@@ -25,9 +25,7 @@ copyright:
 3. 디바이스가 알림을 수신했는지 확인하십시오. 
 
 	다음 스크린샷은 Android와 iOS 디바이스의 포그라운드에서
-푸시 알림을 처리하는 경보 상자를 보여줍니다. 
-
-	![Android의 포그라운드 푸시 알림](images/Android_Screenshot.jpg)
+푸시 알림을 처리하는 경보 상자를 보여줍니다. 	![Android의 포그라운드 푸시 알림](images/Android_Screenshot.jpg)
 
 	![iOS의 포그라운드 푸시 알림](images/iOS_Screenshot.jpg)
 

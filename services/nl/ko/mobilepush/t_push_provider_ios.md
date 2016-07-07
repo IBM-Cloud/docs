@@ -7,18 +7,19 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# Apple 푸시 알림(APN)에 대한 신임 정보 구성
+# Apple 푸시 알림(APNS)에 대한 신임 정보 구성
 
 {: #create-push-credentials-apns}
 
-애플리케이션 개발자는 APNs(Apple Push Notification service)를 이용하여 Bluemix의 푸시 서비스 인스턴스(제공자)에서 iOS 디바이스와 애플리케이션으로 원격 알림을 전송할 수 있습니다. 디바이스의 대상 애플리케이션으로 메시지가 전송됩니다. APNs 신임 정보를 획득하여 구성합니다. APNs 인증서는 푸시 알림 서비스에서 안전하게 관리하며 제공자 자격으로 APNs 서버에 연결할 때 사용합니다. 
+애플리케이션 개발자는 APNS(Apple Push Notification Service)를 이용하여 Bluemix의 푸시 서비스 인스턴스(제공자)에서 iOS 디바이스와 애플리케이션으로 원격 알림을 전송할 수 있습니다. 디바이스의 대상 애플리케이션으로 메시지가 전송됩니다. APNS 신임 정보를 획득하여 구성하십시오. APNS 인증서는 푸시 알림 서비스에서 안전하게 관리하며 제공자로서 APNS 서버에 연결할 때 사용됩니다. 
 
 1. [Apple 개발자](https://developer.apple.com/) 계정을 확보하십시오. 
 2. [앱 ID를 등록하십시오.](#create-push-credentials-apns-register)
 3. [개발 및 배포 APNs SSL 인증서 작성](#create-push-credentials-apns-ssl)
 4. [개발 프로비저닝 프로파일을 작성하십시오.](#create-push-credentials-dev-profile)
 5. [저장소 배포 프로비저닝 프로파일을 작성하십시오.](#create-push-credentials-apns-distribute_profile)
-6. [푸시 대시보드에서 APNs를 설정하십시오.](#create-push-credentials-apns-dashboard)
+6. [Bluemix 푸시에 대해 .p12 푸시 인증 파일을 작성하십시오.](#create-p12-push-certificate-file-for-Bluemix-push)
+7. [푸시 대시보드에서 APNs를 설정하십시오.](#create-push-credentials-apns-dashboard)
 
 
 
@@ -42,23 +43,23 @@ copyright:
 	* 명시적 ID 접미부
 
 	![명시적 ID](images/appID_bundleID.jpg)
-3. 다음 단계. 개발 및 배포 APNs SSL 인증서를 작성하십시오. 
+3. 다음 단계. 개발 및 배포 APNS SSL 인증서를 작성하십시오.
 
-##개발 및 배포 APNs SSL 인증서 작성
+##개발 및 배포 APNS SSL 인증서를 작성하십시오.
 {: #create-push-credentials-apns-ssl}
 
-APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성하여 이를 Apple 인증 기관(CA)에 제출해야 합니다. CSR에는 사용자의 회사, Apple 푸시 알림에 서명할 때 사용하는 공용 및 개인 키를 식별하는 정보가 포함됩니다. 그런 다음 iOS 개발자 포털에서 SSL 인증서를 생성하십시오. 인증서와 이의 공용 및 개인 키는 Keychain Access에 저장됩니다. 
+APNS 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성하여 이를 Apple 인증 기관(CA)에 제출해야 합니다. CSR에는 사용자의 회사, Apple 푸시 알림에 서명할 때 사용하는 공용 및 개인 키를 식별하는 정보가 포함됩니다. 그런 다음 iOS 개발자 포털에서 SSL 인증서를 생성하십시오. 인증서와 이의 공용 및 개인 키는 Keychain Access에 저장됩니다. 
 
 **시작하기 전에**
 
 [앱 ID를 등록하십시오.](#create-push-credentials-apns-register)
 
-APNs는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니다. 
+APNS는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니다. 
 
 * 샌드박스 모드는 개발 및 테스트 중에 사용됩니다. 
 * 프로덕션 모드는 앱 저장소(또는 다른 엔터프라이즈 배포 메커니즘)를 통해 애플리케이션을 배포할 때 사용됩니다. 
 
-개발 및 배포 환경을 위한 별도의 인증서를 획득해야 합니다. 인증서는 원격 알림의 수신인인 앱의 앱 ID와 연관되어 있습니다. 프로덕션의 경우 최대 2개의 인증서를 작성할 수 있습니다. Bluemix는 인증서를 사용하여 APNs와의 SSL 연결을 설정합니다. 
+개발 및 배포 환경을 위한 별도의 인증서를 획득해야 합니다. 인증서는 원격 알림의 수신인인 앱의 앱 ID와 연관되어 있습니다. 프로덕션의 경우 최대 2개의 인증서를 작성할 수 있습니다. Bluemix는 인증서를 사용하여 APNS와의 SSL 연결을 설정합니다. 
 
 개발 및 배포 SSL 인증서를 작성하십시오. 
 
@@ -68,7 +69,7 @@ APNs는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 3. 앱 ID 목록에서 새로 작성한 앱 ID를 선택한 다음 **설정**을 선택하십시오. 
 4. **푸시 알림** 영역에서 개발 SSL 인증서를 작성한 다음 프로덕션 SSL 인증서를 작성하십시오.
 
- 
+
 	![푸시 알림 SSL 인증서](images/certificate_createssl.jpg)
 
 	인증서 서명 요청 작성 정보 화면이 표시됩니다.
@@ -98,7 +99,7 @@ APNs는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 
    	![인증서 및 키 내보내기](images/certificate_p12v2.jpg)
 
-18. **비밀번호 입력** 필드에 내보낸 항목을 보호하기 위한 비밀번호를 입력한 다음 **확인**을 클릭하십시오. 나중에 이 비밀번호를 사용하여 푸시 대시보드에서 APNs 설정을 구성하게 됩니다. 
+18. **비밀번호 입력** 필드에 내보낸 항목을 보호하기 위한 비밀번호를 입력한 다음 **확인**을 클릭하십시오. 나중에 이 비밀번호를 사용하여 푸시 대시보드에서 APNS 설정을 구성하게 됩니다. 
 
 	![인증서 및 키 내보내기](images/export_p12.jpg)
 19. **Key Access.app**이 **키 체인** 화면에서 키를 내보내도록 프롬프트를 표시합니다. 시스템이 해당 항목을 내보낼 수 있도록 Mac의 관리 비밀번호를 입력한 다음 **항상 허용** 옵션을 선택하십시오. 데스크탑에 .p12 인증서가 생성됩니다. 
@@ -112,7 +113,7 @@ APNs는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 **시작하기 전에**
 
 앱 ID를 등록하고 이를 푸시 알림 서비스에 사용할 수 있도록 설정하였으며
-개발 및 프로덕션 APNs SSL 인증서를 사용하도록 구성했는지 확인하십시오.
+개발 및 프로덕션 APNS SSL 인증서를 사용하도록 구성했는지 확인하십시오.
 
 
 개발 프로비저닝 프로파일을 작성하십시오. 
@@ -134,10 +135,26 @@ APNs는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 1. [Apple 개발자](https://developer.apple.com) 포털로 이동하여 **멤버 센터**를 클릭하고 **인증서, ID 및 프로파일**을 선택하십시오.
 2. 다운로드한 프로비저닝 프로파일을 두 번 클릭하여 이를 Xcode에 설치하십시오. 
 
+##Bluemix 푸시에 대해 .p12 푸시 인증 파일을 작성하십시오. 
+{: #create-p12-push-certificate-file-for-Bluemix-push}
+
+올바른 .p12 푸시 인증 파일을 작성하려면 개발/배포 프로파일 인증서와 함께 APNS .p12 인증서를 사용해야 합니다.단계를 완료하십시오.
+
+```
+//You can choose to pick up either the development or distribution certificate  
+	developer_identity.cer - Development profile downloaded from Apple
+	apns.p12 - APNS .p12 exported from the keychain
+	openssl x509 -in developer_identity.cer -inform DER -out
+	developer_identity.pem -outform PEM
+	openssl pkcs12 -nocerts -in apns.p12 -out apns.pem
+	openssl pkcs12 -export -inkey apns.pem -in developer_identity.pem -out bluemixPush_dev.p12
+```
+데스크탑에 `bluemixPush_dev.p12` 파일을 저장해야 합니다.
+
 ##푸시 알림 대시보드에서 APNs 설정
 {: #create-push-credentials-apns-dashboard}
 
-푸시 알림 서비스를 사용하여 알림을 전송하려면 APNs(Apple Push Notification service)에 필요한 SSL 인증서를 업로드하십시오. 또한 REST API를 사용하여 APNs 인증서를 업로드할 수 있습니다. 
+푸시 알림 서비스를 사용하여 알림을 전송하려면 APNS(Apple Push Notification Service)에 필요한 SSL 인증서를 업로드하십시오. 또한 REST API를 사용하여 APNS 인증서를 업로드할 수 있습니다. 
 
 
 **시작하기 전에**
@@ -150,21 +167,20 @@ APNs에 필요한 인증서는 .p12 인증서이며 이 인증서에는 애플�
 
 **참고**: **cer**이 키 체인 액세스에 있으면 이를 컴퓨터로 내보내서 .p12 인증서를 작성하십시오. 
 
-APNs 사용에 대한 자세한 정보는 [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4)를 참조하십시오. 
+APNS 사용에 대한 자세한 정보는 [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4)를 참조하십시오. 
 
-푸시 대시보드에서 APNs를 설정하십시오. 
+푸시 대시보드에서 APNS를 설정하십시오. 
 
 1. Bluemix 대시보드에서 백엔드 애플리케이션을 열고 **IBM 푸시 알림** 서비스를 클릭하여 푸시 대시보드를 여십시오.
 
 	![IBM 푸시 알림](images/bluemixdashboard_push.jpg)
 
 	푸시 대시보드가 표시됩니다. 
-	
+
 	![푸시 알림 설정](images/wizard.jpg)
-1
-2. **구성** 탭에서 **Apple 푸시 인증서** 섹션으로 이동하여 **샌드박스**(개발) 또는 **프로덕션**(분배)를 선택하고 p.12 인증서를 Bluemix에 업로드하십시오. 
+
+2. **구성** 탭에서 **Apple 푸시 인증서** 섹션으로 이동하여 **샌드박스**(개발) 또는 **프로덕션**(배포)를 선택하고 이전 [단계](#create-p12-push-certificate-file-for-Bluemix-push)에서 작성한 p.12 인증서를 업로드하십시오. 
 
 	![푸시 알림 설정](images/credential_screen.jpg)
 3. **Password** 필드에서 **.p12** 인증서 파일과 연관된 비밀번호를 입력하고 **저장**을 클릭하십시오.
 올바른 비밀번호를 사용하여 인증서를 업로드한 후 알림 전송을 시작할 수 있습니다. 
-

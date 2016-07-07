@@ -21,11 +21,11 @@ Les notifications en fonction d'une balise sont des messages de notification qui
 1. Cliquez sur le bouton + **Créer une balise**.   
 
    a. Dans la zone **Nom**, entrez le nom de la balise. Exemple : "coupons".
-   
+
    b. Dans la zone **Description**, entrez une description de balise.
-   
+
    c. Cliquez sur **Sauvegarder**.
-   
+
 1. Dans la zone **Fragments de code**, sélectionnez la plateforme pour votre application mobile.
 1. Modifiez les fragments de code pour traiter les erreurs, puis copiez-les pour chaque balise dans votre application mobile.
 
@@ -62,14 +62,14 @@ Utilisez l'API **getTags** pour obtenir la liste des balises disponibles auxquel
 // Obtenez la liste des balises disponibles auxquelles le périphérique peut s'abonner
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-    public void onSuccess(List<String> tags) { 
+   public void onSuccess(List<String> tags){
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
    subscribeToTag();   
   }    
   @Override    
-  public void onFailure(MFPPushException ex) {
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -124,8 +124,8 @@ Utilisez l'API **retrieveAvailableTags** ci-après pour obtenir la liste des bal
 ```
 //Obtenez la liste des balises disponibles auxquelles le périphérique peut s'abonner
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){ 
- if(error) {    
+^(IMFResponse *response, NSError *error){
+ if(error){    
    [self updateMessage:error.description];  
  } else {
    [self updateMessage:@"Successfully retrieved available tags."];
@@ -135,7 +135,7 @@ Utilisez l'API **retrieveAvailableTags** ci-après pour obtenir la liste des bal
 }
 }];
 ```
-       
+
 Utilisez l'API **retrieveSubscriptions** pour obtenir la liste des balises auxquelles le périphérique est abonné.
 
 
@@ -143,7 +143,7 @@ Utilisez l'API **retrieveSubscriptions** pour obtenir la liste des balises auxqu
 // Obtenez la liste des balises auxquelles le périphérique est abonné.
 [push retrieveSubscriptionsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error) {
-  if(error) {
+  if(error){
      [self updateMessage:error.description];
    } else {
      [self updateMessage:@"Successfully retrieved subscriptions."];
@@ -185,7 +185,7 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
 
-        print( "Response during retrieving subscribed tags : \(response.description)")
+        print( "Response during retrieving subscribed tags : \(response?.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
     }
     else {
@@ -208,7 +208,7 @@ Copiez et collez le fragment de code suivant dans votre application mobile Andro
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-  public void onFailure(MFPPushException ex) {
+    public void onFailure(MFPPushException ex) {
     updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
@@ -253,7 +253,7 @@ Utilisez l'API **subscribeToTags** pour vous abonner à une balise.
 ```
 [push subscribeToTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-  if(error) {
+  if(error){
      [self updateMessage:error.description];
   }else{
       NSDictionary* subStatus = [[NSDictionary alloc]init];
@@ -269,7 +269,7 @@ Utilisez l'API **unsubscribeFromTags** pour vous désabonner d'une balise.
 ```
 [push unsubscribeFromTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-   if(error) {
+   if (error){
        [self updateMessage:error.description];
  } else {
        NSDictionary* subStatus = [[NSDictionary alloc]init];
@@ -289,12 +289,12 @@ Utilisez l'API **subscribeToTags** pour vous abonner à une balise.
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) { 
+	if (error != nil) {
 		//erreur lors de l'abonnement à des balises
 	} else {
 		//l'abonnement aux balises var a abouti (subStatus = response.subscribeStatus();)
 	}
-} 
+}
 ```
 
 **Désabonnement de balises**
@@ -305,7 +305,7 @@ Utilisez l'API **unsubscribeFromTags** pour vous désabonner d'une balise.
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
 
     if error.isEmpty {
-        print( "Response during unsubscribed tags : \(response.description)")
+        print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {

@@ -50,7 +50,7 @@ compile 'com.google.android.gms:play-services:7.8.0'
 <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-	```
+```
 
 	您可以在此阅读有关 [Android 许可权](http://developer.android.com/guide/topics/security/permissions.html)的更多信息。
 
@@ -61,7 +61,7 @@ compile 'com.google.android.gms:play-services:7.8.0'
 		<action android:name="<Your_Android_Package_Name.IBMPushNotification"/>   
 		<category  android:name="android.intent.category.DEFAULT"/>
 	</intent-filter>
-	```
+```
 	**注**：将上述操作中的 *Your_Android_Package_Name* 替换为应用程序中使用的应用程序包名称。
 
 1. 针对 RECEIVE 事件通知，添加 Google 云消息传递 (GCM) 意向服务和意向过滤器。
@@ -80,7 +80,7 @@ compile 'com.google.android.gms:play-services:7.8.0'
 	    <intent-filter>
 	        <action android:name="android.intent.action.BOOT_COMPLETED" />
 
-	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
+	        	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
 	    </intent-filter>
 	</receiver>
 	```
@@ -129,7 +129,7 @@ push.initialize(getApplicationContext());
 ## 注册 Android 设备
 {: #android_register}
 
-使用 ```IMFPush.register()``` API 可向 Push Notification Service 注册设备。对于注册 Android 设备，您首先要在 Bluemix 推送服务配置仪表板中添加 Google 云消息传递 (GCM) 信息。有关更多信息，请参阅[为 Google 云消息传递配置凭证](t_push_provider_android.html)。
+使用 `IMFPush.register()` API 可以为设备注册推送通知服务。对于注册 Android 设备，您首先要在 Bluemix 推送服务配置仪表板中添加 Google 云消息传递 (GCM) 信息。有关更多信息，请参阅[为 Google 云消息传递配置凭证](t_push_provider_android.html)。
 
 将以下代码片段复制并粘贴到 Android 移动应用程序中。
 
@@ -161,9 +161,9 @@ push.initialize(getApplicationContext());
 ## 在 Android 设备上接收推送通知
 {: #android_receive}
 
-要向 Push 注册 notificationListener 对象，请调用 **MFPPush.listen()** 方法。此方法通常是通过处理推送通知的活动的 **onResume()** 方法进行调用。
+要为 notificationListener 对象注册推送，请调用 **MFPPush.listen()** 方法。此方法通常是通过处理推送通知的活动的 **onResume()** 方法进行调用。
 
-1. 要向 Push 注册 notificationListener 对象，请调用 **listen()** 方法。此方法通常是通过处理推送通知的活动的 **onResume()** 方法进行调用。
+1. 要为 notificationListener 对象注册推送，请调用 **listen()** 方法。此方法通常是通过处理推送通知的活动的 **onResume()** 方法进行调用。
 
 	```
 	@Override
@@ -174,7 +174,7 @@ push.initialize(getApplicationContext());
 	   }
 	}
 ```
-2. 构建项目，然后在设备或仿真器上运行该项目。在 register() 方法中针对响应侦听器调用 onSuccess() 方法时，这证实设备已成功向 Push Notification Service 进行注册。此时，可以如“发送基本推送通知”中所述发送消息。
+2. 构建项目，然后在设备或仿真器上运行该项目。在 register() 方法中针对响应侦听器调用 onSuccess() 方法时，这证实设备已成功注册推送通知服务。此时，可以如“发送基本推送通知”中所述发送消息。
 3. 验证设备是否收到通知。如果应用程序在前台运行，那么通知将由 **MFPPushNotificationListener** 进行处理。如果应用程序在后台运行，那么通知栏中会显示一条消息。
 
 
@@ -188,14 +188,12 @@ push.initialize(getApplicationContext());
 
 1. 在**选择受众**中，选择以下某个受众：**所有设备**，或者按平台选择：**仅限 iOS 设备**或**仅限 Android 设备**。
 
-	**注**：选择**所有设备**选项时，预订了推送通知的所有设备都会收到您的通知。
+ **注**：选择**所有设备**选项时，预订了推送通知的所有设备都会收到您的通知。
 
-	![“通知”屏幕](images/tag_notification.jpg)
+ ![“通知”屏幕](images/tag_notification.jpg)
 
 2. 在**创建通知**中，输入消息，然后单击**发送**。
-3. 验证设备是否收到通知。
-
-	以下屏幕快照显示了在 Android 和 iOS 设备上前台处理推送通知的警报框。
+3. 验证设备是否收到通知。以下屏幕快照显示了在 Android 和 iOS 设备上前台处理推送通知的警报框。
 
 	![Android 上的前台推送通知](images/Android_Screenshot.jpg)
 
@@ -211,4 +209,6 @@ push.initialize(getApplicationContext());
 
 成功设置基本通知后，可以配置基于标记的通知和高级选项。
 
-将这些 Push Notifications Service 功能添加到应用程序中。要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。要使用高级通知选项，请参阅[高级推送通知](t_advance_notifications.html)。
+将这些推送通知服务功能添加到应用程序中。
+要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。
+要使用高级通知选项，请参阅[高级推送通知](t_advance_notifications.html)。

@@ -20,12 +20,12 @@ copyright:
 1. 单击 + **创建标记**按钮。   
 
    a. 在**名称**字段中，输入标记的名称。例如，“coupons”。
-   
+
    b. 在**描述**字段中，输入标记描述。
          
-   
+
    c. 单击**保存**。
-   
+
 1. 在**代码片段**区域中，选择移动应用程序的平台。
 1. 修改代码片段以处理错误，然后将每个标记的代码片段复制到移动应用程序中。
 
@@ -58,9 +58,9 @@ copyright:
 ```
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
-@Override
-    public void onSuccess(List<String> tags) {
-    updateTextView("Retrieved available tags: " + tags);  
+   @Override
+   public void onSuccess(List<String> tags){
+   updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
 subscribeToTag();
@@ -68,8 +68,7 @@ subscribeToTag();
   }    
 @Override
     
-public void onFailure(MFPPushException ex) {
-
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -80,8 +79,7 @@ public void onFailure(MFPPushException ex) {
 ```
 // Get a list of tags that to which the device is subscribed.
 push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
-
-    @Override
+@Override
     public void onSuccess(List<String> tags) {
     updateTextView("Retrieved subscriptions : " + tags);
     System.out.println("Subscribed tags are: "+tags);
@@ -103,18 +101,14 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 
 ```
 //Get a list of available tags to which the device can subscribe
-MFPPush.retrieveAvailableTags(function(tags) {
-    alert(tags);
+MFPPush.retrieveAvailableTags(function(tags) {alert(tags);
 }, null);
-
-
 ```
 
 ```
 //Get a list of available tags to which the device is subscribed.
 MFPPush.getSubscriptionStatus(function(tags) {
-
-    alert(tags);
+alert(tags);
 }, null);
 ```
 
@@ -125,9 +119,9 @@ MFPPush.getSubscriptionStatus(function(tags) {
 使用以下 **retrieveAvailableTags** API 可获取设备可预订的可用标记的列表。
 
 ```
-//Get a list of available tags to which the device can subscribe 
+//Get a list of available tags to which the device can subscribe
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){ 
+^(IMFResponse *response, NSError *error){
  if(error){    
 [self updateMessage:error.description];
   
@@ -139,7 +133,7 @@ MFPPush.getSubscriptionStatus(function(tags) {
 }
 }];
 ```
-       
+
 使用以下 **retrieveSubscriptions** API 可获取设备所预订的标记的列表。
 
 
@@ -169,10 +163,7 @@ subscribedTags = [response subscriptions];
 
 ```
 //Get a list of available tags to which the device can subscribe
-push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -> Void in
-
-    if error.isEmpty {
-
+push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -> Void inif error.isEmpty {
         print( "Response during retrieve tags : \(response)")
         print( "status code during retrieve tags : \(statusCode)")
     }
@@ -188,7 +179,7 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
 
-        print( "Response during retrieving subscribed tags : \(response.description)")
+        print( "Response during retrieving subscribed tags : \(response?.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
     }
     else {
@@ -211,8 +202,8 @@ print( "Error during retrieving subscribed tags \(error) ")
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-  public void onFailure(MFPPushException ex) {
-    updateTextView("Error subscribing to Tag1.."
+    public void onFailure(MFPPushException ex) {
+         updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
   @Override
@@ -292,13 +283,12 @@ MFPPush.unsubscribe(tag, success, failure);
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-
 	if (error != nil) {
-//error while subscribing to tags
+		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-} 
+}
 ```
 
 **取消预订标记**
@@ -306,10 +296,8 @@ push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!
 使用 **unsubscribeFromTags** API，可以取消预订标记。
 
 ```
-push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
-
-    if error.isEmpty {
-        print( "Response during unsubscribed tags : \(response.description)")
+push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void inif error.isEmpty {
+        print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {

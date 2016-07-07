@@ -132,7 +132,7 @@ push.initialize(getApplicationContext());
 ## Enregistrement de périphériques Android
 {: #android_register}
 
-Utilisez l'API ```IMFPush.register()``` pour enregistrer le périphérique auprès d'un service Notification push. Pour enregistrer des périphériques Android, vous devez entrer au préalable des informations GCM (Google Cloud Messaging) dans le tableau de bord de configuration du service Push Bluemix. Pour plus d'informations, voir [Configuration de données d'identification pour Google Cloud Messaging](t_push_provider_android.html).
+Utilisez l'API `IMFPush.register()` pour enregistrer le périphérique auprès du service de notification push. Pour enregistrer des périphériques Android, vous devez entrer au préalable des informations GCM (Google Cloud Messaging) dans le tableau de bord de configuration du service Push Bluemix. Pour plus d'informations, voir [Configuration de données d'identification pour Google Cloud Messaging](t_push_provider_android.html).
 
 Copiez et collez les fragments de code suivants dans votre application mobile Android :
 
@@ -164,10 +164,10 @@ Copiez et collez les fragments de code suivants dans votre application mobile An
 ## Réception de notifications push sur des périphériques Android
 {: #android_receive}
 
-Pour enregistrer l'objet notificationListener auprès de Push, appelez la méthode **MFPPush.listen()**. En général, elle est appelée depuis la
+Pour enregistrer l'objet notificationListener auprès de push, appelez la méthode **MFPPush.listen()**. En général, elle est appelée depuis la
 méthode **onResume()** de l'activité qui traite les notifications push.
 
-1. Pour enregistrer l'objet notificationListener auprès de Push, appelez la méthode **listen()**. En général, elle est appelée depuis la
+1. Pour enregistrer l'objet notificationListener auprès de push, appelez la méthode **listen()**. En général, elle est appelée depuis la
 méthode **onResume()** de l'activité qui traite les notifications push.
 
 	```
@@ -179,10 +179,8 @@ méthode **onResume()** de l'activité qui traite les notifications push.
 	   }
 	}
 ```
-2. Générez le projet et exécutez-le sur le périphérique ou l'émulateur. Lorsque la méthode onSuccess() pour le programme d'écoute des réponses dans la méthode register() est appelée, cela signifie que le périphérique a été enregistré auprès de Push. A ce stade, vous pouvez envoyer un message comme décrit dans la rubrique Envoi de notifications push de base.
-3. Vérifiez que vos périphériques ont reçu votre notification. Si l'application se trouve au premier-plan, la notification est traitée par **MFPPushNotificationListener**. Si elle se trouve en arrière-plan, un message est affiché dans la barre de notification.
-
-
+2. Générez le projet et exécutez-le sur le périphérique ou l'émulateur. Lorsque la méthode onSuccess() pour le programme d'écoute des réponses dans la méthode register() est appelée, cela signifie que le périphérique a été enregistré auprès du service de notification push. A ce stade, vous pouvez envoyer un message comme décrit dans la rubrique Envoi de notifications push de base.
+3. Vérifiez que vos périphériques ont reçu votre notification. Si l'application se trouve au premier-plan, la notification est traitée par **MFPPushNotificationListener**. Si elle se trouve en arrière-plan, un message s'affiche dans la barre de notification.
 ## Envoi de notifications push de base
 {: #send}
 
@@ -192,18 +190,14 @@ contenu supplémentaire ou de fichier son).
 
 Envoyez des notifications push de base.
 
-1. Dans la zone **Choisir des destinataires**, sélectionnez l'un des publics suivants :
-**Tous les terminaux** ou par plateforme : **Terminaux iOS seulement** ou
-**Terminaux Android seulement**. 
+1. Dans la zone **Choisir des destinataires**, sélectionnez l'un des publics suivants : **Tous les périphériques** ou par plateforme : **Périphériques iOS seulement** ou **Périphériques Android seulement**.
 
 	**Remarque** : Lorsque vous sélectionnez l'option **Tous les périphériques**, tous les périphériques qui sont abonnés à des notifications push recevront votre notification.
 
 	![Ecran Notifications](images/tag_notification.jpg)
 
-2. Dans la zone **Create your Notification**, entrez votre message, puis cliquez sur **Send**.
-3. Vérifiez que vos périphériques ont reçu votre notification.
-
-	La capture d'écran suivante présente une boîte de dialogue d'alerte qui traite une notification push qui s'exécute au premier plan sur des périphériques Android et iOS.
+2. Dans la zone de **Create your notification**, entrez votre message, puis cliquez sur **Send**.
+3. Vérifiez que vos périphériques ont reçu votre notification. La capture d'écran suivante présente une boîte de dialogue d'alerte qui traite une notification push qui s'exécute au premier plan sur des périphériques Android et iOS.
 
 	![Notification push qui s'exécute au premier plan sur un périphérique Android](images/Android_Screenshot.jpg)
 
@@ -218,8 +212,6 @@ Envoyez des notifications push de base.
 {: #next_steps_tags}
 
 Une fois que vous avez configuré des notifications de base, vous pouvez configurer des notifications basées sur les balises et des options
-avancées.
-
-Ajoutez ces fonctions du service Notifications push à votre application.
+avancées. Ajoutez ces fonctions de service de notification push à votre application.
 Pour utiliser des notifications basées sur les balises, voir [Notifications basées sur les balises](c_tag_basednotifications.html).
 Pour utiliser des options de notification avancées, voir [Notifications push avancées](t_advance_notifications.html).

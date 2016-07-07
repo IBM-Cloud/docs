@@ -135,7 +135,7 @@ push.initialize(getApplicationContext());
 ## Registro de dispositivos Android
 {: #android_register}
 
-Utilice la API ```IMFPush.register()``` para registrar el dispositivo con un Servicio de notificaciones Push. Para el registro con dispositivos Android, primero debe añadir la información de Google Cloud Messaging (GCM) en el panel de control de configuración del servicio push de Bluemix. Para obtener más información, consulte [Configuración de credenciales para Google Cloud Messaging](t_push_provider_android.html).
+Utilice la API de `IMFPush.register()` para registrar el dispositivo con un servicio de notificaciones push. Para el registro con dispositivos Android, primero debe añadir la información de Google Cloud Messaging (GCM) en el panel de control de configuración del servicio push de Bluemix. Para obtener más información, consulte [Configuración de credenciales para Google Cloud Messaging](t_push_provider_android.html).
 
 Copie y pegue los siguientes fragmentos de código en la aplicación para móviles de
                     Android.
@@ -168,11 +168,11 @@ Copie y pegue los siguientes fragmentos de código en la aplicación para móvil
 ## Recepción de notificaciones push en dispositivos Android
 {: #android_receive}
 
-Para registrar el objeto notificationListener con Push, invoque el método **MFPPush.listen()**. Este método normalmente se llama desde
+Para registrar el objeto notificationListener con push, invoque el método **MFPPush.listen()**. Este método normalmente se llama desde
                                 el método **onResume()** de la actividad que maneja
                             las notificaciones push.
 
-1. Para registrar el objeto notificationListener con Push, invoque el método **listen()**. Este método normalmente se llama desde
+1. Para registrar el objeto notificationListener con push, invoque el método **listen()**. Este método normalmente se llama desde
                                 el método **onResume()** de la actividad que maneja
                             las notificaciones push.
 
@@ -185,7 +185,7 @@ Para registrar el objeto notificationListener con Push, invoque el método **MFP
 	   }
 	}
 ```
-2. Cree el proyecto y ejecútelo en el dispositivo o en el emulador. Cuando se invoque el método onSuccess() para la escucha de respuestas en el método register(), confirmará que el dispositivo se ha registrado correctamente con el Servicio de notificaciones Push. En este momento puede enviar un mensaje tal como se describe en Envío de notificaciones push básicas.
+2. Cree el proyecto y ejecútelo en el dispositivo o en el emulador. Cuando se invoque el método onSuccess() para la escucha de respuestas en el método register(), confirmará que el dispositivo se ha registrado correctamente con el servicio de notificaciones push. En este momento puede enviar un mensaje tal como se describe en Envío de notificaciones push básicas.
 3. Verifique que los dispositivos hayan recibido la notificación. Si la aplicación se encuentra en segundo
           plano, la notificación se manejará mediante el
             **MFPPushNotificationListener**. Si la aplicación se encuentra en segundo plano, se mostrará un
@@ -201,18 +201,14 @@ Una vez que haya desarrollado sus aplicaciones, puede enviar notificaciones push
 
 Enviar notificaciones push básicas.
 
-1. En **Elegir la audiencia**, seleccione una de las siguientes audiencias:
-      **Todos los dispositivos**, o por plataforma: **Sólo dispositivos iOS** o
-      **Sólo dispositivos Android**. 
-
-	**Nota**: Cuando seleccione la opción **Todos los dispositivos**, todos los dispositivos que se han suscrito a las notificaciones push recibirán la notificación.
+1. En **Elegir la audiencia**, seleccione una de las siguientes audiencias: **Todos los dispositivos**, o por plataforma: **Sólo dispositivos iOS** o **Sólo dispositivos Android**.
+**Nota**: Cuando seleccione la opción **Todos los dispositivos**, todos los dispositivos que se han suscrito a las notificaciones push recibirán la notificación.
 
 	![pantalla Notificaciones](images/tag_notification.jpg)
 
-2. En **Crear la notificación**, especifique el mensaje y, a continuación, pulse **Enviar**.
+2. En **Crear la notificacion**, escriba el mensaje y, a continuación, pulse **Enviar**.
 3. Verifique que los dispositivos hayan recibido la notificación.
-
-	La captura de pantalla siguiente muestra un recuadro de alerta que maneja una notificación push
+La captura de pantalla siguiente muestra un recuadro de alerta que maneja una notificación push
 en el primer plano en un dispositivo Android e iOS.
 
 	![Notificación push en primer plano en Android](images/Android_Screenshot.jpg)
@@ -230,6 +226,6 @@ en el primer plano en un dispositivo Android e iOS.
 Una vez que haya configurado correctamente las notificaciones básicas, puede configurar
         las notificaciones basadas en código y las opciones avanzadas.
 
-Añada estas características de Servicio de notificaciones push a la aplicación.
+Añada estas funciones del servicio de notificaciones push a la app.
 Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
 Para utilizar opciones de notificaciones avanzadas, consulte [Notificaciones push avanzadas](t_advance_notifications.html).

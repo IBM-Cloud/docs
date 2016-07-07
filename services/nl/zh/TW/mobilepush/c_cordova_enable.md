@@ -29,15 +29,16 @@ Cordova 是一個平台，可使用 JavaScript、CSS 及 HTML 來建置混合式
 1. 安裝 Node.js 及「Node 套件管理程式 (NPM)」工具。NPM 指令行工具與 Node.js 組合在一起。如需如何下載並安裝 Node.js 的相關資訊，請參閱 [Node.js](https://nodejs.org/en/download/)。
 1. 從指令行中，使用 **npm install -g cordova** 指令來安裝 Cordova 指令行工具。若要使用 Cordova Push 外掛程式，這是必要動作。如需如何安裝 Cordova 以及設定 Cordova 應用程式的相關資訊，請參閱 [Cordova Apache](https://cordova.apache.org/#getstarted)。
 
- **附註**：若要檢視 Cordova Push 外掛程式 Readme 檔，請移至 [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)。
+	**附註**：若要檢視 Cordova Push 外掛程式 Readme 檔，請移至 [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+
 
 1. 切換至您要在其中建立 Cordova 應用程式的資料夾，並執行下列指令來建立 Cordova 應用程式。如果您有現存的 Cordova 應用程式，請移至步驟 3。
 
- ```
+```
 cordova create your_app_name
 cd your_app_name
 ```
-1. 選用項目：（選用）編輯 **config.xml** 檔案，並將 <name> 元素中的應用程式名稱變更為您選擇的名稱，而不是預設 HelloCordova 名稱。
+1. 選用項目：（選用）編輯 **config.xml** 檔案，並將 &lt;name> 元素中的應用程式名稱變更為您選擇的名稱，而不是預設 HelloCordova 名稱。
 
 	**附註**：請確定指定正確的軟體組 ID。如果您未指定，則會在 Xcode 中顯示錯誤訊息。
 	* 以無效的授權簽署執行檔。
@@ -46,8 +47,8 @@ cd your_app_name
 	若要修正此問題，請在 Xcode 或 Cordova 應用程式 **config.xml** 檔案中指定正確的「軟體組 ID」。
 
 1. 將最低支援的 API 或部署目標宣告新增至 Cordova 應用程式的 config.xml 檔案。minSdkVersion 值必須高於 15。targetSdkVersion 值必須一律反映可從 Google 取得的最新 Android SDK。
-	* **Android** - 使用編輯器開啟 config.xml 檔案，然後使用最低及目標 SDK 版本更新
-   ```<platform name="android">``` 元素：
+	* **Android** - 使用編輯器來開啟 config.xml 檔案，並將
+`<platform name="android">` 元素更新為最小及目標 SDK 版本：
 
 	```
 	<!-- add deployment target declaration -->
@@ -56,7 +57,7 @@ cd your_app_name
 			  <preference name="android-targetSdkVersion" value="23" />
 			</platform>
 	```
-   * **iOS** - 使用部署目標宣告更新 <platform name="ios"> 元素：
+   * **iOS** - 使用部署目標宣告更新 &lt;platform name="ios"> 元素：
 
 	```
 	<platform name="ios">
@@ -93,9 +94,9 @@ cd your_app_name
 	b. 新增橋接標頭。移至**建置設定 > Swift 編譯器 - 產生程式碼 > Objective-C 橋接標頭**，然後新增下列路徑：*your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
 
 	c. 新增 Frameworks 參數。移至**建置設定 > 鏈結 > Runpath 搜尋路徑**，然後新增下列參數：
-	```
+```
 	@executable_path/Frameworks
-	```
+```
 	d. 解除註解橋接標頭中的下列 Push import 陳述式。移至 *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
 
 	```
@@ -104,8 +105,7 @@ cd your_app_name
 	//#import <IMFPush/IMFResponse+IMFPushCategory.h>
 	```
 	e. 使用 Xcode 建置並執行應用程式。
-1. （僅限 Android）- 使用下列指令建置 Android 專案：
-**cordova build android**。
+1. （僅限 Android）- 使用下列指令建置 Android 專案：**cordova build android**。
 
 	**附註**：在 Android Studio 中開啟專案之前，必須先透過 Cordova CLI 建置 Cordova 應用程式。否則，將發生建置錯誤。
 
@@ -120,9 +120,9 @@ cd your_app_name
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. 修改程式碼 Snippet，以使用您的 Bluemix「路徑」及「應用程式 GUID」參數。按一下「Bluemix 應用程式儀表板」中的**行動式選項**鏈結，以取得應用程式的「路徑」及「應用程式 GUID」。請使用「路徑」及「應用程式 GUID」的值，作為 ```BMSClient.initialize``` 程式碼 Snippet 中的參數。
+1. 修改程式碼 Snippet，以使用您的 Bluemix「路徑」及「應用程式 GUID」參數。按一下「Bluemix 應用程式儀表板」中的**行動選項**鏈結，以取得應用程式的「路徑」及「應用程式 GUID」。請使用「路徑」及「應用程式 GUID」的值，作為 `BMSClient.initialize` 程式碼 Snippet 中的參數。
 
-	**附註**：如果您已使用 Cordova CLI（例如，Cordova create app-name 指令）建立 Cordova 應用程式，請將此 Javascript 程式碼放置在 **index.js** 檔案中 ```onDeviceReady: function()``` 函數內的 ```app.receivedEvent`` 函數後面，以起始設定 BMS 用戶端。
+	**附註**：如果您已使用 Cordova CLI（例如，Cordova create app-name 指令）建立 Cordova 應用程式，請將此 JavaScript 程式碼放置在 **index.js** 檔案中 `onDeviceReady: function()` 函數內的 `app.receivedEvent` 函數後面，以起始設定 BMS 用戶端。
 
 ```
 onDeviceReady: function() {
@@ -182,9 +182,9 @@ MFPPush.registerDevice({}, success, failure);
 您可以使用 JSON.parse 存取 JavaScript 中成功回應參數的內容：**var token = JSON.parse(response).token**
 
 
-可用的索引鍵如下：```token```、```userId`` 及 ```deviceId``。
+可用索引鍵如下：`token`、`userId` 及 `deviceId`。
 
-下列 JavaScript 程式碼 Snippet 顯示如何起始設定 Bluemix Mobile Services Push Client SDK、向 Push Notification Service 登錄裝置，以及接聽推送通知。將此程式碼放入 JavaScript 檔案中。
+下列 JavaScript 程式碼 Snippet 顯示如何起始設定 Bluemix Mobile Services Client SDK、向 Push Notification Service 登錄裝置，以及接聽推送通知。將此程式碼放入 JavaScript 檔案中。
 
 
 
@@ -261,9 +261,9 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 
 使用下列指令建置專案，然後執行專案：
 
-	* Android - 依序執行 **cordova build android** 及 **cordova run android**
+* Android - 依序執行 **cordova build android** 及 **cordova run android**
 
-	* iOS - 依序執行 **cordova build ios** 及 **cordova run ios**
+* iOS - 依序執行 **cordova build ios** 及 **cordova run ios**
 
 
 
@@ -301,7 +301,7 @@ MFPPush.registerNotificationsCallback(notification);
 * payload - 包含通知有效負載的 JSON 物件
 * action-loc-key - 此字串用來作為索引鍵，在現行本地化中取得一個本地化字串，以用於右按鈕的標題，取代「檢視」。
 * badge - 顯示為應用程式圖示徽章的號碼。如果沒有此內容，則不會變更徽章。若要移除徽章，請將此內容的值設為 0。
-* sound - 應用程式組合或者應用程式資料儲存器之 Library/Sounds 資料夾中的音效檔名稱。
+* sound - 應用程式組合或者應用程式資料容器之 Library/Sounds 資料夾中的音效檔名稱。
 
 ###Objective-C
 
@@ -363,9 +363,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 2. 在**建立您的通知**中，輸入您的訊息，然後按一下**傳送**。
 3. 驗證您的裝置已接收到通知。
 
-	下列擷取畫面顯示在 Android 及 iOS 裝置的前景中處理推送通知的警示框。
-
-	![Android 上的前景推送通知](images/Android_Screenshot.jpg)
+	下列擷取畫面顯示在 Android 及 iOS 裝置的前景中處理推送通知的警示框。	![Android 上的前景推送通知](images/Android_Screenshot.jpg)
 
 	![iOS 上的前景推送通知](images/iOS_Screenshot.jpg)
 

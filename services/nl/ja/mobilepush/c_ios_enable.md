@@ -21,10 +21,12 @@ iOS アプリケーションによるプッシュ通知の受け取りとデバ�
 
 
 
-1. Mac ターミナルで以下のコマンドを使用して CocoaPods をインストールします。```
+1. Mac ターミナルで以下のコマンドを使用して CocoaPods をインストールします。
+```
 $ sudo gem install cocoapods
 ```
 2. ターミナルで以下のコマンドを入力して CocoaPods を初期化します。このコマンドを発行する際には、必ず、Xcode プロジェクトがあるディレクトリーで実行してください。`pod init` コマンドはファイルのタイトルを作成します。
+  
 ```
 $ pod init
 ```
@@ -50,18 +52,31 @@ $ pod init
 	    platform :ios, '8.0'
 	    pod 'BMSCore'
 	    pod 'BMSPush'
+      pod 'BMSAnalyticsAPI'
 	end
 	```
 3. ターミナルで、プロジェクト・フォルダーに移動し、以下のコマンドを使用して依存関係をインストールします。
+
 ```
 $ pod update
 ```
 このコマンドにより、依存関係がインストールされ、新しい Xcode ワークスペースが作成されます。**注**: 元の Xcode プロジェクト・ファイルではなく、次のように必ず新しい Xcode ワークスペースを開いてください。
 
-	```
+ ```
 	$ open App.xcworkspace
 	```
-このワークスペースには、元のプロジェクトと、依存関係が含まれている Pods プロジェクトが含まれています。Bluemix Mobile Services ソース・フォルダーを変更したい場合は、Pods プロジェクト内の `Pods/yourImportedSourceFolder` の下にあります (例えば、`Pods/IMFGoogleAuthentication`)。
+このワークスペースには、元のプロジェクトと、依存関係が含まれている Pods プロジェクトが含まれています。Bluemix Mobile Services ソース・フォルダーを変更したい場合は、Pods プロジェクト内の `Pods/yourImportedSourceFolder` の下にあります (例えば、`Pods/BMSPush`)。
+##Carthage
+{: #carthage}
+
+[Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) を使用して、プロジェクトにフレームワークを追加します。 (https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos%29.)
+
+1. `BMSPush` フレームワークを Cartfile に追加します。
+```
+github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
+```
+2. `carthage update` コマンドを実行します。ビルドが完了したら、`BMSPush.framework`、 `BMSCore.framework`、および `BMSAnalyticsAPI.framework` をドラッグして、Xcode プロジェクトに入れます。
+3. [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) サイトにある手順に従って、統合を完了します。
 
 ##インポートされたフレームワークおよびソース・フォルダーの使用
 
@@ -74,7 +89,6 @@ $ pod update
 
 ```
 //Objective-C
-
 #import <IMFCore/IMFCore.h>
 #import <IMFPush/IMFPush.h>
 ```
@@ -96,8 +110,7 @@ $ pod update
 import BMSCore
 import BMSPush
 ```
-
-
+**重要**: Swift の Push の readme ファイルを確認するには、[Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master) にアクセスしてください。
 ##ビルド設定
 
 **「Xcode」>「ビルド設定」>「ビルド・オプション」に移動し、「Bitcode を使用可能に設定 (Set Enable Bitcode)」**を**「いいえ」**に設定します。
@@ -128,9 +141,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
-let myBMSClient = BMSClient.sharedInstance
-
-myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
+let myBMSClient = BMSClient.sharedInstancemyBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
 myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
@@ -163,7 +174,7 @@ Bluemix で作成したアプリケーションに割り当てられた固有キ
 
 **bluemixRegionSuffix**
 
-アプリがホストされている場所を指定します。```bluemixRegion``` パラメーターは、使用する Bluemix デプロイメントを指定します。```BMSClient.REGION`` 静的プロパティーを使用してこの値を設定し、次の 3 つの値のいずれかを使用できます。
+アプリがホストされている場所を指定します。`bluemixRegion` パラメーターでは、使用する Bluemix デプロイメントを指定します。`BMSClient.REGION` 静的プロパティーを使用してこの値を設定し、次の 3 つの値のいずれかを使用できます。
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK
@@ -176,9 +187,7 @@ Bluemix で作成したアプリケーションに割り当てられた固有キ
 {: #enable-push-ios-notifications-register}
 
 
-アプリケーション (アプリ) でリモート通知を受け取るには、そのアプリケーション (アプリ) を APNs に登録する必要があります。これは、通常アプリをデバイスにインストールした後で行われます。
-アプリは、APNs によって生成されたデバイス・トークンを受け取った後、それを Push Notifications Service に送り返す必要があります。
-
+アプリケーション (アプリ) でリモート通知を受け取るには、そのアプリケーション (アプリ) を APNS に登録する必要があります。これは通常、アプリをデバイスにインストールした後で行われます。アプリは、APNS によって生成されたデバイス・トークンを受け取った後、それを Push Notifications Service に送り返す必要があります。
 
 iOS のアプリケーションおよびデバイスを登録するには、以下を行います。
 
@@ -195,10 +204,9 @@ Bluemix® カタログの Boilerplates セクションでバックエンド・�
 
 ```
 	//For Objective-C
-
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
-[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
+	    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 	    [[UIApplication sharedApplication] registerForRemoteNotifications];
 	    }
 	    else{
@@ -214,7 +222,7 @@ Bluemix® カタログの Boilerplates セクションでバックエンド・�
 ```
 	//For Swift
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
+		let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
 		let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
 		application.registerUserNotificationSettings(notificationSettings)
 		application.registerForRemoteNotifications()
@@ -223,7 +231,7 @@ let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | U
 
 ###プッシュ通知へのトークンの受け渡し
 
-トークンを APNs から受け取った後で、```registerDevice:withDeviceToken``` メソッドの一部としてそのトークンをプッシュ通知に渡します。
+トークンを APNS から受け取った後で、`registerDevice:withDeviceToken` メソッドの一部として、そのトークンをプッシュ通知に渡します。
 
 ####Objective-C
 
@@ -232,7 +240,6 @@ let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | U
 -( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
 
    IMFClient *client = [IMFClient sharedInstance];
-
 
  [client initializeWithBackendRoute: @"your-backend-route-here" backendGUID: @"Your-backend-GUID-here"];
 
@@ -250,13 +257,14 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ####Swift
 
-トークンを APNS から受け取った後で、```didRegisterForRemoteNotificationsWithDeviceToken``` メソッドの一部としてそのトークンをプッシュ通知に渡します。
+トークンを APNS から受け取った後で、`didRegisterForRemoteNotificationsWithDeviceToken` メソッドの一部として、そのトークンをプッシュ通知に渡します。
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
-        if error.isEmpty {print( "Response during device registration : \(response)")
+        if error.isEmpty {
+            print( "Response during device registration : \(response)")
             print( "status code during device registration : \(statusCode)")
         }
         else{
@@ -290,11 +298,8 @@ iOS デバイスでプッシュ通知を受け取るには、アプリケーシ�
 
 ```
  // For Swift
-func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-       //UserInfo dictionary will contain data sent from the server
+func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {//UserInfo dictionary will contain data sent from the server
    }
-
-
 ```
 
 
@@ -308,22 +313,19 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 基本プッシュ通知の送信を行います。
 
 1. **「対象者の選択 (Choose the Audience)」**で、**「すべてのデバイス (All Devices)」**、またはプラットフォームに従って**「iOS デバイスのみ (Only iOS devices)」**または**「Android デバイスのみ (Only Anroid devices)」**のいずれかの対象者を選択します。 
-	**注**: **「すべてのデバイス (All Devices)」**オプションを選択すると、プッシュ通知をサブスクライブしているすべてのデバイスが通知を受け取ることになります。
 
+	**注**: **「すべてのデバイス (All Devices)」**オプションを選択すると、プッシュ通知をサブスクライブしているすべてのデバイスが通知を受け取ることになります。
 
 	![「通知」画面](images/tag_notification.jpg)
 
 2. **「通知の作成 (Create your Notification)」**で、メッセージを入力して、**「送信」**をクリックします。
 3. デバイスが通知を受信していることを確認します。
 
-	次のスクリーン・ショットは、Android デバイスおよび iOS デバイス上のフォアグラウンドでプッシュ通知を処理しているアラート・ボックスを示しています。
+	次のスクリーン・ショットは、iOS デバイス上のフォアグラウンドおよびバックグラウンドでプッシュ通知を処理しているアラート・ボックスを示しています。
 
 	![Android 上のフォアグラウンドのプッシュ通知](images/Android_Screenshot.jpg)
 
 	![iOS 上のフォアグラウンドのプッシュ通知](images/iOS_Screenshot.jpg)
-
-	次のスクリーン・ショットは、Android のバックグラウンドでのプッシュ通知を示しています。
-	![Android 上のバックグラウンドのプッシュ通知](images/background.jpg)
 
 
 

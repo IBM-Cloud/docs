@@ -15,7 +15,10 @@ Managing notifications
 -->
  <!--CLM PRODUCTION NAVIGATION: -->
  <!--CLM NEW NAVIGATION : -->
- <topicref href="index.html" linking="none" navtitle="Push Notifications" format="html" scope="peer">
+ <topicref href="index.html" linking="none" navtitle="Push Notifications" format="html" scope="peer"
+locktitle="yes">
+<topicref href="index.html" navtitle="開始使用"
+format="html" scope="peer" locktitle="yes"> </topicref>
 <topicref href="c_overview_push.html" navtitle="關於" linking="sourceonly" format="html"
 outputclass="subsection" scope="peer">
 <topicref href="c_overview_push.html#overview_push_process" format="html"
@@ -72,7 +75,8 @@ navtitle="登錄 iOS 應用程式及裝置" scope="peer"/>
 navtitle="在 iOS 裝置上接收推送通知" scope="peer"/>
 <topicref href="c_ios_enable.html#send" format="html" navtitle="傳送基本推送通知"
 scope="peer"/>
-<topicref href="c_ios_enable.html#next_steps_tags" format="html" navtitle="後續步驟" scope="peer"/>
+<topicref href="c_ios_enable.html#next_steps_tags" format="html" navtitle="後續步驟" scope="peer"
+/>
 </topicref>
 </topicref>
 <topicref href="c_tag_basednotifications.html" outputclass="subsection" chunk="to-content"

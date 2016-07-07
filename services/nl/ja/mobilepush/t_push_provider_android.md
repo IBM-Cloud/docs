@@ -23,32 +23,31 @@ API キーは、Push Notification Service が安全に保管し、GCM サーバ�
 	![プロジェクトの作成](images/gcm_createproject.jpg)
 
 3. **「プロジェクト名」**に、プロジェクトの名前を入力し、**「作成」**ボタンをクリックします。
-4. **「ホーム」**をクリックして、プロジェクト番号を表示します。
-プロジェクト番号を記録してください。
+4. **「ホーム」**をクリックして、プロジェクト番号を表示します。プロジェクト番号を記録してください。
 
 	![GCM プロジェクト番号](images/gcm_projectnumber.jpg)
 
 	**注**: プロジェクトを作成すると、プロジェクト番号 (送信側 ID) が作成されます。この番号を使用して、Push ダッシュボードの画面上で Push Notification Service をセットアップします。
-
 
 5. **「API と認証」**をクリックし、**「Mobile API」**セクションで**「Cloud Messaging for Android」**をクリックします。
 
 	![API](images/gcm_mobileapi.jpg)
 
 6. **「API」**をクリックし、次に**「API を有効にする」**ボタンをクリックして、ご使用のプロジェクトに対する API キーを作成します。
+
 	![API を有効にする](images/gcm_enable_api.jpg)
 
 7. **「API と認証」->「資格情報」**画面に移動します。**「認証情報を追加」**をクリックしてから、**「API キー」**をクリックします。
+
 	![API 資格情報](images/api_credentials.jpg)
 
 8. **「サーバーキー」**オプションを選び、Bluemix Push ダッシュボードで使用することになる GCM API キーを生成します。
-
 9. **「名前」**フィールドで、サーバー API キーの名前を入力します。
 
 	![GCM サーバー・キー](images/gcm_serverkey.jpg)
 
-10. **「作成」**ボタンをクリックします。API キーが表示されます。
-
+10. **「作成」**ボタンをクリックします。
+API キーが表示されます。
 
 	![GCM API キー](images/gcm_apikey.jpg)
 

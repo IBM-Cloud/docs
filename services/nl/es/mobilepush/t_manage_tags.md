@@ -22,11 +22,11 @@ Las notificaciones basadas en etiquetas son mensajes de notificación que están
 1. Pulse el botón **Crear etiqueta** +.   
 
    a. En el campo **Nombre**, especifique el nombre de la etiqueta. Por ejemplo, "cupones".
-   
+
    b. En el campo **Descripción**, especifique una descripción de las etiquetas.
-   
+
    c. Pulse **Guardar**.
-   
+
 1. En el área **Fragmentos de código**, seleccione la plataforma para la aplicación
       para móviles.
 1. Modifique los fragmentos de código para manejar errores y, a continuación, copiar los fragmentos de código para cada etiqueta
@@ -68,14 +68,14 @@ Utilice la API **getTags** siguiente para obtener una lista de etiquetas disponi
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-    public void onSuccess(List<String> tags) { 
+   public void onSuccess(List<String> tags){
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
    subscribeToTag();   
   }    
   @Override    
-  public void onFailure(MFPPushException ex) {
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -129,9 +129,9 @@ Copie los siguientes fragmentos de código en la aplicación iOS desarrollada ut
 Utilice la API **retrieveAvailableTags** siguiente para obtener una lista de etiquetas disponibles a las que está suscrito el dispositivo.
 
 ```
-//Get a list of available tags to which the device can subscribe 
+//Get a list of available tags to which the device can subscribe
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){ 
+^(IMFResponse *response, NSError *error){
  if(error){    
    [self updateMessage:error.description];  
  } else {
@@ -142,7 +142,7 @@ Utilice la API **retrieveAvailableTags** siguiente para obtener una lista de eti
 }
 }];
 ```
-       
+
 Utilice la API **retrieveSubscriptions** para obtener una lista de etiquetas a las que está suscrito
        el dispositivo.
 
@@ -192,7 +192,7 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
 
-        print( "Response during retrieving subscribed tags : \(response.description)")
+        print( "Response during retrieving subscribed tags : \(response?.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
     }
     else {
@@ -215,7 +215,7 @@ Copie y pegue este fragmento de código en la aplicación para móviles de Andro
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-  public void onFailure(MFPPushException ex) {
+    public void onFailure(MFPPushException ex) {
     updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
@@ -276,7 +276,7 @@ Utilice la API **unsubscribeFromTags** para anular la suscripción a una etiquet
 ```
 [push unsubscribeFromTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-   if(error){
+   if (error){
        [self updateMessage:error.description];
  } else {
        NSDictionary* subStatus = [[NSDictionary alloc]init];
@@ -296,12 +296,12 @@ Utilice la API **subscribeToTags** para suscribirse a una etiqueta.
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) { 
+	if (error != nil) {
 		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-} 
+}
 ```
 
 **Eliminar suscripción a etiquetas**
@@ -312,7 +312,7 @@ Utilice la API **unsubscribeFromTags** para anular la suscripción a una etiquet
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
 
     if error.isEmpty {
-        print( "Response during unsubscribed tags : \(response.description)")
+        print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {

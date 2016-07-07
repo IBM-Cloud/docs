@@ -15,7 +15,10 @@ Managing notifications
 -->
  <!--CLM PRODUCTION NAVIGATION: -->
  <!--CLM NEW NAVIGATION : -->
- <topicref href="index.html" linking="none" navtitle="푸시 알림" format="html" scope="peer">
+ <topicref href="index.html" linking="none" navtitle="푸시 알림" format="html" scope="peer"
+locktitle="yes">
+<topicref href="index.html" navtitle="시작하기"
+format="html" scope="peer" locktitle="yes"> </topicref>
 <topicref href="c_overview_push.html" navtitle="정보" linking="sourceonly" format="html"
 outputclass="subsection" scope="peer">
 <topicref href="c_overview_push.html#overview_push_process" format="html"
@@ -72,7 +75,8 @@ navtitle="iOS 애플리케이션 및 디바이스 등록" scope="peer"/>
 navtitle="iOS 디바이스에서 푸시 알림 수신" scope="peer"/>
 <topicref href="c_ios_enable.html#send" format="html" navtitle="기본 푸시 알림 전송"
 scope="peer"/>
-<topicref href="c_ios_enable.html#next_steps_tags" format="html" navtitle="다음 단계" scope="peer"/>
+<topicref href="c_ios_enable.html#next_steps_tags" format="html" navtitle="다음 단계" scope="peer"
+/>
 </topicref>
 </topicref>
 <topicref href="c_tag_basednotifications.html" outputclass="subsection" chunk="to-content"

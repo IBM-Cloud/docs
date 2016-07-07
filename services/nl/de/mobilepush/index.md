@@ -11,13 +11,13 @@ copyright:
 {:codeblock:.codeblock}
 
 # Einführung in {{site.data.keyword.mobilepushshort}}
-
 {: #gettingstartedtemplate}
-
+*Letzte Aktualisierung: 14. Juni 2016*
+{: .last-updated}
 
 {:shortdesc}
 
-Push Notifications Service bietet eine gemeinsame Plattform zum Senden und Verwalten von mobilen Push-Benachrichtigungen, die als Ziel iOS- und Android-Plattformen haben. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten und zur Geräteplattform und führt das Senden von Push-Benachrichtigungen an die Benutzer aus. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID') sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und  [REST-APIs](https://mobile.{DomainName}/imfpushrestapidocs/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
+Der Push-Benachrichtigungsservice bietet eine gemeinsame Plattform zum Senden und Verwalten von mobilen Push-Benachrichtigungen, die als Ziel iOS- und Android-Plattformen haben. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten und zur Geräteplattform und führt das Senden von Push-Benachrichtigungen an die Benutzer aus. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID') sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und  [REST-APIs](https://mobile.{DomainName}/imfpushrestapidocs/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
 
 In diesem Abschnitt wird beschrieben, wie einfache Push-Benachrichtigungen eingerichtet werden. Wenn Sie eine einfache Benachrichtigung verwenden, wird die Benachrichtigung als Rundsendung versendet und nicht mithilfe von Tags an einen bestimmten Benutzerkreis.
 
@@ -32,15 +32,17 @@ In diesem Abschnitt wird beschrieben, wie einfache Push-Benachrichtigungen einge
 
 ## Lernprogramme und Beispiele {:id="samples"}
 {: #samples}
-* [Android helloPush sample application](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/){: new_window}
-- [Cordova sample application](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush){: new_window}
-* [iOS helloPush sample application](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush/){: new_window}
+* [helloPush-Beispielanwendung für Android](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/){: new_window}
+- [Cordova-Beispielanwendung](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush){: new_window}
+* [helloPush-Beispielanwendung für iOS (Obj-C)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush/){: new_window}
+* [helloPush-Beispielanwendung für iOS (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush){: new_window}
 
 ## Software-Development-Kit (SDK)
 {: #sdk}
 * [Android-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push){: new_window}
 * [Cordova-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}
-* [iOS-SDK](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [iOS-SDK (Obj-C)](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [iOS-SDK (Swift)](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/zip/master){: new_window}
 
 ## API-Referenz
 {: #api}

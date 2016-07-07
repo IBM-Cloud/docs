@@ -20,11 +20,11 @@ Tagbasierte Benachrichtigungen sind Benachrichtigungen, die als Ziel alle Gerät
 1. Klicken Sie auf die Schaltfläche **Tag erstellen**.   
 
    a. Geben Sie in das Feld **Name** den Namen für den Tag ein. Beispiel: "Coupons".
-   
+
    b. Geben Sie in das Feld **Beschreibung** eine Beschreibung für den Tag ein.
-   
+
    c. Klicken Sie auf  **Speichern**.
-   
+
 1. Wählen Sie im Bereich **Code-Snippets** die Plattform für Ihre mobile Anwendung aus.
 1. Ändern Sie die Code-Snippets so, dass Fehler verarbeitet werden, und kopieren Sie anschließend die Code-Snippets für jeden Tag in Ihre mobile Anwendung.
 
@@ -58,14 +58,14 @@ Verwenden Sie die API **getTags**, um eine Liste der verfügbaren Tags abzurufen
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-    public void onSuccess(List<String> tags) { 
+   public void onSuccess(List<String> tags){
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
    subscribeToTag();   
   }    
   @Override    
-  public void onFailure(MFPPushException ex) {
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -118,9 +118,9 @@ Kopieren Sie die folgenden Code-Snippets in Ihre mit Objective-C entwickelte iOS
 Verwenden Sie die API **retrieveAvailableTags**, um eine Liste der verfügbaren Tags abzurufen, die das Gerät subskribieren kann.
 
 ```
-//Get a list of available tags to which the device can subscribe 
+//Get a list of available tags to which the device can subscribe
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){ 
+^(IMFResponse *response, NSError *error){
  if(error){    
    [self updateMessage:error.description];  
  } else {
@@ -131,7 +131,7 @@ Verwenden Sie die API **retrieveAvailableTags**, um eine Liste der verfügbaren 
 }
 }];
 ```
-       
+
 Verwenden Sie die API **retrieveSubscriptions**, um eine Liste der Tags abzurufen, die das Gerät subskribiert hat.
 
 
@@ -180,7 +180,7 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
 
-        print( "Response during retrieving subscribed tags : \(response.description)")
+        print( "Response during retrieving subscribed tags : \(response?.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
     }
     else {
@@ -203,7 +203,7 @@ Kopieren Sie das folgende Code-Snippet und fügen Sie es in Ihre mobile Android-
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-  public void onFailure(MFPPushException ex) {
+    public void onFailure(MFPPushException ex) {
     updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
@@ -284,12 +284,12 @@ Verwenden Sie die API **subscribeToTags** zum Subskribieren eines Tags.
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) { 
+	if (error != nil) {
 		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-} 
+}
 ```
 
 **Subskribierung von Tags aufheben**
@@ -300,7 +300,7 @@ Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskribierung ei
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
 
     if error.isEmpty {
-        print( "Response during unsubscribed tags : \(response.description)")
+        print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {

@@ -30,19 +30,19 @@ Cordova アプリケーションをさらに開発するために、クライア
 1. Git のコマンド・ライン・ツールをインストールします。Windows では、必ず **「Windows コマンド・プロンプトから Git を実行する (Run Git from the Window Command Prompt)」**オプションを選択してください。このツールのダウンロードとインストールの方法については、[Git](https://git-scm.com/downloads) を参照してください。
 
 1. Node.js と Node Package Manager (NPM) ツールをインストールします。NPM コマンド・ライン・ツールは Node.js とバンドルされています。Node.js のダウンロードとインストールの方法については、[Node.js](https://nodejs.org/en/download/) を参照してください。
-1. コマンド・ラインから、**npm install -g cordova** コマンドを使用して、Cordova コマンド・ライン・ツールをインストールします。これは、Cordova の Push プラグインを使用するために必要です。
-Cordova のインストールと Cordova アプリのセットアップの方法については、[Cordova Apache](https://cordova.apache.org/#getstarted) を参照してください。
+1. コマンド・ラインから、**npm install -g cordova** コマンドを使用して、Cordova コマンド・ライン・ツールをインストールします。これは、Cordova の Push プラグインを使用するために必要です。Cordova のインストールと Cordova アプリのセットアップの方法については、[Cordova Apache](https://cordova.apache.org/#getstarted) を参照してください。
 
- **注**: Cordova の Push プラグインの readme ファイルを確認する場合は、[https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push) にアクセスしてください。
+	**注**: Cordova の Push プラグインの readme ファイルを確認するには、[https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push) にアクセスしてください。
+
 
 1. Cordova アプリを作成するフォルダーに移動し、次のコマンドを実行して Cordova アプリケーションを作成します。
 既存の Cordova アプリがある場合は、ステップ 3 に進みます。
 
 
- ```
+```
 cordova create your_app_name
-	cd your_app_name
-	```
+cd your_app_name
+```
 1. オプション: (オプション) **config.xml** ファイルを編集し、<name> エレメント内のアプリケーション名を、デフォルトの HelloCordova という名前ではなく、自分で選択した名前に変更します。
 
 	**注**: 正しいバンドル ID を指定してください。正しいバンドル ID を指定しないと、Xcode に次のエラー・メッセージが表示されます。
@@ -52,7 +52,7 @@ cordova create your_app_name
 	この問題を修正するには、Xcode または Cordova アプリ **config.xml** ファイルに正しいバンドル ID を指定します。
 
 1. サポートされる最低レベルの API またはデプロイメント・ターゲット (Deployment Target) の宣言を、Cordova アプリケーションの config.xml ファイルに追加します。minSdkVersion の値は、15 より高くなければなりません。targetSdkVersion の値は、常に、Google から入手可能な最新の Android SDK を反映している必要があります。
-	* **Android** - ご使用のエディターで config.xml ファイルを開き、```<platform name="android">``` エレメントを最低レベルのターゲット SDK バージョンに更新します。
+	* **Android** - ご使用のエディターで config.xml ファイルを開き、`<platform name="android">` エレメントを最低レベルのターゲット SDK バージョンに更新します。
 
 	```
 	<!-- add deployment target declaration -->
@@ -76,10 +76,9 @@ cordova create your_app_name
 	cordova platform add ios@3.9.0
 	cordova platform add android
 	```
-1. Cordova アプリケーションのルート・ディレクトリーで、以下のコマンドを入力して Cordova の Push プラグイン **cordova plugin add ibm-mfp-push** をインストールします。
+1. Cordova アプリケーションのルート・ディレクトリーで、コマンド **cordova plugin add ibm-mfp-push** を入力して Cordova の Push プラグインをインストールします。
 
 	追加したプラットフォームに応じて、以下のような内容が表示されます。
-
 
 	```
 	Installing "ibm-mfp-push" for android
@@ -88,7 +87,6 @@ cordova create your_app_name
 1. *your-app-root-folder* から、コマンド **cordova plugin list** を使用して、Cordova の Core および Push のプラグインが正常にインストールされたことを確認します。
 
 	追加したプラットフォームに応じて、以下のような内容が表示されます。
-
 
 	```
 	ibm-mfp-core 1.0.0 "MFPCore"
@@ -108,8 +106,7 @@ cordova create your_app_name
 	//#import <IMFPush/IMFPushClient.h>
 	//#import <IMFPush/IMFResponse+IMFPushCategory.h>
 	```
-	e. Xcode で、アプリケーションをビルドして実行します。
-1. (Android のみ)- コマンド **cordova build android** を使用して、Android プロジェクトをビルドします。
+	e. Xcode で、アプリケーションをビルドして実行します。1. (Android のみ)- コマンド **cordova build android** を使用して、Android プロジェクトをビルドします。
 
 	**注**: Android Studio でプロジェクトを開く前に、最初に Cordova CLI を使用して Cordova アプリケーションをビルドする必要があります。そうしないと、ビルド・エラーが発生します。
 
@@ -117,23 +114,23 @@ cordova create your_app_name
 ## Cordova プラグインの初期化
 {: #cordova_initialize}
 
-Push Notification Service の Cordova プラグインを使用するには、事前に、アプリケーション経路とアプリケーション GUID を受け渡すことでプラグインを初期化しておく必要があります。
-プラグインを初期化したら、Bluemix ダッシュボードで作成したサーバー・アプリに接続することができます。Cordova プラグインは、Cordova アプリが Bluemix サービスと通信できるようにするための Android および iOS のクライアント SDK のラッパーです。
+Push Notification Service の Cordova プラグインを使用するには、事前に、アプリケーション経路とアプリケーション GUID を受け渡すことでプラグインを初期化しておく必要があります。プラグインを初期化したら、Bluemix ダッシュボードで作成したサーバー・アプリに接続することができます。Cordova プラグインは、Cordova アプリが Bluemix サービスと通信できるようにするための Android および iOS のクライアント SDK のラッパーです。
 
 1. 以下のコード・スニペットをメイン JavaScript ファイル (通常、**www/js** ディレクトリーの下にある) にコピー・アンド・ペーストして、BMSClient を初期化します。
 
 	```
-	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");```
-1. Bluemix の Route パラメーターと appGUID パラメーターを使用するように、コード・スニペットを変更します。Bluemix アプリケーション・ダッシュボード内の**「モバイル・オプション」**リンクをクリックして、アプリケーション経路とアプリ GUID を取得します。この経路とアプリ GUID の値を、```BMSClient.initialize``` コード・スニペットのパラメーターとして使用します。
+	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
+	```
+1. Bluemix の Route パラメーターと appGUID パラメーターを使用するように、コード・スニペットを変更します。Bluemix アプリケーション・ダッシュボード内の**「モバイル・オプション」**リンクをクリックして、アプリケーション経路とアプリ GUID を取得します。この経路とアプリ GUID の値を、`BMSClient.initialize` コード・スニペットのパラメーターとして使用します。
 
-	**注**: Cordova CLI (例えば、Cordova の create app-name コマンド) を使用して Cordova アプリを作成した場合、この Javascript コードを **index.js** ファイルの ```nDeviceReady: function()``` 機能内の ```app.receivedEvent`` 機能の後に置いて、BMS クライアントを初期化します。
+	**注**: Cordova CLI (例えば、Cordova の create app-name コマンド) を使用して Cordova アプリを作成した場合、この Javascript コードを **index.js** ファイルの `onDeviceReady: function()` 関数内の `app.receivedEvent` 関数の後に置いて、BMS クライアントを初期化します。
 
 ```
 onDeviceReady: function() {
     app.receivedEvent('deviceready');
-	    BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
-	    },
-	```
+    BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
+    },
+```
 
 ## デバイスの登録
 {: #cordova_register}
@@ -185,7 +182,7 @@ MFPPush.registerDevice({}, success, failure);```
 **var token = JSON.parse(response).token**
 
 
-使用可能なキーは、```token```、```userId``、および ```deviceId`` です。
+使用可能なキーは、`token`、`userId`、および `deviceId` です。
 
 以下の JavaScript コード・スニペットは、Bluemix Mobile Services クライアント SDK を初期化し、デバイスを Push Notification Service に登録し、プッシュ通知を listen する方法を示しています。このコードを Javascript ファイルに置きます。
 
@@ -208,8 +205,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 コードは **onDeviceReady: function()** 内に置きます。
 
 ```
-onDeviceReady: function() {
-     app.receivedEvent('deviceready');
+onDeviceReady: function() {app.receivedEvent('deviceready');
      BMSClient.initialize("https://http://myroute_mybluemix.net","my_appGuid");
      var success = function(message) { console.log("Success: " + message); };
      var failure = function(message) { console.log("Error: " + message); };
@@ -224,9 +220,7 @@ onDeviceReady: function() {
      var notification = function(notif){
          alert (notif.message);
      };
-     MFPPush.registerNotificationsCallback(notification);
-
- }
+     MFPPush.registerNotificationsCallback(notification);}
 ```
 
 ### Objective-C
@@ -235,7 +229,6 @@ onDeviceReady: function() {
 
 ```
 	// Register the device token with Bluemix Push Notification Service
-
 	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
 	}
@@ -318,9 +311,7 @@ action-loc-key - このストリングは、現行ローカリゼーションに
 
 ```
 // Handle receiving a remote notification
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-
- [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {[[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
 }
 ```
 
@@ -338,18 +329,14 @@ action-loc-key - このストリングは、現行ローカリゼーションに
 
 ```
 // Handle receiving a remote notification
-funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){
-
-    CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
+funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
 }
 ```
 
 ```
 // Handle receiving a remote notification on launch
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-
-    CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
+CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 }
 
 ```
@@ -373,9 +360,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 2. **「通知の作成 (Create your Notification)」**で、メッセージを入力して、**「送信」**をクリックします。
 3. デバイスが通知を受信していることを確認します。
 
-	次のスクリーン・ショットは、Android デバイスおよび iOS デバイス上のフォアグラウンドでプッシュ通知を処理しているアラート・ボックスを示しています。
-
-	![Android 上のフォアグラウンドのプッシュ通知](images/Android_Screenshot.jpg)
+	次のスクリーン・ショットは、Android デバイスおよび iOS デバイス上のフォアグラウンドでプッシュ通知を処理しているアラート・ボックスを示しています。	![Android 上のフォアグラウンドのプッシュ通知](images/Android_Screenshot.jpg)
 
 	![iOS 上のフォアグラウンドのプッシュ通知](images/iOS_Screenshot.jpg)
 
@@ -390,5 +375,6 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 基本通知を正常にセットアップしたら、タグ・ベースの通知および詳細オプションの構成を行うことができます。
 
 
-以下の Push Notifications Service の機能をご使用のアプリに追加します。タグ・ベースの通知を使用する場合は、[タグ・ベースの通知](c_tag_basednotifications.html)を参照してください。
+以下の Push Notifications Service の機能を、ご使用のアプリに追加します。
+タグ・ベースの通知を使用する場合は、[タグ・ベースの通知](c_tag_basednotifications.html)を参照してください。
 拡張通知オプションを使用する場合は、[拡張プッシュ通知](t_advance_notifications.html)を参照してください。

@@ -19,7 +19,7 @@ Android アプリケーションによるプッシュ通知の受け取りとデ
 
 Bluemix® モバイル・サービスの Push SDK は、Gradle を使用して追加できます。Gradle は自動的に成果物をリポジトリーからダウンロードして、Android アプリケーションで使用できるようにします。Android Studio および Android Studio SDK を正しくセットアップしてください。システムのセットアップ方法について詳しくは、[Android Studio 概要](https://developer.android.com/tools/studio/index.html)を参照してください。Gradle については、[Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html) を参照してください。
 
-1. Android Studio で、モバイル・アプリケーションを作成して開いてから、アプリケーションの **build.gradle** ファイルを開きます。次に、以下の依存関係をモバイル・アプリケーションに追加します。これらの import ステートメントは、コード・スニペットに必要です。
+1. Android Studio で、モバイル・アプリケーションを作成して開いてから、アプリケーションの **build.gradle** ファイルを開きます。次に、以下の依存関係をモバイル・アプリケーションに追加します。これらのインポート・ステートメントは、以下のコード・スニペットに必要です。
 
 	```
 	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
@@ -35,8 +35,8 @@ Bluemix® モバイル・サービスの Push SDK は、Gradle を使用して�
 
 	```
 	dependencies {
-	  compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:1.+' 
-compile 'com.google.android.gms:play-services:7.8.0' 
+	  compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:1.+'
+	  compile 'com.google.android.gms:play-services:7.8.0' 
 }  
 	```
 1. **AndroidManifest.xml** ファイルに、以下のアクセス権を追加します。サンプル・マニフェストを表示するには、[Android helloPush Sample Application (Android helloPush サンプル・アプリケーション)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)を参照してください。 サンプル Gradle ファイルを表示するには、[Sample Build Gradle file (サンプル Build Gradle ファイル)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle) を参照してください。
@@ -45,11 +45,11 @@ compile 'com.google.android.gms:play-services:7.8.0'
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="com.ibm.clientsdk.android.app.permission.C2D_MESSAGE" />
 	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-<uses-permission android:name="android.permission.WAKE_LOCK" />
-<uses-permission android:name="android.permission.GET_ACCOUNTS" />
-<uses-permission android:name="android.permission.USE_CREDENTIALS" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 	```
 
 	ここに、[Android のアクセス権](http://developer.android.com/guide/topics/security/permissions.html)の詳しい説明があります。
@@ -61,7 +61,7 @@ compile 'com.google.android.gms:play-services:7.8.0'
 		<action android:name="<Your_Android_Package_Name.IBMPushNotification"/>   
 		<category  android:name="android.intent.category.DEFAULT"/>
 	</intent-filter>
-	```
+```
 	**注**: 上記のアクション内の *Your_Android_Package_Name* を、アプリケーションで使用されているアプリケーション・パッケージ名に置き換えてください。
 
 1. RECEIVE イベント通知のための Google Cloud Messaging (GCM) インテント・サービスおよびインテント・フィルターを追加します。
@@ -129,7 +129,7 @@ push.initialize(getApplicationContext());
 ## Android デバイスの登録
 {: #android_register}
 
-```IMFPush.register()``` API を使用して、Push Notification Service にデバイスを登録します。Android デバイスを登録する場合、まず、Google Cloud Messaging (GCM) 情報を Bluemix プッシュ・サービス構成ダッシュボードに追加します。詳しくは、[Google Cloud Messaging の資格情報の構成](t_push_provider_android.html)を参照してください。
+`IMFPush.register()` API を使用して、Push Notification Service にデバイスを登録します。Android デバイスを登録する場合、まず、Google Cloud Messaging (GCM) 情報を Bluemix プッシュ・サービス構成ダッシュボードに追加します。詳しくは、[Google Cloud Messaging の資格情報の構成](t_push_provider_android.html)を参照してください。
 
 以下のコード・スニペットを Android モバイル・アプリケーションにコピーして貼り付けます。
 
@@ -142,8 +142,8 @@ push.initialize(getApplicationContext());
 	           //handle success here
 	    }
 	    @Override
-    public void onFailure(MFPPushException ex) {
-         //handle failure here
+	    public void onFailure(MFPPushException ex) {
+	    //handle failure here
 	    }
 	});
 ```
@@ -175,44 +175,26 @@ notificationListener オブジェクトを Push に登録するには、**MFPPus
 	   }
 	}
 ```
-2. プロジェクトをビルドし、デバイスまたはエミュレーター上で実行します。register() メソッド内で応答リスナーに onSuccess() メソッドを呼び出す際に、デバイスが Push Notification Service に正常に登録されていることを確認します。この時点で、『基本プッシュ通知の送信』に説明されている方法でメッセージを送信できます。
-3. デバイスが通知を受信していることを確認します。アプリケーションがフォアグラウンドにある場合は、通知は **MFPPushNotificationListener** により処理されます。アプリケーションがバックグラウンドにある場合は、メッセージが通知バーに表示されます。
-
-
-
-## 基本プッシュ通知の送信
+2. プロジェクトをビルドし、デバイスまたはエミュレーター上で実行します。register() メソッド内で応答リスナーに対する onSuccess() メソッドが呼び出される際、このメソッドは、デバイスが Push Notification Service に正常に登録されていることを確認します。この時点で、『基本プッシュ通知の送信』に説明されている方法でメッセージを送信できます。3. デバイスが通知を受信していることを確認します。アプリケーションがフォアグラウンドにある場合は、通知は **MFPPushNotificationListener** により処理されます。アプリケーションがバックグラウンドにある場合は、メッセージが通知バーに表示されます。
+## Sending basic push notifications
 {: #send}
 
-アプリケーションを開発したら、(タグ、バッジ、追加のペイロード、音声ファイルを使用することなく) 基本プッシュ通知を送信できます。
-
-
-基本プッシュ通知の送信を行います。
-
-1. **「対象者の選択 (Choose the Audience)」**で、**「すべてのデバイス (All Devices)」**、またはプラットフォームに従って**「iOS デバイスのみ (Only iOS devices)」**または**「Android デバイスのみ (Only Anroid devices)」**のいずれかの対象者を選択します。 
+アプリケーションを開発したら、(タグ、バッジ、追加のペイロード、音声ファイルを使用することなく) 基本プッシュ通知を送信できます。基本プッシュ通知の送信を行います。1. **「対象者の選択 (Choose the Audience)」**で、**「すべてのデバイス (All Devices)」**、またはプラットフォーム別に**「iOS デバイスのみ (Only iOS devices)」**または**「Android デバイスのみ (Only Anroid devices)」**のいずれかの対象者を選択します。
 	**注**: **「すべてのデバイス (All Devices)」**オプションを選択すると、プッシュ通知をサブスクライブしているすべてのデバイスが通知を受け取ることになります。
-
-
-	![「通知」画面](images/tag_notification.jpg)
+![「通知」画面](images/tag_notification.jpg)
 
 2. **「通知の作成 (Create your Notification)」**で、メッセージを入力して、**「送信」**をクリックします。
-3. デバイスが通知を受信していることを確認します。
-
-	次のスクリーン・ショットは、Android デバイスおよび iOS デバイス上のフォアグラウンドでプッシュ通知を処理しているアラート・ボックスを示しています。
-
-	![Android 上のフォアグラウンドのプッシュ通知](images/Android_Screenshot.jpg)
+3. デバイスが通知を受信していることを確認します。次のスクリーン・ショットは、Android デバイスおよび iOS デバイス上のフォアグラウンドでプッシュ通知を処理しているアラート・ボックスを示しています。![Android 上のフォアグラウンドのプッシュ通知](images/Android_Screenshot.jpg)
 
 	![iOS 上のフォアグラウンドのプッシュ通知](images/iOS_Screenshot.jpg)
 
 	次のスクリーン・ショットは、Android のバックグラウンドでのプッシュ通知を示しています。
 	![Android 上のバックグラウンドのプッシュ通知](images/background.jpg)
 
-
-
-## 次のステップ
+## Next steps
 {: #next_steps_tags}
 
 基本通知を正常にセットアップしたら、タグ・ベースの通知および詳細オプションの構成を行うことができます。
-
-
-以下の Push Notifications Service の機能をご使用のアプリに追加します。タグ・ベースの通知を使用する場合は、[タグ・ベースの通知](c_tag_basednotifications.html)を参照してください。
+以下の Push Notifications Service の機能を、ご使用のアプリに追加します。
+タグ・ベースの通知を使用する場合は、[タグ・ベースの通知](c_tag_basednotifications.html)を参照してください。
 拡張通知オプションを使用する場合は、[拡張プッシュ通知](t_advance_notifications.html)を参照してください。

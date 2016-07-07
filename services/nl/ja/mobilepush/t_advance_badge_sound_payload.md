@@ -31,13 +31,14 @@ iOS のバッジ、音声および追加の JSON ペイロードを構成しま�
 
 ###Android
 
-```
-"settings": {
+Android アプリケーションの `res/raw` ディレクトリーに音声ファイルを追加します。通知の送信中に、プッシュ通知の音声フィールドに音声ファイル名を追加します。
 
-     "gcm" : { 
-"sound":"tt.wav",
-	  }
-	 }  
+```
+"settings":{
+     "gcm":{
+     "sound":"tt.wav",
+  }
+ }  
 ```
 	
 	
@@ -45,32 +46,31 @@ iOS のバッジ、音声および追加の JSON ペイロードを構成しま�
 
 ```
 "settings": {
-
-     "apns" : { 
-"badge": 10,
-	      "sound": "tt.wav",
-	  }
-	}
+     "apns" : {
+      "badge": 10,
+      "sound": "tt.wav",
+  }
+}
 ``` 		
 **追加ペイロード** - このペイロードは、任意のキーと値のペアにすることができますが、プッシュ通知で送信する JSON オブジェクトでなければなりません。
 
 ```
-{"key":"value", "key2":"value2"}```
+{"key":"value", "key2":"value2"}
+```
 
 
-## Android 通知の保留  
+## Android 通知の保留 
 {: #hold-notifications-android}
 
-アプリケーションがバックグラウンドになる場合、恐らく、アプリケーションに送信された通知を Push が保留するようにする必要があります。通知を保留するには、プッシュ通知を処理しているアクティビティーの onPause() メソッドで hold() メソッドを呼び出します。
+アプリケーションがバックグラウンドになる場合、恐らく、アプリケーションに送信された通知をプッシュ通知が保留するようにする必要があります。通知を保留するには、プッシュ通知を処理しているアクティビティーの onPause() メソッドで hold() メソッドを呼び出します。
 
 ```
 @Override
 protected void onPause() {
     super.onPause();
 
-
     if (push != null) {
-push.hold();
+        push.hold();
     }
 } 
 ```
@@ -93,7 +93,6 @@ push.hold();
 	     acceptAction.destructive = NO;
 	  acceptAction.authenticationRequired = NO; */
 	  
-	  
 	 ```
    Swift
 
@@ -104,7 +103,7 @@ push.hold();
 	acceptAction.title = "Accept"
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground*/
+	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 	```
 	
 	```
@@ -160,9 +159,7 @@ push.hold();
 	```
 	//For Objective-C
 
-
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-
 
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
@@ -171,11 +168,9 @@ push.hold();
 
 	```
 	//For Swift
-	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-
-	application.registerUserNotificationSettings(notificationSettings)
-	application.registerForRemoteNotifications()
+	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications()
 	```
 	
 ## アクション可能 iOS 通知の処理  
@@ -199,7 +194,6 @@ push.hold();
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
-
       //must call completion handler when finished
       completionHandler()
   }

@@ -17,14 +17,14 @@ copyright:
 태그 기반 알림은 특정 태그를 구독하는 모든 디바이스를 대상으로 하는 알림 메시지입니다. 각 디바이스는 수에 관계 없이 태그를 구독할 수 있습니다. 태그가 삭제되면 구독자와 디바이스를 포함하여 해당 태그와 연관된 모든 정보가 삭제됩니다. 이 태그가 더 이상 존재하지 않고 클라이언트측에서 추가 조치가 필요하지 않으므로 이 태그에 대해 자동 구독 해지 조치가 필요하지 않습니다. 
 
 1. 푸시 대시보드에서 **태그** 탭을 선택하십시오. 
-1. + **태그 작성** 단추를 클릭하십시오.    
+1.  + **태그 작성** 단추를 클릭하십시오.    
 
    a. **이름** 필드에 태그 이름을 입력하십시오. 예를 들어, "coupons"를 입력하십시오. 
-   
+
    b. **설명** 필드에 태그 설명을 입력하십시오. 
-   
+
    c. **저장**을 클릭하십시오.
-   
+
 1. **코드 스니펫** 영역에서 모바일 애플리케이션에 대한 플랫폼을 선택하십시오. 
 1. 코드 스니펫을 수정하여 오류를 수정한 다음 각 태그의 코드 스니펫을 모바일 애플리케이션에 복사하십시오. 
 
@@ -58,14 +58,14 @@ copyright:
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-   public void onSuccess(List<String> tags) {
+   public void onSuccess(List<String> tags){
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
    subscribeToTag();   
   }    
   @Override    
-  public void onFailure(MFPPushException ex) {
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -100,14 +100,14 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 //Get a list of available tags to which the device can subscribe
 MFPPush.retrieveAvailableTags(function(tags) {
     alert(tags);
-}, null);
+ }, null);
 
 ```
 
 ```
 //Get a list of available tags to which the device is subscribed.
 MFPPush.getSubscriptionStatus(function(tags) {
-    alert(tags);
+alert(tags);
 }, null);
 ```
 
@@ -118,9 +118,9 @@ MFPPush.getSubscriptionStatus(function(tags) {
 디바이스가 구독할 수 있는 사용 가능 태그 목록을 가져오려면 다음 **retrieveAvailableTags** API를 사용하십시오.
 
 ```
-//Get a list of available tags to which the device can subscribe 
+//Get a list of available tags to which the device can subscribe
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){ 
+^(IMFResponse *response, NSError *error){
  if(error){    
    [self updateMessage:error.description];  
  } else {
@@ -131,9 +131,8 @@ MFPPush.getSubscriptionStatus(function(tags) {
 }
 }];
 ```
-       
-디바이스가 구독된 태그 목록을 가져오려면 **retrieveSubscriptions** API를 사용하십시오.
 
+디바이스가 구독된 태그 목록을 가져오려면 **retrieveSubscriptions** API를 사용하십시오.
 
 
 ```
@@ -181,7 +180,7 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
 
-        print( "Response during retrieving subscribed tags : \(response.description)")
+        print( "Response during retrieving subscribed tags : \(response?.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
     }
     else {
@@ -204,8 +203,8 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-  public void onFailure(MFPPushException ex) {
-    updateTextView("Error subscribing to Tag1.."
+    public void onFailure(MFPPushException ex) {
+         updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
   @Override
@@ -218,7 +217,7 @@ new MFPPushResponseListener<String>() {
 
 ```
 push.unsubscribe(tag, new MFPPushResponseListener<String>() {
-@Override
+ @Override
  public void onSuccess(String s) {
    updateTextView("Unsubscribing from tag");
    updateTextView("Successfully unsubscribed from tag . "+ tag);
@@ -265,7 +264,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 [push unsubscribeFromTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-   if(error){
+   if (error){
        [self updateMessage:error.description];
  } else {
        NSDictionary* subStatus = [[NSDictionary alloc]init];
@@ -286,11 +285,11 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
 	if (error != nil) {
-//error while subscribing to tags
+		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-} 
+}
 ```
 
 **태그 구독 해지**
@@ -301,7 +300,7 @@ push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
 
     if error.isEmpty {
-        print( "Response during unsubscribed tags : \(response.description)")
+        print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {
