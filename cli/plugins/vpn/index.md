@@ -10,47 +10,54 @@ copyright:
 {:shortdesc: .shortdesc}
 
 
-# IBM VPN CLI
+# {{site.data.keyword.vpn_short}} CLI plug-in for cf CLI
 *Last updated: 23 June 2016*
 {: .last-updated}
 
-You can use the command line interface (CLI) to configure and manage your IBM® Virtual Private Network (VPN) service. The IBM VPN CLI is a plug-in that is used with the Cloud Foundry CLI plug-in. The plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
 
-Before you begin, install the Cloud Foundry CLI. See [Cloud Foundry command line interface](https://console.{DomainName}/docs/cli/downloads.html) for details. 
+You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.Bluemix}} CLI plug-in. Both versions of the plug-in provide the same functionality.  
+{:shortdesc}
 
-##Install IBM VPN CLI Plug-in
-**Note:** If you have a previous version of the IBM VPN CLI plug-in that is installed, you must first uninstall it. Use the command: 
+The {{site.data.keyword.vpn_short}} plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
+
+The instructions that follow are for working with the Cloud Foundry (cf) CLI plug-in. To use the plug-in with the  {{site.data.keyword.Bluemix_notm}} CLI plug-in, see [{{site.data.keyword.vpn_short}} plug-in for {{site.data.keyword.Bluemix_notm}} CLI](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html).
+
+## Install the cf CLI plug-in  
+Before you begin, install the cf CLI. See [Cloud Foundry command line interface](https://console.{DomainName}/docs/cli/downloads.html) for details. 
+
+##Install the {{site.data.keyword.vpn_short}} CLI plug-in
+**Note:** If you have a previous version of the {{site.data.keyword.vpn_short}} CLI plug-in that is installed, you must first uninstall it. Use the command: 
 
 ```
 cf uninstall-plugin vpn
 ```  
 
-### Install Locally
+### Install locally
 
-1. Download the IBM VPN plug-in for your platform from [IBM Bluemix CLI Plug-in Repository](http://plugins.ng.bluemix.net).
-2. Install the IBM VPN plug-in by using the following command:  
-**Note:** Either switch to the location of the VPN plug-in or specify the path to the plug-in location.  
+1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from [IBM Bluemix CLI Plug-in Repository](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins).
+2. Install the {{site.data.keyword.vpn_short}} plug-in by using the following command:  
+**Note:** Either switch to the location of the {{site.data.keyword.vpn_short}} plug-in or specify the path to the plug-in location.  
 
-	* For MS Windows OS:
+	- For MS Windows OS:
 
 	```
 	cf install-plugin vpn_windows64.exe
 	```  
 
-	* For Apple MAC OS:
+	- For Apple MAC OS:
 
 	```
 	cf install-plugin vpn_mac_os_amd64
 	```  
 
-	* For Linux OS:
+	- For Linux OS:
 
 	```
 	cf install-plugin vpn_linuxamd64
 	```  
 
 
-### Install from Bluemix Repository  
+### Install from Bluemix repository
 
 1. Add the Bluemix repository into the Cloud Foundry CLI repositories. Use the following command:
 
@@ -62,7 +69,7 @@ cf uninstall-plugin vpn
 	```
 	cf install-plugin vpn -r bluemix
 	```
-##List of IBM VPN Service Commands
+##List of {{site.data.keyword.vpn_short}} service commands
 
 ### cf vpn-create connection
 
@@ -110,7 +117,7 @@ Remote endpoint IP address of the VPN tunnel.
 
 **-ike:** Name of the IKE policy.
 
-**-ipsec:** Name of the IPSec policy.
+**-ipsec:** Name of the IPsec policy.
 
 
 ### cf vpn-create ike
@@ -145,7 +152,7 @@ Name of the gateway.
 
 ### cf vpn-create ipsec
 
-Creates an IPSec policy.
+Creates an IPsec policy.
 
 ```
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -154,7 +161,7 @@ cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 {: #p3}
 
 **policy name:** 
-Name of the IPSec policy. 
+Name of the IPsec policy. 
 
 **gateway name:** 
 Name of the gateway. 
@@ -212,7 +219,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-Displays information about the current IPSec connections.
+Displays information about the current IPsec connections.
 
 ```
 cf vpn-show ipsecs
@@ -233,7 +240,7 @@ cf vpn-show ike <policy name>
 ```
 ### cf vpn-show ipsec
 
-Displays information about an IPSec connection.
+Displays information about an IPsec connection.
 
 ```
 cf vpn-show ipsec <policy name>
@@ -320,7 +327,7 @@ Preshared key.
 
 **-ike:** Name of the IKE policy.
 
-**-ipsec:** Name of the IPSec policy.
+**-ipsec:** Name of the IPsec policy.
 
 
 ### cf vpn-update ike
@@ -354,7 +361,7 @@ Name of the IKE policy.
 
 ### cf vpn-update ipsec
 
-Updates an IPSec policy.
+Updates an IPsec policy.
 
 ```
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value> -auth <authorization algorithm>
@@ -363,7 +370,7 @@ cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 {: #p7}
 
 **policy name:** 
-Name of the IPSec policy.
+Name of the IPsec policy.
 
 
 ##### Optional Parameters:

@@ -13,7 +13,7 @@ copyright:
 
 # On-premises configuration examples
 {:#onpremises}
-*Last updated: 17 March 2016*
+*Last updated: 14 June 2016*
 {: .last-updated}
 
 Your on-premises VPN gateway connects with the {{site.data.keyword.vpn_short}} gateway. You might need to modify the configuration of the on-premises gateway that you are using. 
@@ -29,8 +29,7 @@ Your on-premises VPN gateway connects with the {{site.data.keyword.vpn_short}} g
 
 The IBM VPN setup uses the following example configuration:
 
-* Single containers subnet: 172.31.0.0/16
-* Container groups subnet: 172.30.0.0/16
+* Container subnet: 172.31.0.0/16
 * IBM VPN gateway IP address: 134.168.8.164
 
 Your on-premises strongSwan setup uses the following example configuration:
@@ -59,11 +58,11 @@ Your on-premises strongSwan setup uses the following example configuration:
 		```  
 		{: screen}
 
-	2. Configure IPSec:  
+	2. Configure IPsec:  
 		* Edit the file: /etc/ipsec.conf  
 			```
-			root@rdmnm:~# more /etc/ipsec.conf  
-						
+			root@rdmnm:~# cat /etc/ipsec.conf  
+			
 			config setup
 					  
 			conn %default  
@@ -74,46 +73,47 @@ Your on-premises strongSwan setup uses the following example configuration:
 			 mobike=no  
 			 keyexchange=ikev1  
 			 dpdaction=clear  
-			 dpddelay=2s  
-			include /etc/ipsec.all.conf  
+			 dpddelay=200s  
+				
+			include /etc/ipsec.connection1.conf  
 			```
 			{: codeblock}
 
-		* Add the file: /etc/ipsec.all.conf  
+		* Add the file: /etc/ipsec.connection1.conf  
 			```
-			root@rdmnm:~# more /etc/ipsec.all.conf  
+			root@rdmnm:~# cat /etc/ipsec.connection1.conf  
 							
-			conn all  
+			conn connection1  
+			  type=tunnel
 			  auto=add  
+			  aggressive=no  
 			  esp=aes128-sha1-modp1024!  
 			  ike=aes128-sha1-modp1024!  
+			  rightsubnet=172.31.0.0/16  
 			  right=134.168.8.164  
-			  left=169.55.254.166  
 			  leftauth=psk  
 			  rightauth=psk  
-			  rightsubnet=172.31.0.0/16,172.30.0.0/16  
-			  leftsubnet=10.121.33.0/24  
-			  rightid=%any  
-			  leftid=169.55.254.166  
-			  ikelifetime=3600s  
-			  aggressive=no  
-			  keyexchange=ikev1  
+			  rightid=134.168.8.164  
 			  lifetime=3600s  
 			  dpddelay=30s  
 			  dpdaction=hold  
 			  dpdtimeout=120s  
+			  ikelifetime=3600s  
+			  left=169.55.254.166  
+			  leftsubnet=10.121.33.0/24  
+			  leftid=169.55.254.166  
 			```
 			{: codeblock}
 
 		* Edit file: /etc/ipsec.secrets 
  
 			```  
-			root@rdmnm:~# more   /etc/ipsec.secrets  
-				  : PSK "567890"
+			root@rdmnm:~# cat /etc/ipsec.secrets  
+				  : 169.55.254.166 134.168.8.164 : PSK "567890"
 			```
 			{: codeblock}
 
-	3. Restart IPSec:
+	3. Restart IPsec:
 
 		```
 		root@rdmnm:~# ipsec restart
@@ -121,7 +121,7 @@ Your on-premises strongSwan setup uses the following example configuration:
 		{: codeblock}
 
 	4. Verify configuration:
-		* Run the following command on the strongswan server to verify IPSec status:
+		* Run the following command on the strongswan server to verify IPsec status:
 
 			```  
 			root@rdmnm:~# ipsec status
@@ -130,15 +130,13 @@ Your on-premises strongSwan setup uses the following example configuration:
 
 			```
 			Security Associations (1 up, 0 connecting):
-			         all[1914]: ESTABLISHED 48 minutes ago, 169.55.254.166[169.55.254.166]...134.168.8.164[134.168.8.164]
-			         all{20}:  INSTALLED, TUNNEL, ESP in UDP SPIs: cb9c3056_i 1595f835_o
-			         all{20}:   10.121.33.0/24 === 172.30.0.0/16 
-			         all{19}:  INSTALLED, TUNNEL, ESP in UDP SPIs: c6e4ed78_i 8765e42d_o
-			         all{19}:   10.121.33.0/24 === 172.31.0.0/16
+			         connection1[1914]: ESTABLISHED 48 minutes ago, 169.55.254.166[169.55.254.166]...134.168.8.164[134.168.8.164]
+			         connection1{19}:  INSTALLED, TUNNEL, ESP in UDP SPIs: c6e4ed78_i 8765e42d_o
+			         connection1{19}:   10.121.33.0/24 === 172.31.0.0/16
 			```
 			{: screen}
 
-		* Verify the IBM VPN IPSec connection status on the IBM Bluemix service dashboard. In the **VPN Site Connections** section, the status field should display as **ACTIVE**.
+		* Verify the IBM VPN IPsec connection status on the IBM Bluemix service dashboard. In the **VPN Site Connections** section, the status field should display as **ACTIVE**.
 
 	5. Check the strongSwan syslog, if required:
 
@@ -161,8 +159,7 @@ Your on-premises strongSwan setup uses the following example configuration:
 
 The IBM VPN setup uses the following example configuration:
 
-* Single containers subnet: 172.31.0.0/16
-* Container groups subnet: 172.30.0.0/16
+* Container subnet: 172.31.0.0/16
 * IBM VPN gateway IP address: 129.41.255.27
 
 Your on-premises Vyatta setup uses the following example configuration:
@@ -332,7 +329,7 @@ Your on-premises Vyatta setup uses the following example configuration:
 		{: codeblock}
 
 		```
-		IPSec Process Running PID: 5633  
+		IPsec Process Running PID: 5633  
 		  
 		1 Active IPsec Tunnels  
 		  
@@ -417,7 +414,7 @@ Your on-premises Vyatta setup uses the following example configuration:
 
 	10. Check the IBM VPN service connection status:
 
-		Verify IBM VPN IPSec connection status on the IBM Bluemix service dashboard. In the **VPN Site Connections** section, the status field should display **ACTIVE**.
+		Verify IBM VPN IPsec connection status on the IBM Bluemix service dashboard. In the **VPN Site Connections** section, the status field should display **ACTIVE**.
 
 	11. Check the Vyatta syslog, if required:
 		
@@ -443,8 +440,7 @@ Your on-premises Vyatta setup uses the following example configuration:
 
 The IBM VPN setup uses the following example configuration:
 
-* Single containers subnet: 172.31.0.0/16
-* Container groups subnet: 172.30.0.0/16
+* Container subnet: 172.31.0.0/16
 * IBM VPN gateway IP address: 134.168.0.244
 
 Your on-premises SoftLayer GaaS setup uses the following example configuration:
@@ -467,8 +463,8 @@ Your on-premises SoftLayer GaaS setup uses the following example configuration:
 		* Public IP address on on-premises gateway: Enter the IBM VPN gateway public IP address.  
 		* On-premises Subnet: Enter the IBM VPN gateway subnet.  
 		* Delete the GRE tunnel subnet address.   
-		* Select **Advanced IPSec Configuration**. Configure as follows:  
-			* IPSec Encryption: aes-128  
+		* Select **Advanced IPsec Configuration**. Configure as follows:  
+			* IPsec Encryption: aes-128  
 			* Diffie-Hellman group: 2  
 			* ESP - Perfect Forward Security: Enable  
 			* Pre-shared Secret: Enter the preshared secret key that you had used while configuring IBM VPN.  
@@ -482,7 +478,7 @@ Your on-premises SoftLayer GaaS setup uses the following example configuration:
 2. [Configure the gateway](index.html#gateway).
 3. [Configure site connection](index.html#site).
 4. Verify the configuration.
-	1. Run the following command on Vyatta to verify the IPSec connection status:  
+	1. Run the following command on Vyatta to verify the IPsec connection status:  
 		```
 		vyatta@gateway# run show vpn ipsec sa
 		```
@@ -520,15 +516,15 @@ Your on-premises SoftLayer GaaS setup uses the following example configuration:
 		        dir in priority 1883 ptype main 
 		        tmpl src 134.168.0.224 dst 75.126.122.46
 		                proto esp reqid 16384 mode tunnel
-		src 10.86.88.128/26 dst 172.30.0.0/16 
+		src 10.86.88.128/26 dst 172.31.0.0/16 
 		        dir out priority 1883 ptype main 
 		        tmpl src 75.126.122.46 dst 134.168.0.224
 		                proto esp reqid 16388 mode tunnel
-		src 172.30.0.0/16 dst 10.86.88.128/26 
+		src 172.31.0.0/16 dst 10.86.88.128/26 
 		        dir fwd priority 1883 ptype main 
 		        tmpl src 134.168.0.224 dst 75.126.122.46
 		                proto esp reqid 16388 mode tunnel
-		src 172.30.0.0/16 dst 10.86.88.128/26 
+		src 172.31.0.0/16 dst 10.86.88.128/26 
 		        dir in priority 1883 ptype main 
 		        tmpl src 134.168.0.224 dst 75.126.122.46
 		                proto esp reqid 16388 mode tunnel
@@ -631,7 +627,7 @@ Your on-premises SoftLayer GaaS setup uses the following example configuration:
 		```
 		{: screen}
 
-	2. Verify the IBM VPN IPSec connection status on the IBM Bluemix service dashboard. In the **VPN Site Connections** section, the status field should display as **ACTIVE**.  
+	2. Verify the IBM VPN IPsec connection status on the IBM Bluemix service dashboard. In the **VPN Site Connections** section, the status field should display as **ACTIVE**.  
 5. Check the Vyatta syslog, if required:  
 
 	```
@@ -658,8 +654,7 @@ Your on-premises SoftLayer GaaS setup uses the following example configuration:
 
 The IBM VPN setup uses the following example configuration:
 
-* Single containers subnet: 172.31.0.0/16
-* Container groups subnet: 172.30.0.0/16
+* Container subnet: 172.31.0.0/16
 * IBM VPN gateway IP address: 134.168.6.5
 
 Your on-premises setup uses the following example configuration:
@@ -719,7 +714,7 @@ Your on-premises setup uses the following example configuration:
 		
 		group-policy IPsec internal
 		group-policy IPsec attributes
-		 vpn-tunnel-protocol IPSec l2tp-ipsec 
+		 vpn-tunnel-protocol IPsec l2tp-ipsec 
 		
 		tunnel-group 134.168.6.5 type ipsec-l2l
 		tunnel-group 134.168.6.5 general-attributes
