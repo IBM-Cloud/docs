@@ -5,13 +5,16 @@ copyright:
 
 ---
 
-#	{{site.data.keyword.mobilefoundation_short}} 개요
+#	{{site.data.keyword.mobilefoundation_short}} 정보
 {: #overview_mobilefoundation}
+
+*마지막 업데이트 날짜: 2016년 6월 15일*
+{: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} 서비스는 {{site.data.keyword.Bluemix}}에서 {{site.data.keyword.mobilefirst}} 서버 환경을 빠르게 설정하는 방법을 제공합니다. 그런 다음, 이 강력한 클라우드 환경에서 모바일 앱을
 개발, 테스트 및 관리할 수 있습니다.
 
-{{site.data.keyword.mobilefoundation_short}}은 Bluemix의 {{site.data.keyword.containerlong}} 환경에서 {{site.data.keyword.mfserver_short_notm}}를 설정하는 손쉬운 안내 방식의 수단을 사용자에게 제공합니다.
+{{site.data.keyword.mobilefoundation_short}}은 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.containerlong}} 환경에서 {{site.data.keyword.mfserver_short_notm}}를 설정하는 손쉬운 안내 방식의 수단을 사용자에게 제공합니다. 
 
 {{site.data.keyword.mobilefoundation_short}}은 다음과 같은 구성요소로 이루어져 있습니다.
 
@@ -29,15 +32,12 @@ copyright:
 
 *	디바이스, 애플리케이션, 데이터 및 네트워크 계층을 보호합니다. 
 
-*	하나의 중앙 인터페이스에서 모바일 앱 포트폴리오를 관리하고, 선호하는 자체 IDE 및 라이브러리를 사용하여 모바일 앱을 개발합니다. 
+*	하나의 중앙 인터페이스에서 모바일 앱 포트폴리오를 관리하고, 선호하는 IDE 및 라이브러리를 사용하여 모바일 앱을 개발합니다. 
 
 *	온라인 및 오프라인 데이터 동기화를 위해 확장 가능한 데이터 서비스를 사용합니다. 
 
 *	지원되는 모든 모바일 디바이스 운영 체제에 대해 통합된 푸시 알림을 구성합니다. 
 
 {{site.data.keyword.mobilefoundation_short}}에서 {{site.data.keyword.mfp_cli_long_notm}}(CLI)를 사용하여 손쉽게 앱을 작성하고 관리할 수 있습니다.
-
-##	작동 환경
-{: #mobilefoundation_operational_env}
 
 {{site.data.keyword.mobilefoundation_short}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 사용자의 영역 내에서 컨테이너를 프로비저닝할 수 있습니다. 작성된 컨테이너의 세부사항을 보고 컨테이너 성능을 확인하며 {{site.data.keyword.Bluemix_notm}} 대시보드에서 서버 로그에 액세스할 수 있습니다.

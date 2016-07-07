@@ -5,12 +5,15 @@ copyright:
 
 ---
 
-#	{{site.data.keyword.mobilefoundation_short}} の概要
+#	{{site.data.keyword.mobilefoundation_short}} について
 {: #overview_mobilefoundation}
+
+*最終更新日: 2016 年 6 月 15 日*
+{: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} サービスにより、{{site.data.keyword.Bluemix}} 上で {{site.data.keyword.mobilefirst}} サーバー環境を迅速にセットアップする方法が提供されます。その後、この強固なクラウド環境からモバイル・アプリを開発、テスト、および管理できます。
 
-{{site.data.keyword.mobilefoundation_short}} は、Bluemix 上の {{site.data.keyword.containerlong}} 環境で {{site.data.keyword.mfserver_short_notm}} をセットアップするための簡単な方法をガイド付きでユーザーに提供します。
+{{site.data.keyword.mobilefoundation_short}} は、{{site.data.keyword.Bluemix_notm}} 上の {{site.data.keyword.containerlong}} 環境で {{site.data.keyword.mfserver_short_notm}} をセットアップするための簡単な方法をガイド付きでユーザーに提供します。
 
 {{site.data.keyword.mobilefoundation_short}} は、以下のコンポーネントで構成されています。
 
@@ -35,8 +38,5 @@ copyright:
 *	サポートされるすべてのモバイル・デバイス・オペレーティング・システム用に統合されたプッシュ通知を構成します。
 
 {{site.data.keyword.mobilefoundation_short}} とともに {{site.data.keyword.mfp_cli_long_notm}} (CLI) を使用して、アプリを簡単に作成して管理できます。
-
-##	稼働環境
-{: #mobilefoundation_operational_env}
 
 {{site.data.keyword.mobilefoundation_short}} サービスは、{{site.data.keyword.Bluemix_notm}} 上のご使用のスペース内のコンテナーをプロビジョンします。{{site.data.keyword.Bluemix_notm}} ダッシュボードから、作成されるコンテナーの詳細を確認したり、コンテナーのパフォーマンスを表示したり、サーバー・ログにアクセスしたりできます。
