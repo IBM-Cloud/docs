@@ -19,7 +19,7 @@ copyright:
 
 #Linking SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts
 {: #softlayerlink}
-*Last updated: 10 June 2016*
+*Last updated: 7 July 2016*
 {: .last-updated}
 
 You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts. When you link your accounts, you are billed through SoftLayer for both SoftLayer and {{site.data.keyword.Bluemix_notm}} resources. If you have an existing account, billing through SoftLayer for {{site.data.keyword.Bluemix_notm}} takes effect for the new billing cycle that starts after the accounts are linked.
@@ -27,9 +27,11 @@ You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accoun
 
 **Important:** All linked accounts in {{site.data.keyword.Bluemix_notm}} must be Pay-As-You-Go accounts. You can create a new Pay-As-You-Go account or link an existing Pay-As-You-Go account. Or, you can link an existing trial account, but it will be upgraded to a Pay-As-You-Go account.  
 
-After your accounts are linked, you can still monitor the usage of your {{site.data.keyword.Bluemix_notm}} resources in the  {{site.data.keyword.Bluemix_notm}} user interface. However, the billing for these resources will now appear on the SoftLayer invoice.
+After your accounts are linked, you can switch between accounts easily. You can still monitor the usage of your {{site.data.keyword.Bluemix_notm}} resources in the  {{site.data.keyword.Bluemix_notm}} user interface. However, the billing for these resources will now appear on the SoftLayer invoice.
 
-Although your account billing will be linked and you will be able to switch between accounts easily, you'll still need to have separate IDs for {{site.data.keyword.Bluemix_notm}} and SoftLayer. Continue to use your SoftLayer ID for SoftLayer products and services and use your IBM id for {{site.data.keyword.Bluemix_notm}} products and services. 
+Although your account billing will be linked, your login ID will vary depending on how your SoftLayer account is authenticated:
+* For users in SoftLayer accounts that do not use IBM id for authentication, continue to use your SoftLayer ID for SoftLayer products and services, and use your IBM id for {{site.data.keyword.Bluemix_notm}} products and services.
+* For users in SoftLayer accounts that use IBM id for authentication, use your IBM id to access both your SoftLayer and your {{site.data.keyword.Bluemix_notm}} accounts.
 
 **Attention:** After accounts are linked, they cannot be unlinked.  
 
@@ -139,7 +141,7 @@ Not all {{site.data.keyword.Bluemix_notm}} services can be used with SoftLayer. 
 After you've linked your {{site.data.keyword.Bluemix_notm}} and SoftLayer billing accounts, the next billing cycle will be charged in a single SoftLayer bill.
 {:shortdesc}
 
-Your {{site.data.keyword.Bluemix_notm}} usage cycle is on a calendar month basis, so your account is billed each month on the first of the month. With SoftLayer, your usage cycle begins from when you started with SoftLayer, so you are billed each month on the same day of the month as when you signed up for your SoftLayer account. 
+Your {{site.data.keyword.Bluemix_notm}} usage cycle is on a calendar month basis, so your account is billed each month on the billing day that was established for your charge agreement. With SoftLayer, your usage cycle begins from when you started with SoftLayer, so you are billed each month on the same day of the month as when you signed up for your SoftLayer account. 
 
 When your accounts are linked, your {{site.data.keyword.Bluemix_notm}} usage will continue to be measured for the current month's cycle, and you will be billed for that usage on a {{site.data.keyword.Bluemix_notm}} invoice. Starting on the first of the next month, your {{site.data.keyword.Bluemix_notm}} charges will be on your SoftLayer invoice.
 
