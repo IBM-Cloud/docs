@@ -26,17 +26,17 @@ For more information, see:
 {: #constructor}
 
 
-The constructor builds the client instance, and accepts an options dict containing the following definitions:
+The constructor builds the client instance and accepts an options dict that contains the following definitions:
 
 | Definition     |Description     |
 |----------------|----------------|
 |``orgId``   |Your organization ID
-|``appId``   |The unique ID of an application within your organization|
-|``auth-method``   |Method of authentication whereby the only value that is currently supported is ``apikey``)|
+|``appId``   |The unique ID of an application in your organization|
+|``auth-method``   |A method of authentication in which the only value that is currently supported is ``apikey``)|
 |``auth-key``   |An optional API key, which is required when auth-method is set to ``apikey``|
 |``auth-token``   |An API key token, which is required when auth-method is set to ``apikey``|
 
-If no options dict is provided, the client connects to the{{site.data.keyword.iot_full}}  Quickstart service, and defaults to an unregistered device. The options dict creates definitions that are used to interact with the {{site.data.keyword.iot_full}} module.
+If no options dict is provided, the client connects to the {{site.data.keyword.iot_full}} Quickstart service as an unregistered device. The options dict creates definitions that are used to interact with the {{site.data.keyword.iot_full}} module.
 
 ```
 
@@ -57,7 +57,7 @@ If no options dict is provided, the client connects to the{{site.data.keyword.io
 ### Using a configuration file
 
 
-If you are not using an options dict as shown above, you must include a configuration file that contains an options dict with the following code format:
+If you are not using an options dict, you must include a configuration file that contains an options dict that is in the following code format:
 
 ```
 
@@ -87,13 +87,13 @@ The application configuration file must also be in the following format:
 {: #api_calls}
 
 
-Each method in the API client responds with either a valid JSON or boolean response in the case of success or IoTFCReSTException in the case of failure. The IoTFCReSTException contains the following properties, which an application can parse to get more information about the failure.
+Each method in the API client responds with either a valid JSON or boolean response in the case of success or IoTFCReSTException in the case of failure. The IoTFCReSTException contains the following properties, which an application can parse to get more information about the failure:
 
 * httpcode - HTTP Status Code
-* message - Exception message containing the reason for the failure
-* response - JsonElement containing the partial response if any otherwise null
+* message - Exception message that contains the reason for the failure
+* response - JsonElement that contains the partial response, if any, otherwise, it is null
 
-In the event of failure, the application needs to parse the response to see whether the action is partially successful or not.
+In the event of failure, the application needs to parse the response to deterimine whether the action is partially successful.
 
 
 
@@ -102,11 +102,7 @@ In the event of failure, the application needs to parse the response to see whet
 
 Events are the mechanism by which devices publish data to the {{site.data.keyword.iot_short_notm}} instance. The device controls the content of the event and assigns a name for each event that it sends.
 
-When an event is received by the {{site.data.keyword.iot_short_notm}} instance, the credentials of the received event identify the sending device, making it impossible for a device to impersonate another device.
-
-
-
-
+When an event is received by the {{site.data.keyword.iot_short_notm}} instance, the credentials of the received event identify the sending device, which prevents a device from impersonating another device.
 
 By default, applications subscribe to all events from all connected devices. Use the type, ID, event, and msgFormat parameters to control the scope of the subscription. A single client can support multiple subscriptions. The following code samples provide examples of how to subscribe to devices that are dependent on device type, ID, event, and msgFormat parameters.
 
@@ -167,7 +163,7 @@ By default, applications subscribe to all events from all connected devices. Use
     client.subscribeToDeviceEvents(deviceType=myDeviceType, deviceId=myDeviceId, event=myEvent)
     client.subscribeToDeviceEvents(deviceType=myOtherDeviceType, deviceId=myOtherDeviceId, event=myEvent)
 ```
-### Subscribing to all events published by a device in JSON format
+### Subscribing to all events that are published in JSON format by a device
 
 
 ```
@@ -185,7 +181,7 @@ By default, applications subscribe to all events from all connected devices. Use
 ## Handling events from devices
 {: #handling_events_devices}
 
-To process the events received by your subscriptions you need to register an event callback method. The messages are returned as an instance of the Event class:
+To process the events that are received by your subscriptions, you need to register an event callback method. The messages are returned as an instance of the Event class:
 
 * event.device - string (uniquely identifies the device across all types of devices in the organization)
 * event.deviceType - string
@@ -266,7 +262,7 @@ By default, when you subscribe to device status, status updates are received for
 ## Handling status updates from devices
 {: #handling_device_updates}
 
-To process the status updates received by your subscriptions you need to register an event callback method. The messages are returned as an instance of the Status class.
+To process the status updates that are received by your subscriptions, you need to register an event callback method. The messages are returned as an instance of the Status class.
 
 The following properties are set for both "Connect" and "Disconnect" status events:
 
@@ -311,7 +307,7 @@ The following properties are only set when the action is "Disconnect":
 ## Publishing events from devices
 {: #publishing_device_events}
 
-Applications can publish events as if they originated from a device.
+Applications can publish events that originated from a device.
 
 ```
 
@@ -363,7 +359,7 @@ Applications can use the ``getOrganizationDetails()`` method to retrieve the det
         print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-For information about the request & response model and the HTTP status code, refer to the Organization Configuration section of the [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+For information about the request & response model and the HTTP status code, see the Organization Configuration section of the [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
 
 ## Bulk device operations
@@ -371,14 +367,14 @@ For information about the request & response model and the HTTP status code, ref
 
 Applications can use bulk operations to get, add, or remove multiple devices simultaneously.
 
-For information about the list of query parameters, the request & response model and http status code, see the Bulk Operations section of the [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/).
+For information about the list of query parameters, the request & response model, and http status code, see the Bulk Operations section of the [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/).
 
 
 ### Retrieving device information
 
-Bulk device information can be retrieved using the ``getAllDevices()`` method. This method retrieves information on all registered devices in the organization. Each request can contain a maximum of 512KB.
+Bulk device information can be retrieved by using the ``getAllDevices()`` method. This method retrieves information on all registered devices in the organization. Each request can contain a maximum of 512KB.
 
-The response contains parameters required by the application to retrieve the dictionary *results* from the response to get the array of devices returned. Other parameters in the response are required to make further calls, for example, the ``_bookmark`` element can be used to page through results. Issue the first request without specifying a bookmark, then take the bookmark returned in the response and provide it on the request for the next page. Repeat until the end of the result set indicated by the absence of a bookmark. Each request must use exactly the same values for the other parameters, otherwise the results are undefined.
+The response contains parameters that are required by the application to retrieve the dictionary *results* from the response to get the array of devices returned. Other parameters in the response are required to make further calls, for example, the ``_bookmark`` element can be used to page through results. Issue the first request without specifying a bookmark, then take the bookmark that is returned in the response and provide it on the request for the next page. Repeat until the end of the result set is indicated by the absence of a bookmark. Each request must use exactly the same values for the other parameters, otherwise the results are undefined.
 
 
 
@@ -398,7 +394,7 @@ The response contains parameters required by the application to retrieve the dic
 ### Adding multiple devices
 
 
-The ``addMultipleDevices()`` method can be used to add one or more devices to your {{site.data.keyword.iot_short_notm}} organization. A request must be no larger than 512KB. The response contains the authentication tokens that were generated for each device. Ensure that you make a copy of the authentication tokens, as if you lose the authentication tokens, they cannot be retrieved.
+The ``addMultipleDevices()`` method can be used to add one or more devices to your {{site.data.keyword.iot_short_notm}} organization. A request must be no larger than 512KB. The response contains the authentication tokens that were generated for each device. Ensure that you make a copy of the authentication tokens, because if you lose the authentication tokens, they cannot be retrieved.
 
 
 ```
@@ -422,7 +418,7 @@ The ``addMultipleDevices()`` method can be used to add one or more devices to yo
 ### Deleting multiple devices
 
 
-The ``deleteMultipleDevices()`` method can be used to delete multiple devices from an {{site.data.keyword.iot_short_notm}}
+The ``deleteMultipleDevices()`` method can be used to delete multiple devices from a {{site.data.keyword.iot_short_notm}}
 organization. A request must be no larger than 512KB.
 
 ```
@@ -447,15 +443,15 @@ organization. A request must be no larger than 512KB.
 ## Device type operations
 {: #device_type_ops}
 
-The device types that you create in your organization can be used to create templates for adding devices. Through the {{site.data.keyword.iot_short_notm}} API features, your applications can list, create, delete, view, or update device types in your organization.
+The device types that you create in your organization can be used to create templates for adding devices. By using the {{site.data.keyword.iot_short_notm}} API features, your applications can list, create, delete, view, or update device types in your organization.
 
 For information about query parameters, the request & response model, and HTTP status codes, see the 'Device types' section of the [IBM {{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) documentation.
 
 
 ### Retrieving all device types
 
-You can use the ``getAllDeviceTypes()`` method to retrieve all of the device types that are in your {{site.data.keyword.iot_short_notm}} organization.
-The response contains parameters required by the application to retrieve the dictionary *results* from the response to get the array of devices returned. Other parameters in the response are required to make further calls, for example, the ``_bookmark`` element can be used to page through results. Issue the first request without specifying a bookmark, then take the bookmark returned in the response and provide it on the request for the next page. Repeat this process until the end of the result set indicated by the absence of a bookmark. Each request must use exactly the same values for the other parameters, or the results will be undefined.
+You can use the ``getAllDeviceTypes()`` method to retrieve all the device types that are in your {{site.data.keyword.iot_short_notm}} organization.
+The response contains parameters that are required by the application to retrieve the dictionary *results* from the response to get the array of devices returned. Other parameters in the response are required to make more calls, for example, the ``_bookmark`` element can be used to page through results. Issue the first request without specifying a bookmark, then take the bookmark that is returned in the response and provide it on the request for the next page. Repeat this process until the end of the result set, which is indicated by the absence of a bookmark. Each request must use exactly the same values for the other parameters, or the results will be undefined.
 
 
 
@@ -515,7 +511,7 @@ The ``addDeviceType()`` method can be used to register a device type to your {{s
 ### Deleting a device type
 
 
-The ``deleteDeviceType()`` method can be used to delete a device type from your  {{site.data.keyword.iot_short_notm}} organization.
+The ``deleteDeviceType()`` method can be used to delete a device type from your {{site.data.keyword.iot_short_notm}} organization.
 
 ```
 
@@ -533,8 +529,7 @@ The ``deleteDeviceType()`` method can be used to delete a device type from your 
 ### Retrieving information for specific device types
 
 
-Use the ``getDeviceType()`` method to retrieve information for a specific device type. The ``typeId`` of the device type that you want to retrieve must be specified.
-as a parameter.
+Use the ``getDeviceType()`` method to retrieve information for a specific device type. The ``typeId`` of the device type that you want to retrieve must be specified as a parameter.
 
 ```
 
@@ -587,7 +582,7 @@ Use the ``updateDeviceType()`` method to modify the properties of a device type.
 ## Device operations
 {: #device_ops}
 
-Device operations made available through the API include listing, adding, removing, viewing, updating, viewing location, and viewing device management information of devices in a
+Device operations that are available in the API include listing, adding, removing, viewing, updating, viewing location, and viewing device management information of devices in a
  {{site.data.keyword.iot_short_notm}} organization.
 
 For information about the query parameters, the request & response model, and the HTTP status code, see the 'Device section' of the [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
@@ -595,7 +590,7 @@ For information about the query parameters, the request & response model, and th
 
 ### Retrieving devices of a particular device type
 
-The *retrieveDevices()* method can be used to retrieve all the devices of a particular device type in an organization in a {{site.data.keyword.iot_short_notm}} instance, as outlined in the following example:
+The *retrieveDevices()* method can be used to retrieve all the devices of a particular device type in an organization in a {{site.data.keyword.iot_short_notm}} instance, which is outlined in the following example:
 
 
 ```
@@ -604,33 +599,33 @@ The *retrieveDevices()* method can be used to retrieve all the devices of a part
      print("Retrieved Devices = ", apiCli.retrieveDevices(deviceTypeId))
 ```
 
-The response contains the parameters and application that needed to retrieve the dictionary *results* from the response to get the array of devices returned. Other parameters in the response are required to make further calls. For example, the *_bookmark* element can be used to page through results. Issue the first request without specifying a bookmark, then take the bookmark returned in the response and provide it on the request for the next page. Repeat until the end of the result set indicated by the absence of a bookmark. Each request must use exactly the same values for the other parameters, or the results are undefined.
+The response contains the parameters and application that are needed to retrieve the dictionary *results* from the response to get the array of devices returned. Other parameters in the response are required to make more calls. For example, the *_bookmark* element can be used to page through results. Issue the first request without specifying a bookmark, then take the bookmark that is returned in the response and provide it on the request for the next page. Repeat until the end of the result set, which is indicated by the absence of a bookmark. Each request must use exactly the same values for the other parameters, or the results are undefined.
 
 
 
-In order to pass the *_bookmark* or any other condition, the overloaded method must be used. The overloaded method takes the parameters in the form of dictionary as shown in the following example:
+In order to pass the *_bookmark* or any other condition, the overloaded method must be used. The overloaded method takes the parameters in the form of a dictionary, which is shown in the following example:
 
 ```
     response = apiClient.retrieveDevices("iotsample-ardunio", parameters);
 ```
 
-The previous code sample sorts the response based on device ID, and then uses the bookmark to page through the results.
+The previous code sample sorts the response based on device ID and then uses the bookmark to page through the results.
 
 ### Adding a device
 
 
-The *registerDevice()* method is used to add a device to a {{site.data.keyword.iot_short_notm}} organization. The *registerDevice()* method adds a single device to your {{site.data.keyword.iot_short_notm}} organization. The parameters that you can specify when you add a device are:
+The *registerDevice()* method is used to add a device to a {{site.data.keyword.iot_short_notm}} organization. The *registerDevice()* method adds a single device to your {{site.data.keyword.iot_short_notm}} organization. You can specify the following parameters when you add a device:
 
-- deviceTypeId: *Optional*. Assigns a device type to the device. If there is a conflict between variables defined by the device type and variables defined by deviceInfo, the device specific variables will take precedence.
+- deviceTypeId: *Optional*. Assigns a device type to the device. If there is a conflict between the variables that are defined by the device type and the variables that are defined by deviceInfo, the device-specific variables will take precedence.
 - deviceId: *Mandatory*.
 - authToken: *Optional*. If no authentication token is supplied, one will be generated and included in the response.
-- deviceInfo: *Optional*. This parameter is optional, and can contain a number of variables, including: serialNumber, manufacturer, model, deviceClass, description, firmware and hardware versions, and descriptiveLocation.
-- metadata: *Optional*. Metadata can optionally be added in the form of custom field:value string pairs. An example is given in the next code sample on this page.
+- deviceInfo: *Optional*. This parameter can contain a number of variables including serialNumber, manufacturer, model, deviceClass, description, firmware and hardware versions, and descriptiveLocation.
+- metadata: *Optional*. Metadata can be added in the form of custom field:value string pairs. An example is given in the next code sample on this page.
 - location: *Optional*. This parameter contains the longitude, latitude, elevation, accuracy, and mesauredDateTime variables.
 
 For more information on these parameters, and the response format and codes, see the [API documentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices).
 
-When using the *registerDevice()* method, you must define the mandatory deviceID parameter and any of the optional parameters that you require for your device, then call the method using the parameters you selected.
+When you use the *registerDevice()* method, you must define the mandatory deviceID parameter and any of the optional parameters that you require for your device and then call the method by using the parameters that you selected.
 
 ### Sample code for adding a device type
 
@@ -649,7 +644,7 @@ Insert the following code after the constructor code in a .py file. The sample d
 ```
 ### Deleting a device
 
-Use the *deleteDevice()* method to remove a device from an organization on the {{site.data.keyword.iot_short_notm}} organization. When you delete a device using the *deleteDevice()* method, you must specify the deviceTypeId and deviceId parameters.
+Use the *deleteDevice()* method to remove a device from an organization on the {{site.data.keyword.iot_short_notm}} organization. When you delete a device by using the *deleteDevice()* method, you must specify the deviceTypeId and deviceId parameters.
 
 The following code sample outlines the format that is required for this method:
 
@@ -661,7 +656,7 @@ The following code sample outlines the format that is required for this method:
 
 Use the *getDevice()* method to remove a device from an organization on the {{site.data.keyword.iot_short_notm}}. When you retrieve device details using the *getDevice()* method, you must specify the deviceTypeId and deviceId parameters
 
-The following code sample provides an outline of the format required for this method.
+The following code sample provides an outline of the format that is required for this method:
 
 
 
@@ -674,7 +669,7 @@ The following code sample provides an outline of the format required for this me
 
 ### Retrieving all devices
 
-Use the *getAllDevices()* method to retrieve all devices within an organization on the {{site.data.keyword.iot_short_notm}}.
+Use the *getAllDevices()* method to retrieve all devices that are in an organization on the {{site.data.keyword.iot_short_notm}}.
 
 ```
 	  apiCli.getAllDevices({'typeId' : deviceTypeId})
@@ -705,7 +700,7 @@ The following code sample identifies a specific device and then updates several 
 ### Retrieving location information
 
 
-The *getDeviceLocation()* method can be used to retrieve the location information of a device. The parameters required for retrieving the location data are deviceTypeId and deviceId.
+The *getDeviceLocation()* method can be used to retrieve the location information of a device. The parameters that are required for retrieving the location data are deviceTypeId and deviceId.
 
 ```
 
@@ -717,7 +712,7 @@ The response to this method contains the longitude, latitude, elevation, accurac
 ### Updating location information
 
 
-Use the *updateDeviceLocation()* method to modify the location information for a device. Similarly to updating device properties, the deviceLocation parameter must be defined with the changes you wish to apply. The code sample below demonstrates changing the location data for a given device.
+Use the *updateDeviceLocation()* method to modify the location information for a device. Similar to updating device properties, the deviceLocation parameter must be defined with the changes you wish to apply. The following code sample demonstrates changing the location data for a given device:
 
 ```
 
@@ -733,7 +728,7 @@ If a date is not supplied, the current date and time is used.
 
 Use the *getDeviceManagementInformation()* method to get the device management information for a device. The response contains the last activity date-time, the device's dormant status (true/false), support for device and firmware actions, and firmware data. For a comprehensive list of response content, see the relevant API documentation.
 
-The following code sample will return the device management information for a device with the deviceId "00aabbccde03", with deviceTypeId "iotsample-arduino".
+The following code sample returns the device management information for a device thta has the deviceId "00aabbccde03" and the deviceTypeId "iotsample-arduino".
 
 
 ```
@@ -743,7 +738,7 @@ The following code sample will return the device management information for a de
 ## Device diagnostic operations
 {: #device_diag_ops}
 
-Applications can use device diagnostic operations to clear logs, retrieve all or specific logs for a device, add log information, delete logs, clear error codes, get device error codes, and add an error codes.
+Applications can use device diagnostic operations to clear logs, retrieve all or specific logs for a device, add log information, delete logs, clear error codes, get device error codes, and add error codes.
 
 For more detailed information on query and response models, response codes, and query parameters, see the {{site.data.keyword.iot_short_notm}} API documentation.
 
@@ -762,7 +757,7 @@ The response model for this method contains the logId, message, severity, data, 
 ### Clearing diagnostic logs for a device
 
 
-Use the *clearAllDiagnosticLogs()* method to delete all diagnostic logs for a specific device. The required parameters are deviceTypeId and deviceId. Be careful when deleting log files, as they cannot be recovered after they are deleted.
+Use the *clearAllDiagnosticLogs()* method to delete all diagnostic logs for a specific device. The required parameters are deviceTypeId and deviceId. Be careful when deleting log files, because they cannot be recovered after they are deleted.
 
 ```
 
@@ -772,12 +767,12 @@ Use the *clearAllDiagnosticLogs()* method to delete all diagnostic logs for a sp
 ### Adding a diagnostic log
 
 
-Use the *addDiagnosticLog()* method to add an entry in the diagnostic log of the device. The log can be pruned as the new entry is added. If no date is supplied, the current date and time are added to the entry. To use this method, you need to define a 'logs' parameter with the following variables:
+Use the *addDiagnosticLog()* method to add an entry in the diagnostic log of the device. The log can be pruned when the new entry is added. If no date is supplied, the current date and time are added to the entry. To use this method, you need to define a 'logs' parameter that has the following variables:
 
 - message: This variable is mandatory, and contains the new diagnostic message.
-- severity: This variable is optional. If used, the value corresponds to the severity of the diagnostic log, and should be 0, 1, or 2, corresponding to the informational, warning, and error categories.
-- data: This variable is optional, and contains diagnostic data.
-- timestamp: This variable is optional, and contains the date and time of the log entry in ISO8601 format. If this variable is not included, the current date and time are used.
+- severity: This variable is optional. If used, the value corresponds to the severity of the diagnostic log and should be 0, 1, or 2, which corresponds with the informational, warning, and error categories.
+- data: This variable is optional and contains diagnostic data.
+- timestamp: This variable is optional and contains the date and time of the log entry in ISO8601 format. If this variable is not included, the current date and time are used.
 
 The other parameters that are required in the method are the deviceTypeId and deviceId values for the device.
 
@@ -830,10 +825,10 @@ Use the *clearAllErrorCodes()* method to clear the list of error codes that are 
 ### Adding a single diagnostic error code
 
 
-The *addErrorCode()* method is used to add an error code to the list of error codes associated with the device. The list can be pruned as the new entry is added. The parameters required in the method are deviceTypeId, deviceId, and errorCode. The errorCode parameter contains the following variables:
+The *addErrorCode()* method is used to add an error code to the list of error codes that are associated with the device. The list can be pruned when the new entry is added. The parameters that are required in the method are deviceTypeId, deviceId, and errorCode. The errorCode parameter contains the following variables:
 
-- errorCode: This variable is mandatory and should be set as an integer. This sets the number of the error code to be created.
-- timestamp: This variable is optional, and contains the date and time of the log entry in ISO8601 format. If this variable is not included, it is automatically added with the current date and time.
+- errorCode: This variable is mandatory and should be set as an integer. This variable sets the number of the error code that is created.
+- timestamp: This variable is optional and contains the date and time of the log entry in ISO8601 format. If this variable is not included, the timestamp is automatically added with the current date and time.
 
 ```
 
@@ -844,7 +839,7 @@ The *addErrorCode()* method is used to add an error code to the list of error co
 ## Connection problem determination
 {: #connection_problem_determination}
 
-Use the *getDeviceConnectionLogs()* method to list connection log events for a device. Connection log events can be used to help diagnose connectivity problems between the device and the {{site.data.keyword.iot_short_notm}} service. The entries record successful connection, unsuccessful connection attempts, intentional disconnection and server-initiated disconnection events.
+Use the *getDeviceConnectionLogs()* method to list connection log events for a device. Connection log events can be used to help diagnose connectivity problems between the device and the {{site.data.keyword.iot_short_notm}} service. The entries record successful connections, unsuccessful connection attempts, intentional disconnections, and server-initiated disconnection events.
 
 ```
 
@@ -860,21 +855,21 @@ The response includes a list of log entries, which contain log messages and time
 
 The historical event retrieval operations that are described in this section can be used to view events from all devices, view events from a device type, or to view events for a specific device.
 
-For information about the query parameters, the request & response model and HTTP status code, see the Historical event retrieval section of the [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+For information about the query parameters, the request & response model, and HTTP status codes, see the Historical event retrieval section of the [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
 
 ### Viewing events from all devices
 
-Use the *getHistoricalEvents()* method to view events across all devices registered to the organization.
+Use the *getHistoricalEvents()* method to view events from all devices that are registered to the organization.
 
 ```
 
     print("Historical Events = ", apiCli.getHistoricalEvents())
 ```
 
-The response of the *getHistoricalEvents()* method contains some parameters and the application needs to retrieve the JSON element *events* from the response to get the array of events returned. Other parameters in the response are required to make further call, for example, the *_bookmark* element can be used to page through results. Issue the first request without specifying a bookmark, then take the bookmark returned in the response and provide it on the request for the next page. Repeat until the end of the result set indicated by the absence of a bookmark. Each request must use exactly the same values for the other parameters, otherwise the results are undefined.
+The response of the *getHistoricalEvents()* method contains some parameters, and the application needs to retrieve the JSON element *events* from the response to get the array of events returned. Other parameters in the response are required to make more calls, for example, the *_bookmark* element can be used to page through results. Issue the first request without specifying a bookmark, then take the bookmark that is returned in the response and provide it on the request for the next page. Repeat until the end of the result set, which is indicated by the absence of a bookmark. Each request must use exactly the same values for the other parameters, otherwise the results are undefined.
 
-In order to pass the *_bookmark* or any other condition, the overloaded method must be used. The overloaded method takes the parameters in the form of dictionary as outlined in the following code sample:
+In order to pass the *_bookmark* or any other condition, the overloaded method must be used. The overloaded method takes the parameters in the form of a dictionary, which is shown in the following code sample:
 
 ```
 
@@ -883,7 +878,7 @@ In order to pass the *_bookmark* or any other condition, the overloaded method m
     duration = {'start' : startTime, 'end' : endTime }
     apiCli.getHistoricalEvents(options = duration))
 ```
-The previous code sample returns the events between the start and end time.
+The code sample returns the events between the start and end time.
 
 ### Viewing events from a device type
 
@@ -895,13 +890,13 @@ Use the *getHistoricalEvents()* method to view events from all the devices of a 
 	  apiCli.getHistoricalEvents(deviceType = 'iotsample-arduino', options = duration)
 ```
 
-The response will contain some parameters and the application needs to retrieve the JSON element *events* from the response to get the array of events returned. As mentioned in the *view events from all devices* section, the overloaded method can be used to control the output.
+The response contains some parameters, and the application needs to retrieve the JSON element *events* from the response to get the array of events returned. The overloaded method can be used to control the output. For more information about the overloaded method, see the *View events from all devices* section.
 
 
 ### Viewing events from a device
 
 
-Use the *getHistoricalEvents()* method to view events from a specific device. DeviceTypeId and deviceId parameters are required in order to use this method.
+Use the *getHistoricalEvents()* method to view events from a specific device. The deviceTypeId and deviceId parameters are required in order to use this method.
 
 ```
 
