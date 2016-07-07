@@ -1,6 +1,7 @@
 # Creazione di applicazioni mobili
 {: #mobile}
-*Ultimo aggiornamento: 28 gennaio 2016* 
+*Ultimo aggiornamento: 28 gennaio 2016*
+{: .last-updated} 
 
 Con i servizi mobili {{site.data.keyword.Bluemix}}, puoi incorporare i servizi cloud precostruiti, gestiti e scalabili nelle tue applicazioni mobili senza dipendere dall'intervento del settore IT. Puoi concentrarti sulla creazione delle applicazioni mobili anziché sulla complessità della gestione dell'infrastruttura
   di back-end.

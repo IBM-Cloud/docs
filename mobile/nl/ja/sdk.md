@@ -1,6 +1,13 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 # SDK、サンプル、および API 参照
 {: #sdk}
-*最終更新日: 2016 年 1 月 28 日*
+*最終更新日: 2016 年 5 月 12 日*
+{: .last-updated}
 
 Bluemix モバイル・サービス SDK をアプリに追加するには、使用する SDK を選択し、依存関係マネージャーを構成して SDK をアプリにプルします。
 
@@ -8,9 +15,9 @@ Bluemix モバイル・サービス SDK をアプリに追加するには、使�
 <!---
 <p class="cta"><a href="/docs/starters/mobilefirst/gettingstarted/android_existingproject.html#setup_sdk_gradle">Get SDK</a></p>
 --->
-
+<!-- Android -->
 <ul><li><strong>サンプル:</strong></li>
-<li><a href="gettingstarted/android.html">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld">HelloWorld</a></li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">HelloPush</a>
 </li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">HelloAuthentication</a>
@@ -27,13 +34,12 @@ Bluemix モバイル・サービス SDK をアプリに追加するには、使�
 </ul>
 <ul>
 <li><strong>API 参照:</strong></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">コア</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">Facebook 認証</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">Google 認証</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">プッシュ</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">REST API のプッシュ</a></li>
+
+<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">REST API のプッシュ</a></li>
 </ul>
-</td><td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
+</td>
+<!-- Cordova -->
+<td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
 <!---
 <p class="cta"><a href="test">Get SDK</a></p>
 --->
@@ -44,7 +50,7 @@ Bluemix モバイル・サービス SDK をアプリに追加するには、使�
 </ul>
 
 <ul><li><strong>サンプル:</strong></li>
-<li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld">HelloWorld</a></li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">HelloPush</a>
 </li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">HelloAuthentication</a>
@@ -57,6 +63,7 @@ Bluemix モバイル・サービス SDK をアプリに追加するには、使�
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">bms-clientsdk android-push</a></li>
 </ul>
 
+<!-- iOS -->
 </td>
 <td valign="top"><img src="images/iOS_SDK_icon.png" alt="ios">
 
@@ -65,23 +72,19 @@ Bluemix モバイル・サービス SDK をアプリに追加するには、使�
 SDK</a></p> --->
 
 <ul><li><strong>サンプル:</strong></li>
-<li><a href="gettingstarted/ios.html">HelloWorld</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">HelloPush</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">HelloPush</a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">HelloAuthentication</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">HelloAuthentication</a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellotodo" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">Hello ToDo</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellotodo" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">Hello ToDo</a></li>
 </ul>
 
 <p class="devops"><a href="https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master">IBM DevOps の SDK</a></p>
 <ul>
 <li><strong>API 参照:</strong></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">コア</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">Facebook 認証</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">Google 認証</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">IMFURLProtocol</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">プッシュ</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">REST API のプッシュ</a></li>
+<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">IMFURLProtocol</a></li>
+<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(新しいタブまたはウィンドウで開く)" target="_blank">REST API のプッシュ</a></li>
 </ul>
 </td>
 </tr>

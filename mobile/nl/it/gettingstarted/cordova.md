@@ -7,9 +7,10 @@ copyright:
 <!-- Attribute definitions -->
 {:codeblock: .codeblock}
 
-# Introduzione all'esempio HelloWorld
+# Introduzione all'esempio Hello Bluemix per Cordova
 {: #gettingstarted-cordova}
-*Ultimo aggiornamento: 17 marzo 2016*
+*Ultimo aggiornamento: 27 maggio 2016*
+{: .last-updated}
 
 Se desideri iniziare a lavorare con una nuova applicazione Cordova, puoi utilizzare l'applicazione HelloWorld. Questa applicazione illustra come connettere il tuo backend mobile su {{site.data.keyword.Bluemix}} da un'applicazione mobile senza autenticazione. Nell'applicazione è già installato l'SDK. Quando sei pronto, puoi ottenere le specifiche librerie
     che desideri utilizzare nella tua applicazione.
@@ -71,7 +72,7 @@ Se desideri iniziare a lavorare con una nuova applicazione Cordova, puoi utilizz
 	2. Vai a **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** e aggiungi il seguente percorso:
 
 		```
-		<il_nome_del_tuo_progetto>/Plugins/ibm-mfp-core/Bridging-Header.h
+		<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 		```
 
 	3. Vai a **Build settings > Linking > Runpath Search Paths** e aggiungi il seguente parametro Frameworks:
@@ -126,11 +127,11 @@ Per informazioni su come ottenere l'SDK e integrarlo nella tua applicazione mobi
 # rellinks
 
 ## samples
-   * [HelloWorld (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
+   * [Hello Bluemix (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
 
 ## sdk
    * [bms-clientsdk-cordova-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 <!--## api
-   * [Core API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
+   * [Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
 -->

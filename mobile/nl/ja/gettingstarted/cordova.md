@@ -7,9 +7,10 @@ copyright:
 <!-- Attribute definitions -->
 {:codeblock: .codeblock}
 
-# HelloWorld サンプル入門
+# Cordova 用 Hello Bluemix サンプル入門
 {: #gettingstarted-cordova}
-*最終更新日: 2016 年 3 月 17 日*
+*最終更新日: 2016 年 5 月 27 日*
+{: .last-updated}
 
 新規 Cordova アプリケーションを始める場合は、HelloWorld というアプリが使用できます。このアプリは、モバイル・アプリから {{site.data.keyword.Bluemix}} 上のモバイル・バックエンドへ認証を行わずに接続する方法を示す実例となっています。
 このアプリには既に SDK がインストールされています。準備ができたら、アプリで使用したい特定のライブラリーが取得できます。
@@ -133,11 +134,11 @@ SDK を取得して SDK をモバイル・アプリに統合する方法につ�
 # 関連リンク
 
 ## サンプル
-   * [HelloWorld (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
+   * [Hello Bluemix (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
 
 ## sdk
    * [bms-clientsdk-cordova-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 <!--## api
-   * [Core API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
+   * [Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
 -->

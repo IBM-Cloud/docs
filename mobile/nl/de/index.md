@@ -1,6 +1,7 @@
 # Mobile Apps erstellen
 {: #mobile}
-*Letzte Aktualisierung: 28. Januar 2016* 
+*Letzte Aktualisierung: 28. Januar 2016*
+{: .last-updated} 
 
 Mit {{site.data.keyword.Bluemix}} Mobile Services können Sie vordefinierte, verwaltete und skalierbare Cloud-Services in Ihre mobilen iOS-Anwendungen integrieren, ohne dass die IT-Abteilung involviert werden muss. Sie können sich auf das Erstellen mobiler Apps statt auf die Komplexitäten beim Verwalten der Back-End-Infrastruktur konzentrieren.
 

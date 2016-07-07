@@ -1,6 +1,13 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 # SDKs, amostras e referência de API
 {: #sdk}
-*Última atualização: 28 de janeiro de 2016*
+*Última atualização: 12 de maio de 2016*
+{: .last-updated}
 
 Para incluir SDKs do Bluemix Mobile Services em seu app, escolha os SDKs que você deseja usar e, em seguida, configure o gerenciador de dependência para enviar os SDKs por pull para o app.
 
@@ -8,9 +15,9 @@ Para incluir SDKs do Bluemix Mobile Services em seu app, escolha os SDKs que voc
 <!---
 <p class="cta"><a href="/docs/starters/mobilefirst/gettingstarted/android_existingproject.html#setup_sdk_gradle">Get SDK</a></p>
 --->
-
+<!-- Android -->
 <ul><li><strong>Modelos:</strong></li>
-<li><a href="gettingstarted/android.html">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld">HelloWorld</a></li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">HelloPush</a>
 </li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">HelloAuthentication</a>
@@ -27,13 +34,12 @@ Para incluir SDKs do Bluemix Mobile Services em seu app, escolha os SDKs que voc
 </ul>
 <ul>
 <li><strong>Referências de API:</strong></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Núcleo</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Autenticação do Facebook</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Autenticação do Google </a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Enviar por push</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Enviar por push a API REST</a></li>
+
+<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Enviar por push a API REST</a></li>
 </ul>
-</td><td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
+</td>
+<!-- Cordova -->
+<td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
 <!---
 <p class="cta"><a href="test">Get SDK</a></p>
 --->
@@ -44,7 +50,7 @@ Para incluir SDKs do Bluemix Mobile Services em seu app, escolha os SDKs que voc
 </ul>
 
 <ul><li><strong>Modelos:</strong></li>
-<li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld">HelloWorld</a></li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">HelloPush</a>
 </li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">HelloAuthentication</a>
@@ -57,6 +63,7 @@ Para incluir SDKs do Bluemix Mobile Services em seu app, escolha os SDKs que voc
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">bms-clientsdk android-push</a></li>
 </ul>
 
+<!-- iOS -->
 </td>
 <td valign="top"><img src="images/iOS_SDK_icon.png" alt="ios">
 
@@ -65,24 +72,20 @@ Para incluir SDKs do Bluemix Mobile Services em seu app, escolha os SDKs que voc
 SDK</a></p> --->
 
 <ul><li><strong>Modelos:</strong></li>
-<li><a href="gettingstarted/ios.html">HelloWorld</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">HelloPush</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">HelloPush</a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">HelloAuthentication</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">HelloAuthentication</a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellotodo" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Hello ToDo</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellotodo" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Hello ToDo</a></li>
 </ul>
 
 <p class="devops"><a href="https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master">SDK no IBM
 DevOps</a></p>
 <ul>
 <li><strong>Referências de API:</strong></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Núcleo</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Autenticação do Facebook</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Autenticação do Google </a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">IMFURLProtocol</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Enviar por push</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Enviar por push a API REST</a></li>
+<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">IMFURLProtocol</a></li>
+<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Abre em uma nova guia ou janela)" target="_blank">Enviar por push a API REST</a></li>
 </ul>
 </td>
 </tr>

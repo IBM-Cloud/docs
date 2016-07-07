@@ -7,9 +7,10 @@ copyright:
 <!-- Attribute definitions -->
 {:codeblock: .codeblock}
 
-# Initiation à l'exemple HelloWorld
+# Mise en route - Exemple Hello Bluemix pour Cordova
 {: #gettingstarted-cordova}
-*Dernière mise à jour : 17 mars 2016*
+*Dernière mise à jour : 27 mai 2016*
+{: .last-updated}
 
 Si vous voulez débuter avec une nouvelle application Cordova, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à
 votre système de back end mobile dans {{site.data.keyword.Bluemix}} depuis une application mobile sans authentification. Le logiciel SDK est déjà installé pour l'application. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans
@@ -74,7 +75,7 @@ terminal, puis entrez la commande suivante :
 	2. Accédez à **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** et ajoutez le chemin suivant :
 
 		```
-		<nom_de_votre_projet>/Plugins/ibm-mfp-core/Bridging-Header.h
+		<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 		```
 
 	3. Accédez à **Build settings > Linking > Runpath Search Paths** et ajoutez le paramètre Frameworks suivant :
@@ -83,10 +84,10 @@ terminal, puis entrez la commande suivante :
 		@executable_path/Frameworks
 		```
 
-7. Créez et exécutez l'exemple sur votre émulateur ou périphérique mobile. 
+7. Créez et exécutez l'exemple sur votre émulateur ou périphérique mobile.
 
   ### Android
-	1. Générez l'appli Cordova avec la commande suivante : 
+	1. Générez l'appli Cordova avec la commande suivante :
 
     **Important :** Avant d'ouvrir votre projet dans Android Studio, vous devez d'abord générer votre appli Cordova via l'interface de ligne de commande Cordova (CLI). Si vous ne le faites pas, vous des erreurs de génération se produisent.
 
@@ -132,11 +133,11 @@ Pour des informations sur l'obtention du logiciel SDK et son intégration à vot
 # rellinks
 
 ## samples
-   * [HelloWorld (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
+   * [Hello Bluemix (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
 
 ## sdk
    * [bms-clientsdk-cordova-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 <!--## api
-   * [Core API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
+   * [Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
 -->
