@@ -4,18 +4,23 @@ copyright:
   years: 2015, 2016
   
 ---
+{:shortdesc: .shortdesc}
 
 # Cordova 플러그인 설정
 {: #getting-started-cordova}
 
+*마지막 업데이트 날짜: 2016년 5월 25일*
+{: .last-updated}
+
 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 Cordova 애플리케이션을 계측하고 SDK를 초기화하고 보호 및 비보호 자원을 요청하십시오.
+{:shortdesc}
 
 ## 시작하기 전에
 {: #before-you-begin}
+다음이 있어야 합니다.
+* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오. 
 
-- {{site.data.keyword.amashort}} 서비스에서 보호하는 모바일 백엔드의 인스턴스가 있어야 합니다. 모바일 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](getting-started.html)를 참조하십시오. 
-
-- Cordova 애플리케이션을 작성하거나 기존 프로젝트를 사용하십시오. Cordova 애플리케이션을 설정하는 방법에 대한 자세한 정보는 [Cordova 웹 사이트](https://cordova.apache.org/)를 참조하십시오. 
+* Cordova 애플리케이션 또는 기존 프로젝트를 사용하십시오. Cordova 애플리케이션을 설정하는 방법에 대한 자세한 정보는 [Cordova 웹 사이트](https://cordova.apache.org/)를 참조하십시오. 
 
 ## {{site.data.keyword.amashort}} Cordova 플러그인 설치
 {: #getting-started-cordova-plugin}
@@ -35,7 +40,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 기본 {{site.d
 1. Android 플랫폼을 추가한 경우 지원되는 최소 API를 Cordova 애플리케이션의 `config.xml` 파일에 추가해야 합니다. `config.xml` 파일을 열고 `<platform name="android">` 요소에 다음 행을 추가하십시오. 
 
 	```XML
-	<platform name="android">    
+	<platform name="android">  
 		<preference name="android-minSdkVersion" value="15"/>
 		<preference name="android-targetSdkVersion" value="23"/>
 		<!-- add minimum and target Android API level declaration -->
@@ -131,7 +136,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 기본 {{site.d
 	}
 
 	var failure = function(error){
-		console.log("failure", error);
+	console.log("failure", error);
 	}
 
 	var request = new MFPRequest("/protected", MFPRequest.GET);

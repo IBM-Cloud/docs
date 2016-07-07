@@ -4,18 +4,23 @@ copyright:
   years: 2015, 2016
   
 ---
+{:shortdesc: .shortdesc}
 
 # Cordova-Plug-in einrichten
 {: #getting-started-cordova}
 
+*Letzte Aktualisierung: 25. Mai 2016*
+{: .last-updated}
+
 Instrumentieren Sie Ihre Cordova-Anwendung mit dem {{site.data.keyword.amashort}}-Client-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und nicht geschützte Ressourcen.
+{:shortdesc}
 
 ## Vorbereitungen
 {: #before-you-begin}
+Voraussetzungen:
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
 
-- Sie müssen über eine Instanz eines mobilen Back-Ends verfügen, die durch den {{site.data.keyword.amashort}}-Service geschützt wird. Weitere Informationen zur Erstellung eines mobilen Back-Ends finden Sie in der [Einführung](getting-started.html).
-
-- Erstellen Sie eine Cordova-Anwendung oder verwenden Sie ein vorhandenes Projekt. Weitere Informationen zur Einrichtung Ihrer Cordova-Anwendung finden Sie auf der [Cordova-Website](https://cordova.apache.org/).
+* Cordova-Anwendung oder ein vorhandenes Projekt. Weitere Informationen zur Einrichtung Ihrer Cordova-Anwendung finden Sie auf der [Cordova-Website](https://cordova.apache.org/).
 
 ## Cordova-Plug-in für {{site.data.keyword.amashort}} installieren
 {: #getting-started-cordova-plugin}
@@ -48,7 +53,7 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 
 	```XML
 	<platform name="ios">
-    <preference name="deployment-target" value="8.0"/>
+		<preference name="deployment-target" value="8.0"/>
 		<!-- add deployment target declaration -->
 	</platform>
 	```
@@ -73,17 +78,17 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 
 		Konfigurieren Sie Ihr Xcode-Projekt wie nachfolgend angegeben, um Buildfehler zu vermeiden.
 
-		1. Öffnen Sie Ihre Xcode-Projektdatei (xcode.proj) mit der neuesten Version von Xcode im Verzeichnis  &lt;*app_name*&gt;/platforms/ios.
+		1. Öffnen Sie Ihre Xcode-Projektdatei (xcode.proj) mit der neuesten Version von Xcode im Verzeichnis &lt;*app_name*&gt;/platforms/ios.
 
-		**Wichtig:** Wenn eine Nachricht "Convert to Latest Swift Syntax" ausgegeben wird, klicken Sie auf 'Cancel' (Abbrechen).
+		**Wichtig:** Wenn die Nachricht "Convert to Latest Swift Syntax" ausgegeben wird, klicken Sie auf 'Cancel' (Abbrechen).
 
 		2. Navigieren Sie zu **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** und fügen Sie den folgenden Pfad hinzu:
 
 			```
-			<ihr_projektname>/Plugins/ibm-mfp-core/Bridging-Header.h
+			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. Navigieren Sie zu **Build settings > Linking > Runpath Search Paths** und fügen Sie den folgenden Parameter 'Frameworks' hinzu:
+		3. Navigieren Sie zu **Build settings > Linking > Runpath Search Paths** und fügen Sie den folgenden Frameworks-Parameter hinzu:
 
 			```
 			@executable_path/Frameworks

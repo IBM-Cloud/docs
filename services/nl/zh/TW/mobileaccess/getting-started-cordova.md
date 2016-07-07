@@ -4,23 +4,28 @@ copyright:
   years: 2015, 2016
   
 ---
+{:shortdesc: .shortdesc}
 
 # 設定 Cordova 外掛程式
 {: #getting-started-cordova}
 
-使用 {{site.data.keyword.amashort}} Client SDK 檢測 Cordova 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
+*前次更新：2016 年 5 月 25 日*
+{: .last-updated}
+
+使用 {{site.data.keyword.amashort}} 用戶端 SDK 檢測 Cordova 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
+{:shortdesc}
 
 ## 開始之前
 {: #before-you-begin}
+您必須具有：
+* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端的相關資訊，請參閱[開始使用](index.html)。
 
-- 您必須具有 {{site.data.keyword.amashort}} 服務所保護之行動式後端的實例。如需如何建立行動式後端的相關資訊，請參閱[開始使用](getting-started.html)。
-
-- 建立 Cordova 應用程式，或使用現有專案。如需如何設定 Cordova 應用程式的相關資訊，請參閱 [Cordova 網站](https://cordova.apache.org/)。
+* Cordova 應用程式，或使用現有專案。如需如何設定 Cordova 應用程式的相關資訊，請參閱 [Cordova 網站](https://cordova.apache.org/)。
 
 ## 安裝 {{site.data.keyword.amashort}} Cordova 外掛程式
 {: #getting-started-cordova-plugin}
 
-{{site.data.keyword.amashort}} Client SDK for Cordova 是包裝原生 {{site.data.keyword.amashort}} Client SDK 的 Cordova 外掛程式。它是使用「Cordova 指令行介面 (CLI)」及 `npmjs`（Cordova 專案的外掛程式儲存庫）進行配送。Cordova CLI 會從儲存庫中自動下載外掛程式，並使它們可供 Cordova 應用程式使用。
+適用於 Cordova 的 {{site.data.keyword.amashort}} 用戶端 SDK 是包裝原生 {{site.data.keyword.amashort}} 用戶端 SDK 的 Cordova 外掛程式。它是使用「Cordova 指令行介面 (CLI)」及 `npmjs`（Cordova 專案的外掛程式儲存庫）進行配送。Cordova CLI 會從儲存庫中自動下載外掛程式，並使它們可供 Cordova 應用程式使用。
 
 1. 將 Android 及 iOS 平台新增至 Cordova 應用程式。從指令行中，執行下列一個或兩個指令：
 
@@ -37,8 +42,8 @@ copyright:
 	```XML
 	<platform name="android">  
 		<preference name="android-minSdkVersion" value="15"/>
-  	<preference name="android-targetSdkVersion" value="23"/>
-  	<!-- add minimum and target Android API level declaration -->
+		<preference name="android-targetSdkVersion" value="23"/>
+		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
 
@@ -50,8 +55,8 @@ copyright:
 
 	```XML
 	<platform name="ios">
-    <preference name="deployment-target" value="8.0"/>
-     <!-- add deployment target declaration -->
+		<preference name="deployment-target" value="8.0"/>
+		<!-- add deployment target declaration -->
 	</platform>
 	```
 
@@ -100,31 +105,31 @@ copyright:
 	cordova plugin list
 	```
 
-## 起始設定 {{site.data.keyword.amashort}} Client 外掛程式
+## 起始設定 {{site.data.keyword.amashort}} 用戶端外掛程式
 {: #getting-started-cordova-initialize}
 
-若要使用 {{site.data.keyword.amashort}} Client SDK，您必須傳遞 *applicationGUID* 及 *applicationRoute* 參數來起始設定 SDK。
+若要使用 {{site.data.keyword.amashort}} 用戶端 SDK，您必須傳遞 *applicationGUID* 及 *applicationRoute* 參數來起始設定 SDK。
 
-1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板的主頁面上，尋找路徑及應用程式 GUID 值。依序按一下應用程式名稱及**行動式選項**，以顯示**應用程式路徑**及**應用程式 GUID** 值來起始設定 SDK。
+1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板的主頁面上，尋找路徑及應用程式 GUID 值。依序按一下應用程式名稱及**行動選項**，以顯示**應用程式路徑**及**應用程式 GUID** 值來起始設定 SDK。
 
-3. 新增下列呼叫到 `index.js` 檔案，以起始設定 {{site.data.keyword.amashort}} Client SDK。將 *applicationRoute* 及 *applicationGUID* 取代為 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動式選項**的值。
+3. 新增下列呼叫到 `index.js` 檔案，以起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。將 *applicationRoute* 及 *applicationGUID* 取代為 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的值。
 
 	```JavaScript
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
 
-## 對行動式後端提出要求
+## 對行動後端提出要求
 {: #getting-started-request}
 
-起始設定 {{site.data.keyword.amashort}} Client SDK 之後，即可開始對行動式後端提出要求。
+起始設定 {{site.data.keyword.amashort}} 用戶端 SDK 之後，即可開始對行動後端提出要求。
 
-1. 嘗試將要求傳送給新行動式後端的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`。例如：
+1. 嘗試將要求傳送給新行動後端的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`。例如：
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected
 	```
 
-	使用 MobileFirst Services Starter 樣板所建立之行動式後端的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。瀏覽器中會傳回 `Unauthorized` 訊息。傳回此訊息的原因是只有使用 {{site.data.keyword.amashort}} Client SDK 所檢測的行動式應用程式才會存取這個端點。
+	使用 MobileFirst Services Starter 樣板所建立之行動後端的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。瀏覽器中會傳回 `Unauthorized` 訊息。傳回此訊息的原因是只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才會存取這個端點。
 
 
 
@@ -136,7 +141,7 @@ copyright:
 	}
 
 	var failure = function(error){
-		console.log("failure", error);
+	console.log("failure", error);
 	}
 
 	var request = new MFPRequest("/protected", MFPRequest.GET);

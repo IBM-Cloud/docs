@@ -8,7 +8,11 @@ copyright:
 # Touch ID로 권한 보안 설정
 {: #before-you-begin}
 
-Touch ID는 iOS 디바이스의 지문 인식 기능입니다. Touch ID를 사용하여 이후 사용을 위해 권한 정보를 자동으로 보안 설정할 수 있습니다. 보안 강도를 구성하려면 `IMFAuthorizationManager.setAuthorizationPersistencePolicy()` 메소드를 사용하여 다음 지속성 정책 중 하나를 설정하십시오. 
+Touch ID는 iOS 디바이스의 지문 인식 기능입니다. Touch ID를 사용하여 이후 사용을 위해 권한 정보를 자동으로 보안 설정할 수 있습니다.  
+
+Touch ID는 {{site.data.keyword.amashort}} Objective-C SDK에서만 사용할 수 있습니다.
+
+보안 강도를 구성하려면 `IMFAuthorizationManager.setAuthorizationPersistencePolicy()` 메소드를 사용하여 다음 지속성 정책 중 하나를 설정하십시오. 
 
 * **IMFAuthorizationPersistencePolicyNever**(가장 안전): 권한 정보를 디바이스에 보존하지 않습니다. 권한 헤더는 단일 애플리케이션 세션 동안 유효합니다. 권한 정보는 iOS 키체인에 보존됩니다. 
 

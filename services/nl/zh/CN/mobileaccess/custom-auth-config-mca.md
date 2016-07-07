@@ -11,7 +11,7 @@ copyright:
 
 ## 开始之前
 {: #custom-dash-begin}
-* 请阅读[入门](getting-started.html)。
+* 请阅读[入门](index.html)。
 * 使用 {{site.data.keyword.amashort}} 服务器 SDK 保护后端应用程序。有关更多信息，请参阅[保护资源](protecting-resources.html)。
 * 让定制身份提供者应用程序开始运行。
 

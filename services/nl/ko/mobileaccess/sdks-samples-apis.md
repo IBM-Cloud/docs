@@ -8,7 +8,11 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} SDK, 샘플, API 참조
-{{site.data.keyword.amashort}} SDK를 앱에 추가하려면, 사용하려는 SDK를 선택한 다음 SDK를 앱으로 풀링하도록 종속성 관리자를 구성하십시오. 
+*마지막 업데이트 날짜: 2016년 4월 30일*
+{: .last-updated}
+
+{{site.data.keyword.amashort}} SDK를 앱에 추가하려면, 사용하려는 SDK를 선택한 다음 SDK를 앱으로 풀링하도록 종속성 관리자를 구성하십시오.
+{:shortdesc}
 
 ## 코어 SDK
 {: #coresdk}
@@ -33,18 +37,20 @@ copyright:
 ### iOS(Swift SDK)
 {: #coresdk-ios-swift}
 
-[Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
+[Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security)
 
 #### CocoaPods로 코어 SDK 설치
 {: #coresdk-ios-siwft-cocoapods}
 
 ```
 use_frameworks!
-pod 'BMSCore'
+pod 'BMSSecurity'
 ```
 
 ### iOS(Objective-C SDK)
 {: #coresdk-ios}
+
+Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만, 새로운 Swift SDK를 위해 올해 말에 중단될 계획입니다([iOS Swift SDK 설정](getting-started-ios-swift-sdk.html) 참조).
 
 [Git 저장소](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master),
 [API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
@@ -107,6 +113,7 @@ pod 'BMSFacebookAuthentication'
 [Git 저장소](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
 [API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
+*참고:* Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만 새로운 Swift SDK를 위해 올해 말해 중단될 계획입니다. 새 애플리케이션에서는 Swift SDK를 사용하는 것이 좋습니다(iOS Swift SDK 설정 참조).
 #### CocoaPods로 Facebook SDK 설치
 {: #facebooksdk-ios-cocoapods}
 
@@ -139,7 +146,7 @@ cordova plugin add ibm-mfp-core
 {: #googlesdk-android-gradle}
 
 ```Gradle
-    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
     	name:'googleauthentication',
     	version: '2.+',
     	ext: 'aar',
@@ -159,7 +166,7 @@ use_frameworks!
 pod 'BMSGoogleAuthentication'
 ```
 
-### iOS(Objective-C SDK)
+### iOS(Objective-C SDK - 더 이상 사용되지 않음)
 {: #googlesdk-ios}
 
 [Git 저장소](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),

@@ -12,7 +12,7 @@ copyright:
 
 {{site.data.keyword.amafull}} 服务为移动应用程序提供了安全性和监视功能。您可以配置客户机认证和身份提供者。此外，还可以向应用程序添加监视功能，以同时支持客户机日志记录和使用情况统计信息。
 
-注：Mobile Client Access 服务先前称为 Advanced Mobile Access。
+注：{{site.data.keyword.amashort}} 服务先前称为 Advanced Mobile Access。
 {: shortdesc}
 
 1. 在 Bluemix 中设置移动后端，并在移动应用程序中配置 SDK。有关更多信息，请参阅[入门](getting-started.html)。

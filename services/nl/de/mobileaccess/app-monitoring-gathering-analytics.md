@@ -7,8 +7,12 @@ copyright:
 
 # Nutzungsanalysedaten erfassen
 {: #usage-analytics}
+*Letzte Aktualisierung: 6. Mai 2016*
+{: .last-updated}
 
 Sie können das {{site.data.keyword.amashort}}-Client-SDK so konfigurieren, dass Nutzungsanalysedaten aufgezeichnet und die aufgezeichneten Daten an den {{site.data.keyword.amashort}}-Service gesendet werden.
+
+**Wichtig**: Die Überwachungsfunktionen des Service {{site.data.keyword.amashort}} sollen auf den neuen Service [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics) migriert werden. Das neue Swift-SDK nutzt den neuen Service {{site.data.keyword.mobileanalytics_short}}, der eine deutlich umfangreichere Analyseerfahrung bereitstellt. Der Service {{site.data.keyword.mobileanalytics_short}} befindet sich aktuell in der Versuchsphase und soll planmäßig noch dieses Jahr allgemein verfügbar gemacht werden. Es empfiehlt sich, die Migration Ihrer Anwendungen zum Verwenden des neuen Service {{site.data.keyword.mobileanalytics_short}} und des Swift-SDK zu überprüfen, da die Verwendung und Unterstützung der Überwachungsfunktionen des Service {{site.data.keyword.amashort}} eingestellt werden sollen, wenn {{site.data.keyword.mobileanalytics_short}} allgemein verfügbar ist.
 
 **Anmerkung:** Stellen Sie sicher, dass Sie die Protokollerfassung aktiviert haben, bevor Sie die Aufzeichnung von Nutzungsanalysedaten starten.
 
@@ -40,6 +44,10 @@ MFPAnalytics.send();
 
 ### iOS - Objective-C
 {: #usage-analytics-objectc}
+
+**Wichtig**: Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden.
+
+Das Objective-C-SDK meldet Überwachungsdaten an die Überwachungskonsole des Service {{site.data.keyword.amashort}}. Falls Sie auf die Überwachungsfunktionen des Service {{site.data.keyword.amashort}} angewiesen sind, verwenden Sie weiterhin das Objective-C-SDK.
 
 ```Objective-C
 // Aufzeichnung von Nutzungsanalysedaten aktivieren

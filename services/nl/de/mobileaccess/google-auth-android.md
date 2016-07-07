@@ -5,66 +5,62 @@ copyright:
 
 ---
 
-# Google-Authentifizierung in Android-Apps aktivieren
+# Google-Authentifizierung für Android-Apps aktivieren
 {: #google-auth-android}
 
 ## Vorbereitungen
 {: #before-you-begin}
+Voraussetzungen:
 
-* Sie müssen über eine Ressource verfügen, die von {{site.data.keyword.amashort}} geschützt wird, und ein Android-Projekt haben, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist.  Weitere Informationen finden Sie in [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) und [Android-SDK einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
-* Schützen Sie Ihre Back-End-Anwendung manuell mit dem {{site.data.keyword.amashort}}-Server-SDK. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* Android-Projekt in Android Studio, das für das Arbeiten mit Gradle konfiguriert ist. Das Projekt muss nicht mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
 
-## Google-Projekt für die Android-Plattform konfigurieren
-{: #google-auth-android-project}
-Zur Verwendung von Google als Identitätsprovider erstellen Sie ein Projekt in Google Developer Console. Zur Erstellung eines Projekts gehört das Anfordern einer Google-Client-ID.  Die Google-Client-ID ist eine eindeutige Kennung für Ihre Anwendung, die von der Google-Authentifizierung verwendet wird.
+Das Einrichten der Google-Authentifizierung für Ihre {{site.data.keyword.amashort}}-Android-App erfordert außerdem die Konfiguration der folgenden Komponenten:
+* {{site.data.keyword.Bluemix_notm}}-Anwendung
+* Android Studio-Projekt
 
-1. Erstellen Sie ein Projekt in [Google Developer Console](https://console.developers.google.com).
-Wenn Sie bereits ein Projekt haben, können Sie die Schritte, in denen die Projekterstellung beschrieben wird, überspringen und mit dem Hinzufügen von Berechtigungsnachweisen beginnen.
-   1.    Öffnen Sie ein neues Projektmenü.
+## Projekt in Google Developer Console erstellen
+{: #create-google-project}
 
-         ![Bild](images/FindProject.jpg)
+Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der Entwicklerkonsole von Google '[Google Developer Console](https://console.developers.google.com)'.
+Zur Erstellung eines Projekts gehört das Anfordern einer Google-Client-ID. Die Google-Client-ID ist eine eindeutige Kennung für Ihre Anwendung, die von der Google-Authentifizierung verwendet wird und zum Einrichten der {{site.data.keyword.Bluemix_notm}}-Anwendung erforderlich ist.
 
-   2.    Klicken Sie auf **Create a project**.
+Führen Sie die folgenden Schritte von der Konsole aus:
 
-         ![Bild](images/CreateAProject.jpg)
-
-
-   1. Wählen Sie in der Liste **Social APIs** den Eintrag **Google+ API** aus.
-
-     ![Bild](images/chooseGooglePlus.jpg)
-
-   1. Klicken Sie in der nächsten Anzeige auf **Enable**.
-
-1. Wählen Sie die Registerkarte **Consent Screen** aus und geben Sie den Produktnamen an, der den Benutzern angezeigt wird. Weitere Werte sind optional. Klicken Sie auf **Save**.
-
-    ![Bild](images/consentScreen.png)
-
-1. Wählen Sie in der Liste **Credentials** die OAuth-Client-ID aus.
-
-     ![Bild](images/chooseCredentials.png)
+1. Erstellen Sie ein Projekt mithilfe der **Google+**-API.
+2. Fügen Sie den Benutzerzugriff **OAuth** hinzu.
+3. Vor dem Hinzufügen der Berechtigungsnachweise müssen Sie die Plattform auswählen (Android).
+4. Fügen Sie die Berechtigungsnachweise hinzu. Zum Abschließen der Erstellung der Berechtigungsnachweise müssen Sie den **Fingerabdruck für das Signaturzertifikat** hinzufügen.
 
 
 
-1. Wählen Sie einen Anwendungstyp aus. Klicken Sie auf **Android**. Geben Sie einen aussagekräftigen Namen für Ihren Android-Client an.
+### Signaturzertifikat einrichten
+Damit Google Ihre Anwendungsauthentizität überprüfen kann, müssen Sie einen Fingerabdruck für das Signaturzertifikat angeben.
 
-1. Damit Google Ihre Anwendungsauthentizität überprüfen kann, müssen Sie einen Fingerabdruck für das Signaturzertifikat angeben.
+Das Android-Betriebssystem erfordert, dass alle Anwendungen, die auf einem Android-Gerät installiert sind, mit einem Entwicklerzertifikat signiert sind. Eine Android-Anwendung kann in zwei Modi erstellt werden: Debugmodus und Freigabemodus (Release). Es wird gewöhnlich empfohlen, zwei unterschiedliche Zertifikate für den Debugmodus und den Freigabemodus zu haben.  Zertifikate, die zum Signieren von Android-Anwendungen im Debugmodus verwendet werden, werden in das Android-SDK gepackt.  Das Android-SDK wird in der Regel von Android Studio automatisch installiert. Wenn Sie Ihre Anwendung für Google Play freigeben möchten, müssen Sie die App mit einem anderen Zertifikat signieren, das Sie normalerweise selbst generieren. Weitere Informationen finden Sie unter [Android-Anwendungen signieren](http://developer.android.com/tools/publishing/app-signing.html).
 
-	 **Weitere Informationen zur Android-Sicherheit:** Das Android-Betriebssystem erfordert, dass alle Anwendungen, die auf einem Android-Gerät installiert sind, mit einem Entwicklerzertifikat signiert sind. Eine Android-Anwendung kann in zwei Modi erstellt werden: Debugmodus und Freigabemodus (Release). Es wird gewöhnlich empfohlen, zwei unterschiedliche Zertifikate für den Debugmodus und den Freigabemodus zu haben.  Zertifikate, die zum Signieren von Android-Anwendungen im Debugmodus verwendet werden, werden in das Android-SDK gepackt.  Das Android-SDK wird in der Regel von Android Studio automatisch installiert. Wenn Sie Ihre Anwendung für Google Play freigeben möchten, müssen Sie die App mit einem anderen Zertifikat signieren, das Sie normalerweise selbst generieren. Weitere Informationen finden Sie unter [Android-Anwendungen signieren](http://developer.android.com/tools/publishing/app-signing.html).
+Ein Keystore (Schlüsselspeicher), der ein Zertifikat für Entwicklungsumgebungen enthält, ist in der Datei `~/.android/debug.keystore` gespeichert. Das Standardkennwort für den Keystore ist `android`. Dieses Zertifikat dient zum Erstellen (Build) von Anwendungen im Debugmodus.
 
-1. Ein Keystore (Schlüsselspeicher), der ein Zertifikat für Entwicklungsumgebungen enthält, ist in der Datei `~/.android/debug.keystore` gespeichert. Das Standardkennwort für den Keystore ist `android`. Dieses Zertifikat dient zum Erstellen (Build) von Anwendungen im Debugmodus.
-
-     1. Rufen Sie Ihren Fingerabdruck für das Signaturzertifikat ab:
+1. Rufen Sie Ihren Fingerabdruck für das Signaturzertifikat von Ihrer Client-Entwicklungsumgebung ab:
 
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 	```
 	Mit derselben Syntax können Sie auch den Schlüsselhashwert Ihres Freigabemoduszertifikats abrufen. Ersetzen Sie in dem Befehl den Alias- und den Keystorepfad entsprechend.
 
-1. Suchen Sie die Zeile, die mit `SHA1` beginnt, unter **Certificate Fingerprints**. Kopieren Sie den Fingerabdruck, den Sie mit dem **keytool**-Befehl ermittelt haben, in Google Developer Console.
+1. Suchen Sie im Dialog 'Google Console Credential' die Zeile, die unter **Certificate Fingerprints** mit `SHA1` beginnt. Kopieren Sie den Fingerabdruck, der durch Ausführen des Befehls **keytool** abgerufen wurde, in das Textfeld.
 
-1. Geben Sie den Paketnamen Ihrer Android-Anwendung an. Zur Ermittlung des Paketnamens Ihrer Android-Anwendung öffnen Sie die Datei `AndroidManifest.xml` in Android Studio und suchen nach: `<manifest package="{your-package-name}">`. Wenn Sie dies erledigt haben, klicken Sie auf **Create**.
+###Paketname
 
-Es wird ein Dialogfenster mit Ihrer Google-Client-ID angezeigt. Notieren Sie sich diesen Wert. Sie müssen diesen Wert bei {{site.data.keyword.Bluemix}} registrieren.
+1. Geben Sie im Dialog 'Credentials' den Paketnamen Ihrer Android-Anwendung ein. 
+
+  Zur Ermittlung des Paketnamens Ihrer Android-Anwendung öffnen Sie die Datei `AndroidManifest.xml` in Android Studio und suchen nach: `<manifest package="{your-package-name}">`. 
+
+1. Wenn Sie dies erledigt haben, klicken Sie auf **Create**. **Damit ist die Erstellung der Berechtigungsnachweise abgeschlossen.**
+
+###Google-Client-ID
+
+Wenn die Berechtigungsnachweise erfolgreich erstellt wurden, wird auf der Seite für Berechtigungsnachweise Ihre Google-Client-ID angezeigt. Notieren Sie sich diesen Wert. Sie müssen diesen Wert in der {{site.data.keyword.Bluemix}}-Anwendung registrieren.
 
 
 ## {{site.data.keyword.amashort}} für die Google-Authentifizierung konfigurieren
@@ -104,7 +100,7 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 	}
 	```
 
-	Sie können die Abhängigkeit vom Modul `core` der Gruppe `com.ibm.mobilefirstplatform.clientsdk.android` entfernen, wenn diese vorhanden ist. Das Modul `googleauthentication` lädt sie automatisch für Sie herunter. Das Modul `googleauthentication` lädt das Google-SDK herunter und installiert es in Ihrem Android-Projekt.
+	**Hinweis:** Sie können die Abhängigkeit vom Modul `core` der Gruppe `com.ibm.mobilefirstplatform.clientsdk.android` entfernen, wenn diese vorhanden ist. Das Modul `googleauthentication` lädt sie automatisch für Sie herunter. Das Modul `googleauthentication` lädt das Google-SDK herunter und installiert es in Ihrem Android-Projekt.
 
 1. Synchronisieren Sie Ihr Projekt mit Gradle, indem Sie auf **Tools > Android > Sync Project with Gradle Files** klicken.
 
@@ -145,14 +141,14 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 
 ## Authentifizierung testen
 {: #google-auth-android-test}
-Nach der Initialisierung des Client-SDK und der Registrierung des Google-Authentifizierungsmanagers können Sie mit dem Senden von Anforderungen an Ihr mobiles Back-End beginnen.
+Nach der Initialisierung des Client-SDK und der Registrierung des Google-Authentifizierungsmanagers können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen.
 
 ### Vorbereitungen
 {: #google-auth-android-testing-before}
-Sie müssen ein mobiles Back-End haben, das mit der Boilerplate 'MobileFirst Services Starter' erstellt wurde, und eine Ressource, die durch {{site.data.keyword.amashort}} geschützt wird, am Endpunkt `/protected` haben. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Sie müssen über eine mobile Back-End-Anwendung verfügen, die mit der MobileFirst Services Starter-Boilerplate erstellt wurde. Außerdem müssen Sie bereits eine Ressource haben, die durch {{site.data.keyword.amashort}} am Endpunkt `/protected` geschützt wird. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Entpunkt Ihres mobilen Back-Ends zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
- Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der Boilerplate 'MobileFirst Services' erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Daher können nur mobile Anwendungen auf den Endpunkt zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
+1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
+ Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der Boilerplate 'MobileFirst Services' erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Daher können nur mobile Anwendungen auf den Endpunkt zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
 
 1. Senden Sie eine Anforderung über Ihre Android-Anwendung an denselben Endpunkt. Fügen Sie den folgenden Code hinzu, nachdem Sie die `BMSClient`-Instanz initialisiert und `GoogleAuthenticationManager` registriert haben.
 

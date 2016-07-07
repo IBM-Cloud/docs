@@ -10,7 +10,7 @@ copyright:
 
 Konfigurieren Sie Ihre iOS-Anwendung, die mit der angepassten Authentifizierung arbeitet, zur Verwendung des {{site.data.keyword.amashort}}-Client-SDKs und verbinden Sie Ihre Anwendung mit {{site.data.keyword.Bluemix}}.
 
-**Tipp:** Wenn Sie Ihre iOS-App mit Swift entwickeln, sollten Sie die Verwendung von {{site.data.keyword.amashort}}-Client-Swift-SDK in Erwägung ziehen. Die Anweisungen auf dieser Seite gelten für das {{site.data.keyword.amashort}}-Client-Objective-C-SDK. Anweisungen für die Verwendung des Swift-SDK finden Sie in [{{site.data.keyword.amashort}}-Client-SDK für iOS konfigurieren (Swift-SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html).
+**Hinweis:** Wenn Sie Ihre iOS-App mit Swift entwickeln, sollten Sie die Verwendung von {{site.data.keyword.amashort}}-Client-Swift-SDK in Erwägung ziehen. Die Anweisungen auf dieser Seite gelten für das {{site.data.keyword.amashort}}-Client-Objective-C-SDK. Anweisungen für die Verwendung des neuen Swift-SDK finden Sie in [{{site.data.keyword.amashort}}-Client-SDK für iOS konfigurieren (Swift-SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html).
 
 ## Vorbereitungen
 {: #before-you-begin}
@@ -175,9 +175,9 @@ CustomAuthenticationDelegate.m
 
 	// Im Fall eines Fehlers beim Erfassen von Berechtigungsnachweisen müssen
 	// Sie dies an IMFAuthenticationContext zurückmelden. Andernfalls verbleibt
-	// das Mobile Client Access-Client-SDK unbegrenzte Zeit in einem
-	// Wartestatus für Berechtigungsnachweise.
-	}
+ 	// das Mobile Client Access-Client-SDK unbegrenzte Zeit in einem
+	 // Wartestatus für Berechtigungsnachweise.
+	 }
 
 -(void)authenticationContext:(id<IMFAuthenticationContext>)context
 					didReceiveAuthenticationSuccess:(NSDictionary *)userInfo{
@@ -220,10 +220,10 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 		context.submitAuthenticationChallengeAnswer(challengeAnswer)
 
 		// Im Fall eines Fehlers beim Erfassen von Berechtigungsnachweisen müssen
- 	// Sie dies an IMFAuthenticationContext zurückmelden. Andernfalls verbleibt
- 	// das Mobile Client Access-Client-SDK unbegrenzte Zeit in einem
-	 // Wartestatus für Berechtigungsnachweise.
-	 }
+ 	// Sie dies an IMFAuthenticationContext zurückmelden. Andernfalls verbleibt das
+		// Mobile Client Access-Client-SDK unbegrenzte Zeit in einem
+		// Wartestatus für Berechtigungsnachweise
+	}
 
 
 	func authenticationContext(context: IMFAuthenticationContext!,
@@ -261,14 +261,13 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 ## Authentifizierung testen
 {: #custom-ios-testing}
-Nachdem Sie das Client-SDK initialisiert und ein angepasstes Delegat `IMFAuthenticationDelegate` registriert haben, können Sie mit dem Senden von Anforderungen an Ihr mobiles Back-End beginnen.
+Nach der Initialisierung des Client-SDK und der Registrierung des angepassten Delegats `IMFAuthenticationDelegate` können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen.
 
 ### Vorbereitungen
 {: #custom-ios-testing-before}
  Sie müssen eine Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, sowie eine Ressource, die durch {{site.data.keyword.amashort}} geschützt wird, am Endpunkt `/protected` haben.
 
-1. Senden Sie eine Anforderung an den geschützten Endpunkt Ihres mobilen Back-Ends in Ihrem Browser, indem Sie die Adresse `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
-  Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
+1. Senden Sie eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung in Ihrem Browser, indem Sie die Adresse `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`). Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
 1. Verwenden Sie Ihre iOS-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert und Ihr angepasstes `IMFAuthenticationDelegate` registriert haben:
 
 	Objective-C:

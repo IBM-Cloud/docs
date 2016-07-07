@@ -8,11 +8,9 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} 入門
-       
 {: #getting-started}
 
-{{site.data.keyword.amafull}} サービスは、
-モバイル・アプリケーションにセキュリティーおよびモニター機能を付与します。クライアントの認証プロバイダーおよび ID プロバイダーを構成できるようになります。また、アプリケーションにモニター機能を追加することにより、クライアントのロギングおよび使用統計の両方が可能になります。
+{{site.data.keyword.amafull}} サービスは、モバイル・アプリケーションにセキュリティーおよびモニター機能を付与します。クライアントの認証プロバイダーおよび ID プロバイダーを構成できるようになります。また、アプリケーションにモニター機能を追加することにより、クライアントのロギングおよび使用統計の両方が可能になります。
 
 注: {{site.data.keyword.amashort}} サービスの以前の名称は Advanced Mobile Access でした。
 {: shortdesc}
@@ -26,18 +24,18 @@ copyright:
 1. アプリのモニタリングおよびロギングを構成します。詳細情報については、[アプリのモニター](app-monitoring.html)を参照してください。
 
 
-># 関連リンク{:class="linklist"}
->## チュートリアルおよびサンプル{:id="samples"}
+># 関連リンク {:class="linklist"}
+>## チュートリアルおよびサンプル {:id="samples"}
 >* [android-helloauthentication](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication)
 >* [ios-helloauthentication](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication)
 >
-># 関連リンク{:class="linklist"}
->## API 参照{:id="api"}
+># 関連リンク {:class="linklist"}
+>## API 参照 {:id="api"}
 >* [Core API リファレンス (Android)](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
 >* [Core API リファレンス (iOS)](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
 >
-># 関連リンク{:class="linklist"}
->## SDK{:id="sdk"}
+># 関連リンク {:class="linklist"}
+>## SDK {:id="sdk"}
 >* [Core SDK (iOS) ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)  
 >* [bms-clientsdk-android-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 >* [bms-clientsdk-cordova-plugin-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)

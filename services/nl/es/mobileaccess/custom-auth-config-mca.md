@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
   
 ---
 
@@ -11,7 +11,7 @@ Para utilizar la autenticación personalizada con su app móvil, debe registrar 
 
 ## Antes de empezar
 {: #custom-dash-begin}
-* Consulte [Cómo empezar](getting-started.html).
+* Consulte [Cómo empezar](index.html).
 * Proteja la aplicación de fondo con el SDK del servidor de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Protección de recursos](protecting-resources.html).
 * Disponga de una aplicación de proveedor de identidad personalizado en ejecución.
 

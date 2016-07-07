@@ -7,6 +7,8 @@ copyright:
 
 # Informazioni su {{site.data.keyword.amashort}}
 {: #mca-overview}
+*Ultimo aggiornamento: 15 maggio 2016*
+{: .last-updated}
 
 Il servizio {{site.data.keyword.amafull}} fornisce servizi di autenticazione e monitoraggio per le applicazioni mobili che accedono a risorse cloud ospitate su {{site.data.keyword.Bluemix_notm}}.
 
@@ -48,11 +50,11 @@ con il servizio {{site.data.keyword.amashort}}.
 
 ## Flusso della richiesta {{site.data.keyword.amashort}}
 {: #flow}
-Il seguente diagramma descrive in che modo una richiesta fluisce dall'SDK ai tuoi provider di identità e backend mobile.
+Il seguente diagramma descrive in che modo una richiesta fluisce dall'SDK ai tuoi provider di identità e all'applicazione di back-end mobile.
 
 ![immagine](images/mca-sequence-overview.jpg)
 
-1. Usa SDK {{site.data.keyword.amashort}} per effettuare una richiesta alle tue risorse di backend protette con l'SDK server {{site.data.keyword.amashort}}.
+1. Usa SDK {{site.data.keyword.amashort}} per effettuare una richiesta alle tue risorse di back-end protette con l'SDK server {{site.data.keyword.amashort}}.
 * L'SDK server {{site.data.keyword.amashort}} rileva una richiesta non autorizzata e restituisce HTTP 401 insieme all'ambito di autorizzazione.
 * L'SDK client {{site.data.keyword.amashort}} rileva automaticamente l'HTTP 401 e avvia il processo di autenticazione.
 * l'SDK client {{site.data.keyword.amashort}} contatta il servizio {{site.data.keyword.amashort}} e chiede di emettere un'intestazione di autorizzazione.
@@ -67,4 +69,4 @@ Il seguente diagramma descrive in che modo una richiesta fluisce dall'SDK ai tuo
 * Se la convalida ha esito positivo, il servizio {{site.data.keyword.amashort}} genera un'intestazione di autorizzazione e restituisce l'intestazione all'SDK client {{site.data.keyword.amashort}}. L'intestazione di autorizzazione contiene due token: un token di accesso che contiene le informazioni sulle autorizzazioni di accesso e un token ID che contiene le informazioni su utente, dispositivo o applicazione correnti.
 * Da questo punto in avanti, tutte le richieste effettuate con l'SDK client {{site.data.keyword.amashort}} hanno un'intestazione di autorizzazione di nuova acquisizione.
 * L'SDK client {{site.data.keyword.amashort}} reinvia automaticamente la richiesta originale che ha attivato il flusso di autorizzazione.
-* L'SDK server {{site.data.keyword.amashort}} estrae l'intestazione di autorizzazione dalla richiesta, convalida l'intestazione con il servizio {{site.data.keyword.amashort}} e concede l'accesso a una risorsa di backend.
+* L'SDK server {{site.data.keyword.amashort}} estrae l'intestazione di autorizzazione dalla richiesta, convalida l'intestazione con il servizio {{site.data.keyword.amashort}} e concede l'accesso a una risorsa di back-end.

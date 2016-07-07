@@ -4,18 +4,24 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
 
-# iOS Objective-C SDK 설정
+# iOS Objective-C SDK 설정(더 이상 사용되지 않음)
 {: #getting-started-ios}
 
-{{site.data.keyword.amashort}} SDK를 사용하여 iOS 애플리케이션을 계측하십시오. SDK를 초기화하고 보호 및 비보호 자원에 대한 요청을 작성하십시오. 
+*마지막 업데이트 날짜: 2016년 6월 14일*
+{: .last-updated}
 
-**팁:** Swift로 iOS 앱을 개발하는 경우 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 사용을 고려하십시오. 세부사항은 [iOS Swift SDK 설정](getting-started-ios-swift-sdk.html)을 참조하십시오.
+{{site.data.keyword.amashort}} SDK를 사용하여 iOS 애플리케이션을 계측하십시오. SDK를 초기화하고 보호 및 비보호 자원에 대한 요청을 작성하십시오.
+{:shortdesc}
+
+**중요:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만 새로운 Swift SDK를 위해 올해 말해 중단될 계획입니다. 새 애플리케이션에서는 Swift SDK를 사용하는 것이 좋습니다([iOS Swift SDK 설정](getting-started-ios-swift-sdk.html) 참조). 
 
 ## 시작하기 전에
 {: #before-you-begin}
-* {{site.data.keyword.amashort}} 서비스에서 보호하는 모바일 백엔드의 인스턴스가 있어야 합니다. 모바일 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](getting-started.html)를 참조하십시오. 
-* 올바르게 Xcode를 설정했는지 확인하십시오. iOS 개발 환경을 설정하는 방법에 대한 자세한 정보는 [Apple 개발자 웹 사이트](https://developer.apple.com/support/xcode/)를 참조하십시오. 
+다음이 있어야 합니다.
+* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.  
+* Xcode 프로젝트.   
 
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 설치
@@ -25,9 +31,10 @@ copyright:
 
 ### CocoaPods 설치
 {: #install-cocoapods}
+
 1. 터미널을 열고 **pod --version** 명령을 실행하십시오. 이미 CocoaPods가 설치되어 있는 경우 버전 번호가 표시됩니다. SDK를 설치하기 위해 다음 섹션으로 건너뛸 수 있습니다. 
 
-1. CocoaPods가 설치되어 있지 않은 경우에는 다음을 실행하십시오.
+1. CocoaPods가 설치되어 있지 않은 경우에는 다음을 실행하십시오. 
 ```
 sudo gem install cocoapods
 ```
@@ -67,8 +74,9 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 	#import <IMFCore/IMFCore.h>
 	```
 
-	**Swift:**
 
+	**Swift:**
+	
 	{{site.data.keyword.amashort}} 클라이언트 SDK는 Objective-C로 구현됩니다. 브리징 헤더를 Swift 프로젝트에 추가해야 할 수 있습니다. 
 
 	1. Xcode에서 마우스 오른쪽 단추로 프로젝트를 클릭하고 **새 파일..**을 선택하십시오. 
@@ -89,6 +97,7 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+
 
 	**Swift:**
 
@@ -116,7 +125,7 @@ IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backend
 																method:@"GET"];
 
 	[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-if (error){
+		if (error){
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);

@@ -1,21 +1,26 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
   
 ---
+{:shortdesc: .shortdesc}
 
 # Configuración del plug-in de Cordova
 {: #getting-started-cordova}
 
-Instrumente su aplicación de Cordova con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos. 
+*Última actualización: 25 de mayo de 2016*
+{: .last-updated}
+
+Instrumente su aplicación de Cordova con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
+{:shortdesc}
 
 ## Antes de empezar
 {: #before-you-begin}
+Debe tener lo siguiente: 
+* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de un programa de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
 
-- Debe tener una instancia de un programa de fondo móvil que esté protegida por el servicio de {{site.data.keyword.amashort}}. Para obtener más información sobre cómo crear un programa de fondo móvil, consulte [Cómo empezar](getting-started.html).
-
-- Cree una aplicación de Cordova o utilice un proyecto existente. Para obtener más información sobre la configuración de aplicaciones de Cordova, consulte el [sitio web de Cordova](https://cordova.apache.org/).
+* Una aplicación de Cordova o un proyecto existente. Para obtener más información sobre la configuración de aplicaciones de Cordova, consulte el [sitio web de Cordova](https://cordova.apache.org/).
 
 ## Instalación del plug-in de Cordova para {{site.data.keyword.amashort}}
 {: #getting-started-cordova-plugin}
@@ -80,7 +85,7 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 		2. Vaya a **Valores de compilación > Compilador de Swift - Generación de código > Cabecera puente de Objective-C** y añada la siguiente vía de acceso:
 
 			```
-			<nombre_proyecto>/Plugins/ibm-mfp-core/Bridging-Header.h
+			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
 		3. Vaya a **Valores de compilación > Enlazar > Vías de acceso de búsqueda de Runpath** y añada los siguientes parámetros de Frameworks:
@@ -100,7 +105,7 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 ## Inicialización del plug-in del cliente {{site.data.keyword.amashort}}
 {: #getting-started-cordova-initialize}
 
-Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, debe inicializarlo pasando los parámetros *applicationGUID* y *applicationRoute*. 
+Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, debe inicializarlo pasando los parámetros *applicationGUID* y *applicationRoute*.
 
 1. Busque los valores de GUID y ruta de la aplicación en la página principal del panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse el nombre de la app y después **Opciones móviles** para visualizar los valores de **Ruta de aplicación** y **GUID de aplicación** para inicializar el SDK.
 
@@ -122,7 +127,6 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
 	```
 
 	El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se accede a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
-
 
 1. Utilice la aplicación de Cordova para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
 

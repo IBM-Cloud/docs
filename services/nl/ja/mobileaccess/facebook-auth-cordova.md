@@ -4,19 +4,30 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
-# Cordova アプリで Facebook 認証を使用可能にする
+# Cordova アプリ用の Facebook 認証の使用可能化
 {: #facebook-auth-cordova}
-Cordova アプリケーションを Facebook 認証統合用に構成するには、Java、Objective-C、または Swift でその Cordova アプリケーションのネイティブ・コードに変更を加える必要があります。各プラットフォームは別々に構成します。ネイティブ・コードの変更は、Android Studio や Xcode などのネイティブ開発環境で行ってください。
+
+*最終更新日: 2016 年 6 月 15 日*
+{: .last-updated}
+
+
+Cordova アプリケーションを Facebook 認証統合用に構成するには、Java、Objective-C、または Swift でその Cordova アプリケーションのネイティブ・コードに変更を加える必要があります。各プラットフォームは別々に構成します。この Cordova アプリケーションには既に {{site.data.keyword.amashort}} SDK が装備されている必要があります。 
+
+
+ネイティブ・コードの変更は、Android Studio や Xcode などのネイティブ開発環境で行ってください。
+{:shortdesc}
 
 ## 開始する前に
 {: #facebook-auth-before}
-* {{site.data.keyword.amashort}} により保護されたリソース、および {{site.data.keyword.amashort}} Client SDK が装備された Cordova プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)および [Cordova プラグインのセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)を参照してください。
-* {{site.data.keyword.amashort}} Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
-* Facebook Application ID を作成します。詳しくは、[Facebook Developer Portal から Facebook アプリケーション ID を取得する](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。
-* (オプション) 次のセクションの内容をよく理解してください。
-   * [Android アプリで Facebook 認証を使用可能にする](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html)
-   * [iOS アプリで Facebook 認証を使用可能にする](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html)
+以下が必要です。
+* {{site.data.keyword.amashort}} Client SDK が装備された Cordova プロジェクト。[Cordova プラグインのセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* Facebook Application ID。詳しくは、[Facebook Developer Portal から Facebook アプリケーション ID を取得する](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。
+
 
 
 ## Android プラットフォームの構成
@@ -28,7 +39,7 @@ Cordova アプリケーションの Android プラットフォームを Facebook
 * Facebook 認証用の {{site.data.keyword.amashort}} の構成
 * Android 用の {{site.data.keyword.amashort}} Client SDK の構成
 
-Cordova アプリケーションを構成する際の唯一の違いは、Java コードではなく JavaScript コードで {{site.data.keyword.amashort}} Client SDK を初期化する必要がある点です。`FacebookAuthenticationManager` API は引き続きネイティブ・コードで登録する必要があります。
+Cordova アプリケーションを構成する際の唯一の違いは、Java コードではなく JavaScript コードで {{site.data.keyword.amashort}} Client SDK を初期化する必要がある点です ([認証のテスト](#facebook-auth-cordova-test)を参照してください)。`FacebookAuthenticationManager` API は引き続きネイティブ・コードで登録する必要があります。
 
 ## iOS プラットフォームの構成
 {: #facebook-auth-cordova-ios}
@@ -43,15 +54,15 @@ Cordova アプリケーションの iOS プラットフォームを Facebook 認
 1. [{{site.data.keyword.Bluemix_notm}} Mobile Services SDK for iOS](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master) が含まれたアーカイブをダウンロードします。
 
 1. `Sources/Authenticators/IMFFacebookAuthentication` ディレクトリーに移動し、全てのファイルを Xcode 内の iOS プロジェクトにコピー (ドラッグ・アンド・ドロップ) します。以下のファイルをコピーしてください。
-	* IMFDefaultFacebookAuthenticationDelegate.h
+  * IMFDefaultFacebookAuthenticationDelegate.h
 
   * IMFDefaultFacebookAuthenticationDelegate.m
 
-	* IMFFacebookAuthenticationDelegate.h
+  * IMFFacebookAuthenticationDelegate.h
 
-	* IMFFacebookAuthenticationHandler.h
+  * IMFFacebookAuthenticationHandler.h
 
-	* IMFFacebookAuthenticationHandler.m
+  * IMFFacebookAuthenticationHandler.m
 
 	Xcode からプロンプトが出されたら、**「ファイルをコピー... (Copy files...)」**を選択します。
 
@@ -90,10 +101,10 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 ### 開始する前に
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
-1. ブラウザーで、新しく作成されたモバイル・バックエンドの保護エンドポイントに要求を送信してみてください。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
+1. ブラウザーで、新しく作成されたモバイル・バックエンドの保護エンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
 <br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。 `認証されていない`というメッセージがブラウザーに戻されます。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能であるため、このメッセージが戻されます。
 
-1. Cordova アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` を初期化した後で次のコードを追加します。
+1. Cordova アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後で次のコードを追加します。
 
 	```JavaScript
 	var success = function(data){
@@ -110,7 +121,7 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 
 	![image](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-facebook-login.png)
 
-	> この画面は、デバイスに Facebook アプリをインストールしていない場合、または現在 Facebook に ログインしていない場合は少し違って見えるかも知れません。
+	> この画面は、デバイスに Facebook アプリをインストールしていない場合、または現在 Facebook に ログインしていない場合は少し違って見えるかもしれません。
 
 1. 「**OK**」をクリックし、{{site.data.keyword.amashort}} が認証を目的として Facebook のユーザー ID を使用することを承認します。
 

@@ -11,8 +11,8 @@ Para usar autenticação customizada com seu app móvel, deve-se registrar uma r
 
 ## Antes de Começar
 {: #custom-dash-begin}
-* Leia a [Introdução](getting-started.html).
-* Proteja seu aplicativo backend com o {{site.data.keyword.amashort}} server SDK. Para obter mais informações, veja [Protegendo recursos](protecting-resources.html).
+* Leia a [Introdução](index.html).
+* Proteja seu aplicativo backend com o {{site.data.keyword.amashort}} server SDK. Para obter mais informações, consulte [Protegendo recursos](protecting-resources.html).
 * Tenha um aplicativo de provedor de identidade customizado em execução.
 
 ## Configure a autenticação customizada no painel do {{site.data.keyword.Bluemix}}
@@ -22,8 +22,8 @@ Use o painel do {{site.data.keyword.amashort}} para configurar a autenticação 
 1. Abra seu app no painel do {{site.data.keyword.Bluemix}}.
 
 1. Clique em **Opções móveis** e anote a
-**Rota** (`applicationRoute`) e o **GUID do
-app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
+**Rota** (`applicationRoute`) e o **GUID
+do app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 
 1. Clique no ladrilho {{site.data.keyword.amashort}}. O painel do {{site.data.keyword.amashort}} é carregado.
 

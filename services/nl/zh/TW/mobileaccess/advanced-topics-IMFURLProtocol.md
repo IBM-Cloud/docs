@@ -1,17 +1,21 @@
 ---
+
 copyright:
   years: 2015, 2016
+  
 ---
-# 在 iOS 應用程式中使用 IMFURLProtocol
+# 使用 IMFURLProtocol 傳送要求
 {: #imfurl}
-在進階情況下，您可能無法使用 `IMFResourceRequest` 類別將要求傳送給受保護資源；例如，透過某個協力廠商程式碼傳送對受保護資源的要求時。可能的解決方案是使用 `IMFURLProtocol` API，以及標準 `NSURLRequest (NSMutableURLRequest)` 呼叫。
+在部分情況下，您可能無法使用 `IMFResourceRequest` 類別將要求傳送給受保護資源；例如，透過某個協力廠商程式碼傳送對受保護資源的要求時。可能的解決方案是使用 `IMFURLProtocol` API，以及標準 `NSURLRequest (NSMutableURLRequest)` 呼叫。
+
+`IMFURLProtocol` API 只能從 {{site.data.keyword.amashort}} Objective-C SDK 取得。
 
 ## 安裝 `IMFURLProtocol` pod
 {: #imfurl-pod}
 
 您可以使用 CocoaPods 來安裝 `IMFURLProtocol` pod。然後，您可以從 iOS 專案中參照 `IMFURLProtocol.h`。
 
-## 使用 IMFURLProtocol API 傳送要求
+## 使用 `IMFURLProtocol` API 傳送要求
 {: #imfurl-send}
 
 1. 在用來傳送要求的類別中，匯入 `IMFURLProtocol.h` 檔案。

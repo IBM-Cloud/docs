@@ -7,8 +7,12 @@ copyright:
 
 # Raccolta dell'analisi dell'utilizzo
 {: #usage-analytics}
+*Ultimo aggiornamento: 6 maggio 2016*
+{: .last-updated}
 
 Puoi configurare l'SDK client {{site.data.keyword.amashort}} per registrare l'analisi dell'utilizzo e inviare i dati registrati al servizio {{site.data.keyword.amashort}}.
+
+**Importante**: le funzioni di monitoraggio del servizio {{site.data.keyword.amashort}} è pianificato che vengano migrate al nuovo servizio [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics). La nuova SDK Swift utilizza il nuovo servizio {{site.data.keyword.mobileanalytics_short}}, che fornisce una migliore esperienza di analisi. Il servizio {{site.data.keyword.mobileanalytics_short}} è al momento in fase sperimentale, si pianifica di farlo diventare disponibile più avanti in questo anno. Ci raccomandiamo di studiare la migrazione delle tue applicazioni per utilizzare il nuovo servizio {{site.data.keyword.mobileanalytics_short}} e la SDK Swift perché le funzioni di monitoraggio del servizio {{site.data.keyword.amashort}} saranno abbandonate quando {{site.data.keyword.mobileanalytics_short}} diventa disponibile.
 
 **Nota:** assicurati di avere abilitato la cattura della registrazione prima di avviare la registrazione dell'analisi dell'utilizzo.
 
@@ -40,6 +44,10 @@ MFPAnalytics.send();
 
 ### iOS - Objective-C
 {: #usage-analytics-objectc}
+
+**Importante**: mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift.
+
+La SDK Objective-C riporta i dati di monitoraggio alla console di monitoraggio del servizio {{site.data.keyword.amashort}}. Se fai affidamento sulle funzioni di monitoraggio del servizio {{site.data.keyword.amashort}}, continua ad utilizzare la SDK Objective-C.
 
 ```Objective-C
 // Abilita la registrazione dell'analisi di utilizzo

@@ -4,17 +4,28 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
-# 在 Android 应用程序中启用 Facebook 认证
+# 启用 Android 应用程序的 Facebook 认证
 {: #facebook-auth-android}
+
+*上次更新时间：2016 年 6 月 15 日*
+{: .last-updated}
+
+
 要在 Android 应用程序中将 Facebook 用作身份提供者，请为 Facebook 应用程序添加并配置 Android 平台。
+{:shortdesc}
 
 ## 开始之前
 {: #facebook-auth-android-before}
- * 您必须具有受 {{site.data.keyword.amashort}} 保护的资源，并且具有安装了 {{site.data.keyword.amashort}} 客户端 SDK 的 Android 项目。有关更多信息，请参阅 [{{site.data.keyword.amashort}} 入门](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)和[设置 Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)。  
- * 使用 {{site.data.keyword.amashort}} 服务器 SDK 手动保护后端应用程序。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
- * 创建 Facebook 应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
+您必须具有：
+* 配置为使用 Gradle 的 Android 项目。该项目不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。  
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
+* Facebook 应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
 
+**重要信息**：您无需单独安装 Facebook SDK (`com.facebook.FacebookSdk`)。添加 {{site.data.keyword.amashort}} Facebook 客户端 SDK 时，Gradle 会自动安装 Facebook SDK。您可以跳过 Facebook 开发者门户网站中的**添加 Facebook SDK 到项目**步骤。
 
 ## 针对 Android 平台配置 Facebook 应用程序
 {: #facebook-auth-android-config}
@@ -94,9 +105,9 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 	}
 ```
 
-	您可以除去对 `com.ibm.mobilefirstplatform.clientsdk.android` 组的 `core` 模块的依赖关系（如果存在于文件中）。`facebookauthentication` 模块会自动下载 `core` 模块。
+	**注：**您可以除去对 `com.ibm.mobilefirstplatform.clientsdk.android` 组的 `core` 模块的依赖关系（如果存在于文件中）。`facebookauthentication` 模块会自动下载 `core` 模块，以及 Facebook 自己的 SDK。
 
-  保存更新后，`facebookauthentication` 模块会在 Android 项目中下载并安装 Facebook SDK。
+  保存更新后，`facebookauthentication` 模块会在 Android 项目中下载并安装所有必要的 SDK。
 
 
 1. 使用 Gradle 同步项目。单击**工具 > Android > 使用 Gradle 文件同步项目**。
@@ -176,7 +187,7 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 
 ### 开始之前
 {: #facebook-auth-android-testing-before}
-您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 1. 尝试在浏览器中对新创建的移动后端的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
 <br/>使用 MobileFirst Services Starter 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
@@ -216,7 +227,7 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 
 	![图像](images/android-facebook-login-success.png)
 
-1. 通过添加以下代码，您还可以添加注销功能：
+ 通过添加以下代码，您还可以添加注销功能：
 
  ```
 FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
@@ -224,4 +235,4 @@ FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), list
 
  如果您在用户登录 Facebook 之后调用此代码，那么用户将从 Facebook 注销。当用户尝试重新登录时，系统将提示他们输入 Facebook 凭证。
 
- 传递给注销功能的 `listener` 值可以为空值。
+ 传递给注销功能的 `listener` 值可以为 `null`。

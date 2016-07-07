@@ -1,11 +1,14 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
   
 ---
 
 # Activation, configuration et utilisation de Logger
 {: #enable-logger}
+*Dernière mise à jour : 6 mai 2016*
+{: .last-updated}
 
 Le SDK client de {{site.data.keyword.amashort}} fournit une infrastructure de journalisation similaire à d'autres infrastructures que vous pouvez connaître, telles que `java.util.logging` ou `log4j`. L'infrastructure de journalisation prend notamment en charge plusieurs instances de consignateur par package, différents niveaux de journalisation et la capture des traces de pile.
 
@@ -25,6 +28,8 @@ d'API obsolètes ou une lenteur des réponses réseau.
 
 Vous devez avoir initialisé le SDK client de {{site.data.keyword.amashort}} avant d'utiliser l'infrastructure de journalisation. Les exemples suivants illustrent l'utilisation de base de l'infrastructure de journalisation du SDK client de {{site.data.keyword.amashort}}.
 
+**Important** : une migration des fonctions de surveillance du service {{site.data.keyword.amashort}} est prévue vers le nouveau service [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics). Le nouveau kit SDK Swift s'appuie sur le nouveau service {{site.data.keyword.mobileanalytics_short}}, qui fournit une expérience d'analyse beaucoup plus riche. Le service {{site.data.keyword.mobileanalytics_short}} est actuellement en phase expérimentale, et il devrait être disponible pour tous plus tard dans l'année. Il vous est donc conseillé de réfléchir à la migration de vos applications pour utiliser le nouveau service {{site.data.keyword.mobileanalytics_short}} et le SDK Swift, puisque les fonctions de surveillance du service {{site.data.keyword.amashort}} ne seront plus proposées quand {{site.data.keyword.mobileanalytics_short}} sera disponible.
+
 ### Android
 {: #enable-logger-android}
 
@@ -42,6 +47,10 @@ logger.fatal("fatal message");
 
 ### iOS - Objective-C
 {: #enable-logger-objectc}
+
+**Important** : alors que le SDK Objective-C reste complètement pris en charge et est toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix}} Mobile Services, il est prévu qu'il soit interrompu plus tard dans l'année et remplacé par le nouveau SDK Swift.
+
+Le SDK Objective-C rapporte les données de surveillance à la console de surveillance du service {{site.data.keyword.amashort}}. Si vous dépendez des fonctions de surveillance du service {{site.data.keyword.amashort}}, continuez à utiliser le SDK Objective-C.
 
 ```Objective-C
 [[IMFClient sharedInstance] initializeWithBackendRoute:appRoute backendGUID:appGUID];

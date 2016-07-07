@@ -10,7 +10,7 @@ copyright:
 
 사용자 정의 인증을 사용하는 iOS 애플리케이션이 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하고 애플리케이션을 {{site.data.keyword.Bluemix}}에 연결하도록 구성하십시오.
 
-**팁:** Swift로 iOS 앱을 개발하는 경우 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 사용을 고려하십시오. 이 페이지의 지시사항은 {{site.data.keyword.amashort}} 클라이언트 Objective-C SDK에 적용됩니다. Swift SDK 사용에 대한 지시사항은 [iOS용 {{site.data.keyword.amashort}} 클라이언트 SDK(Swift SDK) 구성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)을 참조하십시오.
+**참고:** Swift로 iOS 앱을 개발하는 경우 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 사용을 고려하십시오. 이 페이지의 지시사항은 {{site.data.keyword.amashort}} 클라이언트 Objective-C SDK에 적용됩니다. 새 Swift SDK 사용에 대한 지시사항은 [iOS용 {{site.data.keyword.amashort}} 클라이언트 SDK(Swift SDK) 구성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)을 참조하십시오.
 
 ## 시작하기 전에
 {: #before-you-begin}
@@ -261,14 +261,14 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 ## 인증 테스트
 {: #custom-ios-testing}
-클라이언트 SDK를 초기화하고 사용자 정의 `IMFAuthenticationDelegate`를 등록한 후에는 모바일 백엔드 요청을 시작할 수 있습니다.
+클라이언트 SDK를 초기화하고 사용자 정의 `IMFAuthenticationDelegate`를 등록한 후에는 모바일 백엔드 애플리케이션 요청을 시작할 수 있습니다.
 
 ### 시작하기 전에
 {: #custom-ios-testing-before}
 {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받는 자원이 있어야 합니다. 
 
-1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송하십시오.
-  {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 
+1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송하십시오.
+  {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화하고 사용자 정의 `IMFAuthenticationDelegate`를 등록한 후 다음 코드를 추가하십시오. 
 
 	Objective-C:

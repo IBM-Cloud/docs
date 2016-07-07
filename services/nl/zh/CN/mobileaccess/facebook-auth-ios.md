@@ -4,19 +4,30 @@ copyright:
   years: 2015, 2016
 
 ---
+{:screen:  .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 
-# 在 iOS 应用程序 (Objective-C SDK) 中启用 Facebook 认证
+# 启用 iOS 应用程序 (Objective-C SDK) 的 Facebook 认证
 {: #facebook-auth-ios}
 
-要在 iOS 应用程序中将 Facebook 用作身份提供者，请为 Facebook 应用程序添加并配置 iOS 平台。
 
-**提示：**如果要使用 Swift 开发 iOS 应用程序，请考虑使用 {{site.data.keyword.amashort}} 客户端 Swift SDK。本页面中的指示信息适用于 {{site.data.keyword.amashort}} 客户端 Objective-C SDK。有关使用 Swift SDK 的指示信息，请参阅[在 iOS 应用程序 (Swift SDK) 中启用 Facebook 认证](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html)。
+*上次更新时间：2016 年 6 月 15 日*
+{: .last-updated}
+
+
+要在 iOS 应用程序中将 Facebook 用作身份提供者，请为 Facebook 应用程序添加并配置 iOS 平台。
+{:shortdesc}
+
+**注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK（请参阅[设置 iOS Swift SDK](facebook-auth-ios-swift-sdk.html)）。
 
 ## 开始之前
 {: #facebook-auth-ios-before}
-* 您必须具有受 {{site.data.keyword.amashort}} 保护的资源，并且具有安装了 {{site.data.keyword.amashort}} 客户端 SDK 的 iOS 项目。有关更多信息，请参阅 [{{site.data.keyword.amashort}} 入门](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)和[设置 iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)。  
-* 使用 {{site.data.keyword.amashort}} 服务器 SDK 手动保护后端应用程序。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
-* 创建 Facebook 应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
+您必须具有：
+* 设置为使用 CocoaPods 的 iOS 项目。有关更多信息，请参阅[设置 iOS SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html) 中的**安装 CocoaPods**。
+**注：**继续之前，您无需安装核心 {{site.data.keyword.amashort}} 客户端 SDK。
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
+* Facebook 应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
 
 ## 针对 iOS 平台配置 Facebook 应用程序
 {: #facebook-auth-ios-config}
@@ -130,16 +141,18 @@ copyright:
 	    </dict>
 	</dict>
 ```
-使用 Facebook 应用程序标识更新 URL 方案和 FacebookappID 属性。 **重要信息**：确保您未覆盖 `info.plist` 文件中的任何现有属性。如果您有重叠属性，必须手动进行合并。有关更多信息，请参阅 [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) 和 [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9)。
+使用 Facebook 应用程序标识更新 URL 方案和 FacebookappID 属性。
+
+ **重要信息**：确保您未覆盖 `info.plist` 文件中的任何现有属性。如果您有重叠属性，必须手动进行合并。有关更多信息，请参阅 [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) 和 [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9)。
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #facebook-auth-ios-initalize}
 
 传递应用程序路径 (`applicationRoute`) 和应用程序 GUID (`applicationGUID`)，以初始化客户端 SDK。
 
-通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的
+通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
 
-1. 打开 {{site.data.keyword.Bluemix_notm}}“仪表板”主页，然后单击您的应用程序。单击**移动选项**，然后记录**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`)。
+1. 打开 {{site.data.keyword.Bluemix_notm}} 仪表板的主页，然后单击您的应用程序。单击**移动选项**，然后记录**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`)。
 
 1. 通过添加以下头，将所需框架导入要使用 {{site.data.keyword.amashort}} 客户端 SDK 的类中：
 
@@ -165,14 +178,14 @@ copyright:
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
-	* 在 Xcode 中单击项目，然后选择**构建设置**选项卡。
+	* 在 Xcode 中单击项目，然后选择**构建设置** 选项卡。
 	* 搜索 **Objective-C Bridging Header**。
-	* 将值设置为您的 `BridgingHeader.h` 文件的位置，例如：`$(SRCROOT)/MyApp/BridgingHeader.h`。
-	* 通过构建项目来确保 Xcode 选取了您的桥接头。您应该不会看到任何失败消息。
+ * 将值设置为您的 `BridgingHeader.h` 文件的位置，例如：`$(SRCROOT)/MyApp/BridgingHeader.h`。
+ * 通过构建项目来确保 Xcode 选取了您的桥接头。您应该不会看到任何失败消息。
 
 3. 初始化客户端 SDK。将 *applicationRoute* 和 *applicationGUID* 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。
 
-	**Objective-C**
+**Objective-C**
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -235,7 +248,8 @@ copyright:
 {: #facebook-auth-ios-testing-before}
 您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
-1. 尝试在浏览器中对新创建的移动后端的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
+1. 尝试在浏览器中对新创建的移动后端的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。
+例如：`http://my-mobile-backend.mybluemix.net/protected`
 <br/>使用 MobileFirst Services Starter 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
 
 1. 使用 iOS 应用程序对同一端点发起请求。
@@ -250,7 +264,7 @@ copyright:
 																method:@"GET"];
 
 	[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-if (error){
+		if (error){
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
@@ -277,7 +291,7 @@ if (error){
 
 1. 运行应用程序。这将弹出 Facebook 登录屏幕。
 
-	![图像](images/ios-facebook-login.png)
+ ![图像](images/ios-facebook-login.png)
 
 	如果设备上未安装 Facebook 应用程序，或者如果您当前未登录到 Facebook，那么此屏幕的外观可能略有不同。
 
@@ -286,12 +300,9 @@ if (error){
 1. 	请求成功后，将在 Xcode 控制台中显示以下输出：
 	![图像](images/ios-facebook-login-success.png)
 
-
-
 	通过添加以下代码，您还可以添加注销功能：
 
-
-	**Objective-C**
+**Objective-C**
 
 	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
@@ -303,8 +314,8 @@ if (error){
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	如果您在用户登录 Facebook 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 Mobile Client Access 权限，以使用 Facebook 进行认证。
+	如果您在用户登录 Facebook 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Facebook 进行认证。
 
-	要切换用户，您必须调用此代码，并且用户必须在浏览器中注销 Facebook。
-您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。
+要切换用户，您必须调用此代码，并且用户必须在浏览器中注销 Facebook。
 
+  您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

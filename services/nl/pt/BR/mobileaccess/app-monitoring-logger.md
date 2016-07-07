@@ -5,8 +5,10 @@ copyright:
   
 ---
 
-# Ativando, configurando e usando o criador de logs
+# Ativando, configurando e usando o Criador de logs
 {: #enable-logger}
+*Última atualização: 6 de maio de 2016*
+{: .last-updated}
 
 O {{site.data.keyword.amashort}} client SDK fornece uma estrutura de criação de log que é semelhante a outras estruturas de log com as quais você pode estar familiarizado, tais como, `java.util.logging` ou `log4j`. A estrutura de criação de log suporta várias instâncias do criador de logs por pacote, diferentes níveis de log, captura ou rastreios de pilha para um travamento de aplicativo e mais.
 
@@ -29,6 +31,9 @@ os desenvolvedores a resolver defeitos do aplicativo.
 
 Assegure-se de que tenha inicializado o {{site.data.keyword.amashort}} client SDK antes de usar a estrutura de criação de log. As amostras a seguir demonstram o uso básico de uma estrutura de criação de log do {{site.data.keyword.amashort}} client SDK.
 
+**Importante**: as funções de monitoramento
+do serviço {{site.data.keyword.amashort}} são planejadas para serem migradas para o novo serviço do [ {{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics). O novo Swift SDK alavanca o novo serviço {{site.data.keyword.mobileanalytics_short}}, que fornece uma experiência analítica muito mais rica. O serviço {{site.data.keyword.mobileanalytics_short}} está atualmente em fase experimental com planos de se tornar geralmente disponível posteriormente este ano. Recomendamos investigar a migração de seus aplicativos para usar o novo serviço {{site.data.keyword.mobileanalytics_short}} e o Swift SDK, uma vez que as funções de monitoramento do serviço {{site.data.keyword.amashort}} estão planejadas para serem descontinuadas quando o {{site.data.keyword.mobileanalytics_short}} estiver geralmente disponível.
+
 ### Android
 {: #enable-logger-android}
 
@@ -46,6 +51,10 @@ logger.fatal("fatal message");
 
 ### iOS - Objective-C
 {: #enable-logger-objectc}
+
+**Importante:** embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix}} Mobile Services, ele está planejado para ser descontinuado posteriormente este ano em favor do novo Swift SDK.
+
+O Objective-C SDK relata dados de monitoramento para o Monitoring Console do serviço {{site.data.keyword.amashort}}. Se você depende das funções de monitoramento do serviço {{site.data.keyword.amashort}}, continue a usar o Objective-C SDK.
 
 ```Objective-C
 [[IMFClient sharedInstance] initializeWithBackendRoute:appRoute backendGUID:appGUID];
@@ -75,7 +84,7 @@ logger.logErrorWithMessages("error");
 logger.logFatalWithMessages("fatal");
 ```
 
-**Nota:** o {{site.data.keyword.amashort}} client SDK é implementado com Objective-C; portanto, pode ser necessário incluir o arquivo `IMFLoggerExtension.swift` em seu projeto Swift para usar a API do criador de logs anterior. É possível localizar esse arquivo no [archive do {{site.data.keyword.amashort}} client SDK](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
+**Nota:** o {{site.data.keyword.amashort}} client SDK é implementado com Objective-C; portanto, pode ser necessário incluir o arquivo `IMFLoggerExtension.swift` em seu projeto do Swift para usar a API do criador de logs anterior. É possível localizar esse arquivo no [archive do {{site.data.keyword.amashort}} client SDK](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
 
 
 ### Cordova
@@ -201,8 +210,8 @@ var logger1 = MFPLogger.getInstance("logger1");
 var logger2 = MFPLogger.getInstance("logger2");    
 
 // Log messages with different levels
-logger1.debug ("debug message");
-logger2.info ("info message");
+logger1.debug("debug message");
+logger2.info("info message");
 
 // Send persisted logs to the {{site.data.keyword.amashort}} service
 MFPLogger.send(success, failure);

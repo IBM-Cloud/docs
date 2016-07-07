@@ -1,33 +1,57 @@
----
+ ---
 
 copyright:
   years: 2016
 
 ---
+{:screen:  .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 
-# 在 iOS 应用程序 (Swift SDK) 中启用 Google 认证
+# 启用 iOS 应用程序 (Swift SDK) 的 Google 认证
 {: #google-auth-ios}
+使用 Google 登录，在 {{site.data.keyword.amashort}} iOS Swift 应用程序上认证用户。新发行的 {{site.data.keyword.amashort}} Swift SDK 为现有 Mobile Client Access Objective-C SDK 提供的功能增添了新功能，同时也改进了现有功能。
+
+**注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用 Objective-C SDK，以支持此新的 Swift SDK。
+
+
 
 ## 开始之前
 {: #google-auth-ios-before}
+您必须具有：
 
-* 您必须具有受 {{site.data.keyword.amashort}} 保护的资源，并且具有安装了 {{site.data.keyword.amashort}} 客户端 SDK 的 iOS 项目。有关更多信息，请参阅 [{{site.data.keyword.amashort}} 入门](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)和[设置 iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)。  
-* 使用 {{site.data.keyword.amashort}} 服务器 SDK 手动保护后端应用程序。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+* Xcode 中的 iOS 项目。它不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。  
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
 
-## 准备应用程序以登录 Google
+
+## 准备应用程序以进行 Google 登录
 {: #google-sign-in-ios}
 
-遵循 Google 在[针对 iOS 的 Goolge 登录](https://developers.google.com/identity/sign-in/ios/start-integrating)中提供的指示信息准备应用程序以登录 Google。以下步骤为您提供了为准备应用程序而必须执行的任务的简要概述。
+遵循 Google 在[针对 iOS 的 Google 登录](https://developers.google.com/identity/sign-in/ios/start-integrating)中提供的指示信息，准备应用程序以进行 Google 登录。 
 
-1. 为应用程序启用针对 iOS 的 Goolge 登录。有关更多信息，请参阅[尝试针对iOS 执行登录](https://developers.google.com/identity/sign-in/ios/start?ver=swift)。
+此过程会：
+* 在 Google 开发者网站上准备新项目， 
+* 创建 `GoogleService-Info.plist` 文件和 `REVERSE_CLIENT_ID` 值，以添加到 Xcode 项目，以及
+* 创建 **Google 客户端标识**，以添加到 {{site.data.keyword.Bluemix_notm}} 后端应用程序。
 
-1. 获取项目的配置文件 (`GoogleService-Info.plist`)。要获取该文件，请参阅[为应用程序启用 Google 服务](https://developers.google.com/mobile/add?platform=ios)。
+以下步骤为您提供了为准备应用程序而必须执行的任务的简要概述。 
 
- **重要信息：**获取 `GoogleService-Info.plist` 文件时，请打开该文件，并记录 `CLIENT_ID` 值。您稍后配置 {{site.data.keyword.amashort}} 时需要此值。
+**注：**并非一定要添加 `Google/SignIn` CocoaPod。下面的 `BMSGoogleAuthentication` CocoaPod 会添加必要的 SDK。
+
+1. 记录 Xcode 项目中来自主要目标**常规**选项卡**身份**部分的**捆绑软件标识**。您需要它创建 Google 登录项目。
+
+1. 在 Google 开发者上，针对 iOS 的 Google 登录创建项目，网址为 https://developers.google.com/mobile/add?platform=ios。 
+
+2. 向您的项目添加 Google 登录服务。
+
+3. 检索 `GoogleService-Info.plist`。
+
+  **重要信息：**获取 `GoogleService-Info.plist` 文件时，请打开该文件，并记录 `CLIENT_ID` 值。您稍后配置 {{site.data.keyword.amashort}} 后端应用程序时需要此值。
 
 1. 将 `GoogleService-Info.plist` 文件添加到 Xcode 项目。有关更多信息，请参阅[将配置文件添加到项目](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config)。
 
-1. 在 Xcode 项目中，使用 `REVERSE_CLIENT_ID` 和捆绑软件标识更新 URL 方案。有关更多信息，请参阅[将 URL 方案添加到项目](https://developers.google.com/identity/sign-in/ios/start-integrating#add_url_schemes_to_your_project)。
+1. 在 Xcode 项目中，使用 `REVERSE_CLIENT_ID` 和捆绑软件标识更新 URL 方案。有关更多信息，请参阅[将 URL 方案添加到项目](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project)。
+
 
 1. 使用以下代码更新应用程序的 project-Bridging-Header.h 文件：
 
@@ -56,31 +80,30 @@ copyright:
 {: #google-auth-ios-sdk}
 
 ### 安装 CocoaPods
-{: #google-auth-cocoapods}
+{: #install-cocoapods}
 
-{{site.data.keyword.amashort}} 客户端 SDK 通过 CocoaPods 进行分发；CocoaPods 是用于 iOS 项目的依赖关系管理器。CocoaPods 会自动从存储库下载工件，并将其提供给 iOS 应用程序。
+1. 打开终端并运行 **pod --version** 命令。如果已经安装了 CocoaPods，那么将显示版本号。可以跳至下一部分来安装 SDK。
 
-1. 打开终端并运行 `pod --version` 命令。如果已经安装了 CocoaPods，那么将显示版本号。可以跳至本教程的下一部分。
+1. 如果未安装 CocoaPods，请运行：
+```
+sudo gem install cocoapods
+```
+有关更多信息，请参阅 [CocoaPods Web 站点](https://cocoapods.org/)。
 
-1. 通过运行 `sudo gem install cocoapods` 来安装 CocoaPods。如果需要其他指导信息，请参阅 [CocoaPods Web 站点](https://cocoapods.org/)。
+### 使用 CocoaPods 安装 {{site.data.keyword.amashort}} 客户端 Swift SDK
+{: #facebook-auth-install-swift-cocoapods}
 
-1. 关闭 XCode。
+1. 如果 iOS 项目中没有 `Podfile`，请运行 `pod init`，以创建该文件。
 
-1. 打开终端并运行 `cd` 进入项目目录。
-
-1.  运行 `pod init`。
-
-### 使用 CocoaPods 安装 {{site.data.keyword.amashort}} 客户端 SWift SDK
-{: #google-auth-ios-sdk-cocoapods}
-
-1. 浏览到您的 iOS 项目。
-
-1. 编辑 `Podfile` 以添加以下行：
+1. 编辑 `Podfile` 并向相关目标添加以下行：
 
  ```
  use_frameworks!
  pod 'BMSGoogleAuthentication'
  ```
+ 
+ **注：**如果已安装 {{site.data.keyword.amashort}} 核心 SDK，那么您可以移除此行：`pod 'BMSSecurity'`。`BMSGoogleAuthentication` Pod 会安装所有必要的框架。
+	
  **提示：**您可以将 `use_frameworks!` 添加到 Xcode 目标中，而不是置于 Podfile 中。
 
 1. 保存 `Podfile`，然后在命令行中运行 `pod install`。CocoaPods 会安装依赖关系。您将看到进度和添加的组件。
@@ -108,7 +131,7 @@ copyright:
  import BMSSecurity
  ```
 
-1. 使用以下代码来初始化客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。
+1. 使用以下代码来初始化客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击仪表板左上角的人脸图标 (![人脸](/face.png "人脸"))。 
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -116,9 +139,8 @@ copyright:
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-
- // Initialize the Client SDK.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<application Bluemix region>)
+ // Initialize the client SDK.  
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -127,8 +149,9 @@ copyright:
       }
 
  // [START openurl]
-      func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?,annotation: AnyObject) -> Bool {
-return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+      func application(application: UIApplication,
+          openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+             return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
       }
 
  @available(iOS 9.0, *)
@@ -185,6 +208,7 @@ return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openU
  })
  response:Optional("Hello, this is a protected resource!"), no error
  ```
+{: screen}
 
 1. 通过添加以下代码，您还可以添加注销功能：
 

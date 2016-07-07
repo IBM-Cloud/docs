@@ -8,6 +8,9 @@ copyright:
 # 로컬 개발 환경에서 {{site.data.keyword.amashort}} 사용
 {: #protecting-local}
 
+*마지막 업데이트 날짜: 2016년 4월 15일*
+{: .last-updated}
+
 {{site.data.keyword.Bluemix}}에서 실행 중인 {{site.data.keyword.amashort}} 서비스를 사용하도록 로컬 개발 환경을 구성할 수 있습니다. 특히 Node.js와 같은 로컬 개발 서버를 사용하여 서버 측 코드를 개발하는 경우 {{site.data.keyword.amashort}} 서버 SDK를 사용할 수 있습니다.
 
 {{site.data.keyword.amashort}} 서버 SDK를 사용하려면 두 개의 환경 변수가 설정되어 있어야 합니다. {{site.data.keyword.Bluemix_notm}}에서 서버 측 코드를 개발 중인 경우 {{site.data.keyword.Bluemix_notm}} 인프라에서 해당 변수를 제공합니다. 
@@ -21,13 +24,13 @@ copyright:
 
 1. **모바일 옵션**을 클릭하고 **AppGUID** 값을 복사하십시오. 
 
-1. 로컬 개발 환경에 *VCAP_APPLICATION* 환경 변수를 설정하십시오. 변수는 단일 특성이 설정되어 있으며 문자열로 변환된 JSON 오브젝트를 포함해야 합니다.
+1. 로컬 개발 환경에 *VCAP_APPLICATION* 환경 변수를 설정하십시오. 변수는 단일 특성이 설정되어 있으며 문자열로 변환된 JSON 오브젝트를 포함해야 합니다. 
 ```JavaScript
 {
     application_id: "appGUID"
 }
 ```
-*appGUID* 변수를 **모바일 옵션** 필드의 값으로 대체하십시오. 
+*appGUID* 변수를 **모바일 옵션** 필드의 값으로 대체하십시오.
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 모바일 백엔드 애플리케이션의 {{site.data.keyword.amashort}} 서비스 타일에 있는 **신임 정보 표시**를 클릭하십시오. JSON 오브젝트는 {{site.data.keyword.amashort}}에서 모바일 백엔드 애플리케이션에 제공하는 액세스 신임 정보와 함께 표시됩니다. 
 
@@ -65,7 +68,7 @@ var MCABackendStrategy =
 
 // 코드의 나머지 부분
 ```
-코드에서 *appGUID* 값을 모바일 백엔드 *appGUID* 값으로 모두 대체하십시오. 
+코드에서 *appGUID* 값을 모바일 백엔드 *appGUID* 값으로 모두 대체하십시오.
 
 
 ## 로컬 개발 서버에 대해 작업할 수 있도록 모바일 애플리케이션 구성

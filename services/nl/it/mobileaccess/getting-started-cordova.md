@@ -4,18 +4,23 @@ copyright:
   years: 2015, 2016
   
 ---
+{:shortdesc: .shortdesc}
 
 # Configurazione del plugin Cordova
 {: #getting-started-cordova}
 
+*Ultimo aggiornamento: 25 maggio 2016*
+{: .last-updated}
+
 Strumenta la tua applicazione Cordova con l'SDK client {{site.data.keyword.amashort}}, inizializza l'SDK ed effettua richieste alle risorse protette e non protette.
+{:shortdesc}
 
 ## Prima di cominciare
 {: #before-you-begin}
+È necessario disporre di:
+* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html).
 
-- Devi disporre di un'istanza di un backend mobile protetto dal servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un backend mobile, consulta [Introduzione](getting-started.html).
-
-- Crea un'applicazione Cordova o utilizza un progetto esistente. Per ulteriori informazioni su come configurare la tua applicazione Cordova, consulta il [sito web di Cordova](https://cordova.apache.org/).
+* Crea un'applicazione Cordova o utilizza un progetto esistente. Per ulteriori informazioni su come configurare la tua applicazione Cordova, consulta il [sito web di Cordova](https://cordova.apache.org/).
 
 ## Installazione del plugin Cordova {{site.data.keyword.amashort}}
 {: #getting-started-cordova-plugin}
@@ -50,7 +55,7 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 
 	```XML
 	<platform name="ios">
-    <preference name="deployment-target" value="8.0"/>
+		<preference name="deployment-target" value="8.0"/>
 		<!-- add deployment target declaration -->
 	</platform>
 	```
@@ -82,7 +87,7 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 		2. Vai a **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** e aggiungi il seguente percorso:
 
 			```
-			<il_nome_del_tuo_progetto>/Plugins/ibm-mfp-core/Bridging-Header.h
+			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
 		3. Vai a **Build settings > Linking > Runpath Search Paths** e aggiungi il seguente parametro Frameworks:

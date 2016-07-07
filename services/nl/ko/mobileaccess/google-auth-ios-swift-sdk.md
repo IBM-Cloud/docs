@@ -1,33 +1,57 @@
----
+ ---
 
 copyright:
   years: 2016
 
 ---
+{:screen:  .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 
-# iOS 앱(Swift SDK)에서 Google 인증 사용
+# iOS 앱에서 Google 인증 사용(Swift SDK)
 {: #google-auth-ios}
+{{site.data.keyword.amashort}} iOS Swift 앱에서 사용자를 인증하려면 Google 로그인을 사용하십시오. 새로 릴리스된 {{site.data.keyword.amashort}} Swift SDK가 기존 모바일 클라이언트 액세스 Objective-C SDK에서 제공하는 기능에 추가되어 해당 기능을 향상시킵니다. 
+
+**참고:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만 새로운 Swift SDK를 위해 올해 말해 중단될 계획입니다. 
+
+
 
 ## 시작하기 전에
 {: #google-auth-ios-before}
+다음이 있어야 합니다.
 
-* {{site.data.keyword.amashort}}에서 보호하는 자원 및 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 iOS 프로젝트가 있어야 합니다. 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) 및 [iOS Swift SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)을 참조하십시오.  
-* {{site.data.keyword.amashort}} 서버 SDK를 사용하여 백엔드 애플리케이션을 수동으로 보호하십시오. 자세한 정보는 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
+* Xcode의 iOS 프로젝트. {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되지 않아도 됩니다.  
+* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오. 
 
-## Google 로그인을 수행할 수 있도록 앱 준비
+
+## Google 로그인을 위해 앱 준비
 {: #google-sign-in-ios}
 
-Google에서 제공하는 [Goolge Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start-integrating)에서 Google이 제공하는 지시사항을 따라 Google 로그인을 수행할 수 있도록 앱을 준비하십시오. 다음 단계는 앱을 준비하기 위해 수행해야 하는 태스크에 대해 간략하게 설명합니다.
+[iOS용 Google 로그인](https://developers.google.com/identity/sign-in/ios/start-integrating)에서 Google이 제공하는 지시사항을 따라 Google 로그인을 위해 앱을 준비하십시오. 
 
-1. 앱에서 iOS용 Google 로그인을 사용으로 설정하십시오. 자세한 정보는 [Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start?ver=swift)를 참조하십시오.
+이 프로세스에서는 다음을 수행합니다.
+* Google 개발자 사이트에서 새로운 프로젝트를 준비합니다. 
+* Xcode 프로젝트에 추가할 `REVERSE_CLIENT_ID` 값과 `GoogleService-Info.plist` 파일을 작성합니다.
+* {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션에 추가할 **Google 클라이언트 ID**를 작성합니다.
 
-1. 프로젝트에 대한 구성 파일(`GoogleService-Info.plist`)을 가져오십시오. 파일을 가져오려면 [Enable Google services for your app](https://developers.google.com/mobile/add?platform=ios)을 참조하십시오.
+다음 단계에서는 앱을 준비하는 데 필요한 단계를 간략하게 설명합니다. 
 
- **중요:** `GoogleService-Info.plist` 파일을 가져올 때 파일을 열고 `CLIENT_ID` 값을 기록해 두십시오. 나중에 {{site.data.keyword.amashort}}를 구성하는 데 이 값이 필요합니다.
+**참고:** `Google/SignIn` CocoaPod를 추가할 필요가 없습니다. 필수 SDK는 아래 `BMSGoogleAuthentication` CocoaPod에서 추가합니다.
 
-1. `GoogleService-Info.plist` 파일을 Xcode 프로젝트에 추가하십시오. 자세한 정보는 [Add the configuration file to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config)를 참조하십시오.
+1. 기본 대상의 **일반** 탭에 있는 **ID** 섹션에서 Xcode 프로젝트의 **번들 ID**를 기록하십시오. Google 로그인 프로젝트를 작성하는 데 필요합니다. 
 
-1. `REVERSE_CLIENT_ID` 및 번들 ID를 사용하여 Xcode 프로젝트의 URL 스킴을 업데이트하십시오. 자세한 정보는 [Add URL schemes to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add_url_schemes_to_your_project)를 참조하십시오.
+1. iOS용 Google 로그인을 위한 Google 개발자에서 프로젝트를 작성하십시오(https://developers.google.com/mobile/add?platform=ios). 
+
+2. 프로젝트에 Google 로그인 서비스를 추가하십시오.
+
+3. `GoogleService-Info.plist`를 검색하십시오.
+
+  **중요:** `GoogleService-Info.plist` 파일을 가져올 때 파일을 열고 `CLIENT_ID` 값을 기록해 두십시오. 나중에 {{site.data.keyword.amashort}} 백엔드 애플리케이션을 구성하는 데 이 값이 필요합니다.
+
+1. `GoogleService-Info.plist` 파일을 Xcode 프로젝트에 추가하십시오. 자세한 정보는 [프로젝트에 구성 파일 추가](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config)를 참조하십시오.
+
+1. `REVERSE_CLIENT_ID` 및 번들 ID를 사용하여 Xcode 프로젝트의 URL 스킴을 업데이트하십시오. 자세한 정보는 [Add URL schemes to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project)를 참조하십시오.
+
 
 1. 다음 코드를 사용하여 앱의 project-Bridging-Header.h 파일을 업데이트하십시오.
 
@@ -37,7 +61,7 @@ Google에서 제공하는 [Goolge Sign-In for iOS](https://developers.google.com
 
  브리징 헤더 파일 업데이트에 대한 자세한 정보는 [Enable sign-in](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in)의 1단계를 참조하십시오.
 
-## Google 인증을 위해 {{site.data.keyword.amashort}} 구성
+## Google 인증용 {{site.data.keyword.amashort}} 구성
 {: #google-auth-ios-config}
 
 iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보드에서 Google 인증을 사용하도록 설정할 수 있습니다.
@@ -56,31 +80,30 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보�
 {: #google-auth-ios-sdk}
 
 ### CocoaPods 설치
-{: #google-auth-cocoapods}
+{: #install-cocoapods}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK는 iOS 프로젝트용 종속성 관리자인 CocoaPods를 사용하여 분배됩니다. CocoaPods는 저장소에서 아티팩트를 자동으로 다운로드하고 iOS 애플리케이션에서 아티팩트를 사용할 수 있게 합니다. 
+1. 터미널을 열고 **pod --version** 명령을 실행하십시오. 이미 CocoaPods가 설치되어 있는 경우 버전 번호가 표시됩니다. SDK를 설치하기 위해 다음 섹션으로 건너뛸 수 있습니다. 
 
-1. 터미널을 열고 `pod --version` 명령을 실행하십시오. 이미 CocoaPods가 설치되어 있는 경우 버전 번호가 표시됩니다. 이 학습서의 다음 섹션으로 건너뛸 수 있습니다. 
+1. CocoaPods가 설치되어 있지 않은 경우에는 다음을 실행하십시오. 
+```
+sudo gem install cocoapods
+```
+자세한 정보는 [CocoaPods 웹 사이트](https://cocoapods.org/)를 참조하십시오.
 
-1. `sudo gem install cocoapods`를 실행하여 CocoaPods를 설치하십시오. 추가적인 안내가 필요한 경우 [CocoaPods 웹 사이트](https://cocoapods.org/)를 참조하십시오. 
+### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 설치
+{: #facebook-auth-install-swift-cocoapods}
 
-1. XCode를 닫으십시오.
+1. iOS 프로젝트에 `Podfile`이 없으면 `pod init`을 실행하여 파일을 작성하십시오.
 
-1. 터미널 및 `cd`를 프로젝트 디렉토리로 여십시오.
-
-1.  `pod init`를 실행하십시오.
-
-### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SWift SDK
-{: #google-auth-ios-sdk-cocoapods}
-
-1. iOS 프로젝트로 이동하십시오.
-
-1. `Podfile`을 편집하여 다음 행을 추가하십시오.
+1. `Podfile`을 편집하고 다음 행을 적절한 대상에 추가하십시오.
 
  ```
  use_frameworks!
  pod 'BMSGoogleAuthentication'
  ```
+ 
+ **참고:** 이미 {{site.data.keyword.amashort}} 코어 SDK를 설치한 경우 `pod 'BMSSecurity'` 행을 제거할 수 있습니다. `BMSGoogleAuthentication` pod에서 필요한 모든 프레임워크를 설치합니다.
+	
  **팁:** `use_frameworks!`를 Podfile에 삽입하는 대신 Xcode 대상에 추가할 수 있습니다.
 
 1. `Podfile`을 저장하고 명령행에서 `pod install`을 실행하십시오. CocoaPods가 종속 항목을 설치합니다. 진행상태 및 추가된 컴포넌트를 확인할 수 있습니다. 
@@ -108,7 +131,7 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보�
  import BMSSecurity
  ```
 
-1. 다음 코드를 사용하여 클라이언트 SDK를 초기화하십시오. `<applicationRoute>` 및 `<applicationGUID>`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID**의 값으로 바꾸십시오.
+1. 다음 코드를 사용하여 클라이언트 SDK를 초기화하십시오. `<applicationRoute>` 및 `<applicationGUID>`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID**의 값으로 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 대시보드의 왼쪽 상단 구석에 있는 페이스 아이콘(![Face](/face.png "Face"))을 클릭하십시오.  
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -117,7 +140,7 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보�
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
  // Initialize the client SDK.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<application Bluemix region>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -152,14 +175,14 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보�
 
 1. MobileFirst 서비스 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호되므로 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 결과적으로 데스크탑 브라우저에 `권한 없음`이 표시됩니다. 
 
-1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. 
+1. iOS 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. 
 
  ```Swift
  let protectedResourceURL = "<Your protected resource URL>" // any protected resource
  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
  if error == nil {
-    print ("response:\(response?.responseText), no error")
+print ("response:\(response?.responseText), no error")
  } else {
     print ("error: \(error)")
  }
@@ -185,6 +208,7 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보�
  })
  response:Optional("Hello, this is a protected resource!"), no error
  ```
+{: screen}
 
 1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 
