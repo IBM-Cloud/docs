@@ -7,9 +7,10 @@ copyright:
 <!-- Attribute definitions -->
 {:codeblock: .codeblock}
 
-# Cómo empezar con el ejemplo HelloWorld
+# Cómo empezar con el ejemplo de Hello Bluemix for Cordova
 {: #gettingstarted-cordova}
-*Última actualización: 17 de marzo de 2016*
+*Última actualización: 27 de mayo de 2016*
+{: .last-updated}
 
 Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utilizar la app HelloWorld. Esta app muestra cómo conectar con el backend móvil en {{site.data.keyword.Bluemix}} desde una app móvil sin autenticación. La app la tiene instalado el SDK. Cuando esté listo, puede obtener las bibliotecas específicas que desee utilizar en la app.
 
@@ -58,7 +59,7 @@ Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utiliz
 		GUID: "<GUID_APLICACIÓN>",
 		```
 
-6. Configure su app Cordova para iOS. La plataforma Android no requiere configuración adicional. 
+6. Configure su app Cordova para iOS. La plataforma Android no requiere configuración adicional.
 
 	### iOS
   Configure su proyecto de Xcode como se indica a continuación, para evitar errores de compilación.
@@ -70,7 +71,7 @@ Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utiliz
 	2. Vaya a **Valores de compilación > Compilador de Swift - Generación de códigos > Cabecera puente de Objective-C** y añada la siguiente vía de acceso:
 
 		```
-		<nombre_proyecto>/Plugins/ibm-mfp-core/Bridging-Header.h
+		<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 		```
 
 	3. Vaya a **Valores de compilación > Enlaces > Vías de acceso de búsqueda de vías de acceso de ejecución** y añada el siguiente parámetro de Frameworks:
@@ -79,12 +80,12 @@ Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utiliz
 		@executable_path/Frameworks
 		```
 
-7. Compile y ejecute el ejemplo en su dispositivo o emulador de dispositivo móvil. 
+7. Compile y ejecute el ejemplo en su dispositivo o emulador de dispositivo móvil.
 
   ### Android
 	1. Compile la app de Cordova utilizando el mandato siguiente:
 
-    **Importante:** Antes de abrir su proyecto en Android Studio, primero debe compilar su aplicación de Cordova mediante la interfaz de línea de mandatos (CLI) de Cordova. De lo contrario, se encontrará con errores de compilación. 
+    **Importante:** Antes de abrir su proyecto en Android Studio, primero debe compilar su aplicación de Cordova mediante la interfaz de línea de mandatos (CLI) de Cordova. De lo contrario, se encontrará con errores de compilación.
 
 	```Bash
 	cordova build android
@@ -95,7 +96,7 @@ Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utiliz
   ### iOS
   1. Compile la app de Cordova en Xcode.
 
-    **Consejo:** Compilar en Xcode ofrece más opciones, como la depuración y la configuración del proyecto. 
+    **Consejo:** Compilar en Xcode ofrece más opciones, como la depuración y la configuración del proyecto.
 
   2. Ejecute la app de ejemplo en Xcode.
 
@@ -125,11 +126,11 @@ Para obtener información sobre cómo obtener el SDK e integrarlo en la app para
 # rellinks
 
 ## samples
-   * [HelloWorld (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
+   * [Hello Bluemix (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
 
 ## sdk
    * [bms-clientsdk-cordova-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 <!--## api
-   * [Core API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
+   * [Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
 -->

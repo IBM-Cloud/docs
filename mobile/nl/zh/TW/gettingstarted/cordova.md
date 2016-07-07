@@ -7,13 +7,14 @@ copyright:
 <!-- Attribute definitions -->
 {:codeblock: .codeblock}
 
-# 開始使用 HelloWorld 範例
+# 開始使用 Hello Bluemix for Cordova 範例
 {: #gettingstarted-cordova}
-*前次更新：2016 年 3 月 17 日*
+*前次更新：2016 年 5 月 27 日*
+{: .last-updated}
 
-如果您要開始使用新的 Cordova 應用程式，可以使用 HelloWorld 應用程式。這個應用程式會示範如何從行動式應用程式連接到 {{site.data.keyword.Bluemix}} 的行動式後端而不需鑑別。應用程式已安裝 SDK。當您準備好時，便可以取得想要在應用程式中使用的特定程式庫。
+如果您要開始使用新的 Cordova 應用程式，可以使用 HelloWorld 應用程式。這個應用程式會示範如何從行動應用程式連接到 {{site.data.keyword.Bluemix}} 的行動後端而不需鑑別。應用程式已安裝 SDK。當您準備好時，便可以取得想要在應用程式中使用的特定程式庫。
 
-1. 在 {{site.data.keyword.Bluemix_notm}} 中建立行動式後端。
+1. 在 {{site.data.keyword.Bluemix_notm}} 中建立行動後端。
 
 	1. 在 {{site.data.keyword.Bluemix_notm}} 型錄的「樣板」區段中，按一下 MobileFirst Services Starter。
 	1. 輸入您應用程式的名稱及主機，然後按一下**建立**。
@@ -79,7 +80,7 @@ copyright:
 		@executable_path/Frameworks
 			```
 
-7. 在行動式模擬器或裝置上建置並執行此範例。
+7. 在行動模擬器或裝置上建置並執行此範例。
 
   ### Android
 	1. 使用下列指令建置 Cordova 應用程式：
@@ -105,7 +106,7 @@ copyright:
 ![Hello World 應用程式順利連接 Bluemix](images/yayconnected.jpg "圖 1. Hello World 應用程式順利連接 Bluemix")
 
 
-當您順利從行動式應用程式連接至 {{site.data.keyword.Bluemix_notm}} 時，即會顯示訊息「耶！您連上了」。
+當您順利從行動應用程式連接至 {{site.data.keyword.Bluemix_notm}} 時，即會顯示訊息「耶！您連上了」。
 
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
@@ -118,18 +119,18 @@ copyright:
 
 ## 後續步驟：
 {: #next}
-如需如何取得 SDK 並整合到您的行動式應用程式的相關資訊，請參閱：
+如需如何取得 SDK 並整合到您的行動應用程式的相關資訊，請參閱：
 * [Mobile Client Access：設定 Cordova 外掛程式](../../services/mobileaccess/getting-started-cordova.html)
 * [Push Notifications：設定 Cordova 外掛程式](../../services/mobilepush/enablepush_cordova.html#setup_sdk_cordova)
 
 # 相關鏈結
 
 ## 範例
-   * [HelloWorld (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
+   * [Hello Bluemix (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
 
 ## SDK
    * [bms-clientsdk-cordova-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 <!--## api
-   * [Core API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
+   * [Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
 -->

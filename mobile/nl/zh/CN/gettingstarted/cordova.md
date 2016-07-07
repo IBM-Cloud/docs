@@ -7,9 +7,10 @@ copyright:
 <!-- Attribute definitions -->
 {:codeblock: .codeblock}
 
-# HelloWorld 样本入门
+# Hello Bluemix for Cordova 样本入门
 {: #gettingstarted-cordova}
-*上次更新时间：2016 年 3 月 17 日*
+*上次更新时间：2016 年 5 月 27 日*
+{: .last-updated}
 
 如果想要从新的 Cordova 应用程序开始操作，可以使用 HelloWorld 应用程序。此应用程序演示了如何在不认证的情况下，从移动应用程序连接到 {{site.data.keyword.Bluemix}} 上的移动后端。该应用程序已经安装有 SDK。准备就绪后，可以获取要在应用程序中使用的特定库。
 
@@ -84,7 +85,7 @@ copyright:
   ### Android
 	1. 使用以下命令构建 Cordova 应用程序：
 
-    **重要信息：**在 Android Studio 中打开项目之前，您必须先通过 Cordova 命令行界面 (CLI) 构建 Cordova 应用程序。否则，您将遇到构建错误。
+    **重要信息：**在 Android Studio 中打开项目之前，您必须先通过 Cordova 命令行界面 (CLI) 构建 Cordova 应用程序。否则，将遇到构建错误。
 
 	```Bash
 	cordova build android
@@ -125,11 +126,11 @@ copyright:
 # 相关链接
 
 ## 样本
-   * [HelloWorld (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
+   * [Hello Bluemix (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
 
 ## sdk
    * [bms-clientsdk-cordova-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 <!--## api
-   * [Core API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
+   * [Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
 -->
