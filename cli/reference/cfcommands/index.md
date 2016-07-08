@@ -16,7 +16,7 @@ copyright:
 
 # Cloud Foundry (cf) commands
 
-*Last updated: 29 January 2016*
+*Last updated: 8 July 2016*
 {: .last-updated}
 
 You can use Cloud Foundry (cf) commands to manage your apps.
@@ -152,6 +152,11 @@ cf help command_name
 ## cf login
 
 Logs you in to {{site.data.keyword.Bluemix_notm}}.
+
+<!-- staging only for atlas 45 -->
+
+**Note**: If you are logging in with a federated ID, you must use the single sign-on (SSO) parameter to log in. 
+
 ```
 cf login
 ```
@@ -164,6 +169,8 @@ You can use one or more of the following parameters when you issue the cf login 
 <dt>*-p* password</dt>
 <dd>Your password.</dd>
 <dd>*Important:* If you provide your password by using the *-p* parameter on the command line interface, the password might be recorded in the command line history. For security reasons, avoid providing the password by using the -p parameter. Instead, enter the password when the command line interface prompts you.</dd>
+<dt>*-sso*</dt>
+<dd>You must use the single sign-on option (SSO) when logging in with a federated ID. This is not required when logging in with an IBM id. If you try to sign in with a federated ID, and you do not specify the SSO parameter, you will be prompted to include it. Using the SSO parameter prompts you to enter the one-time passcode upon login.</dd>
 <dt>*-o* organization_name</dt>
 <dd>The name of the organization that you want to log in to.</dd>
 <dt>*-s* space_name</dt>
@@ -171,6 +178,8 @@ You can use one or more of the following parameters when you issue the cf login 
 <dt>*--skip-ssl-validation*</dt>
 <dd>Disables the SSL validation process. Use of this parameter might cause security problems.</dd>
 </dl>
+
+<!-- staging only content for the sso parameter and note for federated ID atlas 45 work -->
 
 *Note:* If you provide your password in the *-p* parameter of this command, your password might be recorded in the shell command history file and might be visible to other users of the local operating system.
 
