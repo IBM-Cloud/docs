@@ -108,11 +108,14 @@ Read more about operating this service in the <a href="../services/mobilepush/in
 * [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
 * [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
 * [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
 * [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
+-->
  
 ## Tutorials and Samples
 {: #samples}
 * [Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
-<!-- * [Blog Post: Creating a Store Catalog application using Bluemix Mobile (Part 1/2)](https://developer.ibm.com/bluemix/?p=35667&preview=true){: new_window}
-* [Blog Post: Integrating a custom Bluemix backend into the Store Catalog application (Part 2/2)](https://developer.ibm.com/bluemix/?p=35191&preview=true){: new_window} -->
+
+<!-- blogs posts aren't live yet
+* [Blog Post: Creating a Store Catalog application using Bluemix Mobile (Part 1/2)](https://developer.ibm.com/bluemix/?p=35667&preview=true){: new_window}
+* [Blog Post: Integrating a custom Bluemix backend into the Store Catalog application (Part 2/2)](https://developer.ibm.com/bluemix/?p=35191&preview=true){: new_window}
+-->
