@@ -14,49 +14,35 @@ copyright:
 # Working with bundles
 {: #globalizationpipeline_workingwithbundles}
 
-*Last updated: 25 March 2016*
+*Last updated: 6 July 2016*
 {: .last-updated}
 
-Each bundle contains a source file and also all of the translations that have been generated from that file.
+Each bundle you create contains the key value pairs from your resource file and the complete set of translations that have been generated.
 {:shortdesc}
 
-The source files can be of any of the following formats and must contain content in the form of key/value pairs that represent the UI strings from your app.
+The resource files you upload can be of any of the following formats and must contain content in the form of key/value pairs that represent the UI strings from your app.
 
 
-<table>
-<thead>
-<tr>
-<th>File type</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>*Java™ .properties files*</td>
-<td><pre class="codeblock">
-<code>
-logout=Logout
-back=Back
-examples=Menu
-home=Home
-web=Web
-enterprise=Enterprise
-extra=Resources
-about=About
-settings=Settings
-help=Help
-support=Support
-topics=Topics
+* File type: *Java™ Properties files (.properties)*<br>
+Example:
+```js
+logout=Logout 
+back=Back 
+examples=Menu 
+home=Home 
+web=Web 
+enterprise=Enterprise 
+extra=Resources 
+about=About 
+settings=Settings 
+help=Help 
+support=Support 
+topics=Topics 
 appExitMsg=Are you sure you want to quit the application?
-</code>
-</pre>
-</td>
-</tr>
-<tr>
-<td>*AMD I18N*</td>
-<td><pre class="codeblock">
-<code>
-/* JavaScript content from commonapp/home/nls/HomeView.js in folder common */
+```
+* File type: *AMD I18N (.js)*<br>
+Example:
+```js
 define({
     "root": {
        logout: "Logout",
@@ -74,14 +60,10 @@ define({
        appExitMsg: "Are you sure you want to quit the application?"
     }
 });
-</code>
-</pre>
-</td>
-</tr>
-<tr>
-<td>*JSON*</td>
-<td><pre class="codeblock">
-<code>
+``` 
+* File type: *JSON (.json)*<br>
+Example:
+```js
 {
   "logout": "Logout",
   "back": "Back",
@@ -97,31 +79,29 @@ define({
   "topics": "Topics",
   "appExitMsg": "Are you sure you want to quit the application?"
 }
-</code>
-</pre>
-</td>
-</tr>
-</tbody>
-</table>
+``` 
 
-In addition, a source file must also adhere to these guidelines:
-* Each key can be a maximum of 256 characters.
-* Each value can be a maximum of 2048 characters.
+In addition, a resource file must also adhere to these guidelines:
+* Each key can be a maximum of 255 characters.
+* Each value can be a maximum of 8191 characters.
 * Each bundle can contain a maximum of 500 key / value pairs.
-* A resource file can be no larger than 2 MB.
 
-After you upload a resource file, its contents can be machine translated into any of the supported languages.
+
+## Translating a Bundle
+{: #globalizationpipeline_translatingabundle}
+
+Only uploaded resource files will be translated. You can upload a resource file when [creating a bundle](index.html#globalizationpipeline_creatingbundles) or [modifying with bundle details](bundles.html#globalizationpipeline_modifyingbundles).
+
+After you upload a resource file, you can  translate its contents into any of the languages provided by the default machine translation engine. Optionally you can choose an alternative machine translation engine as described in the [Machine translation configuration](managing_translations.html#globalizationpipeline_service_to_service) section. The default engine supports the following target languages
 
 <table>
 <thead>
 <tr>
-<th>Source languagese</th>
 <th>Target languages</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td rowspan="9">English</td>
 <td>Chinese (Simplified)</td>
 </tr>
 <tr>
@@ -151,15 +131,15 @@ After you upload a resource file, its contents can be machine translated into an
 </tbody>
 </table>
 
-**Note:** English is currently the only supported language for source files. As the {{site.data.keyword.GlobalizationPipeline_short}} service evolves, additional source and target languages will be added.
+**Note:** English is currently the only supported source language. As the {{site.data.keyword.GlobalizationPipeline_full}} service evolves, additional source and target languages will be added.
 
-As bundles are created, they are added to the Bundles tab to make them easily accessible. From there, you can further evolve your translations.
+As you create bundles, they are added to the **Bundles** tab to make them easily accessible. From there, additional tasks can be performed on your translations.
 
 
 ## Selecting a bundle to work with
 {: #globalizationpipeline_selectingabundle}
 
-1. Click the **Bundles** tab to view all of the bundles that you created.
+1. Click the **Bundles** tab to view all of the bundles that you have created.
 2. Click a **Bundle ID** from the list to see more details about that bundle, or click the **View the bundles detail** icon ![Select the View the bundles detail icon to open a bundle and work with its translations](images/viewProjectDetailIcon.png)	in the Actions column.
 
 ![View all of the available bundles from the Bundles tab.](images/translationBundles.png)
@@ -180,35 +160,42 @@ The status for each language in the bundle can be In Progress, Failed, or Transl
 | Status | Description |
 |--------|-------------|
 | In Progress | Machine translation is still in progress. |
-| Failed | An error occurred while the source file was being translated into the target language. |
+| Failed | An error occurred while the resource file was being translated into the target language. |
 | Translated | The translation to the target language is complete. |
 
-You can update the source file that the bundle uses, add a target language to a bundle, delete a target language from a bundle, and download the generated translations for a target language.
+You can update the resource file that the bundle uses, add a target language to a bundle, delete a target language from a bundle, and download the generated translations for a target language.
 
-### Update the source file that the bundle uses
+### Updating the resource file used by the bundle
 
 1. Next to the source language, click the **Upload resources** icon ![Select this icon to upload a new resource file](images/uploadIcon.png) in the Actions column.
 2. Click **Browse** and select the new resource file to upload.
 3. Select the type of resource file that you are uploading
- * Java .properties file
+ * Java Properties file
  * AMD I18N
  * JSON
 4. Click **Update** to upload the new resource file.
 
-The key/value pairs that are in the new or updated source file are synchronized with the values that were already uploaded. Only the keys and values that are new or changed are translated after you upload the source file.
+The key/value pairs that are in the new or updated resource file are synchronized with the values that were already uploaded. Only content that is new or changed will be translated.
 
-### Add a target language to a bundle
+### Adding a target language to a bundle
 
-1. Click the **Add Language** list.
-2. All available target languages are shown, including those that have already been selected. Select the languages to add to the bundle.
-3. Click outside of the menu to close it, and then begin the translation process for the languages.
+1. Click the **Add Language** button.
+2. All available target languages are shown. Select the languages to add to the bundle.
 
-### Delete a target language from a bundle
+Translation for the selected languages will begin immediately.
+
+### Deleting a target language from a bundle
 
 When you delete a target language from a bundle, you remove the target language and all associated translations from the project. In the Actions column of the target language to remove, click the **Remove this target language** icon ![Select the Remove this target language trash can icon](images/trashIcon.png).
 
-### Download the generated translations for a target language
+### Downloading the generated translations for a target language
 
-1. In the Actions column of the target or source language to download, click the **Download the translations** icon ![Select the download icon to download the source keys or translations for a target language](images/downloadIcon.png).
+{{site.data.keyword.GlobalizationPipeline_full}} provides several ways to incorporate the translation for a target language into your application. You can download the translation as a resource file and include it in your application build. You can also reference the translation dynamically from {{site.data.keyword.GlobalizationPipeline_full}} using one of the open source [SDKs](https://github.com/IBM-Bluemix/gp-common). 
+
+<!-- For information on {{site.data.keyword.GlobalizationPipeline_full}} SDKs, see <link>. -->
+
+To download the translation as a resource file: 
+
+1. In the **Actions** column of the target or source language to download, click the **Download the translations** icon ![Select the download icon to download the source keys or translations for a target language](images/downloadIcon.png).
 2. Select a file format.
 3. Click **Download**.
