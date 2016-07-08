@@ -11,43 +11,52 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Defining criteria
+# Defining policies
 {: #DRA_criteria}
 
 *Last updated: 6 June 2016*
 {: .last-updated}
 
-With {{site.data.keyword.DRA_short}}, defining the criteria for your application is easy. To get started, follow these steps:
+With {{site.data.keyword.DRA_short}}, defining the policies for your application is easy. To get started, follow these steps:
 {:shortdesc}
 
 
-1. If you are creating criteria for the first time, click **Let's Go**.
+1. If you are creating policies for the first time, click **Let's Go**.
 
-2. Click **Create Criteria (+)** and choose the test type to create the criterion for.
+2. Click **Create Policy (+)**, and then enter a name and description for the new policy.
 
-  {{site.data.keyword.DRA_short}} supports these types of metrics and formats:
-  
-  * Functional Verification Test (Mocha, JUnit)
-  * Unit Test (Mocha, JUnit, Karma/Mocha)
-  * Code Coverage (Istanbul, Blanket.js)
+3. Click **Next**.
 
-  Criteria are created in the {{site.data.keyword.Bluemix_notm}} organization that {{site.data.keyword.DRA_short}} was added to. Any applications that are in the same organization can use the criteria.
-  
-  For items that have test cases, you can specify critical test cases, which are tests that must pass regardless of the acceptable percentage. Critical test case names must match the `full title` attribute of the test case, which is as follows:    
-  
-  * For Karma/Mocha tests: The `describe()` and `it()` description strings linked together with spaces
-  * For JUnit tests: The package name, class name, and function name linked together with spaces    
+4. For each rule that you want to add to the new policy:
+  1. Click **Create Rule (+)**.
+  2. Select the rule type.
+  3. Enter details and conditions for the rule.
+  4. Click **Save**.
 
-  You can see the full titles of all the tests in the logs after a run.  
+5. When you're finished adding rules to the policy, click **Complete**.
 
-  **Notes:**  
-  1. Deployment Risk Analytics currently does not support **critical tests** that contain a hyphen in the full  title.    
-  2. If you change your organization name, you must recreate criteria and you will not have access to previous decision reports.
+Policies are created in the {{site.data.keyword.Bluemix_notm}} organization that {{site.data.keyword.DRA_short}} was added to. Any applications that are in the same organization can use the policy.
 
-## Creating functional verification test criteria
+{{site.data.keyword.DRA_short}} supports these types of metrics and formats:
+
+* Functional Verification Test (Mocha, JUnit)
+* Unit Test (Mocha, JUnit, Karma/Mocha)
+* Code Coverage (Istanbul, Blanket.js)
+
+{{site.data.keyword.DRA_short}} also supports Selenium and Jasmine tests, though these must be included within the previously mentioned tools, such as JUnit and Mocha. For items that have test cases, you can specify critical test cases, which are tests that must pass regardless of the acceptable percentage. Critical test case names must match the `full title` attribute of the test case, which is as follows:    
+* For Karma/Mocha tests: The `describe()` and `it()` description strings linked together with spaces
+* For JUnit tests: The package name, class name, and function name linked together with spaces    
+
+You can see the full titles of all the tests in the logs after a run.  
+
+**Notes:**  
+1. Deployment Risk Analytics currently does not support **critical tests** that contain a hyphen in the full title.    
+2. If you change your organization name, you must recreate policies and you will not have access to previous decision reports.
+
+## Creating functional verification test rules
 {: #DRA_criteria_fvt}
 
-1. Type a name and select a format.
+1. Type a description and select a format.
 
 2. Specify the percentage of test cases that must pass to be declared successful.
 
@@ -58,10 +67,10 @@ With {{site.data.keyword.DRA_short}}, defining the criteria for your application
 5. Click **Save**.
 
 
-## Creating unit test criteria
+## Creating unit test rules
 {: #DRA_criteria_ut}
 
-1. Type a name and select a format.
+1. Type a description and select a format.
 
 2. Specify the percentage of test cases that must pass to be declared successful.
 
@@ -72,10 +81,10 @@ With {{site.data.keyword.DRA_short}}, defining the criteria for your application
 5. Click **Save**.
 
 
-## Creating code coverage criteria
+## Creating code coverage rules
 {: #DRA_criteria_codecoverage}
 
-1. Type a name and select a format.
+1. Type a description and select a format.
 
 2. Specify the percentage of code coverage that is required to be declared successful.
 
