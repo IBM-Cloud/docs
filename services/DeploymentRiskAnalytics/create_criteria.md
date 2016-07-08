@@ -31,12 +31,11 @@ With {{site.data.keyword.DRA_short}}, defining the criteria for your application
   * Unit Test (Mocha, JUnit, Karma/Mocha)
   * Code Coverage (Istanbul, Blanket.js)
 
-  Criteria are created in the {{site.data.keyword.Bluemix_notm}} organization that {{site.data.keyword.DRA_short}} was added to. Any applications that are in the same organization can use the criteria.
+Criteria are created in the {{site.data.keyword.Bluemix_notm}} organization that {{site.data.keyword.DRA_short}} was added to. Any applications that are in the same organization can use the criteria.
   
-  For items that have test cases, you can specify critical test cases, which are tests that must pass regardless of the acceptable percentage. Critical test case names must match the `full title` attribute of the test case, which is as follows:    
-  
-  * For Karma/Mocha tests: The `describe()` and `it()` description strings linked together with spaces
-  * For JUnit tests: The package name, class name, and function name linked together with spaces    
+{{site.data.keyword.DRA_short}} also supports Selenium and Jasmine tests, though these must be included within the previously mentioned tools, such as JUnit and Mocha. For items that have test cases, you can specify critical test cases, which are tests that must pass regardless of the acceptable percentage. Critical test case names must match the `full title` attribute of the test case, which is as follows:    
+* For Karma/Mocha tests: The `describe()` and `it()` description strings linked together with spaces
+* For JUnit tests: The package name, class name, and function name linked together with spaces  
 
   You can see the full titles of all the tests in the logs after a run.  
 
