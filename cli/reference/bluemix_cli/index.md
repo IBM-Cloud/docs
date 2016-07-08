@@ -17,7 +17,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-*Last updated: 11 May 2016*
+*Last updated: 7 July 2016*
 {: .last-updated}
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} commands are wrappers of existing cf commands, while others provide extended capabilities for {{site.data.keyword.Bluemix_notm}} users. The following information lists commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI, and includes their names, options, usage, prerequisites, descriptions, and examples.
@@ -421,8 +421,13 @@ bluemix login [OPTIONS...]
 
 <strong>Prerequisites</strong>: Endpoint
 
+<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
+
 <strong>Command options</strong>:
 For information about options supported by the `login` command, see `cf login` command usage information for cf commands for managing applications.
+
+<strong>Note</Strong>:
+If logging in with federated ID, use '--sso' option to authenticate with one time passcode.
 
 
 ## bluemix logout
