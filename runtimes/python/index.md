@@ -11,7 +11,7 @@ copyright:
 
 # Python
 {: #python_runtime}
-*Last updated: 21 June 2016*
+*Last updated: 8 July 2016*
 {: .last-updated}
 
 The Python runtime on {{site.data.keyword.Bluemix}} is powered by the python_buildpack.
@@ -32,26 +32,27 @@ environment.  See [Using the starter applications](../../cfapps/starter_app_usag
 You can specify the version of Python to be used by your app by setting python-versionnumber in the runtime.txt file in the root of your application. For example:
 
 ```
-python-3.5.0
+python-3.5.1
 ```
 {: codeblock}
 
-When a version is not specified, version 2.7.10 is chosen by default.
+When a version is not specified, version 2.7.11 is chosen by default.
 
 ### Available versions:
 {: #available_versions}
 
 The following Python versions are available in the
-[Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.2)
+[Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5)
 currently installed in {{site.data.keyword.Bluemix}}:
 
-* 2.7.9
 * 2.7.10
+* 2.7.11
 * 3.3.5
 * 3.3.6
-* 3.4.2
 * 3.4.3
+* 3.4.4
 * 3.5.0
+* 3.5.1
 
 If your application requires a Python version that is not listed,
 you can use the external
