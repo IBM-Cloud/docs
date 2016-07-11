@@ -109,6 +109,7 @@ Read more about operating this service in the <a href="../services/mobilepush/in
 * [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
 * [Push Notifications](../services/mobilepush/index.html){: new_window}
 -->
+{: #general}
 * [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
  
 ## Tutorials and Samples
