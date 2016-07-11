@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*Last updated: 19 March 2016*
+*Last Updated: 06 July 2016*
 {: .last-updated}
 
 The Tomcat runtime on {{site.data.keyword.Bluemix}} is powered by the java_buildpack.
@@ -43,9 +43,11 @@ Both of these can be specified in the application's manifest file.  For example:
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-The current default Tomcat version is 8.0.30.  The current default Java version is 1.8.0_65.
+The current default Tomcat version is 8.0.36.  The current default Java version is 1.8.0_91.
 For more information please see [java-buildpack releases](https://github.com/cloudfoundry/java-buildpack/releases).
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)
