@@ -76,7 +76,7 @@ Complete the following steps to connect a {{site.data.keyword.cloudant}}:
 
   b. Select a time zone. The time in the selected timezone will be used to determine which bucket device data should be placed in, not the time local to the device. Timestamps on device data being sent to the {{site.data.keyword.cloudant}} will be converted into the selected timezone when deciding into which database the data will be entered.
 
-  c. Choose a database name. The database name will be `Iotp_<orgID>_<choice>_<bucket_name>` where `<orgID>` is your organization ID, `<choice>` is your choice of database name, and `<bucket_name>` is a string which defines whether the database uses a daily, weekly, or monthly bucket interval. The `<bucket_name>` uses the following format.
+  c. Choose a database name. The database name will be `iotp_<orgID>_<choice>_<bucket_name>` where `<orgID>` is your organization ID, `<choice>` is your choice of database name, and `<bucket_name>` is a string which defines whether the database uses a daily, weekly, or monthly bucket interval. The `<bucket_name>` uses the following format.
 
   For daily bucket intervals, `<bucket_name>` will be `yyyy-mm-dd`.
   For weekly buckets intervals  `<bucket_name>` will be `yyyy-www` where `www` indicates a week number, for example `2016-w03`
@@ -90,7 +90,7 @@ Your device data is now being stored in your {{site.data.keyword.cloudant}}.
 ## Creating new design documents  
 {: #design_docs}
 
-New design documents are contained in the configuration database, and are copied to every database created. The configuration database name is `Iotp_<orgid>_<choice>_configuration
+New design documents are contained in the configuration database, and are copied to every database created. The configuration database name is `iotp_<orgid>_<choice>_configuration
 ` using the same parameters are the database names above.
 
 The default design documents contained withing the {{site.data.keyword.iot_short_notm}} implement queries available in the current historian, apart from the summarize function.
