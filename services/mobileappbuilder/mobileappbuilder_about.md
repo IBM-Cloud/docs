@@ -5,10 +5,15 @@ copyright:
 
 ---
 {:shortdesc: .shortdesc}
+{:note:.deprecated}
+
+**This service is deprecated:** All instances of this service are deprecated. Existing instances can be used until 11 August 2016. For more information, see the [deprecation announcement blog](https://developer.ibm.com/bluemix/2016/07/12/mobile-app-builder-now-part-bluemix-mobile-dashboard/){: new_window}.
+{:deprecated}
+
 
 # About {{site.data.keyword.mobileappbuilder_short}}
 {: #mobileappbuilder_about}
-*Last updated: 29 April 2016*
+*Last updated: 12 July 2016*
 {: .last-updated}
 
 {: shortdesc}
@@ -32,3 +37,11 @@ With the {{site.data.keyword.mobileappbuilder_short}} service, you can:
 **Templates**: Templates are provided as a basis for mobile app development.
 
 **Screens**: Different screens within the app creation tool help you customize your app.
+
+
+# Related Links
+{: #rellinks}
+
+## Blog Post
+{: #general}
+* [Mobile App Builder - new service now available](https://developer.ibm.com/bluemix/2016/05/03/mobile-app-builder-now-available/){: new_window}

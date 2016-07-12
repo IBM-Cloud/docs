@@ -5,10 +5,15 @@ copyright:
 
 ---
 {:shortdesc: .shortdesc}
+{:note:.deprecated}
+
+**This service is deprecated:** All instances of this service are deprecated. Existing instances can be used until 11 August 2016. For more information, see the [deprecation announcement blog](https://developer.ibm.com/bluemix/2016/07/12/mobile-app-builder-now-part-bluemix-mobile-dashboard/){: new_window}.
+{:deprecated}
+
 
 # Customizing your app
 {: #mobileappbuilder_screens}
-*Last updated: 29 April 2016*
+*Last updated: 12 July 2016*
 {: .last-updated}
 
 {: shortdesc}
@@ -111,3 +116,10 @@ The **Publish** settings are used for certificate information for app signing. F
 {: #get_my_app}
 The **Get My App** screen lets you create your app. You can choose the iOS icon, the Android icon, or both.
 
+
+# Related Links
+{: #rellinks}
+
+## Blog Post
+{: #general}
+* [Mobile App Builder - new service now available](https://developer.ibm.com/bluemix/2016/05/03/mobile-app-builder-now-available/){: new_window}

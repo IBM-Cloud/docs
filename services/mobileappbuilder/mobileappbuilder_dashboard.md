@@ -5,10 +5,15 @@ copyright:
 
 ---
 {:shortdesc: .shortdesc}
+{:note:.deprecated}
+
+**This service is deprecated:** All instances of this service are deprecated. Existing instances can be used until 11 August 2016. For more information, see the [deprecation announcement blog](https://developer.ibm.com/bluemix/2016/07/12/mobile-app-builder-now-part-bluemix-mobile-dashboard/){: new_window}.
+{:deprecated}
+
 
 # Using the dashboard
 {: #mobileappbuilder_dashboard}
-*Last updated: 29 April 2016*
+*Last updated: 12 July 2016*
 {: .last-updated}
 
 {: shortdesc}
@@ -20,6 +25,7 @@ The following actions are supported:
 * Adding apps: Create new apps. You can choose the template that you want for your app.
 * Editing apps: Edit pre-existing apps. You can continue editing the apps in the **Design** screen.
 * Deleting apps: Delete apps.
+
 
 ## Creating a new app
 {: #create_app}
@@ -44,3 +50,11 @@ Click **Edit** to edit your app in the **Design** screen.
 ## Deleting an existing app
 {: #delete_app}
 Click the **Trash** icon to delete your existing app.
+
+
+# Related Links
+{: #rellinks}
+
+## Blog Post
+{: #general}
+* [Mobile App Builder - new service now available](https://developer.ibm.com/bluemix/2016/05/03/mobile-app-builder-now-available/){: new_window}
