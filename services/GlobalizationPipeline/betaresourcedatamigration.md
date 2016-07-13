@@ -83,3 +83,4 @@ The commands above extract existing bundle data and resource entry data and uplo
 
 
 For example, the beta version supports Arabic translation through Watson Language Translation. In the GA version, Arabic translation is no longer offered for free. When you port beta data to the new GA instance, already translated Arabic contents will be preserved. No change in source language will trigger Arabic translation automatically, unless you set up Watson binding to enable Arabic translation. This is also the case when the source instance is the GA version. External MT service binding is specific to a GP instance; the binding/configuration to another instance will not be ported automatically. 
+
