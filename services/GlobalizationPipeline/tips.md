@@ -90,3 +90,4 @@ In addition, ask native language speakers to review and edit the machine transla
 
 * **Avoid text in graphics.**
 * **Avoid using formatting for emphasis.**
+
