@@ -15,7 +15,7 @@ years: 2016
 # Network plans
 {: #ibmblockchain_etn}
  
-*Last updated:12 July 2016*
+*Last updated: 13 July 2016*
 {: .last-updated}
 
 Both plans, the Starter Developer and High Security Business Network, unlock several features in the Hyperledger fabric which robustly enhance availability, security, confidentiality and privacy; and the configuration is such that you are able to test and affirm these features.  Each instance runs as a four-node network with a Certificate Authority managing identities and member permissions, and each network leverages the same capabilites from the core fabric. The only fundamental difference between the two is their operating/hosting environment.  The developer network runs in a shared multi-tenant environment on Softlayer, whereas the high security network exists as an isolated single-tenant running in a secure services container. 

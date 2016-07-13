@@ -15,7 +15,7 @@ years: 2016
 # Further testing
 {: #etn_next}
 
-*Last updated: 12 July 2016*
+*Last updated: 13 July 2016*
 {: .last-updated}
 
 The following tests were run in the High Security Business Network environment to test chaincode function, ledger, long runs, concurrency and complex transactions. (Note: some of these tests are repeated in the [Node.js SDK](etn_txn.html) and [Testing consensus and availability](etn_pbft.html) sections.)

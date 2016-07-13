@@ -16,7 +16,7 @@ copyright:
 *Last updated: 13 July 2016*
 {: .last-updated}
 
-Use the blockchain monitor to retrieve details about your network, such as peer information, logs, ledger state, APIs and chaincodes. The monitor provides you with an overview of your blockchain environment, including performance data and currently-deployed chaincodes.
+Use the blockchain monitor to retrieve details about your network, such as peer information, logs, ledger state, APIs and chaincode. The monitor provides you with an overview of your blockchain environment, including performance data and currently-deployed chaincode.
 {:shortdesc}
 
 ## Monitor tabs

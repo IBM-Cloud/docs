@@ -15,10 +15,10 @@ years: 2016
 # Verified performance metrics
 {: #etn_performance}
 
-*Last updated: 12 July 2016*
+*Last updated: 13 July 2016*
 {: .last-updated}
 
-The following performance benchmarks have been tested and verified by IBM. Performance can vary, based on the environment, chaincode run, security settings, transaction batch size, and other factors. Results were achieved in a High Security Business Network: **(have they really run all these on the dedicated env. LinuxONE on z? Dong Ming is trying to connect to LPAR 7/12)**
+The following performance benchmarks have been tested and verified by IBM. Performance can vary, based on the environment, chaincode run, security settings, transaction batch size, and other factors. Results were achieved in a High Security Business Network: 
 {:shortdesc}
 
 ### Performance/Stress
