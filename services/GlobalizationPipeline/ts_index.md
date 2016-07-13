@@ -11,13 +11,13 @@ copyright:
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.GlobalizationPipeline_full}} troubleshooting
+# {{site.data.keyword.GlobalizationPipeline_short}} troubleshooting
 {: #globalizationpipelinets}
 
-*Last updated: 27 June 2016*
+*Last updated: 13 July 2016*
 {: .last-updated}
 
-Here are some answers to common questions about using {{site.data.keyword.GlobalizationPipeline_full}}. 
+Here are some answers to common questions about using {{site.data.keyword.GlobalizationPipeline_short}}. 
 {:shortdesc}
 
 
@@ -47,7 +47,7 @@ The resource file I am trying to upload is not accepted.
 When adding a resource file to a new translation bundle or updating an existing resource file to be translated, I receive an error.
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}} only accepts resource files of the following types: Java™ .properties, JSON, and AMD I18N.
+{{site.data.keyword.GlobalizationPipeline_short}} only accepts resource files of the following types: Java™ .properties, JSON, and AMD I18N.
 {: tsCauses}
 
 Ensure that the resource file being uploaded is of one of these types.
@@ -67,7 +67,7 @@ The resource file I am trying to upload is not accepted.
 When adding or updating a resource file to a translation project, an error is occurring because a portion of the file is to large.
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}} can only accept resource files that meet certain size requirements.
+{{site.data.keyword.GlobalizationPipeline_short}} can only accept resource files that meet certain size requirements.
 {: tsCauses}
 
 Ensure that the resource file conforms to the following guidelines:
@@ -88,7 +88,7 @@ An non-English sourced resource file is not translating properly.
 When a resource file that is not sourced in English is uploaded to a translation bundle, the generated translations are not correct.
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}} currently only supports English as a source language.
+{{site.data.keyword.GlobalizationPipeline_short}} currently only supports English as a source language.
 {: tsCauses}
 
 Translation of non-English resource files is not yet supported.
@@ -108,5 +108,5 @@ The spacing that is used around variables that are contained within strings is n
 Machine translation engines are designed to work with natural language and might not always recognize or know how to handle specific syntax used by programming languages. As a result, the handling of syntax that is mixed with plain text might vary.
 {: tsCauses}
 
-{{site.data.keyword.GlobalizationPipeline_full}} currently recognizes the pattern "{}" commonly used to represent variables and will preserve the original format of the content contained within.
+{{site.data.keyword.GlobalizationPipeline_short}} currently recognizes the pattern "{}" commonly used to represent variables and will preserve the original format of the content contained within.
 {: tsResolve}
