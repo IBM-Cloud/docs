@@ -7,12 +7,17 @@ copyright:
 
 # Configuring {{site.data.keyword.amashort}} for custom authentication
 {: #custom-dash}
+
+*Last updated: 28 June 2016*
+{: .last-updated}
+
+
 To use custom authentication with your mobile app, you must register a custom authentication realm and the base URL of your custom identity provider in the {{site.data.keyword.amashort}} service dashboard.
 
 ## Before you begin
 {: #custom-dash-begin}
-* Read [Getting Started](getting-started.html).
-* Protect your backend application with the {{site.data.keyword.amashort}} server SDK.  For more information see [Protecting resources](protecting-resources.html).
+* Read [Getting Started](index.html).
+* Protect your back-end application with the {{site.data.keyword.amashort}} server SDK.  For more information see [Protecting resources](protecting-resources.html).
 * Have a custom identity provider application running.
 
 ## Configure custom authentication in the {{site.data.keyword.Bluemix}} dashboard
@@ -21,7 +26,7 @@ Use the {{site.data.keyword.amashort}} dashboard to configure custom authenticat
 
 1. Open your app in the {{site.data.keyword.Bluemix}} dashboard.
 
-1. Click **Mobile Options** and take note of your **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`). You need these values when you initialize the SDK.
+1. Click **Mobile Options** and take note of your **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`). You need these values to initialize the SDK.
 
 1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}} dashboard loads.
 

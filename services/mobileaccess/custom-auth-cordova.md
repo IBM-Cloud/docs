@@ -7,6 +7,11 @@ copyright:
 
 # Configuring the {{site.data.keyword.amashort}} client SDK for Cordova
 {: #custom-cordova}
+
+*Last updated: 16 June 2016*
+{: .last-updated}
+
+
 Configure your Cordova application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
 
 
@@ -136,15 +141,15 @@ BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener
 
 ## Testing the authentication
 {: #custom-cordova-test}
-After the client SDK is initialized and a custom AuthenticationListener is registered, you can start making requests to your mobile backend.
+After the client SDK is initialized and a custom AuthenticationListener is registered, you can start making requests to your mobile back-end application.
 
 ### Before you begin
 {: #custom-cordova-testing-before}
 You must have an application that was created with the {{site.data.keyword.mobilefirstbp}} boilerplate and have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
 
 
-1. Send a request to protected endpoint of your mobile backend in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
- The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your browser.
+1. Send a request to protected endpoint of your mobile back-end application in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
+ The `/protected` endpoint of a mobile back-end application that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your browser.
 
 1. Use your Cordova application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom AuthenticationListener.
 

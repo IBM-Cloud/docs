@@ -4,37 +4,48 @@ copyright:
   years: 2016
 
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 
-# Enabling Facebook authentication in iOS apps (Swift SDK)
+# Enabling Facebook authentication for iOS apps (Swift SDK)
 {: #facebook-auth-ios}
 
+*Last updated: 15 June 2016*
+{: .last-updated}
+
 To use Facebook as an identity provider in your iOS applications, add and configure the iOS Platform for your Facebook application.
+{:shortdesc}
 
 ## Before you begin
 {: #facebook-auth-ios-before}
+ You must have
+* An iOS project that is set up to work with CocoaPods.  For more information, see **Install CocoaPods** in  [Setting up the iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
+   **Note:** You do not need to install the core {{site.data.keyword.amashort}}  client SDK before proceeding.
+* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* A Facebook application on the Facebook for Developers site. 
 
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with {{site.data.keyword.amashort}} client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
-* Manually protect your backend application with {{site.data.keyword.amashort}} server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
-* Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
+**Important:** You do not need to separately install the Facebook's own SDK. The Facebook SDK is installed automatically by `BMSFacebookAuthentication` pod below. You can skip the **Add the Facebook SDK to your Xcode Project** step when you add or configure your app on the Facebook for Developers site.
+
+**Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
 ## Configuring your Facebook Application for the iOS Platform
 {: #facebook-auth-ios-config}
+On the Facebook for Developers site:
 
-1. Log in to [your Facebook app's dashboard](https://developers.facebook.com/apps/).
-
-1. Take note of the **App ID** for your app. You need this value when you configure your iOS project for Facebook authentication.
-
-1. Click **Settings > Add Platform > iOS**.
+1. Log in to your account.
+1. Ensure that the iOS platform has been added to your app. When you add or configure the iOS platform more details are provided about the following steps.
 
 1. Specify the *bundleId* of your iOS application. To find the *bundleId* of your iOS application, look for the **Bundle Identifier** in either the `info.plist` file or Xcode project **General** tab.
-**Tip**: Consider enabling URL Scheme Suffix or Single Sign On if you are planning to use these features.
+
+  **Tip**: Consider enabling URL Scheme Suffix or Single Sign On if you are planning to use these features.
 
 1. Click **Save Settings**.
 
 ## Configuring {{site.data.keyword.amashort}} for Facebook authentication
 {: #facebook-auth-ios-configmca}
 
-After you have configured the Facebook Application ID and your Facebook Application to serve iOS clients, you can enable Facebook authentication in {{site.data.keyword.amashort}}.
+After you  configure the Facebook Application ID and your Facebook Application to serve iOS clients, you can enable Facebook authentication in {{site.data.keyword.amashort}}.
 
 1. Open your app in the {{site.data.keyword.Bluemix}} dashboard.
 
@@ -42,7 +53,7 @@ After you have configured the Facebook Application ID and your Facebook Applicat
 
 1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}} dashboard loads.
 
-1. Click the **Facebook** tile.
+1. Click the **Configure** button on the **Facebook** panel.
 
 1. Specify the Facebook Application ID and click **Save**.
 
@@ -50,30 +61,32 @@ After you have configured the Facebook Application ID and your Facebook Applicat
 {: #facebook-auth-ios-sdk}
 
 ### Installing CocoaPods
-{: #facebook-auth-cocoapods}
+{: #install-cocoapods}
 
-The {{site.data.keyword.amashort}} client SDK is distributed with CocoaPods, a dependency manager for iOS projects. CocoaPods automatically downloads artifacts from repositories and makes them available to your iOS application.
+1. Open Terminal and run the **pod --version** command. If CocoaPods is installed, the version number displays. You can skip to the next section to install the SDK.
 
-1. Open Terminal and run `pod --version` command. If you already have CocoaPods installed, the version number is displayed. You can skip to the next section of this tutorial.
-
-1. Install CocoaPods by running `sudo gem install cocoapods`. Refer to [CocoaPods website](https://cocoapods.org/) in case additional guidance is required.
-
-1. Close XCode.
-
-1. Open Terminal and `cd` into your project directory.
-
-1.  Run `pod init`.
+1. If you do not have CocoaPods installed, run:
+```
+sudo gem install cocoapods
+```
+For more information, see the [CocoaPods website](https://cocoapods.org/).
 
 ### Installing the {{site.data.keyword.amashort}} client Swift SDK with CocoaPods
 {: #facebook-auth-install-swift-cocoapods}
 
-1. In your iOS project, edit the `Podfile` and add the following lines:
+1. If you have no `Podfile` in your iOS project, run `pod init` to created the file.
+
+1. Edit the `Podfile` and add the following lines:
 
  ```
 use_frameworks!
 pod 'BMSFacebookAuthentication'
+
 	```
- **Tip:** You can add `use_frameworks!` to your Xcode target instead of having it in the Podfile.
+
+   **Note:** If you have this line in your Pod file: `pod 'BMSSecurity'`, you must remove it. The `BMSFacebookAuthentication` pod installs all necessary frameworks.
+
+   **Tip:** You can add `use_frameworks!` to your Xcode target instead of having it in the Podfile.
 
 1. Save the `Podfile` and run the `pod install` command from the command line. CocoaPods installs the dependencies. The progress and which components were added are displayed.
 
@@ -89,6 +102,7 @@ pod 'BMSFacebookAuthentication'
 1. Configure Facebook integration by adding the following properties to your `info.plist` file:
 
    ![image](images/ios-facebook-infoplist-settings.png)
+
 
    Update URL scheme and FacebookappID properties with your Facebook Application ID
 
@@ -162,6 +176,7 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSSecurity
  ```
 2. Initialize the client SDK.	Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
+Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the face icon (![face](images/face.jpg "Face icon"))  in the upper-left corner of the dashboard.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -169,7 +184,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<application Bluemix region>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -198,16 +213,16 @@ A common, though not mandatory, place to put the initialization code is in the `
 ## Testing the authentication
 {: #facebook-auth-ios-testing}
 
-After the client SDK is initialized and Facebook Authentication Manager is registered, you can start making requests to your mobile backend.
+After the client SDK is initialized and Facebook Authentication Manager is registered, you can start making requests to your mobile back-end application.
 
 ### Before you begin
 {: #facebook-auth-ios-testing-before}
 
 You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Try to send a request to protected endpoint of your newly created mobile backend in your browser. Open the following URL: `{applicationRoute}/protected`.
+1. Try to send a request to protected endpoint of your newly created mobile back-end application in your browser. Open the following URL: `{applicationRoute}/protected`.
 For example: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can be accessed only by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK.
+<br/>The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can be accessed only by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK.
 
 1. Use your iOS application to make a request to the same endpoint.
 
@@ -227,7 +242,7 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
  ```
 
 1. Run your application. A Facebook login screen pops up.
-
+ 
    ![image](images/ios-facebook-login.png)
 
    This screen might look slightly different if you are not currently logged in to Facebook.
@@ -247,6 +262,7 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
  })
  response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
  ```
+  {: screen}
 
 1. You can also add logout functionality by adding the following code:
 
@@ -254,8 +270,8 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
 FacebookAuthenticationManager.sharedInstance.logout(callBack)
 ```
 
- If you call this code after a user is logged in with Facebook and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Facebook for authentication purposes.
+ If you call this code after a user is logged in with Facebook, and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Facebook for authentication purposes.
 
- To switch users, you must call this code and the user must logout from Facebook in their browser.
+ To switch users, you must call this code and the user must log out from Facebook in their browser.
 
  Passing `callBack` to the logout function is optional. You can also pass `nil`.

@@ -7,7 +7,12 @@ copyright:
 
 # Configuring the {{site.data.keyword.amashort}} client SDK for Android
 {: #custom-android}
-Configure your Android application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
+
+*Last updated: 28 June 2016*
+{: .last-updated}
+
+
+Configure your Android application with custom authentication to use the {{site.data.keyword.amashort}} client SDK, and connect your application to {{site.data.keyword.Bluemix}}.
 
 ## Before you begin
 {: #before-you-begin}
@@ -21,10 +26,10 @@ You must have a resource that is protected by an instance of the {{site.data.key
 
 ## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #custom-android-initialize}
-1. In your Android project in Android Studio, open the `build.gradle` file of your app module.
-<br/>**Tip:** Your Android project might have two `build.gradle` files: for the project and for the application module. Use the application module file.
+1. In your Android project in Android Studio, open the `build.gradle` file of your app module (not the project `build.gradle`).
 
-1. In the `build.gradle` file file, find the `dependencies` section and check for the following compile dependency. Add this dependency if it is not already there.
+
+1. In the `build.gradle`  file, find the `dependencies` section and check for that the following dependency exists:
 
 	```Gradle
 	dependencies {
@@ -53,13 +58,16 @@ Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GU
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");					
-	```
+					"applicationGUID",
+					BMSClient.REGION_UK);
+```
+Replace the `BMSClient.REGION_UK` with the appropriate region.					
+	
 
 ## AuthenticationListener interface
 {: #custom-android-authlistener}
 
-The {{site.data.keyword.amashort}} client SDK provides the `AuthenticationListener` interface so that you can implement a custom authentication flow. The `AuthenticationListener` interface exposes three methods that are called on different phases of the authentication process.
+The {{site.data.keyword.amashort}} client SDK provides the `AuthenticationListener` interface so that you can implement a custom authentication flow. The `AuthenticationListener` interface exposes three methods that are called in different phases during the authentication process.
 
 ### onAuthenticationChallengeReceived method
 {: #custom-onAuth}
@@ -177,16 +185,16 @@ Use the *realmName* that you specified in the {{site.data.keyword.amashort}} das
 
 ## Testing the authentication
 {: #custom-android-testing}
-After the client SDK is initialized and a custom AuthenticationListener is registered, you can start making requests to your mobile backend.
+After the client SDK is initialized and a custom AuthenticationListener is registered, you can start making requests to your mobile back-end application.
 
 ### Before you begin
 {: #custom-android-testing-before}
 You must have an application that was created with the {{site.data.keyword.mobilefirstbp}} boilerplate and have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
 
 
-1. Send a request to protected endpoint of your mobile backend in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
+1. Send a request to the protected endpoint (`{applicationRoute}/protected`) of your mobile back-end application from your browser, for example `http://my-mobile-backend.mybluemix.net/protected`.
 
-1. The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your  browser.
+1. The `/protected` endpoint of a mobile back-end application that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your  browser.
 
 1. Use your Android application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom AuthenticationListener.
 
@@ -221,6 +229,6 @@ You must have an application that was created with the {{site.data.keyword.mobil
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge received from the server again.
+ If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge that is received from the server again.
 
  The value for `listener` passed to the logout function can be `null`.

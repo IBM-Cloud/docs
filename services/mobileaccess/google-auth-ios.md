@@ -5,16 +5,22 @@ copyright:
 
 ---
 
-# Enabling Google authentication in iOS apps
+# Enabling Google authentication for iOS Objective C apps
 {: #google-auth-ios}
 
-**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the Swift SDK, see [Enabling Google authentication in iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
+
+*Last updated: 16 June 2016*
+{: .last-updated}
+
+Use Google Sign-In to authenticate users on your Mobile Client Access iOS app.
+
+**Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue this SDK later this year in favor of the new Swift SDK. For new applications we highly recommend using the Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the Swift SDK, see [Enabling Google authentication in iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
 
 ## Before you begin
 {: #google-auth-ios-before}
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
-* Manually protect your backend application with {{site.data.keyword.amashort}} server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
-
+You must have:
+* An iOS project in Xcode. It does not need to be instrumented with the {{site.data.keyword.amashort}} client SDK.
+* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end, see [Getting started](index.html).
 
 ## Configuring a Google Project for the iOS Platform
 {: #google-auth-ios-project}
@@ -53,13 +59,13 @@ If you already have a project, you can skip the steps that describe project crea
 
 1. Provide a meaningful name for your iOS client. Specify the bundle ID of your iOS application. To find the bundle ID of your iOS application look for **Bundle Identifier** in either the `info.plist` file or the Xcode project **General** tab.
 
-1. Take a note of your new iOS client ID. You need the value when you set up the application in  {{site.data.keyword.Bluemix}}.
+1. Take a note of your new Google iOS client ID. You need the value when you set up the application in  {{site.data.keyword.Bluemix}}.
 
 
 ## Configuring {{site.data.keyword.amashort}} for Google authentication
 {: #google-auth-ios-config}
 
-Now that you have an iOS client ID, you can enable Google authentication in the {{site.data.keyword.Bluemix_notm}} dashboard.
+Now that you have a Google iOS client ID, you can enable Google authentication in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
@@ -69,12 +75,12 @@ Now that you have an iOS client ID, you can enable Google authentication in the 
 
 1. Click the **Google** tile.
 
-1. In **Application ID for iOS**, specify your iOS client ID for Android and click **Save**.
+1. In **Application ID for iOS**, specify your Google client ID for iOS and click **Save**.
 
 	Note: In addition to the Google client id, the reverse value is also needed for your client configuration (see below). To access both values, download the example plist using pencil icon:
 		![info.plist file download](images/download_plist.png)
 
-## Configuring the {{site.data.keyword.amashort}} client SDK for iOS
+## Configuring the {{site.data.keyword.amashort}} Google client SDK for iOS
 {: #google-auth-ios-sdk}
 
 ### Installing the {{site.data.keyword.amashort}} client SDK using CocoaPods
@@ -169,6 +175,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 	7. Set the value to the location of your `BridgingHeader.h` file, for example: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	8. Make sure your bridging header is being picked up by Xcode by building your project.
 
+
 3. Use the following code to initialize the client SDK.  Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values that you obtained from **Mobile Options**.
 
 	Objective-C:
@@ -185,8 +192,6 @@ A common, though not mandatory, place to put the initialization code is in the `
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
-
-
 
 1. Register Google Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code immediately after you initialize the IMFClient:
 

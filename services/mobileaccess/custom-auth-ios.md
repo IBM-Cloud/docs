@@ -8,9 +8,13 @@ copyright:
 # Configuring {{site.data.keyword.amashort}} client SDK for iOS
 {: #custom-ios}
 
+*Last updated: 16 June 2016*
+{: .last-updated}
+
+
 Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
 
-**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the Swift SDK, see [Configuring {{site.data.keyword.amashort}} client SDK for iOS (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)
+**Note:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the new Swift SDK, see [Configuring {{site.data.keyword.amashort}} client SDK for iOS (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html).
 
 ## Before you begin
 {: #before-you-begin}
@@ -261,14 +265,14 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 ## Testing the authentication
 {: #custom-ios-testing}
-After you initialize the client SDK and register a custom `IMFAuthenticationDelegate`, you can start making requests to your mobile backend.
+After you initialize the client SDK and register a custom `IMFAuthenticationDelegate`, you can start making requests to your mobile back-end application.
 
 ### Before you begin
 {: #custom-ios-testing-before}
  You must have an application that was created with the {{site.data.keyword.mobilefirstbp}} boilerplate and have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
 
-1. Send a request to protected endpoint of your mobile backend in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
-  The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your browser.
+1. Send a request to protected endpoint of your mobile back-end application in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
+  The `/protected` endpoint of a mobile back-end application that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your browser.
 1. Use your iOS application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom `IMFAuthenticationDelegate`:
 
 	Objective-C:

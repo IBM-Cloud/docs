@@ -4,19 +4,30 @@ copyright:
   years: 2015, 2016
 
 ---
+{:screen:  .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 
-# Enabling Facebook authentication in iOS apps (Objective-C SDK)
+# Enabling Facebook authentication for iOS apps (Objective-C SDK)
 {: #facebook-auth-ios}
 
-To use Facebook as identity provider in your iOS applications, add and configure the iOS Platform for your Facebook application.
 
-**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the Swift SDK, see [Enabling Facebook authentication in iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html)
+*Last updated: 15 June 2016*
+{: .last-updated}
+
+
+To use Facebook as identity provider in your iOS applications, add and configure the iOS Platform for your Facebook application.
+{:shortdesc}
+
+**Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for {{site.data.keyword.Bluemix}} Mobile Services, there are plans for discontinuing it later this year in favor of the new Swift SDK (see [Setting up the iOS Swift SDK](facebook-auth-ios-swift-sdk.html)).
 
 ## Before you begin
 {: #facebook-auth-ios-before}
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with {{site.data.keyword.amashort}} client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
-* Manually protect your backend application with {{site.data.keyword.amashort}} server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
-* Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+You must have:
+* An iOS project that is set up to work with CocoaPods.  For more information, see **Install CocoaPods** in  [Setting up the iOS  SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
+   **Note:** You do not need to install the core {{site.data.keyword.amashort}}  client SDK before proceeding.
+* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end, see [Getting started](index.html).
+* A Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configuring your Facebook Application for the iOS Platform
 {: #facebook-auth-ios-config}
@@ -40,7 +51,7 @@ After you have configured the Facebook Application ID and your Facebook Applicat
 
 1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}} dashboard loads.
 
-1. Click the **Facebook** tile.
+1. Click the **Configure** button in the **Facebook** panel.
 
 1. Specify the Facebook Application ID and click **Save**.
 

@@ -7,6 +7,11 @@ copyright:
 
 # Creating a custom identity provider
 {: #custom-create}
+
+*Last updated: 16 June 2016*
+{: .last-updated}
+
+
 To create a custom identity provider, develop a web application that exposes a RESTful API:
 
 ```
@@ -113,7 +118,7 @@ The user identity object is used by the {{site.data.keyword.amashort}} service t
 
 Each request from the {{site.data.keyword.amashort}} service to a custom identity provider contains an authorization header so that the custom identity provider can verify that the request is coming from an authorized source. While not strictly mandatory, consider validating the authorization header by instrumenting your custom identity provider with a {{site.data.keyword.amashort}} server SDK. To use this SDK, your custom identity provider application must implemented with Node.js or Liberty for Java&trade;&trade; and run on {{site.data.keyword.Bluemix_notm}}.
 
-The authorization header contains information about the mobile client and mobile app that triggered the authentication process. You can use the security context to retrieve this data. For more information, see [Protecting resources](protecting-resources.html)
+The authorization header contains information about the mobile client and mobile app that triggered the authentication process. You can use the security context to retrieve this data. For more information, see [Protecting resources](protecting-resources.html).
 
 ## Sample implementation of custom identity provider
 {: #custom-sample}
