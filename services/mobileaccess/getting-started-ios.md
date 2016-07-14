@@ -4,18 +4,24 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
 
-# Setting up the iOS Objective-C SDK
+# Setting up the iOS Objective-C SDK (Deprecated)
 {: #getting-started-ios}
 
-Instrument your iOS application with the {{site.data.keyword.amashort}} SDK, initialize the SDK and make requests to protected and unprotected resources.
+*Last updated: 14 June 2016*
+{: .last-updated}
 
-**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. For details, see [Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html)
+Instrument your iOS application with the {{site.data.keyword.amashort}} SDK, initialize the SDK and make requests to protected and unprotected resources.
+{:shortdesc}
+
+**Important:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue this SDK later this year in favor of the new Swift SDK. For new applications we highly recommend using the Swift SDK (see [Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html)).
 
 ## Before you begin
 {: #before-you-begin}
-* You must have an instance of a mobile backend that is protected by the {{site.data.keyword.amashort}} service. For more information about how to create a mobile backend, see [Getting started](getting-started.html).
-* Make sure that you correctly set up Xcode. For more information about how to set up your iOS development environment, see the [Apple Developer website](https://developer.apple.com/support/xcode/).
+You must have:
+* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end, see [Getting started](index.html).
+* An Xcode project.  
 
 
 ## Installing the {{site.data.keyword.amashort}} client SDK
@@ -25,6 +31,7 @@ The {{site.data.keyword.amashort}} SDK is distributed with CocoaPods, a dependen
 
 ### Install CocoaPods
 {: #install-cocoapods}
+
 1. Open Terminal and run the **pod --version** command. If you already have CocoaPods installed, the version number displays. You can skip to the next section to install the SDK.
 
 1. If you do not have CocoaPods installed, run:
@@ -67,8 +74,9 @@ To use the {{site.data.keyword.amashort}} client SDK, you must initialize the SD
 	#import <IMFCore/IMFCore.h>
 	```
 
-	**Swift:**
 
+	**Swift:**
+	
 	The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project:
 
 	1. Right-click your project in Xcode and select **New File..**.
@@ -89,6 +97,7 @@ Replace the *applicationRoute* and *applicationGUID* with the values from **Mobi
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+
 
 	**Swift:**
 
