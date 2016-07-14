@@ -13,7 +13,7 @@ copyright:
 
 # Sample apps and tutorials for {{site.data.keyword.blockchain}}
 {: #1stanchor}
-*Last updated: 2 June 2016*
+*Last updated: 14 July 2016*
 {: .last-updated}
 
 Sample applications and tutorials for {{site.data.keyword.blockchainfull}} demonstrate how fundamental applications and chaincodes function in a blockchain network.  To learn more about the fabric code that is underpinning your blockchain network, visit the [Docs](https://github.com/hyperledger/fabric/tree/master/docs) section of the Linux Foundation's Hyperledger Project.  
@@ -395,12 +395,12 @@ That’s all it takes to write basic chaincode.
 ## Requirements for Marbles, Commercial Paper, and Car Lease demos
 {: #requirements}
 
-The following prerequisites are necessary to run the Marbles, Commercial Paper, and Car Lease applications:
+The following prerequisites are necessary to run the Marbles, Commercial Paper, and Car Lease applications locally.  Your bluemix environment clones the core fabric and provides these dependencies:
 
-- Bluemix ID https://console.ng.bluemix.net/ (needed to create your IBM Blockchain network).
-- Node.js 0.12.0+ and npm v2+ (only needed if you want to run the app locally, npm comes with Node.js).
-- Node.js + express experience. Marbles is a very simple blockchain app but it's still a fairly involved node app. You should be comfortable with node and the express module.
-- Golang Environment (needed only to build your own chaincode, not needed if you just run the application as-is).
+- Bluemix ID https://console.ng.bluemix.net/ (needed to create your IBM Blockchain network and produce service credentials for peers and Certificate Authority)
+- Node.js 0.12.0+ and npm v2+ (npm comes with Node.js).
+- Node.js + express experience.  You should be comfortable with node and the express module.
+- Golang Environment (needed only to build your own chaincode).
 - You have a conceptual understanding of the terms 'chaincode', 'ledger', and 'peer' in a blockchain context. See the [Hyperledger Project Glossary](https://github.com/hyperledger/fabric/blob/master/docs/glossary.md) for more information on blockchain terminology.
 
 ## Using the Marbles demo
@@ -420,26 +420,21 @@ The Commercial Paper (CP) application demonstrates how a commercial paper tradin
 
 The Car Lease application demonstrates the lifecycle of a vehicle from creation to manufacture, through a series of owners, and finishing with the vehicle being scrapped. The demo makes use of Node.js for the server side programming, with Golang used for the chaincode running on the IBM Blockchain network. The demo has two chaincodes, the first defines the rules about what can and can't happen to a vehicle (similar to a v5c), and the second stores a log of what has happened to a vehicle during its lifetime. Both chaincodes use JSON objects to store their data.  Vist the [Car Lease README](https://github.com/IBM-Blockchain/car-lease-demo/blob/master/README.md) to learn more about the application architecture and vehicle attributes associated with this demo, or deploy immediately to Bluemix.  [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)
 
-## Using Node SDK
+## Non-deterministic chaincode
+{: #ndcc}
+
+Blockchain networks support deterministic code only. Using non-deterministic chaincode is not supported, and will cause errors, on any blockchain network. 
+
+### What is non-deterministic chaincode?
+Non-deterministic chaincode is code that will **not** produce the same appended value, over time and across nodes, on a blockchain. By contrast, deterministic chaincode **always** produces the same appended value, over time and across nodes. The following examples demonstrate this difference:
+
+An invocation transaction that always increments the value of a variable by one, for example, is deterministic because the result is always the same, on every node, without variance. Whenever this transaction is run against a fixed value of five, for example, the appended value is always six, on every node, every time. The network outcome for deterministic chaincode is no divergence in the blockchain; all nodes always agree that the value is one greater than the previous invocation result.
+
+By contrast, an invocation transaction that increments the value of a blockchain variable with the number of elapsed seconds since the start of the day (00:00), for example, is non-deterministic because over time the value will vary across nodes.  Each time this transaction is run against a fixed value of five, for example, the appended value diverges across nodes (with rare exceptions), because the number of elapsed seconds since 00:00 will inevitably vary. The network outcome for this non-deterministic chaincode is divergent blockchains; all nodes will not agree on the value of five + the number of elapsed seconds since 00:00.
+
+Chaincode, therefore, must exhibit no randomness in the appended values, over time and across nodes. Any randomness produces divergent blockchains across nodes, which must then be resolved by the network. To further avoid randomness, you must also ensure that no parallel chaincode can affect the input value from invocation chaincode. For example, do not run any query transactions in parallel with invocation transactions, because parallel queries could produce variance in the invocation values across nodes.
+
+<!---## Using the Node.js SDK
 {: #nodesdk}
 
-Use the [Node.js SDK](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md) for easier interaction with IBM Blockchain chaincode.  Pay specific attention to the `ibc.load()` function.  This is a function that wraps a typical startup using a standard IBM Blockchain Network.  This allows you to integrate your network, registry and chaincodes with the Bluemix network.  
-
-## Using a web application
-{: #appjs}
-
-View the source code for the [app.js](https://github.com/IBM-Blockchain/marbles/blob/master/app.js) to understand the interaction between the web application, SDK, and chaincode.  You can use this code as a template when developing your own web app.  
-
-One interesting dynamic is the interaction between the web application and the JavaScript SDK.  Your application interacts with a peer on the network through a REST HTTP call. The SDK then abstracts the details of the REST call away, and allows you to use dot notation to call GoLang functions.  The code snippet below shows where the JavaScript SDK is a required variable in your application:
-
-```javascript
-// =========================================
-var part1 = require('./utils/ws_part1');
-var part2 = require('./utils/ws_part2');
-var ws = require('ws');
-var wss = {};
-var Ibc1 = require('ibm-blockchain-js');
-var ibc = new Ibc1();
-// =========================================
-```
-{: codeblock}
+Use the [Hyperledger fabric client SDK ](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md) library for easier interaction with an IBM Blockchain network.  The SDK, through importing packages and libraries, allows for an application developer to build Node.js applications that can invoke functionality on the blockchain network from the client side.  Member services and asset management are now pluggable components on client side applications.  See the [Enhanced Node.js SDK](etn_sdk.html) section for full documentation and application examples.---> 
