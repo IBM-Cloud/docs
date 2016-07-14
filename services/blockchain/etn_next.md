@@ -18,7 +18,7 @@ years: 2016
 *Last updated: 14 July 2016*
 {: .last-updated}
 
-The following tests were run in the High Security Business Network environment to test chaincode function, ledger, long runs, concurrency and complex transactions. (Note: some of these tests are repeated in the [Node.js SDK](etn_txn.html) and [Testing consensus and availability](etn_pbft.html) sections.)
+The following tests were run in the High Security Business Network environment (unless otherwise noted) to test chaincode function, ledger, long runs, concurrency and complex transactions. (Note: some of these tests are repeated in the [Node.js SDK](etn_txn.html) and [Testing consensus and availability](etn_pbft.html) sections.)
 
 {:shortdesc}
 
@@ -33,5 +33,5 @@ The following tests were run in the High Security Business Network environment t
 	- 1 client creating 2.8 million records using 1K payload.  Only one peer used for this case.  
 3. Long Runs - This testing was done by sending invokes, chain height and queries across multiple nodes for 72 hours with 1KB payloads.
 4. Node.js SDK - The enhanced Node.js SDK was used to register and enroll users, and perform deploy, invokes, and query on both a peer in development mode (starting peer with: `peer node start –peer-chaincodedev`) and network mode (starting peer with: `peer node start`).
-5. Concurrency - This testing was done by sending 1000 concurrent invokes to each of the four peers for a duration of 10 minutes, with 1KB payloads, and measuring chain height and querying ledger state.
-6. Complex Transactions - This testing was done by randomly submitting a mix of queries and invokes of various payload sizes ranging from 10k to 500K to the different peers for a duration of 10 minutes. The chain height and query of world state were measured for consistency.
+5. Basic concurrency - This testing was done by sending concurrent invokes to each of the four peers for a duration of 10 minutes, with 1KB payloads, and measuring chain height and querying ledger state.
+6. Complex Transactions - This testing was done by randomly submitting a mix of queries and invokes of various payload sizes ranging from 10k to 500K to the different peers for a duration of 10 minutes. The chain height and query of world state were measured for consistency. (**Note:** these tests were executed on the distributed platform)
