@@ -28,8 +28,9 @@ There are currently two versions available for the blockchain service - **Starte
 |                           | Starter Developer               | High Security Business Network  |
 | ------------------------- |:--------------------------:|:-----:|
 | Purpose   |  development/experimentation and test levels of security, performance and availability  |  simulate enterprise network and test levels of security, performance and availability |
-| Environment     | shared multi-tenant in Softlayer| isolated single-tenant in LinuxONE on z |
+| Environment     | shared multi-tenant in SoftLayer| isolated single tenant in LinuxONE on z |
 | Nodes     | 4 nodes + Certificate Authority     | 4 nodes + Certificate Authority, running in a [secure services container](etn_ssc.html)|
+| Confidential Transactions | Yes | Yes |
 | Consensus  |  [PBFT](etn_pbft.html)    |    [PBFT](etn_pbft.html) |
 | Dashboard Monitor | Same | Same |
  
