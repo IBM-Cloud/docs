@@ -12,22 +12,23 @@ years: 2016
 {:pre: .pre}
 
 
-# Verified performance metrics
+# Verified behaviors
 {: #etn_performance}
 
 *Last updated: 14 July 2016*
 {: .last-updated}
 
-The following performance benchmarks have been tested and verified by IBM. Performance can vary, based on the environment, chaincode run, security settings, transaction batch size, and other factors. Results were achieved in a High Security Business Network: 
+The following behaviors have been tested and verified by IBM. Performance can vary, based on the environment, chaincode run, security settings, transaction batch size, and other factors.  Results were achieved in a High Security setting unless otherwise noted: 
 {:shortdesc}
 
 ### Performance/Stress
 
-This testing was done to obtain the TPS (transactions per-second) of invokes and queries under short duration test intervals - 10 minutes, and long duration test intervals - 60 minutes, with PBFT / Security & Privacy enabled.
+This testing was done to obtain the TPS (transactions per-second) of invokes and queries under short duration test intervals - 10 minutes, and long duration test intervals - 60 minutes, with PBFT / Security & Privacy enabled.  **Note:** these metrics were achieved on a multi-tenant distributed network.
 
 - chaincode example02
 - logging level: error
 - thread number: 100
+- batch size: 1000
 - duration: 10 min. and 60 min.
 - transaction types: invoke a->b, invoke b->a, then repeat & query a, query b, then repeat
 
