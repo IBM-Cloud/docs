@@ -13,7 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.blockchain}} (Beta)
 {: #gettingstartedtemplate}
-*Last updated: 12 July 2016*
+*Last updated: 14 July 2016*
 {: .last-updated}
 
 With the {{site.data.keyword.blockchainfull}} service on Bluemix, you can quickly spin up a blockchain network and circumvent the complexities involved with manually creating a development environment.  Rather than creating and managing a network, developers can spend their time generating applications and working with chaincode.  The service is a peer-to-peer permissioned network built on top of the Linux Foundation's Hyperledger [fabric code](https://github.com/hyperledger/fabric).
@@ -42,7 +42,7 @@ To get started, follow these steps to create and deploy an unbound service insta
   - Leave the **App** field as **Leave unbound**.
   - Change the **Service name** to a name or value unique to you.  For example, **MyBlockchainABC123**.
   - Leave the **Credential name** field as its default value.
-  - Choose **Starter Developer** or **High Security** ( ![](images/green_dot.png) if approved) under the **Selected Plan** field.
+  - Choose **Starter Developer Plan** or **High Security** ( ![](images/green_dot.png) if approved) under the **Selected Plan** field.
   - Click **CREATE**.
 2.  You are now on the **Service Dashboard** screen for your new service.  From here you can **Manage** your instance of the network:
   - Click **LAUNCH** to see the blockchain monitor for your {{site.data.keyword.blockchain}} network.

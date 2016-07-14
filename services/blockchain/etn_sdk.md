@@ -15,7 +15,7 @@ years: 2016
 # Enhanced Node.js SDK
 {: #etn_sdk}
  
-*Last updated: 13 July 2016*
+*Last updated: 14 July 2016*
 {: .last-updated}
 
 The enhanced Node.js SDK allows application developers to build Node.js applications that can interact with an existing blockchain.  These include the abilities to:

@@ -15,7 +15,7 @@ years: 2016
 # Testing blockchain networks
 {: #etn_txn}
  
-*Last updated: 13 July 2016*
+*Last updated: 14 July 2016*
 {: .last-updated}
 
 Use the tests laid forth in this section to affirm important security features, network availability and performance metrics.

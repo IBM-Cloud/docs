@@ -14,7 +14,7 @@ copyright:
 
 # About blockchain
 {: #ibmblockchain_overview}
-*Last updated: 13 July 2016*
+*Last updated: 14 July 2016*
 {: .last-updated}
 
 You can use blockchain to digitally represent assets, which can then be traded quickly and securely over permissioned networks.

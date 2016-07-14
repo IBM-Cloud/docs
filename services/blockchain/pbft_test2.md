@@ -15,7 +15,7 @@ years: 2016
 # Consensus Test 2: One Byzantine node
 {: #pbft_test2}
 
-*Last updated: 12 July 2016*
+*Last updated: 14 July 2016*
 {: .last-updated}
 
 Consensus Test 2 tests the PBFT protocol in a network scenario where one of the four nodes is Byzantine: one node has gone offline in an arbitrary and concurrent manner.

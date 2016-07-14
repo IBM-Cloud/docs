@@ -15,7 +15,7 @@ years: 2016
 # Network landscape
 {: #etn_overview}
  
-*Last updated: 13 July 2016*
+*Last updated: 14 July 2016*
 {: .last-updated}
 
 The Developer Network and High Security Business Network exploit the latest iterations of the Hyperledger fabric, which include a consensus protocol called Practical Byzantine Fault Tolerance (PBFT), and an enhanced Node.js SDK.  Both consist of four nodes and a Certificate Authority.  The Certificate Authority governs "Membership Services," and is responsible for managing identities, network permissions and confidential transactions through the issuance of digital certificates.

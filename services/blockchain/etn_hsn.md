@@ -15,7 +15,7 @@ years: 2016
 # High Security Business Network
 {: #etn_overview}
  
-*Last updated: 13 July 2016*
+*Last updated: 14 July 2016*
 {: .last-updated}
 
 The High Security Business Network runs in an isolated and highly secured environment, distinguishing it from other cloud-hosted offerings. The operating system, fabric, and nodes all exist in a secure services container (SSC), providing your enterprise with the security and impregnability that customers have come to expect from z Systems technology.  The SSC also delivers performance optimization for  peer-to-peer communication, availability, scalability, hardware encryption, tamper-proof crypto keys, and securely encrypted VMs.  
