@@ -18,7 +18,7 @@ years: 2016
 *Last updated: 14 July 2016*
 {: .last-updated}
 
-Use the tests laid forth in this section to affirm important security features, network availability and performance metrics.
+Use the tests laid forth in this section to affirm important security features and network availability.
 {:shortdesc}
 
 ## Testing roles and transactions
