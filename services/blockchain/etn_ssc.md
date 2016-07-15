@@ -15,7 +15,7 @@ years: 2016
 # Understanding the Secure Services Container (SSC)
 {: #etn_ssc}
 
-*Last updated: 14 July 2016*
+*Last updated: 15 July 2016*
 {: .last-updated}
 
 The High Security Business Network is deployed as an appliance into a Secure Services Container (SSC), which provides the base infrastructure for hosting blockchain services. The appliance combines operating systems, Docker, middleware, and software components that work autonomously, and provides core services and infrastructure with optimized security.

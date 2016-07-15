@@ -15,7 +15,7 @@ years: 2016
 # Testing consensus and availability
 {: #etn_pbft}
 
-*Last updated: 14 July 2016*
+*Last updated: 15 July 2016*
 {: .last-updated}
 
 Both the Developer Network and the High Security Business Network plans enable you to test the Practical Byzantine Fault Tolerance (PBFT) consensus protocol on a four-node blockchain network. The following topics provide details about consensus in general, and PBFT in particular. When you are ready to start testing, four PBFT test cases are provided.
