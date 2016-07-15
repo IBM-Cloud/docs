@@ -11,7 +11,7 @@ copyright:
 
 # About {{site.data.keyword.vpn_short}}
 {: #vpn_overview}  
-*Last updated: 08 June 2016*
+*Last updated: 14 July 2016*
 {: .last-updated}
 
 The {{site.data.keyword.vpn_full}} (VPN) service provides a secure communication channel between your corporate data center and your resources in the IBM Bluemix&reg; cloud environment. The connection is established over the Internet.
@@ -49,4 +49,19 @@ The IBM VPN service is compliant with the following IETF RFCs:
 You can create the IBM VPN service by using a simple and intuitive graphical interface. You can specify your gateway IP address and your data center subnets. You can either use default IPsec and IKE policies, or customize the policies to suit your needs.  
 ##Management
 You can manage the IBM VPN service by using a graphical interface, a [command line interface](../../cli/plugins/vpn/index.html), or [APIs](https://new-console.ng.bluemix.net/apidocs/101).
+
+## Getting help and support for {{site.data.keyword.vpn_short}} 
+{: #gettinghelp}
+
+If you have problems or questions when using the IBM VPN service, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket. 
+
+When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
+
+* If you have technical questions about developing or deploying an app with {{site.data.keyword.vpn_short}}, post your question on [Stack Overflow](http://stackoverflow.com/search?q=vpn+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "vpn".
+
+* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/vpn/?smartspace=bluemix){:new_window} forum. Include the  "vpn" and "bluemix" tags.
+
+See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
+
+For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://www.{DomainName}/docs/support/index.html#contacting-support).
 
