@@ -1,7 +1,7 @@
 ---
 
-copyright :
-   years: 2016
+copyright:
+  years: 2016
 
 ---
 
@@ -13,9 +13,10 @@ copyright :
 # Agrégation des API
 {: #api_aggregation}
 
-*Dernière mise à jour : 31 mars 2016*
+*Dernière mise à jour : 15 juin 2016*
+{: .last-updated}
 
-Certaines API d'Insights for Weather peuvent être agrégées. Une agrégation permet d'associer plusieurs appels d'API atomiques dans la même demande HTTP.
+Certaines API d'{{site.data.keyword.weather_short}} peuvent être agrégées. Une agrégation permet d'associer plusieurs appels d'API atomiques dans la même demande HTTP.
 {: shortdesc}
 
 Un appel d'API atomique fait référence aux API qui disposent d'un alias pour les agrégations. Si cet alias est disponible, il est indiqué dans le guide d'utilisation de l'API, à la section relative au format de l'URL. Par exemple, l'API de prévisions standard journalière dispose de l'alias d'agrégation`v2fcstdaily10`, qui peut être utilisé pour extraire les prévisions journalières sur 10 jours dans le contexte d'une demande agrégée.
@@ -29,7 +30,6 @@ le chemin d'accès et la chaîne de la requête).
 
 **Remarque :** Si la demande ou la réponse ne respecte pas l'une de ces restrictions, vous recevez une
 réponse d'erreur avec un code HTTP 500 (généralement 500 ou 502, bien que d'autres codes soient possibles).
-
 
 ## URL d'agrégation d'API
 L'URL d'agrégation d'API commence par `/v2/aggregate/`, suivi des alias séparés par des points-virgules.
@@ -49,14 +49,13 @@ lorsque les paramètres de requête s'appliquent à toutes les API atomiques. Da
 
 L'exemple qui suit applique `geocode=31.44,84.33&amp;language=en&amp;units=e` à la demande pour les API atomiques `v2fcstdaily10` et `v2obscurrent` :
 
-
 ```
 https://twcservice.mybluemix.net/api/weather/v2/aggregate/v2fcstdaily10;v2obscurrent?geocode=31.44,84.33&amp;language=en&amp;units=e
 ```
 
 ### Précisez quelles API atomiques reçoivent quels paramètres de requête
 
-Si vous devez définir des paramètres pour certaines API atomiques, les paramètres de requête peuvent utiliser la notation positionnelle de `?R1.param1=value1&amp;R2.param2=value2`. Ce format utilise `param1` pour la première API atomique et `param2` pour la seconde API atomique. 
+Si vous devez définir des paramètres pour certaines API atomiques, les paramètres de requête peuvent utiliser la notation positionnelle de `?R1.param1=value1&amp;R2.param2=value2`. Ce format utilise `param1` pour la première API atomique et `param2` pour la seconde API atomique.
 
 L'exemple qui suit applique `geocode=31.44,84.33&amp;language=en&amp;units=e` à `v2fcstdaily10` et  `geocode=44.44,50.23&amp;language=en&amp;units=e` à `v2obscurrent`.
 
@@ -68,7 +67,7 @@ https://twcservice.mybluemix.net/api/weather/v2/aggregate/v2fcstdaily10;v2obscu
 
 Vous pouvez regrouper des paramètres à l'aide d'une
 notation positionnelle dans laquelle ils sont séparés par des virgules : `?R1,R2.param1=value1&amp;param2=value2`.
-Ce format utilise `param1` pour la première et la deuxième API atomiques et `param2` pour toutes les API atomiques. 
+Ce format utilise `param1` pour la première et la deuxième API atomiques et `param2` pour toutes les API atomiques.
 
 L'exemple qui suit applique `geocode=34.06,84.21&amp;language=enUS&amp;units=e` à `v2fcstdaily10` et `v2obscurrent`. Il applique `geocode= 33.06,81.11&amp;language=enUS&amp;units=e` à `v2loc` :
 
@@ -89,7 +88,6 @@ https://twcservice.mybluemix.net/api/weather/v2/aggregate/v2fcstdaily10;v2fcstd
 
 L'exemple qui suit applique `geocode=31.44,84.33&amp;language=en&amp;units=e` à la première occurrence de `v2fcstdaily10` et
 `geocode=33.54,85.43&amp;language=en&amp;units=e` à la seconde occurrence de `v2fcstdaily10` pour extraire les mêmes données pour plusieurs lieux :
-
 
 ```
 https://twcservice.mybluemix.net/api/weather/v2/aggregate/v2fcstdaily10;v2fcstdaily10?R1.geocode=31.44,84.33&amp;R2.geocode=33.54,85.43&amp;language=en&amp;units=e

@@ -13,9 +13,10 @@ copyright:
 # Agregação da API
 {: #api_aggregation}
 
-*Última atualização: 31 de março de 2016*
+*Última atualização: 15 de junho de 2016*
+{: .last-updated}
 
-Algumas APIs do Insights for Weather podem ser agregadas. É possível usar a
+Algumas APIs do {{site.data.keyword.weather_short}} podem ser agregadas. É possível usar a
 agregação para combinar duas ou mais chamadas API atômicas em uma
 única solicitação de HTTP.
 {: shortdesc}
