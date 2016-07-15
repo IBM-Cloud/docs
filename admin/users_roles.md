@@ -17,7 +17,7 @@ copyright:
 
 # Managing team members and roles
 {: #userroles}
-Last updated: 1 June 2016
+Last updated: 12 July 2016
 {: .last-updated}
 
 From the **Team Directory** page for your account, you can manage existing team members and their roles in your organization and spaces, as well as invite new team members. To access the team directory for your account, go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Team Directory**. 
@@ -60,6 +60,17 @@ The following roles can be assigned at the space level:
 |Auditor | Space auditors have read-only access to all information about the space, such as information about the number of instances, service bindings, and resource use for each application in the space. |
 
 **Note**: Team members that are assigned the manager or developer space role can access the VCAP_SERVICES environment variable. However, a team member that is assigned the auditor role can't access VCAP_SERVICES.
+
+## Adjusting visibility of the team directory
+{: #teamdirectoryvisibility}
+
+Depending on how you have your {{site.data.keyword.Bluemix_notm}} accounts and organizations set up, you might want to change the visibility of the team directory page. By default, all team members within your account can see the full list of account team members, including all members of all organizations within the account. You might have privacy concerns or security reasons that prompt you to adjust the visibility of the team directory page. You have two options for setting the visibility of the team directory page: all team members or just you as the account owner.
+
+To change the visibility of the team directory page complete the following steps:
+
+1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Team Directory**. 
+2. For the **Visibility to** option, click the current selection to view the options.
+3. Then, select **All** or **Just me** based on the current needs for your account.
 
 ## Inviting team members
 {: #inviteteammembers}

@@ -22,10 +22,6 @@ To ugrade your plan:
 1.	In the {{site.data.keyword.objectstorageshort}} user interface, click **Plan**.
 2.	Select **Standard** as the new plan and then click **Save**.
 
-![{{site.data.keyword.objectstorageshort}} Change Pricing Plan](images/Change_plan.png)
-
-*Figure 5. {{site.data.keyword.objectstorageshort}} Change Pricing Plan*
-
 You can also change your payment plan by using the command line interface. For more information, see [How to change your plan](../../pricing/index.html#changing).
 
 

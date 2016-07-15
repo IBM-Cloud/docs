@@ -15,7 +15,7 @@ copyright:
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 12 July 2016*
+*Last updated: 14 July 2016*
 {: .last-updated}
 
 General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
@@ -151,7 +151,7 @@ You cannot invite users to your organization if you are a collaborator of the or
 If you are unable to invite users to your organization and need a different role to do so, contact your organization manager to change your role. To identify your organization manager, complete the following steps:
 {: tsResolve}
 
-  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Avatar** icon ![Avatar](images/account_support.svg) in the menu bar, and select **Manage Organizations**.
+  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the menu bar, and select **Manage Organizations**.
   2. Go to your organization, and view the information of organization manager on the **USERS** tab.  
   
 If you are unable to invite users because you are a collaborator and not a member, you must delete your previous {{site.data.keyword.Bluemix_notm}} account and then be invited to join the account as a member of the organization. To delete your previous account and join the account as a member, complete the following steps: 
@@ -341,7 +341,7 @@ This error often is received the first time you try to create an app or a servic
 Ensure that you created a space in your current organization.  To create a space, use one of the following methods:
 {: tsResolve}
 
-  * From Avatar ![Avatar](images/account_support.svg), select the organization that you want to create the space in, and then click **Create a Space**.
+  * From Account and Support ![Account and Support](images/account_support.svg), select the organization that you want to create the space in, and then click **Create a Space**.
   * In the cf command line interface, type `cf create-space <space_name> -o <organization_name>`.
 
 Try again. If you see this message again, go to the [Bluemix status](https://status.eu-gb.bluemix.net/){: new_window} page to check whether a service or component has an issue.

@@ -14,7 +14,7 @@ copyright:
 # Working with bundles
 {: #globalizationpipeline_workingwithbundles}
 
-*Last updated: 6 July 2016*
+*Last updated: 13 July 2016*
 {: .last-updated}
 
 Each bundle you create contains the key value pairs from your resource file and the complete set of translations that have been generated.
@@ -87,7 +87,7 @@ In addition, a resource file must also adhere to these guidelines:
 * Each bundle can contain a maximum of 500 key / value pairs.
 
 
-## Translating a Bundle
+## Translating a bundle
 {: #globalizationpipeline_translatingabundle}
 
 Only uploaded resource files will be translated. You can upload a resource file when [creating a bundle](index.html#globalizationpipeline_creatingbundles) or [modifying with bundle details](bundles.html#globalizationpipeline_modifyingbundles).
@@ -131,7 +131,7 @@ After you upload a resource file, you can  translate its contents into any of th
 </tbody>
 </table>
 
-**Note:** English is currently the only supported source language. As the {{site.data.keyword.GlobalizationPipeline_full}} service evolves, additional source and target languages will be added.
+**Note:** English is currently the only supported source language. As the {{site.data.keyword.GlobalizationPipeline_short}} service evolves, additional source and target languages will be added.
 
 As you create bundles, they are added to the **Bundles** tab to make them easily accessible. From there, additional tasks can be performed on your translations.
 
@@ -190,7 +190,7 @@ When you delete a target language from a bundle, you remove the target language 
 
 ### Downloading the generated translations for a target language
 
-{{site.data.keyword.GlobalizationPipeline_full}} provides several ways to incorporate the translation for a target language into your application. You can download the translation as a resource file and include it in your application build. You can also reference the translation dynamically from {{site.data.keyword.GlobalizationPipeline_full}} using one of the open source [SDKs](https://github.com/IBM-Bluemix/gp-common). 
+{{site.data.keyword.GlobalizationPipeline_short}} provides several ways to incorporate the translation for a target language into your application. You can download the translation as a resource file and include it in your application build. You can also reference the translation dynamically from {{site.data.keyword.GlobalizationPipeline_short}} using one of the open source [SDKs](https://github.com/IBM-Bluemix/gp-common). 
 
 <!-- For information on {{site.data.keyword.GlobalizationPipeline_full}} SDKs, see <link>. -->
 

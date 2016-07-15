@@ -10,15 +10,15 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Beta resource data migration
+# Migrating resource data from beta version
 {: #globalizationpipeline_betaresourcedatamigration}
 
-*Last updated: 27 June 2016*
+*Last updated: 13 July 2016*
 {: .last-updated}
 
 The beta version of {{site.data.keyword.GlobalizationPipeline_full}} will be terminated after a certain period after the release of the GA version. User data in beta instances will not be moved to GA service instances. To keep the data after GA, you can export resource data into files, then import to the new instance. Please note that you cannot perform this operation using the service dashboard. Also, exporting resource data into one of resource file format will not preserve other metadata associated with the resource entries.
 
-To support data migration from beta to GA, a feature has been added to the {{site.data.keyword.GlobalizationPipeline_full}}’s Java command line tool. The tool's source is hosted at https://github.com/IBM-Bluemix/gp-java-tools and its binary release will be also available in the github repository. The latest development snapshot is posted. [Download.](https://w3-connections.ibm.com/communities/service/html/communityview?communityUuid=589d87cf-d0c7-4e06-ab95-4108547f90aa#fullpageWidgetId=Wa22bb771e29b_4aa9_a114_cfe53fda2cc8&file=5cdaf089-ec7c-4881-b5a0-7ab651491237)
+To support data migration from beta to GA, a feature has been added to the {{site.data.keyword.GlobalizationPipeline_short}}’s Java command line tool. The tool's source is hosted at https://github.com/IBM-Bluemix/gp-java-tools and its binary release will be also available in the github repository. The latest development snapshot is posted. [Download.](https://w3-connections.ibm.com/communities/service/html/communityview?communityUuid=589d87cf-d0c7-4e06-ab95-4108547f90aa#fullpageWidgetId=Wa22bb771e29b_4aa9_a114_cfe53fda2cc8&file=5cdaf089-ec7c-4881-b5a0-7ab651491237)
 
 The tool uses a REST API enhanced after beta release for ***uploading resource entries***, therefore, destination service instance must be the GA version. 
 * Source: beta or GA
@@ -83,7 +83,4 @@ The commands above extract existing bundle data and resource entry data and uplo
 
 
 For example, the beta version supports Arabic translation through Watson Language Translation. In the GA version, Arabic translation is no longer offered for free. When you port beta data to the new GA instance, already translated Arabic contents will be preserved. No change in source language will trigger Arabic translation automatically, unless you set up Watson binding to enable Arabic translation. This is also the case when the source instance is the GA version. External MT service binding is specific to a GP instance; the binding/configuration to another instance will not be ported automatically. 
-
-
-
 

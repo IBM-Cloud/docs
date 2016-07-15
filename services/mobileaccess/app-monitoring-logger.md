@@ -5,8 +5,10 @@ copyright:
   
 ---
 
-# Enabling, configuring and using Logger
+# Enabling, configuring, and using Logger
 {: #enable-logger}
+*Last updated: 6 May 2016*
+{: .last-updated}
 
 The {{site.data.keyword.amashort}} client SDK provides a logging framework that is similar to other log frameworks that you might be familiar with, such as `java.util.logging` or `log4j`. The logging framework supports multiple per-package logger instances, different log levels, capturing of stack traces for an application crash and more.
 
@@ -21,6 +23,8 @@ The {{site.data.keyword.amashort}} client SDK logging framework supports the fol
 * `DEBUG` - Use for reporting debug statements to help developers resolve application defects.
 
 Make sure that you have initialized the {{site.data.keyword.amashort}} client SDK prior to using the logging framework. The following samples demonstrate the basic usage of a {{site.data.keyword.amashort}} client SDK logging framework.
+
+**Important**: The monitoring functions of the {{site.data.keyword.amashort}} service are planned to be migrated to the new [{{site.data.keyword.mobileanalytics_short}} service](https://console.ng.bluemix.net/catalog/services/mobile-analytics). The new Swift SDK leverages the new {{site.data.keyword.mobileanalytics_short}} service, which provides a much richer analytics experience. The {{site.data.keyword.mobileanalytics_short}} service is currently in experimental phase with plans to be made generally available later this year. We recommend investigating migrating your applications to use the new {{site.data.keyword.mobileanalytics_short}} service and Swift SDK since the monitoring functions of {{site.data.keyword.amashort}} service are planned to be discontinued when {{site.data.keyword.mobileanalytics_short}} is generally available.
 
 ### Android
 {: #enable-logger-android}
@@ -39,6 +43,10 @@ logger.fatal("fatal message");
 
 ### iOS - Objective-C
 {: #enable-logger-objectc}
+
+**Important**: While the Objective-C SDK remains fully supported, and is still considered the primary SDK for {{site.data.keyword.Bluemix}} Mobile Services, it is planned to be discontinued later this year in favor of the new Swift SDK.
+
+The Objective-C SDK reports monitoring data to the Monitoring Console of the {{site.data.keyword.amashort}} service. If you rely on the monitoring functions of the {{site.data.keyword.amashort}} service, continue to use the Objective-C SDK.
 
 ```Objective-C
 [[IMFClient sharedInstance] initializeWithBackendRoute:appRoute backendGUID:appGUID];

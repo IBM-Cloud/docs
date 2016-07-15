@@ -13,7 +13,7 @@ copyright:
 
 # Configuring rules
 {: #nsgrules}  
-*Last updated: 04 May 2016*
+*Last updated: 05 July 2016*
 {: .last-updated}
 
 You can configure rules to manage inbound traffic (ingress traffic) to a virtual server, and outbound traffic (egress traffic) from a virtual server. 
@@ -39,3 +39,5 @@ Configure rules as shown in the following steps.
 		* If you select **SG**, select a security group from the **Source SG** or **Destination SG** drop-down list. The list displays all the configured security groups, including the default security group.  
 		* If you select **Server**, select a virtual server from the **Source Virtual Server** or **Destination Virtual Server** drop-down.
 5. Select **ADD**.
+
+Next, assign virtual server instances or virtual server groups to the security group. See [Assigning instances](https://new-console.{DomainName}/docs/services/networksecuritygroups/networksecuritygroups_instances.html#nsginstances).
