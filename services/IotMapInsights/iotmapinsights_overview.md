@@ -14,7 +14,7 @@ copyright:
 
 # About {{site.data.keyword.iotmapinsights_short}}
 {: #iotmapinsights_overview}
-*Last updated: 22 June 2016*
+*Last updated: 15 July 2016*
 {: .last-updated}
 
 The {{site.data.keyword.iotmapinsights_full}} is a service on {{site.data.keyword.Bluemix_notm}} that you can use to get fast access to static road network data and dynamic event data. {{site.data.keyword.iotmapinsights_short}} also provides geospatial tools for road networks, which you can use to integrate geospatial capabilities with your applications.
@@ -27,6 +27,8 @@ The {{site.data.keyword.iotmapinsights_short}} service provides the following fe
 - Geospatial tools
 
 The {{site.data.keyword.iotmapinsights_short}} service collects and uses [OpenStreetMap](http://www.openstreetmap.org/){: new_window} road network data that is stored in the service memory cache for processing.
+
+Data from OpenStreetMap is made available under the Open Data Common Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF). For more information, see [OpenStreetMap Copyright and License](www.openstreetmap.org/copyright).
 
 ## Static map data
 {: #static_map_data_query}
