@@ -22,7 +22,7 @@ copyright:
 {:shortdesc}
 
 
-The {{site.data.keyword.iotdriverinsights_short}} service bundles the following services, which provide powerful automotive analytics:
+The {{site.data.keyword.iotdriverinsights_short}} service includes the following services, which provide powerful analytics for large volumes of automotive data.
 
 |Service|Description|Getting started|About|
 |:---|:---|:---|:---|
