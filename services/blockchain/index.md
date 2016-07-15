@@ -13,26 +13,28 @@ copyright:
 
 # Getting started with {{site.data.keyword.blockchain}} (Beta)
 {: #gettingstartedtemplate}
-*Last updated: 14 July 2016*
+*Last updated: 15 July 2016*
 {: .last-updated}
 
-With the {{site.data.keyword.blockchainfull}} service on Bluemix&reg;, you can spin up a multi-node blockchain network at the click of a button. Rather than creating and managing a network, developers can get into code faster and spend their time writing applications and working with chaincode. The service is a peer-to-peer permissioned network built on top of the Linux Foundation's Hyperledger [fabric code](https://github.com/hyperledger/fabric).
+With the {{site.data.keyword.blockchainfull}} service on Bluemix&reg;, you can spin up a multi-node blockchain network at the click of a button. Rather than creating and managing a network, developers can get into code faster and spend their time writing applications and working with chaincode. The service is a peer-to-peer permissioned network built on the [hyperledger/fabric](https://github.com/hyperledger/fabric) code from the Linux Foundation's Hyperledger Project.
 {:shortdesc}
 
 You can use a blockchain network to exchange digital assets through a shared ledger. For more information about shared ledgers and business networks, see the [About](ibmblockchain_overview.html) blockchain topic.
 
 There are currently two versions available for the blockchain service - **Starter Developer** and **High Security Business Network**.  Use the comparisons in the table below to choose the right environment for your needs.
 
-![](images/red_alert.png) **Due to limited capacity during the Beta period, you must first request access to the High Security plan.**  Visit [IBM Blockchain on IBM Bluemix](http://www-stage.watson.ibm.com/files/blockchain/bluemix.html) and follow the steps to request a provisioning of the High Security Business Network.
+![](images/red_alert.png) **This is a limited Beta offering, therefore you must receive IBM approval in order to access the High Security plan.**  Visit [IBM Blockchain on IBM Bluemix](http://www-stage.watson.ibm.com/files/blockchain/bluemix.html) and follow the steps to request a provisioning of the High Security Business Network.
 
-|                           | Starter Developer               | High Security Business Network  |
+| Service Type              | Starter Developer               | High Security Business Network  |
 | ------------------------- |:--------------------------:|:-----:|
-| Purpose   |  development/experimentation and test levels of security, performance and availability  |  simulate enterprise network and test levels of security, performance and availability |
-| Environment     | shared multi-tenant in SoftLayer| isolated single tenant in IBM LinuxONE&trade; |
-| Nodes     | 4 nodes + Certificate Authority     | 4 nodes + Certificate Authority, running in a [secure services container](etn_ssc.html)|
+| Platform  | SoftLayer     | IBM LinuxONE&trade; |
+| Purpose   |  development and test levels of security performance and availability |  simulate enterprise network and test levels of security, performance and availability |
+| Environment     | shared multi-tenant | isolated single tenant |
+| Secure Services Container - [SSC](etn_ssc.html) | No | Yes |
+| Nodes     | 4 nodes + Certificate Authority     | 4 nodes + Certificate Authority |
 | Confidential Transactions | Yes | Yes |
 | Consensus  |  [PBFT](etn_pbft.html)    |    [PBFT](etn_pbft.html) |
-| Dashboard Monitor | Same | Same |
+| Dashboard Monitor | Yes | Yes |
  
 
 
