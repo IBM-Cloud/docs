@@ -13,13 +13,13 @@ copyright:
 
 # Getting started with {{site.data.keyword.blockchain}} (Beta)
 {: #gettingstartedtemplate}
-*Last updated: 15 July 2016*
+*Last updated: 18 July 2016*
 {: .last-updated}
 
 With the {{site.data.keyword.blockchainfull}} service on Bluemix&reg;, you can spin up a multi-node blockchain network at the click of a button. Rather than creating and managing a network, developers can get into code faster and spend their time writing applications and working with chaincode. The service is a peer-to-peer permissioned network built on the [hyperledger/fabric](https://github.com/hyperledger/fabric) code from the Linux Foundation's Hyperledger Project.
 {:shortdesc}
 
-You can use a blockchain network to exchange digital assets through a shared ledger. For more information about shared ledgers and business networks, see the [About](ibmblockchain_overview.html) blockchain topic.
+You can use a blockchain network to digitally represent assets which can then be securely exchanged and tracked through a shared ledger. For more information about shared ledgers and business networks, see the [About](ibmblockchain_overview.html) blockchain topic.
 
 There are currently two versions available for the blockchain service - **Starter Developer** and **High Security Business Network**.  Use the comparisons in the table below to choose the right environment for your needs.
 
