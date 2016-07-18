@@ -5,10 +5,10 @@ copyright:
 
 ---
 
-# Configuring the {{site.data.keyword.amashort}} client SDK for Android
+# Configuring custom authentication for your {{site.data.keyword.amashort}} Android app
 {: #custom-android}
 
-*Last updated: 28 June 2016*
+*Last updated: 17 July 2016*
 {: .last-updated}
 
 
@@ -27,7 +27,6 @@ You must have a resource that is protected by an instance of the {{site.data.key
 ## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #custom-android-initialize}
 1. In your Android project in Android Studio, open the `build.gradle` file of your app module (not the project `build.gradle`).
-
 
 1. In the `build.gradle`  file, find the `dependencies` section and check for that the following dependency exists:
 

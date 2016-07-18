@@ -5,10 +5,10 @@ copyright:
 
 ---
 
-# Configuring the {{site.data.keyword.amashort}} client SDK for Cordova
+# Configuring custom authentication for your {{site.data.keyword.amashort}} Cordova app
 {: #custom-cordova}
 
-*Last updated: 16 June 2016*
+*Last updated: 17 July 2016*
 {: .last-updated}
 
 

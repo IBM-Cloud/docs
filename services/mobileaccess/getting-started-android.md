@@ -11,7 +11,7 @@ copyright:
 # Setting up the Android SDK
 {: #getting-started-android}
 
-*Last updated: 04 July 2016*
+*Last updated: 18 July 2016*
 {: .last-updated}
 
 Instrument your Android application with the {{site.data.keyword.amashort}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.
@@ -29,11 +29,9 @@ You must have:
 
 The {{site.data.keyword.amashort}} client SDK is distributed with Gradle, a dependency manager for Android projects. Gradle automatically downloads artifacts from repositories, and makes them available to your Android application.
 
-1. Create an Android Studio project or open an existing project.
+1. Create an Android Studio project, or open an existing project.
 
 1. Open the `build.gradle` file for your application (**not** the project `build.gradle` file).
-
-
 
 1. Find the **dependencies** section of the `build.gradle` file.  Add a compile dependency for the {{site.data.keyword.amashort}} client SDK:
 

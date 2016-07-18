@@ -8,7 +8,7 @@ copyright:
 # Enabling Google authentication for web applications
 {: #google-auth-web}
 
-*Last updated: 13 July 2016*
+*Last updated: 18 July 2016*
 {: .last-updated}
 
 Use Google Sign-In to authenticate users on your web application.
@@ -20,15 +20,17 @@ Use Google Sign-In to authenticate users on your web application.
 You must have:
 * A web app.
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* The URI for the final redirect (after the authorization process completes).
+
 
 
 ## Configuring a Google application for your website
-To start using Google as an identity provider, create a project in the [Google Developer Console](https://console.developers.google.com). Part of creating a project is to obtain a Google Client ID and Secret. The Google Client ID and Secret are the unique identifiers for your application used by Google authentication, and are needed for setting up the {{site.data.keyword.amashort}} dashboard.
+To start using Google as an identity provider, create a project in the [Google Developer Console](https://console.developers.google.com). Part of creating a project is to obtain a **Google Client ID** and **Secret**. The Google Client ID and Secret are the unique identifiers for your application used by Google authentication, and are needed for setting up the {{site.data.keyword.amashort}} dashboard.
 
 
 1. Open your Google application in the Google Developer Console. 
 3. Add the Google+ API. 
-3. Create credentials using OAuth. Select Web application in application type. To create the credentials you need to enter the {{site.data.keyword.amashort}} redirect URI in the Authorized redirect URIs
+3. Create credentials using OAuth. Select Web application in application type. Enter the {{site.data.keyword.amashort}} redirect URI in the Authorized redirect URIs
 box. The {{site.data.keyword.amashort}} redirect authorization URI can be obtained from the Google configuration screen of the {{site.data.keyword.amashort}} dashboard (see steps below). 
 6. Save changes. Take note of the Google Client ID and Application Secret.
 
@@ -39,15 +41,11 @@ After you have a Google Application ID and Secret, you can enable Google authent
 1. Open your app in the  {{site.data.keyword.Bluemix_notm}}  dashboard.
 1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}}  dashboard loads.
 1. Click the button on the Google panel.
-1. In the **Configure for Web** section:
-
-    * Enter the Google Client ID and Application Secret.
-
-    * Find the authorization redirect URI required by Google in the **Mobile Client Access Redirect URI for Facebook Developer Console** text box.
-
-    * Enter the Web application redirect URI to be used by Mobile Client Access after successful authentication in the **Your Web Application Redirect URIs** textbox.
-     
-  Click **Save**.
+1. In the **Configure for Web** section:   
+    * Note the value in the **Mobile Client Access Redirect URI for Google Developer Console** textbox. This is the value you need to add to the **Authorized redirect URIs**  box under **Restrictions in the Client ID for Web application**  of the **Google Developers Portal** in step 3 above.
+    * Enter the **Google Client ID** and **Client Secret**.
+    * Enter the redirect URI in the **Your Web Application Redirect URIs**. This value is for the redirect URI to be accessed after the authorization process is completed, and is determined by the developer.
+1. Click **Save**.
 
 
 ## Implementing the {{site.data.keyword.amashort}} authorization flow using Google as identity provider
@@ -60,22 +58,25 @@ To start the process of authorization:
 
     **Note:** In case you created the {{site.data.keyword.amashort}} service before web support was added, you may not have authorization endpoints in the service credentials. In this case use the following authorization endpoints depending on your Bluemix region:
 
- US South: 
- ```
- https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
- ```
- London: 
- ```
- https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
-  ```
-  Sydney: 
-  ```
-  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
-  ```
+
+ 	US South: 
+ 	```
+ 	https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
+ 	```
+ 	London: 
+ 	```
+ 	https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
+  	```
+  	Sydney: 
+  	```
+  	https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
+  	```
+1. Build the authorization server URI using the `response_type("code")`, `client_id`, and `redirect_uri` as query parameters.
+1. Redirect from your web app to the generated URI.
   
-  The example below retrieves the parameters from the `VCAP_SERVICES` variable, building the URL, and sending the redirect request.
+The example below retrieves the parameters from the `VCAP_SERVICES` variable, building the URL, and sending the redirect request.
   
-     ```Java
+```Java
  var cfEnv = require("cfenv"); 
  app.get("/protected", checkAuthentication, function(req, res, next){ 
  	res.send("Hello from protected endpoint"); 
@@ -93,7 +94,7 @@ To start the process of authorization:
 		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
 		var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
 		var clientId = mcaCredentials.clientId; 
-		var redirectUri = "http://some-server/oauth/callback"; // Your web application redirect uri 
+		var redirectUri = "http://some-server/oauth/callback"; // Your web application redirect URI 
 		var redirectUrl = authorizationEndpoint + "?response_type=code";
 		redirectUrl += "&client_id=" + clientId; 
 		redirectUrl += "&redirect_uri=" + redirectUri; 
@@ -106,32 +107,34 @@ To start the process of authorization:
 Note that the `redirect_uri` parameter represents your web application redirect URI and must be equal to the one defined in the {{site.data.keyword.amashort}} dashboard.
 After redirecting to the authorization end-point the user will get a login form from Google. After user grants permissions to be logged in using his Google identity the {{site.data.keyword.amashort}} service will call your web application redirect URI supplying the grant code as a query parameter.
 
+## Obtaining the tokens
 The next step is to obtain access token and identity tokens using the previously received grant code. In order to do so: 
 
 1. Retrieve token `tokenEndpoint`, `clientId`, and `secret` from service credentials stored in `VCAP_SERVICES` environment variable. 
   
     **Note:** In case you created the {{site.data.keyword.amashort}} service before web support was added, you may not have authorization endpoints in the service credentials. In this case use the following authorization endpoints depending on your Bluemix region:
  
- US South: 
- ```
- https:// mobileclientaccess.ng.bluemix.net/oauth/v2/token 
-  ```
- London: 
-  ```
-  https:// mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
-   ```
-   Sydney: 
-  ```
-   https:// mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
-  ```
+ 	US South: 
+ 	```
+ 	https:// mobileclientaccess.ng.bluemix.net/oauth/v2/token 
+  	```
+ 	London: 
+  	```
+  	https:// mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
+   	```
+   	Sydney: 
+  	```
+   	https:// mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
+  	```
 
-2. Send a post request to the token server URI with grant_type ("authorization_code"), client_id, redirect_uri, and code as form parameters and `clientId` and `clientSecret` as Basic HTTP authentication credentials.
+2. Send a post request to the token server URI with grant_type ("authorization_code"), client_id, redirect_uri, and code as form parameters. Send the `clientId` and `clientSecret` as Basic HTTP authentication credentials.
  
-The following example, the following code retrieves the necessary values, and sends them with a post request.
+The following code retrieves the necessary values, and sends them with a post request.
     
    ```Java    
-   var cfEnv = require("cfenv");
-   var base64url = require("base64url ");
+  var cfEnv = require("cfenv");
+  var base64url = require("base64url ");
+  var request = require('request');
 
    app.get("/oauth/callback", function(req, res, next){ 
 	var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
@@ -160,29 +163,31 @@ The following example, the following code retrieves the necessary values, and se
 ); 
   ```
 
-The `state` parameter is not in use, it can be left empty.
-
-The `redirect_uri` parameter is the redirect after successful or failed authentication with Google and must match the `redirect_uri` from step 1.  Make sure to send this POST request within 10 min after which the grant code expires.
+  The `redirect_uri` parameter is the URI for redirecting, after the successful or failed authentication with Google+, and must match the `redirect_uri` from step 1.  
+   
+Make sure to send this POST request within 10 min after which the grant code expires. After 10 minutes a new code is required.
 
 The POST response body will contain the `access_token` and the `id_token` encoded in base64.
 
 Once you have received access, and identity the tokens, you can flag web session as authenticated and optionally persist these tokens.  
 
 
-##Using obtained access and identity token
-The identity token contains information about user identity. In case of Google authentication, the token contains all the information the user agreed to share, such as full name, age group, url of the profile photo, etc.
+##Using obtained access and identity token 
 
-The access token allows communication with resources protected by {{site.data.keyword.amashort}} authorization filters 
+The identity token contains information about user identity. In case of Google authentication, the token will contain all the information user agreed to share, such as full name,  url of the profile photo, etc.  
 
-##Client Access authorization filters
+The access token enables communications with resources protected by {{site.data.keyword.amashort}} authorization filters, see see [Protecting Resources](protecting-resources.html).
 
-In order to make requests to protected resources add an Authorization header to requests with the following structure:
-Authorization=Bearer <accessToken> <idToken>
 
-See https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/protecting-resources-nodejs.html.
+In order to make requests to protected resources, add an Authorization header to requests with the following structure: 
 
-**Note:** The `idToken` is optional. In the case where you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
+`Authorization=Bearer <accessToken> <idToken>`
 
+**Note:** 
+
+* The `accessToken` and `idToken` must be separated by a white space.
+
+* The `idToken` is optional. In the case where you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
 
 
 

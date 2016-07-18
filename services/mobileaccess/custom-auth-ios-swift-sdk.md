@@ -5,14 +5,15 @@ copyright:
 
 ---
 
-# Configuring {{site.data.keyword.amashort}} client SDK for iOS (Swift SDK)
+# Configuring custom authentication for your {{site.data.keyword.amashort}} iOS (Swift SDK) app
+
 {: #custom-ios}
 
-*Last updated: 16 June 2016*
+*Last updated: 18 July 2016*
 {: .last-updated}
 
 
-Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.  The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
+Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.  The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves on the functionality provided by the existing Mobile Client Access Objective-C SDK.
 
 **Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
 
@@ -118,7 +119,7 @@ After you initialize the client SDK and register a custom authentication delegat
 ### Before you begin
 {: #custom-ios-testing-before}
 
- You must have an application that was created with the {{site.data.keyword.mobilefirstbp}} boilerplate and have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
+ You must have an application that was created with the {{site.data.keyword.mobilefirstbp}} boilerplate, and have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
 
 1. Send a request to protected endpoint of your mobile back-end application in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
   The `/protected` endpoint of a mobile back-end application that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your browser.
