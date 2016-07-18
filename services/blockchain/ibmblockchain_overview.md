@@ -30,7 +30,7 @@ The following terms are instrumental in gaining a holistic understanding of bloc
 
 **Transactor**: A network participant connected to the blockchain through a node, that issues transactions from the client side by leveraging an SDK or API.
 
-**Transaction**: A request by a transactor to the blockchain to execute a function on the ledger.  Transactions types include deploy/invoke/query and are implemented through the chaincode functions set forth in the fabric's API contract.  <!---Chaincode implements the functions set forth in the fabric's API contract.  --->
+**Transaction**: A request by a transactor to the blockchain to execute a function on the ledger.  Transaction types include deploy/invoke/query and are implemented through the chaincode functions set forth in the fabric's API contract.  <!---Chaincode implements the functions set forth in the fabric's API contract.  --->
 
 **Ledger**: A sequence of cryptographically-linked blocks, containing transactions and the current world state.  In addition to data from previous transactions, the ledger (blockchain) also contains the data for currently-running chaincode applications.
 
