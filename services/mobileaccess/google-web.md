@@ -59,7 +59,7 @@ To start the process of authorization:
 
   The `state` parameter is not in use for now, and it can be left empty.
 
-  The `redirect_uri` parameter uri is the redirect after successful or failed authentication with Google.
+  The `redirect_uri` parameter URI is the redirect after successful or failed authentication with Google.
   The response you get after redirect  contains the authorization code in the request query parameters.
 1. Make a `POST` request to the authorization server token end-point:
 
