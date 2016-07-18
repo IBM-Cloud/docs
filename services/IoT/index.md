@@ -5,32 +5,34 @@ copyright:
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Deploying and configuring {{site.data.keyword.iot_short_notm}} for your organization
+# Getting started with {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-*Last updated: 6 June 2016*
+*Last updated: 18 July 2016*
 {: .last-updated}
 
-{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} gives you a versatile IoT toolkit, that includes gateway devices, device management, and powerful application access. By using {{site.data.keyword.iot_short_notm}}, you can collect connected device data and perform analytics on real-time data from your organization.
+{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} gives you a versatile IoT toolkit that includes gateway devices, device management, and powerful application access. By using {{site.data.keyword.iot_short_notm}}, you can collect connected device data and perform analytics on real-time data from your organization.
 {:shortdesc}
 
 ## Before you begin
+{: #byb}
 
 Before connecting devices and utilizing data, an instance of the {{site.data.keyword.iot_short_notm}} service must exist in your {{site.data.keyword.Bluemix_notm}} organization. You can create it directly from the [{{site.data.keyword.iot_short_notm}} page in the Bluemix Services Catalog](https://console.{DomainName}/catalog/services/internet-of-things-platform/).  
 
 ## Up and running with {{site.data.keyword.iot_short_notm}}
+{: #up_and_running}
 
 To get up and running with the service, explore the following options depending on your situation:
 
    |   The service is deployed | The service is not deployed
   ------------- | -------------
   **I have a device to connect** | [Connect your device to {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore device connection in the [Play organization demo](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  **I do not have a device to connect** | [Create and connect a Node-RED device simulator](nodereddevice_sample.html){:new_window}.
+  **I do not have a device to connect** | [Create and connect a Node-RED device simulator](nodereddevice_sample.html){:new_window}. | Get started with [Watson IoT Platform Starter](https://new-console.stage1.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}.
 **Tip:** For additional information on how to connect specific device types to {{site.data.keyword.iot_short_notm}}, see [developerWorks recipes](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}.  
 
 
