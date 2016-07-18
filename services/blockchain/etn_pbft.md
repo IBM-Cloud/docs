@@ -15,7 +15,7 @@ years: 2016
 # Testing consensus and availability
 {: #etn_pbft}
 
-*Last updated: 15 July 2016*
+*Last updated: 18 July 2016*
 {: .last-updated}
 
 Both the Developer Network and the High Security Business Network plans enable you to test the Practical Byzantine Fault Tolerance (PBFT) consensus protocol on a four-node blockchain network. The following topics provide details about consensus in general, and PBFT in particular. When you are ready to start testing, four PBFT test cases are provided.
@@ -33,8 +33,8 @@ Practical Byzantine Fault Tolerance (PBFT) is one of various consensus protocols
 
 The 2\*f + 1 PBFT rule has the following implications for the Developer Network and the High Security Business Network:
 
-1. Either network can tolerate no more than one Byzantine node. Each network contains N=4 nodes, so applying the formula for the maximum number of Byzantine nodes results in f=(4-1)/3=1. If two or more Byzantine nodes (f>1) exist, a 4-node PBFT network cannot guarantee consistency of the ledger across nodes. (By comparison, note that tolerating two Byzantine nodes would require f=(7-1)/3=2, or a minimum 7-node blockchain network.)
-2. If fewer than 2\*f + 1 nodes are online, either network ceases operation, because PBFT cannot guarantee consistency of the ledger across nodes. Either network will resume operation when at least 2\*f + 1 nodes are online.
+1. The network can tolerate no more than one Byzantine node. Each network contains N=4 nodes, so applying the formula for the maximum number of Byzantine nodes results in f=(4-1)/3=1. If two or more Byzantine nodes (f>1) exist, a 4-node PBFT network cannot guarantee consistency of the ledger across nodes. (By comparison, note that tolerating two Byzantine nodes would require f=(7-1)/3=2, or a minimum 7-node blockchain network.)
+2. If fewer than 2\*f + 1 nodes are online, the network ceases operation, because PBFT cannot guarantee consistency of the ledger across nodes. The network will resume operation when at least 2\*f + 1 nodes are online.
 3. Because only a minimum of 2\*f + 1 nodes must reach consensus before proceeding to the next block of transactions, the ledger on any additional nodes (beyond 2\*f + 1) will temporarily lag behind. This lag in syncing the shared ledger across all nodes is an inevitable limitation on any PFBT network.
 
 ## What are the consensus test cases?
