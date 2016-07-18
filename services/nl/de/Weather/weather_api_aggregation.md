@@ -1,7 +1,7 @@
 ---
 
 copyright:
-	years: 2015, 2016
+  years: 2016
 
 ---
 
@@ -13,9 +13,10 @@ copyright:
 # Aggregation von APIs
 {: #api_aggregation}
 
-*Letzte Aktualisierung: 31. März 2016*
+*Letzte Aktualisierung: 15. Juni 2016*
+{: .last-updated}
 
-Einige Insights for Weather-APIs können aggregiert werden. Mit einer Aggregation können Sie mindestens
+Einige {{site.data.keyword.weather_short}}-APIs können aggregiert werden. Mit einer Aggregation können Sie mindestens
 zwei atomare API-Aufrufe in einer einzelnen HTTP-Anforderung zusammenfassen.
 {: shortdesc}
 
@@ -34,7 +35,7 @@ darf nicht mehr als 1 MB betragen.
 
 **Hinweis:** Wenn die Anforderung oder die Antwort gegen eine oder mehrere
 dieser Beschränkungen verstößt, wird ein Fehler mit dem HTTP-Statuscode 500
-(für gewöhnlich 500 oder 502; es können aber auch andere Codes zurückgegeben werden) ausgegeben. 
+(für gewöhnlich 500 oder 502; es können aber auch andere Codes zurückgegeben werden) ausgegeben.
 
 ## Aggregierte API-URLs
 Die aggregierte API-URL beginnt mit `/v2/aggregate/` gefolgt von Aliasnamen, die durch Semikolons getrennt sind.
@@ -48,7 +49,7 @@ verwenden Sie das folgende Format:
 ## Abfrageparameter für atomare APIs und Aggregation
 Für alle Anforderungen sind Abfrageparameter erforderlich. Die Abfrageparameter für die Aggregation werden auf dieselbe Art und Weise wie
 für die atomaren API-Aufrufe übergeben. Allerdings sind einige zusätzliche Regeln erforderlich. In den folgenden Abschnitten wird beschrieben, wie Sie zum Bilden verschiedener
-Aggregationen angewendet werden können. 
+Aggregationen angewendet werden können.
 
 ### Angeben von Abfrageparametern, die sich auf alle atomaren APIs beziehen
 
@@ -58,7 +59,7 @@ Standardformat auf: `?param1=value1&amp;param2=value2`.
 
 Im folgenden Beispiel wird
 `geocode=31.44,84.33&amp;language=en&amp;units=e` auf die Anforderung für die atomaren APIs
-`v2fcstdaily10` und `v2obscurrent` angewendet: 
+`v2fcstdaily10` und `v2obscurrent` angewendet:
 
 ```
 https://twcservice.mybluemix.net/api/weather/v2/aggregate/v2fcstdaily10;v2obscurrent?geocode=31.44,84.33&amp;language=en&amp;units=e
@@ -108,7 +109,7 @@ https://twcservice.mybluemix.net/api/weather/v2/aggregate/v2fcstdaily10;v2fcstd
 
 Im folgenden Beispiel gilt `geocode=31.44,84.33&amp;language=en&amp;units=e` für die erste `v2fcstdaily10` und
 `geocode=33.54,85.43&amp;language=en&amp;units=e` für die zweite
-`Anforderung v2fcstdaily10` zum Abrufen mehrerer Standorte für dieselben Daten: 
+`Anforderung v2fcstdaily10` zum Abrufen mehrerer Standorte für dieselben Daten:
 
 ```
 https://twcservice.mybluemix.net/api/weather/v2/aggregate/v2fcstdaily10;v2fcstdaily10?R1.geocode=31.44,84.33&amp;R2.geocode=33.54,85.43&amp;language=en&amp;units=e
