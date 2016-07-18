@@ -14,7 +14,8 @@ copyright:
 #モニターとロギング
 {: #monitoringandlogging}
 
-*最終更新日: 2016 年 5 月 11 日*
+*最終更新日: 2016 年 5 月 24 日*
+{: .last-updated}
 
 アプリをモニターし、ログを確認することで、アプリケーション実行
 およびデータ・フローをたどって、デプロイメントの理解を深めることができます。また、問題を見つけて修復するために必要な時間と労力を削減することもできます。
@@ -22,7 +23,13 @@ copyright:
 
 {{site.data.keyword.Bluemix}} アプリケーションは、広く分散したマルチインスタンス・アプリケーションにすることができ、アプリケーションの実行およびそのデータを多くのサービスで共有できます。この複合環境では、アプリを管理するために、アプリのモニターとログの確認が重要になります。
 
-{{site.data.keyword.Bluemix_notm}} は、アプリの実行中にそのログ・ファイルを生成する組み込みのロギング・メカニズムを備えています。ログでは、アプリに対して生成されたエラー、警告、および情報の各メッセージを表示できます。また、ログ・メッセージをログ・ファイルに書き込むようにアプリを構成することもできます。ログ・フォーマットおよびログの表示方法について詳しくは、『[{{site.data.keyword.Bluemix_notm}} アプリのロギング (Logging for {{site.data.keyword.Bluemix_notm}} apps)](#logging_for_bluemix_apps)』を参照してください。
+##アプリのモニターとロギング
+{: #monitoring_logging_bluemix_apps}
+
+{{site.data.keyword.Bluemix_notm}} は、アプリの実行中にそのログ・ファイルを生成する組み込みのロギング・メカニズムを備えています。ログでは、アプリに対して生成されたエラー、警告、および情報の各メッセージを表示できます。また、ログ・メッセージをログ・ファイルに書き込むようにアプリを構成することもできます。
+ログ・フォーマットおよびログの表示方法について詳しくは、
+[『Cloud Foundry で実行されてい
+るアプリのロギング』 ](#logging_for_bluemix_apps)を参照してください。
 
 アプリをモニターすることで、アプリのデプロイメントの確認および制御を行うことができます。モニターにより、以下のタスクを実行できます。
 
@@ -32,7 +39,7 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}} プラットフォームでのデプロイメントの運用を安定化するために、問題を速やかに検出し、原因を効率的に判別する必要があります。この目的を満たすには、アプリの設計時にトラブルシューティングに留意し、アプリを {{site.data.keyword.Bluemix_notm}} にデプロイしたら、モニターおよびロギング用のサービスまたはツールを使用します。
 
-##Cloud Foundry で実行されているアプリのモニター
+###Cloud Foundry で実行されているアプリのモニター
 {: #monitoring_bluemix_apps}
 
 Cloud Foundry インフラストラクチャーを使用して {{site.data.keyword.Bluemix_notm}} でアプリを実行している場合、正常性状況、リソース使用量、トラフィック・メトリックなどの最新のパフォーマンス情報を入手する必要があります。このパフォーマンス情報を使用して、適宜、意思決定やアクション実行を行うことができます。
@@ -43,7 +50,7 @@ Cloud Foundry インフラストラクチャーを使用して {{site.data.keywo
 Analytics](../services/monana/index.html) を参照してください。
 * サード・パーティー・オプション。例えば、[New Relic](http://newrelic.com/){:new_window}。
 
-##Cloud Foundry で実行されているアプリのロギング
+###Cloud Foundry で実行されているアプリのロギング
 {: #logging_for_bluemix_apps}
 
 Cloud Foundry インフラストラクチャーを使用して {{site.data.keyword.Bluemix_notm}} でアプリを実行している場合、ログ・ファイルが自動的に作成されます。デプロイメントからランタイムまでのどのステージでも、エラーが発生した場合は、ログを調べて問題解決の糸口を探すことができます。
@@ -59,8 +66,7 @@ Cloud Foundry インフラストラクチャーを使用して {{site.data.keywo
 
 ```
          1         2         3         4         5
-12345678901234567890123456789012345678901234567890
---------------------------------------------------
+12345678901234567890123456789012345678901234567890--------------------------------------------------
 yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 ```
 {:screen}
@@ -192,20 +198,18 @@ Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 関心のあるログを表示する場合、または表示しない内容を除外する場合、cf コマンド・ライン・インターフェースで **cut** や **grep** などのフィルター・オプションを指定して **cf logs** コマンドを使用できます。
 
 * 完全な詳細ログではなく、一部を表示する場合、**cut** オプションを使用します。例えば、コンポーネントおよびメッセージの情報を表示するには、以下のコマンドを使用します。
+
 ```
 cf logs appname --recent | cut -c 29-40,46- 
 ```
 
 **grep** オプションについて詳しくは、cut --help と入力してください。
 * 特定のキーワードが含まれているログ項目を表示するには、**grep** オプションを使用します。例えば、キーワード「[APP」が含まれているログ項目を表示するには、以下のコマンドを使用できます。
+
 ```
 cf logs appname --recent | grep '\[App'
 ```
-**grep** オプションについて詳しくは、`grep --help` と入力してください。
-
-
-
-### 外部ログ・ホストの構成
+**grep** オプションについて詳しくは、`grep --help` と入力してください。### 外部ログ・ホストの構成
 {: #thirdparty_logging}
 
 {{site.data.keyword.Bluemix_notm}} は、限られた量のログ情報をメモリー内に保持します。情報がログに記録されると、古い情報が新しい情報に置き換えられます。すべてのログ情報を保持するには、外部ログ・ホスト (例えば、サード・パーティーのログ管理サービスまたはその他のホスト) にログを保存することができます。
@@ -281,5 +285,141 @@ cf logs appname --recent | grep '\[App'
 ログが生成されると、少し遅れて、外部ログ・ホストにあるメッセージを表示できます。それらは、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは cf コマンド・ライン・インターフェースで表示するメッセージに似たメッセージです。アプリに複数のインスタンスがある場合、ログは集約されるため、アプリのすべてのログを確認できます。それに加えて、ログは、アプリのクラッシュおよびデプロイメントをまたいで継続的に保持されます。
 
 **注:** コマンド・ライン・インターフェースで表示するメッセージは、syslog フォーマットではなく、外部ログ・ホストで表示されるメッセージと完全には一致しないことがあります。 
+
+### 例: Cloud Foundry アプリケーション・ログの Splunk へのストリーミング 
+{: #splunk}
+
+この例では、Jane という開発者が、IBM Virtual Servers Beta および Ubuntu イメージを使用して仮想サーバーを作成します。
+Jane は Cloud Foundry アプリケーション・ログを
+{{site.data.keyword.Bluemix_notm}} から Splunk へストリームし
+ようと試みます。 
+
+  1. まず、Splunk をセットアップします。
+
+     a. Jane は、[
+Splunk Light のダウンロード・サイト](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}から
+Splunk Light をダウンロードして、次のコマンドを使用してこれをインストールします。
+ソフトウェアは */opt/splunk* にインストールされます。 
+       
+	    ```
+        dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
+        ```
+	   
+     b. RFC5424 syslog テクノロジー・アドオンをイン
+ストールして適用し、{{site.data.keyword.Bluemix_notm}} と統合します。アドオンのインストール手順について詳しくは、
+[
+『Cloud Foundry ガイドライン』](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}を参照してください。
+
+	    次のコマンドを使用してアドオンをインストールします。
+        
+	    ```
+        cd /opt/splunk/etc/apps
+        tar xvfz ~/rfc5424-syslog_11.tgz
+        ```
+	   
+        次に Jane は、
+*/opt/splunk/etc/apps/rfc5424/default/transforms.conf*
+を次のテキストで構成される新規の *transforms.conf* ファイルと
+置き換えて、アドオンを適用します。
+	   
+	    ```
+        [rfc5424_host]
+        DEST_KEY = MetaData:Host
+        REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
+        FORMAT = host::$1
+
+        [rfc5424_header]
+        REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
+        FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
+        MV_ADD = true
+        ```
+        {:screen}	   
+
+     c. Splunk のセットアップ後、Ubuntu マシン上の一
+部のポートをオープンして、着信 syslog ドレーン (ポート 5140)
+および Splunk Web UI (ポート 8000) を受け入れる必要があります。
+{{site.data.keyword.Bluemix_notm}} 仮想サーバーのファイアウォ
+ールがデフォルトでセットアップされているためです。
+	   
+	    **注:** ここでは Jane の評価目的のために iptable 構成としているため、これは一時的なものです。実動における Bluemix 仮想サーバーでのファイアウォール設定を構成する方法について詳しくは、[『ネットワーク・セキュリティー・グループ (Network Security Groups)』](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window}資料を参照してください。
+	 
+	   ```
+	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
+       iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
+       iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
+       iptables -A INPUT -p tcp --sport 8000 -j ACCEPT
+	   ```
+	   {:screen}	
+	  
+	   次に、Jane は次のコマンドを使用して Splunk を実行します。
+
+       ```
+	   /opt/splunk/bin/splunk start --accept-license
+       ```
+		
+  2. Splunk 設定を構成して、
+{{site.data.keyword.Bluemix_notm}} から syslog ドレーンを受け
+入れます。syslog ドレーン用にデータ入力を作成する必要があります。
+
+     a. Splunk Web インターフェース
+の左側から、**「データ (Data)」>「データ入力 (Data inputs)」
+**とクリックします。Splunk がサポー
+トする入力タイプのリストが表示されます。 
+	 
+     b. syslog ドレーンが TCP プロトコルを使用するため、
+**TCP** を選択します。
+	 
+     c. **TCP** ペインの **「ポ
+ート」**フィールドで、**「5140」**と入力
+し、残りのフィールドは空白のまま残し、**「次へ」**
+をクリックします。
+	 
+     d. **「ソース・タイプ」**リストから、
+**「未カテゴリー化 (Uncategorized)」>「rfc5424_syslog」
+**を選択します。
+	 
+     e. **「方式 (Method)」**タイプに
+**「IP」**を選択します。
+	 
+     f. **「索引 (Index)」**フィールド
+で、**「新規索引の作成 (Create a new index)」
+**をクリックします。新規索引に「bluemix」という名前を付け、**「保存」**をクリックします。
+	 
+     g. 最後に**「レビュー (Review)」**ウ
+ィンドウで、設定が正しいことを確認し、**「送信 (Submit)」**を
+クリックしてこのデータ入力を有効にします。
+
+  3. {{site.data.keyword.Bluemix_notm}}で、syslog ドレ
+ーン・サービスを作成し、これをアプリにバインドします。
+
+     a. cf cli から次のコマンドを使用して syslog ドレーン・サービスを作成します。
+	 
+     ```
+     cf cups splunk -l syslog://dummyhost:5140
+     ```
+        
+     **注:** *dummyhost* は実
+名ではありません。実際のホスト名を非表示にするために使用されます。 
+
+     b. Jane は 自分のスペースで syslog ドレーン・サービスをアプリにバ
+インドしてから、アプリを再ステージングします。
+	 
+	 ```
+     cf bind-service myapp splunk
+     cf restage myapp
+     ```
+		
+
+アプリを試行して、Splunk Web インターフェースで次の照
+会ストリングを入力します。
+
+```
+source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
+```
+
+Splunk Web インターフェースでログのストリームを確認します。Jane がインストール
+する Splunk は Splunk Light ですが、1 日に 500 MB のログを保存することが可能です。 
+
+
 
 

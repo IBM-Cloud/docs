@@ -17,7 +17,8 @@ copyright:
 
 # Gestion de l'environnement {{site.data.keyword.Bluemix_notm}} local et de l'environnement {{site.data.keyword.Bluemix_notm}} dédié
 {: #mng}
-*Dernière mise à jour : 16 mai 2016*
+*Dernière mise à jour : 13 juin 2016*
+{: .last-updated}
 
 Si vous disposez d'un accès administrateur pour l'environnement {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié, accédez à la page **Administration** pour gérer les ressources, surveiller l'utilisation des quotas, administrer des droits d'utilisateur, planifier des notifications de mise à niveau, afficher des rapports de sécurité et des journaux, etc. Vous
 pouvez gérer votre organisation en créant des espaces et en configurant des [rôles utilisateur et autorisations](index.html#oc_useradmin). Voir
@@ -56,147 +57,169 @@ abonnements à des événements](index.html#oc_eventsubscription). |
 ## Notifications et abonnements à des événements
 {: #oc_eventsubscription}
 
-Vous pouvez prendre connaissance à tout moment du statut de votre environnement en consultant la page Statut. {{site.data.keyword.Bluemix_notm}}
-envoie également des notifications dans la zone Notifications de la page Administration concernant des événements tels que la maintenance et les mises à
-niveau prévues. Les incidents sont signalés dans la page Statut.
+Vous pouvez prendre connaissance à tout moment du statut de votre environnement en consultant la page Statut. Les incidents sont signalés sur cette page au fur
+et à masure qu'ils se produisent. {{site.data.keyword.Bluemix_notm}} envoie également des notifications à la zone Notifications
+sur la page Administration pour des événements tels que des mises à jour de maintenance planifiées ou en attente.
 
 ### Notifications
 
-Vous pouvez afficher les notifications d'IBM pour votre environnement local ou dédié afin de surveiller le statut de votre environnement. Reportez-vous au
-tableau ci-dessous pour des informations sur les différents types de notification et les emplacements auxquels les notifications sont publiées.
+Vous pouvez afficher les notifications pour votre environnement local ou dédié pour surveiller le statut de votre environnement. Reportez-vous au tableau
+ci-dessous pour plus d'informations sur les différents types de notification et les emplacements où elles sont publiées.
 
 *Tableau 2. Types d'événement et méthodes de notification*
 
 | **Type d'événement** | **Méthode de notification** |       
 |-----------------|-------------------|
 | Mises à jour de maintenance | Vous êtes prévenu en cas de mises à jour de maintenance prévues dans la zone Notifications de la page Administration. Accédez
-à la page **Administration**, puis sélectionnez l'icône **Notifications** ![Notifications](images/icon_announcement.svg). Pour
-afficher la liste complète ainsi que l'historique de vos notifications en attente et consultées, cliquez sur **ADMINISTRATION &gt;
-INFORMATIONS SYSTEME** &gt; *Nombre* **mises à jour en attente**. Vous pouvez étendre la capacité de
-notification en configurant un abonnement à un événement qui intègre les alertes relatives aux mises à jour de maintenance de la page Administration à un
-service Web de votre choix afin d'acheminer les messages vers l'adresse électronique d'un centre d'assistance ou afin d'envoyer un message SMS à un
-numéro de téléphone de votre choix. |
+à la page **Administration**, puis sélectionnez l'icône **Notifications** ![Notifications](images/icon_announcement.svg). 
+Pour afficher la liste complète ainsi que l'historique de vos notifications en attente et consultées, cliquez sur **ADMINISTRATION &gt; INFORMATIONS
+SYSTEME** &gt; *Nombre* **en attente**. Vous
+pouvez étendre la capacité de notification en configurant un abonnement envoyant un courrier électronique aux destinataires de votre choix. Vous pouvez également
+configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix. |
 | Incidents critiques | Vous êtes prévenu en cas d'incident critique dans la page Statut. Cliquez sur l'icône **Compte et support**
-![Compte et support](../support/images/account_support.svg), puis sélectionnez **Statut**. Vous pouvez étendre la
-capacité de notification en configurant un abonnement à un événement qui intègre les alertes relatives aux incidents de la page
-Statut à un service Web de votre choix afin d'acheminer les messages vers l'adresse électronique d'un centre d'assistance ou afin d'envoyer un
-message SMS à un numéro de téléphone de votre choix. |  
-| Statut | Vous pouvez afficher le statut le plus récent de la plateforme, des services et de votre instance {{site.data.keyword.Bluemix_notm}}. Cliquez sur l'icône **Compte et support** ![Compte et support](../support/images/account_support.svg), puis
+![Compte et support](../support/images/account_support.svg), puis sélectionnez **Statut**. Vous
+pouvez étendre la capacité de notification en configurant un abonnement à des événements qui envoie un courrier électronique au destinataire de votre choix. 
+Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.  |  
+| Statut {{site.data.keyword.Bluemix_notm}} | Vous pouvez toujours examiner le statut le plus récent de la plateforme, des services et de votre instance
+{{site.data.keyword.Bluemix_notm}} sur la page Statut. Cliquez sur l'icône **Compte et support** ![Compte et support](../support/images/account_support.svg), puis
 sélectionnez **Statut**.  |
 
 ### Configuration d'abonnements à des événements
 
-Vous pouvez étendre la fonctionnalité des notifications qui sont envoyées dans la page Administration et dans la page Statut en utilisant des
-abonnements à des événements qui utilisent des webhooks. Les webhooks routent vos notifications directement vers une destination de votre choix, par
-exemple l'adresse électronique d'un centre d'assistance (par courrier électronique) ou un numéro de téléphone (par message SMS). Vous pouvez personnaliser
-le type de notification, notamment les alertes relatives aux mises à jour de maintenance ou aux incidents critiques, ainsi que les informations qui sont
-incluses dans la notification.
+Vous pouvez étendre la fonctionnalité des notifications envoyées à la page Administration et à la page Statut en utilisant des abonnements à des événements
+pour configurer un courrier personnalisé ou encore utiliser des webhooks pour les intégrer à l'outil de votre choix. Si vous sélectionnez l'option
+webhooks, vos notifications sont acheminées directement à la destination de votre choix, par exemple à un numéro de téléphone (via un message SMS). Vous pouvez
+personnaliser le type de notification, notamment les alertes relatives aux mises à jour de maintenance ou aux incidents critiques, ainsi que les informations qui
+sont incluses dans le corps de chaque notification.
 
-Pour utiliser des webhooks afin de configurer un abonnement à un événement spécifique, procédez comme suit :
+**Remarque **: seuls les utilisateurs disposant de l'autorisation Admin (`ops.admin`) peuvent configurer des abonnements à
+des événements.
 
-* Pour les notifications relatives aux mises à jour de maintenance, accédez à **INFORMATIONS SYSTEME** &gt;
-*Nombre* **mises à jour en attente**, puis cliquez sur l'icône **S'abonner**
-![S'abonner](images/icon_subscribe.svg).
-* Pour les notifications d'alerte relatives aux incidents, cliquez sur l'icône **Compte et support**
-![Compte et support](../support/images/account_support.svg) &gt; **Statut**, puis cliquez sur l'icône
+Pour accéder à la page **Abonnements à des événements**, procédez comme suit :
+
+* Pour les notifications de mise à jour de maintenance, accédez à **INFORMATIONS SYSTEME &gt; *Nombre * en attente &gt; Abonnements **.
+* Pour les notifications relatives à des incidents, cliquez sur l'icône **Compte et support**
+![Compte et support](../support/images/account_support.svg) &gt; **Statut**, puis sur l'icône
 **S'abonner** ![S'abonner](images/icon_subscribe.svg).
 
 **Remarque** : vous pouvez accéder à la page des abonnements à des événements pour les deux types de notification en appliquant
 l'une des deux méthodes décrites.
 
+Pour créer un abonnement de courrier électronique ou webhook depuis la page **Abonnements à des événements**, procédez comme suit :
+
 1. Cliquez sur **Ajouter un abonnement**.
+2. Remplissez le formulaire d'abonnement à un événement. Pour plus d'informations sur les zones du formulaire et les valeurs à utiliser dans la section
+Contenu,
+reportez-vous aux tableaux suivants.
+3. Une fois que vous avez complété ce formulaire, vous pouvez choisir parmi les options suivantes :
 
-2. Remplissez le formulaire d'abonnement à un événement. Pour des informations sur les zones du formulaire et les valeurs à utiliser dans la section
-Contenu, reportez-vous aux tableaux suivants :
+  * Cliquez sur **Sauvegarder** pour enregistrer l'abonnement dans votre liste d'abonnement à des événements. 
+  * Cliquez sur **Sauvegarder et tester** pour enregistrer et tester la notification. 
+  * Cliquez sur **Sauvegarder et fermer** pour enregistrer l'abonnement dans votre liste d'abonnement à des événements et revenir à la page
+précédente.
 
-*Tableau 3. Zones du formulaire d'abonnement à un événement *
+*Tableau 3. Zones du formulaire d'abonnement pour un abonnement à un courrier électronique*
 
 | **Zone** | **Description** |
 |-----------------|-------------------|
-| Type | Sélectionnez un webhook. |
-| Méthode | Sélectionnez GET ou POST. |
-| Evénement | Choisissez de vous abonner aux notifications relatives aux mises à jour ou aux incidents. |
-| URL | Entrez l'adresse URL afin d'ancrer votre service Web. |
-| Description | Ajoutez une description pour l'abonnement à un événement que vous créez. |
+| Type | Sélectionnez **Courrier électronique**. |
+| Evénement | Choisissez de vous abonner aux notifications relatives à une mise à jour ou à un incident. |
+| Activé | Sélectionnez l'option d'activation des notifications par courrier électronique. Effacez la sélection pour désactiver la notification par courrier
+électronique. Les abonnements sont activés par défaut. |
+| Objet | Renseignez la ligne d'objet du courrier électronique. Cette zone est obligatoire.  |
+| Corps | Entrez le texte du corps du message à envoyer dans le message électronique. Vous pouvez utiliser les valeurs de contenu IBM pour alimenter la
+notification par courrier électronique avec les informations pertinentes. Reportez-vous
+au tableau [Valeurs de la section Contenu](index.html#payload) pour déterminer les valeurs que vous pouvez utiliser. Utilisez des balises HTML
+élémentaires pour structurer votre courrier électronique. Si vous n'entrez pas d'informations dans cette section, vous recevrez une notification ne comportant pas d'information supplémentaire. 
+Cette zone est obligatoire. |
+| A | Entrez l'adresse ou les adresses électroniques des destinataires de la notification par courrier électronique dans une liste séparée par des virgules. Développez
+les options "cc" ou "bcc" pour ajouter d'autres destinataires au courrier électronique. 
+Cette zone est obligatoire. |
+| Description | Ajoutez une description unique pour l'abonnement que vous créez. |
+
+
+*Tableau 4. Zones du formulaire d'abonnement à des événements d'abonnement webhook*
+
+| **Zone** | **Description** |
+|-----------------|-------------------|
+| Type | Sélectionnez **Webhook** |
+| Méthode | Sélectionnez **GET** ou **POST**. |
+| Evénement | Choisissez de vous abonner aux notifications relatives à une mise à jour ou à un incident. |
+| URL | Entrez l'URL pour connexion à votre service Web. |
+| Description | Ajoutez une description unique pour l'abonnement que vous créez. |
 | Nom d'utilisateur | Entrez votre nom d'utilisateur pour votre service Web. Si vous ne voulez pas utiliser vos données d'identification personnelles, vous
 pouvez configurer un ID fonctionnel à utiliser spécifiquement avec {{site.data.keyword.Bluemix_notm}}. |
 | Mot de passe | Entrez le mot de passe pour votre service Web. |
-| Contenu | Si vous avez sélectionné la méthode POST, entrez les propriétés propres au service Web que vous utilisez, associées aux valeurs
-appliquées pour
-la notification IBM. Reportez-vous au tableau ci-dessous afin de prendre connaissance des valeurs IBM que vous pouvez utiliser pour remplir votre
-notification. Si vous n'entrez pas d'informations dans cette section, vous recevrez une notification ne comportant pas d'information supplémentaire. |
+| Contenu | Si vous avez sélectionné la méthode POST, entrez les propriétés spécifiques au service Web que vous utilisez
+appariées aux valeurs de contenu utilisées pour la notification IBM. 
+Reportez-vous au tableau [Valeurs de la section Contenu](index.html#payload) pour déterminer les valeurs que vous pouvez utiliser. Si vous n'entrez pas d'informations dans cette section, vous recevrez une notification ne comportant pas d'information supplémentaire. |
 
-*Tableau 4. Valeurs de la section Contenu*
+*Tableau 5. Valeurs de la section Contenu*
+{: #payload}
 
 | **Valeur IBM** | **Description** | **Type d'événement** |
 |----------------|----------------|------------------------|
-| {{content.title}} | Titre du message |  Mise à jour et incident   |
-| {{status}} | Statut de la mise à jour ou de l'incident.  | Mise à jour et incident  |
-| {{type}} | Mise à jour ou incident  | Mise à jour et incident  | 
-| {{region}} | Région affectée  | Mise à jour et incident  |
-| {{content.message}} | Description du message |   Mise à jour et incident   |
-| {{content.severity}} | Evaluation de la gravité  | Incident |
-| {{content.category}} | Services affectés  | Incident |
+| {{content.title}} | Titre du message |  Mise à jour et incident  |
+| {{type}} | Mise à jour ou incident | Mise à jour et incident | 
+| {{region}} | Région affectée | Mise à jour et incident |
+| {{content.message}} | Description du message |   Mise à jour et incident  |
+| {{content.severity}} | Evaluation de la gravité | Incident |
+| {{content.category}} | Services affectés | Incident |
 | {{content.subCategoryName}} | Composants affectés | Incident |
-| {{content.scheduleWindow}} | Date prévue de la mise à jour  | Mise à jour  |
-| {{content.disruption}} | Composants affectés | Mise à jour  |
+| {{status}} | Statut de la mise à jour | Mise à jour |
+| {{content.scheduleWindow.start}} | Date de début planifiée pour la mise à jour | Mise à jour |
+| {{content.scheduleWindow.end}} | Heure de fin planifiée pour la mise à jour | Mise à jour |
+| {{content.disruption}} | Composants affectés | Mise à jour |
 
-Une fois votre abonnement à un événement sauvegardé, vous recevez des notifications via la méthode que vous avez configurée par le biais de votre
-service Web. Les notifications continuent d'être publiées dans la page Statut pour les incidents et dans la zone Notifications de la page Administration
+Une fois votre abonnement à un événement sauvegardé, vous recevrez des notifications via la méthode configurée. Les notifications continuent d'être publiées dans la page Statut pour les incidents et dans la zone Notifications de la page Administration
 pour les mises à jour de maintenance.
 
-Vous pouvez sélectionner n'importe quel abonnement à un événement et afficher l'activité récente. Vous pouvez cliquer pour développer toute entrée
-d'activité récente afin d'afficher les détails. Les valeurs IBM pour la notification que vous pouvez utiliser dans la section du contenu sont incluses
-dans les détails. Pour afficher ces valeurs, développez l'entrée d'activité récente, développez **Evénement**, puis développez **Objet**.
+Vous pouvez sélectionner n'importe quel abonnement à un événement sauvegardé, examiner l'activité récente ou l'éditer selon vos besoins. Cliquez sur une
+entrée d'activité récente pour la développer et visualiser les détails de son historique.
 
 ## Mises à jour de maintenance
 {: #oc_schedulemaintenance}
 
 Vous pouvez afficher les mises à jour de maintenance planifiées et en attente en sélectionnant **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt;
-*Nombre* mises à jour en attente** pour accéder à la page **Mises à jour du système**.  
+*Nombre* en attente ** pour accéder à la page **Mises à jour du système**. 
 
-**Remarque** : reportez-vous à la section ci-après pour apprendre à définir des fenêtres de maintenance pré-approuvées pour
-commencer. Ces fenêtres doivent être définies pour qu'IBM puisse planifier la maintenance de votre environnement.
-
+**Remarque **: reportez-vous tout d'abord à la section [Définition de fenêtres de
+maintenance pré-approuvées](index.html#preapprovedmaintenance) ci-dessous. Ces fenêtres doivent être définies pour qu'IBM puisse planifier la maintenance de votre environnement.
 
 <dl>
-<dt>Mises à jour sans interruption </dt>
+<dt>Mises à jour sans interruption</dt>
 <dd>Une mise à jour sans interruption n'a pas d'impact sur votre environnement, vos applications en cours d'exécution ou l'accès de vos utilisateurs à vos
 applications. Ce type de mise à jour ne requiert pas d'approbation au cas par cas et est appliquée au cours des fenêtres de disponibilité pré-approuvées
-pour la maintenance que vous avez définies dans la page Mises à jour du système.
-</dd>
+pour la maintenance que vous avez définies dans la page Mises à jour du système.</dd>
 <dt>Mises à jour avec interruption </dt>
-<dd>Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs à
-vos applications. Vous devez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée.
-Vous pouvez sélectionner la date et l'heure de déploiement suggérées en fonction de vos fenêtres de mise à jour pré-approuvées ou sélectionner deux
-combinaisons date-heure supplémentaires parmi lesquelles IBM pourra choisir lors de la planification de la mise à jour.
-</dd>
+<dd>Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs
+à vos applications. Vous devez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée. Vous pouvez
+sélectionner la date et l'heure de déploiement suggérées, l'option pour n'importe laquelle de vos fenêtres pré-approuvées, ou bien ouvrir le calendrier afin de
+sélectionner trois dates et heures spécifiques parmi lesquelles IBM pourra choisir pour planifier la mise à jour.</dd>
 </dl>
 
 
-### Définition de fenêtres de maintenance pré-approuvées 
+### Définition de fenêtres de maintenance pré-approuvées
 {: #preapprovedmaintenance}
 
-Avant de procéder à la planification et l'approbation des mises à jour, vous devez définir des fenêtres de maintenance pré-approuvées.
-Une mise à jour sans interruption est planifiée pendant les heures pré-approuvées. Elle n'a pas d'impact sur votre environnement, les applications en cours
-d'exécution ni l'accès de vos utilisateurs à vos applications. Ce type de mise à jour ne requiert pas d'approbation au cas par cas et est appliquée au
-cours des fenêtres de disponibilité pré-approuvées pour la maintenance que vous avez définies dans la page Mises à jour du système.
+Avant de procéder à la planification et l'approbation des mises à jour, vous devez définir des fenêtres de maintenance pré-approuvées. Les mises à
+jour sans interruption sont planifiées pour exécution au cours des fenêtres pré-approuvées. 
 
+Vous devez définir au minimum 24 heures disponibles réparties sur au moins trois jours de la semaine. Vous pouvez, par exemple, définir trois
+créneaux de 8 heures sur trois jours distincts, ou des créneaux de 6 heures sur quatre jours distincts. Pour garantir que les créneaux soient assez longs pour
+l'application d'une mise à jour, la durée de chaque créneau doit être d'au moins quatre heures.
 
-Vous devez définir au moins 24 heures disponibles dans une semaine, sur au moins 3 jours de la semaine. Par exemple, vous pouvez définir trois
-fenêtres de 8 heures sur trois jours, ou des fenêtres de 6 heures sur 4 jours. Pour garantir que la durée des fenêtres est suffisante pour l'application
-d'une mise à jour, chaque fenêtre doit couvrir au moins 4 heures.
+**Remarque **: seuls les utilisateurs disposant de l'autorisation Admin (`ops.admin`) peuvent planifier et approuver
+des mises à jour de maintenance.
 
-
-1. Accédez à **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* mises à jour en attente &gt; Gérer la disponibilité**.
-2. Développez la section **Gérer les fenêtres de disponibilité pour les mises à jour**. 
+1. Accédez à **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* en attente &gt; Gérer la disponibilité**.
+2. Développez la section **Gérer les fenêtres de disponibilité pour les mises à jour**.
 3. Cliquez sur **Ajouter** ![Ajouter](images/add-new.png).
-4. Définissez votre première fenêtre de disponibilité en sélectionnant la fréquence, la durée et l'heure de début de la fenêtre. 
+4. Définissez votre première fenêtre de disponibilité en sélectionnant la fréquence, la durée et l'heure de début de la fenêtre.
 5. Cliquez sur **Soumettre**.
-6. Répétez ce processus jusqu'à ce que vous ayez rempli les exigences minimales pour les fenêtres hebdomadaires.
+6. Répétez ce processus jusqu'à ce que vous ayez rempli les exigences minimales pour les fenêtres hebdomadaires. 
 
-
-### Définition de fenêtres d'indisponibilité pour la maintenance 
+### Définition de fenêtres d'indisponibilité pour la maintenance
 
 Une fois que vous avez défini vos fenêtres de disponibilité pré-approuvées pour la maintenance, vous pouvez choisir de définir des dates
 et des heures
@@ -204,68 +227,45 @@ spécifiques pendant lesquelles votre environnement ne pourra pas être mis à j
 lequel
 l'activité est élevée et vous ne voulez pas qu'une maintenance soit appliquée afin de vous assurer que vos applications seront disponibles pour vos utilisateurs.
 
-
-1. Accédez à **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* mises à jour en attente &gt; Gérer la disponibilité**.
-2. Développez la section **Gérer les fenêtres d'indisponibilité pour les mises à jour**. 
-3. Cliquez sur **Add new** ![Add new](images/add-new.png).
-4. Définissez votre fenêtre d'indisponibilité en sélectionnant la fréquence, la durée et l'heure de début de la fenêtre. 
+1. Accédez à **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* en attente &gt; Gérer la disponibilité**.
+2. Développez la section **Gérer les fenêtres d'indisponibilité pour les mises à jour**.
+3. Cliquez sur **Ajouter** ![Ajouter](images/add-new.png).
+4. Définissez votre fenêtre d'indisponibilité en sélectionnant la fréquence, la durée et l'heure de début de la fenêtre.
 5. Cliquez sur **Soumettre**.
 
-### Planification et approbation des mises à jour 
+### Planification et approbation des mises à jour
 {: #scheduleandapprove}
 
 Une fois que vous avez défini vos fenêtres de maintenance pré-approuvées, les mises à jour sans interruption sont planifiées automatiquement à ces
 heures. Votre approbation explicite pour ces types de mise à jour n'est pas requise. Toutefois, vous pouvez afficher les détails de chaque mise à jour de
-maintenance, notamment les éléments mis à jour, la durée de la mise à jour et l'heure de planification de la mise à jour.
- 
+maintenance, notamment les éléments mis à jour, la durée de la mise à jour et l'heure de planification de la mise à jour. 
 
-Afin d'afficher les détails d'une mise à jour sans interruption, procédez comme suit : 
+Afin d'afficher les détails d'une mise à jour sans interruption, procédez comme suit :
 
-1. Accédez à **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* mises à jour en attente**.
-2. Identifiez les lignes de mise à jour pour lesquelles **Customer Scheduling Required** a pour valeur
-**No**.
-3. Sélectionnez la ligne de cette mise à jour pour afficher les détails. 
+1. Accédez à **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre * en attente**.
+2. Identifiez les lignes pour lesquelles **Customer Scheduling Required** a pour valeur **No**.
+3. Sélectionnez la ligne de cette mise à jour pour afficher les détails.
 
 Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs
-à vos applications. Vous devez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée.
-Vous pouvez sélectionner la date et l'heure de déploiement suggérées en fonction de vos fenêtres de mise à jour pré-approuvées ou sélectionner deux
-combinaisons date-heure supplémentaires parmi lesquelles IBM pourra choisir lors de la planification de la mise à jour.
-
+à vos applications. Vous devez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée. Vous pouvez
+sélectionner la date et l'heure de déploiement suggérées, l'option pour n'importe laquelle de vos fenêtres pré-approuvées, ou bien ouvrir le calendrier afin de
+sélectionner trois dates et heures spécifiques parmi lesquelles IBM pourra choisir pour planifier la mise à jour.
 
 Pour les mises à jour avec interruption requérant votre approbation, procédez comme suit :
 
-
-1. Accédez à **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* mises à jour en attente**.
-2. Identifiez les lignes de mise à jour pour lesquelles **Customer Scheduling Required** a pour valeur **Yes**.
+1. Accédez à **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre * en attente**.
+2. Identifiez les lignes pour lesquelles **Customer Scheduling Required** a pour valeur **Yes**.
 3. Sélectionnez la ligne de cette mise à jour afin de consulter les détails de la mise à jour, notamment sa description, la date et l'heure suggérées
 pour la mise à jour, les composants affectés et la durée de la mise à jour.
-
 4. Sélectionnez **Planifier et approuver**.
-5. Choisissez l'une des options suivantes : **Date suggérée**, **Autres dates** ou **Toute fenêtre pré-approuvée**.
-6. Cliquez sur **Soumettre**. 
+5. Choisissez l'une des options suivantes : **Date suggérée**, **Dates spécifiques** ou **Toute fenêtre pré-approuvée**. Si
+vous sélectionnez **Dates spécifiques**, vous pouvez ouvrir le calendrier pour sélectionner trois options parmi lesquelles IBM pourra choisir.
+6. Quand vous avez terminé, cliquez sur **Soumettre**. 
 
-En fonction de votre sélection, la mise à jour est appliquée à la date suggérée que vous avez acceptée, au cours de l'une de vos fenêtres
-pré-approuvées, ou à d'autres date et heure. Une fois la date de planification de votre mise à jour finalisée par IBM, elle est affichée dans les détails
-de la mise à jour dans la page **Mises à jour du système**. 
+En fonction de votre sélection, la mise à jour est planifiée pour son déploiement à la date suggérée que vous avez acceptée,
+lors d'une des fenêtres pré-approuvées ou à l'une des dates et heures spécifiques que vous avez sélectionnées. Lorsque la mise à jour est planifiée pour son
+déploiement par IBM, la date planifiée est indiquée dans les détails de la mise à jour sur la page **Mises à jour du système**.
 
-### Configuration d'un flux de calendrier pour les mises à jour planifiées 
-
-Dans la page Mises à jour du système, vous pouvez choisir d'effectuer le suivi du planning des mises à jour en cliquant sur l'icône
-**Calendrier** ![Calendrier](images/icon_calendar.svg) et en téléchargeant le fichier `.ics` afin
-d'importer les mises à jour planifiées dans une application de calendrier de votre choix :
-
-<ol>
-<li>Ouvrez votre application de calendrier.</li>
-<li>Téléchargez le fichier de calendrier en cliquant sur l'icône **Calendrier**
-![Calendrier](images/icon_calendar.svg), puis importez-le dans votre application de calendrier en utilisant le fichier
-`.ics`.</li>
-<li>Entrez vos données d'identification.</li>
-<li>Affichez vos mises à jour planifiées.</li>
-</ol>
-
-Vous pouvez également étendre la fonctionnalité de notification pour la page Administration à l'aide d'abonnements à des événements en vue de
-l'intégration à un service Web de votre choix. Pour configurer un abonnement à des notifications d'événement relatives à une mise à jour ou un incident,
-voir [Notifications et abonnements à des événements](index.html#oc_eventsubscription).
 
 ## Affichage des informations système
 {: #oc_system}
@@ -276,25 +276,21 @@ Vous pouvez développer et afficher diverses sections sur les mises à jour de m
 de la
 configuration LDAP.
 
-### Mises à jour du système en attente 
+### Mises à jour du système en attente
 
 La section Mises à jour affiche le nombre de notifications relatives à des mises à jour en attente qui requièrent une intervention de votre part. Il
 existe deux types de mise à jour de maintenance :
 
-
 <dl>
-<dt>Les mises à jour sans interruption </dt>
+<dt>Mises à jour sans interruption</dt>
 <dd>Une mise à jour sans interruption n'a pas d'impact sur votre environnement, vos applications en cours d'exécution ou l'accès de vos utilisateurs à vos
 applications. Ce type de mise à jour ne requiert pas d'approbation au cas par cas. Ces mises à jour sont appliquées au cours des fenêtres de
-disponibilité pré-approuvées pour la maintenance que vous avez définies dans la page Mises à jour du système.
-</dd>
-<dt>Les mises à jour avec interruption </dt>
-<dd>Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs à
-vos applications. Vous pouvez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée pour
-vous assurer que la mise à jour ne sera pas appliquée pendant les heures de bureau critiques.
-Vous pouvez sélectionner la date et l'heure de déploiement suggérées en fonction de vos fenêtres de mise à jour pré-approuvées ou sélectionner deux
-combinaisons date-heure supplémentaires parmi lesquelles IBM pourra choisir lors de l'application de la mise à jour.
-</dd>
+disponibilité pré-approuvées pour la maintenance que vous avez définies dans la page Mises à jour du système.</dd>
+<dt>Mises à jour avec interruption </dt>
+<dd>Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs
+à vos applications. Vous pouvez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée pour
+vous assurer que la mise à jour ne sera pas appliquée pendant les heures de bureau critiques. Vous pouvez sélectionner la date et l'heure de déploiement suggérées en fonction de vos fenêtres de mise à jour pré-approuvées ou sélectionner deux
+combinaisons date-heure supplémentaires parmi lesquelles IBM pourra choisir lors de l'application de la mise à jour.</dd>
 </dl>
 
 Pour plus d'informations sur la définition de fenêtres de maintenance pré-approuvées, la définition de dates d'indisponibilité spécifiques pour la
@@ -314,13 +310,12 @@ Dans la section Informations générales, vous pouvez consulter les informations
 Dans la section Détails de la configuration LDAP, vous pouvez sélectionner le serveur LDAP et afficher des informations sur les mappages des
 utilisateurs et des groupes. Si vous utilisez un ID Web {{site.data.keyword.IBM}}, il est indiqué dans cette section.
 
-## Affichage de l'utilisation et des rapports 
+## Affichage de l'utilisation et des rapports
 {: #oc_resource}
 
 Vous pouvez afficher différents types d'informations relatives à l'utilisation pour votre instance locale ou dédiée et pour votre compte
 {{site.data.keyword.Bluemix_notm}}. Vous pouvez aussi télécharger et afficher des rapports de sécurité et des journaux pour votre instance
 {{site.data.keyword.Bluemix_notm}}.
-
 
 - Des informations sur les ressources, notamment l'espace disque, l'utilisation de l'unité centrale, l'utilisation du réseau et les temps de réponse
 moyens. Voir [Utilisation des ressources](index.html#resourceusage).
@@ -436,7 +431,7 @@ contenu textuel des rapports et des journaux. Vous pouvez aussi choisir de filtr
 Le tableau ci-dessous présente la liste des rapports de sécurité qui sont générés pour l'environnement {{site.data.keyword.Bluemix_notm}}
 local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié.
 
-*Tableau 5. Liste des rapports de sécurité*
+*Tableau 6. Liste des rapports de sécurité*
 
 | **Catégorie** | **Rapport** | **Description** |      
 |-----------------|-------------------|---------------------|
@@ -478,8 +473,7 @@ incidents de sécurité. |
 
 Vous pouvez afficher le statut de l'environnement {{site.data.keyword.Bluemix_notm}} et de la console d'administration.
 
-
-### Statut de l'environnement {{site.data.keyword.Bluemix_notm}} 
+### Statut de l'environnement {{site.data.keyword.Bluemix_notm}}
 
 Vous pouvez surveiller le statut de votre instance {{site.data.keyword.Bluemix_notm}} à l'aide de la page Statut de
 {{site.data.keyword.Bluemix_notm}}. Cliquez sur l'icône **Compte et support** ![Compte et support](../support/images/account_support.svg), puis
@@ -487,21 +481,18 @@ sélectionnez **Statut**.
 
 La page Statut est l'emplacement central pour rechercher des notifications et des annonces sur les événements clés affectant la plateforme {{site.data.keyword.Bluemix_notm}} et les principaux services dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez vous abonner à un flux RSS pour recevoir les notifications automatiquement et ne pas avoir à les rechercher. Pour plus d'informations sur la page Statut et la configuration du flux RSS, voir [Affichage de {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
-### Statut de la console d'administration 
+### Statut de la console d'administration
 
 Après le déploiement initial de votre environnement {{site.data.keyword.Bluemix_notm}}, une vérification est effectuée automatiquement sur
-les composants utilisés pour administrer l'environnement.
-Vous pouvez accéder à la page Vérification de la console d'administration afin de vérifier le statut des composants après l'exécution de la
+les composants utilisés pour administrer l'environnement. Vous pouvez accéder à la page Vérification de la console d'administration afin de vérifier le statut des composants après l'exécution de la
 vérification. Pour
 ouvrir cette page, accédez à <code>https://console.&lt;sous-domaine&gt;.bluemix.net/check</code>, où `<sous-domaine>` est le nom de
 votre instance locale ou dédiée.
-
 
 Vous pouvez effectuer une vérification à tout moment. Vous devez être connecté pour pouvoir sélectionner l'option d'exécution de la vérification. Si
 vous rencontrez des problèmes lors de l'ajout d'un utilisateur, de l'édition d'une organisation ou de la gestion de vos services, exécutez cette
 vérification afin de déterminer si des composants sont défaillants ou déconnectés. Vous pouvez ouvrir un ticket de demande de service avec les informations
 générées par la vérification pour une résolution rapide du problème.
-
 
 ## Gestion de votre catalogue
 {: #oc_catalog}
@@ -519,7 +510,15 @@ la visibilité, sélectionnez l'une des options suivantes :
 - Pour contrôler la visibilité d'un plan individuel, sélectionnez le nom du plan, puis utilisez le menu déroulant afin de sélectionner
 **Activer pour toutes les organisations**, **Désactiver pour toutes les organisations** ou **Activer le plan pour des organisations spécifiques**.
 
-<!-- staging only start -->
+Vous pouvez également gérer l'ordre de priorité des packs de construction disponibles pour sélection par vos développeurs lorsqu'ils créent des
+applications compte tenu de leur compatibilité.
+
+1. Accédez à **ADMINISTRATION &gt; GESTION DU CATALOGUE**.
+2. Accédez à la section **Traitement**.
+3. Sélectionnez **Priorité du pack de construction**.
+4. Sélectionnez dans la liste l'option de pack de construction dont vous désirez définir la priorité.
+5. Cette option étant sélectionnée, utilisez les flèches pour déplacer l'option dans la liste. La priorité est définie en plaçant en tête de liste l'élément avec
+la priorité la plus élevée.
 
 ### Enregistrement d'un courtier de services
 {: #servicebrokerui}
@@ -560,62 +559,59 @@ JSON suivant de la réponse (GET) du Catalogue :</p>
 "services": [
    {
       "bindable":true,
-      "description":"Cool Service est une solution d'analyse et d'entreposage de données.",
+      "description":"Cool Service est une solution d'analyse et d'entreposage de données. ",
       "id":"cool-service-id",
       "name":"coolservice",
-      "tags":[
+      "tags": [
          "customer_dedicated"
       ],
-      "metadata":{
-         "displayName":"Cool Service",
+      "metadata": {
+         "displayName": "Cool Service",
          "serviceMonitorApi":"https://myservicesstatus.mybluemix.net/healthcheck/",
-         "providerDisplayName":"Société Cool",
-         "longDescription":"Cool Service est une solution d'analyse et d'entreposage des données. Vous pouvez placer rapidement vos données dans une base de
-données structurant les données en colonne en mémoire, de génération suivante, et commencer à exécuter des requêtes
-analytiques complexes.,
+         "providerDisplayName":"Cool company",
+         "longDescription":"Cool Service est une solution d'analyse et d'entreposage. Vous pouvez placer rapidement vos données dans une base de
+données de la prochaine génération structurant les données en colonne en mémoire et commencer à exécuter des requêtes analytiques complexes. ",
          "bullets":[
             {
                "title":"Rapide et simple",
                "description":"Cool Service utilise des innovations et la technologie structurant les données en colonne en mémoire, comme le traitement vectoriel parallèle et la compression afin d'analyser et de renvoyer rapidement les données pertinentes."
             },
             {
-               "title":"Connectivité",
+               "title": "Connectivité",
                "description":"Cool Service a été conçu pour vous permettre de vous connecter facilement à tous vos services et à toutes vos applications. Vous pouvez
 commencer à analyser vos données immédiatement à l'aide d'outils familiers."
             }
          ],
-         "featuredImageUrl":"http://chemin/icon_64x64.png",
-         "imageUrl":"http://chemin/icon_50x50.png",
-         "mediumImageUrl":"http://chemin/icon_32x32.png",
-         "smallImageUrl":"http://chemin/icon_24x24.png",
-         "documentationUrl":"http://chemin/documentation.html",
-         "instructionsUrl":"http://chemin/servicesample.md",
-         "termsUrl":"http://chemin/terms_of_agreement.pdf",
-         "media":[
-            {
-               "type":"youtube",
-               "thumbnailUrl":"http://chemin/thumbnail.png",
-               "url":"http://chemin/youtube/video",
-               "caption":"Apprendre à utiliser Cool Service en 60 secondes"
+         "featuredImageUrl": "http://chemin/accès/icône_64x64.png",
+         "imageUrl": "http://chemin/accès/icône_50x50.png",
+         "mediumImageUrl": "http://chemin/accès/icône_32x32.png",
+         "smallImageUrl": "http://chemin/accès/icône_24x24.png",
+         "documentationUrl": "http://chemin/accès/documentation.html",
+         "instructionsUrl": "http://chemin/accès/serviceexemple.md",
+         "termsUrl": "http://chemin/accès/termes_du_contrat.pdf",
+         "media": [{
+               "type": "youtube",
+               "thumbnailUrl": "http://chemin/accès/miniature.png",
+               "url": "http://chemin/accès/youtube/vidéo",
+               "caption": "Utilisation de Cool Service dans 60 secondes"
             },
             {
-               "type":"image",
-               "thumbnailUrl":"http://chemin/thumbnail.png",
-               "url":"http://chemin/image_file.png",
-               "caption":"Cool Service connecte des applications"
+               "type": "image",
+               "thumbnailUrl": "http://chemin/accès/miniature.png",
+               "url": "http://chemin/accès/fichier_image.png",
+               "caption": "Cool Service connecte des applications"
             },
             {
-               "type":"video",
-               "thumbnailUrl":"http://chemin/thumb.png",
-               "caption":"Cool Service fonctionne avec des tableaux",
-               "source":[
-                  {
+               "type": "video",
+               "thumbnailUrl": "http://chemin/accès/minia.png",
+               "caption": "Cool Service fonctionne avec des tables",
+               "source": [{
                      "type":"video/mp4",
-                     "url":"http://chemin/video_file.mp4"
+                     "url": "http://chemin/accès/fichier_vidéo.mp4"
                   },
                   {
                      "type":"video/ogg",
-                     "url":"http://chemin/video_file.ogg"
+                     "url": "http://chemin/accès/fichier_vidéo.ogg"
                   }
                ]
             }
@@ -624,10 +620,11 @@ commencer à analyser vos données immédiatement à l'aide d'outils familiers."
       "plans":[
          {
             "name":"smallplan",
-            "description":"Schéma et espace table dédiés par instance de service sur un serveur partagé. 1 Go et 10 Go de stockage de données compressées peuvent correspondre respectivement à 5 Go et 50 Go de données non compressés selon des taux de compression typiques.",
+            "description":"Schéma et espace table dédiés par instance de service sur un serveur partagé. 1 Go et 10 Go de stockage de base de données
+compressées peuvent contenir respectivement jusqu'à 5 Go et 50 Go de données non compressées selon des taux de compression typiques.",
             "free":false,
             "id":"cool-service-plan-id",
-            "metadata":{
+            "metadata": {
                "bullets":[
                   "1 Go minimum par instance. 10 Go maximum par instance."
                ],
@@ -638,7 +635,7 @@ commencer à analyser vos données immédiatement à l'aide d'outils familiers."
                      "partNumber":"D15UTLL"
                   }
                ],
-               "displayName":"Petit"
+               "displayName":"Small"
             }
          }
       ]
@@ -697,11 +694,11 @@ Pour créer une organisation et ajouter des responsables, procédez comme suit :
 
 Vous pouvez créer des espaces dans votre organisation, par exemple un espace *dev* comme environnement de développement, un espace
 *test* comme environnement de test et un espace *production* comme environnement de production. Ensuite, vous pouvez
-associer vos applications à des espaces. Procédez comme suit pour créer un espace : 
+associer vos applications à des espaces. Procédez comme suit pour créer un espace :
 
 1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**. 
-2. Sélectionnez l'organisation à laquelle ajouter un espace. 
+&gt; page **Gérer les organisations**.
+2. Sélectionnez l'organisation à laquelle ajouter un espace.
 3. Cliquez sur **Créer un espace**.
 4. Entrez un nom d'espace.
 5. Cliquez sur **Créer**.
@@ -720,8 +717,7 @@ le quota total alloué. La liste de termes suivante définit les types d'utilisa
 	<dt><strong>Mémoire système totale</strong></dt>
 	<dd>Quantité de mémoire physique totale qui est disponible dans votre environnement.</dd>
 	<dt><strong>Quota déployé</strong></dt>
-	<dd>Quantité de mémoire allouée à toutes les applications déployées dans toutes les organisations. La somme du quota déployé peut dépasser la quantité de
-mémoire système totale physique pour votre environnement. Par exemple, si la quantité de mémoire système totale est de 16 Go et que vous allouez 4 Go de mémoire à chaque organisation pour cinq organisations
+	<dd>Quantité de mémoire allouée à toutes les applications déployées dans toutes les organisations. La somme du quota déployé peut dépasser la quantité de mémoire système totale physique pour votre environnement. Par exemple, si la quantité de mémoire système totale est de 16 Go et que vous allouez 4 Go de mémoire à chaque organisation pour cinq organisations
 différentes, le quota total est supérieur à la quantité de mémoire système totale qui vous a été allouée pour toutes les organisations. Cependant, dans la plupart des cas, les organisations n'utilisent pas le quota total qui leur est alloué individuellement. De plus, les organisations
 n'utilisent pas toutes la totalité de leur quota d'allocation de mémoire simultanément. </dd>
 	<dt><strong>Total quota</strong></dt>
@@ -736,7 +732,8 @@ superflue**.
 
 	<dl>
 	<dt><strong>Utilisation de la mémoire la plus élevée</strong></dt>
-	<dd>Utilisez cette option pour identifier l'organisation qui utilise la quantité de mémoire la plus élevée. Effectuez un tri par utilisation de la mémoire la plus élevée pour identifier les organisations qui utilisent la quantité de mémoire la plus élevée. La liste est triée par quota déployé. </dd>
+	<dd>Utilisez cette option pour identifier l'organisation qui utilise la quantité de mémoire la plus élevée. Effectuez un tri par utilisation de la mémoire la plus élevée pour identifier les organisations qui utilisent la quantité de mémoire la plus
+élevée. La liste est triée par quota déployé. </dd>
 	<dt><strong>Allocation de mémoire superflue</strong></dt>
 	<dd>Utilisez cette option pour identifier les organisations dont le plan d'établissement des quotas est supérieur aux besoins.
 	Effectuez un tri par allocation de mémoire superflue pour identifier les organisations qui utilisent la quantité de mémoire la plus faible par rapport au
@@ -802,21 +799,21 @@ Vous pouvez rechercher des utilisateurs existants, supprimer des utilisateurs et
 `write` (écrire), vous pouvez ajouter des utilisateurs.
 
   1. Pour ajouter un seul utilisateur depuis votre annuaire LDAP, cliquez sur **Ajouter un utilisateur**.
-  2. Dans la zone **Rechercher**, entrez l'adresse électronique de l'utilisateur, puis sélectionnez l'utilisateur dans la liste. 
+  2. Dans la zone **Rechercher**, entrez l'adresse électronique de l'utilisateur, puis sélectionnez l'utilisateur dans la liste.
   3. Ensuite, dans la zone **Organisation**, choisissez l'organisation à laquelle ajouter l'utilisateur en entrant le nom de
-l'organisation et en le sélectionnant dans la liste. 
+l'organisation et en le sélectionnant dans la liste.
   4. Pour ajouter l'utilisateur à l'organisation sélectionnée, cliquez sur **Ajouter un utilisateur**.
 
   **Remarque** : lorsque l'opération d'ajout aboutit, l'utilisateur est ajouté au tableau pour que vous puissiez
 l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit ne leur est affecté.
 
-* Ajoutez un groupe d'utilisateurs depuis votre annuaire LDAP. 
+* Ajoutez un groupe d'utilisateurs depuis votre annuaire LDAP.
 
   1. Cliquez sur **Ajouter un groupe d'utilisateurs**.
-  2. Dans la zone **Rechercher**, entrez un nom de groupe à rechercher, puis sélectionnez le nom de groupe dans la liste. 
+  2. Dans la zone **Rechercher**, entrez un nom de groupe à rechercher, puis sélectionnez le nom de groupe dans la liste.
   3. Ensuite, dans la zone **Organisation**, choisissez l'organisation à laquelle ajouter le groupe d'utilisateurs en entrant le nom
 de
-l'organisation et en le sélectionnant dans la liste. 
+l'organisation et en le sélectionnant dans la liste.
   4. Pour ajouter le groupe d'utilisateurs à l'organisation sélectionnée, cliquez sur **Ajouter des utilisateurs**.
   **Remarque** : les groupes de plus de 50 utilisateurs sont ajoutés via un travail par lots en arrière-plan. Lorsque l'opération
 d'ajout aboutit, l'utilisateur ou le groupe est ajouté au tableau pour que vous puissiez l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit ne leur est affecté.
@@ -824,24 +821,24 @@ d'ajout aboutit, l'utilisateur ou le groupe est ajouté au tableau pour que vous
 * Ajoutez un groupe d'utilisateurs en important une feuille de calcul qui répertorie des ID utilisateur, des adresses électroniques d'utilisateur et
 l'organisation à laquelle vous voulez ajouter l'utilisateur.
 
-
   1. Cliquez sur **Importer des utilisateurs**.
-  2. Cliquez sur **Télécharger un modèle (.CSV)** pour télécharger une feuille de calcul comportant les colonnes requises que
-vous pouvez remplir, ou créez votre propre feuille de calcul comportant au moins les en-têtes de colonne requis : **ID utilisateur**,
-**Adresse électronique** et **Organisation**.
+  2. Cliquez sur **Télécharger un modèle (.CSV)** pour télécharger une feuille de calcul avec les colonnes requises que vous pourrez
+remplir ou créez votre propre feuille de calcul incluant les en-têtes de colonne requis : **ID utilisateur**, **Courrier
+électronique**, **Organisation**.  Deux colonnes facultatives sont également incluses dans le modèle : **Prénom** et
+**Nom**.
   3. Indiquez les valeurs d'utilisateur dans les colonnes requises. Si vous n'utilisez pas d'annuaire LDAP, utilisez les en-têtes de colonne requis
-et les en-têtes de colonne facultatifs **Prénom** et **Nom** pour votre importation d'utilisateur. 
+et les en-têtes de colonne facultatifs pour votre importation d'utilisateurs.
   4. Sauvegardez votre fichier et cliquez sur **Envoyer le fichier par téléchargement**.
  
 
   **Remarque** : entrez les ID utilisateur qui correspondent aux valeurs utilisées dans votre registre d'utilisateurs. Les
 colonnes de votre feuille de calcul peuvent apparaître dans n'importe quel ordre tant que toutes les colonnes requises sont présentes. Vous recevez un
 message de configuration indiquant que tous les utilisateurs ont été ajoutés, si l'importation a abouti. Si l'importation n'a abouti que pour certains
-utilisateurs, consultez le message d'erreur afin de prendre des mesures pour les utilisateurs qui n'ont pas pu être ajoutés. 
+utilisateurs, consultez le message d'erreur afin de prendre des mesures pour les utilisateurs qui n'ont pas pu être ajoutés.
 
 * Retirez des utilisateurs. Si vous disposez du droit `Admin` ou du droit `Utilisateurs` avec l'accès `write` (écrire), vous pouvez retirer des utilisateurs.
 
-    1. Localisez l'utilisateur et cliquez sur l'icône ![Supprimer](images/icon_trash.svg). 
+    1. Localisez l'utilisateur et cliquez sur l'icône ![Supprimer](images/icon_trash.svg).
     2. Cliquez sur **Retirer**.
 
 ### Droits
@@ -849,7 +846,7 @@ utilisateurs, consultez le message d'erreur afin de prendre des mesures pour les
 
 Les droits suivants peuvent être accordés aux utilisateurs :
 
-*Tableau 6. Droits*
+*Tableau 7. Droits*
 
 | **Droit d'utilisateur** | **Description** |       
 |-----------------|-------------------|
@@ -866,7 +863,7 @@ ajouter ou retirer (accès `write`) des utilisateurs. Ce droit ne vous permet pa
 Les droits peuvent être activés, ou l'utilisateur peut se voir attribuer l'accès `view` (afficher) ou `write`
 (écrire) pour ces droits, comme représenté par les icônes suivantes :
 
-* L'icône ![Activé](images/icon_enabled.svg) représentant une coche située à côté d'un droit signifie que le droit est activé. 
+* L'icône ![Activé](images/icon_enabled.svg) représentant une coche située à côté d'un droit signifie que le droit est activé.
 * L'icône ![Afficher](images/icon_read.svg) représentant un oeil signifie que l'utilisateur dispose de l'accès
 `view` (afficher en
 lecture seule) pour ce droit.
@@ -875,7 +872,7 @@ lecture seule) pour ce droit.
 c'est-à-dire éditer, ajouter ou supprimer) pour ce droit.
 
 Pour éditer les droits et les organisations d'autres utilisateurs, vous devez disposer du droit `Admin`. Pour éditer les droits, localisez l'utilisateur et cliquez sur son nom. Dans
-la page **Edition d'utilisateur**, vous pouvez activer ou désactiver les droits : 
+la page **Edition d'utilisateur**, vous pouvez activer ou désactiver les droits :
 
 * Sélectionnez **Activé** dans la liste pour activer un droit.
 * Sélectionnez **Read** dans la liste pour que l'utilisateur dispose de l'accès `view` (afficher en lecture
@@ -884,7 +881,6 @@ supprimer) pour ce droit.
 * Sélectionnez **Désactivé** pour désactiver le droit.
 
 Pour ajouter ou retirer un utilisateur dans une organisation, sélectionnez l'une des options suivantes :
-
 
 * Pour ajouter un utilisateur à une organisation, sélectionnez le nom d'utilisateur dans le tableau afin d'accéder à l'écran **Edition
 d'utilisateur**. Ensuite, utilisez la zone de recherche pour localiser une organisation, sélectionnez-la dans la liste, puis cliquez sur
@@ -1115,8 +1111,8 @@ de cookie.</dd>
             "emails": [
                 "un_id_utilisateur@domaine.com"
             ],
-            "first_name": "Un_prénom",
-            "last_name": "Un_nom",
+            "first_name": "un_prénom",
+            "last_name": "un_nom",
             "user_id": "un_id_utilisateur@domaine.com"
         }
     ],
@@ -1251,7 +1247,7 @@ POST /codi/v1/serviceBrokers
 ### Demande
 {: #registerrequest}
 
-*Tableau 7. Zones*
+*Tableau 8. Zones*
 
 | **Nom** | **Description** |
 |-----------------|-------------------|
@@ -1332,7 +1328,7 @@ Utilisez l'API et les exemples de code suivants pour mettre à jour un service.
 ### Demande
 {: #updaterequest}
 
-*Tableau 8. Zones*
+*Tableau 9. Zones*
 
 | **Nom** | **Description** |
 |-----------------|-------------------|
@@ -1404,7 +1400,7 @@ Content-Type: application/json
 
 Utilisez l'API et les exemples de code suivants pour supprimer un service.
 
-*Tableau 9. Paramètre*
+*Tableau 10. Paramètre
 
 | **Nom** | **Description** |
 |-----------------|-------------------|

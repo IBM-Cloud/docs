@@ -19,6 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} 系统详细信息
 {: #openwhisk_reference}
 *上次更新时间：2016 年 4 月 14 日*
+{: .last-updated}
 
 以下各部分提供了有关 {{site.data.keyword.openwhisk}} 系统的更多详细信息。
 {: shortdesc}
@@ -39,11 +40,15 @@ copyright:
 
 ### 标准名称
 
-实体的标准名称为 `/namespaceName[/packageName]/entityName`。请注意，`/` 用于对名称空间、包和实体定界。此外，名称空间必须带有前缀 `/`。
+实体的标准名称为 `/namespaceName[/packageName]/entityName`。
+请注意，`/` 用于对名称空间、包和实体定界。
+此外，名称空间必须带有前缀 `/`。
 
 为了方便起见，如果名称空间是用户的 *缺省名称空间*，那么可以保留不变。
 
-例如，假设用户的缺省名称空间为 `/myOrg`。下面是一些实体的标准名称及其别名的示例。
+
+例如，假设用户的缺省名称空间为 `/myOrg`。
+下面是一些实体的标准名称及其别名的示例。
 
 | 标准名称 | 别名 | 名称空间 | 包 | 名称 |
 | --- | --- | --- | --- | --- |
@@ -84,7 +89,7 @@ copyright:
 
 操作的调用并未排序。如果用户通过命令行或 REST API 调用一个操作两次，那么第二个调用可能会先于第一个调用运行。如果操作有副作用，那么可能会以任意顺序观察到这些副作用。
 
-此外，不保证操作以原子方式执行。两个操作可以并行运行，其副作用可能会交错。任何并行副作用都将依赖于实施。
+此外，不保证操作以原子方式执行。两个操作可以并行运行，其副作用可能会交错。对于副作用，OpenWhisk 并不能确保任何特定的并行一致性模型。任何并行副作用都将依赖于实施。
 
 ### 至多一次语义
 {: #openwhisk_atmostonce}
@@ -256,6 +261,7 @@ JavaScript 操作在 Node.js V0.12.9 环境中执行，带有可供操作使用�
 - async
 - body-parser
 - btoa
+- cheerio
 - cloudant
 - commander
 - consul
@@ -264,6 +270,7 @@ JavaScript 操作在 Node.js V0.12.9 环境中执行，带有可供操作使用�
 - errorhandler
 - express
 - express-session
+- gm
 - jade
 - log4js
 - merge
@@ -278,11 +285,13 @@ JavaScript 操作在 Node.js V0.12.9 环境中执行，带有可供操作使用�
 - semver
 - serve-favicon
 - socket.io
+- socket.io-client
 - superagent
 - swagger-tools
 - tmp
 - watson-developer-cloud
 - when
+- ws
 - xml2js
 - xmlhttprequest
 - yauzl
@@ -300,6 +309,61 @@ Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二�
 主二进制程序应该复制到 `dockerSkeleton/client/clientApp` 文件。任何附带文件或库都可以位于 `dockerSkeleton/client` 目录中。
 
 您还可以通过修改 `dockerSkeleton/Dockerfile` 来包含任何编译步骤或依赖关系。例如，如果操作是 Python 脚本，那么可以安装 Python。
+
+
+## REST API
+
+通过 REST API，可以使用系统中的所有功能。操作、触发器、规则、包、激活和名称空间具有集合和实体端点。
+
+以下是集合端点：
+
+- `https://$BASEURL/api/v1/namespaces`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations`
+
+您可以在集合端点上执行 GET 请求，以访存集合中的实体列表。
+
+每一个实体类型都具有实体端点：
+
+- `https://$BASEURL/api/v1/namespaces/{namespace}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations/{activationName}`
+
+名称空间和激活端点仅支持 GET 请求。操作、触发器、规则和包端点支持 GET、PUT 和 DELETE 请求。操作、触发器和规则的端点还支持 POST 请求，其用于调用操作和触发器，并启用或禁用规则。有关详细信息，请参阅 [API参考](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json)。
+
+所有 API 都通过 HTTP 基本认证进行保护。基本认证凭证位于 `~/.wskprops` 文件的 `AUTH` 属性中，以冒号分隔。您还可以在 [CLI 配置步骤](../README.md#setup-cli)中，对这些凭证进行检索。
+
+以下示例使用 cURL 命令，获取 `whisk.system` 名称空间中所有包的列表：
+
+```
+curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
+```
+{: pre}
+```
+[
+  {
+    "name": "slack",
+    "binding": false,
+    "publish": true,
+    "annotations": [
+      {
+        "key": "description",
+        "value": "Package which contains actions to interact with the Slack messaging service"
+      }
+    ],
+    "version": "0.0.9",
+    "namespace": "whisk.system"
+  },
+  ...
+]
+```
+{: screen}
 
 
 ## 系统限制

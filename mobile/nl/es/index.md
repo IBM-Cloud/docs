@@ -1,6 +1,7 @@
 # Creación de apps para móvil
 {: #mobile}
-*Última actualización: 28 de enero de 2016* 
+*Última actualización: 28 de enero de 2016*
+{: .last-updated} 
 
 Con {{site.data.keyword.Bluemix}} Mobile Services, puede incorporar servicios de nube integrados, gestionados y escalables a las aplicaciones móviles sin intervención de TI. Céntrese en crear sus apps para móvil en lugar de en solucionar la complejidad de gestionar la infraestructura de fondo.
 
@@ -13,7 +14,7 @@ Con {{site.data.keyword.Bluemix}} Mobile Services, puede incorporar servicios de
 Proporciona una instancia de cada uno de los {{site.data.keyword.Bluemix_notm}} Mobile Services y enlaza el servicio con la aplicación Node.js. </li>
 		</ul>
 	</td>
-	<td> <img src="images/mf_boiler_icon.png" alt="Bluemix Mobile Services" width="500"> Contenedor modelo de {{site.data.keyword.mobilefirstbp}} Starter</td>
+	<td> <img src="images/mf_boiler_icon.png" alt="Bluemix Mobile Services" width="500"> Contenedor modelo de {{site.data.keyword.mobilefirstbp}} Starter </td>
 </tr>
 </table>
 

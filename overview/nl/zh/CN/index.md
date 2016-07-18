@@ -17,6 +17,7 @@ copyright:
 {: #overview}
 
 *上次更新时间：2016 年 5 月 9 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 是一种 {{site.data.keyword.IBM}} 开放云平台。通过该平台，移动应用程序和 Web 应用程序开发者可以访问 {{site.data.keyword.IBM_notm}} 软件来执行集成、安全、事务以及其他关键功能，还可以访问业务合作伙伴提供的软件。
 {:shortdesc}
@@ -191,7 +192,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 <dt>{{site.data.keyword.IBM_notm}} Containers</dt>
     <dd>利用 {{site.data.keyword.IBM_notm}} Containers 基础架构，您可以在支持容器部署的任何位置运行 Web 应用程序。*容器*是一个对象，用于容纳应用程序运行所需的所有内容。此基础架构中包含用于可信映像的专用注册表，方便您上传、存储和检索这些映像。然后，您可以让这些映像可用于 {{site.data.keyword.Bluemix_notm}} 中，并在平台中管理容器。{{site.data.keyword.IBM_notm}} Containers 基础架构可水平和垂直扩展。您可以使用公共 Docker Hub 中提供的所有映像，还可以使用 Docker API 和命令行界面来管理 {{site.data.keyword.Bluemix_notm}} 上的容器。{{site.data.keyword.IBM_notm}} 还在 Containers 注册表中提供一些公共映像，供您使用和扩展。    {{site.data.keyword.IBM_notm}} Containers 用于在托管的云环境中运行 Docker 容器。Docker 会添加一个引擎，该引擎会将应用程序部署到用于运行容器的虚拟环境中。Docker 还会提供一个环境，供您用于运行代码。当您准备就绪后，它会提供相应的工具，让您可以将代码从开发环境转移到测试环境，然后再转移到生产环境。
 
-    要了解有关 {{site.data.keyword.IBM_notm}} Containers 的更多信息，请参阅 [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)。</dd>
+要了解有关 {{site.data.keyword.IBM_notm}} Containers 的更多信息，请参阅 [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)。</dd>
 <dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (BETA)</dt>
     <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} 是一种托管的云环境，属于 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 的一部分，可用于构建、运行、管理和监视您的应用程序，同时保持对应用程序以及运行应用程序的中间件的最大控制权。使用 {{site.data.keyword.virtualmachinesshort}} 来隔离您的业务解决方案，尤其是在公共云中部署应用程序时。</p>
 <p>    

@@ -18,6 +18,7 @@ copyright:
 
 # 使用社区 buildpack
 *上次更新时间：2016 年 3 月 15 日*
+{: .last-updated}
 
 如果在 {{site.data.keyword.Bluemix}}“目录”中找不到提供所需运行时的入门模板，那么可以将外部 buildpack 添加到 {{site.data.keyword.Bluemix_notm}} 中。使用 cf push 命令部署应用程序时，可以指定 Cloud Foundry 兼容的定制 buildpack。
 {:shortdesc}
@@ -32,9 +33,9 @@ copyright:
 
 ```
 cf buildpacks
-正在获取 buildpack...
+Getting buildpacks...
 
-buildpack          位置   已启用    已锁定   文件名
+buildpack      position   enabled   locked   filename
 ...
 java_buildpack     7      true      false    buildpack_java_v2.0.2.zip
 ruby_buildpack     8      true      false    buildpack_ruby_v46-245-g2fc4ad8.zip

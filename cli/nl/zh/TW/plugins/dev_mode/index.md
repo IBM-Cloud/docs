@@ -14,10 +14,13 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# 開發模式 CLI
+# （已淘汰）開發模式 CLI
 {: #devmodecli}
 
-*前次更新：2016 年 4 月 11 日*
+*前次更新：2016 年 5 月 12 日*
+{: .last-updated}
+
+**這個 CLI 已淘汰：**請不要使用開發模式 (dev_mode) CLI，而是改用 IBM Eclipse Tools for Bluemix 或 DevOps Web IDE。您可以繼續使用 dev_mode CLI 到 2016 年 6 月 30 日止。
 
 您可以使用 Bluemix 開發模式指令行介面 (dev_mode CLI)，在應用程式於雲端執行時更新應用程式。dev_mode CLI 建置為 cf CLI 外掛程式，且同時支援 Liberty 和 IBM Node.js 應用程式。
 {: shortdesc}
@@ -26,7 +29,7 @@ copyright:
 您可以使用 dev_mode CLI 來執行下列作業：
 - 在開發模式與標準模式之間切換應用程式。
 - 漸進式地更新應用程式檔案，而不必進行新的推送。
-- 在現有儲存器中啟動、停止或重新啟動應用程式。
+- 在現有容器中啟動、停止或重新啟動應用程式。
 
 ## 安裝 dev_mode 外掛程式
 **必要條件：**開始之前，請先安裝 Cloud Foundry CLI。如需詳細資料，請參閱[開始使用 Cloud Foundry 指令行介面撰寫程式碼](https://github.com/cloudfoundry/cli)。 
@@ -35,10 +38,10 @@ copyright:
 使用下列其中一個方法安裝 dev_mode 指令行工具：
 - 在本端安裝。
   1. 從 [IBM Bluemix CLI 外掛程式儲存庫](http://plugins.{DomainName})下載您的平台的 dev_mode 外掛程式。
-  2. 使用 cf install-plugin 指令安裝 dev_mode 外掛程式：
+  2. 移至儲存 dev_mode 外掛程式的資料夾，然後使用 cf install-plugin 指令來安裝 dev_mode 外掛程式。例如： 
   
         ```
-        cf install-plugin dev_mode-linux_amd64
+        cf install-plugin dev_mode-linux64
         ```
 
 - 從 Bluemix CLI 儲存庫安裝。
@@ -124,7 +127,8 @@ cf mode <appName> <dev|normal>
 ## status
 {: #status}
 
-顯示應用程式模式及執行時期狀態。```
+顯示應用程式模式及運行環境狀態。
+```
 cf status <appName>
 ```
 
@@ -140,11 +144,13 @@ cf update-file <remotePath> <localPath> [command_options]
 ```
 
 
-<strong>指令選項</strong>：<dl>
+<strong>指令選項</strong>：
+
+   <dl>
    <dt>expand</dt>
    <dd>指出是否必須從 zip 檔案擷取上傳的檔案。</dd>
    <dt>restart</dt>
-   <dd>檔案更新之後，重新啟動應用程式執行時期。</dd>
+   <dd>檔案更新之後，重新啟動應用程式運行環境。</dd>
    </dl>
 
 
@@ -159,15 +165,16 @@ cf delete-file <remotePath> [command_options]
 ```
 
 
-<strong>指令選項</strong>：<dl>
+<strong>指令選項</strong>：
+ <dl>
    <dt>restart</dt>
-   <dd>檔案更新之後，重新啟動應用程式執行時期。</dd>
+   <dd>檔案更新之後，重新啟動應用程式運行環境。</dd>
   </dl>
 
 
 ## start-inplace
 {: #start_inplace}
-在現有儲存器中啟動應用程式。
+在現有容器中啟動應用程式。
 
 ```
 cf start-inplace <appName>
@@ -177,7 +184,7 @@ cf start-inplace <appName>
 
 ## stop-inplace
 {: #stop_inplace}
-在現有儲存器中停止應用程式。
+在現有容器中停止應用程式。
 
 ```
 cf stop-inplace <appName>
@@ -188,7 +195,7 @@ cf stop-inplace <appName>
 ## restart-inplace
 {: #restart_inplace}
 
-在現有儲存器中重新啟動應用程式。
+在現有容器中重新啟動應用程式。
 
 ```
 cf restart-inplace <appName>
@@ -201,10 +208,8 @@ cf restart-inplace <appName>
 
 ## 相關鏈結
 {: #general}
-
-<!-- Include a link to your full product documentation, pricing sheet, IBM Bluemix prerequisites -->
-
-
-* [CLI 和開發工具](../../index.html#cli){:new_window}
+* [開發模式 CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
+* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

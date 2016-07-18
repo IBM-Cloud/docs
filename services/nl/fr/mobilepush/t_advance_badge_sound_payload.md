@@ -28,8 +28,10 @@ chaîne du fichier son à utiliser.
 
 ###Android
 
+Ajoutez votre fichier son dans le répertoire `res/raw` de votre application Android. Lors de l'envoi de la notification, ajoutez le nom du fichier son dans la zone sound de la notification push. 
+
 ```
-"settings": {
+"settings":{
      "gcm" : {
      "sound":"tt.wav",
 	  }
@@ -58,7 +60,7 @@ vous voulez envoyer avec la notification push.
 ## Conservation des notifications Android 
 {: #hold-notifications-android}
 
-Lorsque votre application passe en arrière-plan, il peut être judicieux que Push conserve les notifications qui lui sont envoyées. Pour conserver des notifications, appelez la méthode hold() dans la méthode onPause() de l'activité qui traite les notifications push.
+Lorsque votre application passe en arrière-plan, il peut être judicieux que la notification push conserve les notifications qui sont envoyées à votre application. Pour conserver des notifications, appelez la méthode hold() dans la méthode onPause() de l'activité qui traite les notifications push.
 
 ```
 @Override
@@ -103,7 +105,7 @@ votre application.
 	acceptAction.title = "Accept"
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground*/
+	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 	```
 	
 	```
@@ -172,11 +174,9 @@ catégorie.
 
 	```
 	//For Swift
-	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-
-	application.registerUserNotificationSettings(notificationSettings)
-	application.registerForRemoteNotifications()
+	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications() 
 	```
 	
 ## Traitement des notifications iOS interactives  

@@ -1,19 +1,22 @@
 ---
 
-Copyright : 2016
+copyright:
+  years: 2016
 
 ---
 
 # Configuration du SDK client pour iOS (Swift SDK) de {{site.data.keyword.amashort}}
 {: #custom-ios}
 
-Configurez votre application iOS qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
+Configurez votre application iOS qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.  Le nouveau SDK Swift {{site.data.keyword.amashort}} qui vient de sortir améliore les fonctionnalités fournies par le SDK Mobile Client Access Objective-C existant et en ajoute de nouvelles.
+
+**Remarque :** alors que le SDK Objective-C reste complètement pris en charge et est toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix_notm}} Mobile Services, il est prévu qu'il soit interrompu plus tard dans l'année et remplacé par le nouveau SDK Swift.
 
 ## Avant de commencer
 {: #before-you-begin}
 
 Vous devez disposer d'une ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configuré pour utiliser un fournisseur d'identité personnalisé.  Votre appli mobile doit aussi être instrumentée à l'aide du SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir les sujets suivants :
- * [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
  * [Configuration du SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
  * [Utilisation d'un fournisseur d'identité personnalisé](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Création d'un fournisseur d'identité personnalisé](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
@@ -38,45 +41,8 @@ Vous devez disposer d'une ressource protégée par une instance du service {{sit
 
  1. Cliquez sur **Sauvegarder**.
 
-## Configuration du SDK client de {{site.data.keyword.amashort}} pour iOS
- {: #custom-auth-ios-sdk}
 
-### Installation de CocoaPods
- {: #custom-auth-cocoapods}
 
- Le SDK client de {{site.data.keyword.amashort}} est distribué avec CocoaPods, un gestionnaire de dépendances pour les projets iOS. CocoaPods télécharge automatiquement les artefacts à partir des référentiels et les met à la disposition de votre application iOS.
-
- 1. Ouvrez Terminal et lancez la commande `pod --version`. Si CocoaPods est déjà installé, le numéro de version est affiché. Vous pouvez passer à la section suivante de ce tutoriel.
-
- 1. Installez CocoaPods en exécutant `sudo gem install cocoapods`. Reportez-vous au [site Web CocoaPods](https://cocoapods.org/) si vous avez besoin d'autres instructions.
-
- 1. Fermez XCode.
-
- 1. Ouvrez un terminal et utilisez la commande `cd` pour accéder à votre répertoire de projet.
-
- 1.  Exécutez `pod init`.
-
-### Installation du logiciel SDK client avec CocoaPods
-{: #custom-ios-sdk-cocoapods}
-
-Utilisez le gestionnaire de dépendances CocoaPods pour installer le SDK client de {{site.data.keyword.amashort}}.
-
-1. Ouvrez Terminal et accédez au répertoire racine de votre projet iOS.
-
-1. Modifiez le fichier `Podfile` en lui ajoutant les lignes suivantes .
-
- ```
- use_frameworks!
- pod 'BMSSecurity'
- ```
- **Astuce :** Vous pouvez ajouter `use_frameworks!` à votre cible Xcode au lieu du Podfile.
-
-1. Depuis la ligne de commande, exécutez `pod install`.
-CocoaPods installe les dépendances qui ont été ajoutées. La progression et les composants ajoutés s'affichent.
-
- **Important** : A partir de ce moment, vous devrez toujours ouvrir votre projet à l'aide d'un fichier `xcworkspace` généré par CocoaPods. Son nom est généralement `{your-project-name}.xcworkspace`.  
-
-1. Exécutez `open {your-project-name}.xcworkspace` depuis la ligne de commande pour ouvrir l'espace de travail de votre projet iOS.
 
 ### Initialisation du logiciel SDK client
 {: #custom-ios-sdk-initialize}
@@ -98,16 +64,17 @@ le code d'initialisation est souvent placé dans la méthode `application:didFin
 1. Initialisez le SDK client {{site.data.keyword.amashort}}, stipulez MCAAuthorizationManager comme nouveau gestionnaire d'authentification,
 définissez un délégué d'authentification et enregistrez-le. Remplacez `<applicationRoute>` et
 `<applicationGUID>` par les valeurs de **Route** et **Identificateur global unique de l'application**
-de la section **Options pour application mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
+de la section **Options pour application mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. 
 
+  Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône face (![Face](/face.png "Face")) dans l'angle supérieur gauche du tableau de bord. Pour `<yourProtectedRealm>`,utilisez le nom de domaine que vous avez défini dans la vignette **Personnalisé** du tableau de bord {{site.data.keyword.amashort}}.
  ```Swift
  let backendURL = "<applicationRoute>"
  let backendGUID = "<applicationGUID>"
- let customRealm = "<domaine de votre ressource protégée>"
+ let customRealm = "<yourProtectedRealm>"
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<application Bluemix region>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -146,6 +113,7 @@ de la section **Options pour application mobile** dans le tableau de bord {{site
 {: #custom-ios-testing}
 
 Après avoir initialisé le SDK client et enregistré un délégué d'authentification personnalisé, vous pouvez commencer à envoyer des demandes à votre back end mobile.
+
 ### Avant de commencer
 {: #custom-ios-testing-before}
 
@@ -185,7 +153,9 @@ et enregistré votre délégué d'authentification personnalisé :
  response:Optional("Bonjour Don Lon"), no error
  ```
 
-1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :```
+1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+
+ ```
  MCAAuthorizationManager.sharedInstance.logout(callBack)
  ```  
 

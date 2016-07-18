@@ -7,6 +7,8 @@ copyright:
 
 # Protokollfunktion aktivieren, konfigurieren und verwenden
 {: #enable-logger}
+*Letzte Aktualisierung: 6. Mai 2016*
+{: .last-updated}
 
 Das {{site.data.keyword.amashort}}-Client-SDK stellt ein Protokollierungsframework bereit, das anderen Protokollierungsframeworks, mit denen Sie vielleicht vertraut sind, wie `java.util.logging` oder `log4j`, ähnlich ist. Das Protokollierungsframework unterstützt mehrere Protokollierungsinstanzen auf Paketbasis, verschiedene Protokollierungsstufen, die Erfassung von Stack-Traces für einen Anwendungsabsturz und weitere Funktionen.
 
@@ -21,6 +23,8 @@ Das Protokollierungsframework des {{site.data.keyword.amashort}}-Client-SDK unte
 * `DEBUG` - Wird zur Meldung von Debuganweisungen verwendet, die Entwicklern bei der Behebung von Anwendungsmängeln helfen.
 
 Stellen Sie sicher, dass Sie das {{site.data.keyword.amashort}}-Client-SDK initialisieren, bevor Sie das Protokollierungsframework verwenden. Die folgenden Beispiel veranschaulichen die grundlegende Verwendung des Protokollierungsframeworks aus dem {{site.data.keyword.amashort}}-Client-SDK.
+
+**Wichtig**: Die Überwachungsfunktionen des Service {{site.data.keyword.amashort}} sollen auf den neuen Service [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics) migriert werden. Das neue Swift-SDK nutzt den neuen Service {{site.data.keyword.mobileanalytics_short}}, der eine deutlich umfangreichere Analyseerfahrung bereitstellt. Der Service {{site.data.keyword.mobileanalytics_short}} befindet sich aktuell in der Versuchsphase und soll planmäßig noch dieses Jahr allgemein verfügbar gemacht werden. Es empfiehlt sich, die Migration Ihrer Anwendungen zum Verwenden des neuen Service {{site.data.keyword.mobileanalytics_short}} und des Swift-SDK zu prüfen, da die Verwendung und Unterstützung der Überwachungsfunktionen des Service {{site.data.keyword.amashort}} eingestellt werden sollen, wenn {{site.data.keyword.mobileanalytics_short}} allgemein verfügbar ist.
 
 ### Android
 {: #enable-logger-android}
@@ -39,6 +43,10 @@ logger.fatal("fatal message");
 
 ### iOS - Objective-C
 {: #enable-logger-objectc}
+
+**Wichtig**: Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden.
+
+Das Objective-C-SDK meldet Überwachungsdaten an die Überwachungskonsole des Service {{site.data.keyword.amashort}}. Falls Sie auf die Überwachungsfunktionen des Service {{site.data.keyword.amashort}} angewiesen sind, verwenden Sie weiterhin das Objective-C-SDK.
 
 ```Objective-C
 [[IMFClient sharedInstance] initializeWithBackendRoute:appRoute backendGUID:appGUID];
@@ -119,9 +127,7 @@ Logger logger2 = Logger.getInstance("logger2");
 
 // Nachrichten mit unterschiedlichen Stufen protokollieren
 logger1.debug("debug message");
-logger2.info("info message");
-
-// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
+logger2.info("info message");// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
 Logger.send();
 ```
 
@@ -191,10 +197,8 @@ var logger1 = MFPLogger.getInstance("logger1");
 var logger2 = MFPLogger.getInstance("logger2");    
 
 // Nachrichten mit unterschiedlichen Stufen protokollieren
-logger1.debug ("debug message");
-logger2.info ("info message");
-
-// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
+logger1.debug("debug message");
+logger2.info("info message");// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
 MFPLogger.send(success, failure);
 ```
 

@@ -15,7 +15,8 @@ copyright:
 {:download: .download}
 
 # Codierung mit Git starten
-*Letzte Aktualisierung: 2. März 2016*  
+*Letzte Aktualisierung: 2. März 2016*
+{: .last-updated}  
 
 Sie können ein gehostetes Git-Repository erstellen, das für {{site.data.keyword.Bluemix}} automatisch bereitgestellt wird. Sie können dann den in Ihrer App ausgeführten Code ändern, indem Sie für Änderungen eine Push-Operation an das Git-Repository durchführen. 
 {:shortdesc}
@@ -60,9 +61,7 @@ bl login
 ```
 bl projects
 ```
-Suchen Sie in der Liste nach dem Projektnamen, der Ihrer Anwendung entspricht. Der Projektname hat das Format *Alias* | *Anwendungsname*. 
-
-4. Synchronisieren Sie die lokale Umgebung mit dem Projekt in {{site.data.keyword.Bluemix_notm}}, indem Sie den folgenden Befehl eingeben. Wenn Sie der Eigner des Projekts sind, müssen Sie für 'projectName' nur den Namen Ihrer eigenen Anwendung angeben. 
+Suchen Sie in der Liste nach dem Projektnamen, der Ihrer Anwendung entspricht. Der Projektname hat das Format *Alias* | *Anwendungsname*.4. Synchronisieren Sie die lokale Umgebung mit dem Projekt in {{site.data.keyword.Bluemix_notm}}, indem Sie den folgenden Befehl eingeben. Wenn Sie der Eigner des Projekts sind, müssen Sie für 'projectName' nur den Namen Ihrer eigenen Anwendung angeben. 
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
 ```
 bl sync projectName -d localDirectory --verbose

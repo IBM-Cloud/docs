@@ -15,6 +15,7 @@ copyright:
 
 # Traitement
 *Dernière mise à jour : 19 février 2016*
+{: .last-updated}
 
 Le calcul englobe l'infrastructure et les ressources que vous pouvez choisir pour construire des applications
 {{site.data.keyword.Bluemix}}. Les ressources de calcul incluent {{site.data.keyword.openwhisk_short}}, des applications Cloud Foundry,

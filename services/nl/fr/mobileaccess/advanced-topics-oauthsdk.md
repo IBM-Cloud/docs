@@ -1,15 +1,16 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
   
 ---
 
-# Communications de système de back end à système de back end
+# Configuration des communications de système de back end à système de back end
 {: #backend-comm}
 
-Dans certains scénarios avancés, vous pouvez être amené à envoyer des demandes à partir d'une application de back end qui s'exécute sur {{site.data.keyword.Bluemix}} à un autre système de back end qui est protégé par le service {{site.data.keyword.amashort}}, par exemple le service {{site.data.keyword.cloudant}}). Dans ce cas, vous devez ajouter un jeton OAuth à la demande.
+Dans certains scénarios, vous pouvez être amené à envoyer des demandes à partir d'une application de back end qui s'exécute sur {{site.data.keyword.Bluemix}} à un autre système de back end qui est protégé par le service {{site.data.keyword.amashort}} (le service {{site.data.keyword.cloudant}}, par exemple). Dans ce cas, vous devez ajouter un jeton OAuth à la demande.
 
-Utilisez le module nmpjs `bms-mca-oauth-sdk` pour obtenir et injecter des jetons OAuth dans les demandes.
+Utilisez le module `bms-mca-oauth-sdk npmjs` pour obtenir et injecter des jetons OAuth dans les demandes.
 
 ## Installation du module bms-mca-oauth-sdk
 {: #sdk}

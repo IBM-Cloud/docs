@@ -12,7 +12,7 @@ copyright:
 # Getting customer support
 {: #getting-customer-support}
 
-*Last updated: 17 June 2016*
+*Last updated: 7 July 2016*
 {: .last-updated}
 
 
@@ -128,7 +128,9 @@ You can also use a third-party service to automatically send an email for each R
 ## Contacting support
 {: #contacting-support}
 
-You can open support tickets if you have a valid {{site.data.keyword.Bluemix_notm}} account.  
+You can open support tickets if you have a valid {{site.data.keyword.Bluemix_notm}} account. 
+
+If you have a {{site.data.keyword.Bluemix_notm}} account linked with a SoftLayer account, you can open support tickets for {{site.data.keyword.Bluemix_notm}} from the SoftLayer Customer portal or from the {{site.data.keyword.Bluemix_notm}} user interface.
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
@@ -151,8 +153,8 @@ If you are unable to resolve your technical problem with the troubleshooting and
 If the problem is not due to an outage, and you are a customer in a country or region excluding China, open a support ticket by using one of the following options:
 
   * From Account and Support, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
-  * From [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. After you sign in to the portal, click **Open Ticket**, and then fill in the support form. 
   * Use the [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} help page. You can submit tickets for sales, billing, IBM id and login, and technical support problems. For technical support problems, you can further select a technical group after you click the **Technical Support** tile. For example, if you need help with Cloud Foundry apps, OpenWhisk, Containers, Virtual Servers, or Bare Metal servers, you can choose **Application Services**. If you need help with a specific service, select the corresponding service category. To determine the category that your service belongs to, see categories under [Services](../services/index.html){: new_window} in the left navigation pane.  
+  * From [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. After you sign in to the portal, click **Open Ticket**, and then fill in the support form. 
   
 
 

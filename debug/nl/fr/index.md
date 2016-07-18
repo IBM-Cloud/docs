@@ -6,6 +6,7 @@ copyright:
 ---
 
 
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -15,7 +16,8 @@ copyright:
 # Débogage
 {: #debugging}
 
-*Dernière mise à jour : 3 mars 2016*
+*Dernière mise à jour : 25 mai 2016*
+{: .last-updated}
 
 Si vous rencontrez des problèmes avec {{site.data.keyword.Bluemix}}, vous pouvez afficher les fichiers journaux et déboguer les erreurs. 
 {:shortdesc}
@@ -32,12 +34,14 @@ Foundry](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: ne
 
 ## Débogage des erreurs de constitution
 {: #debugging-staging-errors}
-Vous pouvez rencontrer des problèmes lorsque vous constituez vos applications dans {{site.data.keyword.Bluemix_notm}}. Si la constitution de votre
-application échoue, vous pouvez consulter les journaux afin d'identifier la cause de l'erreur et de résoudre le problème.
+Vous pouvez rencontrer des problèmes lorsque vous constituez vos applications dans {{site.data.keyword.Bluemix_notm}}. Si le transfert de votre application
+échoue, vous pouvez rechercher et examiner les journaux de transfert (STG) afin de déterminer ce qui s'est passé lors du déploiement
+de l'application et corriger le problème. Pour plus d'informations sur les méthodes d'affichage des journaux des applications
+Bluemix, voir [Affichage des journaux](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
 
-Pour comprendre la raison pour laquelle votre application ne fonctionne pas dans {{site.data.keyword.Bluemix_notm}}, vous devez savoir comment
-une
+Pour comprendre la raison pour laquelle votre application ne fonctionne pas dans {{site.data.keyword.Bluemix_notm}}, vous devez savoir comment une
 application est déployée et exécutée dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Déploiement d'une application](../manageapps/depapps.html#appdeploy){: new_window}.
+
 
 La procédure suivante présente l'utilisation de la commande `cf logs` pour déboguer des erreurs constitution. Avant de continuer, vérifiez que vous avez installé l'interface de ligne de commande cf. Pour plus d'informations sur l'installation de l'interface de ligne de commande cf, voir [Installation de l'interface de ligne de commande cf](../starters/install_cli.html){: new_window}.
 
@@ -54,8 +58,8 @@ La procédure suivante présente l'utilisation de la commande `cf logs` pour dé
 	```
   4. Regardez la première erreur qui apparaît dans le journal.
   
-Si vous utilisez le plug-in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} pour déployer des applications, l'onglet **Console** de l'outil Eclipse affiche des journaux
-semblables à la sortie de cf logs. Vous pouvez également ouvrir une fenêtre Eclipse distincte pour contrôler `les journaux` au cours du déploiement de l'application.
+Si vous utilisez le plug-in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} pour déployer des applications, vous pouvez examiner dans l'onglet
+**Console** de l'outil Eclipse des journaux similaires à la sortie de la commande cf logs. Vous pouvez également ouvrir une fenêtre Eclipse distincte pour contrôler `les journaux` au cours du déploiement de l'application.
 
 En complément de la commande `cf logs`, vous pouvez également utiliser le service {{site.data.keyword.Bluemix_notm}} Monitoring and Analytics pour collecter des détails de journaux. Ce service contrôle également la performance, la santé et la disponibilité de vos applications. Il fournit également des analyses de journaux pour les applications de contexte d'exécution Node.js et Liberty.  
 
@@ -151,6 +155,30 @@ répertoire logs.
   * Pour les applications PHP, vous pouvez utiliser la fonction error_log pour écrire des données dans un fichier dans le répertoire logs.
   * Pour les applications Python, vous pouvez demander au consignateur d'écrire des données dans un fichier dans le répertoire logs : logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * Pour les applications Ruby, vous pouvez demander au consignateur d'écrire des données dans un fichier dans le répertoire logs.
+ 
+ 
+### Débogage des modifications du code
+{: #debug_code_changes}
+
+Si vous apportez des modifications à une application déjà déployée et fonctionnelle, mais que vos modifications du code
+ne sont pas reflétées dans {{site.data.keyword.Bluemix_notm}}, vous pouvez déboguer le code en utilisant les journaux. Que votre application soit en
+exécution ou non, vous pouvez examiner les journaux générés lors du déploiement de l'application ou en phase d'exécution afin de déterminer pourquoi le nouveau code
+ne fonctionne pas.
+
+Selon la manière dont le nouveau code est déployé, choisissez l'une des méthodes suivantes pour déboguer les modifications du code : 
+
+  * Pour un nouveau code déployé depuis la ligne de commande cf, examinez la sortie de la commande *cf
+push*. Vous pouvez utiliser en plus la commande *cf logs* pour trouver d'autres indices pour résoudre le problème. Pour plus d'informations, sur
+l'utilisation de la commande *cf logs*, voir [Affichage des journaux dans
+l'interface de ligne de commande](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
+
+  * Pour un nouveau code déployé depuis une interface graphique, telle que
+l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline, ou
+Travis-CI, vous pouvez examiner les journaux depuis l'interface. Par exemple, si vous déployez le nouveau code depuis
+l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}, vous pouvez accéder au Tableau de bord, rechercher votre application, puis afficher tous les
+journaux pour repérer des indices. Pour plus d'informations sur l'affichage de journaux depuis l'interface utilisateur de
+{{site.data.keyword.Bluemix_notm}}, voir
+[Affichage des journaux dans le tableau de bord Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
  
 
 # rellinks

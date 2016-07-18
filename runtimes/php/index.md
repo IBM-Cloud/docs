@@ -11,7 +11,7 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*Last Updated: 10 June 2016*
+*Last Updated: 06 July 2016*
 {: .last-updated}
 
 The PHP runtime on {{site.data.keyword.Bluemix}} is powered by the php_buildpack.
@@ -38,29 +38,28 @@ You can specify the version of PHP to be used by your app in the composer.json f
 ```
 {
     "require": {
-        "php": "5.6.*"
+        "php": "7.0.*"
     }
 }
 ```
 {: codeblock}
 For more information, see [Composer Package links](https://getcomposer.org/doc/04-schema.md#package-links).
 
-When a version is not specified, version 5.5.30 is chosen by default.
+When a version is not specified, version 5.5.34 is chosen by default.
 
 ### Available versions:
 {: #available_versions}
 
 The following PHP versions are available in the
-[PHP buildpack](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.1.5)
+[PHP buildpack](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.10)
 currently installed in {{site.data.keyword.Bluemix}}:
 
-* 5.4.44
-* 5.4.45
-* 5.5.29
-* 5.5.30
-* 5.6.30
-* 5.6.13
-* 5.6.14
+* 5.5.33
+* 5.5.34
+* 5.6.19
+* 5.6.20
+* 7.0.4
+* 7.0.5
 
 If your app requires a PHP version that is not listed,
 you can use the external
@@ -68,7 +67,9 @@ you can use the external
 deploy the app.
 
 # rellinks
-## samples
+{: #rellinks}
+## Tutorials and Samples
+{: #samples}
 * [Build and deploy a REST API](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Build and deploy a mobile-friendly calorie counter](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## general

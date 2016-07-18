@@ -18,7 +18,8 @@ copyright:
 
 #Schaltfläche für die Bereitstellung in {{site.data.keyword.Bluemix_notm}} erstellen {: #deploy-button} 
 
-*Letzte Aktualisierung: 2. März 2016* 
+*Letzte Aktualisierung: 2. März 2016*
+{: .last-updated} 
 
 Die Schaltfläche für die Bereitstellung in {{site.data.keyword.Bluemix}} bietet eine effiziente Möglichkeit, die auf Git basierende öffentliche App zu teilen, sodass andere Personen mit dem Code experimentieren und diesen in IBM {{site.data.keyword.Bluemix_notm}} bereitstellen können. Die Schaltfläche erfordert nur minimalen Konfigurationsaufwand und kann überall dort eingefügt werden, wo Markupunterstützung bereitsteht. Jeder, der auf diese Schaltfläche klickt, erstellt eine geklonte Kopie des Codes in einem neuen Git-Repository, sodass die ursprüngliche App unverändert bleibt. 
 {: shortdesc} 
@@ -175,7 +176,7 @@ Mit der Manifestdatei können Sie Folgendes angeben:
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>, mit Ausgabe an den Ordner <code>./target/</code></li>
 	   </ul>
 	</li>	
-	<li>Zur Konfiguration einer Pipeline für das Projekt in einem Verzeichnis <code>.bluemix</code> fügen Sie eine Datei <code>pipeline.yml</code> ein. Sie können eine Datei <code>pipeline.yml</code> manuell erstellen oder aus einem vorhandenen DevOps Services-Projekt generieren. Führen Sie für die Erstellung einer Datei 'pipeline.yml' aus einem {{site.data.keyword.jazzhub_short}}-Projekt und zum Hinzufügen dieser Datei zu Ihrem Repository die folgenden Schritte aus. 
+	<li>Zur Konfiguration einer Pipeline für das Projekt in einem Verzeichnis <code>.bluemix</code> fügen Sie eine Datei <code>pipeline.yml</code> ein. Sie können eine Datei mit der Bezeichnung <code>pipeline.yml</code> manuell erstellen oder sie auf der Grundlage eines vorhandenen DevOps Services-Projekts generieren. Führen Sie für die Erstellung einer Datei 'pipeline.yml' aus einem {{site.data.keyword.jazzhub_short}}-Projekt und zum Hinzufügen dieser Datei zu Ihrem Repository die folgenden Schritte aus. 
 <ol>
 <li>Öffnen Sie Ihr DevOps Services-Projekt in einem Browser und klicken Sie auf die Option zum Erstellen und Bereitstellen.</li>
 <li>Konfigurieren Sie Ihre Pipeline mit Erstellungs- und Bereitstellungsjobs.</li>

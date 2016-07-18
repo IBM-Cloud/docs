@@ -1,7 +1,7 @@
-﻿---
+---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
 
 ---
 {:new_window: target="_blank"}
@@ -12,7 +12,8 @@ copyright:
 # {{site.data.keyword.mobileanalytics_short}} (ベータ版) の開始  
 
 {: #gettingstartedtemplate}
-*最終更新日: 2016 年 5 月 17 日*
+*最終更新日時: 2016 年 5 月 17 日*
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} サービスを使用して、状態、動作、モバイル・アプリのコンテキスト、モバイル・ユーザー、モバイル・デバイスを測定します。
 {: shortdesc}
@@ -21,8 +22,7 @@ copyright:
 
 1. {{site.data.keyword.mobileanalytics_short}} サービスの [ インスタンスを作成](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)した後、{{site.data.keyword.Bluemix}} の「ダッシュボード」の「サービス」セクション内のタイルをクリックして、{{site.data.keyword.mobileanalytics_short}} コンソールにアクセスできます。
 
-  **重要:** 新たに作成された Mobile Analytics サービスを最初に開くとき、ウィンドウが表示され、サービスが ID を検証できるよう自分自身に関する必要な情報をサービスに {{site.data.keyword.Bluemix_notm}} が提供できるようにする許可を求められます。
-**「確認」**をクリックすると、続いて {{site.data.keyword.mobileanalytics_short}} コンソールが表示されます。キャンセルする場合、{{site.data.keyword.mobileanalytics_short}} コンソールは開きません。
+  **重要:** 新たに作成された Mobile Analytics サービスを最初に開く際、ウィンドウが表示され、サービスが ID を検証できるよう自分自身に関する必要な情報をサービスに {{site.data.keyword.Bluemix_notm}} が提供できるようにする許可を求められます。**「確認」**をクリックすると、続いて {{site.data.keyword.mobileanalytics_short}} コンソールが表示されます。キャンセルする場合、{{site.data.keyword.mobileanalytics_short}} コンソールは開きません。
 
 2. {{site.data.keyword.mobileanalytics_short}} [クライアント SDK](install-client-sdk.html) をインストールします。
 
@@ -45,7 +45,7 @@ copyright:
 			catch (MalformedURLException e) {
 	            //The Bluemix region provided is invalid
 	        }
-				Analytics.init(getApplication(), "your_app_name", "your_client_key", Analytics.DeviceEvent.LIFECYCLE);
+				Analytics.init(getApplication(), your_app_name, your_client_key, Analytics.DeviceEvent.LIFECYCLE);
 		```
     **bluemixRegion** パラメーターは、使用している Bluemix デプロイメントを指定します。例えば、`BMSClient.REGION_US_SOUTH` や `BMSClient.REGION_UK`、あるいは `BMSClient.REGION_SYDNEY` などです。
 
@@ -56,10 +56,12 @@ copyright:
     import BMSCore
     import BMSAnalytics
     ```
-  2. アプリケーション・コード内のクライアント SDK を初期化して使用分析やアプリケーション・セッションを記録します。その際、[クライアント・キー](sdk.html#analytics-clientkey) 値を使用します。```Swift
-  BMSClient.sharedInstance.initializeWithBluemixAppRoute("nil",bluemixAppGUID: "nil", bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-  Analytics.initializeWithAppName("your_app_name", apiKey: "your_client_key", deviceEvents: DeviceEvent.LIFECYCLE)
-  ```
+  2. アプリケーション・コード内のクライアント SDK を初期化して使用分析やアプリケーション・セッションを記録します。その際、[クライアント・キー](sdk.html#analytics-clientkey)値を使用します。
+ 
+	```Swift
+	BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
+	Analytics.initializeWithAppName(your_app_name, apiKey: your_client_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	```
   **bluemixRegion** パラメーターは、使用している Bluemix デプロイメントを指定します。例えば、`BMSClient.REGION_US_SOUTH` や `BMSClient.REGION_UK`、あるいは `BMSClient.REGION_SYDNEY` などです。
 
 4. 記録した使用分析を Mobile Analytics サービスに送信します。分析のテストは、アプリケーションの開始時に次のコードを実行すると簡単に行えます。

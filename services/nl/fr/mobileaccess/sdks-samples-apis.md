@@ -1,13 +1,18 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
 {:shortdesc: .shortdesc}
 
 # Logiciels SDK, exemples et référence d'API de {{site.data.keyword.amashort}}
+*Dernière mise à jour : 30 avril 2016*
+{: .last-updated}
+
 Pour ajouter des SDK {{site.data.keyword.amashort}} à votre appli, sélectionnez ceux que vous voulez utiliser, puis configurez votre gestionnaire de dépendances pour qu'il les insère dans votre appli.
+{:shortdesc}
 
 ## SDK Core
 {: #coresdk}
@@ -32,18 +37,20 @@ Le SDK Core comprend des API permettant l'activation de l'authentification perso
 ### iOS (SDK Swift)
 {: #coresdk-ios-swift}
 
-[Référentiel Git](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
+[Référentiel Git](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security)
 
 #### Installation du logiciel SDK Core avec CocoaPods
 {: #coresdk-ios-siwft-cocoapods}
 
 ```
 use_frameworks!
-pod 'BMSCore'
+pod 'BMSSecurity'
 ```
 
 ### iOS (SDK Objective-C)
 {: #coresdk-ios}
+
+Alors que le SDK Objective-C reste complètement pris en charge et est toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix_notm}} Mobile Services, il est prévu qu'il soit interrompu plus tard dans l'année et remplacé par le nouveau SDK Swift. (voir [Configuration du SDK Swift iOS](getting-started-ios-swift-sdk.html)).
 
 [Référentiel Git](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master),
 [Référence d'API](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
@@ -106,6 +113,7 @@ pod 'BMSFacebookAuthentication'
 [Référentiel Git](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
 [Référence d'API](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
+*Remarque :* alors que le SDK Objective-C reste complètement pris en charge et est toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix_notm}} Mobile Services, il est prévu qu'il soit interrompu plus tard dans l'année et remplacé par le nouveau SDK Swift. Pour les nouvelles applications, il est vivement recommandé d'utiliser le SDK Swift (Configuration du SDK Swift iOS).
 #### Installation du logiciel SDK Facebook avec CocoaPods
 {: #facebooksdk-ios-cocoapods}
 
@@ -118,7 +126,7 @@ pod 'IMFFacebookAuthentication'
 
 [Référentiel Github et référence d'API](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
-#### Installation du logiciel SDK Facebook avec l'interface de ligne de commande Cordova
+#### Installation du SDK Facebook avec l'interface de ligne de commande Cordova
 {: #facebooksdk-cordova-cli}
 
 ```Bash
@@ -134,7 +142,7 @@ cordova plugin add ibm-mfp-core
 [Référentiel Github](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication),
 [Référence d'API](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
 
-#### Installation du logiciel SDK Google+ avec Gradle
+#### Installation du SDK Google+ SDK avec Gradle
 {: #googlesdk-android-gradle}
 
 ```Gradle
@@ -150,7 +158,7 @@ cordova plugin add ibm-mfp-core
 
 [Référentiel Git](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication)
 
-#### Installation du logiciel SDK Google+ avec CocoaPods
+#### Installation du SDK Google+ SDK avec CocoaPods
 {: #googlesdk-ios-swift-cocoapods}
 
 ```
@@ -158,13 +166,13 @@ use_frameworks!
 pod 'BMSGoogleAuthentication'
 ```
 
-### iOS (SDK Objective-C)
+### iOS (SDK Objective-C - Déprécié)
 {: #googlesdk-ios}
 
 [Référentiel Git](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
 [Référence d'API](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html)
 
-#### Installation du logiciel SDK Google+ avec CocoaPods
+#### Installation du SDK Google+ SDK avec CocoaPods
 {: #googlesdk-ios-cocoapods}
 
 ```Bash
@@ -176,7 +184,7 @@ pod 'IMFGoogleAuthentication'
 
 [Référentiel Git et référence d'API](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
-#### Installation du logiciel SDK Google+ avec l'interface de ligne de commande Cordova
+#### Installation du SDK Google+ avec l'interface de ligne de commande Cordova
 {: #googlesdk-cordova-cli}
 
 ```Bash
@@ -195,17 +203,17 @@ cordova plugin add ibm-mfp-core
 npm install -save bms-mca-token-validation-strategy
 ```
 
-## SDK serveur de {{site.data.keyword.amashort}} pour serveur Liberty for &trade;
+## SDK serveur de {{site.data.keyword.amashort}} pour serveur Liberty for Java&trade;
 {: #serverlibertysdk}
 
 [Téléchargez les artefacts TAI](https://imf-tai.{DomainName}/public/TAI.zip)
 
-## Logiciel SDK OAuth Node.js de {{site.data.keyword.amashort}}
+## SDK OAuth Node.js de {{site.data.keyword.amashort}}
 {: #serverlibertysdk-github}
 
 [Référentiel Git](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk)
 
-#### Installation du logiciel SDK OAuth avec npm
+#### Installation du SDK OAuth avec npm
 {: #oauthsdk}
 
 ```Bash
@@ -215,17 +223,15 @@ npm install -save bms-mca-oauth-sdk
 ## Exemples de fournisseur d'identité personnalisé
 {: #customidprovider}
 
-[Simple sample Git repo (Référentiel Git d'exemples
-simples)](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
-[Advanced sample Git repo (Référentiel Git
-d'exemples avancés)](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+[Référentiel Git exemple simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+[Référentiel Git exemple avancé](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## IMFURLProtocol
 {: #IMFURLProtocol}
 
 [Référence d'API](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
 
-#### Installation d'IMFURLProtocol avec CocoaPods
+#### Installation de IMFURLProtocol avec CocoaPods
 {: #IMFURLProtocol-cocoapods}
 
 ```Bash

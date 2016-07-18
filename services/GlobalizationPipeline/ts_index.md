@@ -14,10 +14,10 @@ copyright:
 # {{site.data.keyword.GlobalizationPipeline_short}} troubleshooting
 {: #globalizationpipelinets}
 
-*Last updated: 22 March 2016*
+*Last updated: 13 July 2016*
 {: .last-updated}
 
-Here are the answers to several common questions about using {{site.data.keyword.GlobalizationPipeline_short}} in {{site.data.keyword.Bluemix_notm}}.
+Here are some answers to common questions about using {{site.data.keyword.GlobalizationPipeline_short}}. 
 {:shortdesc}
 
 
@@ -44,7 +44,7 @@ Test the translation of product names before you use them, and if you find probl
 The resource file I am trying to upload is not accepted.
 {:shortdesc}
 
-When adding a resource file to a new translation project or updating an existing resource file to be translated, I receive an error
+When adding a resource file to a new translation bundle or updating an existing resource file to be translated, I receive an error.
 {: tsSymptoms}
 
 {{site.data.keyword.GlobalizationPipeline_short}} only accepts resource files of the following types: Java™ .properties, JSON, and AMD I18N.
@@ -79,7 +79,7 @@ Ensure that the resource file conforms to the following guidelines:
 
 
 
-## A non-English sourced resource file is not being properly translated to other languages
+## A non-English resource file is not being properly translated to other languages
 {: #problem4}
 
 An non-English sourced resource file is not translating properly.

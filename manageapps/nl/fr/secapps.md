@@ -15,6 +15,7 @@ copyright:
 {: #securingapps}
 
 *Dernière mise à jour : 9 mai 2016*
+{: .last-updated}
 
 Vous pouvez sécuriser vos applications en téléchargeant des certificats SSL et en limitant l'accès aux applications.
 {:shortdesc}
@@ -86,7 +87,6 @@ pouvoir télécharger des certificats, vous devez créer une demande de signatur
 Lorsque vous utilisez un domaine personnalisé, pour servir le certificat SSL, utilisez les noeuds finaux de région suivants afin de fournir la route
 d'URL allouée à votre organisation dans Bluemix :
 
-
   * Sur des Etats-Unis : secure.us-south.bluemix.net 
   * Europe-Royaume-Uni : secure.eu-gb.bluemix.net
   * Australie-Sydney : secure.au-syd.bluemix.net 
@@ -110,7 +110,7 @@ client définissant les accès utilisateur autorisés à votre domaine personnal
 du certificat, permettant ainsi l'authentification du propriétaire du certificat. Un certificat est émis par un organisme de certification et il est signé numériquement par cet organisme.
     
     En général, un certificat est émis et signé par une autorité de certification. Toutefois, pour le test et le développement, vous pouvez
-utiliser un certificat autosigné. 
+utiliser un certificat autosigné.
     
     Les types de certificat suivants sont pris en charge dans
 {{site.data.keyword.Bluemix_notm}}:

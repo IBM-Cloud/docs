@@ -1,6 +1,7 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -73,11 +74,11 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 #### Arguments
 {: #custom-android-onAuth-arg}
 
-* `AuthenticationContext` : Fourni par le SDK client de {{site.data.keyword.amashort}} pour vous permettre de communiquer les réponses aux demandes d'authentification ou les échecs de collecte des données d'identification. Par exemple, lorsque l'utilisateur annule la demande d'authentification.
+* `AuthenticationContext` : Fourni par le SDK client de {{site.data.keyword.amashort}} pour vous permettre de communiquer les réponses aux demandes d'authentification ou les échecs de collecte des données d'identification.  Par exemple, lorsque l'utilisateur annule la demande d'authentification.
 * `JSONObject` : Contient une demande d'authentification personnalisée, renvoyée par un fournisseur d'identité personnalisé.
 * `Context` : Référence au contexte Android qui a été utilisé lors de l'envoi de la demande. Cet argument représente généralement une activité Android.
 
-En appelant la méthode `onAuthenticationChallengeReceived`, le SDK client de {{site.data.keyword.amashort}} délègue le contrôle au développeur. Le service attend les données d'identification. Le développeur doit collecter les données d'identification et les fournir au SDK client de {{site.data.keyword.amashort}} par l'une des méthodes de l'interface `AuthenticationContext`.
+En appelant la méthode `onAuthenticationChallengeReceived`, le SDK client de {{site.data.keyword.amashort}} délègue le contrôle au développeur.  Le service attend les données d'identification. Le développeur doit collecter les données d'identification et les fournir au SDK client de {{site.data.keyword.amashort}} par l'une des méthodes de l'interface `AuthenticationContext`.
 
 ### Méthode onAuthenticationSuccess
 {: #custom-android-authlistener-onsuccess}
@@ -143,7 +144,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 			// demeure indéfiniment à l'état d'attente de données
 			// d'identification
 
-			log("Cette situation ne devrait jamis se produire...");
+			log("Cette situation ne devrait jamais se produire...");
 			authContext.submitAuthenticationFailure(null);
 		}
 	}
@@ -179,17 +180,16 @@ Utilisez le nom de domaine que vous avez défini dans le tableau de bord {{site.
 
 ## Test de l'authentification
 {: #custom-android-testing}
-Une fois que le SDK client est initialisé et qu'un programme d'écoute d'authentification est enregistré, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
+Une fois que le SDK client est initialisé et qu'un programme AuthenticationListener personnalisé est enregistré, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
 
 ### Avant de commencer
 {: #custom-android-testing-before}
 Vous devez disposer d'une application créée avec un conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`.
 
 
-1. Envoyez une demande à un noeud final protégé de votre système de back end mobile dans votre navigateur en ouvrant
-`{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
+1. Envoyez une demande à un noeud final protégé de votre application de back end mobile dans votre navigateur en ouvrant `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
 
-1. Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} est protégé par {{site.data.keyword.amashort}}. Ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. En conséquence, un message `Unauthorized` s'affiche dans le navigateur.
+1. Le noeud final `/protected` d'une application de back end mobile qui a été créée avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} est protégé par {{site.data.keyword.amashort}}. Ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. En conséquence, un message `Unauthorized` s'affiche dans le navigateur.
 
 1. A l'aide de votre application Android, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` et enregistré votre programme d'écoute d'authentification.
 

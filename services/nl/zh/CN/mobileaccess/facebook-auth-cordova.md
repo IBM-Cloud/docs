@@ -4,19 +4,30 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
-# 在 Cordova 应用程序中启用 Facebook 认证
+# 启用 Cordova 应用程序的 Facebook 认证
 {: #facebook-auth-cordova}
-要配置 Cordova 应用程序进行 Facebook 认证集成，必须使用 Cordova 应用程序的本机代码（即 Java、Objective-C 或 Swift）进行更改。请分别配置每个平台。在本机开发环境中使用本机代码进行更改，例如在 Android Studio 或 Xcode 中更改。
+
+*上次更新时间：2016 年 6 月 15 日*
+{: .last-updated}
+
+
+要配置 Cordova 应用程序进行 Facebook 认证集成，必须使用 Cordova 应用程序的本机代码（即 Java、Objective-C 或 Swift）进行更改。请分别配置每个平台。此 Cordova 应用程序必须已安装 {{site.data.keyword.amashort}} SDK。 
+
+
+在本机开发环境中使用本机代码进行更改，例如在 Android Studio 或 Xcode 中更改。
+{:shortdesc}
 
 ## 开始之前
 {: #facebook-auth-before}
-* 您必须具有受 {{site.data.keyword.amashort}} 保护的资源，并且具有安装了 {{site.data.keyword.amashort}} 客户端 SDK 的 Cordova 项目。有关更多信息，请参阅 [{{site.data.keyword.amashort}} 入门](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)和[设置 Cordova 插件](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)。
-* 使用 {{site.data.keyword.amashort}} 服务器 SDK 手动保护后端应用程序。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
-* 创建 Facebook 应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
-* （可选）请熟悉以下部分：
-   * [在 Android 应用程序中启用 Facebook 认证](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html)
-   * [在 iOS 应用程序中启用 Facebook 认证](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html)
+您必须具有：
+* 已安装 {{site.data.keyword.amashort}} 客户端 SDK 的 Cordova 项目，请参阅[设置 Cordova 插件](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)。
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm} 后端的更多信息，请参阅[入门](index.html)。
+* Facebook 应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
+
 
 
 ## 配置 Android 平台
@@ -28,7 +39,7 @@ copyright:
 * 配置 {{site.data.keyword.amashort}} 进行 Facebook 认证
 * 针对 Android 配置 {{site.data.keyword.amashort}} 客户端 SDK
 
-配置 Cordova 应用程序时的唯一差别在于，必须使用 JavaScript 代码（而不是 Java 代码）来初始化 {{site.data.keyword.amashort}} 客户端 SDK。`FacebookAuthenticationManager` API 仍必须使用本机代码进行注册。
+配置 Cordova 应用程序时的唯一差别在于，必须使用 JavaScript 代码（而不是 Java 代码）来初始化 {{site.data.keyword.amashort}} 客户端 SDK（请参阅[测试认证](#facebook-auth-cordova-test)）。`FacebookAuthenticationManager` API 仍必须使用本机代码进行注册。
 
 ## 配置 iOS 平台
 {: #facebook-auth-cordova-ios}
@@ -43,11 +54,11 @@ copyright:
 1. 下载包含 [{{site.data.keyword.Bluemix_notm}}Mobile Services SDK for iOS](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master) 的归档。
 
 1. 转至 `Sources/Authenticators/IMFFacebookAuthentication` 目录，并将所有文件复制（拖放）到 Xcode 中的 iOS 项目。复制以下文件：
-	* IMFDefaultFacebookAuthenticationDelegate.h
+  * IMFDefaultFacebookAuthenticationDelegate.h
   * IMFDefaultFacebookAuthenticationDelegate.m
-	* IMFFacebookAuthenticationDelegate.h
-	* IMFFacebookAuthenticationHandler.h
-	* IMFFacebookAuthenticationHandler.m
+  * IMFFacebookAuthenticationDelegate.h
+  * IMFFacebookAuthenticationHandler.h
+  * IMFFacebookAuthenticationHandler.m
 
 	在 Xcode 提示时，选择**复制文件...**。
 
@@ -64,8 +75,8 @@ copyright:
 将以下行添加到应用程序代表的 `application:openURL:sourceApplication:annotation` 方法。此代码将确保向所有 Cordova 插件通知相应事件。
 
 ```
-[[ NSNotificationCenter defaultCenter] postNotification:
-		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
+[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
+      
 ```
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK

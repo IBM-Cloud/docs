@@ -16,7 +16,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} の用語集 
 {: #glossary}
 
-*最終更新日: 2016 年 4 月 19 日*
+*最終更新日: 2016 年 4 月 19 日*{: .last-updated}
 
 この用語集は {{site.data.keyword.Bluemix}} の用語と定義を提供します。
 {:shortdesc}

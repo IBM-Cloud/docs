@@ -10,57 +10,68 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Premiers pas avec Insights for Weather
+# Initiation à {{site.data.keyword.weather_short}}
 {: #insights_weather_overview}
 
-*Dernière mise à jour : 19 mai 2016*
+*Dernière mise à jour : 1er juillet 2016*
+{: .last-updated}
 
 A l'aide d'{{site.data.keyword.weatherfull}}, incorporez les données météorologiques de The Weather Company (TWC) à vos applications {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
-**Remarque :** Le service Insights for Weather n'est actuellement pas disponible pour le Japon.
+**Attention :** Actuellement, il est **impossible** d'acheter ou d'utiliser le service {{site.data.keyword.weather_short}} dans les régions ou pays suivants : Afghanistan, Arménie, Azerbaïdjan, Bahreïn, Bangladesh, Bhoutan, Brunei, Cambodge, Chine, Chypre, Géorgie, Inde, Indonésie, Iran, Irak, Japon, Jordanie, Kazakhstan, Koweït, Kirghizistan, Laos, Liban, Malaisie, Maldives, Mongolie, Birmanie, Népal, Oman, Pakistan, Philippines,
+Qatar, Russie, Arabie Saoudite, Singapour, Corée du Sud, Sri Lanka, Syrie, Taïwan,
+Tadjikistan, Timor-Leste, Turquie, Turkménistan, Émirats arabes unis, Ouzbékistan, Vietnam, Yémen. Cette liste est mise à jour lorsque des informations supplémentaires sont disponibles. 
 
-Avant de commencer, créez une application Web {{site.data.keyword.Bluemix_notm}} dans le tableau de bord avec un environnement d'exécution tel que Liberty for Java. Attendez que votre application soit mise à disposition, puis ajoutez le service Insights for Weather à votre application.
+Si vous possédez déjà une application qui utilise le service [Insights for Weather](https://console.{DomainName}/docs/services/InsightsWeather/index.html){: new_window}, elle continuera de fonctionner sans aucune modification pendant une période de 90 jours après l'introduction d'{{site.data.keyword.weather_short}}. Pour bénéficier des nouvelles API et du modèle de tarification amélioré, faites migrer votre application vers le nouveau service.
 
-Lorsque vous liez votre application à Insights for Weather, vous fournissez des données d'identification uniques à une instance du service. Votre application utilise ces données d'identification avec les [API REST](https://twcservice.{APPDomain}/rest-api/){:new_window} pour extraire des données météorologiques.
+
+Avant de commencer, créez une application Web {{site.data.keyword.Bluemix_notm}} dans le tableau de bord avec un environnement d'exécution tel que Liberty for Java. Attendez que votre application soit mise à disposition, puis ajoutez le service {{site.data.keyword.weather_short}} à cette dernière.
+
+Lorsque vous liez votre application à {{site.data.keyword.weather_short}}, vous mettez à disposition des données d'identification uniques pour une instance du service.
+Votre application utilise ces données d'identification avec les [API REST](https://twcservice.{APPDomain}/rest-api/){:new_window} pour extraire des données météorologiques.
 
 Procédez comme suit pour extraire les données d'identification de `VCAP_SERVICES` et intégrer l'instance du service à votre application.
 
+
 1. Accédez à la page des propriétés de votre application.
 2. Accédez à la section **Variables d'environnement**. Les informations `VCAP_SERVICES` pour chacun de vos services s'affichent.
-3. Notez le nom d'utilisateur et le mot de passe du service Insights for Weather.
+3. Notez le nom d'utilisateur et le mot de passe du service {{site.data.keyword.weather_short}}.
 Pour essayer les [API REST](https://twcservice.{APPDomain}/rest-api/){:new_window}, vous devez entrer ces données d'identification lorsque vous êtes invité à vous connecter.
 Votre entrée `VCAP_SERVICES` est semblable à l'exemple suivant :
 
 ```
 {
+{
    "weatherinsights": [
-     {
-      "name": "Insights for Weather",
-      "label": "weatherinsights",
-      "plan": "Free",
-      "credentials": {
-         "port": "443",
-         "username": "fa7fed4b86baa0ec3e48e96b29cd2a03",
-         "host": "twcservice.mybluemix.net",
-         "password": "7abcxw29",
-         "url": "https://fa7fed4b86baa0ec3e48e96b29cd2a03:7cunxw29@cdeservice.mybluemix.net"
+      {
+         "name": "Weather Company Data for IBM Bluemix",
+         "label": "weatherinsights",
+         "plan": "Free",
+         "credentials": {
+            "username": "d40845df-8125-441f-8e7c-e650726ce721",
+            "password": "tDV0HGZz3O",
+            "host": "twcservice.mybluemix.net",
+            "port": 443,
+            "url": "https://d40845df-8125-441f-8e7c-e650726ce721:tDV0HGZz3O@twcservice.mybluemix.net"
+         }
       }
-     }
    ]
 }
 ```
 
 **Remarque :** Chaque région est indépendante. Vous ne pouvez pas utiliser les données d'identification qui vous ont été fournies pour le service dans une région pour vous authentifier auprès d'un service d'une autre région.
-Si vous n'indiquez pas les données d'identification valides, un message "Unauthorized" (Non autorisé) est généré dans le corps de réponse. 
+Si vous n'indiquez pas les données d'identification valides, un message "Unauthorized" (Non autorisé) est généré dans le corps de réponse.
 
 # rellinks
 {: #rellinks}
 ## samples
 {: #samples}
-* [Insights for Weather demo](http://insights-for-weather-demo.mybluemix.net/){: new_window}
+* [Application de démonstration d'{{site.data.keyword.weather_short}}](http://weather-company-data-demo.{APPDomain}){: new_window}
+* [Vidéo d'analyse approfondie d'{{site.data.keyword.weather_short}}](https://youtu.be/pZHXIibziUo){: new_window}
 * [Places Insights hands-on lab](https://github.com/IBM-Bluemix/places-insights-lab){: new_window}
-* [What's the weather like in Bluemix?](https://developer.ibm.com/bluemix/2015/12/08/insights-weather-sample-overview){: new_window}
+* [Exemple d'application {{site.data.keyword.Bluemix_notm}} + Weather](https://github.com/IBM-Bluemix/insights-weather){: new_window}
+* [IBM Cloud - Serveurs non virtualisés, données des taxis New-Yorkais et Insights for Weather (tutoriel YouTube)](https://www.youtube.com/watch?v=Uwmzpx9DZ5c){: new_window}
 
 ## api
 {: #api}

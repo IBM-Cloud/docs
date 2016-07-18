@@ -27,4 +27,6 @@ copyright:
 
   3. {: download} 下载入门模板代码并通过转至**文件>将现有项目导入工作空间>归档文件**来将其导入 Eclipse 中。
   
-    <a class="xref" href="http://bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_starter-code.svg" alt="下载入门模板代码" /></a>有关部署应用程序的逐步指示信息，请参阅[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序](../manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}。
+    <a class="xref" href="http://bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_starter-code.svg" alt="下载入门模板代码" /></a> 
+
+有关部署应用程序的逐步指示信息，请参阅[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序](../manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}。

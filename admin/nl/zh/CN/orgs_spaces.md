@@ -18,6 +18,7 @@ copyright:
 # 管理组织和空间
 {: #orgsspacesusers}
 *上次更新时间：2016 年 5 月 16 日*
+{: .last-updated}
 
 作为帐户所有者，您可以通过转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; ** 管理组织**页面来管理组织。组织管理员还可以使用“管理组织”页面来管理自己被设置为其管理员的任何组织。
 {:shortdesc}
@@ -42,7 +43,7 @@ copyright:
 <dt>域</dt>
 <dd>在分配给组织的因特网上提供路径。路径具有子域和域。子域通常是应用程序名称。域可能是系统域，或者为应用程序注册的定制域。请参阅[管理定制域](orgs_spaces.html#managedomains)。<br/><p>**注**：添加定制域时，必须将 DNS 服务器配置为解析您的定制域，以指向 {{site.data.keyword.Bluemix_notm}} 系统域。这样，当 {{site.data.keyword.Bluemix_notm}} 接收到定制域的请求时，它可以将其正确路由到您的应用程序。</p></dd>
 <dt>配额</dt>
-<dd>表示组织的资源限制，包括可分配供组织使用的服务数和内存量。创建组织时会分配配额。组织的空间中任何应用程序和服务导致配额的使用。通过“现买现付”或“预订”套餐，可以根据您组织的需求变化来调整 Cloud Foundry 应用程序和容器的配额。请参阅[管理配额](orgs_spaces.html#managequota)。</dd>
+<dd>表示组织的资源限制，包括可分配供组织使用的服务数和内存量。创建组织时会分配配额。组织的空间中任何应用程序或服务都会使用一定的配额。通过“现买现付”或“预订”套餐，可以根据您组织的需求变化来调整 Cloud Foundry 应用程序和容器的配额。请参阅[管理配额](orgs_spaces.html#managequota)。</dd>
 </dl>
 
 在 {{site.data.keyword.Bluemix_notm}} 中，您可以通过以下方式，使用组织来启用团队成员间的协作并促进项目资源的逻辑分组：
@@ -54,7 +55,7 @@ copyright:
 
 当您创建组织时，组织名称在 {{site.data.keyword.Bluemix_notm}} 中必须是唯一的。如果组织名称已经由其他 {{site.data.keyword.Bluemix_notm}} Public、Dedicated 或 Local 用户使用，那么必须指定新名称。创建组织之后，系统会自动为您分配*组织管理员*许可权，该许可权允许您编辑组织名称、添加团队成员以及在组织中创建或删除空间。
 
-您必须联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}来删除组织。请求支持团队删除组织时，该组织内的所有空间、应用程序和服务都会删除。
+您必须联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}来删除组织。请求支持团队删除组织时，会删除该组织内的所有空间、应用程序和服务。
 
 以下[用户角色](users_roles.html#userrolesinfo)可以分配给组织中的团队成员：
 
@@ -71,7 +72,7 @@ copyright:
 
 在组织内，您可以使用空间将一组应用程序、服务和团队成员分组在一起。空间与 {{site.data.keyword.Bluemix_notm}} 中的特定区域联系在一起。
 
-在将团队成员添加到组织之后，您可以为其授予对空间的许可权。与组织类似，空间也具有一组[用户角色](users_roles.html#userrolesinfo)，这些角色带有分配给团队成员的特定许可权：
+在将团队成员添加到组织之后，您可以对其授予空间的许可权。与组织类似，空间也具有一组[用户角色](users_roles.html#userrolesinfo)，这些角色带有分配给团队成员的特定许可权：
 
 <ul>
 <li>空间管理员</li>
@@ -118,7 +119,7 @@ copyright:
 
 作为帐户所有者，您可以联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}来删除组织。 
 
-**注**：删除操作不可撤销。您会失去与组织相关联的所有应用程序和服务。
+**注**：删除操作不可撤销。您会失去与该组织相关联的所有应用程序和服务。
 
 您可以在**管理组织**页面中删除空间：
 
@@ -147,7 +148,7 @@ copyright:
 ## 管理配额
 {: #managequota}
 
-作为帐户所有者或组织管理员，您可以查看已分配和已使用的组织配额。配额表示创建组织时为组织分配的资源限制。组织的空间中任何应用程序和服务导致配额的使用。
+作为帐户所有者或组织管理员，您可以查看已分配和已使用的组织配额。配额表示创建组织时为其分配的资源限制。组织的空间中任何应用程序或服务都会使用一定的配额。
 
 要查看组织的配额，请完成以下步骤：
 

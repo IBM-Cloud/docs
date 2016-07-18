@@ -97,7 +97,7 @@ Nicht alle Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region ver
 |{{site.data.keyword.retrieveandrankshort}}	|Ja 		|Ja 		|Ja|
 |{{site.data.keyword.SecureGateway}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.servicediscoveryshort}}		|Ja		|Ja		|Nein|
-|{{site.data.keyword.serviceproxyshort}}		|Ja		|Nein		|Nein|
+|{{site.data.keyword.serviceproxyshort}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.sescashort}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.ssofull}}			|Ja		|Nein		|Nein|
 |{{site.data.keyword.speechtotextshort}}	|Ja 		|Ja	 	|Ja|
@@ -117,7 +117,7 @@ Nicht alle Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region ver
 *Tabelle 2. Serviceverfügbarkeit*
 
 ## Fortgesetzte Verfügbarkeit für Services
-{{site.data.keyword.Bluemix_notm}} hat eine Gruppe von Services als Tier 1 ermittelt. IBM wird keine Tier 1-Service entfernen, ohne ein Funktionsäquivalent zur Verfügung zu stellen oder wenigstens fünf Jahre vorher die Rücknahme des Service bekannt zu machen.  
+{{site.data.keyword.Bluemix_notm}} hat eine Gruppe von Services als Tier 1 ermittelt. IBM wird keine Tier 1-Service entfernen, ohne ein Funktionsäquivalent zur Verfügung zu stellen oder wenigstens fünf Jahre vorher die Rücknahme des Service bekannt zu machen. 
 
 Die folgenden Services sind als Tier 1 klassifiziert:
   * {{site.data.keyword.apiconnect_short}}

@@ -1,6 +1,7 @@
 # Création d'applications mobiles
 {: #mobile}
-*Dernière mise à jour : 28 janvier 2016* 
+*Dernière mise à jour : 28 janvier 2016*
+{: .last-updated} 
 
 Avec les services mobiles {{site.data.keyword.Bluemix}}, vous pouvez intégrer des services de cloud prégénérés, gérés et
 évolutifs dans vos applications

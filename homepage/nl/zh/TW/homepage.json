@@ -16,7 +16,7 @@
 				"name": "IBM Bluemix OpenWhisk",
 				"href": "openwhisk/index.html"
 			}, {
-				"name": "儲存器",
+				"name": "容器",
 				"href": "containers/container_index.html"
 			}, {
 				"name": "虛擬伺服器",
@@ -40,7 +40,7 @@
 				"href": "services/vpn/index.html"
 			}]
 		}, {
-			"title": "儲存體",
+			"title": "儲存空間",
 			"img": "homepage/images/storage.svg",
 			"href": "services/storage.html",
 			"links": [{
@@ -105,9 +105,6 @@
 			}, {
 				"name": "Streaming Analytics",
 				"href": "services/StreamingAnalytics/index.html"
-			}, {
-				"name": "Time Series Database",
-				"href": "services/TimeSeries/index.html"
 			}]
 		}, {
 			"title": "Watson",
@@ -125,6 +122,9 @@
 			}, {
 				"name": "Dialog",
 				"href": "services/Dialog/index.html"
+			}, {
+				"name": "Document Conversion",
+				"href": "services/DocumentConversion/index.html"
 			}, {
 				"name": "Language Translation",
 				"href": "services/WatsonLanguageTranslation/index.html"
@@ -154,7 +154,7 @@
 				"href": "services/TradeoffAnalytics/index.html"
 			}, {
 				"name": "Visual Recognition",
-				"href": "services/VisualRecognition/index.html"
+				"href": "services/VisualRecognition/VisualRecognition.html"
 			}]
 		}, {
 			"title": "整合",
@@ -240,7 +240,7 @@
 				"href": "services/WorkloadScheduler/index.html"
 			}]
 		}, {
-			"title": "行動式",
+			"title": "行動",
 			"img": "homepage/images/mobile.svg",
 			"href": "services/mobile.html",
 			"links": [{

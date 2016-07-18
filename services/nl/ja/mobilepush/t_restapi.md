@@ -57,7 +57,7 @@ appSecret の値を取得するには、以下のようにします。
 ```
 {
  "imfpush_Dev": [
-{
+   {
      "name": "testapp1",
      "label": "imfpush_Dev",
      "plan": "Basic",

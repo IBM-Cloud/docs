@@ -14,7 +14,7 @@ copyright:
 # Machine translation tips
 {: #globalizationpipeline_tips}
 
-*Last updated: 22 March 2016*
+*Last updated: 12 July 2016*
 {: .last-updated}
 
 Machine translation can be effective at providing an approximation of the source text's meaning. However, the quality and usefulness of machine translation varies greatly depending on the target language and the machine translation engine that you use. One of the key factors in the quality of machine translation is the quality of the source itself. Source text that is loaded with colloquialisms, incomplete sentences, incorrect punctuation, and ambiguous words and phrases might not be translated accurately.
@@ -90,3 +90,4 @@ In addition, ask native language speakers to review and edit the machine transla
 
 * **Avoid text in graphics.**
 * **Avoid using formatting for emphasis.**
+

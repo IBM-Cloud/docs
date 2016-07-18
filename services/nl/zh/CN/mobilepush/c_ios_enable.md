@@ -21,10 +21,12 @@ copyright:
 
 
 1. 在 Mac 终端中，使用以下命令安装 CocoaPods：
+
 ```
 $ sudo gem install cocoapods
 ```
 2. 在终端中输入以下命令来初始化 CocoaPods。发出此命令时，确保此命令是在 Xcode 项目所在目录中运行。`pod init` 命令会创建文件标题。
+  
 ```
 $ pod init
 ```
@@ -50,18 +52,31 @@ $ pod init
 	    platform :ios, '8.0'
 	    pod 'BMSCore'
 	    pod 'BMSPush'
+      pod 'BMSAnalyticsAPI'
 	end
 	```
 3. 在终端中，转至项目文件夹，然后使用以下命令安装依赖关系：
+
 ```
 $ pod update
 ```
 该命令会安装依赖关系并创建新的 Xcode 工作空间。**注**：确保始终打开新的 Xcode 工作空间，而不是原始 Xcode 项目文件：
-
-	```
+```
 	$ open App.xcworkspace
 	```
-该工作空间包含原始项目，以及包含依赖关系的 Pods 项目。如果要修改 Bluemix Mobile Services 源文件夹，那么可以在 Pods 项目的 `Pods/yourImportedSourceFolder` 下找到该文件夹，例如：`Pods/IMFGoogleAuthentication`。
+该工作空间包含原始项目，以及包含依赖关系的 Pods 项目。如果要修改 Bluemix Mobile Services 源文件夹，您可以在 Pods 项目的 `Pods/yourImportedSourceFolder` 下找到该文件夹，例如：`Pods/BMSPush`。
+
+##Carthage
+{: #carthage}
+
+使用 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 将框架添加到项目中。（https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos%29。）
+
+1. 将 `BMSPush` 框架添加到 Cartfile 中：
+```
+github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
+```
+2. 运行 `carthage update` 命令。构建完成时，请将 `BMSPush.framework`、`BMSCore.framework` 和 `BMSAnalyticsAPI.framework` 拖动到 Xcode 项目中。
+3. 遵循 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 站点上的指示信息以完成集成。
 
 ##使用导入的框架和源文件夹
 
@@ -74,7 +89,6 @@ $ pod update
 
 ```
 //Objective-C
-
 #import <IMFCore/IMFCore.h>
 #import <IMFPush/IMFPush.h>
 ```
@@ -96,8 +110,7 @@ $ pod update
 import BMSCore
 import BMSPush
 ```
-
-
+**注意**：要查看 Swift Push 自述文件，请转至[自述文件](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master)
 ##构建设置
 
 转至 **Xcode > 构建设置 > 构建选项**，然后将**启用位代码**设置为**否**。
@@ -161,7 +174,7 @@ let push = BMSPushClient.sharedInstance
 
 **bluemixRegionSuffix**
 
-指定托管应用程序的位置。```bluemixRegion``` 参数指定要使用的 Bluemix 部署。可以使用 ```BMSClient.REGION`` 静态属性设置此值，并使用以下三个值中的一个值：
+指定托管应用程序的位置。`bluemixRegion` 参数指定要使用的 Bluemix 部署。可以使用 `BMSClient.REGION` 静态属性设置此值，并使用以下三个值中的一个值：
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK
@@ -174,7 +187,7 @@ let push = BMSPushClient.sharedInstance
 {: #enable-push-ios-notifications-register}
 
 
-应用程序必须向 APNs 进行注册，才能接收远程通知，该注册通常发生在将应用程序安装到设备上之后。当应用程序收到 APNs 生成的设备令牌后，必须将该令牌传递回 Push Notifications Service。
+应用程序必须注册 APNS，才能接收远程通知，该注册通常发生在将应用程序安装到设备上之后。当应用程序收到 APNS 生成的设备令牌后，必须将该令牌传递回 Push Notifications Service。
 
 要注册 iOS 应用程序和设备，请执行以下操作：
 
@@ -190,7 +203,6 @@ let push = BMSPushClient.sharedInstance
 
 ```
 	//For Objective-C
-
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
 [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
@@ -218,7 +230,7 @@ let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | U
 
 ###将令牌传递给 Push Notifications
 
-从 APNs 收到令牌后，将该令牌传递给 Push Notifications（作为 ```registerDevice:withDeviceToken``` 方法的一部分）。
+从 APNS 收到令牌后，将该令牌传递给 Push Notifications（作为 `registerDevice:withDeviceToken` 方法的一部分）。
 
 ####Objective-C
 
@@ -228,9 +240,7 @@ let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | U
 
    IMFClient *client = [IMFClient sharedInstance];
 
-
- [client initializeWithBackendRoute:@"your-backend-route-here" backendGUID:@"Your-backend-GUID-here"];
-
+ [client initializeWithBackendRoute: @"your-backend-route-here" backendGUID: @"Your-backend-GUID-here"];
 
 
  // get Push instance
@@ -246,7 +256,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ####Swift
 
-从 APNs 收到令牌后，将该令牌传递给 Push Notifications（作为 ```didRegisterForRemoteNotificationsWithDeviceToken``` 方法的一部分）。
+从 APNS 收到令牌后，将该令牌传递给 Push Notifications（作为 `didRegisterForRemoteNotificationsWithDeviceToken` 方法的一部分）。
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
@@ -291,7 +301,6 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
        //UserInfo dictionary will contain data sent from the server
    }
 
-
 ```
 
 
@@ -313,14 +322,9 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 2. 在**创建通知**中，输入消息，然后单击**发送**。
 3. 验证设备是否收到通知。
 
-	以下屏幕快照显示了在 Android 和 iOS 设备上前台处理推送通知的警报框。
-
-	![Android 上的前台推送通知](images/Android_Screenshot.jpg)
+	以下屏幕快照显示了在 iOS 设备上前台和后台处理推送通知的警报框。	![Android 上的前台推送通知](images/Android_Screenshot.jpg)
 
 	![iOS 上的前台推送通知](images/iOS_Screenshot.jpg)
-
-	以下屏幕快照显示了 Android 后台的推送通知。
- ![Android 上的后台推送通知](images/background.jpg)
 
 
 

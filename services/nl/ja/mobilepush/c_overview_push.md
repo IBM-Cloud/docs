@@ -9,7 +9,7 @@ copyright:
 {: #overview-push}
 
 プッシュ通知は、iOS デバイスおよび Android デバイスへの通知の送信に使用できるサービスです。通知は、すべてのアプリケーション・ユーザーをターゲットとすることも、タグを使用して特定のユーザーおよびデバイスの集合をターゲットとすることもできます。デバイス、タグ、およびサブスクリプションを管理できます。
-クライアント・アプリケーションをさらに開発するために、SDK (software development kit) および Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用することもできます。Push 専用サービスについて詳しくは、[専用サービス](../../dedicated/index.html)を参照してください。 
+クライアント・アプリケーションをさらに開発するために、SDK (software development kit) および Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用することもできます。Push 専用サービスについては、[『専用サービス』](../../dedicated/index.html)を参照してください。 
 
 
 ## Push Notification Service プロセス

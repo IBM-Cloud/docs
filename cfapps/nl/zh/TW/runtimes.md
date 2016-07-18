@@ -13,10 +13,10 @@ copyright:
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# 執行時期概觀
+# 運行環境概觀
 *前次更新：2015 年 11 月 11 日*
 
-使用執行時期可快速啟動並執行您的應用程式，而不需要設定及管理 VM 和作業系統。{{site.data.keyword.Bluemix}} 中的執行時期是以 Cloud Foundry 為基礎，這表示 Cloud Foundry 的社群建置套件或工具外掛程式也能與 {{site.data.keyword.Bluemix_notm}} 搭配運作。若要開始使用，請參閱持續增加中的執行時期清單。
+使用運行環境可快速啟動並執行您的應用程式，而不需要設定及管理 VM 和作業系統。{{site.data.keyword.Bluemix}} 中的運行環境是以 Cloud Foundry 為基礎，這表示 Cloud Foundry 的社群建置套件或工具外掛程式也能與 {{site.data.keyword.Bluemix_notm}} 搭配運作。若要開始使用，請參閱持續增加中的運行環境清單。
 {:shortdesc}
 
 <ul class="runtimeIconList">

@@ -8,14 +8,16 @@ copyright:
 # Configurando o {{site.data.keyword.amashort}} client SDK para iOS (Swift SDK)
 {: #custom-ios}
 
-Configure seu aplicativo iOS que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
+Configure seu aplicativo iOS que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.  O {{site.data.keyword.amashort}} Swift SDK recém-liberado inclui e melhora a funcionalidade fornecida pelo Mobile Client Access Objective-C SDK existente.
+
+**Nota:** embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuar o Objective-C SDK posteriormente este ano em favor deste novo Swift SDK.
 
 ## Antes de iniciar
 {: #before-you-begin}
 
-Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que seja configurada para usar um provedor de identidade customizado.  Seu app móvel também deve ser instrumentado com o {{site.data.keyword.amashort}} client SDK. Para obter informações adicionais, consulte as seguintes informações:
+Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que seja configurada para usar um provedor de identidade customizado.  Seu app móvel também deve ser instrumentado com o {{site.data.keyword.amashort}} client SDK.  Para obter informações adicionais, consulte as seguintes informações:
  * [Introdução
-ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
  * [Configurando o iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
  * [Usando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Criando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
@@ -42,52 +44,14 @@ autenticação customizada.
 
  1. Clique em **Salvar**.
 
-## Configurando o {{site.data.keyword.amashort}} client SDK para iOS
- {: #custom-auth-ios-sdk}
 
-### Instalando o CocoaPods
- {: #custom-auth-cocoapods}
 
- O {{site.data.keyword.amashort}} client SDK é distribuído com o CocoaPods, um gerenciador de dependência para projetos iOS. O CocoaPods faz o download automático de artefatos de repositórios e os disponibiliza para o aplicativo iOS.
-
- 1. Abra o Terminal e execute o comando `pod --version`. Se você já tiver o CocoaPods instalado, o número da versão será exibido. É possível pular para a próxima seção deste tutorial.
-
- 1. Instale o CocoaPods executando `sudo gem install cocoapods`. Consulte o [website do CocoaPods](https://cocoapods.org/) se precisar de orientação adicional.
-
- 1. Feche o XCode.
-
- 1. Abra Terminal e `cd` no diretório de projeto.
-
- 1.  Execute `pod init`.
-
-### Instalando o client SDK com o CocoaPods
-{: #custom-ios-sdk-cocoapods}
-
-Use o gerenciador de dependência CocoaPods para instalar o {{site.data.keyword.amashort}} client SDK.
-
-1. Abra o Terminal e navegue até o diretório-raiz de seu projeto iOS.
-
-1. Edite `Podfile` e inclua as linhas a seguir.
-
- ```
- use_frameworks!
- pod 'BMSSecurity'
- ```
- **Dica:** é possível incluir `use_frameworks!` em
-seu destino Xcode em vez de tê-lo no Podfile.
-
-1. Na linha de comandos, execute `pod install`.
-O CocoaPods instala as dependências incluídas. O progresso e quais componentes foram incluídos são exibidos.
-
- **Importante**: deve-se agora abrir o projeto usando um arquivo xcworkspace que foi gerado por CocoaPods. Normalmente, o nome é `{your-project-name}.xcworkspace`.  
-
-1. Execute `open {your-project-name}.xcworkspace` a partir da linha de comandos para abrir sua área de trabalho do projeto iOS.
 
 ### Inicializando o client SDK
 {: #custom-ios-sdk-initialize}
 
 Inicialize o SDK passando os parâmetros `applicationRoute` e
-`applicationGUID`. Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo
+`applicationGUID`. Um local comum, mas não obrigatório, para colocar o código de inicialização é no método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo
 
 1. Obter valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. Os
 valores `applicationRoute` e `applicationGUID` são
@@ -101,20 +65,23 @@ exibidos nos campos **Rota** e **GUID do app**.
  import BMSSecurity
 ```
 
-1. Inicialize o {{site.data.keyword.amashort}} client SDK, mude o gerenciador de autorização para ser MCAAuthorizationManager e defina uma delegação de autenticação e registre-a. Substitua os valores
-`<applicationRoute>` e
+1. Inicialize o {{site.data.keyword.amashort}} client SDK, mude o gerenciador de autorização para ser MCAAuthorizationManager, defina um delegado de autenticação e registre-o. Substitua os
+valores `<applicationRoute>` e
 `<applicationGUID>` pelos valores de **Rota** e
 **GUID do app** que você obteve das **Opções
-móveis** no painel {{site.data.keyword.Bluemix_notm}}.
+móveis** no painel {{site.data.keyword.Bluemix_notm}}. 
+
+  Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de face (![Face](/face.png "Face")) no canto superior esquerdo do painel.
+Para `<yourProtectedRealm>`, use o **Nome da região** definido no quadro **Customizado** do painel do {{site.data.keyword.amashort}}.
 
  ```Swift
  let backendURL = "<applicationRoute>"
  let backendGUID = "<applicationGUID>"
- let customRealm = "<your protected resource's realm>"
+ let customRealm = "<yourProtectedRealm>"
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<application Bluemix region>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -149,7 +116,7 @@ móveis** no painel {{site.data.keyword.Bluemix_notm}}.
  }   
  ```
 
-## Testando a Autenticação
+## Testando a autenticação
 {: #custom-ios-testing}
 
 Depois de inicializar o client SDK e registrar uma delegação de autenticação customizada, será possível começar a fazer solicitações ao seu backend móvel.
@@ -157,14 +124,12 @@ Depois de inicializar o client SDK e registrar uma delegação de autenticação
 ### Antes de iniciar
 {: #custom-ios-testing-before}
 
- Deve-se ter um aplicativo que foi criado com o modelo do {{site.data.keyword.mobilefirstbp}} e ter um recurso que esteja protegido por {{site.data.keyword.amashort}} no terminal `/protected`.
+ Deve-se ter um aplicativo criado com o modelo do {{site.data.keyword.mobilefirstbp}} e ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`.
 
-1. Envie uma solicitação ao terminal protegido do backend móvel em seu navegador
-abrindo `{applicationRoute}/protected`, por exemplo,
-`http://my-mobile-backend.mybluemix.net/protected`.
-  O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
+1. Envie uma solicitação para o terminal protegido do backend móvel em seu navegador abrindo `{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`.
+  O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} está protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
-1. Use seu aplicativo iOS para fazer solicitação ao mesmo terminal. Inclua o
+1. Use seu aplicativo iOS para fazer solicitação para o mesmo terminal. Inclua o
 código a seguir depois de inicializar `BMSClient` e registrar a
 delegação de autenticação customizada:
 
@@ -172,7 +137,7 @@ delegação de autenticação customizada:
  let customResourceURL = "<your protected resource's path>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
-  if error == nil {
+ if error == nil {
       print ("response:\(response?.responseText), no error")
   } else {
       print ("error: \(error)")
@@ -182,7 +147,7 @@ delegação de autenticação customizada:
  request.sendWithCompletionHandler(callBack)
  ```
 
-1. 	Quando suas solicitações forem bem-sucedidas, você verá a saída a seguir no console Xcode:
+1.	Quando suas solicitações forem bem-sucedidas, você verá a saída a seguir no console Xcode:
 
  ```
  onAuthenticationSuccess info = Optional({

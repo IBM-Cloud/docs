@@ -15,7 +15,8 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} public
 {: #public}
-*Dernière mise à jour : 22 février 2016*
+*Dernière mise à jour : 19 mai 2016*
+{: .last-updated}
 
 
 {{site.data.keyword.Bluemix_notm}} fait abstraction de la plupart des aspects complexes associés à l'hébergement et à la gestion des
@@ -176,7 +177,9 @@ fonctionner. La franchise de ressources est la même dans toutes les régions qu
 Si
 vous employez l'interface utilisateur
 {{site.data.keyword.Bluemix_notm}}, vous pouvez basculer vers une région différente et travailler avec les
-espaces de cette région.
+espaces de cette région. Accédez à l'icône **Compte et support**
+![Icône compte et support](../admin/images/account_support.svg) et développez le sélecteur **Région**. Vous pouvez ici
+sélectionner une région différente dans la liste.
 
 Si vous utilisez l'interface de ligne de commande cf, vous devez vous connecter à la région {{site.data.keyword.Bluemix_notm}} avec laquelle vous voulez travailler en entrant la
 commande cf api et en spécifiant le noeud final d'API de la région. Par exemple, entrez la commande suivante pour vous connecter à la région {{site.data.keyword.Bluemix_notm}}

@@ -51,6 +51,7 @@ $ pod init
 	    platform :ios, '8.0'
 	    pod 'BMSCore'
 	    pod 'BMSPush'
+      pod 'BMSAnalyticsAPI'
 	end
 	```
 3. Wechseln Sie am Terminal in Ihren Projektordner und installieren Sie die
@@ -63,7 +64,19 @@ Mit diesem Befehl werden Ihre Abhängigkeiten installiert und es wird ein neuer 
 	```
 	$ open App.xcworkspace
 	```
-Der Arbeitsbereich enthält Ihr ursprüngliches Projekt und das Projekt 'Pods', das Ihre Abhängigkeiten enthält. Wenn Sie einen Bluemix Mobile Services-Quellenordner ändern möchten, finden Sie diesen in Ihrem Projekt 'Pods' unter `Pods/yourImportedSourceFolder`, zum Beispiel: `Pods/IMFGoogleAuthentication`.
+Der Arbeitsbereich enthält Ihr ursprüngliches Projekt und das Projekt 'Pods', das Ihre Abhängigkeiten enthält. Wenn Sie einen Bluemix Mobile Services-Quellenordner ändern möchten, finden Sie diesen in Ihrem Projekt 'Pods' unter `Pods/yourImportedSourceFolder`, zum Beispiel: `Pods/BMSPush`.
+
+##Carthage
+{: #carthage}
+
+Fügen Sie mithilfe von [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) Frameworks zu Ihrem Projekt hinzu. (https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos%29.)
+
+1. Fügen Sie `BMSPush`-Frameworks zur Cartfile hinzu:
+```
+github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
+```
+2. Führen Sie den Befehl `carthage update` aus. Wenn der Build abgeschlossen ist, ziehen Sie `BMSPush.framework`, `BMSCore.framework` und `BMSAnalyticsAPI.framework` in das Xcode-Projekt.
+3. Gehen Sie den Anweisungen auf der [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)-Site entsprechend vor, um die Integration abzuschließen.
 
 ##Importierte Frameworks und Quellenordner verwenden
 
@@ -97,7 +110,7 @@ Schreiben Sie #import-Anweisungen für die entsprechenden Header, zum Beispiel:
 import BMSCore
 import BMSPush
 ```
-
+**Achtung**: Die Push-Readme-Datei für Swift finden Sie in [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master).
 
 ##Buildeinstellungen
 
@@ -162,7 +175,7 @@ Gibt den eindeutigen Schlüssel an, der der Anwendung zugewiesen wird, die Sie i
 
 **bluemixRegionSuffix**
 
-Gibt den Standort an, an dem die App gehostet ist. Der Parameter `bluemixRegion` gibt an, welche Bluemix-Bereitstellung Sie verwenden. Sie können diesen Wert mit der statischen Eigenschaft `BMSClient.REGION` angeben und einen von drei Werten verwenden:
+Gibt den Standort an, an dem die App gehostet ist. Der Parameter `bluemixRegion` gibt an, welche Bluemix-Bereitstellung verwendet wird. Sie können diesen Wert mit der statischen Eigenschaft `BMSClient.REGION` angeben und einen von drei Werten verwenden:
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK
@@ -175,9 +188,9 @@ Gibt den Standort an, an dem die App gehostet ist. Der Parameter `bluemixRegion`
 {: #enable-push-ios-notifications-register}
 
 
-Eine Anwendung (App) muss bei APNs registriert werden, um ferne Benachrichtigungen zu empfangen. Dieser Schritt erfolgt meistens nach der Installation der App auf einem Gerät. Nachdem das von APNs generierte Gerätetoken von der App empfangen wurde, muss es zurück an Push Notifications Service geleitet werden.
+Eine Anwendung (App) muss bei APNS registriert werden, um ferne Benachrichtigungen zu empfangen. Dieser Schritt erfolgt meistens nach der Installation der App auf einem Gerät. Nachdem das von APNS generierte Gerätetoken von der App empfangen wurde, muss es zurück an Push Notifications Service geleitet werden.
 
-Führen Sie zum Registrieren von iOs-Anwendungen und -Geräten die folgenden Schritte aus:
+Führen Sie zum Registrieren von iOS-Anwendungen und -Geräten die folgenden Schritte aus:
 
 1. Back-End-Anwendung erstellen
 2. Token an Push Notifications übergeben
@@ -218,7 +231,7 @@ Erstellen Sie eine Back-End-Anwendung im Abschnitt 'Boilerplates' des Bluemix®-
 
 ###Token an Push Notifications übergeben
 
-Sobald das Token von APNs empfangen wird, leiten Sie es als Teil der Methode `registerDevice:withDeviceToken` an Push Notifiacations weiter.
+Sobald das Token von APNS empfangen wird, leiten Sie es als Teil der Methode `registerDevice:withDeviceToken` an Push Notifiacations weiter.
 
 ####Objective-C
 
@@ -313,14 +326,12 @@ Push-Benachrichtigungen subskribiert haben, Ihre Benachrichtigung.
 2. Geben Sie in **Eigene Benachrichtigung erstellen** die gewünschte Nachricht ein und klicken Sie auf **Senden**.
 3. Überprüfen Sie, ob die Geräte Ihre Benachrichtigung empfangen haben.
 
-	Der folgende Screenshot zeigt ein Alertfeld bei der Verarbeitung einer Push-Benachrichtigung im Vordergrund eines Android- und iOS-Geräts.
+	Der folgende Screenshot zeigt ein Alertfeld bei der Verarbeitung einer
+Push-Benachrichtigung im Vordergrund und Hintergrund eines iOS-Geräts.
 
 	![Push-Benachrichtigung im Vordergrund auf einem Android-Gerät](images/Android_Screenshot.jpg)
 
 	![Push-Benachrichtigung im Vordergrund auf einem iOS-Gerät](images/iOS_Screenshot.jpg)
-
-	Der folgende Screenshot zeigt eine Push-Benachrichtigung im Hintergrund auf einem Android-Gerät.
-	![Push-Benachrichtigung im Hintergrund auf einem Android-Gerät](images/background.jpg)
 
 
 

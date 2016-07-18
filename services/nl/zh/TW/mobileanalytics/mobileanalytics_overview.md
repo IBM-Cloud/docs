@@ -7,13 +7,15 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # 關於 {{site.data.keyword.mobileanalytics_short}}  
+{: aboutmobileanalytics}
 *前次更新：2016 年 4 月 21 日*
+{: .last-updated}
 
 {: shortdesc}
-{{site.data.keyword.mobileanalytics_full}} 服務提供行動式應用程式開發人員及應用程式擁有者的重要應用程式用法及效能見解。使用 {{site.data.keyword.mobileanalytics_short}}，應用程式擁有者及開發人員可以瞭解「使用者端」發生的情況，而且他們可以使用這項見解來建置與使用者最相關且行動式應用程式真實領域內最顯著的較佳應用程式。 
+{{site.data.keyword.mobileanalytics_full}} 服務提供行動應用程式開發人員及應用程式擁有者的重要應用程式用法及效能見解。使用 {{site.data.keyword.mobileanalytics_short}}，應用程式擁有者及開發人員可以瞭解「使用者端」發生的情況，而且他們可以使用這項見解來建置與使用者最相關且行動應用程式真實領域內最顯著的較佳應用程式。 
 
 {: #overview}  
-此服務包括的「{{site.data.keyword.mobileanalytics_short}} 主控台」，可讓開發人員及應用程式擁有者監視行動式應用程式效能、查看用法統計資料，以及搜尋裝置日誌。{{site.data.keyword.mobileanalytics_short}} 提供適用於 iOS 8+（僅限 Swift）及 Android 4+ 的 Client SDK。
+此服務包括的「{{site.data.keyword.mobileanalytics_short}} 主控台」，可讓開發人員及應用程式擁有者監視行動應用程式效能、查看用法統計資料，以及搜尋裝置日誌。{{site.data.keyword.mobileanalytics_short}} 提供適用於 iOS 8+（僅限 Swift）及 Android 4+ 的 Client SDK。
 
 <!-- Mobile Analytics Server SDKs - set of server SDKs to protect resources that are-->
 <!--hosted on {{site.data.keyword.Bluemix_notm}}. Currently supported runtimes are-->
@@ -76,7 +78,8 @@ copyright:
 
 All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. You can also create custom charts, based on data that is collected by the analytics service in the dashboard. In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. -->
 
-># 相關鏈結 {:class="linklist"}
+>
+# 相關鏈結 {:class="linklist"}
 <!-->## 指導教學及範例 {:id="samples"}-->
 <!-->* [Link1](https://github.com/)-->
 >

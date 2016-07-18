@@ -15,7 +15,10 @@ Managing notifications
 -->
  <!--CLM PRODUCTION NAVIGATION: -->
  <!--CLM NEW NAVIGATION : -->
- <topicref href="index.html" linking="none" navtitle="プッシュ通知" format="html" scope="peer">
+ <topicref href="index.html" linking="none" navtitle="プッシュ通知" format="html" scope="peer"
+locktitle="yes">
+<topicref href="index.html" navtitle="始めに"
+format="html" scope="peer" locktitle="yes"> </topicref>
 <topicref href="c_overview_push.html" navtitle="概要" linking="sourceonly" format="html"
 outputclass="subsection" scope="peer">
 <topicref href="c_overview_push.html#overview_push_process" format="html"
@@ -72,7 +75,8 @@ navtitle="iOS アプリケーションとデバイスの登録" scope="peer"/>
 navtitle="iOS デバイスでのプッシュ通知の受け取り" scope="peer"/>
 <topicref href="c_ios_enable.html#send" format="html" navtitle="基本プッシュ通知の送信"
 scope="peer"/>
-<topicref href="c_ios_enable.html#next_steps_tags" format="html" navtitle="次のステップ" scope="peer"/>
+<topicref href="c_ios_enable.html#next_steps_tags" format="html" navtitle="次のステップ" scope="peer"
+/>
 </topicref>
 </topicref>
 <topicref href="c_tag_basednotifications.html" outputclass="subsection" chunk="to-content"
@@ -87,9 +91,9 @@ navtitle="タグ・ベースの通知の使用" scope="peer"/>
 <topicref href="t_advance_badge_sound_payload.html" outputclass="subsection" chunk="to-content"
 navtitle="拡張通知" format="html" scope="peer">
 <topicref href="t_advance_badge_sound_payload.html#badge-sound-payload"
-navtitle="音声、ペイロード、iOS バッジの構成" format="html" scope="peer"/>
+navtitle="音声、ペイロード、および iOS バッジの構成" format="html" scope="peer"/>
 <topicref href="t_advance_badge_sound_payload.html#hold-notifications-android"
-navtitle="Android 通知の保留 " format="html" scope="peer"/>
+navtitle="Android 通知の保留" format="html" scope="peer"/>
 <topicref href="t_advance_badge_sound_payload.html#enable-actionable-notifications-ios"
 navtitle="アクション可能 iOS 通知の使用可能化" format="html" scope="peer"/>
 <topicref href="t_advance_badge_sound_payload.html#actionable-notifications"

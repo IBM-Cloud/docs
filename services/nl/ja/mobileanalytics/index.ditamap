@@ -6,8 +6,9 @@
 
 <map xml:lang="ja-jp">
 <title>Mobile Analytics</title>
-<topicref format="html" href="index.html" linking="sourceonly" navtitle="Mobile Analytics"
-scope="peer">
+<topicref format="html" href="index.html" linking="none" navtitle="Mobile Analytics" scope="peer"
+locktitle="yes">
+<topicref format="html" href="index.html" navtitle="はじめに" scope="peer" locktitle="yes"> </topicref>
 <topicref format="html" href="mobileanalytics_overview.html" navtitle="製品情報" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="mobileanalytics_overview.html#usingmetrics" linking="sourceonly"
@@ -23,15 +24,15 @@ navtitle="Swift クライアント SDK のインストール" scope="peer"> </to
 <topicref format="html" href="sdk.html" navtitle="アプリケーションの装備" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="クライアント・キー値の識別" scope="peer"> </topicref>
+navtitle="クライアント・キーの識別" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
-navtitle="分析を収集するための Android アプリの初期設定" scope="peer"> </topicref>
+navtitle="Android アプリの初期化" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"
-navtitle="分析収集のための iOS アプリの初期設定" scope="peer"> </topicref>
+navtitle="iOS アプリの初期化" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#app-monitoring-gathering-analytics" linking="sourceonly"
 navtitle="使用分析の収集" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#app-monitoring-logger" linking="sourceonly"
-navtitle="ロガーの有効化、構成、および使用" scope="peer"> </topicref>
+navtitle="ロガーの使用" scope="peer"> </topicref>
 <!--<topicref format="html" href="sdk.html#enable-logger-sdklogs" linking="sourceonly" navtitle="Enabling the Client SDK internal logs" scope="peer"> </topicref>-->
 <topicref format="html" href="sdk.html#trackingusers" linking="sourceonly" navtitle="ユーザーのトラッキング"
 scope="peer"> </topicref>
@@ -39,10 +40,10 @@ scope="peer"> </topicref>
 </topicref>
 <topicref format="html" href="app-monitoring.html" linking="sourceonly" navtitle="アプリのモニター"
 scope="peer" outputclass="subsection">
-<topicref format="html" href="app-monitoring.html#custom-charts"
-navtitle="カスタム・グラフによるデータの視覚化" scope="peer">
+<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="データの視覚化"
+scope="peer">
 <topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly"
-navtitle="クライアント・ログのカスタム・グラフの作成" scope="peer"> </topicref>
+navtitle="カスタム・グラフの作成" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly"
 navtitle="カスタム・データのエクスポート" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly"
@@ -50,9 +51,9 @@ navtitle="カスタム・グラフ定義のエクスポートとインポート"
 </topicref>
 <topicref format="html" href="app-monitoring.html#alerts" navtitle="アラートの設定" scope="peer">
 <topicref format="html" href="app-monitoring.html#alert-def-client-logs" linking="sourceonly"
-navtitle="クライアント・ログのアラート定義の作成" scope="peer"> </topicref>
+navtitle="クライアント・ログ・アラートの作成" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#alert-def-app-crash" linking="sourceonly"
-scope="peer" navtitle="アプリ異常終了のアラート定義の作成"> </topicref>
+scope="peer" navtitle="アプリ・クラッシュ・アラートの作成"> </topicref>
 <topicref format="html" href="app-monitoring.html#managing-alert-definitions" linking="sourceonly"
 scope="peer" navtitle="アラート定義の管理"> </topicref>
 <topicref format="html" href="app-monitoring.html#viewing-alert-details" linking="sourceonly"

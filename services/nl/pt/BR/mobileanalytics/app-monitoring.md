@@ -7,6 +7,7 @@ copyright:
 # Monitorando aplicativos com o {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
 *Última atualização: 6 de maio de 2016*
+{: .last-updated}
 
 O {{site.data.keyword.mobileanalytics_full}} fornece monitoramento e análise para seus aplicativos móveis. É
 possível registrar logs de clientes e monitorar dados com o SDK do cliente do {{site.data.keyword.mobileanalytics_short}}. Os desenvolvedores podem controlar quando enviar esses dados para o serviço {{site.data.keyword.mobileanalytics_short}}. Quando os dados são entregues no {{site.data.keyword.mobileanalytics_short}}, é possível usar o painel do {{site.data.keyword.mobileanalytics_short}} para obter insights de análise sobre os aplicativos móveis, dispositivos e logs do cliente.

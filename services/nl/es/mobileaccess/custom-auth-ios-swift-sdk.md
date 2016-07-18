@@ -1,20 +1,22 @@
 ---
 
 copyright:
-  años: 2016
+  years: 2016
 
 ---
 
 # Configuración del SDK del cliente de {{site.data.keyword.amashort}} para iOS (SDK de Swift)
 {: #custom-ios}
 
-Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amashort}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.
+Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amashort}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.  El nuevo SDK de {{site.data.keyword.amashort}} Swift amplia y mejora la funcionalidad proporcionada por el SDK Objetive-C de Mobile Client Access existente. 
+
+**Nota:** Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK a finales del año en favor del nuevo SDK de Swift. 
 
 ## Antes de empezar
 {: #before-you-begin}
 
-Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte la siguiente información:
- * [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte la siguiente información:
+ * [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
  * [Configuración del SDK de Swift de iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
  * [Utilización de un proveedor de identidad personalizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Creación de un proveedor de identidad personalizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
@@ -38,45 +40,8 @@ Debe tener un recurso que esté protegido por una instancia del servicio de {{si
 
  1. Pulse **Guardar**.
 
-## Configuración del SDK del cliente de {{site.data.keyword.amashort}} para iOS
- {: #custom-auth-ios-sdk}
 
-### Instalación de CocoaPods
- {: #custom-auth-cocoapods}
 
- El SDK del cliente de {{site.data.keyword.amashort}} se distribuye con CocoaPods, un gestor de dependencias para proyectos de iOS. CocoaPods descarga automáticamente los artefactos desde los repositorios y los pone a disposición para la aplicación de iOS.
-
- 1. Abra Terminal y ejecute el mandato `pod --version`. Si ya tiene CocoaPods instalado, se muestra el número de versión. Puede omitir la sección siguiente de esta guía de aprendizaje.
-
- 1. Instale CocoaPods ejecutando `sudo gem install cocoapods`. Consulte el [sitio web de CocoaPods](https://cocoapods.org/) en caso de necesitar más información.
-
- 1. Cierre XCode.
-
- 1. Abra Terminal y ejecute `cd` en el directorio del proyecto.
-
- 1.  Ejecute `pod init`.
-
-### Instalación del SDK del cliente con CocoaPods
-{: #custom-ios-sdk-cocoapods}
-
-Utilice el gestor de dependencias CocoaPods para instalar el SDK del cliente de {{site.data.keyword.amashort}}. 
-
-1. Abra Terminal y navegue hasta el directorio raíz del proyecto de iOS.
-
-1. Edite el archivo `Podfile` y añada las siguientes líneas.
-
- ```
- use_frameworks!
- pod 'BMSSecurity'
- ```
- **Consejo:** puede añadir `use_frameworks!` al destino de Xcode en lugar de especificarlo en el archivo Podfile.
-
-1. Desde la línea de mandatos, ejecute `pod install`.
-CocoaPods instala las dependencias añadidas. Se mostrarán el progreso y los componentes que se han añadido.
-
- **Importante**: ahora debe abrir el proyecto con un archivo xcworkspace que ha generado CocoaPods. El nombre suele ser `{nombre-proyecto}.xcworkspace`.  
-
-1. Ejecute `open {nombre-proyecto}.xcworkspace` desde una línea de mandatos para abrir su espacio de trabajo de iOS.
 
 ### Inicialización del SDK del cliente
 {: #custom-ios-sdk-initialize}
@@ -85,7 +50,7 @@ Para inicializar el SDK, especifique los parámetros `applicationRoute` y `appli
 
 1. Obtenga los valores de los parámetros de la aplicación. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Los valores de `applicationRoute` y `applicationGUID` se muestran en los campos **Ruta** e **Identificador exclusivo global de la app**.
 
-1. Importe las infraestructuras necesarias en la clase en la que desea utilizar el SDK del cliente de {{site.data.keyword.amashort}}. 
+1. Importe las infraestructuras necesarias en la clase en la que desea utilizar el SDK del cliente de {{site.data.keyword.amashort}}.
 
  ```Swift
  import UIKit
@@ -93,16 +58,18 @@ Para inicializar el SDK, especifique los parámetros `applicationRoute` y `appli
  import BMSSecurity
 ```
 
-1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}, cambie el gestor de autorización por MCAAuthorizationManager y defina un delegado de autenticación y regístrelo. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
+1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}, cambie el gestor de autorización por MCAAuthorizationManager y defina un delegado de autenticación y regístrelo. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. 
+
+  Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}m pulse en el icono de c ara (![Cara](/face.png "Cara")) que se encuentra en la esquina superior derecha del panel de control. Para `<yourProtectedRealm>`, utilice el **nombre de reino** que ha definido en el título **Custom** del panel de control de {{site.data.keyword.amashort}}.
 
  ```Swift
  let backendURL = "<applicationRoute>"
  let backendGUID = "<applicationGUID>"
- let customRealm = "<your protected resource's realm>"
+ let customRealm = "<yourProtectedRealm>"
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<application Bluemix region>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -137,20 +104,19 @@ Para inicializar el SDK, especifique los parámetros `applicationRoute` y `appli
  }   
  ```
 
-## Prueba de autenticación
+## Prueba de la autenticación
 {: #custom-ios-testing}
 
-Después de inicializar el SDK del cliente y registrar un delegado de autorización personalizado, puede empezar a realizar solicitudes al programa de fondo móvil. 
+Después de inicializar el SDK del cliente y registrar un delegado de autorización personalizado, puede empezar a realizar solicitudes al programa de fondo móvil.
 
 ### Antes de empezar
 {: #custom-ios-testing-before}
 
  Debe tener una aplicación que se haya creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y que disponga de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`.
 
-1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://mi-programa-fondo-móvil.mybluemix.net/protected`.
-  El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
+1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`. El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
 
-1. Utilice la aplicación de iOS para realizar solicitudes al mismo punto final. Añada el código siguiente para inicializar `BMSClient` y registrar el delegado de autorización personalizad:
+1. Utilice la aplicación de iOS para realizar una solicitud al mismo punto final. Añada el código siguiente para inicializar `BMSClient` y registrar el delegado de autorización personalizad:
 
  ```Swift
  let customResourceURL = "<your protected resource's path>"
@@ -181,8 +147,7 @@ Después de inicializar el SDK del cliente y registrar un delegado de autorizaci
  ```
 
 1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código:
-
- ```
+```
  MCAAuthorizationManager.sharedInstance.logout(callBack)
  ```  
 

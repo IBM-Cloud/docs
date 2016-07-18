@@ -20,6 +20,7 @@ copyright:
 {: #openwhisk_actions}
 
 *上次更新时间：2016 年 3 月 22 日*
+{: .last-updated}
 
 操作是在 {{site.data.keyword.openwhisk}} 平台上运行的无状态代码片段。操作可以是 JavaScript 函数、Swift 函数或封装在 Docker 容器中的定制可执行程序。例如，操作可用于检测映像中的构面、聚集一组 API 调用或发布推文。
 {:shortdesc}
@@ -75,7 +76,7 @@ copyright:
 
   您可以看到刚才创建的 `hello` 操作。
 
-4. 创建操作后，可以使用“invoke”命令在 {{site.data.keyword.openwhisk_short}} 的云中运行该操作。可以通过在命令中指定标记以使用*阻塞*调用或*非阻塞*调用来调用操作。阻塞调用会等待操作运行至完成并返回结果。此示例使用的是阻塞参数 `-blocking`：
+4. 创建操作后，可以使用“invoke”命令在 {{site.data.keyword.openwhisk_short}} 的云中运行该操作。可以通过在命令中指定标记以使用*阻塞*调用或*非阻塞*调用来调用操作。阻塞调用会等待操作运行至完成并返回结果。此示例使用的是阻塞参数 `--blocking`：
 
   ```
   wsk action invoke --blocking hello
@@ -83,7 +84,6 @@ copyright:
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  response:
   {
       "result": {
           "payload": "Hello world"
@@ -289,7 +289,7 @@ copyright:
 以下示例调用 Yahoo Weather 服务来获取特定位置的当前天气状况。 
 
 1. 将以下内容保存在名为 `weather.js` 的文件中。
-```
+  ```
     var request = require('request');
     
     function main(msg) {
@@ -314,7 +314,7 @@ copyright:
   此示例还显示了需要异步操作。此操作返回 `whisk.async()`，指示函数返回时此操作的结果尚不可用。相反，结果会在 HTTP 调用完成后在 `request` 回调中提供，并且会作为自变量传递给 `whisk.done()` 函数。
 
 2. 运行以下命令来创建并调用操作：
-```
+  ```
   wsk action create weather weather.js
   ```
   {: pre}
@@ -344,19 +344,20 @@ copyright:
   {: pre}
   ```
   package /whisk.system/util
-   action /whisk.system/util/cat: Concatenate array of strings, and split lines into an array
+   action /whisk.system/util/cat: Concatenate array of strings
    action /whisk.system/util/head: Filter first K array elements and discard rest
    action /whisk.system/util/date: Get current date and time
    action /whisk.system/util/sort: Sort array
+   action /whisk.system/util/split: Splits a string into an array of strings
   ```
   {: screen}
 
-  您将使用此示例中的 `cat` 和 `sort` 操作。
+  您将使用此示例中的 `split` 和 `sort` 操作。
 
 2. 创建操作序列，使一个操作的结果作为自变量传递给下一个操作。
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/cat,/whisk.system/util/sort
+  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -391,7 +392,9 @@ copyright:
 
   在结果中，您会看到这些行已排序。
 
-**注**：有关使用多个指定参数来调用操作序列的更多信息，请参阅[设置缺省参数](./openwhisk_actions.html##openwhisk_binding_actions)
+**注**：有关使用多个指定参数来调用操作序列的更多信息，请参阅[设置缺省参数](./actions.md#setting-default-parameters)
+
+
 
 ## 创建 Swift 操作
 {: #openwhisk_actions_swift}
@@ -403,29 +406,33 @@ copyright:
 ### 创建并调用操作
 {: #openwhisk_actions_invoke_swift}
 
-操作仅仅是顶级 Swift 函数。例如，创建名为 `hello.swift` 的文件并包含以下内容：
+操作仅仅是顶级 Swift 函数。例如，创建名为
+`hello.swift` 的文件并包含以下内容：
 
 ```
   func main(args: [String:Any]) -> [String:Any] {
       if let name = args["name"] as? String {
           return [ "greeting" : "Hello \(name)!" ]
       } else {
-return [ "greeting" : "Hello stranger!" ]
+          return [ "greeting" : "Hello stranger!" ]
       }
   }
 ```
 {: codeblock}
 
-请注意，正如 JavaScript 操作一样，Swift 操作始终会使用一个字典并生成一个字典。
+Swift 操作始终会使用一个字典并生成一个字典。
 
 可以通过此函数创建名为 `helloSwift` 的 {{site.data.keyword.openwhisk_short}} 操作，如下所示：
+
 
 ```
 wsk action create helloSwift hello.swift
 ```
 {: pre}
 
-使用命令行和 `.swift` 源文件时，无需指定您要创建 Swift 操作（与 JavaScript 操作相反）；该工具会根据文件扩展名来进行确定。
+使用命令行和 `.swift` 源文件时，
+无需指定您要创建 Swift 操作（与 JavaScript 操作相反）；
+该工具会根据文件扩展名来进行确定。
 
 Swift 操作的操作调用与 JavaScript 操作的操作调用相同：
 
@@ -441,7 +448,10 @@ wsk action invoke --blocking --result helloSwift --param name World
 ```
 {: screen}
 
-**注意：**Swift 操作在 Linux 环境中运行。Swift on Linux 仍在开发中；{{site.data.keyword.openwhisk_short}} 通常会使用最新可用发行版，但此版本不一定稳定。此外，用于 {{site.data.keyword.openwhisk_short}} 的 Swift 版本可能与 Mac OS 上 Xcode 的稳定发行版中的 Swift 版本不一致。
+**注意：**Swift 操作在 Linux 环境中运行。Swift on Linux 仍在开发中；{{site.data.keyword.openwhisk_short}}
+通常会使用最新可用发行版，但此版本不一定稳定。此外，用于 {{site.data.keyword.openwhisk_short}} 的 Swift 版本可能与 Mac OS 上 Xcode 的稳定发行版中的 Swift 版本不一致。
+
+
 
 ## 创建 Docker 操作
 {: #openwhisk_actions_docker}
@@ -462,7 +472,7 @@ wsk action invoke --blocking --result helloSwift --param name World
   {: pre}
   ```
   现在，Docker 框架已安装在当前目录中。
-```
+  ```
   {: screen}
 
   ```
@@ -540,7 +550,8 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 可以使用 {{site.data.keyword.openwhisk_short}} CLI 在调用操作时监视其输出。
 
-1. 在 shell 中发出以下命令：```
+1. 在 shell 中发出以下命令：
+  ```
   wsk activation poll
   ```
   {: pre}
@@ -573,7 +584,8 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 可以通过删除不想使用的操作来进行清理。
 
-1. 运行以下命令来删除操作：```
+1. 运行以下命令来删除操作：
+  ```
   wsk action delete hello
   ```
   {: pre}
@@ -582,7 +594,8 @@ wsk action invoke --blocking --result helloSwift --param name World
   ```
   {: screen}
 
-2. 验证该操作是否不再出现在操作列表中。```
+2. 验证该操作是否不再出现在操作列表中。
+  ```
   wsk action list
   ```
   {: pre}

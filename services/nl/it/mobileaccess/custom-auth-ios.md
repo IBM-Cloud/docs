@@ -10,7 +10,7 @@ copyright:
 
 Configura la tua applicazione iOS che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connetti la tua applicazione a {{site.data.keyword.Bluemix}}.
 
-**Suggerimento:** se stai sviluppando la tua applicazione iOS in Swift, valuta l'utilizzo dell'SDK Swift client {{site.data.keyword.amashort}}. Le istruzioni in questa pagina si applicano all'SDK Objective-C client {{site.data.keyword.amashort}}. Per istruzioni sull'utilizzo dell'SDK Swift, vedi [Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)
+**Nota:** se stai sviluppando la tua applicazione iOS in Swift, valuta l'utilizzo dell'SDK Swift client {{site.data.keyword.amashort}}. Le istruzioni in questa pagina si applicano all'SDK Objective-C client {{site.data.keyword.amashort}}. Per istruzioni sull'utilizzo della nuova SDK Swift, vedi [Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html).
 
 ## Prima di cominciare
 {: #before-you-begin}
@@ -162,8 +162,7 @@ CustomAuthenticationDelegate.m
 
 @implementation CustomAuthenticationDelegate
 
--(void)authenticationContext:(id<IMFAuthenticationContext>)context
-					didReceiveAuthenticationChallenge:(NSDictionary *)challenge{
+- (void) authenticationContext:(id<IMFAuthenticationContext>)context didReceiveAuthenticationChallenge:(NSDictionary *)challenge {
 
 	NSLog(@"didReceiveAuthenticationChallenge :: %@", challenge);
 
@@ -225,10 +224,10 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 		context.submitAuthenticationChallengeAnswer(challengeAnswer)
 
 		// Se si è verificato un errore di raccolta delle credenziali, devi
-		// segnalarlo all'IMFAuthenticationContext. In caso contrario, l'SDK client Mobile Client
-		// Access resterà in uno stato di attesa delle credenziali
+		// segnalarlo all'IMFAuthenticationContext. Altrimenti l'SDK client Mobile Client
+		// Access rimarrà nello stato di attesa delle credenziali
 		// per sempre
-}
+	}
 
 
 	func authenticationContext(context: IMFAuthenticationContext!,
@@ -266,14 +265,14 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 ## Verifica dell'autenticazione
 {: #custom-ios-testing}
-Dopo che hai inizializzato l'SDK client e registrato un `IMFAuthenticationDelegate` personalizzato, puoi iniziare a effettuare richieste al tuo backend mobile.
+Dopo che hai inizializzato l'SDK client e registrato un `IMFAuthenticationDelegate` personalizzato, puoi iniziare a effettuare richieste alla tua applicazione di back-end mobile.
 
 ### Prima di cominciare
 {: #custom-ios-testing-before}
  Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyword.mobilefirstbp}} e di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
 
-1. Invia una richiesta all'endpoint protetto del tuo backend mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
-  L'endpoint `/protected` di un backend mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
+1. Invia una richiesta all'endpoint protetto della tua applicazione di back-end mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
+L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo aver inizializzato `BMSClient` e registrato il tuo `IMFAuthenticationDelegate` personalizzato:
 
 	Objective-C:

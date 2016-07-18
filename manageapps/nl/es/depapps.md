@@ -15,6 +15,7 @@ copyright:
 {: #deployingapps}
 
 *Última actualización: 9 de mayo de 2016*
+{: .last-updated}
 
 Puede desplegar apps en {{site.data.keyword.Bluemix}} utilizando varios métodos, como por ejemplo la interfaz de línea de mandatos y los entornos de desarrollo integrado (IDE). También puede utilizar manifiestos de app para desplegar apps. Si utiliza un manifiesto de app debe reducir el número de detalles de despliegue que debe especificar cada vez que despliega una app en {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -83,10 +84,7 @@ utilice el mandato siguiente:
   cf push appname -p app_path
   ```
   
-A
-                                                  El archivo `package.json` debe estar
-                                                  en su app Node.js para que lo reconozca el paquete
-                                                  de compilación de Node.js. El archivo `app.js` es el script
+A El archivo `package.json` debe estar en su app Node.js para que lo reconozca el paquete de compilación de Node.js. El archivo `app.js` es el script
 de entrada de la app, que se puede especificar en el archivo `package.json`. El ejemplo siguiente muestra un archivo `package.json` sencillo:
 
   ```
@@ -136,7 +134,7 @@ Una app es específica del espacio en el que se ha desplegado. No puede mover ni
 ##Manifiesto de aplicación
 {: #appmanifest}
 
-El manifiesto de app contiene opciones que se aplican al mandato **cf       push**. Puede utilizar el manifiesto de app para reducir el número de detalles de despliegue que debe especificar cada vez que envía una app a {{site.data.keyword.Bluemix_notm}}.
+El manifiesto de app contiene opciones que se aplican al mandato **cf push**. Puede utilizar el manifiesto de app para reducir el número de detalles de despliegue que debe especificar cada vez que envía una app a {{site.data.keyword.Bluemix_notm}}.
 
 En los manifiestos de app, puede especificar opciones como, por ejemplo, el número de instancias de la app que se deben crear, la cantidad de memoria y la cuota de disco que se debe asignar a las apps y otras variables de entorno para la app. También puede utilizar los manifiestos de app para automatizar despliegues de apps. El nombre predeterminado de un archivo de manifiesto es `manifest.yml`.
 
@@ -165,7 +163,7 @@ cf push -f appManifest.yml
 |**timeout**	|El intervalo máximo de tiempo, en segundos, que se utiliza para iniciar la app. El valor predeterminado es de 60 segundos.	|`timeout: 80`|
 |**no-route**	|Un valor booleano para impedir que se asigne una ruta a la app si la app sólo se está ejecutando como programa de fondo. El valor predeterminado es **false**.	|`no-route: true`|
 |**random-route**	|Un valor booleano para asignar una ruta aleatoria a la app. El valor predeterminado es **false**.	|`random-route: true`|
-|**services**	|Los servicios que se van a enlazar a la app.	|`services:   - mysql_maptest`|
+|**services**	|Los servicios que se van a enlazar a la app.	|`services: - mysql_maptest`|
 |**env**	|Las variables de entorno personalizadas de la app.|`env: DEV_ENV: production`|
 *Tabla 1. Opciones admitidas en el archivo manifest.yml*
 

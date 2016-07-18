@@ -28,11 +28,11 @@ nenhuma ação adicional é necessária no lado do cliente.
 1. Clique no botão + **Criar tag**.   
 
    a. No campo **Nome**, insira o nome da tag. Por exemplo, "coupons".
-   
+
    b. No campo **Descrição**, insira uma descrição da tag.
-   
+
    c. Clique em  **Salvar**.
-   
+
 1. Na área **Fragmentos de códigos**,
 selecione a plataforma para seu aplicativo móvel.
 1. Modifique os fragmentos de códigos para manipular erros e
@@ -84,14 +84,14 @@ disponíveis as quais o dispositivo podem assinar.
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-    public void onSuccess(List<String> tags) { 
+   public void onSuccess(List<String> tags){
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
    subscribeToTag();   
   }    
   @Override    
-  public void onFailure(MFPPushException ex) {
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -150,10 +150,10 @@ Use a API **retrieveAvailableTags** a seguir para obter uma
 lista de tags disponíveis as quais o dispositivo pode assinar.
 
 ```
-//Get a list of available tags to which the device can subscribe 
+//Get a list of available tags to which the device can subscribe
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){ 
- if (error){    
+^(IMFResponse *response, NSError *error){
+ if(error){    
    [self updateMessage:error.description];  
  } else {
    [self updateMessage:@"Successfully retrieved available tags."];
@@ -163,7 +163,7 @@ lista de tags disponíveis as quais o dispositivo pode assinar.
 }
 }];
 ```
-       
+
 Use a API **retrieveSubscriptions** para obter uma
 lista de tags nas quais o dispositivo está inscrito.
 
@@ -172,7 +172,7 @@ lista de tags nas quais o dispositivo está inscrito.
 // Get a list of tags that to which the device is subscribed.
 [push retrieveSubscriptionsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error) {
-  if (error){
+  if(error){
      [self updateMessage:error.description];
    } else {
      [self updateMessage:@"Successfully retrieved subscriptions."];
@@ -219,7 +219,7 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
 
-        print( "Response during retrieving subscribed tags : \(response.description)")
+        print( "Response during retrieving subscribed tags : \(response?.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
     }
     else {
@@ -244,7 +244,7 @@ aplicativo móvel Android.
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-  public void onFailure(MFPPushException ex) {
+    public void onFailure(MFPPushException ex) {
     updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
@@ -292,7 +292,7 @@ identificação.
 ```
 [push subscribeToTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-  if (error){
+  if(error){
      [self updateMessage:error.description];
   }else{
       NSDictionary* subStatus = [[NSDictionary alloc]init];
@@ -331,12 +331,12 @@ identificação.
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) { 
+	if (error != nil) {
 		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-} 
+}
 ```
 
 **Cancelar assinatura de tags**
@@ -348,7 +348,7 @@ identificação.
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
 
     if error.isEmpty {
-        print( "Response during unsubscribed tags : \(response.description)")
+        print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {
@@ -384,8 +384,7 @@ clique na guia **Notificações**.
 em tag.
 1. No campo **Procurar** tags, procure pelas tags que deseja
 usar e clique no botão
-**+Incluir**.![Tela
-Notificações](images/tag_notification.jpg)
+**+Incluir**.![Tela de notificações](images/tag_notification.jpg)
 1. Acesse a área **Criar suas notificações **, e
 no campo **Texto da mensagem**,
 insira o texto que deseja enviar em sua notificação.

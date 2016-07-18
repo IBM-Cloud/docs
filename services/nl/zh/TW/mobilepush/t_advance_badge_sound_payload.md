@@ -19,13 +19,15 @@ copyright:
 
 1. 在 Push Notifications 儀表板上，移至**通知**標籤。
 2. 移至**選用欄位**區段，以配置下列推送通知特性。 
-	- **音效檔** - 輸入指向行動式應用程式中音效檔的字串。在有效負載中，指定要使用之音效檔的字串名稱。
+	- **音效檔** - 輸入指向行動應用程式中音效檔的字串。在有效負載中，指定要使用之音效檔的字串名稱。
 	- **iOS 徽章** - 對於 iOS 裝置，這是要顯示為應用程式圖示徽章的號碼。如果沒有此內容，則不會變更徽章。若要移除徽章，請將此內容的值設為 0。
 	
 	
 
 
 ###Android
+
+在 Android 應用程式的 `res/raw` 目錄中，新增您的音效檔。傳送通知時，在推送通知的音效欄位中新增音效檔名稱。
 
 ```
 "settings":{
@@ -56,14 +58,12 @@ copyright:
 ## 保存 Android 通知 
 {: #hold-notifications-android}
 
-在應用程式進入背景時，您可能會想要 Push 先保留傳送給應用程式的通知。若要保留通知，請在處理推送通知之活動的 onPause() 方法中呼叫 hold() 方法。
+在應用程式進入背景時，您可能會想要推送通知保留傳送給應用程式的通知。若要保留通知，請在處理推送通知之活動的 onPause() 方法中呼叫 hold() 方法。
 
 ```
 @Override
-protected void onPause() {
-    super.onPause();
-
-    if (push != null) {
+protected void onPause() {super.onPause();
+if (push != null) {
         push.hold();
     }
 } 
@@ -97,7 +97,7 @@ protected void onPause() {
 	acceptAction.title = "Accept"
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground*/
+	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 	```
 	
 	```
@@ -162,11 +162,9 @@ protected void onPause() {
 
 	```
 	//For Swift
-	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-
-	application.registerUserNotificationSettings(notificationSettings)
-	application.registerForRemoteNotifications()
+	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications() 
 	```
 	
 ## 處理可採取動作的 iOS 通知  

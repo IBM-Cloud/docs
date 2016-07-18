@@ -29,17 +29,15 @@ copyright:
 
 # Despliegue de la app con la interfaz de línea de mandatos
 *Última actualización: 24 de febrero de 2016*
+{: .last-updated}
 
 Puede utilizar la interfaz de línea de mandatos para desplegar y modificar app e instancias de servicio.
 {:shortdesc}
 
-Antes de empezar, instale las interfaces de línea de mandatos de {{site.data.keyword.Bluemix}} y Cloud Foundry.
+Antes de empezar, instale Cloud Foundry y las interfaces de línea de mandatos de {{site.data.keyword.Bluemix}}
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Se abre en una pestaña o ventana
-nueva)"><img class="image" src="images/btn_bx_commandline.svg" alt="Descargar la interfaz de línea de mandatos de
-{{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Se abre
-en una pestaña o ventana nueva)"><img class="image" src="images/btn_cf_commandline.svg" alt="Descargar la interfaz de línea de mandatos de Cloud Foundry" /> </a> 
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Se abre en una pestaña o ventana nueva)"><img class="image" src="images/btn_cf_commandline.svg" alt="Descargar la interfaz de línea de mandatos de Cloud Foundry" /> </a>  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Se abre en una pestaña o ventana nueva)"><img class="image" src="images/btn_bx_commandline.svg" alt="Descargar la interfaz de línea de mandatos de {{site.data.keyword.Bluemix}}" /> </a>
 </p>
 
 **Restricción:** Las herramientas de línea de mandatos no se admiten en Cygwin. Utilice las herramientas en una ventana de línea de mandatos que no sea la ventana de Cygwin.

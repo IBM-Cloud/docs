@@ -1,6 +1,7 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -223,7 +224,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 
 ## Etapes suivantes
 {: #next-steps}
-* [Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée](custom-auth-config-mca.html)
+* [Configuration d'{{site.data.keyword.amashort}} pour l'authentification personnalisée](custom-auth-config-mca.html)
 * [Configuration de l'authentification personnalisée pour Android](custom-auth-android.html)
 * [Configuration de l'authentification personnalisée pour iOS](custom-auth-ios.html)
 * [Configuration de l'authentification personnalisée pour Cordova](custom-auth-cordova.html)

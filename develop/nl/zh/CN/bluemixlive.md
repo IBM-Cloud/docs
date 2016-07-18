@@ -17,7 +17,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*上次更新时间：2016 年 4 月 7 日*  
+*上次更新时间：2016 年 4 月 7 日*
+{: .last-updated}  
 
 如果您要构建 Node.js 应用程序，那么可以使用 {{site.data.keyword.Bluemix}} Live Sync 快速更新 {{site.data.keyword.Bluemix_notm}} 上的应用程序实例，并像在桌面上进行操作一样进行开发，而无需重新部署。   
 {: shortdesc}
@@ -27,13 +28,13 @@ copyright:
 {{site.data.keyword.Bluemix_notm}} Live Sync 由三个功能部件组成。
 
 **桌面同步**  
-    您可以将任何桌面目录树与基于云的项目工作空间同步，具体与 Dropbox 的工作方式类似。Web IDE 会直接编辑同一基于云的工作空间，因此两者会保持同步。“桌面同步”适用于任何类型的应用程序。要使用“桌面同步”，需要下载和安装 BL 命令行界面。  
+您可以将任何桌面目录树与基于云的项目工作空间同步，具体与 Dropbox 的工作方式类似。Web IDE 会直接编辑同一基于云的工作空间，因此两者会保持同步。“桌面同步”适用于任何类型的应用程序。要使用“桌面同步”，需要下载和安装 BL 命令行界面。  
 
 **实时编辑**
-    您可以对 {{site.data.keyword.Bluemix_notm}} 中运行的 Node.js 应用程序进行更改，然后立即在浏览器中测试这些更改。在同步的桌面目录中或在 Web IDE 中进行的任何更改都会立即传播到应用程序的文件系统中。  
+您可以对 {{site.data.keyword.Bluemix_notm}} 中运行的 Node.js 应用程序进行更改，然后立即在浏览器中测试这些更改。在同步的桌面目录中或在 Web IDE 中进行的任何更改都会立即传播到应用程序的文件系统中。  
 
 **调试**  
-    当 Node.js 应用程序处于“实时编辑”方式时，您可以创建 shell 并在其中进行调试。您可以使用 Node Inspector 调试器来动态编辑代码、插入断点、单步执行代码、重新启动运行时，等等。  
+当 Node.js 应用程序处于“实时编辑”方式时，您可以创建 shell 并在其中进行调试。您可以使用 Node Inspector 调试器来动态编辑代码、插入断点、单步执行代码、重新启动运行时，等等。  
 
 您可以使用“桌面同步”来保持桌面工作空间与您使用 Web IDE 直接编辑的基于云的项目工作空间同步。您可以使用“实时编辑”将基于云的项目工作空间中的更改传播到运行中应用程序。这两个功能部件，既可以使用其中一个，也可以两个同时使用。而且，如果使用“桌面同步”或“实时编辑”将应用程序置于“实时编辑”方式，那么可以调试运行中应用程序。
 
@@ -161,7 +162,7 @@ bl start --restart
     a. 在 `manifest.yml` 文件中，添加以下变量：
 	```
 	env:
-      ENABLE_BLUEMIX_DEV_MODE: "true" 
+      ENABLE_BLUEMIX_DEV_MODE: "true"
 	```
 
 3. 增大内存。  
@@ -298,19 +299,22 @@ bl login | l [ -u username ][-p password ][ -s server ]
 此命令会提示需要 *username* 和 *password*：
 
 ```
-bl login```
+bl login
+```
 {: pre}
 
 使用户 `name@company.com` 登录：
 
 ```
-bl login –u name@company.com –p pa55w0rd```
+bl login –u name@company.com –p pa55w0rd
+```
 {: pre}
 
 使用户 `name@company.com` 通过密码 *pa55 w0rd* 登录，此密码包含一个空格，因此需要用引号将其括起：
 
 ```
-bl login –u name@company.com –p “pa55 w0rd”```
+bl login –u name@company.com –p “pa55 w0rd”
+```
 {: pre}
 
 ## Logout
@@ -375,7 +379,8 @@ bl sync
 此命令会开始同步，并且等效于 `bl sync “alias | myproject”`（如果项目由已登录用户拥有）。
 
 ```
-bl sync  myproject```
+bl sync  myproject
+```
 {: pre}
 
 此命令会开始与其名称包含空格（因此括在引号内）的项目 `my pro ject` 进行同步：
@@ -388,7 +393,8 @@ bl sync “my pro ject”
 此命令会开始将项目 `myproject` 与目录 `myfolder` 进行同步：
 
 ```
-bl sync myproject –d  myfolder```
+bl sync myproject –d  myfolder
+```
 {: pre}
 
 ## Create
@@ -430,13 +436,15 @@ bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_R
 此命令开始创建专用项目的过程，并提示输入要使用的项目名称。
 
 ```
-bl create```
+bl create
+```
 {: pre}
 
 此命令创建名为 `myNewProject` 的公共项目。
 
 ```
-bl create -n myNewProject --public```
+bl create -n myNewProject --public
+```
 {: pre}
 
 ## 状态
@@ -459,21 +467,23 @@ bl status | ss [ projectName ]
 
 此示例显示正在运行的应用程序的状态。如果当前目录为现有同步目标，那么它会使用关联项目。如果当前目录不是现有同步目标，那么此命令会提示需要 `projectName`。
 
-``
-bl status ```
+```
+bl status
+```
 {: pre}
 
-此示例显示项目 *myproject* 的状态，等效于 `bl status “alias |
-myproject”`（如果项目由已登录用户拥有）。
+此示例显示项目 *myproject* 的状态，等效于 `bl status “alias | myproject”`（如果项目由已登录用户拥有）。
 
 ```
-bl status myproject```
+bl status myproject
+```
 {: pre}
 
 此示例显示与项目 `my pro ject` 关联的运行中应用程序的状态，此项目的名称包含空格，因此括在引号内：
 
 ```
-bl status “my pro ject”```
+bl status “my pro ject”
+```
 {: pre}
 
 ## Start
@@ -511,25 +521,29 @@ bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit
 此命令用于启动与启动文件 `launchConfigurations/my.launch` 关联的 `myproject` 应用程序实例。
 
 ```
-bl start myproject –l “launchConfigurations/my.launch”```
+bl start myproject –l “launchConfigurations/my.launch”
+```
 {: pre}
 
-此命令用于启动与具有启动文件 `launchConfigurations/my.launch` 的当前目录关联的项目应用程序实例。如果当前目录不是同步目标，那么会显示错误。
+此命令用于通过启动文件 `launchConfigurations/my.launch` 启动与当前目录关联的项目的应用程序实例。如果当前目录不是同步目标，那么会显示错误。
 
 ```
-bl start –l “launchConfigurations/my.launch” ```
+bl start –l “launchConfigurations/my.launch”
+```
 {: pre}
 
-此命令用于启动与具有清单文件 `manifest.yml` 的当前目录关联的项目应用程序实例。清单中指定的信息用于创建新的启动配置文件。此命令提示您输入其余的必需信息，然后会启动由启动配置描述的应用程序：
+此命令用于通过清单文件 `manifest.yml` 启动与当前目录关联的项目的应用程序实例。清单中指定的信息用于创建新的启动配置文件。此命令提示您输入其余的必需信息，然后会启动由启动配置描述的应用程序：
 
 ```
-bl start –m “mymanifest.yml” ```
+bl start –m “mymanifest.yml”
+```
 {: pre}
 
 此命令用于通过清单文件 `manifest.yml` 启动与当前目录关联的项目的应用程序实例，并且等效于 `bl start –m manifest.yml`。
 
 ```
-bl start```
+bl start
+```
 {: pre}
 
 ## Stop
@@ -557,19 +571,22 @@ bl stop | sp projectName [ -l launchConfiguration ]
 如果当前目录为同步目标，那么此命令会停止应用程序；否则，此命令会由于发生错误而退出。如果没有启动配置，那么此命令会由于发生错误而退出。如果有多个启动配置，那么此命令会提示您选择要停止的配置。
 
 ```
-bl stop```
+bl stop
+```
 {: pre}
 
 此命令用于停止与使用启动文件 `mylaunchConfig` 运行的项目应用程序实例。
 
 ```
-bl stop myproject –l “mylaunchConfig” ```
+bl stop myproject –l “mylaunchConfig”
+```
 {: pre}
 
 如果当前目录为使用启动文件 `launchConfigurations/mylaunchconfig.launch` 启动的关联项目的同步目标，那么此命令会停止应用程序；否则，此命令会由于发生错误而退出：
 
 ```
-bl stop –l “launchConfigurations/mylaunchconfig.launch” ```
+bl stop –l “launchConfigurations/mylaunchconfig.launch”
+```
 {: pre}
 
 ># 相关链接 {:class="linklist"}

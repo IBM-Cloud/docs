@@ -29,4 +29,6 @@ copyright:
   
     <a class="xref" href="http://bluemix.net" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_starter-code.svg" alt="스타터 코드 다운로드" /> </a>
 
+ 
+
 앱을 배치하기 위한 단계별 지시사항을 보려면 [IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}를 참조하십시오.

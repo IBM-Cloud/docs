@@ -4,19 +4,30 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
 # Cordova 앱에서 Facebook 인증 사용
 {: #facebook-auth-cordova}
-Facebook 인증 통합을 위해 Cordova 애플리케이션을 구성하려면 Java, Objective-C 또는 Swift로 Cordova 애플리케이션의 원시 코드를 변경해야 합니다. 플랫폼마다 별도로 구성하십시오. Android Studio 또는 Xcode 등에서 원시 코드를 변경하려면 기본 개발 환경을 사용하십시오. 
+
+*마지막 업데이트 날짜: 2016년 6월 15일*
+{: .last-updated}
+
+
+Facebook 인증 통합을 위해 Cordova 애플리케이션을 구성하려면 Java, Objective-C 또는 Swift로 Cordova 애플리케이션의 원시 코드를 변경해야 합니다. 플랫폼마다 별도로 구성하십시오. 이 Cordova 애플리케이션은 먼저 {{site.data.keyword.amashort}} SDK로 인스트루먼트되야 합니다. 
+
+
+원시 개발 환경을 사용하여 원시 코드(예: Android Studio 또는 Xcode)를 변경하십시오.
+{:shortdesc}
 
 ## 시작하기 전에
 {: #facebook-auth-before}
-* {{site.data.keyword.amashort}}에서 보호하는 자원 및 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 Cordova 프로젝트가 있어야 합니다. 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) 및 [Cordova 플러그인 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)을 참조하십시오.
-* {{site.data.keyword.amashort}} 서버 SDK를 사용하여 백엔드 애플리케이션을 수동으로 보호하십시오. 자세한 정보는 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
-* Facebook 애플리케이션 ID를 작성하십시오. 자세한 정보는 [Facebook 개발자 포털에서 Facebook 애플리케이션 ID 얻기](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)를 참조하십시오. 
-* (선택사항) 다음 절의 내용을 숙지하십시오. 
-   * [Android 앱에서 Facebook 인증 사용](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html)
-   * [iOS 앱에서 Facebook 인증 사용](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html)
+다음이 있어야 합니다.
+* {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 Cordova 프로젝트는 [Cordova 플러그인 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)을 참조하십시오.
+* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm} 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
+* Facebook 애플리케이션 ID. 자세한 정보는 [Facebook 개발자 포털에서 Facebook 애플리케이션 ID 얻기](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)를 참조하십시오. 
+
 
 
 ## Android 플랫폼 구성
@@ -28,7 +39,7 @@ Facebook 인증 통합을 위해 Cordova 애플리케이션의 Android 플랫폼
 * Facebook 인증용 {{site.data.keyword.amashort}} 구성
 * Android용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
 
-Cordova 애플리케이션을 구성하는 경우 {{site.data.keyword.amashort}} 클라이언트 SDK를 Java 코드 대신 JavaScript 코드로 초기화해야 한다는 점만 다릅니다. `FacebookAuthenticationManager` API는 여전히 사용자의 원시 코드에 등록해야 합니다. 
+Cordova 애플리케이션을 구성하는 경우 {{site.data.keyword.amashort}} 클라이언트 SDK를 Java 코드 대신 JavaScript 코드로 초기화해야 한다는 점만 다릅니다([인증 테스트](#facebook-auth-cordova-test) 참조). `FacebookAuthenticationManager` API는 여전히 사용자의 원시 코드에 등록해야 합니다. 
 
 ## iOS 플랫폼 구성
 {: #facebook-auth-cordova-ios}
@@ -43,11 +54,11 @@ Facebook 인증을 통합하도록 Cordova 애플리케이션의 iOS 플랫폼�
 1. [{{site.data.keyword.Bluemix_notm}} iOS용 모바일 서비스 SDK](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)가 포함된 아카이브를 다운로드하십시오. 
 
 1. `Sources/Authenticators/IMFFacebookAuthentication` 디렉토리로 이동한 다음 모든 파일을 Xcode의 iOS 프로젝트로 복사(끌어서 놓기)하십시오. 다음 파일을 복사하십시오. 
-	* IMFDefaultFacebookAuthenticationDelegate.h
+  * IMFDefaultFacebookAuthenticationDelegate.h
   * IMFDefaultFacebookAuthenticationDelegate.m
-	* IMFFacebookAuthenticationDelegate.h
-	* IMFFacebookAuthenticationHandler.h
-	* IMFFacebookAuthenticationHandler.m
+  * IMFFacebookAuthenticationDelegate.h
+  * IMFFacebookAuthenticationHandler.h
+  * IMFFacebookAuthenticationHandler.m
 
 	Xcode에서 프롬프트를 표시하면 **파일 복사...**를 선택하십시오. 
 
@@ -64,8 +75,8 @@ Facebook 인증을 통합하도록 Cordova 애플리케이션의 iOS 플랫폼�
 애플리케이션 위임자의 `application:openURL:sourceApplication:annotation` 메소드에 다음 행을 추가하십시오. 이 코드는 모든 Cordova 플러그인에서 각각의 이벤트에 대한 알림을 수신하도록 합니다.
 
 ```
-[[ NSNotificationCenter defaultCenter] postNotification:
-		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
+[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
+      
 ```
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화

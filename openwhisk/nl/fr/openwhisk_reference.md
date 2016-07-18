@@ -19,6 +19,7 @@ copyright:
 # Détails du système {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_reference}
 *Dernière mise à jour : 14 avril 2016*
+{: .last-updated}
 
 Les sections ci-après fournissent davantage de détails sur le système {{site.data.keyword.openwhisk}}.
 {: shortdesc}
@@ -99,7 +100,7 @@ possible que le deuxième appel soit exécuté avant le premier. Si les actions 
 quel ordre.
 
 De plus, l'exécution des actions de manière atomique n'est pas garantie. Deux actions peuvent s'exécuter simultanément et leurs effets secondaires
-peuvent s'imbriquer. Les
+peuvent s'imbriquer.  OpenWhisk ne garantit aucun un modèle de cohérence spécifique quant aux effets secondaires.Les
 effets secondaires liés à la simultanéité dépendent de l'implémentation.
 
 ### Sémantique "un au plus"
@@ -160,9 +161,7 @@ fonctions :
 ```
 function main() {
     return { payload: helper() }
-}
-
-function helper() {
+} function helper() {
     return new Date();
 }
 ```
@@ -290,6 +289,7 @@ Les actions JavaScript sont exécutées dans un environnement Node.js version 0.
 - async
 - body-parser
 - btoa
+- cheerio
 - cloudant
 - commander
 - consul
@@ -298,6 +298,7 @@ Les actions JavaScript sont exécutées dans un environnement Node.js version 0.
 - errorhandler
 - express
 - express-session
+- gm
 - jade
 - log4js
 - fusionner/fusion
@@ -312,11 +313,13 @@ Les actions JavaScript sont exécutées dans un environnement Node.js version 0.
 - semver
 - serve-favicon
 - socket.io
+- socket.io-client
 - superagent
 - swagger-tools
 - tmp
 - watson-developer-cloud
 - when
+- ws
 - xml2js
 - xmlhttprequest
 - yauzl
@@ -334,6 +337,70 @@ Le squelette Docker est pratique pour générer des images Docker compatibles av
 Le programme binaire principal doit être copié dans le fichier `dockerSkeleton/client/clientApp`. La bibliothèque ou les fichiers associés peuvent se trouver dans le répertoire `dockerSkeleton/client`.
 
 Vous pouvez aussi inclure des étapes de compilation ou des dépendances en modifiant le fichier `dockerSkeleton/Dockerfile`. Par exemple, vous pouvez installer Python si votre action est un script Python.
+
+
+## API REST
+
+Toutes les fonctions du système sont disponibles via une API REST. Des noeuds finaux de collection et d'entité sont présents pour les
+actions, les déclencheurs, les packages, les activations, et les espaces de nom.
+
+Les noeuds finaux de collection sont les suivants :
+
+- `https://$BASEURL/api/v1/namespaces`
+- `https://$BASEURL/api/v1/namespaces/{espace_nom}/actions`
+- `https://$BASEURL/api/v1/namespaces/{espace_nom}/triggers`
+- `https://$BASEURL/api/v1/namespaces/{espace_nom}/rules`
+- `https://$BASEURL/api/v1/namespaces/{espace_nom}/packages`
+- `https://$BASEURL/api/v1/namespaces/{espace_nom}/activations`
+
+Vous pouvez lancer une requête GET sur les noeuds finaux de collection pour extraire une liste d'entités dans la
+collection.
+
+Des noeuds finaux d'entité sont présents pour chaque type d'entité :
+
+- `https://$BASEURL/api/v1/namespaces/{espace_nom}`
+- `https://$BASEURL/api/v1/namespaces/{espace_nom}/actions/[{nom_package}/]{nom_action}`
+- `https://$BASEURL/api/v1/namespaces/{espace_nom}/triggers/{nom_déclencheur}`
+- `https://$BASEURL/api/v1/namespaces/{espace_nom}/rules/{nom_règle}`
+- `https://$BASEURL/api/v1/namespaces/{espace_nom}/packages/{nom_package}`
+- `https://$BASEURL/api/v1/namespaces/{espace_nom}/activations/{nom_activation}`
+
+Les noeuds finaux d'espace de nom et d'activation ne prennent en charge que les requêtes GET. Les noeuds finaux d'actions, de déclencheurs, de règles et
+de packages prennent en charge les requêtes GET, PUT et DELETE. Les noeuds finaux d'actions, de déclencheurs et de règles prennent également en charge les
+requêtes POST, lesquelles sont utilisées pour appeler des actions et des déclencheurs et pour activer ou désactiver des règles. Reporte-vous au document
+[API
+reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json) pour plus d'informations.
+
+Toutes les API sont protégées via une authentification HTTP Basic. Les données d'identification pour authentification HTTP Basic résident dans la propriété
+`AUTH` de votre fichier `~/.wskprops`, et sont délimitées par un signe deux-points. Vous pouvez également extraire ces données
+d'identification dans les [Etapes de configuration de l'interface CLI](../README.md#setup-cli).
+
+Ci-dessous figure un exemple qui utilise la commande cURL pour extraire la liste de tous les packages dans l'espace de nom
+`whisk.system` :
+
+```
+curl -u NOM_UTILISATEUR:MOT_DE_PASSE https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
+```
+{: pre}
+```
+[
+  {
+    "name": "slack",
+    "binding": false,
+    "publish": true,
+    "annotations": [
+      {
+        "key": "description",
+        "value": "Package contenant des actions pour interaction avec le service de messagerie Slack"
+      }
+    ],
+    "version": "0.0.9",
+    "namespace": "whisk.system"
+  },
+  ...
+]
+```
+{: screen}
 
 
 ## Limites du système

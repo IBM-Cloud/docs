@@ -5,12 +5,18 @@ copyright:
   
 ---
 
-# 应用程序监视
+# 监视应用程序
 {: #app-monitoring}
+*上次更新时间：2016 年 5 月 6 日*
+{: .last-updated}
 
 除了安全功能外，{{site.data.keyword.amafull}} 还为移动应用程序提供了监视和分析功能。可以通过 {{site.data.keyword.amashort}} 客户端 SDK 来记录客户端日志并监视数据。开发者可以控制何时将这些数据发送到 {{site.data.keyword.amashort}} 服务。在 {{site.data.keyword.amashort}} 服务中发生的所有安全事件（例如，认证成功或失败）都会自动记录。
 
 数据传递到 {{site.data.keyword.amashort}} 后，可以使用 {{site.data.keyword.amashort}}“监视仪表板”来获取有关移动应用程序、设备和客户端日志的分析洞察。缺省情况下会记录有关应用程序对 {{site.data.keyword.amashort}} 所保护资源提出的请求的信息。
+
+
+**注**：{{site.data.keyword.amashort}} 服务的监视功能计划迁移到新 [{{site.data.keyword.mobileanalytics_short}} 服务](https://console.ng.bluemix.net/catalog/services/mobile-analytics)。新 Swift SDK 将使用新的 {{site.data.keyword.mobileanalytics_short}} 服务，该服务提供了更加丰富的分析体验。{{site.data.keyword.mobileanalytics_short}} 服务目前在试验阶段，计划在今年晚些时候正式发布。我们建议您着手对迁移应用程序以使用新的 {{site.data.keyword.mobileanalytics_short}} 服务和 Swift SDK 进行调查，因为我们计划在 {{site.data.keyword.mobileanalytics_short}} 正式发布时，停止使用 {{site.data.keyword.amashort}} 服务的监视功能。
+
 
 自动记录的数据包括认证数、新设备数和新用户数等信息。此外，还可以配置 {{site.data.keyword.amashort}} 客户端 SDK 来报告以下信息：
 
@@ -22,7 +28,7 @@ copyright:
 ### 客户机端日志捕获
 {: #client-side-logcapture}
 
-现场的应用程序有时会遇到问题，需要引起开发者注意以进行修复。通常很难重现这些问题。<!--in R&D.--> 处理代码的开发者可能缺乏用于测试的环境或确切设备。在这些情况下，能够在环境中发生问题时从客户机设备中检索调试日志就会非常有用。
+现场的应用程序有时会遇到问题，需要引起开发者注意以进行修复。通常很难重现这些问题。<!--in R&D.--> 处理代码的开发者可能缺乏测试所需的环境或必要设备。在这些情况下，能够在环境中发生问题时从客户机设备中检索调试日志就会非常有用。
 
 ## 保存捕获到的数据
 {: #preserve-captureddata}
@@ -32,11 +38,11 @@ copyright:
 ## 使用 {{site.data.keyword.amashort}}“监视仪表板”
 {: #monitoring-dashboard}
 
-1. 打开 {{site.data.keyword.Bluemix}}“仪表板”，然后单击 {{site.data.keyword.Bluemix_notm}} 应用程序
+1. 打开 {{site.data.keyword.Bluemix}}“仪表板”，然后单击 {{site.data.keyword.Bluemix_notm}} 应用程序。
 
-2. {{site.data.keyword.Bluemix_notm}} 应用程序仪表板打开时，单击 {{site.data.keyword.amashort}} 磁贴
+2. {{site.data.keyword.Bluemix_notm}} 应用程序仪表板打开时，单击 {{site.data.keyword.amashort}} 磁贴。
 
-3. 在 {{site.data.keyword.amashort}}“仪表板”上，单击左侧菜单中的`监视`链接
+3. 在 {{site.data.keyword.amashort}}“仪表板”上，单击左侧菜单中的`监视`链接。
 
 ## 后续步骤
 {: #next-steps}

@@ -18,6 +18,7 @@ copyright:
 {: #autoscalingcli}
 
 *上次更新时间：2016 年 2 月 25 日*
+{: .last-updated}
 
 您可以使用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 来配置 {{site.data.keyword.autoscaling}} 服务。{{site.data.keyword.autoscaling}} CLI 支持 Linux64、Win64 和 OSX，提供的功能类似于 Auto-Scaling RESTful API。
 {: shortdesc}
@@ -102,7 +103,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 </dl>
 
 
-## 显示应用程序的自动扩展历史记录
+## 显示应用程序的 Auto-Scaling 历史记录
 
 可以显示特定应用程序的自动扩展活动历史记录。自动扩展历史记录表将显示在命令行界面中。
 
@@ -121,7 +122,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 **提示：**您还可以使用 **--json** 选项更好地显示原始 JSON 响应。
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
 * [{{site.data.keyword.autoscaling}} 服务](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}

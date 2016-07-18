@@ -15,7 +15,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*上次更新时间：2016 年 5 月 16 日*
+*上次更新时间：2016 年 6 月 6 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} Local 将为您的数据中心带来 {{site.data.keyword.Bluemix_notm}} 基于云的平台的能力和敏捷性。通过 {{site.data.keyword.Bluemix_notm}} Local，在与 {{site.data.keyword.Bluemix_notm}} Public 保持安全连接并与之同步的同时，可以在公司防火墙后保护您最敏感的工作负载。
 {:shortdesc}
@@ -33,6 +34,7 @@ IBM® 使用云操作即服务来监视和维护您的环境，让您可以专�
 | **类型** | **名称** | **描述** |
 |----------|----------|-----------------|
 |内含 | {{site.data.keyword.Bluemix_notm}} 运行时 | 使用运行时可快速启动并运行应用程序，无需设置和管理计算机与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_notm}} Local 实例中使用。|
+|可选 | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} 将 {{site.data.keyword.APIM}} 和 IBM StrongLoop 集成到单个产品中，以提供一个综合解决方案来创建、运行、管理和强制执行 API 与微型服务。 |
 |可选 | {{site.data.keyword.APIM}} | 使用 {{site.data.keyword.APIMfull}} 服务可编写、管理和社交化 API。可以使用资源导入 API，方法是使用代理 URL 或从 HTTP 数据源组合数据。使用 {{site.data.keyword.APIM}} 服务的好处是，您可以管理 API 的使用方式。 |
 |内含 | {{site.data.keyword.autoscaling}}| 根据策略，动态增大或减小应用程序的计算资源容量。通过此服务，您在 {{site.data.keyword.Bluemix}} Local 环境中的使用不受限制。|
 |可选 | {{site.data.keyword.datacshort}} | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
@@ -49,6 +51,10 @@ IBM® 使用云操作即服务来监视和维护您的环境，让您可以专�
 |{{site.data.keyword.Bluemix_notm}} Local 访问权一次性设置 | 用于部署和配置本地环境的一次性设置费用。 |
 |{{site.data.keyword.Bluemix_notm}} Local 计算资源增加 16 GB 容量 | 扩展 IBM {{site.data.keyword.Bluemix_notm}} Local 计算资源，以额外提供 16 GB 内存容量。 |
 |{{site.data.keyword.Bluemix_notm}} Data & Session Cache 增加 50 GB 容量 | 此环境允许部署和运行 Data Cache 和 Session Cache 实例，最高累计容量为 50 GB。 |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 500 万个 API调用 | 此环境允许运行 {{site.data.keyword.apiconnect_short}} 的专用版本，容量为每月 500 万个 API 调用，目标为部门 API 项目。 |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 增加 10 万个 API 调用| {{site.data.keyword.apiconnect_short}} Professional 环境的扩展，用于每月提供额外 10 万个 API 调用容量。 |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 2500 万个 API 调用 | 此环境允许运行 {{site.data.keyword.apiconnect_short}} 的专用版本，容量为每月 2500 万个 API 调用，目标为企业范围 API 项目。 |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 增加 10 万个 API 调用 | {{site.data.keyword.apiconnect_short}} Enterprise 环境的扩展，用于每月提供额外 10 万个 API 调用容量。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} 增加 500 个 API 调用容量 | 此环境允许运行 {{site.data.keyword.APIM}} for {{site.data.keyword.Bluemix_notm}} 的专用版本，容量为每秒 500 个 API 调用。 |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local 递增增加 | 除允许在本地环境中运行 {{site.data.keyword.iot_full}} 专用版本的 {{site.data.keyword.iot_full}} Local 基本服务产品以外的环境，容量为 100,000 个并行连接设备或应用程序，数据交换量为 0.5 TB。 |
 
@@ -446,6 +452,8 @@ vSphere Enterprise plus（如果计划使用分布式虚拟交换机）</dd>
 
 IBM 会在 IBM 认为适当的时候，为 {{site.data.keyword.Bluemix_notm}} 运行时和服务维护并安装更新与修订。在维护时段内，服务可能会不可用。此外，IBM 会与您合作安排对 {{site.data.keyword.Bluemix_notm}} 平台的维护更新。
 
+### {{site.data.keyword.Bluemix_notm}} 维护
+
 {{site.data.keyword.Bluemix_notm}} Local 需要以下类型的维护：
 <dl>
 <dt>**服务标准维护**</dt>
@@ -463,6 +471,17 @@ IBM 会发送广播报文，详细描述在“状态”页面上针对每个维�
 **重要信息**：IBM 保留在必要时中断服务来实施紧急维护的权利。IBM 可能会更改所安排的维护时间，但会通知您任何此类更改以及任何紧急维护信息。
 
 如果在维护更新后报告有问题，您与 {{site.data.keyword.Bluemix_notm}} 支持人员协商，允许 IBM 回滚更新是否对您最有利。IBM 会根据商定的结果回滚更新，使环境复原到先前的状态。
+
+### 客户基础架构维护
+{: #inframaintenance}
+
+{{site.data.keyword.Bluemix_notm}} Local 部署到 ESXi 管理程序，vCenter 应用程序用于集中管理虚拟机和 ESXi 主机。{{site.data.keyword.Bluemix_notm}} 支持 ESXi 和 vCenter 最新的三个版本，包括所有中间更新和补丁。您始终可以在 [Local 基础架构需求](../local/index.html#localinfra)文档中查找最新的受支持版本。
+
+**重要信息**：当 {{site.data.keyword.Bluemix_notm}} Local 部署到 ESXi 管理程序时，ESXi 的升级和修补可能会中断本地环境的可用性，包括在该环境中运行的所有应用程序和服务。您必须使用支持凭单通知 {{site.data.keyword.Bluemix_notm}}，然后才能完成升级和修补，以确保中断不会错误地向操作团队发出警报。如果您具有已分配的客户成功经理 (CSM)，那么您可以与该 CSM 一起工作，就升级安排进行沟通。
+
+为了确保您的本地实例与最新的受支持版本兼容，{{site.data.keyword.Bluemix_notm}} 运营团队会监视环境是否存在与最新 {{site.data.keyword.Bluemix_notm}} Local 环境更新不匹配的不受支持版本。一些 {{site.data.keyword.Bluemix_notm}} 更新（如 Cloud Foundry 版本更新）需要您更新 ESXi 或 vCenter 软件。{{site.data.keyword.Bluemix_notm}} 支持将就必须更新的内容和更新截止时间向您发出警报。您将收到完成此更新的时间范围。
+
+{{site.data.keyword.Bluemix_notm}} 会尽一切努力让本地环境与最新的 ESXi 和 vCenter 版本兼容。但是，可能会有一小段时期无法支持最新的 ESXi 和 vCenter 版本。请参阅 [Local 基础架构需求](../local/index.html#localinfra)文档，以获取最新的兼容版本，然后再应用任何更新。
 
 ## 事件响应和支持
 {: #incidentresponse}

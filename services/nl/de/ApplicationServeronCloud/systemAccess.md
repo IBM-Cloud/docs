@@ -11,13 +11,35 @@ copyright:
 
 #Systemzugriff
 {: #system_access}
-In diesen Abschnitten werden unterschiedliche Methoden zum Zugriff auf Ihre Systeme sowie für die Einrichtung des Zugriffs auf Ihre Systeme beschrieben.
+In diesen Abschnitten werden verschiedene Methoden der Erstellung und Verwaltung einer Serviceinstanz sowie verschiedene Möglichkeiten des Zugriffs und der Einrichtung des Zugriffs auf Ihre Systeme beschrieben.
 {: shortdesc}
+
+*Letzte Aktualisierung: 08. Juni 2016*
+{: .last-updated}
+
+## REST-API-Nutzung in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+{: #restapi_usage}
+
+In WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} werden Instanzen auf eine der folgenden Weisen erstellt, bereitgestellt, verwaltet und gelöscht: 
+
+* Über das {{site.data.keyword.Bluemix_notm}}-Katalog- und -Service-Dashboard in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle.
+* Durch die Erstellung einer Anwendung oder eines Scripts, die bzw. das die REST-konformen APIs nutzt.
+
+Durch die Verwendung der mit Swagger 2.0 kompatiblen REST-APIs können Clients auf dieselben Funktionen zugreifen, die auch über das Portal und das Dashboard verfügbar sind. Weitere Informationen zu den unterstützten REST-APIs und Ressourcen finden Sie in der [REST-API-Dokumentation](https://new-console.{DomainName}/apidocs/212){: new_window} von WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}.
+
+**Hinweis:** Abhängig von der erstellten T-Shirt-Größe ist der Service nach der Erstellung einer Serviceinstanz möglicherweise nicht sofort einsatzbereit. Es wird empfohlen, das Feld **Status** der zurückgegebenen JSON-Daten abzufragen, um den aktuellen Status der Serviceinstanz festzustellen. 
+
+**Hinweis:** Standardmäßig verweist die API-Basis-URL auf einen Endpunkt in der [Region US South](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}. Wenn Sie die Region UK oder Sydney verwenden, müssen Sie sicherstellen, dass die Anwendung einen der folgenden Endpunkte verwendet: 
+
+* [Region UK](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
+* [Region Sydney](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+
 
 ## Service-Dashboard
 {: #service_dashboard}
 
-Nach der Erstellung der Serviceinstanz werden Sie zum Service-Dashboard weitergeleitet. Sie können jederzeit zum Service-Dashboard zurückkehren, indem Sie im Dashboard Ihrer Organisation auf das Servicesymbol klicken. Über das Service-Dashboard haben Sie Zugriff auf Folgendes:
+Nach der Erstellung der Serviceinstanz werden Sie zum Service-Dashboard weitergeleitet. Sie können jederzeit zum Service-Dashboard zurückkehren, indem Sie im Dashboard Ihrer Organisation auf das Servicesymbol klicken.
+Über das Service-Dashboard haben Sie Zugriff auf Folgendes:
 
 *  Einen Link zu dieser Dokumentation
 *  Einen Link zum Herunterladen der erforderlichen OpenVPN-Konfigurationsdateien.
@@ -27,6 +49,8 @@ Nach der Erstellung der Serviceinstanz werden Sie zum Service-Dashboard weiterge
 *  Einen privaten SSH-Schlüssel.
 *  Den Namen des Benutzers mit Administratorberechtigungen und das Administratorkennwort für WebSphere®.
 *  Die URLs für Admin Center und Admin Console.
+
+**Hinweis**: Aufgrund einer bestimmten Menge an Rechen-, Speicher- und E/A-Ressourcen werden für Clients Gebühren für die Summe der virtuellen Maschinen im Status GESTOPPT mit einer reduzierten Rate von 5 % berechnet. Clients werden mit einer festen Anzahl von Instanzen im Status GESTOPPT mit maximal 10 IP-Adressen oder 64 GB Speicherplatz verwaltet. 
 
 
 ## OpenVPN für WebSphere Application Server for Bluemix-Instanzen einrichten
@@ -40,13 +64,13 @@ Für den Zugriff auf virtuelle Maschinen in WebSphere Application Server in Blue
   * [openvpn-install-2.3.4-I001-x86_64.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-x86_64.exe){: new_window} für 64-Bit oder
   * [openvpn-install-2.3.4-I001-i686.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-i686.exe){: new_window} für 32-Bit.
 2. Stellen Sie sicher, dass Sie die [Ausführung als Windows-Administrator durchführen](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window} und installieren Sie openVPN.
-3. Laden Sie die VPN-Konfigurationsdateien über den OpenVPN-Download-Link der WebSphere Application Server for Bluemix-Instanz im Service-Dashboard herunter. Extrahieren Sie alle vier Dateien aus der komprimierten Datei in das Verzeichnis **{OpenVPN-Ausgangsverzeichnis}\config**. Beispiel:
+3. Laden Sie die VPN-Konfigurationsdateien über den OpenVPN-Download-Link der WebSphere Application Server for Bluemix-Instanz im Service-Dashboard herunter. Extrahieren Sie alle vier Dateien aus der komprimierten Datei in das Verzeichnis **{OpenVPN-Ausgangsverzeichnis}\config**.   Beispiel:
 
   <pre>  
     C:\Program Files\OpenVPN\Config
   </pre>
   {: codeblock}
-  
+
 4. Starten Sie das OpenVPN-Clientprogramm "OpenVPN GUI". Stellen Sie sicher, dass Sie zum Starten des Programms die Option zum [Ausführen als Windows-Administrator](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window} ausgewählt haben. Ansonsten kann möglicherweise keine Verbindung hergestellt werden.
 
 ### Befolgen Sie die folgenden Anweisungen zur Einrichtung von OpenVPN in Linux:
@@ -54,7 +78,7 @@ Für den Zugriff auf virtuelle Maschinen in WebSphere Application Server in Blue
   * Wenn Sie RPM Package Manager manuell herunterladen und installieren müssen, wechseln Sie zum Abschnitt zum [Herunterladen von OpenVPN für UNIX/Linux](https://openvpn.net/index.php/access-server/download-openvpn-as-sw.html){: new_window}. Hierbei benötigen Sie möglicherweise Unterstützung von Ihrem Linux-Administrator.
 3. Laden Sie die VPN-Konfigurationsdateien über den OpenVPN-Download-Link der WebSphere Application Server for Bluemix-Instanz im Service-Dashboard herunter. Extrahieren Sie die Dateien in das Verzeichnis, in dem Sie den OpenVPN-Client starten möchten. Alle vier Dateien müssen sich im selben Verzeichnis befinden.
 3. Starten Sie das OpenVPN-Clientprogramm.  Öffnen Sie ein Terminalfenster und wechseln Sie in das Verzeichnis, in dem sich die Konfigurationsdateien befinden. Führen Sie den folgenden Befehl als Root aus:
-  
+
   <pre>
       $ openvpn --config vt-wasaas-wasaas.ovpn
   </pre>
@@ -94,16 +118,16 @@ Befolgen Sie die folgenden Anweisungen zur Einrichtung von SSH-Zugriff auf Ihre 
     $ ssh virtuser@169.53.246.xxx -i /path/privateKeyFileName
   </pre>
   {: codeblock}
-  
+
 5. Für eine vollständige Berechtigung des Tys 'sysadmin' müssen Sie mithilfe des folgenden Befehls den 'virtuser' nach 'root' wechseln:
 
   <pre>
     $ sudo su root
   </pre>
   {: codeblock}
-  
+
 6. Für den Fall, dass beim Zugreifen auf das System mit dem privaten SSH-Schlüssel Probleme auftreten, wird das Rootkennwort bereitgestellt. Melden Sie sich mithilfe des folgenden Befehls als Root an und geben Sie das Kennwort an.
- 
+
  <pre>
     $ ssh root@169.53.246.x
   </pre>
@@ -119,7 +143,7 @@ Befolgen Sie die folgenden Anweisungen zur Einrichtung von SSH-Zugriff auf Ihre 
       IdentityFile /path/privateKeyFileName
   </pre>
   {: codeblock}
-  
+
 9. Führen Sie "ssh VM1" aus, um als Benutzer virtuser eine Verbindung herzustellen.
 
 ## Systempfade

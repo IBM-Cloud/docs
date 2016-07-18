@@ -5,12 +5,15 @@ copyright:
 
 ---
 
-#	Panoramica di {{site.data.keyword.mobilefoundation_short}}
+#	Informazioni su {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
+
+*Ultimo aggiornamento: 15 giugno 2016*
+{: .last-updated}
 
 Il servizio {{site.data.keyword.mobilefoundation_short}} fornisce un modo per impostare rapidamente un ambiente {{site.data.keyword.mobilefirst}} Server su{{site.data.keyword.Bluemix}}. Puoi quindi sviluppare, testare e gestire applicazioni mobili da questo solido ambiente cloud.
 
-{{site.data.keyword.mobilefoundation_short}} fornisce agli utenti un modo facile e guidato per impostare {{site.data.keyword.mfserver_short_notm}} nell'ambiente {{site.data.keyword.containerlong}} su Bluemix.
+{{site.data.keyword.mobilefoundation_short}} fornisce agli utenti un modo facile e guidato per impostare {{site.data.keyword.mfserver_short_notm}} nell'ambiente {{site.data.keyword.containerlong}} su {{site.data.keyword.Bluemix_notm}}.
 
 {{site.data.keyword.mobilefoundation_short}} è costituito dai seguenti componenti:
 
@@ -28,16 +31,12 @@ Con {{site.data.keyword.mobilefoundation_short}}, puoi eseguire le seguenti funz
 
 *	Proteggere il dispositivo, l'applicazione, i dati e la connettività.
 
-*	Gestire il tuo portfolio dell'applicazione mobile da una sola interfaccia centrale e sviluppare le applicazioni mobili
-dalle tue IDE e librerie preferite.
+*	Gestire il tuo portfolio dell'applicazione mobile da una sola interfaccia centrale e sviluppare le applicazioni mobili utilizzando le tue IDE e librerie preferite.
 
 *	Utilizzare servizi di dati scalabili per la sincronizzazione dei dati online e offline.
 
 *	Configurare notifiche push unificate per tutti i sistemi operativi di dispositivo mobile supportati.
 
 Puoi utilizzare la CLI ({{site.data.keyword.mfp_cli_long_notm}}) con {{site.data.keyword.mobilefoundation_short}} per creare e gestire facilmente le applicazioni.
-
-##	Ambiente operativo
-{: #mobilefoundation_operational_env}
 
 Il servizio {{site.data.keyword.mobilefoundation_short}} fornisce un contenitore nel tuo spazio in {{site.data.keyword.Bluemix_notm}}. Puoi visualizzare i dettagli del contenitore creato, visualizzarne le prestazioni e accedere ai log del server dal tuo dashboard {{site.data.keyword.Bluemix_notm}}.

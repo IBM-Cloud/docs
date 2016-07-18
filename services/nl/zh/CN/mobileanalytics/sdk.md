@@ -8,6 +8,7 @@ copyright:
 # 检测应用程序以使用 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK
 {: #mobileanalytics_sdk}
 *上次更新时间：2016 年 4 月 27 日*
+{: .last-updated}
 
 使用 {{site.data.keyword.mobileanalytics_full}} SDK，您可以检测移动应用程序。
 {: shortdesc}
@@ -49,7 +50,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // 确保指向您的区域
         } catch (MalformedURLException e) {
-            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
+            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -107,7 +108,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: "your_client_key",
+      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -115,7 +116,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: "your_api_key")
+	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
 	```
 
   您可以使用 `Analytics.recordApplicationDidBecomeActive()` 和 `Analytics.recordApplicationWillResignActive()` 方法，来记录 WatchOS 上的设备事件。
@@ -186,7 +187,8 @@ Analytics.send()
 ```
 // 记录定制图表的定制分析事件
 let eventObject = ["customProperty": "propertyValue"]
-Analytics.log(eventObject)```
+Analytics.log(eventObject)
+```
 
   <!--Removing Cordova for experimental-->
   <!--### Cordova-->
@@ -394,7 +396,7 @@ Analytics.userIdentity = nil
 
   1. Visit the dashboard for the {{site.data.keyword.mobileanalytics_short}} service where you want to send analytics data and note the browser URL for the dashboard.
   2. Determine the value for reporting analytics, as follows:
-  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before `/analytics/console/dashboard`.  
+  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before ``/analytics/console/dashboard``.  
 
   		For example, if the dashboard URL is: `http://mobile-analytics-dashboard.ng.bluemix.net/analytics/console/dashboard?instanceId=12345abcde`
       {: screen}
@@ -497,3 +499,9 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
+
+# 相关链接
+
+## API 参考
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

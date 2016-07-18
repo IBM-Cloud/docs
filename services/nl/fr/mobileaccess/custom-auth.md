@@ -1,10 +1,11 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
-# Utilisation d'un fournisseur d'identité personnalisé pour authentifier les utilisateurs
+# Authentification des utilisateurs en utilisant un fournisseur d'identité personnalisé
 {: #custom-id}
 Vous pouvez créer un fournisseur d'identité personnalisé et implémenter votre propre logique pour la collecte et la validation des données d'identification. Un fournisseur d'identité est une application Web qui expose une interface RESTful. Vous pouvez héberger un fournisseur d'identité personnalisé sur site ou sur {{site.data.keyword.Bluemix}}. La seule exigence est qu'il soit accessible sur l'Internet public pour pouvoir communiquer avec le service {{site.data.keyword.amashort}}.
 
@@ -15,8 +16,8 @@ Vous pouvez créer un fournisseur d'identité personnalisé et implémenter votr
 ![image](images/mca-sequence-custom.jpg)
 
 1. Utilisez le SDK {{site.data.keyword.amashort}} pour envoyer une demande à vos ressources de back end qui sont protégées par le SDK serveur de {{site.data.keyword.amashort}}.
-* Le SDK serveur de {{site.data.keyword.amashort}} détecte une demande non autorisée et renvoie une erreur HTTP 401 et la portée d'autorisation.
-* Le SDK client de {{site.data.keyword.amashort}} détecte automatiquement l'erreur HTTP 401 et lance le processus d'authentification.
+* Le SDK serveur de {{site.data.keyword.amashort}} détecte une demande non autorisée et renvoie une demande d'autorisation HTTP 401 et la portée de l'autorisation.
+* Le SDK client de {{site.data.keyword.amashort}} détecte automatiquement l'erreur HTTP 401 ci-dessus et lance le processus d'authentification.
 * Le SDK client de {{site.data.keyword.amashort}} contacte le service {{site.data.keyword.amashort}} et lui demande d'émettre un en-tête d'autorisation.
 * Le service {{site.data.keyword.amashort}} communique avec le fournisseur d'identité personnalisé afin de démarrer le processus d'authentification.
 * Le fournisseur d'identité renvoie une demande d'authentification au service {{site.data.keyword.amashort}}.
@@ -24,7 +25,7 @@ Vous pouvez créer un fournisseur d'identité personnalisé et implémenter votr
 * Le SDK client de {{site.data.keyword.amashort}} délègue l'authentification à une classe personnalisée que vous avez créée. Vous devez collecter les données d'identification et les fournir au SDK client de {{site.data.keyword.amashort}}.
 * Les données d'identification fournies au SDK {{site.data.keyword.amashort}} par le développeur sont envoyées au service {{site.data.keyword.amashort}} en tant que réponse à la demande d'authentification.
 * Le service {{site.data.keyword.amashort}} valide la réponse à la demande d'authentification auprès du fournisseur d'identité.
-* Si la validation aboutit, le service {{site.data.keyword.amashort}} génère un en-tête d'autorisation et le renvoie au SDK client de {{site.data.keyword.amashort}}. L'en-tête d'autorisation contient deux jetons : un jeton qui contient des informations sur les droits d'accès, et un autre jeton qui contient des informations sur l'utilisateur, le périphérique et l'application.
+* Si la validation aboutit, le service {{site.data.keyword.amashort}} génère un en-tête d'autorisation et le renvoie au SDK client de {{site.data.keyword.amashort}}. L'en-tête d'autorisation contient deux jetons : un jeton qui contient des informations sur les droits d'accès, et un autre jeton qui contient des informations sur l'utilisateur, le périphérique et l'application actuels.
 * A partir de ce moment, toutes les demandes faites avec le SDK client de {{site.data.keyword.amashort}} contiennent un nouvel en-tête d'autorisation.
 * Le SDK client de {{site.data.keyword.amashort}} renvoie automatiquement la demande d'origine qui avait déclenché le flux d'autorisation.
 * Le SDK serveur de {{site.data.keyword.amashort}} extrait l'en-tête d'autorisation de la demande, la valide auprès du service {{site.data.keyword.amashort}}, et donne l'accès à la ressource de back end.
@@ -34,11 +35,11 @@ Vous pouvez créer un fournisseur d'identité personnalisé et implémenter votr
 
 Avec un fournisseur d'identité personnalisé, vous pouvez créer des demandes d'authentification personnalisées destinées au client. Il permet de personnaliser l'ensemble du flux d'authentification.
 
-Lorsque vous créez un fournisseur d'identité personnalisé, vous pouvez :
+Quand vous créez un fournisseur d'identité personnalisé, vous pouvez :
 
 1. Personnaliser une demande d'authentification qui doit être envoyée par le service {{site.data.keyword.amashort}} à l'application de client mobile. Une demande d'authentification est un objet JSON qui contient des données personnalisées. Le client mobile peut les utiliser pour personnaliser les flux d'authentification.
 
-Exemple de demande d'authentification personnalisée :
+  Exemple de demande d'authentification personnalisée :
 
 	```JavaScript
 	{
@@ -53,7 +54,7 @@ Exemple de demande d'authentification personnalisée :
 
 1. Implémenter le flux de collecte des données d'identification sur le client mobile, en prenant en compte les différentes étapes et les différents formulaires d'authentification. De la même manière que pour la demande d'authentification personnalisée, vous devez créer la structure de la réponse personnalisée.
 
-Exemple de réponse personnalisée à une demande d'authentification envoyée par le client mobile :
+  Exemple de réponse personnalisée à une demande d'authentification envoyée par le client mobile :
 
 	```JavaScript
 	{
@@ -109,7 +110,7 @@ doit transmettre l'ID d'état dans les demandes qui font partie de la suite du p
 ## Domaine personnalisé
 {: #custom-id-custom}
 
-Un fournisseur d'identité personnalisé prend en charge un domaine d'authentification personnalisé. Pour gérer les demandes d'authentification entrantes, créez et enregistrez une instance AuthenticationDelegate/AuthenticationListener dans votre application de client mobile. Définissez le nom du domaine d'authentification personnalisé lorsque vous configurez un fournisseur d'identité personnalisé dans le tableau de bord {{site.data.keyword.amashort}}. Il peut permettre d'identifier l'instance de service {{site.data.keyword.amashort}} dont provient la demande.
+Un fournisseur d'identité personnalisé prend en charge un domaine d'authentification personnalisé. Pour gérer les demandes d'authentification entrantes, créez et enregistrez une instance `AuthenticationDelegate` / 	`AuthenticationListener` dans votre application de client mobile. Définissez le nom du domaine d'authentification personnalisé lorsque vous configurez un fournisseur d'identité personnalisé dans le tableau de bord {{site.data.keyword.amashort}}. Il peut permettre d'identifier l'instance de service {{site.data.keyword.amashort}} dont provient la demande.
 
 ## Etapes suivantes
 {: #next-steps}
@@ -119,3 +120,4 @@ Un fournisseur d'identité personnalisé prend en charge un domaine d'authentifi
 * [Configuration de l'authentification personnalisée pour iOS (SDK Swift)](custom-auth-ios-swift-sdk.html)
 * [Configuration de l'authentification personnalisée pour iOS (SDK Objective-C)](custom-auth-ios.html)
 * [Configuration de l'authentification personnalisée pour Cordova](custom-auth-cordova.html)
+

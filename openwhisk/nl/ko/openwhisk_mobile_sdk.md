@@ -14,6 +14,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} 모바일 SDK 사용
 {: #openwhisk_mobile_sdk}
 *마지막 업데이트 날짜: 2016년 3월 28일*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}}에서는 쉽게 원격 트리거를 실행하고 원격 조치를 호출할 수 있도록 모바일 앱을 사용하는 iOS 및 watchOS 2 디바이스에 대한 모바일 SDK를 제공합니다. 현재 Android용 버전은 사용할 수 없습니다. Android 개발자는 직접 {{site.data.keyword.openwhisk}} REST API를 사용할 수 있습니다.
 {: shortdesc}
@@ -26,14 +27,10 @@ CocoaPods, Carthage를 사용하거나 소스 디렉토리에서 모바일 SDK�
 
 ### CocoaPods를 사용하여 설치 
 
-모바일용 {{site.data.keyword.openwhisk_short}} SDK는 CocoaPods를 통해 공용 배포에 대해 사용 가능합니다. Cocoapods가 설치되었다고 가정하고 다음 행을 스타터 앱 프로젝트 디렉토리 내의 'Podfile'이라는 파일에 배치하십시오. 
+모바일용 {{site.data.keyword.openwhisk_short}} SDK는 CocoaPods를 통해 공용 배포에 대해 사용 가능합니다. CocoaPods가 설치되었다고 가정하고, 스타터 앱 프로젝트 디렉토리 내의 'Podfile'이라고 하는 파일에 다음 행을 두십시오.  
 
 ```
-source 'https://github.com/openwhisk/openwhisk-podspecs.git'
-
-use_frameworks!
-
-target 'MyApp' do
+source 'https://github.com/openwhisk/openwhisk-podspecs.git'use_frameworks!target 'MyApp' do
      platform :ios, '9.0'
      pod 'OpenWhisk'
 end
@@ -45,21 +42,23 @@ end
 ```
 {: codeblock}
 
-명령행에서 "pod install"을 입력하십시오. 그러면 watchOS 2 확장자가 있는 iOS 앱에 대해 SDK를 설치합니다. 앱에 대해 작성된 작업공간 파일 Cocoapods를 사용하여 Xcode에서 프로젝트를 여십시오.
+명령행에서 `pod install`을 입력하십시오. 그러면 watchOS 2 확장자가 있는 iOS 앱에 대해 SDK를 설치합니다. CocoaPods에서 앱용으로 작성하는 작업공간 파일을 사용하여 Xcode에서 프로젝트를 여십시오. 
 
 ### Carthage를 사용하여 설치
 
-앱의 프로젝트 디렉토리에 'Cartfile'이라는 파일을 작성하십시오. 다음 행을 Cartfile에 배치하십시오.
+앱의 프로젝트 디렉토리에 'Cartfile'이라는 파일을 작성하십시오. Cartfile에서 다음 행을 두십시오. 
 ```
-github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 {: codeblock}
 
-명령행에 'carthage update --platform ios'를 입력하십시오. Carthage가 SDK를 다운로드하여 빌드하고 사용자 앱의 프로젝트 디렉토리에 Carthage라는 디렉토리를 작성하고 OpenWhisk.framework 파일을 Carthage/build/iOS 내에 배치합니다. OpenWhisk.framework를 Xcode 프로젝트 내의 임베디드 프레임워크에 추가하십시오.
+명령행에서 `carthage update --platform ios`를 입력하십시오. Carthage가 SDK를 다운로드하여 빌드하고 사용자 앱의 프로젝트 디렉토리에 Carthage라는 디렉토리를 작성하고 OpenWhisk.framework 파일을 Carthage/build/iOS 내에 배치합니다. 
+
+그리고 OpenWhisk.framework를 Xcode 프로젝트의 임베디드 프레임워크에 추가해야 합니다. 
 
 ### 소스 코드에서 설치
 
-소스 코드는 https://github.com/openwhisk//openwhisk-client-swift.git에서 사용 가능합니다. Xcode에서 OpenWhisk.xcodeproj 파일을 사용하여 프로젝트를 여십시오. 프로젝트에는 각각 iOS 및 WathOS2를 대상으로 하는 두 개의 "OpenWhisk" 및 "OpenWhiskWatch" 스킴이 포함됩니다. 필요한 대상에 대한 프로젝트를 빌드하고 결과 프레임워크를 사용자의 앱에 추가하십시오(일반적으로 ~/Library/Developer/Xcode/DerivedData/사용자의 앱 이름).
+소스 코드는 https://github.com/openwhisk/openwhisk-client-swift.git에서 사용 가능합니다. Xcode에서 OpenWhisk.xcodeproj 파일을 사용하여 프로젝트를 여십시오. 프로젝트에는 각각 iOS 및 watchOS 2를 대상으로 하는 두 개의 "OpenWhisk" 및 "OpenWhiskWatch" 스킴이 포함됩니다. 필요한 대상에 대한 프로젝트를 빌드하고 결과 프레임워크를 사용자의 앱에 추가하십시오(일반적으로 ~/Library/Developer/Xcode/DerivedData/사용자의 앱 이름).
 
 ## 스타터 앱 설치 예
 {: #openwhisk_install_sdkstart}
@@ -67,6 +66,7 @@ github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 {{site.data.keyword.openwhisk_short}} CLI를 사용하여 {{site.data.keyword.openwhisk_short}} SDK 프레임워크를 임베드하는 예제 코드를 다운로드할 수 있습니다.  
 
 스타터 앱 예제를 설치하려면 다음 명령을 입력하십시오.
+
 ```
 wsk sdk install iOS
 ```
@@ -81,9 +81,7 @@ wsk sdk install iOS
 예를 들어, Swift 2.1에서는 다음 예제 코드를 사용하여 신임 정보 오브젝트를 작성하십시오.
 
 ```
-let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
-
-let whisk = Whisk(credentials: credentialsConfiguration!)
+let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")let whisk = Whisk(credentials: credentialsConfiguration!)
 ```
 {: codeblock}
 
@@ -137,15 +135,8 @@ do {
 원격 트리거를 실행하기 위해 `fireTrigger` 메소드를 호출할 수 있습니다. 사전을 사용하여 필요한 매개변수를 전달하십시오.
 
 ```
-// In this example we are firing a trigger when our location has changed by a certain amount
-
-var locationParams = Dictionary<String, String>()
-locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"
-
-do {
-    try whisk.fireTrigger(name: "locationChanged", package: "mypackage", namespace: "mynamespace", parameters: locationParams, callback: {(reply, error) -> Void in
-
-        if let error = error {
+// In this example we are firing a trigger when our location has changed by a certain amountvar locationParams = Dictionary<String, String>()
+locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"do {try whisk.fireTrigger(name: "locationChanged", package: "mypackage", namespace: "mynamespace", parameters: locationParams, callback: {(reply, error) -> Void inif let error = error {
             print("Error firing trigger \(error.localizedDescription)")
         } else {
             print("Trigger fired!")
@@ -165,14 +156,9 @@ do {
 조치가 결과를 리턴하는 경우, invokeAction 호출에서 hasResult를 true로 설정하십시오. 조치의 결과는 응답 사전에서 리턴됩니다. 예를 들어, 다음과 같습니다.
 
 ```
-do {
-    try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void in
-
-        if let error = error {
+do {try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void inif let error = error {
             //do something
-            print("Error invoking action \(error.localizedDescription)")
-
-        } else {
+            print("Error invoking action \(error.localizedDescription)")} else {
 var result = reply["result"]
             print("Got result \(result)")
         }
@@ -208,16 +194,13 @@ whisk.baseURL = "http://localhost:8080"
 
 ```
 // create a network delegate that trusts everything
-class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {
-    func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
+class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
         completionHandler(NSURLSessionAuthChallengeDisposition.UseCredential, NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!))
     }
 }
 
 // create an NSURLSession that uses the trusting delegate
-let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: NetworkUtilsDelegate(), delegateQueue:NSOperationQueue.mainQueue())
-
-// set the SDK to use this urlSession instead of the default shared one
+let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: NetworkUtilsDelegate(), delegateQueue:NSOperationQueue.mainQueue())// set the SDK to use this urlSession instead of the default shared one
 whisk.urlSession = session
 ```
 {: codeblock}
@@ -253,17 +236,11 @@ whiskButton.invokeAction(parameters: myParams, callback: { reply, error in
     }
 })
 
-// or alternatively you can set up a "self contained" button that listens for press events on itself and invokes an action
-
-var whiskButtonSelfContained = WhiskButton(frame: CGRectMake(0,0,20,20))
+// or alternatively you can set up a "self contained" button that listens for press events on itself and invokes an actionvar whiskButtonSelfContained = WhiskButton(frame: CGRectMake(0,0,20,20))
 whiskButtonSelfContained.listenForPressEvents = true
-do {
-
-   // use qualified name API which requires do/try/catch
+do {// use qualified name API which requires do/try/catch
    try whiskButtonSelfContained.setupWhiskAction("mypackage/helloConsole", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)
-   whiskButtonSelfContained.actionButtonCallback = { reply, error in
-
-       if let error = error {
+   whiskButtonSelfContained.actionButtonCallback = { reply, error inif let error = error {
            print("Oh no, error: \(error)")
        } else {
            print("Success: \(reply)")

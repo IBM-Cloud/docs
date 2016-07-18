@@ -15,6 +15,7 @@ copyright:
 
 # Cloud Foundry 앱 작성
 *마지막 업데이트 날짜: 2016년 4월 18일*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}}를 사용하여
 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 앱을 작성할 수 있습니다. 앱이

@@ -8,6 +8,9 @@ copyright:
 # Usando o {{site.data.keyword.amashort}} com um ambiente de desenvolvimento local
 {: #protecting-local}
 
+*Última atualização: 15 de abril de 2016*
+{: .last-updated}
+
 É possível configurar seu ambiente de desenvolvimento local para usar o serviço {{site.data.keyword.amashort}} que está em execução no {{site.data.keyword.Bluemix}}. Especificamente, é possível usar o {{site.data.keyword.amashort}} server SDK quando você está desenvolvendo código do lado do servidor com um servidor de desenvolvimento local, como Node.js.
 
 O {{site.data.keyword.amashort}} server SDK requer que duas variáveis de ambiente sejam configuradas. Quando você estiver desenvolvendo código do lado do servidor no {{site.data.keyword.Bluemix_notm}}, essas variáveis serão fornecidas pela infraestrutura do {{site.data.keyword.Bluemix_notm}}.

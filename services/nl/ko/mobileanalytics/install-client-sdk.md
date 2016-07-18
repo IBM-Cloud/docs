@@ -9,6 +9,7 @@ copyright:
 클라이언트 SDK
 {: #mobileanalytics_sdk}
 *마지막 업데이트 날짜: 2016년 4월 21일*
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK는
 현재 Android, iOS 및 WatchOS에 대해 사용 가능합니다.
@@ -28,7 +29,7 @@ copyright:
 3. `build.gradle` 파일의 `Dependencies` 섹션을 찾아서 다음과 같이 {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK에 대한 컴파일 종속성을 추가하십시오.
 
   ```Gradle
-    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
       name:'analytics',
       version: '1.+',
       ext: 'aar',
@@ -91,7 +92,7 @@ Xcode를 올바르게 설정했는지 확인하십시오. iOS 개발 환경을 �
   use_frameworks!
 
   target 'MyApp' do
-     platform :ios, '8.0'
+platform :ios, '8.0'
      pod 'BMSAnalytics'
   end
   ```
@@ -117,3 +118,7 @@ Xcode를 올바르게 설정했는지 확인하십시오. iOS 개발 환경을 �
 ## SDK
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+
+## API 참조
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

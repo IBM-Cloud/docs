@@ -2,13 +2,13 @@
 
 # About {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Last updated: 24 June 2016*
+*Last updated: 15 July 2016*
 {: .last-updated}
 
 
 IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} uses OpenStack Identity (Keystone) for authentication and can be accessed directly by using OpenStack Object Storage (Swift) API v1 calls. IBM {{site.data.keyword.objectstorageshort}} can be bound to a {{site.data.keyword.Bluemix_notm}} application or accessed from outside a {{site.data.keyword.Bluemix_notm}} application. 
 
-More information and documentation about using OpenStack Swift and Keystone is available at the [OpenStack documentation site](http://docs.openstack.org){: new_window}.
+For more information about using OpenStack Swift and Keystone, view the [OpenStack documentation site](http://docs.openstack.org){: new_window}.
 
 The {{site.data.keyword.objectstorageshort}} architecture diagram is as follows:
 

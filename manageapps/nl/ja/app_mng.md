@@ -15,6 +15,7 @@ copyright:
 {: #app_management}
 
 *最終更新日: 2016 年 3 月 17 日*
+{: .last-updated}
 
 アプリ管理は、開発用およびデバッグ用のユーティリティーの一式であり、{{site.data.keyword.Bluemix}} 上の Liberty および Node.js アプリケーション用に使用可能にすることができます。
 {:shortdesc}

@@ -29,14 +29,20 @@ copyright:
 
 # コマンド・ライン・インターフェースを使用したアプリのデプロイ
 *最終更新日: 2016 年 2 月 24 日*
+{: .last-updated}
 
 コマンド・ライン・インターフェースを使用して、アプリケーションおよびサービス・インスタンスのデプロイと変更が可能です。
 {:shortdesc}
 
-最初に、{{site.data.keyword.Bluemix}} コマンド・ライン・インターフェースと Cloud Foundry コマンド・ライン・インターフェースをインストールします。
+開始する前に、Cloud Foundry および
+{{site.data.keyword.Bluemix}} コマンド・ライン・インター
+フェースをインストールします。
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="{{site.data.keyword.Bluemix}} コマンド・ライン・インターフェースのダウンロード" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry コマンド・ライン・インターフェースのダウンロード" /> </a>
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/btn_cf_commandline.svg" alt="
+Cloud Foundry コマンド・ライン・インターフェースのダウンロード" /> </a>
+<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="
+{{site.data.keyword.Bluemix}} コマンド・ライン・インターフェースのダウンロード" /> </a>
 </p>
 
 **制約事項:** コマンド・ライン・ツールは Cygwin でサポートされません。このツールは Cygwin コマンド・ライン・ウィンドウ以外のコマンド・ライン・ウィンドウで使用してください。{:prereq}
@@ -46,6 +52,7 @@ copyright:
   1. {: download} スターター・コードをダウンロードします。 
       
     <a class="xref" href="http://bluemix.net" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_starter-code.svg" alt="スターター・コードのダウンロード" /> </a>
+
   
   2. パッケージを新規ディレクトリーに解凍し、開発環境をセットアップします。
   3. 新規ディレクトリーに移動します。

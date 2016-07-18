@@ -23,10 +23,10 @@ ou
       **Apenas dispositivos Android**.
 
 
-	**Nota**: Ao selecionar a opção **Todos os dispositivos**, todos os
+	**Nota**: ao selecionar a opção **Todos os dispositivos**, todos os
 dispositivos inscritos para notificações push recebem sua notificação.
 
-	![Tela Notificações](images/tag_notification.jpg)
+	![Tela de notificações](images/tag_notification.jpg)
 
 2. Em **Criar sua notificação**, insira sua mensagem e clique
 em **Enviar**.
@@ -35,9 +35,9 @@ em **Enviar**.
 	A captura de tela a seguir mostra uma caixa de alerta que manipula uma
 notificação push em primeiro plano em um dispositivo Android e iOS.
 
-	![Notificação push em primeiro plano no Android](images/Android_Screenshot.jpg)
+	![Notificação push de primeiro plano no Android](images/Android_Screenshot.jpg)
 
-	![Notificação push em primeiro plano no iOS](images/iOS_Screenshot.jpg)
+	![Notificação push de primeiro plano no iOS](images/iOS_Screenshot.jpg)
 
 	A captura de tela a seguir mostra uma notificação push no plano de fundo para Android.
-	![Notificação push no plano de fundo no Android](images/background.jpg)
+	![Notificação push de segundo plano no Android](images/background.jpg)

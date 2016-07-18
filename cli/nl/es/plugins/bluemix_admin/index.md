@@ -18,7 +18,8 @@ copyright:
 # CLI de admin de {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
-*Última actualización: 3 de marzo de 2016*
+*Última actualización: 2 de juno de 2016*
+{: .last-updated}
 
 Puede gestionar usuarios del entorno Local o Dedicado de
 {{site.data.keyword.Bluemix_notm}} o {{site.data.keyword.Bluemix_notm}} mediante
@@ -233,7 +234,7 @@ cf ba set-org <nombre_usuario> <organización> [<rol>]
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización {{site.data.keyword.Bluemix_notm}} a la que se va a asignar el usuario.</dd>
 <dt class="pt dlterm">&lt;rol&gt;</dt>
-<dd class="pd">Consulte [Roles](../../../admin/adminpublic.html#orgsandspaces) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
+<dd class="pd">Consulte [Roles](../../../admin/users_roles.html#userrolesinfo) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba so** como alias para el nombre de mandato
@@ -256,7 +257,7 @@ cf ba unset-org <nombre_usuario> <organización> [<rol>]
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización {{site.data.keyword.Bluemix_notm}} a la que se va a asignar el usuario.</dd>
 <dt class="pt dlterm">&lt;rol&gt;</dt>
-<dd class="pd">Consulte [Roles](../../../admin/adminpublic.html#orgsandspaces) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
+<dd class="pd">Consulte [Roles](../../../admin/users_roles.html#userrolesinfo) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba uo** como alias para un nombre de mandato
@@ -307,6 +308,8 @@ Puede añadir, suprimir y recuperar informes de seguridad.
 cf ba add-report <categoría> <fecha> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
+
+**Nota**: Si tiene acceso de escritura para el permiso de informes, puede crear una nueva categoría y añadir un informe en cualquiera de los formatos aceptados para sus usuarios. Especifique el nombre de la nueva categoría para el parámetro `category` o añada su informe en una categoría existente. 
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;categoría&gt;</dt>
@@ -374,8 +377,8 @@ cf ba enable-service-plan <identificador_plan>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">El nombre o GUID del servicio que desea habilitar. Si especifica un nombre de servicio que no es exclusivo,
-se le solicitará que elija un plan de servicio.</dd>
+<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de servicio que no es exclusivo,
+se le solicitará que elija un plan de servicio. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre del servicio para abrir la vista de detalles, para luego ver qué planes de precios hay disponibles para el dicho servicio. </dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba esp** como alias para el nombre de mandato
@@ -391,8 +394,8 @@ cf ba disable-service-plan <identificador_plan>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">El nombre o GUID del servicio que desea inhabilitar. Si especifica un nombre de servicio que no es exclusivo,
-se le solicitará que elija un plan de servicio.</dd>
+<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de servicio que no es exclusivo,
+se le solicitará que elija un plan de servicio. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre del servicio para abrir la vista de detalles, para luego ver qué planes de precios hay disponibles para el dicho servicio. </dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba dsp** como alias para un nombre de mandato
@@ -411,8 +414,8 @@ cf ba add-service-plan-visibility <identificador_plan> <organización>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">El nombre o GUID del servicio al que desea añadir visibilidad. Si especifica un nombre de servicio que no es exclusivo,
-se le solicitará que elija un plan de servicio.</dd>
+<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de servicio que no es exclusivo,
+se le solicitará que elija un plan de servicio. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre del servicio para abrir la vista de detalles, para luego ver qué planes de precios hay disponibles para el dicho servicio. </dd>
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} que va a agregar a la lista de visibilidad del servicio.</dd>
 </dl>
@@ -429,8 +432,8 @@ cf ba remove-service-plan-visibility <identificador_plan> <organización>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">El nombre o GUID del servicio del que desea eliminar la visibilidad. Si especifica un nombre de servicio que no es exclusivo,
-se le solicitará que elija un plan de servicio.</dd>
+<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de servicio que no es exclusivo,
+se le solicitará que elija un plan de servicio. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre del servicio para abrir la vista de detalles, para luego ver qué planes de precios hay disponibles para el dicho servicio. </dd>
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} que va a eliminar de la lista de visibilidad del servicio.</dd>
 </dl>
@@ -449,8 +452,8 @@ cf ba edit-service-plan-visibilities <identificador_plan> <organización_1> <org
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">El nombre o GUID del servicio que desea hacer visible. Si especifica un nombre de servicio que no es exclusivo,
-se le solicitará que elija un plan de servicio.</dd>
+<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de servicio que no es exclusivo,
+se le solicitará que elija un plan de servicio. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre del servicio para abrir la vista de detalles, para luego ver qué planes de precios hay disponibles para el dicho servicio. </dd>
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} a la que va a agregar visibilidad. Puede habilitar la visibilidad del servicio a más de una organización especificando nombres de organización o GUID adicionales en el mandato.</dd>
 </dl>
@@ -463,7 +466,7 @@ se le solicitará que elija un plan de servicio.</dd>
 Utilice los mandatos siguientes para mostrar una lista de todos los intermediarios de servicio, añadir o suprimir
 intermediarios de servicio, o para actualizar un intermediario de servicio.
 
-* Puede mostrar una lista de los intermediarios de servicio especificando el mandato siguiente: 
+* Puede mostrar una lista de los intermediarios de servicio especificando el mandato siguiente:
 
 ```
 cf ba service-brokers <nombre_intermediario>
@@ -471,7 +474,7 @@ cf ba service-brokers <nombre_intermediario>
 {: codeblock}
 
 **Nota**: Para mostrar una lista de todos los intermediarios de servicio, especifique el mandato sin el parámetro
-`nombre_intermediario`. 
+`nombre_intermediario`.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nombre_intermediario&gt;</dt>

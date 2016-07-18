@@ -15,6 +15,7 @@ copyright:
 {: #updatingapps}
 
 *마지막 업데이트 날짜: 2016년 5월 9일*
+{: .last-updated}
 
 
 cf push 명령 또는 {{site.data.keyword.Bluemix}} DevOps Services를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 업데이트할 수 있습니다. 대부분의 경우 심지어 Node.js와 같은 기본 제공 빌드팩의 경우에도 -c 매개변수를 제공하여 애플리케이션 시작에 사용할 명령을 지정해야 합니다.
@@ -276,7 +277,7 @@ cf delete-route domain -n hostname -f
   ...
   ```
   
-  **결과:** *초록색* 앱이 URL `Blue.mybluemix.net`에 응답합니다.
+  **결과:** *Green* 앱이 URL `Blue.mybluemix.net`에 응답합니다.
 
 
 # 관련 링크

@@ -76,6 +76,7 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 ### onAuthenticationSuccess メソッド
 {: #custom-android-authlistener-onsuccess}
 認証が成功した後、このメソッドを呼び出します。引数には、Android Context と、認証の成功に関する詳しい情報を含む JSONObject (これはオプションです) があります。
+
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
@@ -83,6 +84,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 ### onAuthenticationFailure メソッド
 {: #custom-android-authlistener-onfail}
 認証が失敗した後、このメソッドを呼び出します。引数には、Android Context と、認証の失敗に関する詳しい情報を含む JSONObject (これはオプションです) があります。
+
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
@@ -114,8 +116,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class CustomAuthenticationListener implements AuthenticationListener {
-
-	@Override
+@Override
 	public void onAuthenticationChallengeReceived (AuthenticationContext authContext,
 											JSONObject challenge, Context context) {
 
@@ -174,18 +175,18 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 
 ## 認証のテスト
 {: #custom-android-testing}
-Client SDK が初期化され、カスタム AuthenticationListener が登録されたら、モバイル・バックエンドに要求を出すことを開始できます。
+Client SDK が初期化され、カスタム AuthenticationListener の登録が完了すると、モバイル・バックエンドに要求を出すことができるようになります。
 
 ### 開始する前に
 {: #custom-android-testing-before}
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたアプリケーションと、 `/protected` エンドポイントで{{site.data.keyword.amashort}} により保護されているリソースを持っている必要があります。
 
 
-1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。
+1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントに要求を送信します。
 
-1. {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
+1. {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
 
-1. Android アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` を初期化した後で次のコードを追加して、カスタムの AuthenticationListener を登録します。
+1. Android アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後で次のコードを追加して、カスタムの AuthenticationListener を登録します。
 
 	```Java
 	Request request = new Request("/protected", Request.GET);
@@ -208,16 +209,10 @@ Client SDK が初期化され、カスタム AuthenticationListener が登録さ
 	});
 ```
 
-1. 	要求が成功したら、LogCat ツールで以下のように出力されます。
+1. 	要求が成功したら、LogCat ツールで以下のように出力されます。![image](images/android-custom-login-success.png)
 
-	![image](images/android-custom-login-success.png)
-
- 次のコードを追加してログアウト機能を追加することもできます。
-
- ```Java
+ 次のコードを追加してログアウト機能を追加することもできます。```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。
-
- ログアウト機能に渡される `listener` の値は、`ヌル`にすることができます。
+ ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。ログアウト機能に渡される `listener` の値は、`ヌル`にすることができます。

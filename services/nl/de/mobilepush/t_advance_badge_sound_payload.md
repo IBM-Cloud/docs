@@ -27,6 +27,8 @@ Konfigurieren Sie ein iOS Badge, Audio und zusätzliche JSON-Nutzdaten.
 
 ###Android
 
+Fügen Sie die Audiodatei zum Verzeichnis `res/raw` der Android-Anwendung hinzu. Fügen Sie beim Senden einer Benachrichtigung den Namen der Audiodatei zum entsprechenden Feld der Push-Benachrichtigung hinzu. 
+
 ```
 "settings": {
      "gcm" : {
@@ -56,7 +58,7 @@ Konfigurieren Sie ein iOS Badge, Audio und zusätzliche JSON-Nutzdaten.
 ## Android-Benachrichtigungen blockieren 
 {: #hold-notifications-android}
 
-Wenn Ihre Anwendung in den Hintergrund wechselt, möchten Sie möglicherweise, dass Push Benachrichtigungen blockiert, die an Ihre Anwendung gesendet werden. Zum Blockieren von Benachrichtigungen rufen Sie die Methode 'hold()' in der Methode 'onPause()' der Aktivität auf, die Push-Benachrichtigungen verarbeitet.
+Wenn Ihre Anwendung in den Hintergrund wechselt, möchten Sie möglicherweise, dass die Push-Benachrichtigungsfunktion Benachrichtigungen blockiert, die an Ihre Anwendung gesendet werden. Zum Blockieren von Benachrichtigungen rufen Sie die Methode 'hold()' in der Methode 'onPause()' der Aktivität auf, die Push-Benachrichtigungen verarbeitet.
 
 ```
 @Override
@@ -97,7 +99,7 @@ Im Gegensatz zu konventionellen Push-Benachrichtigungen werden Benutzer bei umse
 	acceptAction.title = "Accept"
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground*/
+	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 	```
 	
 	```
@@ -162,11 +164,9 @@ Im Gegensatz zu konventionellen Push-Benachrichtigungen werden Benutzer bei umse
 
 	```
 	//For Swift
-	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-
-	application.registerUserNotificationSettings(notificationSettings)
-	application.registerForRemoteNotifications()
+	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications() 
 	```
 	
 ## Umsetzbare iOS-Benachrichtigungen verarbeiten  

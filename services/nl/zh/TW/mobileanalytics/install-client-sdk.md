@@ -9,6 +9,7 @@ copyright:
 Client SDK
 {: #mobileanalytics_sdk}
 *前次更新：2016 年 4 月 21 日*
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_short}}
 Client SDK 目前適用於 Android、iOS 及 WatchOS。
@@ -28,7 +29,7 @@ Client SDK 目前適用於 Android、iOS 及 WatchOS。
 3. 找到 `build.gradle` 檔案的 `Dependencies` 區段，並新增 {{site.data.keyword.mobileanalytics_short}} Client SDK 的編譯相依關係，如下所示：
 
   ```Gradle
-    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
       name:'analytics',
       version: '1.+',
       ext: 'aar',
@@ -63,7 +64,7 @@ Client SDK 目前適用於 Android、iOS 及 WatchOS。
 ## 安裝 Swift SDK
 {: #installing-sdk-ios}
 
-{{site.data.keyword.mobileanalytics_full}} SDK 可讓您檢測行動式應用程式。Swift SDK 適用於 iOS 及 watchOS。
+{{site.data.keyword.mobileanalytics_full}} SDK 可讓您檢測行動應用程式。Swift SDK 適用於 iOS 及 watchOS。
 
 ### 開始之前
 {: #before-you-begin-ios}
@@ -91,7 +92,7 @@ Client SDK 目前適用於 Android、iOS 及 WatchOS。
   use_frameworks!
 
   target 'MyApp' do
-     platform :ios, '8.0'
+platform :ios, '8.0'
      pod 'BMSAnalytics'
   end
   ```
@@ -117,3 +118,7 @@ Client SDK 目前適用於 Android、iOS 及 WatchOS。
 ## SDK
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+
+## API 參考資料
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

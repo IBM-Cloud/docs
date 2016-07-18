@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
 
 ---
 
@@ -20,7 +20,7 @@ middleware y el invitado operativo subyacente. Estos repositorios permiten a los
 
 ## Actualizaciones de VM
 
-En el siguiente apartado se describe cómo aplica cambios del sistema en la máquina virtual. 
+En el siguiente apartado se describe cómo aplica cambios del sistema en la máquina virtual.
 
 Puede actualizar su VM del mismo modo que actualiza cualquier otro sistema RHEL normal. Mediante el gestor de paquetes "Yum" de Red Had, puede instalar, actualizar, desinstalar y realizar muchas otras acciones con sus paquetes.
 

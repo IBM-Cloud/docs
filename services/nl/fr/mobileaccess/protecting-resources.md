@@ -1,15 +1,27 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
 {:shortdesc: .shortdesc}
 
-# Protection des ressources de cloud à l'aide de {{site.data.keyword.amashort}}
+# Protection des ressources de back-end avec le service {{site.data.keyword.amashort}}
 {: #protecting-resources}
-Le service {{site.data.keyword.amashort}} permet de protéger les applications de back end Node.js et Java qui s'exécutent sur {{site.data.keyword.Bluemix_notm}} à l'aide des fonctions de sécurité OAuth pour les mobiles et de surveillance.
+
+*Dernière mise à jour : 30 avril 2016*
+{: .last-updated}
+
+
+Le service {{site.data.keyword.amashort}} permet de protéger les applications de back end Node.js et Java qui s'exécutent sur {{site.data.keyword.Bluemix_notm}} via des fonctions de surveillance et de sécurité OAuth pour périphériques mobiles.
 {:shortdesc}
+
+## Avant de commencer
+{: #before-you-begin}
+Avant de commencer, prenez soin de créer le service Node.js.
+
+
 ## Filtre d'autorisation
 {: #auth-filter}
 Le SDK serveur de {{site.data.keyword.amashort}} contient des filtres d'autorisation qui peuvent vous servir à protéger vos applications de back end. Le filtre d'autorisation intercepte les demandes entrantes et vérifie la présence d'un en-tête d'autorisation. En cas d'absence ou d'invalidité de l'en-tête d'autorisation, le filtre renvoie une réponse d'erreur HTTP 401. Le SDK client de {{site.data.keyword.amashort}} sait intercepter une réponse HTTP 401 renvoyée par le SDK serveur de {{site.data.keyword.amashort}} et déclenche le flux d'authentification.

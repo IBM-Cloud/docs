@@ -6,6 +6,7 @@ copyright:
 ---
 
 
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -15,7 +16,8 @@ copyright:
 # Fehlerbehebung
 {: #debugging}
 
-*Letzte Aktualisierung: 3. März 2016*
+*Letzte Aktualisierung: 25. Mai 2016*
+{: .last-updated}
 
 Wenn Probleme mit {{site.data.keyword.Bluemix}} auftreten, können Sie die Protokolldateien anzeigen, um die Probleme zu untersuchen und die Fehler zu beheben. 
 {:shortdesc}
@@ -30,9 +32,10 @@ Protokolle haben ein festes Format. Bei ausführlichen Protokollen ist eine Filt
 
 ## Staging-Fehler beheben
 {: #debugging-staging-errors}
-Beim Durchführen des Stagings für die Anwendungen unter Verwendung von {{site.data.keyword.Bluemix_notm}} können Fehler auftreten. Wenn die Durchführung des Stagings für eine App fehlschlägt, können Sie die Protokolle prüfen, um die Ursache des Fehlers zu ermitteln und das Problem zu beheben.
+Beim Durchführen des Stagings für die Anwendungen unter Verwendung von {{site.data.keyword.Bluemix_notm}} können Fehler auftreten. Wenn die Durchführung des Stagings für eine App fehlschlägt, können Sie die STG-Protokolle durchsuchen und prüfen, um den während der Bereitstellung der App aufgetretenen Fehler zu ermitteln und das Problem zu beheben. Weitere Informationen zum Anzeigen von Protokollen für Bluemix-Apps finden Sie unter [Protokolle anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
 
 Um zu verstehen, warum in einer App unter {{site.data.keyword.Bluemix_notm}} ein Fehler auftritt, müssen Sie wissen, wie eine App unter {{site.data.keyword.Bluemix_notm}} bereitgestellt und ausgeführt wird. Detaillierte Informationen hierzu finden Sie in [Bereitstellung von Anwendung](../manageapps/depapps.html#appdeploy){: new_window}.
+
 
 Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf logs` Staging-Fehler beheben können. Stellen Sie vor der Ausführung der folgenden Schritte sicher, dass Sie die cf-Befehlszeilenschnittstelle installiert haben. Weitere Informationen zum Installieren der cf-Befehlszeilenschnittstelle finden Sie unter [cf-Befehlszeilenschnittstelle installieren](../starters/install_cli.html){: new_window}.
 
@@ -132,6 +135,18 @@ Auf die Dateien `stdout.log` und `stderr.log` konnte früher standardmäßig üb
   * Bei PHP-Anwendungen können Sie die Funktion 'error_log' verwenden, um in eine Datei im Protokollverzeichnis zu schreiben.
   * Bei Python-Anwendungen können Sie konfigurieren, dass von der Protokollfunktion in eine Datei im Protokollverzeichnis geschrieben wird: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * Bei Ruby-Anwendungen können Sie konfigurieren, dass von der Protokollfunktion in eine Datei im Protokollverzeichnis geschrieben wird.
+ 
+ 
+### Debugging von Codeänderungen
+{: #debug_code_changes}
+
+Wenn Sie Codeänderungen an einer App vornehmen, die schon bereitgestellt wurde und aktiv ist, und die Codeänderungen nicht in {{site.data.keyword.Bluemix_notm}} übernommen werden, können Sie mithilfe der Protokolle ein Debugging durchführen. Unabhängig davon, ob die App aktiv ist, können Sie die Protokolle prüfen, die während der Bereitstellung oder Laufzeit der App generiert wurden, um festzustellen, warum der neue Code nicht funktioniert.
+
+Je nachdem, wie der neue Code bereitgestellt wurde, können Sie für das Debugging der Codeänderungen eine der folgenden Methoden verwenden: 
+
+  * Wenn der neue Code über die Befehlszeilenschnittstelle 'cf' bereitgestellt wurde, überprüfen Sie die Ausgabe des Befehls *cf push*. Darüber hinaus können Sie mit dem Befehl *cf logs* weitere Hinweise zur Lösung des Problems erhalten. Weitere Informationen zur Verwendung des Befehls *cf logs* finden Sie unter [Protokolle über die Befehlszeilenschnittstelle anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
+
+  * Wenn der neue Code über eine GUI (z. B. {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle, DevOps Delivery Pipeline oder Travis-CI) bereitgestellt wurde, können Sie die Protokolle über die Schnittstelle prüfen. Wenn der neue Code beispielsweise über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle bereitgestellt wurde, können Sie 'Dashboard' aufrufen, die App suchen und dann die Protokolle auf Hinweise durchsuchen. Weitere Informationen zum Anzeigen von Protokollen über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle finden Sie unter [Protokolle im Bluemix-Dashboard anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
  
 
 # Zugehörige Links

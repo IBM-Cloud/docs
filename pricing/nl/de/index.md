@@ -51,7 +51,8 @@ copyright:
 # Preisstruktur
 {: #pricing}
 
-*Letzte Aktualisierung: 16. Mai 2016*
+*Letzte Aktualisierung: 1. Juni 2016*
+{: .last-updated}
 
 Sie können kostenfrei Anwendungen in {{site.data.keyword.Bluemix}} ausführen und {{site.data.keyword.Bluemix_notm}}-Services testen. Sie können sich für einen kostenfreien 30-Tage-Test anmelden, bei dem Sie zusätzliche Leistungen, einschließlich kostenloser Unterstützung, erhalten. Nach 30 Tagen können Sie einen Kontotyp auswählen und nur für das bezahlen, was Sie über die kostenfreien Leistungen hinaus nutzen. Bluemix stellt Ihnen eine Berechnungsfunktion zur Verfügung, sodass Sie die Kosten im Voraus einschätzen können, sowie die Ansicht 'Nutzungsdashboard', in der Sie die tatsächlichen Kosten nach dem Erstellen Ihrer Apps überprüfen können.
 {:shortdesc}
@@ -133,6 +134,8 @@ Sie können Ihre kostenlose Testversion jederzeit in ein belastbares Konto konve
 Nach der Erstellung eines belastbaren Kontos können Sie die von Ihnen angegebenen Informationen bearbeiten. Klicken Sie auf das Symbol **Profileinstellungen** in der rechten oberen Ecke der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle und klicken Sie anschließend auf **Konto &gt; Kontotyp**, um Ihre Informationen zu bearbeiten.
 
 Falls während der Verwendung eines Kontos vom Typ Nutzungsabhängige Zahlung oder Abonnement Probleme mit {{site.data.keyword.Bluemix_notm}} auftreten, finden Sie weitere Informationen unter [Onlinehilfe abrufen](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help).
+
+**Hinweis:** Wenn Sie das {{site.data.keyword.Bluemix_notm}}-Abrechnungskonto mit einem SoftLayer-Konto verknüpfen, werden Ihre {{site.data.keyword.Bluemix_notm}}-Gebühren ab dem ersten des nächsten Monats über die SoftLayer-Rechnung abgerechnet. Weitere Details hierzu finden Sie unter [Guthaben anzeigen](../admin//softlayerlink.html#bill_usage).
 
 ###Nutzungsabhängiges Konto
 {: #pay-as-you-go}
@@ -334,21 +337,16 @@ die im Rahmen eines Plans anfallen, der auf dem Preismodell mit Blockpreisstufe 
 ### Kostenfreie Leistungen für virtuelle Server
 {: #vms}
 
-Sie können die virtuellen {{site.data.keyword.Bluemix_notm}}-Server in der öffentlichen IBM Cloud als kostenlose Beta-Features nutzen. Kostenlose Leistungen werden für die Anzahl der von Ihnen erstellten
+Sie können {{site.data.keyword.virtualmachineslong}} in der öffentlichen IBM Cloud als kostenloses Beta-Feature nutzen. Kostenlose Leistungen werden für die Anzahl der von Ihnen erstellten
 Images virtueller Server, für die Anzahl der zugeordneten IP-Adressen und für die nutzbare Speichermenge zur Verfügung gestellt.
 
-Im Folgenden sind die kostenlosen Leistungen für
-die Betaversion der virtuellen {{site.data.keyword.Bluemix_notm}}-Server aufgeführt:
+Für die Betaversion von {{site.data.keyword.virtualmachineslong}} können die folgenden kostenlosen Leistungen in Anspruch genommen werden:
 
-* 8 Instanzen
-* 8 virtuelle CPUs
-* 12 GB Speicher
+* 2 Instanzen
+* 2 virtuelle CPUs
+* 8 GB Speicher
 * 200 GB Blockspeicher
-* 4 öffentliche IP-Adressen
-
-Sie können zudem mithilfe der Infrastruktur virtueller Server
-in Ihren nicht öffentlichen {{site.data.keyword.Bluemix_notm}}-Clouds
-virtuelle Server bereitstellen, wobei nur die Einschränkungen und Quoten Ihrer nicht öffentlichen Clouds zu berücksichtigen sind.
+* 5 öffentliche IP-Adressen
 
 
 ##Vorgehensweise zum Schätzen der Kosten
@@ -484,6 +482,13 @@ Dem Kontoeigner werden die Gebühren für die Gesamtnutzung, die für alle Organ
 Kontoeigner können die Nutzungszusammenfassung nach Region und Organisation filtern. Wenn Sie ein Kontoeigner sind, legen Sie unter **Organisation** die Auswahl **Alle Organisationen** fest, um die Nutzung für das gesamte Konto für einen zwölfmonatigen Zeitraum anzuzeigen. Klicken Sie auf einen bestimmten Monat, um die Nutzung für diesen Monat anzuzeigen. Die angezeigten Gebühren stellen den Betrag dar, der Ihnen als Kontoeigner für diesen Monat in Rechnung gestellt wird.
 
 Wenn Sie unter **Organisation** eine bestimmte Organisation auswählen, können Sie die gesamte Nutzung für diese Organisation, einschließlich der Nutzung als Teil eines gebührenfreien Nutzungskontingents anzeigen. Die für die Organisation angezeigten Gebühren sind nicht die Gebühren, die Ihnen in Rechnung gestellt werden. Die Nutzung des gebührenfreien Nutzungskontingents wird auf Kontoebene als kostenlos angezeigt, aber nicht auf Organisationsebene. Aus diesem Grund wird beim Anzeigen der Nutzung der Organisation die tatsächliche Nutzung für diese Organisation einschließlich der kostenlosen und der gebührenpflichtigen Nutzung angezeigt. Beim Anzeigen der Nutzung aller Organisationen wird die Nutzung für das Konto aufsummiert, nachdem das gebührenfreie Nutzungskontingent entfernt wurde.
+
+##Guthaben anzeigen
+{: #credits}
+
+Als Kontoeigner oder Abrechnungsmanager können Sie in der Ansicht 'Nutzungsdashboard' Guthaben für Ihr Konto anzeigen. Sie könnten beispielsweise über Guthaben verfügen, wenn Sie ein SoftLayer-Konto mit einem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft haben.
+
+Klicken Sie zum Öffnen der Ansicht 'Nutzungsdashboard' auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und wählen Sie **Konto** aus. Klicken Sie auf der angezeigten Seite auf **Nutzungsdashboard**. In dieser Ansicht werden gegebenenfalls die bestehenden Guthaben und die entsprechenden Ablaufdaten angezeigt.
 
 ##Benachrichtigungen
 {: #notifications}

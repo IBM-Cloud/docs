@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1200"
+   height="700"
+   viewBox="0 0 1200 700.00002"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Erin task modified.svg">
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect12908"
+       is_visible="true"
+       offset_points="0,0.5"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="round"
+       miter_limit="4"
+       end_linecap_type="zerowidth"
+       cusp_linecap_type="round" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect4228"
+       is_visible="true"
+       offset_points="0,0.51532056"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="round"
+       miter_limit="4"
+       end_linecap_type="zerowidth"
+       cusp_linecap_type="round" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect4214"
+       is_visible="true"
+       offset_points="0,0.5"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="round"
+       miter_limit="4"
+       end_linecap_type="zerowidth"
+       cusp_linecap_type="round" />
+    <linearGradient
+       id="linearGradient5854"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ec671d;stop-opacity:1;"
+         offset="0"
+         id="stop5856" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5854"
+       id="linearGradient5858"
+       x1="229.5"
+       y1="1027.3621"
+       x2="1200.5"
+       y2="1027.3621"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.830476,0,0,0.88392528,77.963239,116.99639)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.88714286"
+     inkscape:cx="600"
+     inkscape:cy="350"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1600"
+     inkscape:window-height="848"
+     inkscape:window-x="-8"
+     inkscape:window-y="22"
+     inkscape:window-maximized="1"
+     units="px">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4136"
+       spacingx="10"
+       spacingy="10" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <rect
+       style="opacity:1;fill:#c0d4a6;fill-opacity:1;stroke:#4e8b15;stroke-width:4.44537449;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.93641621"
+       id="rect5878"
+       width="595.98273"
+       height="342.82397"
+       x="269.75421"
+       y="127.42184" />
+    <rect
+       style="opacity:1;fill:#dcd3f1;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.29713762;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6320"
+       width="130.9169"
+       height="191.06873"
+       x="319.78925"
+       y="130.12148" />
+    <rect
+       style="opacity:1;fill:#dcd3f1;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.28458691;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6320-4"
+       width="129.17506"
+       height="189.91599"
+       x="680.19232"
+       y="130.11092" />
+    <g
+       id="g6499">
+      <rect
+         y="189.97867"
+         x="690.74847"
+         height="119.25224"
+         width="19.739239"
+         id="rect5902-3"
+         style="opacity:1;fill:#fc4109;fill-opacity:1;stroke:#000000;stroke-width:0.48139429;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         transform="matrix(0,-1,1,0,0,0)"
+         sodipodi:linespacing="125%"
+         id="text5918-6"
+         y="706.62811"
+         x="-298.01309"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="706.62811"
+           x="-298.01309"
+           id="tspan5920-6"
+           sodipodi:role="line">Chaincode 0</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="480"
+       y="250.00002"
+       id="text6536"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6538"
+         x="480"
+         y="250.00002">.....................</tspan></text>
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-352.36208)">
+    <path
+       style="fill:#f3270d;fill-opacity:1;stroke:none;stroke-opacity:1"
+       d="m 239.80201,477.49491 0,572.75779 9.44589,0 0,-572.75779 -9.44589,0 z"
+       id="rect4157"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#f3270d;fill-opacity:1;stroke:none;stroke-opacity:1"
+       id="rect4159"
+       width="9.855072"
+       height="516.86334"
+       x="888.06757"
+       y="477.60822" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#e9661c;stroke-width:1.1133455;stroke-opacity:0.93641621;opacity:0"
+       id="rect4169"
+       width="969.58716"
+       height="39.886654"
+       x="230.05667"
+       y="1012.4189" />
+    <rect
+       style="opacity:1;fill:#f4b67e;fill-opacity:1;stroke:url(#linearGradient5858);stroke-width:5.74045229;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.93641621"
+       id="rect4179"
+       width="805.56177"
+       height="44.196266"
+       x="268.97272"
+       y="1003.0093" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="497.92273"
+       y="1030.9449"
+       id="text5860"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5862"
+         x="497.92273"
+         y="1030.9449">Mainframe &amp; LinuxONE platform</tspan></text>
+    <rect
+       style="opacity:1;fill:#079d49;fill-opacity:1;stroke:#000000;stroke-width:3.7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.93641621"
+       id="rect5864"
+       width="596.90527"
+       height="59.85215"
+       x="270.07391"
+       y="932.43597" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="399.45248"
+       y="970.25256"
+       id="text5866"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5868"
+         x="399.45248"
+         y="970.25256">SSC LPAR (IBM KVM based)</tspan></text>
+    <rect
+       style="opacity:1;fill:#35b5e6;fill-opacity:1;stroke:#136fd8;stroke-width:4.937;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.93641621"
+       id="rect5870"
+       width="595.63135"
+       height="88.76339"
+       x="270.61832"
+       y="832.98035" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:bold;font-size:22.5px;line-height:125%;font-family:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'Arial Bold';font-stretch:normal;font-variant:normal;"
+       x="398.0354"
+       y="884.32666"
+       id="text5872"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5874"
+         x="398.0354"
+         y="884.32666">Secure Execution Context (SEC)</tspan></text>
+    <rect
+       style="opacity:1;fill:#35b5e6;fill-opacity:1;stroke:#136fd8;stroke-width:4.89774132;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.93641621"
+       id="rect5882"
+       width="486.43741"
+       height="60.029633"
+       x="321.15085"
+       y="732.34723" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="403.67151"
+       y="770.10767"
+       id="text5884"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5886"
+         x="403.67151"
+         y="770.10767">Secure Services Container (SSC)</tspan></text>
+    <rect
+       style="opacity:1;fill:#7ccc26;fill-opacity:1;stroke:#000000;stroke-width:1.58709383;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5890"
+       width="489.09564"
+       height="55.739223"
+       x="320.14349"
+       y="674.05139" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="499.16263"
+       y="709.12537"
+       id="text5892"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5894"
+         x="499.16263"
+         y="709.12537">Blockchain</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.48197174px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="337.92099"
+       y="521.87555"
+       id="text5914"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5916"
+         x="337.92099"
+         y="521.87555">Peer 0</tspan></text>
+    <rect
+       style="opacity:1;fill:#fc4109;fill-opacity:1;stroke:#000000;stroke-width:0.48139429;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5902"
+       width="19.739239"
+       height="119.25224"
+       x="329.69586"
+       y="542.63318" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-650.6676"
+       y="345.57547"
+       id="text5918"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5920"
+         x="-650.6676"
+         y="345.57547">Chaincode 0</tspan></text>
+    <g
+       id="g6322"
+       transform="translate(-21.780362,19.629686)">
+      <rect
+         y="523.01678"
+         x="450.71832"
+         height="120.43987"
+         width="19.574108"
+         id="rect5912"
+         style="opacity:1;fill:#fc4109;fill-opacity:1;stroke:#000000;stroke-width:0.46542206;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         transform="matrix(0,-1.0294767,0.97136731,0,0,0)"
+         sodipodi:linespacing="125%"
+         id="text5926"
+         y="479.70874"
+         x="-612.94153"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.01584053px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="479.70874"
+           x="-612.94153"
+           id="tspan5928"
+           sodipodi:role="line">Chaincode j</tspan></text>
+    </g>
+    <rect
+       style="opacity:1;fill:#079d49;fill-opacity:1;stroke:#000000;stroke-width:3.27582431;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5930"
+       width="164.76613"
+       height="60.418304"
+       x="909.79083"
+       y="932.15289" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="923.51855"
+       y="972.36206"
+       id="text5932"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5934"
+         x="923.51855"
+         y="972.36206">SSC LPAR</tspan></text>
+    <rect
+       style="opacity:1;fill:#35b5e6;fill-opacity:1;stroke:#136fd8;stroke-width:4.36639118;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.9372549"
+       id="rect5936"
+       width="163.22762"
+       height="90.57061"
+       x="909.71472"
+       y="832.07678" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="971.74927"
+       y="887.10107"
+       id="text5938"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5940"
+         x="971.74927"
+         y="887.10107">SEC</tspan></text>
+    <rect
+       style="opacity:1;fill:#c0d4a6;fill-opacity:1;stroke:#4e8b15;stroke-width:3.93551278;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.9372549"
+       id="rect5942"
+       width="163.47878"
+       height="342.72104"
+       x="909.9353"
+       y="480.00278" />
+    <rect
+       style="opacity:1;fill:#35b5e6;fill-opacity:1;stroke:#136fd8;stroke-width:4.92799997;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.9372549"
+       id="rect5944"
+       width="78.066467"
+       height="60.169338"
+       x="951.98431"
+       y="725.54657" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="965.20129"
+       y="764.33472"
+       id="text5946"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5948"
+         x="965.20129"
+         y="764.33472">SSC</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="829.14655"
+       y="471.08221"
+       id="text5950"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5952"
+         x="829.14655"
+         y="471.08221">LPAR isolation</tspan></text>
+    <g
+       id="g4218"
+       transform="matrix(1.7954815,0,0,1.7025573,27.458452,493.57004)">
+      <ellipse
+         id="ellipse4195"
+         ry="7.5"
+         rx="6.9000001"
+         cy="46.599998"
+         cx="32.700001" />
+      <path
+         id="path4197"
+         d="m 51.4,34.4 -1.7,0 0.1,25.8 27.5,17.6 1.8,0 L 78.9,48.7 51.4,34.4 Z M 73.8,72.2 52.2,59.4 52.1,38.4 73.7,50 73.8,72.2 Z"
+         inkscape:connector-curvature="0" />
+      <g
+         id="g4199">
+        <path
+           id="path4201"
+           d="M 38.3,68.7"
+           inkscape:connector-curvature="0" />
+        <ellipse
+           id="ellipse4203"
+           ry="22.200001"
+           rx="12.3"
+           cy="79.699997"
+           cx="32.700001" />
+        <rect
+           id="rect4205"
+           height="24.6"
+           width="38.799999"
+           class="st0"
+           y="82"
+           x="12.5"
+           style="fill:#ffffff" />
+      </g>
+      <path
+         id="path4207"
+         d="m 55.9,76.1 0,0 5.5,4.2 9.8,-1.8 0,-0.5 -15.2,-10.2 -8,1.9 0,0 0,0.3 5.2,3.9"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4209"
+         d="M 58.2,85.1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g6475"
+       transform="translate(-1.1695906,69.005848)">
+      <path
+         sodipodi:nodetypes="cc"
+         style="fill:none;stroke:#000000;stroke-width:4.28740168;stroke-miterlimit:4;stroke-dasharray:8.57480315, 4.28740157;stroke-dashoffset:0"
+         inkscape:connector-curvature="0"
+         d="m 168.54414,564.13378 71.40487,-0.0997"
+         id="basic-f13-en.svgpath1622" />
+      <path
+         sodipodi:nodetypes="cc"
+         style="fill:none;stroke:#000000;stroke-width:4.32283449;stroke-miterlimit:4;stroke-dasharray:8.64566929, 4.32283465;stroke-dashoffset:0"
+         inkscape:connector-curvature="0"
+         d="m 199.9021,641.09044 39.42165,-76.59428"
+         id="basic-f13-en.svgpath1622-7" />
+      <path
+         inkscape:transform-center-x="-2.2525823"
+         transform="matrix(0.79303178,0.41801864,-0.47253958,0.91797764,342.8018,-27.252642)"
+         inkscape:transform-center-y="0.48487206"
+         d="m 200,652.36206 -4.33013,-7.5 -4.33012,-7.5 8.66025,0 8.66025,0 -4.33012,7.5 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="2.6179939"
+         sodipodi:arg1="1.5707963"
+         sodipodi:r2="5"
+         sodipodi:r1="10"
+         sodipodi:cy="642.36206"
+         sodipodi:cx="200"
+         sodipodi:sides="3"
+         id="path17495"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.7316606;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         sodipodi:type="star" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="385.44186"
+       y="605.01447"
+       id="text6316"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6318"
+         x="385.44186"
+         y="605.01447">......</tspan></text>
+    <rect
+       style="opacity:0;fill:#dcd3f1;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4.00521469;stroke-miterlimit:4;stroke-dasharray:8.01042882, 4.0052144;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6327"
+       width="148.05997"
+       height="140.28218"
+       x="342.08112"
+       y="512.22101" />
+    <g
+       id="g6507">
+      <rect
+         y="542.56464"
+         x="720.65259"
+         height="119.48553"
+         width="18.84622"
+         id="rect5910-3"
+         style="opacity:1;fill:#fc4109;fill-opacity:1;stroke:#000000;stroke-width:0.4548735;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         transform="matrix(0,-1.0060634,0.99397315,0,0,0)"
+         sodipodi:linespacing="125%"
+         id="text5922-2"
+         y="740.39514"
+         x="-646.29834"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.60574722px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="740.39514"
+           x="-646.29834"
+           id="tspan5924-6"
+           sodipodi:role="line">Chaincode 1</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="744.18024"
+       y="605.30688"
+       id="text6316-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6318-0"
+         x="744.18024"
+         y="605.30688">......</tspan></text>
+    <rect
+       style="opacity:1;fill:#fc4109;fill-opacity:1;stroke:#000000;stroke-width:0.46262708;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5912-8"
+       width="19.576902"
+       height="118.98068"
+       x="787.06525"
+       y="542.99597" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.05502892px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-630.90527"
+       y="827.6507"
+       id="text5926-0"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1.0315687,0.9693974,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5928-4"
+         x="-630.90527"
+         y="827.6507">Chaincode j</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.48197174px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="697.92102"
+       y="521.58319"
+       id="text5914-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5916-3"
+         x="697.92102"
+         y="521.58319">Peer 3</tspan></text>
+    <g
+       transform="translate(-360.47798,0.67563789)"
+       id="g6507-3">
+      <rect
+         y="542.56464"
+         x="720.65259"
+         height="119.48553"
+         width="18.84622"
+         id="rect5910-3-5"
+         style="opacity:1;fill:#fc4109;fill-opacity:1;stroke:#000000;stroke-width:0.4548735;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         transform="matrix(0,-1.0060634,0.99397315,0,0,0)"
+         sodipodi:linespacing="125%"
+         id="text5922-2-8"
+         y="740.39514"
+         x="-646.29834"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.60574722px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="740.39514"
+           x="-646.29834"
+           id="tspan5924-6-1"
+           sodipodi:role="line">Chaincode 1</tspan></text>
+    </g>
+  </g>
+  <style
+     id="style4193"
+     type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+</svg>

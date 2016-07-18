@@ -15,7 +15,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*마지막 업데이트 날짜: 2016년 5월 16일*
+*마지막 업데이트 날짜: 2016년 6월 6일*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} Local은 {{site.data.keyword.Bluemix_notm}} 클라우드 기반 플랫폼의 강력함 및 민첩성을 데이터 센터로 가져옵니다. {{site.data.keyword.Bluemix_notm}} Local을 사용하여 안전하게 연결되고 {{site.data.keyword.Bluemix_notm}} Public 동기화를 유지하는 동안 회사 방화벽 뒤에 가장 민감한 워크로드를 보호할 수 있습니다.
 {:shortdesc}
@@ -33,6 +34,7 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 | **유형** | **이름** | **설명** |
 |----------|----------|-----------------|
 |포함 | {{site.data.keyword.Bluemix_notm}} 런타임 | 시스템 및 운영 체제를 설정하고 관리할 필요 없이 신속하게 앱을 시작하고 실행하려면 런타임을 사용하십시오. 모든 {{site.data.keyword.Bluemix_notm}} 런타임은 {{site.data.keyword.Bluemix_notm}} Local 인스턴스에서 사용자에게 사용 가능합니다.|
+|선택사항 | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}}는 {{site.data.keyword.APIM}}와 IBM StrongLoop를 API 및 마이크로서비스를 작성, 실행, 관리 및 적용하기 위한 포괄적 솔루션을 제공하는 단일 오퍼링으로 통합합니다. |
 |선택사항 | {{site.data.keyword.APIM}} | {{site.data.keyword.APIMfull}} 서비스는 API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL을 사용하거나 HTTP 데이터 소스의 데이터를 어셈블하여 자원들로 API를 가져올 수 있습니다. {{site.data.keyword.APIM}} 서비스를 사용하면 API가 어떻게 이용되는지를 관리할 수 있게 된다는 이점이 있습니다. |
 |포함 | {{site.data.keyword.autoscaling}}| 정책에 따라 애플리케이션의 계산 자원 용량을 동적으로 늘리거나 줄입니다. 이 서비스를 사용하면 {{site.data.keyword.Bluemix}} Local 환경에서 무제한 사용이 가능합니다.|
 |선택사항 | {{site.data.keyword.datacshort}} | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
@@ -49,6 +51,10 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |{{site.data.keyword.Bluemix_notm}} Local 액세스 일회성 설정 | 로컬 환경의 배치 및 구성을 위한 일회성 설정 비용입니다. |
 |{{site.data.keyword.Bluemix_notm}} Local 계산 자원 16GB 용량 증가 | 추가 16GB 메모리 용량을 제공하기 위한 {{site.data.keyword.Bluemix_notm}} Local 계산 자원의 확장입니다. |
 |{{site.data.keyword.Bluemix_notm}} 데이터 & 세션 캐시 50GB 용량 증가 | 최대 50GB 누적 용량까지 데이터 캐시 및 세션 캐시 인스턴스의 배치 및 실행을 허용하는 환경입니다. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 500만 API 호출 | 부서별 API 프로젝트 방향으로 대상 지정된 월간 500만 API 호출의 용량을 지닌 {{site.data.keyword.apiconnect_short}}의 개인용 버전 실행을 허용하는 환경입니다.  |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 10만 API 호출 증가| 매월 10만 API 호출의 추가 용량을 제공하는 {{site.data.keyword.apiconnect_short}} Professional 환경의 확장입니다.  |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 2,500만 API 호출 | 엔터프라이즈 전체 API 프로젝트 방향으로 대상 지정된 월간 2,500만 API 호출의 용량을 지닌 {{site.data.keyword.apiconnect_short}}의 개인용 버전 실행을 허용하는 환경입니다.  |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 10만 API 호출 증가 | 매월 10만 API 호출의 추가 용량을 제공하는 {{site.data.keyword.apiconnect_short}} Enterprise 환경의 확장입니다.  |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} 500 API 호출 용량 증가 | 초당 500개 API 호출의 용량을 지닌 {{site.data.keyword.Bluemix_notm}}용 {{site.data.keyword.APIM}}의 개인용 버전 실행을 허용하는 환경입니다. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local 증분 증가 | 0.5TB 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 로컬 환경 내에서 {{site.data.keyword.iot_full}}의 개인용 버전 실행을 허용하는 {{site.data.keyword.iot_full}} Local 기본 서비스 오퍼링에 대한 추가 환경입니다. |
 
@@ -469,6 +475,8 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 
 IBM은 적합하다고 판단하면 {{site.data.keyword.Bluemix_notm}} 런타임 및 서비스에 대한 업데이트 및 수정사항을 유지보수하고 설치합니다. 유지보수 기간 중에는 서비스를 사용하지 못할 수 있습니다.또한 IBM은 {{site.data.keyword.Bluemix_notm}} 플랫폼에 대한 유지보수 업데이트를 스케줄하도록 사용자와 함께 작업합니다.
 
+### {{site.data.keyword.Bluemix_notm}} 유지보수
+
 다음 유형의 유지보수가 {{site.data.keyword.Bluemix_notm}} Local에 필요합니다.
 <dl>
 <dt>**서비스의 표준 유지보수**</dt>
@@ -486,6 +494,17 @@ IBM은 각 유지보수 기간에 대해 계획된 변경사항을 자세히 설
 **중요**: IBM은 필요에 따라 비상 유지보수를 적용할 수 있도록 서비스를 인터럽트할 수 있는 권한을 보유합니다. IBM은 스케줄된 유지보수 시간을 변경할 수 있지만 그러한 변경은 물론 비상 유지보수 정보에 대해서도 사용자에게 알려드릴 것입니다.
 
 유지보수 업데이트 이후 문제가 보고되는 경우에는 IBM이 업데이트를 롤백하도록 허용하는 것이 최선인지 여부를 {{site.data.keyword.Bluemix_notm}} 지원 센터와 협의합니다. 협의가 이루어지면 IBM은 업데이트를 롤백하여 환경을 이전 단계로 복원합니다.
+
+### 고객 인프라 유지보수
+{: #inframaintenance}
+
+{{site.data.keyword.Bluemix_notm}} Local은 ESXi 하이퍼바이저에 배치되며, vCenter 애플리케이션은 가상 머신 및 ESXi 호스트를 중앙 집중식으로 관리하는 데 사용됩니다. {{site.data.keyword.Bluemix_notm}}는 모든 중간 업데이트 및 패치를 포함하여 3가지 최신 버전의 ESXi 및 vCenter를 지원합니다. 언제든지 [Local 인프라 요구사항](../local/index.html#localinfra) 문서에서 최신 지원 버전을 찾을 수 있습니다. 
+
+**중요사항**: {{site.data.keyword.Bluemix_notm}} Local이 ESXi 하이퍼바이저로 배치된 경우, ESXi에 대한 업그레이드 및 패치는 환경 내에서 실행 중인 모든 애플리케이션 및 서비스를 포함하여 로컬 환경의 가용성에 지장을 초래할 수 있습니다. 중단 때문에 오류의 운영 팀에 경보하지 않도록 보장하려면, 업그레이드 또는 패치를 완료하기 전에 지원 티켓을 사용하여 {{site.data.keyword.Bluemix_notm}}에 알려야 합니다. 지정된 CSM(Client Success Manager)이 있는 경우, CSM과 공동 작업으로 업그레이드 스케줄을 교환할 수 있습니다. 
+
+로컬 인스턴스가 최신 지원 버전과 호환 가능함을 보장하기 위해, {{site.data.keyword.Bluemix_notm}} 운영 팀은 최신 {{site.data.keyword.Bluemix_notm}} Local 환경 업데이트와 일치하지 않을 수 있는 미지원 버전의 환경을 모니터합니다. 일부 {{site.data.keyword.Bluemix_notm}} 업데이트(예: Cloud Foundry 버전 업데이트)는 ESXi 또는 vCenter 소프트웨어의 업데이트를 필요로 합니다. {{site.data.keyword.Bluemix_notm}} 지원에서는 업데이트가 필요한 사항과 시점과 관련하여 사용자에게 경보를 제공합니다. 사용자에게는 이 업데이트를 완료하기 위한 시간 창이 제공됩니다. 
+
+{{site.data.keyword.Bluemix_notm}}에서는 로컬 환경이 최신 ESXi 및 vCenter 버전과 호환성을 유지하도록 모든 노력을 기울이고 있습니다. 그러나 대부분의 최신 ESXi 및 vCenter 버전이 지원되지 않는 순간이 있을 수 있습니다. 업데이트를 적용하기 전에 최신 호환 가능 버전에 대해 [Local 인프라 요구사항](../local/index.html#localinfra) 문서를 참조하십시오. 
 
 ## 인시던트 대응 및 지원
 {: #incidentresponse}

@@ -19,6 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} パッケージの使用と作成
 {: #openwhisk_packages}
 *最終更新日: 2016 年 3 月 28 日*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} では、パッケージを使用して関連するアクションのセットを 1 つにまとめ、それらのパッケージを他のユーザーと共有することができます。
 
@@ -68,7 +69,7 @@ copyright:
   {: pre}
   ```
   package /whisk.system/cloudant: Cloudant database service
-     (params: {{site.data.keyword.Bluemix_notm}}ServiceName host username password dbname includeDoc overwrite)
+(params: {{site.data.keyword.Bluemix_notm}}ServiceName host username password dbname includeDoc overwrite)
    action /whisk.system/cloudant/read: Read document from database
    action /whisk.system/cloudant/write: Write document to database
    feed   /whisk.system/cloudant/changes: Database change feed
@@ -88,7 +89,7 @@ copyright:
   {: pre}
   ```
   action /whisk.system/cloudant/read: Read document from database
-     (params: dbname includeDoc id)
+(params: dbname includeDoc id)
   ```
   {: screen}
 
@@ -109,7 +110,7 @@ copyright:
   {: pre}
   ```
   action /whisk.system/samples/greeting: Print a friendly greeting
-     (params: name place)
+(params: name place)
   ```
   {: screen}
 
@@ -124,7 +125,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, stranger from somewhere!"
+"payload": "Hello, stranger from somewhere!"
   }
   ```
   {: screen}
@@ -140,7 +141,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Mork from Ork!"
+"payload": "Hello, Mork from Ork!"
   }
   ```
   {: screen}
@@ -197,7 +198,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Odin from Valhalla!"
+"payload": "Hello, Odin from Valhalla!"
   }
   ```
   {: screen}
@@ -213,7 +214,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Odin from Asgard!"
+"payload": "Hello, Odin from Asgard!"
   }
   ```
   {: screen}
@@ -246,7 +247,7 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
   {: pre}
   ```
   action /whisk.system/alarms/alarm: Fire trigger when alarm occurs
-     (params: cron trigger_payload)
+(params: cron trigger_payload)
   ```
   {: screen}
 
@@ -270,7 +271,7 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
 
   ```
   function main(params) {
-      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -446,7 +447,7 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
   {: pre}
   ```
   {
-      "city": "Austin",
+"city": "Austin",
       "country": "USA"
   }
   ```
@@ -461,7 +462,7 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
   {: pre}
   ```
   {
-      "city": "Dallas",
+"city": "Dallas",
       "country": "USA",
       "state": "Texas"
   }
@@ -516,6 +517,6 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
   ```
   {: screen}
 
-  前述の例では、
-`myNamespace` 名前空間で作業しています。この名前空間が、完全修飾名に含まれています。
+  前述の例では、`myNamespace` 名前空間で作業
+しています。この名前空間が、完全修飾名に含まれています。
 

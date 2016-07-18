@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-# カスタム ID プロバイダーを使用したユーザー認証
+# カスタム ID プロバイダーを使用したユーザーの認証
 {: #custom-id}
 カスタム ID プロバイダーを作成し、資格情報の収集と検証のためのユーザー独自のロジックを実装することができます。カスタム ID プロバイダーは、RESTful インターフェースを公開する Web アプリケーションです。オンプレミスまたは {{site.data.keyword.Bluemix}} 上でカスタム ID プロバイダーをホストできます。唯一の要件は、カスタム ID プロバイダーは {{site.data.keyword.amashort}} サービスと対話できるように公開インターネットからアクセス可能でなければならないということです。
 
@@ -15,10 +15,10 @@ copyright:
 
 ![image](images/mca-sequence-custom.jpg)
 
-1. {{site.data.keyword.amashort}} SDK を使用して、{{site.data.keyword.amashort}} Server SDK によって保護されているバックエンド・リソースへの要求を実行します。
+1. {{site.data.keyword.amashort}} SDK を使用して、{{site.data.keyword.amashort}} Server SDK によって保護されているバックエンド・リソースへ要求を出します。
 * {{site.data.keyword.amashort}} Server SDK は、無許可の要求を検出し、HTTP 401 と許可スコープを返します。
-* {{site.data.keyword.amashort}} Client SDK は、上記の HTTP 401 を自動的に検出し、認証プロセスを開始します。
-* {{site.data.keyword.amashort}} Client SDK は、{{site.data.keyword.amashort}} サービスに連絡して許可ヘッダーを発行するよう依頼します。
+* {{site.data.keyword.amashort}} Client SDK は自動的に上記の HTTP 401 を検出し、認証プロセスを開始します。
+* {{site.data.keyword.amashort}} Client SDK は {{site.data.keyword.amashort}} サービスに連絡し、認証ヘッダーを送信するよう要求します。
 * {{site.data.keyword.amashort}} サービスは、認証プロセスを開始するためにカスタム ID プロバイダーと通信します。
 * カスタム ID プロバイダーは、{{site.data.keyword.amashort}} サービスに認証チャレンジを返します。
 * {{site.data.keyword.amashort}} サービスは、その認証チャレンジを {{site.data.keyword.amashort}} Client SDK に返します。
@@ -33,13 +33,13 @@ copyright:
 ## カスタム ID プロバイダーについての理解
 {: #custom-id-about}
 
-カスタム ID プロバイダーを使用して、クライアントに送信されるカスタム認証チャレンジを提供できます。カスタム ID プロバイダーによって、認証フローを完全にカスタマイズできます。
+カスタム ID プロバイダーを使用して、クライアントに送信されるカスタム認証チャレンジを提供できます。認証フローを完全にカスタマイズできます。
 
 カスタム ID プロバイダーを作成する際、以下を行うことができます。
 
 1. {{site.data.keyword.amashort}} サービスによってモバイル・クライアント・アプリケーションに送信される認証チャレンジをカスタマイズします。認証チャレンジは、任意のカスタム・データを含む JSON オブジェクトです。モバイル・クライアントは、このカスタム・データを使用して認証フローをカスタマイズできます。
 
-カスタム認証チャレンジの例を以下に示します。
+  カスタム認証チャレンジの例を以下に示します。
 
 	```JavaScript
 	{
@@ -54,7 +54,7 @@ copyright:
 
 1. マルチステップ認証およびマルチフォーム認証も含めて任意のカスタム資格情報収集フローをモバイル・クライアントに実装します。カスタム認証チャレンジと同様に、カスタム認証チャレンジ応答の構造も設計する必要があります。
 
-モバイル・クライアントによって送信されるカスタム認証チャレンジ応答の例を以下に示します。
+  モバイル・クライアントによって送信されるカスタム認証チャレンジ応答の例を以下に示します。
 
 	```JavaScript
 	{
@@ -102,7 +102,7 @@ copyright:
 ## カスタム・レルム
 {: #custom-id-custom}
 
-カスタム ID プロバイダーは、1 つのカスタム認証レルムをサポートします。着信認証チャレンジを処理するために、モバイル・クライアント・アプリケーションで AuthenticationDelegate / AuthenticationListener のインスタンスを作成して登録します。{{site.data.keyword.amashort}} ダッシュボードでカスタム ID プロバイダーを構成するときに、カスタム認証レルム名を定義します。それを使用して、要求が特定の {{site.data.keyword.amashort}} サービス・インスタンスから着信していることを識別できます。
+カスタム ID プロバイダーは、1 つのカスタム認証レルムをサポートします。着信認証チャレンジを処理するために、モバイル・クライアント・アプリケーションで `AuthenticationDelegate` / 	`AuthenticationListener` のインスタンスを作成して登録します。{{site.data.keyword.amashort}} ダッシュボードでカスタム ID プロバイダーを構成するときに、カスタム認証レルム名を定義します。それを使用して、要求が特定の {{site.data.keyword.amashort}} サービス・インスタンスから着信していることを識別できます。
 
 ## 次のステップ
 {: #next-steps}
@@ -112,3 +112,4 @@ copyright:
 * [iOS 用のカスタム認証の構成 (Swift SDK)](custom-auth-ios-swift-sdk.html)
 * [iOS 用のカスタム認証の構成 (Objective-C SDK)](custom-auth-ios.html)
 * [Cordova 用のカスタム認証の構成 ](custom-auth-cordova.html)
+

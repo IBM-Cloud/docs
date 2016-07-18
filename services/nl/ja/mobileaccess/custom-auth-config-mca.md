@@ -11,7 +11,7 @@ copyright:
 
 ## 開始する前に
 {: #custom-dash-begin}
-* [入門](getting-started.html)をお読みください。
+* [入門](index.html)をお読みください。
 * {{site.data.keyword.amashort}} Server SDK でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。
 * カスタム ID プロバイダー・アプリケーションを実行します。
 

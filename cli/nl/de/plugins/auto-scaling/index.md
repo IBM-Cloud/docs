@@ -18,6 +18,7 @@ copyright:
 {: #autoscalingcli}
 
 *Letzte Aktualisierung: 25. Februar 2016*
+{: .last-updated}
 
 Sie können den Service {{site.data.keyword.autoscaling}} unter Verwendung der {{site.data.keyword.autoscaling}}-CLI für {{site.data.keyword.Bluemix_notm}} konfigurieren. Die {{site.data.keyword.autoscaling}}-CLI unterstützt Linux64, Win64 und OSX und stellt eine ähnliche Funktionalität wie die REST-konforme API für Autoskalierung (Auto-Scaling RESTful API) bereit.
 {: shortdesc}
@@ -121,7 +122,9 @@ Sie können das Protokoll der Autoskalierungsaktivität einer bestimmten App anz
 **Tipp:** Sie können auch die Option **--json** verwenden, um eine Quelltextformatierung der ursprünglichen JSON-Antwort zu erstellen.
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [{{site.data.keyword.autoscaling}}-Service](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}}-CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [W3C-Standard 'Date and Time Formats'](https://www.w3.org/TR/NOTE-datetime){: new_window}

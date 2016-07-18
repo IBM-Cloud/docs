@@ -7,11 +7,17 @@ copyright:
 
 # Surveillance des applications
 {: #app-monitoring}
+*Dernière mise à jour : 6 mai 2016*
+{: .last-updated}
 
 Outre les fonctions de sécurité, {{site.data.keyword.amafull}} fournit également des fonctions de surveillance et d'analyse à vos applications mobiles. Le SDK client de {{site.data.keyword.amashort}} vous permet d'enregistrer les journaux client et de surveiller les données. Les développeurs peuvent contrôler le moment auquel ces données doivent être envoyées au service {{site.data.keyword.amashort}}. Tous les événements de sécurité, tels que les réussites et les échecs d'authentification, qui se produisent dans le service {{site.data.keyword.amashort}} sont automatiquement journalisés.
 
 Lorsque les données ont été fournies à {{site.data.keyword.amashort}}, vous pouvez utiliser le tableau de bord de surveillance de {{site.data.keyword.amashort}} pour analyser les performances pour vos applications mobiles, de vos périphériques et de vos journaux client. Les informations sur les demandes que votre application envoie aux ressources qui sont protégées par
 {{site.data.keyword.amashort}} sont enregistrées par défaut.
+
+
+**Remarque** : une migration des fonctions de surveillance du service {{site.data.keyword.amashort}} est prévue vers le nouveau service [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics). Le nouveau kit SDK Swift s'appuie sur le nouveau service {{site.data.keyword.mobileanalytics_short}}, qui fournit une expérience d'analyse beaucoup plus riche. Le service {{site.data.keyword.mobileanalytics_short}} est actuellement en phase expérimentale, et il devrait être disponible pour tous plus tard dans l'année. Il vous est donc conseillé de réfléchir à la migration de vos applications pour utiliser le nouveau service {{site.data.keyword.mobileanalytics_short}} et le SDK Swift, puisque les fonctions de surveillance du service {{site.data.keyword.amashort}} ne seront plus proposées quand {{site.data.keyword.mobileanalytics_short}} sera disponible.
+
 
 Les données enregistrées automatiquement comprennent des informations telles que le nombre d'authentifications, les nouveaux périphériques et les nouveaux utilisateurs. En outre, vous pouvez configurer le SDK client de {{site.data.keyword.amashort}} pour signaler les informations suivantes :
 
@@ -44,9 +50,9 @@ récemment. Il revient au développeur de décider à quel moment les données c
 
 1. Ouvrez le tableau de bord {{site.data.keyword.Bluemix}} et cliquez sur votre application {{site.data.keyword.Bluemix_notm}}.
 
-2. Lorsque le tableau de bord de l'application {{site.data.keyword.Bluemix_notm}} s'ouvre, cliquez sur une vignette {{site.data.keyword.amashort}}.
+2. Quand le tableau de bord de votre application {{site.data.keyword.Bluemix_notm}} s'ouvre, cliquez sur une vignette {{site.data.keyword.amashort}}.
 
-3. Dans le tableau de bord {{site.data.keyword.amashort}}, cliquez sur le lien `Surveillance` dans le lien situé à gauche.
+3. Dans le tableau de bord {{site.data.keyword.amashort}}, cliquez sur le lien `Surveillance` dans le menu de gauche.
 
 ## Etapes suivantes
 {: #next-steps}

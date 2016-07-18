@@ -7,6 +7,8 @@ copyright:
 
 # 로거 활성화, 구성 및 사용
 {: #enable-logger}
+*마지막 업데이트 날짜: 2016년 5월 6일*
+{: .last-updated}
 
 {{site.data.keyword.amashort}} 클라이언트 SDK는 `java.util.logging` 또는 `log4j`와 같이 익숙한 다른 로그 프레임워크와 유사한 로깅 프레임워크를 제공합니다. 로깅 프레임워크는 여러 개의 패키지별 로거 인스턴스, 여러 로그 레벨, 애플리케이션 충돌에 대한 스택 추적 캡처 등을 지원합니다. 
 
@@ -21,6 +23,8 @@ copyright:
 * `DEBUG` - 개발자가 애플리케이션 결함을 해결하는 데 도움이 되도록 디버그 명령문을 보고하는 데 사용합니다.
 
 로깅 프레임워크를 사용하기 전에 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화했는지 확인하십시오. 다음 샘플은 {{site.data.keyword.amashort}} 클라이언트 SDK 로깅 프레임워크의 기본 사용법을 보여줍니다.
+
+**중요**: {{site.data.keyword.amashort}} 서비스의 모니터링 기능은 새로운 [{{site.data.keyword.mobileanalytics_short}} 서비스](https://console.ng.bluemix.net/catalog/services/mobile-analytics)로 마이그레이션될 계획입니다. 새로운 Swift SDK에서는 새 {{site.data.keyword.mobileanalytics_short}} 서비스를 활용하여, 훨씬 풍부한 분석 경험을 제공합니다. {{site.data.keyword.mobileanalytics_short}} 서비스는 올해 말 일반적으로 사용할 수 있도록 계획하여 현재 실험 단계에 있습니다. {{site.data.keyword.mobileanalytics_short}}가 사용 가능하게 되면 {{site.data.keyword.amashort}} 서비스의 모니터링 기능이 중단될 계획이므로 새로운 {{site.data.keyword.mobileanalytics_short}} 서비스와 Swift SDK를 사용하도록 애플리케이션이 마이그레이션되었는지 조사하는 것이 좋습니다. 
 
 ### Android
 {: #enable-logger-android}
@@ -39,6 +43,10 @@ logger.fatal("fatal message");
 
 ### iOS - Objective-C
 {: #enable-logger-objectc}
+
+**중요**: Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix}} 모바일 서비스의 기본 SDK로 간주되므로 새로운 Swift SDK를 위해 올해 말에 중단될 계획입니다.
+
+Objective-C SDK에서는 {{site.data.keyword.amashort}} 서비스의 모니터링 콘솔에 모니터링 데이터를 보고합니다. {{site.data.keyword.amashort}} 서비스의 모니터링 기능을 사용하는 경우 계속 Objective-C SDK를 사용하십시오.
 
 ```Objective-C
 [[IMFClient sharedInstance] initializeWithBackendRoute:appRoute backendGUID:appGUID];

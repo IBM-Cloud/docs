@@ -1,13 +1,18 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
   
 ---
 
 # Sécurisation de l'autorisation avec Touch ID
 {: #before-you-begin}
 
-Touch ID est une fonctionnalité de reconnaissance d'empreinte digitale pour les périphériques iOS. Vous pouvez l'utiliser pour sécuriser automatiquement les informations d'autorisation pour les accès à venir. Pour configurer la force de la sécurité, définissez l'une des règles de persistance suivantes avec la méthode
+Touch ID est une fonctionnalité de reconnaissance d'empreinte digitale pour les périphériques iOS. Vous pouvez l'utiliser pour sécuriser automatiquement les informations d'autorisation pour les accès à venir. 
+
+Touch ID n'est disponible qu'à partir du SDK {{site.data.keyword.amashort}} Objective-C.
+
+Pour configurer la force de la sécurité, définissez l'une des règles de persistance suivantes avec la méthode
 `IMFAuthorizationManager.setAuthorizationPersistencePolicy()`.
 
 * **IMFAuthorizationPersistencePolicyNever** (la plus sécurisée) : Ne jamais conserver les informations d'autorisation sur ce périphérique. L'en-tête d'autorisation n'est valide qu'au cours d'une seule session d'application. Les informations d'autorisation sont conservées dans la chaîne de certificats iOS.

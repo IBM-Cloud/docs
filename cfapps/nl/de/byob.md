@@ -18,6 +18,7 @@ copyright:
 
 # Community-Buildpacks verwenden
 *Letzte Aktualisierung: 15. März 2016*
+{: .last-updated}
 
 Wenn Sie im {{site.data.keyword.Bluemix}}-Katalog keinen Starter finden, der die gewünschte Laufzeitumgebung bereitstellt, können Sie ein externes Buildpack in {{site.data.keyword.Bluemix_notm}} integrieren. Sie können ein angepasstes, mit Cloud Foundry kompatibles Buildpack angeben, wenn Sie Ihre App mithilfe des Befehls 'cf push' bereitstellen.
 {:shortdesc}
@@ -32,9 +33,9 @@ Externe Buildpacks werden Ihnen von der Cloud Foundry-Community für die Verwend
 
 ```
 cf buildpacks
-Abrufen von Buildpacks...
+Getting buildpacks...
 
-Buildpack      Position   aktiviert   gesperrt   Dateiname
+buildpack      position   enabled   locked   filename
 ...
 java_buildpack     7      true      false    buildpack_java_v2.0.2.zip
 ruby_buildpack     8      true      false    buildpack_ruby_v46-245-g2fc4ad8.zip

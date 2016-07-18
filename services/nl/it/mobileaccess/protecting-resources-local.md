@@ -8,12 +8,15 @@ copyright:
 # Utilizzo {{site.data.keyword.amashort}} con un ambiente di sviluppo locale
 {: #protecting-local}
 
+*Ultimo aggiornamento: 15 aprile 2016*
+{: .last-updated}
+
 Puoi configurare il tuo ambiente di sviluppo locale per utilizzare il servizio {{site.data.keyword.amashort}} che è in esecuzione su {{site.data.keyword.Bluemix}}. Specificamente, puoi utilizzare l'SDK server {{site.data.keyword.amashort}} quando stai sviluppando codice lato server con un server di sviluppo locale, come ad esempio Node.js.
 
 L'SDK server {{site.data.keyword.amashort}} richiede che siano impostate due variabili di ambiente. Quando stai sviluppando codice lato server su {{site.data.keyword.Bluemix_notm}}, queste variabili vengono fornite dall'infrastruttura {{site.data.keyword.Bluemix_notm}}.
 
-* `VCAP_SERVICES`: contiene informazioni sui servizi associati mediante bind all'applicazione di backend mobile.
-* `VCAP_APPLICATION`: contiene informazioni sull'applicazione di backend mobile.
+* `VCAP_SERVICES`: contiene informazioni sui servizi associati mediante bind all'applicazione di back-end mobile.
+* `VCAP_APPLICATION`: contiene informazioni sull'applicazione di back-end mobile.
 
 Per utilizzare {{site.data.keyword.amashort}} con un ambiente di sviluppo locale, devi aggiungere manualmente queste variabili di ambiente.
 
@@ -142,9 +145,8 @@ NSString *bluemixAppGUID = @"il-tuo-guid-applicazione-bluemix";
 NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
 								baseRequestUrl];
 
-IMFResourceRequest *request =  [IMFResourceRequest
-				requestWithPath:requestPath
-				method:@"GET"];
+IMFResourceRequest *request =  [IMFResourceRequest requestWithPath:requestPath
+																method:@"GET"];
 
 [request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
 	if (error){

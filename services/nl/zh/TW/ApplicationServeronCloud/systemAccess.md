@@ -11,8 +11,29 @@ copyright:
 
 #系統存取
 {: #system_access}
-以下主題包括如何存取系統以及如何設定存取系統的多種方法。
+以下主題包括建立及管理服務實例的方法，以及如何存取系統以及如何設定存取系統的多種方法。
 {: shortdesc}
+
+*前次更新：2016 年 6 月 8 日*
+{: .last-updated}
+
+## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的 REST API 使用
+{: #restapi_usage}
+
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的實例會以下列其中一種方式建立、佈建、管理和刪除：
+
+* 從 {{site.data.keyword.Bluemix_notm}} 使用者介面的 {{site.data.keyword.Bluemix_notm}}「型錄」及「服務儀表板」。
+* 藉由建立使用 RESTful API 的應用程式或 Script。
+
+透過使用遵循 Swagger 2.0 的 REST API，客戶能夠存取與透過入口網站和儀表板所提供功能的相同功能。如需所支援之 REST API 和資源的相關資訊，請參閱 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文件](https://new-console.{DomainName}/apidocs/212){: new_window}。
+
+**附註：**建立服務實例之後，根據所建立的 T 恤尺碼，您的服務可能無法立即供使用。建議您查詢所傳回 JSON 的**狀態**欄位，以判斷服務實例的現行狀態。
+
+**附註：**依預設，API 基礎 URL 會指向[美國南部地區](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}中的端點。如果您使用英國或雪梨地區，請確定您的應用程式使用下列其中一個端點：
+
+* [英國地區](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
+* [雪梨地區](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+
 
 ## 服務儀表板
 {: #service_dashboard}
@@ -27,6 +48,8 @@ copyright:
 *  專用 SSH 金鑰。
 *  WebSphere® 管理使用者及管理密碼。
 *  「管理中心」及「管理主控台」URL。
+
+**附註**：由於特定量的運算、記憶體和 I/O 資源，客戶會因為處理停止狀態的累計 VM，被收取減價 5% 的費用。客戶會被控制在固定數量的已停止實例，最多不超過 10 個 IP 位址或 64 GB 的記憶體。
 
 
 ## 為 WebSphere Application Server for Bluemix 實例設定 openVPN
@@ -43,10 +66,9 @@ copyright:
 3. 在服務儀表板中，從 WebSphere Application Server for Bluemix 實例的 OpenVPN 下載鏈結下載 VPN 配置檔。將壓縮檔中的全部 4 個檔案解壓縮至 **{OpenVPN home}\config** 目錄。例如：
 
   <pre>  
-    C:\Program Files\OpenVPN\Config
-  </pre>
+C:\Program Files\OpenVPN\Config  </pre>
   {: codeblock}
-  
+
 4. 啟動 openVPN 用戶端程式 "OpenVPN GUI"。確保選取[以 Windows 管理者身分執行](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window}來啟動程式。如果您沒有這麼做，則可能無法進行連接。
 
 ### 使用下列指示，在 Linux 中設定 openVPN：
@@ -54,10 +76,9 @@ copyright:
   * 如果您需要手動下載及安裝 RPM 套件管理程式，請前往 [openVPN unix/linux 下載](https://openvpn.net/index.php/access-server/download-openvpn-as-sw.html){: new_window}。您可能需要 Linux 管理者的協助。
 3. 在服務儀表板中，從 WebSphere Application Server for Bluemix 實例的 OpenVPN 下載鏈結下載 VPN 配置檔。請將檔案解壓縮至您要從中啟動 openVPN 用戶端的目錄。您需要相同目錄中的所有四個檔案。
 3. 啟動 openVPN 用戶端程式。開啟終端機視窗，並移至包含配置檔案的目錄。以 root 身分執行下列指令：
-  
+
   <pre>
-      $ openvpn --config vt-wasaas-wasaas.ovpn
-  </pre>
+$ openvpn --config vt-wasaas-wasaas.ovpn  </pre>
   {: codeblock}  
 
 ### 使用下列指示，在 Mac 中設定 openVPN：
@@ -73,13 +94,13 @@ copyright:
 
 若要驗證 OpenSSH 的安裝，請輸入以下指令：
   ```
-      $ ssh -V
+$ ssh -V
   ```
   {: codeblock}
 
 您將收到與以下內容類似的回應：
   ```
-      OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
+OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
   ```
   {: codeblock}
 
@@ -91,22 +112,19 @@ copyright:
 4. 執行以下指令：
 
   <pre>
-    $ ssh virtuser@169.53.246.xxx -i /path/privateKeyFileName
-  </pre>
+$ ssh virtuser@169.53.246.xxx -i /path/privateKeyFileName  </pre>
   {: codeblock}
-  
+
 5. 使用以下指令，將 virtuser 切換為 root 使用者，以獲取完整的 sysadmin 權限：
 
   <pre>
-    $ sudo su root
-  </pre>
+$ sudo su root  </pre>
   {: codeblock}
-  
+
 6. 如果您在使用專用 SSH 金鑰存取系統時遇到問題，請使用提供的 root 密碼。執行以下指令，以 root 身分登入，並提供密碼。
- 
+
  <pre>
-    $ ssh root@169.53.246.x
-  </pre>
+$ ssh root@169.53.246.x  </pre>
   {: codeblock}
 
 7. 不論使用私密 ssh 金鑰還是 root 密碼來存取系統，都請立即變更 root 密碼。
@@ -114,12 +132,11 @@ copyright:
 
   <pre>
    Host VM1
-      Hostname 169.53.246.xxx
+Hostname 169.53.246.xxx
       User virtuser
-      IdentityFile /path/privateKeyFileName
-  </pre>
+      IdentityFile /path/privateKeyFileName  </pre>
   {: codeblock}
-  
+
 9. 執行 "ssh VM1"，以 virtuser 進行連接。
 
 ## 系統路徑
@@ -127,8 +144,8 @@ copyright:
 
 * 可以從 */opt/IBM/WebSphere/Liberty/bin* 發出 Liberty Profile 指令。
 * Liberty Profile 伺服器設定檔位置是 */opt/IBM/WebSphere/Profiles/Liberty/servers/server1*。
-* 可以從 */opt/IBM/WebSphere/AppServer/bin* 發出典型 WebSphere Application Server 指令。
-* 伺服器的典型 WebSphere Application Server 設定檔位置為 */opt/IBM/WebSphere/Profiles/DefaultAppSrv01/servers/server1*。
+* 可以從 */opt/IBM/WebSphere/AppServer/bin* 發出傳統 WebSphere Application Server 指令。
+* 伺服器的傳統 WebSphere Application Server 設定檔位置是 */opt/IBM/WebSphere/Profiles/DefaultAppSrv01/servers/server1*。
 
 ## 使用管理中心及管理主控台鏈結
 {: #console_links}
@@ -148,9 +165,10 @@ copyright:
   * 在每一個 WebSphere Application Server for Bluemix 節點上，您會在 WAS_HOME/virtual/bin 目錄中找到 Script openFirewallPorts.sh。
   * 在每一個 Liberty Collective 主機上，您會在 WAS_HOME/virtual/bin 目錄中找到 Script openFirewallPorts.sh。
 
-用法：```
+用法：
+```
       $ openFirewallPorts.sh -ports <PORT>:<PROTOCOL>,... -persist true|false
-  ```
+```
   {: codeblock}
 
 * PORT 是埠號

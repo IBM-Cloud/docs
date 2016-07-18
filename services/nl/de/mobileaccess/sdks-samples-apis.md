@@ -8,7 +8,11 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}}-SDKs, Beispiele und API-Referenzen
+*Letzte Aktualisierung: 30. April 2016*
+{: .last-updated}
+
 Wenn Sie Ihrer App {{site.data.keyword.amashort}}-SDKs hinzufügen wollen, wählen Sie die SDKs aus, die Sie verwenden wollen, und konfigurieren anschließend Ihren Abhängigkeitenmanager, sodass er die SDKs in Ihre App aufnimmt.
+{:shortdesc}
 
 ## Kern-SDK
 {: #coresdk}
@@ -33,18 +37,20 @@ Das Kern-SDK (Core SDK) enthält die APIs zur Aktivierung einer angepassten Auth
 ### iOS (Swift-SDK)
 {: #coresdk-ios-swift}
 
-[Git-Repository](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
+[Git-Repository](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security)
 
 #### Kern-SDK mit CocoaPods installieren
 {: #coresdk-ios-siwft-cocoapods}
 
 ```
 use_frameworks!
-pod 'BMSCore'
+pod 'BMSSecurity'
 ```
 
 ### iOS (Objective-C-SDK)
 {: #coresdk-ios}
+
+Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden (siehe Abschnitt [iOS-Swift-SDK einrichten](getting-started-ios-swift-sdk.html)).
 
 [Git-Repository](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master),
 [API-Referenz](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
@@ -107,6 +113,7 @@ pod 'BMSFacebookAuthentication'
 [Git-Repository](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
 [API-Referenz](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
+*Hinweis:* Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, die Verwendung und Unterstützung dieses SDK sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden. Für neue Anwendungen wird dringend die Verwendung des Swift-SDK empfohlen (siehe Abschnitt 'iOS-Swift-SDK einrichten').
 #### Facebook-SDK mit CocoaPods installieren
 {: #facebooksdk-ios-cocoapods}
 
@@ -119,7 +126,7 @@ pod 'IMFFacebookAuthentication'
 
 [Github-Repository und API-Referenz](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
-#### Facebook-SDK mit der Cordova-Befehlszeilenschnittstelle (CLI) installieren
+#### Facebook-SDK mit Cordova-CLI installieren
 {: #facebooksdk-cordova-cli}
 
 ```Bash
@@ -159,7 +166,7 @@ use_frameworks!
 pod 'BMSGoogleAuthentication'
 ```
 
-### iOS (Objective-C-SDK)
+### iOS (Objective-C-SDK - nicht mehr verwendet)
 {: #googlesdk-ios}
 
 [Git-Repository](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
@@ -177,7 +184,7 @@ pod 'IMFGoogleAuthentication'
 
 [Git-Repository und API-Referenz](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
-#### Google+-SDK mit der Cordova-Befehlszeilenschnittstelle (CLI) installieren
+#### Google+-SDK mit Cordova-CLI installieren
 {: #googlesdk-cordova-cli}
 
 ```Bash
@@ -189,7 +196,7 @@ cordova plugin add ibm-mfp-core
 
 [Git-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy)
 
-#### Server-SDK mit 'npm' installieren
+#### Server-SDK mit npm installieren
 {: #serversdk-npm}
 
 ```Bash
@@ -206,7 +213,7 @@ npm install -save bms-mca-token-validation-strategy
 
 [Git-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk)
 
-#### OAuth-SDK mit 'npm' installieren
+#### OAuth-SDK mit npm installieren
 {: #oauthsdk}
 
 ```Bash

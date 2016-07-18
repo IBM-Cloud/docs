@@ -13,7 +13,7 @@ votre application.
 Services
 Starter.
     2. Entrez un nom et un hôte pour votre application et cliquez sur **Créer**.
-    3. Cliquez sur **Terminer**. 
+    3. Cliquez sur **Terminer**.
 2. Obtenez le projet depuis GitHub. Si vous le souhaitez, vous pouvez utiliser la commande git clone pour obtenir le projet. Depuis votre ordinateur, ouvrez le
 terminal, puis entrez la commande suivante :
 ```
@@ -32,7 +32,7 @@ répertoire de votre choix. Android Studio peut demander un répertoire de base 
 {: codeblock}
 
 4. Exécutez l'exemple dans votre environnement de développement.
-A partir de la barre d'outils d'Android Studio, cliquez sur le bouton **Play** et sélectionnez un simulateur. 
+A partir de la barre d'outils d'Android Studio, cliquez sur le bouton **Play** et sélectionnez un simulateur.
 
   Dans le simulateur, cliquez sur **Ping {{site.data.keyword.Bluemix_notm}}**. Le modèle d'application envoie une demande Get à
 une ressource protégée dans le contexte d'exécution `Node.js` dans {{site.data.keyword.Bluemix_notm}}. Si la demande
@@ -40,7 +40,6 @@ aboutit, la connexion est vérifiée et le texte dans le simulateur est mis à j
 
   **Remarque :** Le code d'exécution `Node.js` est fourni dans le conteneur boilerplate MobileFirst Services Starter. Si l'application de back end n'a pas été
 créée avec le conteneur boilerplate MobileFirst Services Starter, elle ne peut pas se connecter.
-
 
   Lorsque vous parvenez à vous connecter à {{site.data.keyword.Bluemix_notm}} depuis l'application mobile dans Android Studio, le message suivant s'affiche :
   Yay! You are connected
@@ -55,9 +54,9 @@ créée avec le conteneur boilerplate MobileFirst Services Starter, elle ne peut
   ![Application Hello World non connectée à
 Bluemix](images/bummer_android.jpg "Figure 2. Application Hello World non connectée à Bluemix")
 
-  Pour identifier et résoudre le problème lié à l'échec de la connexion, procédez comme suit : 
+  Pour identifier et résoudre le problème lié à l'échec de la connexion, procédez comme suit :
    * Assurez-vous d'avoir collé correctement les valeurs de route et d'identificateur global unique.
-   * Consultez le journal de débogage pour obtenir plus d'informations. 
+   * Consultez le journal de débogage pour obtenir plus d'informations.
 
 ## Etapes suivantes :
 {: #next}

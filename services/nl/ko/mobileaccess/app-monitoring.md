@@ -7,10 +7,16 @@ copyright:
 
 # 애플리케이션 모니터링
 {: #app-monitoring}
+*마지막 업데이트 날짜: 2016년 5월 6일*
+{: .last-updated}
 
 {{site.data.keyword.amafull}}는 보안 기능 이외에도 모바일 애플리케이션에 대한 모니터링 및 분석을 제공합니다. {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 클라이언트 로그 및 모니터 데이터를 기록할 수 있습니다. 개발자는 이 데이터를 {{site.data.keyword.amashort}} 서비스로 전송할 시기를 제어할 수 있습니다. {{site.data.keyword.amashort}} 서비스에서 발생하는 모든 보안 이벤트(예: 인증 성공 또는 실패)는 자동으로 로깅됩니다. 
 
 데이터가 {{site.data.keyword.amashort}}에 전달되면 {{site.data.keyword.amashort}} 모니터링 대시보드를 사용하여 모바일 애플리케이션, 디바이스 및 클라이언트 로그에 대한 분석 정보를 얻을 수 있습니다. 기본적으로 애플리케이션이 {{site.data.keyword.amashort}}에서 보호되는 자원에 대해 작성하는 요청에 대한 정보가 기록됩니다.
+
+
+**참고**: {{site.data.keyword.amashort}} 서비스의 모니터링 기능은 새로운 [{{site.data.keyword.mobileanalytics_short}} 서비스](https://console.ng.bluemix.net/catalog/services/mobile-analytics)로 마이그레이션될 계획입니다. 새로운 Swift SDK에서는 새 {{site.data.keyword.mobileanalytics_short}} 서비스를 활용하여, 훨씬 풍부한 분석 경험을 제공합니다. {{site.data.keyword.mobileanalytics_short}} 서비스는 올해 말 일반적으로 사용할 수 있도록 계획하여 현재 실험 단계에 있습니다. {{site.data.keyword.mobileanalytics_short}}가 사용 가능하게 되면 {{site.data.keyword.amashort}} 서비스의 모니터링 기능이 중단될 계획이므로 새로운 {{site.data.keyword.mobileanalytics_short}} 서비스와 Swift SDK를 사용하도록 애플리케이션이 마이그레이션되었는지 조사하는 것이 좋습니다. 
+
 
 자동으로 기록되는 데이터에는 인증, 새 디바이스 및 새 사용자 수와 같은 정보가 포함됩니다. 또한 다음 정보를 보고하도록 {{site.data.keyword.amashort}} 클라이언트 SDK를 구성할 수 있습니다.
 

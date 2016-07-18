@@ -4,18 +4,23 @@ copyright:
   years: 2015, 2016
   
 ---
+{:shortdesc: .shortdesc}
 
 # Configurando o plug-in do Cordova
 {: #getting-started-cordova}
 
+*Última atualização: 25 de maio de 2016*
+{: .last-updated}
+
 Instrumente seu aplicativo Cordova com o {{site.data.keyword.amashort}} client SDK, inicialize o SDK e faça solicitações para recursos protegidos e não protegidos.
+{:shortdesc}
 
 ## Antes de Começar
 {: #before-you-begin}
+Você deve ter:
+* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
 
-- Deve-se ter uma instância de um backend móvel que seja protegido pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend móvel, consulte [Introdução](getting-started.html).
-
-- Crie um aplicativo Cordova ou use um projeto existente. Para obter mais informações sobre como configurar seu aplicativo Cordova, consulte o [website do Cordova](https://cordova.apache.org/).
+* Um aplicativo Cordova ou usar um projeto existente. Para obter mais informações sobre como configurar seu aplicativo Cordova, consulte o [website do Cordova](https://cordova.apache.org/).
 
 ## Instalando o plug-in do Cordova do {{site.data.keyword.amashort}}
 {: #getting-started-cordova-plugin}
@@ -48,12 +53,12 @@ O {{site.data.keyword.amashort}} client SDK para Cordova é um plug-in do Cordov
 
 	```XML
 	<platform name="ios">
-    <preference name="deployment-target" value="8.0"/>
+		<preference name="deployment-target" value="8.0"/>
 		<!-- add deployment target declaration -->
 	</platform>
 	```
 
-1. Instale o plug-in Cordova do {{site.data.keyword.amashort}}:
+1. Instale o plug-in do Cordova do {{site.data.keyword.amashort}}:
 
  	```Bash
 	cordova plugin add ibm-mfp-core
@@ -122,8 +127,7 @@ Para usar o {{site.data.keyword.amashort}} client SDK, deve-se inicializar o SDK
 
 Depois que o {{site.data.keyword.amashort}} client SDK for inicializado, será possível começar a fazer solicitações para o seu backend móvel.
 
-1. Tente enviar uma solicitação para um terminal protegido de seu novo backend móvel. Em
-seu navegador, abra esta URL: `{applicationRoute}/protected`. Por exemplo:
+1. Tente enviar uma solicitação para um terminal protegido de seu novo backend móvel. Em seu navegador, abra esta URL: `{applicationRoute}/protected`. Por exemplo:
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected
@@ -132,7 +136,6 @@ seu navegador, abra esta URL: `{applicationRoute}/protected`. Por exemplo:
 	O terminal `/protected` de um backend móvel que foi criado com o
 modelo MobileFirst Services Starter é protegido com
 {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal é acessado somente por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
-
 
 1. Use seu aplicativo Cordova para fazer uma solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient`:
 

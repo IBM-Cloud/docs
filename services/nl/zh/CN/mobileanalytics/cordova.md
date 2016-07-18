@@ -29,7 +29,8 @@ iOS：
 cordova platform add ios
 ```
 
-4. 使用以下命令添加 Cordova 插件：```
+4. 使用以下命令添加 Cordova 插件：
+```
 cordova plugin add ibm-mfp-core
 ```
 
@@ -110,7 +111,8 @@ GUID: "<APPLICATION_GUID>",
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
-如果连接失败，那么将显示消息“糟糕，出错了”。此外，还会提供有关该错误的更多信息。检查以下各项：
+如果连接失败，那么将显示消息“糟糕，出错了”。此外，还会提供有关该错误的更多信息。
+检查以下各项：
  * 验证是否正确地粘贴了路径和 GUID 值。
  * 查看 Xcode 或 Android 调试日志。
  * 在 Bluemix 中检查应用程序的状态。

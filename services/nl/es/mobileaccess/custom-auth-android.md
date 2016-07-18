@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
 
 ---
 
@@ -11,7 +11,7 @@ Configure su aplicación de Android con autenticación personalizada para que ut
 
 ## Antes de empezar
 {: #before-you-begin}
-Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte la siguiente información:
+Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte la siguiente información:
  * [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configuración del SDK de Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
  * [Utilización de un proveedor de identidad personalizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -71,11 +71,11 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 #### Argumentos
 {: #custom-android-onAuth-arg}
 
-* `AuthenticationContext`: proporcionado por el SDK del cliente de {{site.data.keyword.amashort}} para que pueda volver a notificar los errores o las respuestas al cambio de autenticación durante la recopilación de credenciales. Por ejemplo, cuando un usuario cancela la autenticación.
+* `AuthenticationContext`: proporcionado por el SDK del cliente de {{site.data.keyword.amashort}} para que pueda volver a notificar los errores o las respuestas al cambio de autenticación durante la recopilación de credenciales.  Por ejemplo, cuando un usuario cancela la autenticación.
 * `JSONObject`: contiene un cambio de autenticación personalizada, tal como se devuelve desde un proveedor de identidad personalizado.
 * `Context`: una referencia al contexto de Android utilizado cuando se envió la solicitud. Normalmente este argumento representa una actividad de Android.
 
-Al llamar al método `onAuthenticationChallengeReceived`, el SDK del cliente de {{site.data.keyword.amashort}} delega el control al desarrollador. El servicio espera las credenciales. El desarrollador debe recopilar las credenciales y notificarlas al SDK del cliente de {{site.data.keyword.amashort}} utilizando uno de los métodos de la interfaz `AuthenticationContext`. 
+Al llamar al método `onAuthenticationChallengeReceived`, el SDK del cliente de {{site.data.keyword.amashort}} delega el control al desarrollador.  El servicio espera las credenciales. El desarrollador debe recopilar las credenciales y notificarlas al SDK del cliente de {{site.data.keyword.amashort}} utilizando uno de los métodos de la interfaz `AuthenticationContext`.
 
 ### Método onAuthenticationSuccess
 {: #custom-android-authlistener-onsuccess}
@@ -183,7 +183,7 @@ Después de inicializar el SDK del cliente y registrar una AuthenticationListene
 Debe tener una aplicación que se haya creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y que disponga de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`.
 
 
-1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://mi-programa-fondo-móvil.mybluemix.net/protected`.
+1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`. 
 
 1. El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
 
@@ -222,4 +222,4 @@ Debe tener una aplicación que se haya creado con el contenedor modelo de {{site
 
  Si invoca este código después de que el usuario haya iniciado sesión, la sesión del usuario se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá volver a responder a la pregunta que reciba del servidor.
 
- El valor para `listener` que se pasa a la función de cierre de sesión puede ser `null`. 
+ El valor para `listener` que se pasa a la función de cierre de sesión puede ser `null`.

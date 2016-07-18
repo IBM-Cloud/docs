@@ -9,11 +9,15 @@ copyright:
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
+{:note:.deprecated}
+
+**This service is deprecated:** All instances of this service are deprecated. Existing instances can be used until 11 August 2016. For more information, see the [deprecation announcement blog](https://developer.ibm.com/bluemix/2016/07/12/mobile-app-builder-now-part-bluemix-mobile-dashboard/){: new_window}.
+{:deprecated}
 
 
 # Getting started with {{site.data.keyword.mobileappbuilder_short}} (Experimental)
 {: #gettingstartedtemplate}
-*Last updated: 29 April 2016*
+*Last updated: 12 July 2016*
 {: .last-updated}
 
 
@@ -22,7 +26,6 @@ copyright:
 
 
 Complete these steps to get started with the {{site.data.keyword.mobileappbuilder_short}} service:
-
 
 1. [Create an instance](https://www.ng.bluemix.net/docs/services/reqnsi.html#req_instance) of the {{site.data.keyword.mobileappbuilder_full}} service.
 
@@ -39,3 +42,9 @@ Complete these steps to get started with the {{site.data.keyword.mobileappbuilde
 6. Click **Create**.
 
 
+# Related Links
+{: #rellinks}
+
+## Blog Post
+{: #general}
+* [Mobile App Builder - new service now available](https://developer.ibm.com/bluemix/2016/05/03/mobile-app-builder-now-available/){: new_window}

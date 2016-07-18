@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
 
 ---
 
@@ -10,11 +10,11 @@ copyright:
 
 Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amashort}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.
 
-**Consejo:** si está desarrollando su app iOS en Swift, tenga en cuenta la posibilidad de utilizar el SDK de Swift de cliente de {{site.data.keyword.amashort}}. Las instrucciones de esta página se aplican al SDK de Objective-C de cliente de {{site.data.keyword.amashort}}. Para ver instrucciones sobre cómo utiliza el SDK de Swift, consulte el apartado sobre [Configuración del SDK de cliente de {{site.data.keyword.amashort}} para iOS (SDK de Swift)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)
+**Nota:** si está desarrollando su app iOS en Swift, tenga en cuenta la posibilidad de utilizar el SDK de Swift de cliente de {{site.data.keyword.amashort}}. Las instrucciones de esta página se aplican al SDK de Objective-C de cliente de {{site.data.keyword.amashort}}. Para ver instrucciones sobre cómo utiliza el nuevo SDK de Swift, consulte el apartado sobre [Configuración del SDK de cliente de {{site.data.keyword.amashort}} para iOS (SDK de Swift)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html). 
 
 ## Antes de empezar
 {: #before-you-begin}
-Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte la siguiente información:
+Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte la siguiente información:
  * [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configuración del SDK de Objective-C de iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
  * [Utilización de un proveedor de identidad personalizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -25,7 +25,7 @@ Debe tener un recurso que esté protegido por una instancia del servicio de {{si
 
 ## Instalación del SDK del cliente con CocoaPods
 {: #custom-ios-sdk-cocoapods}
-Utilice el gestor de dependencias CocoaPods para instalar el SDK del cliente de {{site.data.keyword.amashort}}. 
+Utilice el gestor de dependencias CocoaPods para instalar el SDK del cliente de {{site.data.keyword.amashort}}.
 
 1. Abra Terminal y navegue hasta el directorio raíz del proyecto de iOS.
 
@@ -51,7 +51,7 @@ Para inicializar el SDK, especifique los parámetros de ruta de la aplicación (
 
 1. Obtenga los valores de los parámetros de la aplicación. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles** para ver los valores correspondientes a **Ruta** (`applicationRoute`) y a **Identificador exclusivo global de la app** (`applicationGUID`).
 
-1. Importe la infraestructura `IMFCore` a la clase en la que desea utilizar el SDK del cliente. 
+1. Importe la infraestructura `IMFCore` a la clase en la que desea utilizar el SDK del cliente.
 
 	Objective-C:
 
@@ -105,7 +105,7 @@ Se llama a este método cuando se recibe un cambio de autenticación personaliza
 * El protocolo `IMFAuthenticationContext` se proporciona desde el SDK del cliente de {{site.data.keyword.amashort}} para que el desarrollador pueda volver a notificar las respuestas del cambio de autenticación o el error durante la recopilación de credenciales (por ejemplo, cancelación del usuario).
 * `NSDictionary` que contiene un cambio de autenticación personalizada tal como lo devuelve un proveedor de identidad personalizado
 
-Al llamar al método `authenticationContext:didReceiveAuthenticationChallenge`, el SDK del cliente de {{site.data.keyword.amashort}} delega el control al desarrollador y pasa a modo de espera de las credenciales. Es responsabilidad del desarrollador recopilar las credenciales y volverlas a notificar al SDK del cliente de {{site.data.keyword.amashort}} utilizando uno de los métodos `IMFAuthenticationContext`, tal como se describe a continuación. 
+Al llamar al método `authenticationContext:didReceiveAuthenticationChallenge`, el SDK del cliente de {{site.data.keyword.amashort}} delega el control al desarrollador y pasa a modo de espera de las credenciales. Es responsabilidad del desarrollador recopilar las credenciales y volverlas a notificar al SDK del cliente de {{site.data.keyword.amashort}} utilizando uno de los métodos `IMFAuthenticationContext`, tal como se describe a continuación.
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
@@ -157,8 +157,8 @@ CustomAuthenticationDelegate.m
 
 @implementation CustomAuthenticationDelegate
 
--(void) authenticationContext:(id<IMFAuthenticationContext>)context
-					didReceiveAuthenticationChallenge:(NSDictionary *)challenge {
+-(void)authenticationContext:(id<IMFAuthenticationContext>)context
+					didReceiveAuthenticationChallenge:(NSDictionary *)challenge{
 
 	NSLog(@"didReceiveAuthenticationChallenge :: %@", challenge);
 
@@ -179,14 +179,14 @@ CustomAuthenticationDelegate.m
 	// de las credenciales
 	}
 
--(void) authenticationContext:(id<IMFAuthenticationContext>)context
+-(void)authenticationContext:(id<IMFAuthenticationContext>)context
 					didReceiveAuthenticationSuccess:(NSDictionary *)userInfo{
 	NSLog(@"didReceiveAuthenticationSuccess");
 
 
 }
 
--(void) authenticationContext:(id<IMFAuthenticationContext>)context
+-(void)authenticationContext:(id<IMFAuthenticationContext>)context
 					didReceiveAuthenticationFailure:(NSDictionary *)userInfo{
 	NSLog(@"didReceiveAuthenticationFailure");
 
@@ -219,13 +219,14 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 		context.submitAuthenticationChallengeAnswer(challengeAnswer)
 
 		// En caso de que se produzca un error al recopilar las credenciales, tendrá
-	// que notificarlo a IMFAuthenticationContext. De lo contrario, el SDK del cliente Mobile
-	// Client Access permanecerá siempre en estado de espera
-	// de las credenciales
+	// que notificarlo a IMFAuthenticationContext. En caso contrario, el SDK del
+		// cliente Mobile Client Access permanecerá para siempre en un estado de
+		// espera de credenciales
 	}
 
 
-	func authenticationContext(context: IMFAuthenticationContext!, didReceiveAuthenticationSuccess userInfo: [NSObject : AnyObject]!) {
+	func authenticationContext(context: IMFAuthenticationContext!,
+					didReceiveAuthenticationSuccess userInfo: [NSObject : AnyObject]!) {
 		NSLog("didReceiveAuthenticationSuccess")
 	}
 
@@ -258,14 +259,13 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 ## Prueba de autenticación
 {: #custom-ios-testing}
-Después de inicializar el SDK del cliente y registrar un `IMFAuthenticationDelegate` personalizado, puede empezar a realizar solicitudes al programa de fondo móvil. 
+Después de inicializar el SDK del cliente y registrar un `IMFAuthenticationDelegate` personalizado, puede empezar a realizar solicitudes a la aplicación de fondo móvil. 
 
 ### Antes de empezar
 {: #custom-ios-testing-before}
  Debe tener una aplicación que se haya creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y que disponga de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`.
 
-1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://mi-programa-fondo-móvil.mybluemix.net/protected`.
-  El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
+1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`. El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
 1. Utilice la aplicación de iOS para realizar solicitudes al mismo punto final. Añada el código siguiente para inicializar `BMSClient` y registrar el `IMFAuthenticationDelegate` personalizado:
 
 	Objective-C:

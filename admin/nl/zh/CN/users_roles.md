@@ -17,7 +17,8 @@ copyright:
 
 # 管理团队成员和角色
 {: #userroles}
-*上次更新时间：2016 年 5 月 16 日*
+*上次更新时间：2016 年 6 月 1 日*
+{: .last-updated}
 
 在您帐户的**团队目录**页面中，可以管理现有团队成员及其在您组织和空间中的角色，还可以邀请新的团队成员。要访问您帐户的团队目录，请转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; *your_account_name* &gt; **团队目录**。
 {:shortdesc}
@@ -81,6 +82,8 @@ copyright:
 </ol>
 
 单击**查看暂挂**以检查邀请是处于暂挂状态还是已被接受。可以随时选择重新发送邀请电子邮件或对暂挂邀请取消邀请。
+
+如果您具有与 {{site.data.keyword.Bluemix_notm}} 帐户相链接的 SoftLayer 帐户，那么您可以添加 SoftLayer 团队成员。转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; *your_account_name* &gt; **邀请团队成员**页面。然后，在**添加 SoftLayer 团队成员**部分中单击**添加**，以在 SoftLayer 帐户中进行认证，并查看 SoftLayer 帐户的团队成员列表。有关从 SoftLayer 帐户添加团队成员的更多信息，请参阅[邀请 SoftLayer 团队成员加入 {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users)。
 
 ## 编辑角色
 {: #editinguserroles}

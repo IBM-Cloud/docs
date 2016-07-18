@@ -5,12 +5,18 @@ copyright:
   
 ---
 
-# Anwendungsüberwachung
+# Anwendungen überwachen
 {: #app-monitoring}
+*Letzte Aktualisierung: 6. Mai 2016*
+{: .last-updated}
 
 Neben Sicherheitseinrichtungen stellt {{site.data.keyword.amafull}} auch Überwachungs- und Analysefunktionen für Ihre mobilen Anwendungen bereit. Mit dem {{site.data.keyword.amashort}}-Client-SDK können Sie Clientprotokolle und Überwachungsdaten aufzeichnen. Entwickler können steuern, wann diese Daten an den {{site.data.keyword.amashort}}-Service gesendet werden sollen. Alle Sicherheitsereignisse, wie zum Beispiel erfolgreiche oder fehlgeschlagene Authentifizierungen, die im {{site.data.keyword.amashort}}-Service auftreten, werden automatisch protokolliert.
 
 Wenn Daten an {{site.data.keyword.amashort}} übergeben werden, können Sie das {{site.data.keyword.amashort}}-Überwachungsdashboard verwenden, um Analyseerkenntnisse zu Ihren mobilen Anwendungen, Geräten und Clientprotokollen zu erhalten. Informationen zu Anforderungen, die Ihre Anwendung an Ressourcen sendet, die von {{site.data.keyword.amashort}} geschützt werden, werden standardmäßig aufgezeichnet.
+
+
+**Anmerkung**: Die Überwachungsfunktionen des Service {{site.data.keyword.amashort}} sollen auf den neuen Service [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics) migriert werden. Das neue Swift-SDK nutzt den neuen Service {{site.data.keyword.mobileanalytics_short}}, der eine deutlich umfangreichere Analyseerfahrung bereitstellt. Der Service {{site.data.keyword.mobileanalytics_short}} befindet sich aktuell in der Versuchsphase und soll planmäßig noch dieses Jahr allgemein verfügbar gemacht werden. Es empfiehlt sich, die Migration Ihrer Anwendungen zum Verwenden des neuen Service {{site.data.keyword.mobileanalytics_short}} und des Swift-SDK zu prüfen, da die Verwendung und Unterstützung der Überwachungsfunktionen des Service {{site.data.keyword.amashort}} eingestellt werden sollen, wenn {{site.data.keyword.mobileanalytics_short}} allgemein verfügbar ist.
+
 
 Zu den automatisch aufgezeichneten Daten gehören Informationen wie die Anzahl der Authentifizierungen, der neuen Geräte und der neuen Benutzer. Darüber hinaus können Sie das {{site.data.keyword.amashort}}-Client-SDK so konfigurieren, dass es die folgenden Informationen zurückmeldet:
 

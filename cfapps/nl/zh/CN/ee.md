@@ -18,9 +18,10 @@ copyright:
 # 场景：端到端开发
 {: #ee}
 
-*上次更新时间：2016 年 4 月 18 日*
+*上次更新时间：2016 年 6 月 15 日*
+{: .last-updated}
 
-构建、运行和部署应用程序时，可以使用 {{site.data.keyword.Bluemix}} 用户界面、平台和一组工具。首次操作时，请遵循此端到端开发场景。
+构建、运行和部署应用程序时，可以使用 {{site.data.keyword.Bluemix}} 用户界面、平台和一组工具。请按照以下步骤开始此端到端开发场景。
 {:shortdesc}
 
 ## 注册
@@ -35,11 +36,12 @@ copyright:
 
 在 {{site.data.keyword.Bluemix_notm}} 中，应用程序与组织和空间相关联。一个组织可由多个合作者拥有并使用。最初，您将获得根据您的用户名命名的缺省组织，并且您是唯一的合作者。您还将获得该组织内的一个空间。空间是运行应用程序的环境；例如，您可以拥有 dev 空间、test 空间和 production 空间，分别用作开发环境、测试环境和生产环境。此外，每个环境都属于一个区域。通过 {{site.data.keyword.Bluemix_notm}}，您可以将应用程序部署到特定地理区域，以减少网络等待时间，增强数据隐私性，提高可用性。有关详细信息，请参阅“区域”。
 
-对于此场景，应使用 Node.js 来开发 Web 应用程序。假定您在美国，并且您的大部分应用程序用户也在美国。您决定在靠近您用户群的位置构建并运行应用程序，以便能够减少网络等待时间。登录到 {{site.data.keyword.Bluemix_notm}} 后，单击右上方您的帐户名称，然后选择**美国南部**区域。然后，可以执行以下步骤来创建应用程序：
+对于此场景，应使用 Node.js 来开发 Web 应用程序。假定您在美国，并且您的大部分应用程序用户也在美国。您决定在靠近您用户群的位置构建并运行应用程序，以便能够减少网络等待时间。登录到 {{site.data.keyword.Bluemix_notm}} 之后，单击**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg)，并选择**美国南部**区域。然后，可以执行以下步骤来创建应用程序：
 
-  1. 单击加号按钮。
-  2. 选择**计算** > **CF 应用程序** > **SDK for Node.js**。
-  3. 键入应用程序的唯一名称（例如 TestNode），然后单击**创建**。应用程序名称必须在整个 {{site.data.keyword.Bluemix_notm}} 环境中唯一。
+  1. 选择**计算**。
+  2. 单击加号图标。
+  3. 选择 **SDK for Node.js**。
+  4. 键入应用程序的唯一名称（例如 TestNode），然后单击**创建**。应用程序名称必须在整个 {{site.data.keyword.Bluemix_notm}} 环境中唯一。
   
 现在，可以看到**开始编码**指示信息。您可以遵循指示信息来下载、修改和部署 TestNode 入门模板代码。
 
@@ -59,10 +61,10 @@ copyright:
 现在，您的应用程序已绑定到 {{site.data.keyword.cloudant}} 服务。您可以在 VCAP_SERVICES 环境变量中找到应用程序与服务实例进行通信时所需的所有数据。例如，{{site.data.keyword.Bluemix_notm}} 会在同一虚拟机上托管多个应用程序，而这些应用程序不能使用同一 HTTP 端口号来接收入局请求。为了避免冲突，会为每个应用程序提供唯一端口号。此端口号在 VCAP_APP_PORT 变量下提供。
 
 单击应用程序“概述”页面上的**环境变量**，可查看 VCAP_SERVICES 的整个列表来了解更多信息：
+
 ```
 {
    "cloudantNoSQLDB": [
-
       {
          "name": "Cloudant NoSQL DB-tx",
          "label": "cloudantNoSQLDB",
@@ -120,11 +122,13 @@ copyright:
   5. 登录到 {{site.data.keyword.Bluemix_notm}} 后，即准备就绪，可以将应用程序重新部署到 {{site.data.keyword.Bluemix_notm}}。从应用程序目录 `C:\test`，输入以下命令：
   
   ```
-  cf push TestNode```
+  cf push TestNode
+  ```
   
   有关 **cf push** 命令的更多信息，请参阅“上传应用程序”。
   
-  6. 现在，可以通过在浏览器中输入以下应用程序 URL 来访问应用程序：```
+  6. 现在，可以通过在浏览器中输入以下应用程序 URL 来访问应用程序：
+  ```
   http://TestNode.mybluemix.net
   ```
 
@@ -135,19 +139,21 @@ copyright:
 
 通过 {{site.data.keyword.Bluemix_notm}}，您可以使用 Bluemix 用户界面添加服务，如本场景的较早部分中所述。此外，还可以使用 **cf** 命令行界面来绑定服务。假定要使用 cf 命令行界面将 {{site.data.keyword.cloudant}} 服务添加到应用程序 TestNode 中。
 
-要在应用程序内使用 {{site.data.keyword.cloudant}} 服务，您需要创建 Cloudant 服务实例，将应用程序绑定到该服务实例，然后使用该服务实例。相同的过程对所有其他服务均适用。
+要在应用程序内使用 {{site.data.keyword.cloudant}} 服务，您需要创建 Cloudant 服务实例，将应用程序绑定到该服务实例，然后使用该服务实例。此过程对所有其他服务均适用。
 
   1. 创建 Cloudant NoSQL DB 服务实例。
   
   使用 cf create-service 命令创建新的服务实例。例如：
   
   ```
-  cf create-service cloudantNoSQLDB Shared cloudant100```
+  cf create-service cloudantNoSQLDB Shared cloudant100
+  ```
   
   您还可以使用 cf services 命令来查看所创建的服务实例的列表。
   
   ```
-  cf services```
+  cf services
+  ```
   
   服务实例创建后，任何应用程序都可绑定和使用该服务实例。
   
@@ -156,7 +162,8 @@ copyright:
   要使用服务实例，必须将其绑定到应用程序。使用 cf bind-service 命令并指定应用程序名称和所创建的服务实例，可将服务实例绑定到应用程序。
   
   ```
-  cf bind-service TestNode cloudant100```
+  cf bind-service TestNode cloudant100
+  ```
   
   将服务实例绑定到应用程序后，{{site.data.keyword.Bluemix_notm}} 就能够与服务进行通信，还能让新应用程序与该服务实例进行通信。对于不同的服务，在绑定期间，{{site.data.keyword.Bluemix_notm}} 处理应用程序和服务实例的方式可能会不同。例如，某些服务可能会为每个与服务实例进行通信的应用程序创建一个新租户。服务会使用凭证等信息来响应 {{site.data.keyword.Bluemix_notm}}，这些信息必须传递到应用程序，应用程序才能与服务进行通信。
 
@@ -173,10 +180,11 @@ copyright:
   <dt>url</dt>
   <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
   
-  例如，Node.js 应用程序可能会按如下方式访问这些信息：```
+  例如，Node.js 应用程序可能会按如下方式访问这些信息：
+  ```
   if (process.env.VCAP_SERVICES) {
 
-        var env = JSON.parse(process.env.VCAP_SERVICES);
+var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['"cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
@@ -191,15 +199,14 @@ copyright:
   
   4. 与服务实例进行交互。
   
-  可以使用凭证信息来与服务实例进行交互。可执行的操作包括读取、写入和更新。以下示例演示了如何将 JSON 对象插入到 {{site.data.keyword.cloudant}} 服务实例：```
+  可以使用凭证信息来与服务实例进行交互。可执行的操作包括读取、写入和更新。以下示例演示了如何将 JSON 对象插入到 {{site.data.keyword.cloudant}} 服务实例：
+```
   // create a new message
 var create_message = function(req, res) {
   require('cloudantdb').connect(cloudant.url, function(err, conn) {
 
-    var collection = conn.collection('messages');
-
-
-    // create message record
+var collection = conn.collection('messages');
+// create message record
     var parsedUrl = require('url').parse(req.url, true);
     var queryObject = parsedUrl.query;
     var name = (queryObject["name"] || 'Bluemix');

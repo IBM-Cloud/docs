@@ -209,7 +209,7 @@ app.post('/apps/:tenantId/:realmName/handleChallengeAnswer', jsonParser, functio
 });
 
 app.use(function(req, res, next){
-	res.status(404).send("Questo non è l'URL che stai cercando");
+	res.status(404).send("This is not the URL you're looking for");
 });
 
 var server = app.listen(cfenv.getAppEnv().port, function () {
@@ -220,7 +220,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 ```
 --->
 
-## Fasi successive
+## Passi successivi
 {: #next-steps}
 * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](custom-auth-config-mca.html)
 * [Configurazione dell'autenticazione personalizzata per Android](custom-auth-android.html)

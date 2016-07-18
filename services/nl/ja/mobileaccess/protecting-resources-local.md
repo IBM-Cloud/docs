@@ -8,6 +8,9 @@ copyright:
 # ローカル開発環境での {{site.data.keyword.amashort}} の使用
 {: #protecting-local}
 
+*最終更新日: 2016 年 4 月 15 日*
+{: .last-updated}
+
 ローカル開発環境を、{{site.data.keyword.Bluemix}} 上で実行されている {{site.data.keyword.amashort}} サービスを使用するように構成することができます。具体的には、ローカル開発サーバーで Node.js などのサーバー・サイド・コードを開発している時に {{site.data.keyword.amashort}} Server SDK を使用することができます。
 
 {{site.data.keyword.amashort}} Server SDK では、2 つの環境変数を設定する必要があります。{{site.data.keyword.Bluemix_notm}} 上でサーバー・サイド・コードを開発している場合、これらの変数は {{site.data.keyword.Bluemix_notm}} インフラストラクチャーによって提供されます。
@@ -22,14 +25,13 @@ copyright:
 1. **「モバイル・オプション」**をクリックし、**AppGUID** の値をコピーします。
 
 1. ローカル開発環境で、*VCAP_APPLICATION* 環境変数を設定します。この変数には、文字列化された JSON オブジェクトが単一プロパティーとともに含まれている必要があります。
+
 ```JavaScript
 {
     application_id: "appGUID"
 }
 ```
-*appGUID* 変数を、**「モバイル・オプション」**フィールドの値に置換します。
-
-1. {{site.data.keyword.Bluemix_notm}} ダッシュボード上の、モバイル・バックエンド・アプリケーションの {{site.data.keyword.amashort}} サービス・タイルで**「資格情報の表示」**をクリックします。{{site.data.keyword.amashort}} がモバイル・バックエンド・アプリケーションに提供するアクセス権限の資格情報とともに JSON オブジェクトが表示されます。
+*appGUID* 変数を、**「モバイル・オプション」**フィールドの値に置換します。1. {{site.data.keyword.Bluemix_notm}} ダッシュボード上の、モバイル・バックエンド・アプリケーションの {{site.data.keyword.amashort}} サービス・タイルで**「資格情報の表示」**をクリックします。{{site.data.keyword.amashort}} がモバイル・バックエンド・アプリケーションに提供するアクセス権限の資格情報とともに JSON オブジェクトが表示されます。
 
 1. ローカル開発環境で、`VCAP_SERVICES` 環境変数を設定します。この変数の値は、{{site.data.keyword.amashort}} 資格情報を含む、文字列化された JSON オブジェクトでなければなりません。詳細情報についは、以下のサンプルを参照してください。
 
@@ -65,10 +67,7 @@ var MCABackendStrategy =
 
 // Rest of your code
 ```
-このコード内の *appGUID* 値のオカレンスは、ユーザーのモバイル・バックエンドの *appGUID* 値に置換します。
-
-
-## ローカル開発サーバーで作業するためのモバイル・アプリケーションの構成
+このコード内の *appGUID* 値のオカレンスは、ユーザーのモバイル・バックエンドの *appGUID* 値に置換します。## ローカル開発サーバーで作業するためのモバイル・アプリケーションの構成
 {: #configuring-local}
 
 {{site.data.keyword.Bluemix_notm}} アプリケーションの実際の URL を使用して {{site.data.keyword.amashort}} Client SDK を初期化し、各要求で localhost (または IP アドレス) を使用します。以下のサンプルを参照してください。
@@ -124,7 +123,8 @@ var failure = function(error){
 var request = new MFPRequest(baseRequestUrl +
 							"/resource/path", MFPRequest.GET);
 
-request.send(success, failure);```
+request.send(success, failure);
+```
 
 ### iOS - Objective C
 
@@ -145,8 +145,7 @@ IMFResourceRequest *request =  [IMFResourceRequest
 				method:@"GET"];
 
 [request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-
-	if (error){
+if (error){
 		NSLog(@"Error :: %@", [error description]);
 	} else {
 		NSLog(@"Response :: %@", [response responseText]);

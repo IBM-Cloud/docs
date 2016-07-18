@@ -15,6 +15,7 @@ copyright:
 {: #updatingapps}
 
 *上次更新时间：2016 年 5 月 9 日*
+{: .last-updated}
 
 
 您可以使用 cf push 命令或 {{site.data.keyword.Bluemix}} DevOps Services 来更新 {{site.data.keyword.Bluemix_notm}} 中的应用程序。在许多情况下，即便对于内置 buildpack（例如 Node.js），也必须提供 -c 参数来指定用于启动应用程序的命令。

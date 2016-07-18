@@ -8,6 +8,7 @@ copyright:
 # Instrumentando seu aplicativo para usar os SDKs do cliente do {{site.data.keyword.mobileanalytics_short}}
 {: #mobileanalytics_sdk}
 *Última atualização: 27 de abril de 2016*
+{: .last-updated}
 
 Os SDKs do {{site.data.keyword.mobileanalytics_full}} permitem instrumentar o aplicativo móvel.
 {: shortdesc}
@@ -18,7 +19,7 @@ O {{site.data.keyword.mobileanalytics_short}} permite coletar três categorias d
 2. Eventos customizados - esta categoria inclui dados que você mesmo define e que são específicos para seu aplicativo. Esses dados representam eventos que ocorrem no aplicativo, como visualizações da página, toques do botão ou compras do aplicativo. Além de inicializar o SDK do {{site.data.keyword.mobileanalytics_short}} no aplicativo, deve-se incluir uma linha de código para cada evento customizado que você desejar rastrear.
 3. Mensagens de log do cliente - esta categoria permite que o desenvolvedor inclua linhas de código em todo o aplicativo que registram mensagens customizadas para ajudar no desenvolvimento e na depuração. O desenvolvedor designa um nível de severidade/detalhamento a cada mensagem de log e pode, subsequentemente, filtrar mensagens de filtro por nível designado ou preservar espaço de armazenamento configurando o aplicativo para ignorar mensagens que estão abaixo de um determinado nível de log. Para coletar dados do log do cliente, deve-se inicializar o SDK do {{site.data.keyword.mobileanalytics_short}} dentro do aplicativo, bem como incluir uma linha de código para cada mensagem de log.
 
-Atualmente, os SDKs estão disponíveis para Android, iOS e WatchOS.
+Atualmente os SDKs estão disponíveis para Android, iOS e WatchOS.
 
 ## Identificando seu valor da Chave do cliente
 {: #analytics-clientkey}
@@ -49,7 +50,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
-            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
+            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -106,7 +107,7 @@ Inicialize seu aplicativo para permitir o envio de logs para o serviço {{site.d
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: "your_client_key",
+      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -114,7 +115,7 @@ Inicialize seu aplicativo para permitir o envio de logs para o serviço {{site.d
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: "your_api_key")
+	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
 	```
 
   É possível registrar eventos do dispositivo no WatchOS usando os métodos `Analytics.recordApplicationDidBecomeActive()` e `Analytics.recordApplicationWillResignActive()`.
@@ -468,3 +469,9 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
+
+# rellinks
+
+## Referência da API
+{: #api}
+* [API REST](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

@@ -1,6 +1,7 @@
 # Criando apps móveis
 {: #mobile}
-*Última atualização: 28 de janeiro de 2016* 
+*Última atualização: 28 de janeiro de 2016*
+{: .last-updated} 
 
 Com o {{site.data.keyword.Bluemix}} Mobile Services, é possível incorporar serviços de nuvem pré-construídos, gerenciados e escaláveis nos aplicativos móveis sem depender do envolvimento de TI. Você pode focar na
 construção dos seus apps móveis em vez de nas complexidades de gerenciamento da

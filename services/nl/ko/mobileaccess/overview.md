@@ -7,6 +7,8 @@ copyright:
 
 # {{site.data.keyword.amashort}} 정보
 {: #mca-overview}
+*마지막 업데이트 날짜: 2016년 5월 15일*
+{: .last-updated}
 
 {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 호스팅되는 클라우드 자원을 액세스하는 모바일 애플리케이션에 대해 인증 및 모니터링 서비스를 제공합니다. 
 
@@ -45,13 +47,13 @@ copyright:
 
 ## {{site.data.keyword.amashort}} 요청 플로우
 {: #flow}
-다음 다이어그램은 SDK에서 모바일 백엔드 및 ID 제공자로 요청이 이동하는 방법에 대해 설명합니다. 
+다음 다이어그램은 SDK에서 모바일 백엔드 애플리케이션 및 ID 제공자로 요청이 이동하는 방법에 대해 설명합니다. 
 
 ![이미지](images/mca-sequence-overview.jpg)
 
 1. {{site.data.keyword.amashort}} SDK를 사용하여 {{site.data.keyword.amashort}} 서버 SDK로 보호되는 백엔드 자원을 요청합니다.
 * {{site.data.keyword.amashort}} 서버 SDK가 권한이 없는 요청을 발견하고 HTTP 401 및 권한 범위를 리턴합니다.
-* {{site.data.keyword.amashort}} 클라이언트 SDK가 HTTP 401을 발견하고 인증 프로세스를 시작합니다.
+* {{site.data.keyword.amashort}} 클라이언트 SDK가 자동으로 HTTP 401을 발견하고 인증 프로세스를 시작합니다.
 * {{site.data.keyword.amashort}} 클라이언트 SDK가 {{site.data.keyword.amashort}} 서비스에 연결하여 권한 헤더를 발행하도록 요청합니다.
 * {{site.data.keyword.amashort}} 서비스가 현재 구성된 인증 유형에 따라 인증 확인 방식을 제공함으로써 먼저 인증하도록 클라이언트 앱에 요청합니다. 
 * {{site.data.keyword.amashort}} 클라이언트 SDK는 다음 중 하나를 사용합니다.

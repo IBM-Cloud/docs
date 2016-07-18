@@ -11,10 +11,10 @@ copyright:
 {:codeblock:.codeblock}
 
 
-# Getting started with {{site.data.keyword.GlobalizationPipeline_short}} (BETA)
+# Getting started with {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline}
 
-*Last updated: 25 March 2016*
+*Last updated: 13 July 2016*
 {: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} is a service that provides machine translation and editing capabilities for rapidly translating web or mobile UIs. With its dashboard, RESTful API, and integration with your app's delivery pipeline, you can release to global customers without having to rebuild or re-deploy your app.
@@ -22,15 +22,13 @@ copyright:
 
 You can use the {{site.data.keyword.GlobalizationPipeline_short}} service with any app in {{site.data.keyword.Bluemix}}, or unbound, by itself. You can create, maintain, and revise translations rapidly, with minimal effort and without having to leave your DevOps environment.
 
-The {{site.data.keyword.GlobalizationPipeline_short}} service is a beta offering, and is provided as-is for development and experimentation purposes only. Capabilities will be added as the service continues to evolve.
-
-From the {{site.data.keyword.GlobalizationPipeline_short}} interface, you can quickly translate your {{site.data.keyword.Bluemix_notm}} apps. For information about translating your apps by using the RESTful API, see the [API Reference](https://gp-beta-rest.ng.bluemix.net/translate/swagger/index.html){: new_window}. 
+From the {{site.data.keyword.GlobalizationPipeline_short}} interface, you can quickly translate your {{site.data.keyword.Bluemix_notm}} apps. For information about translating your apps by using the RESTful API, see [API Reference](https://gp-rest.ng.bluemix.net/translate/swagger/index.html){: new_window}. 
 
 
 ## Creating a bundle
 {: #globalizationpipeline_creatingbundles}
 
-With the {{site.data.keyword.GlobalizationPipeline_short}} service, you can create bundles, which include the source files of your apps that will be translated. The source files can be either Java.properties, AMD I18N, or JSON files and must contain content in the form of key/value pairs that represent the UI strings from your app.  For more details and examples of supported file types, see [Working with bundles](bundles.html#globalizationpipeline_workingwithbundles).
+With the {{site.data.keyword.GlobalizationPipeline_short}} service, you can create bundles, which include the resource files of your apps that will be translated. The resource files can be either Java Properties, AMD I18N, or JSON files and must contain content in the form of key/value pairs that represent the UI strings from your app.  For more details and examples of supported file types, see [Working with bundles](./bundles.html){: new_window}.
 
 To create a bundle, complete the following steps:
 
@@ -42,9 +40,11 @@ To create a bundle, complete the following steps:
 |-------|---------|------------|
 | **Bundle ID** | Yes | A unique name to identify the bundle. |
 | **Source language** | Yes | The native language of the source file. |
-| **Resource File** | No | A [resource file](bundles.html#globalizationpipeline_workingwithbundles) to translate. You upload this file from your computer. |
+| **Resource File** | No | A [resource file](bundles.html#globalizationpipeline_workingwithbundles) to translate. The maximum file size is limited to 2MB. Specified resource files will be uploaded.  |
 | **File format** | No | The file type that is being uploaded. |
 | **Target language** | No | The languages that you want translations for. |
+
+**Note:** To change the language service that provides machine translation for your bundles, click the [**MT Configuration**](./managing_translations.html#globalizationpipeline_service_to_service) tab to view other supported machine translation engines.
 
 3\. Click **Save**
 
@@ -54,7 +54,25 @@ After the bundle is created, the uploaded resource file is translated into all o
 * Edit the generated translations
 * Update the source file that is used in the bundle and regenerate the translations
 
-**Note** If the original source file is updated, the keys and values that are defined in the file are synchronized with the most recent version of the source file so that only the changed keys and values are translated.
+## Importing translated bundles
+{: #globalizationpipeline_importtranslatedbundlesintoservice}
+
+Alternatively, if you already have translated resource files, you can import them to a new bundle. For more information see [Java Client Tools for {{site.data.keyword.GlobalizationPipeline_short}}](https://github.com/IBM-Bluemix/gp-java-tools).
+
+**Note:**  If the original source file is updated, the keys and values that are defined in the file are synchronized with the most recent version of the source file so that only the changed keys and values are translated.
+
+## Estimating {{site.data.keyword.GlobalizationPipeline_short}} Data Usage
+{: #globalizationpipeline_documentpricing}
+
+{{site.data.keyword.GlobalizationPipeline_short}} stores your translations in a backend database. To estimate active data size, you can refer to the formula below:
+
+`<expected resource data storage size in MB> ˜= 0.0005 * <number of key/value pairs in the source resource> * <number of languages including the source language>`
+
+According to the formula, the size of a typical bundle is `(length of key + length of value in UTF-8 = ˜40 bytes)`.
+
+For example, if you have 100 key/value pairs and translate them to 9 languages, the estimated storage size is 0.0005 100 (9+1) = 0.5 MB. The actual size may be different depending on actual key/value size and metadata stored along with the translation.
+
+Use the Bluemix [pricing calculator](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet&orgGuid=127a45f4-4461-4d5b-a26b-6dc2fdd1a3a2&spaceGuid=208fb1ff-413b-4fd9-9615-e8226062d0f3) to determine your monthly service costs.
 
 
 # Related Links
@@ -78,7 +96,7 @@ After the bundle is created, the uploaded resource file is translated into all o
 ## API Reference
 {: #api}
 
-* [IBM Globalization Pipeline RESTful API](https://gp-beta-rest.ng.bluemix.net/translate/swagger/index.html){: new_window}
+* [IBM Globalization Pipeline RESTful API](https://gp-rest.ng.bluemix.net/translate/swagger/index.html){: new_window}
 
 ## Related Links
 {: #general}

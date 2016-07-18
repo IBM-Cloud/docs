@@ -91,11 +91,11 @@ iFrame 플로우는 회사 브랜드를 유지하려는 경우에 유용합니�
 이 값은 선택사항입니다.</dd>
 	
 <dt class="pt dlterm">organization_guid</dt>
-<dd class="pd">기본 대상 조직의 GUID입니다. 이 값을 찾으려면 <strong>조직 관리</strong> > <i>organization_name</i>을(를) 클릭하십시오. 조직의 URL에는 해당 조직의 GUID가 포함됩니다.
+<dd class="pd">기본 대상 조직의 GUID입니다. 이 값을 찾으려면 <strong>조직 관리</strong> > <i>organization_name</i>을 클릭하십시오. 조직의 URL에는 해당 조직의 GUID가 포함됩니다.
 이 값은 선택사항입니다.</dd>
 	
 <dt class="pt dlterm">space_guid</dt>
-<dd class="pd">기본 대상 영역의 GUID입니다. 이 값을 찾으려면 <strong>조직 관리</strong> > <i>space_name</i>을(를) 클릭하십시오. 영역의 URL에는 해당 영역의 GUID가 포함됩니다.
+<dd class="pd">기본 대상 영역의 GUID입니다. 이 값을 찾으려면 <strong>조직 관리</strong> > <i>space_name</i>을 클릭하십시오. 영역의 URL에는 해당 영역의 GUID가 포함됩니다.
 이 값은 선택사항입니다.</dd>
 	
 <dt class="pt dlterm">auto_login</dt>

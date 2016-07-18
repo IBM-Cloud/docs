@@ -8,7 +8,14 @@ copyright:
 # Securing authorization with Touch ID
 {: #before-you-begin}
 
-Touch ID is a fingerprint recognition feature for iOS devices. You can use Touch ID to automatically secure authorization information for future use. To configure security strength, set one of the following persistence polices with the `IMFAuthorizationManager.setAuthorizationPersistencePolicy()` method.
+*Last updated: 22 June 2016*
+{: .last-updated}
+
+Touch ID is a fingerprint recognition feature for iOS devices. You can use Touch ID to automatically secure authorization information for future use. 
+
+**Note:** Touch ID is available only from the  {{site.data.keyword.amashort}} Objective-C SDK.
+
+To configure security strength, set one of the following persistence polices with the `IMFAuthorizationManager.setAuthorizationPersistencePolicy()` method.
 
 * **IMFAuthorizationPersistencePolicyNever** (Most secure): Never persist authorization information on the device. An authorization header is valid during a single application session. Authorization information is persisted in the iOS keychain.
 

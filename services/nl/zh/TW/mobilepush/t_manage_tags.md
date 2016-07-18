@@ -20,14 +20,13 @@ copyright:
 1. 按一下 + **建立標籤**按鈕。   
 
    a. 在**名稱**欄位中，輸入標籤的名稱。例如，"coupons"。
-   
+
    b. 在**說明**欄位中，輸入標籤說明。
-   
-   
+
    c. 按一下**儲存**。
-   
-1. 在**程式碼 Snippet** 區域中，選取您行動式應用程式的平台。
-1. 修改程式碼 Snippet 來處理錯誤，然後將每一個標籤的程式碼 Snippet 複製到行動式應用程式。
+
+1. 在**程式碼 Snippet** 區域中，選取您行動應用程式的平台。
+1. 修改程式碼 Snippet 來處理錯誤，然後將每一個標籤的程式碼 Snippet 複製到行動應用程式。
 
 ## 刪除標籤
 {: #delete_tags}
@@ -45,13 +44,13 @@ copyright:
 # 取得標籤
 {: #get_tags}
 
-標籤提供的方法是根據使用者的興趣將目標通知傳送給使用者，與傳送給所有應用程式的一般播送不同。您可以使用 Push 儀表板上的「標籤」標籤或使用 REST API 來建立及管理標籤。您可在下列區段中使用程式碼 Snippet 來管理及查詢行動式應用程式的標籤訂閱。您可以使用這些程式碼 Snippet 來取得訂閱、訂閱標籤、取消訂閱標籤，以及取得可用標籤清單。您可以複製這些程式碼 Snippet，並將其貼入行動式應用程式中。
+標籤提供的方法是根據使用者的興趣將目標通知傳送給使用者，與傳送給所有應用程式的一般播送不同。您可以使用 Push 儀表板上的「標籤」標籤或使用 REST API 來建立及管理標籤。您可在下列區段中使用程式碼 Snippet 來管理及查詢行動應用程式的標籤訂閱。您可以使用這些程式碼 Snippet 來取得訂閱、訂閱標籤、取消訂閱標籤，以及取得可用標籤清單。您可以複製這些程式碼 Snippet，並將其貼入行動應用程式中。
 
 ## Android
 
 **getTags** API 會傳回裝置可訂閱的可用標籤清單。在裝置訂閱特定標籤之後，該裝置就可以接收針對該標籤傳送的任何推送通知。
 
-將下列程式碼 Snippet 複製到 Android 行動式應用程式來取得裝置訂閱的標籤清單，以及取得可用標籤清單。
+將下列程式碼 Snippet 複製到 Android 行動應用程式來取得裝置訂閱的標籤清單，以及取得可用標籤清單。
 
 使用下列 **getTags** API 來取得裝置可訂閱的可用標籤清單。
 
@@ -93,22 +92,20 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 
 ## Cordova
 
-將下列程式碼 Snippet 複製到行動式應用程式來取得裝置訂閱的標籤清單，以及取得裝置可訂閱的可用標籤清單。
+將下列程式碼 Snippet 複製到行動應用程式來取得裝置訂閱的標籤清單，以及取得裝置可訂閱的可用標籤清單。
 
 擷取可供訂閱的標籤陣列。
 
 ```
 //Get a list of available tags to which the device can subscribe
-MFPPush.retrieveAvailableTags(function(tags) {
-    alert(tags);
+MFPPush.retrieveAvailableTags(function(tags) {alert(tags);
 }, null);
-
 ```
 
 ```
 //Get a list of available tags to which the device is subscribed.
 MFPPush.getSubscriptionStatus(function(tags) {
-    alert(tags);
+alert(tags);
 }, null);
 ```
 
@@ -119,9 +116,9 @@ MFPPush.getSubscriptionStatus(function(tags) {
 使用下列 **retrieveAvailableTags** API 來取得裝置可訂閱的可用標籤清單。
 
 ```
-//Get a list of available tags to which the device can subscribe 
+//Get a list of available tags to which the device can subscribe
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){ 
+^(IMFResponse *response, NSError *error){
  if(error){    
    [self updateMessage:error.description];  
  } else {
@@ -132,7 +129,7 @@ MFPPush.getSubscriptionStatus(function(tags) {
 }
 }];
 ```
-       
+
 使用 **retrieveSubscriptions** API 來取得裝置訂閱的標籤清單。
 
 
@@ -157,7 +154,7 @@ subscribedTags = [response subscriptions];
 
 呼叫 Push 服務來取得標籤的訂閱。
 
-將下列程式碼 Snippet 複製到 Swift 行動式應用程式，來取得裝置訂閱的可用標籤清單，以及取得裝置可訂閱的可用標籤清單。
+將下列程式碼 Snippet 複製到 Swift 行動應用程式，來取得裝置訂閱的可用標籤清單，以及取得裝置可訂閱的可用標籤清單。
 
 
 ```
@@ -181,11 +178,11 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
 
-        print( "Response during retrieving subscribed tags : \(response.description)")
+        print( "Response during retrieving subscribed tags : \(response?.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
     }
     else {
-print( "Error during retrieving subscribed tags \(error) ")
+        print( "Error during retrieving subscribed tags \(error) ")
         Print( "Error during retrieving subscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
     }
 }
@@ -198,7 +195,7 @@ print( "Error during retrieving subscribed tags \(error) ")
 
 ## Android
 
-複製下列程式碼 Snippet，並將其貼入 Android 行動式應用程式。
+複製下列程式碼 Snippet，並將其貼入 Android 行動應用程式。
 
 ```
 push.subscribe(allTags.get(0),
@@ -218,7 +215,7 @@ new MFPPushResponseListener<String>() {
 
 ```
 push.unsubscribe(tag, new MFPPushResponseListener<String>() {
-@Override
+ @Override
  public void onSuccess(String s) {
    updateTextView("Unsubscribing from tag");
    updateTextView("Successfully unsubscribed from tag . "+ tag);
@@ -232,7 +229,7 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 
 ## Cordova
 
-複製下列程式碼 Snippet，並將其貼入 Cordova 行動式應用程式。
+複製下列程式碼 Snippet，並將其貼入 Cordova 行動應用程式。
 
 ```
 var tag = "YourTag";
@@ -242,7 +239,7 @@ MFPPush.unsubscribe(tag, success, failure);
 
 ## Objective-C
 
-複製下列程式碼 Snippet，並將其貼入 Objective-C 行動式應用程式。
+複製下列程式碼 Snippet，並將其貼入 Objective-C 行動應用程式。
 
 使用 **subscribeToTags** API 來訂閱標籤。
 
@@ -277,7 +274,7 @@ MFPPush.unsubscribe(tag, success, failure);
 
 ## Swift
 
-複製下列程式碼 Snippet，並將其貼入 Swift 行動式應用程式。
+複製下列程式碼 Snippet，並將其貼入 Swift 行動應用程式。
 
 **訂閱可用的標籤**
 
@@ -285,13 +282,12 @@ MFPPush.unsubscribe(tag, success, failure);
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-
 	if (error != nil) {
-//error while subscribing to tags
+		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-} 
+}
 ```
 
 **取消訂閱標籤**
@@ -302,11 +298,11 @@ push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
 
     if error.isEmpty {
-        print( "Response during unsubscribed tags : \(response.description)")
+        print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {
-print( "Error during  unsubscribed tags \(error) ")
+        print( "Error during  unsubscribed tags \(error) ")
         print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
     }
 }

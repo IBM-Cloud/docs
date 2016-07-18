@@ -72,11 +72,11 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 #### Argomenti
 {: #custom-android-onAuth-arg}
 
-* `AuthenticationContext`: fornito dall'SDK client {{site.data.keyword.amashort}} per consentirti di notificare a tua volta le risposte alla richiesta di verifica dell'autenticazione oppure gli errori durante la raccolta di credenziali. Un esempio è un utente che annulla l'autenticazione.
+* `AuthenticationContext`: fornito dall'SDK client {{site.data.keyword.amashort}} per consentirti di notificare a tua volta le risposte alla richiesta di verifica dell'autenticazione oppure gli errori durante la raccolta di credenziali.  Un esempio è un utente che annulla l'autenticazione.
 * `JSONObject`: contiene una richiesta di verifica dell'autenticazione personalizzata, come restituito da un provider di identità personalizzato.
 * `Context`: un riferimento al contesto Android che è stato utilizzato quando è stata inviata la richiesta. Di norma, questo argomento rappresenta un'attività Android.
 
-Richiamando il metodo `onAuthenticationChallengeReceived`, l'SDK client {{site.data.keyword.amashort}} sta delegando il controllo allo sviluppatore. Il servizio attende le credenziali. Lo sviluppatore deve raccogliere le credenziali e notificarle a sua volta all'SDK client {{site.data.keyword.amashort}} utilizzando
+Richiamando il metodo `onAuthenticationChallengeReceived`, l'SDK client {{site.data.keyword.amashort}} sta delegando il controllo allo sviluppatore.  Il servizio attende le credenziali. Lo sviluppatore deve raccogliere le credenziali e notificarle a sua volta all'SDK client {{site.data.keyword.amashort}} utilizzando
 uno dei metodi di interfaccia `AuthenticationContext`.
 
 ### Metodo onAuthenticationSuccess
@@ -181,16 +181,16 @@ Utilizza il nome di area di autenticazione (*realmName*) che hai specificato nel
 
 ## Verifica dell'autenticazione
 {: #custom-android-testing}
-Dopo che l'SDK client è stato inizializzato e che un AuthenticationListener personalizzato è stato registrato, puoi iniziare a effettuare richieste al tuo backend mobile.
+Dopo che l'SDK client è stato inizializzato e che un AuthenticationListener personalizzato è stato registrato, puoi iniziare a effettuare richieste al tuo back-end mobile.
 
 ### Prima di cominciare
 {: #custom-android-testing-before}
 Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyword.mobilefirstbp}} e di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
 
 
-1. Invia una richiesta all'endpoint protetto del tuo backend mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
+1. Invia una richiesta all'endpoint protetto della tua applicazione di back-end mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
 
-1. L'endpoint `/protected` di un backend mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
+1. L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
 
 1. Utilizza la tua applicazione Android per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato `BMSClient` e registrato il tuo AuthenticationListener personalizzato.
 

@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} システムの詳細
 {: #openwhisk_reference}
-*最終更新日: 2016 年 4 月 14 日*
+*最終更新日: 2016 年 4 月 14 日*{: .last-updated}
 
 以下のセクションでは、{{site.data.keyword.openwhisk}} システムについて詳しく説明します。
 {: shortdesc}
@@ -92,7 +92,9 @@ Bluemix では、組織とスペースのペアが {{site.data.keyword.openwhisk
 
 アクションの呼び出しは順序付けられません。ユーザーがコマンド・ラインまたは REST API からアクションを 2 回呼び出した場合に、2 番目の呼び出しが最初の呼び出しより前に実行される可能性があります。アクションに副次作用がある場合、それらが検出される順序は一定ではありません。
 
-さらに、アクションがアトミックに実行される保証はありません。2 つのアクションが並行して実行され、その副次作用がインターリーブする可能性があります。並行性の副次作用は実装に依存します。
+さらに、アクションがアトミックに実行される保証はありません。2 つのアクションが並行して実行され、その副次作用がインターリーブする可能性があります。
+OpenWhisk は、副次作用として特定の並行一貫性モデルを保証しません。
+並行性の副次作用は実装に依存します。
 
 ### 最高 1 回 (At most once) のセマンティクス
 {: #openwhisk_atmostonce}
@@ -141,8 +143,7 @@ Bluemix では、組織とスペースのペアが {{site.data.keyword.openwhisk
 JavaScript で記述されたアクションは、単一ファイルに限定されなければなりません。ファイルは複数の関数を含むことができますが、規則により `main` という関数が存在しなければならず、これが、アクションを起動したときに呼び出されます。例えば、以下は、複数の関数を含むアクションの例です。
 
 ```
-function main() {
-    return { payload: helper() }
+function main() {return { payload: helper() }
 }
 
 function helper() {
@@ -176,8 +177,7 @@ function main() {
 ```
 // an action in which each path results in a synchronous activation
 function main(params) {
-  if (params.payload == 0) {
-     return;
+  if (params.payload == 0) {return;
   } else if (params.payload == 1) {
      return whisk.done();    // indicates normal completion
   } else if (params.payload == 2) {
@@ -194,8 +194,7 @@ JavaScript アクションのアクティベーションは、main 関数が ```
 以下は、非同期に実行されるアクションの例です。
 
 ```
-function main() {
-    setTimeout(function() {
+function main() {setTimeout(function() {
         return whisk.done({done: true});
     }, 100);
     return whisk.async();
@@ -207,7 +206,7 @@ function main() {
 
 ```
   function main(params) {
-      if (params.payload) {
+     if (params.payload) {
          setTimeout(function() {
             return whisk.done({done: true});
          }, 100);
@@ -266,6 +265,7 @@ JavaScript アクションは、Node.js バージョン 0.12.9 環境におい�
 - async
 - body-parser
 - btoa
+- cheerio
 - cloudant
 - commander
 - consul
@@ -274,6 +274,7 @@ JavaScript アクションは、Node.js バージョン 0.12.9 環境におい�
 - errorhandler
 - express
 - express-session
+- gm
 - jade
 - log4js
 - merge
@@ -288,11 +289,13 @@ JavaScript アクションは、Node.js バージョン 0.12.9 環境におい�
 - semver
 - serve-favicon
 - socket.io
+- socket.io-client
 - superagent
 - swagger-tools
 - tmp
 - watson-developer-cloud
 - when
+- ws
 - xml2js
 - xmlhttprequest
 - yauzl
@@ -310,6 +313,77 @@ Docker スケルトンは、{{site.data.keyword.openwhisk_short}} 互換の Dock
 メインのバイナリー・プログラムは、`dockerSkeleton/client/clientApp` ファイルにコピーする必要があります。比較ファイルまたはライブラリーは、`dockerSkeleton/client` ディレクトリーに存在することができます。
 
 また、`dockerSkeleton/Dockerfile` を変更して、コンパイル・ステップや依存関係を組み込むこともできます。例えば、アクションが Python スクリプトであれば、Python をインストールします。
+
+
+## REST API
+
+システム上のすべての機能は、REST API を通じて使用可能です。アクション、トリガー、ルール
+、パッケージ、アクティベーション、および名前空間のコレクション・エン
+ドポイントとエンティティー・エンドポイントがあります。
+
+以下のコレクション・エンドポイントがあります。
+
+- `https://$BASEURL/api/v1/namespaces`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations`
+
+コレクション・エンドポイントで GET 要求を実行して、コレ
+クションのエンティティーのリストをフェッチします。
+
+エンティティーのタイプごとに以下のエンティティー・エンドポイン
+トがあります。
+
+- `https://$BASEURL/api/v1/namespaces/{namespace}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations/{activationName}`
+
+名前空間とアクティベーション・エンドポイントのみが GET 要求をサ
+ポートします。アクション、トリガー、ルール、およびパッケージのエンドポイン
+トは、GET、PUT、および DELETE 要求をサポートします。アクション、トリガー、およびル
+ールのエンドポイントも POST 要求をサポートします。これは、アクションと
+トリガーを起動し、ルールを使用可能または使用不可にするために使用され
+ます。詳しくは、
+[
+『API 資料』](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json)を参照してください。
+
+すべての API は、HTTP 基本認証で保護さ
+れています。基本認証の資格情報は `~/.wskprops` ファイルの `AUTH`
+プロパティーにあり、コロンで区切られています。この資格情報は、[CLI 構成手順](../README.md#setup-cli)でも
+取り出すことができます。
+
+以下は、cURL コマンドを使用して `whisk.system` 名
+前空間のすべてのパッケージのリストを取得する例を示しています。
+
+
+```
+curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
+```
+{: pre}
+```
+[
+  {
+    "name": "slack",
+    "binding": false,
+    "publish": true,
+    "annotations": [
+      {
+        "key": "description",
+        "value": "Package which contains actions to interact with the Slack messaging service"
+      }
+    ],
+    "version": "0.0.9",
+    "namespace": "whisk.system"
+  },
+  ...
+]
+```
+{: screen}
 
 
 ## システムしきい値

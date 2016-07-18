@@ -18,42 +18,48 @@ copyright:
 # プロファイル設定
 {: #usersettings}
 *最終更新日: 2016 年 5 月 16 日*
+{: .last-updated}
 
-プロファイル設定を更新するには、**「アカウントとサポート」**アイコン ![「アカウントとサポート」アイコン](../admin/images/account_support.svg) &gt; **「アカウント」** &gt; **「プロファイル」**と進みます。
+**「アカウントとサポート」**アイコン ![「アカウントとサポート」アイコン](../admin/images/account_support.svg)&gt;**「アカウント」**&gt;**「プロファイル」**に移動して、プロファイル設定を更新します。
 {:shortdesc}
 
- **「プロファイル」**ページで、以下の情報を設定または更新することができます。
+ **「プロファイル」**ページで、以下の情報を設定または更新できます。
 
- * 他の {{site.data.keyword.Bluemix_notm}} ユーザーに対して表示されるプロファイルのフォト
- * IBM ID 情報 (名前、E メール、電話番号、パスワード、会社名、および役割)
+<!--  * A profile photo that is visible to other {{site.data.keyword.Bluemix_notm}} users -->
+
+ * 名前、E メール、電話番号、パスワード、会社名、役割などの IBM ID 情報
  * 分析トラッキング設定
 
-## プロファイルのフォトの変更
+<!-- pulled back, so removing content for now
+
+## Changing your profile photo
 {: #photo}
 
-1. **「アカウントとサポート」**アイコン ![「アカウントとサポート」アイコン](../admin/images/account_support.svg) &gt; **「アカウント」** &gt; **「プロファイル」**と進みます。
+1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
 
-* 新しい写真をアップロードするには、**「フォトの変更」**をクリックします。
-* 写真を削除するには、**「フォトの削除」**をクリックします。
+* Click **Change Photo** to upload a new photo.
+* Click **Remove Photo** to remove your photo.
+
+-->
 
 ## IBM ID 情報の編集
 {: #ibmid}
 
-IBM ID アカウント情報 (名前、E メール、電話番号、パスワード、会社名など) を変更する必要がある場合、以下の手順を実行します。
+名前、E メール、電話番号、パスワード、会社名などの IBM ID アカウント情報を変更する必要が生じた場合、以下のステップを実行します。
 
-1. **「アカウントとサポート」**アイコン ![「アカウントとサポート」アイコン](../admin/images/account_support.svg) &gt; **「アカウント」** &gt; **「プロファイル」**と進みます。
-2. **「IBM ID の編集」**をクリックします。
+1. **「アカウントとサポート」**アイコン ![「アカウントとサポート」アイコン](../admin/images/account_support.svg)&gt;**「アカウント」**&gt;**「プロファイル」**に移動します。
+2. **「IBM ID の編集 (Edit your IBM id)」**をクリックします。
 3. ユーザー情報を編集します。
 4. **「送信」**をクリックします。
 
 ## 分析トラッキング設定
 {: #tracking}
 
-{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースでのアクションは、デフォルトでトラッキングされます。トラッキングによって、{{site.data.keyword.Bluemix_notm}} チームは、操作方法を改善し、より良いサポートを提供することが可能になります。これ以外の目的で、収集されたデータが使用あるいは共有されることはありません。
+デフォルトでは、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースでのアクションは追跡されます。トラッキングにより、{{site.data.keyword.Bluemix_notm}} チームは、ユーザー・エクスペリエンスやサポートを改善できます。これ以外の目的で、収集されたデータが使用あるいは共有されることはありません。
 
-トラッキングを無効にすることを選択した場合、{{site.data.keyword.Bluemix_notm}} の一部のフィーチャー (チャットでのコミュニケーションなど) を使用できなくなることがあります。
+トラッキングを無効にするように選択した場合、チャット通信など、{{site.data.keyword.Bluemix_notm}} の一部の機能を使用できなくなることがあります。
 
-分析トラッキングを無効にするには、以下の手順を実行します。
+分析トラッキングを無効にするには、以下のステップを実行します。
 
-1. **「アカウントとサポート」**アイコン ![「アカウントとサポート」アイコン](../admin/images/account_support.svg) &gt; **「アカウント」** &gt; **「プロファイル」**と進みます。
+1. **「アカウントとサポート」**アイコン ![「アカウントとサポート」アイコン](../admin/images/account_support.svg)&gt;**「アカウント」**&gt;**「プロファイル」**に移動します。
 2. 分析トラッキングを**「オフ」**に設定します。

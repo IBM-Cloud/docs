@@ -15,6 +15,7 @@ copyright:
 
 # Creación de apps de Cloud Foundry
 *Última actualización: 18 de abril de 2016*
+{: .last-updated}
 
 Con {{site.data.keyword.Bluemix}}, puede crear su app en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. Una vez creada, puede seguir utilizando la interfaz de usuario o utilizar la interfaz de línea de mandatos cf o {{site.data.keyword.jazzhub_title}} para desarrollar, planificar, desplegar o realizar un seguimiento de la app.
 {:shortdesc}
@@ -32,8 +33,7 @@ Para empezar a crear la aplicación, siga los pasos siguientes:
 para elegir un iniciador, especifique un nombre y seleccione cómo desea codificar.
   4. Cuando acabe con las instrucciones, pulse **VER
 VISIÓN GENERAL DE LA APP**. Se visualiza la Visión general de su app en el panel de control.
-  5. Puede añadir un servicio a la app pulsando **AÑADIR UN SERVICIO O API** en la Visión general de la app, en la interfaz de usuario de Bluemix. Examine y seleccione servicios del catálogo, o  desplácese hasta el final del catálogo y pulse **Servicios experimentales de {{site.data.keyword.Bluemix_notm}}** para examinar servicios experimentales.
-También puede utilizar la interfaz de línea de mandatos cf. Consulte Opciones para trabajar con apps.
+  5. Puede añadir un servicio a la app pulsando **AÑADIR UN SERVICIO O API** en la Visión general de la app, en la interfaz de usuario de Bluemix. Examine y seleccione servicios del catálogo, o desplácese hasta el final del catálogo y pulse **Servicios experimentales de {{site.data.keyword.Bluemix_notm}}** para examinar servicios experimentales. También puede utilizar la interfaz de línea de mandatos cf. Consulte Opciones para trabajar con apps.
   6. En la Visión general de la app, pulse Añadir Git para guardar el origen de la aplicación en un
 repositorio Git y crear un proyecto alojado en Git. También puede desplegar la aplicación desde {{site.data.keyword.jazzhub_title}}.
 

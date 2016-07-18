@@ -15,6 +15,7 @@ copyright:
 {: #updatingapps}
 
 *Dernière mise à jour : 9 mai 2016*
+{: .last-updated}
 
 
 Vous pouvez utiliser la commande cf push ou {{site.data.keyword.Bluemix}} DevOps Services pour mettre à jour les applications dans {{site.data.keyword.Bluemix_notm}}. Dans de nombreux cas, même pour les packs de construction intégrés tels que Node.js, vous devez également fournir un paramètre -c afin de spécifier la

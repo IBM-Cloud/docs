@@ -1,6 +1,13 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 # SDK, esempi e guida di riferimento alle API
 {: #sdk}
-*Ultimo aggiornamento: 28 gennaio 2016*
+*Ultimo aggiornamento: 12 maggio 2016*
+{: .last-updated}
 
 Per aggiungere gli SDK di Bluemix Mobile Services alla tua applicazione, scegli gli SDK che vuoi utilizzare e configura quindi il gestore dipendenze per introdurre gli SDK nella tua applicazione.
 
@@ -8,9 +15,9 @@ Per aggiungere gli SDK di Bluemix Mobile Services alla tua applicazione, scegli 
 <!---
 <p class="cta"><a href="/docs/starters/mobilefirst/gettingstarted/android_existingproject.html#setup_sdk_gradle">Get SDK</a></p>
 --->
-
+<!-- Android -->
 <ul><li><strong>Esempi:</strong></li>
-<li><a href="gettingstarted/android.html">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld">HelloWorld</a></li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">HelloPush</a>
 </li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">HelloAuthentication</a>
@@ -27,13 +34,12 @@ Per aggiungere gli SDK di Bluemix Mobile Services alla tua applicazione, scegli 
 </ul>
 <ul>
 <li><strong>Guide di riferimento API:</strong></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Core</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Facebook</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Google</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push REST API</a></li>
+
+<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push REST API</a></li>
 </ul>
-</td><td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
+</td>
+<!-- Cordova -->
+<td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
 <!---
 <p class="cta"><a href="test">Get SDK</a></p>
 --->
@@ -44,7 +50,7 @@ Per aggiungere gli SDK di Bluemix Mobile Services alla tua applicazione, scegli 
 </ul>
 
 <ul><li><strong>Esempi:</strong></li>
-<li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld">HelloWorld</a></li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">HelloPush</a>
 </li>
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">HelloAuthentication</a>
@@ -57,6 +63,7 @@ Per aggiungere gli SDK di Bluemix Mobile Services alla tua applicazione, scegli 
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">bms-clientsdk android-push</a></li>
 </ul>
 
+<!-- iOS -->
 </td>
 <td valign="top"><img src="images/iOS_SDK_icon.png" alt="ios">
 
@@ -65,24 +72,20 @@ Per aggiungere gli SDK di Bluemix Mobile Services alla tua applicazione, scegli 
 SDK</a></p> --->
 
 <ul><li><strong>Esempi:</strong></li>
-<li><a href="gettingstarted/ios.html">HelloWorld</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">HelloPush</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">HelloPush</a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">HelloAuthentication</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">HelloAuthentication</a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellotodo" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Hello ToDo</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellotodo" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Hello ToDo</a></li>
 </ul>
 
 <p class="devops"><a href="https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master">SDK su IBM
 DevOps</a></p>
 <ul>
 <li><strong>Guide di riferimento API:</strong></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Core</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Facebook</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Google</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">IMFURLProtocol</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push</a></li>
-<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push REST API</a></li>
+<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">IMFURLProtocol</a></li>
+<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push REST API</a></li>
 </ul>
 </td>
 </tr>

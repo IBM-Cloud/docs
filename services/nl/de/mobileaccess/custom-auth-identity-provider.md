@@ -217,7 +217,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 
 ## Nächste Schritte
 {: #next-steps}
-* [{{site.data.keyword.amashort}} für die angepasste Authentifizierung konfigurieren](custom-auth-config-mca.html)
+* [{{site.data.keyword.amashort}} für eine angepasste Authentifizierung konfigurieren](custom-auth-config-mca.html)
 * [Angepasste Authentifizierung für Android konfigurieren](custom-auth-android.html)
 * [Angepasste Authentifizierung für iOS konfigurieren](custom-auth-ios.html)
 * [Angepasste Authentifizierung für Cordova konfigurieren](custom-auth-cordova.html)

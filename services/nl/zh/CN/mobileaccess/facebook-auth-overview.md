@@ -4,12 +4,21 @@ copyright:
   years: 2015, 2016
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
 # 使用 Facebook 凭证认证用户
 {: #facebook-auth-overview}
-您可以将 {{site.data.keyword.amashort}} 服务配置为通过将 Facebook 用作身份提供者来保护资源。移动应用程序用户可以使用自己的 Facebook 凭证进行认证。
 
-**重要信息**：您无需单独安装 Facebook SDK。配置 {{site.data.keyword.amashort}} 客户端 SDK 时，依赖关系管理器会自动安装 Facebook SDK。
+*上次更新时间：2016 年 6 月 15 日*
+{: .last-updated}
+
+您可以将 {{site.data.keyword.amashort}} 服务配置为通过将 Facebook 用作身份提供者来保护资源。移动应用程序用户可以使用自己的 Facebook 凭证进行认证。
+{:shortdesc}
+
+**重要信息**：您无需单独安装 Facebook 提供的 SDK。配置 {{site.data.keyword.amashort}} 客户端 SDK 时，依赖关系管理器会自动安装 Facebook SDK。
 
 ## {{site.data.keyword.amashort}} 请求流程
 {: #mca-facebook-sequence}
@@ -18,7 +27,7 @@ copyright:
 
 ![图像](images/mca-sequence-facebook.jpg)
 
-1. 使用 {{site.data.keyword.amashort}} SDK 对受 {{site.data.keyword.amashort}} 服务器 SDK 保护的后端资源发起请求。
+1. 使用 {{site.data.keyword.amashort}} 客户端 SDK 对受 {{site.data.keyword.amashort}} 服务器 SDK 保护的后端资源发起请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 检测到未授权的请求，然后返回 HTTP 401 代码和授权作用域。
 * {{site.data.keyword.amashort}} 客户端 SDK 自动检测到上述 HTTP 401 代码，然后启动认证过程。
 * {{site.data.keyword.amashort}} 客户端 SDK 访问 {{site.data.keyword.amashort}} 服务，并要求发出 Authorization 头。
@@ -48,7 +57,7 @@ copyright:
 ## 后续步骤
 {: #next-steps}
 
-* [在 Android 应用程序中启用 Facebook 认证](facebook-auth-android.html)
-* [在 iOS 应用程序 (Swift SDK) 中启用 Facebook 认证](facebook-auth-ios-swift-sdk.html)
-* [在 iOS 应用程序 (Objective-C SDK) 中启用 Facebook 认证](facebook-auth-ios.html)
-* [在 Cordova 应用程序中启用 Facebook 认证](facebook-auth-cordova.html)
+* [启用 Android 应用程序的 Facebook 认证](facebook-auth-android.html)
+* [启用 iOS 应用程序 (Swift SDK) 的 Facebook 认证](facebook-auth-ios-swift-sdk.html)
+* [启用 iOS 应用程序（Objective-C SDK - 不推荐）的 Facebook 认证](facebook-auth-ios.html)
+* [启用 Cordova 应用程序的 Facebook 认证](facebook-auth-cordova.html)

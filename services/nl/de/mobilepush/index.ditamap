@@ -15,7 +15,10 @@ Managing notifications
 -->
  <!--CLM PRODUCTION NAVIGATION: -->
  <!--CLM NEW NAVIGATION : -->
- <topicref href="index.html" linking="none" navtitle="Push Notifications" format="html" scope="peer">
+ <topicref href="index.html" linking="none" navtitle="Push Notifications" format="html" scope="peer"
+locktitle="yes">
+<topicref href="index.html" navtitle="Einführung"
+format="html" scope="peer" locktitle="yes"> </topicref>
 <topicref href="c_overview_push.html" navtitle="Produktinformation" linking="sourceonly" format="html"
 outputclass="subsection" scope="peer">
 <topicref href="c_overview_push.html#overview_push_process" format="html"
@@ -72,7 +75,8 @@ navtitle="iOS-Anwendungen und -Geräte registrieren" scope="peer"/>
 navtitle="Push-Benachrichtigungen in iOS-Geräten empfangen" scope="peer"/>
 <topicref href="c_ios_enable.html#send" format="html" navtitle="Einfache Push-Benachrichtigungen senden"
 scope="peer"/>
-<topicref href="c_ios_enable.html#next_steps_tags" format="html" navtitle="Nächste Schritte" scope="peer"/>
+<topicref href="c_ios_enable.html#next_steps_tags" format="html" navtitle="Nächste Schritte" scope="peer"
+/>
 </topicref>
 </topicref>
 <topicref href="c_tag_basednotifications.html" outputclass="subsection" chunk="to-content"
@@ -89,7 +93,7 @@ navtitle="Erweiterte Benachrichtigungen" format="html" scope="peer">
 <topicref href="t_advance_badge_sound_payload.html#badge-sound-payload"
 navtitle="Audio, Nutzdaten und iOS-Badge konfigurieren" format="html" scope="peer"/>
 <topicref href="t_advance_badge_sound_payload.html#hold-notifications-android"
-navtitle="Android-Benachrichtigungen blockieren" format="html" scope="peer"/>
+navtitle="Android-Benachrichtigungen blockieren " format="html" scope="peer"/>
 <topicref href="t_advance_badge_sound_payload.html#enable-actionable-notifications-ios"
 navtitle="Umsetzbare iOS-Benachrichtigungen aktivieren" format="html" scope="peer"/>
 <topicref href="t_advance_badge_sound_payload.html#actionable-notifications"

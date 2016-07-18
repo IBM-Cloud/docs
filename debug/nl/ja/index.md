@@ -6,6 +6,7 @@ copyright:
 ---
 
 
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -15,7 +16,8 @@ copyright:
 # デバッグ
 {: #debugging}
 
-*最終更新日: 2016 年 3 月 3 日*
+*最終更新日: 2016 年 5 月 25 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} で問題が発生した場合、ログ・ファイルを確認して問題を調査し、エラーをデバッグすることができます。
 {:shortdesc}
@@ -28,10 +30,19 @@ copyright:
 ## ステージング・エラーのデバッグ
 {: #debugging-staging-errors}
 {{site.data.keyword.Bluemix_notm}} でアプリケーションをステージングする際に問題が発生する場合があります。
-アプリがステージングに失敗した場合、ログを使用してエラーの原因を調べ、問題から回復することができます。
+アプリケーションがステージングに失敗した場合、ステージング (STG)・ログ
+を検索およびレビューして、アプリケーションのデプロイ中に発生したこと
+を究明し、問題から復旧することができます。Bluemix アプリケーションのログの表示方法につい
+て詳しくは、
+[『ロ
+グの表示』](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}を参照してください。
 
-{{site.data.keyword.Bluemix_notm}} 上でアプリが失敗する場合の原因を理解するには、アプリがどのように {{site.data.keyword.Bluemix_notm}} にデプロイされ、実行されるかを把握する必要があります。詳細については、[「アプリケーション・デプロイメント (Application
+{{site.data.keyword.Bluemix_notm}} 上でアプリが失敗する
+場合の原因を理解するには、アプリがどのように
+{{site.data.keyword.Bluemix_notm}} にデプロイされ、実行される
+かを把握する必要があります。詳細については、[「アプリケーション・デプロイメント (Application
 deployment)」](../manageapps/depapps.html#appdeploy){: new_window}を参照してください。
+
 
 以下の手順は、`cf
 logs` コマンドを使用してステージング・エラーをデバッグする方法を示しています。以下のステップを実行する前に、cf コマンド・ライン・インターフェースがインストール済みであることを確認してください。cf コマンド・ライン・インターフェースのインストールについて詳しくは、[「cf コマンド・ライン・インターフェースのインストール」](../starters/install_cli.html){: new_window}を参照してください。
@@ -48,7 +59,9 @@ logs` コマンドを使用してステージング・エラーをデバッグ�
 	```
   4. ログ内に表示された最初のエラーを確認します。
   
-IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} プラグインを使用してアプリケーションをデプロイする場合、Eclipse ツールの**「コンソール」**タブに、cf logs 出力に似たログが表示されます。アプリケーションをデプロイするときに、`ログ`をトラッキングするために別の Eclipse ウィンドウを開くこともできます。
+IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}}
+プラグインを使用してアプリケーションをデプロイする場合、Eclipse ツールの**「コ
+ンソール」**タブに、cf logs 出力に似たログが表示されます。アプリケーションをデプロイするときに、`ログ`をトラッキングするために別の Eclipse ウィンドウを開くこともできます。
 
 `cf
 logs` コマンドに加えて、{{site.data.keyword.Bluemix_notm}} では、ログの詳細を収集するための Monitoring and Analytics サービスを使用することも可能です。また、Monitoring and Analytics サービスは、ご使用のアプリケーションのパフォーマンス、正常性、および可用性をモニターします。Node.js および
@@ -75,7 +88,8 @@ Liberty ランタイム・アプリケーションのログ分析も提供され
 {: screen}
 
 
-ログの最初のエラーが、ステージングが失敗した理由を示しています。この例では、最初のエラーはステージングの段階での DEA コンポーネントからの出力です。```
+ログの最初のエラーが、ステージングが失敗した理由を示しています。この例では、最初のエラーはステージングの段階での DEA コンポーネントからの出力です。
+```
 2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3```
 {: screen}
 
@@ -136,6 +150,38 @@ SystemErr のエントリーをそれぞれ探してください。
   * PHP アプリケーションの場合、error_log 関数を使用して、logs ディレクトリー内のファイルに書き込むことができます。
   * Python アプリケーションの場合、次のように、ロガーを使用して logs ディレクトリー内のファイルに書き込むことができます: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * Ruby アプリケーションの場合、ロガーを使用して logs ディレクトリー内のファイルに書き込むことができます。
+ 
+ 
+### コード変更のデバッグ
+{: #debug_code_changes}
+
+デプロイ済みで稼働中のアプリケーションにコード変更を加えた場合、
+そのコード変更がまだ {{site.data.keyword.Bluemix_notm}} に
+反映されていなければ、ログを使用してデバッグすることができます。アプリケーションが実行中
+かどうかにかかわらず、アプリケーションのデプロイ時またはランタイム時
+に生成されたログを確認して、
+新規コードが稼働しない原因をデバッグすることができます。
+
+新規コードがデプロイされる方法によって、コード変更をデバッグす
+る以下の方法のうちいずれかを選択します。 
+
+  * cf コマンド・ラインからデプロイされた新規コードの場合は、
+*cf push* コマンドからの出力を確認します。加えて、*cf logs*
+コマンドを使用して、問題を解決するためのさらなるヒントを検索すること
+ができます。*cf logs* コマンドの使用方法について詳しくは、
+[
+『コマンド・ライン・インターフェースからのログの表示』](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}を参照
+してください。 
+
+  * {{site.data.keyword.Bluemix_notm}} ユーザー・イン
+ターフェース、DevOps Delivery Pipeline、または Travis-CI のような GUI
+からデプロイされた新規コードの場合は、インターフェースからログを確
+認します。例えば、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェース
+から新規コードをデプロイする場合は、ダッシュボードに移動し、アプリを
+見つけてから、ログを表示してヒントを確認します。{{site.data.keyword.Bluemix_notm}} ユーザー・インタ
+ーフェースからログを表示する方法について詳しくは、
+[
+『Bluemix ダッシュボードからのログの表示』](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}を参照してください。
  
 
 # 関連リンク

@@ -4,8 +4,7 @@
 
 # Initiation à l'exemple HelloWorld
 {: #gettingstarted-ios}
-Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application HelloWorld.
-Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
+Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
 mobile sans authentification. Le logiciel SDK est déjà installé pour l'application. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans
 votre application.
 
@@ -48,7 +47,9 @@ are connected" s'affiche :<br/>
 ![Application Hello
 World connectée à {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Application Hello World connectée à {{site.data.keyword.Bluemix_notm}}") <br/>
 Si la connexion aboutit, le Xcode de connexion pour le débogage contient le message suivant :
-```You have connected to {{site.data.keyword.Bluemix_notm}} successfully```
+```
+You have connected to {{site.data.keyword.Bluemix_notm}} successfully
+```
 5. Corrigez les problèmes éventuels.
 Si la connexion échoue, le message "Bummer Something went wrong" s'affiche. Des informations supplémentaires sur l'erreur sont incluses.<br/>
 ![Application Hello World non connectée à {{site.data.keyword.Bluemix_notm}}](images/bummer_android.jpg "Figure 2. Application Hello World non connectée à Bluemix")

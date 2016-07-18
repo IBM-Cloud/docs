@@ -19,6 +19,7 @@ copyright:
 # Uso y creación de paquetes de {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
 *Última actualización: 28 de marzo de 2016*
+{: .last-updated}
 
 En {{site.data.keyword.openwhisk}}, puede utilizar paquetes para agrupar un conjunto de acciones relacionadas y
 compartirlas con otros.

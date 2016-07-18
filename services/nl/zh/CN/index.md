@@ -99,7 +99,7 @@ copyright:
 |{{site.data.keyword.retrieveandrankshort}}	|是 		|是 		|是|
 |{{site.data.keyword.SecureGateway}}		|是		|是		|是|
 |{{site.data.keyword.servicediscoveryshort}}		|是		|是		|否|
-|{{site.data.keyword.serviceproxyshort}}		|是		|否		|否|
+|{{site.data.keyword.serviceproxyshort}}		|是		|是		|否|
 |{{site.data.keyword.sescashort}}		|是		|是		|是|
 |{{site.data.keyword.ssofull}}			|是		|否		|否|
 |{{site.data.keyword.speechtotextshort}}	|是 		|是	 	|是|

@@ -5,10 +5,9 @@ copyright:
 
 ---
 
-
 {:shortdesc: .shortdesc} 
 
-# Données et analyse
+# Données & analyse
 {: #data_analytics}
 
 *Dernière mise à jour : 9 mars 2016*

@@ -16,6 +16,7 @@ copyright:
 # Seguridad de {{site.data.keyword.Bluemix_notm}}
 {: #security}
 *Última actualización: 9 de mayo de 2016*
+{: .last-updated}
 
 Diseñada con prácticas de ingeniería seguras, la plataforma {{site.data.keyword.Bluemix}} dispone de controles de seguridad de varios niveles de la red y de la infraestructura. {{site.data.keyword.Bluemix_notm}} ofrece una serie de servicios de seguridad que pueden utilizar los desarrolladores de apps para proteger sus apps móviles y web. Estos elementos se combinan para convertir {{site.data.keyword.Bluemix_notm}} en una plataforma con opciones claras para el desarrollo de apps seguras.
 {:shortdesc}

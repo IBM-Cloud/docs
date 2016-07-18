@@ -16,6 +16,9 @@ copyright:
 # ハイブリッド
 {: #hybrid}
 
+*最終更新日: 2016 年 6 月 8 日*
+{: .last-updated}
+
 {{site.data.keyword.Bluemix_notm}} は、パブリック、専用、およびローカルという統合デプロイメント・モデルによって、クラウドを利用するための新たな方法を提示します。これから規模を拡大する予定の中小企業であっても、さらに分離を必要とする大企業であっても、{{site.data.keyword.Bluemix_notm}} にはニーズに合うクラウド・デプロイメントが揃っています。お客様は境界のないクラウド内で開発を行うことができ、このクラウドで、IBM が提供するパブリック {{site.data.keyword.Bluemix_notm}} サービスにお客様の専用サービスを接続することができます。さらに、お客様のチームは、既存のデータ、システム、およびプロセスを、{{site.data.keyword.Bluemix_notm}} で使用可能な SaaS ツールと一緒に使用できます。
 {:shortdesc}
 
@@ -26,6 +29,9 @@ copyright:
 ## 専用
 
 {{site.data.keyword.Bluemix_notm}} Dedicated は、IBM SoftLayer データ・センター内の物理的に隔離されたハードウェアを使用するプライベート・クラウドです。ベアメタル・サーバーと仮想サーバーを組み合わせてプロビジョンされるシングル・テナントの {{site.data.keyword.Bluemix_notm}} 環境が、お客様のニーズに合わせて作成されます。また、カタログのシンジケートを通して使用可能になる機能や、専用計算リソースおよび専用サービスの組み合わせを用いることで、シンジケートされたカタログによってアプリを強化できます。詳細については、『[{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html)』を参照してください。
+
+**注:**{{site.data.keyword.Bluemix}} Dedicated に対応した SoftLayer に
+関する情報は、中国では適用されません。 
 
 ## ローカル
 

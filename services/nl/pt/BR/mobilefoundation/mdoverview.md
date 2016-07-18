@@ -5,12 +5,15 @@ copyright:
 
 ---
 
-#	Visão Geral do {{site.data.keyword.mobilefoundation_short}}
+#	Sobre o {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
+
+*Última atualização: 15 de junho de 2016*
+{: .last-updated}
 
 O serviço {{site.data.keyword.mobilefoundation_short}} fornece uma maneira de configurar rapidamente um ambiente do servidor {{site.data.keyword.mobilefirst}} no {{site.data.keyword.Bluemix}}. Então é possível desenvolver, testar e gerenciar aplicativos móveis usando esse ambiente em nuvem robusto.
 
-O {{site.data.keyword.mobilefoundation_short}} fornece aos usuários uma maneira fácil e orientada de configurar o {{site.data.keyword.mfserver_short_notm}} no ambiente do {{site.data.keyword.containerlong}} no Bluemix.
+O {{site.data.keyword.mobilefoundation_short}} fornece aos usuários uma maneira fácil e orientada de configurar o {{site.data.keyword.mfserver_short_notm}} no ambiente do {{site.data.keyword.containerlong}} no {{site.data.keyword.Bluemix_notm}}.
 
 O {{site.data.keyword.mobilefoundation_short}} consiste nos seguintes componentes:
 
@@ -28,16 +31,12 @@ Com o {{site.data.keyword.mobilefoundation_short}}, é possível executar as fun
 
 *	Assegurar o dispositivo, o aplicativo, dados e a camada de rede.
 
-*	Gerenciar seu portfólio de aplicativos móveis a partir de uma única interface central e desenvolver aplicativos móveis
-usando seus próprios IDEs e bibliotecas favoritos.
+*	Gerenciar seu portfólio de apps móveis a partir de uma única interface central e desenvolver apps móveis usando seus IDEs e bibliotecas favoritos.
 
 *	Usar serviços de dados escaláveis para sincronização de dados on-line e off-line.
 
 *	Configurar notificações push unificadas para todos os sistemas operacionais de dispositivos móveis suportados.
 
 É possível usar a {{site.data.keyword.mfp_cli_long_notm}} (CLI) com o {{site.data.keyword.mobilefoundation_short}} para criar e gerenciar aplicativos facilmente.
-
-##	Ambiente Operacional
-{: #mobilefoundation_operational_env}
 
 O serviço {{site.data.keyword.mobilefoundation_short}} provisiona um contêiner em seu espaço no {{site.data.keyword.Bluemix_notm}}. É possível ver os detalhes do contêiner criado, visualizar o desempenho do contêiner e acessar os logs do servidor a partir de seu painel do {{site.data.keyword.Bluemix_notm}}.

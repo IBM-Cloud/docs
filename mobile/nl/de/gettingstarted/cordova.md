@@ -7,9 +7,10 @@ copyright:
 <!-- Attribute definitions -->
 {:codeblock: .codeblock}
 
-# Einführung in das Beispiel 'HelloWorld'
+# Einführung in das Beispiel 'Hello Bluemix for Cordova'
 {: #gettingstarted-cordova}
-*Letzte Aktualisierung: 17. März 2016*
+*Letzte Aktualisierung: 27. Mai 2016*
+{: .last-updated}
 
 Wenn Sie mit einer neuen Cordova-Anwendung arbeiten möchten, können Sie die App 'HelloWorld' verwenden. Mit dieser App wird demonstriert, wie Sie ohne Authentifizierung eine Verbindung von einer mobilen App zu Ihrem mobilen Back-End unter {{site.data.keyword.Bluemix}} herstellen können. Für die App ist das SDK bereits installiert. Wenn Sie bereit sind, können Sie die spezifischen Bibliotheken abrufen, die Sie in Ihrer App verwenden möchten.
 
@@ -70,7 +71,7 @@ Wenn Sie mit einer neuen Cordova-Anwendung arbeiten möchten, können Sie die Ap
 	2. Navigieren Sie zu **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** und fügen Sie den folgenden Pfad hinzu:
 
 		```
-		<Name Ihres Projekts>/Plugins/ibm-mfp-core/Bridging-Header.h
+		<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 		```
 
 	3. Navigieren Sie zu **Build settings > Linking > Runpath Search Paths** und fügen Sie die folgenden Frameworks-Parameter hinzu:
@@ -102,7 +103,7 @@ Wenn Sie mit einer neuen Cordova-Anwendung arbeiten möchten, können Sie die Ap
 Es wird eine eine Anwendung mit einer einzelnen Ansicht mit der Schaltfläche **PING BLUEMIX** angezeigt. Wenn Sie die Schaltfläche antippen, testet die Anwendung die Verbindung zwischen dem Client und der {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung. Die Verbindung wird mithilfe der Anwendungsroute getestet, die Sie in der Datei `index.js` angegeben haben.
 
 
-![Verbindung zwischen Anwendung 'Hello World' und Bluemix erfolgreich hergestellt](images/yayconnected.jpg "Bild 1. Erfolgreiche Verbindung zwischen Anwendung 'Hello World' und Bluemix")
+![Verbindung zwischen Anwendung 'Hello World' und Bluemix erfolgreich hergestellt](images/yayconnected.jpg "Abbildung 1. Erfolgreiche Verbindung zwischen Anwendung 'Hello World' und Bluemix")
 
 
 Wenn Sie erfolgreich eine Verbindung von der mobilen App zu {{site.data.keyword.Bluemix_notm}} hergestellt haben, wird folgende Nachricht angezeigt: "Yay! You are connected".
@@ -125,11 +126,11 @@ Informationen zum Abrufen des SDKs und zum Integrieren in Ihre mobile App finden
 # Zugehörige Links
 
 ## Beispiele
-   * [HelloWorld (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
+   * [Hello Bluemix (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
 
 ## SDK
    * [bms-clientsdk-cordova-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 <!--## api
-   * [Core API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
+   * [Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
 -->

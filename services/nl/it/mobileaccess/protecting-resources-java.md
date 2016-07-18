@@ -7,6 +7,11 @@ copyright:
 
 # Protezione delle risorse Liberty for Java con {{site.data.keyword.amashort}}
 {: #protecting-liberty}
+
+*Ultimo aggiornamento: 15 aprile 2016*
+{: .last-updated}
+
+
 L'SDK server {{site.data.keyword.amashort}} fornisce un modulo OAuthTAI per le applicazioni Liberty for Java&trade; distribuite su {{site.data.keyword.Bluemix}}. Devi strumentare il tuo server Liberty con il modulo OAuthTAI per proteggerlo dall'accesso non autorizzato e per ottenere le informazioni di monitoraggio.
 
 ## Prima di cominciare
@@ -57,7 +62,7 @@ mediante bind a un oggetto speciale denominato `ALL_AUTHENTICATED_USERS`. Il seg
 	</application>
 	```
 
-1. Aggiungi la seguente proprietà che contiene l'URL del servizio {{site.data.keyword.amashort}} nelle variabili di ambiente della tua applicazione di backend. Puoi aggiungere l'URL al file `manifest.yml` o al file `server.env`.
+1. Aggiungi la seguente proprietà che contiene l'URL del servizio {{site.data.keyword.amashort}} nelle variabili di ambiente della tua applicazione di back-end. Puoi aggiungere l'URL al file `manifest.yml` o al file `server.env`.
 
 	```
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
@@ -83,7 +88,8 @@ Ad esempio:
 	</security-constraint>
 
 	<security-role id="SecurityRole_TAIUserRole" >
-		<description>Questo è il ruolo usato da MFP OAuthTAI per proteggere la risorsa e ne è richiesta l'associazione a 'ALL_AUTHENTICATED_USERS' in Liberty</description> 		<role-name>TAIUserRole</role-name>
+		<description>Questo è il ruolo usato da MFP OAuthTAI per proteggere la risorsa e ne è richiesta l'associazione a 'ALL_AUTHENTICATED_USERS' in Liberty</description>
+		<role-name>TAIUserRole</role-name>
 	</security-role>
 	```
 
@@ -121,8 +127,7 @@ L'interfaccia `WLCredential` fornisce le API per ottenere i dettagli sul princip
 
 ```Java
 
-WLCredential callerWLCredential =
-				callerSubject.getPublicCredentials(WLCredential.class).iterator().next();
+WLCredential callerWLCredential = callerSubject.getPublicCredentials(WLCredential.class).iterator().next();
 
 JSONObject securityContext = callerWLCredential.getSecurityContext();
 String userIdentity = securityContext.get("imf.sub");

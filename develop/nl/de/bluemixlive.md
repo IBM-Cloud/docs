@@ -17,7 +17,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Letzte Aktualisierung: 7. April 2016*  
+*Letzte Aktualisierung: 7. April 2016*
+{: .last-updated}  
 
 Wenn Sie eine Node.js-Anwendung erstellen, können Sie {{site.data.keyword.Bluemix}} Live Sync dazu verwenden, die Anwendungsinstanz ohne großen Zeitaufwand in {{site.data.keyword.Bluemix_notm}} zu aktualisieren und Entwicklungsprozesse wie auf dem Desktop durchzuführen, ohne dass eine erneute Bereitstellung erforderlich ist.   
 {: shortdesc}
@@ -211,7 +212,7 @@ l *login*: Anmeldung bei {{site.data.keyword.Bluemix_notm}}.
 
 lo *logout*: Abmeldung bei {{site.data.keyword.Bluemix_notm}}.
 
-s *sync*: Synchronisationsprozess zwischen Desktop und Server starten. 
+s *sync*: Synchronisationsprozess zwischen Desktop und Server starten.
 
 c *create*: Privates Projekt erstellen, mit dem Git-Repository in diesem Verzeichnis verknüpfen und den Inhalt in {{site.data.keyword.Bluemix_notm}} bereitstellen.
 
@@ -255,14 +256,14 @@ Verwenden Sie diesen Befehl, um Hilfetext zu einem Befehl oder zur Befehlsliste 
 
 **Beispiele**
 
-Die Liste der Befehle anzeigen: 
+Die Liste der Befehle anzeigen:
 
 ```
 bl --help
 ```
 {: pre}
 
-Detaillierte Informationen über den Synchronisationsbefehl (sync) anzeigen: 
+Detaillierte Informationen über den Synchronisationsbefehl (sync) anzeigen:
 
 ```
 bl sync --help
@@ -289,7 +290,7 @@ Verwenden Sie diesen Befehl für die Anmeldung bei {{site.data.keyword.Bluemix_n
 
 -u *username*: Ihre IBM ID für die Anmeldung bei {{site.data.keyword.Bluemix_notm}}.
 
--p *password*: Ihr Kennwort für die IBM ID. 
+-p *password*: Ihr Kennwort für die IBM ID.
 
 -s *server*: Der Servername oder die IP-Adresse des {{site.data.keyword.jazzhub_short}}-Servers.
 
@@ -309,7 +310,7 @@ bl login –u name@company.com –p pa55w0rd
 ```
 {: pre}
 
-Melden Sie den Benutzer `name@company.com` mit dem Kennwort *pa55 w0rd* an, das ein Leerzeichen enthält und daher in Anführungszeichen stehen muss: 
+Melden Sie den Benutzer `name@company.com` mit dem Kennwort *pa55 w0rd* an, das ein Leerzeichen enthält und daher in Anführungszeichen stehen muss:
 
 ```
 bl login –u name@company.com –p “pa55 w0rd”
@@ -354,17 +355,17 @@ Verwenden Sie diesen Befehl, um die Synchronisation des Inhalts eines Projekts m
 
 **Argument**
 
-*projectName*: Der Projektname in der Form *“alias | mproject”* oder einfach nur *myproject*, falls der angemeldete Benutzer der Eigner des Projekts ist. 
+*projectName*: Der Projektname in der Form *“alias | mproject”* oder einfach nur *myproject*, falls der angemeldete Benutzer der Eigner des Projekts ist.
 
 **Optionen**
 
 -d *localDirectory*: Lokaler Verzeichnispfad. Ist standardmäßig der aktuelle Ordner ".".
 
-*--overwritelocal*: Übersicht über das lokale Verzeichnis mit dem Inhalt des Projektarbeitsplatzes. 
+*--overwritelocal*: Übersicht über das lokale Verzeichnis mit dem Inhalt des Projektarbeitsplatzes.
 
-*--overwriteremote*: Projektarbeitsplatz mit dem Inhalt des lokalen Verzeichnisses überschreiben. 
+*--overwriteremote*: Projektarbeitsplatz mit dem Inhalt des lokalen Verzeichnisses überschreiben.
 
-*--verbose*: Ausführliche Protokollierung anzeigen. 
+*--verbose*: Ausführliche Protokollierung anzeigen.
 
 **Beispiele**
 
@@ -375,7 +376,7 @@ bl sync
 ```
 {: pre}
 
-Dieser Befehl beginnt mit der Synchronisation und entspricht `bl sync “alias | myproject”`, falls der angemeldete Benutzer der Eigner des Projekts ist. 
+Dieser Befehl beginnt mit der Synchronisation und entspricht `bl sync “alias | myproject”`, falls der angemeldete Benutzer der Eigner des Projekts ist.
 
 ```
 bl sync  myproject
@@ -422,13 +423,13 @@ Mit diesem Befehl können Sie aus einem Verzeichnis mit Code ein privates Projek
 
 -e *GIT_EXE*: Vollständiger Pfad zu einer ausführbaren Git-Datei. Standardwert: 'detected'.
 
-*--creds*: Eingabeaufforderung für Ihre Git-Berechtigungsnachweise. 
+*--creds*: Eingabeaufforderung für Ihre Git-Berechtigungsnachweise.
 
-*--fork*: Dieses Verzeichnis verzweigen und ein Projekt und ein Repository erstellen. 
+*--fork*: Dieses Verzeichnis verzweigen und ein Projekt und ein Repository erstellen.
 
-*--public*: Das neue Projekt öffentlich machen. 
+*--public*: Das neue Projekt öffentlich machen.
 
-*--prompt*: Eingabeaufforderung für alle erforderlichen Optionen mit verfügbaren Auswahlmöglichkeit. 
+*--prompt*: Eingabeaufforderung für alle erforderlichen Optionen mit verfügbaren Auswahlmöglichkeit.
 
 **Beispiele**
 
@@ -460,7 +461,7 @@ Verwenden Sie diesen Befehl, um den Status der Anwendungen aufzulisten, die den 
 
 **Argument**
 
-*projectName*: Der Projektname in der Form `“alias | myproject”` oder einfach nur `myproject`, falls der angemeldete Benutzer der Eigner des Projekts ist. 
+*projectName*: Der Projektname in der Form `“alias | myproject”` oder einfach nur `myproject`, falls der angemeldete Benutzer der Eigner des Projekts ist.
 
 **Beispiele**
 
@@ -468,12 +469,12 @@ In diesem Beispiel wird der Status der aktiven Anwendungen angezeigt. Wenn das a
 Synchronisationsziel ist, wird das zugeordnete Projekt verwendet. Wenn das aktuelle Verzeichnis kein vorhandenes Synchronisationsziel ist,
 fordert der Befehl zur Eingabe von `Projektname` auf.
 
-``
+```
 bl status
 ```
 {: pre}
 
-Dieses Beispiel zeigt den Status des Projekts *myproject* an und entspricht `bl status “alias | myproject”`, falls der angemeldete Benutzer der Eigner des Projekts ist. 
+Dieses Beispiel zeigt den Status des Projekts *myproject* an und entspricht `bl status “alias | myproject”`, falls der angemeldete Benutzer der Eigner des Projekts ist.
 
 ```
 bl status myproject
@@ -501,11 +502,11 @@ Verwenden Sie diesen Befehl zum Starten der Anwendungsinstanz, die von der Start
 
 **Argument**
 
-*projectName*: Der Projektname in der Form *“alias | myproject”* oder einfach nur *myproject*, falls der angemeldete Benutzer der Eigner des Projekts ist. 
+*projectName*: Der Projektname in der Form *“alias | myproject”* oder einfach nur *myproject*, falls der angemeldete Benutzer der Eigner des Projekts ist.
 
 **Optionen**
 
--l *launchConfiguration*: Der Startkonfigurationsname (zum Beispiel `mylaunchconfig`), Dateiname (zum Beispiel `mylaunchconfig.launch`) oder ein projektbezogener Pfad zur Startkonfigurationsdatei (zum Beispiel `launchConfigurations/mylaunchconf.launch`).
+-l *launchConfiguration*: Der Name der Startkonfiguration (zum Beispiel `mylaunchconfig`), Dateiname (zum Beispiel `mylaunchconfig.launch`) oder ein projektbezogener Pfad zur Startkonfigurationsdatei (zum Beispiel `launchConfigurations/mylaunchconf.launch`).
 
 -m *manifestPath*: Der projektbezogene Pfade zur Manifestdatei (zum Beispiel `manifest.yml`).
 
@@ -561,11 +562,11 @@ Verwenden Sie diesen Befehl zum Stoppen der Anwendungsinstanz, die der Startdate
 
 **Argument**
 
-*projectName*: Der Projektname in der Form *“alias | mproject”* oder einfach nur *mproject*, falls der angemeldete Benutzer der Eigner des Projekts ist. 
+*projectName*: Der Projektname in der Form *“alias | mproject”* oder einfach nur *mproject*, falls der angemeldete Benutzer der Eigner des Projekts ist.
 
 **Optionen**
 
--l *launchConfiguration*: Der Name der Startkonfiguration (zum Beispiel `mylaunchconfig`), Dateiname (zum Beispiel `mylaunchconfig.launch` oder ein projektbezogener Pfad zur Startkonfigurationsdatei (zum Beispiel `launchConfigurations/mylaunchconf.launch`).
+-l *launchConfiguration*: Der Name der Startkonfiguration (zum Beispiel `mylaunchconfig`), Dateiname (zum Beispiel `mylaunchconfig.launch`) oder ein projektbezogener Pfad zur Startkonfigurationsdatei (zum Beispiel `launchConfigurations/mylaunchconf.launch`).
 
 **Beispiele**
 

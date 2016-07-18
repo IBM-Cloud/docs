@@ -5,12 +5,18 @@ copyright:
   
 ---
 
-# Monitoraggio applicazioni
+# Monitoraggio delle applicazioni
 {: #app-monitoring}
+*Ultimo aggiornamento: 6 maggio 2016*
+{: .last-updated}
 
 Oltre alle funzioni di sicurezza, {{site.data.keyword.amafull}} fornisce anche il monitoraggio e l'analisi per le tue applicazioni mobili. Puoi registrare i log client e i dati di monitoraggio con l'SDK client {{site.data.keyword.amashort}}. Gli sviluppatori possono controllare quando inviare questi dati al servizio {{site.data.keyword.amashort}}. Tutti gli eventi di sicurezza, quali la riuscita o meno dell'autenticazione, che si verificano nel servizio {{site.data.keyword.amashort}} vengono registrati automaticamente.
 
 Quando i dati vengono distribuiti a {{site.data.keyword.amashort}}, puoi utilizzare il dashboard di monitoraggio {{site.data.keyword.amashort}} per ottenere informazioni approfondite di analisi relative alle tue applicazioni mobili e ai tuoi dispositivi e log client. Le informazioni sulle richieste effettuate dalla tua applicazione alle risorse protette {{site.data.keyword.amashort}} sono registrate per impostazione predefinita.
+
+
+**Nota**: le funzioni di monitoraggio del servizio {{site.data.keyword.amashort}} è pianificato che vengano migrate al nuovo servizio [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics). La nuova SDK Swift utilizza il nuovo servizio {{site.data.keyword.mobileanalytics_short}}, che fornisce una migliore esperienza di analisi. Il servizio {{site.data.keyword.mobileanalytics_short}} è al momento in fase sperimentale, si pianifica di farlo diventare disponibile più avanti in questo anno. Ci raccomandiamo di studiare la migrazione delle tue applicazioni per utilizzare il nuovo servizio {{site.data.keyword.mobileanalytics_short}} e la SDK Swift perché le funzioni di monitoraggio del servizio {{site.data.keyword.amashort}} saranno abbandonate quando {{site.data.keyword.mobileanalytics_short}} diventa disponibile.
+
 
 I dati registrati automaticamente includono informazioni quali il numero di autenticazioni, nuovi dispositivi e nuovi utenti. Puoi inoltre configurare
 l'SDK client {{site.data.keyword.amashort}} per notificare le seguenti informazioni:
@@ -44,11 +50,11 @@ al servizio {{site.data.keyword.amashort}} utilizzando le API fornite.
 ## Utilizzo del dashboard di monitoraggio {{site.data.keyword.amashort}}
 {: #monitoring-dashboard}
 
-1. Apri il dashboard {{site.data.keyword.Bluemix}} e fai clic sull'applicazione {{site.data.keyword.Bluemix_notm}}
+1. Apri il dashboard {{site.data.keyword.Bluemix}} e fai clic sulla tua applicazione {{site.data.keyword.Bluemix_notm}}.
 
-2. Quando il tuo dashboard dell'applicazione {{site.data.keyword.Bluemix_notm}} viene aperto, fai clic su un tile {{site.data.keyword.amashort}}
+2. Quando il tuo dashboard dell'applicazione {{site.data.keyword.Bluemix_notm}} si è aperto, fai clic su un tile {{site.data.keyword.amashort}}.
 
-3. Nel dashboard {{site.data.keyword.amashort}}, fai clic sul link `Monitoraggio` nel menu di sinistra
+3. Nel dashboard {{site.data.keyword.amashort}}, fai clic sul link `Monitoraggio` nel menu di sinistra.
 
 ## Fasi successive
 {: #next-steps}

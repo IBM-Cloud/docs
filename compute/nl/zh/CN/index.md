@@ -15,6 +15,7 @@ copyright:
 
 # 计算
 *上次更新时间：2016 年 2 月 19 日*
+{: .last-updated}
 
 计算包含基础架构和资源，您可以从中进行选择来构建 {{site.data.keyword.Bluemix}} 应用程序。计算资源包括 {{site.data.keyword.openwhisk_short}}、Cloud Foundry 应用程序、{{site.data.keyword.IBM_notm}} Containers 和 {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}。
 {:shortdesc}

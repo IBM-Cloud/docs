@@ -32,6 +32,8 @@ Configura un badge, l'audio e del payload JSON aggiuntivo iOS.
 
 ###Android
 
+Aggiungi il file audio nella directory `res/raw` della tua applicazione android. Mentre invii le notifiche aggiungi il nome del file audio nel campo audio della notifica push.
+
 ```
 "settings": {
      "gcm" : {
@@ -59,11 +61,10 @@ Configura un badge, l'audio e del payload JSON aggiuntivo iOS.
 ```
 
 
-## Messa in pausa delle notifiche Android  
+## Messa in pausa delle notifiche Android 
 {: #hold-notifications-android}
 
-Quando la tua applicazione va in background, probabilmente vuoi che Push metta in pausa le notifiche inviate alla
-                            tua applicazione. Per mettere in pausa le notifiche, richiama il metodo hold() nel metodo onPause() dell'attività che sta gestendo le notifiche di push.
+Quando la tua applicazione va in background, probabilmente vuoi che push metta in pausa le notifiche inviate alla tua applicazione. Per mettere in pausa le notifiche, richiama il metodo hold() nel metodo onPause() dell'attività che sta gestendo le notifiche di push.
 
 ```
 @Override
@@ -107,7 +108,7 @@ per abilitare le notifiche di push operative nella tua applicazione.
 	acceptAction.title = "Accept"
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground*/
+	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 	```
 	
 	```
@@ -176,11 +177,9 @@ l'identità della categoria.
 
 	```
 	//Per Swift
-	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-
-	application.registerUserNotificationSettings(notificationSettings)
-	application.registerForRemoteNotifications()
+	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications() 
 	```
 	
 ## Gestione di notifiche iOS operative  

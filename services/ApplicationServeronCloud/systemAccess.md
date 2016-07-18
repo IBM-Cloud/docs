@@ -25,19 +25,19 @@ Instances in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 * From the {{site.data.keyword.Bluemix_notm}} Catalog and Service Dashboard in the {{site.data.keyword.Bluemix_notm}} UI.
 * From the creation of an application or script that uses our RESTful APIs.
 
-Through use of our Swagger 2.0 compliant REST APIs, clients have access to the same function as provided through the portal and dashboard. For more information about supported REST APIs and resources, see the WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API Documentation](https://new-console.{DomainName}/apidocs/212){: new_window}.
+Through use of our Swagger 2.0 compliant REST APIs, clients have access to the same function as provided through the portal and dashboard. For more information about supported REST APIs and resources, see the WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API Documentation](https://new-console.{DomainName}/apidocs/231){: new_window}.
 
 **Note:** After creating a service instance, depending on the Tee-Shirt size that is created, your service might not be immediately ready for use. It is recommended that you query the **Status** field of the JSON returned to determine the current state of the service instance.
 
-**Note:** The API BASE URL referenced in the sample code of the [REST API Documentation](https://new-console.{DomainName}/apidocs/212){: new_window} points to the US South Region.  If you are using other regions, ensure that your application references the appropriate API BASE URL.
+**Note:** The API BASE URL referenced in the sample code of the [REST API Documentation](https://new-console.{DomainName}/apidocs/231){: new_window} points to the US South Region.  If you are using other regions, ensure that your application references the appropriate API BASE URL.
 
 *Table 1. API Base URLs for Rest API Implementation*
 
 | **Region name** | **Geographic location** | **Region prefix** | **API Base URL** |       
 |:-------------:|:----------:|:--------------:|:-------------:|
-| US South region | Dallas, TX, US | ng | wasaas-broker.ng.bluemix.net/wasaas-broker |
-| United Kingdom region | London, England | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker |
-| Sydney region | Sydney, Australia | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker |
+| US South region | Dallas, TX, US | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
+| United Kingdom region | London, England | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
+| Sydney region | Sydney, Australia | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
 
 
 

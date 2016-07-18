@@ -14,13 +14,14 @@ copyright:
 # Uso del SDK móvil de {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
 *Última actualización: 28 de marzo de 2016*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} proporciona un SDK móvil para dispositivos iOS y watchOS 2 que permite a las apps activar
 fácilmente desencadenantes remotos e invocar acciones remotas. Actualmente no hay disponible una versión para Android;
 los desarrolladores de Android pueden utilizar directamente la API de REST de {{site.data.keyword.openwhisk}}.
 {: shortdesc}
 
-El SDK móvil se escribe en Swift 2.2, y admite iOS9 y releases posteriores.
+El SDK móvil se escribe en Swift 2.2, y admite iOS 9 y releases posteriores.
 
 ## Añadir el SDK a su app
 {: #openwhisk_add_sdk}
@@ -28,8 +29,7 @@ Puede instalar el SDK móvil usando CocoaPods, Carthage o desde el directorio de
 
 ### Instalación usando CocoaPods 
 
-El SDK de {{site.data.keyword.openwhisk_short}} para móvil está disponible para distribución pública por medio de CocoaPods. Suponiendo
-que Cocoapods esté instalado, ponga las líneas siguientes en un archivo llamado 'Podfile' dentro del directorio de proyecto de la app starter. 
+El SDK de {{site.data.keyword.openwhisk_short}} para móvil está disponible para distribución pública por medio de CocoaPods. Suponiendo que CocoaPods esté instalado, ponga las líneas siguientes en un archivo llamado 'Podfile' dentro del directorio de proyecto de la app starter. 
 
 ```
 source 'https://github.com/openwhisk/openwhisk-podspecs.git'
@@ -48,24 +48,26 @@ end
 ```
 {: codeblock}
 
-En la línea de mandatos, escriba "pod install". Así se instalará el SDK para una app iOS con una extensión watchOS 2.  Utilice
-el archivo de espacio de trabajo que crea Cocoapods para su app para abrir el proyecto en Xcode.
+En la línea de mandatos, escriba `pod install`. Así se instalará el SDK para una app iOS con una extensión watchOS 2.  Utilice el archivo de espacio de trabajo que crea CocoaPods para su app para abrir el proyecto en Xcode.
 
 ### Instalación usando Carthage
 
-Cree un archivo en el directorio del proyecto de la app, y llámelo 'Cartfile'. Añada las líneas siguientes al Cartfile:
+Cree un archivo en el directorio del proyecto de la app, y llámelo 'Cartfile'. Añada la línea siguiente al Cartfile:
+
 ```
-github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 {: codeblock}
 
-En la línea de mandatos, escriba 'carthage update --platform ios'. Carthage descarga y construye el SDK, crea un directorio llamado
-Carthage en el directorio de proyecto de su app y coloca un archivo OpenWhisk.framework dentro de Carthage/build/iOS. Añade OpenWhisk.framework
+En la línea de mandatos, escriba `carthage update --platform ios`. Carthage descarga y construye el SDK, crea un directorio llamado
+Carthage en el directorio de proyecto de su app y coloca un archivo OpenWhisk.framework dentro de Carthage/build/iOS.
+
+Luego debe añadir OpenWhisk.framework
 a las infraestructuras incluidas en su proyecto Xcode.
 
 ### Instalación a partir de código fuente
 
-El código fuente está disponible en https://github.com/openwhisk//openwhisk-client-swift.git. Abra el proyecto usando el archivo OpenWhisk.xcodeproj en Xcode.  El proyecto contiene dos esquemas "OpenWhisk" y "OpenWhiskWatch" enfocados a iOS y WathOS2, respectivamente.  Construya el proyecto
+El código fuente está disponible en https://github.com/openwhisk/openwhisk-client-swift.git. Abra el proyecto usando el archivo OpenWhisk.xcodeproj en Xcode. El proyecto contiene dos esquemas, "OpenWhisk" y "OpenWhiskWatch", destinados a iOS i watchOS 2, respectivamente. Construya el proyecto
 para los destinos que necesite y añada las infraestructuras resultantes a su app (normalmente en
 ~/Library/Developer/Xcode/DerivedData/nombre_app).
 
@@ -122,7 +124,8 @@ según sea necesario.
 Por ejemplo:
 
 ```
-// En este ejemplo, invocamos una acción para imprimir un mensaje en la consola de OpenWhisk Console var params = Dictionary<String, String>()
+// En este ejemplo, invocamos una acción para imprimir un mensaje en la consola de OpenWhisk
+var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
 
 do {

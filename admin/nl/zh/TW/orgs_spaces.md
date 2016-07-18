@@ -18,6 +18,7 @@ copyright:
 # 管理組織和空間
 {: #orgsspacesusers}
 *前次更新：2016 年 5 月 16 日*
+{: .last-updated}
 
 身為帳戶擁有者，您可以管理組織，方法是移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **管理組織**頁面。組織管理員也可以使用「管理組織」頁面來管理將他們設為管理員的任何組織。
 {:shortdesc}
@@ -40,10 +41,10 @@ copyright:
 <dt>團隊成員</dt>
 <dd>組織及空間中具有基本許可權的角色。您必須先被指派給組織，才能獲授與組織內空間的其他許可權。如需詳細資訊，請參閱[使用者及角色](users_roles.html#userrolesinfo)。</dd>
 <dt>網域</dt>
-<dd>提供網際網路上配置給組織的路徑。路徑具有一個子網域及一個網域。子網域一般是應用程式名稱。網域可能是系統網域，或您針對應用程式所登錄的自訂網域。請參閱[管理自訂網域](orgs_spaces.html#managedomains)。&lt;br/>
+<dd>提供網際網路上配置給組織的路徑。路徑具有一個子網域及一個網域。子網域一般是應用程式名稱。網域可能是系統網域，或您針對應用程式所登錄的自訂網域。請參閱[管理自訂網域](orgs_spaces.html#managedomains)。<br/>
 <p>**附註**：如果您新增自訂網域，則必須配置 DNS 伺服器來解析自訂網域，以指向 {{site.data.keyword.Bluemix_notm}} 系統網域。使用此方式，{{site.data.keyword.Bluemix_notm}} 接到您的自訂網域的要求時，可以將它適當地遞送至您的應用程式。</p></dd>
 <dt>配額</dt>
-<dd>代表組織的資源限制，包括可配置供組織使用的服務數目及記憶體數量。建立組織時，會指派配額。組織空間中的任何應用程式或服務都會影響配額使用情形。使用「隨收隨付制」或「訂閱」方案，您可以在組織需要變更時，調整 Cloud Foundry 應用程式及儲存器的配額。請參閱[管理配額](orgs_spaces.html#managequota)。</dd>
+<dd>代表組織的資源限制，包括可配置供組織使用的服務數目及記憶體數量。建立組織時，會指派配額。組織空間中的任何應用程式或服務都會影響配額使用情形。使用「隨收隨付制」或「訂閱」方案，您可以在組織需要變更時，調整 Cloud Foundry 應用程式及容器的配額。請參閱[管理配額](orgs_spaces.html#managequota)。</dd>
 </dl>
 
 在 {{site.data.keyword.Bluemix_notm}} 中，您可以使用組織來啟用團隊成員之間的協同作業，以及使用下列方式促進專案資源的邏輯分組：
@@ -73,7 +74,7 @@ copyright:
 
 在組織內，您可以使用空間來群組一組應用程式、服務及團隊成員。在 {{site.data.keyword.Bluemix_notm}} 中，空間關聯於特定地區。
 
-將團隊成員新增至組織之後，即可將空間的許可權授與他們。與組織類似，空間也會有一組[使用者角色](users_roles.html#userrolesinfo)具有指派給團隊成員的特定許可權：
+將團隊成員新增至組織之後，即可將空間的許可權授與他們。與組織類似，空間也會有一組[使用者角色](users_roles.html#userrolesinfo)，其具有指派給團隊成員的特定許可權：
 
 <ul>
 <li>空間管理員</li>
@@ -161,7 +162,7 @@ copyright:
 3. 按一下**編輯**。
 4. 選取**配額**標籤。
 
-若要更新您組織的配額，您必須開啟支援問題單。如需開啟支援問題單的相關資訊，請參閱[取得客戶支援](../support/index.html#contacting-support)。如需儲存器配額的相關資訊，請參閱「儲存器」文件中的[配額](../containers/container_creating_ov.html#container_quota)。
+若要更新您組織的配額，您必須開啟支援問題單。如需開啟支援問題單的相關資訊，請參閱[取得客戶支援](../support/index.html#contacting-support)。如需容器配額的相關資訊，請參閱「容器」文件中的[配額](../containers/container_creating_ov.html#container_quota)。
 
 ## 管理網域
 {: #managedomains}

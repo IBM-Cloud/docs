@@ -14,6 +14,7 @@ copyright:
 {:new_window: target="_blank"}
 
 *上次更新时间：2016 年 1 月 12 日*
+{: .last-updated}
 
 # 使用入门模板应用程序
 {: #using_starter_applications}

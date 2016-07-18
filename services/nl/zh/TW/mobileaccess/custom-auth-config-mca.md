@@ -7,12 +7,12 @@ copyright:
 
 # 配置 {{site.data.keyword.amashort}} 進行自訂鑑別
 {: #custom-dash}
-若要搭配使用自訂鑑別與行動式應用程式，您必須在 {{site.data.keyword.amashort}} 服務儀表板中登錄自訂鑑別領域，以及自訂身分提供者的基本 URL。
+若要搭配使用自訂鑑別與行動應用程式，您必須在 {{site.data.keyword.amashort}} 服務儀表板中登錄自訂鑑別領域，以及自訂身分提供者的基本 URL。
 
 ## 開始之前
 {: #custom-dash-begin}
-* 閱讀[開始使用](getting-started.html)。
-* 使用 {{site.data.keyword.amashort}} Server SDK 保護後端應用程式。如需相關資訊，請參閱[保護資源](protecting-resources.html)。
+* 閱讀[開始使用](index.html)。
+* 使用 {{site.data.keyword.amashort}} 伺服器 SDK 保護後端應用程式。如需相關資訊，請參閱[保護資源](protecting-resources.html)。
 * 讓自訂身分提供者應用程式執行。
 
 ## 在 {{site.data.keyword.Bluemix}} 儀表板中配置自訂鑑別
@@ -21,7 +21,7 @@ copyright:
 
 1. 在 {{site.data.keyword.Bluemix}} 儀表板中開啟應用程式。
 
-1. 按一下**行動式選項**，並記下您的**路徑** (`applicationRoute`) 及 **應用程式 GUID** (`applicationGUID`)。起始設定 SDK 時，您需要這些值。
+1. 按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及 **應用程式 GUID** (`applicationGUID`)。起始設定 SDK 時，您需要這些值。
 
 1. 按一下 {{site.data.keyword.amashort}} 磚。即會載入 {{site.data.keyword.amashort}} 儀表板。
 

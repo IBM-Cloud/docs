@@ -8,7 +8,11 @@ copyright:
 # Touch ID での許可情報の保護
 {: #before-you-begin}
 
-Touch ID は、iOS デバイス向けの指紋認証機能です。Touch ID を使用することで、将来の使用のために許可情報を自動的に保護できます。セキュリティー強度を構成するため、`IMFAuthorizationManager.setAuthorizationPersistencePolicy()` メソッドを使用して以下のいずれかのパーシスタンス・ポリシーを設定します。
+Touch ID は、iOS デバイス向けの指紋認証機能です。Touch ID を使用することで、将来の使用のために許可情報を自動的に保護できます。 
+
+Touch ID は、{{site.data.keyword.amashort}} Objective-C SDK からのみ使用可能です。
+
+セキュリティー強度を構成するため、`IMFAuthorizationManager.setAuthorizationPersistencePolicy()` メソッドを使用して以下のいずれかのパーシスタンス・ポリシーを設定します。
 
 * **IMFAuthorizationPersistencePolicyNever** (最高のセキュリティー強度): 許可情報をデバイスに保持することは決してありません。許可ヘッダーは単一アプリケーション・セッション中のみ有効です。許可情報は iOS keychain 内で保持されます。
 

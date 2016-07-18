@@ -12,7 +12,8 @@ Si desea empezar a trabajar con una nueva app de iOS, puede utilizar la app Hell
     <li>Especifique un nombre y un host para la app y pulse **Crear**.</li>
     <li>Pulse **Finalizar**. </li>
 </ol>
-2. Obtenga el proyecto de GitHub. En el sistema, abra el terminal y escriba el siguiente mandato:
+2. Obtenga el proyecto de GitHub.
+En el sistema, abra el terminal y escriba el siguiente mandato:
 ```
 git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld
 ```
@@ -36,11 +37,13 @@ return true
 4. Ejecute el ejemplo en el entorno de desarrollo.
 En Xcode, pulse **Producto &gt; Ejecutar**. Se inicia un simulador de iOS.
 En el simulador, pulse **Ping {{site.data.keyword.Bluemix_notm}}**. La app de ejemplo obtiene la cabecera de autorización del servicio Mobile Client Access. Si el ping se ejecuta correctamente, se actualiza el texto del simulador.
-<br/>Cuando se haya conectado correctamente a {{site.data.keyword.Bluemix_notm}} desde la app para móvil en Xcode, se mostrará el mensaje  ¡Se ha conectado!<br/>
+<br/>Cuando se haya conectado correctamente a {{site.data.keyword.Bluemix_notm}} desde la app para móvil en Xcode, se mostrará el mensaje ¡Se ha conectado!<br/>
 ![Aplicación Hello World conectada correctamente a {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figura 1. Aplicación Hello World conectada correctamente a {{site.data.keyword.Bluemix_notm}}")
 <br/>
 Si se ha conectado correctamente, el Xcode de inicio de sesión de depuración contiene el siguiente mensaje:
-```Se ha conectado a {{site.data.keyword.Bluemix_notm}} correctamente```
+```
+Se ha conectado correctamente a {{site.data.keyword.Bluemix_notm}}
+```
 5. Resuelva cualquier problema.
 Si la conexión falla, se muestra el mensaje "Algo salió mal". Se incluye más información sobre el error.<br/>
 ![Aplicación Hello World no conectada a {{site.data.keyword.Bluemix_notm}}](images/bummer_android.jpg "Figura 2. Aplicación Hello World no conectada a Bluemix")

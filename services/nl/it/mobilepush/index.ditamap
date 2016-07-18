@@ -15,7 +15,10 @@ Managing notifications
 -->
  <!--CLM PRODUCTION NAVIGATION: -->
  <!--CLM NEW NAVIGATION : -->
- <topicref href="index.html" linking="none" navtitle="Push Notifications" format="html" scope="peer">
+ <topicref href="index.html" linking="none" navtitle="Push Notifications" format="html" scope="peer"
+locktitle="yes">
+<topicref href="index.html" navtitle="Introduzione"
+format="html" scope="peer" locktitle="yes"> </topicref>
 <topicref href="c_overview_push.html" navtitle="Informazioni" linking="sourceonly" format="html"
 outputclass="subsection" scope="peer">
 <topicref href="c_overview_push.html#overview_push_process" format="html"
@@ -50,7 +53,7 @@ scope="peer"/>
 <topicref href="c_cordova_enable.html" chunk="to-content" format="html" navtitle="Cordova"
 scope="peer">
 <topicref href="c_cordova_enable.html#cordova_install" format="html"
-navtitle="Installazione del plugin Cordova" scope="peer"/>
+navtitle="Installazione del plugin push Cordova" scope="peer"/>
 <topicref href="c_cordova_enable.html#cordova_initialize" format="html"
 navtitle="Inizializzazione del plugin Cordova" scope="peer"/>
 <topicref href="c_cordova_enable.html#cordova_register" format="html" navtitle="Registrazione di dispositivi"
@@ -74,7 +77,8 @@ navtitle="Registrazione di dispositivi ed applicazioni iOS" scope="peer"/>
 navtitle="Ricezione di notifiche di push su dispositivi iOS" scope="peer"/>
 <topicref href="c_ios_enable.html#send" format="html" navtitle="Invio di notifiche di push di base"
 scope="peer"/>
-<topicref href="c_ios_enable.html#next_steps_tags" format="html" navtitle="Fasi successive" scope="peer"/>
+<topicref href="c_ios_enable.html#next_steps_tags" format="html" navtitle="Fasi successive" scope="peer"
+/>
 </topicref>
 </topicref>
 <topicref href="c_tag_basednotifications.html" outputclass="subsection" chunk="to-content"

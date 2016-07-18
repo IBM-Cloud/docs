@@ -7,6 +7,8 @@ copyright:
 
 # Abilitazione, configurazione e utilizzo del Logger
 {: #enable-logger}
+*Ultimo aggiornamento: 6 maggio 2016*
+{: .last-updated}
 
 L'SDK client {{site.data.keyword.amashort}} fornisce un framework di registrazione in log simile ad altri framework di log con cui potresti avere dimestichezza, come `java.util.logging` o `log4j`. Il framework di registrazione in log supporta, tra l'altro, più istanze logger per pacchetto, diversi livelli di log e l'acquisizione di tracce di stack per un arresto anomalo di applicazioni.
 
@@ -23,6 +25,8 @@ presentano agli utenti come un arresto anomalo dell'applicazione.
 * `DEBUG` - utilizzalo per la notifica delle istruzioni di debug per aiutare gli sviluppatori a risolvere i difetti delle applicazioni.
 
 Assicurati di avere inizializzato l'SDK client {{site.data.keyword.amashort}} prima di utilizzare il framework di registrazione in log. I seguenti esempi illustrano l'utilizzo di base di un framework di registrazione in log dell'SDK client {{site.data.keyword.amashort}}.
+
+**Importante**: le funzioni di monitoraggio del servizio {{site.data.keyword.amashort}} è pianificato che vengano migrate al nuovo servizio [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics). La nuova SDK Swift utilizza il nuovo servizio {{site.data.keyword.mobileanalytics_short}}, che fornisce una migliore esperienza di analisi. Il servizio {{site.data.keyword.mobileanalytics_short}} è al momento in fase sperimentale, si pianifica di farlo diventare disponibile più avanti in questo anno. Ci raccomandiamo di studiare la migrazione delle tue applicazioni per utilizzare il nuovo servizio {{site.data.keyword.mobileanalytics_short}} e la SDK Swift perché le funzioni di monitoraggio del servizio {{site.data.keyword.amashort}} saranno abbandonate quando {{site.data.keyword.mobileanalytics_short}} diventa disponibile.
 
 ### Android
 {: #enable-logger-android}
@@ -41,6 +45,10 @@ logger.fatal("fatal message");
 
 ### iOS - Objective-C
 {: #enable-logger-objectc}
+
+**Importante**: mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift.
+
+La SDK Objective-C riporta i dati di monitoraggio alla console di monitoraggio del servizio {{site.data.keyword.amashort}}. Se fai affidamento sulle funzioni di monitoraggio del servizio {{site.data.keyword.amashort}}, continua ad utilizzare la SDK Objective-C.
 
 ```Objective-C
 [[IMFClient sharedInstance] initializeWithBackendRoute:appRoute backendGUID:appGUID];

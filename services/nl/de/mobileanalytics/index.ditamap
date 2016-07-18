@@ -4,10 +4,11 @@
  "ibm-map.dtd">
 
 
-<map xml:lang="en-us">
+<map xml:lang="de-de">
 <title>Mobile Analytics</title>
-<topicref format="html" href="index.html" linking="sourceonly" navtitle="Mobile Analytics"
-scope="peer">
+<topicref format="html" href="index.html" linking="none" navtitle="Mobile Analytics" scope="peer"
+locktitle="yes">
+<topicref format="html" href="index.html" navtitle="Einführung" scope="peer" locktitle="yes"> </topicref>
 <topicref format="html" href="mobileanalytics_overview.html" navtitle="Informationen" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="mobileanalytics_overview.html#usingmetrics" linking="sourceonly"
@@ -23,15 +24,15 @@ navtitle="Swift-Client-SDK installieren" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html" navtitle="Anwendung instrumentieren" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="Wert für Clientschlüssel angeben" scope="peer"> </topicref>
+navtitle="Clientschlüssel ermitteln" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
-navtitle="Android-App zum Erfassen der Analysedaten initialisieren" scope="peer"> </topicref>
+navtitle="Android-App initialisieren" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"
-navtitle="iOS-App zum Erfassen der Analysedaten initialisieren" scope="peer"> </topicref>
+navtitle="iOS-App initialisieren" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#app-monitoring-gathering-analytics" linking="sourceonly"
 navtitle="Nutzungsanalysedaten zusammenstellen" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#app-monitoring-logger" linking="sourceonly"
-navtitle="Protokollfunktion aktivieren, konfigurieren und verwenden" scope="peer"> </topicref>
+navtitle="Protokollfunktion verwenden" scope="peer"> </topicref>
 <!--<topicref format="html" href="sdk.html#enable-logger-sdklogs" linking="sourceonly" navtitle="Enabling the Client SDK internal logs" scope="peer"> </topicref>-->
 <topicref format="html" href="sdk.html#trackingusers" linking="sourceonly" navtitle="Benutzer verfolgen"
 scope="peer"> </topicref>
@@ -39,10 +40,10 @@ scope="peer"> </topicref>
 </topicref>
 <topicref format="html" href="app-monitoring.html" linking="sourceonly" navtitle="Apps überwachen"
 scope="peer" outputclass="subsection">
-<topicref format="html" href="app-monitoring.html#custom-charts"
-navtitle="Daten mit angepassten Diagrammen darstellen" scope="peer">
+<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="Daten visualisieren"
+scope="peer">
 <topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly"
-navtitle="Benutzerdefinierte Diagramme für Clientprotokolle erstellen" scope="peer"> </topicref>
+navtitle="Benutzerdefinierte Diagramme erstellen" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly"
 navtitle="Angepasste Daten exportieren" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly"
@@ -50,9 +51,9 @@ navtitle="Angepasste Diagrammdefinitionen exportieren und importieren" scope="pe
 </topicref>
 <topicref format="html" href="app-monitoring.html#alerts" navtitle="Alerts einstellen" scope="peer">
 <topicref format="html" href="app-monitoring.html#alert-def-client-logs" linking="sourceonly"
-navtitle="Alertdefinition für Clientprotokolle erstellen" scope="peer"> </topicref>
+navtitle="Clientprotokollalerts erstellen" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#alert-def-app-crash" linking="sourceonly"
-scope="peer" navtitle="Alertdefinition für App-Abstürze erstellen"> </topicref>
+scope="peer" navtitle="Alerts zu App-Abstürzen erstellen"> </topicref>
 <topicref format="html" href="app-monitoring.html#managing-alert-definitions" linking="sourceonly"
 scope="peer" navtitle="Alertdefinitionen verwalten"> </topicref>
 <topicref format="html" href="app-monitoring.html#viewing-alert-details" linking="sourceonly"

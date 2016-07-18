@@ -4,18 +4,24 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
 
-# iOS-Objective-C-SDK einrichten
+# iOS-Objective-C-SDK einrichten (nicht mehr verwendet)
 {: #getting-started-ios}
 
-Instrumentieren Sie Ihre iOS-Anwendung mit dem {{site.data.keyword.amashort}}-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und nicht geschützte Ressourcen.
+*Letzte Aktualisierung: 14. Juni 2016*
+{: .last-updated}
 
-**Tipp:** Wenn Sie Ihre iOS-App mit Swift entwickeln, sollten Sie die Verwendung von {{site.data.keyword.amashort}}-Client-Swift-SDK in Erwägung ziehen. Details hierzu finden Sie in [iOS-Swift-SDK einrichten](getting-started-ios-swift-sdk.html).
+Instrumentieren Sie Ihre iOS-Anwendung mit dem {{site.data.keyword.amashort}}-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und nicht geschützte Ressourcen.
+{:shortdesc}
+
+**Wichtig:** Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, die Verwendung und Unterstützung dieses SDK sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden. Für neue Anwendungen wird dringend die Verwendung von Swift-SDK empfohlen (Informationen dazu siehe [iOS-Swift-SDK einrichten](getting-started-ios-swift-sdk.html)).
 
 ## Vorbereitungen
 {: #before-you-begin}
-* Sie müssen über eine Instanz eines mobilen Back-Ends verfügen, die durch den {{site.data.keyword.amashort}}-Service geschützt wird. Weitere Informationen zur Erstellung eines mobilen Back-Ends finden Sie in der [Einführung](getting-started.html).
-* Stellen Sie sicher, dass Sie Xcode ordnungsgemäß eingerichtet haben. Weitere Informationen zur Einrichtung Ihrer iOS-Entwicklungsumgebung finden Sie auf der [Apple Developer-Website](https://developer.apple.com/support/xcode/).
+Voraussetzungen:
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
+* Xcode-Projekt  
 
 
 ## {{site.data.keyword.amashort}}-Client-SDK installieren
@@ -25,6 +31,7 @@ Das {{site.data.keyword.amashort}}-SDK wird mit CocoaPods, einem Abhängigkeiten
 
 ### CocoaPods installieren
 {: #install-cocoapods}
+
 1. Öffnen Sie das Terminal und führen Sie den Befehl **pod --version** aus. Wenn CocoaPods bereits installiert ist, wird die Versionsnummer angezeigt. Sie können mit dem nächsten Abschnitt fortfahren, um das SDK zu installieren.
 
 1. Wenn CocoaPods nicht installiert ist, führen Sie den folgenden Befehl aus:
@@ -67,8 +74,9 @@ Zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK müssen Sie das SDK
 	#import <IMFCore/IMFCore.h>
 	```
 
-	**Swift:**
 
+	**Swift:**
+	
 	Das {{site.data.keyword.amashort}}-Client-SDK ist mit Objective-C implementiert. Sie müssen Ihrem Swift-Projekt möglicherweise einen Überbrückungsheader hinzufügen:
 
 	1. Klicken Sie mit der rechten Maustaste auf Ihr Projekt in Xcode und wählen Sie **New File** aus.
@@ -89,6 +97,7 @@ Ersetzen Sie die Werte *applicationRoute* und *applicationGUID* durch die Werte 
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+
 
 	**Swift:**
 

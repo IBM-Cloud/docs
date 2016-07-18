@@ -7,15 +7,17 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # Informazioni su {{site.data.keyword.mobileanalytics_short}}  
+{: aboutmobileanalytics}
 *Ultimo aggiornamento: 21 aprile 2016*
+{: .last-updated}
 
 {: shortdesc}
-Il servizio {{site.data.keyword.mobileanalytics_full}} fornisce un'analisi approfondita dell'utilizzo e delle prestazioni delle applicazioni chiave per gli sviluppatori di applicazioni mobili e i proprietari di applicazioni. Utilizzando {{site.data.keyword.mobileanalytics_short}}, i proprietari e gli sviluppatori di applicazioni possono comprendere cosa sta
+Il servizio {{site.data.keyword.mobileanalytics_full}} fornisce un'analisi approfondita dell'utilizzo e delle prestazioni delle applicazioni chiave per gli sviluppatori di applicazioni mobili e i proprietari di applicazioni.  Utilizzando {{site.data.keyword.mobileanalytics_short}}, i proprietari e gli sviluppatori di applicazioni possono comprendere cosa sta
 succedendo sul "lato utente" e possono utilizzare questa analisi approfondita per sviluppare meglio delle applicazioni di vero interesse per gli utenti e
 che si distinguono nella ricchissima offerta di applicazioni mobili. 
 
 {: #overview}  
-Il servizio include la console {{site.data.keyword.mobileanalytics_short}}, dove gli sviluppatori e i proprietari di applicazioni possono monitorare le prestazioni delle applicazioni mobili, visualizzare le statistiche di utilizzo e cercare nei log dispositivo. {{site.data.keyword.mobileanalytics_short}} fornisce degli SDK client per iOS 8+ (solo Swift) e Android 4+.
+Il servizio include la console {{site.data.keyword.mobileanalytics_short}}, dove gli sviluppatori e i proprietari di applicazioni possono monitorare le prestazioni delle applicazioni mobili, visualizzare le statistiche di utilizzo e cercare nei log dispositivo.  {{site.data.keyword.mobileanalytics_short}} fornisce degli SDK client per iOS 8+ (solo Swift) e Android 4+.
 
 <!-- Mobile Analytics Server SDKs - set of server SDKs to protect resources that are-->
 <!--hosted on {{site.data.keyword.Bluemix_notm}}. Currently supported runtimes are-->
@@ -44,7 +46,7 @@ Con il servizio {{site.data.keyword.mobileanalytics_short}} puoi:
 <dt>Scopri rapidamente i problemi</dt>
 	<dd>Monitora lo stato di arresto anomalo. Imposta dei trigger di avviso sulle metriche critiche e instrada gli avvisi a qualsiasi endpoint REST. </dd>
 <dt>Risolvi la causa di fondo</dt>
-	<dd>Utilizza la registrazione client personalizzata nella tua applicazione, carica automaticamente i log ed esegui ricerche al loro interno dalla console. Esegui il drill-down sugli eventi di arresto anomalo per visualizzare le tracce di stack.</dd>
+	<dd>Utilizza la registrazione client personalizzata nella tua applicazione, carica automaticamente i log ed esegui ricerche al loro interno dalla console. Esegui il drill-down sugli eventi di arresto anomalo per visualizzare le tracce di stack. </dd>
 </dl>
  
 

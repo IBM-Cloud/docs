@@ -15,6 +15,7 @@ copyright:
 
 # Anwendung hochladen
 *Letzte Aktualisierung: 17. Februar 2016*
+{: .last-updated}
 
 Nachdem Sie sich bei {{site.data.keyword.Bluemix}} angemeldet haben, können Sie Ihre Anwendung mit dem Befehl 'cf push' hochladen.
 {:shortdesc}

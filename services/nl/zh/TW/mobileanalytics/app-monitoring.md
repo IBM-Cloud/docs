@@ -7,8 +7,9 @@ copyright:
 # 使用 {{site.data.keyword.mobileanalytics_short}} 監視應用程式
 {: #monitoringapps}
 *前次更新：2016 年 5 月 6 日*
+{: .last-updated}
 
-{{site.data.keyword.mobileanalytics_full}} 提供行動式應用程式的監視及分析。您可以記錄用戶端日誌，以及使用 {{site.data.keyword.mobileanalytics_short}} Client SDK 來監視資料。開發人員可以控制何時將這項資料傳送至 {{site.data.keyword.mobileanalytics_short}} 服務。將資料遞送給 {{site.data.keyword.mobileanalytics_short}} 時，您可以使用 {{site.data.keyword.mobileanalytics_short}} 儀表板來深入分析行動式應用程式、裝置及用戶端日誌。
+{{site.data.keyword.mobileanalytics_full}} 提供行動應用程式的監視及分析。您可以記錄用戶端日誌，以及使用 {{site.data.keyword.mobileanalytics_short}} Client SDK 來監視資料。開發人員可以控制何時將這項資料傳送至 {{site.data.keyword.mobileanalytics_short}} 服務。將資料遞送給 {{site.data.keyword.mobileanalytics_short}} 時，您可以使用 {{site.data.keyword.mobileanalytics_short}} 儀表板來深入分析行動應用程式、裝置及用戶端日誌。
 {: shortdesc}
 
 ## 使用自訂圖表視覺化資料
@@ -106,8 +107,7 @@ copyright:
 				* 臨界值類型：應用程式實例總計
 
 					**附註**：如果您選擇「應用程式平均值」選項，則用戶端日誌會除以裝置數目來取得平均值。例如，如果您有兩個裝置，而且其中一個裝置傳送六個用戶端日誌，而另一個裝置傳送三個用戶端日誌，則平均值是 4.5 個用戶端日誌。
-				* 運算子：大於或等於 3
-	<!-- insert alert definition tab image? -->
+				* 運算子：大於或等於 3<!-- insert alert definition tab image? -->
 
 4. 按**下一步**或**分佈方法**標籤，然後提供下列值：
 	* 方法：僅限 Analytics 主控台

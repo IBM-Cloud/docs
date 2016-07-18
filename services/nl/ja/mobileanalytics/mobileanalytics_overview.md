@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2016
@@ -7,7 +7,9 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.mobileanalytics_short}} について  
-*最終更新日: 2016 年 4 月 21 日*
+{: aboutmobileanalytics}
+*最終更新日時: 2016 年 4 月 21 日*
+{: .last-updated}
 
 {: shortdesc}
 {{site.data.keyword.mobileanalytics_full}} サービスは、モバイル・アプリ開発者およびアプリ所有者に、主なアプリの使用量とパフォーマンスに関する洞察を提供します。{{site.data.keyword.mobileanalytics_short}} を使用すれば、アプリ所有者および開発者は「ユーザー側」で何が発生しているのかを把握することができます。また、この洞察を使用して、ユーザーに関連性の高い、おびただしい数のモバイル・アプリの中で際立つ、より良いアプリを作成することができます。 

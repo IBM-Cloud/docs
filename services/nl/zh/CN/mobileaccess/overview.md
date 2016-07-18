@@ -7,6 +7,8 @@ copyright:
 
 # 关于 {{site.data.keyword.amashort}}
 {: #mca-overview}
+*上次更新时间：2016 年 5 月 15 日*
+{: .last-updated}
 
 {{site.data.keyword.amafull}} 服务为访问 {{site.data.keyword.Bluemix_notm}} 上所托管云资源的移动应用程序提供认证和监视服务。
 
@@ -45,7 +47,7 @@ copyright:
 
 ## {{site.data.keyword.amashort}} 请求流程
 {: #flow}
-下图描述了请求是如何从 SDK 流向移动后端和身份提供者的。
+下图描述了请求是如何从 SDK 流向移动后端应用程序和身份提供者的。
 
 ![图像](images/mca-sequence-overview.jpg)
 

@@ -16,15 +16,18 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} 專用
 {: #dedicated}
 
-*前次更新：2016 年 5 月 16 日*
+*前次更新：2016 年 6 月 13 日*
+{: .last-updated}
 
 
 {{site.data.keyword.Bluemix}} 是一種以雲端為基礎的開放標準平台，用於建置、執行及管理應用程式。使用「{{site.data.keyword.Bluemix_notm}} 專用」，即可在您自己的專用 SoftLayer 環境中，使用強大而簡潔的 {{site.data.keyword.Bluemix_notm}}，而這個環境同時安全地連接至「{{site.data.keyword.Bluemix_notm}} 公用」環境和您自己的網路。
 {:shortdesc}
 
+**附註：**與 SoftLayer 相關的所有資訊，包括 「{{site.data.keyword.Bluemix}} 專用」的服務、支援和銷售，皆不適用於中國。中國的「{{site.data.keyword.Bluemix}} 專用」客戶可以從 [UNISYS Service Management IBM Bluemix 頁面](https://chinabluemix.itsm.unisysedge.cn){: new_window}要求支援。此外，中國客戶還可以在 [IBM developerWorks 中國 Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} 取得免費支援。
+
 {{site.data.keyword.Bluemix_notm}} 的所有專用部署都包括下列好處及特性，而且不需額外付費：VPN、專用虛擬區域網路 (VLAN)、防火牆、與 LDAP 的連線功能、運用現有內部部署資料庫及應用程式的能力、24 小時全年無休的現場安全防護、專用硬體及標準支援。
 
-「{{site.data.keyword.Bluemix_notm}} 專用」包含所有內含的 {{site.data.keyword.Bluemix_notm}} 執行時期，以及 64 GB 的運算資源記憶體。
+「{{site.data.keyword.Bluemix_notm}} 專用」包含所有內含的 {{site.data.keyword.Bluemix_notm}} 運行環境，以及 64 GB 的運算資源記憶體。
 
 此外，還會有一組服務可用作「{{site.data.keyword.Bluemix_notm}} 專用」服務。請檢閱下表，以查看所含項目及您可購買的項目。
 
@@ -32,17 +35,18 @@ copyright:
 
 | **類型**        | **名稱**            | **說明** |      
 |-----------------|-------------------|-------------------|
-|內含 | {{site.data.keyword.Bluemix_notm}} 執行時期 | 使用執行時期可快速啟動並執行您的應用程式，而不需要設定及管理機器和作業系統。您可以在「{{site.data.keyword.Bluemix_notm}} 專用」實例中使用所有 {{site.data.keyword.Bluemix_notm}} 執行時期。|
+|內含 | {{site.data.keyword.Bluemix_notm}} 運行環境 | 使用運行環境可快速啟動並執行您的應用程式，而不需要設定及管理機器和作業系統。您可以在「{{site.data.keyword.Bluemix_notm}} 專用」實例中使用所有 {{site.data.keyword.Bluemix_notm}} 運行環境。|
 |內含 | {{site.data.keyword.autoscaling}} | 根據原則，動態增加或減少應用程式的運算能力。使用此服務，即可在「{{site.data.keyword.Bluemix_notm}} 專用」環境中無限制地使用。 |
 |選用 | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} 將 {{site.data.keyword.APIM}} 及 IBM StrongLoop 整合成單一供應項目，提供綜合性解決方案來建立、執行、管理及強制執行 API 和微服務。 |
 |選用 | {{site.data.keyword.APIM}} | 使用 {{site.data.keyword.APIMfull}} 服務來組合、管理及社交化 API。您可以使用 Proxy URL 或組合來自 HTTP 資料來源中的資料，以匯入 API 與資源。使用 {{site.data.keyword.APIM}} 服務的好處是您可以管理 API 的使用方式。 |
-|選用 | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動式及 Web 應用程式模型。 |
+|選用 | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動及 Web 應用程式模型。 |
 |選用 | {{site.data.keyword.dashdbshort}} | 使用 dashDB 來儲存關聯式資料，包括地理空間資料之類的特殊類型。然後，使用 SQL 或進階內建分析（例如預測分析及資料採礦、使用 R 的分析和地理空間分析）分析該資料。 |
 |選用 | {{site.data.keyword.datacshort}} | 此服務提供記憶體內的資料網格，它支援應用程式的分散式快取情境。包含 50 GB 的記憶體內快取。 |
-|選用 | {{site.data.keyword.mobilepushshort}} | {{site.data.keyword.mobilepushshort}} 是一種服務，可用來將通知傳送至 iOS 及 Android 裝置。通知可以將目標設為所有應用程式使用者或一組使用標籤的特定使用者和裝置。您可以管理裝置、標籤及訂閱。您也可以使用 SDK（軟體開發套件）及「具象狀態傳輸 (REST)」應用程式介面 (API) 來進一步開發用戶端應用程式。 |
+| 選用（測試版） | 記載 | 在 {{site.data.keyword.Bluemix_notm}} 使用者介面中提供 Cloud Foundry 應用程式的日誌，並在 Kibana 中提供可搜尋的日誌和儀表板。 |
+|選用 | {{site.data.keyword.mobilepushshort}} | {{site.data.keyword.mobilepushshort}} 是一種服務，可用來將通知傳送至 iOS 及 Android 裝置。可以將通知目標設為所有應用程式使用者或一組使用標籤的特定使用者和裝置。您可以管理裝置、標籤及訂閱。您也可以使用 SDK（軟體開發套件）及「具象狀態傳輸 (REST)」應用程式介面 (API) 來進一步開發用戶端應用程式。 |
 |選用 | {{site.data.keyword.messagehub}} | {{site.data.keyword.messagehub}} 是一個可擴充、分散式、高傳輸量訊息匯流排，以聯合您的內部部署與外部部署技術。{{site.data.keyword.messagehub}} 是以 Apache Kafka 為基礎，後者是一個快速、可擴充及可延續的即時傳訊引擎。 |
 |選用 | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} 服務使您能夠以安全的方式將 {{site.data.keyword.Bluemix_notm}} 應用程式連接至內部部署或雲端中的遠端位置。  |
-|選用 | {{site.data.keyword.sescashort}} | 為了提高備援，{{site.data.keyword.sescashort}} 會提供快取中所儲存階段作業的抄本。因此，電壓過低或作業中斷時，用戶端應用程式仍然保有快取中階段作業的存取權。此服務支援 Web 及行動式應用程式的階段作業快取實務。 |
+|選用 | {{site.data.keyword.sescashort}} | 為了提高備援，{{site.data.keyword.sescashort}} 會提供快取中所儲存階段作業的抄本。因此，電壓過低或作業中斷時，用戶端應用程式仍然保有快取中階段作業的存取權。此服務支援 Web 及行動應用程式的階段作業快取情境。 |
 |選用 | {{site.data.keyword.iot_full}} | 此服務可讓您的應用程式與已連接的裝置、感應器及閘道進行通訊，並且取用這些項目所收集的資料。基本供應項目允許在專用環境內執行專用版本的 {{site.data.keyword.iot_full}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 1.6 TB 的資料交換。 |
 
 您可以選購一些元件來擴充及延伸您的資源和服務容量。聯絡銷售團隊，即可購買所有這些元件；如需聯絡業務代表的相關資訊，請移至[與我們聯絡](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)。若要增加服務的方案，您可以從型錄的服務磚選取方案。
@@ -51,18 +55,22 @@ copyright:
 
 | **名稱**            | **說明** |      
 |-------------------|-------------------|
-|專用執行時期 16 GB 容量增加  | 延伸執行時期環境，以提供額外的 16 GB 執行時期容量。 |
-|專用 {{site.data.keyword.cloudant}} 1.6 TB 容量增加 | 包括在設計容量為 1.6 TB 的專用環境內，執行專用版本的 {{site.data.keyword.cloudantfull}}。  |
-|專用 {{site.data.keyword.datacshort}} 及 {{site.data.keyword.sescashort}} 50 GB 容量增加 | 此環境允許部署及執行 {{site.data.keyword.datacshort}} 和 {{site.data.keyword.sescashort}} 實例，最多有 50 GB 的累積容量。 |
-|專用直接鏈結 1 Gbps 容量 | 直接連接至針對資料傳送所設計的適當 SoftLayer 網路存在點的專用網路鏈結，最高 1 Gbps。 |
-|專用直接鏈結 10 Gbps 容量 | 直接連接至針對資料傳送所設計的適當 SoftLayer 網路存在點的專用網路鏈結，最高 10 Gbps。 |
-|專用 {{site.data.keyword.dashdbshort}} 企業 64.1 | 在具有 64 GB RAM 及 16 個 vCPU 的專用伺服器上，每個服務實例一個資料庫。建議最多使用 1 TB 預載資料（以一般壓縮為依據）。  |
-|專用 {{site.data.keyword.dashdbshort}} 企業 256.4 | 在具有 256 GB RAM 及 32 個核心的專用裸機伺服器上，每個服務實例一個資料庫。建議最多使用 4 TB 預載資料（以一般壓縮為依據）。 |
-|專用 {{site.data.keyword.dashdbshort}} 企業 256.12  | 在具有 256 GB RAM 及 32 個核心的專用裸機伺服器上，每個服務實例一個資料庫。建議最多使用 12 TB 預載資料（以一般壓縮為依據）。此儲存體密集方案適合資料量較高且查詢不需要以記憶體內速度執行的環境。 |
+|專用運行環境 16 GB 容量增加  | 延伸運行環境，以提供額外的 16 GB 運行環境容量。 |
+|專用 {{site.data.keyword.apiconnect_short}} Professional 5 百萬個 API 呼叫 | 此環境允許在容量為每月 5 百萬個 API 呼叫的專用環境內，執行專用版本的 {{site.data.keyword.apiconnect_short}}，目標為部門的 API 專案。 |
+|專用 {{site.data.keyword.apiconnect_short}} Professional 10 萬個 API 呼叫增加 | {{site.data.keyword.apiconnect_short}} Professional 環境的延伸，每月可提供 10 萬個 API 呼叫的額外容量。 |
+|專用 {{site.data.keyword.apiconnect_short}} Enterprise 2500 萬個 API 呼叫 | 此環境允許在容量為每月 2500 萬個 API 呼叫的專用環境內，執行專用版本的 {{site.data.keyword.apiconnect_short}}，目標為整個企業的 API 專案。 |
+|專用 {{site.data.keyword.apiconnect_short}} Enterprise 10 萬個 API 呼叫增加 | {{site.data.keyword.apiconnect_short}} Enterprise 環境的延伸，每月可提供 10 萬個 API 呼叫的額外容量。 |
 |專用 {{site.data.keyword.APIM}} 1000 個 API 呼叫容量  | 此環境允許在容量為每秒 1,000 個 API 呼叫的專用環境內執行專用版本的 {{site.data.keyword.APIM}}。 |
 |專用 {{site.data.keyword.APIM}} 500 個 API 呼叫容量增加  | 此環境允許在容量為每秒 500 個 API 呼叫的專用環境內執行專用版本的 IBM API Management for Bluemix。  |
+|專用 {{site.data.keyword.cloudant}} 1.6 TB 容量增加 | 包括在設計容量為 1.6 TB 的專用環境內，執行專用版本的 {{site.data.keyword.cloudantfull}}。  |
+|專用 {{site.data.keyword.datacshort}} 及 {{site.data.keyword.sescashort}} 50 GB 容量增加 | 此環境允許部署及執行 {{site.data.keyword.datacshort}} 和 {{site.data.keyword.sescashort}} 實例，最多有 50 GB 的累積容量。 |
+|專用 {{site.data.keyword.dashdbshort}} 企業 64.1 | 在具有 64 GB RAM 及 16 個 vCPU 的專用伺服器上，每個服務實例一個資料庫。建議最多使用 1 TB 預載資料（以一般壓縮為依據）。  |
+|專用 {{site.data.keyword.dashdbshort}} 企業 256.4 | 在具有 256 GB RAM 及 32 個核心的專用裸機伺服器上，每個服務實例一個資料庫。建議最多使用 4 TB 預載資料（以一般壓縮為依據）。 |
+|專用 {{site.data.keyword.dashdbshort}} 企業 256.12  | 在具有 256 GB RAM 及 32 個核心的專用裸機伺服器上，每個服務實例一個資料庫。建議最多使用 12 TB 預載資料（以一般壓縮為依據）。此儲存空間密集方案適合資料量較高且查詢不需要以記憶體內速度執行的環境。 |
+|專用直接鏈結 1 Gbps 容量 | 直接連接至針對資料傳送所設計的適當 SoftLayer 網路存在點的專用網路鏈結，最高 1 Gbps。 |
+|專用直接鏈結 10 Gbps 容量 | 直接連接至針對資料傳送所設計的適當 SoftLayer 網路存在點的專用網路鏈結，最高 10 Gbps。 |
 |{{site.data.keyword.Bluemix_notm}} 專用社群服務  | 此環境允許部署及執行社群服務，每一個社群服務最多有 50 個實例。  |
-|IBM Bluemix 專用硬體防火牆 - 高可用性 | 備用的 1 Gbps 硬體防火牆，配置來保護「專用」環境內相同 VLAN 上的單一、多個或所有伺服器。 |
+|IBM {{site.data.keyword.Bluemix_notm}} 專用硬體防火牆 - 高可用性 | 備用的 1 Gbps 硬體防火牆，配置來保護「專用」環境內相同 VLAN 上的單一、多個或所有伺服器。 |
 |針對高可用性配置的專用 1 Gbps Vyatta VPN  | 針對高可用性配置的 1 Gbps Vyatta VPN，以供專用環境使用。 |
 |IBM {{site.data.keyword.Bluemix_notm}} 專用 {{site.data.keyword.mobilepushshort}} | 此環境允許部署及執行每秒可接受 300 個要求的 {{site.data.keyword.mobilepushshort}} 實例。 |
 |{{site.data.keyword.iot_short}} 專用漸進式增加 | 此環境增加允許在專用環境內執行專用版本的 {{site.data.keyword.iot_short}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 0.5 TB 的資料交換。 |
@@ -149,9 +157,9 @@ copyright:
 ##設定 {{site.data.keyword.Bluemix_notm}} 專用
 {: #setupdedicated}
 
-「{{site.data.keyword.Bluemix_notm}} 專用」的設計，是為了提供「{{site.data.keyword.Bluemix_notm}} 公用」供應項目的專用版本。您可以使用 {{site.data.keyword.Bluemix_notm}} 服務及執行時期，來支援 IBM 管理之 SoftLayer 帳戶中的運算需求。
+「{{site.data.keyword.Bluemix_notm}} 專用」的設計，是為了提供「{{site.data.keyword.Bluemix_notm}} 公用」供應項目的專用版本。您可以使用 {{site.data.keyword.Bluemix_notm}} 服務及運行環境，來支援 IBM 管理之 SoftLayer 帳戶中的運算需求。
 
-IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyword.Bluemix_notm}} 專用」。您可以存取服務、執行時期及關聯的資源，也可以部署和移除 {{site.data.keyword.Bluemix_notm}} 應用程式。IBM 利用多個 SoftLayer 位置來交付「{{site.data.keyword.Bluemix_notm}} 專用」，讓您可以在接近您的位置取得專用版本。
+IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyword.Bluemix_notm}} 專用」。您可以存取服務、運行環境及相關聯的資源，也可以部署及移除 {{site.data.keyword.Bluemix_notm}} 應用程式。IBM 利用多個 SoftLayer 位置來交付「{{site.data.keyword.Bluemix_notm}} 專用」，讓您可以在接近您的位置取得專用版本。
 
 若要設定您的 {{site.data.keyword.Bluemix_notm}} 專用版本，請執行下列動作：
 
@@ -188,7 +196,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 <li>您決定是否將從公用網際網路存取您的專用環境。</li>
 <li>您選取將使用的鑑別類型。可選取的類型包括 IBM ID 或 Active Directory。如需使用及登錄 IBM ID 的相關資訊，請參閱<a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">說明及常見問題</a>頁面。</li>
 <li>您識別並指派環境的管理團隊角色。如需您必須指派哪些角色的相關資訊，請參閱 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} 專用角色及責任</a>。</li>
-<li>IBM 部署核心平台，其中包含彈性執行時期、主控台、管理特性和監視。</li>
+<li>IBM 部署核心平台，其中包含彈性運行環境、主控台、管理特性及監視。</li>
 <li>IBM 配置您對環境的管理存取權。</li>
 <li>您可以開始使用您的專用實例來回應警示，該實例由 IBM 作業中心的團隊進行監視。</li>
 </ol>
@@ -212,7 +220,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 <dt>**網路專家**</dt>
 <dd>與 IBM 業務代表一起訂定 {{site.data.keyword.Bluemix_notm}} 部署的網路計劃。指派給這個角色的人員會檢查 IBM 所需的必要網路規格，並與 IBM 一起訂定實作計劃。安裝及驗證階段結束時，指派給這個角色的人員會進行核准，確認網路配置符合組織標準。</dd>
 <dt>**DevOps 聯絡人**</dt>
-<dd>與 IBM 業務代表一起計劃並套用 {{site.data.keyword.Bluemix_notm}} 平台、服務及執行時期所需的維護更新作業。指派給這個角色的人員也會與 IBM 業務代表一起配置您的「{{site.data.keyword.Bluemix_notm}} 專用」實例。</dd>
+<dd>與 IBM 業務代表一起計劃並套用 {{site.data.keyword.Bluemix_notm}} 平台、服務及運行環境所需的維護更新作業。指派給這個角色的人員也會與 IBM 業務代表一起配置您的「{{site.data.keyword.Bluemix_notm}} 專用」實例。</dd>
 </dl>
 
 您的客戶代表會與其他合作的 IBM 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「高階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[聯絡支援中心](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
@@ -237,7 +245,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 初始階段用來建立「{{site.data.keyword.Bluemix_notm}} 專用」環境。此階段的主要目標包括下列各項：
 
 - 審查財務合約，並建立交付的里程碑日期。
-- 建立 {{site.data.keyword.Bluemix_notm}} 平台，並提供執行時期及服務的存取權。
+- 建立 {{site.data.keyword.Bluemix_notm}} 平台，並提供運行環境及服務的存取權。
 - 定義並建立貴公司網路與 {{site.data.keyword.Bluemix_notm}} 作業之間的網路連線功能。
 - 識別並指派管理團隊的角色。
 
@@ -256,7 +264,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 |識別進行事件偵測及問題判斷的工具 | 識別用於在 {{site.data.keyword.Bluemix_notm}} 平台層次進行事件偵測及問題判斷的 IBM 及協力廠商工具。 | IBM |
 |定義提升計劃 | 定義提升計劃來分類並解決從監視元件偵測到的事件。 | IBM |
 |簽署基礎架構、平台及支援合約 | 簽署訂閱合約（包括環境的財務條款）。簽署支援訂閱。 | 客戶 |
-|採購環境 | 採購運算資源、網路及儲存體（包括核心及「服務 VLAN」用來管理 {{site.data.keyword.Bluemix_notm}}、裸機服務用來管理 Data Power，以及 SoftLayer Firewall）。提供容許 VPN 通道的基礎架構。 | 客戶 |
+|採購環境 | 採購運算資源、網路及儲存空間（包括核心及「服務 VLAN」用來管理 {{site.data.keyword.Bluemix_notm}}、裸機服務用來管理 Data Power，以及 SoftLayer Firewall）。提供容許 VPN 通道的基礎架構。 | IBM |
 |安裝平台、應用程式，以及監視和管理元件 | 安裝、配置及驗證平台元件（例如 BOSH Director、「雲端控制器」、「性能管理程式」、傳訊、路由器、DEA 及服務提供者），以及提升及問題偵測計劃中所定義的監視元件。 | IBM |
 |安裝並配置安全元件 | 安裝並配置嵌入監視及提升計劃的安全元件（包括 IBM QRadar、認證儲存庫、侵入防禦系統、IBM BigFix 及「IBM Security 特許身分管理」）。 | IBM |
 |安裝並配置自訂元件 |  	安裝並配置位在 {{site.data.keyword.Bluemix_notm}} 產品及服務範圍外部的自訂元件。 | 客戶 |
@@ -285,9 +293,9 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 |檢閱容量預測 | 檢閱容量預測，因為它們與可能影響容量的外部事件，以及預期的新應用程式部署有關。與 IBM 一起據此檢閱預測及計劃。 | IBM 及客戶皆負有責任 |
 |檢閱預測 | 檢閱容量預測，因為它與可能影響容量的外部事件有關。 | 客戶 |
 |調整容量 |  隨著需求的變更來新增或移除容量。 | IBM |
-|發佈即將到來的更新及維護 | 建立進行必要 IBM 元件維護的文件。 | IBM |
+|發佈即將到來的更新及維護 | 建立用於進行必要 IBM 元件維護的文件。 | IBM |
 |執行維護 | 與 IBM 一起排定 21 天時間範圍內的必要維護。您可以提供 21 天時間範圍內無法進行的日期，而 IBM 會據此排定維護。 | IBM 及客戶皆負有責任 |
-|處理佈建失敗 | 修正部署至「型錄」之客戶建立服務的佈建失敗（發生時）。 | IBM |
+|處理佈建失敗 | 修正部署至「型錄」之客戶建立服務所發生的佈建失敗。 | IBM |
 |執行網路及 IP 掃描 | 執行每日及每月網路和 IP 掃描。 | IBM 及客戶皆負有責任 |
 |提供審核日誌的存取權 | 提供所有安全及管理審核日誌的存取權。   | IBM 及客戶皆負有責任 |
 |進行測試 | 進行定期「重要作業控制 (KCO)」測試及協力廠商滲透測試。 | IBM 及客戶皆負有責任 |
@@ -313,7 +321,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 ##維護專用實例
 {: #maintaindedicated}
 
-當 IBM 認為適當時，即會維護並安裝 {{site.data.keyword.Bluemix_notm}} 執行時期和服務的更新及修正程式。在維護時間範圍期間，可能無法使用服務。此外，IBM 會與您一起合作來排定 {{site.data.keyword.Bluemix_notm}} 平台的維護更新。
+當 IBM 認為適當時，即會維護並安裝 {{site.data.keyword.Bluemix_notm}} 運行環境和服務的更新及修正程式。在維護時間範圍期間，可能無法使用服務。此外，IBM 會與您一起合作來排定 {{site.data.keyword.Bluemix_notm}} 平台的維護更新。
 
 「{{site.data.keyword.Bluemix_notm}} 專用」需要下列類型的維護：
 <dl>
@@ -370,7 +378,7 @@ IBM 會傳送針對「狀態」頁面上每一個維護時間範圍所規劃之�
 
 「{{site.data.keyword.Bluemix_notm}} 公用」預設會部署至多個地理位置。不過，您必須執行下列動作，才能啟用分散在全球的「{{site.data.keyword.Bluemix_notm}} 專用」實例：
 
-* 確定您的開發人員將應用程式部署至多個地區（透過手動或自動化處理程序）。地區應該彼此相隔 200 公里以上，確保自然災難不會影響這兩個地理位置。
+* 確定您的開發人員將應用程式部署至多個地區（透過手動或自動化處理程序）。地區應該彼此相隔 200 公里以上，確保自然災難不會同時影響這兩個地理位置。
 * 配置廣域負載平衡器（例如 Akamai 或 Dyn），使其指向至少兩個不同地區中的應用程式。
 
 **附註**：並非所有 {{site.data.keyword.Bluemix_notm}} 服務都支援地區分散。當您建構應用程式時，如果要達到地理分散，則也必須確保該應用程式所使用的服務具有資料同步處理這個重要特性。
@@ -414,7 +422,7 @@ IBM 會傳送針對「狀態」頁面上每一個維護時間範圍所規劃之�
 </p>
 </dd>
 <dt>SoftLayer 備援</dt>
-<dd>如果在專用環境中使用 SoftLayer，則每一個雲端儲存體叢集中的資料都會寫入多次，而且儲存體叢集已配置自動修復功能，以防磁碟機故障。如果虛擬伺服器發生問題，SoftLayer 會嘗試在另一個主機上重新啟動虛擬伺服器。</dd>
+<dd>如果在專用環境中使用 SoftLayer，則每一個雲端儲存空間叢集中的資料都會寫入多次，而且儲存空間叢集已配置自動修復功能，以防磁碟機故障。如果虛擬伺服器發生問題，SoftLayer 會嘗試在另一個主機上重新啟動虛擬伺服器。</dd>
 <dt>meta 資料備份</dt>
 <dd>使用 SoftLayer EVault Backup，將 meta 資料備份至最少距離 200 公里的位置。</dd>
 </dl>
@@ -424,7 +432,7 @@ IBM 會傳送針對「狀態」頁面上每一個維護時間範圍所規劃之�
 
 「{{site.data.keyword.Bluemix_notm}} 專用」設定、meta 資料及配置會定期備份，以為環境中發生的任何非計劃性的運作中斷作好準備。您負責備份的資料包括應用程式資料、雲端資料庫服務資料及物件儲存庫。
 
-在資料備份過程（包括系統 meta 資料及配置），IBM 會完成下列作業：
+在資料備份過程（包括系統 meta 資料及配置）中，IBM 會完成下列作業：
 
 <ul>
 <li>加密所有備份副本並管理加密金鑰</li>

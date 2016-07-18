@@ -15,6 +15,7 @@ copyright:
 {: #deployingapps}
 
 *Dernière mise à jour : 9 mai 2016*
+{: .last-updated}
 
 Vous pouvez déployer des applications dans {{site.data.keyword.Bluemix}} via diverses méthodes, notamment en utilisant l'interface de ligne de commande et des environnements de développement intégré (IDE). Vous pouvez également utiliser des manifestes d'application afin de déployer des applications. L'utilisation d'un manifeste d'application vous permet de réduire le nombre d'informations de déploiement que vous devez spécifier à chaque fois que vous déployez une application dans {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -173,12 +174,11 @@ L'exemple ci-dessous illustre un fichier manifeste pour une application Node.js
 utilisant le pack de construction de communauté intégré Node.js dans {{site.data.keyword.Bluemix_notm}}.
 
 ```
----
-- name: monAppNodejs
+--- - name: myNodejsapp
   memory: 256M
   disk_quota: 512M
-  path: /dev/monAppNodejs
-  buildpack: pack_construction_nodejs
+  path: /dev/myNodejsApp
+  buildpack: nodejs_buildpack
   host: nodejs001
   domain: mybluemix.net
   command: node app.js

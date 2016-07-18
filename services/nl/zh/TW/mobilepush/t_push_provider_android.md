@@ -29,7 +29,7 @@ API 金鑰會安全地儲存並供 Push Notification Service 用來連接至 GCM
 
 	**附註**：當您建立專案時，會建立專案號碼（傳送端 ID）。使用此號碼，可在 Push 儀表板畫面上設定 Push Notification Service。
 
-5. 按一下 **API 及鑑別**，然後按一下**行動式 API** 區段中的 **Cloud Messaging for Android**。
+5. 按一下 **API 及鑑別**，然後按一下**行動 API** 區段中的 **Cloud Messaging for Android**。
 
 	![API](images/gcm_mobileapi.jpg)
 

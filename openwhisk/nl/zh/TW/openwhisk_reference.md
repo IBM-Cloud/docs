@@ -19,6 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} 系統詳細資料
 {: #openwhisk_reference}
 *前次更新：2016 年 4 月 14 日*
+{: .last-updated}
 
 下列各節提供有關 {{site.data.keyword.openwhisk}} 系統的其他詳細資料。
 {: shortdesc}
@@ -34,7 +35,7 @@ copyright:
 
 在 Bluemix 中，組織+空間配對對應至 {{site.data.keyword.openwhisk_short}} 名稱空間。例如，組織 `BobsOrg` 及空間 `dev` 將對應至 {{site.data.keyword.openwhisk_short}} 名稱空間 `/BobsOrg_dev`。
 
-如果您已獲授權，請建立專屬的名稱空間。`/whisk.system` 名稱空間是保留供隨 {{site.data.keyword.openwhisk_short}} 系統一起配送的實體使用。
+如果您已獲授權，請自行建立名稱空間。`/whisk.system` 名稱空間是保留供隨 {{site.data.keyword.openwhisk_short}} 系統一起配送的實體使用。
 
 
 ### 完整名稱
@@ -73,7 +74,7 @@ copyright:
 
 動作實作應該是無狀態，或*等冪*。雖然系統不會強制執行此內容，但是不保證在呼叫之間可以使用動作所維護的任何狀態。
 
-此外，動作可能會有多個說明實例，而且每個說明實例都有其專屬狀態。動作呼叫可能會分派至所有這些說明實例。
+此外，動作可能會有多個說明實例，而且每個說明實例都有自己的狀態。動作呼叫可能會分派至所有這些說明實例。
 
 ### 呼叫輸入及輸出
 
@@ -84,7 +85,7 @@ copyright:
 
 動作不是依序進行呼叫。如果使用者從指令行或 REST API 呼叫動作兩次，則可能會先執行第二次呼叫，再執行第一次呼叫。如果動作有負面影響，則可能會依任意順序觀察到它們。
 
-此外，不保證自動執行動作。可以同時執行兩個動作，而其負面影響可能會交錯。所有並行性負面影響都是相依實作。
+此外，不保證自動執行動作。可以同時執行兩個動作，而其負面影響可能會交錯。OpenWhisk 無法確保任何特定並行一致性模型是否有負面影響。所有並行性負面影響都是相依實作。
 
 ### 最多一次語意
 {: #openwhisk_atmostonce}
@@ -127,13 +128,12 @@ copyright:
 
 ### 函數原型
 
-{{site.data.keyword.openwhisk_short}} JavaScript 動作是在 Node.js 執行時期（目前為 0.12.9 版）中執行。
+{{site.data.keyword.openwhisk_short}} JavaScript 動作是在 Node.js 運行環境（目前為 0.12.9 版）中執行。
 
 以 JavaScript 撰寫的動作必須限制於單一檔案。此檔案可以包含多個函數，但依慣例，必須要有稱為 `main` 的函數，而且此函數是在呼叫動作時呼叫。例如，以下是具有多個函數的動作的範例。
 
 ```
-function main() {
-    return { payload: helper() }
+function main() {return { payload: helper() }
 }
 
 function helper() {
@@ -167,8 +167,7 @@ function main() {
 ```
 // an action in which each path results in a synchronous activation
 function main(params) {
-  if (params.payload == 0) {
-     return;
+  if (params.payload == 0) {return;
   } else if (params.payload == 1) {
      return whisk.done();    // indicates normal completion
   } else if (params.payload == 2) {
@@ -185,8 +184,7 @@ function main(params) {
 以下是非同步執行的動作範例。
 
 ```
-function main() {
-    setTimeout(function() {
+function main() {setTimeout(function() {
         return whisk.done({done: true});
     }, 100);
     return whisk.async();
@@ -198,7 +196,7 @@ function main() {
 
 ```
   function main(params) {
-      if (params.payload) {
+     if (params.payload) {
          setTimeout(function() {
             return whisk.done({done: true});
          }, 100);
@@ -248,7 +246,7 @@ function main() {
 
 `whisk.getAuthKey()` 函數會傳回用來執行動作的授權金鑰。您通常不需要直接呼叫此函數，因為 `whisk.invoke()` 及 `whisk.trigger()` 函數會隱含地使用它。
 
-### 執行時期環境
+### 運行環境
 {: #openwhisk_ref_runtime_environment}
 
 JavaScript 動作是在具有可供動作使用的下列套件的 Node.js 0.12.9 版環境中執行：
@@ -257,6 +255,7 @@ JavaScript 動作是在具有可供動作使用的下列套件的 Node.js 0.12.9
 - async
 - body-parser
 - btoa
+- cheerio
 - cloudant
 - commander
 - consul
@@ -265,6 +264,7 @@ JavaScript 動作是在具有可供動作使用的下列套件的 Node.js 0.12.9
 - errorhandler
 - express
 - express-session
+- gm
 - jade
 - log4js
 - merge
@@ -279,11 +279,13 @@ JavaScript 動作是在具有可供動作使用的下列套件的 Node.js 0.12.9
 - semver
 - serve-favicon
 - socket.io
+- socket.io-client
 - superagent
 - swagger-tools
 - tmp
 - watson-developer-cloud
 - when
+- ws
 - xml2js
 - xmlhttprequest
 - yauzl
@@ -292,7 +294,7 @@ JavaScript 動作是在具有可供動作使用的下列套件的 Node.js 0.12.9
 ## Docker 動作
 {: #openwhisk_ref_docker}
 
-Docker 動作是在 Docker 儲存器中執行使用者提供的二進位檔。二進位檔是在根據 Ubuntu 14.04 LTD 的 Docker 映像檔中執行，因此二進位檔必須與此發行套件相容。
+Docker 動作是在 Docker 容器中執行使用者提供的二進位檔。二進位檔是在根據 Ubuntu 14.04 LTD 的 Docker 映像檔中執行，因此二進位檔必須與此發行套件相容。
 
 動作輸入 "payload" 參數會被當作位置引數傳遞至二進位程式，而且會在 "result" 參數中傳回執行程式的標準輸出。
 
@@ -300,7 +302,62 @@ Docker 架構是建置 {{site.data.keyword.openwhisk_short}} 相容 Docker 映�
 
 應該將主要二進位程式複製到 `dockerSkeleton/client/clientApp` 檔。任何伴隨的檔案或程式庫都可以位於 `dockerSkeleton/client` 目錄中。
 
-透過修改 `dockerSkeleton/Dockerfile`，也可以併入任何編譯步驟或相依關係。例如，如果動作是 Python Script，您可以安裝 Python。
+透過修改 `dockerSkeleton/Dockerfile`，也可以包含任何編譯步驟或相依關係。例如，如果動作是 Python Script，您可以安裝 Python。
+
+
+## REST API
+
+系統中的所有功能都可透過 REST API 來使用。其中有動作、觸發程式、規則、套件、啟動和名稱空間的集合和實體端點。
+
+以下是集合端點：
+
+- `https://$BASEURL/api/v1/namespaces`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations`
+
+您可以在集合端點上執行 GET 要求，以提取集合中的實體清單。
+
+每一種實體類型都有實體端點：
+
+- `https://$BASEURL/api/v1/namespaces/{namespace}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations/{activationName}`
+
+名稱空間和啟動端點僅支援 GET 要求。動作、觸發程式、規則和套件端點可支援 GET、PUT 及 DELETE 要求。動作、觸發程式和規則的端點也可支援 POST 要求（用來呼叫動作和觸發程式，以及啟用或停用規則）。如需詳細資料，請參閱 [API 參考資料](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json)。
+
+所有 API 都是透過 HTTP 基本鑑別進行保護。基本鑑別認證位於 `~/.wskprops` 檔案的 `AUTH` 內容中，以冒號區隔。您也可以在 [CLI 配置步驟](../README.md#setup-cli)中擷取這些認證。
+
+下列範例是使用 cURL 指令來取得 `whisk.system` 名稱空間中的所有套件清單：
+
+```
+curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
+```
+{: pre}
+```
+[
+  {
+    "name": "slack",
+    "binding": false,
+    "publish": true,
+    "annotations": [
+      {
+        "key": "description",
+        "value": "Package which contains actions to interact with the Slack messaging service"
+      }
+    ],
+    "version": "0.0.9",
+    "namespace": "whisk.system"
+  },
+  ...
+]
+```
+{: screen}
 
 
 ## 系統限制
@@ -310,8 +367,8 @@ Docker 架構是建置 {{site.data.keyword.openwhisk_short}} 相容 Docker 映�
 
 | 限制 | 說明 | 可配置 | 單位 | 預設值 |
 | ----- | ----------- | ------------ | -----| ------- |
-| timeout | 不容許儲存器的執行時間超過 N 毫秒 | 每個動作 |  毫秒 | 60000 |
-| memory | 不容許儲存器配置超過 N MB 的記憶體 | 每個動作 | MB | 256 |
+| timeout | 不容許容器的執行時間超過 N 毫秒 | 每個動作 |  毫秒 | 60000 |
+| memory | 不容許容器配置超過 N MB 的記憶體 | 每個動作 | MB | 256 |
 | concurrent | 每個名稱空間不容許超過 N 個並行啟動 | 每個名稱空間 | 數字 | 100 |
 | minuteRate | 使用者每分鐘不能呼叫超過這麼多動作 | 每位使用者 | 數字 | 120 |
 | hourRate | 使用者每小時不能呼叫超過這麼多動作 | 每位使用者 | 數字 | 3600 |
@@ -319,12 +376,12 @@ Docker 架構是建置 {{site.data.keyword.openwhisk_short}} 相容 Docker 映�
 ### 每個動作逾時（毫秒）（預設值：60 秒）
 * 逾時限制 N 落在 [100 毫秒..300000 毫秒] 的範圍內，並且是針對每個動作設定（毫秒）。
 * 使用者可以在建立動作時變更此限制。
-* 終止執行時間超過 N 毫秒的儲存器。
+* 終止執行時間超過 N 毫秒的容器。
 
 ### 每個動作記憶體 (MB)（預設值：256MB）
 * 記憶體限制 M 落在 [128MB..512MB] 的範圍內，並且是針對每個動作設定 (MB)。
 * 使用者可以在建立動作時變更此限制。
-* 配置給儲存器的記憶體不能超過限制。
+* 配置給容器的記憶體不能超過限制。
 
 ### 每個名稱空間 #並行呼叫 (#)（預設值：100）
 * 目前針對名稱空間所處理的啟動次數不能超過 100。

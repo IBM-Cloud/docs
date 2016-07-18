@@ -15,6 +15,7 @@ copyright:
 {: #app_management}
 
 *마지막 업데이트 날짜: 2016년 3월 17일*
+{: .last-updated}
 
 App Management는 {{site.data.keyword.Bluemix}}에서
 Liberty 및 Node.js 애플리케이션에 사용할 수 있는 개발 및 디버깅 유틸리티 세트입니다.

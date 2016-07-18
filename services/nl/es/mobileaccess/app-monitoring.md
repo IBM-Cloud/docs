@@ -1,16 +1,22 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
   
 ---
 
-# Supervisión de la aplicación
+# Supervisión de aplicaciones
 {: #app-monitoring}
+*Última actualización: 6 de mayo de 2016*
+{: .last-updated}
 
 Además de las características de seguridad, {{site.data.keyword.amafull}} también ofrece capacidades de supervisión y análisis para aplicaciones móviles. Puede grabar registros de clientes y supervisar datos con el SDK del cliente de {{site.data.keyword.amashort}}. Los desarrolladores pueden controlar cuándo se envían estos datos al servicio de {{site.data.keyword.amashort}}. Todos los sucesos de seguridad, como un error de autenticación o una autenticación correcta, que se produce en el servicio de {{site.data.keyword.amashort}} se registran automáticamente.
 
 Cuando se entregan los datos a {{site.data.keyword.amashort}}, puede utilizar el panel de control de supervisión de {{site.data.keyword.amashort}} para obtener información de analíticas sobre aplicaciones móviles, dispositivos y registros de clientes. La información sobre las solicitudes que efectúa la aplicación en los recursos protegidos por {{site.data.keyword.amashort}} queda registrada de forma predeterminada.
+
+
+**Nota**: está previsto migrar las funciones de supervisión del servicio {{site.data.keyword.amashort}} al nuevo servicio [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics). El nuevo SDK de Swift utiliza el nuevo servicio de {{site.data.keyword.mobileanalytics_short}}, que proporciona más prestaciones de análisis. El servicio {{site.data.keyword.mobileanalytics_short}} actualmente se encuentra en fase experimental y está previsto que esté disponible de forma general en unos meses. Se recomienda investigar la migración de sus aplicaciones para utilizar el nuevo servicio {{site.data.keyword.mobileanalytics_short}} y el SDK de Swift ya que está previsto que las funciones de supervisión del servicio {{site.data.keyword.amashort}} dejen de utilizarse cuando {{site.data.keyword.mobileanalytics_short}} pase a estar disponible de forma general. 
+
 
 Los datos registrados automáticamente incluyen información como el número de autenticaciones, los dispositivos nuevos y los usuarios nuevos. Además puede configurar el SDK del cliente de {{site.data.keyword.amashort}} para que notifica la información siguiente:
 
@@ -32,11 +38,11 @@ No es posible garantizar la conservación de todos los datos capturados en el la
 ## Utilización del panel de control de supervisión de {{site.data.keyword.amashort}}
 {: #monitoring-dashboard}
 
-1. Abra el panel de control de {{site.data.keyword.Bluemix}} y pulse la aplicación de {{site.data.keyword.Bluemix_notm}}.
+1. Abra el panel de control de {{site.data.keyword.Bluemix}} y pulse la aplicación de {{site.data.keyword.Bluemix_notm}}. 
 
 2. Cuando se abra el panel de control de la aplicación de {{site.data.keyword.Bluemix_notm}}, pulse en un mosaico de {{site.data.keyword.amashort}}.
 
-3. En el panel de control de {{site.data.keyword.amashort}},haga clic en el enlace `Supervisión` del menú de la izquierda.
+3. En el panel de control de {{site.data.keyword.amashort}}, pulse en el enlace `Supervisión` del menú de la izquierda.
 
 ## Próximos pasos
 {: #next-steps}

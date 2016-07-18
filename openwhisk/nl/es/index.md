@@ -17,7 +17,8 @@ copyright:
 {:pre: .pre}
 
 # Iniciación a {{site.data.keyword.openwhisk_short}}
-*Última actualización: 17 de febrero de 2016*
+*Última actualización: 06 de junio de 2016*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} es un servicio distribuido de cálculo dirigido por sucesos. {{site.data.keyword.openwhisk_short}} ejecuta lógica de aplicación en respuesta a sucesos o invocaciones directas desde la web o apps móviles sobre HTTP. Los sucesos se pueden
 proporcionar desde servicios de Bluemix como Cloudant, y desde orígenes externos. Los desarrolladores se pueden centrar en escribir
@@ -65,7 +66,7 @@ Para empezar con {{site.data.keyword.openwhisk_short}}, intente el ejemplo de c�
 
 ```
 /**
- * Hello world como acción OpenWhisk.
+ * Hello world as an OpenWhisk action.
  */
 function main(params) {
     var name = params.name || 'World';
@@ -118,7 +119,7 @@ Para utilizar este ejemplo, siga estos pasos:
 También puede utilizar las capacidades dirigidas por sucesos en {{site.data.keyword.openwhisk_short}} para invocar
 esta acción en respuesta a sucesos. Siga el ejemplo
 [alarm service example](./openwhisk_packages.html#openwhisk_packages_trigger) para configurar un origen de sucesos para
-invocar la acción `hello` cada vez que se genere un  suceso periódico.
+invocar la acción `hello` cada vez que se genere un suceso periódico.
 
 
 ## Detalles del sistema

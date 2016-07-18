@@ -5,71 +5,65 @@ copyright:
 
 ---
 
-# Abilitazione dell'autenticazione Google nelle applicazioni Android
+# Abilitazione dell'autenticazione Google per le applicazioni Android
 {: #google-auth-android}
 
 ## Prima di cominciare
 {: #before-you-begin}
+È necessario disporre di:
 
-* Devi disporre di una risorsa protetta da {{site.data.keyword.amashort}} e di un progetto Android strumentato con l'SDK client {{site.data.keyword.amashort}}.  Per ulteriori informazioni, vedi [Introduzione a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) e [Configurazione
-dell'SDK Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).
-* Proteggi manualmente la tua applicazione di backend con l'SDK server {{site.data.keyword.amashort}}. Per ulteriori informazioni, vedi [Protezione delle risorse](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* Un progetto Android in Android Studio configurato per lavorare con Gradle. Non deve essere instrumentato con l'SDK client {{site.data.keyword.amashort}}.  
+* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html).
 
-## Configurazione di un progetto Google per la piattaforma Android
-{: #google-auth-android-project}
-Per iniziare a usare Google come un provider di identità, creare un progetto nella Google Developers Console. Parte della creazione di un progetto consiste nell'ottenere un ID client Google.  L'ID client Google è un identificativo univoco per la tua applicazione utilizzato dall'autenticazione Google.
+La configurazione dell'autenticazione Google per la tua applicazione Android {{site.data.keyword.amashort}} richiederà ulteriori configurazioni per:
+* L'applicazione {{site.data.keyword.Bluemix_notm}}
+* Il tuo progetto Android Studio
 
-1. Crea un progetto nella [Google Developers Console](https://console.developers.google.com).
-Se già hai un progetto, puoi tralasciare i passi che descrivono la creazione del progetto e iniziare con l'aggiunta delle credenziali.
-   1.    Apri il menu di nuovo progetto.
+## Creazione di un progetto con Google Developer Console
+{: #create-google-project}
 
-         ![immagine](images/FindProject.jpg)
+Per iniziare a usare Google come un provider di identità, creare un progetto nella [Google Developer Console](https://console.developers.google.com).
+Parte della creazione di un progetto consiste nell'ottenere un ID client Google.  L'ID client Google è un identificativo univoco per la tua applicazione utilizzato dall'autenticazione Google ed è necessario per la configurazione dell'applicazione {{site.data.keyword.Bluemix_notm}}.
 
-   2.    Fai clic su **Create a project**.
+Dalla console:
 
-         ![immagine](images/CreateAProject.jpg)
-
-
-   1. Dall'elenco **Social APIs**, scegli **Google+ API**.
-
-     ![immagine](images/chooseGooglePlus.jpg)
-
-   1. Fai clic su **Enable** nella schermata successiva.
-
-1. Seleziona la scheda **Consent Screen** e fornisci il nome prodotto visualizzato agli utenti. Altri valori sono facoltativi. Fai clic su **Save**.
-
-    ![immagine](images/consentScreen.png)
-
-1. Dall'elenco **Credentials**, scegli l'ID client OAuth.
-
-     ![immagine](images/chooseCredentials.png)
+1. Crea un progetto utilizzando l'API **Google+**.
+2. Aggiungi l'accesso utente **OAuth**.
+3. Prima di aggiungere le credenziali, devi scegliere la piattaforma (Android).
+4. Aggiungi le credenziali. Per completare la creazione delle credenziali, devi aggiungere l'**impronta digitale di certificato di firma**.
 
 
 
-1. Seleziona un tipo di applicazione. Fai clic su **Android**. Fornisci un nome significativo per il tuo client Android.
+### Configurazione del certificato di firma.
+Per fare in modo che Google verifichi l'autenticità della tua applicazione, devi specificare un'impronta digitale di certificato di firma.
 
-1. Per fare in modo che Google verifichi l'autenticità della tua applicazione, devi specificare un'impronta digitale di certificato di firma.
-
-	 **Ulteriori informazioni sulla sicurezza Android:** il sistema operativo Android richiede che tutte le applicazioni installate su un dispositivo Android siano firmate con un certificato sviluppatore. Un'applicazione Android può essere messa a punto in due modalità: debug e rilascio. È di norma consigliato disporre di certificati differenti per le modalità di debug e rilascio.  I certificati utilizzati per firmare le applicazioni Android in modalità di debug sono forniti con l'SDK Android.  L'SDK Android è in genere installato automaticamente da Android Studio. Quando vuoi rilasciare la tua applicazione a Google Play, devi firmare la tua applicazione con un altro certificato che di norma generi tu stesso. Per ulteriori informazioni,
+Il sistema operativo Android richiede che tutte le applicazioni installate su un dispositivo Android siano firmate con un certificato sviluppatore. Un'applicazione Android può essere messa a punto in due modalità: debug e rilascio. È di norma consigliato disporre di certificati differenti per le modalità di debug e rilascio.  I certificati utilizzati per firmare le applicazioni Android in modalità di debug sono forniti con l'SDK Android.  L'SDK Android è in genere installato automaticamente da Android Studio. Quando vuoi rilasciare la tua applicazione a Google Play, devi firmare la tua applicazione con un altro certificato che di norma generi tu stesso. Per ulteriori informazioni,
 vedi il documento relativo alla [firma delle tue applicazioni Android](http://developer.android.com/tools/publishing/app-signing.html).
 
-1. Un keystore che contiene un certificato per gli ambienti di sviluppo è memorizzato in un file `~/.android/debug.keystore`. La password keystore predefinita è: `android`. Questo certificato viene utilizzato per mettere a punto applicazioni in modalità di debug.
+Un keystore che contiene un certificato per gli ambienti di sviluppo è memorizzato in un file `~/.android/debug.keystore`. La password keystore predefinita è: `android`. Questo certificato viene utilizzato per mettere a punto applicazioni in modalità di debug.
 
-     1. Recupera la tua impronta digitale di certificato di firma:
+1. Recupera la tua impronta digitale di certificato di firma dal tuo ambiente di sviluppo client:
 
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 	```
 	Puoi utilizzare la stessa sintassi anche per recuperare l'hash chiave del tuo certificato di modalità di rilascio. Sostituisci percorso keystore e alias nel comando.
 
-1. Trova la riga che inizia con `SHA1` sotto **Certificate Fingerprints**. Copia l'impronta digitale ottenuta
-eseguendo il comando **keytool** nella Google Developers Console.
+1. Nella finestra di dialogo delle credenziali della console Google trova la riga che inizia con `SHA1` sotto **Certificate Fingerprints**. Copia il valore dell'impronta digitale ottenuta eseguendo il comando **keytool** nella text Developers Console.
 
-1. Specifica il nome pacchetto della tua applicazione Android. Per trovare il nome pacchetto della tua applicazione Android, apri
-il file `AndroidManifest.xml` in Android Studio e cerca: `<manifest package="{il-tuo-nome-pacchetto}">`. Al termine, fai
-clic su **Crea**.
+###Nome pacchetto
 
-Viene presentata una finestra di dialogo che visualizza il tuo ID client Google. Annota questo valore. Devi registrare questo valore presso {{site.data.keyword.Bluemix}}.
+1. Nella finestra di dialogo delle credenziali, immetti il nome pacchetto della tua applicazione Android. 
+
+  Per trovare il nome pacchetto della tua applicazione Android, apri
+il file `AndroidManifest.xml` in Android Studio e cerca: `<manifest package="{il-tuo-nome-pacchetto}">`. 
+
+1. Al termine, fai
+clic su **Crea**. **Questo completa la creazione delle credenziali.**
+
+###ID client Google
+
+Dopo che le credenziali sono state correttamente create, la pagina delle credenziali visualizza il tuo ID client Google. Annota questo valore. Devi registrare questo valore nell'applicazione {{site.data.keyword.Bluemix}}.
 
 
 ## Configurazione di {{site.data.keyword.amashort}} per l'autenticazione Google
@@ -109,7 +103,7 @@ Ora che hai un ID client Google per Android, puoi abilitare l'autenticazione Goo
 	}
 	```
 
-	Puoi rimuovere la dipendenza sul modulo `core` del gruppo `com.ibm.mobilefirstplatform.clientsdk.android`, se ne disponi. Il modulo `googleauthentication` viene scaricato automaticamente per tuo conto. Il modulo `googleauthentication` scarica e installa l'SDK Google nel tuo progetto Android.
+	**Nota:** puoi rimuovere la dipendenza sul modulo `core` del gruppo `com.ibm.mobilefirstplatform.clientsdk.android`, se ne disponi. Il modulo `googleauthentication` viene scaricato automaticamente per tuo conto. Il modulo `googleauthentication` scarica e installa l'SDK Google nel tuo progetto Android.
 
 1. Sincronizza il tuo progetto con Gradle facendo clic su **Tools > Android > Sync Project with Gradle Files**.
 
@@ -151,15 +145,14 @@ valori da **Rotta** e **GUID applicazione** dalla sezione **Opzioni mobili** nel
 
 ## Verifica dell'autenticazione
 {: #google-auth-android-test}
-Dopo che l'SDK client è stato inizializzato e il gestore autenticazione Google è stato registrato, puoi iniziare a effettuare richieste al tuo backend mobile.
+Dopo che l'SDK client è stato inizializzato e il gestore autenticazione Google è stato registrato, puoi iniziare a effettuare richieste alla tua applicazione di back-end mobile.
 
 ### Prima di cominciare
 {: #google-auth-android-testing-before}
-Devi disporre di un backend mobile creato con il contenitore tipo MobileFirst Services Starter e disporre già di una risorsa protetta da
-{{site.data.keyword.amashort}} all'endpoint `/protected`. per ulteriori informazioni, consulta [Protezione delle risorse](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)
+Devi disporre di una applicazione di backend mobile creata con il contenitore tipo MobileFirst Services Starter e disporre già di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`. per ulteriori informazioni, consulta [Protezione delle risorse](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)
 
-1. Prova a inviare una richiesta all'endpoint protetto del tuo backend mobile nel tuo browser desktop aprendo `{applicationRoute}/protected`, ad esempio: `http://my-mobile-backend.mybluemix.net/protected`.
- L'endpoint `/protected` di un backend mobile creato con il contenitore tipo MobileFirst Services è protetto con {{site.data.keyword.amashort}}. Pertanto, a esso possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, vedrai `Unauthorized` nel tuo browser del desktop.
+1. Prova a inviare una richiesta all'endpoint protetto della tua applicazione di backend mobile nel tuo browser desktop aprendo `{applicationRoute}/protected`, ad esempio: `http://my-mobile-backend.mybluemix.net/protected`.
+ L'endpoint `/protected` di una applicazione di back-end mobile creata con il contenitore tipo MobileFirst Services è protetto con {{site.data.keyword.amashort}}. Pertanto, a esso possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, vedrai `Unauthorized` nel tuo browser del desktop.
 
 1. Utilizza la tua applicazione Android per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato l'istanza `BMSClient` e registrato `GoogleAuthenticationManager`.
 

@@ -1,14 +1,17 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
 
 ---
 
 # Protección de recursos Node.js con {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}
 
-Puede utilizar el SDK del servidor de {{site.data.keyword.amashort}} para proteger recursos en la app Node.js. 
+*Última actualización: 15 de abril de 2016*
+{: .last-updated}
+
+Puede utilizar el SDK del servidor de {{site.data.keyword.amashort}} para proteger recursos en la app Node.js.
 
 ### Antes de empezar
 {: #before-you-begin}
@@ -21,7 +24,7 @@ Puede utilizar el SDK del servidor de {{site.data.keyword.amashort}} para proteg
 
 El SDK del servidor de {{site.data.keyword.amashort}} proporciona la estrategia de pasaporte `MCABackendStrategy` para su uso en las aplicaciones de fondo desplegadas en IBM {{site.data.keyword.Bluemix_notm}}. Para proteger la app de accesos no autorizados y obtener información de supervisión, debe instrumentar el servidor Node.js con `MCABackendStrategy`. El módulo npm `bms-mca-token-validation-strategy` proporciona la estrategia de pasaporte `MCABackendStrategy` y el método de verificación para validar la señal de acceso y la señal de ID que ha emitido {{site.data.keyword.amashort}}. Este módulo también suministra automáticamente información de supervisión sobre sucesos de seguridad.
 
-El SDK del servidor de {{site.data.keyword.amashort}} utiliza la infraestructura `Passport` para imponer la autorización. Para obtener más información, consulte [Passportjs.org](http://passportjs.org/).
+El SDK del servidor de {{site.data.keyword.amashort}} utiliza la infraestructura `Passport` para imponer la autorización.  Para obtener más información, consulte [Passportjs.org](http://passportjs.org/).
 
 ### Instalación del SDK del servidor de {{site.data.keyword.amashort}}
 {: #protecting-resources-serversdk}

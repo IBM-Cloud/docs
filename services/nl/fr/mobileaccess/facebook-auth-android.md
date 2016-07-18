@@ -1,21 +1,33 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
-# Activation de l'authentification Facebook dans les applis Android
+# Activation de l'authentification Facebook pour les applications Android
 {: #facebook-auth-android}
+
+*Dernière mise à jour : 15 juin 2016*
+{: .last-updated}
+
+
 Pour utiliser Facebook comme fournisseur d'identité dans vos applications Android, ajoutez et configurez la plateforme Android pour votre application Facebook.
+{:shortdesc}
 
 ## Avant de commencer
 {: #facebook-auth-android-before}
- * Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet Android instrumenté avec le SDK client de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
- * Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
- * Créez un ID d'application Facebook. Pour plus d'informations, voir
+Vous devez disposer des éléments suivants :
+* Un projet Android qui est configuré pour fonctionner avec Gradle. Le projet n'a pas besoin d'être instrumenté avec un SDK client de {{site.data.keyword.amashort}}.  
+* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* Un ID d'application Facebook. Pour plus d'informations, voir
 [Acquisition d'un ID d'application Facebook sur le
 portail Facebook Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
+**Important :** il n'est pas nécessaire d'installer séparément le SDK Facebook (`com.facebook.FacebookSdk`). Celui-ci est installé automatiquement par Gradle quand vous ajoutez le SDK client Facebook de {{site.data.keyword.amashort}}. Vous pouvez sauter l'étape d'ajout du SDK Facebook du portail des développeurs Facebook.
 
 ## Configuration d'une application Facebook pour la plateforme Android
 {: #facebook-auth-android-config}
@@ -96,16 +108,10 @@ Votre projet Android peut contenir deux fichiers `build.gradle` : un pour le pro
 	}
 ```
 
-	Vous pouvez retirer la dépendance sur le module `core` du groupe `com.ibm.mobilefirstplatform.clientsdk.android`, si elle figure dans votre fichier. Le module `facebookauthentication` télécharge le module `core` automatiquement.
-
-  Après avoir sauvegardé vos modifications, le module `facebookauthentication` télécharge et installe le SDK Facebook dans votre projet Android.
-
-
+	**Remarque :** vous pouvez retirer la dépendance sur le module `core` du groupe `com.ibm.mobilefirstplatform.clientsdk.android`, si elle figure dans votre fichier. Le module `facebookauthentication` télécharge le module `core` automatiquement, ainsi que le propre SDK de Facebook. Une fois que vous avez enregistré vos mises à jour, le module `facebookauthentication` télécharge et installe tous les SDK nécessaires dans votre projet Android.
 1. Synchronisez votre projet avec Gradle. Cliquez sur **Tools (Outils) > Android > Sync project with Gradle Files (Synchroniser le projet avec les fichiers Gradle)**.
 
-1. Ouvrez le fichier `res/values/strings.xml` et ajoutez une chaîne `facebook_app_id` contenant votre ID d'application Facebook :
-
-	```XML
+1. Ouvrez le fichier ``res/values/strings.xml`` et ajoutez une chaîne ``facebook_app_id` qui contient votre ID d'application Facebook :```XML
 	<resources>
 		<string name="app_name">HelloWorld</string>
 		<string name="action_settings">Settings</string>
@@ -119,12 +125,13 @@ Votre projet Android peut contenir deux fichiers `build.gradle` : un pour le pro
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
-  2. Ajoutez les métadonnées requises pour le SDK Facebook SDK dans l'élément `<application>` :
-
+  2. Ajoutez les métadonnées requises pour le SDK Facebook dans l'élément `<application>` :
 	```XML
 	<application .......>
 
-		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+		<meta-data
+			android:name="com.facebook.sdk.ApplicationId"
+			android:value="@string/facebook_app_id"/>
 
 		<activity ...../>
 		<activity ...../>
@@ -176,16 +183,15 @@ dans le tableau de bord Bluemix.
 ## Test de l'authentification
 Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des
 demandes à votre back end mobile.
-
 ### Avant de commencer
 {: #facebook-auth-android-testing-before}
 Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et disposer au préalable d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour configurer un noeud final `/protected`, voir la rubrique [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Depuis votre navigateur, tentez d'envoyer une demande à un noeud final protégé de votre nouveau système de back end mobile. Ouvrez l'URL suivante :
-`{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
+1. Tentez d'envoyer une demande à un noeud final protégé de votre nouveau système de back end mobile dans votre navigateur. Ouvrez l'URL suivante :
+`{applicationRoute}/protected`. Exemple : `http://my-mobile-backend.mybluemix.net/protected`
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message signalant l'interdiction d'accéder au site (`Unauthorized`) est renvoyé au navigateur. Ce message est renvoyé car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
 
-1. A l'aide de votre application Android, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé
+1. Utilisez votre application Android pour envoyer une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé
 le client `BMSClient` et enregistré le gestionnaire d'authentification Facebook (`FacebookAuthenticationManager`).
 
 	```Java

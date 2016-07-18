@@ -106,7 +106,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## 定制 AuthenticationListener 的样本实现
 {: #custom-android-samplecustom}
 
-AuthenticationListener 样本旨在处理定制身份提供者。可以从 [Github 存储库](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下载此样本。
+此 AuthenticationListener 样本设计用于处理定制身份提供者。可以从 [Github 存储库](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下载此样本。
 
 ```Java
 package com.ibm.helloworld;
@@ -138,7 +138,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 
 			// In case there was a failure collecting credentials you need to report
 			// it back to the AuthenticationContext. Otherwise Mobile Client
-			// Access Client SDK will remain in a waiting-for-credentials state
+			// Access client SDK will remain in a waiting-for-credentials state
 			// forever
 
 			log("This should never happen...");
@@ -184,9 +184,9 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 必须具有使用 {{site.data.keyword.mobilefirstbp}} 样板创建的应用程序，并且在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。
 
 
-1. 通过在浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端的受保护端点发送请求。
+1. 通过在浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。
 
-1. 使用 {{site.data.keyword.mobilefirstbp}} 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，浏览器中会显示 `Unauthorized` 消息。
+1. 使用 {{site.data.keyword.mobilefirstbp}} 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，浏览器中会显示 `Unauthorized` 消息。
 
 1. 使用 Android 应用程序对同一端点发起请求。初始化 `BMSClient` 并注册定制 AuthenticationListener 后，添加以下代码。
 
@@ -215,7 +215,7 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 
 	![图像](images/android-custom-login-success.png)
 
-1. 通过添加以下代码，您还可以添加注销功能：
+ 通过添加以下代码，您还可以添加注销功能：
 
  ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
@@ -223,4 +223,4 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 
  如果您在用户登录之后调用此代码，那么用户将注销。用户在尝试重新登录时，必须重新回答服务器发出的质询。
 
- 传递给注销功能的 `listener` 值可以为空值。
+ 传递给注销功能的 `listener` 值可以为 `null`。

@@ -11,8 +11,29 @@ copyright:
 
 #システム・アクセス
 {: #system_access}
-以下のトピックには、システムにアクセスしたり、システムへのアクセスをセットアップするためのさまざまな方法が含まれています。
+以下のトピックには、システムにアクセスしたり、システムへのアクセスをセットアップするためのさまざまな方法とともに、サービス・インスタンスの作成および管理の方法が含まれています。
 {: shortdesc}
+
+*最終更新日: 2016 年 6 月 8 日*
+{: .last-updated}
+
+## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} における REST API の使用法
+{: #restapi_usage}
+
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} のインスタンスの作成、プロビジョン、管理、および削除は、以下のいずれかの方法で行われます。
+
+* {{site.data.keyword.Bluemix_notm}} UI の {{site.data.keyword.Bluemix_notm}} カタログおよびサービス・ダッシュボードから。
+* RESTful API を使用したアプリケーションまたはスクリプトの作成から。
+
+Swagger 2.0 準拠 REST API を使用して、ポータルおよびダッシュボードで提供されるものと同じ機能にアクセスできます。サポートされる REST API とリソースについて詳しくは、WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API の資料](https://new-console.{DomainName}/apidocs/212){: new_window}を参照してください。
+
+**注:** サービス・インスタンスを作成した後、作成された T シャツ・サイズによっては、サービスがすぐに使用可能状態にならないことがあります。戻された JSON の **Status** フィールドを照会してサービス・インスタンスの現在の状態を判別することをお勧めします。
+
+**注:** デフォルトで、API BASE URL は、[米国南部地域](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}のエンドポイントを指します。英国地域またはシドニー地域を使用する場合は、アプリケーションが以下のいずれかのエンドポイントを使用することを確認してください。
+
+* [英国地域](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
+* [シドニー地域](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+
 
 ## サービス・ダッシュボード
 {: #service_dashboard}
@@ -30,6 +51,8 @@ copyright:
 *  WebSphere® 管理ユーザーおよび管理パスワード。
 *  管理センターおよび管理コンソールの URL。
 
+**注**: 一定量の計算、メモリー、入出力のリソースのために、停止状態の累積 VM について 5 % 減額して課金されます。IP アドレス 10 個およびメモリー 64 GB を超えない決まった数の停止インスタンスに管理されます。
+
 
 ## WebSphere Application Server for Bluemix インスタンス用の openVPN のセットアップ
 {: #setup_openvpn}
@@ -46,10 +69,9 @@ copyright:
 home}\config** ディレクトリーに解凍します。例:
 
   <pre>  
-    C:\Program Files\OpenVPN\Config
-  </pre>
+C:\Program Files\OpenVPN\Config  </pre>
   {: codeblock}
-  
+
 4. OpenVPN クライアント・プログラム「OpenVPN GUI」を開始します。必ず、[「管理者として実行」](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window}を選択して、プログラムを開始してください。そうでないと、接続できない場合があります。
 
 ### Linux で OpenVPN をセットアップするには、以下の手順を使用します。
@@ -61,10 +83,9 @@ Linux 管理者からの支援が必要な場合があります。
 3. サービス・ダッシュボードで、WebSphere Application Server for Bluemix インスタンスの OpenVPN ダウンロード・リンクから VPN 構成ファイルをダウンロードします。openVPN クライアントの開始に使用する予定のディレクトリーに、ファイルを解凍します。
 4 ファイルがすべて同じディレクトリーにある必要があります。
 3. OpenVPN クライアント・プログラムを開始します。端末ウィンドウを開いて、構成ファイルを含むディレクトリーに移動します。root として次のコマンドを実行します。
-  
+
   <pre>
-      $ openvpn --config vt-wasaas-wasaas.ovpn
-  </pre>
+$ openvpn --config vt-wasaas-wasaas.ovpn  </pre>
   {: codeblock}  
 
 ### Mac で OpenVPN をセットアップするには、以下の手順を使用します。
@@ -82,13 +103,13 @@ OpenSSH は通常、Linux 上で使用でき、Windows 上で実行される Cyg
 
 OpenSSH のインストールを確認するには、次のコマンドを入力します。
 ```
-      $ ssh -V
+$ ssh -V
   ```
   {: codeblock}
 
 応答は以下のようになります。
 ```
-      OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
+OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
   ```
   {: codeblock}
 
@@ -101,22 +122,19 @@ WebSphere Application Server for Bluemix VM への SSH アクセスをセット�
 4. 次のコマンドを実行します。
 
   <pre>
-    $ ssh virtuser@169.53.246.xxx -i /path/privateKeyFileName
-  </pre>
+$ ssh virtuser@169.53.246.xxx -i /path/privateKeyFileName  </pre>
   {: codeblock}
-  
+
 5. 次のコマンドを使用して virtuser から root に切り替えることにより、完全な sysadmin 権限を取得します。
 
   <pre>
-    $ sudo su root
-  </pre>
+$ sudo su root  </pre>
   {: codeblock}
-  
+
 6. 秘密 SSH 鍵でシステムにアクセスして問題が発生する場合は、提供された root パスワードを使用します。次のコマンドを実行して root としてログインし、パスワードを入力します。
- 
+
  <pre>
-    $ ssh root@169.53.246.x
-  </pre>
+$ ssh root@169.53.246.x  </pre>
   {: codeblock}
 
 7. システムへのアクセスで秘密 SSH 鍵を使用した場合も、root パスワードを使用した場合も、すぐに root パスワードを変更してください。
@@ -124,12 +142,11 @@ WebSphere Application Server for Bluemix VM への SSH アクセスをセット�
 
   <pre>
 Host VM1
-      Hostname 169.53.246.xxx
-      User virtuser
-      IdentityFile /path/privateKeyFileName
-  </pre>
+Hostname 169.53.246.xxx
+User virtuser
+IdentityFile /path/privateKeyFileName  </pre>
   {: codeblock}
-  
+
 9. virtuser として接続するために、「ssh VM1」を実行します。
 
 ## システム・パス
@@ -137,8 +154,8 @@ Host VM1
 
 * Liberty プロファイルのコマンドは、*/opt/IBM/WebSphere/Liberty/bin* から実行可能です。
 * Liberty プロファイルのサーバー・プロファイルがある場所は、*/opt/IBM/WebSphere/Profiles/Liberty/servers/server1* です。
-* 従来型の WebSphere Application Server コマンドは、*/opt/IBM/WebSphere/AppServer/bin* から実行できます。
-* サーバー用の従来型の WebSphere Application Server プロファイルがある場所は、*/opt/IBM/WebSphere/Profiles/DefaultAppSrv01/servers/server1* です。
+* Traditional WebSphere Application Server コマンドは、*/opt/IBM/WebSphere/AppServer/bin* から実行できます。
+* サーバー用の Traditional WebSphere Application Server プロファイルのロケーションは、*/opt/IBM/WebSphere/Profiles/DefaultAppSrv01/servers/server1* です。
 
 ## 管理センターと管理コンソールのリンクの使用
 {: #console_links}
@@ -162,7 +179,7 @@ Host VM1
   * 各 Liberty 集合ホスト上には、WAS_HOME/virtual/bin ディレクトリー内に openFirewallPorts.sh スクリプトがあります。
 
 使用法: ```
-      $ openFirewallPorts.sh -ports <PORT>:<PROTOCOL>,... -persist true|false
+$ openFirewallPorts.sh -ports <PORT>:<PROTOCOL>,... -persist true|false
   ```
   {: codeblock}
 

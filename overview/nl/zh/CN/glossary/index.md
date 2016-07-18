@@ -17,6 +17,7 @@ copyright:
 {: #glossary}
 
 *上次更新时间：2016 年 4 月 19 日*
+{: .last-updated}
 
 本词汇表提供了 {{site.data.keyword.Bluemix}} 的术语和定义。
 {:shortdesc}

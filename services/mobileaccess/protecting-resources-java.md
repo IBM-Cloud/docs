@@ -7,18 +7,24 @@ copyright:
 
 # Protecting Liberty for Java resources with {{site.data.keyword.amashort}}
 {: #protecting-liberty}
-The {{site.data.keyword.amashort}} server SDK provides an OAuthTAI module for Liberty for Java&trade;  applications that are deployed on {{site.data.keyword.Bluemix}}. You must instrument your Liberty server with the OAuthTAI module to protect it from unauthorized access and get monitoring information.
+
+*Last updated: 30 June 2016*
+{: .last-updated}
+
+
+The {{site.data.keyword.amashort}} server SDK provides an `OAuthTAI` module for Liberty for Java&trade;  applications that are deployed on {{site.data.keyword.Bluemix}}. You must instrument your Liberty server with the `OAuthTAI` module to protect it from unauthorized access, and to gather monitoring information.
 
 ## Before you begin
 {: #before-you-begin}
-* You must be familiar with developing Liberty for Java applications on {{site.data.keyword.Bluemix}}. For more information, see [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html).
+You must be familiar with developing on Liberty for Java applications on {{site.data.keyword.Bluemix}}. For more information, see [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html).
 
 ## Installing the {{site.data.keyword.amashort}} server SDK
 {: #installing-server-sdk}
 
-1. Download and extract the [OAuthTAI artifacts](https://imf-tai.{DomainName}/public/TAI.zip).
+1. Download and extract  [OAuthTAI artifacts](https://imf-tai.{DomainName}/public/TAI.zip).
 
-1. Copy the `com.ibm.worklight.oauth.tai_1.0.0.jar` file to the `${wlp.user.dir}/extensions/lib` directory.
+1. Copy the `com.ibm.worklight.oauth.tai_1.0.0.jar` file to the `$<wlp.user.dir>/extensions/lib` directory.
+
 	**Tip:** `$<wlp.user.dir>` is the user directory for the Liberty for Java runtime. The default directory name is `usr`.
 
 1. Copy the `OAuthTai-1.0.mf` directory to the `$<wlp.user.dir>/extension/lib/features` directory.
@@ -27,7 +33,7 @@ The {{site.data.keyword.amashort}} server SDK provides an OAuthTAI module for Li
 ## Configuring the Liberty for Java server to use the {{site.data.keyword.amashort}} server SDK
 {: #configuring-liberty}
 
-1. Edit the `server.xml` file and add required features.
+1. Edit the `server.xml` file, and add required features.
 
 	```XML
 	<featureManager>
@@ -37,7 +43,7 @@ The {{site.data.keyword.amashort}} server SDK provides an OAuthTAI module for Li
 	</featureManager>
 
 	```
-1. Continue editing the `server.xml` file and configure the OAuthTAI feature. The security role `TAIUserRole` is mapped to a special subject named `ALL_AUTHENTICATED_USERS`. The following snippet demonstrates how to protect `/protected` endpoint GET methods.
+1. Continue editing the `server.xml` file, and configure the `OAuthTAI` feature. The security role `TAIUserRole` is mapped to a special subject named `ALL_AUTHENTICATED_USERS`. The following snippet demonstrates how to protect `/protected` endpoint GET methods.
 
 	```XML
 	<usr_OAuthTAI id="myOAuthTAI" realmName="imfAuthentication">
@@ -56,13 +62,13 @@ The {{site.data.keyword.amashort}} server SDK provides an OAuthTAI module for Li
 	</application>
 	```
 
-1. Add the following property that contains the {{site.data.keyword.amashort}} service URL into the environment variables of your backend application. You can add the URL to the `manifest.yml` or `server.env` file.
+1. Add the following property that contains the {{site.data.keyword.amashort}} service URL to the environment variables of your back-end application. You can add the URL to the `manifest.yml` or `server.env` file.
 
 	```
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
 	```
 
-### Protecting Liberty for Java resources
+## Protecting Liberty for Java resources
 {: #protecting-liberty-resources}
 
 To protect the resources hosted by your Liberty for Java application, you must specify `TAIUserRole` as the Java security role. You can define the security role in the `web.xml` file or as an annotation.
@@ -116,7 +122,7 @@ For more information, see [WSCredential](http://www-01.ibm.com/support/knowledge
 
 #### com.worklight.oauth.tai.WLCredential property
 {: #WLCredential}
-The `WLCredential` interface provides APIs to get the specific principal details.
+The `WLCredential` interface provides APIs to get specific details about the user, device, and application.
 
 ```Java
 

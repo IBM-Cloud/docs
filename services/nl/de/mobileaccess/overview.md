@@ -7,6 +7,8 @@ copyright:
 
 # Informationen zu {{site.data.keyword.amashort}}
 {: #mca-overview}
+*Letzte Aktualisierung: 15. Mai 2016*
+{: .last-updated}
 
 Der {{site.data.keyword.amafull}}-Service stellt Authentifizierungs- und Überwachungsservices für mobile Anwendungen bereit, die auf Cloudressourcen zugreifen, die per Hosting in {{site.data.keyword.Bluemix_notm}} zur Verfügung werden.
 
@@ -45,11 +47,11 @@ Sie können die folgenden Typen von Authentifizierung in Ihrer mobilen App verwe
 
 ## {{site.data.keyword.amashort}}-Anforderungsablauf
 {: #flow}
-Das folgende Diagramm beschreibt, wie eine Anforderung aus dem SDK an Ihr mobiles Back-End und an Identitätsprovider geleitet wird.
+Das folgende Diagramm beschreibt, wie eine Anforderung aus dem SDK an Ihre mobile Back-End-Anwendung und an Identitätsprovider geleitet wird.
 
 ![Bild](images/mca-sequence-overview.jpg)
 
-1. Verwenden Sie das {{site.data.keyword.amashort}}-SDK, um eine Anforderung an Ihre Back-End-Ressourcen zu senden, die mit dem {{site.data.keyword.amashort}}-Server-SDK geschützt werden.
+1. Verwenden Sie das {{site.data.keyword.amashort}}-SDK zum Senden einer Anforderung an Ihre Back-End-Ressourcen, die mit dem {{site.data.keyword.amashort}}-Server-SDK geschützt werden.
 * Das {{site.data.keyword.amashort}}-Server-SDK erkennt eine nicht autorisierte Anforderung und gibt den Status HTTP 401 und den Berechtigungsbereich zurück.
 * Das {{site.data.keyword.amashort}}-Client-SDK erkennt den Status HTTP 401 automatisch und startet den Authentifizierungsprozess.
 * Das {{site.data.keyword.amashort}}-Client-SDK kontaktiert den {{site.data.keyword.amashort}}-Service und fordert die Ausgabe eines Berechtigungsheaders an.

@@ -19,6 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}}-Systemdetails
 {: #openwhisk_reference}
 *Letzte Aktualisierung: 14. April 2016*
+{: .last-updated}
 
 Die folgenden Abschnitte enthalten weitere Details zum {{site.data.keyword.openwhisk}}-System.
 {: shortdesc}
@@ -84,7 +85,7 @@ Die Eingabe für eine Aktion und die Ausgabe aus einer Aktion ist ein Wörterver
 
 Aufrufe einer Aktion werden nicht geordnet. Wenn der Benutzer eine Aktion zweimal über die Befehlszeile oder die REST-API aufruft, ist es möglich, dass der zweite Aufruf vor dem ersten ausgeführt wird. Wenn die Aktionen Nebeneffekte haben, werden diese möglicherweise in irgendeiner Reihenfolge beobachtet.
 
-Darüber hinaus gibt es keine Garantie, dass Aktionen atomar ausgeführt werden. Zwei Aktionen können gleichzeitig ausgeführt werden, sodass ihre Nebeneffekte verzahnt auftreten. Alle Nebeneffekte einer gleichzeitigen Ausführung hängen von der Implementierung ab.
+Darüber hinaus gibt es keine Garantie, dass Aktionen atomar ausgeführt werden. Zwei Aktionen können gleichzeitig ausgeführt werden, sodass ihre Nebeneffekte verzahnt auftreten.  OpenWhisk garantiert kein bestimmtes Konsistenzmodell für Nebeneffekte bei gleichzeitiger Ausführung. Alle Nebeneffekte einer gleichzeitigen Ausführung hängen von der Implementierung ab.
 
 ### Semantik des maximal einmaligen Aufrufs
 {: #openwhisk_atmostonce}
@@ -258,6 +259,7 @@ JavaScript-Aktionen werden in einer Umgebung von Node.js Version 0.12.9 ausgefü
 - async
 - body-parser
 - btoa
+- cheerio
 - cloudant
 - commander
 - consul
@@ -266,6 +268,7 @@ JavaScript-Aktionen werden in einer Umgebung von Node.js Version 0.12.9 ausgefü
 - errorhandler
 - express
 - express-session
+- gm
 - jade
 - log4js
 - merge
@@ -280,11 +283,13 @@ JavaScript-Aktionen werden in einer Umgebung von Node.js Version 0.12.9 ausgefü
 - semver
 - serve-favicon
 - socket.io
+- socket.io-client
 - superagent
 - swagger-tools
 - tmp
 - watson-developer-cloud
 - when
+- ws
 - xml2js
 - xmlhttprequest
 - yauzl
@@ -302,6 +307,61 @@ Das Docker-Gerüst (Skeleton) ist eine bequeme Methode, {{site.data.keyword.open
 Das Hauptbinärprogramm muss in die Datei `dockerSkeleton/client/clientApp` kopiert werden. Alle Begleitdateien oder die Bibliothek können sich im Verzeichnis `dockerSkeleton/client` befinden.
 
 Sie können darüber hinaus auch Kompilierungsschritte oder Abhängigkeiten einbeziehen, indem Sie die `dockerSkeleton/Dockerfile` ändern. Sie können zum Beispiel Python installieren, wenn Ihre Aktion ein Python-Script ist.
+
+
+## REST-API
+
+Alle Funktionen im System stehen über eine REST-API zur Verfügung. Es gibt Sammlungs- und Entitätsendpunkte für Aktionen, Auslöser, Regeln, Pakete, Aktivierungen und Namensbereiche.
+
+Die Sammlungsendpunkte lauten wie folgt:
+
+- `https://$BASEURL/api/v1/namespaces`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations`
+
+Sie können eine GET-Anforderung für die Sammlungsendpunkte ausführen, um eine Liste der Entitäten in der Sammlung abzurufen.
+
+Für jeden Entitätstyp gibt es Entitätsendpunkte:
+
+- `https://$BASEURL/api/v1/namespaces/{namespace}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations/{activationName}`
+
+Die Endpunkte für Namensbereiche und Aktivierungen unterstützen nur GET-Anforderungen. Die Endpunkte für Aktionen, Auslöser, Regeln und Pakete unterstützen GET-, PUT- und DELETE-Anforderungen. Die Endpunkte für Aktionen, Auslöser und Regeln unterstützen auch POST-Anforderungen, die zum Aufrufen von Aktionen und Auslösern sowie zum Aktivieren und Inaktivieren von Regeln verwendet werden. Weitere Details hierzu finden Sie in der [API-Referenz](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json).
+
+Alle APIs sind mit der HTTP-Basisauthentifizierung geschützt. Die durch einen Doppelpunkt voneinander getrennten BasicAuth-Berechtigungsnachweise befinden sich in der Eigenschaft `AUTH` in der `~/.wskprops`-Datei. Sie finden diese Berechtigungsnachweise auch in den [Konfigurationsschritten der Befehlszeilenschnittstelle (CLI)](../README.md#setup-cli).
+
+Das folgende Beispiel zeigt, wie Sie mit dem Befehl 'cURL' eine Liste aller Pakete im Namensbereich `whisk.system` abrufen können:
+
+```
+curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
+```
+{: pre}
+```
+[
+  {
+    "name": "slack",
+    "binding": false,
+    "publish": true,
+    "annotations": [
+      {
+        "key": "description",
+        "value": "Package which contains actions to interact with the Slack messaging service"
+      }
+    ],
+    "version": "0.0.9",
+    "namespace": "whisk.system"
+  },
+  ...
+]
+```
+{: screen}
 
 
 ## Systembegrenzungen

@@ -15,6 +15,7 @@ copyright:
 # VCAP 서비스
 
 *마지막 업데이트 날짜: 2016년 3월 15일*
+{: .last-updated}
 
 
 VCAP_SERVICES 환경 변수는 {{site.data.keyword.Bluemix_notm}}의
@@ -32,6 +33,7 @@ VCAP_SERVICES 환경 변수는 {{site.data.keyword.Bluemix_notm}}의
 있습니다. 애플리케이션이 {{site.data.keyword.Bluemix_notm}}의 서비스 인스턴스에 바인딩된 경우 이러한 값이 VCAP_SERVICES 환경 변수에 채워집니다.
 
 VCAP_SERVICES 환경 변수의 값은 서비스 인스턴스를 애플리케이션에 바인딩한 경우에만 사용할 수 있습니다. 다음 명령을 사용하여 애플리케이션 환경 변수를 볼 수 있습니다.
+
 ```
 cf env APP_NAME
 ```

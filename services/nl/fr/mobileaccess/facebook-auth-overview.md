@@ -1,14 +1,24 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
 # Authentification des utilisateurs à l'aide des données d'identification Facebook
 {: #facebook-auth-overview}
-Vous pouvez configurer la protection des ressources dans le service {{site.data.keyword.amashort}} en utilisant Facebook en tant que fournisseur d'identité. Les utilisateurs de votre application mobile peuvent alors s'authentifier avec leurs données d'identification Facebook.
 
-**Important** : Il n'est pas nécessaire d'installer séparément le SDK Facebook. Celui-ci est installé automatiquement par les gestionnaires de dépendances lors de la configuration du SDK client de {{site.data.keyword.amashort}}.
+*Dernière mise à jour : 15 juin 2016*
+{: .last-updated}
+
+Vous pouvez configurer la protection des ressources dans le service {{site.data.keyword.amashort}} en utilisant Facebook en tant que fournisseur d'identité. Les utilisateurs de votre application mobile peuvent alors s'authentifier avec leurs données d'identification Facebook.
+{:shortdesc}
+
+**Important** : il n'est pas nécessaire d'installer séparément le SDK fourni par Facebook. Celui-ci est installé automatiquement par les gestionnaires de dépendances lors de la configuration du SDK client de {{site.data.keyword.amashort}}.
 
 ## Flux des demandes {{site.data.keyword.amashort}}
 {: #mca-facebook-sequence}
@@ -30,7 +40,7 @@ Le diagramme simplifié suivant représente l'intégration entre {{site.data.key
 * Le SDK client de {{site.data.keyword.amashort}} renvoie automatiquement la demande d'origine qui avait déclenché le flux d'autorisation.
 * Le SDK serveur de {{site.data.keyword.amashort}} extrait l'en-tête d'autorisation de la demande, la valide auprès du service {{site.data.keyword.amashort}}, et donne l'accès à la ressource de back end.
 
-## Acquisition d'un ID d'application Facebook sur le portail Facebook Developer
+## Obtenez un ID d'application Facebook dans le portail des développeurs Facebook.
 {: #facebook-appID}
 
 Pour commencer à utiliser Facebook en tant que fournisseur d'identité, vous devez créer une application dans le portail Facebook Developer. Au cours de ce processus, vous obtenez un ID d'application Facebook, qui est un identificateur unique qui permet à Facebook de savoir quelle application tente de se connecter.
@@ -47,7 +57,7 @@ Si vous êtes invité à choisir entre une application iOS ou Android, sélectio
 ## Etapes suivantes
 {: #next-steps}
 
-* [Activation de l'authentification Facebook dans les applis Android](facebook-auth-android.html)
-* [Activation de l'authentification Facebook dans les applications iOS (SDK Swift)](facebook-auth-ios-swift-sdk.html)
-* [Activation de l'authentification Facebook dans les applications iOS (SDK Objective-C)](facebook-auth-ios.html)
-* [Activation de l'authentification Facebook dans les applis Cordova](facebook-auth-cordova.html)
+* [Activation de l'authentification Facebook pour les applications Android](facebook-auth-android.html)
+* [Activation de l'authentification Facebook pour les applications iOS (SDK Swift)](facebook-auth-ios-swift-sdk.html)
+* [Activation de l'authentification Facebook pour les applications iOS (SDK Objective-C - Déprécié)](facebook-auth-ios.html)
+* [Activation de l'authentification Facebook pour les applications Cordova](facebook-auth-cordova.html)

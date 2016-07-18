@@ -50,7 +50,7 @@ compile 'com.google.android.gms:play-services:7.8.0'
 <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-	```
+```
 
 	여기에서 [Android 권한](http://developer.android.com/guide/topics/security/permissions.html)에 대한 정보를 볼 수 있습니다. 
 
@@ -61,7 +61,7 @@ compile 'com.google.android.gms:play-services:7.8.0'
 		<action android:name="<Your_Android_Package_Name.IBMPushNotification"/>   
 		<category  android:name="android.intent.category.DEFAULT"/>
 	</intent-filter>
-	```
+```
 	**참고**: 위의 조치에서 *Your_Android_Package_Name*을 사용자 애플리케이션에서 사용되는 애플리케이션 패키지 이름으로 대체하십시오. 
 
 1. GCM(Google Cloud Messaging) 의도 서비스 및 RECEIVE 이벤트 알림에 대한 의도 필터를 추가하십시오.
@@ -80,7 +80,7 @@ compile 'com.google.android.gms:play-services:7.8.0'
 	    <intent-filter>
 	        <action android:name="android.intent.action.BOOT_COMPLETED" />
 
-	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
+	        	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
 	    </intent-filter>
 	</receiver>
 	```
@@ -129,7 +129,7 @@ push.initialize(getApplicationContext());
 ## Android 디바이스 등록
 {: #android_register}
 
-```IMFPush.register()``` API를 사용하여 디바이스를 푸시 알림 서비스에 등록할 수 있습니다. Android 디바이스의 등록인 경우, 우선 Bluemix 푸시 서비스 구성 대시보드에서 GCM(Google Cloud Messaging) 정보를 추가하십시오. 자세한 정보는 [GCM(Google Cloud Messaging)의 신임 정보 구성](t_push_provider_android.html)을 참조하십시오. 
+`IMFPush.register()` API를 사용하여 디바이스를 푸시 알림 서비스에 등록할 수 있습니다. Android 디바이스의 등록인 경우, 우선 Bluemix 푸시 서비스 구성 대시보드에서 GCM(Google Cloud Messaging) 정보를 추가하십시오. 자세한 정보는 [GCM(Google Cloud Messaging)의 신임 정보 구성](t_push_provider_android.html)을 참조하십시오. 
 
 다음 코드 스니펫을 복사하여 Android 모바일 애플리케이션에 붙여넣으십시오. 
 
@@ -174,35 +174,35 @@ notificationListener 오브젝트를 푸시에 등록하려면 **MFPPush.listen(
 	   }
 	}
 ```
-2. 프로젝트를 빌드하고 디바이스 또는 에뮬레이터에서 이를 실행하십시오. register() 메소드의 응답 리스너에 대해 onSuccess() 메소드가 호출되면 디바이스가 푸시 알림 서비스에 정상적으로 푸시에 등록된 것입니다. 이 때 기본 푸시 알림 전송에 설명된 대로 메시지를 보낼 수 있습니다. 
-3. 디바이스가 알림을 수신했는지 확인하십시오. 애플리케이션이 포그라운드에 있는 경우 **MFPPushNotificationListener**에 의해 알림이 처리됩니다. 애플리케이션이 백그라운드에 있는 경우 알림 막대에 메시지가 표시됩니다. 
+2. 프로젝트를 빌드하고 디바이스 또는 에뮬레이터에서 이를 실행하십시오. register() 메소드의 응답 리스너에 대해 onSuccess() 메소드가 호출되면 디바이스가 푸시 알림 서비스에 정상적으로 등록된 것입니다. 이 때 기본 푸시 알림 전송에 설명된 대로 메시지를 보낼 수 있습니다.
+3. 디바이스가 알림을 수신했는지 확인하십시오. 애플리케이션이 포그라운드에 있는 경우 **MFPPushNotificationListener**에 의해 알림이 처리됩니다. 애플리케이션이 백그라운드에 있는 경우 알림 막대에 메시지가 표시됩니다.
 
 
 ## 기본 푸시 알림 전송
 {: #send}
 
-애플리케이션이 개발된 후에는 (태그, 배지, 추가 페이로드 또는 사운드 파일을 사용하지 않아도) 기본 푸시 알림을 전송할 수 있습니다. 
+애플리케이션이 개발된 후에는 (태그, 배지, 추가 페이로드 또는 사운드 파일을 사용하지 않아도) 기본 푸시 알림을 전송할 수 있습니다.
 
 
-기본 푸시 알림을 보내십시오. 
+기본 푸시 알림을 보내십시오.
 
-1. **청취자 선택**에서 다음 청취자 중 하나를 선택하십시오. **모든 디바이스** 또는 플랫폼 기준으로 **iOS 디바이스만** 또는 **Anroid 디바이스만**. 
+1. **청취자 선택**에서 다음 청취자 중 하나를 선택하십시오. **모든 디바이스** 또는 플랫폼 기준으로 **iOS 디바이스만** 또는 **Anroid 디바이스만**.
 
-	**참고**: **모든 디바이스** 옵션을 선택하는 경우 푸시 알림에 구독된 모든 디바이스가 알림을 수신합니다. 
+ **참고**: **모든 디바이스** 옵션을 선택하는 경우 푸시 알림에 구독된 모든 디바이스가 알림을 수신합니다.
 
-	![알림 화면](images/tag_notification.jpg)
+ ![알림 화면](images/tag_notification.jpg)
 
-2. **알림 작성**에서 메시지를 입력하고 **보내기**를 클릭하십시오.
-3. 디바이스가 알림을 수신했는지 확인하십시오. 
+2. **알림 작성**에서 메시지를 입력하고 **보내기**를 클릭하십시오. 
+3. 디바이스가 알림을 수신했는지 확인하십시오.
 
-	다음 스크린샷은 Android와 iOS 디바이스의 포그라운드에서
-푸시 알림을 처리하는 경보 상자를 보여줍니다. 
+ 다음 스크린샷은 Android와 iOS 디바이스의 포그라운드에서
+푸시 알림을 처리하는 경보 상자를 보여줍니다.
 
-	![Android의 포그라운드 푸시 알림](images/Android_Screenshot.jpg)
+  ![Android의 포그라운드 푸시 알림](images/Android_Screenshot.jpg)
 
-	![iOS의 포그라운드 푸시 알림](images/iOS_Screenshot.jpg)
+  ![iOS의 포그라운드 푸시 알림](images/iOS_Screenshot.jpg)
 
-	다음 스크린샷은 Android의 백그라운드에 있는 푸시 알림을 보여줍니다.
+ 다음 스크린샷은 Android의 백그라운드에 있는 푸시 알림을 보여줍니다.
 	![Android의 백그라운드 푸시 알림](images/background.jpg)
 
 
@@ -210,7 +210,7 @@ notificationListener 오브젝트를 푸시에 등록하려면 **MFPPush.listen(
 ## 다음 단계
 {: #next_steps_tags}
 
-정상적으로 기본 알림을 설정한 후 태그 기반 알림 및 고급 옵션을 구성할 수 있습니다. 
+정상적으로 기본 알림을 설정한 후 태그 기반 알림 및 고급 옵션을 구성할 수 있습니다.
 
 다음의 푸시 알림 서비스 기능을 사용자의 앱에 추가하십시오.
 태그 기반 알림을 사용하려면 [태그 기반 알림](c_tag_basednotifications.html)을 참조하십시오.

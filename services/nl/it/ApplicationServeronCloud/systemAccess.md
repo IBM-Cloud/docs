@@ -11,8 +11,29 @@ copyright:
 
 #Accesso al sistema
 {: #system_access}
-Questi argomenti includono vari modi per accedere e configurare l'accesso al tuo sistema.
+Questi argomenti comprendono metodi per la creazione e la gestione di un'istanza del servizio, insieme a vari modi per accedere e impostare l'accesso ai tuoi sistemi.
 {: shortdesc}
+
+*Ultimo aggiornamento: 08 giugno 2016*
+{: .last-updated}
+
+## Utilizzo dell'API REST in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+{: #restapi_usage}
+
+Le istanze in {{site.data.keyword.Bluemix_notm}} vengono create, sottoposte a provisioning, gestite ed eliminate in uno dei seguenti modi:
+
+* Dal Catalogo e Dashboard del servizio di {{site.data.keyword.Bluemix_notm}} nell'IU {{site.data.keyword.Bluemix_notm}}.
+* Dalla creazione di un'applicazione o script che utilizza le API RESTful.
+
+Mediante l'utilizzo delle API REST conformi a Swagger 2.0, i clienti hanno accesso alle stesse funzioni fornite attraverso il portale e il dashboard. Per ulteriori informazioni sulle API REST e sulle risorse supportate, vedi la [Documentazione API REST](https://new-console.{DomainName}/apidocs/212){: new_window} di WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}.
+
+**Nota:** dopo la creazione di un'istanza del servizio, a seconda della dimensione Tee-Shirt creata, il servizio potrebbe non essere immediatamente pronto per l'uso. Si consiglia di eseguire una query nel campo **Stato** del JSON restituito per determinare lo stato corrente dell'istanza del servizio. 
+
+**Nota:** per impostazione predefinita, l'URL BASE API punta a un endpoint nella [Regione Stati Uniti Sud](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}.  Se stai utilizzando la regione Regno Unito o Sydney, assicurati che la tua applicazione utilizzi uno dei seguenti endpoint:
+
+* [Regione Regno Unito](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
+* [Regione Sydney](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+
 
 ## Dashboard del servizio
 {: #service_dashboard}
@@ -30,6 +51,8 @@ Dal dashboard del servizio puoi accedere a:
 *  Una chiave SSH privata.
 *  L'utente amministratore e la password amministratore di WebSphere®.
 *  Gli URL di Admin Center e Admin Console.
+
+**Nota**: a causa di una specifica quantità di risorse I/O, calcolo e memoria, ai clienti vengono addebitate le macchine virtuali accumulate nello stato ARRESTATO a un tasso ridotto del 5%.  I clienti vengono gestiti fino a un numero fisso di istanze ARRESTATE con non più di 10 indirizzi IP o 64 GB di memoria.
 
 
 ## Impostazione di openVPN per le istanze WebSphere Application Server for Bluemix
@@ -49,17 +72,17 @@ OpenVPN è richiesto per accedere alla macchina virtuale WebSphere Application S
     C:\Program Files\OpenVPN\Config
   </pre>
   {: codeblock}
-  
+
 4. Avvia il programma client openVPN "OpenVPN GUI". Assicurati di selezionare [Esegui come amministratore Windows](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window} per avviare il programma. In caso contrario,
 potresti non riuscire a connetterti.
 
 ### Utilizza le seguenti istruzioni per impostare openVPN in Linux:
-1. Per installare openVPN segui queste istruzioni [](https://openvpn.net/index.php/access-server/docs/admin-guides/182-how-to-connect-to-access-server-with-linux-clients.html){: new_window}.
+1. Per installare openVPN segui queste [istruzioni ](https://openvpn.net/index.php/access-server/docs/admin-guides/182-how-to-connect-to-access-server-with-linux-clients.html){: new_window}.
   * Se devi scaricare e installare manualmente la gestione pacchetti RPM, passa alla pagina dei [download unix/linux openVPN](https://openvpn.net/index.php/access-server/download-openvpn-as-sw.html){: new_window}. Potresti avere bisogno di assistenza dal tuo amministratore Linux.
 3. Scarica i file di configurazione VPN dal link di scaricamento di OpenVPN dell'istanza WebSphere Application Server for Bluemix nel dashboard del servizio. Estrai i file nella directory da cui intendi avviare il client
 openVPN. Ti serviranno tutti e quattro i file nella stessa directory.
 3. Avvia il programma client openVPN.  Apri una finestra di terminale e vai alla directory che contiene i file di configurazione. Esegui il seguente comando come root:
-  
+
   <pre>
       $ openvpn --config vt-wasaas-wasaas.ovpn
   </pre>
@@ -95,7 +118,7 @@ Utilizza le seguenti istruzioni per impostare l'accesso SSH alle tue macchine vi
 
 1. Riesamina il messaggio di avvertenza che compare la prima volta che ti colleghi, "L'autenticità dell'host x.x.x.x non può essere stabilita." Questo
 è normale. Quando ti viene richiesto, seleziona yes. La chiave pubblica è ora installata sulla tua VM per l'utente virtuser.
-2. Accedi a virtuser utilizzando la chiave privata. Per dei risultati ottimali, utilizza il metodo di autenticazione della chiave privata. 
+2. Accedi a virtuser utilizzando la chiave privata. Per dei risultati ottimali, utilizza il metodo di autenticazione della chiave privata.
 3. Copia il contenuto della chiave privata in un file.
 4. Esegui il comando:
 
@@ -103,16 +126,16 @@ Utilizza le seguenti istruzioni per impostare l'accesso SSH alle tue macchine vi
     $ ssh virtuser@169.53.246.xxx -i /path/privateKeyFileName
   </pre>
   {: codeblock}
-  
+
 5. Acquisisci l'autorità sysadmin completa passando da virtuser a root utilizzando il comando:
 
   <pre>
     $ sudo su root
   </pre>
   {: codeblock}
-  
+
 6. Se stai riscontrando dei problemi durante l'accesso al sistema con la chiave ssh privata, utilizza la password root che ti è stata fornita. Accedi come root eseguendo il seguente comando e fornisci la password.
- 
+
  <pre>
     $ ssh root@169.53.246.x
   </pre>
@@ -129,7 +152,7 @@ con la password root, cambia immediatamente la password root.
       IdentityFile /path/privateKeyFileName
   </pre>
   {: codeblock}
-  
+
 9. Esegui "ssh VM1" per collegarti come virtuser.
 
 ## Percorsi di sistema
@@ -137,8 +160,8 @@ con la password root, cambia immediatamente la password root.
 
 * I comandi Liberty Profile possono essere immessi da */opt/IBM/WebSphere/Liberty/bin*.
 * L'ubicazione del profilo del server Liberty Profile è */opt/IBM/WebSphere/Profiles/Liberty/servers/server1*.
-* I comandi WebSphere Application Server tradizionali possono essere emessi da */opt/IBM/WebSphere/AppServer/bin*.
-* L'ubicazione tradizionale del profilo di WebSphere Application Server per il server è  */opt/IBM/WebSphere/Profiles/DefaultAppSrv01/servers/server1*.
+* I comandi WebSphere Application Server tradizionali possono essere immessi da */opt/IBM/WebSphere/AppServer/bin*.
+* L'ubicazione del profilo di WebSphere Application Server tradizionale per il server è */opt/IBM/WebSphere/Profiles/DefaultAppSrv01/servers/server1*.
 
 ## Utilizzo dei link Admin Center e Admin Console
 {: #console_links}

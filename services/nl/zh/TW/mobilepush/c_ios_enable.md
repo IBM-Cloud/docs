@@ -25,6 +25,7 @@ copyright:
 $ sudo gem install cocoapods
 ```
 2. 在終端機中輸入下列指令，以起始設定 CocoaPods。發出此指令時，請確定是在 Xcode 專案所在的目錄中執行它。`pod init` 指令會建立檔案標題。
+  
 ```
 $ pod init
 ```
@@ -50,6 +51,7 @@ $ pod init
 	    platform :ios, '8.0'
 	    pod 'BMSCore'
 	    pod 'BMSPush'
+      pod 'BMSAnalyticsAPI'
 	end
 	```
 3. 從「終端機」中，移至您的專案資料夾，並使用下列指令來安裝相依關係：
@@ -58,10 +60,22 @@ $ pod update
 ```
 該指令會安裝相依關係並建立新的 Xcode 工作區。**附註**：請確定您一律開啟新的 Xcode 工作區，而不是原始 Xcode 專案檔：
 
-	```
+```
 	$ open App.xcworkspace
-	```
-工作區會包含原始專案以及包含相依關係的 Pods 專案。如果您想要修改 Bluemix Mobile Services 來源資料夾，則可以在 Pods 專案的 `Pods/yourImportedSourceFolder` 下找到它，例如：`Pods/IMFGoogleAuthentication`。
+```
+工作區會包含原始專案以及包含相依關係的 Pods 專案。如果您想要修改 Bluemix Mobile Services 來源資料夾，則可以在 Pods 專案的 `Pods/yourImportedSourceFolder` 下找到它，例如：`Pods/BMSPush`。
+
+##Carthage
+{: #carthage}
+
+使用 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 新增專案架構。（https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos%29。）
+
+1. 在 Cartfile 中新增 `BMSPush` 架構：
+```
+github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
+```
+2. 執行 `carthage update` 指令。建置完成時，請將 `BMSPush.framework`、`BMSCore.framework` 及 `BMSAnalyticsAPI.framework` 拖曳至 Xcode 專案。
+3. 遵循 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 網站上的指示，以完成整合。
 
 ##使用匯入的架構和來源資料夾
 
@@ -95,7 +109,7 @@ $ pod update
 import BMSCore
 import BMSPush
 ```
-
+**注意**：若要檢視 Swift Push Readme 檔，請移至 [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master)
 
 ##建置設定
 
@@ -109,7 +123,7 @@ import BMSPush
 ## 起始設定 Push SDK for iOS 應用程式
 {: #enable-push-ios-notifications-initialize}
 
-放置起始設定碼的一般位置位於 iOS 應用程式的應用程式委派中。按一下「Bluemix 應用程式儀表板」中的**行動式選項**鏈結，以取得應用程式的路徑及應用程式 GUID。
+放置起始設定碼的一般位置位於 iOS 應用程式的應用程式委派中。按一下「Bluemix 應用程式儀表板」中的**行動選項**鏈結，以取得應用程式的路徑及應用程式 GUID。
 
 ###起始設定 Core SDK
 
@@ -160,7 +174,7 @@ let push = BMSPushClient.sharedInstance
 
 **bluemixRegionSuffix**
 
-指定管理應用程式的位置。```bluemixRegion``` 參數指定您要使用的 Bluemix 部署。您可以使用 ```BMSClient.REGION``` 靜態內容設定此值，然後使用下列三個值的其中一個：
+指定管理應用程式的位置。`bluemixRegion` 參數指定您所使用的 Bluemix 部署。您可以使用 `BMSClient.REGION` 靜態內容設定此值，然後使用下列三個值的其中一個：
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK
@@ -173,7 +187,7 @@ let push = BMSPushClient.sharedInstance
 {: #enable-push-ios-notifications-register}
 
 
-應用程式必須向 APNs 登錄才能接收遠端通知，這通常發生在應用程式安裝到裝置上之後。在應用程式接收到 APNs 所產生的裝置記號之後，必須將裝置記號傳回給 Push Notifications Service。
+應用程式必須向 APNS 登錄才能接收遠端通知，這通常發生在應用程式安裝到裝置上之後。在應用程式接收到 APNS 所產生的裝置記號之後，必須將裝置記號傳回給 Push Notifications Service。
 
 若要登錄 iOS 應用程式及裝置，請執行下列動作：
 
@@ -216,7 +230,7 @@ let push = BMSPushClient.sharedInstance
 
 ###將記號傳遞至 Push Notifications
 
-從 APNs 接收到記號之後，將記號傳遞至 Push Notifications，這是 ```registerDevice:withDeviceToken``` 方法的一部分。
+從 APNS 接收到記號之後，將記號傳遞至 Push Notifications，這是 `registerDevice:withDeviceToken` 方法的一部分。
 
 ####Objective-C
 
@@ -242,7 +256,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ####Swift
 
-從 APNs 接收到記號之後，將記號傳遞至 Push Notifications，這是 ```didRegisterForRemoteNotificationsWithDeviceToken``` 方法的一部分。
+從 APNS 接收到記號之後，將記號傳遞至 Push Notifications，這是 `didRegisterForRemoteNotificationsWithDeviceToken` 方法的一部分。
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
@@ -308,14 +322,11 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 2. 在**建立您的通知**中，輸入您的訊息，然後按一下**傳送**。
 3. 驗證您的裝置已接收到通知。
 
-	下列擷取畫面顯示在 Android 及 iOS 裝置的前景中處理推送通知的警示框。
+	下列擷取畫面顯示在 iOS 裝置的前景及背景中處理推送通知的警示框。
 
 	![Android 上的前景推送通知](images/Android_Screenshot.jpg)
 
 	![iOS 上的前景推送通知](images/iOS_Screenshot.jpg)
-
-	下列擷取畫面顯示 Android 背景中的推送通知。
-	![Android 上的背景推送通知](images/background.jpg)
 
 
 

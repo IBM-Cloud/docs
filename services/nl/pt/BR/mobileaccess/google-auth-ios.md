@@ -5,23 +5,18 @@ copyright:
 
 ---
 
-# Ativando a autenticação do Google em apps iOS
+# Ativando a autenticação do Google para apps iOS Objective C
 {: #google-auth-ios}
 
-**Dica:** se você estiver desenvolvendo seu app iOS no Swift, considere o uso do {{site.data.keyword.amashort}} client Swift SDK. As instruções nesta página se aplicam ao {{site.data.keyword.amashort}} client Objective-C SDK. Para
-obter instruções sobre como usar o Swift SDK, consulte
-[Ativando
-a autenticação do Google em apps iOS (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
+Use o Google Sign-In para autenticar usuários em seu app Mobile Client Access iOS.
+
+**Nota:** embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuar esse SDK posteriormente este ano em favor do novo Swift SDK. Para novos aplicativos, é altamente recomendável usar o Swift SDK. As instruções nesta página se aplicam ao {{site.data.keyword.amashort}} client Objective-C SDK. Para obter instruções sobre como usar o Swift SDK, consulte [Ativando a autenticação do Google em apps iOS (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
 
 ## Antes de Começar
 {: #google-auth-ios-before}
-* Deve-se ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} e um projeto do iOS que seja instrumentado com o {{site.data.keyword.amashort}} client SDK. Para obter mais informações, consulte
-[Introdução
-ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) e
-[Configurando
-o iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).
-* Proteja manualmente seu aplicativo backend com o {{site.data.keyword.amashort}} server SDK. Para obter mais informações, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
-
+Você deve ter:
+* Um projeto do iOS em Xcode. Ele não precisa ser instrumentado com o {{site.data.keyword.amashort}} client SDK.
+* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
 
 ## Configurando um projeto do Google para a plataforma iOS
 {: #google-auth-ios-project}
@@ -64,13 +59,13 @@ seu aplicativo iOS, procure **Identificador de pacote configurável**
 no arquivo `info.plist` ou na guia **Geral** do
 projeto Xcode.
 
-1. Anote o novo ID de cliente iOS. É necessário o valor ao configurar o aplicativo no {{site.data.keyword.Bluemix}}.
+1. Anote o novo identificador de cliente do Google iOS. É necessário o valor ao configurar o aplicativo no {{site.data.keyword.Bluemix}}.
 
 
 ## Configurando o {{site.data.keyword.amashort}} para autenticação do Google
 {: #google-auth-ios-config}
 
-Agora que você tem um ID de cliente iOS, será possível ativar a autenticação do Google no painel do {{site.data.keyword.Bluemix_notm}}.
+Agora que você tem um identificador de cliente do Google iOS, é possível ativar a autenticação do Google no painel do {{site.data.keyword.Bluemix_notm}}.
 
 1. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}.
 
@@ -82,12 +77,12 @@ app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 
 1. Clique no ladrilho **Google**.
 
-1. Em **ID do aplicativo para iOS**, especifique o ID do cliente iOS para Android e clique em **Salvar**.
+1. Em **ID do aplicativo para iOS**, especifique o identificador de cliente do Google para iOS e clique em **Salvar**.
 
 	Nota: além do identificador de cliente do Google, o valor reverso também é necessário para sua configuração do cliente (veja abaixo). Para acessar ambos os valores, faça download da plist de exemplo usando o ícone de lápis:
 		![download do arquivo info.plist](images/download_plist.png)
 
-## Configurando o {{site.data.keyword.amashort}} client SDK para iOS
+## Configurando o {{site.data.keyword.amashort}} Google client SDK for iOS
 {: #google-auth-ios-sdk}
 
 ### Instalando o {{site.data.keyword.amashort}} client SDK usando o CocoaPods
@@ -120,7 +115,7 @@ apoio` em seu projeto Xcode. É possível editar o arquivo no editor de lista de
 arquivo `info.plist`
 	![info.plist file](images/ios-google-infoplist-settings.png)
 
-	O primeiro Esquema de URL é uma versão reversa do ID do cliente do Google Developer Console. Por exemplo, se o ID do cliente for `123123-abcabc.apps.googleusercontent.com`, o Esquema de URL será: `com.googleusercontent.apps.123123-abcabc`.
+	O primeiro Esquema de URL é uma versão reversa do identificador de cliente do Console do desenvolvedor do Google. Por exemplo, se o identificador de cliente for `123123-abcabc.apps.googleusercontent.com`, o Esquema de URL será: `com.googleusercontent.apps.123123-abcabc`.
 
 	O segundo Esquema de URL é o ID do pacote configurável de seu aplicativo
 
@@ -195,7 +190,8 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 	7. Configure o valor para o local do seu arquivo `BridgingHeader.h`, por exemplo: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	8. Assegure-se de que seu cabeçalho de ponte esteja sendo selecionado pelo Xcode, compilando o seu projeto.
 
-3. Use o código a seguir para inicializar o client SDK. Substitua
+
+3. Use o código a seguir para inicializar o client SDK.  Substitua
 *applicationRoute* e *applicationGUID* pelos valores de
 **Rota** e **GUID do app** que você obteve das
 **Opções móveis**.
@@ -214,8 +210,6 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
-
-
 
 1. Registre o Manipulador de autenticação do Google incluindo o código a seguir no
 método `application:didFinishLaunchingWithOptions` na delegação do seu
@@ -267,21 +261,18 @@ app. Inclua este código imediatamente após a inicialização do IMFClient:
 	}
 ```
 
-## Testando a Autenticação
+## Testando a autenticação
 {: #google-auth-ios-testing}
 Após a inicialização do client SDK, é possível começar a fazer solicitações para seu backend móvel.
 
-### Antes de Começar
+### Antes de iniciar
 {: #google-auth-ios-testing-before}
-Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido por {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel no
-navegador do desktop abrindo
-`{applicationRoute}/protected`, por exemplo,
-`http://my-mobile-backend.mybluemix.net/protected`
+1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel no navegador da área de trabalho abrindo `{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`
 
-1. O terminal `/protected` de um backend móvel criado com o Modelo do MobileFirst Services é protegido com o {{site.data.keyword.amashort}}; portanto, ele só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
+1. O terminal `/protected` de um backend móvel criado com o Modelo MobileFirst Services está protegido com o {{site.data.keyword.amashort}}, portanto, ele só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
 
 1. Use seu aplicativo iOS para fazer solicitação para o mesmo terminal.
 
@@ -321,7 +312,7 @@ navegador do desktop abrindo
 
 	```
 
-1. Execute o aplicativo. Você verá um pop-up da tela de Login do Google
+1. Execute seu aplicativo. Você verá um pop-up da tela de Login do Google
 
 	![image](images/ios-google-login.png)
 
@@ -329,7 +320,7 @@ navegador do desktop abrindo
 
 1. Ao clicar em **OK** você está autorizando o {{site.data.keyword.amashort}} a usar sua identidade de usuário do Google para propósitos de autenticação.
 
-1. 	Sua solicitação deve ser bem-sucedida. Você deverá ver a saída a seguir no LogCat
+1.	Sua solicitação deve ser bem-sucedida. Você deverá ver a saída a seguir no LogCat
 
 	![image](images/ios-google-login-success.png)
 		

@@ -14,7 +14,7 @@ copyright:
 {:new_window: target="_blank"}
 
 # 計算
-*最終更新日: 2016 年 2 月 19 日*
+*最終更新日: 2016 年 2 月 19 日*{: .last-updated}
 
 計算には、{{site.data.keyword.Bluemix}} アプリをビルドするために選択できるインフラストラクチャーおよびリソースが含まれます。計算リソースには、{{site.data.keyword.openwhisk_short}}、Cloud Foundry アプリ、{{site.data.keyword.IBM_notm}} Containers、および {{site.data.keyword.IBM_notm}}  {{site.data.keyword.virtualmachinesshort}} が含まれます。
 {:shortdesc}

@@ -17,7 +17,7 @@ copyright:
 
 # Managing your {{site.data.keyword.Bluemix_notm}} account
 {: #mngacct}
-Last updated: 23 June 2016
+Last updated: 12 July 2016
 {: .last-updated}
 
 Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** to set notifications for your account, view your account usage, or view your bill.
@@ -26,18 +26,29 @@ Go to the **Account and Support** icon ![Account and Support icon](../admin/imag
 ## Setting notifications
 {: #notifications}
 
+Go to **Account and Support** &gt; **Account** &gt; **Notifications** to set up general account and spending notifications. Spending notifications are available only for Subscription and Pay-As-You-Go {{site.data.keyword.Bluemix_notm}} account owners.
+
+You can set platform email notifications for {{site.data.keyword.Bluemix_notm}} incidents and planned maintenance, and you can set spending notifications that alert you when your account is close to the spending threshold that you specified. Complete the following tasks to set different notification types for your account.
+
+### Setting platform notifications
+
+Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Platform** to set email notifications for {{site.data.keyword.Bluemix_notm}} incidents and planned maintenance. You can select or clear each option to enable or disable the email notification.
+
+### Setting spending notifications
+{: #spendingnotifications}
+
 If you are a Subscription or Pay-As-You-Go {{site.data.keyword.Bluemix_notm}} account owner, you can set up email spending notifications. Set notifications for total account, runtime, container, and service spending, as well as spending for individual services, excluding third-party services. You receive notifications when you reach 80%, 90%, and 100% of the spending thresholds that you specify. You can edit each spending notification at any time as your needs change.
 
 Complete the following steps to set up email notifications for spending limits:
 
 <ol>
-<li>Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Spending Notifications**.</li>
-<li>Enter a numeric value to set the spending threshold for triggering a notification for each type of spending notification:<br />
+<li>Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Notifications** &gt; **Spending**.</li>
+<li>Enter a numeric value to set the spending threshold for triggering a notification for each type of notification:<br />
 <ul>
-<li>Total account spending</li>
-<li>Total runtime spending</li>
-<li>Total services spending</li>
-<li>Total container spending</li>
+<li>Total account</li>
+<li>Total runtime</li>
+<li>Total services</li>
+<li>Total container</li>
 <li>Spending for a specific service</li>
 </ul>
 </li>
@@ -45,6 +56,7 @@ Complete the following steps to set up email notifications for spending limits:
 </ol>
 
 **Note**: If you have a trial account, you can upgrade to a Subscription or Pay-As-You-Go account to set spending limits. For more information about Pay-As-You-Go and Subscription accounts, see [How you are billed](../pricing/index.html#pay-accounts).
+
 
 ## Viewing usage
 {: #acctusage}

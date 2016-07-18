@@ -10,7 +10,7 @@ copyright:
 
 {{site.data.keyword.amashort}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する iOS アプリケーションを構成します。
 
-**ヒント:** iOS アプリを Swift で作成している場合は、{{site.data.keyword.amashort}} Client Swift SDK を使用することを検討してください。このページの手順は、{{site.data.keyword.amashort}} Client Objective-C SDK に適用されます。Swift SDK を使用する手順については、[iOS用の {{site.data.keyword.amashort}} Client SDK の構成 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html) を参照してください。
+**注:** iOS アプリを Swift で作成している場合は、{{site.data.keyword.amashort}} Client Swift SDK を使用することを検討してください。このページの手順は、{{site.data.keyword.amashort}} Client Objective-C SDK に適用されます。新しい Swift SDK を使用する手順については、[iOS 用の {{site.data.keyword.amashort}} Client SDK の構成 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html) を参照してください。
 
 ## 開始する前に
 {: #before-you-begin}
@@ -55,15 +55,12 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 1. Client SDK を使用したいクラスに `IMFCore` フレームワークをインポートします。
 
 	Objective-C:
-                    
-
 
 	```Objective-C
 	#import <IMFCore/IMFCore.h>
 	```
 
 	Swift:
-
 
 	{{site.data.keyword.amashort}} Client SDK は Objective-C によって実装されます。この SDK を使用するために、Swift プロジェクトへのブリッジング・ヘッダーを追加する必要がある場合があります。
 
@@ -78,8 +75,6 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 1. Client SDK を初期化します。applicationRoute および applicationGUID を、**「モバイル・オプション」**で取得した**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) の値に置き換えます。
 
 	Objective-C:
-                    
-
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -88,7 +83,6 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 	```
 
 	Swift:
-
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
@@ -148,8 +142,6 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 IMFAuthenticationDelegate サンプルは、カスタム ID プロバイダーのサンプルと連携するよう設計されています。このサンプルは [Github リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)からダウンロードできます。
 
 Objective-C:
-                    
-
 
 ``` Objective-C
 CustomAuthenticationDelegate.h
@@ -212,7 +204,8 @@ import Foundation
 
 class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
-	func authenticationContext(context: IMFAuthenticationContext!, didReceiveAuthenticationChallenge challenge: [NSObject : AnyObject]!) {
+	func authenticationContext(context: IMFAuthenticationContext!,
+					didReceiveAuthenticationChallenge challenge: [NSObject : AnyObject]!) {
 
 		NSLog("didReceiveAuthenticationChallenge :: %@", challenge)
 
@@ -235,11 +228,13 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 	}
 
 
-	func authenticationContext(context: IMFAuthenticationContext!, didReceiveAuthenticationSuccess userInfo: [NSObject : AnyObject]!) {
+	func authenticationContext(context: IMFAuthenticationContext!,
+					didReceiveAuthenticationSuccess userInfo: [NSObject : AnyObject]!) {
 		NSLog("didReceiveAuthenticationSuccess")
 	}
 
-	func authenticationContext(context: IMFAuthenticationContext!, didReceiveAuthenticationFailure userInfo: [NSObject : AnyObject]!) {
+	func authenticationContext(context: IMFAuthenticationContext!,
+					didReceiveAuthenticationFailure userInfo: [NSObject : AnyObject]!) {
 		NSLog("didReceiveAuthenticationFailure")
 	}
 }
@@ -268,18 +263,16 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 ## 認証のテスト
 {: #custom-ios-testing}
-Client SDK を初期化し、カスタム `IMFAuthenticationDelegate` を登録した後、モバイル・バックエンドに要求を出すことを開始できます。
+Client SDK を初期化し、カスタム `IMFAuthenticationDelegate` の登録が完了すると、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
 ### 開始する前に
 {: #custom-ios-testing-before}
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたアプリケーションと、 `/protected` エンドポイントで{{site.data.keyword.amashort}} により保護されているリソースを持っている必要があります。
 
-1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
-1. iOS アプリケーションを使用して、同じエンドポイントへの要求を実行します。`BMSClient` を初期化し、カスタム `IMFAuthenticationDelegate` を登録した後に、以下のコードを追加します。
+1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
+1. iOS アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化し、カスタム `IMFAuthenticationDelegate` を登録した後に、以下のコードを追加します。
 
 	Objective-C:
-                    
-
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -299,7 +292,6 @@ if (error){
 	```
 
 	Swift:
-
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"
@@ -328,7 +320,6 @@ if (error){
 	```
 
 	Swift:
-
 
 	```Swift
 	IMFAuthorizationManager.sharedInstance().logout(callBack)

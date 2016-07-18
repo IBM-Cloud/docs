@@ -4,16 +4,18 @@ copyright:
   years: 2015, 2016
   
 ---
-# iOS 애플리케이션에서 IMFURLProtocol 사용
+# IMFURLProtocol로 요청 보내기
 {: #imfurl}
-보호된 자원에 대한 요청을 일부 써드파티 코드가 전송하는 경우와 같은 고급 수준의 경우 요청을 보호된 자원으로 전송하는 데 `IMFResourceRequest` 클래스를 사용하지 못할 수 있습니다. 가능한 솔루션은 `IMFURLProtocol` API를 표준 `NSURLRequest (NSMutableURLRequest)` 호출과 함께 사용하는 것입니다. 
+일부 경우에 요청을 보호된 자원으로 전송하는 데 `IMFResourceRequest` 클래스를 사용하지 못할 수 있습니다(예: 보호된 자원에 대한 요청을 일부 써드파티 코드가 전송하는 경우). 가능한 솔루션은 `IMFURLProtocol` API를 표준 `NSURLRequest (NSMutableURLRequest)` 호출과 함께 사용하는 것입니다. 
+
+`IMFURLProtocol` API는 {{site.data.keyword.amashort}} Objective-C SDK에서만 사용할 수 있습니다.
 
 ## `IMFURLProtocol` Pod 설치
 {: #imfurl-pod}
 
 CocoaPods를 사용하여 `IMFURLProtocol` Pod를 설치할 수 있습니다. 그런 다음 iOS 프로젝트에서 `IMFURLProtocol.h`를 참조할 수 있습니다. 
 
-## IMFURLProtocol API를 사용하여 요청 전송
+## `IMFURLProtocol` API를 사용하여 요청 보내기
 {: #imfurl-send}
 
 1. 요청 전송에 사용할 클래스에서 `IMFURLProtocol.h` 파일을 가져오십시오. 

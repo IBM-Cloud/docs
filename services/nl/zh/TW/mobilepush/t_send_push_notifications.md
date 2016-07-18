@@ -24,9 +24,7 @@ copyright:
 2. 在**建立您的通知**中，輸入您的訊息，然後按一下**傳送**。
 3. 驗證您的裝置已接收到通知。
 
-	下列擷取畫面顯示在 Android 及 iOS 裝置的前景中處理推送通知的警示框。
-
-	![Android 上的前景推送通知](images/Android_Screenshot.jpg)
+	下列擷取畫面顯示在 Android 及 iOS 裝置的前景中處理推送通知的警示框。	![Android 上的前景推送通知](images/Android_Screenshot.jpg)
 
 	![iOS 上的前景推送通知](images/iOS_Screenshot.jpg)
 

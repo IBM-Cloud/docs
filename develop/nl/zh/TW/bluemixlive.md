@@ -17,7 +17,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*前次更新：2016 年 4 月 7 日*  
+*前次更新：2016 年 4 月 7 日*
+{: .last-updated}  
 
 如果您要建置 Node.js 應用程式，可以使用 {{site.data.keyword.Bluemix}} Live Sync 快速更新 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例，並像在桌面上那樣地開發應用程式而不必重新部署。   
 {: shortdesc}
@@ -27,13 +28,13 @@ copyright:
 {{site.data.keyword.Bluemix_notm}} Live Sync 包含三個特性。
 
 **桌面同步**  
-    您可以將任何桌面目錄樹與雲端型專案工作區同步化，運作方式類似 Dropbox。Web IDE 會直接編輯相同的雲端型工作區，讓兩者保持同步。「桌面同步」適用於任何類型的應用程式。若要使用「桌面同步」，您需要下載並安裝 BL 指令行介面。  
+您可以將任何桌面目錄樹與雲端型專案工作區同步化，運作方式類似 Dropbox。Web IDE 會直接編輯相同的雲端型工作區，讓兩者保持同步。「桌面同步」適用於任何類型的應用程式。若要使用「桌面同步」，您需要下載並安裝 BL 指令行介面。  
 
 **即時編輯**
-    您可以對在 {{site.data.keyword.Bluemix_notm}} 中執行的 Node.js 應用程式進行變更，並立刻在瀏覽器中加以測試。您在已同步的桌面目錄中或在 Web IDE 中所進行的任何變更，都會立即延伸到應用程式的檔案系統。  
+您可以對在 {{site.data.keyword.Bluemix_notm}} 中執行的 Node.js 應用程式進行變更，並立刻在瀏覽器中加以測試。您在已同步的桌面目錄中或在 Web IDE 中所進行的任何變更，都會立即延伸到應用程式的檔案系統。  
 
 **除錯**  
-    當 Node.js 應用程式處於「即時編輯」模式時，您可以使用 Shell 方式連入並進行除錯。您可以使用 Node Inspector 除錯器，以動態編輯程式碼、插入岔斷點、逐步執行程式碼、重新啟動執行時期等等。  
+當 Node.js 應用程式處於「即時編輯」模式時，您可以使用 Shell 方式連入並進行除錯。您可以使用 Node Inspector 除錯器，以動態編輯程式碼、插入岔斷點、逐步執行程式碼、重新啟動運行環境等等。  
 
 您可以使用「桌面同步」，讓桌面工作區與您直接使用 Web IDE 來編輯的雲端型專案工作區保持同步。您可以使用「即時編輯」，將雲端型專案工作區中的變更延伸到執行中的應用程式。您可以單獨或同時使用這些特性。而如果您使用「桌面同步」或「即時編輯」將應用程式置於「即時編輯」模式，就可以對執行中的應用程式進行除錯。
 
@@ -86,6 +87,7 @@ copyright:
 </ol>
 
 當您變更本端目錄中的檔案時，變更會自動延伸到 {{site.data.keyword.Bluemix_notm}} 上執行的應用程式，以及專案雲端工作區。如果您需要重新啟動 Node 應用程式，可以使用下列指令：
+
 ```
 bl start --restart
 ```
@@ -112,17 +114,17 @@ bl start --restart
 
 如果已針對 Node.js 應用程式啟用 {{site.data.keyword.Bluemix_notm}} Live Sync，則您可以存取 {{site.data.keyword.Bluemix_notm}} Live Sync 的「除錯」特性。
 
-您可以使用除錯來動態編輯程式碼、插入岔斷點、逐步執行程式碼、重新啟動執行時期等等，這些全都可以在由 {{site.data.keyword.Bluemix_notm}} 為您的應用程式提供服務時執行。您可以靈活地以漸進方式開發應用程式，同時從龐大的 {{site.data.keyword.Bluemix_notm}} 服務清單進行選擇。
+您可以使用除錯來動態編輯程式碼、插入岔斷點、逐步執行程式碼、重新啟動運行環境等等，這些全都可以在由 {{site.data.keyword.Bluemix_notm}} 為您的應用程式提供服務時執行。您可以靈活地以漸進方式開發應用程式，同時從龐大的 {{site.data.keyword.Bluemix_notm}} 服務清單進行選擇。
 
 「{{site.data.keyword.Bluemix_notm}} 即時除錯」包含下列特性：
 
-* 應用程式執行時期控制
+* 應用程式運行環境控制
 * 使用 [node-inspector](https://github.com/node-inspector/node-inspector) 進行除錯
 * Shell 存取
 
-###應用程式執行時期控制 {: #app-runtime}
+###應用程式運行環境控制 {: #app-runtime}
 
-使用應用程式執行時期控制，您可以用「除錯」來檢查應用程式在啟動時的狀態。當您對於在啟動時當機的應用程式進行疑難排解時，此功能很有用。
+使用應用程式運行環境控制，您可以用「除錯」來檢查應用程式在啟動時的狀態。當您對於在啟動時當機的應用程式進行疑難排解時，此功能很有用。
 
 開發應用程式時，可以從下列動作選取：
 
@@ -143,7 +145,7 @@ bl start --restart
 
 ###Shell {: #shell}
 
-此工具可讓您對應用程式執行所在的儲存器進行 Shell 存取。您可以使用此終端機，在遠端執行診斷 Shell 指令來管理應用程式。
+此工具可讓您對應用程式執行所在的容器進行 Shell 存取。您可以使用此終端機，在遠端執行診斷 Shell 指令來管理應用程式。
 
 監視使用標準 Linux 指令（例如 **top**、**ps** 及 **kill**）之實例內的記憶體及 CPU 使用率。
 
@@ -282,7 +284,7 @@ bl login | l [ -u username ][-p password ][ -s server ]
 使用這個指令來登入 {{site.data.keyword.Bluemix_notm}}。每個階段作業只需要執行一次登入。
 
 
-**警告：**不鼓勵您將密碼提供為指令行選項，因為其他人可以看到它，而且它會記錄為指令歷程的一部分。
+**警告：**不鼓勵您以指令行選項來提供密碼，因為其他人可以看到它，而且它會記錄為指令歷程的一部分。
 
 **附註：**您必須先註冊免費 <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> 帳戶，才能登入。
 
@@ -303,17 +305,17 @@ bl login
 ```
 {: pre}
 
-將使用者 `name@company.com` 登入：
+以使用者 `name@company.com` 進行登入：
 
 ```
 bl login –u name@company.com –p pa55w0rd
 ```
 {: pre}
 
-將使用者 `name@company.com` 登入的密碼 *pa55 w0rd* 包含空格，因此需要加上引號：
+以使用者 `name@company.com` 進行登入時的密碼 *pa55 w0rd* 包含空格，因此需要加上引號：
 
 ```
-bl login –u name@company.com –p “pa55 w0rd”
+bl login –u name@company.com –p "pa55 w0rd"
 ```
 {: pre}
 
@@ -372,7 +374,8 @@ bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremot
 如果現行目錄是現有同步目標，則這個指令會開始與關聯的專案進行同步化。如果現行目錄是空的而且不是現有同步目標，則指令會提示輸入 *projectName*。如果現行目錄不是空的而且不是現有同步目標，則需要改寫選項。
 
 ```
-bl sync```
+bl sync
+```
 {: pre}
 
 這個指令會開始同步化，且相當於 `bl sync "alias | myproject"`（如果已登入使用者擁有此專案）。
@@ -429,7 +432,7 @@ bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_R
 
 *--public*：使新專案成為公用專案。
 
-*--prompt*：提示輸入所有必要的選項，並提供可用的選擇。
+*--prompt*：提示輸入所有必要的選項，並提供可用的選項。
 
 **範例**
 
@@ -449,7 +452,7 @@ bl create -n myNewProject --public
 ```
 {: pre}
 
-## Status
+## 狀態
 {: bl_status}
 
 ```
@@ -469,7 +472,7 @@ bl status | ss [ projectName ]
 
 此範例顯示執行中應用程式的狀態。如果現行目錄是現有同步目標，則會使用關聯的專案。如果現行目錄不是現有同步目標，則指令會提示輸入 `projectName`。
 
-``
+```
 bl status
 ```
 {: pre}

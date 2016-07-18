@@ -16,11 +16,14 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Letzte Aktualisierung: 16. Mai 2016*
+*Letzte Aktualisierung: 13. Juni 2016*
+{: .last-updated}
 
 
 {{site.data.keyword.Bluemix}} ist eine cloudbasierte Plattform mit offenen Standards für das Erstellen, Ausführen und Verwalten von Anwendungen. Mit {{site.data.keyword.Bluemix_notm}} Dedicated erhalten Sie die Leistung und Einfachheit von {{site.data.keyword.Bluemix_notm}} &mdash; und zwar in Ihrer eigenen dedizierten SoftLayer-Umgebung, die sowohl mit der {{site.data.keyword.Bluemix_notm}} Public-Umgebung als auch Ihrem eigenen Netz sicher verbunden ist.
 {:shortdesc}
+
+**Hinweis:** Alle Informationen im Zusammenhang mit SoftLayer, eingeschlossene Services, Unterstützung und Vertrieb für {{site.data.keyword.Bluemix}} Dedicated gelten nicht für China. Kunden von {{site.data.keyword.Bluemix}} Dedicated in China können über die [IBM Bluemix-Seite von UNISYS Service Management](https://chinabluemix.itsm.unisysedge.cn){: new_window} Unterstützung anfordern. Darüber hinaus bieten die [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} kostenlose Unterstützung für Kunden in China.
 
 Alle dedizierten Bereitstellungen von {{site.data.keyword.Bluemix_notm}} beinhalten die folgenden Leistungen und Funktionen ohne gesonderte Berechnung: VPN, privates virtuelles LAN (VLAN), Firewall, Konnektivität mit Ihrem LDAP, Möglichkeit zur Nutzung lokal (d. h. am eigenen Standort) vorhandener Datenbanken und Apps, 24/7-Sicherheit vor Ort, dedizierte Hardware und Standardunterstützung.
 
@@ -34,13 +37,14 @@ Darüber hinaus ist eine Reihe von Services als {{site.data.keyword.Bluemix_notm
 |-----------------|-------------------|-------------------|
 |Inbegriffen | {{site.data.keyword.Bluemix_notm}}-Laufzeiten | Machen Sie mit Laufzeiten Ihre App schnell betriebsbereit, ohne Maschinen und Betriebssysteme einrichten und verwalten zu müssen. Alle {{site.data.keyword.Bluemix_notm}}-Laufzeiten stehen Ihnen zur Verwendung in Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz zur Verfügung.|
 |Inbegriffen | {{site.data.keyword.autoscaling}} | Dynamisches Erhöhen oder Verringern der Rechenleistung Ihrer Anwendung basierend auf Richtlinien. Mit diesem Service können Sie Ihre {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung unbegrenzt nutzen. |
-|Optional | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} integriert {{site.data.keyword.APIM}} und IBM StrongLoop in ein einzelnes Angebot, das eine Komplettlösung bietet, um APIs und Microservices zu erstellen, auszuführen, zu verwalten und durchzusetzen.  |
+|Optional | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} integriert {{site.data.keyword.APIM}} und IBM StrongLoop in ein einzelnes Angebot, das eine Komplettlösung bietet, um APIs und Microservices zu erstellen, auszuführen, zu verwalten und durchzusetzen. |
 |Optional | {{site.data.keyword.APIM}} | Verwenden Sie den {{site.data.keyword.APIMfull}}-Service zum Erstellen, Verwalten und Mitteilen von APIs. Sie können mit einer Proxy-URL oder durch Zusammenstellen von Daten aus HTTP-Datenquellen neue APIs mit Ressourcen importieren. Die Verwendung des {{site.data.keyword.APIM}}-Service bietet den Vorteil, dass Sie steuern können, wie Ihre APIs genutzt werden. |
 |Optional | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} bietet Zugriff auf eine vollständig verwaltete NoSQL-JSON-Datenebene, die permanent aktiv ist. Dieser Service ist mit CouchDB kompatibel und über eine einfache HTTP-Schnittstelle für mobile Anwendungsmodelle und Webanwendungsmodelle zugänglich. |
 |Optional | {{site.data.keyword.dashdbshort}} | Verwenden Sie dashDB zum Speichern relationaler Daten (einschließlich spezieller Datentypen wie Geodaten). Analysieren Sie die Daten anschließend mit SQL oder mit erweiterten integrierten Analyseverfahren wie Vorhersageanalyse, Data Mining oder Geodatenanalyse. |
 |Optional | {{site.data.keyword.datacshort}} | Dieser Service bietet ein speicherinternes Datengitter, durch das Szenarios mit verteiltem Caching für Ihre Apps unterstützt werden. Umfasst 50 GB speicherinternen Cache. |
-|Optional | {{site.data.keyword.mobilepushshort}} | {{site.data.keyword.mobilepushshort}} ist ein Service, mit dem Sie Benachrichtigungen an iOS- und Android-Geräte senden können. Benachrichtigungen können sich an alle Anwendungsbenutzer oder mithilfe von Tags an eine bestimmte Gruppe von Benutzern und Geräten wenden. Sie können Geräte, Tags und Abonnements verwalten. Sie können auch ein SDK (SDK, Software-Development-Kit) und REST-APIs (REST, Representational State Transfer; API, Application Program Interface) verwenden, um die Clientanwendung weiterzuentwickeln.  |
-|Optional | {{site.data.keyword.messagehub}} | {{site.data.keyword.messagehub}} ist ein skalierbarer, dezentraler Nachrichtenbus mit hohem Durchsatz, um Ihre lokalen und nicht lokalen Technologien zu verbinden. {{site.data.keyword.messagehub}} basiert auf Apache Kafka, einer schnellen, skalierbaren und dauerhaft echtzeitorientierten Messaging-Engine.  |
+| Optional (Beta) | Protokollierung | Stellt Protokolle für Ihre Cloud Foundry-Apps in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle sowie durchsuchbare Protokolle und Dashboards in Kibana bereit. |
+|Optional | {{site.data.keyword.mobilepushshort}} | {{site.data.keyword.mobilepushshort}} ist ein Service, mit dem Sie Benachrichtigungen an iOS- und Android-Geräte senden können. Benachrichtigungen können sich an alle Anwendungsbenutzer oder mithilfe von Tags an eine bestimmte Gruppe von Benutzern und Geräten wenden. Sie können Geräte, Tags und Abonnements verwalten. Sie können auch ein SDK (SDK, Software-Development-Kit) und REST-APIs (REST, Representational State Transfer; API, Application Program Interface) verwenden, um die Clientanwendung weiterzuentwickeln. |
+|Optional | {{site.data.keyword.messagehub}} | {{site.data.keyword.messagehub}} ist ein skalierbarer, dezentraler Nachrichtenbus mit hohem Durchsatz, um Ihre lokalen und nicht lokalen Technologien zu verbinden. {{site.data.keyword.messagehub}} basiert auf Apache Kafka, einer schnellen, skalierbaren und dauerhaft echtzeitorientierten Messaging-Engine. |
 |Optional | {{site.data.keyword.SecureGateway}} | Der {{site.data.keyword.SecureGateway}}-Service stellt eine sichere Methode zur Verbindung von {{site.data.keyword.Bluemix_notm}}-Anwendungen mit fernen Standorten lokal oder in der Cloud bereit.  |
 |Optional | {{site.data.keyword.sescashort}} | Um die Redundanz zu erhöhen, stellt {{site.data.keyword.sescashort}} eine Replik für eine Sitzung bereit, die im Cache gespeichert ist. Daher kann Ihre Clientanwendung auch im Falle eines Spannungsabfalls oder einer Betriebsunterbrechung weiterhin auf die im Cache gespeicherte Sitzung zugreifen. Der Service unterstützt das Sitzungs-Caching für Webanwendungen und mobile Anwendungen. |
 |Optional | {{site.data.keyword.iot_full}} | Dieser Service ermöglicht Ihren Apps die Kommunikation mit und die Nutzung der erfassten Daten von Ihren verbundenen Geräten, Sensoren und Gateways. Das Basisangebot ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.iot_full}} in der dedizierten Umgebung mit einer Kapazität für 100.000 gleichzeitig verbundene Geräte oder Anwendungen und 1,6 Terabyte (TB) für den Datenaustausch. |
@@ -52,19 +56,23 @@ Durch optionale Komponenten, die zusätzlich zum Kauf angeboten werden, können 
 | **Name**            | **Beschreibung** |      
 |-------------------|-------------------|
 |Dedicated-Laufzeiten - Kapazitätserweiterung um 16 GB  | Diese Erweiterung der Laufzeitumgebung stellt zusätzlich 16 GB Laufzeitkapazität zur Verfügung. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Professional - 5 Millionen API-Aufrufe | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.apiconnect_short}} innerhalb der dedizierten Umgebung mit einer Kapazität von 5 Millionen API-Aufrufen pro Monat. Richtet sich an API-Projekte auf Abteilungsebene. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Professional - Kapazitätserweiterung auf 100.000 API-Aufrufe | Diese Erweiterung der {{site.data.keyword.apiconnect_short}} Professional-Umgebung bietet eine zusätzliche Kapazität von 100.000 API-Aufrufen pro Monat. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Enterprise - 25 Millionen API-Aufrufe | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.apiconnect_short}} innerhalb der dedizierten Umgebung mit einer Kapazität von 25 Millionen API-Aufrufen pro Monat. Richtet sich an API-Projekte auf Unternehmensebene. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Enterprise - Kapazitätserweiterung auf 100.000 API-Aufrufe | Diese Erweiterung der {{site.data.keyword.apiconnect_short}} Enterprise-Umgebung bietet eine zusätzliche Kapazität von 100.000 API-Aufrufen pro Monat. |
+|Dedicated {{site.data.keyword.APIM}} - Kapazitätserweiterung auf 1000 API-Aufrufe  | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.APIM}} in der dedizierten Umgebung mit einer Kapazität von 1.000 API-Aufrufen pro Sekunde. |
+|Dedicated {{site.data.keyword.APIM}} - Kapazitätserweiterung auf 500 API-Aufrufe  | Diese Umgebung ermöglicht die Ausführung einer privaten Version von IBM API Management for Bluemix in der dedizierten Umgebung mit einer Kapazität von 500 API-Aufrufen pro Sekunde.  |
 |Dedicated {{site.data.keyword.cloudant}} - Kapazitätserweiterung auf 1,6 TB | Beinhaltet die Ausführung einer privaten Version von {{site.data.keyword.cloudantfull}} in der dedizierten Umgebung mit einer Designkapazität von 1,6 Terabyte.  |
 |Dedicated {{site.data.keyword.datacshort}} und {{site.data.keyword.sescashort}} -  Kapazitätserweiterung auf 50 GB | Diese Umgebung ermöglicht die Bereitstellung und Ausführung von {{site.data.keyword.datacshort}}- und {{site.data.keyword.sescashort}}-Instanzen mit einer kumulativen Kapazität bis zu 50 GB. |
-|Dedicated Direct Link mit 1 Gb/s Nutzungsvolumen | Eine dedizierte direkte Netzverbindung mit dem zugehörigen SoftLayer-Netzbereitstellungspunkt für Datenübertragungsvolumen bis 1 Gb/s. |
-|Dedicated Direct Link mit 10 Gb/s Nutzungsvolumen | Eine dedizierte direkte Netzverbindung mit dem zugehörigen SoftLayer-Netzbereitstellungspunkt für Datenübertragungsvolumen bis 10 Gb/s. |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | Eine Datenbank pro Serviceinstanz auf einem dedizierten Server mit 64 GB RAM und 16 vCPUs. Empfohlen für vorheriges Laden von Daten bis 1 TB bei normaler Komprimierung.  |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | Eine Datenbank pro Serviceinstanz auf einem dedizierten Bare-Metal-Server mit 256 GB RAM und 32 Kernen. Empfohlen für vorheriges Laden von Daten bis 4 TB bei normaler Komprimierung. |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.12  | Eine Datenbank pro Serviceinstanz auf einem dedizierten Bare-Metal-Server mit 256 GB RAM und 32 Kernen. Empfohlen für vorheriges Laden von Daten bis 12 TB bei normaler Komprimierung. Dieser Plan mit hoher Speicherdichte eignet sich für Umgebungen mit höheren Datenvolumen, wenn Abfragen nicht mit speicherinternen Geschwindigkeiten ausgeführt werden müssen. |
-|Dedicated {{site.data.keyword.APIM}} - Kapazitätserweiterung auf 1000 API-Aufrufe  | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.APIM}} in der dedizierten Umgebung mit einer Kapazität von 1.000 API-Aufrufen pro Sekunde. |
-|Dedicated {{site.data.keyword.APIM}} - Kapazitätserweiterung auf 500 API-Aufrufe  | Diese Umgebung ermöglicht die Ausführung einer privaten Version von IBM API Management for Bluemix in der dedizierten Umgebung mit einer Kapazität von 500 API-Aufrufen pro Sekunde.  |
+|Dedicated Direct Link mit 1 Gb/s Nutzungsvolumen | Eine dedizierte direkte Netzverbindung mit dem zugehörigen SoftLayer-Netzbereitstellungspunkt für Datenübertragungsvolumen bis 1 Gb/s. |
+|Dedicated Direct Link mit 10 Gb/s Nutzungsvolumen | Eine dedizierte direkte Netzverbindung mit dem zugehörigen SoftLayer-Netzbereitstellungspunkt für Datenübertragungsvolumen bis 10 Gb/s. |
 |{{site.data.keyword.Bluemix_notm}} Dedicated-Community-Services  | Diese Umgebung ermöglicht die Bereitstellung und Ausführung von bis zu 50 Instanzen für jeden Community-Service.  |
-|IBM Bluemix Dedicated Hardware Firewall - High Availability | Eine redundante Hardware-Firewall mit 1 Gb/s, konfiguriert für den Schutz von einzelnen, mehreren oder allen Servern in demselben VLAN innerhalb der Dedicated-Umgebung. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated Hardware Firewall - Hochverfügbarkeit | Eine redundante Hardware-Firewall mit 1 Gb/s, konfiguriert für den Schutz von einzelnen, mehreren oder allen Servern in demselben VLAN innerhalb der Dedicated-Umgebung. |
 |Dedicated Vyatta VPN mit 1 Gb/s, konfiguriert für Hochverfügbarkeit  | Ein Vyatta VPN mit 1 Gb/s, konfiguriert für Hochverfügbarkeit zur Verwendung in der Dedicated-Umgebung. |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.mobilepushshort}} | Eine Umgebung, die die Implementierung und Ausführung von {{site.data.keyword.mobilepushshort}}-Instanzen mit der Möglichkeit, 300 Anfragen pro Sekunde zu akzeptieren, bietet.  |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.mobilepushshort}} | Eine Umgebung, die die Implementierung und Ausführung von {{site.data.keyword.mobilepushshort}}-Instanzen mit der Möglichkeit, 300 Anfragen pro Sekunde zu akzeptieren, bietet. |
 |{{site.data.keyword.iot_short}} Dedicated - inkrementelle Erhöhung | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.iot_short}} in der dedizierten Umgebung mit einer Kapazität für 100.000 gleichzeitig verbundene Geräte oder Anwendungen und 0,5 TB für den Datenaustausch. |
 
 
@@ -76,7 +84,7 @@ Durch optionale Komponenten, die zusätzlich zum Kauf angeboten werden, können 
 
 {{site.data.keyword.Bluemix_notm}} Dedicated umfasst einen privaten Katalog, in dem die lokalen Services angezeigt werden, die ausschließlich Ihnen zur Verfügung stehen. Er umfasst außerdem Services, die zu Ihrer Verwendung aus {{site.data.keyword.Bluemix_notm}} Public verfügbar gemacht werden.
 
-Der syndizierte Katalog bietet die Funktion zum Erstellen von Hybridanwendungen, die aus öffentlichen und privaten Services bestehen. Sie können auf der Basis Ihrer Kriterien für Datenschutz und Sicherheit entscheiden, welche öffentlichen Services die Anforderungen Ihres Unternehmens erfüllen. Wenn es sich um eine Private Serviceinstanz Ihrer dedizierten Umgebung handelt, wird bei den Servicekacheln in Ihrem Katalog das Tag "Dedicated" angezeigt. Entsprechend sehen Sie "Angepasst" bei den Servicekacheln, wenn es sich um einen benutzerdefinierten Service handelt. 
+Der syndizierte Katalog bietet die Funktion zum Erstellen von Hybridanwendungen, die aus öffentlichen und privaten Services bestehen. Sie können auf der Basis Ihrer Kriterien für Datenschutz und Sicherheit entscheiden, welche öffentlichen Services die Anforderungen Ihres Unternehmens erfüllen. Wenn es sich um eine Private Serviceinstanz Ihrer dedizierten Umgebung handelt, wird bei den Servicekacheln in Ihrem Katalog das Tag "Dedicated" angezeigt. Entsprechend sehen Sie "Angepasst" bei den Servicekacheln, wenn es sich um einen benutzerdefinierten Service handelt.
 
 *Tabelle 3. Für Syndikation verfügbare Services aus {{site.data.keyword.Bluemix_notm}} Public nach Region*
 
@@ -218,7 +226,7 @@ und eine Bereitstellungsoption auszuwählen, die Ihren Sicherheitsanforderungen 
 IBM Ansprechpartner an der Konfiguration Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz.</dd>
 </dl>
 
-Ihre Ansprechpartner beim Kunden arbeiten mit IBM Spezialisten zusammen, um sicherzustellen, dass Sie immer die benötigte Unterstützung erhalten. Sie können ein Upgrade auf die Stufe Premium Support durchführen, um für Ihr Konto mit einem dedizierten Cluster Systems Manager (CSM) zu arbeiten. Weitere Informationen zu den unterschiedlichen Unterstützungskategorien finden Sie unter [Support kontaktieren](../support/index.html#contacting-support). Der CSM führt folgende Typen von Tasks aus: 
+Ihre Ansprechpartner beim Kunden arbeiten mit IBM Spezialisten zusammen, um sicherzustellen, dass Sie immer die benötigte Unterstützung erhalten. Sie können ein Upgrade auf die Stufe Premium Support durchführen, um für Ihr Konto mit einem dedizierten Cluster Systems Manager (CSM) zu arbeiten. Weitere Informationen zu den unterschiedlichen Unterstützungskategorien finden Sie unter [Support kontaktieren](../support/index.html#contacting-support). Der CSM führt folgende Typen von Tasks aus:
 
 <ul>
 <li>Schnelle Einführung Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung.</li>
@@ -259,7 +267,7 @@ In der Konzeptionsphase wird die {{site.data.keyword.Bluemix_notm}} Dedicated-Um
 |Angeben von Tools für Ereigniserkennung und Problembestimmung | Geben Sie IBM Tools und Tools von Drittanbietern für die Ereigniserkennung und Problembestimmung auf der {{site.data.keyword.Bluemix_notm}}-Plattformebene an. | IBM |
 |Definieren eines Eskalationsplans | Definieren Sie den Eskalationsplan zur Klassifizierung und Auflösung von Ereignissen, die von Überwachungskomponenten erkannt werden. | IBM |
 |Unterzeichnen von Infrastruktur-, Plattform- und Supportvereinbarungen | Unterzeichnen Sie die Abonnementvereinbarung, einschließlich der finanziellen Vertragsbedingungen für die Umgebung. Unterzeichnen Sie das Supportabonnement. | Kunde |
-|Beschaffen einer Umgebung | Beschaffen Sie Rechenressourcen, Netz und Speicher, einschließlich Core- und Services-VLAN zum Hosten von {{site.data.keyword.Bluemix_notm}} sowie Bare-Metal-Services zum Hosten von Data Power und SoftLayer-Firewall. Stellen Sie eine Infrastruktur bereit, die einen VPN-Tunnel ermöglicht. | Kunde |
+|Beschaffen einer Umgebung | Beschaffen Sie Rechenressourcen, Netz und Speicher, einschließlich Core- und Services-VLAN zum Hosten von {{site.data.keyword.Bluemix_notm}} sowie Bare-Metal-Services zum Hosten von Data Power und SoftLayer-Firewall. Stellen Sie eine Infrastruktur bereit, die einen VPN-Tunnel ermöglicht. | IBM |
 |Installieren von Plattform-, Anwendungs- sowie Überwachungs- und Verwaltungskomponenten | Installieren, konfigurieren und überprüfen Sie Plattformkomponenten wie BOSH Director, Cloud-Controller, Statusmanager, Messaging, Routers, DEAs und Service-Provider sowie die Überwachungskomponenten, die im Eskalations- und Problemerkennungsplan definiert sind. | IBM |
 |Installieren und Konfigurieren von Sicherheitskomponenten | Installieren und konfigurieren Sie Sicherheitskomponenten, die in den Überwachungs- und Eskalationsplan eingebunden sind, darunter IBM QRadar, Vault für Berechtigungsnachweise, Abwehrsystem gegen Angriffe von außen, IBM BigFix und IBM Security Privileged Identity Management. | IBM |
 |Installieren und Konfigurieren von angepassten Komponenten |  	Installieren und konfigurieren Sie angepasste Komponenten, die sich außerhalb des Geltungsbereichs des {{site.data.keyword.Bluemix_notm}}-Produkts und der -Services befinden. | Kunde |
@@ -289,7 +297,7 @@ Als Nächstes folgt die Fortschrittsphase. Die Fortschrittsphase beschreibt die 
 |Überprüfen von Projektionen | Überprüfen Sie die Kapazitätsprojektionen hinsichtlich externer Ereignisse, die sich auf die Kapazität auswirken können. | Kunde |
 |Anpassen der Kapazität |  Fügen Sie Kapazität hinzu oder entfernen Sie Kapazität nach Bedarf. | IBM |
 |Veröffentlichen zukünftiger Aktualisierungen und Wartungen | Erstellen Sie eine Dokumentation für die erforderliche Wartung von IBM Komponenten. | IBM |
-|Durchführen einer Wartung | Planen Sie gemeinsam mit IBM die erforderlicher Wartung innerhalb eines 21-tägigen Zeitraums. Sie können innerhalb des 21-tägigen Zeitraums Daten angeben, an denen keine Wartungsarbeiten ausgeführt werden sollen, und IBM bemüht sich, die Wartung entsprechend zu planen.  | IBM und Kunde |
+|Durchführen einer Wartung | Planen Sie gemeinsam mit IBM die erforderlicher Wartung innerhalb eines 21-tägigen Zeitraums. Sie können innerhalb des 21-tägigen Zeitraums Daten angeben, an denen keine Wartungsarbeiten ausgeführt werden sollen, und IBM bemüht sich, die Wartung entsprechend zu planen. | IBM und Kunde |
 |Adressieren von Bereitstellungsfehlern | Beheben Sie ggf. auftretende Bereitstellungsfehler für vom Kunden erstellte Services, die im Katalog implementiert werden. | IBM |
 |Durchführen von Netz- und IP-Scans | Führen Sie tägliche und monatliche Netz- und IP-Scans durch. | IBM und Kunde |
 |Bereitstellen von Zugriff auf Prüfprotokolle | Stellen Sie Zugriff auf alle Sicherheits- und Verwaltungsprüfprotokolle bereit.   | IBM und Kunde |
@@ -322,14 +330,15 @@ Die folgenden Wartungsarten sind für
 {{site.data.keyword.Bluemix_notm}} Dedicated erforderlich:
 <dl>
 <dt>**Standardwartung für Services**</dt>
-<dd>Die Services verwenden vordefinierte Standardwartungsfenster, die dazu führen können, dass die Services nicht verfügbar sind. IBM benötigt nicht die Genehmigung des Kunden, um Servicewartungsarbeiten durchzuführen, versucht jedoch, die Auswirkungen auf Ihre Services so gering wie möglich zu halten. <br />
+<dd>Die Services verwenden vordefinierte Standardwartungsfenster, die dazu führen können, dass die Services nicht verfügbar sind. IBM benötigt nicht die Genehmigung des Kunden, um Servicewartungsarbeiten durchzuführen, versucht jedoch, die Auswirkungen auf Ihre Services so gering wie möglich zu halten.<br />
 <br />
-IBM sendet Broadcastnachrichten zu den geplanten Änderungen für jeden Wartungszeitraum auf der Statusseite. <br />
+IBM sendet Broadcastnachrichten zu den geplanten Änderungen für jeden Wartungszeitraum auf der Statusseite.<br />
 <br />
 **Wichtig**: Einige Services stehen Ihnen während des Wartungszeitraums möglicherweise nicht zur Verfügung.</dd>
 
 <dt>**Standardwartung für die {{site.data.keyword.Bluemix_notm}}-Plattform**</dt>
-<dd>Wartungsaktualisierung werden basierend auf der Koordination zwischen Ihnen und IBM innerhalb eines 21-tägigen Zeitfensters angewendet. Sie geben IBM vorab genehmigte Wartungszeiten und bestimmte Daten oder Uhrzeiten an, zu denen eine Wartung nicht möglich ist. IBM plant die Aktualisierungen dann entsprechend der von Ihnen ausgewählten Wartungs- und Ausschlusszeiten. <p>
+<dd>Wartungsaktualisierung werden basierend auf der Koordination zwischen Ihnen und IBM innerhalb eines 21-tägigen Zeitfensters angewendet. Sie geben IBM vorab genehmigte Wartungszeiten und bestimmte Daten oder Uhrzeiten an, zu denen eine Wartung nicht möglich ist. IBM plant die Aktualisierungen dann entsprechend der von Ihnen ausgewählten Wartungs- und Ausschlusszeiten.
+<p>
 <p>Wechseln Sie zu **Verwaltung > Systeminformationen**, um anstehende und ausstehende Wartungsaktualisierungen anzuzeigen. Weitere Informationen zu Einstellungen Ihrer vorab genehmigten Zeiten, zu nicht verfügbaren Daten und zur Anzeige oder Prüfung der Wartungsaktualisierungen finden Sie unter <a href="../admin/index.html#oc_schedulemaintenance">Wartungsaktualisierung</a></p>.</dd>
 </dl>
 
