@@ -9,7 +9,7 @@ copyright:
 # Setting up the Cordova plug-in
 {: #getting-started-cordova}
 
-*Last updated: 20 June 2016*
+*Last updated: 17 July 2016*
 {: .last-updated}
 
 Instrument your Cordova application with {{site.data.keyword.amashort}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.
@@ -22,7 +22,7 @@ You must have:
 
 * A  Cordova application or an existing project. For more information about how to set up your Cordova application, see the [Cordova website](https://cordova.apache.org/).
 
-## Installing the {{site.data.keyword.amashort}} Cordova Plug-in
+## Installing the {{site.data.keyword.amashort}} Cordova plug-in
 {: #getting-started-cordova-plugin}
 
 The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in that wraps the native {{site.data.keyword.amashort}} client SDKs. It is distributed using the Cordova Command Line Interface (CLI) and `npmjs`, a plug-in repository for Cordova projects. The Cordova CLI automatically downloads plug-ins from repositories, and makes them available to your Cordova application.

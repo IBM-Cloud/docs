@@ -8,11 +8,11 @@ copyright:
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 
-# Enabling Facebook authentication for iOS apps (Objective-C SDK)
+# Enabling Facebook authentication for your iOS apps (Objective-C SDK)
 {: #facebook-auth-ios}
 
 
-*Last updated: 15 June 2016*
+*Last updated: 17 July 2016*
 {: .last-updated}
 
 

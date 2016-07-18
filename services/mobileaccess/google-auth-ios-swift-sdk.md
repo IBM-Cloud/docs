@@ -11,7 +11,7 @@ copyright:
 # Enabling Google authentication for iOS apps (Swift SDK)
 {: #google-auth-ios}
 
-*Last updated: 16 June 2016*
+*Last updated: 17 July 2016*
 {: .last-updated}
 
 Use Google Sign-In to authenticate users on your {{site.data.keyword.amashort}} iOS Swift app. The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
@@ -55,7 +55,6 @@ The following steps give you a brief outline of the tasks necessary for preparin
 1. Add the `GoogleService-Info.plist` file to your Xcode project. For more information, see [Add the configuration file to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config).
 
 1. Update the URL Schemes in your Xcode project with your `REVERSE_CLIENT_ID` and bundle identifier. For more information, see [Add URL schemes to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project).
-
 
 1. Update your app's project-Bridging-Header.h file with the following code:
 

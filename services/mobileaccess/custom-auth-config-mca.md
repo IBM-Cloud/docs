@@ -8,7 +8,7 @@ copyright:
 # Configuring {{site.data.keyword.amashort}} for custom authentication
 {: #custom-dash}
 
-*Last updated: 28 June 2016*
+*Last updated: 17 July 2016*
 {: .last-updated}
 
 
@@ -22,7 +22,7 @@ To use custom authentication with your mobile app, you must register a custom au
 
 ## Configure custom authentication in the {{site.data.keyword.Bluemix}} dashboard
 {: #custom-dash-config}
-Use the {{site.data.keyword.amashort}} dashboard to configure custom authentication.
+Use the {{site.data.keyword.Bluemix}} dashboard to configure custom authentication.
 
 1. Open your app in the {{site.data.keyword.Bluemix}} dashboard.
 

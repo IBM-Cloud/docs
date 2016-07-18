@@ -11,7 +11,7 @@ copyright:
 # Setting up the iOS Swift SDK
 {: #getting-started-ios}
 
-*Last updated: 26 June 2016*
+*Last updated: 17 July 2016*
 {: .last-updated}
 
 {{site.data.keyword.amashort}} has released a new Swift SDK, that adds to, and improves, the functionality provided by the existing {{site.data.keyword.amashort}} Objective-C SDK, making it easier to authenticate your app and providing better protection for your back-end resources. Instrument your iOS Swift application with the {{site.data.keyword.amashort}} SDK, initialize the SDK, and make requests to protected and unprotected resources.
@@ -35,7 +35,7 @@ You must have:
 
 ## Installing the {{site.data.keyword.amashort}} client SDK
 {: #install-mca-sdk-ios}
-The {{site.data.keyword.amashort}} SDK is distributed with CocoaPods, a dependency manager for iOS projects. CocoaPods automatically downloads artifacts from repositories and makes them available to your iOS application.
+The {{site.data.keyword.amashort}} SDK is distributed with CocoaPods, a dependency manager for iOS projects. CocoaPods automatically downloads artifacts from repositories, and makes them available to your iOS application.
 
 
 ### Install CocoaPods
@@ -85,7 +85,7 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
  import BMSSecurity
  ```  
 
-1. Initialize the {{site.data.keyword.amashort}} client SDK. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the face icon (![Face](/face.png "Face")) in the upper-left corner of the dashboard. 
+1. Initialize the {{site.data.keyword.amashort}} client SDK. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the face icon (![Face](images/face.png "Face")) in the upper-left corner of the dashboard. 
 
 
  ```Swift

@@ -5,18 +5,24 @@ copyright:
 
 ---
 
-#Enabling custom authentication for web applications
+#Configuring custom authentication for {{site.data.keyword.amashort}} web applications
 {: #custom-web}
 
-*Last updated: 13 July 2016*
+*Last updated: 18 July 2016*
 {: .last-updated}
 
-Add custom authentication to your web app.
+Add custom authentication to your {{site.data.keyword.amashort}} web app.
 
 ## Before you begin
 {: #before-you-begin}
+Before you begin,  you must have:
 
-You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  For more information, see the following information:
+*	A web app. 
+*	An instance of a {{site.data.keyword.Bluemix_notm}}  application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}}  back-end application, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html).
+*	The URI for the final redirect (after the authorization process completes).
+
+
+For more information:
  * [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
@@ -25,27 +31,69 @@ You must have a resource that is protected by an instance of the {{site.data.key
 
 ##Configuring a custom identity provider 
 
-When creating a custom identity provider you must implement a `/handleChallengeAnswer` endpoint. This endpoint must have the following structure:  
+When creating a custom identity provider you must define a POST method  with a route  in the following structure: 
 
 `/apps/:tenantID/<your-realm-name>/handleChallengeAnswer`
 
-`tenantID` is a url parameter and `<YourRealmName>` is any realm name you choose. 
+`tenantID` is a url parameter and `<your-realm-name>` is any realm name you choose. 
 
-A call to this endpoint must contain two body parameters: `username` and `password`. After validating the user, this endpoint must return a JSON object of the following structure: 
+The request body will contain a `challengeAnswer` object that contains  `username` and `password`
+After validating the user, this route must return a JSON object of the following structure.. 
+
+
 ```json
 { 
-
             status: "success", 
             userIdentity: { 
                 userName: <user name>, 
                 displayName: <display name> 
-     attributes: <additional attributes json> 
+                attributes: <additional attributes json> 
             } 
         } 
 
  ```
 
-**Note:** The attributes field is optional. 
+**Note:** The `attributes` field is optional. 
+
+The following code demonstrates such a post request.
+
+```Java
+var app = express();
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
+var users = {
+    "John": {
+      password: "123",
+      displayName: "John Doe"
+    }
+};
+
+app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
+         function(req, res) {
+         console.log ("tenantID " + req.params.tenantID);
+         
+         var challengeAnswer = req.body.challengeAnswer;
+         console.log ("challengeAnswer " + JSON.stringify(challengeAnswer));
+
+         if (challengeAnswer && users[challengeAnswer.username] && challengeAnswer.password === users[challengeAnswer.username].password) {
+         res.json({
+                  status: "success",
+                  userIdentity: {
+                  userName: challengeAnswer.username,
+                  displayName: users[challengeAnswer.username].displayName
+                  }
+                  });
+         } else {
+         res.json({
+                  status: "failure"
+                  });
+         }
+         
+         });
+
+```
+
 
 ##Configuring {{site.data.keyword.amashort}} for custom authentication 
 
@@ -54,7 +102,7 @@ After you have your custom identity provider configured, you can enable custom a
 1. Open the {{site.data.keyword.Bluemix_notm}} dashboard. 
 2. Click the relevant {{site.data.keyword.amashort}} application tile. The app dashboard loads. 
 3. Click the **Configure** button on the Custom tile. 
-4. In the **Realm Name** text box, enter the realm name configured in your custom identity provider handler endpoint. 
+4. In the **Realm Name** text box, enter the realm name configured in your custom identity provider handler endpoint. t
 5. Enter the custom identity provider url. 
 6. Enter the Web application redirect URI to be used by {{site.data.keyword.amashort}} dashboard after successful authentication. 
 7. Save. 
@@ -68,7 +116,7 @@ To request user authorization, redirect the browser to the authorization server 
 
 1. Retrieve the authorization endpoint (`authorizationEndpoint`) and clientId (`clientId`) from the service credentials stored in `VCAP_SERVICES` environment variable. 
 
-  **Note:** In case you’ve added the Mobile Client Access service to your application before web support was added you might not have token endpoint in service credentials. Use below urls depending on your {{site.data.keyword.Bluemix_notm}}  region instead: 
+  **Note:** In case you've added the Mobile Client Access service to your application before web support was added you might not have token endpoint in service credentials. Use below urls depending on your {{site.data.keyword.Bluemix_notm}}  region instead: 
  
   US South: 
   ```
@@ -82,7 +130,7 @@ To request user authorization, redirect the browser to the authorization server 
   ```
   https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
   ```
-2. Build the authorization server URI supplying response_type ("code"), `client_id`, and `redirect_uri` as query parameters.  
+2. Build the authorization server URI using `response_type("code")`, `client_id`, and `redirect_uri` as query parameters.  
 1. Redirect from your web app to the generated URI. 
 
 The following example retrieves the parameters from the `VCAP_SERVICES` variable, builds the URL, and sends the redirect request.
@@ -115,19 +163,21 @@ function checkAuthentication(req, res, next){
 
  ```
  
-Note that the `redirect_uri` parameter represents your web application redirect URI and must be equal to the one defined in the{{site.data.keyword.amashort}} dashboard.  
+Note that the `redirect_uri` parameter represents your web application redirect URI and must be equal to the one defined in the {{site.data.keyword.amashort}} dashboard.  
 
-After redirecting to the authorization end-point the user will get a login form. After user’s credentials are authenticated with the custom identity provider, the {{site.data.keyword.amashort}} service will call your web application redirect URI supplying the grant code as a query parameter.  
+A `state` parameter can be passed along with the request. This parameter will be propogated to the custom identity provider POST method, and can be accessed from the request body (`req.body.stateId`).  
 
-After redirecting, the user gets a login form. After the user’s credentials are authenticated by the custom identity provider, the {{site.data.keyword.amashort}} service will calls the web application redirect URI, supplying the grant code as a query parameter. 
+After redirecting to the authorization end-point the user will get a login form. After user's credentials are authenticated with the custom identity provider, the {{site.data.keyword.amashort}} service will call your web application redirect URI supplying the grant code as a query parameter.  
 
+After redirecting, the user gets a login form. After the user's credentials are authenticated by the custom identity provider, the {{site.data.keyword.amashort}} service will calls the web application redirect URI, supplying the grant code as a query parameter. 
 
+##Obtaining the tokens
 
 The next step is to obtain the access token and identity token using the previously received grant code. In order to do so: 
 
 1. Retrieve `authorizationEndpoint`, `clientId`, and `secret` from service credentials stored in `VCAP_SERVICES` environment variable. 
 
-   **Note:** In case you’ve added the Mobile Client Access service to your application before web support was added you might not have token endpoint in service credentials. In this case use below urls depending on your Bluemix region instead: 
+   **Note:** In case you've added the Mobile Client Access service to your application before web support was added you might not have token endpoint in service credentials. In this case use below urls depending on your Bluemix region instead: 
 
  US South: 
  ```
@@ -179,9 +229,9 @@ app.get("/oauth/callback", function(req, res, next){
 ); 
 
  ```
-Note that the `redirect_uri` parameter must match the `redirect_uri` used in authorization request previously. The code parameter value should be the grant code received in the response at the end of authorization request. The grant code is valid for 10 minutes only, you will need to to obtain a new code.
+Note that the `redirect_uri` parameter must match the `redirect_uri` used in authorization request previously. The code parameter value should be the grant code received in the response at the end of authorization request. The grant code is valid for 10 minutes only, after which you will need to obtain a new code.
 
-The response body will contain `access_token` and `id_token`  in JWT format (https://jwt.io/).
+The response body will contain `access_token` and `id_token` in JWT format (https://jwt.io/).
 
 Once you have received access, and identity the tokens, you can flag web session as authenticated and optionally persist these tokens
 
@@ -193,8 +243,11 @@ The access token allows communication with resources protected by Mobile Client 
 
 `Authorization=Bearer <accessToken> <idToken>` 
 
+**Note:** 
 
-**Note:** The identity token is optional. In the case where you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
+* The `<accessToken>` and the `<idToken>` must be separated by a white space.
+
+* The identity token is optional. In the case where you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
 
 
 

@@ -7,7 +7,7 @@ copyright:
 
 # Enabling Facebook authentication for web applications
 
-*Last updated: 13 July 2016*
+*Last updated: 18 July 2016*
 {: .last-updated}
 
 Use  Facebook to authenticate users on your web app.
@@ -16,8 +16,7 @@ Use  Facebook to authenticate users on your web app.
 {: #facebook-auth-android-before}
 You must have:
 * A web app. 
-* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
-* A Facebook application.
+* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by the {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
 * The URI for the final redirect (after the authorization process completes).
 
 
@@ -43,8 +42,9 @@ After you have your Facebook Application ID and App Secret, and your Facebook Ap
 2. Click the tile for the  {{site.data.keyword.amashort}} service.
 1. Click the **Configure** button in the **Facebook** panel.
 2. Note the value in the **Mobile Client Access Redirect URI for Facebook Developer Console** textbox. This is the value you need to add to the **Valid OAuth redirect URIs** box in the **Facebook Login** of the Facebook Developers Portal in step 6 above.
-1. Enter the Facebook **Application ID** and **App Secret**, and save.
+1. Enter the Facebook **Application ID** and **App Secret**.
 2. Enter the redirect URI in the **Your Web Application Redirect URIs**. This value is for the redirect URI to be accessed after the authorization process is completed, and is determined by the developer.
+3. Click **Save**.
 
 
 
@@ -71,9 +71,10 @@ To start the process of authorization:
     ```
  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
   ```
+2. Build the authorization server URI using `response_type("code")`, `client_id`, and `redirect_uri` as query parameters. 
+3. Redirect from your web app to the generated URI.
 
-1. Build the authorization server URI using the response type ("code"), clientId, and the authorization endpoint as query parameters.
-1. Send the request.
+
 
 The example below retrieves the parameters from the `VCAP_SERVICES` variable, building the URL, and sending the redirect request.
 
@@ -109,18 +110,18 @@ The example below retrieves the parameters from the `VCAP_SERVICES` variable, bu
   
  ```
 
-
-   The `state` parameter is not in use for now, it can be left empty.
-   The `redirect_uri` parameter is the uri for redirecting after successful or failed authentication with Facebook.
+   The `redirect_uri` parameter is the URI for redirecting, after the successful or unsuccessful authentication with Facebook.
    
- After redirecting to the authorization endpoint the user will get a login form from 
+
+ After redirecting to the authorization endpoint, the user will get a login form from 
 Facebook. After Facebook authorizes the user's identity the {{site.data.keyword.amashort}} service will call your web application redirect URI, supplying the grant code as a query parameter.  
+## Obtaining the tokens
 
 The next step is to obtain the access and identity tokens using the previously received grant code:
 
  1.  Retrieve token `tokenEndpoint`, `clientId`, and `secret`  from service credentials stored in `VCAP_SERVICES` environment variable. 
  
-    **Note:** In case you’ve used Mobile Client Access before web support was added you might not have token endpoint in service credentials. In this case use below urls depending on your Bluemix region instead: 
+    **Note:** In case you've used Mobile Client Access before web support was added you might not have token endpoint in service credentials. In this case use below urls depending on your Bluemix region instead: 
 
     US South: 
     ```
@@ -135,13 +136,14 @@ The next step is to obtain the access and identity tokens using the previously r
     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
     ```
 
- 1. Send a post request to the token server URI with grant type ("authorization_code"), `clientId`, and your redirect URI  as form parameters, and `clientId` and `secret` as basic HTTP authentication credentials.
+ 1. Send a post request to the token server URI with grant type ("authorization_code"), `clientId`, and your redirect URI  as form parameters. Send the `clientId` and `secret` as basic HTTP authentication credentials.
  
-The following example, the following code retrieves the necessary values, and sends them with a post request.
+The following code retrieves the necessary values, and sends them with a post request.
 
   ```Java
   var cfEnv = require("cfenv");
   var base64url = require("base64url ");
+  var request = require('request');
   
   app.get("/oauth/callback", function(req, res, next){ 
     var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
@@ -179,20 +181,24 @@ The following example, the following code retrieves the necessary values, and se
 
 The response body will contain the access code and token ID in JWT format (https://jwt.io/).
 
-Once you have gained access and received the identity tokens, you can flag web session as authenticated and optionally persist these tokens.  
+Once you have gained access and received the identity tokens, you can flag web session as authenticated, and optionally persist these tokens.  
 
 ##Using obtained access and identity token 
 
 The identity token contains information about user identity. In case of Facebook authentication, the token will contain all the information user agreed to share, such as full name, age group, url of the profile photo, etc.  
 
-The access token enables communications with resources protected by {{site.data.keyword.amashort}} authorization filters, see see [Protecting Resources](protecting-resources-nodejs.html).
+The access token enables communications with resources protected by {{site.data.keyword.amashort}} authorization filters, see see [Protecting Resources](protecting-resources.html).
 
 
-In order to make requests to protected resources add an Authorization header to requests with the following structure: 
+In order to make requests to protected resources, add an authorization header to requests with the following structure: 
 
-`Authorization=Bearer <accessToken> <idToken> `
+`Authorization=Bearer <accessToken> <idToken>`
 
-**Note:** The `idToken` is optional. In the case where you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
+**Note:** 
+
+* The `accessToken` and `idToken` must be separated by a white space.
+
+* The `idToken` is optional. In the case where you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
  
 
 

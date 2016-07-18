@@ -8,7 +8,7 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} SDKs, samples, and API reference
-*Last updated: 13 July 2016*
+*Last updated: 17 July 2016*
 {: .last-updated}
 
 To add {{site.data.keyword.amashort}} SDKs to your app, choose the SDKs that you want to use. Then configure your dependency manager to pull the SDKs into your app.
@@ -18,10 +18,12 @@ To add {{site.data.keyword.amashort}} SDKs to your app, choose the SDKs that you
 
 ## Core SDK
 {: #coresdk}
+
 The Core SDK includes APIs for enabling custom authentication, logging, and monitoring your mobile app.
 
 ### Android
 {: #coresdk-android}
+
 [GitHub repo](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core),
 [API reference](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
 
@@ -45,7 +47,7 @@ Add a compile dependency to your app's `build.gradle` file:
 
 #### Install the Core SDK with CocoaPods
 {: #coresdk-ios-siwft-cocoapods}
-Edit the PodFile file and add the following line to the required targets and run:
+Edit the Podfile and add the following line to the required targets and run:
 
 ```
 use_frameworks!
@@ -62,7 +64,8 @@ While the Objective-C SDK remains fully supported, and is still considered the p
 
 #### Install the Core SDK with CocoaPods
 {: #coresdk-ios-cocoapods}
-Edit the PodFile file and add the following line to the required targets and run:
+
+Edit the Podfile and add the following line to the required targets and run:
 ```Bash
 pod 'IMFCore'
 ```
@@ -76,7 +79,6 @@ pod 'IMFCore'
 {: #coresdk-cordova-cli}
 
 Install the Mobile Client Access Cordova plug-in:
-
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
@@ -92,8 +94,8 @@ cordova plugin add ibm-mfp-core
 
 #### Install the Facebook SDK with Gradle
 {: #facebooksdk-android-gradle}
-Add a compile dependency to your app's `build.gradle` file:
 
+Add a compile dependency to your app's `build.gradle` file:
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
     	name:'facebookauthentication',
@@ -110,7 +112,7 @@ Add a compile dependency to your app's `build.gradle` file:
 #### Install the Facebook SDK with CocoaPods
 {: #facebooksdk-ios-swift-cocoapods}
 
-Edit the PodFile file and add the following to the required targets and run:
+Edit the Podfile and add the following to the required targets and run:
 ```
 use_frameworks!
 pod 'BMSFacebookAuthentication'
@@ -126,7 +128,7 @@ pod 'BMSFacebookAuthentication'
 #### Install the Facebook SDK with CocoaPods
 {: #facebooksdk-ios-cocoapods}
 
-Edit the PodFile file and add the following line and run:
+Edit the Podfile and add the following line and run:
 
 ```Bash
 pod 'IMFFacebookAuthentication'
@@ -176,7 +178,7 @@ Add a compile dependency to your app's `build.gradle` file:
 #### Install the Google+ SDK with CocoaPods
 {: #googlesdk-ios-swift-cocoapods}
 
-Edit the PodFile file and add the following and run:
+Edit the Podfile and add the following and run:
 
 ```
 use_frameworks!
@@ -192,7 +194,7 @@ pod 'BMSGoogleAuthentication'
 #### Install the Google+ SDK with CocoaPods
 {: #googlesdk-ios-cocoapods}
 
-Edit the PodFile file and add the following line and run:
+Edit the Podfile and add the following line and run:
 
 ```Bash
 pod 'IMFGoogleAuthentication'
@@ -267,7 +269,7 @@ npm install -save bms-mca-oauth-sdk
 #### Install the IMFURLProtocol with CocoaPods
 {: #IMFURLProtocol-cocoapods}
 
-Edit the PodFile file and add the following line and run:
+Edit the Podfile and add the following line and run:
 
 ```Bash
 pod 'IMFURLProtocol'

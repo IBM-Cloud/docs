@@ -8,7 +8,7 @@ copyright:
 # Using {{site.data.keyword.amashort}} with a local development environment
 {: #protecting-local}
 
-*Last updated: 30 June 2016*
+*Last updated: 17 July 2016*
 {: .last-updated}
 
 You can configure your local development  to use the {{site.data.keyword.amashort}} service that is running on {{site.data.keyword.Bluemix}}. Specifically, you can develop code locally using the {{site.data.keyword.amashort}} server SDK and send {{site.data.keyword.amashort}} requests to the development server. These requests will be protected by the {{site.data.keyword.amashort}} service that is running on {{site.data.keyword.Bluemix}}.
@@ -75,7 +75,7 @@ var MCABackendStrategy =
 Replace the occurrences of the *appGUID* value in the code with your mobile back-end *appGUID* value.
 
 
-## Configuring mobile client applications to work with a local development server
+## Configuring {{site.data.keyword.amashort}} applications to work with a local development server
 {: #configuring-local}
 
 Initialize the {{site.data.keyword.amashort}} client SDKs with the real URL of your {{site.data.keyword.Bluemix_notm}} application, and use the localhost (or IP address) in each of your requests. See the following samples.
