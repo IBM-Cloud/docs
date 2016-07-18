@@ -11,11 +11,11 @@
 ### UI elements and navigation
 When your {{site.data.keyword.objectstorageshort}} is provisioned, you can see your instance information in the {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} service instance dashboard. From the dashboard, select your {{site.data.keyword.objectstorageshort}} instance to view the panel with more detailed information.  
 #### Usage data
-At the top of the panel, you’ll see the storage usage information for your instance. It also shows the current number of **Storage Containers** and the total number of **Objects** in all of your containers. It lists your memory usage in megabytes. **Storage Consumed** refers to the current amount of space that is used. 
+On your application's home page, you’ll see the storage usage information for your instance. It also shows the current number of **Storage Containers** and the total number of **Objects** in all of your containers. It lists your memory usage in megabytes. **Storage Consumed** refers to the current amount of space that is used. 
 #### Actions
 To retrieve the latest usage data, click the **Refresh** button.   
 ####Object browser 
-The bottom section of the panel contains the object browser. Use the object browser to manage object storage containers and objects. You can create containers, upload files, delete containers, and delete files among other actions.
+Use the object browser to manage object storage containers and objects. You can create containers, upload files, delete containers, and delete files among other actions.
 
 
 ## Using {{site.data.keyword.objectstorageshort}} from a {{site.data.keyword.Bluemix_notm}} app {: #using-object-storage-from-bluemix-app} 
@@ -96,10 +96,6 @@ You can find the credential values for your {{site.data.keyword.objectstoragesho
 **Note:** Make sure that you add a ```/v3``` to the ```auth_url``` from the credentials in the {{site.data.keyword.objectstorageshort}} user interface when you configure the environment variables ```OS_AUTH_URL``` for the Swift client.
 
 
-![{{site.data.keyword.objectstorageshort}} Service Credentials](images/service_credentials.jpg)
-
-*Figure 2. {{site.data.keyword.objectstorageshort}} Service Credentials*
-
 ### Working with containers {: #work-with-containers}
 
 Listing containers:
@@ -171,7 +167,7 @@ If you are using curl, you can set it up like this:
 
 	curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:container_two" https://<object-storage_url>/container_one
 
-In the example above, ```container_two``` has been set up to contain the older versions of your objects stored in ```container_one```. Therefore, ```container_one``` will have the most current version of your objects, and ```container_two``` will have the older versions of your objects. Make sure ```container_two``` exists in order for versioning to work.
+In the example, ```container_two``` has been set up to contain the older versions of your objects stored in ```container_one```. Therefore, ```container_one``` will have the most current version of your objects, and ```container_two``` will have the older versions of your objects. Make sure ```container_two``` exists in order for versioning to work.
 
 With versioning set up, when you upload an object to ```container_one```, if there is an existing version of the object, the existing version is moved to ```container_two``` as the new version is created in ```container_one```. If you delete an object from ```container_one```, the previous version of the object is moved from ```container_two``` back to ```container_one```.
 
@@ -348,11 +344,7 @@ To interact with the {{site.data.keyword.objectstorageshort}} API, construct the
 
 	https://<access point>/<API version>/AUTH_<project ID>/<container namespace>/<object namespace>
 
-For example:
 
-![{{site.data.keyword.objectstorageshort}} URL](images/Swift_URL.png)
-
-*Figure 3. {{site.data.keyword.objectstorageshort}} URL*
 
 The URL consists of five parts. The ```<API version>``` is v1. You can find the  ```<project ID>```, ```<container namespace>```, and ```<object namespace>``` of your {{site.data.keyword.objectstorageshort}} from the {{site.data.keyword.objectstorageshort}} user interface.  For the ```<access point>```, see the following table: 
 
@@ -375,10 +367,6 @@ See the [OpenStack Swift API Complete Reference](http://developer.openstack.org/
 The IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} service supports the Dallas and London storage regions. These storage regions are independent of the {{site.data.keyword.Bluemix_notm}} region, such as US-South and United Kingdom, in which the {{site.data.keyword.objectstorageshort}} service instance is created.  For example, if you create an {{site.data.keyword.objectstorageshort}} instance in the US-South {{site.data.keyword.Bluemix_notm}} region, you can read and write data to either the Dallas or London storage region.  
 
 For the US-South {{site.data.keyword.Bluemix_notm}} region, the Dallas storage region is the default. For the United Kingdom {{site.data.keyword.Bluemix_notm}} region, the London storage region is the default.  The {{site.data.keyword.objectstorageshort}} user interface always launches to the default storage region of the {{site.data.keyword.Bluemix_notm}} region. To switch regions, click the {{site.data.keyword.objectstorageshort}} Region drop-down list and choose another region.
-
-![{{site.data.keyword.objectstorageshort}} Change Region](images/change_region.png)
-
-*Figure 4. {{site.data.keyword.objectstorageshort}} Change Region*
 
 **Note:** The {{site.data.keyword.objectstorageshort}} service does NOT support cross storage region replication.
 
@@ -572,7 +560,7 @@ The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog
 
 ### How to deprovision your {{site.data.keyword.objectstorageshort}} service
 1.	Select your service from the {{site.data.keyword.Bluemix_notm}} dashboard.  
-2.	Click the gear icon in the upper right corner and select **Delete Service**.
+2.	Click the gear icon and select **Delete Service**.
 	
 **Warning:** If you deprovision an IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} service instance, the cloud project and Swift account are deleted. All containers and objects in the deprovisioned instance are deleted from Swift and cannot be restored.
 
