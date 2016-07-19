@@ -52,7 +52,7 @@ To get up and running with the {{site.data.keyword.amashort}} service:
    
    **Web development:**
 
-   **In addition**, the {{site.data.keyword.amashort}} service can protect your web application, requiring no special SDK. You can leverage different identity providers, in addition to protection provided by the {{site.data.keyword.amashort}} service. It enables any web application, regardless of the technology it implements, to take advantage of the OAuth2 protocol. For information on setting up your web app to access the {{site.data.keyword.amashort}} service using different identity providers, see:
+   The {{site.data.keyword.amashort}} service can protect your web application, requiring no special SDK. You can leverage different identity providers, in addition to protection provided by the {{site.data.keyword.amashort}} service. It enables any web application, regardless of the technology it implements, to take advantage of the OAuth2 protocol. For information on setting up your web app to access the {{site.data.keyword.amashort}} service using different identity providers, see:
 
     * [Enabling Facebook authentication for web applications](facebook-auth-web.html)
               
