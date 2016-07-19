@@ -9,8 +9,10 @@ copyright:
 {:new_window: target="_blank"}
 # Configuring credentials for Google cloud messaging (GCM)
 {: #create-push-enable-gcm}
+*Last updated: 14 June 2016*
+{: .last-updated}
 
-Get your Google Cloud Messaging (GCM) credentials, and then set up the Push Notification Service on the Push Dashboard.
+Get your Google Cloud Messaging (GCM) credentials, and then set up the Push Notification service on the Push dashboard.
 
 ##Getting Your Sender ID and API key
 

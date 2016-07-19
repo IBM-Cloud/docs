@@ -7,8 +7,10 @@ copyright:
 
 # Troubleshooting
 {: #errors}
+*Last updated: 14 June 2016*
+{: .last-updated}
 
-Use this section as a guide to troubleshooting common Push Notification issues.
+Use this section as a guide to troubleshooting common push notification issues.
 
 
 ### Internal server error occurred. Please contact admin. (Internal error code: PUSHD102E)

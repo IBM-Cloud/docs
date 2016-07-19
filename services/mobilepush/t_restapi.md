@@ -7,6 +7,8 @@ copyright:
 
 # Using REST APIs
 {: #push-api-rest}
+*Last updated: 12 July 2016*
+{: .last-updated}
 
 You can use a REST (Representational State Transfer) API (application program interface) for push notifications. You can also use the SDK and [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) to further develop your client applications.
 
@@ -102,3 +104,9 @@ For the subscription GET API the following combinations are supported:
 - The name can be one of these fields: “name” or “description”
 - If operator =@ is used, the value can be a sub string.
 - If == is used, the value must be an exact matching string.
+
+
+##Push Notifications response codes
+{: #push-api-response-codes}
+
+Status: 405 Method Not Allowed - Appropriate method expected.

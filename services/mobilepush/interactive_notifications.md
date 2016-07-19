@@ -7,6 +7,8 @@ copyright:
 
 # Interactive notifications
 {: #interactive-notifications}
+*Last updated: 14 June 2016*
+{: .last-updated}
 
 Interactive notifications allow users to act when a notification arrives without opening the application. When an interactive notification arrives, the device shows the action buttons along with the notification message. Interactive notifications are supported on iOS devices with version 8 and later. If an interactive notification is sent to iOS devices with version lesser than 8, the notification actions are not displayed.
 
@@ -24,7 +26,7 @@ Under the notification tab in Push dashboard, click Send Notification. Choose yo
 You must follow these steps to receive interactive notifications:
 
 1. Enable the application capability to perform background tasks on receiving the remote notifications. This step is required if some of the actions are background-enabled.
-1. In the ```AppDelegate (application: didRegisterForRemoteNotificationsWithDeviceTokenapplication:)```, set the categories before you set the ```deviceToken``` on ```WLPush Object```.
+1. In the `AppDelegate (application: didRegisterForRemoteNotificationsWithDeviceTokenapplication:)`, set the categories before you set the `deviceToken` on `WLPush Object`.
 
 ```
 	if([application respondsToSelector:@selector(registerUserNotificationSettings:)]){
@@ -54,4 +56,4 @@ You must follow these steps to receive interactive notifications:
 	-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (ˆ)())completionHandler
 ``` 
 
-5. This new callback method is invoked when user clicks the action button. The implementation of this method must perform the do that is associated with the specified identifier and execute the block in the ```completionHandler``` parameter. Pub Caret 173 
+5. This new callback method is invoked when user clicks the action button. The implementation of this method must perform tasks associated with the specified identifier and execute the block in the `completionHandler` parameter.
