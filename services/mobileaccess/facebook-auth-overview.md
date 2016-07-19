@@ -44,7 +44,7 @@ See the following simplified diagram to understand how {{site.data.keyword.amash
 {: #mca-facebook-sequence}
 The {{site.data.keyword.amashort}} web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
 
-  * The initial request is sent by the web application.
+  * The initial request is sent by the web application (from a log in form, for example).
   * The final redirect is to the web application itself, rather than back-end protected resource. 
 
 
