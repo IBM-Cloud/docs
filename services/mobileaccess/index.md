@@ -34,8 +34,9 @@ To get up and running with the {{site.data.keyword.amashort}} service:
    Protect your mobile back-end resources that are running on Node.js or Liberty for Java&trade; runtimes with mobile-enabled OAuth security. For more information, see [Protecting resources](protecting-resources.html).
    To learn more about the default mobile back-end application, see the [bms-hellotodo-strongloop](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop) sample application.
 
-1. Set up your core {{site.data.keyword.amashort}} client-side development environment.
+1. Set up your core {{site.data.keyword.amashort}} client-side or web development environment.
 
+  **Client development:**
    You can add the {{site.data.keyword.amashort}} SDK to your existing Android, Cordova, or iOS app. 
    * **Android**: ([Setting up the Android SDK](getting-started-android.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
   
@@ -48,6 +49,7 @@ To get up and running with the {{site.data.keyword.amashort}} service:
    
    **Note:**  While the Objective-C SDK remains fully supported, and still considered the primary SDK for {{site.data.keyword.amashort}}, there are plans to discontinue this SDK later this year in favor of the new Swift SDK. If you are creating an application, we highly recommend that you use the Swift SDK (see [Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html)).
    
+   **Web development:**
    **In addition**, the {{site.data.keyword.amashort}} service can protect your web application, requiring no special SDK. You can leverage different identity providers, in addition to protection provided by the {{site.data.keyword.amashort}} service. It enables any web application, regardless of the technology it implements, to take advantage of the OAuth2 protocol. For information on setting up your web app to access the {{site.data.keyword.amashort}} service using different identity providers, see:
 
     * [Enabling Facebook authentication for web applications](facebook-auth-web.html)
