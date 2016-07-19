@@ -40,6 +40,15 @@ See the following simplified diagram to understand how {{site.data.keyword.amash
 * The {{site.data.keyword.amashort}} client SDK  automatically resends the original request that triggered the authorization flow.
 * The {{site.data.keyword.amashort}} server SDK extracts authorization header from request, validates it with {{site.data.keyword.amashort}} service, and grants access to a back-end resource.
 
+## {{site.data.keyword.amashort}} web application request flow
+{: #mca-facebook-sequence}
+The {{site.data.keyword.amashort}} web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
+
+  * The initial request is sent by the web application.
+  * The final redirect is to the web application itself, rather than back-end protected resource. 
+
+
+
 ## Obtaining a Facebook Application ID from the Facebook Developer Portal
 {: #facebook-appID}
 
