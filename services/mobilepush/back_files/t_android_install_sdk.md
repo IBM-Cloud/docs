@@ -1,19 +1,11 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
-
-# Enabling Android applications to receive push notifications
-{: #tag_based_notifications}
-*Last updated: 14 June 2016*
-{: .last-updated}
-
-Enable Android applications to receive push notifications and send push notifications to your devices.
-
-## Installing the client Push SDK with Gradle
+# Installing the client Push SDK with Gradle
 {: #android_install}
 
 This section describes how to install and use the client Push SDK to further develop your Android applications.
@@ -32,14 +24,15 @@ Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatical
 	```
 
 
-2. Add the following dependencies to your mobile application. The following lines add the Bluemix™ Mobile services Push client SDK and the Google play services SDK to your compile scope dependencies.
+1. Add the following dependencies to your mobile application. The following lines add the Bluemix™ Mobile Services Push client SDK and the Google play services SDK to your compile scope dependencies.
 
 	```
 	dependencies {
-	  compile 'com.google.android.gms:play-services:9.0.2' // Automatically pulls in version 2.0 core SDK3 compile group: 'com.ibm.mobilefirstplatform.clientsdk.android', name: 'push', version: '2.+', ext: 'aar', transitive: true
+	  compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:1.+'
+	  compile 'com.google.android.gms:play-services:7.8.0'
 	}  
 	```
-3. In the **AndroidManifest.xml** file, add the following permissions. To view a sample manifest, see [Android helloPush Sample Application](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). To view a sample Gradle file, see [Sample Build Gradle file](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
+1. In the **AndroidManifest.xml** file, add the following permissions. To view a sample manifest, see [Android helloPush Sample Application](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). To view a sample Gradle file, see [Sample Build Gradle file](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
 
 	```
 	<uses-permission android:name="android.permission.INTERNET"/>
@@ -54,7 +47,7 @@ Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatical
 
 	You can read more about [Android permissions](http://developer.android.com/guide/topics/security/permissions.html) here.
 
-4. Add the notification intent settings for the activity. This setting starts the application when the user clicks the received notification from the notification area.
+1. Add the notification intent settings for the activity. This setting starts the application when the user clicks the received notification from the notification area.
 
 	```
 	<intent-filter>  
@@ -64,7 +57,7 @@ Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatical
 	```
 	**Note**: Replace *Your_Android_Package_Name* in the action above with the application package name used in your application.
 
-5. Add the Google Cloud Messaging (GCM) intent service and intent filters for the RECEIVE event notifications.
+1. Add the Google Cloud Messaging (GCM) intent service and intent filters for the RECEIVE event notifications.
 
 	```
 	service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
@@ -86,7 +79,8 @@ Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatical
 	```
 
 
-## Initializing the Push SDK for Android apps
+
+# Initializing the Push SDK for Android apps
 {: #android_initialize}
 
 A common place to put the initialization code is in the onCreate method of the main activity in your Android application.
@@ -94,12 +88,11 @@ A common place to put the initialization code is in the onCreate method of the m
 Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application route and applicationGUID. Use these values for your route and App GUID. Modify the code snippet to use your Bluemix app appRoute and appGUID parameters.
 
 
-###Initialize the Core SDK
+##Initialize the Core SDK
 
 ```
 // Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
-BMSClient.getInstance().initialize(getApplicationContext(), appRoute , appGuid, bluemixRegionSuffix);
-
+BMSClient.getInstance().initialize(getApplicationContext(), "applicationRoute","applicationGUID", bluemixRegion:"Location where your app Hosted");
 ```
 
 
@@ -119,7 +112,7 @@ Specifies the location where the app hosted. You can use one of three values:
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-###Initialize the client Push SDK
+##Initialize the client Push SDK
 
 ```
 //Initialize client Push SDK for Java
@@ -127,10 +120,12 @@ MFPPush push = MFPPush.getInstance();
 push.initialize(getApplicationContext());
 ```
 
-## Registering Android devices
+
+
+# Registering Android devices
 {: #android_register}
 
-Use the `IMFPush.register()` API to register the device with a push notification service. For registering for Android devices, you first add the Google Cloud Messaging (GCM) information in the Bluemix push service configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html).
+Use the ```IMFPush.register()``` API to register the device with a Push Notification Service. For registering for Android devices, you first add the Google Cloud Messaging (GCM) information in the Bluemix push service configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html).
 
 Copy and paste the following code snippets into your Android mobile application.
 
@@ -159,12 +154,13 @@ Copy and paste the following code snippets into your Android mobile application.
 ```
 
 
-## Receiving push notifications on Android devices
+
+# Receiving push notifications on Android devices
 {: #android_receive}
 
-To register the notificationListener object with push, call the **MFPPush.listen()** method. This method is typically called from the **onResume()** method of the activity that is handling push notifications.
+To register the notificationListener object with Push, call the **MFPPush.listen()** method. This method is typically called from the **onResume()** method of the activity that is handling push notifications.
 
-1. To register the notificationListener object with push, call the **listen()** method. This method is typically called from the **onResume()** method of the activity that is handling push notifications.
+1. To register the notificationListener object with Push, call the **listen()** method. This method is typically called from the **onResume()** method of the activity that is handling push notifications.
 
 	```
 	@Override
@@ -175,44 +171,47 @@ To register the notificationListener object with push, call the **MFPPush.listen
 	   }
 	}
 ```
-2. Build the project and run it on the device or emulator. When the onSuccess() method for the response listener in the register() method is invoked, it confirms that the device has successfully registered with push notification service. At this time you can send a message as described in Sending basic push notifications.
+2. Build the project and run it on the device or emulator. When the onSuccess() method for the response listener in the register() method is invoked, it confirms that the device has successfully registered with Push Notification Service. At this time you can send a message as described in Sending basic push notifications.
 3. Verify that your devices have received your notification. If the application is in the foreground, the notification is handled by the **MFPPushNotificationListener**. If the application is in the background, a message is displayed in the notification bar.
 
 
-## Sending basic push notifications
-{: #send}
 
-After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files).
+
+# Sending basic push notifications
+
+{: #push-send-notifications}
+
+After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files). 
 
 
 Send basic push notifications.
 
-1. In **Choose the Audience**, select one of the following audiences: **All Devices**, or by platform: **Only iOS devices** or **Only Anroid devices**.
+1. In **Choose the Audience**, select one of the following audiences: **All Devices**, or by platform: **Only iOS devices** or **Only Anroid devices**. 
 
 	**Note**: When you select the **All Devices** option, all the devices that have subscribed to push notifications receive your notification.
-
+	
 	![Notifications screen](images/tag_notification.jpg)
 
 2. In the **Create your Notification**, enter your message and then click **Send**.
 3. Verify that your devices have received your notification.
 
-	The following screen shot shows an alert box handling a push
+	The following screen shot shows an alert box handling a push 
 notification in the foreground on a Android and iOS device.
 
 	![Foreground push notification on Android](images/Android_Screenshot.jpg)
 
 	![Foreground push notification on iOS](images/iOS_Screenshot.jpg)
-
-	The following following screen shot shows a push notification in the background for Android.
+	
+	The following following screen shot shows a push notification in the background for Android.	
 	![Background push notification on Android](images/background.jpg)
 
 
 
-## Next steps
+# Next steps
 {: #next_steps_tags}
 
 After you have successfully set up basic notifications, you can configure configure tag-based notifications and advanced options.
 
-Add these push notifications service features to your app.
+Add these Push Notifications Service features to your app.
 To use tag-based notifications, see [Tag-based Notifications](c_tag_basednotifications.html).
 To use advanced notifications options, see [Advanced push notifications](t_advance_notifications.html).

@@ -7,8 +7,6 @@ copyright:
 
 # Managing tags
 {: #manage_tags}
-*Last updated: 14 June 2016*
-{: .last-updated}
 
 Use the Push dashboard to create and delete tags for your application and then initiate tag-based notifications. The tag-based notification is received on the device that is subscribed to the tag.
 
@@ -22,11 +20,11 @@ Tag-based notifications are notification messages that are targeted to all the d
 1. Click the + **Create Tag** button.   
 
    a. In the **Name** field, enter the name of the tag. For example, "coupons".
-
+   
    b. In the **Description** field, enter a tag description.
-
+   
    c. Click  **Save**.
-
+   
 1. In the **Code Snippets** area, select the platform for your mobile application.
 1. Modify the code snippets to handle errors and then copy the code snippets for each tag into your mobile application.
 
@@ -60,7 +58,7 @@ Use the following **getTags** API to get a list of available tags to which the d
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-   public void onSuccess(List<String> tags){
+   public void onSuccess(List<String> tags){ 
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
@@ -120,20 +118,20 @@ Copy the following code snippets into your iOS application developed using Objec
 Use the following **retrieveAvailableTags** API to get a list of available tags to which the device can subscribe.
 
 ```
-//Get a list of available tags to which the device can subscribe
+//Get a list of available tags to which the device can subscribe 
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
+^(IMFResponse *response, NSError *error){ 
  if(error){    
    [self updateMessage:error.description];  
  } else {
-   [self updateMessage:@"Successfully retrieved available tags."];
+   [self updateMessage:@"Successfully retrieved available tags."]; 
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];
 [self.appDelegateVC updateMessage:availableTags.description];
 }
 }];
 ```
-
+       
 Use the **retrieveSubscriptions** API to get a list of tags that to which the device is subscribed.
 
 
@@ -182,7 +180,7 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
 
-        print( "Response during retrieving subscribed tags : \(response?.description)")
+        print( "Response during retrieving subscribed tags : \(response.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
     }
     else {
@@ -286,12 +284,12 @@ Use the **subscribeToTags** API to subscribe to a tag.
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
+	if (error != nil) { 
 		//error while subscribing to tags
 	} else {
-		//successfully subscribed to tags var subStatus = response.subscribeStatus();
+		//successfully subscribed to tags var subStatus = response.subscribeStatus(); 
 	}
-}
+} 
 ```
 
 **Unsubscribe Tags**
@@ -302,7 +300,7 @@ Use the **unsubscribeFromTags** API to unsubscribe from a tag.
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
 
     if error.isEmpty {
-        print( "Response during unsubscribed tags : \(response?.description)")
+        print( "Response during unsubscribed tags : \(response.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {

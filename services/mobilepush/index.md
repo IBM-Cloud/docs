@@ -11,9 +11,9 @@ copyright:
 {:codeblock:.codeblock}
 
 # Getting started with {{site.data.keyword.mobilepushshort}}
-
 {: #gettingstartedtemplate}
-
+*Last updated: 14 June 2016*
+{: .last-updated}
 
 {:shortdesc}
 
