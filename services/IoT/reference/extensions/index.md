@@ -138,4 +138,4 @@ When the organization is successfully configured, the *Extensions* section displ
  2. Click the **Tell me more** link next to the Blockchain extension to go to the IoT Blockchain Services Offering page.
  3. Fill out and submit the service request form.   
 The service approval typically takes approximately one day. After your request is approved, you receive an email with instructions on how to activate blockchain integration in your {{site.data.keyword.iot_short_notm}} organization.
- 5. Return to the {{site.data.keyword.iot_short_notm}} dashboard for your organization to complete the setup. For more information, see [Blockchain](../../blockchain/configure_blockchain.html).
+ 5. Return to the {{site.data.keyword.iot_short_notm}} dashboard for your organization to complete the setup. For more information, see [{{site.data.keyword.iot_short_notm}} blockchain integration](../../bl_blockchain_integration.html).
