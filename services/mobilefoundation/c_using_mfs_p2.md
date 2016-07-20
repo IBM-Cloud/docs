@@ -8,7 +8,7 @@ copyright:
 #	Using the Professional 1 Application plan
 {: #using_mobilefoundation_p2}
 
-*Last updated: 15 June 2016*
+*Last updated: 20 July 2016*
 {: .last-updated}
 
 After you create the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service instance, read the following procedure to get started with the service.
@@ -37,7 +37,7 @@ After you create the {{site.data.keyword.mobilefoundation_short}}: Professional 
 
 After the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service instance is created you will see the *Overview* page where you will need to specify the connection information for the {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional service instance.
 
-1.  Select the {{site.data.keyword.Bluemix_notm}} `Space` where the {{site.data.keyword.dashdbshort_notm}} service instance exists, from the list of spaces available in the current `Organization`.
+1.  Select the {{site.data.keyword.Bluemix_notm}} `Space` where the {{site.data.keyword.dashdbshort_notm}} service instance exists, from the list of spaces available in the selected `Organization`.
 
 + Select the {{site.data.keyword.dashdbshort_notm}} `Service Name` and `Credentials` to connect to the existing  {{site.data.keyword.dashdbshort_notm}} service instance.
 
@@ -65,7 +65,7 @@ The process of provisioning your server starts. This process takes about 10 minu
 
   -	The server route created for you. Use this route to reach your mobile server from the public internet. Your mobile applications use that route to access the server.
 
-  -	Your personal `username`` and `password` to access the {{site.data.keyword.mfp_oc_short_notm}}. The `password` is hidden. Click **Show Password** to visualize it.
+  -	Your personal `username` and `password` to access the {{site.data.keyword.mfp_oc_short_notm}}. The `password` is hidden. Click **Show Password** to visualize it.
 
 *	Click **Launch Console** to open the {{site.data.keyword.mfp_oc_short_notm}}.
 
