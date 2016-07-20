@@ -7,7 +7,6 @@ copyright:
   years: 2015, 2016
 
  
-
 ---
 
 
@@ -17,8 +16,10 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-*Last updated: 8 July 2016*
+Last updated: 20 July 2016
 {: .last-updated}
+
+*Version:* 0.4.0
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} commands are wrappers of existing cf commands, while others provide extended capabilities for {{site.data.keyword.Bluemix_notm}} users. The following information lists commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI, and includes their names, options, usage, prerequisites, descriptions, and examples.
 {:shortdesc}
@@ -28,7 +29,7 @@ The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a s
 <dt>Endpoint</dt>
 <dd>An API endpoint must be set through the <code>bluemix api</code> before using the command.</dd>
 <dt>Login</dt>
-<dd>Login by using the <code>bluemix login</code> command is required before using this command.</dd>
+<dd>Login by using the <code>bluemix login</code> command is required before using this command. If logging in with federated ID, use '--sso' option to authenticate with one time passcode.</dd>
 <dt>Target</dt>
 <dd>The <code>bluemix target</code> command must be used to set an org and space before using this command.</dd>
 <dt>Docker</dt>
@@ -50,7 +51,7 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  <tr> 
  <td>[bluemix help](index.html#bluemix_help)</td> 
  <td>[bluemix api](index.html#bluemix_api)</td> 
- <td>[bluemix login](index.html#bluemix_login)</td>
+ <td>[bluemix_login](index.html#bluemix_login)</td>
  <td>[bluemix logout](index.html#bluemix_logout)</td>
  <td>[bluemix target](index.html#bluemix_target)</td>
  </tr> 
@@ -175,9 +176,9 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
 *Table 4. Commands for managing Bluemix services*
 
 
-<table summary="bluemix commands that you can use to manage Bluemix catalog, plug-ins, and security settings."> 
+<table summary="bluemix commands that you can use to manage Bluemix catalog, plug-ins, billing, and security settings."> 
  <thead>
- <th colspan="5">Commands for managing Bluemix catalog, plug-ins, and security settings</th>
+ <th colspan="5">Commands for managing Bluemix catalog, plug-ins, billing, and security settings</th>
  </thead>
  <tbody> 
  <tr> 
@@ -195,15 +196,20 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  <td>[bluemix plugin uninstall](index.html#bluemix_plugin_uninstall)</td> 
  </tr> 
  <tr> 
+ <td>[bluemix bss account-usage](index.html#bluemix_bss_account_usage)</td> 
+ <td>[bluemix bss org-usage](index.html#bluemix_bss_org_usage)</td>
+ <td>[bluemix bss orgs-usage-summary](index.html#bluemix_orgs_usage_summary)</td>
  <td>[bluemix security cert](index.html#bluemix_security_cert)</td> 
  <td>[bluemix security cert-add](index.html#bluemix_security_cert_add)</td>
+ </tr>
+ <tr>
  <td>[bluemix security cert-remove](index.html#bluemix_security_cert_remove)</td>
  <td></td>
  <td></td>
  </tr>
   </tbody> 
  </table> 
-*Table 5. Commands for managing Bluemix catalog, plug-ins, and security settings*
+*Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings*
 
 
 
@@ -428,7 +434,6 @@ For information about options supported by the `login` command, see `cf login` c
 
 <strong>Note</Strong>:
 If logging in with federated ID, use '--sso' option to authenticate with one time passcode.
-
 
 ## bluemix logout
 {: #bluemix_logout}
@@ -865,7 +870,7 @@ bluemix iam account-users
 ```
 
 ## bluemix iam account-user-invite
-{: #bluemix_iam_account-user-inviate}
+{: #bluemix_iam_account-user-invite}
 
 
 Invites a user to the account with an organization and space role already set. This operation can be performed only by the account owner.
@@ -908,7 +913,7 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
 Invite user `Mary` to the organization `IBM` as `OrgManager` role and the space `Cloud` as `SpaceAuditor` role:
 
 ```
-bluemix iam account-user-inviate Mary IBM OrgManager Cloud SpaceAuditor
+bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
 
 ## bluemix iam org-users
@@ -1580,6 +1585,85 @@ This command has the same function and options as the `cf create-shared-domain` 
 This command has the same function and options as the `cf delete-shared-domain` command.
 
 
+
+## bluemix bss account-usage
+{: #bluemix_bss_account_usage}
+
+Show monthly usage and costs of your account.
+
+```
+bluemix bss account-usage [-d YYYY-MM] [--json]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command options</strong>:
+
+<dl>
+  <dt>-d MONTH_DATE (optional)</dt>
+  <dd>Display data for month and date specifying by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
+  <dt>--json (optional)</dt>
+  <dd>Display the usage result in JSON format.</dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Show my account's usage and cost report in 2016-06:
+
+```
+bluemix bss account-usage -d 2016-06
+```
+
+## bluemix bss org-usage
+{: #bluemix_bss_org_usage}
+
+Show monthly usage details of an org. This operation can be done only by a billing manager of the org.
+
+```
+bluemix bss org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command options</strong>:
+
+<dl>
+  <dt>ORG_NAME (required)</dt>
+  <dd>Name of the org.</dd>
+  <dt>-d MONTH_DATE (optional)</dt>
+  <dd>Display data for month and date specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>Name of the region that hosts the org. If set to 'all', org usage in all regions is shown.</dd>
+  <dt>--json (optional)</dt>
+  <dd>Display the usage result in JSON format.</dd>
+</dl>
+
+
+
+## bluemix bss orgs-usage-summary
+{: #bluemix_bss_orgs_usage_summary}
+
+Show monthly usage summary for orgs in my account.
+
+```
+bluemix bss orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
+```
+
+<strong>Prerequisites</strong>: Endpoint, Login
+
+<strong>Command options</strong>:
+
+<dl>
+  <dt>-d MONTH_DATE (optional)</dt>
+  <dd>Display data for month and date specified by using the YYYY-MM format. If not specified, usage of the current month is shown.</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>Name of the region that hosts the orgs. If set to 'all', usage summary of the orgs in all regions is shown.</dd>
+  <dt>--json (optional)</dt>
+  <dd>Display the usage result in JSON format.</dd>
+</dl>
+
+
+
 ## bluemix security cert
 {: #bluemix_security_cert}
 
@@ -1665,7 +1749,6 @@ bluemix security cert-remove DOMAIN [-f]
    <dt>-f  (optional)</dt>
    <dd>Force deletion without confirmation.</dd>
    </dl>
-
 
 
 
@@ -3250,4 +3333,3 @@ To see the version of the IBM Containers, run `bluemix ic info`. For more inform
 {: #general}
 
 * [bx tool](http://clis.ng.bluemix.net/ui/home.html){:new_window}
-
