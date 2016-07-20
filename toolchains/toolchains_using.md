@@ -8,10 +8,10 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Using toolchains
+# Using toolchains on {{site.data.keyword.Bluemix_notm}} Public
 {: #toolchains-using}
 
-*Last updated: 4 May 2016*
+*Last updated: 7 July 2016*
 {: .last-updated}
 
 You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
@@ -22,7 +22,7 @@ You can use a toolchain to be productive in your daily development, deployment, 
 ## Configuring a tool integration
 {: #configuring_a_tool_integration}
 
-You can configure a tool integration for the first time or update the configuration settings for a tool integration that is already part of your toolchain.
+If you deferred the configuration of a tool integration when you created a toolchain, a **Configure** button is shown on its tile. If you configured a tool integration when you created a toolchain, you can update the configuration settings.
 
 1. On the DevOps dashboard, on the **Toolchains** tab, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Tool Integrations**.
 1. If you need to configure a tool integration for the first time, on its tile, click **Configure**.
@@ -36,8 +36,6 @@ You can configure a tool integration for the first time or update the configurat
   ![Configuration menu](images/toolchain_tile_menu.png)
  
  When you are finished updating the settings, click **Save Integration**.
-
- **Note**: After you configure the repo for a GitHub tool integration, the url of the repo can be updated, but the repo itself cannot be changed. To use a different repo, delete the current GitHub tool integration from your toolchain, add a GitHub tool integration to your toolchain, and configure that tool integration to use the new repo.
 
 ## Adding a tool integration
 {: #adding_a_tool_integration}
@@ -53,17 +51,17 @@ You can add and configure tool integrations for your toolchain.
 ## Deleting a tool integration
 {: #deleting_a_tool_integration}
 
-You can delete a tool integration from your toolchain. 
+If you delete a tool integration from your toolchain, the deletion cannot be undone. 
 
 1. On the DevOps dashboard, on the **Toolchains** tab, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Tool Integrations**.
 1. On the tile for the tool integration that you want to delete, click the menu to access the configuration options.
 1. To delete the tool integration from your toolchain, click **Delete**.
-1. Confirm by clicking **Delete**.
+1. Confirm by clicking **Delete**.  
 
 ## Managing access
 {: #managing_access}
 
-You can grant users access to a toolchain by adding them to the organization (org) that the toolchain is associated with. Each toolchain is associated with a specific org, and any user that is a member of that org can access the associated toolchains. If you switch to a different org, you can access a different set of toolchains.
+You can grant users access to a toolchain by adding them to the organization (org) that the toolchain is associated with. Each toolchain is associated with a specific org, and any user that is a member of that org can access the associated toolchains. Click the **Account and Support** icon ![Account and Support icon](../toolchains/images/account_support.svg) to view the org that you are currently working in. Switch to a different org to access a different set of toolchains.
 
 <!--CA: Commenting out the content on authentication for Interconnect since it applies to GitHub Enterprise. This content can be exposed again when GHE is supported for the Dedicated Beta 2.-->
 
@@ -80,17 +78,17 @@ To add a user: -->
 1. On the DevOps dashboard, on the **Toolchains** tab, click the toolchain to manage, and then click **Manage**. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Manage**.  
 1. Click the link to your organization. 
 1. On the Manage Organizations page, click **Invite a User** and type the user's email address.
-1. If you want to give advanced permissions to the user, select one or more of the **Manager**, **Billing Manager**, or **Auditor** check boxes.
+1. If you want to give advanced permissions to manage users in {{site.data.keyword.Bluemix_notm}} orgs, select one or more of the **Manager**, **Billing Manager**, or **Auditor** check boxes.
 1. Click **INVITE**.
 1. Click **SAVE**.
 
 ## Deleting a toolchain
 {: #deleting_a_toolchain}
 
-You can delete a toolchain and specify which of the associated tool integrations you want to delete.
+You can delete a toolchain and specify which of the associated tool integrations you want to delete. When you delete a toolchain, the deletion cannot be undone.
 
 1. On the DevOps dashboard, on the **Toolchains** tab, click the toolchain to delete, and then click **Manage**. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Manage**.
-1. Click **Delete Toolchain** and review the tool integrations that you are deleting.
-1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.
+1. Click **Delete Toolchain** and review or adjust the tool integrations that you are deleting.
+1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
 
  **Tip**: When you delete a GitHub tool integration, the associated GitHub repo is not deleted from GitHub. You must manually remove the repo from GitHub.
