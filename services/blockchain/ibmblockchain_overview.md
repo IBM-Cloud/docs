@@ -30,7 +30,7 @@ The following terms are instrumental in gaining a holistic understanding of bloc
 
 **Transactor**: A network participant connected to the blockchain through a node, that issues transactions from the client side by leveraging an SDK or API.
 
-**Transaction**: A request by a transactor to the blockchain to execute a function on the ledger.  Transactions types include deploy/invoke/query and are implemented through the chaincode functions set forth in the fabric's API contract.  <!---Chaincode implements the functions set forth in the fabric's API contract.  --->
+**Transaction**: A request by a transactor to the blockchain to execute a function on the ledger.  Transaction types include deploy/invoke/query and are implemented through the chaincode functions set forth in the fabric's API contract.  <!---Chaincode implements the functions set forth in the fabric's API contract.  --->
 
 **Ledger**: A sequence of cryptographically-linked blocks, containing transactions and the current world state.  In addition to data from previous transactions, the ledger (blockchain) also contains the data for currently-running chaincode applications.
 
@@ -49,7 +49,7 @@ The following terms are instrumental in gaining a holistic understanding of bloc
 ## Key concepts
 {: #keyconcepts}
 
-Blockchain consists of a network, over which members track and exchange assets, and a record of all exchanges (ledger), which is replicated to all participating members.  Applications deployed to a blockchain consist of a self-executing contract and a client-side application that intefaces with the network through an SDK or API.   Two or more parties, being part of a common blockchain network, would agree on the terms of the logic within the contract (e.g. when I get asset "a", I pay you amount "b").  Once deployed to the blockchain, functions in the contract can be invoked (i.e. a transaction can be triggered), with the ensuing invocation(s) ordered by a leading node and then broadcast to the network participants for consensus.  After validation, transactions are recorded on the shared ledger by all participants.  Once recorded on the ledger, transactions can never be altered or deleted.
+Blockchain consists of a network, over which members track and exchange assets, and a record of all exchanges (ledger), which is replicated to all participating members.  Applications deployed to a blockchain consist of a self-executing contract and a client-side application that intefaces with the network through an SDK or API.   Two or more parties, being part of a common blockchain network, would agree on the terms of the logic within the contract (e.g. when I get asset "a", I pay you amount "b").  Once deployed to the blockchain, functions in the contract can be invoked (i.e. a transaction can be triggered), with the ensuing invocation(s) ordered by a leading node and then broadcast to the network participants for consensus.  After validation, transactions are executed and recorded to the shared ledger by all participants.  Once recorded on the ledger, transactions can never be altered or deleted.
 
 **Network**: A blockchain network is characterized as follows:
 
