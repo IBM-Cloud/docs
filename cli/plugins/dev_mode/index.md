@@ -37,7 +37,7 @@ You can do the following tasks with the dev_mode CLI:
 
 Use one of the following methods to install the dev_mode command line tool:
 - Install locally.
-  1. Download the dev_mode plug-in for your platform from [IBM Bluemix CLI Plugin Repository](http://plugins.{DomainName}).
+  1. Download the dev_mode plug-in for your platform from [IBM Bluemix CLI Plugin Repository](http://plugins.ng.bluemix.net).
   2. Go to the folder that the dev_mode plug-in is saved, and install the dev_mode plug-in by using the cf install-plugin command. For example: 
   
         ```
