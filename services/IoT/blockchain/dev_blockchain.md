@@ -147,13 +147,12 @@ The smart contracts that you want to deploy must be in a public GitHub repositor
 2.  Set up a local Hyperledger development and testing environment.  
 To develop and test your own chaincode before deploying it to {{site.data.keyword.blockchainfull}}, you must set up a local development environment. This environment includes GoLang, which is used to write the chaincode for your contracts.
  1. Set up the development environment.  
- The development environment includes the tools that you need to develop your smart contracts by using the chaincode build in GoLang. For more information, see  
- https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devenv.md.
+ The development environment includes the tools that you need to develop your smart contracts by using the chaincode build in GoLang. For more information, see
+ [Setting up the development environment](https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devenv.md) in the Hyperledger documentation.
  2. Install a chaincode debugging environment.   
- The debugging environment provides you with the tools that you need to test and debug your smart contracts before you deploy them to {{site.data.keyword.blockchainfull}}. For more information, see https://github.com/hyperledger/fabric/blob/master/docs/API/SandboxSetup.md.
+ The debugging environment provides you with the tools that you need to test and debug your smart contracts before you deploy them to {{site.data.keyword.blockchainfull}}. For more information, see [Writing, Building, and Running Chaincode in a Development Environment](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Chaincode-setup.md) in the Hyperledger documentation.
  3. Set up a network for development.   
- The network for development provides you with a stricter, production-like, environment for final testing of your smart contracts.  Use this environment for final testing of your tested and debugged contracts before you deploy them to {{site.data.keyword.blockchainfull}}. For more information, see  
- https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devnet-setup.md.
+ The network for development provides you with a stricter, production-like, environment for final testing of your smart contracts.  Use this environment for final testing of your tested and debugged contracts before you deploy them to {{site.data.keyword.blockchainfull}}. For more information, see [Setting Up a Network](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Network-setup.md) in the Hyperledger documentation.
 
 3. Optional: Download the IBM-provided sample smart contracts.  
 IBM provides a number of smart contracts that you can download and use directly as-is or modify to suit your organization's goals.  
