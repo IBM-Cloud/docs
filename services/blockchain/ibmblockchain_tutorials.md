@@ -13,7 +13,7 @@ copyright:
 
 # Sample apps and tutorials for {{site.data.keyword.blockchain}}
 {: #1stanchor}
-*Last updated: 15 July 2016*
+*Last updated: 20 July 2016*
 {: .last-updated}
 
 Sample applications and tutorials for {{site.data.keyword.blockchainfull}} demonstrate how fundamental applications and chaincodes function in a blockchain network.  To learn more about the fabric code that is underpinning your blockchain network, visit the [Docs](https://github.com/hyperledger/fabric/tree/master/docs) section of the Linux Foundation's Hyperledger Project.  
@@ -25,7 +25,7 @@ You can immediately deploy the Marbles, Commercial Paper or Car Lease demos to s
 - [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)  **Commercial Paper**
 - [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  **Car Lease**
 
-## Using the Hello Chaincode tutorial
+## Using the chaincode tutorial
 {: #hellocc}
 This tutorial demonstrates the basic building blocks and functionality necessary to build an elementary chaincode application. You will be incrementally building up to a working chaincode that will be able to create generic assets.
 Then, you will interact with the chaincode by using the network's API. After reading and completing this tutorial, you should be able to explicitly answer the following questions:
@@ -89,7 +89,7 @@ We will be building up to a working chaincode to create generic assets.
 ### Dependencies
 The `import` statement lists a few dependencies that you will need for your chaincode to build successfully:
 - `fmt` - contains `Println` for debugging/logging.
-- `errors` - standard go error format.
+- `errors` - standard Go error format.
 - `github.com/hyperledger/fabric/core/chaincode/shim` - the code that interfaces your Golang code with a peer.
 
 ### Passing values
@@ -122,9 +122,9 @@ This function may return an error which your code inspects and returns if presen
 
 #### Invoke()
 `Invoke` is called when you want to call chaincode functions to do real work.
-Invocation transactions will be captured as blocks on the chain.
+An invocation will result in a transaction being added to the chain.
 The structure of `Invoke` is simple.
-It receives a `function` argument and based on this argument calls Go functions in the chaincode.
+It receives a `function` argument, and based on this argument calls Go functions in the chaincode.
 
 In your `chaincode_start.go` file, change the `Invoke` function so that it calls a generic write function.
 
@@ -423,7 +423,7 @@ The Car Lease application demonstrates the lifecycle of a vehicle from creation 
 ## Non-deterministic chaincode
 {: #ndcc}
 
-Blockchain networks support deterministic code only. Using non-deterministic chaincode is not supported, and will cause errors, on any blockchain network. 
+Blockchain networks currently support deterministic code only. Using non-deterministic chaincode is not supported, and will cause errors, on any blockchain network. 
 
 ### What is non-deterministic chaincode?
 Non-deterministic chaincode is code that will **not** produce the same appended value, over time and across nodes, on a blockchain. By contrast, deterministic chaincode **always** produces the same appended value, over time and across nodes. The following examples demonstrate this difference:
