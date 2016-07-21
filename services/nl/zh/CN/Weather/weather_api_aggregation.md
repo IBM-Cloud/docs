@@ -13,9 +13,10 @@ copyright:
 # API 聚集
 {: #api_aggregation}
 
-*上次更新时间：2016 年 3 月 31 日*
+*上次更新时间：2016 年 6 月 15 日*
+{: .last-updated}
 
-某些 Insights for Weather API 可以进行聚集。可以使用聚集将两个或更多原子 API 调用组合成单个 HTTP 请求。
+某些 {{site.data.keyword.weather_short}} API 可以进行聚集。可以使用聚集将两个或更多原子 API 调用组合成单个 HTTP 请求。
 {: shortdesc}
 
 原子 API 调用引用用于定义聚集别名的任何 API。每个 API 用户文档在 URL 格式部分中包含聚集名称的别名（如果为聚集提供了别名）。例如，标准每天天气预测 API 的聚集别名为 `v2fcstdaily10`，此别名可作为聚集请求的一部分用于检索 10 天每天天气预测。
