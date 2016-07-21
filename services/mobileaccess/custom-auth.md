@@ -8,19 +8,21 @@ copyright:
 # Authenticating users with a custom identity provider
 {: #custom-id}
 
-*Last updated: 07 July 2016*
+*Last updated: 20 July 2016*
 {: .last-updated}
 
 
 Create a custom identity provider and implement your own logic for collecting and validating credentials. A custom identity provider is a web application that exposes a RESTful interface. You can host the custom identity provider on premises or on {{site.data.keyword.Bluemix}}. The only requirement is that the custom identity provider must be accessible from the public internet so that it can communicate with the {{site.data.keyword.amashort}} service.
 
-## {{site.data.keyword.amashort}} custom identity provider overview
+## {{site.data.keyword.amashort}} custom identity request flow
 {: #custom-id-ovr}
- The following diagram demonstrates how {{site.data.keyword.amashort}} integrates a custom identity provider.
+
+### {{site.data.keyword.amashort}} client request flow
+The following diagram demonstrates how {{site.data.keyword.amashort}} integrates a custom identity provider.
 
 ![image](images/mca-sequence-custom.jpg)
 
-1. Use the {{site.data.keyword.amashort}} SDK to make a request to your back-end resources that are protected with {{site.data.keyword.amashort}} server SDK.
+* Use the {{site.data.keyword.amashort}} SDK to make a request to your back-end resources that are protected with {{site.data.keyword.amashort}} server SDK.
 * The {{site.data.keyword.amashort}} server SDK detects an unauthorized request and returns HTTP 401 and the authorization scope.
 * The {{site.data.keyword.amashort}} client SDK automatically detects the above HTTP 401 and starts the authentication process.
 * The {{site.data.keyword.amashort}} client SDK contacts the {{site.data.keyword.amashort}} service and requests an authorization header.
@@ -34,6 +36,15 @@ Create a custom identity provider and implement your own logic for collecting an
 * From this point on, all requests made with the {{site.data.keyword.amashort}} client SDK have a newly obtained authorization header.
 * The {{site.data.keyword.amashort}} client SDK automatically resends the original request that triggered the authorization flow.
 * The {{site.data.keyword.amashort}} server SDK extracts authorization header from the request, validates it with the {{site.data.keyword.amashort}} service, and grants access to a back-end resource.
+
+### {{site.data.keyword.amashort}} web application request flow
+{: #mca-custom-web-sequence}
+The {{site.data.keyword.amashort}} web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
+
+* The initial request is sent by the web application (from a log-in form, for example).
+* The final redirect is to the protected area of the web application itself, rather than back-end protected resource.
+
+
 
 ## Understanding custom identity providers
 {: #custom-id-about}

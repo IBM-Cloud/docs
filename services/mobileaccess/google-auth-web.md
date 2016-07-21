@@ -8,10 +8,10 @@ copyright:
 # Enabling Google authentication for web applications
 {: #google-auth-web}
 
-*Last updated: 18 July 2016*
+*Last updated: 20 July 2016*
 {: .last-updated}
 
-Use Google Sign-In to authenticate users on your web application.
+Use Google Sign-In to authenticate users on your web application. Add {{site.data.keyword.amashort}} security functionality.
 
 
 ## Before you begin

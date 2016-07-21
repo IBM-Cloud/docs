@@ -11,7 +11,7 @@ copyright:
 # Authenticating users with Google credentials
 {: #google-auth}
 
-*Last updated: 03 July 2016*
+*Last updated: 20 July 2016*
 
 You can configure the {{site.data.keyword.amashort}} service to protect resources, using Google as an identity provider. Your mobile or web application users can then use their Google credentials for authentication.
 {:shortdesc}
@@ -21,11 +21,13 @@ You can configure the {{site.data.keyword.amashort}} service to protect resource
 ## {{site.data.keyword.amashort}} request flow
 {: #google-auth-overview}
 
+### Client request flow
+
 See the following simplified diagram to understand how {{site.data.keyword.amashort}} integrates with Google for authentication.
 
 ![image](images/mca-sequence-google.jpg)
 
-1. Use the {{site.data.keyword.amashort}} SDK to make a request to your back-end resources that are protected  with the {{site.data.keyword.amashort}} server SDK.
+* Use the {{site.data.keyword.amashort}} SDK to make a request to your back-end resources that are protected  with the {{site.data.keyword.amashort}} server SDK.
 * The {{site.data.keyword.amashort}} server SDK detects the unauthorized request and returns an HTTP 401 code and authorization scope.
 * The {{site.data.keyword.amashort}} client SDK automatically detects the HTTP 401 code and starts the authentication process.
 * The {{site.data.keyword.amashort}} client SDK  contacts the {{site.data.keyword.amashort}} service and requests an authorization header.
@@ -37,6 +39,14 @@ See the following simplified diagram to understand how {{site.data.keyword.amash
 * From this point on, all requests that are made through the {{site.data.keyword.amashort}} client SDK  have a newly obtained authorization header.
 * The {{site.data.keyword.amashort}} client SDK automatically resends the original request that triggered the authorization flow.
 * The {{site.data.keyword.amashort}} server SDK extracts the authorization header from the request, validates it with the {{site.data.keyword.amashort}} service, and grants access to a back-end resource.
+
+### {{site.data.keyword.amashort}} web application request flow
+{: #mca-google-web-sequence}
+
+The {{site.data.keyword.amashort}} web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
+
+* The initial request is sent by the web application (from a log-in form, for example).
+* The final redirect is to the protected area of the web application itself, rather than back-end protected resource.
 
 
 

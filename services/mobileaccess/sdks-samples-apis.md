@@ -251,7 +251,8 @@ npm install -save bms-mca-token-validation-strategy
 {: #oauthsdk}
 
 Run NPM to install the SDK:
-```Bash
+```
+Bash
 npm install -save bms-mca-oauth-sdk
 ```
 
@@ -271,6 +272,7 @@ npm install -save bms-mca-oauth-sdk
 
 Edit the Podfile and add the following line and run:
 
-```Bash
+```
+Bash
 pod 'IMFURLProtocol'
 ```

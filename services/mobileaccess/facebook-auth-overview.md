@@ -12,7 +12,7 @@ copyright:
 # Authenticating users with Facebook credentials
 {: #facebook-auth-overview}
 
-*Last updated: 15 June 2016*
+*Last updated: 21 July 2016*
 {: .last-updated}
 
 You can configure the {{site.data.keyword.amashort}} service to protect resources by using Facebook as an identity provider. Your mobile or web application users can use their Facebook credentials for authentication.
@@ -23,11 +23,13 @@ You can configure the {{site.data.keyword.amashort}} service to protect resource
 ## {{site.data.keyword.amashort}} request flow
 {: #mca-facebook-sequence}
 
-See the following simplified diagram to understand how {{site.data.keyword.amashort}} integrates with Facebook for authentication.
+### Mobile client request flow
+
+See the following simplified diagram to understand how {{site.data.keyword.amashort}} integrates with Facebook for authentication from a mobile client app.
 
 ![image](images/mca-sequence-facebook.jpg)
 
-1. Use the {{site.data.keyword.amashort}} client SDK to make a request to your back-end resources that are protected with the {{site.data.keyword.amashort}} server SDK.
+* Use the {{site.data.keyword.amashort}} client SDK to make a request to your back-end resources that are protected with the {{site.data.keyword.amashort}} server SDK.
 * The {{site.data.keyword.amashort}} server SDK detects an unauthorized request and returns HTTP 401 code and authorization scope.
 * The {{site.data.keyword.amashort}} client SDK automatically detects the HTTP 401 code and starts the authentication process.
 * The {{site.data.keyword.amashort}} client SDK  contacts the {{site.data.keyword.amashort}} service and requests an authorization header.
@@ -41,11 +43,11 @@ See the following simplified diagram to understand how {{site.data.keyword.amash
 * The {{site.data.keyword.amashort}} server SDK extracts authorization header from request, validates it with {{site.data.keyword.amashort}} service, and grants access to a back-end resource.
 
 ## {{site.data.keyword.amashort}} web application request flow
-{: #mca-facebook-sequence}
+{: #mca-facebook-web-sequence}
 The {{site.data.keyword.amashort}} web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
 
-  * The initial request is sent by the web application (from a log in form, for example).
-  * The final redirect is to the web application itself, rather than back-end protected resource. 
+  * The initial request is sent by the web application (from a log-in form, for example).
+  * The final redirect is to the protected area of the web application itself, rather than back-end protected resource. 
 
 
 

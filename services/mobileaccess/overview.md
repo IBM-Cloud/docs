@@ -7,7 +7,7 @@ copyright:
 
 # About {{site.data.keyword.amashort}}
 {: #mca-overview}
-*Last updated: 17 July 2016*
+*Last updated: 20 July 2016*
 {: .last-updated}
 
 The {{site.data.keyword.amafull}} service provides authentication and monitoring services for mobile and web applications that access cloud resources hosted on {{site.data.keyword.Bluemix_notm}}.
@@ -51,7 +51,7 @@ The following diagram describes how a request flows from the client SDK to your 
 
 ![image](images/mca-sequence-overview.jpg)
 
-1. Use {{site.data.keyword.amashort}} SDK to make a request to your back-end resources that are protected with the {{site.data.keyword.amashort}} server SDK.
+* Use {{site.data.keyword.amashort}} SDK to make a request to your back-end resources that are protected with the {{site.data.keyword.amashort}} server SDK.
 * The {{site.data.keyword.amashort}} server SDK detects an unauthorized request and returns HTTP 401 + authorization scope.
 * The {{site.data.keyword.amashort}} client SDK automatically detects the HTTP 401 and starts the authentication process.
 * The {{site.data.keyword.amashort}} client SDK contacts the {{site.data.keyword.amashort}} service and asks to issue an authorization header.
@@ -67,3 +67,20 @@ The following diagram describes how a request flows from the client SDK to your 
 * From this point on, all requests made with {{site.data.keyword.amashort}} client SDK have a newly obtained authorization header.
 * The {{site.data.keyword.amashort}} client SDK automatically resends the original request that triggered the authorization flow.
 * The {{site.data.keyword.amashort}} server SDK extracts the authorization header from request, validates the header with the  {{site.data.keyword.amashort}} service, and grants access to a back-end resource.
+
+
+## Getting help and support for {{site.data.keyword.amashort}}
+
+{: #gettinghelp}
+
+If you have problems or questions when using {{site.data.keyword.amashort}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
+
+When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
+
+* If you have technical questions about developing or deploying an app with {{site.data.keyword.amashort}}, post your question on [Stack Overflow](http://stackoverflow.com/search?q=site.data.keyword.amashort+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "{{site.data.keyword.amashort}}".
+* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window} forum.
+
+See [Getting help](https://www.{domainname}/docs/support/index.html#getting-help) for more details about using the forums.
+
+For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://www.{domainname}/docs/support/index.html#contacting-support).
+
