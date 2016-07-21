@@ -10,61 +10,143 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 使用 Insights for Weather REST API
+# 使用 {{site.data.keyword.weather_short}} REST API
 {: #rest_apis}
 
-*上次更新时间：2016 年 4 月 6 日*
+*上次更新时间：2016 年 7 月 1 日*
+{: .last-updated}
 
-您可以使用 [Insights for Weather REST API](https://twcservice.{APPDomain}/rest-api/){:new_window} 来检索天气数据。可以测试 API 操作并立即查看结果，以帮助您更快地构建应用程序。
+您可以使用 [REST API](https://twcservice.{APPDomain}/rest-api/){:new_window} 来检索天气数据。可以测试 API 操作并立即查看结果，以帮助您更快地构建应用程序。
+{: shortdesc}
 
 从参考文档中，单击**列出操作**可查看每个操作的详细信息。指定参数并单击**试试看！**时，系统可能会要求您提供凭证。必须提供 `VCAP_SERVICES` 环境变量中的用户名和密码。通过打开应用程序并单击目录中的**环境变量**，可以找到这些信息。
 
 **注：**每个区域都是独立的。不能将在一个区域中为您供应的服务凭证用于向另一个区域中的服务进行认证。未输入正确的凭证将导致响应主体中显示“未授权”消息。
 
-使用 Insights for Weather API，可以通过提供经度和纬度坐标表示地理位置来检索天气数据。可以使用以下 API。
+使用 REST API，可以通过提供经度和纬度坐标表示地理位置来检索天气数据。可以使用以下 API。
 
 |**API**                                  |**描述**              |
 |-----------------------------------------|-----------------------------|
-|`GET /v2/forecast/daily/10day`           |返回某个地理位置当天和未来 9 天的天气预测。每天天气预测可以包含白天天气预测和晚上天气预测。这些分段在 JSON 响应中是不同的对象。每天天气预测中的白天天气预测数据在当地时间下午 3:00 后不再可用。在当地时间下午 3:00 时，您的应用程序不能再显示白天天气预测。|
-|`GET /v2/forecast/hourly/24hour`         |返回某个地理位置当天和未来 24 小时的每小时天气预测。每小时天气预测数据最多可以包含每个位置 24 小时的天气预测。对于某个位置，在收到新数据后，必须废弃先前所有每小时天气预测。|
-|`GET /v2/observations/current`           |返回某个地理位置的最新天气状况。这些最近的观察数据会保留在数据库中，特定报告站的观察数据最多保留 10 分钟，每个观察站的观察数据最多保留 24 小时。最近的观察数据会基于观察数据的日期/时间戳记，通过先进/先出方法持续更新并进行替换（使用最新的观察数据来循环数据，并将最早的观察数据移至归档存储器）。|
-|`GET /v2/observations/timeseries/24hour` |返回某个地理位置的最新观察数据以及从当前日期和时间开始一直到过去 24 小时的观察数据。天气观察数据是从部署在世界各地的物理设备以及最新天气观察 数据中收集而来的。|
-*表 1. Insights for Weather API 摘要*
+|`GET /v1/{geocode or location ID}/forecast/hourly/48hour.json`  |根据您所提供的格式，返回某个地理位置未来 48 小时的每小时天气预测。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{locationId}`。每小时天气预测数据最多可以包含每个位置 48 小时的天气预测。对于某个位置，在收到新数据后，必须废弃先前所有每小时天气预测。|
+|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |根据您所提供的格式，返回某个地理位置 3、5、7 或 10 天的每天天气预测。返回的天数以 `3day`、`5day`、`7day` 或 `10day` 的格式指定。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{locationId}`。每一个每天天气预测都可以包含白天天气预测、晚上天气预测和 24 小时天气预测。这些分段在 JSON 响应中是不同的对象。每天天气预测中的白天天气预测数据在当地时间下午 3:00 后不再可用。在当地时间下午 3:00 时，您的应用程序不能再显示白天天气预测。|
+|`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|根据您所提供的格式，返回某个地理位置 3、5、7 或 10 天的 6 小时每天天气预测。返回的天数以 `3day`、`5day`、`7day` 或 `10day` 的格式指定。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{locationId}`。每一个每天天气预测都可以包含早晨、下午、晚上和过夜天气预测。这些分段在 JSON 响应中是不同的对象。|
+|`GET /v1/{geocode or location ID}/observations.json`              |返回某个地理位置的最新天气状况。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{locationId}`。这些最近的观察数据会保留在数据库中，特定报告站的观察数据最多保留 10 分钟，每个观察站的观察数据最多保留 24 小时。最近的观察数据会基于观察数据的日期/时间戳记，通过先进/先出方法持续更新并进行替换（使用最新的观察数据来循环数据，并将最早的观察数据移至归档存储器）。|
+|`GET /v1/{geocode or location ID}/observations/timeseries.json`   |返回某个地理位置的最新观察数据以及从当前日期和时间开始一直到过去 24 小时的观察数据。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{locationId}`。天气观察数据是从部署在世界各地的物理设备以及最新天气观察
+数据中收集而来的。|
+|`GET /v1/{geocode, country code, state, or area}/alerts.json`      |返回国家气象局 (NWS)、加拿大环境部和欧洲 MeteoAlarm 发布的天气监测、警告、预警和公告，包括 49 种语言的事件描述、国家或地区名和警报标题的翻译。您可以提供 `geocode/{latitude}/{longitude}`、`country/{countrycode}`、`country/{countrycode}/state/{statecode}`/ 或 `country/{countrycode}/area/{areaid}`。|
+|`GET /v1/alert/{detail_key}/details.json`                         |返回国家气象局 (NWS)、加拿大环境部和欧洲 MeteoAlarm 发布的天气监测、警告、预警和公告。详细信息包括政府气象部门就指定区域发布的警报的深入信息，包括 49 种语言的事件描述、国家或地区名和警报标题的翻译。|
+|`GET /v1/{geocode or postal code}/almanac/daily.json`             |返回来自国家气象局观察站的每天年历信息（仅限美国），时间跨度为 10 到 30 年或更长。该信息由国家气象数据中心 (NCDC) 收集和提供。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{PostalLocationId}`。|
+|`GET /v1/{geocode or postal code}/almanac/monthly.json`           |返回来自国家气象局观察站的每月年历信息（仅限美国），时间跨度为 10 到 30 年或更长。该信息由国家气象数据中心 (NCDC) 收集和提供。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{PostalLocationId}`。|
+|`GET /v3/location/{search or point}`                                  |提供查找位置名或地理位置代码（经度和纬度）的能力，用于检索匹配请求的位置集。定位服务支持按城市名或邮政编码搜索。|
+*表 1. {{site.data.keyword.weather_short}} API 摘要*
 
-## 时间序列观察数据
+## 每天和当天天气预测
+{: #daily_intraday}
+每天天气预测 API 可以包含每个位置多天的每天天气预测。每天的天气预测可以包含多达三个不同的天气预测。对于任何给定天气预测日，API 可以返回白天、夜晚和 24 小时天气预测。
+
+
+当天天气预测 API 可以包含每个位置多天的每天天气预测。每天的天气预测包含四个不同的 6 小时天气预测：早晨（上午 7 点到下午 1 点）、下午（下午 1 点到晚上 7 点）、夜晚（晚上 7 点到凌晨 1 点）和过夜（凌晨 1 点到上午 7 点）。
+当天天气预测在结构上与每天天气预测类似。
+
+
+每一段都有日段号码、星期名称和日段名称。例如，以下示例针对星期四早晨 API 生成的天气预测，显示 `num`、`dow` 和 `daypart_name` 的数据字段顺序和数据值：
+
+* 1，星期四，早晨
+* 2，星期四，下午
+* 3，星期四，夜晚
+* 4，星期四，过夜
+* 5，星期五，早晨
+* 6，星期五，下午
+* 7，星期五，夜晚
+* 8，星期五，过夜
+
+## 现状和时间序列观察数据
 {: #time_series}
 
-时间序列观察数据提供有关温度、降水、风力、气压、能见度、紫外线 (UV) 辐射以及其他相关观察元素的信息，包括观察站、观察日期/时间、天气图标代码和用语。时间序列观察数据与最新观察数据的差异在于观察数据时间段，这将生成一个或多个观察数据集。
+现状和时间序列观察数据提供有关温度、降水、风力、气压、能见度、紫外线 (UV) 辐射以及其他相关观察元素的信息，包括观察站、观察日期/时间、天气图标代码和用语。时间序列观察数据与最新观察数据的差异在于观察数据时间段，这将生成一个或多个观察数据集。
 
 最新天气状况是在不使用时间参数时请求的位置的最新观察数据。这将返回一个数据集。时间序列观察数据包含过去的观察数据，一直到（且包括）过去 24 小时所请求位置的观察数据。
 
 最近的观察数据会保留在主数据库中，最多保留特定报告站的 48 小时（2 天）的观察数据。最近的观察数据会基于观察数据的日期/时间戳记，通过先进/先出方法持续更新并进行替换（使用最新的观察数据来循环数据，并将最早的观察数据移至归档存储器）。保留且可从任何观察站可用的数据量可能会超过 24 小时单个观察报告的数据量。
 观察次数由观察类型确定。
 
+## 警报标题和详细信息
+{: #alerts_levels}
+警报 API 会返回与严重雷暴、龙卷风、地震和洪水相关的天气警报标题。
+这些 API 还会返回非天气警报，如拐卖儿童警报和执法部门警告。
+
+
+**注**：仅美国、加拿大和欧洲可以使用此 API。
+
+警报标题 API 在 `detail_key` 属性中提供密钥值，用于访问警报详细信息 API 中的警报详细信息。
+查询警报标题 API，以获取 `detail_key` 值，然后使用 `detail_key`，检索警报详细信息 API 响应。
+
+**注**：您必须显示应用程序中所显示的任何警报数据的数据源属性。
+
+属性短语必须显示以下信息：
+
+*< 办公室名称发出 > - &lt;办公室行政区代码&gt;、&lt;办公室国家或地区代码&gt;、&lt;来源&gt;、&lt;免责声明&gt;*
+
+例如：
+* 国家气象局发出 - 美国俾斯麦
+* 中央气象和地球动力学研究所发出 - 澳大利亚 EMETNET-Meteoalarm
+
+## 年历信息
+{: #almanac_details}
+年历 API 需要位置标识和位置类型（城市或邮政编码），或者经度和纬度对，来检索特定位置的信息。
+
+
+当您在 URL 中使用 `location` 时，位置必须包括位置标识（邮政编码），以及位置类型和国家或地区代码。
+当您在 URL 中使用 `geocode` 时，搜索位置必须是有效的经度和纬度组合。
+
+
+年历 API 使用参数来指定每天或每月数据、信息的特定日期或日期范围，以及返回数据时所使用的度量单位。
+
+
+日期参数为 `start` 和 `end`。`start` 参数是必需参数，而 `end` 参数为可选参数。当一起使用这两个参数时3，组合会返回日期范围而不是数据的特定月或天。
+
+
+用于检索每天年历结果的日期格式为四位数字值，代表所需数据的月和天，即 MMDD。任何单一数字天都**必须**具有前置零 (0)，例如 01。
+
+用于检索每月结果的日期格式为月，即 MM。任何单一数字月都**必须**具有前置零 (0)，例如 01。任何其他格式都会导致 API 错误，且不会返回任何数据。
+
+**注**：如果您未在请求中提供日期值，那么系统会返回状态 404（错误的请求）。API 不会提供缺省值。
+
 ## URL 构造
 {: #url_construction}
 
-Insights for Weather API 使用常用 URL 结构和查询参数来请求和过滤天气数据。传递给 Insights for Weather API 的 URL 如下所示进行构造：
+REST API 使用常用 URL 结构和查询参数来请求和过滤天气数据。传递给 API 的 URL 如下所示进行构造：
 
 ```
-https://twcservice.mybluemix.net/api/weather/v2/<product group>/&format={format type}&geocode={latitude,longitude}&language={language code}&units={units code}
+https://twcservice.mybluemix.net/api/weather/v1/geocode/<latitude>/<longitude>/<product group>/<date>/<format>&units={units code}&language={language code}
+```
 
+例如：
+
+```
+https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/daily/3day.json?units=m&language=en-US
 ```
 
 |**属性**     |**描述**                                    |
 |------------------|---------------------------------------------------|
-|`主机名`        |托管的 URL 路径（例如，`https://twcservice.mybluemix.net:443/api/weather`）|
-|`版本`         |最新迭代（例如，“v2”）|
-|`商品组`   |产品（例如，“观察数据”或“天气预测”）|
-|`地理位置代码`         |可选的经度和纬度，例如“45.4214,75.6919”表示加拿大渥太华。如果提供了地理位置代码坐标，那么 API 会返回最近可用位置的数据。 句点用作十进制分隔符，逗号用于分隔经度和纬度值。如果提供了地理位置代码，那么会在响应的元数据中返回使用的实际经度和纬度值。|
-|`语言`        |要返回的响应所用的语言。缺省值为 en-US。响应的元数据中的“语言”参数中将返回缺省或请求的转换语言。|
+|`主机名`        |托管的 URL 路径。例如，`https://twcservice.mybluemix.net:443/api/weather`。|
+|`版本`         |当前迭代。例如，“v1”。|
+|`location`        |地理位置代码或位置标识。位置组可以是“geocode”或“location”。例如，“geocode/45.4214/75.6919”代表加拿大渥太华。如果提供了地理位置代码坐标，那么 API 会返回最近可用位置的数据。
+句点用作十进制分隔符，逗号用于分隔经度和纬度值。如果提供了地理位置代码，那么会在响应的元数据中返回使用的实际经度和纬度值。|
+|`商品组`   |产品。例如“observations”或“forecast”。产品子组（例如“historical”）是可选的。|
+|`date`            |日期类型。例如“daily”或“monthly”。|
+|`format`          |格式。例如，“3day”、“5day”、“7day”或“10day”。|
 |`单位`           |要返回的响应所用的单位（可选）。API 支持英制 (e)、公制 (m) 和英制混合 (h) 度量单位。如果提供了度量单位但未提供值，API 将以与语言代码对应的度量单位返回数据。响应的元数据中的“单位”参数中将返回缺省或请求的度量单位。|
+|`语言`        |要返回的响应所用的语言。缺省值为 en-US。响应的元数据中的“语言”参数中将返回缺省或请求的转换语言。|
 *表 2. URL 详细信息*
+
+**注**：REST API 使用 ISO 3166 标准的国家或地区代码。有关更多信息，请参阅 [ISO 标准在线浏览平台](https://www.iso.org/obp/ui/#search/code/){:new_window}。
+API 使用 WGS84 地理位置代码坐标参考系统。有关更多信息，请参阅[基本地理词汇表](https://www.w3.org/2003/01/geo/){:new_window}。
 
 ## 度量单位
 {: #units_measure}
 
-使用 Insights for Weather API 时，无需显式传递度量单位。Insights for Weather API 缺省为与 URL 中的语言代码关联的度量单位。但是，如果要提供不同于缺省值的度量单位，那么可以传递度量单位以覆盖缺省值。
+使用 REST API 时，无需显式传递度量单位。这些 API 缺省为与 URL 中的语言代码关联的度量单位。但是，如果要提供不同于缺省值的度量单位，那么可以传递度量单位以覆盖缺省值。
 
 * 对于 en-US 或 en，缺省度量单位为“英制”。单位代码为“e”。
 * 对于 en-GB，缺省度量单位为“混合英制”。单位代码为“h”。
@@ -73,7 +155,7 @@ https://twcservice.mybluemix.net/api/weather/v2/<product group>/&format={format 
 ## 语言转换
 {: #language_translation}
 
-Insights for Weather API 将转换用语和度量单位。设置请求 URL 的格式时，必须提供有效的语言。将转换以下字段：
+REST API 将转换用语和度量单位。设置请求 URL 的格式时，必须提供有效的语言。将转换以下字段：
 
 |**字段**           |**描述**                                    |
 |--------------------|---------------------------------------------------|
@@ -89,14 +171,17 @@ Insights for Weather API 将转换用语和度量单位。设置请求 URL 的�
 |`phrase_nnchar`     |白天感测天气用语|
 |`lunar_phrase`      |三个字符构成的农历用语简短代码|
 |`uv_desc`           |UV 指数描述，通过提供因曝晒使皮肤受损的关联危险级别，对 UV 指数值进行补充|
-|`sky_cover`         | 基于云层覆盖百分比描述的天空覆盖|
-|`ptend_desc`        | 过去 3 小时气压趋势的描述性文本|
+|`wx_phrase`         |在报告站中已观察天气条件的文本描述。|
+|`pressure_desc`     |用于描述在过去一小时，大气压读数变化的短语。|
+|`headline_text`     |位置事件的标题文本。|
+|`event_desc`        |事件的描述。|
+|`cntry_name`        |发生事件的国家或地区名，以混合大小写字母提供。|
 *表 3. 转换的响应字段*
 
 ## 处理 API 响应中的数据字段为空或缺少数据字段的问题
 {: #handling_null_or_missing}
 
-如果由于数据不可用而导致数据字段为空，那么 Insights for Weather API 会返回包含“空”的相应字段标签，或者根本就不返回字段。
+如果由于数据不可用而导致数据字段为空，那么 REST API 会返回包含“空”的相应字段标签，或者根本就不返回字段。
 
 ## 处理错误
 {: #handling_errors}
@@ -109,11 +194,7 @@ Insights for Weather API 将转换用语和度量单位。设置请求 URL 的�
 |401       |未授权。请求需要认证。|
 |403       |已禁止。服务器识别到请求，但拒绝执行该请求。|
 |404       |找不到。如果必需参数在 API 请求中不存在，那么将返回 MissingParameterException 错误和 404 错误代码。|
-|405       |方法不被允许。例如，发送 POST，而不是 GET。|
-|406       |不可接受。例如，不接受 gzip 压缩响应。|
-|408       |请求超时。客户机未在服务器预期的等待时间内生成请求。|
 |500       |内部服务器错误。服务器遇到意外情况，导致无法执行请求。|
-|502-504   |服务不可用或发生网关问题。如果服务暂时不可用，将会返回这些错误代码。|
 *表 4. 错误响应代码*
 
 有关错误的响应始终是相同的。在一个响应中可能会返回多个错误代码。
@@ -121,8 +202,7 @@ Insights for Weather API 将转换用语和度量单位。设置请求 URL 的�
 
 ```
 {
-  metadata: {
-    transaction_id: "1411496413365:-1880721071"
+  metadata: {transaction_id: "1411496413365:-1880721071"
   },
   success: false,
   errors: [
