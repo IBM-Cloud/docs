@@ -13,9 +13,10 @@ copyright:
 # Aggregazione API
 {: #api_aggregation}
 
-*Ultimo aggiornamento: 31 marzo 2016*
+*Ultimo aggiornamento: 15 giugno 2016*
+{: .last-updated}
 
-Alcune API di Insights for Weather possono essere aggregate. Puoi utilizzare l'aggregazione per combinare due o più chiamate API atomic
+Alcune API {{site.data.keyword.weather_short}} possono essere aggregate. Puoi utilizzare l'aggregazione per combinare due o più chiamate API atomic
 in una singola richiesta HTTP.
 {: shortdesc}
 
@@ -61,7 +62,7 @@ quando i parametri di query vengono applicati a tutte le API atomic. In questo c
 
 Il seguente esempio applica
 `geocode=31.44,84.33&amp;language=en&amp;units=e` per le API atomic
-`v2fcstdaily10` e `v2obscurrent`: 
+`v2fcstdaily10` e `v2obscurrent`:
 
 ```
 https://twcservice.mybluemix.net/api/weather/v2/aggregate/v2fcstdaily10;v2obscurrent?geocode=31.44,84.33&amp;language=en&amp;units=e
