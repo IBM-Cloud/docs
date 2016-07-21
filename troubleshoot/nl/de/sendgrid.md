@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2015*
-{: .last-updated}
+  years: 2015, 2015
+
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -17,6 +17,7 @@ copyright:
 {: #ts_sendgrid}
 
 *Letzte Aktualisierung: 9. Dezember 2015*
+{: .last-updated}
 
 Hier finden Sie die Antwort auf eine Frage zur Verwendung von SendGrid in {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -41,4 +42,3 @@ Zum Überprüfen, wie hoch die Anzahl der noch für den Versand zulässigen E-Ma
 
 Wenn Sie nach dem Erreichen des Grenzwerts von 25.000 E-Mails pro Serviceinstanz monatlich weitere E-Mails senden wollen, können Sie eine weitere Serviceinstanz hinzufügen. Weitere Informationen zu SendGrid finden Sie unter [Getting Started with SendGrid](https://sendgrid.com/docs/index.html){: new_window}.    
 {: tsResolve}
-

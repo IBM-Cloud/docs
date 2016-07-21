@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2015*
-{: .last-updated}
+  years: 2015, 2015
+
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -17,6 +17,7 @@ copyright:
 {: #ts_sendgrid}
 
 *Last updated: 9 December 2015*
+{: .last-updated}
 
 Here is the answer to a question about using SendGrid in {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -41,4 +42,3 @@ To check the remaining number of emails that are allowed, click your SendGrid se
 
 If you want to send more emails after you reached the limit of 25,000 emails per service instance each month, you can add another service instance. For more information about SendGrid, see [Getting Started with SendGrid](https://sendgrid.com/docs/index.html){: new_window}.    
 {: tsResolve}
-

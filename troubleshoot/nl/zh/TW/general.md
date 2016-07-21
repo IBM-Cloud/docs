@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2015*
-{: .last-updated}
+  years: 2015, 2015
+
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -18,6 +18,7 @@ copyright:
 {: #general}
 
 *前次更新：2015 年 12 月 9 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 服務問題可能包括刪除服務實例時發生的閘道逾時錯誤。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
@@ -39,5 +40,3 @@ copyright:
 
 若要解決此問題，請建立具有相同服務名稱的服務實例，然後將它連結至應用程式。之後，您就可以刪除服務實例以及使用該服務的應用程式。   
 {: tsResolve}
-
-

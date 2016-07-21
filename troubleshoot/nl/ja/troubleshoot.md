@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2015*
-{: .last-updated}
+  years: 2015, 2015
+
 
 ---
 
@@ -15,6 +15,7 @@ copyright:
 {: #troubleshooting}
 
 *最終更新日: 2015 年 1 月 6 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} に関する問題が発生した場合は、
 トラブルシューティング・タスクを実行して、行うべき修正処置を決定することができます。

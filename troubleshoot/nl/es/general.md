@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2015*
-{: .last-updated}
+
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -18,6 +18,7 @@ copyright:
 {: #general}
 
 *Última actualización: 9 de diciembre de 2015*
+{: .last-updated}
 
 Entre los problemas de los servicios de {{site.data.keyword.Bluemix}}
 se pueden incluir los errores de tiempo de espera agotado de pasarela que se producen al suprimir
@@ -41,5 +42,3 @@ Este problema sucede si la instancia de servicio ya se ha suprimido desde el con
 
 Para resolver este problema, cree una instancia de servicio con el mismo nombre de servicio y luego enlácela a las apps. Después puede suprimir la instancia de servicio y las apps que utilizan el servicio.   
 {: tsResolve}
-
-

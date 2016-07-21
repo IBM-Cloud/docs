@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2015*
-{: .last-updated}
+  years: 2015, 2015
+
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -17,6 +17,7 @@ copyright:
 {: #ts_sendgrid}
 
 *Última actualización: 9 de diciembre de 2015*
+{: .last-updated}
 
 Esta es la respuesta a la pregunta sobre el uso de SendGrid en {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -41,4 +42,3 @@ Para comprobar el número de correos permitidos que queda, pulse en la instancia
 
 Si quiere enviar más correos electrónicos cuando haya alcanzado el límite de 25.000 correos por instancia de servicio cada mes, puede añadir otra instancia de servicio. Para obtener más información sobre SendGrid, consulte [Iniciación a SendGrid](https://sendgrid.com/docs/index.html){: new_window}.    
 {: tsResolve}
-

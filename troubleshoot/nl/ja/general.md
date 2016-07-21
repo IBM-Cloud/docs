@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2015*
-{: .last-updated}
+  years: 2015, 2015
+
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -18,6 +18,7 @@ copyright:
 {: #general}
 
 *最終更新日: 2015 年 12 月 9 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} サービスの問題には、ユーザーがサービス・インスタンスを削除した場合に発生するゲートウェイ・タイムアウト・エラーなどが含まれます。 しかし多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {:shortdesc}
@@ -39,5 +40,3 @@ copyright:
 
 この問題を解決するには、同じサービス名でサービス・インスタンスを作成し、それをアプリケーションにバインドします。その後、そのサービス・インスタンスとそのサービスを使用するアプリケーションを削除することができます。   
 {: tsResolve}
-
-
