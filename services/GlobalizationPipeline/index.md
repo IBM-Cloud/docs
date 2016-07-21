@@ -64,7 +64,7 @@ Alternatively, if you already have translated resource files, you can import the
 ## Estimating {{site.data.keyword.GlobalizationPipeline_short}} Data Usage
 {: #globalizationpipeline_documentpricing}
 
-{{site.data.keyword.GlobalizationPipeline_short}} stores your translations in a backend database. To estimate active data size, you can refer to the data storage estimate formula:
+{{site.data.keyword.GlobalizationPipeline_short}} stores your translations in a backend database. To estimate active data size, you can refer to the data storage estimation formula:
 
 `<expected resource data storage size in MB> ˜= 0.0005 * <number of key/value pairs in the source resource> * <number of languages including the source language>`
 
