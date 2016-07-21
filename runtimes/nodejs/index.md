@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*Last Updated: 10 June 2016*
+*Last Updated: 07 July 2016*
 {: .last-updated}
 
 The Node.js runtime on {{site.data.keyword.Bluemix}} is powered by the sdk-for-nodejs buildpack.
@@ -71,6 +71,11 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 {: codeblock}
 
 With this code, when the application is running on Bluemix, the VCAP_APP_HOST and VCAP_APP_PORT environment variables contain the host and port values which are internal to Bluemix, and on which the app listens for incoming connections. When the application is running locally, VCAP_APP_HOST and VCAP_APP_PORT are not defined so **localhost** is used as the host and **3000** is used as the port number. Written this way, you can run the application locally for testing purposes and on Bluemix without making further changes.
+
+## Offline mode
+{: #offline_mode}
+
+See [Offline mode](offlineMode.html) for information on controlling the buildpack's access to external sites. 
 
 ## App Management
 {{site.data.keyword.Bluemix}} provides a number of utilities for managing and debugging your Node.js app.  See [App Management](../../manageapps/app_mng.html) for complete details.
@@ -274,7 +279,7 @@ Typically the current **sdk-for-nodejs** buildpack and a back-level version are 
 {: #rellinks}
 ## general
 {: #general}
-* [Latest Updates to the Node.js Buildpack](updates.html)
+* [Latest Updates to the Node.js Buildpack](../../runtimes/nodejs/updates.html)
 * [App Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

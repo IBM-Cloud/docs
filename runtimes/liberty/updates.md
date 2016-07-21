@@ -13,8 +13,15 @@ copyright:
 
 ## A list of the latest updates in the Liberty buildpack.
 
-*Last Updated: 17 June 2016*
+*Last Updated: 20 July 2016*
 {: .last-updated}
+
+### July 22, 2016: Updated Liberty buildpack v3.1-20160717-2254
+* The [App Management](../../manageapps/app_mng.html) functionality was updated to support federated authentication. Also, the Node.js runtime that is used by the `devconsole` and `shell` utilities was updated to the latest `0.12.15` version. 
+* The buildpack adds support for the [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/) application monitoring agent.
+* The buildpack provides an updated data collector for the [Monitoring and Analytics service](../../services/monana/index.html#monana_oview).
+* The buildpack also provides an updated version of the agent for the [Auto-Scaling service](../../services/Auto-Scaling/index.html). 
+* The monthly Liberty runtime version was updated to the [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/) release.
 
 ### June 17, 2016: Updated Liberty buildpack v3.0-20160608-1450
 * The buildpack now contains two versions of WebSphere Liberty, the latest stable release and the latest monthly release. Specifically, it provides [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) stable release and [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) monthly release. The stable release will be used by default. See [Liberty versions](buildpackDefaults.html#liberty_versions) for additional details. 
