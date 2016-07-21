@@ -14,18 +14,15 @@ copyright:
 
 # About blockchain
 {: #ibmblockchain_overview}
-*Last updated: 15 July 2016*
+*Last updated: 18 July 2016*
 {: .last-updated}
-
-You can use blockchain to digitally represent assets, which can then be traded quickly and securely over permissioned networks.
-{:shortdesc}
 
 ## What is blockchain?
 {: #what}
 
 Blockchain is a technology for a new generation of transactional applications that establishes trust, accountability and transparency, while streamlining business processes. It is a design pattern made famous by bitcoin, but its practical uses extend far beyond cryptocurrency exchanges. With blockchain, we can reimagine the most fundamental business exchanges, and open the door to a new world of digital interactions.
 
-Blockchain has the potential to vastly reduce the cost and complexity of cross-enterprise business processes. Its distributed ledger makes it easier to create cost-efficient business networks, where virtually anything of value can be tracked and traded, without requiring a central point of control. The application of this emerging technology is showing great promise across a broad range of business applications. For example, blockchain networks allow securities trades to be settled in minutes, instead of days. Blockchain can also help companies streamline the flow of goods and payments, and enable manufacturers to reduce product recalls by easily sharing production logs with OEMs and regulators.
+Blockchain has the potential to vastly reduce the cost and complexity of cross-enterprise business processes. Its distributed ledger makes it easier to create cost-efficient business networks, where virtually anything of value can be tracked and traded, without requiring a central point of control. The application of this emerging technology is showing great promise across a broad range of business applications. For example, blockchain networks allow securities trades to be settled in minutes, instead of days. Blockchain can also help companies streamline the flow of goods and payments, and enable manufacturers to reduce product recalls by easily sharing production logs with Original Equipment Manufacturers (OEMs) and regulators.
 
 ## Key terms
 {: #keyterms}
@@ -33,7 +30,7 @@ The following terms are instrumental in gaining a holistic understanding of bloc
 
 **Transactor**: A network participant connected to the blockchain through a node, that issues transactions from the client side by leveraging an SDK or API.
 
-**Transaction**: A request by a transactor to the blockchain to execute a function on the ledger.  Chaincode implements the functions set forth in the fabric's API contract.  
+**Transaction**: A request by a transactor to the blockchain to execute a function on the ledger.  Transaction types include deploy/invoke/query and are implemented through the chaincode functions set forth in the fabric's API contract.  <!---Chaincode implements the functions set forth in the fabric's API contract.  --->
 
 **Ledger**: A sequence of cryptographically-linked blocks, containing transactions and the current world state.  In addition to data from previous transactions, the ledger (blockchain) also contains the data for currently-running chaincode applications.
 
@@ -52,14 +49,14 @@ The following terms are instrumental in gaining a holistic understanding of bloc
 ## Key concepts
 {: #keyconcepts}
 
-Blockchain consists of a network, over which members track and exchange assets, and a record of all exchanges (ledger), which is replicated to all participating members.  Applications deployed to a blockchain consist of a self-executing contract and a client-side application that intefaces with the network through an SDK or API.   Two or more parties, being part of a common blockchain network, would agree on the terms of the logic within the contract (e.g. when I get asset "a", I pay you amount "b").  Once deployed to the blockchain, functions in the contract can be invoked (i.e. a transaction can be triggered), with the ensuing result (world state) sent on for validation by the network participants.  After validation, transactions are recorded on the shared ledger by all participants. Once recorded on the ledger, transactions can never be altered or deleted.
+Blockchain consists of a network, over which members track and exchange assets, and a record of all exchanges (ledger), which is replicated to all participating members.  Applications deployed to a blockchain consist of a self-executing contract and a client-side application that intefaces with the network through an SDK or API.   Two or more parties, being part of a common blockchain network, would agree on the terms of the logic within the contract (e.g. when I get asset "a", I pay you amount "b").  Once deployed to the blockchain, functions in the contract can be invoked (i.e. a transaction can be triggered), with the ensuing invocation(s) ordered by a leading node and then broadcast to the network participants for consensus.  After validation, transactions are executed and recorded to the shared ledger by all participants.  Once recorded on the ledger, transactions can never be altered or deleted.
 
 **Network**: A blockchain network is characterized as follows:
 
 - A decentralized peer-to-peer architecture, with nodes that represent network participants, such as banks and securities firms.
-- A group of peers that validate and commit transactions in order to reach consensus.
+- A group of peers that validate transactions though a consensus protocol before committing them to a shared ledger.
 
-**Shared ledger**: The shared ledger can be thought of as the single source of truth for transactions on a blockchain network. And companies might have multiple shared ledgers: one for each of the business networks in which they participate. The shared ledger can be used for recording and totaling financial transactions. A shared ledger has the following attributes:
+**Shared ledger**: The shared ledger can be thought of as the single source of truth for transactions on a blockchain network.  Companies might have multiple shared ledgers: one for each of the business networks in which they participate. The shared ledger can be used for recording and totaling financial transactions. A shared ledger has the following attributes:
 - It records all transactions across the business network.
 - It is shared amongst all participants.
 - It is replicated, so that each participant has their own copy.
@@ -72,7 +69,7 @@ Figure 1 depicts a shared ledger and its participants:
 
 Figure 1 shows the typical network participants in an equities market - Asset custodian (bank), front office, operations, securities depository and a clearing party:
 1. The custodian invokes multiple pieces of chaincode to buy and sell blocks of securities.  
-2. Transactions can be triggered from any network node, but are ultimately submitted to the primary node on the network, which orders the transaction batch.  The primary node then rebroadcasts the ordered transactions to its network peers, all of whom possess a shared copy of the ledger, for agreement on the proposed order (consensus). 
+2. Transactions can be triggered from any network node, but are ultimately submitted to the primary node on the network, which orders the transaction batch.  The primary node then broadcasts the ordered transactions to its network peers, all of whom possess a shared copy of the ledger, for agreement on the proposed order (consensus). 
 3. Once the order of the transactions is agreed upon (consensus), the transactions are executed and appended to the ledger.
 
 

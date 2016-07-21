@@ -8,14 +8,16 @@ copyright:
 {:new_window: target="_blank"}
 
 
-#Enabling Advanced push notifications
+#Enabling advanced push notifications
+*Last updated: 14 June 2016*
+{: .last-updated}
 
 Configure an iOS badge, sound, additional JSON payload, actionable notifications, and holding notifications.
 
 ## Configure sound, and payload and iOS badge
 {: #badge-sound-payload}
 
-Configure an iOS badge, sound and additional JSON payload.
+Configure an iOS badge, sound, and additional JSON payload.
 
 1. On the Push Notifications dashboard, go to the **Notifications** tab.
 2. Go to the **Optional Fields** section to configure the following push notification features. 
@@ -26,6 +28,8 @@ Configure an iOS badge, sound and additional JSON payload.
 
 
 ###Android
+
+Add your sound file in `res/raw` directory of your android application. While sending notification, add the sound file name in the sound field of push notification.
 
 ```
 "settings":{
@@ -56,7 +60,7 @@ Configure an iOS badge, sound and additional JSON payload.
 ## Holding Android notifications 
 {: #hold-notifications-android}
 
-When your application goes into background, you probably want Push to hold back notifications that are sent to your application. To hold notifications, call the hold() method in the onPause() method of the activity that is handling push notifications.
+When your application goes into background, you probably want push notification to hold back notifications sent to your application. To hold notifications, call the hold() method in the onPause() method of the activity that is handling push notifications.
 
 ```
 @Override
@@ -97,7 +101,7 @@ Unlike traditional push notifications, actionable notifications prompt users to 
 	acceptAction.title = "Accept"
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground*/
+	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 	```
 	
 	```
@@ -162,11 +166,9 @@ Unlike traditional push notifications, actionable notifications prompt users to 
 
 	```
 	//For Swift
-	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-
-	application.registerUserNotificationSettings(notificationSettings)
-	application.registerForRemoteNotifications()
+	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications() 
 	```
 	
 ## Handling actionable iOS notifications  

@@ -2,7 +2,7 @@
 
 # Getting started with {{site.data.keyword.blockstorageshort}} (Beta)
 
-*Last updated: 20 June 2016*
+*Last updated: 15 July 2016*
 {: .last-updated}
 
 {{site.data.keyword.blockstoragefull}} provides access to block level storage for transaction intensive workloads and runtimes in need of persistent storage.
@@ -57,9 +57,10 @@ The volume is listed in the table of attached volumes with the information about
 The virtual server can now use the device to persist data. 
 
 
+# Related Links
+{: #rellinks}
 
-># Related Links {:class="linklist"}
->## API Reference {:id="api"}
->* [OpenStack Block Storage (Cinder) API v2](http://developer.openstack.org/api-ref-blockstorage-v2.html){: new_window}
->
->{:elementKind="article" id="rellinks"}
+## API Reference
+{: #api}
+* [OpenStack Block Storage (Cinder) API v2](http://developer.openstack.org/api-ref-blockstorage-v2.html){: new_window}
+

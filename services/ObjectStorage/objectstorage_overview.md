@@ -2,7 +2,7 @@
 
 # About {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Last updated: 24 June 2016*
+*Last updated: 15 July 2016*
 {: .last-updated}
 
 

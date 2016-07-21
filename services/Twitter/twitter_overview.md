@@ -35,14 +35,12 @@ To validate {{site.data.keyword.twittershort}} search results, the service provi
 ## Feedback and support 
 {: #feedback_support}
 
-The {{site.data.keyword.twitterfull}} team wants to hear from you.
+If you have problems or questions, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 
-If you experience any issues with this service, visit the 
-IBM [developerWorks Answers](https://developer.ibm.com/answers/topics/insights-twitter/?smartspace=bluemix){: new.window} forum. Search for answers to previously submitted questions or ask a question. 
-Include the **insights-twitter** and **bluemix** tags to enhance the response time.
+When using the forums to ask a question, tag your question so that it is seen by the IBM Bluemix development teams. 
+* If you have technical questions about developing or deploying an app with {{site.data.keyword.twittershort}}, post your question on Stack Overflow and tag your question with **bluemix** and **twitter**. 
+* For questions about the service and getting started instructions, use the IBM [developerWorks dW Answers](https://developer.ibm.com/answers/topics/insights-twitter/?smartspace=bluemix){: new.window} forum. Include the **insights-twitter** and **bluemix** tags.
 
-If you questions that aren't addressed in developerWorks Answers, post your question on 
-[Stack Overflow](http://stackoverflow.com/search?q=twitter+bluemix){: new.window} and tag your question with **twitter** and **bluemix**.
+See [Getting help](https://new-console.ng.bluemix.net/docs/support/index.html#getting-help){: new.window} for more details about using the forums. 
 
-You can also view the status of the [Bluemix Platform](https://developer.ibm.com/bluemix/support/#status){: new.window} 
-or [open a support ticket](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&offering=ibmbluemix){: new.window}. For more information, see [Troubleshooting](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://new-console.ng.bluemix.net/docs/support/index.html#contacting-support){: new.window}.

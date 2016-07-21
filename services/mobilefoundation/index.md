@@ -13,7 +13,7 @@ copyright:
 # Getting started with {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
 
-*Last updated: 15 June 2016*
+*Last updated: 20 July 2016*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_long}} expedites setting up an {{site.data.keyword.mfp_full}} environment from which you can develop, test, and operate enterprise mobile apps. {{site.data.keyword.mobilefoundation_short}} is available under two different service plans: Developer and Professional 1 Application.
@@ -37,7 +37,7 @@ After you create an instance of the {{site.data.keyword.mobilefoundation_short}}
 
 1.  Connect to an existing {{site.data.keyword.dashdbshort}}: Enterprise Transactional service on {{site.data.keyword.Bluemix_notm}}.
 
-    1.  Select the {{site.data.keyword.Bluemix_notm}} `Space` where the {{site.data.keyword.dashdbshort_notm}} service instance exists, from the list of spaces available in the current `Organization`.
+    1.  Select the {{site.data.keyword.Bluemix_notm}} `Space` where the {{site.data.keyword.dashdbshort_notm}} service instance exists, from the list of spaces available in the selected `Organization`.
 
     2.  Select the {{site.data.keyword.dashdbshort_notm}} `Service Name` and `Credentials` to connect to the existing  {{site.data.keyword.dashdbshort_notm}} service instance.
 

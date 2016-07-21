@@ -13,13 +13,13 @@ copyright:
 
 # Getting started with {{site.data.keyword.blockchain}} (Beta)
 {: #gettingstartedtemplate}
-*Last updated: 15 July 2016*
+*Last updated: 19 July 2016*
 {: .last-updated}
 
 With the {{site.data.keyword.blockchainfull}} service on Bluemix&reg;, you can spin up a multi-node blockchain network at the click of a button. Rather than creating and managing a network, developers can get into code faster and spend their time writing applications and working with chaincode. The service is a peer-to-peer permissioned network built on the [hyperledger/fabric](https://github.com/hyperledger/fabric) code from the Linux Foundation's Hyperledger Project.
 {:shortdesc}
 
-You can use a blockchain network to exchange digital assets through a shared ledger. For more information about shared ledgers and business networks, see the [About](ibmblockchain_overview.html) blockchain topic.
+You can use a blockchain network to digitally represent assets which can then be securely exchanged and tracked through a shared ledger. For more information about shared ledgers and business networks, see the [About blockchain](ibmblockchain_overview.html) topic.
 
 There are currently two versions available for the blockchain service - **Starter Developer** and **High Security Business Network**.  Use the comparisons in the table below to choose the right environment for your needs.
 
@@ -30,7 +30,7 @@ There are currently two versions available for the blockchain service - **Starte
 | Platform  | SoftLayer     | IBM LinuxONE&trade; |
 | Purpose   |  development and test levels of security performance and availability |  simulate enterprise network and test levels of security, performance and availability |
 | Environment     | shared multi-tenant | isolated single tenant |
-| Secure Services Container - [SSC](etn_ssc.html) | No | Yes |
+| [IBM Secure Service Container](etn_ssc.html) | No | Yes |
 | Nodes     | 4 nodes + Certificate Authority     | 4 nodes + Certificate Authority |
 | Confidential Transactions | Yes | Yes |
 | Consensus  |  [PBFT](etn_pbft.html)    |    [PBFT](etn_pbft.html) |

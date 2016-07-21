@@ -14,13 +14,13 @@ copyright:
 # Getting started with {{site.data.keyword.DRA_short}} (Experimental)
 {: #DRA_gettingstarted}
 
-*Last updated: 24 May 2016*
+*Last updated: 18 July 2016*
 {: .last-updated}
 
 {{site.data.keyword.DRA_full}} allows you to maintain and improve the quality of your code in {{site.data.keyword.Bluemix_notm}} by monitoring your deployments to identify risks before they are released.
 {:shortdesc}
 
-{{site.data.keyword.DRA_short}} collects and analyzes the results from unit tests, functional tests, and code coverage tools to determine whether your code meets predefined criteria at specified gates in your deployment process. If your code does not meet or exceed the criteria, the deployment is halted, preventing risks from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment or as a way to implement and improve quality standards over time.
+{{site.data.keyword.DRA_short}} collects and analyzes the results from unit tests, functional tests, and code coverage tools to determine whether your code meets predefined policies at specified gates in your deployment process. If your code does not meet or exceed a policy, the deployment is halted, preventing risks from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment or as a way to implement and improve quality standards over time.
 
 {{site.data.keyword.DRA_short}} is an experimental offering and is provided as-is for development and experimentation purposes only.  To use {{site.data.keyword.DRA_short}}, add it to any toolchain that uses the {{site.data.keyword.deliverypipeline}}.
 
@@ -35,7 +35,7 @@ To access the {{site.data.keyword.DRA_short}} criteria UI, complete the followin
 
 4. Complete your setup with the remaining tasks:
 
-	1. [Define criteria](./create_criteria.html) for {{site.data.keyword.DRA_short}} to manage.
+	1. [Define policies](./create_criteria.html) for {{site.data.keyword.DRA_short}} to manage.
 	2. Add {{site.data.keyword.DRA_short}} to a toolchain and [configure your {{site.data.keyword.deliverypipeline}}](./pipeline_integration.html).
 	3. [Run your {{site.data.keyword.deliverypipeline}}](./pipeline_decision_reports.html)
 

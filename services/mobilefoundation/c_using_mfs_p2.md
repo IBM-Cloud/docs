@@ -8,7 +8,7 @@ copyright:
 #	Using the Professional 1 Application plan
 {: #using_mobilefoundation_p2}
 
-*Last updated: 15 June 2016*
+*Last updated: 20 July 2016*
 {: .last-updated}
 
 After you create the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service instance, read the following procedure to get started with the service.
@@ -37,7 +37,7 @@ After you create the {{site.data.keyword.mobilefoundation_short}}: Professional 
 
 After the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service instance is created you will see the *Overview* page where you will need to specify the connection information for the {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional service instance.
 
-1.  Select the {{site.data.keyword.Bluemix_notm}} `Space` where the {{site.data.keyword.dashdbshort_notm}} service instance exists, from the list of spaces available in the current `Organization`.
+1.  Select the {{site.data.keyword.Bluemix_notm}} `Space` where the {{site.data.keyword.dashdbshort_notm}} service instance exists, from the list of spaces available in the selected `Organization`.
 
 + Select the {{site.data.keyword.dashdbshort_notm}} `Service Name` and `Credentials` to connect to the existing  {{site.data.keyword.dashdbshort_notm}} service instance.
 

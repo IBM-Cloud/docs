@@ -13,10 +13,10 @@ copyright:
 # Using the Insights for Twitter REST APIs
 {: #rest_apis}
 
-*Last updated: 13 May 2016*
+*Last updated: 18 July 2016*
 {: .last-updated}
 
-The {{site.data.keyword.twittershort}} service consists of RESTful APIs to search and consume Twitter content. The query language section below lists the query terms that are supported by the service APIs. Examples are provided to demonstrate how queries can be constructed.
+The {{site.data.keyword.twittershort}} service consists of RESTful APIs to search and consume Twitter content. The [Query language](twitter_rest_apis.html#querylanguage){: new.window} table lists the query terms that are supported by the service APIs. Examples are provided to demonstrate how queries can be constructed.
 {:shortdesc}
 
 ## REST API documentation {: #rest_api}
@@ -63,22 +63,22 @@ The following table lists the currently supported query terms.
 | `bio_lang:language` 	| Matches Tweets from users whose profile language settings match the specified language code.  See `lang:` for a list of support languages. 	| `bio_lang:en` 	|
 | `bio_location:"location"` 	| Matches Tweets from users whose profile location setting contains the specified `location` reference. 	| `bio_location:"New York"` 	|
 | `country_code:country-code` 	| Matches Tweets whose tagged place or location matches the specified country code. </br>**For a list of supported country codes, please see**: http://en.wikipedia.org/wiki/ISO_3166-1 	| `country_code:us` 	|
-| `followers_count:lowerLimit,upperLimit` 	| Matches Tweets from users that have a number of followers that fall within the specified range. The upper bound is optional and both limits are inclusive. 	| `followers_count:500` 	|
-| `friends_count:lowerLimit,upperLimit` 	| Matches Tweets from users that follow a number of users that fall within the specified range. The upper bound is optional and both limits are inclusive. 	| `friends_count:1000,3000` 	|
+| `followers_count:lowerLimit,upperLimit` 	| Matches Tweets from users that have a number of followers that fall within the specified range. The upperLimit is optional and both limits are inclusive. 	| `followers_count:500` 	|
+| `friends_count:lowerLimit,upperLimit` 	| Matches Tweets from users that follow a number of users that fall within the specified range. The upperLimit is optional and both limits are inclusive. 	| `friends_count:1000,3000` 	|
 | `from:twitterHandle` 	| Matches Tweets from users with the preferredUsername *twitterHandle*. Must not contain the &commat; symbol. 	| `from:alexlang11` 	|
 | `has:children` 	| Matches Tweets from users that have children. 	| `has:children` 	|
 | `is:married` 	| Matches Tweets from users that are married. 	| `is:married` 	|
 | `is:verified` 	| Matches Tweets where the author has been verified by Twitter. 	| `analytics is:verified` 	|
 | `lang:language-code` 	| Matches Tweets from a particular language. The list of supported language codes is: <ul><li>`ar` (Arabic)</li><li>`zh` (Chinese)</li><li>`da` (Danish)</li><li>`dl` (Dutch)</li><li>`en` (English)</li><li>`fi` (Finnish)</li><li>`fr` (French)</li><li>`de` (German)</li><li>`el` (Greek)</li><li>`he` (Hebrew)</li><li>`id` (Indonesian)</li><li>`it` (Italian)</li><li>`ja` (Japanese)</li><li>`ko` (Korean)</li><li>`no` (Norwegian)</li><li>`fa` (Persian)</li><li>`pl` (Polish)</li><li>`pt` (Portuguese)</li><li>`ru` (Russian)</li><li>`es` (Spanish)</li><li>`sv` (Swedish)</li><li>`th` (Thai)</li><li>`tr` (Turkish)</li><li>`uk` (Ukrainian)</li></ul>    | `lang:de` (to match German Tweets) 	|
-| `listed_count:lowerLimit,upperLimit` 	| Matches Tweets where Twitter's listing of the author falls within the specified range. The upper bound is optional and both limits are inclusive. 	| `listed_count:1000,3000` 	|
+| `listed_count:lowerLimit,upperLimit` 	| Matches Tweets where Twitter's listing of the author falls within the specified range. The upperLimit is optional and both limits are inclusive. 	| `listed_count:1000,3000` 	|
 | `point_radius:[longitude latitude radius]` 	| Matches Tweets from a geographical region, specified by its longitude and latitude coordinates and a radius. </br></br>All coordinates are represented in decimal degrees. The `longitude` must be a value between -180 and +180, while `latitude` must be a value between -90 and +90. Specifying a value outside the supported ranges returns an error. Values must be entered as floating-point numbers; integers are not supported. </br></br>The radius of the surrounding area must be specified in miles (mi) or kilometers (km). 	| `point_radius:[41.128611 -73.707778 5.0mi]` 	|
 | `posted:startTime  posted:startTime,endTime` 	| Matches Tweets that have been posted at or after "startTime". The "endTime" is optional and both limits are inclusive. Timestamps must be in one of the following formats:  </br>"yyyy-mm-dd" or "yyyy-mm-ddTHH:MM:SSZ" </br>  Timezone is based on UTC (Coordinated Universal Time). When specifying hours, minutes, and seconds, the time must be enclosed by "T" and "Z", as in the prescribed format. 	| `posted:2014-12-01,2014-12-12` 	|
 | `sentiment:sentiment-value` 	| Matches Tweets with a particular sentiment. Supported values are: </br><dl>positive</dl> <dlentry>Tweet contains more positive than negative sentiment phrases.</dlentry> </br></br><dl>negative</dl> <dlentry>Tweet contains more negative than positive sentiment phrases.</dlentry>  </br></br><dl>neutral</dl>  <dlentry>Tweet does not contain any sentiment, or is in a language that does not offer sentiment detection.</dlentry> </br></br><dl>ambivalent</dl>  <dlentry>Tweet contains an equal amount of positive and negative sentiment phrases.</dlentry> 	| `sentiment:positive` 	|
-| `statuses_count:lowerLimit,upperLimit` 	| Matches Tweets from users that have posted a number of statuses that falls within the specified range. The upper bound is optional and both limits are inclusive. 	| `statuses_count:1000,3000` 	|
+| `statuses_count:lowerLimit,upperLimit` 	| Matches Tweets from users that have posted a number of statuses that falls within the specified range. The upperLimit is optional and both limits are inclusive. 	| `statuses_count:1000,3000` 	|
 | `time_zone:timeZone` 	| Matches Tweets from users whose profile settings match the specified time zone. 	| `time_zone:"Eastern Time (US & Canada)"` 	|
 | `time_zone:city` 	| Matches Tweets from users whose profile settings match the specified city. 	| `time_zone:"Dublin"` 	|
 *Table 2. Query terms*
 
-All supported query terms can be combined with the above Boolean operators. For example,
+All supported query terms can be combined with the previously described Boolean operators. For example,
 
 `ibm -apple followers_count:500`

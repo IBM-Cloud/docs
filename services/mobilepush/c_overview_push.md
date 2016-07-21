@@ -7,44 +7,50 @@ copyright:
 
 # About Push Notifications
 {: #overview-push}
+*Last updated: 14 June 2016*
+{: .last-updated}
 
-Push Notifications is a service that you can use to send notifications to iOS and Android device. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. For information about Push dedicated service, see [Dedicated Services](../../dedicated/index.html). 
+Push Notifications is a service that you can use to send notifications to iOS and Android device. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
+
+Push Notification is also available as a Bluemix Dedicated service. For information about Push dedicated service, see [Dedicated Services](../../dedicated/index.html). Note that the Push Notifications monitoring tab does not show analytics data.
+
+The Push Notification service is now OpenWhisk enabled. For more information, see [OpenWhisk](../../openwhisk/index.html).
 
 
-## Push notification service process
+## Push Notification service process
 {: #overview_push_process}
 
-Mobile clients can subscribe and register for the Push Notification Service. On startup, mobile applications register and subscribe themselves to the Push Notification Service. The notifications are dispatched to the Apple Push Notification Service (APNs) or Google Cloud Messaging (GCM) server and then sent to registered mobile clients.
+Mobile clients can subscribe and register for the Push Notification service. On startup, mobile applications register and subscribe themselves to the Push Notification service. The notifications are dispatched to the Apple Push Notification Service (APNS) or Google Cloud Messaging (GCM) server and then sent to registered mobile clients.
 
 ![Push Overview](images/overview.jpg)
 
 
 ###Mobile applications
 
-On startup, mobile applications register and subscribe themselves to the Push Notification Service to receive notifications.
+On startup, mobile applications register and subscribe themselves to the Push Notification service to receive notifications.
 
 ###Backend applications
 
-Backend applications can be on premises or in a public cloud. Backend applications use the Push Notification Service to send context-sensitive notifications to mobile users. The backend applications are not required to maintain and manage mobile devices and user information for sending push notifications. Instead, backend applications can use the Push Notification Service.
+Backend applications can be on premises or in a public cloud. Backend applications use the Push Notification service to send context-sensitive notifications to mobile users. The backend applications are not required to maintain and manage mobile devices and user information for sending push notifications. Instead, backend applications can use the Push Notification service.
 
 ###App backend owner
 
-The role that created the mobile backend application that bundles an instance of the Push Notification Service. This person configures and sets up the Push Notification Service to suit the backend applications that use the Push Notification Service and mobile applications that are the target of push notifications.
+The role that created the mobile backend application that bundles an instance of the Push Notification service. This person configures and sets up the Push Notification service to suit the backend applications that use the Push Notification service and mobile applications that are the target of push notifications.
 
-###Push Notification Service
+###Push Notification service
 
-The Push Notification Service manages all the information that is related to the devices that register for notifications. The service keeps your applications transparent to the technology details of sending notifications to these heterogeneous mobile platforms, handling all of this within.
+The Push Notification service manages all the information that is related to the devices that register for notifications. The service keeps your applications transparent to the technology details of sending notifications to these heterogeneous mobile platforms, handling all of this within.
 
 ###Gateways
 
-Mobile device platform-specific cloud services such as Google Cloud Messaging (GCM) or Apple Push Notification Service (APNs) use the Push Notification Service to dispatch notifications to the mobile applications.
+Mobile device platform-specific cloud services such as Google Cloud Messaging (GCM) or Apple Push Notification Service (APNS) use the Push Notification service to dispatch notifications to the mobile applications.
 
 ## Push notification types
 {: #overview-push-types}
 
 ###Broadcast
 
-When a mobile application registers itself with the Push Notification Service, it can start receiving broadcasts. Broadcast notifications are notification messages that are targeted to all the devices that have the application installed and configured for the Push Notification Service. Broadcast notifications are enabled by default with any application that is enabled for push notifications. Any application that is enabled for Push Notification Service has a predefined subscription to the Push.ALL tag, which is used by server to broadcast notification messages to all the devices. To send a broadcast notification that uses the REST Push API, ensure that the "target" is an empty JSON file when posting to the messages resource.
+When a mobile application registers itself with the Push Notification service, it can start receiving broadcasts. Broadcast notifications are notification messages that are targeted to all the devices that have the application installed and configured for the Push Notification service. Broadcast notifications are enabled by default with any application that is enabled for push notifications. Any application that is enabled for Push Notification service has a predefined subscription to the Push.ALL tag, which is used by server to broadcast notification messages to all the devices. To send a broadcast notification that uses the REST Push API, ensure that the "target" is an empty JSON file when posting to the messages resource.
 
 ###Tag-based notifications
 

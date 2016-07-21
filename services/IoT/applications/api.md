@@ -11,37 +11,33 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# HTTP API for applications
+# HTTP REST API for applications
 {: #api}
 
-Use the {{site.data.keyword.iot_full}} API to build and customize applications that interact with your organization on {{site.data.keyword.iot_short_notm}}.
+*Last updated: 08 July 2016*
+{: .last-updated}
+
+Use the {{site.data.keyword.iot_full}} HTTP REST API to build and customize applications that interact with your organization on {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
-## API capabilities
+## Capabilities
 {: #capabilities}
 
-The {{site.data.keyword.iot_short_notm}} API supports the following functions for applications:
+The {{site.data.keyword.iot_short_notm}} HTTP REST API supports the following capabilities and functions for applications:
 
-- View organization details
+- Organization information retrieval
 - Bulk device operations (list, add, and remove)
 - Device type operations (list, create, delete, view details, and update)
 - Device operations (list, add, remove, view details, update, view location, and view management information)
 - Device diagnostic operations (clear logs, retrieve logs, add log information, delete logs, get specific logs, clear error codes, get device error codes, and add error codes)
 - Connection problem determination (list device connection log events)
 - Historical event retrieval (view events for all devices, view events by device type, and view events for a specific device)
-- Device management request operations (list device management requests, initiate requests, clear request status, get request details, list all request statuses by device, and get the request status for a specific device)
-- Usage management (retrieve number of active devices over a period, retrieve total amount of storage that is used by historical event data, and retrieve total amount of data that is used)
-- Publish events on behalf of devices (beta)
-- Service status queries (retrieve service statuses by organization)
+- Device management request operations (list device management requests, initiate requests, clear request status, get details of a request, list all request statuses by device, and get the request status for a specific device)
+- Usage management operations (retrieve number of active devices over a period, retrieve total amount of storage that is used by historical event data, and retrieve total amount of data used)
+- Device event publishing (beta)
+- Service status querying (retrieve service statuses by organization)
 
-## API version information
-{: #version_information}
+## Accessing the HTTP REST API
+{: #api_link}
 
-Use the [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) to build and customize applications for your organization.
-
-
-**Important:**
-While the [{{site.data.keyword.iot_short_notm}} API V1](https://docs.internetofthings.ibmcloud.com/swagger/v0001.html) is supported, some of the capabilities that are described in this section are either limited or are not available. The following list outlines some of the limitations of using version 1:
-  - Many of the API paths that relate to devices are different.
-  - The only device type operation that is supported is the capability to list all device types.
-  - Operations that are related to device management, device management requests, diagnostic information, or location are not available.
+To access the {{site.data.keyword.iot_short_notm}} HTTP REST API and obtain more information about how to build and customize your applications, go to https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
