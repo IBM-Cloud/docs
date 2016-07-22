@@ -14,7 +14,7 @@ copyright:
 # Defining policies
 {: #DRA_criteria}
 
-*Last updated: 6 June 2016*
+Last updated: 22 July 2016
 {: .last-updated}
 
 With {{site.data.keyword.DRA_short}}, defining the policies for your application is easy. To get started, follow these steps:
@@ -43,7 +43,9 @@ Policies are created in the {{site.data.keyword.Bluemix_notm}} organization that
 * Unit Test (Mocha, JUnit, Karma/Mocha)
 * Code Coverage (Istanbul, Blanket.js)
 
-{{site.data.keyword.DRA_short}} also supports Selenium and Jasmine tests, though these must be included within the previously mentioned tools, such as JUnit and Mocha. For items that have test cases, you can specify critical test cases, which are tests that must pass regardless of the acceptable percentage. Critical test case names must match the `full title` attribute of the test case, which is as follows:    
+{{site.data.keyword.DRA_short}} also supports Selenium and Jasmine tests, though these must be included within the previously mentioned tools, such as JUnit, xUnit, and Mocha. To learn more about using {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.DRA_short}}, and Selenium together, see [Running Selenium tests from the command line on a delivery pipeline](https://developer.ibm.com/devops-services/2016/07/21/running-selenium-tests-command-line-delivery-pipeline/).
+
+For items that have test cases, you can specify critical test cases, which are tests that must pass regardless of the acceptable percentage. Critical test case names must match the `full title` attribute of the test case, which is as follows:    
 * For Karma/Mocha tests: The `describe()` and `it()` description strings linked together with spaces
 * For JUnit tests: The package name, class name, and function name linked together with spaces    
 
