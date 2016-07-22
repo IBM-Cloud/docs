@@ -10,7 +10,7 @@ copyright:
 
 # Getting started with the Hello Bluemix for Android sample
 {: #gettingstarted-android}
-*Last Updated: 27 May 2016*
+Last Updated: 27 May 2016
 {: .last-updated}  
 
 If you want to get started with a new Android application, you can use the HelloWorld app. This app demonstrates how to connect to your {{site.data.keyword.Bluemix}} backend from a mobile app without authentication. The app already has the SDK installed. When you're ready, you can get the specific libraries that you want to use in your app.
@@ -35,18 +35,21 @@ From the Android Studio toolbar, click the **Play** button and select a simulato
 
   **Note:** The `Node.js` runtime code is provided in the MobileFirst Services Starter boilerplate. If the backend application was not created with the MobileFirst Services Starter boilerplate, the application will not connect successfully.
 
-  When you successfully connect to {{site.data.keyword.Bluemix_notm}} from the mobile app in Android Studio, the following message displays:
-
+  When you successfully connect to {{site.data.keyword.Bluemix_notm}} from the mobile app in Android Studio, you see:
   `Yay! You are connected`
   {: screen}
 
+<!--
   ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+  -->
 
   If the connection fails, you see:
   `Bummer. Something went wrong`
   {: screen}
 
+<!--
   ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
+  -->
 
   You can troubleshoot the failed connection as follows:
    * Verify that you correctly pasted the route and GUID values.
