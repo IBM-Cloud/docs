@@ -123,10 +123,15 @@ You can find additional information about {{site.data.keyword.openwhisk_short}} 
 * [Limits](./openwhisk_reference.html#openwhisk_syslimits)
 * [REST API](https://new-console.{DomainName}/apidocs/98)
 
-# rellinks
-## api
-* [REST API Documentation](./openwhisk_reference.html#openwhisk_ref_restapi)
+# Related Links
+{: #rellinks}
 
-## general
+## API Reference
+{: #api}
+* [REST API Documentation](./openwhisk_reference.html#openwhisk_ref_restapi)
+* [REST API](https://new-console.{DomainName}/apidocs/98){:new_window}
+
+## Related Links
+{: #general}
 * [Discover: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
 * [{{site.data.keyword.openwhisk_short}} on IBM developerWorks](https://developer.ibm.com/openwhisk/){:new_window}

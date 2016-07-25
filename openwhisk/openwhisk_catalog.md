@@ -163,7 +163,7 @@ You can use the `changes` feed to configure a service to fire a trigger on every
 
 4. Observe new activations for the `myCloudantTrigger` trigger for each document change.
 
-**Note**: If you are unable to observe new activations, see the subsequent sections on reading from and writing to a Cloudant database. Testing the reading and writing steps below will help verify that your Cloudant credentials are correct.
+**Note**: If you are unable to observe new activations, see the subsequent sections on reading from and writing to a Cloudant database. Testing the following reading and writing steps will help verify that your Cloudant credentials are correct.
 
 You can now create rules and associate them to actions to react to the document updates.
 
