@@ -8,7 +8,8 @@ copyright:
 # Enabling Google authentication for Cordova apps
 {: #google-auth-cordova}
 
-*Last updated: 28 June 2016*
+
+Last updated: 21 July 2016
 {: .last-updated}
 
 To configure Cordova applications for Google authentication integration you must make changes in the native code of the Cordova application (Java, Objective-C, or Swift). Each platform must be configured separately. Use the native development environment to make changes in the native code, for example, in Android Studio or Xcode.
@@ -48,11 +49,11 @@ The steps required to configure iOS Platform of Cordova application for Google a
 
 1. Go to the `Sources/Authenticators/IMFGoogleAuthentication` directory and copy (drag and drop) all of the files to your iOS project in Xcode. The files you need to copy are:
 
-	> * IMFDefaultGoogleAuthenticationDelegate.h
-	> * IMFDefaultGoogleAuthenticationDelegate.m
-	> * IMFGoogleAuthenticationDelegate.h
-	> * IMFGoogleAuthenticationHandler.h
-	> * IMFGoogleAuthenticationHandler.m
+	* IMFDefaultGoogleAuthenticationDelegate.h
+	* IMFDefaultGoogleAuthenticationDelegate.m
+	* IMFGoogleAuthenticationDelegate.h
+	* IMFGoogleAuthenticationHandler.h
+	* IMFGoogleAuthenticationHandler.m
 
 Select the **Copy files....** checkbox.
 
@@ -89,11 +90,11 @@ After the client SDK is initialized, you can start making requests to your mobil
 You must have a back-end application protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Try to send a request to protected endpoint of your mobile back-end application in your desktop browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`
+1. Try to send a request to a protected endpoint of your mobile back-end application in your desktop browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
 
-1. The `/protected` endpoint of a mobile back-end application created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}, therefore it can only be accessed by mobile applications instrumented with {{site.data.keyword.amashort}} client SDK. As a result you will see `Unauthorized` in your desktop browser.
+1. The `/protected` endpoint of a mobile back-end application created with the MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}, therefore it can be accessed only by mobile applications that are instrumented with the  {{site.data.keyword.amashort}} client SDK. As a result, you will see `Unauthorized` in your desktop browser.
 
-1. Use your Cordova application to make request to the same endpoint. Add the following code after you initialize `BMSClient`.
+1. Use your Cordova application to make a request to the same endpoint. Add the following code after you initialize `BMSClient`.
 
 	```JavaScript
 	var success = function(data){
@@ -107,14 +108,14 @@ You must have a back-end application protected by {{site.data.keyword.amashort}}
 	```
 
 
-1. Run your application. The Google login screen pops up.
+1. Run your application. The Google login screen displays.
 
-	![image](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-google-login.png)
+	![Google login screen](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Google login screen](images/ios-google-login.png)
 	This screen might look slightly different if you do not have the Facebook app installed on your device, or if you are not currently logged in to Facebook.
 1. By clicking **OK** you are authorizing {{site.data.keyword.amashort}} to use your Google user identity for authentication purposes.
 
-1. 	Your request should succeed. Depending on a platform you're using you should see the following output in LogCat/Xcode console
+1. 	Your request should succeed. Depending on the platform that you use, you will see the following output in LogCat/Xcode console:
 
-	![image](images/android-google-login-success.png)
+	![Code snippet on android](images/android-google-login-success.png)
 
-	![image](images/ios-google-login-success.png)
+	![Code snippet on iOS](images/ios-google-login-success.png)

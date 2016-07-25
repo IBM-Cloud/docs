@@ -9,7 +9,7 @@ copyright:
 # Setting up the iOS Objective-C SDK
 {: #getting-started-ios}
 
-*Last updated: 17 July 2016*
+Last updated: 17 July 2016
 {: .last-updated}
 
 Instrument your iOS application with the {{site.data.keyword.amashort}} SDK, initialize the SDK, and make requests to protected and unprotected resources.
@@ -20,7 +20,7 @@ Instrument your iOS application with the {{site.data.keyword.amashort}} SDK, ini
 ## Before you begin
 {: #before-you-begin}
 You must have:
-* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* An instance of a {{site.data.keyword.Bluemix_notm}} application that is protected by the {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
 * An Xcode project.  
 
 
@@ -69,14 +69,17 @@ To use the {{site.data.keyword.amashort}} client SDK, you must initialize the SD
 
 1. Import the `IMFCore` framework in the class that you want to use the {{site.data.keyword.amashort}} client SDK by adding the following header:
 
-	**Objective-C:**
+	####Objective-C
+	{: #imfcore-objc}
 	
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
 	
 	```
 	
-	**Swift:**
+	####Swift
+	{: #sdk-swift}
+	
 	The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project:
 	1. Right-click your project in Xcode, and select **New File..**.
 	1. In the **iOS Source** category, click **Header file**. Name the file `BridgingHeader.h`.
@@ -89,14 +92,16 @@ To use the {{site.data.keyword.amashort}} client SDK, you must initialize the SD
 1. Use the following code to initialize the {{site.data.keyword.amashort}} client SDK.  A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate. <br/>
 Replace the *applicationRoute* and *applicationGUID* with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
-	**Objective-C:**
+	####Objective-C
+	{: #sharedinstance-objc}
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-	**Swift:**
+	####Swift
+	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
@@ -111,7 +116,8 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 
 1. Use your iOS application to make a request to the same endpoint. Add the following code after you initialize `IMFClient`:
 
-	**Objective-C:**
+	####Objective-C
+	{: #nsstring-objc}
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -129,7 +135,8 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 	}];
 	```
 
-	**Swift:**
+	####Swift
+	{: #imfclientrequestpath-swift}
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

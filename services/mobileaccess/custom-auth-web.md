@@ -8,10 +8,10 @@ copyright:
 #Configuring custom authentication for {{site.data.keyword.amashort}} web applications
 {: #custom-web}
 
-*Last updated: 18 July 2016*
+Last updated: 21 July 2016
 {: .last-updated}
 
-Add custom authentication to your {{site.data.keyword.amashort}} web app.
+Add custom authentication and {{site.data.keyword.amashort}} security functionality to your  web app.
 
 ## Before you begin
 {: #before-you-begin}
@@ -110,13 +110,13 @@ After you have your custom identity provider configured, you can enable custom a
 
 ##Implementing the {{site.data.keyword.amashort}} authorization flow using a custom identity provider 
 
-The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties necessary for the authorization process. It consists of a JSON object and can be viewed by clicking  **Enviroment Variables**  in the left-side navigator of your application.
+The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties that are necessary for the authorization process. It consists of a JSON object and you can view it by clicking  **Enviroment Variables**  from the navigation bar on the left of your application.
 
 To request user authorization, redirect the browser to the authorization server endpoint. In order to do so: 
 
 1. Retrieve the authorization endpoint (`authorizationEndpoint`) and clientId (`clientId`) from the service credentials stored in `VCAP_SERVICES` environment variable. 
 
-  **Note:** In case you've added the Mobile Client Access service to your application before web support was added you might not have token endpoint in service credentials. Use below urls depending on your {{site.data.keyword.Bluemix_notm}}  region instead: 
+  **Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
  
   US South: 
   ```
@@ -177,7 +177,7 @@ The next step is to obtain the access token and identity token using the previou
 
 1. Retrieve `authorizationEndpoint`, `clientId`, and `secret` from service credentials stored in `VCAP_SERVICES` environment variable. 
 
-   **Note:** In case you've added the Mobile Client Access service to your application before web support was added you might not have token endpoint in service credentials. In this case use below urls depending on your Bluemix region instead: 
+   **Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
 
  US South: 
  ```
@@ -239,15 +239,16 @@ Once you have received access, and identity the tokens, you can flag web session
 
 The identity token contains information about user identity. In case of a custom authentication, the token will contain all the information returned by the custom identity provider upon authentication. Under the `imf.user` field, the field `displayName` will contain the `displayName` returned by the custom identity provider, and the field `id` will contain the `userName`.  All other values returned by the custom identity provider are returned within the field `attributes` under `imf.user`.  
 
-The access token allows communication with resources protected by Mobile Client Access authorization filters (see [Protecting resources](protecting-resources.html)). In order to make requests to protected resources add an Authorization header to requests with the following structure: 
+The access token allows communication with resources protected by {{site.data.keyword.amashort}} authorization filters (see [Protecting resources](protecting-resources.html)). To make requests to protected resources, add an Authorization header to requests with the following structure: 
 
 `Authorization=Bearer <accessToken> <idToken>` 
 
-**Note:** 
+####Tips: 
+{: #tips_token}
 
-* The `<accessToken>` and the `<idToken>` must be separated by a white space.
+* The `<accessToken>` and the `<idToken>` must be separated with a white space.
 
-* The identity token is optional. In the case where you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
+* The identity token is optional. If you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
 
 
 

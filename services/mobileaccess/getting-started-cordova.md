@@ -9,7 +9,7 @@ copyright:
 # Setting up the Cordova plug-in
 {: #getting-started-cordova}
 
-*Last updated: 17 July 2016*
+Last updated: 17 July 2016
 {: .last-updated}
 
 Instrument your Cordova application with {{site.data.keyword.amashort}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.
@@ -66,7 +66,8 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 
 1. Configure your platform for Android, iOS, or both.
 
-	* **Android**
+	####Android
+	{: #cordova-android}
 
 		Before opening your project in Android Studio, build your Cordova application through your command-line interface (CLI) to avoid build errors.
 
@@ -74,13 +75,14 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 		cordova build android
 		```
 
-	* **iOS**
+	####iOS
+	{: #cordova-ios}
 
 		Configure your Xcode project as follows, to avoid build errors.
 
 		1. Use the most recent version of Xcode to open your `xcode.proj` file in the `<app_name>/platforms/ios` directory.
 
-		**Important:** If you receive a message to "Convert to Latest Swift Syntax", click Cancel.
+		**Important:** If you receive a message to convert to latest Swift syntax", click Cancel.
 
 		2. Go to **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header**, and add the following path:
 

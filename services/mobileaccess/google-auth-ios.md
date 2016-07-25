@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-ios}
 
 
-*Last updated: 16 June 2016*
+Last updated: 16 June 2016
 {: .last-updated}
 
 Use Google Sign-In to authenticate users on your Mobile Client Access iOS app.
@@ -77,7 +77,7 @@ Now that you have a Google iOS client ID, you can enable Google authentication i
 
 1. In **Application ID for iOS**, specify your Google client ID for iOS and click **Save**.
 
-	Note: In addition to the Google client id, the reverse value is also needed for your client configuration (see below). To access both values, download the example plist using pencil icon:
+	Note: In addition to the Google client ID, the reverse value is also needed for your client configuration. To access both values, download the example plist using the pencil icon:
 		![info.plist file download](images/download_plist.png)
 
 ## Configuring the {{site.data.keyword.amashort}} Google client SDK for iOS
@@ -111,7 +111,7 @@ Configure Google integration by updating the `info.plist` file. The `info.plist`
 
 	The second URL Schema is the bundle ID of your application.
 
-* Use a text editor. Right click the `info.plist` and select **Open as > Source code**. Add the following XML to the file:
+* Use a text editor. Right-click `info.plist` and select **Open as > Source code**. Add the following XML to the file:
 
 	```XML
 	<key>CFBundleURLTypes</key>

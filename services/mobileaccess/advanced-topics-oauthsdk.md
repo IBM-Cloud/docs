@@ -8,7 +8,7 @@ copyright:
 # Communicating between back-end applications and services
 {: #backend-comm}
 
-*Last updated: 20 July 2016*
+Last updated: 21 July 2016
 {: .last-updated}
 
 In some scenarios, you might need to send requests from your back-end application that is running on {{site.data.keyword.Bluemix}} to another back-end service that is protected by the {{site.data.keyword.amashort}} service (for example the {{site.data.keyword.cloudant}} service). In these cases, you must add an OAuth token to the request.
@@ -40,9 +40,9 @@ var options = {
 
 	cacheSize: 100,
 
-	// All of the below properties are retrieved automatically when your Node.js
+	// The following properties are retrieved automatically when your Node.js
 	// runs on {{site.data.keyword.Bluemix_notm}} and bound to an instance of {{site.data.keyword.amashort}} Service.
-	// Alternatively you can get these properties values by clicking Show Credentials
+	// Alternatively, you can get these property values by clicking Show Credentials
 	// on the {{site.data.keyword.amashort}} Service tile in your {{site.data.keyword.Bluemix_notm}} application dashboard
 
 	appId: "appId",				// Bleumix applicationGUID, a.k.a tenantId

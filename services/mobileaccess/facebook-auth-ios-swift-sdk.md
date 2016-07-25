@@ -11,7 +11,7 @@ copyright:
 # Enabling Facebook authentication for iOS apps (Swift SDK)
 {: #facebook-auth-ios}
 
-*Last updated: 17 July 2016*
+Last updated: 17 July 2016
 {: .last-updated}
 
 To use Facebook as an identity provider in your iOS applications, add and configure the iOS Platform for your Facebook application.
@@ -26,7 +26,7 @@ To use Facebook as an identity provider in your iOS applications, add and config
 * A Facebook application on the Facebook for Developers site. 
 
 
-**Important:** You do not need to separately install the Facebook's own SDK. The Facebook SDK is installed automatically by `BMSFacebookAuthentication` pod below. You can skip the **Add the Facebook SDK to your Xcode Project** step when you add or configure your app on the Facebook for Developers site.
+**Important:** You do not need to separately install Facebook SDK. The Facebook SDK  installs automatically by the `BMSFacebookAuthentication` pod. You can skip the **Add the Facebook SDK to your Xcode Project** step when you add or configure your app on the Facebook for Developers website.
 
 **Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
 ## Configuring your Facebook Application for the iOS Platform
@@ -176,7 +176,7 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSSecurity
  ```
 2. Initialize the client SDK.	Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
-Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the face icon (![face](images/face.jpg "Face icon"))  in the upper-left corner of the dashboard.
+Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the face icon (![face](images/face.jpg "Face icon"))  in the upper-left corner of the {{site.data.keyword.Bluemix_notm}} dashboard.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -191,7 +191,7 @@ Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyw
  FacebookAuthenticationManager.sharedInstance.register()
  ```
 
-1. Notify the Facebook SDK about the app activation and register the Facebook Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code right after you initialize the BMSClient instance and register Facebook as the authentication manager.
+1. Notify the Facebook SDK about the app activation and register the Facebook Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code after you initialize the BMSClient instance and register Facebook as the authentication manager.
 
  ```Swift
   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)

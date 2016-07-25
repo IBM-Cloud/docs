@@ -7,7 +7,7 @@ copyright:
 
 # Monitoring applications
 {: #app-monitoring}
-*Last updated: 28 June 2016*
+Last updated: 28 June 2016
 {: .last-updated}
 
 In addition to security features, the {{site.data.keyword.amafull}} also provides monitoring and analytics for your mobile applications. You can record client logs and monitor data with the {{site.data.keyword.amashort}} client SDK. Developers can control when to send this data to the {{site.data.keyword.amashort}} Service. All the security events, such as authentication success or failure, that occur in {{site.data.keyword.amashort}} Service are logged automatically.
@@ -40,7 +40,8 @@ There is no way to guarantee that all captured data is preserved on the client s
 
 2. When your {{site.data.keyword.Bluemix_notm}} application dashboard is open, click a {{site.data.keyword.amashort}} tile.
 
-3. In the {{site.data.keyword.amashort}} Dashboard, click the **Monitoring** link in the left-hand menu.
+3. Click the **Monitoring** link in the {{site.data.keyword.amashort}} Dashboard navigation bar on the left.
+
 
 ## Enabling, configuring, and using Logger
 {: #enable-logger}

@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-android}
 
 
-*Last updated: 16 June 2016*
+Last updated: 16 June 2016
 {: .last-updated}
 
 ## Before you begin
@@ -137,7 +137,7 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 
   Replace  `BMSClient.REGION_UK` with the appropriate region.
 
-
+   **Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 	
 
 1. Add the following code to your Activity:
