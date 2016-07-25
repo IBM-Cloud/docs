@@ -13,9 +13,10 @@ copyright:
 # API 집계
 {: #api_aggregation}
 
-*마지막 업데이트 날짜: 2016년 3월 31일*
+*마지막 업데이트 날짜: 2016년 6월 15일*
+{: .last-updated}
 
-일부 Insights for Weather API는 집계가 가능합니다. 집계를 사용하여 둘 이상의 단위 API 호출을 단일 HTTP 요청으로
+일부 {{site.data.keyword.weather_short}} API를 집계할 수 있습니다. 집계를 사용하여 둘 이상의 단위 API 호출을 단일 HTTP 요청으로
 결합할 수 있습니다.
 {: shortdesc}
 
@@ -100,14 +101,14 @@ https://twcservice.mybluemix.net/api/weather/v2/aggregate/v2fcstdaily10;v2obscu
 https://twcservice.mybluemix.net/api/weather/v2 /aggregate/v2fcstdaily10;v2obscurrent;v2loc ?R1,R2.geocode= 34.06,84.21 &amp;R3.geocode= 33.06,81.11 &amp;language=enUS&amp;units=e
 ```
 
-### 여러 가지 방식으로 동일한 자원 요청
+### 여러 가지 방식으로 동일한 리소스 요청
 
 예를 들면, 다른 언어로 또는 다른 측정 단위를 사용하여
-동일한 자원을 여러 가지 방식으로 요청할 수 있습니다. 이 형식을 사용하면
+동일한 리소스를 여러 가지 방식으로 요청할 수 있습니다. 이 형식을 사용하면
 단위 API가 요청에서 반복될 수 있으며(`/v2/aggregate/v2fcstdaily10;v2fcstdaily10`),
 매개변수의 위치 표기법을 사용하여 어떤 API를 어떤 방법으로 요청하는지
 표시할 수 있습니다(`?R1.param1=value1&amp;R2.param1=value2`). 이 경우 사용자는
-서로 다른 방식으로 형식화되거나 변환된 동일한 자원을 받습니다.
+서로 다른 방식으로 형식화되거나 변환된 동일한 리소스를 받습니다.
 
 다음 예는 `geocode=31.44,84.33&amp;language=en&amp;units=e`를
 첫 번째 `v2fcstdaily10`에 적용하며, `geocode=31.44,84.33&amp;language=fr&amp;units=m`을

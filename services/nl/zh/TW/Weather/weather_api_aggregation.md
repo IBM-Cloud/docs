@@ -13,9 +13,10 @@ copyright:
 # API 聚集
 {: #api_aggregation}
 
-*前次更新：2016 年 3 月 31 日*
+*前次更新：2016 年 6 月 15 日*
+{: .last-updated}
 
-部分 Insights for Weather API 可予以聚集。您可以使用聚集，將兩個以上的基本 API 呼叫合併為單一 HTTP 要求。
+部分 {{site.data.keyword.weather_short}} API 可予以聚集。您可以使用聚集，將兩個以上的基本 API 呼叫合併為單一 HTTP 要求。
 {: shortdesc}
 
 基本 API 呼叫會參照任何定義用於聚集之別名的 API。如果 API 可用於聚集，則每個 API 使用者文件在 URL 格式區段都包含用於聚集的別名。例如，標準每日預測 API 具有用於聚集的別名 `v2fcstdaily10`，其可用來擷取 10 天的每日預測作為聚集要求的一部分。
