@@ -19,7 +19,7 @@ copyright:
 # Creating and invoking {{site.data.keyword.openwhisk_short}} actions
 {: #openwhisk_actions}
 
-*Last updated: 22 March 2016*
+*Last updated: 25 July 2016*
 {: .last-updated}
 
 Actions are stateless code snippets that run on the {{site.data.keyword.openwhisk}} platform. An action can be a JavaScript function, a Swift function, or a custom executable program packaged in a Docker container. For example, an action can be used to detect the faces in an image, aggregate a set of API calls, or post a Tweet.
@@ -393,6 +393,41 @@ Several utility actions are provided in a package called `/whisk.system/util` th
   In the result, you see that the lines are sorted.
 
 **Note**: For more information on invoking action sequences with multiple named parameters, see [Setting default parameters](./actions.md#setting-default-parameters)
+
+
+## Creating Python actions
+{: #openwhisk_actions_python}
+
+The process of creating Python actions is similar to that of JavaScript actions. The following sections guide you through creating and invoking a single Python action, and adding parameters to that action.
+
+### Creating and invoking an action
+{: #openwhisk_actions_python_invoke}
+
+An action is simply a top-level Python function, which means it is necessary to have a method named `main`. For example, create a file called
+`hello.py` with the following content:
+
+```
+    def main(dict):
+        name = dict.get("name", “stranger")
+        greeting = "Hello " + name + “!"
+        print(greeting)
+        return {"greeting": greeting}
+```
+{: codeblock}
+
+Python actions always consume a dictionary and produce a dictionary.
+
+You can create an OpenWhisk action called `helloPython` from this function as
+follows:
+
+```
+wsk action create helloPython hello.py
+```
+{: pre}
+
+When using the command line and a `.py` source file, you do not need to
+specify that you are creating a Python action (as opposed to a JavaScript action);
+the tool determines that from the file extension.
 
 
 
