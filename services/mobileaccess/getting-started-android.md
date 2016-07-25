@@ -11,7 +11,7 @@ copyright:
 # Setting up the Android SDK
 {: #getting-started-android}
 
-*Last updated: 18 July 2016*
+Last updated: 18 July 2016
 {: .last-updated}
 
 Instrument your Android application with the {{site.data.keyword.amashort}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.

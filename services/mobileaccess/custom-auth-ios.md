@@ -8,7 +8,7 @@ copyright:
 # Configuring {{site.data.keyword.amashort}} client SDK for iOS (Objective-C)
 {: #custom-ios}
 
-*Last updated: 18 July 2016*
+Last updated: 21 July 2016
 {: .last-updated}
 
 
@@ -109,28 +109,27 @@ This method is called when a custom authentication challenge is received from {{
 * `IMFAuthenticationContext` protocol is provided by {{site.data.keyword.amashort}} client SDK so that developer can report back authentication challenge answers or failure during crendtials collection (e.g. user cancelled)
 * `NSDictionary` containing a custom authentication challenge as returned by a Custom Identity Provider
 
-By calling the `authenticationContext:didReceiveAuthenticationChallenge` method the {{site.data.keyword.amashort}} client SDK is delegating control to developer and putting itself into a waiting-for-credentials mode. It is developer responsibility to collect credentials and report them back to the {{site.data.keyword.amashort}} client SDK by using one of `IMFAuthenticationContext` protocol methods as will be described below.
+By calling the `authenticationContext:didReceiveAuthenticationChallenge` method, the {{site.data.keyword.amashort}} client SDK is delegating control to the developer and putting itself into a waiting-for-credentials mode. It is the responsibility of the developer to collect credentials and report them back to the {{site.data.keyword.amashort}} client SDK by using one of the following `IMFAuthenticationContext` protocol methods:
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
 						didReceiveAuthenticationSuccess:(NSDictionary *)userInfo;
 ```
 
-This method is called after a successful authentication. The arguments include IMFAuthenticationContext and an optional NSDictionary containing extended info about authentication success.
+This method is called after a successful authentication. The arguments include `IMFAuthenticationContext` and an optional `NSDictionary` that contains extended information about authentication success.
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
 						didReceiveAuthenticationFailure:(NSDictionary*)userInfo;
 ```
 
-This method is called after authentication failure. The arguments include IMFAuthenticationContext and an optional NSDictionary containing extended info about authentication failure.
+This method is called after authentication failure. The arguments include `IMFAuthenticationContext` and an optional `NSDictionary` that contains extended information about authentication failure.
 
 ## IMFAuthenticationContext protocol
 {: #custom-ios-sdk-authcontext}
 
 
-`IMFAuthenticationContext` is supplied as an argument to the `authenticationContext:didReceiveAuthenticationChallenge` method of a custom `IMFAuthenticationHandler`. It is developer's responsibility to collect credentials and use `IMFAuthenticationContext` methods to either return credentials to {{site.data.keyword.amashort}} client SDK or report a failure. Use one of the below methods
-
+The `IMFAuthenticationContext` protocol is supplied as an argument to the `authenticationContext:didReceiveAuthenticationChallenge` method of a custom `IMFAuthenticationHandler`. It is the responsibility of the developer to collect credentials and use `IMFAuthenticationContext` methods to either return credentials to {{site.data.keyword.amashort}} client SDK or report a failure. 
 ```
 -(void) submitAuthenticationChallengeAnswer:(NSDictionary*) answer;
 
@@ -141,7 +140,7 @@ This method is called after authentication failure. The arguments include IMFAut
 {: #custom-ios-sdk-sample}
 
 
-The IMFAuthenticationDelegate sample is designed to work with the custom identity provider sample. You can download the sample from the [Github repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+The IMFAuthenticationDelegate sample is designed to work with the custom identity provider sample. You can download the sample from the [GitHub repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
 
 Objective-C:
 
@@ -166,9 +165,9 @@ CustomAuthenticationDelegate.m
 
 	NSLog(@"didReceiveAuthenticationChallenge :: %@", challenge);
 
-	// In this sample the IMFAuthenticationDelegate immediately returns a hardcoded
-	// set of credentials. In a real life scenario this is where developer would
-	// show a login screen, collect credentials and invoke
+	// In this sample, the IMFAuthenticationDelegate immediately returns a hardcoded
+	// set of credentials. In a real life scenario, a developer would
+	// show a login screen, collect credentials and invoke the
 	// [context submitAuthenticationChallengeAnswer:] API
 
 	NSDictionary *challengeAnswer = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -177,9 +176,9 @@ CustomAuthenticationDelegate.m
 
 	[context submitAuthenticationChallengeAnswer:challengeAnswer];
 
-	// In case there was a failure collecting credentials you need to report
-	// it back to the IMFAuthenticationContext. Otherwise Mobile Client
-	// Access client SDK will remain in a waiting-for-credentials state
+	// In case there is a failure collecting credentials, report
+	// the failure to IMFAuthenticationContext. Otherwise, the Mobile Client
+	// Access client SDK remains in a waiting-for-credentials state
 	// forever
 }
 
@@ -211,9 +210,9 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 		NSLog("didReceiveAuthenticationChallenge :: %@", challenge)
 
-		// In this sample the IMFAuthenticationDelegate immediately returns a hardcoded
-		// set of credentials. In a real life scenario this is where developer would
-		// show a login screen, collect credentials and invoke
+		// In this sample, the IMFAuthenticationDelegate immediately returns a hardcoded
+		// set of credentials. In a real life scenario a developer would
+		// show a login screen, collect credentials and invoke the
 		// context.submitAuthenticationChallengeAnswer() API
 
 		let challengeAnswer: [String:String] = [
@@ -223,9 +222,9 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 		context.submitAuthenticationChallengeAnswer(challengeAnswer)
 
-		// In case there was a failure collecting credentials you need to report
-		// it back to the IMFAuthenticationContext. Otherwise Mobile Client
-		// Access client SDK will remain in a waiting-for-credentials state
+		// In case there is a failure collecting credentials, report
+		// it back to IMFAuthenticationContext. Otherwise, the Mobile Client
+		// Access client SDK remains in a waiting-for-credentials state
 		// forever
 	}
 
@@ -244,7 +243,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 ## Registering custom IMFAuthenticationDelegate
 
-After you create a custom IMFAuthenticationDelegate, register with `IMFClient`. Call the following code in your application before you send any requests to your protected resources. Use realmName that you specified in the {{site.data.keyword.amashort}} dashboard.
+After you create a custom `IMFAuthenticationDelegate`, register with `IMFClient`. Call the following code in your application before you send any requests to your protected resources. Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard.
 
 Objective-C applications:
 

@@ -11,7 +11,7 @@ copyright:
 # Enabling Facebook authentication for Cordova apps
 {: #facebook-auth-cordova}
 
-*Last updated: 15 June 2016*
+Last updated: 15 June 2016
 {: .last-updated}
 
 
@@ -25,7 +25,7 @@ Use the native development environment to make changes in the native code, for e
 {: #facebook-auth-before}
 You must have:
 * A Cordova project that is instrumented with the {{site.data.keyword.amashort}} client SDK, see [Setting up the Cordova plug-in](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
-* An instance of a {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end, see [Getting started](index.html).
+* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end, see [Getting started](index.html).
 * A Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
@@ -66,7 +66,7 @@ The steps required to configure iOS Platform of Cordova application for Facebook
 
 1. The Facebook SDK will be installed into `~/Documents/FacebookSDK` directory. Navigate to that directory and copy (drag and drop) the `FacebookSDK.framework` file to your iOS project in Xcode.
 
-1. 	Click your project root in the left pane of Xcode and select **Build Phases**.
+1. 	Click your project root in Xcode and select **Build Phases**.
 
 1. Add the `FacebookSDK.framework` file to the list of linked libraries in **Link binary with libraries**.
 
@@ -100,7 +100,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 1. Try to send a request to protected endpoint of your newly-created mobile back-end application from your browser. Open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
 <br/>The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can only be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK.
 
-1. Use your Cordova application to make request to the same endpoint. Add the below code after you initialize `BMSClient`:
+1. Use your Cordova application to make request to the same endpoint. Add the following code after you initialize `BMSClient`:
 
 	```JavaScript
 	var success = function(data){
@@ -117,7 +117,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 
 	![image](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-facebook-login.png)
 
-	> This screen might look slightly different if you do not have the Facebook app installed on your device, or if you are not currently logged in to Facebook.
+	This screen might look slightly different if you do not have the Facebook app installed on your device, or if you are not currently logged in to Facebook.
 
 1. Click **OK** to authorize {{site.data.keyword.amashort}}  to use your Facebook user identity for authentication purposes.
 

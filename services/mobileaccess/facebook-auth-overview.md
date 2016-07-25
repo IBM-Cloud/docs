@@ -12,22 +12,22 @@ copyright:
 # Authenticating users with Facebook credentials
 {: #facebook-auth-overview}
 
-*Last updated: 21 July 2016*
+Last updated: 22 July 2016
 {: .last-updated}
 
 You can configure the {{site.data.keyword.amashort}} service to protect resources by using Facebook as an identity provider. Your mobile or web application users can use their Facebook credentials for authentication.
 {:shortdesc}
 
-**Important**: You do not need to separately install the SDK provided by Facebook. The Facebook SDK is installed automatically by dependency managers when you configure the {{site.data.keyword.amashort}} client SDK.
+**Important**: You do not need to separately install the SDK provided by Facebook. The Facebook SDK installs automatically by dependency managers when you configure the {{site.data.keyword.amashort}} client SDK.
 
 ## {{site.data.keyword.amashort}} request flow
 {: #mca-facebook-sequence}
 
 ### Mobile client request flow
 
-See the following simplified diagram to understand how {{site.data.keyword.amashort}} integrates with Facebook for authentication from a mobile client app.
+See the following diagram to understand how {{site.data.keyword.amashort}} integrates with Facebook for authentication, from a mobile client app.
 
-![image](images/mca-sequence-facebook.jpg)
+![Mobile client request flow diagram](images/mca-sequence-facebook.jpg)
 
 * Use the {{site.data.keyword.amashort}} client SDK to make a request to your back-end resources that are protected with the {{site.data.keyword.amashort}} server SDK.
 * The {{site.data.keyword.amashort}} server SDK detects an unauthorized request and returns HTTP 401 code and authorization scope.
@@ -42,13 +42,13 @@ See the following simplified diagram to understand how {{site.data.keyword.amash
 * The {{site.data.keyword.amashort}} client SDK  automatically resends the original request that triggered the authorization flow.
 * The {{site.data.keyword.amashort}} server SDK extracts authorization header from request, validates it with {{site.data.keyword.amashort}} service, and grants access to a back-end resource.
 
-## {{site.data.keyword.amashort}} web application request flow
+### {{site.data.keyword.amashort}} web application request flow
 {: #mca-facebook-web-sequence}
+
 The {{site.data.keyword.amashort}} web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
 
   * The initial request is sent by the web application (from a log-in form, for example).
   * The final redirect is to the protected area of the web application itself, rather than back-end protected resource. 
-
 
 
 ## Obtaining a Facebook Application ID from the Facebook Developer Portal
@@ -58,7 +58,7 @@ To start using Facebook as identity provider, you must create an application in 
 
 1. Open [Facebook Developer Portal](https://developers.facebook.com).
 
-1. Click **My Apps** in the top menu and select **Create a new app**.
+1. Click **My Apps** in the menu and select **Create a new app**.
 Select either iOS or Android application, and click **Skip and Create App ID** on the next screen.
 
 1. Set application display name of your choice and pick a category. Click **Create App ID** to continue.

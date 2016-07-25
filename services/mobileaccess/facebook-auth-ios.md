@@ -4,15 +4,15 @@ copyright:
   years: 2015, 2016
 
 ---
-{:screen:  .screen}
+
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
+
 
 # Enabling Facebook authentication for your iOS apps (Objective-C SDK)
 {: #facebook-auth-ios}
 
 
-*Last updated: 17 July 2016*
+Last updated: 17 July 2016
 {: .last-updated}
 
 
@@ -156,7 +156,8 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 1. Import required framework in the class that you want to use {{site.data.keyword.amashort}} client SDK by adding the following headers:
 
-	**Objective-C**
+	####Objective-C
+	{: #framework-objc}
 
 	```Objective-C
 	#import <IMFCore/IMFCore.h>
@@ -164,7 +165,8 @@ A common, though not mandatory, place to put the initialization code is in the `
 	#import <FacebookSDK/FacebookSDK.h>
 ```
 
-	**Swift**
+	####Swift
+	{: #bridgingheader-swift}
 
 	The {{site.data.keyword.amashort}} client SDK is implemented using Objective-C, therefore you might need to add a bridging header to your swift project.
 
@@ -185,7 +187,8 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 3. Initialize the client SDK.	Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
-	**Objective-C**
+	####Objective-C
+	{: #approute-objc}
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -193,23 +196,26 @@ A common, though not mandatory, place to put the initialization code is in the `
 			backendGUID:@"applicationGUID"];
 	```
 
-	**Swift**
+	####Swift
+	{: #approute-swift}
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
 
-1. Notify the Facebook SDK about the app activation and register the Facebook Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code right after you initialize the IMFClient instance.
+1. Notify the Facebook SDK about the app activation and register the Facebook Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code after you initialize the IMFClient instance.
 
-	**Objective-C**
+	####Objective-C
+	{: #activate-objc}
 
 	```Objective-C
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 ```
 
-	**Swift**
+	####Swift
+	{: #activate-swift}
 
 	```Swift
 		FBAppEvents.activateApp()
@@ -218,7 +224,8 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 1. Add the following code to your app delegate.
 
-	**Objective-C**
+	####Objective-C
+	{: #appdelegate-objc}
 
 	```Objective-C
 	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
@@ -229,7 +236,8 @@ A common, though not mandatory, place to put the initialization code is in the `
 	}
 ```
 
-	**Swift**
+	####Swift
+	{: #appdelegate-swift}
 
 	```Swift
 	func application(application: UIApplication, openURL url: NSURL,
@@ -254,7 +262,8 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
 
 1. Use your iOS application to make a request to the same endpoint.
 
-	**Objective-C**
+	####Objective-C
+	{: #requestpath-objc}
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -273,7 +282,8 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
 	}];
 	```
 
-	**Swift**
+	####Swift
+	{: #requestpath-swift}
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"
@@ -302,13 +312,15 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
 
 	You can also add logout functionality by adding the following code:
 
-	**Objective-C**
+	####Objective-C
+	{: #logout-objc}
 
 	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
 	```
 
-	**Swift**
+	####Swift
+	{: #logout-swift}
 
 	```Swift
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)

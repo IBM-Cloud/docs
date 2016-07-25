@@ -8,7 +8,7 @@ copyright:
 # Web app custom authentication
 {: #custom-web}
 
-*Last updated: 16 June 2016*
+Last updated: 16 June 2016
 {: .last-updated}
 
 Add custom authentication to your web app
@@ -57,7 +57,7 @@ To start the process of authorization:
    state= <state>
    ```
 
-    The `state` parameter is not in use for now, and it can be left empty.
+    The `state` parameter is not currently in use and you can leave it empty.
 
     The `redirect_uri` parameter determines the redirect after the successful or failed authentication of your custom identity provider.
 
