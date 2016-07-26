@@ -17,7 +17,7 @@ copyright:
 
 # Managing your {{site.data.keyword.Bluemix_notm}} account
 {: #mngacct}
-*Last updated: 21 July 2016*
+*Last updated: 26 July 2016*
 {: .last-updated}
 
 Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** to set notifications for your account, view your account usage, or view your bill.
@@ -47,7 +47,7 @@ You can set platform email notifications for {{site.data.keyword.Bluemix_notm}} 
 
 ### Setting platform notifications
 
-Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Platform** to set email notifications for {{site.data.keyword.Bluemix_notm}} incidents and planned maintenance. You can select or clear each option to enable or disable the email notification.
+Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Notifications** &gt; **Platform** to set email notifications for {{site.data.keyword.Bluemix_notm}} incidents and planned maintenance. You can select or clear each option to enable or disable the email notification.
 
 ### Setting spending notifications
 {: #spendingnotifications}
@@ -57,7 +57,7 @@ If you are a Subscription or Pay-As-You-Go {{site.data.keyword.Bluemix_notm}} ac
 Complete the following steps to set up email notifications for spending limits:
 
 <ol>
-<li>Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Notifications** &gt; **Spending**.</li>
+<li>Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Notifications** &gt; **Spending**.</li>
 <li>Enter a numeric value to set the spending threshold for triggering a notification for each type of notification:<br />
 <ul>
 <li>Total account</li>
