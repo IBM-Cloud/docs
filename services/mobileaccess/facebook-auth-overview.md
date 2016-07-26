@@ -12,7 +12,7 @@ copyright:
 # Authenticating users with Facebook credentials
 {: #facebook-auth-overview}
 
-Last updated: 22 July 2016
+Last updated: 26 July 2016
 {: .last-updated}
 
 You can configure the {{site.data.keyword.amashort}} service to protect resources by using Facebook as an identity provider. Your mobile or web application users can use their Facebook credentials for authentication.
