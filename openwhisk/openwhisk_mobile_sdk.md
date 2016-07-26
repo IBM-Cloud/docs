@@ -13,7 +13,7 @@ copyright:
 
 # Using the {{site.data.keyword.openwhisk_short}} mobile SDK
 {: #openwhisk_mobile_sdk}
-*Last updated: 28 March 2016*
+Last updated: 28 March 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} provides a mobile SDK for iOS and watchOS 2 devices that enables mobile apps to easily fire remote triggers and invoke remote actions. A version for Android is currently not available; Android developers can use the {{site.data.keyword.openwhisk}} REST API directly.
@@ -46,11 +46,11 @@ end
 ```
 {: codeblock}
 
-From the command line, type `pod install`. This will install the SDK for an iOS app with a watchOS 2 extension.  Use the workspace file CocoaPods creates for your app to open the project in Xcode.
+From the command line, type `pod install`. This command installs the SDK for an iOS app with a watchOS 2 extension.  Use the workspace file CocoaPods creates for your app to open the project in Xcode.
 
-### Installing using Carthage
+### Installing by using Carthage
 
-Create a file in your app's project directory all it 'Cartfile'. Put the following line in the Cartfile:
+Create a file in your app's project directory and name it 'Cartfile'. Put the following line in the file:
 ```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
@@ -63,9 +63,9 @@ You must then add OpenWhisk.framework to the embedded frameworks in your Xcode p
 ### Installing from source code
 
 Source code is available at https://github.com/openwhisk/openwhisk-client-swift.git.
-Open the project using the `OpenWhisk.xcodeproj` using Xcode.
-The project contains two schemes "OpenWhisk" and "OpenWhiskWatch" targetted for iOS and watchOS 2, respectively.
-Build the project for the targets you need and add the resulting frameworks to your app (usually in ~/Library/Developer/Xcode/DerivedData/your app name).
+Open the project by using the `OpenWhisk.xcodeproj` using Xcode.
+The project contains two schemes: "OpenWhisk" (targeted for iOS) and "OpenWhiskWatch" (targeted for watchOS 2).
+Build the project for the targets that you need and add the resulting frameworks to your app (usually in ~/Library/Developer/Xcode/DerivedData/your app name).
 
 ## Installing the starter app example
 {: #openwhisk_install_sdkstart}
@@ -78,7 +78,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-This will download a zip file containing the starter app. Inside the project directory there is a Podfile. 
+This command downloads a compressed file that contains the starter app. Inside the project directory is a podfile. 
 
 To install the SDK, enter the following command:
 ```
@@ -89,7 +89,7 @@ pod install
 ## Getting started with the SDK
 {: #openwhisk_sdk_getstart}
 
-To get up and running quickly, create a WhiskCredentials object with your {{site.data.keyword.openwhisk_short}} API credentials and create an {{site.data.keyword.openwhisk_short}} instance from that.
+To get up and running quickly, create a WhiskCredentials object with your {{site.data.keyword.openwhisk_short}} API credentials and create an {{site.data.keyword.openwhisk_short}} instance from the object.
 
 For example, in Swift 2.1, use the following example code to create a credentials object:
 
@@ -100,7 +100,7 @@ let whisk = Whisk(credentials: credentialsConfiguration!)
 ```
 {: codeblock}
 
-In previous example, you pass in the `myKey` and `myToken` you get from {{site.data.keyword.openwhisk_short}}. You can retrieve the key and token with the following CLI command:
+In previous example, you pass in the `myKey` and `myToken` that you get from {{site.data.keyword.openwhisk_short}}. You can retrieve the key and token with the following CLI command:
 
 ```
 wsk property get --auth
@@ -111,13 +111,13 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 ```
 {: screen}
 
-The strings before and after the colon are your key and token, respectively.
+The strings before the colon is your key, and the string after the colon is your token.
 
 ## Invoking an {{site.data.keyword.openwhisk_short}} action
 {: #openwhisk_sdk_invoke}
 
 
-To invoke a remote action, you can call `invokeAction` with the action name. You can specify the namespace the action belongs to, or just leave it blank to accept the default namespace.  Use a dictionary to pass parameters to the action as required.
+To invoke a remote action, you can call `invokeAction` with the action name. You can specify the namespace that the action belongs to, or leave it blank to accept the default namespace. Use a dictionary to pass parameters to the action as required.
 
 For example:
 
@@ -170,7 +170,7 @@ do {
 ```
 {: codeblock}
 
-In the previous example, you are firing a trigger called `locationChanged`.
+In the previous example, you are firing a trigger that is called `locationChanged`.
 
 ## Using actions that return a result
 {: #openwhisk_sdk_actionresult}
@@ -198,7 +198,7 @@ do {
 ```
 {: codeblock}
 
-By default, the SDK returns only the activation ID and any result produced by the invoked action. To get metadata of the entire response object, which includes the HTTP response status code, use the following setting:
+By default, the SDK returns only the activation ID and any result that is produced by the invoked action. To get metadata of the entire response object, which includes the HTTP response status code, use the following setting:
 
 ```
 whisk.verboseReplies = true
@@ -215,7 +215,7 @@ whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
 
-In this example, you use an installation running at localhost:8080.  If you do not specify the baseUrl, the mobile SDK uses the instance running at https://openwhisk.ng.bluemix.net.
+In this example, you use an installation that is running at localhost:8080. If you do not specify the baseUrl, the mobile SDK uses the instance that is running at https://openwhisk.ng.bluemix.net.
 
 You can pass in a custom NSURLSession in case you require special network handling. For example, you might have your own {{site.data.keyword.openwhisk_short}} installation that uses self-signed certificates:
 
@@ -237,14 +237,14 @@ whisk.urlSession = session
 
 ### Support for qualified names
 
-All actions and triggers have a fully qualified name that is made up of a namespace, a package, and an action or trigger name. The SDK can accept these as parameters when invoking an action or firing a trigger. The SDK also provides a function that accepts a fully qualified name that looks like `/mynamespace/mypackage/nameOfActionOrTrigger`. The qualified name string supports unnamed default values for namespaces and packages that all {{site.data.keyword.openwhisk_short}} users have, so the following parsing rules apply:
+All actions and triggers have a fully qualified name that is made up of a namespace, a package, and an action or trigger name. The SDK can accept these elements as parameters when you are invoking an action or firing a trigger. The SDK also provides a function that accepts a fully qualified name that looks like `/mynamespace/mypackage/nameOfActionOrTrigger`. The qualified name string supports unnamed default values for namespaces and packages that all {{site.data.keyword.openwhisk_short}} users have, so the following parsing rules apply:
 
 - qName = "foo" results in namespace = default, package = default, action/trrigger = "foo"
 - qName = "mypackage/foo" results in namespace = default, package = mypackage, action/trigger = "foo"
 - qName = "/mynamespace/foo" results in namespace = mynamespace, package = default, action/trigger = "foo"
 - qName = "/mynamespace/mypackage/foo results in namespace = mynamespace, package = mypackage, action/trigger = "foo"
 
-All other combinations issue a WhiskError.QualifiedName error. Therefore, when using qualified names, you must wrap the call in a "`do/try/catch`" construct.
+All other combinations issue a WhiskError.QualifiedName error. Therefore, when you are using qualified names, you must wrap the call in a "`do/try/catch`" construct.
 
 ### SDK button
 
