@@ -163,7 +163,7 @@ You can use the `changes` feed to configure a service to fire a trigger on every
 
 4. Observe new activations for the `myCloudantTrigger` trigger for each document change.
 
-**Note**: If you are unable to observe new activations, see the subsequent sections on reading from and writing to a Cloudant database. Testing the following reading and writing steps will help verify that your Cloudant credentials are correct.
+**Note**: If you are unable to observe new activations, see the subsequent sections on reading from and writing to a Cloudant database. Testing the reading and writing steps below will help verify that your Cloudant credentials are correct.
 
 You can now create rules and associate them to actions to react to the document updates.
 
@@ -511,7 +511,7 @@ Here is an example of creating a package binding and converting speech to text.
   ```
   {: screen}
   
- 
+  
 ## Using the Slack package
 {: #openwhisk_catalog_slack}
 
@@ -583,7 +583,7 @@ The following is an example of creating a trigger that will be fired each time t
 
 1. Generate a GitHub [personal access token](https://github.com/settings/tokens).
 
-  The access token will be used in the next step.
+   The access token will be used in the next step.
 
 2. Create a package binding configured for your GitHub respository and with your accesss token.
 
@@ -608,6 +608,22 @@ For more information on the payload content see the [Github events and payload](
 {: #openwhisk_catalog_pushnotifications}
 
 The `/whisk.system/pushnotifications` package enables you to work with a push service. 
+
+### Install the IBM Push Notification OpenWhisk package 
+
+Download the Push package form the  [wsk-pkg-pushnotification](https://github.com/openwhisk/wsk-pkg-pushnotifications) repository.
+
+Run the install script provided inside the package download
+
+  ```
+  git clone --depth=1 https://github.com/openwhisk/wsk-pkg-pushnotifications
+  cd wsk-pkg-pushnotifications
+  ./install.sh APIHOST AUTH WSK_CLI
+  ```
+  {: pre}
+
+  The `APIHOST` is the OpenWhisk API hostname, `AUTH` is your auth key, and `WSK_CLI` is location of the Openwhisk CLI binary.		     
+
 
 The package includes the following feed:
 
