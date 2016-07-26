@@ -18,7 +18,7 @@ copyright:
 
 # Using and creating {{site.data.keyword.openwhisk_short}} packages
 {: #openwhisk_packages}
-*Last updated: 28 March 2016*
+Last updated: 28 March 2016
 {: .last-updated}
 
 In {{site.data.keyword.openwhisk}}, you can use packages to bundle together a set of related actions, and share them with others.
@@ -29,7 +29,7 @@ A package can include *actions* and *feeds*.
 
 Every {{site.data.keyword.openwhisk_short}} entity, including packages, belongs in a *namespace*, and the fully qualified name of an entity is `/namespaceName[/packageName]/entityName`. Refer to the [naming guidelines](./openwhisk_reference.html#openwhisk_entities) for more information.
 
-The following sections describe how to browse packages and use the triggers and feeds in them. In addition, for those interested in contributing their own packages to the catalog, read the sections on creating and sharing packages.
+The following sections describe how to browse packages and use the triggers and feeds in them. In addition, if you are interested in contributing your own packages to the catalog, read the sections on creating and sharing packages.
 
 ## Browsing packages
 {: #openwhisk_packagedisplay}
@@ -92,7 +92,7 @@ Several packages are registered with {{site.data.keyword.openwhisk_short}}. You 
 ## Invoking actions in a package
 {: #openwhisk_package_invoke}
 
-You can invoke actions in a package, just as with other actions. The next few steps show how to invoke the `greeting` action in the  `/whisk.system/samples` package with different parameters.
+You can invoke actions in a package, just as with other actions. The next few steps show how to invoke the `greeting` action in the `/whisk.system/samples` package with different parameters.
 
 1. Get a description of the `/whisk.system/samples/greeting` action.
 
@@ -142,7 +142,7 @@ You can invoke actions in a package, just as with other actions. The next few st
 ## Creating and using package bindings
 {: #openwhisk_package_bind}
 
-While you can use the entities in a package directly, you might find yourself passing the same parameters to the action every time. You can avoid this by binding to a package and specifying default parameters. These parameters are inherited by the actions in the package.
+Although you can use the entities in a package directly, you might find yourself passing the same parameters to the action every time. You can avoid this by binding to a package and specifying default parameters. These parameters are inherited by the actions in the package.
 
 For example, in the `/whisk.system/cloudant` package, you can set default `username`, `password`, and `dbname` values in a package binding and these values are automatically passed to any actions in the package.
 
@@ -189,8 +189,7 @@ In the following simple example, you bind to the `/whisk.system/samples` package
   ```
   {: screen}
 
-  Notice from the result that the action inherits the `place` parameter you set
-  when you created the `valhallaSamples` package binding.
+  Notice from the result that the action inherits the `place` parameter you set when you created the `valhallaSamples` package binding.
 
 4. Invoke an action and overwrite the default parameter value.
 
@@ -211,7 +210,7 @@ In the following simple example, you bind to the `/whisk.system/samples` package
 ## Creating and using trigger feeds
 {: #openwhisk_package_trigger}
 
-Feeds offer a convenient way to configure an external event source to fire these events to a {{site.data.keyword.openwhisk_short}} trigger. This example shows how to use a feed in the Alarms package to fire a trigger every second, and use a rule to invoke an action every second.
+Feeds offer a convenient way to configure an external event source to fire these events to a {{site.data.keyword.openwhisk_short}} trigger. This example shows how to use a feed in the Alarms package to fire a trigger every second, and how to use a rule to invoke an action every second.
 
 1. Get a description of the feed in the `/whisk.system/alarms` package.
 
@@ -366,7 +365,7 @@ To create a custom package with a simple action in it, try the following example
   {: screen}
 
 
-You can set default parameters for all the entities in a package. You do this by setting package-level parameters which are inherited by all actions in the package. To see how this works, try the following example:
+You can set default parameters for all the entities in a package. You do this by setting package-level parameters that are inherited by all actions in the package. To see how this works, try the following example:
 
 1. Update the `custom` package with two parameters: `city` and `country`.
 
@@ -493,4 +492,3 @@ Others can now use your `custom` package, including binding to the package or di
   {: screen}
 
   In the previous example, you're working with the `myNamespace` namespace, and this namespace appears in the fully qualified name.
-
