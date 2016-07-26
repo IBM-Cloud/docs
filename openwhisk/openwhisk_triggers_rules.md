@@ -18,7 +18,7 @@ copyright:
 
 # Creating triggers and rules
 {: #openwhisk_triggers}
-*Last updated: 22 February 2016*
+Last updated: 22 February 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} triggers and rules bring event-driven capabilities to the platform. Events from external and internal event sources are channeled through a trigger, and rules allow your actions to react to these events.
@@ -34,8 +34,7 @@ Triggers are a named channel for a class of events. The following are examples o
 Triggers can be *fired* (activated) by using a dictionary of key-value pairs. Sometimes this dictionary is referred to as the *event*. As with actions, each firing of a trigger results in an activation ID.
 
 Triggers can be explicitly fired by a user or fired on behalf of a user by an external event source.
-A *feed* is a convenient way to configure an external event source to
-fire trigger events that can be consumed by {{site.data.keyword.openwhisk_short}}. Examples of feeds include the following:
+A *feed* is a convenient way to configure an external event source to fire trigger events that can be consumed by {{site.data.keyword.openwhisk_short}}. Examples of feeds include the following:
 - Cloudant data change feed that fires a trigger event each time a document in a database is added or modified.
 - A Git feed that fires a trigger event for every commit to a Git repository.
 
@@ -109,7 +108,7 @@ As an example, create a trigger to send user location updates, and manually fire
   {: screen}
 
 A trigger that is fired without an accompanying rule to match against has no visible effect.
-Triggers may not be created inside a package, they must be created directly under a namespace.
+Triggers cannot be created inside a package; they must be created directly under a namespace.
 
 ## Using rules to associate triggers and actions
 {: #openwhisk_rules}
@@ -143,7 +142,7 @@ As an example, create a rule that calls the hello action whenever a location upd
   ```
   {: pre}
 
-4. Fire the locationUpdate trigger. Each time you fire an event, the hello action is called with the event parameters.
+4. Fire the locationUpdate trigger. Each time that you fire an event, the hello action is called with the event parameters.
   ```
   wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
@@ -181,5 +180,4 @@ As an example, create a rule that calls the hello action whenever a location upd
 
 You can create multiple rules that associate the same trigger with different actions.
 The trigger and action that make a rule must be in the same namespace and cannot belong to a package.
-If you want to use an action that belongs to a package, you can copy the action into your namespace, for example `wsk action create echo --copy /whisk.system/samples/echo`.
-
+If you want to use an action that belongs to a package, you can copy the action into your namespace. For example: `wsk action create echo --copy /whisk.system/samples/echo`.
