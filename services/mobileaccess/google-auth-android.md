@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-android}
 
 
-Last updated: 16 June 2016
+Last updated: 26 June 2016
 {: .last-updated}
 
 ## Before you begin
