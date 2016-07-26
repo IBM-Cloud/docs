@@ -111,7 +111,7 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 ```
 {: screen}
 
-The strings before the colon is your key, and the string after the colon is your token.
+The string before the colon is your key, and the string after the colon is your token.
 
 ## Invoking an {{site.data.keyword.openwhisk_short}} action
 {: #openwhisk_sdk_invoke}
