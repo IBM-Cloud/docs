@@ -11,7 +11,7 @@ copyright:
 # Enabling Google authentication for iOS apps (Swift SDK)
 {: #google-auth-ios}
 
-Last updated: 17 July 2016
+Last updated: 26 July 2016
 {: .last-updated}
 
 Use Google Sign-In to authenticate users on your {{site.data.keyword.amashort}} iOS Swift app. The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
