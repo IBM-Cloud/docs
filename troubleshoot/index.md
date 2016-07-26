@@ -15,7 +15,7 @@ copyright:
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 21 July 2016*
+*Last updated: 26 July 2016*
 {: .last-updated}
 
 
@@ -326,6 +326,47 @@ If your workbench JVM is IBM JVM 7 or 8, or a previous version of Oracle JVM 8, 
   3. Check whether the `eclipse.vm` property points to your new installation of Oracle JVM 8.
 
 
+  
+## Unable to reuse names of deleted apps
+{: #ts_reuse_appname}
+  
+After you delete an app, you can reuse the app name only after you delete the app route. 
+
+When you try to reuse the app name, you receive the following message:
+{: tsSymptoms}
+
+`The name is already used by another app.`
+
+When an app is deleted, its route, which is the URL for the app, isn't automatically deleted. Therefore, it's not available for reuse. You must go to the space where the app was created to delete the route so that it can be reused.
+{: tsCauses}
+
+Take the following steps to delete the unused route: 
+{: tsResolve}
+
+  1. Check whether the route belongs to the current space by entering the following command: 
+     ```
+	 cf routes
+	 ```
+  2. If the route does not belong to the current space, switch to the space or org that it belongs to by entering the following command: 
+     ```
+	 cf target -o org_name -s space_name
+	 ```
+  3. Delete the app route by entering the following command:
+     ```
+	 cf delete-route domain_name -n host_name
+	 ```
+	 For example:
+	 ```
+	 cf delete-route mybluemix.net -n app001
+	 ```
+
+  
+  
+  
+  
+  
+  
+  
 ## Unable to retrieve spaces in the org
 {: #ts_retrieve_space}
 
