@@ -11,7 +11,7 @@ copyright:
 # Enabling Google authentication for iOS apps (Swift SDK)
 {: #google-auth-ios}
 
-*Last updated: 17 July 2016*
+Last updated: 26 July 2016
 {: .last-updated}
 
 Use Google Sign-In to authenticate users on your {{site.data.keyword.amashort}} iOS Swift app. The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
@@ -40,7 +40,7 @@ This process:
 
 The following steps give you a brief outline of the tasks necessary for preparing your app. 
 
-**Note:** It is not necessary to add the `Google/SignIn` CocoaPod. The necessary SDK is added by the `BMSGoogleAuthentication` CocoaPod below.
+**Note:** It is not necessary to add the Google Sign-In CocoaPod. The necessary SDK is added by the `BMSGoogleAuthentication` CocoaPod below.
 
 1. Note the **Bundle Identifier** in your Xcode project from the **Identity** section of the **General** tab of the main target. You need it to create your  Google Sign-In project.
 
@@ -143,7 +143,7 @@ A common, though not mandatory, place to put the initialization code is in the `
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
  // Initialize the client SDK.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 

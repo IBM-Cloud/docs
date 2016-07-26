@@ -11,7 +11,7 @@ copyright:
 # Enabling Facebook authentication for iOS apps (Swift SDK)
 {: #facebook-auth-ios}
 
-Last updated: 17 July 2016
+Last updated: 26 July 2016
 {: .last-updated}
 
 To use Facebook as an identity provider in your iOS applications, add and configure the iOS Platform for your Facebook application.
@@ -26,7 +26,7 @@ To use Facebook as an identity provider in your iOS applications, add and config
 * A Facebook application on the Facebook for Developers site. 
 
 
-**Important:** You do not need to separately install Facebook SDK. The Facebook SDK  installs automatically by the `BMSFacebookAuthentication` pod. You can skip the **Add the Facebook SDK to your Xcode Project** step when you add or configure your app on the Facebook for Developers website.
+**Important:** You do not need to separately install the Facebook SDK (`com.facebook.FacebookSdk`). The Facebook SDK  installs automatically with the {{site.data.keyword.amashort}} `BMSFacebookAuthentication` pod. You can skip the **Add the Facebook SDK to your Xcode Project** step when you add or configure your app on the Facebook for Developers website.
 
 **Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
 ## Configuring your Facebook Application for the iOS Platform

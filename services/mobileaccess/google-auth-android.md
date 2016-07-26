@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-android}
 
 
-Last updated: 16 June 2016
+Last updated: 26 June 2016
 {: .last-updated}
 
 ## Before you begin
@@ -17,7 +17,7 @@ Last updated: 16 June 2016
 You must have:
 
 * An Android project in Android Studio that is configured to work with Gradle. It does not need to be instrumented with {{site.data.keyword.amashort}} client SDK.  
-* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end, see [Getting started](index.html).
+* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
 
 Setting up Google authentication for your {{site.data.keyword.amashort}}  Android app will require further configuring of:
 * The {{site.data.keyword.Bluemix_notm}} application
@@ -106,7 +106,7 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 	}
 	```
 
-	**Note:** You can remove the dependency on the `core` module of the `com.ibm.mobilefirstplatform.clientsdk.android` group if you have it. The `googleauthentication` module downloads it automatically for you. The `googleauthentication` module downloads and installs the Google SDK in your Android project.
+	**Note:** You can remove the dependency on the `core` module of the `com.ibm.mobilefirstplatform.clientsdk.android` group if you have it. The `googleauthentication` module downloads it automatically for you. The `googleauthentication` module downloads and installs the Google+ SDK in your Android project.
 
 1. Synchronize your project with Gradle by clicking **Tools > Android > Sync Project with Gradle Files**.
 
@@ -138,7 +138,6 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
   Replace  `BMSClient.REGION_UK` with the appropriate region.
 
    **Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
-	
 
 1. Add the following code to your Activity:
 
@@ -156,7 +155,7 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 After the client SDK is initialized and the Google Authentication Manager is registered, you can start making requests to your mobile back-end application.
 
 
-Before you begin testing, you must have a mobile back-end application that was created with the **MobileFirst Services Starter** boilerplate, and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Before you begin testing, you must have a mobile back-end application that was created with the **MobileFirst Services Starter** boilerplate, and already have a resource protected by the  {{site.data.keyword.amashort}} `/protected` endpoint. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Try to send a request to the protected endpoint of your mobile back-end application in your desktop browser by opening `{applicationRoute}/protected`, for example: `http://my-mobile-backend.mybluemix.net/protected`.
  The `/protected` endpoint of a mobile back-end application created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}. Therefore, it can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, you will see `Unauthorized` in your desktop browser.
