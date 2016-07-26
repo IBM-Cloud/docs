@@ -19,7 +19,7 @@ copyright:
 # Creating and invoking {{site.data.keyword.openwhisk_short}} actions
 {: #openwhisk_actions}
 
-*Last updated: 25 July 2016*
+Last updated: 25 July 2016
 {: .last-updated}
 
 Actions are stateless code snippets that run on the {{site.data.keyword.openwhisk}} platform. An action can be a JavaScript function, a Swift function, or a custom executable program packaged in a Docker container. For example, an action can be used to detect the faces in an image, aggregate a set of API calls, or post a Tweet.
@@ -32,7 +32,7 @@ Actions can be composed of calls to other actions or a defined sequence of actio
 ## Creating and invoking JavaScript actions
 {: #openwhisk_create_action_js}
 
-The following sections guide you through working with actions in JavaScript. Beginning with the creation and invocation of a simple action, you will move on to adding parameters to an action and invoking that action with parameters, setting default parameters and invoking them, creating asynchronous actions, and finally working with action sequences.
+The following sections guide you through working with actions in JavaScript. You beginning with the creation and invocation of a simple action. Then, you move on to adding parameters to an action and invoking that action with parameters. Next is setting default parameters and invoking them. Then, you create asynchronous actions and, finally, work with action sequences.
 
 
 ### Creating and invoking a simple JavaScript action
@@ -62,7 +62,7 @@ Review the following steps and examples to create your first JavaScript action.
   ```
   {: screen}
 
-3. List the actions you have created:
+3. List the actions that you have created:
   
   ```
   wsk action list
@@ -177,14 +177,14 @@ Actions can be invoked with multiple named parameters. Recall that the `hello` a
 
 Rather than pass all the parameters to an action every time, you can bind certain parameters. The following example binds the *place* parameter so that the action defaults to the place "Vermont":
  
-1. Update the action using the `--param` option to bind parameter values.
+1. Update the action by using the `--param` option to bind parameter values.
 
   ```
   wsk action update hello --param place 'Vermont'
   ```
   {: pre}
 
-2. Invoke the action, only passing the `name` parameter this time.
+2. Invoke the action, passing only the `name` parameter this time.
 
   ```
   wsk action invoke --blocking --result hello --param name 'Bernie'
@@ -197,9 +197,9 @@ Rather than pass all the parameters to an action every time, you can bind certai
   ```
   {: screen}
 
-  Note that you did not need to specify the place parameter when invoking the action. Bound parameters can still be overwritten by specifying the parameter value at invocation time.
+  Notice that you did not need to specify the place parameter when you invoked the action. Bound parameters can still be overwritten by specifying the parameter value at invocation time.
 
-3. Invoke the action, passing both `name` and `place` values. The latter overwrites the value bound to the action.
+3. Invoke the action, passing both `name` and `place` values. The latter overwrites the value that is bound to the action.
 
   ```
   wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
@@ -215,7 +215,7 @@ Rather than pass all the parameters to an action every time, you can bind certai
 ### Creating asynchronous actions
 {: #openwhisk_asynchrony_js}
 
-JavaScript functions that continue execution in a callback function might need to return the activation result after the `main` function has returned. You can accomplish this using the `whisk.async()` and `whisk.done()` functions in your action.
+JavaScript functions that continue execution in a callback function might need to return the activation result after the `main` function returns. You can accomplish this using the `whisk.async()` and `whisk.done()` functions in your action.
 
 1. Save the following content in a file called `asyncAction.js`.
 
@@ -278,7 +278,7 @@ JavaScript functions that continue execution in a callback function might need t
   ```
   {: screen}
 
-  Comparing the `start` and `end` timestamps in the activation record, you can see that this activation took slightly over twenty seconds to complete.
+  Comparing the `start` and `end` time stamps in the activation record, you can see that this activation took slightly over twenty seconds to complete.
 
 
 ### Using actions to call an external API
@@ -309,7 +309,7 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   ```
   {: codeblock}
 
-  Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./openwhisk_reference.html#runtime_ref_runtime_environment) detail the Node.js packages that you can use in your actions.
+  Notice that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./openwhisk_reference.html#runtime_ref_runtime_environment) detail the Node.js packages that you can use in your actions.
   
   This example also shows the need for asynchronous actions. The action returns `whisk.async()` to indicate that the result of this action is not available yet when the function returns. Instead, the result is available in the `request` callback after the HTTP call completes, and is passed as an argument to the `whisk.done()` function.
 
@@ -392,7 +392,7 @@ Several utility actions are provided in a package called `/whisk.system/util` th
 
   In the result, you see that the lines are sorted.
 
-**Note**: For more information on invoking action sequences with multiple named parameters, see [Setting default parameters](./actions.md#setting-default-parameters)
+**Note**: For more information about invoking action sequences with multiple named parameters, see [Setting default parameters](./actions.md#setting-default-parameters)
 
 
 ## Creating Python actions
@@ -403,7 +403,7 @@ The process of creating Python actions is similar to that of JavaScript actions.
 ### Creating and invoking an action
 {: #openwhisk_actions_python_invoke}
 
-An action is simply a top-level Python function, which means it is necessary to have a method named `main`. For example, create a file called
+An action is simply a top-level Python function, which means it is necessary to have a method that is named `main`. For example, create a file called
 `hello.py` with the following content:
 
 ```
@@ -425,7 +425,7 @@ wsk action create helloPython hello.py
 ```
 {: pre}
 
-When using the command line and a `.py` source file, you do not need to
+When you use the command line and a `.py` source file, you do not need to
 specify that you are creating a Python action (as opposed to a JavaScript action);
 the tool determines that from the file extension.
 
@@ -465,7 +465,7 @@ wsk action create helloSwift hello.swift
 ```
 {: pre}
 
-When using the command line and a `.swift` source file, you do not need to
+When you use the command line and a `.swift` source file, you do not need to
 specify that you are creating a Swift action (as opposed to a JavaScript action);
 the tool determines that from the file extension.
 
@@ -486,7 +486,78 @@ wsk action invoke --blocking --result helloSwift --param name World
 **Attention:** Swift actions run in a Linux environment. Swift on Linux is still in
 development, and {{site.data.keyword.openwhisk_short}} usually uses the latest available release, which is not necessarily stable. In addition, the version of Swift that is used with {{site.data.keyword.openwhisk_short}} might be inconsistent with versions of Swift from stable releases of XCode on MacOS.
 
+## Creating Java actions
 
+The process of creating Java actions is similar to that of JavaScript and Swift actions. The following sections guide you through creating and invoking a single Java action, and adding parameters to that action.
+
+In order to compile, test and archive Java files, you must have a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installed locally.
+
+### Creating and invoking an action
+
+A Java action is a Java program with a method called `main` that has the exact signature as follows:
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+For example, create a Java file called `Hello.java` with the following content:
+
+```
+import com.google.gson.JsonObject;
+
+public class Hello {
+
+    public static JsonObject main(JsonObject args) {
+
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+
+    }
+}
+```
+{: codeblock}
+
+Then, compile `Hello.java` into a JAR file `hello.jar` as follows:
+```
+javac Hello.java
+jar cvf hello.jar Hello.class
+```
+{: pre}
+
+**Note:** [google-gson](https://github.com/google/gson) must exist in your Java CLASSPATH when compiling the Java file.
+
+You can create a OpenWhisk action called `helloJava` from this JAR file as
+follows:
+
+```
+wsk action create helloJava hello.jar
+```
+{: pre}
+
+When you use the command line and a `.jar` source file, you do not need to
+specify that you are creating a Java action;
+the tool determines that from the file extension.
+
+Action invocation is the same for Java actions as it is for Swift and JavaScript actions:
+
+```
+wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+**Note:** If the JAR file has more than one class with a main method matching required signature, the CLI tool uses the first one reported by `jar -tf`.
 
 ## Creating Docker actions
 {: #openwhisk_actions_docker}
@@ -555,7 +626,7 @@ For the instructions that follow, assume that the user ID is "janesmith" and the
   ```
   {: pre}
 
-  Note that part of the example.c file is compiled as part of the Docker image build process, so you do not need C compiled on your machine.
+  Notice that part of the example.c file is compiled as part of the Docker image build process, so you do not need C compiled on your machine.
 
 4. To create an action from a Docker image rather than a supplied JavaScript file, add `--docker` and replace the JavaScript file name with the Docker image name.
 
