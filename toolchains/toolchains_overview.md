@@ -11,7 +11,7 @@ copyright:
 # Getting started with toolchains (Experimental)
 {: #toolchains_getting_started}
 
-*Last updated: 7 July 2016*
+*Last updated: 27 July 2016*
 {: .last-updated}  
 
 Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app.
@@ -131,6 +131,8 @@ After you configure the toolchain and its tool integrations, you can view a visu
 {: #samples}
 
 * [Create an application with three microservices](https://www.ibm.com/devops/method/tutorials/tutorial_microservices_part1){:new_window}
+* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated (Experimental)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window}
+* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated (Experimental)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window}
 
 ## Related Links
 {: #general}
