@@ -114,14 +114,14 @@ To try the mobile starter app, perform the following tasks:
 4. Connect your iPhone to your computer and select it as a build destination.
 5. Select the IoT4I file in the list of files to display the Identity dialog.
 6. In the Identity dialog box in Xcode, make the following changes:
-  - Change the **Bundle Identifier** to a unique identifier, for example: "myIoT4Ibundle".
+  - Change the **Bundle Identifier** to a unique identifier, for example: **myIoT4Ibundle**.
   - Set **Team** to your personal team name and then click **Fix Issue**.
 7. To connect your app to your instance of {{site.data.keyword.iotinsurance_short}}, set the following parameters in the **constants.swift** file:  
     - [applicationRoute](#iot4i_mobileParam) = the URL for your instance of {{site.data.keyword.iotinsurance_short}}
     - [applicationId](#iot4i_mobileParam) = the mobile client access ID for your instance of {{site.data.keyword.iotinsurance_short}}
 8. On your computer, click the arrow to build and run the current scheme. The mobile starter app is installed on your phone. For more information, see the [Apple developer instructions for running apps on devices from Xcode](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/LaunchingYourApponDevices/LaunchingYourApponDevices.html).
 
-  **Note:** If an error is displayed when you try to build that says "Could not launch "IoT4I" because you have not yet verified that your Developer App certificate is trusted on your device", select yourself as a Trusted Developer, by completing the following steps:  
+  **Note:** If an error is displayed when you try to build that says *Could not launch IoT4I because you have not yet verified that your Developer App certificate is trusted on your device*, select yourself as a Trusted Developer, by completing the following steps:  
     1. On your phone, go to **Settings > General > Device Management > yourDeveloperID**.
     2. Tap your developer ID account name to establish trust for your developer ID.
     3. When prompted, confirm that the developer ID is trusted.
