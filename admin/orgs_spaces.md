@@ -158,7 +158,7 @@ To view the quota for your org, complete the following steps:
 3. Click **Edit**.
 4. Select the **Quota** tab.
 
-To update the quota for your organization, you must open a support ticket. For more information about openeing a support ticket, see [Getting customer support](../support/index.html#contacting-support).For more information about quota for containers, see [Quota](../containers/container_creating_ov.html#container_quota) in the Containers documentation.
+To update the quota for your organization, you must open a support ticket. For more information about openeing a support ticket, see [Getting customer support](../support/index.html#contacting-support).For more information about quota for containers, see [Quota](../containers/container_planning_org_ov.html##container_planning_quota) in the Containers documentation.
 
 ## Managing domains
 {: #managedomains}
