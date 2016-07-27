@@ -17,7 +17,7 @@ The {{site.data.keyword.mobileanalytics_full}} SDKs enable you to instrument you
 
 1.  Pre-defined data - This category includes generic usage and device information that applies to all apps. Within this category is device metadata (operating system and device model) and usage data (active users and app sessions) that indicates the volume, frequency, or duration of app use. Pre-defined data is collected automatically after you initialize the {{site.data.keyword.mobileanalytics_short}} SDK in your app.
 2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track.
-3. Client log messages - This category enables the developer to add lines of code throughout the app that log custom messages to assist in development and debugging. The developer assigns a severity/verbosity level to each log message and can subsequently filter messages by assigned level or preserve storage space by configuring the app to ignore messages that are below a given log level. To collect client log data, you must initialize the {{site.data.keyword.mobileanalytics_short}} SDK within your app, as well as add a line of code for each log message.
+3. Client log messages - This category enables the developer to add lines of code throughout the app that log custom messages to assist in development and debugging. The developer assigns a severity/verbosity level to each log message and can subsequently filter messages by assigned level or preserve storage space by configuring the app to ignore messages that are at a lower level of a given log level. To collect client log data, you must initialize the {{site.data.keyword.mobileanalytics_short}} SDK within your app, as well as add a line of code for each log message.
 
 Currently SDKs are available for Android, iOS and WatchOS.
 
@@ -35,7 +35,7 @@ Identify your **Client Key** value before you set up the client SDK. The Client 
 
 Initialize your application to enable sending logs to the {{site.data.keyword.mobileanalytics_short}} service.
 
-1. Import the Client SDK by adding the following `import` statement to the top of your project file:
+1. Import the Client SDK by adding the following `import` statement to the beginning of your project file:
 
   ```
   import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
@@ -75,7 +75,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
 Initialize your application to enable sending logs to the {{site.data.keyword.mobileanalytics_short}} service. The Swift SDK is available for iOS and watchOS.
 
-1. Import the `BMSCore` and `BMSAnalytics` frameworks by adding the following `import` statements to the top of your `AppDelegate.swift` project file:
+1. Import the `BMSCore` and `BMSAnalytics` frameworks by adding the following `import` statements to the beginning of your `AppDelegate.swift` project file:
 
   ```Swift
   import BMSCore
