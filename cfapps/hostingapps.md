@@ -191,7 +191,7 @@ To ensure that your application can run in a local environment after you modify 
 ## Related Links
 {: #general}
 
-* [IBM Containers](../containers/container_cli_ov.html)
+* [IBM Containers](../containers/container_index.html)
 * [Virtual Machines](../virtualmachines/vm_index.html)
 * [Getting started with Delivery Pipeline](../services/DeliveryPipeline/index.html)
 * [Deploying apps with IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
