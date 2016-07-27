@@ -14,8 +14,7 @@ years: 2016
 
 # Verified behaviors
 {: #etn_performance}
-
-*Last updated: 15 July 2016*
+Last updated: 15 July 2016
 {: .last-updated}
 
 The following behaviors have been tested and verified by IBM.  The results were achieved in a High Security setting unless otherwise noted: 

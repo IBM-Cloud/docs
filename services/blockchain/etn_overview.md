@@ -14,8 +14,7 @@ years: 2016
  
 # Network landscape
 {: #etn_overview}
- 
-*Last updated: 15 July 2016*
+Last updated: 19 July 2016
 {: .last-updated}
 
 The Developer Network and High Security Business Network exploit the latest iterations of the Hyperledger fabric, which include a consensus protocol called Practical Byzantine Fault Tolerance (PBFT), and an enhanced Node.js SDK.  Both consist of four nodes and a Certificate Authority.  The Certificate Authority governs "Membership Services," and is responsible for managing identities, network permissions and confidential transactions through the issuance of digital certificates.
@@ -42,7 +41,7 @@ Use the following steps to understand the network flow:
 1. A registered user enrolls through the PKI (Member Services) and receives a long-term enrollment certificate (eCert) and a batch of transactional certificates (tCerts).
 2. The user deploys a piece of chaincode onto the network.  The chaincode (aka smart contract) contains business logic embedded within its code.  **Note**: All transactions (deploy, invoke, query) require a tCert, and must be signed with the user's private key.  The user derives this private key from his batch of tCerts.
 3. The user invokes the smart contract.  Invoke simply means that the user is triggering the contract to self-execute the logic that is coded into it.
-4. A transaction (deploy or invoke) is submitted to the network.  Transactions can come in to any network peer.  Once a peer receives a transaction request, it submits the request to the network's primary peer (VP1 in diagram).  The primary peer will order a batch of transactions and re-broadcast this order to its fellow peers.
+4. A transaction (deploy or invoke) is submitted to the network.  Transactions can come in to any network peer.  Once a peer receives a transaction request, it submits the request to the network's primary peer (VP1 in diagram).  The primary peer will order a batch of transactions and broadcast this order to its fellow peers.
 5. The peers use a predetermined consensus protocol (PBFT) to agree upon the order.  The process of reaching an agreement on the transaction order is referred to as consensus.  
 6. Once the peers have agreed upon the order, the requests are executed and appended to the ledger.  
 

@@ -14,8 +14,7 @@ years: 2016
 
 # Consensus Test 1: No Byzantine nodes
 {: #pbft_test1}
-
-*Last updated: 15 July 2016*
+Last updated: 15 July 2016
 {: .last-updated}
 
 Consensus Test 1 tests the PBFT consensus protocol in a blockchain network scenario where none of the four nodes are Byzantine: none of the nodes have gone offline in an arbitrary and concurrent manner.

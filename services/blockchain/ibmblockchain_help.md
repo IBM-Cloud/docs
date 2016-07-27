@@ -13,7 +13,7 @@ copyright:
 
 # Getting help for blockchain
 {: #ibmblockchain_help}
-*Last updated: 27 June 2016*
+Last updated: 17 June 2016
 {: .last-updated}
 
 Wait for the new Atlas style UI and then we can implement this section.  Not enough content yet...
