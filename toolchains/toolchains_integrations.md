@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-*Last updated: 20 July 2016*
+*Last updated: 26 July 2016*
 {: .last-updated}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
@@ -29,7 +29,7 @@ The tool integrations that are available to add and configure for your toolchain
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.deliverypipeline}} 		|Yes	   	|Yes  		|
 |{{site.data.keyword.DRA_short}} 		|Yes		|No			|
-|Eclipse Orion {{site.data.keyword.webide}}		|Yes		|No			|
+|Eclipse Orion {{site.data.keyword.webide}}		|Yes		|Yes			|
 |GitHub		|Yes		|No		|
 |{{site.data.keyword.ghe_short}}			|No		|Yes		|
 |PagerDuty			|Yes		|No		|
@@ -124,7 +124,7 @@ The Eclipse Orion {{site.data.keyword.webide}} is an integrated web-based enviro
  
 To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webide}} tool integration:
 
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Tool Integrations**
+1. If you have a toolchain on {{site.data.keyword.Bluemix_notm}} Public and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Tool Integrations**. If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Dedicated, on the Dashboard, on the **DEVOPS** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the upper-right corner of the app's Overview page, click **View Toolchain**. Then, click **Tool Integrations**.
 1. Click the add button (+).
 1. In the Tool Integrations section, click **Eclipse Orion Web IDE**. 
 1. Click **Create Integration**.
@@ -203,6 +203,9 @@ You can configure {{site.data.keyword.ghe_short}} as a tool integration in your 
 1. To use GitHub Issues for issue tracking, select the **Enable GitHub Issues** check box.
 1. Click **Create Integration**.
 1. Click the tile for the {{site.data.keyword.ghe_short}} repo that you want to work with. Your company's [{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html#dedicated){: new_window} instance opens, where you can view the contents of the repo.
+ 
+  **Tip**: You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the {{site.data.keyword.ghe_short}} repo and deploy an app from your workspace.
+
 1. If you enabled GitHub Issues, click the tile for GitHub Issues.
 
 
