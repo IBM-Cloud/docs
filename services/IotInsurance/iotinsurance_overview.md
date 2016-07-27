@@ -63,4 +63,4 @@ You can create new shields in JavaScript using the {{site.data.keyword.iotinsura
 
 ### Shields
 A shield is a specific protection that a customer acquires from the insurance provider. For example, a homeowner purchases insurance on their home to shield it against fire, water damage, burglaries, and other hazards. The {{site.data.keyword.iotinsurance_short}} solution provides a built-in shield against water. Customers are alerted and can take action when an event that involves water threatens their home. Using the REST API, developers can add more shields.
-Shields run in the {{site.data.keyword.iotinsurance_short}} analytics engine, which looks at the type of hazard (for example, "Water is detected"), the user account of the sensor that sent the hazard, and which shields are associated with the account. Action can be taken based on that information.
+Shields run in the {{site.data.keyword.iotinsurance_short}} analytics engine, which looks at the type of hazard (for example, *Water is detected*), the user account of the sensor that sent the hazard, and which shields are associated with the account. Action can be taken based on that information.
