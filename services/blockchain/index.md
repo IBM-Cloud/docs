@@ -13,7 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.blockchain}} (Beta)
 {: #gettingstartedtemplate}
-*Last updated: 19 July 2016*
+Last updated: 22 July 2016
 {: .last-updated}
 
 With the {{site.data.keyword.blockchainfull}} service on Bluemix&reg;, you can spin up a multi-node blockchain network at the click of a button. Rather than creating and managing a network, developers can get into code faster and spend their time writing applications and working with chaincode. The service is a peer-to-peer permissioned network built on the [hyperledger/fabric](https://github.com/hyperledger/fabric) code from the Linux Foundation's Hyperledger Project.
@@ -27,14 +27,13 @@ There are currently two versions available for the blockchain service - **Starte
 
 | Service Type              | Starter Developer               | High Security Business Network  |
 | ------------------------- |:--------------------------:|:-----:|
-| Platform  | SoftLayer     | IBM LinuxONE&trade; |
 | Purpose   |  development and test levels of security performance and availability |  simulate enterprise network and test levels of security, performance and availability |
+| Nodes     | 4 nodes + Certificate Authority     | 4 nodes + Certificate Authority |
+| [Dashboard Monitor](ibmblockchainmonitor.html) | Yes | Yes |
+| Confidential Transactions  | Yes | Yes |
+| [Consensus](etn_pbft.html)  | PBFT | PBFT |
 | Environment     | shared multi-tenant | isolated single tenant |
 | [IBM Secure Service Container](etn_ssc.html) | No | Yes |
-| Nodes     | 4 nodes + Certificate Authority     | 4 nodes + Certificate Authority |
-| Confidential Transactions | Yes | Yes |
-| Consensus  |  [PBFT](etn_pbft.html)    |    [PBFT](etn_pbft.html) |
-| Dashboard Monitor | Yes | Yes |
  
 
 

@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-*Last updated: 19 May 2016*
+Last updated: 19 May 2016
 {: .last-updated}
 
 
@@ -107,7 +107,7 @@ Each app can have one or more URLs associated with it, but all of them must poin
 ## Regions
 {: #ov_intro_reg}
 
-A {{site.data.keyword.Bluemix_notm}} region is a defined geographical territory that you can deploy your apps to. You can create apps and service instances in different with the same {{site.data.keyword.Bluemix_notm}} infrastructure for application management and the same usage details view for billing. You can select the region that is nearest to your customers and deploy your apps to this region to get low application latency. You can also select the region where you want to keep the application data to address security issues. When you build apps in multiple regions, if one region goes down, the apps that are in the other regions continue to run. Your resource allowance is the same for each region that you use.
+A {{site.data.keyword.Bluemix_notm}} region is a defined geographical territory that you can deploy your apps to. You can create apps and service instances in different regions with the same {{site.data.keyword.Bluemix_notm}} infrastructure for application management and the same usage details view for billing. You can select the region that is nearest to your customers and deploy your apps to this region to get low application latency. You can also select the region where you want to keep the application data to address security issues. When you build apps in multiple regions, if one region goes down, the apps that are in the other regions continue to run. Your resource allowance is the same for each region that you use.
 
 If you are using the {{site.data.keyword.Bluemix_notm}} user interface, you can switch to a different region to work with the spaces in that region. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg), and expand the **Region** selector. Then, you can select a different region from the list.
 
@@ -151,9 +151,9 @@ All {{site.data.keyword.Bluemix_notm}} infrastructure, Cloud Foundry components,
 *Systems of record* include apps and databases that store business records and automate standardized processes. *Systems of engagement* are capabilities that expand the usefulness of systems of record and make them more engaging to users.
 By integrating a system of record with the app that you create in {{site.data.keyword.Bluemix_notm}}, you can perform the following actions:
 
- * Enable secure communication between the app and the backend database by downloading and installing a secure connector on premise.
+ * Enable secure communication between the app and the back-end database by downloading and installing a secure connector on premise.
  * Invoke a database in a secure way.
- * Create APIs from integration flows with databases and backend systems, such as customer relationship management system.
+ * Create APIs from integration flows with databases and back-end systems, such as customer relationship management system.
  * Expose only the schemas and tables that you want to be exposed to the app.
  * As a {{site.data.keyword.Bluemix_notm}} organization manager, publish an API as a private service that is visible only to your organization members.
 

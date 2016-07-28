@@ -11,7 +11,7 @@ copyright:
 # Enabling Google authentication for iOS apps (Swift SDK)
 {: #google-auth-ios}
 
-Last updated: 26 July 2016
+Last updated: 27 July 2016
 {: .last-updated}
 
 Use Google Sign-In to authenticate users on your {{site.data.keyword.amashort}} iOS Swift app. The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
@@ -40,7 +40,7 @@ This process:
 
 The following steps give you a brief outline of the tasks necessary for preparing your app. 
 
-**Note:** It is not necessary to add the Google Sign-In CocoaPod. The necessary SDK is added by the `BMSGoogleAuthentication` CocoaPod below.
+**Note:** It is not necessary to add the Google Sign-In CocoaPod. The necessary SDK is added by the `BMSGoogleAuthentication` CocoaPod.
 
 1. Note the **Bundle Identifier** in your Xcode project from the **Identity** section of the **General** tab of the main target. You need it to create your  Google Sign-In project.
 
@@ -134,7 +134,7 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSSecurity
  ```
 
-1. Use the following code to initialize the client SDK. Replace `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click on the face icon (![Face](/face.png "Face")) in the upper-left corner of the dashboard. 
+1. Use the following code to initialize the client SDK. Replace `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click on the face icon (![Face](/face.png "Face")) in <!--the upper-left corner of--> the dashboard. 
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -219,6 +219,6 @@ You must be using the {{site.data.keyword.mobilefirstbp}}  boilerplate and alrea
  GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  If you call this code after a user is logged in with Google and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Google for authentication purposes. At that point, the user can click the user name in the upper-right corner of the screen to select and log in with another user.
+  If you call this code after a user is logged in with Google and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Google for authentication purposes. At that point, the user can click the user name <!--in the upper-right corner of the screen--> to select and log in with another user.
 
    Passing `callBack` to the logout function is optional. You can also pass `nil`.

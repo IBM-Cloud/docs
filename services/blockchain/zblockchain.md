@@ -14,8 +14,7 @@ copyright:
 
 # Blockchain on z
 {: #zblockchain}
-
-*Last updated: 8 June 2016*
+Last updated: 8 July 2016
 {: .last-updated}
 
 

@@ -15,7 +15,7 @@ years: 2016
 # Understanding the IBM Secure Service Container
 {: #etn_ssc}
 
-*Last updated: 19 July 2016*
+Last updated: 22 July 2016
 {: .last-updated}
 
 The High Security Business Network is deployed as an appliance into an IBM Secure Service Container, which provides the base infrastructure for hosting blockchain services. The appliance combines operating systems, Docker, middleware, and software components that work autonomously, and provides core services and infrastructure with optimized security.
