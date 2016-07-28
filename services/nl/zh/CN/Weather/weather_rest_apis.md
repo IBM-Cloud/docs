@@ -31,8 +31,7 @@ copyright:
 |`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |根据您所提供的格式，返回某个地理位置 3、5、7 或 10 天的每天天气预测。返回的天数以 `3day`、`5day`、`7day` 或 `10day` 的格式指定。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{locationId}`。每一个每天天气预测都可以包含白天天气预测、晚上天气预测和 24 小时天气预测。这些分段在 JSON 响应中是不同的对象。每天天气预测中的白天天气预测数据在当地时间下午 3:00 后不再可用。在当地时间下午 3:00 时，您的应用程序不能再显示白天天气预测。|
 |`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|根据您所提供的格式，返回某个地理位置 3、5、7 或 10 天的 6 小时每天天气预测。返回的天数以 `3day`、`5day`、`7day` 或 `10day` 的格式指定。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{locationId}`。每一个每天天气预测都可以包含早晨、下午、晚上和过夜天气预测。这些分段在 JSON 响应中是不同的对象。|
 |`GET /v1/{geocode or location ID}/observations.json`              |返回某个地理位置的最新天气状况。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{locationId}`。这些最近的观察数据会保留在数据库中，特定报告站的观察数据最多保留 10 分钟，每个观察站的观察数据最多保留 24 小时。最近的观察数据会基于观察数据的日期/时间戳记，通过先进/先出方法持续更新并进行替换（使用最新的观察数据来循环数据，并将最早的观察数据移至归档存储器）。|
-|`GET /v1/{geocode or location ID}/observations/timeseries.json`   |返回某个地理位置的最新观察数据以及从当前日期和时间开始一直到过去 24 小时的观察数据。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{locationId}`。天气观察数据是从部署在世界各地的物理设备以及最新天气观察
-数据中收集而来的。|
+|`GET /v1/{geocode or location ID}/observations/timeseries.json`   |返回某个地理位置的最新观察数据以及从当前日期和时间开始一直到过去 24 小时的观察数据。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{locationId}`。天气观察数据是从部署在世界各地的物理设备以及最新天气观察 数据中收集而来的。|
 |`GET /v1/{geocode, country code, state, or area}/alerts.json`      |返回国家气象局 (NWS)、加拿大环境部和欧洲 MeteoAlarm 发布的天气监测、警告、预警和公告，包括 49 种语言的事件描述、国家或地区名和警报标题的翻译。您可以提供 `geocode/{latitude}/{longitude}`、`country/{countrycode}`、`country/{countrycode}/state/{statecode}`/ 或 `country/{countrycode}/area/{areaid}`。|
 |`GET /v1/alert/{detail_key}/details.json`                         |返回国家气象局 (NWS)、加拿大环境部和欧洲 MeteoAlarm 发布的天气监测、警告、预警和公告。详细信息包括政府气象部门就指定区域发布的警报的深入信息，包括 49 种语言的事件描述、国家或地区名和警报标题的翻译。|
 |`GET /v1/{geocode or postal code}/almanac/daily.json`             |返回来自国家气象局观察站的每天年历信息（仅限美国），时间跨度为 10 到 30 年或更长。该信息由国家气象数据中心 (NCDC) 收集和提供。您可以提供 `geocode/{latitude}/{longitude}` 或 `location/{PostalLocationId}`。|
@@ -131,8 +130,7 @@ https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/dai
 |------------------|---------------------------------------------------|
 |`主机名`        |托管的 URL 路径。例如，`https://twcservice.mybluemix.net:443/api/weather`。|
 |`版本`         |当前迭代。例如，“v1”。|
-|`location`        |地理位置代码或位置标识。位置组可以是“geocode”或“location”。例如，“geocode/45.4214/75.6919”代表加拿大渥太华。如果提供了地理位置代码坐标，那么 API 会返回最近可用位置的数据。
-句点用作十进制分隔符，逗号用于分隔经度和纬度值。如果提供了地理位置代码，那么会在响应的元数据中返回使用的实际经度和纬度值。|
+|`location`        |地理位置代码或位置标识。位置组可以是“geocode”或“location”。例如，“geocode/45.4214/75.6919”代表加拿大渥太华。如果提供了地理位置代码坐标，那么 API 会返回最近可用位置的数据。 句点用作十进制分隔符，逗号用于分隔经度和纬度值。如果提供了地理位置代码，那么会在响应的元数据中返回使用的实际经度和纬度值。|
 |`商品组`   |产品。例如“observations”或“forecast”。产品子组（例如“historical”）是可选的。|
 |`date`            |日期类型。例如“daily”或“monthly”。|
 |`format`          |格式。例如，“3day”、“5day”、“7day”或“10day”。|

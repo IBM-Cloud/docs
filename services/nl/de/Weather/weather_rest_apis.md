@@ -40,15 +40,10 @@ Sie können die folgenden APIs verwenden.
 |**API**                                  |**Beschreibung**              |
 |-----------------------------------------|-----------------------------|
 |`GET /v1/{geocode or location ID}/forecast/hourly/48hour.json`  |Gibt die stündliche Wettervorhersage für die nächsten 48 Stunden für angegebene Geoortungsdaten entsprechend dem von Ihnen angegebenen Format zurück. Sie können `geocode/{latitude}/{longitude}` oder `location/{locationId}` angeben. Die stündlichen Vorhersagedaten können bis zu 48 stündliche Vorhersagen für jeden Standort enthalten. Wenn neue Daten empfangen werden, müssen Sie alle vorherigen stündlichen Vorhersagen für einen Standort löschen.|
-|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |Gibt die tägliche Wettervorhersage für die nächsten 3, 5, 7 oder 10 Tage für angegebene Geoortungsdaten entsprechend dem von Ihnen angegebenen Format zurück. Die Anzahl der zurückgegebenen Tage wird im Format als `3day`, `5day`, `7day` oder `10day` angegeben. Sie können `geocode/{latitude}/{longitude}` oder `location/{locationId}` angeben. Jede Tagesvorhersage kann eine Tag- und eine Nachtvorhersage sowie eine 24-Stunden-Vorhersage enthalten. Diese Segmente sind separate Objekte in den JSON-Antworten. Vorhersagedaten für den Tag einer Tagesvorhersage stehen nach 15:00 Uhr Ortszeit nicht mehr zur Verfügung. Nach dieser Uhrzeit wird die Vorhersage für den Tag in Ihrer Anwendung
-nicht mehr angezeigt.|
+|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |Gibt die tägliche Wettervorhersage für die nächsten 3, 5, 7 oder 10 Tage für angegebene Geoortungsdaten entsprechend dem von Ihnen angegebenen Format zurück. Die Anzahl der zurückgegebenen Tage wird im Format als `3day`, `5day`, `7day` oder `10day` angegeben. Sie können `geocode/{latitude}/{longitude}` oder `location/{locationId}` angeben. Jede Tagesvorhersage kann eine Tag- und eine Nachtvorhersage sowie eine 24-Stunden-Vorhersage enthalten. Diese Segmente sind separate Objekte in den JSON-Antworten. Vorhersagedaten für den Tag einer Tagesvorhersage stehen nach 15:00 Uhr Ortszeit nicht mehr zur Verfügung. Nach dieser Uhrzeit wird die Vorhersage für den Tag in Ihrer Anwendung nicht mehr angezeigt.|
 |`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|Gibt die tägliche Wettervorhersage in 6-Stunden-Zeiträumen für die nächsten 3, 5, 7 oder 10 Tage für angegebene Geoortungsdaten entsprechend dem von Ihnen angegebenen Format zurück. Die Anzahl der zurückgegebenen Tage wird im Format als `3day`, `5day`, `7day` oder `10day` angegeben. Sie können `geocode/{latitude}/{longitude}` oder `location/{locationId}` angeben. Jede Tagesvorhersage kann eine Vorhersage für Vormittag, Nachmittag, Abend und Nacht enthalten. Diese Segmente sind separate Objekte in den JSON-Antworten.|
-|`GET /v1/{geocode or location ID}/observations.json`              |Gibt die aktuellen Wetterbedingungen für eine Geoortung zurück. Sie können `geocode/{latitude}/{longitude}` oder `location/{locationId}` angeben. Diese aktuellen Beobachtungen werden in der Datenbank bis zu 10 Minuten bei bestimmten Berichtsstationen gespeichert. Ferner werden 24 Stunden der Beobachtungen pro Station gespeichert. Die aktuellen Beobachtungsdaten werden fortlaufend aktualisiert
-und anhand der FIFO-Methode (Daten mit neuester Beobachtung austauschen und die alten Beobachtungen
-in den Archivierungsspeicher verschieben) basierend auf den Datums-/Zeitangaben der Beobachtungen ersetzt.|
-|`GET /v1/{geocode or location ID}/observations/timeseries.json`   |Gibt die aktuellen Beobachtungen
-und bis zu 24 Stunden der letzten Beobachtungsdaten ausgehend vom aktuellen Zeitpunkt zurück. Sie können `geocode/{latitude}/{longitude}` oder `location/{locationId}` angeben. Wetterbeobachtungen werden von physischen Einheiten zusammengestellt,
-die weltweit implementiert sind, sowie von den aktuellen Beobachtungen.|
+|`GET /v1/{geocode or location ID}/observations.json`              |Gibt die aktuellen Wetterbedingungen für eine Geoortung zurück. Sie können `geocode/{latitude}/{longitude}` oder `location/{locationId}` angeben. Diese aktuellen Beobachtungen werden in der Datenbank bis zu 10 Minuten bei bestimmten Berichtsstationen gespeichert. Ferner werden 24 Stunden der Beobachtungen pro Station gespeichert. Die aktuellen Beobachtungsdaten werden fortlaufend aktualisiert und anhand der FIFO-Methode (Daten mit neuester Beobachtung austauschen und die alten Beobachtungen in den Archivierungsspeicher verschieben) basierend auf den Datums-/Zeitangaben der Beobachtungen ersetzt.|
+|`GET /v1/{geocode or location ID}/observations/timeseries.json`   |Gibt die aktuellen Beobachtungen und bis zu 24 Stunden der letzten Beobachtungsdaten ausgehend vom aktuellen Zeitpunkt zurück. Sie können `geocode/{latitude}/{longitude}` oder `location/{locationId}` angeben. Wetterbeobachtungen werden von physischen Einheiten zusammengestellt, die weltweit implementiert sind, sowie von den aktuellen Beobachtungen.|
 |`GET /v1/{geocode, country code, state, or area}/alerts.json`      |Gibt Wetterbeobachtungen, Warnungen, Aussagen und Empfehlungen zurück, die vom National Weather Service (NWS), Environment Canada und MeteoAlarm (Europa) ausgegeben werden, und enthält die Übersetzung der Ereignisbeschreibung, des Ländernamens und der Warnungsüberschrift in 49 Sprachen. Sie können `geocode/{latitude}/{longitude}`, `country/{countrycode}`, `country/{countrycode}/state/{statecode}`/ oder `country/{countrycode}/area/{areaid}` angeben.|
 |`GET /v1/alert/{detail_key}/details.json`                         |Gibt Wetterbeobachtungen, Warnungen, Aussagen und Empfehlungen zurück, die vom National Weather Service (NWS), Environment Canada und MeteoAlarm (Europa) ausgegeben werden. In den Details sind umfassendere Informationen zu der vom Wetteramt ausgegebenen Warnung für das jeweilige Gebiet enthalten sowie die Übersetzung der Ereignisbeschreibung, des Ländernamens und der Warnungsüberschriften in 49 Sprachen.|
 |`GET /v1/{geocode or postal code}/almanac/daily.json`             |Gibt tägliche Almanach-Informationen zurück (nur USA), die aus Beobachtungsstationen des National Weather Service stammen und sich auf einen Zeitraum von 10 bis 30 Jahren oder mehr beziehen. Gesammelt und bereitgestellt werden die Informationen vom National Climatic Data Center (NCDC). Sie können `geocode/{latitude}/{longitude}` oder `location/{PostalLocationId}` angeben.|
@@ -149,21 +144,12 @@ https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/dai
 |------------------|---------------------------------------------------|
 |`hostname`        |Der gehostete URL-Pfad. Beispiel: `https://twcservice.mybluemix.net:443/api/weather`.|
 |`version`         |Die aktuelle Iteration. Beispiel: "v1".|
-|`location`        |Der Geocode oder die Standort-ID. Die Standortgruppe kann "geocode" oder "location" sein. "geocode/45.4214/75.6919" stellt beispielsweise Ottawa in Kanada dar. Wenn Sie eine geocodierte Koordinate angeben, gibt die API Daten für den Standort zurück,
-der dieser Koordinate am nächsten liegt. Punkte werden als Dezimaltrennzeichen und Kommas
-zum Trennen von Breitengrad- und Längengradwerten verwendet. Wenn Sie einen Geocode bereitstellen,
-werden die tatsächlich verwendeten Werte für Breitengrad und Längengrad in den Metadaten der
-Antwort zurückgegeben.|
+|`location`        |Der Geocode oder die Standort-ID. Die Standortgruppe kann "geocode" oder "location" sein. "geocode/45.4214/75.6919" stellt beispielsweise Ottawa in Kanada dar. Wenn Sie eine geocodierte Koordinate angeben, gibt die API Daten für den Standort zurück, der dieser Koordinate am nächsten liegt. Punkte werden als Dezimaltrennzeichen und Kommas zum Trennen von Breitengrad- und Längengradwerten verwendet. Wenn Sie einen Geocode bereitstellen, werden die tatsächlich verwendeten Werte für Breitengrad und Längengrad in den Metadaten der Antwort zurückgegeben.|
 |`product group`   |Das Produkt. Beispiel: "observations" oder "forecast". Eine Produkt-Untergruppe, z. B. "historical", ist optional.|
 |`date`            |Der Datumstyp. Beispiel: "daily" oder "monthly".|
 |`format`          |Das Format. Beispiel: "3day", "5day", "7day" oder "10day".|
-|`units`           |Die optionale Einheit, in der die Antwort zurückgegeben werden soll. Die API
-unterstützt die Maßeinheiten 'English' (e), 'Metric' (m) und 'UK-Hybrid' (h). Wenn Sie die Maßeinheiten angeben, nicht jedoch einen Wert, gibt die API die Daten
-in der Maßeinheit zurück, die dem Sprachencode entspricht. Die Standardeinheit oder
-die angeforderte Einheit wird im Maßeinheitsparameter (units) in den Metadaten
-der Antwort zurückgegeben.|
-|`language`        |Die Sprache, in der die Antwort zurückgegeben werden soll. Der Standardwert ist 'en-US'. Die Standardsprache oder die angeforderte Übersetzungssprache wird im Sprachparameter (language)
-in den Metadaten der Antwort zurückgegeben.|
+|`units`           |Die optionale Einheit, in der die Antwort zurückgegeben werden soll. Die API unterstützt die Maßeinheiten 'English' (e), 'Metric' (m) und 'UK-Hybrid' (h). Wenn Sie die Maßeinheiten angeben, nicht jedoch einen Wert, gibt die API die Daten in der Maßeinheit zurück, die dem Sprachencode entspricht. Die Standardeinheit oder die angeforderte Einheit wird im Maßeinheitsparameter (units) in den Metadaten der Antwort zurückgegeben.|
+|`language`        |Die Sprache, in der die Antwort zurückgegeben werden soll. Der Standardwert ist 'en-US'. Die Standardsprache oder die angeforderte Übersetzungssprache wird im Sprachparameter (language) in den Metadaten der Antwort zurückgegeben.|
 *Tabelle 2. URL-Details*
 
 **Hinweis**: Die REST-APIs verwenden für Landescodes die Norm ISO 3166. Weitere Informationen finden Sie auf der [Online-Suchplattform für ISO-Normen](https://www.iso.org/obp/ui/#search/code/){:new_window}.
@@ -195,13 +181,11 @@ Die folgenden Fehler werden übersetzt:
 |`daypart_name`      |Der Name eines Tagesabschnitts von 12 Stunden (darin nicht enthalten die Namen der Tage in den ersten 48 Stunden)|
 |`temp_phrase`       |Die Kurzbeschreibung, die die vorhergesagte Höchst- oder Tiefsttemperatur für den 12-stündigen Vorhersagezeitraum enthält|
 |`shortcast`         |Ein abgekürzter Teil einer beschreibenden Vorhersage|
-|`long_daypart_name` |Der benannte Zeitrahmen für die gültige Wettervorhersage in einem erweiterten Format. Der benannte Zeitrahmen kann entweder für einen
-12-Stunden- oder einen 24-Stunden-Zeitrahmen gelten.|
+|`long_daypart_name` |Der benannte Zeitrahmen für die gültige Wettervorhersage in einem erweiterten Format. Der benannte Zeitrahmen kann entweder für einen 12-Stunden- oder einen 24-Stunden-Zeitrahmen gelten.|
 |`golf_category`     |Die Indexkategorie 'Golf', die als Bezeichnung für die Wetterbedingungen für das Golfspielen ausgedrückt wird|
 |`phrase_nnchar`     |Sinnvolle Wetterbezeichnung für den Tag|
 |`lunar_phrase`      |Kurzcode aus drei Zeichen für Mondphasen|
-|`uv_desc`           |Beschreibung für den UV-Index, die den Wert
-für den UV-Index durch die Bereitstellung der zugehörigen Risikostufe für die Haut durch Sonneneinstrahlung ergänzt|
+|`uv_desc`           |Beschreibung für den UV-Index, die den Wert für den UV-Index durch die Bereitstellung der zugehörigen Risikostufe für die Haut durch Sonneneinstrahlung ergänzt|
 |`wx_phrase`         |Eine Textbeschreibung der beobachteten Wetterbedingungen an der Berichtsstation.|
 |`pressure_desc`     |Eine Phrase, die die veränderten Messwerte für den Luftdruck im Verlauf der letzten Stunde beschreibt.|
 |`headline_text`     |Der Text der Überschrift eines Ereignisses für den Standort.|
@@ -221,13 +205,11 @@ Die folgenden Fehlercodes sind allen APIs gemeinsam:
 
 |**Fehler** |**Beschreibung**                                    |
 |----------|---------------------------------------------------|
-|400       |Fehlerhafte Anforderung. Die Anforderung wurde vom Server aufgrund einer fehlerhaften
-Syntax nicht verstanden. Dieser Fehlercode wird für alle APIs implementiert. Die API lehnt die Anforderung ab, wenn ungültige Parameter angegeben werden.|
+|400       |Fehlerhafte Anforderung. Die Anforderung wurde vom Server aufgrund einer fehlerhaften Syntax nicht verstanden. Dieser Fehlercode wird für alle APIs implementiert. Die API lehnt die Anforderung ab, wenn ungültige Parameter angegeben werden.|
 |401       |Nicht autorisiert. Für die Anforderung ist eine Authentifizierung erforderlich.|
 |403       |Nicht zulässig. Der Server hat die Anforderung verstanden, lehnt eine Verarbeitung jedoch ab.|
 |404       |Nicht gefunden. Wenn in der API-Anforderung ein erforderlicher Parameter nicht vorhanden ist, wird der Fehler "MissingParameterException" mit dem Fehlercode 404 zurückgegeben.|
-|500       |Interner Serverfehler. Der Server hat eine nicht erwartete Bedingung erkannt,
-die ihn daran gehindert hat, die Anforderung zu verarbeiten.|
+|500       |Interner Serverfehler. Der Server hat eine nicht erwartete Bedingung erkannt, die ihn daran gehindert hat, die Anforderung zu verarbeiten.|
 *Tabelle 4. Fehlerantwortcode*
 
 Die Antwort bei einem Fehler ist immer gleich. In einer Antwort können mehrere Fehlercodes zurückgegeben werden.
