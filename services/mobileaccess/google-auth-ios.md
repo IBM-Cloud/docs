@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-ios}
 
 
-Last updated: 16 June 2016
+Last updated: 27 June 2016
 {: .last-updated}
 
 Use Google Sign-In to authenticate users on your Mobile Client Access iOS app.
@@ -320,6 +320,6 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	If you call this code after a user is logged in with Google and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Google for authentication purposes. At that point, the user can click the user name in the upper-right corner of the screen to select and login with another user.
+	If you call this code after a user is logged in with Google and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Google for authentication purposes. At that point, the user can click the user name <!--in the upper-right corner of the screen--> to select and login with another user.
 
 	Passing `callBack` to the logout function is optional. You can also pass `nil`.
