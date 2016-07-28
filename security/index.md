@@ -15,15 +15,15 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} security
 {: #security}
-*Last updated: 22 July 2016*
+Last updated: 22 July 2016
 {: .last-updated}
 
-Designed with secure engineering practices, the {{site.data.keyword.Bluemix}} platform has layered security controls across network and infrastructure. {{site.data.keyword.Bluemix_notm}} provides a group of security services that can be used by application developers to secure their mobile and web apps. These elements combine to make {{site.data.keyword.Bluemix_notm}} a platform with clear choices for secure application development.
+Designed with secure engineering practices, the {{site.data.keyword.Bluemix}} platform has layered security controls across network and infrastructure. {{site.data.keyword.Bluemix_notm}} provides a group of security services that application developers can use to secure their mobile and web apps. These elements combine to make {{site.data.keyword.Bluemix_notm}} a platform with clear choices for secure application development.
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} ensures security readiness by adhering to security policies that are driven by best practices in IBM for systems, networking, and secure engineering. These policies include practices such as source code scanning, dynamic scanning, threat modeling, and penetration testing. {{site.data.keyword.Bluemix_notm}} follows the IBM Product Security Incident Response Team (PSIRT) process for security incident management. See the [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} site for details.
 
-{{site.data.keyword.Bluemix_notm}} Public and Dedicated use IBM SoftLayer Infrastructure-as-a-Service (IaaS) cloud services and takes full advantage of its security architecture. SoftLayer IaaS provides multiple, overlapping tiers of protection for your applications and data. For {{site.data.keyword.Bluemix_notm}} Local, you own the physical security and provide the infrastructure by hosting {{site.data.keyword.Bluemix_notm}} Local in your own data center behind a company firewall. In addition, {{site.data.keyword.Bluemix_notm}} adds security capabilities at the Platform as a Service layer in different categories: platform, data, and application.
+{{site.data.keyword.Bluemix_notm}} Public and Dedicated use IBM SoftLayer Infrastructure-as-a-Service (IaaS) cloud services and take full advantage of its security architecture. SoftLayer IaaS provides multiple, overlapping tiers of protection for your applications and data. For {{site.data.keyword.Bluemix_notm}} Local, you own the physical security and provide the infrastructure by hosting {{site.data.keyword.Bluemix_notm}} Local in your own data center behind a company firewall. In addition, {{site.data.keyword.Bluemix_notm}} adds security capabilities at the Platform as a Service layer in different categories: platform, data, and application.
 
 ## Security of the {{site.data.keyword.Bluemix_notm}} platform
 {: #platform-security}
@@ -72,16 +72,17 @@ For {{site.data.keyword.Bluemix_notm}} Dedicated and Local, authentication throu
 <dt>Data protection</dt>
 <dd> All {{site.data.keyword.Bluemix_notm}} traffic goes through the IBM WebSphere® DataPower® SOA Appliances, which provide reverse proxy, SSL termination, and load balancing functions.
 The following HTTP methods are allowed:
- * DELETE
- * GET
- * HEAD
- * OPTIONS
- * POST
- * PUT
- * TRACE
-
-HTTP inactivity times out at 2 minutes.
-
+<ul>
+<li>DELETE</li>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+<li>POST</li>
+<li>PUT</li>
+<li>TRACE</li>
+</ul>
+HTTP inactivity times out at 2 minutes.</dd>
+<dd>
 The following headers are populated by DataPower:
 <dl>
 <dt>$wsis</dt>
@@ -109,10 +110,10 @@ The following headers are populated by DataPower:
 
 <dl>
 <dt>Environment segregation</dt>
-<dd> For {{site.data.keyword.Bluemix_notm}} Public, development and production environments are segregated from each other to improve application stability and security.</dd>
+<dd>For {{site.data.keyword.Bluemix_notm}} Public, development and production environments are segregated from each other to improve application stability and security.</dd>
 
 <dt>Firewalls</dt>
-<dd> Firewalls are in place to restrict access to the {{site.data.keyword.Bluemix_notm}} network. For {{site.data.keyword.Bluemix_notm}} Local, your company firewall segregates the rest of your network from your {{site.data.keyword.Bluemix_notm}} instance.</dd>
+<dd>Firewalls are in place to restrict access to the {{site.data.keyword.Bluemix_notm}} network. For {{site.data.keyword.Bluemix_notm}} Local, your company firewall segregates the rest of your network from your {{site.data.keyword.Bluemix_notm}} instance.</dd>
 
 <dt>Intrusion protection</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} Public and Dedicated enable intrusion protection to discover threats so that they can be addressed. Intrusion protection policies are enabled on firewalls.</dd>
@@ -141,13 +142,13 @@ The following headers are populated by DataPower:
 <dt>User access management</dt>
 <dd>Within {{site.data.keyword.Bluemix_notm}}, Separation of Duties guidelines are followed to assign granular access privileges to users, and to ensure that users have only the access that is required to perform their jobs according to the principle of least privilege.
 
-Within a {{site.data.keyword.Bluemix_notm}} Dedicated and Local environments, assigned administrators can manage roles and permissions for {{site.data.keyword.Bluemix_notm}} user in their organization by using the Admin Console. See [Managing {{site.data.keyword.Bluemix_notm}} Local and Dedicated](../admin/index.html#mng) for details.
+Within {{site.data.keyword.Bluemix_notm}} Dedicated and Local environments, assigned administrators can manage roles and permissions for {{site.data.keyword.Bluemix_notm}} users in their organization by using the Admin Console. See [Managing {{site.data.keyword.Bluemix_notm}} Local and Dedicated](../admin/index.html#mng) for details.
 </dd>
 </dl>
 
 ### Physical security
 
-{{site.data.keyword.Bluemix_notm}} Public and Dedicated relies on the network-within-a-network topology of SoftLayer for physical network security. This network-within-a-network architecture ensures that systems are fully accessible only to authorized personnel. For {{site.data.keyword.Bluemix_notm}} Local, you own the physical security for the local instance. Your data center is secured behind your company firewall.
+{{site.data.keyword.Bluemix_notm}} Public and Dedicated rely on the network-within-a-network topology of SoftLayer for physical network security. This network-within-a-network architecture ensures that systems are fully accessible only to authorized personnel. For {{site.data.keyword.Bluemix_notm}} Local, you own the physical security for the local instance. Your data center is secured behind your company firewall.
 
 In SoftLayer network-within-a-network, the public network layer handles public traffic to hosted websites or online resources. The private network layer allows for true out-of-band management through a distinct stand-alone third carrier over SSL, PPTP, or IPSec VPN gateways. The data center to data center network layer provides free and secure connectivity between servers that are housed in separate SoftLayer facilities.
 
@@ -184,7 +185,7 @@ As an application developer, you must enable the security configurations, includ
 
 You can use security capabilities that are provided by several {{site.data.keyword.Bluemix_notm}} services to secure your applications. All {{site.data.keyword.Bluemix_notm}} services that are produced by IBM follow IBM secure engineering development practices.
 
-**Note:** Some of the services described here might not apply to Bluemix Dedicated or Local instances.
+**Note:** Some services described here might not apply to {{site.data.keyword.Bluemix_notm}} Dedicated or Local instances.
 
 ### SSO service
 
@@ -246,7 +247,7 @@ For {{site.data.keyword.Bluemix_notm}} *app users*, the **app user flow** is as 
  3. Through the network router.
  4. Reaches the application runtime in the droplet execution agent (DEA).
 
-The {{site.data.keyword.Bluemix_notm}} *developer* follows two main flows, for login and for development and deployment.
+The {{site.data.keyword.Bluemix_notm}} *developer* follows two main flows: for login, and for development and deployment.
  * The **developer login flow** includes the following:
     * For developers who are logging in to {{site.data.keyword.Bluemix_notm}} Public, the flow is as follows:
       1. Through the IBM Single Sign On service.
