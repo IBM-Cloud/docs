@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Last updated: 20 January 2016*
+*Last updated: 28 July 2016*
 
 You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
 {:shortdesc}
@@ -48,7 +48,7 @@ Predefined services are available in {{site.data.keyword.Bluemix_notm}} for mobi
 
 
 
-{{site.data.keyword.Bluemix_notm}} also has experimental services that you can try out. To view all available experimental services, boilerplates, and runtimes, log in to {{site.data.keyword.Bluemix_notm}}, scroll to the bottom of the Catalog, and then click **{{site.data.keyword.Bluemix_notm}} Lab Catalog**.
+{{site.data.keyword.Bluemix_notm}} also has experimental services that you can try out. To view all available experimental services, boilerplates, and runtimes, log in to {{site.data.keyword.Bluemix_notm}}, scroll to the end of the Catalog, and then click **{{site.data.keyword.Bluemix_notm}} Lab Catalog**.
 
 Experimental services might not be stable and can change in ways that are not compatible with earlier versions. These services are not recommended for use in production environments. Support for experimental services is provided through the {{site.data.keyword.Bluemix_notm}} Developers Community. If a problem is investigated by IBM and the problem is determined to be a defect in an experimental service, IBM is not obligated to provide a fix.
 
@@ -221,7 +221,7 @@ To enable an external app or third-party tool to use a {{site.data.keyword.Bluem
     2. From the Catalog, select the service that you want by clicking the service tile. The service details page opens.
     3. In the Add Service window, keep the **App**: list selection as **Leave unbound**. This selection means that the service will not be connected to a {{site.data.keyword.Bluemix_notm}} app.
     4. Make any other selections as needed. Then, click **CREATE**. A service instance is created, and the service Dashboard displays.
-2. In the left navigation pane of the service Dashboard, you can select **Service Credentials** to view or add credentials in JSON format. Use the API key that is displayed as the credentials to connect to the service instance.
+2. In the navigation pane of the service Dashboard, you can select **Service Credentials** to view or add credentials in JSON format. Use the API key that is displayed as the credentials to connect to the service instance.
 
 Your application that runs outside of {{site.data.keyword.Bluemix_notm}} can now access the {{site.data.keyword.Bluemix_notm}} service.
 
@@ -293,14 +293,14 @@ If you have a service instance that is created and bound to apps in one region, 
     
 	Assume that you are starting in the region where you want to use the service instance. To use a service instance that exists in another region, complete the following steps:
 
-      1. Switch to the region where the service instance exists. In the {{site.data.keyword.Bluemix_notm}} top menu bar, expand **Region** or click the **Region** icon, and then select the region where the service instance exists.
+      1. Switch to the region where the service instance exists. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand **Region** or click the **Region** icon, and then select the region where the service instance exists.
 
       2. Retrieve the credentials and the connection parameters from the VCAP_SERVICES environment variable of the service instance in the region where the service exists. Complete the following steps:
 
 	       1. In the {{site.data.keyword.Bluemix_notm}} Dashboard, click your application tile. The Overview page is displayed.
-	       2. In the left navigation pane, click **Environment Variables**. The *VCAP_SERVICES* environment variable details are displayed on the right pane. Record the JSON content for the service instance.
+	       2. In the navigation pane, click **Environment Variables**. The *VCAP_SERVICES* environment variable details are displayed on the right pane. Record the JSON content for the service instance.
 
-      3. Switch to the region where you want to use the service instance. In the {{site.data.keyword.Bluemix_notm}} top menu bar, expand **Region** or click the **Region** icon, and then select the region where you want to use the service instance.
+      3. Switch to the region where you want to use the service instance. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand **Region** or click the **Region** icon, and then select the region where you want to use the service instance.
 
       4. Create a user-provided service instance by using the credentials and connection parameters that you recorded from the *VCAP_SERVICES* environment variable. For information about how to create a user-provided service instance, see [Creating a user-provided service instance](#user_provide_services){: new_window}.
 
@@ -326,8 +326,8 @@ To use a service instance from another service, complete the following steps:
 
 1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click
 the tile for the service that you want to access. The dashboard for the service is displayed.
-2. In the left navigation pane, click *Manage* to authorize the binding from other service instances by using the console of the service instance.
-3. If you want to deny other services access to the service instance, click *Service Access Authorization* in the left navigation pane and then use *Revoke* to remove the service binding. 
+2. In the navigation pane, click **Manage** to authorize the binding from other service instances by using the console of the service instance.
+3. If you want to deny other services access to the service instance, click **Service Access Authorization** in the navigation pane and then use **Revoke** to remove the service binding. 
 
 # rellinks
 {: #rellinks}
