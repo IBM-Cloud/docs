@@ -37,28 +37,16 @@ Puede utilizar las siguientes API.
 
 |**API**                                  |**Descripción**              |
 |-----------------------------------------|-----------------------------|
-|`GET /v1/{geocode or location ID}/forecast/hourly/48hour.json`  |Devuelve la previsión meteorológica para las siguientes 48 horas para una geolocalización en función del formato que se proporcione. Puede proporcionar un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Los datos de previsión por hora pueden contener previsiones por hora hasta un máximo de 48 para cada ubicación. Debe descartar todas las previsiones por hora anteriores para una ubicación cuando
-se reciben datos nuevos.|
-|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |Devuelve las previsiones meteorológicas diarias para 3, 5, 7 o 10 días para una geolocalización en función del formato que se proporcione. El número de días devuelto se especifica en el formato como `3day`, `5day`, `7day` o `10day`. Puede proporcionar un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. La previsión de cada día puede contener una previsión para el día, una previsión para la noche y una previsión de 24 horas. Estos segmentos son objetos independientes
-en las respuestas JSON. Los datos de la previsión diaria no están disponibles a partir de las 3:00 PM hora local. A las 3:00 PM, hora local, la aplicación ya no debe mostrar la previsión del día.|
-|`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|Devuelve previsiones meteorológicas diarias en periodos de 6 horas para 3, 5, 7 o 10 días para una geolocalización en función del formato que se proporcione. El número de días devuelto se especifica en el formato como `3day`, `5day`, `7day` o `10day`. Puede proporcionar un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. La previsión de cada día puede contener una previsión para la mañana, la tarde, la noche y la madrugada. Estos segmentos son objetos independientes
-en las respuestas JSON.|
-|`GET /v1/{geocode or location ID}/observations.json`              |Devuelve las condiciones del tiempo actuales para una geolocalización. Puede proporcionar un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Estas observaciones recientes se mantienen en la base de datos
-hasta 10 minutos en estaciones de informes específicas y 24 horas de observaciones por estación. Los datos
-de observaciones recientes se actualizan continuamente y se sustituyen por una metodología
-de primero en entrar, primero en salir (rotando los datos con la observación más reciente y moviendo las
-observaciones más antiguas al almacenamiento de archivado) basándose
-en la indicación de fecha/hora de las observaciones.|
-|`GET /v1/{geocode or location ID}/observations/timeseries.json`   |Devuelve las
-observaciones actuales y hasta 24 horas de observaciones anteriores, a partir de la fecha y hora actuales,
-para una geolocalización. Puede proporcionar un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Las observaciones meteorológicas se
-recopilan de los dispositivos físicos desplegados en todo el mundo
-y las observaciones meteorológicas actuales.|
+|`GET /v1/{geocode or location ID}/forecast/hourly/48hour.json`  |Devuelve la previsión meteorológica para las siguientes 48 horas para una geolocalización en función del formato que se proporcione. Puede proporcionar un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Los datos de previsión por hora pueden contener previsiones por hora hasta un máximo de 48 para cada ubicación. Debe descartar todas las previsiones por hora anteriores para una ubicación cuando se reciben datos nuevos.|
+|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |Devuelve las previsiones meteorológicas diarias para 3, 5, 7 o 10 días para una geolocalización en función del formato que se proporcione. El número de días devuelto se especifica en el formato como `3day`, `5day`, `7day` o `10day`. Puede proporcionar un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. La previsión de cada día puede contener una previsión para el día, una previsión para la noche y una previsión de 24 horas. Estos segmentos son objetos independientes en las respuestas JSON. Los datos de la previsión diaria no están disponibles a partir de las 3:00 PM hora local. A las 3:00 PM, hora local, la aplicación ya no debe mostrar la previsión del día.|
+|`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|Devuelve previsiones meteorológicas diarias en periodos de 6 horas para 3, 5, 7 o 10 días para una geolocalización en función del formato que se proporcione. El número de días devuelto se especifica en el formato como `3day`, `5day`, `7day` o `10day`. Puede proporcionar un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. La previsión de cada día puede contener una previsión para la mañana, la tarde, la noche y la madrugada. Estos segmentos son objetos independientes en las respuestas JSON.|
+|`GET /v1/{geocode or location ID}/observations.json`              |Devuelve las condiciones del tiempo actuales para una geolocalización. Puede proporcionar un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Estas observaciones recientes se mantienen en la base de datos hasta 10 minutos en estaciones de informes específicas y 24 horas de observaciones por estación. Los datos de observaciones recientes se actualizan continuamente y se sustituyen por una metodología de primero en entrar, primero en salir (rotando los datos con la observación más reciente y moviendo las observaciones más antiguas al almacenamiento de archivado) basándose en la indicación de fecha/hora de las observaciones.|
+|`GET /v1/{geocode or location ID}/observations/timeseries.json`   |Devuelve las observaciones actuales y hasta 24 horas de observaciones anteriores, a partir de la fecha y hora actuales, para una geolocalización. Puede proporcionar un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Las observaciones meteorológicas se recopilan de los dispositivos físicos desplegados en todo el mundo y las observaciones meteorológicas actuales.|
 |`GET /v1/{geocode, country code, state, or area}/alerts.json`      |Devuelve observaciones, avisos, sentencias y advertencias meteorológicas emitidos por el National Weather Service (NWS), Environment Canada y MeteoAlarm (Europa) e incluyen la traducción de la descripción de suceso, nombre de país y titulares de alertas en 49 idiomas. Puede proporcionar un `geocode/{latitude}/{longitude}`, `country/{countrycode}`, `country/{countrycode}/state/{statecode}`/, o `country/{countrycode}/area/{areaid}`.|
 |`GET /v1/alert/{detail_key}/details.json`                         |Devuelve observaciones, avisos, sentencias y advertencias meteorológicas emitidos por el National Weather Service (NWS), Environment Canada y MeteoAlarm (Europa). Los detalles incluyen información detallada sobre la alerta emitida por la autoridad gubernamental meteorológica para el área especificada e incluyen la traducción de la descripción de suceso, nombre de país y titulares de alertas en 49 idiomas.|
 |`GET /v1/{geocode or postal code}/almanac/daily.json`             |Devuelve la información de almanaque diaria (sólo EE.UU.) que se obtiene de las estaciones de observación del National Weather Service desde un periodo de tiempo que comprende de 10 a 30 años o más. La información la recopila y la proporciona el National Climatic Data Center (NCDC). Puede proporcionar un `geocode/{latitude}/{longitude}`, o `location/{PostalLocationId}`.|
 |`GET /v1/{geocode or postal code}/almanac/monthly.json`           |Devuelve la información de almanaque mensual (sólo EE.UU.) que se obtiene de las estaciones de observación del National Weather Service desde un periodo de tiempo que comprende de 10 a 30 años o más. La información la recopila y la proporciona el National Climatic Data Center (NCDC). Puede proporcionar un `geocode/{latitude}/{longitude}`, o `location/{PostalLocationId}`.|
-|`GET /v3/location/{search or point}`                                  |Proporciona la capacidad para buscar un nombre de ubicación o un geocódigo (latitud y longitud) para recuperar un conjunto de ubicaciones que coincidan con la solicitud. El Location Service admite la búsqueda por nombre de ciudad o código postal.|
+|`GET /v3/location/{search or point}`                              |Proporciona la capacidad para buscar un nombre de ubicación o un geocódigo (latitud y longitud) para recuperar un conjunto de ubicaciones que coincidan con la solicitud. El Location Service admite la búsqueda por nombre de ciudad o código postal.|
 *Tabla 1. Resumen de la API de {{site.data.keyword.weather_short}}*
 
 ## Previsiones diarias e intradía
@@ -178,20 +166,12 @@ https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/dai
 |------------------|---------------------------------------------------|
 |`nombre de host`        |La vía de acceso del URL alojada. Por ejemplo, `https://twcservice.mybluemix.net:443/api/weather`.|
 |`versión`         |Iteración actual. Por ejemplo, "v1".|
-|`ubicación`        |El geocódigo o el ID de ubicación. El grupo de ubicación puede ser "geocode" o "location". Por ejemplo, "geocode/45.4214/75.6919" representa a Ottawa, Canadá. Si proporciona una coordenada de geocódigo, la API devuelve datos para la ubicación disponible más
-cercana. Se utilizan puntos como separadores decimales y se utilizan comas para separar los valores de
-latitud y longitud. Si proporciona un geocódigo, los valores de latitud y longitud reales que se utilizan
-se devuelven en los metadatos de la respuesta.|
+|`ubicación`        |El geocódigo o el ID de ubicación. El grupo de ubicación puede ser "geocode" o "location". Por ejemplo, "geocode/45.4214/75.6919" representa a Ottawa, Canadá. Si proporciona una coordenada de geocódigo, la API devuelve datos para la ubicación disponible más cercana. Se utilizan puntos como separadores decimales y se utilizan comas para separar los valores de latitud y longitud. Si proporciona un geocódigo, los valores de latitud y longitud reales que se utilizan se devuelven en los metadatos de la respuesta.|
 |`grupo de productos`   |El producto. Por ejemplo, "observations" o "forecast". Un subgrupo de productos, por ejemplo, "historical", es opcional.|
 |`fecha`            |El tipo de fecha. Por ejemplo, "daily" o "monthly".|
 |`formato`          |El formato. Por ejemplo, "3day", "5day", "7day" o "10day".|
-|`unidades`           |Unidades opcionales en las que se debe devolver la respuesta. La API soporta las unidades de medida English (e), Metric (m) y UK-Hybrid (h). Si proporciona las unidades de medida, pero no
-proporciona un valor, la API devuelve los datos en la unidad de medida que corresponde
-al código de idioma. La unidad de medida predeterminada o solicitada se devuelve en el parámetro de unidades
-en los metadatos de la respuesta.|
-|`idioma`        |Idioma en el que devolver la respuesta. El valor predeterminado es en-US. El
-idioma de traducción predeterminado o solicitado se devuelve en el parámetro de idioma en los metadatos
-de la respuesta.|
+|`unidades`           |Unidades opcionales en las que se debe devolver la respuesta. La API soporta las unidades de medida English (e), Metric (m) y UK-Hybrid (h). Si proporciona las unidades de medida, pero no proporciona un valor, la API devuelve los datos en la unidad de medida que corresponde al código de idioma. La unidad de medida predeterminada o solicitada se devuelve en el parámetro de unidades  en los metadatos de la respuesta.|
+|`idioma`        |Idioma en el que devolver la respuesta. El valor predeterminado es en-US. El idioma de traducción predeterminado o solicitado se devuelve en el parámetro de idioma en los metadatos de la respuesta.|
 *Tabla 2. Detalles de URL*
 
 **Nota**: Las API REST utilizan el estándar ISO 3166 para los códigos de país. Para obtener más información, consulte la
@@ -251,14 +231,11 @@ Los siguientes códigos de error son comunes a todas las API:
 
 |**Error** |**Descripción**                                    |
 |----------|---------------------------------------------------|
-|400       |Solicitud incorrecta. El servidor no ha entendido la solicitud debido a una sintaxis incorrecta. Este código
-de error se implementa para todas las API. La API rechaza la solicitud si se proporcionan
-parámetros no válidos.|
+|400       |Solicitud incorrecta. El servidor no ha entendido la solicitud debido a una sintaxis incorrecta. Este código de error se implementa para todas las API. La API rechaza la solicitud si se proporcionan parámetros no válidos.|
 |401       |No autorizado. La solicitud precisa autenticación.|
 |403       |Prohibido. El servidor ha entendido la solicitud pero se niega a cumplirla.|
 |404       |No encontrado. Si un parámetro necesario no está presente en la solicitud de API, se devuelve el error MissingParameterException con el código de error 404.|
-|500       |Error de servidor interno. El servidor ha encontrado una condición inesperada que le ha impedido
-cumplir la solicitud.|
+|500       |Error de servidor interno. El servidor ha encontrado una condición inesperada que le ha impedido cumplir la solicitud.|
 *Tabla 4. Código de respuesta de error*
 
 La respuesta de error es siempre la mismo. Se pueden devolver varios códigos de error en una respuesta.
