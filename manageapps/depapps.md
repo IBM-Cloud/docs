@@ -14,7 +14,7 @@ copyright:
 #Deploying apps
 {: #deployingapps}
 
-*Last updated: 9 May 2016*
+*Last updated: 28 July 2016*
 {: .last-updated}
 
 You can deploy applications to {{site.data.keyword.Bluemix}} by using various methods, such as the command line interface and integrated development environments (IDEs). You can also use application manifests to deploy applications. By using an application manifest, you reduce the number of deployment details that you must specify every time that you deploy an application to {{site.data.keyword.Bluemix_notm}}.
@@ -399,7 +399,7 @@ User-defined environment variables are specific for an application. You have the
 
   * Use the {{site.data.keyword.Bluemix_notm}} user interafce. Complete the following steps:
     1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click your app tile. The App details page is displayed.
-	2. On the left navigation pane, click **Environment Variables**.
+	2. Click **Environment Variables**.
 	3. Click **USER-DEFINED**, then click **ADD**.
 	4. Fill in the required fields, then click **SAVE**.
   * Use the cf command line interface. Add a user-defined variable by using the `cf set-env` command. For example: 
