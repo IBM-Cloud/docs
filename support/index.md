@@ -27,7 +27,7 @@ To open a support ticket or find other help options, you can go to Account and S
 ### Using Account and Support
 Account and Support is a feature that enables you to check account information, view status, stay up to date with notifications, select your region, select and manage orgs, and log out. In addition, you can get help and provide feedback.
 
-To open Account and Support, log in to the {{site.data.keyword.Bluemix_notm}} user interface and click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar.
+To open Account and Support, log in to the {{site.data.keyword.Bluemix_notm}} user interface and click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the menu bar.
 
 Click **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
 
@@ -67,7 +67,7 @@ On the Status page, you can find the following information:
 
 You can find the Status page by choosing either of the following options:
 
-  * Log in to the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](./images/account_support.svg) in the top menu bar, and then click **Status**. Check the listed resources for the ![some issues](images/some_issues.svg) icon. This icon might indicate an outage.
+  * Log in to the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](./images/account_support.svg) in the menu bar, and then click **Status**. Check the listed resources for the ![some issues](images/some_issues.svg) icon. This icon might indicate an outage.
   * Access it directly at [IBM {{site.data.keyword.Bluemix_notm}} - System Status](https://status.eu-gb.bluemix.net/){: new_window}.
 
 
@@ -107,7 +107,7 @@ You can also use a third-party service to automatically send an email for each R
 
   * Check for current maintenance windows or an incident in progress
 
-	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar or the [IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window} help page.
+	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the **Account and Support** icon ![Account and Support](images/account_support.svg) in the menu bar or the [IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window} help page.
 
   * Take advantage of multiple {{site.data.keyword.Bluemix_notm}} regions
 
@@ -153,7 +153,7 @@ If you are unable to resolve your technical problem with the troubleshooting and
 If the problem is not due to an outage, and you are a customer in a country or region excluding China, open a support ticket by using one of the following options:
 
   * From Account and Support, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
-  * Use the [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} help page. You can submit tickets for sales, billing, IBM id and login, and technical support problems. For technical support problems, you can further select a technical group after you click the **Technical Support** tile. For example, if you need help with Cloud Foundry apps, OpenWhisk, Containers, Virtual Servers, or Bare Metal servers, you can choose **Application Services**. If you need help with a specific service, select the corresponding service category. To determine the category that your service belongs to, see categories under [Services](../services/index.html){: new_window} in the left navigation pane.  
+  * Use the [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} help page. You can submit tickets for sales, billing, IBM id and login, and technical support problems. For technical support problems, you can further select a technical group after you click the **Technical Support** tile. For example, if you need help with Cloud Foundry apps, OpenWhisk, Containers, Virtual Servers, or Bare Metal servers, you can choose **Application Services**. If you need help with a specific service, select the corresponding service category. To determine the category that your service belongs to, see categories under [Services](../services/index.html){: new_window} in the navigation pane.  
   * From [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. After you sign in to the portal, click **Open Ticket**, and then fill in the support form. 
   
 
@@ -180,7 +180,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer, support is p
 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a> help page. You can use an email address or your IBM id for this form. Select the **{{site.data.keyword.Bluemix_notm}} Dedicated** option for the Region field.
 <p>Form submissions are monitored from Sunday 10:00 PM UTC through Friday 11:59 PM UTC.</p>
 </li>
-<li>If you have an IBM id and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the **Account and Support** icon <img src="images/account_support.svg" alt="Account and Support" /> in the top menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
+<li>If you have an IBM id and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the **Account and Support** icon <img src="images/account_support.svg" alt="Account and Support" /> in the menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
 <li>If you don't have an IBM id, you can contact someone in your organization who does have one, or work with your IBM representative.
 <p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Dedicated environment.</p></li>
 </ul>
@@ -200,7 +200,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Local customer, support is provi
 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a> help page. You can use an email address or your IBM id for this form. Select the **{{site.data.keyword.Bluemix_notm}} Local** option for the  Region field.
 <p>Form submissions are monitored from Sunday 10:00 PM UTC through Friday 11:59 PM UTC.</p>
 </li>
-<li>If you have an IBM id and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the **Account and Support** icon <img src="images/account_support.svg" alt="Account and Support" /> in the top menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
+<li>If you have an IBM id and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the **Account and Support** icon <img src="images/account_support.svg" alt="Account and Support" /> in the menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
 <li>If you don't have an IBM id, you can contact someone in your organization who does have one, or work with your IBM representative.
 <p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Local environment.</p></li>
 </ul>
