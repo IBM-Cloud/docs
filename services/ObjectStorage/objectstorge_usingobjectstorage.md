@@ -565,7 +565,7 @@ The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog
 
 ## Using {{site.data.keyword.Bluemix_notm}} Fine-grained Access Control with IBM {{site.data.keyword.objectstorageshort}} {: #fine-grained-access-control}
 
-If you have multiple users saving files in the same container you can use Fine-grained Access Control Lists, or ACLs, to keep them from seeing each others files. ACLs are enabled at the container level and are not available for the service instance, storage account, or at the project level.
+If you have multiple users storing files in the same container you can use Fine-grained Access Control Lists, or ACLs, to keep them from seeing each others files. ACLs are enabled at the container level and are not available for the service instance, storage account, or at the project level.
 
 
 
@@ -931,7 +931,6 @@ X-Storage-Policy: standard
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
-
 
 
 
