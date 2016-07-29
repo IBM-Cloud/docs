@@ -677,7 +677,7 @@ You can manage {{site.data.keyword.objectstorageshort}} users in the Service Cre
   ```
   cURL command:
   ```
-  "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <bearer_token>" -H "Cookie: "
+  curl "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <bearer_token>" -H "Cookie: "
   ```
 
 You created and added a member to your  {{site.data.keyword.objectstorageshort}} instance.  However, this user does not have permission to read or write to any container. You must explicitly grant access to each container you want the member to have access to.
