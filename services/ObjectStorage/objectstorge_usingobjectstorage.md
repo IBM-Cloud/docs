@@ -74,6 +74,12 @@ Install the Python Swift client by using Python pip:
 
 	sudo pip install python-swiftclient
 
+
+Install the Python Keystone client by running the following command:
+
+	sudo pip install python-keystoneclient
+
+
 ### Setting up the client {: #setup-swift-client}
 
 The Swift client takes the authentication information from the following environment variables:
@@ -554,6 +560,380 @@ An example response is as follows. The response is trimmed to show only the {{si
 The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog. The Service Catalog is contained in the response body of the token request. The response is a full catalog of OpenStack services that are available. Select the endpoint from the Service Catalog with type of ```object-store``` and the region that matches the region field in the credentials.
 
 **Note:** Use the public interface (`publicURL`). The internal interface (`internalURL`) is not accessible from {{site.data.keyword.Bluemix_notm}}.
+
+
+
+## Using {{site.data.keyword.Bluemix_notm}} Fine-grained Access Control with IBM {{site.data.keyword.objectstorageshort}} {: #fine-grained-access-control}
+
+If you have multiple users saving files in the same container you can use Fine-grained Access Control Lists, or ACLs, to keep them from seeing each others files. ACLs are enabled at the container level and are not available for the service instance, storage account, or at the project level.
+
+
+
+### {{site.data.keyword.objectstorageshort}} users vs {{site.data.keyword.Bluemix_notm}} users {: #users}
+
+
+#### {{site.data.keyword.objectstorageshort}} users
+
+{{site.data.keyword.objectstorageshort}} uses Cloud Foundry Service Keys backed by the OpenStack Identity Service to manage users. The Identity Service provides for user authentication using tokens and authorization using ACLs.
+
+The {{site.data.keyword.Bluemix_notm}} GUI creates a default administrative user when an {{site.data.keyword.objectstorageshort}} instance is created. This is the user that manages access to the storage service instance.
+
+For more information about service keys, see [the Cloud Foundry documentation](https://docs.cloudfoundry.org/devguide/services/service-keys.html).
+
+
+#### {{site.data.keyword.Bluemix_notm}} platform users
+
+The {{site.data.keyword.Bluemix_notm}} Single Sign On service authenticates platform users against the IBM identity provider. The account owner can manage the roles of existing team members in the organization and spaces, as well as invite new team members. Currently, fine-grained access control cannot be enabled for the users assigned to your space. All users that have access to the space containing the {{site.data.keyword.objectstorageshort}} service have full management access to the lifecycle of the service.
+
+For more information about user roles, see [the {{site.data.keyword.Bluemix_notm}} documentation](https://new-console.ng.bluemix.net/docs/admin/users_roles.html).
+
+
+
+### Authorizing {{site.data.keyword.objectstorageshort}} users {: #authorizing-users}
+
+Access to the service is controlled by user roles and container ACLs. {{site.data.keyword.objectstorageshort}} users can be either administrative or non-administrative.
+
+<table>
+  <tr>
+    <th> Administrative users (admin) </th>
+    <th> Non-administrative users (member) </th>
+  </tr>
+  <tr>
+    <td> Manage access control </td>
+    <td> By default, have no access to the service or its containers </td>
+  </tr>
+  <tr>
+    <td> Can create and delete containers </td>
+    <td> Can perform actions based on the containers read/write ACLs </td>
+  </tr>
+  <tr>
+    <td> Can read and write to containers </td>
+    <td> Can perform actions as determined by the admin </td>
+  </tr>
+</table>
+
+*Table 1: User roles defined*
+
+
+Container ACLs can be defined to manage access to objects in Swift containers. You can use read access so that users are only allowed to download objects, or you can allow users to download and list objects. Write access allows the user to upload new objects to a container.
+
+Note: Procedures outlined in this doc require the Swift CLI. For more information, see [using {{site.data.keyword.objectstorageshort}} with the Swift CLI](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli).
+
+
+
+### Managing {{site.data.keyword.objectstorageshort}} users {: #managing-users}
+
+You can manage {{site.data.keyword.objectstorageshort}} users in the Service Credential tab on your dashboard, the Cloud Foundry API, or the Cloud Foundry CLI. You can create administrative users using the GUI, CF API, or CF CLI. To create a member, you must be an admin user and use the CF API or CF CLI.
+
+
+
+### Creating a user with the member role {: #creating-member}
+
+1. Log into {{site.data.keyword.Bluemix_notm}} as a user with a developer role. You must be located within the space of the service instance you want to manage.
+
+  ```
+  cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
+  ```
+
+2. Create a Service Key for a member using the following format. This creates service credentials with non-admin privileges. You can use either the Cloud Foundry command or the cURL command.
+
+  Cloud Foundry command:
+  ```
+  cf create-service-key <object_storage_service_instance_name> <service-key-name> -c '{"role":"member"}'
+  ```
+
+  Example:
+
+  ```
+  cf create-service-key Object-Storage-Acl-Test-member member1 -c '{"role":"member"}'
+
+  ```
+  cURL command:
+  ```
+  "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name": "<user_name>", "role": "member"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: " -H "Cookie: "
+  ```
+
+3. List credentials for the Service Key Object-Storage-ACL-Test.
+
+  Cloud Foundry command:
+  ```
+  cf service-key <service_key_name> <member_name>
+  ```
+  Example:
+  Creating a member service key for a service instance named Object-Storage-Acl-Test as an admin.
+  ```
+  {
+    "auth_url": "https://identity.open.softlayer.com",
+    "domainId": "8753ff40ac1a4f4a9f162ad8026b6ce0",
+    "domainName": "757955",
+    "password": "xxxxxxxx",
+    "project": "object_storage_6046b6e2_ee53_4884_916f_89c65e4d408e",
+    "projectId": "c727d7e248b448f6b268f31a1bd8691e",
+    "region": "dallas",
+    "role": "member",
+    "userId": "3c5b516655e4479881d3d216895faedb",
+    "username": "member_2afbeea1d58b1867f46c699553d1e4513e7df83a"
+  }
+  ```
+  cURL command:
+  ```
+  "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <bearer_token>" -H "Cookie: "
+  ```
+
+You created and added a member to your  {{site.data.keyword.objectstorageshort}} instance.  However, this user does not have permission to read or write to any container. You must explicitly grant access to each container you want the member to have access to.
+
+
+
+### Granting a member read access to an {{site.data.keyword.objectstorageshort}} container {: #member-read-access}
+
+Only an admin user can grant read access to a container for a member user using the Swift CLI with the `-read-acl` or `-r` option.
+
+To grant read access you can use either Swift commands or cURL commands.
+
+1. Authenticate your credentials using a CF Service Key.  You will get your Object Storage URL and authentication token as an output.
+
+  Swift command:
+  ```
+  export OS_USER_ID=<user_id>>
+  export OS_PASSWORD=<password>
+  export OS_TENANT_ID=<tenant_id>
+  export OS_AUTH_URL=https://identity.open.softlayer.com/v3
+  export OS_REGION_NAME=<region>
+  export OS_IDENTITY_API_VERSION=3
+  export OS_AUTH_VERSION=3
+
+  swift auth
+  ```
+  cURL command:
+  ```
+  curl -i -H "X-Auth-User: <user_id>" -H "X-Auth-Key: <password>" <auth_url>
+  ```
+2. Create a container.
+
+  Swift command:
+  ```
+  swift post <container_name>
+  ```
+  cURL command:
+  ```
+  curl -i <OS_STORAGE_URL> -X PUT -H "X-Auth-Token:<OS_AUTH_TOKEN>"
+  ```
+3. As an admin, grant read access by running the following command:
+
+  Swift command:
+  ```
+  swift post <container_name> --read-acl "<user_id>:<project_id>"
+  ```
+  cURL command:
+  ```
+  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: <tenant_id>:<project_id>" -H "X-Auth-Token: <OS_AUTH_TOKEN>"
+  ```
+4. As an admin, verify the Read ACL value.
+
+  Swift command:
+  ```
+  swift stat <container_name>
+  ```
+  cURL command:
+  ```
+  curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token:<OS_AUTH_TOKEN>"
+  ```
+  Example output:
+  ```
+  HTTP/1.1 204 No Content
+  Content-Length: 0
+  X-Container-Object-Count: 1
+  Accept-Ranges: bytes
+  X-Storage-Policy: standard
+  X-Container-Read: c727d7e248b448f6b268f31a1bd8691e:3c5b516655e4479881d3d216895faedb
+  X-Container-Bytes-Used: 31512
+  X-Timestamp: 1462818314.11220
+  Content-Type: text/plain; charset=utf-8
+  X-Trans-Id: txad7fe001da274b9ba39a6-005772e4d6
+  Date: Tue, 28 Jun 2016 20:57:58 GMT
+  ```
+
+
+
+### Manipulating read ACLs {: #manipulating-read-acls}
+
+You can manipulate read ACL combinations.
+
+<table>
+  <tr>
+    <th> Permission </th>
+    <th> Read ACL options </th>
+  </tr>
+  <tr>
+    <td> Read for all referers </td>
+    <td> `.r,*` </td>
+  </tr>
+  <tr>
+    <td> Read and list for all referers and listing </td>
+    <td> `.r:*,.rlistings` </td>
+  </tr>
+  <tr>
+    <td> Read and list for a specified user in a specific project </td>
+    <td> `< project_id>:< user_id>` </td>
+  </tr>
+  <tr>
+    <td> Read and list for a specified user in every project </td>
+    <td> `<*>:< user_id>` </td>
+  </tr>
+  <tr>
+    <td> Read and list for a every user in a specified project </td>
+    <td> `< project_id>:<*>` </td>
+  </tr>
+  <tr>
+    <td> Read and list for every user in every project  </td>
+    <td> `<*>:<*>` </td>
+  </tr>
+</table>
+
+*Table 2: ACL options that are available to manipulate object read ACLs*
+
+Note: Use a comma (,) to separate ACLs. For example, `-read-acl project id:user_id1, project_id2:user_id2`.
+
+Note: The `.r:*` ACL specifies access for any referer regardless of account affiliation or user name. The `.rlistings` ACL allows to list the containers and read (download) objects.
+
+
+
+### Granting write access to a container for an  {{site.data.keyword.objectstorageshort}} member {: #member-write-access}
+
+Only an admin user can grant write access to a container. Access is granted through the Swift CLI with the `-write-acl` or `-w` option.
+
+To grant write access you can use either Swift commands or cURL commands.
+
+1. Authenticate your credentials using a CF Service Key.  You will get your Object Storage URL and authentication token as an output.
+
+  Swift command:
+  ```
+  export OS_USER_ID=<user_id>
+  export OS_PASSWORD="<password>"
+  export OS_TENANT_ID=<tenant_id>
+  export OS_AUTH_URL=https://identity.open.softlayer.com/v3
+  export OS_REGION_NAME=<region>
+  export OS_IDENTITY_API_VERSION=3
+  export OS_AUTH_VERSION=3
+
+  swift auth
+  ```
+  cURL command:
+  ```
+  curl -i -H "X-Auth-User:< user_id>" -H "X-Auth-Key:< password>" https://identity.open.softlayer.com/v3
+  ```
+2. Grant write access by running the following command:
+
+  Swift command:
+  ```
+  swift post <container_name> --write-acl "<user_id>:<project_id>"
+  ```
+  cURL command:
+  ```
+  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: <user_id>: <project_id>" -H "X-Auth-Token:<OS_AUTH_TOKEN>"
+
+  ```
+3. Verify the write ACL value.
+
+  Swift command:
+  ```
+  swift stat <container_name>
+  ```
+  cURL command:
+  ```
+  curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token:<OS_AUTH_TOKEN>"
+  ```
+
+
+
+### Manipulating write ACLs {: #manipulating-write-acls}
+
+You can manipulate write ACL combinations.
+
+<table>
+  <tr>
+    <th> Permission </th>
+    <th> Write ACL options </th>
+  </tr>
+  <tr>
+    <td> Write for a specified user in a specific project </td>
+    <td> `<project_id>:<user_id>` </td>
+  </tr>
+  <tr>
+    <td> Write for a specified user in every project </td>  
+    <td> `*:<user_id>` </td>
+  </tr>
+  <tr>
+    <td> Write for every user in a specified project </td>
+    <td> `<project_id>:<*>` </td>
+  </tr>
+  <tr>
+    <td> Write for every user in every project </td>
+    <td> `<*>:<*>` </td>
+  </tr>
+</table>
+
+*Table 3: Write ACL permissions by option*
+
+Note: Use a comma (,) to separate ACLs. For example, `-write-acl project id:user_id1, project_id2:user_id2`.
+
+
+
+### Removing access control from a container {: #removing-access}
+
+- To remove read ACLs from a container:
+
+  Swift command:
+  ```
+  swift post <container_name> --read-acl “”
+  ```
+  cURL command:
+  ```
+  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
+  ```
+
+- To remove write ACLs from a container:
+
+  Swift command:
+  ```
+  swift post <container_name> --write-acl “”
+  ```
+  cURL command:
+  ```
+  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
+  ```
+
+- To verify you have removed an ACL:
+
+  Swift command:
+  ```
+  swift stat <container_name>
+  ```
+
+  Example output:
+  ```
+         Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
+       Container: Test
+         Objects: 1
+           Bytes: 31512
+        Read ACL:
+       Write ACL:
+         Sync To:
+        Sync Key:
+   Accept-Ranges: bytes
+X-Storage-Policy: standard
+     X-Timestamp: 1462818314.11220
+      X-Trans-Id: txf04968bc9ef8431982b77-005772e34b
+    Content-Type: text/plain; charset=utf-8
+
+  ```
+  cURL command:
+  ```
+  curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
+  ```
+
+
+
 
 
 ## Unbinding and deprovisioning {{site.data.keyword.objectstorageshort}} {: #deprovisioning-object-storage}
