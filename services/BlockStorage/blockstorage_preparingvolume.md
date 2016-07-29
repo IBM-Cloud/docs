@@ -4,7 +4,7 @@
 # Preparing {{site.data.keyword.blockstorageshort}} volumes 
 {: #preparing-block-storage-volume}
 
-Last updated: 26 July 2016
+Last updated: 29 July 2016
 {: .last-updated}
 
   After you create your volume and attach it to a virtual server, you must mount and prepare the volume to be used.
