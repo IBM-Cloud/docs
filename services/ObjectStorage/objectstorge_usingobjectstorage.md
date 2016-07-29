@@ -563,7 +563,7 @@ The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog
 
 
 
-## Using Fine-grained Access Control with IBM {{site.data.keyword.objectstorageshort}} {: #fine-grained-access-control}
+## Using {{site.data.keyword.Bluemix_notm}} Fine-grained Access Control with IBM {{site.data.keyword.objectstorageshort}} {: #fine-grained-access-control}
 
 If you have multiple users saving files in the same container you can use Fine-grained Access Control Lists, or ACLs, to keep them from seeing each others files. ACLs are enabled at the container level and are not available for the service instance, storage account, or at the project level.
 
@@ -650,10 +650,10 @@ You can manage {{site.data.keyword.objectstorageshort}} users in the Service Cre
   ```
   cURL command:
   ```
-  "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name": "<user_name>", "role": "member"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: " -H "Cookie: "
+  curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name": "<user_name>", "role": "member"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: " -H "Cookie: "
   ```
 
-3. List credentials for the Service Key Object-Storage-ACL-Test.
+3. Validate credentials for the Service Key you created.
 
   Cloud Foundry command:
   ```
