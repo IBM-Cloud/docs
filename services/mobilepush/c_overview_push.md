@@ -58,7 +58,11 @@ Tag notifications are notification messages that are targeted to all the devices
 
 ###Unicast notifications
 
-Unicast notifications are notification messages that are targeted to a particular device . Unicast notifications do not require any additional setup and are enabled by default when the application is enabled for push notifications. To send a Unicast notification that uses the REST API, make sure that the deviceIds are provided when posting to a message resource.
+Unicast notifications are notification messages that are targeted to a particular device or user. Unicast notifications targeted to devices do not require any additional setup and are enabled by default when the application is enabled for push notifications.  
+
+However, Unicast Notifications targed to users require i) associating a userId with a device at the time of registering the mobile device for PushNotifications  ii) authorizing such a userId registration by passing a 'clientSecret' which is allocated when provisioning the PushNotifications service.  Typically a mobile application will first run a authentication cycle where the mobile app user is authenticated against a authentication service [like Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html).  On successful authentication the authenticated userID is then passed into the Push Device Registration API along with a clientSecret.  The presence of a clientSecret enforces only authorized association of UserIds with mobile device registrations.
+
+To send a Unicast notifications via the REST API, make sure that the deviceIds or userIds are provided when posting to a message resource.
 
 ###Platform-based notifications
 
