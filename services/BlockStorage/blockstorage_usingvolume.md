@@ -2,18 +2,8 @@
 
 # Using {{site.data.keyword.blockstorageshort}} volume {: #using-block-storage-volume} 
 
-*Last updated: 20 June 2016*
+*Last updated: 29 July 2016*
 {: .last-updated}
-
-## Creating a volume {: #creating-volume} 
-
-1.	Click **Create** to start the **Create Volume** dialog.
-2.	Provide the size of the volume that you want. Decimal numbers are not accepted. The size is limited by the quota that is assigned to your organization.
-3.	Provide a name. The name is for display purposes only.
-4.	Optionally, provide a more detailed description of the volume. 
-5.	Click **Create** to submit the information and close the dialog. 
-
-Creating a volume can take a few moments. 
 
 ## Deleting a volume {: #deleting-volume}
 
