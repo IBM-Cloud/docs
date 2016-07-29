@@ -5,7 +5,7 @@
 # Attaching {{site.data.keyword.blockstorageshort}} volumes to a virtual server
 {: #attaching-block-storage-volume}
 
-Last updated: 26 July 2016
+Last updated: 29 July 2016
 {: .last-updated}
 
 Volumes are attached and detached from virtual servers as devices with a specific device name. For a virtual server to be able to persist data on a volume, you must attach the volume to the virtual server.
