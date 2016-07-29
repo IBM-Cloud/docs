@@ -42,7 +42,7 @@ npm install hfc -g
 ```
 
 ```js
-var hlc = require('hlc');
+var hfc = require('hfc');
 ```
 
 ## Web Application
@@ -58,14 +58,14 @@ Explore the remainder of the application to see member enrollment, issuing of tr
 
 ```js
 // Include the package from npm:
-var hlc = require('hlc');
+var hfc = require('hfc');
 
 // Create a client chain.
-var chain = hlc.newChain("targetChain");
+var chain = hfc.newChain("targetChain");
 
 // Configure the KeyValStore which is used to store sensitive keys
 // as so it is important to secure this storage.
-chain.setKeyValStore( hlc.newFileKeyValStore('/tmp/keyValStore') );
+chain.setKeyValStore( hfc.newFileKeyValStore('/tmp/keyValStore') );
 
 // Set the URL for member services
 chain.setMemberServicesUrl("grpc://localhost:50051");
