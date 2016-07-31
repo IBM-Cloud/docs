@@ -7,14 +7,15 @@ copyright:
 
 # Enabling Facebook authentication for web applications
 
-*Last updated: 20 July 2016*
+Last updated: 27 July 2016
 {: .last-updated}
 
-Use Facebook to authenticate users on your web app. Add {{site.data.keyword.amashort}} security functionality.
+Use Facebook to authenticate users on your web app. Add {{site.data.keyword.amashort}} security functionality. 
 
 ## Before you begin
 {: #facebook-auth-android-before}
 You must have:
+
 * A web app. 
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by the {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
 * The URI for the final redirect (after the authorization process completes).
@@ -23,35 +24,35 @@ You must have:
 ## Configuring a Facebook application for your website
 To use Facebook as an identity provider on your website, you must add and configure the website platform on your Facebook application.
 
-1. Log in to the Facebook Developers Portal (https://developers.facebook.com).
+1. Log in to the [Facebook Developers Portal](https://developers.facebook.com).
 2. Open or create your app.
-1. Note the **Application ID**  and **App Secret**. You need these values when you configure your web project for Facebook authentication in the {{site.data.keyword.amashort}} dashboard.
-1. Add the Website platform if it does not exist.
-1. Add or open the **Facebook Login** from the Products list.
-1. Enter the authorization server callback endpoint URI in the **Valid OAuth redirect URIs** box. Find this authorization redirect URI in the  {{site.data.keyword.amashort}} dashboard configuration steps below.
-2. Save changes.
+3. Note the **Application ID**  and **App Secret**. You need these values when you configure your web project for Facebook authentication in the {{site.data.keyword.amashort}} dashboard.
+4. Add the **Website** platform, if it does not exist.
+5. Add or open the **Facebook Login** from the Products list.
+6. Enter the authorization server callback endpoint URI in the **Valid OAuth redirect URIs** box. Find this authorization redirect URI in the {{site.data.keyword.amashort}} dashboard configuration steps that follow.
+7. Save changes.
 
 
 
 
-# Configuring {{site.data.keyword.amashort}} for Facebook authentication
+## Configuring {{site.data.keyword.amashort}} for Facebook authentication
 After you have your Facebook Application ID and App Secret, and your Facebook Application has been configured to serve web clients, you can enable Facebook authentication in the {{site.data.keyword.Bluemix_notm}}  dashboard.
 
 1. Open the {{site.data.keyword.Bluemix_notm}} dashboard.
-1. Click the relevant app tile. The app loads.
-2. Click the tile for the  {{site.data.keyword.amashort}} service.
-1. Click the **Configure** button in the **Facebook** panel.
-2. Note the value in the **Mobile Client Access Redirect URI for Facebook Developer Console** textbox. This is the value you need to add to the **Valid OAuth redirect URIs** box in the **Facebook Login** of the Facebook Developers Portal in step 6 above.
-1. Enter the Facebook **Application ID** and **App Secret**.
-2. Enter the redirect URI in the **Your Web Application Redirect URIs**. This value is for the redirect URI to be accessed after the authorization process is completed, and is determined by the developer.
-3. Click **Save**.
+2. Click the relevant app tile to load the app.
+3. Click the tile for the  {{site.data.keyword.amashort}} service.
+4. Click the **Configure** button in the **Facebook** panel.
+5. Note the value in the **Mobile Client Access Redirect URI for Facebook Developer Console** text box. You need this value to add to the **Valid OAuth redirect URIs** box in the **Facebook Login** of the Facebook Developers Portal in step six of Configuring a Facebook application for your website.
+6. Enter the Facebook **Application ID** and **App Secret**.
+7. Enter the redirect URI in the **Your Web Application Redirect URIs**. This value is for the redirect URI to be accessed after the authorization process is completed, and is determined by the developer.
+8. Click **Save**.
 
 
 
 
 ## Implementing the {{site.data.keyword.amashort}} authorization flow using Facebook as identity provider
 
-The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties necessary for the authorization process. It consists of a JSON object and can be viewed by clicking  **Enviroment Variables**  in the left-side navigator of your application.
+The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties necessary for the authorization process. It consists of a JSON object and can be viewed by clicking  **Environment Variables**  in <!--the left-side navigator of--> your application.
 
 To start the process of authorization:
 
@@ -76,7 +77,7 @@ To start the process of authorization:
 
 
 
-The example below retrieves the parameters from the `VCAP_SERVICES` variable, building the URL, and sending the redirect request.
+The following example retrieves the parameters from the `VCAP_SERVICES` variable, building the URL, and sending the redirect request.
 
   ```Java
   var cfEnv = require("cfenv"); 
@@ -97,7 +98,7 @@ The example below retrieves the parameters from the `VCAP_SERVICES` variable, bu
         var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
         var clientId = mcaCredentials.clientId;   
         var redirectUri = "http://some-server/oauth/callback"; 
-         // Your web application redirect uri   
+         // Your web application redirect URI   
 
         var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   
@@ -115,13 +116,14 @@ The example below retrieves the parameters from the `VCAP_SERVICES` variable, bu
 
  After redirecting to the authorization endpoint, the user will get a login form from 
 Facebook. After Facebook authorizes the user's identity the {{site.data.keyword.amashort}} service will call your web application redirect URI, supplying the grant code as a query parameter.  
+
 ## Obtaining the tokens
 
 The next step is to obtain the access and identity tokens using the previously received grant code:
 
  1.  Retrieve token `tokenEndpoint`, `clientId`, and `secret`  from service credentials stored in `VCAP_SERVICES` environment variable. 
  
-    **Note:** In case you've used Mobile Client Access before web support was added you might not have token endpoint in service credentials. In this case use below urls depending on your Bluemix region instead: 
+    **Note:** If you used {{site.data.keyword.amashort}} before web support was added, you might not have a token endpoint in service credentials. Instead, use the following URLs, depending on your Bluemix region: 
 
     US South: 
     ```
@@ -190,15 +192,16 @@ The identity token contains information about user identity. In case of Facebook
 The access token enables communications with resources protected by {{site.data.keyword.amashort}} authorization filters, see see [Protecting Resources](protecting-resources.html).
 
 
-In order to make requests to protected resources, add an authorization header to requests with the following structure: 
+To make requests to protected resources, add an authorization header to requests with the following structure: 
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-**Note:** 
+#### Tips
+{: tips} 
 
-* The `accessToken` and `idToken` must be separated by a white space.
+* You must separate the `accessToken` and `idToken` with a white space.
 
-* The `idToken` is optional. In the case where you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
+* The `idToken` is optional. If you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
  
 
 
