@@ -35,7 +35,7 @@ To get up and running with the {{site.data.keyword.amashort}} service:
 	####Client development
    {: #client-development}
    
-	You can add the {{site.data.keyword.amashort}} SDK to your existing Android,iOS, or Cordova app, as follows: 
+	You can add the {{site.data.keyword.amashort}} SDK to your existing Android, iOS, or Cordova app, as follows: 
    * Android: ([Setting up the Android SDK](getting-started-android.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
   
    * iOS (Swift SDK): ([Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html))
