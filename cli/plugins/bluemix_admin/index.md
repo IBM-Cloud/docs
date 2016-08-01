@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
-*Last updated: 26 June 2016*
+Last updated: 1 August 2016
 {: .last-updated}
 
 
@@ -63,6 +63,12 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
+If you need to uninstall the plug-in, you can use the following commands, then you can add the updated repository and install the latest plug-in:
+
+* Uninstall the plug-in: `cf uninstall-plugin-repo BluemixAdmin https://console.<subdomain>.bluemix.net/cli`
+* Remove the plugin repository: `cf remove-plugin-repo BluemixAdmin`
+
+
 ## Using the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
 
 You can use the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks. To see a list of commands, run the following
@@ -104,13 +110,15 @@ cf login
 ### Adding a user
 
 You can add a user to your
-{{site.data.keyword.Bluemix_notm}} environment from
-an LDAP registry. Enter the following command:
+{{site.data.keyword.Bluemix_notm}} environment from the
+user registry for your environment. Enter the following command:
 
 ```
 cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
+
+**Note**: To add a user to a specific organization, you must be the manager of the organization, or you must have **Admin** or **User** permission with **Write** access.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -567,3 +575,210 @@ entering the following command:
 
 **Tip:** You can also use **ba usb** as an alias for the longer
 **ba update-service-broker** command name.
+
+<!-- staging only start -->
+
+### Working with application security groups
+
+To work with Application security groups (ASGs), you must be a full access administrator for the local or dedicated environment. All users of the environment can list the available ASGs for the organization that is being targeted with the command, but in order to create, update, or bind ASGs, you must be an administrator for the {{site.data.keyword.Bluemix_notm}} environment.
+
+ASGs are put in place to act as virtual firewalls which control outbound traffic from the applications in your {{site.data.keyword.Bluemix_notm}} environment. Each ASG consists of a list of rules allowing specific traffic and communication to and from the outside network. You can bind one or more ASGs to a specific security group set, for example all running apps or all staging apps which are Cloud Foundry security groups used for applying global access, or you can bind to spaces within an organization in your {{site.data.keyword.Bluemix_notm}} environment.
+
+{{site.data.keyword.Bluemix_notm}} is initially set up with all access to the outside network restricted. IBM created two security groups, `public_networks` and `dns`, to enable global access to the outside network by binding these groups to default Cloud Foundry security groups sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets, which apply the allow rules to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information see, [Binding Application Security Groups](http://docs.pivotal.io/pivotalcf/1-6/adminguide/app-sec-groups.html#binding-groups).
+
+**Note**: The following commands that enable you to work with security groups are based on the Cloud Foundry 1.6 version.
+
+#### Listing, creating, updating, and deleting security groups
+
+For more information about creating security groups and the rules that define outgoing traffic, see [Creating and Updating Application Security Groups](http://docs.pivotal.io/pivotalcf/1-6/adminguide/app-sec-groups.html#creating-groups).
+
+* You can list all security groups by
+entering the following command:
+
+```
+cf ba security-groups
+```
+{: codeblock}
+
+**Tip:** You can also use **ba sgs** as an alias for the longer
+**ba security-groups** command name.
+
+* You can display a specific security group's details by
+entering the following command:
+
+```
+cf ba security-groups <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Name of the security group</dd>
+</dl>
+
+**Tip:** You can also use **ba sg** as an alias for the longer
+**ba security-groups** command name with the `security-group` parameter.
+
+
+* You can create a security group by
+entering the following command. Each security group that you create has the prefix `adminconsole_` added to the name to distinguish it from the IBM-created security groups.
+
+```
+cf ba create-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Name of your security group</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">Absolute or relative path to a rules file</dd>
+</dl>
+
+**Tip:** You can also use **ba csg** as an alias for the longer
+**ba create-security-group** command name.
+
+* You can update a security group by
+entering the following command:
+
+```
+cf ba update-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Name of your security group</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">Absolute or relative path to a rules file</dd>
+</dl>
+
+**Tip:** You can also use **ba usg** as an alias for the longer
+**ba update-security-group** command name.
+
+* You can delete a security group by
+entering the following command:
+
+```
+cf ba delete-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Name of your security group</dd>
+</dl>
+
+**Tip:** You can also use **ba dsg** as an alias for the longer
+**ba delete-security-group** command name.
+
+
+#### Binding, unbinding, and listing bound security groups
+
+For more information about binding and unbinding security groups, see [Binding Application Security Groups](http://docs.pivotal.io/pivotalcf/1-6/adminguide/app-sec-groups.html#binding-groups) and [Unbinding Application Security Groups](docs.pivotal.io/pivotalcf/1-6/adminguide/app-sec-groups.html#unbinding-groups).
+
+* You can bind to thetheDefault Staging security group set by
+entering the following command:
+
+```
+cf ba bind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Name of your security group</dd>
+</dl>
+
+**Tip:** You can also use **ba bssg** as an alias for the longer
+**ba bind-staging-security-group** command name.
+
+* You can bind to the Default Running security group set by
+entering the following command:
+
+```
+cf ba bind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Name of your security group</dd>
+</dl>
+
+**Tip:** You can also use **ba brsg** as an alias for the longer
+**ba bind-running-security-group** command name.
+
+* You can unbind to a Default Staging security group set by
+entering the following command:
+
+```
+cf ba cf ba unbind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Name of your security group</dd>
+</dl>
+
+**Tip:** You can also use **ba ussg** as an alias for the longer
+**ba unbind-staging-security-group** command name.
+
+* You can unbind to a Default Running security group set by
+entering the following command:
+
+```
+cf ba unbind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Name of your security group</dd>
+</dl>
+
+**Tip:** You can also use **ba brsg** as an alias for the longer
+**ba bind-running-security-group** command name.
+
+* You can bind a security group to a space by
+entering the following command:
+
+```
+cf ba bind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Name of your security group</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">Name of the organization to bind the security group to</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">Name of the space within the organization to bind the security group to</dd>
+</dl>
+
+**Tip:** You can also use **ba bsg** as an alias for the longer
+**ba bind-security-group** command name.
+
+* You can unbind a security group to a space by
+entering the following command:
+
+```
+cf ba unbind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">Name of your security group</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">Name of the organization to bind the security group to</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">Name of the space within the organization to bind the security group to</dd>
+</dl>
+
+**Tip:** You can also use **ba usg** as an alias for the longer
+**ba unbind-staging-security-group** command name.
+
+<!-- staging end -->
