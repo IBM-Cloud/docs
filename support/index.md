@@ -12,7 +12,7 @@ copyright:
 # Getting customer support
 {: #getting-customer-support}
 
-*Last updated: 7 July 2016*
+Last updated: 1 August 2016
 {: .last-updated}
 
 
@@ -68,7 +68,7 @@ On the Status page, you can find the following information:
 You can find the Status page by choosing either of the following options:
 
   * Log in to the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](./images/account_support.svg) in the menu bar, and then click **Status**. Check the listed resources for the ![some issues](images/some_issues.svg) icon. This icon might indicate an outage.
-  * Access it directly at [IBM {{site.data.keyword.Bluemix_notm}} - System Status](https://status.eu-gb.bluemix.net/){: new_window}.
+  * Access it directly at [IBM {{site.data.keyword.Bluemix_notm}} - System Status](http://ibm.biz/bluemixstatus){: new_window}.
 
 
 ### Subscribing to an RSS feed
@@ -79,12 +79,20 @@ To subscribe, follow these steps:
 
   1. Download and install an RSS reader.
   2. Use your reader to subscribe to the feed with one of the following methods:
-       * Drag the ![RSS](images/rss.svg) icon into your RSS reader.
+       * Drag the RSS ![RSS](images/rss.svg) icon into your RSS reader.
        * Right-click the RSS icon, select **Copy link address**, and paste the URL into your RSS reader.
 
 	See your reader's **Help** section for more information. 	   
 
-Other methods of reading RSS feeds are also available through web browser plug-ins such as [RSS Feed](http://feeder.co/){: new_window} Reader for Chrome or [Brief](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} add-on for Firefox, or with other news sources like [Feedly](http://www.feedly.com/){: new_window} or [G2reader](http://www.g2reader.com/en/){: new_window}.
+Other methods of reading RSS feeds are available through web browser plug-ins such as the following:
+  * [RSS Feed](http://feeder.co/){: new_window} Reader for Chrome 
+  * [Brief](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} add-on for Firefox
+
+
+News sources like the following also provide methods to read RSS feeds:
+
+  * [Feedly](http://www.feedly.com/){: new_window} 
+  * [G2reader](http://www.g2reader.com/en/){: new_window} 
 
 You can also use a third-party service to automatically send an email for each RSS update. The following list provides some example third-party services:
 
@@ -97,12 +105,15 @@ You can also use a third-party service to automatically send an email for each R
 
 {{site.data.keyword.Bluemix_notm}} typically has approximately 50 updates per month.
 
+### Setting up incident and maintenance email notifications
+
+For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform notifications. Platform notifications are optional email alerts for incident and maintenance events for the {{site.data.keyword.Bluemix_notm}} platform. You can choose to receive these email notifications by clicking the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Notifications** &gt; **Platform** options. For more information about setting account notifications, go to [Setting notifications](../admin/account.html#notifications).
 ### Best practices for monitoring status
 
   * Check for upcoming maintenance windows
 
 	Check for upcoming maintenance windows posted on the status page, at least once every 24 hours, by using one of the following options:
-	  * By navigating directly to the [Status](https://status.eu-gb.bluemix.net/){: new_window} page
+	  * By navigating directly to the [Status](http://ibm.biz/bluemixstatus){: new_window} page
 	  * By using the RSS feed or an RSS-to-email forwarder
 
   * Check for current maintenance windows or an incident in progress
