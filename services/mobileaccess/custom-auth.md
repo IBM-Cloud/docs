@@ -8,7 +8,7 @@ copyright:
 # Authenticating users with a custom identity provider
 {: #custom-id}
 
-*Last updated: 20 July 2016*
+Last updated: 22 July 2016
 {: .last-updated}
 
 
@@ -17,14 +17,15 @@ Create a custom identity provider and implement your own logic for collecting an
 ## {{site.data.keyword.amashort}} custom identity request flow
 {: #custom-id-ovr}
 
-### {{site.data.keyword.amashort}} client request flow
-The following diagram demonstrates how {{site.data.keyword.amashort}} integrates a custom identity provider.
 
-![image](images/mca-sequence-custom.jpg)
+### {{site.data.keyword.amashort}} client request flow
+ The following diagram demonstrates how {{site.data.keyword.amashort}} integrates a custom identity provider.
+
+![Request flow diagram](images/mca-sequence-custom.jpg)
 
 * Use the {{site.data.keyword.amashort}} SDK to make a request to your back-end resources that are protected with {{site.data.keyword.amashort}} server SDK.
 * The {{site.data.keyword.amashort}} server SDK detects an unauthorized request and returns HTTP 401 and the authorization scope.
-* The {{site.data.keyword.amashort}} client SDK automatically detects the above HTTP 401 and starts the authentication process.
+* The {{site.data.keyword.amashort}} client SDK automatically detects the HTTP 401 and starts the authentication process.
 * The {{site.data.keyword.amashort}} client SDK contacts the {{site.data.keyword.amashort}} service and requests an authorization header.
 * The {{site.data.keyword.amashort}} service communicates with the custom identity provider in order to start authentication process.
 * The custom identity provider returns an authentication challenge to the {{site.data.keyword.amashort}} service.
@@ -39,10 +40,12 @@ The following diagram demonstrates how {{site.data.keyword.amashort}} integrates
 
 ### {{site.data.keyword.amashort}} web application request flow
 {: #mca-custom-web-sequence}
+
 The {{site.data.keyword.amashort}} web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
 
-* The initial request is sent by the web application (from a log-in form, for example).
-* The final redirect is to the protected area of the web application itself, rather than back-end protected resource.
+  * The initial request is sent by the web application (from a log-in form, for example).
+  * The final redirect is to the protected area of the web application itself, rather than back-end protected resource. 
+
 
 
 
@@ -97,6 +100,7 @@ When you create a custom identity provider, you might:
 
 ### Sample implementation of custom identity provider
 {: #custom-sample}
+
 Use any of the following Node.js sample implementations of a custom identity provider as a reference when you develop your custom identity provider. Download full application code from the GitHub repositories.
 
  * [Simple sample](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
@@ -114,6 +118,7 @@ Use any of the following Node.js sample implementations of a custom identity pro
 
 ## Stateful versus stateless
 {: #custom-id-state}
+
 By default, the custom identity provider is considered a stateless application. In some cases, the custom identity provider might need to store state that is related to the authentication process. An example use case is a multi-step authentication, where the custom identity provider needs to store the result of the first authentication step, before proceeding to the next step. To support stateful functionality, a custom identity provider must generate a stateID and supply it in the  response to the {{site.data.keyword.amashort}} service. The {{site.data.keyword.amashort}} service must pass the stateID in subsequent requests that belong to the client authentication process.
 
 ## Custom realm

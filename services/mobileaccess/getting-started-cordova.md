@@ -37,7 +37,7 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	cordova platform add ios
 	```
 
-1. If you added the Android platform, you must add the minimum supported API level to the `config.xml` file of your Cordova application. Open the `config.xml` file, and add the following line to the `<platform name="android">` element:
+2. If you added the Android platform, you must add the minimum supported API level to the `config.xml` file of your Cordova application. Open the `config.xml` file, and add the following line to the `<platform name="android">` element:
 
 	```XML
 	<platform name="android">  
@@ -49,7 +49,7 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 
 	The *minSdkVersion* value must be higher than `15`. The *targetSdkVersion* value must be the latest Android SDK that is available from Google.
 
-1. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
+3. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
 
 	```XML
 	<platform name="ios">
@@ -58,18 +58,18 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	</platform>
 	```
 
-1. Install the {{site.data.keyword.amashort}} Cordova plug-in:
+4. Install the {{site.data.keyword.amashort}} Cordova plug-in:
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Configure your platform for Android, iOS, or both.
+5. Configure your platform for Android, iOS, or both.
 
 	####Android
 	{: #cordova-android}
 
-		Before opening your project in Android Studio, build your Cordova application through your command-line interface (CLI) to avoid build errors.
+	Before opening your project in Android Studio, build your Cordova application through your command-line interface (CLI) to avoid build errors.
 
 		```
 		cordova build android
@@ -78,27 +78,27 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	####iOS
 	{: #cordova-ios}
 
-		Configure your Xcode project as follows, to avoid build errors.
+	Configure your Xcode project as follows, to avoid build errors.
 
-		1. Use the most recent version of Xcode to open your `xcode.proj` file in the `<app_name>/platforms/ios` directory.
+	1. Use the most recent version of Xcode to open your `xcode.proj` file in the `<app_name>/platforms/ios` directory.
 
 		**Important:** If you receive a message to convert to latest Swift syntax", click Cancel.
 
-		2. Go to **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header**, and add the following path:
+	2. Go to **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header**, and add the following path:
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. Go to **Build settings > Linking > Runpath Search Paths**, and add the following Frameworks parameter:
+	3. Go to **Build settings > Linking > Runpath Search Paths**, and add the following Frameworks parameter:
 
 			```
 			@executable_path/Frameworks
 			```
 
-		4. Build and run your application with Xcode.
+	4. Build and run your application with Xcode.
 
-1. Verify that the plug-in installed successfully by running the following command:
+6. Verify that the plug-in installed successfully by running the following command:
 
 	```Bash
 	cordova plugin list

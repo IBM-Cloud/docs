@@ -7,7 +7,7 @@ copyright:
 
 # Enabling Facebook authentication for Web apps
 
-*Last updated: 15 June 2016*
+Last updated: 15 June 2016
 {: .last-updated}
 
 Use  Facebook to authenticate users on your web app.
@@ -61,7 +61,7 @@ To start the process of authorization:
 
 
   The `state` parameter is not in use for now, it can be left empty.
-  The `redirect_uri` parameter is the URI for redirecting after successful or failed authentication with Facebook.
+  The `redirect_uri` parameter is the uri for redirecting after successful or failed authentication with Facebook.
 
 1. After redirecting to the authorization end-point you will get a login form from      
    Facebook. Enter the username and password to redirect to the `redirect_uri`.

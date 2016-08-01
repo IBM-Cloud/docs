@@ -9,7 +9,7 @@ copyright:
 
 {: #custom-ios}
 
-Last updated: 18 July 2016
+Last updated: 01 August 2016
 {: .last-updated}
 
 
@@ -65,7 +65,7 @@ Initialize the SDK by passing the `applicationRoute`and `applicationGUID` parame
 
 1. Initialize the {{site.data.keyword.amashort}} client SDK, change the authorization manager to be MCAAuthorizationManager, and define an authentication delegate and register it. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. 
 
-  Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click on the face icon (![Face](/face.png "Face")) in the  dashboard. 
+  Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the Account and Support widget.
   <!--upper-left corner of the -->
 
   For `<yourProtectedRealm>`, use the **Realm name** you defined in the **Custom** tile of {{site.data.keyword.amashort}} dashboard.

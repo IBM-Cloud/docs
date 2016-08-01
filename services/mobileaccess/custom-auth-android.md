@@ -8,7 +8,7 @@ copyright:
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Android app
 {: #custom-android}
 
-*Last updated: 17 July 2016*
+Last updated: 01 August 2016
 {: .last-updated}
 
 
@@ -34,7 +34,7 @@ You must have a resource that is protected by an instance of the {{site.data.key
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
@@ -60,7 +60,7 @@ Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GU
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Replace the `BMSClient.REGION_UK` with the appropriate region.					
+Replace the `BMSClient.REGION_UK` with the appropriate region.	 To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the Account and Support widget.				
 	
 
 ## AuthenticationListener interface

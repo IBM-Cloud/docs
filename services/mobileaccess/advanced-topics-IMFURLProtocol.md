@@ -7,7 +7,7 @@ copyright:
 # Sending requests with IMFURLProtocol
 {: #imfurl}
 
-*Last updated: 22 June 2016*
+Last updated: 22 June 2016
 {: .last-updated}
 
 In some cases, you might not be able to use the `IMFResourceRequest` class for sending requests to protected resources; such as when a request to a protected resource is sent by some third-party code. A possible solution is use the `IMFURLProtocol` API, along with the standard `NSURLRequest (NSMutableURLRequest)` call.

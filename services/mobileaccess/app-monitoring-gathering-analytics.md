@@ -7,7 +7,7 @@ copyright:
 
 # Gathering usage analytics
 {: #usage-analytics}
-*Last updated: 6 May 2016*
+Last updated: 6 May 2016
 {: .last-updated}
 
 You can configure the {{site.data.keyword.amashort}} client SDK to record usage analytics and send the recorded data to the {{site.data.keyword.amashort}} service.

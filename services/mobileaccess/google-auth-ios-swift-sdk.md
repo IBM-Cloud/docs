@@ -11,7 +11,7 @@ copyright:
 # Enabling Google authentication for iOS apps (Swift SDK)
 {: #google-auth-ios}
 
-Last updated: 27 July 2016
+Last updated: 01 August 2016
 {: .last-updated}
 
 Use Google Sign-In to authenticate users on your {{site.data.keyword.amashort}} iOS Swift app. The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
@@ -134,7 +134,7 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSSecurity
  ```
 
-1. Use the following code to initialize the client SDK. Replace `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click on the face icon (![Face](/face.png "Face")) in <!--the upper-left corner of--> the dashboard. 
+1. Use the following code to initialize the client SDK. Replace `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the Account and Support widget.
 
  ```Swift
  let backendURL = "<applicationRoute>"

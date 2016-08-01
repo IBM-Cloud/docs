@@ -8,7 +8,7 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} SDKs, samples, and API reference
-*Last updated: 17 July 2016*
+Last updated: 17 July 2016
 {: .last-updated}
 
 To add {{site.data.keyword.amashort}} SDKs to your app, choose the SDKs that you want to use. Then configure your dependency manager to pull the SDKs into your app.
@@ -35,7 +35,7 @@ Add a compile dependency to your app's `build.gradle` file:
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
     	name:'core',
-    	version: '1.+',
+    	version: '2.+',
     	ext: 'aar',
     	transitive: true
 ```
@@ -251,8 +251,7 @@ npm install -save bms-mca-token-validation-strategy
 {: #oauthsdk}
 
 Run NPM to install the SDK:
-```
-Bash
+```Bash
 npm install -save bms-mca-oauth-sdk
 ```
 
@@ -260,6 +259,7 @@ npm install -save bms-mca-oauth-sdk
 {: #customidprovider}
 
 [Simple sample GitHub repo](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+
 [Advanced sample GitHub repo](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## IMFURLProtocol
@@ -272,7 +272,6 @@ npm install -save bms-mca-oauth-sdk
 
 Edit the Podfile and add the following line and run:
 
-```
-Bash
+```Bash
 pod 'IMFURLProtocol'
 ```
