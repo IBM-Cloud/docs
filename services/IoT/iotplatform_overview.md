@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,6 +13,8 @@ copyright:
 
 # About {{site.data.keyword.iot_short_notm}}
 {: #about_iotplatform}
+Last updated: 1 August 2016
+{: .last-updated}
 
 {{site.data.keyword.iot_full}} provides powerful application access to IoT devices and data to help you rapidly compose analytics applications, visualization dashboards, and mobile IoT apps.
 {:shortdesc}
@@ -22,6 +24,8 @@ copyright:
 ## Architecture of the {{site.data.keyword.iot_short_notm}}
 {: #watsoniotplatform_architecture}
 ![IBM Watson IoT Platform Architecture](images/architecture_platform.svg "IBM Watson IoT Platform architecture")
+
+**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Cloud and Edge Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  
 
 The {{site.data.keyword.iot_short_notm}} communicates with your applications and devices by using the {{site.data.keyword.iot_short_notm}} API and the {{site.data.keyword.iot_short_notm}} messaging protocol. The {{site.data.keyword.iot_short_notm}} dashboard connects as a front-end user interface to simplify operations within the platform. Device data can be stored or used with analytics solutions.
 

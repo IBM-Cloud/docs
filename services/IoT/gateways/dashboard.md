@@ -14,7 +14,7 @@ copyright:
 
 # Connecting gateways
 {: #IoT_connectGateway}
-*Last updated: 18 July 2016*
+Last updated: 28 July 2016
 
 Before you can begin receiving data from devices that are connected to your gateways, you must connect the gateway to  {{site.data.keyword.iot_full}}. Connecting a gateway to {{site.data.keyword.iot_short_notm}} involves creating a gateway device type and registering the gateway with {{site.data.keyword.iot_short_notm}}. You can then use the registration information to connect the gateway to {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
@@ -32,7 +32,7 @@ Gateway devices have additional permissions when compared to regular devices and
 - Run a device management agent, so that it can be managed, also manage the devices connected to it.  
 For gateway developer information, see [MQTT connectivity for gateways](mqtt.html).
 
-<!-- You can also use gateways to perform edge analytics on the data that the gateway devices are sending. For more information, see [Edge analytics](../edge_analytics.html) and [Installing the edge analytics agent](#edge).-->
+You can also use gateways to perform edge analytics on the data that the gateway devices are sending. For more information, see [Edge analytics](../edge_analytics.html) and [Installing the edge analytics agent](#edge).
 
 ## Step 1: Registering your gateway with {{site.data.keyword.iot_short_notm}}  
 {: #register_gateway}
@@ -96,15 +96,99 @@ When a device is successfully connected to your gateway, it displays on the dash
 **Note:** In the {{site.data.keyword.iot_short_notm}} dashboard, devices and gateways that are connected directly to the {{site.data.keyword.iot_short_notm}} display a status icon to indicate that they are connected. The dashboard displays devices that are connected indirectly through a gateway as disconnected as it does not have any knowledge of a devices connectivity to the gateway.
 
 
-<!-- ## Installing the edge analytics agent
+## Installing the Edge Analytics Agent
 {: #edge}
 
 The Edge Analytics Agent (EAA) is a is a software component built on top of [Apache Quarks](http://quarks.incubator.apache.org/) to carry out edge analytics operations on a gateway by uploading and managing edge analytics rules from the {{site.data.keyword.iot_short_notm}} dashboard. For more information about edge analytics, see [Edge Analytics](../edge_analytics.html).
+
+### Installing EAA
+{: #eaa_install}
 
 To install EAA on your gateway:
 1. In the {{site.data.keyword.iot_short}} dashboard, go to **Rules**.
 2. Click **Download Edge Agent** to go to the [IBM Edge Analytics Agent community](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true).
 3. Navigate to the **Files** section, and download the compressed *ibm-watson-iot-edge-analytics-dslink-java-0.0.1* file.
-4. Follow the instructions in the following recipes to install and configure the EAA software component on your gateway:
- - [Getting started with Edge Analytics in Watson IoT Platform](https://developer.ibm.com/recipes/?post_type=tutorials&p=18216)
--->
+4. For information about how to install and configure the EAA software component on your gateway, see the following recipe:
+ - [Getting started with Edge Analytics in Watson IoT Platform](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472)
+
+### EAA configuration settings
+{: #eaa_configuration}
+
+You can use the EAA config.properties file to set basic software configuration parameters.
+
+To update EAA configuration:
+1. On the gateway system where the EAA is running, locate the EAA config.properties file.
+2. Before you begin editing the settings, make a backup copy of the file.
+3. Open the config.properties file for editing.
+4. Edit the configuration parameters for your environment:
+ <dl>
+ <dt>DataDirectSendEnable</dt>
+ <dd>BOOLEAN (true|false)</br>
+ TRUE (default) - Send all data to {{site.data.keyword.iot_short_notm}}.</br>
+ FALSE - Only send data to {{site.data.keyword.iot_short_notm}} if rules are set on the engine. </dd>
+ <dt>MonitorInterval</dt>
+ <dd>INTEGER (milliseconds)</br>
+ The time in milliseconds before a new monitoring message is sent to {{site.data.keyword.iot_short_notm}}. </br>
+ Set a small value to report monitor metrics more often. Set a large value to have more detailed monitoring information on {{site.data.keyword.iot_short_notm}}. </br>
+ DEFAULT: 60000    </br>
+ RECOMMENDED RANGE: [1000, 360000]</dd>
+ <dt>MonitorLogDesample</dt>
+ <dd>INTEGER  </br>
+ De-sampling ratio between the number of monitoring messages sent to {{site.data.keyword.iot_short_notm}} compared to the messages entered in the local log. For example, if `MonitorLogDesample` is set to 10, only one local log entry is written for every ten messages that are sent to {{site.data.keyword.iot_short_notm}}. </br>A large number keeps the local log small. A small number provides a more detailed local log.</br>
+ DEFAULT: 10</br>
+ RECOMMENDED RANGE: [1, 100]</dd>
+ <dt>MemoryAlertThreshold</dt>
+ <dd>INTEGER (Megabytes)</br>
+ The free JVM heap memory threshold at which a memory warning log message is sent to the {{site.data.keyword.iot_short_notm}} diagnostics log. The alert is driven by the monitoring. </br>A small value reduces the number of alert messages sent to  {{site.data.keyword.iot_short_notm}}. A large value gives you an earlier warning if the EAA server is running into memory issues.</br>**Tip:** You can use [cloud analytics](../cloud_analytics.html) rules to configure alert actions such as email notifications to alert you of memory issues. For information about the available properties that you can use to build rules, see [Edge Analytics Agent diagnostic metrics](../edge_analytics.html#eaa_metrics).</br>
+  DEFAULT: 10</br>
+ RECOMMENDED RANGE: [10 or 5% of the total memory, 200]</dd>
+ </dl>
+5. Save the edited file, and then restart EAA.
+
+Sample EAA config.properties file
+```
+#######################################################################
+# Engine Parameters
+#######################################################################
+# DataDirectSendEnable
+#                    - BOOLEAN(true|false) Set to true to forward all
+#                      the data; Set to false to disable data direct
+#                      send to IOTP when there is no rule set in the
+#                      engine.
+#                      DEFAULT: true
+#######################################################################
+DataDirectSendEnable=true
+
+#######################################################################
+# Monitoring Parameters
+#######################################################################
+# MonitorInterval    - INTEGER Time interval in milliseconds before a  
+#                      new monitoring message is generated. Set it to a
+#                      small value to report the monitor metrics more
+#                      frequently. Set it to a big value to have more
+#                      detailed monitoring information on IoTP.
+#                      DEFAULT: 60000    RECOMMEND: [1000, 360000]
+# MonitorLogDesample - INTEGER The de-sampling ratio of the number of
+#                      monitoring messages sent to IOTP vs. local log,
+#                      i.e. number of monitoring messages N where
+#                      EAA would output only one to the Info log for
+#                      every N messages. Set it big to keep the size
+#                      of the log small. Set it small to have detailed
+#                      monitoring information in local log.
+#                      DEFAULT: 10       RECOMMEND: [1, 100]
+# MemoryAlertThreshold
+#                    - INTEGER the free JVM heap memory in megabyte under
+#                      which a log message would be generated and send to
+#                      IOTP diagnosis log. The alert is driven by the
+#                      monitoring. Set it small to eliminate unnecessary
+#                      alert message on IoTP. Set it big to receive early
+#                      alert when the system is likely to crash. Set to
+#                      Min(Max(10MB, 5% of the total memory), 200MB) is
+#                      recommended.
+#                      DEFAULT: 10       RECOMMEND: [10, 200]
+#######################################################################
+
+MonitorInterval=60000
+MonitorLogDesample=10
+MemoryAlertThreshold=10
+```

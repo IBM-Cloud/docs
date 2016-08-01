@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-{:new_window: target="_blank"}
+  {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,98 +14,106 @@ copyright:
 
 # ﻿C# for application developers
 {: #c_sharp}
+Last updated: 28 July 2016
+{: .last-updated}
 
-For more information, see [iot-csharp](https://github.com/IoT-Analytics/iot-csharp) in GitHub.
+You can use C# to build and customize applications that interact with your organization on {{site.data.keyword.iot_full}}.
+{:shortdesc}
+
+For more information, see [iot-csharp](https://github.com/ibm-watson-iot/iot-csharp) in GitHub.
 
 
 ## Constructor
 {: #constructor}
 
-The constructor builds the client instance, and accepts arguments that contain the following definitions:
+The constructor builds the client instance and accepts arguments that contain the following definitions:
 
-| Definition     |Description     |
-|----------------|----------------|
-|``orgId``   |Your organization ID
-|``appId``   |The unique ID of an application within your organization|
-|``auth-key``   |An optional API key, which is required when auth-method is ``apikey``|
-|``auth-token``   |API key token, which is required when auth-method is ``apikey``|
+|Definition |Description |
+|:---|:---|
+|`orgId`   |Specifies your organization ID.|
+|`appId`   |Specifies the unique ID of an application in your organization.|
+|`auth-key`   |Specifies an API key to securely connect your application to Watson IoT Platform|
+|`auth-token`   |Specifies API key token to securely connect your application to Watson IoT Platform.|
 
-If ``appId`` is the only argument that is provided, the client connects to the {{site.data.keyword.iot_full}} Quickstart service and defaults to an unregistered device. The argument lists create definitions that are used to interact with the {{site.data.keyword.iot_short_notm}} module.
-
-
+If `appId` is the only argument that is provided, the client connects to the {{site.data.keyword.iot_short_notm}} Quickstart service as an unregistered device. The arguments list defines how the client connects to the  {{site.data.keyword.iot_short_notm}} module.
 
 ```
-ApplciationClient applicationClient = new ApplciationClient(orgId, appId, apiKey, authToken);  
+ApplicationClient applicationClient = new ApplicationClient(orgId, appId, apiKey, authToken);  
 applicationClient.connect();
 ```
+
 
 ## Subscribing to device events
 {: #subscribe_device_events}
 
 Devices use events to publish data to the {{site.data.keyword.iot_short_notm}} instance. The device controls the content of the event and assigns a name to each event that it sends.
 
-When an event is received by the {{site.data.keyword.iot_short_notm}} instance, the credentials of the received event identify the sending device, making it impossible for a device to impersonate another device.
+When an event is received by the {{site.data.keyword.iot_short_notm}} instance, the credentials of the received event identify the sending device, which means that a device cannot impersonate another device.
 
-By default, applications can subscribe to all events from all connected devices. Use the ``type``, ``id``, ``event``, and ``msgFormat`` parameters to control the scope of the subscription. A single client instance can support multiple subscriptions. The following code samples outline how you can subscribe to devices that depend on ``device type``, ``id``, ``event``, and ``msgFormat`` parameters.
+By default, applications subscribe to all events from all connected devices. Use the device type, device ID, event, and message format parameters to control the scope of the subscription. The following code samples show how you can define the scope of a subscription by using these parameters:
 
-### Subscribing to all events from all devices:
+### Subscribing to all events from all devices
 
 ```
 applicationClient.connect();
 applicationClient.subscribeToDeviceEvents();
 ```
 
-### Subscribing to all events from all devices of a specific type:
+### Subscribing to all events from all devices of a specific type
 
 ```
 applicationClient.connect();
 applicationClient.subscribeToDeviceEvents(deviceType);
 ```
 
-### Subscribing to a specific event from all devices:
+### Subscribing to a specific event from all devices
 
 ```
 applicationClient.connect();
 applicationClient.subscribeToDeviceEvents(evt);
 ```
 
-###  Subscribing to a specific event from two or more different devices
+###  Subscribing to a specific event from two or more different devices:
 
 ```
 applicationClient.connect();
 applicationClient.subscribeToDeviceEvents(deviceType, deviceId, evt);
 ```
 
-### Subscribing to all events published by a device in JSON format
+### Subscribing to all events that are published in JSON format
 
 ```
 applicationClient.connect();
 applicationClient.subscribeToDeviceEvents(deviceType, deviceId, evt, "json", 0);
 ```
 
+**Note**: A single client instance can support multiple subscriptions.
+
 ### Handling events from devices
 
-To process events that are received by your subscriptions, register an event callback method as outlined in the following example:
+To process events that are received by your subscriptions, register an Event callback method as shown in the following example:
 
 ```
-public static void processEvent(String eventName, string format, string data) {
+public static void processEvent(String eventName, string eventFormat, string eventData) {
 // Do something
 }
 applicationClient.connect();
 applicationClient.eventCallback += processEvent;
 applicationClient.subscribeToDeviceEvents();
 ```
-Where:
+The following table describes the parameters of the Event callback method:
 
-- ``event.device`` is a string that uniquely identifies the device across all types of devices in the organization
-- ``eventName`` is a string
-- ``eventFormat`` is a string
-- ``eventData`` is a string
+|Parameter|Data type|Description|
+|:---|:---|
+|`eventName`|String|Identifies the event. |
+|`eventFormat`|String|Specifies the format. The format can be any string, for example "json".|
+|`eventData`|Dictionary|Specifies the data for the message payload. Maximum length is 131072 bytes.|
+
 
 ## Subscribing to device status
 {: #subscribe_device_status}
 
-By default, the subscription is set to receive status updates for all connected devices. Use the device type and ID parameters to control the scope of the subscription. A single client can support multiple subscriptions.
+By default, the subscription is set to receive status updates for all connected devices. Use the device type and device ID parameters to control the scope of the subscription. The following code samples show how you can define the scope of a subscription by using these parameters:
 
 ### Subscribing to status updates for all devices
 
@@ -123,9 +131,11 @@ applicationClient.subscribeToDeviceStatus += processDeviceStatus;
 applicationClient.subscribeToDeviceStatus(deviceType, deviceId);
 ```
 
+**Note**: A single client instance can support multiple subscriptions.
+
 ### Handling status updates from devices
 
-To process the status updates that are received by your subscriptions, register an event callback method, as outlined in the following example:
+To process the status updates that are received by your subscriptions, register an Event callback method as shown in the following example:
 
 ```
 public static void processDeviceStatus(String deviceType, string deviceId, string data)
@@ -145,7 +155,20 @@ Applications can publish events as if they originated from a device.
 ```
 applicationClient.connect();
 applicationClient.publishEvent(deviceType, deviceId, evt, data, 0);
+
 ```
+
+The following table describes the parameters that are specified in the `publishEvent()` method:
+
+|Parameter|Data type|Description|
+|:---|:---|
+|`deviceType`|String|Specifies the device type. Typically, the deviceType is a grouping for devices that perform a specific task, for example "weatherballoon".|
+|`deviceId`|String|Specifies the ID of the device. Typically, for a given device type, the deviceId is a unique identifier of that device, for example a serial number or MAC address.|
+|`evt`|String|Specifies the name of the event.|
+|`format`|String|Specifies the format. The format can be any string, for example "json".|
+|`data`|Dictionary|Specifies the data for the message payload. Maximum length is 131072 bytes.|
+|`QoS`|Integer|Specifies the Quality of Service. Valid values are 0,1,2. |
+
 
 ## Publishing commands to devices
 {: #publish_commands_devices}
@@ -156,3 +179,13 @@ Applications can publish commands to connected devices.
 applicationClient.connect();
 applicationClient.publishCommand(deviceType, deviceId, "testcmd", "json", data, 0);
 ```
+The following table describes the parameters that are specified in the `publishCommand()` method:
+
+|Parameter|Data type|Description|
+|:---|:---|
+|`deviceType`|String|Specifies the device type. Typically, the deviceType is a grouping for devices that perform a specific task, for example "weatherballoon".|
+|`deviceId`|String|Specifies the ID of the device. Typically, for a given device type, the deviceId is a unique identifier of that device, for example a serial number or MAC address.|
+|`command`|String|Specifies the name of the command.|
+|`format`|String|Specifies the format. The format can be any string, for example "json".|
+|`data`|Dictionary|Specifies the data for the message payload. Maximum length is 131072 bytes.|
+|`QoS`|Integer|Specifies the Quality of Service. Valid values are 0,1,2. |

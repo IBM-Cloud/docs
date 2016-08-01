@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="7.0216999in"
-   height="3.4703603in"
-   viewBox="0 0 631.95304 312.33241"
+   width="6.7743831in"
+   height="3.314805in"
+   viewBox="0 0 609.69452 298.33244"
    id="svg5645"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="architecture_platform.svg"
+   sodipodi:docname="architecture_platform_edge.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
@@ -699,6 +699,48 @@
     </marker>
     <marker
        style="overflow:visible"
+       id="TriangleInM-1-8-1-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInM">
+      <path
+         transform="scale(-0.4,-0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         id="path21249-59-33-3-2"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleOutM-3-0-1-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         id="path21258-13-3-9-4"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleOutM-3-0-1-6-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         id="path21258-13-3-9-4-1"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
        id="TriangleInM-1-5-0"
        refX="0"
        refY="0"
@@ -725,48 +767,6 @@
          id="path21258-13-6-1"
          inkscape:connector-curvature="0" />
     </marker>
-    <marker
-       style="overflow:visible"
-       id="TriangleInM-1-5-0-1"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="TriangleInM">
-      <path
-         transform="scale(-0.4,-0.4)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
-         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
-         id="path21249-59-7-5-2"
-         inkscape:connector-curvature="0" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="TriangleInM-1-5-28"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="TriangleInM">
-      <path
-         transform="scale(-0.4,-0.4)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
-         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
-         id="path21249-59-7-8"
-         inkscape:connector-curvature="0" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="TriangleOutM-3-4-0"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="TriangleOutM">
-      <path
-         transform="scale(0.4,0.4)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
-         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
-         id="path21258-13-6-6"
-         inkscape:connector-curvature="0" />
-    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -775,16 +775,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.68"
-     inkscape:cx="240.20471"
-     inkscape:cy="159.72601"
+     inkscape:zoom="1.3155765"
+     inkscape:cx="429.6939"
+     inkscape:cy="111.03025"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1019"
-     inkscape:window-x="-9"
+     inkscape:window-width="1680"
+     inkscape:window-height="1023"
+     inkscape:window-x="528"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      fit-margin-top="0"
@@ -807,12 +807,12 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(27.496986,-351.0298)">
+     transform="translate(216.18735,-351.02979)">
     <rect
        ry="0"
        rx="0"
-       y="447.17853"
-       x="-26.996986"
+       y="446.33182"
+       x="-215.31818"
        height="50.000015"
        width="149.25006"
        id="rect79371-1-6-6-9-8-7-3-5-1-2-5-5"
@@ -820,8 +820,8 @@
     <rect
        ry="0"
        rx="0"
-       y="441.5011"
-       x="-19.642138"
+       y="440.65439"
+       x="-207.96333"
        height="50.000011"
        width="149.25005"
        id="rect79371-1-6-6-9-8-7-3-5-1-2-5"
@@ -829,7 +829,7 @@
     <rect
        ry="0"
        rx="0"
-       y="515.30756"
+       y="473.30756"
        x="-26.09376"
        height="50.000015"
        width="149.25006"
@@ -838,7 +838,7 @@
     <rect
        ry="0"
        rx="0"
-       y="509.30756"
+       y="467.30756"
        x="-20.093761"
        height="50.000015"
        width="149.25006"
@@ -849,28 +849,10 @@
        rx="0"
        y="364.09103"
        x="189.3998"
-       height="264.71655"
-       width="415.05627"
+       height="269.73944"
+       width="204.10735"
        id="rect79371-1-6-6-9-8-7-80-8-4"
        style="fill:#f0f0ef;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <rect
-       ry="0"
-       rx="0"
-       y="447.90054"
-       x="428.85703"
-       height="50.575722"
-       width="141.13666"
-       id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9-4-1-9-8"
-       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:#f0f0ef;stroke-opacity:1" />
-    <rect
-       ry="0"
-       rx="0"
-       y="443.24768"
-       x="434.142"
-       height="50.575722"
-       width="141.13664"
-       id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9-4-1-9"
-       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:#f0f0ef;stroke-opacity:1" />
     <g
        id="g6624"
        transform="translate(309.94118,533.92621)" />
@@ -974,18 +956,9 @@
          id="flowPara6808" /></flowRoot>    <rect
        ry="0"
        rx="0"
-       y="437.60153"
-       x="439.68451"
-       height="50.575722"
-       width="141.13663"
-       id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9-4-1"
-       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:#f0f0ef;stroke-opacity:1" />
-    <rect
-       ry="0"
-       rx="0"
        y="389.08173"
        x="207.11299"
-       height="226.66548"
+       height="224.18765"
        width="159.05859"
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
@@ -999,8 +972,8 @@
     <rect
        ry="0"
        rx="0"
-       y="434.16483"
-       x="-13.005022"
+       y="433.31812"
+       x="-201.32622"
        height="50.000008"
        width="149.25003"
        id="rect79371-1-6-6-9-8-7-3-5-1-2"
@@ -1008,32 +981,32 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="42.015415"
-       y="450.36569"
+       x="-146.30577"
+       y="449.51898"
        id="text18189-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan18191-0"
-         x="42.015415"
-         y="450.36569" /><tspan
+         x="-146.30577"
+         y="449.51898" /><tspan
          sodipodi:role="line"
-         x="42.015415"
-         y="464.11569"
+         x="-146.30577"
+         y="463.26898"
          id="tspan8202">IoT Devices</tspan><tspan
          sodipodi:role="line"
-         x="42.015415"
-         y="477.86569"
+         x="-146.30577"
+         y="477.01898"
          id="tspan6878-8"
          style="font-size:7.5px;stroke:none" /><tspan
          sodipodi:role="line"
-         x="42.015415"
-         y="491.61569"
+         x="-146.30577"
+         y="490.76898"
          id="tspan18193-4"
          style="font-size:7.5px;stroke:none" /></text>
     <rect
        ry="0"
        rx="0"
-       y="555.57135"
+       y="441.57135"
        x="218.76572"
        height="50.000004"
        width="137.15324"
@@ -1042,22 +1015,26 @@
     <text
        sodipodi:linespacing="125%"
        id="text44235-7"
-       y="576.93506"
+       y="462.93506"
        x="270.40372"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
-         y="576.93506"
+         id="tspan44239-7"
+         y="462.93506"
+         x="270.40372"
+         sodipodi:role="line">Rest &amp; </tspan><tspan
+         y="476.68506"
          x="270.40372"
          sodipodi:role="line"
-         id="tspan6445-3">Blockchain</tspan><tspan
-         y="590.68506"
+         id="tspan7973">Real-time APIs</tspan><tspan
+         y="490.43506"
          x="270.40372"
          sodipodi:role="line"
-         id="tspan4781">integration</tspan></text>
+         id="tspan6445-3" /></text>
     <rect
        ry="0"
        rx="0"
-       y="503.66003"
+       y="461.66003"
        x="-12.939287"
        height="50.000008"
        width="149.25003"
@@ -1067,30 +1044,34 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="42.015415"
-       y="517.8609"
+       y="469.8609"
        id="text18189-1-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan18191-0-3"
          x="42.015415"
-         y="517.8609" /><tspan
+         y="469.8609" /><tspan
          sodipodi:role="line"
          x="42.015415"
-         y="531.6109"
+         y="483.6109"
          id="tspan8202-7">IoT Gateways</tspan><tspan
          sodipodi:role="line"
          x="42.015415"
-         y="545.3609"
+         y="497.3609"
+         id="tspan5517">+ EAA</tspan><tspan
+         sodipodi:role="line"
+         x="42.015415"
+         y="511.1109"
          id="tspan6808-9"
          style="font-size:7.5px" /><tspan
          sodipodi:role="line"
          x="42.015415"
-         y="559.1109"
+         y="524.8609"
          id="tspan6878-8-3"
          style="font-size:7.5px" /><tspan
          sodipodi:role="line"
          x="42.015415"
-         y="572.8609"
+         y="538.6109"
          id="tspan18193-4-9"
          style="font-size:7.5px" /></text>
     <text
@@ -1118,18 +1099,18 @@
     <path
        inkscape:connector-curvature="0"
        id="path8199-4"
-       d="m 141.59564,530.36604 61.76646,0"
+       d="m 141.59564,492.36604 61.76646,0"
        style="opacity:1;fill:none;stroke:#000000;stroke-width:1.61312211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-1-5);marker-end:url(#TriangleOutM-3-4)" />
     <rect
        x="148.72604"
-       y="516.65698"
+       y="484.65698"
        width="38.326622"
        height="15.000005"
        id="rect56941-0-3-9-6"
        style="opacity:1;fill:#ffffff" />
     <text
        sodipodi:linespacing="125%"
-       y="533.39691"
+       y="495.39691"
        x="152.27927"
        font-size="11"
        id="text56834-0-4-80"
@@ -1145,68 +1126,23 @@
            height="185.48387"
            x="358.06451"
            y="-39.357193" /></flowRegion><flowPara
-         id="flowPara7065" /></flowRoot>    <path
-       style="fill:none;stroke:#000000;stroke-width:1.65158689;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.95476096, 4.95476096;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#TriangleInM-5);marker-end:url(#TriangleOutM-7)"
-       d="m 371.0242,460.12079 64.7472,0"
-       id="path8207"
-       inkscape:connector-curvature="0" />
-    <rect
-       x="387.51215"
-       y="453.59247"
-       width="33.063465"
-       height="15.000005"
-       id="rect56941-0-3-9-2"
-       style="fill:#f0f0ef;fill-opacity:1" />
-    <text
+         id="flowPara7065" /></flowRoot>    <text
        sodipodi:linespacing="125%"
-       y="458.3324"
-       x="388.11801"
-       font-size="11"
-       id="text56834-0-4-1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">
-      <tspan
-         sodipodi:role="line"
-         id="tspan5798"
-         x="388.11801"
-         y="458.3324">MQTT</tspan>
-      <tspan
-         sodipodi:role="line"
-         id="tspan5800"
-         x="388.11801"
-         y="472.0824">HTTP</tspan>
-    </text>
-    <text
-       sodipodi:linespacing="125%"
-       y="663.23334"
-       x="147.24741"
+       y="649.23334"
+       x="141.24741"
        font-size="11"
        id="text66184"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Internet</text>
     <path
        inkscape:connector-curvature="0"
        id="path13593"
-       d="m 177.8291,648.20247 -23.895,0 0,-0.088 c -5.456,-0.671 -9.60201,-5.278 -9.60201,-10.884 0,-6.049 4.92101,-10.971 10.97101,-10.971 0.693,0 1.38,0.064 2.054,0.192 0.752,-5.997 5.797,-10.53201 11.979,-10.53201 6.361,0 11.518,4.80201 12.033,11.05601 4.252,1.613 7.063,5.65 7.063,10.255 0,5.605 -4.146,10.213 -9.602,10.884 l 0,0.077 -1.001,0.011 z m -22.581,-2 22.544,-0.01 c 4.844,-0.176 8.638,-4.112 8.638,-8.962 0,-3.959 -2.54,-7.404 -6.32,-8.573 l -0.686,-0.212 -0.019,-0.717 c -0.144,-5.5 -4.568,-9.809 -10.071,-9.809 -5.505,0 -9.929,4.311 -10.072,9.813 l -0.034,1.321 -1.262,-0.393 c -0.858,-0.267 -1.754,-0.402 -2.665,-0.402 -4.946,0 -8.97101,4.024 -8.97101,8.971 0,4.85 3.79401,8.786 8.63801,8.962 l 0.28,0.011 z"
+       d="m 171.8291,634.20247 -23.895,0 0,-0.088 c -5.456,-0.671 -9.60201,-5.278 -9.60201,-10.884 0,-6.049 4.92101,-10.971 10.97101,-10.971 0.693,0 1.38,0.064 2.054,0.192 0.752,-5.997 5.797,-10.53201 11.979,-10.53201 6.361,0 11.518,4.80201 12.033,11.05601 4.252,1.613 7.063,5.65 7.063,10.255 0,5.605 -4.146,10.213 -9.602,10.884 l 0,0.077 -1.001,0.011 z m -22.581,-2 22.544,-0.01 c 4.844,-0.176 8.638,-4.112 8.638,-8.962 0,-3.959 -2.54,-7.404 -6.32,-8.573 l -0.686,-0.212 -0.019,-0.717 c -0.144,-5.5 -4.568,-9.809 -10.071,-9.809 -5.505,0 -9.929,4.311 -10.072,9.813 l -0.034,1.321 -1.262,-0.393 c -0.858,-0.267 -1.754,-0.402 -2.665,-0.402 -4.946,0 -8.97101,4.024 -8.97101,8.971 0,4.85 3.79401,8.786 8.63801,8.962 l 0.28,0.011 z"
        style="fill:#66d1f5;fill-opacity:1" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="440.41376"
-       y="430.50845"
-       id="text266398-0"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan266400-6"
-         x="440.41376"
-         y="430.50845">Apps and Services</tspan><tspan
-         sodipodi:role="line"
-         x="440.41376"
-         y="445.50845"
-         id="tspan266402-0" /></text>
     <rect
        ry="0"
        rx="0"
-       y="572.80499"
-       x="-12.858814"
+       y="562.80499"
+       x="-14.85881"
        height="50.000008"
        width="149.25003"
        id="rect79371-1-6-6-9-8-7-3-5-1-4"
@@ -1214,26 +1150,26 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="54.029083"
-       y="588.73309"
+       x="52.029083"
+       y="578.73309"
        id="text44241"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="54.029083"
-         y="588.73309"
+         x="52.029083"
+         y="578.73309"
          id="tspan44245">Watson IoT </tspan><tspan
          sodipodi:role="line"
-         x="54.029083"
-         y="602.48309"
+         x="52.029083"
+         y="592.48309"
          id="tspan5792">Platform</tspan><tspan
          sodipodi:role="line"
-         x="54.029083"
-         y="616.23309"
+         x="52.029083"
+         y="606.23309"
          id="tspan9810">Dashboard</tspan></text>
     <rect
        ry="0"
        rx="0"
-       y="376.74783"
+       y="402.74783"
        x="-26.960798"
        height="50.000015"
        width="149.25008"
@@ -1242,7 +1178,7 @@
     <rect
        ry="0"
        rx="0"
-       y="371.0704"
+       y="397.0704"
        x="-19.605947"
        height="50.000011"
        width="149.25006"
@@ -1251,7 +1187,7 @@
     <rect
        ry="0"
        rx="0"
-       y="363.7341"
+       y="389.7341"
        x="-12.96883"
        height="50.000008"
        width="149.25005"
@@ -1261,65 +1197,35 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="43.057407"
-       y="394.01312"
+       y="420.01312"
        id="text18189-5-9"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="43.057407"
-         y="394.01312"
+         y="420.01312"
          id="tspan6913-6">Applications</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path8199"
-       d="m 141.74594,401.39506 61.76647,0"
+       d="m 141.74594,419.39506 61.76647,0"
        style="opacity:1;fill:none;stroke:#000000;stroke-width:1.61312211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-1-8-1);marker-end:url(#TriangleOutM-3-0-1)" />
     <rect
        x="156.98393"
-       y="393.94354"
+       y="411.94354"
        width="23.24901"
        height="15.000002"
        id="rect56941-0-3-9"
        style="opacity:1;fill:#ffffff" />
     <text
        sodipodi:linespacing="125%"
-       y="404.68356"
+       y="422.68356"
        x="159.2424"
        font-size="11"
        id="text56834-0-4"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">API</text>
-    <path
-       inkscape:connector-curvature="0"
-       id="path8199-4-4"
-       d="m 141.69951,458.94619 61.76646,0"
-       style="opacity:1;fill:none;stroke:#000000;stroke-width:1.61312211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-1-5-2);marker-end:url(#TriangleOutM-3-4-3)" />
-    <rect
-       x="148.82991"
-       y="451.23712"
-       width="38.326626"
-       height="15.000005"
-       id="rect56941-0-3-9-6-6"
-       style="opacity:1;fill:#ffffff" />
-    <text
-       sodipodi:linespacing="125%"
-       y="455.97711"
-       x="152.38312"
-       font-size="11"
-       id="text56834-0-4-80-3"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">
-      <tspan
-         sodipodi:role="line"
-         id="tspan5794"
-         x="152.38312"
-         y="455.97711">MQTT</tspan>
-      <tspan
-         sodipodi:role="line"
-         id="tspan5796"
-         x="152.38312"
-         y="469.72711">HTTP</tspan>
-    </text>
     <g
        id="g5278"
-       transform="translate(-10.531131,436.61056)">
+       transform="translate(-198.85232,435.76384)">
       <path
          id="path5280"
          d="M 40,12 35.33,12 9.67,12 5,12 5,33 9.67,33 35.34,33 40,33 40,12 Z m -9.22,8.06 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -18.57,-4.88 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -0.02,1.5 7.87,0 0,-7.87 -7.87,0 0,7.87 z m -10.98,-2.5 c 1.1,0 2,0.9 2,2 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 0,-1.11 0.9,-2 2,-2 z m 1.98,-2.88 -4,0 0,-4 4,0 0,4 z"
@@ -1329,7 +1235,7 @@
     </g>
     <g
        id="g5323"
-       transform="matrix(0.09052457,0,0,0.07015804,-10.496341,511.36273)"
+       transform="matrix(0.09052457,0,0,0.07015804,-10.496341,469.36273)"
        style="stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none">
       <rect
          id="rect5291"
@@ -1419,15 +1325,6 @@
          stroke-miterlimit="10"
          style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
-    <rect
-       ry="0"
-       rx="0"
-       y="442.72049"
-       x="218.39995"
-       height="50.000011"
-       width="137.15326"
-       id="rect79371-1-6-6-9-8-7-3-5-2-2-3"
-       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <g
        id="g5339"
        transform="translate(222.22527,444.99945)">
@@ -1530,70 +1427,9 @@
         </g>
       </g>
     </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="494.67459"
-       y="464.4097"
-       id="text18189-5-9-1"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         x="494.67459"
-         y="464.4097"
-         id="tspan6913-6-2">Applications</tspan></text>
-    <g
-       id="g5240-2"
-       transform="matrix(0.09339235,0,0,0.09339235,442.38152,439.69303)"
-       style="stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none">
-      <rect
-         id="rect5222-4"
-         height="110"
-         width="388.89999"
-         stroke-miterlimit="10"
-         y="55.599998"
-         x="55.599998"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
-      <rect
-         id="rect5224-7"
-         height="110"
-         width="388.89999"
-         stroke-miterlimit="10"
-         y="195"
-         x="55.599998"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
-      <rect
-         id="rect5226-6"
-         height="110"
-         width="388.89999"
-         stroke-miterlimit="10"
-         y="334.39999"
-         x="55.599998"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
-      <circle
-         id="circle5228-0"
-         r="18.6"
-         cy="110.6"
-         cx="389"
-         stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
-      <circle
-         id="circle5230-5"
-         r="18.6"
-         cy="250"
-         cx="389"
-         stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
-      <circle
-         id="circle5232-6"
-         r="18.6"
-         cy="389.39999"
-         cx="389"
-         stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
-    </g>
     <g
        id="g5722"
-       transform="matrix(0.10411489,0,0,0.10411489,-10.433652,572.31722)"
+       transform="matrix(0.10411489,0,0,0.10411489,-12.43365,562.31722)"
        style="stroke-width:9.60477543;stroke-miterlimit:4;stroke-dasharray:none">
       <rect
          id="rect5708"
@@ -1608,7 +1444,7 @@
          style="stroke-width:9.60477543;stroke-miterlimit:4;stroke-dasharray:none">
         <polygon
            id="polygon5712"
-           points="248.8,233.7 237.7,334 259.9,334 "
+           points="259.9,334 248.8,233.7 237.7,334 "
            stroke-miterlimit="10"
            style="fill:none;stroke:#ffffff;stroke-width:9.60477543;stroke-miterlimit:4;stroke-dasharray:none" />
         <path
@@ -1621,7 +1457,7 @@
     </g>
     <g
        id="g5240-2-8"
-       transform="matrix(0.09339235,0,0,0.09339235,-10.766404,365.98469)"
+       transform="matrix(0.09339235,0,0,0.09339235,-10.766404,391.98469)"
        style="stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none">
       <rect
          id="rect5222-4-5"
@@ -1680,95 +1516,170 @@
            height="286.11111"
            x="30.555555"
            y="-62.752552" /></flowRegion><flowPara
-         id="flowPara5808" /></flowRoot>    <text
+         id="flowPara5808" /></flowRoot>    <rect
+       ry="0"
+       rx="0"
+       y="526.41406"
+       x="-215.68735"
+       height="50.000023"
+       width="149.25008"
+       id="rect79371-1-6-6-9-8-7-3-5-1-2-5-5-7"
+       style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       ry="0"
+       rx="0"
+       y="520.73663"
+       x="-208.3325"
+       height="50.000019"
+       width="149.25006"
+       id="rect79371-1-6-6-9-8-7-3-5-1-2-5-88"
+       style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       ry="0"
+       rx="0"
+       y="513.40033"
+       x="-201.69539"
+       height="50.000015"
+       width="149.25005"
+       id="rect79371-1-6-6-9-8-7-3-5-1-2-4"
+       style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="-146.67493"
+       y="529.6012"
+       id="text18189-1-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan18191-0-0"
+         x="-146.67493"
+         y="529.6012" /><tspan
+         sodipodi:role="line"
+         x="-146.67493"
+         y="543.3512"
+         id="tspan8202-2">IoT Devices</tspan><tspan
+         sodipodi:role="line"
+         x="-146.67493"
+         y="557.1012"
+         id="tspan6878-8-9"
+         style="font-size:7.5px;stroke:none" /><tspan
+         sodipodi:role="line"
+         x="-146.67493"
+         y="570.8512"
+         id="tspan18193-4-6"
+         style="font-size:7.5px;stroke:none" /></text>
+    <g
+       id="g5278-5"
+       transform="translate(-199.22146,515.84599)">
+      <path
+         id="path5280-4"
+         d="M 40,12 35.33,12 9.67,12 5,12 5,33 9.67,33 35.34,33 40,33 40,12 Z m -9.22,8.06 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -18.57,-4.88 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -0.02,1.5 7.87,0 0,-7.87 -7.87,0 0,7.87 z m -10.98,-2.5 c 1.1,0 2,0.9 2,2 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 0,-1.11 0.9,-2 2,-2 z m 1.98,-2.88 -4,0 0,-4 4,0 0,4 z"
+         stroke-miterlimit="10"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#ffffff;stroke-miterlimit:10" />
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path8199-9"
+       d="m -53.103692,462.37272 23.136269,22.38849"
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1.50000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-0-1-6)" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path8199-9-6"
+       d="m -52.29479,537.68395 22.3885,-23.13627"
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1.50000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-0-1-6-5)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="-16.57482"
+       y="541.54181"
+       id="text18189-1-0-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-16.57482"
+         y="541.54181"
+         id="tspan18193-4-9-9"
+         style="font-size:10px">Edge analytics enabled gateways </tspan><tspan
+         sodipodi:role="line"
+         x="-16.57482"
+         y="554.04181"
+         style="font-size:10px"
+         id="tspan5587">with Edge Analytics Agent (EAA). </tspan></text>
+    <rect
+       ry="0"
+       rx="0"
+       y="552.67505"
+       x="218.69371"
+       height="50.000004"
+       width="137.15324"
+       id="rect79371-1-6-6-9-8-7-3-5-2-2-8"
+       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+    <text
        sodipodi:linespacing="125%"
-       id="text44235-7-0"
-       y="464.08423"
-       x="270.03796"
+       id="text44235-7-1"
+       y="574.03876"
+       x="270.3317"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
-         id="tspan44239-7-2"
-         y="464.08423"
-         x="270.03796"
-         sodipodi:role="line">Rest &amp; </tspan><tspan
-         y="477.83423"
-         x="270.03796"
+         y="574.03876"
+         x="270.3317"
          sodipodi:role="line"
-         id="tspan7973-8">Real-time APIs</tspan><tspan
-         y="491.58423"
-         x="270.03796"
+         id="tspan6445-3-5">Blockchain</tspan><tspan
+         y="587.78876"
+         x="270.3317"
          sodipodi:role="line"
-         id="tspan6445-3-0" /></text>
+         id="tspan4781">integration</tspan></text>
+    <rect
+       ry="0"
+       rx="0"
+       y="497.22812"
+       x="218.18123"
+       height="50.000011"
+       width="137.15326"
+       id="rect79371-1-6-6-9-8-7-3-5-2-2-36"
+       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text44235-7-5"
+       y="518.59186"
+       x="269.81924"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="518.59186"
+         x="269.81924"
+         sodipodi:role="line"
+         id="tspan6445-3-7">Cloud Analytics</tspan><tspan
+         y="532.34186"
+         x="269.81924"
+         sodipodi:role="line"
+         id="tspan5128">Edge Analytics</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4785"
+       width="35.309284"
+       height="27.616978"
+       x="226.411"
+       y="509.04248" />
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4785-5"
        width="35.309288"
        height="27.616982"
-       x="225.92532"
-       y="566.47729" />
+       x="225.85332"
+       y="563.58099" />
     <g
        id="g4804"
-       transform="matrix(0.19714314,0,0,0.19714314,232.76789,569.06362)"
+       transform="matrix(0.19714312,0,0,0.19714312,232.69584,566.16725)"
        style="fill:#ffffff">
       <path
          id="path4806"
          d="M 78.288,62 64,47.944 64,41 l -7,0 0,-5 7,0 0,-16 -6.932,0 -5.826,-4 1.758,0 0,-16 -17,0 0,16 1.822,0 -5.759,4 -7.063,0 0,16 16,0 0,-16 -6.118,0 5.759,-4 7.759,0 5.826,4 -6.226,0 0,16 7,0 0,5 -7,0 0,16 7,0 0,5 -7,0 0,16 7,0 0,5 -7,0 0,17 16,0 0,-17 -7,0 0,-5 7,0 0,-16 -7,0 0,-5 7,0 0,-6.757 L 75.988,62 71,62 l 0,16 16,0 0,-16 -8.712,0 z M 40,3 l 9,0 0,10 -9,0 0,-10 z"
          inkscape:connector-curvature="0" />
     </g>
-    <path
-       inkscape:connector-curvature="0"
-       id="path8199-4-5"
-       d="m 140.45314,599.767 61.76647,0"
-       style="opacity:1;fill:none;stroke:#000000;stroke-width:1.61312211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-1-5-28);marker-end:url(#TriangleOutM-3-4-0)" />
-    <rect
-       x="149.71359"
-       y="593.53815"
-       width="38.326626"
-       height="15.000007"
-       id="rect56941-0-3-9-6-0"
-       style="opacity:1;fill:#ffffff" />
-    <text
-       sodipodi:linespacing="125%"
-       y="604.27808"
-       x="153.26682"
-       font-size="11"
-       id="text56834-0-4-80-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">HTTP</text>
-    <rect
-       ry="0"
-       rx="0"
-       y="499.12411"
-       x="218.42645"
-       height="50.000019"
-       width="137.15327"
-       id="rect79371-1-6-6-9-8-7-3-5-2-2-36"
-       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text44235-7-5"
-       y="520.48785"
-       x="270.06448"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         y="520.48785"
-         x="270.06448"
-         sodipodi:role="line"
-         id="tspan6445-3-7">Cloud Analytics</tspan><tspan
-         y="534.23785"
-         x="270.06448"
-         sodipodi:role="line"
-         id="tspan5128">Edge Analytics</tspan></text>
-    <rect
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect4785"
-       width="35.309288"
-       height="27.616982"
-       x="226.65622"
-       y="510.93848" />
     <g
        style="fill:#ffffff"
        id="g4835"
-       transform="matrix(0.6753665,0,0,0.6753665,233.69287,514.62336)">
+       transform="matrix(0.6753665,0,0,0.6753665,233.44768,512.72743)">
       <g
          id="g4817">
         <rect
@@ -1801,5 +1712,24 @@
            x="10" />
       </g>
     </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path8199-4-7"
+       d="m 139.07191,586.46651 61.76647,0"
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1.61312211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-1-5-0);marker-end:url(#TriangleOutM-3-4-4)" />
+    <rect
+       x="146.95605"
+       y="578.6571"
+       width="38.326626"
+       height="15.000007"
+       id="rect56941-0-3-9-6-0"
+       style="opacity:1;fill:#ffffff" />
+    <text
+       sodipodi:linespacing="125%"
+       y="589.39703"
+       x="150.50929"
+       font-size="11"
+       id="text56834-0-4-80-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">HTTP</text>
   </g>
 </svg>
