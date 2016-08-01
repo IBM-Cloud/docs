@@ -12,7 +12,7 @@ copyright:
 # Getting started with {{site.data.keyword.mobileanalytics_short}} (Experimental)  
 
 {: #gettingstartedtemplate}
-*Last updated: 28 April 2016*
+*Last updated: 1 August 2016*
 {: .last-updated}
 
 Use the {{site.data.keyword.mobileanalytics_full}} service to measure the state, behavior, and context of your mobile apps, mobile users, and mobile devices.
@@ -22,7 +22,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 
 1. After you [create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) of the {{site.data.keyword.mobileanalytics_short}} service, you can access the {{site.data.keyword.mobileanalytics_short}} Console by clicking your tile in the Services section of the {{site.data.keyword.Bluemix}} Dashboard.
 
-  **Important:** When you initially open your newly created Mobile Analytics service, a window displays to confirm that you allow {{site.data.keyword.Bluemix_notm}} to provide necessary information to the service about yourself so the service can validate your identity. Click **Confirm** to continue to the {{site.data.keyword.mobileanalytics_short}} console. If you cancel, the {{site.data.keyword.mobileanalytics_short}} console will not open.
+  **Important:** When you initially open your newly created Mobile Analytics service, a window might display to confirm that you allow {{site.data.keyword.Bluemix_notm}} to provide necessary information to the service about yourself so the service can validate your identity. Click **Confirm** to continue to the {{site.data.keyword.mobileanalytics_short}} console. If you cancel, the {{site.data.keyword.mobileanalytics_short}} console will not open.
 2. Install the {{site.data.keyword.mobileanalytics_short}} [Client SDKs](install-client-sdk.html).
 3. Import the Client SDKs and initialize them with the following code snippet to record usage analytics.
   #### Android
@@ -34,7 +34,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 		import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
 		```
 
-  2. Get your [Client Key](sdk.html#analytics-clientkey) value.
+  2. Get your [Access Key](sdk.html#analytics-clientkey) value.
   3. Initialize the Client SDK inside your application code to record usage analytics and application sessions.
 		
 		```Java
@@ -43,7 +43,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 		    } catch (MalformedURLException e) {
 		        Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
 		    }
-		   Analytics.init(getApplication(), "your_app_name", "your_client_key", Analytics.DeviceEvent.LIFECYCLE);
+		   Analytics.init(getApplication(), "your_app_name", "your_access_key", Analytics.DeviceEvent.LIFECYCLE);
 		```
     The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
 
@@ -56,16 +56,16 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
     import BMSAnalytics
     ```
 
-  2. Get your [Client Key](sdk.html#analytics-clientkey) value.
+  2. Get your [Access Key](sdk.html#analytics-clientkey) value.
 
   3. Initialize the Client SDK inside your application code to record usage analytics and application sessions.
 	
 	```Swift
 	BMSClient.sharedInstance.initializeWithBluemixAppRoute("nil",bluemixAppGUID: "nil", bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-	Analytics.initializeWithAppName("your_app_name", apiKey: "your_client_key", deviceEvents: DeviceEvent.LIFECYCLE)
+	Analytics.initializeWithAppName("your_app_name", accessKey: "your_access_key", deviceEvents: DeviceEvent.LIFECYCLE)
 	```
 
-    The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example,   `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
+    The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
 
 4. Send recorded usage analytics to the Mobile Analytics Service. A simple way to test your analytics is to run the following code when your application starts:
 
@@ -113,7 +113,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 See the [Instrumenting your application](sdk.html) topic.
 5. Compile and run the application on your emulator or device.
 
-6. Go to the {{site.data.keyword.mobileanalytics_short}} **Dashboard** to see usage analytics, such as new devices and total devices using the application. You can also monitor your app by [creating custom charts](app-monitoring.html#custom-charts), [setting alerts](app-monitoring.html#alerts), and [monitoring app crashes](app-monitoring.html#monitor-app-crash). 
+6. Go to the {{site.data.keyword.mobileanalytics_short}} **Dashboard** to see usage analytics, such as new devices and total devices using the application. You can also monitor your app by <!-- [creating custom charts](app-monitoring.html#custom-charts), --> [setting alerts](app-monitoring.html#alerts) and [monitoring app crashes](app-monitoring.html#monitor-app-crash). 
 
 
 # rellinks
