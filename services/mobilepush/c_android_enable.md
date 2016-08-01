@@ -1,4 +1,4 @@
----
+    ---
 
 copyright:
  years: 2015 2016
@@ -8,7 +8,7 @@ copyright:
 
 # Enabling Android applications to receive push notifications
 {: #tag_based_notifications}
-*Last updated: 14 June 2016*
+Last updated: 20 July 2016
 {: .last-updated}
 
 Enable Android applications to receive push notifications and send push notifications to your devices.
@@ -62,7 +62,7 @@ Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatical
 		<category  android:name="android.intent.category.DEFAULT"/>
 	</intent-filter>
 	```
-	**Note**: Replace *Your_Android_Package_Name* in the action above with the application package name used in your application.
+	**Note**: Replace *Your_Android_Package_Name* in the previous action with the application package name used in your application.
 
 5. Add the Google Cloud Messaging (GCM) intent service and intent filters for the RECEIVE event notifications.
 
@@ -91,7 +91,8 @@ Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatical
 
 A common place to put the initialization code is in the onCreate method of the main activity in your Android application.
 
-Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application route and applicationGUID. Use these values for your route and App GUID. Modify the code snippet to use your Bluemix app appRoute and appGUID parameters.
+To get your App route and App GUID, select the Configuration option in the navigation pane for your initialized push services and click **Mobile Options**.
+Use these values for your route and App GUID. Modify the code snippet to use your Bluemix app appRoute and appGUID parameters.
 
 
 ###Initialize the Core SDK
@@ -103,15 +104,18 @@ BMSClient.getInstance().initialize(getApplicationContext(), appRoute , appGuid, 
 ```
 
 
-**appRoute**
+####appRoute
+{: approute}
 
 Specifies the route that is assigned to the server application that you created on Bluemix.
 
-**AppGUID**
+####AppGUID
+{: appguid}
 
-Specifies the unique key that is assigned to the application that you created on Bluemix. This value is case-sensitive.
+Specifies the unique key that is assigned to the Push Notification service instance on Bluemix. This value is case-sensitive. You can get this value from Mobile Options on the Push Dashboard.
 
-**bluemixRegionSuffix**
+####bluemixRegionSuffix
+{: bluemixRegionSuffix}
 
 Specifies the location where the app hosted. You can use one of three values:
 
@@ -122,21 +126,25 @@ Specifies the location where the app hosted. You can use one of three values:
 ###Initialize the client Push SDK
 
 ```
-//Initialize client Push SDK for Java
+Initialize client Push SDK for Java
 MFPPush push = MFPPush.getInstance();
-push.initialize(getApplicationContext());
+push.initialize(getApplicationContext(), "AppGUID");
 ```
+####AppGUID
+{: AppGUID}
+
+This is the AppGUID key of the Push Notifications service.
 
 ## Registering Android devices
 {: #android_register}
 
-Use the `IMFPush.register()` API to register the device with a push notification service. For registering for Android devices, you first add the Google Cloud Messaging (GCM) information in the Bluemix push service configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html).
+Use the `IMFPush.register()` API to register the device with Push Notification service. For registering for Android devices, you first add the Google Cloud Messaging (GCM) information in the Bluemix push service configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html).
 
 Copy and paste the following code snippets into your Android mobile application.
 
 ```
 	//Register Android devices
-	push.register(new MFPPushResponseListener<String>() {
+	push.registerDevice(new MFPPushResponseListener<String>() {
 	    @Override
 	    public void onSuccess(String deviceId) {
 	           //handle success here
@@ -197,11 +205,9 @@ Send basic push notifications.
 3. Verify that your devices have received your notification.
 
 	The following screen shot shows an alert box handling a push
-notification in the foreground on a Android and iOS device.
+notification in the foreground on a Android device.
 
 	![Foreground push notification on Android](images/Android_Screenshot.jpg)
-
-	![Foreground push notification on iOS](images/iOS_Screenshot.jpg)
 
 	The following following screen shot shows a push notification in the background for Android.
 	![Background push notification on Android](images/background.jpg)

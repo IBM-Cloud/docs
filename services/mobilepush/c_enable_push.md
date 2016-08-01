@@ -7,7 +7,7 @@ copyright:
 
 # Enabling notifications
 {: #c_enable_push-notifications}
-*Last updated: 14 June 2016*
+Last updated: 14 June 2016
 {: .last-updated}
 
 You can enable applications to receive and send push notifications to your devices.

@@ -7,7 +7,7 @@ copyright:
 
 # Enabling Cordova applications to receive push notifications
 {: #cordova_enable}
-*Last updated: 14 June 2016*
+Last updated: 20 July 2016
 {: .last-updated}
 
 Cordova is a platform for building hybrid applications with JavaScript, CSS, and HTML. The {{site.data.keyword.mobilepushshort}} supports development of Cordova-based iOS and Android applications.
@@ -123,7 +123,7 @@ Before you can use the push notification service Cordova plug-in, you need to in
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. Modify the code snippet to use your Bluemix Route and appGUID parameters. Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application Route and App GUID. Use the Route and App GUID values as your parameters in your `BMSClient.initialize` code snippet.
+1. Modify the code snippet to use your Bluemix Route and appGUID parameters. Click the **Mobile Options** link in your Push Dashboard to get the the app Route, App GUID and client Secret. Use the Route and App GUID values as your parameters in your `BMSClient.initialize` code snippet.
 
 	**Note**: If you have created a Cordova app using the Cordova CLI, for example, Cordova create app-name command, put this Javascript code in the **index.js** file, after the `app.receivedEvent` function within the `onDeviceReady: function()` function to initialize the BMS client.
 
@@ -137,9 +137,14 @@ onDeviceReady: function() {
 ## Registering devices
 {: #cordova_register}
 
-To register a device with the push notification service, call the register method.
+Before registering, initialize the Push Notification service.
+```
+var appGUID = "your push service appGUID";
+MFPPush.initialize(appGUID);
 
-Copy and paste the following code snippet into your Cordova application to register a device.
+```
+
+To register a device with the Push Notification service, call the register method. Copy the following code snippet into your Cordova application to register a device.
 
 ```
 	var success = function(message) { console.log("Success: " + message); };
@@ -149,7 +154,7 @@ Copy and paste the following code snippet into your Cordova application to regis
 
 ### Android
 {: #cordova_register_android}
-Android does not use of the settings parameter. If you are only building an Android app, pass an empty object; for example:
+Android does not use of the settings parameter. If you are only building an Android app, pass an empty object. For example:
 
 ```
 	MFPPush.registerDevice({}, success, failure);
@@ -158,7 +163,7 @@ Android does not use of the settings parameter. If you are only building an Andr
 
 ### iOS
 {: #cordova_register_ios}
-If you want to customize the alert, badge, and sound properties, add the following JavaScript code snippet to the web part of your Cordova application.
+To customize the alert, badge, and sound properties, add the following JavaScript code snippet to the web part of your Cordova application.
 
 ```
 	var settings = {
@@ -184,9 +189,9 @@ You can access the contents of the success response parameter in Javascript usin
 **var token = JSON.parse(response).token**
 
 
-Available keys are as follows: `token`, `userId`, and `deviceId`.
+The available keys are: `token`, `userId`, and `deviceId`.
 
-The following JavaScript code snippet shows how to initialize your Bluemix Mobile Services client SDK, register a device with push notification service, and listen to push notifications. You put this code in your Javascript file.
+The following JavaScript code snippet shows how to initialize your Bluemix Mobile Services client SDK, register a device with Push Notification service, and listen to push notifications. You put this code in your Javascript file.
 
 
 
@@ -263,16 +268,32 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 
 Build your project and then run your project by using the following commands:
 
-	* Android - **cordova build android** and then **cordova run android**
+####Android
+{: android-next-steps}
 
-	* iOS - **cordova build ios** and then **cordova run ios**
+```
+cordova build android
+```
 
+```
+cordova run android
+```
 
+####iOS
+{: ios-next-steps}
+
+```
+cordova build ios
+```
+
+```
+cordova run ios
+```
 
 ## Receiving push notifications on devices
 {: #cordova_receive}
 
-Copy and paste the following code snippets to receive push notifications on devices.
+Copy and paste the following code snippet to receive push notifications on devices.
 
 ###JavaScript
 
@@ -300,8 +321,8 @@ The following section lists the Android notification properties:
 The following section lists the iOS notification properties:
 
 * message - Push notification message
-* payload - JSON object containing a notification payload
-action-loc-key - The string is used as a key to get a localized string in the current localization to use for the right button’s title instead of “View".
+* payload - JSON object that contains a notification payload
+action-loc-key - The string is used as a key to get a localized string in the current localization, to use for the appropriate button title, instead of `View`.
 * badge - The number to display as the badge of the app icon. If this property is absent, the badge is not changed. To remove the badge, set the value of this property to 0.
 * sound - The name of a sound file in the app bundle or in the Library/Sounds folder of the app data container.
 

@@ -7,7 +7,7 @@ copyright:
 
 # Managing tags
 {: #manage_tags}
-*Last updated: 14 June 2016*
+Last updated: 14 June 2016
 {: .last-updated}
 
 Use the Push dashboard to create and delete tags for your application and then initiate tag-based notifications. The tag-based notification is received on the device that is subscribed to the tag.
@@ -49,6 +49,7 @@ Tag-based notifications are notification messages that are targeted to all the d
 Tags provide a way to send targeted notifications to users based their interests, unlike general broadcasts that are sent to all applications. You can create and manage tags by using the Tag tab on the Push dashboard or use REST APIs. You can use code snippets in the following sections to manage and query your tag subscriptions for your mobile application. You can use these code snippets to get subscriptions, subscribed to a tag, unsubscribed from a tag, get a list of available tags. You copy and paste these code snippets into your mobile application.
 
 ## Android
+{: android-get-tags}
 
 The **getTags** API returns the list of available tags to which the device can subscribe. After the device is subscribed to a particular tag, the device can receive any push notifications that are sent for that tag.
 
@@ -93,6 +94,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 ```
 
 ## Cordova
+{: cordova-get-tags}
 
 Copy the following code snippets into your mobile application to get a list of tags to which the device is subscribed and to get a list of available tags to which the device can subscribe.
 
@@ -114,6 +116,7 @@ MFPPush.getSubscriptionStatus(function(tags) {
 ```
 
 ## Objective-C
+{: objc-get-tags}
 
 Copy the following code snippets into your iOS application developed using Objective-C to get a list of tags to which the device is subscribed and get a list of available tags to which the device can subscribe.
 
@@ -153,6 +156,7 @@ subscribedTags = [response subscriptions];
 ```
 
 ## Swift
+{: swift-get-tags}
 
 The **retrieveAvailableTagsWithCompletionHandler** API returns the list of available tags to which the device can subscribe. After the device is subscribed to a particular tag, the device can receive any push notifications that are sent for that tag.
 
@@ -198,6 +202,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 Use the following code snippets to allow your devices to get subscriptions, subscribe to a tag, and unsubscribe from a tag.
 
 ## Android
+{: android-subscribe-tags}
 
 Copy and paste this code snippet into your Android mobile application.
 
@@ -232,6 +237,7 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 
 ## Cordova
+{: cordova-subscribe-tags}
 
 Copy and paste this code snippet into your Cordova mobile application.
 
@@ -242,6 +248,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 
 ## Objective-C
+{: objc-subscribe-tags}
 
 Copy and paste this code snippet into your Objective-C mobile application.
 
@@ -277,6 +284,7 @@ Use the **unsubscribeFromTags** API to unsubscribe from a tag.
 ```
 
 ## Swift
+{: swift-subscribe-tags}
 
 Copy and paste this code snippet into your Swift mobile application.
 
@@ -319,12 +327,13 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
 
 Tag-based notifications are notification messages that are targeted to all the devices that are subscribed to a particular tag. Each device can be subscribed to any number of tags. This section describes how to send tag-based notifications. Subscriptions are maintained by the Push Notifications service Bluemix instance. When a tag is deleted, all the information associated with that tag, including its subscribers and devices are deleted. No automatic unsubscribe is needed for this tag since it no longer exists and no further action is required from the client side.
 
-**Before you begin**
+###Before you begin
+{: before-you-begin}
 
 Create tags on the **Tag** screen. For information about how to create tags, see [Creating tags](t_manage_tags.html).
 
 1. From the **Push Notification** dashboard, click the **Notifications** tab.
 1. Select the **Tags** option to send tag-based notifications.
 1. In the **Search** tags field, search for the tags that want to use and then click the **+Add** button.![Notifications Screen](images/tag_notification.jpg)
-1. Go to the **Create Your Notifications** area and in the **Message Text** field, enter text that want to send in your notification.
+1. In the **Message Text** field, enter text that would be sent as a notification to the subscribed audience.
 1. Click the **Send** button.

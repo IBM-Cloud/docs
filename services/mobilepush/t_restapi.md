@@ -7,7 +7,7 @@ copyright:
 
 # Using REST APIs
 {: #push-api-rest}
-*Last updated: 12 July 2016*
+Last updated: 12 July 2016
 {: .last-updated}
 
 You can use a REST (Representational State Transfer) API (application program interface) for push notifications. You can also use the SDK and [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) to further develop your client applications.
@@ -22,12 +22,19 @@ With the Push REST API, backend server applications and clients can access Push 
 
 To obtain the base URL for the REST API:
 
-1. Create a backend application in the Boilerplates section Bluemix® catalog, which automatically binds the Push service to this application. If you already created a backend app, make sure that you bind the app to the Push Notification Service. 
+1. Create a backend application in the Boilerplates section Bluemix® catalog, which automatically binds the Push service to this application. You can also create a service instance of Push and leave it unbounded. 
 
 1. In the main page of the Bluemix dashboard, go to the **Applications** area and then click your app.
 
-3. Click MOBILE OPTIONS. The route and app GUID values are displayed at the top of the details page for your app.
+3. Click **MOBILE OPTIONS**. The route and app GUID values are displayed at the start of the details page for your app. The Show Credentials screen shows information about the AppSecret. You can get the application secret from Mobile Options and also client secret for some of the API's.
 
+You can also use the command line to get the service credentials:
+
+```
+cf create-service-key {push_instance_name} {key_name}
+
+cf service-key {push_instance_name} {key_name}
+```
 
 
 ## Accept language header
@@ -69,7 +76,9 @@ The **Show Credentials** screen shows information about the AppSecret:
 ##Push REST API filters
 {: #push-api-rest-filters}
 
-Filters define a search criteria that restrict data that is returned from a GET API of Push. Apply the filters against the result of the Get operation that you want to filter. The filter restricts the number of entries that are included in the result. For example, you can use a filter to search a tag with a starts with "test". You can generate a filter by using the following syntax.
+Filters define a search criteria that restrict data that is returned from a GET API of Push. Apply the filters against the result of the Get operation that you want to filter. The filter restricts the number of entries included in the result. For example, you can use a filter to search for tags that start with "test". 
+
+Filters can be generated using the following syntax:
 
 **name**
 The field name on which the filter is being applied.
