@@ -11,7 +11,7 @@ copyright:
 # Enabling Facebook authentication for iOS apps (Swift SDK)
 {: #facebook-auth-ios}
 
-Last updated: 26 July 2016
+Last updated: 01 August 2016
 {: .last-updated}
 
 To use Facebook as an identity provider in your iOS applications, add and configure the iOS Platform for your Facebook application.
@@ -20,7 +20,7 @@ To use Facebook as an identity provider in your iOS applications, add and config
 ## Before you begin
 {: #facebook-auth-ios-before}
  You must have
-* An iOS project that is set up to work with CocoaPods.  For more information, see **Install CocoaPods** in  [Setting up the iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
+* An iOS project that is seft up to work with CocoaPods.  For more information, see **Install CocoaPods** in  [Setting up the iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
    **Note:** You do not need to install the core {{site.data.keyword.amashort}}  client SDK before proceeding.
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
 * A Facebook application on the Facebook for Developers site. 
@@ -176,7 +176,7 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSSecurity
  ```
 2. Initialize the client SDK.	Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
-Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the face icon (![face](images/face.jpg "Face icon"))  in the upper-left corner of the {{site.data.keyword.Bluemix_notm}} dashboard.
+Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the Account and Support widget.
 
  ```Swift
  let backendURL = "<applicationRoute>"

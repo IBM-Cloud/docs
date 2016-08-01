@@ -11,7 +11,7 @@ copyright:
 # Setting up the iOS Swift SDK
 {: #getting-started-ios}
 
-*Last updated: 17 July 2016*
+Last updated: 01 August 2016
 {: .last-updated}
 
 {{site.data.keyword.amashort}} has released a new Swift SDK, that adds to, and improves, the functionality provided by the existing {{site.data.keyword.amashort}} Objective-C SDK, making it easier to authenticate your app and providing better protection for your back-end resources. Instrument your iOS Swift application with the {{site.data.keyword.amashort}} SDK, initialize the SDK, and make requests to protected and unprotected resources.
@@ -85,7 +85,7 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
  import BMSSecurity
  ```  
 
-1. Initialize the {{site.data.keyword.amashort}} client SDK. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the face icon (![Face](images/face.png "Face")) in the upper-left corner of the dashboard. 
+1. Initialize the {{site.data.keyword.amashort}} client SDK. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the Account and Support widget.
 
 
  ```Swift
