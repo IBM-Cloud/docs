@@ -11,7 +11,7 @@ copyright:
 {:codeblock:.codeblock}
 {:note: .deprecated}
 
-**This service is being merged with {{site.data.keyword.iot_full}}:**  Existing instances are being merged with the corresponding {{site.data.keyword.iot_short_notm}} organizations which now contains the Real-Time Insights analytics and dashboard features. You can also access your instances from the {{site.data.keyword.iotrtinsights_short}} dashboard in read-only mode until 1 September 2016. For more information, see the [IBM Watson IoT Platform blog](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and [Cloud Analytics](https://new-console.ng.bluemix.net/docs/services/IoT/cloud_analytics.html){: new_window} in the {{site.data.keyword.iot_short_notm}} documentation.  
+**This service is being merged with {{site.data.keyword.iot_full}}:**  Existing instances are being merged with the corresponding {{site.data.keyword.iot_short_notm}} organizations which now contains the Real-Time Insights analytics and dashboard features. You can also access your instances from the {{site.data.keyword.iotrtinsights_short}} dashboard until 1 September 2016. For more information, see the [IBM Watson IoT Platform blog](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and [Cloud Analytics](https://new-console.ng.bluemix.net/docs/services/IoT/cloud_analytics.html){: new_window} in the {{site.data.keyword.iot_short_notm}} documentation.  
 {: deprecated}
 
 # Action types {: #actions}
