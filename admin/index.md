@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Last updated: 5 July 2016
+Last updated: 1 August 2016
 {: .last-updated}
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
@@ -152,8 +152,9 @@ You are required to set a minimum of 24 available hours for a week for a minimum
 2. Expand the **Manage Available Update Windows** section.
 3. Click **Add new** ![Add new](images/add-new.png).
 4. Set your first availability window by selecting the frequency, duration, and start time for the window.
-5. Click **Submit**.
-6. Repeat this process until you have met the minimum requirements for the weekly windows.
+5. Optional: Select **Mark as preferred**, if you'd like to set your recurring availability window as a preferred time for deployments to be scheduled. Preferred windows are given priority, when possible.
+6. Click **Submit**.
+7. Repeat this process until you have met the minimum requirements for the weekly windows.
 
 ### Setting unavailable maintenance windows
 
@@ -184,8 +185,9 @@ For disruptive updates that do require your approval, complete the following ste
 2. Identify any rows that have **Customer Scheduling Required** set to **Yes**.
 3. Select the row for that update to review the details for the update including the update description, suggested date and time for the update, the affected components, and duration for the update.
 4. Select **Schedule and Approve**.
-5. Choose from the following options: **Suggested date**, **Specific dates**, or **Any preapproved window**. If you select **Specific dates**, you can open the calendar to select three options for IBM to choose from.
-6. Select **Submit** when you are finished.
+5. Choose from the following options: **Suggested date**, **Alternative dates**, or **Any preapproved window**. If you select **Alternative dates**, you can open the calendar to select three options for IBM to choose from.
+6. Optional: From the list of selected alternative dates in the calendar, select the ones that you want to be set as preferred dates for deployment. Each selected date is noted as preferred for the deployer who is scheduling the deployment. IBM attempts to schedule maintenance during preferred update windows.
+7. Select **Submit** when you are finished.
 
 Based on your selection, the update is scheduled for deployment during the suggested date that you accepted, during one of your preapproved windows, or one of the specific dates and times that you selected. When the update is scheduled for deployment by IBM, you see the scheduled date reflected in the details for the update on the **System Updates** page.
 
