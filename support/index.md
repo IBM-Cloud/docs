@@ -12,7 +12,7 @@ copyright:
 # Getting customer support
 {: #getting-customer-support}
 
-Last updated: 1 August 2016
+Last updated: 2 August 2016
 {: .last-updated}
 
 
@@ -25,6 +25,7 @@ To open a support ticket or find other help options, you can go to Account and S
 {:shortdesc}
 
 ### Using Account and Support
+{: #using-avatar}
 Account and Support is a feature that enables you to check account information, view status, stay up to date with notifications, select your region, select and manage orgs, and log out. In addition, you can get help and provide feedback.
 
 To open Account and Support, log in to the {{site.data.keyword.Bluemix_notm}} user interface and click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the menu bar.
@@ -72,6 +73,7 @@ You can find the Status page by choosing either of the following options:
 
 
 ### Subscribing to an RSS feed
+{: #subscribing-rss-feed}
 
 You can also be alerted of any notifications by subscribing to the RSS feed for the {{site.data.keyword.Bluemix_notm}} Status page. This approach provides a way for you to get updates without having to regularly consult the status page.
 
@@ -106,9 +108,11 @@ You can also use a third-party service to automatically send an email for each R
 {{site.data.keyword.Bluemix_notm}} typically has approximately 50 updates per month.
 
 ### Setting up incident and maintenance email notifications
+{: #setting-up-notifications}
 
 For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform notifications. Platform notifications are optional email alerts for incident and maintenance events for the {{site.data.keyword.Bluemix_notm}} platform. You can choose to receive these email notifications by clicking the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Notifications** &gt; **Platform** options. For more information about setting account notifications, go to [Setting notifications](../admin/account.html#notifications).
 ### Best practices for monitoring status
+{: #best-practices}
 
   * Check for upcoming maintenance windows
 
@@ -184,7 +188,7 @@ Each support ticket is assigned a unique ticket number for reference. In countri
 
 <!-- Michelle links to this anchor  -->
 
-If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer, support is provided by the IBM {{site.data.keyword.Bluemix_notm}} support team. However, because you might not have an IBM ID, you have a few different options for getting support.
+If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer in a country or region other than China, support is provided by the IBM {{site.data.keyword.Bluemix_notm}} support team. You can choose from a few different options to get support, depending on whether you have an IBM id.
 
 <ul>
 <li>Contact support by opening a new ticket using the
