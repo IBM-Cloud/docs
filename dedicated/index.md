@@ -195,7 +195,7 @@ You can expect a process similar to the following list for the initial deploymen
 <li>You identify an owner for the public account that is used to represent your company in {{site.data.keyword.Bluemix_notm}} Public. IBM uses this account for tracking syndicated services usage.</li>
 <li>You select the type of secure connection to your data center. You can select from SoftLayer VPN, SoftLayer Direct Link, and AT&T Net Bond.</li>
 <li>You decide whether there will be any access to your dedicated environment from the public Internet.</li>
-<li>You select the type of authentication that will be used. You can select from IBM ID or Active Directory. For information about using and registering for an IBM ID, see the <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Help and FAQ</a> page.
+<li>You select the type of authentication that will be used. You can select from IBMid or Active Directory. For information about using and registering for an IBMid, see the <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Help and FAQ</a> page.
 </li>
 <li>You identify and assign roles for your administrative team for the environment. For information about the roles that you must assign, see <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated roles and responsibilities</a>.</li>
 <li>IBM deploys the core platform that includes the elastic runtimes, console, administration feature, and monitoring.</li>
