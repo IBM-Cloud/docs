@@ -170,7 +170,7 @@ You can use one or more of the following parameters when you issue the cf login 
 <dd>Your password.</dd>
 <dd>*Important:* If you provide your password by using the *-p* parameter on the command line interface, the password might be recorded in the command line history. For security reasons, avoid providing the password by using the -p parameter. Instead, enter the password when the command line interface prompts you.</dd>
 <dt>*-sso*</dt>
-<dd>You must use the single sign-on option (SSO) when logging in with a federated ID. This is not required when logging in with an IBM id. If you try to sign in with a federated ID, and you do not specify the SSO parameter, you will be prompted to include it. Using the SSO parameter prompts you to enter the one-time passcode upon login.</dd>
+<dd>You must use the single sign-on option (SSO) when logging in with a federated ID. This is not required when logging in with an IBMid. If you try to sign in with a federated ID, and you do not specify the SSO parameter, you will be prompted to include it. Using the SSO parameter prompts you to enter the one-time passcode upon login.</dd>
 <dt>*-o* organization_name</dt>
 <dd>The name of the organization that you want to log in to.</dd>
 <dt>*-s* space_name</dt>
