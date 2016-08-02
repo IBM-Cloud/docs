@@ -576,21 +576,19 @@ entering the following command:
 **Tip:** You can also use **ba usb** as an alias for the longer
 **ba update-service-broker** command name.
 
-<!-- staging only start -->
-
 ### Working with application security groups
 
 To work with application security groups (ASGs), you must be a full access administrator for the local or dedicated environment. All users of the environment can list the available ASGs for the organization that is being targeted with the command. However, to create, update, or bind ASGs, you must be an administrator for the {{site.data.keyword.Bluemix_notm}} environment.
 
 ASGs function as virtual firewalls that control outbound traffic from the applications in your {{site.data.keyword.Bluemix_notm}} environment. Each ASG consists of a list of rules that allow specific traffic and communication to and from the outside network. You can bind one or more ASGs to a specific security group set, for example a group set that is used for applying global access, or you can bind to spaces within an organization in your {{site.data.keyword.Bluemix_notm}} environment.
 
-{{site.data.keyword.Bluemix_notm}} is initially set up with all access to the outside network restricted. Two IBM-created  security groups, `public_networks` and `dns`, enable global access to the outside network when you bind these groups to default Cloud Foundry security group sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets. These group sets apply the rules for allowing traffic to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information, see [Binding Application Security Groups](http://docs.pivotal.io/pivotalcf/1-6/adminguide/app-sec-groups.html#binding-groups).
+{{site.data.keyword.Bluemix_notm}} is initially set up with all access to the outside network restricted. Two IBM-created  security groups, `public_networks` and `dns`, enable global access to the outside network when you bind these groups to default Cloud Foundry security group sets. The two security group sets in Cloud Foundry that are used to apply global access are the **Default Staging** and **Default Running** group sets. These group sets apply the rules for allowing traffic to all running apps or all staging apps. If you do not want to bind to these two security group sets, you can unbind from the Cloud Foundry group sets, and then bind the security group to a specific space. For more information, see [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
 **Note**: The following commands that enable you to work with security groups are based on the Cloud Foundry 1.6 version.
 
 #### Listing, creating, updating, and deleting security groups
 
-For more information about creating security groups and the rules that define outgoing traffic, see [Creating and Updating Application Security Groups](http://docs.pivotal.io/pivotalcf/1-6/adminguide/app-sec-groups.html#creating-groups).
+For more information about creating security groups and the rules that define outgoing traffic, see [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 * You can list all security groups by
 entering the following command:
@@ -675,7 +673,7 @@ cf ba delete-security-group <security-group>
 
 #### Binding, unbinding, and listing bound security groups
 
-For more information about binding and unbinding security groups, see [Binding Application Security Groups](http://docs.pivotal.io/pivotalcf/1-6/adminguide/app-sec-groups.html#binding-groups) and [Unbinding Application Security Groups](docs.pivotal.io/pivotalcf/1-6/adminguide/app-sec-groups.html#unbinding-groups).
+For more information about binding and unbinding security groups, see [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} and [Unbinding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
 
 * You can bind to thetheDefault Staging security group set by
 entering the following command:
@@ -781,4 +779,3 @@ cf ba unbind-security-group <security-group> <org> <space>
 **Tip:** You can also use **ba usg** as an alias for the longer
 **ba unbind-staging-security-group** command name.
 
-<!-- staging end -->
