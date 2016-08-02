@@ -563,7 +563,7 @@ The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog
 
 
 
-## Using {{site.data.keyword.Bluemix_notm}} Fine-grained Access Control with IBM {{site.data.keyword.objectstorageshort}} {: #fine-grained-access-control}
+## Using Fine-grained Access Control with IBM {{site.data.keyword.objectstorageshort}} {: #fine-grained-access-control}
 
 If you have multiple users storing files in the same container you can use Fine-grained Access Control Lists, or ACLs, to keep them from seeing each others files. ACLs are enabled at the container level and are not available for the service instance, storage account, or at the project level.
 
@@ -635,17 +635,17 @@ You can manage {{site.data.keyword.objectstorageshort}} users in the Service Cre
   cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
   ```
 
-2. Create a Service Key for a member using the following format. This creates service credentials with non-admin privileges. You can use either the Cloud Foundry command or the cURL command.
+2. Create service credentials for a member with non-admin privileges. `service-key-name` will be the name of your credential. You can use either the Cloud Foundry command or the cURL command.
 
   Cloud Foundry command:
   ```
-  cf create-service-key <object_storage_service_instance_name> <service-key-name> -c '{"role":"member"}'
+  cf create-service-key <"object_storage_service_instance_name"> <service-key-name> -c '{"role":"member"}'
   ```
 
   Example:
 
   ```
-  cf create-service-key Object-Storage-Acl-Test-member member1 -c '{"role":"member"}'
+  cf create-service-key Object-Storage-AclTest member1 -c '{"role":"member"}'
 
   ```
   cURL command:
@@ -660,7 +660,7 @@ You can manage {{site.data.keyword.objectstorageshort}} users in the Service Cre
   cf service-key <service_key_name> <member_name>
   ```
   Example:
-  Creating a member service key for a service instance named Object-Storage-Acl-Test as an admin.
+  Creating a member service key for a service instance named Object-Storage-Acl-Test.
   ```
   {
     "auth_url": "https://identity.open.softlayer.com",
@@ -694,9 +694,9 @@ To grant read access you can use either Swift commands or cURL commands.
 
   Swift command:
   ```
-  export OS_USER_ID=<user_id>>
+  export OS_USER_ID=<user_id>
   export OS_PASSWORD=<password>
-  export OS_TENANT_ID=<tenant_id>
+  export OS_TENANT_ID=<project_id>
   export OS_AUTH_URL=https://identity.open.softlayer.com/v3
   export OS_REGION_NAME=<region>
   export OS_IDENTITY_API_VERSION=3
@@ -708,17 +708,7 @@ To grant read access you can use either Swift commands or cURL commands.
   ```
   curl -i -H "X-Auth-User: <user_id>" -H "X-Auth-Key: <password>" <auth_url>
   ```
-2. Create a container.
-
-  Swift command:
-  ```
-  swift post <container_name>
-  ```
-  cURL command:
-  ```
-  curl -i <OS_STORAGE_URL> -X PUT -H "X-Auth-Token:<OS_AUTH_TOKEN>"
-  ```
-3. As an admin, grant read access by running the following command:
+3. Grant read access by running the following command:
 
   Swift command:
   ```
@@ -728,7 +718,7 @@ To grant read access you can use either Swift commands or cURL commands.
   ```
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: <tenant_id>:<project_id>" -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
-4. As an admin, verify the Read ACL value.
+4. Verify the Read ACL value.
 
   Swift command:
   ```
@@ -879,9 +869,10 @@ Note: Use a comma (,) to separate ACLs. For example, `-write-acl project id:user
 
 
 
+
 ### Removing access control from a container {: #removing-access}
 
-- To remove read ACLs from a container:
+To remove read ACLs from a container:
 
   Swift command:
   ```
@@ -892,7 +883,7 @@ Note: Use a comma (,) to separate ACLs. For example, `-write-acl project id:user
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
 
-- To remove write ACLs from a container:
+To remove write ACLs from a container:
 
   Swift command:
   ```
@@ -903,7 +894,7 @@ Note: Use a comma (,) to separate ACLs. For example, `-write-acl project id:user
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
 
-- To verify you have removed an ACL:
+To verify you have removed an ACL:
 
   Swift command:
   ```
@@ -931,7 +922,6 @@ X-Storage-Policy: standard
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
-
 
 
 
