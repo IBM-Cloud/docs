@@ -26,7 +26,7 @@ Go to the **Account and Support** icon ![Account and Support icon](../admin/imag
  On the **Profile** page, you can set or update the following information:
 
  * A profile photo that is visible to other {{site.data.keyword.Bluemix_notm}} users
- * IBM id information including your name, email, phone number, password, company, and role
+ * IBMid information including your name, email, phone number, password, company, and role
  * Analytics tracking setting
 
 ## Changing your profile photo
@@ -37,13 +37,13 @@ Go to the **Account and Support** icon ![Account and Support icon](../admin/imag
 * Click **Change Photo** to upload a new photo.
 * Click **Remove Photo** to remove your photo.
 
-## Editing your IBM id information
+## Editing your IBMid information
 {: #ibmid}
 
-If you need to change your IBM id account information, such as your name, email, phone number, password, or company name, complete the following steps:
+If you need to change your IBMid account information, such as your name, email, phone number, password, or company name, complete the following steps:
 
 1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
-2. Click **Edit your IBM id**.
+2. Click **Edit your IBMid**.
 3. Edit your user information.
 4. Click **Submit**.
 
