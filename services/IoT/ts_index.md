@@ -53,6 +53,7 @@ You can fix this problem by confirming that you have properly set the ping and K
 ## Getting help and support for {{site.data.keyword.iot_short_notm}}
 {: #gettinghelp}
 
+If you have problems or questions when using {{site.data.keyword.iot_short_notm}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 
 When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 
