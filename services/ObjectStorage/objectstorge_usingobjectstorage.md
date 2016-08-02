@@ -565,7 +565,7 @@ The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog
 
 ## Using Fine-grained Access Control with IBM {{site.data.keyword.objectstorageshort}} {: #fine-grained-access-control}
 
-If you have multiple users storing files in the same container you can use Fine-grained Access Control Lists, or ACLs, to keep them from seeing each others files. ACLs are enabled at the container level and are not available for the service instance, storage account, or at the project level.
+You can use Fine-grained Access Control Lists, or ACLs, to help secure files when you have multiple users storing files in the same container. ACLs are enabled at the container level and are not available for the service instance, storage account, or at the project level.
 
 
 
@@ -574,16 +574,16 @@ If you have multiple users storing files in the same container you can use Fine-
 
 #### {{site.data.keyword.objectstorageshort}} users
 
-{{site.data.keyword.objectstorageshort}} uses Cloud Foundry Service Keys backed by the OpenStack Identity Service to manage users. The Identity Service provides for user authentication using tokens and authorization using ACLs.
+{{site.data.keyword.objectstorageshort}} uses Cloud Foundry Service Keys backed by the OpenStack Identity Service to manage users. The Identity Service provides for user authentication by using tokens and authorization by using ACLs.
 
-The {{site.data.keyword.Bluemix_notm}} GUI creates a default administrative user when an {{site.data.keyword.objectstorageshort}} instance is created. This is the user that manages access to the storage service instance.
+The {{site.data.keyword.Bluemix_notm}} GUI creates a default administrative user when an {{site.data.keyword.objectstorageshort}} instance is created. This user manages access to the storage service instance.
 
 For more information about service keys, see [the Cloud Foundry documentation](https://docs.cloudfoundry.org/devguide/services/service-keys.html).
 
 
 #### {{site.data.keyword.Bluemix_notm}} platform users
 
-The {{site.data.keyword.Bluemix_notm}} Single Sign On service authenticates platform users against the IBM identity provider. The account owner can manage the roles of existing team members in the organization and spaces, as well as invite new team members. Currently, fine-grained access control cannot be enabled for the users assigned to your space. All users that have access to the space containing the {{site.data.keyword.objectstorageshort}} service have full management access to the lifecycle of the service.
+The {{site.data.keyword.Bluemix_notm}} Single Sign On service authenticates platform users against the IBM identity provider. The account owner can manage the roles of existing team members in the organization and spaces, as well as, invite new team members. Currently, fine-grained access control cannot be enabled for the users who are assigned to your space. All users that have access to the space containing the {{site.data.keyword.objectstorageshort}} service have full management access to the lifecycle of the service.
 
 For more information about user roles, see [the {{site.data.keyword.Bluemix_notm}} documentation](https://new-console.ng.bluemix.net/docs/admin/users_roles.html).
 
@@ -617,7 +617,7 @@ Access to the service is controlled by user roles and container ACLs. {{site.dat
 
 Container ACLs can be defined to manage access to objects in Swift containers. You can use read access so that users are only allowed to download objects, or you can allow users to download and list objects. Write access allows the user to upload new objects to a container.
 
-Note: Procedures outlined in this doc require the Swift CLI. For more information, see [using {{site.data.keyword.objectstorageshort}} with the Swift CLI](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli).
+Note: Procedures that are outlined in this doc require the Swift CLI. For more information, see [using {{site.data.keyword.objectstorageshort}} with the Swift CLI](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli).
 
 
 
@@ -629,7 +629,7 @@ You can manage {{site.data.keyword.objectstorageshort}} users in the Service Cre
 
 ### Creating a user with the member role {: #creating-member}
 
-1. Log into {{site.data.keyword.Bluemix_notm}} as a user with a developer role. You must be located within the space of the service instance you want to manage.
+1. Log in to {{site.data.keyword.Bluemix_notm}} as a user with a developer role. You must be located within the space of the service instance you want to manage.
 
   ```
   cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
@@ -639,13 +639,13 @@ You can manage {{site.data.keyword.objectstorageshort}} users in the Service Cre
 
   Cloud Foundry command:
   ```
-  cf create-service-key <"object_storage_service_instance_name"> <service-key-name> -c '{"role":"member"}'
+  cf create-service-key "<object_storage_service_instance_name>" <service-key-name> -c '{"role":"member"}'
   ```
 
   Example:
 
   ```
-  cf create-service-key Object-Storage-AclTest member1 -c '{"role":"member"}'
+  cf create-service-key "Object-Storage-AclTest" member1 -c '{"role":"member"}'
 
   ```
   cURL command:
@@ -690,7 +690,7 @@ Only an admin user can grant read access to a container for a member user using 
 
 To grant read access you can use either Swift commands or cURL commands.
 
-1. Authenticate your credentials using a CF Service Key.  You will get your Object Storage URL and authentication token as an output.
+1. Authenticate your credentials by using a CF Service Key.  You get your Object Storage URL and authentication token as an output.
 
   Swift command:
   ```
@@ -798,7 +798,7 @@ To grant write access you can use either Swift commands or cURL commands.
 
   Swift command:
   ```
-  export OS_USER_ID=<user_id>
+  export OS_USER_ID="<user_id>"
   export OS_PASSWORD="<password>"
   export OS_TENANT_ID=<tenant_id>
   export OS_AUTH_URL=https://identity.open.softlayer.com/v3
@@ -894,7 +894,7 @@ To remove write ACLs from a container:
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
 
-To verify you have removed an ACL:
+To verify that you have removed an ACL:
 
   Swift command:
   ```
@@ -922,7 +922,6 @@ X-Storage-Policy: standard
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
-
 
 
 ## Unbinding and deprovisioning {{site.data.keyword.objectstorageshort}} {: #deprovisioning-object-storage}
