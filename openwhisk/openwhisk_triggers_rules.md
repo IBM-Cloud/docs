@@ -24,7 +24,8 @@ Last updated: 22 February 2016
 {{site.data.keyword.openwhisk}} triggers and rules bring event-driven capabilities to the platform. Events from external and internal event sources are channeled through a trigger, and rules allow your actions to react to these events.
 {: shortdesc}
 
-## Triggers
+## Creating triggers
+{: #openwhisk_triggers_create}
 
 Triggers are a named channel for a class of events. The following are examples of triggers:
 - A trigger of location update events.
@@ -38,7 +39,8 @@ A *feed* is a convenient way to configure an external event source to fire trigg
 - Cloudant data change feed that fires a trigger event each time a document in a database is added or modified.
 - A Git feed that fires a trigger event for every commit to a Git repository.
 
-## Rules
+## Using rules
+{: #openwhisk_rules_use}
 
 A rule associates one trigger with one action, with every firing of the trigger causing the corresponding action to be invoked with the trigger event as input.
 
@@ -62,7 +64,7 @@ You can set up rules so that a single trigger event invokes multiple actions, an
 The three rules establish the following behavior: images in both tweets and uploaded images are classified, uploaded images are classified, and a thumbnail version is generated. 
 
 ## Creating and firing triggers
-{: #openwhisk_triggers}
+{: #openwhisk_triggers_fire}
 
 Triggers can be fired when certain events occur, or can be fired manually.
 
@@ -110,8 +112,8 @@ As an example, create a trigger to send user location updates, and manually fire
 A trigger that is fired without an accompanying rule to match against has no visible effect.
 Triggers cannot be created inside a package; they must be created directly under a namespace.
 
-## Using rules to associate triggers and actions
-{: #openwhisk_rules}
+## Associating triggers and actions by using rules
+{: #openwhisk_rules_assoc}
 
 Rules are used to associate a trigger with an action. Each time a trigger event is fired, the action is invoked with the event parameters.
 
