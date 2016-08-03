@@ -16,9 +16,9 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Using {{site.data.keyword.openwhisk_short}}-enabled services 
+# Using {{site.data.keyword.bluemix_short}} services that are enabled for {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
-Last updated: 28 March 2016
+Last updated: 2 August 2016
 {: .last-updated}
 
 In {{site.data.keyword.openwhisk}}, a catalog of packages gives you an easy way to enhance your app with useful capabilities, and to access external services in the ecosystem. Examples of external services that are {{site.data.keyword.openwhisk_short}}-enabled include Cloudant, The Weather Company, Slack, and GitHub.
@@ -42,6 +42,7 @@ The `/whisk.system/cloudant` package enables you to work with a Cloudant databas
 The following topics walk through setting up a Cloudant database, configuring an associated package, and using the actions and feeds in the `/whisk.system/cloudant` package.
 
 ### Setting up a Cloudant database in {{site.data.keyword.Bluemix_notm}}
+{: #openwhisk_catalog_cloudant_in}
 
 If you're using {{site.data.keyword.openwhisk_short}} from {{site.data.keyword.Bluemix}}, {{site.data.keyword.openwhisk_short}} automatically creates package bindings for your {{site.data.keyword.Bluemix_notm}} Cloudant service instances. If you're not using {{site.data.keyword.openwhisk_short}} and Cloudant from {{site.data.keyword.Bluemix_notm}}, skip to the next step.
 
@@ -110,6 +111,7 @@ If you're using {{site.data.keyword.openwhisk_short}} from {{site.data.keyword.B
   {: screen}
 
 ### Setting up a Cloudant database outside {{site.data.keyword.Bluemix_notm}}
+{: #openwhisk_catalog_cloudant_outside}
 
 If you're not using {{site.data.keyword.openwhisk_short}} in {{site.data.keyword.Bluemix_notm}} or if you want to set up your Cloudant database outside of {{site.data.keyword.Bluemix_notm}}, you must manually create a package binding for your Cloudant account. You need the Cloudant account host name, user name, and password.
 
@@ -134,6 +136,7 @@ If you're not using {{site.data.keyword.openwhisk_short}} in {{site.data.keyword
 
 
 ### Listening for changes to a Cloudant database
+{: #openwhisk_catalog_cloudant_listen}
 
 You can use the `changes` feed to configure a service to fire a trigger on every change to your Cloudant database. The parameters are as follows:
 
@@ -202,6 +205,7 @@ The JSON representation of the trigger event is as follows:
 
 
 ### Writing to a Cloudant database
+{: #openwhisk_catalog_cloudant_write}
 
 You can use an action to store a document in a Cloudant database called `testdb`. Make sure that this database exists in your Cloudant account.
 
@@ -227,6 +231,7 @@ You can use an action to store a document in a Cloudant database called `testdb`
 
 
 ### Reading from a Cloudant database
+{: #openwhisk_catalog_cloudant_read}
 
 You can use an action to fetch a document from a Cloudant database called `testdb`. Make sure that this database exists in your Cloudant account.
 
@@ -260,6 +265,7 @@ The package includes the following feed.
 
 
 ### Firing a trigger event periodically
+{: #openwhisk_catalog_alarm_fire}
 
 The `/whisk.system/alarms/alarm` feed configures the Alarm service to fire a trigger event at a specified frequency. The parameters are as follows:
 
@@ -299,6 +305,7 @@ The package includes the following action.
 Creating a package binding with the `apiKey` value is suggested. This way, you don't need to specify the key every time you invoke the actions in the package.
 
 ### Getting a weather forecast for a location
+{: #openwhisk_catalog_weather_forecast}
 
 The `/whisk.system/weather/forecast` action returns a weather forecast for a location by calling an API from The Weather Company. The parameters are as follows:
 
@@ -367,6 +374,7 @@ The package includes the following actions.
 Creating a package binding with the `username` and `password` values is suggested. This way, you don't need to specify these credentials every time you invoke the actions in the package.
 
 ### Translating text
+{: #openwhisk_catalog_watson_translate}
 
 The `/whisk.system/watson/translate` action translates text from one language to another. The parameters are as follows:
 
@@ -401,6 +409,7 @@ The following is an example of creating a package binding and translating some t
 
 
 ### Identifying the language of some text
+{: #openwhisk_catalog_watson_identifylang}
 
 The `/whisk.system/watson/languageId` action identifies the language of some text. The parameters are as follows:
 
@@ -434,6 +443,7 @@ The following is an example of creating a package binding and identifying the la
 
 
 ### Converting some text to speech
+{: #openwhisk_catalog_watson_texttospeech}
 
 The `/whisk.system/watson/textToSpeech` action converts some text into an audio speech. The parameters are as follows:
 
@@ -468,6 +478,7 @@ The following is an example of creating a package binding and converting some te
 
 
 ### Converting speech to text
+{: #openwhisk_catalog_watson_speechtotext}
 
 The `/whisk.system/watson/speechToText` action converts audio speech into text. The parameters are as follows:
 
@@ -527,6 +538,7 @@ The package includes the following actions:
 Creating a package binding with the `username`, `url`, and `channel` values is suggested. With binding, you don't need to specify the values each time that you invoke the action in the package.
 
 ### Posting a message to a Slack channel
+{: #openwhisk_catalog_slack_post}
 
 The `/whisk.system/slack/post` action posts a message to a specified Slack channel. The parameters are as follows:
 
@@ -571,6 +583,7 @@ The package includes the following feed:
 Creating a package binding with the `username`, `repository`, and `accessToken` values is suggested.  With binding, you don't need to specify the values each time that you use the feed in the package.
 
 ### Firing a trigger event with GitHub activity
+{: #openwhisk_catalog_github_fire}
 
 The `/whisk.system/github/webhook` feed configures a service to fire a trigger when there is activity in a specified GitHub repository. The parameters are as follows:
 
@@ -618,9 +631,10 @@ The package includes the following feed:
 | `/whisk.system/pushnotifications/webhook` | feed | events | Fire trigger events on device activities (device registration, unregistration, subscription, or unsubscription) on the Push service |
 Creating a package binding with the `appId` and `appSecret` values is suggested. This way, you don't need to specify these credentials every time you invoke the actions in the package.
 
-### Setting up IBM Push Notifications package
+### Creating a Push package binding
+{: #openwhisk_catalog_pushnotifications_create}
 
-While creating an IBM Push Notifications package, you must specify the following parameters,
+While creating a Push Notifications package binding, you must specify the following parameters,
 
 -  `appId`: The Bluemix app GUID.
 -  `appSecret`: The Bluemix push notification service appSecret.
@@ -631,7 +645,7 @@ The following is an example of creating a package binding.
 
 2. Initialize the Push Notification Service and bind the service to the Bluemix application
 
-3. Configure the [IBM Push Notification application](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
+3. Configure the [Push Notification application](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
 
   Be sure to remember the `App GUID` and the `App Secret` of the Bluemix app you created.
 
@@ -656,7 +670,8 @@ The following is an example of creating a package binding.
   ```
   {: screen}
 
-### Sending Push Notifications
+### Sending push notifications
+{: #openwhisk_catalog_pushnotifications_send}
 
 The `/whisk.system/pushnotifications/sendMessage` action sends push notifications to registered devices. The parameters are as follows:
 - `text` - The notification message to be shown to the user. For example: `-p text "Hi ,{{site.data.keyword.openwhisk}} send a notification"`.
@@ -694,9 +709,10 @@ Here is an example of sending push notification from the pushnotification packag
   ```
   {: screen}
 
-### Firing a trigger event on IBM Push Notifications Service activity
+### Firing a trigger event on Push activity
+{: #openwhisk_catalog_pushnotifications_fire}
 
-The `/whisk.system/pushnotifications/webhook` configures the IBM Push Notifications service to fire a trigger when there is a device activity such as device registration / unregistration or subscription / unsubscription in a specified application
+The `/whisk.system/pushnotifications/webhook` configures the Push service to fire a trigger when there is a device activity such as device registration / unregistration or subscription / unsubscription in a specified application
 
 The parameters are as follows:
 
@@ -704,16 +720,16 @@ The parameters are as follows:
 - `appSecret:` The Bluemix app GUID.
 - `events:` Supported events are `onDeviceRegister`, `onDeviceUnregister`, `onDeviceUpdate`, `onSubscribe`, `onUnsubscribe`.To get notified for all events use the wildcard character `*`.
 
-The following is an example of creating a trigger that will be fired each time there is a new device registered with the IBM Push Notifications Service application.
+The following is an example of creating a trigger that will be fired each time there is a new device registered with the Push Notifications service application.
 
-1. Create a package binding configured for your IBM Push Notifications service with your appId and appSecret.
+1. Create a package binding configured for your Push Notifications service with your appId and appSecret.
 
   ```
   wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
   ```
   {: pre}
 
-2. Create a trigger for the IBM Push Notifications Service `onDeviceRegister` event type using your `myPush/webhook` feed.
+2. Create a trigger for the Push Notifications service `onDeviceRegister` event type using your `myPush/webhook` feed.
 
   ```
   wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister

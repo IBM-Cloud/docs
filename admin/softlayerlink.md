@@ -30,8 +30,8 @@ You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accoun
 After your accounts are linked, you can switch between accounts easily. You can still monitor the usage of your {{site.data.keyword.Bluemix_notm}} resources in the  {{site.data.keyword.Bluemix_notm}} user interface. However, the billing for these resources will now appear on the SoftLayer invoice.
 
 Although your account billing will be linked, your login ID will vary depending on how your SoftLayer account is authenticated:
-* For users in SoftLayer accounts that do not use IBM id for authentication, continue to use your SoftLayer ID for SoftLayer products and services, and use your IBM id for {{site.data.keyword.Bluemix_notm}} products and services.
-* For users in SoftLayer accounts that use IBM id for authentication, use your IBM id to access both your SoftLayer and your {{site.data.keyword.Bluemix_notm}} accounts.
+* For users in SoftLayer accounts that do not use IBMid for authentication, continue to use your SoftLayer ID for SoftLayer products and services, and use your IBMid for {{site.data.keyword.Bluemix_notm}} products and services.
+* For users in SoftLayer accounts that use IBMid for authentication, use your IBMid to access both your SoftLayer and your {{site.data.keyword.Bluemix_notm}} accounts.
 
 **Attention:** After accounts are linked, they cannot be unlinked.  
 
@@ -69,7 +69,7 @@ To invite team members through {{site.data.keyword.Bluemix_notm}}:
 
 You can do this operation over and over as more team members are added to your Softlayer account.
  
-The team member receives an email that includes a **Join the organization** link. If the member does not have an IBM id, the member is redirected to a registration page. Next, the member can enter some basic information and create their {{site.data.keyword.Bluemix_notm}} account.
+The team member receives an email that includes a **Join the organization** link. If the member does not have an IBMid, the member is redirected to a registration page. Next, the member can enter some basic information and create their {{site.data.keyword.Bluemix_notm}} account.
 
 For more information about inviting team members through the {{site.data.keyword.Bluemix_notm}} user interface, see [Inviting team members](https://console.ng.bluemix.net/docs/admin/users_roles.html#inviteteammembers).
 

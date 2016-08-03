@@ -8,7 +8,7 @@ copyright:
 # Creating a custom identity provider
 {: #custom-create}
 
-*Last updated: 16 June 2016*
+Last updated: 16 June 2016
 {: .last-updated}
 
 

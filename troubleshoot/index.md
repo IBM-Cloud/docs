@@ -15,7 +15,7 @@ copyright:
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 26 July 2016*
+*Last updated: 1 August 2016*
 {: .last-updated}
 
 
@@ -386,7 +386,7 @@ Ensure that you created a space in your current organization.  To create a space
   * From Account and Support ![Account and Support](images/account_support.svg), select the organization that you want to create the space in, and then click **Create a Space**.
   * In the cf command line interface, type `cf create-space <space_name> -o <organization_name>`.
 
-Try again. If you see this message again, go to the [Bluemix status](https://status.eu-gb.bluemix.net/){: new_window} page to check whether a service or component has an issue.
+Try again. If you see this message again, go to the [Bluemix status](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
 
 
 
@@ -491,7 +491,7 @@ Other less common causes of a Bad Gateway error are Internet service provider (I
 
  
 
-If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first check the [{{site.data.keyword.Bluemix_notm}} status](https://developer.ibm.com/bluemix/support/#status){: new_window} page. You might want to use the service in another {{site.data.keyword.Bluemix_notm}} region as a workaround. Detailed information is available in [Using services in another region](../services/reqnsi.html#cross_region_service){: new_window}. If the service status is normal, try the following steps to solve the problem: 
+If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first check the [{{site.data.keyword.Bluemix_notm}} status](http://ibm.biz/bluemixstatus){: new_window} page. You might want to use the service in another {{site.data.keyword.Bluemix_notm}} region as a workaround. Detailed information is available in [Using services in another region](../services/reqnsi.html#cross_region_service){: new_window}. If the service status is normal, try the following steps to solve the problem: 
 {: tsResolve}
 
   * Retry the action:
@@ -1208,8 +1208,52 @@ Use one of the following methods to fix the problem:
 	```
 	<appname> open
 	```
-	
 
+## Deploying an app from the run bar fails
+{: #deployinganappfromtherunbarfails}
+
+In this scenario, the deployment fails in a yellow, "not synchronized" state. 
+
+The app that you are deploying has the same route as another app that is running. To fix this issue, change the route to be unique.
+
+## Run bar cannot be found
+{: #runbarcannotbefound}
+
+If you don't see the run bar in the Eclipse Orion {{site.data.keyword.webide}}, one of these issues occurred:
+
+1. {{site.data.keyword.jazzhub}} isn't identifying your project as a project.
+   * Fix: In your project's root directory, create a `project.json` file.
+2. {{site.data.keyword.jazzhub_short}} failed to determine which folder your app is in.
+   * Fix: If your app is in a directory other than the project root, do one of these steps:
+      * In your project's root directory, create a `manifest.yml` file. Then, edit the file so that it points to the location of your app; for example, `path: path_to_your_app`
+      * Move your app so that it is in your project's root directory.
+3. {{site.data.keyword.jazzhub_short}} does not detect that your app is a Node.js app.
+   * Fix: In the app folder of your project, create a `package.json` file.
+   
+
+## GitHub hook isn't working
+{: #githubhookisntworking}
+
+If you configured your GitHub project to create work-item links when you push commits and the links aren't working as expected, follow these steps to find the problem:
+
+1. In your GitHub repo, click **Settings**.
+   ![GitHub settings link](images/githubSettings1_small.png)
+
+2. Click **Webhooks & services**.
+   ![GitHub web hooks and services link](images/githubHooks1_small.png)
+
+3. To view the message, hover over the {{site.data.keyword.jazzhub}} status icon.
+   ![Error message on service hook](images/troubleshoothook1_small.png)
+
+4. Resolve the error according to the GitHub message.
+
+5. To verify that the fix worked, commit and push another change, or go to the service page for {{site.data.keyword.jazzhub_short}} and click **Test service**.
+   ![GitHub Test service button](images/githubTestService_small.png)
+
+6. Verify that there are no errors by checking the status icon again.
+   ![Status icon without errors](images/githubResolved_small.png)
+
+For more information, see [Setting up GitHub for Bluemix DevOps Services projects](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Troubleshooting for managing accounts

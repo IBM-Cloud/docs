@@ -15,37 +15,35 @@ copyright:
 
 # Node.js for application developers
 {: #nodejs}
+Adapt the client libraries and samples in node.js to build and customize applications that interact with your organization on {{site.data.keyword.iot_full}}.
+{:shortdesc}
+
 
 
 For more information, see the following resources:
 - [Client libraries and samples](https://github.com/ibm-messaging/iot-nodejs) in GitHub.
 - [Device samples](https://github.com/ibm-messaging/iot-nodejs/tree/master/samples) in GitHub.
 - [ibmiotf](https://www.npmjs.com/package/ibmiotf) on NPM.
+- [Reference](#reference_nodejs) section of this document.
 
-
-## Application client
-{: #app_client}
-
-*ApplicationClient* is an application client for the {{site.data.keyword.iot_full}} service. This section contains information on how {{site.data.keyword.iot_short_notm}} applications interact with devices.
 
 ## Constructor
 {: #constructor}
 
 The constructor builds the application client instance and accepts a JSON configuration file that contains the following properties:
 
-| Definition     |Description     |
+| Property     |Description     |
 |----------------|----------------|
-|``org`` |Your organization ID|
-|``id`` |The unique ID of your application within your organization|
-|``auth-key``|API key|
-|`auth-token``|API key token|
-|`type``|Specify `shared` to enable shared subscription|
+|`org` |Your organization ID. This is a required value.|
+|`id` |The unique ID of your application within your organization.|
+|`auth-key`|An API key.|
+|`auth-token`|An API key token.|
+|`type`|The type of subscription. Specify `shared` to enable shared subscription.|
+
 
 To use Quickstart, only the first two properties are required.
 
-
 ```
-
   var Client = require("ibmiotf");
 	var appClientConfig = {
 		"org" : orgId,
@@ -57,10 +55,11 @@ To use Quickstart, only the first two properties are required.
 	var appClient = new Client.IotfApplication(appClientConfig);
 ```
 
+
 ### Using a configuration file
 
 
-Instead of passing the JSON properties directly, you can also use a configuration file, which is outlined in the following code sample:
+Instead of passing the JSON properties directly, you can also use a configuration file which is outlined in the following code sample:
 
 ```
 
@@ -97,23 +96,23 @@ To connect to {{site.data.keyword.iot_short_notm}}, submit a *connect* request, 
 	});
 ```
 
-After successfully connecting to the {{site.data.keyword.iot_short_notm}} service, the application client sends a *connect* event, so all the logic can be implemented inside this callback function.
+After successfully connecting to the {{site.data.keyword.iot_short_notm}} service, the application client sends a `connect` event, so any logic can be implemented inside this callback function.
 
 
 
-The application client automatically tries to reconnect when it loses connection. When the reconnection is successful, the client sends a *reconnect* event.
+The application client automatically tries to reconnect when it loses connection. When the reconnection is successful, the client sends a `reconnect` event.
 
 
 
 ## Logging
 {: #logging}
 
-By default, only log events of type ```warn``` are recorded. If you want to increase or decrease the  logging level, use the *log.setLevel* function. The following log levels are supported:
-- *trace
+By default, only log events of type ``warn`` are recorded. If you want to increase or decrease the  logging level, use the `log.setLevel` function. The following log levels are supported:
+- trace
 - debug
 - info
 - warn
-- error*.
+- error
 
 ```
 
@@ -131,7 +130,7 @@ By default, only log events of type ```warn``` are recorded. If you want to incr
 ## Shared subscriptions
 {: #shared_subscriptions}
 
-Use the shared subscription feature to build scalable applications that balance the load of messages across multiple instances of the application. To enable load balancing, set the 'type' field to 'shared', which is shown in the following example:
+Use the shared subscription feature to build scalable applications that balance the load of messages across multiple instances of the application. To enable load balancing, set the `type` field to `shared`, which is shown in the following example:
 
 ```
 
@@ -156,7 +155,7 @@ Use the shared subscription feature to build scalable applications that balance 
 ## Handling errors
 {: #handling_errors}
 
-When the application client encounters an error, an *error* event is generated.
+When the application client encounters an error, an `error` event is generated.
 
 ```
 
@@ -179,12 +178,10 @@ When the application client encounters an error, an *error* event is generated.
 
 Events are the mechanism by which devices publish data to the {{site.data.keyword.iot_short_notm}} instance. The device controls the content of the event and assigns a name for each event that it sends.
 
-When an event is received by the {{site.data.keyword.iot_short_notm}} instance, the credentials of the received event identify the sending device, which makes it impossible for a device to impersonate another device.
+When an event is received by the {{site.data.keyword.iot_short_notm}} instance, the credentials of the received event identify the sending device, which means that a device cannot impersonate another device.
 
 
-
-
-By default, applications subscribe to all events from all connected devices. Use the type, ID, event, and msgFormat parameters to control the scope of the subscription. A single client can support multiple subscriptions. The following code samples provide examples of how to subscribe to devices that are dependent on device type, ID, event, and msgFormat parameters:
+By default, applications subscribe to all events from all connected devices. Use the device type, device ID, event, and message format parameters to control the scope of the subscription. The following code samples show how you can use these parameters to define the scope of a subscription:
 
 ### Subscribing to all events from all devices
 
@@ -261,17 +258,19 @@ By default, applications subscribe to all events from all connected devices. Use
 	});
 ```
 
+**Note**: A single client can support multiple subscriptions.
+
 ### Handling events from devices
 
 
-To process the events that are received by your subscriptions, implement a device event callback method. The {{site.data.keyword.iot_short_notm}} application client sends the event *deviceEvent*. This function has the following properties:
+To process the events that are received by your subscriptions, implement a device event callback method. The {{site.data.keyword.iot_short_notm}} application client sends the event ``deviceEvent``. This function has the following properties:
 
 - deviceType
 - deviceId
 - eventType
 - format
-- payload - Device event payload
-- topic - Original topic
+- payload
+- topic
 
 ```
 
@@ -346,11 +345,11 @@ By default, when you subscribe to device status, status updates are received for
 
 ### Handling status updates from devices
 
-To process the status updates that are received by your subscriptions, implement a device status callback method. The {{site.data.keyword.iot_short_notm}} application client sends the event *deviceStatus*. This function has the following properties:
+To process the status updates that are received by your subscriptions, implement a device status callback method. The {{site.data.keyword.iot_short_notm}} application client sends the event `deviceStatus`. This function has the following properties:
 
 -   deviceType
 -   deviceId
--   payload - Device status payload
+-   payload
 -   topic
 
 ```
@@ -379,11 +378,12 @@ To process the status updates that are received by your subscriptions, implement
 
 Applications can publish events as if they originated from a device. The function requires the following properties:
 
--   DeviceType
--   Device ID
--   Event Type
--   Format
--   Data
+-   deviceType
+-   deviceId
+-   eventType
+-   format
+-   data
+
 
 ```
 
@@ -406,13 +406,11 @@ Applications can publish events as if they originated from a device. The functio
 
 Applications can publish commands to connected devices. The function requires the following properties:
 
-
-
--   DeviceType
--   Device ID
--   Command Type
--   Format
--   Data
+-   deviceType
+-   deviceId
+-   eventType
+-   format
+-   data
 
 ```
 
@@ -449,3 +447,19 @@ The following sample disconnects the client and also releases the connections:
 		appClient.disconnect();
 	});
 ```
+
+
+## Reference
+{: #reference_nodejs}
+
+The following table describes the parameters that are required for the functions described in this node.js documentation:
+
+|Parameter|Data type|Description|
+|:---|:---|
+|`deviceType`|String|Specifies the device type. Typically, the deviceType is a grouping for devices that perform a specific task, for example "weatherballoon".|
+|`deviceId`|String|Specifies the ID of the device. Typically, for a given device type, the deviceId is a unique identifier of that device, for example a serial number or MAC address.|
+|`eventType`|String|Specifies a group of specific events, for example "status", "warning" and "data".|
+|`format`|String|Specifies the format. The format can be any string, for example "json".  The format divides up the topic space.|
+|`data`|Dictionary|Specifies the data for the message payload. Maximum length is 131072 bytes.|
+|`payload`|String|Specifies the data for the message payload. Maximum length is 131072 bytes.|
+|`topic`|String|When publishing as a device, the topic string does not include the device type or device ID; these are taken from the client ID.  For example, `iot-2/evt/event_id/fmt/format_string`.  When publishing as an application or gateway on behalf of a device, the topic must include the device type and device ID.  For example `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|

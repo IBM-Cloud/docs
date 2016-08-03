@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,6 +14,10 @@ copyright:
 
 # Feature overview
 {: #features}
+
+Last updated: 28 July 2016
+{: .last-updated}
+
 
 ## Device registry
 {: #device-registry}
@@ -25,7 +29,7 @@ device types to represent individual device models and apply default metadata to
 ## Connectivity
 {: #connectivity}
 
-Securely connect your devices, gateways and applications directly to the {{site.data.keyword.iot_full}} via MQTT.  For more information about the advantages of using
+Securely connect your devices, gateways and applications directly to the {{site.data.keyword.iot_short}} via MQTT.  For more information about the advantages of using
 the MQTT protocol, see the [MQTT](../reference/mqtt/index.html) reference information.
 Model the data from your device as events and control the flow of events into your applications.
 
@@ -33,15 +37,15 @@ Model the data from your device as events and control the flow of events into yo
 ## Gateway support
 {: #gateway-support}
 
-In many cases where a direct connection can not be made between the service and a device, the {{site.data.keyword.iot_short_notm}} allows
+In many cases where a direct connection can not be made between the service and a device, the {{site.data.keyword.iot_short}} allows
 gateway devices to connect that can provide indirect connectivity for multiple devices.
 
 
 ## Device management
 {: #device-management}
 
-Optionally, allow the {{site.data.keyword.iot_short_notm}} to manage the lifecycle of your devices by implementing support for
-the {{site.data.keyword.iot_short_notm}}'s device management protocol in your devices.  The means by which the device
+Optionally, allow the {{site.data.keyword.iot_short}} to manage the lifecycle of your devices by implementing support for
+the {{site.data.keyword.iot_short}}'s device management protocol in your devices.  The means by which the device
 connects to the service does not affect the device management protocol, which functions the
 same for directly connected, indirectly connected, and gateway devices.
 
@@ -49,9 +53,9 @@ same for directly connected, indirectly connected, and gateway devices.
 ## External service integration
 {: #external-service-int}
 
-The {{site.data.keyword.iot_short_notm}} supports integration with external services to bring data and operations supported by
+The {{site.data.keyword.iot_short}} supports integration with external services to bring data and operations supported by
 other online services into the platform, allowing your application and device developers to
-seamlessly interact with those services without ever leaving the comfort of the {{site.data.keyword.iot_short_notm}} APIs.
+seamlessly interact with those services without ever leaving the comfort of the {{site.data.keyword.iot_short}} APIs.
 
 **Important:** This feature is currently available as part of a limited beta. Future updates  
 may include changes incompatible with the current version of this feature. Try it out and [let us know what you think](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
@@ -60,7 +64,7 @@ may include changes incompatible with the current version of this feature. Try i
 ## Historian
 {: #historical-event-storage}
 
-Configure the {{site.data.keyword.iot_short_notm}} to store a record of the events your devices generate.
+Configure the {{site.data.keyword.iot_short}} to store a record of the events your devices generate.
 
 **Warning:** **Message format restrictions apply to the Historian**
 
@@ -74,7 +78,7 @@ The Historian feature supports JSON messages that meet the following criteria:
 
 The **d** element is where you include all data for the event (or command) that is transmitted in the message.
 
-- This element is required for your message to meet the {{site.data.keyword.iot_short_notm}} message specification.
+- This element is required for your message to meet the {{site.data.keyword.iot_short}} message specification.
 - This must always be a JSON object (not an array)
 - In the case where you wish to send no data the **d** element should still be present, but contain an empty object.
 
@@ -102,7 +106,7 @@ The **ts** element is optional, and you can use this to associate an event or co
 ## Last event cache
 {: #last-event-cache}
 
-Using the API you can retrieve the last recorded value of an event ID for a specific device, or the last recorded value for each event-id reported by a specific device. The last event cache only includes data from event IDs that were sent in the previous 30 days.
+Using the API you can retrieve the last recorded value of an event ID for a specific device, or the last recorded value for each event-id reported by a specific device. The last event cache only includes data from event IDs that were sent in the previous 12 months.
 
 To request the most recent value for a specific event-id, use the following API request, which returns the last recorded value for the “power” event-id.
 

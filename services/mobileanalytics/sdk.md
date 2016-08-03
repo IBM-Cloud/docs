@@ -7,7 +7,7 @@ copyright:
 
 # Instrumenting your application to use the {{site.data.keyword.mobileanalytics_short}} client SDKs
 {: #mobileanalytics_sdk}
-*Last updated: 27 April 2016*
+*Last updated: 1 August 2016*
 {: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_full}} SDKs enable you to instrument your mobile application.
@@ -21,13 +21,14 @@ The {{site.data.keyword.mobileanalytics_full}} SDKs enable you to instrument you
 
 Currently SDKs are available for Android, iOS and WatchOS.
 
-## Identifying your Client Key value
+## Identifying your Access Key value
 {: #analytics-clientkey}
 
-Identify your **Client Key** value before you set up the client SDK. The Client Key is required for initializing the client SDK.
+Identify your **Access Key** value before you set up the client SDK. The Access Key is required for initializing the client SDK.
+
 1. Open your {{site.data.keyword.mobileanalytics_short}} service dashboard.
-2. Click the wrench icon to open the API Keys tab.
-3. In the API Keys tab, note the Client Key value.
+2. Click the **Service Credentials** tab.
+3. Copy your Access key value.
 
 
 ## Initializing your Android app to collect analytics
@@ -60,7 +61,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Initialize Analytics by using your Android application object and giving it your application’s name. You also need the [**Client Key**](#analytics-clientkey) value.
+3. Initialize Analytics by using your Android application object and giving it your application’s name. You also need the [**Access Key**](#analytics-clientkey) value.
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -98,7 +99,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Initialize Analytics by giving it your mobile application’s name. You also need the [**Client Key**](#analytics-clientkey) value.
+3. Initialize Analytics by giving it your mobile application’s name. You also need the [**Access Key**](#analytics-clientkey) value.
 
   The application name is used as a filter to search for client logs in your {{site.data.keyword.mobileanalytics_short}} Dashboard. By using the same application name across platforms (for example, Android and iOS), you can see all logs from that application under the same name, regardless of which platform the logs were sent from.
 
@@ -108,7 +109,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: "your_client_key",
+      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -116,7 +117,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: "your_api_key")
+	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
 	```
 
   You can record device events on WatchOS by using the `Analytics.recordApplicationDidBecomeActive()` and `Analytics.recordApplicationWillResignActive()` methods.

@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -35,7 +35,7 @@ To create and connect the Node-RED device simulator:
     Leave the rest of the options at their default values. After the application is deployed, you are brought to the Start coding with Node-RED page.  
     **Note:** The staging process might take a few minutes.
 
-    3. Click the app link at the top of the page to open Node-RED.  
+    3. Click the Routes link to open Node-RED.  
     Example: `http://simulatedDevice.mybluemix.net`
     4. Click **Go to your Node-RED flow editor** to open the editor.
     5. Copy the Node-RED flow data that you find in the [Node-RED node flow data](#flow_data) section of this document.

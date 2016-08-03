@@ -11,7 +11,7 @@ copyright:
 # Setting up the Android SDK
 {: #getting-started-android}
 
-Last updated: 18 July 2016
+Last updated: 01 August 2016
 {: .last-updated}
 
 Instrument your Android application with the {{site.data.keyword.amashort}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.
@@ -39,7 +39,7 @@ The {{site.data.keyword.amashort}} client SDK is distributed with Gradle, a depe
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
@@ -71,7 +71,7 @@ Initialize the SDK by passing the `context`, `applicationGUID`, `applicationRout
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Replace the `BMSClient.REGION_UK` with the appropriate region.
+Replace the `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the Account and Support widget.
 
 ## Making a request to your mobile back-end application
 {: #request}

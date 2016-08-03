@@ -116,7 +116,7 @@ With a Pay-As-You-Go account, you are charged based on your use of {{site.data.k
 
 You can convert your free trial into a billable account at any time. All of your free trial non-billable account information and {{site.data.keyword.Bluemix_notm}} solutions will be seamlessly merged into the new billable account.
 
-After you create a billable account, you can edit the information that you provided. Click the **Profile Settings icon** in the upper-right corner of the {{site.data.keyword.Bluemix_notm}} user interface, then click **Account &gt; Account Type** to edit your information.
+After you create a billable account, you can edit the information that you provided. Click the **Profile Settings icon**, then click **Account &gt; Account Type** to edit your information.
 
 If you encounter any problems with {{site.data.keyword.Bluemix_notm}} when you are using a Pay-As-You-Go or a Subscription account, see [Getting online help](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) for more information.
 
@@ -422,7 +422,7 @@ To open the **Notifications** view, click the **Account and Support** icon &gt; 
 
 You can change your service plan in {{site.data.keyword.Bluemix_notm}} in the service Dashboard, if plan changes are enabled for that service.
 
-Only certain services provide the ability for you to change the service plan. If plan changes are enabled for the service, the service Dashboard displays a **Plan** option in the left navigation. Each service has a different set of next steps to follow if you change your plan.
+Only certain services provide the ability for you to change the service plan. If plan changes are enabled for the service, the service Dashboard displays a **Plan** option in the navigation. Each service has a different set of next steps to follow if you change your plan.
 
 1. To change your plan, in the service Dashboard, click **Plan**. Typically, you can upgrade your plan or reduce your plan.
 2. After you change your plan, you must complete a set of next steps. The steps vary depending on the type of plan change and the service. For example, if you reduced your plan, you might need to restage your app. Or, if you upgraded your plan, you might need to restage your app and take other actions.<br/><br/>To restage your app, go to the {{site.data.keyword.Bluemix_notm}} Dashboard and find the app that the service is bound to. In the app menu, select **Restart App**.<br/><br/>Other next step actions depend on the service. See the following table for specific actions.

@@ -13,6 +13,8 @@ copyright:
 
 
 # MQTT connectivity for gateways
+Last updated: 10 June 2016
+{: .last-updated}
 
 Use MQTT clients as gateways to connect your devices to your {{site.data.keyword.iot_full}} instance.
 
@@ -21,11 +23,12 @@ Use MQTT clients as gateways to connect your devices to your {{site.data.keyword
 ## MQTT client connection
 {: #MQTT_client_connection}
 
-Every registered organization has a unique endpoint, which must be used when connecting MQTT clients for gateways in that organization.
+To connect MQTT clients for gateways that are in your {{site.data.keyword.iot_short}} instance, use the following URL:
 
-```
-org_id.messaging.internetofthings.ibmcloud.com
-```
+<pre class="pre"><var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com</pre>
+{: codeblock}
+
+Where *orgId* is the unique organization ID that was generated when you registered the service instance.
 
 **Note:** In the {{site.data.keyword.iot_short_notm}} dashboard, devices and gateways that are connected directly to the {{site.data.keyword.iot_short_notm}} display a status icon to indicate that they are  connected. The dashboard displays devices that are connected indirectly through a gateway as disconnected as it does not have any knowledge of a devices connectivity to the gateway.
 
@@ -67,7 +70,7 @@ For a gateway to successfully authenticate, you must define each MQTT client ID 
 ```
 Where:
 -   Lowercase **g** identifies that the client is a gateway
--   org_id is the unique six character organization ID that was generated when you registered the service alphanumeric string that was assigned when you first registered the service.
+-   **org\_id** is the unique six character organization ID that was generated when you registered the service alphanumeric string that was assigned when you first registered the service.
 -   **typeId** is intended to be used as an identifier of the type of gateway connecting, it may be useful to think of this as analogous
     to a model number.
 -   **deviceId** must uniquely identify a gateway device across all gateways of a specific type, it may be useful to think of this as analogous to a serial number.
@@ -75,9 +78,9 @@ Where:
 **Note:** You can use any scheme of your choice when assigning values for `typeId` and `deviceId`, however the following restrictions apply to both values:
 -   Maximum length of 36 characters
 -   Must comprise only alpha-numeric characters (`a-z`, `A-Z`, `0-9`) and the following special characters:
- -   dash (`-`)
- -   underscore (`_`)
- -   dot (`.`)
+ -   dash(-)
+ -   underscore(_)
+ -   dot(.)
 
 
 ## MQTT authentication
@@ -107,12 +110,10 @@ iot-2/type/**typeId**/id/**deviceId**/evt/**eventId**/fmt/**formatString**
 **Example**
 
 
-|               | 'typeID'    | 'deviceID' |
-| ------------- |-------------| ---------- |
-| Gateway 1     | mygateway   | gateway1   |
-| Device 1      | mydevice    | device1    |
-
-
+|    |'typeID'|'deviceID'|
+|:---|:---|:---|
+|Gateway 1 |mygateway |gateway1 |
+|Device 1 |mydevice |device1 |
 
 -   Gateway 1 can publish its own status events:  
     `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
@@ -136,10 +137,11 @@ The MQTT `+` wildcard can be used for `typeId`, `deviceId`, `commandId` and `for
 
 **Example**
 
-|               | 'typeID'    | 'deviceID' |
-| ------------- |-------------| ---------- |
-| Gateway 1     | mygateway   | gateway1   |
-| Device 1      | mydevice    | device1    |
+|Device |`typeID`|`deviceID`|
+|:---|:---|
+|Gateway 1| mygateway   | gateway1   |
+|Device 1 | mydevice    | device1    |
+
 
 -   Gateway 1 can subscribe to commands directed at the gateway:  
     `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
@@ -174,7 +176,7 @@ When errors occur during the validation of the publish or subscribe topic, or du
 ```
  ot-2/type/**typeId**/id/**deviceId**/notify
 ```
-Messages received on the notify topic will have the following format:
+Messages that are received on the notify topic contain the following format:
 
 ```   
 {
@@ -198,7 +200,7 @@ Messages received on the notify topic will have the following format:
 -   RC: The return code
 -   Message: The error message
 
-Notifications a gateway can receive:
+A gateway can receive the following notifications:
 
 -   Topic does not match with any allowed topic rules.
 -   Device type is not valid.
@@ -228,22 +230,24 @@ When handling failures it is important to take this into account if you are usin
 ### Topics
 {: #topics}
 
-A managed gateway is required to subscribe to two topics to handle requests and responses from {{site.data.keyword.iot_short_notm}}:
+A managed gateway must subscribe to two topics to handle requests and responses from {{site.data.keyword.iot_short_notm}}:
 
--   The managed gateway will subscribe to device management responses on:  
-    `iotdm-1/type/<typeId>/id/<deviceId>/response/+`
--   The managed gateway will subscribe to device management requests on:  
-    `iotdm-1/type/<typeId>/id/<deviceId>/+`
+-   The managed gateway subscribes to device management responses on:  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/+</pre>
+-   The managed gateway subscribes to device management requests on:  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/+</pre>
+    
+A managed gateway publishes:
 
-A managed gateway will publish to two topics:
+- Device management responses on:  
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
+- Device management requests on:  
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 
--   The managed gateway will publish device management responses on:  
-    `iotdevice-1/type/<typeId>/id/<deviceId>/response/`
--   The managed gateway will publish device management requests on:  
-    `iotdevice-1/type/<typeId>/id/<deviceId>/`
-
-The gateway is able to process Device Management Protocol messages for both itself and on behalf other connected devices by using the relevant
-&lt;typeId&gt; and &lt;deviceId&gt;.
+{: codeblock}
+    
+The gateway can process Device Management Protocol messages for both itself and on behalf other connected devices by using the relevant
+**typeId** and **deviceId**
 
 ### Message format
 {: #msg_format}

@@ -13,7 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-*Last updated: 18 July 2016*
+Last updated: 18 July 2016
 {: .last-updated}
 
 {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} gives you a versatile IoT toolkit that includes gateway devices, device management, and powerful application access. By using {{site.data.keyword.iot_short_notm}}, you can collect connected device data and perform analytics on real-time data from your organization.

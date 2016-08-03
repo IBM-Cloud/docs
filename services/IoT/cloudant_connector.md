@@ -13,7 +13,7 @@ copyright:
 
 # Connecting and configuring a historian service by using a {{site.data.keyword.cloudant}}  
 {: #cloudant_main}
-*Last updated: 17 June 2016*
+Last updated: 20 July 2016
 {: .last-updated}
 
 Connecting a {{site.data.keyword.cloudantfull}} service to your {{site.data.keyword.iot_full}} allows you to store and access your device data. Device data is stored in daily, weekly, or monthly databases depending on your selected bucket interval.

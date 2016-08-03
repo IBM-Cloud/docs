@@ -2,7 +2,7 @@
 
 # About {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Last updated: 15 July 2016*
+*Last updated: 29 July 2016*
 {: .last-updated}
 
 
@@ -12,7 +12,7 @@ For more information about using OpenStack Swift and Keystone, view the [OpenSta
 
 The {{site.data.keyword.objectstorageshort}} architecture diagram is as follows:
 
-[![{{site.data.keyword.objectstorageshort}} Architecture Diagram](images/object_storage_solution_archectiture_small.png)](https://console.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+[![{{site.data.keyword.objectstorageshort}} Architecture Diagram](images/ObjectStorageArchitectureDiagram.png)](https://console.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/ObjectStorageArchitectureDiagram.png){: new_window}
 
 *Figure 1. {{site.data.keyword.objectstorageshort}} Architecture Diagram*
 

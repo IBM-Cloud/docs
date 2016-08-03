@@ -5,10 +5,17 @@ copyright:
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # {{site.data.keyword.iot_short_notm}} Feature Overview
+{: #feature_overview}
+
+Last updated: 29 June 2016
+{: .last-updated}
 
 The {{site.data.keyword.iot_full}} is built on the following key areas:
 
@@ -18,6 +25,7 @@ The {{site.data.keyword.iot_full}} is built on the following key areas:
   4. Risk Management - Configure secure connectivity and architecture with access control for users and applications.
 
 ## Connect
+{: #connect}
 
 {{site.data.keyword.iot_short_notm}} Connect is the starting point for any {{site.data.keyword.iot_short_notm}} service. Connecting devices, creating applications, controlling your devices, and interacting with third-party services are all available under {{site.data.keyword.iot_short_notm}} Connect.
 
@@ -40,22 +48,22 @@ Third-party service integration is built into the {{site.data.keyword.iot_short_
 ---
 
 ## Information Management
+{: #information_management}
 
 {{site.data.keyword.iot_short_notm}} Information Management controls the data that is sent by devices after it reaches your {{site.data.keyword.iot_short_notm}} service. Information management includes data storage and transformation.
 
-### Last known value
+### Device last event cache
 
-By using the {{site.data.keyword.iot_short_notm}} API, you can retrieve the last known value of any date that was sent by a device. This works whether the device is online or offline, which allows you to retrieve device parameter status regardless of the device's physical location or use status. Data can only be gathered from event IDs that were sent in the previous 30 days.
+By using the {{site.data.keyword.iot_short_notm}} Last Event Cache API, you can retrieve the last event that was sent by a device. This works whether the device is online or offline, which allows you to retrieve device status regardless of the device's physical location or use status. Last event data of a device can be retrieved for any specific event that occurred up to 365 days ago.
 
-### Longer term data storage
+### Device event data storage
 
-Device data that is sent to your {{site.data.keyword.iot_short_notm}} service can be stored for later use. Data storage is an essential first step towards performing insightful analytics to gain insights from that data.
-
-By storing device data, you can track changes over longer periods of time and store sets of data for use with powerful analytics tools, including use with Watson APIs and cognitive computing.
+Device event data from your {{site.data.keyword.iot_short_notm}} service can be stored for later use. Data storage is an essential first step towards performing insightful analytics to gain insights from that data.  For example, you can track changes over longer periods of time and store sets of data for use with powerful analytics tools, including use with Watson APIs and cognitive computing.
 
 ---
 
 ## Analytics
+{: #analytics}
 
 ### Visualize real-time device data
 
@@ -64,6 +72,7 @@ You can visualize and display real-time device data by using dashboard cards. Da
 ---
 
 ## Risk Management
+{: #risk_management}
 
 ### Secure connectivity and architecture
 

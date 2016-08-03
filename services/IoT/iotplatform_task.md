@@ -5,21 +5,23 @@ copyright:
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
-
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Connecting devices
 {: #iotplatform_task}
-*Last updated: 6 June 2016*
+Last updated: 29 June 2016
 {: .last-updated}
 
 Before you can begin receiving data from your your IoT devices, you must connect them to  {{site.data.keyword.iot_full}}. Connecting a device to {{site.data.keyword.iot_short_notm}} involves registering the device with {{site.data.keyword.iot_short_notm}} and then using the registration information to configure the device to connect to {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
 ## Before you begin
+{: #byb}
+
 Before you start the connection process, you must ensure that your devices meet the following requirements for communicating with {{site.data.keyword.iot_short_notm}}:
 
 - Your device must be able to communicate by sending device messages in the [MQTT format](https://docs.internetofthings.ibmcloud.com/reference/mqtt/index.html).
@@ -52,7 +54,7 @@ When you add your first device to your {{site.data.keyword.iot_short_notm}} orga
  **Tip:** You can add and edit attributes and metadata later.
  4. Click **Create** to add the new device type.
 10. Click **Next** to begin the process of adding your device with the selected device type.
-11. Enter a device ID, such as `my_first_device`.  
+11. Enter a device ID. **Tip:** For network connected devices, this could for example be the device MAC address without any separating colons.  
 The device ID is used to identify the device in the {{site.data.keyword.iot_short_notm}} dashboard and is also a required parameter for connecting your device to {{site.data.keyword.iot_short_notm}}.
 12. Optional: Click **Additional fields** to add device information, such as serial number, manufacturer, model, and so on.  
  **Tip:** You can add and edit this information later.

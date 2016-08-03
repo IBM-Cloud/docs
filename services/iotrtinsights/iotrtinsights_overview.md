@@ -5,12 +5,18 @@ copyright:
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target=\_"blank"}
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+{:note: .deprecated}
+
+**This service is being merged with {{site.data.keyword.iot_full}}:**  Existing instances are being merged with the corresponding {{site.data.keyword.iot_short_notm}} organizations which now contains the Real-Time Insights analytics and dashboard features. You can also access your instances from the {{site.data.keyword.iotrtinsights_short}} dashboard until 1 September 2016. For more information, see the [IBM Watson IoT Platform blog](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and [Analyzing IoT Data](https://new-console.{DomainName}/docs/services/IoT/analytics.html){: new_window} in the {{site.data.keyword.iot_short_notm}} documentation.  
+{: deprecated}
 
 # About {{site.data.keyword.iotrtinsights_short}}
 {: #iotrtinsights_overview}
-*Last updated: 11 February 2016*
+Last updated: 1 August 2016
 {: .last-updated}
 
 {{site.data.keyword.iotrtinsights_short}} provides a real-time analytics engine and analytics authoring capability that enables the contextualization and monitoring of IoT device data, speeds understanding of current conditions, and improves decision-making and responses to emerging issues.

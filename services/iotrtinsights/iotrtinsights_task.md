@@ -5,14 +5,18 @@ copyright:
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target=\_"blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
+{:note: .deprecated}
+
+**This service is being merged with {{site.data.keyword.iot_full}}:**  Existing instances are being merged with the corresponding {{site.data.keyword.iot_short_notm}} organizations which now contains the Real-Time Insights analytics and dashboard features. You can also access your instances from the {{site.data.keyword.iotrtinsights_short}} dashboard until 1 September 2016. For more information, see the [IBM Watson IoT Platform blog](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and [Analyzing IoT Data](https://new-console.{DomainName}/docs/services/IoT/analytics.html){: new_window} in the {{site.data.keyword.iot_short_notm}} documentation.  
+{: deprecated}
 
 # Connecting and viewing your devices
 {: #iotrtinsights_task}
-*Last updated: 11 February 2016*
+Last updated: 1 August 2016
 {: .last-updated}
 
 {{site.data.keyword.iotrtinsights_short}} uses {{site.data.keyword.iot_short}} for device access and data retrieval. Devices that you connect to {{site.data.keyword.iot_short}} are automatically connected to {{site.data.keyword.iotrtinsights_short}}.
@@ -40,7 +44,7 @@ Adding a new device is a two-step process. First, you add the device to {{site.d
   **Important:** Each message schema must have a unique combination of data source, device type, and event name. To create more than one schema for a specific data source and device type combination, specify a unique event name for each message schema instead of using the default `+` wild card.   
   6. Add one or more data points that you want to include in the device dashboards.  
     You can select data points from a connected device, or add data points manually. The available data points are defined in the payload of the messages that are sent by a device. For information about the {{site.data.keyword.iot_short}} payload format, see the [Message Payload](https://docs.internetofthings.ibmcloud.com/messaging/payload.html "Message Payload.") topic in the {{site.data.keyword.iot_short}} documentation.   
-    **Tip:** You can manually create virtual data points that modify or combine existing data points that are type integer or float. For example, if the device data point temp returns a temperature value in Fahrenheit, and you want to use Celsius instead, you can create a virtual data point *temp_c* with the following function *temp_c=(temp-32)/1.8*. You can then use the virtual *temp_c* data point instead of the real-time *temp* data point in your rule conditions. In the dashboards, virtual data points are identified by a dashed underline.    
+    **Tip:** You can manually create virtual data points that modify or combine existing data points that are type integer or float. For example, if the device data point temp returns a temperature value in Fahrenheit, and you want to use Celsius instead, you can create a virtual data point *temp_c* with the following function *temp_c=(temp-32)/1.8*. You can then use the virtual *temp_c* data point instead of the real-time *temp* data point in your rule conditions. Virtual data points are identified by a dashed underline in product dialogs.    
 
   <dl>
   <dt>Select from connected device</dt>

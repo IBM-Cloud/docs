@@ -7,7 +7,7 @@ copyright:
 
 # About {{site.data.keyword.amashort}}
 {: #mca-overview}
-*Last updated: 20 July 2016*
+Last updated: 22 July 2016
 {: .last-updated}
 
 The {{site.data.keyword.amafull}} service provides authentication and monitoring services for mobile and web applications that access cloud resources hosted on {{site.data.keyword.Bluemix_notm}}.
@@ -33,7 +33,7 @@ You can use the following types of authentication in your mobile app:
 ## Architecture overview
 {: #architecture}
 
-![image](images/mca-overview.jpg)
+![Architecture overview diagram](images/mca-overview.jpg)
 
 * Protect your cloud resources (Node.js applications) with {{site.data.keyword.amashort}} server SDK.
 * Use the `Request` class provided by the {{site.data.keyword.amashort}} client SDK to communicate with your protected cloud resources.
@@ -49,7 +49,7 @@ You can use the following types of authentication in your mobile app:
 {: #flow}
 The following diagram describes how a request flows from the client SDK to your mobile back-end application and identity providers.
 
-![image](images/mca-sequence-overview.jpg)
+![Request flow diagram](images/mca-sequence-overview.jpg)
 
 * Use {{site.data.keyword.amashort}} SDK to make a request to your back-end resources that are protected with the {{site.data.keyword.amashort}} server SDK.
 * The {{site.data.keyword.amashort}} server SDK detects an unauthorized request and returns HTTP 401 + authorization scope.
@@ -57,8 +57,8 @@ The following diagram describes how a request flows from the client SDK to your 
 * The {{site.data.keyword.amashort}} client SDK contacts the {{site.data.keyword.amashort}} service and asks to issue an authorization header.
 * The {{site.data.keyword.amashort}} service asks the client app to authenticate first by supplying an authentication challenge according to the currently configured authentication type.
 * According to the authentication type, {{site.data.keyword.amashort}} client SDK:
-   * **Facebook or Google authentication:** Automatically processes the authentication challenge
-   * **Custom authentication**: Obtains credentials based on logic provided by the developer.
+   * Facebook or Google authentication: Automatically processes the authentication challenge
+   * Custom authentication: Obtains credentials based on logic provided by the developer.
 * If Facebook or Google authentication is configured, the {{site.data.keyword.amashort}} client SDK uses the associated SDK to obtain Facebook or Google access tokens. These tokens serve as the authentication challenge response.
 * If Custom authentication is configured, the developer must obtain the authentication challenge answer, and supply it to {{site.data.keyword.amashort}} client SDK.
 * After the authentication challenge answer is obtained, it is sent to the {{site.data.keyword.amashort}} service.
@@ -70,15 +70,14 @@ The following diagram describes how a request flows from the client SDK to your 
 
 
 ## Getting help and support for {{site.data.keyword.amashort}}
-
 {: #gettinghelp}
 
-If you have problems or questions when using {{site.data.keyword.amashort}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
+If you have problems or questions when using {{site.data.keyword.amashort}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket. 
 
 When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 
 * If you have technical questions about developing or deploying an app with {{site.data.keyword.amashort}}, post your question on [Stack Overflow](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "{{site.data.keyword.amashort}}".
-* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window} forum.
+* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window} forum. 
 
 See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
 

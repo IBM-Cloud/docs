@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Last updated: 5 July 2016
+Last updated: 1 August 2016
 {: .last-updated}
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
@@ -84,6 +84,7 @@ To create an email or webhook subscription from the **Event Subscriptions** page
 | Type | Select **Email**. |
 | Event | Select to be subscribed to notifications for an Update or Incident. |
 | Enabled | Select the option to enable the email notifications. Clear the selection to disable the email notification. Subscriptions are enabled by default. |
+| Combine notifications | Select the option to combine the incident notifications for all regions into a single notification. This option is available for incidents only. |
 | Subject | Enter the subject line for the email. This is a required field.  |
 | Body | Enter the message body text to be sent in the email. You can use the IBM payload values to populate the email notification with pertinent information. See the [Payload section values](index.html#payload) table to identify which values you can use. Use basic HTML tags to structure your email. If you do not enter information in this section, you receive a notification that does not have any additional information. This is a required field. |
 | To | Enter the email address or addresses using a comma-separated list for the recipients of the email notification. Expand the "cc" or "bcc" options to copy others on the email. This is a required field. |
@@ -97,6 +98,8 @@ To create an email or webhook subscription from the **Event Subscriptions** page
 | Type | Select **Webhook** |
 | Method | Select **GET** or **POST**. |
 | Event | Select to be subscribed to notifications for an Update or Incident. |
+| Enabled | Select the option to enable the notification. Clear the selection to disable the notification. Subscriptions are enabled by default. |
+| Combine notifications | Select the option to combine the incident notifications for all regions into a single notification. This option is available for incidents only. |
 | URL | Enter the URL to connect to your web service. |
 | Description | Add a unique description for the subscription that you are creating. |
 | User name | Enter your user name for your web service. If you don't want to use your personal credentials, you can set up a functional ID to use specifically with {{site.data.keyword.Bluemix_notm}}. |
@@ -152,8 +155,9 @@ You are required to set a minimum of 24 available hours for a week for a minimum
 2. Expand the **Manage Available Update Windows** section.
 3. Click **Add new** ![Add new](images/add-new.png).
 4. Set your first availability window by selecting the frequency, duration, and start time for the window.
-5. Click **Submit**.
-6. Repeat this process until you have met the minimum requirements for the weekly windows.
+5. Optional: Select **Mark as preferred**, if you'd like to set your recurring availability window as a preferred time for deployments to be scheduled. Preferred windows are given priority, when possible.
+6. Click **Submit**.
+7. Repeat this process until you have met the minimum requirements for the weekly windows.
 
 ### Setting unavailable maintenance windows
 
@@ -184,10 +188,11 @@ For disruptive updates that do require your approval, complete the following ste
 2. Identify any rows that have **Customer Scheduling Required** set to **Yes**.
 3. Select the row for that update to review the details for the update including the update description, suggested date and time for the update, the affected components, and duration for the update.
 4. Select **Schedule and Approve**.
-5. Choose from the following options: **Suggested date**, **Specific dates**, or **Any preapproved window**. If you select **Specific dates**, you can open the calendar to select three options for IBM to choose from.
-6. Select **Submit** when you are finished.
+5. Choose from the following options: **Suggested date**, **Alternative dates**, or **Any preapproved window**. If you select **Alternative dates**, you can open the calendar to select three options for IBM to choose from.
+6. Optional: From the list of selected alternative dates in the calendar, select the ones that you want to be set as preferred dates for deployment. Each selected date is noted as preferred for the deployer who is scheduling the deployment. IBM attempts to schedule maintenance during preferred update windows.
+7. Select **Submit** when you are finished.
 
-Based on your selection, the update is scheduled for deployment during the suggested date that you accepted, during one of your preapproved windows, or one of the specific dates and times that you selected. When the update is scheduled for deployment by IBM, you see the scheduled date reflected in the details for the update on the **System Updates** page.
+Based on your selection, the update is scheduled for deployment during the suggested date that you accepted, during one of your preapproved windows, or one of the specific dates and times that you selected. When the update is scheduled for deployment by IBM, you see the scheduled date reflected in the details for the update on the **System Updates** page. You can reschedule an already planned deployment only if a day (24 hours) before the scheduled start date and time remains. Once you have rescheduled a deployment, you can't reschedule it again.
 
 
 ## Viewing system information
