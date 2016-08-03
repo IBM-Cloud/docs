@@ -11,7 +11,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.cdn_short}} (Beta)
 {: #cdn}  
-*Last updated: 03 May 2016*
+*Last updated: 02 August 2016*
 {: .last-updated}  
 
 Use {{site.data.keyword.cdn_full}} (CDN) to reduce content load time, enhance user experience, and lower bandwidth usage in your Bluemix&reg; or virtual server applications. The service supports only HTTP applications. HTTPS applications are not supported. 
@@ -37,6 +37,8 @@ Complete the following tasks to add a custom domain name.
 	5. Select the **Edit routes and App Access** icon from the dashboard.  
 	6. Select the custom domain name from the domain names drop-down, enter **www** in the host field, and select **SAVE**.  
 	The custom domain name along with your application route is displayed.  
+
+For more information about custom domains, see [Managing domains](https://new-console.{DomainName}/docs/admin/orgs_spaces.html#managedomains).
 
 ## Adding the service to an application
 
