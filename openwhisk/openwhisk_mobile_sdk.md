@@ -13,7 +13,7 @@ copyright:
 
 # Using the {{site.data.keyword.openwhisk_short}} mobile SDK
 {: #openwhisk_mobile_sdk}
-Last updated: 28 March 2016
+Last updated: 2 August 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} provides a mobile SDK for iOS and watchOS 2 devices that enables mobile apps to easily fire remote triggers and invoke remote actions. A version for Android is currently not available; Android developers can use the {{site.data.keyword.openwhisk}} REST API directly.
@@ -26,7 +26,7 @@ The mobile SDK is written in Swift 2.2 and supports iOS 9 and later releases.
 You can install the mobile SDK by using CocoaPods, Carthage, or from the source directory.
 
 ### Installing by using CocoaPods 
-
+{: #openwhisk_add_sdk_cocoapods}
 The {{site.data.keyword.openwhisk_short}} SDK for mobile is available for public distribution through CocoaPods. Assuming CocoaPods is installed, put the following lines into a file called 'Podfile' inside the starter app project directory. 
 
 ```
@@ -49,7 +49,7 @@ end
 From the command line, type `pod install`. This command installs the SDK for an iOS app with a watchOS 2 extension.  Use the workspace file CocoaPods creates for your app to open the project in Xcode.
 
 ### Installing by using Carthage
-
+{: #openwhisk_add_sdk_carthage}
 Create a file in your app's project directory and name it 'Cartfile'. Put the following line in the file:
 ```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
@@ -61,7 +61,7 @@ From the command line, type `carthage update --platform ios`. Carthage downloads
 You must then add OpenWhisk.framework to the embedded frameworks in your Xcode project
 
 ### Installing from source code
-
+{: #openwhisk_add_sdk_source}
 Source code is available at https://github.com/openwhisk/openwhisk-client-swift.git.
 Open the project by using the `OpenWhisk.xcodeproj` using Xcode.
 The project contains two schemes: "OpenWhisk" (targeted for iOS) and "OpenWhiskWatch" (targeted for watchOS 2).
@@ -111,7 +111,7 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 ```
 {: screen}
 
-The string before the colon is your key, and the string after the colon is your token.
+The strings before the colon is your key, and the string after the colon is your token.
 
 ## Invoking an {{site.data.keyword.openwhisk_short}} action
 {: #openwhisk_sdk_invoke}
@@ -236,7 +236,7 @@ whisk.urlSession = session
 {: codeblock}
 
 ### Support for qualified names
-
+{: #openwhisk_sdk_configure_qual}
 All actions and triggers have a fully qualified name that is made up of a namespace, a package, and an action or trigger name. The SDK can accept these elements as parameters when you are invoking an action or firing a trigger. The SDK also provides a function that accepts a fully qualified name that looks like `/mynamespace/mypackage/nameOfActionOrTrigger`. The qualified name string supports unnamed default values for namespaces and packages that all {{site.data.keyword.openwhisk_short}} users have, so the following parsing rules apply:
 
 - qName = "foo" results in namespace = default, package = default, action/trrigger = "foo"
@@ -247,7 +247,7 @@ All actions and triggers have a fully qualified name that is made up of a namesp
 All other combinations issue a WhiskError.QualifiedName error. Therefore, when you are using qualified names, you must wrap the call in a "`do/try/catch`" construct.
 
 ### SDK button
-
+{: #openwhisk_sdk_configure_button}
 For convenience, the SDK includes a `WhiskButton`, which extends the `UIButton` to allow it to invoke actions.  To use the `WhiskButton`, follow this example:
 
 ```
