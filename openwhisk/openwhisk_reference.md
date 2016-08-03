@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} system details
 {: #openwhisk_reference}
-Last updated: 14 April 2016
+Last updated: 2 August 2016
 {: .last-updated}
 
 The following sections provide more details about the {{site.data.keyword.openwhisk}} system.
@@ -28,7 +28,7 @@ The following sections provide more details about the {{site.data.keyword.openwh
 {: #openwhisk_entities}
 
 ### Namespaces and packages
-
+{: #openwhisk_entities_namespaces}
 {{site.data.keyword.openwhisk_short}} actions, triggers, and rules belong in a namespace, and optionally a package.
 
 Packages can contain actions and feeds. A package cannot contain another package, so package nesting is not allowed. Also, entities do not have to be contained in a package.
@@ -39,7 +39,7 @@ You can create your own namespaces if you're entitled to do so. The `/whisk.syst
 
 
 ### Fully qualified names
-
+{: #openwhisk_entities_fullyqual}
 The fully qualified name of an entity is
 `/namespaceName[/packageName]/entityName`. Notice that `/` is used to delimit namespaces, packages, and entities. Also, namespaces must be prefixed with a `/`.
 
@@ -56,7 +56,7 @@ For example, consider a user whose default namespace is `/myOrg`. Following are 
 You will be using this naming scheme when you use the {{site.data.keyword.openwhisk_short}} CLI, among other places.
 
 ### Entity names
-
+{: #openwhisk_entities_names}
 The names of all entities, including actions, triggers, rules, packages, and namespaces, are a sequence of characters that follow the following format:
 
 * The first character must be an alphanumeric character, a digit, or an underscore.
@@ -72,13 +72,13 @@ More precisely, a name must match the following regular expression (expressed wi
 The following sections describe details about {{site.data.keyword.openwhisk_short}} actions.
 
 ### Statelessness
-
+{: #openwhisk_semantics_stateless}
 Action implementations should be stateless, or *idempotent*. While the system does not enforce this property, there is no guarantee that any state maintained by an action will be available across invocations.
 
 Moreover, multiple instantiations of an action might exist, with each instantiation having its own state. An action invocation might be dispatched to any of these instantiations.
 
 ### Invocation input and output
-
+{: #openwhisk_semantics_invocationio}
 The input to and output from an action is a dictionary of key-value pairs. The key is a string, and the value a valid JSON value.
 
 ### Invocation ordering of actions
@@ -129,7 +129,7 @@ An activation record contains the following fields:
 {: #openwhisk_ref_javascript}
 
 ### Function prototype
-
+{: #openwhisk_ref_javascript_fnproto}
 {{site.data.keyword.openwhisk_short}} JavaScript actions run in a Node.js runtime, currently version 0.12.9.
 
 Actions written in JavaScript must be confined to a single file. The file can contain multiple functions but by convention a function called `main` must exist and is the one called when the action is invoked. For example, the following is an example of an action with multiple functions.
@@ -149,7 +149,7 @@ The action input parameters are passed as a JSON object as a parameter to the `m
 
 
 ### Synchronous and asynchronous behavior
-
+{: #openwhisk_ref_javascript_synchasynch}
 It is common for JavaScript functions to continue execution in a callback function even after a return. To accommodate this, an activation of a JavaScript action can be *synchronous* or *asynchronous*.
 
 A JavaScript action's activation is **synchronous** if the main function exits under one of the following conditions:
@@ -218,7 +218,7 @@ It is possible for an action to be synchronous on some inputs and asynchronous o
 Notice that regardless of whether an activation is synchronous or asynchronous, the invocation of the action can be blocking or non-blocking.
 
 ### Additional SDK methods
-
+{: #openwhisk_ref_javascript_additsdk}
 The `whisk.invoke()` function invokes another action. It takes as an argument a dictionary that defines the following parameters:
 
 - *name*: The fully qualified name of the action to invoke,
@@ -387,38 +387,46 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 | hourRate | a user cannot invoke more than this many actions per hour | per user | number | 3600 |
 
 ### Per action timeout (ms) (Default: 60s)
+{: #openwhisk_syslimits_timeout}
 * The timeout limit N is in the range [100ms..300000ms] and is set per action in milliseconds.
 * A user can change the limit when creating the action.
 * A container that runs longer than N milliseconds is terminated.
 
 ### Per action memory (MB) (Default: 256MB)
+{: #openwhisk_syslimits_memory}
 * The memory limit M is in the range from [128MB..512MB] and is set per action in MB.
 * A user can change the limit when creating the action.
 * A container cannot have more memory allocated than the limit.
 
 ### Per action artifact (MB) (Fixed: 1MB)
+{: #openwhisk_syslimits_artifact}
 * The maximum code size for the action is 1MB.
 * It is recommended for a JavaScript action to use a tool to concatenate all source code, including dependencies into a single bundled file.
 
 ### Per activation payload size (MB) (Fixed: 1MB)
+{: #openwhisk_syslimits_payload}
 * The maximum POST content size plus any curried parameters for an action invocation or trigger firing is 1MB.
 
 ### Per namespace concurrent invocation (Default: 100)
+{: #openwhisk_syslimits_concur}
 * The number of activations that are currently processed for a namespace cannot exceed 100.
 * The default limit can be statically configured by whisk in consul kvstore.
 * A user is currently not able to change the limits.
 
 ### Invocations per minute/hour (Fixed: 120/3600)
+{: #openwhisk_syslimits_invocations}
 * The rate limit N is set to 120/3600 and limits the number of action invocations in one minute/hour windows.
 * A user cannot change this limit when creating the action.
 * A CLI call that exceeds this limit receives an error code corresponding to TOO_MANY_REQUESTS.
 
 ### Per Docker action open files ulimit (Fixed: 64:64)
+{: #openwhisk_syslimits_openulimit}
 * The maximum number of open file is 64 (for both hard and soft limits).
 * The docker run command use the argument `--ulimit nofile=64:64`.
 * For more information about the ulimit for open files see the [docker run](https://docs.docker.com/engine/reference/commandline/run) documentation.
 
-### Per Docker action number of processes ulimit (Fixed: 512:512)
+### Per Docker action processes ulimit (Fixed: 512:512)
+{: #openwhisk_syslimits_proculimit}
 * The maximum number of processes available to a user is 512 (for both hard and soft limits).
 * The docker run command use the argument `--ulimit nproc=512:512`.
 * For more information about the ulimit for maximum number of processes see the [docker run](https://docs.docker.com/engine/reference/commandline/run) documentation.
