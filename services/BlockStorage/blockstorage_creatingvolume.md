@@ -19,4 +19,4 @@ Creating a volume can take a few moments.
 
 What's next?
 
-After the volume is created, attach it to a virtual server. For more information, see [Attaching a volume to a virtual server](../BlockStorage/blockstorage_attachingvolume.html).
+After the volume is created, attach it to a virtual server. For more information, see [Attaching volumes to a virtual server](../BlockStorage/blockstorage_attachingvolume.html).
