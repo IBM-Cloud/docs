@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Last updated: 2 August 2016
+Last updated: 3 August 2016
 {: .last-updated}
 
 If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
@@ -916,7 +916,12 @@ The following example shows output from this command:
 You can use the `Admin` REST API to add users to the
 {{site.data.keyword.Bluemix_notm}} instance. You must
 have **Users** permission with **Write** access to add
-users, or the Admin permission (ops.admin) for the admin console.
+users, or the Admin permission (ops.admin) for the admin console. Additionally, as the Admin, you can allow organization members who do not have general admin console `user` or `admin` permission the ability to add new users to their organization only. Use the following API command for this specific capability for organization managers:
+
+```
+PUT console.<subdomain>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE or FALSE>
+```
+{: screen}
 
 You can add one user or a list of users. You can add users to a single
 organization, or to multiple organizations.To
