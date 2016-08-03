@@ -8,12 +8,12 @@ copyright:
 #	About {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
 
-*Last updated: 20 July 2016*
+Last updated: 03 August 2016
 {: .last-updated}
 
-The {{site.data.keyword.mobilefoundation_short}} service provides a way to quickly set up a {{site.data.keyword.mobilefirst}} server environment on {{site.data.keyword.Bluemix}}. You can then develop, test, and manage mobile apps from this robust cloud environment.
+The {{site.data.keyword.mobilefoundation_short}} service provides a way to quickly set up a {{site.data.keyword.mobilefirst}} server environment on {{site.data.keyword.Bluemix}}. You can then develop, test, and manage mobile apps from this cloud environment.
 
-{{site.data.keyword.mobilefoundation_short}} provides users an easy and guided way to set up {{site.data.keyword.mfserver_short_notm}} in the {{site.data.keyword.containerlong}} environment on {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.mobilefoundation_short}} provides users an easy and guided way to set up {{site.data.keyword.mfserver_short_notm}} <!--in the {{site.data.keyword.containerlong}} -->environment on {{site.data.keyword.Bluemix_notm}}.
 
 {{site.data.keyword.mobilefoundation_short}} consists of the following components:
 
@@ -39,7 +39,7 @@ With {{site.data.keyword.mobilefoundation_short}}, you can perform the following
 
 You can use the {{site.data.keyword.mfp_cli_long_notm}} (CLI) with the {{site.data.keyword.mobilefoundation_short}} to easily create and manage apps.
 
-{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.
+<!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
 ## Getting help and support for {{site.data.keyword.mobilefoundation_short}}
 {: #getting_help_mobilefoundation}
