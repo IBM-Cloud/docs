@@ -24,4 +24,4 @@ By using boards and cards, you can view graphics that represent data set values 
 
 With analytics rules, you specify the conditions that trigger actions. For example, you might create a rule to ensure that an alert is sent to the dashboard on a user's device, and that an email is sent to the administrator, when the device is dropped, or when the temperature of the device spikes.
 
-Use cloud rules to trigger rules for devices that are connected directly to {{site.data.keyword.iot_short_notm}} in the cloud, and edge rules to trigger rules for devices that are connected to edge analytics enabled gateways.
+Use cloud rules to trigger rules for devices that are connected directly to {{site.data.keyword.iot_short_notm}} in the cloud, and edge rules to trigger rules for devices that are connected to edge analytics - enabled gateways.
