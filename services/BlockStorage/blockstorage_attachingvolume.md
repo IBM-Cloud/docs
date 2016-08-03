@@ -23,4 +23,4 @@ The virtual server can now use the device to persist data.
 
 What's next?
 
-After the volume is created and you attach it to a virtual server, see [Preparing the block storage volume](../BlockStorage/blockstorage_preparingvolume.html) to prepare it for use.
+After the volume is created and you attach it to a virtual server, see [Preparing volumes](../BlockStorage/blockstorage_preparingvolume.html) to prepare it for use.

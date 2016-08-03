@@ -5,32 +5,16 @@
 Last updated: 29 July 2016
 {: .last-updated}
 
-{{site.data.keyword.blockstoragefull}} provides access to block level storage for transaction intensive workloads and runtimes in need of persistent storage.
+{{site.data.keyword.blockstoragefull}} provides access to block level storage for transaction-intensive workloads and runtimes that need persistent storage. You can use the {{site.data.keyword.blockstorageshort}} service to manage volume lifecycles, attach volumes to your IBM Virtual Servers, and create snapshots of your block storage volumes.
 
-You can use IBM {{site.data.keyword.blockstorageshort}} to create volumes and attach them to virtual servers. To have persistent storage, a virtual server requires IBM {{site.data.keyword.blockstorageshort}}. Otherwise, when you restart the virtual server, it resets to the default image. The data in block storage volumes persists beyond the lifecycle of your virtual servers. IBM {{site.data.keyword.blockstorageshort}} uses OpenStack Cinder to manage the volume lifecycle.
+Before you begin, review the following information.
 
-{{site.data.keyword.blockstorageshort}} volumes are created through an IBM {{site.data.keyword.blockstorageshort}} service instance. You can attach the volumes to a virtual server in the following ways:
-  * Specify a particular device that you provide. 
-  * Specify that the system automatically selects an available device name. 
+* The {{site.data.keyword.blockstorageshort}} service is supported only in an unbound context. 
+* You must have IBM {{site.data.keyword.virtualmachinesshort}} created to attach block storage volumes. To learn more about using block storage volumes with IBM {{site.data.keyword.virtualmachinesshort}}, see [Block storage volumes and IBM Virtual Servers](../../virtualmachines/vm_create.html#storage_BS). 
 
-The virtual server performs its I/O operations directly with the specified device independent of the {{site.data.keyword.blockstorageshort}} service.
+Complete these steps to get started with {{site.data.keyword.blockstorageshort}}:
 
-You can also create block-level snapshots of volumes. The {{site.data.keyword.blockstorageshort}} service does not allow you to create snapshots while the volume is attached, so the resulting snapshots will be crash-consistent. 
-
-Complete these steps to get started with IBM {{site.data.keyword.blockstorageshort}}:
-
-1. Create a {{site.data.keyword.blockstorageshort}} service instance.
-   To create an instance of the {{site.data.keyword.blockstorageshort}} service in your space, follow these steps:
- 
-   a.	Go to the {{site.data.keyword.Bluemix_notm}} **Catalog** tab and enter **{{site.data.keyword.blockstorageshort}}** into the search box, or go to **Services** and select **Storage**. Click the **{{site.data.keyword.blockstorageshort}}** service. 
- 
-   b.	Enter a space and service name. Select the plan and click **Create**.
- 	
-   The {{site.data.keyword.blockstorageshort}} service is only supported in an unbound context. 
-
-   An instance of {{site.data.keyword.blockstorageshort}} service is created in your space. You can open the {{site.data.keyword.blockstorageshort}} UI to manage volumes anytime by clicking the service instance icon.
-
-2. Create a volume.
+1. Create a volume.
    
    a. Open the {{site.data.keyword.blockstorageshort}} service.
 
@@ -46,7 +30,7 @@ Complete these steps to get started with IBM {{site.data.keyword.blockstoragesho
 
   Creating a volume can take a few moments.
 
-3. Attach a volume to a virtual server.
+2. Attach a volume to a virtual server.
 
    a.	Open the {{site.data.keyword.blockstorageshort}} service.
    
@@ -64,7 +48,7 @@ Complete these steps to get started with IBM {{site.data.keyword.blockstoragesho
  
 What's next?
 
-Prepare the volume for use. For more information, see [Preparing Block Storage volumes](../BlockStorage/blockstorage_preparingvolume.html).
+Prepare the volume for use. For more information, see [Preparing volumes](../BlockStorage/blockstorage_preparingvolume.html).
 
 # Related Links
 {: #rellinks}
@@ -79,5 +63,4 @@ Prepare the volume for use. For more information, see [Preparing Block Storage v
 ## API Reference
 {: #api}
 * [OpenStack Block Storage (Cinder) API v2](http://developer.openstack.org/api-ref-blockstorage-v2.html){: new_window}
-
 
