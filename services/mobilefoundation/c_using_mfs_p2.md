@@ -8,7 +8,7 @@ copyright:
 #	Using the Professional 1 Application plan
 {: #using_mobilefoundation_p2}
 
-Last updated: 03 August 2016
+Last updated: 04 August 2016
 {: .last-updated}
 
 With the Professional 1 Application plan users can create 1 mobile application with multiple mobile operating systems.
@@ -22,7 +22,7 @@ Consider the following before you configure  {{site.data.keyword.mobilefoundatio
 
 * You should have access to the {{site.data.keyword.dashdbshort_notm}} service instance credentials before you can configure the settings of your {{site.data.keyword.mobilefoundation_short}} service instance.
 
-**Note**: The {{site.data.keyword.dashdbshort_notm}} service instance can exist in any `Space` within your {{site.data.keyword.Bluemix_notm}} `Organization`or any other `Organization` that you have access to. Ensure that you have the permissions to access the `Space` where the {{site.data.keyword.dashdbshort_notm}} service instance exists.
+**Note**: The {{site.data.keyword.dashdbshort_notm}} service instance can exist in any `Space` within your {{site.data.keyword.Bluemix_notm}} `Organization` or any other `Organization` that you have access to. Ensure that you have the permissions to access the `Space` where the {{site.data.keyword.dashdbshort_notm}} service instance exists.
 
 
 ## Adding the database connection
@@ -82,7 +82,7 @@ The process of provisioning your server starts. This process takes about 10 minu
 
 *	Click **Recreate** to re-create the server.
 
-* This action stops your existing server and deletes the data. A new server instance is created with an updated version if available. This action takes a few minutes to complete.
+* This action stops your existing server and deletes the data. A new server instance is created with an updated version, if available. This action takes a few minutes to complete.
 
 **Note**: All the data from your previous server instance including information on the apps and adapters is persisted in the configured {{site.data.keyword.dashdbshort_notm}} service instance, this data is used to recreate your server.
 
