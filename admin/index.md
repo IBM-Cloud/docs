@@ -17,10 +17,10 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Last updated: 1 August 2016
+Last updated: 2 August 2016
 {: .last-updated}
 
-If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
+If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
 {:shortdesc}
 
 *Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance*
@@ -30,11 +30,12 @@ If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or
 |Monitor system usage | Click **ADMINISTRATION &gt; USAGE**. View your system information, monitor CPU usage, and plan usage to make the best decisions for your business. See [Viewing usage information](index.html#oc_resource).|
 |Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT** to manage which services are visible to your users and orgs. See [Managing your catalog](index.html#oc_catalog).|
 |Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** to create organizations, monitor quotas for organizations, and make needs-based decisions quickly. See [Administering organizations](index.html#oc_organizations).|
-|Create spaces and assign user roles | Click the **Avatar** icon ![Avatar](../support/images/account_support.svg), then select **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](../admin/orgs_spaces.html). |
+|Create spaces and assign user roles | Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), then select **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](../admin/orgs_spaces.html). |
 |Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](index.html#oc_useradmin). |
 |Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](index.html#oc_report). |
-|View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. You can also access the calendar feed and event subscriptions for extending your notifications in the Pending Updates section. See [Viewing system information](index.html#oc_system). |
-|Extend notifications and set up event subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending**. You can use web hooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and event subscriptions](index.html#oc_eventsubscription). |
+|View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending maintenance updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. See [Viewing system information](index.html#oc_system). |
+|Extend notifications and set up event subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending**. You can use webhooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and event subscriptions](index.html#oc_eventsubscription). |
+
 
 
 ## Notifications and event subscriptions
@@ -51,8 +52,8 @@ You can view notifications for your local or dedicated environment to monitor th
 | **Event Type** | **Notification method** |       
 |-----------------|-------------------|
 | Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications area on the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**. You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice. |
-| Critical incidents | You are alerted about critical incidents on the Status page. Click the **Avatar** icon ![Avatar](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that sends an email to a recipient of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  |  
-| {{site.data.keyword.Bluemix_notm}} Status | You can always view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance on the Status page. Click the **Avatar** icon ![Avatar](../support/images/account_support.svg), and then select **Status**.  |
+| Critical incidents | You are alerted about critical incidents on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that sends an email to a recipient of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  |  
+| {{site.data.keyword.Bluemix_notm}} Status | You can always view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**.  |
 
 ### Setting up event subscriptions
 
@@ -63,7 +64,7 @@ You can extend the functionality of the notifications that are sent to the Admin
 To access the **Event Subscriptions** page, complete the following steps:
 
 * For maintenance update notifications, go to **SYSTEM INFORMATION &gt; *Number* pending &gt; Subscriptions**.
-* For incident notifications, click the **Avatar** icon ![Avatar](../support/images/account_support.svg) &gt; **Status**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
+* For incident notifications, click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg) &gt; **Status**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
 
 **Note**: You can access the event subscription page for both types of notifications by using either of the two methods described.
 
@@ -215,7 +216,7 @@ update notifications that require action on your part. There are two types of ma
 <dd>A disruptive update might affect your environment, running applications, or your users' access to your applications. You have the ability to schedule and approve each of these maintenance updates within the allotted 21-day maintenance window to ensure that the update is not applied during critical business hours. You can select the suggested deployment date and time that is based on your preapproved update windows, or you can select two additional times and dates for IBM to choose from when applying the update.</dd>
 </dl>
 
-For more information about setting preapproved maintenance windows, setting specific unavailable dates for maintenance, and setting up a calendar feed, see [Maintenance updates](index.html#oc_schedulemaintenance).
+For more information about setting preapproved maintenance windows, and setting specific unavailable dates for maintenance, see [Maintenance updates](admin/index.html#oc_schedulemaintenance).
 
 ### General system information
 
@@ -269,7 +270,7 @@ minutes, hour, and day.
 You can view the monthly usage for your account for your dedicated or local environment. You can use this data to identify how much to charge specific orgs based on their usage.
 
 <ol>
-<li>Click the <strong>Avatar</strong> icon ![Avatar](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Usage details</strong>.</li>
+<li>Click the <strong>{{site.data.keyword.avatar}}</strong> icon ![Avatar](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Usage details</strong>.</li>
 <li>Select the org that you want to see data for.</li>
 <li>You can see usage details for the following categories:
 <ul>
@@ -285,7 +286,7 @@ You can view the monthly usage for your account for your dedicated or local envi
 You can also view the monthly usage and associated charges at the account level for your runtimes, apps, and services that are syndicated from {{site.data.keyword.Bluemix_notm}} Public. You can use this data to identify how much to charge specific orgs based on their usage.
 
 <ol>
-<li>Click the <strong>Avatar</strong> icon ![Avatar](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Usage details</strong>.</li>
+<li>Click the <strong>{{site.data.keyword.avatar}}</strong> icon ![Avatar](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Usage details</strong>.</li>
 <li>Click <strong>Public</strong>.</li>
 <li>Select the org that you want to see data for, or select <strong>All Organizations</strong> to view the data for all orgs at once.</li>
 <li>You can see usage details for the following categories:
@@ -361,7 +362,7 @@ You can view status for the {{site.data.keyword.Bluemix_notm}} environment and f
 
 ### {{site.data.keyword.Bluemix_notm}} environment status
 
-You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance by using the {{site.data.keyword.Bluemix_notm}} Status page. Click the **Avatar** icon ![Avatar](../support/images/account_support.svg), and then select **Status**.
+You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance by using the {{site.data.keyword.Bluemix_notm}} Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**.
 
 The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}. You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
@@ -386,13 +387,17 @@ Catalog, select **DISABLE ALL PLANS**.
 - To control the visibility of an individual plan, select the plan name, and then use the
 drop-down menu to select **Enable for all organizations**, **Disable for all organizations**, or **Enable plan for specific organizations**.
 
+<!-- staging only start -->
+
 You can also manage the priority order of available buildpacks to be chosen based on compatibility for your developers when they are creating apps.
 
-1. Go to **ADMINISTRATION &gt; CATALOG MANAGEMENT**.
+1. Go to **ADMINISTRATION &gt; CATALOG MANAGEMENT**
 2. Go to the **Compute** section.
 3. Select **Buildpack priority**.
-4. Select the buildpack option that you want to prioritize within the list.
-5. With the option selected, use the arrows to move the option within the list. Priority is set by listing the highest prioirty item first in the list.
+4. Select the buildpack option that you want to prioritize higher or lower within the list.
+5. With the option selected, use the arrows to move the option within the list.
+
+<!-- staging only end -->
 
 ### Registering a service broker
 {: #servicebrokerui}
@@ -549,11 +554,12 @@ create the org.
 
 You can create spaces in your organization; for example, a *dev* space as a development environment, a *test* space as a testing environment, and a *production* space as a production environment. Then, you can associate your apps with spaces. Complete the following steps to create a space:
 
-1. Go to the **Avatar** icon ![Avatar icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
 2. Select the org that you want to add a space to.
 3. Click **Create a Space**.
 4. Enter a space name.
 5. Click **Create**.
+
 
 ### Quota monitoring
 
@@ -671,10 +677,10 @@ field with **Read** or **Write** access for the users permission.
 
 **Note**: Enter user IDs that match the values used in your user registry.
 
-   1. Click **Import users**.
-   2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or you can create your own by using a spreadsheet that includes the required column headers: **User ID**, **Email**, and **Organization**.  Two optional columns are also included in the template: **First Name** and **Last Name**.
-   3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required and optional column headers for the users that you are importing.
-   4. Save your file, and click **Upload file**.
+  1. Click **Import users**.
+  2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or you can create your own by using a spreadsheet that includes the required column headers: **User ID**, **Email**, and **Organization**.  Two optional columns are also included in the template: **First Name** and **Last Name**.
+  3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required and optional column headers for the users that you are importing.
+  4. Save your file, and click **Upload file**.
 
   **Note**: The columns within your spreadsheet can be in any order as long as you have all of the required columns. If the import was successful, you receive a confirmation message that states that all users were added. If the import was successful for some users, but not others, review the error message to take action on the users that could not be added.
 
@@ -719,6 +725,7 @@ Permissions can be enabled for the user with either **Read** or
 * The ![Read, represented by an eye](images/icon_read.svg) icon means that the user has **Read** (read-only) access for that permission.
 * The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has **Write** (edit, add, or remove) access for that permission.
 
+
 ## Managing users with the Admin REST API
 {: #usingadminapi}
 
@@ -739,9 +746,9 @@ input and provides easy-to-read output. You can download Python from the [Python
 ### Logging in to the Admin Console
 
 Before you can run any `Admin` API requests, you must log in to the
-Admin Console. If you have `admin` permission or `users`
-permission with `write` access, you can add or remove users. You must have
-`admin` permission to edit other users' permissions.
+Admin Console. If you have **Admin** permission or **Users**
+permission with **Write** access, you can add or remove users. You must have
+**Admin** permission to edit other users' permissions.
 
 To log in to the Admin Console, you can use basic access authentication on the
 `https://<your_host>.ibm.com/login` endpoint. The server returns a cookie with your
@@ -787,7 +794,7 @@ command:
 
 When you add a user, you must specify an organization. You can use the
 `Admin` REST API to list all organizations. You must have
-`users` permission with `read` access to list
+**Users** permission with **Read** access to list
 organizations.To list all organizations, run the following command:
 
 `curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
@@ -832,7 +839,7 @@ The following example shows output from this command:
 You can determine whether a user was already added to your
 {{site.data.keyword.Bluemix_notm}} environment by
 using the `Admin` REST API to list registered users. You must have
-`users` permission with `read` access to list registered
+**Users** permission with **Read** access to list registered
 users.To list all users, run the following command:
 
 `curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
@@ -908,8 +915,8 @@ The following example shows output from this command:
 
 You can use the `Admin` REST API to add users to the
 {{site.data.keyword.Bluemix_notm}} instance. You must
-have `users` permission with `write` access to add
-users.
+have **Users** permission with **Write** access to add
+users, or the Admin permission (ops.admin) for the admin console.
 
 You can add one user or a list of users. You can add users to a single
 organization, or to multiple organizations.To
@@ -1014,7 +1021,7 @@ command:
 
 You can use the `Admin` REST API to remove users from the
 {{site.data.keyword.Bluemix_notm}} instance. You must
-have `users` permission with `write` access to remove users.
+have **Users** permission with **Write** access to remove users.
 
 To remove a user, you must provide the user ID of the user. Run the following command:
 
@@ -1050,7 +1057,6 @@ command:
  ```
 {: screen}
 
-
 ## Custom service API
 {: #servicebrokerapi}
 
@@ -1079,8 +1085,6 @@ POST /codi/v1/serviceBrokers
 ### Request
 {: #registerrequest}
 
-*Table 8. Fields*
-
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. |
@@ -1089,6 +1093,7 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
 
+*Table 8. Fields*
 
 #### Body
 {: #registerbody}
@@ -1160,8 +1165,6 @@ Use the following API and code examples to update a service.
 ### Request
 {: #updaterequest}
 
-*Table 9. Fields*
-
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
@@ -1170,6 +1173,7 @@ Use the following API and code examples to update a service.
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
 
+*Table 9. Fields*
 
 #### Body
 {: #updatebody}
@@ -1232,12 +1236,11 @@ Content-Type: application/json
 
 Use the following API and code examples to delete a service.
 
-*Table 10. Parameter*
-
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
 
+*Table 10. Parameter*
 
 ### Route
 
