@@ -16,7 +16,7 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Using {{site.data.keyword.bluemix_short}} services that are enabled for {{site.data.keyword.openwhisk_short}}
+# Using {{site.data.keyword.Bluemix_notm}} services that are enabled for {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
 Last updated: 2 August 2016
 {: .last-updated}
