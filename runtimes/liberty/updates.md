@@ -13,7 +13,7 @@ copyright:
 
 ## A list of the latest updates in the Liberty buildpack.
 
-Last Updated: 20 July 2016
+*Last Updated: 20 July 2016*
 {: .last-updated}
 
 ### July 22, 2016: Updated Liberty buildpack v3.1-20160717-2254

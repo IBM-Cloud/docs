@@ -12,7 +12,7 @@ copyright:
 # Options for pushing Liberty apps
 {: #options_for_pushing}
 
-Last Updated: 10 June 2016
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 The behavior of the Liberty server in Bluemix is controlled by the Liberty buildpack. Buildpacks can provide a complete runtime environment for a specific class of applications. They are key to providing portability across clouds and contributing to an open cloud architecture. The Liberty buildpack provides WebSphere Liberty container capable of running Java EE 7 and OSGi applications. It supports popular frameworks such as Spring and includes the IBM JRE. WebSphere Liberty enables rapid application development that is suited to the cloud. The Liberty buildpack supports multiple applications that are deployed into a single Liberty server. As part of the Liberty buildpack integration into Bluemix, the buildpack ensures that environment variables for binding services are shown as configuration variables in the Liberty server.

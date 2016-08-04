@@ -12,7 +12,7 @@ copyright:
 # Liberty for Java
 {: #liberty_runtime}
 
-Last Updated: 10 June 2016
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 Liberty for Java applications on {{site.data.keyword.Bluemix}} are powered by the liberty-for-java buildpack. The liberty-for-java buildpack provides a complete runtime environment for running Java EE 7 and OSGi applications on top of Liberty profile. It supports popular frameworks like Spring and includes the IBM JRE. WebSphere Liberty enables rapid application development that is well suited to the cloud.

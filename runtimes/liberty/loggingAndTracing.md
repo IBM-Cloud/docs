@@ -12,7 +12,7 @@ copyright:
 # Logging and tracing
 {: #logging_tracing}
 
-Last Updated: 21 June 2016
+*Last Updated: 21 June 2016*
 {: .last-updated}
 
 ## Log files

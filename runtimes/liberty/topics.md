@@ -12,7 +12,7 @@ copyright:
 # Liberty topics
 {: #topics}
 
-Last Updated: 10 June 2016
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 * [Liberty runtime](index.html)

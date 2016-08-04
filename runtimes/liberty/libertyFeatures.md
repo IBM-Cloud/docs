@@ -11,7 +11,7 @@ copyright:
 # Liberty features supported in Bluemix
 {: #liberty_features}
 
-Last Updated: 28 July 2016
+*Last Updated: 28 July 2016*
 {: .last-updated}
 
 The Liberty for Java instant runtime includes a subset of the Liberty Profile features.  Some features which the Liberty Profile provides are not available in the Liberty for Java instant runtime because they are not applicable in the cloud environment.
