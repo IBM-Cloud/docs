@@ -14,7 +14,7 @@ copyright:
 # Getting started with {{site.data.keyword.DRA_short}} (Experimental)
 {: #DRA_gettingstarted}
 
-*Last updated: 18 July 2016*
+*Last updated: 4 August 2016*
 {: .last-updated}
 
 {{site.data.keyword.DRA_full}} allows you to maintain and improve the quality of your code in {{site.data.keyword.Bluemix_notm}} by monitoring your deployments to identify risks before they are released.
@@ -25,13 +25,13 @@ copyright:
 {{site.data.keyword.DRA_short}} is an experimental offering and is provided as-is for development and experimentation purposes only.  To use {{site.data.keyword.DRA_short}}, add it to any toolchain that uses the {{site.data.keyword.deliverypipeline}}.
 
 {: #DRA_catalog}
-To access the {{site.data.keyword.DRA_short}} criteria UI, complete the following steps.
+To access the {{site.data.keyword.DRA_short}} UI, complete the following steps.
 
 1. From the DevOps category under Experimental in the {{site.data.keyword.Bluemix_notm}} catalog, click **{{site.data.keyword.DRA_short}}**.
 
 2. Click **Create** to add the service to your {{site.data.keyword.Bluemix_notm}} organization.
 
-3. On the {{site.data.keyword.DRA_short}} Manage tab, click **OPEN DEPLOYMENT RISK ANALYTICS DASHBOARD** to open the criteria UI
+3. On the {{site.data.keyword.DRA_short}} Manage tab, click **OPEN DEPLOYMENT RISK ANALYTICS DASHBOARD**.
 
 4. Complete your setup with the remaining tasks:
 
