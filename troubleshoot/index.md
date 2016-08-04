@@ -15,7 +15,7 @@ copyright:
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 1 August 2016*
+Last updated: 4 August 2016
 {: .last-updated}
 
 
@@ -25,25 +25,25 @@ General problems with accessing {{site.data.keyword.Bluemix}} might include a us
 ## Unable to log in to {{site.data.keyword.Bluemix_notm}}
 {: #ts_logintobm}
 
-You must have a valid IBM ID and password to log in to {{site.data.keyword.Bluemix_notm}}.
+You must have a valid IBMid and password to log in to {{site.data.keyword.Bluemix_notm}}.
 
 
 When you try to sign in to {{site.data.keyword.Bluemix_notm}}, you see the following error message: 
 {: tsSymptoms} 
 
-`The IBM id and/or password entered below is incorrect. Please try again.`
+`The IBMid and/or password entered below is incorrect. Please try again.`
 
 
-The IBM ID and password that you use to sign in to {{site.data.keyword.Bluemix_notm}} is invalid.
+The IBMid and password that you use to sign in to {{site.data.keyword.Bluemix_notm}} is invalid.
 {: tsCauses} 
  
 
-To get a valid IBM ID and password, go to the My IBM profile page, and then complete one of the following steps:
+To get a valid IBMid and password, go to the My IBM profile page, and then complete one of the following steps:
 {: tsResolve}
-  * If you have already registered an IBM ID and you want to check whether your ID and password are valid, click **Sign in** and enter your IBM ID and password on the Sign in page. If you have forgotten your password, click **Forgot your password** on the right side of the Sign in page to reset your password. If you have forgotten your IBM ID or continue to have problems with your password, contact the Worldwide IBM Registration Help Desk for help. 
-  * If you don't have an IBM ID, click **Register** to register an IBM ID and password. 
+  * If you have already registered an IBMid and you want to check whether your ID and password are valid, click **Sign in** and enter your IBMid and password on the Sign in page. If you have forgotten your password, click **Forgot your password** on the right side of the Sign in page to reset your password. If you have forgotten your IBMid or continue to have problems with your password, contact the Worldwide IBM Registration Help Desk for help. 
+  * If you don't have an IBMid, click **Register** to register an IBMid and password. 
   
-**Note:** For IBM employees, the IBM ID might be different from the intranet login ID. 
+**Note:** For IBM employees, the IBMid might be different from the intranet login ID. 
 
 
 
@@ -152,7 +152,7 @@ You cannot invite users to your organization if you are a collaborator of the or
 If you are unable to invite users to your organization and need a different role to do so, contact your organization manager to change your role. To identify your organization manager, complete the following steps:
 {: tsResolve}
 
-  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the menu bar, and select **Manage Organizations**.
+  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) in the menu bar, and select **Manage Organizations**.
   2. Go to your organization, and view the information of organization manager on the **USERS** tab.  
   
 If you are unable to invite users because you are a collaborator and not a member, you must delete your previous {{site.data.keyword.Bluemix_notm}} account and then be invited to join the account as a member of the organization. To delete your previous account and join the account as a member, complete the following steps: 
@@ -383,7 +383,7 @@ This error often is received the first time you try to create an app or a servic
 Ensure that you created a space in your current organization.  To create a space, use one of the following methods:
 {: tsResolve}
 
-  * From Account and Support ![Account and Support](images/account_support.svg), select the organization that you want to create the space in, and then click **Create a Space**.
+  * Click the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) to open the Account and Support widget, select the organization that you want to create the space in, and then click **Create a Space**.
   * In the cf command line interface, type `cf create-space <space_name> -o <organization_name>`.
 
 Try again. If you see this message again, go to the [Bluemix status](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
@@ -1284,7 +1284,7 @@ The status of your {{site.data.keyword.Bluemix_notm}} account becomes inactive w
 To reactivate your account, contact [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}. In the email, you must include the following information:
 {: tsResolve}
 
-  * The IBM ID that you use to log in to {{site.data.keyword.Bluemix_notm}}.
+  * The IBMid that you use to log in to {{site.data.keyword.Bluemix_notm}}.
   * The name of the organization in which your app is being created. This information can help the support team determine whether you are assigned the correct roles or membership within your organization.
 
 
