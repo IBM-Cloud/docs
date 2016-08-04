@@ -12,7 +12,7 @@ copyright:
 # Automatic configuration of bound services
 {: #auto_config}
 
-*Last Updated: 10 June 2016*
+Last Updated: 10 June 2016
 {: .last-updated}
 
 You can bind various services to your Liberty application. Services can be container-managed, application-managed, or both, depending on what the developer wants.

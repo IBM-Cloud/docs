@@ -11,8 +11,15 @@ copyright:
 # Liberty features supported in Bluemix
 {: #liberty_features}
 
-*Last Updated: 10 June 2016*
+Last Updated: 28 July 2016
 {: .last-updated}
+
+The Liberty for Java instant runtime includes a subset of the Liberty Profile features.  Some features which the Liberty Profile provides are not available in the Liberty for Java instant runtime because they are not applicable in the cloud environment.
+
+The following features are included which are specific to Bluemix:
+* appState-1.0
+* cloudAutowiring-1.0
+* logAnalysis-1.0</code>
 
 The following table shows Liberty features supported in Bluemix
 
@@ -36,7 +43,7 @@ The following table shows Liberty features supported in Bluemix
 <td>batch-1.0</td>
 <td>batchManagement-1.0</td>
 <td>beanValidation-1.0</td>
-<td>beanValidation-1.1</td>
+<td>beanValidation-1.1 </td>
 </tr>
 
 <tr>
@@ -117,7 +124,7 @@ The following table shows Liberty features supported in Bluemix
 </tr>
 
 <tr>
-<td>jsp-2.3 </td>
+<td>jsp-2.3</td>
 <td>ldapRegistry-3.0</td>
 <td>localConnector-1.0</td>
 <td>logAnalysis-1.0</td>
@@ -200,6 +207,17 @@ The following table shows Liberty features supported in Bluemix
 <td></td>
 </tr>
 </table>
+
+A subset of the available features are enabled by default when deploying WAR or EAR files.  See [Stand-alone apps](optionsForPushing.html#stand_alone_apps) for details.
+
+The Liberty for Java runtime also makes some Liberty beta features available. Those features are not listed in the table but can be found at <a href="https://new-console.ng.bluemix.net/docs/runtimes/liberty/usingBetaFeatures.html">Using the beta features</a>.
+
+Keep in mind that a server cannot load incompatible features, so be sure it is configured to enable only features that are compatible. See
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Supported Java EE 6 and 7 feature combinations</a>.
+
+To see a complete list of the features available in Liberty along with Java EE versions and other information see
+[Liberty Features](https://www.ibm.com/support/knowledgecenter/SSCKBL_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)
+in the IBM Knowledge Center.
 
 Applications that use remote EJBs can be deployed to Bluemix
 however, the remote EJBs are not remotely accessible with the CORBA/IIOP
