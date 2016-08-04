@@ -26,7 +26,7 @@ Once you have created bundles and started generating translations for your appli
 
 To add and configure an alternative machine translation service for {{site.data.keyword.GlobalizationPipeline_short}}, select the **Machine Translation Configuration** tab from the {{site.data.keyword.GlobalizationPipeline_short}} dashboard.
 
-* To add a machine translation service that is in the {{site.data.keyword.Bluemix_notm}} catalog, (**Watson Language Translation**), the service must first be added to your {{site.data.keyword.Bluemix_notm}} space.
+* To add a machine translation service that is in the {{site.data.keyword.Bluemix_notm}} catalog, (**Watson Language Translator**), the service must first be added to your {{site.data.keyword.Bluemix_notm}} space.
 
 * To add a third party service, select the button for that service on the **Machine Translation Configuration** tab and provide the user credentials required to access the service.
 
