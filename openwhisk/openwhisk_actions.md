@@ -32,7 +32,7 @@ Actions can be composed of calls to other actions or a defined sequence of actio
 ## Creating and invoking JavaScript actions
 {: #openwhisk_create_action_js}
 
-The following sections guide you through working with actions in JavaScript. You beginning with the creation and invocation of a simple action. Then, you move on to adding parameters to an action and invoking that action with parameters. Next is setting default parameters and invoking them. Then, you create asynchronous actions and, finally, work with action sequences.
+The following sections guide you through working with actions in JavaScript. You begin with the creation and invocation of a simple action. Then, you move on to adding parameters to an action and invoking that action with parameters. Next is setting default parameters and invoking them. Then, you create asynchronous actions and, finally, work with action sequences.
 
 
 ### Creating and invoking a simple JavaScript action
