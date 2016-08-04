@@ -21,7 +21,7 @@ copyright:
 
 {: #deliverypipeline_extending}
 
-*Last updated: 29 April 2016*
+*Last updated: 4 August 2016*
 {: .last-updated}
 
 You can extend the capabilities of the {{site.data.keyword.deliverypipeline}} service by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
@@ -341,58 +341,16 @@ A pipeline that uses Active Deploy would typically include these stages:
     - **Test** jobs that you can use to test your new app in production.
     - The **Active Deploy-Complete** job that ends the deployment process and decreases the original version of your app if the test phase was successful. Otherwise, a rollback will occur and your app will revert to the original version.
 
-### Creating the Active Deploy stage of the pipeline
-To set up Active Deploy in your pipeline, configure the jobs and environmental variables of the **Deploy** stage.
+## Using Active Deploy for zero downtime deployment in the pipeline
+{: #deliverypipeline_activedeploy}
 
-Before you begin:
-- You will need a running application with an existing pipeline.
-  - For information on how to get started with the pipeline, [see the Build &amp; deploy documentation](https://hub.jazz.net/docs/deploy/).
+You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Bluemix® DevOps Services Delivery Pipeline. For more information about getting started, [see the Active Deploy documentation](https://console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
 
-To add jobs:
+## Building and deploying container images with the pipeline
+{: #deliverypipeline_containers}
 
-1. Click **ADD STAGE** and name the stage **Active Deploy**.
-2. Go to the **JOBS** tab and click **ADD JOB**. Select **Cloud Foundry** as the job type and name it **Deploy Single Instance**.
-  - You must edit the default command script to export either *NAME* or *CF_APP_NAME* and deploy as a single instance with no mapped routes. *NAME* should be the equivalent to the name of the deployed app and should be unique each time the job is run. For example:
-  ```
-    #!/bin/bash
-    NAME="${CF_APP}_${BUILD_NUMBER}"
-    cf push "${NAME}" --no-route -i 1
-    export NAME
-  ```
-3. Add another job and select **Active Deploy - Begin** from the **Deployer type** menu.
-4. Click **ADD JOB** and select **Test**.
-5. In the **Test Command** section, insert the code for any tests you want to run.
- - In order for the test to complete successfully the result must be 0. A return code of anything else causes the job to fail and a rollback occurs.
- - You must uncheck **Stop running this stage if this job fails** in all test jobs to allow the **Active Deploy - Complete** job to run. If **Active Deploy - Begin** runs successfully, the **Active Deploy - Complete** job must execute to avoid a scenario in which an update of the original app remains in progress preventing alternative updates.
-6. Click **ADD JOB** and select **Active Deploy - Complete** from the **Deployer type** menu.
+You can automate your app builds and container deployments to Bluemix® by using the IBM® Continuous Delivery Pipeline for Bluemix. The Delivery Pipeline service in DevOps services supports:
+  - Building Docker images
+  - Deploying images in containers to Bluemix
 
-
-To configure your environmental variables:
-
-1. In the **ENVIRONMENTAL PROPERTIES** tab, click **ADD PROPERTY**.
-2. Select **TEXT PROPERTY**.
-3. Enter the name and value for each of the variables below. Repeat to add more variables and then click **SAVE** to complete your stage.
-
-| **Name** | **Required** | **Default** | **Description** |
-|:--------:|:------------:|:-----------:|:---------------:|
-| NAME or CF_APP_NAME | Yes | Leave blank, this will be filled out in the **Deploy Single Instance** job | The name of the new version of the app and takes the form *AppName_BuildNumber*, with the build number increasing |
-| GROUP_SIZE | Yes | 1 | The desired number of instances of an app |
-| TEST_RESULT_FOR_AD | Yes | Leave blank, this will be set in your **Test** jobs | All test jobs need to be set to return a 0 for a successful execution |
-| ROUTE_HOSTNAME | No | The name of your app | The host name in the route, that is mapped to the current version of the app |
-| ROUTE_DOMAIN | No | *.mybluemix.net | The domain in the route, that is mapped to the current version of the app |
-| CONCURRENT_VERSIONS | No | 2 | The number of versions kept of the app, including at least one successful deploy |
-
-**Important:**
-- The first time the pipeline is run, the Active Deploy service will not be invoked. When the pipeline runs, the **Deploy Single Instance** job exports the *NAME* of the new version of the app. The **Active Deploy-Begin** job uses the *NAME* to find the *App_Name* and then searches the space for any earlier versions of the app with a route. If an original app can't be found, **Active Deploy-Begin** will scale the app to *GROUP_SIZE* instances and map the route to *ROUTE_HOSTNAME.ROUTE_DOMAIN*.
-
-
-### Viewing updates
-
-While the pipeline is running, you can view real-time updates in several ways:
-
- * To see the code as it is updated, click **View logs and history**.
- * To track progress by using the activity log on your app's Dashboard, click below the **LAST EXECUTION RESULT** heading.
- * To see a history of your updates, including the current deployment, go to the Active Deploy dashboard.
-
-
-For more information about the Active Deploy service, see the [Bluemix documentation](https://www.ng.bluemix.net/docs/services/ActiveDeploy/index.html).
+For more information about getting started, see [the Delivery Pipeline and containers overview](https://console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
