@@ -11,7 +11,7 @@ copyright:
 # Enabling Facebook authentication for Android apps
 {: #facebook-auth-android}
 
-*Last updated: 01 August 2016*
+Last updated: 04 August 2016
 {: .last-updated}
 
 
@@ -83,7 +83,7 @@ After you have the Facebook Application ID and you have configured your Facebook
 
 1. Specify the Facebook Application ID and click **Save**.
 
-## Configuring {{site.data.keyword.amashort}}  client SDK for Android
+## Configuring {{site.data.keyword.amashort}} client SDK for Android
 {: #facebook-auth-android-sdk}
 To configure the client SDK for Android, use the Gradle dependency manager in Android Studio.
 
@@ -165,6 +165,9 @@ Your Android project might have two `build.gradle` files:  for the project and a
 					"applicationRoute",
 					"applicationGUID",
 					BMSClient.REGION_UK);
+
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
 
 	FacebookAuthenticationManager.getInstance().register(this);
 ```

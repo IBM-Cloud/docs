@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-android}
 
 
-Last updated: 01 August 2016
+Last updated: 04 August 2016
 {: .last-updated}
 
 ## Before you begin
@@ -122,7 +122,7 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 
 1. To use the {{site.data.keyword.amashort}} client SDK, you must initialize it by passing the context, applicationGUID, and applicationRoute parameters.
 
-	A common, though not mandatory, place to put the initialization code is in the onCreate method of the main activity in your Android application
+	A common, though not mandatory, place to put the initialization code is in the onCreate method of the main activity in your Android application.
 
 1. Initialize the client SDK and register the Google authentication manager. Replace *applicationRoute* and *applicationGUID* with the values from **Route** and **App GUID** from the **Mobile Options** section in the dashboard.
 
@@ -131,6 +131,9 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 					"applicationRoute",
 					"applicationGUID",
 					BMSClient.REGION_UK);
+
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
 						
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
