@@ -14,7 +14,7 @@ years: 2016
  
 # Enhanced Node.js SDK
 {: #etn_sdk}
-Last updated: 15 July 2016
+Last updated: 5 August 2016
 {: .last-updated}
 
 The enhanced Node.js SDK allows application developers to build Node.js applications that can interact with an existing blockchain.  These include the abilities to:
@@ -33,7 +33,7 @@ The client SDK provides APIs through which an application can interact with a Hy
 You can include the SDK in your Node.js app in one of the following ways:
 *  offline: You need to copy the files from the Hyperledger source tree: https://github.com/hyperledger/fabric/tree/master/sdk/node/lib into the `/lib` directory of the Node.js app.  Subsequently include it with the following code snippet:
 ```js
-var hlc = require("./lib/hlc");
+var hfc = require("./lib/hfc");
 ```
 
 * npm:  Install the SDK from npm with the first snippet, then include it with the second code snippet:
@@ -42,7 +42,7 @@ npm install hfc -g
 ```
 
 ```js
-var hlc = require('hlc');
+var hfc = require('hfc');
 ```
 
 ## Web Application
@@ -58,10 +58,10 @@ Explore the remainder of the application to see member enrollment, issuing of tr
 
 ```js
 // Include the package from npm:
-var hlc = require('hlc');
+var hfc = require('hfc');
 
 // Create a client chain.
-var chain = hlc.newChain("targetChain");
+var chain = hfc.newChain("targetChain");
 
 // Configure the KeyValStore which is used to store sensitive keys
 // as so it is important to secure this storage.
@@ -123,7 +123,7 @@ function handleUserRequest(userName, chaincodeID, fcn, args) {
      });
      // Listen for the 'complete' event.
      tx.on('complete', function(results) {
-        console.log("completed invoke: %j",results;
+        console.log("completed invoke: %j",results);
      });
      // Listen for the 'error' event.
      tx.on('error', function(err) {
