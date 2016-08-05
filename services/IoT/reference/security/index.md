@@ -14,7 +14,7 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} security
 {: #sec-index}
-Last updated: 1 August 2016
+Last updated: 5 August 2016
 {: .last-updated}
 
 As a cloud-hosted service the {{site.data.keyword.iot_full}} embeds security as an important aspect of its architecture.
@@ -36,7 +36,7 @@ For more details on the security of the {{site.data.keyword.Bluemix_notm}}, plea
 ## {{site.data.keyword.iot_short_notm}} Security compliance
 {: #compliance}  
 ![ISO 27K icon](../../images/icon_iso27k1.png "ISO 27K icon")   
-{{site.data.keyword.iot_short_notm}} is certified under the International Organization for Standardization (ISO) 27001 and 27002 standards, which define the best practices for information security management processes. The ISO 27001 standard specifies the requirements for establishing, implementing, and documenting Information Security Management Systems (ISMS) and the requirements for implementing security controls, according to the needs of individual organizations. The ISO 27002 standard explains each security control of ISO 27001 in detail. The ISO 27000 family of standards incorporates a process of scaling risk and valuation of assets, with the goal of safeguarding the confidentiality, integrity, and availability of the written, oral, and electronic information.
+{{site.data.keyword.iot_short_notm}} is certified under the International Organization for Standardization (ISO) 27001 standard, which defines the best practices for information security management processes. The ISO 27001 standard specifies the requirements for establishing, implementing, and documenting Information Security Management Systems (ISMS) and the requirements for implementing security controls, according to the needs of individual organizations. The ISO 27000 family of standards incorporates a process of scaling risk and valuation of assets, with the goal of safeguarding the confidentiality, integrity, and availability of the written, oral, and electronic information.
 
 {{site.data.keyword.iot_short_notm}} is audited by a third-party security firm and meets all of the requirements for ISO 27001: {{site.data.keyword.iot_short_notm}} ISO 27001:2013 Certificate of Registration.
 
