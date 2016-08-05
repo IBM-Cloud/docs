@@ -19,7 +19,7 @@ copyright:
 # Creating and invoking {{site.data.keyword.openwhisk_short}} actions
 {: #openwhisk_actions}
 
-Last updated: 2 August 2016
+Last updated: 4 August 2016
 {: .last-updated}
 
 Actions are stateless code snippets that run on the {{site.data.keyword.openwhisk}} platform. An action can be a JavaScript function, a Swift function, or a custom executable program packaged in a Docker container. For example, an action can be used to detect the faces in an image, aggregate a set of API calls, or post a Tweet.
@@ -215,23 +215,28 @@ Rather than pass all the parameters to an action every time, you can bind certai
 ### Creating asynchronous actions
 {: #openwhisk_asynchrony_js}
 
-JavaScript functions that continue execution in a callback function might need to return the activation result after the `main` function returns. You can accomplish this using the `whisk.async()` and `whisk.done()` functions in your action.
+JavaScript functions that run asynchronously may need to return the activation result after the `main` function has returned. You can accomplish this by returning a Promise in your action.
 
 1. Save the following content in a file called `asyncAction.js`.
 
   ```
-  function main() {
-      setTimeout(function() {
-          return whisk.done({done: true});
-      }, 20000);
-      return whisk.async();
-  }
+  function main(args) {
+       return new Promise(function(resolve, reject) {
+         setTimeout(function() {
+           resolve({ done: true });
+         }, 2000);
+      })
+   }
   ```
   {: codeblock}
 
-  Notice that the `main` function returns immediately, and the `whisk.async()` return value indicates that this activation should continue running.
+  Notice that the `main` function returns a Promise, which indicates that the activation hasn't completed yet, but is expected to in the future.
 
-  The `setTimeout()` JavaScript function in this case waits for twenty seconds before calling the callback function, where the call to `whisk.done()` indicates that the activation is complete.
+  The `setTimeout()` JavaScript function in this case waits for twenty seconds before calling the callback function.  This represents the asynchronous code and goes inside the Promise's callback function.
+
+  The Promise's callback takes two arguments, resolve and reject, which are both functions.  The call to `resolve()` fulfills the Promise and indicates that the activation has completed normally.
+
+  A call to `reject()` can be used to reject the Promise and signal that the activation has completed abnormally.
 
 2. Run the following commands to create the action and invoke it:
 
@@ -291,27 +296,33 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
 1. Save the following content in a file called `weather.js`.
   ```
     var request = require('request');
-    
+
     function main(params) {
         var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
-    
-        request.get(url, function(error, response, body) {
-            var condition = JSON.parse(body).query.results.channel.item.condition;
-            var text = condition.text;
-            var temperature = condition.temp;
-            var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-            whisk.done({msg: output});
+
+        return new Promise(function(resolve, reject) {
+            request.get(url, function(error, response, body) {
+                if (error) {
+                    reject(error);    
+                }
+                else {
+                    var condition = JSON.parse(body).query.results.channel.item.condition;
+                    var text = condition.text;
+                    var temperature = condition.temp;
+                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                    resolve({msg: output});
+                }
+            });
         });
-    
-        return whisk.async();
     }
   ```
   {: codeblock}
 
-  Notice that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./openwhisk_reference.html#runtime_ref_runtime_environment) detail the Node.js packages that you can use in your actions.
-  
-  This example also shows the need for asynchronous actions. The action returns `whisk.async()` to indicate that the result of this action is not available yet when the function returns. Instead, the result is available in the `request` callback after the HTTP call completes, and is passed as an argument to the `whisk.done()` function.
+  Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./reference.md#runtime-environment) detail the Node.js packages that you can use in your actions.
+
+  This example also shows the need for asynchronous actions. The action returns a Promise to indicate that the result of this action is not available yet when the function returns. Instead, the result is available in the `request` callback after the HTTP call completes, and is passed as an argument to the `resolve()` function.
+
 
 2. Run the following commands to create the action and invoke it:
   ```
@@ -408,8 +419,8 @@ An action is simply a top-level Python function, which means it is necessary to 
 
 ```
     def main(dict):
-        name = dict.get("name", “stranger")
-        greeting = "Hello " + name + “!"
+        name = dict.get("name", "stranger")
+        greeting = "Hello " + name + "!"
         print(greeting)
         return {"greeting": greeting}
 ```
@@ -485,79 +496,6 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **Attention:** Swift actions run in a Linux environment. Swift on Linux is still in
 development, and {{site.data.keyword.openwhisk_short}} usually uses the latest available release, which is not necessarily stable. In addition, the version of Swift that is used with {{site.data.keyword.openwhisk_short}} might be inconsistent with versions of Swift from stable releases of XCode on MacOS.
-
-## Creating Java actions
-
-The process of creating Java actions is similar to that of JavaScript and Swift actions. The following sections guide you through creating and invoking a single Java action, and adding parameters to that action.
-
-In order to compile, test and archive Java files, you must have a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installed locally.
-
-### Creating and invoking an action
-
-A Java action is a Java program with a method called `main` that has the exact signature as follows:
-```
-public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
-```
-{: codeblock}
-
-For example, create a Java file called `Hello.java` with the following content:
-
-```
-import com.google.gson.JsonObject;
-
-public class Hello {
-
-    public static JsonObject main(JsonObject args) {
-
-        String name = "stranger";
-        if (args.has("name"))
-            name = args.getAsJsonPrimitive("name").getAsString();
-
-        JsonObject response = new JsonObject();
-        response.addProperty("greeting", "Hello " + name + "!");
-        return response;
-
-    }
-}
-```
-{: codeblock}
-
-Then, compile `Hello.java` into a JAR file `hello.jar` as follows:
-```
-javac Hello.java
-jar cvf hello.jar Hello.class
-```
-{: pre}
-
-**Note:** [google-gson](https://github.com/google/gson) must exist in your Java CLASSPATH when compiling the Java file.
-
-You can create a OpenWhisk action called `helloJava` from this JAR file as
-follows:
-
-```
-wsk action create helloJava hello.jar
-```
-{: pre}
-
-When you use the command line and a `.jar` source file, you do not need to
-specify that you are creating a Java action;
-the tool determines that from the file extension.
-
-Action invocation is the same for Java actions as it is for Swift and JavaScript actions:
-
-```
-wsk action invoke --blocking --result helloJava --param name World
-```
-{: pre}
-
-```
-  {
-      "greeting": "Hello World!"
-  }
-```
-{: screen}
-
-**Note:** If the JAR file has more than one class with a main method matching required signature, the CLI tool uses the first one reported by `jar -tf`.
 
 ## Creating Docker actions
 {: #openwhisk_actions_docker}

@@ -18,7 +18,7 @@ copyright:
 
 # Using {{site.data.keyword.Bluemix_notm}} services that are enabled for {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
-Last updated: 2 August 2016
+Last updated: 4 August 2016
 {: .last-updated}
 
 In {{site.data.keyword.openwhisk}}, a catalog of packages gives you an easy way to enhance your app with useful capabilities, and to access external services in the ecosystem. Examples of external services that are {{site.data.keyword.openwhisk_short}}-enabled include Cloudant, The Weather Company, Slack, and GitHub.
@@ -293,23 +293,24 @@ Each generated event will include as parameters the properties specified in the 
 ## Using the Weather package
 {: #openwhisk_catalog_weather}
 
-The `/whisk.system/weather` package offers a convenient way to call the IBM Weather Insights API.
+The `/whisk.system/weather` package offers a convenient way to call the Weather Company Data for IBM Bluemix API.
 
 The package includes the following action.
 
 | Entity | Type | Parameters | Description |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | package | apiKey | Services from IBM Weather Insights API  |
-| `/whisk.system/weather/forecast` | action | apiKey, latitude, longitude, timePeriod | forecast for specified time period|
+| `/whisk.system/weather` | package | username, password | Services from the Weather Company Data for IBM Bluemix API  |
+| `/whisk.system/weather/forecast` | action | latitude, longitude, timePeriod | forecast for specified time period|
 
-Creating a package binding with the `apiKey` value is suggested. This way, you don't need to specify the key every time you invoke the actions in the package.
+Creating a package binding with the `username` and `password` values is suggested. This way, you don't need to specify the credentials every time you invoke the actions in the package.
 
 ### Getting a weather forecast for a location
 {: #openwhisk_catalog_weather_forecast}
 
 The `/whisk.system/weather/forecast` action returns a weather forecast for a location by calling an API from The Weather Company. The parameters are as follows:
 
-- `apiKey`: An API key for The Weather Company that is entitled to invoke the forecast API.
+- `username`: Username for The Weather Company Data for IBM Bluemix that is entitled to invoke the forecast API.
+- `password`: Password for The Weather Company Data for IBM Bluemix that is entitled to invoke the forecast API..
 - `latitude`: The latitude coordinate of the location.
 - `longitude`: The longitude coordinate of the location.
 - `timeperiod`: Time period for the forecast. Valid options are '10day' - (default) Returns a daily 10-day forecast , '24hour' - Returns an hourly 2-day forecast, , 'current' - Returns the current weather conditions, 'timeseries' - Returns both the current observations and up to 24 hours of past observations, from the current date and time. 
@@ -622,7 +623,7 @@ For more information about the payload content, see the [GitHub events and paylo
 
 The `/whisk.system/pushnotifications` package enables you to work with a push service. 
 
-The package includes the following feed:
+The package includes the following action and feed:
 
 | Entity | Type | Parameters | Description |
 | --- | --- | --- | --- |
@@ -674,20 +675,20 @@ The following is an example of creating a package binding.
 {: #openwhisk_catalog_pushnotifications_send}
 
 The `/whisk.system/pushnotifications/sendMessage` action sends push notifications to registered devices. The parameters are as follows:
-- `text` - The notification message to be shown to the user. For example: `-p text "Hi ,{{site.data.keyword.openwhisk}} send a notification"`.
+- `text`: The notification message to be shown to the user. For example: `-p text "Hi ,OpenWhisk send a notification"`.
 - `url`: An optional URL that can be sent along with the alert. For example: `-p url "https:\\www.w3.ibm.com"`.
-- `gcmPayload` - Custom JSON payload that will be sent as part of the notification message. For example: `-p gcmPayload "{"hi":"hello"}"`
-- `gcmSound` - The sound file (on device) that will be attempted to play when the notification arrives on the device.
-- `gcmCollapseKey` - This parameter identifies a group of messages
-- `gcmDelayWhileIdle` - When this parameter is set to true, it indicates that the message will not be sent until the device becomes active.
-- `gcmPriority` - Sets the priority of the message.
-- `gcmTimeToLive` - This parameter specifies how long (in seconds) the message will be kept in GCM storage if the device is offline.
-- `apnsBadge` - The number to display as the badge of the application icon.
-- `apnsCategory` -  The category identifier to be used for the interactive push notifications.
-- `apnsIosActionKey` - The title for the Action key .
-- `apnsPayload` - Custom JSON payload that will be sent as part of the notification message.
-- `apnsType` - ['DEFAULT', 'MIXED', 'SILENT'].
-- `apnsSound` - The name of the sound file in the application bundle. The sound of this file is played as an alert.
+- `gcmPayload`: Custom JSON payload that will be sent as part of the notification message. For example: `-p gcmPayload "{"hi":"hello"}"`
+- `gcmSound`: The sound file (on device) that will be attempted to play when the notification arrives on the device.
+- `gcmCollapseKey`: This parameter identifies a group of messages
+- `gcmDelayWhileIdle`: When this parameter is set to true, it indicates that the message will not be sent until the device becomes active.
+- `gcmPriority`: Sets the priority of the message.
+- `gcmTimeToLive`: This parameter specifies how long (in seconds) the message will be kept in GCM storage if the device is offline.
+- `apnsBadge`: The number to display as the badge of the application icon.
+- `apnsCategory`: The category identifier to be used for the interactive push notifications.
+- `apnsIosActionKey`: The title for the Action key .
+- `apnsPayload`: Custom JSON payload that will be sent as part of the notification message.
+- `apnsType`: ['DEFAULT', 'MIXED', 'SILENT'].
+- `apnsSound`: The name of the sound file in the application bundle. The sound of this file is played as an alert.
 
 Here is an example of sending push notification from the pushnotification package.
 
@@ -716,8 +717,8 @@ The `/whisk.system/pushnotifications/webhook` configures the Push service to fir
 
 The parameters are as follows:
 
-- `appId:` The Bluemix push notification service appSecret.
-- `appSecret:` The Bluemix app GUID.
+- `appId:` The Bluemix app GUID.
+- `appSecret:` The Bluemix push notification service appSecret.
 - `events:` Supported events are `onDeviceRegister`, `onDeviceUnregister`, `onDeviceUpdate`, `onSubscribe`, `onUnsubscribe`.To get notified for all events use the wildcard character `*`.
 
 The following is an example of creating a trigger that will be fired each time there is a new device registered with the Push Notifications service application.

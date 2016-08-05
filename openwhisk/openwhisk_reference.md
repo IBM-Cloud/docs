@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} system details
 {: #openwhisk_reference}
-Last updated: 2 August 2016
+Last updated: 4 August 2016
 {: .last-updated}
 
 The following sections provide more details about the {{site.data.keyword.openwhisk}} system.
@@ -29,6 +29,7 @@ The following sections provide more details about the {{site.data.keyword.openwh
 
 ### Namespaces and packages
 {: #openwhisk_entities_namespaces}
+
 {{site.data.keyword.openwhisk_short}} actions, triggers, and rules belong in a namespace, and optionally a package.
 
 Packages can contain actions and feeds. A package cannot contain another package, so package nesting is not allowed. Also, entities do not have to be contained in a package.
@@ -40,6 +41,7 @@ You can create your own namespaces if you're entitled to do so. The `/whisk.syst
 
 ### Fully qualified names
 {: #openwhisk_entities_fullyqual}
+
 The fully qualified name of an entity is
 `/namespaceName[/packageName]/entityName`. Notice that `/` is used to delimit namespaces, packages, and entities. Also, namespaces must be prefixed with a `/`.
 
@@ -57,6 +59,7 @@ You will be using this naming scheme when you use the {{site.data.keyword.openwh
 
 ### Entity names
 {: #openwhisk_entities_names}
+
 The names of all entities, including actions, triggers, rules, packages, and namespaces, are a sequence of characters that follow the following format:
 
 * The first character must be an alphanumeric character, a digit, or an underscore.
@@ -73,12 +76,14 @@ The following sections describe details about {{site.data.keyword.openwhisk_shor
 
 ### Statelessness
 {: #openwhisk_semantics_stateless}
+
 Action implementations should be stateless, or *idempotent*. While the system does not enforce this property, there is no guarantee that any state maintained by an action will be available across invocations.
 
 Moreover, multiple instantiations of an action might exist, with each instantiation having its own state. An action invocation might be dispatched to any of these instantiations.
 
 ### Invocation input and output
 {: #openwhisk_semantics_invocationio}
+
 The input to and output from an action is a dictionary of key-value pairs. The key is a string, and the value a valid JSON value.
 
 ### Invocation ordering of actions
@@ -130,7 +135,8 @@ An activation record contains the following fields:
 
 ### Function prototype
 {: #openwhisk_ref_javascript_fnproto}
-{{site.data.keyword.openwhisk_short}} JavaScript actions run in a Node.js runtime, currently version 0.12.9.
+
+{{site.data.keyword.openwhisk_short}} JavaScript actions run in a Node.js runtime, currently version 6.2.0.
 
 Actions written in JavaScript must be confined to a single file. The file can contain multiple functions but by convention a function called `main` must exist and is the one called when the action is invoked. For example, the following is an example of an action with multiple functions.
 
@@ -150,22 +156,15 @@ The action input parameters are passed as a JSON object as a parameter to the `m
 
 ### Synchronous and asynchronous behavior
 {: #openwhisk_ref_javascript_synchasynch}
+
 It is common for JavaScript functions to continue execution in a callback function even after a return. To accommodate this, an activation of a JavaScript action can be *synchronous* or *asynchronous*.
 
 A JavaScript action's activation is **synchronous** if the main function exits under one of the following conditions:
 
 - The main function exits without executing a ```return``` statement.
-- The main function exits by executing a ```return``` statement that returns any value *except* ```whisk.async()```.
+- The main function exits by executing a ```return``` statement that returns any value *except* a Promise.
 
-The following are two examples of synchronous actions.
-
-```
-// a synchronous action
-function main() {
-  return {payload: 'Hello, World!'};
-}
-```
-{: codeblock}
+Here is an example of a synchronous action.
 
 ```
 // an action in which each path results in a synchronous activation
@@ -173,7 +172,7 @@ function main(params) {
   if (params.payload == 0) {
      return;
   } else if (params.payload == 1) {
-     return whisk.done();    // indicates normal completion
+     return {payload: 'Hello, World!'};
   } else if (params.payload == 2) {
     return whisk.error();   // indicates abnormal completion
   }
@@ -181,19 +180,33 @@ function main(params) {
 ```
 {: codeblock}
 
-A JavaScript action's activation is **asynchronous** if the main function exits by calling ```return whisk.async();```.  In this case, the system assumes that the action is still running, until the action executes one of the following:
-- ```return whisk.done();```
-- ```return whisk.error();```
+A JavaScript action's activation is **asynchronous** if the main function exits by returning a Promise.  In this case, the system assumes that the action is still running, until the Promise has been fulfilled or rejected.
+Start by instantiating a new Promise object and passing it a callback function. The callback takes two arguments, resolve and reject, which are both functions. All your asynchronous code goes inside that callback.
 
-The following is an example of an action that executes asynchronously.
+
+The following is an example on how to fulfill a Promise by calling the resolve function.
 
 ```
-function main() {
-    setTimeout(function() {
-        return whisk.done({done: true});
-    }, 100);
-    return whisk.async();
-}
+function main(args) {
+     return new Promise(function(resolve, reject) {
+       setTimeout(function() {
+         resolve({ done: true });
+       }, 100);
+    })
+ }
+```
+{: codeblock}
+
+The following is an example on how to reject a Promise by calling the reject function.
+
+```
+function main(args) {
+     return new Promise(function(resolve, reject) {
+       setTimeout(function() {
+         reject({ done: true });
+       }, 100);
+    })
+ }
 ```
 {: codeblock}
 
@@ -202,23 +215,25 @@ It is possible for an action to be synchronous on some inputs and asynchronous o
 ```
   function main(params) {
       if (params.payload) {
-         setTimeout(function() {
-            return whisk.done({done: true});
-         }, 100);
-         return whisk.async();  // asynchronous activation
+         // asynchronous activation
+         return new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                  resolve({ done: true });
+                }, 100);
+             })
       }  else {
-         return whisk.done();   // synchronous activation
+         // synchronous activation
+         return {done: true};
       }
   }
-```
+````
 {: codeblock}
-
-- In this case, the `main` function returns `whisk.async()`. When the activation result is available, the `whisk.done()` function is called with the result passed as a JSON object. This is referred to as an *asynchronous* activation.
 
 Notice that regardless of whether an activation is synchronous or asynchronous, the invocation of the action can be blocking or non-blocking.
 
 ### Additional SDK methods
 {: #openwhisk_ref_javascript_additsdk}
+
 The `whisk.invoke()` function invokes another action. It takes as an argument a dictionary that defines the following parameters:
 
 - *name*: The fully qualified name of the action to invoke,
@@ -250,49 +265,96 @@ The signature for `next` is `function(error, activation)`, where:
 
 The `whisk.getAuthKey()` function returns the authorization key under which the action is running. Usually, you do not need to invoke this function directly because it is used implicitly by the `whisk.invoke()` and `whisk.trigger()` functions.
 
-### Runtime environment
-{: #openwhisk_ref_runtime_environment}
+### Node.js runtime environments
 
-JavaScript actions are executed in a Node.js version 0.12.14 environment with the following packages available to be used by the action:
+JavaScript actions are executed by default in a Node.js version 6.2.0 environment.  The 6.2.0 environment will also be used for an action if the `--kind` flag is explicitly specified with a value of 'nodejs:6' when creating/updating the action.
+The following packages are available to be used in the Node.js 6.2.0 environment:
 
-- apn
-- async
-- body-parser
-- btoa
-- cheerio
-- cloudant
-- commander
-- consul
-- cookie-parser
-- cradle
-- errorhandler
-- express
-- express-session
-- gm
-- jade
-- log4js
-- merge
-- moment
-- mustache
-- nano
-- node-uuid
-- oauth2-server
-- process
-- request
-- rimraf
-- semver
-- serve-favicon
-- socket.io
-- socket.io-client
-- superagent
-- swagger-tools
-- tmp
-- watson-developer-cloud
-- when
-- ws
-- xml2js
-- xmlhttprequest
-- yauzl
+- apn v1.7.5
+- async v1.5.2
+- body-parser v1.15.1
+- btoa v1.1.2
+- cheerio v0.20.0
+- cloudant v1.4.1
+- commander v2.9.0
+- consul v0.25.0
+- cookie-parser v1.4.2
+- cradle v0.7.1
+- errorhandler v1.4.3
+- express v4.13.4
+- express-session v1.12.1
+- gm v1.22.0
+- log4js v0.6.36
+- iconv-lite v0.4.13
+- merge v1.2.0
+- moment v2.13.0
+- mustache v2.2.1
+- nano v6.2.0
+- node-uuid v1.4.7
+- nodemailer v2.5.0
+- oauth2-server v2.4.1
+- pkgcloud v1.3.0
+- process v0.11.3
+- pug v2.0.0
+- request v2.72.0
+- rimraf v2.5.2
+- semver v5.1.0
+- sendgrid v3.0.11
+- serve-favicon v2.3.0
+- socket.io v1.4.6
+- socket.io-client v1.4.6
+- superagent v1.8.3
+- swagger-tools v0.10.1
+- tmp v0.0.28
+- twilio v2.9.1
+- watson-developer-cloud v1.12.4
+- when v3.7.7
+- ws v1.1.0
+- xml2js v0.4.16
+- xmlhttprequest v1.8.0
+- yauzl v2.4.2
+
+The Node.js version 0.12.14 environment will be used for an action if the `--kind` flag is explicitly specified with a value of 'nodejs' when creating/updating the action.
+The following packages are available to be used in the Node.js 0.12.14 environment:
+
+- apn v1.7.4
+- async v1.5.2
+- body-parser v1.12.0
+- btoa v1.1.2
+- cheerio v0.20.0
+- cloudant v1.4.1
+- commander v2.7.0
+- consul v0.18.1
+- cookie-parser v1.3.4
+- cradle v0.6.7
+- errorhandler v1.3.5
+- express v4.12.2
+- express-session v1.11.1
+- gm v1.20.0
+- jade v1.9.2
+- log4js v0.6.25
+- merge v1.2.0
+- moment v2.8.1
+- mustache v2.1.3
+- nano v5.10.0
+- node-uuid v1.4.2
+- oauth2-server v2.4.0
+- process v0.11.0
+- request v2.60.0
+- rimraf v2.5.1
+- semver v4.3.6
+- serve-favicon v2.2.0
+- socket.io v1.3.5
+- socket.io-client v1.3.5
+- superagent v1.3.0
+- swagger-tools v0.8.7
+- tmp v0.0.28
+- watson-developer-cloud v1.4.1
+- when v3.7.3
+- ws v1.1.0
+- xml2js v0.4.15
+- xmlhttprequest v1.7.0
+- yauzl v2.3.1
 
 
 ## Docker actions
@@ -382,9 +444,12 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 | ----- | ----------- | ------------ | -----| ------- |
 | timeout | a container is not allowed to run longer than N milliseconds | per action |  milliseconds | 60000 |
 | memory | a container is not allowed to allocate more than N MB of memory | per action | MB | 256 |
-| concurrent | no more than N concurrent activations per namespace are allowed| per namespace | number | 100 |
+| logs | a container is not allowed to write more than N MB to stdout | per action | MB | 10 |
+| concurrent | no more than N concurrent activations per namespace are allowed | per namespace | number | 100 |
 | minuteRate | a user cannot invoke more than this many actions per minute | per user | number | 120 |
 | hourRate | a user cannot invoke more than this many actions per hour | per user | number | 3600 |
+| codeSize | the maximum size of the actioncode | not configurable, limit per action | MB | 48 |
+| parameters | the maximum size of the paramters that can be attached | not configurable, limit per action/package/trigger | MB | 1 |
 
 ### Per action timeout (ms) (Default: 60s)
 {: #openwhisk_syslimits_timeout}
@@ -398,14 +463,16 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 * A user can change the limit when creating the action.
 * A container cannot have more memory allocated than the limit.
 
-### Per action artifact (MB) (Fixed: 1MB)
-{: #openwhisk_syslimits_artifact}
-* The maximum code size for the action is 1MB.
-* It is recommended for a JavaScript action to use a tool to concatenate all source code, including dependencies into a single bundled file.
+### Per action logs (MB) (Default: 10MB)
+{: #openwhisk_syslimits_logs}
+* The log limit N is in the range [0MB..10MB] and is set per action.
+* A user can change the limit when creating or updating the action.
+* Logs that exceed the set limit are truncated and a warning is added as the last output of the activation to indicate that the activation exceeded the set log limit.
 
-### Per activation payload size (MB) (Fixed: 1MB)
-{: #openwhisk_syslimits_payload}
-* The maximum POST content size plus any curried parameters for an action invocation or trigger firing is 1MB.
+### Per action artifact (MB) (Fixed: 48MB)
+{: #openwhisk_syslimits_artifact}
+* The maximum code size for the action is 48MB.
+* It is recommended for a JavaScript action to use a tool to concatenate all source code including dependencies into a single bundled file.
 
 ### Per namespace concurrent invocation (Default: 100)
 {: #openwhisk_syslimits_concur}
@@ -418,6 +485,12 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 * The rate limit N is set to 120/3600 and limits the number of action invocations in one minute/hour windows.
 * A user cannot change this limit when creating the action.
 * A CLI call that exceeds this limit receives an error code corresponding to TOO_MANY_REQUESTS.
+
+### Size of the parameters (Fixed: 1MB)
+{: #openwhisk_syslimits_parameters}
+* The size limit for the parameters on creating or updating of an action/package/trigger is 1MB.
+* The limit cannot be changed by the user.
+* An entity with too big parameters will be rejected on trying to create or update it.
 
 ### Per Docker action open files ulimit (Fixed: 64:64)
 {: #openwhisk_syslimits_openulimit}
