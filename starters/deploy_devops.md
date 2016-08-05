@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
  
 
@@ -15,7 +15,7 @@ copyright:
 {:download: .download}
 
 # Start coding with Git
-*Last updated: 2 March 2016*
+Last updated: 2 March 2016
 {: .last-updated}  
 
 You can create a hosted Git repository that deploys to {{site.data.keyword.Bluemix}} automatically. Then, you can modify the code that runs in your app by pushing changes to the Git repository. 
@@ -41,7 +41,7 @@ For step-by-step directions, see [Set up Git integration and auto-deploy in DevO
 
 If you are building a Node.js app, you can use {{site.data.keyword.Bluemix_notm}} Live Sync to quickly update the app instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop.  
 
-To learn more about {{site.data.keyword.Bluemix_notm}} Live Sync, see [{{site.data.keyword.Bluemix_notm}} Live Sync](../develop/bluemixlive.html). For more details on the commands, see the [{{site.data.keyword.Bluemix_notm}} Live Sync CLI doc](../cli/reference/bl/index.html). To use {{site.data.keyword.Bluemix_notm}} Live Sync with the Web IDE, see [Live Edit](../develop/bluemixlive.html).  
+To learn more about {{site.data.keyword.Bluemix_notm}} Live Sync, see [{{site.data.keyword.Bluemix_notm}} Live Sync](../develop/bluemixlive.html). For more details about the commands, see the [{{site.data.keyword.Bluemix_notm}} Live Sync CLI doc](../cli/reference/bl/index.html). To use {{site.data.keyword.Bluemix_notm}} Live Sync with the Web IDE, see [Live Edit](../develop/bluemixlive.html).  
 
 1. Download and install the {{site.data.keyword.Bluemix_notm}} Live Sync bl command line. 
 
@@ -52,30 +52,31 @@ To learn more about {{site.data.keyword.Bluemix_notm}} Live Sync, see [{{site.da
 
 **Important:** The bl command line tool is available only for Windows 7 and 8 and Mac OS X version 10.9 or later. 
 
-2. On a command line, log in using the following command. You will be prompted for your IBM® id and password. 
+2. On a command line, log in by entering this command:  
 ```
 bl login
 ```
+When you are prompted, enter your {{site.data.keyword.ibmid}} and password.
 
-3. See the list of projects that are available for {{site.data.keyword.Bluemix_notm}} Live Sync synchronization by entering the following command: 
+3. See the list of projects that are available for {{site.data.keyword.Bluemix_notm}} Live Sync synchronization by entering this command: 
 ```
 bl projects
 ```
 Find the project name in the list that matches your application. The project name has the format of your *alias* | *your application name*. 
 
-4. Synchronize your local environment with your project on {{site.data.keyword.Bluemix_notm}} by entering the following command. If you are the owner of the project, you only need to specify your-application-name for projectName. 
+4. Synchronize your local environment with your project on {{site.data.keyword.Bluemix_notm}} by entering this command. If you are the owner of the project, you only need to specify your-application-name for projectName. 
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
 ```
 bl sync projectName -d localDirectory --verbose
 ```
-This command continues to run (and synchronization continues) until you enter a "q". The --verbose option displays the logging and status information. If any of your arguments contain a space, you need to enclose the name in quotes. 
+This command continues to run, and synchronization continues, until you enter a "q". The --verbose option displays the logging and status information. If any of your arguments contain a space, enclose the name in quotation marks. 
 
-5. In another command line window, in your local directory, deploy the application to {{site.data.keyword.Bluemix_notm}} in Live Edit mode by entering the following command:
+5. In another command-line window, in your local directory, deploy the application to {{site.data.keyword.Bluemix_notm}} in Live Edit mode by entering this command:
 ```
 bl start
 ```  
 
-When you change the files in your local directory, the changes are automatically propagated to both the application that is running on {{site.data.keyword.Bluemix_notm}} and the project cloud workspace. If you need to restart the Node application, then you can use the following command:
+When you change the files in your local directory, the changes are automatically propagated to both the application that is running on {{site.data.keyword.Bluemix_notm}} and the project cloud workspace. If you need to restart the Node application, enter this command:
 ```
 bl start --restart 
 ```
