@@ -14,7 +14,7 @@ years: 2016
 
 # Consensus Test 4: Restart a Byzantine node
 {: #pbft_test1}
-Last updated: 15 July 2016
+Last updated: 4 August 2016
 {: .last-updated}
 
 Consensus Test 4 tests the PBFT protocol in a network scenario where one of the four nodes has come back online after being Byzantine: one node is restarted after going offline in an arbitrary and concurrent manner.
@@ -50,11 +50,11 @@ Complete the following steps to test PBFT after restarting one Byzantine node:
  "params": {
  "type": 1,
  "chaincodeID":{
- "path":"github.com/hyperledger/fabric/examples/chaincode/go/chaincode\_example02"
+ "path":"github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02"
  },
  "ctorMsg": {
  "function":"init",
- "args":\["a", "1000", "b", "2000"\]
+ "args": ["a", "1000", "b", "2000"]
  },
  "secureContext": "***test\_user1***"
  },
@@ -67,14 +67,13 @@ Complete the following steps to test PBFT after restarting one Byzantine node:
 "jsonrpc": "2.0",
 "result": {
 "status": "OK",
-"message": "52b0d803fc395b5e34d8d4a7cd69fb6aa00099b8fabed83504ac1c5d61a425aca5b3ad3bf96643ea4fdaac132c417c37b00f88fa800de7ece387d008a76d3586"
+"message": "YOUR_CHAINCODE_ID"
 },
 "id": 1
 }
 ```
    d. The request is transmitted to all four peers on the network. The peers run the PBFT consensus protocol, and agree to execute this request and store the result on their respective copies of the ledger.  
-   e. All transactions are asynchronous. The return payload contains a chaincode hash, which you will use in later chaincode invocations.  
-   f. Completion of the deploy operation is dependent on factors such as processor speed and network latency.  
+   e. All transactions are asynchronous. The return payload contains a chaincode hash, which you will use in later chaincode invocations. f. Completion of the deploy operation is dependent on factors such as processor speed and network latency.  
 4. For test purposes, simulate peer VP2 going offline in a Byzantine (arbitrary and concurrent) manner, by manually stopping the node using the interface stop button.
 5. Run an invoke operation on the chaincode:  
    a. For this example, chaincode_example02 moves 1 unit from a to b:  
@@ -86,11 +85,11 @@ Complete the following steps to test PBFT after restarting one Byzantine node:
 "params": {
 "type": 1,
 "chaincodeID":{
-"name":"52b0d803fc395b5e34d8d4a7cd69fb6aa00099b8fabed83504ac1c5d61a425aca5b3ad3bf96643ea4fdaac132c417c37b00f88fa800de7ece387d008a76d3586"
+"name":"YOUR_CHAINCODE_ID"
 },
 "ctorMsg": {
 "function":"invoke",
-"args":\["a", "b", "1"\]
+"args": ["a", "b", "1"]
 }
 “secureContext”: “***test\_user1***”
 },
@@ -118,11 +117,11 @@ Complete the following steps to test PBFT after restarting one Byzantine node:
 "params": {
 "type": 1,
 "chaincodeID":{
-"name":"52b0d803fc395b5e34d8d4a7cd69fb6aa00099b8fabed83504ac1c5d61a425aca5b3ad3bf96643ea4fdaac132c417c37b00f88fa800de7ece387d008a76d3586"
+"name":"YOUR_CHAINCODE_ID"
 },
 "ctorMsg": {
 "function":"query",
-"args":\["a"\]
+"args":["a"]
 }
 “secureContext”: “***test\_user1***”
 },
