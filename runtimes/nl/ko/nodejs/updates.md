@@ -11,11 +11,19 @@ copyright:
 # sdk-for-nodejs 빌드팩의 최신 업데이트
 {: #latest_updates}
 
-*마지막 업데이트 날짜: 2016년 6월 22일*
+*마지막 업데이트 날짜: 2016년 7월 18일*
 {: .last-updated}
 
 sdk-for-nodejs 빌드팩의 최신 업데이트 목록
-## 2016년 6월 22일: 업데이트된 Node.js 빌드팩 v3.5-20160608-1102
+## 2016년 7월 22일: 업데이트된 Node.js 빌드팩 v3.6-20160715-0749
+이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 및 6.2.2를 지원합니다. 현재 기본 버전은 4.4.7입니다.
+
+이 릴리스에는 연합 로그인을 지원하는 업데이트된 앱 관리 프록시가 포함됩니다.
+
+다음 보안 취약점에 대한 수정사항이 포함되었습니다. 
+* [CVE-2016-1669](http://www-01.ibm.com/support/docview.wss?uid=swg21986383)
+
+## 2016년 6월 22일: 업데이트된 Node.js 빌드팩 v3.5-20160609-1608
 
 이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 4.4.5 및 6.2.0을 추가합니다. 기본 버전은 4.4.5입니다. 
 
@@ -96,14 +104,14 @@ v3.0beta를 사용하여 사용자 애플리케이션을 푸시하려면 다음�
 * "-b" 옵션을 'cf push' 명령에서 사용하십시오. 
 
 ```
-        cf push -b sdk-for-nodejs-v3beta
+cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
 * 또는 manifest.yml 파일에서 "buildpack" 옵션을 사용하십시오. 
 
 ```
-        buildpack: sdk-for-nodejs-v3beta
+buildpack: sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -132,7 +140,7 @@ Node.js v2.6.1은 [StrongPM 앱 관리 핸들러](https://developer.ibm.com/blue
 * 애플리케이션이 해당 package.json 파일에서 런타임을 지정하지 않은 경우 사용자 앱은 v0.10.x가 아닌 v0.12.1을 사용하여 시작됩니다. 이전 버전을 사용해야 하는 경우 다음에서 표시된 대로 package.json에 v0.10.x를 지정하십시오. 
 
 ```
-        "engines": {
+"engines": {
             "node": "0.10.x"
         }
 ```

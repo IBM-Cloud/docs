@@ -12,7 +12,7 @@ copyright:
 # Criação de Log e Rastreio
 {: #logging_tracing}
 
-*Última atualização: 10 de junho de 2016*
+*Última atualização: 21 de junho de 2016*
 {: .last-updated}
 
 ## Arquivos de log
@@ -35,7 +35,7 @@ Na interface com o usuário do IBM Bluemix, existem recursos de rastreio e de du
 * Use o Rastreio para visualizar e atualizar o traceSpecification de criação de log do Liberty em instâncias do aplicativo em execução.
 * Use o Dump para criar e manipular dumps de encadeamento e de heap em instâncias do aplicativo em execução.
 
-Para executar essa ação, selecione um aplicativo Liberty na interface com o usuário. Em Tempo de execução na navegação à esquerda, é possível abrir os detalhes da instância. Selecione uma instância ou diversas instâncias. No menu Ações, é possível escolher TRACE ou DUMP.
+Para executar essa ação, selecione um aplicativo Liberty na interface com o usuário. Na categoria Tempo de execução na navegação, é possível abrir os detalhes da instância. Selecione uma instância ou diversas instâncias. No menu Ações, é possível escolher TRACE ou DUMP.
 
 # rellinks
 {: #rellinks}

@@ -11,11 +11,19 @@ copyright:
 # Atualizações mais recentes para o buildpack sdk-for-nodejs
 {: #latest_updates}
 
-*Última atualização: 22 de junho de 2016*
+*Última atualização: 18 de julho de 2016*
 {: .last-updated}
 
 Uma lista das atualizações mais recentes no buildpack sdk-for-nodejs.
-## 22 de junho de 2016: atualizado o buildpack do Node.js v3.5-20160608-1102
+## 22 de julho de 2016: atualizado o buildpack do Node.js v3.6-20160715-0749
+Esta liberação do buildpack suporta as versões de runtime do IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 e 6.2.2. O padrão agora é 4.4.7.
+
+Esta liberação inclui um proxy de Gerenciamento de app atualizado que suporta logins federados.
+
+Estão incluídas correções para as vulnerabilidades de segurança a seguir:
+* [CVE-2016-1669](http://www-01.ibm.com/support/docview.wss?uid=swg21986383)
+
+## 22 de junho de 2016: atualizado o buildpack do Node.js v3.5-20160609-1608
 
 Esta liberação do buildpack inclui as versões de runtime 4.4.5 e 6.2.0 do IBM SDK for Node.js. O valor se torna 4.4.5.
 

@@ -16,19 +16,18 @@ copyright:
 
 Die Laufzeit von ASP.NET Core in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'ASP.NET Core'. ASP.NET Core
 ist ein modulares Open-Source-Framework zum Erstellen von .NET-Webanwendungen.
-.Net Core ist eine kleine, plattformübergreifende Laufzeit, die von ASP.NET Core-Anwendungen als Ziel verwendet werden kann.
+.Net Core ist eine kleine, plattformübergreifende Laufzeit, die von ASP.NET Core-Anwendungen als Ziel verwendet werden kann. 
 Gemeinsam ermöglichen sie moderne, cloudbasierte Webanwendungen.
 {: shortdesc}
 
 ## Erkennung
 {: #detection}
-Das Bluemix-Buildpack 'ASP.NET Core' wird verwendet, wenn es irgendwo in der Anwendung mindestens eine Datei project.json gibt
- oder wenn die Anwendung mit einer Push-Operation aus dem Ausgabeverzeichnis des Befehls *dotnet publish* übertragen wird.
+Das Bluemix-Buildpack 'ASP.NET Core' wird verwendet, wenn mindestens ein Ordner sowohl eine Datei project.json und mindestens eine Datei .cs in der Anwendung enthält wenn die Anwendung mit einer Push-Operation aus dem Ausgabeverzeichnis des Befehls *dotnet publish* übertragen wird.
 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine ASP.NET Core-Starteranwendung bereit. Die ASP.NET Core-Starteranwendung ist eine einfache App, die eine Schablone bereitstellt, die Sie verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix}} stellt eine ASP.NET Core-Starteranwendung bereit.  Die ASP.NET Core-Starteranwendung ist eine einfache App, die eine Schablone bereitstellt, die Sie verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
@@ -75,7 +74,7 @@ Das Tool Yeoman kann zum Generieren neuer Projektvorlagen verwendet werden, wie 
 
 Wenn Sie möchten, dass Ihre Anwendung alle erforderlichen Binärdateien enthält, sodass das Buildpack keine
 externen Binärdateien herunterlädt, können Sie eine veröffentlichte *eigenständige* Anwendung mit einer Push-Operation
-übertragen. Weitere Informationen zu eigenständigen Anwendungen finden Sie in
+übertragen.  Weitere Informationen zu eigenständigen Anwendungen finden Sie in
 [Portierbarkeitstypen in .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}.
 
 Geben Sie zum Veröffentlichen einer Anwendung einen Befehl wie den folgenden ein:
@@ -86,12 +85,12 @@ Geben Sie zum Veröffentlichen einer Anwendung einen Befehl wie den folgenden ei
   
 Die App kann dann mit einer Push-Operation aus dem Verzeichnis
 ```
-  bin/<Debug|Release>/<framework>/<laufzeit>/publish
+  bin/<Debug|Release>/<framework>/<runtime>/publish
 ```
 {: codeblock}
 übertragen werden.
 
-Beachten Sie auch, dass Sie, wenn Sie in Ihrer Anwendung eine Datei manifest.yml verwenden, den Pfad des Ausgabeordners 'publish' in Ihrer Datei manifest.yml angeben können. In diesem Fall müssen Sie sich nicht in diesem Ordner befinden, wenn Sie die Anwendung mit einer Push-Operation übertragen.
+Beachten Sie auch, dass Sie, wenn Sie in Ihrer Anwendung eine Datei manifest.yml verwenden, den Pfad des Ausgabeordners 'publish' in Ihrer Datei manifest.yml angeben können.  In diesem Fall müssen Sie sich nicht in diesem Ordner befinden, wenn Sie die Anwendung mit einer Push-Operation übertragen.
 
 ## Apps mit mehreren Projekten bereitstellen
 

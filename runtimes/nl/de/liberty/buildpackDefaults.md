@@ -32,7 +32,7 @@ Das Buildpack stellt zwei Versionen der Liberty-Laufzeit bereit:
   * Es stellt keine [Beta-Features](usingBetaFeatures.html) bereit.
   * Es wird normalerweise vierteljährlich aktualisiert.
 
-2. Die neueste Betaversion
+2. Das monatliche Release
   * Sie muss durch Angabe des Werts **"version: +"** für die Umgebungsvariable **JBP_CONFIG_LIBERTY** explizit aktiviert werden.
   * Sie stellt [Beta-Features](usingBetaFeatures.html) bereit.
   * Sie wird normalerweise monatlich aktualisiert.

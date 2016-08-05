@@ -11,7 +11,7 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*上次更新时间：2016 年 6 月 10 日*
+*上次更新时间：2016 年 7 月 6 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 PHP 运行时由 php_buildpack 提供支持。php_buildpack 为 PHP 应用程序提供了一个完整的运行时环境。
@@ -35,27 +35,26 @@ copyright:
 ```
 {
     "require": {
-        "php": "5.6.*"
+        "php": "7.0.*"
     }
 }
 ```
 {: codeblock}
 有关更多信息，请参阅 [Composer Package links](https://getcomposer.org/doc/04-schema.md#package-links)。
 
-如果未指定版本，缺省情况下会选择 V5.5.30。
+如果未指定版本，缺省情况下会选择 V5.5.34。
 
 ### 可用版本：
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} 中当前安装的 [PHP buildpack](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.1.5) 内提供了以下 PHP 版本：
+{{site.data.keyword.Bluemix}} 中当前安装的 [PHP buildpack](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.10) 内提供了以下 PHP 版本：
 
-* 5.4.44
-* 5.4.45
-* 5.5.29
-* 5.5.30
-* 5.6.30
-* 5.6.13
-* 5.6.14
+* 5.5.33
+* 5.5.34
+* 5.6.19
+* 5.6.20
+* 7.0.4
+* 7.0.5
 
 如果您应用程序所需的 PHP 版本没有列在上述列表中，那么可以使用外部 [PHP buildpack](https://github.com/cloudfoundry/php-buildpack.git) 来部署应用程序。
 

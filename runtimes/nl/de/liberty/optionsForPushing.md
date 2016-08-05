@@ -196,7 +196,7 @@ Hinweis: Auf die Webanwendungen, die als Teil des Serververzeichnisses implement
 
 Sie können auch eine Datei für einen paketierten Server mit einer Push-Operation an Bluemix übertragen. Die Datei für den paketierten Server wird mithilfe des Liberty-Befehls zum Erstellen von Serverpaketen erstellt. Zusätzlich zu den Anwendungs- und Konfigurationsdateien kann die Datei des paketierten Servers gemeinsam genutzte Ressourcen und Liberty-Benutzerfeatures enthalten, die von der Anwendung benötigt werden.
 
-Verwenden Sie zum Paketieren eines Liberty-Servers den Befehl './bin/server package' aus dem Liberty-Installationsverzeichnis. Geben Sie den Servernamen an und verwenden Sie die Option '––include=usr'.
+Verwenden Sie zum Paketieren eines Liberty-Servers den Befehl `./bin/server package` aus dem Liberty-Installationsverzeichnis. Geben Sie den Servernamen an und verwenden Sie die Option `--include=usr`.
 Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Sie folgenden Befehl aus:
 
 ```
@@ -204,7 +204,9 @@ Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Si
 ```
 {: codeblock}
 
-Dieser Befehl generiert die Datei 'serverName.zip' im Serververzeichnis. Anschließend können Sie die komprimierte Datei mithilfe des Befehls 'cf push' mit einer Push-Operation an Bluemix übertragen.
+Dieser Befehl generiert die Datei 'serverName.zip' im Serververzeichnis. Wenn Sie mit der Option `--archive` eine andere Archivdatei angegeben haben, stellen Sie sicher, dass die Erweiterung `.zip` anstelle von `.jar` verwendet wird. **Das Buildpack unterstützt keine paketierten Serverdateien mit der Erweiterung .jar**.
+
+Anschließend können Sie die generierte `.zip`-Datei mithilfe des Befehls `cf push` mit einer Push-Operation an Bluemix übertragen.
 Beispiel:
 
 ```

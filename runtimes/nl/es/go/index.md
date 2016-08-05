@@ -10,20 +10,20 @@ copyright:
 {:codeblock: .codeblock}
 
 
-# Ir
+# Go
 {: #go_runtime}
-*Última actualización: 16 de marzo de 2016*
+*Última actualización: 06 de julio de 2016*
 
 El tiempo de ejecución de Go en {{site.data.keyword.Bluemix}} está basado en go_buildpack.
-El go_buildpack proporciona un entorno de ejecución completo para aplicaciones Go.
+go_buildpack proporciona un entorno de ejecución completo para aplicaciones Go.
 {: shortdesc}
 
-El go_buildpack se utiliza si la aplicación contiene un archivo denominado *.go.
+go_buildpack se utiliza si la aplicación contiene un archivo denominado *.go.
 
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio Go.  La aplicación de inicio Go es una aplicación sencilla Go que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la app de inicio, y realizar y enviar los cambios al entorno de Bluemix. Consulte [Utilización de las aplicaciones de iniciador](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio de Go. La aplicación de inicio de Go es una aplicación sencilla Go que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la app de inicio, y realizar y enviar los cambios al entorno de Bluemix. Consulte [Utilización de las aplicaciones de iniciador](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
@@ -33,7 +33,7 @@ Puede especificar la versión de Go que utilizará la app estableciendo la propi
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.3.3",
+	"GoVersion": "go1.6.1",
 	"Deps": []
 }
 ```
@@ -44,17 +44,15 @@ Para obtener más información, consulte [godep](https://github.com/tools/godep)
 {: #available_versions}
 
 Las siguientes versiones de Go están disponibles en el
-[paquete de compilación de Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window}
+[paquete de compilación de Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.7.5){: new_window}
 instalado actualmente en {{site.data.keyword.Bluemix}}:
 
-* 1.2.1
-* 1.2.2
-* 1.3.2
-* 1.3.3
 * 1.4.2
 * 1.4.3
-* 1.5
-* 1.5.1
+* 1.5.3
+* 1.5.4
+* 1.6
+* 1.6.1
 
 Si la app requiere una versión de Go que no aparece en la lista,
 puede utilizar el

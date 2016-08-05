@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*마지막 업데이트 날짜: 2016년 6월 10일*
+*마지막 업데이트 날짜: 2016년 7월 13일*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}}의 Tomcat 런타임은 java_buildpack을 통해 제공됩니다.
@@ -37,12 +37,12 @@ JBP_CONFIG_TOMCAT 환경 변수를 사용하여 앱에서 사용할 Tomcat 버�
 JBP_CONFIG_OPEN_JDK_JRE 환경 변수를 사용하여 앱에서 사용할 Java 버전을 변경할 수 있습니다.
 두 환경 변수 모두 애플리케이션의 Manifest 파일에서 지정할 수 있습니다. 예: 
 ```
-    env:
+env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-현재 기본 Tomcat 버전은 8.0.30입니다. 현재 기본 Java 버전은 1.8.0_65입니다.
+현재 java_buildpack 버전은 기본 Tomcat 버전 8.30.0 및 기본 Java 버전 1.8.0_71을 포함하는 v3.6입니다.
 자세한 정보는 [java-buildpack 릴리스](https://github.com/cloudfoundry/java-buildpack/releases)를 참조하십시오.
 
 # 관련 링크

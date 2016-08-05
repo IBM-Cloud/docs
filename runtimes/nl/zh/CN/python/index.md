@@ -11,10 +11,10 @@ copyright:
 
 # Python
 {: #python_runtime}
-*上次更新时间：2016 年 6 月 10 日*
+*上次更新时间：2016 年 7 月 6 日*
 {: .last-updated}
 
-{{site.data.keyword.Bluemix}} 上的 Python 运行时由 python_buildpack 提供支持。python_buildpack 为 Python 应用程序提供了一个完整的运行时环境。
+{{site.data.keyword.Bluemix}} 上的 Python 运行时由 python_buildpack 提供支持。python_buildpack 为 Python 2 和 Python 3 应用程序提供了一个完整的运行时环境。
 {: shortdesc}
 
 如果您应用程序的根目录中包含 requirements.txt 文件或 setup.py 文件，那么将使用 python_buildpack。
@@ -30,29 +30,28 @@ copyright:
 您可以为您的应用程序指定要使用的 Python 版本，方法是在 runtime.txt 文件中设置 python-versionnumber，该文件位于您应用程序的根目录中。例如：
 
 ```
-python-3.4.3
+python-3.5.0
 ```
 {: codeblock}
 
-如果未指定版本，缺省情况下会选择 V2.7.10。
+如果未指定版本，缺省情况下会选择 V2.7.11。
 
 ### 可用版本：
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} 中当前安装的 [Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.1) 内提供了以下 Python 版本：
+{{site.data.keyword.Bluemix}} 中当前安装的 [Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5) 内提供了以下 Python 版本：
 
-* 2.7.9
 * 2.7.10
+* 2.7.11
 * 3.3.5
 * 3.3.6
-* 3.4.2
 * 3.4.3
+* 3.4.4
 * 3.5.0
+* 3.5.1
 
 如果您应用程序所需的 Python 版本没有列在上述列表中，那么可以使用外部 [Python buildpack](https://github.com/cloudfoundry/python-buildpack) 来部署应用程序。
 
 # 相关链接
-{: #rellinks}
 ## 常规
-{: #general}
 * [用于 Python 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/python-buildpack)

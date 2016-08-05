@@ -14,20 +14,19 @@ copyright:
 {: #dotnet_core}
 *Última actualización: 30 de mayo de 2016*
 
-El tiempo de ejecución de ASP.NET en {{site.data.keyword.Bluemix}} está basado en el paquete de compilación de ASP.NET Core.
-ASP.NET Core es una infraestructura de código abierto modular para crear aplicaciones web .NET.
-.Net Core es un tiempo de ejecución pequeño multiplataforma que puede ser objetivo de las aplicaciones de ASP.NET Core. Se combinan para habilitar aplicaciones web modernas basadas en la nube.
+El tiempo de ejecución de ASP.NET en {{site.data.keyword.Bluemix}} está basado en el paquete de compilación de ASP.NET Core. ASP.NET Core es una infraestructura de código abierto modular para crear aplicaciones web .NET.
+.Net Core es un tiempo de ejecución pequeño multiplataforma que puede ser objetivo de las aplicaciones de ASP.NET Core. 
+Se combinan para habilitar aplicaciones web modernas basadas en la nube.
 {: shortdesc}
 
 ## Detección
 {: #detection}
-El paquete de compilación ASP.NET Core de Bluemix se utiliza si hay uno o más archivos project.json en cualquier lugar de la aplicación, o si la aplicación se recibe del directorio de salida del mandato *dotnet publish*.
+El paquete de compilación de ASP.NET Core de Bluemix se utiliza si hay una o más carpetas que contienen un project.json y al menos un archivo .cs en cualquier lugar de la aplicación, o si la aplicación se envía por push desde el directorio de salida del mandato *dotnet publish*.
 
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio de ASP.NET Core.  La aplicación de inicio de ASP.NET Core es una app sencilla que proporciona una plantilla que puede utilizar.
-Puede experimentar con la app de inicio, y realizar y enviar los cambios por push al entorno de Bluemix.  Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio de ASP.NET Core.  La aplicación de inicio de ASP.NET Core es una app sencilla que proporciona una plantilla que puede utilizar. Puede experimentar con la app de inicio, y realizar y enviar los cambios por push al entorno de Bluemix.  Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
@@ -45,7 +44,7 @@ Controle la versión de .NET CLI con un global.json opcional en el directorio ra
 ```
 {: codeblock}
 
-Si no se especivca, se utiliza el Release Candidate más estable actualmente.
+Si no se especifica, se utiliza el Release Candidate más estable actualmente.
 
 ### Personalización de las fuentes de paquetes de NuGet
 
@@ -65,16 +64,14 @@ Controle donde se descargan las dependencias de la aplicación en el archivo NuG
 
 Para obtener más información sobre la ejecución de una aplicación de ASP.NET Core localmente, consulte
 [Iniciación a ASP.NET](http://docs.asp.net/en/latest/getting-started/index.html).
-Para coincidir más a fondo con cómo se ejecuta la aplicación Bluemix, siga las intrucciones de Linux para .NET Core, auque el desarrollo de la aplicación en Linux no es necesario. 
+Para coincidir más a fondo con cómo se ejecuta la aplicación Bluemix, siga las instrucciones de Linux para .NET Core, aunque el desarrollo de la aplicación en Linux no es necesario.
 
 La herramienta Yeoman puede utilizarse para generar nuevas plantillas de proyecto tal como se describen en
 [Creación de proyectos con Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
 ## Envío por push de una aplicación publicada
 
-Si desea que la aplicación contenga todos sus binarios necesarios de modo que el paquete de compilación no descargue ningún binario externo, puede enviar por push una aplicación *autocontenida* publicada.
-Consulte [Tipos de portabilidad en .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window} para obtener más información sobre las aplicaciones autocontenidas.
-
+Si desea que la aplicación contenga todos sus binarios necesarios de modo que el paquete de compilación no descargue ningún binario externo, puede enviar por push una aplicación *autocontenida* publicada.  Consulte [Tipos de portabilidad en .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window} para obtener más información sobre las aplicaciones autocontenidas.
 
 Para publicar un problema de aplicación, emita un mandato como el siguiente:
 ```
@@ -82,14 +79,14 @@ Para publicar un problema de aplicación, emita un mandato como el siguiente:
 ```
 {: codeblock}
   
-La app podrá enviar por push desde el directorio 
+La app podrá enviar por push desde el directorio
 ```
   bin/<Debug|Release>/<framework>/<runtime>/publish
 ```
 {: codeblock}
 .
 
-Tenga en cuenta que si utiliza un archivo manifest.yml en la aplicación, puede especificar la vía de acceso a la carpeta de salida de publicación en manifest.yml. Después no tendrá que estar en esa carpeta cuando envíe por push la aplicación. 
+Tenga en cuenta que si utiliza un archivo manifest.yml en la aplicación, puede especificar la vía de acceso a la carpeta de salida de publicación en manifest.yml.  Después no tendrá que estar en esa carpeta cuando envíe por push la aplicación.
 
 ## Despliegue de apps con varios proyectos
 
@@ -102,7 +99,7 @@ Por ejemplo, si una solución que contiene tres proyectos, *MyApp.DAL*, *MyApp.S
 ```
 {: codeblock}
 
-En este ejemplo, el paquete de compilación compila automáticamente los proyectos *MyApp.DAL* y *MyApp.Services* si están listados como dependencias en el archivo project.json para *MyApp.Web*, pero el paquete de compilación sólo intentará ejecutar el proyecto principal, *MyApp.Web*, con dotnet run -p src/MyApp.Web. La vía de acceso a *MyApp.Web*, suponiendo que este proyecto es yn proyecto xproj, también podría especificarse como 
+En este ejemplo, el paquete de compilación compila automáticamente los proyectos *MyApp.DAL* y *MyApp.Services* si están listados como dependencias en el archivo project.json para *MyApp.Web*, pero el paquete de compilación sólo intentará ejecutar el proyecto principal, *MyApp.Web*, con dotnet run -p src/MyApp.Web. La vía de acceso a *MyApp.Web*, suponiendo que este proyecto es un proyecto xproj, también podría especificarse como 
 ```
   project = src/MyApp.Web/MyApp.Web.xproj 
 ```
@@ -116,11 +113,11 @@ El paquete de compilación ejecutará la aplicación con el mandato *dotnet run*
 ```
 {: codeblock}
 
-La aplicación necesitará pasar este argumento a kestrel para asegurarse de que kestrel esté escuchando en el puerto correcto. 
+La aplicación necesitará pasar este argumento a kestrel para asegurarse de que kestrel esté escuchando en el puerto correcto.
 
 Para implementar que este argumento se pase, los ejemplos proporcionados en el repositorio cli-samples y las plantillas proporcionadas por Visual Studio requieren ligeras modificaciones antes de desplegarse en Bluemix.
 
-Son necesarias modificaciones en el método principal tal como se indican en los comentarios del siguiente ejemplo: 
+Son necesarias modificaciones en el método principal tal como se indican en los comentarios del siguiente ejemplo:
 
 <pre>
   public static void Main(string[] args)

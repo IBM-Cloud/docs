@@ -36,7 +36,7 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 例如：
 
 ```
-    $ cf push <yourappname> -p myapp.war
+$ cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -62,7 +62,7 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 這些特性對應於 Java EE 7 Web 設定檔特性。您可以透過設定 JBP_CONFIG_LIBERTY 環境變數來指定另一組 Liberty 特性。例如，若只要啟用 jsp-2.3 及 websocket-1.1 特性，請執行指令並重新編譯打包應用程式：
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -71,14 +71,14 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 如果您已部署 WAR 檔，則可以在內嵌的 ibm-web-ext.xml 檔案中所設定的環境定義根目錄下存取 Web 應用程式。如果 ibm-web-ext.xml 檔案不存在，或未指定環境定義根目錄，則可以在根環境定義下存取應用程式。例如，
 
 ```
-    http://<yourappname>.mybluemix.net/
+http://<yourappname>.mybluemix.net/
 ```
 {: codeblock}
 
 如果您已部署 EAR 檔，可在 EAR 部署描述子所定義的環境定義根目錄下，存取內嵌的 Web 應用程式。例如，
 
 ```
-    http://<yourappname>.mybluemix.net/acme/
+http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -125,14 +125,14 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 由於效能的原因，只部署 WAR 和 EAR 檔時，依預設會停用 [CDI 1.2 隱含 Bean 保存檔掃描](https://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_cdi_behavior.html)。隱含 Bean 保存檔掃描可以使用 JBP_CONFIG_LIBERTY 環境變數加以啟用。例如：
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 重要事項：為了讓環境變數的變更能夠生效，您必須重新編譯打包應用程式：
 
 ```
-    $ cf restage myapp
+$ cf restage myapp
 ```
 {: codeblock}
 
@@ -144,7 +144,7 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 如果 Liberty 設定檔已安裝在您的工作站上，而且您已經使用應用程式建立 Liberty 伺服器，就可以將該目錄的內容推送至 Bluemix。例如，如果您的 Liberty 伺服器名稱為 defaultServer，請執行下列指令：
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
+$ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -173,14 +173,14 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 伺服器目錄備妥之後，您可以將它部署至 Bluemix。
 
 ```
-    $ cf push <yourappname> -p defaultServer
+$ cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
 附註：已部署為該伺服器目錄一部分的 Web 應用程式，可在[環境定義根目錄（由 Liberty 設定檔決定）](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)下進行存取。例如：
 
 ```
-    http://<yourappname>.mybluemix.net/acme/
+http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -189,17 +189,19 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 
 您也可以將包裝伺服器檔案推送至 Bluemix。包裝伺服器檔案是使用 Liberty 的 server package 指令所建立。除了應用程式和配置檔之外，包裝伺服器檔案還可以包含應用程式所需的共用資源和 Liberty 使用者特性。
 
-若要包裝 Liberty 伺服器，請從您的 Liberty 安裝目錄使用 ./bin/server package 指令。請指定伺服器名稱，並包含 '––include=usr' 選項。例如，如果您的 Liberty 伺服器為 defaultServer，請執行下列指令：
+若要包裝 Liberty 伺服器，請從您的 Liberty 安裝目錄使用 `./bin/server package` 指令。指定您的伺服器名稱，並包含 `--include=usr` 選項。例如，如果您的 Liberty 伺服器為 defaultServer，請執行下列指令：
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+$ wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
-這個指令會在伺服器目錄中產生 serverName.zip 檔案。然後，您可以使用 cf push 指令，將該壓縮檔推送至 Bluemix。例如：
+這個指令會在伺服器目錄中產生 serverName.zip 檔案。如果您之前是使用 `--archive` 選項來指定不同的保存檔，請確定其副檔名為 `.zip`，而不是 `.jar`。**建置套件不支援以 '.jar' 副檔名建立的包裝伺服器檔案**。
+
+然後您可以使用 `cf push` 指令，將所產生的 `.zip` 檔案推送至 Bluemix。例如：
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+$ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 

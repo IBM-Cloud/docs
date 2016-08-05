@@ -11,19 +11,27 @@ copyright:
 # Últimas actualizaciones para el paquete de compilación de ASP.NET Core
 {: #latest_updates}
 
-*Última actualización: 10 de junio de 2016*
+*Última actualización: 07 de julio de 2016*
 
 Una lista de las últimas actualizaciones del paquete de compilación de aspnet.
 
+## 11 de julio de 2016: Se ha actualizado el paquete de compilación de ASP.NET Core v0.9-20160706-1603
+
+Esta versión del paquete de compilación incluye los siguientes cambios:
+
+* Esta versión del paquete de compilación da soporte a la compilación de la Vista previa 2 de .NET CLI 1.0 y a .NET Core 1.0 RTM
+* El paquete de compilación sigue dando soporte a la Vista previa 1 de .NET CLI 1.0 y a .NET Core 1.0 RC2
+* La versión predeterminada de .NET CLI que se instalará es ahora 1.0.0-preview2-003121
+
 ## 10 de junio de 2016: Se ha actualizado el paquete de compilación de ASP.NET Core v0.8.1-20160526-0957
 
-Esta versión del paquete de compilación incluye los siguientes cambios: 
+Esta versión del paquete de compilación incluye los siguientes cambios:
 
 * El nombre del tiempo de ejecución se cambia de ASP.NET 5 a ASP.NET Core.
 * El número de versión del paquete de compilación se incluye en el resultado del script de detección.
-* Esta versión del paquete de compilación elimina el soporte de aplicaciones basadas en DNX que utilizan CoreCLR RC1 y más bajo. 
+* Esta versión del paquete de compilación elimina el soporte de aplicaciones basadas en DNX que utilizan CoreCLR RC1 y más bajo.
 * Esta versión del paquete de compilación da soporte a .NET CLI y .NET Core RC2.
-* El paquete de compilación detecta proyectos con un archivo project.json o archivos *.runtimeconfig.json de la salida de publicación. 
+* El paquete de compilación detecta proyectos con un archivo project.json o archivos *.runtimeconfig.json de la salida de publicación.
 
 ## 22 de octubre de 2015: Se ha actualizado el paquete de compilación de ASP.NET 5 v0.7-20151022-1257
 

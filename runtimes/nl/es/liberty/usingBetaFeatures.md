@@ -70,7 +70,7 @@ Para poder utilizar las funciones beta de Liberty en Bluemix, debe hacer lo sigu
           IBM_LIBERTY_BETA: "true"
 ```
 
-3. Establezca la variable de entorno **JBP_CONFIG_LIBERTY** en **"version: +"**. Esta variable habilita el [tiempo de ejecución beta de Liberty](buildpackDefaults.html#liberty_versions) que da soporte a funciones beta. Por ejemplo:
+3. Establezca la variable de entorno **JBP_CONFIG_LIBERTY** en **"version: +"**. Esta variable habilita el [tiempo de ejecución mensual de Liberty](buildpackDefaults.html#liberty_versions) que da soporte a funciones beta. Por ejemplo:
   * utilizando la herramienta de línea de mandatos cf:
 ```
        $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
@@ -83,7 +83,7 @@ Para poder utilizar las funciones beta de Liberty en Bluemix, debe hacer lo sigu
           JBP_CONFIG_LIBERTY: "version: +"
 ```
 
-Si está habilitando funciones beta en una aplicación existente, no olvide volver a transferir la aplicación después de establecer las variables de entorno. 
+Si está habilitando funciones beta en una aplicación existente, no olvide volver a transferir la aplicación después de establecer las variables de entorno.
 
 {: #codeblock}
 

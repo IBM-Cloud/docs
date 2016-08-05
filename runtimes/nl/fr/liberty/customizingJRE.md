@@ -54,6 +54,11 @@ d'OpenJDK 7, définissez la variable d'environnement suivante :
 
 La propriété de version peut être définie avec une plage de versions, telle que 1.7.+, ou avec une version spécifique répertoriée dans la [liste des versions OpenJDK disponibles](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Pour de meilleurs résultats, utilisez Java 8.
 
+## Environnement JRE Oracle
+{: #oracle_jre}
+
+Voir [Utilisation de l'environnement JRE Oracle](oracle_jre.html) pour plus d'informations.
+
 ## Configuration des options de l'environnement d'exécution Java (JRE)
 {: #configuring_jre}
 
@@ -82,8 +87,7 @@ Java est désactivé et les vidages mémoire de machine virtuelle Java sont ache
 l'application commun. Ces vidages peuvent être affichés depuis le tableau de bord Bluemix ou l'interface de ligne de commande CF.
 
 L'exemple ci-après illustre une configuration de machine virtuelle Java par défaut qui est générée par le pack de construction
-pour une application déployée avec une limite de mémoire de 512 Mo :
-   
+pour une application déployée avec une limite de mémoire de 512 Mo :   
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -233,7 +237,7 @@ Déploiement d'une application avec des options JVM personnalisées pour activer
 
 * Pour mettre à jour l'option JVM
 d'IBM pour une application déployée afin de déclencher un vidage heap, snap et
-javacore sur une condition OutOfMemory, définissez la variable d'environnement de l'application avec l'option JVM et redémarrez l'application : 
+javacore sur une condition OutOfMemory, définissez la variable d'environnement de l'application avec l'option JVM et redémarrez l'application :
 
   <pre>
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'

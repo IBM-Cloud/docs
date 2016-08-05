@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*上次更新时间：2016 年 6 月 10 日*
+*上次更新时间：2016 年 7 月 7 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Node.js 运行时采用 sdk-for-nodejs buildpack 技术。
@@ -43,8 +43,8 @@ web: node app.js
 ```
 {
     ...   
-"scripts": {
-"start": "node app.js"
+    "scripts": {
+      "start": "node app.js"
 }
 }
 ```
@@ -53,7 +53,7 @@ web: node app.js
 如果 **package.json** 中提供了启动脚本条目，那么将自动生成 **Procfile**。自动生成的 **Procfile** 的内容如下所示：
 
 ```
-    web: npm start
+web: npm start
 ```
 {: codeblock}
 
@@ -73,6 +73,11 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 {: codeblock}
 
 使用此代码，当应用程序在 Bluemix 上运行时，VCAP_APP_HOST 和 VCAP_APP_PORT 环境变量包含 Bluemix 内部的主机和端口值，并且应用程序在其上侦听入局连接。当应用程序在本地运行时，VCAP_APP_HOST 和 VCAP_APP_PORT 未定义，所以 **localhost** 用作主机，而 **3000** 用作端口号。通过这种方式编写源代码，您可以在本地运行应用程序以用于测试，以及在 Bluemix 上运行应用程序，而无需进一步更改。
+
+## 脱机方式
+{: #offline_mode}
+
+有关如何控制 buildpack 对外部站点的访问的信息，请参阅[脱机方式](offlineMode.html)。 
 
 ## 应用程序管理
 {{site.data.keyword.Bluemix}} 提供若干用于管理和调试 Node.js 应用程序的实用程序。请参阅[应用程序管理](../../manageapps/app_mng.html)，以获取完整详细信息。
@@ -119,7 +124,7 @@ NPM 提供了脚本编制功能，允许您运行脚本，其中包括分别适�
 使用 NODE_MODULES_CACHE 变量来确定 Node buildpack 是使用还是忽略先前构建的高速缓存。缺省值为 true。要禁用高速缓存，请将 NODE_MODULES_CACHE 设置为 false，例如，通过 cf 命令行：
 
 ```
-    $ cf set-env myapp NODE_MODULES_CACHE false
+$ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
@@ -142,14 +147,14 @@ Nodejs buildpack V3.2-20160315-1257 及更高版本支持 [FIPS](https://en.wiki
 例如：
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+$ cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
 您有必要了解：当 FIPS_MODE 为 true 时，某些节点模块可能无法工作。例如，**使用 [MD5](https://en.wikipedia.org/wiki/MD5) 的节点模块将会失败**，如 [Express](http://expressjs.com/)。对于 Expess，在 Expess 应用程序中将 [etag](http://expressjs.com/en/api.html) 设置为 false 可能会帮助解决此问题。例如，您可以在代码中执行以下操作：
 
 ```
-    app.set('etag', false);
+app.set('etag', false);
 ```
 {: codeblock}
 请参阅这篇 [stackoverflow 帖子](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)以获取更多信息。
@@ -214,8 +219,8 @@ console.log('ssl version is [' +process.versions.openssl +']');
 ```
 {
     ...   
-"scripts": {
-"start": "node --enable-fips app.js"
+    "scripts": {
+      "start": "node --enable-fips app.js"
     }
 }
 ```
@@ -274,7 +279,7 @@ Bluemix 提供多个版本的 Node.js buildpack。
 {: #rellinks}
 ## 常规
 {: #general}
-* [Node.js buildpack 的最新更新](updates.html)
+* [Node.js buildpack 的最新更新](../../runtimes/nodejs/updates.html)
 * [应用程序管理](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

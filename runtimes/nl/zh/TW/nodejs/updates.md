@@ -11,11 +11,19 @@ copyright:
 # sdk-for-nodejs 建置套件的最新更新項目
 {: #latest_updates}
 
-*前次更新：2016 年 6 月 22 日*
+*前次更新：2016 年 7 月 18 日*
 {: .last-updated}
 
 sdk-for-nodejs 建置套件中的最新更新項目清單。
-## 2016 年 6 月 22 日：已更新 Node.js 建置套件 v3.5-20160608-1102
+## 2016 年 7 月 22 日：已更新 Node.js 建置套件 v3.6-20160715-0749
+這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.45, 0.10.46、0.12.14、0.12.15、4.4.6、4.4.7、6.2.1 和 6.2.2。現在預設值為 4.4.7。
+
+此版本包含已更新的「應用程式管理 Proxy」，可支援聯合登入。
+
+其中包括下列安全漏洞的修正程式：
+* [CVE-2016-1669](http://www-01.ibm.com/support/docview.wss?uid=swg21986383)
+
+## 2016 年 6 月 22 日：已更新 Node.js 建置套件 v3.5-20160609-1608
 
 這個版本的建置套件新增了 IBM SDK for Node.js 運行環境 4.4.5 及 6.2.0 版。預設為 4.4.5。
 
@@ -98,14 +106,14 @@ Monitoring and Analytics 服務的錯誤修正程式
 * 在 'cf push' 指令中使用 "-b" 選項：
 
 ```
-        cf push -b sdk-for-nodejs-v3beta
+cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
 * 或者，在 manifest.yml 檔案中使用 "buildpack" 選項：
 
 ```
-        buildpack: sdk-for-nodejs-v3beta
+buildpack: sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -134,7 +142,7 @@ Node.js 2.6.1 版引進了 [StrongPM 應用程式管理處理程式](https://dev
 * 如果您的應用程式未在其 package.json 檔案中指定運行環境，則您的應用程式現在將開始使用 0.12.1 版而非 0.10.x 版。如果您需要使用舊版，請在 package.json 中指定 0.10.x 版，如下所示。
 
 ```
-        "engines": {
+"engines": {
             "node": "0.10.x"
         }
 ```

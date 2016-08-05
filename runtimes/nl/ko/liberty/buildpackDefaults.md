@@ -28,7 +28,7 @@ Liberty 빌드팩은 Bluemix에서 자주 업데이트됩니다. 각 릴리스�
   * [베타 기능](usingBetaFeatures.html)을 제공하지 않습니다.
   * 일반적으로 분기별로 업데이트됩니다. 
 
-2. 최신 베타 릴리스
+2. 월별 릴리스
   * **JBP_CONFIG_LIBERTY** 환경 변수를 **"version: +"** 값으로 설정하여 명시적으로 사용으로 설정해야 합니다. 
   * [베타 기능](usingBetaFeatures.html)을 제공합니다.
   * 일반적으로 월별로 업데이트됩니다. 

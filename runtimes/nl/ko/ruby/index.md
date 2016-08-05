@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*마지막 업데이트 날짜: 2016년 6월 10일*
+*마지막 업데이트 날짜: 2016년 7월 6일*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}}의 Ruby 런타임은 ruby_buildpack을 통해 제공됩니다.
@@ -33,7 +33,7 @@ ruby_buildpack은 앱의 루트 디렉토리에 Gemfile이 있는 경우 사용�
 
 
 ```
-  source 'https://rubygems.org'
+source 'https://rubygems.org'
   ruby '2.1.7'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
@@ -41,20 +41,20 @@ ruby_buildpack은 앱의 루트 디렉토리에 Gemfile이 있는 경우 사용�
 ```
 {: codeblock}
 
-버전이 지정되지 않은 경우 기본적으로 버전 2.2.2가 선택됩니다. 
+버전이 지정되지 않은 경우 기본적으로 버전 2.2.4가 선택됩니다.
 
 ### 사용 가능한 버전: 
 {: #available_versions}
 
 다음 Ruby 버전은 현재
-{{site.data.keyword.Bluemix}}에 설치된 [Ruby 빌드팩](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.7?cm_mc_uid=02162397679414470795470&cm_mc_sid_50200000=1447951462)에서
+{{site.data.keyword.Bluemix}}에 설치된 [Ruby 빌드팩](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.16)에서
 사용 가능합니다. 
 
-* 2.0.0
-* 2.1.6
-* 2.1.7
-* 2.2.2
+* 2.1.8
+* 2.1.9
 * 2.2.3
+* 2.2.4
+* 2.3.0
 
 나열되지 않은 Ruby 버전이 애플리케이션에 필요한 경우
 외부
@@ -66,4 +66,4 @@ ruby_buildpack은 앱의 루트 디렉토리에 Gemfile이 있는 경우 사용�
 ## 일반
 {: #general}
 * [Ruby에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails 문서](http://rubyonrails.org/documentation/)
+* [Ruby on Rails 문서](http://api.rubyonrails.org/)

@@ -11,11 +11,19 @@ copyright:
 # Dernières mises à jour apportées au pack de construction sdk-for-nodejs
 {: #latest_updates}
 
-*Dernière mise à jour : 22 juin 2016*
+*Dernière mise à jour : 18 juillet 2016*
 {: .last-updated}
 
 Liste des dernières mises à jour apportées au pack de construction sdk-for-nodejs.
-## 22 juin 2016 : Pack de construction Node.js v3.5-20160608-1102 mis à jour
+## 22 juillet 2016 : Pack de construction Node.js v3.6-20160715-0749 mis à jour
+Cette édition du pack de construction prend en charge les versions d'exécution IBM SDK for Node.js suivantes : 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 et 6.2.2. La version par défaut est désormais 4.4.7.
+
+Cette édition inclut un proxy de gestion d'application mis à jour qui prend en charge les connexions fédérées.
+
+Des correctifs sont inclus pour les vulnérabilités en matière de sécurité suivantes :
+* [CVE-2016-1669](http://www-01.ibm.com/support/docview.wss?uid=swg21986383)
+
+## 22 juin 2016 : Pack de construction Node.js v3.5-20160609-1608 mis à jour
 
 Cette édition du pack de construction ajoute l'environnement d'exécution IBM SDK for Node.js, versions 4.4.5 et 6.2.0. La valeur par défaut devient 4.4.5.
 
@@ -25,18 +33,18 @@ Cette édition inclut les correctifs de bogue provenant du [pack de construction
 
 ## 20 mai 2016 : Pack de construction Node.js v3.4-20160518-1653 mis à jour
 
-Cette édition du pack de construction ajoute l'environnement d'exécution IBM SDK for Node.js, versions 0.10.45, 0.12.14, 4.4.4, 6.0.0 et 6.1.0. La version par défaut est désormais 4.4.4. 
+Cette édition du pack de construction ajoute l'environnement d'exécution IBM SDK for Node.js, versions 0.10.45, 0.12.14, 4.4.4, 6.0.0 et 6.1.0. La version par défaut est désormais 4.4.4.
 
 Des correctifs sont inclus pour les vulnérabilités en matière de sécurité suivantes :
 * [CVE-2015-8855](http://www-01.ibm.com/support/docview.wss?uid=swg21982852)
 * [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176](https://www.openssl.org/news/secadv/20160503.txt)
 
-Notez qu'il s'agit d'un problème connu lié à npm v3 et à l'utilitaire App Management Inspector. npm 3.8.6 est la version par défaut avec les environnements d'exécution 6.0.0 et 6.1.0. Si vous souhaitez utiliser l'un des environnements d'exécution 6.x et l'utilitaire Inspector, vous devez spécifier une version npm 2.x dans votre fichier package.json comme solution temporaire. 
+Notez qu'il s'agit d'un problème connu lié à npm v3 et à l'utilitaire App Management Inspector. npm 3.8.6 est la version par défaut avec les environnements d'exécution 6.0.0 et 6.1.0. Si vous souhaitez utiliser l'un des environnements d'exécution 6.x et l'utilitaire Inspector, vous devez spécifier une version npm 2.x dans votre fichier package.json comme solution temporaire.
 
 ## 29 avril 2016 : Pack de construction Node.js v3.3-20160428-1409 mis à jour
 
 Cette édition du pack de construction ajoute l'environnement d'exécution IBM SDK for Node.js, versions 0.10.44, 0.12.13, 4.4.0, 4.4.1, 4.4.2 et 4.4.3. La valeur par défaut est désormais 4.4.3.
-Pour la version 4.3.1 et les versions ultérieures, il est désormais possible d'utiliser une version compatible FIPS de l'environnement d'exécution en définissant la variable d'environnement `FIPS_MODE=true` pour votre application. 
+Pour la version 4.3.1 et les versions ultérieures, il est désormais possible d'utiliser une version compatible FIPS de l'environnement d'exécution en définissant la variable d'environnement `FIPS_MODE=true` pour votre application.
 
 Le pack de construction mis à jour et les nouvelles versions d'environnement d'exécution contiennent aussi des correctifs relatifs aux vulnérabilités en matière de sécurité :
 * [CVE-2016-2515](http://www-01.ibm.com/support/docview.wss?uid=swg21977578)
@@ -46,15 +54,15 @@ Le pack de construction mis à jour et les nouvelles versions d'environnement d'
 Le pack de construction mis à jour contient également des correctifs pour plusieurs bogues :
 * IBM SDK for Node.js sera toujours utilisé si une version qui correspond à la plage requise est disponible. Auparavant, cela n'était vrai que pour les versions d'environnement d'exécution 4.x.
 * L'utilitaire App Management Inspector fonctionne désormais avec les versions d'environnement d'exécution 4.x.
-* Une régression a été corrigée dans l'utilitaire strongpm App Management. 
+* Une régression a été corrigée dans l'utilitaire strongpm App Management.
 
 ## 18 mars 2016 : Pack de construction Node.js v3.2-20160315-1257 mis à jour
 
-Cette édition du pack de construction déplace l'environnement d'exécution IBM SDK for Node.js par défaut de la version 4.3.0 vers la version 4.3.2. Elle comprend également IBM SDK for Node.js versions 0.10.43, 0.12.12 et 4.3.1. Utilisez ces versions Node.js récentes pour récupérer les correctifs relatifs à plusieurs vulnérabilités en matière de sécurité. 
+Cette édition du pack de construction déplace l'environnement d'exécution IBM SDK for Node.js par défaut de la version 4.3.0 vers la version 4.3.2. Elle comprend également IBM SDK for Node.js versions 0.10.43, 0.12.12 et 4.3.1. Utilisez ces versions Node.js récentes pour récupérer les correctifs relatifs à plusieurs vulnérabilités en matière de sécurité.
 
 ## 4 mars 2016 : Pack de construction Node.js v3.1-20160222-1123 mis à jour
 
-Cette édition du pack de construction déplace l'environnement d'exécution IBM SDK for Node.js par défaut de la version 4.2.4 vers la version 4.3.0. Elle comprend également IBM SDK for Node.js versions 0.10.42, 0.12.10 et 4.2.6. Utilisez ces versions Node.js récentes pour récupérer les correctifs relatifs à plusieurs vulnérabilités en matière de sécurité. 
+Cette édition du pack de construction déplace l'environnement d'exécution IBM SDK for Node.js par défaut de la version 4.2.4 vers la version 4.3.0. Elle comprend également IBM SDK for Node.js versions 0.10.42, 0.12.10 et 4.2.6. Utilisez ces versions Node.js récentes pour récupérer les correctifs relatifs à plusieurs vulnérabilités en matière de sécurité.
 
 ## 4 février 2016 : Pack de construction Node.js v3.0-20160125-1224 mis à jour
 
@@ -88,7 +96,8 @@ Cette édition est totalement synchronisée avec le pack de construction [Cloud 
 Cette édition du pack de construction Node.js est livrée avec deux versions, la version 2.0 et la version 3.0 bêta. Elles incluent toutes les deux les
 modifications suivantes :
 
-Correctif de bogue pour le service Monitoring and Analytics. Inclusion d'un environnement d'exécution en cache pour IBM SDK for Node.js v4.2.3.0, v4.2.2.0, v1.2.0.8 et v1.2.0.7 (versions basées sur les versions Node.js v4.2.3, v4.2.2, v0.12.9 et v0.12.8 de la communauté). En outre, dans la version 3.0 bêta, l'environnement d'exécution Node.js par défaut est passé à v4.2.3.
+Correctif de bogue pour le service Monitoring and Analytics. Inclusion d'un environnement d'exécution en cache pour IBM SDK for Node.js v4.2.3.0, v4.2.2.0, v1.2.0.8 et v1.2.0.7 (versions basées sur les versions Node.js v4.2.3, v4.2.2, v0.12.9 et v0.12.8 de la communauté).
+En outre, dans la version 3.0 bêta, l'environnement d'exécution Node.js par défaut est passé à v4.2.3.
 
 Le pack de construction IBM Node.js version 3.0 bêta est désormais publié en tant que pack de construction autre que le pack de construction par défaut dans
 Bluemix, avec Node.js
@@ -155,7 +164,7 @@ de la façon suivante :
 {: codeblock}
 
 * Problèmes connus liés à la version 0.12.1 :
-   * La fonction "Suspend" ne fonctionne pas lorsque vous utilisez la fonction Debug Tools mise à disposition par Bluemix Live Sync. 
+   * La fonction "Suspend" ne fonctionne pas lorsque vous utilisez la fonction Debug Tools mise à disposition par Bluemix Live Sync.
    * Le module mqlight utilisé pour le service MQ Light n'est pas pris en charge dans la version 0.12.x.
 
 * Diverses vulnérabilités de sécurité ont été résolues :
@@ -184,7 +193,7 @@ version 1.1.0.13](https://developer.ibm.com/node/sdk/).
 journalisation de leur application de manière dynamique si l'application utilise le module log4js, bunyan ou ibmbluemix pour la journalisation.
 * Désormais, le pack de construction Node.js est livré avec
 [IBM SDK for Node.js
-version 0.10.33](https://developer.ibm.com/node/sdk/). Cette mise à jour inclut des correctifs pour le problème POODLE. 
+version 0.10.33](https://developer.ibm.com/node/sdk/). Cette mise à jour inclut des correctifs pour le problème POODLE.
 
 ## 23 octobre 2014 : Pack de construction Node.js v1.6-20141013-1736 mis à jour
 
@@ -206,7 +215,7 @@ client pendant le déploiement.
 * Désormais, le pack de construction Node.js est livré avec [IBM SDK for Node.js version 1.1.0.7](https://developer.ibm.com/node/sdk/). Cette mise à jour signifie que vous obtenez un environnement d'exécution
 IBM Node.js entièrement pris en charge
 lorsque vous indiquez l'environnement d'exécution Node.js stable le plus récent
-pour votre application, à savoir la version 0.10.31. Avec un environnement d'exécution Node.js entièrement pris en charge, les clients bénéficient d'une expérience de prise en charge cohérente. 
+pour votre application, à savoir la version 0.10.31. Avec un environnement d'exécution Node.js entièrement pris en charge, les clients bénéficient d'une expérience de prise en charge cohérente.
 * Le pack de construction contient une infrastructure de service améliorée. Plus spécifiquement, elle fonctionne mieux lors de la liaison du service Monitoring and Analytics et fournit des informations de diagnostic supplémentaires en cas d'échec du service.
 
 ## 28 août 2014 : Pack de construction Node.js v1.3-20140821-1143 mis à jour

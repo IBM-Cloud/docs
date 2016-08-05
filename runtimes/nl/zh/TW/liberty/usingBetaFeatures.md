@@ -61,26 +61,26 @@ Bluemix 中可用的 Liberty 測試版特性
 2.  將 **IBM_LIBERTY_BETA** 環境變數設為 **true**。此變數會指示 Liberty 建置套件，為您的應用程式安裝並啟用測試版特性。例如：
   * 使用 cf 指令行工具：
 ```
-       $ cf set-env <yourappname> IBM_LIBERTY_BETA true
+$ cf set-env <yourappname> IBM_LIBERTY_BETA true
 ```
 {: #codeblock}
 
   * 或者，使用 manifest.yml 檔案：
 ```
-      env:
+env:
           IBM_LIBERTY_BETA: "true"
 ```
 
-3. 將 **JBP_CONFIG_LIBERTY** 環境變數設為 **"version: +"**。此變數會啟用支援測試版特性的 [Liberty 測試版運行環境](buildpackDefaults.html#liberty_versions)。例如：
+3. 將 **JBP_CONFIG_LIBERTY** 環境變數設為 **"version: +"**。此變數會啟用可支援測試版特性的 [Liberty 每月運行環境](buildpackDefaults.html#liberty_versions)。例如：
   * 使用 cf 指令行工具：
 ```
-       $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
+$ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
 ```
 {: #codeblock}
 
   * 或者，使用 manifest.yml 檔案：
 ```
-      env:
+env:
           JBP_CONFIG_LIBERTY: "version: +"
 ```
 

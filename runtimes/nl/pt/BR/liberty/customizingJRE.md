@@ -58,6 +58,11 @@ configure a variável de ambiente a seguir:
 
 A propriedade da versão pode ser configurada para um intervalo de versão como 1.7.+ ou qualquer versão específica listada na [lista de versões do OpenJDK disponíveis](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Para obter os melhores resultados, use Java 8.
 
+## Oracle JRE
+{: #oracle_jre}
+
+Consulte [Usando o Oracle JRE](oracle_jre.html) para obter informações sobre como usar o Oracle JRE.
+
 ## Configurando as opções do JRE
 {: #configuring_jre}
 

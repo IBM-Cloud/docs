@@ -13,11 +13,19 @@ copyright:
 
 ## Liste des dernières mises à jour apportées au pack de construction Liberty.
 
-*Dernière mise à jour : 17 juin 2016*
+*Dernière mise à jour : 20 juillet 2016*
 {: .last-updated}
 
+### 22 juillet 2016 : Pack de construction Liberty v3.1-20160717-2254 mis à jour
+* La fonctionnalité [Gestion de l'appli](../../manageapps/app_mng.html) a été mise à jour pour prendre en charge l'authentification fédérée. De plus, le contexte d'exécution Node.js dont se servent les utilitaires `devconsole` et `shell` a été mis à jour vers la version la plus récente, `0.12.15`. 
+* Le pack de construction ajoute une prise en charge de l'agent de surveillance d'application [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/).
+* Le pack de construction fournit un collecteur de données mis à jour pour le [service Monitoring and Analytics](../../services/monana/index.html#monana_oview).
+* Le pack de construction fournit aussi une version mise à jour de l'agent pour le [service de mise à l'échelle automatique](../../services/Auto-Scaling/index.html). 
+* La version d'exécution Liberty mensuelle a été mise au niveau de la version [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/).
+
 ### 17 juin 2016 : Pack de construction Liberty v3.0-20160608-1450 mis à jour
-* Le pack de construction contient désormais deux versions de WebSphere Liberty. Il s'agit de l'édition stable et de l'édition bêta les plus récentes. Plus spécifiquement, il contient l'édition stable [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) et l'édition bêta [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). L'édition stable sera utilisée par défaut. Pour plus d'informations, voir [Liberty versions](buildpackDefaults.html#liberty_versions).  
+* Le pack de construction contient désormais deux versions de WebSphere Liberty (la dernière édition stable et la dernière édition mensuelle). Plus spécifiquement, il fournit l'édition stable [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) et l'édition mensuelle [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). L'édition stable sera utilisée par défaut. Pour plus d'informations, voir [Liberty versions](buildpackDefaults.html#liberty_versions). 
+* Le pack de construction contient aussi les correctifs de sécurité suivants : [Security Bulletin: Vulnerability in Apache Standard Taglibs affects Liberty for Java for IBM Bluemix (CVE-2015-0254)](http://www-01.ibm.com/support/docview.wss?uid=swg21985531).
 
 ### 25 mai 2016 : Pack de construction Liberty v2.9-20160519-1249 mis à jour
 * Le pack de construction contient une version mise à jour de WebSphere Liberty basée qui repose sur la [version bêta de mai](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). La version mise à jour de Liberty met à disposition les fonctions bêta *bluemixLogCollector-1.1* et *logstashCollector-1.1* disponibles dans Bluemix.
@@ -25,10 +33,10 @@ copyright:
 ### 5 mai 2016 : Pack de construction Liberty v2.8-20160430-1011 mis à jour
 * Le pack de construction contient une version mise à jour de WebSphere Liberty qui repose sur la [version bêta d'avril](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). La version mise à jour de Liberty met à disposition la fonction GA *logstashCollector-1.0* et la fonction bêta *logmetCollector-1.0* disponibles dans Bluemix.
 * Le pack de construction contient également les versions mises à jour d'IBM JRE : 8 SR3 et 7.1 SR3 FP40. 
-* Le pack de construction ajoute la prise en charge initiale de l'agent de surveillance d'application [AppDynamics](https://www.appdynamics.com/). 
-* La prise en charge de [Dynatrace](dynatrace.html) a été améliorée afin de simplifier l'installation de l'agent. 
-* Le pack de construction fournit un collecteur de données mis à jour pour le [service Monitoring and Analytics](../../services/monana/index.html#monana_oview). Il contient un correctif destiné à remédier un problème lié à la collecte de données de segment de mémoire maximales. 
-* L'environnement d'exécution Node.js dont se servent les [utilitaires devconsole et shell d'App Management](../../manageapps/app_mng.html#app_management) a été mis à jour vers la version 0.12.13 la plus récente. 
+* Le pack de construction ajoute la prise en charge initiale de l'agent de surveillance d'application [AppDynamics](https://www.appdynamics.com/).
+* La prise en charge de [Dynatrace](dynatrace.html) a été améliorée afin de simplifier l'installation de l'agent.
+* Le pack de construction fournit un collecteur de données mis à jour pour le [service Monitoring and Analytics](../../services/monana/index.html#monana_oview). Il contient un correctif destiné à remédier un problème lié à la collecte de données de segment de mémoire maximales.
+* L'environnement d'exécution Node.js dont se servent les [utilitaires devconsole et shell d'App Management](../../manageapps/app_mng.html#app_management) a été mis à jour vers la version 0.12.13 la plus récente.
 
 ### 25 mars 2016 : Pack de construction Liberty v2.7-20160321-1358 mis à jour
 * Le pack de construction contient une version mise à jour du profil Liberty qui repose sur la [version bêta de mars](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). La version mise à jour de Liberty met à disposition la fonction bêta cloudant-1.0 dans Bluemix.

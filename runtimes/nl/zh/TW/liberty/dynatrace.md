@@ -50,7 +50,8 @@ $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","pr
 
 </li>
 <li>將您的應用程式推送到 Bluemix 之後，請將您建立的使用者所提供服務連結到該應用程式。例如，使用下列指令：
-<pre>
+
+  <pre>
   $ cf bs myApp my-dynatrace-collector
   </pre>  
   {: codeblock}
@@ -75,7 +76,7 @@ Dynatrace 代理程式必須在 Web 伺服器上進行管理，而 Liberty 建�
 ```
       ---
       6.3.0: https://my-dynatrace-agent.mybluemix.net/dynatrace-agent-6.3.0-unix.jar
-```  
+```
 {: codeblock}
      * index.yml 檔案所指定的位置上必須提供 **dynatrace-agent-6.3.0-unix.jar** 檔案。Jar 檔和 index.yml 的位置可以是相同的目錄。
 
@@ -87,7 +88,7 @@ Dynatrace 代理程式必須在 Web 伺服器上進行管理，而 Liberty 建�
    <li> 將 **JBP_CONFIG_DYNATRACEAGENT** 變數的值設為 *"repository_root：URL_of_server_hosting_index.yml"*。例如，在推送您的應用程式之後發出下列指令：
   
   <pre>   
-$ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
+    $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
   </pre>
   {: codeblock}
 
@@ -95,14 +96,15 @@ $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-a
   </li>
   <li> 在設定此環境變數之後，請重新編譯打包您的應用程式。Liberty 應用程式的 staging_task.log 會發出一則訊息，指出從代理程式管理伺服器順利下載了 Dynatrace 代理程式。例如：
 <pre>
-Downloading dynatrace-agent-6.3.0-unix.jar 6.3.0 from https://my-dynatrace-agent-host.mybluemix.net/dynatrace-agent-6.3.0-unix.jar (17.8s)
+    Downloading dynatrace-agent-6.3.0-unix.jar 6.3.0 from https://my-dynatrace-agent-host.mybluemix.net/dynatrace-agent-6.3.0-unix.jar (17.8s)
   </pre>
   {: codeblock}
 
 </li>
 <li>若要查看 staging_task.log，請發出下列指令：
-<pre>
-$ cf files myAppName logs/staging_task.log
+
+  <pre>
+    $ cf files myAppName logs/staging_task.log
   </pre>  
   {: codeblock}
 

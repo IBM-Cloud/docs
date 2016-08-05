@@ -87,7 +87,7 @@ Liberty 빌드팩을 통해 바인드된 서비스를 자동으로 구성하지 
 좀 더 공식적으로 표현하자면, 문자열의 문법은 다음과 같습니다. 
 
 ```
-    Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
+Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
     <service_type_specification> :: <service_type>=<option>
     <service_type> :: service type (service label as it appears in VCAP_SERVICES)
     <option> :: all | config
@@ -103,7 +103,7 @@ Liberty 빌드팩을 통해 바인드된 서비스를 자동으로 구성하지 
 다음은 Mongo 및 SQLDB 시나리오에서 manifest.yml 파일에 지정된 샘플 옵트 아웃 명세입니다. 
 
 ```
-    env:
+env:
       services_autoconfig_excludes: mongodb-2.2=allenv:
       services_autoconfig_excludes: sqldb=configenv:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
@@ -113,7 +113,7 @@ Liberty 빌드팩을 통해 바인드된 서비스를 자동으로 구성하지 
 다음은 명령 인터페이스를 사용하여 애플리케이션 myapp에 services_autoconfig_excludes 환경 변수를 설정하는 방법의 예입니다. 
 
 ```
-    $ cf set-env myapp services_autoconfig_excludes sqldb=config
+$ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}

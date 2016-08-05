@@ -72,7 +72,7 @@ Liberty-Buildpack an, die Beta-Features zu installieren und für Ihre Anwendung 
           IBM_LIBERTY_BETA: "true"
 ```
 
-3. Setzen Sie die Umgebungsvariable **JBP_CONFIG_LIBERTY** auf **"version: +"**. Diese Variable aktiviert die [Liberty-Beta-Laufzeit](buildpackDefaults.html#liberty_versions), die Beta-Features unterstützt. Beispiel:
+3. Setzen Sie die Umgebungsvariable **JBP_CONFIG_LIBERTY** auf **"version: +"**. Diese Variable aktiviert die [monatliche Liberty-Laufzeit](buildpackDefaults.html#liberty_versions), die Beta-Features unterstützt. Beispiel:
   * Verwendung des Befehlszeilentools 'cf':
 ```
        $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"

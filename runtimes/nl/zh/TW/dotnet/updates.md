@@ -11,9 +11,17 @@ copyright:
 # ASP.NET Core 建置套件的最新更新項目
 {: #latest_updates}
 
-*前次更新：2016 年 6 月 10 日*
+*前次更新：2016 年 7 月 7 日*
 
 aspnet 建置套件中的最新更新項目清單。
+
+## 2016 年 7 月 11 日：已更新 ASP.NET Core 建置套件 v0.9-20160706-1603
+
+建置套件的這個版本包括下列變更：
+
+* 這個版本的建置套件支援 .NET CLI 1.0 Preview 2 建置和 .NET Core 1.0 RTM
+* 此建置套件會繼續支援 .NET CLI 1.0 Preview 1 和 .NET Core 1.0 RC2
+* 現在要安裝的預設 .NET CLI 版本為 1.0.0-preview2-003121
 
 ## 2016 年 6 月 10 日：已更新 ASP.NET Core 建置套件 v0.8.1-20160526-0957
 
@@ -34,7 +42,7 @@ aspnet 建置套件中的最新更新項目清單。
 * 建置套件的這個版本支援 Beta 7 DNX 變更，而且可以執行與具有下列自訂啟動指令的舊測試版相依的應用程式：
 
 ```
-   dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
+dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
 ```
 {: codeblock}
 

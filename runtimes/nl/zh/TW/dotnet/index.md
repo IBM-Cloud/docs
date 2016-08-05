@@ -21,7 +21,7 @@ copyright:
 
 ## 偵測
 {: #detection}
-如果應用程式中的任何位置有一個以上的 project.json 檔案，或是從 *dotnet publish* 指令的輸出目錄中推送應用程式，則會使用 Bluemix ASP.NET Core 建置套件。
+如果應用程式中的任何位置有一個以上的資料夾同時包含 project.json 檔案以及至少一個 .cs 檔案，或是從 *dotnet publish* 指令的輸出目錄推送應用程式，就會使用 Bluemix ASP.NET Core 建置套件。
 
 ## 入門範本應用程式
 {: #starter_application}
@@ -73,7 +73,7 @@ Yeoman 工具可以用來產生新的專案範本（如[使用 Yeoman 建置專�
 
 若要發佈應用程式，請發出指令，例如：
 ```
-  dotnet publish -r ubuntu.14.04-x64 
+dotnet publish -r ubuntu.14.04-x64 
 ```
 {: codeblock}
   
@@ -92,14 +92,14 @@ Yeoman 工具可以用來產生新的專案範本（如[使用 Yeoman 建置專�
 
 例如，如果解決方案在 *src* 資料夾中包含 *MyApp.DAL*、*MyApp.Services* 及 *MyApp.Web* 這三個專案，而且 *MyApp.Web* 是主要專案，則 .deployment 檔案的格式將如下所示：
 ```
-  [config]
+[config]
   project = src/MyApp.Web
 ```
 {: codeblock}
 
 在此範例中，建置套件將自動編譯 *MyApp.DAL* 及 *MyApp.Services* 專案（如果它們列為 *MyApp.Web* 之 project.json 檔案中的相依關係），但建置套件使用 dotnet run -p src/MyApp.Web 時只會嘗試執行主要專案 (*MyApp.Web*)。*MyApp.Web*（假設此專案是 xproj 專案）的路徑也可以指定為： 
 ```
-  project = src/MyApp.Web/MyApp.Web.xproj 
+project = src/MyApp.Web/MyApp.Web.xproj 
 ```
 {: codeblock}
 
@@ -107,7 +107,7 @@ Yeoman 工具可以用來產生新的專案範本（如[使用 Yeoman 建置專�
 
 建置套件將使用 *dotnet run* 指令來執行您的應用程式，以及傳遞下列指令行引數：
 ```
-  --server.urls http://0.0.0.0:${PORT}
+--server.urls http://0.0.0.0:${PORT}
 ```
 {: codeblock}
 
@@ -136,13 +136,13 @@ Yeoman 工具可以用來產生新的專案範本（如[使用 Yeoman 建置專�
 
 將下列相依關係新增至 project.json： 
 ```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+"Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
 ```
 {: codeblock}
 
 將 *using* 陳述式新增至包含 Main 方法的檔案： 
 ```
-  using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
 

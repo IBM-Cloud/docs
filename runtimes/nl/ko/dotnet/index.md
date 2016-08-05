@@ -22,7 +22,8 @@ ASP.NET Core는 .NET 웹 애플리케이션 빌드를 위한 모듈형 오픈 �
 
 ## 발견
 {: #detection}
-Bluemix ASP.NET Core 빌드팩은 애플리케이션에 하나 이상의 project.json 파일이 있거나 *dotnet publish* 명령의 출력 디렉토리에서 애플리케이션이 푸시된 경우에 사용됩니다. 
+Bluemix ASP.NET Core 빌드팩은 애플리케이션에 project.json 및 하나 이상의 .cs 파일이 둘 다 포함된 하나 이상의 폴더가 있거나
+애플리케이션이 *dotnet publish* 명령의 출력 디렉토리에서 푸시되는 경우 사용됩니다.
 
 ## 스타터 애플리케이션
 {: #starter_application}
@@ -74,13 +75,13 @@ Bluemix ASP.NET Core 빌드팩은 애플리케이션에 하나 이상의 project
 
 애플리케이션을 공개하려면 다음과 같이 명령을 발행하십시오. 
 ```
-  dotnet publish -r ubuntu.14.04-x64 
+dotnet publish -r ubuntu.14.04-x64 
 ```
 {: codeblock}
   
 그런 다음 다음 위치에서 앱을 푸시할 수 있습니다. 
 ```
-  bin/<Debug|Release>/<framework>/<runtime>/publish 디렉토리.
+  bin/<Debug|Release>/<framework>/<runtime>/publish
 ```
 {: codeblock}
 
@@ -93,7 +94,7 @@ Bluemix ASP.NET Core 빌드팩은 애플리케이션에 하나 이상의 project
 
 예를 들어 세 개의 프로젝트, *MyApp.DAL*, *MyApp.Services*, *MyApp.Web*을 *src* 폴더에 포함하고 *MyApp.Web*이 기본 프로젝트인 솔루션의 경우 배치 파일의 형식은 다음과 같습니다. 
 ```
-  [config]
+[config]
   project = src/MyApp.Web
 ```
 {: codeblock}
@@ -103,7 +104,7 @@ Bluemix ASP.NET Core 빌드팩은 애플리케이션에 하나 이상의 project
 나열된 경우에 빌드팩은 자동으로 이 프로젝트들을 컴파일하지만 실행은 기본 프로젝트인 *MyApp.Web*에 대해서만 dotnet run -p src/MyApp.Web을 사용하여
 시도합니다. 이 프로젝트를 xproj 프로젝트라고 가정하고 *MyApp.Web*에 대한 경로를 다음과 같이 지정할 수도 있습니다.  
 ```
-  project = src/MyApp.Web/MyApp.Web.xproj 
+project = src/MyApp.Web/MyApp.Web.xproj 
 ```
 {: codeblock}
 
@@ -111,7 +112,7 @@ Bluemix ASP.NET Core 빌드팩은 애플리케이션에 하나 이상의 project
 
 빌드팩은 *dotnet run* 명령으로 애플리케이션을 실행하고 뒤에 오는 명령행 인수를 전달합니다. 
 ```
-  --server.urls http://0.0.0.0:${PORT}
+--server.urls http://0.0.0.0:${PORT}
 ```
 {: codeblock}
 
@@ -140,13 +141,13 @@ Bluemix ASP.NET Core 빌드팩은 애플리케이션에 하나 이상의 project
 
 다음 종속 항목을 project.json에 추가하십시오.  
 ```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+"Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
 ```
 {: codeblock}
 
 Main 메소드를 포함하는 파일에 *using* 명령문을 추가하십시오.  
 ```
-  using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
 

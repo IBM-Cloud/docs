@@ -13,7 +13,7 @@ copyright:
 # 環境変数
 {: #environment_variables}
 
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 6 月 10 日*
 {: .last-updated}
 
 Liberty for Java によってサポートされる環境変数。
@@ -61,7 +61,8 @@ Liberty for Java によってサポートされる環境変数。
 
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
-<td>[OpenJDK バージョン](customizingJRE.html)</td>を構成します。</tr>
+<td>[OpenJDK バージョン](customizingJRE.html)を構成します。</td>
+</tr>
 
 <tr>
 <td>JBP_CONFIG_SPRINGAUTORECONFIGURATION </td>

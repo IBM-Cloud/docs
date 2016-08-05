@@ -27,9 +27,11 @@ copyright:
 * [Dynatrace verwenden](dynatrace.html)
 * [New Relic verwenden](newRelic.html)
 * [JRE anpassen](customizingJRE.html)
+* [Oracle JRE](oracle_jre.html)
 * [Protokollierung und Tracing](loggingAndTracing.html)
 * [Umgebungsvariablen](environmentVariables.html)
 * [Buildpack-Standardwerte](buildpackDefaults.html)
+* [Offlinemodus](offlineMode.html)
 * [Neueste Aktualisierungen](updates.html)
 
 # Zugehörige Links

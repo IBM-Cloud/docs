@@ -11,7 +11,7 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*마지막 업데이트 날짜: 2016년 6월 10일*
+*마지막 업데이트 날짜: 2016년 7월 6일*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}}의 PHP 런타임은 php_buildpack을 통해 제공됩니다. 
@@ -38,27 +38,26 @@ composer.json 파일에서 앱이 사용할 PHP 버전을 지정할 수 있습�
 ```
 {
     "require": {
-        "php": "5.6.*"
+        "php": "7.0.*"
     }
 }
 ```
 {: codeblock}
-자세한 정보는 [작성기 패키지 링크](https://getcomposer.org/doc/04-schema.md#package-links)를 참조하십시오. 버전이 지정되지 않은 경우 기본적으로 버전 5.5.30이 선택됩니다. 
+자세한 정보는 [작성기 패키지 링크](https://getcomposer.org/doc/04-schema.md#package-links)를 참조하십시오. 버전이 지정되지 않은 경우 기본적으로 버전 5.5.34가 선택됩니다.
 
 ### 사용 가능한 버전: 
 {: #available_versions}
 
 다음 PHP 버전은 현재
-{{site.data.keyword.Bluemix}}에 설치된 [PHP 빌드팩](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.1.5)에서
+{{site.data.keyword.Bluemix}}에 설치된 [PHP 빌드팩](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.10)에서
 사용 가능합니다. 
 
-* 5.4.44
-* 5.4.45
-* 5.5.29
-* 5.5.30
-* 5.6.30
-* 5.6.13
-* 5.6.14
+* 5.5.33
+* 5.5.34
+* 5.6.19
+* 5.6.20
+* 7.0.4
+* 7.0.5
 
 나열되지 않은 PHP 버전이 애플리케이션에 필요한 경우
 외부
@@ -67,7 +66,7 @@ composer.json 파일에서 앱이 사용할 PHP 버전을 지정할 수 있습�
 
 # 관련 링크
 {: #rellinks}
-## 학습서 및 샘플
+## 튜토리얼 및 샘플
 {: #samples}
 * [REST API 빌드 및 배치](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [모바일 친화 칼로리 카운터 빌드 및 배치](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)

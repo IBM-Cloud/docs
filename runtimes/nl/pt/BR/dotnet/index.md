@@ -16,19 +16,19 @@ copyright:
 
 O tempo de execução ASP.NET Core no {{site.data.keyword.Bluemix}} é desenvolvido com o buildpack ASP.NET Core. O ASP.NET Core
 é uma estrutura de software livre modular para a construção de aplicativos da web .NET.
-O .Net Core é um tempo de execução pequeno de plataforma cruzada que pode ser direcionado pelos aplicativos ASP.NET Core.
+O .Net Core é um tempo de execução pequeno de plataforma cruzada que pode ser direcionado pelos aplicativos ASP.NET Core. 
 Eles combinam para permitir aplicativos da web modernos, baseados em nuvem.
 {: shortdesc}
 
 ## Detecção
 {: #detection}
-O buildpack do Bluemix ASP.NET Core será usado se houver um ou mais arquivos project.json em qualquer lugar no aplicativo,
- ou se o aplicativo for enviado por push do diretório de saída do comando *dotnet publish*.
+O buildpack Bluemix ASP.NET Core será usado se houver uma ou mais pastas contendo um arquivo project.json e pelo menos um arquivo .cs em qualquer lugar no aplicativo
+ou se o aplicativo for enviado por push do diretório de saída do comando *dotnet publish*.
 
 ## Aplicativo iniciador
 {: #starter_application}
 
-O {{site.data.keyword.Bluemix}} fornece um aplicativo iniciador do ASP.NET Core. O aplicativo iniciador do ASP.NET Core é um app simples que fornece um modelo que pode ser usado. É possível experimentar o app iniciador e fazer mudanças e enviá-las por push para o ambiente do Bluemix.  Consulte [Usando os aplicativos iniciadores](../../cfapps/starter_app_usage.html) para obter ajuda sobre o uso
+O {{site.data.keyword.Bluemix}} fornece um aplicativo iniciador do ASP.NET Core.  O aplicativo iniciador do ASP.NET Core é um app simples que fornece um modelo que pode ser usado. É possível experimentar o app iniciador e fazer mudanças e enviá-las por push para o ambiente do Bluemix.  Consulte [Usando os aplicativos iniciadores](../../cfapps/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
 
 ## Versões de tempo de execução
@@ -75,7 +75,7 @@ A ferramenta Yeoman pode ser usada para gerar novos modelos de projeto, conforme
 ## Enviando por push um aplicativo publicado
 
 Se você quiser que seu aplicativo contenha todos os binários necessários para que o buildpack não faça download de
-qualquer binário externo, será possível enviar por push um aplicativo *autocontido* publicado. Consulte [Tipos de portabilidade no .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}
+qualquer binário externo, será possível enviar por push um aplicativo *autocontido* publicado.  Consulte [Tipos de portabilidade no .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}
 para obter mais informações sobre aplicativos autocontido.
 
 Para publicar um aplicativo, emita um comando como:
@@ -93,7 +93,7 @@ específico.
 
 Observe também que se você estiver usando um arquivo manifest.yml em seu
 aplicativo, será possível especificar o caminho para a pasta de saída de publicação no
-manifest.yml. Assim, não é necessário estar nessa pasta quando enviar o aplicativo por
+manifest.yml.  Assim, não é necessário estar nessa pasta quando enviar o aplicativo por
 push.
 
 ## Implementando apps com diversos projetos

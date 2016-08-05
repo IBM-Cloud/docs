@@ -27,9 +27,11 @@ copyright:
 * [使用 Dynatrace](dynatrace.html)
 * [使用 New Relic](newRelic.html)
 * [自訂 JRE](customizingJRE.html)
+* [Oracle JRE](oracle_jre.html)
 * [記載和追蹤](loggingAndTracing.html)
 * [環境變數](environmentVariables.html)
 * [建置套件預設值](buildpackDefaults.html)
+* [離線模式](offlineMode.html)
 * [最新更新項目](updates.html)
 
 # 相關鏈結

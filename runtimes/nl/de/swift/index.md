@@ -5,7 +5,7 @@
 
 # Swift-Laufzeit
 {: #swift_runtime}
-*Letzte Aktualisierung: 10. Juni 2016*
+*Letzte Aktualisierung: 21. Juni 2016*
 {: .last-updated}
 
 Die Swift-Laufzeit in {{site.data.keyword.Bluemix}} basiert auf dem Swift-Buildpack für Bluemix (das heißt swift_buildpack').
@@ -32,7 +32,7 @@ swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a
 ```
 {: pre}
 
-Neben der Angabe einer Datei `.swift-version` müssen Sie den Parameter `-b https://github.com/IBM-Swift/swift-buildpack` dem Befehl `cf push` wie folgt hinzufügen:
+Neben der Angabe einer Datei `.swift-version` müssen Sie den Parameter `-b https://github.com/IBM-Swift/swift-buildpack` dem Befehl `cf push` wie im folgenden Beispiel hinzufügen:
 
 ```
 cf push -b https://github.com/IBM-Swift/swift-buildpack

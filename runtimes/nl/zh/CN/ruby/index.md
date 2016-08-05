@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*上次更新时间：2016 年 6 月 10 日*
+*上次更新时间：2016 年 7 月 6 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Ruby 运行时由 ruby_buildpack 提供支持。ruby_buildpack 为 Ruby 应用程序提供了完整的运行时环境。
@@ -31,7 +31,7 @@ copyright:
 
 
 ```
-  source 'https://rubygems.org'
+source 'https://rubygems.org'
   ruby '2.1.7'
   gem 'sinatra', '>= 0'
 gem 'haml', '>= 0'
@@ -39,18 +39,18 @@ gem 'json', '>=0'
 ```
 {: codeblock}
 
-如果未指定版本，缺省情况下会选择 V2.2.2。
+如果未指定版本，缺省情况下会选择 V2.2.4。
 
 ### 可用版本：
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} 中当前安装的 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.7?cm_mc_uid=02162397679414470795470&cm_mc_sid_50200000=1447951462) 内提供了以下 Ruby 版本：
+{{site.data.keyword.Bluemix}} 中当前安装的 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.16) 内提供了以下 Ruby 版本：
 
-* 2.0.0
-* 2.1.6
-* 2.1.7
-* 2.2.2
+* 2.1.8
+* 2.1.9
 * 2.2.3
+* 2.2.4
+* 2.3.0
 
 如果您应用程序所需的 Ruby 版本没有列在上述列表中，那么可以使用外部 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack) 来部署应用程序。
 
@@ -59,4 +59,4 @@ gem 'json', '>=0'
 ## 常规
 {: #general}
 * [用于 Ruby 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails 文档](http://rubyonrails.org/documentation/)
+* [Ruby on Rails 文档](http://api.rubyonrails.org/)

@@ -19,7 +19,7 @@ copyright:
 
 ## 检测
 {: #detection}
-如果应用程序中的任何位置存在一个或多个 project.json 文件或者应用程序是从 *dotnet publish* 命令的输出目录进行推送，将使用 Bluemix 的“ASP.NET 核心”buildpack。
+如果应用程序中的任何位置存在一个或多个包含 project.json 文件和至少一个 .cs 文件的文件夹，或者应用程序是从 *dotnet publish* 命令的输出目录进行推送，那么将使用 Bluemix 的“ASP.NET 核心”buildpack。
 
 ## 入门模板应用程序
 {: #starter_application}
@@ -70,7 +70,7 @@ copyright:
 
 要发布应用程序，请发出类似如下命令：
 ```
-  dotnet publish -r ubuntu.14.04-x64 
+dotnet publish -r ubuntu.14.04-x64 
 ```
 {: codeblock}
   
@@ -89,14 +89,14 @@ copyright:
 
 例如，如果解决方案的 *src* 文件夹中包含 *MyApp.DAL*、*MyApp.Services* 和 *MyApp.Web* 这三个项目，其中 *MyApp.Web* 是主要项目，那么 .deployment 文件的格式应如下所示：
 ```
-  [config]
+[config]
   project = src/MyApp.Web
 ```
 {: codeblock}
 
 在此示例中，如果在 project.json 文件中将 *MyApp.DAL* 和 *MyApp.Services* 项目列为 *MyApp.Web* 的依赖项，那么 buildpack 会自动编译这两个项目，但 buildpack 只会尝试使用 dotnet run -p src/MyApp.Web 执行主要项目 *MyApp.Web*。假定 *MyApp.Web* 为 xproj 项目，那么此项目的路径还可指定为 
 ```
-  project = src/MyApp.Web/MyApp.Web.xproj 
+project = src/MyApp.Web/MyApp.Web.xproj 
 ```
 {: codeblock}
 
@@ -104,7 +104,7 @@ copyright:
 
 buildpack 将使用 *dotnet run* 命令运行您的应用程序，并传递以下内容之后的命令行自变量
 ```
-  --server.urls http://0.0.0.0:${PORT}
+--server.urls http://0.0.0.0:${PORT}
 ```
 {: codeblock}
 
@@ -133,13 +133,13 @@ buildpack 将使用 *dotnet run* 命令运行您的应用程序，并传递以�
 
 将以下依赖项添加到 project.json 中： 
 ```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+"Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
 ```
 {: codeblock}
 
 将 *using* 语句添加到包含 Main 方法的文件中： 
 ```
-  using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
 

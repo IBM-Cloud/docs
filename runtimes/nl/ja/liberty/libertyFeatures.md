@@ -11,7 +11,7 @@ copyright:
 # Bluemix でサポートされる Liberty フィーチャー
 {: #liberty_features}
 
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 6 月 10 日*
 {: .last-updated}
 
 下表に、Bluemix でサポートされる Liberty フィーチャーを示します。

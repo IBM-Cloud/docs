@@ -40,7 +40,7 @@ New Relic 是協力廠商服務，可為您的應用程式提供監視度量值�
 1. 在 IBM Bluemix 中建立 New Relic 服務實例。
 
   <pre>
-$ cf create-service newrelic standard mynewrelic
+    $ cf create-service newrelic standard mynewrelic
   </pre>
   {: codeblock}
 
@@ -48,7 +48,7 @@ $ cf create-service newrelic standard mynewrelic
 
   <pre>
         &dash;&dash;&dash;
-applications:
+        applications:
         - name: myapp
          memory: 1G
          instances: 1
@@ -68,16 +68,17 @@ applications:
 如果您有現有的 New Relic 帳戶和授權碼，可以利用「使用者提供的服務」，將現有的 New Relic 服務連結至應用程式。
 
 1. 使用現有的授權碼來建立使用者提供的服務實例。例如，如果您現有的授權碼是 1234567，則可以使用 CF CLI 來進行 "create-user-provided-service"，並在出現提示時提供授權碼 1234567，如下所示：
-```
+
+  ```
     $ cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
-```
+  ```
   {: codeblock}
 
 2. 利用使用者提供的 New Relic 服務實例，將您的應用程式部署至 IBM Bluemix。以下是利用使用者提供的 New Relic 服務實例的範例應用程式資訊清單：
   <pre>
         &dash;&dash;&dash;
-applications:
+        applications:
         - name: myapp
          memory: 1G
          instances: 1

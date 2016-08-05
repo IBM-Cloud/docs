@@ -25,7 +25,7 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
 请参阅 Liberty buildpack 为应用程序生成的样本配置：
 
 ```
-    -javaagent:/home/vcap/app/.new_relic_agent/new_relic_agent-3.12.0.jar
+-javaagent:/home/vcap/app/.new_relic_agent/new_relic_agent-3.12.0.jar
     -Dnewrelic.home=/home/vcap/app/.new_relic_agent
     -Dnewrelic.config.license_key=123456
     -Dnewrelic.config.app_name=myapp
@@ -68,8 +68,9 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
 如果现有 New Relic 帐户和许可证密钥，那么可以使用“用户提供的服务”将现有 New Relic 服务绑定到应用程序。
 
 1. 使用现有许可证密钥来创建用户提供的服务实例。例如，如果现有许可证密钥为 1234567，那么可以使用 CF CLI 来执行“create-user-provided-service”命令，并在提示时提供许可证密钥 1234567，如下所示：
-```
-    $ cf create-user-provided-service mynewrelic -p "licenseKey"
+
+  ```
+$ cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
 ```
   {: codeblock}

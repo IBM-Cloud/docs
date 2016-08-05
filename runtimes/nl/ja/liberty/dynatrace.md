@@ -11,7 +11,7 @@ copyright:
 # Dynatrace の使用
 {: #using_dynatrace}
 
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 6 月 10 日*
 {: .last-updated}
 
 Dynatrace は、アプリケーションのモニタリングを提供するサード・パーティー・サービスです。

@@ -27,9 +27,11 @@ copyright:
 * [Utilisation de Dynatrace](dynatrace.html)
 * [Utilisation de New Relic](newRelic.html)
 * [Personnalisation de l'environnement d'exécution Java (JRE)](customizingJRE.html)
+* [Environnement JRE Oracle](oracle_jre.html)
 * [Journalisation et traçage](loggingAndTracing.html)
 * [Variables d'environnement](environmentVariables.html)
 * [Valeurs par défaut du pack de construction](buildpackDefaults.html)
+* [Mode Hors ligne](offlineMode.html)
 * [Dernières mises à jour](updates.html)
 
 # rellinks
