@@ -21,7 +21,7 @@ copyright:
 
 {: #deliverypipeline_extending}
 
-*Last updated: 4 August 2016*
+*Last updated: 5 August 2016*
 {: .last-updated}
 
 You can extend the capabilities of the {{site.data.keyword.deliverypipeline}} service by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
@@ -326,20 +326,7 @@ To create HipChat notifications:
 
 6. Repeat these steps to send HipChat notifications for other stages that include IBM Container Service, IBM Security Static Analyzer, and IBM Globalization jobs.
 
-## Using Active Deploy for zero downtime deployment in the pipeline
-{: #deliverypipeline_activedeploy}
 
-You can update running apps with zero downtime when you use the IBM Active Deploy service in your pipeline. Active Deploy provides you a continual update process where the new version of your app is finalized only when it proves to work properly in production. You can automate Active Deploy by integrating the service into your pipeline, which enables faster continuous delivery.
-
-A pipeline that uses Active Deploy would typically include these stages:
-
-  - A **Build** stage where you compile your project.
-  - A **Test** stage where you would evaluate the newly built app.
-  - A **Deploy** stage that includes these jobs:
-    - A **Cloud Foundry** build job that deploys a single, un-routed instance of the new version of the app.
-    - The **Active Deploy-Begin** job that contains a script that starts the deployment process and increases the instances of your new app until both versions of your app are live in production.
-    - **Test** jobs that you can use to test your new app in production.
-    - The **Active Deploy-Complete** job that ends the deployment process and decreases the original version of your app if the test phase was successful. Otherwise, a rollback will occur and your app will revert to the original version.
 
 ## Using Active Deploy for zero downtime deployment in the pipeline
 {: #deliverypipeline_activedeploy}
