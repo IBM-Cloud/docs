@@ -17,7 +17,7 @@ copyright:
 {:pre: .pre}
 
 # Getting started with {{site.data.keyword.openwhisk_short}}
-Last updated: 2 August 2016
+Last updated: 4 August 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} is a distributed, event-driven compute service. {{site.data.keyword.openwhisk_short}} runs application logic in response to events or direct invocations from web or mobile apps over HTTP. Events can be provided from Bluemix services like Cloudant and from external sources. Developers can focus on writing application logic, and creating actions that are executed on demand. The rate of executing actions always matches the event rate, resulting in inherent scaling and resiliency and optimal utilization. You pay for only what you use and you don't have to manage a server. You can also get the [source code](https://github.com/openwhisk/openwhisk) and run the system yourself.
@@ -32,7 +32,7 @@ You can use the {{site.data.keyword.openwhisk_short}} command line interface (CL
 Go to [Configure CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} and follow the instructions to install it. 
 **Note:** You must have Python 2.7 installed on your system to use the CLI.
 
-After {{site.data.keyword.openwhisk_short}} is set up with the CLI, you can begin using it from the command line or through REST APIs.
+After {{site.data.keyword.openwhisk_short}} is set up with the CLI, you can begin using it from the command line.
 
 ## Using the {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_using_cli}
