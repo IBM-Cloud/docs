@@ -623,11 +623,32 @@ Note: Procedures that are outlined in this doc require the Swift CLI. For more i
 
 ### Managing {{site.data.keyword.objectstorageshort}} users {: #managing-users}
 
-You can manage {{site.data.keyword.objectstorageshort}} users in the Service Credential tab on your dashboard, the Cloud Foundry API, or the Cloud Foundry CLI. You can create administrative users using the GUI, CF API, or CF CLI. To create a member, you must be an admin user and use the CF API or CF CLI.
+You can manage {{site.data.keyword.objectstorageshort}} users in the Service Credential tab on your dashboard, the Cloud Foundry API, or the Cloud Foundry CLI. You can create users using the GUI, CF API, or CF CLI.
 
 
 
-### Creating a user with the member role {: #creating-member}
+### Creating a user in the UI {: #creating-user-ui}
+
+Access control lists are available in the Object Storage dashboard of the new {{site.data.keyword.Bluemix_notm}} console. To see the new console, click **Try the new {{site.data.keyword.Bluemix_notm}}**. 
+
+1.  Log in to {{site.data.keyword.Bluemix_notm}} as a user with a developer role. You must be located within the space of the service instance you want to manage.
+
+2. Click the **Service Credentials** tab.
+
+3. Click **New Credential**.
+
+4. Provide a name for the credential.
+
+5. In the **Add Inline Configuration Parameters** text field, input the credential information for the role you want to create. The information must be formatted as a JSON payload.
+  - To create an administrative user: `{"role":"admin"}`
+  - To create a non-administrative user: `{"role":"member"}`
+
+6. Click **Add**.
+
+
+
+
+### Creating a user with the command line {: #creating-user-cli}
 
 1. Log in to {{site.data.keyword.Bluemix_notm}} as a user with a developer role. You must be located within the space of the service instance you want to manage.
 
@@ -635,14 +656,14 @@ You can manage {{site.data.keyword.objectstorageshort}} users in the Service Cre
   cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
   ```
 
-2. Create service credentials for a member with non-admin privileges. `service-key-name` will be the name of your credential. You can use either the Cloud Foundry command or the cURL command.
+2. You can use either the Cloud Foundry commands or cURL commands to create service credentials for a user. `service-key-name` will be the name of your credential. A user can have the role of an admin or a member.
 
   Cloud Foundry command:
   ```
-  cf create-service-key "<object_storage_service_instance_name>" <service-key-name> -c '{"role":"member"}'
+  cf create-service-key "<object_storage_service_instance_name>" <service-key-name> -c '{"role":"<user_role>"}'
   ```
 
-  Example:
+  Example command to create service credentials for a member user:
 
   ```
   cf create-service-key "Object-Storage-AclTest" member1 -c '{"role":"member"}'
@@ -650,7 +671,7 @@ You can manage {{site.data.keyword.objectstorageshort}} users in the Service Cre
   ```
   cURL command:
   ```
-  curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name": "<user_name>", "role": "member"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: " -H "Cookie: "
+  curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name": "<user_name>", "role": "<user_role>"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: " -H "Cookie: "
   ```
 
 3. Validate credentials for the Service Key you created.
@@ -865,7 +886,7 @@ You can manipulate write ACL combinations.
 
 *Table 3: Write ACL permissions by option*
 
-Note: Use a comma (,) to separate ACLs. For example, `-write-acl project id:user_id1, project_id2:user_id2`.
+Note: Use a comma (,) to separate ACLs. For example, `--write-acl project id:user_id1, project_id2:user_id2`.
 
 
 
@@ -924,13 +945,15 @@ X-Storage-Policy: standard
   ```
 
 
+
+
 ## Unbinding and deprovisioning {{site.data.keyword.objectstorageshort}} {: #deprovisioning-object-storage}
 
 ### How to deprovision your {{site.data.keyword.objectstorageshort}} service
 1.	Select your service from the {{site.data.keyword.Bluemix_notm}} dashboard.  
 2.	Click the gear icon and select **Delete Service**.
 	
-**Warning:** If you deprovision an IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} service instance, the cloud project and Swift account are deleted. All containers and objects in the deprovisioned instance are deleted from Swift and cannot be restored.
+**Attention:** If you deprovision an IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} service instance, the cloud project and Swift account are deleted. All containers and objects in the deprovisioned instance are deleted from Swift and cannot be restored.
 
 ### Unbinding an application or deleting a service key
 
