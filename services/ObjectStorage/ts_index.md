@@ -1,17 +1,17 @@
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} troubleshooting
+# Risoluzione dei problemi di {{site.data.keyword.objectstorageshort}}
 {: #troubleshooting}
 
-*Last updated: 24 June 2016*
+*Ultimo aggiornamento: 24 giugno 2016*
 {: .last-updated}
 
-## Unrecognized token contentpack returned when using openstack4J with Liberty Profile
+## È stato restituito un token contentpack non riconosciuto durante l'utilizzo di openstack4J con il profilo Liberty
 {: #unrecognized_token}
 
-### Symptom
+### Sintomo 
 
-The following stacktrace might occur when using openstack4j with the Liberity Profile:
+È possibile che si verifichi la seguente traccia di stack quando utilizzi openstack4j con il profilo Liberty:
 
     Exception thrown by application class 'org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity:124'
     org.openstack4j.api.exceptions.ClientResponseException: Unrecognized token 'contentpack': was expecting ('true', 'false' or 'null') at [Source: contentpack ; line: 1, column: 12]
@@ -27,11 +27,11 @@ The following stacktrace might occur when using openstack4j with the Liberity Pr
     at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
     at java.lang.reflect.Method.invoke(Unknown Source)
 
-### Solution
+### Soluzione
 
-This problem results from a class-loading issue, where the openstack4j library contains some of the same packages that are provided in the Liberty profile.  For example, OpenStack4j uses JERSEY, which might collide with the Wink libs.
+Questo problema è causato da un errore di caricamento della classe, dove la libreria openstack4j contiene alcuni degli stessi pacchetti forniti nel profilo Liberty.  Ad esempio, OpenStack4j utilizza JERSEY, che può essere in conflitto con le librerie Wink.
 
-To resolve the problem, follow these steps:
+Per risolvere il problema, utilizza la seguente procedura:
 
-1. Use reverse classloading (parentLast).
-2. Exclude jaxrs from the enabled features.
+1. Utilizza il caricamento della classe inverso (parentLast).
+2. Escludi jaxrs dalle funzioni abilitate.
