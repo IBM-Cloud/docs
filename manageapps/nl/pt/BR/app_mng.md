@@ -15,6 +15,7 @@ copyright:
 {: #app_management}
 
 *Última atualização: 17 de março de 2016*
+{: .last-updated}
 
 App Management é um conjunto de utilitários de desenvolvimento e depuração que podem ser ativados para
 seus aplicativos Liberty e Node.js no {{site.data.keyword.Bluemix}}.

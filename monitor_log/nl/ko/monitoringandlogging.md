@@ -14,7 +14,7 @@ copyright:
 #모니터링 및 로깅
 {: #monitoringandlogging}
 
-*마지막 업데이트 날짜: 2016년 5월 24일*
+*마지막 업데이트 날짜: 2016년 7월 1일*
 {: .last-updated}
 
 앱을 모니터링하고 로그를 검토하면서 애플리케이션 실행을 따라 가면 배치에 대해 더 잘 이해할 수 있습니다. 또한 문제를 찾아 이를 해결하는 데 드는 시간과 노력을 줄일 수 있습니다.
@@ -22,7 +22,7 @@ copyright:
 
 {{site.data.keyword.Bluemix}} 애플리케이션은 넓게 배포되는 다중 인스턴스 애플리케이션으로, 애플리케이션의 실행과 이의 데이터를 다수의 서비스에서 공유할 수 있습니다. 이러한 복합 환경에서 앱을 모니터링하고 로그를 검토하는 것은 앱 관리에 중요합니다. 
 
-##앱 모니터링 및 로깅
+##Cloud Foundry 앱 모니터링 및 로깅
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}}에는 실행 중인 앱의 로그 파일을 생성하는 로깅 메커니즘이 기본 제공됩니다. 로그를 통해 사용자 앱에 대해 생성된 오류, 경고 및 정보 메시지를 확인할 수 있습니다. 또한 로그 메시지를 로그 파일에 기록하도록 앱을 구성할 수도 있습니다. 로그 형식 및 로그를 보는 방법에 대한 자세한 정보는 [Cloud Foundry에서 실행 중인 앱 로깅](#logging_for_bluemix_apps)을 참조하십시오.
@@ -31,21 +31,21 @@ copyright:
 
 * 앱 인스턴스의 성능 정보를 수집 및 모니터링하고 이들이 작동 가능한지 확인합니다. 
 * 잠재적 병목 현상 발견 또는 업그레이드가 필요한 시점 등과 같이 애플리케이션 운영에 대한 통찰력을 얻습니다. 
-* 자원 사용량 및 비용을 예측합니다. 
+* 리소스 사용량 및 비용을 예측합니다. 
 
 {{site.data.keyword.Bluemix_notm}} 플랫폼에서 사용자의 배치를 안정적으로 운용하기 위해서는 문제점을 즉각 발견하여 원인을 효율적으로 판별하는 것이 좋습니다. 이를 위해서는 문제점 해결을 염두에 두고 앱을 개발하며 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 때 모니터링과 로깅을 위한 서비스나 도구를 사용하십시오. 
 
-###Cloud Foundry에서 실행되는 앱 모니터링
+###Cloud Foundry에서 실행 중인 앱 모니터링
 {: #monitoring_bluemix_apps}
 
-Cloud Foundry 인프라를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 앱을 실행하는 경우 작동 상태, 자원 사용량, 트래픽 메트릭 등 성능 정보를 받아보기를 원합니다. 이러한 성능 정보가 있으면 그에 맞게 의사 결정을 하거나 조치를 취할 수 있습니다. 
+Cloud Foundry 인프라를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 앱을 실행하는 경우 작동 상태, 리소스 사용량, 트래픽 메트릭 등 성능 정보를 받아보기를 원합니다. 이러한 성능 정보가 있으면 그에 맞게 의사 결정을 하거나 조치를 취할 수 있습니다. 
 
 {{site.data.keyword.Bluemix_notm}} 앱을 모니터하려면 다음 방법 중 하나를 사용하십시오.
 
 * {{site.data.keyword.Bluemix_notm}} 서비스. 모니터링 및 분석은 애플리케이션 성능을 모니터링할 때 사용할 수 있는 서비스를 제공합니다. 또한 이 서비스는 로그 분석과 같은 분석 기능도 제공합니다. 자세한 정보는 [Monitoring and Analytics](../services/monana/index.html)를 참조하십시오. 
 * 써드파티 옵션. 예를 들어, [New Relic](http://newrelic.com/){:new_window}이 있습니다. 
 
-###Cloud Foundry에서 실행되는 앱 로깅
+###Cloud Foundry에서 실행 중인 앱 로깅
 {: #logging_for_bluemix_apps}
 
 로그 파일은 Cloud Foundry 인프라를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 앱을 실행할 때 자동으로 작성됩니다. 배치에서 런타임까지 어느 단계에서 오류가 발생하더라도 로그를 확인하여 문제를 해결하는 데 도움이 되는 단서를 얻을 수 있습니다.
@@ -60,7 +60,7 @@ Cloud Foundry 인프라를 사용하여 {{site.data.keyword.Bluemix_notm}}에서
 {{site.data.keyword.Bluemix_notm}} 애플리케이션에 대한 로그는 다음 패턴과 유사하게 고정 형식으로 표시됩니다. 
 
 ```
-         1         2         3         4         5
+1         2         3         4         5
 12345678901234567890123456789012345678901234567890
 --------------------------------------------------
 yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
@@ -228,7 +228,7 @@ cf logs appname --recent | grep '\[App'
 
   2. 사용자 제공 서비스 인스턴스를 작성하십시오.
      
-	 `'cf create-user-provided-service'` 명령 또는 `'cups'`(명령의 짧은 버전)를 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오.
+	 서비스 제공 서비스 인스턴스를 작성하려면 ```cf create-user-provided-service``` 명령(또는 ```cups```, 명령의 짧은 버전)을 사용하십시오. 
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```
@@ -257,7 +257,7 @@ cf logs appname --recent | grep '\[App'
 	 <tr>
      <td>syslog-tls 호스트</td>
      <td>`cf cups my-logs -l syslog-tls://HOST:PORT`</td>
-	 <td>인증서는 인증 기관에 의해 신뢰받아야 합니다. 자체 서명 인증서를 사용하지 마십시오.</td>
+	 <td>인증서는 인증 기관에 의해 보안되어야 합니다. 자체 서명 인증서를 사용하지 마십시오.</td>
      </tr>
 	 <tr>
      <td>HTTPS POST</td>
@@ -282,7 +282,7 @@ cf logs appname --recent | grep '\[App'
 	 사용자 제공 서비스 인스턴스의 이름입니다.
 	 
   4. 앱을 다시 스테이징하십시오.
-     변경사항이 적용되도록 ```cf restage appname```을 입력하십시오. 
+     유형```cf restage appname``` 변경사항이 적용되도록 하십시오. 
 
 #### 외부 호스트에서 로그 보기
 {: #viewing_logs_external}
@@ -302,7 +302,7 @@ cf logs appname --recent | grep '\[App'
      a. Jane은 [Splunk Light 다운로드 사이트](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}에서 Splunk Light를 다운로드한 후에 다음 명령을 사용하여 이를 설치합니다. 소프트웨어는 */opt/splunk*에 설치됩니다.  
        
 	    ```
-        dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
+dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
         ```
 	   
      b. Jane은 {{site.data.keyword.Bluemix_notm}}와의 통합을 위해 RFC5424 syslog 기술 추가 기능을 설치하고 패치합니다. 추가 기능 설치 관련 지시사항에 대한 자세한 정보는 [Cloud Foundry 가이드라인](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}을 참조하십시오.   
@@ -310,19 +310,17 @@ cf logs appname --recent | grep '\[App'
 	    Jane은 다음 명령을 사용하여 추가 기능을 설치합니다. 
         
 	    ```
-        cd /opt/splunk/etc/apps
+cd /opt/splunk/etc/apps
         tar xvfz ~/rfc5424-syslog_11.tgz
         ```
 	   
         그리고 Jane은 */opt/splunk/etc/apps/rfc5424/default/transforms.conf*를 다음 텍스트로 구성된 새 *transforms.conf* 파일로 대체하여 추가 기능을 패치합니다. 
 	   
 	    ```
-        [rfc5424_host]
+[rfc5424_host]
         DEST_KEY = MetaData:Host
         REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
-        FORMAT = host::$1
-
-        [rfc5424_header]
+        FORMAT = host::$1[rfc5424_header]
         REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
         FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
         MV_ADD = true
@@ -368,7 +366,7 @@ cf logs appname --recent | grep '\[App'
      a. Jane은 cf cli에서 다음 명령을 사용하여 syslog 드레인 서비스를 작성합니다. 
 	 
      ```
-     cf cups splunk -l syslog://dummyhost:5140
+cf cups splunk -l syslog://dummyhost:5140
      ```
         
      **참고:** *dummyhost*는 실제 이름이 아닙니다. 이는 실제 호스트 이름을 숨기는 데 사용됩니다.  
@@ -376,7 +374,7 @@ cf logs appname --recent | grep '\[App'
      b. Jane은 syslog 드레인 서비스를 자체 영역의 앱에 바인드한 후에 앱을 다시 스테이징합니다. 
 	 
 	 ```
-     cf bind-service myapp splunk
+cf bind-service myapp splunk
      cf restage myapp
      ```
 		

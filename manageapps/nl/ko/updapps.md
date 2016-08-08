@@ -51,7 +51,7 @@ cf push 명령 또는 {{site.data.keyword.Bluemix}} DevOps Services를 사용하
   1. 다음 명령을 입력하여 조직의 사용자 정의 도메인을 작성하십시오.
     
     ```
-    cf create-domain <your org name> mydomain
+cf create-domain <your org name> mydomain
     ```
     
     *organization_name*
@@ -65,7 +65,7 @@ cf push 명령 또는 {{site.data.keyword.Bluemix}} DevOps Services를 사용하
   2. 다음 명령을 입력하여 사용자 정의 도메인을 포함한 라우트를 애플리케이션에 추가하십시오.
     
     ```
-    cf map-route myapp mydomain -n host_name
+cf map-route myapp mydomain -n host_name
     ```
     
     *myapp*
@@ -123,7 +123,7 @@ cf delete-route domain -n hostname -f
 1. *Blue* 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시하십시오.
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   **결과:** *Blue* 앱이 실행 중이며 URL `Blue.mybluemix.net`에 응답합니다.
@@ -131,7 +131,7 @@ cf delete-route domain -n hostname -f
 2. 다음과 같이 **cf rename** 명령을 사용하여 *Blue* 앱의 이름을 *Green*으로 바꾸십시오.
   
   ```
-  cf rename Blue Green
+cf rename Blue Green
   ```
   
   **cf apps** 명령을 사용하여 현재 영역에 있는 애플리케이션을 나열하십시오.
@@ -148,7 +148,7 @@ cf delete-route domain -n hostname -f
 3. 필요한 사항을 변경하고 업데이트된 *Blue* 버전을 준비 상태로 유지하십시오. 업데이트된 *Blue* 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시하십시오.
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   **cf apps** 명령을 사용하여 현재 영역에 있는 애플리케이션을 나열하십시오.
@@ -168,7 +168,7 @@ cf delete-route domain -n hostname -f
 4. 선택사항: 앱의 이전 버전(*Green*)을 삭제하려는 경우, **cf delete** 명령을 사용하십시오.
   
   ```
-  cf delete Green -f
+cf delete Green -f
   ```
   
   **cf route** 명령을 사용하여 영역에 있는 라우트를 나열하십시오.
@@ -189,7 +189,7 @@ cf delete-route domain -n hostname -f
 1. *Blue* 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시하십시오.
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   **결과:** *Blue* 앱이 실행 중이며 URL `Blue.mybluemix.net`에 응답합니다.
@@ -197,7 +197,7 @@ cf delete-route domain -n hostname -f
 2. 필요한 사항을 변경하고 *Green* 버전을 준비 상태로 유지하십시오. *Green* 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시하십시오.
   
   ```
-  cf push Green
+cf push Green
   ```
   
   **cf route** 명령을 사용하여 현재 영역에 있는 애플리케이션을 나열하십시오.
@@ -218,7 +218,7 @@ cf delete-route domain -n hostname -f
 3. `Blue.mybluemix.net`에 대한 모든 트래픽이 *Blue* 앱과 *Green* 앱에 라우트되도록 *Blue* 앱을 *Green* 앱에 맵핑하십시오.
   
   ```
-  cf map-route Green mybluemix.net -n Blue
+cf map-route Green mybluemix.net -n Blue
   ```
   
   cf routes 명령을 사용하여 영역에 있는 라우트를 나열하십시오.
@@ -239,7 +239,7 @@ cf delete-route domain -n hostname -f
 4. *Green*이 예상대로 실행되는 것이 확인되면, *Blue* 앱에서 `Blue.mybluemix.net` 라우트를 제거하십시오.
   
   ```
-  cf unmap-route Blue mybluemix.net -n Blue
+cf unmap-route Blue mybluemix.net -n Blue
   ```
   
   cf routes 명령을 사용하여 영역에 있는 라우트를 나열하십시오.
@@ -257,7 +257,7 @@ cf delete-route domain -n hostname -f
 5. *Green* 앱에 대한 `Green.mybluemix.net` 라우트를 제거하십시오.
   
   ```
-  cf unmap-route Green mybluemix.net -n Green
+cf unmap-route Green mybluemix.net -n Green
   ```
   
   **결과:** CF 라우터가 *Blue* 앱에 대한 트래픽 전송을 중지합니다. *Green* 앱이 URL `Blue.mybluemix.net`에 응답합니다.
@@ -265,7 +265,7 @@ cf delete-route domain -n hostname -f
 6. 선택사항: 애플리케이션의 이전 버전(*Blue*)을 삭제하려는 경우, `cf delete` 명령을 사용하십시오.
   
   ```
-  cf delete Blue -f
+cf delete Blue -f
   ```
   
   cf route 명령을 사용하여 영역에 있는 라우트를 나열하십시오.

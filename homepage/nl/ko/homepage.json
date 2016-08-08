@@ -6,7 +6,7 @@
 	}, {
 		"id": "Categories",
 		"items": [{
-			"title": "계산",
+			"title": "컴퓨팅",
 			"img": "homepage/images/compute.svg",
 			"href": "compute/index.html",
 			"links": [{
@@ -294,7 +294,7 @@
 		
 	}, {
 		"id": "Resources",
-		"descriptionTitle": "자원",
+		"descriptionTitle": "리소스",
 		"items": [{
 			"title": "Bluemix를 사용해야 하는 이유",
 			"img": "homepage/images/WhatIsBluemix-icon.svg",

@@ -62,9 +62,9 @@ copyright:
 アクションをクリックします。
 **注**:  CLI を使用してアクティビティー・ログに出力を表示するには、以下のコマンドを使用します。 
 
-  ```
-  wsk activation poll
-  ```
+  
+wsk activation poll
+  
   {: pre} 
 
 ## フィルター・オプション 

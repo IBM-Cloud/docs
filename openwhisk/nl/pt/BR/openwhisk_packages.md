@@ -19,6 +19,7 @@ copyright:
 # Usando e criando pacotes do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
 *Última atualização: 28 de março de 2016*
+{: .last-updated}
 
 No {{site.data.keyword.openwhisk}}, é possível usar pacotes para empacotar um conjunto de ações relacionadas juntas e compartilhá-las com outras pessoas.
 
@@ -61,11 +62,11 @@ Vários pacotes são registrados com o {{site.data.keyword.openwhisk_short}}. É
   ```
   {: pre}
   ```
-  pacote /whisk.system/cloudant: serviço de banco de dados do Cloudant
+  package /whisk.system/cloudant: serviço de banco de dados do Cloudant
      (parâmetros: {{site.data.keyword.Bluemix_notm}}ServiceName host username password dbname includeDoc overwrite)
-   ação /whisk.system/cloudant/read: ler documento do banco de dados
-   ação /whisk.system/cloudant/write: gravar documento no banco de dados
-   feed /whisk.system/cloudant/changes: feed de mudança do banco de dados
+   action /whisk.system/cloudant/read: ler documento do banco de dados
+   action /whisk.system/cloudant/write: gravar documento no banco de dados
+   feed   /whisk.system/cloudant/changes: feed de mudança do banco de dados
   ```
   {: screen}
 
@@ -80,7 +81,7 @@ Vários pacotes são registrados com o {{site.data.keyword.openwhisk_short}}. É
   ```
   {: pre}
   ```
-  ação /whisk.system/cloudant/read: ler documento do banco de dados
+  action /whisk.system/cloudant/read: ler documento do banco de dados
      (parâmetros: dbname includeDoc id)
   ```
   {: screen}
@@ -100,8 +101,8 @@ Vários pacotes são registrados com o {{site.data.keyword.openwhisk_short}}. É
   ```
   {: pre}
   ```
-  ação /whisk.system/samples/greeting: imprimir uma saudação amistosa
-     (parâmetros: name place)
+  action /whisk.system/samples/greeting: imprimir uma saudação amistosa
+     (parâmetros: nome local)
   ```
   {: screen}
 
@@ -228,7 +229,7 @@ Feeds oferecem uma maneira conveniente para configurar uma origem de eventos ext
   ```
   {: pre}
   ```
-  ação /whisk.system/alarms/alarm: disparar acionador quando o alarme ocorrer
+  action /whisk.system/alarms/alarm: disparar acionador quando o alarme ocorrer
      (parâmetros: cron trigger_payload)
   ```
   {: screen}

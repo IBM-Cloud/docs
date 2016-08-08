@@ -306,7 +306,8 @@ Para criar uma instância de serviço fornecida pelo usuário e ligá-la a um ap
 
 1. Crie uma instância de serviço fornecida pelo usuário usando o comando **cf create-user-provided-service** ou **cf
 cups**:
-    * Para criar uma instância de serviço fornecida pelo usuário, use a opção **-p** e separe os nomes de parâmetro com vírgulas. A interface da linha de comandos cf, então, solicita cada parâmetro por vez. Por exemplo:
+    * Para criar uma instância de serviço fornecida pelo usuário, use a opção **-p** e separe os nomes de parâmetro com vírgulas. A interface da linha de comandos cf, então, solicita cada parâmetro por vez. Por
+exemplo:
         ```
         cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com

@@ -17,7 +17,7 @@ copyright:
 
 # Gestion des organisations et des espaces
 {: #orgsspacesusers}
-*Dernière mise à jour : 16 mai 2016*
+Dernière mise à jour : 16 mai 2016
 {: .last-updated}
 
 En tant que propriétaire de compte, vous pouvez gérer vos organisations en cliquant sur l'icône **Compte et support**

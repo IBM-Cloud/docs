@@ -1,15 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2015
-
+  years: 2015, 2016
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms} 
+{:tsCauses: .tsCauses} 
+{:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -30,7 +29,7 @@ copyright:
 {:shortdesc}
 
 
-嘗試刪除服務實例時，您看到此服務分配管理系統錯誤訊息：`閘道逾時`。
+嘗試刪除服務實例時，您看到此服務分配管理系統錯誤訊息：`Gateway timeout`。
 {: tsSymptoms}
 
 
@@ -40,3 +39,5 @@ copyright:
 
 若要解決此問題，請建立具有相同服務名稱的服務實例，然後將它連結至應用程式。之後，您就可以刪除服務實例以及使用該服務的應用程式。   
 {: tsResolve}
+
+

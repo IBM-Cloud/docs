@@ -25,7 +25,7 @@ copyright:
 動作是在 {{site.data.keyword.openwhisk}} 平台上執行的無狀態程式碼 Snippet。動作可以是 JavaScript 函數、Swift 函數，或包裝在 Docker 容器中的自訂可執行程式。例如，動作可以用來偵測映像檔中的樣式、聚集一組 API 呼叫，或張貼推文。
 {:shortdesc}
 
-可以明確地呼叫動作，或為回應某事件而執行動作。在任一情況下，執行動作都會根據唯一啟動 ID 來識別啟動記錄。動作的輸入及動作的結果是鍵值組的定義檔，其中索引鍵是字串，而值是有效的 JSON 值。
+可以明確地呼叫動作，或為回應某事件而執行動作。在任一情況下，執行動作都會根據唯一啟動 ID 來識別啟動記錄。動作的輸入及動作的結果是鍵值組的字典，其中索引鍵是字串，而值是有效的 JSON 值。
 
 動作是由其他動作的呼叫或定義的一連串動作所組成。
 
@@ -43,8 +43,7 @@ copyright:
 1. 建立含有下列內容的 JavaScript 檔。在此範例中，檔名是 'hello.js'。
   
   ```
-  function main() {
-return {payload: 'Hello world'};
+function main() {return {payload: 'Hello world'};
   }
   ```
   {: codeblock}
@@ -54,22 +53,22 @@ return {payload: 'Hello world'};
 2. 從下列 JavaScript 函數建立動作。在此範例中，動作稱為 'hello'。
 
   ```
-  wsk action create hello hello.js
+wsk action create hello hello.js
   ```
   {: pre}
   ```
-  ok: created action hello
+ok: created action hello
   ```
   {: screen}
 
 3. 列出您已建立的動作：
   
   ```
-  wsk action list
+wsk action list
   ```
   {: pre}
   ```
-  actions
+actions
   hello       private
   ```
   {: screen}
@@ -79,13 +78,12 @@ return {payload: 'Hello world'};
 4. 建立動作之後，即可使用 'invoke' 指令透過 {{site.data.keyword.openwhisk_short}} 在雲端執行它。在指令中指定旗標，即可透過*封鎖* 呼叫或*非封鎖* 呼叫來呼叫動作。封鎖呼叫會等待動作執行完成並傳回結果。這個範例使用封鎖參數 `--blocking`：
 
   ```
-  wsk action invoke --blocking hello
+wsk action invoke --blocking hello
   ```
   {: pre}
   ```
-  ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  {
-"result": {
+ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
+  {"result": {
           "payload": "Hello world"
       },
       "status": "success",
@@ -103,21 +101,21 @@ return {payload: 'Hello world'};
 5. 如果您不是立即需要動作結果，則可以省略 `--blocking` 旗標，以進行非封鎖呼叫。您稍後可以透過使用啟動 ID 來取得結果。請參閱下列範例：
 
   ```
-  wsk action invoke hello
+wsk action invoke hello
   ```
   {: pre}
   ```
-  ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
+ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: screen}
 
   ```
-  wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
+wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: pre}
   ```
   {
-"payload": "Hello world"
+      "payload": "Hello world"
   }
   ```
   {: screen}
@@ -125,11 +123,11 @@ return {payload: 'Hello world'};
 6. 如果您忘記記錄啟動 ID，則可以取得從最近到最舊排列的啟動清單。執行下列指令，以取得啟動的清單：
 
   ```
-  wsk activation list
+wsk activation list
   ```
   {: pre}
   ```
-  activations
+activations
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
@@ -143,8 +141,8 @@ return {payload: 'Hello world'};
 1. 在動作中使用參數。例如，使用下列內容來更新 'hello.js' 檔：
   
   ```
-  function main(params) {
-return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+function main(params) {
+     return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -154,16 +152,16 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 2. 更新 `hello` 動作並呼叫動作，同時將 `name` 及 `place` 參數值傳遞給它。請參閱下列範例：
   
   ```
-  wsk action update hello hello.js
+wsk action update hello hello.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
   ```
   {: pre}
   ```
   {
-"payload": "Hello, Bernie from Vermont"
+      "payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -180,19 +178,19 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 1. 使用 `--param` 選項來連結參數值，以更新動作。
 
   ```
-  wsk action update hello --param place 'Vermont'
+wsk action update hello --param place 'Vermont'
   ```
   {: pre}
 
 2. 呼叫動作，但這次只傳遞 `name` 參數。
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie'
+wsk action invoke --blocking --result hello --param name 'Bernie'
   ```
   {: pre}
   ```
   {
-"payload": "Hello, Bernie from Vermont"
+      "payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -202,12 +200,12 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 3. 呼叫動作，並傳遞 `name` 及 `place` 值。後者會改寫連結至動作的值。
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
   ```
   {: pre}
   ```
   {  
-"payload": "Hello, Bernie from Washington, DC"
+      "payload": "Hello, Bernie from Washington, DC"
   }
   ```
   {: screen}
@@ -220,8 +218,7 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 1. 將下列內容儲存至稱為 `asyncAction.js` 的檔案中。
 
   ```
-  function main() {
-setTimeout(function() {
+function main() {setTimeout(function() {
           return whisk.done({done: true});
       }, 20000);
       return whisk.async();
@@ -236,16 +233,16 @@ setTimeout(function() {
 2. 執行下列指令，以建立並呼叫動作：
 
   ```
-  wsk action create asyncAction asyncAction.js
+wsk action create asyncAction asyncAction.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result asyncAction
+wsk action invoke --blocking --result asyncAction
   ```
   {: pre}
   ```
   {
-"done": true
+      "done": true
   }
   ```
   {: screen}
@@ -255,23 +252,23 @@ setTimeout(function() {
 3. 提取啟動日誌，來查看啟動需要多久時間才能完成：
 
   ```
-  wsk activation list --limit 1 asyncAction
+wsk activation list --limit 1 asyncAction
   ```
   {: pre}
   ```
-  activations
+activations
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
   {: screen}
 
 
   ```
-  wsk activation get b066ca51e68c4d3382df2d8033265db0
+wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
  ```
   {
-"start": 1455881628103,
+      "start": 1455881628103,
       "end":   1455881648126,
       ...
   }
@@ -289,11 +286,10 @@ setTimeout(function() {
 此範例會呼叫 Yahoo Weather 服務，以取得特定位置的現行狀況。 
 
 1. 將下列內容儲存至稱為 `weather.js` 的檔案中。
+  
   ```
-    var request = require('request');
-    
-    function main(msg) {
-        var location = msg.location || 'Vermont';
+var request = require('request');function main(params) {
+     var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
     
         request.get(url, function(error, response, body) {
@@ -302,9 +298,7 @@ setTimeout(function() {
             var temperature = condition.temp;
             var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
             whisk.done({msg: output});
-        });
-    
-return whisk.async();
+        });return whisk.async();
     }
   ```
   {: codeblock}
@@ -315,11 +309,11 @@ return whisk.async();
 
 2. 執行下列指令，以建立並呼叫動作：
   ```
-  wsk action create weather weather.js
+wsk action create weather weather.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   ```
   {: pre}
   ```
@@ -339,11 +333,11 @@ return whisk.async();
 1. 顯示 `/whisk.system/util` 套件中的動作。
   
   ```
-  wsk package get --summary /whisk.system/util
+wsk package get --summary /whisk.system/util
   ```
   {: pre}
   ```
-  package /whisk.system/util
+package /whisk.system/util
    action /whisk.system/util/cat: Concatenate array of strings
    action /whisk.system/util/head: Filter first K array elements and discard rest
    action /whisk.system/util/date: Get current date and time
@@ -357,7 +351,7 @@ return whisk.async();
 2. 建立動作序列，以將某個動作的結果當作下一個動作的引數來傳遞。
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
+wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -366,7 +360,7 @@ return whisk.async();
 3. 在呼叫動作序列之前，請建立稱為 'haiku.txt' 且包含數行文字的文字檔：
 
   ```
-  Over-ripe sushi,
+Over-ripe sushi,
   The Master
   Is full of regret.
   ```
@@ -375,12 +369,12 @@ return whisk.async();
 4. 呼叫動作：
   
   ```
-  wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
+wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
   ```
   {: pre}
   ```
   {
-"length": 3,
+      "length": 3,
       "lines": [
           "Is full of regret.",
           "Over-ripe sushi,",
@@ -409,7 +403,7 @@ return whisk.async();
 動作只是最上層 Swift 函數。例如，建立稱為 `hello.swift` 且含有下列內容的檔案：
 
 ```
-  func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
+func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
           return [ "greeting" : "Hello \(name)!" ]
       } else {
 return [ "greeting" : "Hello stranger!" ]
@@ -418,7 +412,7 @@ return [ "greeting" : "Hello stranger!" ]
 ```
 {: codeblock}
 
-Swift 動作一律會使用某個定義檔，並產生一個定義檔。
+Swift 動作一律會使用某個字典，並產生一個字典。
 
 您可以從此函數建立稱為 `helloSwift` 的 {{site.data.keyword.openwhisk_short}} 動作，如下所示：
 
@@ -452,7 +446,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 使用 {{site.data.keyword.openwhisk_short}} Docker 動作，您可以使用任何語言來撰寫動作。
 
-您的程式碼會編譯成可執行二進位檔，並內嵌至 Docker 映像檔。二進位程式與系統互動的方式是從 `stdin` 取得輸入，並透過 `stdout` 回覆。
+您的程式碼會編譯成可執行的二進位檔，並內嵌在 Docker 映像檔中。二進位程式與系統互動的方式是從 `stdin` 取得輸入，並透過 `stdout` 回覆。
 
 先決條件是您必須具備 Docker Hub 帳戶。若要設定免費 Docker ID 及帳戶，請移至 [Docker Hub](https://hub.docker.com){: new_window}。
 
@@ -461,20 +455,20 @@ wsk action invoke --blocking --result helloSwift --param name World
 1. 下載 Docker 架構。您可以使用 CLI 進行下載，如下所示：
 
   ```
-  wsk sdk install docker
+wsk sdk install docker
   ```
   {: pre}
   ```
-  Docker 架構現在安裝在現行目錄中。
+Docker 架構現在安裝在現行目錄中。
   ```
   {: screen}
 
   ```
-  ls dockerSkeleton/
+ls dockerSkeleton/
   ```
   {: pre}
   ```
-  Dockerfile      README.md       buildAndPush.sh client          server
+Dockerfile      README.md       buildAndPush.sh client          server
   ```
   {: screen}
 
@@ -483,7 +477,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 2. 在 blackbox 架構中，設定您的自訂二進位檔。此架構已包括您可以使用的 C 程式。
 
   ```
-  cat ./dockerSkeleton/client/example.c
+cat ./dockerSkeleton/client/example.c
   ```
   {: pre}
   {: pre}
@@ -491,8 +485,8 @@ wsk action invoke --blocking --result helloSwift --param name World
   #include <stdio.h>
   
   int main(int argc, char *argv[]) {
-printf("Hello %s from arbitrary C program!\n",
-             (argc == 1) ? "anonymous" : argv[1]);
+      printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
+             (argc == 1) ? "undefined" : argv[1]);
   }
   ```
   {: screen}
@@ -502,15 +496,15 @@ printf("Hello %s from arbitrary C program!\n",
 3. 建置 Docker 映像檔，並使用提供的 Script 予以上傳。您必須先執行 `docker login` 進行鑑別，然後執行具有所選擇映像檔名稱的 Script。
 
   ```
-  docker login -u janesmith -p janes_password
+docker login -u janesmith -p janes_password
   ```
   {: pre}
   ```
-  cd dockerSkeleton
+cd dockerSkeleton
   ```
   {: pre}
   ```
-  ./buildAndPush.sh janesmith/blackboxdemo
+./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
 
@@ -519,20 +513,33 @@ printf("Hello %s from arbitrary C program!\n",
 4. 若要從 Docker 映像檔建立動作，而非提供的 JavaScript 檔案，請新增 `--docker`，並將 JavaScript 檔名稱取代為 Docker 映像檔名稱。
 
   ```
-  wsk action create --docker example janesmith/blackboxdemo
+wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result example --param payload Rey
+wsk action invoke --blocking --result example --param payload Rey
   ```
   {: pre}
   ```
   {
-"msg": "Hello Rey from arbitrary C program!\n"
+      "args": {
+          "payload": "Rey"
+      },
+      "msg": "Hello from arbitrary C program!"
   }
   ```
   {: screen}
 
+5. 若要更新 Docker 動作，請執行 `buildAndPush.sh` 來重新整理 Docker Hub 上的映像檔，然後您必須執行 `wsk action update`，使系統提取新的映像檔。新的呼叫會開始使用新的映像檔，而不是剛使用過含有舊程式碼的映像檔。
+
+  ```
+./buildAndPush.sh janesmith/blackboxdemo
+  ```
+  {: pre}
+  ```
+  wsk action update --docker example janesmith/blackboxdemo
+  ```
+  {: pre}
 
 您可以在[參照](./openwhisk_reference.html#openwhisk_ref_docker)小節找到建立 Docker 動作的相關資訊。
 
@@ -545,8 +552,9 @@ printf("Hello %s from arbitrary C program!\n",
 您可以使用 {{site.data.keyword.openwhisk_short}} CLI 來監看所呼叫動作的輸出。
 
 1. 從 Shell，發出下列指令：
+  
   ```
-  wsk activation poll
+wsk activation poll
   ```
   {: pre}
 
@@ -555,11 +563,11 @@ printf("Hello %s from arbitrary C program!\n",
 2. 切換至另一個視窗，然後呼叫動作：
 
   ```
-  wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
+wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
   ```
   {: pre}
   ```
-  ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
+ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
   ```
   {: screen}
 
@@ -567,7 +575,7 @@ printf("Hello %s from arbitrary C program!\n",
 
   ```
   Activation: helloWorld (7331f9b9e2044d85afd219b12c0f1491)
-2016-02-11T16:46:56.842065025Z stdout: hello bob!
+    2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
   {: screen}
 
@@ -579,21 +587,23 @@ printf("Hello %s from arbitrary C program!\n",
 刪除您不要使用的動作來進行清除。
 
 1. 執行下列指令，以刪除動作：
+  
   ```
-  wsk action delete hello
+wsk action delete hello
   ```
   {: pre}
   ```
-  ok: deleted hello
+ok: deleted hello
   ```
   {: screen}
 
 2. 驗證動作不再出現於動作清單中。
+  
   ```
-  wsk action list
+wsk action list
   ```
   {: pre}
   ```
-  actions
+actions
   ```
   {: screen}

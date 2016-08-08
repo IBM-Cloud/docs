@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2015
-
+  years: 2015, 2016
+  
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms} 
+{:tsCauses: .tsCauses} 
+{:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -30,7 +30,7 @@ copyright:
 {:shortdesc}
 
 
-尝试删除服务实例时，看到服务代理程序错误消息：`网关超时`。
+尝试删除服务实例时，看到服务代理程序错误消息：```网关超时```。
 {: tsSymptoms}
 
 
@@ -40,3 +40,5 @@ copyright:
 
 要解决此问题，请使用相同服务名称创建服务实例，然后将其绑定到您的应用程序。此后，您可以删除服务实例和使用该服务的应用程序。   
 {: tsResolve}
+
+

@@ -4,7 +4,7 @@
 
 copyright:
 
-  2015, 2016
+  années : 2015, 2016
 
  
 
@@ -18,8 +18,9 @@ copyright:
 # Interface de ligne de commande pour l'administration de {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
-*Dernière mise à jour : 2 juin 2016*
+*Dernière mise à jour : 22 juin 2016*
 {: .last-updated}
+
 
 Vous pouvez gérer les utilisateurs pour votre environnement
 {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié en utilisant l'interface de ligne de commande Cloud Foundry avec le plug-in
@@ -235,7 +236,7 @@ cf ba set-org <nom_utilisateur> <organisation> [<rôle>]
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à laquelle affecter l'utilisateur.</dd>
 <dt class="pt dlterm">&lt;rôle&gt;</dt>
-<dd class="pd">Voir [Rôles](../../../admin/users_roles.html#userrolesinfo) pour prendre connaissance des rôles utilisateur
+<dd class="pd">Voir [Rôles](../../../admin/users_roles.html) pour prendre connaissance des rôles utilisateur
 {{site.data.keyword.Bluemix_notm}} et pour des descriptions.</dd>
 </dl>
 
@@ -259,7 +260,7 @@ cf ba unset-org <nom_utilisateur> <organisation> [<rôle>]
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à laquelle affecter l'utilisateur.</dd>
 <dt class="pt dlterm">&lt;rôle&gt;</dt>
-<dd class="pd">Voir [Rôles](../../../admin/users_roles.html#userrolesinfo) pour prendre connaissance des rôles utilisateur
+<dd class="pd">Voir [Rôles](../../../admin/users_roles.html) pour prendre connaissance des rôles utilisateur
 {{site.data.keyword.Bluemix_notm}} et pour des descriptions.</dd>
 </dl>
 
@@ -387,10 +388,9 @@ cf ba enable-service-plan <identificateur_plan>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificateur_plan&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de service qui n'est pas unique, vous êtes invité à choisir
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
 parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
-**Ajouter** pour afficher les services de cette catégorie. Cliquez
-sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les plans de tarification disponibles pour ce service. </dd>
+**Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. </dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba esp** comme alias pour le nom de commande plus long **ba
@@ -407,10 +407,9 @@ cf ba disable-service-plan <identificateur_plan>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificateur_plan&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de service qui n'est pas unique, vous êtes invité à choisir
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
 parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
-**Ajouter** pour afficher les services de cette catégorie. 
-Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les plans de tarification disponibles pour ce service. </dd>
+**Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. </dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba dsp** comme alias pour le nom de commande plus long **ba
@@ -433,10 +432,9 @@ cf ba add-service-plan-visibility <identificateur_plan> <organisation>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificateur_plan&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de service qui n'est pas unique, vous êtes invité à choisir
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
 parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
-**Ajouter** pour afficher les services de cette catégorie. 
-Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les plans de tarification disponibles pour ce service. </dd>
+**Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. </dd>
 <dt class="pt dlterm">&lt;organisation&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à ajouter à la liste de visibilité du service.</dd>
@@ -455,10 +453,9 @@ cf ba remove-service-plan-visibility <identificateur_plan> <organisation>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificateur_plan&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de service qui n'est pas unique, vous êtes invité à choisir
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
 parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
-**Ajouter** pour afficher les services de cette catégorie. 
-Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les plans de tarification disponibles pour ce service. </dd>
+**Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. </dd>
 <dt class="pt dlterm">&lt;organisation&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à retirer de la liste de visibilité du service.</dd>
@@ -479,10 +476,9 @@ indiquez dans la commande.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificateur_plan&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de service qui n'est pas unique, vous êtes invité à choisir
+<dd class="pd">Nom ou identificateur global unique (GUID) du plan de service à activer. Si vous entrez un nom de service qui n'est pas unique, par exemple, "Standard" ou "Basic", vous êtes invité à choisir
 parmi plusieurs plans de service. Pour identifier un nom de plan de service, sélectionnez la catégorie du service dans la page d'accueil, puis
-**Ajouter** pour afficher les services de cette catégorie. 
-Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les plans de tarification disponibles pour ce service. </dd>
+**Ajouter** pour afficher les services de cette catégorie. Cliquez sur le nom du service pour ouvrir la vue détaillée, depuis laquelle vous pourrez examiner les noms des plans de service disponibles pour ce service. </dd>
 <dt class="pt dlterm">&lt;organisation&gt;</dt>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 pour laquelle ajouter la visibilité. Vous pouvez activer la visibilité du service pour plusieurs organisations en entrant des noms ou des identificateurs

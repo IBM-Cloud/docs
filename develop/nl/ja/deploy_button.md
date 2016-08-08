@@ -64,7 +64,7 @@ copyright:
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/deploy_buttonx2.png" alt="Bluemix にデプロイ" /></a>
 </p> 
 
-##ボタンの作成{: #create-button}
+##ボタンの作成 {: #create-button}
 
 「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを作成するには、以下のようにします。 
 

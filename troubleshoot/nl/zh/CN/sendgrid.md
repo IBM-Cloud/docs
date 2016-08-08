@@ -1,14 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2015
+  years: 2015, 2016
+  
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms} 
+{:tsCauses: .tsCauses} 
+{:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -17,7 +18,6 @@ copyright:
 
 *上次更新时间：2015 年 12 月 9 日*
 {: .last-updated}
-
 
 以下是关于在 {{site.data.keyword.Bluemix}} 中使用 SendGrid 的问题解答。
 {:shortdesc}
@@ -42,3 +42,4 @@ copyright:
 
 在达到每个月每个服务实例 25,000 个电子邮件的限制之后，如果您还要发送更多电子邮件，那么可以添加另一个服务实例。有关 SendGrid 的更多信息，请参阅 [Getting Started with SendGrid](https://sendgrid.com/docs/index.html){: new_window}。    
 {: tsResolve}
+

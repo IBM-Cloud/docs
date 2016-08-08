@@ -17,7 +17,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Última atualização: 07 de abril de 2016*  
+*Última atualização: 24 de junho de 2016*
+{: .last-updated}  
 
 Se você estiver construindo um aplicativo Node.js, será possível usar o {{site.data.keyword.Bluemix}} Live Sync para atualizar rapidamente a instância do aplicativo no {{site.data.keyword.Bluemix_notm}} e desenvolver da forma usual na área de trabalho sem reimplementar.   
 {: shortdesc}
@@ -76,8 +77,14 @@ Para obter mais detalhes sobre os comandos, consulte [Comandos do Bluemix Live S
 
 <strong>Importante:</strong> a ferramenta de linha de comandos bl está disponível somente para Windows 7 e 8 e Mac OS X versão 10.9 ou posterior. </li>
 
-<li>Em uma linha de comandos, efetue login usando o comando a seguir. Você será solicitado a fornecer o ID e a senha IBM.  
+<li>Em uma linha de comandos, efetue login usando o comando a seguir. Será solicitado que você forneça o ID do usuário e senha.  
 <pre class="codeblock">bl login</pre>
+
+<strong>Nota:</strong> o seu ID do usuário para DevOps Services pode ser um ID IBM ou um ID federado (ID corporativo). Se você usar autenticação federada, para efetuar login em seu cliente da linha de
+comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e senha funcionarão com todos os clientes. Para obter mais
+informações sobre a criação de um token de acesso pessoal, consulte
+<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> O que é autenticação
+federada e como ela me afeta?</a> 
 </li>
 
 <li>Consulte a lista de projetos que estão disponíveis para sincronização do {{site.data.keyword.Bluemix_notm}} Live Sync, inserindo o comando a seguir:
@@ -201,7 +208,13 @@ O app deve usar o buildpack do IBM SDK for Node.js. Não há suporte para buildp
 Após a instalação do {{site.data.keyword.Bluemix_notm}} Live
 Debug, é possível usar as ferramentas de depuração.
 
-Envie por push o app e, em seguida, procure em `https://app-host.mybluemix.net/bluemix-debug/manage` para acessar a interface com o usuário de depuração do {{site.data.keyword.Bluemix_notm}}. Quando solicitado, insira seu ID e senha IBM para autenticação.
+Envie por push o aplicativo e, em seguida, navegue para `https://app-host.mybluemix.net/bluemix-debug/manage` para acessar a interface com o usuário de depuração do
+{{site.data.keyword.Bluemix_notm}}. Quando for solicitado para autenticar, insira o seu ID do usuário e token de acesso pessoal ou a senha de ID IBM.    
+
+   **Nota**: o seu ID do usuário para DevOps Services pode ser um ID IBM ou um ID federado (ID corporativo). Se você usar autenticação federada, para efetuar login em seu cliente da
+linha de comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e senha funcionarão com todos os clientes. Para obter mais
+informações sobre a criação de um token de acesso pessoal, consulte [O que é autenticação
+federada e como ela me afeta?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 ###Restaurando configurações do app e desativando o Bluemix Live Debug {: #restore_live_debug}
 
@@ -236,7 +249,7 @@ Para obter informações adicionais sobre download e uso do comando bl, veja [Bl
 A linha de comandos do {{site.data.keyword.Bluemix_live}}, **bl**, tem a sintaxe a seguir:
 
 ```
-comando bl [argumentos][options] [--help]
+bl command [arguments] [options] [--help]
 ```
 {: pre}
 
@@ -308,7 +321,7 @@ bl sync --help
 {: bl_login}
 
 ```
-bl login | l [ -u username ][-p password ][ -s server ]
+bl login | l [ -u username ] [-p password ][ -s server ]
 ```
 {: pre}
 
@@ -322,11 +335,16 @@ Use esse comando para efetuar login no {{site.data.keyword.Bluemix_notm}}. O log
 
 **Opções**
 
--u *username*: seu ID IBM a ser usado para efetuar login no {{site.data.keyword.Bluemix_notm}}.
+-u *username*: o seu ID do usuário para efetuar login no {{site.data.keyword.Bluemix_notm}}.
 
--p *password*: Sua senha de ID IBM.
+-p *password*: o seu token de acesso pessoal ou a senha de ID IBM.
 
--s *server*: nome do servidor ou endereço IP do servidor {{site.data.keyword.jazzhub_short}}. 
+-s *server*: o nome do servidor ou endereço IP do servidor {{site.data.keyword.jazzhub_short}}.    
+
+   **Nota**: o seu ID do usuário para DevOps Services pode ser um ID IBM ou um ID federado (ID corporativo). Se você usar autenticação federada, para efetuar login em seu cliente da
+linha de comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e senha funcionarão com todos os clientes. Para obter
+mais informações sobre a criação de um token de acesso pessoal, consulte [O que é
+autenticação federada e como ela me afeta?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 **Exemplos**
 
@@ -379,7 +397,7 @@ Use esse comando para listar todos os projetos disponíveis para sincronização
 {: bl_sync}
 
 ```
-bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
 ```
 {: pre}
 
@@ -445,14 +463,14 @@ bl sync myproject –d  myfolder
 {: bl_create}
 
 ```
-bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
 ```
 {: pre}
 
 **Propósito**
 
 Use esse comando a partir de um diretório que contém o código para criar um
-projeto privado, vincule-o ao repositório Git e implemente o conteúdo do repositório
+projeto privado, vincule-o ao Git repo e implemente o conteúdo do repo
 no {{site.data.keyword.Bluemix_notm}}.
 
 **Opções**
@@ -461,9 +479,9 @@ no {{site.data.keyword.Bluemix_notm}}.
 
 -r *REGION*: uma região do {{site.data.keyword.Bluemix_notm}}. Padrão: Sul dos EUA.
 
--o *ORG*: uma organização do {{site.data.keyword.Bluemix_notm}}. Padrão: primeira organização localizada.
+-o *ORG*: uma organização do {{site.data.keyword.Bluemix_notm}}. Padrão: Primeiro org localizado.
 
--s *SPACE*: um espaço do {{site.data.keyword.Bluemix_notm}}. Padrão: primeiro espaço localizado.
+-s *SPACE*: um espaço do {{site.data.keyword.Bluemix_notm}}. Parão: primeiro espaço localizado.
 
 -g *GIT_REPO*: nome do repositório remoto a ser usado para quaisquer repositórios Git existentes. Padrão: origem.
 
@@ -544,7 +562,7 @@ bl status “my pro ject”
 {: bl_start}
 
 ```
-bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
 ```
 {: pre}
 

@@ -1,50 +1,51 @@
 {
   "id": "docs_homepage_services",
-  "title": "How to use Bluemix services",
-  "subtitle": "Learn about service types and availability",
+  "title": "Como usar os serviços do Bluemix",
+  "subtitle": "Aprenda sobre os tipos de serviço e a disponibilidade",
   "subtitleHref": "services/index.html",
   "items": [{
     "id": "cfApp",
-    "title": "Cloud Foundry Applications",
+    "title": "Aplicativos Cloud Foundry",
     "href": "cfapps/index.html",
-    "category_id": "compute"
+    "category_id": "calcular"
   }, {
-    "title": "Runtimes",
+    "title": "Tempos de execução",
     "href": "cfapps/runtimes.html",
-    "category_id": "compute"
+    "category_id": "calcular"
   }, {
-    "title": "Boilerplates",
+    "title": "Modelos",
     "href": "cfapps/boilerplates.html",
-    "category_id": "compute"
+    "category_id": "calcular"
   }, {
     "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "compute"
+    "category_id": "calcular"
   }, {
-    "id": "container",
+    "id": "contêiner",
     "title": "IBM Containers",
     "href": "containers/container_index.html",
-    "category_id": "compute"
+    "category_id": "calcular"
   }, {
-    "id": "vm",
+    "id": "MV",
     "title": "IBM Virtual Servers",
     "href": "virtualmachines/vm_index.html",
-    "category_id": "compute"
+    "category_id": "calcular"
   }, {
     "type": "extra",
-    "title": "Try working with data",
+    "title": "Tente trabalhar com dados",
     "href": "services/WorkWithData/index.html",
-    "category_id": "data"
+    "category_id": "dados"
   }, {
     "type": "extra",
-    "title": "Try toolchains",
+    "title": "Tente as cadeias de ferramentas",
     "href": "toolchains/toolchains_overview.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Try mobile Bluemix services",
+    "title": "Tente o painel Móvel do Bluemix",
     "href": "mobile/index.html",
-    "category_id": "mobile"
+    "category_id": "móvel"
   }]
 }
+

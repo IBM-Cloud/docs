@@ -45,7 +45,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 您可以將自動擴充原則附加至特定應用程式。請執行下列指令：
 
-```bx as policy-attach <APP_NAME> -p <policy_file>```
+```
+bx as policy-attach <APP_NAME> -p <policy_file>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -58,7 +60,11 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## 產生自動擴充原則
 
-您可以透過回答指令行介面上的問題來產生自動擴充原則。根據您的輸入，包含自動擴充原則之定義的 JSON 檔案會以您輸入的名稱儲存。如果您未輸入檔名，原則內容會直接列印至指令行，而不會將它儲存至檔案。請執行下列指令：```bx as policy-create```
+您可以透過回答指令行介面上的問題來產生自動擴充原則。根據您的輸入，包含自動擴充原則之定義的 JSON 檔案會以您輸入的名稱儲存。如果您未輸入檔名，原則內容會直接列印至指令行，而不會將它儲存至檔案。請執行下列指令：
+
+```
+bx as policy-create
+```
 {: codeblock}
 
 
@@ -66,7 +72,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 您可以顯示應用程式的自動擴充原則。原則的內容會直接列印至指令行。請執行下列指令：
 
-```bx as policy-show <APP_NAME> [--json]```
+```
+bx as policy-show <APP_NAME> [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -76,9 +84,14 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 **提示：**您也可以使用 **--json** 選項，來進行原始 JSON 回應的細緻列印。
 
+
 ## 分割自動擴充原則
 
-您可以從應用程式中移除自動擴充原則。請執行下列指令：```bx as policy-detach <APP_NAME>```
+您可以從應用程式中移除自動擴充原則。請執行下列指令：
+
+```
+bx as policy-detach <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -91,7 +104,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 您可以啟用或停用特定應用程式的自動擴充原則。請執行下列指令：
 
-```bx as policy-enable|policy-disable <APP_NAME>```
+```
+bx as policy-enable|policy-disable <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -104,7 +119,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 您可以顯示特定應用程式之自動擴充活動的歷程。自動擴充歷程記錄的表格會顯示在指令行介面中。
 
-```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]```
+```
+bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+```
 {: codeblock}
 
 <dl class="parml">

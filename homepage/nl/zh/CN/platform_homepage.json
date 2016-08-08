@@ -1,6 +1,6 @@
 {
-	"id": "docs_homepage",
-	"descriptionTitle": "文档主页平台部分",
+	"id": "docs_homepage_platform",
+	"title": "如何使用 Bluemix 平台",
 	"items": [{
 		"title": "CLI 和开发工具",
 		"description": "访问多种工具，例如统一命令行界面和 CLI 插件。",
@@ -12,10 +12,10 @@
 		"img": "homepage/images/manage_apps.svg",
 		"href": "manageapps/mngapps.html"
 	}, {
-		"title": "帐户管理",
+		"title": "管理",
 		"description": "管理组织和空间，包括用户访问权。",
 		"img": "homepage/images/admin.svg",
-		"href": "/admin/adminpublic.html"
+		"href": "admin/adminpublic.html"
 	}, {
 		"title": "监视和日志记录",
 		"description": "跟进应用程序的使用情况和数据流，从而更好地了解部署情况。",
@@ -32,7 +32,7 @@
 		"img": "homepage/images/troubleshoot.svg",
 		"href": "troubleshoot/troubleshoot.html"
 	}, {
-		"title": "平台安全性",
+		"title": "Bluemix 安全性",
 		"description": "了解 Bluemix 如何提供功能性、基础架构、操作和物理安全。",
 		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
@@ -42,5 +42,6 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}]
+
 }
 

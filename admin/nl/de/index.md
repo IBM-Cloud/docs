@@ -17,7 +17,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated verwalten
 {: #mng}
-*Letzte Aktualisierung: 13. Juni 2016*
+Letzte Aktualisierung: 5. Juli 2016
 {: .last-updated}
 
 Wenn Sie über Administratorzugriff für {{site.data.keyword.Bluemix_notm}} Local oder {{site.data.keyword.Bluemix_notm}} Dedicated verfügen, können Sie über die Seite **Verwaltung** Ressourcen verwalten, die Kontingentnutzung überwachen, Benutzerberechtigungen verwalten, Upgradebenachrichtigungen planen, Sicherheitsberichte und Protokolle anzeigen und vieles mehr. Sie können Ihre Organisationen verwalten, indem Sie Bereiche erstellen und [Benutzerrollen und Berechtigungen festlegen](index.html#oc_useradmin). Weitere Informationen finden Sie in [Organisationen verwalten](../admin/orgs_spaces.html).
@@ -34,13 +34,13 @@ Wenn Sie über Administratorzugriff für {{site.data.keyword.Bluemix_notm}} Loca
 |Administratorberechtigungen verwalten | Klicken Sie auf **Verwaltung &gt; Benutzeradministration**, um Benutzer hinzuzufügen, Benutzer zu entfernen und Benutzerberechtigungen anzupassen. Siehe [Benutzer und Berechtigungen verwalten](index.html#oc_useradmin). |
 |Berichte und Protokolle prüfen | Klicken Sie auf **Verwaltung &gt; Berichte und Protokolle**, um Sicherheitsberichte und Prüfprotokolle für Ihre Instanz anzuzeigen. Siehe [Berichte anzeigen](index.html#oc_report). |
 |Systeminformationen anzeigen | Klicken Sie auf **Verwaltung &gt; Systeminformationen**, um Systeminformationen wie anstehende Aktualisierungen, Name und Version Ihrer Instanz, Region, API-URL, CLI-URL, LDAP-Konfigurationsdetails, Gruppen- und Benutzerzuordnungen, Statistiken und gemeinsam genutzte Domänen anzuzeigen. Sie können außerdem auf den Kalenderfeed und die Ereignisabonnements zur Erweiterung Ihrer Benachrichtigungen im Abschnitt 'Anstehende Aktualisierungen' zugreifen. Siehe [Systeminformationen anzeigen](index.html#oc_system). |
-|Benachrichtigungen erweitern und Ereignisabonnements einrichten | Klicken Sie auf **Verwaltung &gt; Systeminformationen &gt; *Anzahl* Aktualisierungen stehen an**. Sie können Web-Hooks zur Integraion in einen Web-Service Ihrer Wahl verwenden, um ein Abonnement für Ereignisbenachrichtigungen für eine Aktualisierung oder eine Störung einzurichten. Siehe [Benachrichtigungen und Ereignisabonnements](index.html#oc_eventsubscription). |
+|Benachrichtigungen erweitern und Ereignisabonnements einrichten | Klicken Sie auf **Verwaltung &gt; Systeminformationen &gt; *Anzahl* Aktualisierungen stehen an**. Sie können Web-Hooks zur Integration in einen Web-Service Ihrer Wahl verwenden, um ein Abonnement für Ereignisbenachrichtigungen für eine Aktualisierung oder eine Störung einzurichten. Siehe [Benachrichtigungen und Ereignisabonnements](index.html#oc_eventsubscription). |
 
 
 ## Benachrichtigungen und Ereignisabonnements
 {: #oc_eventsubscription}
 
-Sie können den Status Ihrer Umgebung jederzeit über die Seite 'Status' ermitteln. Störungen (Vorfälle) werden auf der Seite 'Status' gemeldet. {{site.data.keyword.Bluemix_notm}} sendet außerdem Benachrichtigungen in den Bereich 'Benachrichtigungen' auf der Seite 'Verwaltung' über Ereignisse wie geplante oder anstehende Wartungsaktualisierungen. 
+Sie können den Status Ihrer Umgebung jederzeit über die Seite 'Status' ermitteln. Störungen (Vorfälle) werden auf der Seite 'Status' gemeldet. {{site.data.keyword.Bluemix_notm}} sendet außerdem Benachrichtigungen in den Bereich 'Benachrichtigungen' auf der Seite 'Verwaltung' über Ereignisse wie geplante oder anstehende Wartungsaktualisierungen.
 
 ### Benachrichtigungen
 
@@ -50,8 +50,8 @@ Sie können Benachrichtigungen für Ihre lokale oder dedizierte Umgebung anzeige
 
 | **Ereignistyp** | **Benachrichtigungsmethode** |       
 |-----------------|-------------------|
-| Wartungsaktualisierungen | Sie werden im Bereich 'Benachrichtigungen' auf der Seite 'Verwaltung' über bevorstehende Wartungsaktualisierungen benachrichtigt. Wechseln Sie zur Seite **Verwaltung** und wählen Sie das Symbol **Benachrichtigungen** ![Benachrichtigungen](images/icon_announcement.svg) aus. Zum Anzeigen einer vollständigen Liste und des Verlaufs der anstehenden und abgeschlossenen Benachrichtigungen klicken Sie auf **Verwaltung &gt; Systeminformationen** &gt; *Anzahl* **Anstehend**. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Abonnement einrichten, das eine E-Mail an die Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |
-| Kritische Vorfälle | Sie werden über kritische Vorfälle auf der Seite 'Status' benachrichtigt. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und wählen Sie **Status** aus. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Ereignisabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.   |  
+| Wartungsaktualisierungen | Sie werden im Bereich 'Benachrichtigungen' auf der Seite 'Verwaltung' über bevorstehende Wartungsaktualisierungen benachrichtigt. Wechseln Sie zur Seite **Verwaltung** und wählen Sie das Symbol **Benachrichtigungen** ![Benachrichtigungen](images/icon_announcement.svg) aus. Zum Anzeigen einer vollständigen Liste und des Verlaufs der anstehenden und abgeschlossenen Benachrichtigungen klicken Sie auf **Verwaltung &gt; Systeminformationen** &gt; *Anzahl* **Anstehend**. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Abonnement einrichten, das eine E-Mail an die Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert. |
+| Kritische Vorfälle | Sie werden über kritische Vorfälle auf der Seite 'Status' benachrichtigt. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und wählen Sie **Status** aus. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Ereignisabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |  
 | {{site.data.keyword.Bluemix_notm}}-Status | Sie können den neuesten Status für die Plattform, die Services und Ihre {{site.data.keyword.Bluemix_notm}}-Instanz immer auf der Seite 'Status' anzeigen. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und wählen Sie **Status** aus.  |
 
 ### Ereignisabonnements einrichten
@@ -122,29 +122,29 @@ Führen Sie die folgenden Schritte aus, um ein E-Mail- oder Web-Hook-Abonnement 
 
 Nach dem Speichern des Ereignisabonnements empfangen Sie Benachrichtigungen durch die Methode, die Sie eingerichtet haben. Benachrichtigungen werden weiterhin auf der Seite 'Status' für Vorfälle und im Bereich 'Benachrichtigungen' der Seite 'Verwaltung' für Wartungsaktualisierungen angezeigt.
 
-Sie können ein beliebiges gespeichertes Ereignisabonnement auswählen, die letzte Aktivität anzeigen und bei Bedarf Änderungen vornehmen. Sie können auf einen Eintrag für eine kürzliche Aktivität klicken, um die zugehörigen Verlaufsdetails anzuzeigen. 
+Sie können ein beliebiges gespeichertes Ereignisabonnement auswählen, die letzte Aktivität anzeigen und bei Bedarf Änderungen vornehmen. Sie können auf einen Eintrag für eine kürzliche Aktivität klicken, um die zugehörigen Verlaufsdetails anzuzeigen.
 
 ## Wartungsaktualisierungen
 {: #oc_schedulemaintenance}
 
-Sie können geplante und ausstehende Wartungsaktualisierungen anzeigen, indem Sie über **Verwaltung &gt; Systeminformationen &gt; *Anzahl* anstehend** auf die Seite **Systemaktualisierungen** zugreifen.  
+Sie können geplante und ausstehende Wartungsaktualisierungen anzeigen, indem Sie über **Verwaltung &gt; Systeminformationen &gt; *Anzahl* anstehend** auf die Seite **Systemaktualisierungen** zugreifen. 
 
 **Hinweis**: Lesen Sie als Einführung den Abschnitt [Vorab genehmigte Wartungszeiten einstellen](index.html#preapprovedmaintenance). Diese Fenster müssen definiert sein, damit IBM die Wartungszeiten für Ihre Umgebung planen kann.
 
 <dl>
 <dt>Unterbrechungsfreie Aktualisierungen</dt>
-<dd>Eine unterbrechungsfreie Aktualisierung hat keine Auswirkunge auf Ihre Umgebung, Ihre aktiven Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen. Dieser Aktualisierungstyp erfordert keine fallspezifische Genehmigung und wird während der vorab genehmigten, verfügbaren Wartungszeiten angewendet, die Sie auf der Seite 'Systemaktualisierungen' festgelegt haben.</dd>
+<dd>Eine unterbrechungsfreie Aktualisierung hat keine Auswirkungen auf Ihre Umgebung, Ihre aktiven Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen. Dieser Aktualisierungstyp erfordert keine fallspezifische Genehmigung und wird während der vorab genehmigten, verfügbaren Wartungszeiten angewendet, die Sie auf der Seite 'Systemaktualisierungen' festgelegt haben.</dd>
 <dt>Aktualisierung mit Unterbrechungen</dt>
-<dd>Eine Aktualisierung mit Unterbrechungen kann sich auf Ihre Umgebung, die Ausführung von Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen auswirken. Sie müssen jede dieser Wartungsaktualisierungen innerhalb des zugeteilten Wartungszeitraums von 21 Tagen terminieren und genehmigen. Sie können den vorgeschlagenen Bereitstellungszeitpunkt (Datum und Uhrzeit) oder die Option für ein zuvor genehmigtes Fenster auswählen. Alternativ können Sie auch den Kalender öffnen, um drei bestimmte Daten und Uhrzeiten auszuwählen, aus denen IBM dann bei der Planung der Aktualisierung auswählt. </dd>
+<dd>Eine Aktualisierung mit Unterbrechungen kann sich auf Ihre Umgebung, die Ausführung von Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen auswirken. Sie müssen jede dieser Wartungsaktualisierungen innerhalb des zugeteilten Wartungszeitraums von 21 Tagen terminieren und genehmigen. Sie können den vorgeschlagenen Bereitstellungszeitpunkt (Datum und Uhrzeit) oder die Option für ein zuvor genehmigtes Fenster auswählen. Alternativ können Sie auch den Kalender öffnen, um drei bestimmte Daten und Uhrzeiten auszuwählen, aus denen IBM dann bei der Planung der Aktualisierung auswählt.</dd>
 </dl>
 
 
 ### Vorab genehmigte Wartungszeiten einstellen
 {: #preapprovedmaintenance}
 
-Bevor Sie mit der Terminierung und Prüfung von Aktualisierungen beginnen, müssen Sie ihre vorab genehmigten Zeitfenster festlegen. Unterbrechungsfreie Aktualisierungen werden innerhalb der vorab genehmigten Zeitfenster geplant.  
+Bevor Sie mit der Terminierung und Prüfung von Aktualisierungen beginnen, müssen Sie ihre vorab genehmigten Zeitfenster festlegen. Unterbrechungsfreie Aktualisierungen werden innerhalb der vorab genehmigten Zeitfenster geplant. 
 
-Sie müssen mindestens 24 verfügbare Stunden pro Woche an mindestens drei Tagen der Woche festlegen. Sie können zum Beispiel drei 8-Stunden-Zeitfenster an drei verschiedenen Tagen festlegen oder an vier Tagen 6-Stunden-Zeitfenster. Um sicherzustellen, dass die Zeiträume ausreichend Zeit für das Anwenden einer Aktualisierung bieten, muss jeder Zeitraum mindestens vier Stunden lang sein. 
+Sie müssen mindestens 24 verfügbare Stunden pro Woche an mindestens drei Tagen der Woche festlegen. Sie können zum Beispiel drei 8-Stunden-Zeitfenster an drei verschiedenen Tagen festlegen oder an vier Tagen 6-Stunden-Zeitfenster. Um sicherzustellen, dass die Zeiträume ausreichend Zeit für das Anwenden einer Aktualisierung bieten, muss jeder Zeitraum mindestens vier Stunden lang sein.
 
 **Hinweis**: Nur Benutzer mit der Administratorberechtigung (`ops.admin`) können Wartungsaktualisierungen planen und genehmigen.
 
@@ -153,7 +153,7 @@ Sie müssen mindestens 24 verfügbare Stunden pro Woche an mindestens drei Tagen
 3. Klicken Sie auf **Neues hinzufügen** ![Neues hinzufügen](images/add-new.png).
 4. Legen Sie das erste verfügbare Zeitfenster fest, indem Sie die Häufigkeit, die Dauer und die Anfangszeit für das Fenster auswählen.
 5. Klicken Sie auf **Abschicken**.
-6. Wiederholen Sie diesen Vorgang, bis Sie die Mindestanforderungen für die wöchentlichen Zeitfenster erfüllt haben. 
+6. Wiederholen Sie diesen Vorgang, bis Sie die Mindestanforderungen für die wöchentlichen Zeitfenster erfüllt haben.
 
 ### Nicht verfügbare Wartungszeiten festlegen
 
@@ -176,7 +176,7 @@ Um die Details für eine unterbrechungsfreie Aktualisierung anzuzeigen, führen 
 2. Suchen Sie Zeilen, bei denen für **Angepasste Terminplanung erforderlich** die Einstellung **Nein** festgelegt ist.
 3. Wählen Sie die Zeile für die Aktualisierung aus, um die Details anzuzeigen.
 
-Eine Aktualisierung mit Unterbrechungen kann sich auf Ihre Umgebung, die Ausführung von Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen auswirken. Sie müssen jede dieser Wartungsaktualisierungen innerhalb des zugeteilten Wartungszeitraums von 21 Tagen terminieren und genehmigen. Sie können den vorgeschlagenen Bereitstellungszeitpunkt (Datum und Uhrzeit) oder die Option für ein zuvor genehmigtes Fenster auswählen. Alternativ können Sie auch den Kalender öffnen, um drei bestimmte Daten und Uhrzeiten auszuwählen, aus denen IBM dann bei der Planung der Aktualisierung auswählt. 
+Eine Aktualisierung mit Unterbrechungen kann sich auf Ihre Umgebung, die Ausführung von Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen auswirken. Sie müssen jede dieser Wartungsaktualisierungen innerhalb des zugeteilten Wartungszeitraums von 21 Tagen terminieren und genehmigen. Sie können den vorgeschlagenen Bereitstellungszeitpunkt (Datum und Uhrzeit) oder die Option für ein zuvor genehmigtes Fenster auswählen. Alternativ können Sie auch den Kalender öffnen, um drei bestimmte Daten und Uhrzeiten auszuwählen, aus denen IBM dann bei der Planung der Aktualisierung auswählt.
 
 Führen Sie für Aktualisierungen mit Unterbrechung, die Ihre Genehmigung erfordern, folgende Schritte durch:
 
@@ -204,7 +204,7 @@ für die eine Aktion Ihrerseits erforderlich ist. Es gibt zwei Typen von Wartung
 
 <dl>
 <dt>Unterbrechungsfreie Aktualisierungen</dt>
-<dd>Eine unterbrechungsfreie Aktualisierung hat keine Auswirkunge auf Ihre Umgebung, Ihre aktiven Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen. Dieser Aktualisierungstyp erfordert keine fallspezifische Genehmigung. Diese Aktualisierungen werden in den vorab genehmigten, verfügbaren Wartungszeiten, die Sie auf der Seite 'Systemaktualisierungen' festgelegt haben, angewendet.</dd>
+<dd>Eine unterbrechungsfreie Aktualisierung hat keine Auswirkungen auf Ihre Umgebung, Ihre aktiven Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen. Dieser Aktualisierungstyp erfordert keine fallspezifische Genehmigung. Diese Aktualisierungen werden in den vorab genehmigten, verfügbaren Wartungszeiten, die Sie auf der Seite 'Systemaktualisierungen' festgelegt haben, angewendet.</dd>
 <dt>Aktualisierung mit Unterbrechungen</dt>
 <dd>Eine Aktualisierung mit Unterbrechungen kann sich auf Ihre Umgebung, die Ausführung von Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen auswirken. Sie können jede dieser Wartungsaktualisierungen innerhalb des zugeteilten Wartungszeitraums von 21 Tagen terminieren und genehmigen, um sicherzustellen, dass die Aktualisierung nicht während kritischer Geschäftszeiten angewendet wird. Sie können das vorgeschlagene Implementierungsdatum und die vorgeschlagene Uhrzeit auswählen, die auf den von Ihnen vorab genehmigten Aktualisierungszeiten basieren, oder Sie können zwei weitere Uhrzeiten und Daten auswählen, aus denen IBM dann bei der Anwendung der Aktualisierung auswählt.</dd>
 </dl>
@@ -424,11 +424,11 @@ Führen Sie die folgenden Schritte aus, um Ihren Service-Broker zu registrieren:
          "bullets":[
             {
                "title":"Fast and Simple",
-               "description":"Cool Service arbeitet mit dynamischer, speicherinterner und spaltenbasierter Technologie sowie mit Innovationen, wie paralleler Vektorverarbeitung und verlässlicher Komprimierung, um relevante Daten schnell zu scannen und zurückzugeben."
+               "description":"Cool Service uses dynamic in-memory columnar technology and innovations, such as parallel vector processing and actionable compression to rapidly scan and return relevant data."
             },
             {
                "title":"Connectivity",
-               "description":"Cool Service is built to let you connect easily and to all of your services and applications. You can start analyzing your data right away with familiar tools."
+               "description":"Cool Service is built to let you connect easily and to all of your services and applications. You can start analyzing your data immediately with familiar tools."
             }
          ],
          "featuredImageUrl":"http://path/to/icon_64x64.png",
@@ -622,34 +622,22 @@ Organisationen durch Klicken auf den Organisationsnamen ausführen.
   - Diagramm zur Anwendungszuordnung, das zeigt, welche Anwendungen in dem Wert für das genutzte Speicherkontingent enthalten sind.
   - Diagramm zur gemessenen Anwendungsnutzung, das einen dreimonatigen Bericht zu den genutzten GB-Stunden pro bereitgestellter App zeigt. Sie können die **Listenansicht** auswählen, um Daten für alle Apps mit Speicherzuordnung pro App und gemessener GB-Stundennutzung für die vergangenen drei Monate anzuzeigen.
 
-- Zum Bearbeiten des Namens der Organisation sowie zum Hinzufügen oder Entfernen von Managern klicken Sie auf den Namen
-der Organisation in der Liste und folgen den Anweisungen auf der Anzeige.
+- Zum Bearbeiten des Namens der Organisation sowie zum Hinzufügen oder Entfernen von Managern klicken Sie auf den Namen der Organisation in der Liste und folgen den Anweisungen in der Anzeige. 
 
 ## Benutzer und Berechtigungen verwalten
 {: #oc_useradmin}
 
-Sie können Ihrer {{site.data.keyword.Bluemix_notm}}-Instanz aus der Benutzerregistry Ihres Unternehmens über LDAP
-Benutzer hinzufügen. Sie können
-Benutzer einzeln oder in Gruppen hinzufügen und die Benutzerberechtigungen anzeigen. Wenn Ihnen die
-Berechtigung `admin` zugewiesen ist, können Sie auch Berechtigungen für andere Benutzer festlegen
-und verwalten. Klicken Sie auf **Verwaltung &gt; Benutzeradministration**.
+Sie können Benutzer einzeln oder in Gruppen hinzufügen und die Benutzerberechtigungen anzeigen. Im Allgemeinen werden Benutzer zur {{site.data.keyword.Bluemix_notm}}-Instanz aus dem Benutzerregistry des Unternehmens über das LDAP-Protokoll hinzugefügt (LDAP - Lightweight Directory Access Protocol). Wenn Ihnen die Berechtigung **Admin** zugewiesen ist, können Sie auch Berechtigungen für andere Benutzer festlegen und verwalten. Klicken Sie auf **Verwaltung &gt; Benutzeradministration**.
 
-Auf der Seite für die Benutzerverwaltung werden alle Benutzer für die lokale oder dedizierte Instanz angezeigt.
-Die Berechtigungen für jeden Benutzer werden angezeigt. Die folgenden Berechtigungen sind verfügbar: None,
-`Admin`, `Catalog`, `Login`,
-`Reports` und `Users`. Berechtigungen können aktiviert werden oder dem
-Benutzer kann der Zugriff `view` bzw. `write` für diese Berechtigung
-erteilt werden; diese werden durch Symbole dargestellt. Beschreibungen der
-einzelnen Typen und Erläuterungen der Symbole finden Sie unter [Berechtigungen](index.html#permissions).
+Auf der Seite für die Benutzerverwaltung werden alle Benutzer für die lokale oder dedizierte Instanz angezeigt. Die Berechtigungen für jeden Benutzer werden über Symbole in der Tabelle angezeigt. Folgende Berechtigungen sind zulässig: None, **Admin**, **Login**, **Catalog**, **Reports** und **Users**. Für die Berechtigungen **Admin** und **Login** kann **On** oder **Off** eingestellt werden; die restlichen Berechtigungen werden mithilfe bestimmter Zugriffstypen aktiviert oder inaktiviert, unter anderem durch den Zugriff **Lesen** oder **Schreiben** für die Berechtigung, die durch Symbole angezeigt wird. Beschreibungen der einzelnen Typen und Erläuterungen der Symbole finden Sie in [Berechtigungen](#permissions). 
 
 ### Mit Benutzern arbeiten
 
-Sie können nach vorhandenen Benutzern suchen, Benutzer entfernen und Benutzer einzeln oder in Gruppen hinzufügen. Es stehen verschiedene Optionen zur Auswahl:
+Abhängig vom Zugriff **Lesen** oder **Schreiben** für die Berechtigungen des Benutzers können Sie nach vorhandenen Benutzern suchen, Benutzer entfernen und Benutzer einzeln oder in Gruppen hinzufügen. Beachten Sie, dass Sie über vollen Zugriff zum Ausführen jeder Task für die Benutzerverwaltung in der Umgebung verfügen, wenn Sie über die Berechtigung **Admin** verfügen. Die folgenden Tasks zum Verwalten der Benutzer können ausgeführt werden. Überprüfen Sie die folgende Liste, um festzustellen, ob Sie mit Ihren Zugriffsrechten auf bestimmte Tasks zur Benutzerverwaltung zugreifen können: 
 
-* Nach Benutzern suchen. Sie können mithilfe des Feldes **Suchen** Benutzer in der Tabelle suchen.
+* Suchen Sie Benutzer. Sie können mithilfe des Felds **Suchen** in der Tabelle Benutzer mit dem Zugriff **Lesen** (Read) oder **Schreiben** (Write) für die Benutzerberechtigung suchen. 
 
-* Fügen Sie einen einzelnen Benutzer hinzu. Wenn Sie die Berechtigung `admin` oder die Berechtigung
-`users` mit dem Zugriff `write` besitzen, können Sie Benutzer hinzufügen.
+* Fügen Sie einen einzelnen Benutzer hinzu. Wenn Sie die Berechtigung **Admin** oder die Berechtigung **Users** mit dem Zugriff **Write** besitzen, können Sie Benutzer hinzufügen. 
 
   1. Um einen einzelnen Benutzer aus Ihrem LDAP-Verzeichnis hinzuzufügen, klicken Sie auf **Benutzer hinzufügen**.
   2. Geben Sie im Feld **Suche** die E-Mail-Adresse für den Benutzer ein und wählen Sie anschließend den Benutzer aus der gefüllten Liste aus.
@@ -659,67 +647,67 @@ Sie können nach vorhandenen Benutzern suchen, Benutzer entfernen und Benutzer e
   **Hinweis**: Wenn die Operation zum Hinzufügen erfolgreich ist, wird der Benutzer für Sie zum Anzeigen und zum Durchsuchen zu der Tabelle hinzugefügt. Wenn Benutzer hinzugefügt werden,
 sind ihnen keine Berechtigungen zugewiesen.
 
-* Fügen Sie eine Benutzergruppe aus Ihrem LDAP-Verzeichnis hinzu.
+* Fügen Sie eine Benutzergruppe aus Ihrem LDAP-Verzeichnis hinzu. Wenn Sie die Berechtigung **Admin** oder die Berechtigung **Users** mit dem Zugriff **Write** besitzen, können Sie Benutzer hinzufügen. 
 
   1. Klicken Sie auf **Benutzergruppe hinzufügen**.
   2. Geben Sie im Feld **Suche** einen Gruppennamen für die Suche ein und wählen Sie den Gruppennamen aus der gefüllten Liste aus.
   3. Wählen Sie neben dem Feld **Organisation** die Organisation aus, zu der Sie die Benutzergruppe hinzufügen möchten, indem Sie den Namen der Organisation eingeben und diesen aus der gefüllten Liste auswählen.
   4. Klicken Sie auf **Benutzer hinzufügen**, um die Benutzergruppe zu der ausgewählten Organisation hinzuzufügen.
+  
   **Hinweis**: Gruppen oder mehr als 50 Benutzer werden über einen Stapeljob im Hintergrund hinzugefügt. Wenn die Hinzufügeoperation erfolgreich war, wird der Benutzer bzw. die Gruppe
 zur Tabelle hinzugefügt und Sie können ihn bzw. sie anzeigen und durchsuchen. Wenn Benutzer hinzugefügt werden,
 sind ihnen keine Berechtigungen zugewiesen.
 
-* Eine Gruppe von Benutzern hinzufügen, indem ein Arbeitsblatt importiert wird, das die Benutzer-IDs, E-Mail-Adressen und die Organisation enthält, zu der Sie die Benutzer hinzufügen möchten.
+* Eine Gruppe von Benutzern hinzufügen, indem ein Arbeitsblatt importiert wird, das die Benutzer-IDs, E-Mail-Adressen und die Organisation enthält, zu der Sie die Benutzer hinzufügen möchten. Wenn Sie die Berechtigung **Admin** oder die Berechtigung **Users** mit dem Zugriff **Write** besitzen, können Sie Benutzer hinzufügen. 
 
-  1. Klicken Sie auf **Benutzer importieren**.
-  2. Klicken Sie auf **Vorlage herunterladen (.CSV)**, um ein Arbeitsblatt mit den erforderlichen Spalten herunterzuladen, das Sie ausfüllen können, oder um Ihr eigenes Arbeitsblatt zu erstellen, das mindestens die folgenden erforderlichen Spaltenüberschriften enthält: **Benutzer-ID**, **E-Mail**, **Organisation**. Ferner gibt es zwei optionale Spalten, die ebenfalls in der Vorlage enthalten sind: **Vorname** und **Nachname**.
-  3. Geben Sie die Benutzerwerte in die erforderlichen Spalten ein. Falls Sie kein LDAP-Verzeichnis verwenden, verwenden Sie die erforderlichen und optionalen Spaltenüberschriften für Ihren Benutzerimport. 
-  4. Speichern Sie Ihre Datei und klicken Sie auf **Datei hochladen**.
- 
+**Hinweis**: Geben Sie die Benutzer-IDs ein, die mit den in Ihrer Benutzerregistry verwendeten Werten übereinstimmen. 
 
-  **Hinweis**: Geben Sie die Benutzer-IDs ein, die mit den in Ihrer Benutzerregistry verwendeten Werten übereinstimmen. Die Spalten innerhalb des Arbeitsblatts können in beliebiger Reihenfolge angeordnet sein, solange Sie über alle erforderlichen Spalten verfügen. Sie empfangen eine Bestätigungsnachricht, die besagt, dass alle Benutzer hinzugefügt wurden, wenn der Import erfolgreich war. Wenn der Import für einige Benutzer erfolgreich war, für andere hingegen nicht, prüfen Sie die Fehlernachricht, um Aktionen für die Benutzer zu ergreifen, die nicht hinzugefügt werden konnten.
+   1. Klicken Sie auf **Benutzer importieren**.
+   2. Klicken Sie auf **Vorlage herunterladen (.CSV)**, um ein Arbeitsblatt mit den erforderlichen Spalten herunterzuladen, das Sie ausfüllen können, oder um Ihr eigenes Arbeitsblatt zu erstellen, das mindestens die folgenden erforderlichen Spaltenüberschriften enthält: **Benutzer-ID**, **E-Mail**, **Organisation**. In der Vorlage sind zwei optionale Spalten enthalten: **Vorname** und **Nachname**. 
+   3. Geben Sie die Benutzerwerte in die erforderlichen Spalten ein. Falls Sie kein LDAP-Verzeichnis verwenden, verwenden Sie die erforderlichen und optionalen Spaltenüberschriften für die Benutzer, die Sie importieren. 
+   4. Speichern Sie Ihre Datei und klicken Sie auf **Datei hochladen**.
 
-* Entfernen Sie Benutzer. Wenn Sie die Berechtigung `admin` oder die Berechtigung
-`users` mit dem Zugriff `write` besitzen, können Sie Benutzer entfernen.
+  **Hinweis**: Die Spalten innerhalb des Arbeitsblatts können in beliebiger Reihenfolge angeordnet sein, solange Sie über alle erforderlichen Spalten verfügen. Wenn der Import erfolgreich war, erhalten Sie eine Bestätigungsnachricht, in der bestätigt wird, dass alle Benutzer hinzugefügt wurden. Wenn der Import für einige Benutzer erfolgreich war, für andere hingegen nicht, prüfen Sie die Fehlernachricht, um Aktionen für die Benutzer zu ergreifen, die nicht hinzugefügt werden konnten.
+
+* Entfernen Sie Benutzer. Wenn Sie die Berechtigung **Admin** oder die Berechtigung **Users** mit dem Zugriff **Write** besitzen, können Sie Benutzer permanent aus der Umgebung entfernen. 
 
     1. Suchen Sie den Benutzer und klicken Sie auf das Symbol ![Löschen](images/icon_trash.svg).
     2. Klicken Sie auf **Entfernen**.
 
+* Damit Sie Berechtigungen und Organisationen, zu denen Benutzer gehören, bearbeiten können, müssen Sie über die Berechtigung **Admin** verfügen. Um Berechtigungen für Benutzer zu bearbeiten, suchen Sie den gewünschten Benutzer und klicken Sie auf den Benutzernamen. Auf der Seite **Benutzer bearbeiten** können Sie die Berechtigungen aktivieren oder inaktivieren.
+
+    * Wählen Sie **On** in der Liste aus, um die Berechtigung **Admin** oder **Login** zu aktivieren. 
+    * Wählen Sie in der Liste **Lesen** (Read) aus, um dem Benutzer den Zugriff **Lesen** (schreibgeschützt) für diese Berechtigung zu erteilen, oder wählen Sie **Schreiben** (Write) aus, um dem Benutzer den Schreibzugriff **Schreiben** zum Bearbeiten, Hinzufügen und Entfernen für diese Berechtigung zu erteilen. 
+    * Wählen Sie **Off** aus, um alle Berechtigungen zu inaktivieren. 
+    
+    **Hinweis**: Wenn für die Berechtigung **Admin** die Einstellung **On** festgelegt wird, wird für alle anderen Berechtigungen **Schreiben** eingestellt. 
+
+* Wenn Sie einen Benutzer zu einer bestimmten Organisation hinzufügen oder aus ihr entfernen möchten, müssen Sie über die Berechtigung **Admin** oder die Berechtigung **Users** mit dem Zugriff **Schreiben** verfügen. 
+
+    1. Wählen Sie den Benutzernamen in der Tabelle aus, um auf die Seite **Benutzer bearbeiten** zuzugreifen und einen Benutzer zu einer Organisation hinzuzufügen. Verwenden Sie anschließend das Suchfeld, um eine Organisation zu lokalisieren, wählen Sie die Organisation aus der Liste aus und klicken Sie anschließend auf **Speichern**. 
+    2. Wählen Sie den Benutzernamen in der Tabelle aus, um auf die Seite **Benutzer bearbeiten** zuzugreifen und einen Benutzer aus einer Organisation zu entfernen. Klicken Sie anschließend für die Organisation, aus der der Benutzer entfernt werden soll, auf ![Entfernen](images/icon_remove.svg) und dann auf **Speichern**.
+
 ### Berechtigungen
 {: #permissions}
 
-Benutzern können die folgenden Berechtigungen zugewiesen werden:
+Den Benutzern können die folgenden Berechtigungen mit bestimmten Zugriffsebenen zugeordnet werden, die dem Benutzer die Ausführung bestimmter Tasks ermöglichen: 
 
 *Tabelle 7. Berechtigungen*
 
 | **Benutzerberechtigung** | **Beschreibung** |       
 |-----------------|-------------------|
-| Admin | Benutzer mit der Berechtigung `admin` können Berechtigungen für andere Benutzer bearbeiten. |
-| Catalog | Benutzern mit der Berechtigung `catalog` kann der Zugriff auf `view` (Anzeigen) oder `write` (Ändern) zugewiesen werden, und zwar für die in der lokalen oder dedizierten Instanz verfügbaren Services. |  
-| Login | Benutzer mit der Berechtigung `login` sind berechtigt, die Verwaltungsseite anzuzeigen. Ohne diese Berechtigung wird Benutzern die Menüoption 'Verwaltung' nicht angezeigt. |
-| Reports | Benutzern mit der Berechtigung `reports` kann für Sicherheitsberichte der Zugriff `view` (Anzeigen) oder `write` (Ändern) zugewiesen werden. |
-| Users | Benutzern mit der Berechtigung `users` kann der Zugriff `view` (Anzeigen) für die Benutzerliste oder `write` (Hinzufügen oder Entfernen) für Benutzer zugewiesen werden. Diese Berechtigung erlaubt es Ihnen nicht, Berechtigungen für andere Benutzer festzulegen.|
+| Admin | Benutzer mit der Berechtigung **Admin**, für die **On** eingestellt ist, können die Berechtigungen für andere Benutzer bearbeiten. Wenn für die Berechtigung 'On' festgelegt ist, ist automatisch der uneingeschränkte Zugriff auf alle anderen Berechtigungen aktiviert. Zusätzlich zu den Tasks, die für jede Berechtigung in dieser Tabelle beschrieben werden, kann der Administrator auch Ereignisabonnements einrichten, um direkt in Bezug auf Wartungen und Vorfälle benachrichtigt zu werden, die Wartung zu planen, Verifizierungsprüfungen für Konsolenkomponenten auszuführen und Organisationen und Bereiche für die Umgebung zu erstellen.  |
+| Login | Benutzer mit der Berechtigung **Login**, für die **On** eingestellt ist, können die Option für die Verwaltungsseite in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle anzeigen. Benutzer, deren Berechtigung aktiviert ist, können auf die Kacheln [Systeminformationen](#oc_system) und [Ressourcennutzung](#oc_resource) zugreifen. Ohne diese Berechtigung können Benutzer die Menüoption 'Verwaltung' nicht anzeigen und nicht auf sie zugreifen.  |
+| Catalog | Benutzern mit der Berechtigung **Catalog** kann der Zugriff auf **Lesen** oder **Schreiben** (Ändern) zugewiesen werden, und zwar für die in der lokalen oder dedizierten Instanz verfügbaren Services. Ein Benutzer mit Lesezugriff kann auf die Kachel 'Katalogverwaltung' zugreifen, um verfügbare Services anzuzeigen. Ein Benutzer mit Schreibzugriff kann auf die Kachel [Katalogverwaltung](#oc_catalog) zugreifen, um Services anzuzeigen, die Sichtbarkeit der Services zu bearbeiten, angepasste Services zu registrieren und die Liste für die Buildpack-Priorität zu steuern.  |  
+| Reports | Benutzern mit der Berechtigung **Reports** kann für Sicherheitsberichte der Zugriff **Lesen** oder **Schreiben** (Ändern) zugewiesen werden. Benutzer mit der Berechtigung zum Anzeigen können auf die Kachel 'Berichte und Protokolle' zugreifen, um Berichte herunterzuladen. Benutzer mit Schreibzugriff können die Kachel [Berichte und Protokolle](#oc_report) anzeigen und mithilfe der Befehlszeilenschnittstelle neue Berichte hochladen sowie neue Kategorien für den Zugriff durch die Benutzer erstellen.  |
+| Users | Benutzern mit der Berechtigung **Users** kann der Zugriff **Lesen** (Anzeigen) für die Liste der Benutzer oder **Schreiben** (Hinzufügen oder Entfernen) für Benutzer zugewiesen werden. Diese Berechtigung erlaubt es Ihnen nicht, Berechtigungen für andere Benutzer festzulegen. Benutzer mit Schreibzugriff können neue Benutzer zur Umgebung hinzufügen, Benutzer aus der Umgebung löschen und vorhandene Benutzer zu Organisationen hinzufügen, die in der Umgebung bereits vorhanden sind. Außerdem können Benutzer mit dem Zugriff **Schreiben** neue Organisationen hinzufügen, Organisationen löschen und die Benutzer in den Organisationen bearbeiten.  |
 
 
-Berechtigungen können aktiviert werden oder dem Benutzer kann der Zugriff `view` bzw.
-`write` für diese Berechtigung erteilt werden; dies wird durch die folgenden Symbole dargestellt:
+Berechtigungen können für Benutzer mit dem Zugriff **Lesen** oder **Schreiben** für diese Berechtigung aktiviert werden; dies wird durch die folgenden Symbole dargestellt: 
 
-* Das Symbol ![Aktiviert; dargestellt durch ein Hakensymbol](images/icon_enabled.svg) neben einer Berechtigung bedeutet, dass diese Berechtigung aktiviert ist.
-* Das Symbol ![Anzeigen: dargestellt durch ein Augensymbol](images/icon_read.svg) bedeutet, dass der Benutzer für diese Berechtigung über den Zugriff `view` (schreibgeschützt) verfügt.
-* Das Symbol ![Schreiben: dargestellt durch ein Stiftsymbol](images/icon_write.svg) bedeutet, dass der Benutzer für diese Berechtigung über den Zugriff `write` (Bearbeiten, Hinzufügen oder Entfernen) verfügt.
-
-Die Bearbeitung von Berechtigungen und Organisationen für andere Benutzer erfordert, dass Sie über die Berechtigung `admin` verfügen. Um Berechtigungen zu bearbeiten,
-suchen Sie den gewünschten Benutzer und klicken Sie auf den Benutzernamen. Auf der Seite **Benutzer bearbeiten** können Sie die Berechtigungen aktivieren oder inaktivieren.
-
-* Wählen Sie **On** in der Liste aus, um eine Berechtigung zu aktivieren.
-* Wählen Sie in der Liste **Lesen** (Read) aus, um dem Benutzer Lesezugriff `view` für diese Berechtigung zu erteilen, oder wählen Sie **Schreiben** (Write) aus, um dem Benutzer Schreibzugriff `write` zum Bearbeiten, Hinzufügen und Entfernen für diese Berechtigung zu erteilen.
-* Wählen Sie **Off** aus, um die Berechtigung zu inaktivieren.
-
-Wählen Sie die folgenden Optionen aus, um einen Benutzer zu einer Organisation hinzuzufügen oder zu entfernen:
-
-* Wählen Sie den Benutzernamen in der Tabelle aus, um auf die Anzeige **Benutzer bearbeiten** zuzugreifen und einen Benutzer zu einer Organisation hinzuzufügen. Verwenden Sie anschließend das Suchfeld, um eine Organisation zu lokalisieren, und wählen Sie die Organisation aus der Liste aus. Klicken Sie anschließend auf **Speichern**.
-* Wählen Sie den Benutzernamen in der Tabelle aus, um auf die Anzeige **Benutzer bearbeiten** zuzugreifen und einen Benutzer aus einer Organisation zu entfernen. Klicken Sie anschließend für die Organisation, aus der der Benutzer entfernt werden soll, auf ![Entfernen](images/icon_remove.svg) und dann auf **Speichern**.
-
+* Wenn das Symbol ![Aktiviert; dargestellt durch ein Hakensymbol](images/icon_enabled.svg) einer Berechtigung zugeordnet ist, bedeutet dies, dass diese Berechtigung aktiviert ist. 
+* Das Symbol ![Lesen: dargestellt durch ein Augensymbol](images/icon_read.svg) bedeutet, dass der Benutzer für diese Berechtigung über den Zugriff **Lesen** (schreibgeschützt) verfügt. 
+* Das Symbol ![Schreiben: dargestellt durch ein Stiftsymbol](images/icon_write.svg) bedeutet, dass der Benutzer für diese Berechtigung über den Zugriff **Schreiben** (Bearbeiten, Hinzufügen oder Entfernen) verfügt. 
 
 ## Benutzer mit der Admin-REST-API verwalten
 {: #usingadminapi}
@@ -776,8 +764,8 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 {
     "message": "Logged in",
     "name": {
-        "familyName": "*Nachname*",
-        "givenName": "*Vorname*"
+        "familyName": "*last_name*",
+        "givenName": "*first_name*"
     }
 }
 ```

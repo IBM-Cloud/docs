@@ -17,7 +17,8 @@ copyright:
 
 # Configurações de perfil
 {: #usersettings}
-*Última atualização: 16 de maio de 2016*
+Última atualização: 23 de junho de 2016
+{: .last-updated}
 
 Acesse o ícone **Conta e suporte**
 ![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt;

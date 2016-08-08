@@ -40,7 +40,7 @@ copyright:
 # 関連リンク
 ## 一般
 * [{{site.data.keyword.Bluemix_notm}} とは](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/)
-* [入門](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [概説](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
 * [ハイブリッド・モデルについて](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
 * [{{site.data.keyword.Bluemix_notm}} の新機能](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 用語集](../overview/glossary/index.html)

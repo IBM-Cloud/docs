@@ -16,6 +16,7 @@ copyright:
 {: #ts_sendgrid}
 
 *Última atualização: 9 de dezembro de 2015*
+{: .last-updated}
 
 Aqui está a resposta para uma pergunta sobre como usar o SendGrid no {{site.data.keyword.Bluemix}}.
 {:shortdesc}

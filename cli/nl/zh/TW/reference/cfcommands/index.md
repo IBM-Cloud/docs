@@ -16,7 +16,7 @@ copyright:
 
 # Cloud Foundry (cf) 指令
 
-*前次更新：2016 年 1 月 29 日*
+*前次更新：2016 年 7 月 8 日*
 {: .last-updated}
 
 您可以使用 Cloud Foundry (cf) 指令來管理應用程式。
@@ -159,6 +159,11 @@ cf help command_name
 
 讓您登入 {{site.data.keyword.Bluemix_notm}}。
 
+
+<!-- staging only for atlas 45 -->
+
+**附註：**如果您是使用聯合 ID 登入，則必須使用單一登入 (SSO) 參數來登入。 
+
 ```
 cf login
 ```
@@ -170,6 +175,8 @@ cf login
 <dt>*-p* password</dt>
 <dd>您的密碼。</dd>
 <dd>*重要事項：*如果您在指令行介面上使用 *-p* 參數提供密碼，密碼可能會記錄在指令行歷程中。為了安全因素，請避免使用 -p 參數提供密碼。請改為在指令行介面提示您時再輸入密碼。</dd>
+<dt>*-sso*</dt>
+<dd>以聯合 ID 登入時，必須使用單一登入選項 (SSO)。以 IBM ID 登入時，則不需要這麼做。如果您嘗試使用聯合 ID 來登入，而沒有指定 SSO 參數，系統會提示您將其包含在內。使用 SSO 參數時，系統會提示您在登入時輸入一次性密碼。</dd>
 <dt>*-o* organization_name</dt>
 <dd>您要登入的組織名稱。</dd>
 <dt>*-s* space_name</dt>
@@ -177,6 +184,8 @@ cf login
 <dt>*--skip-ssl-validation*</dt>
 <dd>停用 SSL 驗證處理程序。使用此參數可能導致安全問題。</dd>
 </dl>
+
+<!-- staging only content for the sso parameter and note for federated ID atlas 45 work -->
 
 *附註：*如果您在此指令的 *-p* 參數中提供密碼，您的密碼可能會記錄在 Shell 指令歷程檔案，且可能被本端作業系統的其他使用者看到。
 
@@ -217,7 +226,8 @@ cf push appname
 <dd>建置套件的名稱。buildpack_name 可以是依名稱或 Git URL 的自訂建置套件，例如，`my-buildpack` 或 `https://github.com/heroku/heroku-buildpack-play.git`。</dd>
 <dt>*-c* start_command</dt>
 <dd>應用程式的啟動指令。若要使用預設的啟動指令，請針對這個選項指定 null 值。例如：</dd>
-<dd>```
+<dd>
+```
 cf push appname -c null
 ```</dd>
 <dd>您也可以使用這個選項來執行 Script 檔。例如：
@@ -239,7 +249,7 @@ cf push appname -c "bash ./<run.sh>"
 <dt>*-t* timeout</dt>
 <dd>應用程式啟動的時間上限（秒）。其他伺服器端的逾時可能會置換此值。</dd>
 <dt>*-s* stackname</dt>
-<dd>要執行應用程式的堆疊。堆疊是預先建置的檔案系統（包括作業系統）。使用 `cf stacks`，以檢視 {{site.data.keyword.Bluemix_notm}} 中的可用堆疊。</dd>
+<dd>要執行應用程式的堆疊。堆疊是預先建置的檔案系統（包括作業系統）。請使用 `cf stacks` 來檢視 {{site.data.keyword.Bluemix_notm}} 中的可用堆疊。</dd>
 <dt>*--no-hostname*</dt>
 <dd>將 Bluemix 系統網域對映到此應用程式。</dd>
 <dt>*--no-manifest*</dt>
@@ -318,8 +328,8 @@ cf stop appname
 cf -v
 ```
 
-# 相關鏈結
+# rellinks
 {: #rellinks}
-## 一般
+## general
 {: #general}
-* [快速參照卡 - cf 指令](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

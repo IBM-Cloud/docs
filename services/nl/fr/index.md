@@ -39,6 +39,7 @@ applicable. Pour des informations sur la gravité des tickets, voir [Contacter l
 *Tableau 1. Informations sur le support des services {{site.data.keyword.Bluemix_notm}}*
 
 ##Services expérimentaux
+{: #experimental_services}
 
 {{site.data.keyword.Bluemix_notm}}
 propose également des services expérimentaux que vous pouvez essayer. Pour examiner tous les services expérimentaux, boilerplates et contextes d'exécution,
@@ -51,6 +52,7 @@ environnements de production n'est pas recommandée. Le support des services exp
 détermine qu'il s'agit d'un défaut d'un service expérimental, elle n'est pas obligée de fournir un correctif.
 
 ##Services par région
+{: #services_region}
 
 Les services ne sont pas tous disponibles dans toutes les régions {{site.data.keyword.Bluemix_notm}}. Le tableau ci-dessous affiche le
 services qui sont fournis par IBM.
@@ -134,6 +136,7 @@ services qui sont fournis par IBM.
 *Tableau 2. Disponibilité des services*
 
 ## Disponibilité ininterrompue des services
+{: #services_availability}
 {{site.data.keyword.Bluemix_notm}} a identifié un ensemble de services de niveau 1. Elle ne retirera aucun service de niveau 1 sans proposer
 de fonction équivalente ou vous aviser de son retrait au moins cinq ans à l'avance. 
 
@@ -153,6 +156,7 @@ Pour en savoir plus sur les conditions d'utilisation des services, voir
 [Conditions d'utilisation de {{site.data.keyword.Bluemix_notm}}](../navigation/notices.html#terms).
 
 ## Obsolescence de service
+{: #service_deprecation}
 
 IBM vous avisera au moins 30 jours à l'avance de son intention d'arrêter ou de remplacer
 un service disponible. Si un remplacement équivalent n'est pas fourni, pendant au moins 12 mois à compter de cet annonce, IBM utilisera tout moyen

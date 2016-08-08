@@ -1,15 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2015
-
+  years: 2015, 2016
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms} 
+{:tsCauses: .tsCauses} 
+{:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -40,3 +39,5 @@ copyright:
 
 이 문제점을 해결하려면 동일한 서비스 이름으로 서비스 인스턴스를 작성한 다음 이 인스턴스를 애플리케이션에 바인딩하십시오. 그러면 해당 서비스에서 사용하는 서비스 인스턴스와 애플리케이션을 삭제할 수 있습니다.    
 {: tsResolve}
+
+

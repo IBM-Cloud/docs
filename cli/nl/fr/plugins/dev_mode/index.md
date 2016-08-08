@@ -17,7 +17,7 @@ copyright:
 # (Obsolète) Interface de ligne de commande en mode développement
 {: #devmodecli}
 
-*Dernière mise à jour : 12 mai 2016*
+*Dernière mise à jour : 23 juin 2016*
 {: .last-updated}
 
 **Cette interface de ligne de commande est obsolète :** au lieu d'utiliser l'interface de ligne de commande en mode développement
@@ -70,7 +70,8 @@ de l'interface de ligne de commande IBM Bluemix](http://plugins.{DomainName}).
         ```
 
 ## Affichage des commandes dev_mode
-**Pour afficher toutes les commandes de l'interface CLI dev_mode, utilisez la commande suivante :**
+
+Pour afficher toutes les commandes CLI dev_mode, utilisez la commande suivante :
 
 ```
 cf plugins
@@ -182,7 +183,7 @@ cf delete-file <chemin_distant> [options_commande]
 
 ## start-inplace
 {: #start_inplace}
-Démarrez l'application dans le conteneur existant. 
+Démarrez l'application dans le conteneur existant.
 
 ```
 cf start-inplace <nom_app>
@@ -192,7 +193,7 @@ cf start-inplace <nom_app>
 
 ## stop-inplace
 {: #stop_inplace}
-Arrêtez l'application dans le conteneur existant. 
+Arrêtez l'application dans le conteneur existant.
 
 ```
 cf stop-inplace <nom_app>
@@ -203,7 +204,7 @@ cf stop-inplace <nom_app>
 ## restart-inplace
 {: #restart_inplace}
 
-Redémarrez l'application dans le conteneur existant. 
+Redémarrez l'application dans le conteneur existant.
 
 ```
 cf restart-inplace <nom_app>

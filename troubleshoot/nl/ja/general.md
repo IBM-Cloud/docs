@@ -1,15 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2015
-
+  years: 2015, 2016
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms} 
+{:tsCauses: .tsCauses} 
+{:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -30,8 +29,7 @@ copyright:
 {:shortdesc}
 
 
-サービス・インスタンスを削除しようとすると、`「ゲートウェイ・タイムアウト (Gateway timeout)」`というサービス・ブローカーのエラー・メッセージが表示されます。
-{: tsSymptoms}
+サービス・インスタンスを削除しようとすると、「ゲートウェイ・タイムアウト (Gateway timeout)」というサービス・ブローカーのエラー・メッセージが表示されます。{: tsSymptoms}
 
 
 この問題は、そのサービス・インスタンスが既にクラウド・コントローラーから削除済みである場合に発生します。
@@ -40,3 +38,5 @@ copyright:
 
 この問題を解決するには、同じサービス名でサービス・インスタンスを作成し、それをアプリケーションにバインドします。その後、そのサービス・インスタンスとそのサービスを使用するアプリケーションを削除することができます。   
 {: tsResolve}
+
+

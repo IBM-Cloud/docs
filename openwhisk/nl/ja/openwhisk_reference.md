@@ -54,9 +54,9 @@ Bluemix では、組織とスペースのペアが {{site.data.keyword.openwhisk
 
 | 完全修飾名 | 別名 | 名前空間 | パッケージ | 名前 |
 | --- | --- | --- | --- | --- |
-| `/whisk.system/cloudant/read` | - | `/whisk.system` | `cloudant` | `read` |
+| `/whisk.system/cloudant/read` |  | `/whisk.system` | `cloudant` | `read` |
 | `/myOrg/video/transcode` | `video/transcode` | `/myOrg` | `video` | `transcode` |
-| `/myOrg/filter` | `filter` | `/myOrg` | - | `filter` |
+| `/myOrg/filter` | `filter` | `/myOrg` |  | `filter` |
 
 中でも特に {{site.data.keyword.openwhisk_short}} CLI を使用する場合、この命名体系を使用します。
 
@@ -126,7 +126,7 @@ OpenWhisk は、副次作用として特定の並行一貫性モデルを保証�
 - *activationId* : アクティベーション ID。
 - *start* および *end* : アクティベーションの開始と終了を記録するタイム・スタンプ。値は、[UNIX の時刻形式](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15)です。
 - *namespace* および `name`: エンティティーの名前空間および名前。
-- *logs* : アクティベーション中にアクションによって生成されたログを含むストリング配列。各配列エレメントは、アクションによって標準出力または標準エラー出力に出力された行に対応し、ログ出力の時刻とストリームを含みます。構造は、次のとおりです。```TIMESTAMP STREAM: LOG_OUTPUT```
+- *logs* : アクティベーション中にアクションによって生成されたログを含むストリング配列。各配列エレメントは、アクションによって標準出力または標準エラー出力に出力された行に対応し、ログ出力の時刻とストリームを含みます。構造体は、次のとおりです。TIMESTAMP STREAM: LOG_OUTPUT。
 - *response* : `success`、`status`、および `result` のキーを定義したディクショナリー。
   - *status* : アクティベーションの結果。「success (成功)」、「application error (アプリケーション・エラー)」、「action developer error (アクション開発者エラー)」、「whisk internal error (whisk 内部エラー)」のいずれかの値が可能です。
   - *success* : 状況が`「success」`の場合に限り、`true` になります。
@@ -142,14 +142,14 @@ OpenWhisk は、副次作用として特定の並行一貫性モデルを保証�
 
 JavaScript で記述されたアクションは、単一ファイルに限定されなければなりません。ファイルは複数の関数を含むことができますが、規則により `main` という関数が存在しなければならず、これが、アクションを起動したときに呼び出されます。例えば、以下は、複数の関数を含むアクションの例です。
 
-```
+
 function main() {return { payload: helper() }
 }
 
 function helper() {
     return new Date();
 }
-```
+
 {: codeblock}
 
 アクションの入力パラメーターは、`main` 関数へのパラメーターで JSON オブジェクトとして渡されます。成功したアクティベーションの結果も JSON オブジェクトですが、これは、以下のセクションに示すように、アクションが同期か非同期かによって、戻り方が異なります。
@@ -161,20 +161,20 @@ JavaScript 関数が、戻った後でもコールバック関数で実行を続
 
 JavaScript アクションのアクティベーションは、main 関数が以下のいずれかの条件で終了する場合に**同期**となります。
 
-- main 関数が ```return``` ステートメントを実行せずに終了する。
-- main 関数が、```whisk.async()``` *以外の* 任意の値を返す ```return`` ステートメントを実行して終了する。
+- main 関数が return ステートメントを実行せずに終了する。
+- main 関数が return ステートメントを実行して終了し、whisk.async() *以外* の値を返す。
 
 以下に、同期アクションの例を 2 つ示します。
 
-```
+
 // a synchronous action
 function main() {
   return {payload: 'Hello, World!'};
 }
-```
+
 {: codeblock}
 
-```
+
 // an action in which each path results in a synchronous activation
 function main(params) {
   if (params.payload == 0) {return;
@@ -184,28 +184,28 @@ function main(params) {
     return whisk.error();   // indicates abnormal completion
   }
 }
-```
+
 {: codeblock}
 
-JavaScript アクションのアクティベーションは、main 関数が ```return whisk.async();``` を呼び出して終了する場合に**非同期**となります。この場合、システムは、以下のいずれかをアクションが実行するまで、アクションがまだ実行中であると見なします。
-- ```return whisk.done();```
-- ```return whisk.error();```
+JavaScript アクションのアクティベーションは、main 関数が return whisk.async(); を呼び出して終了する場合に**非同期**となります。この場合、システムは、以下のいずれかをアクションが実行するまで、アクションがまだ実行中であると見なします。
+- return whisk.done();
+- return whisk.error();
 
 以下は、非同期に実行されるアクションの例です。
 
-```
+
 function main() {setTimeout(function() {
         return whisk.done({done: true});
     }, 100);
     return whisk.async();
 }
-```
+
 {: codeblock}
 
 アクションは、ある入力では同期で、別の入力では非同期であることもあります。以下に例を示します。
 
-```
-  function main(params) {
+
+function main(params) {
      if (params.payload) {
          setTimeout(function() {
             return whisk.done({done: true});
@@ -215,7 +215,7 @@ function main() {setTimeout(function() {
          return whisk.done();   // synchronous activation
       }
   }
-```
+
 {: codeblock}
 
 - このケースで、`main` 関数は `whisk.async()` を返します。アクティベーションの結果が使用可能である場合、`whisk.done()` 関数が呼び出され、結果が JSON オブジェクトとして渡されます。これは、*非同期* アクティベーションと呼ばれます。
@@ -229,7 +229,7 @@ function main() {setTimeout(function() {
 - *name* : 呼び出すアクションの完全修飾名。
 - *parameters* : 呼び出されたアクションへの入力を表す JSON オブジェクト。省略された場合、デフォルトは空のオブジェクトです。
 - *apiKey* : アクションの呼び出しに使用する許可キー。
-デフォルトは `whisk.getAuthKey()` です。 
+デフォルトは `whisk.getAuthKey()` です。
 - *blocking* : アクションをブロッキング・モードと非ブロッキング・モードのどちらで呼び出すか。デフォルトは `false` で、非ブロッキングの呼び出しを指示します。
 - *next* : 呼び出しの完了時に実行するオプションのコールバック関数。
 
@@ -259,7 +259,7 @@ function main() {setTimeout(function() {
 ### ランタイム環境
 {: #openwhisk_ref_runtime_environment}
 
-JavaScript アクションは、Node.js バージョン 0.12.9 環境において、アクションで使用可能な以下のパッケージで実行されます。
+JavaScript アクションは、Node.js バージョン 0.12.14 環境において、アクションで使用可能な以下のパッケージで実行されます。
 
 - apn
 - async
@@ -310,12 +310,13 @@ Docker アクションは、Docker コンテナーでユーザー提供バイナ
 
 Docker スケルトンは、{{site.data.keyword.openwhisk_short}} 互換の Docker イメージをビルドするための便利な方法です。`wsk sdk install docker` CLI コマンドでスケルトンをインストールできます。
 
-メインのバイナリー・プログラムは、`dockerSkeleton/client/clientApp` ファイルにコピーする必要があります。比較ファイルまたはライブラリーは、`dockerSkeleton/client` ディレクトリーに存在することができます。
+メインのバイナリー・プログラムは、`dockerSkeleton/client/action` ファイルにコピーする必要があります。比較ファイルまたはライブラリーは、`dockerSkeleton/client` ディレクトリーに存在することができます。
 
 また、`dockerSkeleton/Dockerfile` を変更して、コンパイル・ステップや依存関係を組み込むこともできます。例えば、アクションが Python スクリプトであれば、Python をインストールします。
 
 
 ## REST API
+{: #openwhisk_ref_restapi}
 
 システム上のすべての機能は、REST API を通じて使用可能です。アクション、トリガー、ルール
 、パッケージ、アクティベーション、および名前空間のコレクション・エン
@@ -323,12 +324,16 @@ Docker スケルトンは、{{site.data.keyword.openwhisk_short}} 互換の Dock
 
 以下のコレクション・エンドポイントがあります。
 
-- `https://$BASEURL/api/v1/namespaces`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/actions`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/rules`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/packages`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/activations`
+- `https://{BASE URL}/api/v1/namespaces`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+
+`{BASE URL}` は、OpenWhisk API ホスト名 (すなわち、openwhisk.ng.bluemix.net、172.17.0.1 など) です。
+
+`{namespace}` には、文字 `_` を使用して、ユーザーの *default namespace* (すなわち、E メール・アドレス) を指定できます。
 
 コレクション・エンドポイントで GET 要求を実行して、コレ
 クションのエンティティーのリストをフェッチします。
@@ -336,12 +341,12 @@ Docker スケルトンは、{{site.data.keyword.openwhisk_short}} 互換の Dock
 エンティティーのタイプごとに以下のエンティティー・エンドポイン
 トがあります。
 
-- `https://$BASEURL/api/v1/namespaces/{namespace}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{activationName}`
 
 名前空間とアクティベーション・エンドポイントのみが GET 要求をサ
 ポートします。アクション、トリガー、ルール、およびパッケージのエンドポイン
@@ -350,7 +355,7 @@ Docker スケルトンは、{{site.data.keyword.openwhisk_short}} 互換の Dock
 トリガーを起動し、ルールを使用可能または使用不可にするために使用され
 ます。詳しくは、
 [
-『API 資料』](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json)を参照してください。
+『API 資料』](https://new-console.{DomainName}/apidocs/98)を参照してください。
 
 すべての API は、HTTP 基本認証で保護さ
 れています。基本認証の資格情報は `~/.wskprops` ファイルの `AUTH`
@@ -361,11 +366,11 @@ Docker スケルトンは、{{site.data.keyword.openwhisk_short}} 互換の Dock
 前空間のすべてのパッケージのリストを取得する例を示しています。
 
 
-```
+
 curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
-```
+
 {: pre}
-```
+
 [
   {
     "name": "slack",
@@ -382,9 +387,12 @@ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whi
   },
   ...
 ]
-```
+
 {: screen}
 
+OpenWhisk API は、Web クライアントからの要求/応答呼び出しをサポートします。OpenWhisk は、Cross-Origin Resource Sharing ヘッダーを使用して `OPTIONS` 要求に応答します。現在は、すべてのオリジンが許可され (すなわち、Access-Control-Allow-Origin は「`*`」)、Access-Control-Allow-Headers に許可とコンテンツ・タイプが示されます。
+
+**OpenWhisk は、現在のところ、アカウント当たり 1 つのキーしかサポートしないので、簡単な実験の範囲を超えて CORS を使用することはお勧めできません。ご使用のキーはクライアント・サイドのコードに埋め込む必要があり、公衆に表示されることになります。注意して使用してください。**
 
 ## システムしきい値
 {: #openwhisk_syslimits}
@@ -409,13 +417,29 @@ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whi
 * ユーザーは、アクションの作成時に限度を変更することができます。
 * コンテナーに限度を超えるメモリーを割り振ることはできません。
 
-### 名前空間当たりの同時呼び出し (数) (デフォルト: 100)
+### アクション当たりの成果物 (MB) (固定: 1MB)
+* アクションの最大コード・サイズは 1MB です。
+* JavaScript アクションの場合は、ツールを使用して、依存関係を含むすべてのソース・コードを単一のバンドル・ファイルに連結することをお勧めします。
+
+### アクティベーション当たりのペイロード・サイズ (MB) (固定: 1MB)
+* 最大 POST コンテンツ・サイズに、アクションの呼び出しまたはトリガーの発生に伴うパラメーターをすべて加えたサイズが 1MB です。
+
+### 名前空間当たりの同時呼び出し (デフォルト: 100)
 * 名前空間で同時に処理されるアクティベーションの数が 100 を超えることはできません。
 * デフォルト限度は、consul kvstore で whisk によって静的に構成可能です。
 * ユーザーは現在この限度を変更できません。
 
-
-### 分/時間当たりの呼び出し (数) (固定: 120/3600)
+### 分/時間当たりの呼び出し数 (固定: 120/3600)
 * レート限度の N は 120/3600 に設定され、1 分/1 時間の枠内のアクション呼び出し数を制限します。
 * ユーザーがアクションの作成時にこの限度を変更することはできません。
 * この限度を超える CLI 呼び出しは、TOO_MANY_REQUESTS に対応するエラー・コードを受け取ります。
+
+### Docker アクション当たりのオープン・ファイル数の制限 (固定: 64:64)
+* オープン・ファイルの最大数は 64 です (これは、ハード制限とソフト制限の両方に適用されます)。
+* docker run コマンドは、引数 `--ulimit nofile=64:64` を使用します。
+* オープン・ファイル数の制限について詳しくは、[docker run](https://docs.docker.com/engine/reference/commandline/run) の資料を参照してください。
+
+### Docker アクション当たりのプロセス数の制限 (固定: 512:512)
+* ユーザーが使用可能なプロセスの最大数は 512 です (これは、ハード制限とソフト制限の両方に適用されます)。
+* docker run コマンドは、引数 `--ulimit nproc=512:512` を使用します。
+* プロセスの最大数の制限について詳しくは、[docker run](https://docs.docker.com/engine/reference/commandline/run) の資料を参照してください。

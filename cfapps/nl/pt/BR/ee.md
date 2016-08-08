@@ -18,7 +18,8 @@ copyright:
 # Cenário: Desenvolvimento de ponta a ponta
 {: #ee}
 
-*Última atualização: 18 de abril de 2016*
+*Última atualização: 15 de junho de 2016*
+{: .last-updated}
 
 É possível usar a interface com o usuário, a plataforma e uma
 seleção de ferramentas do {{site.data.keyword.Bluemix}} ao construir, executar
@@ -51,13 +52,14 @@ para menor latência de rede, privacidade de dados e melhor disponibilidade. Con
 
 Para este cenário, você deseja desenvolver um app da web usando Node.js. Suponha que você esteja nos EUA e a maioria dos usuários do app também esteja
 nos EUA. Você decide construir e executar o app próximo da base do
-usuário, para se beneficiar da latência de rede inferior. Após efetuar login no {{site.data.keyword.Bluemix_notm}}, clique em seu nome da conta no canto superior direito e selecione a região
-**Sul dos EUA**. É possível, então, executar as
+usuário, para se beneficiar da latência de rede inferior. Após a criação de log no {{site.data.keyword.Bluemix_notm}}, clique no ícone **Conta e suporte**
+![ícone Conta e suporte](../admin/images/account_support.svg) e, em seguida, selecione a região **Sul dos EUA**. É possível, então, executar as
 etapas a seguir para criar um app:
 
-  1. Clique no botão mais.
-  2. Selecione **Calcular**>**Aplicativos de CF**>**SDK para Node.js**.
-  3. Digite um nome exclusivo para o seu aplicativo, por exemplo, TestNode e clique em **Criar**. O nome do app deve ser exclusivo
+  1. Selecione **Calcular**.
+  2. Clique no ícone de mais.
+  3. Selecione **SDK for Node.js**.
+  4. Digite um nome exclusivo para o seu aplicativo, por exemplo, TestNode e clique em **Criar**. O nome do app deve ser exclusivo
 em todo o ambiente do {{site.data.keyword.Bluemix_notm}}.
   
 Agora é possível ver as instruções de **Iniciar codificação**. É possível seguir as instruções para fazer download do código de início de TestNode, modificá-lo e implementá-lo.

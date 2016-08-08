@@ -19,7 +19,7 @@ copyright:
 
 *Dernière mise à jour : 7 décembre 2015* 
 
-Dans le cas d'exemples de projet déployés dans {{site.data.keyword.Bluemix_notm}} via le bouton Déployer dans {{site.data.keyword.Bluemix_notm}}, vous pouvez définir des configurations de pipeline {{site.data.keyword.jazzhub_short}} sous forme de fichiers YAML. Les pipelines définis sous forme de texte peuvent être partagés pour que les personnes qui dévient votre projet n'aient pas à configurer leurs propres pipelines. Cette fonction est en cours de développement : le format YAML et son implémentation peuvent changer à tout moment. Actuellement, cette fonction n'est disponible que pour les projets avec Git et les référentiels GitHub qui ciblent {{site.data.keyword.Bluemix_notm}}.
+Dans le cas d'exemples de projet déployés dans {{site.data.keyword.Bluemix_notm}} via le bouton Déployer dans {{site.data.keyword.Bluemix_notm}}, vous pouvez définir des configurations de pipeline {{site.data.keyword.jazzhub_short}} sous forme de fichiers YAML. Les pipelines définis sous forme de texte peuvent être partagés pour que les personnes qui dévient votre projet n'aient pas à configurer leurs propres pipelines. Cette fonction est en cours de développement : le format YAML et son implémentation peuvent changer à tout moment. Actuellement, cette fonction n'est disponible que pour les projets avec Git et les référentiels GitHub qui ciblent {{site.data.keyword.Bluemix_notm}}. 
 {: shortdesc} 
 
 Le répertoire racine de l'exemple de projet doit contenir un dossier appelé `.bluemix` dans lequel se trouve un fichier `pipeline.yml`.
@@ -100,11 +100,11 @@ Stage:
 name: <nom>
 [inputs:
 	<séquence d'entrées>]
-[triggers:   
+[triggers:
 	<séquence de déclencheurs>]
-[properties:   
+[properties:
 	<séquence de propriétés>]
-[jobs:   
+[jobs:
 	<séquence de travaux>]
 ```
 {: codeblock} 

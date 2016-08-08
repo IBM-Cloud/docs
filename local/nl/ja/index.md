@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*最終更新日: 2016 年 6 月 6 日*
+*最終更新日: 2016 年 7 月 7 日*
 {: .last-updated}
 
 ユーザーのデータ・センターは、{{site.data.keyword.Bluemix}} Local を使用することにより、{{site.data.keyword.Bluemix_notm}} クラウド・ベースのプラットフォームが持つ能力と俊敏性を得ることができます。{{site.data.keyword.Bluemix_notm}} Local を使用すれば、{{site.data.keyword.Bluemix_notm}} Public にセキュアに接続して同期をとり続けながら、同時に、自社のファイアウォールの内側にある最高機密のワークロードを保護することができます。
@@ -33,13 +33,14 @@ IBM® はクラウド操作をサービスとして使用してお客様の環�
 
 | **タイプ ** | **名前** | **説明** |
 |----------|----------|-----------------|
-|組み込み | {{site.data.keyword.Bluemix_notm}} ランタイム | ランタイムはアプリを素早く立ち上げて実行するために使用します。マシンとオペレーティング・システムのセットアップと管理は不要です。すべての {{site.data.keyword.Bluemix_notm}} ランタイムが、{{site.data.keyword.Bluemix_notm}} Local インスタンスで使用可能です。|
-|オプション | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} は、{{site.data.keyword.APIM}} と IBM StrongLoop を単一のオファリングに統合し、API とマイクロサービスを作成、実行、管理、および強化する包括的な解決策を提供します。 |
-|オプション | {{site.data.keyword.APIM}} | {{site.data.keyword.APIMfull}} サービスを使用して、API を構成、管理、およびソーシャル化します。API は、プロキシー URL を使用するか、HTTP データ・ソースからデータをアセンブルすることにより、リソースと一緒にインポートできます。{{site.data.keyword.APIM}} サービスを使用する利点は、API の使用方法を管理できることです。 |
-|組み込み | {{site.data.keyword.autoscaling}}| ポリシーに基づいて、アプリケーションのリソース容量を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix}} Local 環境で使用量が無制限になります。|
-|オプション | {{site.data.keyword.datacshort}} | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
-|オプション | {{site.data.keyword.sescashort}} | 冗長性を高めるために、{{site.data.keyword.sescashort}} は、キャッシュに保管されたセッションのレプリカを提供します。これにより、ブラウンアウトまたは障害が発生した場合、クライアント・アプリケーションはキャッシュ内のセッションへのアクセスを維持できます。サービスでは、Web アプリケーションとモバイル・アプリケーションのセッション・キャッシュ・シナリオがサポートされます。 |
-|オプション | {{site.data.keyword.iot_full}} | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。Local の基本オファリングには、初期環境が含まれます。初期環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えたローカル環境内で {{site.data.keyword.iot_full}} の専用バージョンを実行できます。 |
+|組み込み | [{{site.data.keyword.Bluemix_notm}} ランタイム](../cfapps/runtimes.html) | ランタイムはアプリを素早く立ち上げて実行するために使用します。マシンとオペレーティング・システムのセットアップと管理は不要です。すべての {{site.data.keyword.Bluemix_notm}} ランタイムが、{{site.data.keyword.Bluemix_notm}} Local インスタンスで使用可能です。|
+|組み込み | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | ポリシーに基づいて、アプリケーションのリソース容量を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix}} Local 環境で使用量が無制限になります。|
+|オプション | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} は、{{site.data.keyword.APIM}} と IBM StrongLoop を単一のオファリングに統合し、API とマイクロサービスを作成、実行、管理、および強化する包括的な解決策を提供します。 |
+|オプション | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | {{site.data.keyword.APIMfull}} サービスを使用して、API を構成、管理、およびソーシャル化します。API は、プロキシー URL を使用するか、HTTP データ・ソースからデータをアセンブルすることにより、リソースと一緒にインポートできます。{{site.data.keyword.APIM}} サービスを使用する利点は、API の使用方法を管理できることです。 |
+|オプション | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。 |
+|オプション | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
+|オプション | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 冗長性を高めるために、{{site.data.keyword.sescashort}} は、キャッシュに保管されたセッションのレプリカを提供します。これにより、ブラウンアウトまたは障害が発生した場合、クライアント・アプリケーションはキャッシュ内のセッションへのアクセスを維持できます。サービスでは、Web アプリケーションとモバイル・アプリケーションのセッション・キャッシュ・シナリオがサポートされます。 |
+|オプション | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。Local の基本オファリングには、初期環境が含まれます。初期環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えたローカル環境内で {{site.data.keyword.iot_full}} の専用バージョンを実行できます。 |
 
 
 リソースおよびサービスの容量を拡大および拡張するために購入できる、オプションのコンポーネントが用意されています。販売チームに連絡して、これらのコンポーネントを購入できます。営業担当員への連絡について詳しくは、[「お問い合わせ」](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)にアクセスしてください。サービスのプランを増やすには、カタログのサービス・タイルからプランを選択します。
@@ -56,6 +57,7 @@ IBM® はクラウド操作をサービスとして使用してお客様の環�
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 2500 万回の API 呼び出し | 企業全体の API プロジェクトを対象にした、1 月当たり 2500 万回の API  呼び出し容量を持つ {{site.data.keyword.apiconnect_short}} の専用バージョンを実行できる環境。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 10 万回の API 呼び出し容量の増加 | 1 月当たり 10 万回の API 呼び出し容量を追加する {{site.data.keyword.apiconnect_short}} Enterprise 環境の拡張。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} の 500 回の API 呼び出しの容量増加 | 1 秒当たり 500 回の API 呼び出しの容量で {{site.data.keyword.APIM}} for {{site.data.keyword.Bluemix_notm}} の専用バージョンを実行できる環境。 |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} クラスター | {{site.data.keyword.cloudant}} サービスの 3 ノード・クラスターをデプロイできる環境。ノードのデータ容量は、ローカル環境用に提供されるインフラストラクチャーによって決まります。 |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local の増分式の拡張 | {{site.data.keyword.iot_full}} Local 基本サービス・オファリングに追加される環境。この追加環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 0.5 TB のデータ交換の容量を備えたローカル環境内で {{site.data.keyword.iot_full}} の専用バージョンを実行できます。 |
 
 

@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*上次更新时间：2016 年 5 月 9 日*
+*上次更新时间：2016 年 6 月 22 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 平台是使用安全工程实践进行设计的，通过不同的层对整个网络和基础架构中的安全进行控制。{{site.data.keyword.Bluemix_notm}} 提供了一组安全性服务，应用程序开发者可以使用这些服务来保护自己的移动和 Web 应用程序。这些优势组合在一起，使 {{site.data.keyword.Bluemix_notm}} 平台成为安全应用程序开发的不二选择。
@@ -215,31 +215,11 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
 
 有关更多信息，请参阅 [dashDB 入门](../services/dashDB/index.html)。
 
-### Cloud Integration
-
-通过 Cloud Integration 服务，可以集成云和内部部署数据。您可以添加服务来与后端数据库（例如 DB2、Oracle 和 SAP）进行交互。然后，可以移动数据或创建 REST API 来供 {{site.data.keyword.Bluemix_notm}} 应用程序访问和使用。通过该服务，可以安全地与内部部署安全连接器进行通信，并将后端记录系统公开为 REST API 来供应用程序使用。
-
-有关更多信息，请参阅 [Cloud Integration 入门](../services/CloudIntegration/index.html)。
-
 ### Secure Gateway
 
 通过 Secure Gateway 服务，可以将 {{site.data.keyword.Bluemix_notm}} 应用程序安全地连接到内部部署或云中的远程位置。该服务可提供安全连接，并在您的 {{site.data.keyword.Bluemix_notm}} 组织与要连接到的远程位置之间建立隧道。可以使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 API 软件包来配置和创建安全网关。
 
 有关更多信息，请参阅 [Secure Gateway 入门](../services/SecureGateway/secure_gateway.html)。
-
-### SQL Database
-
-SQL Database 服务会将完整配置的关系数据库添加到您的应用程序。此服务使用 IBM Directory Server LDAP 进行认证，并使用 IBM InfoSphere® Guardium® Data Activity Monitor 来保护应用程序所访问的数据库。应用程序和数据库之间的连接由 DigiCert 签署的 SSL 证书保护。
-
-在包含此服务的某些套餐中，可以使用 {{site.data.keyword.Bluemix_notm}} 中的 SQL 数据库控制台来获取包含以下信息的报告：
-
- * 应用程序所访问的数据库中可能存在的敏感数据。
- * 指定时间段内访问过数据库的应用程序用户。
- * 正在访问数据库中敏感数据的应用程序用户。
-
-要使用 SQL 来掩蔽数据，应用程序可以调用与数据库一起部署的掩蔽用户定义的函数 (UDF)。例如，可以掩蔽要在其他地方用于测试的数据。UDF 从 IBM Infosphere Optim™ 实施数据掩蔽算法。
-
-此服务的高级套餐还包含数据加密。有关此服务的更多信息，请参阅 [SQL Database 入门](../services/SQLDB/index.html)。
 
 ### 安全信息和事件管理
 
@@ -298,7 +278,7 @@ SQL Database 服务会将完整配置的关系数据库添加到您的应用程�
 
 在 [IBM Bluemix 风险调查结果](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}上，可以找到 FISC 安全准则的 {{site.data.keyword.Bluemix_notm}} 自我评估文档（日语）。 
 
-![ISO 27001/2](images/icon_iso27k1.png) {{site.data.keyword.Bluemix_notm}} 已通过**国际标准化组织 (ISO) 27001 和 27002 标准**的认证，这两个标准定义了信息安全管理过程的最佳做法。ISO 27001 标准根据不同组织的需求规定了应如何建立、实施和记录信息安全管理系统 (ISMS) ，以及应如何实施安全性控制。ISO 27002 标准对 ISO 27001 中的每种安全性控制进行了详细的说明。ISO 27000 系列标准中包含了一个确定风险规模和评估资产价值的过程，旨在保护书面、口头和电子信息的机密性、完整性和可用性。
+![ISO 27001/2](images/icon_iso27k1.png) {{site.data.keyword.Bluemix_notm}} 已通过**国际标准化组织 (ISO) 27001 和 27002 标准**的认证，这两个标准定义了信息安全管理过程的最佳做法。ISO 27001 标准根据不同组织的需求规定了应如何建立、实施和记录信息安全管理系统 (ISMS)，以及应如何实施安全性控制。ISO 27002 标准对 ISO 27001 中的每种安全性控制进行了详细的说明。ISO 27000 系列标准中包含了一个确定风险规模和评估资产价值的过程，旨在保护书面、口头和电子信息的机密性、完整性和可用性。
 
 {{site.data.keyword.Bluemix_notm}} 经第三方安全公司审计，满足 ISO 27001 的所有要求：[Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}。
 

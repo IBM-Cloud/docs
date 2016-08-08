@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  années : 2015, 2016
 
  
 
@@ -16,7 +16,7 @@ copyright:
 
 # Commandes Cloud Foundry (cf)
 
-*Dernière mise à jour : 29 janvier 2016*
+*Dernière mise à jour : 8 juillet 2016*
 {: .last-updated}
 
 Vous pouvez utiliser des commandes Cloud Foundry (cf) pour gérer vos applications.
@@ -165,6 +165,11 @@ cf help nom_commande
 ## cf login
 
 Vous connecte à {{site.data.keyword.Bluemix_notm}}.
+
+<!-- staging only for atlas 45 -->
+
+**Remarque** : si vous êtes connecté à l'aide d'un ID fédéré, vous devez utiliser le paramètre de connexion unique (SSO) pour vous connecter. 
+
 ```
 cf login
 ```
@@ -180,6 +185,8 @@ Vous pouvez utiliser un ou plusieurs des paramètres suivants lorsque vous émet
 de passe peut être enregistré dans l'historique de la ligne de commande. Pour des raisons de sécurité, évitez de fournir le mot de passe
 avec le paramètre -p. A la place,
 entrez le mot de passe lorsque l'interface de ligne de commande vous y invite.</dd>
+<dt>*-sso*</dt>
+<dd>Vous devez utiliser l'option de connexion unique (SSO) pour vous connecter à l'aide d'un ID fédéré. Cela n'est pas obligatoire lorsque vous vous connectez avec un ID IBM. Si vous essayez de vous connecter avec un ID fédéré sans spécifier le paramètre de connexion unique, vous serez invité à l'inclure. Lorsque vous utilisez le paramètre de connexion unique, vous êtes invité à entrer un code d'accès unique lors de la connexion. </dd>
 <dt>*-o*nom_organisation</dt>
 <dd>Nom de l'organisation à laquelle vous voulez vous connecter.</dd>
 <dt>*-s*nom_espace</dt>
@@ -187,6 +194,8 @@ entrez le mot de passe lorsque l'interface de ligne de commande vous y invite.</
 <dt>*--skip-ssl-validation*</dt>
 <dd>Désactive le processus de validation SSL. L'utilisation de ce paramètre peut entraîner des problèmes de sécurité.</dd>
 </dl>
+
+<!-- staging only content for the sso parameter and note for federated ID atlas 45 work -->
 
 *Remarque :* si vous indiquez votre mot de passe dans le paramètre *-p* de cette commande, votre mot de passe peut être
 enregistré dans le fichier
@@ -237,22 +246,20 @@ cf push nom_app -c “bash ./<run.sh>"
 ```</dd>
 <dt>*-f* chemin_manifeste</dt>
 <dd>Chemin d'accès au fichier manifeste. Le fichier manifeste par défaut est manifest.yml sous le répertoire racine de votre application.</dd>
-<dt>*-i*nombre_instances</dt>
+<dt>*-i* nombre_instances</dt>
 <dd>Nombre d'instances.</dd>
-<dt>*-k*limite_disque</dt>
-<dd>Limite de disque pour l'application, par exemple *256M*, *1024M* ou *1G*.</dd>
-<dt>*-m*limite_mémoire</dt>
-<dd>Limite de mémoire pour l'application, par exemple *256M*,
-*1024M* ou *1G*.</dd>
-<dt>*-n*nom_hôte</dt>
-<dd>Nom d'hôte pour l'application, par exemple *mon-sous-domaine*.</dd>
-<dt>*-p*chemin_app</dt>
+<dt>*-k* limite_disque</dt>
+<dd>Limite de disque pour l'application, par exemple, *256M*, *1024M* ou *1G*.</dd>
+<dt>*-m* limite_mémoire</dt>
+<dd>Limite de mémoire pour l'application, par exemple, *256M*, *1024M* ou *1G*.</dd>
+<dt>*-n* nom_hôte</dt>
+<dd>Nom d'hôte pour l'application, par exemple, *my-subdomain*.</dd>
+<dt>*-p* chemin_app</dt>
 <dd>Chemin d'accès au répertoire de l'application ou au fichier archive de l'application.</dd>
-<dt>*-t*délai_attente</dt>
+<dt>*-t* délai</dt>
 <dd>Délai maximal de démarrage de l'application, en secondes. Il se peut que d'autres délais d'attente côté serveur remplacent cette valeur.</dd>
 <dt>*-s* nom_pile</dt>
-<dd>Pile pour l'exécution des applications. Une pile est un système de fichiers préconfiguré incluant le système d'exploitation. Utilisez `cf
-stacks` pour afficher les piles disponibles dans {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd>Pile pour l'exécution des applications. Une pile est un système de fichiers préconfiguré incluant le système d'exploitation. Utilisez `cf stacks` pour afficher les piles disponibles dans {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*--no-hostname*</dt>
 <dd>Mappe le domaine de système Bluemix à cette application.</dd>
 <dt>*--no-manifest*</dt>
@@ -274,13 +281,12 @@ cf scale nom_app -i nombre_instances -k limite_disque -m limite_mémoire
 <dl>
 <dt>nom_app</dt>
 <dd>Nom de l'application.</dd>
-<dt>*-i*nombre_instances</dt>
+<dt>*-i* nombre_instances</dt>
 <dd>Nombre d'instances.</dd>
-<dt>*-k*limite_disque</dt>
-<dd>Limite de disque pour l'application, par exemple *256M*, *1024M* ou *1G*.</dd>
-<dt>*-m*limite_mémoire</dt>
-<dd>Limite de mémoire pour l'application, par exemple *256M*,
-*1024M* ou *1G*.</dd>
+<dt>*-k* limite_disque</dt>
+<dd>Limite de disque pour l'application, par exemple, *256M*, *1024M* ou *1G*.</dd>
+<dt>*-m* limite_mémoire</dt>
+<dd>Limite de mémoire pour l'application, par exemple, *256M*, *1024M* ou *1G*.</dd>
 <dt>*-f*</dt>
 <dd>Force l'application à redémarrer sans invite.</dd>
 </dl>
@@ -335,6 +341,6 @@ cf -v
 
 # rellinks
 {: #rellinks}
-## Général
+## general 
 {: #general}
-* [Fiche de référence rapide - Commandes cf](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

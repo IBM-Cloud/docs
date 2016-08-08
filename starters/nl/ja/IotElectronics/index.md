@@ -12,6 +12,7 @@ copyright:
 
 # {{site.data.keyword.iotelectronics}} Starter によるアプリの作成
 *最終更新日: 2016 年 6 月 14 日*
+{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} は、接続された電気製品との通信や、その制御、分析、更新をアプリで実行できるようにする、統合エンドツーエンド・ソリューションです。Starter には、シミュレート電気製品を作成して制御するためのスターター・アプリと、その電気製品をモバイル・デバイスから制御するためのサンプル・モバイル・アプリが組み込まれています。
 {:shortdesc}
@@ -34,15 +35,14 @@ Bluemix カタログのボイラープレート・セクションから {{site.d
   - **レルム名**: myRealm
   - **URL**: https://<*myIoT4eStarterApp*>.mybluemix.net  
 
-    **ヒント:** URL ではセキュアな `https://` 接頭部を必ず使用してください。スターター・アプリの URL を確認するには、**「モバイル・オプション」**をクリックします。
-4. 保存します。
+    **ヒント:** URL ではセキュアな `https://` 接頭部を必ず使用してください。スターター・アプリの URL を確認するには、**「モバイル・オプション」**をクリックします。4. 保存します。
 
-  詳しくは、『[Configuring {{site.data.keyword.amashort}}](iotelectronics_config_mobile.html#iot4e_configureMCA)』を参照してください。
+  詳しくは、『[{{site.data.keyword.amashort}}](iotelectronics_config_mobile.html#iot4e_configureMCA) を構成する』を参照してください。
 
 ##シミュレート電気製品を作成する
 シミュレート電気製品を作成するには、以下のステップを実行します。
 1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、{{site.data.keyword.iotelectronics}} アプリケーションを開始します。
-2. `「アプリは稼働しています」`という状況メッセージが表示されるまで待機してから、**「アプリの表示 (View App)」**をクリックしてスターター・アプリを表示します。  
+2. *「アプリは稼働しています」*という状況メッセージが表示されるまで待機してから、**「アプリの表示 (View App)」**をクリックしてスターター・アプリを表示します。  
 3. **「接続された電気製品をリモート制御する (Remotely control your connected appliances)」**を選択します。
 4. **「次にシミュレート洗濯機を選択または追加します (Next, choose or add new simulated washer)」**と表記されたセクションまでスクロールし、追加 (+) ボタンをクリックします。新規洗濯機が作成されます。
 
@@ -55,7 +55,7 @@ Bluemix カタログのボイラープレート・セクションから {{site.d
 2. スターター・アプリにある接続 QR コードをスキャンして、デバイスを組織に接続します。
 3. スターター・アプリにある電気製品 QR コードをスキャンして、シミュレート電気製品を接続します。
 
-  詳しくは、「[Connecting the mobile app to your {{site.data.keyword.iotelectronics}} environment](iotelectronics_config_mobile.html#iot4e_connecting_mobile)」を参照してください。
+  詳しくは、『モバイル・アプリを [{{site.data.keyword.iotelectronics}} 環境に接続する](iotelectronics_config_mobile.html#iot4e_connecting_mobile)』を参照してください。
 
 ##次に行うこと
 {{site.data.keyword.iotelectronics}} で実行できること。
@@ -70,19 +70,17 @@ Bluemix カタログのボイラープレート・セクションから {{site.d
 {: #rellinks}
 ## API 資料
 {: #api}
-* [{{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)  
-* [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
+* [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
+* [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
 
 
 ## コンポーネント
 {: #general}
 
-* [{{site.data.keyword.iotelectronics_full}} の資料](iotelectronics_overview.html)
-* [{{site.data.keyword.iot_full}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
-* [{{site.data.keyword.iotrtinsights_full}}](https://new-console.ng.bluemix.net/docs/services/iotrtinsights/iotrtinsights_overview.html)
-* [{{site.data.keyword.amafull}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [{{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [{{site.data.keyword.iotelectronics}} の資料](iotelectronics_overview.html)
+* [{{site.data.keyword.iot_full}} の資料](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+*  [{{site.data.keyword.amashort}} の資料](https://new-console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
+* [{{site.data.keyword.sdk4nodefull}} の資料](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
 ## サンプル
 {: #samples}

@@ -335,7 +335,7 @@ Folgende Variablen werden vom DEA definiert:
         {
             "name": "mysql-ix",
             "label": "mysql-5.5",
-            "tags": [
+            "tags":[
                 "mysql",
                 "relational",
                 "data_management",

@@ -18,13 +18,13 @@ copyright:
 # CLI 和開發工具
 {: #cli}
 
-*前次更新：2016 年 5 月 27 日*
+*前次更新：2016 年 6 月 28 日*
 {: .last-updated}
 
 使用 {{site.data.keyword.Bluemix_short}}，您可以存取各種功能強大的工具，例如統一指令行介面和 CLI 外掛程式。其中每個 CLI 下載都可用來增強您的 {{site.data.keyword.Bluemix_notm}} 體驗。
 {:shortdesc}
 
-## ![指令行介面](./images/CLI.svg) 指令行介面
+## ![](./images/CLI.svg) 指令行介面
 {: #downloads}
 
 下載及安裝指令行介面，以支援您的 {{site.data.keyword.Bluemix_notm}} 體驗。 
@@ -39,16 +39,16 @@ copyright:
 | [下載 CLI](http://clis.ng.bluemix.net/)  <br> [檢視文件](./reference/bluemix_cli/index.html)|  [下載 CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [檢視文件](./reference/cfcommands/index.html) |
 
 
-## ![指令行介面外掛程式](./images/CLI_Plugin.svg) 指令行介面外掛程式
+## ![](./images/CLI_Plugin.svg) 指令行介面外掛程式
 
-使用其他指令，輕鬆延伸您的 {{site.data.keyword.Bluemix_notm}} 指令行介面。若要存取 {{site.data.keyword.Bluemix_notm}} 指令行介面外掛程式，請參閱 [CLI 外掛程式儲存庫](http://plugins.ng.bluemix.net/)。
+使用其他指令，輕鬆延伸您的 {{site.data.keyword.Bluemix_notm}} 指令行介面。若要存取 {{site.data.keyword.Bluemix_notm}} 指令行介面外掛程式，請參閱 [CLI 外掛程式儲存庫](https://plugins.ng.bluemix.net/)。
 
 ### 延伸您的 {{site.data.keyword.Bluemix_notm}} 指令行介面：bx
 
 1. 若要從 {{site.data.keyword.Bluemix_notm}} 登錄安裝 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式，請設定外掛程式登錄端點：
 
 ```
-bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
 ```
 2. 執行下列指令，以安裝外掛程式：
 ```
@@ -65,7 +65,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 1. 若要從 {{site.data.keyword.Bluemix_notm}} 登錄安裝 cf CLI 外掛程式，請設定外掛程式登錄端點：
 
 ```
-cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
 ```
 2. 執行下列指令，以安裝外掛程式：
 ```
@@ -83,7 +83,7 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 <!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
-## ![整合式開發工具](./images/Integrated_Dev_Tools.svg) 整合式開發工具
+## ![](./images/Integrated_Dev_Tools.svg) 整合式開發工具
 
 下載並安裝外掛程式以整合您最愛的 {{site.data.keyword.Bluemix_notm}} 服務。
 

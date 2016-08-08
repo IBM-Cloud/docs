@@ -18,7 +18,9 @@ copyright:
 # CLI do administrador do {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
-*Última atualização: 3 de março de 2016*
+*Última atualização: 22 de junho de 2016*
+{: .last-updated}
+
 
 É possível gerenciar usuários para o ambiente do seu
 {{site.data.keyword.Bluemix_notm}} Local ou {{site.data.keyword.Bluemix_notm}} Dedicated usando
@@ -235,8 +237,8 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">O nome ou GUID da organização do {{site.data.keyword.Bluemix_notm}} para a qual designar o usuário.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">Consulte [Funções](../../../admin/adminpublic.html#orgsandspaces) para obter descrições e funções de usuário do
-{{site.data.keyword.Bluemix_notm}}.</dd>
+<dd class="pd">Consulte [Funções](../../../admin/users_roles.html) para obter
+funções e descrições do usuário do {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 
 **Dica:** também é possível usar **ba so** como um alias para o nome do comando mais longo **ba set-org**.
@@ -258,8 +260,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">O nome ou GUID da organização do {{site.data.keyword.Bluemix_notm}} para a qual designar o usuário.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">Consulte [Funções](../../../admin/adminpublic.html#orgsandspaces) para obter descrições e funções de usuário do
-{{site.data.keyword.Bluemix_notm}}.</dd>
+<dd class="pd">Consulte [Funções](../../../admin/users_roles.html) para obter funções e descrições do usuário do {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 
 **Dica:** também é possível usar **ba uo** como um alias para o nome do comando mais longo **ba unset-org**.
@@ -268,7 +269,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
-<dd class="pd">Gerenciador de organização. Um gerenciador de organização possui authoridade para executar as ações a seguir:
+<dd class="pd">Gerenciador de organização. Um gerenciador de organização possui autoridade para executar as ações a seguir:
 <ul>
 <li>Criar ou excluir espaços dentro da organização.</li>
 <li>Convidar usuários para a organização e gerenciar usuários.</li>
@@ -310,6 +311,9 @@ cf ba set-quota <organization> <plan>
 cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
+
+**Nota**: Se você tiver acesso de gravação para a permissão de relatórios, poderá criar uma nova categoria e incluir um relatório em qualquer um dos formatos aceitos para seus usuários. Insira
+o novo nome da categoria para o parâmetro `category` ou inclua o seu novo relatório em uma categoria existente.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
@@ -374,8 +378,12 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do serviço que você deseja ativar. Se você inserir um nome do serviço não
-exclusivo, serão solicitados os planos de serviço dos quais escolher.</dd>
+<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se
+você inserir um nome do serviço não exclusivo, por exemplo, "Padrão"
+ou "Básico", será solicitado que escolha a partir de planos de
+serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+**Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de serviços
+que estão disponíveis para esse serviço. </dd>
 </dl>
 
 **Dica:** também é possível usar **ba esp** como um alias para o nome do comando mais longo **ba enable-service-plan**.
@@ -390,8 +398,9 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do serviço que você deseja desativar. Se você inserir um nome do serviço não
-exclusivo, serão solicitados os planos de serviço dos quais escolher.</dd>
+<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você inserir um nome do serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será solicitado que escolha a partir de planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+**Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
+serviços que estão disponíveis para esse serviço. </dd>
 </dl>
 
 **Dica:** também é possível usar **ba dsp** como um alias para o nome do comando mais longo **ba disable-service-plan**.
@@ -411,8 +420,12 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do serviço para o qual você deseja incluir visibilidade. Se você inserir um nome do serviço não
-exclusivo, serão solicitados os planos de serviço dos quais escolher.</dd>
+<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se
+você inserir um nome do serviço não exclusivo, por exemplo, "Padrão"
+ou "Básico", será solicitado que escolha a partir de planos de
+serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+**Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
+serviços que estão disponíveis para esse serviço. </dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">O nome ou o GUID da organização {{site.data.keyword.Bluemix_notm}} a ser incluída na lista de visibilidade do serviço.</dd>
 </dl>
@@ -429,8 +442,11 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do serviço para o qual você deseja remover a visibilidade. Se você inserir um nome do serviço não
-exclusivo, serão solicitados os planos de serviço dos quais escolher.</dd>
+<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se
+você inserir um nome do serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será solicitado que escolha a partir de planos de
+serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+**Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
+serviços que estão disponíveis para esse serviço. </dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">O nome ou o GUID da organização {{site.data.keyword.Bluemix_notm}} a ser removida da
 lista de visibilidade do serviço.</dd>
@@ -451,8 +467,11 @@ que você especifica no comando.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do serviço que você deseja tornar visível. Se você inserir um nome do serviço não
-exclusivo, serão solicitados os planos de serviço dos quais escolher.</dd>
+<dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se
+você inserir um nome do serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será solicitado que escolha a partir de planos de
+serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+**Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
+serviços que estão disponíveis para esse serviço. </dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">O nome ou o GUID da organização {{site.data.keyword.Bluemix_notm}} para a qual incluir a visibilidade. É
 possível ativar a visibilidade do serviço para mais de uma organização, inserindo GUIDs ou nomes adicionais da
@@ -473,7 +492,7 @@ cf ba service-brokers <broker_name>
 ```
 {: codeblock}
 
-**Nota**: para listar todos os brokers de serviço, insira o comando sem o parâmetro `broker_name`. 
+**Nota**: para listar todos os brokers de serviço, insira o comando sem o parâmetro `broker_name`.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nome_do_servidor_intermediário&gt;</dt>

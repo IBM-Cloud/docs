@@ -16,7 +16,7 @@ copyright:
 
 # Cloud Foundry(cf) 명령
 
-*마지막 업데이트 날짜: 2016년 1월 29일*
+*마지막 업데이트 날짜: 2016년 7월 8일*
 {: .last-updated}
 
 Cloud Foundry(cf) 명령을 사용하여 앱을 관리할 수 있습니다.
@@ -35,7 +35,7 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>{{site.data.keyword.Bluemix_notm}}에 연결할 때 지정해야 하는 Bluemix API 엔드포인트의 URL입니다. 일반적으로 이 URL은 https://api.{DomainName}입니다.
+<dd>{{site.data.keyword.Bluemix_notm}}에 연결할 때 지정해야 하는 Bluemix API 엔드포인트의 URL입니다. 일반적으로 이 URL은 다음과 같습니다. https://api.{DomainName}.
 현재 사용 중인 API 엔드포인트의 URL을 표시하려는 경우 cf api 명령에 이 매개변수를 지정할 필요가 없습니다.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>SSL 유효성 검증 프로세스를 사용 안함으로 설정합니다. 이 매개변수를 사용할 경우 보안 문제가 발생할 수 있습니다. </dd>
@@ -159,6 +159,11 @@ cf help command_name
 
 {{site.data.keyword.Bluemix_notm}}에 로그인됩니다.
 
+
+<!-- staging only for atlas 45 -->
+
+**참고**: 연합된 ID로 로그인하는 경우 싱글 사인온(SSO) 매개변수를 사용하여 로그인해야 합니다. 
+
 ```
 cf login
 ```
@@ -170,6 +175,8 @@ cf login 명령을 실행할 때 다음 매개변수 중 하나 이상을 사용
 <dt>*-p*password</dt>
 <dd>비밀번호입니다. </dd>
 <dd>*중요:* 명령행 인터페이스에 *-p* 매개변수를 사용하여 비밀번호를 지정하는 경우, 이 비밀번호가 명령행 히스토리에 기록될 수 있습니다. 보안을 위해 -p 매개변수를 사용하여 비밀번호를 지정하지 말아야 합니다. 대신, 명령행 인터페이스의 지시에 따라 비밀번호를 입력하십시오.</dd>
+<dt>*-sso*</dt>
+<dd>연합된 ID로 로그인하는 경우 싱글 사인온 옵션(SSO)을 사용해야 합니다. 이는 IBM ID로 로그인하는 경우 필요하지 않습니다. 연합된 ID로 로그인하려고 시도하고 SSO 매개변수를 지정하지 않으면, 이를 포함하도록 프롬프트가 표시됩니다. SSO 매개변수를 사용하면 로그인 시 일회성 패스코드를 입력하도록 프롬프트가 표시됩니다.</dd>
 <dt>*-o* organization_name</dt>
 <dd>로그인하려는 조직의 이름입니다. </dd>
 <dt>*-s* space_name</dt>
@@ -177,6 +184,8 @@ cf login 명령을 실행할 때 다음 매개변수 중 하나 이상을 사용
 <dt>*--skip-ssl-validation*</dt>
 <dd>SSL 유효성 검증 프로세스를 사용 안함으로 설정합니다. 이 매개변수를 사용할 경우 보안 문제가 발생할 수 있습니다. </dd>
 </dl>
+
+<!-- staging only content for the sso parameter and note for federated ID atlas 45 work -->
 
 *참고:* 이 명령의 *-p* 매개변수에 비밀번호를 제공할 경우 비밀번호가 쉘 명령 히스토리 파일에 기록되며 로컬 운영 체제의 다른 사용자가 이를 볼 수 있습니다.
 
@@ -229,17 +238,17 @@ cf push appname -c “bash ./<run.sh>"
 <dt>*-i* instance_number</dt>
 <dd>인스턴스 수입니다. </dd>
 <dt>*-k* disk_limit</dt>
-<dd>애플리케이션에 대한 디스크 한계입니다(예: *256M*, *1024M* 또는 *1G*). </dd>
+<dd>애플리케이션의 디스크 한계입니다(예: *256M*, *1024M* 또는 *1G*).</dd>
 <dt>*-m* memory_limit</dt>
-<dd>애플리케이션에 대한 메모리 한계입니다(예: *256M*, *1024M* 또는 *1G*). </dd>
+<dd>애플리케이션의 메모리 한계입니다(예: *256M*, *1024M* 또는 *1G*).</dd>
 <dt>*-n* host_name</dt>
-<dd>애플리케이션의 호스트 이름입니다(예: *my-subdomain*). </dd>
+<dd>애플리케이션의 호스트 이름입니다(예: *my-subdomain*).</dd>
 <dt>*-p* app_path</dt>
 <dd>애플리케이션 디렉토리 또는 애플리케이션 아카이브 파일의 경로입니다. </dd>
 <dt>*-t* timeout</dt>
 <dd>애플리케이션 시작에 걸리는 최대 시간(초)입니다. 다른 서버 측 제한시간이 이 값을 대체할 수 있습니다. </dd>
 <dt>*-s* stackname</dt>
-<dd>앱을 실행하기 위한 스택입니다. 스택은 운영 체제를 포함하는 빌드별 파일 시스템입니다. {{site.data.keyword.Bluemix_notm}}에서 사용 가능한 스택을 보려면 `cf stacks`를 사용하십시오.</dd>
+<dd>앱을 실행하기 위한 스택입니다. 스택은 운영 체제를 포함하는 빌드별 파일 시스템입니다. `cf stacks`를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 사용 가능한 스택을 보십시오.</dd>
 <dt>*--no-hostname*</dt>
 <dd>Bluemix 시스템 도메인을 이 애플리케이션에 맵핑합니다.</dd>
 <dt>*--no-manifest*</dt>
@@ -264,9 +273,9 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 <dt>*-i* instance_number</dt>
 <dd>인스턴스 수입니다. </dd>
 <dt>*-k* disk_limit</dt>
-<dd>애플리케이션에 대한 디스크 한계입니다(예: *256M*, *1024M* 또는 *1G*). </dd>
+<dd>애플리케이션의 디스크 한계입니다(예: *256M*, *1024M* 또는 *1G*).</dd>
 <dt>*-m* memory_limit</dt>
-<dd>애플리케이션에 대한 메모리 한계입니다(예: *256M*, *1024M* 또는 *1G*). </dd>
+<dd>애플리케이션의 메모리 한계입니다(예: *256M*, *1024M* 또는 *1G*).</dd>
 <dt>*-f*</dt>
 <dd>프롬프트 없이 애플리케이션을 강제로 다시 시작합니다. </dd>
 </dl>
@@ -318,8 +327,8 @@ cf stop appname
 cf -v
 ```
 
-# rellinks
+# 관련 링크
 {: #rellinks}
-## general 
+## 일반
 {: #general}
-* [빠른 참조 카드 - cf 명령](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2015, 2016
 
  
 
@@ -14,16 +14,22 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Bluemix CLI VPN 外掛程式
+# 適用於 {{site.data.keyword.Bluemix_notm}} CLI 的 {{site.data.keyword.vpn_short}} 外掛程式
 
-*前次更新：*2016 年 1 月 18 日
+*前次更新：2016 年 6 月 20 日*
+{: .last-updated}
 
-*版本：*0.1.5
+*版本：*1.4.0
 
-您可以使用 Bluemix CLI VPN 外掛程式配置及管理 IBM Virtual Private Network (VPN) 服務。
+您可以使用指令行介面 (CLI) 來配置及管理 {{site.data.keyword.vpn_full}} 服務。{{site.data.keyword.vpn_short}} CLI 外掛程式有兩個版本：一個適用於 Cloud Foundry CLI 外掛程式，另一個適用於 {{site.data.keyword.Bluemix}} CLI 外掛程式。這兩個版本的外掛程式都提供相同的功能。  
 {:shortdesc}
 
-接下來的資訊列出 Bluemix CLI VPN 外掛程式支援的所有指令，並包括其名稱、選項、用法、必要條件、說明及範例。
+{{site.data.keyword.vpn_short}} 外掛程式適用於 Windows、MAC 和 Linux 作業系統。請確定您是使用適用的版本。
+
+下列指示適用於 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式。若要將此外掛程式與 Cloud Foundry (cf) CLI 外掛程式搭配使用，請參閱[適用於 cf CLI 的 {{site.data.keyword.vpn_short}} CLI 外掛程式](../vpn/index.html)。
+
+
+下列資訊列出 Bluemix CLI {{site.data.keyword.vpn_short}} 外掛程式支援的所有指令，並包含其名稱、選項、用法、必要條件、說明及範例。請參閱[延伸您的 Bluemix 指令行介面](../../index.html#cli_bluemix_ext)，以瞭解如何安裝 VPN 外掛程式。
 
 **附註：***必要條件* 列出使用指令之前需要哪些動作。必要條件可能包括下列一個以上的動作：
 <dl>
@@ -40,7 +46,7 @@ copyright:
 建立 VPN 連線。
 
 ```
-bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
+bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **必要條件**：端點、登入、目標
@@ -90,7 +96,7 @@ bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "19
 建立 IKE 原則。
 
 ```
-bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
+bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **必要條件**：端點、登入、目標
@@ -122,7 +128,7 @@ bluemix vpn ike-create my_ike -g my_gateway
 建立 IPSec 原則。
 
 ```
-bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
+bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **必要條件**：端點、登入、目標
@@ -154,7 +160,7 @@ bluemix vpn ipsec-create my_policy -g my_gateway
 建立 VPN 閘道。
 
 ```
-bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **必要條件**：端點、登入、目標
@@ -334,7 +340,7 @@ bluemix vpn gateway-delete GATEWAY_NAME
 更新現有 VPN 連線。
 
 ```
-bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY] [-subnets "SUBNET/MASK"][-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
+bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **必要條件**：端點、登入、目標
@@ -376,7 +382,7 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY
 更新 IKE 原則。
 
 ```
-bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **必要條件**：端點、登入、目標
@@ -400,7 +406,7 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP
 更新 IPSec 原則。
 
 ```
-bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **必要條件**：端點、登入、目標
@@ -424,7 +430,7 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GRO
 更新現有 VPN 閘道。
 
 ```
-bluemix vpn gateway-update GATEWAY_NAME [-t TYPE][-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **必要條件**：端點、登入、目標

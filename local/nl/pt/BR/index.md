@@ -15,7 +15,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Última atualização: 16 de maio de 2016*
+*Última atualização: 7 de julho de 2016*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} Local traz a eficiência e agilidade da plataforma baseada em nuvem do {{site.data.keyword.Bluemix_notm}} para seu datacenter. Com o
 {{site.data.keyword.Bluemix_notm}} Local, é possível proteger
@@ -49,20 +50,23 @@ Além disso, há um conjunto de serviços que estão disponíveis como serviços
 
 | **Tipo** | **Nome** | **Descrição** |
 |----------|----------|-----------------|
-|Incluído | Tempos de execução do {{site.data.keyword.Bluemix_notm}} | Use tempos de execução para colocar seu app funcionando rapidamente, sem necessidade de configurar e gerenciar as máquinas e os sistemas operacionais. Todos os tempos de execução do
+|Incluído | [ Tempos de execução do {{site.data.keyword.Bluemix_notm}}](../cfapps/runtimes.html) | Use tempos de execução para colocar seu app funcionando rapidamente, sem necessidade de configurar e gerenciar as máquinas e os sistemas operacionais. Todos os tempos de execução do
 {{site.data.keyword.Bluemix_notm}} estão disponíveis
 para uso em sua instância do {{site.data.keyword.Bluemix_notm}} Local.|
-|Opcional | {{site.data.keyword.APIM}} | Use o serviço {{site.data.keyword.APIMfull}} para compor, gerenciar e socializar APIs. É
+|Incluído | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | Aumente ou diminua dinamicamente a capacidade de recursos de cálculo do aplicativo com base em políticas. Com esse serviço, você
+tem uso ilimitado em seu ambiente do {{site.data.keyword.Bluemix}} Local.|
+|Opcional | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | O {{site.data.keyword.apiconnect_long}} integra o {{site.data.keyword.APIM}} e o IBM StrongLoop em uma única oferta que fornece uma
+solução abrangente para criar, executar, gerenciar e impingir APIs e microsserviços. |
+|Opcional | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | Use o serviço {{site.data.keyword.APIMfull}} para compor, gerenciar e socializar APIs. É
 possível importar APIs com recursos usando uma URL de proxy ou montando dados a partir de origens de dados HTTP. O
 benefício do uso do serviço {{site.data.keyword.APIM}}
 é que é possível gerenciar como suas APIs são usadas. |
-|Incluído | {{site.data.keyword.autoscaling}}| Aumente ou diminua dinamicamente a capacidade de recursos de cálculo do aplicativo com base em políticas. Com esse serviço, você
-tem uso ilimitado em seu ambiente do {{site.data.keyword.Bluemix}} Local.|
-|Opcional | {{site.data.keyword.datacshort}} | Esse serviço fornece uma grade de dados da memória
+|Opcional | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | O {{site.data.keyword.cloudant}} fornece acesso a uma camada de dados do JSON NoSQL totalmente gerenciada que sempre está ativa. Esse serviço é compatível com o CouchDB e acessível por meio de uma interface HTTP simples de usar para modelos de aplicativos móveis e da web. |
+|Opcional | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | Esse serviço fornece uma grade de dados da memória
 que suporta cenários de armazenamento em cache distribuído para seus apps. Inclui
  50 GB de cache na memória. |
-|Opcional | {{site.data.keyword.sescashort}} | Para maior redundância, o {{site.data.keyword.sescashort}} fornece uma réplica de uma sessão armazenada no cache. Portanto, no caso de uma indisponibilidade de energia, seu aplicativo cliente manterá acesso à sessão no cache. O serviço suporta cenários de armazenamento em cache de sessão para aplicativos móveis e da web. |
-|Opcional | {{site.data.keyword.iot_full}} | Esse serviço permite que os apps se comuniquem e consumam dados que são coletados por seus dispositivos conectados, sensores e gateways. A oferta de base local inclui um ambiente inicial que permite executar uma versão privada do IBM {{site.data.keyword.iot_full}} dentro do ambiente local com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 1,6 TB de troca de dados. |
+|Opcional | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | Para maior redundância, o {{site.data.keyword.sescashort}} fornece uma réplica de uma sessão armazenada no cache. Portanto, no caso de uma indisponibilidade de energia, seu aplicativo cliente manterá acesso à sessão no cache. O serviço suporta cenários de armazenamento em cache de sessão para aplicativos móveis e da web. |
+|Opcional | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | Esse serviço permite que os apps se comuniquem e consumam dados que são coletados por seus dispositivos conectados, sensores e gateways. A oferta de base local inclui um ambiente inicial que permite executar uma versão privada do IBM {{site.data.keyword.iot_full}} dentro do ambiente local com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 1,6 TB de troca de dados. |
 
 
 Há componentes opcionais que estão disponíveis para você comprar para escalar e ampliar a capacidade de seus recursos e serviços. É possível comprar qualquer um desses componentes entrando em contato com a equipe de vendas; acesse [Contate-nos](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) para obter informações sobre como contatar um representante de vendas. Para aumentar seu plano para um serviço, é possível selecionar o plano a partir do ladrilho do serviço em seu catálogo.
@@ -74,7 +78,17 @@ Há componentes opcionais que estão disponíveis para você comprar para escala
 |Configuração única de acesso do {{site.data.keyword.Bluemix_notm}} Local | Um encargo de configuração única para implementar e configurar o ambiente local. |
 |Aumento de capacidade de 16 GB de recursos de cálculo do {{site.data.keyword.Bluemix_notm}} Local | Uma extensão dos recursos de cálculo do IBM {{site.data.keyword.Bluemix_notm}} Local para fornecer um extra de 16 GB de capacidade de memória. |
 |Aumento de capacidade de 50 GB de Dados e Sessão do {{site.data.keyword.Bluemix_notm}} | Um ambiente que permite implementar e executar as instâncias de Cache de Dados e Cache de Sessão até uma capacidade acumulativa de 50 GB. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 5 milhões de Chamadas API | Um ambiente que permite executar uma versão privada do
+{{site.data.keyword.apiconnect_short}} com uma capacidade de 5 milhões de Chamadas API por mês, destinadas para projetos de API do departamento. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional aumento de 100 mil Chamadas API| Uma extensão do ambiente do {{site.data.keyword.apiconnect_short}} Professional, para fornecer
+capacidade adicional de 100 mil chamadas API por mês. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 25 milhões de Chamadas API | Um ambiente que permite executar uma versão privada do
+{{site.data.keyword.apiconnect_short}} com uma capacidade de 25 milhões de Chamadas API por mês, destinadas para projetos de API em toda a empresa. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise aumento de 100 mil Chamadas API | Uma extensão do ambiente do {{site.data.keyword.apiconnect_short}} Enterprise, para fornecer
+capacidade adicional de 100 mil Chamadas API por mês. |
 |Aumento de capacidade de 500 chamadas API do {{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} | Um ambiente que permite executar uma versão privada do {{site.data.keyword.APIM}} for {{site.data.keyword.Bluemix_notm}} com uma capacidade de 500 chamadas API por segundo. |
+|{{site.data.keyword.Bluemix_notm}} Cluster local do {{site.data.keyword.cloudant}} | Um ambiente que permite implementar um cluster de 3 nós do serviço do {{site.data.keyword.cloudant}}. 
+A capacidade de dados dos nós é determinada pela infraestrutura fornecida por você para o ambiente local. |
 |Aumento incremental do {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local | Um ambiente adicional para a oferta de serviços de base do {{site.data.keyword.iot_full}} Local que permite executar uma versão privada do {{site.data.keyword.iot_full}} no ambiente local com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 0,5 TB de troca de dados. |
 
 
@@ -85,8 +99,8 @@ Há componentes opcionais que estão disponíveis para você comprar para escala
 O {{site.data.keyword.Bluemix_notm}} Local inclui um catálogo privado organizado que exibe os serviços locais que estão disponíveis exclusivamente para você. Ele também inclui serviços adicionais que são disponibilizadas para você para uso a partir do {{site.data.keyword.Bluemix_notm}} Public.
 
 O catálogo organizado fornece a função para criar aplicativos híbridos que consistem em serviços públicos e privados. Você tem a opção de decidir quais serviços públicos atendem aos requisitos para seus negócios com base em sua privacidade de dados e critérios de segurança. Se
-for uma instância privada do serviço para o seu ambiente local, você verá uma identificação "Local" com os ladrilhos de serviço em seu catálogo. Da mesma forma, se for um serviço customizado, você verá
-"Customizado" listado com o ladrilho do serviço. 
+for uma instância privada do serviço para o seu ambiente local, você verá uma identificação "Local" com os ladrilhos de serviço em seu catálogo. Da mesma forma, se for um serviço customizado, você
+verá "Customizado" listado com o ladrilho do serviço. 
 
 *Tabela 3. Serviços disponíveis para organização a partir do {{site.data.keyword.Bluemix_notm}} Public por região*
 
@@ -189,7 +203,8 @@ O ambiente está completamente visível para você, como administrador, para ger
 
 O {{site.data.keyword.Bluemix_notm}} Local foi projetado para fornecer uma versão privada da oferta do {{site.data.keyword.Bluemix_notm}} Public que está hospedada em seu próprio hardware, gerenciada por você. É possível usar serviços e tempos de execução do {{site.data.keyword.Bluemix_notm}} para suportar suas necessidades de computação em um ambiente em nuvem seguro, hospedado pelo cliente e gerenciado.
 
-A IBM fornece acesso ao {{site.data.keyword.Bluemix_notm}} Local usando um login protegido por senha. É possível acessar os serviços, os tempos de execução e os recursos associados e implementar e remover apps do {{site.data.keyword.Bluemix_notm}}. Revise as etapas a seguir para trabalhar com seu representante IBM para configurar sua instância local do {{site.data.keyword.Bluemix_notm}}.
+A IBM fornece acesso ao {{site.data.keyword.Bluemix_notm}} Local usando um login protegido por senha. É possível acessar os serviços, os tempos de execução
+e os recursos associados e implementar e remover apps do {{site.data.keyword.Bluemix_notm}}. Revise as etapas a seguir para trabalhar com seu representante IBM para configurar sua instância local do {{site.data.keyword.Bluemix_notm}}.
 
 Para configurar sua versão privada do {{site.data.keyword.Bluemix_notm}}:
 
@@ -276,8 +291,7 @@ informações:
 <li>É possível começar a usar sua instância local que é monitorada pela equipe de operações da IBM para responder aos alertas.</li>
 </ol>
 
-Depois que a instância do {{site.data.keyword.Bluemix_notm}} estiver configurada, será possível monitorar e gerenciar sua instância do {{site.data.keyword.Bluemix_notm}} usando a página Administração. Para
-obter mais informações, consulte
+Depois que a instância do {{site.data.keyword.Bluemix_notm}} estiver configurada, será possível monitorar e gerenciar sua instância do {{site.data.keyword.Bluemix_notm}} usando a página Administração. Para obter mais informações, consulte
 [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e Dedicated](../admin/index.html#mng). Para obter informações sobre upgrades e manutenção, veja [Mantendo sua instância local](index.html#maintainlocal).
 
 ##Funções e Responsabilidades
@@ -553,6 +567,8 @@ para cada um dos quatro DEAs. Esse exemplo é baseado em um DEA configurado com 
 A IBM mantém e instala atualizações e correções nos tempos de execução e serviços do {{site.data.keyword.Bluemix_notm}}, conforme julga adequado. Os serviços podem não estar disponíveis durante
 as janelas de manutenção. Além disso, a IBM trabalha com você para planejar atualizações de manutenção para a plataforma do {{site.data.keyword.Bluemix_notm}}.
 
+### Manutenção do {{site.data.keyword.Bluemix_notm}}
+
 Os tipos de manutenção a seguir são necessários para o {{site.data.keyword.Bluemix_notm}} Local:
 <dl>
 <dt>**Manutenção padrão para serviços**</dt>
@@ -575,6 +591,28 @@ IBM pode mudar os horários de manutenção planejados, mas o notifica sobre qua
 
 Se houver um problema relatado após uma atualização de manutenção, você concordará com o Suporte do {{site.data.keyword.Bluemix_notm}} se for de seu melhor interesse permitir que a IBM
 recupere a atualização. Em concordância, a IBM reverterá a atualização para restaurar o ambiente para o estado anterior.
+
+### Manutenção da infraestrutura do cliente
+{: #inframaintenance}
+
+O {{site.data.keyword.Bluemix_notm}} Local está implementado no hypervisor ESXi e o aplicativo vCenter é usado para gerenciar centralmente máquinas virtuais e hosts ESXi. O
+{{site.data.keyword.Bluemix_notm}} suporta as três versões mais recentes de ESXi e vCenter, incluindo todas as atualizações e correções intermediárias. Sempre é possível localizar as versões
+mais recentes suportadas na documentação de [Requisitos de infraestrutura local](../local/index.html#localinfra).
+
+**Importante**: com o {{site.data.keyword.Bluemix_notm}} Local sendo implementado no hypervisor ESXi, upgrades e correções para ESXi podem interromper a disponibilidade do
+ambiente local, incluindo todos os aplicativos e serviços em execução dentro do ambiente. Deve-se notificar o {{site.data.keyword.Bluemix_notm}} usando um chamado de suporte anterior à conclusão de um
+upgrade ou de uma correção, para assegurar que a interrupção não alerte a equipe de operações por engano. Se
+você tiver um gerenciador de sucesso do cliente designado (CSM), será possível trabalhar com o CSM para
+comunicar o planejamento de upgrade.
+
+Para assegurar que a sua instância local seja compatível com as versões mais recentes suportadas, a equipe de Operações do {{site.data.keyword.Bluemix_notm}} monitora o ambiente para versões não
+suportadas que podem não corresponder às últimas atualizações do ambiente do {{site.data.keyword.Bluemix_notm}} Local. Algumas atualizações do {{site.data.keyword.Bluemix_notm}}, como
+atualizações de versão do Cloud Foundry, requerem que você atualize o software ESXi ou vCenter. O suporte do {{site.data.keyword.Bluemix_notm}} irá alertá-lo sobre o que deve ser atualizado e quando. É
+fornecida uma janela de tempo para concluir esta atualização.
+
+O {{site.data.keyword.Bluemix_notm}} faz todos os esforços para manter os ambientes locais compatíveis com as versões mais recentes do ESXi e do vCenter. No entanto, pode haver curtos períodos
+de tempo nos quais as versões mais recentes do ESXi e do vCenter não são suportadas. Consulte a documentação de [Requisitos de infraestrutura local](../local/index.html#localinfra)
+para as versões compatíveis mais recentes, antes de aplicar qualquer atualização.
 
 ## Resposta ao incidente e suporte
 {: #incidentresponse}
@@ -602,8 +640,8 @@ Dependendo do problema, você, a IBM ou ambos trabalham juntos para corrigir o p
 
 A recuperação de desastre para o {{site.data.keyword.Bluemix_short}} Local pode ser configurada de forma semelhante à maneira que funciona quando você usa o
 {{site.data.keyword.Bluemix_short}}
-Public. O {{site.data.keyword.Bluemix_short}} Public fornece uma plataforma continuamente disponível para inovação com várias medidas à prova de falhas, a fim de assegurar que as suas organizações,
-os seus espaços e aplicativos estejam sempre disponíveis. Implementar apps em várias regiões geográficas permite disponibilidade contínua que protege contra perda simultânea não planejada de vários componentes de hardware ou software, ou a perda de um datacenter inteiro, para que, mesmo no caso de um desastre natural em uma localização geográfica, as instâncias de app distribuídas do {{site.data.keyword.Bluemix_notm}} Public em localizações geográficas alternativas fiquem disponíveis.
+Public. O {{site.data.keyword.Bluemix_short}} Public fornece uma plataforma continuamente disponível para inovação com várias medidas à prova de falhas, a fim de assegurar que as suas organizações, os seus
+espaços e aplicativos estejam sempre disponíveis. Implementar apps em várias regiões geográficas permite disponibilidade contínua que protege contra perda simultânea não planejada de vários componentes de hardware ou software, ou a perda de um datacenter inteiro, para que, mesmo no caso de um desastre natural em uma localização geográfica, as instâncias de app distribuídas do {{site.data.keyword.Bluemix_notm}} Public em localizações geográficas alternativas fiquem disponíveis.
 {: shortdesc}
 
 A recuperação de desastre do {{site.data.keyword.Bluemix_short}} Local torna-se possível por meio de disponibilidade contínua para seus apps, da alta disponibilidade inerente da plataforma e da capacidade de restaurar sua instância no caso de uma falha. Você é responsável por ativar a disponibilidade contínua de seus apps implementando em várias regiões. A alta disponibilidade é construída no nível de plataforma por meio de tecnologias incluídas no Cloud Foundry e de outros componentes. Além disso, é possível trabalhar junto com a IBM para assegurar que seus dados sejam corretamente submetidos a backup no caso de você precisar restaurar sua instância a qualquer momento.

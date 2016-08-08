@@ -17,7 +17,7 @@ copyright:
 
 # Gestion des membres d'équipe et des rôles
 {: #userroles}
-*Dernière mise à jour : 1er juin 2016*
+Dernière mise à jour : 12 juillet 2016
 {: .last-updated}
 
 Depuis la page **Répertoire d'équipe** pour votre compte, vous pouvez gérer les membres d'équipe existants et leurs rôles dans votre
@@ -86,6 +86,18 @@ service et l'utilisation des ressources pour chaque application dans l'espace. |
 **Remarque** : les membres d'équipe qui possèdent le rôle de responsable ou de développeur de l'espace peuvent accéder à la
 variable
 d'environnement VCAP_SERVICES. Toutefois, un membre d'équipe possédant le rôle d'auditeur ne peut pas y accéder.
+
+## Ajustement de la visibilité du répertoire d'équipe
+{: #teamdirectoryvisibility}
+
+Selon la manière dont vos comptes et organisations {{site.data.keyword.Bluemix_notm}} sont configurés, vous souhaiterez peut-être modifier la visibilité de la page du répertoire d'équipe. Par défaut, tous les membres d'équipe de votre compte peuvent voir la liste complète des membres de l'équipe du compte, y compris tous les membres de toutes les organisations au sein du compte. Il se peut que pour des questions de confidentialité ou de sécurité, vous soyez amené à ajuster la visibilité de la page du répertoire d'équipe. Deux options s'offrent à vous pour la configuration de la visibilité de la page du répertoire d'équipe : tous les membres d'équipe ou juste vous, en tant que propriétaire du compte. 
+
+Pour modifier la visibilité de la page du répertoire d'équipe, procédez comme suit :
+
+1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
+&gt; **Compte** &gt; *nom_de_votre_compte* &gt; **Répertoire d'équipe**. 
+2. Pour l'option **Visibilité pour**, cliquez sur la sélection en cours pour afficher les options. 
+3. Sélectionnez ensuite **Tous** ou **Moi seulement** selon les besoins en cours pour votre compte. 
 
 ## Invitation de membres d'équipe
 {: #inviteteammembers}

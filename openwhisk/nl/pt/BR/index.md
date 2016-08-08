@@ -17,19 +17,26 @@ copyright:
 {:pre: .pre}
 
 # Introdução ao {{site.data.keyword.openwhisk_short}}
-*Última atualização: 17 de fevereiro de 2016*
+*Última atualização: 28 de junho de 2016*
+{: .last-updated}
 
 O {{site.data.keyword.openwhisk}} é um serviço de cálculo distribuído acionado por eventos. O {{site.data.keyword.openwhisk_short}} executa uma lógica de aplicativo em resposta a eventos ou chamadas diretas a partir de apps da web ou móveis sobre HTTP. Os eventos podem ser fornecidos a partir de serviços do Bluemix, como o Cloudant, e a partir de fontes externas. Os desenvolvedores podem focar a composição da lógica do aplicativo e a criação de ações que são executadas sob demanda. A taxa de execução de ações sempre corresponde à taxa de eventos, resultando em ajuste de escala e resiliência inerentes, além de utilização ideal. Você paga somente o que você usar e não precisa gerenciar um servidor. Também é possível obter o [código-fonte](https://github.com/openwhisk/openwhisk) e você mesmo executar o sistema.
 {: shortdesc}
 
 Para obter mais detalhes sobre como o {{site.data.keyword.openwhisk_short}} funciona, consulte [Sobre o {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
-## Configurando o {{site.data.keyword.openwhisk_short}}
-É possível usar a interface da linha de comandos (CLI) do {{site.data.keyword.openwhisk_short}} para configurar o namespace e a chave de autorização. Acesse [Configurar a CLI](https://console.{DomainName}/openwhisk/cli){: new_window} e siga a experiência orientada para instalá-la. Observe que deve-se ter o Python versão 2.7 instalado no sistema para usar a CLI.
+## Configurando a CLI do {{site.data.keyword.openwhisk_short}}
+{: #openwhisk_start_configure_cli}
+
+É possível usar a interface da linha de comandos (CLI) do {{site.data.keyword.openwhisk_short}} para configurar o namespace e a chave de autorização. 
+Acesse [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e siga as instruções para instalá-la.
+Observe que deve-se ter o Python versão 2.7 instalado no sistema para usar a CLI.
 
 Após o {{site.data.keyword.openwhisk_short}} estar configurado com a CLI, será possível iniciar seu uso a partir da linha de comandos ou por meio de APIs REST.
 
 ## Usando o CLI do {{site.data.keyword.openwhisk_short}}
+{: #openwhisk_start_using_cli}
+
 Após ter configurado seu ambiente, será possível iniciar o uso da CLI do {{site.data.keyword.openwhisk_short}} para executar o seguinte:
 
 * Executar os fragmentos de código ou ações no {{site.data.keyword.openwhisk_short}}. Consulte [Criando e chamando ações](./openwhisk_actions.html).
@@ -39,17 +46,22 @@ Após ter configurado seu ambiente, será possível iniciar o uso da CLI do {{si
 
 
 ## Usando o {{site.data.keyword.openwhisk_short}} a partir de um app do iOS
+{: #openwhisk_start_using_ios}
+
 É possível usar o {{site.data.keyword.openwhisk_short}} a partir de seu app móvel do iOS ou do Apple Watch usando o SDK do iOS do {{site.data.keyword.openwhisk_short}}. Para obter mais detalhes, consulte a [documentação do iOS](./openwhisk_mobile_sdk.html).
 
 ## Usando APIs REST com o {{site.data.keyword.openwhisk_short}}
+{: #openwhisk_start_using_restapi}
+
 Após seu ambiente do {{site.data.keyword.openwhisk_short}} ser ativado, é possível usar o {{site.data.keyword.openwhisk_short}} com seus apps da web ou apps móveis com chamadas API REST. Para obter mais detalhes sobre as APIs para ações, ativações, pacotes, regras e acionadores, consulte a [documentação da API do {{site.data.keyword.openwhisk_short}}](https://new-console.{DomainName}/apidocs/98).
 
 ## Exemplo Hello World do {{site.data.keyword.openwhisk_short}}
+{: #openwhisk_start_hello_world}
 Para iniciar o uso do {{site.data.keyword.openwhisk_short}}, tente o exemplo de código JavaScript a seguir.
 
 ```
 /**
- * Hello World como uma ação do OpenWhisk.
+ * Hello world como uma ação OpenWhisk.
  */
 function main(params) {
     var name = params.name || 'World';
@@ -117,7 +129,7 @@ Também é possível usar os recursos acionados por eventos no {{site.data.keywo
 
 # rellinks
 ## interface de programação de aplicativos
-* [Documentação da API REST](https://new-console.{DomainName}/apidocs/98){:new_window}
+* [Documentação da API REST](./openwhisk_reference.html#openwhisk_ref_restapi)
 
 ## gerais
 * [Descobrir: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}

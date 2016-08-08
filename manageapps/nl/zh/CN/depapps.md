@@ -53,7 +53,7 @@ copyright:
   * 要将 Liberty 服务器软件包部署到 {{site.data.keyword.Bluemix_notm}}，请从源目录使用以下命令：
   
   ```
-  cf push
+cf push
   ```
   
   有关 Liberty buildpack 的更多信息，请参阅 [Liberty for Java](../runtimes/liberty/index.html)。
@@ -61,27 +61,27 @@ copyright:
   * 要将 Java Tomcat 应用程序部署到 {{site.data.keyword.Bluemix_notm}}，请使用以下命令：
   
   ```
-  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
+cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * 要将 WAR 包部署到 {{site.data.keyword.Bluemix_notm}}，请使用以下命令：
   
   ```
-  cf push appname -p app.war
+cf push appname -p app.war
   ```
-  或者，可通过使用以下命令指定包含应用程序文件的目录：
-  
+或者，可通过使用以下命令指定包含应用程序文件的目录：  
   ```
-  cf push appname -p "./app"
+cf push appname -p "./app"
   ```
   
   * 要将 Node.js 应用程序部署到 {{site.data.keyword.Bluemix_notm}}，请使用以下命令：
   
   ```
-  cf push appname -p app_path
+cf push appname -p app_path
   ```
   
-Node.js 应用程序中必须具有 `package.json` 文件，Node.js buildpack 才可识别此应用程序。`app.js` 文件是应用程序的入口脚本，可在 `package.json` 文件中指定该文件。以下示例显示简单的 `package.json` 文件：
+Node.js 应用程序中必须具有 `package.json` 文件，Node.js buildpack 才可识别此应用程序。`app.js` 文件是应用程序的入口脚本，可在 `package.json` 文件中指定该文件。以下示例显示简单的 `package.json` 文件：  
+	
 
   ```
   {
@@ -93,11 +93,11 @@ Node.js 应用程序中必须具有 `package.json` 文件，Node.js buildpack �
                 "jade": ">=1.1.4"
         },
         "scripts": {
-                "start": "node app.js"
-        },
+                  "start": "node app.js"
+},
         "engines": {
                 "node": ">=0.10.0"
-        },
+},
         "repository": {}
   }
   ```
@@ -107,8 +107,8 @@ Node.js 应用程序中必须具有 `package.json` 文件，Node.js buildpack �
   * 要将 PHP、Ruby 或 Python 应用程序部署到 {{site.data.keyword.Bluemix_notm}}，请从包含应用程序源的目录中使用以下命令：
   
   ```
-  cf push appname
-  ```
+cf push appname 
+```
 
 ###在多个空间中部署应用程序
 
@@ -117,14 +117,14 @@ Node.js 应用程序中必须具有 `package.json` 文件，Node.js buildpack �
   1. 使用带 **-s** 选项的 **cf target** 命令，切换到要部署应用程序的空间：
   
   ```
-  cf target -s <space_name>
+cf target -s <space_name>
   ```
   
   2. 转至应用程序目录，然后使用 **cf push** 命令部署应用程序，其中 appname 必须在域中唯一。
   
   ```
-  cf push appname
-  ```
+cf push appname 
+```
   
 ##应用程序清单
 {: #appmanifest}
@@ -187,7 +187,8 @@ cf push -f appManifest.yml
 ##环境变量
 {: #app_env}
 
-环境变量包含 {{site.data.keyword.Bluemix_notm}} 上已部署应用程序的环境信息。除了通过 *Droplet Execution Agent (DEA)* 和 buildpack 设置的环境变量，还可为 {{site.data.keyword.Bluemix_notm}} 上的应用程序设置特定于应用程序的环境变量。
+环境变量包含 {{site.data.keyword.Bluemix_notm}} 上已部署应用程序的环境信息。除了通过 *Droplet Execution Agent
+(DEA)* 和 buildpack 设置的环境变量，还可为 {{site.data.keyword.Bluemix_notm}} 上的应用程序设置特定于应用程序的环境变量。
 
 您可通过使用 **cf env** 命令或从 {{site.data.keyword.Bluemix_notm}} 用户界面查看正在运行的 {{site.data.keyword.Bluemix_notm}} 应用程序的以下环境变量：
 	
@@ -198,10 +199,10 @@ cf push -f appManifest.yml
   ```
   {
    "VCAP_SERVICES": {
-    "AppScan Dynamic Analyzer": [
+"AppScan Dynamic Analyzer": [
      {
       "credentials": {
-       "bindingid": "0ab3162a-867e-4137-a2e7-39463a89472e",
+"bindingid": "0ab3162a-867e-4137-a2e7-39463a89472e",
        "password": "xE/jh/PlRj3ruuy8RCl8JNyEywaivRH1xXSZcbVExKg="
       },
       "label": "AppScan Dynamic Analyzer",
@@ -217,7 +218,7 @@ cf push -f appManifest.yml
     "mysql-5.5": [
      {
       "credentials": {
-       "host": "23.246.200.38",
+"host": "23.246.200.38",
        "hostname": "23.246.200.38",
        "name": "d296abcc06c9e418b94abcaafdf547620",
        "password": "peRiYCG4ZYqu3",
@@ -262,25 +263,25 @@ cf push -f appManifest.yml
   <dd>DEA 主机的 IP 地址。</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>JSON 字符串，其中包含有关部署的应用程序的信息。此信息包括应用程序名称、URI、内存限制、应用程序达到其当前状态时的时间戳记等。例如：
-  <pre class="pre codeblock"><code>
+<pre class="pre codeblock"><code>
   {
-    "limits": {
-        "mem": 512,
+"limits": {
+"mem": 512,
         "disk": 1024,
         "fds": 16384
-    },
+        },
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
-    ],
+"testapp.AppDomainNameng.mybluemix.net"
+        ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
-    ],
+"testapp.AppDomainNameng.mybluemix.net"
+        ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
     "instance_id": "09f50e22848d4ec0b943e9e487c23569",
@@ -295,21 +296,21 @@ cf push -f appManifest.yml
 </code></pre></dd>
   <dt><strong>VCAP_SERVICES</strong></dt>
   <dd>JSON 字符串，包含与已部署应用程序绑定的服务的信息。例如：
-  <pre class="pre codeblock"><code>
+<pre class="pre codeblock"><code>
   {
-    "mysql-5.5": [
+"mysql-5.5": [
         {
-            "name": "mysql-ix",
+                        "name": "mysql-ix",
             "label": "mysql-5.5",
-            "tags": [
-                "mysql",
+      "tags":[
+"mysql",
                 "relational",
                 "data_management",
                 "ibm_experimental"
-            ],
+                        ],
             "plan": "300",
-            "credentials": {
-                "name": "d296abcc06c9e418b94abcaafdf547620",
+"credentials": {
+"name": "d296abcc06c9e418b94abcaafdf547620",
                 "hostname": "23.246.200.38",
                 "host": "23.246.200.38",
                 "port": 3307,
@@ -318,7 +319,7 @@ cf push -f appManifest.yml
                 "password": "peRiYCG4ZYqu3",
                 "uri": "mysql://uzpGf7eGJ7mtB:peRiYCG4ZYqu3@23.246.200.38:3307/d296abcc06c9e418b94abcaafdf547620"
             }
-        }
+                }
     ]
 }
 </code></pre></dd>
@@ -327,10 +328,10 @@ cf push -f appManifest.yml
 
 通过 buildpack 定义的变量对于每个 buildpack 是不同的。请参阅 [buildpack](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window}，以了解任何其他兼容 buildpack。
 
+
+
 <ul>
-    <li>以下变量通过 Liberty buildpack 定义：
-	
-	  <dl>
+    <li>以下变量通过 Liberty buildpack 定义：<dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
 	  <dd>运行应用程序的 Java SDK 的位置。</dd>
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
@@ -360,7 +361,7 @@ cf push -f appManifest.yml
 
 ```
 if (process.env.VCAP_SERVICES) {
-    var env = JSON.parse (process.env.VCAP_SERVICES);
+var env = JSON.parse (process.env.VCAP_SERVICES);
     myvar = env.foo[bar].foo;
 }
 ```
@@ -382,14 +383,15 @@ if (process.env.VCAP_SERVICES) {
   * 使用 **cf push** 命令并指定 -c 参数。例如，部署 Node.js 应用程序时，可以通过 -c 参数指定 **node app.js** 启动命令：
   
   ```
-  cf push appname -p app_path -c "node app.js"
+cf push appname -p app_path -c "node app.js"
   ```
   
   * 在 `manifest.yml` 文件中使用 command 参数。例如，部署 Node.js 应用程序时，可以在清单文件中指定 **node app.js** 启动命令：
+
   
   ```
-  command: node app.js
-  ```
+command: node app.js
+```
   
 
 ### 添加用户定义的环境变量
@@ -402,12 +404,12 @@ if (process.env.VCAP_SERVICES) {
 	2. 在左侧导航窗格中，单击**环境变量**。
 	3. 单击**用户定义**，然后单击**添加**。
 	4. 填写必填字段，然后单击**保存**。
-  * 使用命令行界面。使用 `cf set-env` 命令添加用户定义的变量。例如：
+  * 使用命令行界面。使用 `cf set-env` 命令添加用户定义的变量。例如： 
     ```
-    cf set-env appname env_var_name env_var_value
+cf set-env appname env_var_name env_var_value
     ```
 	
-  * 使用 `manifest.yml` 文件。在该文件中添加值对。例如：
+  * 使用 `manifest.yml` 文件。在该文件中添加值对。例如： 
     ```
 	env:
       VAR1:value1

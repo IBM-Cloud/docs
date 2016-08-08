@@ -17,7 +17,7 @@ copyright:
 
 # Paramètres de profil
 {: #usersettings}
-*Dernière mise à jour : 16 mai 2016*
+Dernière mise à jour : 23 juin 2016
 {: .last-updated}
 
 Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg) &gt;
@@ -26,23 +26,19 @@ Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/
 
  Dans la page **Profil**, vous pouvez définir ou mettre à jour les informations suivantes :
 
-<!--  * A profile photo that is visible to other {{site.data.keyword.Bluemix_notm}} users -->
-
+ * Photo de profil visible pour les autres utilisateurs {{site.data.keyword.Bluemix_notm}}
  * Les informations d'ID IBM telles que votre nom, votre adresse électronique, votre numéro de téléphone, votre mot de passe, votre société et votre
 rôle
  * Paramètre Suivi pour analyse
 
-<!-- pulled back, so removing content for now
-
-## Changing your profile photo
+## Modification de la photo de votre profil
 {: #photo}
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
+1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
+&gt; **Compte** &gt; **Profil**.
 
-* Click **Change Photo** to upload a new photo.
-* Click **Remove Photo** to remove your photo.
-
--->
+* Cliquez sur **Changer de photo** pour télécharger une nouvelle photo.
+* Cliquez sur **Supprimer la photo** pour retirer votre photo.
 
 ## Edition de vos informations d'ID IBM
 {: #ibmid}

@@ -8,9 +8,10 @@ copyright:
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Sobre o {{site.data.keyword.iotelectronics}}
+# Sobre {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
 *Última atualização: 11 de junho de 2016*
+{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} é uma instância de produção IoT totalmente integrada que permite que os aplicativos
 se comuniquem e consumam dados coletados por seus dispositivos, sensores e gateways conectados.
@@ -46,8 +47,7 @@ orientações verificados está disponível e pode ser modificado e usado para p
 
 ## O que há no iniciador {{site.data.keyword.iotelectronics}}
 {: #whatsInStarter}
-O modelo do iniciador implementa a solução integrada do {{site.data.keyword.iotelectronics}}.
-Todos os componentes são ligados e implementados automaticamente para você. O aplicativo do iniciador permite explorar rapidamente os recursos da
+O modelo do iniciador implementa a solução integrada do {{site.data.keyword.iotelectronics}}.  Todos os componentes são ligados e implementados automaticamente para você. O aplicativo do iniciador permite explorar rapidamente os recursos da
 solução usando dispositivos e dados simulados. O aplicativo móvel de amostra mostra como um consumidor pode registrar, receber alertas e controlar
 um dispositivo conectado. É possível usar as amostras como pontos de início para criar seus próprios aplicativos e coletar dados de seus próprios
 dispositivos. Os serviços e aplicativos a seguir são incluídos na solução:
@@ -68,21 +68,19 @@ sociais existentes e assegura que as comunicações com os sistemas backend seja
 **{{site.data.keyword.sdk4nodefull}}** permite desenvolver, implementar e ajustar a escala de aplicativos
 JavaScript&reg; do lado do servidor e fornece desempenho, segurança e capacidade de manutenção aprimorados.
 
-**Aplicativo móvel de amostra** permite visualizar o status e se comunicar com um dispositivo simulado usando seu telefone iOS. Descubra
-como obter o aplicativo móvel [aqui](iotelectronics_config_mobile.html).
+**Aplicativo móvel de amostra** permite visualizar o status e se comunicar com um dispositivo simulado usando seu telefone iOS. Descubra como conseguir o aplicativo móvel em
+[Usando o aplicativo móvel](iotelectronics_config_mobile.html).
 
 # Links Relacionados
 {: #rellinks}
-## Componentes
+## afetados
 {: #general}
-* [{{site.data.keyword.iot_short}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [{{site.data.keyword.iotrtinsights_short}}](https://new-console.ng.bluemix.net/docs/services/iotrtinsights/index.html)   
-* [{{site.data.keyword.amafull}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [{{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [ Documentação do {{site.data.keyword.iot_short}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
+* [Documentação do {{site.data.keyword.amafull}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/index.html)
+* [Documentação do {{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
 
-## Documentação da API
+## documentação da API
 {: #api}
-*  [{{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
-* [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)
-* [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
+*  [API do {{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
+*  [API do {{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)

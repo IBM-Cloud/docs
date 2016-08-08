@@ -37,6 +37,7 @@ copyright:
 下列程序顯示如何使用 `cf logs` 指令來針對編譯打包錯誤進行除錯。採取下列步驟之前，請確定已安裝 cf 指令行介面。如需安裝 cf 指令行介面的相關資訊，請參閱[安裝 cf 指令行介面](../starters/install_cli.html){: new_window}。
 
   1. 在 cf 指令行介面中輸入下列程式碼，以連接至 {{site.data.keyword.Bluemix_notm}}：
+     
      ```
 	 cf api https://api.ng.bluemix.net
 	 ```
@@ -44,7 +45,8 @@ copyright:
   2. 輸入 `cf login`，以登入 {{site.data.keyword.Bluemix_notm}}。
   
   3. 輸入 `cf logs appname --recent`，以擷取最近日誌。如果您要過濾詳細日誌，請使用 `grep` 選項。例如，您可以輸入下列程式碼，只顯示 [STG] 日誌：
-```
+
+    ```
 	cf logs appname --recent | grep '\[STG\]'
 	```
   4. 檢視日誌中顯示的第一個錯誤。

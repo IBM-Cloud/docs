@@ -18,8 +18,9 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-*上次更新时间：2016 年 6 月 2 日*
+*上次更新时间：2016 年 6 月 22 日*
 {: .last-updated}
+
 
 您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 环境的用户。例如，可以从 LDAP 注册表添加用户。如果要查看有关管理 {{site.data.keyword.Bluemix_notm}} Public 帐户的信息，请参阅[管理](../../../admin/adminpublic.html#administer)。
 
@@ -215,7 +216,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要向其分配用户的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](../../../admin/users_roles.html#userrolesinfo)。</dd>
+<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](../../../admin/users_roles.html)。</dd>
 </dl>
 
 **提示：****ba set-org** 命令名较长，您还可以使用 **ba so** 作为其别名。
@@ -235,7 +236,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要向其分配用户的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](../../../admin/users_roles.html#userrolesinfo)。</dd>
+<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](../../../admin/users_roles.html)。</dd>
 </dl>
 
 **提示：****ba unset-org** 命令名较长，您还可以使用 **ba uo** 作为其别名。
@@ -348,7 +349,7 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要启用的服务计划的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。要识别服务计划名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的价格套餐。</dd>
+<dd class="pd">要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。</dd>
 </dl>
 
 **提示：****ba enable-service-plan** 命令名较长，您还可以使用 **ba esp** 作为其别名。
@@ -362,7 +363,7 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要启用的服务计划的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。要识别服务计划名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的价格套餐。</dd>
+<dd class="pd">要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。</dd>
 </dl>
 
 **提示：****ba disable-service-plan** 命令名较长，您还可以使用 **ba dsp** 作为其别名。
@@ -380,7 +381,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要启用的服务计划的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。要识别服务计划名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的价格套餐。</dd>
+<dd class="pd">要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要添加到服务的可视性列表的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 </dl>
@@ -396,7 +397,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要启用的服务计划的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。要识别服务计划名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的价格套餐。</dd>
+<dd class="pd">要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要从服务的可视性列表中除去的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 </dl>
@@ -414,7 +415,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要启用的服务计划的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。要识别服务计划名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的价格套餐。</dd>
+<dd class="pd">要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要为其添加可视性的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。可以通过在命令中输入其他组织名称或 GUID，对多个组织启用服务可视性。</dd>
 </dl>

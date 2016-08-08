@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} セキュリティー
 {: #security}
-*最終更新日: 2016 年 5 月 9 日*
+*最終更新日: 2016 年 6 月 22 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} プラットフォームはセキュア・エンジニアリング・プラクティスを使用して設計されており、ネットワークおよびインフラストラクチャー全体における階層化セキュリティー管理機能を備えています。{{site.data.keyword.Bluemix_notm}} は、アプリケーション開発者がモバイル・アプリおよび Web アプリを保護するために使用できる一連のセキュリティー・サービスを備えています。これらのエレメントを組み合わせることで、{{site.data.keyword.Bluemix_notm}} は、セキュアなアプリケーション開発に対して明確な選択を提供するプラットフォームになっています。
@@ -203,7 +203,7 @@ Single Sign On サービスでは、以下に示すように、ユーザーの�
 <dd> Google、Facebook、および LinkedIn によって保守されているユーザー・レジストリー。</dd>
 </dl>
 
-詳しくは、『[Single Sign On 入門 (Getting started with Single Sign On)](../services/SingleSignOn/index.html)』を参照してください。
+詳しくは、『[Single Sign On 概説 (Getting started with Single Sign On)](../services/SingleSignOn/index.html)』を参照してください。
 
 ### Application Security on Cloud
 
@@ -219,33 +219,13 @@ IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} プラ�
 
 dashDB サービスは、ユーザー認証に組み込み LDAP サーバーを使用します。アプリケーションとデータベースの間の接続は、SSL 証明書によって保護されます。このサービスでは、DB2® 固有の暗号化機能を使用して、デプロイ済みのデータベースおよびデータベース・バックアップを自動的に暗号化します。マスター鍵のローテーションは、90 日ごとに自動で実施されます。
 
-詳しくは、『[dashDB 入門 (Getting started with dashDB)](../services/dashDB/index.html)』を参照してください。
-
-### Cloud Integration
-
-Cloud Integration サービスにより、クラウドとオンプレミスのデータを統合できます。DB2、Oracle、SAP などのバックエンド・データベースと対話するサービスを追加できます。次に、データを移動したり、{{site.data.keyword.Bluemix_notm}} アプリケーションがアクセスおよび使用するための REST API を作成したりすることができます。このサービスにより、オンプレミスのセキュア・コネクターとのセキュア通信が可能になり、アプリケーションが使用する REST API としてバックエンド SoR (Systems of Record) が公開されます。
-
-詳しくは、『[Cloud Integration 入門 (Getting started with Cloud Integration)](../services/CloudIntegration/index.html)』を参照してください。
+詳しくは、『[dashDB 概説 (Getting started with dashDB)](../services/dashDB/index.html)』を参照してください。
 
 ### Secure Gateway
 
 Secure Gateway サービスを使用すれば、{{site.data.keyword.Bluemix_notm}} アプリをオンプレミスまたはクラウドにあるリモート・ロケーションにセキュアに接続できるようになります。これにより、セキュア接続が実現し、{{site.data.keyword.Bluemix_notm}} 組織と接続先リモート・ロケーションとの間にトンネルが確立されます。{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは API パッケージを使用して、セキュア・ゲートウェイを構成および作成できます。
 
-詳しくは、『[Secure Gateway 入門 (Getting started with Secure Gateway)](../services/SecureGateway/secure_gateway.html)』を参照してください。
-
-### SQL Database
-
-SQL Database サービスは、完全にプロビジョンされたリレーショナル・データベースをアプリに追加します。このサービスでは、IBM Directory Server LDAP を使用して認証を行い、IBM InfoSphere® Guardium® Data Activity Monitor を使用してアプリケーションがアクセスするデータベースを保護します。アプリケーションとデータベースの間の接続は、DigiCert が署名する SSL 証明書によって保護されます。
-
-このサービスを使用する特定のプランでは、{{site.data.keyword.Bluemix_notm}} 内の SQL データベース・コンソールを使用すると、以下の情報を含むレポートを取得できます。
-
- * アプリケーションがアクセスするデータベース内に存在する可能性のある機密データ。
- * 指定された期間内にデータベースにアクセスしたアプリケーション・ユーザー。
- * データベース内の機密データにアクセスしているアプリケーション・ユーザー。
-
-SQL を使用してデータをマスクするには、データベースと共にデプロイされているマスキングのユーザー定義関数 (UDF) をアプリケーションから呼び出します。例えば、使用したいデータを別の場所でテスト用にマスクすることも可能です。UDF はこのデータ・マスキング・アルゴリズムを IBM Infosphere Optim™ から実装します。
-
-このサービスのプレミアム・プランには、データ暗号化も含まれています。このサービスについて詳しくは、『[SQL Database 入門 (Getting started with SQL Database)](../services/SQLDB/index.html) 』を参照してください。
+詳しくは、『[Secure Gateway 概説 (Getting started with Secure Gateway)](../services/SecureGateway/secure_gateway.html)』を参照してください。
 
 ### SIEM (Security Information and Event Management)
 
@@ -346,4 +326,4 @@ FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己
 {: #general}
 
 * [SoftLayer Security Compliance](http://www.softlayer.com/security)
-* [Single Sign On 入門 (Getting started with Single Sign On)](../services/SingleSignOn/index.html)
+* [Single Sign On 概説 (Getting started with Single Sign On)](../services/SingleSignOn/index.html)

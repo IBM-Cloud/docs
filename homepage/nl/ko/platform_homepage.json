@@ -1,6 +1,6 @@
 {
-	"id": "docs_homepage",
-	"descriptionTitle": "문서 홈 페이지 플랫폼 섹션",
+	"id": "docs_homepage_platform",
+	"title": "Bluemix 플랫폼 사용 방법",
 	"items": [{
 		"title": "CLI 및 개발 도구",
 		"description": "액세스 도구(예: 통합 명령행 인터페이스 및 CLI 플러그인)입니다.",
@@ -12,10 +12,10 @@
 		"img": "homepage/images/manage_apps.svg",
 		"href": "manageapps/mngapps.html"
 	}, {
-		"title": "계정 관리",
+		"title": "관리",
 		"description": "사용자 액세스를 포함하여 조직과 영역을 관리합니다.",
 		"img": "homepage/images/admin.svg",
-		"href": "/admin/adminpublic.htmll"
+		"href": "admin/adminpublic.html"
 	}, {
 		"title": "모니터링 및 로깅",
 		"description": "애플리케이션 사용량 및 데이터 플로우를 따라 가면 배치에 대해 더 잘 이해할 수 있습니다.",
@@ -32,15 +32,16 @@
 		"img": "homepage/images/troubleshoot.svg",
 		"href": "troubleshoot/troubleshoot.html"
 	}, {
-		"title": "플랫폼 보안",
+		"title": "Bluemix 보안",
 		"description": "Bluemix가 기능, 인프라, 운영 및 실제 보안을 제공하는 방법을 학습합니다.",
 		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
 	}, {
 		"title": "하이브리드",
-		"description": "공용, 전용 및 사내 구축형 배치 모델에서 서비스로 전달됩니다.",
+		"description": "퍼블릭, 데디케이티드 및 사내 구축형 배치 모델에서 서비스로 전달됩니다.",
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}]
+
 }
 

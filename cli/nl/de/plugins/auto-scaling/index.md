@@ -43,7 +43,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 Sie können eine Autoskalierungsrichtlinie einer bestimmten App zuordnen. Führen Sie den folgenden Befehl aus:
 
-```bx as policy-attach <APP_NAME> -p <policy_file>```
+```
+bx as policy-attach <APP_NAME> -p <policy_file>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -58,7 +60,9 @@ Sie können eine Autoskalierungsrichtlinie einer bestimmten App zuordnen. Führe
 
 Sie können eine Autoskalierungsrichtlinie erstellen, indem Sie die Fragen in der Befehlszeilenschnittstelle beantworten. Entsprechend Ihrer Eingabe wird eine JSON-Datei mit der Definition der Autoskalierungsrichtlinie mit dem von Ihnen eingegebenen Namen gespeichert. Wenn Sie den Dateinamen nicht eingeben, wird der Richtlinieninhalt direkt in der Befehlszeile ausgegeben und nicht in einer Datei gespeichert. Führen Sie den folgenden Befehl aus:
 
-```bx as policy-create```
+```
+bx as policy-create
+```
 {: codeblock}
 
 
@@ -66,7 +70,9 @@ Sie können eine Autoskalierungsrichtlinie erstellen, indem Sie die Fragen in de
 
 Sie können die Autoskalierungsrichtlinie einer App anzeigen. Der Inhalt der Richtlinie wird direkt in der Befehlszeile ausgegeben. Führen Sie den folgenden Befehl aus:
 
-```bx as policy-show <APP_NAME> [--json]```
+```
+bx as policy-show <APP_NAME> [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -81,7 +87,9 @@ Sie können die Autoskalierungsrichtlinie einer App anzeigen. Der Inhalt der Ric
 
 Sie können eine Autoskalierungsrichtlinie von einer App entfernen. Führen Sie den folgenden Befehl aus:
 
-```bx as policy-detach <APP_NAME>```
+```
+bx as policy-detach <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -94,7 +102,9 @@ Sie können eine Autoskalierungsrichtlinie von einer App entfernen. Führen Sie 
 
 Sie können die Autoskalierungsrichtlinie einer bestimmten App aktivieren oder inaktivieren. Führen Sie den folgenden Befehl aus:
 
-```bx as policy-enable|policy-disable <APP_NAME>```
+```
+bx as policy-enable|policy-disable <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -107,7 +117,9 @@ Sie können die Autoskalierungsrichtlinie einer bestimmten App aktivieren oder i
 
 Sie können das Protokoll der Autoskalierungsaktivität einer bestimmten App anzeigen. In der Befehlszeilenschnittstelle wird eine Tabelle der Autoskalierungsprotokolleinträge angezeigt.
 
-```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>][--end-date=<end_timestamp>]  [--json]```
+```
+bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+```
 {: codeblock}
 
 <dl class="parml">

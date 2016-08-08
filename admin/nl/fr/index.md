@@ -4,7 +4,7 @@
 
 copyright:
 
-  2015, 2016
+  années : 2015, 2016
 
 
 
@@ -17,90 +17,57 @@ copyright:
 
 # Gestion de l'environnement {{site.data.keyword.Bluemix_notm}} local et de l'environnement {{site.data.keyword.Bluemix_notm}} dédié
 {: #mng}
-*Dernière mise à jour : 13 juin 2016*
+Dernière mise à jour : 5 juillet 2016
 {: .last-updated}
 
-Si vous disposez d'un accès administrateur pour l'environnement {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié, accédez à la page **Administration** pour gérer les ressources, surveiller l'utilisation des quotas, administrer des droits d'utilisateur, planifier des notifications de mise à niveau, afficher des rapports de sécurité et des journaux, etc. Vous
-pouvez gérer votre organisation en créant des espaces et en configurant des [rôles utilisateur et autorisations](index.html#oc_useradmin). Voir
-[Gestion de vos organisations](../admin/orgs_spaces.html).
+Si vous disposez d'un accès administrateur pour l'environnement {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié, accédez à la page **Administration** pour gérer les ressources, surveiller l'utilisation des quotas, administrer des droits d'utilisateur, planifier des notifications de mise à niveau, afficher des rapports de sécurité et des journaux, etc. Vous pouvez gérer votre organisation en créant des espaces et en configurant des [rôles utilisateur et autorisations](index.html#oc_useradmin). Voir [Gestion de vos organisations](../admin/orgs_spaces.html).
 {:shortdesc}
 
 *Tableau 1. Tâches d'administration permettant de gérer une instance {{site.data.keyword.Bluemix_notm}} locale ou dédiée*
 
 | Que puis-je faire ? | Détails |    
 |----------------|---------|
-|Surveiller l'utilisation du système | Cliquez sur **ADMINISTRATION &gt; UTILISATION**. Affichez vos informations système, surveillez
-l'utilisation de l'unité centrale et planifiez l'utilisation afin de prendre les meilleures décisions pour votre entreprise. Voir [Affichage des informations relatives à l'utilisation](index.html#oc_resource).|
-|Gérer votre catalogue | Cliquez sur **ADMINISTRATION &gt; GESTION DES CATALOGUES** afin de gérer les services que vos utilisateurs et
-organisations peuvent voir. Voir [Gestion de votre catalogue](index.html#oc_catalog).|
-|Administrer des organisations | Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES ORGANISATIONS** afin de créer des organisations,
-surveiller les quotas pour les organisations et prendre des décisions rapidement en fonction des besoins. Voir
+|Surveiller l'utilisation du système | Cliquez sur **ADMINISTRATION &gt; UTILISATION**. Affichez vos informations système, surveillez l'utilisation de l'unité centrale et planifiez l'utilisation afin de prendre les meilleures décisions pour votre entreprise. Voir [Affichage des informations relatives à l'utilisation](index.html#oc_resource).|
+|Gérer votre catalogue | Cliquez sur **ADMINISTRATION &gt; GESTION DES CATALOGUES** afin de gérer les services que vos utilisateurs et organisations peuvent voir. Voir [Gestion de votre catalogue](index.html#oc_catalog).|
+|Administrer des organisations | Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES ORGANISATIONS** afin de créer des organisations, surveiller les quotas pour les organisations et prendre des décisions rapidement en fonction des besoins. Voir
 [Administration des organisations](index.html#oc_organizations).|
-|Créer des espaces et affecter des rôles utilisateur | Cliquez sur l'icône **Compte et support**
-![Compte et support](../support/images/account_support.svg), puis sélectionnez **Gérer les organisations** afin de
-créer des espaces dans vos organisations. Ajoutez des utilisateurs et affectez des organisations et des espaces aux utilisateurs. Voir
+|Créer des espaces et affecter des rôles utilisateur | Cliquez sur l'icône **Compte et support** ![Compte et support](../support/images/account_support.svg), puis sélectionnez **Gérer les organisations** afin de créer des espaces dans vos organisations. Ajoutez des utilisateurs et affectez des organisations et des espaces aux utilisateurs. Voir
 [Gestion de vos organisations](../admin/orgs_spaces.html). |
-|Gérer les droits d'administrateur | Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES UTILISATEURS** pour ajouter des utilisateurs,
-retirer des utilisateurs et ajuster les droits des utilisateurs. Voir [Gestion des utilisateurs et des droits](index.html#oc_useradmin). |
-|Consulter les rapports et les journaux | Cliquez sur **ADMINISTRATION &gt; RAPPORTS ET JOURNAUX** afin d'afficher des rapports de
-sécurité et des journaux d'audit pour votre instance. Voir [Affichage des rapports](index.html#oc_report). |
-|Afficher les informations système | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** afin d'afficher des informations système,
-telles que les mises à jour en attente, le nom et la version de votre instance, la région, l'adresse URL de l'API, l'adresse URL de l'interface de ligne de
-commande, les détails de la configuration LDAP, les mappages des groupes et des utilisateurs, des statistiques et les domaines partagés. Vous pouvez aussi accéder aux abonnements à des événements et au flux de calendrier afin d'étendre vos notifications dans la section Mises à jour en
-attente. Voir
+|Gérer les droits d'administrateur | Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES UTILISATEURS** pour ajouter des utilisateurs, retirer des utilisateurs et ajuster les droits des utilisateurs. Voir [Gestion des utilisateurs et des droits](index.html#oc_useradmin). |
+|Consulter les rapports et les journaux | Cliquez sur **ADMINISTRATION &gt; RAPPORTS ET JOURNAUX** afin d'afficher des rapports de sécurité et des journaux d'audit pour votre instance. Voir [Affichage des rapports](index.html#oc_report). |
+|Afficher les informations système | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** afin d'afficher des informations système, telles que les mises à jour en attente, le nom et la version de votre instance, la région, l'adresse URL de l'API, l'adresse URL de l'interface de ligne de commande, les détails de la configuration LDAP, les mappages des groupes et des utilisateurs, des statistiques et les domaines partagés. Vous pouvez aussi accéder aux abonnements à des événements et au flux de calendrier afin d'étendre vos notifications dans la section Mises à jour en attente. Voir
 [Affichage des informations système](index.html#oc_system). |
-|Etendre des notifications et configurer des abonnements à des événements | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt;
-*Nombre* mises à jour en attente **. Vous pouvez utiliser des webhooks pour l'intégration à un service Web de votre choix afin de configurer un abonnement à une notification d'événement pour une mise à jour ou un incident. Voir [Notifications et
-abonnements à des événements](index.html#oc_eventsubscription). |
+|Etendre des notifications et configurer des abonnements à des événements | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* mises à jour en attente **. Vous pouvez utiliser des webhooks pour l'intégration à un service Web de votre choix afin de configurer un abonnement à une notification d'événement pour une mise à jour ou un incident. Voir [Notifications et abonnements à des événements](index.html#oc_eventsubscription). |
 
 
 ## Notifications et abonnements à des événements
 {: #oc_eventsubscription}
 
-Vous pouvez prendre connaissance à tout moment du statut de votre environnement en consultant la page Statut. Les incidents sont signalés sur cette page au fur
-et à masure qu'ils se produisent. {{site.data.keyword.Bluemix_notm}} envoie également des notifications à la zone Notifications
-sur la page Administration pour des événements tels que des mises à jour de maintenance planifiées ou en attente.
+Vous pouvez prendre connaissance à tout moment du statut de votre environnement en consultant la page Statut. Les incidents sont signalés sur cette page au fur et à mesure qu'ils se produisent. {{site.data.keyword.Bluemix_notm}} envoie également des notifications à la zone Notifications sur la page Administration pour des événements tels que des mises à jour de maintenance planifiées ou en attente.
 
 ### Notifications
 
-Vous pouvez afficher les notifications pour votre environnement local ou dédié pour surveiller le statut de votre environnement. Reportez-vous au tableau
-ci-dessous pour plus d'informations sur les différents types de notification et les emplacements où elles sont publiées.
+Vous pouvez afficher les notifications pour votre environnement local ou dédié pour surveiller le statut de votre environnement. Reportez-vous au tableau ci-dessous pour plus d'informations sur les différents types de notification et les emplacements où elles sont publiées.
 
 *Tableau 2. Types d'événement et méthodes de notification*
 
 | **Type d'événement** | **Méthode de notification** |       
 |-----------------|-------------------|
-| Mises à jour de maintenance | Vous êtes prévenu en cas de mises à jour de maintenance prévues dans la zone Notifications de la page Administration. Accédez
-à la page **Administration**, puis sélectionnez l'icône **Notifications** ![Notifications](images/icon_announcement.svg). 
-Pour afficher la liste complète ainsi que l'historique de vos notifications en attente et consultées, cliquez sur **ADMINISTRATION &gt; INFORMATIONS
-SYSTEME** &gt; *Nombre* **en attente**. Vous
-pouvez étendre la capacité de notification en configurant un abonnement envoyant un courrier électronique aux destinataires de votre choix. Vous pouvez également
-configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix. |
+| Mises à jour de maintenance | Vous êtes prévenu en cas de mises à jour de maintenance prévues dans la zone Notifications de la page Administration. Accédez à la page **Administration**, puis sélectionnez l'icône **Notifications** ![Notifications](images/icon_announcement.svg). Pour afficher la liste complète ainsi que l'historique de vos notifications en attente et consultées, cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** &gt; *Nombre* **en attente**. Vous pouvez étendre la capacité de notification en configurant un abonnement envoyant un courrier électronique aux destinataires de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix. |
 | Incidents critiques | Vous êtes prévenu en cas d'incident critique dans la page Statut. Cliquez sur l'icône **Compte et support**
-![Compte et support](../support/images/account_support.svg), puis sélectionnez **Statut**. Vous
-pouvez étendre la capacité de notification en configurant un abonnement à des événements qui envoie un courrier électronique au destinataire de votre choix. 
-Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.  |  
-| Statut {{site.data.keyword.Bluemix_notm}} | Vous pouvez toujours examiner le statut le plus récent de la plateforme, des services et de votre instance
-{{site.data.keyword.Bluemix_notm}} sur la page Statut. Cliquez sur l'icône **Compte et support** ![Compte et support](../support/images/account_support.svg), puis
-sélectionnez **Statut**.  |
+![Compte et support](../support/images/account_support.svg), puis sélectionnez **Statut**. Vous pouvez étendre la capacité de notification en configurant un abonnement à des événements qui envoie un courrier électronique au destinataire de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.  |  
+| Statut {{site.data.keyword.Bluemix_notm}} | Vous pouvez toujours examiner le statut le plus récent de la plateforme, des services et de votre instance {{site.data.keyword.Bluemix_notm}} sur la page Statut. Cliquez sur l'icône **Compte et support** ![Compte et support](../support/images/account_support.svg), puis sélectionnez **Statut**.  |
 
 ### Configuration d'abonnements à des événements
 
-Vous pouvez étendre la fonctionnalité des notifications envoyées à la page Administration et à la page Statut en utilisant des abonnements à des événements
-pour configurer un courrier personnalisé ou encore utiliser des webhooks pour les intégrer à l'outil de votre choix. Si vous sélectionnez l'option
-webhooks, vos notifications sont acheminées directement à la destination de votre choix, par exemple à un numéro de téléphone (via un message SMS). Vous pouvez
-personnaliser le type de notification, notamment les alertes relatives aux mises à jour de maintenance ou aux incidents critiques, ainsi que les informations qui
-sont incluses dans le corps de chaque notification.
+Vous pouvez étendre la fonctionnalité des notifications envoyées à la page Administration et à la page Statut en utilisant des abonnements à des événements pour configurer un courrier personnalisé ou encore utiliser des webhooks pour les intégrer à l'outil de votre choix. Si vous sélectionnez l'option webhooks, vos notifications sont acheminées directement à la destination de votre choix, par exemple à un numéro de téléphone (via un message SMS). Vous pouvez personnaliser le type de notification, notamment les alertes relatives aux mises à jour de maintenance ou aux incidents critiques, ainsi que les informations qui sont incluses dans le corps de chaque notification.
 
-**Remarque **: seuls les utilisateurs disposant de l'autorisation Admin (`ops.admin`) peuvent configurer des abonnements à
-des événements.
+**Remarque **: seuls les utilisateurs disposant de l'autorisation Admin (`ops.admin`) peuvent configurer des abonnements à des événements.
 
 Pour accéder à la page **Abonnements à des événements**, procédez comme suit :
 
 * Pour les notifications de mise à jour de maintenance, accédez à **INFORMATIONS SYSTEME &gt; *Nombre * en attente &gt; Abonnements **.
-* Pour les notifications relatives à des incidents, cliquez sur l'icône **Compte et support**
-![Compte et support](../support/images/account_support.svg) &gt; **Statut**, puis sur l'icône
-**S'abonner** ![S'abonner](images/icon_subscribe.svg).
+* Pour les notifications relatives à des incidents, cliquez sur l'icône **Compte et support** ![Compte et support](../support/images/account_support.svg) &gt; **Statut**, puis sur l'icône **S'abonner** ![S'abonner](images/icon_subscribe.svg).
 
 **Remarque** : vous pouvez accéder à la page des abonnements à des événements pour les deux types de notification en appliquant
 l'une des deux méthodes décrites.
@@ -108,15 +75,12 @@ l'une des deux méthodes décrites.
 Pour créer un abonnement de courrier électronique ou webhook depuis la page **Abonnements à des événements**, procédez comme suit :
 
 1. Cliquez sur **Ajouter un abonnement**.
-2. Remplissez le formulaire d'abonnement à un événement. Pour plus d'informations sur les zones du formulaire et les valeurs à utiliser dans la section
-Contenu,
-reportez-vous aux tableaux suivants.
+2. Remplissez le formulaire d'abonnement à un événement. Pour plus d'informations sur les zones du formulaire et les valeurs à utiliser dans la section Contenu, reportez-vous aux tableaux suivants.
 3. Une fois que vous avez complété ce formulaire, vous pouvez choisir parmi les options suivantes :
 
   * Cliquez sur **Sauvegarder** pour enregistrer l'abonnement dans votre liste d'abonnement à des événements. 
   * Cliquez sur **Sauvegarder et tester** pour enregistrer et tester la notification. 
-  * Cliquez sur **Sauvegarder et fermer** pour enregistrer l'abonnement dans votre liste d'abonnement à des événements et revenir à la page
-précédente.
+  * Cliquez sur **Sauvegarder et fermer** pour enregistrer l'abonnement dans votre liste d'abonnement à des événements et revenir à la page précédente.
 
 *Tableau 3. Zones du formulaire d'abonnement pour un abonnement à un courrier électronique*
 
@@ -124,17 +88,10 @@ précédente.
 |-----------------|-------------------|
 | Type | Sélectionnez **Courrier électronique**. |
 | Evénement | Choisissez de vous abonner aux notifications relatives à une mise à jour ou à un incident. |
-| Activé | Sélectionnez l'option d'activation des notifications par courrier électronique. Effacez la sélection pour désactiver la notification par courrier
-électronique. Les abonnements sont activés par défaut. |
+| Activé | Sélectionnez l'option d'activation des notifications par courrier électronique. Effacez la sélection pour désactiver la notification par courrier électronique. Les abonnements sont activés par défaut. |
 | Objet | Renseignez la ligne d'objet du courrier électronique. Cette zone est obligatoire.  |
-| Corps | Entrez le texte du corps du message à envoyer dans le message électronique. Vous pouvez utiliser les valeurs de contenu IBM pour alimenter la
-notification par courrier électronique avec les informations pertinentes. Reportez-vous
-au tableau [Valeurs de la section Contenu](index.html#payload) pour déterminer les valeurs que vous pouvez utiliser. Utilisez des balises HTML
-élémentaires pour structurer votre courrier électronique. Si vous n'entrez pas d'informations dans cette section, vous recevrez une notification ne comportant pas d'information supplémentaire. 
-Cette zone est obligatoire. |
-| A | Entrez l'adresse ou les adresses électroniques des destinataires de la notification par courrier électronique dans une liste séparée par des virgules. Développez
-les options "cc" ou "bcc" pour ajouter d'autres destinataires au courrier électronique. 
-Cette zone est obligatoire. |
+| Corps | Entrez le texte du corps du message à envoyer dans le message électronique. Vous pouvez utiliser les valeurs de contenu IBM pour alimenter la notification par courrier électronique avec les informations pertinentes. Reportez-vous au tableau [Valeurs de la section Contenu](index.html#payload) pour déterminer les valeurs que vous pouvez utiliser. Utilisez des balises HTML élémentaires pour structurer votre courrier électronique. Si vous n'entrez pas d'informations dans cette section, vous recevrez une notification ne comportant pas d'information supplémentaire. Cette zone est obligatoire. |
+| A | Entrez l'adresse ou les adresses électroniques des destinataires de la notification par courrier électronique dans une liste séparée par des virgules. Développez les options "cc" ou "bcc" pour ajouter d'autres destinataires au courrier électronique. Cette zone est obligatoire. |
 | Description | Ajoutez une description unique pour l'abonnement que vous créez. |
 
 
@@ -147,12 +104,9 @@ Cette zone est obligatoire. |
 | Evénement | Choisissez de vous abonner aux notifications relatives à une mise à jour ou à un incident. |
 | URL | Entrez l'URL pour connexion à votre service Web. |
 | Description | Ajoutez une description unique pour l'abonnement que vous créez. |
-| Nom d'utilisateur | Entrez votre nom d'utilisateur pour votre service Web. Si vous ne voulez pas utiliser vos données d'identification personnelles, vous
-pouvez configurer un ID fonctionnel à utiliser spécifiquement avec {{site.data.keyword.Bluemix_notm}}. |
+| Nom d'utilisateur | Entrez votre nom d'utilisateur pour votre service Web. Si vous ne voulez pas utiliser vos données d'identification personnelles, vous pouvez configurer un ID fonctionnel à utiliser spécifiquement avec {{site.data.keyword.Bluemix_notm}}. |
 | Mot de passe | Entrez le mot de passe pour votre service Web. |
-| Contenu | Si vous avez sélectionné la méthode POST, entrez les propriétés spécifiques au service Web que vous utilisez
-appariées aux valeurs de contenu utilisées pour la notification IBM. 
-Reportez-vous au tableau [Valeurs de la section Contenu](index.html#payload) pour déterminer les valeurs que vous pouvez utiliser. Si vous n'entrez pas d'informations dans cette section, vous recevrez une notification ne comportant pas d'information supplémentaire. |
+| Contenu | Si vous avez sélectionné la méthode POST, entrez les propriétés spécifiques au service Web que vous utilisez appariées aux valeurs de contenu utilisées pour la notification IBM. Reportez-vous au tableau [Valeurs de la section Contenu](index.html#payload) pour déterminer les valeurs que vous pouvez utiliser. Si vous n'entrez pas d'informations dans cette section, vous recevrez une notification ne comportant pas d'information supplémentaire. |
 
 *Tableau 5. Valeurs de la section Contenu*
 {: #payload}
@@ -171,42 +125,32 @@ Reportez-vous au tableau [Valeurs de la section Contenu](index.html#payload) pou
 | {{content.scheduleWindow.end}} | Heure de fin planifiée pour la mise à jour | Mise à jour |
 | {{content.disruption}} | Composants affectés | Mise à jour |
 
-Une fois votre abonnement à un événement sauvegardé, vous recevrez des notifications via la méthode configurée. Les notifications continuent d'être publiées dans la page Statut pour les incidents et dans la zone Notifications de la page Administration
-pour les mises à jour de maintenance.
+Une fois votre abonnement à un événement sauvegardé, vous recevrez des notifications via la méthode configurée. Les notifications continuent d'être publiées dans la page Statut pour les incidents et dans la zone Notifications de la page Administration pour les mises à jour de maintenance.
 
-Vous pouvez sélectionner n'importe quel abonnement à un événement sauvegardé, examiner l'activité récente ou l'éditer selon vos besoins. Cliquez sur une
-entrée d'activité récente pour la développer et visualiser les détails de son historique.
+Vous pouvez sélectionner n'importe quel abonnement à un événement sauvegardé, examiner l'activité récente ou l'éditer selon vos besoins. Cliquez sur une entrée d'activité récente pour la développer et visualiser les détails de son historique.
 
 ## Mises à jour de maintenance
 {: #oc_schedulemaintenance}
 
-Vous pouvez afficher les mises à jour de maintenance planifiées et en attente en sélectionnant **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt;
-*Nombre* en attente ** pour accéder à la page **Mises à jour du système**. 
+Vous pouvez afficher les mises à jour de maintenance planifiées et en attente en sélectionnant **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* en attente ** pour accéder à la page **Mises à jour du système**. 
 
-**Remarque **: reportez-vous tout d'abord à la section [Définition de fenêtres de
-maintenance pré-approuvées](index.html#preapprovedmaintenance) ci-dessous. Ces fenêtres doivent être définies pour qu'IBM puisse planifier la maintenance de votre environnement.
+**Remarque **: reportez-vous tout d'abord à la section [Définition de fenêtres de maintenance pré-approuvées](index.html#preapprovedmaintenance) ci-dessous. Ces fenêtres doivent être définies pour qu'IBM puisse planifier la maintenance de votre environnement.
 
 <dl>
 <dt>Mises à jour sans interruption</dt>
-<dd>Une mise à jour sans interruption n'a pas d'impact sur votre environnement, vos applications en cours d'exécution ou l'accès de vos utilisateurs à vos
-applications. Ce type de mise à jour ne requiert pas d'approbation au cas par cas et est appliquée au cours des fenêtres de disponibilité pré-approuvées
-pour la maintenance que vous avez définies dans la page Mises à jour du système.</dd>
-<dt>Mises à jour avec interruption </dt>
-<dd>Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs
-à vos applications. Vous devez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée. Vous pouvez
-sélectionner la date et l'heure de déploiement suggérées, l'option pour n'importe laquelle de vos fenêtres pré-approuvées, ou bien ouvrir le calendrier afin de
-sélectionner trois dates et heures spécifiques parmi lesquelles IBM pourra choisir pour planifier la mise à jour.</dd>
+<dd>Une mise à jour sans interruption n'a pas d'impact sur votre environnement, vos applications en cours d'exécution ou l'accès de vos utilisateurs à vos applications. Ce type de mise à jour ne requiert pas d'approbation au cas par cas et est appliquée au cours des fenêtres de disponibilité pré-approuvées pour la maintenance que vous avez définies dans la page Mises à jour du système.</dd>
+<dt>Mises à jour avec interruption</dt>
+<dd>Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs à vos applications. Vous devez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée. Vous pouvez
+sélectionner la date et l'heure de déploiement suggérées, l'option pour n'importe laquelle de vos fenêtres pré-approuvées, ou bien ouvrir le calendrier afin de sélectionner trois dates et heures spécifiques parmi lesquelles IBM pourra choisir pour planifier la mise à jour.</dd>
 </dl>
 
 
 ### Définition de fenêtres de maintenance pré-approuvées
 {: #preapprovedmaintenance}
 
-Avant de procéder à la planification et l'approbation des mises à jour, vous devez définir des fenêtres de maintenance pré-approuvées. Les mises à
-jour sans interruption sont planifiées pour exécution au cours des fenêtres pré-approuvées. 
+Avant de procéder à la planification et l'approbation des mises à jour, vous devez définir des fenêtres de maintenance pré-approuvées. Les mises à jour sans interruption sont planifiées pour exécution au cours des fenêtres pré-approuvées. 
 
-Vous devez définir au minimum 24 heures disponibles réparties sur au moins trois jours de la semaine. Vous pouvez, par exemple, définir trois
-créneaux de 8 heures sur trois jours distincts, ou des créneaux de 6 heures sur quatre jours distincts. Pour garantir que les créneaux soient assez longs pour
+Vous devez définir au minimum 24 heures disponibles réparties sur au moins trois jours de la semaine. Vous pouvez, par exemple, définir trois créneaux de 8 heures sur trois jours distincts, ou des créneaux de 6 heures sur quatre jours distincts. Pour garantir que les créneaux soient assez longs pour
 l'application d'une mise à jour, la durée de chaque créneau doit être d'au moins quatre heures.
 
 **Remarque **: seuls les utilisateurs disposant de l'autorisation Admin (`ops.admin`) peuvent planifier et approuver
@@ -217,7 +161,7 @@ des mises à jour de maintenance.
 3. Cliquez sur **Ajouter** ![Ajouter](images/add-new.png).
 4. Définissez votre première fenêtre de disponibilité en sélectionnant la fréquence, la durée et l'heure de début de la fenêtre.
 5. Cliquez sur **Soumettre**.
-6. Répétez ce processus jusqu'à ce que vous ayez rempli les exigences minimales pour les fenêtres hebdomadaires. 
+6. Répétez ce processus jusqu'à ce que vous ayez rempli les exigences minimales pour les fenêtres hebdomadaires.
 
 ### Définition de fenêtres d'indisponibilité pour la maintenance
 
@@ -286,7 +230,7 @@ existe deux types de mise à jour de maintenance :
 <dd>Une mise à jour sans interruption n'a pas d'impact sur votre environnement, vos applications en cours d'exécution ou l'accès de vos utilisateurs à vos
 applications. Ce type de mise à jour ne requiert pas d'approbation au cas par cas. Ces mises à jour sont appliquées au cours des fenêtres de
 disponibilité pré-approuvées pour la maintenance que vous avez définies dans la page Mises à jour du système.</dd>
-<dt>Mises à jour avec interruption </dt>
+<dt>Mises à jour avec interruption</dt>
 <dd>Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs
 à vos applications. Vous pouvez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée pour
 vous assurer que la mise à jour ne sera pas appliquée pendant les heures de bureau critiques. Vous pouvez sélectionner la date et l'heure de déploiement suggérées en fonction de vos fenêtres de mise à jour pré-approuvées ou sélectionner deux
@@ -578,7 +522,7 @@ données de la prochaine génération structurant les données en colonne en mé
             },
             {
                "title": "Connectivité",
-               "description":"Cool Service a été conçu pour vous permettre de vous connecter facilement à tous vos services et à toutes vos applications. Vous pouvez
+               "description": "Cool Service a été conçu pour vous permettre de vous connecter facilement à tous vos services et à toutes vos applications. Vous pouvez
 commencer à analyser vos données immédiatement à l'aide d'outils familiers."
             }
          ],
@@ -692,12 +636,9 @@ Pour créer une organisation et ajouter des responsables, procédez comme suit :
 
 ### Création d'espaces
 
-Vous pouvez créer des espaces dans votre organisation, par exemple un espace *dev* comme environnement de développement, un espace
-*test* comme environnement de test et un espace *production* comme environnement de production. Ensuite, vous pouvez
-associer vos applications à des espaces. Procédez comme suit pour créer un espace :
+Vous pouvez créer des espaces dans votre organisation, par exemple un espace *dev* comme environnement de développement, un espace *test* comme environnement de test et un espace *production* comme environnement de production. Ensuite, vous pouvez associer vos applications à des espaces. Procédez comme suit pour créer un espace :
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**.
+1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg) &gt; page **Gérer les organisations**.
 2. Sélectionnez l'organisation à laquelle ajouter un espace.
 3. Cliquez sur **Créer un espace**.
 4. Entrez un nom d'espace.
@@ -761,8 +702,7 @@ Dans la section Liste des organisations, vous pouvez afficher toutes les organis
 {{site.data.keyword.Bluemix_notm}}, et vous pouvez effectuer des actions pour des organisations individuelles en cliquant sur le nom de
 l'organisation.
 
-- Pour supprimer une organisation, cliquez sur l'icône **Supprimer** ![Supprimer](images/icon_trash.svg) dans
-la colonne Actions.
+- Pour supprimer une organisation, cliquez sur l'icône **Supprimer** ![Supprimer](images/icon_trash.svg) dans la colonne Actions.
 - Afin d'afficher le plan d'établissement des quotas et l'utilisation pour une organisation, cliquez sur le nom de l'organisation dans la liste. La page **Gérer les organisations** de l'organisation sélectionnée affiche les informations suivantes sur l'utilisation :
 
   - Le nombre de services utilisés
@@ -779,24 +719,20 @@ invites à l'écran.
 ## Gestion des utilisateurs et des droits
 {: #oc_useradmin}
 
-Vous pouvez ajouter des utilisateurs à votre instance {{site.data.keyword.Bluemix_notm}} depuis le registre d'utilisateurs de votre société via
-LDAP. Vous pouvez ajouter des utilisateurs individuels ou des groupes d'utilisateurs et
-afficher les droits d'utilisateur. Si vous disposez du droit `Admin`, vous pouvez également définir et gérer les droits des autres
-utilisateurs. Cliquez sur **ADMINISTRATION &gt; USER ADMINISTRATION**.
+Vous pouvez ajouter des utilisateurs individuels ou des groupes d'utilisateurs et
+afficher les droits d'utilisateur. En général, les utilisateurs sont ajoutés à votre instance {{site.data.keyword.Bluemix_notm}} depuis le registre d'utilisateurs de votre société via LDAP (Lightweight Directory Access Protocol). Si vous disposez du droit **Admin**, vous pouvez également définir et gérer des droits pour d'autres utilisateurs. Cliquez sur **ADMINISTRATION &gt; USER ADMINISTRATION**.
 
-La page User Administration affiche tous les utilisateurs pour l'instance locale ou dédiée.
-Les droits de chaque utilisateur sont affichés. Les droits peuvent être les suivants : aucun, `Admin`, `Catalogue`,
-`Connexion`, `Rapports` et `Utilisateurs`. Ils peuvent être activés, ou l'utilisateur peut se voir attribuer l'accès
-`view` (afficher) ou `write` (écrire) pour le droit, comme représenté par les icônes. Voir [Droits](index.html#permissions) pour la description de chaque type et l'explication des icônes.
+La page User Administration affiche tous les utilisateurs pour l'instance locale ou dédiée. Les droits de chaque utilisateur sont affichés sous forme d'icônes dans le tableau. Les droits possibles sont les suivants : Aucun, **Admin**, **Connexion**, **Catalogue**, **Rapports** et **Utilisateurs**.
+Il est possible d'affecter les valeurs **Activé** ou **Désactivé** aux droits **Admin** et **Connexion** alors que les droits restants sont activés ou désactivés avec des types d'accès spécifiques, y compris les accès **Lecture** ou **Ecriture** pour ces droits, comme représentés par des icônes. Voir [Droits](#permissions) pour la description de chaque type et l'explication des icônes.
 
 ### Gestion des utilisateurs
 
-Vous pouvez rechercher des utilisateurs existants, supprimer des utilisateurs et ajouter des utilisateurs individuellement ou en groupe. Effectuez l'une des opérations suivantes :
+En fonction de l'accès **Lecture** ou **Ecriture** pour les droits des utilisateurs, vous pouvez rechercher des utilisateurs existants, retirer des utilisateurs et ajouter des utilisateurs individuellement ou via un groupe. Notez que si vous possédez le droit **Admin**, vous disposez d'un accès complet vous permettant d'exécuter n'importe quelle tâche pour la gestion des utilisateurs dans l'environnement. Les tâches ci-après peuvent être exécutées pour gérer des utilisateurs. Consultez la liste suivante pour voir si votre niveau d'accès vous permet d'effectuer des tâches de gestion d'utilisateurs spécifiques :
 
-* Localisez des utilisateurs. Vous pouvez localiser des utilisateurs dans le tableau à l'aide de la zone **Rechercher**.
+* Localisez les utilisateurs. Vous pouvez localiser les utilisateurs dans le tableau en utilisant la zone **Rechercher** avec les accès **Lecture** ou **Ecriture** pour les droits des utilisateurs. 
 
-* Ajoutez un seul utilisateur. Si vous disposez du droit `Admin` ou du droit `Utilisateurs` avec l'accès
-`write` (écrire), vous pouvez ajouter des utilisateurs.
+* Ajoutez un seul utilisateur. Si vous disposez du droit **Admin** ou du droit **Utilisateurs** avec l'accès
+**Ecriture**, vous pouvez ajouter des utilisateurs.
 
   1. Pour ajouter un seul utilisateur depuis votre annuaire LDAP, cliquez sur **Ajouter un utilisateur**.
   2. Dans la zone **Rechercher**, entrez l'adresse électronique de l'utilisateur, puis sélectionnez l'utilisateur dans la liste.
@@ -807,7 +743,8 @@ l'organisation et en le sélectionnant dans la liste.
   **Remarque** : lorsque l'opération d'ajout aboutit, l'utilisateur est ajouté au tableau pour que vous puissiez
 l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit ne leur est affecté.
 
-* Ajoutez un groupe d'utilisateurs depuis votre annuaire LDAP.
+* Ajoutez un groupe d'utilisateurs depuis votre annuaire LDAP. Si vous disposez du droit **Admin** ou du droit **Utilisateurs** avec l'accès
+**Ecriture**, vous pouvez ajouter des utilisateurs.
 
   1. Cliquez sur **Ajouter un groupe d'utilisateurs**.
   2. Dans la zone **Rechercher**, entrez un nom de groupe à rechercher, puis sélectionnez le nom de groupe dans la liste.
@@ -815,80 +752,67 @@ l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit
 de
 l'organisation et en le sélectionnant dans la liste.
   4. Pour ajouter le groupe d'utilisateurs à l'organisation sélectionnée, cliquez sur **Ajouter des utilisateurs**.
+  
   **Remarque** : les groupes de plus de 50 utilisateurs sont ajoutés via un travail par lots en arrière-plan. Lorsque l'opération
 d'ajout aboutit, l'utilisateur ou le groupe est ajouté au tableau pour que vous puissiez l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit ne leur est affecté.
 
 * Ajoutez un groupe d'utilisateurs en important une feuille de calcul qui répertorie des ID utilisateur, des adresses électroniques d'utilisateur et
-l'organisation à laquelle vous voulez ajouter l'utilisateur.
+l'organisation à laquelle vous voulez ajouter l'utilisateur. Si vous disposez du droit **Admin** ou du droit **Utilisateurs** avec l'accès
+**Ecriture**, vous pouvez ajouter des utilisateurs.
 
-  1. Cliquez sur **Importer des utilisateurs**.
-  2. Cliquez sur **Télécharger un modèle (.CSV)** pour télécharger une feuille de calcul avec les colonnes requises que vous pourrez
-remplir ou créez votre propre feuille de calcul incluant les en-têtes de colonne requis : **ID utilisateur**, **Courrier
-électronique**, **Organisation**.  Deux colonnes facultatives sont également incluses dans le modèle : **Prénom** et
-**Nom**.
-  3. Indiquez les valeurs d'utilisateur dans les colonnes requises. Si vous n'utilisez pas d'annuaire LDAP, utilisez les en-têtes de colonne requis
-et les en-têtes de colonne facultatifs pour votre importation d'utilisateurs.
-  4. Sauvegardez votre fichier et cliquez sur **Envoyer le fichier par téléchargement**.
- 
+**Remarque** : entrez les ID utilisateur qui correspondent aux valeurs utilisées dans votre registre d'utilisateurs. 
 
-  **Remarque** : entrez les ID utilisateur qui correspondent aux valeurs utilisées dans votre registre d'utilisateurs. Les
-colonnes de votre feuille de calcul peuvent apparaître dans n'importe quel ordre tant que toutes les colonnes requises sont présentes. Vous recevez un
-message de configuration indiquant que tous les utilisateurs ont été ajoutés, si l'importation a abouti. Si l'importation n'a abouti que pour certains
+   1. Cliquez sur **Importer des utilisateurs**.
+   2. Cliquez sur **Télécharger un modèle (.CSV)** pour télécharger une feuille de calcul avec les colonnes requises que vous pourrez remplir ou créez votre propre modèle en utilisant une feuille de calcul qui comporte les en-têtes de colonne requis : **ID utilisateur**, **Courrier électronique** et **Organisation**. Deux colonnes facultatives sont également incluses dans le modèle : **Prénom** et **Nom**.
+   3. Indiquez les valeurs d'utilisateur dans les colonnes requises. Si vous n'utilisez pas d'annuaire LDAP, utilisez les en-têtes de colonne requis
+et les en-têtes de colonne facultatifs pour les utilisateurs que vous importez. 
+   4. Sauvegardez votre fichier et cliquez sur **Envoyer le fichier par téléchargement**.
+
+  **Remarque** : Les colonnes de votre feuille de calcul peuvent apparaître dans n'importe quel ordre tant que toutes les colonnes requises sont présentes. Si l'importation aboutit, vous recevez un message de confirmation indiquant que tous les utilisateurs ont été ajoutés. Si l'importation n'a abouti que pour certains
 utilisateurs, consultez le message d'erreur afin de prendre des mesures pour les utilisateurs qui n'ont pas pu être ajoutés.
 
-* Retirez des utilisateurs. Si vous disposez du droit `Admin` ou du droit `Utilisateurs` avec l'accès `write` (écrire), vous pouvez retirer des utilisateurs.
+* Retirez des utilisateurs. Si vous disposez du droit **Admin** ou du droit **Utilisateurs** avec l'accès
+**Ecriture**, vous pouvez retirer définitivement des utilisateurs de l'environnement.
 
     1. Localisez l'utilisateur et cliquez sur l'icône ![Supprimer](images/icon_trash.svg).
     2. Cliquez sur **Retirer**.
 
+* Pour éditer les droits et les organisations des utilisateurs, vous devez disposer du droit **Admin**. Pour éditer les droits des utilisateurs, localisez ces derniers et cliquez sur leur nom. Dans
+la page **Edition d'utilisateur**, vous pouvez activer ou désactiver les droits :
+
+    * Sélectionnez **Activé** dans la liste pour activer le droit **Admin** ou **Connexion**. 
+    * Sélectionnez **Lecture** dans la liste pour que l'utilisateur dispose de l'accès **Lecture** (en lecture seule) pour ce droit ou sélectionnez **Ecriture** pour que l'utilisateur dispose de l'accès **Ecriture** (édition ou ajout et retrait) pour ce droit. 
+    * Sélectionnez **Désactivé** pour désactiver n'importe lequel des droits. 
+    
+    **Remarque** : Lorsque le droit **Admin** a pour valeur **Activé**, tous les autres droits sont définis avec l'accès**Ecriture**. 
+
+* Pour ajouter ou retirer un utilisateur dans une organisation spécifique, vous devez disposer du droit **Admin** ou du droit **Utilisateurs** avec l'accès **Ecriture**. 
+
+    1. Pour ajouter un utilisateur à une organisation, sélectionnez le nom de celui-ci dans le tableau pour accéder à la page **Edition d'utilisateur**. Ensuite, utilisez la zone de recherche pour localiser une organisation, sélectionnez celle-ci dans la liste, puis cliquez sur **Sauvegarder**.
+    2. Pour retirer un utilisateur d'une organisation, sélectionnez le nom de l'utilisateur concerné dans le tableau afin d'accéder à la page **Edition d'utilisateur**. Ensuite, cliquez sur ![Retirer](images/icon_remove.svg) pour l'organisation dont vous souhaitez retirer l'utilisateur, puis cliquez sur **Sauvegarder**.
+
 ### Droits
 {: #permissions}
 
-Les droits suivants peuvent être accordés aux utilisateurs :
+Les droits suivants peuvent être accordés aux utilisateurs avec des niveaux d'accès spécifiques qui permettent à ces derniers d'exécuter des tâches spécifiques :
 
 *Tableau 7. Droits*
 
 | **Droit d'utilisateur** | **Description** |       
 |-----------------|-------------------|
-| Admin | Les utilisateurs disposant du droit `Admin` peuvent éditer les droits des autres utilisateurs. |
-| Catalogue | Les utilisateurs disposant du droit `Catalogue` peuvent afficher (accès `view`) ou modifier (accès `write`) les services qui sont disponibles dans l'instance locale ou dédiée. |  
-| Connexion | Les utilisateurs disposant du droit `Connexion` sont autorisés à voir la page Administration. Sans ce droit, les utilisateurs ne peuvent pas voir l'option de menu Administration. |
-| Rapports | Les utilisateurs disposant du droit `Rapports` peuvent afficher (accès `view`) ou modifier
-(accès `write`) les rapports de sécurité. |
-| Utilisateurs | Les utilisateurs disposant du droit `Utilisateurs` peuvent afficher (accès `view`) la liste des
-utilisateurs ou
-ajouter ou retirer (accès `write`) des utilisateurs. Ce droit ne vous permet pas de définir des droits pour d'autres utilisateurs.|
+| Admin | Les utilisateurs pour lesquels le droit **Admin** a pour valeur **Activé** sont autorisés à éditer des droits pour d'autres utilisateurs. Si le droit est activé, l'accès complet à tous les autres droits est automatiquement activé. Outre les tâches décrites dans ce tableau pour chaque droit, l'administrateur peut également configurer des abonnements d'événement afin de recevoir directement des alertes relatives à des opérations de maintenance ou à des incidents, planifier des tâches de maintenance, exécuter des vérifications sur les composants de console et créer des organisations et des espaces pour l'environnement.  |
+| Connexion | Les utilisateurs pour lesquels le droit **Connexion** a pour valeur **Activé** sont autorisés à afficher l'option de page d'administration dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}. Les utilisateurs pour lesquels le droit est activé peuvent accéder aux vignettes [Informations système](#oc_system) et [Utilisation des ressources](#oc_resource). Sans ce droit, les utilisateurs ne peuvent pas voir l'option de menu d'administration ni y accéder.  |
+| Catalogue | Les utilisateurs disposant du droit **Catalogue** peuvent lire (accès **Lecture** ou modifier (accès **Ecriture**) les services disponibles dans l'instance locale ou dédiée. L'accès en lecture permet à l'utilisateur d'accéder à la vignette Gestion du catalogue pour afficher les services disponibles. L'accès en écriture permet à l'utilisateur d'accéder à la vignette [Gestion du catalogue](#oc_catalog) pour afficher les services, éditer la visibilité des services, enregistrer des services personnalisés et contrôler la liste de priorité du pack de construction.  |  
+| Rapports | Les utilisateurs disposant du droit **Rapports** peuvent lire (accès **Lecture**) ou modifier (accès **Ecriture**) les rapports de sécurité. L'accès en affichage permet à l'utilisateur d'accéder à la vignette Rapports et journaux pour télécharger des rapports. L'accès en écriture permet à l'utilisateur d'afficher la vignette [Rapports et journaux](#oc_report) et d'utiliser l'interface CLI pour télécharger de nouveaux rapports et créer de nouvelles catégories auxquelles les utilisateurs pourront accéder.  |
+| Utilisateurs | Les utilisateurs disposant du droit **Utilisateurs** peuvent afficher (accès **Lecture**) la liste d'utilisateurs ou ajouter ou retirer des utilisateurs (accès **Ecriture**). Ce droit ne vous permet pas de définir des droits pour d'autres utilisateurs. L'accès en écriture permet à l'utilisateur d'ajouter de nouveaux utilisateurs à l'environnement, de supprimer des utilisateurs de l'environnement et d'ajouter des utilisateurs existants à des organisations qui existent déjà dans l'environnement. De plus, l'accès **Ecriture** permet à l'utilisateur d'ajouter de nouvelles organisations, de supprimer des organisations et d'éditer les utilisateurs des organisations.  |
 
 
-Les droits peuvent être activés, ou l'utilisateur peut se voir attribuer l'accès `view` (afficher) ou `write`
-(écrire) pour ces droits, comme représenté par les icônes suivantes :
+Des droits peuvent être activés pour l'utilisateur avec un accès **Lecture** ou
+**Ecriture** pour ces droits, comme représenté par les icônes suivantes : 
 
-* L'icône ![Activé](images/icon_enabled.svg) représentant une coche située à côté d'un droit signifie que le droit est activé.
-* L'icône ![Afficher](images/icon_read.svg) représentant un oeil signifie que l'utilisateur dispose de l'accès
-`view` (afficher en
-lecture seule) pour ce droit.
-* L'icône ![Ecrire](images/icon_write.svg) représentant un crayon signifie que l'utilisateur dispose de l'accès
-`write` (écrire,
-c'est-à-dire éditer, ajouter ou supprimer) pour ce droit.
-
-Pour éditer les droits et les organisations d'autres utilisateurs, vous devez disposer du droit `Admin`. Pour éditer les droits, localisez l'utilisateur et cliquez sur son nom. Dans
-la page **Edition d'utilisateur**, vous pouvez activer ou désactiver les droits :
-
-* Sélectionnez **Activé** dans la liste pour activer un droit.
-* Sélectionnez **Read** dans la liste pour que l'utilisateur dispose de l'accès `view` (afficher en lecture
-seule) pour ce droit ou **Write** pour qu'il dispose de l'accès `write` (écrire, c'est-à-dire éditer, ajouter ou
-supprimer) pour ce droit.
-* Sélectionnez **Désactivé** pour désactiver le droit.
-
-Pour ajouter ou retirer un utilisateur dans une organisation, sélectionnez l'une des options suivantes :
-
-* Pour ajouter un utilisateur à une organisation, sélectionnez le nom d'utilisateur dans le tableau afin d'accéder à l'écran **Edition
-d'utilisateur**. Ensuite, utilisez la zone de recherche pour localiser une organisation, sélectionnez-la dans la liste, puis cliquez sur
-**Sauvegarder**.
-* Pour retirer un utilisateur d'une organisation, sélectionnez le nom d'utilisateur dans le tableau afin d'accéder à l'écran
-**Edition d'utilisateur**. Ensuite, cliquez sur ![Retirer](images/icon_remove.svg) pour l'organisation de laquelle
-retirer l'utilisateur, puis cliquez sur **Sauvegarder**.
-
+* L'icône ![Activé, représentée par une coche](images/icon_enabled.svg) associée à un droit signifie que celui-ci est activé. 
+* L'icône ![Lire, représentée par un oeil](images/icon_read.svg) signifie que l'utilisateur dispose de l'accès **Lecture** (lecture seule) pour ce droit. 
+* L'icône ![Ecrire, représentée par un crayon](images/icon_write.svg) signifie que l'utilisateur dispose de l'accès **Ecriture** (édition, ajout ou retrait) pour ce droit. 
 
 ## Gestion des utilisateurs avec l'API REST Admin
 {: #usingadminapi}
@@ -945,8 +869,8 @@ cette commande :
 {
     "message": "Logged in",
     "name": {
-        "familyName": "*nom*",
-        "givenName": "*prénom*"
+        "familyName": "*last_name*",
+        "givenName": "*first_name*"
     }
 }
 ```
@@ -1460,8 +1384,9 @@ nécessaire de le désinstaller, de supprimer le référentiel, puis de réinsta
 Procédez comme suit pour ajouter le référentiel et installer le plug-in :
 
 <ol>
-<li>Pour ajouter le référentiel de plug-in d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :
-<br/><br/> <code> cf add-plugin-repo BluemixAdmin https://console.&lt;sous-domaine&gt;.bluemix.net/cli </code><br/><br/>
+<li>Pour ajouter le référentiel de plug-in d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante : <br/><br/> <code>
+cf add-plugin-repo BluemixAdmin https://console.&lt;sous-domaine&gt;.bluemix.net/cli
+</code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;sous-domaine&gt;</dt>
 <dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}.</dd>

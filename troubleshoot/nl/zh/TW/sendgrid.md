@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2015
-
+  years: 2015, 2016
+  
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms} 
+{:tsCauses: .tsCauses} 
+{:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -42,3 +42,4 @@ copyright:
 
 如果在達到每個服務實例每月 25,000 封電子郵件的限制之後，還想要傳送更多電子郵件，您可以新增另一個服務實例。如需 SendGrid 的相關資訊，請參閱[開始使用 SendGrid](https://sendgrid.com/docs/index.html){: new_window}。    
 {: tsResolve}
+

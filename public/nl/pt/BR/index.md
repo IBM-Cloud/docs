@@ -15,7 +15,8 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Público
 {: #public}
-*Última atualização: 22 de fevereiro de 2016*
+*Última atualização: 19 maio de 2016*
+{: .last-updated}
 
 
 O {{site.data.keyword.Bluemix_notm}} sumariza e oculta
@@ -177,7 +178,8 @@ apps nessa região para obter baixa latência do aplicativo. Também é possíve
 região em que você deseja manter os dados do aplicativo por questões de segurança de endereço. Ao construir apps em diversas regiões, se uma região ficar inativa, os apps que estão nas outras regiões continuarão a executar. A concessão de seu recurso é a mesma para cada região que você usa.
 
 Se estiver usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}},
-poderá alternar para uma região diferente para trabalhar com os espaços dessa região.
+poderá alternar para uma região diferente para trabalhar com os espaços dessa região. Acesse o ícone **Conta e suporte** ![ícone Conta e
+suporte](../admin/images/account_support.svg) e expanda o seletor Região. Em seguida, é possível selecionar uma região diferente a partir da lista.
 
 Se você estiver utilizando a interface de linha de comandos do
 cf, deverá se conectar à região do

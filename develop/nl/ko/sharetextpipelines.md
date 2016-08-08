@@ -169,7 +169,7 @@ space: <space name>
 
 ##확장 작업 및 확장 정의 {: #extension-jobs} 
 
-확장 정의는 확장 작업에 사용 가능한 특성 세트를 정의합니다. `extension_id `특성이 지정된 경우 작업이 확장 작업으로 처리됩니다. 확장에 사용 가능한 특성을 찾으려면 해당 문서를 참조하십시오. 
+확장 정의는 확장 작업에 사용 가능한 특성 세트를 정의합니다. `extension_id ` 특성이 지정된 경우 작업이 확장 작업으로 처리됩니다. 확장에 사용 가능한 특성을 찾으려면 해당 문서를 참조하십시오. 
 
 ##YAML 파일을 사용하여 파이프라인과 상호작용 {: #pipeline-yaml} 
 
@@ -190,8 +190,7 @@ space: <space name>
         target:
           url: http://api.ng.bluemix.net
           organization: ${CF_ORGANIZATION}
-        script: \"echo ${CF_ORGANIZATION}\"                
-      ...
+        script: \"echo ${CF_ORGANIZATION}\"...
     "
   }
 }

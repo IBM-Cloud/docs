@@ -8,9 +8,10 @@ copyright:
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.iotelectronics}} について
+# {{site.data.keyword.iotelectronics}} の概要
 {: #iotelectronics_about}
 *最終更新日: 2016 年 6 月 11 日*
+{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} は、接続された電気製品、センサー、ゲートウェイとの通信や、それらによって収集されたデータの利用をアプリで実行できるようにする、完全に統合された IoT 実動インスタンスです。
 {:shortdesc}
@@ -50,20 +51,18 @@ iOS デバイスを使用して、電気製品の所有者が電気製品との�
 
 **{{site.data.keyword.sdk4nodefull}}** は、サーバー・サイド JavaScript&reg; アプリを開発、デプロイ、スケーリングできるようにし、強化されたパフォーマンス、セキュリティー、保守容易性を実現します。
 
-**サンプル・モバイル・アプリ**は、iOS デバイスを使用してシミュレート電気製品の状況を表示し、その電気製品との通信を行えるようにします。モバイル・アプリの入手方法については、[ここから](iotelectronics_config_mobile.html)ご覧ください。
+**サンプル・モバイル・アプリ**は、iOS デバイスを使用してシミュレート電気製品の状況を表示し、その電気製品との通信を行えるようにします。『[モバイル・アプリの使用](iotelectronics_config_mobile.html)』で、モバイル・アプリの取得方法を確認してください。
 
 # 関連リンク
 {: #rellinks}
 ## コンポーネント
 {: #general}
-* [{{site.data.keyword.iot_short}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [{{site.data.keyword.iotrtinsights_short}}](https://new-console.ng.bluemix.net/docs/services/iotrtinsights/index.html)   
-* [{{site.data.keyword.amafull}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [{{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [{{site.data.keyword.iot_short}} の資料](https://new-console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
+* [{{site.data.keyword.amafull}} の資料](https://new-console.ng.bluemix.net/docs/services/mobileaccess/index.html)
+* [{{site.data.keyword.sdk4nodefull}} の資料](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
 
 ## API 資料
 {: #api}
-*  [{{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
-* [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)
-* [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
+*  [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
+*  [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)

@@ -16,7 +16,8 @@ copyright:
 
 # Comandos do Cloud Foundry (cf)
 
-*Última atualização: 29 de janeiro de 2016*
+*Última atualização: 8 de julho de 2016*
+{: .last-updated}
 
 É possível usar os comandos do Cloud Foundry (cf) para gerenciar os seus apps.
 {:shortdesc}
@@ -33,7 +34,7 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>A URL do terminal da API do Bluemix que você deve especificar ao se conectar ao {{site.data.keyword.Bluemix_notm}}. Normalmente, essa URL é https://api.{DomainName}.
+<dd>A URL do terminal da API do Bluemix que você deve especificar ao se conectar ao {{site.data.keyword.Bluemix_notm}}. Normalmente, essa URL é https://api.{DomainName}. 
 Se você deseja exibir a URL do terminal da API que estiver usando atualmente, não será necessário especificar esse parâmetro para o comando cf api.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Desativa o processo de validação SSL. O uso desse parâmetro pode causar problemas de segurança.</dd>
@@ -156,6 +157,11 @@ parâmetro.</dd>
 
 Efetua seu
 login no {{site.data.keyword.Bluemix_notm}}.
+
+<!-- staging only for atlas 45 -->
+
+**Nota**: se você estiver efetuando login com um ID federado, deverá usar o parâmetro de conexão única (SSO) para efetuar login. 
+
 ```
 cf login
 ```
@@ -170,6 +176,11 @@ cf login
 <dd>Sua senha.</dd>
 <dd>*Importante:* Se você fornecer sua senha usando o parâmetro *-p* na interface de linha de comandos, a senha poderá ser registrada no histórico da linha de comandos. Por motivos de segurança, evite fornecer a senha usando o parâmetro -p. Em vez disso,
 insira a senha quando a interface da linha de comandos solicitar.</dd>
+<dt>*-sso*</dt>
+<dd>Deve-se usar a opção de conexão única (SSO) ao efetuar login com um ID federado. Isso não será necessário ao efetuar login com um ID IBM. Se você tentar efetuar sign in com um ID federado e não
+especificar o parâmetro SSO, será solicitado que o inclua. Usar o
+parâmetro SSO solicita que você insira a senha descartável após o
+login.</dd>
 <dt>*-o*organization_name</dt>
 <dd>O nome da organização na qual você deseja efetuar login.</dd>
 <dt>*-s*space_name</dt>
@@ -177,6 +188,8 @@ insira a senha quando a interface da linha de comandos solicitar.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Desativa o processo de validação SSL. O uso desse parâmetro pode causar problemas de segurança.</dd>
 </dl>
+
+<!-- staging only content for the sso parameter and note for federated ID atlas 45 work -->
 
 *Nota:* Se você fornecer a sua senha no parâmetro *-p* desse comando, sua senha poderá ser registrada no arquivo histórico do comando shell e poderá ser visível para outros usuários do sistema operacional local.
 
@@ -226,23 +239,21 @@ cf push appname -c “bash ./<run.sh>"
 ```</dd>
 <dt>*-f* manifest_path</dt>
 <dd>O caminho do arquivo de manifesto. O arquivo manifest padrão é manifest.yml sob o diretório-raiz de seu aplicativo.</dd>
-<dt>*-i*instance_number</dt>
+<dt>*-i* instance_number</dt>
 <dd>O número de instâncias.</dd>
-<dt>*-k*disk_limit</dt>
-<dd>O limite de disco para o aplicativo, por exemplo, *256M*, *1024M*
-oi *1G*.</dd>
-<dt>*-m*memory_limit</dt>
-<dd>O limite de memória para o aplicativo, por exemplo, *256M*, *1024M*
-ou *1G*.</dd>
-<dt>*-n*host_name</dt>
+<dt>*-k* disk_limit</dt>
+<dd>O limite de disco para o aplicativo, por exemplo, *256M*, *1024M* ou *1G*.</dd>
+<dt>*-m* memory_limit</dt>
+<dd>O limite de memória para o aplicativo, por exemplo, *256M*, *1024M* ou *1G*.</dd>
+<dt>*-n* host_name</dt>
 <dd>O nome do host para o aplicativo, por exemplo, *my-subdomain*.</dd>
-<dt>*-p*app_path</dt>
+<dt>*-p* app_path</dt>
 <dd>O caminho para o diretório do aplicativo ou o archive do aplicativo</dd>
-<dt>*-t*timeout</dt>
+<dt>*-t* timeout</dt>
 <dd>Tempo máximo, em segundos, para o aplicativo iniciar. Outros tempos-limite do lado do servidor podem substituir esse
 valor.</dd>
 <dt>*-s* stackname</dt>
-<dd>A pilha para executar os apps. Uma pilha é um sistema de arquivos pré-construído que inclui o sistema operacional. Use `cf stacks` para visualizar as pilhas disponíveis no {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd>A pilha para executar os apps. Uma pilha é um sistema de arquivos pré-construído que inclui o sistema operacional. Use `cf stacks` para visualizar as pilhas disponíveis em {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*--no-hostname*</dt>
 <dd>Mapeia o domínio do sistema do Bluemix para esse aplicativo.</dd>
 <dt>*--no-manifest*</dt>
@@ -264,14 +275,12 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 <dl>
 <dt>appname</dt>
 <dd>O nome do aplicativo.</dd>
-<dt>*-i*instance_number</dt>
+<dt>*-i* instance_number</dt>
 <dd>O número de instâncias</dd>
-<dt>*-k*disk_limit</dt>
-<dd>O limite de disco para o aplicativo, por exemplo, *256M*, *1024M*
-oi *1G*.</dd>
-<dt>*-m*memory_limit</dt>
-<dd>O limite de memória para o aplicativo, por exemplo, *256M*, *1024M*
-ou *1G*.</dd>
+<dt>*-k* disk_limit</dt>
+<dd>O limite de disco para o aplicativo, por exemplo, *256M*, *1024M* ou *1G*.</dd>
+<dt>*-m* memory_limit</dt>
+<dd>O limite de memória para o aplicativo, por exemplo, *256M*, *1024M* ou *1G*.</dd>
 <dt>*-f*</dt>
 <dd>Força o aplicativo a reiniciar sem prompt.</dd>
 </dl>
@@ -330,4 +339,4 @@ cf -v
 {: #rellinks}
 ## general 
 {: #general}
-* [Cartão de referência rápida - comandos cf](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [Cartão de Referência Rápida - comandos cf](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

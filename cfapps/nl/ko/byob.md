@@ -61,7 +61,7 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 
 ## 외부 빌드팩
 
-{{site.data.keyword.Bluemix_notm}}에서는 외부 빌드팩 또는 사용자 정의 빌드팩을 사용할 수 있습니다. **cf push** 명령에서 -b 옵션을 사용하여 빌드팩의 URL을 지정하고 ```-s``` 옵션을 사용하여 스택을 지정하십시오. 예를 들어, 정적 파일에 대한 외부 커뮤니티 빌드팩을 사용하려면 다음 명령을 실행하십시오.
+{{site.data.keyword.Bluemix_notm}}에서는 외부 빌드팩 또는 사용자 정의 빌드팩을 사용할 수 있습니다. -b 옵션으로 빌드팩의 URL을 지정하고 ```-s``` 옵션으로 **cf push** 명령에서 스택을 지정해야 합니다. 예를 들어, 정적 파일에 대한 외부 커뮤니티 빌드팩을 사용하려면 다음 명령을 실행하십시오.
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2

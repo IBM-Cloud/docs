@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*最終更新日: 2016 年 6 月 13 日*
+*最終更新日: 2016 年 7 月 11 日*
 {: .last-updated}
 
 
@@ -24,11 +24,8 @@ copyright:
 {:shortdesc}
 
 **注:** SoftLayer、含まれるサービス、サポート、
-および {{site.data.keyword.Bluemix}} Dedicated の販売に関するすべて
-の情報は、中国では適用されません。中国の {{site.data.keyword.Bluemix}}
-Dedicated のお客様は、[UNISYS Service
-Management IBM Bluemix ページ](https://chinabluemix.itsm.unisysedge.cn){: new_window}からサポート
-を要求することができます。さらに、中国のお客様は、
+および {{site.data.keyword.Bluemix_notm}} Dedicated の販売に関するすべて
+の情報は、中国では適用されません。中国の {{site.data.keyword.Bluemix_notm}} Dedicated は、IBM Bluebox (OpenStack ベースのプライベート・クラウド・インフラストラクチャー) によってサポートされます。中国の {{site.data.keyword.Bluemix_notm}} Dedicated のお客様は、[UNISYS Service Management IBM {{site.data.keyword.Bluemix_notm}} ページ](https://chinabluemix.itsm.unisysedge.cn){: new_window}からサポートを要求することができます。さらに、中国のお客様は、
 [IBM
 developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} で無
 料のサポートを受けることができます。
@@ -43,19 +40,19 @@ developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/blu
 
 | **タイプ **        | **名前**            | **説明** |      
 |-----------------|-------------------|-------------------|
-|組み込み | {{site.data.keyword.Bluemix_notm}} ランタイム | ランタイムはアプリを素早く立ち上げて実行するために使用します。マシンとオペレーティング・システムのセットアップと管理は不要です。すべての {{site.data.keyword.Bluemix_notm}} ランタイムが、{{site.data.keyword.Bluemix_notm}} Dedicated インスタンスで使用可能です。|
-|組み込み | {{site.data.keyword.autoscaling}} | ポリシーに基づいて、アプリケーションの計算能力を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix_notm}} Dedicated 環境で使用量が無制限になります。 |
-|オプション | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} は、{{site.data.keyword.APIM}} と IBM StrongLoop を単一のオファリングに統合し、API とマイクロサービスを作成、実行、管理、および強化する包括的な解決策を提供します。 |
-|オプション | {{site.data.keyword.APIM}} | {{site.data.keyword.APIMfull}} サービスを使用して、API を構成、管理、およびソーシャル化します。API は、プロキシー URL を使用するか、HTTP データ・ソースからデータをアセンブルすることにより、リソースと一緒にインポートできます。{{site.data.keyword.APIM}} サービスを使用する利点は、API の使用方法を管理できることです。 |
-|オプション | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。 |
-|オプション | {{site.data.keyword.dashdbshort}} | dashDB を使用して、地理空間情報などの特殊タイプを含む、リレーショナル・データを保管します。次に、そのデータを SQL、または予測分析とデータ・マイニング、R による分析、および Geospatial Analytics などの拡張組み込み分析を使用して分析します。 |
-|オプション | {{site.data.keyword.datacshort}} | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
+|組み込み | [{{site.data.keyword.Bluemix_notm}} ランタイム](../cfapps/runtimes.html) | ランタイムはアプリを素早く立ち上げて実行するために使用します。マシンとオペレーティング・システムのセットアップと管理は不要です。すべての {{site.data.keyword.Bluemix_notm}} ランタイムが、{{site.data.keyword.Bluemix_notm}} Dedicated インスタンスで使用可能です。|
+|組み込み | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | ポリシーに基づいて、アプリケーションの計算能力を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix_notm}} Dedicated 環境で使用量が無制限になります。 |
+|オプション | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} は、{{site.data.keyword.APIM}} と IBM StrongLoop を単一のオファリングに統合し、API とマイクロサービスを作成、実行、管理、および強化する包括的な解決策を提供します。 |
+|オプション | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | {{site.data.keyword.APIMfull}} サービスを使用して、API を構成、管理、およびソーシャル化します。API は、プロキシー URL を使用するか、HTTP データ・ソースからデータをアセンブルすることにより、リソースと一緒にインポートできます。{{site.data.keyword.APIM}} サービスを使用する利点は、API の使用方法を管理できることです。 |
+|オプション | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。 |
+|オプション | [{{site.data.keyword.dashdbshort}}](../services/dashDB/dashDB.html) | dashDB を使用して、地理空間情報などの特殊タイプを含む、リレーショナル・データを保管します。次に、そのデータを SQL、または予測分析とデータ・マイニング、R による分析、および Geospatial Analytics などの拡張組み込み分析を使用して分析します。 |
+|オプション | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
 | オプション (ベータ版) | ロギング | {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースで Cloud Foundry アプリのログおよび Kibana で検索可能なログとダッシュボードを提供します。 |
-|オプション | {{site.data.keyword.mobilepushshort}} | {{site.data.keyword.mobilepushshort}} は、通知を iOS および Android デバイスに送信するために使用することができるサービスです。通知は、すべてのアプリケーション・ユーザー、またはタグを使用して特定のユーザーとデバイスのセットを対象にすることができます。デバイス、タグ、およびサブスクリプションを管理することができます。SDK (Software Development Kit) および　Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用して、さらにクライアント・アプリケーションを開発することも可能です。 |
-|オプション | {{site.data.keyword.messagehub}} | {{site.data.keyword.messagehub}} は、配布されたスケーラブルで高スループットのメッセージ・バスであり、オンプレミス・テクノロジーとオフプレミス・テクノロジーを統合します。{{site.data.keyword.messagehub}} は、Apache Kafka に基づいています。これは、高速かつスケーラブルで永続的なリアルタイムのメッセージング・エンジンです。 |
-|オプション | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} サービスは、{{site.data.keyword.Bluemix_notm}} アプリケーションをオンプレミスまたはクラウド内のリモート・ロケーションに接続するための安全な方法を提供します。  |
-|オプション | {{site.data.keyword.sescashort}} | 冗長性を高めるために、{{site.data.keyword.sescashort}} は、キャッシュに保管されたセッションのレプリカを提供します。これにより、ブラウンアウトまたは障害が発生した場合、クライアント・アプリケーションはキャッシュ内のセッションへのアクセスを維持できます。サービスでは、Web アプリケーションとモバイル・アプリケーションのセッション・キャッシュ・シナリオがサポートされます。 |
-|オプション | {{site.data.keyword.iot_full}} | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。基本オファリングでは、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えた専用環境内で {{site.data.keyword.iot_full}} の専用バージョンを実行することができます。 |
+|オプション | [{{site.data.keyword.messagehub}}](../services/MessageHub/index.html#messagehub) | {{site.data.keyword.messagehub}} は、配布されたスケーラブルで高スループットのメッセージ・バスであり、オンプレミス・テクノロジーとオフプレミス・テクノロジーを統合します。{{site.data.keyword.messagehub}} は、Apache Kafka に基づいています。これは、高速かつスケーラブルで永続的なリアルタイムのメッセージング・エンジンです。 |
+|オプション | [{{site.data.keyword.mobilepushshort}}](../services/mobilepush/index.html) | {{site.data.keyword.mobilepushshort}} は、通知を iOS および Android デバイスに送信するために使用することができるサービスです。通知は、すべてのアプリケーション・ユーザー、またはタグを使用して特定のユーザーとデバイスのセットを対象にすることができます。デバイス、タグ、およびサブスクリプションを管理することができます。SDK (Software Development Kit) および　Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用して、さらにクライアント・アプリケーションを開発することも可能です。 |
+|オプション | [{{site.data.keyword.SecureGateway}}](../services/SecureGateway/secure_gateway.html) | {{site.data.keyword.SecureGateway}} サービスは、{{site.data.keyword.Bluemix_notm}} アプリケーションをオンプレミスまたはクラウド内のリモート・ロケーションに接続するための安全な方法を提供します。  |
+|オプション | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 冗長性を高めるために、{{site.data.keyword.sescashort}} は、キャッシュに保管されたセッションのレプリカを提供します。これにより、ブラウンアウトまたは障害が発生した場合、クライアント・アプリケーションはキャッシュ内のセッションへのアクセスを維持できます。サービスでは、Web アプリケーションとモバイル・アプリケーションのセッション・キャッシュ・シナリオがサポートされます。 |
+|オプション | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。基本オファリングでは、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えた専用環境内で {{site.data.keyword.iot_full}} の専用バージョンを実行することができます。 |
 
 リソースおよびサービスの容量を拡大および拡張するために購入できる、オプションのコンポーネントが用意されています。販売チームに連絡して、これらのコンポーネントを購入できます。営業担当員への連絡について詳しくは、[「お問い合わせ」](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)にアクセスしてください。サービスのプランを増やすには、カタログのサービス・タイルからプランを選択します。
 
@@ -80,6 +77,7 @@ developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/blu
 |{{site.data.keyword.Bluemix_notm}} Dedicated コミュニティー・サービス  | コミュニティー・サービスごとに、最大合計 50 インスタンスまでコミュニティー・サービスをデプロイして実行できる環境。  |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated ハードウェア・ファイアウォール - 高可用性 | 専用環境内の同じ VLAN 上の単一、複数、またはすべてのサーバーを保護するように構成された、冗長 1 Gbps ハードウェア・ファイアウォール。 |
 |高可用性用に構成された専用 1 Gbps Vyatta VPN  | 専用環境での使用のために高可用性を実現するように構成された 1 Gbps Vyatta VPN。 |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.messagehub}} | 1 区画当たり最大 10 GB のパブリッシュおよびサブスクライブ・メッセージングを提供する環境。メッセージは最大 24 時間保持され、消費用に使用可能です。 |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.mobilepushshort}} | 1 秒当たり 300 個の要求を受け入れる能力を持つ {{site.data.keyword.mobilepushshort}} インスタンスをデプロイして実行できる環境。 |
 |{{site.data.keyword.iot_short}} Dedicated の増分式の拡張 | 環境の拡張。拡張される環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 0.5 TB のデータ交換の容量を備えた専用環境内で {{site.data.keyword.iot_short}} の専用バージョンを実行できます。 |
 

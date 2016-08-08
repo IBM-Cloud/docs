@@ -15,6 +15,7 @@ copyright:
 {: #deployingapps}
 
 *Última atualização: 9 de maio de 2016*
+{: .last-updated}
 
 É possível implementar aplicativos no
 {{site.data.keyword.Bluemix}}
@@ -497,12 +498,14 @@ as etapas a seguir:
 	2. Na área de janela de navegação à esquerda, clique em **Variáveis de ambiente**.
 	3. Clique em **DEFINIDA PELO USUÁRIO** e, em seguida, clique em **INCLUIR**.
 	4. Preencha os campos necessários e, em seguida, clique em **SALVAR**.
-  * Use a interface de linha de comandos cf. Inclua uma variável definida pelo usuário usando o comando `cf set-env`. Por exemplo: 
+  * Use a interface de linha de comandos cf. Inclua uma variável definida pelo usuário usando o comando `cf set-env`. Por
+exemplo: 
     ```
     cf set-env appname env_var_name env_var_value
     ```
 	
-  * Use o arquivo `manifest.yml`. Inclua pares de valores no arquivo. Por exemplo: 
+  * Use o arquivo `manifest.yml`. Inclua pares de valores no arquivo. Por
+exemplo: 
     ```
 	env:
       VAR1:value1

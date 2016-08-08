@@ -31,7 +31,7 @@ copyright:
 	
   2. *devconsole*：启用开发控制台实用程序，该实用程序可通过以下 URL 进行访问：
     ```
-    http://<yourappname>.mybluemix.net/bluemix-debug/manage
+http://<yourappname>.mybluemix.net/bluemix-debug/manage
     ```
 	
     使用开发控制台，用户可以重新启动、停止或暂挂自己的应用程序。用户还可以启用或访问 shell 和 inspector 实用程序。
@@ -44,7 +44,7 @@ copyright:
 	
   4. *shell*：启用基于 Web 的 shell，该 shell 可通过 devconsole 实用程序或通过访问以下 URL 来进行访问：
     ```
-    http://<yourappname>.mybluemix.net/bluemix-debug/shell
+http://<yourappname>.mybluemix.net/bluemix-debug/shell
     ```
 	
     访问 shell 实用程序后，将显示一个终端窗口，允许通过 shell 访问您的应用程序。您可以执行常规 shell 中支持的所有操作，例如编辑文件、检查内存使用量或运行诊断命令。
@@ -82,14 +82,14 @@ copyright:
     1. 配置 *strongpm* BlUEMIX_APP_MGMT_ENABLE 环境变量，并重新编译打包应用程序。
     
 	```
-    cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
+cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
     cf restage <appname>
     ```
 	
     2. 在 Cloud Foundry 命令行中，向应用程序添加路径，该路径将“-pm”附加到应用程序名称，例如 <appname>-pm.mybluemix.net。
     
 	```
-    cf map-route <appname> ng.bluemix.net -n <appname>-pm
+cf map-route <appname> ng.bluemix.net -n <appname>-pm
     ```
 	
     3. 在本地工作站上，安装 [StrongLoop npm 模块](https://www.npmjs.com/package/strongloop){:new_window}。

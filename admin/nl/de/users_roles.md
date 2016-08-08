@@ -17,7 +17,7 @@ copyright:
 
 # Teammitglieder und Rollen verwalten
 {: #userroles}
-*Letzte Aktualisierung: 1. Juni 2016*
+Letzte Aktualisierung: 12. Juli 2016
 {: .last-updated}
 
 Auf der Seite **Teamverzeichnis** für Ihr Konto können Sie vorhanden Teammitglieder und deren Rollen in Ihrer Organisation und in Bereichen verwalten sowie neue Teammitglieder einladen. Um auf das Teamverzeichnis für Ihr Konto zuzugreifen, klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../admin/images/account_support.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teamverzeichnis**. 
@@ -60,6 +60,17 @@ Die folgenden Rollen können auf Bereichsebene zugeordnet werden:
 |Auditor | Bereichsauditoren haben Lesezugriff auf alle Informationen zu Bereichen, beispielsweise auf Informationen zur Anzahl der Instanzen, zu Servicebindungen und zur Ressourcennutzung für jede Anwendung im Bereich. |
 
 **Hinweis**: Teammitglieder, denen eine Bereichsmanager- oder Bereichsentwicklerrolle zugeordnet wurde, können auf die Umgebungsvariable VCAP_SERVICES zugreifen. Ein Teammitglied, dem die Auditorrolle zugeordnet wurde, kann nicht auf VCAP_SERVICES zugreifen.
+
+## Sichtbarkeit des Teamverzeichnisses anpassen
+{: #teamdirectoryvisibility}
+
+Abhängig von der Konfiguration der {{site.data.keyword.Bluemix_notm}}-Konten und -Organisationen kann es sinnvoll sein, die Sichtbarkeit des Teamverzeichnisses der Teamverzeichnisseite zu ändern. Standardmäßig können alle Teammitglieder die gesamte Liste der Kontoteammitglieder anzeigen, einschließlich aller Mitglieder aller Organisationen in diesem Konto. Es kann sein, dass die Sichtbarkeit der Teamverzeichnisseite aus Datenschutz- oder Sicherheitsgründen angepasst werden muss. Es gibt zwei Optionen zum Einstellen der Sichtbarkeit der Teamverzeichnisseite: alle Teammitglieder oder nur Sie als Kontoeigner. 
+
+Führen Sie die folgenden Schritte aus, um die Sichtbarkeit der Teamverzeichnisseite zu ändern: 
+
+1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teamverzeichnis**. 
+2. Klicken Sie zur Verwendung der Option **Sichtbarkeit für** auf die aktuelle Auswahl zum Anzeigen der Optionen. 
+3. Wählen Sie anschließend abhängig von den aktuellen Anforderungen an das Konto **Alle** oder **Nur für mich** aus. 
 
 ## Teammitglieder einladen
 {: #inviteteammembers}

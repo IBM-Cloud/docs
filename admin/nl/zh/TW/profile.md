@@ -17,7 +17,7 @@ copyright:
 
 # 設定檔設定
 {: #usersettings}
-*前次更新：2016 年 5 月 16 日*
+前次更新：2016 年 6 月 23 日
 {: .last-updated}
 
 移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **帳戶** &gt; **設定檔**，以更新您的設定檔設定。
@@ -25,22 +25,17 @@ copyright:
 
  在**設定檔**頁面上，您可以設定或更新下列資訊：
 
-<!--  * A profile photo that is visible to other {{site.data.keyword.Bluemix_notm}} users -->
-
+ * 其他 {{site.data.keyword.Bluemix_notm}} 使用者可以看到的設定檔照片
  * IBM ID 資訊，包括您的姓名、電子郵件、電話號碼、密碼、公司及角色
  * 分析追蹤設定
 
-<!-- pulled back, so removing content for now
-
-## Changing your profile photo
+## 變更您的設定檔照片
 {: #photo}
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
+1. 移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **帳戶** &gt; **設定檔**。
 
-* Click **Change Photo** to upload a new photo.
-* Click **Remove Photo** to remove your photo.
-
--->
+* 按一下**變更照片**，以上傳新的照片。
+* 按一下**移除照片**，以移除照片。
 
 ## 編輯 IBM ID 資訊
 {: #ibmid}

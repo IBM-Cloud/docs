@@ -17,7 +17,7 @@ copyright:
 
 # Profileinstellungen
 {: #usersettings}
-*Letzte Aktualisierung: 16. Mai 2016*
+Letzte Aktualisierung: 23. Juni 2016
 {: .last-updated}
 
 Klicken Sie auf das Symbol **Konto und Verwaltung** ![Symbol 'Konto und Verwaltung'](../admin/images/account_support.svg) &gt; **Konto** &gt; **Profil**, um Ihre Profileinstellungen zu aktualisieren.
@@ -25,22 +25,17 @@ Klicken Sie auf das Symbol **Konto und Verwaltung** ![Symbol 'Konto und Verwaltu
 
  Auf der Seite **Profil** können Sie die folgenden Informationen festlegen oder aktualisieren:
 
-<!--  * A profile photo that is visible to other {{site.data.keyword.Bluemix_notm}} users -->
-
+ * Ein Profilfoto, das für andere {{site.data.keyword.Bluemix_notm}}-Benutzer sichtbar ist
  * Informationen zur IBM ID einschließlich Ihres Namens, Ihrer E-Mail-Adresse, Ihrer Telefonnummer, Ihres Kennworts, Ihres Unternehmens und Ihrer Rolle
  * Einstellung zur Analyseaufzeichnung
 
-<!-- pulled back, so removing content for now
-
-## Changing your profile photo
+## Profilfoto ändern
 {: #photo}
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
+1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; **Profil**.
 
-* Click **Change Photo** to upload a new photo.
-* Click **Remove Photo** to remove your photo.
-
--->
+* Klicken Sie auf **Foto ändern**, um ein neues Foto hochzuladen. 
+* Klicken Sie auf **Foto entfernen**, um das Foto zu entfernen. 
 
 ## Informationen zu Ihrer IBM ID bearbeiten
 {: #ibmid}

@@ -101,10 +101,10 @@ stages:
 ```
 ---
 name: <name>
-[inputs:
-	<sequence of inputs>]
+[inputs: 
+	<sequence of inputs>] 
 [triggers:   
-	<sequence of triggers>]
+	<sequence of triggers>] 
 [properties:   
 	<sequence of properties>] 
 [jobs:   
@@ -190,8 +190,7 @@ space: <space name>
         target:
           url: http://api.ng.bluemix.net
           organization: ${CF_ORGANIZATION}
-        script: \"echo ${CF_ORGANIZATION}\"                
-      ...
+        script: \"echo ${CF_ORGANIZATION}\"...
     "
   }
 }

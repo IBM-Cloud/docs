@@ -7,7 +7,6 @@ copyright:
   years: 2015, 2016
 
  
-
 ---
 
 
@@ -17,8 +16,10 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}}(bx) 명령
 {: #bluemix_cli}
 
-*마지막 업데이트 날짜: 2016년 5월 11일*
+마지막 업데이트 날짜: 2016년 7월 20일
 {: .last-updated}
+
+*버전:* 0.4.0
 
 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다. 일부 {{site.data.keyword.Bluemix_notm}} 명령은 기존 cf 명령의 랩퍼이며, 나머지는 {{site.data.keyword.Bluemix_notm}} 사용자에 대해 확장 기능을 제공합니다. 다음 정보에서는 {{site.data.keyword.Bluemix_notm}} CLI에서 지원하는 명령을 나열하며, 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제가 포함됩니다.
 {:shortdesc}
@@ -28,7 +29,7 @@ copyright:
 <dt>엔드포인트</dt>
 <dd>명령을 사용하기 전에 <code>bluemix api</code>를 통해 API 엔드포인트를 설정해야 합니다.</dd>
 <dt>로그인</dt>
-<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다.</dd>
+<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다. 연합된 ID로 로그인하는 경우 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하십시오.</dd>
 <dt>대상</dt>
 <dd>이 명령을 사용하기 전에 <code>bluemix target</code> 명령을 사용하여 조직과 영역을 설정해야 합니다.</dd>
 <dt>Docker</dt>
@@ -50,7 +51,7 @@ copyright:
  <tr> 
  <td>[bluemix help](index.html#bluemix_help)</td> 
  <td>[bluemix api](index.html#bluemix_api)</td> 
- <td>[bluemix 로그인](index.html#bluemix_login)</td>
+ <td>[bluemix_login](index.html#bluemix_login)</td>
  <td>[bluemix logout](index.html#bluemix_logout)</td>
  <td>[bluemix target](index.html#bluemix_target)</td>
  </tr> 
@@ -175,9 +176,9 @@ copyright:
 *표 4. Bluemix 서비스 관리를 위한 명령*
 
 
-<table summary="Bluemix 카탈로그, 플러그인 및 보안 설정의 관리에 사용 가능한 Bluemix 명령.">
+<table summary="Bluemix 카탈로그, 플러그인, 청구 및 보안 설정을 관리하는 데 사용할 수 있는 Bluemix 명령.">
  <thead>
- <th colspan="5">Bluemix 카탈로그, 플러그인 및 보안 설정 관리를 위한 명령</th>
+ <th colspan="5">Bluemix 카탈로그, 플러그인, 청구 및 보안 설정 관리를 위한 명령</th>
  </thead>
  <tbody> 
  <tr> 
@@ -195,15 +196,20 @@ copyright:
  <td>[bluemix plugin uninstall](index.html#bluemix_plugin_uninstall)</td> 
  </tr> 
  <tr> 
+ <td>[bluemix bss account-usage](index.html#bluemix_bss_account_usage)</td> 
+ <td>[bluemix bss org-usage](index.html#bluemix_bss_org_usage)</td>
+ <td>[bluemix bss orgs-usage-summary](index.html#bluemix_orgs_usage_summary)</td>
  <td>[bluemix security cert](index.html#bluemix_security_cert)</td> 
  <td>[bluemix security cert-add](index.html#bluemix_security_cert_add)</td>
+ </tr>
+ <tr>
  <td>[bluemix security cert-remove](index.html#bluemix_security_cert_remove)</td>
  <td></td>
  <td></td>
  </tr>
   </tbody> 
  </table> 
-*표 5. Bluemix 카탈로그, 플러그인 및 보안 설정 관리를 위한 명령*
+*표 5. Bluemix 카탈로그, 플러그인, 청구 및 보안 설정 관리를 위한 명령*
 
 
 
@@ -377,7 +383,7 @@ bluemix ic help group-create
 {{site.data.keyword.Bluemix_notm}} API 엔드포인트를 설정하거나 확인합니다. 이 명령은 `cf api` 명령을 랩핑 처리합니다. 
 
 ```
-bluemix api [API_ENDPOINT][--unset]
+bluemix api [API_ENDPOINT] [--unset]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -419,9 +425,13 @@ bluemix login [OPTIONS...]
 
 <strong>전제조건</strong>: 엔드포인트
 
+<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
+
 <strong>명령 옵션</strong>:
 `login` 명령에 지원되는 옵션에 대한 자세한 정보는 `cf login` 명령 사용법 정보에서 애플리케이션 관리를 위한 cf 명령을 참조하십시오.
 
+<strong>참고</Strong>:
+연합된 ID로 로그인하는 경우 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하십시오.
 
 ## bluemix logout
 {: #bluemix_logout}
@@ -600,7 +610,7 @@ cf 애플리케이션 또는 컨테이너 그룹을 지정된 인스턴스 개�
 **참고:** 컨테이너 그룹을 스케일링하는 경우 인스턴스 번호만 지정할 수 있습니다. 옵션을 지정하지 않은 경우, 이 명령은 컨테이너 그룹의 현재 인스턴스 수와 cf 애플리케이션의 디스크 할당량 및 메모리 크기도 나열합니다. 
 
 ```
-bluemix scale CF_APP_NAME|CONTAINER_GROUP_NAME [-i INSTANCE_COUNT][-k DISK_QUOTA] [-m MEMORY_SIZE]
+bluemix scale CF_APP_NAME|CONTAINER_GROUP_NAME [-i INSTANCE_COUNT] [-k DISK_QUOTA] [-m MEMORY_SIZE]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
@@ -649,7 +659,7 @@ bluemix curl PATH [OPTIONS...]
 <strong>명령 옵션</strong>:
    <dl>
    <dt><i>PATH</i>(필수)</dt>
-   <dd>자원의 URL 경로입니다. 예: /v2/apps.</dd>
+   <dd>리소스의 URL 경로입니다. 예: /v2/apps.</dd>
    <dt><i>OPTIONS</i>(선택사항)</dt>
    <dd>`bluemix curl` 명령에서 지원하는 옵션은 `cf curl` 명령에 대한 옵션과 동일합니다. </dd>
    </dl>
@@ -854,7 +864,7 @@ bluemix iam account-users
 ```
 
 ## bluemix iam account-user-invite
-{: #bluemix_iam_account-user-inviate}
+{: #bluemix_iam_account-user-invite}
 
 
 조직 및 영역 역할이 이미 설정된 계정으로 사용자를 초대합니다. 이 조작은 계정 소유자만 수행할 수 있습니다.
@@ -897,7 +907,7 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
 사용자 `Mary`를 `IBM` 조직에 `OrgManager` 역할로 초대하고 `Cloud` 영역에 `SpaceAuditor` 역할로 초대합니다.
 
 ```
-bluemix iam account-user-inviate Mary IBM OrgManager Cloud SpaceAuditor
+bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
 
 ## bluemix iam org-users
@@ -1569,6 +1579,85 @@ bluemix network route-unmap my-container-group ng.bluemix.net -n abc
 이 명령은 `cf delete-shared-domain` 명령과 기능 및 옵션이 동일합니다.
 
 
+
+## bluemix bss account-usage
+{: #bluemix_bss_account_usage}
+
+계정의 월별 사용량 및 비용을 표시하십시오.
+
+```
+bluemix bss account-usage [-d YYYY-MM] [--json]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+
+<dl>
+  <dt>-d MONTH_DATE(선택사항)</dt>
+  <dd>YYYY-MM 형식을 사용하여 월 및 날짜 지정에 대한 데이터를 표시하십시오. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
+  <dt>--json(선택사항)</dt>
+  <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
+</dl>
+
+<strong>예제</strong>:
+
+2016-06의 내 계정 사용량 및 비용 보고서 표시:
+
+```
+bluemix bss account-usage -d 2016-06
+```
+
+## bluemix bss org-usage
+{: #bluemix_bss_org_usage}
+
+조직의 월별 사용량 세부사항을 표시하십시오. 이 오퍼레이션은 조직의 청구 관리자만 완료할 수 있습니다.
+
+```
+bluemix bss org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+
+<dl>
+  <dt>ORG_NAME(필수)</dt>
+  <dd>조직의 이름입니다.</dd>
+  <dt>-d MONTH_DATE(선택사항)</dt>
+  <dd>YYYY-MM 형식을 사용하여 지정된 월 및 날짜에 대한 데이터를 표시하십시오. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>조직을 호스트하는 지역의 이름입니다. 'all'로 설정되면 모든 지역의 조직 사용량이 표시됩니다.</dd>
+  <dt>--json(선택사항)</dt>
+  <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
+</dl>
+
+
+
+## bluemix bss orgs-usage-summary
+{: #bluemix_bss_orgs_usage_summary}
+
+내 계정에서 조직에 대한 월별 사용량 요약을 표시하십시오.
+
+```
+bluemix bss orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
+```
+
+<strong>전제조건</strong>: 엔드포인트, 로그인
+
+<strong>명령 옵션</strong>:
+
+<dl>
+  <dt>-d MONTH_DATE(선택사항)</dt>
+  <dd>YYYY-MM 형식을 사용하여 지정된 월 및 날짜에 대한 데이터를 표시하십시오. 지정되지 않으면 현재 월의 사용량이 표시됩니다.</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>조직을 호스트하는 지역의 이름입니다. 'all'로 설정되면 모든 지역에 있는 조직의 사용량 요약이 표시됩니다.</dd>
+  <dt>--json(선택사항)</dt>
+  <dd>JSON 형식으로 사용량 결과를 표시하십시오.</dd>
+</dl>
+
+
+
 ## bluemix security cert
 {: #bluemix_security_cert}
 
@@ -1604,7 +1693,7 @@ bluemix security cert ibmcxo-eventconnect.com
 현재 조직의 지정된 도메인에 인증서를 추가합니다.
 
 ```
-bluemix security cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD][-i INTERMEDIATE_CERT_FILE] [--verify-client]
+bluemix security cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [--verify-client]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
@@ -1657,7 +1746,6 @@ bluemix security cert-remove DOMAIN [-f]
 
 
 
-
 ## bluemix plugin repos
 {: #bluemix_plugin_repos}
 
@@ -1687,7 +1775,7 @@ bluemix plugin repo-add REPO_NAME REPO_URL
    <dt>REPO_NAME(필수)</dt>
    <dd>추가되는 저장소의 이름입니다. 각 저장소의 고유 이름을 정의할 수 있습니다.</dd>
    <dt>REPO_URL(필수)</dt>
-   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). http://plugins.ng.bluemix.net는 Bluemix CLI의 공식 플러그인 저장소입니다. </dd>
+   <dd>추가되는 저장소의 URL입니다. 저장소 URL에는 프로토콜이 포함되어 있어야 합니다(예: plugins.ng.bluemix.net이 아닌 http://plugins.ng.bluemix.net). http://plugins.ng.bluemix.net 이것이 Bluemix CLI의 공식 플러그인 저장소입니다. </dd>
     </dl>
 
 
@@ -1777,7 +1865,7 @@ bluemix plugin list
 지정된 경로 또는 저장소에서 {{site.data.keyword.Bluemix_notm}} CLI에 특정 버전의 플러그인을 설치합니다.
 
 ```
-bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME][-v VERSION]
+bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
 ```
 
 <strong>전제조건</strong>: 없음
@@ -1878,7 +1966,7 @@ bluemix region-set us-south
 실행 중인 컨테이너를 제어하거나 해당 출력을 봅니다. 컨테이너를 종료하고 중지하려면 `CTRL+C`를 사용하십시오. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [attach](https://docs.docker.com/reference/commandline/attach/){: new_window} 명령을 참조하십시오. 
 
 ```
-bluemix ic attach [--no-stdin][--sig-proxy] CONTAINER
+bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker
@@ -1907,10 +1995,10 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-IBM Containers 빌드 서비스를 호출하여 로컬에 또는 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에 Docker 이미지를 빌드합니다. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [build](https://docs.docker.com/reference/commandline/build/){: new_window} 명령을 참조하십시오. 
+IBM Containers 빌드 서비스를 호출하여 로컬에 또는 사설 {{site.data.keyword.Bluemix_notm}} 저장소에 Docker 이미지를 빌드합니다. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [build](https://docs.docker.com/reference/commandline/build/){: new_window} 명령을 참조하십시오. 
 
 ```
-bluemix ic build -t TAG|--tag TAG [--no-cache][-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
+bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker
@@ -1985,7 +2073,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 컨테이너에서 명령을 실행합니다. 자세한 정보는 Docker 도움말에서 [exec](https://docs.docker.com/reference/commandline/exec/){: new_window} 명령을 참조하십시오.
 
 ```
-bluemix ic exec [-d|--detach][-it] [-u USER|--user USER] CONTAINER [CMD]
+bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker
@@ -2092,7 +2180,7 @@ bluemix ic group-instances my_group
 확장 가능한 컨테이너 그룹을 작성합니다.
 
 ```
-bluemix ic group-create [-p PORT|--publish port][-m MEMORY|--memory MEMORY] [-e ENV|--env ENV][-v VOLUME:CONTAINER_PATH] [--min MIN][--max MAX] [--desired DESIRED][--auto] [-n HOST|--hostname HOST][-d DOMAIN|--domain DOMAIN] [--name NAME] IMAGE [CMD]
+bluemix ic group-create [-p PORT|--publish port] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] [--min MIN] [--max MAX] [--desired DESIRED] [--auto] [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] [--name NAME] IMAGE [CMD]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
@@ -2182,7 +2270,7 @@ bluemix ic group-create -p 9080 --auto -n mycontainerhost -d .mybluemix.net --na
 
 
 ```
-bluemix ic group-update [--min MIN][--max MAX] [--desired DESIRED][--auto] CONTAINER_GROUP
+bluemix ic group-update [--min MIN] [--max MAX] [--desired DESIRED] [--auto] CONTAINER_GROUP
 ```
 
 **팁:** 컨테이너 그룹의 호스트 이름 또는 도메인을 업데이트하려면 `bluemix ic route-map [-n HOST][-d DOMAIN] CONTAINER_GROUP`을 사용하십시오.
@@ -2253,7 +2341,7 @@ bluemix ic group-remove my_group
 조직의 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에 있는 사용 가능한 모든 이미지 목록을 봅니다. 자세한 정보는 Docker 도움말에서 [images](https://docs.docker.com/reference/commandline/images){: new_window} 명령을 참조하십시오. 목록에는 이미지 ID, 작성된 날짜 및 이미지 이름이 포함됩니다.
 
 ```
-bluemix ic images [-a|--all][--no-trunc] [-q|--quiet]
+bluemix ic images [-a|--all] [--no-trunc] [-q|--quiet]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker
@@ -2417,7 +2505,7 @@ bluemix ic ip-bind 192.123.12.12 proxy
 
 컨테이너에서 유동 IP 주소를 바인드 해제합니다. 
 
-공용 IP 주소는 IBM Containers에서 제한된 자원입니다. 따라서, 영역에 할당되었지만 컨테이너에 바인드되지 않은 공용 IP 주소는 무료 평가판 사용자로부터 주기적으로(대략 주 단위로) 재확보됩니다. 종량과금제 또는 구독 고객으로부터는 바인드되지 않은 공용 IP 주소가 재확보되지 않습니다.
+공인 IP 주소는 IBM Containers에서 제한된 리소스입니다. 따라서, 영역에 할당되었지만 컨테이너에 바인드되지 않은 공인 IP 주소는 무료 평가판 사용자로부터 주기적으로(대략 주 단위로) 재확보됩니다. 종량과금제 또는 구독 고객으로부터는 바인드되지 않은 공인 IP 주소가 재확보되지 않습니다.
 
 ```
 bluemix ic ip-unbind IP_ADDRESS CONTAINER
@@ -2595,7 +2683,7 @@ bluemix ic unpause proxy
 로그인한 사용자의 네임스페이스에서 실행 중인 컨테이너 목록을 봅니다. 기본적으로 이 명령은 실행 중인 컨테이너만 표시합니다. 자세한 정보는 Docker 도움말에서 [ps](https://docs.docker.com/reference/commandline/ps/){: new_window} 명령을 참조하십시오.
 
 ```
-bluemix ic ps [-a|--all][-s|--size] [-l NUM|--limit NUM][-q|--quiet]
+bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker
@@ -2760,7 +2848,7 @@ bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 
 
 ```
-bluemix ic run [-p PORT|--publish PORT][-P] [-m MEMORY|--memory MEMORY][-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] -n NAME|--name NAME [--link NAME:ALIAS][-it] IMAGE [CMD [CMD ...]]
+bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] -n NAME|--name NAME [--link NAME:ALIAS] [-it] IMAGE [CMD [CMD ...]]
 ```
 **참고:** Cloud Foundry 명령 도구가 설치되어 있으며 Cloud Foundry 토큰이 있는지 확인하십시오. `bluemix login` 및 `bluemix ic init`를 사용하여 성공적으로 로그인하면 필수 토큰 및 인증서가 생성됩니다.
 
@@ -2771,7 +2859,7 @@ bluemix ic run [-p PORT|--publish PORT][-P] [-m MEMORY|--memory MEMORY][-e ENV|-
 
    <dl>
    <dt>-p <i>PORT</i>|--publish <i>PORT</i>(선택사항)</dt>
-   <dd>HTTP 트래픽에 대한 포트를 공개합니다. Dockerfile에 사용 중인 이미지에 대해 지정된 모든 포트가 포함됩니다. 여러 <i>-p</i> 옵션을 사용하여 여러 포트를 포함시킬 수 있습니다. 포트를 공개하면 공용 IP 주소가 사용 가능한 경우 컨테이너에 공용 IP 주소가 자동으로 바인드됩니다.<br><br>컨테이너에 바인드할 기존 IP 주소가 영역에 있는 경우, 이 IP 주소를 나중에 바인드하는 대신 지정할 수 있습니다. IP 주소는 &lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br> 형식으로 지정해야 합니다.<br>영역의 IP 주소 요청에 대한 자세한 정보는 <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a> 명령을 참조하십시오.<br><br>포트를 지정하면 호스트에 도달하려고 하는 동일한 {{site.data.keyword.Bluemix_notm}} 영역에 있는 {{site.data.keyword.Bluemix_notm}} 로드 밸런서 또는 컨테이너에서 해당 앱을 사용할 수 있습니다. Dockerfile에 사용 중인 이미지에 대해 포트가 지정되어 있으면 해당 포트를 포함시키십시오.<br><br><strong>팁:</strong><ul><li>IBM 인증 Liberty 서버 이미지 또는 이 이미지의 수정된 버전의 경우 포트 9080을 입력하십시오.</li><li>IBM 인증 Node.js 이미지 또는 이 이미지의 수정된 버전의 경우 포트 8000을 입력하십시오.</li></ul></dd>
+   <dd>HTTP 트래픽에 대한 포트를 공개합니다. Dockerfile에 사용 중인 이미지에 대해 지정된 모든 포트가 포함됩니다. 여러 <i>-p</i> 옵션을 사용하여 여러 포트를 포함시킬 수 있습니다. 포트를 공개하면 공인 IP 주소가 사용 가능한 경우 컨테이너에 공인 IP 주소가 자동으로 바인드됩니다.<br><br>컨테이너에 바인드할 기존 IP 주소가 영역에 있는 경우, 이 IP 주소를 나중에 바인드하는 대신 지정할 수 있습니다. IP 주소는 &lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br> 형식으로 지정해야 합니다.<br>영역의 IP 주소 요청에 대한 자세한 정보는 <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a> 명령을 참조하십시오.<br><br>포트를 지정하면 호스트에 도달하려고 하는 동일한 {{site.data.keyword.Bluemix_notm}} 영역에 있는 {{site.data.keyword.Bluemix_notm}} 로드 밸런서 또는 컨테이너에서 해당 앱을 사용할 수 있습니다. Dockerfile에 사용 중인 이미지에 대해 포트가 지정되어 있으면 해당 포트를 포함시키십시오.<br><br><strong>팁:</strong><ul><li>IBM 인증 Liberty 서버 이미지 또는 이 이미지의 수정된 버전의 경우 포트 9080을 입력하십시오.</li><li>IBM 인증 Node.js 이미지 또는 이 이미지의 수정된 버전의 경우 포트 8000을 입력하십시오.</li></ul></dd>
    <dt>-P(선택사항)</dt>
    <dd>HTTP 트래픽에 대해 이미지의 Dockerfile에 지정된 포트를 자동으로 공개합니다. </dd>
    <dt>-m <i>MEMORY</i>|--memory <i>MEMORY</i>(선택사항)</dt>
@@ -2844,7 +2932,7 @@ bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path regi
 컨테이너 그룹에 액세스하는 데 사용할 인터넷 트래픽에 대한 라우트를 설정합니다. 이 명령을 사용하여 새 라우트를 설정하거나 기존 라우트를 업데이트할 수 있습니다.
 
 ```
-bluemix ic route-map [-n HOST|--hostname HOST][-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
+bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
@@ -2875,7 +2963,7 @@ bluemix ic route-map -n my_host -d organization.com GROUP1
 컨테이너 그룹에 액세스하는 데 사용할 인터넷 트래픽에 대한 라우트를 설정합니다. 이 명령을 사용하여 새 라우트를 설정하거나 기존 라우트를 업데이트할 수 있습니다.
 
 ```
-bluemix ic route-unmap [-n HOST|--hostname HOST][-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
+bluemix ic route-unmap [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
@@ -3275,4 +3363,3 @@ IBM Containers의 버전을 보려면 `bluemix ic info`를 실행하십시오. �
 {: #general}
 
 * [bx 도구](http://clis.ng.bluemix.net/ui/home.html){:new_window}
-

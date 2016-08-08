@@ -17,7 +17,8 @@ copyright:
 
 # Gerenciando organizações e espaços
 {: #orgsspacesusers}
-*Última atualização: 16 de maio de 2016*
+Última atualização: 16 de maio de 2016
+{: .last-updated}
 
 Como um proprietário da conta, é possível gerenciar as suas
 organizações acessando o ícone **Conta e suporte** ![ícone Conta e
@@ -134,7 +135,7 @@ espaço e selecione **Visualizar detalhes**.
 6. Clique em ** Adicionar**.
 
 
-## Renomeando uma organização
+## Renomear uma organização
 {: #orgrename}
 
 Execute as etapas
@@ -185,8 +186,7 @@ Conclua as etapas a seguir, para listar os membros para um espaço específico:
 1. Acesse o ícone **Conta e suporte**
 ![ícone Conta e
 suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizações.
-2. Identifique a organização para a qual deseja visualizar os
-membros e clique em **Visualizar detalhes**.
+2. Identifique a organização para a qual deseja visualizar os membros e clique em **Visualizar detalhes**.
 3. Identifique o espaço para o qual deseja visualizar os membros e clique em **Editar**.
 4. É possível ver os membros de seu espaço e as suas funções na guia **Usuários**.
 
@@ -221,7 +221,7 @@ de seus espaços. Como um gerenciador de espaço, a guia **Domínios** para um e
 suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizações.
 2. Identifique a organização que você deseja visualizar ou para a qual deseja editar domínios.
 3. Selecione **Visualizar detalhes** para essa organização.
-4. Clique em **Editar**.
+4. Clique em **Edit**.
 5. Clique em **Domínios**.
 
 Se você incluir um domínio customizado, deverá

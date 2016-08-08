@@ -12,6 +12,7 @@ copyright:
 
 # 使用 {{site.data.keyword.iotelectronics}} Starter 建立應用程式
 *前次更新：2016 年 6 月 14 日*
+{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} 是整合式的端對端解決方案，可讓您的應用程式與已連接的應用裝置通訊，以及控制、分析及更新已連接的應用裝置。入門範本包含入門範本應用程式，可讓您建立及控制模擬應用裝置，也包含一個範例行動應用程式，可讓您從行動裝置控制那些應用裝置。
 {:shortdesc}
@@ -42,7 +43,7 @@ copyright:
 ##建立模擬應用裝置
 若要建立模擬應用裝置，請執行下列步驟：
 1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板中，啟動 {{site.data.keyword.iotelectronics}} 應用程式。
-2. 等待`您的應用程式正在執行中`狀態訊息，然後按一下**檢視應用程式**以顯示入門範本應用程式。  
+2. 等待*您的應用程式正在執行中*狀態訊息，然後按一下**檢視應用程式**以顯示入門範本應用程式。  
 3. 選取**遠端控制您的已連接應用裝置**。
 4. 捲動至標示為**接下來，選擇或新增模擬洗衣機**，然後按一下新增 (+) 按鈕。即會建立新的洗衣機。
 
@@ -70,19 +71,17 @@ copyright:
 {: #rellinks}
 ## API 文件
 {: #api}
-* [{{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)  
-* [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
+* [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
+* [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
 
 
 ## 元件
 {: #general}
 
-* [{{site.data.keyword.iotelectronics_full}} 文件](iotelectronics_overview.html)
-* [{{site.data.keyword.iot_full}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
-* [{{site.data.keyword.iotrtinsights_full}}](https://new-console.ng.bluemix.net/docs/services/iotrtinsights/iotrtinsights_overview.html)
-* [{{site.data.keyword.amafull}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [{{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [{{site.data.keyword.iotelectronics}} 文件](iotelectronics_overview.html)
+* [{{site.data.keyword.iot_full}} 文件](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+*  [{{site.data.keyword.amashort}} 文件](https://new-console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
+* [{{site.data.keyword.sdk4nodefull}} 文件](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
 ## 範例
 {: #samples}

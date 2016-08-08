@@ -9,6 +9,7 @@ copyright:
 {: #services_troubleshooting}
 
 *Última atualização: 9 de dezembro de 2015*
+{: .last-updated}
 
 Se você tiver problemas com serviços do {{site.data.keyword.Bluemix}},
 é possível revisar as informações de resolução de problemas para determinar qual ação

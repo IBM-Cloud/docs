@@ -1,6 +1,6 @@
 {
-	"id": "docs_homepage",
-	"descriptionTitle": "文件首頁平台區段",
+	"id": "docs_homepage_platform",
+	"title": "如何使用 Bluemix 平台",
 	"items": [{
 		"title": "CLI 及開發工具",
 		"description": "存取工具，例如統一指令行介面和 CLI 外掛程式。",
@@ -12,10 +12,10 @@
 		"img": "homepage/images/manage_apps.svg",
 		"href": "manageapps/mngapps.html"
 	}, {
-		"title": "帳戶管理",
+		"title": "管理",
 		"description": "管理組織和空間（包括使用者存取）。",
 		"img": "homepage/images/admin.svg",
-		"href": "/admin/adminpublic.html"
+		"href": "admin/adminpublic.html"
 	}, {
 		"title": "監視及記載",
 		"description": "遵循應用程式使用及資料流程，以深入瞭解部署。",
@@ -32,7 +32,7 @@
 		"img": "homepage/images/troubleshoot.svg",
 		"href": "troubleshoot/troubleshoot.html"
 	}, {
-		"title": "平台的安全",
+		"title": "Bluemix 安全",
 		"description": "瞭解 Bluemix 如何提供功能安全、基礎架構安全、作業安全及實體安全。",
 		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
@@ -42,5 +42,6 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}]
+
 }
 

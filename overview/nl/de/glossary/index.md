@@ -539,7 +539,7 @@ Ein Softwareprogramm oder Computer, der Services von einem Server anfordert. Sie
 ### Cloud-Computing
 {: #x3877850}
 
-Eine Datenverarbeitungsplattform, auf der Benutzer über ihre verbundenen Einheiten von überall her auf Anwendungen oder Rechenressourcen wie z. B. Services zugreifen können. Eine vereinfachte Benutzerschnittstelle und/oder eine Anwendungsprogrammierschnittstelle (API) macht die Infrastruktur, die solche Services unterstützt, für Benutzer transparent.
+Eine Datenverarbeitungsplattform, auf der Benutzer über ihre verbundenen Geräten von überall her auf Anwendungen oder Rechenressourcen wie z. B. Services zugreifen können. Eine vereinfachte Benutzerschnittstelle und/oder eine Anwendungsprogrammierschnittstelle (API) macht die Infrastruktur, die solche Services unterstützt, für Benutzer transparent.
 
 ### Cloudportierbarkeit
 {: #x4585297}
@@ -1264,7 +1264,7 @@ Push-Benachrichtigungen und Integration mit sozialen Netzwerken über eine verei
 ### Mobile Cloud
 {: #x4585344}
 
-Eine Infrastruktur, in der die Speicherung und Verarbeitung von Daten für Anwendungen von einer mobilen Einheit in die Cloud ausgelagert wird. Bei der Datenverarbeitung in der mobilen Cloud werden Anwendungen nicht auf einen bestimmten Netzbetreiber beschränkt, sondern es wird über das Web auf sie zugegriffen.
+Eine Infrastruktur, in der die Speicherung und Verarbeitung von Daten für Anwendungen von einem mobilen Gerät in die Cloud ausgelagert wird. Bei der Datenverarbeitung in der mobilen Cloud werden Anwendungen nicht auf einen bestimmten Netzbetreiber beschränkt, sondern es wird über das Web auf sie zugegriffen.
 
 ### Modell
 {: #x2245601}
@@ -1972,9 +1972,7 @@ Siehe [Prüfung der Testbereitschaft (Test Readiness Review, TRR)](#x2214953).
 ### </a>Trust-Association-Interceptor (TAI)
 {: #x2239009}
 
-Der Mechanismus, durch den die Anerkennung in der Produktumgebung für jede Anforderung
-validiert wird, die der Proxy-Server empfängt. Proxy-Server und
-Interceptor stimmen der Validierungsmethode zu.
+Der Mechanismus, durch den die Anerkennung in der Produktumgebung für jede Anforderung validiert wird, die der Proxy-Server empfängt. Proxy-Server und Interceptor stimmen der Validierungsmethode zu.
 
 ### Trusted-Root-Zertifikat
 {: #x2042234}

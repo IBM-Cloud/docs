@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2015
+  years: 2015, 2016
 
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms} 
+{:tsCauses: .tsCauses} 
+{:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -42,3 +42,4 @@ Zum Überprüfen, wie hoch die Anzahl der noch für den Versand zulässigen E-Ma
 
 Wenn Sie nach dem Erreichen des Grenzwerts von 25.000 E-Mails pro Serviceinstanz monatlich weitere E-Mails senden wollen, können Sie eine weitere Serviceinstanz hinzufügen. Weitere Informationen zu SendGrid finden Sie unter [Getting Started with SendGrid](https://sendgrid.com/docs/index.html){: new_window}.    
 {: tsResolve}
+

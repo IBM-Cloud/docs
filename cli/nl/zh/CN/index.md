@@ -18,13 +18,13 @@ copyright:
 # CLI 和开发工具
 {: #cli}
 
-*上次更新时间：2016 年 5 月 27 日*
+*上次更新时间：2016 年 6 月 28 日*
 {: .last-updated}
 
 通过 {{site.data.keyword.Bluemix_short}}，您可以访问各种功能强大的工具，例如统一命令行界面和 CLI 插件。其中每个 CLI 下载都可用于支持您的 {{site.data.keyword.Bluemix_notm}} 体验。
 {:shortdesc}
 
-## ![命令行界面](./images/CLI.svg) 命令行界面
+## ![](./images/CLI.svg) 命令行界面
 {: #downloads}
 
 下载并安装命令行界面以便为您的 {{site.data.keyword.Bluemix_notm}} 体验提供支持。 
@@ -40,15 +40,15 @@ copyright:
 | [下载 CLI](http://clis.ng.bluemix.net/)<br> [查看文档](./reference/bluemix_cli/index.html)|  [下载 CLI](https://github.com/cloudfoundry/cli/releases){: new_window}<br> [查看文档](./reference/cfcommands/index.html) |
 
 
-## ![命令行界面插件](./images/CLI_Plugin.svg) 命令行界面插件
+## ![](./images/CLI_Plugin.svg) 命令行界面插件
 
-使用更多命令轻松扩展 {{site.data.keyword.Bluemix_notm}} 命令行界面。要访问 {{site.data.keyword.Bluemix_notm}} 命令行界面插件，请参阅 [ CLI 插件存储库](http://plugins.ng.bluemix.net/)。
+使用更多命令轻松扩展 {{site.data.keyword.Bluemix_notm}} 命令行界面。要访问 {{site.data.keyword.Bluemix_notm}} 命令行界面插件，请参阅 [ CLI 插件存储库](https://plugins.ng.bluemix.net/)。
 
 ### 扩展 {{site.data.keyword.Bluemix_notm}} 命令行界面：bx
 
 1. 要从 {{site.data.keyword.Bluemix_notm}} 注册表安装 {{site.data.keyword.Bluemix_notm}} CLI 插件，请设置插件注册表端点：
 ```
-bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
 ```
 2. 运行以下命令来安装插件：
 ```
@@ -64,7 +64,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 1. 要从 {{site.data.keyword.Bluemix_notm}} 注册表安装 cf CLI 插件，请设置插件注册表端点：
 ```
-cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
 ```
 2. 运行以下命令来安装插件：
 ```
@@ -82,7 +82,7 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 <!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
-## ![集成开发工具](./images/Integrated_Dev_Tools.svg) 集成开发工具
+## ![](./images/Integrated_Dev_Tools.svg) 集成开发工具
 
 下载并安装插件，以集成首选的 {{site.data.keyword.Bluemix_notm}} 服务。
 

@@ -12,7 +12,7 @@ copyright:
 # 获取客户支持
 {: #getting-customer-support}
 
-*上次更新时间：2016 年 6 月 17 日*
+*上次更新时间：2016 年 7 月 7 日*
 {: .last-updated}
 
 
@@ -129,7 +129,9 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 ## 联系支持人员
 {: #contacting-support}
 
-如果您有有效的 {{site.data.keyword.Bluemix_notm}} 帐户，那么可以打开支持凭单。  
+如果您有有效的 {{site.data.keyword.Bluemix_notm}} 帐户，那么可以开具支持凭单。 
+
+如果您具有与 SoftLayer 帐户相链接的 {{site.data.keyword.Bluemix_notm}} 帐户，那么您可以从 SoftLayer 客户门户网站或者从 {{site.data.keyword.Bluemix_notm}} 用户界面，打开 {{site.data.keyword.Bluemix_notm}} 的支持凭单。
 
 ### 联系 {{site.data.keyword.Bluemix_notm}} Public 支持人员
 {: #contacting-bluemix-support}
@@ -152,8 +154,8 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 如果问题不是因中断而引起的，且您是某个国家或地区（中国除外）的客户，请使用以下某个选项来开具支持凭单：
 
   * 在“帐户和支持”中，单击**获取帮助**。在显示的页面上，单击**取得联系**。填写表单，指出您需要技术支持帮助您解决的问题。
-  * 在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 中。登录到该门户网站后，单击**提交凭单**，然后填写支持表单。 
   * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}帮助页面。可以提交有关销售、记帐、IBM 标识和登录以及技术支持问题的凭单。有关技术支持问题，可以在单击**技术支持**磁贴后，进一步选择技术组。例如，如果需要有关 Cloud Foundry 应用程序、OpenWhisk、Containers、Virtual Servers 或裸机服务器的帮助，可以选择**应用程序服务**。如果需要有关特定服务的帮助，请选择相应的服务类别。要确定服务所属的类别，请查看左侧导航窗格中的[服务](../services/index.html){: new_window}下的类别。  
+  * 在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 中。登录到该门户网站后，单击**开具凭单**，然后填写支持表单。 
   
 
 

@@ -6,16 +6,18 @@ copyright:
 ---
 
 
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
 
-# Depuração
+# Depurando
 {: #debugging}
 
-*Última atualização: 3 de março de 2016*
+*Última atualização: 25 de maio de 2016*
+{: .last-updated}
 
 Se você tiver problemas com o {{site.data.keyword.Bluemix}}, será possível visualizar os arquivos de log para investigar os problemas e depurar os erros. 
 {:shortdesc}
@@ -27,9 +29,13 @@ Os logs estão em um formato fixo. Para logs detalhados, é possível filtrar os
 
 ## Depurando erros de preparação
 {: #debugging-staging-errors}
-Você poderá ter problemas ao preparar seus aplicativos no {{site.data.keyword.Bluemix_notm}}. Se seu app falhar na preparação, será possível visualizar logs para ver a causa do erro e recuperar do problema.
+Você poderá ter problemas ao preparar seus aplicativos no {{site.data.keyword.Bluemix_notm}}. Se o seu aplicativo falhar na preparação, será possível procurar e revisar os logs de preparação (STG)
+para determinar o que aconteceu durante a implementação do aplicativo e recuperar-se do problema. Para obter mais informações sobre os métodos de visualizar logs para aplicativos Bluemix, consulte
+[Visualizando Logs](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
 
-Para entender por que seu app pode estar falhando no {{site.data.keyword.Bluemix_notm}}, você precisa saber como um app é implementado e executado no {{site.data.keyword.Bluemix_notm}}. Para obter informações detalhadas, consulte [Implementação do aplicativo](../manageapps/depapps.html#appdeploy){: new_window}.
+Para entender por que o seu aplicativo pode estar falhando no {{site.data.keyword.Bluemix_notm}}, é necessário saber como um aplicativo é implementado no
+{{site.data.keyword.Bluemix_notm}} e executado nele. Para obter informações detalhadas, consulte [Implementação do aplicativo](../manageapps/depapps.html#appdeploy){: new_window}.
+
 
 O procedimento a seguir mostra como você pode usar o comando `cf logs` para depurar os erros de preparação. Antes de executar as etapas a seguir, assegure-se de que tenha instalado a interface de linha de comandos cf. Para obter mais informações sobre como instalar a interface de linha de comandos cf, veja [Instalando a interface de linha de comandos cf](../starters/install_cli.html){: new_window}.
 
@@ -46,13 +52,18 @@ O procedimento a seguir mostra como você pode usar o comando `cf logs` para dep
 	```
   4. Visualize o primeiro erro que foi exibido no log.
   
-Se você usar as ferramentas IBM Eclipse para o plug-in do {{site.data.keyword.Bluemix_notm}} para implementar aplicativos, na guia **Console** da ferramenta Eclipse, é possível ver logs que são semelhantes à saída cf logs. É possível também abrir uma janela do Eclipse separada para controlar `os logs` ao implementar o aplicativo.
+Se você usar as ferramentas IBM Eclipse para o plug-in do
+{{site.data.keyword.Bluemix_notm}} para implementar
+aplicativos, na guia **Console** da ferramenta
+Eclipse, será
+possível ver logs que são semelhantes à saída de logs de cf. É possível também abrir uma janela do Eclipse separada para controlar `os logs` ao implementar o aplicativo.
 
 Além do comando `cf logs`, no {{site.data.keyword.Bluemix_notm}} também é possível usar o serviço Monitoring and Analytics para coletar os detalhes do log. Além disso, o serviço Monitoring and Analytics monitora o desempenho, o funcionamento e a disponibilidade de seus aplicativos. Ele também fornece análise de log para aplicativos de tempo de execução Node.js e Liberty.  
 
 ### Depurando erros de preparação para um aplicativo Node.js
 
-O exemplo a seguir mostra um log que é exibido após a inserção de `cf logs appname --recent`. O exemplo assume que os erros de preparação ocorreram para o aplicativo Node.js:
+O exemplo a seguir mostra um log que é exibido após a inserção de `cf logs appname --recent`. O exemplo
+assume que os erros de preparação ocorreram para o aplicativo Node.js:
 ```
 2014-08-11T14:19:36.17+0100 [API] OUT Atualizado o app com guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API] OUT Atualizado o app com guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
@@ -70,7 +81,8 @@ O exemplo a seguir mostra um log que é exibido após a inserção de `cf logs a
 {: screen}
 
 
-O primeiro erro no log mostra o motivo  porquê a preparação falha. No exemplo, o primeiro erro é uma saída do componente DEA durante a fase de preparação.
+O primeiro erro no log mostra o motivo  porquê a preparação falha. No exemplo, o primeiro erro é uma saída do
+componente DEA durante a fase de preparação.
 ```
 2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3
 ```
@@ -129,6 +141,28 @@ Os arquivos `stdout.log` e `stderr.log` anteriormente estavam disponíveis por p
   * Para aplicativos PHP, é possível fazer a função error_log gravar em um arquivo no diretório de logs.
   * Para aplicativos Python, é possível fazer o criador de logs gravar em um arquivo no diretório de logs: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * Para aplicativos Ruby, é possível fazer o criador de logs gravar em um arquivo no diretório de logs.
+ 
+ 
+### Depurando mudanças de código
+{: #debug_code_changes}
+
+Se você estiver fazendo mudanças de código para um aplicativo que já está implementado e funcionando, mas as alterações de código não estiverem sendo refletidas no
+{{site.data.keyword.Bluemix_notm}}, será possível depurar
+usando os logs. Se o seu aplicativo estiver em execução ou não, é possível verificar os logs que são gerados durante a implementação ou o tempo
+de execução do aplicativo para depurar por que o novo código não está funcionando.
+
+Dependendo da forma como o novo código é implementado, escolha um dos métodos a seguir para depurar as mudanças de código: 
+
+  * Para o novo código que é implementado a partir da linha de comandos cf, verifique a saída do comando *cf push*. Além disso, é possível usar o comando *cf logs* para
+localizar mais pistas para resolver o problema. Para obter mais informações sobre como usar o comando *cf logs*, consulte
+[visualizando logs a partir da interface da linha de comandos](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
+
+  * Para o novo código que é implementado a partir de uma GUI, como a interface com o usuário do {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline ou Travis-CI, é possível verificar
+os logs da interface. Por exemplo, se você implementar o novo código
+a partir da interface com o usuário do
+{{site.data.keyword.Bluemix_notm}}, será possível ir para Painel, localizar o seu aplicativo e,
+em seguida, visualizar os logs para pistas.   Para obter mais informações sobre como visualizar os logs da interface com o usuário do {{site.data.keyword.Bluemix_notm}}, consulte
+[Visualizando logs do Painel do Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
  
 
 # rellinks

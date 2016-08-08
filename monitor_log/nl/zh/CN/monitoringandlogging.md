@@ -14,7 +14,7 @@ copyright:
 #监视和日志记录
 {: #monitoringandlogging}
 
-*上次更新时间：2016 年 5 月 24 日*
+*上次更新时间：2016 年 7 月 1 日*
 {: .last-updated}
 
 通过监视应用程序和复查日志，您可以跟进应用程序的执行和数据流，从而更好地了解部署情况。此外，还可以减少找到任何问题并进行修复所需的时间和精力。
@@ -22,7 +22,7 @@ copyright:
 
 {{site.data.keyword.Bluemix}} 应用程序可以是广泛分布的多实例应用程序，并且应用程序的执行及其数据可以在许多服务中共享。在这种复杂的环境中，监视应用程序和复查日志对您管理应用程序非常重要。
 
-##对应用程序进行监视和日志记录
+##监视和记录 Cloud Foundry 应用程序
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} 具有内置日志记录机制，可在应用程序运行时为应用程序生成日志文件。在日志中，可以查看为应用程序生成的错误、警告和参考消息。此外，还可以配置应用程序，以便将日志消息写入日志文件中。有关日志格式和如何查看日志的更多信息，请参阅[对 Cloud Foundry 上运行的应用程序进行日志记录](#logging_for_bluemix_apps)。
@@ -31,7 +31,7 @@ copyright:
 
 * 收集和监视应用程序实例的性能信息，并检查这些实例是否运行正常。
 * 深入了解应用程序操作，例如检测潜在瓶颈或何时需要升级。
-* 预估资源使用情况和费用。
+* 估算资源使用情况和费用。
 
 为了使您的部署在 {{site.data.keyword.Bluemix_notm}} 平台上稳定运行，您希望及时检测到问题，并有效地确定原因。为了实现此目标，请在设计应用程序时将故障诊断考虑在内，并在应用程序部署到 {{site.data.keyword.Bluemix_notm}} 后使用服务或工具进行监视和日志记录。
 
@@ -155,13 +155,9 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 <dd>显示最近一段时间的日志。</dd>
 
 <dt><strong>cf logs <var class="keyword varname">appname</var></strong></dt>
-<dd>显示自运行此命令以来生成的日志。
-</dd>
+<dd>显示自运行此命令以来生成的日志。</dd>
 </dl>
-<div class="note tip"><span class="tiptitle">提示：</span>在一个命令行窗口中运行
-<span class="keyword cmdname">cf push</span> 或 <span class="keyword cmdname">cf
-start</span> 命令时，可以在另一个命令行窗口中输入 <samp class="ph codeph">cf
-logs appname --recent</samp> 来实时查看日志。</div>
+<div class="note tip"><span class="tiptitle">提示：</span>在一个命令行窗口中运行 <span class="keyword cmdname">cf push</span> 或 <span class="keyword cmdname">cf start</span> 命令时，可以在另一个命令行窗口中输入 <samp class="ph codeph">cf logs appname --recent</samp> 来实时查看日志。</div>
 </li>
 
 <li>部署应用程序后查看日志。
@@ -170,11 +166,9 @@ logs appname --recent</samp> 来实时查看日志。</div>
 
 <dl><strong>buildpack.log</strong></dt>
 <dd>
-<p>此日志文件会记录细颗粒度的参考事件，用于调试目的。
-您可以使用此日志来对 buildpack 执行问题进行故障诊断。
-</p>
+<p>此日志文件会记录细颗粒度的参考事件，用于调试目的。您可以使用此日志来对 buildpack 执行问题进行故障诊断。</p>
 <p>要将数据生成到 <span class="ph filepath">buildpack.log</span> 文件中，必须使用以下命令来启用 buildpack 跟踪：
-   <pre class="pre">cf set-env <var class="keyword varname">appname</var> JBP_LOG_LEVEL DEBUG</pre>
+<pre class="pre">cf set-env <var class="keyword varname">appname</var> JBP_LOG_LEVEL DEBUG</pre>
 <p>
 <p>要查看此日志，请输入以下命令：
 <pre class="pre">cf files <var class="keyword varname">appname</var> app/.buildpack-diagnostics/buildpack.log</pre>
@@ -182,8 +176,7 @@ logs appname --recent</samp> 来实时查看日志。</div>
 </dd>
 
 <dt><strong>staging_task.log</strong></dt>
-<dd><p>此日志文件会在编译打包任务的主要步骤之后记录消息。
-您可以使用此日志来对编译打包问题进行故障诊断。</p>
+<dd><p>此日志文件会在编译打包任务的主要步骤之后记录消息。您可以使用此日志来对编译打包问题进行故障诊断。</p>
 <p>要查看此日志，请输入以下命令：
 <pre class="pre">cf files <var class="keyword varname">appname</var> logs/staging_task.log</pre>
 </p>
@@ -229,7 +222,7 @@ cf logs appname --recent | grep '\[App'
 
   2. 创建用户提供的服务实例。
      
-	 使用 ```cf create-user-provided-service``` 命令（或此命令的简短版本 ```cups``）来创建用户提供的服务实例：
+	 使用 ```cf create-user-provided-service``` 命令（或此命令的简短版本 ```cups```）来创建用户提供的服务实例： 
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```
@@ -273,7 +266,7 @@ cf logs appname --recent | grep '\[App'
 	
 	 ```
 	 cf bind-service appname <service_name>
-	 ```
+	```
 	 **appname**
 	 
 	 应用程序的名称。
@@ -282,8 +275,7 @@ cf logs appname --recent | grep '\[App'
 	 
 	 用户提供的服务实例的名称。
 	 
-  4. 重新编译打包应用程序。
-     输入 ```cf restage appname``` 以使更改生效。 
+  4. 重新编译打包应用程序。键入 ```cf restage appname``` 以使更改生效。 
 
 #### 查看外部主机中的日志
 {: #viewing_logs_external}
@@ -303,7 +295,7 @@ cf logs appname --recent | grep '\[App'
      a. Jane 从[下载 Splunk Light 站点](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}下载了 Splunk Light，然后使用以下命令，对其进行安装。该软件安装在 */opt/splunk*。 
        
 	    ```
-        dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
+dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
         ```
 	   
      b. Jane 安装并修补 RFC5424 syslog 技术附加组件，以与 {{site.data.keyword.Bluemix_notm}} 集成。有关安装附加组件的指示的更多信息，请参阅 [Cloud Foundry 准则](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}。  
@@ -344,6 +336,7 @@ cf logs appname --recent | grep '\[App'
 	  
 	   然后，Jane 使用以下命令来运行 Splunk：
 
+
        ```
 	   /opt/splunk/bin/splunk start --accept-license
        ```
@@ -369,7 +362,7 @@ cf logs appname --recent | grep '\[App'
      a. Jane 通过 cf CLI，使用以下命令，创建 syslog 漏出服务：
 	 
      ```
-     cf cups splunk -l syslog://dummyhost:5140
+cf cups splunk -l syslog://dummyhost:5140
      ```
         
      **注：** *dummyhost* 不是实名。它用于隐藏实际主机名。 
@@ -377,7 +370,7 @@ cf logs appname --recent | grep '\[App'
      b. Jane 将 syslog 漏出服务绑定到其空间内的某个应用程序，然后重新编译打包该应用程序。
 	 
 	 ```
-     cf bind-service myapp splunk
+cf bind-service myapp splunk
      cf restage myapp
      ```
 		

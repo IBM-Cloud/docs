@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*前次更新：2016 年 5 月 9 日*
+*前次更新：2016 年 6 月 22 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。
@@ -215,31 +215,11 @@ dashDB 服務使用內嵌式 LDAP 伺服器進行使用者鑑別。應用程式�
 
 如需相關資訊，請參閱[開始使用 dashDB](../services/dashDB/index.html)。
 
-### Cloud Integration
-
-Cloud Integration 服務可讓您整合雲端與內部部署資料。您可以新增服務，以與 DB2、Oracle 及 SAP 之類的後端資料庫互動。接下來，您可以移動資料或建立 REST API，讓 {{site.data.keyword.Bluemix_notm}} 應用程式存取及使用。此服務能促成與內部部署安全連接器的安全通訊，並將後端記錄系統公開為 REST API，以便應用程式使用。
-
-如需相關資訊，請參閱[開始使用 Cloud Integration](../services/CloudIntegration/index.html)。
-
 ### Secure Gateway
 
 Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程式安全地連接至遠端位置（內部部署或雲端）。它提供安全連線功能，並在您的 {{site.data.keyword.Bluemix_notm}} 組織與您要連接的遠端位置之間建立通道。您可以利用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 API 套件，來配置及建立安全閘道。
 
 如需相關資訊，請參閱[開始使用 Secure Gateway](../services/SecureGateway/secure_gateway.html)。
-
-### SQL Database
-
-SQL Database 服務為您的應用程式增加了完整佈建的關聯式資料庫。此服務使用 IBM Directory Server LDAP 進行鑑別，並使用 IBM InfoSphere® Guardium® Data Activity Monitor 來保護應用程式存取的資料庫。應用程式與資料庫之間的連線受到 DigiCert 簽署的 SSL 憑證保護。
-
-在含有此服務的某些方案中，您可以使用 {{site.data.keyword.Bluemix_notm}} 中的 SQL 資料庫主控台來取得包含下列資訊的報告：
-
- * 應用程式所存取的資料庫中可能存在的機密資料。
- * 在指定期間內存取資料庫的應用程式使用者。
- * 存取資料庫中的機密資料的應用程式使用者。
-
-若要利用 SQL 來遮罩資料，應用程式可以呼叫與資料庫一起部署的遮罩使用者定義函數 (UDF)。例如，您可以遮罩要用來在其他地方測試的資料。UDF 會實作來自 IBM Infosphere Optim™ 的資料遮罩演算法。
-
-此服務的高階方案也包括資料加密。如需此服務的相關資訊，請參閱[開始使用 SQL Database](../services/SQLDB/index.html)。
 
 ### 安全資訊及事件管理
 
@@ -292,7 +272,7 @@ SQL Database 服務為您的應用程式增加了完整佈建的關聯式資料�
 {{site.data.keyword.Bluemix}} 提供了一個您可以信任的安全雲端平台。{{site.data.keyword.Bluemix_notm}} 規範來自於根據業界最佳安全標準（包括 ISO 27001 和 ISO 27002）建置的平台和服務。
 {:shortdesc}
 
-![歐盟 (EU) 資料保護示範條款](images/icon_eumc.png) **歐盟 (EU) 示範條款**是一種協議，用於保護從歐盟 (EU) 或歐洲經濟區 (EEA) 傳輸到第三方國家的個人資料。「歐盟 (EU) 示範條款」是由位於 EU 或 EEA 的用戶（資料匯出方）與位於第三方國家的 IBM 資料處理方（資料匯入方）之間簽訂的。[IBM SaaS 歐盟 (EU) 示範條款](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}包含資料匯出方和資料匯入方的權利和責任，以及資料主體的權利。「IBM SaaS 歐盟示範條款」可確保個人資料在第三方國家處理時仍能受到像在 EU 或 EEA 中一樣的保護。
+![歐盟 (EU) 資料保護示範條款](images/icon_eumc.png) **歐盟 (EU) 示範條款**是一種協議，用於保護從歐盟 (EU) 或歐洲經濟區 (EEA) 傳輸到第三方國家或地區的個人資料。「歐盟 (EU) 示範條款」是由位於 EU 或 EEA 的用戶（資料匯出方）與位於第三方國家或地區的 IBM 資料處理方（資料匯入方）之間簽訂的。[IBM SaaS 歐盟 (EU) 示範條款](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}包含資料匯出方和資料匯入方的權利和責任，以及資料主體的權利。「IBM SaaS 歐盟示範條款」可確保個人資料在第三方國家或地區處理時仍能受到像在 EU 或 EEA 中一樣的保護。
 
 ![金融行業資訊系統](images/FISC.gif) 對於日本的銀行和相關金融機構，電腦系統必須具有適當的安全程序，這些程序應根據「金融行業資訊系統中心 (FISC)」安全準則。**FISC** 安全準則由「日本金融廳 (FSA)」、「日本央行 (BOJ)」和 FISC 貫徹實施。
 

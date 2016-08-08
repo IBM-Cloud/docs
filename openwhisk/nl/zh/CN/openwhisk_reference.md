@@ -40,21 +40,18 @@ copyright:
 
 ### 标准名称
 
-实体的标准名称为 `/namespaceName[/packageName]/entityName`。
-请注意，`/` 用于对名称空间、包和实体定界。
-此外，名称空间必须带有前缀 `/`。
+实体的标准名称为
+`/namespaceName[/packageName]/entityName`。请注意，`/` 用于对名称空间、包和实体定界。此外，名称空间必须带有前缀 `/`。
 
 为了方便起见，如果名称空间是用户的 *缺省名称空间*，那么可以保留不变。
 
-
-例如，假设用户的缺省名称空间为 `/myOrg`。
-下面是一些实体的标准名称及其别名的示例。
+例如，假设用户的缺省名称空间为 `/myOrg`。下面是一些实体的标准名称及其别名的示例。
 
 | 标准名称 | 别名 | 名称空间 | 包 | 名称 |
 | --- | --- | --- | --- | --- |
-| `/whisk.system/cloudant/read` | - | `/whisk.system` | `cloudant` | `read` |
+| `/whisk.system/cloudant/read` |  | `/whisk.system` | `cloudant` | `read` |
 | `/myOrg/video/transcode` | `video/transcode` | `/myOrg` | `video` | `transcode` |
-| `/myOrg/filter` | `filter` | `/myOrg` | - | `filter` |
+| `/myOrg/filter` | `filter` | `/myOrg` |  | `filter` |
 
 使用 {{site.data.keyword.openwhisk_short}} CLI 时，您将使用此命名方案，在其他位置也同样遵循此方案。
 
@@ -120,7 +117,7 @@ copyright:
 - *activationId*：激活标识。
 - *start* 和 *end*：记录激活开始时间和结束时间的时间戳记。值为 [UNIX 时间格式](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15)。
 - *namespace* 和 `name`：实体的名称空间和名称。
-- *logs*：字符串数组，其中包含在操作激活期间由操作生成的日志。每个数组元素对应于操作向 stdout 或 stderr 生成的一行输出，并且包含日志输出的时间和流。结构如下所示：“`TIMESTAMP STREAM: LOG_OUTPUT`”。
+- *logs*：字符串数组，其中包含在操作激活期间由操作生成的日志。每个数组元素对应于操作向 stdout 或 stderr 生成的一行输出，并且包含日志输出的时间和流。结构如下：```TIMESTAMP STREAM: LOG_OUTPUT```.
 - *response*：用于定义 `success`、`status` 和 `result` 键的字典：
   - *status*：激活结果，可能为以下某个值：“success”、“application error”、“action developer error”和“whisk internal error”。
   - *success*：当且仅当 status 为“`success`”时，此项为 `true`
@@ -156,8 +153,8 @@ JavaScript 函数即便返回之后，仍在回调函数中继续执行是很常
 
 如果 main 函数在以下某个条件下退出，那么 JavaScript 操作的激活是**同步**的：
 
-- main 函数在不执行“`return`”语句的情况下退出。
-- main 函数通过执行“`return`”语句退出，此语句返回*除*“`whisk.async()`”以外的任何值。
+- main 函数在不执行 ```return``` 语句的情况下退出。
+- main 函数通过执行 ```return``` 语句退出，此语句返回*除* ```whisk.async()``` 以外的任何值。
 
 下面是同步操作的两个示例。
 
@@ -183,9 +180,9 @@ function main(params) {
 ```
 {: codeblock}
 
-如果 main 函数通过调用“`return whisk.async();`”退出，那么 JavaScript 操作的激活是**异步**的。在此情况下，系统假定操作仍在运行，直到操作执行以下某个语句为止：
-- “`return whisk.done();`”
-- “`return whisk.error();`”
+如果 main 函数通过调用 ```return whisk.async();``` 退出，那么 JavaScript 操作的激活是**异步**的。在此情况下，系统假定操作仍在运行，直到操作执行以下某个语句为止：
+- ```return whisk.done();```
+- ```return whisk.error();```
 
 下面是异步执行的操作的示例。
 
@@ -225,7 +222,7 @@ function main() {
 
 - *name*：要调用的操作的标准名称。
 - *parameters*：表示所调用操作的输入的 JSON 对象。如果省略，缺省值为空对象。
-- *apiKey*：用于调用操作的授权密钥。缺省值为 `whisk.getAuthKey()`。 
+- *apiKey*：用于调用操作的授权密钥。缺省值为 `whisk.getAuthKey()`。
 - *blocking*：操作应该以阻塞还是非阻塞方式调用。缺省值为 `false`，指示非阻塞调用。
 - *next*：调用完成时要执行的可选回调函数。
 
@@ -255,7 +252,7 @@ function main() {
 ### 运行时环境
 {: #openwhisk_ref_runtime_environment}
 
-JavaScript 操作在 Node.js V0.12.9 环境中执行，带有可供操作使用的以下包：
+JavaScript 操作在 Node.js V0.12.14 环境中执行，带有可供操作使用的以下包：
 
 - apn
 - async
@@ -306,36 +303,41 @@ Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二�
 
 通过 Docker 框架，可以方便地构建兼容 {{site.data.keyword.openwhisk_short}} 的 Docker 映像。可以使用 `wsk sdk install docker` CLI 命令安装该框架。
 
-主二进制程序应该复制到 `dockerSkeleton/client/clientApp` 文件。任何附带文件或库都可以位于 `dockerSkeleton/client` 目录中。
+主二进制程序应该复制到 `dockerSkeleton/client/action` 文件。任何附带文件或库都可以位于 `dockerSkeleton/client` 目录中。
 
 您还可以通过修改 `dockerSkeleton/Dockerfile` 来包含任何编译步骤或依赖关系。例如，如果操作是 Python 脚本，那么可以安装 Python。
 
 
 ## REST API
+{: #openwhisk_ref_restapi}
 
 通过 REST API，可以使用系统中的所有功能。操作、触发器、规则、包、激活和名称空间具有集合和实体端点。
 
 以下是集合端点：
 
-- `https://$BASEURL/api/v1/namespaces`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/actions`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/rules`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/packages`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/activations`
+- `https://{BASE URL}/api/v1/namespaces`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+
+`{BASE URL}` 是 OpenWhisk API 主机名（即 openwhisk.ng.bluemix.net、172.17.0.1 等）
+
+对于 `{namespace}`，可以使用字符 `_` 来指定用户的 *缺省名称空间*（即电子邮件地址）
 
 您可以在集合端点上执行 GET 请求，以访存集合中的实体列表。
 
 每一个实体类型都具有实体端点：
 
-- `https://$BASEURL/api/v1/namespaces/{namespace}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{activationName}`
 
-名称空间和激活端点仅支持 GET 请求。操作、触发器、规则和包端点支持 GET、PUT 和 DELETE 请求。操作、触发器和规则的端点还支持 POST 请求，其用于调用操作和触发器，并启用或禁用规则。有关详细信息，请参阅 [API参考](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json)。
+名称空间和激活端点仅支持 GET 请求。操作、触发器、规则和包端点支持 GET、PUT 和 DELETE 请求。操作、触发器和规则的端点还支持 POST 请求，其用于调用操作和触发器，以及启用或禁用规则。有关详细信息，请参阅 [API参考](https://new-console.{DomainName}/apidocs/98)。
 
 所有 API 都通过 HTTP 基本认证进行保护。基本认证凭证位于 `~/.wskprops` 文件的 `AUTH` 属性中，以冒号分隔。您还可以在 [CLI 配置步骤](../README.md#setup-cli)中，对这些凭证进行检索。
 
@@ -365,6 +367,9 @@ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whi
 ```
 {: screen}
 
+OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cross-Origin Resource Sharing 头来响应 `OPTIONS` 请求。目前，允许所有源（即 Access-Control-Allow-Origin 为 "`*`"）且 Access-Control-Allow-Headers 会产生 Authorization 和 Content-Type。
+
+**由于 OpenWhisk 目前仅支持每个帐户一个密钥，因此建议除了简单的试验之外，不要使用 CORS。密钥需要嵌入客户端代码中，这会使公众都能够看到密钥。请谨慎使用。**
 
 ## 系统限制
 {: #openwhisk_syslimits}
@@ -389,13 +394,29 @@ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whi
 * 用户在创建操作时可以更改此限制。
 * 一个容器分配的内存不能超过此限制。
 
-### 每个名称空间的并行调用数（个）（缺省值：100）
+### 每个操作工件 (MB)（固定值：1MB）
+* 操作的最大代码大小为 1MB。
+* 建议 JavaScript 操作使用工具，将所有源代码（包括依赖关系）连接为单个捆绑文件。
+
+### 每个激活有效内容大小 (MB)（固定值：1MB）
+* 最大 POST 内容大小加上操作调用或触发器触发的任何调制参数为 1MB。
+
+### 每个名称空间的并行调用数（缺省值：100）
 * 当前为一个名称空间处理的激活数不能超过 100。
 * 缺省限制可以通过静态方式由 whisk 在 consul kvstore 中进行配置。
 * 用户当前不能更改限制。
 
-
-### 每分钟/小时的调用数（个）（固定值：120/3600）
+### 每分钟/小时的调用数（固定值：120/3600）
 * 速率限制 N 设置为 120/3600，用于限制 1 分钟/小时时段中的操作调用数。
 * 用户在创建操作时不能更改此限制。
 * 超过此限制的 CLI 调用将收到与 TOO_MANY_REQUESTS 对应的错误代码。
+
+### 每个 Docker 操作打开文件数 ulimit（固定值：64:64）
+* 打开文件的最大数目为 64（这同时适用于硬限制和软件限制）。
+* docker run 命令使用自变量 `--ulimit nofile=64:64`。
+* 有关打开文件数 ulimit 的更多信息，请参阅 [docker run](https://docs.docker.com/engine/reference/commandline/run) 文档。
+
+### 每个 Docker 操作进程数 ulimit（固定值：512:512）
+* 用户可用的最大进程数为 512（这同时适用于硬限制和软件限制）。
+* docker run 命令使用自变量 `--ulimit nproc=512:512`。
+* 有关最大进程数 ulimit 的更多信息，请参阅 [docker run](https://docs.docker.com/engine/reference/commandline/run) 文档。

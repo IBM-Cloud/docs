@@ -19,7 +19,7 @@ copyright:
 
 #鏈結 SoftLayer 與 {{site.data.keyword.Bluemix_notm}} 計費帳戶
 {: #softlayerlink}
-*前次更新：2016 年 6 月 10 日*
+*前次更新：2016 年 7 月 7 日*
 {: .last-updated}
 
 您現在可以鏈結 SoftLayer 與 {{site.data.keyword.Bluemix_notm}} 計費帳戶。在您將帳戶鏈結後，就會透過 SoftLayer 同時針對 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 資源向您收費。如果您有現存的帳戶，將在帳戶鏈結之後開始的新計費週期，透過 SoftLayer 來收取 {{site.data.keyword.Bluemix_notm}} 的費用。
@@ -27,9 +27,11 @@ copyright:
 
 **重要事項：**{{site.data.keyword.Bluemix_notm}} 中所有鏈結的帳戶都必須是「隨收隨付制」帳戶。您可以建立新的「隨收隨付制」帳戶，也可以鏈結至現有的「隨收隨付制」帳戶。或者，您可以鏈結現有的試用帳戶，但它將會升級為「隨收隨付制」帳戶。  
 
-帳戶鏈結之後，您還是可以在 {{site.data.keyword.Bluemix_notm}} 使用者介面中監視 {{site.data.keyword.Bluemix_notm}} 資源的使用情形。不過，這些資源的計費現在會出現在 SoftLayer 發票上。
+帳戶鏈結之後，即可在帳戶之間輕鬆地切換。您還是可以在 {{site.data.keyword.Bluemix_notm}} 使用者介面中監視 {{site.data.keyword.Bluemix_notm}} 資源的用量。不過，這些資源的計費現在會出現在 SoftLayer 發票上。
 
-雖然帳戶計費將會鏈結，而且您能夠在帳戶之間輕易切換，但針對 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 還是需要有個別 ID。請繼續將 SoftLayer ID 用於 SoftLayer 產品與服務，並將 IBM ID 用於 {{site.data.keyword.Bluemix_notm}} 產品與服務。 
+雖然您的帳戶計費將會鏈結，但您的登入 ID 會依據 SoftLayer 帳戶的鑑別方式而不同：
+* 若為 SoftLayer 帳戶中未使用 IBM ID 來鑑別的使用者，請繼續將 SoftLayer ID 用於 SoftLayer 產品與服務，並將 IBM ID 用於 {{site.data.keyword.Bluemix_notm}} 產品與服務。
+* 若為 SoftLayer 帳戶中使用 IBM ID 來鑑別的使用者，請使用您的 IBM ID 來存取 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 帳戶。
 
 **注意：**帳戶鏈結之後，便無法解除鏈結。  
 
@@ -138,7 +140,7 @@ copyright:
 將 {{site.data.keyword.Bluemix_notm}} 計費帳戶與 SoftLayer 計費帳戶鏈結之後，將以一張 SoftLayer 帳單收取下一個計費週期的費用。
 {:shortdesc}
 
-您的 {{site.data.keyword.Bluemix_notm}} 使用週期是以公曆月為基準，所以會在每個月 1 日向您的帳戶收費。使用 SoftLayer 時，您的使用週期是從 SoftLayer 起始使用日開始，所以會以 SoftLayer 帳戶註冊當月的相同日期，每月向您收費。 
+您的 {{site.data.keyword.Bluemix_notm}} 使用週期是以公曆月為基準，所以會在收費合約成立的帳單日，每個月向您的帳戶收費。使用 SoftLayer 時，您的使用週期是從 SoftLayer 起始使用日開始，所以會以 SoftLayer 帳戶註冊當月的相同日期，每月向您收費。 
 
 帳戶鏈結之後，會繼續計算當月週期的 {{site.data.keyword.Bluemix_notm}} 用量，並且會在 {{site.data.keyword.Bluemix_notm}} 發票上向您收取該用量的費用。從下個月 1 日開始，{{site.data.keyword.Bluemix_notm}} 的費用將會列在 SoftLayer 發票上。
 

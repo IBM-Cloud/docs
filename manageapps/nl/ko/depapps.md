@@ -82,7 +82,7 @@ Cloud Foundry를 기반으로 빌드되었으므로 명령이 기본적으로 �
   * Liberty 서버 패키지를 {{site.data.keyword.Bluemix_notm}}에 배치하려면 소스 디렉토리에서 다음 명령을 사용하십시오.
   
   ```
-  cf push
+cf push
   ```
   
   Liberty
@@ -92,27 +92,26 @@ for Java](../runtimes/liberty/index.html)를 참조하십시오.
   * Java Tomcat 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하려면 다음 명령을 사용하십시오.
   
   ```
-  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
+cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * WAR 패키지를 {{site.data.keyword.Bluemix_notm}}에
 배치하려면 다음 명령을 사용하십시오.
   
   ```
-  cf push appname -p app.war
+cf push appname -p app.war
   ```
-  또는
-다음 명령을 사용하여 애플리케이션 파일이 포함된 디렉토리를 지정할 수 있습니다.
-  
+또는
+다음 명령을 사용하여 애플리케이션 파일이 포함된 디렉토리를 지정할 수 있습니다.  
   ```
-  cf push appname -p "./app"
+cf push appname -p "./app"
   ```
   
   * Node.js 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에
 배치하려면 다음 명령을 사용하십시오.
   
   ```
-  cf push appname -p app_path
+cf push appname -p app_path
   ```
   
 Node.js
@@ -122,7 +121,7 @@ Node.js 애플리케이션에 있어야 합니다. `app.js` 파일은 애플리�
 
   ```
   {
-"name": "MyUniqueNodejs01",
+        "name": "MyUniqueNodejs01",
         "version": "0.0.1",
         "description": "A sample package.json file",
         "dependencies": {
@@ -148,7 +147,7 @@ Node.js 애플리케이션에 있어야 합니다. `app.js` 파일은 애플리�
 사용하십시오.
   
   ```
-  cf push appname
+cf push appname
   ```
 
 ###단일 앱을 여러 영역에 배치
@@ -159,13 +158,13 @@ Node.js 애플리케이션에 있어야 합니다. `app.js` 파일은 애플리�
   1. **cf target** 명령을 **-s** 옵션과 함께 사용하여 앱을 배치할 영역으로 전환하십시오.
   
   ```
-  cf target -s <space_name>
+cf target -s <space_name>
   ```
   
   2. 앱 디렉토리로 이동한 후 **cf push** 명령을 사용하여 앱을 배치하십시오. 여기서, appname은 도메인 내에서 고유해야 합니다.
   
   ```
-  cf push appname
+cf push appname
   ```
   
 ##애플리케이션 Manifest
@@ -329,9 +328,9 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
   {
 "limits": {
         "mem": 512,
-        "disk": 1024,
-        "fds": 16384
-        },
+"disk": 1024,
+"fds": 16384
+    },
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
@@ -362,26 +361,26 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
   {
 "mysql-5.5": [
         {
-            "name": "mysql-ix",
-            "label": "mysql-5.5",
-            "tags": [
-                "mysql",
-                "relational",
-                "data_management",
-                "ibm_experimental"
-                        ],
+"name": "mysql-ix",
+"label": "mysql-5.5",
+"tags": [
+"mysql",
+"relational",
+"data_management",
+"ibm_experimental"
+            ],
             "plan": "300",
 "credentials": {
        "name": "d296abcc06c9e418b94abcaafdf547620",
-                "hostname": "23.246.200.38",
-                "host": "23.246.200.38",
-                "port": 3307,
-                "user": "uzpGf7eGJ7mtB",
-                "username": "uzpGf7eGJ7mtB",
-                "password": "peRiYCG4ZYqu3",
-                "uri": "mysql://uzpGf7eGJ7mtB:peRiYCG4ZYqu3@23.246.200.38:3307/d296abcc06c9e418b94abcaafdf547620"
+"hostname": "23.246.200.38",
+"host": "23.246.200.38",
+"port": 3307,
+"user": "uzpGf7eGJ7mtB",
+"username": "uzpGf7eGJ7mtB",
+"password": "peRiYCG4ZYqu3",
+"uri": "mysql://uzpGf7eGJ7mtB:peRiYCG4ZYqu3@23.246.200.38:3307/d296abcc06c9e418b94abcaafdf547620"
             }
-                }
+        }
     ]
 }
 </code></pre></dd>
@@ -405,7 +404,7 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
 	  <dt><strong>IBM_JAVA_COMMAND_LINE</strong></dt>
 	  <dd>DEA에서 Liberty 프로파일 서버 인스턴스를 시작하는 Java 명령입니다.</dd>
 	  <dt><strong>WLP_USR_DIR</strong></dt>
-	  <dd>DEA에서 Liberty 프로파일 서버 인스턴스를 시작할 때 공유 자원 및 서버 정의의
+	  <dd>DEA에서 Liberty 프로파일 서버 인스턴스를 시작할 때 공유 리소스 및 서버 정의의
 위치입니다.</dd>
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>실행 중인 Liberty 프로파일 서버 인스턴스의 로그 파일 및 작업 디렉토리와
@@ -456,7 +455,7 @@ Environment Variables](http://docs.cloudfoundry.org/devguide/deploy-apps/environ
   * **cf push** 명령을 사용하고 -c 매개변수를 지정하십시오. 예를 들어, Node.js 애플리케이션을 배치하는 경우에는 **node app.js** 시작 명령을 -c 매개변수에 지정할 수 있습니다.
   
   ```
-  cf push appname -p app_path -c "node app.js"
+cf push appname -p app_path -c "node app.js"
   ```
   
   * `manifest.yml` 파일에 command 매개변수를 사용하십시오. 예를 들어 Node.js 애플리케이션을 배치할 경우
@@ -464,7 +463,7 @@ Environment Variables](http://docs.cloudfoundry.org/devguide/deploy-apps/environ
 지정할 수 있습니다.
   
   ```
-  command: node app.js
+command: node app.js
   ```
   
 
@@ -480,12 +479,12 @@ Environment Variables](http://docs.cloudfoundry.org/devguide/deploy-apps/environ
 	3. **사용자 정의**를 클릭하고 **추가**를 클릭하십시오.
 	4. 필수 필드에 값을 입력하고 **저장**을 클릭하십시오.
   * cf 명령행 인터페이스를 사용하십시오. `cf set-env` 명령을 사용하여 사용자 정의 변수를 추가하십시오. 예: 
-  ```
-    cf set-env appname env_var_name env_var_value
+    ```
+cf set-env appname env_var_name env_var_value
     ```
 	
   * `manifest.yml` 파일을 사용하십시오. 파일에 값 쌍을 추가하십시오. 예: 
-  ```
+    ```
 	env:
       VAR1:value1
       VAR2:value2

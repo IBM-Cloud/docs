@@ -15,6 +15,7 @@ copyright:
 {: #updatingapps}
 
 *Última atualização: 9 de maio de 2016*
+{: .last-updated}
 
 
 É possível usar o comando cf push ou o {{site.data.keyword.Bluemix}} DevOps Services para atualizar os aplicativos no {{site.data.keyword.Bluemix_notm}}. Em muitos casos, mesmo para os buildpacks integrados, como o Node.js, deve-se também fornecer um parâmetro -c para especificar qual comando será usado para iniciar seu aplicativo.

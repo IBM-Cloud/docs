@@ -190,8 +190,7 @@ space: <space name>
         target:
           url: http://api.ng.bluemix.net
           organization: ${CF_ORGANIZATION}
-        script: \"echo ${CF_ORGANIZATION}\"                
-      ...
+        script: \"echo ${CF_ORGANIZATION}\"...
     "
   }
 }

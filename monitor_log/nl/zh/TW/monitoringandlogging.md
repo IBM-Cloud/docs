@@ -14,7 +14,7 @@ copyright:
 #監視及記載
 {: #monitoringandlogging}
 
-*前次更新：2016 年 5 月 24 日*
+*前次更新：2016 年 7 月 1 日*
 {: .last-updated}
 
 監視應用程式以及檢閱日誌，即可遵循應用程式執行及資料流程，以深入瞭解部署。此外，您還可以減少找到任何問題並進行修復所需的時間及工作量。
@@ -22,7 +22,7 @@ copyright:
 
 {{site.data.keyword.Bluemix}} 應用程式可以是廣泛分散在各處的多實例應用程式，而且您的應用程式執行及其資料可以在許多服務之間共用。在此複雜環境中，監視您的應用程式以及檢閱日誌對管理應用程式而言十分重要。
 
-##監視及記載應用程式
+##監視及記載 Cloud Foundry 應用程式
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} 具有內建記載機制，可產生執行中應用程式的日誌檔。在日誌中，您可以檢視針對應用程式所產生的錯誤、警告及參考訊息。此外，您也可以配置應用程式將日誌訊息寫入日誌檔中。如需日誌格式及日誌檢視方式的相關資訊，請參閱 [Cloud Foundry 上執行的應用程式的記載](#logging_for_bluemix_apps)。
@@ -60,7 +60,7 @@ copyright:
 {{site.data.keyword.Bluemix_notm}} 應用程式的日誌會以固定格式顯示，與下列型樣類似：
 
 ```
-         1         2         3         4         5
+1         2         3         4         5
 12345678901234567890123456789012345678901234567890
 --------------------------------------------------
 yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
@@ -226,10 +226,11 @@ cf logs appname --recent | grep '\[App'
 
   2. 建立使用者提供的服務實例。
      
-	 使用 ```cf create-user-provided-service``` 指令（或 ```cups``，這個指令的簡短版本），以建立使用者提供的服務實例：
-	 ```
+	 使用 `cf create-user-provided-service` 指令（或 `cups`，這個指令的簡短版本），以建立使用者提供的服務實例：
+	  
+```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
-	 ```
+```
 	 **service_name**
 	 
 	 使用者提供的服務實例的名稱。
@@ -268,9 +269,9 @@ cf logs appname --recent | grep '\[App'
 
 	 使用下列指令，將服務實例連結至您的應用程式： 
 	
-	 ```
+```
 	 cf bind-service appname <service_name>
-	```
+```
 	 **appname**
 	 
 	 應用程式的名稱。
@@ -280,7 +281,7 @@ cf logs appname --recent | grep '\[App'
 	 使用者提供的服務實例的名稱。
 	 
   4. 重新編譯打包應用程式。
-     鍵入 ```cf restage appname```，讓變更生效。 
+     鍵入 `cf restage appname`，讓變更生效。 
 
 #### 從外部主機檢視日誌
 {: #viewing_logs_external}
@@ -300,7 +301,7 @@ cf logs appname --recent | grep '\[App'
      a. Jane 從[下載 Splunk Light 網站](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}下載 Splunk Light，然後使用下列指令加以安裝。軟體安裝在 */opt/splunk* 中。 
        
 	    ```
-        dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
+dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
         ```
 	   
      b. Jane 安裝並修補 RFC5424 syslog 技術附加程式，以便與 {{site.data.keyword.Bluemix_notm}} 整合。如需附加程式安裝指示的相關資訊，請參閱 [Cloud Foundry 準則](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}。  
@@ -308,19 +309,17 @@ cf logs appname --recent | grep '\[App'
 	    Jane 使用下列指令來安裝附加程式：
         
 	    ```
-        cd /opt/splunk/etc/apps
+cd /opt/splunk/etc/apps
         tar xvfz ~/rfc5424-syslog_11.tgz
         ```
 	   
         然後，Jane 修補附加程式，作法是以包含下列文字的新 *transforms.conf* 檔案來取代 */opt/splunk/etc/apps/rfc5424/default/transforms.conf*：
 	   
 	    ```
-        [rfc5424_host]
+[rfc5424_host]
         DEST_KEY = MetaData:Host
         REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
-        FORMAT = host::$1
-
-        [rfc5424_header]
+        FORMAT = host::$1[rfc5424_header]
         REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
         FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
         MV_ADD = true
@@ -366,7 +365,7 @@ cf logs appname --recent | grep '\[App'
      a. Jane 從 cf CLI 使用下列指令來建立 syslog drain 服務：
 	 
      ```
-     cf cups splunk -l syslog://dummyhost:5140
+cf cups splunk -l syslog://dummyhost:5140
      ```
         
      **附註：***dummyhost* 不是實際名稱。它是用來隱藏實際的主機名稱。 
@@ -374,7 +373,7 @@ cf logs appname --recent | grep '\[App'
      b. Jane 將 syslog drain 服務連結至其空間中的應用程式，然後重新編譯打包該應用程式。
 	 
 	 ```
-     cf bind-service myapp splunk
+cf bind-service myapp splunk
      cf restage myapp
      ```
 		

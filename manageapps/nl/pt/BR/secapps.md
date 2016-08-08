@@ -15,6 +15,7 @@ copyright:
 {: #securingapps}
 
 *Última atualização: 9 de maio de 2016*
+{: .last-updated}
 
 É possível proteger seus aplicativos fazendo upload de certificados SSL e restringindo acesso aos aplicativos.
 {:shortdesc}

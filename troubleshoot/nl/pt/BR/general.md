@@ -17,6 +17,7 @@ copyright:
 {: #general}
 
 *Última atualização: 9 de dezembro de 2015*
+{: .last-updated}
 
 Problemas de serviços do {{site.data.keyword.Bluemix}}
 podem incluir um erro de tempo limite do gateway que ocorre quando você
@@ -33,7 +34,7 @@ uma instância de serviço que já foi excluída do controlador de nuvem.
 {:shortdesc}
 
 
-Ao tentar excluir uma instância de serviço, você vê a mensagem de erro do broker de serviço, ```Tempo limite do gateway```.
+Ao tentar excluir uma instância de serviço, você verá a mensagem de erro do broker de serviço, ```Tempo limite do gateway```.
 {: tsSymptoms}
 
 

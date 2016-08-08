@@ -16,6 +16,9 @@ copyright:
 # Híbrido
 {: #hybrid}
 
+*Última atualização: 8 de junho de 2016*
+{: .last-updated}
+
 Com modelos de implementação integrados públicos, dedicados e locais, o {{site.data.keyword.Bluemix_notm}} representa uma nova maneira de experiência de nuvem. O {{site.data.keyword.Bluemix_notm}} possui implementações de nuvem que se ajustam às suas necessidades, independentemente de se você é uma pequena empresa que planeja escalar ou uma grande empresa que requer isolamento adicional. É
 possível desenvolver em uma nuvem sem fronteiras, em que é possível
 conectar seus serviços privados aos serviços públicos do {{site.data.keyword.Bluemix_notm}} disponíveis na IBM. Além disso, você e sua equipe podem usar dados, sistemas e processos existentes juntamente com as ferramentas SaaS disponíveis no {{site.data.keyword.Bluemix_notm}}.
@@ -30,6 +33,8 @@ aplicativos, é possível concentrar-se no desenvolvimento de seu app sem precis
 ## Dedicado
 
 O {{site.data.keyword.Bluemix_notm}} Dedicated é uma nuvem particular com hardware fisicamente isolado em um datacenter do IBM SoftLayer. Com locatário único e fornecido em uma combinação de servidores bare metal e virtuais, seu ambiente do {{site.data.keyword.Bluemix_notm}} é criado para se ajustar às suas necessidades. E, com o catálogo organizado, é possível conferir poderes a seus apps com uma combinação de recursos de cálculo e serviços dedicados, assim como recursos disponibilizados por meio da organização do catálogo. Saiba mais sobre o [{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html).
+
+**Nota:** informações que estão relacionadas ao SoftLayer for {{site.data.keyword.Bluemix}} Dedicated não são aplicáveis na China. 
 
 ## Local
 

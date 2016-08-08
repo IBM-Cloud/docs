@@ -17,7 +17,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*最終更新日: 2016 年 4 月 07 日*
+*最終更新日: 2016 年 6 月 24 日*
 {: .last-updated}  
 
 Node.js アプリケーションを作成する場合、{{site.data.keyword.Bluemix}} Live Sync を使用すると、{{site.data.keyword.Bluemix_notm}} にあるアプリケーション・インスタンスを迅速に更新して、デスクトップにある場合と同じように再デプロイせずに開発することができます。   
@@ -71,8 +71,10 @@ Desktop Sync では以下の点を考慮してください。
 
 <strong>重要:</strong> bl コマンド・ライン・ツールは、Windows 7 と 8、および Mac OS X バージョン 10.9 以降でのみ使用可能です。</li>
 
-<li>コマンド・ラインで、以下のコマンドを使用してログインします。IBM ID とパスワードを求めるプロンプトが出されます。  
+<li>コマンド・ラインで、以下のコマンドを使用してログインします。ユーザー ID とパスワードの入力を求めるプロンプトが出されます。  
 <pre class="codeblock">bl login</pre>
+
+<strong>注:</strong> DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="BluemixDevOps Services">What's federated authentication and how does it affect me?</a> を参照してください。 
 </li>
 
 <li>以下のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} Live Sync で同期できるプロジェクトのリストを表示します。
@@ -89,9 +91,9 @@ Desktop Sync では以下の点を考慮してください。
 ローカル・ディレクトリーにあるファイルを変更すると、その変更内容は、{{site.data.keyword.Bluemix_notm}} で稼動しているアプリケーションとプロジェクト・クラウド・ワークスペースの両方に自動的に伝搬します。
 Node アプリケーションの再始動が必要な場合は、以下のコマンドを使用できます。
 
-```
+
 bl start --restart 
-```
+
 
 ##Live Edit {: #live-edit}
 
@@ -123,7 +125,7 @@ Debug を使用すると、アプリが {{site.data.keyword.Bluemix_notm}} で�
 * [node-inspector](https://github.com/node-inspector/node-inspector) を使用したデバッグ
 * シェル・アクセス
 
-###アプリケーション・ランタイム制御{: #app-runtime}
+###アプリケーション・ランタイム制御 {: #app-runtime}
 
 アプリケーション・ランタイム制御により、Debug を使用してアプリの開始時の状態を検査することができます。この機能は、始動時に異常終了するアプリをトラブルシューティングする際に役立ちます。
 
@@ -150,7 +152,7 @@ Debug には、以下の機能が含まれています。
 
 標準的な Linux コマンド (**top**、**ps**、および **kill** など) を使用するインスタンス内でメモリーおよび CPU の使用量をモニターします。
 
-###{{site.data.keyword.Bluemix_notm}} Live Debug を使用可能にするためのアプリの構成{: #configure_app_debug}
+###{{site.data.keyword.Bluemix_notm}} Live Debug を使用可能にするためのアプリの構成 {: #configure_app_debug}
 
 アプリは、IBM SDK for Node.js ビルドパックを使用する必要があります。カスタム・ビルドパックはサポートされていません。
 
@@ -162,10 +164,11 @@ Debug には、以下の機能が含まれています。
 2. 環境変数を設定します。  
 
     a. `manifest.yml` ファイルに次の変数を追加します。
-	```
+	
+	
 	env:
       ENABLE_BLUEMIX_DEV_MODE: "true" 
-	```
+	
 
 3. メモリーを増やします。  
 
@@ -173,9 +176,11 @@ Debug には、以下の機能が含まれています。
 
 {{site.data.keyword.Bluemix_notm}} Live Debug がインストールされたら、デバッグ・ツールを使用することができます。
 
-アプリをプッシュし、`https://app-host.mybluemix.net/bluemix-debug/manage` を参照して {{site.data.keyword.Bluemix_notm}} デバッグ・ユーザー・インターフェースにアクセスします。プロンプトが出されたら、認証のために IBM ID とパスワードを入力してください。
+アプリをプッシュし、次に `https://app-host.mybluemix.net/bluemix-debug/manage` を参照して、{{site.data.keyword.Bluemix_notm}} デバッグ・ユーザー・インターフェースにアクセスします。認証を求めるプロンプトが出されたら、ユーザー ID と、パーソナル・アクセス・トークンまたは IBM ID のパスワードを入力します。    
 
-###アプリ構成の復元および Bluemix Live Debug の使用不可化{: #restore_live_debug}
+   **注**: DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、[What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/) を参照してください。
+
+###アプリ構成の復元および Bluemix Live Debug の使用不可化 {: #restore_live_debug}
 
 1. アプリの `manifest.yml` ファイルから ENABLE_BLUEMIX_DEV_MODE 環境変数を削除します。
 
@@ -183,7 +188,7 @@ Debug には、以下の機能が含まれています。
 
 3. アプリをプッシュします。
 
-## {{site.data.keyword.Bluemix_notm}} Live Sync (bl) コマンド{: #bl-commands}
+## {{site.data.keyword.Bluemix_notm}} Live Sync (bl) コマンド {: #bl-commands}
 
 Node.js アプリケーションを構築する場合、{{site.data.keyword.Bluemix_live}} を使用して、
 {{site.data.keyword.Bluemix_notm}} で実行中のアプリケーション・インスタンスを即時に更新して、デスクトップの場合と同じように再デプロイせずに開発することができます。
@@ -206,9 +211,9 @@ bl コマンドのダウンロードと使用について詳しくは、[Bluemix
 
 {{site.data.keyword.Bluemix_live}} コマンド・ライン **bl** の構文は次のとおりです。
 
-```
-bl command [arguments][options] [--help]
-```
+
+bl command [arguments] [options] [--help]
+
 {: pre}
 
 **command**
@@ -251,9 +256,9 @@ ss *status*: {{site.data.keyword.Bluemix_notm}} 内の実行中のアプリケ�
 ## ヘルプ
 {: bl_help}
 
-```
+
 bl [ command ] --help | --h
-```
+
 {: pre}
 
 **使用量**
@@ -264,24 +269,24 @@ bl [ command ] --help | --h
 
 コマンドのリストを表示します。
 
-```
+
 bl --help
-```
+
 {: pre}
 
 sync コマンドに関する詳細情報を表示します。
 
-```
+
 bl sync --help
-```
+
 {: pre}
 
 ## login
 {: bl_login}
 
-```
-bl login | l [ -u username ][-p password ][ -s server ]
-```
+
+bl login | l [ -u username ] [-p password ][ -s server ]
+
 {: pre}
 
 **目的**
@@ -295,41 +300,41 @@ bl login | l [ -u username ][-p password ][ -s server ]
 
 **options**
 
--u *ユーザー名*:
-{{site.data.keyword.Bluemix_notm}} へのログインに使用する IBM ID。
+-u *username*: {{site.data.keyword.Bluemix_notm}} にログインするためのユーザー ID。
 
--p *パスワード*: IBM ID のパスワード。
+-p *password*: パーソナル・アクセス・トークンまたは IBM ID のパスワード。
 
--s *サーバー*: {{site.data.keyword.jazzhub_short}} サーバーのサーバー名
-または IP アドレス。
+-s *server*: {{site.data.keyword.jazzhub_short}} サーバーのサーバー名または IP アドレス。    
+
+   **注**: DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、[What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/) を参照してください。
 
 **例**
 
 次のコマンドを実行すると、*username* と *password* の両方の入力を求めるプロンプトが出されます。
 
 
-```
-bl login```
+
+bl login
 {: pre}
 
 ユーザー `name@company.com:` でログインします。
 
-```
-bl login –u name@company.com –p pa55w0rd```
+
+bl login –u name@company.com –p pa55w0rd
 {: pre}
 
 ユーザー `name@company.com` をパスワード *pa55 w0rd* でログインします。パスワードにスペースが含まれているため、引用符で囲む必要があります。
 
-```
-bl login –u name@company.com –p “pa55 w0rd”```
+
+bl login –u name@company.com –p “pa55 w0rd”
 {: pre}
 
 ## ログアウト
 {: bl_logout}
 
-```
+
 bl logout | lo
-```
+
 {: pre}
 
 **目的**
@@ -339,9 +344,9 @@ bl logout | lo
 ## プロジェクト
 {: bl_projects}
 
-```
+
 bl projects | p
-```
+
 {: pre}
 
 **目的**
@@ -352,9 +357,9 @@ bl projects | p
 ## Sync
 {: bl_sync}
 
-```
-bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
-```
+
+bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
+
 {: pre}
 
 **目的**
@@ -389,8 +394,8 @@ bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremot
 現行ディレクトリーが空ではなく、既存の同期ターゲットでない場合は、上書きオプションが必要です。
 
 
-```
-bl sync```
+
+bl sync
 {: pre}
 
 該当プロジェクトをログイン・ユーザーが所有する場合、
@@ -398,32 +403,32 @@ bl sync```
 myproject”` と同等の処理を行います。
 
 
-```
-bl sync  myproject```
+
+bl sync  myproject
 {: pre}
 
 次のコマンドは、
 プロジェクト `my pro ject` との同期を開始します。この名前はスペースを含むため、引用符で囲みます。
 
 
-```
+
 bl sync “my pro ject”
-```
+
 {: pre}
 
 次のコマンドは、
 プロジェクト `myproject` とディレクトリー `myfolder` の同期を開始します。
 
-```
-bl sync myproject –d  myfolder```
+
+bl sync myproject –d  myfolder
 {: pre}
 
 ## 作成
 {: bl_create}
 
-```
-bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
-```
+
+bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
+
 {: pre}
 
 **目的**
@@ -458,22 +463,22 @@ bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_R
 
 以下のコマンドは、プライベート・プロジェクトの作成プロセスを開始し、使用するプロジェクト名を求めるプロンプトを出します。
 
-```
-bl create```
+
+bl create
 {: pre}
 
 以下のコマンドは、`myNewProject` という名前のパブリック・プロジェクトを作成します。
 
-```
-bl create -n myNewProject --public```
+
+bl create -n myNewProject --public
 {: pre}
 
 ## 状況
 {: bl_status}
 
-```
+
 bl status | ss [ projectName ]
-```
+
 {: pre}
 
 **目的**
@@ -493,9 +498,8 @@ bl status | ss [ projectName ]
 現行ディレクトリーが既存の同期ターゲットではない場合にこのコマンドを実行すると、`projectName` の入力を求めるプロンプトが出されます。
 
 
-```
+
 bl status 
-```
 {: pre}
 
 該当プロジェクトをログイン・ユーザーが所有する場合、
@@ -503,25 +507,23 @@ bl status
 myproject”` と同等です。
 
 
-```
+
 bl status myproject
-```
 {: pre}
 
 次の例では、プロジェクト `my pro ject` に関連付けられた実行中のアプリケーションの状況を表示します。このプロジェクト名はスペースを含むため、引用符で囲みます。
 
 
-```
+
 bl status “my pro ject”
-```
 {: pre}
 
 ## 開始
 {: bl_start}
 
-```
-bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
-```
+
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
+
 {: pre}
 
 **目的**
@@ -539,9 +541,7 @@ bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit
 
 **options**
 
--l *launchConfiguration*: 起動構成名 (例えば `mylaunchconfig`)、ファイル
-名 (例えば `mylaunchconfig.launch`)、または起動構成フ
-ァイルのプロジェクト相対パス (例えば `launchConfigurations/mylaunchconf.launch`)。
+-l *launchConfiguration*: 起動構成名 (例えば `mylaunchconfig`)、ファイル名 (例えば `mylaunchconfig.launch`)、または起動構成ファイルのプロジェクト相対パス (例えば `launchConfigurations/mylaunchconf.launch`)。
 
 -m *manifestPath*: マニフェスト・ファイルのプロジェクト相対パス (例えば `manifest.yml`)。
 
@@ -560,8 +560,8 @@ bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit
 `myproject` のアプリケーション・インスタンスを開始します。
 
 
-```
-bl start myproject –l “launchConfigurations/my.launch”```
+
+bl start myproject –l “launchConfigurations/my.launch”
 {: pre}
 
 次のコマンドは、起動ファイル `launchConfigurations/my.launch`
@@ -569,8 +569,8 @@ bl start myproject –l “launchConfigurations/my.launch”```
 現行ディレクトリーが同期ターゲットではない場合、エラーが表示されます。
 
 
-```
-bl start –l “launchConfigurations/my.launch” ```
+
+bl start –l “launchConfigurations/my.launch” 
 {: pre}
 
 次のコマンドは、マニフェスト・ファイル `manifest.yml`
@@ -579,22 +579,22 @@ bl start –l “launchConfigurations/my.launch” ```
 このコマンドは、必要な残りの情報の入力を求めるプロンプトを出してから、起動構成で記述されたアプリケーションを開始します。
 
 
-```
-bl start –m “mymanifest.yml” ```
+
+bl start –m “mymanifest.yml” 
 {: pre}
 
 このコマンドは、マニフェスト・ファイル ``manifest.yml`` で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始し、```bl start –m manifest.yml`` と同等です。
 
-```
-bl start```
+
+bl start
 {: pre}
 
 ## 停止
 {: bl_stop}
 
-```
+
 bl stop | sp projectName [ -l launchConfiguration ]
-```
+
 {: pre}
 
 **目的**
@@ -610,10 +610,7 @@ bl stop | sp projectName [ -l launchConfiguration ]
 
 **options**
 
--l *launchConfiguration*: 起動構成名 (例えば
-`mylaunchconfig`)、ファイル名 (例えば
-`mylaunchconfig.launch`)、または起動構成ファイルの
-プロジェクト相対パス (例えば `launchConfigurations/mylaunchconf.launch`)。
+-l *launchConfiguration*: 起動構成名 (例えば `mylaunchconfig`)、ファイル名 (例えば `mylaunchconfig.launch`)、または起動構成ファイルのプロジェクト相対パス (例えば `launchConfigurations/mylaunchconf.launch`)。
 
 **例**
 
@@ -623,16 +620,16 @@ bl stop | sp projectName [ -l launchConfiguration ]
 複数の起動構成がある場合には、停止する構成を指定するように求めるプロンプトがコマンドによって出されます。
 
 
-```
-bl stop```
+
+bl stop
 {: pre}
 
 次のコマンドは、起動ファイル `mylaunchConfig`
 を使用して実行中のプロジェクトのアプリケーション・インスタンスを停止します。
 
 
-```
-bl stop myproject –l “mylaunchConfig” ```
+
+bl stop myproject –l “mylaunchConfig” 
 {: pre}
 
 次のコマンドは、現行ディレクトリーが、
@@ -641,16 +638,16 @@ bl stop myproject –l “mylaunchConfig” ```
 そうでない場合は、エラーで終了します。
 
 
-```
-bl stop –l “launchConfigurations/mylaunchconfig.launch” ```
+
+bl stop –l “launchConfigurations/mylaunchconfig.launch” 
 {: pre}
 
-># 関連リンク{:class="linklist"}
->## チュートリアルおよびサンプル{:id="samples"}
+># 関連リンク {:class="linklist"}
+>## チュートリアルおよびサンプル {:id="samples"}
 >* [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
 >
-># 関連リンク{:class="linklist"}
->## 関連リンク{:id="general"}
+># 関連リンク {:class="linklist"}
+>## 関連リンク {:id="general"}
 >* [Eclipse tools for Bluemix](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
 >
 >{:elementKind="article" id="rellinks"}

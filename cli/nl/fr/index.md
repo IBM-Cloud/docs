@@ -4,7 +4,7 @@
 
 copyright:
 
-  2015, 2016
+  années : 2015, 2016
 
  
 
@@ -18,13 +18,13 @@ copyright:
 # Interface de ligne de commande et outils de développement
 {: #cli}
 
-*Dernière mise à jour : 27 mai 2016*
+*Dernière mise à jour : 28 juin 2016*
 {: .last-updated}
 
 Avec {{site.data.keyword.Bluemix_short}}, vous avez accès à des outils puissants, tels qu'une interface de ligne de commande (CLI) unifiée et des plug-in CLI. Chacun de ces téléchargements d'interface de ligne de commande est accessible afin d'optimiser votre expérience avec {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
-## ![Interfaces de ligne de commande](./images/CLI.svg) Interfaces de ligne de commande
+## ![](./images/CLI.svg) Interfaces de ligne de commande
 {: #downloads}
 
 Téléchargez et installez des interfaces de ligne de commande pour votre expérience
@@ -47,18 +47,18 @@ Server](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} pour 
 | [Télécharger l'interface de ligne de commande](http://clis.ng.bluemix.net/) <br> [Afficher la documentation](./reference/bluemix_cli/index.html)|  [Télécharger l'interface de ligne de commande](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [Afficher la documentation](./reference/cfcommands/index.html) |
 
 
-## ![Plug-in d'interface de ligne de commande](./images/CLI_Plugin.svg) Plug-in d'interface de ligne de commande
+## ![](./images/CLI_Plugin.svg) Plug-ins d'interface de ligne de commande
 
 Etendez facilement votre interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des commandes supplémentaires. Pour accéder
 aux plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, voir le
-[référentiel de plug-in de l'interface de ligne de commande](http://plugins.ng.bluemix.net/).
+[référentiel de plug-in de l'interface de ligne de commande](https://plugins.ng.bluemix.net/).
 
 ### Etendez votre interface de ligne de commande {{site.data.keyword.Bluemix_notm}} : bx
 
 1. Pour installer des plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} depuis le registre {{site.data.keyword.Bluemix_notm}}, définissez le noeud
 final du registre des plug-in :
 ```
-bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
 ```
 2. Exécutez la commande suivante pour installer un plug-in :
 ```
@@ -76,7 +76,7 @@ bluemix plugin install nom_plug-in -r bluemix-bx-staging
 final du registre des
 plug-in :
 ```
-cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
 ```
 2. Exécutez la commande suivante pour installer un plug-in :
 ```
@@ -94,7 +94,7 @@ cf install-plugin nom_plug-in -r bluemix-cf-staging
 <!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
-## ![Outils de développement intégrés](./images/Integrated_Dev_Tools.svg) Outils de développement intégrés
+## ![](./images/Integrated_Dev_Tools.svg) Outils de développement intégrés
 
 Téléchargez et installez des plug-in afin d'intégrer les services {{site.data.keyword.Bluemix_notm}} que
 vous préférez.

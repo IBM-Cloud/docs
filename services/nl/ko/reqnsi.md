@@ -48,7 +48,7 @@ copyright:
 
 
 
-{{site.data.keyword.Bluemix_notm}}에 사용해 볼 수 있는 시범 서비스도 포함되어 있습니다. 모든 사용 가능한 시범 서비스, 표준 유형 및 런타임을 확인하려면 {{site.data.keyword.Bluemix_notm}}에 로그인하고 카탈로그의 맨 아래로 스크롤한 다음 **{{site.data.keyword.Bluemix_notm}} 랩 카탈로그**를 클릭하십시오.
+{{site.data.keyword.Bluemix_notm}}에 사용해 볼 수 있는 시범 서비스도 포함되어 있습니다. 모든 사용 가능한 시범 서비스, 표준 유형 및 런타임을 확인하려면 {{site.data.keyword.Bluemix_notm}}에 로그인하고 카탈로그의 맨 아래로 스크롤한 다음 **{{site.data.keyword.Bluemix_notm}} 연구소 카탈로그**를 클릭하십시오.
 
 시범 서비스는 안정적이지 않을 수 있으며 이전 버전과 호환 가능하지 않은 방식으로 변경될 수 있습니다. 프로덕션 환경에서는 이러한 서비스를 사용하지 않는 것이 좋습니다. 시범 서비스에 대한 지원은 {{site.data.keyword.Bluemix_notm}} 개발자 커뮤니티를 통해 제공됩니다. IBM에서 문제점을 조사한 결과 시범 서비스의 결함으로 판별될 경우 IBM이 수정사항을 제공할 의무는 없습니다.
 
@@ -152,9 +152,9 @@ copyright:
 * cf 명령행 인터페이스: **cf marketplace** 명령을 사용합니다. 
 * 사용자 고유 애플리케이션: [GET /v2/services 서비스 API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}를 사용합니다. 
 
-애플리케이션을 개발할 때 필요한 서비스를 선택할 수 있습니다. 선택하면 {{site.data.keyword.Bluemix_notm}}에서 서비스와 상호작용하여 서비스 자원을 프로비저닝하는 데 필요한 단계를 수행합니다. 프로비저닝 프로세스는 서비스 유형마다 다릅니다. 예를 들어 데이터베이스 서비스는 데이터베이스를 작성하고, 모바일 애플리케이션의 푸시 알림 서비스는 구성 정보를 생성합니다. 
+애플리케이션을 개발할 때 필요한 서비스를 선택할 수 있습니다. 선택하면 {{site.data.keyword.Bluemix_notm}}에서 서비스와 상호작용하여 서비스 리소스를 프로비저닝하는 데 필요한 단계를 수행합니다. 프로비저닝 프로세스는 서비스 유형마다 다릅니다. 예를 들어 데이터베이스 서비스는 데이터베이스를 작성하고, 모바일 애플리케이션의 푸시 알림 서비스는 구성 정보를 생성합니다. 
 
-{{site.data.keyword.Bluemix_notm}}에서는 서비스 인스턴스를 사용하여 애플리케이션에 서비스 자원을 제공합니다. 서비스 인스턴스는 웹 애플리케이션 간에 공유할 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}}에서는 서비스 인스턴스를 사용하여 애플리케이션에 서비스 리소스를 제공합니다. 서비스 인스턴스는 웹 애플리케이션 간에 공유할 수 있습니다. 
 
 다른 지역에서 호스팅되는 서비스가 해당 지역에서 사용 가능할 경우 이 서비스도 사용할 수 있습니다. 이러한 서비스는 인터넷을 통해 액세스할 수 있으며 API 엔드포인트를 사용합니다. {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 외부 애플리케이션 또는 써드파티 도구를 코딩할 때와 동일한 방식으로 이러한 서비스를 사용하도록 애플리케이션을 수동으로 코딩해야 합니다. 자세한 정보는 [외부 애플리케이션 및 써드파티 도구가 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정](#accser_external)을 참조하십시오.
 
@@ -184,13 +184,13 @@ cf 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하
 2. 다음 명령을 사용하여 서비스 인스턴스를 작성하십시오. 여기서 service_name은 서비스 이름이고, service_plan은 서비스 플랜이며, service_instance는 이 서비스 인스턴스에 사용할 이름입니다.
 
     ```
-    cf create-service service_name service_plan service_instance
+cf create-service service_name service_plan service_instance
     ```
 
 3. 다음 명령을 사용하여 서비스 인스턴스를 애플리케이션에 바인딩하십시오. 여기서 appname은 애플리케이션의 이름이고, service_instance는 서비스 인스턴스의 이름입니다.
 
     ```
-    cf bind-service appname service_instance
+cf bind-service appname service_instance
     ```
 
 동일한 영역 또는 조직 내의 해당 앱 인스턴스에만 서비스 인스턴스를 바인딩할 수 있습니다. 단, 외부 앱이 사용하는 것과 동일한 방식으로 기타 영역 또는 조직에서 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 신임 정보를 사용하여 앱 인스턴스를 직접 구성할 수 있습니다. 외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하는 방법에 대한 자세한 정보는 [외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정](#accser_external){: new_window}을 참조하십시오.
@@ -230,14 +230,14 @@ cf 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하
 ## 사용자 제공 서비스 인스턴스 작성
 {: #user_provide_services}
 
-{{site.data.keyword.Bluemix_notm}} 외부에서 관리되는 자원들이 있을 수 있습니다. 인터넷에서 이들 외부 자원에 액세스하기 위한 신임 정보를 가지고 있는 경우, {{site.data.keyword.Bluemix_notm}} 사용자 제공 서비스 인스턴스를 작성하여 외부 자원을 표시하고 통신할 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}} 외부에서 관리되는 리소스들이 있을 수 있습니다. 인터넷에서 이들 외부 리소스에 액세스하기 위한 신임 정보를 가지고 있는 경우, {{site.data.keyword.Bluemix_notm}} 사용자 제공 서비스 인스턴스를 작성하여 외부 리소스를 표시하고 통신할 수 있습니다. 
 
 사용자 제공 서비스 인스턴스를 작성하고 애플리케이션에 바인딩하려면 다음 단계를 완료하십시오. 
 
 1. **cf create-user-provided-service** 또는 **cf cups** 명령을 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오.
-    * 일반적인 사용자 제공 서비스 인스턴스를 작성하려면 **-p** 옵션을 사용하고 매개변수 이름을 쉼표로 구분하십시오. 그러면 cf 명령행 인터페이스에 각 매개변수를 묻는 메시지가 표시됩니다. 예를 들어, 다음과 같습니다.
+    * 일반적인 사용자 제공 서비스 인스턴스를 작성하려면 **-p** 옵션을 사용하고 매개변수 이름을 쉼표로 구분하십시오. 그러면 cf 명령행 인터페이스에 각 매개변수를 묻는 메시지가 표시됩니다. 예를 들어, 다음과 같습니다. 
         ```
-        cf cups testups1 -p "host, port, dbname, username, password"
+cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -250,7 +250,7 @@ cf 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하
     * 써드파티 로그 관리 소프트웨어로 정보를 제공하는 서비스 인스턴스를 작성하려면 **-l** 옵션을 사용하고 써드파티 로그 관리 소프트웨어가 제공하는 대상을 지정하십시오. 예를 들어, 다음과 같습니다. 
 
         ```
-        cf cups testups2 -l syslog://example.com
+cf cups testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -260,7 +260,7 @@ cf 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하
     * 일반적인 사용자 제공 서비스 인스턴스를 업데이트하려면 **-p** 옵션을 사용하고 JSON 오브젝트에 매개변수 키 및 값을 지정하십시오. 예를 들어, 다음과 같습니다. 
 
         ```
-        cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -268,7 +268,7 @@ cf 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하
     * 써드파티 로그 관리 소프트웨어로 정보를 제공하는 서비스 인스턴스를 작성하려면 -l 옵션을 사용하십시오. 예를 들어, 다음과 같습니다. 
 
         ```
-        cf uups testups2 -l syslog://example2.com
+cf uups testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -281,7 +281,7 @@ cf 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하
 	OK
 	```
 
-이제 외부 자원을 사용하도록 애플리케이션을 구성할 수 있습니다. 서비스와 상호작용하도록 애플리케이션을 구성하는 방법은 [서비스와 상호작용하도록 애플리케이션 구성](#config){: new_window}을 참조하십시오.
+이제 외부 리소스를 사용하도록 애플리케이션을 구성할 수 있습니다. 서비스와 상호작용하도록 애플리케이션을 구성하는 방법은 [서비스와 상호작용하도록 애플리케이션 구성](#config){: new_window}을 참조하십시오.
 
 ## 다른 지역에서 서비스 사용
 {: #cross_region_service}

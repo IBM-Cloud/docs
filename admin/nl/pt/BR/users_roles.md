@@ -17,10 +17,11 @@ copyright:
 
 # Gerenciando membros da equipe e funções
 {: #userroles}
-*Última atualização: 16 de maio de 2016*
+Última atualização: 12 de julho de 2016
+{: .last-updated}
 
 A partir da página de **Diretório da equipe** para a sua conta, é possível gerenciar membros da equipe existentes e suas funções em sua organização e espaços, bem como convidar novos
-membros da equipe. Para acessar o diretório da equipe para a sua conta, acesse o ícone **Conta e suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt; *nome_de_sua_conta* &gt; **Diretório da equipe**.
+membros da equipe. Para acessar o diretório da equipe para a sua conta, acesse o ícone **Conta e suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt; *nome_de_sua_conta* &gt; **Diretório da equipe**. 
 {:shortdesc}
 
 Proprietários da conta executam todas as operações nas organizações e espaços, incluindo o gerenciamento de membros da equipe e de suas funções designadas. Gerenciadores de organização têm acesso para
@@ -77,6 +78,20 @@ espaço. |
 **Nota**: membros da equipe que são designados com a função de espaço de gerenciador ou desenvolvedor podem acessar a variável de ambiente VCAP_SERVICES. No entanto, um membro da
 equipe designado com a função de auditor não pode acessar VCAP_SERVICES.
 
+## Ajustando a visibilidade do diretório da equipe
+{: #teamdirectoryvisibility}
+
+Dependendo de como você tem as suas contas e organizações do {{site.data.keyword.Bluemix_notm}} configuradas, talvez você queira mudar a visibilidade da página de diretório da equipe. Por
+padrão, todos os membros da equipe em sua conta podem ver a lista completa de membros da equipe de conta, incluindo todos os membros de todas as organizações dentro da conta. Talvez você tenha preocupações de
+privacidade ou razões de segurança que o avisem para ajustar a visibilidade da página de diretório da equipe. Você tem duas opções para configurar a visibilidade da página de diretório da equipe: todos os
+membros da equipe ou só você como o proprietário da conta.
+
+Para mudar a visibilidade da página de diretório da equipe conclua as etapas a seguir:
+
+1. Acesse o ícone **Conta e suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt; *nome_de_sua_conta* &gt; **Diretório da equipe**. 
+2. Para a opção **Visibilidade para**, clique na seleção atual para visualizar as opções.
+3. Em seguida, selecione **Todos** ou **Somente eu** com base nas necessidades atuais para a sua conta.
+
 ## Convidando membros da equipe
 {: #inviteteammembers}
 
@@ -92,16 +107,24 @@ eles são designados com a função de auditor automaticamente. É possível mud
 <li>Selecione os espaços para os quais deseja permitir acesso aos seus membros da equipe.</li>
 <li>Selecione a função a ser designada para os espaços selecionados na organização.</li>
 <li>Selecione a opção para confirmar que você assume a responsabilidade financeira por todos os encargos incorridos na conta.</li>
-<li>Insira o endereço de e-mail para um membro da equipe individual ou endereços de e-mail para múltiplos membros da equipe:<ul>
+<li>Insira o endereço de e-mail para um membro da equipe individual ou endereços de e-mail para múltiplos membros da equipe:
+<ul>
 <li>Para incluir um membro da equipe único, insira o endereço de e-mail e clique em **Enviar**.</li>
-<li>Para incluir mais de um membro da equipe, clique em **Convidar todos eles de uma vez**. Insira os endereços de e-mail usando uma lista separada por vírgula, espaços ou quebras de linha. 
-Em seguida, clique em **Avançar**, para verificar os endereços de e-mail ao quais o convite deve ser enviado e clique em **Enviar**.</li>
+<li>Para incluir mais de um membro da equipe, clique em **Convidar todos eles de uma vez**. Insira os endereços de e-mail usando uma lista separada por vírgula, espaços ou quebras de linha. Em seguida, clique em **Avançar**, para verificar os endereços de e-mail ao quais o convite deve ser enviado e clique em **Enviar**.</li>
 </ul>
 </li>
 </ol>
 
 Clique em **Visualizar pendente**, para verificar se os convites estão pendentes ou aceitos. É possível optar por reenviar o e-mail de convite ou cancelar o convite para um convite
 pendente a qualquer momento.
+
+Se você tiver uma conta do SoftLayer vinculada à sua conta do {{site.data.keyword.Bluemix_notm}}, poderá incluir os membros de sua equipe do SoftLayer. Acesse o ícone **Conta e
+suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt; *nome_de_sua_conta* &gt; página **Convidar
+membros da equipe**. Em seguida, clique em
+**Incluir** na seção **Incluir membros da
+equipe do SoftLayer** para autenticar em sua conta do SoftLayer e
+visualizar uma lista de membros da equipe a partir de sua conta do SoftLayer. Para obter mais informações sobre a inclusão de membros da equipe a partir da sua conta do SoftLayer, consulte
+[Convidando membros da equipe do SoftLayer para o {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users).
 
 ## Editando Funções
 {: #editinguserroles}

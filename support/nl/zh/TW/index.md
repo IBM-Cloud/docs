@@ -12,7 +12,7 @@ copyright:
 # 取得客戶支援
 {: #getting-customer-support}
 
-*前次更新：2016 年 6 月 17 日*
+*前次更新：2016 年 7 月 7 日*
 {: .last-updated}
 
 
@@ -108,8 +108,7 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 
   * 檢查現行維護時間範圍或進行中的事件
 
-	如果您懷疑 {{site.data.keyword.Bluemix_notm}} 未如預期般運作，請檢查狀態頁面中的現行維護時間範圍或進行中的事件。
-若要提報狀態頁面上尚未列出的發生事件，請透過頂端功能表列中的**帳戶和支援**圖示 ![帳戶和支援](images/account_support.svg) 或 [IBM Bluemix 支援中心](https://support.eu-gb.bluemix.net/gethelp/){: new_window}說明頁面來開啟「支援問題單」。
+	如果您懷疑 {{site.data.keyword.Bluemix_notm}} 未如預期般運作，請檢查狀態頁面中的現行維護時間範圍或進行中的事件。若要提報狀態頁面上尚未列出的事件，請透過頂端功能表列中的**帳戶和支援**圖示 ![帳戶和支援](images/account_support.svg) 或 [IBM Bluemix 支援中心](https://support.eu-gb.bluemix.net/gethelp/){: new_window}說明頁面來開啟「支援問題單」。
 
   * 充分運用多個 {{site.data.keyword.Bluemix_notm}} 地區
 
@@ -123,16 +122,16 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 
   * 準備進行輕微岔斷
 
-    在大部分情況下，即使是在維護時間範圍的期間內，{{site.data.keyword.Bluemix_notm}} 仍可繼續正常使用。不過，無法完全避免服務的輕微岔斷。即使暫時岔斷 {{site.data.keyword.Bluemix_notm}}
-的應用程式管理功能（例如啟動及停止應用程式），執行中應用程式通常仍可持續使用。為了盡量提高執行中應用程式的可用性，針對每一個應用程式請至少執行三個實例。
-
+    在大部分情況下，即使是在維護時間範圍的期間內，{{site.data.keyword.Bluemix_notm}} 仍可繼續正常使用。不過，無法完全避免服務的輕微岔斷。即使暫時岔斷 {{site.data.keyword.Bluemix_notm}} 的應用程式管理功能（例如啟動及停止應用程式），執行中應用程式通常仍可持續使用。為了盡量提高執行中應用程式的可用性，針對每一個應用程式請至少執行三個實例。
 
 
 
 ## 與支援中心聯絡
 {: #contacting-support}
 
-如果您有有效的 {{site.data.keyword.Bluemix_notm}} 帳戶，便可開啟支援問題單。  
+如果您有有效的 {{site.data.keyword.Bluemix_notm}} 帳戶，便可開啟支援問題單。 
+
+如果您有 {{site.data.keyword.Bluemix_notm}} 帳戶與 SoftLayer 帳戶鏈結，可以從「SoftLayer 客戶」入口網站或從 {{site.data.keyword.Bluemix_notm}} 使用者介面開啟 {{site.data.keyword.Bluemix_notm}} 的支援問題單。
 
 ### 與「{{site.data.keyword.Bluemix_notm}} 公用」的支援中心聯絡
 {: #contacting-bluemix-support}
@@ -155,8 +154,8 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 如果問題不是由於作業中斷而造成，而且您是中國以外國家或地區的客戶，請使用下列其中一個選項來開啟支援問題單：
 
   * 從「帳戶和支援」，按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。請填寫表單，以指出您需要何種技術支援。
-  * 從 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}。登入入口網站之後，請按一下**開啟問題單**，然後填寫支援表單。 
   * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport){: new_window}說明頁面。您可以針對銷售、計費、IBM ID 和登入，以及技術支援問題來提交問題單。對於技術支援問題，您可以在按一下**技術支援**磚之後進一步選取技術群組。例如，如果您需要有關 Cloud Foundry 應用程式、OpenWhisk、Containers、Virtual Servers 或 Bare Metal Servers 的協助，則可以選擇**應用程式服務**。如果您需要有關特定服務的協助，請選取對應的服務種類。若要判斷您服務所屬的種類，請查看左導覽窗格中[服務](../services/index.html){: new_window}下方的種類。  
+  * 從 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}。登入入口網站之後，請按一下**開啟問題單**，然後填寫支援表單。 
   
 
 
@@ -262,8 +261,7 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 
 在您收集診斷資訊之前，請先完成下列步驟：
 
-  1. 確定您已安裝最新的 cf 指令行介面。如需相關資訊，請參閱[安裝
-cf 指令行介面](../starters/install_cli.html){: new_window}。
+  1. 確定您已安裝最新的 cf 指令行介面。如需相關資訊，請參閱[安裝 cf 指令行介面](../starters/install_cli.html){: new_window}。
 
      **附註：**如果您沒有安裝最新的 cf 指令行介面，在 cf 指令行連接至 {{site.data.keyword.Bluemix_notm}} 之後，`cf logs` 指令可能不會傳回輸出。
 

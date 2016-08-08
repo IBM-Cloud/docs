@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  années : 2015, 2016
 
  
 
@@ -14,7 +14,7 @@ copyright:
 {:new_window: target="_blank"}
 
 # Traitement
-*Dernière mise à jour : 19 février 2016*
+*Dernière mise à jour : 24 juin 2016*
 {: .last-updated}
 
 Le calcul englobe l'infrastructure et les ressources que vous pouvez choisir pour construire des applications
@@ -22,4 +22,4 @@ Le calcul englobe l'infrastructure et les ressources que vous pouvez choisir pou
 {{site.data.keyword.IBM_notm}} Containers et {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}.
 {:shortdesc}
 
-Pour en savoir plus sur les différences entre ces options de calcul, voir l'article [Bluemix OpenWhisk, Instant Runtimes, Containers or Virtual Machines](https://developer.ibm.com/bluemix/2015/08/05/bluemix-instant-runtimes-containers-or-virtual-machines/).
+Pour en savoir plus sur les différences entre ces options de calcul, voir l'article [Bluemix OpenWhisk, Instant Runtimes, Containers or Virtual Servers](https://developer.ibm.com/bluemix/2015/08/05/bluemix-instant-runtimes-containers-or-virtual-machines/).

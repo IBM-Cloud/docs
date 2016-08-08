@@ -28,12 +28,14 @@ copyright:
 *表 1. {{site.data.keyword.Bluemix_notm}} 服務支援資訊*
 
 ##實驗性服務
+{: #experimental_services}
 
 {{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及運行環境，請登入 {{site.data.keyword.Bluemix_notm}}，捲動至型錄底端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗性服務**。
 
 實驗性服務可能不穩定，而且可能會變更，而與較舊版不相容。這些服務不建議用於正式作業環境。實驗性服務支援是透過「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
 
 ##各地區的服務
+{: #services_region}
 
 並非所有服務都能在每個 {{site.data.keyword.Bluemix_notm}} 地區使用。下表顯示 IBM 所提供的服務。
 
@@ -117,6 +119,7 @@ copyright:
 
 
 ## 服務的持續可用性
+{: #services_availability}
 {{site.data.keyword.Bluemix_notm}} 已將一組服務識別為「層級 1」。若未將功能對等項目設為可用，或提供至少五年的撤銷通知，IBM 就不會撤銷任何「層級 1」服務。 
 
 下列服務分類為「層級 1」：
@@ -134,5 +137,6 @@ copyright:
 若要進一步閱讀服務的使用條款，請參閱：[{{site.data.keyword.Bluemix_notm}} 條款](../navigation/notices.html#terms)。
 
 ## 服務淘汰
+{: #service_deprecation}
 
 IBM 至少會在 30 天前通知要停止或取代通用服務。如果未提供相等的取代項目，則從公告日期開始算起的至少 12 個月，IBM 將使用商用合理方式來繼續作業以及先前部署的服務實例的支援。 

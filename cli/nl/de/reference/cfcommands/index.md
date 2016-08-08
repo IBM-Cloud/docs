@@ -16,7 +16,7 @@ copyright:
 
 # Cloud Foundry-Befehle (cf-Befehle)
 
-*Letzte Aktualisierung: 29. Januar 2016*
+*Letzte Aktualisierung: 8. Juli 2016*
 {: .last-updated}
 
 Sie können Cloud Foundry-Befehle ('cf'-Befehle) zur Verwaltung Ihrer Apps verwenden.
@@ -153,6 +153,11 @@ cf help command_name
 ## cf login
 
 Hiermit melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an.
+
+<!-- staging only for atlas 45 -->
+
+**Hinweis**: Wenn Sie sich mit einer eingebundenen ID anmelden, müssen Sie den SSO-Parameter (SSO - Single Sign-on) zum Anmelden verwenden.  
+
 ```
 cf login
 ```
@@ -164,10 +169,9 @@ Für das Absetzen des Befehls 'cf login' können Sie mindestens einen der folgen
 <dd>Ihr Benutzername. Dieser Parameter ist optional.</dd>
 <dt>*-p* password</dt>
 <dd>Ihr Kennwort.</dd>
-<dd>*Wichtig* Wenn Sie Ihr Kennwort mithilfe des Parameters *-p* in der Befehlszeilenschnittstelle angeben, wird es möglicherweise
-im Befehlszeilenprotokoll aufgezeichnet. Sie sollten aus Sicherheitsgründen das Kennwort nicht
-mithilfe des Parameters -p angeben. Geben Sie stattdessen das Kennwort ein, wenn Sie in der Befehlszeilenschnittstelle
-dazu aufgefordert werden.</dd>
+<dd>*Wichtig* Wenn Sie Ihr Kennwort mithilfe des Parameters *-p* in der Befehlszeilenschnittstelle angeben, wird es möglicherweise im Befehlszeilenprotokoll aufgezeichnet. Sie sollten aus Sicherheitsgründen das Kennwort nicht mithilfe des Parameters -p angeben. Geben Sie stattdessen das Kennwort ein, wenn Sie in der Befehlszeilenschnittstelle dazu aufgefordert werden. </dd>
+<dt>*-sso*</dt>
+<dd>Sie müssen die SSO-Option (SSO - Single Sign-on) verwenden, wenn Sie sich mit einer eingebundenen ID anmelden. Dies ist nicht erforderlich, wenn Sie sich mit einer IBM ID anmelden. Wenn Sie versuchen, sich mit einer eingebundenen ID anzumelden und dabei keinen SSO-Parameter angeben, werden Sie aufgefordert, den Parameter anzugeben. Bei Verwendung des SSO-Parameters werden Sie aufgefordert, beim Anmelden den einmaligen Kenncode einzugeben. </dd>
 <dt>*-o* organization_name</dt>
 <dd>Der Name der Organisation, bei der Sie sich anmelden möchten.</dd>
 <dt>*-s* space_name</dt>
@@ -175,6 +179,8 @@ dazu aufgefordert werden.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Inaktiviert den Prozess der SSL-Validierung. Die Verwendung dieses Parameters kann zu Sicherheitsproblemen führen.</dd>
 </dl>
+
+<!-- staging only content for the sso parameter and note for federated ID atlas 45 work -->
 
 *Hinweis:* Wenn Sie im Parameter *-p* dieses Befehls Ihr Kennwort angeben, wird Ihr Kennwort möglicherweise in der Protokolldatei des Shellbefehls aufgezeichnet und kann für andere Benutzer des lokalen Betriebssystem sichtbar sein.
 
@@ -224,17 +230,17 @@ cf push appname -c “bash ./<run.sh>"
 <dt>*-i* instance_number</dt>
 <dd>Die Anzahl der Instanzen.</dd>
 <dt>*-k* disk_limit</dt>
-<dd>Die Plattenbegrenzung für die Anwendung, zum Beispiel *256M*, *1024M* oder *1G*.</dd>
+<dd>Die Plattenbegrenzung für die Anwendung, zum Beispiel *256M*, *1024M* oder *1G*. </dd>
 <dt>*-m* memory_limit</dt>
-<dd>Die Speicherbegrenzung für die Anwendung, zum Beispiel *256M*, *1024M* oder *1G*.</dd>
+<dd>Die Speicherbegrenzung für die Anwendung, zum Beispiel *256M*, *1024M* oder *1G*. </dd>
 <dt>*-n* host_name</dt>
-<dd>Der Hostname für die Anwendung, zum Beispiel *meine-Unterdomäne*.</dd>
+<dd>Der Hostname für die Anwendung, zum Beispiel *meine_unterdomäne*. </dd>
 <dt>*-p* app_path</dt>
 <dd>Der Pfad zum Anwendungsverzeichnis oder zur Archivdatei des Anwendungsverzeichnisses.</dd>
 <dt>*-t* timeout</dt>
 <dd>Die maximale Zeit für den Start der Anwendung in Sekunden. Möglicherweise wird dieser Wert durch andere serverseitige Zeitlimits überschrieben.</dd>
 <dt>*-s* stackname</dt>
-<dd>Der Stack zum Ausführen der Anwendungen. Ein Stack ist ein vorgefertigtes Dateisystem einschließlich Betriebssystem. Mit `cf stacks` können Sie die in {{site.data.keyword.Bluemix_notm}} verfügbaren Stacks anzeigen.</dd>
+<dd>Der Stack zum Ausführen der Anwendungen. Ein Stack ist ein vorgefertigtes Dateisystem einschließlich Betriebssystem. Mit `cf stacks` können Sie die in {{site.data.keyword.Bluemix_notm}} verfügbaren Stacks anzeigen. </dd>
 <dt>*--no-hostname*</dt>
 <dd>Ordnet die Bluemix-Systemdomäne dieser Anwendung zu.</dd>
 <dt>*--no-manifest*</dt>
@@ -259,9 +265,9 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 <dt>*-i* instance_number</dt>
 <dd>Die Anzahl der Instanzen.</dd>
 <dt>*-k* disk_limit</dt>
-<dd>Die Plattenbegrenzung für die Anwendung, zum Beispiel *256M*, *1024M* oder *1G*.</dd>
+<dd>Die Plattenbegrenzung für die Anwendung, zum Beispiel *256M*, *1024M* oder *1G*. </dd>
 <dt>*-m* memory_limit</dt>
-<dd>Die Speicherbegrenzung für die Anwendung, zum Beispiel *256M*, *1024M* oder *1G*.</dd>
+<dd>Die Speicherbegrenzung für die Anwendung, zum Beispiel *256M*, *1024M* oder *1G*. </dd>
 <dt>*-f*</dt>
 <dd>Erzwingt den Neustart der Anwendung ohne Eingabeaufforderung.</dd>
 </dl>
@@ -315,6 +321,6 @@ cf -v
 
 # rellinks
 {: #rellinks}
-## general 
+## general
 {: #general}
-* [Referenzkarte - 'cf'-Befehle](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

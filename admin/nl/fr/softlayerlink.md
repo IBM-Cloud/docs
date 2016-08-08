@@ -19,7 +19,7 @@ copyright:
 
 #Liaison des comptes de facturation SoftLayer et {{site.data.keyword.Bluemix_notm}}
 {: #softlayerlink}
-*Dernière mise à jour : 10 juin 2016*
+*Dernière mise à jour : 7 juillet 2016*
 {: .last-updated}
 
 Vous pouvez à présent lier les comptes de facturation SoftLayer et {{site.data.keyword.Bluemix_notm}}. Lorsque vous liez vos comptes, vous êtes
@@ -31,13 +31,12 @@ facturation via SoftLayer pour {{site.data.keyword.Bluemix_notm}} prend effet au
 en créer un nouveau ou utiliser un compte Paiement à la carte existant. Vous pouvez aussi lier un compte d'essai existant, mais celui-ci sera transformé en
 compte avec paiement à la carte.  
 
-Après avoir lié vos comptes, vous pouvez continuer à surveiller l'utilisation de vos ressources
-{{site.data.keyword.Bluemix_notm}} depuis l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}. Toutefois, la facturation pour ces
+Une fois vos comptes liés, vous pouvez facilement passer de l'un à l'autre. Vous pouvez continuer à surveiller l'utilisation de vos ressources {{site.data.keyword.Bluemix_notm}} dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}. Toutefois, la facturation pour ces
 ressources apparaîtra dorénavant sur la facture SoftLayer.
 
-Bien que la facturation de votre compte soit liée et que vous puissiez basculer aisément entre les comptes, vous aurez toujours besoin d'ID distincts
-pour {{site.data.keyword.Bluemix_notm}} et SoftLayer. Continuez à utiliser votre ID SoftLayer pour les produits et services SoftLayer et votre ID
-IBM pour les produits et services {{site.data.keyword.Bluemix_notm}}. 
+Même si la facturation de votre compte est liée, votre ID de connexion varie selon la manière dont votre compte SoftLayer est authentifié :
+* Pour les utilisateurs des comptes SoftLayer qui n'utilisent pas un ID IBM pour l'authentification, continuez à utiliser votre ID SoftLayer pour les produits et services SoftLayer et utilisez votre ID IBM pour les produits et services {{site.data.keyword.Bluemix_notm}}. 
+* Pour les utilisateurs des comptes SoftLayer qui utilisent un ID IBM pour l'authentification, utilisez votre ID IBM pour accéder à vos comptes SoftLayer et {{site.data.keyword.Bluemix_notm}}. 
 
 **Attention :** la liaison des comptes est irréversible.  
 
@@ -178,8 +177,8 @@ Une fois que vous avez lié vos comptes {{site.data.keyword.Bluemix_notm}} et So
 facture SoftLayer.
 {:shortdesc}
 
-Votre cycle d'utilisation de {{site.data.keyword.Bluemix_notm}} est basé sur le mois calendaire et votre compte sera donc facturé chaque mois le
-premier du mois. Avec SoftLayer, votre cycle d'utilisation débute au moment où vous avez commencé à utiliser SoftLayer, et vous êtes donc facturé chaque mois le
+Votre cycle d'utilisation de {{site.data.keyword.Bluemix_notm}} est basé sur le mois calendaire et votre compte sera facturé chaque mois le jour de facturation établi pour votre contrat de crédit.
+Avec SoftLayer, votre cycle d'utilisation débute au moment où vous avez commencé à utiliser SoftLayer, et vous êtes donc facturé chaque mois le
 même jour où vous avez ouvert votre compte SoftLayer. 
 
 Lorsque vos comptes sont liés, votre utilisation de {{site.data.keyword.Bluemix_notm}} continue à être mesurée d'après le cycle du mois en cours et vous

@@ -17,7 +17,7 @@ copyright:
 # (더 이상 사용되지 않는) 개발 모드 CLI
 {: #devmodecli}
 
-*마지막 업데이트 날짜: 2016년 5월 12일*
+*마지막 업데이트 날짜: 2016년 6월 23일*
 {: .last-updated}
 
 **이 CLI는 더 이상 사용되지 않음:** 개발 모드(dev_mode) CLI를 사용하는 대신, IBM Eclipse Tools for Bluemix 또는 DevOps 웹 IDE를 사용하십시오. 2016년 6월 30일까지는 dev_mode CLI 사용을 계속할 수 있습니다. 
@@ -41,30 +41,31 @@ dev_mode 명령행 도구를 설치하려면 다음 방법 중 하나를 사용�
   2. dev_mode 플러그인이 저장된 폴더로 이동하고, cf install-plugin 명령을 사용하여 dev_mode 플러그인을 설치하십시오. 예를 들어, 다음과 같습니다.  
   
         ```
-        cf install-plugin dev_mode-linux64
+cf install-plugin dev_mode-linux64
         ```
 
 - Bluemix CLI 저장소에서 설치합니다.
   1. 다음 명령을 사용하여 Cloud Foundry CLI 저장소에 bluemix-repo 저장소를 추가하십시오.
   
         ```
-        cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
   2. cf repo-plugins를 입력하십시오. dev_mode 플러그인이 bluemix-repo 저장소에 나타납니다. 
 		
 		```
-        cf repo-plugins
+cf repo-plugins
         ```
   
   3. 다음 명령을 사용하여 Cloud Foundry CLI 플러그인에 dev_mode 플러그인을 설치하십시오.
   
         ```
-        cf install-plugin dev_mode -r bluemix-repo
+cf install-plugin dev_mode -r bluemix-repo
         ```
 
 ## dev_mode 명령 보기
-**모든 dev_mode CLI 명령을 표시하려면 다음 명령을 사용하십시오.**
+
+모든 dev_mode CLI 명령을 표시하려면 다음 명령을 사용하십시오.
 
 ```
 cf plugins

@@ -2180,7 +2180,7 @@ amostra</tspan></text>
            id="tspan4579"
            y="438.79944"
            x="486.05368"
-           sodipodi:role="line">Serviço</tspan></text>
+           sodipodi:role="line">Service</tspan></text>
     </g>
     <g
        id="g4731-3"
@@ -2198,7 +2198,7 @@ amostra</tspan></text>
            id="tspan6702-1"
            y="509.96609"
            x="61.470284"
-           sodipodi:role="line">Cliente</tspan></text>
+           sodipodi:role="line">Consumidor</tspan></text>
       <rect
          style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="rect79371-1-6-6-9-8-7-3-5-1-4-5"
@@ -2273,7 +2273,7 @@ amostra</tspan></text>
            style="font-size:11.25000095px"
            sodipodi:role="line"
            x="461.03171"
-           y="3.7135651">Fabricantes do dispositivo IoT</tspan><tspan
+           y="3.7135651">Fabricante do dispositivo do IoT</tspan><tspan
            id="tspan7318-8-6-0"
            sodipodi:role="line"
            x="461.03171"
@@ -2333,7 +2333,7 @@ amostra</tspan></text>
          sodipodi:role="line"
          x="499.79694"
          y="103.36868"
-         id="tspan9810">Painel</tspan></text>
+         id="tspan9810">Dashboard</tspan></text>
     <g
        id="g5722"
        transform="matrix(0.08090742,0,0,0.08307112,454.6233,71.786196)"
@@ -2392,11 +2392,11 @@ amostra</tspan></text>
          id="tspan44239-7"
          y="216.68509"
          x="509.94742"
-         sodipodi:role="line">Rest e </tspan><tspan
+         sodipodi:role="line">APIs Rest</tspan><tspan
          y="230.43509"
          x="509.94742"
          sodipodi:role="line"
-         id="tspan7973">APIs em tempo real</tspan><tspan
+         id="tspan7973">e de tempo real</tspan><tspan
          y="244.18509"
          x="509.94742"
          sodipodi:role="line"
@@ -2586,11 +2586,11 @@ amostra</tspan></text>
          id="tspan4579-7-5"
          y="171.24385"
          x="702.77588"
-         sodipodi:role="line">Amostra simulada </tspan><tspan
+         sodipodi:role="line">Dispositivos de</tspan><tspan
          y="184.99385"
          x="702.77588"
          sodipodi:role="line"
-         id="tspan4890">dispositivos</tspan></text>
+         id="tspan4890">amostras simuladas</tspan></text>
     <g
        transform="matrix(0.88229753,0,0,0.8706004,649.54495,164.80866)"
        id="g3-96">
@@ -2698,11 +2698,11 @@ amostra</tspan></text>
          y="324.47162"
          x="300.1373"
          sodipodi:role="line"
-         id="tspan4890-1">IoT for Electronics</tspan><tspan
+         id="tspan4890-1">Aplicativo IoT for Electronics</tspan><tspan
          y="338.22162"
          x="300.1373"
          sodipodi:role="line"
-         id="tspan7488">Aplicativo do iniciador</tspan></text>
+         id="tspan7488">Starter</tspan></text>
     <g
        transform="matrix(0.88229753,0,0,0.8706004,246.21183,317.84197)"
        id="g3-96-0">
@@ -2769,12 +2769,12 @@ amostra</tspan></text>
            id="tspan4945-3"
            y="125.51817"
            x="261.233"
-           sodipodi:role="line">Eletroeletrônicos do consumidor</tspan><tspan
+           sodipodi:role="line">Serviço de registro</tspan><tspan
            style="font-size:11.25000095px"
            id="tspan5228"
            y="139.58067"
            x="261.233"
-           sodipodi:role="line">serviço de registro</tspan></text>
+           sodipodi:role="line">de eletroeletrônica do consumidor</tspan></text>
     </g>
     <g
        id="g5499"
@@ -2799,7 +2799,7 @@ amostra</tspan></text>
            id="tspan5558"
            y="257.88394"
            x="260.74411"
-           sodipodi:role="line">Acesso ao consumidor IoT</tspan></text>
+           sodipodi:role="line">Acesso de consumidor do IoT</tspan></text>
     </g>
     <g
        id="g4161"
@@ -2875,7 +2875,7 @@ amostra</tspan></text>
          x="298.36966"
          y="104.32381"
          id="tspan7485"
-         style="font-weight:bold;font-size:11.25000095px">Serviço</tspan></text>
+         style="font-weight:bold;font-size:11.25000095px">Service</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44235-7-4"

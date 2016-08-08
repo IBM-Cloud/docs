@@ -51,7 +51,8 @@ copyright:
 # Venda
 {: #pricing}
 
-*Última atualização: 16 de maio de 2016*
+*Última atualização: 1 de junho de 2016*
+{: .last-updated}
 
 É possível executar aplicativos no {{site.data.keyword.Bluemix}} e
 experimentar grátis serviços do {{site.data.keyword.Bluemix_notm}}. É possível assinar para uma avaliação gratuita por 30 dias com abonos adicionais, incluindo suporte grátis. Após 30 dias, é possível escolher um tipo de conta e pagar somente o que usar além dos abonos grátis. O
@@ -132,6 +133,9 @@ Com uma conta de Pagamento por uso, você é cobrado com base no uso de cálculo
 Depois de criar uma conta faturável, é possível editar as informações fornecidas. Clique no **ícone de Configurações de perfil** no canto superior direito da interface com o usuário do {{site.data.keyword.Bluemix_notm}}, em seguida, clique em **Conta e tipo de conta** para editar suas informações.
 
 Se você encontrar algum problema com o {{site.data.keyword.Bluemix_notm}} quando estiver usando uma conta de Pagamento por uso ou de Assinatura, veja [Obtendo ajuda on-line](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) para obter mais informações.
+
+**Nota:** se você vincular a sua conta de cobrança do {{site.data.keyword.Bluemix_notm}} com uma conta do SoftLayer, começando no primeiro do próximo mês, os seus encargos do
+{{site.data.keyword.Bluemix_notm}} estarão em sua fatura do SoftLayer. Para obter detalhes adicionais, consulte [Visualizando créditos](../admin//softlayerlink.html#bill_usage).
 
 ###Conta de Pagamento por uso
 {: #pay-as-you-go}
@@ -351,19 +355,16 @@ baseia em um modelo de precificação de camada em bloco:
 ### Abonos grátis para servidores virtuais
 {: #vms}
 
-É possível usar servidores virtuais {{site.data.keyword.Bluemix_notm}} na nuvem pública da IBM como recursos beta sem encargos. Abonos grátis são fornecidos para o número de imagens do servidor
+É possível usar {{site.data.keyword.virtualmachineslong}} na nuvem pública da IBM como um recurso beta sem encargos. Abonos grátis são fornecidos para o número de imagens do servidor
 virtual que você pode criar, o número de endereços IP que são designados, bem como a quantia de memória que pode ser usada.
 
-Os itens a seguir são os abonos grátis para os servidores virtuais {{site.data.keyword.Bluemix_notm}} beta:
+Os itens a seguir são os abonos grátis para as {{site.data.keyword.virtualmachineslong}} beta:
 
-* 8 instâncias
-* 8 CPUs virtuais
-* 12 GB de memória
+* 2 instâncias
+* 2 CPUs virtuais
+* 8 GB de memória
 * 200 GB de armazenamento de bloco
-* 4 endereços IP públicos
-
-Além disso, é possível usar a infraestrutura de servidores virtuais para provisionar servidores virtuais em suas nuvens particulares do {{site.data.keyword.Bluemix_notm}}, sujeitas apenas aos
-limites e cotas de suas nuvens particulares.
+* 5 endereços IP públicos
 
 
 ##Como estimar seus custos
@@ -473,8 +474,8 @@ pesadas. O preço total do armazenamento inclui as partes a seguir:</p>
 <pre class="codeblock">
 <codeblock>
     148 x 1 = $148
-    (450,000 / 1000) x 0.03 = $13.5
-    (90,000 / 1000) x 0.15 = $13.5
+    (450.000 / 1000) x 0,03 = $13,5
+    (90.000 / 1000) x 0,15 = $13,5
 </codeblock>
 </pre>
 <p>
@@ -508,6 +509,15 @@ O proprietário da conta é cobrado pelo uso total que é incorrido entre todas 
 Proprietários de conta podem filtrar o resumo de uso por região e organização. Se você for um proprietário da conta, configure **Organização** como **Todas as organizações** para ver o uso da conta inteira para um período de 12 meses. Clique em um determinado mês para ver o uso para aquele mês. Os encargos mostrados representam a quantia pela qual você, como proprietário da conta, é faturado para aquele mês.
 
 Se você selecionar uma organização específica para a **Organização**, é possível ver o uso total para essa organização, incluindo qualquer uso como parte de uma camada grátis. Os encargos mostrados para a organização não são os encargos pelos quais você é faturado. O uso da camada grátis é mostrado como grátis no nível de conta, mas não no nível organizacional. Portanto, ao visualizar o uso organizacional, você verá o uso real para essa organização, incluindo uso grátis e cobrado. Todo uso organizacional é acumulado para o uso da conta depois que a camada grátis é removida.
+
+##Visualizando créditos
+{: #credits}
+
+Como um proprietário da conta ou um gerente de faturamento, é possível usar a visualização Painel de Uso para ver qualquer crédito para a sua conta. Você pode ter créditos se, por exemplo, você
+vinculou uma conta do SoftLayer com uma conta do {{site.data.keyword.Bluemix_notm}}.
+
+Para abrir a visualização Painel de Uso, clique no ícone **Conta e suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) e, em seguida, selecione
+**Conta**. Na página exibida, clique em **Painel de Uso**. Na visualização, é possível ver quaisquer créditos, se existirem, e quando eles expiram.
 
 ##Notificações
 {: #notifications}

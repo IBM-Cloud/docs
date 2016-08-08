@@ -38,6 +38,7 @@ o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Pa
 *Tabela 1. Informações de suporte de serviços do {{site.data.keyword.Bluemix_notm}}*
 
 ##Serviços experimentais
+{: #experimental_services}
 
 O {{site.data.keyword.Bluemix_notm}} também tem serviços experimentais que você pode tentar. Para visualizar todos os serviços experimentais, modelos e tempos de execução, efetue login no {{site.data.keyword.Bluemix_notm}}, role para a parte inferior do catálogo e, em seguida, clique em **Serviços experimentais do {{site.data.keyword.Bluemix_notm}}**.
 
@@ -46,6 +47,7 @@ e for determinado que é um defeito em um serviço experimental,
 a IBM não será obrigada a fornecer uma correção.
 
 ##Serviços por região
+{: #services_region}
 
 Nem todos os serviços estão disponíveis em toda região do {{site.data.keyword.Bluemix_notm}}. A tabela a seguir mostra os serviços que são fornecidos pela IBM.
 
@@ -108,7 +110,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.retrieveandrankshort}}	|Sim 		|Sim 		|Sim|
 |{{site.data.keyword.SecureGateway}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.servicediscoveryshort}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.serviceproxyshort}}		|Sim		|Não		|Não|
+|{{site.data.keyword.serviceproxyshort}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.sescashort}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.ssofull}}			|Sim		|Não		|Não|
 |{{site.data.keyword.speechtotextshort}}	|Sim 		|Sim	 	|Sim|
@@ -128,6 +130,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 *Tabela 2. Disponibilidade do serviço*
 
 ## Disponibilidade contínua para serviços
+{: #services_availability}
 O {{site.data.keyword.Bluemix_notm}} identificou um conjunto de serviços como Camada 1. A IBM não irá retirar nenhum serviço da Camada 1 sem disponibilizar um equivalente funcional ou
 fornecer aviso de, pelo menos, cinco anos da retirada. 
 
@@ -146,5 +149,6 @@ Os serviços a seguir são classificados como Camada 1:
 Para ler mais sobre termos de uso para serviços, consulte: termos do [{{site.data.keyword.Bluemix_notm}}](../navigation/notices.html#terms).
 
 ## Descontinuação de serviço
+{: #service_deprecation}
 
 A IBM fornecerá um aviso de pelo menos 30 dias da sua intenção de descontinuar ou substituir um serviço geralmente disponível. Se uma substituição equivalente não for fornecida, por pelo menos 12 meses a partir da data desse núncio, a IBM usará meios comercialmente razoáveis para continuar a operação e o suporte de instâncias do serviço implementadas anteriormente. 

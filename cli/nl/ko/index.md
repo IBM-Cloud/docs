@@ -18,13 +18,13 @@ copyright:
 # CLI 및 개발 도구
 {: #cli}
 
-*마지막 업데이트 날짜: 2016년 5월 27일*
+*마지막 업데이트 날짜: 2016년 6월 28일*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix_short}}를 통해 통합 명령행 인터페이스 및 CLI 플러그인과 같은 강력한 도구를 이용할 수 있습니다. 각각의 CLI를 다운로드하여 {{site.data.keyword.Bluemix_notm}} 환경에 사용 가능합니다.
 {:shortdesc}
 
-## ![명령행 인터페이스](./images/CLI.svg) 명령행 인터페이스
+## ![](./images/CLI.svg) 명령행 인터페이스
 {: #downloads}
 
 {{site.data.keyword.Bluemix_notm}} 환경을 지원하는 명령행 인터페이스를 다운로드하여 설치하십시오.  
@@ -39,16 +39,16 @@ copyright:
 | [CLI 다운로드](http://clis.ng.bluemix.net/)  <br> [문서 보기](./reference/bluemix_cli/index.html)|  [CLI 다운로드](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [문서 보기](./reference/cfcommands/index.html) |
 
 
-## ![명령행 인터페이스 플러그인](./images/CLI_Plugin.svg) 명령행 인터페이스 플러그인
+## ![](./images/CLI_Plugin.svg) 명령행 인터페이스 플러그인
 
-더 많은 명령으로 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 간편하게 확장합니다. {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스 플러그인에 액세스하려면 [ CLI 플러그인 저장소](http://plugins.ng.bluemix.net/)를 참조하십시오.
+더 많은 명령으로 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 간편하게 확장합니다. {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스 플러그인에 액세스하려면 [ CLI 플러그인 저장소](https://plugins.ng.bluemix.net/)를 참조하십시오.
 
 ### {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스 확장: bx
 
 1. {{site.data.keyword.Bluemix_notm}} 레지스트리에서 {{site.data.keyword.Bluemix_notm}} CLI 플러그인을 설치하려면 플러그인 레지스트리 엔드포인트를 설정하십시오.
 
 ```
-bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
 ```
 2. 다음 명령을 실행하여 플러그인을 설치하십시오.
 
@@ -66,7 +66,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 1. {{site.data.keyword.Bluemix_notm}} 레지스트리에서 cf CLI 플러그인을 설치하려면 플러그인 레지스트리 엔드포인트를 설정하십시오.
 
 ```
-cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
 ```
 2. 다음 명령을 실행하여 플러그인을 설치하십시오.
 
@@ -85,7 +85,7 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 <!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
-## ![통합 개발 도구](./images/Integrated_Dev_Tools.svg) 통합 개발 도구
+## ![](./images/Integrated_Dev_Tools.svg) 통합 개발 도구
 
 즐겨찾기 {{site.data.keyword.Bluemix_notm}} 서비스를 통합하기 위해 플러그인을 다운로드하고 설치합니다.
 

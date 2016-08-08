@@ -99,7 +99,7 @@ IBM 使用轉遞技術來安全地監視及維護您的環境，讓您可以專�
 
 初始虛擬機器在客戶防火牆後面的網路中執行，該網路透過「轉遞」對 IBM 作業中心具有出埠連線功能。{{site.data.keyword.Bluemix_notm}} 平台元件和核心服務在一個隔離的專用虛擬區域網路 (VLAN) 中執行。「{{site.data.keyword.Bluemix_notm}} 本端」將 VLAN 用於專用子網路。使用專用子網路（而不使用公用 VLAN）不但更為安全，而且還有助於避免發生遞送問題。
 
-DataPower 應用裝置提供對 {{site.data.keyword.Bluemix_notm}} 應用程式網域的存取。這些應用裝置會連接至可從您的內部網路存取的網路。部署應用程式及服務的使用者自可從您的內部網路存取的網路進行存取。您必須提供 7 個具有出埠網際網路存取權的 IP 位址。DataPower 應用裝置會從這些客戶 IP 位址遞送至隔離的 {{site.data.keyword.Bluemix_notm}} 部署。如需網路規格和基礎架構需求的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 本端基礎架構需求](../local/index.html#localinfra)。
+DataPower 應用裝置提供對 {{site.data.keyword.Bluemix_notm}} 應用程式網域的存取。這些應用裝置會連接至可從您的內部網路存取的網路。部署應用程式及服務的使用者自可從您的內部網路存取的網路進行存取。您必須提供 7 個具有出埠網際網路存取權的 IP 位址。DataPower 應用裝置會從這些客戶 IP 位址遞送至隔離的 {{site.data.keyword.Bluemix_notm}} 部署。如需網路規格和基礎架構需求的相關資訊，請參閱[「{{site.data.keyword.Bluemix_notm}} 本端」基礎架構需求](../local/index.html#localinfra)。
 
 ### {{site.data.keyword.Bluemix_notm}} 的運作方式
 {: #howwork}

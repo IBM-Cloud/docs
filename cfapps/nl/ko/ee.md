@@ -38,7 +38,7 @@ copyright:
 
 이 시나리오에서는 Node.js를 사용하여 웹 앱을 개발하고자 합니다. 현재 미국에 거주하고 있으며 대부분의 앱 사용자도 미국에 있다고 가정합니다. 네트워크 대기 시간 감소의 장점을 이용할 수 있도록, 사용자 기반에 근접한 앱을 빌드하고 실행하기로 결정합니다. {{site.data.keyword.Bluemix_notm}}에 로그인한 후에 **계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg)을 클릭하고 **미국 남부** 지역을 선택하십시오. 그리고 다음 단계에 따라 앱을 작성하십시오.
 
-  1. **계산**을 선택하십시오.
+  1. **컴퓨팅**을 선택하십시오.
   2. 더하기 아이콘을 클릭하십시오. 
   3. **SDK for Node.js**를 선택하십시오. 
   4. 앱의 고유 이름(예: TestNode)을 입력하고 **작성**을 클릭하십시오. 앱 이름은 전체 {{site.data.keyword.Bluemix_notm}} 환경에서 고유해야 합니다. 
@@ -106,29 +106,36 @@ copyright:
 	```
 	
     **요구사항:** 항상 cf 명령행 도구의 최신 버전을 사용해야 합니다.
-  3. **cf** 명령행 인터페이스를 설치한 후에는 **cf api** 명령을 사용하여 작업할 {{site.data.keyword.Bluemix_notm}} 지역을 지정해야 합니다. **cf** 명령행 인터페이스는 *https://api.Bluemix_URL*을 사용합니다. 여기서, *Bluemix_URL*은 지역의 URL입니다. 미국 남부 지역의 URL은 {{Domain}}입니다. 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}}에 연결하십시오.
+  3. **cf** 명령행 인터페이스를 설치한 후에는 **cf api** 명령을
+사용하여 작업할 {{site.data.keyword.Bluemix_notm}} 지역을
+지정해야 합니다.
+**cf** 명령행 인터페이스는 *https://api.Bluemix_URL*을 사용합니다. 여기서, *Bluemix_URL*은
+지역의 URL입니다. 미국 남부 지역의 URL은 {{Domain}}입니다. 다음 명령을 입력하여
+{{site.data.keyword.Bluemix_notm}}에 연결하십시오.
   
   ```
-  cf api https://api.ng.bluemix.net
+cf api https://api.ng.bluemix.net
 	 ```
   
-  기타 {{site.data.keyword.Bluemix_notm}} 지역에 연결하는 방법에 대한 자세한 정보는 {{site.data.keyword.Bluemix_notm}} 지역을 참조하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 지정한 후에 사용자가 지정한 위치 정보가 저장됩니다.
+  기타 {{site.data.keyword.Bluemix_notm}} 지역에 연결하는 방법에 대한 자세한 정보는
+{{site.data.keyword.Bluemix_notm}} 지역을 참조하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 지정한 후에
+사용자가 지정한 위치 정보가 저장됩니다.
   
   4. 그런 다음, cf login 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 있습니다.
   
   ```
-  cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
+cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
   ```
   
   5. {{site.data.keyword.Bluemix_notm}}에 로그인한 후에는 {{site.data.keyword.Bluemix_notm}}로 다시 앱을 배치할 준비가 됩니다. 앱 디렉토리 `C:\test`에서 다음 명령을 입력하십시오. 
   
   ```
-  cf push TestNode```
+cf push TestNode```
   
   **cf push** 명령에 대한 자세한 정보는 앱 업로드를 참조하십시오.
   
   6. 이제 브라우저에서 다음 앱 URL을 입력하여 앱에 액세스할 수 있습니다.
-```
+  ```
   http://TestNode.mybluemix.net
   ```
 
@@ -146,12 +153,12 @@ copyright:
   cf create-service 명령을 사용하여 서비스의 새 인스턴스를 작성하십시오. 예:
   
   ```
-  cf create-service cloudantNoSQLDB Shared cloudant100```
+cf create-service cloudantNoSQLDB Shared cloudant100```
   
   cf services 명령을 사용하여 작성한 서비스 인스턴스의 목록을 볼 수도 있습니다.
   
   ```
-  cf services```
+cf services```
   
   서비스 인스턴스를 작성한 후에는 임의의 애플리케이션을 바인딩하고 사용하는 데 사용할 수 있습니다.
   
@@ -160,7 +167,7 @@ copyright:
   서비스 인스턴스를 사용하려면 애플리케이션을 바인딩해야 합니다. 사용자가 작성한 애플리케이션 이름 및 서비스 인스턴스를 지정하고 cf bind-service 명령을 사용하여 서비스 인스턴스를 애플리케이션에 바인딩하십시오.
   
   ```
-  cf bind-service TestNode cloudant100```
+cf bind-service TestNode cloudant100```
   
   서비스 인스턴스를 애플리케이션에 바인딩하면 {{site.data.keyword.Bluemix_notm}}가 서비스와 통신할 수 있으며 새 애플리케이션이 해당 서비스 인스턴스와 통신하도록 지정할 수 있습니다. 다른 서비스의 경우, {{site.data.keyword.Bluemix_notm}}가 바인딩 동안 애플리케이션 및 서비스 인스턴스를 다르게 처리할 수 있습니다. 예를 들어, 일부 서비스는 서비스 인스턴스와 통신하는 각 애플리케이션에 대해 새 테넌트를 작성할 수 있습니다. 서비스는 애플리케이션과 서비스 사이의 통신을 위해 반드시 애플리케이션에 전달되어야 하는
 신임 정보 등의 정보를 사용하여 {{site.data.keyword.Bluemix_notm}}에 다시 응답합니다. 
@@ -179,9 +186,10 @@ copyright:
   <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
   
   예를 들어, Node.js 앱이 다음과 같이 이 정보에 액세스할 수 있습니다.
-```
-  if (process.env.VCAP_SERVICES) {
-        var env = JSON.parse(process.env.VCAP_SERVICES);
+
+  ```
+if (process.env.VCAP_SERVICES) {
+var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['"cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
@@ -197,8 +205,9 @@ copyright:
   4. 서비스 인스턴스와 상호작용하십시오.
   
   신임 정보를 사용하여 서비스 인스턴스와 상호작용할 수 있습니다. 취할 수 있는 조치에는 읽기, 쓰기 및 업데이트가 포함됩니다. 다음 예는 JSON 오브젝트를 {{site.data.keyword.cloudant}} 서비스 인스턴스에 삽입하는 방법을 예시합니다.
-```
-  // create a new message
+
+  ```
+// create a new message
 var create_message = function(req, res) {
   require('cloudantdb').connect(cloudant.url, function(err, conn) {
     var collection = conn.collection('messages');

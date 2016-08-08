@@ -19,23 +19,25 @@ copyright:
 
 #SoftLayer と {{site.data.keyword.Bluemix_notm}} の請求アカウントのリンク
 {: #softlayerlink}
-*最終更新日: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 7 月 7 日*
 {: .last-updated}
 
 SoftLayer と {{site.data.keyword.Bluemix_notm}} の請求アカウントをリンクできるようになりました。アカウントをリンクすると、SoftLayer と {{site.data.keyword.Bluemix_notm}} の両方のリソースについて SoftLayer から請求されるようになります。既存のアカウントがある場合、SoftLayer からの {{site.data.keyword.Bluemix_notm}} についての請求は、アカウントのリンク後に開始する次の請求処理サイクルから有効になります。
 {:shortdesc}
 
-**重要:** {{site.data.keyword.Bluemix_notm}} でリンクされるアカウントはすべて、従量課金 (PAYG) アカウントでなければなりません。新規従量課金 (PAYG) アカウントを作成するか、既存の 従量課金 (PAYG) アカウントをリンクできます。あるいは、既存のトライアル・アカウントをリンクすることもできますが、そのアカウントは従量課金 (PAYG) アカウントにアップグレードされます。  
+**重要:** {{site.data.keyword.Bluemix_notm}} でリンクされるアカウントはすべて、従量課金 (PAYG) アカウントでなければなりません。新規従量課金 (PAYG) アカウントを作成するか、既存の従量課金 (PAYG) アカウントをリンクできます。あるいは、既存のトライアル・アカウントをリンクすることもできますが、そのアカウントは従量課金 (PAYG) アカウントにアップグレードされます。  
 
-アカウントのリンク後にも、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースで {{site.data.keyword.Bluemix_notm}} リソースの使用量を引き続きモニターできます。ただし、それらのリソースについての請求は、SoftLayer の請求書に表示されるようになっています。
+アカウントがリンクされた後、アカウント間で簡単に切り替えることができます。{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースで {{site.data.keyword.Bluemix_notm}} リソースの使用量を引き続きモニターできます。ただし、それらのリソースについての請求は、SoftLayer の請求書に表示されるようになっています。
 
-アカウントの請求処理がリンクされ、アカウント間で簡単に切り替えることができるようになりますが、{{site.data.keyword.Bluemix_notm}} と SoftLayer の別個の ID が引き続き必要になります。引き続き、SoftLayer の製品とサービスには SoftLayer ID を使用し、{{site.data.keyword.Bluemix_notm}} の製品とサービスには IBM ID を使用します。 
+アカウントの請求はリンクされますが、ログイン ID は、SoftLayer アカウントの認証方法に応じて以下のように異なるものになります。
+* 認証に IBM ID を使用しない SoftLayer アカウントのユーザーの場合、SoftLayer の製品とサービスには引き続き SoftLayer ID を使用し、{{site.data.keyword.Bluemix_notm}} の製品とサービスには IBM ID を使用します。
+* 認証に IBM ID を使用する SoftLayer アカウントのユーザーの場合、SoftLayer アカウントと {{site.data.keyword.Bluemix_notm}} アカウントの両方へのアクセスに IBM ID を使用します。
 
 **注意:** リンクされたアカウントをリンク解除することはできません。  
 
 SoftLayer アカウントがあり、SoftLayer アカウントと {{site.data.keyword.Bluemix_notm}} アカウントをリンクする場合は、以下のステップを実行します。
  1. {{site.data.keyword.slportal}} で、**「{{site.data.keyword.Bluemix_notm}} アカウントをリンク (Link a {{site.data.keyword.Bluemix_notm}} Account)」**をクリックします。 
- 2. SoftLayer アカウントと {{site.data.keyword.Bluemix_notm}} アカウントをリンクするご利用条件を読み、同意します。
+ 2. SoftLayer アカウントと {{site.data.keyword.Bluemix_notm}} アカウントをリンクする場合のご利用条件を読み、同意します。
  3. 要求されたら、{{site.data.keyword.Bluemix_notm}} アカウントに関連付けられている E メール・アドレスを指定します。{{site.data.keyword.Bluemix_notm}} アカウントがない場合は、使用する E メール・アドレスを指定し、{{site.data.keyword.Bluemix_notm}} への招待を受けてアカウントを作成するための手順に従います。
 
 アカウントをリンクするには、SoftLayer アカウントのマスター・ユーザーでなければなりません。
@@ -53,10 +55,10 @@ SoftLayer アカウントがあり、SoftLayer アカウントと {{site.data.ke
 ## {{site.data.keyword.Bluemix_notm}} への SoftLayer チーム・メンバーの招待
 {: #invite_users}
 
-{{site.data.keyword.Bluemix_notm}} アカウントと SoftLayer アカウントをリンクする場合、{{site.data.keyword.Bluemix_notm}} に参加するように SoftLayer チーム・メンバーを招待できます。あるいは、後で {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースから SoftLayer チーム・メンバーを招待することもできます。
+{{site.data.keyword.Bluemix_notm}} アカウントと SoftLayer アカウントをリンクするときに、{{site.data.keyword.Bluemix_notm}} に参加するように SoftLayer チーム・メンバーを招待できます。あるいは、後で {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースから SoftLayer チーム・メンバーを招待することもできます。
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースから、SoftLayer アカウントのすべてのメンバーを招待することを選択するか、個別メンバーを選択できます。チーム・メンバーを招待する際には、被招待者の {{site.data.keyword.Bluemix_notm}} アカウントの役割を設定する必要があります。{{site.data.keyword.Bluemix_notm}} の各種役割について詳しくは、[ユーザー役割](https://console.ng.bluemix.net/docs/admin/users_roles.html#userrolesinfo)を参照してください。
+{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースから、SoftLayer アカウントのすべてのメンバーを招待することを選択します。また、個別にメンバーを選択することもできます。チーム・メンバーを招待する際には、被招待者の {{site.data.keyword.Bluemix_notm}} アカウントの役割を設定する必要があります。{{site.data.keyword.Bluemix_notm}} の各種役割について詳しくは、[ユーザー役割](https://console.ng.bluemix.net/docs/admin/users_roles.html#userrolesinfo)を参照してください。
 
 チーム・メンバーを {{site.data.keyword.Bluemix_notm}} アカウントに招待するには、SoftLayer アカウントのマスター・ユーザーでなければなりません。
 
@@ -84,7 +86,7 @@ SoftLayer 資産で API ベースの公開 {{site.data.keyword.Bluemix_notm}} �
 3. サービス資格情報をコピーし、アプリケーションに追加して、サービスが既存のコードで実行されるようにセットアップします。
 4. アプリを更新した後に、SoftLayer インフラストラクチャーで新規バージョンをデプロイします。
 
-SoftLayer のアプリから Watson API を呼び出して*洞察およびコグニティブ* の知識を得ることで、さらにパーソナライズできます。あるいは、*データおよび分析* サービスを使用して、アプリでハイパフォーマンス分析を利用できます。あるいは、DaaS (Database-as-a-Service) を選択し、管理を {{site.data.keyword.Bluemix_notm}} に任せることができます。
+SoftLayer のアプリから Watson API を呼び出して*洞察およびコグニティブ* の知識を得ることで、アプリをさらにパーソナライズできます。あるいは、*データおよび分析* サービスを使用して、アプリでハイパフォーマンス分析を利用できます。あるいは、DaaS (Database-as-a-Service) を選択し、管理を {{site.data.keyword.Bluemix_notm}} に任せることができます。
 
 {{site.data.keyword.activedeployshort}} や {{site.data.keyword.deliverypipeline}} などのサービスとともにコンテナーを使用することで、アプリケーション開発を最新化できます。そうすると、{{site.data.keyword.vpn_short}} サービスを使用して SoftLayer にトンネルで戻し、プライベート・ネットワーク内のコンテナーを SoftLayer プライベート・ネットワークに接続できます。計算リソースおよびサービスの使用量に対するすべての課金は、SoftLayer 請求に反映されます。 
 
@@ -139,7 +141,7 @@ SoftLayer のアプリから Watson API を呼び出して*洞察およびコグ
 {{site.data.keyword.Bluemix_notm}} と SoftLayer の請求アカウントをリンクすると、次の請求処理サイクルは、単一の SoftLayer 請求で課金されます。
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} の使用量サイクルはカレンダー月ベースであるため、アカウントは、毎月、月初めに請求されます。SoftLayer では、使用量サイクルは、SoftLayer の使用を開始したときから始まるため、毎月、SoftLayer アカウントを登録したときと同じ日に請求されます。 
+{{site.data.keyword.Bluemix_notm}} の使用量サイクルは暦月ベースであるため、アカウントは毎月、課金契約に設定された請求日に請求されます。SoftLayer では、使用量サイクルは、SoftLayer の使用を開始したときから始まるため、毎月、SoftLayer アカウントを登録したときと同じ日に請求されます。 
 
 アカウントをリンクした場合、現行月のサイクルの間、{{site.data.keyword.Bluemix_notm}} の使用量が引き続き計測され、その使用量については {{site.data.keyword.Bluemix_notm}} の請求書で請求されます。翌月の初めから、{{site.data.keyword.Bluemix_notm}} の課金は、SoftLayer の請求書に含まれるようになります。
 
@@ -147,7 +149,7 @@ SoftLayer のアプリから Watson API を呼び出して*洞察およびコグ
 
 ![Bluemix と SoftLayer のアカウントのリンクのサマリー](images/BluemixSoftLayerBill.svg)
 
-請求が結合されると、SoftLayer の請求書のサマリー請求書に **{{site.data.keyword.Bluemix_notm}}** セクションが含まれます。詳細請求ビューで、{{site.data.keyword.Bluemix_notm}} の課金はその他のサービスとして表示され、*"{{site.data.keyword.Bluemix_notm}} Plan..."* で開始します。
+請求が結合されると、SoftLayer の請求書のサマリー請求書に **{{site.data.keyword.Bluemix_notm}}** セクションが含まれます。詳細請求ビューで、{{site.data.keyword.Bluemix_notm}} の課金はその他のサービスとして表示され、*"{{site.data.keyword.Bluemix_notm}} Plan..."* から始まります。
 
 {{site.data.keyword.Bluemix_notm}} の使用量を表示する方法については、『[使用量詳細の表示](https://console.ng.bluemix.net/docs/pricing/index.html#usage)』を参照してください。
 

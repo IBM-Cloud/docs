@@ -15,7 +15,8 @@ copyright:
 {:download: .download}
 
 # Iniciar a codificação com Git
-*Última atualização: 2 de março de 2016*  
+*Última atualização: 2 de março de 2016*
+{: .last-updated}  
 
 É possível criar um repositório Git hospedado que é implementado no {{site.data.keyword.Bluemix}} automaticamente. Em seguida, é possível modificar o código que é executado em seu app enviando por push as mudanças
 para o repositório Git. 

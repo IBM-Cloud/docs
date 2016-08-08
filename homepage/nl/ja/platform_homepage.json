@@ -1,6 +1,6 @@
 {
-	"id": "docs_homepage",
-	"descriptionTitle": "Docs ホーム・ページ・プラットフォーム・セクション",
+	"id": "docs_homepage_platform",
+	"title": "Bluemix プラットフォームの使用法",
 	"items": [{
 		"title": "CLI と開発ツール",
 		"description": "統合コマンド・ライン・インターフェースおよび CLI プラグインなどのツールにアクセスできます。",
@@ -12,10 +12,10 @@
 		"img": "homepage/images/manage_apps.svg",
 		"href": "manageapps/mngapps.html"
 	}, {
-		"title": "アカウント管理",
+		"title": "管理",
 		"description": "ユーザーのアクセス権限を含め、組織およびスペースを管理できます。",
 		"img": "homepage/images/admin.svg",
-		"href": "/admin/adminpublic.html"
+		"href": "admin/adminpublic.html"
 	}, {
 		"title": "モニターとロギング",
 		"description": "アプリケーション使用およびデータ・フローをたどって、デプロイメントの理解を深めることができます。",
@@ -32,7 +32,7 @@
 		"img": "homepage/images/troubleshoot.svg",
 		"href": "troubleshoot/troubleshoot.html"
 	}, {
-		"title": "プラットフォームのセキュリティー",
+		"title": "Bluemix のセキュリティー",
 		"description": "機能、インフラストラクチャー、運用のセキュリティーと、物理的セキュリティーを Bluemix がどのように提供するのかを理解できます。",
 		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
@@ -42,5 +42,6 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}]
+
 }
 

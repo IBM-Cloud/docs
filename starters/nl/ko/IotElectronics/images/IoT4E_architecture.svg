@@ -2175,7 +2175,7 @@
            id="tspan6702-6"
            y="425.04944"
            x="486.05368"
-           sodipodi:role="line">Mobile Client Access </tspan><tspan
+           sodipodi:role="line">모바일 클라이언트 액세스</tspan><tspan
            id="tspan4579"
            y="438.79944"
            x="486.05368"
@@ -2197,7 +2197,7 @@
            id="tspan6702-1"
            y="509.96609"
            x="61.470284"
-           sodipodi:role="line">소비자</tspan></text>
+           sodipodi:role="line">이용자</tspan></text>
       <rect
          style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="rect79371-1-6-6-9-8-7-3-5-1-4-5"
@@ -2768,7 +2768,7 @@
            id="tspan4945-3"
            y="125.51817"
            x="261.233"
-           sodipodi:role="line">가전제품</tspan><tspan
+           sodipodi:role="line">이용자 가전</tspan><tspan
            style="font-size:11.25000095px"
            id="tspan5228"
            y="139.58067"
@@ -2798,7 +2798,7 @@
            id="tspan5558"
            y="257.88394"
            x="260.74411"
-           sodipodi:role="line">IoT 소비자 액세스</tspan></text>
+           sodipodi:role="line">IoT 이용자 액세스</tspan></text>
     </g>
     <g
        id="g4161"
@@ -2885,7 +2885,7 @@
          y="226.88509"
          x="301.00787"
          sodipodi:role="line"
-         id="tspan7973-9">Rest  API</tspan><tspan
+         id="tspan7973-9">Rest API</tspan><tspan
          y="240.63509"
          x="301.00787"
          sodipodi:role="line"

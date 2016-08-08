@@ -43,8 +43,7 @@ copyright:
 1. 创建具有以下内容的 JavaScript 文件。对于此示例，文件名为“hello.js”。
   
   ```
-  function main() {
-      return {payload: 'Hello world'};
+function main() {return {payload: 'Hello world'};
   }
   ```
   {: codeblock}
@@ -54,22 +53,22 @@ copyright:
 2. 通过以下 JavaScript 函数创建操作。对于此示例，操作名为“hello”。
 
   ```
-  wsk action create hello hello.js
+wsk action create hello hello.js
   ```
   {: pre}
   ```
-  ok: created action hello
+ok: created action hello
   ```
   {: screen}
 
 3. 列出已创建的操作：
   
   ```
-  wsk action list
+wsk action list
   ```
   {: pre}
   ```
-  actions
+actions
   hello       private
   ```
   {: screen}
@@ -79,13 +78,12 @@ copyright:
 4. 创建操作后，可以使用“invoke”命令在 {{site.data.keyword.openwhisk_short}} 的云中运行该操作。可以通过在命令中指定标记以使用*阻塞*调用或*非阻塞*调用来调用操作。阻塞调用会等待操作运行至完成并返回结果。此示例使用的是阻塞参数 `--blocking`：
 
   ```
-  wsk action invoke --blocking hello
+wsk action invoke --blocking hello
   ```
   {: pre}
   ```
-  ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  {
-      "result": {
+ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
+  {"result": {
           "payload": "Hello world"
       },
       "status": "success",
@@ -103,16 +101,16 @@ copyright:
 5. 如果不是立即需要操作结果，可以省略 `--blocking` 标记以进行非阻塞调用。可以在以后使用激活标识来获取结果。请参阅以下示例：
 
   ```
-  wsk action invoke hello
+wsk action invoke hello
   ```
   {: pre}
   ```
-  ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
+ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: screen}
 
   ```
-  wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
+wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: pre}
   ```
@@ -125,11 +123,11 @@ copyright:
 6. 如果忘记了记录激活标识，那么可以获取激活列表，其中激活按从最新到最旧的顺序列出。运行以下命令来获取激活列表：
 
   ```
-  wsk activation list
+wsk activation list
   ```
   {: pre}
   ```
-  activations
+activations
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
@@ -143,8 +141,8 @@ copyright:
 1. 在操作中使用参数。例如，使用以下内容来更新“hello.js”文件：
   
   ```
-  function main(params) {
-      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+function main(params) {
+     return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -154,11 +152,11 @@ copyright:
 2. 将 `name` 和 `place` 参数值传递给 `hello` 操作时，更新并调用该操作。请参阅以下示例：
   
   ```
-  wsk action update hello hello.js
+wsk action update hello hello.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
   ```
   {: pre}
   ```
@@ -180,14 +178,14 @@ copyright:
 1. 使用 `--param` 选项更新操作以绑定参数值。
 
   ```
-  wsk action update hello --param place 'Vermont'
+wsk action update hello --param place 'Vermont'
   ```
   {: pre}
 
 2. 调用操作，但这次只传递 `name` 参数。
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie'
+wsk action invoke --blocking --result hello --param name 'Bernie'
   ```
   {: pre}
   ```
@@ -202,7 +200,7 @@ copyright:
 3. 调用操作，并同时传递 `name` 和 `place` 值。后者将覆盖绑定到操作的值。
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
   ```
   {: pre}
   ```
@@ -220,8 +218,7 @@ copyright:
 1. 将以下内容保存在名为 `asyncAction.js` 的文件中。
 
   ```
-  function main() {
-      setTimeout(function() {
+function main() {setTimeout(function() {
           return whisk.done({done: true});
       }, 20000);
       return whisk.async();
@@ -236,11 +233,11 @@ copyright:
 2. 运行以下命令来创建并调用操作：
 
   ```
-  wsk action create asyncAction asyncAction.js
+wsk action create asyncAction asyncAction.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result asyncAction
+wsk action invoke --blocking --result asyncAction
   ```
   {: pre}
   ```
@@ -255,18 +252,18 @@ copyright:
 3. 访存激活日志以查看完成激活所用的时间：
 
   ```
-  wsk activation list --limit 1 asyncAction
+wsk activation list --limit 1 asyncAction
   ```
   {: pre}
   ```
-  activations
+activations
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
   {: screen}
 
 
   ```
-  wsk activation get b066ca51e68c4d3382df2d8033265db0
+wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
  ```
@@ -289,11 +286,10 @@ copyright:
 以下示例调用 Yahoo Weather 服务来获取特定位置的当前天气状况。 
 
 1. 将以下内容保存在名为 `weather.js` 的文件中。
+
   ```
-    var request = require('request');
-    
-    function main(msg) {
-        var location = msg.location || 'Vermont';
+var request = require('request');function main(params) {
+     var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
     
         request.get(url, function(error, response, body) {
@@ -302,9 +298,7 @@ copyright:
             var temperature = condition.temp;
             var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
             whisk.done({msg: output});
-        });
-    
-        return whisk.async();
+        });return whisk.async();
     }
   ```
   {: codeblock}
@@ -315,11 +309,11 @@ copyright:
 
 2. 运行以下命令来创建并调用操作：
   ```
-  wsk action create weather weather.js
+wsk action create weather weather.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   ```
   {: pre}
   ```
@@ -339,11 +333,11 @@ copyright:
 1. 显示 `/whisk.system/util` 包中的操作。
   
   ```
-  wsk package get --summary /whisk.system/util
+wsk package get --summary /whisk.system/util
   ```
   {: pre}
   ```
-  package /whisk.system/util
+package /whisk.system/util
    action /whisk.system/util/cat: Concatenate array of strings
    action /whisk.system/util/head: Filter first K array elements and discard rest
    action /whisk.system/util/date: Get current date and time
@@ -357,7 +351,7 @@ copyright:
 2. 创建操作序列，使一个操作的结果作为自变量传递给下一个操作。
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
+wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -366,7 +360,7 @@ copyright:
 3. 调用操作序列之前，请创建名为“haiku.txt”的文本文件，其中包含以下几行文本：
 
   ```
-  Over-ripe sushi,
+Over-ripe sushi,
   The Master
   Is full of regret.
   ```
@@ -375,7 +369,7 @@ copyright:
 4. 调用操作：
   
   ```
-  wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
+wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
   ```
   {: pre}
   ```
@@ -406,15 +400,13 @@ copyright:
 ### 创建并调用操作
 {: #openwhisk_actions_invoke_swift}
 
-操作仅仅是顶级 Swift 函数。例如，创建名为
-`hello.swift` 的文件并包含以下内容：
+操作仅仅是顶级 Swift 函数。例如，创建名为 `hello.swift` 的文件并包含以下内容：
 
 ```
-  func main(args: [String:Any]) -> [String:Any] {
-      if let name = args["name"] as? String {
+func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
           return [ "greeting" : "Hello \(name)!" ]
       } else {
-          return [ "greeting" : "Hello stranger!" ]
+return [ "greeting" : "Hello stranger!" ]
       }
   }
 ```
@@ -424,15 +416,12 @@ Swift 操作始终会使用一个字典并生成一个字典。
 
 可以通过此函数创建名为 `helloSwift` 的 {{site.data.keyword.openwhisk_short}} 操作，如下所示：
 
-
 ```
 wsk action create helloSwift hello.swift
 ```
 {: pre}
 
-使用命令行和 `.swift` 源文件时，
-无需指定您要创建 Swift 操作（与 JavaScript 操作相反）；
-该工具会根据文件扩展名来进行确定。
+使用命令行和 `.swift` 源文件时，无需指定您要创建 Swift 操作（与 JavaScript 操作相反）；该工具会根据文件扩展名来进行确定。
 
 Swift 操作的操作调用与 JavaScript 操作的操作调用相同：
 
@@ -448,8 +437,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 ```
 {: screen}
 
-**注意：**Swift 操作在 Linux 环境中运行。Swift on Linux 仍在开发中；{{site.data.keyword.openwhisk_short}}
-通常会使用最新可用发行版，但此版本不一定稳定。此外，用于 {{site.data.keyword.openwhisk_short}} 的 Swift 版本可能与 Mac OS 上 Xcode 的稳定发行版中的 Swift 版本不一致。
+**注意：**Swift 操作在 Linux 环境中运行。Swift on Linux 仍在开发中；{{site.data.keyword.openwhisk_short}} 通常会使用最新可用发行版，但此版本不一定稳定。此外，用于 {{site.data.keyword.openwhisk_short}} 的 Swift 版本可能与 Mac OS 上 Xcode 的稳定发行版中的 Swift 版本不一致。
 
 
 
@@ -467,20 +455,20 @@ wsk action invoke --blocking --result helloSwift --param name World
 1. 下载 Docker 框架。可以使用 CLI 进行下载，如下所示：
 
   ```
-  wsk sdk install docker
+wsk sdk install docker
   ```
   {: pre}
   ```
-  现在，Docker 框架已安装在当前目录中。
-  ```
+现在，Docker 框架已安装在当前目录中。
+```
   {: screen}
 
   ```
-  ls dockerSkeleton/
+ls dockerSkeleton/
   ```
   {: pre}
   ```
-  Dockerfile      README.md       buildAndPush.sh client          server
+Dockerfile      README.md       buildAndPush.sh client          server
   ```
   {: screen}
 
@@ -489,16 +477,15 @@ wsk action invoke --blocking --result helloSwift --param name World
 2. 在 Docker 框架中设置定制二进制文件。该框架已经包含可以使用的 C 程序。
 
   ```
-  cat ./dockerSkeleton/client/example.c
+cat ./dockerSkeleton/client/example.c
   ```
   {: pre}
   {: pre}
   ```
   #include <stdio.h>
   
-  int main(int argc, char *argv[]) {
-      printf("Hello %s from arbitrary C program!\n",
-             (argc == 1) ? "anonymous" : argv[1]);
+  int main(int argc, char *argv[]) {printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
+             (argc == 1) ? "undefined" : argv[1]);
   }
   ```
   {: screen}
@@ -508,15 +495,15 @@ wsk action invoke --blocking --result helloSwift --param name World
 3. 使用提供的脚本来构建 Docker 映像并进行上传。必须首先运行 `docker login` 以进行认证，然后使用所选映像名称来运行脚本。
 
   ```
-  docker login -u janesmith -p janes_password
+docker login -u janesmith -p janes_password
   ```
   {: pre}
   ```
-  cd dockerSkeleton
+cd dockerSkeleton
   ```
   {: pre}
   ```
-  ./buildAndPush.sh janesmith/blackboxdemo
+./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
 
@@ -525,20 +512,33 @@ wsk action invoke --blocking --result helloSwift --param name World
 4. 要通过 Docker 映像而不是通过提供的 JavaScript 文件来创建操作，请添加 `--docker`，并将 JavaScript 文件名替换为 Docker 映像名称。
 
   ```
-  wsk action create --docker example janesmith/blackboxdemo
+wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result example --param payload Rey
+wsk action invoke --blocking --result example --param payload Rey
   ```
   {: pre}
   ```
   {
-      "msg": "Hello Rey from arbitrary C program!\n"
+      "args": {
+          "payload": "Rey"
+      },
+      "msg": "Hello from arbitrary C program!"
   }
   ```
   {: screen}
 
+5. 要更新 Docker 操作，请运行 `buildAndPush.sh` 以刷新 Docker Hub 上的映像，然后您必须运行 `wsk action update` 以使系统访存新映像。新的调用将使用新映像而非具有旧代码的暖映像开始。
+
+  ```
+./buildAndPush.sh janesmith/blackboxdemo
+  ```
+  {: pre}
+  ```
+  wsk action update --docker example janesmith/blackboxdemo
+  ```
+  {: pre}
 
 您可以在[参考](./openwhisk_reference.html#openwhisk_ref_docker)部分中找到有关创建 Docker 操作的更多信息。
 
@@ -552,7 +552,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 1. 在 shell 中发出以下命令：
   ```
-  wsk activation poll
+wsk activation poll
   ```
   {: pre}
 
@@ -561,11 +561,11 @@ wsk action invoke --blocking --result helloSwift --param name World
 2. 切换到其他窗口，并调用操作：
 
   ```
-  wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
+wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
   ```
   {: pre}
   ```
-  ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
+ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
   ```
   {: screen}
 
@@ -586,20 +586,20 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 1. 运行以下命令来删除操作：
   ```
-  wsk action delete hello
+wsk action delete hello
   ```
   {: pre}
   ```
-  ok: deleted hello
+ok: deleted hello
   ```
   {: screen}
 
 2. 验证该操作是否不再出现在操作列表中。
   ```
-  wsk action list
+wsk action list
   ```
   {: pre}
   ```
-  actions
+actions
   ```
   {: screen}

@@ -48,9 +48,9 @@ copyright:
 
 | 完整名稱 | 別名 | 名稱空間 | 套件 | 名稱 |
 | --- | --- | --- | --- | --- |
-| `/whisk.system/cloudant/read` | - | `/whisk.system` | `cloudant` | `read` |
+| `/whisk.system/cloudant/read` |  | `/whisk.system` | `cloudant` | `read` |
 | `/myOrg/video/transcode` | `video/transcode` | `/myOrg` | `video` | `transcode` |
-| `/myOrg/filter` | `filter` | `/myOrg` | - | `filter` |
+| `/myOrg/filter` | `filter` | `/myOrg` |  | `filter` |
 
 在其他位置中，使用 {{site.data.keyword.openwhisk_short}} CLI 時，將會使用此命名方法。
 
@@ -116,11 +116,11 @@ copyright:
 - *activationId*：啟動 ID。
 - *start* 及 *end*：記錄啟動開始及結束的時間戳記。值為 [UNIX 時間格式](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15)。
 - *namespace* 及 `name`：實體的名稱空間及名稱。
-- *logs*：字串陣列，內含動作在其啟動期間所產生的日誌。每一個陣列元素都對應至動作之 stdout 或 stderr 的行輸出，並且包括日誌輸出的時間及串流。結構如下：```TIMESTAMP STREAM: LOG_OUTPUT```。
-- *response*：定義索引鍵 `success`、`status` 及 `result` 的定義檔：
+- *logs*：字串陣列，內含動作在其啟動期間所產生的日誌。每一個陣列元素都對應至動作之 stdout 或 stderr 的行輸出，並且包括日誌輸出的時間及串流。結構如下：`TIMESTAMP STREAM: LOG_OUTPUT`。
+- *response*：定義索引鍵 `success`、`status` 及 `result` 的字典：
   - *status*：啟動結果，可能是下列其中一個值："success"、"application error"、"action developer error"、"whisk internal error"。
   - *success*：假設並且只有在狀態為 `"success"` 時，才會為 `true`
-- *result*：包含啟動結果的定義檔。如果啟動成功，這會包含動作所傳回的值。如果啟動失敗，`result` 一定會包含 `error` 索引鍵，通常還會有失敗的說明。
+- *result*：包含啟動結果的字典。如果啟動成功，這會包含動作所傳回的值。如果啟動失敗，`result` 一定會包含 `error` 索引鍵，通常還會有失敗的說明。
 
 
 ## JavaScript 動作
@@ -151,8 +151,8 @@ JavaScript 函數常見於在回呼函數中繼續執行，即使是在傳回之
 
 如果 main 函數在下列其中一種狀況下結束，則 JavaScript 動作的啟動是**同步**：
 
-- main 函數結束，而未執行 ```return``` 陳述式。
-- main 函數結束的原因為執行會傳回任何值（```whisk.async()``` *除外*）的 ```return`` 陳述式。
+- main 函數結束，而未執行 `return` 陳述式。
+- main 函數結束，因為所執行的 `return` 陳述式傳回 `whisk.async()` *除外* 的任何值。
 
 以下是兩個同步動作範例。
 
@@ -177,9 +177,9 @@ function main(params) {
 ```
 {: codeblock}
 
-如果 main 函數結束的原因為呼叫 ```return whisk.async();```，則 JavaScript 動作的啟動是**非同步**。在此情況下，除非動作執行下列其中一項，否則系統會假設動作仍在執行中：
-- ```return whisk.done();```
-- ```return whisk.error();```
+如果 main 函數因為呼叫 `return whisk.async();` 而結束，則 JavaScript 動作的啟動為**非同步**。在此情況下，除非動作執行下列其中一項，否則系統會假設動作仍在執行中：
+- `return whisk.done();`
+- `return whisk.error();`
 
 以下是非同步執行的動作範例。
 
@@ -195,7 +195,7 @@ function main() {setTimeout(function() {
 某個動作在部分輸入上可能為同步，但在其他輸入上則為非同步。以下是範例。
 
 ```
-  function main(params) {
+function main(params) {
      if (params.payload) {
          setTimeout(function() {
             return whisk.done({done: true});
@@ -214,12 +214,12 @@ function main() {setTimeout(function() {
 
 ### 其他 SDK 方法
 
-`whisk.invoke()` 函數會呼叫另一個動作。它接受定義下列參數的定義檔作為引數：
+`whisk.invoke()` 函數會呼叫另一個動作。它接受定義下列參數的字典作為引數：
 
 - *name*：要呼叫之動作的完整名稱。
 - *parameters*：JSON 物件，代表所呼叫動作的輸入。如果省略，預設值為空的物件。
 - *apiKey*：用來呼叫動作的授權金鑰。
-預設值為 `whisk.getAuthKey()`。 
+預設值為 `whisk.getAuthKey()`。
 - *blocking*：應該以封鎖還是非封鎖模式呼叫動作。預設值為 `false`，這指出非封鎖呼叫。
 - *next*：要在呼叫完成時執行的選用回呼函數。
 
@@ -227,7 +227,7 @@ function main() {setTimeout(function() {
 
 - 如果呼叫成功，則 `error` 是 `false`，如果失敗，則為實際的值，這通常是說明錯誤的字串。
 - 發生錯誤時，可能是未定義 `activation`（視失敗模式而定）。
-- 若已定義，則 `activation` 是包含下列欄位的定義檔：
+- 若已定義，則 `activation` 是包含下列欄位的字典：
   - *activationId*：啟動 ID：
   - *result*：如果已使用封鎖模式來呼叫動作，則動作結果為 JSON 物件，否則為 `undefined`。
 
@@ -242,14 +242,14 @@ function main() {setTimeout(function() {
 
 - 如果發動成功，則 `error` 是 `false`，如果失敗，則為實際的值，這通常是說明錯誤的字串。
 - 發生錯誤時，可能是未定義 `activation`（視失敗模式而定）。
-- 若已定義，則 `activation` 是 `activationId` 欄位包含啟動 ID 的定義檔。
+- 若已定義，則 `activation` 是 `activationId` 欄位包含啟動 ID 的字典。
 
 `whisk.getAuthKey()` 函數會傳回用來執行動作的授權金鑰。您通常不需要直接呼叫此函數，因為 `whisk.invoke()` 及 `whisk.trigger()` 函數會隱含地使用它。
 
 ### 運行環境
 {: #openwhisk_ref_runtime_environment}
 
-JavaScript 動作是在具有可供動作使用的下列套件的 Node.js 0.12.9 版環境中執行：
+JavaScript 動作是在 Node.js 0.12.14 版環境中執行，該環境中含有可供動作使用的下列套件：
 
 - apn
 - async
@@ -300,36 +300,41 @@ Docker 動作是在 Docker 容器中執行使用者提供的二進位檔。二�
 
 Docker 架構是建置 {{site.data.keyword.openwhisk_short}} 相容 Docker 映像檔的一種簡便方式。您可以使用 `wsk sdk install docker` CLI 指令來安裝架構。
 
-應該將主要二進位程式複製到 `dockerSkeleton/client/clientApp` 檔。任何伴隨的檔案或程式庫都可以位於 `dockerSkeleton/client` 目錄中。
+應該將主要二進位程式複製到 `dockerSkeleton/client/action` 檔。任何伴隨的檔案或程式庫都可以位於 `dockerSkeleton/client` 目錄中。
 
 透過修改 `dockerSkeleton/Dockerfile`，也可以包含任何編譯步驟或相依關係。例如，如果動作是 Python Script，您可以安裝 Python。
 
 
 ## REST API
+{: #openwhisk_ref_restapi}
 
 系統中的所有功能都可透過 REST API 來使用。其中有動作、觸發程式、規則、套件、啟動和名稱空間的集合和實體端點。
 
 以下是集合端點：
 
-- `https://$BASEURL/api/v1/namespaces`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/actions`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/rules`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/packages`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/activations`
+- `https://{BASE URL}/api/v1/namespaces`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+
+`{BASE URL}` 是 OpenWhisk API 主機名稱（亦即 openwhisk.ng.bluemix.net、172.17.0.1 等等）
+
+針對 `{namespace}`，字元 `_` 可以用來指定使用者的 *預設名稱空間*（亦即，電子郵件位址）
 
 您可以在集合端點上執行 GET 要求，以提取集合中的實體清單。
 
 每一種實體類型都有實體端點：
 
-- `https://$BASEURL/api/v1/namespaces/{namespace}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{activationName}`
 
-名稱空間和啟動端點僅支援 GET 要求。動作、觸發程式、規則和套件端點可支援 GET、PUT 及 DELETE 要求。動作、觸發程式和規則的端點也可支援 POST 要求（用來呼叫動作和觸發程式，以及啟用或停用規則）。如需詳細資料，請參閱 [API 參考資料](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json)。
+名稱空間和啟動端點僅支援 GET 要求。動作、觸發程式、規則和套件端點可支援 GET、PUT 及 DELETE 要求。動作、觸發程式和規則的端點也可支援 POST 要求（用來呼叫動作和觸發程式，以及啟用或停用規則）。如需詳細資料，請參閱 [API 參考資料](https://new-console.{DomainName}/apidocs/98)。
 
 所有 API 都是透過 HTTP 基本鑑別進行保護。基本鑑別認證位於 `~/.wskprops` 檔案的 `AUTH` 內容中，以冒號區隔。您也可以在 [CLI 配置步驟](../README.md#setup-cli)中擷取這些認證。
 
@@ -359,6 +364,9 @@ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whi
 ```
 {: screen}
 
+OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk 會以「跨原點資源共用」標頭來回應 `OPTIONS` 要求。目前可允許所有原點（亦即，Access-Control-Allow-Origin 為 "`*`"），而 Access-Control-Allow-Header 會產生 Authorization 和 Content-Type。
+
+**由於 OpenWhisk 目前針對每個帳戶僅支援一個金鑰，因此不建議在簡單實驗之外使用 CORS。您的金鑰需要內嵌在用戶端程式碼中，以公開顯示。請謹慎使用。**
 
 ## 系統限制
 {: #openwhisk_syslimits}
@@ -383,13 +391,29 @@ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whi
 * 使用者可以在建立動作時變更此限制。
 * 配置給容器的記憶體不能超過限制。
 
-### 每個名稱空間 #並行呼叫 (#)（預設值：100）
+### 每個動作構件 (MB)（固定：1MB）
+* 動作的程式碼大小上限為 1MB。
+* 建議 JavaScript 動作使用工具，將所有原始碼（包括相依關係）連結成單一組合檔。
+
+### 每個啟動有效負載大小 (MB)（固定：1MB）
+* POST 內容大小，加上為動作呼叫或觸發程式發動而附帶的任何參數，上限為 1MB。
+
+### 每個名稱空間並行呼叫（預設值：100）
 * 目前針對名稱空間所處理的啟動次數不能超過 100。
 * Whisk 可以在 consul kvstore 中靜態配置預設限制。
 * 使用者目前無法變更限制。
 
-
-### 每分鐘/小時的呼叫次數 (#)（固定：120/3600）
+### 每分鐘/小時的呼叫次數（固定：120/3600）
 * 速率限制 N 設定為 120/3600，並限制一分鐘/小時的時間範圍內的動作呼叫次數。
 * 使用者無法在建立動作時變更此限制。
 * 超過此限制的 CLI 呼叫會收到與 TOO_MANY_REQUESTS 對應的錯誤碼。
+
+### 每個 Docker 動作開啟檔案 ulimit（固定：64:64）
+* 開啟檔案的數量上限為 64（這同時套用於硬性和軟性限制）。
+* docker run 指令使用引數 `--ulimit nofile=64:64`。
+* 如需開啟檔案 ulimit 的相關資訊，請參閱 [docker run](https://docs.docker.com/engine/reference/commandline/run) 文件。
+
+### 每個 Docker 動作程序數 ulimit（固定：512:512）
+* 可供使用者使用的程序數上限為 512（這同時套用於硬性和軟性限制）。
+* docker run 指令使用引數 `--ulimit nproc=512:512`。
+* 如需程序數上限 ulimit 的相關資訊，請參閱 [docker run](https://docs.docker.com/engine/reference/commandline/run) 文件。

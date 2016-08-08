@@ -50,9 +50,9 @@ Bluemix에서 조직+영역 쌍은 {{site.data.keyword.openwhisk_short}} 네임�
 
 | 완전한 이름 | 별명 | 네임스페이스 | 패키지 | 이름 |
 | --- | --- | --- | --- | --- |
-| `/whisk.system/cloudant/read` | - | `/whisk.system` | `cloudant` | `read` |
+| `/whisk.system/cloudant/read` |  | `/whisk.system` | `cloudant` | `read` |
 | `/myOrg/video/transcode` | `video/transcode` | `/myOrg` | `video` | `transcode` |
-| `/myOrg/filter` | `filter` | `/myOrg` | - | `filter` |
+| `/myOrg/filter` | `filter` | `/myOrg` |  | `filter` |
 
 다른 위치에서 {{site.data.keyword.openwhisk_short}} CLI를 사용할 때 이 명명 체계를 사용할 것입니다.
 
@@ -117,7 +117,7 @@ Bluemix에서 조직+영역 쌍은 {{site.data.keyword.openwhisk_short}} 네임�
 
 - *activationId*: 활성화 ID입니다.
 - *시작* 및 *종료*: 활성화의 시작 및 종료를 기록하는 시간소인입니다. 값은 [UNIX 시간 형식](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15)으로 표시됩니다.
-- *네임스페이스* 및 `이름`: 엔티티의 네임스페이스 및 이름입니다.
+- *네임스페이스* 및 `name`: 엔티티의 네임스페이스 및 이름입니다.
 - *로그*: 활성화 동안 조치에 의해 생성된 로그가 있는 문자열의 배열입니다. 각 배열 요소는 조치에 의한 stdout 또는 stderr에 대한 행 출력에 해당되며 로그 출력의 시간 및 스트림을 포함합니다. 구조는 다음과 같습니다. ```TIMESTAMP STREAM: LOG_OUTPUT```.
 - *응답*: `success`, `status` 및 `result` 키를 정의하는 사전입니다.
   - *상태*: "성공", "애플리케이션 오류", "조치 개발자 오류", "whisk 내부 오류" 값 중 하나일 수 있는 활성화 결과입니다.
@@ -153,8 +153,8 @@ JavaScript 함수가 리턴 후에도 콜백 짝수에서 계속 실행되는 �
 
 다음 조건 중 하나 아래에서 기본 함수가 종료되면 JavaScript 조치의 활성화가 **동기**입니다.
 
-- ```return``` 명령문을 실행하지 않고 기본 함수가 종료됩니다.
-- 임의의 값 *except* ```whisk.async()```를 리턴하는 ```return`` 명령문을 실행하여 기본 함수가 종료됩니다.
+- 기본 함수는 ```return``` 명령문을 실행하지 않아도 존재합니다.
+- 기본 함수는 ```return``` 명령문을 실행하여 존재하며 이는 다음 임의의 값을 리턴합니다. *except* ```whisk.async()```.
 
 다음은 동기 조치의 두 가지 예입니다.
 
@@ -179,7 +179,7 @@ function main(params) {
 ```
 {: codeblock}
 
-```return whisk.async();```를 호출하여 기본 함수가 종료되면 JavaScript 조치의 활성화가 **비동기**입니다. 이 경우, 시스템은 조치가 다음 중 하나를 실행할 때까지 조치가 여전히 실행 중이라고 가정합니다.
+JavaScript 조치의 활성화는 다음을 호출하여 기본 함수가 존재하는 경우 **비동기**입니다. ```return whisk.async();```.  이 경우, 시스템은 조치가 다음 중 하나를 실행할 때까지 조치가 여전히 실행 중이라고 가정합니다.
 - ```return whisk.done();```
 - ```return whisk.error();```
 
@@ -197,7 +197,7 @@ function main() {setTimeout(function() {
 조치가 일부 입력에서는 동기적으로, 다른 입력에서는 비동기적으로 실행될 수 있습니다. 다음은 그에 대한 예입니다.
 
 ```
-  function main(params) {
+function main(params) {
      if (params.payload) {
          setTimeout(function() {
             return whisk.done({done: true});
@@ -221,7 +221,7 @@ function main() {setTimeout(function() {
 - *name*: 호출할 조치의 완전한 이름입니다.
 - *parameters*: 호출된 조치에 대한 입력을 나타내는 JSON 오브젝트입니다. 생략하는 경우, 기본값은 비어 있는 오브젝트입니다.
 - *apiKey*: 조치를 호출할 때 사용할 권한 키입니다.
-기본값은 `whisk.getAuthKey()`입니다. 
+기본값은 `whisk.getAuthKey()`입니다.
 - *blocking*: 조치가 블로킹 또는 비블로킹 모드로 호출되어야 하는지 나타냅니다. 기본값은 비블로킹 호출을 나타내는 `false`입니다.
 - *next*: 호출이 완료될 때 실행되는 선택적 콜백 함수입니다.
 
@@ -251,7 +251,7 @@ function main() {setTimeout(function() {
 ### 런타임 환경
 {: #openwhisk_ref_runtime_environment}
 
-JavaScript 조치는 조치에 의해 사용 가능한 다음 패키지와 함께 Node.js 버전 0.12.9 환경에서 실행됩니다.
+JavaScript 조치는 조치에서 사용될 수 있는 다음 패키지와 함께 Node.js 버전 0.12.14 환경에서 실행됩니다.
 
 - apn
 - async
@@ -302,36 +302,42 @@ Docker 조치는 Docker 컨테이너 내의 사용자 제공 2진을 실행합�
 
 Docker 스켈레톤은 {{site.data.keyword.openwhisk_short}}-호환 가능 Docker 이미지를 구현하는 편리한 방법입니다. `wsk sdk install docker` CLI 명령을 사용하여 스켈레톤을 설치할 수 있습니다.
 
-기본 2진 프로그램은 `dockerSkeleton/client/clientApp` 파일에 복사되어야 합니다. 모든 동반 파일 또는 라이브러리는 `dockerSkeleton/client` 디렉토리에 상주할 수 있습니다.
+기본 2진 프로그램은 `dockerSkeleton/client/action` 파일에 복사되어야 합니다. 모든 동반 파일 또는 라이브러리는 `dockerSkeleton/client` 디렉토리에 상주할 수 있습니다.
 
 또한 `dockerSkeleton/Dockerfile`을 수정하여 모든 컴파일 단계 또는 종속 항목을 포함시킬 수 있습니다. 예를 들어, 조치가 Python 스크립트이면 Python을 설치할 수 있습니다.
 
 
 ## REST API
+{: #openwhisk_ref_restapi}
 
 시스템의 모든 기능은 REST API를 통해 사용 가능합니다. 조치, 트리거, 규칙, 패키지, 활성화 및 네임스페이스에 대해 콜렉션 및 엔티티 엔드포인트가 있습니다. 
 
 다음은 콜렉션 엔드포인트입니다. 
 
-- `https://$BASEURL/api/v1/namespaces`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/actions`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/rules`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/packages`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/activations`
+- `https://{BASE URL}/api/v1/namespaces`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+
+`{BASE URL}`은 OpenWhisk API 호스트 이름입니다(즉, openwhisk.ng.bluemix.net, 172.17.0.1 등).
+
+`{namespace}`의 경우, `_` 문자를 사용자의 *기본
+네임스페이스*(즉, 이메일 주소)를 지정하는 데 사용할 수 있습니다.
 
 콜렉션 엔드포인트에서 GET 요청을 수행하여 콜렉션에서 엔티티의 목록을 페치할 수 있습니다. 
 
 각 엔티티 유형마다 엔티티 엔드포인트가 있습니다. 
 
-- `https://$BASEURL/api/v1/namespaces/{namespace}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{activationName}`
 
-네임스페이스 및 활성화 엔드포인트는 GET 요청만 지원합니다. 조치, 트리거, 규칙 및 패키지 엔드포인트는 GET, PUT 및 DELETE 요청을 지원합니다. 조치, 트리거 및 규칙의 엔드포인트는 POST 요청도 지원하며, 이는 조치 및 트리거를 호출하고 규칙을 사용 또는 사용 안하는 데 사용됩니다. 세부사항은 [API 참조](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json)를 참조하십시오. 
+네임스페이스 및 활성화 엔드포인트는 GET 요청만 지원합니다. 조치, 트리거, 규칙 및 패키지 엔드포인트는 GET, PUT 및 DELETE 요청을 지원합니다. 조치, 트리거 및 규칙의 엔드포인트는 POST 요청도 지원하며, 이는 조치 및 트리거를 호출하고 규칙을 사용 또는 사용 안하는 데 사용됩니다. 세부사항은 [API 참조](https://new-console.{DomainName}/apidocs/98)를 참조하십시오. 
 
 모든 API는 HTTP 기본 인증으로 보호됩니다. 기본 인증 신임 정보는 콜론으로 구분되어 `~/.wskprops` 파일의 `AUTH` 특성에 있습니다. [CLI 구성 단계](../README.md#setup-cli)에서 이 신임 정보를 검색할 수도 있습니다. 
 
@@ -361,6 +367,9 @@ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whi
 ```
 {: screen}
 
+OpenWhisk API는 웹 클라이언트에서 요청-응답 호출을 지원합니다. OpenWhisk는 교차-원본 리소스 공유 헤더가 포함된 `OPTIONS` 요청에 응답합니다. 현재 모든 원본이 허용되고(즉, 액세스-제어-허용-원본이 "`*`"임) 액세스-제어-허용-헤더가 권한 및 컨텐츠-유형을 산출합니다.
+
+**OpenWhisk가 현재 계정마다 하나의 키만 지원하여, 단순 시범을 넘어 CORS를 사용하도록 권장하지 않습니다. 사용자의 키가 클라이언트 측 코드에서 임베드되어 공용으로 표시되어야 합니다. 주의하여 사용하십시오.**
 
 ## 시스템 한계
 {: #openwhisk_syslimits}
@@ -385,13 +394,29 @@ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whi
 * 사용자가 조치를 작성할 때 한계를 변경할 수 있습니다.
 * 컨테이너에 한계보다 더 많은 메모리가 할당될 수 없습니다.
 
-### 네임스페이스당 #동시 호출(#)(기본값: 100)
+### 조치 아티팩트당(MB)(고정값: 1MB)
+* 조치의 최대 코드 크기는 1MB입니다.
+* JavaScript 조치에서 종속 항목을 포함하여 모든 소스 코드를 단일 번들된 파일로 연결하는 데 도구를 사용하도록 권장합니다.
+
+### 활성화 페이로드 크기당(MB)(고정값: 1MB)
+* 조치 호출 또는 트리거 실행에 대해 임의의 손질된 매개변수와 최대 POST 컨텐츠 크기는 1MB입니다.
+
+### 네임스페이스 동시 호출당(기본값: 100)
 * 네임스페이스에 대해 동시에 처리되는 활성화의 수가 100을 초과할 수 없습니다.
 * 기본 한계는 consul kvstore의 whisk에 의해 정적으로 구성될 수 있습니다.
 * 현재 사용자가 한계를 변경할 수 없습니다.
 
-
-### 분/시간당 호출(#)(고정됨: 120/3600)
+### 분/시간당 호출 수(고정값: 120/3600)
 * 비율 한계 N은 120/3600으로 설정되어 1분/시간 창에서 조치 호출의 수를 제한합니다.
 * 사용자가 조치를 작성할 때 한계를 변경할 수 없습니다.
 * 이 한계를 초과하는 호출은 TOO_MANY_REQUESTS에 해당되는 오류 코드를 수신합니다.
+
+### Docker 조치 오픈 파일 상한당(고정값: 64:64)
+* 오픈 파일의 최대 수는 64입니다(이는 하드 및 소프트 한계 둘 다에 적용됨).
+* docker run 명령에서는 `--ulimit nofile=64:64` 인수를 사용합니다.
+* 오픈 파일의 상한에 대한 자세한 정보는 [docker run](https://docs.docker.com/engine/reference/commandline/run) 문서를 참조하십시오.
+
+### 프로세스 상한의 Docker 조치 수당(고정값: 512:512)
+* 사용자에게 사용 가능한 프로세스의 최대 수는 512입니다(이는 하드 및 소프트 한계 둘 다에 적용됨).
+* docker run 명령에서는 `--ulimit nproc=512:512` 인수를 사용합니다.
+* 프로세스의 최대 수에 대해 상한에 대한 자세한 정보는 [docker run](https://docs.docker.com/engine/reference/commandline/run) 문서를 참조하십시오.

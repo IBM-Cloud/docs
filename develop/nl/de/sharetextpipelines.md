@@ -102,15 +102,15 @@ stages:
 Stage: 
 ```
 ---
-name: <Name>
+name: <name>
 [inputs:
-	<Eingabefolge>]
-[triggers:   
-	<Auslöserfolge>]
-[properties:   
-	<Eigenschaftenfolge>]
-[jobs:   
-	<Jobfolge>]
+	<sequence of inputs>]
+[triggers:
+	<sequence of triggers>]
+[properties:
+	<sequence of properties>]
+[jobs:
+	<sequence of jobs>]
 ```
 {: codeblock} 
 

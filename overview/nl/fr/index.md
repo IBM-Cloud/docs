@@ -493,7 +493,7 @@ de générer une application mobile riche.
 Tout d'abord, votre développeur d'intégration crée l'application de back end mobile dans {{site.data.keyword.Bluemix_notm}}. Il fait appel au conteneur boilerplate Mobile Cloud utilisant le contexte d'exécution Node.js qu'il connaît le mieux.
 
 Puis, en utilisant le service Cloud Integration dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, il expose une API via un connecteur
-sécurisé. Le développeur d'application télécharge le connecteur sécurisé et l'installe sur site, afin d'activer la communication sécurisée entre son interface de programme d'application et la base de données. Après avoir créé le noeud final de base de données, il peut consulter tous les schémas et extraire les tables qu'il veut exposer à l'application en tant
+sécurisé. Le développeur d'application télécharge le connecteur sécurisé et l'installe sur site, afin d'activer la communication sécurisée entre son  interface de programme d'application et la base de données. Après avoir créé le noeud final de base de données, il peut consulter tous les schémas et extraire les tables qu'il veut exposer à l'application en tant
 qu'API.
 
 Il ajoute ensuite le service Push pour distribuer des notifications mobiles aux clients intéressés. Il ajoute également un service de partenaire commercial pour écrire un tweet lorsqu'un nouvel enregistrement client est créé avec une interface de programme d'application Twitter.

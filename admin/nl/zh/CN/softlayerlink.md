@@ -19,7 +19,7 @@ copyright:
 
 #链接 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 缴费帐户
 {: #softlayerlink}
-*上次更新时间：2016 年 6 月 10 日*
+*上次更新时间：2016 年 7 月 7 日*
 {: .last-updated}
 
 现在，您可以链接 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 缴费帐户。当您链接帐户时，您可以通过 SoftLayer，同时对 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 资源进行记帐。如果您具有现有的帐户，那么通过 SoftLayer 对 {{site.data.keyword.Bluemix_notm}} 进行记帐会在链接帐户之后启动的新记帐周期生效。
@@ -27,9 +27,11 @@ copyright:
 
 **重要信息：**{{site.data.keyword.Bluemix_notm}} 中的所有链接帐户都必须是“现买现付”帐户。您可以创建新的“现买现付”帐户，或者链接现有的“现买现付”帐户。或者，您可以链接现有的试用帐户，但是它将升级到“现买现付”帐户。  
 
-链接帐户之后，您仍可以在 {{site.data.keyword.Bluemix_notm}} 用户界面中，监视 {{site.data.keyword.Bluemix_notm}} 资源的使用。但是，这些资源的帐单现在将出现在 SoftLayer 发票上。
+链接帐户之后，您可以轻松地在帐户之间切换。您仍可以在 {{site.data.keyword.Bluemix_notm}} 用户界面中，监视 {{site.data.keyword.Bluemix_notm}} 资源的使用。但是，这些资源的帐单现在将出现在 SoftLayer 发票上。
 
-虽然您的帐户帐单将会链接，且您将能够轻松地在帐户之间切换，但是您仍需要对 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 具有不同的标识。继续对 SoftLayer 产品和服务使用 SoftLayer 标识，对 {{site.data.keyword.Bluemix_notm}} 产品和服务使用 IBM 标识。 
+虽然会链接您的帐户帐单，但是根据认证 SoftLayer 帐户的方法，您的登录标识会有所不同：
+* 对于 SoftLayer 帐户中未使用 IBM 标识进行认证的用户，继续对 SoftLayer 产品和服务使用 SoftLayer 标识，对 {{site.data.keyword.Bluemix_notm}} 产品和服务使用 IBM 标识。
+* 对于 SoftLayer 帐户中使用 IBM 标识进行认证的用户，使用 IBM 标识来访问 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 帐户。
 
 **注意：**帐户链接之后即无法对它们取消链接。  
 
@@ -84,9 +86,9 @@ copyright:
 3. 通过复制服务凭证并将它们添加到应用程序，设置服务以与现有代码一起运行。
 4. 更新应用程序之后，在 SoftLayer 基础架构上部署新版本。
 
-通过在 SoftLayer 中从应用程序调用 Watson API，使它们更具个性化，您可以获得*洞察和认知*知识。或者，使用*数据和分析*服务，以对您的应用程序使用高性能分析。或者，选择数据库即服务，在这里您可以将管理留给 {{site.data.keyword.Bluemix_notm}}。
+通过在 SoftLayer 中从应用程序调用 Watson API，使它们更具个性化，您可以获得*洞察和认知*知识。或者，使用*数据和分析*服务，以对您的应用程序使用高性能分析。或者，选择数据库即服务，在这里您可以让 {{site.data.keyword.Bluemix_notm}} 来进行管理。
 
-使用容器与 {{site.data.keyword.activedeployshort}} 和 {{site.data.keyword.deliverypipeline}} 等服务，使得您的应用程序开发更具现代化。然后，您可以使用 {{site.data.keyword.vpn_short}} 服务，通过隧道回到 SoftLayer，以将专用网络中的容器连接到 SoftLayer 专用网络。计算资源和服务的所有使用情况费用都会反映在 SoftLayer 帐单中。 
+将容器与 {{site.data.keyword.activedeployshort}} 和 {{site.data.keyword.deliverypipeline}} 等服务配合使用，使得您的应用程序开发更具现代化。然后，您可以使用 {{site.data.keyword.vpn_short}} 服务，通过隧道回到 SoftLayer，以将专用网络中的容器连接到 SoftLayer 专用网络。计算资源和服务的所有使用情况费用都会反映在 SoftLayer 帐单中。 
 
 ### 基于 API 的 {{site.data.keyword.Bluemix_notm}} 服务
 并非所有 {{site.data.keyword.Bluemix_notm}} 服务都可以和 SoftLayer 一起使用。以下服务可以设置为与应用程序代码一起运行：
@@ -139,7 +141,7 @@ copyright:
 在您链接 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 缴费帐户之后，下一个记帐周期将会记入单个 SoftLayer 帐单。
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} 使用情况周期以日历月为基础，因此您的帐户会在每月的第一天进行记帐。使用 SoftLayer，您的使用情况周期从您开始使用 SoftLayer 开始，因此每月会在您注册 SoftLayer 帐户的那一天进行记帐。 
+{{site.data.keyword.Bluemix_notm}} 使用情况周期以日历月为基础，因此您的帐户会在每月的建立收费协议的记帐日进行记帐。使用 SoftLayer，您的使用情况周期从您开始使用 SoftLayer 开始，因此每月会在您注册 SoftLayer 帐户的那一天进行记帐。 
 
 当链接帐户时，{{site.data.keyword.Bluemix_notm}} 使用情况将继续在当前月份周期内测量，并会在 {{site.data.keyword.Bluemix_notm}} 发票上对该使用情况进行记帐。从下个月的第一天开始，您的 {{site.data.keyword.Bluemix_notm}} 费用将会列在 SoftLayer 发票上。
 

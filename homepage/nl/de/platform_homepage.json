@@ -1,6 +1,6 @@
 {
-	"id": "docs_homepage",
-	"descriptionTitle": "Abschnitt zur Homepageplattform mit Dokumenten",
+	"id": "docs_homepage_platform",
+	"title": "Vorgehensweise zur Verwendung der Bluemix-Plattform",
 	"items": [{
 		"title": "CLI- und Entwicklungstools",
 		"description": "Zugriffstools wie eine einheitliche Befehlszeilenschnittstelle und CLI-Plug-ins.",
@@ -12,10 +12,10 @@
 		"img": "homepage/images/manage_apps.svg",
 		"href": "manageapps/mngapps.html"
 	}, {
-		"title": "Kontoverwaltung",
+		"title": "Verwalten",
 		"description": "Organisationen und Bereiche einschließlich Benutzerzugriff verwalten.",
 		"img": "homepage/images/admin.svg",
-		"href": "/admin/adminpublic.html"
+		"href": "admin/adminpublic.html"
 	}, {
 		"title": "Überwachung und Protokollierung",
 		"description": "Befolgen Sie die Anwendungsnutzung und den Datenfluss, um ein besseres Verständnis Ihrer Implementierung zu erlangen.",
@@ -23,16 +23,16 @@
 		"href": "monitor_log/monitoringandlogging.html"
 	}, {
 		"title": "Preisstruktur",
-		"description": "Schätzen Sie die Kosten mit dem Rechner und zeigen Sie die Ist-Kosten mit der Ansicht 'Verwendungsdetails' an. ",
+		"description": "Schätzen Sie die Kosten mit dem Rechner und zeigen Sie die Ist-Kosten mit der Ansicht 'Verwendungsdetails' an.",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"
 	}, {
 		"title": "Fehlerbehebung",
-		"description": "Wenn Probleme mit der Plattform auftreten, können Sie diese Fehlerbehebungstasks ausführen, um festzustellen, welche Schritte erforderlich sind. ",
+		"description": "Wenn Probleme mit der Plattform auftreten, können Sie diese Fehlerbehebungstasks ausführen, um festzustellen, welche Schritte erforderlich sind.",
 		"img": "homepage/images/troubleshoot.svg",
 		"href": "troubleshoot/troubleshoot.html"
 	}, {
-		"title": "Sicherheit der Plattform",
+		"title": "Bluemix-Sicherheit",
 		"description": "Erfahren Sie, wie Bluemix funktionelle, Infrastruktur-, Betriebs- und physische Sicherheit bereitstellt.",
 		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
@@ -42,5 +42,6 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}]
+
 }
 

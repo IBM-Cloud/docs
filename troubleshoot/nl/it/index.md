@@ -16,6 +16,7 @@ copyright:
 {: #accessing}
 
 *Ultimo aggiornamento: 16 maggio 2016*
+{: .last-updated}
 
 I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero includere un utente che non riesce ad accedere a {{site.data.keyword.Bluemix_notm}}, un account bloccato in uno stato In sospeso e così via. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi. 
 {:shortdesc}

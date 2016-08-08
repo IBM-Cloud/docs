@@ -69,24 +69,24 @@ copyright:
 1. 输入以下命令来创建触发器：
  
   ```
-  wsk trigger create locationUpdate
+wsk trigger create locationUpdate
   ```
   {: pre}
  
   ```
-  ok: created trigger locationUpdate
+ok: created trigger locationUpdate
   ```
   {: screen}
 
 2. 通过列出触发器集来检查是否已创建该触发器。
 
   ```
-  wsk trigger list
+wsk trigger list
   ```
   {: pre}
  
   ```
-  triggers
+triggers
   /someNamespace/locationUpdate                            private
   ```
   {: screen}
@@ -96,17 +96,17 @@ copyright:
 3. 接下来，通过指定触发器名称和参数来触发触发器事件：
 
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
   {: pre}
 
   ```
-  ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
+ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
   {: screen}
 
-   您向 statusUpdate 触发器触发的任何事件当前并不执行任何操作。要发挥作用，该触发器需要规则来将其与操作关联在一起。
-
+在没有匹配的伴随规则下触发的触发器没有可见效果。
+触发器不可以在包内创建，它们必须直接在名称空间下创建。
 
 ## 使用规则关联触发器和操作
 {: #openwhisk_rules}
@@ -117,7 +117,7 @@ copyright:
 
 1. 通过我们将使用的操作码来创建“hello.js”文件：
   ```
-  function main(params) {
+function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
@@ -125,46 +125,46 @@ copyright:
 
 2. 确保该触发器和操作存在。
   ```
-  wsk trigger update locationUpdate
+wsk trigger update locationUpdate
   ```
   {: pre}
   
   ```
-  wsk action update hello hello.js
+wsk action update hello hello.js
   ```
   {: pre}
 
 3. 创建并启用规则。三个参数分别是规则名称、触发器和操作。
   ```
-  wsk rule create --enable myRule locationUpdate hello
+wsk rule create --enable myRule locationUpdate hello
   ```
   {: pre}
 
 4. 触发 locationUpdate 触发器。每次触发事件时，都会通过事件参数来调用 hello 操作。
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
   {: pre}
   
   ```
-  ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
+ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
   {: screen}
 
 5. 通过检查最新的激活来验证是否调用了该操作。
   ```
-  wsk activation list --limit 1 hello
+wsk activation list --limit 1 hello
   ```
   {: pre}
   
   ```
-  activations
+activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
   
   ```
-  wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
+wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
   ```
@@ -176,4 +176,6 @@ copyright:
 
   您将看到 hello 操作收到了事件有效内容，并返回了期望的字符串。
 
-  可以创建多个规则，用于将同一触发器与不同操作相关联。
+可以创建多个规则，用于将同一触发器与不同操作相关联。制定规则的触发器和操作必须位于相同的名称空间，且不能属于包。
+如果您想要使用属于包的操作，那么您可以将该操作复制到名称空间，例如 `wsk action create echo --copy /whisk.system/samples/echo`。
+

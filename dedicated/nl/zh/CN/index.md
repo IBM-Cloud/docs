@@ -16,15 +16,15 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*上次更新时间：2016 年 6 月 13 日*
+*上次更新时间：2016 年 7 月 11 日*
 {: .last-updated}
 
 
 {{site.data.keyword.Bluemix}} 是一种基于云的开放标准平台，用于构建、运行和管理应用程序。通过 {{site.data.keyword.Bluemix_notm}} Dedicated，您可以在您自己的专用 SoftLayer 环境中享受到 {{site.data.keyword.Bluemix_notm}} 为您提供的强大功能和简便性。该专用 SoftLayer 环境是以安全方式连接到 {{site.data.keyword.Bluemix_notm}} Public 环境和您自己的网络。
 {:shortdesc}
 
-**注：**与 SoftLayer 有关的所有信息（包括 {{site.data.keyword.Bluemix}} Dedicated 的服务、支持和销售）在中国都不适用。
-中国的 {{site.data.keyword.Bluemix}} Dedicated 客户可以通过 [UNISYS Service Management IBM Bluemix 页面](https://chinabluemix.itsm.unisysedge.cn){: new_window}请求支持。此外，中国的客户还可以在 [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} 上获取免费支持。
+**注：**与 SoftLayer 有关的所有信息（包括 {{site.data.keyword.Bluemix_notm}} Dedicated 的服务、支持和销售）在中国都不适用。
+中国的 {{site.data.keyword.Bluemix_notm}} Dedicated 由 IBM Bluebox 提供支持，其为基于 OpenStack 的私有云基础架构。中国的 {{site.data.keyword.Bluemix_notm}} Dedicated 客户可以通过 [UNISYS Service Management IBM {{site.data.keyword.Bluemix_notm}} 页面](https://chinabluemix.itsm.unisysedge.cn){: new_window}请求支持。此外，中国的客户还可以在 [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} 上获取免费支持。
 
 无需额外付费，{{site.data.keyword.Bluemix_notm}} 的所有专用部署中都包含以下优势和功能：VPN、专用虚拟局域网 (VLAN)、防火墙、与 LDAP 的连接、利用现有内部部署数据库和应用程序的能力、全天候现场安全防护、专用硬件以及标准支持。
 
@@ -36,19 +36,19 @@ copyright:
 
 | **类型**        | **名称**            | **描述** |      
 |-----------------|-------------------|-------------------|
-|内含 | {{site.data.keyword.Bluemix_notm}} 运行时 | 使用运行时可快速启动并运行应用程序，无需设置和管理计算机与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_notm}} Dedicated 实例中使用。|
-|内含 | {{site.data.keyword.autoscaling}} | 根据策略，动态增大或减小应用程序的计算容量。通过此服务，您在 {{site.data.keyword.Bluemix_notm}} Dedicated 环境中的使用不受限制。 |
-|可选 | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} 将 {{site.data.keyword.APIM}} 和 IBM StrongLoop 集成到单个产品中，以提供一个综合解决方案来创建、运行、管理和强制执行 API 与微型服务。 |
-|可选 | {{site.data.keyword.APIM}} | 使用 {{site.data.keyword.APIMfull}} 服务可编写、管理和社交化 API。可以使用资源导入 API，方法是使用代理 URL 或从 HTTP 数据源组合数据。使用 {{site.data.keyword.APIM}} 服务的好处是，您可以管理 API 的使用方式。 |
-|可选 | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} 提供了对始终启用的完全受管 NoSQL JSON 数据层的访问。此服务兼容 CouchDB，并且可通过易用的 HTTP 接口供移动和 Web 应用程序模型访问。 |
-|可选 | {{site.data.keyword.dashdbshort}} | 使用 dashDB 可存储关系数据，包括特殊类型的数据（例如地理空间数据）。然后，使用 SQL 或高级内置分析（例如预测性分析和数据挖掘、使用 R 的分析以及地理空间分析）来分析该数据。 |
-|可选 | {{site.data.keyword.datacshort}} | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
+|内含 | [{{site.data.keyword.Bluemix_notm}} 运行时](../cfapps/runtimes.html) | 使用运行时可快速启动并运行应用程序，无需设置和管理计算机与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_notm}} Dedicated 实例中使用。|
+|内含 | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | 根据策略，动态增大或减小应用程序的计算容量。通过此服务，您在 {{site.data.keyword.Bluemix_notm}} Dedicated 环境中的使用不受限制。 |
+|可选 | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 将 {{site.data.keyword.APIM}} 和 IBM StrongLoop 集成到单个产品中，以提供一个综合解决方案来创建、运行、管理和强制执行 API 与微型服务。 |
+|可选 | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | 使用 {{site.data.keyword.APIMfull}} 服务可编写、管理和社交化 API。可以使用资源导入 API，方法是使用代理 URL 或从 HTTP 数据源组合数据。使用 {{site.data.keyword.APIM}} 服务的好处是，您可以管理 API 的使用方式。 |
+|可选 | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供了对始终启用的完全受管 NoSQL JSON 数据层的访问。此服务兼容 CouchDB，并且可通过易用的 HTTP 接口供移动和 Web 应用程序模型访问。 |
+|可选 | [{{site.data.keyword.dashdbshort}}](../services/dashDB/dashDB.html) | 使用 dashDB 可存储关系数据，包括特殊类型的数据（例如地理空间数据）。然后，使用 SQL 或高级内置分析（例如预测性分析和数据挖掘、使用 R 的分析以及地理空间分析）来分析该数据。 |
+|可选 | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
 | 可选 (Beta) | 日志记录 | 为 {{site.data.keyword.Bluemix_notm}} 用户界面中的 Cloud Foundry 应用程序和 Kibana 中的可搜索日志和仪表板提供日志。 |
-|可选 | {{site.data.keyword.mobilepushshort}} | {{site.data.keyword.mobilepushshort}} 是可用于向 iOS 和 Android 设备发送通知的服务。通知可以针对所有应用程序用户发送，也可以针对一组使用标记的特定用户和设备发送。您可以管理设备、标记和预订。还可以使用 SDK（软件开发包）和具象状态传输 (REST) 应用程序编程接口 (API) 来进一步开发您的客户机应用程序。 |
-|可选 | {{site.data.keyword.messagehub}} | {{site.data.keyword.messagehub}} 是一种可扩展的分布式消息传递总线，吞吐量高，可将内部部署和外部部署技术合并在一起。{{site.data.keyword.messagehub}} 基于 Apache Kafka，这是一种高速、耐用的可扩展实时消息传递引擎。 |
-|可选 | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} 服务使您能够以安全方式将 {{site.data.keyword.Bluemix_notm}} 应用程序连接到内部部署或云中的远程位置。  |
-|可选 | {{site.data.keyword.sescashort}} | 为了提高冗余度，{{site.data.keyword.sescashort}} 提供了高速缓存中存储的会话的副本。因此，万一发生掉线或中断，客户机应用程序会保持对高速缓存中的会话的访问。此服务支持 Web 和移动应用程序的会话高速缓存场景。 |
-|可选 | {{site.data.keyword.iot_full}} | 此服务允许应用程序与连接的设备、传感器和网关进行通信，以及使用这些设备、传感器和网关收集的数据。基本产品允许在专用环境中运行 {{site.data.keyword.iot_full}} 的专用版本，容量为 100,000 个并行连接设备或应用程序，数据交换量为 1.6 TB。 |
+|可选 | [{{site.data.keyword.messagehub}}](../services/MessageHub/index.html#messagehub) | {{site.data.keyword.messagehub}} 是一种可扩展的分布式消息传递总线，吞吐量高，可将内部部署和外部部署技术合并在一起。{{site.data.keyword.messagehub}} 基于 Apache Kafka，这是一种高速、耐用的可扩展实时消息传递引擎。 |
+|可选 | [{{site.data.keyword.mobilepushshort}}](../services/mobilepush/index.html) | {{site.data.keyword.mobilepushshort}} 是可用于向 iOS 和 Android 设备发送通知的服务。通知可以针对所有应用程序用户发送，也可以针对一组使用标记的特定用户和设备发送。您可以管理设备、标记和预订。还可以使用 SDK（软件开发包）和具象状态传输 (REST) 应用程序编程接口 (API) 来进一步开发您的客户机应用程序。 |
+|可选 | [{{site.data.keyword.SecureGateway}}](../services/SecureGateway/secure_gateway.html) | {{site.data.keyword.SecureGateway}} 服务使您能够以安全方式将 {{site.data.keyword.Bluemix_notm}} 应用程序连接到内部部署或云中的远程位置。  |
+|可选 | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 为了提高冗余度，{{site.data.keyword.sescashort}} 提供了高速缓存中存储的会话的副本。因此，万一发生掉线或中断，客户机应用程序会保持对高速缓存中的会话的访问。此服务支持 Web 和移动应用程序的会话高速缓存场景。 |
+|可选 | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | 此服务允许应用程序与连接的设备、传感器和网关进行通信，以及使用这些设备、传感器和网关收集的数据。基本产品允许在专用环境中运行 {{site.data.keyword.iot_full}} 的专用版本，容量为 100,000 个并行连接设备或应用程序，数据交换量为 1.6 TB。 |
 
 有一些可选组件可供您购买，用于扩展资源和服务的容量。可以通过联系销售团队来购买其中任何组件；请转至[联系我们](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)，以获取有关联系销售代表的信息。要增加服务的套餐，可以从目录的服务磁贴中选择套餐。
 
@@ -73,6 +73,7 @@ copyright:
 |{{site.data.keyword.Bluemix_notm}} Dedicated 社区服务  | 此环境允许部署和运行社区服务，每个社区服务最多共 50 个实例。  |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated 硬件防火墙 - 高可用性 | 冗余 1 Gbps 硬件防火墙，配置用于保护专用环境中同一 VLAN 中的单台服务器、多台服务器或所有服务器。 |
 |配置用于高可用性的专用 1 Gbps Vyatta VPN  | 1 Gbps Vyatta VPN，配置用于高可用性，供专用环境使用。 |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.messagehub}} | 该环境提供每个分区高达 10 GB 的发布和订阅消息传递。可保留消息并供使用最多 24 小时。 |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.mobilepushshort}} | 此环境允许部署和执行 {{site.data.keyword.mobilepushshort}} 实例，每秒能接受 300 个请求。 |
 |{{site.data.keyword.iot_short}} Dedicated 递增增加 | 此环境允许在专用环境中运行 {{site.data.keyword.iot_short}} 的专用版本，容量为 100,000 个并行连接设备或应用程序，数据交换量为 0.5 TB。 |
 
@@ -235,7 +236,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 在 {{site.data.keyword.Bluemix_notm}} 实例上与您合作的 {{site.data.keyword.Bluemix_notm}} 支持和运作团队可能需要访问您的专用环境，但仅出于以下原因才会这样做。
 
 <ul>
-<li>处理警报和执行操作维护</li>
+<li>响应警报和执行操作维护</li>
 <li>尝试重现支持凭单上报告的问题</li>
 </ul>
 
@@ -279,7 +280,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 |检查监视软件 | 检查上报和问题确定计划中定义的监视和管理组件。 | 客户 |
 |检查操作系统 | 检查以确保操作系统映像达到合规标准。IBM 提供对操作系统映像的访问权。 | IBM 和客户共担责任 |
 
-接下来是进展阶段。进展阶段描述了您和 IBM Cloud 之间的现行协作关系。此阶段的主要目标包含以下内容：
+接下来是进展阶段。进展阶段描述了您和 IBM Cloud 的持续协作关系。此阶段的主要目标包含以下内容：
 
 - 审查容量并进行必要的调整。
 - 审查维护和平台改进。
