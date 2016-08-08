@@ -18,7 +18,7 @@ copyright:
 # Scenario: End-to-end development
 {: #ee}
 
-*Last updated: 15 June 2016*
+*Last updated: 8 August 2016*
 {: .last-updated}
 
 You can use the {{site.data.keyword.Bluemix}} user interface, platform, and a selection of tools when you build, run, and deploy your apps. Follow this end-to-end development scenario to get started.
@@ -183,7 +183,7 @@ To use the {{site.data.keyword.cloudant}} service within your app, you need to c
   ```
   if (process.env.VCAP_SERVICES) {
         var env = JSON.parse(process.env.VCAP_SERVICES);
-        var cloudant = env['"cloudantNoSQLDB'][0].credentials;
+        var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
                 "username" : "user1",
