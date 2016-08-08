@@ -37,7 +37,7 @@ copyright:
 | `/whisk.system/cloudant` | 패키지 | {{site.data.keyword.Bluemix_notm}}ServiceName, host, username, password, dbname, includeDoc, overwrite | Cloudant 데이터베이스와 함께 작동 |
 | `/whisk.system/cloudant/read` | 조치 | dbname, includeDoc, id | 데이터베이스에서 문서 읽기 |
 | `/whisk.system/cloudant/write` | 조치 | dbname, overwrite, doc | 데이터베이스에 문서 쓰기 |
-| `/whisk.system/cloudant/changes` | 피드 | dbname, includeDoc | 데이터베이스에 대한 변경 시 트리거 이벤트 실행 |
+| `/whisk.system/cloudant/changes` | 피드 | dbname, includeDoc, maxTriggers | 데이터베이스에 대한 변경 시 트리거 이벤트 실행 |
 
 다음 주제에서는 `/whisk.system/cloudant` 패키지 내에서의 Cloudant 데이터베이스 설정, 연관된 패키지 구성 및 조치 및 피드 사용에 대해 설명합니다.
 
@@ -61,7 +61,7 @@ copyright:
 3. 네임스페이스 내의 패키지를 새로 고치십시오. 일반적으로 새로 고치기는 사용자가 작성한 Cloudant 서비스 인스턴스에 대한 패키지 바인딩을 작성합니다.
 
   ```
-  wsk package refresh
+wsk package refresh
   ```
   {: pre}
   ```
@@ -71,7 +71,7 @@ copyright:
   {: screen}
 
   ```
-  wsk package list
+wsk package list
   ```
   {: pre}
   ```
@@ -116,18 +116,18 @@ copyright:
 1. Cloudant 계정에 대해 구성된 패키지 바인딩을 작성하십시오.
 
   ```
-  wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
   ```
   {: pre}
 
 2. 패키지 바인딩이 있는지 확인하십시오.
 
   ```
-  wsk package list
+wsk package list
   ```
   {: pre}
   ```
-  packages
+packages
   /myNamespace/myCloudant private binding
   ```
   {: screen}
@@ -135,23 +135,27 @@ copyright:
 
 ### Cloudant 데이터베이스에 대한 변경 청취
 
-`changes` 피드를 사용하여 Cloudant 데이터베이스에 대한 모든 변경 시 트리거를 실행하도록 서비스를 구성할 수 있습니다.
+`changes` 피드를 사용하여 Cloudant 데이터베이스에 대한 모든 변경 시 트리거를 실행하도록 서비스를 구성할 수 있습니다.매개변수는 다음과 같습니다.
+
+- `dbname`: Cloudant 데이터베이스의 이름입니다.
+- `includeDoc`: true로 설정하면 실행되는 각 트리거 이벤트에 수정된 Cloudant 문서가 포함됩니다. 
+- `maxTriggers`: 이 한계에 도달하면 트리거 실행이 중지됩니다. 기본값은 1000입니다. 이를 최대 10,000으로 설정할 수 있습니다. 10,000을 초과하여 설정하려고 시도하는 경우 요청이 거부됩니다.
 
 1. 앞에서 작성한 패키지 바인딩의 `changes`를 사용하여 트리거를 작성하십시오. `/myNamespace/myCloudant`를 사용자의 패키지 이름으로 대체하십시오.
 
   ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
+wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
   ```
   {: pre}
   ```
-  ok: created trigger feed myCloudantTrigger
+ok: created trigger feed myCloudantTrigger
   ```
   {: screen}
 
 2. 활성화를 위해 폴링하십시오.
 
   ```
-  wsk activation poll
+wsk activation poll
   ```
   {: pre}
 
@@ -159,7 +163,7 @@ copyright:
 
 4. 각 문서 변경에 대한 `myCloudantTrigger` 트리거의 새 활성화를 관찰하십시오.
 
-**참고**: 새 활성화를 관찰할 수 없으면 Cloudant 데이터베이스에 대한 읽기 및 쓰기에 관한 후속 절을 참조하십시오. 다음의 읽기 및 쓰기 단계를 테스트하면 Cloudant 신임 정보가 올바른지 확인하는 데 도움이 됩니다. 
+**참고**: 새 활성화를 관찰할 수 없으면 Cloudant 데이터베이스에 대한 읽기 및 쓰기에 관한 후속 절을 참조하십시오. 아래의 읽기 및 쓰기 단계를 테스트하면 Cloudant 신임 정보가 올바른지 확인하는 데 도움이 됩니다.
 
 이제 규칙을 작성하고 규칙을 조치에 연관시켜 문서 업데이트에 반응할 수 있습니다.
 
@@ -167,7 +171,7 @@ copyright:
 
   ```
   {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
+        "_id": "6ca436c44074c4c2aa6a40c9a188b348",
     "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
     "name": "Heisenberg"
   }
@@ -186,7 +190,7 @@ copyright:
 
   ```
   {
-      "id": "6ca436c44074c4c2aa6a40c9a188b348",
+            "id": "6ca436c44074c4c2aa6a40c9a188b348",
       "seq": "2-g1AAAAL9aJyV-GJCaEuqx4-BktQkYp_dmIfC",
       "changes": [
           {
@@ -204,13 +208,13 @@ copyright:
 1. 앞에서 작성한 패키지 바인딩 내의 `write` 조치를 사용하여 문서를 저장하십시오. `/myNamespace/myCloudant`를 사용자의 패키지 이름으로 대체하십시오.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
   ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
-    "id": "heisenberg",
+        "id": "heisenberg",
     "ok": true,
     "rev": "1-9a94fb93abc88d8863781a248f63c8c3"
   }
@@ -229,12 +233,12 @@ copyright:
 1. 앞에서 작성한 패키지 바인딩 내의 `read` 조치를 사용하여 문서를 페치하십시오. `/myNamespace/myCloudant`를 사용자의 패키지 이름으로 대체하십시오.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
   ```
   {: pre}
   ```
   {
-    "_id": "heisenberg",
+        "_id": "heisenberg",
     "_rev": "1-9a94fb93abc88d8863781a248f63c8c3"
     "name": "Walter White"
   }
@@ -259,7 +263,7 @@ copyright:
 
 `/whisk.system/alarms/alarm` 피드는 지정된 빈도로 트리거 이벤트를 실행하기 위해 알람 서비스를 구성합니다. 매개변수는 다음과 같습니다.
 
-- `cron`: 협정 세계시(UTC)로 트리거를 실행할 시점을 표시하는 Unix crontab 구문 기반의 문자열입니다. 문자열은 공백으로 구분되는 여섯 개 필드의 시퀀스입니다. `X X X X X X `. cron 구문 사용에 대한 세부사항은 https://github.com/ncb000gt/node-cron을 참조하십시오. 다음은 문자열에서 표시하는 빈도의 일부 예입니다. 
+- `cron`: 협정 세계시(UTC)로 트리거를 실행할 시점을 표시하는 Unix crontab 구문 기반의 문자열입니다. 문자열은 공백으로 구분되는 여섯 개 필드의 시퀀스입니다. `X X X X X X `. cron 구문 사용에 대한 세부사항은 다음을 참조하십시오. https://github.com/ncb000gt/node-cron 다음은 문자열에서 표시하는 빈도의 일부 예입니다. 
 
   - `* * * * * *`: 매초. 
   - `0 * * * * *`: 매분의 처음. 
@@ -268,7 +272,7 @@ copyright:
 
 - `trigger_payload`: 이 매개변수의 값은 트리거가 실행될 때마다 트리거의 컨텐츠가 됩니다.
 
-- `maxTriggers`: 이 한계에 도달하면 트리거 실행이 중지됩니다. 기본값은 1000입니다.
+- `maxTriggers`: 이 한계에 도달하면 트리거 실행이 중지됩니다. 기본값은 1000입니다. 이를 최대 10,000으로 설정할 수 있습니다. 10,000을 초과하여 설정하려고 시도하는 경우 요청이 거부됩니다.
 
 다음은 트리거 이벤트에서 `name` 및 `place` 값을 사용하여 매 20초마다 한 번 실행될 트리거를 작성하는 예입니다.
 
@@ -309,20 +313,20 @@ copyright:
 1. 사용자의 API 키를 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
   ```
   {: pre}
 
 2. 패키지 바인딩에서 `forecast` 조치를 호출하여 날씨 예보를 가져오십시오.
 
   ```
-  wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
   ```
   {: pre}
 
   ```
   {
-      "forecasts": [
+            "forecasts": [
           {
               "dow": "Wednesday",
               "max_temp": -1,
@@ -377,20 +381,20 @@ copyright:
 1. Watson 신임 정보를 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-  wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
   ```
   {: pre}
 
 2. 패키지 바인딩에서 `translate` 조치를 호출하여 일부 텍스트를 영어에서 프랑스어로 변환하십시오.
 
   ```
-  wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
   ```
   {: pre}
 
   ```
   {
-      "payload": "Ciel bleu a venir"
+            "payload": "Ciel bleu a venir"
   }
   ```
   {: screen}
@@ -409,19 +413,19 @@ copyright:
 1. Watson 신임 정보를 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
   ```
   {: pre}
 
 2. 패키지 바인딩에서 `languageId` 조치를 호출하여 언어를 식별하십시오.
 
   ```
-  wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
   ```
   {: pre}
   ```
   {
-"payload": "Ciel bleu a venir",
+    "payload": "Ciel bleu a venir",
     "language": "fr",
     "confidence": 0.710906
   }
@@ -445,19 +449,19 @@ copyright:
 1. Watson 신임 정보를 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
   ```
   {: pre}
 
 2. 패키지 바인딩에서 `textToSpeech` 조치를 호출하여 텍스트를 변환하십시오. 
 
   ```
-  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
   {
-    "payload": "<base64 encoding of a .wav file>"
+        "payload": "<base64 encoding of a .wav file>"
   }
   ```
   {: screen}
@@ -490,19 +494,22 @@ copyright:
 1. Watson 신임 정보를 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
   ```
+  {: pre}
 
 2. 패키지 바인딩에서 `speechToText` 조치를 호출하여 인코딩된 오디오를 변환하십시오. 
 
   ```
-  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
+  {: pre}
   ```
   {
-    "data": "Hello Watson"
+        "data": "Hello Watson"
   }
   ```
+  {: screen}
   
  
 ## Slack 패키지 사용
@@ -537,14 +544,14 @@ copyright:
 2. Slack 신임 정보, 게시할 채널 및 게시할 때 사용할 사용자 이름을 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-  wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
   ```
   {: pre}
 
 3. 패키지 바인딩에서 `post` 조치를 호출하여 사용자의 Slack 채널에 메시지를 게시하십시오.
 
   ```
-  wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
+wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
   ```
   {: pre}
 
@@ -570,7 +577,7 @@ copyright:
 - `username`: GitHub 저장소의 사용자 이름입니다.
 - `repository`: GitHub 저장소입니다.
 - `accessToken`: GitHub 개인 액세스 토큰입니다. [토큰을 작성](https://github.com/settings/tokens)할 때, repo:status 및 public_repo 범위를 선택하십시오. 또한 저장소에 미리 정의된 웹후크가 없는지 확인하십시오.
-- `events`: 관심 있는 [GitHub 활동 유형](https://developer.github.com/v3/activity/events/types/)입니다.
+- `events`: 관심 있는 [GitHub 이벤트 유형](https://developer.github.com/v3/activity/events/types/)입니다.
 
 다음은 GitHub 저장소에 대한 새 커미트가 있을 때마다 실행될 트리거를 작성하는 예입니다.
 
@@ -578,18 +585,137 @@ copyright:
 
   액세스 토큰은 다음 단계에서 사용됩니다.
 
-
 2. 액세스 토큰을 사용하여 GitHub 저장소에 대해 구성된 패키지 바인딩을 작성하십시오.
 
   ```
-  wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
+wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
   ```
   {: pre}
 
 3. `myGit/webhook` 피드를 사용하여 GitHub `push` 이벤트 유형에 대한 트리거를 작성하십시오.
 
   ```
-  wsk trigger create myGitTrigger --feed myGit/webhook --param events push
+wsk trigger create myGitTrigger --feed myGit/webhook --param events push
   ```
   {: pre}
 
+`git push`를 통한 Github 저장소에 대한 커미트로 인해 트리거가 웹후크로 실행됩니다. 트리거와 일치하는 규칙이 있는 경우 연관된 조치가 호출됩니다.
+조치가 입력 매개변수로 Github 웹후크 페이로드를 수신합니다. 각 Github 웹후크 이벤트에 유사한 JSON 스키마가 있지만, 해당 이벤트 유형으로 판별되는 고유한 페이로드 오브젝트입니다.
+페이로드 컨텐츠에 대한 자세한 정보는 [Github 이벤트 및 페이로드](https://developer.github.com/v3/activity/events/types/) API 문서를 참조하십시오.
+
+
+## Push 패키지 사용
+{: #openwhisk_catalog_pushnotifications}
+
+`/whisk.system/pushnotifications` 패키지를 사용하면 푸시 서비스로 작업할 수 있습니다. 
+
+패키지에는 다음 피드가 포함됩니다.
+
+| 엔티티 | 유형 | 매개변수 | 설명 |
+| --- | --- | --- | --- |
+| `/whisk.system/pushnotifications` | 패키지 | appId, appSecret  | 푸시 서비스에 대한 작업 |
+| `/whisk.system/pushnotifications/sendMessage` | 조치 | text, url, deviceIds, platforms, tagNames, apnsBadge, apnsCategory, apnsActionKeyTitle, apnsSound, apnsPayload, apnsType, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive | 지정된 디바이스에 푸시 알림 발송 |
+| `/whisk.system/pushnotifications/webhook` | 피드 | events | 푸시 서비스에서 디바이스 활동의 트리거 이벤트 실행(디바이스 등록(해제)/구독(해제)) |
+필수는 아니지만 `appId` 및 `appSecret` 값을 사용하여 패키지 바인딩을 작성하도록 권장합니다. 이 방법의 경우, 패키지에서 조치를 호출할 때마다 신임 정보를 지정할 필요가 없습니다.
+
+### IBM 푸시 알림 패키지 설정
+
+IBM 푸시 알림 패키지를 작성하는 동안 다음 매개변수를 제공해야 합니다.
+
+-  `appId`: Bluemix 앱 GUID입니다.
+-  `appSecret`: Bluemix 푸시 알림 서비스 appSecret입니다.
+
+다음은 패키지 바인딩을 작성하는 예제입니다.
+
+1. [Bluemix 대시보드](http://console.ng.bluemix.net)에서 Bluemix 애플리케이션을 작성하십시오.
+
+2. 푸시 알림 서비스를 초기화하고 서비스를 Bluemix 애플리케이션에 바인드하십시오.
+
+3. [IBM 푸시 알림 애플리케이션](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)을 구성하십시오.
+
+  작성한 Bluemix 앱의 `App GUID` 및 `App Secret`을 기억해야 합니다.
+
+
+4. `/whisk.system/pushnotifications`로 패키지 바인딩을 작성하십시오.
+
+  ```
+  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  ```
+  {: pre}
+
+5. 패키지 바인딩이 있는지 확인하십시오.
+
+  ```
+wsk package list
+  ```
+  {: pre}
+
+  ```
+  packages
+  /myNamespace/myPush private binding
+  ```
+  {: screen}
+
+### 푸시 알림 발송
+
+`/whisk.system/pushnotifications/sendMessage` 조치는 등록된 디바이스에 푸시 알림을 발송합니다. 매개변수는 다음과 같습니다.
+- `text` - 사용자에게 표시될 알림 메시지입니다. 예: -p text "Hi ,{{site.data.keyword.openwhisk}} send a notification"
+- `url`: 경보와 함께 전송할 수 있는 선택적 URL입니다. 예: -p url "https:\\www.w3.ibm.com"
+- `gcmPayload` - 알림 메시지의 파트로 전송될 사용자 정의 JSON 페이로드입니다. 예: -p gcmPayload "{"hi":"hello"}"
+- `gcmSound` - 알림이 디바이스에 도달하면 재생하도록 시도될 소리 파일(디바이스 위)입니다.
+- `gcmCollapseKey` - 이 매개변수는 메시지의 그룹을 식별합니다.
+- `gcmDelayWhileIdle` - 이 매개변수가 true로 설정되는 경우, 디바이스가 활성이 될 때가지 메시지가 전송되지 않아야 함을 표시합니다.
+- `gcmPriority` - 메시지의 우선순위를 설정합니다.
+- `gcmTimeToLive` - 이 매개변수는 디바이스가 오프라인인 경우 GCM 스토리지에서 메시지가 보관되어야 하는 시간(초)을 지정합니다.
+- `apnsBadge` - 애플리케이션 아이콘의 뱃지로 표시할 숫자입니다.
+- `apnsCategory` - 대화식 푸시 알림에 사용될 카테고리 ID입니다.
+- `apnsIosActionKey` - 조치 키의 제목입니다.
+- `apnsPayload` - 알림 메시지의 파트로 전송될 사용자 정의 JSON 페이로드입니다.
+- `apnsType` - ['DEFAULT', 'MIXED', 'SILENT']
+- `apnsSound` - 애플리케이션 번들에 있는 소리 파일의 이름입니다. 이 파일의 소리가 경보로 재생됩니다.
+
+다음은 pushnotification 패키지에서 푸시 알림을 전송하는 예제입니다.
+
+1. 이전에 작성한 패키지 바인딩에서 `sendMessage` 조치를 사용하여 푸시 알림을 전송하십시오. `/myNamespace/myPush`를 패키지 이름으로 바꿔야 합니다.
+
+  ```
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  ```
+  {: pre}
+
+  ```
+  {
+        "result": {
+          "pushResponse": "{"messageId":"11111H","message":{"message":{"alert":"this is my message","url":"http.google.com"},"settings":{"apns":{"sound":"default"},"gcm":{"sound":"default"},"target":{"deviceIds":["T1","T2"]}}}"
+  },
+      "status": "success",
+      "success": true
+  }
+  ```
+  {: screen}
+
+### IBM 푸시 알림 서비스 활동의 트리거 이벤트 실행
+
+`/whisk.system/pushnotifications/webhook`가 IBM 푸시 알림 서비스를 구성하여 지정된 애플리케이션에서 디바이스 등록/등록 해제 또는 구독/구독 해제 등의 디바이스 활동이 있는 경우 트리거를 실행합니다.
+
+매개변수는 다음과 같습니다.
+
+- `appId:` Bluemix 푸시 알림 서비스 appSecret입니다.
+- `appSecret:` Bluemix 앱 GUID입니다.
+- `events:` 지원되는 이벤트는 `onDeviceRegister`, `onDeviceUnregister`, `onDeviceUpdate`, `onSubscribe`, `onUnsubscribe`입니다. 모든 이벤트에 대해 알림을 받으려면 와일드카드 문자 `*`를 사용하십시오.
+
+다음은 IBM 푸시 알림 서비스 애플리케이션으로 등록된 새 디바이스가 있을 때마다 실행될 트리거를 작성하는 예제입니다.
+
+1. appId 및 appSecret으로 IBM 푸시 알림 서비스에 대해 구성된 패키지 바인딩을 작성하십시오.
+
+  ```
+  wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
+  ```
+  {: pre}
+
+2. `myPush/webhook` 피드를 사용하여 IBM 푸시 알림 서비스 `onDeviceRegister` 이벤트 유형에 대해 트리거를 작성하십시오.
+
+  ```
+  wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister
+  ```
+  {: pre}

@@ -28,17 +28,17 @@ copyright:
 「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを使用してプロジェクトが複製されると、{{site.data.keyword.jazzhub_short}} は `pipeline.yml` ファイルに基づいたパイプラインを作成します。 
 
 例: 
-``` 
+ 
 <sample root>
 	.bluemix
 		pipeline.yml
 	<other sample content>
-```
+
 {: codeblock} 
 
 YAML ファイル・フォーマットはパイプラインの仕様を含む単一の YAML 文書です。以下のサンプル {{site.data.keyword.jazzhub_short}} パイプラインは、Ant を使用して Java アプリを 1 つのステージでビルドします。その後、別のステージで、パイプラインがそのアプリを {{site.data.keyword.Bluemix_notm}} にデプロイします。 
 
-``` 
+ 
 ---
 stages:
 - name: Build Stage
@@ -80,7 +80,7 @@ stages:
       cf push "${CF_APP}"
       # View logs
       #cf logs "${CF_APP}" --recent
-```
+
 {: codeblock} 
 
 ##YAML ファイルの構文
@@ -90,16 +90,16 @@ stages:
 
 パイプライン:
 
-```
+
 ---
 stages:
 <sequence of stages>
-```
+
 {: codeblock} 
 
 ステージ:
  
-```
+
 ---
 name: <name>
 [inputs: 
@@ -110,39 +110,39 @@ name: <name>
 	<sequence of properties>] 
 [jobs:   
 	<sequence of jobs>]
-```
+
 {: codeblock} 
 
 入力:
 
-```
+
 type: 'git' | 'job'
 [branch: <branch name>] ;only for Git inputs
 stage: <stage name>		  ;only for job inputs
 job: <job name>			   	;only for job inputs
-```
+
 {: codeblock} 
 
 トリガー:
 
-```
+
 type: 'commit' | 'stage'
 [enabled: 'true | 'false'] ;true is assumed if not specified
-```
+
 {: codeblock} 	
 	
 プロパティー:
 
-```
+
 name: <property name>
 value: <property value>
 [type: 'text' | 'secure' | 'text_area' | 'file'] ;text is assumed if not specified
-```
+
 {: codeblock} 
 
 ジョブ:
 
-```
+
 [name: <job name>]
 type: 'builder' | 'deployer' | 'tester'
 fail_stage: 'true' | 'false'
@@ -155,17 +155,17 @@ fail_stage: 'true' | 'false'
 [test_file_pattern: <pattern>] ;builder and tester only
 [target: <target>] ;deployer and extension jobs only
 *[<extension property name>: <value>] ;extension jobs only
-```
+
 {: codeblock} 
 
 ターゲット:
 
-```
+
 url: <target url>
 organization: <org name>
 space: <space name>
 [application: <application name>]
-```
+
 {: codeblock} 
 
 ##拡張ジョブおよび拡張定義 {: #extension-jobs} 
@@ -179,7 +179,7 @@ space: <space name>
 
 パイプラインが `pipeline.yml` ファイルから作成される前に、「{{site.data.keyword.Bluemix_notm}} にデプロイ」機能は、ファイル内のすべての環境変数を {{site.data.keyword.Bluemix_notm}} インターフェースで指定した情報 (例えば、組織) に置き換えます。YAML 値が置換されるのは、その値が 1 つの環境変数のみで構成される場合のみです。 
 
-```
+
 {
   "project_id": "_ljkahfliasdlk",
   "env": {"CF_ORGANIZATION" : "user@se.ibm.com"
@@ -191,12 +191,11 @@ space: <space name>
         target:
           url: http://api.ng.bluemix.net
           organization: ${CF_ORGANIZATION}
-        script: \"echo ${CF_ORGANIZATION}\"                
-      ...
+        script: \"echo ${CF_ORGANIZATION}\"...
     "
   }
 }
-```
+
 {: codeblock} 
 
 このサンプル内で、ターゲット組織はターゲット URL に対して解決され、パイプライン構成内に残る値は組織 GUID です。デプロイメント・スクリプト内のオカレンスは置換されません。
@@ -220,9 +219,9 @@ CF_APP	| アプリ名
 
 以下の形式の URL を使用して、既存のパイプラインからファイルを生成します。
 
-```
+
 <DevOps Services domain>/pipeline/user/project/yaml
-```
+
 {: codeblock} 
 
 accept ヘッダーはこの呼び出しでは必要ありません。この呼び出しはブラウザーから使用できます。 

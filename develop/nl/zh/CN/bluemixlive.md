@@ -17,7 +17,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*上次更新时间：2016 年 4 月 7 日*
+*上次更新时间：2016 年 6 月 24 日*
 {: .last-updated}  
 
 如果您要构建 Node.js 应用程序，那么可以使用 {{site.data.keyword.Bluemix}} Live Sync 快速更新 {{site.data.keyword.Bluemix_notm}} 上的应用程序实例，并像在桌面上进行操作一样进行开发，而无需重新部署。   
@@ -70,8 +70,10 @@ copyright:
 
 <strong>重要信息：</strong>bl 命令行工具仅适用于 Windows 7 和 8 以及 Mac OS X V10.9 或更高版本。</li>
 
-<li>在命令行上，使用以下命令登录。系统将提示您输入 IBM 标识和密码。  
+<li>在命令行上，使用以下命令登录。系统将提示您输入用户标识和密码。  
 <pre class="codeblock">bl login</pre>
+
+<strong>注：</strong>DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么您的 IBM 标识和密码可以与所有客户端一起使用。有关创建个人访问令牌的更多信息，请参阅 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a> 
 </li>
 
 <li>通过输入以下命令，查看可用于 {{site.data.keyword.Bluemix_notm}} Live Sync 同步的项目的列表：
@@ -160,9 +162,10 @@ bl start --restart
 2. 设置环境变量。  
 
     a. 在 `manifest.yml` 文件中，添加以下变量：
+	
 	```
 	env:
-      ENABLE_BLUEMIX_DEV_MODE: "true"
+      ENABLE_BLUEMIX_DEV_MODE: "true" 
 	```
 
 3. 增大内存。  
@@ -171,7 +174,9 @@ bl start --restart
 
 在安装 {{site.data.keyword.Bluemix_notm}} 实时调试后，可以使用调试工具。
 
-推送应用程序，然后浏览到 `https://app-host.mybluemix.net/bluemix-debug/manage`，以访问 {{site.data.keyword.Bluemix_notm}} 调试用户界面。出现提示时，请输入您的 IBM 标识和密码进行认证。
+推送应用程序，然后浏览到 `https://app-host.mybluemix.net/bluemix-debug/manage`，以访问 {{site.data.keyword.Bluemix_notm}} 调试用户界面。收到认证的提示时，请输入用户标识和个人访问令牌或 IBM 标识密码。    
+
+   **注：**DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么您的 IBM 标识和密码可以与所有客户端一起使用。有关创建个人访问令牌的更多信息，请参阅 [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 ###复原应用程序配置并禁用 Bluemix 实时调试 {: #restore_live_debug}
 
@@ -202,7 +207,7 @@ bl start --restart
 {{site.data.keyword.Bluemix_live}} 命令行 **bl** 的语法如下：
 
 ```
-bl command [arguments][options] [--help]
+bl command [arguments] [options] [--help]
 ```
 {: pre}
 
@@ -274,7 +279,7 @@ bl sync --help
 {: bl_login}
 
 ```
-bl login | l [ -u username ][-p password ][ -s server ]
+bl login | l [ -u username ] [-p password ][ -s server ]
 ```
 {: pre}
 
@@ -288,11 +293,13 @@ bl login | l [ -u username ][-p password ][ -s server ]
 
 **选项**
 
--u *username*：您用于登录到 {{site.data.keyword.Bluemix_notm}} 的 IBM 标识。
+-u *username*：用于登录到 {{site.data.keyword.Bluemix_notm}} 的用户标识。
 
--p *password*：您的 IBM 标识密码。
+-p *password*：个人访问令牌或 IBM 标识密码。
 
--s *server*：{{site.data.keyword.jazzhub_short}} 服务器的服务器名称或 IP 地址。
+-s *server*：{{site.data.keyword.jazzhub_short}} 服务器的服务器名称或 IP 地址。    
+
+   **注：**DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么您的 IBM 标识和密码可以与所有客户端一起使用。有关创建个人访问令牌的更多信息，请参阅 [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 **示例**
 
@@ -345,7 +352,7 @@ bl projects | p
 {: bl_sync}
 
 ```
-bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
 ```
 {: pre}
 
@@ -401,7 +408,7 @@ bl sync myproject –d  myfolder
 {: bl_create}
 
 ```
-bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
 ```
 {: pre}
 
@@ -490,7 +497,7 @@ bl status “my pro ject”
 {: bl_start}
 
 ```
-bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
 ```
 {: pre}
 

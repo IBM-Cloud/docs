@@ -19,7 +19,7 @@ copyright:
 
 #SoftLayer- und {{site.data.keyword.Bluemix_notm}}-Abrechnungskonten verknüpfen
 {: #softlayerlink}
-*Letzte Aktualisierung: 10. Juni 2016*
+*Letzte Aktualisierung: 7. Juli 2016*
 {: .last-updated}
 
 Sie können nun die SoftLayer- und {{site.data.keyword.Bluemix_notm}}-Abrechnungskonten verknüpfen. Wenn Sie die Konten verknüpfen, erfolgt die Rechnungsstellung sowohl für SoftLayer- als auch für {{site.data.keyword.Bluemix_notm}}-Ressourcen über SoftLayer. Wenn Sie über ein bestehendes Konto verfügen, erfolgt die Rechnungsstellung für {{site.data.keyword.Bluemix_notm}} über SoftLayer ab dem neuen Abrechnungszyklus, der nach dem Verknüpfen der Konten beginnt.
@@ -27,9 +27,11 @@ Sie können nun die SoftLayer- und {{site.data.keyword.Bluemix_notm}}-Abrechnung
 
 **Wichtig:** Alle verknüpften Konten in {{site.data.keyword.Bluemix_notm}} müssen nutzungsabhängige Konten sein. Sie können ein neues nutzungsabhängiges Konto erstellen oder ein bestehendes nutzungsabhängiges Konto verknüpfen. Sie können auch ein bestehendes Testkonto verknüpfen, das dann in ein nutzungsabhängiges Konto umgewandelt wird.  
 
-Nachdem die Konten verknüpft wurden, kann die Nutzung der {{site.data.keyword.Bluemix_notm}}-Ressourcen weiterhin in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle überwacht werden. Diese Ressourcen werden nun allerdings über die SoftLayer-Rechnung abgerechnet.
+Nachdem die Konten verknüpft wurden, können Sie die Konten leicht wechseln. Sie können die Nutzung der {{site.data.keyword.Bluemix_notm}}-Ressourcen weiterhin in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle überwachen. Diese Ressourcen werden nun allerdings über die SoftLayer-Rechnung abgerechnet.
 
-Obwohl die Kontoabrechnung verknüpft ist und Sie problemlos zwischen den Konten wechseln können, benötigen Sie weiterhin separate IDs für {{site.data.keyword.Bluemix_notm}} und SoftLayer. Verwenden Sie Ihre SoftLayer-ID weiterhin für SoftLayer-Produkte und -Services und die IBM ID für {{site.data.keyword.Bluemix_notm}}-Produkte und -Services. 
+Auch wenn die Kontoabrechnung verknüpft ist, ist die Anmelde-ID abhängig von der Authentifizierung des SoftLayer-Kontos unterschiedlich: 
+* Benutzer mit SoftLayer-Konten, die nicht die IBM ID zur Authentifizierung verwenden, sollten weiterhin ihre SoftLayer-ID für SoftLayer-Produkte und -Services und ihre IBM ID für {{site.data.keyword.Bluemix_notm}}-Produkte und -Services verwenden. 
+* Benutzer mit SoftLayer-Konten, die die IBM ID zur Authentifizierung verwenden, sollten die IBM ID für den Zugriff auf SoftLayer- und {{site.data.keyword.Bluemix_notm}}-Konten verwenden. 
 
 **Achtung:** Das Verknüpfen der Konten kann nicht rückgängig gemacht werden.  
 
@@ -65,7 +67,7 @@ Gehen Sie wie folgt vor, um Teammitglieder über {{site.data.keyword.Bluemix_not
  2. Klicken Sie auf **Hinzufügen**, um sich für das SoftLayer-Konto zu authentifizieren und eine Liste der Teammitglieder aus dem SoftLayer-Konto anzuzeigen.
  3. Wählen Sie die gewünschten Teammitglieder aus und klicken Sie auf **Senden**.
 
-Sie können diese Operation für jedes weitere Teammitglied wiederholen, das Ihrem Softlayer-Konto hinzugefügt wird.
+Sie können diese Operation für jedes weitere Teammitglied wiederholen, das Ihrem SoftLayer-Konto hinzugefügt wird.
  
 Das Teammitglied empfängt eine E-Mail mit einem Link zur **Teilnahme an der Organisation**. Wenn das Mitglied über keine IBM ID verfügt, wird es zur Registrierungsseite weitergeleitet. Als Nächstes kann das Teammitglied einige Basisinformationen eingeben und ein {{site.data.keyword.Bluemix_notm}}-Konto erstellen.
 
@@ -139,7 +141,7 @@ Mit SoftLayer können nicht alle {{site.data.keyword.Bluemix_notm}}-Services ver
 Nach der Verknüpfung Ihrer {{site.data.keyword.Bluemix_notm}}- und SoftLayer-Abrechnungskonten erfolgt die Rechnungsstellung im nächsten Abrechnungszyklus über eine einzige SoftLayer-Rechnung.
 {:shortdesc}
 
-Der {{site.data.keyword.Bluemix_notm}}-Nutzungszyklus basiert auf Kalendermonaten, sodass Rechnungen für Ihr Konto monatlich zum Monatsersten erstellt werden. Bei SoftLayer beginnt der Nutzungszyklus mit dem Beginn der SoftLayer-Nutzung, sodass die Rechnungsstellung jeden Monat an dem Tag erfolgt, an dem Sie sich für Ihr SoftLayer-Konto angemeldet haben. 
+Der {{site.data.keyword.Bluemix_notm}}-Nutzungszyklus basiert auf Kalendermonaten, sodass Ihr Konto monatlich an dem Abrechnungstag abgerechnet wird, der in der Gebührenvereinbarung festgelegt wurde. Bei SoftLayer beginnt der Nutzungszyklus mit dem Beginn der SoftLayer-Nutzung, sodass die Rechnungsstellung jeden Monat an dem Tag erfolgt, an dem Sie sich für Ihr SoftLayer-Konto angemeldet haben. 
 
 Wenn Sie Ihre Konten verknüpfen, wird die {{site.data.keyword.Bluemix_notm}}-Nutzung für den aktuellen Monat noch wie bisher abgerechnet und Sie erhalten für diesen Nutzungszeitraum eine {{site.data.keyword.Bluemix_notm}}-Rechnung. Ab dem ersten des nächsten Monats werden Ihre {{site.data.keyword.Bluemix_notm}}-Gebühren über die SoftLayer-Rechnung abgerechnet.
 

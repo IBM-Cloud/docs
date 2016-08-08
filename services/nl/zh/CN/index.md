@@ -31,12 +31,14 @@ copyright:
 
 
 ##试验性服务
+{: #experimental_services}
 
 {{site.data.keyword.Bluemix_notm}} 还包含可供您试用的试验性服务。要查看所有可用的试验性服务、样板和运行时，请登录到 {{site.data.keyword.Bluemix_notm}}，滚动到“目录”的底部，然后单击 **{{site.data.keyword.Bluemix_notm}} 试验性服务**。
 
 试验性服务可能不稳定，并且可能会发生变化而与较低版本不兼容。不建议在生产环境中使用这些服务。对试验性服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者社区提供。对于某个问题，如果经 IBM 调查后确定该问题是试验性服务中的缺陷，那么 IBM 没有义务提供修订。
 
 ##按区域列出的服务
+{: #services_region}
 
 不是所有的服务都可以在每个 {{site.data.keyword.Bluemix_notm}} 区域中使用。下表显示 IBM 提供的服务。
 
@@ -120,6 +122,7 @@ copyright:
 
 
 ## 服务持续可用性
+{: #services_availability}
 {{site.data.keyword.Bluemix_notm}} 已将一组服务确定为第 1 层。IBM 在未提供等效功能的情况下，不会撤销任何第 1 层服务，或者撤销前至少提前五年通知。 
 
 以下服务分类为第 1 层：
@@ -137,5 +140,6 @@ copyright:
 要阅读有关服务使用条款的更多信息，请参阅：[{{site.data.keyword.Bluemix_notm}} 条款](../navigation/notices.html#terms)。
 
 ## 服务废弃
+{: #service_deprecation}
 
 在中断或替换一般可用服务之前，IBM 将就其意图提供至少 30 天的通知。如果不提供等效替换，那么从该通知的日期起至少 12 个月内，IBM 将使用在商业上合理的方式来继续操作和支持先前部署的服务实例。 

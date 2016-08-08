@@ -23,8 +23,7 @@ Vous pouvez créer un référentiel Git hébergé qui se déploie automatiquemen
 
 1. Pour commencer, dans la vue d'ensemble de l'application, cliquez sur **Ajouter le référentiel et le pipeline Git**, ou dans la version classique de {{site.data.keyword.Bluemix_notm}}, cliquez sur **AJOUTER UN REFERENTIEL GIT**. 
 2. Dans la fenêtre qui s'ouvre, vérifiez que la case **Remplir le référentiel avec le package d'applications du module de démarrage et activer le pipeline Build & Deploy** est cochée. Le référentiel Git est créé. Si le code de démarrage est disponible, il est chargé dans le référentiel. De plus, l'application est déployée par le service Delivery Pipeline qui s'exécute dans {{site.data.keyword.jazzhub}}.  
-3. Pour mettre à jour votre application, vous pouvez utiliser la ligne de commande ou l'environnement de développement intégré Web.
-
+3. Pour mettre à jour votre application, vous pouvez utiliser la ligne de commande ou l'environnement de développement intégré Web.  
    **Si vous utilisez la ligne de commande :**
    a. Clonez votre référentiel Git à partir de l'adresse URL Git figurant dans la vue d'ensemble de l'application.  
    b. Dans l'éditeur de votre choix, mettez à jour le code.  
@@ -61,7 +60,7 @@ bl login
 ```
 bl projects
 ```
-Recherchez le nom de projet dans la liste qui correspond à votre application. Le nom de projet suit le format de votre *alias* | *nom d'application*.
+Recherchez le nom de projet dans la liste qui correspond à votre application. Le nom de projet suit le format de votre *alias* | *nom d'application*. 
 
 4. Synchronisez votre environnement local avec votre projet dans {{site.data.keyword.Bluemix_notm}} à l'aide de la commande ci-après. Si vous êtes le propriétaire du projet, il suffit de spécifier nom-de-votre-application pour nom_projet. 
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->

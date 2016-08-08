@@ -1,50 +1,51 @@
 {
   "id": "docs_homepage_services",
-  "title": "How to use Bluemix services",
-  "subtitle": "Learn about service types and availability",
+  "title": "Bluemix 서비스 사용 방법",
+  "subtitle": "서비스 유형 및 가용성 학습",
   "subtitleHref": "services/index.html",
   "items": [{
     "id": "cfApp",
-    "title": "Cloud Foundry Applications",
+    "title": "Cloud Foundry 애플리케이션",
     "href": "cfapps/index.html",
-    "category_id": "compute"
+    "category_id": "컴퓨팅"
   }, {
-    "title": "Runtimes",
+    "title": "런타임",
     "href": "cfapps/runtimes.html",
-    "category_id": "compute"
+    "category_id": "컴퓨팅"
   }, {
-    "title": "Boilerplates",
+    "title": "표준 유형",
     "href": "cfapps/boilerplates.html",
-    "category_id": "compute"
+    "category_id": "컴퓨팅"
   }, {
     "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "compute"
+    "category_id": "컴퓨팅"
   }, {
-    "id": "container",
+    "id": "컨테이너",
     "title": "IBM Containers",
     "href": "containers/container_index.html",
-    "category_id": "compute"
+    "category_id": "컴퓨팅"
   }, {
     "id": "vm",
     "title": "IBM Virtual Servers",
     "href": "virtualmachines/vm_index.html",
-    "category_id": "compute"
+    "category_id": "컴퓨팅"
   }, {
-    "type": "extra",
-    "title": "Try working with data",
+    "type": "별도",
+    "title": "데이터 작업 시도",
     "href": "services/WorkWithData/index.html",
-    "category_id": "data"
+    "category_id": "데이터(data)"
   }, {
-    "type": "extra",
-    "title": "Try toolchains",
+    "type": "별도",
+    "title": "도구 체인 시도",
     "href": "toolchains/toolchains_overview.html",
     "category_id": "devops"
   }, {
-    "type": "extra",
-    "title": "Try mobile Bluemix services",
+    "type": "별도",
+    "title": "Bluemix Mobile 대시보드 시도",
     "href": "mobile/index.html",
-    "category_id": "mobile"
+    "category_id": "모바일"
   }]
 }
+

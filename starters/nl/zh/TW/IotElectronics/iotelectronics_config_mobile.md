@@ -15,15 +15,16 @@ copyright:
 # 使用行動應用程式
 {: #iot4e_using_mobile}
 *前次更新：2016 年 6 月 14 日*
+{: .last-updated}
 
 開始使用 {{site.data.keyword.iotelectronics_full}} 行動應用程式，以瞭解您如何接收警示、傳送指令，以及檢查已連接應用裝置的狀態。
 {:shortdesc}
 
 請完成下列作業：
-1. [下載行動應用程式](#iot4e_downloadmobile)
-2. [配置 {{site.data.keyword.amafull}}](#iot4e_configureMCA)
-3. [將您的行動裝置連接至 {{site.data.keyword.iotelectronics}} 環境](#iot4e_connecting_mobile)
-4. [在您的行動裝置上登錄及控制應用裝置](#iot4e_adding_appliance)
+1. [下載行動應用程式](#iot4e_downloadmobile)。
+2. [配置 {{site.data.keyword.amafull}}](#iot4e_configureMCA)。
+3. [將您的行動裝置連接至 {{site.data.keyword.iotelectronics}} 環境](#iot4e_connecting_mobile)。
+4. [在您的行動裝置上登錄及控制應用裝置](#iot4e_adding_appliance)。
 
 
  ## 下載行動應用程式
@@ -50,7 +51,6 @@ copyright:
     - **URL**：輸入識別 {{site.data.keyword.iotelectronics}} Starter 應用程式用的 URL，格式如下：**https://<*myIoT4eStarterApp*>.mybluemix.net**  
 
       **提示：**請務必在 URL 中使用安全的 `https://` 字首。您可以按一下**行動選項**，找到入門範本應用程式的 URL。
-
 
   ![{{site.data.keyword.amashort}} 自訂鑑別項目。](images/MCA_config_pg2.svg "{{site.data.keyword.amashort}} 自訂鑑別項目")  
 
@@ -87,8 +87,8 @@ copyright:
 
   1. 在電腦上，捲動至模擬洗衣機並按一下它，以顯示其資料和應用裝置 QR 碼。
 
-![選取洗衣機。](images/IoT4E_mobile_washer_QR.svg "選取洗衣機。")
+  ![選取洗衣機。](images/IoT4E_mobile_washer_QR.svg "選取洗衣機。")
 
-  3.	使用您的行動裝置掃描洗衣機的 QR 碼，以在您的行動電話上登錄洗衣機。您會在行動電話上看到洗衣機狀態。
+  2.	使用您的行動裝置掃描洗衣機的 QR 碼，以在您的行動電話上登錄洗衣機。您會在行動電話上看到洗衣機狀態。
 
-  4. 在電腦上，選取洗衣機的問題，例如主機板故障或強烈振動。問題會將警示傳送至行動電話。
+  3. 在電腦上，選取洗衣機的問題，例如主機板故障或強烈振動。問題會將警示傳送至行動電話。

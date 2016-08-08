@@ -58,7 +58,8 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 
 ### 소스 코드에서 설치
 
-소스 코드는 https://github.com/openwhisk/openwhisk-client-swift.git에서 사용 가능합니다. Xcode에서 OpenWhisk.xcodeproj 파일을 사용하여 프로젝트를 여십시오. 프로젝트에는 각각 iOS 및 watchOS 2를 대상으로 하는 두 개의 "OpenWhisk" 및 "OpenWhiskWatch" 스킴이 포함됩니다. 필요한 대상에 대한 프로젝트를 빌드하고 결과 프레임워크를 사용자의 앱에 추가하십시오(일반적으로 ~/Library/Developer/Xcode/DerivedData/사용자의 앱 이름).
+소스 코드는 다음에서 사용 가능합니다. https://github.com/openwhisk/openwhisk-client-swift.git Xcode를 통해 `OpenWhisk.xcodeproj`를 사용하여 프로젝트를 여십시오.
+프로젝트에는 각각 iOS 및 watchOS 2를 대상으로 하는 두 개의 "OpenWhisk" 및 "OpenWhiskWatch" 스킴이 포함됩니다. 필요한 대상에 대한 프로젝트를 빌드하고 결과 프레임워크를 사용자의 앱에 추가하십시오(일반적으로 ~/Library/Developer/Xcode/DerivedData/사용자의 앱 이름).
 
 ## 스타터 앱 설치 예
 {: #openwhisk_install_sdkstart}
@@ -70,8 +71,15 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 wsk sdk install iOS
 ```
-그러면 스타터 앱을 포함하는 Zip 파일이 다운로드됩니다. 내부의 프로젝트 디렉토리는 Podfile입니다. 터미널에서 "pod install"을 실행하여 SDK를 설치하십시오.
 {: pre}
+
+그러면 스타터 앱을 포함하는 Zip 파일이 다운로드됩니다. 프로젝트 디렉토리 내에 Podfile이 있습니다. 
+
+SDK를 설치하려면 다음 명령을 입력하십시오.
+```
+pod install
+```
+{: pre} 
 
 ## SDK 시작하기
 {: #openwhisk_sdk_getstart}
@@ -181,14 +189,14 @@ whisk.verboseReplies = true
 ## SDK 구성
 {: #openwhisk_sdk_configure}
 
-baseURL 매개변수를 사용하면 {{site.data.keyword.openwhisk_short}}의 다른 설치와 함께 작업하도록 SDK를 구성할 수 있습니다. 예를 들면, 다음과 같습니다.
+baseURL 매개변수를 사용하면 {{site.data.keyword.openwhisk_short}}의 다른 설치와 함께 작업하도록 SDK를 구성할 수 있습니다. 예를 들어, 다음과 같습니다.
 
 ```
 whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
 
-이 예에서는 localhost:8080에서 실행되는 설치를 사용합니다. baseUrl을 지정하지 않으면 모바일 SDK가 https://openwhisk.ng.bluemix.net에서 실행되는 인스턴스를 사용합니다.
+이 예에서는 localhost:8080에서 실행되는 설치를 사용합니다. baseUrl을 지정하지 않으면 모바일 SDK가 다음에서 실행되는 인스턴스를 사용합니다. https://openwhisk.ng.bluemix.net
 
 특수 네트워크 처리가 필요한 경우 사용자 정의 NSURLSession을 패스할 수 있습니다. 예를 들어, 자체 서명된 인증서를 사용하는 {{site.data.keyword.openwhisk_short}} 설치가 있을 수 있습니다.
 

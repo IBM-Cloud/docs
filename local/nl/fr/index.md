@@ -4,7 +4,7 @@
 
 copyright:
 
-  2015, 2016
+  années : 2015, 2016
 
  
 
@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} local
 {: #local}
-*Dernière mise à jour : 6 juin 2016*
+*Dernière mise à jour : 7 juillet 2016*
 {: .last-updated}
 
 L'environnement {{site.data.keyword.Bluemix}} local apporte la puissance et l'agilité de la plateforme reposant sur le cloud
@@ -41,20 +41,23 @@ déterminer les éléments inclus et ceux dont vous pouvez faire l'acquisition.
 
 *Tableau 1. Services et contextes d'exécution locaux*
 
-| **Type** | **Nom** | **Description** |
+| **Type** | **Nom ** | **Description** |
 |----------|----------|-----------------|
-|Inclus | Contextes d'exécution {{site.data.keyword.Bluemix_notm}} | Utilisez des contextes d'exécution pour que votre application soit opérationnelle rapidement, sans qu'il soit nécessaire de configurer et de gérer des machines et des systèmes d'exploitation. Vous pouvez utiliser tous les contextes d'exécution {{site.data.keyword.Bluemix_notm}} dans votre instance {{site.data.keyword.Bluemix_notm}} locale.|
-|Facultatif | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} intègre {{site.data.keyword.APIM}}
+|Inclus | [Contextes d'exécution {{site.data.keyword.Bluemix_notm}}](../cfapps/runtimes.html) | Utilisez des contextes d'exécution pour que votre application soit opérationnelle rapidement, sans qu'il soit nécessaire de configurer et de gérer des machines et des systèmes d'exploitation. Vous pouvez utiliser tous les contextes d'exécution {{site.data.keyword.Bluemix_notm}} dans votre instance {{site.data.keyword.Bluemix_notm}} locale.|
+|Inclus | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | Augmente ou diminue dynamiquement la capacité de vos ressources de traitement en fonction de
+règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix}} local.|
+|Facultatif | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} intègre {{site.data.keyword.APIM}}
 et IBM StrongLoop dans une offre unique qui fournit une solution complète pour la création, l'exécution, la gestion et l'application d'API et de
 microservices. |
-|Facultatif | {{site.data.keyword.APIM}} | Utilisez le service {{site.data.keyword.APIMfull}} pour composer des API, les gérer et les diffuser sur les réseaux sociaux. Vous pouvez importer des API avec des ressources en utilisant une adresse URL de proxy ou en assemblant des données à partir de sources de données HTTP. L'avantage avec le service {{site.data.keyword.APIM}} est que vous pouvez gérer la façon dont vos API sont utilisées. |
-|Inclus | {{site.data.keyword.autoscaling}}| Augmente ou diminue dynamiquement la capacité de vos ressources de traitement en fonction de
-règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix}} local.|
-|Facultatif | {{site.data.keyword.datacshort}} | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
-|Facultatif | {{site.data.keyword.sescashort}} | Pour augmenter la redondance, {{site.data.keyword.sescashort}} fournit une réplique d'une session
+|Facultatif | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | Utilisez le service {{site.data.keyword.APIMfull}} pour composer des API, les gérer et les diffuser sur les réseaux sociaux. Vous pouvez importer des API avec des ressources en utilisant une adresse URL de proxy ou en assemblant des données à partir de sources de données HTTP. L'avantage avec le service {{site.data.keyword.APIM}} est que vous pouvez gérer la façon dont vos API sont utilisées. |
+|Facultatif | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} fournit l'accès à une couche de données JSON NoSQL
+entièrement gérée toujours active. Ce service est compatible avec CouchDB et accessible via une interface HTTP facile à utiliser pour les modèles
+d'application mobile et Web. |
+|Facultatif | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
+|Facultatif | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | Pour augmenter la redondance, {{site.data.keyword.sescashort}} fournit une réplique d'une session
 qu'il stocke en cache. Par conséquent, en cas de microcoupure ou d'indisponibilité, votre application client peut continuer à accéder à la session en cache. Le service
 prend en charge des scénarios de mise en cache de session pour les applications Web et mobiles. |
-|Facultatif | {{site.data.keyword.iot_full}} | Ce service permet à vos applications de communiquer et de consommer les données collectées par vos
+|Facultatif | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | Ce service permet à vos applications de communiquer et de consommer les données collectées par vos
 périphériques connectés, capteurs et passerelles. L'offre de base locale inclut un environnement initial permettant l'exécution d'une version privée d'IBM
 {{site.data.keyword.iot_full}} dans l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 1,6 To
 d'échange de données. |
@@ -86,6 +89,7 @@ mois ciblant des projets d'API au niveau de l'entreprise. |
 l'environnement {{site.data.keyword.apiconnect_short}} Enterprise offrant une capacité supplémentaire de 100000 appels d'API par mois. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} 500 API calls capacity increase | Environnement permettant l'exécution
 d'une version privée de {{site.data.keyword.APIM}} {{site.data.keyword.Bluemix_notm}}, avec une capacité de 500 appels d'API par seconde. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} Cluster | Environnement permettant le déploiement d'un cluster de 3 noeuds du service {{site.data.keyword.cloudant}}. La capacité de données des noeuds est déterminée par l'infrastructure fournie par vous pour l'environnement local.  |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local incremental increase | Environnement s'ajoutant à l'offre
 de service de base {{site.data.keyword.iot_full}} Local et permettant l'exécution d'une version privée d'{{site.data.keyword.iot_full}} dans
 l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 0,5 To d'échange de données. |
@@ -683,7 +687,7 @@ dans la section Exigences de l'infrastructure [Local](../local/index.html#locali
 les mises à jour et les correctifs ESXi peuvent perturber la disponibilité de l'environnement local, notamment de toutes les
 applications et de tous les services opérant dans cet environnement. Vous devez aviser {{site.data.keyword.Bluemix_notm}} via un ticket de support
 avant d'appliquer une mise à niveau ou un correctif afin que l'interruption n'alerte pas par erreur l'équipe chargée des opérations. Si un responsable CSM vous a été
-affecté (CSM), vous pouvez communiquer le planning de mise à niveau via cet intermédiaire. 
+affecté (CSM), vous pouvez communiquer le planning de mise à niveau via cet intermédiaire.
 
 Pour garantir que votre instance locale soit compatible avec les dernières versions prises en charge,
 l'équipe chargée des opérations {{site.data.keyword.Bluemix_notm}} surveille l'environnement pour détecter des versions non prises en charge
@@ -805,7 +809,7 @@ to the Cloud](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-ba
 En plus de permettre une disponibilité en continu, {{site.data.keyword.Bluemix_notm}} permet également une haute disponibilité à travers la plateforme
 en utilisant des technologies intégrées dans Cloud Foundry et d'autres composants.
 
-Ces technologies incluent les points suivants :
+Ces technologies présentent les caractéristiques suivantes :
 
 <dl>
 <dt>Evolutivité DEA dans Cloud Foundry</dt>

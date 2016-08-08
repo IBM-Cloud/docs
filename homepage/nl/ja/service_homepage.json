@@ -1,50 +1,51 @@
 {
   "id": "docs_homepage_services",
-  "title": "How to use Bluemix services",
-  "subtitle": "Learn about service types and availability",
+  "title": "Bluemix サービスの使用法",
+  "subtitle": "サービス・タイプと可用性についての詳細",
   "subtitleHref": "services/index.html",
   "items": [{
     "id": "cfApp",
-    "title": "Cloud Foundry Applications",
+    "title": "Cloud Foundry アプリケーション",
     "href": "cfapps/index.html",
-    "category_id": "compute"
+    "category_id": "計算 (compute)"
   }, {
-    "title": "Runtimes",
+    "title": "ランタイム",
     "href": "cfapps/runtimes.html",
-    "category_id": "compute"
+    "category_id": "計算 (compute)"
   }, {
-    "title": "Boilerplates",
+    "title": "ボイラープレート",
     "href": "cfapps/boilerplates.html",
-    "category_id": "compute"
+    "category_id": "計算 (compute)"
   }, {
     "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "compute"
+    "category_id": "計算 (compute)"
   }, {
-    "id": "container",
+    "id": "コンテナー (container)",
     "title": "IBM Containers",
     "href": "containers/container_index.html",
-    "category_id": "compute"
+    "category_id": "計算 (compute)"
   }, {
     "id": "vm",
     "title": "IBM Virtual Servers",
     "href": "virtualmachines/vm_index.html",
-    "category_id": "compute"
+    "category_id": "計算 (compute)"
   }, {
     "type": "extra",
-    "title": "Try working with data",
+    "title": "データの処理の試行",
     "href": "services/WorkWithData/index.html",
-    "category_id": "data"
+    "category_id": "データ"
   }, {
     "type": "extra",
-    "title": "Try toolchains",
+    "title": "ツールチェーンの試行",
     "href": "toolchains/toolchains_overview.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Try mobile Bluemix services",
+    "title": "Bluemix Mobile ダッシュボードの試行",
     "href": "mobile/index.html",
-    "category_id": "mobile"
+    "category_id": "モバイル"
   }]
 }
+

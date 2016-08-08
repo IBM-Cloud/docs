@@ -28,12 +28,14 @@ copyright:
 *표 1. {{site.data.keyword.Bluemix_notm}} 서비스 지원 정보*
 
 ##시범 서비스
+{: #experimental_services}
 
 {{site.data.keyword.Bluemix_notm}}에 사용해 볼 수 있는 시범 서비스도 포함되어 있습니다. 사용 가능한 모든 시범 서비스, 표준 유형 및 런타임을 보려면, {{site.data.keyword.Bluemix_notm}}에 로그인하고 카탈로그의 맨 아래로 스크롤한 후에 **{{site.data.keyword.Bluemix_notm}} 시범 서비스**를 클릭하십시오.
 
 시범 서비스는 안정적이지 않을 수 있으며 이전 버전과 호환 가능하지 않은 방식으로 변경될 수 있습니다. 프로덕션 환경에서는 이러한 서비스를 사용하지 않는 것이 좋습니다. 시범 서비스에 대한 지원은 {{site.data.keyword.Bluemix_notm}} 개발자 커뮤니티를 통해 제공됩니다. IBM에서 문제점을 조사한 결과 시범 서비스의 결함으로 판별될 경우 IBM이 수정사항을 제공할 의무는 없습니다.
 
 ##지역별 서비스
+{: #services_region}
 
 모든 {{site.data.keyword.Bluemix_notm}} 지역에서 모든 서비스를 사용할 수 있는 것은 아닙니다. 다음 표는 IBM에서 제공하는 서비스를 보여줍니다. 
 
@@ -117,6 +119,7 @@ copyright:
 
 
 ## 지속적 서비스 가용성
+{: #services_availability}
 {{site.data.keyword.Bluemix_notm}}에서 서비스 세트를 계층 1로 식별했습니다. IBM은 동일한 기능을 사용 가능하게 하거나 서비스 중단을 5년 이상 알린 후에 계층 1 서비스를 중단합니다. 
 
 계층 1로 분류되는 서비스는 다음과 같습니다.
@@ -133,6 +136,7 @@ copyright:
 
 서비스 이용 약관에 대한 세부사항을 읽어보려면 [{{site.data.keyword.Bluemix_notm}} 이용 약관](../navigation/notices.html#terms)을 참조하십시오.
 
-## 서비스 폐지
+## 서비스 지원 중단
+{: #service_deprecation}
 
 일반적으로 사용되는 서비스를 중단하거나 대체할 예정인 경우 IBM은 최소한 30일 이전에 이를 공지합니다. 동등한 대체 수단이 마련되지 않은 경우, 해당 공지 날짜로부터 최소한 12개월간 IBM은 상용으로 제공되는 적절한 수단을 활용하여 이전에 배치된 서비스 인스턴스의 운영과 지원을 계속 제공합니다.  

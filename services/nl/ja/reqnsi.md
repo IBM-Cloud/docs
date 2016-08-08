@@ -38,12 +38,10 @@ copyright:
 
 |タイプ 	|説明	|サポートの詳細|
 |:------|:--------------|:--------------|
-|IBM	|IBM が提供するサービスで、一般出荷可能。	|IBM が提供する一般出荷可能なサービスの欠陥であると判定された問題は、サポート対象となります。
-サポートは、ユーザーが設定した重大度に基づいて提供されます。チケット重大度について詳しくは、『[サポートへのお問い合わせ](../support/index.html#contacting-bluemix-support){: new_window}』を参照してください。|
+|IBM	|IBM が提供するサービスで、一般出荷可能。	|IBM が提供する一般出荷可能なサービスの欠陥であると判定された問題は、サポート対象となります。サポートは、ユーザーが設定した重大度に基づいて提供されます。チケット重大度について詳しくは、『[サポートへのお問い合わせ](../support/index.html#contacting-bluemix-support){: new_window}』を参照してください。|
 |サード・パーティー	|IBM 以外の企業が提供するサービス。	|サード・パーティー・サービスに対するサポートは、各サービス・プロバイダーから提供されます。IBM が問題を調査し、その問題がサード・パーティー・サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。IBM は、必要に応じてサード・パーティー・サービスのプロバイダーと分析内容を共有します。|
 |コミュニティー	|オープン・ソース・コミュニティーにより提供されるサービス。	|コミュニティー・サービスに対するサポートは、{{site.data.keyword.Bluemix_notm}} Developers Community から提供されます。IBM が問題を調査し、その問題がコミュニティー・サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。|
-|ベータ	|生産準備が未完了で、開発のトライアル・ステージにあるサービス。ベータ・サービスは、開発チームやマーケティング・チームがサービスを一般出荷可能にする前にそのサービスの価値を評価するのに役立ちます。	|IBM が提供するベータ・サービスの欠陥であると判定された問題はサポート対象となりますが、IBM は修正を提供する義務を負いません。また、該当する場合、問題チケットには重大度 3 または 4 が割り当てられます。
-チケット重大度については、『[サポートへのお問い合わせ](../support/index.html#contacting-bluemix-support){: new_window}』を参照してください。|
+|ベータ	|生産準備が未完了で、開発のトライアル・ステージにあるサービス。ベータ・サービスは、開発チームやマーケティング・チームがサービスを一般出荷可能にする前にそのサービスの価値を評価するのに役立ちます。	|IBM が提供するベータ・サービスの欠陥であると判定された問題はサポート対象となりますが、IBM は修正を提供する義務を負いません。また、該当する場合、問題チケットには重大度 3 または 4 が割り当てられます。チケット重大度については、『[サポートへのお問い合わせ](../support/index.html#contacting-bluemix-support){: new_window}』を参照してください。|
 *表 1. {{site.data.keyword.Bluemix_notm}} サービスのサポート情報*
 
 
@@ -185,15 +183,15 @@ cf コマンド・ライン・インターフェースを使用してサービ�
 
 2. 以下のコマンドを使用してサービス・インスタンスを作成します。ここで、service_name はサービスの名前、service_plan はサービスのプラン、service_instance はこのサービス・インスタンス用に使用する名前です。
 
-    ```
-    cf create-service service_name service_plan service_instance
-    ```
+    
+cf create-service service_name service_plan service_instance
+    
 
 3. 以下のコマンドを使用してサービス・インスタンスをアプリケーションにバインドします。ここで、appname はアプリケーションの名前、service_instance はサービス・インスタンスの名前です。
 
-    ```
-    cf bind-service appname service_instance
-    ```
+    
+cf bind-service appname service_instance
+    
 
 サービス・インスタンスは、同じスペースまたは組織内のアプリ・インスタンスにのみバインド可能です。ただし、外部アプリと同じように他のスペースまたは組織からサービス・インスタンスを使用できます。バインディングを作成する代わりに、資格情報を使用してアプリ・インスタンスを直接構成します。外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用する方法について詳しくは、[『外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする』](#accser_external){: new_window}を参照してください。
 
@@ -237,8 +235,9 @@ cf コマンド・ライン・インターフェースを使用してサービ�
 ユーザー提供のサービス・インスタンスを作成し、それをアプリケーションにバインドするには、以下のステップを実行します。
 
 1. **cf create-user-provided-service** コマンドまたは **cf cups** コマンドを使用して、ユーザー提供のサービス・インスタンスを作成します。
-    * 一般的なユーザー提供のサービス・インスタンスを作成するには、**-p** オプションを使用し、パラメーター名をコンマで区切ります。cf コマンド・ライン・インターフェースはその後、各パラメーターについて順にプロンプトを出します。以下に例を示します。```
-        cf cups testups1 -p "host, port, dbname, username, password"
+    * 一般的なユーザー提供のサービス・インスタンスを作成するには、**-p** オプションを使用し、パラメーター名をコンマで区切ります。cf コマンド・ライン・インターフェースはその後、各パラメーターについて順にプロンプトを出します。例えば次のようにします。
+        
+cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -246,41 +245,41 @@ cf コマンド・ライン・インターフェースを使用してサービ�
         password> p@$$w0rd
         Creating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
-        ```
+        
 
     * サード・パーティーのログ管理ソフトウェアに情報をドレーンするサービス・インスタンスを作成するには、**-l** オプションを使用し、そのサード・パーティーのログ管理ソフトウェアが提供する宛先を指定します。例えば次のようにします。
 
-        ```
-        cf cups testups2 -l syslog://example.com
+        
+cf cups testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
-        ```
+        
 
     ユーザー提供のサービス・インスタンスの 1 つ以上のパラメーターを更新する場合は、**cf update-user-provided-service** コマンドまたは **cf uups** コマンドを使用します。
 
     * 一般的なユーザー提供のサービス・インスタンスを更新するには、**-p** オプションを使用して、パラメーターのキーと値を JSON オブジェクトで指定します。例えば次のようにします。
 
-        ```
-        cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        
+cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
-        ```
+        
 
     * サード・パーティーのログ管理ソフトウェアに情報をドレーンするサービス・インスタンスを作成するには、-l オプションを使用します。例えば次のようにします。
 
-        ```
-        cf uups testups2 -l syslog://example2.com
+        
+cf uups testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
-        ```
+        
 
 2. cf bind-service コマンドを使用して、サービス・インスタンスをアプリケーションにバインドします。例えば次のようにします。
 
-	```
+	
 	cf bind-service myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
-	```
+	
 
 外部リソースを使用するようアプリケーションを構成できるようになりました。サービスと対話するようアプリケーションを構成する方法については、[「サービスと対話するようアプリケーションを構成する」](#config){: new_window}を参照してください。
 
@@ -307,9 +306,9 @@ cf コマンド・ライン・インターフェースを使用してサービ�
 
       5. 以下のコマンドを使用して、ユーザー提供のサービス・インスタンスをアプリにバインドします。
 
-	     ```
+	     
 	     cf bind-service myapp user-provided_service_instance
-	```
+	
 
 
 

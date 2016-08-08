@@ -18,8 +18,9 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-*最終更新日: 2016 年 6 月 2 日*
+*最終更新日: 2016 年 6 月 22 日*
 {: .last-updated}
+
 
 Cloud Foundry コマンド・ライン・インターフェースを {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインと共に使用することにより、{{site.data.keyword.Bluemix_notm}} Local 環境または {{site.data.keyword.Bluemix_notm}} Dedicated 環境のユーザーを管理できます。例えば、LDAP レジストリーからユーザーを追加できます。{{site.data.keyword.Bluemix_notm}} パブリック・アカウントの管理に関する情報を探している場合は、『[管理](../../../admin/adminpublic.html#administer)』を参照してください。
 
@@ -57,9 +58,9 @@ CLI プラグインの使用
 {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用すると、ユーザーの追加と削除、組織へのユーザーの割り当てと割り当て解除、といった管理タスクを実行できます。コマンドのリストを表示するには、次のコマンドを実行します。
 
 
-```
+
 cf plugins
-```
+
 {: codeblock}
 
 追加でコマンドのヘルプを表示するには、`-help` オプションを使用します。
@@ -91,9 +92,9 @@ cf login
 LDAP レジストリーから {{site.data.keyword.Bluemix_notm}} 環境にユーザーを追加できます。次のコマンドを入力します。
 
 
-```
+
 cf ba add-user <user_name> <organization>
-```
+
 {: codeblock}
 
 <dl class="parml">
@@ -112,9 +113,9 @@ cf ba add-user <user_name> <organization>
 ユーザーを検索できます。次のコマンドを入力します。
 
 
-```
+
 cf ba search-users <user_name>
-```
+
 {: codeblock}
 
 <dl class="parml">
@@ -131,9 +132,9 @@ cf ba search-users <user_name>
 指定されたユーザーに対する許可を設定できます。次のコマンドを入力します。
 
 
-```
+
 cf ba set-permissions <user_name> <permission> <access>
-```
+
 {: codeblock}
 
 **注**: 一度に 1 つの許可を設定できます。
@@ -155,9 +156,9 @@ cf ba set-permissions <user_name> <permission> <access>
 
 次のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} 環境からユーザーを削除できます。
 
-```
+
 cf ba remove-user <user_name>
-```
+
 {: codeblock}
 
 <dl class="parml">
@@ -175,9 +176,9 @@ cf ba remove-user <user_name>
 
 * 組織を追加するには、以下のコマンドを入力します。
 
-```
+
 cf ba create-organization <organization> <manager>
-```
+
 {: codeblock}
 
 <dl class="parml">
@@ -191,9 +192,9 @@ cf ba create-organization <organization> <manager>
 
 * 組織を削除するには、以下のコマンドを入力します。
 
-```
+
 cf ba delete-organization <organization>
-```
+
 {: codeblock}
 
 <dl class="parml">
@@ -208,9 +209,9 @@ cf ba delete-organization <organization>
 {{site.data.keyword.Bluemix_notm}} 環境内のユーザーを特定の組織に割り当てることができます。次のコマンドを入力します。
 
 
-```
+
 cf ba set-org <user_name> <organization> [<role>]
-```
+
 {: codeblock}
 
 <dl class="parml">
@@ -219,7 +220,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">ユーザーの割り当て先となる {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](../../../admin/users_roles.html#userrolesinfo)を参照してください。
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](../../../admin/users_roles.html)を参照してください。
 </dd>
 </dl>
 
@@ -230,9 +231,9 @@ cf ba set-org <user_name> <organization> [<role>]
 {{site.data.keyword.Bluemix_notm}} 環境内のユーザーについて、特定の組織への割り当てを解除することができます。次のコマンドを入力します。
 
 
-```
+
 cf ba unset-org <user_name> <organization> [<role>]
-```
+
 {: codeblock}
 
 <dl class="parml">
@@ -241,7 +242,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">ユーザーの割り当て先となる {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](../../../admin/users_roles.html#userrolesinfo)を参照してください。
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](../../../admin/users_roles.html)を参照してください。
 </dd>
 </dl>
 
@@ -269,9 +270,9 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 特定の組織の使用量の割り当て量を設定できます。
 
-```
+
 cf ba set-quota <organization> <plan>
-```
+
 {: codeblock}
 
 <dl class="parml">
@@ -288,9 +289,9 @@ cf ba set-quota <organization> <plan>
 セキュリティー・レポートを追加、削除、および取得できます。
 * レポートを追加するには、以下のコマンドを入力します。
 
-```
+
 cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
-```
+
 {: codeblock}
 
 **注**: レポートの書き込みアクセス許可がある場合は、新規カテゴリーを作成し、ユーザー用に受け入れられるフォーマットのいずれかでレポートを追加できます。`category` パラメーターに新規カテゴリー名を入力するか、既存のカテゴリーに新規レポートを追加します。
@@ -310,9 +311,9 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 
 * レポートを削除するには、以下のコマンドを入力します。
 
-```
+
 cf ba delete-report <category> <date> <name>
-```
+
 {: codeblock}
 
 <dl class="parml">
@@ -328,9 +329,9 @@ cf ba delete-report <category> <date> <name>
 
 * レポートを取得するには、以下のコマンドを入力します。
 
-```
+
 cf ba retrieve-report <category> <date> <name>
-```
+
 {: codeblock}
 
 <dl class="parml">
@@ -350,28 +351,28 @@ cf ba retrieve-report <category> <date> <name>
 
 * すべての組織に対して {{site.data.keyword.Bluemix_notm}} カタログでのサービスの表示を有効化するには、以下のコマンドを入力します。
 
-```
+
 cf ba enable-service-plan <plan_identifier>
-```
+
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開き、そのサービスで使用可能な料金プランを表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 </dl>
 
 **ヒント:** **ba enable-service-plan** という長いコマンド名の別名として **ba esp** を使用することもできます。
 
 * すべての組織に対して {{site.data.keyword.Bluemix_notm}} カタログでのサービスの表示を無効化するには、以下のコマンドを入力します。
 
-```
+
 cf ba disable-service-plan <plan_identifier>
-```
+
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開き、そのサービスで使用可能な料金プランを表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 </dl>
 
 **ヒント:** **ba disable-service-plan<retrieve-report** という長いコマンド名の別名として **ba dsp**を使用することもできます。
@@ -382,14 +383,14 @@ cf ba disable-service-plan <plan_identifier>
 
 * 組織が {{site.data.keyword.Bluemix_notm}} カタログで特定のサービスを表示できるようにするには、以下のコマンドを入力します。
 
-```
+
 cf ba add-service-plan-visibility <plan_identifier> <organization>
-```
+
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開き、そのサービスで使用可能な料金プランを表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">サービスの表示可能性リストに追加する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 </dl>
@@ -398,14 +399,14 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 * 組織に対して {{site.data.keyword.Bluemix_notm}} カタログでのサービスの表示可能性を削除するには、以下のコマンドを入力します。
 
-```
+
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
-```
+
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開き、そのサービスで使用可能な料金プランを表示できます。</dd>
+<dd class="pd">有効にするサービス・プランの名前または GUID。非固有のサービス名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">サービスの表示可能性リストから削除する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 </dl>
@@ -414,16 +415,16 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 * 単一または複数の組織に対して既存のすべての表示されるサービスを置換するには、以下のコマンドを使用します。
 
-```
+
 cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>
-```
+
 {: codeblock}
 
 **注:** このコマンドにより、指定した組織で表示される既存のサービスが、コマンドで指定したサービスに置換されます。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開き、そのサービスで使用可能な料金プランを表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">表示可能性を追加する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。コマンドに追加の組織名または GUID を入力することで、複数の組織に対してサービスの表示可能性を有効化できます。</dd>
 </dl>
@@ -436,9 +437,9 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 * サービス・ブローカーをリストするには、次のコマンドを入力します。
 
-```
+
 cf ba service-brokers <broker_name>
-```
+
 {: codeblock}
 
 **注**: すべてのサービス・ブローカーをリストするには、`broker_name` パラメーターを指定せずにコマンドを入力します。
@@ -452,9 +453,9 @@ cf ba service-brokers <broker_name>
 
 * サービス・ブローカーを追加して、{{site.data.keyword.Bluemix_notm}} カタログにカスタム・サービスを追加できるようにするには、次のコマンドを入力します。
 
-```
+
 cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
-```
+
 {: codeblock}
 
 <dl class="parml">
@@ -472,9 +473,9 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 
 * サービス・ブローカーを削除して、{{site.data.keyword.Bluemix_notm}} カタログからカスタム・サービスを除去するには、次のコマンドを入力します。
 
-```
+
 cf ba delete-service-broker <service_broker>
-```
+
 {: codeblock}
 
 <dl class="parml">

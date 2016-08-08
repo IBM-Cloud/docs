@@ -18,6 +18,7 @@ copyright:
 
 # Monitorando a atividade de seu {{site.data.keyword.openwhisk_short}} de atividade com o Painel do {{site.data.keyword.openwhisk_short}}
 *Última atualização: 9 de fevereiro de 2016*
+{: .last-updated}
 
 O [Painel do {{site.data.keyword.openwhisk}}](https://{DomainName}/whisk/dashboard/) fornece um resumo gráfico de sua atividade. Utilize o painel para determinar o desempenho e o funcionamento de suas ações do {{site.data.keyword.openwhisk_short}}. 
 {:shortdesc}

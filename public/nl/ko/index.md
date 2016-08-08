@@ -13,7 +13,7 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} Public
+# {{site.data.keyword.Bluemix_notm}} 퍼블릭
 {: #public}
 *마지막 업데이트 날짜: 2016년 5월 19일*
 {: .last-updated}
@@ -22,7 +22,7 @@ copyright:
 {{site.data.keyword.Bluemix_notm}}는 클라우드 기반 앱을 호스팅하고 관리하는 것과 연관된 대부분의 복잡성을 추상화하고 숨깁니다. 애플리케이션 개발자는 애플리케이션을 호스팅하는 데 필요한 인프라를 관리할 필요 없이 앱을 개발하는 데 집중할 수 있습니다.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}}는 사용자의 요구사항에 맞는 클라우드 배치를 가지고 있습니다. 확장을 계획 중인 소기업이든 추가적인 분리가 필요한 대기업이든 규모에 관계없이 클라우드에서 경계 없이 개발을 할 수 있으며 이를 통해 사용자 전용 서비스를 {{site.data.keyword.IBM_notm}} 및 써드파티 제공자에서 제공하는 공용 {{site.data.keyword.Bluemix_notm}} 서비스에 연결할 수 있습니다. 모든 서비스 인스턴스는 {{site.data.keyword.IBM_notm}}에서 관리하고 사용하도록 선택한 서비스에 대해서만
+{{site.data.keyword.Bluemix_notm}}는 사용자의 요구사항에 맞는 클라우드 배치를 가지고 있습니다. 확장을 계획 중인 소기업이든 추가적인 분리가 필요한 대기업이든 규모에 관계없이 클라우드에서 경계 없이 개발을 할 수 있으며 이를 통해 사용자 데디케이티드 서비스를 {{site.data.keyword.IBM_notm}} 및 써드파티 제공자에서 제공하는 공용 {{site.data.keyword.Bluemix_notm}} 서비스에 연결할 수 있습니다. 모든 서비스 인스턴스는 {{site.data.keyword.IBM_notm}}에서 관리하고 사용하도록 선택한 서비스에 대해서만
 요금이 청구됩니다. 
 
 핵심은
@@ -170,7 +170,7 @@ copyright:
 애플리케이션 데이터를 보관할 지역을
 선택할 수도 있습니다. 앱을 여러 지역에서 빌드할 경우
 이 중 한 지역의 작동이 중지되면 다른 지역에 있는 앱은 계속 실행됩니다.
-허용되는 자원 양은 사용하는 각 지역마다 동일합니다.
+허용되는 리소스 양은 사용하는 각 지역마다 동일합니다.
 
 {{site.data.keyword.Bluemix_notm}}
 사용자 인터페이스를 사용하고 있는 경우 다른 지역으로 전환하여
@@ -257,7 +257,7 @@ SOR(System of Record) 및 SOE(System of Engagement)를 연결함으로써 개발
 
 <dl>
 <dt>Cloud Integration API</dt>
-    <dd>Cloud Integration API는 웹 API를 통해 방화벽 뒤에 있는 SOR(System of Record)에 대한 보안 액세스를 제공합니다. Cloud Integration API를 작성할 때 웹 API를 통해 액세스하려는 자원을 선택하고 허용되는 오퍼레이션을 지정하고 API에 액세스하기 위해 SDK와 샘플을 포함합니다. Cloud Integration API를 작성하는 방법에 대한 자세한 정보는 [Cloud Integration API 작성](../services/CloudIntegration/index.html#cloudint_add_service)을 참조하십시오.</dd>
+    <dd>Cloud Integration API는 웹 API를 통해 방화벽 뒤에 있는 SOR(System of Record)에 대한 보안 액세스를 제공합니다. Cloud Integration API를 작성할 때 웹 API를 통해 액세스하려는 리소스를 선택하고 허용되는 오퍼레이션을 지정하고 API에 액세스하기 위해 SDK와 샘플을 포함합니다. Cloud Integration API를 작성하는 방법에 대한 자세한 정보는 [Cloud Integration API 작성](../services/CloudIntegration/index.html#cloudint_add_service)을 참조하십시오.</dd>
 <dt>개인 서비스</dt>
     <dd>개인 서비스는 Cloud Integration API, SDK 및 자격부여 정책으로 구성됩니다. 또한 개인 서비스에는
 서비스 제공업체가 제공하는 문서 또는 기타 항목이 포함될 수 있습니다.

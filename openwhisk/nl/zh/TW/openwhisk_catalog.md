@@ -37,7 +37,7 @@ copyright:
 | `/whisk.system/cloudant` | 套件 | {{site.data.keyword.Bluemix_notm}}ServiceName、host、username、password、dbname、includeDoc、overwrite | 使用 Cloudant 資料庫 |
 | `/whisk.system/cloudant/read` | 動作 | dbname、includeDoc、id | 讀取資料庫中的文件 |
 | `/whisk.system/cloudant/write` | 動作 | dbname、overwrite、doc | 將文件寫入資料庫 |
-| `/whisk.system/cloudant/changes` | 資訊來源 | dbname、includeDoc | 在資料庫變更時發動觸發程式事件 |
+| `/whisk.system/cloudant/changes` | 資訊來源 | dbname、includeDoc、maxTriggers | 在資料庫變更時發動觸發程式事件 |
 
 下列各主題逐步說明如何設定 Cloudant 資料庫、配置關聯的套件，以及使用 `/whisk.system/cloudant` 套件中的動作及資訊來源。
 
@@ -61,7 +61,7 @@ copyright:
 3. 重新整理名稱空間中的套件。重新整理會自動建立您所建立之 Cloudant 服務實例的套件連結。
 
   ```
-  wsk package refresh
+wsk package refresh
   ```
   {: pre}
   ```
@@ -71,7 +71,7 @@ copyright:
   {: screen}
 
   ```
-  wsk package list
+wsk package list
   ```
   {: pre}
   ```
@@ -116,18 +116,18 @@ copyright:
 1. 建立針對 Cloudant 帳戶所配置的套件連結。
 
   ```
-  wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
   ```
   {: pre}
 
 2. 驗證套件連結已存在。
 
   ```
-  wsk package list
+wsk package list
   ```
   {: pre}
   ```
-  packages
+packages
   /myNamespace/myCloudant private binding
   ```
   {: screen}
@@ -135,23 +135,27 @@ copyright:
 
 ### 接聽 Cloudant 資料庫的變更
 
-您可以使用 `changes` 資訊來源，配置服務在每次變更 Cloudant 資料庫時發動觸發程式。
+您可以使用 `changes` 資訊來源，配置服務在每次變更 Cloudant 資料庫時發動觸發程式。參數如下所示：
+
+- `dbname`：Cloudant 資料庫的名稱。
+- `includeDoc`：如果設為 true，所發動的每一個觸發程式事件都會包括已修改的 Cloudant 文件。 
+- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。您可以將其設定至上限 10,000。如果您嘗試設定超過 10,000 的值，將會拒絕要求。
 
 1. 使用您先前建立的套件連結中的 `changes` 資訊來源，來建立觸發程式。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
 
   ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
+wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
   ```
   {: pre}
   ```
-  ok: created trigger feed myCloudantTrigger
+ok: created trigger feed myCloudantTrigger
   ```
   {: screen}
 
 2. 輪詢啟動。
 
   ```
-  wsk activation poll
+wsk activation poll
   ```
   {: pre}
 
@@ -159,7 +163,7 @@ copyright:
 
 4. 觀察每一個文件變更的 `myCloudantTrigger` 觸發程式的新啟動。
 
-**附註**：如果您無法觀察到新啟動，請參閱有關在 Cloudant 資料庫中讀取及寫入的後續各節。測試下列讀取及寫入步驟，有助於驗證 Cloudant 認證正確無誤。
+**附註**：如果您無法觀察到新啟動，請參閱有關在 Cloudant 資料庫中讀取及寫入的後續各節。測試下面的讀取及寫入步驟，有助於驗證 Cloudant 認證正確無誤。
 
 您現在可以建立規則，並將它們關聯至可反應文件更新的動作。
 
@@ -167,7 +171,7 @@ copyright:
 
   ```
   {
-"_id": "6ca436c44074c4c2aa6a40c9a188b348",
+    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
     "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
     "name": "Heisenberg"
   }
@@ -186,7 +190,7 @@ copyright:
 
   ```
   {
-"id": "6ca436c44074c4c2aa6a40c9a188b348",
+      "id": "6ca436c44074c4c2aa6a40c9a188b348",
       "seq": "2-g1AAAAL9aJyV-GJCaEuqx4-BktQkYp_dmIfC",
       "changes": [
           {
@@ -204,13 +208,13 @@ copyright:
 1. 使用您先前建立的套件連結中的 `write` 動作，來儲存文件。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
 
   ```
-  wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
   ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
-"id": "heisenberg",
+    "id": "heisenberg",
     "ok": true,
     "rev": "1-9a94fb93abc88d8863781a248f63c8c3"
   }
@@ -229,12 +233,12 @@ copyright:
 1. 使用您先前建立的套件連結中的 `read` 動作，來提取文件。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
 
   ```
-  wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
   ```
   {: pre}
   ```
   {
-"_id": "heisenberg",
+    "_id": "heisenberg",
     "_rev": "1-9a94fb93abc88d8863781a248f63c8c3"
     "name": "Walter White"
   }
@@ -268,7 +272,7 @@ copyright:
 
 - `trigger_payload`：每次發動觸發程式時，此參數的值都會變成觸發程式的內容。
 
-- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。
+- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。您可以將其設定至上限 10,000。如果您嘗試設定超過 10,000 的值，將會拒絕要求。
 
 以下範例使用觸發程式事件中的 `name` 及 `place` 值來建立每 20 秒發動一次的觸發程式。
 
@@ -309,20 +313,20 @@ copyright:
 1. 使用 API 金鑰建立套件連結。
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
   ```
   {: pre}
 
 2. 在套件連結中呼叫 `forecast` 動作，以取得天氣預報。
 
   ```
-  wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
   ```
   {: pre}
 
   ```
   {
-"forecasts": [
+      "forecasts": [
           {
               "dow": "Wednesday",
               "max_temp": -1,
@@ -377,20 +381,20 @@ copyright:
 1. 使用 Watson 認證建立套件連結。
 
   ```
-  wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
   ```
   {: pre}
 
 2. 在套件連結中呼叫 `translate` 動作，以將一些文字從英文翻譯成法文。
 
   ```
-  wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
   ```
   {: pre}
 
   ```
   {
-"payload": "Ciel bleu a venir"
+      "payload": "Ciel bleu a venir"
   }
   ```
   {: screen}
@@ -409,19 +413,19 @@ copyright:
 1. 使用 Watson 認證建立套件連結。
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
   ```
   {: pre}
 
 2. 在套件連結中呼叫 `languageId` 動作，以識別語言。
 
   ```
-  wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
   ```
   {: pre}
   ```
   {
-"payload": "Ciel bleu a venir",
+    "payload": "Ciel bleu a venir",
     "language": "fr",
     "confidence": 0.710906
   }
@@ -445,19 +449,19 @@ copyright:
 1. 使用 Watson 認證建立套件連結。
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
   ```
   {: pre}
 
 2. 在套件連結中呼叫 `textToSpeech` 動作，以轉換文字。
 
   ```
-  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
   {
-    "payload": "<base64 encoding of a .wav file>"
+        "payload": "<base64 encoding of a .wav file>"
   }
   ```
   {: screen}
@@ -490,19 +494,22 @@ copyright:
 1. 使用 Watson 認證建立套件連結。
 
   ```
-  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
   ```
+  {: pre}
 
 2. 在套件連結中呼叫 `speechToText` 動作，以轉換已編碼的音訊。
 
   ```
-  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
+  {: pre}
   ```
   {
-    "data": "Hello Watson"
+        "data": "Hello Watson"
   }
   ```
+  {: screen}
   
  
 ## 使用 Slack 套件
@@ -537,14 +544,14 @@ copyright:
 2. 使用 Slack 認證、要張貼至其中的通道，以及用來進行張貼的使用者名稱，來建立套件連結。
 
   ```
-  wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
   ```
   {: pre}
 
 3. 在套件連結中呼叫 `post` 動作，以將訊息張貼至 Slack 通道。
 
   ```
-  wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
+wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
   ```
   {: pre}
 
@@ -570,7 +577,7 @@ copyright:
 - `username`：GitHub 儲存庫的使用者名稱。
 - `repository`：GitHub 儲存庫。
 - `accessToken`：GitHub 個人存取記號。[建立記號](https://github.com/settings/tokens)時，請務必選取 repo:status 及 public_repo 範圍。同時，請確定您尚未定義儲存庫的任何 Webhook。
-- `events`：感興趣的 [GitHub 活動類型](https://developer.github.com/v3/activity/events/types/)。
+- `events`：感興趣的 [GitHub 事件類型](https://developer.github.com/v3/activity/events/types/)。
 
 下列範例說明如何建立在每次 GitHub 儲存庫有新確定時將發動的觸發程式。
 
@@ -578,18 +585,136 @@ copyright:
 
   下一步將會使用存取記號。
 
-
 2. 使用存取記號，建立針對 GitHub 儲存庫所配置的套件連結。
 
   ```
-  wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
+wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
   ```
   {: pre}
 
 3. 使用 `myGit/webhook` 資訊來源，以建立 GitHub `push` 事件類型的觸發程式。
 
   ```
-  wsk trigger create myGitTrigger --feed myGit/webhook --param events push
+wsk trigger create myGitTrigger --feed myGit/webhook --param events push
   ```
   {: pre}
 
+透過 `git push` 來確定 Github 儲存庫時，將會導致 webhook 發動觸發程式。如果有符合觸發程式的規則，則會呼叫相關聯的動作。
+此動作會接收 Github webhook 有效負載作為輸入參數。每個 Github webhook 事件的 JSON 綱目都很類似，但其事件類型會決定唯一的有效負載物件。
+如需有效負載內容的相關資訊，請參閱 [Github 事件和有效負載](https://developer.github.com/v3/activity/events/types/) API 文件。
+
+
+## 使用 Push 套件
+{: #openwhisk_catalog_pushnotifications}
+
+`/whisk.system/pushnotifications` 套件可讓您使用推送服務。 
+
+該套件包括下列資訊來源：
+
+| 實體 | 類型 | 參數 | 說明 |
+| --- | --- | --- | --- |
+| `/whisk.system/pushnotifications` | 套件 | appId、appSecret  | 使用 Push 服務 |
+| `/whisk.system/pushnotifications/sendMessage` | 動作 | text、url、deviceIds、platforms、tagNames、apnsBadge、apnsCategory、apnsActionKeyTitle、apnsSound、apnsPayload、apnsType、gcmCollapseKey、gcmDelayWhileIdle、gcmPayload、gcmPriority、gcmSound、gcmTimeToLive | 將推送通知傳送至指定的裝置 |
+| `/whisk.system/pushnotifications/webhook` | 資訊來源 | 事件 | 在「Push 服務」中產生裝置活動（裝置（取消）登錄 /（取消）訂閱）時發動觸發事件 |
+雖然不是必要的，但還是建議您使用 `appId` 和 `appSecret` 值來建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定這些認證。
+### 設定 IBM Push Notifications 套件
+
+建立IBM Push Notifications 套件時，您必須提供下列參數：
+
+-  `appId`：Bluemix 應用程式 GUID。
+-  `appSecret`：Bluemix 推送通知服務 appSecret。
+
+下列範例說明如何建立套件連結。
+
+1. 在 [Bluemix 儀表板](http://console.ng.bluemix.net)中建立 Bluemix 應用程式。
+
+2. 起始設定「推送通知服務」，並將該服務連結至 Bluemix 應用程式。
+
+3. 配置 [IBM 推送通知應用程式](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)。
+
+  請務必記住您建立之 Bluemix 應用程式的 `App GUID` 和 `App Secret`。
+
+
+4. 建立與 `/whisk.system/pushnotifications` 連結的套件。
+
+  ```
+  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  ```
+  {: pre}
+
+5. 驗證套件連結已存在。
+
+  ```
+wsk package list
+  ```
+  {: pre}
+
+  ```
+  packages
+  /myNamespace/myPush private binding
+  ```
+  {: screen}
+
+### 傳送推送通知
+
+`/whisk.system/pushnotifications/sendMessage` 動作會將推送通知傳送至已登錄的裝置。參數如下所示：
+- `text` - 要對使用者顯示的通知訊息。例如：-p text "Hi ,{{site.data.keyword.openwhisk}} send a notification"。
+- `url` - 可隨著警示一起傳送的選用性 URL。例如：-p url "https:\\www.w3.ibm.com"。
+- `gcmPayload` - 會放在通知訊息中一起傳送的自訂 JSON 有效負載。例如：-p gcmPayload "{"hi":"hello"}"。
+- `gcmSound` - 當通知到達裝置時，將會嘗試播放的音效檔（在裝置上）。
+- `gcmCollapseKey` - 此參數可識別訊息的群組。
+- `gcmDelayWhileIdle` - 當此參數設為 true 時，表示要等到裝置變成作用中時，才會傳送訊息。
+- `gcmPriority` - 設定訊息的優先順序。
+- `gcmTimeToLive` - 此參數指定當裝置離線時，訊息應保留在 GCM 儲存空間中多久（以秒為單位）。
+- `apnsBadge` - 要顯示成應用程式圖示徽章的數字。
+- `apnsCategory` -  要用於互動式推送通知的種類 ID。
+- `apnsIosActionKey` - 動作鍵的標題。
+- `apnsPayload` - 會放在通知訊息中一起傳送的自訂 JSON 有效負載。
+- `apnsType` - ['DEFAULT'、'MIXED'、'SILENT']。
+- `apnsSound` - 應用程式組合中的音效檔名稱。將會播放此檔案的音效作為警示。
+
+下面是從推送通知套件傳送推送通知的範例。
+
+1. 使用您先前建立之套件連結中的 `sendMessage` 動作來傳送推送通知。請務必將 `/myNamespace/myPush` 取代成您的套件名稱。
+
+  ```
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  ```
+  {: pre}
+
+  ```
+  {
+  "result": {
+          "pushResponse": "{"messageId":"11111H","message":{"message":{"alert":"this is my message","url":"http.google.com"},"settings":{"apns":{"sound":"default"},"gcm":{"sound":"default"},"target":{"deviceIds":["T1","T2"]}}}"
+  },
+      "status": "success",
+      "success": true
+  }
+  ```
+  {: screen}
+
+### 在產生 IBM Push Notifications 服務活動時發動觸發事件
+
+`/whisk.system/pushnotifications/webhook` 將 IBM Push Notifications 服務配置成：當指定的應用程式中有裝置活動（例如裝置登錄 / 取消登錄或訂閱 / 取消訂閱）時，即發動觸發程式
+
+參數如下所示：
+
+- `appId`：Bluemix 推送通知服務 appSecret。
+- `appSecret`：Bluemix 應用程式 GUID。
+- `events`：支援的事件為 `onDeviceRegister`、`onDeviceUnregister`、`onDeviceUpdate`、`onSubscribe`、`onUnsubscribe`。如果所有事件都要通知，請使用萬用字元 `*`。
+
+下列範例說明如何建立在每次有新裝置向「IBM Push Notifications 服務」應用程式登錄時，即發動的觸發程式。
+
+1. 以您的 appId 和 appSecret 來建立為 IBM Push Notifications 服務配置的套件連結。
+
+  ```
+  wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
+  ```
+  {: pre}
+
+2. 使用 `myPush/webhook` 資訊來源，為「IBM Push Notifications 服務」的 `onDeviceRegister` 事件類型建立觸發程式。
+
+  ```
+  wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister
+  ```
+  {: pre}

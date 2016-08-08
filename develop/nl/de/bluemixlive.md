@@ -17,7 +17,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Letzte Aktualisierung: 7. April 2016*
+*Letzte Aktualisierung: 24. Juni 2016*
 {: .last-updated}  
 
 Wenn Sie eine Node.js-Anwendung erstellen, können Sie {{site.data.keyword.Bluemix}} Live Sync dazu verwenden, die Anwendungsinstanz ohne großen Zeitaufwand in {{site.data.keyword.Bluemix_notm}} zu aktualisieren und Entwicklungsprozesse wie auf dem Desktop durchzuführen, ohne dass eine erneute Bereitstellung erforderlich ist.   
@@ -70,8 +70,10 @@ Weitere Details zu den Befehlen finden Sie unter [Bluemix Live Sync-Befehle (bl)
 
 <strong>Wichtig:</strong> Das Befehlszeilentool 'bl' ist nur für Windows 7 und 8 sowie für Mac OS X ab Version 10.9 verfügbar. </li>
 
-<li>Melden Sie sich in einer Befehlszeile mit dem folgenden Befehl an. Sie werden zur Eingabe Ihrer IBM ID und des entsprechenden Kennworts aufgefordert.  
+<li>Melden Sie sich in einer Befehlszeile mit dem folgenden Befehl an. Sie werden zur Eingabe Ihrer Benutzer-ID und des entsprechenden Kennworts aufgefordert.   
 <pre class="codeblock">bl login</pre>
+
+<strong>Hinweis:</strong> Ihre Benutzer-ID für DevOps Services kann entweder eine IBM ID oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBM ID und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a>.  
 </li>
 
 <li>Zeigen Sie die Liste der für die {{site.data.keyword.Bluemix_notm}} Live Sync-Synchronisation verfügbaren Projekte an, indem Sie den folgenden Befehl eingeben:
@@ -171,7 +173,9 @@ Die App muss das IBM SDK for Node.js-Buildpack verwenden. Angepasste Buildpacks 
 
 Nach der Installation von {{site.data.keyword.Bluemix_notm}} Live Debug können Sie die Debug-Tools verwenden.
 
-Stellen Sie die App per Push-Operation bereit und rufen Sie dann `https://app-host.mybluemix.net/bluemix-debug/manage` auf, um auf die Benutzerschnittstelle des {{site.data.keyword.Bluemix_notm}}-Debug-Features zuzugreifen. Wenn Sie dazu aufgefordert werden, geben Sie zur Authentifizierung Ihre IBM ID und das zugehörige Kennwort ein.
+Stellen Sie die App per Push-Operation bereit und rufen Sie dann `https://app-host.mybluemix.net/bluemix-debug/manage` auf, um auf die Benutzerschnittstelle des {{site.data.keyword.Bluemix_notm}}-Debug-Features zuzugreifen. Wenn Sie aufgefordert werden, sich zu authentifizieren, geben Sie Ihre Benutzer-ID und das persönliche Zugriffstoken oder das Kennwort zur IBM ID ein.     
+
+   **Hinweis**: Ihre Benutzer-ID für DevOps Services kann entweder eine IBM ID oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBM ID und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/). 
 
 ###App-Konfigurationen wiederherstellen und Bluemix Live Debug inaktivieren {: #restore_live_debug}
 
@@ -202,7 +206,7 @@ Weitere Informationen zum Herunterladen und Verwenden des Befehls 'bl' finden Si
 Die {{site.data.keyword.Bluemix_live}}-Befehlszeile **bl** hat die folgende Syntax:
 
 ```
-bl Befehl [Argumente][options] [--help]
+bl command [arguments] [options] [--help]
 ```
 {: pre}
 
@@ -274,7 +278,7 @@ bl sync --help
 {: bl_login}
 
 ```
-bl login | l [ -u username ][-p password ][ -s server ]
+bl login | l [ -u username ] [-p password ][ -s server ]
 ```
 {: pre}
 
@@ -288,11 +292,13 @@ Verwenden Sie diesen Befehl für die Anmeldung bei {{site.data.keyword.Bluemix_n
 
 **Optionen**
 
--u *username*: Ihre IBM ID für die Anmeldung bei {{site.data.keyword.Bluemix_notm}}.
+-u *benutzername*: Die Benutzer-ID zum Anmelden an {{site.data.keyword.Bluemix_notm}}. 
 
--p *password*: Ihr Kennwort für die IBM ID.
+-p *kennwort*: Das persönliche Zugriffstoken oder das Kennwort zur IBM ID. 
 
--s *server*: Der Servername oder die IP-Adresse des {{site.data.keyword.jazzhub_short}}-Servers.
+-s *server*: Der Servername oder die IP-Adresse des {{site.data.keyword.jazzhub_short}}-Servers.     
+
+   **Hinweis**: Ihre Benutzer-ID für DevOps Services kann entweder eine IBM ID oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBM ID und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/). 
 
 **Beispiele**
 
@@ -345,7 +351,7 @@ Verwenden Sie diesen Befehl, um alle Projekte aufzulisten, die für die Synchron
 {: bl_sync}
 
 ```
-bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
 ```
 {: pre}
 
@@ -401,7 +407,7 @@ bl sync myproject –d  myfolder
 {: bl_create}
 
 ```
-bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
 ```
 {: pre}
 
@@ -465,9 +471,7 @@ Verwenden Sie diesen Befehl, um den Status der Anwendungen aufzulisten, die den 
 
 **Beispiele**
 
-In diesem Beispiel wird der Status der aktiven Anwendungen angezeigt. Wenn das aktuelle Verzeichnis ein vorhandenes
-Synchronisationsziel ist, wird das zugeordnete Projekt verwendet. Wenn das aktuelle Verzeichnis kein vorhandenes Synchronisationsziel ist,
-fordert der Befehl zur Eingabe von `Projektname` auf.
+In diesem Beispiel wird der Status der aktiven Anwendungen angezeigt. Wenn das aktuelle Verzeichnis ein vorhandenes Synchronisationsziel ist, wird das zugeordnete Projekt verwendet. Wenn das aktuelle Verzeichnis kein vorhandenes Synchronisationsziel ist, fordert der Befehl zur Eingabe von `Projektname` auf.
 
 ```
 bl status
@@ -492,7 +496,7 @@ bl status “my pro ject”
 {: bl_start}
 
 ```
-bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
 ```
 {: pre}
 

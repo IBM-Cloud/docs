@@ -18,8 +18,9 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}}-Administrator-CLI
 {: #bluemixadmincli}
 
-*Letzte Aktualisierung: 2. Juni 2016*
+*Letzte Aktualisierung: 22. Juni 2016*
 {: .last-updated}
+
 
 Sie können Benutzer für Ihre {{site.data.keyword.Bluemix_notm}} Local- oder
 {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung über die Cloud
@@ -239,7 +240,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, der der Benutzer zugewiesen werden soll.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">Informationen zu {{site.data.keyword.Bluemix_notm}}-Benutzerrollen und Beschreibungen
-finden Sie unter [Rollen](../../../admin/users_roles.html#userrolesinfo).</dd>
+finden Sie unter [Rollen](../../../admin/users_roles.html).</dd>
 </dl>
 
 **Tipp:** Sie können auch **ba so** als Alias für den längeren
@@ -263,7 +264,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, der der Benutzer zugewiesen werden soll.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">Informationen zu {{site.data.keyword.Bluemix_notm}}-Benutzerrollen und Beschreibungen
-finden Sie unter [Rollen](../../../admin/users_roles.html#userrolesinfo).</dd>
+finden Sie unter [Rollen](../../../admin/users_roles.html).</dd>
 </dl>
 
 **Tipp:** Sie können auch **ba uo** als Alias für den längeren
@@ -386,7 +387,7 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn der eingegebene Servicename nicht eindeutig ist, werden Sie mit Serviceplänen zur Auswahl eines Service aufgefordert. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen. Daraufhin können Sie die für diesen Service verfügbaren Preistarife anzeigen.</dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen Servicenamen eingeben, der nicht eindeutig ist, wie zum Beispiel "Standard" oder "Basic", werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
 </dl>
 
 **Tipp:** Sie können auch **ba esp** als Alias für den längeren Befehlsnamen **ba enable-service-plan** verwenden.
@@ -401,7 +402,7 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn der eingegebene Servicename nicht eindeutig ist, werden Sie mit Serviceplänen zur Auswahl eines Service aufgefordert. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen. Daraufhin können Sie die für diesen Service verfügbaren Preistarife anzeigen.</dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen Servicenamen eingeben, der nicht eindeutig ist, wie zum Beispiel "Standard" oder "Basic", werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
 </dl>
 
 **Tipp:** Sie können auch **ba dsp** als Alias für den längeren
@@ -424,7 +425,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn der eingegebene Servicename nicht eindeutig ist, werden Sie mit Serviceplänen zur Auswahl eines Service aufgefordert. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen. Daraufhin können Sie die für diesen Service verfügbaren Preistarife anzeigen.</dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen Servicenamen eingeben, der nicht eindeutig ist, wie zum Beispiel "Standard" oder "Basic", werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, die der Sichtbarkeitsliste des Service hinzugefügt werden soll.</dd>
 </dl>
@@ -442,7 +443,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn der eingegebene Servicename nicht eindeutig ist, werden Sie mit Serviceplänen zur Auswahl eines Service aufgefordert. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen. Daraufhin können Sie die für diesen Service verfügbaren Preistarife anzeigen.</dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen Servicenamen eingeben, der nicht eindeutig ist, wie zum Beispiel "Standard" oder "Basic", werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, die aus der Sichtbarkeitsliste des Service entfernt werden soll.</dd>
 </dl>
@@ -462,7 +463,7 @@ durch den Service, den Sie im Befehl angeben.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn der eingegebene Servicename nicht eindeutig ist, werden Sie mit Serviceplänen zur Auswahl eines Service aufgefordert. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen. Daraufhin können Sie die für diesen Service verfügbaren Preistarife anzeigen.</dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen Servicenamen eingeben, der nicht eindeutig ist, wie zum Beispiel "Standard" oder "Basic", werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, für die die Sichtbarkeit hinzugefügt werden soll. Sie können
 die Sichtbarkeit des Service für mehrere Organisationen aktivieren, indem Sie weitere Organisationsnamen oder GUIDs im Befehl angeben.</dd>

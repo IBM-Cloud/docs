@@ -17,7 +17,7 @@ copyright:
 
 # プロファイル設定
 {: #usersettings}
-*最終更新日: 2016 年 5 月 16 日*
+最終更新日: 2016 年 6 月 23 日
 {: .last-updated}
 
 **「アカウントとサポート」**アイコン ![「アカウントとサポート」アイコン](../admin/images/account_support.svg)&gt;**「アカウント」**&gt;**「プロファイル」**に移動して、プロファイル設定を更新します。
@@ -25,22 +25,17 @@ copyright:
 
  **「プロファイル」**ページで、以下の情報を設定または更新できます。
 
-<!--  * A profile photo that is visible to other {{site.data.keyword.Bluemix_notm}} users -->
-
+ * 他の {{site.data.keyword.Bluemix_notm}} ユーザーに表示されるプロファイルの写真
  * 名前、E メール、電話番号、パスワード、会社名、役割などの IBM ID 情報
  * 分析トラッキング設定
 
-<!-- pulled back, so removing content for now
-
-## Changing your profile photo
+## プロファイルの写真の変更
 {: #photo}
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
+1. **「アカウントとサポート」**アイコン ![「アカウントとサポート」アイコン](../admin/images/account_support.svg)&gt;**「アカウント」**&gt;**「プロファイル」**に移動します。
 
-* Click **Change Photo** to upload a new photo.
-* Click **Remove Photo** to remove your photo.
-
--->
+* **「写真の変更 (Change Photo)」**をクリックして、新しい写真をアップロードします。
+* **「写真の削除 (Remove Photo)」**をクリックして、写真を削除します。
 
 ## IBM ID 情報の編集
 {: #ibmid}

@@ -34,15 +34,10 @@ copyright:
 
 | エンティティー | タイプ  | パラメーター | 説明 |
 | --- | --- | --- | --- |
-| `/whisk.system/cloudant` | パッケージ | 
-{{site.data.keyword.Bluemix_notm}}ServiceName、host、username、password、dbname、includeDoc、overwrite | 
-Cloudant データベースを処理 |
-| `/whisk.system/cloudant/read` | アクション | dbname、includeDoc、id | 
-データベースから文書を読み取る |
-| `/whisk.system/cloudant/write` | アクション | dbname、overwrite、doc | 
-データベースに文書を書き込む |
-| `/whisk.system/cloudant/changes` | フィード | dbname、includeDoc | 
-データベースの変更時にトリガー・イベントを発生させる |
+| `/whisk.system/cloudant` | パッケージ | {{site.data.keyword.Bluemix_notm}}ServiceName、host、username、password、dbname、includeDoc、overwrite | Cloudant データベースを処理 |
+| `/whisk.system/cloudant/read` | アクション | dbname、includeDoc、id | データベースから文書を読み取る |
+| `/whisk.system/cloudant/write` | アクション | dbname、overwrite、doc | データベースに文書を書き込む |
+| `/whisk.system/cloudant/changes` | フィード | dbname、includeDoc、maxTriggers | データベースの変更時にトリガー・イベントを発生させる |
 
 以降のトピックでは、Cloudant データベースのセットアップ、関連付けられたパッケージの構成、および `/whisk.system/cloudant` パッケージのアクションとフィードの使用をウォークスルーします。
 
@@ -57,44 +52,44 @@ Cloudant データベースを処理 |
 
 2. ご使用の {{site.data.keyword.openwhisk_short}} CLI が、前のステップで使用した {{site.data.keyword.Bluemix_notm}} 組織とスペースに対応する名前空間に存在するようにします。
 
-  ```
+  
   wsk property set --namespace my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space
-  ```
+  
   {: pre}
 
   あるいは、`wsk property set --namespace` を使用して、アクセス可能な名前空間のリストから名前空間を設定することができます。
 
 3. 名前空間でパッケージを最新表示します。最新表示により、ユーザーが作成した Cloudant サービス・インスタンスのパッケージ・バインディングが自動的に作成されます。
 
-  ```
-  wsk package refresh
-  ```
+  
+wsk package refresh
+  
   {: pre}
-  ```
+  
   created bindings:
   {{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1
-  ```
+  
   {: screen}
 
-  ```
-  wsk package list
-  ```
+  
+wsk package list
+  
   {: pre}
-  ```
+  
   packages
   /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1 private binding
-  ```
+  
   {: screen}
 
   {{site.data.keyword.Bluemix_notm}} Cloudant サービス・インスタンスに対応するパッケージ・バインディングの完全修飾名が表示されます。
 
 4. 前に作成されたパッケージ・バインディングが Cloudant {{site.data.keyword.Bluemix_notm}} サービス・インスタンスのホストと資格情報で構成されているかどうかを確認します。
 
-  ```
+  
   wsk package get /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1
-  ```
+  
   {: pre}
-  ```
+  
   ok: got package /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1, projecting parameters
   [
       ...
@@ -112,7 +107,7 @@ Cloudant データベースを処理 |
       }
       ...
   ]
-  ```
+  
   {: screen}
 
 ### {{site.data.keyword.Bluemix_notm}} 外部の Cloudant データベースのセットアップ
@@ -123,66 +118,69 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
 
 1. Cloudant アカウント用に構成されるパッケージ・バインディングを作成します。
 
-  ```
-  wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
-  ```
+  
+wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+  
   {: pre}
 
 2. パッケージ・バインディングが存在することを確認します。
 
-  ```
-  wsk package list
-  ```
+  
+wsk package list
+  
   {: pre}
-  ```
-  packages
+  
+packages
   /myNamespace/myCloudant private binding
-  ```
+  
   {: screen}
 
 
 ### Cloudant データベースに対する変更の listen
 
-`changes` フィードを使用して、Cloudant データベースが変更されるたびにトリガーを発生させるサービスを構成することができます。
+`changes` フィードを使用して、Cloudant データベースが変更されるたびにトリガーを発生させるサービスを構成することができます。パラメーターは次のとおりです。
+
+
+- `dbname`: Cloudant データベースの名前。
+- `includeDoc`: true に設定すると、発生する各トリガー・イベントに、変更された Cloudant 文書が含まれます。 
+- `maxTriggers`: この限界に達するとトリガーの発生を停止します。デフォルトは 1000 です。最大 10,000 に設定できます。10,000 を超える値に設定しようとすると、要求は拒否されます。
 
 1. 前に作成したパッケージ・バインディングの `changes` フィードを使用してトリガーを作成します。`/myNamespace/myCloudant` を、ご使用のパッケージ名に置き換えてください。
 
-  ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
-  ```
+  
+wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
+  
   {: pre}
-  ```
-  ok: created trigger feed myCloudantTrigger
-  ```
+  
+ok: created trigger feed myCloudantTrigger
+  
   {: screen}
 
 2. アクティベーションをポーリングします。
 
-  ```
-  wsk activation poll
-  ```
+  
+wsk activation poll
+  
   {: pre}
 
 3. Cloudant ダッシュボードで、既存の文書を変更するか、新しい文書を作成します。
 
 4. 文書を変更するたびに、`myCloudantTrigger` トリガーの新規アクティベーションを監視します。
 
-**注**: 新規アクティベーションを監視できない場合は、Cloudant データベースからの読み取りと Cloudant データベースへの書き込みに関する後続のセクションを参照してください。
-以下の読み取りおよび書き込みのステップを試すと、Cloudant 資格情報が正し
-いことを確認するのに役立ちます。
+**注**: 新規アクティベーションを監視できない場合は、Cloudant データベースからの読み取りと Cloudant データベースへの書き込みに関する後続のセクションを参照してください。以下の読み取りおよび書き込みのステップを試してみると、Cloudant 資格情報が正しいことを確認するのに役立ちます。
 
 これで、ルールを作成してアクションに関連付け、文書の更新に対応することができるようになります。
 
 生成されたイベントのコンテンツは、トリガーを作成するときの
 `includeDoc` パラメーターの値によって異なります。true に設定すると、発生する各トリガー・イベントに、変更された Cloudant 文書が含まれます。たとえば、次の変更された文書を考えてみます。 
 
-  ```
+  
   {
-"_id": "6ca436c44074c4c2aa6a40c9a188b348",
+    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
     "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
     "name": "Heisenberg"
   }
-  ```
+  
   {: screen}
 
 この例のコードは、対応する `_id`、`_rev`、および `name` の各パラメーターを使用してトリガー・イベントを生成します。実際には、トリガー・イベントの JSON 表記は文書に一致します。
@@ -195,9 +193,9 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
 
 トリガー・イベントの JSON 表記は、以下のようになります。
 
-  ```
+  
   {
-"id": "6ca436c44074c4c2aa6a40c9a188b348",
+      "id": "6ca436c44074c4c2aa6a40c9a188b348",
       "seq": "2-g1AAAAL9aJyV-GJCaEuqx4-BktQkYp_dmIfC",
       "changes": [
           {
@@ -205,7 +203,7 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
           }
       ]
   }
-  ```
+  
 
 
 ### Cloudant データベースへの書き込み
@@ -215,18 +213,18 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
 1. 前に作成したパッケージ・バインディングの `write` アクションを使用して、文書を格納します。
 `/myNamespace/myCloudant` を、ご使用のパッケージ名に置き換えてください。
 
-  ```
-  wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
-  ```
+  
+wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  
   {: pre}
-  ```
+  
   ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
-"id": "heisenberg",
+    "id": "heisenberg",
     "ok": true,
     "rev": "1-9a94fb93abc88d8863781a248f63c8c3"
   }
-  ```
+  
   {: screen}
 
 2. Cloudant ダッシュボードで参照して、文書が存在していることを確認します。
@@ -242,17 +240,17 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
 1. 前に作成したパッケージ・バインディングの `read` アクションを使用して、文書を取り出します。
 `/myNamespace/myCloudant` を、ご使用のパッケージ名に置き換えてください。
 
-  ```
-  wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
-  ```
+  
+wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+  
   {: pre}
-  ```
+  
   {
-"_id": "heisenberg",
+    "_id": "heisenberg",
     "_rev": "1-9a94fb93abc88d8863781a248f63c8c3"
     "name": "Walter White"
   }
-  ```
+  
   {: screen}
 
 
@@ -267,8 +265,7 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
 | エンティティー | タイプ  | パラメーター | 説明 |
 | --- | --- | --- | --- |
 | `/whisk.system/alarms` | パッケージ | - | アラームおよび定期的ユーティリティー |
-| `/whisk.system/alarms/alarm` | フィード | cron、trigger_payload、maxTriggers | 
-トリガー・イベントを定期的に発生させる |
+| `/whisk.system/alarms/alarm` | フィード | cron、trigger_payload、maxTriggers | トリガー・イベントを定期的に発生させる |
 
 
 ### トリガー・イベントの定期的な発生
@@ -288,13 +285,13 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 - `trigger_payload`: このパラメーターの値は、
 トリガーが発生するたびにトリガーのコンテンツになります。
 
-- `maxTriggers`: この限界に達するとトリガーの発生を停止します。デフォルトは 1000 です。
+- `maxTriggers`: この限界に達するとトリガーの発生を停止します。デフォルトは 1000 です。最大 10,000 に設定できます。10,000 を超える値に設定しようとすると、要求は拒否されます。
 
 以下は、トリガー・イベントに `name` と `place` の値を指定して、20 秒ごとに 1 回発生するトリガーを作成する例です。
 
-  ```
+  
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
-  ```
+  
   {: pre}
 
 生成される各イベントは、`trigger_payload` の値に指定されるプロパティーをパラメーターとして含みます。この場合、各トリガー・イベントは、
@@ -336,21 +333,21 @@ Weather Insights API を呼び出すのに便利な方法を提供します。
 
 1. API キーを使用してパッケージ・バインディングを作成します。
 
-  ```
-  wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
-  ```
+  
+wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+  
   {: pre}
 
 2. パッケージ・バインディングの `forecast` アクションを起動して、天気予報を取得します。
 
-  ```
-  wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
-  ```
+  
+wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  
   {: pre}
 
-  ```
+  
   {
-"forecasts": [
+      "forecasts": [
           {
               "dow": "Wednesday",
               "max_temp": -1,
@@ -369,7 +366,7 @@ Weather Insights API を呼び出すのに便利な方法を提供します。
           ...
       ],
   }
-  ```
+  
   {: screen}
 
 
@@ -406,23 +403,23 @@ Weather Insights API を呼び出すのに便利な方法を提供します。
 
 1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
 
-  ```
-  wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
-  ```
+  
+wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
+  
   {: pre}
 
 2. パッケージ・バインディングの `translate` アクションを起動して、テキストを英語からフランス語に変換します。
 
-  ```
-  wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
-  ```
+  
+wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+  
   {: pre}
 
-  ```
+  
   {
-"payload": "Ciel bleu a venir"
+      "payload": "Ciel bleu a venir"
   }
-  ```
+  
   {: screen}
 
 
@@ -439,24 +436,24 @@ Weather Insights API を呼び出すのに便利な方法を提供します。
 
 1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
 
-  ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
+  
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  
   {: pre}
 
 2. パッケージ・バインディングの `languageId` アクションを起動して、言語を識別します。
 
-  ```
-  wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
-  ```
+  
+wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+  
   {: pre}
-  ```
+  
   {
-"payload": "Ciel bleu a venir",
+    "payload": "Ciel bleu a venir",
     "language": "fr",
     "confidence": 0.710906
   }
-  ```
+  
   {: screen}
 
 
@@ -479,24 +476,24 @@ Weather Insights API を呼び出すのに便利な方法を提供します。
 
 1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
 
-  ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
+  
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  
   {: pre}
 
 2. パッケージ・バインディングで
 `textToSpeech` アクションを起動して、テキストを変換
 します。
 
-  ```
-  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
-  ```
+  
+wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  
   {: pre}
-  ```
+  
   {
-    "payload": "<base64 encoding of a .wav file>"
+        "payload": "<base64 encoding of a .wav file>"
   }
-  ```
+  
   {: screen}
 
 
@@ -532,22 +529,25 @@ Weather Insights API を呼び出すのに便利な方法を提供します。
 
 1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
 
-  ```
-  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
+  
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  
+  {: pre}
 
 2. パッケージ・バインディングで
 `speechToText` アクションを起動して、エンコードされ
 た音声を変換します。
 
-  ```
-  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
-  ```
-  ```
+  
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  
+  {: pre}
+  
   {
-    "data": "Hello Watson"
+        "data": "Hello Watson"
   }
-  ```
+  
+  {: screen}
   
  
 ## Slack パッケージの使用
@@ -561,8 +561,7 @@ Weather Insights API を呼び出すのに便利な方法を提供します。
 | エンティティー | タイプ  | パラメーター | 説明 |
 | --- | --- | --- | --- |
 | `/whisk.system/slack` | パッケージ | url、channel、username | Slack API と対話 |
-| `/whisk.system/slack/post` | アクション | text、url、channel、username | 
-Slack チャネルへメッセージをポスト |
+| `/whisk.system/slack/post` | アクション | text、url、channel、username | Slack チャネルへメッセージをポスト |
 
 必須ではありませんが、`username`、
 `url`、および「channel」の各値を使用してパッケージ・バインディングを作成することをお勧めします。バインディングを使用すると、パッケージでアクションを起動するたびに値を指定する必要はありません。
@@ -587,16 +586,16 @@ Slack チャネルへメッセージをポスト |
 
 2. Slack の資格情報、ポスト先のチャネル、およびポストするユーザー名を指定して、パッケージ・バインディングを作成します。
 
-  ```
-  wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
-  ```
+  
+wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  
   {: pre}
 
 3. パッケージ・バインディングの `post` アクションを起動し、ご使用の Slack チャネルにメッセージをポストします。
 
-  ```
-  wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
-  ```
+  
+wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
+  
   {: pre}
 
 
@@ -610,13 +609,10 @@ Slack チャネルへメッセージをポスト |
 
 | エンティティー | タイプ  | パラメーター | 説明 |
 | --- | --- | --- | --- |
-| `/whisk.system/github` | パッケージ | username、
-repository、accessToken | GitHub API と対話 |
-| `/whisk.system/github/webhook` | フィード | events、username、repository、accessToken | 
-GitHub アクティビティーでトリガー・イベントを発生させる |
+| `/whisk.system/github` | パッケージ | username、repository、accessToken | GitHub API と対話 |
+| `/whisk.system/github/webhook` | フィード | events、username、repository、accessToken | GitHub アクティビティーでトリガー・イベントを発生させる |
 
-必須ではありませんが、`username`、
-`repository`、および `accessToken` の各値を使用してパッケージ・ バインディングを作成することをお勧めします。バインディングを使用すると、パッケージのフィードを使用するたびに値を指定する必要はありません。
+必須ではありませんが、`username`、`repository`、および `accessToken` の各値を使用してパッケージ・ バインディングを作成することをお勧めします。バインディングを使用すると、パッケージのフィードを使用するたびに値を指定する必要はありません。
 
 ### GitHub アクティビティーによるトリガー・イベントの発生
 
@@ -626,8 +622,7 @@ GitHub アクティビティーでトリガー・イベントを発生させる 
 - `username`: GitHub リポジトリーのユーザー名。
 - `repository`: GitHub リポジトリー。
 - `accessToken`: ご使用の GitHub パーソナル・アクセス・トークン。[トークンの作成](https://github.com/settings/tokens)時に、必ず repo:status スコープと public_repo スコープを選択してください。また、リポジトリーに既に定義された Webhook がないようにしてください。
-- `events`: 対象の [GitHub
-アクティビティー・タイプ](https://developer.github.com/v3/activity/events/types/)。
+- `events`: 対象の [GitHub イベント・タイプ](https://developer.github.com/v3/activity/events/types/)。
 
 以下は、GitHub リポジトリーに新規コミットがあるたびに発生するトリガーを作成する例です。
 
@@ -635,18 +630,137 @@ GitHub アクティビティーでトリガー・イベントを発生させる 
 
   アクセス・トークンは次のステップで使用します。
 
-
 2. GitHub リポジトリー用に構成されるパッケージ・バインディングを、アクセス・トークンを使用して作成します。
 
-  ```
-  wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
-  ```
+  
+wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
+  
   {: pre}
 
 3. `myGit/webhook` フィードを使用して、GitHub `push` イベント・タイプのトリガーを作成します。
 
-  ```
-  wsk trigger create myGitTrigger --feed myGit/webhook --param events push
-  ```
+  
+wsk trigger create myGitTrigger --feed myGit/webhook --param events push
+  
   {: pre}
 
+`git push` を使用して Github リポジトリーへのコミットが行われると、Web フックによってトリガーが発生します。トリガーに突き合わせるルールが存在する場合は、関連付けられたアクションが呼び出されます。
+アクションは、Github Web フック・ペイロードを入力パラメーターとして受け取ります。各 Github Web フック・イベントは、類似した JSON スキーマを持っていますが、それぞれのイベント・タイプによって判別される固有のペイロード・オブジェクトです。
+ペイロード・コンテンツについては、[Github events and payload](https://developer.github.com/v3/activity/events/types/) API の資料を参照してください。
+
+
+## Push パッケージの使用
+{: #openwhisk_catalog_pushnotifications}
+
+`/whisk.system/pushnotifications` パッケージを使用すると、プッシュ・サービスを処理することができます。 
+
+このパッケージには、以下のフィードが含まれています。
+
+| エンティティー | タイプ  | パラメーター | 説明 |
+| --- | --- | --- | --- |
+| `/whisk.system/pushnotifications` | パッケージ | appId、appSecret  | プッシュ・サービスの処理 |
+| `/whisk.system/pushnotifications/sendMessage` | アクション | text、url、deviceIds、platforms、tagNames、apnsBadge、apnsCategory、apnsActionKeyTitle、apnsSound、apnsPayload、apnsType、gcmCollapseKey、gcmDelayWhileIdle、gcmPayload、gcmPriority、gcmSound、gcmTimeToLive | 指定されたデバイスにプッシュ通知を送信 |
+| `/whisk.system/pushnotifications/webhook` | フィード | events | プッシュ・サービスでデバイスのアクティビティー (デバイスの登録 (登録解除) / サブスクリプション (アンサブスクリプション)) に基づきトリガー・イベントを発生させる |
+必須ではありませんが、`appId` と `appSecret` の値を使用して、パッケージ・バインディングを作成することをお勧めします。この方法を使用すると、パッケージ内のアクションを起動するたびにこれらの資格情報を指定する必要はありません。### IBM Push Notifications パッケージのセットアップ
+
+IBM Push Notifications パッケージの作成時に、以下のパラメーターを指定する必要があります。
+
+-  `appId`: Bluemix アプリ GUID。
+-  `appSecret`: Bluemix プッシュ通知サービス appSecret。
+
+以下は、パッケージ・バインディングを作成する方法の例です。
+
+1. [Bluemix ダッシュボード](http://console.ng.bluemix.net)で Bluemix アプリケーションを作成します。
+
+2. Push Notification Service を初期化して、サービスを Bluemix アプリケーションにバインドします。
+
+3. [IBM Push Notification アプリケーション](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)を構成します。
+
+  作成した Bluemix アプリケーションの`「App GUID」`と`「App Secret」`を必ず覚えておいてください。
+
+
+4. `/whisk.system/pushnotifications` を使用してパッケージ・バインディングを作成します。
+
+  
+  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  
+  {: pre}
+
+5. パッケージ・バインディングが存在することを確認します。
+
+  
+wsk package list
+  
+  {: pre}
+
+  
+  packages
+  /myNamespace/myPush private binding
+  
+  {: screen}
+
+### プッシュ通知の送信
+
+`/whisk.system/pushnotifications/sendMessage` アクションは、プッシュ通知を登録デバイスに送信します。パラメーターは次のとおりです。
+
+- `text` - ユーザーに表示する通知メッセージ。例: -p text "Hi ,{{site.data.keyword.openwhisk}} send a notification".
+- `url`: アラートと一緒に送信できるオプションの URL。例: -p url "https:\\www.w3.ibm.com".
+- `gcmPayload` - 通知メッセージの一部として送信されるカスタム JSON ペイロード。例: -p gcmPayload "{"hi":"hello"}"
+- `gcmSound` - 通知がデバイスに到着したときに再生が試行される (デバイス上の) 音声ファイル。
+- `gcmCollapseKey` - このパラメーターは、メッセージのグループを識別します。
+- `gcmDelayWhileIdle` - このパラメーターが true に設定されている場合、デバイスがアクティブになるまでメッセージを送信してはならないことを示します。
+- `gcmPriority` - メッセージの優先順位を設定します。
+- `gcmTimeToLive` - このパラメーターは、デバイスがオフラインの場合に GCM ストレージ内にメッセージを保持する時間 (秒) を指定します。
+- `apnsBadge` - アプリケーション・アイコンのバッジとして表示する番号。
+- `apnsCategory` -  対話式プッシュ通知に使用されるカテゴリー ID。
+- `apnsIosActionKey` - アクション・キーのタイトル。
+- `apnsPayload` - 通知メッセージの一部として送信されるカスタム JSON ペイロード。
+- `apnsType` - ['DEFAULT', 'MIXED', 'SILENT']。
+- `apnsSound` - アプリケーション・バンドル内の音声ファイルの名前。このファイルの音がアラートとして再生されます。
+
+pushnotification パッケージからプッシュ通知を送信する例を以下に示します。
+
+1. 前に作成したパッケージ・バインディング内の `sendMessage` アクションを使用して、プッシュ通知を送信します。`/myNamespace/myPush` を、ご使用のパッケージ名に置き換えてください。
+
+  
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  
+  {: pre}
+
+  
+  {
+  "result": {
+  "pushResponse": "{"messageId":"11111H","message":{"message":{"alert":"this is my message","url":"http.google.com"},"settings":{"apns":{"sound":"default"},"gcm":{"sound":"default"},"target":{"deviceIds":["T1","T2"]}}}"
+  },
+  "status": "success",
+  "success": true
+  }
+  
+  {: screen}
+
+### IBM Push Notifications Service アクティビティーによるトリガー・イベントの発生
+
+`/whisk.system/pushnotifications/webhook` は、指定されたアプリケーションでデバイス・アクティビティー (デバイスの登録 / 登録解除、またはサブスクリプション / アンサブスクリプションなど) があったときにトリガーを発生するように IBM Push Notifications サービスを構成します。
+
+パラメーターは次のとおりです。
+
+
+- `appId:` Bluemix プッシュ通知サービス appSecret。
+- `appSecret:` Bluemix アプリ GUID。
+- `events:` サポートされるイベントは、`onDeviceRegister`、 `onDeviceUnregister`、`onDeviceUpdate`、`onSubscribe`、`onUnsubscribe`です。すべてのイベントの通知を受け取るようにするには、ワイルドカード文字 `*` を使用します。
+
+以下は、IBM Push Notifications Service アプリケーションに新規デバイスが登録されるたびに発生するトリガーを作成する例です。
+
+1. ご使用の appId と appSecret を使用して、IBM Push Notifications サービス用に構成されたパッケージ・バインディングを作成します。
+
+  
+  wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
+  
+  {: pre}
+
+2. `myPush/webhook` フィードを使用して、IBM Push Notifications Service `onDeviceRegister` イベント・タイプのトリガーを作成します。
+
+  
+  wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister
+  
+  {: pre}

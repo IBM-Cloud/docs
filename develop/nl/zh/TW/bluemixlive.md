@@ -17,7 +17,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*前次更新：2016 年 4 月 7 日*
+*前次更新：2016 年 6 月 24 日*
 {: .last-updated}  
 
 如果您要建置 Node.js 應用程式，可以使用 {{site.data.keyword.Bluemix}} Live Sync 快速更新 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例，並像在桌面上那樣地開發應用程式而不必重新部署。   
@@ -70,8 +70,10 @@ copyright:
 
 <strong>重要事項：</strong>bl 指令行工具僅適用於 Windows 7 和 8，以及 Mac OS X 10.9 版或更新版本。</li>
 
-<li>在指令行上，使用下列指令登入。系統會提示您輸入 IBM ID 及密碼。  
+<li>在指令行上，使用下列指令登入。系統會提示您輸入使用者 ID 和密碼。  
 <pre class="codeblock">bl login</pre>
+
+<strong>附註：</strong>您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果不使用聯合鑑別，則您的 IBM ID 和密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">何謂聯合鑑別以及它對我有什麼影響？</a> 
 </li>
 
 <li>輸入下列指令，以查看可用於 {{site.data.keyword.Bluemix_notm}} Live Sync 同步化的專案清單：
@@ -161,6 +163,7 @@ bl start --restart
 2. 設定環境變數。  
 
     a. 在 `manifest.yml` 檔案中，新增下列變數：
+	
 	```
 	env:
       ENABLE_BLUEMIX_DEV_MODE: "true" 
@@ -172,7 +175,9 @@ bl start --restart
 
 安裝「{{site.data.keyword.Bluemix_notm}} 即時除錯」之後，您可以使用除錯工具。
 
-推送應用程式，然後瀏覽至 `https://app-host.mybluemix.net/bluemix-debug/manage`，以存取 {{site.data.keyword.Bluemix_notm}} 除錯使用者介面。系統提示時，請輸入您的 IBM ID 及密碼來進行鑑別。
+推送應用程式，然後瀏覽至 `https://app-host.mybluemix.net/bluemix-debug/manage`，以存取 {{site.data.keyword.Bluemix_notm}} 除錯使用者介面。當系統提示您鑑別時，請輸入您的使用者 ID 和個人存取記號或 IBM ID 密碼。    
+
+   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果不使用聯合鑑別，則您的 IBM ID 和密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱[何謂聯合鑑別以及它對我有什麼影響？](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 ###還原應用程式配置並停用 Bluemix 即時除錯 {: #restore_live_debug}
 
@@ -203,7 +208,7 @@ bl start --restart
 {{site.data.keyword.Bluemix_live}} 指令行 (**bl**) 的語法如下：
 
 ```
-bl command [arguments][options] [--help]
+bl command [arguments] [options] [--help]
 ```
 {: pre}
 
@@ -275,7 +280,7 @@ bl sync --help
 {: bl_login}
 
 ```
-bl login | l [ -u username ][-p password ][ -s server ]
+bl login | l [ -u username ] [-p password ][ -s server ]
 ```
 {: pre}
 
@@ -290,11 +295,13 @@ bl login | l [ -u username ][-p password ][ -s server ]
 
 **選項**
 
--u *username*：您用來登入 {{site.data.keyword.Bluemix_notm}} 的 IBM ID。
+-u *username*：您用來登入 {{site.data.keyword.Bluemix_notm}} 的使用者 ID。
 
--p *password*：IBM ID 密碼。
+-p *password*：您的個人存取記號或 IBM ID 密碼。
 
--s *server*：{{site.data.keyword.jazzhub_short}} 伺服器的「伺服器名稱」或「IP 位址」。
+-s *server*：{{site.data.keyword.jazzhub_short}} 伺服器的伺服器名稱或 IP 位址。    
+
+   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果不使用聯合鑑別，則您的 IBM ID 和密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱[何謂聯合鑑別以及它對我有什麼影響？](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 **範例**
 
@@ -347,7 +354,7 @@ bl projects | p
 {: bl_sync}
 
 ```
-bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
 ```
 {: pre}
 
@@ -403,7 +410,7 @@ bl sync myproject –d  myfolder
 {: bl_create}
 
 ```
-bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
 ```
 {: pre}
 
@@ -495,7 +502,7 @@ bl status "my pro ject"
 {: bl_start}
 
 ```
-bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
 ```
 {: pre}
 
@@ -526,21 +533,21 @@ bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit
 這個指令會啟動與啟動檔 `launchConfigurations/my.launch` 相關聯之 `myproject` 的應用程式實例。
 
 ```
-bl start myproject –l “launchConfigurations/my.launch”
+bl start myproject –l "launchConfigurations/my.launch"
 ```
 {: pre}
 
 這個指令會啟動與現行目錄（含啟動檔 `launchConfigurations/my.launch`）相關聯之專案的應用程式實例。如果現行目錄不是同步目標，則會顯示一則錯誤。
 
 ```
-bl start –l “launchConfigurations/my.launch”
+bl start –l "launchConfigurations/my.launch"
 ```
 {: pre}
 
 這個指令會啟動與現行目錄（含資訊清單檔 `manifest.yml`）相關聯之專案的應用程式實例。資訊清單中指定的資訊是用來建立新的啟動配置檔。這個指令會提示您輸入其餘的必要資訊，然後啟動由啟動配置說明的應用程式：
 
 ```
-bl start –m “mymanifest.yml”
+bl start –m "mymanifest.yml"
 ```
 {: pre}
 
@@ -584,14 +591,14 @@ bl stop
 
 
 ```
-bl stop myproject –l “mylaunchConfig”
+bl stop myproject –l "mylaunchConfig"
 ```
 {: pre}
 
 如果現行目錄是使用啟動檔 `launchConfigurations/mylaunchconfig.launch` 啟動之關聯專案的同步目標，則這個指令會停止應用程式；否則，它會結束，並發生錯誤：
 
 ```
-bl stop –l “launchConfigurations/mylaunchconfig.launch”
+bl stop –l "launchConfigurations/mylaunchconfig.launch"
 ```
 {: pre}
 

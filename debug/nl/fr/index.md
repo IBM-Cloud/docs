@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  2015, 2016
 
 ---
 
@@ -176,7 +176,7 @@ l'interface de ligne de commande](../monitor_log/monitoringandlogging.html#viewi
 l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline, ou
 Travis-CI, vous pouvez examiner les journaux depuis l'interface. Par exemple, si vous déployez le nouveau code depuis
 l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}, vous pouvez accéder au Tableau de bord, rechercher votre application, puis afficher tous les
-journaux pour repérer des indices. Pour plus d'informations sur l'affichage de journaux depuis l'interface utilisateur de
+journaux pour repérer des indices.   Pour plus d'informations sur l'affichage de journaux depuis l'interface utilisateur de
 {{site.data.keyword.Bluemix_notm}}, voir
 [Affichage des journaux dans le tableau de bord Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
  

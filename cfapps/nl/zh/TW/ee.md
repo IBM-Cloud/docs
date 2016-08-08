@@ -109,7 +109,7 @@ copyright:
   3. 安裝 **cf** 指令行介面之後，您必須使用 **cf api** 指令，來指定您工作時要使用的 {{site.data.keyword.Bluemix_notm}} 地區。**cf** 指令行介面使用 *https://api.Bluemix_URL*，其中 *Bluemix_URL* 是地區的 URL。「美國南部」地區 URL 是 {{Domain}}。請輸入下列指令，以連接至 {{site.data.keyword.Bluemix_notm}}：
   
   ```
-  cf api https://api.ng.bluemix.net
+cf api https://api.ng.bluemix.net
 	 ```
   
   如需連接至其他 {{site.data.keyword.Bluemix_notm}} 地區的相關資訊，請參閱 {{site.data.keyword.Bluemix_notm}} 地區。指定 {{site.data.keyword.Bluemix_notm}} 地區之後，會儲存您指定的位置資訊。
@@ -117,19 +117,20 @@ copyright:
   4. 接下來，您可以使用 cf login 指令登入 {{site.data.keyword.Bluemix_notm}}。
   
   ```
-  cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
+cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
   ```
   
   5. 登入 {{site.data.keyword.Bluemix_notm}} 之後，您便可以將應用程式部署回 {{site.data.keyword.Bluemix_notm}}。從您的應用程式目錄 `C:\test` 輸入下列指令：
   
   ```
-  cf push TestNode
+cf push TestNode
   ```
   
   如需 **cf push** 指令的相關資訊，請參閱「上傳應用程式」。
   
   6. 現在，您可以在瀏覽器裡輸入下列應用程式 URL，來存取應用程式：
-```
+
+  ```
   http://TestNode.mybluemix.net
   ```
 
@@ -147,13 +148,13 @@ copyright:
   使用 cf create-service 指令來建立新的服務實例。例如：
   
   ```
-  cf create-service cloudantNoSQLDB Shared cloudant100
+cf create-service cloudantNoSQLDB Shared cloudant100
   ```
   
   還可以使用 cf services 指令來查看您所建立的服務實例清單。
   
   ```
-  cf services
+cf services
 ```
   
   建立服務實例之後，即可供您的任何應用程式連結和使用。
@@ -163,7 +164,7 @@ copyright:
   若要使用服務實例，必須將它連結至您的應用程式。使用 cf bind-service 指令，透過指定應用程式名稱以及您所建立的服務實例，將服務實例連結至應用程式。
   
   ```
-  cf bind-service TestNode cloudant100
+cf bind-service TestNode cloudant100
   ```
   
   將服務實例連結至應用程式可讓 {{site.data.keyword.Bluemix_notm}} 與服務通訊，並可指定新的應用程式將與該服務實例通訊。對於不同服務，{{site.data.keyword.Bluemix_notm}} 在連結期間，可能以不同方式處理應用程式及服務實例。例如，部分服務可能會針對每一個與服務實例通訊的應用程式，建立新的承租戶。服務會使用認證之類的資訊回應 {{site.data.keyword.Bluemix_notm}}，必須將這些資訊傳遞給應用程式，才能在應用程式與服務之間進行通訊。
@@ -182,9 +183,10 @@ copyright:
   <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
   
   例如，您的 Node.js 應用程式可能會存取此資訊，如下所示：
-```
-  if (process.env.VCAP_SERVICES) {
-var env = JSON.parse(process.env.VCAP_SERVICES);
+
+  ```
+if (process.env.VCAP_SERVICES) {
+    var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['"cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
@@ -200,11 +202,11 @@ var env = JSON.parse(process.env.VCAP_SERVICES);
   4. 與服務實例互動。
   
   您可以使用認證資訊來與服務實例互動。您可以採取的動作包括讀取、寫入及更新。下列範例示範如何將 JSON 物件插入到 {{site.data.keyword.cloudant}} 服務實例：
-```
-  // create a new message
+
+  ```
+// create a new message
 var create_message = function(req, res) {
-  require('cloudantdb').connect(cloudant.url, function(err, conn) {
-var collection = conn.collection('messages');// create message record
+  require('cloudantdb').connect(cloudant.url, function(err, conn) {var collection = conn.collection('messages');// create message record
     var parsedUrl = require('url').parse(req.url, true);
     var queryObject = parsedUrl.query;
     var name = (queryObject["name"] || 'Bluemix');

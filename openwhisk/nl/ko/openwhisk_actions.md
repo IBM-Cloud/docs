@@ -43,8 +43,7 @@ copyright:
 1. 다음 컨텐츠를 사용하여 JavaScript 파일을 작성하십시오. 이 예에서 파일 이름은 'hello.js'입니다.
   
   ```
-  function main() {
-      return {payload: 'Hello world'};
+function main() {      return {payload: 'Hello world'};
   }
   ```
   {: codeblock}
@@ -54,22 +53,22 @@ copyright:
 2. 다음 JavaScript 함수에서 조치를 작성하십시오. 이 예에서 조치를 'hello'라고 합니다.
 
   ```
-  wsk action create hello hello.js
+wsk action create hello hello.js
   ```
   {: pre}
   ```
-  ok: created action hello
+ok: created action hello
   ```
   {: screen}
 
 3. 작성한 조치 나열:
   
   ```
-  wsk action list
+wsk action list
   ```
   {: pre}
   ```
-  actions
+actions
   hello       private
   ```
   {: screen}
@@ -79,13 +78,12 @@ copyright:
 4. 조치를 작성한 후에 'invoke' 명령을 사용하여 {{site.data.keyword.openwhisk_short}}의 클라우드 내에서 이를 실행할 수 있습니다. 명령에 플래그를 지정하여 *블로킹* 호출 또는 *비블로킹* 호출을 사용하여 조치를 호출할 수 있습니다. 블로킹 호출은 조치가 실행을 완료하고 결과를 리턴할 때까지 대기합니다. 이 예에서는 블로킹 매개변수인 `--blocking`을 사용합니다. 
 
   ```
-  wsk action invoke --blocking hello
+wsk action invoke --blocking hello
   ```
   {: pre}
   ```
-  ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  {
-      "result": {
+ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
+  {      "result": {
           "payload": "Hello world"
       },
       "status": "success",
@@ -103,21 +101,21 @@ copyright:
 5. 지금 당장 조치 결과가 필요하지 않은 경우, `--blocking` 플래그를 생략하여 비블로킹 호출을 작성할 수 있습니다. 나중에 활성화 ID를 사용하여 결과를 얻을 수 있습니다. 다음 예를 참조하십시오.
 
   ```
-  wsk action invoke hello
+wsk action invoke hello
   ```
   {: pre}
   ```
-  ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
+ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: screen}
 
   ```
-  wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
+wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: pre}
   ```
   {
-      "payload": "Hello world"
+            "payload": "Hello world"
   }
   ```
   {: screen}
@@ -125,11 +123,11 @@ copyright:
 6. 활성화 ID를 기록하는 것을 잊은 경우, 가장 최신에서 가장 오래된 순서로 정렬된 활성화 목록을 얻을 수 있습니다. 다음 명령을 실행하여 활성화 목록을 얻으십시오.
 
   ```
-  wsk activation list
+wsk activation list
   ```
   {: pre}
   ```
-  activations
+activations
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
@@ -143,8 +141,8 @@ copyright:
 1. 조치에 매개변수를 사용하십시오. 예를 들어, 다음 컨텐츠로 'hello.js' 파일을 업데이트하십시오.
   
   ```
-  function main(params) {
-      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+function main(params) {
+     return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -154,16 +152,16 @@ copyright:
 2. `name` 및 `place` 매개변수값을 전달하면서 `hello` 조치를 업데이트하고 조치를 호출하십시오. 다음 예를 참조하십시오.
   
   ```
-  wsk action update hello hello.js
+wsk action update hello hello.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
   ```
   {: pre}
   ```
   {
-      "payload": "Hello, Bernie from Vermont"
+            "payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -180,19 +178,19 @@ copyright:
 1. `--param` 옵션을 사용하여 매개변수값을 바인딩하도록 조치를 업데이트하십시오.
 
   ```
-  wsk action update hello --param place 'Vermont'
+wsk action update hello --param place 'Vermont'
   ```
   {: pre}
 
 2. 이번에는 `name` 매개변수만 전달하여 조치를 호출하십시오.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie'
+wsk action invoke --blocking --result hello --param name 'Bernie'
   ```
   {: pre}
   ```
   {
-      "payload": "Hello, Bernie from Vermont"
+            "payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -202,7 +200,7 @@ copyright:
 3. `name` 및 `place` 값을 둘 다 전달하여 조치를 호출하십시오. 나중에 조치에 바인딩된 값을 겹쳐씁니다.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
   ```
   {: pre}
   ```
@@ -220,8 +218,7 @@ copyright:
 1. `asyncAction.js`라는 파일에 다음 컨텐츠를 저장하십시오.
 
   ```
-  function main() {
-      setTimeout(function() {
+function main() {      setTimeout(function() {
           return whisk.done({done: true});
       }, 20000);
       return whisk.async();
@@ -236,16 +233,16 @@ copyright:
 2. 다음 명령을 실행하여 조치를 작성하고 호출하십시오.
 
   ```
-  wsk action create asyncAction asyncAction.js
+wsk action create asyncAction asyncAction.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result asyncAction
+wsk action invoke --blocking --result asyncAction
   ```
   {: pre}
   ```
   {
-      "done": true
+            "done": true
   }
   ```
   {: screen}
@@ -255,23 +252,23 @@ copyright:
 3. 활성화 완료에 걸린 시간을 보려면 활성화 로그를 페치하십시오.
 
   ```
-  wsk activation list --limit 1 asyncAction
+wsk activation list --limit 1 asyncAction
   ```
   {: pre}
   ```
-  activations
+activations
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
   {: screen}
 
 
   ```
-  wsk activation get b066ca51e68c4d3382df2d8033265db0
+wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
  ```
   {
-      "start": 1455881628103,
+            "start": 1455881628103,
       "end":   1455881648126,
       ...
   }
@@ -289,11 +286,10 @@ copyright:
 이 예에서는 Yahoo 날씨 서비스를 호출하여 특정 위치에서의 현재 상태를 얻습니다. 
 
 1. `weather.js`라는 파일에 다음 컨텐츠를 저장하십시오.
+  
   ```
-    var request = require('request');
-    
-    function main(msg) {
-        var location = msg.location || 'Vermont';
+var request = require('request');function main(params) {
+     var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
     
         request.get(url, function(error, response, body) {
@@ -302,9 +298,7 @@ copyright:
             var temperature = condition.temp;
             var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
             whisk.done({msg: output});
-        });
-    
-        return whisk.async();
+        });        return whisk.async();
     }
   ```
   {: codeblock}
@@ -315,11 +309,11 @@ copyright:
 
 2. 다음 명령을 실행하여 조치를 작성하고 호출하십시오.
   ```
-  wsk action create weather weather.js
+wsk action create weather weather.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   ```
   {: pre}
   ```
@@ -339,11 +333,11 @@ copyright:
 1. `/whisk.system/util` 패키지의 조치를 표시합니다.
   
   ```
-  wsk package get --summary /whisk.system/util
+wsk package get --summary /whisk.system/util
   ```
   {: pre}
   ```
-  package /whisk.system/util
+package /whisk.system/util
    action /whisk.system/util/cat: Concatenate array of strings
    action /whisk.system/util/head: Filter first K array elements and discard rest
    action /whisk.system/util/date: Get current date and time
@@ -357,7 +351,7 @@ copyright:
 2. 한 조치의 결과가 다음 조치에 인수로 전달되도록 조치 시퀀스를 작성하십시오.
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
+wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -366,7 +360,7 @@ copyright:
 3. 조치 시퀀스를 호출하기 전에 텍스트 몇 행이 있는 'haiku.txt'를 작성하십시오.
 
   ```
-  Over-ripe sushi,
+Over-ripe sushi,
   The Master
   Is full of regret.
   ```
@@ -375,12 +369,12 @@ copyright:
 4. 조치 호출:
   
   ```
-  wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
+wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
   ```
   {: pre}
   ```
   {
-"length": 3,
+      "length": 3,
       "lines": [
           "Is full of regret.",
           "Over-ripe sushi,",
@@ -409,7 +403,7 @@ Swift 조치 작성 프로세스는 JavaScript 조치 작성 프로세스와 유
 조치는 단순히 최상위 레벨의 Swift 함수입니다. 예를 들어, 다음 컨텐츠를 사용하여 `hello.swift`라는 파일을 작성하십시오.
 
 ```
-  func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
+func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
           return [ "greeting" : "Hello \(name)!" ]
       } else {
 return [ "greeting" : "Hello stranger!" ]
@@ -464,20 +458,20 @@ wsk action invoke --blocking --result helloSwift --param name World
 1. Docker 스켈레톤을 다운로드하십시오. 다음과 같이 CLI를 사용하여 다운로드할 수 있습니다.
 
   ```
-  wsk sdk install docker
+wsk sdk install docker
   ```
   {: pre}
   ```
-  The Docker skeleton is now installed at the current directory.
+The Docker skeleton is now installed at the current directory.
   ```
   {: screen}
 
   ```
-  ls dockerSkeleton/
+ls dockerSkeleton/
   ```
   {: pre}
   ```
-  Dockerfile      README.md       buildAndPush.sh client          server
+Dockerfile      README.md       buildAndPush.sh client          server
   ```
   {: screen}
 
@@ -486,16 +480,15 @@ wsk action invoke --blocking --result helloSwift --param name World
 2. Docker 스켈레톤에 사용자 정의 2진을 설정하십시오. 스켈레톤은 사용할 수 있는 C 프로그램을 이미 포함하고 있습니다.
 
   ```
-  cat ./dockerSkeleton/client/example.c
+cat ./dockerSkeleton/client/example.c
   ```
   {: pre}
   {: pre}
   ```
   #include <stdio.h>
   
-  int main(int argc, char *argv[]) {
-printf("Hello %s from arbitrary C program!\n",
-             (argc == 1) ? "anonymous" : argv[1]);
+  int main(int argc, char *argv[]) {printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
+             (argc == 1) ? "undefined" : argv[1]);
   }
   ```
   {: screen}
@@ -505,15 +498,15 @@ printf("Hello %s from arbitrary C program!\n",
 3. Docker 이미지를 빌드하고 제공된 스크립트를 사용하여 이를 업로드하십시오. 먼저 `docker login`을 실행하여 인증한 다음 선택된 이미지 이름을 사용하여 스크립트를 실행하십시오.
 
   ```
-  docker login -u janesmith -p janes_password
+docker login -u janesmith -p janes_password
   ```
   {: pre}
   ```
-  cd dockerSkeleton
+cd dockerSkeleton
   ```
   {: pre}
   ```
-  ./buildAndPush.sh janesmith/blackboxdemo
+./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
 
@@ -522,20 +515,33 @@ printf("Hello %s from arbitrary C program!\n",
 4. 제공된 JavaScript 파일이 아니라 Docker 이미지에서 조치를 작성하려면 `--docker`를 추가하고 JavaScript 파일 이름을 Docker 이미지 이름으로 대체하십시오.
 
   ```
-  wsk action create --docker example janesmith/blackboxdemo
+wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result example --param payload Rey
+wsk action invoke --blocking --result example --param payload Rey
   ```
   {: pre}
   ```
   {
-"msg": "Hello Rey from arbitrary C program!\n"
+      "args": {
+          "payload": "Rey"
+      },
+      "msg": "Hello from arbitrary C program!"
   }
   ```
   {: screen}
 
+5. Docker 조치를 업데이트하려면 `buildAndPush.sh`를 실행하여 Docker 허브의 이미지를 새로 고치십시오. 그러면 새 이미지를 페치할 시스템을 작성하는 데 `wsk action update`를 실행해야 합니다. 새 호출은 이전 코드가 포함된 웜 이미지가 아니라 새 이미지를 통해 시작합니다.
+
+  ```
+./buildAndPush.sh janesmith/blackboxdemo
+  ```
+  {: pre}
+  ```
+  wsk action update --docker example janesmith/blackboxdemo
+  ```
+  {: pre}
 
 [참조](./openwhisk_reference.html#openwhisk_ref_docker) 절에서 Docker 조치 작성에 대한 자세한 정보를 찾을 수 있습니다.
 
@@ -548,8 +554,9 @@ printf("Hello %s from arbitrary C program!\n",
 {{site.data.keyword.openwhisk_short}} CLI를 사용하여 조치가 호출될 때 조치의 출력을 감시할 수 있습니다.
 
 1. 쉘에서 다음 명령 실행:
+  
   ```
-  wsk activation poll
+wsk activation poll
   ```
   {: pre}
 
@@ -558,11 +565,11 @@ printf("Hello %s from arbitrary C program!\n",
 2. 다른 창으로 전환하여 조치 호출:
 
   ```
-  wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
+wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
   ```
   {: pre}
   ```
-  ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
+ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
   ```
   {: screen}
 
@@ -570,7 +577,7 @@ printf("Hello %s from arbitrary C program!\n",
 
   ```
   Activation: helloWorld (7331f9b9e2044d85afd219b12c0f1491)
-2016-02-11T16:46:56.842065025Z stdout: hello bob!
+    2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
   {: screen}
 
@@ -582,21 +589,23 @@ printf("Hello %s from arbitrary C program!\n",
 사용하지 않는 조치를 삭제하여 정리할 수 있습니다.
 
 1. 다음 명령을 실행하여 조치 삭제:
+  
   ```
-  wsk action delete hello
+wsk action delete hello
   ```
   {: pre}
   ```
-  ok: deleted hello
+ok: deleted hello
   ```
   {: screen}
 
 2. 조치가 더 이상 조치 목록에 표시되지 않는지 확인하십시오.
+  
   ```
-  wsk action list
+wsk action list
   ```
   {: pre}
   ```
-  actions
+actions
   ```
   {: screen}

@@ -18,6 +18,7 @@ copyright:
 {: #autoscalingcli}
 
 *Última atualização: 25 de fevereiro de 2016*
+{: .last-updated}
 
 É possível configurar o serviço {{site.data.keyword.autoscaling}} usando o {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}}. O {{site.data.keyword.autoscaling}} CLI suporta Linux64, Win64 e OSX e fornece funcionalidade semelhante ao ajuste automático de escala que a API RESTful fornece.
 {: shortdesc}
@@ -113,15 +114,17 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">O nome do app para o qual você deseja mostrar o histórico da política de ajuste automático de escala.
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">O registro de data e hora do início do intervalo de histórico. Os formatos suportados são `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Por padrão, o registro de data e hora está configurado para 50 horas à frente do horário atual. Veja o <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Padrão de formatos de data e hora do W3C</a> para obter detalhes sobre o formato do registro de data e hora.
+<dd class="pd">O registro de data e hora do início do intervalo de histórico. Os formatos suportados são `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Por padrão, o registro de data e hora está configurado para 50 horas à frente do horário atual. Veja o <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Padrão de formatos de data e hora do W3C</a> para obter detalhes sobre o formato do registro de data e hora. 
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">O registro de data e hora do término do intervalo de histórico. Os formatos suportados são `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Por padrão, o registro de data e hora está configurado para o horário atual. Veja o <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Padrão de formatos de data e hora do W3C</a> para obter detalhes sobre o formato do registro de data e hora.
+<dd class="pd">O registro de data e hora do término do intervalo de histórico. Os formatos suportados são `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Por padrão, o registro de data e hora está configurado para o horário atual. Veja o <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Padrão de formatos de data e hora do W3C</a> para obter detalhes sobre o formato do registro de data e hora. 
 </dl>
 
 **Dica:** Também é possível usar a opção **--json** para impressão elegante da resposta JSON original.
 
 # rellinks
+{: #rellinks}
 ## gerais
+{: #general}
 * [{{site.data.keyword.autoscaling}} serviço](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}}CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [Padrão de formatos de data e hora do W3C](https://www.w3.org/TR/NOTE-datetime){: new_window}

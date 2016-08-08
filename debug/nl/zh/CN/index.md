@@ -44,6 +44,7 @@ copyright:
   2. 通过输入 `cf login`，登录 {{site.data.keyword.Bluemix_notm}}。
   
   3. 通过输入 `cf logs appname --recent`，检索最新的日志。如果您想要过滤详细日志，请使用 `grep` 选项。例如，您可以输入以下代码以仅显示 [STG] 日志：
+    
     ```
 	cf logs appname --recent | grep '\[STG\]'
 	```
@@ -118,7 +119,8 @@ copyright:
 在 cf 命令行界面中输入 `cf logs appname --recent` 后，仅会显示最新的日志。要查看先前发生的错误的日志，必须检索所有日志并搜索错误。要检索应用程序的所有日志，请使用以下一种方法：
 <dl> 
 <dt><strong>{{site.data.keyword.Bluemix_notm}} Monitoring and Analytics 服务</strong></dt> 
-<dd>Monitoring and Analytics 服务的集成日志文件搜索和分析功能可帮助您快速识别错误。有关更多信息，请参阅 <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Monitoring and Analytics</a>。</dd> 
+<dd>Monitoring and Analytics 服务的集成日志文件搜索和分析功能可帮助您快速识别错误。有关更多信息，请参阅 <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Monitoring and
+Analytics</a>。</dd> 
 <dt><strong>第三方工具</strong></dt> 
 <dd>您可以从应用程序收集日志并导出到外部日志主机。有关更多信息，请参阅<a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">配置外部日志记录</a>。</dd> 
 <dt><strong>用于收集和导出日志的脚本</strong></dt> 

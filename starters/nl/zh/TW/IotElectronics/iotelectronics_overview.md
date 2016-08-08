@@ -11,6 +11,7 @@ copyright:
 # 關於 {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
 *前次更新：2016 年 6 月 11 日*
+{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} 是完全整合的 IoT 正式作業實例，可讓您的應用程式與已連接的應用裝置、感應器及閘道通訊，並且取用它們所收集的資料。
 {:shortdesc}
@@ -50,20 +51,18 @@ copyright:
 
 **{{site.data.keyword.sdk4nodefull}}** 讓您能開發、部署及調整伺服器端的 JavaScript&reg; 應用程式，並提供加強的效能、安全及服務功能。
 
-**範例行動應用程式**可讓您使用 iOS 手機檢視模擬應用裝置的狀態並與其通訊。[在這裡](iotelectronics_config_mobile.html)可以瞭解如何取得行動應用程式。
+**範例行動應用程式**可讓您使用 iOS 手機檢視模擬應用裝置的狀態並與其通訊。請參閱[使用行動應用程式](iotelectronics_config_mobile.html)，以瞭解如何取得行動應用程式。
 
 # 相關鏈結
 {: #rellinks}
 ## 元件
 {: #general}
-* [{{site.data.keyword.iot_short}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [{{site.data.keyword.iotrtinsights_short}}](https://new-console.ng.bluemix.net/docs/services/iotrtinsights/index.html)   
-* [{{site.data.keyword.amafull}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [{{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [{{site.data.keyword.iot_short}} 文件](https://new-console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
+* [{{site.data.keyword.amafull}} 文件](https://new-console.ng.bluemix.net/docs/services/mobileaccess/index.html)
+* [{{site.data.keyword.sdk4nodefull}} 文件](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
 
 ## API 文件
 {: #api}
-*  [{{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
-* [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)
-* [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
+*  [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
+*  [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)

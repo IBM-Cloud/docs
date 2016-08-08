@@ -15,7 +15,8 @@ copyright:
 # Resolução de problemas para acessar o {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Última atualização: 16 de maio de 2016*
+*Última atualização: 14 de julho de 2016*
+{: .last-updated}
 
 Problemas gerais com o acesso ao {{site.data.keyword.Bluemix}}
 podem incluir um usuário que não foi capaz de efetuar login no {{site.data.keyword.Bluemix_notm}},
@@ -133,7 +134,7 @@ O email de confirmação é enviado ao endereço de email fornecido. Verifique s
 
 
 
-## Não foi possível incluir usuários em uma organização
+## Não é possível incluir usuários em uma organização
 {: #ts_adduser}
 
 É possível convidar mais de um usuário para trabalhar sob a mesma organização. É possível convidar os usuários para a sua organização
@@ -179,7 +180,8 @@ para alterar a sua função. Para identificar o gerente da organização, conclu
 etapas a seguir:
 {: tsResolve}
 
-  1. Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone **Conta e suporte** ![Conta e suporte](images/account_support.svg) na barra de menus superior e selecione **Gerenciar organizações**.
+  1. Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone **Conta e suporte** ![Conta e suporte](images/account_support.svg) na barra de
+menus e selecione **Gerenciar organizações**.
   2. Acesse sua organização e visualize as informações sobre o gerente da organização na guia **USUÁRIOS**.  
   
 Se você não conseguir convidar os usuários porque é um colaborador
@@ -224,8 +226,7 @@ da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
 
     
 
-## Uma página {{site.data.keyword.Bluemix_notm}}
-não pode ser carregada
+## A página do {{site.data.keyword.Bluemix_notm}} não pode ser carregada
 {: #ts_err}
 
 Quando você usa a interface com o usuário do {{site.data.keyword.Bluemix_notm}},
@@ -382,7 +383,28 @@ Se a sua JVM de ambiente de trabalho for IBM JVM 7 ou 8, ou uma versão anterior
   3. Verifique se a propriedade `eclipse.vm` aponta para sua nova instalação do Oracle JVM 8.
 
 
+## Não é possível recuperar espaços na organização
+{: #ts_retrieve_space}
 
+Não será possível criar um aplicativo ou um serviço se a sua organização atual não tiver um espaço associado com ela.
+
+Ao tentar criar um aplicativo no Bluemix, você vê a mensagem de erro a seguir:
+{: tsSymptoms}
+
+`BXNUI0515E: A tentativa de recuperar os espaços na organização falhou devido a um problema de conexão de rede.`
+
+Esse erro geralmente é recebido na primeira vez em que você tenta criar um aplicativo ou um serviço a partir do Catálogo quando um espaço ainda não estiver criado.
+{: tsCauses}
+
+Certifique-se de que você criou um espaço em sua organização atual. Para criar um espaço, use um dos métodos a seguir:
+{: tsResolve}
+
+  * A partir de Conta e suporte ![Conta e suporte](images/account_support.svg), selecione a organização na qual você deseja criar o espaço e, em seguida, clique em
+**Criar um espaço**.
+  * Na interface de linha de comandos cf, digite `cf create-space <space_name> -o <organization_name>`.
+
+Tente novamente. Se você vir essa mensagem novamente, acesse a página de [status do Bluemix](https://status.eu-gb.bluemix.net/){: new_window} para verificar se um serviço ou
+componente tem um problema.
 
 
 
@@ -413,7 +435,7 @@ Para obter o nível de autoridade apropriado, use um dos métodos a seguir:
 {: tsResolve}
  * Selecione outra organização e outro espaço para os quais tenha a função de desenvolvedor. 
  * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Consulte
-[Gerenciando suas organizações](../admin/orgs_spaces.html), para obter detalhes.
+[Gerenciando organizações e espaços](../admin/orgs_spaces.html){: new_window} para obter detalhes.
  
 
  
@@ -909,7 +931,7 @@ sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IB
   
 
 
-## Uma rota do app não pode ser criada
+## As rotas do app não podem ser criadas
 {: #ts_hostistaken}
 
 Ao implementar um app no {{site.data.keyword.Bluemix_notm}}, a rota do app não pode ser criada se o nome do host especificado já estiver sendo usado.
@@ -945,7 +967,7 @@ push` com a opção **-n**.
     ```
 
 
-## Um app WAR não pode ser enviado por push usando o comando cf push
+## Aplicativos WAR não podem ser enviados por push usando o comando cf push
 {: #ts_cf_war}
 
 Você pode não conseguir usar o comando cf push para implementar um app da Web arquivado no {{site.data.keyword.Bluemix_notm}} se o local do app não for especificado corretamente.
@@ -982,8 +1004,7 @@ sobre o comando `cf push`, insira `cf push
 
 
 
-## Caracteres de byte duplo não são exibidos corretamente quando os aplicativos Liberty
-são enviados por push ao {{site.data.keyword.Bluemix_notm}}
+## Caracteres de byte duplo não são exibidos corretamente quando os aplicativos Liberty são enviados por push ao {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
 
 Os caracteres de byte duplo podem não ser exibidos corretamente
@@ -1060,8 +1081,7 @@ ao problema:
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por
-exemplo:
+	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por exemplo:
 	    ```
 		{
       ...
@@ -1070,8 +1090,7 @@ exemplo:
  	   }
 	}
 	    ```
-	  * Use o arquivo `manifest.yml`. Por
-exemplo: 
+	  * Use o arquivo `manifest.yml`. Por exemplo: 
 	    ```
 		applications:
   name: MyUniqueNodejs01
@@ -1129,7 +1148,7 @@ O buildpack do Liberty usa o arquivo `server.xml` para configurar o app e gera u
 {: tsResolve}
 	
 	
-## Um app não pode ser preparado usando um buildpack customizado
+## Os aplicativos não podem ser colocados em estágios usando buildpacks customizados
 {: #ts_bp_compilation}
 
 Você pode não conseguir implementar um app no {{site.data.keyword.Bluemix_notm}} usando um buildpack customizado se os scripts no buildpack não forem executáveis.
@@ -1154,7 +1173,7 @@ de cada script para executável. Por exemplo, é possível digitar `git update -
 	
 	
 	
-## Um app não pode ser implementado a partir de DevOps Services no {{site.data.keyword.Bluemix_notm}}
+## Não é possível implementar um aplicativo a partir do DevOps Services para o {{site.data.keyword.Bluemix_notm}}
 {: #ts_devops_to_bm}
 
 Você pode não conseguir enviar por push seu app do IBM Bluemix DevOps Services para o {{site.data.keyword.Bluemix_notm}} se o arquivo `manifest.yml` não estiver presente em seu app.
@@ -1386,7 +1405,7 @@ Para reativar sua conta, entre em contato com o [Suporte {{site.data.keyword.Blu
 
 
 
-## Não há espaço associado à organização atual
+## Nenhum espaço está associado com a sua organização atual
 {: #ts_no_space}
 
 Não será possível criar um aplicativo se não houver espaço
@@ -1411,12 +1430,12 @@ Para criar um espaço, use um dos métodos a seguir:
 {: tsResolve}
  
   * No Painel do {{site.data.keyword.Bluemix_notm}}, selecione a organização em que você deseja criar o espaço, em seguida, clique em **Criar um espaço**.
-  * Na interface de linha de comandos cf, digite ```cf create-space <space_name> -o <organization_name>```.
+  * Na interface da linha de comandos cf, digite ```cf create-space <space_name> -o <organization_name>```.
   
   
   
   
-## Os nomes de domínio para aplicativos diferentes são os mesmos
+## Os apps compartilham o mesmo nome de domínio
 {: #ts_domain_diff}
 
 Você pode observar que diversos aplicativos compartilham a mesma
@@ -1484,7 +1503,7 @@ problemas seguindo algumas etapas simples.
 {:shortdesc}
 
 
-## Um buildpack obsoleto é carregado do cache quando um app é enviado por push
+## Buildpack obsoleto usado quando um aplicativo é enviado por push
 {: #ts_loading_bp}
 
 
@@ -1496,7 +1515,7 @@ no diretório de cache do app antes de enviar por push ou remontar o app.
  
 
 Ao enviar por push ou remontar um app após a atualização do
-buildpack, os componentes de buildpack mais recentes não são carregados automaticamente. Como resultado, seu app usa os componentes de buildpack obsoletos. As atualizações
+buildpack, os componentes de buildpack mais recentes não são carregados automaticamente. Como resultado, o seu aplicativo usa os componentes de buildpack obsoletos a partir do cache. As atualizações
 que foram aplicadas ao buildpack desde a última vez que o app foi enviado por
 push não são implementadas. 
 {: tsSymptoms}

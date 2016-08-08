@@ -14,10 +14,13 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# CLI do modo de desenvolvimento
+# (Descontinuada) CLI do Modo de desenvolvimento
 {: #devmodecli}
 
-*Última atualização: 11 de abril de 2016*
+*Última atualização: 23 de junho de 2016*
+{: .last-updated}
+
+**Esta CLI foi descontinuada:** em vez de usar a CLI de Modo de desenvolvimento (dev_mode), use IBM Eclipse Tools for Bluemix ou DevOps Web IDE. É possível continuar a usar a CLI dev_mode até 30 de junho de 2016.
 
 Com a interface da linha de comandos do modo de desenvolvimento do Bluemix (CLI dev_mode), é possível atualizar seus apps enquanto eles estão sendo executados na nuvem. A CLI dev_mode é construída como um plug-in de CLI cf
 e suporta ambos os apps Liberty e IBM Node.js.
@@ -39,10 +42,10 @@ Use um dos métodos a seguir para instalar a ferramenta de linha de comandos dev
 - Instalar localmente.
   1. Faça o download do plug-in dev_mode para sua plataforma a partir do [Repositório de
 Plug-ins de CLI do IBM Bluemix](http://plugins.{DomainName}).
-  2. Instale o plug-in dev_mode usando o comando cf install-plugin:
+  2. Acesse a pasta em que o plug-in dev_mode está salvo e instale o plug-in dev_mode usando o comando cf install-plugin. Por exemplo: 
   
         ```
-        cf install-plugin dev_mode-linux_amd64
+        cf install-plugin dev_mode-linux64
         ```
 
 - Instale a partir do repositório da CLI do Bluemix.
@@ -65,7 +68,8 @@ Plug-ins de CLI do IBM Bluemix](http://plugins.{DomainName}).
         ```
 
 ## Visualizando comandos do dev_mode
-**Pra exibir todos os comandos da CLI dev_mode, use o comando a seguir:**
+
+Para exibir todos os comandos da CLI dev_mode, use o comando a seguir:
 
 ```
 cf plugins
@@ -76,7 +80,7 @@ cf plugins
 
 Use o índice na tabela a seguir para referir-se aos comandos da CLI dev_mode usados frequentemente:
 
-<table summary="índice de comandos do dev_mode">
+<table summary="índice de comandos do dev_mode"> 
  <thead>
  <th colspan="4">Comandos do dev_mode</th>
  </thead>
@@ -211,10 +215,8 @@ cf restart-inplace <appName>
 
 ## Links Relacionados
 {: #general}
-
-<!-- Include a link to your full product documentation, pricing sheet, IBM Bluemix prerequisites -->
-
-
-* [Ferramentas de CLI e de desenvolvimento](../../index.html#cli){:new_window}
+* [CLI do Modo de desenvolvimento](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
+* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

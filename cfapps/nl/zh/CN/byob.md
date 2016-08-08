@@ -61,7 +61,7 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 
 ## 外部 buildpack
 
-您可以在 {{site.data.keyword.Bluemix_notm}} 中使用外部或定制 buildpack。在 **cf push** 命令中，必须使用 -b 选项来指定 buildpack 的 URL，并使用 `-s` 选项来指定堆栈。例如，要对静态文件使用外部社区 buildpack，请运行以下命令：
+您可以在 {{site.data.keyword.Bluemix_notm}} 中使用外部或定制 buildpack。在 **cf push** 命令中，必须使用 -b 选项来指定 buildpack 的 URL，并使用 ```-s``` 选项来指定堆栈。例如，要对静态文件使用外部社区 buildpack，请运行以下命令：
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2

@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2015，2016
 
  
 
@@ -14,17 +14,22 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Bluemix CLI VPN 插件
+# {{site.data.keyword.Bluemix_notm}} CLI 的 {{site.data.keyword.vpn_short}} 插件
 
-*上次更新时间：*2016 年 1 月 18 日
+*上次更新时间：2016 年 6 月 20 日*
+{: .last-updated}
 
-*版本：*0.1.5
+*版本：*1.4.0
 
-您可以使用 Bluemix CLI VPN 插件来配置并管理 IBM Virtual Private Network (VPN) 服务。
+您可以使用命令行界面 (CLI) 来配置和管理 {{site.data.keyword.vpn_full}} 服务。{{site.data.keyword.vpn_short}} CLI 插件提供两个版本：一个用于与 Cloud Foundry CLI 插件一起使用，另一个用于与 {{site.data.keyword.Bluemix}} CLI 插件一起使用。这两个版本的插件提供相同的功能。  
 {:shortdesc}
 
-以下信息列出了 Bluemix CLI VPN 插件支持的所有命令，包括命令名称、选项、用法、先决条件、描述和示例。
+{{site.data.keyword.vpn_short}} 插件可用于 Windows、MAC 和 Linux 操作系统。请确保使用适合于您的插件。
 
+以下指示信息适用于使用 {{site.data.keyword.Bluemix_notm}} CLI 插件。要将该插件与 Cloud Foundry (cf) CLI 插件一起使用，请参阅 [cf CLI 的 {{site.data.keyword.vpn_short}} CLI 插件](../vpn/index.html)。
+
+
+以下信息列出了 Bluemix CLI 的 {{site.data.keyword.vpn_short}} 插件支持的所有命令，并包含命令名称、选项、用法、先决条件、描述和示例。请参阅[扩展 Bluemix 命令行界面](../../index.html#cli_bluemix_ext)，以了解如何安装 vpn 插件。
 
 **注：***先决条件*列出使用命令前必须执行的操作。先决条件可能会包含以下一个或多个操作：
 <dl>
@@ -41,7 +46,7 @@ copyright:
 创建 VPN 连接。
 
 ```
-bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
+bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **先决条件**：端点、登录和目标
@@ -56,17 +61,17 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 
 -subnets "*SUBNET*/*MASK*"（必需）：CIDR 格式的远程子网地址。
 
--cip *CUSTOMER_GATEWAY_IP_ADDRESS*（必需）：VPN 通道的远程端点 IP 地址。
+-cip *CUSTOMER_GATEWAY_IP_ADDRESS*（必需）：VPN 隧道的远程端点 IP 地址。
 
 -d *DESCRIPTION*（可选）：所指定参数的描述。
 
--peer_id *PEER_ID*（可选）：远程同级的标识。VPN 通道的另一个端点。
+-peer_id *PEER_ID*（可选）：远程同级的标识。VPN 隧道的另一个端点。
 
 -admin_state *ADMIN_STATE*（可选）：VPN 连接的状态。有效值为 `UP` 或 `DOWN`。
 
 -dpd-action *ACTION*（可选）：检测到同级无效时要执行的操作。有效值为 `hold`、`clear`、`disabled`、`restart` 或 `restart-by-peer`。缺省值为 `hold`。
 
--gateway_ip *IP_ADDRESS*（可选）：本地 VPN 通道端点的 IP 地址。
+-gateway_ip *IP_ADDRESS*（可选）：本地 VPN 隧道端点的 IP 地址。
 
 -i *INITIATOR_STATE*（可选）：发起者的状态。缺省值为 `bi-directional`。
 
@@ -91,7 +96,7 @@ bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "19
 创建 IKE 策略。
 
 ```
-bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
+bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **先决条件**：端点、登录和目标
@@ -123,7 +128,7 @@ bluemix vpn ike-create my_ike -g my_gateway
 创建 IPSec 策略。
 
 ```
-bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
+bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **先决条件**：端点、登录和目标
@@ -155,7 +160,7 @@ bluemix vpn ipsec-create my_policy -g my_gateway
 创建 VPN 网关。
 
 ```
-bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **先决条件**：端点、登录和目标
@@ -335,7 +340,7 @@ bluemix vpn gateway-delete GATEWAY_NAME
 更新现有 VPN 连接。
 
 ```
-bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY] [-subnets "SUBNET/MASK"][-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
+bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **先决条件**：端点、登录和目标
@@ -350,17 +355,17 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY
 
 -subnets "*SUBNET*/*MASK*"（可选）：CIDR 格式的子网地址。
 
--cip *CUSTOMER_GATEWAY_IP_ADDRESS*（可选）：VPN 通道的远程端点 IP 地址。
+-cip *CUSTOMER_GATEWAY_IP_ADDRESS*（可选）：VPN 隧道的远程端点 IP 地址。
 
 -d *DESCRIPTION*（可选）：所指定参数的描述。
 
--peer_id *PEER_ID*（可选）：远程同级的标识。VPN 通道的另一个端点。
+-peer_id *PEER_ID*（可选）：远程同级的标识。VPN 隧道的另一个端点。
 
 -admin_state *ADMIN_STATE*（可选）：VPN 连接的状态。有效值为 `UP` 或 `DOWN`。
 
 -dpd-action *ACTION*（可选）：检测到同级无效时要执行的操作。有效值为 `hold`、`clear`、`disabled`、`restart` 或 `restart-by-peer`。
 
--gateway_ip *IP_ADDRESS*（可选）：本地 VPN 通道端点的 IP 地址。
+-gateway_ip *IP_ADDRESS*（可选）：本地 VPN 隧道端点的 IP 地址。
 
 -i *INITIATOR_STATE*（可选）：发起者的状态。
 
@@ -377,7 +382,7 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY
 更新 IKE 策略。
 
 ```
-bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **先决条件**：端点、登录和目标
@@ -401,7 +406,7 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP
 更新 IPSec 策略。
 
 ```
-bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **先决条件**：端点、登录和目标
@@ -425,7 +430,7 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GRO
 更新现有 VPN 网关。
 
 ```
-bluemix vpn gateway-update GATEWAY_NAME [-t TYPE][-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **先决条件**：端点、登录和目标

@@ -1,50 +1,51 @@
 {
   "id": "docs_homepage_services",
-  "title": "How to use Bluemix services",
-  "subtitle": "Learn about service types and availability",
+  "title": "如何使用 Bluemix 服務",
+  "subtitle": "瞭解服務類型和可用性",
   "subtitleHref": "services/index.html",
   "items": [{
     "id": "cfApp",
-    "title": "Cloud Foundry Applications",
+    "title": "Cloud Foundry 應用程式",
     "href": "cfapps/index.html",
-    "category_id": "compute"
+    "category_id": "運算"
   }, {
-    "title": "Runtimes",
+    "title": "運行環境",
     "href": "cfapps/runtimes.html",
-    "category_id": "compute"
+    "category_id": "運算"
   }, {
-    "title": "Boilerplates",
+    "title": "樣板",
     "href": "cfapps/boilerplates.html",
-    "category_id": "compute"
+    "category_id": "運算"
   }, {
     "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "compute"
+    "category_id": "運算"
   }, {
-    "id": "container",
+    "id": "容器",
     "title": "IBM Containers",
     "href": "containers/container_index.html",
-    "category_id": "compute"
+    "category_id": "運算"
   }, {
     "id": "vm",
     "title": "IBM Virtual Servers",
     "href": "virtualmachines/vm_index.html",
-    "category_id": "compute"
+    "category_id": "運算"
   }, {
     "type": "extra",
-    "title": "Try working with data",
+    "title": "嘗試使用資料",
     "href": "services/WorkWithData/index.html",
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "Try toolchains",
+    "title": "嘗試工具鏈",
     "href": "toolchains/toolchains_overview.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Try mobile Bluemix services",
+    "title": "嘗試 Bluemix Mobile 儀表板",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]
 }
+

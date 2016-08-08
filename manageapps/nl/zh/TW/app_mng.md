@@ -30,8 +30,9 @@ copyright:
     若已啟用，建置套件會啟動位在應用程式運行環境與容器之間的 Proxy 代理程式。*proxy* 公用程式會處理應用程式接收的所有要求。根據要求類型，它會執行「應用程式管理」動作，或將要求轉遞給應用程式。*proxy* 容許啟用大部分其他「應用程式管理」公用程式。透過啟用 *proxy*，即使應用程式損毀，您的應用程式容器還是會繼續運作。Proxy 代理程式也容許進行漸進式檔案更新，以啟用 Node.js 應用程式的「即時編輯」模式。
 	
   2. *devconsole*：啟用可在下列 URL 存取的開發主控台公用程式：
+    
     ```
-    http://<yourappname>.mybluemix.net/bluemix-debug/manage
+http://<yourappname>.mybluemix.net/bluemix-debug/manage
     ```
 	
     使用開發主控台，使用者可以重新啟動、停止或暫停其應用程式。使用者也可以啟用或存取 shell 及 inspector 公用程式。
@@ -43,8 +44,9 @@ copyright:
     「性能檢測中心」支援透過使用 IBM Monitoring and Diagnostic Tools 來分析 Liberty 及 Node.js 應用程式的效能。如需相關資訊，請參閱 [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}。</p></li>
 	
   4. *shell*：啟用可從 devconsole 公用程式或透過存取下列 URL 進行存取的 Web 型 Shell：
+    
     ```
-    http://<yourappname>.mybluemix.net/bluemix-debug/shell
+http://<yourappname>.mybluemix.net/bluemix-debug/shell
     ```
 	
     在您存取 shell 公用程式之後，即會顯示終端機視窗，在視窗中會以 Shell 方式連入應用程式。您可以執行一般 Shell 中所支援的所有作業，例如編輯檔案、檢查記憶體用量，或執行診斷指令。
@@ -82,27 +84,27 @@ copyright:
     1. 配置 *strongpm* BlUEMIX_APP_MGMT_ENABLE 環境變數，然後重新編譯打包應用程式。
     
 	```
-    cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
+cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
     cf restage <appname>
     ```
 	
     2. 從 Cloud Foundry 指令行中，新增應用程式的路徑，其中路徑裡的應用程式名稱後面附加了 "-pm"，例如 <appname>-pm.mybluemix.net。
     
 	```
-    cf map-route <appname> ng.bluemix.net -n <appname>-pm
+cf map-route <appname> ng.bluemix.net -n <appname>-pm
     ```
 	
     3. 在本端工作站上安裝 [StrongLoop npm 模組](https://www.npmjs.com/package/strongloop){:new_window}。
     
 	```
-    npm install -g strongloop
+npm install -g strongloop
     ```
 	
     4. 在 [StrongLoop 網站](https://strongloop.com/register/){:new_window}上建立帳戶。
     5. 在本端工作站上啟動 Arc，並使用您建立的帳戶登入。
     
 	```
-    slc arc
+slc arc
     ```
 	
     6. 導覽至 Arc 內的「程序管理程式」視圖。將含有埠 80 的新建路徑輸入「程序管理程式」。按「啟動」按鈕。如需詳細資料，請參閱[有關使用 Arc 的完整文件](https://docs.strongloop.com/display){:new_window}。

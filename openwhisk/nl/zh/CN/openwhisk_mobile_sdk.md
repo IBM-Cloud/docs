@@ -61,7 +61,8 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 
 ### 通过源代码安装
 
-源代码在 https://github.com/openwhisk/openwhisk-client-swift.git 中提供。使用 Xcode 中的 OpenWhisk.xcodeproj 文件打开项目。该项目包含“OpenWhisk”和“OpenWhiskWatch”这两个方案，分别用于 iOS 和 watchOS 2。针对需要的目标构建项目，然后将生成的框架添加到应用程序（通常位于 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
+源代码在 https://github.com/openwhisk/openwhisk-client-swift.git 中提供。使用 Xcode 中的 `OpenWhisk.xcodeproj` 打开项目。
+该项目包含“OpenWhisk”和“OpenWhiskWatch”这两个方案，分别用于 iOS 和 watchOS 2。针对需要的目标构建项目，然后将生成的框架添加到应用程序（通常位于 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
 
 ## 安装入门模板应用程序示例
 {: #openwhisk_install_sdkstart}
@@ -73,8 +74,16 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 wsk sdk install iOS
 ```
-这将下载包含入门模板应用程序的 zip 文件。在项目目录中有一个 Podfile。通过终端运行“pod install”以安装 SDK。
 {: pre}
+
+这将下载包含入门模板应用程序的 zip 文件。在项目目录中有一个 Podfile。 
+
+要安装 SDK，请输入以下命令：
+
+```
+pod install
+```
+{: pre} 
 
 ## SDK 入门
 {: #openwhisk_sdk_getstart}

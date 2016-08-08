@@ -72,24 +72,24 @@ copyright:
 1. 다음 명령을 입력하여 트리거를 작성하십시오.
  
   ```
-  wsk trigger create locationUpdate
+wsk trigger create locationUpdate
   ```
   {: pre}
  
   ```
-  ok: created trigger locationUpdate
+ok: created trigger locationUpdate
   ```
   {: screen}
 
 2. 트리거 세트를 나열하여 작성된 트리거를 확인하십시오.
 
   ```
-  wsk trigger list
+wsk trigger list
   ```
   {: pre}
  
   ```
-  triggers
+triggers
   /someNamespace/locationUpdate                            private
   ```
   {: screen}
@@ -99,17 +99,17 @@ copyright:
 3. 다음으로 트리거 이름 및 매개변수를 지정하여 트리거 이벤트를 실행하십시오.
 
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
   {: pre}
 
   ```
-  ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
+ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
   {: screen}
 
-   statusUpdate 트리거를 실행하는 모든 이벤트가 현재로서는 아무것도 수행하지 않습니다. 유용하게 사용하려면 트리거를 조치와 연관시키는 규칙이 필요합니다.
-
+대조할 수반되는 규칙 없이 실행되는 트리거는 영향을 미치지 않습니다.
+트리거는 패키지 내에서 작성되지 않을 수 있으며, 네임스페이스 아래에서 직접 작성되어야 합니다.
 
 ## 트리거 및 조치를 연관시키기 위해 규칙 사용
 {: #openwhisk_rules}
@@ -119,64 +119,71 @@ copyright:
 예를 들어, 위치 업데이트가 게시될 때마다 hello 조치를 호출하는 규칙을 작성하십시오. 
 
 1. 사용할 조치 코드를 사용하여 'hello.js' 파일을 작성하십시오.
+  
   ```
-  function main(params) {
+function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
 
 2. 트리거 및 조치가 있는지 확인하십시오.
+  
   ```
-  wsk trigger update locationUpdate
+wsk trigger update locationUpdate
   ```
   {: pre}
   
   ```
-  wsk action update hello hello.js
+wsk action update hello hello.js
   ```
   {: pre}
 
 3. 규칙을 작성하고 사용하도록 설정하십시오. 세 가지 매개변수는 규칙, 트리거 및 조치의 이름입니다.
+  
   ```
-  wsk rule create --enable myRule locationUpdate hello
+wsk rule create --enable myRule locationUpdate hello
   ```
   {: pre}
 
 4. locationUpdate 트리거를 실행하십시오. 이벤트를 실행할 때마다 이벤트 매개변수와 함께 hello 조치가 호출됩니다.
+  
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
   {: pre}
   
   ```
-  ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
+ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
   {: screen}
 
 5. 최신 활성화를 검사하여 조치가 호출되었는지 확인하십시오.
+  
   ```
-  wsk activation list --limit 1 hello
+wsk activation list --limit 1 hello
   ```
   {: pre}
   
   ```
-  activations
+activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
   
   ```
-  wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
+wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
   ```
   {
-"payload": "Hello, Donald from Washington, D.C."
+     "payload": "Hello, Donald from Washington, D.C."
   }
   ```
   {: screen}
 
   hello 조치가 이벤트 페이로드를 수신하고 예상 문자열을 리턴한 것을 볼 수 있습니다.
 
-  동일한 트리거를 다른 조치와 연관시키는 다중 규칙을 작성할 수 있습니다.
+동일한 트리거를 다른 조치와 연관시키는 다중 규칙을 작성할 수 있습니다. 규칙을 작성하는 조치 및 트리거는 동일한 네임스페이스 안에 있어야 하며 패키지에 속할 수 없습니다.
+패키지에 속한 조치를 사용하려는 경우, 조치를 네임스페이스에 복사할 수 있습니다(예: `wsk action create echo --copy /whisk.system/samples/echo`).
+

@@ -17,7 +17,7 @@ copyright:
 {:pre: .pre}
 
 # Initiation à {{site.data.keyword.openwhisk_short}}
-*Dernière mise à jour : 6 juin 2016*
+*Dernière mise à jour : 28 juin 2016*
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} est un service de calcul géré par des événements. {{site.data.keyword.openwhisk_short}} exécute une
@@ -29,15 +29,20 @@ l'écriture de la logique d'application et à la création d'actions qui sont ex
 
 Pour plus de détails sur le fonctionnement d'{{site.data.keyword.openwhisk_short}}, voir [A propos d'{{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
-## Configuration d'{{site.data.keyword.openwhisk_short}}
+## Configuration de l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}} 
+{: #openwhisk_start_configure_cli}
+
 Vous pouvez utiliser l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}} pour configurer votre espace de nom et votre
-clé d'autorisation. Accédez à la page de [configuration de l'interface de ligne de
-commande](https://console.{DomainName}/openwhisk/cli){: new_window} et suivez les instructions d'installation. Python 2.7 doit être installé sur votre système pour que vous puissiez utiliser l'interface de ligne de commande.
+clé d'autorisation. 
+Accédez à la page de [configuration de l'interface de ligne de commande](https://new-console.{DomainName}/openwhisk/cli){: new_window} et suivez les instructions d'installation.
+Python 2.7 doit être installé sur votre système pour que vous puissiez utiliser l'interface de ligne de commande.
 
 Une fois {{site.data.keyword.openwhisk_short}} configuré avec l'interface de ligne de commande, vous pouvez commencer à l'utiliser à partir
 de la ligne de commande ou via des API REST.
 
 ## Utilisation de l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}}
+{: #openwhisk_start_using_cli}
+
 Une fois que vous avez configuré votre environnement, vous pouvez commencer à utiliser l'interface de ligne de commande
 d'{{site.data.keyword.openwhisk_short}} pour effectuer les opérations suivantes :
 
@@ -53,16 +58,21 @@ d'{{site.data.keyword.openwhisk_short}} pour effectuer les opérations suivantes
 
 
 ## Utilisation d'{{site.data.keyword.openwhisk_short}} depuis une application iOS
+{: #openwhisk_start_using_ios}
+
 Vous pouvez utiliser {{site.data.keyword.openwhisk_short}} depuis votre application mobile iOS ou depuis votre Apple Watch à l'aide du
 logiciel SDK {{site.data.keyword.openwhisk_short}} pour iOS. Pour plus de détails, voir la [documentation iOS](./openwhisk_mobile_sdk.html).
 
 ## Utilisation d'API REST avec {{site.data.keyword.openwhisk_short}}
+{: #openwhisk_start_using_restapi}
+
 une fois votre environnement {{site.data.keyword.openwhisk_short}} activé, vous pouvez utiliser {{site.data.keyword.openwhisk_short}}
 avec vos applications Web ou mobiles à l'aide d'appels d'API REST. Pour plus de détails sur les API pour les actions, les activations, les
 packages, les règles et les déclencheurs, voir la [documentation
 de l'API {{site.data.keyword.openwhisk_short}}](https://new-console.{DomainName}/apidocs/98).
 
 ## Exemple Hello World d'{{site.data.keyword.openwhisk_short}}
+{: #openwhisk_start_hello_world}
 Pour vous initier à {{site.data.keyword.openwhisk_short}}, essayez l'exemple de code JavaScript ci-dessous.
 
 ```
@@ -134,7 +144,7 @@ Vous trouverez des informations supplémentaires sur {{site.data.keyword.openwhi
 
 # rellinks
 ## api
-* [Documentation de l'API REST](https://new-console.{DomainName}/apidocs/98){:new_window}
+* [Documentation de l'API REST](./openwhisk_reference.html#openwhisk_ref_restapi)
 
 ## general
 * [Découvrez {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}

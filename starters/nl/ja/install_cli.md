@@ -52,7 +52,6 @@ Cloud Foundry コマンド・ライン・インターフェースのダウンロ
   1. {: download} スターター・コードをダウンロードします。 
       
     <a class="xref" href="http://bluemix.net" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_starter-code.svg" alt="スターター・コードのダウンロード" /> </a>
-
   
   2. パッケージを新規ディレクトリーに解凍し、開発環境をセットアップします。
   3. 新規ディレクトリーに移動します。

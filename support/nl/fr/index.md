@@ -12,7 +12,7 @@ copyright:
 # Support client
 {: #getting-customer-support}
 
-*Dernière mise à jour : 17 juin 2016*
+*Dernière mise à jour : 7 juillet 2016*
 {: .last-updated}
 
 
@@ -150,7 +150,9 @@ instances de chaque application.
 
 Vous pouvez ouvrir des tickets de demande de service si vous disposez d'un compte
 {{site.data.keyword.Bluemix_notm}}
-valide.  
+valide. 
+
+Si vous disposez d'un compte {{site.data.keyword.Bluemix_notm}} qui est lié à un compte SoftLayer, vous pouvez ouvrir des tickets de demande de service pour {{site.data.keyword.Bluemix_notm}} à partir du portail client SoftLayer ou de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. 
 
 ### Contacter le support pour l'environnement {{site.data.keyword.Bluemix_notm}} public
 {: #contacting-bluemix-support}
@@ -184,8 +186,6 @@ options suivantes :
 
   * Depuis Compte et support, cliquez sur **Obtenir de l'aide**. Sur la page qui s'affiche, cliquez sur
 **Prendre contact**. Remplissez le formulaire pour indiquer pour quelle raison vous avez besoin d'une assistance technique.
-  * Depuis le [portail IBM Client Success](https://support.ibmcloud.com){: new_window}. Après vous être connecté au portail,
-cliquez sur **Open Ticket** et renseignez le formulaire de support. 
   * Utilisez la page d'aide [IBM {{site.data.keyword.Bluemix_notm}}
 Support](http://ibm.biz/bluemixsupport){: new_window}. Vous pouvez soumettre des tickets pour des problèmes liés aux ventes, à la facturation, aux ID IBM et à la connexion, ainsi que
 pour des problèmes techniques. Pour les problèmes techniques, vous pouvez sélectionner un groupe technique après avoir cliqué sur la vignette **Technical
@@ -193,6 +193,8 @@ Support**. Par exemple, si vous avez besoin d'aide pour des applications Cloud F
 Bare Metal, choisissez **Services d'application**. Si vous avez besoin d'aide pour un service spécifique, sélectionnez la catégorie de
 service correspondante. Pour identifier la catégorie à laquelle votre service appartient, reportez-vous aux catégories sous
 [Services](../services/index.html){: new_window} dans le panneau de navigation de gauche.  
+  * Depuis le [portail IBM Client Success](https://support.ibmcloud.com){: new_window}. Après vous être connecté au portail,
+cliquez sur **Open Ticket** et renseignez le formulaire de support. 
   
 
 
@@ -227,9 +229,9 @@ Si vous êtes un client {{site.data.keyword.Bluemix_notm}} dédié, le support e
 l'option **{{site.data.keyword.Bluemix_notm}} Dédié** pour la zone Région.
 <p>Les soumissions de formulaires sont surveillées du dimanche 22h00 au vendredi 23h59 (Temps Universel Coordonné).</p>
 </li>
-<li>Si vous disposez d'un ID IBM et avez accès à l'environnement {{site.data.keyword.Bluemix_notm}} Public, cliquez sur l'icône
-**Compte et support** <img src="images/account_support.svg" alt="Compte et support" /> dans la barre de menu supérieure, puis sur
-**Obtenir de l'aide**. Dans la page qui s'affiche, cliquez sur
+<li>Si vous disposez d'un ID IBM et avez accès à l'environnement {{site.data.keyword.Bluemix_notm}} Public, cliquez sur l'icône **Compte et
+support** <img src="images/account_support.svg" alt="Compte et support" /> dans la barre de menu supérieure, puis sur **Obtenir de
+l'aide**. Dans la page qui s'affiche, cliquez sur
 **Prendre contact**.</li>
 <li>Si vous ne disposez pas d'un ID IBM, vous pouvez contacter un membre de votre organisation qui en a un ou bien contacter votre interlocuteur IBM.
 <p>**Remarque** : Si vous en faites la demande, une liste d'utilisateurs de votre organisation pouvant servir de contacts pour les tickets de demande de service peut s'afficher sur la page **Support** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} de votre environnement dédié.</p></li>

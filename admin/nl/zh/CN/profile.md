@@ -17,7 +17,7 @@ copyright:
 
 # 个人档案设置
 {: #usersettings}
-*上次更新时间：2016 年 5 月 16 日*
+上次更新时间：2016 年 6 月 23 日
 {: .last-updated}
 
 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; **个人档案**，以更新个人档案设置。
@@ -25,22 +25,17 @@ copyright:
 
  在**个人档案**页面上，可以设置或更新以下信息：
 
-<!--  * A profile photo that is visible to other {{site.data.keyword.Bluemix_notm}} users -->
-
+ * 其他 {{site.data.keyword.Bluemix_notm}} 用户可见的个人档案照片
  * IBM 标识信息，包括您的姓名、电子邮件、电话号码、密码、公司和角色
  * 分析跟踪设置
 
-<!-- pulled back, so removing content for now
-
-## Changing your profile photo
+## 更改个人档案照片
 {: #photo}
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
+1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; **个人档案**。
 
-* Click **Change Photo** to upload a new photo.
-* Click **Remove Photo** to remove your photo.
-
--->
+* 单击**更改照片**以上传新照片。
+* 单击**除去照片**以除去照片。
 
 ## 编辑 IBM 标识信息
 {: #ibmid}

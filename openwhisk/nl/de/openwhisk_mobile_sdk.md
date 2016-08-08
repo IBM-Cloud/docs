@@ -46,12 +46,11 @@ end
 ```
 {: codeblock}
 
-Geben Sie über die Befehlszeile den Befehl `pod install` ein. Dadurch wird das SDK für eine iOS-App mit einer watchOS 2-Erweiterung installiert. Verwenden Sie die Arbeitsbereichsdatei, die CocoaPods für Ihre App erstellt, um das Projekt in Xcode zu öffnen.
+Geben Sie über die Befehlszeile den Befehl `pod install` ein. Dadurch wird das SDK für eine iOS-App mit einer watchOS 2-Erweiterung installiert.  Verwenden Sie die Arbeitsbereichsdatei, die CocoaPods für Ihre App erstellt, um das Projekt in Xcode zu öffnen.
 
 ### Mithilfe von Carthage installieren
 
 Erstellen Sie eine Datei im Projektverzeichnis Ihrer App mit dem Namen 'Cartfile'. Fügen Sie die folgende Zeile in die Cartfile ein:
-
 ```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
@@ -63,7 +62,7 @@ Dann müssen Sie OpenWhisk.framework den eingebetteten Frameworks in Ihrem Xcode
 
 ### Aus Quellcode installieren
 
-Der Quellcode wird unter https://github.com/openwhisk/openwhisk-client-swift.git zur Verfügung gestellt. Öffnen Sie in Xcode ein Projekt unter Verwendung der Datei OpenWhisk.xcodeproj. Das Projekt enthält die beiden Schemas "OpenWhisk" und "OpenWhiskWatch", die für iOS bzw. watchOS 2 vorgesehen sind. Erstellen Sie das Projekt (Build) für die Ziele, die Sie benötigen, und fügen Sie die resultierenden Frameworks Ihrer App (in der Regel in ~/Library/Developer/Xcode/DerivedData/Ihr App-Name) hinzu.
+Der Quellcode wird unter https://github.com/openwhisk/openwhisk-client-swift.git zur Verfügung gestellt. Öffnen Sie mit Xcode ein Projekt unter Verwendung von `OpenWhisk.xcodeproj`. Das Projekt enthält die beiden Schemas "OpenWhisk" und "OpenWhiskWatch", die für iOS bzw. watchOS 2 vorgesehen sind. Erstellen Sie das Projekt (Build) für die Ziele, die Sie benötigen, und fügen Sie die resultierenden Frameworks Ihrer App (in der Regel in ~/Library/Developer/Xcode/DerivedData/Ihr App-Name) hinzu. 
 
 ## Starter-App-Beispiel installieren
 {: #openwhisk_install_sdkstart}
@@ -74,8 +73,15 @@ Geben Sie den folgenden Befehl ein, um das Starter-App-Beispiel zu installieren:
 ```
 wsk sdk install iOS
 ```
-Durch diesen Befehl wird eine ZIP-Datei heruntergeladen, die die Starter-App enthält.  Im Projektverzeichnis befindet sich eine Podfile.  Führen Sie den Befehl "pod install" über ein Terminal aus, um das SDK zu installieren.
 {: pre}
+
+Durch diesen Befehl wird eine ZIP-Datei heruntergeladen, die die Starter-App enthält. Im Projektverzeichnis befindet sich eine Podfile.  
+
+Geben Sie den folgenden Befehl ein, um das SDK zu installieren: 
+```
+pod install
+```
+{: pre} 
 
 ## Erste Schritte mit dem SDK
 {: #openwhisk_sdk_getstart}

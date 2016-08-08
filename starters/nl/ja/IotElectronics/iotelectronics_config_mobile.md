@@ -15,15 +15,16 @@ copyright:
 # モバイル・アプリの使用
 {: #iot4e_using_mobile}
 *最終更新日: 2016 年 6 月 14 日*
+{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} モバイル・アプリの使用を開始して、アラートの受信、コマンドの送信、接続された電気製品の状況のチェックをどのように実行できるか確認します。
 {:shortdesc}
 
 以下の作業を実行します。
-1. [モバイル・アプリをダウンロードする](#iot4e_downloadmobile)
-2. [{{site.data.keyword.amafull}} を構成する](#iot4e_configureMCA)
-3. [モバイル・デバイスを {{site.data.keyword.iotelectronics}} 環境に接続する](#iot4e_connecting_mobile)
-4. [モバイル・デバイス上で電気製品を登録して制御する](#iot4e_adding_appliance)
+1. [モバイル・アプリをダウンロードする](#iot4e_downloadmobile)。
+2. [{{site.data.keyword.amafull}} を構成する](#iot4e_configureMCA)。
+3. [モバイル・デバイスを {{site.data.keyword.iotelectronics}} 環境に接続する](#iot4e_connecting_mobile)。
+4. [モバイル・デバイス上で電気製品を登録して制御する](#iot4e_adding_appliance)。
 
 
  ## モバイル・アプリをダウンロードする
@@ -86,8 +87,8 @@ copyright:
 
   1. コンピューター上で、シミュレート洗濯機までスクロールし、それをクリックしてそのデータと電気製品 QR コードを表示します。
 
-![洗濯機の選択。](images/IoT4E_mobile_washer_QR.svg "洗濯機の選択。")
+  ![洗濯機の選択。](images/IoT4E_mobile_washer_QR.svg "洗濯機の選択。")
 
-  3.	モバイル・デバイスで洗濯機の QR コードをスキャンして、モバイル・デバイスに洗濯機を登録します。モバイル・デバイスに洗濯機の状況が表示されます。
+  2.	モバイル・デバイスで洗濯機の QR コードをスキャンして、モバイル・デバイスに洗濯機を登録します。モバイル・デバイスに洗濯機の状況が表示されます。
 
-  4. コンピューター上で、ボードの障害や強い振動など、洗濯機の問題を選択します。この問題により、アラートがモバイル・デバイスに送信されます。
+  3. コンピューター上で、ボードの障害や強い振動など、洗濯機の問題を選択します。この問題により、アラートがモバイル・デバイスに送信されます。

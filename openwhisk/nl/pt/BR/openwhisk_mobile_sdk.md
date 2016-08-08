@@ -14,6 +14,7 @@ copyright:
 # Usando o SDK móvel do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
 *Última atualização: 28 de março de 2016*
+{: .last-updated}
 
 O {{site.data.keyword.openwhisk}} fornece um SDK móvel para dispositivos com iOS e watchOS 2 que permite que apps móveis disparem acionadores remotos e chamem ações remotas facilmente. Uma versão para Android não está atualmente disponível; os desenvolvedores para Android podem usar a API REST do {{site.data.keyword.openwhisk}} diretamente.
 {: shortdesc}
@@ -26,7 +27,8 @@ O SDK móvel é escrito em Swift 2.2 e suporta o iOS 9 e liberações posteriore
 
 ### Instalando usando o CocoaPods 
 
-O SDK do {{site.data.keyword.openwhisk_short}} para dispositivo móvel está disponível para distribuição pública por meio do CocoaPods. Supondo que o Cocoapods esteja instalado, coloque as linhas a seguir em um arquivo chamado 'Podfile' dentro do diretório de projeto do app starer. 
+O SDK do {{site.data.keyword.openwhisk_short}} para dispositivo móvel está disponível para distribuição pública por meio do CocoaPods. Supondo que o CocoaPods esteja instalado, coloque as linhas
+a seguir em um arquivo chamado 'Podfile' dentro do diretório de projeto do aplicativo iniciador. 
 
 ```
 source 'https://github.com/openwhisk/openwhisk-podspecs.git'
@@ -45,21 +47,28 @@ end
 ```
 {: codeblock}
 
-Na linha de comandos, digite "pod install". Isso instalará o SDK para um app iOS com uma extensão watchOS 2.  Use o arquivo de área de trabalho que o Cocoapods cria para seu app para abrir o projeto no Xcode.
+A partir da linha de comandos, digite `pod install`. Isso instalará o SDK para um app iOS com uma extensão watchOS 2.  Use o arquivo de área de trabalho que o CocoaPods cria para o seu
+aplicativo para abrir o projeto no Xcode.
 
 ### Instalando usando o Carthage
 
 Crie um arquivo no diretório de projeto de seu app e chame-o de 'Cartfile'. Coloque as linhas a seguir no Cartfile:
 ```
-github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 {: codeblock}
 
-Na linha de comandos, digite 'carthage update --platform ios'. O Carthage faz download e constrói o SDK, cria um diretório chamado Carthage no diretório de projeto do seu app e coloca um arquivo OpenWhisk.framework dentro de Carthage/build/iOS. Inclua OpenWhisk.framework nas estruturas integradas em seu projeto Xcode.
+A partir da linha de comandos, digite `carthage update --platform ios`. O Carthage faz download e constrói o SDK, cria um diretório chamado Carthage no diretório de projeto do seu app e coloca um arquivo OpenWhisk.framework dentro de Carthage/build/iOS.
+
+Deve-se, então, incluir OpenWhisk.framework nas estruturas integradas em seu projeto Xcode
 
 ### Instalando a partir do código-fonte
 
-O código-fonte está disponível em https://github.com/openwhisk//openwhisk-client-swift.git. Abra o projeto usando o arquivo OpenWhisk.xcodeproj no Xcode.  O projeto contém dois esquemas "OpenWhisk" e "OpenWhiskWatch" destinados ao iOS e ao WathOS2, respectivamente.  Construa o projeto para os destinos que precisa e inclua as estruturas resultantes em seu app (geralmente, em ~/Library/Developer/Xcode/DerivedData/nome de seu app).
+O código-fonte está disponível em https://github.com/openwhisk/openwhisk-client-swift.git.
+Abra o projeto usando o `OpenWhisk.xcodeproj` usando Xcode.
+O projeto contém dois esquemas "OpenWhisk" e
+"OpenWhiskWatch", destinados para iOS e watchOS 2, respectivamente.
+Construa o projeto para os destinos que precisa e inclua as estruturas resultantes em seu app (geralmente, em ~/Library/Developer/Xcode/DerivedData/nome de seu app).
 
 ## Instalando o exemplo do app iniciador
 {: #openwhisk_install_sdkstart}
@@ -70,8 +79,15 @@ Para instalar o exemplo do app iniciador, insira o comando a seguir:
 ```
 wsk sdk install iOS
 ```
-Isso fará download de um arquivo zip que contém o app iniciador.  Dentro do diretório do projeto está um Podfile.  Execute "pod install" a partir de um terminal para instalar o SDK.
 {: pre}
+
+Isso fará download de um arquivo zip que contém o app iniciador. Dentro do diretório de projeto há um Podfile. 
+
+Para instalar o SDK, insira o comando a seguir:
+```
+pod install
+```
+{: pre} 
 
 ## Introdução ao SDK
 {: #openwhisk_sdk_getstart}
@@ -110,8 +126,8 @@ Por
 exemplo:
 
 ```
-// In this example, we are invoking an action to print a message to
-the OpenWhisk Console var params = Dictionary<String, String>()
+// Neste exemplo, estamos chamando uma ação para imprimir uma mensagem nos parâmetros var do OpenWhisk
+Console = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
 
 do {
@@ -251,9 +267,8 @@ whiskButton.setupWhiskAction("helloConsole", package: "mypackage", namespace: "_
 
 let myParams = ["name":"value"]
 
-// Call this when you detect a press event, e.g. in an
-IBAction, to invoke the action whiskButton.invokeAction(parameters:
-myParams, callback: { reply, error in
+// Chame isto ao detectar um evento de imprensa, ou seja, em uma IBAction, para chamar a ação
+whiskButton.invokeAction(parameters: myParams, callback: { reply, error in
     if let error = error {
         print("Oh no, error: \(error)")
     } else {

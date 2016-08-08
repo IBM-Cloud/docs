@@ -48,9 +48,9 @@ Beispiel: Betrachten Sie einen Benutzer mit dem Standardnamensbereich `/myOrg`. 
 
 | Vollständig qualifizierter Name | Alias | Namensbereich | Paket | Name |
 | --- | --- | --- | --- | --- |
-| `/whisk.system/cloudant/read` | - | `/whisk.system` | `cloudant` | `read` |
+| `/whisk.system/cloudant/read` |  | `/whisk.system` | `cloudant` | `read` |
 | `/myOrg/video/transcode` | `video/transcode` | `/myOrg` | `video` | `transcode` |
-| `/myOrg/filter` | `filter` | `/myOrg` | - | `filter` |
+| `/myOrg/filter` | `filter` | `/myOrg` |  | `filter` |
 
 Sie verwenden dieses Benennungsschema unter anderem zum Beispiel, wenn Sie die {{site.data.keyword.openwhisk_short}}-CLI verwenden.
 
@@ -118,7 +118,8 @@ Ein Aktivierungsdatensatz enthält die folgenden Felder:
 - *activationId*: Die Aktivierungs-ID.
 - *start* und *end*: Zeitmarken, die den Start und das Ende der Aktivierung aufzeichnen. Die Werte haben das [UNIX-Zeitformat](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15).
 - *namespace* und `name`: Der Namensbereich und der Name der Entität.
-- *logs*: Ein Array von Zeichenfolgen mit Protokollen, die durch die Aktion während ihrer Aktivierung generiert wurden. Jedes Array-Element entspricht einer Zeilenausgabe an 'stdout' oder 'stderr' durch die Aktion und enthält die Zeit und den Datenstrom der Protokollausgabe. Die Struktur sieht wie folgt aus: ```TIMESTAMP STREAM: LOG_OUTPUT```.
+- *logs*: Ein Array von Zeichenfolgen mit Protokollen, die durch die Aktion während ihrer Aktivierung generiert wurden. Jedes Array-Element entspricht einer Zeilenausgabe an 'stdout' oder 'stderr' durch die Aktion und enthält die Zeit und den Datenstrom der Protokollausgabe. Die Struktur ist wie folgt:
+```TIMESTAMP STREAM: LOG_OUTPUT```.
 - *response*: Ein Wörterverzeichnis, in dem die Schlüssel `success`, `status` und `result` definiert werden:
   - *status*: Das Aktivierungsergebnis, das einen der folgenden Werte haben kann: "success", "application error", "action developer error", "whisk internal error".
   - *success*: Hat den Wert `true`, wenn und nur wenn der Status `"success"` ist.
@@ -154,8 +155,8 @@ Es ist für JavaScript-Funktionen durchaus üblich, die Ausführung in einer Cal
 
 Die Aktivierung einer JavaScript-Aktion ist **synchron**, wenn die Funktion 'main' unter einer der folgenden Bedingungen vorhanden ist:
 
-- Die Funktion 'main' ist vorhanden, ohne eine Anweisung ```return``` auszuführen.
-- Die Funktion 'main' ist vorhanden und führt eine Anweisung ```return``` aus, die einen beliebigen Wert *mit Ausnahme von* ```whisk.async()`` zurückgibt.
+- Die Funktion 'main' ist ohne Ausführung der Anweisung ```return``` vorhanden. 
+- Die Funktion 'main' ist vorhanden und führt die Anweisung ```return``` aus, die einen beliebigen Wert *mit Ausnahme von* ```whisk.async()``` zurückgibt. 
 
 Die beiden folgenden Beispiele zeigen synchrone Aktionen.
 
@@ -181,7 +182,7 @@ function main(params) {
 ```
 {: codeblock}
 
-Die Aktivierung einer JavaScript-Aktion ist **asynchron**, wenn die Funktion 'main' mit einem Aufruf ```return whisk.async();``` beendet wird.  In diesem Fall nimmt das System an, dass die Aktion solange weiter ausgeführt wird, bis die Aktion eine der folgenden Anweisungen ausführt:
+Die Aktivierung einer JavaScript-Aktion ist **asynchron**, wenn die Funktion 'main' mit einem Aufruf ```return whisk.async();``` beendet wird. In diesem Fall nimmt das System an, dass die Aktion solange weiter ausgeführt wird, bis die Aktion eine der folgenden Anweisungen ausführt:
 - ```return whisk.done();```
 - ```return whisk.error();```
 
@@ -223,7 +224,7 @@ Die Funktion `whisk.invoke()` ruft eine andere Aktion auf. Sie empfängt als Arg
 
 - *name*: Der vollständig qualifizierte Name der aufzurufenden Aktion.
 - *parameters*: Ein JSON-Objekt, das die Eingabe für die aufgerufene Aktion darstellt. Falls nicht angegeben, wird standardmäßig ein leeres Objekt verwendet.
-- *apiKey*: Der Berechtigungsschlüssel, mit dem die Aktion aufzurufen ist. Standardwert: `whisk.getAuthKey()`. 
+- *apiKey*: Der Berechtigungsschlüssel, mit dem die Aktion aufzurufen ist. Standardwert: `whisk.getAuthKey()`.
 - *blocking*: Gibt an, ob die Aktion im blockierenden oder nicht blockierenden Modus aufgerufen werden soll. Standardwert ist `false`, der einen nicht blockierenden Aufruf angibt.
 - *next*: Eine optionale Callback-Funktion, die auszuführen ist, wenn der Aufruf beendet wird.
 
@@ -253,7 +254,7 @@ Die Funktion `whisk.getAuthKey()` gibt den Berechtigungsschlüssel zurück, unte
 ### Laufzeitumgebung
 {: #openwhisk_ref_runtime_environment}
 
-JavaScript-Aktionen werden in einer Umgebung von Node.js Version 0.12.9 ausgeführt, in der die folgenden Pakete zur Verwendung durch die Aktionen verfügbar sind:
+JavaScript-Aktionen werden in einer Umgebung von Node.js Version 0.12.14 ausgeführt, in der die folgenden Pakete zur Verwendung durch die Aktionen verfügbar sind: 
 
 - apn
 - async
@@ -304,36 +305,41 @@ Der Aktionseingabeparameter "payload" wird als Positionsargument an das Binärpr
 
 Das Docker-Gerüst (Skeleton) ist eine bequeme Methode, {{site.data.keyword.openwhisk_short}}-kompatible Docker-Images zu erstellen. Sie können das Gerüst mit dem CLI-Befehl `wsk sdk install docker` installieren.
 
-Das Hauptbinärprogramm muss in die Datei `dockerSkeleton/client/clientApp` kopiert werden. Alle Begleitdateien oder die Bibliothek können sich im Verzeichnis `dockerSkeleton/client` befinden.
+Das Hauptbinärprogramm muss in die Datei `dockerSkeleton/client/action` kopiert werden. Alle Begleitdateien oder die Bibliothek können sich im Verzeichnis `dockerSkeleton/client` befinden.
 
 Sie können darüber hinaus auch Kompilierungsschritte oder Abhängigkeiten einbeziehen, indem Sie die `dockerSkeleton/Dockerfile` ändern. Sie können zum Beispiel Python installieren, wenn Ihre Aktion ein Python-Script ist.
 
 
 ## REST-API
+{: #openwhisk_ref_restapi}
 
 Alle Funktionen im System stehen über eine REST-API zur Verfügung. Es gibt Sammlungs- und Entitätsendpunkte für Aktionen, Auslöser, Regeln, Pakete, Aktivierungen und Namensbereiche.
 
 Die Sammlungsendpunkte lauten wie folgt:
 
-- `https://$BASEURL/api/v1/namespaces`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/actions`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/rules`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/packages`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/activations`
+- `https://{BASE URL}/api/v1/namespaces`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+
+`{BASE URL}` ist der OpenWhisk-API-Hostname (d.h. openwhisk.ng.bluemix.net, 172.17.0.1, usw.). 
+
+Für `{namespace}` kann das Zeichen `_` zum Angeben des *Standardnamensbereichs* (d.h. einer E-Mail-Adresse) verwendet werden. 
 
 Sie können eine GET-Anforderung für die Sammlungsendpunkte ausführen, um eine Liste der Entitäten in der Sammlung abzurufen.
 
 Für jeden Entitätstyp gibt es Entitätsendpunkte:
 
-- `https://$BASEURL/api/v1/namespaces/{namespace}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://$BASEURL/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{activationName}`
 
-Die Endpunkte für Namensbereiche und Aktivierungen unterstützen nur GET-Anforderungen. Die Endpunkte für Aktionen, Auslöser, Regeln und Pakete unterstützen GET-, PUT- und DELETE-Anforderungen. Die Endpunkte für Aktionen, Auslöser und Regeln unterstützen auch POST-Anforderungen, die zum Aufrufen von Aktionen und Auslösern sowie zum Aktivieren und Inaktivieren von Regeln verwendet werden. Weitere Details hierzu finden Sie in der [API-Referenz](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json).
+Die Endpunkte für Namensbereiche und Aktivierungen unterstützen nur GET-Anforderungen. Die Endpunkte für Aktionen, Auslöser, Regeln und Pakete unterstützen GET-, PUT- und DELETE-Anforderungen. Die Endpunkte für Aktionen, Auslöser und Regeln unterstützen auch POST-Anforderungen, die zum Aufrufen von Aktionen und Auslösern sowie zum Aktivieren und Inaktivieren von Regeln verwendet werden. Weitere Details hierzu finden Sie in der [API-Referenz](https://new-console.{DomainName}/apidocs/98).
 
 Alle APIs sind mit der HTTP-Basisauthentifizierung geschützt. Die durch einen Doppelpunkt voneinander getrennten BasicAuth-Berechtigungsnachweise befinden sich in der Eigenschaft `AUTH` in der `~/.wskprops`-Datei. Sie finden diese Berechtigungsnachweise auch in den [Konfigurationsschritten der Befehlszeilenschnittstelle (CLI)](../README.md#setup-cli).
 
@@ -363,6 +369,9 @@ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whi
 ```
 {: screen}
 
+Von der OpenWhisk-API werden Anforderung/Antwort-Aufrufe von Web-Clients unterstützt. Von OpenWhisk wird auf `OPTIONS`-Anforderungen mit CORS-Headern (CORS - Cross-Origin Resource Sharing) geantwortet. Derzeit sind alle Ursprünge zulässig (d.h. Access-Control-Allow-Origin ist "`*`") und Access-Control-Allow-Header sorgen für die Autorisierung und den Inhaltstyp. 
+
+**Da von OpenWhisk derzeit nur ein Schlüssel pro Konto unterstützt wird, wird empfohlen, CORS nur für einfache Experimente und nicht darüber hinaus zu verwenden. Der Schlüssel müsste sonst in clientseitigen Code eingebettet werden, was ihn öffentlich zugänglich machen würde. Verwenden Sie ihn mit Sorgfalt. **
 
 ## Systembegrenzungen
 {: #openwhisk_syslimits}
@@ -387,13 +396,29 @@ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whi
 * Ein Benutzer kann das Limit beim Erstellen der Aktion ändern.
 * Einem Container kann nicht mehr Speicher als das Limit geordnet werden.
 
-### Anzahl gleichzeitiger Aufrufe pro Namensbereich (Anzahl) (Standardwert: 100)
+### Artefakt pro Aktion (MB) (Festgelegt: 256 MB)
+* Die maximale Codegröße für die Aktion ist 1 MB. 
+* Es wird empfohlen, für eine JavaScript-Aktion ein Tool zum Verketten des gesamten Quellcodes, einschließlich der Abhängigkeiten, in einer einzelnen Bundledatei zu verwenden. 
+
+### Nutzdatengröße pro Aktivierung (MB) (Festgelegt: 1 MB)
+* Die maximale POST-Inhaltsgröße plus Parameter für einen Aktionsaufruf oder eine Auslöserinitialisierung beträgt 1 MB. 
+
+### Gleichzeitige Aufrufe pro Namensbereich (Standardwert: 100)
 * Die Anzahl der Aktivierungen, die für einen Namensbereich gleichzeitig verarbeitet werden, kann 100 nicht überschreiten.
 * Die Standardbegrenzung kann von Whisk in Consul-KV-Store statisch konfiguriert werden.
 * Ein Benutzer hat gegenwärtig keine Möglichkeit, die Begrenzungen zu ändern.
 
-
-### Aufrufe pro Minute/Stunde (Anzahl) (Festgelegt: 120/3600)
+### Aufrufe pro Minute/Stunde (Festgelegt: 120/3600)
 * Die Begrenzung N der Rate ist auf 120/3600 festgelegt und begrenzt die Anzahl von Aktionsaufrufen in Fenstern von 1 Minute bzw. 1 Stunde.
 * Ein Benutzer kann diese Begrenzung beim Erstellen der Aktion nicht ändern.
 * Ein CLI-Aufruf, der diese Begrenzung überschreitet, empfängt einen Fehlercode, der dem Wert TOO_MANY_REQUESTS entspricht.
+
+### Wert für 'ulimit' für offene Dateien pro Docker-Aktion (Festgelegt: 64:64)
+* Die maximale Anzahl offener Dateien beträgt 64 (dies bezieht sich auf feste und veränderliche Grenzwerte). 
+* Vom Docker-Ausführungsbefehl wird das Argument `--ulimit nofile=64:64` verwendet. 
+* Weitere Informationen zu 'ulimit' für offene Dateien finden Sie in der Docker-Dokumentation unter [run](https://docs.docker.com/engine/reference/commandline/run). 
+
+### Wert für 'ulimit' für Anzahl der Prozesse pro Docker-Aktion (Festgelegt: 512:512)
+* Die maximale Anzahl der für einen Benutzer verfügbaren Prozesse beträgt 512 (dies bezieht sich auf feste und veränderliche Grenzwerte). 
+* Vom Docker-Ausführungsbefehl wird das Argument `--ulimit nproc=512:512` verwendet. 
+* Weitere Informationen zu 'ulimit' für die maximale Anzahl an Prozessen finden Sie in der Docker-Dokumentation unter [run](https://docs.docker.com/engine/reference/commandline/run). 

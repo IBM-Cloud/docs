@@ -108,7 +108,7 @@ copyright:
   3. 安装 **cf** 命令行界面后，必须使用 **cf api** 命令来指定要使用的 {{site.data.keyword.Bluemix_notm}} 区域。**cf** 命令行界面使用 *https://api.Bluemix_URL*，其中 *Bluemix_URL* 是区域的 URL。美国南部区域的 URL 为 {{Domain}}。输入以下命令，以连接到 {{site.data.keyword.Bluemix_notm}}：
   
   ```
-  cf api https://api.ng.bluemix.net
+cf api https://api.ng.bluemix.net
 	 ```
   
   有关连接到其他 {{site.data.keyword.Bluemix_notm}} 区域的更多信息，请参阅 {{site.data.keyword.Bluemix_notm}} 区域。指定 {{site.data.keyword.Bluemix_notm}} 区域后，您所指定的位置信息会得到保存。
@@ -116,18 +116,19 @@ copyright:
   4. 接下来，可以使用 cf login 命令登录到 {{site.data.keyword.Bluemix_notm}}。
   
   ```
-  cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
+cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
   ```
   
   5. 登录到 {{site.data.keyword.Bluemix_notm}} 后，即准备就绪，可以将应用程序重新部署到 {{site.data.keyword.Bluemix_notm}}。从应用程序目录 `C:\test`，输入以下命令：
   
   ```
-  cf push TestNode
+cf push TestNode
   ```
   
   有关 **cf push** 命令的更多信息，请参阅“上传应用程序”。
   
   6. 现在，可以通过在浏览器中输入以下应用程序 URL 来访问应用程序：
+  
   ```
   http://TestNode.mybluemix.net
   ```
@@ -146,13 +147,13 @@ copyright:
   使用 cf create-service 命令创建新的服务实例。例如：
   
   ```
-  cf create-service cloudantNoSQLDB Shared cloudant100
+cf create-service cloudantNoSQLDB Shared cloudant100
   ```
   
   您还可以使用 cf services 命令来查看所创建的服务实例的列表。
   
   ```
-  cf services
+cf services
   ```
   
   服务实例创建后，任何应用程序都可绑定和使用该服务实例。
@@ -162,7 +163,7 @@ copyright:
   要使用服务实例，必须将其绑定到应用程序。使用 cf bind-service 命令并指定应用程序名称和所创建的服务实例，可将服务实例绑定到应用程序。
   
   ```
-  cf bind-service TestNode cloudant100
+cf bind-service TestNode cloudant100
   ```
   
   将服务实例绑定到应用程序后，{{site.data.keyword.Bluemix_notm}} 就能够与服务进行通信，还能让新应用程序与该服务实例进行通信。对于不同的服务，在绑定期间，{{site.data.keyword.Bluemix_notm}} 处理应用程序和服务实例的方式可能会不同。例如，某些服务可能会为每个与服务实例进行通信的应用程序创建一个新租户。服务会使用凭证等信息来响应 {{site.data.keyword.Bluemix_notm}}，这些信息必须传递到应用程序，应用程序才能与服务进行通信。
@@ -181,9 +182,9 @@ copyright:
   <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
   
   例如，Node.js 应用程序可能会按如下方式访问这些信息：
+  
   ```
-  if (process.env.VCAP_SERVICES) {
-
+if (process.env.VCAP_SERVICES) {
 var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['"cloudantNoSQLDB'][0].credentials;
   } else {
@@ -200,11 +201,11 @@ var env = JSON.parse(process.env.VCAP_SERVICES);
   4. 与服务实例进行交互。
   
   可以使用凭证信息来与服务实例进行交互。可执行的操作包括读取、写入和更新。以下示例演示了如何将 JSON 对象插入到 {{site.data.keyword.cloudant}} 服务实例：
-```
-  // create a new message
+
+  ```
+// create a new message
 var create_message = function(req, res) {
   require('cloudantdb').connect(cloudant.url, function(err, conn) {
-
 var collection = conn.collection('messages');
 // create message record
     var parsedUrl = require('url').parse(req.url, true);

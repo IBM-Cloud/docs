@@ -29,6 +29,6 @@ VCAP_SERVICES 環境変数は、{{site.data.keyword.Bluemix_notm}} でサービ
 
 VCAP_SERVICES 環境変数の値は、サービス・インスタンスをアプリケーションにバインドしたときにのみ使用可能です。アプリケーション環境変数は、以下のコマンドを使用して表示できます。
 
-```
+
 cf env APP_NAME
-```
+

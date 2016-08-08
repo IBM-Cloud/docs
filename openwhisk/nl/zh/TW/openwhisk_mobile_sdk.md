@@ -62,7 +62,8 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 
 ### 從原始碼安裝
 
-原始碼位於 https://github.com/openwhisk/openwhisk-client-swift.git。在 Xcode 中，使用 OpenWhisk.xcodeproj 檔案來開啟專案。專案包含目標分別為 iOS 及 watchOS 2 的兩個方法："OpenWhisk" 及 "OpenWhiskWatch"。建置所需目標的專案，以及將產生的架構新增至應用程式（通常是在 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
+原始碼位於 https://github.com/openwhisk/openwhisk-client-swift.git。請使用 Xcode 來開啟使用 `OpenWhisk.xcodeproj` 的專案。
+專案包含目標分別為 iOS 及 watchOS 2 的兩個方法："OpenWhisk" 及 "OpenWhiskWatch"。建置所需目標的專案，以及將產生的架構新增至應用程式（通常是在 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
 
 ## 安裝入門範本應用程式範例
 {: #openwhisk_install_sdkstart}
@@ -74,8 +75,16 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 wsk sdk install iOS
 ```
-這會下載包含入門範本應用程式的 zip 檔。Podfile 是在專案目錄內。從終端機執行 "pod install" 來安裝 SDK。
 {: pre}
+
+這會下載包含入門範本應用程式的 zip 檔。專案目錄中有 Podfile。 
+
+若要安裝 SDK，請輸入下列指令：
+
+```
+pod install
+```
+{: pre} 
 
 ## 開始使用 SDK
 {: #openwhisk_sdk_getstart}
@@ -106,7 +115,7 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 {: #openwhisk_sdk_invoke}
 
 
-若要呼叫遠端動作，您可以使用動作名稱來呼叫 `invokeAction`。您可以指定動作所屬的名稱空間，或讓它保留空白，以接受預設名稱空間。請視需要使用定義檔將參數傳遞給動作。
+若要呼叫遠端動作，您可以使用動作名稱來呼叫 `invokeAction`。您可以指定動作所屬的名稱空間，或讓它保留空白，以接受預設名稱空間。請視需要使用字典將參數傳遞給動作。
 
 例如：
 
@@ -136,7 +145,7 @@ do {
 ## 發動 {{site.data.keyword.openwhisk_short}} 觸發程式
 {: #openwhisk_sdk_fire}
 
-若要發動遠端觸發程式，您可以呼叫 `fireTrigger` 方法。使用定義檔，視需要傳入參數。
+若要發動遠端觸發程式，您可以呼叫 `fireTrigger` 方法。使用字典，視需要傳入參數。
 
 ```
 // In this example we are firing a trigger when our location has changed by a certain amountvar locationParams = Dictionary<String, String>()
@@ -157,7 +166,7 @@ locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"do {try whisk
 ## 使用可傳回結果的動作
 {: #openwhisk_sdk_actionresult}
 
-如果動作傳回結果，請在 invokeAction 呼叫中將 hasResult 設定為 true。回覆定義檔中會傳回動作的結果，例如：
+如果動作傳回結果，請在 invokeAction 呼叫中將 hasResult 設定為 true。回覆字典中會傳回動作的結果，例如：
 
 ```
 do {try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void inif let error = error {

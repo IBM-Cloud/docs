@@ -28,6 +28,7 @@ Für {{site.data.keyword.Bluemix_notm}}-Services stehen mehrere Unterstützungss
 *Tabelle 1. Supportinformationen für {{site.data.keyword.Bluemix_notm}}*
 
 ##Experimentelle Services
+{: #experimental_services}
 
 {{site.data.keyword.Bluemix_notm}} stellt darüber hinaus experimentelle Services bereit, die Sie testen können. Um alle verfügbaren experimentellen Services, Boilerplates und Laufzeiten anzuzeigen, melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an, blättern Sie zum Ende des Katalogs und klicken Sie anschließend auf **{{site.data.keyword.Bluemix_notm}} Experimental Services**.
 
@@ -35,6 +36,7 @@ Experimentelle Services sind möglicherweise nicht stabil und können so geände
 ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen.
 
 ##Services nach Region
+{: #services_region}
 
 Nicht alle Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In der folgenden Tabelle sind die Services aufgeführt, die von IBM zur Verfügung gestellt werden.
 
@@ -117,6 +119,7 @@ Nicht alle Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region ver
 *Tabelle 2. Serviceverfügbarkeit*
 
 ## Fortgesetzte Verfügbarkeit für Services
+{: #services_availability}
 {{site.data.keyword.Bluemix_notm}} hat eine Gruppe von Services als Tier 1 ermittelt. IBM wird keine Tier 1-Service entfernen, ohne ein Funktionsäquivalent zur Verfügung zu stellen oder wenigstens fünf Jahre vorher die Rücknahme des Service bekannt zu machen. 
 
 Die folgenden Services sind als Tier 1 klassifiziert:
@@ -134,5 +137,6 @@ Die folgenden Services sind als Tier 1 klassifiziert:
 Um mehr über die Nutzungsbedingungen für Services zu erfahren, siehe [{{site.data.keyword.Bluemix_notm}}-Nutzungsbedingungen](../navigation/notices.html#terms).
 
 ## Serviceeinstellung
+{: #service_deprecation}
 
 IBM kündigt die Absicht, einen allgemein verfügbaren Service einzustellen oder zu ersetzen, mindestens 30 Tage im Voraus an. Wenn nicht spätestens 12 Monate nach der Ankündigung ein funktional entsprechender Ersatz bereitgestellt wird, setzt IBM wirtschaftlich vertretbare Methoden ein, um den Betrieb und die Unterstützung der zuvor bereitgestellten Instanzen des Service fortzusetzen. 

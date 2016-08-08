@@ -17,7 +17,7 @@ copyright:
 # (Veraltet) Befehlszeilenschnittstelle (CLI) für Entwicklungsmodus
 {: #devmodecli}
 
-*Letzte Aktualisierung: 12. Mai 2016*
+*Letzte Aktualisierung: 23. Juni 2016*
 {: .last-updated}
 
 **Diese Befehlszeilenschnittstelle wird nicht mehr verwendet.** Verwenden Sie anstelle der Befehlszeilenschnittstelle für den Entwicklungsmodus (dev_mode) IBM Eclipse Tools for Bluemix oder die DevOps-Web-IDE. Die dev_mode-CLI kann bis 30. Juni 2016 verwendet werden.
@@ -64,7 +64,8 @@ Installieren Sie das Befehlszeilentool 'dev_mode' über eine der folgenden Metho
         ```
 
 ## Befehle der CLI 'dev_mode' anzeigen
-**Verwenden Sie den folgenden Befehl, um alle Befehle der CLI 'dev_mode' anzuzeigen.**
+
+Verwenden Sie den folgenden Befehl, um alle Befehle der CLI 'dev_mode' anzuzeigen: 
 
 ```
 cf plugins
@@ -114,7 +115,7 @@ cf help <Befehlsname>
 Ändern des App-Modus.
 
 ```
-cf mode <App-Name> <dev|normal>
+cf mode <appName> <dev|normal>
 ```
 <strong>Befehlsoptionen</strong>:
 

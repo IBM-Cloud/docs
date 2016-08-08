@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2015
-
+  years: 2015, 2015*
+{: .last-updated}
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms} 
+{:tsCauses: .tsCauses} 
+{:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -18,7 +18,6 @@ copyright:
 {: #general}
 
 *Dernière mise à jour : 9 décembre 2015*
-{: .last-updated}
 
 Des problèmes liés aux services {{site.data.keyword.Bluemix}} peuvent survenir :
 par exemple, une erreur de dépassement de délai d'attente de la passerelle peut se produire lorsque vous supprimez une instance de service. Toutefois, dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
@@ -31,8 +30,7 @@ Il se peut que vous receviez un message d'erreur lorsque vous tentez de supprime
 {:shortdesc}
 
 
-Lorsque vous tentez de supprimer une instance de service, le message d'erreur suivant du courtier de services, qui indique le dépassement du
-délai d'attente de la passerelle, s'affiche : ```Gateway timeout```.
+Lorsque vous tentez de supprimer une instance de service, le message d'erreur du courtier de services ```Gateway timeout``` s'affiche.
 {: tsSymptoms}
 
 
@@ -42,3 +40,5 @@ Ce problème se produit lorsque l'instance de service a déjà été supprimée 
 
 Pour résoudre le problème, créez une instance de service portant ce nom de service et liez-la à vos applications. Vous pourrez ensuite supprimer l'instance de service et les applications utilisant ce service.   
 {: tsResolve}
+
+

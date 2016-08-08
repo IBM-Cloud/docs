@@ -33,7 +33,7 @@ copyright:
 Mobile Data, Mobile Application Security 및 푸시 서비스 외에 Node.js 런타임이 포함되어 있습니다. 또한
 이러한 서비스에 액세스하는 모바일 앱 개발을 시작하기 위한 SDK 및 샘플 애플리케이션을 포함합니다. 
 
-*런타임*은 애플리케이션을 실행하는 데 사용되는 자원 세트입니다. {{site.data.keyword.Bluemix_notm}}에서는
+*런타임*은 애플리케이션을 실행하는 데 사용되는 리소스 세트입니다. {{site.data.keyword.Bluemix_notm}}에서는
 다양한 유형의 애플리케이션을 위한 컨테이너로 런타임 환경을 제공합니다.
 런타임 환경은 빌드팩으로
 {{site.data.keyword.Bluemix_notm}}에
@@ -86,13 +86,14 @@ Track & Plan 및 Delivery Pipeline과 Web IDE 및 Git 호스팅도 포함됩니�
 각 인스턴스는 단 하나의 인스턴스만 실행 중인 경우에도 로드 밸런스를 조정하기 위해
 언제든지 다른 가상 머신으로 이동되거나 다시 시작될 수 있습니다. 애플리케이션이 이동되거나
 삭제될 때 로컬 스토리지에 저장된 내용도 모두 지워집니다. 지속성을 유지할 수 있도록 Bluemix 데이터 저장소 서비스 중 하나를 사용하십시오.</dd>
-<dt>자원 한계</dt>
-<dd>평가판 계정이 사용할 수 있는 자원의 양에는 한계가 있음을 유념하십시오. 한계는 다음과 같습니다.<table style="width:100%">
-  <th>자원 유형</th>	<th>수량 한계</th>
+<dt>리소스 한계</dt>
+<dd>평가판 계정이 사용할 수 있는 리소스의 양에는 한계가 있음을 유념하십시오. 한계는 다음과 같습니다.
+<table style="width:100%">
+  <th>리소스 유형</th>	<th>수량 한계</th>
 <tr><td>모든 앱에 걸쳐 사용되는 서비스의 수</td> <td>10</td>
 <tr><td>모든 앱에 걸쳐 사용되는 메모리</td> <td>	2G</td>
 <tr><td>라우트 수</td> <td>500</td>
 </table>
 </dd></dl>
 
-*표 1. 평가판 계정에 대한 {{site.data.keyword.Bluemix_notm}} 자원 한계*
+*표 1. 평가판 계정에 대한 {{site.data.keyword.Bluemix_notm}} 리소스 한계*

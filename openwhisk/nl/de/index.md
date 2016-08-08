@@ -17,7 +17,7 @@ copyright:
 {:pre: .pre}
 
 # Einführung in {{site.data.keyword.openwhisk_short}}
-*Letzte Aktualisierung: 6. Juni 2016*
+*Letzte Aktualisierung: 28. Juni 2016*
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} ist ein verteilter, ereignisgesteuerter Berechnungsservice. {{site.data.keyword.openwhisk_short}} führt Anwendungslogik in Reaktion auf Ereignisse oder direkte Aufrufe durch Web-Apps oder mobile Apps über HTTP aus. Ereignisse können von Bluemix-Services wie Cloudant und von externen Quellen bereitgestellt werden. Entwickler können sich auf das Schreiben von Anwendungslogik sowie auf das Erstellen von Aktionen, die auf Anforderung ausgeführt werden, konzentrieren. Die Rate der Ausführung von Aktionen entspricht immer der Ereignisrate, sodass sich eine inhärente Skalierung und Ausfallsicherheit sowie eine optimale Auslastung ergeben. Sie bezahlen nur für das, was Sie nutzen, und Sie brauchen keinen Server zu verwalten. Sie können darüber hinaus den [Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
@@ -25,12 +25,16 @@ copyright:
 
 Weitere Einzelheiten zur Funktionsweise von {{site.data.keyword.openwhisk_short}} finden Sie unter [Informationen zu {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
-## {{site.data.keyword.openwhisk_short}} einrichten
-Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten. Navigieren Sie zu [CLI konfigurieren](https://console.{DomainName}/openwhisk/cli){: new_window} und befolgen Sie die geführten Schritte für die Installation. Beachten Sie, dass Python 2.7 auf Ihrem System installiert sein muss, damit Sie die Befehlszeilenschnittstelle verwenden können.
+## {{site.data.keyword.openwhisk_short}}-CLI einrichten
+{: #openwhisk_start_configure_cli}
 
-Nach der Einrichtung von {{site.data.keyword.openwhisk_short}} mithilfe der Befehlszeilenschnittstelle können Sie mit der Verwendung über die Befehlszeile oder durch REST-APIs beginnen.
+Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten. Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor. Beachten Sie, dass Python 2.7 auf Ihrem System installiert sein muss, damit Sie die Befehlszeilenschnittstelle verwenden können. 
+
+Nach der Einrichtung von {{site.data.keyword.openwhisk_short}} mithilfe der Befehlszeilenschnittstelle können Sie mit der Verwendung über die Befehlszeile oder durch REST-APIs beginnen. 
 
 ## {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) verwenden
+{: #openwhisk_start_using_cli}
+
 Wenn Sie Ihre Umgebung konfiguriert haben, können Sie mit der Verwendung der {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle zu folgenden Zwecken beginnen:
 
 * Sie können Code-Snippets oder Aktionen in {{site.data.keyword.openwhisk_short}} ausführen. Siehe [Aktionen erstellen und aufrufen](./openwhisk_actions.html).
@@ -40,12 +44,17 @@ Wenn Sie Ihre Umgebung konfiguriert haben, können Sie mit der Verwendung der {{
 
 
 ## {{site.data.keyword.openwhisk_short}} über eine iOS-App verwenden
+{: #openwhisk_start_using_ios}
+
 Sie können {{site.data.keyword.openwhisk_short}} mithilfe des {{site.data.keyword.openwhisk_short}}-iOS-SDK über Ihre mobile iOS-App oder Apple Watch verwenden. Weitere Details finden Sie in der [iOS-Dokumentation](./openwhisk_mobile_sdk.html).
 
 ## REST-APIs mit {{site.data.keyword.openwhisk_short}} verwenden
+{: #openwhisk_start_using_restapi}
+
 Nach der Einrichtung Ihrer {{site.data.keyword.openwhisk_short}}-Umgebung können Sie {{site.data.keyword.openwhisk_short}} mit Ihren Web-Apps oder mobilen Apps mithilfe von REST-API-Aufrufen verwenden. Weitere Details zu den APIs für Aktionen, Aktivierungen, Pakete, Regeln und Auslöser finden Sie in der [API-Dokumentation für {{site.data.keyword.openwhisk_short}}](https://new-console.{DomainName}/apidocs/98).
 
 ## {{site.data.keyword.openwhisk_short}}-Beispiel Hello World
+{: #openwhisk_start_hello_world}
 Für den Einstieg in {{site.data.keyword.openwhisk_short}} können Sie das folgende Beispiel für JavaScript-Code ausprobieren.
 
 ```
@@ -114,7 +123,7 @@ Weitere Informationen zu {{site.data.keyword.openwhisk_short}} finden Sie in den
 
 # Zugehörige Links
 ## API
-* [REST-API-Dokumentation](https://new-console.{DomainName}/apidocs/98){:new_window}
+* [REST-API-Dokumentation](./openwhisk_reference.html#openwhisk_ref_restapi)
 
 ## Allgemein
 * [Entdecken Sie: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}

@@ -17,7 +17,7 @@ copyright:
 
 # Gestion de votre compte {{site.data.keyword.Bluemix_notm}}
 {: #mngacct}
-*Dernière mise à jour : 1er juin 2016*
+*Dernière mise à jour : 12 juillet 2016*
 {: .last-updated}
 
 Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg) &gt;
@@ -27,26 +27,32 @@ Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/
 ## Définition de notifications
 {: #notifications}
 
-Si vous possédez un compte {{site.data.keyword.Bluemix_notm}} de type Paiement à la carte, vous pouvez configurer des notifications par
-courrier électronique relatives aux dépenses. Définissez des notifications pour les dépenses totales du compte, pour les dépenses relatives aux contextes
+Accédez à **Compte et support** &gt; **Compte** &gt; **Notifications** pour configurer les notifications relatives au compte général et aux dépenses. Les notifications relatives aux dépenses ne sont disponibles que pour les propriétaires de compte {{site.data.keyword.Bluemix_notm}} Abonnement et Paiement à la carte. 
+
+Vous pouvez définir des notifications par courrier électronique de plateforme pour les incidents et la maintenance planifiée de {{site.data.keyword.Bluemix_notm}} et vous pouvez définir des notifications relatives aux dépenses qui vous envoient des alertes lorsque vous vous approchez du plafond des dépenses que vous avez spécifié pour compte. Effectuez les tâches ci-après pour définir différents types de notification pour votre compte.
+
+### Définition de notifications de plateforme
+
+Cliquez sur l'icône **Compte et support** ![icône Compte et support](../admin/images/account_support.svg) &gt; **Compte** &gt; **Plateforme** dans le but de définir des notifications par courrier électronique pour les incidents et la maintenance planifiée de {{site.data.keyword.Bluemix_notm}}. Vous pouvez sélectionner ou désélectionner chaque option pour activer ou désactiver la notification par courrier électronique. 
+
+### Définition des notifications relatives aux dépenses
+{: #spendingnotifications}
+
+Si vous possédez un compte {{site.data.keyword.Bluemix_notm}} de type Abonnement ou Paiement à la carte, vous pouvez configurer des notifications par courrier électronique relatives aux dépenses. Définissez des notifications pour les dépenses totales du compte, pour les dépenses relatives aux contextes
 d'exécution, aux conteneurs et aux services, ainsi que pour les dépenses relatives aux services individuels, à l'exception des services de tiers. Vous recevez des
 notifications lorsque vous atteignez 80 %, 90 % et 100 % des seuils que vous avez spécifiés pour les dépenses. Vous pouvez éditer chaque notification
 relative aux dépenses à tout moment, selon l'évolution de vos besoins.
 
-**Remarque** : si vous possédez plusieurs comptes, vous pouvez choisir de définir des notifications relatives aux dépenses pour
-chaque compte individuel.
-
 Procédez comme suit afin de configurer des notifications par courrier électronique pour les limites relatives aux dépenses :
 
 <ol>
-<li>Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg) &gt;
-**Compte** &gt; *nom_de_votre_compte* &gt; **Notifications relatives aux dépenses**.</li>
-<li>Entrez une valeur numérique afin de définir un seuil pour les dépenses, en fonction duquel une notification sera déclenchée, pour chaque type de notification relative aux dépenses :<br />
+<li>Cliquez sur l'icône **Compte et support** ![icône Compte et support](../admin/images/account_support.svg) &gt; **Compte** &gt; **Notifications** &gt; **Dépenses**.</li>
+<li>Entrez une valeur numérique afin de définir un plafond pour les dépenses, en fonction duquel une notification sera déclenchée, pour chaque type de notification :<br />
 <ul>
-<li>Dépenses totales liées au compte</li>
-<li>Dépenses totales liées à l'exécution</li>
-<li>Dépenses totales liées aux services</li>
-<li>Dépenses totales liées au conteneur</li>
+<li>Total lié au compte</li>
+<li>Total lié à l'exécution</li>
+<li>Total lié aux services</li>
+<li>Total lié au conteneur</li>
 <li>Dépenses pour un service spécifique</li>
 </ul>
 </li>
@@ -58,6 +64,7 @@ Procédez comme suit afin de configurer des notifications par courrier électron
 carte afin de définir des limites relatives aux dépenses. Pour plus d'informations sur les comptes de type Paiement à la carte et les comptes d'abonnement,
 voir
 [Facturation](../pricing/index.html#pay-accounts).
+
 
 ## Affichage de l'utilisation
 {: #acctusage}

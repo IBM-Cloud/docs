@@ -17,7 +17,7 @@ copyright:
 
 # Organisationen und Bereiche verwalten
 {: #orgsspacesusers}
-*Letzte Aktualisierung: 16. Mai 2016*
+Letzte Aktualisierung: 16. Mai 2016
 {: .last-updated}
 
 Als Kontoeigner können Sie Ihre Organisationen verwalten, indem Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) klicken und die Seite **Organisationen verwalten** aufrufen. Organisationsmanager können ferner die Seite 'Organisationen verwalten' verwenden, um beliebige Organisationen, für die Sie als Manager festgelegt sind, zu verwalten.

@@ -30,7 +30,7 @@ PaaS(Platform as a Service)를 통해 애플리케이션을 더 간편하게 개
 목표는 즉시 사용할 수 있도록 준비된 서비스를 제공하고 인터넷 스케일 개발을 사용할 수 있게 하는 기능을 호스팅함으로써 앱의 제공을 단순화하는 것입니다. 
 
 {{site.data.keyword.Bluemix_notm}}는
-또한 사용자의 요구사항에 맞는 클라우드 배치를 가지고 있습니다. 확장을 계획 중인 소기업이든 추가적인 분리가 필요한 대기업이든 규모에 관계없이 클라우드에서 경계 없이 개발을 할 수 있으며 이를 통해 사용자 전용 서비스를 {{site.data.keyword.IBM_notm}} 및 써드파티 제공자에서 제공하는 공용 {{site.data.keyword.Bluemix_notm}} 서비스에 연결할 수 있습니다. 모든 서비스 인스턴스는 {{site.data.keyword.IBM_notm}}에서 관리하고 사용하도록 선택한 서비스에 대해서만
+또한 사용자의 요구사항에 맞는 클라우드 배치를 가지고 있습니다. 확장을 계획 중인 소기업이든 추가적인 분리가 필요한 대기업이든 규모에 관계없이 클라우드에서 경계 없이 개발을 할 수 있으며 이를 통해 사용자 데디케이티드 서비스를 {{site.data.keyword.IBM_notm}} 및 써드파티 제공자에서 제공하는 공용 {{site.data.keyword.Bluemix_notm}} 서비스에 연결할 수 있습니다. 모든 서비스 인스턴스는 {{site.data.keyword.IBM_notm}}에서 관리하고 사용하도록 선택한 서비스에 대해서만
 요금이 청구됩니다. 
 
 {{site.data.keyword.Bluemix_notm}}의 다양한 서비스 및 런타임을 사용하여
@@ -59,9 +59,9 @@ PaaS(Platform as a Service)를 통해 애플리케이션을 더 간편하게 개
 ## {{site.data.keyword.Bluemix_notm}} 아키텍처
 {: #ov_arch}
 
-{{site.data.keyword.Bluemix_notm}}를 사용하여 공용 {{site.data.keyword.Bluemix_notm}} 플랫폼에 액세스하거나 전용 {{site.data.keyword.Bluemix_notm}} 플랫폼을 설정하거나 둘 다 사용할 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}}를 사용하여 퍼블릭 {{site.data.keyword.Bluemix_notm}} 플랫폼에 액세스하거나 데디케이티드 {{site.data.keyword.Bluemix_notm}} 플랫폼을 설정하거나 둘 다 사용할 수 있습니다. 
 
-### {{site.data.keyword.Bluemix_notm}} Public
+### {{site.data.keyword.Bluemix_notm}} 퍼블릭
 {: #public}
 
 핵심은 {{site.data.keyword.Bluemix_notm}}는 앱을 개발하고 바로 사용 가능한 기능을 제공하는 서비스를 사용할 수 있는 환경이라는 점입니다. {{site.data.keyword.Bluemix_notm}}는 또한 Liberty와 같은 애플리케이션 서버에서 실행되는 애플리케이션 아티팩트를 호스팅하는 환경을 제공합니다. SoftLayer를 사용하여 {{site.data.keyword.Bluemix_notm}}는 배치된 각 앱을 호스팅하는 가상 컨테이너를 배치합니다. 이 환경에서 앱은 사전 빌드된 서비스(써드파티 서비스 포함)를 사용하여 앱 어셈블리를 간편하게 만들 수 있습니다. 
@@ -82,33 +82,33 @@ PaaS(Platform as a Service)를 통해 애플리케이션을 더 간편하게 개
 
 *그림 2. 다중 지역 애플리케이션 배치*
 
-### {{site.data.keyword.Bluemix_notm}} Dedicated
+### {{site.data.keyword.Bluemix_notm}} 데디케이티드
 {: #dedicated}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated는 공용 {{site.data.keyword.Bluemix_notm}} 및 자체 네트워크 모두에 안전하게 연결되는 고유의 독점적 SoftLayer 환경입니다. {{site.data.keyword.Bluemix_notm}} Dedicated는 VPN 또는 직접 네트워크 연결을 통해 네트워크에 설치됩니다. 단일 테넌트 하드웨어는 전 세계의 어떤 SoftLayer 데이터 센터에도 설정할 수 있습니다. {{site.data.keyword.IBM_notm}}은 전용 플랫폼 및 전용 서비스를 관리하여 사용자가 사용자 정의 앱을 빌드하는 데 전념할 수 있도록 합니다. 또한 {{site.data.keyword.IBM_notm}}은 사용자가 선택한 유지보수 기간 동안 전용 인스턴스에 대해 모든 유지보수를 수행합니다.
+{{site.data.keyword.Bluemix_notm}} 데디케이티드는 퍼블릭 {{site.data.keyword.Bluemix_notm}} 및 자체 네트워크 모두에 안전하게 연결되는 고유의 독점적 SoftLayer 환경입니다. {{site.data.keyword.Bluemix_notm}} 데디케이티드는 VPN 또는 직접 네트워크 연결을 통해 네트워크에 설치됩니다. 단일 테넌트 하드웨어는 전 세계의 어떤 SoftLayer 데이터 센터에도 설정할 수 있습니다. {{site.data.keyword.IBM_notm}}은 데디케이티드 플랫폼 및 데디케이티드 서비스를 관리하여 사용자가 사용자 정의 앱을 빌드하는 데 전념할 수 있도록 합니다. 또한 {{site.data.keyword.IBM_notm}}은 사용자가 선택한 유지보수 기간 동안 데디케이티드 인스턴스에 대해 모든 유지보수를 수행합니다.
 
-{{site.data.keyword.IBM_notm}}은 사용자의 전용 환경에서 사용할 수 있는 여러 서비스를 가지고 있지만 사용자는 모든 공용 서비스에 연결할 수 있습니다. 모든 런타임은 전용 환경에서 사용할 수 있습니다. 모든 {{site.data.keyword.Bluemix_notm}}전용 배치에는 추가 비용 없이 VPN, 사설 VLAN, 방화벽, LDAP를 통한 연결, 기존 사내 구축형 데이터베이스 및 앱을 활용하는 능력, 연중 무휴 온사이트 보안, 전용 하드웨어, 표준 지원 등 여러 혜택과 기능이 포함됩니다.  
+{{site.data.keyword.IBM_notm}}은 사용자의 데디케이티드 환경에서 사용할 수 있는 여러 서비스를 가지고 있지만 사용자는 모든 퍼블릭 서비스에 연결할 수 있습니다. 모든 런타임은 데디케이티드 환경에서 사용할 수 있습니다. 모든 {{site.data.keyword.Bluemix_notm}}데디케이티드 배치에는 추가 비용 없이 VPN, 사설 VLAN, 방화벽, LDAP를 통한 연결, 기존 사내 구축형 데이터베이스 및 앱을 활용하는 능력, 연중 무휴 온사이트 보안, 데디케이티드 하드웨어, 표준 지원 등 여러 혜택과 기능이 포함됩니다.  
 
-![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png)
+![{{site.data.keyword.Bluemix_notm}} 데디케이티드](images/dedicated.png)
 
-*그림 3. {{site.data.keyword.Bluemix_notm}} Dedicated*
+*그림 3. {{site.data.keyword.Bluemix_notm}} 데디케이티드*
 
-### {{site.data.keyword.Bluemix_notm}} Local
+### {{site.data.keyword.Bluemix_notm}} 로컬
 {: #local}
 
-{{site.data.keyword.Bluemix_notm}} Local은 회사 방화벽 뒤 데이터 센터에 배치된 자체 {{site.data.keyword.Bluemix_notm}} 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} Local을 사용하여 안전하게 연결되고 {{site.data.keyword.Bluemix_notm}} Public 동기화를 유지할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 로컬은 회사 방화벽 뒤 데이터 센터에 배치된 자체 {{site.data.keyword.Bluemix_notm}} 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 로컬을 사용하여 안전하게 연결되고 {{site.data.keyword.Bluemix_notm}} 퍼블릭 동기화를 유지할 수 있습니다.
 
-{{site.data.keyword.Bluemix_notm}} Local에는 사용자가 독점적으로 사용 가능한 로컬 서비스를 표시하는 신디케이트된 개인용 카탈로그가 포함되어 있습니다. 또한 {{site.data.keyword.Bluemix_notm}} Public에서 사용 가능하며 여기에서 신디케이트된 서비스도 포함되어 있습니다. 모든 런타임은 로컬 환경에서 사용할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 로컬 배치에는 추가 비용 없이 Relay 관리 기술, LDAP를 통한 연결, 기존 사내 구축형 데이터베이스 및 앱을 활용하는 능력, 표준 지원 등 여러 혜택과 기능이 포함됩니다. 
+{{site.data.keyword.Bluemix_notm}} 로컬에는 사용자가 독점적으로 사용 가능한 로컬 서비스를 표시하는 개인용 신디케이트된(각 클라우드 형태 간 동일하게 연동된) 카탈로그가 포함되어 있습니다. 또한 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 사용 가능하며 여기에서 신디케이트된 서비스도 포함되어 있습니다. 모든 런타임은 로컬 환경에서 사용할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 로컬 배치에는 추가 비용 없이 Relay 관리 기술, LDAP를 통한 연결, 기존 사내 구축형 데이터베이스 및 앱을 활용하는 능력, 표준 지원 등 여러 혜택과 기능이 포함됩니다. 
 
-IBM은 사용자가 비즈니스에 집중할 수 있도록 사용자 환경을 안전하게 모니터하고 유지보수하기 위해 Relay 기술을 사용합니다. Relay는 {{site.data.keyword.Bluemix_notm}} Local에 포함된 전달 기능이며 항상 최신이고 안정적이며 보안 시스템을 포함하기 위해 IBM이 자동으로 지속적인 업데이트를 제공하도록 합니다. Relay는 도입/인식(Inception) 가상 머신에서 생성된 개방형, 아웃바운드 SSL, VPN 터널을 통해 연결을 달성합니다. 이 터널을 통해 IBM은 인스턴스의 플랫폼, 계산 자원 및 서비스를 제공하고 유지보수합니다. [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html#local)을 참조하십시오.
+IBM은 사용자가 비즈니스에 집중할 수 있도록 사용자 환경을 안전하게 모니터하고 유지보수하기 위해 Relay 기술을 사용합니다. Relay는 {{site.data.keyword.Bluemix_notm}} 로컬에 포함된 전달 기능이며 항상 최신이고 안정적이며 보안 시스템을 포함하기 위해 IBM이 자동으로 지속적인 업데이트를 제공하도록 합니다. Relay는 도입/인식(Inception) 가상 머신에서 생성된 개방형, 아웃바운드 SSL, VPN 터널을 통해 연결을 달성합니다. 이 터널을 통해 IBM은 인스턴스의 플랫폼, 컴퓨팅 리소스 및 서비스를 제공하고 유지보수합니다. [{{site.data.keyword.Bluemix_notm}} 로컬](../local/index.html#local)을 참조하십시오.
 
-![{{site.data.keyword.Bluemix_notm}} Local.](images/localarch.png "Bluemix Local")
+![{{site.data.keyword.Bluemix_notm}} 로컬.](images/localarch.png "Bluemix 로컬")
 
-*그림 4. {{site.data.keyword.Bluemix_notm}} Local*
+*그림 4. {{site.data.keyword.Bluemix_notm}} 로컬*
 
-도입/인식(Inception) 가상 머신은 릴레이를 통해 IBM 운영 센터에 아웃바운드 연결되는 네트워크의 방화벽 뒤에 있는 네트워크에서 실행됩니다. {{site.data.keyword.Bluemix_notm}} 플랫폼 구성요소와 코어 서비스는 분리된 사설 가상 근거리 통신망(VLAN)에서 실행됩니다. {{site.data.keyword.Bluemix_notm}} Local은 사설 서브넷을 위해 VLAN을 사용합니다. 공용 VLAN에 비해 사설 서브넷을 사용하면 한층 안전하고 라우팅 문제를 방지하는 데 도움이 됩니다.
+도입/인식(Inception) 가상 머신은 Relay를 통해 IBM 운영 센터에 아웃바운드 연결되는 네트워크의 방화벽 뒤에 있는 네트워크에서 실행됩니다. {{site.data.keyword.Bluemix_notm}} 플랫폼 구성요소와 코어 서비스는 분리된 사설 가상 근거리 통신망(VLAN)에서 실행됩니다. {{site.data.keyword.Bluemix_notm}} 로컬은 사설 서브넷을 위해 VLAN을 사용합니다. 공용 VLAN에 비해 사설 서브넷을 사용하면 한층 안전하고 라우팅 문제를 방지하는 데 도움이 됩니다.
 
-DataPower 어플라이언스는 {{site.data.keyword.Bluemix_notm}} 애플리케이션 도메인에 액세스할 수 있도록 지원합니다. 이 어플라이언스는 사용자 인트라넷에서 액세스 가능한 네트워크에 연결됩니다. 앱과 서비스를 배치하는 사용자는 인트라넷에서 액세스 가능한 네트워크에서 액세스할 수 있습니다. 아웃바운드 인터넷 액세스 가능한 7개의 IP 주소를 제공해야 합니다. DataPower 어플라이언스는 이 고객 IP 주소에서 분리된 {{site.data.keyword.Bluemix_notm}} 배치로 경로 지정됩니다. 네트워크 스펙 및 인프라 요구 사항에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 인프라 요구사항](../local/index.html#localinfra)을 참조하십시오.
+DataPower 어플라이언스는 {{site.data.keyword.Bluemix_notm}} 애플리케이션 도메인에 액세스할 수 있도록 지원합니다. 이 어플라이언스는 사용자 인트라넷에서 액세스 가능한 네트워크에 연결됩니다. 앱과 서비스를 배치하는 사용자는 인트라넷에서 액세스 가능한 네트워크에서 액세스할 수 있습니다. 아웃바운드 인터넷 액세스 가능한 7개의 IP 주소를 제공해야 합니다. DataPower 어플라이언스는 이 고객 IP 주소에서 분리된 {{site.data.keyword.Bluemix_notm}} 배치로 경로 지정됩니다. 네트워크 스펙 및 인프라 요구 사항에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 로컬 인프라 요구사항](../local/index.html#localinfra)을 참조하십시오.
 
 ### {{site.data.keyword.Bluemix_notm}}의 작동 방식
 {: #howwork}
@@ -215,7 +215,7 @@ Stateless 특성 때문에 앱에 대한 요청이 중단될 수 있습니다.
 애플리케이션 데이터를 보관할 지역을
 선택할 수도 있습니다. 앱을 여러 지역에서 빌드할 경우
 이 중 한 지역의 작동이 중지되면 다른 지역에 있는 앱은 계속 실행됩니다.
-허용되는 자원 양은 사용하는 각 지역마다 동일합니다.
+허용되는 리소스 양은 사용하는 각 지역마다 동일합니다.
 
 {{site.data.keyword.Bluemix_notm}}
 사용자 인터페이스를 사용하고 있는 경우 다른 지역으로 전환하여
@@ -279,7 +279,7 @@ Docker 컨테이너를 실행하는 데 사용됩니다. Docker는
 <dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}(베타)</dt>
     <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}은 호스트되는 클라우드 환경이며 앱 및 앱이 실행되는 미들웨어에 대한 제어를 유지하면서 사용자의 애플리케이션을 빌드, 실행, 관리 및 모니터할 수 있는 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}의 일부입니다. 비즈니스 솔루션을 격리할 때, 특히 앱을 퍼블릭 클라우드에 배치할 때 {{site.data.keyword.virtualmachinesshort}}을 사용하십시오.</p>
 <p>    
-OpenStack 소프트웨어를 사용하는 공용 및 개인용(사내 구축형) 클라우드에서 가상 서버를 실행하고 관리할 수 있습니다. {{site.data.keyword.Bluemix_notm}} UI 또는 OSC(OpenStackClient) 클라이언트를 사용하여 가상 서버를 작성, 실행 및 관리할 수 있습니다. {{site.data.keyword.IBM_notm}}에서 제공하는 가상 서버 이미지를 사용하거나 자신의 사용자 정의 이미지에서 가상 서버를 작성할 수 있습니다. {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 기능을 사용하면 로깅, Auto Scaling 및 모니터링 등의 클라우드 기반 애플리케이션을 호스트하고 관리하는 것과 연관된 복잡성을 제거할 수 있습니다. OpenStack 서비스 및 {{site.data.keyword.Bluemix_notm}} 서비스를 함께 사용하여 하이브리드 애플리케이션을 빌드하고 실행할 수 있습니다. 필요에 따라 운영 정책 및 워크로드 요구를 기반으로 하여 인프라 자원을 프로비저닝할 수 있습니다.</p>
+OpenStack 소프트웨어를 사용하는 퍼블릭 및 프라이빗(사내 구축형) 클라우드에서 가상 서버를 실행하고 관리할 수 있습니다. {{site.data.keyword.Bluemix_notm}} UI 또는 OSC(OpenStackClient) 클라이언트를 사용하여 가상 서버를 작성, 실행 및 관리할 수 있습니다. {{site.data.keyword.IBM_notm}}에서 제공하는 가상 서버 이미지를 사용하거나 자신의 사용자 정의 이미지에서 가상 서버를 작성할 수 있습니다. {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 기능을 사용하면 로깅, Auto Scaling 및 모니터링 등의 클라우드 기반 애플리케이션을 호스트하고 관리하는 것과 연관된 복잡성을 제거할 수 있습니다. OpenStack 서비스 및 {{site.data.keyword.Bluemix_notm}} 서비스를 함께 사용하여 하이브리드 애플리케이션을 빌드하고 실행할 수 있습니다. 필요에 따라 운영 정책 및 워크로드 요구를 기반으로 하여 인프라 리소스를 프로비저닝할 수 있습니다.</p>
 <p>
 {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}에 대한 자세한 정보는 [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html)의 내용을 참조하십시오.</p> </dd>
 </dl>
@@ -352,7 +352,7 @@ OpenStack 소프트웨어를 사용하는 공용 및 개인용(사내 구축형)
 {: #runtimes}
 
 *런타임*은 앱 실행에
-사용되는 자원 세트입니다. {{site.data.keyword.Bluemix_notm}}에서는
+사용되는 리소스 세트입니다. {{site.data.keyword.Bluemix_notm}}에서는
 다양한 유형의 앱을 위한 컨테이너로 런타임 환경을 제공합니다. 런타임 환경은 {{site.data.keyword.Bluemix_notm}}에 빌드팩으로 통합되고
 사용을 위해 자동으로 구성됩니다.
 
@@ -423,7 +423,7 @@ SOR(System of Record) 및 SOE(System of Engagement)를 연결함으로써 개발
 
 <dl>
 <dt>Cloud Integration API</dt>
-    <dd>Cloud Integration API는 웹 API를 통해 방화벽 뒤에 있는 SOR(System of Record)에 대한 보안 액세스를 제공합니다. Cloud Integration API를 작성할 때 웹 API를 통해 액세스하려는 자원을 선택하고 허용되는 오퍼레이션을 지정하고 API에 액세스하기 위해 SDK와 샘플을 포함합니다. Cloud Integration API를 작성하는 방법에 대한 자세한 정보는 [Cloud Integration API 작성](../services/CloudIntegration/index.html#cloudint_add_service)을 참조하십시오.</dd>
+    <dd>Cloud Integration API는 웹 API를 통해 방화벽 뒤에 있는 SOR(System of Record)에 대한 보안 액세스를 제공합니다. Cloud Integration API를 작성할 때 웹 API를 통해 액세스하려는 리소스를 선택하고 허용되는 오퍼레이션을 지정하고 API에 액세스하기 위해 SDK와 샘플을 포함합니다. Cloud Integration API를 작성하는 방법에 대한 자세한 정보는 [Cloud Integration API 작성](../services/CloudIntegration/index.html#cloudint_add_service)을 참조하십시오.</dd>
 <dt>개인 서비스</dt>
     <dd>개인 서비스는 Cloud Integration API, SDK 및 자격부여 정책으로 구성됩니다. 또한 개인 서비스에는
 서비스 제공업체가 제공하는 문서 또는 기타 항목이 포함될 수 있습니다.

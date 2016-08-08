@@ -12,7 +12,8 @@ copyright:
 # Obtendo suporte ao cliente
 {: #getting-customer-support}
 
-*Última atualização: 11 de maio de 2016*
+*Última atualização: 7 de julho de 2016*
+{: .last-updated}
 
 
 Se você tiver problemas com o {{site.data.keyword.Bluemix}}, há várias opções de suporte, como obter ajuda por meio de um fórum ou abrir um chamado de suporte.
@@ -41,10 +42,11 @@ campo de procura. Respostas da documentação do
 Os fóruns de Stack Overflow e dW Answers, ambos, fornecem uma ampla variedade de respostas pesquisáveis para as suas perguntas do Bluemix. Se você não encontrar uma
 resposta existente, faça uma nova pergunta. 
 
-  * Acesse [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} para fazer perguntas técnicas sobre como desenvolver aplicativos com a plataforma e
+  * Acesse [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} para fazer perguntas técnicas sobre como desenvolver aplicativos com a plataforma e
 serviços do Bluemix.
   * Acesse [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} para fazer perguntas sobre a oferta do
 {{site.data.keyword.Bluemix_notm}} e sobre como obter instruções de introdução.
+  * Na China, acesse [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} para fazer perguntas.
 
 Também é possível fazer uma pergunta no Stack Overflow diretamente a partir de Conta e Suporte, concluindo as etapas a seguir:
   1. Na Conta e suporte, clique em **Obter ajuda**. 
@@ -151,14 +153,17 @@ aplicativos em execução, execute pelo menos três instâncias de cada aplicati
 ## Entrando em contato com o suporte
 {: #contacting-support}
 
-É possível abrir chamados de suporte se você tiver uma conta válida do {{site.data.keyword.Bluemix_notm}}.  
+É possível abrir chamados de suporte se você tiver uma conta válida do {{site.data.keyword.Bluemix_notm}}. 
+
+Se você tiver uma conta do {{site.data.keyword.Bluemix_notm}} vinculada com uma conta do SoftLayer, será possível abrir chamados de suporte para o {{site.data.keyword.Bluemix_notm}} a
+partir do portal Cliente do SoftLayer ou a partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
 
 ### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
 
 Todos os clientes do {{site.data.keyword.Bluemix_notm}} são fornecidos com suporte técnico grátis por meio da comunidade do Bluemix ou do Stack Overflow.  Além disso, diferentes níveis de suporte são fornecidos para atender às diferentes necessidades do cliente. Consulte a tabela a seguir para escolher entre os níveis de suporte grátis, básico, padrão e premium. 
 
-Níveis | Grátis |  Básica | Padrão | Premium
+Níveis | Livre |  Básica | Padrão | Premium
 --- | --- | --- | --- | --- |
 Descrição | Suporte para todos os clientes de avaliação do Bluemix.  |  Suporte para ambientes que não sejam de produção ou cargas de trabalho em que severidades e tempos de resposta tradicionais não são necessários. | Suporte para ambientes com um número limitado de aplicativos críticos aos negócios. Clientes do {{site.data.keyword.Bluemix_notm}} Dedicated e do {{site.data.keyword.Bluemix_notm}} Local recebem suporte padrão. | Suporte para ambientes essenciais que têm uma dependência estratégica no {{site.data.keyword.Bluemix_notm}}. 
 Suporte de alta severidade |  N/A | N/A | Incluído | Incluído
@@ -171,22 +176,26 @@ Client Success Manager (CSM) designado | Não incluído | Não incluído | Não 
 
 Se você não conseguir resolver seu problema técnico com a resolução de problemas e as opções de ajuda, será possível perguntar ao suporte. No entanto, antes de entrar em contato com o suporte para um problema técnico, assegure que o problema não seja devido a uma indisponibilidade, verificando o status do {{site.data.keyword.Bluemix_notm}}.
 
-Se o problema não for devido a uma indisponibilidade, abra um chamado de suporte usando uma das opções a seguir:
+Se o problema não for devido a uma indisponibilidade e você for um cliente em um país ou região, excluindo a China, abra um chamado de suporte usando uma das opções a seguir:
 
   * Na Conta e suporte, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**. Preencha o formulário para indicar o motivo pelo qual você precisa
 do suporte técnico.
+  * Use a página da ajuda [Suporte IBM do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window}. É possível enviar chamados para problemas de
+vendas, faturamento, ID IBM e login, bem como de suporte técnico. Para problemas de suporte técnico, é possível selecionar ainda um grupo técnico após você clicar no título **Suporte técnico**. Por exemplo, se você precisar de ajuda com apps Cloud Foundry, OpenWhisk, contêineres, servidores virtuais ou servidores bare metal, será possível escolher **Application Services**. Se precisar de ajuda com um serviço específico, selecione a categoria de serviço correspondente. Para determinar a categoria à qual seu serviço pertence, consulte as categorias sob [Serviços](../services/index.html){: new_window} na área de janela de navegação à esquerda.  
   * A partir do [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Depois de conectar-se ao portal, clique em **Abrir chamado** e, em seguida, preencha o formulário de suporte. 
-  * Use a página da ajuda [Suporte IBM do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window}. É possível enviar chamados para problemas de vendas, faturamento, ID e login e suporte técnico. Para problemas de suporte técnico, é possível selecionar ainda um grupo técnico após você clicar no título **Suporte técnico**. Por exemplo, se você precisar de ajuda com apps Cloud Foundry, OpenWhisk, contêineres, servidores virtuais ou servidores bare metal, será possível escolher **Application Services**. Se precisar de ajuda com um serviço específico, selecione a categoria de serviço correspondente. Para determinar a categoria à qual seu serviço pertence, consulte as categorias sob [Serviços](../services/index.html){: new_window} na área de janela de navegação à esquerda.  
   
 
 
 Ao abrir um chamado de suporte, assegure que você indique uma gravidade apropriada para seu chamado. A gravidade determina como o chamado será manipulado. Veja [Severidade e tempo de resposta do chamado de suporte](index.html#support-ticket-severity){: new_window} para obter informações sobre as diferentes severidades. Se a sua solicitação for urgente, mas você tiver somente suporte grátis ou básico, será possível fazer upgrade de sua conta para enviar chamados de alta severidade (nível 1, 2 e 3). Para fazer upgrade de sua conta para um nível de suporte mais alto, entre em contato com o representante de vendas da IBM por e-mail em sales@bluemix.net.
 
+Se você for um cliente na China, poderá obter suporte pago para a sua conta a partir da página de [UNISYS Service Management IBM
+Bluemix](https://chinabluemix.itsm.unisysedge.cn){: new_window}.
+
 #### Verificando o status do chamado de suporte
 {: #check-ticket-status}
 
-Cada chamado de suporte é designado a um número de chamado exclusivo para referência. É possível usar o número de chamado para revisar o progresso do chamado de suporte e atualizar o chamado de suporte no [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. As atualizações e respostas são enviadas a você por e-mail e registradas nas notas do chamado.  
-
+Cada chamado de suporte é designado a um número de chamado exclusivo para referência. Em países ou regiões que não sejam na China, é possível usar o número de chamado para revisar o seu progresso do
+chamado de suporte e atualizar o chamado de suporte no [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. As atualizações e respostas são enviadas a você por e-mail e registradas nas notas do chamado. 
 
 
 ### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}}
@@ -198,13 +207,19 @@ Dedicated
 Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como talvez você não tenha um ID IBM, há algumas opções diferentes para obter suporte.
 
 <ul>
-<li>Entre em contato com o suporte abrindo um novo chamado usando a página da ajuda <a href="http://ibm.biz/bluemixsupport" target="_blank">Suporte IBM do {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Dedicated** para o campo Região.
+<li>Entre em contato com o suporte abrindo um novo chamado usando a página da ajuda <a href="http://ibm.biz/bluemixsupport" target="_blank">Suporte IBM do {{site.data.keyword.Bluemix_notm}}</a>. É
+possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Dedicated** para o campo Região.
 <p>Os envios de formulário são monitorados a partir de domingo às 22h UTC até sexta-feira às 23h59 UTC.</p>
 </li>
-<li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone **Conta e suporte** <img src="images/account_support.svg" alt="Conta e suporte" /> na barra de menus superior e, em seguida, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
-<li>Se você não tiver um ID IBM, é possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
+<li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone **Conta e suporte**
+<img src="images/account_support.svg" alt="Conta e suporte" /> na barra de menus superior e, em seguida, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
+<li>Se você não tiver um ID IBM, poderá entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
 <p>**Nota**: em sua solicitação, uma lista de usuários em sua organização que podem servir como contatos para chamados de suporte pode ser exibida na página **Suporte** na interface com o usuário do {{site.data.keyword.Bluemix_notm}} em seu ambiente Dedicated.</p></li>
 </ul>
+
+Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated na China, poderá solicitar suporte a partir da página de [UNISYS Service
+Management IBM Bluemix](https://chinabluemix.itsm.unisysedge.cn){: new_window}. Além disso, os clientes na China podem obter suporte grátis em [IBM developerWorks China Developer
+Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
 
 
 ### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}} Local
@@ -215,11 +230,13 @@ Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated, o supor
 Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Local, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como talvez você não tenha um ID IBM, há algumas opções diferentes para obter suporte.
 
 <ul>
-<li>Entre em contato com o suporte abrindo um novo chamado usando a página da ajuda <a href="http://ibm.biz/bluemixsupport" target="_blank">Suporte IBM do {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Local** para o campo Região.
+<li>Entre em contato com o suporte abrindo um novo chamado usando a página da ajuda <a href="http://ibm.biz/bluemixsupport" target="_blank">Suporte IBM do {{site.data.keyword.Bluemix_notm}}</a>. É
+possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Local** para o campo Região.
 <p>Os envios de formulário são monitorados a partir de domingo às 22h UTC até sexta-feira às 23h59 UTC.</p>
 </li>
-<li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone **Conta e suporte** <img src="images/account_support.svg" alt="Conta e suporte" /> na barra de menus superior e, em seguida, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
-<li>Se você não tiver um ID IBM, é possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
+<li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone **Conta e suporte**
+<img src="images/account_support.svg" alt="Conta e suporte" /> na barra de menus superior e, em seguida, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
+<li>Se você não tiver um ID IBM, poderá entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
 <p>**Nota**: Em sua solicitação, uma lista de usuários em sua org que podem servir como contatos para chamados de suporte pode ser exibida na página **Suporte** na interface com o usuário do {{site.data.keyword.Bluemix_notm}} em seu ambiente Local.</p></li>
 </ul>
 
@@ -263,7 +280,8 @@ Para relatar uma potencial vulnerabilidade de segurança, conclua as etapas a se
 ### Escalando um chamado de suporte
 {: #escalation}
 
-Com o suporte padrão ou premium, se você não tiver recebido uma resposta no prazo para um chamado de suporte ou se sentir que um chamado de suporte não está sendo direcionado de forma apropriada, será possível escalar o chamado de suporte. Por meio do processo de encaminhamento do chamado de suporte, a gerência da IBM revisa suas preocupações e trabalha com você para melhorar a experiência de suporte.
+Com o suporte padrão ou premium, em um país ou região diferente da China, se você não tiver recebido uma resposta no prazo para um chamado de suporte ou se sentir que um chamado de suporte não está
+sendo direcionado de forma apropriada, será possível escalar o chamado de suporte. Por meio do processo de encaminhamento do chamado de suporte, a gerência da IBM revisa suas preocupações e trabalha com você para melhorar a experiência de suporte.
 
 Para enviar uma solicitação de escalada, execute as etapas a seguir:
   1. Abra um novo chamado de suporte com o resumo **Solicitação de escalada**.
@@ -350,5 +368,5 @@ Periodicamente, a IBM envia pesquisas de opinião aos clientes do Bluemix para o
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
   * [Instalando a ferramenta de comando cf](../starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
-  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

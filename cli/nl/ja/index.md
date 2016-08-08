@@ -18,13 +18,13 @@ copyright:
 # CLI と開発ツール
 {: #cli}
 
-*最終更新日: 2016 年 5 月 27 日*
+*最終更新日: 2016 年 6 月 28 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix_short}} では、統合コマンド・ライン・インターフェースおよび CLI プラグインなどの強力なツールにアクセスできます。これらの各 CLI のダウンロードは、ユーザーの {{site.data.keyword.Bluemix_notm}} 体験をサポートするためにすべて使用可能です。
 {:shortdesc}
 
-## ![コマンド・ライン・インターフェース](./images/CLI.svg) コマンド・ライン・インターフェース
+## ![](./images/CLI.svg) コマンド・ライン・インターフェース
 {: #downloads}
 
 {{site.data.keyword.Bluemix_notm}} の体験をサポートするコマンド・ライン・インターフェースをダウンロードしてインストールします。 
@@ -39,21 +39,20 @@ copyright:
 | [CLI のダウンロード](http://clis.ng.bluemix.net/)  <br> [資料の表示](./reference/bluemix_cli/index.html)|  [CLI のダウンロード](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [資料の表示](./reference/cfcommands/index.html) |
 
 
-## ![コマンド・ライン・インターフェースのプラグイン](./images/CLI_Plugin.svg) コマンド・ライン・インターフェースのプラグイン
+## ![](./images/CLI_Plugin.svg) コマンド・ライン・インターフェースのプラグイン
 
-ご使用の {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースを、多くのコマンドで簡単に拡張します。{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースのプラグインにアクセスするには、『[ CLI プラグイン・リポジトリー](http://plugins.ng.bluemix.net/)』を参照してください。
+ご使用の {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースを、多くのコマンドで簡単に拡張します。{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースのプラグインにアクセスするには、『[ CLI プラグイン・リポジトリー](https://plugins.ng.bluemix.net/)』を参照してください。
 
 ### {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースの拡張: bx
 
 1. {{site.data.keyword.Bluemix_notm}} レジストリーから {{site.data.keyword.Bluemix_notm}} CLI プラグインをインストールするには、プラグイン・レジストリーのエンドポイントを次のようにして設定します。
 
-```
-bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
-```
+bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
+
 2. プラグインをインストールするには、次のコマンドを実行します。
-```
+
 bluemix plugin install plugin_name -r bluemix-bx-staging
-```
+
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *ネットワーク・セキュリティー・グループ* |
 |-----|-----|-----|
@@ -64,13 +63,12 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 1. {{site.data.keyword.Bluemix_notm}} レジストリーから cf CLI プラグインをインストールするには、プラグイン・レジストリーのエンドポイントを次のようにして設定します。
 
-```
-cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
-```
+cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
+
 2. プラグインをインストールするには、次のコマンドを実行します。
-```
+
 cf install-plugin plugin_name -r bluemix-cf-staging
-```
+
 
 | *Active Deploy* | *管理コンソール* | 
 |-----------------|-----------------|
@@ -83,7 +81,7 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 <!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
-## ![統合開発ツール](./images/Integrated_Dev_Tools.svg) 統合開発ツール
+## ![](./images/Integrated_Dev_Tools.svg) 統合開発ツール
 
 お気に入りの {{site.data.keyword.Bluemix_notm}} サービスを統合するためのプラグインをダウンロードしてインストールします。
 

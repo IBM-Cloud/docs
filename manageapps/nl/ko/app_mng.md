@@ -31,8 +31,9 @@ Liberty 및 Node.js 애플리케이션에 사용할 수 있는 개발 및 디버
     사용 가능한 경우, 빌드팩이 사용자 애플리케이션의 런타임과 컨테이너 사이에 위치하는 프록시 에이전트를 시작합니다. *프록시* 유틸리티는 애플리케이션이 수신하는 모든 요청을 처리합니다. 요청 유형에 따라 앱 관리 조치를 수행하거나 사용자 애플리케이션에 요청을 전달합니다. *프록시*는 대다수의 기타 앱 관리 유틸리티에 대해 인에이블먼트를 허용합니다. *프록시*를 사용 가능하게 설정하면 애플리케이션이 충돌하는 경우에도 애플리케이션 컨테이너는 계속 활성 상태를 유지합니다. 또한 프록시 에이전트는 증분 파일 업데이트를 허용하여, Node.js 애플리케이션에서 "Live Edit" 모드를 사용할 수 있습니다. 
 	
   2. *devconsole*: 다음 URL에서 액세스 가능한 개발 콘솔 유틸리티를 사용할 수 있게 합니다.
+    
     ```
-    http://<yourappname>.mybluemix.net/bluemix-debug/manage
+http://<yourappname>.mybluemix.net/bluemix-debug/manage
     ```
 	
     사용자는 개발 콘솔을 사용하여 자신의 애플리케이션을 다시 시작, 중지 또는 일시중단할 수 있습니다. 또한 shell 및 inspector 유틸리티를 사용하거나 이에 액세스할 수도 있습니다. 
@@ -44,8 +45,9 @@ Liberty 및 Node.js 애플리케이션에 사용할 수 있는 개발 및 디버
     Health Center는 IBM 모니터링 및 진단 도구를 사용하여 Liberty 및 Node.js 애플리케이션의 성능을 분석할 수 있도록 지원합니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에서 Liberty Java 또는 Node.js 애플리케이션의 성능 분석 방법](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}을 참조하십시오. </p></li>
 	
   4. *shell*: devconsole 유틸리티를 통해서나 다음 URL에 액세스하여 액세스할 수 있는 웹 기반 쉘을 사용할 수 있도록 합니다.
+    
     ```
-    http://<yourappname>.mybluemix.net/bluemix-debug/shell
+http://<yourappname>.mybluemix.net/bluemix-debug/shell
     ```
 	
     shell 유틸리티에 액세스하면 애플리케이션에 대한 쉘 액세스가 있는 터미널 창이 표시됩니다. 파일 편집, 메모리 사용량 점검 또는 진단 명령 실행 등 일반 쉘에서 지원되는 모든 작업을 수행할 수 있습니다. 
@@ -83,27 +85,27 @@ Liberty 및 Node.js 애플리케이션에 사용할 수 있는 개발 및 디버
     1. *strongpm* BlUEMIX_APP_MGMT_ENABLE 환경 변수를 구성하고 애플리케이션을 다시 스테이징하십시오.
     
 	```
-    cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
+cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
     cf restage <appname>
     ```
 	
     2. Cloud Foundry 명령행에서, "-pm"이 애플리케이션 이름에 첨부되어 있는 라우트(예: <appname>-pm.mybluemix.net)를 애플리케이션에 추가하십시오. 
     
 	```
-    cf map-route <appname> ng.bluemix.net -n <appname>-pm
+cf map-route <appname> ng.bluemix.net -n <appname>-pm
     ```
 	
     3. [StrongLoop npm 모듈](https://www.npmjs.com/package/strongloop){:new_window}을 로컬 워크스테이션에 설치하십시오. 
     
 	```
-    npm install -g strongloop
+npm install -g strongloop
     ```
 	
     4. [StrongLoop의 웹 사이트](https://strongloop.com/register/){:new_window}에서 계정을 작성하십시오. 
     5. 로컬 워크스테이션에서 Arc를 시작하고 작성한 계정을 사용하여 로그인하십시오. 
     
 	```
-    slc arc
+slc arc
     ```
 	
     6. Arc 내의 프로세스 관리자로 이동하십시오. 포트를 80으로 하여 새로 작성한 라우트를 프로세스 관리자에 입력하십시오. 활성화 단추를 누르십시오. 자세한 정보는 [Arc 사용에 관한 상세 문서](https://docs.strongloop.com/display){:new_window}를 참조하십시오. 

@@ -51,7 +51,7 @@ copyright:
   1. 通过输入以下命令，为组织创建定制域：
     
     ```
-    cf create-domain <your org name> mydomain
+cf create-domain <your org name> mydomain
     ```
     
     *organization_name*
@@ -65,7 +65,7 @@ copyright:
   2. 通过输入以下命令，将包含定制域的路径添加到应用程序：
     
     ```
-    cf map-route myapp mydomain -n host_name
+cf map-route myapp mydomain -n host_name
     ```
     
     *myapp*
@@ -123,7 +123,7 @@ cf delete-route domain -n hostname -f
 1. 将 *Blue* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}。
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   **结果：**该 *Blue* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
@@ -131,7 +131,7 @@ cf delete-route domain -n hostname -f
 2. 使用 **cf rename** 命令将 *Blue* 应用程序重命名为 *Green*：
   
   ```
-  cf rename Blue Green
+cf rename Blue Green
   ```
   
   使用 **cf apps** 命令列出当前空间中的应用程序：
@@ -148,7 +148,7 @@ cf delete-route domain -n hostname -f
 3. 进行必要的更改，并使更新的 *Blue* 版本准备就绪。将更新的 *Blue* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}：
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   使用 **cf apps** 命令列出当前空间中的应用程序：
@@ -168,7 +168,7 @@ cf delete-route domain -n hostname -f
 4. 可选：如果想要删除应用程序的旧版本 (*Green*)，请使用 **cf delete** 命令。
   
   ```
-  cf delete Green -f
+cf delete Green -f
   ```
   
   使用 **cf route** 命令列出空间中的路径：
@@ -189,7 +189,7 @@ cf delete-route domain -n hostname -f
 1. 将 *Blue* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}。
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   **结果：**该 *Blue* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
@@ -197,7 +197,7 @@ cf delete-route domain -n hostname -f
 2. 进行必要的更改，并使 *Green* 版本准备就绪。将 *Green* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}：
   
   ```
-  cf push Green
+cf push Green
   ```
   
   使用 **cf route** 命令列出当前空间中的应用程序：
@@ -218,7 +218,7 @@ cf delete-route domain -n hostname -f
 3. 将 *Blue* 应用程序映射到 *Green* 应用程序，让 `Blue.mybluemix.net` 的所有流量路由到 *Blue* 应用程序和 *Green* 应用程序。
   
   ```
-  cf map-route Green mybluemix.net -n Blue
+cf map-route Green mybluemix.net -n Blue
   ```
   
   使用 cf routes 命令列出空间中的路径：
@@ -239,7 +239,7 @@ cf delete-route domain -n hostname -f
 4. 验证 *Green* 是否在按预期运行时，请从 *Blue* 应用程序除去 `Blue.mybluemix.net` 路径：
   
   ```
-  cf unmap-route Blue mybluemix.net -n Blue
+cf unmap-route Blue mybluemix.net -n Blue
   ```
   
   使用 cf routes 命令列出空间中的路径：
@@ -257,7 +257,7 @@ cf delete-route domain -n hostname -f
 5. 除去 *Green* 应用程序的 `Green.mybluemix.net` 路径。
   
   ```
-  cf unmap-route Green mybluemix.net -n Green
+cf unmap-route Green mybluemix.net -n Green
   ```
   
   **结果：**CF 路由器停止将流量发送到 *Blue* 应用程序。*Green* 应用程序正在响应 URL `Blue.mybluemix.net`。
@@ -265,7 +265,7 @@ cf delete-route domain -n hostname -f
 6. 可选：如果想要删除应用程序的旧版本 (*Blue*)，请使用 `cf delete` 命令。
   
   ```
-  cf delete Blue -f
+cf delete Blue -f
   ```
   
   使用 cf route 命令列出空间中的路径：

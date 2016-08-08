@@ -1,4 +1,4 @@
----
+﻿---
 
  
 
@@ -18,9 +18,11 @@ copyright:
 
 #Criando um botão Implementar no {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Última atualização: 2 de março de 2016* 
+*Última atualização: 2 de março de 2016*
+{: .last-updated} 
 
-O botão Implementar no {{site.data.keyword.Bluemix}} é uma maneira eficiente de compartilhar seu app público de origem Git para que outras pessoas possam experimentar com o código e implementá-lo no IBM {{site.data.keyword.Bluemix_notm}}. O botão requer configuração mínima e é possível inseri-lo em qualquer lugar que suporte marcação. Qualquer essoa que clicar no botão cria uma cópia clonada do código em um novo repositório Git de modo que seu app original permaneça não afetado. 
+O botão Implementar no {{site.data.keyword.Bluemix}} é uma maneira eficiente de compartilhar seu app público de origem Git para que outras pessoas possam experimentar com o código e implementá-lo no IBM {{site.data.keyword.Bluemix_notm}}. O botão requer configuração mínima e é possível inseri-lo em qualquer lugar que suporte marcação. Qualquer
+pessoa que clicar no botão cria uma cópia clonada do código em um novo repositório Git de modo que seu app original permaneça não afetado. 
 {: shortdesc} 
 
 **Dica:** se a marca da empresa for importante, será possível [integrar um fluxo Implementar no iFrame do {{site.data.keyword.Bluemix_notm}}](../develop/deploy_button_embed.html) a seu conteúdo, em vez de inserir um botão. Quando as pessoas criam uma cópia clonada de seu app público de origem Git, elas permanecem em seu conteúdo em vez de serem redirecionadas ao website bluemix.net. 
@@ -129,7 +131,7 @@ Revise estas considerações para o repositório do projeto que você usará no 
 Com o arquivo manifest, é possível especificar: 
     <ul>
     <li>Um nome de app exclusivo.</li>  
-    <li>Serviços declarados: Uma extensão manifest, que cria ou procura por serviços obrigatórios ou opcionais que devem ser configurados antes que o app seja implementado, como um serviço de cache de dados. É possível localizar uma lista de serviços, rótulos e planos elegíveis do {{site.data.keyword.Bluemix_notm}}, usando a <a href="https://github.com/cloudfoundry/cli/releases">Interface da linha de comandos CF</a> para executar o comando <code>cf marketplace</code> ou procurando no <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">catálogo do {{site.data.keyword.Bluemix_notm}}</a>. 
+    <li>Serviços declarados: Uma extensão manifest, que cria ou procura por serviços obrigatórios ou opcionais que devem ser configurados antes que o app seja implementado, como um serviço de cache de dados. É possível localizar uma lista de serviços, rótulos e planos elegíveis do     {{site.data.keyword.Bluemix_notm}}, usando a <a href="https://github.com/cloudfoundry/cli/releases">Interface da linha de comandos CF</a> para executar o comando <code>cf marketplace</code> ou procurando no <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">catálogo do {{site.data.keyword.Bluemix_notm}}</a>.
     
     <strong>Nota:</strong> serviços declarados são uma extensão IBM do formato de manifest padrão do Cloud Foundry. Essa extensão pode ser revisada em uma liberação futura conforme o recurso evolui e melhora.
 	
@@ -142,7 +144,7 @@ Com o arquivo manifest, é possível especificar:
     &lt;`arbitrary_service_instance_name`&gt;:  # [required]
       label: &lt;`actual_service_name`&gt; # [required] The actual service name from market place
       plan: Shared # [optional] If provided, used to fetch the declared service. Otherwise, defaults to 'Free' or 'free'.
-  applications:
+  aplicativos:
   - serviços
     - &lt;`arbitrary_service_instance_name`&gt;
     name: &lt;`appname`&gt;

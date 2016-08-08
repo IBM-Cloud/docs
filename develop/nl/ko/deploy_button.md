@@ -44,7 +44,7 @@ copyright:
 
 ##단추 예 {: #button-examples} 
 
-공용 {{site.data.keyword.jazzhub_short}} 저장소의 앱 단추 예를 참조하십시오.
+퍼블릭 {{site.data.keyword.jazzhub_short}} 저장소의 앱 단추 예를 참조하십시오.
 
 <p>
 <a class="xref" href="https://bluemix.net/deploy?repository=https://hub.jazz.net/git/idsorg/sample-java-cloudant" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/deploy_buttonx2.png" alt="Bluemix에 배치" /></a>

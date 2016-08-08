@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2015，2016
 
  
 
@@ -14,16 +14,22 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# VPN용 Bluemix CLI 플러그인
+# {{site.data.keyword.Bluemix_notm}} CLI의 {{site.data.keyword.vpn_short}} 플러그인
 
-*마지막 업데이트 날짜:* 2016년 1월 18일
+*마지막 업데이트 날짜: 2016년 6월 20일*
+{: .last-updated}
 
-*버전:* 0.1.5
+*버전:* 1.4.0
 
-Bluemix CLI VPN 플러그인을 사용하여 IBM VPN(Virtual Private Network) 서비스를 구성하고 관리할 수 있습니다.
+명령행 인터페이스(CLI)를 사용하여 {{site.data.keyword.vpn_full}} 서비스를 구성하고 관리할 수 있습니다. {{site.data.keyword.vpn_short}} CLI 플러그인은 두 개의 버전으로 사용 가능합니다(Cloud Foundry CLI 플러그인으로 사용할 항목 및 {{site.data.keyword.Bluemix}} CLI 플러그인으로 사용할 다른 항목). 두 플러그인 버전 모두 동일한 기능을 제공합니다.  
 {:shortdesc}
 
-다음 정보는 Bluemix CLI VPN 플러그인에서 지원하는 모든 명령을 나열하며 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제를 포함합니다.
+{{site.data.keyword.vpn_short}} 플러그인은 Windows, MAC 및 Linux 운영 체제에 사용 가능합니다. 사용자에게 적용 가능한 항목을 사용해야 합니다.
+
+뒤따르는 지시사항은 {{site.data.keyword.Bluemix_notm}} CLI 플러그인 작업에 대한 것입니다. Cloud Foundry(cf) CLI 플러그인으로 플러그인을 사용하려면 [cf CLI의 {{site.data.keyword.vpn_short}} CLI 플러그인](../vpn/index.html)을 참조하십시오.
+
+
+뒤따르는 정보는 Bluemix CLI의 {{site.data.keyword.vpn_short}} 플러그인에서 지원되는 모든 명령을 나열하고 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제를 포함합니다. vpn 플러그인을 설치하는 방법에 대해 [Bluemix 명령행 인터페이스 확장](../../index.html#cli_bluemix_ext)을 참조하십시오.
 
 **참고:** *전제조건*에는 명령을 사용하기 전에 필요한 조치가 설명되어 있습니다. 전제조건에는 다음 조치 중 하나 이상이 포함될 수 있습니다.
 <dl>
@@ -40,7 +46,7 @@ Bluemix CLI VPN 플러그인을 사용하여 IBM VPN(Virtual Private Network) �
 VPN 연결을 작성합니다.
 
 ```
-bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
+bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **전제조건**:  엔드포인트, 로그인, 대상 설정
@@ -90,7 +96,7 @@ bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "19
 IKE 정책을 작성합니다. 
 
 ```
-bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
+bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **전제조건**:  엔드포인트, 로그인, 대상 설정
@@ -122,7 +128,7 @@ bluemix vpn ike-create my_ike -g my_gateway
 IPSec 정책을 작성합니다. 
 
 ```
-bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
+bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **전제조건**:  엔드포인트, 로그인, 대상 설정
@@ -154,7 +160,7 @@ bluemix vpn ipsec-create my_policy -g my_gateway
 VPN 게이트웨이를 작성합니다.
 
 ```
-bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **전제조건**:  엔드포인트, 로그인, 대상 설정
@@ -334,7 +340,7 @@ bluemix vpn gateway-delete GATEWAY_NAME
 기존 VPN 연결을 업데이트합니다.
 
 ```
-bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY] [-subnets "SUBNET/MASK"][-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
+bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **전제조건**:  엔드포인트, 로그인, 대상 설정
@@ -376,7 +382,7 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY
 IKE 정책을 업데이트합니다.
 
 ```
-bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **전제조건**:  엔드포인트, 로그인, 대상 설정
@@ -400,7 +406,7 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP
 IPSec 정책을 업데이트합니다.
 
 ```
-bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **전제조건**:  엔드포인트, 로그인, 대상 설정
@@ -424,7 +430,7 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GRO
 기존 VPN 게이트웨이를 업데이트합니다.
 
 ```
-bluemix vpn gateway-update GATEWAY_NAME [-t TYPE][-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **전제조건**:  엔드포인트, 로그인, 대상 설정

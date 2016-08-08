@@ -9,7 +9,7 @@ copyright:
 {:shortdesc: .shortdesc} 
 
 
-# Segurança
+# Security
 {: #security}
 
 *Última atualização: 9 de dezembro de 2015*

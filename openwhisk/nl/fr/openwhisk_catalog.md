@@ -42,7 +42,7 @@ Le package `/whisk.system/cloudant` permet d'utiliser une base de données Cloud
 une base de données Cloudant |
 | `/whisk.system/cloudant/read` | action | dbname, includeDoc, id | Lire un document à partir d'une base de données |
 | `/whisk.system/cloudant/write` | action | dbname, overwrite, doc | Ecrire un document dans une base de données |
-| `/whisk.system/cloudant/changes` | flux | dbname, includeDoc | Exécuter des événements déclencheurs en cas de modification dans une
+| `/whisk.system/cloudant/changes` | flux | dbname, includeDoc, maxTriggers | Exécuter des événements déclencheurs en cas de modification dans une
 base de données |
 
 Les rubriques ci-après expliquent comment configurer une base de données Cloudant, comment configurer un package associé, et comment utiliser les
@@ -65,7 +65,7 @@ trouvez.
 à l'organisation et à l'espace {{site.data.keyword.Bluemix_notm}} que vous avez utilisés à l'étape précédente.
 
   ```
-  wsk property set --namespace monOrg{{site.data.keyword.Bluemix_notm}}_monEspace{{site.data.keyword.Bluemix_notm}}
+  wsk property set --namespace my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space
   ```
   {: pre}
 
@@ -91,9 +91,7 @@ que vous avez créée.
   {: pre}
   ```
   packages
-
-/monOrg{{site.data.keyword.Bluemix_notm}}_monEspace{{site.data.keyword.Bluemix_notm}}/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1
-private binding
+  /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1 private binding
   ```
   {: screen}
 
@@ -104,14 +102,11 @@ doit apparaître.
 {{site.data.keyword.Bluemix_notm}} Cloudant.
 
   ```
-  wsk package get
-/monOrg{{site.data.keyword.Bluemix_notm}}_monEspace{{site.data.keyword.Bluemix_notm}}/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1
+  wsk package get /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1
   ```
   {: pre}
   ```
-  ok: got package
-/monOrg{{site.data.keyword.Bluemix_notm}}_monEspace{{site.data.keyword.Bluemix_notm}}/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1,
-projecting parameters
+  ok: got package /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1, projecting parameters
   [
       ...
       {
@@ -161,10 +156,14 @@ Cloudant. Vous avez besoin du nom d'hôte, du nom d'utilisateur et du mot de pas
 ### Ecoute des modifications apportées dans une base de données Cloudant
 
 Vous pouvez utiliser le flux `changes` pour configurer un service afin d'exécuter un déclencheur à chaque fois qu'une modification
-est apportée dans votre base de données Cloudant.
+est apportée dans votre base de données Cloudant. Les paramètres sont les suivants :
 
-1. Créez un déclencheur avec le flux `changes` dans la liaison de package que vous avez créée précédemment. Prenez soin de remplacer
-`/monEspaceNom/monCloudant` par votre nom de package.
+- `dbname` : Nom de la base de données Cloudant. 
+- `includeDoc` : Si la valeur est true, chaque événement déclencheur qui est exécuté inclut le document Cloudant modifié.  
+- `maxTriggers` : L'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. La valeur par défaut est 1000. La valeur maximale que vous pouvez définir est 10 000. Si vous tentez de définir une valeur supérieure à 10 000, la demande est rejetée. 
+
+1. Créez un déclencheur avec le flux `changes` dans la liaison de package que vous avez créée précédemment. Prenez
+soin de remplacer `/monEspaceNom/monCloudant` par votre nom de package.
 
   ```
   wsk trigger create monDéclencheurCloudant --feed /monEspaceNom/monCloudant/changes --param dbname testdb --param includeDoc true
@@ -233,15 +232,15 @@ La représentation JSON de l'événement déclencheur est la suivante :
 Vous pouvez utiliser une action pour stocker un document dans une base de données Cloudant appelée `testdb`. Assurez-vous que
 cette base de données existe sur votre compte Cloudant.
 
-1. Stockez un document en utilisant l'action `write` dans la liaison de package que vous avez créée précédemment. Prenez soin de remplacer
-`/monEspaceNom/monCloudant` par votre nom de package.
+1. Stockez un document en utilisant l'action `write` dans la liaison de package que vous avez créée précédemment. Prenez
+soin de remplacer `/monEspaceNom/monCloudant` par votre nom de package.
 
   ```
   wsk action invoke /monEspaceNom/monCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
-  ok: invoked /monEspaceNom/monCloudant/write with id 62bf696b38464fd1bcaff216a68b8287
+  ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
     "id": "heisenberg",
     "ok": true,
@@ -304,11 +303,11 @@ https://github.com/ncb000gt/node-cron. Voici quelques exemples de la fréquence 
   - `* * * * * *` : chaque seconde.
   - `0 * * * * *` : au début de chaque minute.
   - `* 0 * * * *` : au début de chaque heure.
-  - `0 0 9 8 * *` à 9:00:00 du matin (UTC) le huitième jour de chaque mois. 
+  - `0 0 9 8 * *` à 9:00:00 du matin (UTC) le huitième jour de chaque mois.
 
 - `trigger_payload` : la valeur de ce paramètre devient le contenu du déclencheur à chaque fois que le déclencheur est exécuté.
 
-- `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. La valeur par défaut est 1000.
+- `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. La valeur par défaut est 1000. La valeur maximale que vous pouvez définir est 10 000. Si vous tentez de définir une valeur supérieure à 10 000, la demande est rejetée. 
 
 Voici un exemple de création de déclencheur qui sera exécuté toutes les 20 secondes avec les valeurs `name` et
 `place` dans l'événement déclencheur.
@@ -523,7 +522,7 @@ L'action `/whisk.system/watson/speechToText` convertit un contenu audio en texte
 - `password` : mot de passe de l'API Watson.
 - `payload` : données binaires des paroles à convertir en texte.
 - `content_type` : type MIME du contenu audio.
-- `encoding` : codage des données binaires des paroles.
+- `encoding` : codage du fichier binaire vocal.
 - `continuous` : indique si plusieurs résultats finaux représentant des phrases consécutives séparées par de longues pauses doivent être
 renvoyés.
 - `inactivity_timeout` : nombre de secondes après lequel, si seul un silence est détecté dans le contenu audio soumis,
@@ -545,20 +544,22 @@ Ci-dessous figure un exemple de création de liaison de package et de conversion
 1. Créez une liaison de package avec vos données d'identification Watson.
 
   ```
-  $ wsk package bind /whisk.system/watson myWatson -p username 'NOM_UTILISATEUR_WATSON' -p password 'MOT_DE_PASSE_WATSON'
+  wsk package bind /whisk.system/watson myWatson -p username 'MON_NOM_UTILISATEUR_WATSON' -p password 'MON_MOT_DE_PASSE_WATSON'
   ```
+  {: pre}
 
 2. Appelez l'action `speechToText` dans votre liaison de package pour convertir le contenu audio codé.
 
   ```
-  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <codage en base 64 d'un fichier .wav> --param
-content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
+  {: pre}
   ```
   {
     "data": "Hello Watson"
   }
   ```
+  {: screen}
   
  
 ## Utilisation du package Slack
@@ -635,14 +636,13 @@ référentiel GitHub spécifié. Les paramètres sont les suivants :
 - `repository` : référentiel GitHub.
 - `accessToken` : votre jeton d'accès personnel GitHub. Lorsque vous [créez votre
 jeton](https://github.com/settings/tokens), veillez à sélectionner les portées repo:status et public_repo. De plus, vérifiez qu'aucun webhook n'est défini pour votre référentiel.
-- `events` : [type d'activité GitHub](https://developer.github.com/v3/activity/events/types/) qui vous intéresse.
+- `events` : [type d'événement GitHub](https://developer.github.com/v3/activity/events/types/) qui vous intéresse. 
 
 Voici un exemple de création de déclencheur qui sera exécuté à chaque fois qu'une nouvelle validation est effectuée dans un référentiel GitHub.
 
 1. Générez un [jeton d'accès personnel](https://github.com/settings/tokens) GitHub.
 
   Le jeton d'accès va être utilisé à l'étape suivante.
-
 
 2. Créez une liaison de package configurée pour votre référentiel GitHub et avec votre jeton d'accès.
 
@@ -659,3 +659,123 @@ aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
   ```
   {: pre}
 
+Une validation au référentiel Github via une commande `git push` provoque l'exécution du déclencheur par le webhook. Si une règle correspond au déclencheur, l'action associée sera appelée.
+L'action reçoit le contenu de webhook Github comme paramètre d'entrée. Chaque événement de webhook Github comporte un schéma JSON similaire, mais un objet de contenu unique qui est déterminé par son type d'événement.
+Pour plus d'informations sur le contenu, voir la documentation de l'API des [événements et de contenu Github](https://developer.github.com/v3/activity/events/types/).
+
+
+## Utilisation du package Push
+{: #openwhisk_catalog_pushnotifications}
+
+Le package `/whisk.system/pushnotifications` vous permet d'utiliser un service push.  
+
+Le package inclut le flux suivant :
+
+| Entité | Type | Paramètres | Description |
+| --- | --- | --- | --- |
+| `/whisk.system/pushnotifications` | package | appId, appSecret  | utilisation du service push |
+| `/whisk.system/pushnotifications/sendMessage` | action | text, url, deviceIds, platforms, tagNames, apnsBadge, apnsCategory, apnsActionKeyTitle, apnsSound, apnsPayload, apnsType, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive | Envoi de notification push au(x) périphérique(s) spécifié(s) |
+| `/whisk.system/pushnotifications/webhook` | feed | events | Exécution d'événements déclencheur sur des activités de périphérique ((annulation d')enregistrement/(annulation d') abonnement de périphérique |
+Bien que ce ne soit pas obligatoire, il est recommandé de créer un package de liaison avec les valeurs `appId` et `appSecret`. Ainsi, il n'est pas nécessaire de spécifier ces données d'identification à chaque fois que vous appelez les actions du package.
+
+### Configuration du package IBM Push Notifications package
+
+Lors de la création d'un package IBM Push Notifications, vous devez préciser les paramètres suivants :
+
+-  `appId` : Identificateur global unique d'application Bluemix. 
+-  `appSecret` : Valeur confidentielle d'application du service de notification push Bluemix.
+
+Voici un exemple de création d'une liaison de package. 
+
+1. Créez une application Bluemix dans le [tableau de bord Bluemix](http://console.ng.bluemix.net).
+
+2. Initialisez le service de notification push et liez celui-ci à l'application Bluemix. 
+
+3. Configurez l'application [IBM Push Notification](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
+
+  Prenez soin de mémoriser l'`identificateur global unique d'application` et la `valeur confidentielle d'application` de l'application Bluemix que vous avez créée. 
+
+
+4. Créez une liaison de package avec `/whisk.system/pushnotifications`.
+
+  ```
+  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  ```
+  {: pre}
+
+5. Vérifiez que la liaison de package existe.
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+
+  ```
+  packages
+  /myNamespace/myPush private binding
+  ```
+  {: screen}
+
+### Envoi de notifications push
+
+L'action `/whisk.system/pushnotifications/sendMessage` envoie des notifications push à des périphériques enregistrés. Les paramètres sont les suivants :
+- `text` - Message de notification à présenter à l'utilisateur. Par exemple : -p text "Hi ,{{site.data.keyword.openwhisk}} send a notification".
+- `url` : URL facultative qui peut être envoyée en même temps que l'alerte. Par exemple : -p url "https:\\www.w3.ibm.com".
+- `gcmPayload` - Contenu JSON personnalisé qui sera envoyé dans le cadre du message de notification. Par exemple : -p gcmPayload "{"hi":"hello"}"
+- `gcmSound` - Fichier son (sur le périphérique) qui est utilisé lorsque la notification arrive sur le périphérique. 
+- `gcmCollapseKey` - Ce paramètre identifie un groupe de messages
+- `gcmDelayWhileIdle` - Lorsque ce paramètre a pour valeur true, il indique que le message ne doit pas être envoyé tant que le périphérique n'est pas actif.
+- `gcmPriority` - Définit la priorité du message.
+- `gcmTimeToLive` - Ce paramètre spécifie le nombre de secondes pendant lesquelles le message doit être conservé dans le stockage GCM si le périphérique est hors ligne. 
+- `apnsBadge` - Numéro à afficher en tant que badge de l'icône d'application. 
+- `apnsCategory` -  Identificateur de catégorie à utiliser pour les notifications push interactives. 
+- `apnsIosActionKey` - Titre de la clé d'action. 
+- `apnsPayload` - Contenu JSON personnalisé qui sera envoyé dans le cadre du message de notification. 
+- `apnsType` - ['DEFAULT', 'MIXED', 'SILENT'].
+- `apnsSound` - Nom du fichier son dans l'ensemble d'applications. Le son de ce fichier est utilisé pour une alerte. 
+
+Voici un exemple d'envoi d'une notification push depuis le package de notification push.
+
+1. Envoyez une notification push à l'aide de l'action `sendMessage` dans la liaison de package que vous avez créée précédemment. Prenez soin de remplacer `/myNamespace/myPush` par votre nom de package. 
+
+  ```
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  ```
+  {: pre}
+
+  ```
+  {
+  "result": {
+  "pushResponse": "{"messageId":"11111H","message":{"message":{"alert":"this is my message","url":"http.google.com"},"settings":{"apns":{"sound":"default"},"gcm":{"sound":"default"},"target":{"deviceIds":["T1","T2"]}}}"
+  },
+      "status": "success",
+      "success": true
+  }
+  ```
+  {: screen}
+
+### Exécution d'un événement déclencheur sur l'activité de service IBM Push Notifications
+
+`/whisk.system/pushnotifications/webhook` configure le service IBM Push Notifications pour qu'il exécute un déclencheur lorsqu'il existe une activité de périphérique, telle qu'un enregistrement ou une annulation d'enregistrement ou un abonnement ou une annulation d'abonnement de périphérique dans une application spécifiée.
+
+Les paramètres sont les suivants :
+
+- `appId :` Valeur confidentielle d'application du service de notification push Bluemix. 
+- `appSecret :` Identificateur global unique d'application Bluemix. 
+- `events :` Les événements pris en charge sont `onDeviceRegister`, `onDeviceUnregister`, `onDeviceUpdate`, `onSubscribe`, `onUnsubscribe`. Pour être avertis de tous les événements, utilisez le caractère générique `*`.
+
+Voici un exemple de création d'un déclencheur qui sera exécuté chaque fois qu'un nouveau périphérique est enregistré avec l'application IBM Push Notifications Service. 
+
+1. Créez une liaison de package configurée pour votre service IBM Push Notifications avec vos paramètres appId et appSecret.
+
+  ```
+  wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
+  ```
+  {: pre}
+
+2. Créez un déclencheur pour le type d'événement `onDeviceRegister` du service IBM Push Notifications en utilisant votre flux `myPush/webhook`. 
+
+  ```
+  wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister
+  ```
+  {: pre}

@@ -17,6 +17,7 @@ copyright:
 {: #overview}
 
 *Última atualização: 9 de maio de 2016*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} é a plataforma em nuvem
 aberta da {{site.data.keyword.IBM}} que fornece aos
@@ -350,7 +351,7 @@ com apps Cloud Foundry existentes e podem se vincular a qualquer um
 dos serviços disponíveis no catálogo do {{site.data.keyword.Bluemix_notm}}. Com esta infraestrutura, você desenvolve e gerencia seu código de aplicativo e o
 {{site.data.keyword.Bluemix_notm}} cuida do
 gerenciamento e da manutenção da infraestrutura que aciona tais apps.</dd>
-<dt>{{site.data.keyword.IBM_notm}}Containers</dt>
+<dt>Contêineres do {{site.data.keyword.IBM_notm}}</dt>
     <dd>Com a infraestrutura do
 {{site.data.keyword.IBM_notm}} Containers, é possível executar seu app da web em qualquer lugar que suporte implementação de contêiner. Um *contêiner* é um objeto que contém tudo o que é necessário para um app ser executado. Esta infraestrutura inclui um registro privado para sua imagens confiáveis, para que você possa fazer upload, armazenar e recuperá-las. É possível, então, tornar tais imagens disponíveis no
 {{site.data.keyword.Bluemix_notm}} e gerenciar seus contêineres na plataforma. A
@@ -541,8 +542,7 @@ que reside no local protegido por um firewall. É possível chamar o
 sistema de registro de uma maneira segura e alavancar os serviços móveis no {{site.data.keyword.Bluemix_notm}} para que seja possível construir um app móvel avançado.
 
 Primeiro, seu desenvolvedor de integração cria o app de backend
-móvel no {{site.data.keyword.Bluemix_notm}}. Ele usa o modelo
-Nuvem para dispositivo móvel que usa o tempo de execução Node.js
+móvel no {{site.data.keyword.Bluemix_notm}}. Ele usa o modelo Nuvem para dispositivo móvel que usa o tempo de execução Node.js
 com o qual ele está mais familiarizado.
 
 Depois, usando o serviço Cloud Integration na
@@ -595,9 +595,11 @@ A tabela a seguir lista os idiomas nacionais suportados e os códigos de idioma 
 ## Links Relacionados
 {: #general}
 
-* [Pré-requisitos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
+* [Pré-requisitos
+do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
 * [O que há de novo no {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
-* [Problemas conhecidos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
+* [Problemas
+conhecidos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}} glossário](glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} Folha de precificação](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)

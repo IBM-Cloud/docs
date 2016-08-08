@@ -15,6 +15,7 @@ copyright:
 
 # Fazendo upload do seu aplicativo
 *Última atualização: 17 de fevereiro de 2016*
+{: .last-updated}
 
 Depois de ter efetuado login no {{site.data.keyword.Bluemix}}, é possível fazer upload do aplicativo com o comando cf push.
 {:shortdesc}

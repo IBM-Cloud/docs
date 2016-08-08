@@ -15,6 +15,7 @@ copyright:
 
 # Criando apps Cloud Foundry
 *Última atualização: 18 de abril de 2016*
+{: .last-updated}
 
 Com
 o {{site.data.keyword.Bluemix}}, é possível

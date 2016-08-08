@@ -20,6 +20,7 @@ copyright:
 {: #openwhisk_actions}
 
 *Última atualização: 22 de março de 2016*
+{: .last-updated}
 
 Ações são fragmentos de código stateless executados na plataforma {{site.data.keyword.openwhisk}}. Uma ação pode ser uma função JavaScript, uma função Swift ou um programa executável customizado empacotado em um contêiner do Docker. Por exemplo, uma ação pode ser usada para detectar as faces em uma imagem, agregar um conjunto de chamadas de API ou postar um Tweet.
 {:shortdesc}
@@ -75,15 +76,14 @@ Revise as etapas e os exemplos a seguir para criar sua primeira ação JavaScrip
 
   É possível ver a ação `hello` que acabou de criar.
 
-4. Após criar sua ação, será possível executá-la na nuvem no {{site.data.keyword.openwhisk_short}} com o comando 'invoke'. É possível chamar ações com uma chamada de *bloqueio* ou *sem bloqueio* especificando uma sinalização no comando. Uma chamada de bloqueio espera até que a ação ser executada até a conclusão e retorna um resultado. Este exemplo usa o parâmetro de bloqueio, `-blocking`:
+4. Após criar sua ação, será possível executá-la na nuvem no {{site.data.keyword.openwhisk_short}} com o comando 'invoke'. É possível chamar ações com uma chamada de *bloqueio* ou *sem bloqueio* especificando uma sinalização no comando. Uma chamada de bloqueio espera até que a ação ser executada até a conclusão e retorna um resultado. Este exemplo usa o parâmetro de bloqueio, `--blocking`:
 
   ```
   wsk action invoke --blocking hello
   ```
   {: pre}
   ```
-  ok: hello chamada com id 44794bd6aab74415b4e42a308d880e5b
-  resposta:
+  ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
   {
       "result": {
           "payload": "Hello world"
@@ -292,8 +292,8 @@ Este exemplo chama um serviço Yahoo Weather para obter as condições atuais em
   ```
     var request = require('request');
     
-    function main(msg) {
-        var location = msg.location || 'Vermont';
+    function main(params) {
+        var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
     
         request.get(url, function(error, response, body) {
@@ -343,20 +343,21 @@ Diversas ações do utilitário são fornecidas em um pacote chamado `/whisk.sys
   ```
   {: pre}
   ```
-  pacote /whisk.system/util
-   ação /whisk.system/util/cat: concatenar matriz de sequências e dividir linhas em uma matriz
-   ação /whisk.system/util/head: filtrar elementos da matriz do primeiro K e descartar o restante
-   ação /whisk.system/util/date: obter data e hora atuais
-   ação /whisk.system/util/sort: classificar matriz
+  package /whisk.system/util
+   action /whisk.system/util/cat: Concatenar matriz de sequências
+   action /whisk.system/util/head: Filtrar elementos da matriz do primeiro K e descartar o restante
+   action /whisk.system/util/date: Obter data e hora atual
+   action /whisk.system/util/sort: Classificar matriz
+   action /whisk.system/util/split: Divide uma sequência em uma matriz de sequências
   ```
   {: screen}
 
-  As ações `cat` e `sort` serão usadas neste exemplo.
+  Você estará usando as ações `split` e `sort` neste exemplo.
 
 2. Crie uma sequência de ações de modo que o resultado de uma ação seja passado como um argumento para a próxima ação.
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/cat,/whisk.system/util/sort
+  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -391,7 +392,9 @@ Diversas ações do utilitário são fornecidas em um pacote chamado `/whisk.sys
 
   No resultado, você vê que as linhas estão classificadas.
 
-**Nota**: para obter mais informações sobre chamada de sequências de ações com vários parâmetros denominados, consulte [Configurando parâmetros padrão](./openwhisk_actions.html##openwhisk_binding_actions)
+**Nota**: para obter mais informações sobre chamada de sequências de ações com vários parâmetros denominados, consulte [Configurando parâmetros padrão](./actions.md#setting-default-parameters)
+
+
 
 ## Criando ações Swift
 {: #openwhisk_actions_swift}
@@ -416,7 +419,7 @@ Uma ação é simplesmente uma função Swift de nível superior. Por exemplo, c
 ```
 {: codeblock}
 
-Observe que assim como ações JavaScript, as ações Swift sempre consomem um dicionário e produzem um dicionário.
+As ações swift sempre consomem um dicionário e produzem um dicionário.
 
 É possível criar uma ação do {{site.data.keyword.openwhisk_short}} chamada `helloSwift` a partir desta função da seguinte forma:
 
@@ -443,12 +446,14 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **Atenção:** as ações Swift são executadas em um ambiente Linux. Swift no Linux ainda está em desenvolvimento e o {{site.data.keyword.openwhisk_short}} geralmente usa a liberação mais recente disponível, que não está necessariamente estável. Além disso, a versão do Swift usada com o {{site.data.keyword.openwhisk_short}} pode estar inconsistente com versões do Swift de liberações estáveis do XCode no MacOS.
 
+
+
 ## Criando ações Docker
 {: #openwhisk_actions_docker}
 
 Com as ações Docker do {{site.data.keyword.openwhisk_short}}, é possível escrever suas ações em qualquer linguagem.
 
-Seu código é compilado em um binário executável e integrado a uma imagem do Docker. O programa binário interage com o sistema aceitando entrada de `stdin` e respondendo por meio de `stdout`.
+O seu código é compilado em um binário executável e integrado em uma imagem do Docker. O programa binário interage com o sistema aceitando entrada de `stdin` e respondendo por meio de `stdout`.
 
 Como um pré-requisito, deve-se ter uma conta do Docker Hub.  Para configurar um ID e uma conta do Docker grátis, acesse o [Docker Hub](https://hub.docker.com){: new_window}.
 
@@ -487,8 +492,8 @@ Para as instruções a seguir, suponha que o ID do usuário seja "janesmith" e a
   #include <stdio.h>
   
   int main(int argc, char *argv[]) {
-      printf("Hello %s from arbitrary C program!\n",
-             (argc == 1) ? "anonymous" : argv[1]);
+      printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
+             (argc == 1) ? "undefined" : argv[1]);
   }
   ```
   {: screen}
@@ -524,11 +529,25 @@ Para as instruções a seguir, suponha que o ID do usuário seja "janesmith" e a
   {: pre}
   ```
   {
-      "msg": "Hello Rey from arbitrary C program!\n"
+      "args": {
+          "payload": "Rey"
+      },
+      "msg": "Hello from arbitrary C program!"
   }
   ```
   {: screen}
 
+5. Para atualizar uma ação do Docker, execute `buildAndPush.sh` para atualizar a imagem no Docker Hub e, em seguida, é necessário executar `wsk action update` para
+fazer o sistema buscar a nova imagem. Novas chamadas iniciarão o uso da nova imagem e não uma imagem ativa com o código antigo.
+
+  ```
+  ./buildAndPush.sh janesmith/blackboxdemo
+  ```
+  {: pre}
+  ```
+  wsk action update --docker example janesmith/blackboxdemo
+  ```
+  {: pre}
 
 É possível localizar mais informações sobre como criar ações Docker na seção [Referências](./openwhisk_reference.html#openwhisk_ref_docker).
 
@@ -562,7 +581,7 @@ As ações do {{site.data.keyword.openwhisk_short}} podem ser chamadas por outro
 3. Observe o log de ativação na janela de pesquisa:
 
   ```
-  Ativação: helloWorld (7331f9b9e2044d85afd219b12c0f1491)
+  Activation: helloWorld (7331f9b9e2044d85afd219b12c0f1491)
     2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
   {: screen}

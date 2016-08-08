@@ -7,7 +7,6 @@ copyright:
   years: 2015, 2016
 
  
-
 ---
 
 
@@ -17,8 +16,10 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} (bx) コマンド
 {: #bluemix_cli}
 
-*最終更新日: 2016 年 5 月 11 日*
+最終更新日: 2016 年 7 月 20 日
 {: .last-updated}
+
+*バージョン:* 0.4.0
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) では、ユーザーが {{site.data.keyword.Bluemix_notm}} と対話できるように、名前空間別にグループ化したコマンドのセットが提供されています。
 {{site.data.keyword.Bluemix_notm}} コマンドには、既存の cf コ
@@ -34,7 +35,7 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
 <dt>エンドポイント</dt>
 <dd>このコマンドを使用する前に、<code>bluemix api</code> を介して API エンドポイントを設定する必要があります。</dd>
 <dt>login</dt>
-<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。</dd>
+<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。フェデレーテッド ID でログインする場合は、「--sso」オプションを使用し、ワンタイム・パスコードを使って認証します。</dd>
 <dt>ターゲット</dt>
 <dd>このコマンドを使用する前に、<code>bluemix target</code> コマンドを使用して組織およびスペースを設定する必要があります。</dd>
 <dt>Docker</dt>
@@ -57,7 +58,7 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  <tr> 
  <td>[bluemix help](index.html#bluemix_help)</td> 
  <td>[bluemix api](index.html#bluemix_api)</td> 
- <td>[bluemix login](index.html#bluemix_login)</td>
+ <td>[bluemix_login](index.html#bluemix_login)</td>
  <td>[bluemix logout](index.html#bluemix_logout)</td>
  <td>[bluemix target](index.html#bluemix_target)</td>
  </tr> 
@@ -182,9 +183,9 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
 *表 4. Bluemix サービスを管理するためのコマンド*
 
 
-<table summary="Bluemix カタログ、プラグイン、およびセキュリティー設定の管理に使用することができる Bluemix コマンド。">
+<table summary="Bluemix カタログ、プラグイン、請求、およびセキュリティー設定の管理に使用できる Bluemix コマンド。">
  <thead>
- <th colspan="5">Bluemix カタログ、プラグイン、およびセキュリティー設定を管理するためのコマンド</th>
+ <th colspan="5">Bluemix カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</th>
  </thead>
  <tbody> 
  <tr> 
@@ -202,16 +203,23 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  <td>[bluemix plugin uninstall](index.html#bluemix_plugin_uninstall)</td> 
  </tr> 
  <tr> 
+ <td>[bluemix bss account-usage](index.html#bluemix_bss_account_usage)</td> 
+ <td>[bluemix bss org-usage](index.html#bluemix_bss_org_usage)</td>
+ <td>[bluemix bss orgs-usage-summary](index.html#bluemix_orgs_usage_summary)</td>
  <td>[bluemix security cert](index.html#bluemix_security_cert)</td> 
  <td>[bluemix security cert-add](index.html#bluemix_security_cert_add)</td>
+ </tr>
+ <tr>
  <td>[bluemix security cert-remove](index.html#bluemix_security_cert_remove)</td>
  <td></td>
  <td></td>
  </tr>
   </tbody> 
  </table> 
-*表 5. Bluemix カタログ、プラグイン、
-およびセキュリティー設定を管理するためのコマンド*<table summary="ネットワーク設定
+*表 5. Bluemix カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド*
+
+
+<table summary="ネットワーク設定
 の管理に使用することができる Bluemix コマンド。">
  <thead>
  <th colspan="5">ネットワーク設定を管理するためのコマンド</th>
@@ -328,9 +336,9 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
 {: #bluemix_help}
 {{site.data.keyword.Bluemix_notm}} CLI の第 1 レベルの組み込みコマンドおよびサポートされる名前空間に関する一般ヘルプを表示するか、または、特定の組み込みコマンドまたは名前空間に関するヘルプを表示します。
 
-```
+
 bluemix help [COMMAND|NAMESPACE]
-```
+
 
 <strong>前提条件</strong>: なし
 
@@ -347,42 +355,42 @@ bluemix help [COMMAND|NAMESPACE]
 
 {{site.data.keyword.Bluemix_notm}} CLI の一般ヘルプを表示します。
 
-```
+
 bluemix help
-```
+
 
 `info` コマンドのヘルプを表示します。
 
-```
+
 bluemix help info
-```
+
 
 `ic` 名前空間のヘルプを表示します。
 
-```
+
 bluemix help ic
-```
+
 
 または 
 
-```
+
 bluemix ic help
-```
+
 
 `ic` 名前空間の下の `group-create` コマンドのヘルプを表示します。
 
-```
+
 bluemix ic help group-create
-```
+
 
 
 ## bluemix api
 {: #bluemix_api}
 {{site.data.keyword.Bluemix_notm}} API エンドポイントを設定または表示します。このコマンドは `cf api` コマンドをラップします。
 
-```
-bluemix api [API_ENDPOINT][--unset]
-```
+
+bluemix api [API_ENDPOINT] [--unset]
+
 
 <strong>前提条件</strong>: なし
 
@@ -398,21 +406,21 @@ bluemix api [API_ENDPOINT][--unset]
 
 API エンドポイントを api.ng.bluemix.net に設定します。
 
-```
+
 bluemix api api.ng.bluemix.net
-```
+
 
 現行 API エンドポイントを表示します。
 
-```
+
 bluemix api
-```
+
 
 API エンドポイントを設定解除します。
 
-```
+
 bluemix api --unset
-```
+
 
 
 ## bluemix login
@@ -420,23 +428,27 @@ bluemix api --unset
 
 ユーザーをログインします。このコマンドは `cf login` コマンドをラップします。コマンド・オプションは `cf login` コマンドのオプションと同じです。
 
-```
+
 bluemix login [OPTIONS...]
-```
+
 
 <strong>前提条件</strong>: エンドポイント
 
+<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
+
 <strong>コマンド・オプション</strong>: `login` コマンドでサポートされるオプションについては、アプリケーション管理用 cf コマンドの `cf login` コマンド使用法の説明を参照してください。
 
+<strong>注</Strong>:
+フェデレーテッド ID でログインする場合は、「--sso」オプションを使用し、ワンタイム・パスコードを使って認証します。
 
 ## bluemix logout
 {: #bluemix_logout}
 
 ユーザーをログアウトします。このコマンドは `cf logout` コマンドをラップします。
 
-```
+
 bluemix logout
-```
+
 
 <strong>前提条件</strong>: なし
 
@@ -447,9 +459,9 @@ bluemix logout
 
 ターゲットの組織またはスペースを設定または表示します。このコマンドは `cf target` コマンドをラップします。
 
-```
+
 bluemix target [-o ORG_NAME] [-s SPACE_NAME]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -460,17 +472,19 @@ bluemix target [-o ORG_NAME] [-s SPACE_NAME]
    <dt>-s <i>SPACE_NAME</i> (オプション)</dt>
    <dd>ターゲットとなるスペースの名前。</dd>
    </dl>
--o *ORG_NAME* と -s *SPACE_NAME* のどちらも指定されない場合、現行の組織およびスペースが表示されます。<strong>例</strong>:現行の組織を `MyOrg` に、スペースを `MySpace` に設定します。
+-o *ORG_NAME* と -s *SPACE_NAME* のどちらも指定されない場合、現行の組織およびスペースが表示されます。<strong>例</strong>:
 
-```
+現行の組織を `MyOrg` に、スペースを `MySpace` に設定します。
+
+
 bluemix target -o MyOrg -s MySpace
-```
+
 
 現行の組織およびスペースを表示します。
 
-```
+
 bluemix target
-```
+
 
 
 ## bluemix info
@@ -478,9 +492,9 @@ bluemix target
 
 基本的な {{site.data.keyword.Bluemix_notm}} 情報を表示します。これには、現行領域、クラウド・コントローラーのバージョン、および、いくつかの有用なエンドポイント (例えば、ログイン用のエンドポイントや、アクセス・トークン交換用のエンドポイントなど) が含まれます。
 
-```
+
 bluemix info
-```
+
 
 <strong>前提条件</strong>: エンドポイント
 
@@ -491,9 +505,9 @@ bluemix info
 
 構成ファイルにデフォルト値を書き込みます。
 
-```
+
 bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/file) | --color (true|false) | --locale (LOCALE|CLEAR) | --check-version (true|false)
-```
+
 
 <strong>前提条件</strong>: なし
 
@@ -517,39 +531,39 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
 
 次のように、HTTP 要求タイムアウトを 30 秒に設定します。
 
-```
+
 bluemix config --http-timeout 30
-```
+
 
 次のように、HTTP 要求のトレース出力を使用可能にします。
 
-```
+
 bluemix config --trace true
-```
+
 
 次のように、指定されたファイル */home/usera/my_trace* への HTTP 要求をトレースします。
 
-```
+
 bluemix config --trace /home/usera/my_trace
-```
+
 
 次のように、カラー出力を使用不可にします。
 
-```
+
 bluemix config --color false
-```
+
 
 次のように、ロケールを zh_Hans に設定します。
 
-```
+
 bluemix config --locale zh_Hans
-```
+
 
 次のように、ロケール設定をクリアします。
 
-```
+
 bluemix config --locale CLEAR
-```
+
 
 
 ## bluemix list
@@ -557,9 +571,9 @@ bluemix config --locale CLEAR
 
 現行スペース内のすべての cf アプリケーション、コンテナー、コンテナー・グループ、および VM グループをリストします。
 
-```
+
 bluemix list [apps|containers|container-groups|vm-groups]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -580,21 +594,21 @@ bluemix list [apps|containers|container-groups|vm-groups]
 
 すべての cf アプリケーションをリストします。
 
-```
+
 bluemix list apps
-```
+
 
 すべてのコンテナー・インスタンスをリストします。
 
-```
+
 bluemix list containers
-```
+
 
 すべてのアプリケーション、コンテナー、コンテナー・グループ、および VM グループをリストします。
 
-```
+
 bluemix list
-```
+
 
 
 ## bluemix scale
@@ -604,9 +618,9 @@ cf アプリケーションまたはコンテナー・グループを、指定�
 
 **注:** コンテナー・グループのスケーリングに指定できるのはインスタンス数のみです。オプションが何も指定されない場合、このコマンドは、コンテナー・グループの現行インスタンス数をリストし、cf アプリケーションではディスク割り当て量とメモリー・サイズもリストします。
 
-```
-bluemix scale CF_APP_NAME|CONTAINER_GROUP_NAME [-i INSTANCE_COUNT][-k DISK_QUOTA] [-m MEMORY_SIZE]
-```
+
+bluemix scale CF_APP_NAME|CONTAINER_GROUP_NAME [-i INSTANCE_COUNT] [-k DISK_QUOTA] [-m MEMORY_SIZE]
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -621,23 +635,25 @@ bluemix scale CF_APP_NAME|CONTAINER_GROUP_NAME [-i INSTANCE_COUNT][-k DISK_QUOTA
    <dt>-m <i>MEMORY_SIZE</i> (オプション)</dt>
    <dd>cf アプリケーションの新しいメモリー・サイズ。コンテナー・グループのスケーリングの場合は無効です。</dd>
     </dl>
-<strong>例</strong>:`my-container-group` の現行インスタンス数を表示します。
+<strong>例</strong>:
 
-```
+`my-container-group` の現行インスタンス数を表示します。
+
+
 bluemix scale my-container-group
-```
+
 
 `my-container-group` を 2 インスタンスにスケーリングします。
 
-```
+
 bluemix scale my-container-group -i 2
-```
+
 
 `my-java-app` を、3 インスタンス、8G ディスク割り当て量、および 1024M メモリー・サイズにスケーリングします。
 
-```
+
 bluemix scale my-java-app -i 3 -k 8G -m 1024M
-```
+
 
 
 ## bluemix curl
@@ -645,9 +661,9 @@ bluemix scale my-java-app -i 3 -k 8G -m 1024M
 
 {{site.data.keyword.Bluemix_notm}} への未加工 HTTP 要求を実行します。*Content-Type* はデフォルトで *application/json* に設定されます。このコマンドは、要求を {{site.data.keyword.Bluemix_notm}} マルチクラウド制御プロキシーに送信します。サポートされるパスについては、[CloudFoundry API 資料](http://apidocs.cloudfoundry.org/){: new_window}内の API パス定義を参照してください。
 
-```
+
 bluemix curl PATH [OPTIONS...]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -663,9 +679,9 @@ bluemix curl PATH [OPTIONS...]
 
 現行アカウントのすべての組織に関する情報を表示するには、次のように指定します。
 
-```
+
 bluemix curl /v2/organizations
-```
+
 
 
 ## bluemix iam orgs
@@ -673,9 +689,9 @@ bluemix curl /v2/organizations
 
 すべての組織をリストします。
 
-```
+
 bluemix iam orgs [-r REGION --guid]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -692,18 +708,18 @@ bluemix iam orgs [-r REGION --guid]
 地域 `us-south` 内のすべての組織を、GUID の
 出力と共にリストします。
 
-```
+
 bluemix iam orgs -r us-south --guid
-```
+
 
 ## bluemix iam org
 {: #bluemix_iam_org}
 
 指定された組織の情報を表示します。
 
-```
+
 bluemix iam org ORG_NAME [--guid]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -720,18 +736,18 @@ bluemix iam org ORG_NAME [--guid]
 組織 `IBM`
 の情報を、GUID の出力と共に表示します
 
-```
+
 bluemix iam org IBM --guid
-```
+
 
 ## bluemix iam org-create
 {: #bluemix_iam_org_create}
 
 新しい組織を作成します。この操作は、アカウントの所有者のみが実行できます。  
 
-```
+
 bluemix iam org-create ORG_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -745,9 +761,9 @@ bluemix iam org-create ORG_NAME
 
 名前が `IBM` という組織を作成します。
 
-```
+
 bluemix iam org-create IBM
-```
+
 
 
 ## bluemix iam org-replicate
@@ -755,9 +771,9 @@ bluemix iam org-create IBM
 
 現在の地域から別の地域に組織を複製します。
 
-```
+
 bluemix iam org-replicate ORG_NAME REGION_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -773,9 +789,9 @@ bluemix iam org-replicate ORG_NAME REGION_NAME
 
 組織 `myorg` を地域 `eu-gb` に複製します。
 
-```
+
 bluemix iam org-replicate myorg eu-gb
-```
+
 
 
 ## bluemix iam org-rename
@@ -783,9 +799,9 @@ bluemix iam org-replicate myorg eu-gb
 
 組織の名前を変更します。この操作は、組織の管理者のみが実行できます。
 
-```
+
 bluemix iam org-rename OLD_ORG_NAME NEW_ORG_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -802,9 +818,9 @@ bluemix iam org-rename OLD_ORG_NAME NEW_ORG_NAME
 
 現行地域内の指定された組織を削除します。
 
-```
+
 bluemix iam org-delete ORG_NAME [-f --all]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -857,19 +873,19 @@ bluemix iam org-delete ORG_NAME [-f --all]
 
 アカウントに関連付けられているユーザーを表示します。この操作は、アカウントの所有者のみが実行できます。
 
-```
+
 bluemix iam account-users
-```
+
 
 ## bluemix iam account-user-invite
-{: #bluemix_iam_account-user-inviate}
+{: #bluemix_iam_account-user-invite}
 
 
 組織とスペースの役割が既に設定されているアカウントにユーザーを招待します。この操作は、アカウントの所有者のみが実行できます。
 
-```
+
 bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -904,18 +920,18 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
 
 ユーザー `Mary` を組織 `IBM` に役割 `OrgManager` として招待し、スペース `Cloud` に役割 `SpaceAuditor` として招待するには、次のように指定します。
 
-```
-bluemix iam account-user-inviate Mary IBM OrgManager Cloud SpaceAuditor
-```
+
+bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
+
 
 ## bluemix iam org-users
 {: #bluemix_iam_org_users}
 
 指定された組織内のユーザーを役割別に表示します
 
-```
+
 bluemix iam org-users ORG_NAME [-a]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -933,9 +949,9 @@ bluemix iam org-users ORG_NAME [-a]
 
 組織の役割をユーザーに割り当てます。この操作は、組織の管理者のみが実行できます。  
 
-```
+
 bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -961,9 +977,9 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
 
 ユーザー `Mary` を組織 `IBM` に役割 `OrgManager` として割り当てるには、次のように指定します。
 
-```
+
 bluemix iam org-role-set Mary IBM OrgManager
-```
+
 
 
 ## bluemix iam org-role-unset
@@ -971,9 +987,9 @@ bluemix iam org-role-set Mary IBM OrgManager
 
 組織の役割をユーザーから削除します。この操作は、組織の管理者のみが実行できます。  
 
-```
+
 bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -997,9 +1013,9 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
 
 ユーザー `Mary` を組織 `IBM` の役割 `OrgManager` から削除するには、次のように指定します。
 
-```
+
 bluemix iam org-role-unset Mary IBM OrgManager
-```
+
 
 
 ## bluemix iam space-users
@@ -1007,9 +1023,9 @@ bluemix iam org-role-unset Mary IBM OrgManager
 
 指定されたスペース内のユーザーを役割別に表示します
 
-```
+
 bluemix iam space-users ORG_NAME SPACE_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -1027,9 +1043,9 @@ bluemix iam space-users ORG_NAME SPACE_NAME
 
 スペースの役割をユーザーに割り当てます。この操作は、スペースの管理者のみが実行できます。  
 
-```
+
 bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -1055,18 +1071,18 @@ bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
 ユーザー `Mary` を組織 `IBM` およびスペース `Cloud` に役割 `SpaceManager` として割り当てるには、次のように指定します。
 
-```
+
 bluemix iam space-role-set Mary IBM Cloud SpaceManager
-```
+
 
 ## bluemix iam space-role-unset
 {: #bluemix_iam_space_role_unset}
 
 スペースの役割をユーザーから削除します。この操作は、スペースの管理者のみが実行できます。  
 
-```
+
 bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -1093,9 +1109,9 @@ bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
 ユーザー `Mary` を組織 `IBM` と、役割 `SpaceManager` としてのスペース `Cloud` から削除するには、次のように指定します。
 
-```
+
 bluemix iam space-role-unset Mary IBM Cloud SpaceManager
-```
+
 
 
 ## bluemix app push
@@ -1316,9 +1332,9 @@ bluemix iam space-role-unset Mary IBM Cloud SpaceManager
 
 Bluemix のボイラープレート・テンプレートを表示します。
 
-```
+
 bluemix catalog templates [-d]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -1336,9 +1352,9 @@ bluemix catalog templates [-d]
 
 指定されたボイラープレート・テンプレートの詳細情報を表示します。
 
-```
+
 bluemix catalog template TEMPLATE_ID
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -1354,9 +1370,9 @@ bluemix catalog template TEMPLATE_ID
 
 テンプレート `mobileBackendStarter` の詳細を表示します。
 
-```
+
 bluemix catalog template mobileBackendStarter
-```
+
 
 
 ## bluemix catalog template-run
@@ -1364,9 +1380,9 @@ bluemix catalog template mobileBackendStarter
 
 指定されたテンプレートをベースにした、指定された URL と説明を持つ cf アプリケーションを作成します。デフォルトでは、この新規アプリケーションは自動的に開始されます。
 
-```
+
 bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -1390,21 +1406,21 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTIO
 
 `javaHelloWorld` テンプレートをベースにして cf アプリケーション `my-app` を作成します。
 
-```
+
 bluemix catalog template-run javaHelloWorld my-app
-```
+
 
 `rubyHelloWorld` テンプレートに基づき、経路 `myrubyapp.ng.bluemix.net` と説明 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.` を使用してアプリケーション `my-ruby-app` を作成するには、以下のように指定します。
 
-```
+
 bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.ng.bluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
-```
+
 
 `pythonHelloWorld` テンプレートをベースにして、自動開始なしでアプリケーション `my-python-app` を作成します。
 
-```
+
 bluemix catalog template-run pythonHelloWorld my-python-app --no-start
-```
+
 
 
 ## bluemix network regions
@@ -1412,9 +1428,9 @@ bluemix catalog template-run pythonHelloWorld my-python-app --no-start
 
 {{site.data.keyword.Bluemix_notm}} のすべての地域の情報を表示します。
 
-```
+
 bluemix network regions
-```
+
 
 <strong>前提条件</strong>: エンドポイント
 
@@ -1424,9 +1440,9 @@ bluemix network regions
 
 指定された地域に切り替えます。このコマンドは、可能な場合、新しい地域の同じ組織およびスペースに自動的にターゲットを変更します。さもなければ、コマンドは、ユーザーが既にログインしている場合、新しい組織とスペースを選択するようユーザーにプロンプトを出します。API エンドポイントはそれに合わせて変更されます。
 
-```
+
 bluemix network region-set REGION_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント
 
@@ -1441,9 +1457,9 @@ bluemix network region-set REGION_NAME
 
 現行地域を `eu-gb` に設定します。
 
-```
+
 bluemix network region-set eu-gb
-```
+
 
 
 ## bluemix network routes
@@ -1463,9 +1479,9 @@ bluemix network region-set eu-gb
 
 指定されたドメインおよびホスト名を持つ経路を既存 cf アプリケーションまたはコンテナー・グループにマップします。
 
-```
+
 bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -1485,15 +1501,15 @@ bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST
 
 指定されたドメインで `my-app` に経路をマップします。
 
-```
+
 bluemix network route-map my-app mybluemix.net
-```
+
 
 指定されたドメインとホスト名で「my-container-group」に経路をマップします。
 
-```
+
 bluemix network route-map my-container-group ng.bluemix.net -n abc
-```
+
 
 
 ## bluemix network route-unmap
@@ -1501,9 +1517,9 @@ bluemix network route-map my-container-group ng.bluemix.net -n abc
 
 指定された経路を既存 cf アプリケーションまたはコンテナー・グループからマップ解除します。
 
-```
+
 bluemix network route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -1522,15 +1538,15 @@ bluemix network route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HO
 
 `my-app.mybluemix.net` を `my-app` からマップ解除するには、以下のように指定します。
 
-```
+
 bluemix network route-unmap my-app mybluemix.net
-```
+
 
 `abc.ng.bluexmix.net` を `my-container-group` からマップ解除するには、以下のように指定します。
 
-```
+
 bluemix network route-unmap my-container-group ng.bluemix.net -n abc
-```
+
 
 
 ## bluemix network route-create
@@ -1581,14 +1597,93 @@ bluemix network route-unmap my-container-group ng.bluemix.net -n abc
 このコマンドの機能とオプションは `cf delete-shared-domain` コマンドと同じです。
 
 
+
+## bluemix bss account-usage
+{: #bluemix_bss_account_usage}
+
+アカウントの月次使用量とコストを表示します。
+
+
+bluemix bss account-usage [-d YYYY-MM] [--json]
+
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+
+<dl>
+  <dt>-d MONTH_DATE (オプション)</dt>
+  <dd>YYYY-MM 形式を使用して指定する日付のデータを表示します。指定されていない場合、今月の使用量が表示されます。</dd>
+  <dt>--json (オプション)</dt>
+  <dd>使用量の結果を JSON 形式で表示します。</dd>
+</dl>
+
+<strong>例</strong>:
+
+2016 年 6 月のマイ・アカウントの使用量とコストのレポートを表示します。
+
+
+bluemix bss account-usage -d 2016-06
+
+
+## bluemix bss org-usage
+{: #bluemix_bss_org_usage}
+
+組織の月次使用量の詳細を表示します。この操作は、組織の請求管理者のみ実行できます。
+
+
+bluemix bss org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
+
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+
+<dl>
+  <dt>ORG_NAME (必須)</dt>
+  <dd>組織の名前。</dd>
+  <dt>-d MONTH_DATE (オプション)</dt>
+  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。指定されていない場合、今月の使用量が表示されます。</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>組織をホストする地域の名前。「all」に設定されている場合、すべての地域の組織の使用量が表示されます。</dd>
+  <dt>--json (オプション)</dt>
+  <dd>使用量の結果を JSON 形式で表示します。</dd>
+</dl>
+
+
+
+## bluemix bss orgs-usage-summary
+{: #bluemix_bss_orgs_usage_summary}
+
+マイ・アカウント内の組織の月次使用量サマリーを表示します。
+
+
+bluemix bss orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
+
+
+<strong>前提条件</strong>: エンドポイント、ログイン
+
+<strong>コマンド・オプション</strong>:
+
+<dl>
+  <dt>-d MONTH_DATE (オプション)</dt>
+  <dd>YYYY-MM 形式を使用して指定された日付のデータを表示します。指定されていない場合、今月の使用量が表示されます。</dd>
+  <dt>-r REGION_NAME</dt>
+  <dd>組織をホストする地域の名前。「all」に設定されている場合、すべての地域の組織の使用量サマリーが表示されます。</dd>
+  <dt>--json (オプション)</dt>
+  <dd>使用量の結果を JSON 形式で表示します。</dd>
+</dl>
+
+
+
 ## bluemix security cert
 {: #bluemix_security_cert}
 
 ドメインの証明書情報をリストします。
 
-```
+
 bluemix security cert DOMAIN_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン
 
@@ -1605,9 +1700,9 @@ bluemix security cert DOMAIN_NAME
 
 ドメイン `ibmcxo-eventconnect.com` の証明書情報を表示するには、次のように指定します。
 
-```
+
 bluemix security cert ibmcxo-eventconnect.com
-```
+
 
 
 ## bluemix security cert-add
@@ -1615,9 +1710,9 @@ bluemix security cert ibmcxo-eventconnect.com
 
 現在の組織内の、指定したドメインに証明書を追加します。
 
-```
-bluemix security cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD][-i INTERMEDIATE_CERT_FILE] [--verify-client]
-```
+
+bluemix security cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [--verify-client]
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -1642,9 +1737,9 @@ bluemix security cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD][
 
 ドメイン `ibmcxo-eventconnect.com` に証明書を追加するには、以下のように指定します。
 
-```
+
 bluemix security cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
-```
+
 
 
 ## bluemix security cert-remove
@@ -1652,9 +1747,9 @@ bluemix security cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.c
 
 現在の組織内の、指定したドメインから証明書を削除します。
 
-```
+
 bluemix security cert-remove DOMAIN [-f]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -1669,15 +1764,14 @@ bluemix security cert-remove DOMAIN [-f]
 
 
 
-
 ## bluemix plugin repos
 {: #bluemix_plugin_repos}
 
 {{site.data.keyword.Bluemix_notm}} CLI に登録されているすべてのプラグイン・リポジトリーをリストします。
 
-```
+
 bluemix plugin repos
-```
+
 
 <strong>前提条件</strong>: なし
 
@@ -1687,9 +1781,9 @@ bluemix plugin repos
 
 新規プラグイン・リポジトリーを {{site.data.keyword.Bluemix_notm}} CLI に追加します。
 
-```
+
 bluemix plugin repo-add REPO_NAME REPO_URL
-```
+
 
 <strong>前提条件</strong>: なし
 
@@ -1707,9 +1801,9 @@ bluemix plugin repo-add REPO_NAME REPO_URL
 
 Bluemix CLI の公式プラグイン・リポジトリーを `bluemix-repo` として追加します。
 
-```
+
 bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
-```
+
 
 
 ## bluemix plugin repo-remove
@@ -1717,9 +1811,9 @@ bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 
 {{site.data.keyword.Bluemix_notm}} CLI からプラグイン・リポジトリーを削除します。
 
-```
+
 bluemix plugin repo-remove REPO_NAME
-```
+
 
 <strong>前提条件</strong>: なし
 
@@ -1733,9 +1827,9 @@ bluemix plugin repo-remove REPO_NAME
 
 {{site.data.keyword.Bluemix_notm}} CLI から `bluemix-repo` リポジトリーを削除します。
 
-```
+
 bluemix plugin repo-remove bluemix-repo
-```
+
 
 
 ## bluemix plugin repo-plugins
@@ -1743,9 +1837,9 @@ bluemix plugin repo-remove bluemix-repo
 
 追加されたすべてのリポジトリーまたは特定のリポジトリー内にある使用可能なプラグインをすべてリストします。
 
-```
+
 bluemix plugin repo-plugins [-r REPO_NAME]
-```
+
 
 <strong>前提条件</strong>: なし
 
@@ -1760,15 +1854,15 @@ bluemix plugin repo-plugins [-r REPO_NAME]
 
 追加されたすべてのリポジトリー内のすべてのプラグインをリストします。
 
-```
+
 bluemix plugin repo-plugins
-```
+
 
 `bluemix-repo` リポジトリー内のすべてのプラグインをリストします。
 
-```
+
 bluemix plugin repo-plugins -r bluemix-repo
-```
+
 
 
 ## bluemix plugin list
@@ -1776,9 +1870,9 @@ bluemix plugin repo-plugins -r bluemix-repo
 
 {{site.data.keyword.Bluemix_notm}} CLI 内のインストールされたプラグインをすべてリストします。
 
-```
+
 bluemix plugin list
-```
+
 
 <strong>前提条件</strong>: なし
 
@@ -1788,9 +1882,9 @@ bluemix plugin list
 
 指定したパスまたはリポジトリーから、特定のバージョンのプラグインを {{site.data.keyword.Bluemix_notm}} CLI にインストールします。
 
-```
-bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME][-v VERSION]
-```
+
+bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
+
 
 <strong>前提条件</strong>: なし
 
@@ -1810,26 +1904,26 @@ bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME][-v VERSION]
 
 ローカル・ファイルからプラグインをインストールします。
 
-```
+
 bluemix plugin install /downloads/new_plugin
-```
+
 
 リモート URL からプラグインをインストールします。
 
-```
+
 bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
-```
+
 
 最新バージョンの `IBM-Containers` プラグインを `bluemix-repo` リポジトリーからインストールするには、以下のように指定します。
 
-```
+
 bluemix plugin install IBM-Containers -r bluemix-repo
-```
+
 バージョン `0.5.800` の `IBM-Containers` プラグインを `bluemix-repo` リポジトリーからインストールするには、以下のように指定します。
 
-```
+
 bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
-```
+
 
 
 
@@ -1841,9 +1935,9 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 
 指定されたプラグインを {{site.data.keyword.Bluemix_notm}} CLI からアンインストールします。
 
-```
+
 bluemix plugin uninstall PLUGIN_NAME
-```
+
 
 <strong>前提条件</strong>: なし
 
@@ -1858,9 +1952,9 @@ bluemix plugin uninstall PLUGIN_NAME
 
 前にインストールされた `IBM-Containers` プラグインをアンインストールします。
 
-```
+
 bluemix plugin uninstall IBM-Containers
-```
+
 
 
 ## bluemix ic init
@@ -1868,9 +1962,9 @@ bluemix plugin uninstall IBM-Containers
 
 IBM Containers サービスの全機能を使用できるようにローカル・マシン上のコンテナー環境を初期化します。
 
-```
+
 bluemix ic init
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -1880,9 +1974,9 @@ bluemix ic init
 
 `us-south` 地域に切り替えます。
 
-```
+
 bluemix region-set us-south
-```
+
 
 
 ## bluemix ic attach
@@ -1890,9 +1984,9 @@ bluemix region-set us-south
 
 実行中のコンテナーを制御するか、その出力を表示します。終了してコンテナーを停止するには `CTRL+C` を使用します。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [attach](https://docs.docker.com/reference/commandline/attach/){: new_window} コマンドを参照してください。 
 
-```
-bluemix ic attach [--no-stdin][--sig-proxy] CONTAINER
-```
+
+bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -1911,9 +2005,9 @@ bluemix ic attach [--no-stdin][--sig-proxy] CONTAINER
 
 次の例は、コンテナー `my_container` にアタッチする要求です。
 
-```
+
 bluemix ic attach my_container
-```
+
 
 
 ## bluemix ic build
@@ -1921,9 +2015,9 @@ bluemix ic attach my_container
 
 IBM Containers ビルド・サービスを呼び出して、Docker イメージをローカルにビルドするか、またはプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内にビルドします。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [build](https://docs.docker.com/reference/commandline/build/){: new_window} コマンドを参照してください。 
 
-```
-bluemix ic build -t TAG|--tag TAG [--no-cache][-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
-```
+
+bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -1948,9 +2042,9 @@ bluemix ic build -t TAG|--tag TAG [--no-cache][-p|--pull] [-q|--quiet] DOCKERFIL
 *myimage* という名前のイメージをビルドする要求です。
 ビルドで使用される Dockerfile および他の成果物は、コマンドが実行されるディレクトリーと同じディレクトリー内にあります。レジストリーおよび名前空間がイメージ名と共に含まれているため、イメージは組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内にビルドされます。
 
-```
+
 bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage
-```
+
 
 
 ## bluemix ic create
@@ -1964,9 +2058,9 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage
 
 Docker Hub イメージ、またはローカル・レジストリーからのイメージにアクセスし、そのイメージをプライベート {{site.data.keyword.Bluemix_notm}} リポジトリーにコピーします。
 
-```
+
 bluemix ic cpi SOURCE_IMAGE DESTINATION_IMAGE
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -1982,15 +2076,15 @@ bluemix ic cpi SOURCE_IMAGE DESTINATION_IMAGE
 
 ソース・リポジトリーからプライベート・リポジトリーにイメージをコピーし、そのイメージのタグを追加します。
 
-```
+
 bluemix ic cpi source_repository/source_image_name private_registry_URL/destination_image_name:tag
-```
+
 
 `sinatra` イメージを `training` リポジトリーからプライベート・リポジトリー `registry.ng.bluemix.net/mynamespace` にコピーし、そのイメージの名前を `mysinatra` にします。イメージ `mysinatra` 用にタグ `v1` を追加します。 
 
-```
+
 bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
-```
+
 
 
 ## bluemix ic exec
@@ -1999,9 +2093,9 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 
 コンテナー内でコマンドを実行します。詳細については、Docker ヘルプで [exec](https://docs.docker.com/reference/commandline/exec/){: new_window} コマンドを参照してください。
 
-```
-bluemix ic exec [-d|--detach][-it] [-u USER|--user USER] CONTAINER [CMD]
-```
+
+bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -2025,15 +2119,15 @@ bluemix ic exec [-d|--detach][-it] [-u USER|--user USER] CONTAINER [CMD]
 
 `bash` コマンドを `my_container` コンテナー内で対話モードで実行します。
 
-```
+
 bluemix ic exec -it my_container bash
-```
+
 
 `date` コマンドを `my_container` コンテナー内で実行します。
 
-```
+
 bluemix ic exec my_container date
-```
+
 
 
 ## bluemix ic groups
@@ -2041,9 +2135,9 @@ bluemix ic exec my_container date
 
 組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内のコンテナー・グループをリストします。
 
-```
+
 bluemix ic groups
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2053,9 +2147,9 @@ bluemix ic groups
 
 コンテナー・グループの作成時に指定された詳細情報 (環境変数、ポート、メモリーなど) を表示します。
 
-```
+
 bluemix ic group-inspect CONTAINER_GROUP
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2070,9 +2164,9 @@ bluemix ic group-inspect CONTAINER_GROUP
 
 次の例は、コンテナー・グループ `my_group` を検査する要求を示しています。
 
-```
+
 bluemix ic group-inspect my_group
-```
+
 
 
 ## bluemix ic group-instances
@@ -2080,9 +2174,9 @@ bluemix ic group-inspect my_group
 
 指定されたコンテナー・グループのインスタンスをリストします。
 
-```
+
 bluemix ic group-instances CONTAINER_GROUP
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2097,9 +2191,9 @@ bluemix ic group-instances CONTAINER_GROUP
 
 コンテナー・グループ `my_group` のすべてのインスタンスをリストします。
 
-```
+
 bluemix ic group-instances my_group
-```
+
 
 
 ## bluemix ic group-create
@@ -2107,9 +2201,9 @@ bluemix ic group-instances my_group
 
 スケーラブル・コンテナー・グループを作成します。
 
-```
-bluemix ic group-create [-p PORT|--publish port][-m MEMORY|--memory MEMORY] [-e ENV|--env ENV][-v VOLUME:CONTAINER_PATH] [--min MIN][--max MAX] [--desired DESIRED][--auto] [-n HOST|--hostname HOST][-d DOMAIN|--domain DOMAIN] [--name NAME] IMAGE [CMD]
-```
+
+bluemix ic group-create [-p PORT|--publish port] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] [--min MIN] [--max MAX] [--desired DESIRED] [--auto] [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] [--name NAME] IMAGE [CMD]
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2134,10 +2228,8 @@ bluemix ic group-create [-p PORT|--publish port][-m MEMORY|--memory MEMORY] [-e 
 *表 8. 一般的に使用される環境変数*
 
    <dl>
-   <dt>-v VOLUME:CONTAINER_PATH[:ro]|--volume
-VOLUME:CONTAINER_PATH[:ro] (オプション)</dt>
-   <dd><i>VolumeId:ContainerPath[:ro]</i> 形式で詳細を指定して、
-コンテナーにボリュームを接続します。<ul>
+   <dt>-v VOLUME:CONTAINER_PATH[:ro]|--volume VOLUME:CONTAINER_PATH[:ro] (オプション)</dt>
+   <dd><i>VolumeId:ContainerPath[:ro]</i> 形式で詳細を指定して、コンテナーにボリュームを接続します。<ul>
    <li>VOLUME: ボリュームの ID または名前。</li>
    <li>CONTAINER_PATH: コンテナー内でのボリュームへの絶対パス。</li>
    <li>ro (オプション):<i>ro</i> を指定すると、ボリュームはデフォルトの読み取り/書き込みではなく読み取り専用になります。</li></ul>
@@ -2168,8 +2260,7 @@ VOLUME:CONTAINER_PATH[:ro] (オプション)</dt>
    <dd>通常は、このドメインは <i>.mybluemix.net</i> です。ホストとドメインが結合して、完全なパブリック経路 URL (例えば <i>http://mycontainerhost.mybluemix.net</i>) を形成します。<i>bluemix ic group-inspect</i> コマンドを使用してコンテナーの詳細をレビューすると、ホストとドメインが経路として一緒にリストされます。</dd>
    <dt>--name <i>NAME</i> (必須)</dt>
    <dd>グループに名前を割り当てます。<i>-n</i> は推奨されません。<br>
-   <strong>ヒント:</strong> コンテナー名の先頭は文字でなければなりません。名前には、大文字、小
-文字、数字、ピリオド (.)、下線 (_)、およびハイフン (-) を使用できます。</dd>
+   <strong>ヒント:</strong> コンテナー名の先頭は文字でなければなりません。名前には、大文字、小文字、数字、ピリオド (.)、下線 (_)、およびハイフン (-) を使用できます。</dd>
    <dt>IMAGE (必須)</dt>
    <dd>コンテナー・グループ内の各コンテナー・インスタンスに含まれるイ
 メージ。イメージの後にコマンドをリストできますが、イメージの後にオプションを置かないでください。イメージを指定する前に、すべてのオプションを含めてください。<br><br>組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内のイメージを使用する場合、形式 <i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i> でイメージを指定します。<br><br>IBM Containers によって提供されるイメージを使用する場合、組織の名前空間を含めないでください。形式 <i>registry.ng.bluemix.net/IMAGE</i> でイメージを指定してください。</dd>
@@ -2188,21 +2279,21 @@ VOLUME:CONTAINER_PATH[:ro] (オプション)</dt>
 
 IBM Containers によって提供される `registry.ng.bluemix.net/ibmnode` イメージを使用してコンテナー・グループ `my_container_group` を作成し、そのコンテナー・グループで長時間実行コマンド `ping localhost` を実行します。
 
-```
+
 bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode ping localhost
-```
+
 
 IBM Containers によって提供される `registry.ng.bluemix.net/ibmnode` イメージを使用してコンテナー・グループ `my_container_group` を作成し、そのコンテナー・グループで長時間実行コマンド `tail -f /dev/null` を実行します。
 
-```
+
 bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode -- tail -f /dev/null
-```
+
 
 `registry.ng.bluemix.net/ibmliberty` イメージを使用して、スケーラブル・グループ `mygroup` を自動リカバリーを有効にして作成します。ポートは `9080`、ホスト名は `mycontainerhost`、ドメイン名は `.mybluemix.net` です。
 
-```
+
 bluemix ic group-create -p 9080 --auto -n mycontainerhost -d .mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty 
-```
+
 
 
 ## bluemix ic group-update
@@ -2211,9 +2302,9 @@ bluemix ic group-create -p 9080 --auto -n mycontainerhost -d .mybluemix.net --na
 コンテナー・グループを更新します。
 
 
-```
-bluemix ic group-update [--min MIN][--max MAX] [--desired DESIRED][--auto] CONTAINER_GROUP
-```
+
+bluemix ic group-update [--min MIN] [--max MAX] [--desired DESIRED] [--auto] CONTAINER_GROUP
+
 
 **ヒント:** コンテナー・グループのホスト名またはドメインを更新するには、`bluemix ic route-map [-n HOST][-d DOMAIN] CONTAINER_GROUP` を使用します。
 
@@ -2245,9 +2336,9 @@ bluemix ic group-update [--min MIN][--max MAX] [--desired DESIRED][--auto] CONTA
 
 次の例は、コンテナー・グループ `my_group` を更新する要求です。
 
-```
+
 bluemix ic group-update --max 5 my_group
-```
+
 
 
 ## bluemix ic group-remove
@@ -2255,9 +2346,9 @@ bluemix ic group-update --max 5 my_group
 
 組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリーからコンテナー・グループを削除します。
 
-```
+
 bluemix ic group-remove [-f|--force] CONTAINER_GROUP
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2276,9 +2367,9 @@ bluemix ic group-remove [-f|--force] CONTAINER_GROUP
 
 次の例は、コンテナー・グループを削除する要求です。ここで、`my_group` はコンテナー・グループの名前です。
 
-```
+
 bluemix ic group-remove my_group
-```
+
 
 
 ## bluemix ic images
@@ -2286,9 +2377,9 @@ bluemix ic group-remove my_group
 
 組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内の使用可能なすべてのイメージのリストを表示します。詳細については、Docker ヘルプで [images](https://docs.docker.com/reference/commandline/images){: new_window} コマンドを参照してください。リストには、イメージ ID、作成日、およびイメージ名が含まれます。
 
-```
-bluemix ic images [-a|--all][--no-trunc] [-q|--quiet]
-```
+
+bluemix ic images [-a|--all] [--no-trunc] [-q|--quiet]
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -2308,8 +2399,8 @@ bluemix ic images [-a|--all][--no-trunc] [-q|--quiet]
 
 次の例は、組織の使用可能なイメージのリストを受け取る要求です。
 
-```
-bluemix ic images```
+
+bluemix ic images
 
 
 ## bluemix ic inspect
@@ -2317,9 +2408,9 @@ bluemix ic images```
 
 コンテナーに関する情報を表示します。詳細については、Docker ヘルプで [inspect](https://docs.docker.com/reference/commandline/inspect){: new_window} コマンドを参照してください。
 
-```
+
 bluemix ic inspect [IMAGE|images|CONTAINER]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -2344,9 +2435,9 @@ bluemix ic inspect [IMAGE|images|CONTAINER]
 
 次の例は、`proxy` という名前のコンテナーを検査する要求です。
  
-```
+
 bluemix ic inspect proxy
-```
+
 
 
 ## bluemix ic info
@@ -2354,9 +2445,9 @@ bluemix ic inspect proxy
 
 コンテナー・クラウド・サービス・インスタンスの状態を説明する情報を表示します。この情報に含まれるのは、コンテナーの限度、コンテナーの使用状況、実行中のコンテナー、メモリーの限度、メモリーの使用状況、浮動 IP アドレスの限度、浮動 IP アドレスの使用状況、CCS ホスト URL、レジストリー・ホスト URL、およびデバッグ・モード状況です。
 
-```
+
 bluemix ic info
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2366,9 +2457,9 @@ bluemix ic info
 
 ログインしているユーザーが使用可能な浮動 IP アドレスをリストします。このリストには、IP アドレスと、IP アドレスがリンクされている先のコンテナー ID が含まれます。IP アドレスが未使用の場合、コンテナー ID は示されません。
 
-```
+
 bluemix ic ips [-a|--all]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2385,18 +2476,18 @@ bluemix ic ips [-a|--all]
 
 次の例は、使用可能かどうかに関係なく、組織のすべての IP アドレスのリストを受け取る要求です。
 
-```
+
 bluemix ic ips -a
-```
+
 
 
 ## bluemix ic ip-request
 {: #ip_request}
 新しい浮動 IP アドレスを要求します。
 
-```
+
 bluemix ic ip-request
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2406,9 +2497,9 @@ bluemix ic ip-request
 
 コンテナー・クラウド・サービス・インスタンスから浮動 IP アドレスを解放します。
 
-```
+
 bluemix ic ip-release IP_ADDRESS
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2427,9 +2518,9 @@ bluemix ic ip-release IP_ADDRESS
 
 使用可能な浮動 IP アドレスをコンテナーにバインドします。
 
-```
+
 bluemix ic ip-bind IP_ADDRESS CONTAINER
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2446,9 +2537,9 @@ bluemix ic ip-bind IP_ADDRESS CONTAINER
 
 次の例は、IP アドレス `192.123.12.12` をコンテナー `proxy` にバインドする要求です。
 
-```
+
 bluemix ic ip-bind 192.123.12.12 proxy
-```
+
 
 
 ## bluemix ic ip-unbind
@@ -2458,9 +2549,9 @@ bluemix ic ip-bind 192.123.12.12 proxy
 
 パブリック IP アドレスは、IBM Containers の制限付きリソースです。したがって、スペースに割り当てられていてコンテナーにバインドされていないパブリック IP アドレスは、およそ週 1 回の頻度で無料試用ユーザーから定期的に再要求されます。アンバインドされたパブリック IP アドレスは、従量制課金カスタマーまたはサブスクリプション・カスタマーから再要求されることはありません。
 
-```
+
 bluemix ic ip-unbind IP_ADDRESS CONTAINER
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2477,9 +2568,9 @@ bluemix ic ip-unbind IP_ADDRESS CONTAINER
 
 次の例は、IP アドレス `192.123.12.12` をコンテナー `proxy` からアンバインドする要求です。
 
-```
+
 bluemix ic ip-unbind 192.123.12.12 proxy
-```
+
 
 
 ## bluemix ic kill
@@ -2487,9 +2578,9 @@ bluemix ic ip-unbind 192.123.12.12 proxy
 
 コンテナーを停止せずにコンテナー内の実行中のプロセスを停止します。詳細については、Docker ヘルプで [kill](https://docs.docker.com/reference/commandline/kill/){: new_window} コマンドを参照してください。
 
-```
+
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -2507,9 +2598,9 @@ bluemix ic kill [-s CMD|--signal CMD] CONTAINER
 
 次の例は、`proxy` という名前のコンテナー内のプロセスを停止する要求です。
 
-```
+
 bluemix ic kill proxy
-```
+
 
 
 ## bluemix ic namespace-get
@@ -2517,9 +2608,9 @@ bluemix ic kill proxy
 
 ログイン先の組織のプライベート {{site.data.keyword.Bluemix_notm}} イメージ・リポジトリーの名前を表示します。
 
-```
+
 bluemix ic namespace-get
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2531,9 +2622,9 @@ bluemix ic namespace-get
 
 *制限*: リポジトリー名前空間の名前にハイフン (`-`) を使用することはできません。
 
-```
+
 bluemix ic namespace-set NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2552,9 +2643,9 @@ bluemix ic namespace-set NAME
 
 実行中のコンテナー内のすべてのプロセスを休止します。詳細については、Docker ヘルプで [pause](https://docs.docker.com/reference/commandline/pause/){: new_window} コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic unpause](#unpause) コマンドを参照してください。
 
-```
+
 bluemix ic pause CONTAINER
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -2581,9 +2672,9 @@ bluemix ic pause CONTAINER
 
 次の例は、`proxy` という名前のコンテナーを休止する要求です。
 
-```
+
 bluemix ic pause proxy
-```
+
 
 
 ## bluemix ic unpause
@@ -2591,9 +2682,9 @@ bluemix ic pause proxy
 
 実行中のコンテナー内のすべてのプロセスを休止解除します。詳細については、Docker ヘルプで [unpause](https://docs.docker.com/reference/commandline/unpause/){: new_window} コマンドを参照してください。コンテナーを休止する場合は、[bluemix ic pause](#pause) コマンドを参照してください。
 
-```
+
 bluemix ic unpause CONTAINER
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -2621,9 +2712,9 @@ bluemix ic unpause CONTAINER
 
 次の例は、`proxy` という名前のコンテナーを休止解除する要求です。
 
-```
+
 bluemix ic unpause proxy
-```
+
 
 
 ## bluemix ic port
@@ -2636,9 +2727,9 @@ bluemix ic unpause proxy
 {: #bluemix_ic_ps}
 ログインしているユーザーの名前空間で実行中のコンテナーのリストを表示します。デフォルトでは、このコマンドは実行中のコンテナーのみを表示します。詳細については、Docker ヘルプで [ps](https://docs.docker.com/reference/commandline/ps/){: new_window} コマンドを参照してください。
 
-```
-bluemix ic ps [-a|--all][-s|--size] [-l NUM|--limit NUM][-q|--quiet]
-```
+
+bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -2665,9 +2756,9 @@ bluemix ic ps [-a|--all][-s|--size] [-l NUM|--limit NUM][-q|--quiet]
 
 次の例は、実行中と停止状態のすべてのコンテナーを表示する要求です。
 
-```
+
 bluemix ic ps -a
-```
+
 
 
 ## bluemix ic restart
@@ -2675,9 +2766,9 @@ bluemix ic ps -a
 
 コンテナーを再始動します。詳細については、Docker ヘルプで [restart](https://docs.docker.com/reference/commandline/restart/){: new_window} コマンドを参照してください。
 
-```
+
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -2708,9 +2799,9 @@ bluemix ic restart CONTAINER [-t SECS|--time SECS]
 
 次の例は、`proxy` という名前のコンテナーを再始動する要求です。
 
-```
+
 bluemix ic restart proxy
-```
+
 
 
 ## bluemix ic rm
@@ -2718,9 +2809,9 @@ bluemix ic restart proxy
 
 コンテナーを削除します。詳細については、Docker ヘルプで [rm](https://docs.docker.com/reference/commandline/rm/){: new_window} コマンドを参照してください。
 
-```
+
 bluemix ic rm [-f|--force] CONTAINER
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -2751,9 +2842,9 @@ bluemix ic rm [-f|--force] CONTAINER
 
 次の例は、`proxy` という名前のコンテナーを削除する要求です。
 
-```
+
 bluemix ic rm proxy
-```
+
 
 
 ## bluemix ic rmi
@@ -2761,9 +2852,9 @@ bluemix ic rm proxy
 
 ログインしているユーザーの名前空間からイメージを削除します。詳細については、Docker ヘルプで [rmi](https://docs.docker.com/reference/commandline/rmi/){: new_window} コマンドを参照してください。
 
-```
+
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -2800,9 +2891,9 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
 
 次の例は、イメージ `mynamespace/myimage:latest` を削除する要求です。
 
-```
+
 bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
-```
+
 
 
 ## bluemix ic run
@@ -2813,9 +2904,9 @@ bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 
 
 
-```
-bluemix ic run [-p PORT|--publish PORT][-P] [-m MEMORY|--memory MEMORY][-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] -n NAME|--name NAME [--link NAME:ALIAS][-it] IMAGE [CMD [CMD ...]]
-```
+
+bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] -n NAME|--name NAME [--link NAME:ALIAS] [-it] IMAGE [CMD [CMD ...]]
+
 **注:** Cloud Foundry コマンド・ツールがインストー
 ルされていること、および Cloud Foundry トークンがあることを確認してください。
 `bluemix login` および `bluemix ic
@@ -2827,8 +2918,7 @@ init` を使用した正常なログインによって、必要なトークン�
 
    <dl>
    <dt>-p <i>PORT</i>|--publish <i>PORT</i> (オプション)</dt>
-   <dd>HTTP トラフィックのポートを公開します。
-使用するイメージの Dockerfile 内に指定されているポートがあれば、それらのポートを含めます。複数の <i>-p</i> オプションを使用して、複数のポートを含めることができます。ポートを公開すると、パブリック IP アドレスが使用可能な場合、パブリック IP アドレスがコンテナーに自動的にバインドされます。<br><br>コンテナーにバインドしたい IP アドレスがスペース内に既に存在する場合、後でバインドするのでなく、その IP アドレスを指定できます。IP アドレスは、&lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br> 形式で指定する必要があります。<br>スペース用の IP アドレスの要求について詳しくは、<a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a> コマンドを参照してください。<br><br>ポートを指定したら、同じ {{site.data.keyword.Bluemix_notm}} スペース内でホストにアクセスしようとする {{site.data.keyword.Bluemix_notm}} Load Balancer またはコンテナーがアプリを使用できるように設定します。使用するイメージの Dockerfile 内にポートが指定されている場合、そのポートを含めてください。<br><br>
+   <dd>HTTP トラフィックのポートを公開します。使用するイメージの Dockerfile 内に指定されているポートがあれば、それらのポートを含めます。複数の <i>-p</i> オプションを使用して、複数のポートを含めることができます。ポートを公開すると、パブリック IP アドレスが使用可能な場合、パブリック IP アドレスがコンテナーに自動的にバインドされます。<br><br>コンテナーにバインドしたい IP アドレスがスペース内に既に存在する場合、後でバインドするのでなく、その IP アドレスを指定できます。IP アドレスは、&lt;ip-address&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br> 形式で指定する必要があります。<br>スペース用の IP アドレスの要求について詳しくは、<a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a> コマンドを参照してください。<br><br>ポートを指定したら、同じ {{site.data.keyword.Bluemix_notm}} スペース内でホストにアクセスしようとする {{site.data.keyword.Bluemix_notm}} Load Balancer またはコンテナーがアプリを使用できるように設定します。使用するイメージの Dockerfile 内にポートが指定されている場合、そのポートを含めてください。<br><br>
 <strong>ヒント:</strong><ul><li>IBM 認定 Liberty Server イメージ、またはこのイメージの変更版の場合、ポート 9080 を入力します。</li><li>IBM 認定 Node.js イメージ、またはこのイメージの変更版の場合、ポート 8000 を入力します。</li></ul></dd>
    <dt>-P (オプション)</dt>
    <dd>イメージの Dockerfile 内に指定されたポートを HTTP トラフィック
@@ -2860,9 +2950,8 @@ init` を使用した正常なログインによって、必要なトークン�
    <li>ro (オプション):<i>ro</i> を指定すると、ボリュームはデフォルトの読み取り/書き込みではなく読み取り専用になります。</li></ul>
    </dd>
    <dt>-n <i>NAME</i>|--name <i>NAME</i> (必須)</dt>
-   <dd>コンテナーに名前を割り当てます。<br> <strong>ヒント:</strong> コンテナー名の先頭は文字でなければなりません。
-名前には、大文字、小文字、数字、ピリオド (.)、下線 (_)、およびハイフ
-ン (-) を使用できます。</dd>
+   <dd>コンテナーに名前を割り当てます。<br> <strong>ヒント:</strong> コンテナー名の先頭は文字でなければなりません。名前には、大文字、小
+文字、数字、ピリオド (.)、下線 (_)、およびハイフン (-) を使用できます。</dd>
    <dt>--link <i>NAME</i>:<i>ALIAS</i> (オプション)</dt>
    <dd>あるコンテナーが実行中の別のコンテナーと通信するようにしたい場合は、ホスト名の別名を使用してそのコンテナーを指定できます。</dd>
    <dt>-it (オプション)</dt>
@@ -2880,28 +2969,28 @@ IBM Containers によって提供されるイメージを使用する場合は�
 
 `registry.ng.bluemix.net/ibmnode` イメージに基づいて作成された `my_container` コンテナーで、長時間実行コマンド `sh -c "while true; do date; sleep 20; done"` を実行します。
  
-```
+
 bluemix ic run --name my_container registry.ng.bluemix.net/ibmnode -- sh -c "while true; do date; sleep 20; done"
-```
+
 
 
 `my_namespace/nginx` イメージを使用して、メモリー限度が `1024` MB のコンテナー `proxy` を作成し、開始します。ここで、`my_namespace` は、ログイン・ユーザーと関連付けられた名前空間です。
 
-```
+
 bluemix ic run -n proxy -m 1024 registry.ng.bluemix.net/my_namespace/nginx
-```
+
 
 `my_namespace/blog` イメージを使用してコンテナーを作成して開始し、資格情報を環境変数として渡します。`my_namespace` は、ログイン・ユーザーと関連付けられた名前空間です。
 
-```
+
 bluemix ic run -n my_container -e USER=johnsmith -e PASS=password registry.ng.bluemix.net/my_namespace/blog
-```
+
 
 `my_namespace/blog` イメージを使用してボリュームをコンテナーに追加します。ここで、`my_namespace` は、ログイン・ユーザーに関連付けられた名前空間です。
 
-```
+
 bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path registry.ng.bluemix.net/my_namespace/blog
-```
+
 
 
 ## bluemix ic route-map
@@ -2909,9 +2998,9 @@ bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path regi
 
 コンテナー・グループへのアクセスに使用するインターネット・トラフィックの経路を設定します。このコマンドを使用して、新規経路を設定するか、既存の経路を更新できます。
 
-```
-bluemix ic route-map [-n HOST|--hostname HOST][-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
-```
+
+bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2932,9 +3021,9 @@ bluemix ic route-map [-n HOST|--hostname HOST][-d DOMAIN|--domain DOMAIN] CONTAI
 次の例は、`GROUP1` と呼ばれるグループ
 の経路をマップする要求です。ここで、`my_host` はホス
 ト名で、`organization.com` はドメインです。
-```
+
 bluemix ic route-map -n my_host -d organization.com GROUP1
-```
+
 
 
 ## bluemix ic route-unmap
@@ -2942,9 +3031,9 @@ bluemix ic route-map -n my_host -d organization.com GROUP1
 
 コンテナー・グループへのアクセスに使用するインターネット・トラフィックの経路を設定します。このコマンドを使用して、新規経路を設定するか、既存の経路を更新できます。
 
-```
-bluemix ic route-unmap [-n HOST|--hostname HOST][-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
-```
+
+bluemix ic route-unmap [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -2964,18 +3053,18 @@ bluemix ic route-unmap [-n HOST|--hostname HOST][-d DOMAIN|--domain DOMAIN] CONT
 次の例は、`GROUP1` と呼ばれるグループ
 の経路をマップ解除する要求です。ここで、`my_host` は
 ホスト名、`organization.com` はドメインです。
-```
+
 bluemix ic route-unmap -n my_host -d organization.com GROUP1
-```
+
 
 
 ## bluemix ic start
 {: #ic_start}
 停止しているコンテナーを開始します。詳細については、Docker ヘルプで [start](https://docs.docker.com/reference/commandline/start/){: new_window} コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic stop](#ic_stop) コマンドを参照してください。
 
-```
+
 bluemix ic start CONTAINER
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -3004,18 +3093,18 @@ bluemix ic start CONTAINER
 
 次の例は、`proxy` という名前のコンテナーを開始する要求です。
 
-```
+
 bluemix ic start proxy
-```
+
 
 
 ## bluemix ic stop  
 {: #ic_stop}
 実行中のコンテナーを停止します。詳細については、Docker ヘルプで [stop](https://docs.docker.com/reference/commandline/stop/){: new_window} コマンドを参照してください。コンテナーを開始する場合は、[bluemix ic start](#ic_start) コマンドを参照してください。
 
-```
+
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -3045,9 +3134,9 @@ bluemix ic stop CONTAINER [-t SECS|--time SECS]
 
 次の例は、`proxy` という名前のコンテナーを停止する要求です。
 
-```
+
 bluemix ic stop proxy
-```
+
 
 
 ## bluemix ic stats
@@ -3055,9 +3144,9 @@ bluemix ic stop proxy
 
 1 つ以上のコンテナーについて、使用状況統計をライブで表示します。終了するには `CTRL+C` を使用します。詳細については、Docker ヘルプで [stats](https://docs.docker.com/reference/commandline/stats/){: new_window} コマンドを参照してください。
 
-```
+
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -3074,9 +3163,9 @@ bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
 
 次の例は、1 つのコンテナーについての最新の統計情報を表示する要求です。
 
-```
+
 bluemix ic stats --no-stream my_container
-```
+
 
 
 ## bluemix ic top
@@ -3084,9 +3173,9 @@ bluemix ic stats --no-stream my_container
 
 コンテナーで実行されているプロセスを表示します。詳細については、Docker ヘルプで [top](https://docs.docker.com/reference/commandline/top/){: new_window} コマンドを参照してください。
 
-```
+
 bluemix ic top CONTAINER [CONTAINER]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -3101,9 +3190,9 @@ bluemix ic top CONTAINER [CONTAINER]
 
 次の例は、`my_container` という名前のコンテナー内のプロセスを表示する要求です。
 
-```
+
 bluemix ic top my_container
-```
+
 
 
 ## bluemix ic volumes
@@ -3111,9 +3200,9 @@ bluemix ic top my_container
 
 ボリュームをリストします。
 
-```
+
 bluemix ic volumes
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -3124,9 +3213,9 @@ bluemix ic volumes
 ボリュームを検査します。
 
 
-```
+
 bluemix ic volume-inspect VOLUME_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -3141,9 +3230,9 @@ bluemix ic volume-inspect VOLUME_NAME
 
 次の例は、ボリュームを検査する要求です。ここで、`volume_name` はボリュームの名前です。
 
-```
+
 bluemix ic volume-inspect volume_name
-```
+
 
 
 ## bluemix ic volume-create
@@ -3151,9 +3240,9 @@ bluemix ic volume-inspect volume_name
 
 ボリュームを作成します。
 
-```
+
 bluemix ic volume-create VOLUME_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -3161,8 +3250,8 @@ bluemix ic volume-create VOLUME_NAME
 
    <dl>
    <dt>VOLUME_NAME (必須)</dt>
-   <dd>ボリューム名。名前には、小文字、数字、下線 (_)、およびハイフン (-) を
-使用できます。</dd>
+   <dd>ボリューム名。名前には、小文字、数字、下線 (_)、およびハイフン
+(-) を 使用できます。</dd>
    </dl>
 
 
@@ -3170,9 +3259,9 @@ bluemix ic volume-create VOLUME_NAME
 
 次の例は、ボリュームを作成する要求です。
 
-```
+
 bluemix ic volume-create volume_name 
-```
+
 
 
 ## bluemix ic volume-remove
@@ -3180,9 +3269,9 @@ bluemix ic volume-create volume_name
 
 ボリュームを削除します。
 
-```
+
 bluemix ic volume-remove VOLUME_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -3197,9 +3286,9 @@ bluemix ic volume-remove VOLUME_NAME
 
 次の例は、ボリュームを削除する要求です。ここで、`volume_name` はボリュームの名前です。
 
-```
+
 bluemix ic volume-remove volume_name
-```
+
 
 ## bluemix ic volume-fs
 
@@ -3207,18 +3296,18 @@ bluemix ic volume-remove volume_name
 
 ファイル・システムをリストします。
 
-```
+
 bluemix ic volume-fs
-```
+
 
 ## bluemix ic volume-fs-create
 {: #bluemix_ic_volume_fs_create}
 
 新しいファイル・システムを作成します。
 
-```
+
 bluemix ic volume-fs-create FILE_SYSTEM_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -3234,18 +3323,18 @@ bluemix ic volume-fs-create FILE_SYSTEM_NAME
 
 次の例は、ファイル・システムを作成する要求です。
 
-```
+
 bluemix ic volume-fs-create my_file_system 
-```
+
 
 ## bluemix ic volume-fs-remove
 {: #bluemix_ic_volume_fs_remove}
 
 ファイル・システムを削除します。
 
-```
+
 bluemix ic volume-fs-remove FILE_SYSTEM_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -3260,18 +3349,18 @@ bluemix ic volume-fs-remove FILE_SYSTEM_NAME
 
 次の例は、ファイル・システムを削除する要求を示しています。ここで、`my_file_system` は、ファイル・システムの名前です。
 
-```
+
 bluemix ic volume-fs-remove my_file_system
-```
+
 
 ## bluemix ic volume-fs-inspect
 {: #bluemix_ic_volume_fs_inspect}
 
 ファイル・システムを検査します。
 
-```
+
 bluemix ic volume-fs-inspect FILE_SYSTEM_NAME
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -3286,9 +3375,9 @@ bluemix ic volume-fs-inspect FILE_SYSTEM_NAME
 
 次の例は、ファイル・システムを検査する要求です。ここで、`my_file_system` は、ボリュームの名前です。
 
-```
+
 bluemix ic volume-fs-inspect my_file_system
-```
+
 
 
 ## bluemix ic volume-fs-flavors
@@ -3297,9 +3386,9 @@ bluemix ic volume-fs-inspect my_file_system
 
 すべてのファイル・システムのフレーバーをリストします。
 
-```
+
 bluemix ic volume-fs-flavors
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
@@ -3310,9 +3399,9 @@ bluemix ic volume-fs-flavors
 
 コンテナーを終了し、確認のために終了コードを表示します。詳細については、Docker ヘルプで [wait](https://docs.docker.com/reference/commandline/wait/){: new_window} コマンドを参照してください。
 
-```
+
 bluemix ic wait CONTAINER [CONTAINER]
-```
+
 
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット、Docker
 
@@ -3327,9 +3416,9 @@ bluemix ic wait CONTAINER [CONTAINER]
 
 次の例は、`my_container` という名前のコンテナーを終了する要求です。
 
-```
+
 bluemix ic wait my_container
-```
+
 
 
 ## bluemix ic version
@@ -3337,9 +3426,9 @@ bluemix ic wait my_container
 
 Docker のバージョンを表示します。 
 
-```
+
 bluemix ic version
-```
+
 
 <strong>前提条件</strong>:  Docker
 
@@ -3352,4 +3441,3 @@ IBM Containers のバージョンを表示するには、`bluemix ic info` を�
 {: #general}
 
 * [bx ツール](http://clis.ng.bluemix.net/ui/home.html){:new_window}
-

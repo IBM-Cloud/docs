@@ -43,13 +43,13 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 Vous pouvez associer une règle de mise à l'échelle automatique à une application spécifique. Exécutez la commande suivante :
 
-```bx as policy-attach <NOM_APP> -p <fichier_règle>```
+```bx as policy-attach <NOM_APP> -p <fichier_règles>```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;NOM_APP&gt;</dt>
 <dd class="pd">Nom de l'application à laquelle associer une règle de mise à l'échelle automatique.</dd>
-<dt class="pt dlterm">&lt;fichier_règle&gt;</dt>
+<dt class="pt dlterm">&lt;fichier_règles&gt;</dt>
 <dd class="pd">Nom du fichier JSON décrivant la règle de mise à l'échelle automatique. Voir la <a href="https://new-console.{DomainName}/apidocs/48" target="_blank">documentation de l'API RESTful {{site.data.keyword.autoscaling}}</a> pour plus de détails.</dd>
 </dl>
 
@@ -77,7 +77,7 @@ Vous pouvez afficher la règle de mise à l'échelle automatique d'une applicati
 **Astuce :** vous pouvez également utiliser l'option **--json** pour formater automatiquement la réponse JSON originale.
 
 
-## Retrait d'une règle de mise à l'échelle automatique
+## Dissociation d'une règle de mise à l'échelle automatique
 
 Vous pouvez retirer une règle de mise à l'échelle automatique d'une application. Exécutez la commande suivante :
 
@@ -107,7 +107,7 @@ Vous pouvez activer ou désactiver la règle de mise à l'échelle automatique d
 
 Vous pouvez afficher l'historique d'une activité de mise à l'échelle automatique d'une application spécifique. Un tableau d'enregistrements d'historique de mise à l'échelle automatique s'affiche dans l'interface de ligne de commande.
 
-```bx as history-show <NOM_APP>  [--start-date=<horodatage_début>][--end-date=<horodatage_fin>]  [--json]```
+```bx as history-show <NOM_APP>  [--start-date=<horodatage_début>]  [--end-date=<horodatage_fin>]  [--json]```
 {: codeblock}
 
 <dl class="parml">

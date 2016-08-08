@@ -31,10 +31,12 @@ copyright:
 
 完成以下步骤来添加存储库并安装该插件：
 1. 要添加 {{site.data.keyword.Bluemix_notm}} CLI 插件存储库，请运行以下命令：
+
 ```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. 要安装 {{site.data.keyword.autoscaling}} CLI 插件，请运行以下命令：
+
 ```
 bluemix plugin install auto-scaling -r bluemix-plugin-repo
 ```

@@ -65,12 +65,14 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # (Ou version ultérieure
 Depuis la ligne de commande, entrez `carthage update --platform ios`. Carthage télécharge et génère le logiciel SDK, crée un répertoire appelé Carthage
 dans le répertoire de projet de votre application, et place un fichier OpenWhisk.framework dans Carthage/build/iOS.
 
-Vous devez ensuite ajouter l'élément OpenWhisk.framework aux structures intégrées dans votre projet Xcode. 
+Vous devez ensuite ajouter l'élément OpenWhisk.framework aux structures intégrées dans votre projet Xcode.
 
 ### Installation depuis le code source
 
-Le code source est disponible sur le site https://github.com/openwhisk/openwhisk-client-swift.git. Ouvrez le projet à l'aide du fichier OpenWhisk.xcodeproj
-dans Xcode. Le projet contient deux schémas, "OpenWhisk" et "OpenWhiskWatch", ciblant respectivement iOS et watchOS 2. Générez le projet pour les cibles dont vous
+Le code source est disponible sur le site https://github.com/openwhisk/openwhisk-client-swift.git.
+Ouvrez le projet à l'aide de `OpenWhisk.xcodeproj` et de Xcode.
+Le projet contient deux schémas, "OpenWhisk" et "OpenWhiskWatch", ciblant respectivement iOS et watchOS 2.
+Générez le projet pour les cibles dont vous
 avez besoin et ajoutez les infrastructures résultantes à votre application (généralement, dans ~/Library/Developer/Xcode/DerivedData/nom de votre
 application).
 
@@ -84,9 +86,15 @@ Pour installer l'exemple d'application de démarrage, entrez la commande suivant
 ```
 wsk sdk install iOS
 ```
-Elle télécharge un fichier zip contenant l'application de démarrage.  Un fichier Pod se trouve dans le répertoire de projet.  Exécutez "pod install" depuis
-un terminal pour installer le logiciel SDK.
 {: pre}
+
+Elle télécharge un fichier zip contenant l'application de démarrage. Le répertoire de projet contient un fichier Pod.  
+
+Pour installer le logiciel SDK, entrez la commande suivante :
+```
+pod install
+```
+{: pre} 
 
 ## Initiation au logiciel SDK
 {: #openwhisk_sdk_getstart}
@@ -197,6 +205,8 @@ do {
             var result = reply["result"]
             print("Got result \(result)")
         }
+
+
     })
 } catch {
     print("Error \(error)")

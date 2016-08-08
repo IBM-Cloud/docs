@@ -33,8 +33,7 @@ Ein Auslöser ist ein benannter Kanal für eine Klasse von Ereignissen. Es gibt 
 
 Auslöser können mithilfe eines Wörterverzeichnisses mit Schlüssel/Wert-Paaren *aktiviert* (ausgelöst) werden. Manchmal wird dieses Wörterverzeichnis als das *Ereignis* bezeichnet. Wie bei Aktionen führt das Aktivieren eines Auslösers zu einer Aktivierungs-ID.
 
-Auslöser können explizit durch einen Benutzer oder für einen Benutzer durch eine externe Ereignisquelle aktiviert werden.
-Ein *Feed* ist eine bequeme Methode zum Konfigurieren einer externen Ereignisquelle zum Aktivieren von Auslöserereignissen, die von {{site.data.keyword.openwhisk_short}} verarbeitet werden können. Beispiele für Feeds sind die folgenden:
+Auslöser können explizit durch einen Benutzer oder für einen Benutzer durch eine externe Ereignisquelle aktiviert werden. Ein *Feed* ist eine bequeme Methode zum Konfigurieren einer externen Ereignisquelle zum Aktivieren von Auslöserereignissen, die von {{site.data.keyword.openwhisk_short}} verarbeitet werden können. Beispiele für Feeds sind die folgenden:
 - Der Feed für Cloudant-Datenbankänderungen, der jedes Mal ein Auslöserereignis aktiviert, wenn ein Dokument in einer Datenbank hinzugefügt oder geändert wird.
 - Ein Git-Feed, der ein Auslöserereignis für jede Festschreibung (Commit) in einem Git-Repository aktiviert.
 
@@ -105,8 +104,7 @@ Erstellen Sie zum Beispiel einen Auslöser, um Aktualisierungen an Benutzerstand
   ```
   {: screen}
 
-   Alle Ereignisse, die für den Auslöser "locationUpdate" aktiviert werden, haben zurzeit noch keine Wirkung. Um nützlich zu sein, benötigt der Auslöser eine Regel, die ihn einer Aktion zuordnet.
-
+Ein Auslöser, der ohne zugehörige Regel aktiviert wird, die mit ihm abgeglichen werden soll, hat keine sichtbaren Auswirkungen. Auslöser können nicht innerhalb eines Pakets erstellt werden, sie müssen direkt in einem Namensbereich erstellt werden. 
 
 ## Auslöser und Aktionen durch Regeln zuordnen
 {: #openwhisk_rules}
@@ -176,4 +174,5 @@ Erstellen Sie zum Beispiel eine Regel, die die Aktion "hello" aufruft, wenn eine
 
   Wie Sie sehen, hat die Aktion 'hello' die Ereignisnutzdaten (payload) empfangen und die erwartete Zeichenfolge zurückgegeben.
 
-  Sie können mehrere Regeln erstellen, die denselben Auslöser verschiedenen Aktionen zuordnen.
+Sie können mehrere Regeln erstellen, die denselben Auslöser verschiedenen Aktionen zuordnen. Der Auslöser und die Aktion, aus denen eine Regel besteht, müssen sich in demselben Namensbereich befinden und dürfen nicht zu einem Paket gehören. Wenn Sie eine Aktion verwenden möchten, die zu einem Paket gehört, können Sie die Aktion in den Namensbereich kopieren; Beispiel: `wsk action create echo --copy /whisk.system/samples/echo`. 
+

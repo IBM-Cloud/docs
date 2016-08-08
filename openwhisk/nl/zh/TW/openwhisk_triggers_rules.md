@@ -31,7 +31,7 @@ copyright:
 - 將文件上傳至網站的觸發程式。
 - 送入電子郵件的觸發程式。
 
-使用鍵值組定義檔，可以*發動*（啟動）觸發程式。此定義檔有時稱為*事件*。與動作相同，每次發動觸發程式都會導致啟動 ID。
+使用鍵值組字典，可以*發動*（啟動）觸發程式。此字典有時稱為*事件*。與動作相同，每次發動觸發程式都會導致啟動 ID。
 
 使用者可以明確地發動觸發程式，或者由外部事件來源代表使用者發動觸發程式。
 *資訊來源* 是一種簡便的方法，可配置外部事件來源來發動 {{site.data.keyword.openwhisk_short}} 所使用的觸發程式事件。資訊來源範例包括下列各項：
@@ -69,24 +69,24 @@ copyright:
 1. 輸入下列指令，以建立觸發程式：
  
   ```
-  wsk trigger create locationUpdate
+wsk trigger create locationUpdate
   ```
   {: pre}
  
   ```
-  ok: created trigger locationUpdate
+ok: created trigger locationUpdate
   ```
   {: screen}
 
 2. 列出這組觸發程式，確認您已建立觸發程式。
 
   ```
-  wsk trigger list
+wsk trigger list
   ```
   {: pre}
  
   ```
-  triggers
+triggers
   /someNamespace/locationUpdate                            private
   ```
   {: screen}
@@ -96,17 +96,17 @@ copyright:
 3. 接下來，請指定觸發程式名稱及參數，以發動觸發程式事件：
 
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
   {: pre}
 
   ```
-  ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
+ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
   {: screen}
 
-   目前對 statusUpdate 觸發程式發動的任何事件都不會執行任何動作。觸發程式需要有將它與動作相關聯的規則，才會更為有用。
-
+發動觸發程式時，如果沒有隨附可供比對的規則，則不會有可見的效果。
+觸發程式不能建立在套件中，必須直接建立在名稱空間之下。
 
 ## 使用規則建立觸發程式與動作的關聯
 {: #openwhisk_rules}
@@ -116,64 +116,71 @@ copyright:
 例如，建立規則，以在張貼位置更新時即呼叫 hello 動作。 
 
 1. 使用我們將使用的動作碼來建立 'hello.js' 檔案：
+  
   ```
-  function main(params) {
+function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
 
 2. 確定觸發程式及動作已存在。
+  
   ```
-  wsk trigger update locationUpdate
+wsk trigger update locationUpdate
   ```
   {: pre}
   
   ```
-  wsk action update hello hello.js
+wsk action update hello hello.js
   ```
   {: pre}
 
 3. 建立及啟用規則。這三個參數是規則、觸發程式及動作的名稱。
+  
   ```
-  wsk rule create --enable myRule locationUpdate hello
+wsk rule create --enable myRule locationUpdate hello
   ```
   {: pre}
 
 4. 發動 locationUpdate 觸發程式。每次發動事件時，都會使用事件參數來呼叫 hello 動作。
+  
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
   {: pre}
   
   ```
-  ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
+ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
   {: screen}
 
 5. 檢查最新的啟動，來驗證已呼叫動作。
+  
   ```
-  wsk activation list --limit 1 hello
+wsk activation list --limit 1 hello
   ```
   {: pre}
   
   ```
-  activations
+activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
   
   ```
-  wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
+wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
   ```
   {
-"payload": "Hello, Donald from Washington, D.C."
+     "payload": "Hello, Donald from Washington, D.C."
   }
   ```
   {: screen}
 
   您看到 hello 動作接收到事件有效負載並傳回預期字串。
 
-  您可以建立多個規則，來建立相同觸發程式與不同動作的關聯。
+您可以建立多個規則，來建立相同觸發程式與不同動作的關聯。觸發程式與建立規則的動作必須在相同的名稱空間中，而不能屬於套件。
+如果您想要使用屬於套件的動作，可以將動作複製到名稱空間中，例如 `wsk action create echo --copy /whisk.system/samples/echo`。
+

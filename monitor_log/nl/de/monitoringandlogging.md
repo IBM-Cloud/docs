@@ -14,7 +14,7 @@ copyright:
 #Überwachung und Protokollierung
 {: #monitoringandlogging}
 
-*Letzte Aktualisierung: 24. Mai 2016*
+*Letzte Aktualisierung: 1. Juli 2016*
 {: .last-updated}
 
 Indem Sie Ihre Apps überwachen und Protokolle überprüfen, können Sie die Anwendungsausführung und den Datenfluss verfolgen, um Ihre Bereitstellung besser zu verstehen. Darüber hinaus können Sie die Zeit und den Aufwand für das Auffinden und Beheben von Problemen reduzieren.
@@ -22,7 +22,7 @@ Indem Sie Ihre Apps überwachen und Protokolle überprüfen, können Sie die Anw
 
 Bei {{site.data.keyword.Bluemix}}-Anwendungen kann es sich um weit verteilte Anwendungen mit mehreren Instanzen handeln und die Ausführung Ihrer Anwendung mitsamt der zugehörigen Daten kann von vielen verschiedenen Services übernommen werden. In einer solchen komplexen Umgebung ist das Überwachen Ihrer Apps und das Überprüfen von Protokollen von zentraler Bedeutung für das Verwalten Ihrer Apps.
 
-##Apps für Überwachung und Protokollierung
+##Cloud Foundry-Apps für Überwachung und Protokollierung
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} hat einen integrierten Protokolliermechanismus, um Protokolldateien für Ihre Apps zu erstellen, während sie ausgeführt werden. In den Protokollen können Sie die Fehler, Warnungen und Informationsnachrichten sehen, die für Ihre Apps erzeugt werden. Sie können Ihre App auch so konfigurieren, dass Protokollnachrichten in die Protokolldatei geschrieben werden. Weitere Informationen zu Protokollformaten und zur Anzeige von Protokollen finden Sie unter [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden](#logging_for_bluemix_apps).
@@ -223,12 +223,12 @@ Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem Syst
 
   2. Erstellen Sie eine vom Benutzer bereitgestellte Serviceinstanz.
      
-	 Verwenden Sie den Befehl ```cf create-user-provided-service``` (oder die Kurzversion des Befehls ```cups``), um eine vom Benutzer bereitgestellte Serviceinstanz zu erstellen: 
+	 Verwenden Sie den Befehl ```cf create-user-provided-service ``` (oder die Kurzversion des Befehls ```cups```), um eine vom Benutzer bereitgestellte Serviceinstanz zu erstellen:  
 	 ```
 	 cf create-user-provided-service <Servicename> -l <Protokollierungsendpunkt>
-	 ```
+```
 	 **Servicename**
-	 
+	
 	 Der Name der vom Benutzer bereitgestellten Serviceinstanz.
 	 
 	 **Protokollierungsendpunkt**
@@ -267,9 +267,9 @@ Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem Syst
 	
 	 ```
 	 cf bind-service App-Name <Servicename>
-	 ```
-	 **App-Name**
-	 
+```
+	 **Appname**
+	
 	 Der Name Ihrer App.
 	 
 	 **Servicename**
@@ -290,7 +290,7 @@ Wenn Protokolle generiert werden, können Sie nach einer kurzen Verzögerung Nac
 ### Beispiel: Streaming von Cloud Foundry-Anwendungsprotokollen in Splunk 
 {: #splunk}
 
-In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter Verwendung von IBM Virtual Servers Beta und des Ubuntu-Image. Die Cloud Foundry-Anwendungsprotokolle sollen per Streaming von {{site.data.keyword.Bluemix_notm}} in Splunk übertragen werden. 
+In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter Verwendung von IBM Virtual Servers Beta und des Ubuntu-Image.  Die Cloud Foundry-Anwendungsprotokolle sollen per Streaming von {{site.data.keyword.Bluemix_notm}} in Splunk übertragen werden. 
 
   1. Zunächst muss Splunk von Jane installiert werden.
 
@@ -298,7 +298,7 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
        
 	    ```
         dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
-        ```
+```
 	   
      b. Jane installiert und korrigiert das RFC5424-Add-on der syslog-Technologie für die Integration mit {{site.data.keyword.Bluemix_notm}}. Weitere Informationen zur Installation des Add-ons finden Sie in der [Cloud Foundry-Richtlinie](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.  
 
@@ -307,7 +307,7 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
 	    ```
         cd /opt/splunk/etc/apps
         tar xvfz ~/rfc5424-syslog_11.tgz
-        ```
+```
 	   
         Anschließend korrigiert Jane das Add-on, indem sie */opt/splunk/etc/apps/rfc5424/default/transforms.conf* durch eine neue Datei *transforms.conf* ersetzt, die den folgenden Text enthält:
 	   
@@ -321,7 +321,7 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
         REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
         FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
         MV_ADD = true
-        ```
+```
         {:screen}	   
 
      Nach der Installation von Splunk muss Jane einige Ports auf der Ubuntu-Maschine öffnen, damit der eingehende syslog-Drain (Port 5140) und die Splunk-Webbenutzerschnittstelle (Port 8000) akzeptiert werden, da für den virtuellen {{site.data.keyword.Bluemix_notm}}-Server standardmäßig eine Firewall eingerichtet ist.
@@ -333,14 +333,14 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
        iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
        iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
        iptables -A INPUT -p tcp --sport 8000 -j ACCEPT
-	   ```
+```
 	   {:screen}	
 	  
 	   Anschließend startet Jane die Ausführung von Splunk mithilfe des folgenden Befehls:
 
        ```
 	   /opt/splunk/bin/splunk start --accept-license
-       ```
+```
 		
   2. Jane konfiguriert die Splunk-Einstellungen, um den syslog-Drain von {{site.data.keyword.Bluemix_notm}} zu akzeptieren. Für den syslog-Drain muss eine Dateneingabe erstellt werden.
 
@@ -364,7 +364,7 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
 	 
      ```
      cf cups splunk -l syslog://dummyhost:5140
-     ```
+```
         
      **Hinweis:** *dummyhost* ist nicht der richtige Name. Er wird verwendet, um den tatsächlichen Hostnamen zu verdecken. 
 
@@ -373,7 +373,7 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
 	 ```
      cf bind-service myapp splunk
      cf restage myapp
-     ```
+```
 		
 
 Jane testet die App und gibt dann die folgende Abfragezeichenfolge in die Splunk-Webschnittstelle ein:

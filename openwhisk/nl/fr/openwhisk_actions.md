@@ -315,8 +315,8 @@ Cet exemple appelle un service météorologique Yahoo afin de prendre connaissan
   ```
     var request = require('request');
     
-    function main(msg) {
-        var location = msg.location || 'Vermont';
+    function main(params) {
+        var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
     
         request.get(url, function(error, response, body) {
@@ -488,7 +488,7 @@ provenant d'éditions stables de Xcode sous MacOS.
 
 Avec les actions {{site.data.keyword.openwhisk_short}} Docker, vous pouvez écrire vos actions dans n'importe quel langage.
 
-Votre code est compilé dans une fichier binaire exécutable et imbriqué dans une image Docker. Le programme binaire interagit avec le système en prenant l'entrée provenant de `stdin` et en répondant par le biais de `stdout`.
+Votre code est compilé dans un fichier binaire exécutable et imbriqué dans une image Docker. Le programme binaire interagit avec le système en prenant l'entrée provenant de `stdin` et en répondant par le biais de `stdout`.
 
 Au préalable, vous devez disposer d'un compte Docker Hub.  Pour configurer un ID et un compte Docker gratuits, visitez [Docker Hub](https://hub.docker.com){: new_window}.
 
@@ -529,8 +529,8 @@ qu'{{site.data.keyword.openwhisk_short}} utilisera.  Ensuite, l'image Docker té
   #include <stdio.h>
   
   int main(int argc, char *argv[]) {
-      printf("Hello %s from arbitrary C program!\n",
-             (argc == 1) ? "anonymous" : argv[1]);
+      printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
+             (argc == 1) ? "undefined" : argv[1]);
   }
   ```
   {: screen}
@@ -569,11 +569,24 @@ nom de fichier JavaScript par le nom d'image Docker.
   {: pre}
   ```
   {
-      "msg": "Hello Rey from arbitrary C program!\n"
+      "args": {
+          "payload": "Rey"
+      },
+      "msg": "Hello from arbitrary C program!"
   }
   ```
   {: screen}
 
+5. Pour mettre à jour une action Docker, exécutez `buildAndPush.sh` pour actualiser l'image sur le concentrateur Docker, puis exécutez `wsk action update` pour que le système puisse extraire la nouvelle image. Les nouveaux appels commenceront à utiliser la nouvelle image et non une image de démarrage à chaud avec l'ancien code. 
+
+  ```
+  ./buildAndPush.sh janesmith/blackboxdemo
+  ```
+  {: pre}
+  ```
+  wsk action update --docker example janesmith/blackboxdemo
+  ```
+  {: pre}
 
 Des informations sur la création d'actions Docker sont disponibles dans la section
 [Références](./openwhisk_reference.html#openwhisk_ref_docker).

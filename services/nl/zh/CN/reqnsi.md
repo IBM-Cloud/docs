@@ -30,9 +30,7 @@ copyright:
 <dt><strong>类别</strong></dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 服务按不同的类别进行组织。在每个服务类别中，IBM 创建的服务最先列出，然后是第三方服务，最后是社区服务。</dd>
 <dt><strong>支持</strong></dt>
-<dd>系统为 {{site.data.keyword.Bluemix_notm}} 服务提供了多个级别的支持。下表描述了 {{site.data.keyword.Bluemix_notm}} 服务的一般支持信息：
-
-</dd>
+<dd>系统为 {{site.data.keyword.Bluemix_notm}} 服务提供了多个级别的支持。下表描述了 {{site.data.keyword.Bluemix_notm}} 服务的一般支持信息：</dd>
 </dl>
 
 
@@ -184,7 +182,7 @@ copyright:
 2. 使用以下命令创建服务实例，其中 service_name 是服务的名称；service_plan 是服务的套餐；service_instance 是您希望用于此服务实例的名称。
 
     ```
-    cf create-service service_name service_plan service_instance
+cf create-service service_name service_plan service_instance
     ```
 
 3. 使用以下命令将服务实例绑定到应用程序，其中 appname 是应用程序的名称；service_instance 是服务实例的名称。
@@ -237,7 +235,7 @@ copyright:
 1. 创建用户提供的服务实例，方法是使用 **cf create-user-provided-service** 或 **cf cups** 命令：
     * 要创建用户提供的一般服务实例，请使用 **-p** 选项，并用逗号分隔参数名称。随后，cf 命令行界面会依次提示您提供每个参数的值。例如：
         ```
-        cf cups testups1 -p "host, port, dbname, username, password"
+cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -250,7 +248,7 @@ copyright:
     * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 **-l** 选项，然后指定第三方日志管理软件提供的目标。例如：
 
         ```
-        cf cups testups2 -l syslog://example.com
+cf cups testups2 -l syslog://example.com
         正在以 user@sample.com 身份在组织 my-org/空间 dev 中创建用户提供的服务 testups2...
         成功
         ```
@@ -260,7 +258,7 @@ copyright:
     * 要更新一般用户提供的服务实例，请使用 **-p** 选项，并在 json 对象中指定参数键和值。例如：
 
         ```
-        cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         正在以 user@sample.com 身份在组织 my-org/空间 dev 中更新用户提供的服务 testups1...
         成功
         ```
@@ -268,7 +266,7 @@ copyright:
     * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 -l 选项。例如：
 
         ```
-        cf uups testups2 -l syslog://example2.com
+cf uups testups2 -l syslog://example2.com
         正在以 user@sample.com 身份在组织 my-org/空间 dev 中更新用户提供的服务 testups2...
         成功
         ```
@@ -308,7 +306,7 @@ copyright:
 
 	     ```
 	     cf bind-service myapp user-provided_service_instance
-	     ```
+	```
 
 
 

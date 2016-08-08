@@ -8,7 +8,7 @@ copyright:
 
 {:shortdesc: .shortdesc} 
 
-# Application Services
+# Serviços de Aplicativos
 {: #app_services}
 
 *Última atualização: 28 de janeiro de 2016*

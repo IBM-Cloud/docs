@@ -54,9 +54,9 @@ plusieurs entités et leurs alias.
 
 | Nom qualifié complet | Alias | Espace de nom | Package | Nom |
 | --- | --- | --- | --- | --- |
-| `/whisk.system/cloudant/read` | - | `/whisk.system` | `cloudant` | `read` |
+| `/whisk.system/cloudant/read` |  | `/whisk.system` | `cloudant` | `read` |
 | `/monOrg/video/transcode` | `video/transcode` | `/monOrg` | `video` | `transcode` |
-| `/monOrg/filter` | `filter` | `/monOrg` | - | `filter` |
+| `/monOrg/filter` | `filter` | `/monOrg` |  | `filter` |
 
 Vous utiliserez ce schéma de dénomination dans l'interface de ligne de commande {{site.data.keyword.openwhisk_short}}, entre autres.
 
@@ -100,7 +100,7 @@ possible que le deuxième appel soit exécuté avant le premier. Si les actions 
 quel ordre.
 
 De plus, l'exécution des actions de manière atomique n'est pas garantie. Deux actions peuvent s'exécuter simultanément et leurs effets secondaires
-peuvent s'imbriquer.  OpenWhisk ne garantit aucun un modèle de cohérence spécifique quant aux effets secondaires.Les
+peuvent s'imbriquer.  OpenWhisk ne garantit aucun un modèle de cohérence spécifique quant aux effets secondaires. Les
 effets secondaires liés à la simultanéité dépendent de l'implémentation.
 
 ### Sémantique "un au plus"
@@ -137,7 +137,7 @@ Un enregistrement d'activation contient les zones suivantes :
 [format de temps UNIX](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15).
 - *namespace* et `name` : espace de nom et nom de l'entité.
 - *logs* : tableau de chaînes indiquant les journaux générés par l'action au cours de son activation. Chaque élément de tableau
-correspond à une ligne générée dans stdout ou stderr par l'action et inclut l'horodatage et le flux de la sortie journal. La structure est la suivante : ```HORODATAGE FLUX : SORTIE_JOURNAL```.
+correspond à une ligne générée dans stdout ou stderr par l'action et inclut l'horodatage et le flux de la sortie journal. La structure est la suivante : ```TIMESTAMP STREAM: LOG_OUTPUT```.
 - *response* : dictionnaire définissant les clés `success`, `status` et `result` :
   - *status* : résultat de l'activation, qui peut être "success",
 "application error", "action developer
@@ -179,8 +179,8 @@ d'une action JavaScript peut être *synchrone* ou *asynchrone*.
 
 L'activation d'une action JavaScript est **synchrone** si la fonction main se termine dans l'une des conditions suivantes :
 
-- La fonction main se termine sans exécuter d'instruction ```return```.
-- La fonction main se termine en exécutant une instruction ```return``` qui renvoie n'importe quelle valeur *sauf* ```whisk.async()``.
+- La fonction main se termine sans exécuter d'instruction ```return``` .
+- La fonction main se termine en exécutant une instruction ```return``` qui renvoie n'importe quelle valeur *sauf* ```whisk.async()```.
 
 Voici deux exemples d'action synchrone.
 
@@ -205,8 +205,7 @@ function main() {
 ```
 {: codeblock}
 
-L'activation d'une action JavaScript est **asynchrone** si la fonction main se termine en appelant ```return
-whisk.async();```.  Dans ce cas, le système suppose que l'action est toujours en cours d'exécution jusqu'à ce qu'elle exécute l'une des instructions
+L'activation d'une action JavaScript est **asynchrone** si la fonction main se termine en appelant ```return whisk.async();```.  Dans ce cas, le système suppose que l'action est toujours en cours d'exécution jusqu'à ce qu'elle exécute l'une des instructions
 suivantes :
 - ```return whisk.done();```
 - ```return whisk.error();```
@@ -251,7 +250,7 @@ La fonction `whisk.invoke()` appelle une autre action. Elle admet comme argument
 
 - *name* : nom qualifié complet de l'action à appeler.
 - *parameters* : objet JSON représentant l'entrée de l'action appelée. S'il est omis, la valeur par défaut est un objet vide.
-- *apiKey* : clé d'autorisation avec laquelle appeler l'action. La valeur par défaut est `whisk.getAuthKey()`. 
+- *apiKey* : clé d'autorisation avec laquelle appeler l'action. La valeur par défaut est `whisk.getAuthKey()`.
 - *blocking* : indique si l'action doit être appelée en mode bloquant ou non bloquant. La valeur par défaut est
 `false` et signifie que l'appel est non bloquant.
 - *next* : fonction de rappel facultative à exécuter lorsque l'appel est terminé.
@@ -283,7 +282,7 @@ La fonction `whisk.getAuthKey()` renvoie la clé d'autorisation avec laquelle l'
 ### Environnement d'exécution
 {: #openwhisk_ref_runtime_environment}
 
-Les actions JavaScript sont exécutées dans un environnement Node.js version 0.12.9 avec les packages suivants, qui peuvent être utilisés par l'action :
+Les actions JavaScript sont exécutées dans un environnement Node.js version 0.12.14 avec les packages suivants disponibles pour être utilisés par l'action :
 
 - apn
 - async
@@ -334,42 +333,48 @@ Le paramètre "payload" de l'entrée d'action est transmis en tant qu'argument d
 
 Le squelette Docker est pratique pour générer des images Docker compatibles avec {{site.data.keyword.openwhisk_short}}. Vous pouvez l'installer avec la commande d'interface de ligne de commande `wsk sdk install docker`.
 
-Le programme binaire principal doit être copié dans le fichier `dockerSkeleton/client/clientApp`. La bibliothèque ou les fichiers associés peuvent se trouver dans le répertoire `dockerSkeleton/client`.
+Le programme binaire principal doit être copié dans le fichier `dockerSkeleton/client/action`. La bibliothèque ou les fichiers associés peuvent se trouver dans le répertoire `dockerSkeleton/client`.
 
 Vous pouvez aussi inclure des étapes de compilation ou des dépendances en modifiant le fichier `dockerSkeleton/Dockerfile`. Par exemple, vous pouvez installer Python si votre action est un script Python.
 
 
 ## API REST
+{: #openwhisk_ref_restapi}
 
 Toutes les fonctions du système sont disponibles via une API REST. Des noeuds finaux de collection et d'entité sont présents pour les
 actions, les déclencheurs, les packages, les activations, et les espaces de nom.
 
 Les noeuds finaux de collection sont les suivants :
 
-- `https://$BASEURL/api/v1/namespaces`
-- `https://$BASEURL/api/v1/namespaces/{espace_nom}/actions`
-- `https://$BASEURL/api/v1/namespaces/{espace_nom}/triggers`
-- `https://$BASEURL/api/v1/namespaces/{espace_nom}/rules`
-- `https://$BASEURL/api/v1/namespaces/{espace_nom}/packages`
-- `https://$BASEURL/api/v1/namespaces/{espace_nom}/activations`
+- `https://{BASE URL}/api/v1/namespaces`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+
+`{BASE URL}` est le nom d'hôte de l'API OpenWhisk (c'est-à-dire openwhisk.ng.bluemix.net, 172.17.0.1, etc.)
+
+Pour `{namespace}`, le caractère `_` peut être utilisé afin de spécifier *default
+namespace* (adresse électronique) pour l'utilisateur 
 
 Vous pouvez lancer une requête GET sur les noeuds finaux de collection pour extraire une liste d'entités dans la
 collection.
 
 Des noeuds finaux d'entité sont présents pour chaque type d'entité :
 
-- `https://$BASEURL/api/v1/namespaces/{espace_nom}`
-- `https://$BASEURL/api/v1/namespaces/{espace_nom}/actions/[{nom_package}/]{nom_action}`
-- `https://$BASEURL/api/v1/namespaces/{espace_nom}/triggers/{nom_déclencheur}`
-- `https://$BASEURL/api/v1/namespaces/{espace_nom}/rules/{nom_règle}`
-- `https://$BASEURL/api/v1/namespaces/{espace_nom}/packages/{nom_package}`
-- `https://$BASEURL/api/v1/namespaces/{espace_nom}/activations/{nom_activation}`
+- `https://{BASE URL}/api/v1/namespaces/{espace_nom}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{nom_action}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{nom_déclencheur}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{nom_règle}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{nom_package}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{nom_activation}`
 
 Les noeuds finaux d'espace de nom et d'activation ne prennent en charge que les requêtes GET. Les noeuds finaux d'actions, de déclencheurs, de règles et
 de packages prennent en charge les requêtes GET, PUT et DELETE. Les noeuds finaux d'actions, de déclencheurs et de règles prennent également en charge les
 requêtes POST, lesquelles sont utilisées pour appeler des actions et des déclencheurs et pour activer ou désactiver des règles. Reporte-vous au document
 [API
-reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json) pour plus d'informations.
+reference](https://new-console.{DomainName}/apidocs/98) pour plus d'informations.
 
 Toutes les API sont protégées via une authentification HTTP Basic. Les données d'identification pour authentification HTTP Basic résident dans la propriété
 `AUTH` de votre fichier `~/.wskprops`, et sont délimitées par un signe deux-points. Vous pouvez également extraire ces données
@@ -402,6 +407,9 @@ curl -u NOM_UTILISATEUR:MOT_DE_PASSE https://openwhisk.ng.bluemix.net/api/v1/nam
 ```
 {: screen}
 
+L'API OpenWhisk prend en charge les appels demande-réponse de clients Web. OpenWhisk répond aux demandes `OPTIONS` avec des en-têtes CORS (Cross-Origin Resource Sharing). Actuellement, toutes les origines sont autorisées (la valeur de Access-Control-Allow-Origin est "`*`") et les en-têtes Access-Control-Allow-Header fournissent l'autorisation et le type de contenu. 
+
+**Comme OpenWhisk ne prend en charge qu'une seule clé par compte, il n'est pas recommandé d'utiliser CORS (Cross-Origin Response Sharing) au-delà de simples expérimentations. Votre clé doit être imbriquée dans le code côté client afin d'être visible pour le public. A utiliser avec précaution.**
 
 ## Limites du système
 {: #openwhisk_syslimits}
@@ -426,13 +434,29 @@ curl -u NOM_UTILISATEUR:MOT_DE_PASSE https://openwhisk.ng.bluemix.net/api/v1/nam
 * Un utilisateur peut changer la limite lorsqu'il crée l'action.
 * La quantité de mémoire allouée dans un conteneur ne peut pas être supérieure à la limite.
 
-### Nombre d'appels simultanés par espace de nom (nombre) (valeur par défaut 100)
+### Artefact par action (Mo) (fixe : 1 Mo)
+* La taille de code maximale pour l'action est 1 Mo.
+* Pour une action JavaScript, il est recommandé d'utiliser un outil permettant de concaténer tout le code source, y compris les dépendances dans un fichier regroupé unique. 
+
+### Taille de la charge par activation (Mo) (fixe : 1 Mo)
+* La taille de contenu POST maximale plus les paramètres transmis pour un appel d'action ou la mise en application d'un déclencheur est de 1 Mo. 
+
+### Nombre d'appels simultanés par espace de nom (valeur par défaut : 100)
 * Le nombre d'activations qui sont traitées simultanément pour un espace de nom ne peut pas être supérieur à 100.
 * La limite par défaut peut être configurée statiquement par whisk dans consul kvstore.
 * Un utilisateur ne peut pas changer les limites.
 
-
-### Appels par minute/heure (nombre) Fixe : 120/3600)
+### Appels par minute/heure (fixe : 120/3600)
 * La limite de débit N est 120/3600 et limite le nombre d'appels d'action dans des fenêtres d'une minute/heure.
 * Un utilisateur ne peut pas changer cette limite lorsqu'il crée l'action.
 * Un appel d'interface de ligne de commande dépassant cette limite reçoit un code d'erreur correspondant à TOO_MANY_REQUESTS.
+
+### Valeur ulimit pour le nombre de fichiers ouverts par action Docker (fixe : 64:64)
+* Le nombre maximal de fichiers ouverts est 64 (cela s'applique aux limites absolues et aux limites souples). 
+* La commande docker run utilise l'argument `--ulimit nofile=64:64`.
+* Pour plus d'informations sur l'utilisation de ulimit pour les fichiers ouverts, voir la documentation [docker run](https://docs.docker.com/engine/reference/commandline/run). 
+
+### Valeur ulimit pour le nombre de processus par action Docker (fixe : 512:512)
+* Le nombre maximal de processus disponibles pour un utilisateur est 512 (cela s'applique aux limites absolues et aux limites souples). 
+* La commande docker run utilise l'argument `--ulimit nproc=512:512`.
+* Pour plus d'informations sur l'utilisation de ulimit pour le nombre maximal de processus, voir la documentation [docker run](https://docs.docker.com/engine/reference/commandline/run). 

@@ -130,6 +130,7 @@ local.
 	
     6. Accédez à la vue Process Manager dans Arc. Entrez la route que vous venez de créer avec le port 80 dans Process Manager. Cliquez sur le bouton Activate. Voir la [documentation complète relative à l'utilisation
 d'Arc](https://docs.strongloop.com/display){:new_window} pour plus de détails.
+
 	
   3. *trace* : définit dynamiquement des niveaux de trace si votre application utilise les modules de journalisation *log4js*,
 *ibmbluemix*

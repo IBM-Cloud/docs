@@ -99,8 +99,7 @@ copyright:
 * 上传促销码所指定的额外数量的 SSL 证书
 * 使用高级服务套餐
 
-**注：**可以将多个促销码应用到您的帐户。在促销码的到期日期之前，每个促销码只能兑换一次。
-要使用促销码，请在 {{site.data.keyword.Bluemix_notm}} 用户界面中单击**概要文件设置**图标，选择**帐户**，然后单击**帐户类型**。
+**注：**可以将多个促销码应用到您的帐户。在促销码的到期日期之前，每个促销码只能兑换一次。要使用促销码，请在 {{site.data.keyword.Bluemix_notm}} 用户界面中单击**概要文件设置**图标，选择**帐户**，然后单击**帐户类型**。
 
 ##计费方式
 {: #pay-accounts}
@@ -355,8 +354,7 @@ copyright:
 
 <dl>
 <dt>四个 256 MB Node.js 运行时实例</dt>
-<dd>Bluemix 对运行时按 GB-小时收费。每月使用的 GB 数是 <code>4 x 256 = 1024 MB 或 1 GB/月</code>。假设<code>一个月有 24 x 30 = 720 小时</code>，那么应用程序按 <code>1 x 720 = 720 GB-小时</code>收费。
-<p>
+<dd>Bluemix 对运行时按 GB-小时收费。每月使用的 GB 数是 <code>4 x 256 = 1024 MB 或 1 GB/月</code>。假设<code>一个月有 24 x 30 = 720 小时</code>，那么应用程序按 <code>1 x 720 = 720 GB-小时</code>收费。<p>
 375 GB-小时包括在每月免费限额中，在所有 {{site.data.keyword.Bluemix_notm}} 运行时共享。因此，运行时的总成本为 <code>0.07 美元 x (720-375) = 24.15 美元</code>。</p></dd>
 
 <dt>两个 Auto-Scaling 策略（处理器和内存）</dt>
@@ -366,12 +364,11 @@ copyright:
 <dd>Data Cache 服务提供的 50 MB 套餐免费。然而，免费套餐可能难以满足您每月计划使用的 2 GB。Data Cache 的 3 个付费套餐都是以固定金额购买特定的空间量，而不管您实际使用的空间量是多少。因此，您希望选择符合您计划使用量（标准套餐为 5 GB）的最低限度套餐。每月总开销为 155 美元。</dd>
 
 <dt>NoSQL 数据库每月 150 GB</dt>
-<dd>IBM Cloudant NoSQL DB for {{site.data.keyword.Bluemix_notm}} 服务费用基于数据存储和按不同 API 方法访问该数据的能力。<strong>PUT</strong> 和 <strong>POST</strong> 命令被视为频繁 API 调用，但 <strong>GET</strong> 命令被视为稀少 API 调用。
-<p>
+<dd>IBM Cloudant NoSQL DB for {{site.data.keyword.Bluemix_notm}} 服务费用基于数据存储和按不同 API 方法访问该数据的能力。<strong>PUT</strong> 和 <strong>POST</strong> 命令被视为频繁 API 调用，但 <strong>GET</strong> 命令被视为稀少 API 调用。<p>
 加总 GB 数并减去 2 GB 免费限额。每月对 148 GB 收费。减去 50,000 稀少 API 调用和 10,000 频繁 API 调用的免费限额。存储价格总计包括以下部分：</p>
 <pre class="codeblock">
 <codeblock>
-    148 x 1 = 148 美元
+148 x 1 = 148 美元
     (450,000 / 1000) x 0.03 = 13.5 美元
     (90,000 / 1000) x 0.15 = 13.5 美元
 </codeblock>
@@ -433,8 +430,7 @@ copyright:
 
 ###通过命令行界面更改套餐
 
-（可选）您可以通过命令行界面来更改服务套餐。
-要更新服务套餐，请输入以下命令：
+（可选）您可以通过命令行界面来更改服务套餐。要更新服务套餐，请输入以下命令：
 ```
 cf update-service <service_name> [-p <new_plan>]
 ```

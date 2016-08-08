@@ -17,7 +17,7 @@ copyright:
 # （不推荐）开发方式 CLI
 {: #devmodecli}
 
-*上次更新时间：2016 年 5 月 12 日*
+*上次更新时间：2016 年 6 月 23 日*
 {: .last-updated}
 
 **不推荐使用此 CLI：**请使用 IBM Eclipse Tools for Bluemix 或 DevOps Web IDE，而不使用开发方式 (dev_mode) CLI。您可以继续使用 dev_mode CLI 直到 2016 年 6 月 30 日。
@@ -41,30 +41,31 @@ copyright:
   2. 转至保存 dev_mode 插件的文件夹，并使用 cf install-plugin 命令安装 dev_mode 插件。例如： 
   
         ```
-        cf install-plugin dev_mode-linux64
+cf install-plugin dev_mode-linux64
         ```
 
 - 从 Bluemix CLI 存储库进行安装。
   1. 通过使用以下命令将 bluemix-repo 存储库添加到 Cloud Foundry CLI 存储库：
   
         ```
-        cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
   2. 键入 cf repo-plugins。dev_mode 插件会显示在 bluemix-repo 存储库中。
 		
 		```
-        cf repo-plugins
+cf repo-plugins
         ```
   
   3. 通过使用以下命令将 dev_mode 插件安装到 Cloud Foundry CLI 插件：
   
         ```
-        cf install-plugin dev_mode -r bluemix-repo
+cf install-plugin dev_mode -r bluemix-repo
         ```
 
 ## 查看 dev_mode 命令
-**要显示所有 dev_mode CLI 命令，请使用以下命令：**
+
+要显示所有 dev_mode CLI 命令，请使用以下命令：
 
 ```
 cf plugins

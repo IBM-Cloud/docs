@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2015，2016
 
  
 
@@ -14,16 +14,22 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# VPN 用の Bluemix CLI プラグイン
+# {{site.data.keyword.Bluemix_notm}} CLI 用の {{site.data.keyword.vpn_short}} プラグイン
 
-*最終更新日:* 2016 年 1 月 18 日
+*最終更新日: 2016 年 6 月 20 日*
+{: .last-updated}
 
-*バージョン:* 0.1.5
+*バージョン:* 1.4.0
 
-Bluemix CLI VPN プラグインを使用して、IBM 仮想プライベート・ネットワーク (VPN) サービスの構成および管理を行うことができます。
+コマンド・ライン・インターフェース (CLI) を使用して、{{site.data.keyword.vpn_full}} サービスの構成と管理を行うことができます。 {{site.data.keyword.vpn_short}} CLI プラグインには、2 つのバージョンがあります。1 つは Cloud Foundry CLI プラグインで使用するためのものであり、もう 1 つは {{site.data.keyword.Bluemix}} CLI プラグインで使用するためのものです。どちらのバージョンのプラグインも同じ機能を提供します。  
 {:shortdesc}
 
-以下の説明では、Bluemix CLI VPN プラグインでサポートされるすべてのコマンドをリストし、それぞれの名前、オプション、使用法、前提条件、および例を示します。
+{{site.data.keyword.vpn_short}} プラグインには、Windows、MAC、および Linux オペレーティング・システム用があります。環境に適したものを使用してください。
+
+以下の手順は、{{site.data.keyword.Bluemix_notm}} CLI プラグインで使用する場合の説明です。Cloud Foundry (cf) CLI プラグインでプラグインを使用する場合は、『[{{site.data.keyword.vpn_short}} CLI plug-in for cf CLI](../vpn/index.html)』を参照してください。
+
+
+以下の説明では、Bluemix CLI 用 {{site.data.keyword.vpn_short}} プラグインでサポートされるすべてのコマンドをリストし、それぞれの名前、オプション、使用法、前提条件、説明、および例を示します。VPN プラグインのインストール方法については、『[Extend your Bluemix command line interface](../../index.html#cli_bluemix_ext)』を参照してください。
 
 **注:** *前提条件*には、コマンドを使用する前に必要なアクションがリストされています。前提条件には、以下のアクションの 1 つ以上が含まれる場合があります。
 <dl>
@@ -39,9 +45,9 @@ Bluemix CLI VPN プラグインを使用して、IBM 仮想プライベート・
 ## bluemix vpn connection-create
 VPN 接続を作成します。
 
-```
-bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
-```
+
+bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -81,17 +87,17 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 
 `my_connection` という名前の新しい VPN 接続を作成します:
 
-```
+
 bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
-```
+
 
 
 ## bluemix vpn ike-create
 IKE ポリシーを作成します。
 
-```
-bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
-```
+
+bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -113,17 +119,17 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] 
 
 `my_ike` という名前の新しい IKE ポリシーを作成します:
 
-```
+
 bluemix vpn ike-create my_ike -g my_gateway
-```
+
 
 
 ## bluemix vpn ipsec-create
 IPSec ポリシーを作成します。
 
-```
-bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
-```
+
+bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -145,17 +151,17 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP
 
 `my_policy` という名前で IPSec ポリシーを作成します。
 
-```
+
 bluemix vpn ipsec-create my_policy -g my_gateway
-```
+
 
 
 ## bluemix vpn gateway-create
 VPN ゲートウェイを作成します。
 
-```
-bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnets SUBNET_ADDRESS]
-```
+
+bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -173,17 +179,17 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnet
 
 名前が `my_gateway` で、タイプが `allContainerGroups` のゲートウェイを作成します。
 
-```
+
 bluemix vpn gateway-create my_gateway -t allContainerGroups
-```
+
 
 
 ## bluemix vpn connections
 現在の接続すべてについての情報が表示されます。
 
-```
+
 bluemix vpn connections
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -191,9 +197,9 @@ bluemix vpn connections
 ## bluemix vpn ikes
 現在の IKE 接続についての情報が表示されます。
 
-```
+
 bluemix vpn ikes
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -201,9 +207,9 @@ bluemix vpn ikes
 ## bluemix vpn ipsecs
 現在の IPSec 接続についての情報が表示されます。
 
-```
+
 bluemix vpn ipsecs
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -211,9 +217,9 @@ bluemix vpn ipsecs
 ## bluemix vpn gateways
 現在のゲートウェイについての情報が表示されます。
 
-```
+
 bluemix vpn gateways
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -221,9 +227,9 @@ bluemix vpn gateways
 ## bluemix vpn connection
 特定の接続についてのすべての情報が表示されます。
 
-```
+
 bluemix vpn connection CONNECTION_NAME
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -235,9 +241,9 @@ bluemix vpn connection CONNECTION_NAME
 ## bluemix vpn ike
 IKE 接続についての情報が表示されます。
 
-```
+
 bluemix vpn ike POLICY_NAME
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -249,9 +255,9 @@ bluemix vpn ike POLICY_NAME
 ## bluemix vpn ipsec
 IPSec 接続についての情報が表示されます。
 
-```
+
 bluemix vpn ipsec POLICY_NAME
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -263,9 +269,9 @@ bluemix vpn ipsec POLICY_NAME
 ## bluemix vpn gateway
 ゲートウェイについての接続情報が表示されます。
 
-```
+
 bluemix vpn gateway GATEWAY_NAME
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -277,9 +283,9 @@ bluemix vpn gateway GATEWAY_NAME
 ## bluemix vpn connection-delete
 既存の接続を削除します。
 
-```
+
 bluemix vpn connection-delete CONNECTION_NAME
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -291,9 +297,9 @@ bluemix vpn connection-delete CONNECTION_NAME
 ## bluemix vpn ike-delete
 既存の IKE ポリシーを削除します。
 
-```
+
 bluemix vpn ike-delete POLICY_NAME
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -305,9 +311,9 @@ bluemix vpn ike-delete POLICY_NAME
 ## bluemix vpn ipsec-delete
 既存の IPSec ポリシーを削除します。
 
-```
+
 bluemix vpn ipsec-delete POLICY_NAME
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -319,9 +325,9 @@ bluemix vpn ipsec-delete POLICY_NAME
 ## bluemix vpn gateway-delete
 既存のゲートウェイを削除します。
 
-```
+
 bluemix vpn gateway-delete GATEWAY_NAME
-```
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -333,9 +339,9 @@ bluemix vpn gateway-delete GATEWAY_NAME
 ## bluemix vpn connection-update
 既存の VPN 接続を更新します。
 
-```
-bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY] [-subnets "SUBNET/MASK"][-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
-```
+
+bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -375,9 +381,9 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY
 ## bluemix vpn ike-update
 IKE ポリシーを更新します。
 
-```
-bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
-```
+
+bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -399,9 +405,9 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP
 ## bluemix vpn ipsec-update
 IPSec ポリシーを更新します。
 
-```
-bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
-```
+
+bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 
@@ -423,9 +429,9 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GRO
 ## bluemix vpn gateway-update
 既存の VPN ゲートウェイを更新します。
 
-```
-bluemix vpn gateway-update GATEWAY_NAME [-t TYPE][-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
-```
+
+bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+
 
 **前提条件**: エンドポイント、ログイン、ターゲット
 

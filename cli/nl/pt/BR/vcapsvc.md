@@ -15,6 +15,7 @@ copyright:
 # Serviços VCAP
 
 *Última atualização: 15 de março de 2016*
+{: .last-updated}
 
 
 A variável de ambiente VCAP_SERVICES é um objeto JSON

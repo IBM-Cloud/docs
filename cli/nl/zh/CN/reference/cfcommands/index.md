@@ -16,7 +16,7 @@ copyright:
 
 # Cloud Foundry (cf) 命令
 
-*上次更新时间：2016 年 1 月 29 日*
+*上次更新时间：2016 年 7 月 8 日*
 {: .last-updated}
 
 您可以使用 Cloud Foundry (cf) 命令来管理应用程序。
@@ -29,6 +29,7 @@ copyright:
 ## cf api
 
 显示或指定 {{site.data.keyword.Bluemix_notm}} API 端点的 URL。
+
 ```
 cf api BluemixServerURL
 ```
@@ -51,11 +52,13 @@ cf api BluemixServerURL
 ## cf bind-service
 
 将现有服务实例绑定到应用程序。
+
 ```
 cf bind-service appname service_instance
 ```
 
-例如，如果您在当前组织和空间中有名为 `my_dataworks` 的服务实例，那么可以使用 `cf bind-service my_app my_dataworks` 将此服务实例绑定到应用程序。
+例如，如果您在当前组织和空间中有名为 `my_dataworks` 的服务实例，那么可以使用 `cf bind-service my_app
+my_dataworks` 将此服务实例绑定到应用程序。
 
 <dl>
 <dt>appname</dt>
@@ -67,6 +70,7 @@ cf bind-service appname service_instance
 ## cf create-service
 
 创建服务实例。
+
 ```
 cf create-service service_name service_plan service_instance
 ```
@@ -84,6 +88,7 @@ cf create-service service_name service_plan service_instance
 ## cf create-space
 
 创建空间。
+
 ```
 cf create-space space_name
 ```
@@ -99,6 +104,7 @@ cf create-space space_name
 ## cf delete
 
 删除现有应用程序。
+
 ```
 cf delete appname
 ```
@@ -114,6 +120,7 @@ cf delete appname
 ## cf delete-space
 
 删除空间。
+
 ```
 cf delete-space space_name
 ```
@@ -128,6 +135,7 @@ cf delete-space space_name
 ## cf events
 
 显示与应用程序有关的运行时事件。
+
 ```
 cf events appname
 ```
@@ -139,6 +147,7 @@ cf events appname
 ## cf help
 
 显示所有 cf 命令的帮助信息。如果使用 command_name 参数，那么会显示特定 cf 命令的帮助信息。
+
 ```
 cf help command_name
 ```
@@ -152,6 +161,12 @@ cf help command_name
 ## cf login
 
 登录到 {{site.data.keyword.Bluemix_notm}}。
+
+
+<!-- staging only for atlas 45 -->
+
+**注**：如果您使用联合标识登录，那么您必须使用单点登录 (SSO) 参数才能登录。 
+
 ```
 cf login
 ```
@@ -164,6 +179,8 @@ cf login
 <dt>*-p* password</dt>
 <dd>您的密码。</dd>
 <dd>*重要信息：*如果在命令行界面上使用 *-p* 参数来提供密码，那么密码可能会记录在命令行历史记录中。出于安全考虑，请避免使用 -p 参数来提供密码。请改为在命令行界面提示您时输入密码。</dd>
+<dt>*-sso*</dt>
+<dd>使用联合标识登录时，必须使用单点登录选项 (SSO)。使用 IBM 标识登录时则无需如此。如果您尝试使用联合标识登录，且您未指定 SSO 参数，那么系统将提示您包含它。使用 SSO 参数会在登录时提示您输入一次性密码。</dd>
 <dt>*-o* organization_name</dt>
 <dd>您要登录的组织的名称。</dd>
 <dt>*-s* space_name</dt>
@@ -172,12 +189,15 @@ cf login
 <dd>禁用 SSL 验证过程。使用此参数可能会导致安全性问题。</dd>
 </dl>
 
+<!-- staging only content for the sso parameter and note for federated ID atlas 45 work -->
+
 *注：*如果使用此命令的 *-p* 参数来提供密码，那么密码可能会记录在 shell 命令历史记录文件中，并且可能对本地操作系统的其他用户可见。
 
 
 ## cf logs
 
 显示应用程序的 STDOUT 和 STDERR 日志流。
+
 ```
 cf logs appname
 ```
@@ -191,6 +211,7 @@ cf logs appname
 ## cf marketplace
 
 列出 Marketplace 中可用的所有服务。此命令列出的服务还会显示在 {{site.data.keyword.Bluemix_notm}}“目录”中。
+
 ```
 cf marketplace
 ```
@@ -198,6 +219,7 @@ cf marketplace
 ## cf push
 
 将新的应用程序部署到 Bluemix，或者更新 Bluemix 中现有的应用程序。
+
 ```
 cf push appname 
 ```
@@ -220,17 +242,17 @@ cf push appname -c “bash ./<run.sh>"
 <dt>*-i* instance_number</dt>
 <dd>实例数。</dd>
 <dt>*-k* disk_limit</dt>
-<dd>应用程序的磁盘限制，例如，*256M*、*1024M* 或 *1G*。</dd>
+<dd>应用程序的磁盘限制，例如 *256M*、*1024M* 或 *1G*。</dd>
 <dt>*-m* memory_limit</dt>
-<dd>应用程序的内存限制，例如，*256M*、*1024M* 或 *1G*。</dd>
+<dd>应用程序的内存限制，例如 *256M*、*1024M* 或 *1G*。</dd>
 <dt>*-n* host_name</dt>
-<dd>应用程序的主机名，例如，*my-subdomain*。</dd>
+<dd>应用程序的主机名，例如 *my-subdomain*。</dd>
 <dt>*-p* app_path</dt>
 <dd>应用程序目录或应用程序归档文件的路径。</dd>
 <dt>*-t* timeout</dt>
 <dd>应用程序启动的最长时间（以秒为单位）。其他服务器端超时可能会覆盖此值。</dd>
 <dt>*-s* stackname</dt>
-<dd>要运行应用程序的堆栈。堆栈是预构建的文件系统，包括操作系统。使用 `cf stacks` 可查看 {{site.data.keyword.Bluemix_notm}} 中的可用堆栈。</dd>
+<dd>要运行应用程序的堆栈。堆栈是预构建的文件系统，包括操作系统。使用“cf stacks”可查看 {{site.data.keyword.Bluemix_notm}} 中的可用堆栈。</dd>
 <dt>*--no-hostname*</dt>
 <dd>将 Bluemix 系统域映射到此应用程序。</dd>
 <dt>*--no-manifest*</dt>
@@ -255,9 +277,9 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 <dt>*-i* instance_number</dt>
 <dd>实例数</dd>
 <dt>*-k* disk_limit</dt>
-<dd>应用程序的磁盘限制，例如，*256M*、*1024M* 或 *1G*。</dd>
+<dd>应用程序的磁盘限制，例如 *256M*、*1024M* 或 *1G*。</dd>
 <dt>*-m* memory_limit</dt>
-<dd>应用程序的内存限制，例如，*256M*、*1024M* 或 *1G*。</dd>
+<dd>应用程序的内存限制，例如 *256M*、*1024M* 或 *1G*。</dd>
 <dt>*-f*</dt>
 <dd>在不提示的情况下，强制重新启动应用程序。</dd>
 </dl>
@@ -313,4 +335,4 @@ cf -v
 {: #rellinks}
 ## general 
 {: #general}
-* [快速参考卡 - cf 命令](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

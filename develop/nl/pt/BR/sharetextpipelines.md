@@ -91,7 +91,7 @@ stages:
       application: JavaSampleUnitTest
     script: |
       cf push "${CF_APP}"
-      # Visualizar Logs
+      # View logs
       #cf logs "${CF_APP}" --recent
 ```
 {: codeblock} 

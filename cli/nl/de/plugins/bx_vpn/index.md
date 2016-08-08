@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2015，20166
 
  
 
@@ -14,16 +14,22 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Bluemix-CLI-Plug-in für VPN
+# {{site.data.keyword.vpn_short}}-Plug-in für {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle
 
-*Letzte Aktualisierung:* 18. Januar 2016
+*Letzte Aktualisierung: 20. Juni 2016*
+{: .last-updated}
 
-*Version:* 0.1.5
+*Version:* 1.4.0
 
-Mit dem Bluemix-CLI-Plug-in für VPN können Sie Ihren IBM VPN-Service (VPN = Virtual Private Network) konfigurieren und verwalten.
+Sie können den {{site.data.keyword.vpn_full}}-Service mit der Befehlszeilenschnittstelle konfigurieren und verwalten. Das Plug-in für die {{site.data.keyword.vpn_short}}-Befehlszeilenschnittstelle ist in zwei Versionen verfügbar: für die Verwendung mit dem Plug-in für die Cloud Foundry-Befehlszeilenschnittstelle und für die Verwendung mit dem Plug-in für die {{site.data.keyword.Bluemix}}-Befehlszeilenschnittstelle. Von beiden Versionen des Plug-ins werden dieselben Funktionen bereitgestellt.   
 {:shortdesc}
 
-In den folgenden Informationen werden alle Befehle, die von dem Bluemix-CLI-Plug-in für VPN unterstützt werden, mit Namen, Optionen, Syntax, Voraussetzungen, Beschreibungen und Beispielen aufgeführt.
+Das {{site.data.keyword.vpn_short}}-Plug-in ist für Windows-, MAC- und Linux-Betriebssysteme verfügbar. Stellen Sie sicher, dass Sie das für Sie geeignete Plug-in verwenden. 
+
+Die nachfolgenden Anweisungen sind für das Plug-in für die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle vorgesehen. Informationen zur Verwendung des Plug-ins mit der Plug-in für die Cloud Foundry-Befehlszeilenschnittstelle (cf) finden Sie unter [{{site.data.keyword.vpn_short}}-CLI-Plug-in für cf-Befehlszeilenschnittstelle](../vpn/index.html). 
+
+
+In der nachfolgenden Liste werden alle vom {{site.data.keyword.vpn_short}}-Plug-in für die Bluemix-Befehlszeilenschnittstelle unterstützten Befehle mit Namen, Optionen, Verwendungen, Voraussetzungen, Beschreibungen und Beispielen aufgeführt. Informationen zum Installieren des VPN-Plug-ins finden Sie unter [Bluemix-Befehlszeilenschnittstelle erweitern](../../index.html#cli_bluemix_ext). 
 
 **Hinweis:** Unter *Voraussetzungen* wird aufgelistet, welche Aktionen vor der Verwendung des Befehls ausgeführt werden müssen. Zu den Voraussetzungen könnten eine oder mehrere der folgenden Aktionen gehören:
 <dl>
@@ -40,7 +46,7 @@ In den folgenden Informationen werden alle Befehle, die von dem Bluemix-CLI-Plug
 Erstellt eine VPN-Verbindung.
 
 ```
-bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
+bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **Voraussetzungen**:  Endpunkt, Anmeldung, Ziel
@@ -89,7 +95,7 @@ bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "19
 Erstellt eine IKE-Richtlinie.
 
 ```
-bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
+bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Voraussetzungen**:  Endpunkt, Anmeldung, Ziel
@@ -120,7 +126,7 @@ bluemix vpn ike-create my_ike -g my_gateway
 Erstellt eine IPSec-Richtlinie.
 
 ```
-bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
+bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Voraussetzungen**:  Endpunkt, Anmeldung, Ziel
@@ -151,7 +157,7 @@ bluemix vpn ipsec-create my_policy -g my_gateway
 Erstellt ein VPN-Gateway.
 
 ```
-bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **Voraussetzungen**:  Endpunkt, Anmeldung, Ziel
@@ -330,7 +336,7 @@ bluemix vpn gateway-delete GATEWAY_NAME
 Aktualisiert eine vorhandene VPN-Verbindung.
 
 ```
-bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY] [-subnets "SUBNET/MASK"][-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
+bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **Voraussetzungen**:  Endpunkt, Anmeldung, Ziel
@@ -372,7 +378,7 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY
 Aktualisiert eine IKE-Richtlinie.
 
 ```
-bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Voraussetzungen**:  Endpunkt, Anmeldung, Ziel
@@ -396,7 +402,7 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP
 Aktualisiert eine IPSec-Richtlinie.
 
 ```
-bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Voraussetzungen**:  Endpunkt, Anmeldung, Ziel
@@ -420,7 +426,7 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GRO
 Aktualisiert ein vorhandenes VPN-Gateway.
 
 ```
-bluemix vpn gateway-update GATEWAY_NAME [-t TYPE][-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **Voraussetzungen**:  Endpunkt, Anmeldung, Ziel

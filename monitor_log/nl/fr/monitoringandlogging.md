@@ -14,7 +14,7 @@ copyright:
 #Surveillance et journalisation
 {: #monitoringandlogging}
 
-*Dernière mise à jour : 24 mai 2016*
+*Dernière mise à jour : 1er juillet 2016*
 {: .last-updated}
 
 En surveillant vos applications et en consultant les journaux, vous pouvez suivre l'exécution des applications et le flux de données afin de mieux
@@ -25,7 +25,7 @@ Les applications {{site.data.keyword.Bluemix}} peuvent être des applications à
 l'exécution de votre application et de ses données peut être partagée entre plusieurs services. Dans cet environnement complexe, la surveillance de vos
 applications et la consultation des journaux sont essentielles pour la gestion de vos applications.
 
-##Surveillance et journalisation d'applications
+##Surveillance et journalisation d'applications Cloud Foundry
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} intègre un mécanisme de journalisation qui génère des fichiers journaux pour vos applications, au cours de
@@ -258,13 +258,12 @@ HTTPS POST. Les méthodes d'obtention de noeuds finaux de journalisation varient
 
   2. Créez une instance de service fournie par l'utilisateur.
      
-	 Utilisez la commande ```cf create-user-provided-service``` (ou la version courte de la commande, ```cups``) pour
-créer une instance de service fournie par l'utilisateur : 
+	 Utilisez la commande ```cf create-user-provided-service``` (ou ```cups```, une version courte de la commande) pour créer une instance de service fournie par l'utilisateur :  
 	 ```
 	 cf create-user-provided-service <nom_service> -l <noeud_final_journalisation>
 	 ```
 	 **nom_service**
-	 
+	
 	 Nom de l'instance de service fournie par l'utilisateur.
 	 
 	 **noeud_final_journalisation**
@@ -308,7 +307,7 @@ pour Papertrail.</td>
 	 cf bind-service nom_app <nom_service>
 	 ```
 	 **nom_app**
-	 
+	
 	 Nom de votre application.
 	 
 	 **nom_service**
@@ -316,7 +315,7 @@ pour Papertrail.</td>
 	 Nom de l'instance de service fournie par l'utilisateur.
 	 
   4. Reconstituez l'application. 
-     Entrez ```cf restage nom_app``` pour que les modifications soient appliquées. 
+     Entrez ```cf restage nom_app``` pour que les modifications soient prises en compte.  
 
 #### Affichage des journaux à partir d'hôtes externes
 {: #viewing_logs_external}
@@ -333,7 +332,7 @@ qu'ils ne correspondent pas exactement aux messages qui sont affichés sur votre
 ### Exemple : transmission des journaux d'application Cloud Foundry à Splunk 
 {: #splunk}
 
-Dans cet exemple, un développeur nommé Jane crée un serveur virtuel à l'aide d'IBM Virtual Servers Beta et de l'image Ubuntu. Jane tente de transmettre
+Dans cet exemple, un développeur nommé Jane crée un serveur virtuel à l'aide d'IBM Virtual Servers Beta et de l'image Ubuntu.  Jane tente de transmettre
 les journaux d'application Cloud Foundry de {{site.data.keyword.Bluemix_notm}} à Splunk. 
 
   1. Pour commencer, Jane configure Splunk.

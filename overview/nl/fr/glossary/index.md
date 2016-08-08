@@ -57,6 +57,7 @@ text between these comment tags.-->
 [U](#glossu)
 [V](#glossv)
 [W](#glossw)
+[X](#glossx)
 
 <!--end letter link tags-->
 
@@ -535,13 +536,6 @@ et représentation graphique des processus.
 
 Processus d'authentification par lequel un utilisateur peut accéder à plusieurs systèmes ou applications en saisissant un seul ID utilisateur et mot de passe.
 
-### constituer
-{: #x20671890}
-
-- Action de déployer une application, un service ou une instance à un emplacement prédéfini en vue de l'exécution ou du test avant le déploiement
-dans un environnement de production. Voir aussi [déploiement](#x2104544).
-- Action de marquer un ensemble de modifications de fichier comme étant prêt pour la validation Git.
-
 ### conteneur
 {: #x2010901}
 
@@ -615,7 +609,7 @@ maintenance et les coûts d'exécution pendant la durée de vie prévue du progr
 {: #x2104544}
 
 - Processus qui extrait la sortie d'une génération, prépare la sortie avec des propriétés de configuration, et installe le package à un emplacement
-prédéfini pour qu'il puisse être testé ou exécuté. Voir aussi [constituer](#x20671890).
+prédéfini pour qu'il puisse être testé ou exécuté. Voir aussi [constituer](#x2067189).
 - Processus consistant à déplacer une application (telle qu'un rapport ou un modèle) vers une instance différente. Par exemple, les rapports sont souvent créés dans un environnement de test, puis déployés dans un environnement de production. Lorsqu'une application est déployée, elle est exportée, transférée, puis importée.
 
 ### déploiement automatique
@@ -864,6 +858,9 @@ Objet de référentiel qui inclut un ou plusieurs composants. Les espaces de tra
 
 - Groupe de travaux dans un contexte d'exécution partagé comportant une entrée source, des variables d'environnement et un ordre défini
 d'exécution.
+- Action de déployer une application, un service ou une instance à un emplacement prédéfini en vue de l'exécution ou du test avant le déploiement
+dans un environnement de production. Voir aussi [déploiement](#x2104544).
+- Action de marquer un ensemble de modifications de fichier comme étant prêt pour la validation Git.
 
 ### exécution automatique
 {: #x7344035}
@@ -1379,14 +1376,14 @@ Mode d'exécution de requête Java qui fournit l'accès natif aux sources de don
 
 
 ### modèle
-{: #x2041200}
-
-Structure prédéfinie associée à un artefact.
-
-### modèle
 {: #x2245601}
 
 Représentation physique ou métier de la structure de données provenant d'une ou de plusieurs sources de données. Un modèle décrit des objets de données, la structure, le regroupement ainsi que les relations et la sécurité. Dans Cognos BI, un modèle est créé et mis à jour dans Framework Manager. Le modèle ou un sous-ensemble de celui-ci doit être publié sur le serveur Cognos sous forme de package que les utilisateurs pourront utiliser pour créer et exécuter des rapports.
+
+### modèle
+{: #x2041200}
+
+Structure prédéfinie associée à un artefact.
 
 ### mode production
 {: #x6070975}
@@ -1439,16 +1436,16 @@ Score dérivé des évaluations d'application par les utilisateurs à partir des
 
 
 ### organisation
+{: #x7470494}
+
+Voir [organisation](#x2032585).
+
+### organisation
 {: #x2032585}
 
 Méthodologie de regroupement pour les utilisateurs dans Bluemix. Les organisations permettent de gérer les quotas. Les utilisateurs d'une
 organisation partagent les quotas d'instances de service et de mémoire. Voir aussi [domaine](#x2021210), [espace](#x2039442).
 
-
-### organisation
-{: #x7470494}
-
-Voir [organisation](#x2032585).
 
 ### outil de gestion de la transformation métier (BTMT)
 {: #x2214418}
@@ -1903,14 +1900,14 @@ pour définir les interactions des utilisateurs avec les systèmes.
 Voir [gestion de contrôle de source](#x3579285).
 
 ### scrum
-{: #x7474016}
-
-Méthode de programmation logicielle agile qui utilise des équipes inter fonctionnelles de petites tailles qui s'auto-organisent, ainsi que des pratiques incrémentielles itératives.
-
-### scrum
 {: #x3266541}
 
 Réunion informelle quotidienne des parties prenantes dans un projet de développement agile. Les participants doivent comprendre un scrum maître, le propriétaire du produit et l'équipe, et peuvent inclure le directeur de produit et d'autres parties prenantes.
+
+### scrum
+{: #x7474016}
+
+Méthode de programmation logicielle agile qui utilise des équipes inter fonctionnelles de petites tailles qui s'auto-organisent, ainsi que des pratiques incrémentielles itératives.
 
 ### secousse
 {: #x5905152}
@@ -2247,3 +2244,5 @@ Voir [Worldwide Project Management Method](#x2215004).
 Voir [assurance qualité mondiale](#x2215010).
 
 
+## X
+{: #glossx}

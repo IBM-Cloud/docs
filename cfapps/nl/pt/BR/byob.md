@@ -18,6 +18,7 @@ copyright:
 
 # Usando buildpacks da comunidade
 *Última atualização: 15 de março de 2016*
+{: .last-updated}
 
 Se não for possível localizar um iniciador no Catálogo do {{site.data.keyword.Bluemix}} que forneça o tempo de execução desejado, será possível trazer um buildpack externo para o {{site.data.keyword.Bluemix_notm}}. É possível especificar um buildpack customizado e compatível com Cloud Foundry ao implementar o app usando o comando cf push.
 {:shortdesc}
@@ -37,7 +38,7 @@ Cloud Foundry. Para ver buildpacks integrados da comunidade, execute o comando c
 
 ```
 cf buildpacks
-Getting buildpacks...
+Obtendo buildpacks...
 
 buildpack      position   enabled   locked   filename
 ...
@@ -66,7 +67,8 @@ usar o buildpack integrado da comunidade inserindo o comando a seguir:</p>
 
 ## Buildpacks externos
 
-É possível usar buildpacks externos ou customizados no {{site.data.keyword.Bluemix_notm}}. Deve-se especificar a URL do buildpack com a opção -b e especificar a pilha com a opção ```-s``` no comando **cf push**. Por exemplo, para usar um buildpack de comunidade externo para arquivos estáticos, execute o comando a seguir
+É possível usar buildpacks externos ou customizados no {{site.data.keyword.Bluemix_notm}}. Deve-se especificar a URL do buildpack com a opção -b e especificar a pilha com a opção ```-s``` no
+comando **cf push**. Por exemplo, para usar um buildpack de comunidade externo para arquivos estáticos, execute o comando a seguir
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2

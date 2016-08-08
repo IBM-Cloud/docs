@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 보안
 {: #security}
-*마지막 업데이트 날짜: 2016년 5월 9일*
+*마지막 업데이트 날짜: 2016년 6월 22일*
 {: .last-updated}
 
 보안 엔지니어링 방식으로 디자인된
@@ -27,9 +27,9 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}}는 시스템, 네트워킹 및 보안 엔지니어링과 관련한 IBM의 우수 사례에 의해 구동되는 보안 정책을 고수함으로써 보안 준비성을 보장합니다. 이러한 정책에는 소스 코드 스캔, 동적 스캔, 위협 모델링 및 침입 테스트 등의 실행이 포함됩니다. {{site.data.keyword.Bluemix_notm}}는 보안 인시던트 관리를 위해 IBM PSIRT(Product Security Incident Response Team) 프로세스를 따릅니다. 세부사항은 [IBM Security Vulnerability Management(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 사이트를 참조하십시오.
 
-{{site.data.keyword.Bluemix_notm}} Public 및 Dedicated는 IBM SoftLayer IaaS(Infrastructure-as-a-Service) 클라우드 서비스를 사용하고
-해당 보안 아키텍처를 완전히 활용합니다. SoftLayer IaaS는 애플리케이션 및 데이터에 대한 다중의 중첩된 보안 계층을 제공합니다. {{site.data.keyword.Bluemix_notm}} Local의 경우
-사용자는 회사 방화벽 뒤의 사용자 소유 데이터 센터에서 {{site.data.keyword.Bluemix_notm}} Local을
+{{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드는 IBM SoftLayer IaaS(Infrastructure-as-a-Service) 클라우드 서비스를 사용하고
+해당 보안 아키텍처를 완전히 활용합니다. SoftLayer IaaS는 애플리케이션 및 데이터에 대한 다중의 중첩된 보안 계층을 제공합니다. {{site.data.keyword.Bluemix_notm}} 로컬의 경우
+사용자는 회사 방화벽 뒤의 사용자 소유 데이터 센터에서 {{site.data.keyword.Bluemix_notm}} 로컬을
 호스트하여 물리적 보안을 소유하고 인프라를 제공합니다. 또한 {{site.data.keyword.Bluemix_notm}}는
 다양한 카테고리(플랫폼, 데이터 및 애플리케이션)의 PaaS(Platform as a Service) 계층에서 보안 기능을 추가합니다.
 
@@ -37,7 +37,7 @@ copyright:
 {: #platform-security}
 
 {{site.data.keyword.Bluemix_notm}}는 코어 플랫폼에 대해 (IBM SoftLayer를 통한) 기능, 인프라, 운영 및 물리적 보안을 제공합니다. 그러나
-{{site.data.keyword.Bluemix_notm}} Local은 고객이 제공하는 인프라와 데이터 센터에서
+{{site.data.keyword.Bluemix_notm}} 로컬은 고객이 제공하는 인프라와 데이터 센터에서
 고유하며 물리적 보안을 소유합니다.
 
 {{site.data.keyword.Bluemix_notm}} 환경은 산업 표준을 충족하거나 그 이상을 충족하는 가장 제한적인 IBM 정보 기술(IT) 보안 표준을 준수합니다. 표준에는 네트워크, 데이터 암호화 및
@@ -54,14 +54,14 @@ copyright:
 
 *그림 1. {{site.data.keyword.Bluemix_notm}} 플랫폼 보안 개요*
 
-{{site.data.keyword.Bluemix_notm}} Local에서는 회사의 방화벽 뒤 및 데이터 센터 내에 {{site.data.keyword.Bluemix_notm}}를 호스팅합니다. 따라서 특정 보안 사안에 대해서는 사용자에게 책임이 있습니다. 다음 보안 파트 이미지 세부사항은 고객 소유이며 보안 파트는 IBM에서 관리하고 유지보수합니다.
+{{site.data.keyword.Bluemix_notm}} 로컬에서는 회사의 방화벽 뒤 및 데이터 센터 내에 {{site.data.keyword.Bluemix_notm}}를 호스팅합니다. 따라서 특정 보안 사안에 대해서는 사용자에게 책임이 있습니다. 다음 보안 파트 이미지 세부사항은 고객 소유이며 보안 파트는 IBM에서 관리하고 유지보수합니다.
 
-![Bluemix Local 플랫폼 보안 개요](images/security_local_platform.svg)
+![Bluemix 로컬 플랫폼 보안 개요](images/security_local_platform.svg)
 
-*그림 2. {{site.data.keyword.Bluemix_notm}} Local 플랫폼 보안 개요*
+*그림 2. {{site.data.keyword.Bluemix_notm}} 로컬 플랫폼 보안 개요*
 
-IBM은 {{site.data.keyword.Bluemix_notm}} Local에 포함된 전달 기능인 Relay를 통해 데이터 센터에 {{site.data.keyword.Bluemix_notm}} Local을 설치하고
-원격으로 모니터하고 관리합니다. Relay는 각 {{site.data.keyword.Bluemix_notm}} Local 인스턴스에 고유한 인증서를 안전하게 연결합니다. {{site.data.keyword.Bluemix_notm}} Local 및 Relay에 대한 자세한 정보는 [Bluemix Local](../local/index.html)을 참조하십시오. 
+IBM은 {{site.data.keyword.Bluemix_notm}} 로컬에 포함된 전달 기능인 Relay를 통해 데이터 센터에 {{site.data.keyword.Bluemix_notm}} 로컬을 설치하고
+원격으로 모니터하고 관리합니다. Relay는 각 {{site.data.keyword.Bluemix_notm}} 로컬 인스턴스에 고유한 인증서를 안전하게 연결합니다. {{site.data.keyword.Bluemix_notm}} 로컬 및 Relay에 대한 자세한 정보는 [Bluemix 로컬](../local/index.html)을 참조하십시오. 
 
 ### 기능적 보안
 
@@ -73,25 +73,18 @@ IBM은 {{site.data.keyword.Bluemix_notm}} Local에 포함된 전달 기능인 Re
 <dt>인증</dt>
 <dd>애플리케이션 개발자는 IBM 웹 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 인증됩니다.
 
-{{site.data.keyword.Bluemix_notm}} Dedicated
-및 Local의 경우 LDAP을 통한 인증이 기본적으로 지원됩니다. 요청 시 {{site.data.keyword.Bluemix_notm}} 대신 IBM 웹 ID를 통한 인증을 설정할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 데디케이티드 및 로컬의 경우 LDAP을 통한 인증이 기본적으로 지원됩니다. 요청 시 {{site.data.keyword.Bluemix_notm}} 대신 IBM 웹 ID를 통한 인증을 설정할 수 있습니다.
 </dd>
 
 <dt>권한 부여</dt>
-<dd>{{site.data.keyword.Bluemix_notm}}는
-Cloud Foundry 메커니즘을 사용하여 각 애플리케이션 개발자가
-자신이 작성한 애플리케이션 및 서비스 인스턴스에만 액세스하도록 합니다. {{site.data.keyword.Bluemix_notm}} 서비스에
-대한 권한 부여는 OAuth를 기반으로 합니다. 모든 {{site.data.keyword.Bluemix_notm}} 플랫폼 내부 엔드포인트에 대한 액세스는
-외부 사용자로 제한됩니다.</dd>
+<dd>{{site.data.keyword.Bluemix_notm}}는 Cloud Foundry 메커니즘을 사용하여 각 애플리케이션 개발자가 자신이 작성한 애플리케이션 및 서비스 인스턴스에만 액세스하도록 합니다. {{site.data.keyword.Bluemix_notm}} 서비스에 대한 권한 부여는 OAuth를 기반으로 합니다. 모든 {{site.data.keyword.Bluemix_notm}} 플랫폼 내부 엔드포인트에 대한 액세스는 외부 사용자로 제한됩니다.</dd>
 
 <dt>감사</dt>
-<dd>애플리케이션 개발자의 모든 성공 및 실패 인증 시도에 대해
-감사 로그가 작성됩니다. 감사 로그는 {{site.data.keyword.Bluemix_notm}} 애플리케이션이 실행되는 컨테이너를 호스팅하는 Linux 시스템에 대한 권한 부여된 액세스에 대해서도 작성됩니다.</dd>
+<dd>애플리케이션 개발자의 모든 성공 및 실패 인증 시도에 대해 감사 로그가 작성됩니다. 감사 로그는 {{site.data.keyword.Bluemix_notm}} 애플리케이션이 실행되는 컨테이너를 호스팅하는 Linux 시스템에 대한 권한 부여된 액세스에 대해서도 작성됩니다.</dd>
 
 <dt>데이터 보호</dt>
 <dd> 모든 {{site.data.keyword.Bluemix_notm}} 트랙픽은 리버스 프록시, SSL 종료 및 로드 밸런싱 기능을 제공하는 IBM WebSphere® DataPower® SOA 어플라이언스를 통과합니다.
-다음과 같은 HTTP 메소드를
-사용할 수 있습니다.
+다음과 같은 HTTP 메소드를 사용할 수 있습니다.
  * DELETE
  * GET
  * HEAD
@@ -105,8 +98,7 @@ HTTP 비활성 제한시간은 2분입니다.
 다음 헤더는 DataPower로 채워집니다.
 <dl>
 <dt>$wsis</dt>
-<dd>클라이언트 측 연결이 안전(HTTPS)하면 true로 설정합니다.
-그렇지 않으면 false로 설정합니다.</dd>
+<dd>클라이언트 측 연결이 안전(HTTPS)하면 true로 설정합니다. 그렇지 않으면 false로 설정합니다.</dd>
 <dt>$wssc</dt>
 <dd>클라이언트 연결 스킴(https, http, ws, wss) 중 하나로
 설정합니다.</dd>
@@ -117,37 +109,30 @@ HTTP 비활성 제한시간은 2분입니다.
 <dt>x-client-ip</dt>
 <dd>클라이언트 IP 주소로 설정합니다.</dd>
 <dt>x-forwarded-proto</dt>
-<dd>클라이언트 연결 스킴(https, http, ws, wss) 중 하나로
-설정합니다.</dd>
+<dd>클라이언트 연결 스킴(https, http, ws, wss) 중 하나로 설정합니다.</dd>
 </dl>
 </dd>
 
 <dt>보안 개발 방식 실행</dt>
-<dd> {{site.data.keyword.Bluemix_notm}} Public 및 Dedicated의 경우 주기적 보안 취약성 스캔은 IBM Security AppScan® Dynamic Analyzer를 사용하여 다양한 {{site.data.keyword.Bluemix_notm}} 컴포넌트에서 수행됩니다. 위협 모델링 및 침입 테스트는 모든 {{site.data.keyword.Bluemix_notm}} 배치 유형에 대해 잠재적 취약점을 발견하고 해결하기 위해 사용됩니다. 또한 애플리케이션 개발자는 AppScan Dynamic Analyzer 서비스를 사용하여 {{site.data.keyword.Bluemix_notm}}에 배치된 자체 웹 앱을 보호할 수 있습니다.</dd>
+<dd> {{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드의 경우 주기적 보안 취약성 스캔은 IBM Security AppScan® Dynamic Analyzer를 사용하여 다양한 {{site.data.keyword.Bluemix_notm}} 컴포넌트에서 수행됩니다. 위협 모델링 및 침입 테스트는 모든 {{site.data.keyword.Bluemix_notm}} 배치 유형에 대해 잠재적 취약점을 발견하고 해결하기 위해 사용됩니다. 또한 애플리케이션 개발자는 AppScan Dynamic Analyzer 서비스를 사용하여 {{site.data.keyword.Bluemix_notm}}에 배치된 자체 웹 앱을 보호할 수 있습니다.</dd>
 </dl>
 
 ### 인프라 보안
 
-{{site.data.keyword.Bluemix_notm}}는
-애플리케이션 실행을 위한 강력한 토대를 제공하기 위해
-Cloud Foundry를 기반으로 빌드됩니다. 아키텍처 내에서 보안 및 격리를 위한 여러 컴포넌트가
-제공됩니다. 또한 변경 관리 및 백업 및 복구 프로시저가 무결성 및 가용성을 보장하기 위해 구현됩니다.
+{{site.data.keyword.Bluemix_notm}}는 애플리케이션 실행을 위한 강력한 토대를 제공하기 위해 Cloud Foundry를 기반으로 빌드됩니다. 아키텍처 내에서 보안 및 격리를 위한 여러 컴포넌트가 제공됩니다. 또한 변경 관리 및 백업 및 복구 프로시저가 무결성 및 가용성을 보장하기 위해 구현됩니다.
 
 <dl>
 <dt>환경 격리</dt>
-<dd> {{site.data.keyword.Bluemix_notm}} Public의 경우 개발 및 프로덕션 환경은 애플리케이션 안정성 및 보안성을 높이기 위해 서로 격리됩니다.</dd>
+<dd> {{site.data.keyword.Bluemix_notm}} 퍼블릭의 경우 개발 및 프로덕션 환경은 애플리케이션 안정성 및 보안성을 높이기 위해 서로 격리됩니다.</dd>
 
 <dt>방화벽</dt>
-<dd> 방화벽은 {{site.data.keyword.Bluemix_notm}} 네트워크에 대한 액세스를 제한하기 위해 적절히 갖춰져 있습니다. {{site.data.keyword.Bluemix_notm}}
-Local의 경우 사용자의 회사 방화벽은 사용자의 나머지 네트워크를
-{{site.data.keyword.Bluemix_notm}} 인스턴스에서 분리합니다.</dd>
+<dd> 방화벽은 {{site.data.keyword.Bluemix_notm}} 네트워크에 대한 액세스를 제한하기 위해 적절히 갖춰져 있습니다. {{site.data.keyword.Bluemix_notm}} 로컬의 경우 사용자의 회사 방화벽은 사용자의 나머지 네트워크를 {{site.data.keyword.Bluemix_notm}} 인스턴스에서 분리합니다.</dd>
 
 <dt>침입 방지</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} Public 및 Dedicated에서는 위협을 발견하여 이를 처리할 수 있도록 침입 방지를 사용합니다. 침입 방지 정책은 방화벽에서 사용됩니다.</dd>
+<dd>{{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드에서는 위협을 발견하여 이를 처리할 수 있도록 침입 방지를 사용합니다. 침입 방지 정책은 방화벽에서 사용됩니다.</dd>
 
 <dt>보안 애플리케이션 컨테이너 관리</dt>
-<dd>각 {{site.data.keyword.Bluemix_notm}} 애플리케이션은
-격리되어 있으며 프로세서, 메모리 및 디스크에 대한 특정 자원 한계가 있는 자체 컨테이너에서 실행됩니다.</dd>
+<dd>각 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 격리되어 있으며 프로세서, 메모리 및 디스크에 대한 특정 리소스 한계가 있는 자체 컨테이너에서 실행됩니다.</dd>
 
 <dt>운영 체제 보안 강화</dt>
 <dd>IBM 관리자는 IBM Endpoint Manager 등의 도구를 사용하여 네트워크 및 운영 체제 강화를 주기적으로 수행합니다.</dd>
@@ -155,18 +140,14 @@ Local의 경우 사용자의 회사 방화벽은 사용자의 나머지 네트�
 
 ### 운영 보안
 
-{{site.data.keyword.Bluemix_notm}}에서는
-다음과 같은 제어 권한이 있는 강력한 운영 보안 환경을 제공합니다.
+{{site.data.keyword.Bluemix_notm}}에서는 다음과 같은 제어 권한이 있는 강력한 운영 보안 환경을 제공합니다.
 
 <dl>
 <dt>취약성 스캔</dt>
-<dd>{{site.data.keyword.Bluemix_notm}}는
-Tenable Network Security 취약성 스캔 도구 Nessus를 사용하여
-네트워크 및 호스트 구성 문제를 발견하여 해결할 수 있도록 합니다.</dd>
+<dd>{{site.data.keyword.Bluemix_notm}}는 Tenable Network Security 취약성 스캔 도구 Nessus를 사용하여 네트워크 및 호스트 구성 문제를 발견하여 해결할 수 있도록 합니다.</dd>
 
 <dt>자동화된 수정사항 관리</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 관리자는
-운영 체제의 수정사항이 적합한 빈도로 적용되도록 보장합니다. 자동화된 수정사항은 IBM Endpoint Manager를 사용하여 적용됩니다.</dd>
+<dd>{{site.data.keyword.Bluemix_notm}} 관리자는 운영 체제의 수정사항이 적합한 빈도로 적용되도록 보장합니다. 자동화된 수정사항은 IBM Endpoint Manager를 사용하여 적용됩니다.</dd>
 
 <dt>감사 로그 통합 및 분석</dt>
 <dd>{{site.data.keyword.Bluemix_notm}}에서는 IBMSecurity QRadar® 도구를 사용하여 Linux 로그를 통합함으로써 Linux 시스템에서 권한 부여된 액세스를 모니터링합니다. 또한 {{site.data.keyword.Bluemix_notm}}는 IBM QRadar 보안 정보 및 이벤트 관리(SIEM)를 사용하여 애플리케이션 개발자의 성공 및 실패한 로그인 시도를 모니터링합니다.</dd>
@@ -174,30 +155,24 @@ Tenable Network Security 취약성 스캔 도구 Nessus를 사용하여
 <dt>사용자 액세스 관리</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 내에서는 업무 분리 가이드라인에 따라 사용자에게 세부 단위의 액세스 권한을 지정하며 사용자가 최소 권한 원칙에 따라 자체 작업의 수행에 필요한 액세스 권한만 갖도록 보장합니다.
 
-{{site.data.keyword.Bluemix_notm}} Dedicated 및 Local 환경 내에서는 지정된 관리자가 관리 콘솔을 사용하여 조직 내 {{site.data.keyword.Bluemix_notm}} 사용자의 역할 및 권한을 관리할 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}} 로컬 및 전용 관리](../admin/index.html#mng)를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 데디케이티드 및 로컬 환경 내에서는 지정된 관리자가 관리 콘솔을 사용하여 조직 내 {{site.data.keyword.Bluemix_notm}} 사용자의 역할 및 권한을 관리할 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}} 로컬 및 데디케이티드 관리](../admin/index.html#mng)를 참조하십시오.
 </dd>
 </dl>
 
 ### 물리적 보안
 
-{{site.data.keyword.Bluemix_notm}} Public 및 Dedicated에서는 실제 네트워크 보안을 위해 SoftLayer의 네트워크 내 네트워크(network-within-a-network) 토폴로지에 의존합니다. 이러한 네트워크 내 네트워크 아키텍처를 사용하여
-권한 있는 사용자만 시스템에 완전히 액세스할 수 있도록
-할 수 있습니다. {{site.data.keyword.Bluemix_notm}} Local에 대해 사용자는 로컬 인스턴스에 대한
-물리적 보안을 소유합니다. 데이터 센터는 회사 방화벽 뒤에서 보호됩니다.
+{{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드에서는 실제 네트워크 보안을 위해 SoftLayer의 네트워크 내 네트워크(network-within-a-network) 토폴로지에 의존합니다. 이러한 네트워크 내 네트워크 아키텍처를 사용하여 권한 있는 사용자만 시스템에 완전히 액세스할 수 있도록 할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 로컬에 대해 사용자는 로컬 인스턴스에 대한 물리적 보안을 소유합니다. 데이터 센터는 회사 방화벽 뒤에서 보호됩니다.
 
-SoftLayer 네트워크 내 네트워크(network-within-a-network)에서 공용 네트워크 계층은 호스팅된 웹 사이트 또는 온라인 자원에 대한 공용 트래픽을 처리합니다. 사설 네트워크 계층을 사용하면 SSL, PPTP 또는 IPSec VPN 게이트웨이에서 개별 독립형 써드파티 업체를 통해 진정한 대역 외 관리를 수행할 수 있습니다. 데이터 센터 간 네트워크 계층은 개별 SoftLayer 설비에 포함된 서버 간의 무료 보안 연결을 제공합니다.
+SoftLayer 네트워크 내 네트워크(network-within-a-network)에서 공용 네트워크 계층은 호스팅된 웹 사이트 또는 온라인 리소스에 대한 공용 트래픽을 처리합니다. 사설 네트워크 계층을 사용하면 SSL, PPTP 또는 IPSec VPN 게이트웨이에서 개별 독립형 써드파티 업체를 통해 진정한 대역 외 관리를 수행할 수 있습니다. 데이터 센터 간 네트워크 계층은 개별 SoftLayer 설비에 포함된 서버 간의 무료 보안 연결을 제공합니다.
 
 모든 SoftLayer 데이터 센터는 예외 없이 SSAE 16 및 업계에서 인정하는 요구사항을 충족하는 제어에 따라 완벽하게 보호됩니다. 자세한 정보는 SoftLayer 보안 규제 준수 페이지를 참조하십시오.
 
 ## 데이터 보안
 {: #data-security}
 
-{{site.data.keyword.Bluemix_notm}}에서는
-비인가 액세스에 대한 데이터 보안이
-{{site.data.keyword.Bluemix_notm}}와 사용자 간의 공동 노력으로 이루어집니다.
+{{site.data.keyword.Bluemix_notm}}에서는 비인가 액세스에 대한 데이터 보안이 {{site.data.keyword.Bluemix_notm}}와 사용자 간의 공동 노력으로 이루어집니다.
 
-실행 중인 애플리케이션과 연관된 데이터는 전송 중 데이터(data-in-transit),
-저장 데이터(data-at-rest) 및 사용 중 데이터(data-in-use)의 세 가지 상태 중 하나일 수 있습니다.
+실행 중인 애플리케이션과 연관된 데이터는 전송 중 데이터(data-in-transit), 저장 데이터(data-at-rest) 및 사용 중 데이터(data-in-use)의 세 가지 상태 중 하나일 수 있습니다.
 
 <dl>
 <dt>전송 중 데이터(data-in-transit)</dt>
@@ -227,7 +202,7 @@ SoftLayer 네트워크 내 네트워크(network-within-a-network)에서 공용 �
 여러 {{site.data.keyword.Bluemix_notm}} 서비스에서 제공하는 보안 기능을 사용하여
 애플리케이션을 보호할 수 있습니다. IBM에서 생성하는 모든 {{site.data.keyword.Bluemix_notm}} 서비스는 IBM 보안 엔지니어링 개발 방식을 따릅니다.
 
-**참고:** 여기에 설명된 서비스 중 일부는 Bluemix Dedicated 또는 Local 인스턴스에 적용되지 않을 수 있습니다.
+**참고:** 여기에 설명된 서비스 중 일부는 Bluemix 데디케이티드 또는 로컬 인스턴스에 적용되지 않을 수 있습니다.
 
 ### SSO 서비스
 
@@ -267,44 +242,12 @@ SSL 인증서에 의해 보호됩니다. 이 서비스는 배치된 데이터베
 
 자세한 정보는 [dashDB 시작하기](../services/dashDB/index.html)를 참조하십시오.
 
-### Cloud Integration
-
-클라우드 통합 서비스를 사용하면 클라우드 및 사내 구축형 데이터를 통합할 수 있습니다. 백엔드 데이터베이스(예: DB2, Oracle 및 SAP)와 상호작용하기 위한 서비스를 추가할 수 있습니다. 그리고 데이터를 이동하거나 액세스하고 사용할
-{{site.data.keyword.Bluemix_notm}}
-애플리케이션의 REST API를 작성할 수 있습니다. 서비스는 사내 구축형 보안 커넥터와의 보안 통신이 가능하도록 하며,
-애플리케이션이 사용하는 REST API로서 백엔드 SOR(System of Record)을 노출합니다.
-
-자세한 정보는 [Cloud Integration 시작하기](../services/CloudIntegration/index.html)를 참조하십시오.
-
 ### Secure Gateway
 
 Secure Gateway 서비스를 사용하면 사내 구축형 또는 클라우드에서 원격 위치에 {{site.data.keyword.Bluemix_notm}} 앱을 안전하게 연결할 수 있습니다. 이는 보안 연결을 제공하며 {{site.data.keyword.Bluemix_notm}} 조직 및
-연결하고자 하는 원격 위치 간에 터널을 설정합니다. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는
-API 패키지를 사용하여 보안 게이트웨이를 구성하고 작성할 수 있습니다.
+연결하고자 하는 원격 위치 간에 터널을 설정합니다. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 API 패키지를 사용하여 Secure Gateway를 구성하고 작성할 수 있습니다.
 
 자세한 정보는 [Secure Gateway 시작하기](../services/SecureGateway/secure_gateway.html)를 참조하십시오.
-
-### SQL Database
-
-SQL Database 서비스는 완전히 프로비저닝된 관계형 데이터베이스를 앱에 추가합니다. 이 서비스는 애플리케이션에서 액세스하는 데이터베이스를 보호하기 위해 인증용 IBM Directory Server LDAP 및 IBM InfoSphere® Guardium® Data Activity Monitor를 사용합니다. 애플리케이션 및 데이터베이스 사이의 연결은
-DigiCert가 서명하는 SSL 인증서에 의해 보호됩니다.
-
-이 서비스의 특정 플랜에서, {{site.data.keyword.Bluemix_notm}}의
-SQL 데이터베이스 콘솔을 사용하여 다음 정보가 포함된 보고서를 가져올 수 있습니다. 
-
- * 애플리케이션이 액세스하는 데이터베이스에 있을 수 있는
-민감한 데이터
- * 지정된 기간 내에 데이터베이스에 액세스한
-애플리케이션 사용자
- * 데이터베이스에 있는 민감한 데이터에 액세스하는
-애플리케이션 사용자
-
-SQL을 사용하여 데이터를 마스킹하기 위해
-애플리케이션은 데이터베이스와 함께 배치되는
-마스킹 사용자 정의 기능(UDF)을 호출할 수 있습니다. 예를 들어, 테스트를 위해 다른 곳에 사용하려는
-데이터를 마스킹할 수 있습니다. UDF는 IBM Infosphere Optim™에서 데이터 마스킹 알고리즘을 구현합니다.
-
-이 서비스의 프리미엄 플랜에는 데이터 암호화도 포함됩니다. 이 서비스에 대한 자세한 정보는 [SQL Database 시작하기](../services/SQLDB/index.html)를 참조하십시오.
 
 ### 보안 정보 및 이벤트 관리
 
@@ -328,26 +271,25 @@ You can use security information and event management (SIEM) 도구를 사용하
 
 {{site.data.keyword.Bluemix_notm}} *개발자*는 두 개의 기본 플로우(로그인용과 개발 및 배치용)를 따릅니다.
  * **개발자 로그인 플로우**에는 다음이 포함됩니다.
-    * {{site.data.keyword.Bluemix_notm}} Public에 로그인한 개발자의 경우
+    * {{site.data.keyword.Bluemix_notm}} 퍼블릭에 로그인한 개발자의 경우
 플로우는 다음과 같습니다.
       1. IBM Single Sign On 서비스를 통해.
       2. IBM 웹 ID를 통해.
-    * {{site.data.keyword.Bluemix_notm}} Dedicated 또는 Local에 로그인한 개발자의 경우 플로우는 엔터프라이즈 LDAP를 통합니다.
+    * {{site.data.keyword.Bluemix_notm}} 데디케이티드 또는 로컬에 로그인한 개발자의 경우 플로우는 엔터프라이즈 LDAP를 통합니다.
  * **개발 및 배치 플로우**는 다음과 같습니다.
-    1. 방화벽을 통해(침입 방지 및 네트워크 보안이 적절히 갖춰져 있음). {{site.data.keyword.Bluemix_notm}} Dedicated에만 적용됩니다.
+    1. 방화벽을 통해(침입 방지 및 네트워크 보안이 적절히 갖춰져 있음). {{site.data.keyword.Bluemix_notm}} 데디케이티드에만 적용됩니다.
     2. IBM DataPower Gateway를 통해(리버스 프록시 및 SSL 종료 프록시 포함).
     3. 네트워크 라우터를 통해.
     4. Cloud Foundry 클라우드 제어기를 사용한 권한 부여를 통해(개발자가 작성한 앱 및 서비스 인스턴스에 대한 액세스만 보장할 수 있도록).
 
-{{site.data.keyword.Bluemix_notm}} Dedicated 및 {{site.data.keyword.Bluemix_notm}} Local *관리자*의 경우,
-**관리자 플로우**는 다음과 같습니다.
+{{site.data.keyword.Bluemix_notm}} 데디케이티드 및 {{site.data.keyword.Bluemix_notm}} 로컬 *관리자*의 경우, **관리자 플로우**는 다음과 같습니다.
  1. 방화벽을 통해(침입 방지 및 네트워크 보안이 적절히 갖춰져 있음).
  2. IBM DataPower Gateway를 통해(리버스 프록시 및 SSL 종료 프록시 포함).
  3. 네트워크 라우터를 통해.
  4. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 관리 페이지에 도달합니다.
 
 이 경로에서 기술된 사용자와 더불어 인가된 IBM 보안 운영 팀은 다음과 같은 다양한 운영 보안 태스크를 수행합니다.
- * 취약성 스캔. {{site.data.keyword.Bluemix_notm}} Local에 대해 사용자는 방화벽 내 물리적 보안 및 스캔을 소유합니다.
+ * 취약성 스캔. {{site.data.keyword.Bluemix_notm}} 로컬에 대해 사용자는 방화벽 내 물리적 보안 및 스캔을 소유합니다.
  * 사용자 액세스 관리.
  * IBM Endpoint Manager로 수정사항을 주기적으로 적용하여 운영 체제 강화.
  * 침입 방지로 위험성 관리.

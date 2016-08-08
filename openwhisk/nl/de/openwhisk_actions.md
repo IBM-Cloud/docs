@@ -292,10 +292,10 @@ Im folgenden Beispiel wird ein Yahoo Weather-Services aufgerufen, um die aktuell
   ```
     var request = require('request');
     
-    function main(msg) {
-        var location = msg.location || 'Vermont';
+    function main(params) {
+        var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
-    
+
         request.get(url, function(error, response, body) {
             var condition = JSON.parse(body).query.results.channel.item.condition;
             var text = condition.text;
@@ -492,10 +492,10 @@ In den nachfolgenden Anweisungen wird die Benutzer-ID "janesmith" und das Kennwo
   {: pre}
   ```
   #include <stdio.h>
-  
+
   int main(int argc, char *argv[]) {
-      printf("Hallo %s von einem beliebigen C-Programm!\n",
-             (argc == 1) ? "anonymous" : argv[1]);
+      printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
+             (argc == 1) ? "undefined" : argv[1]);
   }
   ```
   {: screen}
@@ -531,11 +531,24 @@ In den nachfolgenden Anweisungen wird die Benutzer-ID "janesmith" und das Kennwo
   {: pre}
   ```
   {
-      "msg": "Hello Rey from arbitrary C program!\n"
+      "args": {
+          "payload": "Rey"
+      },
+      "msg": "Hello from arbitrary C program!"
   }
   ```
   {: screen}
 
+5. Führen Sie zum Aktualisieren einer Docker-Aktion `buildAndPush.sh` aus, um das Docker Hub-Image zu aktualisieren; anschließend müssen Sie `wsk action update` ausführen, damit das neue Image vom System abgerufen wird. Bei neuen Aufrufen wird das neue Image verwendet und nicht ein aktives Image mit altem Code. 
+
+  ```
+  ./buildAndPush.sh janesmith/blackboxdemo
+  ```
+  {: pre}
+  ```
+  wsk action update --docker example janesmith/blackboxdemo
+  ```
+  {: pre}
 
 Weitere Informationen zur Erstellung von Docker-Aktionen finden Sie im Abschnitt mit den [Referenzinformationen](./openwhisk_reference.html#openwhisk_ref_docker).
 

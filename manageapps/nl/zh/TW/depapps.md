@@ -53,7 +53,7 @@ copyright:
   * 若要將 Liberty 伺服器套件部署至 {{site.data.keyword.Bluemix_notm}}，請從來源目錄中使用下列指令：
   
   ```
-  cf push
+cf push
   ```
   
   如需「Liberty 建置套件」的相關資訊，請參閱 [Liberty for Java](../runtimes/liberty/index.html)。
@@ -61,31 +61,30 @@ copyright:
   * 若要將 Java Tomcat 應用程式部署至 {{site.data.keyword.Bluemix_notm}}，請使用下列指令：
   
   ```
-  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
+cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * 若要將 WAR 套件部署至 {{site.data.keyword.Bluemix_notm}}，請使用下列指令：
   
   ```
-  cf push appname -p app.war
+cf push appname -p app.war
   ```
-  或者，您可以使用下列指令來指定包含應用程式檔案的目錄：
-  
+或者，您可以使用下列指令來指定包含應用程式檔案的目錄：  
   ```
-  cf push appname -p "./app"
+cf push appname -p "./app"
   ```
   
   * 若要將 Node.js 應用程式部署至 {{site.data.keyword.Bluemix_notm}}，請使用下列指令：
   
   ```
-  cf push appname -p app_path
+cf push appname -p app_path
   ```
   
 `package.json` 檔案必須位於 Node.js 應用程式中，Node.js 建置套件才能辨識該應用程式。`app.js` 檔案是應用程式的登錄 Script，可以在 `package.json` 檔案中指定。下列範例顯示簡式 `package.json` 檔案：
 
   ```
   {
-"name": "MyUniqueNodejs01",
+        "name": "MyUniqueNodejs01",
         "version": "0.0.1",
         "description": "A sample package.json file",
         "dependencies": {
@@ -107,7 +106,7 @@ copyright:
   * 若要將 PHP、Ruby 或 Python 應用程式部署至 {{site.data.keyword.Bluemix_notm}}，請從包含應用程式原始檔的目錄中，使用下列指令：
   
   ```
-  cf push appname
+cf push appname
   ```
 
 ###在多個空間中部署應用程式
@@ -117,13 +116,13 @@ copyright:
   1. 使用 **cf target** 指令與 **-s** 選項，切換至您要部署應用程式的空間：
   
   ```
-  cf target -s <space_name>
+cf target -s <space_name>
   ```
   
   2. 移至應用程式目錄，然後使用 **cf push** 指令部署您的應用程式，其中 appname 在您的網域內必須是唯一的。
   
   ```
-  cf push appname
+cf push appname
   ```
   
 ##應用程式資訊清單
@@ -197,8 +196,7 @@ cf push -f appManifest.yml
   
   ```
   {
-   "VCAP_SERVICES": {
-"AppScan Dynamic Analyzer": [
+   "VCAP_SERVICES": {"AppScan Dynamic Analyzer": [
      {
       "credentials": {
        "bindingid": "0ab3162a-867e-4137-a2e7-39463a89472e",
@@ -301,7 +299,7 @@ cf push -f appManifest.yml
         {
             "name": "mysql-ix",
             "label": "mysql-5.5",
-            "tags": [
+      "tags":[
                 "mysql",
                 "relational",
                 "data_management",
@@ -382,14 +380,14 @@ if (process.env.VCAP_SERVICES) {
   * 使用 **cf push** 指令並指定 -c 參數。例如，當您部署 Node.js 應用程式時，您可以在 -c 參數中指定 **node app.js** 啟動指令：
   
   ```
-  cf push appname -p app_path -c "node app.js"
+cf push appname -p app_path -c "node app.js"
   ```
   
   * 在 `manifest.yml` 檔案中使用 command 參數。例如，當您部署 Node.js 應用程式時，您可以在資訊清單檔中指定 **node app.js** 啟動指令：
 
   
   ```
-  command: node app.js
+command: node app.js
   ```
   
 
@@ -404,13 +402,13 @@ if (process.env.VCAP_SERVICES) {
 	2. 在左導覽窗格中，按一下**環境變數**。
 	3. 按一下**使用者定義**，然後按一下**新增**。
 	4. 填寫必要欄位，然後按一下**儲存**。
-  * 使用 cf 指令行介面。使用 `cf set-env` 指令新增使用者定義的變數。例如：
-  ```
-    cf set-env appname env_var_name env_var_value
+  * 使用 cf 指令行介面。使用 `cf set-env` 指令新增使用者定義的變數。例如： 
+    ```
+cf set-env appname env_var_name env_var_value
     ```
 	
-  * 使用 `manifest.yml` 檔案。在該檔案中新增值配對。例如：
-  ```
+  * 使用 `manifest.yml` 檔案。在該檔案中新增值配對。例如： 
+    ```
 	env:
       VAR1:value1
       VAR2:value2

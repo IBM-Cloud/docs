@@ -30,9 +30,10 @@ copyright:
     有効にすると、ビルドパックは、アプリケーションのランタイムとコンテナーの間に配置されたプロキシー・エージェントを開始します。*proxy* ユーティリティーは、アプリケーションが受信したすべての要求を処理します。要求のタイプに基づいて、アプリ管理アクションを実行するか、要求をアプリケーションに転送します。*proxy* により、他のほとんどのアプリ管理ユーティリティーを有効化できます。*proxy* を有効にすることで、アプリケーション・コンテナーは、アプリケーションが異常終了した場合でも存続します。また、プロキシー・エージェントでは、増分ファイル更新も可能です。これにより、Node.js アプリケーションの「Live Edit」モードが使用可能になります。
 	
   2. *devconsole*: 以下の URL からアクセス可能な開発コンソール・ユーティリティーを使用可能にします。
-    ```
-    http://<yourappname>.mybluemix.net/bluemix-debug/manage
-    ```
+    
+    
+http://<yourappname>.mybluemix.net/bluemix-debug/manage
+    
 	
     開発コンソールを使用することで、ユーザーは、アプリケーションを再始動、停止、または一時停止できます。また、ユーザーは、shell および inspector ユーティリティーを使用可能にしたり、それらにアクセスしたりすることもできます。
 
@@ -44,9 +45,10 @@ copyright:
 
     ヘルス・センターでは、IBM Monitoring and Diagnostic Tools を使用した Liberty アプリケーションおよび Node.js アプリケーションのパフォーマンスの分析がサポートされます。詳しくは、『[How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}』を参照してください。</p></li>
 	
-  4. *shell*: devconsole ユーティリティーから、または以下の URL にアクセスすることでアクセス可能な Web ベースのシェルを使用可能にします。```
-    http://<yourappname>.mybluemix.net/bluemix-debug/shell
-    ```
+  4. *shell*: devconsole ユーティリティーから、または以下の URL にアクセスすることでアクセス可能な Web ベースのシェルを使用可能にします。
+    
+http://<yourappname>.mybluemix.net/bluemix-debug/shell
+    
 	
     shell ユーティリティーにアクセスすると、アプリケーションにシェルでアクセスできる端末ウィンドウが表示されます。ファイルの編集、メモリー使用量の確認、診断コマンドの実行など、通常のシェルでサポートされる任意の操作を実行できます。
 	
@@ -82,29 +84,29 @@ copyright:
 
     1. *strongpm* BlUEMIX_APP_MGMT_ENABLE 環境変数を構成し、アプリケーションを再ステージングします。
     
-	```
-    cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
+	
+cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
     cf restage <appname>
-    ```
+    
 	
     2. Cloud Foundry コマンド・ラインから、アプリケーションへの経路を追加します。ここで、経路のアプリケーション名には「-pm」を追加します (例えば、<appname>-pm.mybluemix.net)。
     
-	```
-    cf map-route <appname> ng.bluemix.net -n <appname>-pm
-    ```
+	
+cf map-route <appname> ng.bluemix.net -n <appname>-pm
+    
 	
     3. ローカル・ワークステーションで [StrongLoop npm モジュール](https://www.npmjs.com/package/strongloop){:new_window}をインストールします。
     
-	```
-    npm install -g strongloop
-    ```
+	
+npm install -g strongloop
+    
 	
     4. [StrongLoop の Web サイト](https://strongloop.com/register/){:new_window}でアカウントを作成します。
     5. ローカル・ワークステーションで Arc を起動し、作成したアカウントでログインします。
     
-	```
-    slc arc
-    ```
+	
+slc arc
+    
 	
     6. Arc 内の「Process Manager」ビューにナビゲートします。新しく作成した経路とポート 80 を Process Manager に入力します。「Activate」ボタンを押します。詳しくは、[Arc の使用に関する完全な資料](https://docs.strongloop.com/display){:new_window}を参照してください。
 	
@@ -127,24 +129,24 @@ copyright:
 
 例えば、devconsole ユーティリティーと *shell* ユーティリティーを使用可能にするには、以下のコマンドを実行します。
 
-```
+
 cf set-env myApp BLUEMIX_APP_MGMT_ENABLE devconsole+shell
-```
+
 
 環境変数を設定したら、その後忘れずにアプリケーションを再ステージングしてください。
 
-```
+
 cf restage myApp
-```
+
 
 アプリケーションに併せてアプリ管理ユーティリティーもインストールされることのないようにする場合は、*BLUEMIX_APP_MGMT_INSTALL* 環境変数を「false」に設定して、アプリケーションを再ステージングします。
 
 例えば次のようにします。
 
-```
+
 cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
 cf restage myApp
-```
+
 
 ##制限
 {: #restrictions}

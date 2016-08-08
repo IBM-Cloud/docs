@@ -47,36 +47,29 @@ copyright:
 请参阅公共 {{site.data.keyword.jazzhub_short}} 存储库的应用程序按钮示例：
 
 <p>
-<a class="xref" href="https://bluemix.net/deploy?repository=https://hub.jazz.net/git/idsorg/sample-java-cloudant" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/deploy_buttonx2.png" alt="部署到 Bluemix" /></a>
-</p> 
+<a class="xref" href="https://bluemix.net/deploy?repository=https://hub.jazz.net/git/idsorg/sample-java-cloudant" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/deploy_buttonx2.png" alt="部署到 Bluemix" /></a></p> 
 
 请参阅公共 GitHub 存储库的应用程序按钮示例： 
 
 <p>
-<a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-node-mysql-uploader" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/deploy_buttonx2.png" alt="部署到 Bluemix" /></a>
-</p> 
+<a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-node-mysql-uploader" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/deploy_buttonx2.png" alt="部署到 Bluemix" /></a></p> 
 
 请参阅 {{site.data.keyword.Bluemix_notm}} 容器中部署的应用程序的按钮示例： 
 
 <p>
-<a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/deploy_buttonx2.png" alt="部署到 Bluemix" /></a>
-</p> 
+<a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/deploy_buttonx2.png" alt="部署到 Bluemix" /></a></p> 
 
 ##创建按钮 {: #create-button}
 
 要创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮，请执行以下操作： 
 
 <ol>
-<li> 复制并修改以下某个片段模板，并在其中加入公共 Git 存储库。
-<p></p>
+<li> 复制并修改以下某个片段模板，并在其中加入公共 Git 存储库。<p></p>
 <p>
-<strong>提示</strong>：如果想要为 DevOps Services 项目指定构建输入，请向 Git URL 添加分支参数。添加分支参数后，系统会将原始公共 Git 存储库（包括其所有分支）克隆到带有新 Git 存储库的新专用 DevOps Services 项目中。系统会将指定的 Git 分支设置为构建作业的输入。如果未指定分支，那么缺省情况下，会将构建作业的输入设置为主分支。
-</p>
+<strong>提示</strong>：如果想要为 DevOps Services 项目指定构建输入，请向 Git URL 添加分支参数。添加分支参数后，系统会将原始公共 Git 存储库（包括其所有分支）克隆到带有新 Git 存储库的新专用 DevOps Services 项目中。系统会将指定的 Git 分支设置为构建作业的输入。如果未指定分支，那么缺省情况下，会将构建作业的输入设置为主分支。</p>
 <ul>
-<li>HTML：
-<p>
-缺省主分支：
-</p>
+<li>HTML：<p>
+缺省主分支：</p>
 <pre class="codeblock">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [必需]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署到 Bluemix"&gt;&lt;/a&gt;
 </pre>
@@ -87,10 +80,8 @@ copyright:
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [必需]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署到 Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
-<li>Markdown：
-<p>
-缺省主分支：
-</p>
+<li>Markdown：<p>
+缺省主分支：</p>
 <pre class="codeblock">
 [&#33;[部署到 Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [必需]&#41;
 </pre>
@@ -102,8 +93,7 @@ copyright:
 </li>
 </ul>
 </li>
-<li>将该片段插入博客、文章、Wiki、自述文件或您希望推广您应用程序的任何位置。
-</li>
+<li>将该片段插入博客、文章、Wiki、自述文件或您希望推广您应用程序的任何位置。</li>
 </ol>
 
 ##按钮片段的注意事项 {: #button-snippet}
@@ -143,7 +133,7 @@ copyright:
     &lt;`arbitrary_service_instance_name`&gt;:  # [必需]
       label: &lt;`actual_service_name`&gt; # [必需] 市场上的实际服务名称
       plan: Shared # [可选] 如果提供，用于访存声明的服务。否则，缺省值为“Free”或“free”。
-  applications:
+applications:
   - 服务
     - &lt;`arbitrary_service_instance_name`&gt;
     name: &lt;`appname`&gt;
@@ -167,8 +157,8 @@ copyright:
    </li>
    </ul>
 	<li> 如果必须在部署应用程序之前构建存储库，那么会先触发存储库中代码的自动构建，再进行部署。在存储库的根目录中检测到构建脚本文件时，会执行自动构建。
-	
-	受支持的构建器：
+
+受支持的构建器：
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>，它会将输出构建到 <code>./output/</code> 文件夹中</li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>，它会将输出构建到 <code>.</code> 文件夹中</i>
@@ -180,14 +170,13 @@ copyright:
 <ol>
 <li>在浏览器中打开您的 DevOps Services 项目，然后单击<b>构建和部署</b>。</li>
 <li>使用构建和部署作业来配置管道。</li>
-<li>在浏览器中，将 <code>/yaml</code> 添加到项目管道 URL 中，然后按 Enter 键。
-<br>示例：<code>https://hub.jazz.net/pipeline/<owner>/<project_name>/yaml</code></li>
+<li>在浏览器中，将 <code>/yaml</code> 添加到项目管道 URL 中，然后按 Enter 键。<br>示例：<code>https://hub.jazz.net/pipeline/<owner>/<project_name>/yaml</code></li>
 <li>保存生成的 <code>pipeline.yml</code> 文件。</li>
 <li>在项目的根目录中，创建 <code>.bluemix</code> 目录。</li>
 <li>将 <code>pipeline.yml</code> 文件上传到 <code>.bluemix</code> 存储库。</li>
 </ol> </li>
 	<li>如果您要使用 <stong>IBM Containers</strong> 在容器中部署应用程序，那么必须将 Dockerfile 放入存储库的根目录中，并将 <code>pipeline.yml</code> 文件放入 <code>.bluemix</code> 目录中。
-	<ul>
+<ul>
 	    <li> 要了解有关创建 Dockerfile 的更多信息，请参阅 <a href="https://docs.docker.com/reference/builder/" target="_blank">Docker 文档</a>。</li>
 	    <li>您可以手动创建 <code>pipeline.yml</code> 文件，也可以根据现有 DevOps Services 项目来生成 pipeline.yml 文件。要手动创建专用于容器的 <code>pipeline.yml</code>，请参阅 <a href="https://github.com/Puquios/" target="_blank">GitHub</a> 中的示例。</li>
         </ul>

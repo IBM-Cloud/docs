@@ -191,13 +191,13 @@ copyright:
 2. 使用下列指令來建立服務實例，其中 service_name 是服務的名稱、service_plan 是服務的方案，而 service_instance 是您要用於此服務實例的名稱。
 
     ```
-    cf create-service service_name service_plan service_instance
+cf create-service service_name service_plan service_instance
     ```
 
 3. 使用下列指令將服務實例連結至應用程式，其中 appname 是應用程式的名稱，而 service_instance 是服務實例的名稱。
 
     ```
-    cf bind-service appname service_instance
+cf bind-service appname service_instance
     ```
 
 您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.Bluemix_notm}} 服務的相關資訊，請參閱[讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external){: new_window}。
@@ -253,7 +253,7 @@ copyright:
 1. 使用 **cf create-user-provided-service** 或 **cf cups** 指令，以建立使用者提供的服務實例：
     * 若要建立一般使用者提供的服務實例，請使用 **-p** 選項，並使用逗點區隔參數名稱。cf 指令行介面接著會提示您依次輸入每一個參數。例如：
         ```
-        cf cups testups1 -p "host, port, dbname, username, password"
+cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -266,7 +266,7 @@ copyright:
     * 若要建立將資訊排除至協力廠商日誌管理軟體的服務實例，請使用 **-l** 選項，然後指定協力廠商日誌管理軟體所提供的目的地。例如：
 
         ```
-        cf cups testups2 -l syslog://example.com
+cf cups testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -277,7 +277,7 @@ copyright:
 例如：
 
         ```
-        cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -285,7 +285,7 @@ copyright:
     * 若要建立將資訊排除至協力廠商日誌管理軟體的服務實例，請使用 -l 選項。例如：
 
         ```
-        cf uups testups2 -l syslog://example2.com
+cf uups testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```

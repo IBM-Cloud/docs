@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  2015，2016
 
  
 
@@ -14,18 +14,23 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Plug-in de l'interface de ligne de commande Bluemix pour le réseau privé virtuel
+# Plug-in {{site.data.keyword.vpn_short}} pour l'interface CLI de {{site.data.keyword.Bluemix_notm}}
 
-*Dernière mise à jour :* 18 janvier 2016
+*Dernière mise à jour : 20 juin 2016*
+{: .last-updated}
 
-*Version :* 0.1.5
+*Version :* 1.4.0
 
-Vous pouvez utiliser le plug-in de l'interface de ligne de commande Bluemix pour le réseau privé virtuel afin de configurer et de gérer votre
-service IBM Virtual Private Network (VPN).
+Vous pouvez utiliser l'interface de ligne de commande pour configurer et gérer votre service {{site.data.keyword.vpn_full}}. Le plug-in CLI {{site.data.keyword.vpn_short}} est disponible dans deux versions : l'un est destiné à être utilisée avec le plug-in CLI Cloud Foundry et l'autre est destiné à être utilisé avec le plug-in CLI {{site.data.keyword.Bluemix}}. Les deux versions du plug-in fournissent la même fonctionnalité.   
 {:shortdesc}
 
-Les informations ci-après répertorient toutes les commandes qui sont prises en charge par le plug-in de l'interface de ligne de commande Bluemix pour
-le réseau privé virtuel, ainsi que leurs noms, leurs options, leur syntaxe, les éléments prérequis, leurs descriptions et des exemples.
+Le plug-in {{site.data.keyword.vpn_short}} est disponible pour les systèmes d'exploitation Windows, MAC et Linux. Assurez-vous d'utiliser celui qui vous correspond.
+
+Les instructions qui suivent s'appliquent au plug-in CLI {{site.data.keyword.Bluemix_notm}}. Pour utiliser le plug-in avec le plug-in CLI Cloud Foundry (cf), voir [Plug-in CLI {{site.data.keyword.vpn_short}} pour CLI cf](../vpn/index.html).
+
+
+Vous trouverez ci-après la liste de toutes les commandes qui sont prises en charge par le plug-in {{site.data.keyword.vpn_short}} pour l'interface CLI de Bluemix, ainsi que leurs noms, leurs options, leur syntaxe, leurs prérequis, leurs descriptions et des exemples.
+Pour savoir comment installer le plug-in vpn, voir [Etendez votre interface de ligne de commande de Bluemix](../../index.html#cli_bluemix_ext). 
 
 **Remarque :** la zone *Prérequis* répertorie les actions qui sont requises avant l'utilisation de la commande. Il
 peut s'agir d'une ou de plusieurs des actions suivantes :
@@ -43,10 +48,7 @@ peut s'agir d'une ou de plusieurs des actions suivantes :
 Crée une connexion de réseau privé virtuel.
 
 ```
-bluemix vpn connection-create NOM_CONNEXION -g NOM_PASSERELLE -k CLE_PRE-PARTAGEE -subnets "SOUS-RESEAU/MASQUE" -cip
-ADRESSE_IP_PASSERELLE_CLIENT [-d DESCRIPTION][-peer_id ID_HOMOLOGUE] [-admin_state ETAT_ADMIN][-dpd-action ACTION]
-[-gateway_ip ADRESSE_IP][-i ETAT_INITIATEUR] [-dpd-timeout VALEUR][-dpd-interval VALEUR] [-ike
-NOM][-ipsec NOM]
+bluemix vpn connection-create NOM_CONNEXION -g NOM_PASSERELLE -k CLE_PRE-PARTAGEE -subnets "SOUS-RESEAU/MASQUE" -cip ADRESSE_IP_PASSERELLE_CLIENT [-d DESCRIPTION] [-peer_id ID_HOMOLOGUE] [-admin_state ETAT_ADMIN] [-dpd-action ACTION] [-gateway_ip ADRESSE_IP] [-i ETAT_INITIATEUR] [-dpd-timeout VALEUR] [-dpd-interval VALEUR] [-ike NOM] [-ipsec NOM]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
@@ -70,7 +72,7 @@ NOM][-ipsec NOM]
 -admin_state *ETAT_ADMIN* (facultatif) : statut de la connexion de réseau privé virtuel. Les valeurs admises sont `UP`
 et `DOWN`.
 
--dpd-action *ACTION* (facultatif) : action à effectuer lorsque l'homologue est identifié comme non opérationnel. Les valeurs admises sont
+-dpd-action *ACTION*  (facultatif) :  action à effectuer lorsque l'homologue est identifié comme non opérationnel. Les valeurs admises sont
 `hold`, `clear`, `disabled`, `restart` et `restart-by-peer`. La
 valeur par défaut est `hold`.
 
@@ -100,8 +102,7 @@ bluemix vpn connection-create ma_connexion -g ma_passerelle -k 123456 -subnets "
 Crée une règle IKE (Internet Key Exchange).
 
 ```
-bluemix vpn ike-create NOM_REGLE -g NOM_PASSERELLE [-d DESCRIPTION][-pfs GROUPE] [-e
-ALGORITHME_CHIFFREMENT][-lv VALEUR_DUREE_VIE]
+bluemix vpn ike-create NOM_REGLE -g NOM_PASSERELLE [-d DESCRIPTION] [-pfs GROUPE] [-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
@@ -134,8 +135,7 @@ bluemix vpn ike-create mon_ike -g ma_passerelle
 Crée une règle IPSec (Internet Protocol Security).
 
 ```
-bluemix vpn ipsec-create NOM_REGLE -g NOM_PASSERELLE [-d DESCRIPTION][-pfs GROUPE] [-e
-ALGORITHME_CHIFFREMENT][-lv VALEUR_DUREE_VIE]
+bluemix vpn ipsec-create NOM_REGLE -g NOM_PASSERELLE [-d DESCRIPTION] [-pfs GROUPE] [-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
@@ -169,7 +169,7 @@ bluemix vpn ipsec-create ma_règle -g ma_passerelle
 Crée une passerelle de réseau privé virtuel.
 
 ```
-bluemix vpn gateway-create NOM_PASSERELLE -t TYPE [-gateway_ip ADRESSE_IP][-subnets ADRESSE_SOUS-RESEAU]
+bluemix vpn gateway-create NOM_PASSERELLE -t TYPE [-gateway_ip ADRESSE_IP] [-subnets ADRESSE_SOUS-RESEAU]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
@@ -349,11 +349,7 @@ bluemix vpn gateway-delete NOM_PASSERELLE
 Met à jour une connexion de réseau privé virtuel existante.
 
 ```
-bluemix vpn connection-update NOM_CONNEXION [-g NOM_PASSERELLE][-k CLE_PRE-PARTAGEE]
-[-subnets
-"SOUS-RESEAU/MASQUE"][-cip ADRESSE_IP_PASSERELLE_CLIENT] [-d DESCRIPTION][-peer_id ID_HOMOLOGUE] [-admin_state ETAT_ADMIN][-dpd-action ACTION]
-[-gateway_ip ADRESSE_IP][-i ETAT_INITIATEUR] [-dpd-timeout VALEUR][-dpd-interval VALEUR] [-ike
-NOM][-ipsec NOM]
+bluemix vpn connection-update NOM_CONNEXION [-g NOM_PASSERELLE] [-k CLE_PRE-PARTAGEE] [-subnets "SOUS-RESEAU/MASQUE"] [-cip ADRESSE_IP_PASSERELLE_CLIENT] [-d DESCRIPTION] [-peer_id ID_HOMOLOGUE] [-admin_state ETAT_ADMIN] [-dpd-action ACTION] [-gateway_ip ADRESSE_IP] [-i ETAT_INITIATEUR] [-dpd-timeout VALEUR] [-dpd-interval VALEUR] [-ike NOM] [-ipsec NOM]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
@@ -398,8 +394,7 @@ configurée afin de vérifier l'état opérationnel de l'homologue. Plage : 5 à
 Met à jour une règle IKE (Internet Key Exchange).
 
 ```
-bluemix vpn ike-update NOM_REGLE [-g NOM_PASSERELLE][-d DESCRIPTION] [-pfs
-GROUPE][-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
+bluemix vpn ike-update NOM_REGLE [-g NOM_PASSERELLE] [-d DESCRIPTION] [-pfs GROUP] [-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
@@ -425,8 +420,7 @@ GROUPE][-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
 Met à jour une règle IPSec (Internet Protocol Security).
 
 ```
-bluemix vpn ipsec-update NOM_REGLE [-g NOM_PASSERELLE][-d DESCRIPTION] [-pfs
-GROUPE][-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
+bluemix vpn ipsec-update NOM_REGLE [-g NOM_PASSERELLE] [-d DESCRIPTION] [-pfs GROUPE] [-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible
@@ -452,7 +446,7 @@ GROUPE][-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
 Met à jour une passerelle de réseau privé virtuel existante.
 
 ```
-bluemix vpn gateway-update NOM_PASSERELLE [-t TYPE][-gateway_ip ADRESSE_IP] [-subnets ADRESSE_SOUS-RESEAU]
+bluemix vpn gateway-update NOM_PASSERELLE [-t TYPE] [-gateway_ip ADRESSE_IP] [-subnets ADRESSE_SOUS-RESEAU]
 ```
 
 **Prérequis** : Noeud final, Connexion, Cible

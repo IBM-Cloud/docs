@@ -302,7 +302,7 @@ Pour créer une instance de service fournie par l'utilisateur et la lier à une 
 1. Créez une instance de service fournie par l'utilisateur avec la commande **cf create-user-provided-service** ou **cf
 cups** :
     * Pour créer une instance de service fournie par l'utilisateur générale, utilisez l'option **-p** et séparez les noms de paramètre par une
-virgule. L'interface de ligne de commande cf vous invite alors à entrer chaque paramètre. Par exemple :
+virgule. L'interface de ligne de commande cf vous invite alors à entrer chaque paramètre. Par exemple :
         ```
         cf cups testups1 -p "hôte, port, nombd, nomutilisateur, motdepasse"
         host> pubsub01.exemple.com

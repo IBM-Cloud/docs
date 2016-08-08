@@ -12,7 +12,7 @@ copyright:
 # 고객 지원 받기
 {: #getting-customer-support}
 
-*마지막 업데이트 날짜: 2016년 6월 17일*
+*마지막 업데이트 날짜: 2016년 7월 7일*
 {: .last-updated}
 
 
@@ -67,7 +67,7 @@ copyright:
 
 다음 옵션 중 하나를 선택하여 상태 페이지를 찾을 수 있습니다.
 
-  * {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에 로그인하고 상단 메뉴 표시줄에서 **계정 및 지원** 아이콘 ![계정 및 지원](./images/account_support.svg)을 클릭하고 **상태**를 클릭하십시오. ![몇 가지 문제](images/some_issues.svg) 아이콘에 대해 나열된 자원을 확인하십시오. 아이콘이 가동 중단을 표시할 수 있습니다.
+  * {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에 로그인하고 상단 메뉴 표시줄에서 **계정 및 지원** 아이콘 ![계정 및 지원](./images/account_support.svg)을 클릭하고 **상태**를 클릭하십시오. ![몇 가지 문제](images/some_issues.svg) 아이콘에 대해 나열된 리소스를 확인하십시오. 아이콘이 가동 중단을 표시할 수 있습니다.
   * [IBM {{site.data.keyword.Bluemix_notm}} - 시스템 상태](https://status.eu-gb.bluemix.net/){: new_window}에서 직접 액세스합니다.
 
 
@@ -112,7 +112,7 @@ copyright:
 
   * 다중 {{site.data.keyword.Bluemix_notm}} 지역 활용
 
-    {{site.data.keyword.Bluemix_notm}} Public의 모든 사용자는 자동으로 US-SOUTH, EU-GB 및 AU-SYD 지역에 액세스할 수 있습니다.
+    {{site.data.keyword.Bluemix_notm}} 퍼블릭의 모든 사용자는 자동으로 US-SOUTH, EU-GB 및 AU-SYD 지역에 액세스할 수 있습니다.
 
 	  * US-SOUTH: https://console.ng.bluemix.net
 	  * EU-GB: https://console.eu-gb.bluemix.net
@@ -129,16 +129,18 @@ copyright:
 ## 지원 문의
 {: #contacting-support}
 
-유효한 {{site.data.keyword.Bluemix_notm}} 계정이 있는 경우 지원 티켓을 열 수 있습니다.   
+유효한 {{site.data.keyword.Bluemix_notm}} 계정이 있는 경우 지원 티켓을 열 수 있습니다.  
 
-### {{site.data.keyword.Bluemix_notm}} Public에 대한 지원 요청
+{{site.data.keyword.Bluemix_notm}} 계정이 SoftLayer 계정과 링크되어 있는 경우, SoftLayer 고객 포털 또는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 {{site.data.keyword.Bluemix_notm}}에 대한 지원 티켓을 열 수 있습니다.
+
+### {{site.data.keyword.Bluemix_notm}} 퍼블릭에 대한 지원 요청
 {: #contacting-bluemix-support}
 
 {{site.data.keyword.Bluemix_notm}}의 모든 고객은 Bluemix 커뮤니티 또는 스택 오버플로우를 통해 무료로 기술 지원을 받습니다. 또한 다양한 고객 요구사항을 충족할 수 있도록 다양한 레벨의 지원이 제공됩니다. 다음 표를 참조하여 무료, 기본, 표준 및 프리미엄 지원 레벨 간에 선택할 수 있습니다.  
 
 레벨 | 무료 |  기본 | 표준 | 프리미엄
 --- | --- | --- | --- | --- |
-설명 | Bluemix의 모든 시험판 고객을 지원합니다.  |  기존의 심각도 및 응답 시간이 필요하지 않은 프로덕션 이외의 환경이나 워크로드를 지원합니다. | 제한된 수의 비즈니스 핵심 애플리케이션이 있는 환경을 지원합니다. {{site.data.keyword.Bluemix_notm}} Dedicated 및 {{site.data.keyword.Bluemix_notm}} Local 고객이 표준 지원을 받습니다. | {{site.data.keyword.Bluemix_notm}}에서 전략적 의존성이 있는 매우 중요한 환경을 지원합니다.
+설명 | Bluemix의 모든 시험판 고객을 지원합니다.  |  기존의 심각도 및 응답 시간이 필요하지 않은 프로덕션 이외의 환경이나 워크로드를 지원합니다. | 제한된 수의 비즈니스 핵심 애플리케이션이 있는 환경을 지원합니다. {{site.data.keyword.Bluemix_notm}} 데디케이티드 및 {{site.data.keyword.Bluemix_notm}} 로컬 고객이 표준 지원을 받습니다. | {{site.data.keyword.Bluemix_notm}}에서 전략적 의존성이 있는 매우 중요한 환경을 지원합니다.
 고심각도 지원 |  해당사항 없음 | 해당사항 없음 | 포함 | 포함된
 지원 언어 | 영어 | 영어 | 영어 | 영어
 지정된 CSM(Client Success Manager) | 포함되지 않음 | 포함되지 않음 | 포함되지 않음 | 포함:<br> 주당 8시간
@@ -152,8 +154,8 @@ copyright:
 가동 중단으로 인한 문제점이 아니며 중국을 제외한 국가 또는 지역의 고객인 경우, 다음 옵션 중 하나를 사용하여 지원 티켓을 여십시오. 
 
   * 계정 및 지원에서 **도움 받기**를 클릭하십시오. 표시되는 페이지에서 **문의**를 클릭하십시오. 양식을 채워 필요한 기술 지원을 표시하십시오.
+  * [IBM {{site.data.keyword.Bluemix_notm}} 지원 센터](http://ibm.biz/bluemixsupport){: new_window} 도움말 페이지를 사용하십시오. 판매, 청구, IBM ID 및 로그인, 그리고 기술 지원 문제점 등에 대한 티켓을 제출할 수 있습니다. 기술 지원 문제점의 경우, **기술 지원** 타일을 클릭한 후에 추가 기술 그룹을 선택할 수 있습니다. 예를 들어, Cloud Foundry 앱, OpenWhisk, 컨테이너, 가상 서버 또는 베어메탈 서버에 대한 도움이 필요한 경우, **애플리케이션 서비스**를 선택할 수 있습니다. 특정 서비스에 대한 도움이 필요하면 해당되는 서비스 카테고리를 선택하십시오. 서비스가 속한 카테고리를 판별하려면 왼쪽 탐색 분할창의 [서비스](../services/index.html){: new_window} 아래의 카테고리를 참조하십시오.  
   * [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}에서, 포털에 로그인한 후에 **티켓 열기**를 클릭하고 지원 양식을 채우십시오. 
-  * [IBM {{site.data.keyword.Bluemix_notm}} 지원 센터](http://ibm.biz/bluemixsupport){: new_window} 도움말 페이지를 사용하십시오. 판매, 청구, IBM id 및 로그인, 그리고 기술 지원 문제점 등에 대한 티켓을 제출할 수 있습니다. 기술 지원 문제점의 경우, **기술 지원** 타일을 클릭한 후에 추가 기술 그룹을 선택할 수 있습니다. 예를 들어, Cloud Foundry 앱, OpenWhisk, 컨테이너, 가상 서버 또는 베어메탈 서버에 대한 도움이 필요한 경우, **애플리케이션 서비스**를 선택할 수 있습니다. 특정 서비스에 대한 도움이 필요하면 해당되는 서비스 카테고리를 선택하십시오. 서비스가 속한 카테고리를 판별하려면 왼쪽 탐색 분할창의 [서비스](../services/index.html){: new_window} 아래의 카테고리를 참조하십시오.  
   
 
 
@@ -167,37 +169,37 @@ copyright:
 각 지원 티켓에는 참조를 위해 고유 티켓 번호가 지정됩니다. 중국 이외의 국가나 지역인 경우, 티켓 번호를 사용하여 지원 티켓 진행상태를 검토하고 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}에서 지원 티켓을 업데이트할 수 있습니다. 업데이트 및 응답은 이메일을 통해 사용자에게 발송되며 티켓 노트에 기록됩니다. 
 
 
-### {{site.data.keyword.Bluemix_notm}} Dedicated에 대한 지원 요청
+### {{site.data.keyword.Bluemix_notm}} 데디케이티드에 대한 지원 요청
 {: #contacting-bluemix-support-dedicated}
 
 <!-- Michelle links to this anchor  -->
 
-{{site.data.keyword.Bluemix_notm}} Dedicated 고객의 경우 IBM {{site.data.keyword.Bluemix_notm}} 지원 팀에서 지원합니다. 하지만 IBM ID가 없을 수 있으므로 지원을 받을 수 있는 몇 가지 다른 옵션이 주어집니다.
+{{site.data.keyword.Bluemix_notm}} 데디케이티드 고객의 경우 IBM {{site.data.keyword.Bluemix_notm}} 지원 팀에서 지원합니다. 하지만 IBM ID가 없을 수 있으므로 지원을 받을 수 있는 몇 가지 다른 옵션이 주어집니다.
 
 <ul>
-<li><a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 지원</a> 도움말 페이지를 사용하여 새 티켓을 열어 지원 센터에 연락하십시오. 이 양식에 대해 이메일 주소나 IBM id를 사용할 수 있습니다. 지역 필드에 대해 **{{site.data.keyword.Bluemix_notm}} Dedicated** 옵션을 선택하십시오.
+<li><a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 지원</a> 도움말 페이지를 사용하여 새 티켓을 열어 지원 센터에 연락하십시오. 이 양식에 대해 이메일 주소나 IBM ID를 사용할 수 있습니다. 지역 필드에 대해 **{{site.data.keyword.Bluemix_notm}} 데디케이티드** 옵션을 선택하십시오.
 <p>양식 제출은 일요일 오후 10시(UTC 기준)에서 금요일 오후 11시 59분(UTC 기준)까지 모니터링됩니다.</p>
 </li>
-<li>IBM id를 보유 중이며 {{site.data.keyword.Bluemix_notm}} Public 환경에 대한 액세스 권한이 있는 경우, 상단 메뉴 표시줄에서 **계정 및 지원** 아이콘 <img src="images/account_support.svg" alt="계정 및 지원" />을 클릭한 다음 **도움말 가져오기**를 클릭하십시오. 표시되는 페이지에서 **문의**를 클릭하십시오. </li>
-<li>IBM id가 없는 경우, 이를 보유한 조직의 다른 사용자에게 문의하거나 IBM 담당자와 함께 작업할 수 있습니다. <p>**참고**: 요청 시 지원 티켓의 담당자 역할을 하는 조직의 사용자 목록이 Dedicated 환경에서 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 **지원** 페이지에 표시될 수 있습니다.</p></li>
+<li>IBM ID를 보유 중이며 {{site.data.keyword.Bluemix_notm}} 퍼블릭 환경에 대한 액세스 권한이 있는 경우, 상단 메뉴 표시줄에서 **계정 및 지원** 아이콘 <img src="images/account_support.svg" alt="계정 및 지원" />을 클릭한 다음 **도움말 가져오기**를 클릭하십시오. 표시되는 페이지에서 **문의**를 클릭하십시오. </li>
+<li>IBM ID가 없는 경우, 이를 보유한 조직의 다른 사용자에게 문의하거나 IBM 담당자와 함께 작업할 수 있습니다. <p>**참고**: 요청 시 지원 티켓의 담당자 역할을 하는 조직의 사용자 목록이 데디케이티드 환경에서 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 **지원** 페이지에 표시될 수 있습니다.</p></li>
 </ul>
 
-중국에 {{site.data.keyword.Bluemix_notm}} Dedicated 고객이 있는 경우, [UNISYS 서비스 관리 IBM Bluemix 페이지](https://chinabluemix.itsm.unisysedge.cn){: new_window}에서 지원을 요청할 수 있습니다. 또한 중국의 고객은 [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}에서 무상 지원을 받을 수 있습니다. 
+중국에 {{site.data.keyword.Bluemix_notm}} 데디케이티드 고객이 있는 경우, [UNISYS 서비스 관리 IBM Bluemix 페이지](https://chinabluemix.itsm.unisysedge.cn){: new_window}에서 지원을 요청할 수 있습니다. 또한 중국의 고객은 [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}에서 무상 지원을 받을 수 있습니다. 
 
 
-### {{site.data.keyword.Bluemix_notm}} Local에 대한 지원 요청
+### {{site.data.keyword.Bluemix_notm}} 로컬에 대한 지원 요청
 {: #contacting-bluemix-support-local}
 
 <!-- Michelle links to this anchor  -->
 
-{{site.data.keyword.Bluemix_notm}} Local 고객의 경우 IBM {{site.data.keyword.Bluemix_notm}} 지원 팀에서 지원합니다. 하지만 IBM ID가 없을 수 있으므로 지원을 받을 수 있는 몇 가지 다른 옵션이 주어집니다.
+{{site.data.keyword.Bluemix_notm}} 로컬 고객의 경우 IBM {{site.data.keyword.Bluemix_notm}} 지원 팀에서 지원합니다. 하지만 IBM ID가 없을 수 있으므로 지원을 받을 수 있는 몇 가지 다른 옵션이 주어집니다.
 
 <ul>
-<li><a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 지원</a> 도움말 페이지를 사용하여 새 티켓을 열어 지원 센터에 연락하십시오. 이 양식에 대해 이메일 주소나 IBM id를 사용할 수 있습니다. 지역 필드에 대해 **{{site.data.keyword.Bluemix_notm}} Local** 옵션을 선택하십시오.
+<li><a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 지원</a> 도움말 페이지를 사용하여 새 티켓을 열어 지원 센터에 연락하십시오. 이 양식에 대해 이메일 주소나 IBM ID를 사용할 수 있습니다. 지역 필드에 대해 **{{site.data.keyword.Bluemix_notm}} 로컬** 옵션을 선택하십시오.
 <p>양식 제출은 일요일 오후 10시(UTC 기준)에서 금요일 오후 11시 59분(UTC 기준)까지 모니터링됩니다.</p>
 </li>
-<li>IBM id를 보유 중이며 {{site.data.keyword.Bluemix_notm}} Public 환경에 대한 액세스 권한이 있는 경우, 상단 메뉴 표시줄에서 **계정 및 지원** 아이콘 <img src="images/account_support.svg" alt="계정 및 지원" />을 클릭한 다음 **도움말 가져오기**를 클릭하십시오. 표시되는 페이지에서 **문의**를 클릭하십시오. </li>
-<li>IBM id가 없는 경우, 이를 보유한 조직의 다른 사용자에게 문의하거나 IBM 담당자와 함께 작업할 수 있습니다. <p>**참고**: 요청 시 지원 티켓의 담당자 역할을 하는 조직의 사용자 목록이 Local 환경에서 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 **지원** 페이지에 표시될 수 있습니다.</p></li>
+<li>IBM ID를 보유 중이며 {{site.data.keyword.Bluemix_notm}} 퍼블릭 환경에 대한 액세스 권한이 있는 경우, 상단 메뉴 표시줄에서 **계정 및 지원** 아이콘 <img src="images/account_support.svg" alt="계정 및 지원" />을 클릭한 다음 **도움말 가져오기**를 클릭하십시오. 표시되는 페이지에서 **문의**를 클릭하십시오. </li>
+<li>IBM ID가 없는 경우, 이를 보유한 조직의 다른 사용자에게 문의하거나 IBM 담당자와 함께 작업할 수 있습니다. <p>**참고**: 요청 시 지원 티켓의 담당자 역할을 하는 조직의 사용자 목록이 로컬 환경에서 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 **지원** 페이지에 표시될 수 있습니다.</p></li>
 </ul>
 
 

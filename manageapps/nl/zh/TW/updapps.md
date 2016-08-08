@@ -24,7 +24,7 @@ copyright:
 ##建立及使用自訂網域
 {: #domain}
 
-您可以在應用程式的 URL 中使用自訂網域，而非預設 {{site.data.keyword.Bluemix_notm}} 系統網域（即 mybluemix.net）。
+您可以在應用程式的 URL 中使用自訂網域，而不使用預設的 {{site.data.keyword.Bluemix_notm}} 系統網域（即 mybluemix.net）。
 
 網域提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑。若要使用自訂網域，必須在公用 DNS 伺服器上登錄自訂網域，在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域，然後將自訂網域對映至公用 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域。將自訂網域對映至 {{site.data.keyword.Bluemix_notm}} 系統網域之後，該自訂網域的要求即會遞送至 {{site.data.keyword.Bluemix_notm}} 中的應用程式。
 
@@ -51,7 +51,7 @@ copyright:
   1. 鍵入下列指令以建立組織的自訂網域：
     
     ```
-    cf create-domain <your org name> mydomain
+cf create-domain <your org name> mydomain
     ```
     
     *organization_name*
@@ -65,7 +65,7 @@ copyright:
   2. 鍵入下列指令，以新增含有自訂網域的路徑至應用程式：
     
     ```
-    cf map-route myapp mydomain -n host_name
+cf map-route myapp mydomain -n host_name
     ```
     
     *myapp*
@@ -123,7 +123,7 @@ cf delete-route domain -n hostname -f
 1. 將 *Blue* 應用程式推送至 {{site.data.keyword.Bluemix_notm}}。
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   **結果：** *Blue* 應用程式執行中，且正在回應 URL `Blue.mybluemix.net`。
@@ -131,7 +131,7 @@ cf delete-route domain -n hostname -f
 2. 使用 **cf rename** 指令，將 *Blue* 應用程式重新命名為 *Green*：
   
   ```
-  cf rename Blue Green
+cf rename Blue Green
   ```
   
   使用 **cf apps** 指令，列出現行空間中的應用程式：
@@ -148,7 +148,7 @@ cf delete-route domain -n hostname -f
 3. 進行必要變更，並備妥已更新的 *Blue* 版本。將已更新的 *Blue* 應用程式推送至 {{site.data.keyword.Bluemix_notm}}：
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   使用 **cf apps** 指令，列出現行空間中的應用程式：
@@ -168,7 +168,7 @@ cf delete-route domain -n hostname -f
 4. 選用項目：如果您要刪除舊版 (*Green*) 的應用程式，請使用 **cf delete** 指令。
   
   ```
-  cf delete Green -f
+cf delete Green -f
   ```
   
   使用 **cf route** 指令，列出空間中的路徑：
@@ -189,7 +189,7 @@ cf delete-route domain -n hostname -f
 1. 將 *Blue* 應用程式推送至 {{site.data.keyword.Bluemix_notm}}。
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   **結果：** *Blue* 應用程式執行中，且正在回應 URL `Blue.mybluemix.net`。
@@ -197,7 +197,7 @@ cf delete-route domain -n hostname -f
 2. 進行必要變更，並備妥 *Green* 版本。將 *Green* 應用程式推送至 {{site.data.keyword.Bluemix_notm}}：
   
   ```
-  cf push Green
+cf push Green
   ```
   
   使用 **cf route** 指令，列出現行空間中的應用程式：
@@ -218,7 +218,7 @@ cf delete-route domain -n hostname -f
 3. 將 *Blue* 應用程式對映至 *Green* 應用程式，讓 `Blue.mybluemix.net` 的所有資料流量同時遞送至 *Blue* 應用程式及 *Green* 應用程式。
   
   ```
-  cf map-route Green mybluemix.net -n Blue
+cf map-route Green mybluemix.net -n Blue
   ```
   
   使用 cf routes 指令，列出空間中的路徑：
@@ -239,7 +239,7 @@ cf delete-route domain -n hostname -f
 4. 驗證 *Green* 如預期執行時，請從 *Blue* 應用程式移除 `Blue.mybluemix.net` 路徑：
   
   ```
-  cf unmap-route Blue mybluemix.net -n Blue
+cf unmap-route Blue mybluemix.net -n Blue
   ```
   
   使用 cf routes 指令，列出空間中的路徑：
@@ -257,7 +257,7 @@ cf delete-route domain -n hostname -f
 5. 移除 *Green* 應用程式的 `Green.mybluemix.net` 路徑。
   
   ```
-  cf unmap-route Green mybluemix.net -n Green
+cf unmap-route Green mybluemix.net -n Green
   ```
   
   **結果：**「CF 路由器」停止將資料流量傳送至 *Blue* 應用程式。*Green* 應用程式正在回應 URL `Blue.mybluemix.net`。
@@ -265,7 +265,7 @@ cf delete-route domain -n hostname -f
 6. 選用項目：如果您要刪除舊版 (*Blue*) 的應用程式，請使用 `cf delete` 指令。
   
   ```
-  cf delete Blue -f
+cf delete Blue -f
   ```
   
   使用 cf route 指令，列出空間中的路徑：

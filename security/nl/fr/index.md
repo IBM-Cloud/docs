@@ -15,7 +15,7 @@ copyright:
 
 # Sécurité {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Dernière mise à jour : 9 mai 2016*
+*Dernière mise à jour : 22 juin 2016*
 {: .last-updated}
 
 Conçue selon les pratiques d'ingénierie sécurisée, la plateforme {{site.data.keyword.Bluemix}}
@@ -288,17 +288,6 @@ données. La rotation de clé principale automatique a lieu tous les 90 jours.
 
 Pour plus d'informations, voir [Initiation à dashDB](../services/dashDB/index.html).
 
-### Cloud Integration
-
-Le service Cloud Integration permet d'intégrer des données de cloud et sur site. Vous pouvez ajouter un service pour interagir avec des bases de
-données
-dorsales telles que DB2, Oracle et SAP. Ensuite, vous pouvez déplacer des données ou créer des API REST pour des applications
-{{site.data.keyword.Bluemix_notm}} en vue de leur accès et de leur utilisation. Le service assure la
-communication sécurisée avec les connecteurs sécurisés sur site et expose des systèmes de back end d'enregistrement sous forme d'API REST que les
-applications peuvent utiliser.
-
-Pour plus d'informations, voir [Initiation à Cloud Integration](../services/CloudIntegration/index.html).
-
 ### Secure Gateway
 
 Le service Secure Gateway permet de connecter les applications {{site.data.keyword.Bluemix_notm}} de façon sécurisée à des emplacements
@@ -307,27 +296,6 @@ l'emplacement distant auquel vous voulez vous connecter. Vous pouvez configurer 
 {{site.data.keyword.Bluemix_notm}} ou un package d'API.
 
 Pour plus d'informations, voir [Initiation à Secure Gateway](../services/SecureGateway/secure_gateway.html).
-
-### SQL Database
-
-Le service SQL Database ajoute une base de données relationnelle complète à votre application. Il utilise le protocole LDAP d'IBM Directory Server
-pour l'authentification et IBM InfoSphere® Guardium® Data Activity Monitor pour protéger la base de données à laquelle accèdent des applications. La connexion entre les applications et la base de données est
-protégée par le certificat SSL que DigiCert signe.
-
-Dans certains plans incluant ce service, vous pouvez utiliser la console de base de données
-SQL dans {{site.data.keyword.Bluemix_notm}} afin d'obtenir des rapports contenant les informations suivantes :
-
- * Les données sensibles qui peuvent exister dans la base de données à laquelle des applications accèdent.
- * Les utilisateurs de l'application qui ont accédé à la base de données au cours d'une période spécifique.
- * Les utilisateurs de l'application qui accèdent à des données sensibles se trouvant dans la base de données.
-
-Pour masquer les données via SQL, les applications peuvent appeler les fonctions de masquage
-définies par l'utilisateur (UDF)
-qui sont déployées avec la base de données. Par exemple, vous pouvez masquer les données que vous voulez utiliser pour effectuer des tests dans un autre
-contexte. Les fonctions définies par l'utilisateur implémentent les algorithmes de masquage des données depuis IBM Infosphere Optim.
-
-Le plan premium pour ce service inclut également le chiffrement de données. Pour plus d'informations, voir
-[Initiation à SQL Database](../services/SQLDB/index.html).
 
 ### Gestion des événements et des informations de sécurité
 
@@ -360,7 +328,7 @@ est le suivant :
     * Pour les développeurs qui se connectent à l'environnement {{site.data.keyword.Bluemix_notm}} dédié ou local, le flux utilise le
 protocole LDAP
 de l'entreprise.
- * Le **flux de développement et de déploiement** est le suivant :
+ * Le **flux de développement et de déploiement** est le suivant : 
     1. Via un pare-feu, avec prévention contre les intrusions et sécurité du réseau. Applicable à l'environnement
 {{site.data.keyword.Bluemix_notm}} dédié seulement.
     2. Via IBM DataPower Gateway avec proxy inverse et proxy de terminaison SSL.

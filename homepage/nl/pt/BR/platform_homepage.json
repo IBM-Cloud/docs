@@ -1,6 +1,6 @@
 {
-	"id": "docs_homepage",
-	"descriptionTitle": "Seção da plataforma de página inicial",
+	"id": "docs_homepage_platform",
+	"title": "Como usar a plataforma do Bluemix",
 	"items": [{
 		"title": "Ferramentas CLI e de desenvolvimento",
 		"description": "Ferramentas de acesso, como uma interface de nível de comando unificada e plug-ins de CLI.",
@@ -12,17 +12,17 @@
 		"img": "homepage/images/manage_apps.svg",
 		"href": "manageapps/mngapps.html"
 	}, {
-		"title": "Administração de Conta",
+		"title": "Administração",
 		"description": "Gerenciar organizações e espaços, incluindo o acesso de usuário.",
 		"img": "homepage/images/admin.svg",
-		"href": "/admin/adminpublic.html"
+		"href": "admin/adminpublic.html"
 	}, {
 		"title": "Monitoramento e criação de log",
 		"description": "Siga o uso do aplicativo e o fluxo de dados para obter um entendimento melhor da sua implementação.",
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
 	}, {
-		"title": "Venda",
+		"title": "Precificação",
 		"description": "Estime custos com a calculador e veja os custos reais com a visualização de detalhes de uso.",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"
@@ -32,7 +32,7 @@
 		"img": "homepage/images/troubleshoot.svg",
 		"href": "troubleshoot/troubleshoot.html"
 	}, {
-		"title": "Segurança da plataforma",
+		"title": "Segurança do Bluemix",
 		"description": "Aprenda com o Bluemix fornece segurança funcional, de infraestrutura, operacional e física.",
 		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
@@ -42,5 +42,6 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}]
+
 }
 

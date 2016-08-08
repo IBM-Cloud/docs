@@ -52,7 +52,7 @@ copyright:
 **注**：要使用 CLI 获取“活动日志”中显示的输出，请使用以下命令： 
 
   ```
-  wsk activation poll
+wsk activation poll
   ```
   {: pre} 
 

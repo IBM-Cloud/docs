@@ -39,11 +39,11 @@ copyright:
 1. 取得 `/whisk.system` 名稱空間中的套件清單。
 
   ```
-  wsk package list /whisk.system
+wsk package list /whisk.system
   ```
   {: pre}
   ```
-  packages
+packages
   /whisk.system/alarms                                              shared
   /whisk.system/cloudant                                            shared
   /whisk.system/github                                              shared
@@ -58,12 +58,12 @@ copyright:
 2. 取得 `/whisk.system/cloudant` 套件中的實體清單。
 
   ```
-  wsk package get --summary /whisk.system/cloudant
+wsk package get --summary /whisk.system/cloudant
   ```
   {: pre}
   ```
   package /whisk.system/cloudant: Cloudant database service
-(params: {{site.data.keyword.Bluemix_notm}}ServiceName host username password dbname includeDoc overwrite)
+     (params: {{site.data.keyword.Bluemix_notm}}ServiceName host username password dbname includeDoc overwrite)
    action /whisk.system/cloudant/read: Read document from database
    action /whisk.system/cloudant/write: Write document to database
    feed   /whisk.system/cloudant/changes: Database change feed
@@ -77,12 +77,12 @@ copyright:
 3. 取得 `/whisk.system/cloudant/read` 動作的說明。
 
   ```
-  wsk action get --summary /whisk.system/cloudant/read
+wsk action get --summary /whisk.system/cloudant/read
   ```
   {: pre}
   ```
   action /whisk.system/cloudant/read: Read document from database
-(params: dbname includeDoc id)
+     (params: dbname includeDoc id)
   ```
   {: screen}
 
@@ -97,12 +97,12 @@ copyright:
 1. 取得 `/whisk.system/samples/greeting` 動作的說明。
 
   ```
-  wsk action get --summary /whisk.system/samples/greeting
+wsk action get --summary /whisk.system/samples/greeting
   ```
   {: pre}
   ```
   action /whisk.system/samples/greeting: Print a friendly greeting
-(params: name place)
+     (params: name place)
   ```
   {: screen}
 
@@ -111,12 +111,12 @@ copyright:
 2. 不使用任何參數來呼叫動作。
 
   ```
-  wsk action invoke --blocking --result /whisk.system/samples/greeting
+wsk action invoke --blocking --result /whisk.system/samples/greeting
   ```
   {: pre}
   ```
   {
-"payload": "Hello, stranger from somewhere!"
+      "payload": "Hello, stranger from somewhere!"
   }
   ```
   {: screen}
@@ -126,12 +126,12 @@ copyright:
 3. 使用參數來呼叫動作。
 
   ```
-  wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
+wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
   ```
   {: pre}
   ```
   {
-"payload": "Hello, Mork from Ork!"
+      "payload": "Hello, Mork from Ork!"
   }
   ```
   {: screen}
@@ -151,22 +151,22 @@ copyright:
 1. 連結至 `/whisk.system/samples`，並設定預設 `place` 參數值。
 
   ```
-  wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla
+wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla
   ```
   {: pre}
   ```
-  ok: created binding valhallaSamples
+ok: created binding valhallaSamples
   ```
   {: screen}
 
 2. 取得套件連結的說明。
 
   ```
-  wsk package get --summary valhallaSamples
+wsk package get --summary valhallaSamples
   ```
   {: pre}
   ```
-  package /myNamespace/valhallaSamples
+package /myNamespace/valhallaSamples
    action /myNamespace/valhallaSamples/greeting: Print a friendly greeting
    action /myNamespace/valhallaSamples/wordCount: Count words in a string
    action /myNamespace/valhallaSamples/helloWorld: Print to the console
@@ -179,12 +179,12 @@ copyright:
 3. 在套件連結中呼叫動作。
 
   ```
-  wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
+wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
   ```
   {: pre}
   ```
   {
-"payload": "Hello, Odin from Valhalla!"
+      "payload": "Hello, Odin from Valhalla!"
   }
   ```
   {: screen}
@@ -194,12 +194,12 @@ copyright:
 4. 呼叫動作，並且改寫預設參數值。
 
   ```
-  wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin --param place Asgard
+wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin --param place Asgard
   ```
   {: pre}
   ```
   {
-"payload": "Hello, Odin from Asgard!"
+      "payload": "Hello, Odin from Asgard!"
   }
   ```
   {: screen}
@@ -215,22 +215,22 @@ copyright:
 1. 取得 `/whisk.system/alarms` 套件中資訊來源的說明。
 
   ```
-  wsk package get --summary /whisk.system/alarms
+wsk package get --summary /whisk.system/alarms
   ```
   {: pre}
   ```
-  package /whisk.system/alarms
+package /whisk.system/alarms
    feed   /whisk.system/alarms/alarm
   ```
   {: screen}
 
   ```
-  wsk action get --summary /whisk.system/alarms/alarm
+wsk action get --summary /whisk.system/alarms/alarm
   ```
   {: pre}
   ```
   action /whisk.system/alarms/alarm: Fire trigger when alarm occurs
-(params: cron trigger_payload)
+     (params: cron trigger_payload)
   ```
   {: screen}
 
@@ -245,15 +245,15 @@ copyright:
   ```
   {: pre}
   ```
-  ok: created trigger feed everyEightSeconds
+ok: created trigger feed everyEightSeconds
   ```
   {: screen}
 
 3. 使用下列動作碼來建立 'hello.js' 檔案。
 
   ```
-  function main(params) {
-return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+function main(params) {
+     return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -261,18 +261,18 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 4. 確定動作已存在。
 
   ```
-  wsk action update hello hello.js
+wsk action update hello hello.js
   ```
   {: pre}
 
 5. 建立規則，以在每次 `everyEightSeconds` 觸發程式發動時呼叫 `hello` 動作。
 
   ```
-  wsk rule create --enable myRule everyEightSeconds hello
+wsk rule create --enable myRule everyEightSeconds hello
   ```
   {: pre}
   ```
-  ok: created rule myRule
+ok: created rule myRule
   ok: rule myRule is activating
   ```
   {: screen}
@@ -280,7 +280,7 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 6. 確認是透過輪詢啟動日誌來呼叫動作。
 
   ```
-  wsk activation poll
+wsk activation poll
   ```
   {: pre}
 
@@ -298,22 +298,22 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 1. 建立稱為 "custom" 的套件。
 
   ```
-  wsk package create custom
+wsk package create custom
   ```
   {: pre}
   ```
-  ok: created package custom
+ok: created package custom
   ```
   {: screen}
 
 2. 取得套件的摘要。
 
   ```
-  wsk package get --summary custom
+wsk package get --summary custom
   ```
   {: pre}
   ```
-  package /myNamespace/custom
+package /myNamespace/custom
   ```
   {: screen}
 
@@ -322,18 +322,18 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 3. 建立稱為 `identity.js` 且包含下列動作碼的檔案。此動作會傳回所有輸入參數。
 
   ```
-  function main(args) { return args; }
+function main(args) { return args; }
   ```
   {: codeblock}
 
 4. 在 `custom` 套件中，建立 `identity` 動作。
 
   ```
-  wsk action create custom/identity identity.js
+wsk action create custom/identity identity.js
   ```
   {: pre}
   ```
-  ok: created action custom/identity
+ok: created action custom/identity
   ```
   {: screen}
 
@@ -342,11 +342,11 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 5. 再次取得套件的摘要。
 
   ```
-  wsk package get --summary custom
+wsk package get --summary custom
   ```
   {: pre}
   ```
-  package /myNamespace/custom
+package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
   {: screen}
@@ -356,7 +356,7 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 6. 在套件中呼叫動作。
 
   ```
-  wsk action invoke --blocking --result custom/identity
+wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
   ```
@@ -370,24 +370,23 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 1. 使用兩個參數來更新 `custom` 套件：`city` 及 `country`。
 
   ```
-  wsk package update custom --param city Austin --param country USA
+wsk package update custom --param city Austin --param country USA
   ```
   {: pre}
   ```
-  ok: updated package custom
+ok: updated package custom
   ```
   {: screen}
 
 2. 顯示套件及動作中的參數，以及查看套件中的 `identity` 動作如何繼承套件中的參數。
 
   ```
-  wsk package get custom parameters
+wsk package get custom parameters
   ```
   {: pre}
   ```
-  ok: got package custom, projecting parameters
-  [
-      {
+ok: got package custom, projecting parameters
+  [{
           "key": "city",
           "value": "Austin"
       },
@@ -400,13 +399,12 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   {: screen}
 
   ```
-  wsk action get custom/identity parameters
+wsk action get custom/identity parameters
   ```
   {: pre}
   ```
-  ok: got action custom/identity, projecting parameters
-  [
-      {
+ok: got action custom/identity, projecting parameters
+  [{
           "key": "city",
           "value": "Austin"
       },
@@ -421,12 +419,12 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 3. 不使用任何參數來呼叫 identity 動作，以驗證動作確實繼承參數。
 
   ```
-  wsk action invoke --blocking --result custom/identity
+wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
   ```
   {
-"city": "Austin",
+      "city": "Austin",
       "country": "USA"
   }
   ```
@@ -435,12 +433,12 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 4. 使用一些參數來呼叫 identity 動作。呼叫參數會與套件參數合併；呼叫參數會置換套件參數。
 
   ```
-  wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
+wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
   ```
   {: pre}
   ```
   {
-"city": "Dallas",
+      "city": "Dallas",
       "country": "USA",
       "state": "Texas"
   }
@@ -456,22 +454,22 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 1. 與所有使用者共用套件：
 
   ```
-  wsk package update custom --shared
+wsk package update custom --shared
   ```
   {: pre}
   ```
-  ok: updated package custom
+ok: updated package custom
   ```
   {: screen}
 
 2. 顯示套件的 `publish` 內容，以驗證它現在為 true。
 
   ```
-  wsk package get custom publish
+wsk package get custom publish
   ```
   {: pre}
   ```
-  ok: got package custom, projecting publish
+ok: got package custom, projecting publish
   true
   ```
   {: screen}
@@ -482,11 +480,11 @@ return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 1. 取得套件的說明，以顯示套件及動作的完整名稱。
 
   ```
-  wsk package get --summary custom
+wsk package get --summary custom
   ```
   {: pre}
   ```
-  package /myNamespace/custom
+package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
   {: screen}

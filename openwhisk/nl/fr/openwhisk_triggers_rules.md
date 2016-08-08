@@ -114,9 +114,8 @@ Par exemple, créez un déclencheur pour envoyer les mises à jour de l'emplacem
   ```
   {: screen}
 
-   Pour l'instant, les événements que vous exécutez dans le déclencheur statusUpdate n'ont pas d'effet. Pour être utile, le déclencheur requiert une
-règle qui l'associe à une action.
-
+Un déclencheur qui est lancé sans aucune règle associée n'a aucun effet visible.
+Les déclencheurs ne peuvent pas être créés au sein d'un package ; ils doivent être créés directement sous un espace de noms. 
 
 ## Utilisation de règles pour associer des déclencheurs et des actions
 {: #openwhisk_rules}
@@ -188,4 +187,7 @@ d'événement.
 
   Vous constatez que l'action hello a reçu le contenu de l'événement et a renvoyé la chaîne attendue.
 
-  Vous pouvez créer plusieurs règles qui associent le même déclencheur à des actions différentes.
+Vous pouvez créer plusieurs règles qui associent le même déclencheur à des actions différentes.
+Le déclencheur et l'action qui constituent une règle doivent figurer dans le même espace de noms et ne peuvent pas appartenir à un package.
+Si vous souhaitez utiliser une action qui appartient à un package, vous pouvez copier l'action dans votre espace de noms, par exemple, `wsk action create echo --copy /whisk.system/samples/echo`.
+

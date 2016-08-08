@@ -75,7 +75,8 @@ Si vous utilisez un pack de construction externe, vous devez spécifier son URL 
   cf push nom_app -p "./app"
   ```
   
-  * Pour déployer des applications Node.js dans {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
+  * Pour déployer des applications Node.js dans {{site.data.keyword.Bluemix_notm}}, utilisez la commande
+suivante :
   
   ```
   cf push nom_app -p chemin_app
@@ -149,10 +150,8 @@ cf push -f appManifest.yml
 |**buildpack**	|Adresse URL ou nom du pack de construction personnalisé.	|`buildpack: ` *URL_pack_construction*|
 |**disk_quota**	|Quota de disque alloué à une application. La valeur par défaut est 1 G.	|`disk_quota: 500M`|
 |**domain**	|Nom de domaine de l'application dans {{site.data.keyword.Bluemix_notm}}.	|`domain:` ng.bluemix.net|
-|**host**	|Nom d'hôte de l'application dans {{site.data.keyword.Bluemix_notm}}. Cette valeur doit être unique dans l'environnement
-{{site.data.keyword.Bluemix_notm}}.	|`host: ` *nom_hôte*|
-|**name**	|Nom de l'application dans {{site.data.keyword.Bluemix_notm}}. Cette valeur doit être unique dans l'environnement
-{{site.data.keyword.Bluemix_notm}}.	|`name: ` *nom_app*|
+|**host**	|Nom d'hôte de l'application dans {{site.data.keyword.Bluemix_notm}}. Cette valeur doit être unique dans l'environnement {{site.data.keyword.Bluemix_notm}}.	|`host: ` *nom_hôte*|
+|**name**	|Nom de l'application dans {{site.data.keyword.Bluemix_notm}}. Cette valeur doit être unique dans l'environnement {{site.data.keyword.Bluemix_notm}}.	|`name: ` *nom_app*|
 |**path**	|Emplacement de votre application. Cette valeur peut être un chemin relatif ou absolu.	|`path: ` *chemin_application*|
 |**command**	|Commande de démarrage personnalisée pour votre application ou commande d'exécution des fichiers script.	|`command:`
 *commande_personnalisée* `command:` *bash ./run.sh*|
@@ -412,12 +411,12 @@ Variables d'environnement définies par l'utilisateur spécifiques à une applic
 	2. Dans le panneau de navigation de gauche, cliquez sur **Variables d'environnement**.
 	3. Cliquez sur **DEFINI PAR L'UTILISATEUR**, puis cliquez sur **AJOUTER**.
 	4. Remplissez les zones obligatoires, puis cliquez sur **SAUVEGARDER**.
-  * Utilisez l'interface de ligne de commande cf. Ajoutez une variable définie par l'utilisateur en utilisant la commande `cf set-env`. Par exemple : 
+  * Utilisez l'interface de ligne de commande cf. Ajoutez une variable définie par l'utilisateur en utilisant la commande `cf set-env`. Exemple : 
     ```
     cf set-env nom_app nom_var_env valeur_var_env
     ```
 	
-  * Utilisez le fichier `manifest.yml`. Ajoutez des paires de valeurs dans le fichier. Par exemple : 
+  * Utilisez le fichier `manifest.yml`. Ajoutez des paires de valeurs dans le fichier. Exemple : 
     ```
 	env:
       VAR1:valeur1

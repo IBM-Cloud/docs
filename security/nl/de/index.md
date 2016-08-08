@@ -15,7 +15,7 @@ copyright:
 
 # Sicherheit in {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Letzte Aktualisierung: 9. Mai 2016*
+*Letzte Aktualisierung: 22. Juni 2016*
 {: .last-updated}
 
 Die Plattform {{site.data.keyword.Bluemix}} wurde mit Verfahren für sichere Entwicklung entwickelt und besitzt geschichtete netz- und infrastrukturweite Sicherheitsmaßnahmen. {{site.data.keyword.Bluemix_notm}} bietet eine Gruppe von Sicherheitsservices zur Verwendung durch Anwendungsentwickler zum Sichern ihrer mobilen Apps und Web-Apps. Kombiniert machen diese Elemente {{site.data.keyword.Bluemix_notm}} zu einer Plattform mit klaren Auswahlmöglichkeiten für eine sichere Anwendungsentwicklung.
@@ -221,31 +221,11 @@ Vom Service 'dashDB' wird ein eingebetteter LDAP-Server für die Benutzerauthent
 
 Weitere Informationen finden Sie in [Einführung in dashDB](../services/dashDB/index.html).
 
-### Cloud Integration
-
-Mit dem Service 'Cloud Integration' können Sie Clouddaten und lokale Daten integrieren. Sie können einen Service für die Interaktion mit Back-End-Datenbanken wie DB2, Oracle und SAP hinzufügen. Anschließend verschieben Sie Daten oder Sie erstellen REST-APIs für den Zugriff und die Verwendung durch {{site.data.keyword.Bluemix_notm}}-Anwendungen. Mit dem Service wird die sichere Kommunikation mit lokalen sicheren Connectors ermöglicht und Back-End-Kerndatensysteme werden als REST-APIs für die Verwendung durch Anwendungen verfügbar gemacht.
-
-Weitere Informationen finden Sie in [Einführung in Cloud Integration](../services/CloudIntegration/index.html).
-
 ### Secure Gateway
 
 Mit dem Service 'Secure Gateways' können Sie lokal oder in der Cloud eine sichere Verbindung zwischen {{site.data.keyword.Bluemix_notm}}-Apps und fernen Standorten herstellen. Es wird eine sichere Verbindung bereitgestellt und ein Tunnel zwischen Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und dem fernen Standort, zu dem Sie eine Verbindung herstellen möchten, eingerichtet. Mithilfe der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder eines API-Pakets können Sie ein sicheres Gateway konfigurieren und erstellen.
 
 Weitere Informationen finden Sie unter [Einführung in Secure Gateway](../services/SecureGateway/secure_gateway.html).
-
-### SQL Database
-
-Mit dem Service 'SQL Database' wird Ihrer App eine vollständig bereitgestellte relationale Datenbank hinzugefügt. Dieser Service nutzt IBM Directory Server LDAP zur Authentifizierung und IBM InfoSphere® Guardium® Data Activity Monitor zum Schutz der Datenbank, auf die Anwendungen zugreifen. Die Verbindung zwischen Anwendungen und der Datenbank wird über das von DigiCert signierte SSL-Zertifikat geschützt.
-
-Bei bestimmten Plänen können Sie bei diesem Service die Konsole der SQL-Datenbank in {{site.data.keyword.Bluemix_notm}} verwenden, um Berichte mit den folgenden Informationen zu erhalten:
-
- * Sensible Daten, die in der Datenbank enthalten sein können, auf die Anwendungen zugreifen.
- * Die Anwendungsbenutzer, die während eines bestimmten Zeitraums auf die Datenbank zugegriffen haben.
- * Die Anwendungsbenutzer, die auf sensible Daten in der Datenbank zugreifen.
-
-Zum Maskieren von Daten mit SQL können Anwendungen die benutzerdefinierten Funktionen (User-Defined Functions, UDF) zum Maskieren aufrufen, die zusammen mit der Datenbank bereitgestellt wurden. So können Sie beispielsweise die Daten maskieren, die Sie an anderer Stelle zum Testen verwenden möchten. Die UDFs implementieren die Algorithmen zur Datenmaskierung aus IBM InfoSphere Optim™.
-
-Der Premiumplan dieses Service umfasst auch die Verschlüsselung von Daten. Weitere Informationen zu diesem Service finden Sie in [Einführung in SQL Database](../services/SQLDB/index.html).
 
 ### Sicherheitsinformationen und Ereignismanagement
 

@@ -18,13 +18,13 @@ copyright:
 # CLI- und Dev-Tools
 {: #cli}
 
-*Letzte Aktualisierung: 27. Mai 2016*
+*Letzte Aktualisierung: 28. Juni 2016*
 {: .last-updated}
 
 Mit {{site.data.keyword.Bluemix_short}} haben Sie Zugriff auf leistungsfähige Tools wie zum Beispiel eine einheitliche Befehlszeilenschnittstelle und CLI-Plug-ins. Alle diese CLI-Downloads werden zur Unterstützung Ihrer Arbeit mit {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt.
 {:shortdesc}
 
-## ![Befehlszeilenschnittstellen](./images/CLI.svg) Befehlszeilenschnittstellen
+## ![](./images/CLI.svg) Befehlszeilenschnittstellen
 {: #downloads}
 
 Sie können Befehlszeilenschnittstellen herunterladen und installieren, die Sie beim Arbeiten mit {{site.data.keyword.Bluemix_notm}} unterstützen. 
@@ -39,15 +39,15 @@ Beide CLI-Tools verwenden standardmäßig den Port 443. Wenn sich ein HTTP-Proxy
 | [CLI herunterladen](http://clis.ng.bluemix.net/) <br> [Dokumentation anzeigen](./reference/bluemix_cli/index.html)|  [CLI herunterladen](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [Dokumentation anzeigen](./reference/cfcommands/index.html) |
 
 
-## ![Befehlszeilenschnittstellen-Plug-ins](./images/CLI_Plugin.svg) Befehlszeilenschnittstelle-Plug-ins
+## ![](./images/CLI_Plugin.svg) Befehlszeilenschnittstelle-Plug-ins
 
-Sie können die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle ohne großen Aufwand durch zusätzliche Befehle erweitern. Zugriff auf die {{site.data.keyword.Bluemix_notm}} -Befehlszeilenschnittstellen-Plug-ins erhalten Sie über das [-CLI-Plug-in-Repository](http://plugins.ng.bluemix.net/).
+Sie können die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle ohne großen Aufwand durch zusätzliche Befehle erweitern. Zugriff auf die {{site.data.keyword.Bluemix_notm}} -Befehlszeilenschnittstellen-Plug-ins erhalten Sie über das [-CLI-Plug-in-Repository](https://plugins.ng.bluemix.net/).
 
 ### Erweitern Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle: bx
 
 1. Zum Installieren von {{site.data.keyword.Bluemix_notm}}-CLI-Plug-ins über die {{site.data.keyword.Bluemix_notm}}-Registry müssen Sie den Plug-in-Registry-Endpunkt festlegen:
 ```
-bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
 ```
 2. Führen Sie den folgenden Befehl aus, um ein Plug-in zu installieren:
 ```
@@ -63,7 +63,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 1. Zum Installieren von CLI-Plug-ins über die {{site.data.keyword.Bluemix_notm}}-Registry müssen Sie den Plug-in-Registry-Endpunkt festlegen:
 ```
-cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
 ```
 2. Führen Sie den folgenden Befehl aus, um ein Plug-in zu installieren:
 ```
@@ -81,7 +81,7 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 <!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
-## ![Integrierte Entwicklungstools](./images/Integrated_Dev_Tools.svg) Integrierte Entwicklungstools
+## ![](./images/Integrated_Dev_Tools.svg) Integrierte Entwicklungstools
 
 Sie können Plug-ins herunterladen und installieren, um Ihre bevorzugten {{site.data.keyword.Bluemix_notm}}-Services zu integrieren.
 

@@ -1,20 +1,20 @@
 ---
 
 copyright:
-  years: 2015, 2015
-
+  years: 2015, 2015*
+{: .last-updated}
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms} 
+{:tsCauses: .tsCauses} 
+{:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
 # Traitement des incidents liés à SendGrid
-{: .last-updated}
+{: #ts_sendgrid}
 
 *Dernière mise à jour : 9 décembre 2015*
 
@@ -53,3 +53,4 @@ Si vous souhaitez envoyer d'autres courriers électroniques une fois la limite m
 25000 courriers électroniques par instance de service atteinte, vous pouvez ajouter une autre instance de service. Pour plus d'informations sur SendGrid,
 voir [Getting Started with SendGrid](https://sendgrid.com/docs/index.html){: new_window}.    
 {: tsResolve}
+

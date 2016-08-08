@@ -14,7 +14,7 @@ copyright:
 #モニターとロギング
 {: #monitoringandlogging}
 
-*最終更新日: 2016 年 5 月 24 日*
+*最終更新日: 2016 年 7 月 1 日*
 {: .last-updated}
 
 アプリをモニターし、ログを確認することで、アプリケーション実行
@@ -23,7 +23,7 @@ copyright:
 
 {{site.data.keyword.Bluemix}} アプリケーションは、広く分散したマルチインスタンス・アプリケーションにすることができ、アプリケーションの実行およびそのデータを多くのサービスで共有できます。この複合環境では、アプリを管理するために、アプリのモニターとログの確認が重要になります。
 
-##アプリのモニターとロギング
+##Cloud Foundry アプリのモニターとロギング
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} は、アプリの実行中にそのログ・ファイルを生成する組み込みのロギング・メカニズムを備えています。ログでは、アプリに対して生成されたエラー、警告、および情報の各メッセージを表示できます。また、ログ・メッセージをログ・ファイルに書き込むようにアプリを構成することもできます。
@@ -64,11 +64,11 @@ Cloud Foundry インフラストラクチャーを使用して {{site.data.keywo
 
 {{site.data.keyword.Bluemix_notm}} アプリケーションのログは、以下のようなパターンの固定フォーマットで表示されます。
 
-```
-         1         2         3         4         5
+
+1         2         3         4         5
 12345678901234567890123456789012345678901234567890--------------------------------------------------
 yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
-```
+
 {:screen}
 
 各ログ項目には、4 つのフィールドが含まれています。各フィールドの要旨については、以下のリストを参照してください。
@@ -199,16 +199,16 @@ Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 
 * 完全な詳細ログではなく、一部を表示する場合、**cut** オプションを使用します。例えば、コンポーネントおよびメッセージの情報を表示するには、以下のコマンドを使用します。
 
-```
+
 cf logs appname --recent | cut -c 29-40,46- 
-```
+
 
 **grep** オプションについて詳しくは、cut --help と入力してください。
 * 特定のキーワードが含まれているログ項目を表示するには、**grep** オプションを使用します。例えば、キーワード「[APP」が含まれているログ項目を表示するには、以下のコマンドを使用できます。
 
-```
+
 cf logs appname --recent | grep '\[App'
-```
+
 **grep** オプションについて詳しくは、`grep --help` と入力してください。### 外部ログ・ホストの構成
 {: #thirdparty_logging}
 
@@ -222,10 +222,10 @@ cf logs appname --recent | grep '\[App'
 
   2. ユーザー提供のサービス・インスタンスを作成します。
      
-	 ```cf create-user-provided-service``` コマンド (または、短縮版コマンド ```cups``) を使用して、ユーザー提供のサービス・インスタンスを作成します。
-	 ```
+	 cf create-user-provided-service コマンド (または、短縮版コマンドの cups) を使用して、ユーザー提供のサービス・インスタンスを作成します。 
+	 
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
-	 ```
+	 
 	 **service_name**
 	 
 	 ユーザー提供のサービス・インスタンスの名前。
@@ -264,9 +264,9 @@ cf logs appname --recent | grep '\[App'
 
 	 サービス・インスタンスをアプリにバインドするには、以下のコマンドを使用します。 
 	
-	 ```
+	 
 	 cf bind-service appname <service_name>
-	```
+	
 	 **appname**
 	 
 	 アプリの名前。
@@ -276,7 +276,7 @@ cf logs appname --recent | grep '\[App'
 	 ユーザー提供のサービス・インスタンスの名前。
 	 
   4. アプリを再ステージングします。
-     変更を有効にするため、```cf restage appname``` と入力します。 
+     変更を有効にするために、cf restage appname を入力します。 
 
 #### 外部ホストからのログの表示
 {: #viewing_logs_external}
@@ -301,9 +301,9 @@ Splunk Light のダウンロード・サイト](https://www.splunk.com/en_us/dow
 Splunk Light をダウンロードして、次のコマンドを使用してこれをインストールします。
 ソフトウェアは */opt/splunk* にインストールされます。 
        
-	    ```
-        dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
-        ```
+	    
+dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
+        
 	   
      b. RFC5424 syslog テクノロジー・アドオンをイン
 ストールして適用し、{{site.data.keyword.Bluemix_notm}} と統合します。アドオンのインストール手順について詳しくは、
@@ -312,27 +312,25 @@ Splunk Light をダウンロードして、次のコマンドを使用してこ�
 
 	    次のコマンドを使用してアドオンをインストールします。
         
-	    ```
-        cd /opt/splunk/etc/apps
+	    
+cd /opt/splunk/etc/apps
         tar xvfz ~/rfc5424-syslog_11.tgz
-        ```
+        
 	   
         次に Jane は、
 */opt/splunk/etc/apps/rfc5424/default/transforms.conf*
 を次のテキストで構成される新規の *transforms.conf* ファイルと
 置き換えて、アドオンを適用します。
 	   
-	    ```
-        [rfc5424_host]
+	    
+[rfc5424_host]
         DEST_KEY = MetaData:Host
         REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
-        FORMAT = host::$1
-
-        [rfc5424_header]
+        FORMAT = host::$1[rfc5424_header]
         REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
         FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
         MV_ADD = true
-        ```
+        
         {:screen}	   
 
      c. Splunk のセットアップ後、Ubuntu マシン上の一
@@ -343,19 +341,19 @@ Splunk Light をダウンロードして、次のコマンドを使用してこ�
 	   
 	    **注:** ここでは Jane の評価目的のために iptable 構成としているため、これは一時的なものです。実動における Bluemix 仮想サーバーでのファイアウォール設定を構成する方法について詳しくは、[『ネットワーク・セキュリティー・グループ (Network Security Groups)』](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window}資料を参照してください。
 	 
-	   ```
+	   
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
        iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
        iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
        iptables -A INPUT -p tcp --sport 8000 -j ACCEPT
-	   ```
+	   
 	   {:screen}	
 	  
 	   次に、Jane は次のコマンドを使用して Splunk を実行します。
 
-       ```
+       
 	   /opt/splunk/bin/splunk start --accept-license
-       ```
+       
 		
   2. Splunk 設定を構成して、
 {{site.data.keyword.Bluemix_notm}} から syslog ドレーンを受け
@@ -394,9 +392,9 @@ Splunk Light をダウンロードして、次のコマンドを使用してこ�
 
      a. cf cli から次のコマンドを使用して syslog ドレーン・サービスを作成します。
 	 
-     ```
-     cf cups splunk -l syslog://dummyhost:5140
-     ```
+     
+cf cups splunk -l syslog://dummyhost:5140
+     
         
      **注:** *dummyhost* は実
 名ではありません。実際のホスト名を非表示にするために使用されます。 
@@ -404,18 +402,18 @@ Splunk Light をダウンロードして、次のコマンドを使用してこ�
      b. Jane は 自分のスペースで syslog ドレーン・サービスをアプリにバ
 インドしてから、アプリを再ステージングします。
 	 
-	 ```
-     cf bind-service myapp splunk
+	 
+cf bind-service myapp splunk
      cf restage myapp
-     ```
+     
 		
 
 アプリを試行して、Splunk Web インターフェースで次の照
 会ストリングを入力します。
 
-```
+
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
-```
+
 
 Splunk Web インターフェースでログのストリームを確認します。Jane がインストール
 する Splunk は Splunk Light ですが、1 日に 500 MB のログを保存することが可能です。 
