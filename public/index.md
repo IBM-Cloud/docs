@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-Last updated: 2 August 2016
+Last updated: 8 August 2016
 {: .last-updated}
 
 
