@@ -14,6 +14,7 @@ copyright:
 {: #troubleshooting}
 
 *Ultimo aggiornamento: 6 gennaio 2015*
+{: .last-updated}
 
 Se riscontri dei problemi con l'utilizzo di {{site.data.keyword.Bluemix}},
 puoi utilizzare le attività di risoluzione dei problemi per determinare l'azione correttiva da

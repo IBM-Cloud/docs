@@ -17,6 +17,7 @@ copyright:
 {: #general}
 
 *Ultimo aggiornamento: 9 dicembre 2015*
+{: .last-updated}
 
 I problemi relativi ai servizi {{site.data.keyword.Bluemix}}
 potrebbero includere un errore di timeout del gateway che si verifica quando elimini

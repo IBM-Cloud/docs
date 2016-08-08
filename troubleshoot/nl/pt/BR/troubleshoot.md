@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2015*
-{: .last-updated}
-
+  years: 2015, 2016
+  
+  
 ---
 
 
@@ -15,6 +15,7 @@ copyright:
 {: #troubleshooting}
 
 *Última atualização: 14 de julho de 2016*
+{: .last-updated}
 
 Se você tiver problemas com o {{site.data.keyword.Bluemix}},
 será possível executar as tarefas de resolução de problemas para determinar a ação

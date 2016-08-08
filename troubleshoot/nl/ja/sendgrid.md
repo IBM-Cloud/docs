@@ -1,8 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2015*
-{: .last-updated}
+  years: 2015, 2016
 
 ---
 
@@ -17,6 +16,7 @@ copyright:
 {: #ts_sendgrid}
 
 *最終更新日: 2015 年 12 月 9 日*
+{: .last-updated}
 
 ここでは、{{site.data.keyword.Bluemix}} での SendGrid の使用に関する質問に対する回答を示します。
 {:shortdesc}

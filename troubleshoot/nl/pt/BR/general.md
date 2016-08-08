@@ -1,8 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2015*
-{: .last-updated}
+  years: 2015, 2016
 
 ---
 
@@ -18,6 +17,7 @@ copyright:
 {: #general}
 
 *Última atualização: 9 de dezembro de 2015*
+{: .last-updated}
 
 Problemas de serviços do {{site.data.keyword.Bluemix}}
 podem incluir um erro de tempo limite do gateway que ocorre quando você

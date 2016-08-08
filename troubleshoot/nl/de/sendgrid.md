@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2015*
-{: .last-updated}
+  years: 2015, 2016
+
 
 ---
 
@@ -17,6 +17,7 @@ copyright:
 {: #ts_sendgrid}
 
 *Letzte Aktualisierung: 9. Dezember 2015*
+{: .last-updated}
 
 Hier finden Sie die Antwort auf eine Frage zur Verwendung von SendGrid in {{site.data.keyword.Bluemix}}.
 {:shortdesc}

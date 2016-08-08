@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2015*
-{: .last-updated}
+  years: 2015, 2016
+  
 
 ---
 
@@ -18,6 +18,7 @@ copyright:
 {: #general}
 
 *上次更新时间：2015 年 12 月 9 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 服务问题可能包括：删除服务实例时发生网关超时错误。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
