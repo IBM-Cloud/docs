@@ -13,7 +13,7 @@ copyright:
 # Configuring custom domain for  {{site.data.keyword.mobilefoundation_short}} server
 {: #configcustomdomain}
 
-Last updated: 03 August 2016
+Last updated: 08 August 2016
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} provisions a {{site.data.keyword.mfserver_short_notm}}, which is<!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to--> accessible using a URL having the  domain names based on the {{site.data.keyword.Bluemix_notm}} **Region**. You can also configure your own custom domain.
@@ -26,7 +26,8 @@ The <!--container group is created with a--> URL or route is created with the de
   |Domain |  Region  |    
   |:----- | :----- |    
   |`mybluemix.net` | US South |    
-  |`eu-gb.mybluemix.net` | United Kingdom  |    
+  |`eu-gb.mybluemix.net` | United Kingdom  |
+  |`au-syd.mybluemix.net` | Sydney  |      
 
 To be able to use your own domain you will need to configure custom domain by performing the following steps:
 
