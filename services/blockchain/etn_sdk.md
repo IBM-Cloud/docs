@@ -50,6 +50,8 @@ The following example demonstrates a basic web application.  It shows how to reg
 
 From your service dashboard, click your **Service Credentials** tab to access the VCAP data for your peers, certificate authority and users.  Use the code snippets below to bind your peers and users to an application.  For example, to bind your Certificate Authority to this application you use the "ca" URL which can be accessed within your **Service Credentials** tab, and implement the following:  *(Note: This is a sample "ca" URL, yours will not be the same)*.
 
+Get your certificate. Go [download](https://blockchain-certs.mybluemix.net/) the one for your network. Most everyone will want to download `us.blockchain.ibm.com.cert`. People using a "High Secuirty Network" should grab the `zone.blockchain.ibm.com.cert`.
+
 ```js
 chain.setMemberServicesUrl("grpc://904bd229-5a3e-407f-8a5d-819dc6205e16_ca-api.stage.blockchain.ibm.com:30303")
 ```
@@ -59,23 +61,28 @@ Explore the remainder of the application to see member enrollment, issuing of tr
 ```js
 // Include the package from npm:
 var hfc = require('hfc');
+var fs = require('fs');
+
+var pem = fs.readFileSync('us.blockchain.ibm.com.cert'); //Or zone.blockchain.ibm.com.cert
 
 // Create a client chain.
 var chain = hfc.newChain("targetChain");
+
+chain.setECDSAModeForGRPC(true); //May need to false; unclear atm
 
 // Configure the KeyValStore which is used to store sensitive keys
 // as so it is important to secure this storage.
 chain.setKeyValStore( hfc.newFileKeyValStore('/tmp/keyValStore') );
 
 // Set the URL for member services
-chain.setMemberServicesUrl("grpc://localhost:50051");
+chain.setMemberServicesUrl("grpcs://<YOUR CA DISCOVERY URL HERE>:<PORT HERE>", {pem:pem});
 
 // Add a peer's URL
-chain.addPeer("grpc://localhost:30303");
+chain.addPeer("grpcs://<YOUR PEER DISCOVERY URL HERE>:<PORT HERE>", {pem:pem});
 
 // Enroll "WebAppAdmin" which is already registered because it is
 // listed in fabric/membersrvc/membersrvc.yaml with it's one time password.
-chain.enroll("WebAppAdmin", "DJY27pEnl16d", function(err, webAppAdmin) {
+chain.enroll("WebAppAdmin", <YOUR PASSWORD>, function(err, webAppAdmin) {
    if (err) return console.log("ERROR: failed to register %s: %s",err);
    // Set this user as the chain's registrar which is authorized to register other users.
    chain.setRegistrar(webAppAdmin);
@@ -131,7 +138,7 @@ function handleUserRequest(userName, chaincodeID, fcn, args) {
      });
    });
 }
-``` 
+```
 
 
 ## Public and Private Keys
