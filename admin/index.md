@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Last updated: 3 August 2016
+Last updated: 9 August 2016
 {: .last-updated}
 
 If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
@@ -148,7 +148,7 @@ You can view scheduled and pending maintenance updates by going to **ADMINISTRAT
 
 Before you start scheduling and approving updates, you must set your preapproved maintenance windows. Non-disruptive updates are scheduled during the preapproved window times.
 
-You are required to set a minimum of 24 available hours for a week for a minimum of three days during each week. For example, you can set three 8-hour windows across three separate days, or you can set 6-hour windows across four separate days. To ensure that the windows provide enough time for an update to be applied, each window must be a minimum of four hours in duration.
+You are required to set a minimum of 12 available hours in a week for a minimum of two days during each week. For example, you can set 6-hour windows across two separate days, or you can set 4-hour windows across three separate days. To ensure that the windows provide enough time for an update to be applied, each window must be a minimum of four hours in duration. To ensure that the windows provide enough time for an update to be applied, each window must be a minimum of four hours in duration.
 
 **Note**: Only users with the Admin permission (`ops.admin`) can schedule and approve maintenance updates.
 
