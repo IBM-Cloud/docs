@@ -8,7 +8,7 @@ copyright:
 {:new_window: target="_blank"}
 # Sending basic push notifications
 {: #push-send-notifications}
-*Last updated: 14 June 2016*
+Last updated: 14 June 2016
 {: .last-updated}
 
 After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files).

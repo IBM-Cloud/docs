@@ -7,12 +7,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# Configuring credentials for APNS
+# Configuring credentials for APNs
 {: #create-push-credentials-apns}
-*Last updated: 14 June 2016*
+Last updated: 14 June 2016
 {: .last-updated}
 
-Apple Push Notification Service (APNS) allows application developers to send remote notifications from the push service instance on Bluemix (the provider) to iOS devices and applications. Messages are sent to a target application on the device. Obtain and configure your APNS credentials. The APNS certificates are securely managed by Push Notification service and used to connect to APNS server as a provider.
+Apple Push Notification Service (APNs) allows application developers to send remote notifications from the push service instance on Bluemix (the provider) to iOS devices and applications. Messages are sent to a target application on the device. Obtain and configure your APNs credentials. The APNs certificates are securely managed by Push Notification service and used to connect to APNs server as a provider.
 
 1. Obtain an [Apple Developers](https://developer.apple.com/) account.
 2. [Register an App ID](#create-push-credentials-apns-register)
@@ -28,7 +28,7 @@ Apple Push Notification Service (APNS) allows application developers to send rem
 {: #create-push-credentials-apns-register}
 
 
-The App ID (the bundle identifier) is a unique identifier that identifies a specific application. Each application requires an App ID. Services like the Push Notifications Service are configured to the App ID.
+The App ID (the bundle identifier) is a unique identifier that identifies a specific application. Each application requires an App ID. Services like the Push Notifications service are configured to the App ID.
 
 
 
@@ -49,9 +49,10 @@ The App ID (the bundle identifier) is a unique identifier that identifies a spec
 ##Create a development and distribution APNS SSL certificate
 {: #create-push-credentials-apns-ssl}
 
-Before you can obtain an APNS certificate, you must first generate a certificate signing request (CSR) and submit it to Apple, the certificate authority (CA). The CSR contains information that identifies your company and your public and private key that you use to sign your Apple push notifications. Then, generate the SSL certificate on the iOS Developer Portal. The certificate, along with its public and private key, is stored in Keychain Access.
+Before you can obtain an APNs certificate, you must first generate a certificate signing request (CSR) and submit it to Apple, the certificate authority (CA). The CSR contains information that identifies your company and your public and private key that you use to sign your Apple push notifications. Then, generate the SSL certificate on the iOS Developer Portal. The certificate, along with its public and private key, is stored in Keychain Access.
 
-**Before you begin**
+###Before you begin
+{: before-you-begin-certificate}
 
 [Register an App ID](#create-push-credentials-apns-register)
 
@@ -60,7 +61,7 @@ APNS can be used in two modes: sandbox and production.
 * Sandbox mode is used during development and testing.
 * Production mode is used when distributing applications through the App Store (or other enterprise distribution mechanisms).
 
-You must obtain separate certificates for your development and distribution environments. The certificates are associated with an App ID for the app that is the recipient of remote notifications. For production, you can create up to two certificates. Bluemix uses the certificates to establish an SSL connection with APNS.
+You must obtain separate certificates for your development and distribution environments. The certificates are associated with an App ID for the app that is the recipient of remote notifications. For production, you can create up to two certificates. Bluemix uses the certificates to establish an SSL connection with APNs.
 
 Create a development and distribution SSL certificate.
 
@@ -110,9 +111,10 @@ Create a development and distribution SSL certificate.
 
 The provisioning profile works with the App ID to determine which devices can install and run your app and which services your app can access. For each App ID, you create two provisioning profiles: one for development and the other for distribution. Xcode uses the development provisioning profile to determine which developers are allowed to build the application and which devices are allowed to be tested on the application.
 
-**Before you begin**
+###Before you begin
+{: before-you-begin-provisioning-file}
 
-Make sure you have registered an App ID, enabled it for Push Notification Service, and configured it to use a development and production APNS SSL certificate.
+Make sure you have registered an App ID, enabled it for Push Notification Service, and configured it to use a development and production APNs SSL certificate.
 
 Create a development provisioning profile.
 
@@ -136,7 +138,7 @@ Use the store provisioning profile to submit your app for distribution to the Ap
 ##Creating .p12 push certificate file for Bluemix push
 {: #create-p12-push-certificate-file-for-Bluemix-push}
 
-To create a valid .p12 push certificate file, you need to use the APNS .p12 certificate along with the development/distribution profile certificate. Complete the steps.
+To create a valid .p12 push certificate file, you need to use the APNs .p12 certificate along with the development/distribution profile certificate. Complete the steps.
 
 ```
 //You can choose to pick up either the development or distribution certificate  
@@ -149,24 +151,25 @@ To create a valid .p12 push certificate file, you need to use the APNS .p12 cert
 ```
 You need to store the `bluemixPush_dev.p12` file to your desktop.
 
-##Setting up APNS on the Push Notification Dashboard
+##Setting up APNs on the Push Notification Dashboard
 {: #create-push-credentials-apns-dashboard}
 
-To use the Push Notification Service to send notifications, upload the SSL certificates that are required for Apple Push Notification Service (APNS). You can also use the REST API to upload an APNS certificate.
+To use the Push Notification service to send notifications, upload the SSL certificates that are required for Apple Push Notification Service (APNs). You can also use the REST API to upload an APNs certificate.
 
 
-**Before you begin**
+###Before you begin
+{: before-you-begin-dashboard}
 
 
-Get your development and production APNS SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNS.
+Get your development and production APNs SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNs.
 
-The certificates that are needed for APNS are .p12 certificates, which contain the private key and SSL certificates that are required to build and publish your application. You must generate the certificates from the Member Center of the Apple Developer website (for which a valid Apple Developer account is required). Separate certificates are required for the development environment (sandbox) and the production (distribution) environment.
+The certificates that are needed for APNs are .p12 certificates, which contain the private key and SSL certificates that are required to build and publish your application. You must generate the certificates from the Member Center of the Apple Developer website (for which a valid Apple Developer account is required). Separate certificates are required for the development environment (sandbox) and the production (distribution) environment.
 
 **Note**: After the .**cer**  is in your key chain access, export it to your computer to create a .p12 certificate.
 
-For more information about using the APNS, see [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4).
+For more information about using the APNs, see [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4).
 
-Set up APNS on the Push dashboard.
+Set up APNs on the Push dashboard.
 
 1. Open your backend application in the Bluemix dashboard and then click the **IBM Push Notifications** service to open the Push dashboard.
 
