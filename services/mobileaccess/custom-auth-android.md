@@ -60,7 +60,7 @@ Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GU
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Replace the `BMSClient.REGION_UK` with the appropriate region.	 To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the Account and Support widget.				
+Replace the `BMSClient.REGION_UK` with the appropriate region.	 To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.				
 	
 
 ## AuthenticationListener interface
@@ -175,8 +175,10 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 After you create a custom AuthenticationListener, register it with `BMSClient` before you start using the listener. Add the following code to your application. This code must be called before you send any requests to your protected resources.
 
 ```Java
-BMSClient.getInstance().registerAuthenticationListener(realmName,
-									new CustomAuthenticationListener());
+MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+
 ```
 
 Use the *realmName* that you specified in the {{site.data.keyword.amashort}} dashboard.
@@ -225,7 +227,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
  You can also add logout functionality by adding the following code:
 
  ```Java
- AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge that is received from the server again.
