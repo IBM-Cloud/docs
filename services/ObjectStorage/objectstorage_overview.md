@@ -12,7 +12,7 @@ For more information about using OpenStack Swift and Keystone, view the [OpenSta
 
 The {{site.data.keyword.objectstorageshort}} architecture diagram is as follows:
 
-[![{{site.data.keyword.objectstorageshort}} Architecture Diagram](images/ObjectStorageArchitectureDiagram.png)](https://github.com/IBM-Bluemix/docs/tree/master/services/ObjectStorage/images/ObjectStorageArchitectureDiagram.png){: new_window}
+[![{{site.data.keyword.objectstorageshort}} Architecture Diagram](images/ObjectStorageArchitectureDiagram.png)](./images/ObjectStorageArchitectureDiagram.png){: new_window}
 
 *Figure 1. {{site.data.keyword.objectstorageshort}} Architecture Diagram*
 
