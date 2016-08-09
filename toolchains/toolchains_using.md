@@ -11,7 +11,7 @@ copyright:
 # Using toolchains on {{site.data.keyword.Bluemix_notm}} Public
 {: #toolchains-using}
 
-*Last updated: 7 July 2016*
+*Last updated: 9 August 2016*
 {: .last-updated}
 
 You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
@@ -61,7 +61,7 @@ If you delete a tool integration from your toolchain, the deletion cannot be und
 ## Managing access
 {: #managing_access}
 
-You can grant users access to a toolchain by adding them to the organization (org) that the toolchain is associated with. Each toolchain is associated with a specific org, and any user that is a member of that org can access the associated toolchains. Click the **Account and Support** icon ![Account and Support icon](../toolchains/images/account_support.svg) to view the org that you are currently working in. Switch to a different org to access a different set of toolchains.
+You can grant users access to a toolchain by adding them to the organization (org) that the toolchain is associated with. Each toolchain is associated with a specific org, and any user that is a member of that org can access the associated toolchains. Click the {{site.data.keyword.avatar}} icon ![Avatar icon](../icons/i-avatar-icon.svg) in the menu bar to open the Account and Support widget and view the org that you are currently working in. Switch to a different org to access a different set of toolchains.
 
 <!--CA: Commenting out the content on authentication for Interconnect since it applies to GitHub Enterprise. This content can be exposed again when GHE is supported for the Dedicated Beta 2.-->
 
