@@ -11,7 +11,7 @@ copyright:
 # Getting started with toolchains (Experimental)
 {: #toolchains_getting_started}
 
-*Last updated: 27 July 2016*
+*Last updated: 9 August 2016*
 {: .last-updated}  
 
 Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app.
@@ -23,7 +23,7 @@ Toolchains are available in the Public and Dedicated environments on {{site.data
 ##Getting started with toolchains: Public
 {: #getting_started_public}
 
-Each toolchain is associated with a specific organization (org) and any user that is a member of that org can access its associated toolchains. Before you create a toolchain, make sure that you are working in the org where you want to create the toolchain. To switch to another org, click the **Account and Support** icon ![Account and Support icon](../toolchains/images/account_support.svg).
+Each toolchain is associated with a specific organization (org) and any user that is a member of that org can access its associated toolchains. Before you create a toolchain, make sure that you are working in the org where you want to create the toolchain. To switch to another org, click the {{site.data.keyword.avatar}} icon ![Avatar icon](../icons/i-avatar-icon.svg) in the menu bar to open the Account and Support widget.
 
 ###Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template}
@@ -69,7 +69,7 @@ After your request to access toolchains is approved, you can create a toolchain 
 ##Getting started with toolchains: Dedicated
 {: #getting_started_dedicated}
 
-Each toolchain is associated with a specific organization (org) and any user that is a member of that org can access its associated toolchains. Before you create a toolchain, click the **Account and Support** icon ![Account and Support icon](../toolchains/images/account_support.svg) to view the org that you are working in. If that org is not the org where you want to create the toolchain, switch to another org.
+Each toolchain is associated with a specific organization (org) and any user that is a member of that org can access its associated toolchains. Before you create a toolchain, click the {{site.data.keyword.avatar}} icon ![Avatar icon](../icons/i-avatar-icon.svg) in the menu bar to open the Account and Support widget and view the org that you are working in. If that org is not the org where you want to create the toolchain, switch to another org.
 
 ###Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template_dedicated}
