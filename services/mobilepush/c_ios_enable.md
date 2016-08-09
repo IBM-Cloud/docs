@@ -248,17 +248,14 @@ Create a backend application in the Boilerplates section Bluemix® catalog, whic
 ```
 	//For Swift
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-		let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-		application.registerUserNotificationSettings(notificationSettings)
-		application.registerForRemoteNotifications()
+		let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil) UIApplication.sharedApplication().registerUserNotificationSettings(settings) UIApplication.sharedApplication().registerForRemoteNotifications()
 	}
 ```
 
 ###Pass the token to Push Notifications
 {: pass-token-push-notifications}
 
-After the token is received from APNs, pass the token to Push Notifications as part of the `registerDevice:withDeviceToken` method.
+After the token is received from APNs, pass the token to Push Notifications as part of the `registerWithDeviceToken` method.
 
 ####Objective-C
 {: objc-token}

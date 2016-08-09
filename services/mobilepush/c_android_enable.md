@@ -36,7 +36,11 @@ Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatical
 
 	```
 	dependencies {
-	  compile 'com.google.android.gms:play-services:9.0.2' // Automatically pulls in version 2.0 core SDK3 compile group: 'com.ibm.mobilefirstplatform.clientsdk.android', name: 'push', version: '2.+', ext: 'aar', transitive: true
+	  compile group: 'com.ibm.mobilefirstplatform.clientsdk.android', 
+		name: 'push', 
+		version: '2.+',
+		ext: 'aar', 
+		transitive: true
 	}  
 	```
 3. In the **AndroidManifest.xml** file, add the following permissions. To view a sample manifest, see [Android helloPush Sample Application](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). To view a sample Gradle file, see [Sample Build Gradle file](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
@@ -50,9 +54,9 @@ Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatical
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-	```
 
-	You can read more about [Android permissions](http://developer.android.com/guide/topics/security/permissions.html) here.
+	```
+   Read more about [Android permissions](http://developer.android.com/guide/topics/security/permissions.html) here.
 
 4. Add the notification intent settings for the activity. This setting starts the application when the user clicks the received notification from the notification area.
 

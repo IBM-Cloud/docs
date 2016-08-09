@@ -22,7 +22,7 @@ With the Push REST API, backend server applications and clients can access Push 
 
 To obtain the base URL for the REST API:
 
-1. Create a backend application in the Boilerplates section Bluemix® catalog, which automatically binds the Push service to this application. You can also create a service instance of Push and leave it unbounded. 
+1. Create a backend application in the Boilerplates section Bluemix® catalog by choosing the MobileFirst Services Starter. This binds the Push Notification service to the application. You can also create a service instance of Push and leave it unbounded. 
 
 1. In the main page of the Bluemix dashboard, go to the **Applications** area and then click your app.
 
