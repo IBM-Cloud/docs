@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
-Last updated: 1 August 2016
+Last updated: 9 August 2016
 {: .last-updated}
 
 
@@ -65,7 +65,7 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 
 If you need to uninstall the plug-in, you can use the following commands, then you can add the updated repository and install the latest plug-in:
 
-* Uninstall the plug-in: `cf uninstall-plugin-repo BluemixAdmin https://console.<subdomain>.bluemix.net/cli`
+* Uninstall the plug-in: `cf uninstall-plugin-repo BluemixAdminCLI`
 * Remove the plugin repository: `cf remove-plugin-repo BluemixAdmin`
 
 
