@@ -9,7 +9,7 @@ copyright:
 
 
 #Enabling advanced push notifications
-*Last updated: 14 June 2016*
+Last updated: 14 June 2016
 {: .last-updated}
 
 Configure an iOS badge, sound, additional JSON payload, actionable notifications, and holding notifications.

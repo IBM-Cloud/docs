@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # Configuring credentials for Google cloud messaging (GCM)
 {: #create-push-enable-gcm}
-*Last updated: 14 June 2016*
+Last updated: 14 June 2016
 {: .last-updated}
 
 Get your Google Cloud Messaging (GCM) credentials, and then set up the Push Notification service on the Push dashboard.
@@ -58,7 +58,8 @@ The API key is displayed.
 
 ##Setting up the Push Notification Service for Android
 
-**Before you begin**
+###Before you begin
+{: before-you-begin}
 
 Get a GCM API Key and Sender ID (project number). 
 
@@ -69,9 +70,39 @@ Get a GCM API Key and Sender ID (project number).
 	The Push dashboard is displayed.
 	
 	![Push setup](images/setup_push_main.jpg)
+To set up an unbound Push Notification Service for Android, select the Unbound IBM Push Notifications service icon to open the Push Notification Service dashboard.
+ 
+	![Push dashboard](images/push_unbound.jpg)
 
 2. Click the **Setup Push** button, to configure the GCM credentials.
 1. On the **Configuration** tab, go to **Google Cloud Messaging** section and configure the Sender ID (GCM project number) and API Key.
 
 4. Click the **Save** button. 
 5. Next steps. [Enabling notifications for Android](c_enable_push.html).
+
+
+##Creating an unbound Push Notification Service for Android
+
+###Before you begin
+{: before-you-begin}
+
+Create a Push Notification service instance. You can use the Push Notification service instance without binding to any back-end application.
+
+1. Bind the Push Notification service instance to a Bluemix application. On binding it, you will be able to see the all details that relate to the service that are stored in JSON format in the VCAP_SERVICES environment variable. 
+
+ ![Binding a Push Notification service](images/unbound_1.jpg)
+ 
+2. Click **Bind** and choose the Push Notification service instance to bind. When your application is bound to the Push Notification service, information on the service are stored in JSON format in the VCAP_SERVICES environment variable for your app. For example: 
+
+```
+{
+   "imfpush_Dev": [
+      {
+         "name": "neekrish_20JulUnbound",
+         "label": "imfpush_Dev",
+         "plan": "Basic",
+         "credentials": null
+      }
+   ]
+}
+```
