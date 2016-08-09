@@ -45,38 +45,37 @@ To learn more about {{site.data.keyword.Bluemix_notm}} Live Sync, see [{{site.da
 
 1. Download and install the {{site.data.keyword.Bluemix_notm}} Live Sync bl command line. 
 
-<p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Download the Windows bl command line button" /> </a> 
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Download the Mac bl command line button" /> </a>
-</p>
+   <p>
+   <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Download the Windows bl command line button" /> </a> 
+   <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Download the Mac bl command line button" /> </a>
+   </p>
 
-**Important:** The bl command line tool is available only for Windows 7 and 8 and Mac OS X version 10.9 or later. 
+   **Important:** The bl command line tool is available only for Windows 7 and 8 and Mac OS X version 10.9 or later. 
 
 2. On a command line, log in by entering this command:  
-```
-bl login
-```
-When you are prompted, enter your {{site.data.keyword.ibmid}} and password.
+   ```
+   bl login
+   ```
+   When you are prompted, enter your {{site.data.keyword.ibmid}} and password.
 
 3. See the list of projects that are available for {{site.data.keyword.Bluemix_notm}} Live Sync synchronization by entering this command: 
-```
-bl projects
-```
-Find the project name in the list that matches your application. The project name has the format of your *alias* | *your application name*. 
+   ```
+   bl projects
+   ```
+   Find the project name in the list that matches your application. The project name has the format of your *alias* | *your application name*. 
 
 4. Synchronize your local environment with your project on {{site.data.keyword.Bluemix_notm}} by entering this command. If you are the owner of the project, you only need to specify your-application-name for projectName. 
-<!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
-```
-bl sync projectName -d localDirectory --verbose
-```
-This command continues to run, and synchronization continues, until you enter a "q". The --verbose option displays the logging and status information. If any of your arguments contain a space, enclose the name in quotation marks. 
+   <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
+   ```
+   bl sync projectName -d localDirectory --verbose
+   ```
+   This command continues to run, and synchronization continues, until you enter a "q". The --verbose option displays the logging and status information. If any of your arguments contain a space, enclose the name in quotation marks. 
 
 5. In another command-line window, in your local directory, deploy the application to {{site.data.keyword.Bluemix_notm}} in Live Edit mode by entering this command:
-```
-bl start
-```  
-
-When you change the files in your local directory, the changes are automatically propagated to both the application that is running on {{site.data.keyword.Bluemix_notm}} and the project cloud workspace. If you need to restart the Node application, enter this command:
-```
-bl start --restart 
-```
+   ```
+   bl start
+   ```  
+   When you change the files in your local directory, the changes are automatically propagated to both the application that is running on {{site.data.keyword.Bluemix_notm}} and the project cloud workspace. If you need to restart the Node application, enter this command:
+   ```
+   bl start --restart 
+   ```
