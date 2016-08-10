@@ -61,7 +61,7 @@ If you delete a tool integration from your toolchain, the deletion cannot be und
 ## Managing access
 {: #managing_access_dedicated}
 
-You can grant users access to a toolchain by adding them to the organization (org) that the toolchain is associated with. Each toolchain is associated with a specific org, and any user that is a member of that org can access the associated toolchains. To view the org that you are currently working in, click the {{site.data.keyword.avatar}} icon ![Avatar icon](../icons/i-avatar-icon.svg) in the menu bar. To access a different set of toolchains, switch to a different org.
+You can grant users access to a toolchain by adding them to the organization (org) that the toolchain is associated with. Each toolchain is associated with a specific org, and any user that is a member of that org can access the associated toolchains. To view the org that you are currently working in, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) in the menu bar. To access a different set of toolchains, switch to a different org.
 
 When you add users to your {{site.data.keyword.Bluemix}} org and spaces, the users can log in to GitHub Enterprise by using their {{site.data.keyword.Bluemix_notm}} ID and password. When the users log in, accounts are created for them. When you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, they are not automatically added to the GitHub Enterprise repo. Someone who has admin privileges for the repo must add them. For more information, see [Using Dedicated GitHub Enterprise](../toolchains/toolchains_integrations.html#ghe){: new_window}.
 
