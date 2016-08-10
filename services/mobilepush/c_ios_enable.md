@@ -32,7 +32,7 @@ $ pod init
 ```
 3. In the generated Podfile, add the SDK dependencies you need. Copy the following Podfile.
 
-   ####Objective-C
+###Objective-C
    {: objc-sdkdependencies}
 
     ```
@@ -271,7 +271,7 @@ After the token is received from APNs, pass the token to Push Notifications as p
 
  // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
-[push initializeWithPushAppGUID:@"pushAppGUID"];
+[push initializeWithAppGUID:@"appGUID"];
 [push registerWithDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
      NSLog(@"%@",error.description);
@@ -289,6 +289,8 @@ After the token is received from APNS, pass the token to Push Notifications as p
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
+  push.initializeWithAppGUID("appGUID")
+  push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
   push.initializeWithPushAppGUID("pushAppGUID")
    push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
