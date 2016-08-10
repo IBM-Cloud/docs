@@ -32,7 +32,7 @@ $ pod init
 ```
 3. In the generated Podfile, add the SDK dependencies you need. Copy the following Podfile.
 
-   ####Objective-C
+###Objective-C
    {: objc-sdkdependencies}
 
     ```
@@ -291,6 +291,8 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
    let push =  BMSPushClient.sharedInstance
   push.initializeWithAppGUID("appGUID")
   push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
+  push.initializeWithPushAppGUID("pushAppGUID")
+   push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
             print( "Response during device registration : \(response)")
             print( "status code during device registration : \(statusCode)")
