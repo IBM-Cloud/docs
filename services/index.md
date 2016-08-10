@@ -88,7 +88,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.mqa}}			|Yes		|Yes		|Yes|
 |{{site.data.keyword.mql}}			|Yes		|Yes		|Yes|
 |{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
-|{{site.data.keyword.objectstorageshort}}	|Yes		|No		|No|
+|{{site.data.keyword.objectstorageshort}}	|Yes		|Yes		|No|
 |{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.mobilepush}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.mobilepushshort}}				|Yes		|Yes		|Yes|
