@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Last updated: 10 May 2016*
+*Last updated: 10 August 2016*
 
 {{site.data.keyword.Bluemix_notm}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design.
 {:shortdesc}
