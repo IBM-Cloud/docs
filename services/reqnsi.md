@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Last updated: 28 July 2016*
+*Last updated: 10 August 2016*
 
 You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
 {:shortdesc}
@@ -79,6 +79,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.APIM}}			|Yes		|Yes		|No|
 |{{site.data.keyword.autoscaling}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.bigicloudst}}		|Yes		|No		|No|
+|{{site.data.keyword.blockstorageshort}}        |No             |Yes            |No |
 |{{site.data.keyword.rules_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.cloudint}}			|Yes		|Yes		|No|
 |{{site.data.keyword.cloudant}}			|Yes		|Yes		|No|
