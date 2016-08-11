@@ -77,7 +77,7 @@ Initialize the SDK by passing the application route (`applicationRoute`) and GUI
 
 1. Initialize the client SDK. Replace the applicationRoute and applicationGUID with the values for **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`) that you obtained from **Mobile Options**.
 
-	Objective-C:
+	###Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -85,12 +85,25 @@ Initialize the SDK by passing the application route (`applicationRoute`) and GUI
 			backendGUID:@"applicationGUID"];
 	```
 
-	Swift:
+	###Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+## Initializing the AuthorizationManager
+Initialize the AuthorizationManager by passing the {{site.data.keyword.amashort}} service `tenantId` parameter that you get when you click the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+
+### Objective-C
+  ```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+     	```
+
+###Swift:
+```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+```
+
 
 
 ## IMFAuthenticationHandler delegate
