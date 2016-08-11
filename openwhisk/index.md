@@ -30,7 +30,10 @@ For more details about how {{site.data.keyword.openwhisk_short}} works, see [Abo
 
 You can use the {{site.data.keyword.openwhisk_short}} command line interface (CLI) to set up your namespace and authorization key. 
 Go to [Configure CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} and follow the instructions to install it. 
-**Note:** You must have Python 2.7 installed on your system to use the CLI.
+
+**Note:** There is a new CLI available that doesn't require Python to be installed. 
+The previous CLI (Python based) is currently deprecated.
+To use the previous CLI (Python based), you must have Python 2.7 installed on your system to use the CLI.
 
 After {{site.data.keyword.openwhisk_short}} is set up with the CLI, you can begin using it from the command line.
 
