@@ -91,6 +91,7 @@ Initialize the SDK by passing the application route (`applicationRoute`) and GUI
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+
 ## Initializing the AuthorizationManager
 Initialize the AuthorizationManager by passing the {{site.data.keyword.amashort}} service `tenantId` parameter that you get when you click the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
 
