@@ -51,7 +51,7 @@ Please review the following notes before starting your consensus testing:
 - Because HTTP is the communication protocol for the peers, the tests use the peer URLs. For example: VP0–api.dev.blockchain.ibm.com:80.
 Note: Symbolic values ***VP0, VP1, VP2 and VP3*** are used as placeholders for the literal peer URLs.
 -  To log in to a peer, use the credentials that were provided when you deployed the bluemix service. For the test cases, **test\_user1** and **test\_user1\_enrollSecret** are used as values for *enrollID* and *enrollSecret*, respectively.
--  Simulate node crashes by manually stopping and restarting peers with the **Actions** buttons from the network console.  Seen in Figure 1, the **Actions** button is on the far-right when you are on the **Network** tab: 
+-  Simulate node crashes by manually stopping and restarting peers with the **Actions** buttons from the network console.  Seen in Figure 1, the **Actions** buttons are on the far-right when you are on the **Network** tab: 
 
 ![](images/stopstartpeer.png)
 *Figure 1. stop start options*
