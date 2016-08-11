@@ -13,17 +13,18 @@ copyright:
 
 # MQTT connectivity for devices
 {: #mqtt}
+Last updated: 7 July 2016
+{: .last-updated}
 
 ## Client connections
 {: #client_connections}
 
-Every registered organization has a unique endpoint, which must be used when you connect MQTT clients for devices in that organization.
+To connect MQTT clients for devices that are in your {{site.data.keyword.iot_short}} instance, use the following URL:
 
+<pre class="pre"><var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com</pre>
+{: codeblock}
 
-
-```
-org_id.messaging.internetofthings.ibmcloud.com
-```
+Where *orgId* is the unique organization ID that was generated when you registered the service instance.
 
 ### Unencrypted client connections
 
@@ -68,21 +69,17 @@ Also, messages sent from devices at a rate greater than 1 per second might be di
 
 For a device to successfully authenticate, define each MQTT client ID in the following format:
 
-```
-    d:org_id:device_type:device_id
-```
+<pre class="pre">d:<var class="keyword varname">orgId</var>:<var class="keyword varname">deviceType</var>:<var class="keyword varname">deviceId</var></pre>
+{: codeblock}
 
 Where:
--  The lowercase **d** character identifies the client as a device
--  org_id is the unique six character organization ID that was generated when you registered the service alphanumeric string that was assigned when you first registered the service.
--  **type\_id** is intended to be used as an identifier for the type
-   of device that is connecting. It might be useful to think of this as analogous
+-  The lowercase **d** character means that the connecting client is a device.
+-  *orgId* is the unique six character organization ID that was generated when you registered the service alphanumeric string that was assigned when you first registered the service.
+-  *deviceType* is the identifier for the type of device that is connecting. It might be useful to think of this as analogous
    to a model number.
--  **device\_id** must uniquely identify a device across all devices of
-   a specific device\_type, it might be useful to think of this as
-   analogous to a serial number.
+-  *deviceId* must uniquely identify a device across all devices of a specific device_type, it might be useful to think of this as analogous to a serial number.
 
-**Note:** When you assign values for ``type_id`` and ``device_id``, you can use any scheme of your choice, however the following restrictions apply to both parameters:
+**Note:** When you assign values for *typeId* and *deviceId* parameters, you can use any scheme of your choice, however the following restrictions apply:
 
 - The maximum length is 36 characters, which can consist of any of the following:
     - Alpha-numeric characters (``a-z``, ``A-Z``, ``0-9``)
@@ -94,7 +91,7 @@ Where:
 ## MQTT authentication
 {: #mqtt_authentication}
 
-### Username
+### User names
 
 The {{site.data.keyword.iot_short_notm}} service currently supports token-based authentication only for devices, as such there is only one valid user name for devices today.
 
@@ -111,9 +108,10 @@ If you are using token based authentication, submit the device authentication to
 
 Devices can only publish to the event topics in the following format:
 
-```
-iot-2/evt/event_id/fmt/format_string
-```
+<pre class="pre">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+{: codeblock}
+
+Where:
 
 -  **event\_id** is the ID of the event, for example "status".  The event ID can be any string permitted by MQTT.  Subscriber applications must use this string in their subscription topic to receive the events published on this topic if wildcards are not used.
 -  **format\_string** is the format of the event payload, for example "json".  The format can be any string permitted by MQTT.  Subscriber applications must use this string in their subscription topic to receive events published on this topic if wildcards are not used.  If the format is not "json", then messages will not be stored in the Historian.
@@ -126,13 +124,12 @@ iot-2/evt/event_id/fmt/format_string
 
 Devices can only subscribe to command topics in the following format:
 
-```
-iot-2/cmd/command_id/fmt/format_string
-```
-Where:
+<pre class="pre">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+{: codeblock}
 
--  **command\_id** is the ID of the command, for example, "update".  The command ID can be any string that is permitted by the MQTT protocol.  A device must use this string in its subscription topic to receive commands published on this topic if wildcards are not used.
--  **format\_string** is the format of the command payload, for example "json".  The format can be any string that is permitted by the MQTT protocol.  A device must use this string in its subscription topic in order to receive commands published on this topic if wildcards are not used.
+Where:
+ - **command\_id** is the ID of the command, for example, "update".  The command ID can be any string that is permitted by the MQTT protocol.  A device must use this string in its subscription topic to receive commands published on this topic if wildcards are not used.
+ - **format\_string** is the format of the command payload, for example "json".  The format can be any string that is permitted by the MQTT protocol.  A device must use this string in its subscription topic in order to receive commands published on this topic if wildcards are not used.
 
 Devices cannot subscribe to events from other devices. A device receives commands that are published specifically to only its own device.
 
@@ -180,14 +177,14 @@ All messages are sent in JSON format. There are two types of messages.
 
 1. Requests  
 Requests are formatted as outlined in the following code sample:
-```
 
-        {  "d": {...}, "reqId": "b53eb43e-401c-453c-b8f5-94b73290c056" }
-```
+<pre class="pre">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</pre>
+{: codeblock}
+
 Where:
 
  - ``d`` carries any data relevant to the request.
- - ``reqId`` is an identifier of the request, and must be copied into a response. If a response is not required, omit this field.
+ - *reqId* is an identifier of the request, and must be copied into a response. If a response is not required, you can omit the *reqId* field.
 
 2. Responses  
 Responses are formatted as outlined in the following code sample:

@@ -14,35 +14,40 @@ copyright:
 
 # Python for device developers
 {: #python}
+Last updated: 29 July 2016
+{: .last-updated}
 
-For more information, see the following resources:
+You can use Python to build and develop device code to interact with your organization on {{site.data.keyword.iot_full}}. The Python client for {{site.data.keyword.iot_short_notm}} provides an API to facilitate simple interaction with {{site.data.keyword.iot_short_notm}} features by abstracting away the underlying protocols such as MQTT and HTTP.
+{:shortdesc}
 
--  The [iot-python](https://github.com/ibm-messaging/iot-python) repository in GitHub.
--  The [ibmiotf](https://pypi.python.org/pypi/ibmiotf) repository in PyPi.
+Use the information and examples that are provided to start developing your devices by using Python.
 
+## Downloading the Python client and resources
+{: #python_client_download}
 
-
+To access the Python client for {{site.data.keyword.iot_short_notm}} and other available resources, go to the [iot-python](https://github.com/ibm-watson-iot/iot-python) repository in GitHub and complete the installation instructions.
 
 ## Constructor
 {: #constructor}
 
-The constructor builds the client instance, and accepts an options dict that contains the following definitions:
+The options dictionary creates definitions that are used to interact with the {{site.data.keyword.iot_short_notm}} module. The constructor builds the client instance and accepts an options dictionary that contains the following definitions:
 
-| Definition    |Description     |
-|----------------|----------------|
-|``org`` |Your organization ID|
-|``type``   |The type of your device|
-|``id``   |The  ID of your device|
-|``auth-method``   |Method of authentication, whereby the only value that is currently supported is “token”)|
-|``auth-token``   |API key token, which is required only if ``auth-method`` is set to 'token'|
+|Definition|Description |
+|:---|:---|
+|`orgId`|Your organization ID.|
+|`type`|The type of your device. Typically, the deviceType is a grouping for devices that perform a specific task, for example "weatherballoon".|
+|`id`|The  ID of your device. Typically, for a given device type, the deviceId is a unique identifier of that device, for example a serial number or MAC address.|
+|`auth-method`|The method of authentication to be used. The only value that is currently supported is `token`.|
+|`auth-token`|An authentication token to securely connect your device to Watson IoT Platform.|
 
-If options dict is not provided, the client connects to the {{site.data.keyword.iot_full}} Quickstart, and defaults to an unregistered device. The options dict creates definitions that are used to interact with the {{site.data.keyword.iot_short_notm}} module.
+If no options dictionary is provided, the client connects to the Watson IoT Platform Quickstart service as an unregistered device.
 
-```
+```python
+
 import ibmiotf.device
 try:
   options = {
-    "org": organization,
+    "org": orgId,
     "type": deviceType,
     "id": deviceId,
     "auth-method": authMethod,
@@ -50,44 +55,47 @@ try:
   }
   client = ibmiotf.device.Client(options)
 except ibmiotf.ConnectionException  as e:
-  ...
+...
 ```
 
 ### Using a configuration file
 
+Instead of defining an options dictionary directly, you can also define an options dictionary separately in a configuration file, as outlined in the following code sample:
 
-Instead of including an options dict directly, you can use a configuration file containing an options dict. If you are using a configuration file that contains an options dict, use the following code format.
+```python
 
-``` sourceCode
 import ibmiotf.device
 try:
   options = ibmiotf.device.ParseConfigFile(configFilePath)
   client = ibmiotf.device.Client(options)
 except ibmiotf.ConnectionException  as e:
-  ...
+...
 ```
 
-The content of the configuration file must be in the following format:
+The configuration file that contains the options dictionary must be in the following format:
+
+```python
+
+[device]
+org=orgID
+type=deviceType
+id=deviceId
+auth-method=token
+auth-token=token
+
 ```
-    [device]
-    org=$orgId
-    type=$myDeviceType
-    id=$myDeviceId
-    auth-method=token
-    auth-token=$token
-```
-**Note:** The dollar ($) character is not required.
 
 ## Publishing events
 {: #publishing_events}
 
-Events are the mechanism by which devices publish data to the {{site.data.keyword.iot_short_notm}}. The device controls the content of the event and assigns a name for each event it sends.
+Events are the mechanism by which devices publish data to the {{site.data.keyword.iot_short_notm}}. The device controls the content of the event and assigns a name for each event that it sends.
 
-When an event is received by the {{site.data.keyword.iot_short_notm}} instance, the credentials of the received event identify the sending device, making it impossible for a device to impersonate another device.
+When an event is received by the {{site.data.keyword.iot_short_notm}} instance, the credentials of the received event identify the sending device, which means that a device cannot impersonate another device.
 
-Events can be published with any of the three quality of service (QoS) levels that are defined by the MQTT protocol.  By default, events are published with a QoS level of zero.
+Events can be published with any of the three quality of service (QoS) levels that are defined by the MQTT protocol.  By default, events are published with a QoS level of `0`.
 
-### Publish event using default quality of service
+### Publish an event by using the default quality of service
+
 ```
 client.connect()
 myData={'name' : 'foo', 'cpu' : 60, 'mem' : 50}
@@ -96,9 +104,9 @@ client.publishEvent("status", "json", myData)
 
 ### Increasing the QoS level for an event
 
-You can increase the [quality of service(QoS) level](../../reference/mqtt/mqtt.html#qos-levels) for events that are published. Events with a higher QoS level than zero might take longer to publish, due to the extra confirmation receipt information that is included.
+You can increase the [quality of service(QoS) level](../../reference/mqtt/index.html#qos-levels) for events that are published. Events that have a higher QoS level than `0` can take longer to publish because of the extra confirmation receipt information that is included.
 
-**Note:** The Quickstart flow mode only supports a QoS level of zero.
+**Note:** The Quickstart flow mode supports only a QoS level of `0`.
 
 ```
 client.connect()
@@ -106,20 +114,21 @@ myQosLevel=2
 myData={'name' : 'foo', 'cpu' : 60, 'mem' : 50}
 client.publishEvent("status", "json", myData, myQosLevel)
 ```
-
-
 ## Handling commands
 {: #handling_commands}
 
-When the device client connects, it automatically subscribes to any command that is specified for this device.  To process specific commands, you need to register a command
-callback method. The messages are returned as an instance of the Command class, which contains the following properties:
+When the device client connects, it automatically subscribes to any command that is specified for this device. To process specific commands, you need to register a command callback method. The messages are returned as an instance of the Command class, which contains the following properties:
 
-* command - string
-* format - string
-* data - dict
-* timestamp - date and time
+|Property|Data type|Description|
+|:---|:---|
+|`command`|String|Identifies the command.|
+|`format`|String|The format can be any string, for example JSON.|
+|`data`|Dictionary|The data for the payload. Maximum length is 131072 bytes.|
+|`timestamp`|Date and time|The date and time of the event.|
 
-```
+
+```python
+
 def myCommandCallback(cmd):
   print("Command received: %s" % cmd.data)
   if cmd.command == "setInterval":
@@ -141,14 +150,15 @@ client.commandCallback = myCommandCallback
 ## Custom message format support
 {: #custom_message_format}
 
-By default, `msgFormat` is set to `json`, which means that the library supports the encoding and decoding of Python dictionary objects in JSON format. When `msgFormat` is set to `json-iotf`, the message is encoded in accordance with the {{site.data.keyword.iot_short_notm}} JSON Payload specification. To add support for your own custom message formats, see the [Custom Message Format sample in GitHub](https://github.com/ibm-messaging/iot-python/tree/master/samples/customMessageFormat).
+By default, the message format is set to ``json``, which means that the library supports the encoding and decoding of Python dictionary objects in JSON format. When the message format is set to ``json-iotf``, the message is encoded in accordance with the {{site.data.keyword.iot_short_notm}} JSON Payload specification. To add support for your own custom message formats, see the [Custom Message Format sample](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat) in GitHub.
 
-When you create a custom encoder module, you must register it in the device client. If you try to use an unknown message format when you send an event, or if the device receives a command in a format that it does not know how to decode, the library will return a `MissingMessageDecoderException` condition.
+When you create a custom encoder module, you must register it in the device client as outlined in the following example:
 
-```
-sourceCode
+```python
+
 import myCustomCodec
 
 client.setMessageEncoderModule("custom", myCustomCodec)
 client.publishEvent("status", "custom", myData)
 ```
+If an event is sent in an unknown format or if a device does not recognize the format, the device library returns a ``MissingMessageDecoderException`` condition.

@@ -13,22 +13,24 @@ copyright:
 
 # MQTT connectivity for applications
 {: #mqtt}
-
+Last updated: 4 August 2016
+{: .last-updated}
 
 ## Client connections
 {: #client_connections}
-Every registered organization has a unique endpoint value, which must be used when connecting MQTT clients for applications in that organization.
 
+To connect MQTT clients to applications in your {{site.data.keyword.iot_full}} instance, use the following URL:
 
-```
-org_id.messaging.internetofthings.ibmcloud.com
-```
+<pre class="pre"><var class="keyword varname">orgID</var>.messaging.internetofthings.ibmcloud.com</pre>
+{: codeblock}
+
+Where *orgID* is the unique organization ID that was generated when you registered the service instance.
 
 ### Unencrypted client connections
 
 For unencrypted client connections, connect on port **1883**.
 
-**Important:** Applications in the {{site.data.keyword.iot_full}} submit information as plain text, including the API key and authentication token. To secure the transmission, always use an encrypted connection.
+**Important:** Applications in the {{site.data.keyword.iot_short_notm}} submit information as plain text, including the API key and authentication token. To secure the transmission, always use an encrypted connection.
 
 ### Encrypted client connections
 
@@ -50,20 +52,19 @@ Many client libraries require that you provide the server's public certificate i
 {: #mqtt_client_identifier}
 For applications to successfully authenticate, define each MQTT client ID in the following format:
 
-```
-a:org_id:app_id
-```
+<pre class="pre">a:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
+{: codeblock}
 
 Where:
 - The lowercase character **a** indicates that the client is an application.
-- org_id is the unique six character organization ID that was generated when you registered the service alphanumeric string that was assigned when you first registered the service.
-- app_id is a user-defined unique string identifier for the client with a maximum length of 36 characters. The string can contain only alpha-numeric characters (a-z, A-Z, 0-9) and the following special characters: dash (-); underscore (\_); dot (.).
+- *orgId* is the unique six character organization ID that was generated when you registered the service.
+- *appId* is a user-defined unique string identifier for the client with a maximum length of 36 characters. The string can contain only alpha-numeric characters (a-z, A-Z, 0-9) and the following special characters: dash (-); underscore (\_); dot (.).
 
 
 **Notes:**
-- When connecting to the Quickstart service, authentication is not required.
-- You do not need to register an application before connecting.
-- **Important:** Only one MQTT client can connect using any given client ID. Simultaneous connections that use the same client ID are not permitted. If you attempt to connect a client in your organization by using an app_id that is already connected, the first connection is disconnected.
+- When you connect to the Quickstart service, authentication is not required.
+- You do not need to register an application before you connect.
+- **Important:** Only one MQTT client can connect using any given client ID. Simultaneous connections that use the same client ID are not permitted. If you attempt to connect a client in your organization by using an application ID that is already connected, the first connection is disconnected.
 
 ## MQTT authentication
 {: #mqtt_authentication}
@@ -71,9 +72,10 @@ Where:
 {{site.data.keyword.iot_short_notm}} applications require an API key to connect into an organization. When an API key is registered, a token is generated, which must be used with that API key.
 
 The following is an example of an API key:
-```
-a-org_id-a84ps90Ajs
-```
+
+<pre class="pre">a-<var class="keyword varname">orgId</var>-a84ps90Ajs</pre>
+{: codeblock}
+
 
 The following is an example of an API token:
 
@@ -83,8 +85,8 @@ MP$08VKz!8rXwnR-Q*
 
 When you make an MQTT connection by using an API key, ensure that the following points apply:
 
-- The MQTT client ID is in the format: a:org_id:app_id
-- The MQTT user name is the API key: a-org_id-a84ps90Ajs
+- The MQTT client ID is in the format: a:*orgId*:*appId*
+- The MQTT user name is the API key: a-*orgId*-a84ps90Ajs
 - The MQTT password is the authentication token: MP$08VKz!8rXwnR-Q*
 
 
@@ -93,7 +95,7 @@ When you make an MQTT connection by using an API key, ensure that the following 
 
 An application can publish events as if they came from any registered device.
 
--  Publish to topic iot-2/type/**device\_type**/id/**device\_id**/evt/**event\_id**/fmt/**format\_string**
+-  Publish to topic iot-2/type/*device_type*/id/*device_id*/evt/*event_id*/fmt/*format_string*
 
 If you would like to migrate existing data from a device into  {{site.data.keyword.iot_short_notm}}, you can create an application to process the bespoke data and publish it into {{site.data.keyword.iot_short_notm}}.
 
@@ -104,35 +106,35 @@ If you would like to migrate existing data from a device into  {{site.data.keywo
 
 An application can publish a command to any registered device.
 
--  Publish to topic iot-2/type/**device\_type**/id/**device\_id**/cmd/**command\_id**/fmt/**format\_string**
+-  Publish to topic iot-2/type/*device_type*/id/*device_id*/cmd/*command_id*/fmt/*format_string*
 
 ## Subscribing to device events
 {: #subscribe_device_events}
 
 An application can subscribe to events from one or more devices.
 
--  Subscribe to topic iot-2/type/**device\_type**/id/**device\_id**/evt/**event\_id**/fmt/**format\_string**
+-  Subscribe to topic iot-2/type/*device_type*/id/*device_id*/evt/*event_id*/fmt/*format_string*
 
-**Note:**  To subscribe to more than one type of event, or events
-from more than a single device, use the MQTT "any" wildcard character (+) for any of the following components:
+**Note:**  To subscribe to more than one type of event, or events from more than a single device, use the MQTT "any" wildcard character (+) for any of the following components:
+
 - device_type
 - device_id
 - event_id
 - format_string
-
 
 ## Subscribing to device commands
 {: #subscribe_device_commands}
 
 An application can subscribe to commands that are being sent to one or more devices.
 
--  Subscribe to topic iot-2/type/**device\_type**/id/**device\_id**/cmd/**command\_id**/fmt/**format\_string**
+-  Subscribe to topic iot-2/type/*device_type*/id/*device_id*/cmd/*command_id*/fmt/*format_string*
 
 **Note:** To subscribe to more than one type of event, or events from more than a single device, use the MQTT "any" wildcard character (+) for any of the following components:
-- device_type
-- device_id
-- cmd_id
-- format_string
+
+-  device_type
+-  device_id
+-  cmd_id
+-  format_string
 
 
 
@@ -141,7 +143,7 @@ An application can subscribe to commands that are being sent to one or more devi
 
 An application can subscribe to monitor the status of one or more devices.
 
--  Subscribe to topic iot-2/type/**device\_type**/id/**device\_id**/mon
+-  Subscribe to topic iot-2/type/*device_type*/id/*device_id*/mon
 
 **Note:** To subscribe to updates from more than one device, use the MQTT "any" wildcard character (+) for any of the following components:
 
@@ -153,9 +155,9 @@ An application can subscribe to monitor the status of one or more devices.
 
 An application can subscribe to monitor status of one or more applications.
 
-- Subscribe to topic iot-2/app/app_id/mon
+- Subscribe to topic iot-2/app/*appId*/mon
 
-**Note:** To subscribe to updates for all applications, use the MQTT "any" wildcard character (+) for the app_id component.
+**Note:** To subscribe to updates for all applications, use the MQTT "any" wildcard character (+) for the *appId* component.
 
 
 ## Quickstart restrictions
@@ -164,8 +166,9 @@ If you are planning to create application code for use with the Quickstart servi
 
 - Publishing commands
 - Subscribing to commands
-- Using the MQTT "any" wildcard character (+) in **device\_type** or app_id components
+- Using the MQTT "any" wildcard character (+) in **deviceType** or **appId** components
 - MQTT connection over SSL
+- Scalable applications
 
 ## Scalable applications
 {: #scalable_apps}
@@ -177,14 +180,13 @@ The number of clients that are required for optimum load balancing and scalabili
 
 To enable load balancing, ensure that the application subscription is non-durable and that the client ID in the subscription matches the following format:
 
-```
-  A:org_id:app_id
-```
+<pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
+{: codeblock}
 
 Where:
 -  The character **A** indicates that the client is a scalable application.
-- org_id is the unique six character organization ID that was generated when you registered the service alphanumeric string that was assigned when you first registered the service.
--  app_id is a user-defined unique string identifier for the client. The string can contain only alpha-numeric characters (a-z, A-Z, 0-9) and the following special characters: dash (-); underscore (\_); dot (.).
+-  *orgId* is the unique six character organization ID that was generated when you registered the service alphanumeric string that was assigned when you first registered the service.
+-  *appId is a user-defined unique string identifier for the client. The string can contain only alpha-numeric characters (a-z, A-Z, 0-9) and the following special characters: dash (-); underscore (\_); dot (.).
 
 **Important:**
 - Only non-durable subscriptions are supported for scalable applications.

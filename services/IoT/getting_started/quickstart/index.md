@@ -12,7 +12,9 @@ copyright:
 {:pre: .pre}
 
 # Quickstart
-{: #quickstart}
+
+Last updated: 4 August 2016
+{: .last-updated}
 
 
 [Quickstart](https://quickstart.internetofthings.ibmcloud.com/#/) is an open sandbox that you can use to quickly connect your devices to the {{site.data.keyword.iot_full}}. If your devices support the MQTT messaging protocol, they can be easily connected to Quickstart.
@@ -23,20 +25,20 @@ There are many examples and tutorials available in [DeveloperWorks Recipes](http
 - [Reactive Blocks](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
 
 
+**Important:** If your {{site.data.keyword.iot_short_notm}} instance uses the Quickstart service, scalable applications are not supported.
+
 ## Simulated devices
-{: #simulated_devices}
 
 In addition to the Quickstart recipes and tutorials, a browser-based simulated device for mobile devices is a available for your to use to connect any device with a web browser to the Quickstart service. Open the following URL on a mobile phone or tablet in your favorite browser:
 
 ```
-http://quickstart.internetofthings.ibmcloud.com/iotsensor.
-
+http://quickstart.internetofthings.ibmcloud.com/iotsensor
 ```
 
-This will launch a browser-based simulated device connecting to the {{site.data.keyword.iot_short_notm}}.
+This will launch a browser-based simulated device connecting to the {{site.data.keyword.iot_short}}.
 
 
-When you connect to the simulated device URL on a mobile device, a browser-based simulated device that is connected to the {{site.data.keyword.iot_short_notm}} is started. There are three sensors that you can control by using the following UI controls that are available:
+When you connect to the simulated device URL on a mobile device, a browser-based simulated device that is connected to the {{site.data.keyword.iot_short}} is started. There are three sensors that you can control by using the following UI controls that are available:
 
 - Temperature
 - Humidity
@@ -46,7 +48,6 @@ When you connect to the simulated device URL on a mobile device, a browser-based
 ![image](iotsensor.png)
 
 ## Data visualization
-{: #data_visualization}
 
 To visualize the data that is generated from your mobile device, ensure that the simulated device is running on your mobile device, and then launch the Quickstart application. Enter the 12 character device ID for the device, which is displayed in the upper right-hand corner of the UI.
 
@@ -58,9 +59,8 @@ As you adjust the sensor values in your simulated device, you can see the data f
 
 
 ## Mosquitto demonstration
-{: #mosquitto_demonstration}
 
-[Mosquitto](http://mosquitto.org/) is a cross platform open source MQTT client that you can use to experiment with the {{site.data.keyword.iot_short_notm}} service. After you have installed the Mosquitto client, pick an `<applicationId>` and a `<deviceId>` that have a good chance to be unique (otherwise your experiment will clash with someone else running through this same demonstration).
+[Mosquitto] is a cross platform open source MQTT client that you can use to experiement with the {{site.data.keyword.iot_short}} service. After you have installed the Mosquitto client, pick an `<applicationId>` and a `<deviceId>` that have a good chance to be unique (otherwise your experiment will clash with someone else running through this same demonstration).
 
 **Note:** There are a couple of restrictions you must consider when deciding on these IDs:
  -   Maximum length of 36 characters
@@ -90,4 +90,13 @@ Returning to your application terminal you should see the two events that you pu
     {"helloworld": 2}
 ```
 
-That’s all there is to it. You have successfully connected a device and an application to the {{site.data.keyword.iot_short_notm}} over MQTT, sent an event from the device to the service and recieved that event in your application.
+That’s all there is to it. You have successfully connected a device and an application to the {{site.data.keyword.iot_short}} over MQTT, sent an event from the device to the service and recieved that event in your application.
+
+
+  [Quickstart]:https://quickstart.internetofthings.ibmcloud.com
+  [DeveloperWorks Recipes]:https://developer.ibm.com/recipes
+  [OpenBlocks IoT BX1G]:https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/
+  [Reactive Blocks]:https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/
+
+  [Quickstart application]:http://quickstart.internetofthings.ibmcloud.com
+  [Mosquitto]:http://mosquitto.org/

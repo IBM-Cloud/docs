@@ -13,6 +13,8 @@ copyright:
 
 # Java client library - managed devices
 {: #java_deviceManagement}
+Last updated: 02 Aug 2016
+{: .last-updated}
 
 ##Introduction
 {: #introduction}
@@ -90,15 +92,16 @@ Use the following code sample to create a `DeviceData` object that includes the 
 
 **Constructor One**
 
-Constructs a `ManagedDevice` instance by accepting the `DeviceData` and the following properties,
+Constructor One constructs a `ManagedDevice` instance in {{site.data.keyword.iot_short_notm}} by accepting the `DeviceData` and all of the following required properties:
 
-* Organization-ID - Your organization ID
-* Device-Type - The type of your device
-* Device-ID - The ID of your device
-* Authentication-Method - Method of authentication (The only value currently supported is "token")
-* Authentication-Token - API key token
+|Property |Description |
+|:---|:---|
+|``Organization-ID`` |Your organization ID|
+|``Device-Type`` |The type of your device. Typically, the deviceType is a grouping for devices that perform a specific task, for example "weatherballoon".|
+|``Device-ID`` |The ID of your device. Typically, for a given device type, the deviceId is a unique identifier of that device, for example a serial number or MAC address.|
+|``Authentication-Method`` |The method of authentication to be used. The only value that is currently supported is `token`.|
+|``Authentication-Token`` |An authentication token to securely connect your device to Watson IoT Platform.|
 
-All of the listed properties are required to interact with the {{site.data.keyword.iot_short_notm}}.
 
 The following code outlines how you can create a `ManagedDevice` instance:
 
@@ -113,7 +116,7 @@ options.setProperty("Authentication-Token", "AUTH TOKEN FOR DEVICE");
 ManagedDevice managedDevice = new ManagedDevice(options, deviceData);
 ```
 
-If you are already using `DeviceClient`, you will notice that the names of the properties are slightly different, and mirror the names in the {{site.data.keyword.iot_short_notm}} dashboard. To migrate from `DeviceClient` to `ManagedDevice` can continue to use the earlier format by constructing the `ManagedDevice` instance as outlined in the folliwing sample:
+If you are already using a `DeviceClient` instance, you will notice that the names of the properties are slightly different, and mirror the names in the {{site.data.keyword.iot_short_notm}} dashboard. To migrate from `DeviceClient` to `ManagedDevice` can continue to use the earlier format by constructing the `ManagedDevice` instance as outlined in the folliwing sample:
 
 ```
 Properties options = new Properties();

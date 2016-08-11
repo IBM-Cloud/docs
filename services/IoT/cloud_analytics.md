@@ -13,7 +13,7 @@ copyright:
 
 # Cloud Analytics
 {: #cloud_analytics}
-Last updated: 1 August 2016
+Last updated: 2 August 2016
 {: .last-updated}
 
 By using {{site.data.keyword.iot_short}} cloud analytics, you specify rule conditions that are based on real-time device data and that trigger alerts and optional actions when met.    
@@ -95,6 +95,10 @@ Condition | Description
 ------------- | -------------
 Trigger every time conditions are met | The rule is triggered every time the rule conditions are met.
 Trigger if conditions are met *N* times in *M* *days/hours/minutes/custom* | The rule is triggered when the conditions are met *N* times in the selected time interval and is then not triggered again until the configured time period has passed. </br>Example: The conditional trigger requirement =`Trigger only once if conditions are met 4 times in 30 minutes`. The device sends one new message every five minutes. At noon, the temperature initially exceeds 90 degrees, which meets the condition. The conditional trigger counter is started, but the rule is not yet triggered.  After 15 minutes and three more messages that indicate that `temp > 90` were received, the rule is triggered. The rule is then not triggered for another 15 minutes regardless of the temperature.
+Trigger only the first time conditions are met and reset when conditions are no longer met. | The rule is triggered when conditions are met but is then not triggered for consecutive messages that also meet the conditions. The triggering criteria is reset by the first message that does not meet the rule conditions.
+
+<!-- Trigger if conditions persist for *M* *days/hours/minutes/custom*. | The rule is triggered when the conditions are met continuously for the selected time interval. </br>The rule is also triggered if the following requirements are met: <ol><li>The rule conditions are first met but are then followed by a time period during which no new messages are received.<li>The no-messages time period exceeds the selected time interval.<li>The message that ends the no-message time period meets the rule conditions.</ol>-->
+
 
 
 ## Using actions in your rules

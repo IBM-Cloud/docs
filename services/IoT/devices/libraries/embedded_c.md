@@ -14,13 +14,24 @@ copyright:
 
 # Embedded C for device developers
 {: #embedded_c}
+Last updated: 02 Aug 2016
+{: .last-updated}
 
-For more information about Embedded C, see [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) in GitHub.
+You can use Embedded C to build and customize devices that interact with your organization on {{site.data.keyword.iot_full}}. Use the information and examples that are provided to start developing your devices by using Embedded C.
+{:shortdesc}
+
+## Downloading the Embedded C client and resources
+{: #embeddedc_client_download}
+
+To access the Embedded C client libraries and samples for {{site.data.keyword.iot_short_notm}}, go to the [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) repository in GitHub and complete the installation instructions.
+
 
 ## Dependencies
 {: #dependencies}
 
-Eclipse [Paho Embedded C library](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git), which provides an MQTT C client library. For more information, see [MQTT Client Package -  C for embedded devices](http://www.eclipse.org/paho/clients/c/embedded/).
+|Dependency |Description|
+|:---|:---|
+|[Eclipse Paho Embedded C library](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git) |Provides an MQTT C client library. For more information, see [MQTT Client Package -  C for embedded devices](http://www.eclipse.org/paho/clients/c/embedded/).|
 
 
 ## Installation
@@ -32,13 +43,13 @@ To install the {{site.data.keyword.iot_full}} client library for Embedded C, com
 ```
   [root@localhost ~]# git clone https://github.com/ibm-messaging/iotf-embeddedc.git
 ```
-2. Copy the Paho library .tar file that you downloaded in the previous step to the *lib* directory.
+2. Copy the Paho library .tar file to the *lib* directory.
 ```
     cd iotf-embeddedc
     cp ~/org.eclipse.paho.mqtt.embedded-c-1.0.0.tar.gz lib/
 ```
 3. Extract the library file
-``  cd lib
+```  cd lib
     tar xvzf org.eclipse.paho.mqtt.embedded-c-1.0.0.tar.gz
 ```
 The downloaded client has the following file structure:
@@ -58,18 +69,21 @@ The downloaded client has the following file structure:
 ## Initializing the client library
 {: #initialize_client_library}
 
-After downloading the client library, it must be initialized and connected to the {{site.data.keyword.iot_short_notm}}. There are 2 ways to initialize the {{site.data.keyword.iot_short_notm}} client library for Embedded C:
+After the client library is downloaded, it must be initialized and connected to the {{site.data.keyword.iot_short_notm}}. You can initialize the {{site.data.keyword.iot_short_notm}} client library for Embedded C by passing parameters or by using a configuration file.
 
-### Passing as parameters
+### Passing parameters
 
-The 'initialize' function uses the following details to connect to the {{site.data.keyword.iot_short_notm}} service:
+The `initialize` function uses the following parameters to connect to the {{site.data.keyword.iot_short_notm}} service:
 
--   client - Pointer to the *iotfclient*
--   org - Your organization ID
--   type - The type of your device
--   id - The device ID
--   authmethod - Method of authentication (the only value currently supported is "token")
--   authtoken - API key token (required if auth-method is "token")
+|Definition |Description |
+|:---|:---|
+|`client`|A pointer to the *iotfclient*.|
+|`org`|Your organization ID.|
+|`type` |The type of your device.|
+|`id` |The device ID.|
+|`auth-method` |The method of authentication to be used. The only value that is currently supported is `token`.|
+|`auth-token`|An authentication token to securely connect your device to Watson IoT Platform.|
+
 
 ```
 	#include "iotfclient.h"
@@ -79,13 +93,13 @@ The 'initialize' function uses the following details to connect to the {{site.da
 	//quickstart
 	rc = initialize(&client,"quickstart","iotsample","001122334455",NULL,NULL);
 	//registered
-	rc = initialize(&client,"orgid","type","id","token","authtoken");
+	rc = initialize(&client,"org","type","id","auth-method","auth-token");
 	....
 ```
 
 ### Using a configuration file
 
-You can also use a configuration file to initialize the Embedded C client library. The function 'initialize\_configfile' takes the configuration file path as a parameter.
+You can also use a configuration file to initialize the Embedded C client library. The `initialize_configfile` function takes the configuration file path as a parameter.
 
 ```
 	#include "iotfclient.h"
@@ -110,7 +124,7 @@ The configuration file must use the following format:
 ## Connecting to the service
 {: #connecting_service}
 
-After initializing the {{site.data.keyword.iot_short_notm}} Embedded C client library, you can connect to the {{site.data.keyword.iot_short_notm}} by calling the 'connectiotf' function.
+After you initialize the {{site.data.keyword.iot_short_notm}} Embedded C client library, you can connect to the {{site.data.keyword.iot_short_notm}} by calling the `connectiotf` function.
 
 ```
 	#include "iotfclient.h"
@@ -138,11 +152,14 @@ After initializing the {{site.data.keyword.iot_short_notm}} Embedded C client li
 ## Handling commands
 {: #handling_commands}
 
-When the device client connects, it automatically subscribes to any command for this device. To process specific commands you need to register a command callback function by calling the function 'setCommandHandler'. The commands are returned as:
+When the device client connects, it automatically subscribes to any command for this device. To process specific commands, you need to register a command callback function by calling the `setCommandHandler` function. The callback function has the following properties:
 
-- commandName - name of the command invoked
-- format - e.g json, xml
-- payload
+|Property |Description|
+|:---|:---|
+|`commandName`  |The name of the command that was invoked. |  
+|`format`  |The format of the event. The format can be any string, for example JSON.|
+|`payload`  |The data for the command payload. Maximum length is 131072 bytes. |
+
 
 ```
 	#include "iotfclient.h"
@@ -163,17 +180,20 @@ When the device client connects, it automatically subscribes to any command for 
 	....
 
 ```
-**Note:** The 'yield' function must be called periodically to receive commands.
+**Note:** The ``yield()`` function enables the device to receive commands from the Watson IoT Platform and keeps the connection alive. If the ``yield()`` function is not called within the time frame that is specified by the keepAlive interval, then any commands that are sent from the platform will not be received by the device. The value that is assigned to the ``yield()`` function specifies length of time (in milliseconds) that data can be read from the socket before control is returned to the application.
 
 ## Publishing events
 {: #publishing_events}
 
-Events can be published by using:
+Events can be published with the following properties:
 
-- eventType - Type of event to be published e.g status, gps
-- eventFormat - Format of the event e.g json
-- data - Payload of the event
-- QoS - qos for the publish event. Supported values : QOS0, QOS1, QOS2
+|Property |Description|
+|:---|:---|
+|eventType  |The type of event that is published, for example status or  gps. |  
+|eventFormat  |The format can be any string, for example `json`. |
+|data  |The data for the payload. Maximum length is 131072 bytes. |
+|QoS  |The Quality of Service level for the publish event. Supported values are `0`, `1`, `2`.|
+
 
 ```
 	#include "iotfclient.h"
@@ -188,7 +208,7 @@ Events can be published by using:
 ## Disconnecting the client
 {: #disconnect_client}
 
-To disconnect the client and release the connections, run the following code snippet.
+To disconnect the client and release the connections, run the following code snippet:
 
 ```
 	#include "iotfclient.h"

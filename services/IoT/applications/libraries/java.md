@@ -14,10 +14,17 @@ copyright:
 # Java for application developers
 {: #java}
 
-You can use Java to build and customize applications that interact with your organization on {{site.data.keyword.iot_full}}.
+Last updated: 29 July 2016
+{: .last-updated}
+
+You can use Java to build and customize applications that interact with your organization on {{site.data.keyword.iot_full}}. Use the information and examples that are provided to start developing your applications by using Java.
 {:shortdesc}
 
-For more information, see [iot-java](https://github.com/ibm-messaging/iot-java) in GitHub.
+## Downloading the Java client and resources
+{: #java_client_download}
+
+To access the Java client libraries and samples for {{site.data.keyword.iot_short_notm}}, go to the [iot-java](https://github.com/ibm-watson-iot/iot-java) repository in GitHub and complete the installation instructions.
+
 
 ## Constructor
 {: #constructor}
@@ -28,9 +35,9 @@ The constructor builds the client instance and accepts a `Properties` object tha
 |----------------|----------------|
 |`org` |Your organization ID. This is a required value. If you are using a Quickstart flow, specify `quickstart`.|
 |`id` |The unique ID of the application in your organization.|
-|`auth-method`  |Method of authentication, for which the only value that is currently supported is `apikey`.|
-|`auth-key`   |An API key, which is required when `auth-method` is set to `apikey`.|
-|`auth-token`   |An API key token, which is required when `auth-method` is set to `apikey`.|
+|`auth-method`  |The method of authentication, for which the only value that is currently supported is `apikey`.|
+|`auth-key`   |An optional API key, which is required when auth-method is set to `apikey`.  |
+|`auth-token`   |An API key token, which is required when auth-method is set to `apikey`. |
 |`clean-session`|A true or false value that is required only if you want to connect the application in durable subscription mode. By default, `clean-session` is set to `true`.|
 |`shared-subscription`|A boolean value. Set to `true` if you would like to build scalable applications that balance the load of messages across multiple instances of the application. For more information, see [Scalable applications](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html#/scalable-applications#scalable-applications).
 
@@ -160,7 +167,7 @@ To process the events that are received by your subscriptions, register an event
 |`event.deviceType`|String|Identifies the device type. Typically, the deviceType is a grouping for devices that perform a specific task, for example "weatherballoon".|
 |`event.deviceId`|String|Represents the ID of the device. Typically, for a given device type, the deviceId is a unique identifier of that device, for example a serial number or MAC address.|
 |`event.event`|String|Typically used to group specific events, for example "status", "warning" and "data".|
-|`event.format`|String|The format can be any string, for example "json".  The format divides up the topic space.|
+|`event.format`|String|The format can be any string, for example JSON.  |
 |`event.data`|Dictionary|The data for the message payload. Maximum length is 131072 bytes.|
 |`event.timestamp`|Date and time|The date and time of the event|
 
@@ -272,9 +279,8 @@ Similar to subscribing to device events, applications can subscribe to device st
 ## Handling status updates from devices
 {: #handling_device_status_updates}
 
-To process the status updates that are received by your subscriptions, you need to register a status event callback method. The messages are returned as an instance of the Status class, which contains the following parameters:
+To process the status updates that are received by your subscriptions, you need to register a status event callback method. For `Connect` and `Disconnect` status events, the messages are returned as an instance of the Status class, which contains the following parameters:
 
-The following parameters are set for both ``Connect`` and ``Disconnect`` status events:
 
 | Parameter     |Data type     |
 |----------------|----------------|
@@ -344,8 +350,6 @@ The overloaded method is available to control the status subscription to a parti
 ## Publishing events from devices
 {: #publishing_events_devices}
 
-[Backup and restore sample](https://github.com/ibm-messaging/iot-backup-restore-sample)
-
 The following code sample shows how applications can publish events as if they originated from a device.
 
 ```
@@ -386,7 +390,7 @@ In addition to MQTT, you can configure your applications to publish device event
 
 For the complete code sample, see the following application example:
 
-[HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdeviceclient/src/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java)
+[HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java)
 
 Based on the settings in the properties file, the `publishEventOverHTTP()` method publishes the event in either Quickstart or in Registered flow. When  `quickstart` is the Organization ID that is specified in the properties file, the `publishEventOverHTTP()` method publishes the event to the {{site.data.keyword.iot_short_notm}} Quickstart service in plain HTTP format. When a valid registered organization is specified in the properties file, the event is always published by using HTTPS so that all of the communication is secure.
 

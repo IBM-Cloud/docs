@@ -192,7 +192,7 @@ To process the events that are received by your subscriptions, you need to regis
 |``event.deviceType``|String|Identifies the device type. Typically, the deviceType is a grouping for devices that perform a specific task, for example "weatherballoon".|
 |``event.deviceId``|String|Represents the ID of the device. Typically, for a given device type, the deviceId is a unique identifier of that device, for example a serial number or MAC address.|
 |``event.event``|String|Typically used to group specific events, for example "status", "warning" and "data".
-|``event.format``|String|The format can be any string, for example "json".  The format divides up the topic space.
+|``event.format``|String|The format can be any string, for example JSON. 
 |``event.data``|Dictionary|The data for the message payload. Maximum length is 131072 bytes.
 |``event.timestamp``|Date and time|The date and time of the event|
 
