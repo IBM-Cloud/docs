@@ -37,6 +37,14 @@ Initialize the SDK by passing applicationGUID and applicationRoute parameters.
 	```
  Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values from the **Mobile Options** panel of your application on the {{site.data.keyword.Bluemix_notm}} dashboard.
 
+
+##Initializing the {{site.data.keyword.amashort}} AuthorizationManager
+Initialize the AuthorizationManager by passing the {{site.data.keyword.amashort}} service `tenantId` parameter that you get when you click  the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+
+  ```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
+
 ## Authentication listener interface
 {: #custom-cordva-auth}
 
