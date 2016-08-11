@@ -48,7 +48,7 @@ CocoaPods installs added dependencies. The progress and which components were ad
 
 
 
-### Initializing the client SDK
+## Initializing the client SDK
 {: #custom-ios-sdk-initialize}
 
 Initialize the SDK by passing the application route (`applicationRoute`) and GUID (`applicationGUID`) parameters. A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate
@@ -97,12 +97,12 @@ Initialize the AuthorizationManager by passing the {{site.data.keyword.amashort}
 ### Objective-C
   ```Objective-C
      [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
-     	```
+  ```
 
-###Swift:
-```Swift
+### Swift:
+ ```Swift
   IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
-```
+ ```
 
 
 
