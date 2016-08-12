@@ -14,7 +14,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotmapinsights_short}}
 {: #iotdriverinsights_index}
-*Last updated: 22 June 2016*
+Last updated: 22 June 2016
 {: .last-updated}
 
 {{site.data.keyword.iotmapinsights_full}} is a service on {{site.data.keyword.Bluemix}} that you can use to enable geospatial functions such as map matching and shortest path search for road networks across the globe with your applications.  

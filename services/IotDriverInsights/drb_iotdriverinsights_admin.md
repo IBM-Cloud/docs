@@ -13,7 +13,7 @@ copyright:
 
 # Administering Driving Behavior Analysis
 {: #1stanchor}
-*Last updated: 19 June 2016*
+Last updated: 19 June 2016
 {: .last-updated}
 
 Administer your {{site.data.keyword.iotdriverinsights_full}} service instance by using the administration console on the {{site.data.keyword.Bluemix_notm}} dashboard. From the administration console, you can configure parameters for {{site.data.keyword.iotdriverinsights_short}}, and manage the data that is stored in the service. You can also view the tenant information and reset the tenant password.
@@ -27,8 +27,8 @@ To access the administration console for the {{site.data.keyword.iotdriverinsigh
 
 1. From the {{site.data.keyword.Bluemix_notm}} dashboard, click the {{site.data.keyword.iotdriverinsights_short}} service tile.
 2. Select the **Manage** view of your service instance.
-Make a note of the *Username* and *Password* credentials. To access the administration console, your IBM ID is required, which might not be the same as your {{site.data.keyword.Bluemix_notm}} credentials.
-3. Click **Launch**, and when prompted, enter your IBM ID credentials.
+Make a note of the *Username* and *Password* credentials. To access the administration console, your IBMid is required, which might not be the same as your {{site.data.keyword.Bluemix_notm}} credentials.
+3. Click **Launch**, and when prompted, enter your IBMid credentials.
 4. Click **LOG IN**. The **Admin Console** is opened in a new window.
 
 ## Managing tenant information

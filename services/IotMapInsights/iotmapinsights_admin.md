@@ -14,7 +14,7 @@ copyright:
 
 # Administering
 {: #iotmapinsights_admin}
-*Last updated: 22 June 2016*
+Last updated: 22 June 2016
 {: .last-updated}
 
 Administer your {{site.data.keyword.iotmapinsights_full}} service instance by using the administration console on the {{site.data.keyword.Bluemix_notm}} dashboard. From the administration console, you can configure parameters for  {{site.data.keyword.iotmapinsights_short}} and manage the data that is stored in the service. You can also view the tenant information and reset the tenant password.
@@ -27,8 +27,8 @@ To access the administration console for the {{site.data.keyword.iotmapinsights_
 
 1. On the {{site.data.keyword.Bluemix_notm}} dashboard, click the {{site.data.keyword.iotmapinsights_short}} service tile.
 2. Select the **Manage** view of your service instance.
-Make a note of the user name and password credentials because you need them later. To access the administration console, your IBM ID is required, which might not be the same as your {{site.data.keyword.Bluemix_notm}} credentials.
-3. Click **Launch** and, when prompted, enter your IBM ID credentials.
+Make a note of the user name and password credentials because you need them later. To access the administration console, your IBMid is required, which might not be the same as your {{site.data.keyword.Bluemix_notm}} credentials.
+3. Click **Launch** and, when prompted, enter your IBMid credentials.
 4. Click **LOG IN**. The **Admin Console** window opens.
 
 ## Managing tenant information

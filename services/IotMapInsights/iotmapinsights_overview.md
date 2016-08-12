@@ -14,7 +14,7 @@ copyright:
 
 # About {{site.data.keyword.iotmapinsights_short}}
 {: #iotmapinsights_overview}
-*Last updated: 20 July 2016*
+Last updated: 20 July 2016
 {: .last-updated}
 
 The {{site.data.keyword.iotmapinsights_full}} is a service on {{site.data.keyword.Bluemix_notm}} that you can use to get fast access to static road network data and dynamic event data. {{site.data.keyword.iotmapinsights_short}} also provides geospatial tools for road networks, which you can use to integrate geospatial capabilities with your applications.

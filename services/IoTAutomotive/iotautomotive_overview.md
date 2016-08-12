@@ -11,7 +11,7 @@ copyright:
 # About {{site.data.keyword.iot4auto_short}} (Experimental)
 {: #iotautomotive_overview}
 
-*Last updated: 23 June 2016*
+Last updated: 29 July 2016
 {: .last-updated}
 
 {{site.data.keyword.iot4auto_full}} is a service on {{site.data.keyword.Bluemix_notm}} that you can use to view and analyze big data from vehicles.
@@ -31,7 +31,7 @@ The {{site.data.keyword.iot4auto_short}} service includes the following {{site.d
 |:---|:---|
 |[Driver Behavior](../IotDriverInsights/index.html)| A service that can analyze the driver behavior and identify trajectory patterns of a journey from the car probe and context data that is retrieved from a connected vehicle.
 |[Context Mapping](../IotMapInsights/index.html)| A service that provides geospatial functions, such as map matching and shortest path search for road networks.
-
+*Table 1. {{site.data.keyword.iot4auto_short}} services*
 
 ## Features
 {: #features}
@@ -106,3 +106,4 @@ By using the available REST API commands, you can customize your {{site.data.key
 |Get car probe data|`getCarProbe`|Gets the latest car probe data of the vehicle that was sent by the `sendCarProbe` API command.|
 |Get map events|`getEvent` |Gets the events on the map that were sent by the `sendEvent`  API command.|
 |Get vehicle asset data|`getVehicle`| Gets the vehicle data as an asset from the `createVehicle` API command.|
+*Table 2. {{site.data.keyword.iot4auto_short}} REST API commands*
