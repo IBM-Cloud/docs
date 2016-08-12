@@ -16,7 +16,7 @@ copyright:
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Last updated: 4 August 2016
+Last updated: 11 August 2016
 {: .last-updated}
 
 
@@ -32,7 +32,7 @@ You must have a valid IBMid and password to log in to {{site.data.keyword.Bluemi
 When you try to sign in to {{site.data.keyword.Bluemix_notm}}, you see the following error message: 
 {: tsSymptoms} 
 
-`The IBMid and/or password entered below is incorrect. Please try again.`
+`The password that you entered is not correct.`
 
 
 The IBMid and password that you use to sign in to {{site.data.keyword.Bluemix_notm}} is invalid.
@@ -41,7 +41,7 @@ The IBMid and password that you use to sign in to {{site.data.keyword.Bluemix_no
 
 To get a valid IBMid and password, go to the My IBM profile page, and then complete one of the following steps:
 {: tsResolve}
-  * If you have already registered an IBMid and you want to check whether your ID and password are valid, click **Sign in** and enter your IBMid and password on the Sign in page. If you have forgotten your password, click **Forgot your password** on the right side of the Sign in page to reset your password. If you have forgotten your IBMid or continue to have problems with your password, contact the Worldwide IBM Registration Help Desk for help. 
+  * If you have already registered an IBMid and you want to check whether your ID and password are valid, click **Sign in** and enter your IBMid and password on the Sign in page. If you have forgotten your password, click **Forgot your password** on the Sign in page to reset your password. If you have forgotten your IBMid or continue to have problems with your password, contact the Worldwide IBM Registration Help Desk for help. 
   * If you don't have an IBMid, click **Register** to register an IBMid and password. 
   
 **Note:** For IBM employees, the IBMid might be different from the intranet login ID. 
@@ -181,7 +181,7 @@ When you register users for {{site.data.keyword.Bluemix_notm}}, you must registe
 To register multiple users for {{site.data.keyword.Bluemix_notm}}, you must complete the following steps for each user:
 {: tsResolve}
 
-  1. Click **SIGN UP** in the upper-right corner of the {{site.data.keyword.Bluemix_notm}} user interface.
+  1. Click **SIGN UP** in the {{site.data.keyword.Bluemix_notm}} user interface.
   2. Complete the steps by following the wizard.
 
     
@@ -214,28 +214,6 @@ You can complete one or more of the following actions as necessary:
   
   
   
-  
-  
-## {{site.data.keyword.Bluemix_notm}} top menu bar disappears
-{: #ts_topmenubar}
-
-You might be unable to see the {{site.data.keyword.Bluemix_notm}} top menu bar when you resize your browser window, or when you use a mobile device.
-
-
-When you decrease the size of your browser window, or when you use a mobile device, the {{site.data.keyword.Bluemix_notm}} top menu bar disappears. When the top menu bar disappears, the side drawer menu that displays as a stacked line icon appears in the upper left corner. 
-{: tsSymptoms}
-
- 
-
-The {{site.data.keyword.Bluemix_notm}} user interface has a responsive design. When the viewing environment changes, the layout of the {{site.data.keyword.Bluemix_notm}} user interface might also change. 
-{: tsCauses}
- 
-
-Use the side drawer menu in the upper left corner instead.
-{: tsResolve}
-
-
-
 
 
 
@@ -611,8 +589,8 @@ Delete any services instances that are not needed, or remove the limit on the nu
  
   * To delete a services instance, you can use the {{site.data.keyword.Bluemix_notm}} user interface or the command line interface.
     To use the {{site.data.keyword.Bluemix_notm}} user interface to delete a service instance, complete the following steps:
-	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click **SERVICES** in the left pane. The services tiles display. 
-	  2. On the service tile that you want to delete, click the **Menu** icon.
+	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click the service that you want to delete. The service tile displays. 
+	  2. On the service tile, click the **Menu** icon.
 	  3. Click **Delete Service**. After you delete the service instance, you will be prompted to restage the application that the service instance was bound to. 
     To use the command line interface to delete a service instance, complete the following steps:
 	  1. Unbind the service instance from an application by typing `cf unbind-service <appname> <service_instance_name>`.
