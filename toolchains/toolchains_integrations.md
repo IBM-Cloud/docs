@@ -13,13 +13,13 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-*Last updated: 26 July 2016*
+*Last updated: 12 August 2016*
 {: .last-updated}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
 {:shortdesc}
 
-**Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. To use toolchains on {{site.data.keyword.Bluemix}} Public, you must make a one-time [request for access](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
+**Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
 
 The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
 
