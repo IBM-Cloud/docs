@@ -17,13 +17,13 @@ copyright:
 # General services problems
 {: #general}
 
-*Last updated: 9 December 2015*
+*Last updated: 12 August 2016*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} services problems might include a gateway time out error that occurs when you delete a service instance. However, in many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
 
-## A gateway timeout error message is displayed when you delete a service instance
+## Service broker error occurs when you delete a service instance
 {: #ts_service_broker}
 
 You might receive an error message when you try to delete a service instance that is already deleted from the cloud controller.
