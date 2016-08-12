@@ -14,7 +14,7 @@ copyright:
 
 # About Driving Behavior Analysis
 {: #iotdriverinsights_overview}
-*Last updated: 16 June 2016*
+Last updated: 16 June 2016
 {: .last-updated}
 
 
