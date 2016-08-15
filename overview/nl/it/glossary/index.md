@@ -17,6 +17,7 @@ copyright:
 {: #glossary}
 
 *Ultimo aggiornamento: 19 aprile 2016*
+{: .last-updated}
 
 Questo glossario fornisce termini e definizioni per {{site.data.keyword.Bluemix}}.
 {:shortdesc}

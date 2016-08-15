@@ -16,6 +16,9 @@ copyright:
 # Ibrida
 {: #hybrid}
 
+*Ultimo aggiornamento: 8 giugno 2016*
+{: .last-updated}
+
 Grazie ai modelli di distribuzione integrata pubblica, dedicata e locale, {{site.data.keyword.Bluemix_notm}} rappresenta un nuovo modo di utilizzo del cloud. {{site.data.keyword.Bluemix_notm}} dispone di distribuzioni cloud adatte alle tue esigenze, a prescindere che tu rappresenti una piccola attività che intende ingrandirsi o una grande azienda che richiede ulteriore isolamento. Con un cloud puoi sviluppare la tua attività senza limiti, connettendo i tuoi servizi privati ai servizi {{site.data.keyword.Bluemix_notm}} pubblici offerti da IBM. Inoltre, tu e il tuo team potete utilizzare i dati, i sistemi e i processi esistenti con gli strumenti SaaS disponibili in {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
@@ -29,6 +32,8 @@ pronte per l'uso. {{site.data.keyword.Bluemix_notm}} pubblico astrae e nasconde 
 ## Dedicato
 
 {{site.data.keyword.Bluemix_notm}} dedicato è un cloud privato con hardware fisicamente isolato in un data center IBM SoftLayer. Il tuo ambiente {{site.data.keyword.Bluemix_notm}}, a tenant singolo e fornito su una combinazione di server bare metal e virtuali, è progettato su misura per soddisfare le tue necessità. Inoltre, con il catalogo diffuso, puoi potenziare le tue applicazioni con una combinazione di servizi e risorse di calcolo dedicati, nonché con le funzionalità rese disponibili attraverso la diffusione del catalogo. Ulteriori informazioni su [{{site.data.keyword.Bluemix_notm}} dedicato](../dedicated/index.html).
+
+**Nota:** le informazioni relative a SoftLayer per {{site.data.keyword.Bluemix}} dedicato non sono applicabili in Cina. 
 
 ## Locale
 

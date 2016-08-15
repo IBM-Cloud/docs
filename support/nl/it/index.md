@@ -12,7 +12,8 @@ copyright:
 # Richiesta di assistenza clienti
 {: #getting-customer-support}
 
-*Ultimo aggiornamento: 11 maggio 2016*
+*Ultimo aggiornamento: 7 luglio 2016*
+{: .last-updated}
 
 
 Se riscontri dei problemi con {{site.data.keyword.Bluemix}}, hai diverse opzioni di supporto, quali l'ottenimento di una guida mediante un forum o l'apertura di un ticket di supporto.
@@ -37,9 +38,10 @@ trovare delle risposte alle tue domande. Nella pagina che viene visualizzata, im
 
 I forum di Stack Overflow e dW Answers forniscono entrambi un'ampia gamma di risposte alle tue domande relative a Bluemix e su cui è possibile eseguire ricerche. Se non trovi una risposta esistente, poni una nuova domanda. 
 
-  * Vai a [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} per porre domande tecniche sullo sviluppo di applicazioni con la piattaforma e i servizi Bluemix.
+  * Vai a [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} per porre domande tecniche sullo sviluppo di applicazioni con la piattaforma e i servizi Bluemix.
   * Vai a [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} per porre domande sull'offerta
 {{site.data.keyword.Bluemix_notm}} e su istruzioni introduttive.
+  * In Cina, passa a [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} per porre domande.
 
 Puoi anche porre una domanda in Stack Overflow direttamente da Account e supporto completando la seguente procedura:
   1. Da Account e supporto, fai clic su **Richiedi assistenza**. 
@@ -149,7 +151,9 @@ tre istanze di ciascuna applicazione.
 ## Come contattare il supporto
 {: #contacting-support}
 
-Se disponi di un account {{site.data.keyword.Bluemix_notm}}valido, puoi aprire ticket di supporto.  
+Se disponi di un account {{site.data.keyword.Bluemix_notm}}valido, puoi aprire ticket di supporto. 
+
+Se hai un account {{site.data.keyword.Bluemix_notm}}collegato con un account SoftLayer, puoi aprire ticket di supporto per {{site.data.keyword.Bluemix_notm}} dal portale de lcliente SoftLayer Customer o dalla interfaccia utente {{site.data.keyword.Bluemix_notm}}.
 
 ### Come contattare il supporto per {{site.data.keyword.Bluemix_notm}} pubblico
 {: #contacting-bluemix-support}
@@ -169,21 +173,22 @@ assegnato inglese | Non incluso | Non incluso | Non incluso | Incluso per<br> 8 
 
 Se non sei riuscito a risolvere il tuo problema tecnico con le opzioni di risoluzione dei problemi e di guida, puoi richiedere assistenza. Tuttavia, prima di contattare il supporto per un problema tecnico, accertati che non sia dovuto a un'interruzione del servizio, controllando lo stato di {{site.data.keyword.Bluemix_notm}}.
 
-Se il problema non è dovuto a un'interruzione, apri un ticket di supporto attraverso una delle seguenti opzioni:
+Se il problema non è dovuto a un'interruzione, sei un cliente e ti trovi in un paese o in una regione diversi dalla Cina, apri un ticket di supporto attraverso una delle seguenti opzioni:
 
   * Da Account e supporto, fai clic su **Richiedi assistenza**. Nella pagina così visualizzata, fai clic su **CONTATTA**. Compila il modulo per indicare per cosa hai bisogno di supporto tecnico.
+  * Utilizza la pagina di assistenza del [supporto IBM {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window}. Puoi inoltrare ticket per problemi relativi a vendite, fatturazione, ID IBM e accesso e supporto tecnico. Per questi ultimi, una volta fatto clic sul tile **Supporto tecnico** puoi selezionare un gruppo tecnico. Ad esempio, se hai bisogno di assistenza per le applicazioni Cloud Foundry, OpenWhisk, Containers o Virtual Servers o per i server Bare Metal, puoi selezionare **Servizi dell'applicazione**. Se hai bisogno di aiuto per un servizio specifico, seleziona la categoria di servizi corrispondente. Per determinare la categoria di appartenenza del tuo servizio, consulta le categorie riportate in [Servizi](../services/index.html){: new_window} nel pannello di navigazione a sinistra.  
   * Da [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Dopo aver eseguito l'accesso al portale, fai clic su **Apri ticket** e quindi riempi il modulo di supporto. 
-  * Utilizza la pagina di assistenza del [supporto IBM {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window}. Puoi inoltrare ticket per problemi relativi a vendite, fatturazione, ID e accesso e per problemi di supporto tecnico. Per questi ultimi, una volta fatto clic sul tile **Supporto tecnico** puoi selezionare un gruppo tecnico. Ad esempio, se hai bisogno di assistenza per le applicazioni Cloud Foundry, OpenWhisk, Containers o Virtual Servers o per i server Bare Metal, puoi selezionare **Servizi dell'applicazione**. Se hai bisogno di aiuto per un servizio specifico, seleziona la categoria di servizi corrispondente. Per determinare la categoria di appartenenza del tuo servizio, consulta le categorie riportate in [Servizi](../services/index.html){: new_window} nel pannello di navigazione a sinistra.  
   
 
 
 Quando apri un ticket di supporto, accertati di indicare una gravità appropriata per il tuo ticket. Quest'ultima determina il modo in cui il tuo ticket viene gestito. Per informazioni sui diversi livelli di severità, vedi [Severità e tempo di risposta del ticket di supporto](index.html#support-ticket-severity){: new_window}. Se la tua richiesta è urgente, ma hai solo un supporto di base o gratuito, puoi eseguire l'upgrade del tuo account e inviare ticket di elevata severità (livello 1, 2 e 3). Per eseguire l'upgrade a un livello di supporto superiore, contatta il tuo rappresentante delle vendite IBM per email a sales@bluemix.net.
 
+Se sei un cliente e ti trovi in Cina, il tuo account usufruisce di un'assistenza prepagata accessibile dalla [pagina IBM Bluemix di gestione dei servizi UNISYS](https://chinabluemix.itsm.unisysedge.cn){: new_window}.
+
 #### Controllo dello stato del ticket di supporto
 {: #check-ticket-status}
 
-A ogni ticket di supporto viene assegnato un numero di riferimento ticket univoco. Puoi utilizzare il numero ticket per vedere lo stato di avanzamento del tuo ticket di supporto e aggiornare il ticket di supporto nel [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Gli aggiornamenti e le risposte ti vengono inviati per email e registrati nelle note del ticket.  
-
+A ogni ticket di supporto viene assegnato un numero di riferimento ticket univoco. Nelle regioni o nei paesi diversi dalla Cina puoi utilizzare il numero di ticket per vedere lo stato di avanzamento del tuo ticket di supporto e aggiornarlo nell'[IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Gli aggiornamenti e le risposte ti vengono inviati per email e registrati nelle note del ticket. 
 
 
 ### Come contattare il supporto per {{site.data.keyword.Bluemix_notm}} dedicato
@@ -199,9 +204,11 @@ di assistenza del <a href="http://ibm.biz/bluemixsupport" target="_blank">suppor
 <p>Gli invii dei moduli vengono monitorati dalla domenica alle ore 22:00 UTC fino al venerdì alle ore 23:59 UTC.</p>
 </li>
 <li>Se disponi di un ID IBM e hai accesso all'ambiente {{site.data.keyword.Bluemix_notm}} pubblico, fai clic sull'icona **Account e supporto** <img src="images/account_support.svg" alt="Account e supporto" /> nella barra dei menu superiore, quindi fai clic su **Richiedi assistenza**. Nella pagina così visualizzata, fai clic su **CONTATTA**.</li>
-<li>Se non disponi di un ID IBM, puoi contattare un membro della tua organizzazione che ne abbia uno o collaborare con il tuo rappresentante IBM.
+<li>Se non disponi di un ID IBM, puoi contattare un membro della tua organizzazione che ne abbia uno o rivolgerti al tuo rappresentante IBM.
 <p>**Nota**: su richiesta, è disponibile un elenco di utenti dell'organizzazione che possono fungere da contatti per i ticket di supporto e che può essere visualizzato nella pagina **Supporto** dell'interfaccia utente {{site.data.keyword.Bluemix_notm}} nel tuo ambiente Dedicato.</p></li>
 </ul>
+
+Se sei un cliente {{site.data.keyword.Bluemix_notm}} dedicato e ti trovi in Cina, puoi richiedere assistenza dalla [pagina IBM Bluemix di gestione dei servizi UNISYS](https://chinabluemix.itsm.unisysedge.cn){: new_window}. Inoltre, i clienti che si trovano in Cina possono ottenere assistenza gratuita all'indirizzo [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
 
 
 ### Come contattare il supporto per {{site.data.keyword.Bluemix_notm}} locale
@@ -217,7 +224,7 @@ di assistenza del <a href="http://ibm.biz/bluemixsupport" target="_blank">suppor
 <p>Gli invii dei moduli vengono monitorati dalla domenica alle ore 22:00 UTC fino al venerdì alle ore 23:59 UTC.</p>
 </li>
 <li>Se disponi di un ID IBM e hai accesso all'ambiente {{site.data.keyword.Bluemix_notm}} pubblico, fai clic sull'icona **Account e supporto** <img src="images/account_support.svg" alt="Account e supporto" /> nella barra dei menu superiore, quindi fai clic su **Richiedi assistenza**. Nella pagina così visualizzata, fai clic su **CONTATTA**.</li>
-<li>Se non disponi di un ID IBM, puoi contattare un membro della tua organizzazione che ne abbia uno o collaborare con il tuo rappresentante IBM.
+<li>Se non disponi di un ID IBM, puoi contattare un membro della tua organizzazione che ne abbia uno o rivolgerti al tuo rappresentante IBM.
 <p>**Nota**: su richiesta, è disponibile un elenco di utenti dell'organizzazione che possono fungere da contatti per i ticket di supporto e che può essere visualizzato nella pagina **Supporto** dell'interfaccia utente {{site.data.keyword.Bluemix_notm}} nel tuo ambiente Locale.</p></li>
 </ul>
 
@@ -261,7 +268,7 @@ Per notificare una vulnerabilità di sicurezza potenziale, completa la seguente 
 ### Escalation di un ticket di supporto
 {: #escalation}
 
-Co il supporto standard o premium, se non hai ricevuto una risposta tempestiva a un ticket di supporto o ritieni che il ticket non venga affrontato in maniera appropriata, puoi effettuarne l'escalation. Attraverso il processo di escalation del ticket di supporto, IBM prende in considerazione le tue preoccupazioni e collabora con te per migliorare la tua esperienza di supporto.
+Con un supporto standard o premium, se ti trovi in un paese o una regione diversi dalla Cina e non hai ricevuto una risposta tempestiva a un ticket di supporto o ritieni che il ticket non venga affrontato in maniera appropriata, puoi effettuarne l'escalation. Attraverso il processo di escalation del ticket di supporto, IBM prende in considerazione le tue preoccupazioni e collabora con te per migliorare la tua esperienza di supporto.
 
 Per inoltrare una richiesta di escalation, completa la seguente procedura:
   1. Apri un nuovo ticket di supporto con riepilogo **Richiesta di escalation**.
@@ -345,8 +352,8 @@ IBM invia periodicamente i sondaggi ai clienti Bluemix per ottenere i loro feedb
 {: #general}
 
   * [Portale di supporto Bluemix](https://support.ibmcloud.com){: new_window} 
-  * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
+  * [Riposte dW](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
   * [Installazione dello strumento di comando cf](../starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
-  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  * [Overflow dello stack](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

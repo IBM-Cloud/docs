@@ -14,14 +14,18 @@ copyright:
 #Monitoraggio e registrazione
 {: #monitoringandlogging}
 
-*Ultimo aggiornamento: 11 maggio 2016*
+*Ultimo aggiornamento: 1 luglio 2016*
+{: .last-updated}
 
 Mediante il monitoraggio delle tue applicazioni e la revisione dei log, puoi seguire l'esecuzione dell'applicazione e il flusso di dati per comprendere al meglio la tua distribuzione. Inoltre, puoi ridurre il tempo e lo sforzo necessari per individuare e correggere eventuali problemi.
 {:shortdesc}
 
 Le applicazioni {{site.data.keyword.Bluemix}} possono essere applicazioni a più istanze ampiamente distribuite e l'esecuzione della tua applicazione e dei suoi dati può essere condivisa tra diversi servizi. In questo ambiente complesso, il processo di monitoraggio delle applicazioni e di revisione dei log è importante per gestire le tue applicazioni.
 
-{{site.data.keyword.Bluemix_notm}} è dotato di un meccanismo di registrazione integrato per produrre file di log per le applicazioni in esecuzione. Nei log, puoi visualizzare gli errori, le avvertenze e i messaggi informativi che vengono generati per la tua applicazione. Inoltre, puoi configurare la tua applicazione in modo da scrivere i messaggi di log nel file di log. Per ulteriori informazioni sui formati e sulla visualizzazione dei log, vedi [Registrazione per le applicazioni {{site.data.keyword.Bluemix_notm}}](#logging_for_bluemix_apps).
+##Monitoraggio e registrazione di applicazioni Cloud Foundry 
+{: #monitoring_logging_bluemix_apps}
+
+{{site.data.keyword.Bluemix_notm}} è dotato di un meccanismo di registrazione integrato per produrre file di log per le applicazioni in esecuzione. Nei log, puoi visualizzare gli errori, le avvertenze e i messaggi informativi che vengono generati per la tua applicazione. Inoltre, puoi configurare la tua applicazione in modo da scrivere i messaggi di log nel file di log. Per ulteriori informazioni sui formati e sulla visualizzazione dei log, vedi [Registrazione per le applicazioni eseguite su Cloud Foundry](#logging_for_bluemix_apps).
 
 Il monitoraggio ti consente di visualizzare e controllare la distribuzione della tua applicazione. Con il monitoraggio, puoi realizzare le seguenti attività:
 
@@ -31,7 +35,7 @@ Il monitoraggio ti consente di visualizzare e controllare la distribuzione della
 
 Per le operazioni stabili delle tue distribuzioni sulla piattaforma {{site.data.keyword.Bluemix_notm}}, desideri rilevare tempestivamente i problemi e determinarne le cause in modo efficiente. Per raggiungere questo obiettivo, tieni a mente la risoluzione dei problemi quando progetti le tue applicazioni e utilizza i servizi o gli strumenti per il monitoraggio e la registrazione quando la tua applicazione viene distribuita a {{site.data.keyword.Bluemix_notm}}.
 
-##Monitoraggio di applicazioni in esecuzione su Cloud Foundry
+###Monitoraggio di applicazioni in esecuzione su Cloud Foundry
 {: #monitoring_bluemix_apps}
 
 Se utilizzi l'infrastruttura Cloud Foundry per eseguire le tue applicazioni su {{site.data.keyword.Bluemix_notm}}, puoi tenere sotto controllo le informazioni sulle prestazioni, ad esempio lo stato di integrità, l'utilizzo delle risorse e le metriche di traffico. Mediante queste informazioni, puoi prendere decisioni o agire di conseguenza.
@@ -41,7 +45,7 @@ Per monitorare le applicazioni {{site.data.keyword.Bluemix_notm}}, utilizza uno 
 * Servizi {{site.data.keyword.Bluemix_notm}}. Monitoring and Analytics offre un servizio che ti permette di monitorare le prestazioni della tua applicazione. Inoltre, questo servizio fornisce anche delle funzioni analitiche come l'analisi dei log. Per ulteriori informazioni, vedi [Monitoring and Analytics](../services/monana/index.html).
 * Opzioni di terze parti. Ad esempio, [New Relic](http://newrelic.com/){:new_window}.
 
-##Registrazione per le applicazioni in esecuzione su Cloud Foundry
+###Registrazione per le applicazioni in esecuzione su Cloud Foundry
 {: #logging_for_bluemix_apps}
 
 I file di log vengono creati automaticamente quando utilizzi l'infrastruttura Cloud Foundry per eseguire le tue applicazioni su {{site.data.keyword.Bluemix_notm}}. Quando riscontri errori in qualsiasi fase, dalla distribuzione al runtime, puoi controllare i log alla ricerca di indizi che possano aiutarti a risolvere il problema.
@@ -121,7 +125,7 @@ Ogni voce di log contiene quattro campi. Fai riferimento al seguente elenco per 
 
 Puoi visualizzare i log delle tue applicazioni Cloud Foundry in tre punti:
 
-  * Dashboard [ {{site.data.keyword.Bluemix_notm}}](#viewing_logs_UI){:new_window}
+  * Dashboard [The {{site.data.keyword.Bluemix_notm}}](#viewing_logs_UI){:new_window}
   * [Interfaccia riga di comando](#viewing_logs_cli){:new_window}
   * [Host log esterni](#thirdparty_logging){:new_window}
 
@@ -147,16 +151,16 @@ Scegli una delle seguenti opzioni per visualizzare i log dall'interfaccia riga d
 <li>Accodamento dei log quando distribuisci le applicazioni.
 <p>Utilizza il comando **cf logs** per visualizzare i log dalla tua applicazione e dai componenti di sistema che interagiscono con la tua applicazione quando distribuisci le applicazioni a {{site.data.keyword.Bluemix_notm}}. Nell'interfaccia riga di comando cf puoi immettere i seguenti comandi. Per ulteriori informazioni sui log cf, vedi <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Log Types and Their Messages in Cloud Foundry</a>. </p>
 <dl>
-<dt><strong>cf logs <var class="keyword varname">nomeapplicazione</var> --recent</strong></dt>
+<dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>Visualizzare i log recenti.</dd>
 
-<dt><strong>cf logs <var class="keyword varname">nomeapplicazione</var></strong></dt>
+<dt><strong>cf logs <var class="keyword varname">appname</var></strong></dt>
 <dd>Visualizza i log che vengono generati dal momento in cui esegui questo
 comando.</dd>
 </dl>
 <div class="note tip"><span class="tiptitle">Suggerimento:</span> quando esegui il comando <span class="keyword cmdname">cf push</span> o <span class="keyword cmdname">cf
 start</span> in una finestra della riga di comando, puoi immettere <samp class="ph codeph">cf
-logs nomeapplicazione --recent</samp> in un'altra finestra di riga di comando per visualizzare
+logs appname --recent</samp> in un'altra finestra di riga di comando per visualizzare
 i log in tempo reale. </div>
 </li>
 
@@ -201,13 +205,13 @@ Per visualizzare i log che ti interessano o per escludere i contenuti che non vu
 
 * Per visualizzare solo una parte dei log, anziché i log dettagliati, utilizza l'opzione **cut**. Ad esempio, per visualizzare le informazioni su componente e messaggio, utilizza il seguente comando:
 ```
-cf logs nomeapplicazione --recent | cut -c 29-40,46- 
+cf logs appname --recent | cut -c 29-40,46- 
 ```
 
 Per ulteriori informazioni sull'opzione **grep**, immetti cut --help.
 * Per visualizzare le voci di log che contengono determinate parole chiave, utilizza l'opzione **grep**. Ad esempio, per visualizzare le voci di log che contengono la parola chiave [APP, puoi utilizzare il seguente comando:
 ```
-cf logs nomeapplicazione --recent | grep '\[App'
+cf logs appname --recent | grep '\[App'
 ```
 Per ulteriori informazioni sull'opzione **grep**, immetti `grep --help`.
 
@@ -226,11 +230,11 @@ Per trasmettere i log dalla tua applicazione e dal sistema a un host log esterno
 
   2. Crea un'istanza del servizio fornito dall'utente.
      
-	 Utilizza il comando ``"cf create-user-provided-service"`` (o ```cups``, una versione breve del comando) per creare un'istanza del servizio fornita dall'utente:
-```
+	 Utilizza il comando ```cf create-user-provided-service``` (o ```cups```, una versione breve del comando) per creare un'istanza del servizio fornita dall'utente: 
+	 ```
 	 cf create-user-provided-service <nome_servizio> -l <endpoint_registrazione>
-```
-	 **nome_servizio**
+	 ```
+	 **service_name**
 	 
 	 Il nome dell'istanza di servizio fornita dall'utente.
 	 
@@ -270,8 +274,8 @@ Per trasmettere i log dalla tua applicazione e dal sistema a un host log esterno
 	
 	 ```
 	 cf bind-service nomeapp <nome_servizio>
-```
-	 **nomeapplicazione**
+	 ```
+	 **appname**
 	 
 	 Il nome della tua applicazione.
 	 
@@ -280,7 +284,7 @@ Per trasmettere i log dalla tua applicazione e dal sistema a un host log esterno
 	 Il nome dell'istanza di servizio fornita dall'utente.
 	 
   4. Riprepara l'applicazione. 
-     Digita ```cf restage nomeapplicazione``` per rendere effettive le modifiche. 
+     Tipo ```cf restage appname``` per rendere effettive le modifiche. 
 
 #### Visualizzazione dei log dagli host esterni
 {: #viewing_logs_external}
@@ -289,5 +293,104 @@ Per trasmettere i log dalla tua applicazione e dal sistema a un host log esterno
 Alla generazione dei log, trascorso qualche istante puoi visualizzare i messaggi del tuo host log esterno simili ai messaggi che visualizzi dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} o dall'interfaccia riga di comando cf.  In caso di più istanze della tua applicazione, i log vengono aggregati e puoi visualizzare tutti i log riguardanti la tua applicazione. Inoltre, i log vengono conservati anche dopo gli arresti anomali dell'applicazione e tra varie distribuzioni.
 
 **Nota:** i log che vedi nell'interfaccia riga di comando non sono in formato syslog e potrebbero non corrispondere esattamente ai messaggi visualizzati nel tuo host log esterno. 
+
+### Esempio: trasmissione di log di applicazioni Cloud Foundry a Splunk 
+{: #splunk}
+
+In questo esempio, uno sviluppatore di nome Jane crea un server virtuale utilizzando dei server virtuali IBM beta e l'immagine Ubuntu.  Jane tenta di trasmettere i log dell'applicazione Cloud Foundry da {{site.data.keyword.Bluemix_notm}} a Splunk. 
+
+  1. Per iniziare, Jane configura Splunk.
+
+     a. Jane scarica Splunk Light dal [sito di download di Splunk Light](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}, quindi lo installa utilizzando il seguente comando. Il software viene installato su */opt/splunk*. 
+       
+	    ```
+        dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
+        ```
+	   
+     b. Jane installa e applica le patch al componente aggiuntivo con tecnologia syslog RFC5424 da integrare con {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni sulle istruzioni di installazione del componente aggiuntivo, consultare la [Guida Cloud Foundry](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.  
+
+	    Jane installa il componente aggiuntivo utilizzando i seguenti comandi:
+        
+	    ```
+        cd /opt/splunk/etc/apps
+        tar xvfz ~/rfc5424-syslog_11.tgz
+        ```
+	   
+        Quindi, Jane applica la patch al componente aggiuntivo sostituendo */opt/splunk/etc/apps/rfc5424/default/transforms.conf* con un nuovo file *transforms.conf* che comprende il testo seguente:
+	   
+	    ```
+        [rfc5424_host]
+        DEST_KEY = MetaData:Host
+        REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
+        FORMAT = host::$1
+
+        [rfc5424_header]
+        REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
+        FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
+        MV_ADD = true
+        ```
+        {:screen}	   
+
+     c. Una volta impostato Splunk, Jane deve aprire alcune porte sulla macchina Ubuntu per accettare lo scarico syslog in entrata (porta 5140) e Splunk Web UI (porta 8000), poiché il firewall del server virtuale {{site.data.keyword.Bluemix_notm}} è configurato con valori predefiniti.
+	   
+	    **Nota:** la conferma iptable viene effettuata in questo punto per gli scopi di valutazione di Jane ed è temporanea. Per configurare l'impostazione del firewall nel server virtuale Bluemix produttivo, vedi la documentazione [Network Security Groups](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} contenente informazioni dettagliate.
+	 
+	   ```
+	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
+       iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
+       iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
+       iptables -A INPUT -p tcp --sport 8000 -j ACCEPT
+	   ```
+	   {:screen}	
+	  
+	   Quindi, Jane esegue Splunk utilizzando il seguente comando:
+
+       ```
+	   /opt/splunk/bin/splunk start --accept-license
+       ```
+		
+  2. Jane configura le impostazioni di Splunk in modo da accettare lo scarico syslog da {{site.data.keyword.Bluemix_notm}}. Deve creare un input di dati per lo scarico syslog.
+
+     a. Dal lato sinistro dell'interfaccia Web Splunk, Jane fa clic su **Dati > Input dati**. Viene visualizzato un elenco di tipi di input supportati da Splunk. 
+	 
+     b. Seleziona **TCP**, perché lo scarico syslog utilizza il protocollo TCP.
+	 
+     c. Nel riquadro **TCP**, immette **5140** all'interno del campo **Porta**, lascia gli altri campi vuoti e fa clic su **Avanti**.
+	 
+     d. Dall'elenco **Tipo di origine**, seleziona **Non categorizzato > rfc5424_syslog**.
+	 
+     e. Per il tipo di **Metodo**, seleziona **IP**.
+	 
+     f. Nel campo **Indice**, Jane fa clic su **Crea un nuovo indice**. Dopo aver rinominato il nuovo indice "bluemix", fa clic su **Salva**.
+	 
+     g. Infine, nella finestra **Riesamina**, Jane conferma che l'impostazione è corretta e fa clic su **Invia** per abilitare l'input di dati.
+
+  3. In {{site.data.keyword.Bluemix_notm}}, Jane crea un servizio di scarico syslog e lo collega a un'applicazione.
+
+     a. Jane crea un servizio di scarico syslog utilizzando il seguente comando dalla cli cf:
+	 
+     ```
+     cf cups splunk -l syslog://dummyhost:5140
+     ```
+        
+     **Nota:** *dummyhost* non è il nome reale. Viene utilizzato per nascondere il nome host effettivo. 
+
+     b. Jane associa il servizio di scarico syslog a un'applicazione nel proprio spazio, quindi riprepara l'applicazione.
+	 
+	 ```
+     cf bind-service myapp splunk
+     cf restage myapp
+     ```
+		
+
+Jane testa l'applicazione, quindi digita la seguente stringa di query nell'interfaccia Web di Splunk:
+
+```
+source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
+```
+
+Jane visualizza un flusso di log nella propria interfaccia Web Splunk. Sebbene la versione di Splunk installata da Jane sia la Splunk Light, può comunque conservare 500 MB di registri al giorno. 
+
+
 
 

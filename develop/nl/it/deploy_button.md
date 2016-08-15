@@ -18,7 +18,8 @@ copyright:
 
 #Creazione di un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Ultimo aggiornamento: 2 marzo 2016* 
+*Ultimo aggiornamento: 2 marzo 2016*
+{: .last-updated} 
 
 Il pulsante Distribuisci a {{site.data.keyword.Bluemix}} è un modo efficiente per condividere la tua applicazione originata da Git pubblica in modo che altri utenti possano sperimentarne il codice ed eseguirne la distribuzione a IBM {{site.data.keyword.Bluemix_notm}}. Il pulsante
 richiede una configurazione minima e puoi inserirlo dovunque siano supportate le markup. Un utente che fa clic sul pulsante crea
@@ -141,8 +142,9 @@ fornire un file manifest che dichiara tali servizi.
 Con il file manifest, puoi specificare: 
     <ul>
     <li>Un nome applicazioni univoco.</li>  
-    <li>Declared services: un'estensione manifest, che crea o cerca i servizi obbligatori o facoltativi di cui è prevista la configurazione prima che venga distribuita l'applicazione, come ad esempio il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei piani, delle etichette e dei servizi {{site.data.keyword.Bluemix_notm}} idonei utilizzando l'<a href="https://github.com/cloudfoundry/cli/releases">interfaccia riga di comando CF</a> per eseguire il comando <code>cf marketplace</code> oppure sfogliando il <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store"> catalogo {{site.data.keyword.Bluemix_notm}} </a>.
-
+    <li>Declared services: un'estensione manifest, che crea o cerca i servizi obbligatori o facoltativi
+di cui è prevista la configurazione prima che venga distribuita l'applicazione, come ad esempio
+il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei piani, delle etichette e dei servizi {{site.data.keyword.Bluemix_notm}} idonei utilizzando l'<a href="https://github.com/cloudfoundry/cli/releases">interfaccia riga di comando CF</a> per eseguire il comando <code>cf marketplace</code> oppure sfogliando il <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store"> caalogo {{site.data.keyword.Bluemix_notm}}</a>. 
     
     <strong>Nota:</strong> è un'estensione IBM del formato manifest Cloud Foundry standard. Questa estensione potrebbe essere modificata in una futura release man mano che la funzione si evolve e viene migliorata.
 	
@@ -158,7 +160,7 @@ Con il file manifest, puoi specificare:
   applications:
   - services
     - &lt;`nome_istanza_servizio_arbitrario`&gt;
-    name: &lt;`nomeapplicazione`&gt;
+    name: &lt;`appname`&gt;
     host: &lt;`apphostname`&gt;
 </pre>
 

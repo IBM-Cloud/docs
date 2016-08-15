@@ -19,6 +19,7 @@ copyright:
 
 
 *Ultimo aggiornamento: 17 febbraio 2016*
+{: .last-updated}
 
 {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}} utilizza
 l'interfaccia riga di comando Cloud Foundry, cf, per

@@ -15,7 +15,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} locale
 {: #local}
-*Ultimo aggiornamento: 16 maggio 2016*
+*Ultimo aggiornamento: 7 luglio 2016*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} locale porta la potenza e l'agilità della piattaforma {{site.data.keyword.Bluemix_notm}} basata sul cloud al tuo data center. Con {{site.data.keyword.Bluemix_notm}} locale, puoi proteggere i tuoi carichi di lavoro più sensibili dietro il tuo firewall aziendale, continuando al tempo stesso a essere connesso in modo protetto e sincronizzato con {{site.data.keyword.Bluemix_notm}} pubblico.
 {:shortdesc}
@@ -32,17 +33,19 @@ Inoltre, è presente una serie di servizi disponibili come servizi locali {{site
 
 | **Tipo** | **Nome** | **Descrizione** |
 |----------|----------|-----------------|
-|Incluso | Runtime {{site.data.keyword.Bluemix_notm}} | Utilizza i runtime per avere un'applicazione subito operativa, senza dover impostare e gestire macchine e sistemi operativi. Tutti i runtime {{site.data.keyword.Bluemix_notm}} sono a tua disposizione per utilizzarli nella tua istanza di {{site.data.keyword.Bluemix_notm}} locale.|
-|Facoltativo | {{site.data.keyword.APIM}} | Utilizza il servizio {{site.data.keyword.APIMfull}}
+|Incluso | [Runtime {{site.data.keyword.Bluemix_notm}}](../cfapps/runtimes.html) | Utilizza i runtime per avere un'applicazione subito operativa, senza dover impostare e gestire macchine e sistemi operativi. Tutti i runtime {{site.data.keyword.Bluemix_notm}} sono a tua disposizione per utilizzarli nella tua istanza di {{site.data.keyword.Bluemix_notm}} locale.|
+|Incluso | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | Ti permette di aumentare o ridurre dinamicamente la capacità delle risorse di elaborazione della tua applicazione in base alle politiche. Con questo servizio, hai un uso illimitato nel tuo ambiente {{site.data.keyword.Bluemix}} locale.|
+|Facoltativo | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} integra {{site.data.keyword.APIM}} e IBM StrongLoop in una singola offerta che fornisce una soluzione completa per creare, eseguire, gestire e implementare API e microservizi. |
+|Facoltativo | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | Utilizza il servizio {{site.data.keyword.APIMfull}}
 per comporre, gestire e socializzare le API. Puoi importare delle API con risorse utilizzando un URL proxy o assemblando dati dalle origini dati HTTP. Il servizio {{site.data.keyword.APIM}} offre il vantaggio che puoi gestire la modalità di utilizzo delle tue API. |
-|Incluso | {{site.data.keyword.autoscaling}}| Ti permette di aumentare o ridurre dinamicamente la capacità delle risorse di elaborazione della tua applicazione in base alle politiche. Con questo servizio, hai un uso illimitato nel tuo ambiente {{site.data.keyword.Bluemix}} locale.|
-|Facoltativo | {{site.data.keyword.datacshort}} | Questo servizio fornisce una griglia di dati in memoria
+|Facoltativo | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} fornisce l'accesso a un livello di dati JSON NoSQL interamente gestito sempre attivo. Questo servizio è compatibile con CouchDB e accessibile mediante un'interfaccia HTTP di facile utilizzo per i modelli di applicazione web e mobile. |
+|Facoltativo | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | Questo servizio fornisce una griglia di dati in memoria
 che supporta scenari di cache distribuita per le tue applicazioni. Include 50 GB di cache in memoria. |
-|Facoltativo | {{site.data.keyword.sescashort}} | Per aumentare la ridondanza, {{site.data.keyword.sescashort}} fornisce una replica di una sessione memorizzata nella cache. Pertanto, nel caso di un'interruzione o di un calo di tensione, la tua applicazione client mantiene l'accesso alla sessione nella cache. Il servizio supporta scenari di memorizzazione di sessioni nella cache per applicazioni Web e mobili. |
-|Facoltativo | {{site.data.keyword.iot_full}} | Questo servizio consente alle tue applicazioni di comunicare tra loro e utilizzare i dati raccolti dai tuoi dispositivi, sensori e gateway connessi. L'offerta di base locale consente l'esecuzione di una versione privata di IBM {{site.data.keyword.iot_full}} nell'ambiente locale con una capacità di 100,000 applicazioni o dispositivi connessi contemporaneamente e 1.6 TB di scambio dati. |
+|Facoltativo | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | Per aumentare la ridondanza, {{site.data.keyword.sescashort}} fornisce una replica di una sessione memorizzata nella cache. Pertanto, nel caso di un'interruzione o di un calo di tensione, la tua applicazione client mantiene l'accesso alla sessione nella cache. Il servizio supporta scenari di memorizzazione di sessioni nella cache per applicazioni Web e mobili. |
+|Facoltativo | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | Questo servizio consente alle tue applicazioni di comunicare tra loro e utilizzare i dati raccolti dai tuoi dispositivi, sensori e gateway connessi. L'offerta di base locale consente l'esecuzione di una versione privata di IBM {{site.data.keyword.iot_full}} nell'ambiente locale con una capacità di 100,000 applicazioni o dispositivi connessi contemporaneamente e 1.6 TB di scambio dati. |
 
 
-Sono presenti dei componenti facoltativi disponibili per te da acquistare per ridimensionare e estendere la capacità dei tuoi servizi o risorse. Puoi acquistare tutti questi componenti contattando il team di vendite; vai all'indirizzo [Contatti](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) per informazioni su come contattare un rappresentante delle vendite. Per incrementare il tuo piano per un servizio, puoi selezionare il piano dal tile del servizio nel tuo catalogo.
+Sono presenti dei componenti facoltativi disponibili per te da acquistare per ridimensionare e estendere la capacità dei tuoi servizi o risorse. Puoi acquistare tutti questi componenti contattando il team di vendite; vai all'indirizzo [Contattaci](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) per informazioni su come contattare un rappresentante delle vendite. Per incrementare il tuo piano per un servizio, puoi selezionare il piano dal tile del servizio nel tuo catalogo.
 
 *Tabella 2. Componenti facoltativi per l'acquisto*
 
@@ -51,7 +54,12 @@ Sono presenti dei componenti facoltativi disponibili per te da acquistare per ri
 |Impostazione accesso locale monouso per {{site.data.keyword.Bluemix_notm}} | Un addebito per un'impostazione monouso per la distribuzione e la configurazione dell'ambiente locale. |
 |Incremento della capacità di 16 GB per le risorse di elaborazione locale di {{site.data.keyword.Bluemix_notm}} | Un'estensione delle risorse di elaborazione locale di IBM {{site.data.keyword.Bluemix_notm}} che fornisce una capacità di memoria extra di 16 GB. |
 |Incremento della capacità di 50 GB di {{site.data.keyword.Bluemix_notm}} Data & Session Cache | Un ambiente che consente la distribuzione e l'esecuzione di istanze Data Cache e Session Cache fino alla capacità cumulativa di 50 GB. |
+|5 milioni di chiamate API {{site.data.keyword.apiconnect_short}} Professional per {{site.data.keyword.Bluemix_notm}} locale | Un ambiente che consente l'esecuzione di una versione privata di {{site.data.keyword.apiconnect_short}} con una capacità di 5 milioni di chiamate API al mese, destinate a progetti API del reparto. |
+|Incremento di 100.000 chiamate API dedicate {{site.data.keyword.apiconnect_short}} Professional per {{site.data.keyword.Bluemix_notm}} locale| Un'estensione dell'ambiente {{site.data.keyword.apiconnect_short}} Professional che fornisce una capacità supplementare di 100.000 chiamate API al mese. |
+|25 milioni di chiamate API dedicate {{site.data.keyword.apiconnect_short}} Enterprise per {{site.data.keyword.Bluemix_notm}} locale | Un ambiente che consente l'esecuzione di una versione privata di {{site.data.keyword.apiconnect_short}} con una capacità di 25 milioni di chiamate API al mese, destinate a progetti API di tutta l'azienda. |
+|Incremento di 100.000 chiamate API dedicate {{site.data.keyword.apiconnect_short}} Enterprise per {{site.data.keyword.Bluemix_notm}} locale | Un'estensione dell'ambiente {{site.data.keyword.apiconnect_short}} Enterprise che fornisce una capacità supplementare di 100.000 chiamate API al mese. |
 |Incremento della capacità di 500 chiamate API {{site.data.keyword.APIM}} locale per {{site.data.keyword.Bluemix_notm}} | Un ambiente che consente l'esecuzione di una versione privata di {{site.data.keyword.APIM}} per {{site.data.keyword.Bluemix_notm}} con una capacità di 500 chiamate API al secondo. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} Cluster | Un ambiente che consente la distribuzione di un cluster di 3 nodi del servizio {{site.data.keyword.cloudant}}. La capacità dei dati dei nodi è determinata dall'infrastrttura che ti è stata fornita per l'ambienete locale. |
 |Aumento incrementale locale per {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} | Un ambiente aggiuntivo all'offerta del servizio di base locale {{site.data.keyword.iot_full}} che consente l'esecuzione di una versione privata di {{site.data.keyword.iot_full}} nell'ambiente locale con una capacità di 100,000 applicazioni o dispositivi connessi contemporaneamente e 0.5 TB di scambio dati. |
 
 
@@ -194,7 +202,7 @@ contatto anche per il supporto e la fatturazione.</li>
 Per la distribuzione e configurazione iniziale del tuo ambiente puoi prevedere un processo simile a quello elencato di seguito. Per i dettagli sui responsabili di ciascuna attività, vedi [Ruoli e responsabilità](../local/index.html#rolesresponsibilities).
 
 <ol>
-<li>Fornisci la configurazione VMware conforme alle specifiche per le risorse di calcolo, la rete e l'archiviazione. Per ulteriori informazioni sui requisiti dell'infrastruttura, vedi <a href="../local/index.html#localinfra">Requisiti dell'infrastruttura {{site.data.keyword.Bluemix_notm}} locale</a>.</li>
+<li>Fornisci la configurazione VMware conforme alle specifiche per le risorse di calcolo, la rete e l'archiviazione. Per ulteriori informazioni sui requisiti dell'infrastruttura, vedi <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements</a>.</li>
 <li>Fornisci le credenziali del cluster vCenter che verranno utilizzate dalla macchina virtuale di inizio. Devi fornire le seguenti informazioni:
 <ul>
 <li>Nome del cluster VMware</li>
@@ -318,7 +326,7 @@ La fase successiva è quella di avanzamento. La fase di avanzamento descrive il 
 |Esaminare le proiezioni della capacità | Esaminare le proiezioni della capacità relative ad eventi esterni che potrebbero influire sulle capacità così come sulle nuove distribuzioni previste per le applicazioni. Lavorare con IBM per esaminare le proiezioni e creare un piano adeguato. | Responsabilità condivisa tra IBM e il cliente |
 |Regolare la capacità |  Aggiungere o rimuovere capacità al mutare delle esigenze. | IBM |
 |Pubblicare gli aggiornamenti e la manutenzione previsti | Creare la documentazione per la manutenzione richiesta dei componenti IBM. | IBM |
-|Effettuare la manutenzione | Lavorare con IBM per pianificare la manutenzione richiesta all'interno di una finestra di 21 giorni. Puoi fornire le date che per te potrebbero non andare bene all'interno della finestra di 21 giorni; IBM provvederà a pianificare la manutenzione di conseguenza.  | Responsabilità condivisa tra IBM e il cliente |
+|Effettuare la manutenzione | Lavorare con IBM per pianificare la manutenzione richiesta all'interno di una finestra di 21 giorni. Puoi fornire le date che per te potrebbero non andare bene all'interno della finestra di 21 giorni; IBM provvederà a pianificare la manutenzione di conseguenza. | Responsabilità condivisa tra IBM e il cliente |
 |Rilevamento di errori di provisioning | Correggere gli errori di provisioning, se presenti, per i servizi creati dal cliente che vengono distribuiti nel catalogo. | IBM |
 |Eseguire scansioni di rete e IP | Eseguire scansioni di rete e IP giornaliere e mensili. | Responsabilità condivisa tra IBM e il cliente |
 |Fornire accesso ai log di controllo | Fornire accesso a tutti i log di controllo amministrativo e della sicurezza.   | Responsabilità condivisa tra IBM e il cliente |
@@ -461,6 +469,8 @@ Ad esempio, se la dimensione dell'host ESXi è 256 GB di memoria con 16x core, v
 
 IBM effettua la manutenzione e l'installazione di aggiornamenti e correzioni ai runtime e ai servizi di {{site.data.keyword.Bluemix_notm}} come ritiene appropriato. I servizi potrebbero non essere disponibili durante le finestre di manutenzione. Inoltre, IBM collabora con te per pianificare gli aggiornamenti di manutenzione per la piattaforma {{site.data.keyword.Bluemix_notm}}.
 
+### Manutenzione di {{site.data.keyword.Bluemix_notm}}
+
 Per {{site.data.keyword.Bluemix_notm}} locale sono richiesti i seguenti tipi di manutenzione:
 <dl>
 <dt>**Manutenzione standard per i servizi**</dt>
@@ -478,6 +488,17 @@ IBM invia dei messaggi di broadcast che descrivono in modo dettagliato le modifi
 **Importante**: IBM si riserva il diritto di interrompere i servizi per applicare la manutenzione di emergenza a seconda delle necessità. IBM potrebbe modificare le ore di manutenzione pianificate, ma verrai avvisato di tali modifiche nonché di tutte le informazioni relative alla manutenzione di emergenza.
 
 Se viene segnalato un problema dopo l'aggiornamento di manutenzione, insieme al rappresentante del supporto {{site.data.keyword.Bluemix_notm}} puoi stabilire se sia utile consentire a IBM di eseguire il rollback dell'aggiornamento. Previo accordo, IBM esegue il rollback dell'aggiornamento per ripristinare l'ambiente allo stato precedente.
+
+### Manutenzione dell'infrastruttura del cliente
+{: #inframaintenance}
+
+{{site.data.keyword.Bluemix_notm}} locale viene distribuito sull'hypervisor ESXi e l'applicazione vCenter viene utilizzata per gestire centralmente le macchine virtuali e gli host ESXi. {{site.data.keyword.Bluemix_notm}} supporta le ultime tre versioni di ESXi e vCenter, compresi tutti gli aggiornamenti e le patch intermedi. Per informazioni sulle ultime versioni supportate, consulta la documentazione [Requisiti dell'infrastruttura locale](../local/index.html#localinfra).
+
+**Importante**: con la distribuzione di {{site.data.keyword.Bluemix_notm}} locale sull'hypervisor ESXi, aggiornamenti e patch per ESXi possono ostacolare la disponibilità dell'ambiente locale, incluse tutte le applicazioni e i servizi in esecuzione nell'ambiente. Invia una notifica a {{site.data.keyword.Bluemix_notm}} attraverso un ticket di supporto prima di completare un aggiornamento o una patch, per far sì che l'interruzione del servizio non allerti il team operativo interessato. Se ti è stato assegnato un client success manager (CSM), puoi comunicargli la pianificazione dell'aggiornamento.
+
+Per accertarti che la tua istanza locale sia compatibile con le ultime versioni supportate, il team operativo {{site.data.keyword.Bluemix_notm}} monitora l'ambiente per accertarsi che non siano presenti versioni non supportate che potrebbero non corrispondere agli ultimi aggiornamenti dell'ambiente {{site.data.keyword.Bluemix_notm}} locale. Alcuni aggiornamenti di {{site.data.keyword.Bluemix_notm}}, quali gli aggiornamenti della versione di Cloud Foundry, richiedono l'aggiornamento del software ESXi o vCenter. Il supporto {{site.data.keyword.Bluemix_notm}} ti allerterà sugli aggiornamenti, comunicandoti quali eseguire ed entro che data. L'aggiornamento deve essere completato entro la finestra temporale indicata.
+
+{{site.data.keyword.Bluemix_notm}} fa il possibile per preservare la compatibilità degli ambienti locali con le ultime versioni di ESXi e vCenter. Tuttavia, potrebbero presentarsi brevi periodi di tempo in cui le versioni più recenti di ESXi e vCenter non sono supportate. Fai riferimento alla documentazione [Requisiti dell'infrastruttura locale](../local/index.html#localinfra) per individuare le ultime versioni compatibili prima di procedere a qualsiasi aggiornamento.
 
 ## Supporto e risposta agli incidenti
 {: #incidentresponse}

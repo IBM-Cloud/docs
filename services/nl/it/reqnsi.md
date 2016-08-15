@@ -225,10 +225,10 @@ Se utilizzi l'interfaccia riga di comando cf per richiedere un'istanza del servi
     cf create-service nome_servizio piano_servizio istanza_servizio
     ```
 
-3. Utilizza il seguente comando per eseguire il bind dell'istanza del servizio a un'applicazione, dove nomeapplicazione è il nome dell'applicazione e istanza_servizio è il nome dell'istanza del servizio.
+3. Utilizza il seguente comando per eseguire il bind dell'istanza del servizio a un'applicazione, dove nome_applicazione è il nome dell'applicazione e istanza_servizio è il nome dell'istanza del servizio.
 
     ```
-    cf bind-service nomeapplicazione istanza_servizio
+    cf bind-service nome_applicazione istanza_servizio
     ```
 
 Puoi eseguire il bind a un'istanza del servizio per le sole istanze dell'applicazione che si trovano nello stesso spazio od organizzazione. Tuttavia, puoi utilizzare istanze di servizio provenienti da altri spazi od organizzazioni seguendo le modalità adottate dalle applicazioni esterne. Invece di creare un bind, utilizza le credenziali per configurare direttamente l'istanza della tua applicazione. Per ulteriori informazioni sull'uso dei servizi {{site.data.keyword.Bluemix_notm}} da parte delle applicazioni esterne, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} ](#accser_external){: new_window}.
@@ -302,7 +302,7 @@ Per creare un'istanza del servizio fornito dall'utente ed eseguirne il bind a un
     * Per creare un'istanza del servizio fornito dall'utente generale, utilizza l'opzione **-p** e
 separa i nomi parametro con delle virgole. L'interfaccia riga di comando cf ti chiede quindi ciascun
 parametro, uno alla volta. Ad
-                                    esempio:
+esempio:
         ```
         cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com

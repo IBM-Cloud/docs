@@ -51,7 +51,8 @@ copyright:
 # Prezzi
 {: #pricing}
 
-*Ultimo aggiornamento: 16 maggio 2016*
+*Ultimo aggiornamento: 1 giugno 2016*
+{: .last-updated}
 
 Puoi eseguire le applicazioni in {{site.data.keyword.Bluemix}}
 e provare i servizi {{site.data.keyword.Bluemix_notm}} gratuitamente. Puoi registrarti per una versione di prova di 30 giorni gratuita che ti offre delle franchigie aggiuntive, compreso un supporto gratuito. Dopo 30 giorni, puoi scegliere un tipo di account e pagare solo per quello che usi oltre i limiti concessi dalle franchigie. Bluemix fornisce un calcolatore del costo che ti consente di stimare in anticipo il costo e la vista Dashboard di utilizzo che ti consente di controllare il costo effettivo dopo che hai creato le tue applicazioni.
@@ -135,6 +136,8 @@ nell'angolo superiore destro dell'interfaccia utente {{site.data.keyword.Bluemix
 modificare le tue informazioni.
 
 Se riscontri qualche problema con {{site.data.keyword.Bluemix_notm}} quando utilizzi un account Pagamento a consumo o Sottoscrizione, vedi [Come ottenere aiuto online](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) per ulteriori informazioni.
+
+**Nota:** se colleghi il tuo account di fatturazione {{site.data.keyword.Bluemix_notm}} a un account SoftLayer, dal primo giorno del mese successivo gli addebiti per {{site.data.keyword.Bluemix_notm}} saranno effettuati sulla fattura SoftLayer. Per ulteriori dettagli, vedi [Visualizzazione dei crediti](../admin//softlayerlink.html#bill_usage).
 
 ###Account Pagamento a consumo
 {: #pay-as-you-go}
@@ -350,18 +353,15 @@ il prezzo totale è $5000 USD. |	$5000 USD|
 ### Franchigie per i server virtuali
 {: #vms}
 
-Puoi utilizzare i server virtuali {{site.data.keyword.Bluemix_notm}} nel cloud pubblico IBM come funzioni beta senza alcun addebito. Delle franchigie sono fornite per le immagini di server virtuale da te create, il numero di indirizzi IP assegnati e la quantità di memoria che può essere utilizzata. 
+Puoi utilizzare gratuitamente {{site.data.keyword.virtualmachineslong}} nel cloud pubblico IBM come funzione beta. Delle franchigie sono fornite per le immagini di server virtuale da te create, il numero di indirizzi IP assegnati e la quantità di memoria che può essere utilizzata.
 
-Per il beta di server virtuali {{site.data.keyword.Bluemix_notm}}, le franchigie consistono nei seguenti elementi:
+Per il beta {{site.data.keyword.virtualmachineslong}}, le franchigie consistono nei seguenti elementi:
 
-* 8 istanze
-* 8 CPU virtuali
-* 12 GB di memoria
+* 2 istanze
+* 2 CPU virtuali
+* 8 GB di memoria
 * 200 GB di archiviazione blocchi
-* 4 indirizzi IP pubblici
-
-Puoi inoltre utilizzare l'infrastruttura di server virtuali per fornire server virtuali nei tuoi cloud privati {{site.data.keyword.Bluemix_notm}},
-soggetto solo ai limiti e alle quote dei tuoi cloud privati.
+* 5 indirizzi IP pubblici
 
 
 ##Come stimare i tuoi costi
@@ -379,8 +379,8 @@ per creare e ospitare la tua applicazione.
 
 Puoi stabilire rapidamente il prezzo della tua applicazione utilizzando i calcolatori forniti da {{site.data.keyword.Bluemix_notm}}.
 
-1. Vai alla {{site.data.keyword.Bluemix_notm}} [pagina dei prezzi](https://console.{DomainName}/pricing/). 
-2. Utilizza uno dei widget **Stima i costi** o fai clic su **Apri calcolatore** per utilizzare il **Calcolatore dei costi preciso al centesimo**.
+1. Vai alla pagina dei costi {{site.data.keyword.Bluemix_notm}} [](https://console.{DomainName}/pricing/). 
+2. Utilizza uno dei widget **Stima i costi** o fai clic su **Apri calcolatore** per utilizzare il **Calcolatore dei costi ridotti al penny**.
 
 Per utilizzare il calcolatore, digita il tuo utilizzo mensile previsto delle
 risorse elencate, ad esempio il numero di istanze o le notifiche di push. Fai clic nel campo **Utilizzo mensile**
@@ -499,6 +499,13 @@ Al proprietario dell'account viene addebitato l'utilizzo totale sostenuto su tut
 I proprietari dell'account possono filtrare il riepilogo dell'utilizzo in base a regione e organizzazione. Se sei un proprietario di account, imposta **Organizzazione** come **Tutte le organizzazioni** per visualizzare l'utilizzo per l'intero account per un periodo di 12 mesi. Fai clic su uno specifico mese per visualizzare il relativo utilizzo. Gli addebiti visualizzati rappresentano l'importo che ti viene addebitato per quel mese in quanto proprietario dell'account.
 
 Se selezioni una specifica organizzazione per l'**Organizzazione**, puoi vedere l'utilizzo totale per tale organizzazione, compresi gli eventuali utilizzi come parte di un periodo di prova gratuito. Gli addebiti visualizzati per l'organizzazione non sono gli addebiti che ti verranno fatturati. L'utilizzo del periodo di prova gratuito viene visualizzato come gratuito, a livello dell'account, ma non a livello dell'organizzazione. Pertanto, quando visualizzi l'utilizzo dell'organizzazione, vedi l'utilizzo reale per tale organizzazione, compresi sia l'utilizzo a titolo gratuito che quello che viene invece addebitato. Tutto l'utilizzo dell'organizzazione viene sommato all'utilizzo dell'account dopo la rimozione del periodo di prova gratuito.
+
+##Visualizzazione dei crediti
+{: #credits}
+
+In qualità di proprietario dell'account o gestore della fatturazione, puoi utilizzare la vista Dashboard di utilizzo per visualizzare tutti i crediti del tuo account. Potresti avere crediti se, ad esempio, hai associato un account SoftLayer a un account {{site.data.keyword.Bluemix_notm}}.
+
+Per aprire la vista Dashboard di utilizzo, fai clic sull'icona **Account e supporto** ![Icona Account e supporto](../admin/images/account_support.svg), quindi seleziona **Account**. Nella pagina così visualizzata, fai clic su **Dashboard di utilizzo**. Nella vista vengono mostrati gli eventuali crediti e la rispettiva data di scadenza.
 
 ##Notifiche
 {: #notifications}

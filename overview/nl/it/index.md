@@ -17,6 +17,7 @@ copyright:
 {: #overview}
 
 *Ultimo aggiornamento: 9 maggio 2016*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} è la piattaforma open cloud {{site.data.keyword.IBM}} che fornisce agli sviluppatori web e mobili l'accesso
 al software {{site.data.keyword.IBM_notm}} per le funzioni di integrazione, sicurezza, transazione e ad altre funzioni chiave, oltre che al software dai business partner.

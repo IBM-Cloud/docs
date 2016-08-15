@@ -15,6 +15,7 @@ copyright:
 
 # Caricamento della tua applicazione
 *Ultimo aggiornamento: 17 febbraio 2016*
+{: .last-updated}
 
 Dopo che hai eseguito l'accesso a {{site.data.keyword.Bluemix}}, puoi caricare la tua applicazione con il comando cf push.
 {:shortdesc}

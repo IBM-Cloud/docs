@@ -18,7 +18,8 @@ copyright:
 # Scenario: sviluppo end-to-end
 {: #ee}
 
-*Ultimo aggiornamento: 18 aprile 2016*
+*Ultimo aggiornamento: 15 giugno 2016*
+{: .last-updated}
 
 Puoi utilizzare l'interfaccia utente, la piattaforma e una selezione di strumenti {{site.data.keyword.Bluemix}}
 per la creazione, esecuzione e
@@ -53,11 +54,12 @@ per una bassa latenza di rete, riservatezza dei dati e maggiore disponibilità. 
 
 Per questo scenario, vuoi distribuire un'applicazione Web che utilizza Node.js. Supponiamo che ti trovi negli Stati Uniti così come la maggior parte degli utenti della
 tua applicazione. Decidi di creare ed eseguire la tua applicazione vicino alla base
-dei tuoi utenti, in modo da poter usufruire di una più bassa latenza di rete. Dopo che hai eseguito l'accesso a {{site.data.keyword.Bluemix_notm}}, fai clic sul nome del tuo account nell'angolo superiore destro e seleziona la regione **Stati Uniti Sud**. Puoi quindi attenerti alla seguente procedura per creare un'applicazione:
+dei tuoi utenti, in modo da poter usufruire di una più bassa latenza di rete. Una volta effettuato l'accesso a {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto** ![Icona Account e supporto](../admin/images/account_support.svg), quindi seleziona la regione **Stati Uniti Sud**. Puoi quindi attenerti alla seguente procedura per creare un'applicazione:
 
-  1. Fai clic sul pulsante più.
-  2. Seleziona **Calcola**>**Applicazioni CF**>**SDK for Node.js**.
-  3. Immetti un nome univoco per la tua applicazione, ad esempio TestNode, e fai clic su **Crea**. Il nome dell'applicazione deve essere univoco
+  1. Seleziona **Calcola**.
+  2. Fai clic sull'icona Più.
+  3. Seleziona **SDK for Node.js**.
+  4. Immetti un nome univoco per la tua applicazione, ad esempio TestNode, e fai clic su **Crea**. Il nome dell'applicazione deve essere univoco
 nell'intero ambiente {{site.data.keyword.Bluemix_notm}}.
   
 Puoi ora visualizzare le istruzioni **Inizia a scrivere codice**. Puoi seguire le istruzioni per scaricare, modificare e distribuire il codice starter di TestNode.
@@ -144,7 +146,7 @@ esempio:
 	
 	```
 	cf -v
-```
+	```
 	
     **Requisito:** assicurati di usare sempre la versione più recente dello strumento riga di comando cf.
   3. Dopo che hai installato l'interfaccia riga di comando **cf**,
@@ -163,23 +165,23 @@ le informazioni sull'ubicazione da te specificate vengono salvate.
   
   ```
   cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
-```
+  ```
   
   5. Dopo che hai eseguito l'accesso a {{site.data.keyword.Bluemix_notm}},
 sei pronto a ridistribuire l'applicazione a {{site.data.keyword.Bluemix_notm}}. Dalla directory dell'applicazione `C:\test`, immetti il seguente
 comando:
   
-```
+  ```
   cf push TestNode
-```
+  ```
   
   Per ulteriori informazioni sul comando **cf push**, vedi Caricamento della tua applicazione.
   
   6. Puoi ora accedere all'applicazione immettendo il seguente URL
 in un browser:
-```
+  ```
   http://TestNode.mybluemix.net
-```
+  ```
 
 Per creare la tua applicazione puoi scegliere anche altri strumenti, ad esempio
 gli strumenti Eclipse. Per ulteriori informazioni, consulta la pagina Inizia a scrivere codice della tua applicazione nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}.
@@ -200,15 +202,15 @@ della tua applicazione all'istanza del servizio e farne quindi uso. La stessa pr
   Usa il comando cf create-service per creare una nuova istanza di un servizio. Ad
 esempio:
   
-```
+  ```
   cf create-service cloudantNoSQLDB Shared cloudant100
-```
+  ```
   
   Puoi anche usare il comando cf services per visualizzare l'elenco di istanze del servizio da te create.
   
-```
+  ```
   cf services
-```
+  ```
   
   Dopo essere stata creata, un'istanza del servizio è a disposizione di tutte le
 tue applicazioni che possono eseguirne il bind e farne uso.
@@ -218,9 +220,9 @@ tue applicazioni che possono eseguirne il bind e farne uso.
   Per utilizzare un'istanza del servizio, devi eseguirne il bind alla
 tua applicazione. Usa il comando cf bind-service per eseguire il bind di un'istanza del servizio a un'applicazione specificando il nome applicazione e l'istanza del servizio da te creata.
   
-```
+  ```
   cf bind-service TestNode cloudant100
-```
+  ```
   
   L'esecuzione del bind di un'istanza del servizio a un'applicazione abilita {{site.data.keyword.Bluemix_notm}} a
 comunicare con il servizio e a specificare che una nuova applicazione comunicherà con tale
@@ -246,7 +248,7 @@ per le comunicazioni tra l'applicazione e il servizio.
   
   Ad esempio, la tua applicazione Node.js potrebbe accedere a queste
 informazioni nel seguente modo:
-```
+  ```
   if (process.env.VCAP_SERVICES) {
         var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['"cloudantNoSQLDB'][0].credentials;
@@ -257,7 +259,7 @@ informazioni nel seguente modo:
                 "url" : "https://user1:secret@localhost:25002"
                 }
         };
-```
+  ```
   
   **Nota:** come mostrato dal codice di esempio, per stabilire una connessione a un'istanza del servizio {{site.data.keyword.cloudant}}, puoi prima controllare se la variabile di ambiente VCAP_SERVICES esiste. Se esiste, l'applicazione può utilizzare le proprietà della variabile cloudant per accedere al database. Tuttavia, se la variabile di ambiente VCAP_SERVICES non è presente, l'istanza del servizio {{site.data.keyword.cloudant}} locale viene utilizza valori predefiniti forniti.
   
@@ -266,7 +268,7 @@ informazioni nel seguente modo:
   Puoi interagire con l'istanza del servizio utilizzando le informazioni delle credenziali. Le azioni che puoi eseguire includono la lettura, la scrittura e l'aggiornamento. Il
 seguente esempio illustra come inserire un oggetto JSON nell'istanza del servizio
 {{site.data.keyword.cloudant}}:
-```
+  ```
   // create a new message
 var create_message = function(req, res) {
   require('cloudantdb').connect(cloudant.url, function(err, conn) {
@@ -286,7 +288,7 @@ var create_message = function(req, res) {
     });
   });
 }
-```
+  ```
   
   5. **Facoltativo:** annulla il bind di un'istanza del servizio oppure eliminala.
   

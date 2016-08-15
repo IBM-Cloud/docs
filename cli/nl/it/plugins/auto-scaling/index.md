@@ -18,6 +18,7 @@ copyright:
 {: #autoscalingcli}
 
 *Ultimo aggiornamento: 25 febbraio 2016*
+{: .last-updated}
 
 Puoi configurare il servizio {{site.data.keyword.autoscaling}} utilizzando la CLI {{site.data.keyword.autoscaling}} per {{site.data.keyword.Bluemix_notm}}. La CLI {{site.data.keyword.autoscaling}} supporta Linux64, Win64 e OSX e fornisce delle funzionalità simili a quelle fornite dall'API RESTful di ridimensionamento automatico.
 {: shortdesc}
@@ -106,7 +107,7 @@ Puoi abilitare o disabilitare la politica di ridimensionamento automatico di una
 
 Puoi visualizzare la cronologia dell'attività di ridimensionamento automatico di una specifica applicazione. Una tabella di record della cronologia del ridimensionamento automatico viene visualizzata nell'interfaccia riga di comando.
 
-```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>][--end-date=<end_timestamp>]  [--json]```
+```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]```
 {: codeblock}
 
 <dl class="parml">
@@ -121,7 +122,9 @@ Puoi visualizzare la cronologia dell'attività di ridimensionamento automatico d
 **Suggerimento:** puoi anche utilizzare l'opzione **--json** per stampare invece la riposta JSON originale.
 
 # rellinks
+{: #rellinks}
 ## generale
+{: #general}
 * [{{site.data.keyword.autoscaling}}servizio](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}

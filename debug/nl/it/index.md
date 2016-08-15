@@ -6,6 +6,7 @@ copyright:
 ---
 
 
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -15,9 +16,10 @@ copyright:
 # Debug
 {: #debugging}
 
-*Ultimo aggiornamento: 3 marzo 2016*
+*Ultimo aggiornamento: 25 maggio 2016*
+{: .last-updated}
 
-Se si verificano problemi con {{site.data.keyword.Bluemix}}, puoi visualizzare i file di log per analizzare i problemi ed eseguire il debug degli errori.
+Se si verificano problemi con {{site.data.keyword.Bluemix}}, puoi visualizzare i file di log per analizzare i problemi ed eseguire il debug degli errori. 
 {:shortdesc}
 
 I log forniscono informazioni quali la corretta esecuzione di un lavoro o la sua mancata riuscita. Forniscono anche informazioni pertinenti che possono essere utilizzate per eseguire il debug e determinare la causa di un problema.
@@ -27,12 +29,13 @@ I log sono in un formato fisso. Per i log dettagliati, puoi filtrarli o utilizza
 
 ## Debug degli errori di preparazione
 {: #debugging-staging-errors}
-Potrebbero verificarsi dei problemi durante la preparazione delle tue applicazioni su {{site.data.keyword.Bluemix_notm}}. Se la preparazione della tua applicazione non riesce, puoi visualizzare i log per individuare la causa dell'errore e risolvere il problema.
+Potrebbero verificarsi dei problemi durante la preparazione delle tue applicazioni su {{site.data.keyword.Bluemix_notm}}. Se la preparazione della tua applicazione non viene eseguita correttamente, puoi visualizzare ed effettuare ricerche nei log di preparazione (STG) al fine di scoprire cosa è accaduto durante la distribuzione dell'applicazione e risolvere il problema. Per ulteriori informazioni sui metodi di visualizzazione dei log per le applicazioni Bluemix, vedi [visualizzazione dei log](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
 
 Per comprendere il motivo per cui la tua applicazione potrebbe provocare errori in {{site.data.keyword.Bluemix_notm}}, devi sapere come vengono distribuite ed eseguite le applicazioni in {{site.data.keyword.Bluemix_notm}}. Per informazioni dettagliate, vedi [Distribuzione delle applicazioni](../manageapps/depapps.html#appdeploy){: new_window}.
 
+
 La seguente procedura mostra come puoi utilizzare il comando `cf logs` per eseguire il debug degli errori di preparazione. Prima di iniziare
-la procedura, assicurati di aver installato l'interfaccia riga di comando cf. Per ulteriori informazioni sull'installazione dell'interfaccia riga di comando cf, vedi [Installazione dell'interfaccia della riga di comando cf](../starters/install_cli.html){: new_window}.
+la procedura, assicurati di aver installato l'interfaccia riga di comando cf. Per ulteriori informazioni sull'installazione dell'interfaccia riga di comando cf, vedi [Installing the cf command line interface](../starters/install_cli.html){: new_window}.
 
   1. Connettiti a {{site.data.keyword.Bluemix_notm}} immettendo il seguente codice nell'interfaccia riga di comando cf:
      ```
@@ -43,11 +46,11 @@ la procedura, assicurati di aver installato l'interfaccia riga di comando cf. Pe
   
   3. Recupera i log recenti immettendo `cf logs nomeapplicazione --recent`. Se vuoi filtrare un log dettagliato, utilizza l'opzione `grep`. Ad esempio, puoi immettere il seguente codice per visualizzare solo i log [STG]:
     ```
-	cf logs nomeapplicazione --recent | grep '\[STG\]'
+	cf logs appname --recent | grep '\[STG\]'
 	```
   4. Visualizza il primo errore mostrato nel log.
   
-Se utilizzi gli strumenti IBM Eclipse per il plugin {{site.data.keyword.Bluemix_notm}} per distribuire le applicazioni, nella scheda **Console** dello strumento Eclipse puoi visualizzare dei log simili all'output di cf logs. Puoi anche aprire una finestra di Eclipse separata per tracciare `i log` quando distribuisci l'applicazione.
+Se utilizzi distribuisci le applicazioni attraverso gli strumenti IBM Eclipse per il plug-in {{site.data.keyword.Bluemix_notm}}, nella scheda **Console** dello strumento Eclipse puoi visualizzare dei log simili all'output di cf logs. Puoi anche aprire una finestra di Eclipse separata per tracciare `i log` quando distribuisci l'applicazione.
 
 Oltre al comando `cf logs`, in {{site.data.keyword.Bluemix_notm}} puoi utilizzare anche il servizio Monitoring and Analytics per raccogliere i dettagli del log. Inoltre, il servizio Monitoring and Analytics monitora le prestazioni, l'integrità e la disponibilità delle tue applicazioni. Fornisce anche analisi di log per le applicazioni di runtime Node.js e Liberty.  
 
@@ -72,7 +75,8 @@ si suppone che si siano verificati errori di preparazione per un'applicazione No
 {: screen}
 
 
-Il primo errore nel log mostra il motivo per cui la preparazione non riesce. Nell'esempio, il primo errore è un output del componente DEA durante la fase di preparazione.
+Il primo errore nel log mostra il motivo per cui la preparazione non riesce. Nell'esempio, il primo errore è un output del componente DEA
+durante la fase di preparazione.
 ```
 2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3
 ```
@@ -113,7 +117,7 @@ che vengono distribuite tramite i pacchetti di build integrati {{site.data.keywo
   * Per le applicazioni Node.js, vedi [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}. 
   * Per le applicazioni PHP, vedi [error_log](http://php.net/manual/en/function.error-log.php){: new_window}.
   * Per le applicazioni Python, vedi [Logging HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
-  * Per le applicazioni Ruby on Rails, vedi [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
+  * 1Per le applicazioni Ruby on Rails, vedi [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * Per le applicazioni Ruby Sinatra, vedi [Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
   
 Quando immetti `cf logs nomeapplicazione --recent` nell'interfaccia riga di comando cf, vengono visualizzati solo i log più recenti. Per visualizzare i log con gli errori che si sono verificati in precedenza, devi recuperare tutti i log e ricercare gli errori. Per recuperare tutti i log per la tua applicazione, utilizza uno dei seguenti metodi:
@@ -134,6 +138,18 @@ con la versione corrente di Cloud Foundry in cui è ospitato {{site.data.keyword
   * Per le applicazioni PHP, puoi utilizzare la funzione error_log per scrivere in un file nella directory logs.
   * Per le applicazioni Python, puoi fare in modo che il logger scriva in un file nella directory logs: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * Per le applicazioni Ruby, puoi fare in modo che il logger scriva in un file nella directory logs.
+ 
+ 
+### Debug delle modifiche al codice
+{: #debug_code_changes}
+
+Se stai apportando modifiche al codice in un'applicazione già distribuita e funzionante, ma le modifiche non vengono rispecchiate in {{site.data.keyword.Bluemix_notm}}, puoi eseguire il debug utilizzando i log. A prescindere che la tua applicazione sia o no in esecuzione, puoi controllare i log generati durante la distribuzione dell'applicazione o il runtime per scoprire il motivo per cui il nuovo codice non funziona.
+
+A seconda del modo in cui il nuovo codice viene distribuito, scegli uno dei seguenti metodi per eseguire il debug delle modifiche al codice: 
+
+  * In caso di nuovo codice distribuito dalla riga di comando cf, controlla l'output del comando *cf push*. Inoltre, puoi utilizzare il comando *cf logs* per trovare ulteriori indizi utili per la risoluzione del problema. Per ulteriori informazioni su come utilizzare il comando *cf logs*, vedi [visualizzazione dei log dall'interfaccia riga di comando](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
+
+  * In caso di nuovo codice distribuito da una GUI, quale ad esempio l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline o l'IC di Travis, puoi controllare i log dall'interfaccia. Ad esempio, se distribuisci il nuovo codice dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} puoi passare al dashboard, trovare la tua applicazione e visualizzare i log per trovare degli indizi.   Per ulteriori informazioni su come visualizzare i log dall'interfaccia utente {{site.data.keyword.Bluemix_notm}}, vedi [Visualizzazione dei log dal dashboard Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
  
 
 # rellinks

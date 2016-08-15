@@ -15,6 +15,7 @@ copyright:
 {: #securingapps}
 
 *Ultimo aggiornamento: 9 maggio 2016*
+{: .last-updated}
 
 Puoi proteggere le tue applicazioni caricando dei certificati SSL e limitando l'accesso alle applicazioni.
 {:shortdesc}

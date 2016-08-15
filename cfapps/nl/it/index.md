@@ -15,6 +15,7 @@ copyright:
 
 # Creazione di applicazioni Cloud Foundry
 *Ultimo aggiornamento: 18 aprile 2016*
+{: .last-updated}
 
 Con {{site.data.keyword.Bluemix}}, puoi
 creare la tua applicazione nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Dopo averla creata, puoi decidere di continuare a usare l'interfaccia utente, l'interfaccia riga di comando cf o {{site.data.keyword.jazzhub_title}} per

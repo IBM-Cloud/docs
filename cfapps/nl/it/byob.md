@@ -18,6 +18,7 @@ copyright:
 
 # Utilizzo dei pacchetti di build della community
 *Ultimo aggiornamento: 15 marzo 2016*
+{: .last-updated}
 
 Se non riesci a trovare uno starter nel Catalogo {{site.data.keyword.Bluemix}} che ti fornisca il runtime desiderato, puoi portare tu un pacchetto di build esterno in {{site.data.keyword.Bluemix_notm}}. Puoi specificare un pacchetto di build personalizzato compatibile con Cloud Foundry quando distribuisci la tua applicazione utilizzando il comando cf push.
 {:shortdesc}

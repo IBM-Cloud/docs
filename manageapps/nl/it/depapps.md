@@ -15,6 +15,7 @@ copyright:
 {: #deployingapps}
 
 *Ultimo aggiornamento: 9 maggio 2016*
+{: .last-updated}
 
 Puoi distribuire applicazioni in {{site.data.keyword.Bluemix}}
 utilizzando vari metodi, quali ad esempio l'interfaccia riga di comando e gli ambienti di
@@ -94,9 +95,9 @@ prompt dei comandi.
 
   * Per distribuire pacchetti server Liberty in {{site.data.keyword.Bluemix_notm}}, utilizza il seguente comando dalla tua directory di origine:
   
-```
+  ```
   cf push
-```
+  ```
   
   Per ulteriori
 informazioni sul pacchetto di build Liberty, vedi [Liberty
@@ -104,39 +105,41 @@ for Java](../runtimes/liberty/index.html).
   
   * Per distribuire le applicazioni Java Tomcat a {{site.data.keyword.Bluemix_notm}}, utilizza il seguente comando:
   
-```
-  cf push nomeapplicazione -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
-```
+  ```
+  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
+  ```
   
   * Per distribuire pacchetti WAR in {{site.data.keyword.Bluemix_notm}},
 utilizza il comando
 seguente:
   
-```
-  cf push nomeapplicazione -p app.war
-```
+  ```
+  cf push appname -p app.war
+  ```
   In alternativa, puoi specificare
 una directory contenente i tuoi file applicazione utilizzando il seguente
 comando:
   
-```
-  cf push nomeapplicazione -p "./app"
-```
+  ```
+  cf push appname -p "./app"
+  ```
   
   * Per distribuire le applicazioni Node.js in {{site.data.keyword.Bluemix_notm}}, utilizza il comando
                                                   seguente:
   
-```
-  cf push nomeapplicazione -p percorso_applicazione
-```
+  ```
+  cf push appname -p percorso_applicazione
+  ```
   
-Perché l'applicazione venga riconosciuta dal pacchetto di build Node.js, è necessario che un file
+Perché
+                                                  l'applicazione venga riconosciuta dal pacchetto
+                                                  di build Node.js, è necessario che un file
                                                   `package.json` sia presente nella tua applicazione Node.js. Il file `app.js`
 è lo script di avvio per l'applicazione e può essere specificato nel file `package.json`. Il seguente
                                                   esempio mostra un semplice file
                                                   `package.json`:
 
-```
+  ```
   {
         "name": "MyUniqueNodejs01",
         "version": "0.0.1",
@@ -162,9 +165,9 @@ Perché l'applicazione venga riconosciuta dal pacchetto di build Node.js, è nec
   * Per distribuire applicazioni PHP, Ruby o Python a {{site.data.keyword.Bluemix_notm}},
 utilizza il seguente comando dalla directory che contiene l'origine della tua applicazione:
   
-```
-  cf push nomeapplicazione
-```
+  ```
+  cf push nome_applicazione
+  ```
 
 ###Distribuzione di un'applicazione in più spazi
 
@@ -174,15 +177,15 @@ cui desideri utilizzarla attenendoti alla seguente procedura:
   1. Passa allo spazio in cui desideri distribuire la tua applicazione
 utilizzando il comando **cf target** con l'opzione **-s**:
   
-```
+  ```
   cf target -s <space_name>
-```
+  ```
   
-  2. Passa alla directory della tua applicazione e distribuiscila utilizzando il comando **cf push**, dove nomeapplicazione deve essere univoco all'interno del tuo dominio.
+  2. Passa alla directory della tua applicazione e distribuiscila utilizzando il comando **cf push**, dove nome_applicazione deve essere univoco all'interno del tuo dominio.
   
-```
-  cf push nomeapplicazione
-```
+  ```
+  cf push nome_applicazione
+  ```
   
 ##Manifest dell'applicazione
 {: #appmanifest}
@@ -275,7 +278,7 @@ utilizzando il comando **cf env** oppure dall'interfaccia utente
   * La variabile VCAP_SERVICES, che contiene informazioni di connessione per accedere a un'istanza di servizio. Se la tua applicazione è associata a più servizi, la variabile VCAP_SERVICES include le informazioni di connessione per ciascuna istanza di servizio. Ad
 esempio:
   
-```
+  ```
   {
    "VCAP_SERVICES": {
     "AppScan Dynamic Analyzer": [
@@ -319,7 +322,7 @@ esempio:
     ]
    }
   }
-```
+  ```
         
 Puoi accedere anche alle variabili di ambiente impostate dal DEA e dai pacchetti di build.
 
@@ -389,7 +392,7 @@ associato all'applicazione distribuita. Ad
         {
             "name": "mysql-ix",
             "label": "mysql-5.5",
-            "tags": [
+            "tags":[
                 "mysql",
                 "relational",
                 "data_management",
@@ -414,7 +417,7 @@ associato all'applicazione distribuita. Ad
 </dl>
 
 Le variabili definite dai pacchetti di build sono diverse
-per ogni pacchetto di build. Vedi [Buildpacks](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} per eventuali altri pacchetti di build compatibili.
+per ogni pacchetto di build. Vedi [Pacchetti di build](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} per eventuali altri pacchetti di build compatibili.
 
 <ul>
     <li>Le seguenti variabili sono definite dal pacchetto di build Liberty:
@@ -474,17 +477,17 @@ forniti dal pacchetto di build.
 
   * Utilizza il comando **cf push** e specifica il parametro -c. Ad esempio, quando distribuisci un'applicazione Node.js, puoi specificare il comando di avvio **node app.js** nel parametro -c:
   
-```
-  cf push nomeapplicazione -p app_path -c "node app.js"
-```
+  ```
+  cf push appname -p app_path -c "node app.js"
+  ```
   
   * Utilizza il parametro di comando nel file `manifest.yml`. Ad esempio, quando distribuisci un'applicazione Node.js,
 puoi specificare il comando di avvio **node app.js**
 nel file manifest:
   
-```
+  ```
   command: node app.js
-```
+  ```
   
 
 ### Aggiunta di variabili di ambiente definite dall'utente
@@ -499,13 +502,13 @@ procedura:
 	3. Fai clic su **DEFINITO DALL'UTENTE** e quindi su **AGGIUNGI**.
 	4. Compila i campi richiesti, quindi fai clic su **SALVA**.
   * Utilizza l'interfaccia riga di comando cf. Aggiungi una variabile definita dall'utente utilizzando il comando `cf set-env`. Ad
-                                    esempio: 
+esempio: 
     ```
-    cf set-env nomeapplicazione env_var_name env_var_value
+    cf set-env appname env_var_name env_var_value
     ```
 	
   * Utilizza il file `manifest.yml`. Aggiungi coppie di valori nel file. Ad
-                                    esempio: 
+esempio: 
     ```
 	env:
       VAR1:value1

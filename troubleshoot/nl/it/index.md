@@ -15,7 +15,7 @@ copyright:
 # Risoluzione dei problemi di accesso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Ultimo aggiornamento: 16 maggio 2016*
+*Ultimo aggiornamento: 14 luglio 2016*
 {: .last-updated}
 
 I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero includere un utente che non riesce ad accedere a {{site.data.keyword.Bluemix_notm}}, un account bloccato in uno stato In sospeso e così via. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi. 
@@ -126,7 +126,7 @@ da te fornito. Controlla la cartella della posta in arrivo e quella della posta 
 
 
 
-## Impossibile aggiungere utenti a un'organizzazione
+## Impossibile aggiungere utenti a un'organizzazione 
 {: #ts_adduser}
 
 Puoi invitare più di un utente a lavorare nella stessa organizzazione. Puoi invitare utenti nella tua organizzazione solo
@@ -174,7 +174,7 @@ per modificare il tuo ruolo. Per identificare il gestore della tua organizzazion
 la seguente procedura:
 {: tsResolve}
 
-  1. Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto** ![Account e supporto](images/account_support.svg) nella barra dei menu superiore e seleziona **Gestisci organizzazioni**.
+  1. Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto** ![Account e supporto](images/account_support.svg) nella barra dei menu e seleziona **Gestisci organizzazioni**.
   2. Vai alla tua organizzazione e visualizza le informazioni del gestore organizzazione
 sulla scheda **UTENTI**.  
   
@@ -383,7 +383,27 @@ Se il JVM workbench JVM è IBM JVM 7 o 8 o una versione precedente di Oracle JVM
   3. Controlla se la proprietà `eclipse.vm` punta alla tua nuova installazione di Oracle JVM 8.
 
 
+## Impossibile richiamare gli spazi in un'organizzazione
+{: #ts_retrieve_space}
 
+Non puoi creare un'applicazione o un servizio se la tua organizzazione corrente non dispone di uno spazio associato ad essa.
+
+Quando tenti di creare un'applicazione in Bluemix, viene visualizzato il seguente messaggio di errore:
+{: tsSymptoms}
+
+`BXNUI0515E: il tentativo di richiamare gli spazi nell'organizzazione non è riuscito a causa di un problema nella connessione di rete.`
+
+Questo errore spesso viene ricevuto la prima volta che si tenta di creare un'applicazione o un servizio dal catalogo quando ancora non è stato creato uno spazio.
+{: tsCauses}
+
+Assicurati di aver creato uno spazio nella tua organizzazione corrente.  Per creare uno spazio, utilizza uno dei seguenti metodi:
+{: tsResolve}
+
+  * Da Account e Supporto ![Account e Supporto](images/account_support.svg), seleziona l'organizzazione in cui vuoi crare lo spazio e fai quindi clic su **Crea uno spazio**.
+  * Nell'interfaccia riga di comando cf, immetti `cf create-space <nome_spazio>
+-o <nome_organizzazione>`.
+
+Riprova. Se vedi di nuovo questo messaggio, vai alla pagina sugli [stati di Bluemix](https://status.eu-gb.bluemix.net/){: new_window} per controllare se un servizio o un componente ha qualche problema.
 
 
 
@@ -413,7 +433,7 @@ Non disponi di un adeguato livello di autorità necessario per eseguire le azion
 Per ottenere il livello di autorità appropriato, utilizza uno dei seguenti metodi: 
 {: tsResolve}
  * Seleziona un'altra organizzazione e uno spazio per cui disponi del ruolo di sviluppatore. 
- * Chiedi al gestore organizzazione di modificare il tuo ruolo in sviluppatore oppure di creare uno spazio e assegnarti quindi un ruolo sviluppatore. Per i dettagli, vedi [Gestione delle tue organizzazioni](../admin/orgs_spaces.html).
+ * Chiedi al gestore organizzazione di modificare il tuo ruolo in sviluppatore oppure di creare uno spazio e assegnarti quindi un ruolo sviluppatore. Consulta [Gestione di organizzazioni e spazi](../admin/orgs_spaces.html){: new_window} per i dettagli.
  
 
  
@@ -559,7 +579,7 @@ sufficiente, prova un servizio esterno come [Object Store](../services/ObjectSto
   * Utilizza l'opzione **-k** con il comando `cf push`
 quando distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}}:
     ```
-	cf push nomeapplicazione -p app_path -k <quota_disco>
+	cf push appname -p app_path -k <quota_disco>
 	```
 
 	
@@ -716,11 +736,11 @@ con il comando `cf push`:
 {: tsResolve}
 
 ```
-cf push nomeapplicazione -p <percorso_applicazione> -c <comando_di_avvio> -b <null-buildpack>
+cf push appname -p <percorso_applicazione> -c <comando_di_avvio> -b <null-buildpack>
 ```
-Ad esempio:
+Per esempio:
 ```
-cf push nomeapplicazione -p <percorso_applicazione> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p <percorso_applicazione> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -767,7 +787,7 @@ accounts](../pricing/index.html#pay-accounts){: new_window}.
 	     Il comando cf apps elenca tutte le applicazioni che hai distribuito nel tuo spazio corrente. Viene visualizzato anche lo stato di ciascuna applicazione.
       2. Per ridurre la quantità di memoria utilizzata dalla tua applicazione, riduci il numero di istanze dell'applicazione e/o il limite massimo di memoria.
 	  ```
-	  cf push <nomeapplicazione> -p <percorso_applicazione> -i <numero_istanza> -m <limite_memoria>
+	  cf push <appname> -p <percorso_applicazione> -i <numero_istanza> -m <limite_memoria>
       ```
 	  3. Riavvia la tua applicazione per rendere effettive le modifiche.
 
@@ -797,7 +817,7 @@ Puoi riavviare manualmente l'applicazione immettendo il seguente comando nell'in
 {: tsResolve}
 
 ```
-cf push <nomeapplicazione> -p <percorso_applicazione>
+cf push <appname> -p <percorso_applicazione>
 ```
 Inoltre, puoi codificare l'applicazione per identificare e risolvere problemi come interruzioni, eccezioni ed errori di connessione. 
 
@@ -875,7 +895,7 @@ directory della tua applicazione.
 
   
   
-## Non è possibile trovare le organizzazioni in {{site.data.keyword.Bluemix_notm}}
+## Impossibile trovare le organizzazioni in {{site.data.keyword.Bluemix_notm}}
 {: #ts_orgs}
 
 Potresti non riuscire a individuare la tua organizzazione in {{site.data.keyword.Bluemix_notm}} quando
@@ -926,7 +946,7 @@ cui è stata creata la tua organizzazione. Per ulteriori informazioni sull'utili
   
 
 
-## Impossibile creare una rotta di applicazione
+## Impossibile creare rotte di applicazione 
 {: #ts_hostistaken}
 
 Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, la rotta dell'applicazione non può essere creata se il nome host da te specificato è già in uso.
@@ -958,11 +978,11 @@ seguenti metodi:
   * Se distribuisci la tua applicazione dal prompt dei comandi, utilizza il comando `cf
 push` con l'opzione **-n**. 
     ```
-    cf push <nomeapplicazione> -p <percorso_applicazione> -n <nome_host>
+    cf push <nome_applicazione> -p <percorso_applicazione> -n <nome_host>
     ```
 
 
-## Non è possibile distribuire un'applicazione WAR utilizzando il comando cf push
+## Non è possibile distribuire delle applicazioni WAR utilizzando il comando cf push 
 {: #ts_cf_war}
 
 Potresti non riuscire a utilizzare il comando cf push per distribuire un'applicazione web archiviata a {{site.data.keyword.Bluemix_notm}} se la posizione dell'applicazione non è specificata correttamente.
@@ -982,15 +1002,15 @@ o il percorso del file WAR.
  	
 	
 Utilizza l'opzione **-p** per specificare
-un file WAR o aggiungere il percorso del file WAR. Ad esempio:
+un file WAR o aggiungere il percorso del file WAR. Per esempio:
 {: tsResolve}
 
 ```
-cf push nomeunivocodellamiaapplicazione01 -p app.war
+cf push MyUniqueAppName01 -p app.war
 ```
 
 ```
-cf push nomeunivocodellamiaapplicazione02 -p "./app.war"
+cf push MyUniqueAppName02 -p "./app.war"
 ```
 Per ulteriori informazioni sul comando `cf push` , immettere `cf push -h`. 	
 
@@ -998,7 +1018,7 @@ Per ulteriori informazioni sul comando `cf push` , immettere `cf push -h`.
 
 
 
-## I caratteri double-byte non sono visualizzati correttamente quando viene eseguito il push di applicazioni Liberty a {{site.data.keyword.Bluemix_notm}}
+## I caratteri double-byte non vengono visualizzati correttamente quando si distribuiscono le applicazioni Liberty a {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
 
 I caratteri double-byte potrebbero non essere visualizzati correttamente se il supporto Unicode non è adeguatamente configurato per i file servlet o JSP.
@@ -1068,13 +1088,11 @@ problema:
 {: tsResolve} 
 
   * Specifica il comando di avvio utilizzando uno dei seguenti metodi: 
-      * Utilizza l'interfaccia riga di comando cf. Ad
-                                    esempio: 
+      * Utilizza l'interfaccia riga di comando cf. Per esempio: 
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Utilizza il file [package.json](https://docs.npmjs.com/json){: new_window}. Ad
-esempio:
+	  * Utilizza il file [package.json](https://docs.npmjs.com/json){: new_window}. Per esempio:
 	    ```
 		{
       ...
@@ -1083,8 +1101,7 @@ esempio:
  	   }
 	}
 	    ```
-	  * Utilizza il file `manifest.yml`. Ad
-esempio: 
+	  * Utilizza il file `manifest.yml`. Per esempio: 
 	    ```
 		applications:
   name: MyUniqueNodejs01
@@ -1145,7 +1162,7 @@ esegui il push dell'applicazione come un'applicazione WAR. Per ulteriori informa
 {: tsResolve}
 	
 	
-## Non è possibile preparare un'applicazione utilizzando un pacchetto di build personalizzato
+## Impossibile preparare l'applicazione utilizzando i pacchetti di build personalizzati
 {: #ts_bp_compilation}
 
 Potresti non riuscire a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando un pacchetto di build personalizzato se gli script all'interno del pacchetto di build non sono eseguibili.
@@ -1218,17 +1235,15 @@ Questo problema si verifica perché non viene fornito alcun pacchetto di build i
 Per utilizzare un pacchetto di build personalizzato per le applicazioni Meteor, usa uno dei seguenti metodi:
 {: tsResolve}
 
-  * Se distribuisci la tua applicazione utilizzando il file `manifest.yml`, specifica l'URL o il nome del pacchetto di build personalizzato usando l'opzione buildpack. Ad
-                                    esempio:
+  * Se distribuisci la tua applicazione utilizzando il file `manifest.yml`, specifica l'URL o il nome del pacchetto di build personalizzato usando l'opzione buildpack. Per esempio:
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
   * Se distribuisci la tua applicazione dal prompt dei comandi, utilizza il comando `cf
 push` e specifica il pacchetto di build personalizzato usando
-l'opzione **-b**. Ad
-                                    esempio:
+l'opzione **-b**. Per esempio:
     ```
-	cf push nomeapplicazione -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1353,7 +1368,7 @@ codice utilizzando i comandi Git:
 	```
 	3. Crea l'applicazione:
 	```
-	<nomeapplicazione> create
+	<appname> create
 	```
 	4. Se necessario, fornisci componenti aggiuntivi.
 	5. Aggiungi eventuali variabili di configurazione richieste.
@@ -1364,11 +1379,11 @@ codice utilizzando i comandi Git:
 	7. Verifica che l'applicazione venga creata correttamente.
 	8. Se necessario, esegui il comando di post distribuzione:
 	```
-	<nomeapplicazione> run
+	<appname> run
 	```
 	9. Apri l'applicazione e verifica che funzioni correttamente:
 	```
-	<nomeapplicazione> open
+	<appname> open
 	```
 	
 
@@ -1407,7 +1422,7 @@ Per riattivare il tuo account, contatta il [Supporto {{site.data.keyword.Bluemix
 
 
 
-## Nessuno spazio associato all'organizzazione corrente
+## Nessuno spazio associato alla tua organizzazione corrente
 {: #ts_no_space}
 
 Non puoi creare un'applicazione se non vi è alcuno spazio
@@ -1432,12 +1447,13 @@ Per creare uno spazio, utilizza uno dei seguenti metodi:
 {: tsResolve}
  
   * Sul Dashboard {{site.data.keyword.Bluemix_notm}}, seleziona l'organizzazione in cui vuoi creare lo spazio e fai quindi clic su **Crea uno spazio**.
-  * Nell'interfaccia riga di comando cf, immetti ```cf create-space <nome_spazio> -o <nome_organizzazione>```.
+  * Nell'interfaccia riga di comando cf, immetti ```cf create-space <nome_spazio>
+-o <nome_organizzazione>```.
   
   
   
   
-## Nomi di dominio uguali per applicazioni diverse
+## Le applicazioni condividono lo stesso nome di dominio
 {: #ts_domain_diff}
 
 Potresti notare che diverse applicazioni condividono lo stesso
@@ -1504,7 +1520,7 @@ Potresti riscontrare dei problemi quando utilizzi i runtime IBM® Bluemix™. Tu
 {:shortdesc}
 
 
-## Un pacchetto di build obsoleto viene caricato dalla cache quando viene eseguito il push di un'applicazione
+## Pacchetto di build obsoleto utilizzato quando viene eseguito il push di un'applicazione 
 {: #ts_loading_bp}
 
 
@@ -1517,7 +1533,7 @@ directory cache della tua applicazione prima di eseguire il push o di preparare 
 
 Quando esegui il push o prepari di nuovo un'applicazione
 dopo l'aggiornamento del pacchetto di build, i componenti del pacchetto di build più recenti non vengono
-caricati automaticamente. Di conseguenza, la tua applicazione utilizza i componenti del pacchetto di build obsoleti. Gli aggiornamenti che
+caricati automaticamente. Di conseguenza, la tua applicazione utilizza i componenti del pacchetto di build obsoleti dalla cache. Gli aggiornamenti che
 sono stati applicati al pacchetto di build dall'ultima volta che hai eseguito il push
 dell'applicazione non vengono implementati. 
 {: tsSymptoms}
@@ -1553,11 +1569,11 @@ eseguire il commit delle modifiche, consulta [Git Basics - Recording Changes to 
 la cache utilizzando il seguente comando. Dopo che hai completato questo passo, tutto il contenuto nella directory
 cache della tua applicazione viene eliminato.
   ```
-  cf push nomeapplicazione -p app_path -b <pacchetto_build_null_modificato>
+  cf push appname -p app_path -b <pacchetto_build_null_modificato>
   ```
   4. Esegui il push della tua applicazione con il pacchetto di build più recente che vuoi utilizzare servendoti del seguente comando: 
   ```
-  cf push nomeapplicazione -p app_path -b <ultimo_pacchetto_build>
+  cf push appname -p app_path -b <ultimo_pacchetto_build>
   ```
   
 	
