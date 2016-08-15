@@ -11,9 +11,17 @@ copyright:
 # ASP.NET Core 빌드팩의 최신 업데이트
 {: #latest_updates}
 
-*마지막 업데이트 날짜: 2016년 6월 10일*
+*마지막 업데이트 날짜: 2016년 7월 7일*
 
 aspnet 빌드팩의 최신 업데이트 목록
+
+## 2016년 7월 11일: 업데이트된 ASP.NET Core 빌드팩 v0.9-20160706-1603
+
+이 버전의 빌드팩에 다음 변경사항이 포함되어 있습니다.
+
+* 이 버전의 빌드팩은 .NET CLI 1.0 Preview 2 빌드 및 .NET Core 1.0 RTM을 지원합니다.
+* 빌드팩이 계속해서 .NET CLI 1.0 Preview 1 및 .NET Core 1.0 RC2를 지원합니다.
+* 설치될 기본 .NET CLI 버전이 현재 1.0.0-preview2-003121입니다.
 
 ## 2016년 6월 10일: 업데이트된 ASP.NET Core 빌드팩 v0.8.1-20160526-0957
 
@@ -34,7 +42,7 @@ aspnet 빌드팩의 최신 업데이트 목록
 * 이 버전의 빌드팩은 Beta 7 DNX 변경을 지원하며, 다음 사용자 정의 시작 명령으로 오래된 베타 릴리스에 종속되는 애플리케이션을 실행할 수 있습니다. 
 
 ```
-   dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
+dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
 ```
 {: codeblock}
 

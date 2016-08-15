@@ -12,7 +12,7 @@ copyright:
 # 日志记录和跟踪
 {: #logging_tracing}
 
-*上次更新时间：2016 年 6 月 10 日*
+*上次更新时间：2016 年 6 月 21 日*
 {: .last-updated}
 
 ## 日志文件
@@ -20,7 +20,7 @@ copyright:
 
 标准 Liberty 日志（例如 messages.log 或 ffdc directory）位于 IBM Bluemix 中每个应用程序实例的 logs 目录下。这些日志可以从 IBM Bluemix 控制台进行访问，也可以使用 cf logs 和 cf files 命令进行访问。例如，要查看 messages.log 文件，请运行以下命令：
 ```
-    $ cf files <yourappname> logs/messages.log
+$ cf files <yourappname> logs/messages.log
 ```
 {: codeblock}
 
@@ -33,7 +33,7 @@ copyright:
 * 使用跟踪可查看和更新有关运行中应用程序实例的 Liberty 日志记录 traceSpecification。
 * 使用转储可创建和处理在运行中应用程序实例上的线程和堆转储。
 
-要执行此操作，请在用户界面中选择 Liberty 应用程序。在左侧导航中的“运行时”下，可以打开实例详细信息。选择一个或多个实例。在“操作”菜单下，可以选择 TRACE 或 DUMP。
+要执行此操作，请在用户界面中选择 Liberty 应用程序。在导航中的“运行时”类别下，可以打开实例详细信息。选择一个或多个实例。在“操作”菜单中，可以选择 TRACE 或 DUMP。
 
 # 相关链接
 {: #rellinks}

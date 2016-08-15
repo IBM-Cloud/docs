@@ -12,11 +12,10 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*前次更新：2016 年 6 月 10 日*
+*前次更新：2016 年 7 月 7 日*
 {: .last-updated}
 
-{{site.data.keyword.Bluemix}} 上的 Node.js 運行環境是採用 sdk-for-nodejs 建置套件的技術。
-sdk-for-nodejs 建置套件為 Node.js 應用程式提供完整的運行環境。
+{{site.data.keyword.Bluemix}} 上的 Node.js 運行環境是採用 sdk-for-nodejs 建置套件的技術。sdk-for-nodejs 建置套件為 Node.js 應用程式提供完整的運行環境。
 {: shortdesc}
 
 當應用程式的根目錄包含 **package.json** 檔案時，會使用 sdk-for-nodejs 建置套件。
@@ -76,6 +75,11 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 
 使用此程式碼，當應用程式在 Bluemix 上執行時，VCAP_APP_HOST 及 VCAP_APP_PORT 環境變數包含的主機和埠值是 Bluemix 的內部值，應用程式即藉此來接聽送入的連線。當應用程式在本端執行時，不會定義 VCAP_APP_HOST 及 VCAP_APP_PORT，因此會使用 **localhost** 作為主機並使用 **3000** 作為埠號。透過此撰寫方式，您可以在本端（若是進行測試）以及在 Bluemix 上執行應用程式，而不必做進一步的變更。
 
+## 離線模式
+{: #offline_mode}
+
+請參閱[離線模式](offlineMode.html)，以瞭解如何控制建置套件對外部網站的存取。 
+
 ## 應用程式管理
 {{site.data.keyword.Bluemix}} 提供若干公用程式來管理 Node.js 應用程式及進行除錯。如需完整的詳細資料，請參閱[應用程式管理](../../manageapps/app_mng.html)。
 
@@ -97,7 +101,8 @@ IBM Node.js 建置套件會快取所有 IBM 運行環境版本。因此，如果
   "name": "myapp",
   "description": "this is my app",
   "version": "0.1",
-  "engines": {"node": "4.2.4",
+  "engines": {
+     "node": "4.2.4",
      "npm": "2.11.3"
   }
 }
@@ -170,7 +175,7 @@ Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS](https:
 <li> 您可以檢查 **process.versions.openssl** 的值。例如：
 
   <pre>
-console.log('ssl version is [' +process.versions.openssl +']');
+  console.log('ssl version is [' +process.versions.openssl +']');
   </pre>
   {: codeblock}
 
@@ -195,8 +200,8 @@ console.log('ssl version is [' +process.versions.openssl +']');
 
 |                 | 結果          |
 | :-------------- | :------------ |
-|FIPS_MODE=true   |成功 (1)       |
-|FIPS_MODE !=true |成功 (2)       |
+|FIPS_MODE=true   |成功 (1)    |
+|FIPS_MODE !=true |成功 (2)    |
 
 * 成功 (1)
   * FIPS 正在使用中。
@@ -225,11 +230,11 @@ console.log('ssl version is [' +process.versions.openssl +']');
 
 |                 |--enable-fips  |NO --enable-fips |
 | :-------------- | :------------ | :-------------- |
-|FIPS_MODE=true   |成功 (1)       |成功 (2)         |
-|FIPS_MODE !=true |失敗 (3)       |成功 (4)         |
+|FIPS_MODE=true   |成功 (1)    |成功 (2)      |
+|FIPS_MODE !=true |失敗 (3)    |成功 (4)      |
 
 * 成功 (1)
-  * 1IPS 正在使用中。
+  * FIPS 正在使用中。
   * staging_task.log 將包括*正在安裝已啟用 FIPS 功能的 IBM SDK for Node.js* 訊息。
   * process.versions.openssl 所傳回的值將包含 "fips"。
   * crypto.fips 將傳回 1，指出 FIPS 正在使用中。
@@ -259,11 +264,12 @@ Bluemix 提供多個版本的 Node.js 建置套件。
 
 一般而言，可以使用現行 **sdk-for-nodejs** 建置套件和前一版的版本。若要查看所有可用的建置套件，請使用 **cf buildpacks** 指令。例如：
 <pre>
-cf buildpacks
+      cf buildpacks
       Getting buildpacks...
+
       buildpack                                 position   enabled   locked   filename   
 
-sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
+      sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
       nodejs_buildpack                          5          true      false    nodejs_buildpack-cached-v1.5.0.zip   
       sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip</pre>
 {: codeblock}
@@ -272,7 +278,7 @@ sdk_for_nodejs                            2          true      false    buildpac
 {: #rellinks}
 ## 一般
 {: #general}
-* [Node.js 建置套件的最新更新項目](updates.html)
+* [Node.js 建置套件的最新更新項目](../../runtimes/nodejs/updates.html)
 * [應用程式管理](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

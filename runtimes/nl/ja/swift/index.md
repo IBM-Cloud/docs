@@ -5,7 +5,7 @@
 
 # Swift ランタイム
 {: #swift_runtime}
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 6 月 21 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Swift ランタイムには、Swift buildpack for Bluemix (つまり、swift_buildpack) が採用されています。
@@ -32,7 +32,7 @@ swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a
 ```
 {: pre}
 
-`.swift-version` ファイルを組み込むことに加えて、以下に示すように、`cf push` コマンドに `-b https://github.com/IBM-Swift/swift-buildpack` パラメーターを追加することも必要です。
+`.swift-version` ファイルを組み込むことに加えて、以下の例に示すように、`cf push` コマンドに `-b https://github.com/IBM-Swift/swift-buildpack` パラメーターを追加することも必要です。
 
 ```
 cf push -b https://github.com/IBM-Swift/swift-buildpack
@@ -42,7 +42,7 @@ Swift でサポートされる全バージョンのリストについては、�
 
 {{site.data.keyword.Bluemix}} にインストールされている Swift ビルドパックの現行バージョンについて詳しくは、ビルドパックの[リリース情報](https://github.com/IBM-Swift/swift-buildpack/releases/tag/1.1.1)を参照してください。
 
-Swift 言語は頻繁に変更されるため、連携することが分かっている Swift バージョンにアプリケーションを「ピン留め」するために、`.swift-version` ファイルを組み込む必要があります。`DEVELOPMENT-SNAPSHOT-2016-05-03-a` 以外の Swift バージョンを使用する場合は、アプリケーションをプッシュするときに `-b https://github.com/IBM-Swift/swift-buildpack` パラメーターを指定する必要があることにも注意してください (上記を参照)。
+Swift 言語は頻繁に変更されるため、連携して動くことが分かっている Swift バージョンにアプリケーションを「ピン留め」するために、`.swift-version` ファイルを組み込む必要があります。Swift の `DEVELOPMENT-SNAPSHOT-2016-05-03-a` 以外のバージョンを使用する場合には、アプリケーションをプッシュする際に `-b https://github.com/IBM-Swift/swift-buildpack` パラメーターを指定する必要があることにも注意してください (前述の通り)。
 
 # 関連リンク
 {: #rellinks}

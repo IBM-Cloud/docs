@@ -5,7 +5,7 @@
 
 # Swift 运行时
 {: #swift_runtime}
-*上次更新时间：2016 年 6 月 10 日*
+*上次更新时间：2016 年 6 月 21 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Swift 运行时由 Bluemix 的 Swift buildpack（例如，swift_buildpack）提供技术支持。swift_buildpack 为 Swift 应用程序提供了完整的运行时环境。
@@ -31,7 +31,7 @@ swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a
 ```
 {: pre}
 
-除了包含 `.swift-version` 文件以外，您还需要将 `-b https://github.com/IBM-Swift/swift-buildpack` 参数添加到 `cf push` 命令中，如下所示：
+除了包含 `.swift-version` 文件以外，您还需要将 `-b https://github.com/IBM-Swift/swift-buildpack` 参数添加到 `cf push` 命令中，如以下示例所示：
 
 ```
 cf push -b https://github.com/IBM-Swift/swift-buildpack
@@ -41,7 +41,7 @@ cf push -b https://github.com/IBM-Swift/swift-buildpack
 
 有关在 {{site.data.keyword.Bluemix}} 中安装的 Swift buildpack 的当前版本，请参阅该 buildpack 的[发行版信息](https://github.com/IBM-Swift/swift-buildpack/releases/tag/1.1.1)。
 
-由于 Swift 语言更改频繁，因此应该包含 `.swift-version` 文件，以便应用程序“锁定”到应用程序已知使用的 Swift 版本。另请记住，如果使用 `DEVELOPMENT-SNAPSHOT-2016-05-03-a` 以外的 Swift 版本，您之后在推送应用程序时应指定 `-b https://github.com/IBM-Swift/swift-buildpack` 参数（如上所示）。
+由于 Swift 语言更改频繁，因此应该包含 `.swift-version` 文件，以便应用程序“锁定”到应用程序已知使用的 Swift 版本。另请记住，如果使用 `DEVELOPMENT-SNAPSHOT-2016-05-03-a` 以外的 Swift 版本，那么在推送应用程序时应指定 `-b https://github.com/IBM-Swift/swift-buildpack` 参数（如前文所示）。
 
 # 相关链接
 {: #rellinks}

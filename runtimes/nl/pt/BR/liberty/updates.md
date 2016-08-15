@@ -13,17 +13,24 @@ copyright:
 
 ## Uma lista das atualizações mais recentes no buildpack do Liberty.
 
-*Última atualização: 17 de junho de 2016*
+*Última atualização: 20 de julho de 2016*
 {: .last-updated}
 
+### 22 de julho de 2016: atualizado o buildpack do Liberty v3.1-20160717-2254
+* A funcionalidade [Gerenciamento de app](../../manageapps/app_mng.html) foi atualizada para suportar autenticação federada. Além disso, o tempo de execução do Node.js que é usado pelos utilitários `devconsole` e `shell` foi atualizado para a versão mais recente `0.12.15`. 
+* O buildpack inclui suporte para o agente de monitoramento de aplicativo [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/).
+* O buildpack fornece um coletor de dados atualizado para o
+[serviço de
+Monitoramento e Analítica](../../services/monana/index.html#monana_oview).
+* O buildpack também fornece uma versão atualizada do agente para o [Serviço de ajuste automático de escala](../../services/Auto-Scaling/index.html). 
+* A versão de runtime do Liberty mensal foi atualizada para a liberação [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/).
+
 ### 17 de junho de 2016: atualizado o buildpack do Liberty v3.0-20160608-1450
-* O buildpack agora contém duas versões do WebSphere Liberty, a liberação estável
-mais recente e a liberação beta mais recente. Especificamente, ele fornece a liberação estável
-[16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) e
-a liberação beta [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). A
+* O buildpack agora contém duas versões do WebSphere Liberty, a liberação estável mais recente e a mensal mais recente. Especificamente, ele fornece a liberação estável [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) e a liberação mensal [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). A
 liberação estável será usada por padrão. Consulte
 [versões do Liberty](buildpackDefaults.html#liberty_versions) para obter
 detalhes adicionais. 
+* O buildpack contém também correções de segurança para as [vulnerabilidades de Taglibs do Apache Standard](http://www-01.ibm.com/support/docview.wss?uid=swg21985531).
 
 ### 25 de maio de 2016: atualizado o buildpack do Liberty v2.9-20160519-1249
 * O buildpack contém uma versão atualizada do WebSphere Liberty com base na

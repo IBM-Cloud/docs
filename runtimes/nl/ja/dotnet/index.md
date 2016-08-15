@@ -12,7 +12,7 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-*最終更新日時: 2016 年 5 月 30 日*
+*最終更新日: 2016 年 5 月 30 日*
 
 {{site.data.keyword.Bluemix}} の ASP.NET Core ランタイムには ASP.NET Core ビルドパックが採用されています。ASP.NET Core は、.NET Web アプリケーションをビルドするためのオープン・ソースのモジュラー・フレームワークです。
 .Net Core は、ASP.NET Core アプリケーションのターゲットにできる小規模なクロスプラットフォーム・ランタイムです。
@@ -21,7 +21,7 @@ copyright:
 
 ## 検出
 {: #detection}
-アプリケーション内のいずれかの場所に 1 つ以上の project.json ファイルが存在する場合、あるいはアプリケーションが *dotnet publish* コマンドの出力ディレクトリーからプッシュされた場合、Bluemix ASP.NET Core ビルドパックが使用されます。
+アプリケーションのどこかに project.json ファイルと少なくとも 1 つの .cs ファイルの両方を含むフォルダーが 1 つ以上存在する場合、あるいはアプリケーションが *dotnet publish* コマンドの出力ディレクトリーからプッシュされた場合、Bluemix ASP.NET Core ビルドパックが使用されます。
 
 ## スターター・アプリケーション
 {: #starter_application}
@@ -72,7 +72,7 @@ copyright:
 
 アプリケーションをパブリッシュするには、次のようなコマンドを発行します。
 ```
-  dotnet publish -r ubuntu.14.04-x64
+dotnet publish -r ubuntu.14.04-x64
 ```
 {: codeblock}
   
@@ -90,14 +90,14 @@ copyright:
 
 例えば、あるソリューションの *src* フォルダー内に 3 つのプロジェクト *MyApp.DAL*、*MyApp.Services*、および *MyApp.Web* が含まれており、*MyApp.Web* がメイン・プロジェクトである場合、.deployment ファイルのフォーマットは、次のようになります。
 ```
-  [config]
+[config]
   project = src/MyApp.Web
 ```
 {: codeblock}
 
 この例では、*MyApp.DAL* プロジェクトと *MyApp.Services* プロジェクトが *MyApp.Web* の project.json ファイルに依存関係としてリストされている場合、ビルドパックはこれらのプロジェクトを自動的にコンパイルします。しかし、dotnet run -p src/MyApp.Web コマンドを使用した場合は、ビルドパックはメイン・プロジェクトである *MyApp.Web* の実行のみを試みます。*MyApp.Web* へのパスは、このプロジェクトが xproj プロジェクトであると想定して、以下のように指定することもできます。 
 ```
-  project = src/MyApp.Web/MyApp.Web.xproj
+project = src/MyApp.Web/MyApp.Web.xproj
 ```
 {: codeblock}
 
@@ -105,7 +105,7 @@ copyright:
 
 ビルドパックは、*dotnet run* コマンドを使用してアプリケーションを実行し、後続のコマンド・ライン引数を渡します。
 ```
-  --server.urls http://0.0.0.0:${PORT}
+--server.urls http://0.0.0.0:${PORT}
 ```
 {: codeblock}
 
@@ -134,13 +134,13 @@ kestrel が正しいポートで listen するようにするために、アプ�
 
 以下の依存関係を project.json に追加します。 
 ```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+"Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
 ```
 {: codeblock}
 
 main メソッドを含むファイルに、*using* ステートメントを追加します。 
 ```
-  using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
 

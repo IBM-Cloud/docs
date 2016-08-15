@@ -20,13 +20,13 @@ Para obter mais informações sobre o que o serviço Dynatrace fornece, veja [Mo
 
 Quando seu aplicativo Liberty é configurado para usar o Dynatrace, o comportamento
 padrão é o tempo de execução do Liberty adquirir um arquivo jar do agente Dynatrace em
-um site do Dynatrace e executar esse agente Dynatrace com seu app. Com esse
+um site do Dynatrace e executar esse agente Dynatrace com seu app.  Com esse
 comportamento padrão, a configuração mínima necessária para usar o Dynatrace é criar um
 serviço fornecido pelo usuário que aponte para o coletor Dynatrace.
 
 ## Criando um serviço fornecido pelo usuário que aponta para o coletor Dynatrace
 
-Em primeiro lugar, você precisará configurar um coletor Dynatrace. Em seguida,
+Em primeiro lugar, você precisará configurar um coletor Dynatrace.  Em seguida,
 deve-se criar um serviço fornecido pelo usuário para passar as informações do agente
 Dynatrace para conexão com o coletor Dynatrace. Veja [Arquitetura do Dynatrace](https://community.dynatrace.com/community/display/DOCDT63/Architecture) para entender melhor o relacionamento entre os componentes do Dynatrace.
 
@@ -72,7 +72,7 @@ Veja [Seção Configuração do agente em Configuração do agente](https://comm
 {: #optional_configuration}
 
 Você pode optar por adquirir e hospedar você mesmo o arquivo jar do agente
-Dynatrace. Nesse caso, são necessárias as etapas adicionais de configuração a seguir.
+Dynatrace.  Nesse caso, são necessárias as etapas adicionais de configuração a seguir.
 1. Adquira e hospede o arquivo jar do agente Dynatrace para que o buildpack do Liberty possa fazer download dele.
 2. Configure seu app Liberty para que ele possa fazer download do agente Dynatrace.
 

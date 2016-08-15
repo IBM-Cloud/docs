@@ -12,7 +12,7 @@ copyright:
 # Journalisation et traçage
 {: #logging_tracing}
 
-*Dernière mise à jour : 10 juin 2016*
+*Dernière mise à jour : 21 juin 2016*
 {: .last-updated}
 
 ## Fichiers journaux
@@ -40,7 +40,7 @@ traceSpecification de journalisation Liberty sur les instances d'application en 
 * Utilisez la fonction Vidage pour créer et manipuler les clichés d'unité d'exécution et de pile sur les instances d'application en cours d'exécution.
 
 Pour
-ce faire, sélectionnez une application Liberty dans l'interface utilisateur. Depuis l'environnement d'exécution dans le panneau de navigation sur la gauche, vous pouvez ouvrir la page des détails de l'instance. Sélectionnez une ou plusieurs instances. Sous le menu Actions, vous pouvez sélectionner TRACE ou DUMP.
+ce faire, sélectionnez une application Liberty dans l'interface utilisateur. Dans la catégorie Exécution du panneau de navigation, vous pouvez ouvrir les détails de l'instance. Sélectionnez une ou plusieurs instances. Dans le menu Actions, vous pouvez choisir TRACE ou DUMP.
 
 # rellinks
 {: #rellinks}

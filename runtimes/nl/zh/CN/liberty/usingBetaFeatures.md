@@ -60,26 +60,26 @@ Bluemix 中可用的 Liberty Beta 功能
 2.  将 **IBM_LIBERTY_BETA** 环境变量设置为 **true**。此变量会引导 Liberty buildpack 为您的应用程序安装并启用 Beta 功能。例如：
   * 使用 cf 命令行工具：
 ```
-       $ cf set-env <yourappname> IBM_LIBERTY_BETA true
+$ cf set-env <yourappname> IBM_LIBERTY_BETA true
 ```
 {: #codeblock}
 
   * 或者，使用 manifest.yml 文件：
 ```
-      env:
+env:
           IBM_LIBERTY_BETA: "true"
 ```
 
-3. 将 **JBP_CONFIG_LIBERTY** 环境变量设置为 **"version: +"**。此变量将启用支持 Beta 功能的 [Liberty Beta 运行时](buildpackDefaults.html#liberty_versions)。例如：
+3. 将 **JBP_CONFIG_LIBERTY** 环境变量设置为 **"version: +"**。此变量将启用支持 Beta 功能的 [Liberty 每月运行时](buildpackDefaults.html#liberty_versions)。例如：
   * 使用 cf 命令行工具：
 ```
-       $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
+$ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
 ```
 {: #codeblock}
 
   * 或者，使用 manifest.yml 文件：
 ```
-      env:
+env:
           JBP_CONFIG_LIBERTY: "version: +"
 ```
 

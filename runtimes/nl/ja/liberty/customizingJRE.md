@@ -11,7 +11,7 @@ copyright:
 # JRE のカスタマイズ
 {: #customizing_jre}
 
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 6 月 10 日*
 {: .last-updated}
 
 アプリケーションは、Liberty ビルドパックによって提供および構成される Java ランタイム環境 (JRE) で実行されます。Liberty ビルドパックにより、JRE のバージョンまたはタイプの構成、JVM オプションのカスタマイズ、JRE 機能のオーバーレイも可能になります。
@@ -23,7 +23,7 @@ copyright:
 
 デフォルトでは IBM JRE バージョン 8 が使用されます。別のバージョンの IBM JRE を指定するには、JBP_CONFIG_IBMJDK 環境変数を使用します。例えば、最新の IBM JRE 7.1 を使用するには、以下の環境変数を設定します。
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+$ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -35,17 +35,22 @@ version プロパティーをバージョン範囲に設定することができ
 オプションで、JRE として OpenJDK を使用して実行するようにアプリケーションを構成できます。アプリケーションを OpenJDK を使用して実行できるようにするには、JVM 環境変数を「openjdk」に設定します。例えば、
 cf コマンド・ライン・ツールを使用して、次のコマンドを実行します。
 ```
-    $ cf set-env myapp JVM 'openjdk'
+$ cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 デフォルトでは、使用可能であれば OpenJDK バージョン 8 が使用されます。別のバージョンの OpenJDK を指定するには、JBP_CONFIG_OPENJDK  環境変数を使用します。例えば、最新の OpenJDK 7 を使用するには、以下の環境変数を設定します。
 ```
-    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+$ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
 version プロパティーは、バージョン範囲 (例えば 1.7.+) に設定するか、[使用可能な OpenJDK バージョンのリスト](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)に示されている、任意の特定のバージョンに設定することができます。最高の結果を得るには Java 8 を使用してください。
+
+## Oracle JRE
+{: #oracle_jre}
+
+Oracle JRE の使用については、[『Oracle JRE の使用』](oracle_jre.html)を参照してください。
 
 ## JRE オプションの構成
 {: #configuring_jre}
@@ -71,7 +76,7 @@ JVM オプションは、Bluemix 環境での最適化を提供するように�
 
 以下に、512 M のメモリー制限を指定してデプロイされたアプリケーションに対してビルドパックが生成した、デフォルト JVM 構成例を示します。   
 ```
-    -Xtune:virtualized
+-Xtune:virtualized
     -Xmx384M
     -Xdump:none
     -Xdump:heap:defaults:file=../../../../../dumps/heapdump.%Y%m%d.%H%M%S.%pid.%seq.phd
@@ -170,7 +175,7 @@ JVM_ARGS 環境変数で指定されたアプリケーション定義オプシ�
 コマンド・ライン・オプションとして保持されます。staging_info.yml ファイルから表示できます。
 
 ```
-    $ cf files myapp staging_info.yml
+$ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
@@ -179,14 +184,14 @@ WAR、EAR、サーバー・ディレクトリー、およびパッケージさ�
 WAR、EAR、およびサーバー・ディレクトリーの jvm.options ファイルを表示するには、次のコマンドを実行します。
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+$ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 パッケージされたサーバーの jvm.options ファイルを表示するには、<serverName> を実際のサーバー名に置き換えて次のコマンドを実行します。
 
 ```
-    $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+$ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
 ```
 {: codeblock}
 
@@ -270,14 +275,14 @@ Snap.20141106.100252.81.0003.trc           307.3K
 例えば、AES 256 ビット暗号化を使用する場合、以下の Java ポリシー・ファイルをオーバーレイする必要があります。
 
 ```
-    .java\jre\lib\security\US_export_policy.jar
+.java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
 ```
 {: codeblock}
 
 適切な非制限ポリシー・ファイルをダウンロードし、それらを次のファイルとしてアプリケーションに追加します。
 ```
-    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
+resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: codeblock}

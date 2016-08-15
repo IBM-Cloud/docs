@@ -11,7 +11,7 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*Última actualización: 10 de junio de 2016*
+*Última actualización: 06 de julio de 2016*
 {: .last-updated}
 
 El tiempo de ejecución de PHP en {{site.data.keyword.Bluemix}} está basado en el php_buildpack.
@@ -36,28 +36,28 @@ Puede especificar la versión de PHP que utilizará la aplicación en el archivo
 ```
 {
     "require": {
-        "php": "5.6.*"
+        "php": "7.0.*"
     }
 }
 ```
 {: codeblock}
 Para obtener más información, consulte [enlaces de Composer Package](https://getcomposer.org/doc/04-schema.md#package-links).
-Cuando no se especifique una versión, se elegirá la versión 5.5.30 de forma predeterminada.
+
+Cuando no se especifica la versión, se selecciona la versión 5.5.34 de forma predeterminada.
 
 ### Versiones disponibles:
 {: #available_versions}
 
 Las siguientes versiones de PHP están disponibles en el
-[paquete de compilación de PHP](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.1.5)
+[paquete de compilación de PHP](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.10)
 actualmente instalado en {{site.data.keyword.Bluemix}}:
 
-* 5.4.44
-* 5.4.45
-* 5.5.29
-* 5.5.30
-* 5.6.30
-* 5.6.13
-* 5.6.14
+* 5.5.33
+* 5.5.34
+* 5.6.19
+* 5.6.20
+* 7.0.4
+* 7.0.5
 
 Si la app requiere una versión de PHP que no aparece en la lista,
 puede utilizar el

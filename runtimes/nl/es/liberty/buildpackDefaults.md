@@ -33,7 +33,7 @@ El paquete de compilación proporciona dos versiones del tiempo de ejecución de
   * No proporciona ninguna [función beta](usingBetaFeatures.html).
   * Normalmente se actualiza cada trimestre.
 
-2. El último release beta
+2. El release mensual
   * Debe habilitarse de forma explícita estableciendo la variable de entorno **JBP_CONFIG_LIBERTY** con el valor **"version: +"**.
   * Proporciona [características beta](usingBetaFeatures.html).
   * Normalmente se actualiza cada mes.

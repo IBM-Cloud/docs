@@ -11,7 +11,7 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*Dernière mise à jour : 10 juin 2016*
+*Dernière mise à jour : 06 juillet 2016*
 {: .last-updated}
 
 L'environnement d'exécution PHP dans {{site.data.keyword.Bluemix}} repose sur le pack php_buildpack.
@@ -36,27 +36,26 @@ Vous pouvez spécifier la version de PHP que votre application doit utiliser en 
 ```
 {
     "require": {
-        "php": "5.6.*"
+        "php": "7.0.*"
     }
 }
 ```
 {: codeblock}
 Pour plus d'informations, voir les [liens Composer Package](https://getcomposer.org/doc/04-schema.md#package-links).
 
-Si aucune version n'est indiquée, la version 5.5.30 est choisie par défaut.
+Si aucune version n'est spécifiée, la version 5.5.34 est choisie par défaut.
 
 ### Versions disponibles :
 {: #available_versions}
 
-Les versions de PHP suivantes sont disponibles dans le [pack de construction PHP](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.1.5) qui est installé dans {{site.data.keyword.Bluemix}} :
+Les versions de PHP suivantes sont disponibles dans le [pack de construction PHP](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.10) qui est installé dans {{site.data.keyword.Bluemix}} :
 
-* 5.4.44
-* 5.4.45
-* 5.5.29
-* 5.5.30
-* 5.6.30
-* 5.6.13
-* 5.6.14
+* 5.5.33
+* 5.5.34
+* 5.6.19
+* 5.6.20
+* 7.0.4
+* 7.0.5
 
 Si votre application requiert une version de PHP qui n'est pas répertoriée, vous pouvez
 utiliser le [pack de construction PHP](https://github.com/cloudfoundry/php-buildpack.git) externe pour

@@ -11,9 +11,17 @@ copyright:
 # Atualizações mais recentes para o buildpack do ASP.NET Core
 {: #latest_updates}
 
-*Última atualização: 10 de junho de 2016*
+*Última atualização: 7 de julho de 2016*
 
 Uma lista das atualizações mais recentes no buildpack do aspnet.
+
+## 11 de julho de 2016: buildpack do ASP.NET Core atualizado v0.9-20160706-1603
+
+Esta versão do buildpack inclui as mudanças a seguir:
+
+* Esta versão do buildpack suporta a compilação do .NET CLI 1.0 Visualização 2 e o .NET Core 1.0 RTM
+* O buildpack continua a suportar o .NET CLI 1.0 Visualização 1 e o .NET Core 1.0 RC2
+* A versão padrão do .NET CLI a ser instalada agora é 1.0.0-preview2-003121
 
 ## 10 de junho de 2016: buildpack do ASP.NET Core atualizado v0.8.1-20160526-0957
 

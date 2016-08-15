@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 7 月 6 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Ruby ランタイムには ruby_buildpack が採用されています。
@@ -32,7 +32,7 @@ ruby_buildpack は、アプリケーションのルート・ディレクトリ�
 
 
 ```
-  source 'https://rubygems.org'
+source 'https://rubygems.org'
   ruby '2.1.7'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
@@ -40,18 +40,18 @@ ruby_buildpack は、アプリケーションのルート・ディレクトリ�
 ```
 {: codeblock}
 
-バージョンを指定しない場合は、デフォルトでバージョン 2.2.2 が選択されます。
+バージョンを指定しない場合は、デフォルトでバージョン 2.2.4 が選択されます。
 
 ### 使用可能なバージョン:
 {: #available_versions}
 
-現在 {{site.data.keyword.Bluemix}} にインストールされている [Ruby ビルドパック](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.7?cm_mc_uid=02162397679414470795470&cm_mc_sid_50200000=1447951462)では、以下のバージョンの Ruby が使用できます。
+現在 {{site.data.keyword.Bluemix}} にインストールされている [Ruby ビルドパック](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.16)では、以下のバージョンの Ruby が使用できます。
 
-* 2.0.0
-* 2.1.6
-* 2.1.7
-* 2.2.2
+* 2.1.8
+* 2.1.9
 * 2.2.3
+* 2.2.4
+* 2.3.0
 
 アプリケーションが、リストされていないバージョンの Ruby を必要とする場合は、外部の [Ruby ビルドパック](https://github.com/cloudfoundry/ruby-buildpack)を使用してアプリケーションをデプロイできます。
 
@@ -60,4 +60,4 @@ ruby_buildpack は、アプリケーションのルート・ディレクトリ�
 ## 一般
 {: #general}
 * [Cloud Foundry buildpack for Ruby, Sinatra and Rails](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails の資料](http://rubyonrails.org/documentation/)
+* [Ruby on Rails の資料](http://api.rubyonrails.org/)

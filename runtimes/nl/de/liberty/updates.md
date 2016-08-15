@@ -13,11 +13,19 @@ copyright:
 
 ## Eine Liste mit den neuesten Aktualisierungen im Liberty-Buildpack.
 
-*Letzte Aktualisierung: 17. Juni 2016*
+*Letzte Aktualisierung: 20. Juli 2016*
 {: .last-updated}
 
+### 22. Juli 2016: Liberty-Buildpack v3.1-20160717-2254 aktualisiert
+* Die Funktion [App-Management](../../manageapps/app_mng.html) wurde aktualisiert und unterstützt jetzt die eingebundene Authentifizierung. Die Node.js-Laufzeit, die von den Dienstprogrammen `devconsole` und `shell` verwendet wird, wurde auf die neueste Version `0.12.15` aktualisiert. 
+* Das Buildpack fügt einen Support für den Anwendungsüberwachungsagenten [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/) hinzu.
+* Das Buildpack stellt einen aktualisierten Datenkollektor für den [Service 'Monitoring and Analytics'](../../services/monana/index.html#monana_oview) bereit.
+* Das Buildpack stellt auch eine aktualisierte Version des Agenten für den [Service 'Auto-Scaling'](../../services/Auto-Scaling/index.html) bereit. 
+* Die monatliche Liberty-Laufzeitversion wurde auf das Release [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/) aktualisiert.
+
 ### 17. Juni 2016: Liberty-Buildpack v3.0-20160608-1450 aktualisiert
-* Das Buildpack enthält jetzt zwei Versionen von WebSphere Liberty, das neueste stabile Release und die neueste Betaversion. Konkret handelt es sich um das stabile Release [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) und die Betaversion [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). Standardmäßig wird das stabile Release verwendet. Weitere Details finden Sie in [Liberty-Versionen](buildpackDefaults.html#liberty_versions). 
+* Das Buildpack enthält jetzt zwei Versionen von WebSphere Liberty, das neueste stabile Release und das neueste monatliche Release. Konkret handelt es sich um das stabile Release [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) und das monatliche Realease [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). Standardmäßig wird das stabile Release verwendet. Weitere Details finden Sie in [Liberty-Versionen](buildpackDefaults.html#liberty_versions). 
+* Das Buildpack enthält Sicherheitskorrekturen für die [Sicherheitslücke in Apache Standard Taglibs](http://www-01.ibm.com/support/docview.wss?uid=swg21985531).
 
 ### 25. Mai 2016: Liberty-Buildpack v2.9-20160519-1249 aktualisiert
 * Das Buildpack enthält eine aktualisierte Version von WebSphere Liberty, die auf der [Betaversion vom Mai](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/) basiert. Mit der aktualisierten Version von Liberty werden die Beta-Features *bluemixLogCollector-1.1* und *logstashCollector-1.1* in Bluemix verfügbar gemacht.

@@ -12,7 +12,7 @@ copyright:
 
 # Go
 {: #go_runtime}
-*Dernière mise à jour : 16 mars 2016*
+*Dernière mise à jour : 06 juillet 2016*
 
 L'environnement d'exécution Go dans {{site.data.keyword.Bluemix}} repose sur le pack go_buildpack.
 Le pack go_buildpack fournit un environnement d'exécution complet pour les applis Go.
@@ -33,7 +33,7 @@ Vous pouvez spécifier la version de Go à utiliser par votre appli en définiss
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.3.3",
+	"GoVersion": "go1.6.1",
 	"Deps": []
 }
 ```
@@ -43,16 +43,14 @@ Pour plus d'informations, voir [godep](https://github.com/tools/godep){: new_win
 ### Versions disponibles :
 {: #available_versions}
 
-Les versions de Go suivantes sont disponibles dans le [pack de construction Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window} qui est installé dans {{site.data.keyword.Bluemix}} :
+Les versions de Go suivantes sont disponibles dans le [pack de construction Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.7.5){: new_window} qui est installé dans {{site.data.keyword.Bluemix}} :
 
-* 1.2.1
-* 1.2.2
-* 1.3.2
-* 1.3.3
 * 1.4.2
 * 1.4.3
-* 1.5
-* 1.5.1
+* 1.5.3
+* 1.5.4
+* 1.6
+* 1.6.1
 
 Si votre application requiert une version de Go qui n'est pas répertoriée ci-dessus, vous pouvez utiliser le
 [pack de construction Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window} externe pour déployer

@@ -13,11 +13,19 @@ copyright:
 
 ## Liberty 빌드팩의 최신 업데이트 목록
 
-*마지막 업데이트 날짜: 2016년 6월 17일*
+*마지막 업데이트 날짜: 2016년 7월 20일*
 {: .last-updated}
 
+### 2016년 7월 22일: 업데이트된 Liberty 빌드팩 v3.1-20160717-2254
+* [앱 관리](../../manageapps/app_mng.html) 기능이 연합 인증을 지원하도록 업데이트되었습니다. 또한, `devconsole` 및 `shell` 유틸리티에서 사용되는 Node.js 런타임이 최신 `0.12.15` 버전으로 업데이트되었습니다. 
+* 빌드팩은 [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/) 애플리케이션 모니터링 에이전트에 대한 지원을 추가합니다.
+* 빌드팩은 [Monitoring and Analytics 서비스](../../services/monana/index.html#monana_oview)에 대한 업데이트된 데이터 콜렉터를 제공합니다.
+* 또한 빌드팩은 [Auto-Scaling 서비스](../../services/Auto-Scaling/index.html)를 위해 에이전트의 업데이트된 버전을 제공합니다. 
+* 월별 Liberty 런타임 버전은 [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/) 릴리스로 업데이트되었습니다.
+
 ### 2016년 6월 17일: 업데이트된 Liberty 빌드팩 v3.0-20160608-1450
-* 이 빌드팩은 이제 WebSphere Liberty의 두 버전 즉, 최신의 안정적 릴리스와 최신 베타 릴리스를 포함합니다. 특히, [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 안정적 릴리스와 [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) 베타 릴리스를 제공합니다. 기본적으로 안정적 릴리스가 사용됩니다. 자세한 내용은 [Liberty 버전](buildpackDefaults.html#liberty_versions)을 참조하십시오.  
+* 이 빌드팩은 이제 WebSphere Liberty의 두 버전인, 최신의 안정된 릴리스와 최신 월별 릴리스를 포함합니다. 특히, [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 안정된 릴리스와 [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) 월별 릴리스를 제공합니다. 기본적으로 안정적 릴리스가 사용됩니다. 자세한 내용은 [Liberty 버전](buildpackDefaults.html#liberty_versions)을 참조하십시오.  
+* 또한 이 빌드팩에는 [Apache Standard Taglibs 취약성](http://www-01.ibm.com/support/docview.wss?uid=swg21985531)의 보안 수정사항이 포함됩니다.
 
 ### 2016년 5월 25일: 업데이트된 Liberty 빌드팩 v2.9-20160519-1249
 * 이 빌드팩에는 [5월 베타](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/)를 기반으로 하는 WebSphere Liberty의 업데이트된 버전이 포함되어 있습니다. 
@@ -171,7 +179,7 @@ Liberty의 업데이트된 버전을 이용하면 *logstashCollector-1.0* GA 기
 ### 2014년 10월 23일: 업데이트된 Liberty 빌드팩 v1.6-20141013-1628
 * 이제 이 빌드팩에 [Monitoring and Analytics](../../services/monana/index.html)를 위한 새로운 데이터 콜렉터가 제공됩니다. 이러한 새로운 데이터 콜렉터는 서비스의 진단 플랜 사용자가 애플리케이션의 문제점을 구체적인 코드 행 수준으로까지 진단할 수 있도록 진단 상세 정보를 수집합니다. 
 * 빌드팩에 버그 수정과 사소한 개선사항을 포함한 관리 및 Auto-Scaling 에이전트의 업데이트된 버전이 포함되어 있습니다. 또한 [Liberty 프로파일](https://developer.ibm.com/wasdev/)과 [Java MongoDB Driver](https://docs.mongodb.org/ecosystem/drivers/java/), v2.12.3의 업데이트된 버전도 포함되어 있습니다.
-* cloudAutowiring 기능에서 일부 애플리케이션의 자원 인젝션 오류를 일으키던 버그가 수정되었습니다. 
+* cloudAutowiring 기능에서 일부 애플리케이션의 리소스 인젝션 오류를 일으키던 버그가 수정되었습니다. 
 
 ### 2014년 10월 3일: 업데이트된 Liberty 빌드팩 v1.5-20140923-1143
 * 이 업데이트된 빌드팩을 적용하면 애플리케이션이 WebSocket 1.0, Servlet 3.1 또는 JAX-RS 2.0와 같은 Liberty 베타 기능을 사용할 수 있습니다. 자세한 정보는 [베타 기능 사용](usingBetaFeatures.html)을 참조하십시오.

@@ -11,11 +11,11 @@ copyright:
 
 # Python
 {: #python_runtime}
-*Dernière mise à jour : 10 juin 2016*
+*Dernière mise à jour : 06 juillet 2016*
 {: .last-updated}
 
 L'environnement d'exécution Python dans {{site.data.keyword.Bluemix}} repose sur le pack python_buildpack.
-Le pack python_buildpack fournit un environnement d'exécution complet pour les applis Python.
+Le pack python_buildpack fournit un environnement d'exécution complet pour les applications Python 2 et Python 3.
 {: shortdesc}
 
 Le pack python_buildpack sera utilisé si le répertoire racine de votre appli contient un fichier requirements.txt ou setup.py.
@@ -31,31 +31,30 @@ Le pack python_buildpack sera utilisé si le répertoire racine de votre appli c
 Vous pouvez spécifier la version de Python à utiliser par votre appli en définissant python-versionnumber dans le fichier runtime.txt se trouvant à la racine de votre application. Par exemple :
 
 ```
-python-3.4.3
+python-3.5.0
 ```
 {: codeblock}
 
-Si aucune version n'est spécifiée, la version 2.7.10 est choisie par défaut.
+Si aucune version n'est spécifiée, la version 2.7.11 est choisie par défaut.
 
 ### Versions disponibles :
 {: #available_versions}
 
-Les versions de Python suivantes sont disponibles dans le [pack de construction Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.1) qui est installé dans {{site.data.keyword.Bluemix}} :
+Les versions de Python suivantes sont disponibles dans le [pack de construction Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5) qui est installé dans {{site.data.keyword.Bluemix}} :
 
-* 2.7.9
 * 2.7.10
+* 2.7.11
 * 3.3.5
 * 3.3.6
-* 3.4.2
 * 3.4.3
+* 3.4.4
 * 3.5.0
+* 3.5.1
 
 Si votre application requiert une version de Python qui n'est pas répertoriée, vous pouvez
 utiliser le [pack de construction Python](https://github.com/cloudfoundry/python-buildpack) externe pour
 la déployer.
 
 # rellinks
-{: #rellinks}
 ## general
-{: #general}
 * [Cloud Foundry buildpack for Python](https://github.com/cloudfoundry/python-buildpack)

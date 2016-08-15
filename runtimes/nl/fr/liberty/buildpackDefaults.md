@@ -32,8 +32,8 @@ Le pack de construction fournit deux versions de l'environnement d'exécution Li
   * Elle ne fournit pas de [fonction bêta](usingBetaFeatures.html).
   * Elle est généralement mise à jour tous les trimestres.
 
-2. Edition bêta la plus récente
-  * Elle doit être activée de manière explicite en affectant à la variable d'environnement **JBP_CONFIG_LIBERTY** la valeur **"version: +"**. 
+2. Edition mensuelle
+  * Elle doit être activée de manière explicite en affectant à la variable d'environnement **JBP_CONFIG_LIBERTY** la valeur **"version: +"**.
   * Elle fournit des [fonctions bêta](usingBetaFeatures.html).
   * Elle est généralement mise à jour tous les mois.
 

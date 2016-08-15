@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*Letzte Aktualisierung: 10. Juni 2016*
+*Letzte Aktualisierung: 13. Juli 2016*
 {: .last-updated}
 
 Die Laufzeit von Tomcat in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'java_buildpack'.
@@ -42,7 +42,7 @@ Beide können in der Manifestdatei der Anwendung angegeben werden.  Beispiel:
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-Die aktuelle Tomcat-Standardversion ist 8.0.30.  Die aktuelle Java-Standardversion ist 1.8.0_65.
+Die aktuelle java_buildpack-Version ist v3.6, die standardmäßig die Tomcat-Version 8.30.0 und die Java-Version 1.8.0_71 enthält.
 Weitere Informationen finden Sie in [java-buildpack releases](https://github.com/cloudfoundry/java-buildpack/releases).
 
 # Zugehörige Links

@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*Última actualización: 10 de junio de 2016*
+*Última actualización: 06 de julio de 2016*
 {: .last-updated}
 
 El tiempo de ejecución de Ruby en {{site.data.keyword.Bluemix}} está basado en el ruby_buildpack.
@@ -40,20 +40,20 @@ Puede especificar la versión de Ruby que utilizará la app en el Gemfile de la 
 ```
 {: codeblock}
 
-Cuando no se especifica la versión, se selecciona la versión 2.2.2 de forma predeterminada.
+Cuando no se especifique una versión, se elegirá la versión 2.2.4 de forma predeterminada.
 
 ### Versiones disponibles:
 {: #available_versions}
 
 Las siguientes versiones de Ruby están disponibles en el
-[paquete de compilación de Ruby](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.7?cm_mc_uid=02162397679414470795470&cm_mc_sid_50200000=1447951462)
+[paquete de compilación de Ruby](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.16)
 actualmente instalado en {{site.data.keyword.Bluemix}}:
 
-* 2.0.0
-* 2.1.6
-* 2.1.7
-* 2.2.2
+* 2.1.8
+* 2.1.9
 * 2.2.3
+* 2.2.4
+* 2.3.0
 
 Si la app requiere una versión de Ruby que no aparece en la lista,
 puede utilizar el
@@ -65,4 +65,4 @@ desplegar la app.
 ## general
 {: #general}
 * [Paquete de compilación de Cloud Foundry para Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Documentación de Ruby on Rails](http://rubyonrails.org/documentation/)
+* [Documentación de Ruby on Rails](http://api.rubyonrails.org/)

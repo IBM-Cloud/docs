@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*Dernière mise à jour : 10 juin 2016*
+*Dernière mise à jour : 13 juillet 2016*
 {: .last-updated}
 
 L'environnement d'exécution Tomcat sur {{site.data.keyword.Bluemix}} repose sur le pack java_buildpack.
@@ -42,7 +42,7 @@ Ces deux variables d'environnement peuvent être définies dans le fichier manif
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-La version par défaut en cours de Tomcat est 8.0.30.  La version par défaut en cours de Java est 1.8.0_65.
+La version java_buildpack actuelle, v3.6, contient la version 8.30.0 Tomcat par défaut et la version Java 1.8.0_71 par défaut.
 Pour plus d'informations, voir les informations sur les [éditions java-buildpack](https://github.com/cloudfoundry/java-buildpack/releases).
 
 # rellinks

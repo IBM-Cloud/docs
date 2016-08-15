@@ -50,14 +50,14 @@ copyright:
 JConsole 包含在您的 Java 安裝中。若要啟動 JConsole 應用程式，請移至 &lt;java-home&gt;/bin，並執行下列指令：
 
 ```
-    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
+$ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
 {: codeblock}
 
 您可能必須傳遞其他參數才能配置 Java 信任儲存庫。下列參數在大部分情況下應該都適用：
 
 ```
-    -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
+-J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
 ```
 {: codeblock}
 
@@ -72,7 +72,7 @@ JConsole 包含在您的 Java 安裝中。若要啟動 JConsole 應用程式，�
 
 如果連線失敗，您可以產生日誌來協助診斷問題。首先，嘗試在 jconsole 指令加上 ** -J-Djava.util.logging.config.file=c:/tmp/logging.properties**，以收集用戶端追蹤。以下是記載內容檔範例：
 ```
-    handlers= java.util.logging.FileHandler
+handlers= java.util.logging.FileHandler
     .level=INFO java.util.logging.FileHandler.pattern = /tmp/jmxtrace.log
     java.util.logging.FileHandler.limit = 50000
     java.util.logging.FileHandler.count = 1

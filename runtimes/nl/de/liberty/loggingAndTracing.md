@@ -12,7 +12,7 @@ copyright:
 # Protokollierung und Tracing
 {: #logging_tracing}
 
-*Letzte Aktualisierung: 10. Juni 2016*
+*Letzte Aktualisierung: 21. Juni 2016*
 {: .last-updated}
 
 ## Protokolldateien
@@ -34,7 +34,7 @@ In der Benutzerschnittstelle von IBM Bluemix gibt es Trace- und Speicherauszugsf
 * Mit der Option 'Trace' kann die Tracespezifikation der Liberty-Protokollierung für aktive Anwendungsinstanzen angezeigt und aktualisiert werden.
 * Mit der Option 'Speicherauszug' können Thread- und Heapspeicherauszüge für aktive Anwendungsinstanzen erstellt und bearbeitet werden.
 
-Wählen Sie hierzu eine Liberty-Anwendung in der Benutzerschnittstelle aus. Unter 'Laufzeit' in der Navigation auf der linken Seite können die Instanzdetails geöffnet werden. Wählen Sie eine oder mehrere Instanzen aus. Im Menü 'Aktionen' können Sie TRACE oder SPEICHERAUSZUG auswählen.
+Wählen Sie hierzu eine Liberty-Anwendung in der Benutzerschnittstelle aus. In der Kategorie 'Laufzeit' in der Navigation können die Instanzdetails geöffnet werden. Wählen Sie eine oder mehrere Instanzen aus. Im Menü 'Aktionen' können Sie TRACE oder SPEICHERAUSZUG auswählen.
 
 # Zugehörige Links
 {: #rellinks}

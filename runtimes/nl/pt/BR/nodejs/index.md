@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*Última atualização: 10 de junho de 2016*
+*Última atualização: 7 de julho de 2016*
 {: .last-updated}
 
 O tempo de execução Node.js no {{site.data.keyword.Bluemix}} é desenvolvido com o buildpack sdk-for-nodejs.
@@ -78,6 +78,11 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 {: codeblock}
 
 Com este código, quando o aplicativo está em execução no Bluemix, as variáveis de ambiente VCAP_APP_HOST e VCAP_APP_PORT contêm os valores do host e da porta que são internos para o Bluemix e nos quais o aplicativo atende as conexões recebidas. Quando o aplicativo está em execução localmente, VCAP_APP_HOST e VCAP_APP_PORT não são definidos, portanto, **localhost** é usado como o host e **3000** é usado como o número da porta. Gravando dessa maneira, é possível executar o aplicativo localmente para fins de teste e no Bluemix sem fazer mudanças adicionais.
+
+## Modo offline
+{: #offline_mode}
+
+Consulte [Modo off-line](offlineMode.html) para obter informações sobre como controlar o acesso do buildpack a sites externos. 
 
 ## App Management
 {{site.data.keyword.Bluemix}} fornece vários utilitários para gerenciar e depurar seu app Node.js.  Consulte [Gerenciamento de App](../../manageapps/app_mng.html) para obter detalhes completos.
@@ -152,9 +157,9 @@ Por exemplo:
 {: codeblock}
 
 É importante entender que quando FIPS_MODE é true, alguns módulos de nó podem não
-funcionar. Por exemplo, **módulos de nó que usam
+funcionar.  Por exemplo, **módulos de nó que usam
 [MD5](https://en.wikipedia.org/wiki/MD5) falharão**, como
-[Express](http://expressjs.com/). Para Express, a configuração de
+[Express](http://expressjs.com/).  Para Express, a configuração de
 [etag](http://expressjs.com/en/api.html) como false no app Expess pode
 ajudar a contornar isso. Por exemplo, é possível fazer o seguinte em seu código:
 ```
@@ -166,7 +171,7 @@ para obter mais informações.
 
 **NOTA**
 [Gerenciamento de app](../../manageapps/app_mng.html) e FIPS_MODE
-*NÃO* são suportados simultaneamente. Se a variável de ambiente
+*NÃO* são suportados simultaneamente.  Se a variável de ambiente
 BLUEMIX_APP_MGMT_ENABLE for configurada e a variável de ambiente FIPS_MODE for
 configurada como true, o app falhará no estágio.
 
@@ -194,6 +199,7 @@ Se a versão do SSL contiver "fips", a versão do SSL que está em uso suportar�
 </li>
 
 <li> Para node.js versão 6 e acima, é possível verificar o valor retornado por crypto.fips em código conforme o seguinte:
+
   <pre>
   console.log('crypto.fips== [' +crypto.fips +']');
   </pre>
@@ -292,7 +298,7 @@ Geralmente, o buildpack **sdk-for-nodejs** atual e uma versão anterior estão d
 {: #rellinks}
 ## geral
 {: #general}
-* [Atualizações mais recentes para o buildpack Node.js](updates.html)
+* [Atualizações mais recentes para o buildpack Node.js](../../runtimes/nodejs/updates.html)
 * [Gerenciamento de Aplicativos
 ](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)

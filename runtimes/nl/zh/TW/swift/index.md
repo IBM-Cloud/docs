@@ -5,7 +5,7 @@
 
 # Swift 運行環境
 {: #swift_runtime}
-*前次更新：2016 年 6 月 10 日*
+*前次更新：2016 年 6 月 21 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Swift 運行環境是採用適用於 Bluemix 的 Swift 建置套件技術（亦即 swift_buildpack）。
@@ -32,7 +32,7 @@ swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a
 ```
 {: pre}
 
-除了包括 `.swift-version` 檔案之外，您還需要將 `-b https://github.com/IBM-Swift/swift-buildpack` 參數新增至 `cf push` 指令，如下所示：
+除了包括 `.swift-version` 檔案之外，您還需要將 `-b https://github.com/IBM-Swift/swift-buildpack` 參數新增至 `cf push` 指令，如下列範例所示：
 
 ```
 cf push -b https://github.com/IBM-Swift/swift-buildpack
@@ -42,7 +42,7 @@ cf push -b https://github.com/IBM-Swift/swift-buildpack
 
 如需已安裝在 {{site.data.keyword.Bluemix}} 中的 Swift 建置套件的現行版本詳細資料，請參閱該建置套件的[版本資訊](https://github.com/IBM-Swift/swift-buildpack/releases/tag/1.1.1)。
 
-因為 Swift 語言經常變更，所以您應該包含 `.swift-version` 檔案，使您的應用程式「固定」使用該應用程式已知可以搭配運作的 Swift 版本。也請記住，如果您使用的 Swift 版本不是 `DEVELOPMENT-SNAPSHOT-2016-05-03-a`，則應該在推送應用程式時指定 `-b https://github.com/IBM-Swift/swift-buildpack` 參數（如上所述）。
+因為 Swift 語言經常變更，所以您應該包含 `.swift-version` 檔案，使您的應用程式「固定」使用該應用程式已知可以搭配運作的 Swift 版本。也請記住，如果您使用的 Swift 版本不是 `DEVELOPMENT-SNAPSHOT-2016-05-03-a`，則應該在推送應用程式時指定 `-b https://github.com/IBM-Swift/swift-buildpack` 參數（如上述）。
 
 # 相關鏈結
 {: #rellinks}

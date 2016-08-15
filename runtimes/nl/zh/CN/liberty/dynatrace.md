@@ -66,12 +66,12 @@ $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","pr
 
 ### 托管 Dynatrace 代理程序
 {: #hosting_dynatrace_agent}
-Dynatrace 代理程序必须在 Web 服务器上进行托管，并且 Liberty buildpack 必须能够从该服务器下载代理程序 jar。该服务器必须使用指定代理程序 jar 相关详细信息的 index.yml 文件进行配置。完成下面的步骤以设置 Dynatrace 代理程序：
+Dynatrace 代理程序必须在 Web 服务器上进行托管，并且 Liberty buildpack 必须能够从该服务器下载代理程序 jar。该服务器必须配置有一个 index.yml 文件，该文件用于指定有关代理程序 jar 的详细信息。完成下面的步骤以设置 Dynatrace 代理程序：
   1. 下载 Dynatrace 代理程序 jar。有关下载 Dynatrace 代理程序 jar 的指示信息，请参阅 Dynatrace 社区 Web 站点上的 [Dynatrace Server Platform Installers](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace)。用于在 Bluemix 上运行的相应代理程序 jar 文件为 **dynatrace-agent-unix.jar** V**6.+**。
   2. 在 Liberty buildpack 可以下载代理程序 jar 文件的位置托管该 jar 文件。可以使用任一可用的服务器工具在 Bluemix 本身上托管该 jar 文件，也可以在某些公共可用的位置进行托管。
      * 确保在托管位置提供 index.yml 文件。index.yml 文件必须包含由以下各项组成的一个条目：代理程序 jar 的版本标识，后跟一个冒号和该代理程序 jar 位置的完整 URL。例如：
 ```
-      ---
+---
       6.3.0: https://my-dynatrace-agent.mybluemix.net/dynatrace-agent-6.3.0-unix.jar
 ```  
 {: codeblock}

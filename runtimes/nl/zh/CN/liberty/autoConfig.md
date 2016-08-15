@@ -86,7 +86,7 @@ copyright:
 更正式地说，字符串的语法如下所示。
 
 ```
-    Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
+Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
     <service_type_specification> :: <service_type>=<option>
     <service_type> :: service type (service label as it appears in VCAP_SERVICES)
     <option> :: all | config
@@ -101,7 +101,7 @@ copyright:
 下面是 manifest.yml 文件中针对 Mongo 和 SQLDB 场景的样本选择退出规范。
 
 ```
-    env:
+env:
       services_autoconfig_excludes: mongodb-2.2=allenv:
       services_autoconfig_excludes: sqldb=configenv:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
@@ -111,7 +111,7 @@ copyright:
 下面是如何使用命令行界面为应用程序 myapp 设置 services_autoconfig_excludes 环境变量的示例。
 
 ```
-    $ cf set-env myapp services_autoconfig_excludes sqldb=config
+$ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}

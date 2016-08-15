@@ -88,7 +88,7 @@ copyright:
 更正式地說，字串的文法如下。
 
 ```
-    Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
+Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
     <service_type_specification> :: <service_type>=<option>
     <service_type> :: service type（如同 VCAP_SERVICES 中顯示的服務標籤）
     <option> :: all | config
@@ -96,14 +96,14 @@ copyright:
 ```
 {: codeblock}
 
-**重要事項**：您指定的服務類型必須符合出現在 VCAP_SERVICES 環境變數中的服務標籤。不接受空格。**重要事項**：在 &lt;service_type_specification> 內不接受空格。唯一接受使用空格的情況是要隔開多個 &lt;service_type_specification> 實例。
+**重要事項**：您指定的服務類型必須符合出現在 VCAP_SERVICES 環境變數中的服務標籤。不接受空格。**重要事項**：在 <service_type_specification> 內不接受空格。唯一接受使用空格的情況是要隔開多個 <service_type_specification> 實例。
 
 使用 "all" 選項可拒絕服務的所有自動配置動作，如同上述的 Mongo 情境。使用 "config" 選項只拒絕配置更新動作，如同上述的 SQLDB 情境。
 
 以下是 manifest.yml 檔案中用於 Mongo 和 SQLDB 情境的拒絕規格範例。
 
 ```
-    env:
+env:
       services_autoconfig_excludes: mongodb-2.2=allenv:
       services_autoconfig_excludes: sqldb=configenv:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all

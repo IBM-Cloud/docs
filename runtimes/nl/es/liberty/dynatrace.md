@@ -18,12 +18,12 @@ Dynatrace es un servicio de otro proveedor que proporciona supervisión de la ap
 
 Para obtener más información acerca de lo que proporciona el servicio de Dynatrace, consulte [Supervisión de la aplicación Dynatrace](http://www.dynatrace.com/en/products/application-monitoring.html).
 
-Cuando la aplicación Liberty se configura para utilizar Dynatrace, el comportamiento predeterminado es que el tiempo de ejecución de Liberty adquirirá un archivo jar de agente de Dynatrace desde un sitio Dynatrace y ejecutará dicho agente Dynatrace con la app. Con este comportamiento predeterminado las configuración mínima necesaria para utilizar Dynatrace es crear un servicio proporcionado por el usuario que apunte al recopilador
+Cuando la aplicación Liberty se configura para utilizar Dynatrace, el comportamiento predeterminado es que el tiempo de ejecución de Liberty adquirirá un archivo jar de agente de Dynatrace desde un sitio Dynatrace y ejecutará dicho agente Dynatrace con la app.  Con este comportamiento predeterminado las configuración mínima necesaria para utilizar Dynatrace es crear un servicio proporcionado por el usuario que apunte al recopilador
 Dynatrace.
 
 ## Creación de un servicio proporcionado por el usuario que apunte al recopilador de Dynatrace
 
-En primer lugar será necesario configurar un recopilador de Dynatrace. A continuación, deberá crear un servicio proporcionado por el usuario para pasar información para el agente
+En primer lugar será necesario configurar un recopilador de Dynatrace.  A continuación, deberá crear un servicio proporcionado por el usuario para pasar información para el agente
 de Dynatrace para conectarse con el recopilador de Dynatrace. Consulte [Arquitectura de Dynatrace](https://community.dynatrace.com/community/display/DOCDT63/Architecture) para comprender mejor la relación entre componentes de Dynatrace.
 
 <ol>
@@ -67,8 +67,7 @@ Consulte [Sección establecimiento del agente de la configuración del agente](h
 ## Configuración opcional
 {: #optional_configuration}
 
-Puede elegir adquirir y alojar usted mismo el archivo jar del agente de Dynatrace. En ese caso, son necesarios los siguientes pasos de configuración adicionales.
-
+Puede elegir adquirir y alojar usted mismo el archivo jar del agente de Dynatrace.  En ese caso, son necesarios los siguientes pasos de configuración adicionales.
 1. Adquiera y aloje el archivo jar del agente de Dynatrace para que el paquete de compilación de Liberty pueda descargarlo.
 2. Configure la app de Liberty de modo que pueda descargar el agente de Dynatrace.
 

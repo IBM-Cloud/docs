@@ -15,18 +15,18 @@ copyright:
 *Dernière mise à jour : 30 mai 2016*
 
 L'environnement d'exécution ASP.NET Core sur {{site.data.keyword.Bluemix}} utilise la technologie du pack de construction ASP.NET Core. ASP.NET Core est une infrastructure open source modulaire permettant de créer des applications Web .NET.
-.Net Core est un petit environnement d'exécution multiplateforme qui peut être ciblé par des applications ASP.NET Core.
+.Net Core est un petit environnement d'exécution multiplateforme qui peut être ciblé par des applications ASP.NET Core. 
 Elles sont combinées pour activer des applications Web modernes basées sur le cloud.
 {: shortdesc}
 
 ## Détection
 {: #detection}
-Le pack de construction Bluemix ASP.NET Core est utilisé si un ou plusieurs fichiers project.json figurent dans l'application, ou si l'application est propagée depuis le répertoire de sortie de la commande *dotnet publish*. 
+Le pack de construction Bluemix ASP.NET Core est utilisé si l'application comporte un ou plusieurs dossiers contenant à la fois un fichier project.json et au moins un fichier .cs, ou si l'application est envoyée par push depuis le répertoire de sortie de la commande *dotnet publish*.
 
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} fournit une application de démarrage ASP.NET Core. L'application de démarrage ASP.NET Core est une application simple qui fournit un modèle que vous pouvez utiliser. Vous pouvez expérimenter cette application de démarrage et effectuer des modifications puis les envoyer par commande push vers l'environnement Bluemix.  Voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix}} fournit une application de démarrage ASP.NET Core.  L'application de démarrage ASP.NET Core est une application simple qui fournit un modèle que vous pouvez utiliser. Vous pouvez expérimenter cette application de démarrage et effectuer des modifications puis les envoyer par commande push vers l'environnement Bluemix.  Voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html) pour obtenir de l'aide.
 
 ## Versions d'environnement d'exécution
 {: #runtime_versions}
@@ -44,7 +44,7 @@ Contrôlez la version .NET CLI à l'aide d'un fichier global.json facultatif con
 ```
 {: codeblock}
 
-Si aucune valeur n'est spécifiée, le candidat de l'édition stable est utilisé. 
+Si aucune valeur n'est spécifiée, le candidat de l'édition stable est utilisé.
 
 ### Personnalisation des sources de package NuGet
 
@@ -63,14 +63,13 @@ Contrôlez l'emplacement à partir duquel les dépendances de votre application 
 {: #developing_locally}
 
 Pour plus d'informations sur l'exécution d'une application ASP.NET Core en local, voir [Getting Started with ASP.NET](http://docs.asp.net/en/latest/getting-started/index.html).
-Pour coller le plus possible au mode d'exécution de l'application dans Bluemix, suivez les instructions pour .NET Core ; sachez que le développement de l'application sur Linux n'est pas obligatoire. 
+Pour coller le plus possible au mode d'exécution de l'application dans Bluemix, suivez les instructions pour .NET Core ; sachez que le développement de l'application sur Linux n'est pas obligatoire.
 
 L'outil Yeoman peut être utilisé pour générer de nouveaux modèles de projet, comme indiqué dans [Building Projects with Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
-## Envoi par commande push d'une application publiée 
+## Envoi par commande push d'une application publiée
 
-Si votre application doit contenir tous ses fichiers binaires requis et éviter ainsi que le pack de construction ne télécharge des fichiers binaires externes, vous pouvez envoyer par commande push une application *autonome* publiée. Pour plus d'informations sur les applications autonomes, voir [Types of portability in .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}.
-
+Si votre application doit contenir tous ses fichiers binaires requis et éviter ainsi que le pack de construction ne télécharge des fichiers binaires externes, vous pouvez envoyer par commande push une application *autonome* publiée.  Pour plus d'informations sur les applications autonomes, voir [Types of portability in .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}.
 
 Pour publier une application, exécutez une commande telle que la suivante :
 ```
@@ -78,14 +77,14 @@ Pour publier une application, exécutez une commande telle que la suivante :
 ```
 {: codeblock}
   
-L'application peut ensuite être envoyée par commande push envoyé à partir du répertoire 
+L'application peut ensuite être envoyée par commande push envoyé à partir du répertoire
 ```
   bin/<Debug|Release>/<framework>/<runtime>/publish
 ```
 {: codeblock}
 .
 
-En outre, si vous utilisez un fichier manifest.yml dans votre application, vous pouvez spécifier le chemin d'accès au dossier de sortie de la publication dans votre fichier manifest.yml.  Ensuite, il n'est pas nécessaire de se placer dans ce dossier lors de l'envoi par commande push de l'application. 
+En outre, si vous utilisez un fichier manifest.yml dans votre application, vous pouvez spécifier le chemin d'accès au dossier de sortie de la publication dans votre fichier manifest.yml.  Ensuite, il n'est pas nécessaire de se placer dans ce dossier lors de l'envoi par commande push de l'application.
 
 ## Déploiement d'applications comportant plusieurs projets
 
@@ -112,7 +111,7 @@ Le pack de construction va exécuter votre application avec la commande *dotnet 
 ```
 {: codeblock}
 
-Votre application devra transmettre cet argument à kestrel pour s'assurer que kestrel est en mode écoute sur le port approprié. 
+Votre application devra transmettre cet argument à kestrel pour s'assurer que kestrel est en mode écoute sur le port approprié.
 
 L'implémentation de la transmission de cet argument nécessite que les exemples fournis dans le répertoire cli-samples et les modèles fournis par Visual Studio soient légèrement modifiés avant d'être déployés vers Bluemix.
 

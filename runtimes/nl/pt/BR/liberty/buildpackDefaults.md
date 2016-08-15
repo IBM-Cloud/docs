@@ -32,7 +32,7 @@ O buildpack fornece duas versões do tempo de execução do Liberty:
   * Não fornece quaisquer [recursos beta](usingBetaFeatures.html).
   * Normalmente, é atualizado por trimestre.
 
-2. A liberação beta mais recente
+2. A liberação mensal
   * Deve ser ativada explicitamente configurando a variável de ambiente **JBP_CONFIG_LIBERTY** com o valor **"version: +"**.
   * Fornece [recursos beta](usingBetaFeatures.html).
   * Normalmente, é atualizado por mês.

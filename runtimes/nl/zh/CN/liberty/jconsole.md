@@ -49,14 +49,14 @@ copyright:
 
 JConsole 包含在 Java 安装中。要启动 JConsole 应用程序，请转至 &lt;java-home&gt;/bin，并运行以下命令：
 ```
-    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
+$ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
 {: codeblock}
 
 您可能需要传递其他参数来配置 Java trustStore。以下参数应适用于大部分情况：
 
 ```
-    -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
+-J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
 ```
 {: codeblock}
 
@@ -71,7 +71,7 @@ JConsole 包含在 Java 安装中。要启动 JConsole 应用程序，请转至 
 
 如果连接失败，可生成日志以帮助诊断问题。首先，尝试通过向 jconsole 命令添加** -J-Djava.util.logging.config.file=c:/tmp/logging.properties** 来收集客户机端跟踪。下面是样本日志记录属性文件：
 ```
-    handlers= java.util.logging.FileHandler
+handlers= java.util.logging.FileHandler
     .level=INFO java.util.logging.FileHandler.pattern = /tmp/jmxtrace.log
     java.util.logging.FileHandler.limit = 50000
     java.util.logging.FileHandler.count = 1

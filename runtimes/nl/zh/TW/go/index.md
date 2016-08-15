@@ -12,7 +12,7 @@ copyright:
 
 # Go
 {: #go_runtime}
-*前次更新：2016 年 3 月 16 日*
+*前次更新：2016 年 7 月 6 日*
 
 {{site.data.keyword.Bluemix}} 上的 Go 運行環境是採用 go_buildpack 技術。go_buildpack 為 Go 應用程式提供完整的運行環境。
 {: shortdesc}
@@ -32,7 +32,7 @@ go_buildpack 用於您的應用程式包含名為 *.go 的檔案的情況。
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.3.3",
+	"GoVersion": "go1.6.1",
 	"Deps": []
 }
 ```
@@ -42,16 +42,14 @@ go_buildpack 用於您的應用程式包含名為 *.go 的檔案的情況。
 ### 可用的版本：
 {: #available_versions}
 
-目前安裝在 {{site.data.keyword.Bluemix}} 中的 [Go 建置套件](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window}提供下列 Go 版本：
+目前安裝在 {{site.data.keyword.Bluemix}} 中的 [Go 建置套件](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.7.5){: new_window}提供下列 Go 版本：
 
-* 1.2.1
-* 1.2.2
-* 1.3.2
-* 1.3.3
 * 1.4.2
 * 1.4.3
-* 1.5
-* 1.5.1
+* 1.5.3
+* 1.5.4
+* 1.6
+* 1.6.1
 
 如果您的應用程式需要未列出的 Go 版本，則可以使用外部 [Go 建置套件](https://github.com/cloudfoundry/go-buildpack.git){: new_window}來部署該應用程式。
 

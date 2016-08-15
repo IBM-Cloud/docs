@@ -34,7 +34,7 @@ Bluemix에서 WAR 또는 EAR 파일과 같은 독립형 애플리케이션을 Li
 예: 
 
 ```
-    $ cf push <yourappname> -p myapp.war
+$ cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -60,23 +60,23 @@ Bluemix에서 WAR 또는 EAR 파일과 같은 독립형 애플리케이션을 Li
 이 기능은 Java EE 7 Web Profile 기능에 해당합니다. JBP_CONFIG_LIBERTY 환경 변수를 설정하여 Liberty 기능의 다른 설정을 지정할 수 있습니다. 예를 들어, jsp-2.3 및 websocket-1.1 기능만 사용하려면 명령을 실행하고 애플리케이션을 다시 스테이징하십시오. 
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
 참고: 최상의 결과를 얻으려면 JBP_CONFIG_LIBERTY 환경 변수로 Liberty 기능을 설정하거나 사용자 정의 server.xml 파일로 [서버 디렉토리](optionsForPushing.html#server_directory) 또는 [패키지된 서버](optionsForPushing.html#packaged_server)로서 애플리케이션을 배치하십시오. 이 환경 변수를 설정하면 애플리케이션이 필요한 기능만 사용하며 빌드팩의 기본 Liberty 기능 설정 변경사항의 영향을 받지 않도록 합니다. 기능 세트 외에도 추가 Liberty 구성을 제공해야 하는 경우에는 [서버 디렉토리](optionsForPushing.html#server_directory) 또는 [패키지된 서버](optionsForPushing.html#packaged_server) 옵션을 사용하여 애플리케이션을 배치하십시오. 
 
-WAR 파일을 배치한 경우, 웹 애플리케이션은 임베디드 ibm-web-ext.xml 파일에 설정된 대로 컨텍스트 루트에서 액세스 가능합니다. ibm-web-ext.xml 파일이 존재하지 않거나 컨텍스트 루트를 지정하지 않는 경우에는 애플리케이션이 루트 컨텍스트에서 액세스 가능합니다. 예를 들면, 다음과 같습니다. 
+WAR 파일을 배치한 경우, 웹 애플리케이션은 임베디드 ibm-web-ext.xml 파일에 설정된 대로 컨텍스트 루트에서 액세스 가능합니다. ibm-web-ext.xml 파일이 존재하지 않거나 컨텍스트 루트를 지정하지 않는 경우에는 애플리케이션이 루트 컨텍스트에서 액세스 가능합니다. 예를 들어, 다음과 같습니다. 
 
 ```
-    http://<yourappname>.mybluemix.net/
+http://<yourappname>.mybluemix.net/
 ```
 {: codeblock}
 
-EAR 파일을 배치했으면 EAR 배치 디스크립터에 정의된 컨텍스트 루트에서 임베디드 웹 애플리케이션에 액세스할 수 있습니다. 예를 들면, 다음과 같습니다. 
+EAR 파일을 배치했으면 EAR 배치 디스크립터에 정의된 컨텍스트 루트에서 임베디드 웹 애플리케이션에 액세스할 수 있습니다. 예를 들어, 다음과 같습니다. 
 
 ```
-    http://<yourappname>.mybluemix.net/acme/
+http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -124,14 +124,14 @@ EAR 파일을 배치했으면 EAR 배치 디스크립터에 정의된 컨텍스�
 예: 
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 중요: 환경 변수 변경사항을 적용하려면 다음과 같이 애플리케이션을 다시 스테이징해야 합니다.
 
 ```
-    $ cf restage myapp
+$ cf restage myapp
 ```
 {: codeblock}
 
@@ -144,7 +144,7 @@ Liberty 프로파일을 워크스테이션에 설치했으며 이미 애플리�
 예를 들어, Liberty 서버의 이름이 defaultServer이면 다음 명령을 실행하십시오.
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
+$ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -173,35 +173,37 @@ Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다�
 서버 디렉토리가 준비되면, Bluemix에 배치할 수 있습니다. 
 
 ```
-    $ cf push <yourappname> -p defaultServer
+$ cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
 참고: 서버 디렉토리의 일부로 배치되는 웹 애플리케이션은 [Liberty 프로파일에서 판별되는 컨텍스트 루트](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)에서 액세스할 수 있습니다. 예: 
 
 ```
-    http://<yourappname>.mybluemix.net/acme/
+http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
 ## 패키지된 서버
 {: #packaged_server}
 
-패키지된 서버 파일을 Bluemix에 푸시할 수도 있습니다. 패키지된 서버 파일은 Liberty의 서버 패키지 명령을 사용하여 작성됩니다. 패키지된 서버 파일에는 애플리케이션과 구성 파일 외에 애플리케이션에 필요한 공유 자원 및 Liberty 사용자 기능이 포함되어 있습니다.
+패키지된 서버 파일을 Bluemix에 푸시할 수도 있습니다. 패키지된 서버 파일은 Liberty의 서버 패키지 명령을 사용하여 작성됩니다. 패키지된 서버 파일에는 애플리케이션과 구성 파일 외에 애플리케이션에 필요한 공유 리소스 및 Liberty 사용자 기능이 포함되어 있습니다.
 
-Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 ./bin/server package 명령을 사용하십시오. 서버 이름을 지정하고 '––include=usr' 옵션을 포함하십시오.
+Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/server package` 명령을 사용하십시오. 서버 이름을 지정하고 `--include=usr` 옵션을 포함하십시오.
 예를 들어, Liberty 서버가 defaultServer이면 다음 명령을 실행하십시오.
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+$ wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
-이 명령은 서버 디렉토리에 serverName.zip 파일을 생성합니다. 그러면 사용자가 cf push 명령을 사용하여 해당 압축 파일을 Bluemix에 푸시할 수 있습니다.
+이 명령은 서버 디렉토리에 serverName.zip 파일을 생성합니다. 다른 아카이브 파일을 지정하는 데 ``--archive`` 옵션을 사용한 경우 ``.jar` 대신 ``.zip` 확장자가 있는지 확인하십시오. **빌드팩은 `.jar` 확장자로 작성된 패키지된 서버 파일을 지원하지 않습니다**.
+
+그러면 사용자가 생성된 `.zip` 파일을 Bluemix에 `cf push` 명령으로 푸시할 수 있습니다.
 예: 
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+$ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 
@@ -252,7 +254,7 @@ connection.name: 연결의 고유 ID이며, UUID 형식을 사용합니다. 예:
 * connection.username: connection.user에 대한 별명입니다.
 * connection.password: 이 애플리케이션을 서비스에 인증하는 데 사용되는 비밀번호입니다. 비밀번호는 Cloud Foundry에서 자동 생성됩니다. 예: pvyCY0YzX9pu5.
 
-Liberty 빌드팩을 통해 자동으로 구성되지 않는 바인드된 서비스의 경우, 애플리케이션에서 자체적으로 백엔드 자원의 액세스를 관리해야 합니다.
+Liberty 빌드팩을 통해 자동으로 구성되지 않는 바인드된 서비스의 경우, 애플리케이션에서 자체적으로 백엔드 리소스의 액세스를 관리해야 합니다.
 
 # 관련 링크
 {: #rellinks}

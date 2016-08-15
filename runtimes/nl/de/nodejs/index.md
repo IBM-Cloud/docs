@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Node.js
 {: #nodejs_runtime}
-*Letzte Aktualisierung: 10. Juni 2016*
+*Letzte Aktualisierung: 07. Juli 2016*
 {: .last-updated}
 
 Die Laufzeit von Node.js in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'sdk-for-nodejs'.
@@ -71,6 +71,11 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 {: codeblock}
 
 Wenn die Anwendung in Bluemix ausgeführt wird, enthalten die Umgebungsvariablen VCAP_APP_HOST und VCAP_APP_PORT mit diesem Code die für Bluemix internen Werte für den Host und den Port, auf dem die App für eingehende Verbindungen empfangsbereit ist. Bei lokaler Ausführung der Anwendung sind die Umgebungsvariablen VCAP_APP_HOST und VCAP_APP_PORT nicht definiert, wodurch **localhost** als Host und **3000** als Portnummer verwendet werden. Durch diese Schreibung können Sie die Anwendung sowohl lokal für Textzwecke als auch in Bluemix ausführen, ohne Änderungen vornehmen zu müssen.
+
+## Offlinemodus
+{: #offline_mode}
+
+Informationen zum Steuern des Buildpack-Zugriff auf externe Sites finden Sie unter [Offlinemodus](offlineMode.html). 
 
 ## App-Management
 {{site.data.keyword.Bluemix}} stellt eine Anzahl Dienstprogramme für das Management und das Debugging Ihrer Node.js-App zur Verfügung.  Vollständige Details finden Sie in [App-Management](../../manageapps/app_mng.html).
@@ -142,7 +147,7 @@ Beispiel:
 ```
 {: codeblock}
 
-Beachten Sie, dass einige Knotenmodule möglicherweise nicht funktionieren, wenn FIPS_MODE auf 'true' gesetzt ist. Beispiel: **Knotenmodule, die [MD5](https://en.wikipedia.org/wiki/MD5) nutzen, schlagen fehl**, wie beispielsweise [Express](http://expressjs.com/).  Im Falle von Express können Sie dieses Problem möglicherweise umgehen, indem Sie [etag](http://expressjs.com/en/api.html) in Ihrer
+Beachten Sie, dass einige Knotenmodule möglicherweise nicht funktionieren, wenn FIPS_MODE auf 'true' gesetzt ist.  Beispiel: **Knotenmodule, die [MD5](https://en.wikipedia.org/wiki/MD5) nutzen, schlagen fehl**, wie beispielsweise [Express](http://expressjs.com/).  Im Falle von Express können Sie dieses Problem möglicherweise umgehen, indem Sie [etag](http://expressjs.com/en/api.html) in Ihrer
 Expess-App auf 'false' setzen. Sie können Ihren Code beispielsweise wie folgt bearbeiten:
 ```
     app.set('etag', false);
@@ -150,7 +155,7 @@ Expess-App auf 'false' setzen. Sie können Ihren Code beispielsweise wie folgt b
 {: codeblock}
 Weitere Informationen finden Sie in diesem [stackoverflow-Post](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js).
 
-**ANMERKUNG** [App-Management](../../manageapps/app_mng.html) und FIPS_MODE werden *NICHT* gleichzeitig unterstützt. Wenn die Umgebungsvariable BLUEMIX_APP_MGMT_ENABLE eingestellt ist und die Umgebungsvariable FIPS_MODE auf 'true' gesetzt ist, kann für die App kein Staging durchgeführt werden.
+**ANMERKUNG** [App-Management](../../manageapps/app_mng.html) und FIPS_MODE werden *NICHT* gleichzeitig unterstützt.  Wenn die Umgebungsvariable BLUEMIX_APP_MGMT_ENABLE eingestellt ist und die Umgebungsvariable FIPS_MODE auf 'true' gesetzt ist, kann für die App kein Staging durchgeführt werden.
 
 Es gibt mehrere Möglichkeiten, den FIPS_MODE-Status zu überprüfen:
 <ul>
@@ -272,7 +277,7 @@ In der Regel stehen das aktuelle Buildpack **sdk-for-nodejs** und eine frühere 
 {: #rellinks}
 ## Allgemein
 {: #general}
-* [Neueste Aktualisierungen für das Node.js-Buildpack](updates.html)
+* [Neueste Aktualisierungen für das Node.js-Buildpack](../../runtimes/nodejs/updates.html)
 * [App-Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

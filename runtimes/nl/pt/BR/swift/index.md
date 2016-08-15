@@ -5,7 +5,7 @@
 
 # Tempo de execução do Swift
 {: #swift_runtime}
-*Última atualização: 10 de junho de 2016*
+*Última atualização: 21 de junho de 2016*
 {: .last-updated}
 
 O tempo de execução Swift no {{site.data.keyword.Bluemix}} é desenvolvido
@@ -39,9 +39,7 @@ swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a
 ```
 {: pre}
 
-Além de incluir um arquivo `.swift-version`, você precisaria
-incluir o parâmetro `-b https://github.com/IBM-Swift/swift-buildpack` no
-comando `cf push`, conforme mostrado abaixo:
+Além de incluir um arquivo `.swift-version`, você também precisaria incluir o parâmetro `-b https://github.com/IBM-Swift/swift-buildpack` no comando `cf push`, conforme mostrado no exemplo a seguir:
 
 ```
 cf push -b https://github.com/IBM-Swift/swift-buildpack
@@ -52,8 +50,7 @@ Para obter uma lista completa das versões suportadas do Swift, consulte o arqui
 Para obter detalhes sobre a versão atual do buildpack do Swift que está instalado no {{site.data.keyword.Bluemix}}, consulte as [informações sobre a liberação](https://github.com/IBM-Swift/swift-buildpack/releases/tag/1.1.1) do buildpack.
 
 Como há mudanças frequentes de idioma do Swift, será necessário incluir um
-arquivo `.swift-version` para que seu app seja "fixado" à versão do Swift com a qual sabe-se que seu aplicativo funciona. Lembre-se também de que se você estiver usando uma versão do Swift diferente de
-`DEVELOPMENT-SNAPSHOT-2016-05-03-a`, será necessário especificar o parâmetro `-b https://github.com/IBM-Swift/swift-buildpack` ao enviar seu app por push (conforme mostrado acima).
+arquivo `.swift-version` para que seu app seja "fixado" à versão do Swift com a qual sabe-se que seu aplicativo funciona. Lembre-se também de que se você estiver usando uma versão do Swift diferente de `DEVELOPMENT-SNAPSHOT-2016-05-03-a`, deverá especificar o parâmetro `-b https://github.com/IBM-Swift/swift-buildpack` ao enviar seu app por push (conforme mostrado anteriormente).
 
 # rellinks
 {: #rellinks}

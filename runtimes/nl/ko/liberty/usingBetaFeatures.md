@@ -62,29 +62,29 @@ Bluemix에서 Liberty 베타 기능을 사용하려면 다음을 수행해야 �
   * cf 명령행 도구 사용:
 
 ```
-       $ cf set-env <yourappname> IBM_LIBERTY_BETA true
+$ cf set-env <yourappname> IBM_LIBERTY_BETA true
 ```
 {: #codeblock}
 
   * 또는 manifest.yml 파일 사용:
 
 ```
-      env:
+env:
           IBM_LIBERTY_BETA: "true"
 ```
 
-3. **JBP_CONFIG_LIBERTY** 환경 변수를 **"version: +"**로 설정하십시오. 이 변수는 베타 기능을 지원하는 [Liberty 베타 런타임](buildpackDefaults.html#liberty_versions)을 사용으로 설정합니다. 예: 
+3. **JBP_CONFIG_LIBERTY** 환경 변수를 **"version: +"**로 설정하십시오. 이 변수는 베타 기능을 지원하는 [Liberty 월별 런타임](buildpackDefaults.html#liberty_versions)을 사용으로 설정합니다. 예: 
   * cf 명령행 도구 사용:
 
 ```
-       $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
+$ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
 ```
 {: #codeblock}
 
   * 또는 manifest.yml 파일 사용:
 
 ```
-      env:
+env:
           JBP_CONFIG_LIBERTY: "version: +"
 ```
 

@@ -188,7 +188,9 @@ Nota: os aplicativos da Web que são implementados como parte do diretório do s
 
 Também é possível enviar por push um arquivo do servidor em pacote para o Bluemix. O arquivo de servidor em pacote é criado usando o comando de pacote do servidor Liberty. Além do aplicativo e dos arquivos de configuração, o arquivo do servidor em pacote pode conter recursos compartilhados e recursos do usuário do Liberty necessários pelo aplicativo.
 
-Para colocar em pacote um servidor Liberty, use o comando ./bin/server package a partir do diretório de instalação do Liberty. Especifique o nome do servidor e inclua a opção '––include=usr'.
+Para colocar em pacote um servidor do Liberty, use o comando
+`./bin/server package` a partir do seu diretório de instalação do
+Liberty. Especifique o nome do servidor e inclua a opção `--include=usr`.
 Por exemplo, se o servidor Liberty for defaultServer, execute o comando:
 
 ```
@@ -196,7 +198,9 @@ Por exemplo, se o servidor Liberty for defaultServer, execute o comando:
 ```
 {: codeblock}
 
-Esse comando gera um arquivo serverName.zip no diretório do servidor. É possível então enviar por push esse arquivo compactado para o Bluemix com o comando cf push.
+Esse comando gera um arquivo serverName.zip no diretório do servidor. Se você tiver usado a opção `--archive` para especificar um archive diferente, certifique-se de que ele tenha a extensão `.zip` em vez de `.jar`. **O buildpack não suporta arquivos do servidor compactados criados com a extensão .jar**.
+
+É possível então enviar por push o arquivo `.zip` gerado para o Bluemix com o comando `cf push`.
 Por exemplo:
 
 ```

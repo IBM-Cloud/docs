@@ -11,11 +11,19 @@ copyright:
 # Neueste Aktualisierungen für das Buildpack 'sdk-for-nodejs'
 {: #latest_updates}
 
-*Letzte Aktualisierung: 22. Juni 2016*
+*Letzte Aktualisierung: 18. Juli 2016*
 {: .last-updated}
 
 Eine Liste mit den neuesten Aktualisierungen im Buildpack 'sdk-for-nodejs'.
-## 22. Juni 2016: Node.js-Buildpack v3.5-20160608-1102 aktualisiert
+## 22. Juli 2016: Node.js buildpack v3.6-20160715-0749 aktualisiert
+Mit diesem Release des Buildpacks werden die IBM SDK for Node.js-Laufzeitversionen 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 und 6.2.2 unterstützt. Die Standardversion ist jetzt 4.4.7.
+
+Dieses Release enthält ein App-Management-Proxy, das eingebundene Anmeldungen unterstützt.
+
+Fixes für die folgenden Sicherheitslücken sind enthalten:
+* [CVE-2016-1669](http://www-01.ibm.com/support/docview.wss?uid=swg21986383)
+
+## 22. Juni 2016: Node.js-Buildpack v3.5-20160609-1608 aktualisiert
 
 Mit diesem Release des Buildpacks werden die IBM SDK for Node.js-Laufzeitversionen 4.4.5 und 6.2.0 hinzugefügt. Zur Standardversion wird 4.4.5.
 
@@ -25,7 +33,7 @@ Dieses Release beinhaltet Fehlerkorrekturen aus dem [Node.js-Buildpack 1.5.14 vo
 
 ## 20. Mai 2016: Node.js-Buildpack v3.4-20160518-1653 aktualisiert
 
-Mit diesem Release des Buildpacks werden die IBM SDK for Node.js-Laufzeitversionen 0.10.45, 0.12.14, 4.4.4, 6.0.0 und 6.1.0 hinzugefügt. Die Standardversion ist jetzt 4.4.4. 
+Mit diesem Release des Buildpacks werden die IBM SDK for Node.js-Laufzeitversionen 0.10.45, 0.12.14, 4.4.4, 6.0.0 und 6.1.0 hinzugefügt. Die Standardversion ist jetzt 4.4.4.
 
 Fixes für die folgenden Sicherheitslücken sind enthalten:
 * [CVE-2015-8855](http://www-01.ibm.com/support/docview.wss?uid=swg21982852)
@@ -35,7 +43,8 @@ Beachten Sie, dass es ein bekanntes Problem mit npm Version 3 und dem Dienstprog
 
 ## 29. April 2016: Node.js-Buildpack v3.3-20160428-1409 aktualisiert
 
-Mit diesem Release des Buildpacks werden die IBM SDK for Node.js-Laufzeitversionen 0.10.44, 0.12.13, 4.4.0, 4.4.1, 4.4.2 und 4.4.3 hinzugefügt. Die Standardversion ist jetzt 4.4.3. Bei
+Mit diesem Release des Buildpacks werden die IBM SDK for Node.js-Laufzeitversionen 0.10.44, 0.12.13, 4.4.0, 4.4.1, 4.4.2 und 4.4.3 hinzugefügt. Die Standardversion ist jetzt 4.4.3.
+Bei
 4.3.1 und höher ist es nun möglich, eine FIPS-fähige Version der Laufzeit zu verwenden. Hierfür müssen Sie die Umgebungsvariable `FIPS_MODE=true` für Ihre App festlegen.
 
 Das aktualisierte Buildpack und die neuen Laufzeitversionen enthalten außerdem Fixes für Sicherheitslücken:

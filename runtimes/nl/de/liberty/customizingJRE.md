@@ -54,6 +54,11 @@ Die Versionseigenschaft kann auf einen Versionsbereich wie '1.7.+ ' oder auf ein
 [Liste der
 verfügbaren OpenJDK-Versionen](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml) aufgeführte Version festgelegt werden. Die besten Ergebnisse erzielen Sie, wenn Sie Java 8 verwenden.
 
+## Oracle JRE
+{: #oracle_jre}
+
+Informationen zur Verwendung von Oracle JRE finden Sie unter [Oracle JRE verwenden](oracle_jre.html).
+
 ## JRE-Optionen konfigurieren
 {: #configuring_jre}
 
@@ -81,8 +86,7 @@ JVM-Speicherauszugsoptionen und Beenden der Prozesse bei erschöpfter Speicherka
   * Weiterleitung von Informationen zu den verfügbaren Speicherressourcen der Anwendung im Fehlerfall an Loggregator.
   * Wenn eine Anwendung für die Aktivierung von JVM-Hauptspeicherauszügen konfiguriert ist, wird das Beenden von Java-Prozessen inaktiviert und die JVM-Hauptspeicherauszüge werden an das gemeinsame Anwendungsverzeichnis 'dumps' weitergeleitet. Diese Speicherauszüge können dann über das Bluemix-Dashboard oder die CF-CLI angezeigt werden.
 
-Im Folgenden finden Sie ein Beispiel für eine JVM-Standardkonfiguration, die vom Buildpack für eine Anwendung generiert wird, die mit einer Speicherbegrenzung von 512 MB bereitgestellt wird:
-   
+Im Folgenden finden Sie ein Beispiel für eine JVM-Standardkonfiguration, die vom Buildpack für eine Anwendung generiert wird, die mit einer Speicherbegrenzung von 512 MB bereitgestellt wird:   
 ```
     -Xtune:virtualized
     -Xmx384M

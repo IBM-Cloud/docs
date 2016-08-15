@@ -11,10 +11,17 @@ copyright:
 # ASP.NET Core ビルドパックに対する最新の更新
 {: #latest_updates}
 
-*最終更新日時: 2016 年 6 月 10 日*
-
+*最終更新日: 2016 年 7 月 7 日*
 
 aspnet ビルドパックの最新更新のリスト。
+
+## 2016 年 7 月 11 日: 更新された ASP.NET Core ビルドパック v0.9-20160706-1603
+
+このバージョンのビルドパックには、以下の変更が含まれています。
+
+* このバージョンのビルドパックは、.NET CLI 1.0 Preview 2 ビルドおよび .NET Core 1.0 RTM をサポートします
+* このビルドパックでは .NET CLI 1.0 Preview 1 および .NET Core 1.0 RC2 のサポートを継続します
+* インストールされるデフォルトの .NET CLI バージョンは現在、1.0.0-preview2-003121 です
 
 ## 2016 年 6 月 10 日: ASP.NET Core ビルドパック v0.8.1-20160526-0957 の更新
 
@@ -35,7 +42,7 @@ aspnet ビルドパックの最新更新のリスト。
 * このバージョンのビルドパックは Beta 7 DNX の変更に対応しており、以下のカスタム開始コマンドを使用して、以前のベータ版に依存するアプリケーションを実行できます。
 
 ```
-   dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
+dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
 ```
 {: codeblock}
 

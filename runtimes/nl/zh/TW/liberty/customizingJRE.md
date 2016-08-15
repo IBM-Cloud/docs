@@ -22,7 +22,7 @@ copyright:
 
 依預設會使用 IBM JRE 第 8 版。請使用 JBP_CONFIG_IBMJDK 環境變數來指定 IBM JRE 的替代版本。例如，若要使用最新的 IBM JRE 7.1，請設定下列環境變數：
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+$ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -33,17 +33,22 @@ version 內容可以設成版本範圍。有兩個支援的版本範圍：1.7.+ 
 
 應用程式可以選擇性地配置為使用 OpenJDK 作為 JRE 來執行。為了讓應用程式能使用 OpenJDK 執行，請將 JVM 環境變數設為 "openjdk"。例如，使用 cf 指令行工具，執行下列指令：
 ```
-    $ cf set-env myapp JVM 'openjdk'
+$ cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 如果啟用的話，依預設會使用 OpenJDK 第 8 版。請使用 JBP_CONFIG_OPENJDK 環境變數來指定 OpenJDK 的替代版本。例如，若要使用最新的 OpenJDK 7，請設定下列環境變數：
 ```
-    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+$ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
 version 內容可以設為 1.7.+ 之類的版本範圍，或[可用的 OpenJDK 版本清單](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)所列出的任何特定版本。為求最佳結果，請使用 Java 8。
+
+## Oracle JRE
+{: #oracle_jre}
+
+如需使用 Oracle JRE 的相關資訊，請參閱[使用 Oracle JRE](oracle_jre.html)。
 
 ## 配置 JRE 選項
 {: #configuring_jre}
@@ -70,7 +75,7 @@ JVM 選項的配置是為了提供 Bluemix 環境中的最佳化，以及輔助�
 
 以下是預設 JVM 配置的範例，它是建置套件針對以「512 M 記憶體限制」所部署的應用程式而產生的：   
 ```
-    -Xtune:virtualized
+-Xtune:virtualized
     -Xmx384M
     -Xdump:none
     -Xdump:heap:defaults:file=../../../../../dumps/heapdump.%Y%m%d.%H%M%S.%pid.%seq.phd
@@ -169,7 +174,7 @@ JVM 選項的配置是為了提供 Bluemix 環境中的最佳化，以及輔助�
 獨立式 Java 應用程式的 JVM 選項會持續保存為指令行選項。您可以從 staging_info.yml 檔案檢視它們。
 
 ```
-    $ cf files myapp staging_info.yml
+$ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
@@ -178,13 +183,13 @@ WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存
 若要檢視 WAR、EAR 及伺服器目錄的 jvm.options 檔案，請執行下列指令：
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+$ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 若要檢視包裝伺服器的 jvm.options 檔案，請以您的伺服器名稱取代 &lt;serverName>，並執行下列指令：
 ```
-    $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+$ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
 ```
 {: codeblock}
 
@@ -224,7 +229,7 @@ $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
     Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
     OK
 
-    Snap.20141106.100252.81.0003.trc           307.3K
+    Snap.20141106.100252.81.0003.trc         307.3K
     heapdump.20141106.100252.81.0001.phd       3.9M
     javacore.20141106.100252.81.0002.txt     870.5K
   </pre>
@@ -271,14 +276,14 @@ $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 例如，如果您要使用 AES 256 位元加密，則需要重疊這些 Java 原則檔案：
 
 ```
-    .java\jre\lib\security\US_export_policy.jar
+.java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
 ```
 {: codeblock}
 
 下載適當的未限定原則檔案，並將它們新增到您的應用程式，如：
 ```
-    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
+resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: codeblock}
