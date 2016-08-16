@@ -12,9 +12,21 @@ copyright:
 # 最新更新情報
 {: #latest_updates}
 
-*最終更新日: 2016 年 6 月 13 日*
+*最終更新日: 2016 年 6 月 24 日*
+{: .last-updated}
 
 サービスの最新更新情報のリスト。
+
+## 2016 年 6 月 24 日: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} の更新
+
+* 新規の *Traditional ND* または *Traditional WebSphere* インスタンスを作成するときに、お客様が V8.5 と V9.0 のどちらかを選択できる機能が追加されました。
+* WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} のバイナリーがアップグレードされ、WebSphere Application Server Liberty (Core プランおよび ND プラン) の新規インスタンスにはフィックスパック 16.0.0.2 がインストール済みになります。16.0.0.2 は、8.5.5.9 の後の次のフィックスパックです。16.0.0.2 以降は、これらのプランでサポートされる、使用許諾のある Liberty オプション・フィーチャーすべてがデフォルトでインストールされます。
+* WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} に影響を与える、以下を含む[いくつかのセキュリティー脆弱性](http://www-01.ibm.com/support/docview.wss?uid=swg21984977){: new_window}についての対処を行いました。
+  * IBM WebSphere Application Server に影響を与える、Apache Standard Taglibs の XML External Entity Injection (XXE) の脆弱性。
+  * WebSphere Application Server Liberty プロファイル API Discovery フィーチャーおよび Swagger の資料を使用する際のセキュリティーが予想より脆弱である可能性。
+  * IBM WebSphere Application Server Liberty の管理センター内の情報開示に関する潜在的な脆弱性。
+  * IBM WebSphere Application Server で HTTP 応答が分割されるという潜在的な脆弱性。
+  * 2016 年 5 月 3 日に OpenSSL プロジェクトによって明らかになった OpenSSL の脆弱性。
 
 ## 2016 年 6 月 13 日: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} の更新
 

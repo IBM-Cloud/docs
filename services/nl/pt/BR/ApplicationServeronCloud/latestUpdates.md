@@ -12,9 +12,21 @@ copyright:
 # Atualizações mais recentes
 {: #latest_updates}
 
-*Última atualização: 13 de junho de 2016*
+*Última atualização: 24 de junho de 2016*
+{: .last-updated}
 
 Uma lista das atualizações mais recentes para o serviço.
+
+## 24 de junho de 2016: atualizado o WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* Incluída a capacidade para os clientes escolherem entre a V8.5 e a V9.0 quando você cria uma nova instância do *Traditional ND* ou do *Traditional WebSphere*.
+* Feito upgrade dos binários do WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} para que novas instâncias do WebSphere Application Server Liberty (Planos Core e ND) tenham o fix pack 16.0.0.2 instalado. 16.0.0.2 é o próximo fix pack depois de 8.5.5.9. A partir de 16.0.0.2, todos os recursos opcionais autorizados do Liberty suportados para esses planos são instalados por padrão.
+* Tratadas [Várias vulnerabilidades de segurança](http://www-01.ibm.com/support/docview.wss?uid=swg21984977){: new_window} que afetam o WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}, incluindo:
+  * Uma vulnerabilidade XML External Entity Injection (XXE) no Apache Standard Taglibs que afeta o IBM WebSphere Application Server.
+  * Um potencial para segurança menor que a esperada ao usar o recurso Descoberta de API do perfil Liberty do WebSphere Application Server e os documentos do Swagger.
+  * Uma vulnerabilidade potencial de divulgação de informações no Admin Center do IBM WebSphere Application Server Liberty.
+  * Uma vulnerabilidade potencial de divisão de resposta HTTP no IBM WebSphere Application Server.
+  * Vulnerabilidades do OpenSSL divulgadas em 3 de maio de 2016 pelo Projeto OpenSSL.
 
 ## 13 de junho de 2016: atualizado o WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 

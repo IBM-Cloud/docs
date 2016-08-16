@@ -20,19 +20,25 @@ In diesen Abschnitten werden verschiedene Methoden der Erstellung und Verwaltung
 ## REST-API-Nutzung in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #restapi_usage}
 
-In WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} werden Instanzen auf eine der folgenden Weisen erstellt, bereitgestellt, verwaltet und gelöscht: 
+In WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} werden Instanzen auf eine der folgenden Weisen erstellt, bereitgestellt, verwaltet und gelöscht:
 
 * Über das {{site.data.keyword.Bluemix_notm}}-Katalog- und -Service-Dashboard in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle.
 * Durch die Erstellung einer Anwendung oder eines Scripts, die bzw. das die REST-konformen APIs nutzt.
 
-Durch die Verwendung der mit Swagger 2.0 kompatiblen REST-APIs können Clients auf dieselben Funktionen zugreifen, die auch über das Portal und das Dashboard verfügbar sind. Weitere Informationen zu den unterstützten REST-APIs und Ressourcen finden Sie in der [REST-API-Dokumentation](https://new-console.{DomainName}/apidocs/212){: new_window} von WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}.
+Durch die Verwendung der mit Swagger 2.0 kompatiblen REST-APIs können Clients auf dieselben Funktionen zugreifen, die auch über das Portal und das Dashboard verfügbar sind. Weitere Informationen zu den unterstützten REST-APIs und Ressourcen finden Sie in der [REST-API-Dokumentation](https://new-console.{DomainName}/apidocs/231){: new_window} von WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}.
 
-**Hinweis:** Abhängig von der erstellten T-Shirt-Größe ist der Service nach der Erstellung einer Serviceinstanz möglicherweise nicht sofort einsatzbereit. Es wird empfohlen, das Feld **Status** der zurückgegebenen JSON-Daten abzufragen, um den aktuellen Status der Serviceinstanz festzustellen. 
+**Hinweis:** Abhängig von der erstellten T-Shirt-Größe ist der Service nach der Erstellung einer Serviceinstanz möglicherweise nicht sofort einsatzbereit. Es wird empfohlen, das Feld **Status** der zurückgegebenen JSON-Daten abzufragen, um den aktuellen Status der Serviceinstanz festzustellen.
 
-**Hinweis:** Standardmäßig verweist die API-Basis-URL auf einen Endpunkt in der [Region US South](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}. Wenn Sie die Region UK oder Sydney verwenden, müssen Sie sicherstellen, dass die Anwendung einen der folgenden Endpunkte verwendet: 
+**Anmerkung:** Die im Beispielcode der [REST-API-Dokumentation](https://new-console.{DomainName}/apidocs/231){: new_window} referenzierte API-Basis-URL zeigt auf die Region 'USA - Süden'.  Bei der Arbeit mit anderen Regionen müssen Sie sicherstellen, dass Ihre Anwendung die enstprechende API-Basis-URL referenziert.
 
-* [Region UK](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
-* [Region Sydney](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+*Tabelle 1. API-Basis-URLs für Implementierung der REST-API*
+
+| **Regionsname** | **Geografischer Standort** | **Regionspräfix** | **API-Basis-URL** |       
+|:-------------:|:----------:|:--------------:|:-------------:|
+| Regeion 'USA - Süden' | Dallas, TX, US | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
+| Region 'Vereinigtes Königreich' | London, England | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
+| Region 'Sydney' | Sydney, Australia | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+
 
 
 ## Service-Dashboard
@@ -50,7 +56,7 @@ Nach der Erstellung der Serviceinstanz werden Sie zum Service-Dashboard weiterge
 *  Den Namen des Benutzers mit Administratorberechtigungen und das Administratorkennwort für WebSphere®.
 *  Die URLs für Admin Center und Admin Console.
 
-**Hinweis**: Aufgrund einer bestimmten Menge an Rechen-, Speicher- und E/A-Ressourcen werden für Clients Gebühren für die Summe der virtuellen Maschinen im Status GESTOPPT mit einer reduzierten Rate von 5 % berechnet. Clients werden mit einer festen Anzahl von Instanzen im Status GESTOPPT mit maximal 10 IP-Adressen oder 64 GB Speicherplatz verwaltet. 
+**Hinweis**: Aufgrund einer bestimmten Menge an Rechen-, Speicher- und E/A-Ressourcen werden für Clients Gebühren für die Summe der virtuellen Maschinen im Status GESTOPPT mit einer reduzierten Rate von 5 % berechnet. Clients werden mit einer festen Anzahl von Instanzen im Status GESTOPPT mit maximal 10 IP-Adressen oder 64 GB Speicherplatz verwaltet.
 
 
 ## OpenVPN für WebSphere Application Server for Bluemix-Instanzen einrichten

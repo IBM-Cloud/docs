@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  années : 2015, 2016
+  years: 2015, 2016
 
 ---
 
@@ -25,14 +25,20 @@ Des instances dans WebSphere Application Server for {{site.data.keyword.Bluemix_
 * Depuis {{site.data.keyword.Bluemix_notm}} Catalog et Service Dashboard dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
 * A partir de la création d'une application ou d'un script utilisant les API RESTful.
 
-En utilisant les API REST compatibles Swagger 2.0, les clients ont accès à la même fonction que celle fournie via le portail et le tableau de bord. Pour plus d'informations sur les ressources et API REST prises en charge, voir la [documentation d'API REST](https://new-console.{DomainName}/apidocs/212){: new_window} de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 
+En utilisant les API REST compatibles Swagger 2.0, les clients ont accès à la même fonction que celle fournie via le portail et le tableau de bord. Pour plus d'informations sur les ressources et API REST prises en charge, voir la [documentation d'API REST](https://new-console.{DomainName}/apidocs/231){: new_window} de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} .
 
 **Remarque :** après création d'une instance de service, selon la taille Tee-Shirt créée, votre service risque de ne pas être immédiatement prêt à être utilisé. Il est recommandé de faire une requête sur la zone **Statut** de l'élément JSON retourné pour déterminer l'état actuel de l'instance de service.
 
-**Remarque :** par défaut, l'URL BASE API pointe sur un noeud final de la région [US South Region](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}. Si vous utilisez la région UK ou Sydney, assurez-vous que votre application se sert de l'un des noeuds finaux suivants :
+**Remarque :** l'URL BASE API référencée dans le code exemple de la [documentation d'API REST](https://new-console.{DomainName}/apidocs/231){: new_window} pointe sur la région "Sud des Etats-Unis". Si vous utilisez d'autres régions, assurez-vous que votre application se réfère à la bonne URL BASE API.
 
-* [UK Region](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
-* [Sydney Region](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+*Tableau 1. URL base API pour l'implémentation d'une API Rest*
+
+| **Nom de région** | **Situation géographique** | **Préfixe de région** | **URL base API** |       
+|:--------------------------:|:-------------------:|:--:|:--------------------------------------------------:|
+| Sud des Etats-Unis         | Dallas, TX, US      | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
+| Royaume-Uni                | Londres, Angleterre | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
+| Sydney                     | Sydney, Australie   | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+
 
 
 ## Tableau de bord du service
@@ -64,8 +70,7 @@ installé et s'exécuter avec des privilèges d'administrateur.
 
 1. Suivez le lien de téléchargement d'[openVPN Windows](http://swupdate.openvpn.org/community/releases/) et téléchargez le module
 suivant :
-  * [openvpn-install-2.3.4-I001-x86_64.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-x86_64.exe){: new_window}
-pour environnement 64 bits, ou
+  * [openvpn-install-2.3.4-I001-x86_64.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-x86_64.exe){: new_window} pour environnement 64 bits, ou
   * [openvpn-install-2.3.4-I001-i686.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-i686.exe){: new_window}
 pour environnement 32 bits
 2. Prenez soin de sélectionner [Exécuter en tant qu'administrateur
@@ -125,7 +130,7 @@ Votre réponse devrait être similaire à ceci :
   {: codeblock}
 
 Procédez comme suit pour configurer l'accès SSH aux machines virtuelles de votre serveur WebSphere
-Application Server for Bluemix :
+Application Server for Bluemix : 
 
 1. Examinez le message d'avertissement qui s'affiche la première fois que vous vous connectez :
 "L'authenticité de l'hôte x.x.x.x n'a pas pu être établie". Ce comportement est
@@ -148,7 +153,7 @@ normal. A l'invite, sélectionnez Oui. La clé publique est à présent install�
   {: codeblock}
 
 6. Si vous rencontrez des problèmes lors de l'accès au système avec la clé SSH privée, utilisez le mot de passe root fourni. Connectez-vous en tant que
-root en exécutant la commande suivante et soumettez le mot de passe :
+root en exécutant la commande suivante et soumettez le mot de passe : 
 
  <pre>
     $ ssh root@169.53.246.x

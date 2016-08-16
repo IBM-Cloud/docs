@@ -12,23 +12,26 @@ copyright:
 # IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 入门
 {: #getting_started}
 
-*上次更新时间：2016 年 6 月 13 日*
+*上次更新时间：2016 年 6 月 24 日*
+{: .last-updated}
 
-{{site.data.keyword.IBM}}WebSphere Application Server for {{site.data.keyword.Bluemix}} 是一种服务，有助于您在 {{site.data.keyword.Bluemix_notm}} 的托管云环境中快速设置预配置的 WebSphere Application Server Liberty、Network Deployment 或传统实例。
+{{site.data.keyword.IBM}}WebSphere Application Server for {{site.data.keyword.Bluemix}} 是一种服务，有助于您在 {{site.data.keyword.Bluemix_notm}} 的托管云环境中快速设置预配置的 WebSphere Application Server Liberty、传统 Network Deployment 或传统 WebSphere 实例。
 {: shortdesc}
 
 ## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 概述
 {: #overview}
 
 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 为使用者提供预配置的传统 WebSphere 和 Liberty 概要文件服务器。
-该服务在虚拟机上托管，具有根访问权的虚拟机访客可以访问访客操作系统。创建服务时，请在 *Liberty*、*ND* 或*传统 WebSphere* 之间进行选择。
+该服务在虚拟机上托管，具有根访问权的虚拟机访客可以访问访客操作系统。创建服务时，请在 *Liberty*、*传统 ND* 或*传统 WebSphere* 之间进行选择。
+
+**注**：现在，使用者在创建新的*传统 ND* 或*传统 WebSphere* 实例时，可以选择 V8.5 或 V9.0。
 
 为您提供了熟悉的 WebSphere 管理体验，并且您对底层的操作系统具有完全访问权。您可以复用现有脚本，并视需要进行一些系统微调，以便与您自己的或第三方的框架搭配使用。系统提供了管理中心和管理控制台来管理 WebSphere Application Server Liberty、ND 或传统服务，就像内部部署 WebSphere 配置那样。
 
-**注**：WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment 套餐现在具有更多功能。该计划包含带有两个或更多虚拟机的 WebSphere Application Server Network Deployment 单元环境。第一个虚拟机包含部署管理程序和 IBM HTTP Server，而其余的虚拟机包含联合到部署管理程序的定制节点（节点代理程序）。使用现有的 wsadmin 脚本来创建 WebSphere 配置，或者使用 WebSphere 管理控制台来手动配置环境。这些新功能允许用户设置集群环境，以用于高可用性、故障转移和可扩展性。集群是任何中间件企业应用程序的一个关键方面，并且客户现在可以选择建立拓扑集群，以实现两个或更多实例之间的请求负载平衡。
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment 套餐包含带有两个或更多虚拟机的 WebSphere Application Server Network Deployment 单元环境。第一个虚拟机包含 Deployment Manager 和 IBM HTTP Server，而其余的虚拟机包含联合到 Deployment Manager 的定制节点（节点代理程序）。使用现有的 wsadmin 脚本来创建 WebSphere 配置，或者使用 WebSphere 管理控制台来手动配置环境。这些新功能允许用户设置集群环境，以用于高可用性、故障转移和可扩展性。集群是任何中间件企业应用程序的一个关键方面，并且客户现在可以选择建立拓扑集群，以实现两个或更多实例之间的请求负载平衡。
 
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core 计划也有更多功能。该计划包含使用 Liberty 集合，作为 Liberty 概要文件（服务器）组的管理域，该集合由两个或更多虚拟机组成。第一个虚拟机包含 Collective Controller Liberty 服务器作为 Liberty 集合的控制点。除了 Liberty 集合之外，此虚拟机还包含 IBM HTTP Server，允许从 Web 浏览器访问应用程序。其余的虚拟机是集合成员（Liberty 概要文件服务器）所在的集合主机。同时还在 Liberty 控制器服务器上启用了 Liberty 管理中心功能。
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core 套餐包含使用 Liberty 集合。Liberty 集合是 Liberty 概要文件（服务器）组的管理域，该集合由两个或更多虚拟机组成。第一个虚拟机包含 Collective Controller Liberty 服务器作为 Liberty 集合的控制点。除了 Liberty 集合之外，此虚拟机还包含 IBM HTTP Server，允许从 Web 浏览器访问应用程序。其余的虚拟机是集合成员（Liberty 概要文件服务器）所在的集合主机。同时还在 Liberty 控制器服务器上启用了 Liberty 管理中心功能。
 
 下图显示了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment 单元和 Liberty 集合环境的体系结构。
 
@@ -94,7 +97,8 @@ IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 为应�
 **注**：根据特定的计算、内存和 I/O 资源量，对于处于“已停止”状态的累计实例，我们会向客户减免百分之五。客户的固定“已停止”实例数将会控制为 10 个 IP 地址或 64 GB 内存以内。
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
 * [WASdev](https://developer.ibm.com/wasdev/){: new_window}
-* [WebSphere Application Server 文档](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/as_ditamaps/was855_welcome_ndmp.html){: new_window}
-* [WebSphere Application Server 传统 V9 Beta 文档](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}
+* [WebSphere Application Server V9 文档](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}

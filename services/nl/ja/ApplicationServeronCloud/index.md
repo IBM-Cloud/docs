@@ -12,25 +12,28 @@ copyright:
 # IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 入門
 {: #getting_started}
 
-*最終更新日: 2016 年 6 月 13 日*
+*最終更新日: 2016 年 6 月 24 日*
+{: .last-updated}
 
-{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} は、{{site.data.keyword.Bluemix_notm}} 上でホストされるクラウド環境において、事前構成済みの WebSphere Application Server Liberty、Network Deployment、または Traditional のインスタンスでの迅速なセットアップを容易にするサービスです。
+{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} は、{{site.data.keyword.Bluemix_notm}} 上でホストされるクラウド環境で、事前定義済みの WebSphere Application Server Liberty、Traditional Network Deployment、または Traditional WebSphere インスタンスを迅速にセットアップできるようにするサービスです。
 {: shortdesc}
 
 ## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} の概要
 {: #overview}
 
 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} は、事前構成された Traditional WebSphere および Liberty プロファイルのサーバーを利用者に提供します。これは、ゲスト・オペレーティング・システムへの root アクセス権限を持つ仮想マシン・ゲストでホストされます。
-サービスを作成するときに、*Liberty*、*ND*、*Traditional WebSphere* のいずれかを選択します。
+サービスを作成するときに、*Liberty*、*Traditional ND*、または *Traditional WebSphere* のいずれかを選択します。
+
+**注:** 利用者は、新規の *Traditional ND* または *Traditional WebSphere* インスタンスを作成するときに、V8.5 と V9.0 のどちらかを選択できるようになりました。
 
 使い慣れた WebSphere 管理操作を使用し、基盤オペレーティング・システムへの全アクセス権限を持つことができます。
 既存のスクリプトを再使用可能で、独自のフレームワークまたはサード・パーティーのフレームワークで動作させるために必要なシステム微調整を行います。
 オンプレミスの WebSphere 構成と同様に、WebSphere Application Server Liberty、ND、または Traditional のサービスを管理するために、管理センターと管理コンソールが提供されています。
 
-**注**: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment プランに機能が追加されました。このプランは、2 つ以上の仮想マシンを使用する WebSphere Application Server Network Deployment セル環境で構成されています。1 つ目の仮想マシンには、デプロイメント・マネージャーと IBM HTTP Server が含まれており、残りの仮想マシンには、デプロイメント・マネージャーに連合されたカスタム・ノード (ノード・エージェント) が含まれています。既存の wsadmin スクリプトを使用して WebSphere 構成を作成するか、WebSphere 管理コンソールを使用して手動で環境を作成します。これらの新機能により、ユーザーは高可用性、フェイルオーバー、およびスケーラビリティーに対してクラスター環境をセットアップすることができます。クラスター化はすべてのミドルウェア・エンタープライズ・アプリケーションの重大な側面であり、クライアントは、トポロジーをクラスター化して、2 つ以上のインスタンスに要求をロード・バランシングすることを選択できるようになりました。
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment プランは、2 つ以上の仮想マシンを使用する WebSphere Application Server Network Deployment セル環境で構成されています。1 つ目の仮想マシンには、Deployment Manager と IBM HTTP Server が含まれており、残りの仮想マシンには、Deployment Manager に統合されたカスタム・ノード (ノード・エージェント) が含まれています。既存の wsadmin スクリプトを使用して WebSphere 構成を作成するか、WebSphere 管理コンソールを使用して手動で環境を作成します。これらの新機能により、ユーザーは高可用性、フェイルオーバー、およびスケーラビリティーに対してクラスター環境をセットアップすることができます。クラスター化はすべてのミドルウェア・エンタープライズ・アプリケーションの重大な側面であり、クライアントは、トポロジーをクラスター化して、2 つ以上のインスタンスに要求をロード・バランシングすることを選択できるようになりました。
 
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core プランにも機能が追加されました。このプランには、Liberty プロファイル (サーバー) のグループの管理ドメインであり、2 つ以上の仮想マシンで構成される Liberty 集合の使用が含まれています。1 つ目の仮想マシンには、Liberty 集合の制御点である集合コントローラー Liberty サーバーが含まれています。Liberty 集合に加え、この仮想マシンには、Web ブラウザーからアプリケーションへのアクセスが可能な IBM HTTP Server も含まれています。残りの仮想マシンは、集合メンバーが常駐する集合ホスト (Liberty プロファイル・サーバー) です。Liberty 管理センター機能も、Liberty コントローラー・サーバーで有効になります。
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core プランには、Liberty Collective の使用が含まれています。Liberty Collective は、Liberty プロファイル (サーバー) のグループの管理ドメインであり、2 つ以上の仮想マシンで構成されています。1 つ目の仮想マシンには、Liberty 集合の制御点である集合コントローラー Liberty サーバーが含まれています。Liberty 集合に加え、この仮想マシンには、Web ブラウザーからアプリケーションへのアクセスが可能な IBM HTTP Server も含まれています。残りの仮想マシンは、集合メンバーが常駐する集合ホスト (Liberty プロファイル・サーバー) です。Liberty 管理センター機能も、Liberty コントローラー・サーバーで有効になります。
 
 次の図は、WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment セル環境と Liberty 集合環境のアーキテクチャーを示しています。
 
@@ -101,7 +104,8 @@ IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} は、�
 **注**: 一定量の計算、メモリー、入出力のリソースのために、停止状態の累積インスタンスについて 5 % 減額して課金されます。IP アドレス 10 個およびメモリー 64 GB を超えない決まった数の停止インスタンスに管理されます。
 
 # 関連リンク
+{: #rellinks}
 ## 一般
+{: #general}
 * [WASdev](https://developer.ibm.com/wasdev/){: new_window}
-* [WebSphere Application Server の資料](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/as_ditamaps/was855_welcome_ndmp.html){: new_window}
-* [WebSphere Application Server Traditional v9 ベータの資料](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}
+* [WebSphere Application Server V9 の資料](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}
