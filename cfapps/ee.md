@@ -18,7 +18,7 @@ copyright:
 # Scenario: End-to-end development
 {: #ee}
 
-*Last updated: 8 August 2016*
+*Last updated: 16 August 2016*
 {: .last-updated}
 
 You can use the {{site.data.keyword.Bluemix}} user interface, platform, and a selection of tools when you build, run, and deploy your apps. Follow this end-to-end development scenario to get started.
@@ -36,7 +36,7 @@ After signing up, you start to build your first app by using {{site.data.keyword
 
 In {{site.data.keyword.Bluemix_notm}}, apps are associated with organizations and spaces. An organization is owned and used by multiple collaborators. Initially, you get a default organization that is named after your user name and you are the only collaborator. You also get a space within this organization. The space is an environment to run your apps; for example, you can have a dev space as a development environment, a test space as a test environment, and a production space as a production environment. Furthermore, each of the environment belongs to a region. With {{site.data.keyword.Bluemix_notm}}, you can deploy your applications to a specific geographical region for lower network latency, data privacy, and better availability. See Regions for details.
 
-For this scenario, you want to develop a web app using Node.js. Assume that you are in the US and most of your app users are also in the US. You decide to build and run your app close to your user base, so that you can benefit from lower network latency. After logging in to {{site.data.keyword.Bluemix_notm}}, click the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg), then select the **US South** region. Then, you can take the following steps to create an app:
+For this scenario, you want to develop a web app using Node.js. Assume that you are in the US and most of your app users are also in the US. You decide to build and run your app close to your user base, so that you can benefit from lower network latency. After logging in to {{site.data.keyword.Bluemix_notm}}, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg), then select the **US South** region. Then, you can take the following steps to create an app:
 
   1. Select **Compute**.
   2. Click the plus icon.
