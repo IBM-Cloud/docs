@@ -4,12 +4,6 @@ copyright:
   years: 2016
 
 ---
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
 
 <!-- Common attributes used in the template are defined as follows: -->
 {:tsSymptoms: .tsSymptoms} 
