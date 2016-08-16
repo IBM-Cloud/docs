@@ -17,10 +17,10 @@ copyright:
 
 # Managing organizations and spaces
 {: #orgsspacesusers}
-Last updated: 16 May 2016
+Last updated: 16 August 2016
 {: .last-updated}
 
-As an account owner, you can manage your organizations by going to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page. Organization managers can also use the Manage Organizations page to manage any organizations where they are set as the manager.
+As an account owner, you can manage your organizations by going to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations** page. Organization managers can also use the Manage Organizations page to manage any organizations where they are set as the manager.
 {:shortdesc}
 
 Management tasks include the following:
@@ -88,14 +88,14 @@ After you add team members to an organization, you can grant them permissions to
 
 Only account owners with Pay-As-You-Go accounts can create an organization. You can create an organization by completing the following steps:
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations** page.
 2. Click **Add a New Org**.
 3. Enter the org name.
 4. Click **Add**.
 
 You can create spaces in your organization; for example, a *dev* space as a development environment, a *test* space as a testing environment, and a *production* space as a production environment. Then, you can associate your apps with spaces. Complete the following steps to create a space:
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations** page.
 2. Identify the org that you want to add a space to, and select **View Details**.
 3. Click **Edit**.
 4. Click **Add a Space**.
@@ -108,7 +108,7 @@ You can create spaces in your organization; for example, a *dev* space as a deve
 
 Take the following steps to rename your organization:
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations** page.
 2. Identify the org that you want to edit, and select **View Details**.
 3. Select **Edit**.
 4. Select **Edit** for the title of the org.
@@ -124,7 +124,7 @@ As the account owner, you can contact [{{site.data.keyword.Bluemix_notm}} Suppor
 
 You can delete a space from the **Manage Organizations** page:
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations** page.
 2. Identify the org that you want to edit, and select **View Details**.
 3. Identify the space that you want to delete, and select **Edit**.
 4. Click **Delete Your Space**.
@@ -134,14 +134,14 @@ You can delete a space from the **Manage Organizations** page:
 
 Complete the following steps to list the members for a specific organization:
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations**.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations**.
 2. Identify the organization that you want to view the members for, and click **View Details**.
 3. Click **Edit**.
 4. You can see the members of your organization and their roles in the **Users** tab.
 
 Complete the following steps to list the members for a specific space:
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations** page.
 2. Identify the organization that you want to view the members for, and click **View Details**.
 3. Identify the space that you want to view the members for, and click **Edit**.
 4. You can see the members of your space and their roles in the **Users** tab.
@@ -153,7 +153,7 @@ As an account owner or organization manager, you can view the allocated and used
 
 To view the quota for your org, complete the following steps:
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations** page.
 2. Identify the organization that you want to view the quota for, and click **View Details**.
 3. Click **Edit**.
 4. Select the **Quota** tab.
@@ -165,7 +165,7 @@ To update the quota for your organization, you must open a support ticket. For m
 
 As an account owner or organization manager, you can view the system domain and add custom domains for applications that are built within an organization and its spaces. As a space manager, the **Domains** tab for a space is a read-only list of the domains that are assigned to the space. 
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations** page.
 2. Identify the org that you want to view or edits domains for.
 3. Select **View Details** for that org.
 4. Click **Edit**.
