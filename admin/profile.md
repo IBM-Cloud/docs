@@ -17,10 +17,10 @@ copyright:
 
 # Profile settings
 {: #usersettings}
-Last updated: 23 June 2016
+Last updated: 16 August 2016
 {: .last-updated}
 
-Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile** to update your profile settings.
+Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profile** to update your profile settings.
 {:shortdesc}
 
  On the **Profile** page, you can set or update the following information:
@@ -32,7 +32,7 @@ Go to the **Account and Support** icon ![Account and Support icon](../admin/imag
 ## Changing your profile photo
 {: #photo}
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profile**.
 
 * Click **Change Photo** to upload a new photo.
 * Click **Remove Photo** to remove your photo.
@@ -42,7 +42,7 @@ Go to the **Account and Support** icon ![Account and Support icon](../admin/imag
 
 If you need to change your IBMid account information, such as your name, email, phone number, password, or company name, complete the following steps:
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profile**.
 2. Click **Edit your IBMid**.
 3. Edit your user information.
 4. Click **Submit**.
@@ -56,5 +56,5 @@ If you choose to disable tracking, then you might not be able to use some featur
 
 To disable analytics tracking, complete the following steps:
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profile**.
 2. Set analytics tracking to **Off**.
