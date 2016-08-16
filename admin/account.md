@@ -17,10 +17,10 @@ copyright:
 
 # Managing your {{site.data.keyword.Bluemix_notm}} account
 {: #mngacct}
-*Last updated: 26 July 2016*
+*Last updated: 16 August 2016*
 {: .last-updated}
 
-Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** to set notifications for your account, view your account usage, or view your bill.
+Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** to set notifications for your account, view your account usage, or view your bill.
 {:shortdesc}
 
 ## Signing up for {{site.data.keyword.Bluemix_notm}}
@@ -41,13 +41,13 @@ A federated ID can be used to sign up for {{site.data.keyword.Bluemix_notm}} onl
 ## Setting notifications
 {: #notifications}
 
-Go to **Account and Support** &gt; **Account** &gt; **Notifications** to set up general account and spending notifications. Spending notifications are available only for Subscription and Pay-As-You-Go {{site.data.keyword.Bluemix_notm}} account owners.
+Go to **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Notifications** to set up general account and spending notifications. Spending notifications are available only for Subscription and Pay-As-You-Go {{site.data.keyword.Bluemix_notm}} account owners.
 
 You can set platform email notifications for {{site.data.keyword.Bluemix_notm}} incidents and planned maintenance, and you can set spending notifications that alert you when your account is close to the spending threshold that you specified. Complete the following tasks to set different notification types for your account.
 
 ### Setting platform notifications
 
-Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Notifications** &gt; **Platform** to set email notifications for {{site.data.keyword.Bluemix_notm}} incidents and planned maintenance. You can select or clear each option to enable or disable the email notification.
+Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Notifications** &gt; **Platform** to set email notifications for {{site.data.keyword.Bluemix_notm}} incidents and planned maintenance. You can select or clear each option to enable or disable the email notification.
 
 ### Setting spending notifications
 {: #spendingnotifications}
@@ -78,7 +78,7 @@ Complete the following steps to set up email notifications for spending limits:
 
 As an account owner or a billing manager for an org, you can use the Usage Dashboard view to see the real-time charges for the runtimes, containers, services, and support that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region.
 
-To open the Usage Dashboard view, click the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Usage Dashboard**. Billing managers can see the details for only the organizations in which they are billing managers.
+To open the Usage Dashboard view, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Usage Dashboard**. Billing managers can see the details for only the organizations in which they are billing managers.
 
 The account owner is charged for the total usage that is incurred across all organizations at the end of each billing cycle. As an account owner, you can filter the usage summary by region and organization. You can also click a particular month to see the usage for that month. Select **All Organizations** from the **Organizations** list to see the usage for all organizations in the account.
 
@@ -86,6 +86,6 @@ The account owner is charged for the total usage that is incurred across all org
 ## Updating billing information
 {: #account_billing}
 
-As the account owner, you can edit, add, or remove saved credit card information that is associated with your {{site.data.keyword.Bluemix_notm}} account. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Billing**.
+As the account owner, you can edit, add, or remove saved credit card information that is associated with your {{site.data.keyword.Bluemix_notm}} account. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Billing**.
 
 If you have a SoftLayer account linked with your {{site.data.keyword.Bluemix_notm}} account, see [Billing for {{site.data.keyword.Bluemix_notm}} usage when accounts are linked](../admin/softlayerlink.html#bill_usage) for more information about how you are billed.
