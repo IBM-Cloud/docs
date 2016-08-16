@@ -11,14 +11,14 @@ copyright:
 # Customizing the JRE
 {: #customizing_jre}
 
-*Last Updated: 10 June 2016*
+Last Updated: 15 August 2016
 {: .last-updated}
 
 Applications are run in a Java runtime environment (JRE) that is provided and configured by the Liberty buildpack. The Liberty buildpack also makes it possible to configure the JRE version or type, customize the JVM options, or overlay the JRE functions.
 
 ## IBM JRE
 
-By default, applications are configured to run with a lightweight version of the IBM JRE. This lightweight JRE is stripped down to provide core, essential function with a much reduced disk and memory footprint. For more information about the contents of the lightweight JRE, see [Liberty for Java runtime](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html).
+By default, applications are configured to run with a lightweight version of the IBM JRE. This lightweight JRE is stripped down to provide core, essential function with a much reduced disk and memory footprint. For more information about the contents of the lightweight JRE, see [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
 IBM JRE version 8 is used by default. Use the JBP_CONFIG_IBMJDK environment variable to specify an alternative version of the IBM JRE. For example, to use the latest IBM JRE 7.1 set the following environment variable:
 ```
