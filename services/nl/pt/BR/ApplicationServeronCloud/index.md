@@ -12,33 +12,31 @@ copyright:
 # Introdução ao IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #getting_started}
 
-*Última atualização: 13 de junho de 2016*
+*Última atualização: 24 de junho de 2016*
+{: .last-updated}
 
-{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} é um serviço que facilita a configuração rápida em uma instância pré-configurada do WebSphere Application Server Liberty, Network Deployment ou Traditional em um ambiente de nuvem hospedado no {{site.data.keyword.Bluemix_notm}}.
+O {{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} é um serviço que facilita a configuração rápida em uma instância pré-configurada do WebSphere Application Server Liberty, do Traditional Network Deployment ou do Traditional WebSphere em um ambiente de nuvem no {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 ## Visão geral do WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
 O WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} fornece aos consumidores os servidores pré-configurados Traditional WebSphere e perfil Liberty. Ele é hospedado em convidados da máquina
-virtual com acesso raiz para o sistema operacional guest. Quando você estiver criando seu serviço, escolha entre *Liberty*, *ND* ou *Traditional WebSphere*.
+virtual com acesso raiz para o sistema operacional guest. Quando você estiver criando seu serviço, escolha entre *Liberty*, *Traditional ND* ou *Traditional WebSphere*.
+
+**Nota:** os consumidores são agora capazes de escolher entre a V8.5 e a V9.0 quando você cria uma nova instância do *Traditional ND* ou do *Traditional WebSphere*.
 
 Você recebe uma experiência de administração do WebSphere familiar e tem acesso completo
 ao sistema operacional subjacente. É possível reutilizar seus scripts existentes e fazer pequenos ajustes de sistema
 necessários para trabalhar com suas estruturas próprias ou de terceiros. O Centro do administrador e os Consoles do administrador são fornecidos para administrar o serviço WebSphere Application Server Liberty, ND ou Traditional, assim como suas configurações do WebSphere no local.
 
-**Nota**: o Plano do WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment tem agora mais recursos. O plano consiste em um ambiente de célula do WebSphere Application Server Network Deployment com duas ou mais máquinas virtuais. A primeira máquina virtual contém o gerenciador de implementação e o IBM
-HTTP Server, e as máquinas virtuais restantes contêm nós customizados (agentes de nó) federados para o
-gerenciador de implementação. Use seus scripts wsadmin existentes para criar sua configuração do WebSphere ou use
+O Plano do WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment consiste em um ambiente de célula do WebSphere Application Server Network Deployment com duas ou mais máquinas virtuais. A primeira máquina virtual contém o Deployment Manager e o IBM HTTP Server e as máquinas virtuais restantes contêm nós customizados (agentes de nó) federados para o Deployment Manager. Use seus scripts wsadmin existentes para criar sua configuração do WebSphere ou use
 o Console administrativo do WebSphere para configurar manualmente o ambiente. Esses novos recursos permitem que os
 usuários configurem um ambiente em cluster para alta disponibilidade, failover e escalabilidade. Armazenamento em cluster
 é um aspecto crítico de qualquer aplicativo corporativo de middleware e os clientes podem agora optar por agrupar
 uma topologia para balancear a carga de solicitações entre duas ou mais instâncias.
 
-O Plano do WebSphere Application Server
-for {{site.data.keyword.Bluemix_notm}} Liberty Core também apresenta
-mais recursos. O plano inclui o uso de um Liberty Collective, que é um domínio
-administrativo para um grupo de perfis Liberty (servidores) e consiste em duas ou mais máquinas virtuais. A
+O Plano do WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core inclui o uso de um Liberty Collective. O Liberty Collective é um domínio administrativo para um grupo de perfis Liberty (servidores) e consiste em duas ou mais máquinas virtuais. A
 primeira máquina virtual contém o servidor Collective Controller liberty, que é um ponto de controle
 para o Liberty Collective. Além do liberty collective, essa máquina virtual também
 contém o IBM HTTP Server, que permite acesso aos aplicativos a partir de um navegador da web. As
@@ -122,7 +120,8 @@ Por exemplo, se você usar o Plano ND, uma Instância será equiparada a 1vCPU c
 **Nota**: em razão de uma quantia específica de recursos de cálculo, de memória e de E/S, os clientes são cobrados por instâncias acumuladas no estado INTERROMPIDO a uma taxa reduzida de 5%. Os clientes são gerenciados para um número fixo de instâncias INTERROMPIDAS com não mais de 10 endereços IP ou 64 GB de memória.
 
 # rellinks
+{: #rellinks}
 ## gerais
+{: #general}
 * [WASdev](https://developer.ibm.com/wasdev/){: new_window}
-* [Documentação do WebSphere Application Server](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/as_ditamaps/was855_welcome_ndmp.html){: new_window}
-* [Documentação do WebSphere Application Server Traditional v9 Beta](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}
+* [Documentação do WebSphere Application Server V9](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}

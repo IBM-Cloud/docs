@@ -13,6 +13,7 @@ copyright:
 {: #topics}
 
 *Dernière mise à jour : 15 avril 2016*
+{: .last-updated}
 
 1. [overview](indexWAS4Bluemix.html)
 2. [maintenanceAndUpdates](maintenanceAndUpdates.html)

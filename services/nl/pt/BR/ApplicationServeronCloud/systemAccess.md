@@ -25,16 +25,23 @@ As instâncias no WebSphere Application Server for {{site.data.keyword.Bluemix_n
 * A partir do Painel de catálogo e serviço do {{site.data.keyword.Bluemix_notm}} na UI do {{site.data.keyword.Bluemix_notm}}.
 * A partir da criação de um aplicativo ou script que usa nossas APIs RESTful.
 
-Por meio do uso de nossas APIs REST compatíveis com o Swagger 2.0, os clientes possuem acesso à mesma função, conforme fornecida por meio do portal e do painel. Para obter mais informações sobre APIs REST e recursos suportados, consulte a [Documentação da API REST](https://new-console.{DomainName}/apidocs/212){: new_window} do WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}.
+Por meio do uso de nossas APIs REST compatíveis com o Swagger 2.0, os clientes possuem acesso à mesma função, conforme fornecida por meio do portal e do painel. Para obter mais informações sobre as APIs REST e os recursos suportados, consulte a [Documentação da API REST](https://new-console.{DomainName}/apidocs/231){: new_window} do WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}.
 
 **Nota:** depois de criar uma instância de
 serviço, dependendo do tamanho de Camiseta criado, seu serviço poderá
 não estar preparado imediatamente para uso. Recomenda-se consultar o campo **Status** do JSON retornado para determinar o estado atual da instância de serviço.
 
-**Nota:** por padrão, a URL BASE da API aponta para um terminal na [Região sul dos EUA](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}. Se você estiver usando o Reino Unido ou a Região de Sydney, assegure-se de que seu aplicativo use um dos terminais a seguir:
+**Nota:** a URL BASE DA API referenciada no código de amostra da [Documentação da API REST](https://new-console.{DomainName}/apidocs/231){: new_window} aponta para a região sul dos EUA. Se
+você estiver usando outras regiões, assegure-se de que seu aplicativo referencie a URL BASE DA API apropriada.
 
-* [Região do Reino Unido](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
-* [Região de Sydney](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+*Tabela 1. URLs Base da API para implementação da API REST*
+
+| **Nome da região** | **Local geográfico** | **Prefixo da região** | **URL Base da API** |       
+|:-------------:|:----------:|:--------------:|:-------------:|
+| Região sul dos EUA | Dallas, TX, EUA | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
+| Região do Reino Unido | Londres, Inglaterra | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
+| Região de Sydney | Sydney, Austrália | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+
 
 
 ## Painel de Serviço

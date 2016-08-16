@@ -12,21 +12,23 @@ copyright:
 # Einführung in IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #getting_started}
 
-*Letzte Aktualisierung: 13. Juni 2016*
+*Letzte Aktualisierung: 24. Juni 2016*
+{: .last-updated}
 
-{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} ist ein Service, mit dem Sie ohne Zeitverlust eine vorkonfigurierte WebSphere Application Server Liberty-, Network Deployment- oder eine klassische Instanz in einer gehosteten Cloudumgebung in {{site.data.keyword.Bluemix_notm}} einrichten können.
-{: shortdesc}
+{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} ist ein Service, mit dem Sie ohne Zeitverlust eine vorkonfigurierte WebSphere Application Server Liberty-, eine klassische Network Deployment- oder eine klassische WebSphere-Instanz in einer gehosteten Cloudumgebung in {{site.data.keyword.Bluemix_notm}} einrichten können.{: shortdesc}
 
 ## Übersicht zu WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} bietet Nutzern vorkonfigurierte klassische WebSphere- und Liberty Profile-Server. Das Programm wird auf virtuellen Gastmaschinen mit Rootzugriff auf das Gastbetriebssystem gehostet. Wenn Sie einen eigenen Service erstellen, müssen Sie zwischen *Liberty*, *ND* und *klassischem WebSphere* wählen.
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} bietet Nutzern vorkonfigurierte klassische WebSphere- und Liberty Profile-Server. Das Programm wird auf virtuellen Gastmaschinen mit Rootzugriff auf das Gastbetriebssystem gehostet. Wenn Sie einen eigenen Service erstellen, müssen Sie zwischen *Liberty*, *klassischem ND* und *klassischem WebSphere* wählen.
+
+**Anmerkung:** Kunden können nun bei der Erstellung einer neuen Instanz von *klassischem ND* oder *klassischem WebSphere* zwischen V8.5 und V9.0 wählen.
 
 Sie erhalten eine vertraute WebSphere-Administrationserfahrung und uneingeschränkten Zugriff auf das zugrunde liegende Betriebssystem. Sie können bereits vorhandene Scripts weiterverwenden und am System die für die Arbeit mit eigenen Frameworks oder Frameworks von Dritten erforderlichen Optimierungsschritte vornehmen. Admin Center und Admin Consoles werden ähnlich Ihren lokalen WebSphere-Konfigurationen zur Verwaltung Ihrer WebSphere Application Server Liberty-, ND- oder klassischen Services bereitgestellt.
 
-**Anmerkung**: Der WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment-Plan umfasst nun mehr Funktionen. Der Plan besteht aus einer WebSphere Application Server Network Deployment-Zellenumgebung mit mindestens zwei virtuellen Maschinen. Die erste virtuelle Maschine enthält den Deployment Manager und IBM HTTP Server und die übrigen virtuellen Maschinen enthalten angepasste Knoten (Knotenagenten), die in den Deployment Manager integriert sind. Mithilfe der vorhandenen wsadmin-Scripts können Sie eine eigene WebSphere-Konfiguration erstellen oder Sie können WebSphere Admin Console verwenden, um die Umgebung manuell zu konfigurieren. Mit diesen neuen Funktionen können Benutzer eine Clusterumgebung für hohe Verfügbarkeit, Funktionsübernahme und Skalierbarkeit konfigurieren. Clustering ist ein entscheidender Aspekt einer Middleware-Unternehmensanwendung und Kunden können nun auswählen, dass für eine Topologie ein Cluster gebildet werden soll, um in zwei oder mehr Instanzen einen Lastausgleich für Anforderungen durchzuführen.
+Der WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment-Plan besteht aus einer WebSphere Application Server Network Deployment-Zellenumgebung mit mindestens zwei virtuellen Maschinen. Die erste virtuelle Maschine enthält den Deployment Manager und IBM HTTP Server und die übrigen virtuellen Maschinen enthalten angepasste Knoten (Knotenagenten), die in den Deployment Manager integriert sind. Mithilfe der vorhandenen wsadmin-Scripts können Sie eine eigene WebSphere-Konfiguration erstellen oder Sie können WebSphere Admin Console verwenden, um die Umgebung manuell zu konfigurieren. Mit diesen neuen Funktionen können Benutzer eine Clusterumgebung für hohe Verfügbarkeit, Funktionsübernahme und Skalierbarkeit konfigurieren. Clustering ist ein entscheidender Aspekt einer Middleware-Unternehmensanwendung und Kunden können nun auswählen, dass für eine Topologie ein Cluster gebildet werden soll, um in zwei oder mehr Instanzen einen Lastausgleich für Anforderungen durchzuführen.
 
-Der WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core-Plan besitzt nun ebenfalls weitere Funktionen. Der Plan umfasst die Verwendung eines Liberty-Verbunds. Dabei handelt es sich um eine Verwaltungsdomäne für eine Gruppe von Liberty-Profilen (Servern), die aus mindestens zwei virtuellen Maschinen besteht. Die erste virtuelle Maschine enthält den Liberty-Server für den Verbundcontroller, einen Steuerpunkt für den Liberty-Verbund. Zusätzlich zum Liberty-Verbund enthält diese virtuelle Maschine auch IBM HTTP Server, wodurch Zugriff auf Ihre Anwendungen über einen Web-Browser ermöglicht wird. Die übrigen virtuellen Maschinen sind Verbundhosts, in denen sich die Verbundmember befinden (Liberty Profile-Server). Das Feature Liberty Admin Center ist auf dem Liberty-Controller-Server ebenfalls aktiviert.
+Der WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core-Plan beinhaltet die Nutzung eines Liberty-Verbunds. Der Liberty-Verbund ist eine Verwaltungsdomäne für eine Gruppe von Liberty-Profilen (Servern), die aus mindestens zwei virtuellen Maschinen besteht. Die erste virtuelle Maschine enthält den Liberty-Server für den Verbundcontroller, einen Steuerpunkt für den Liberty-Verbund. Zusätzlich zum Liberty-Verbund enthält diese virtuelle Maschine auch IBM HTTP Server, wodurch Zugriff auf Ihre Anwendungen über einen Web-Browser ermöglicht wird. Die übrigen virtuellen Maschinen sind Verbundhosts, in denen sich die Verbundmember befinden (Liberty Profile-Server). Das Feature Liberty Admin Center ist auf dem Liberty-Controller-Server ebenfalls aktiviert.
 
 In der folgenden Abbildung ist die Architektur der WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment-Zelle sowie der Liberty-Verbundumgebungen zu sehen.
 
@@ -88,10 +90,11 @@ Beispiel: Bei Nutzung des ND-Plans entspricht eine einzige Instanz 1vCPU mit 2 G
 
 **Anmerkung**: Die Mindestabrechungseinheit sind 0,25 Instanz-Stunden pro angepassten Knoten oder Liberty-Host. Für das oben stehende Beispiel gilt, dass ein Steuerknoten und ein angepasster Knoten, der für mindestens 15 Minuten konfiguriert ist, einer Mindestgebühr von (.25 * Anzahl der Instanzen) entspricht.
 
-**Hinweis**: Aufgrund einer bestimmten Menge an Rechen-, Speicher- und E/A-Ressourcen werden für Clients Gebühren für die Summe der Instanzen im Status GESTOPPT mit einer reduzierten Rate von 5 % berechnet. Clients werden mit einer festen Anzahl von Instanzen im Status GESTOPPT mit maximal 10 IP-Adressen oder 64 GB Speicherplatz verwaltet. 
+**Hinweis**: Aufgrund einer bestimmten Menge an Rechen-, Speicher- und E/A-Ressourcen werden für Clients Gebühren für die Summe der Instanzen im Status GESTOPPT mit einer reduzierten Rate von 5 % berechnet. Clients werden mit einer festen Anzahl von Instanzen im Status GESTOPPT mit maximal 10 IP-Adressen oder 64 GB Speicherplatz verwaltet.
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [WASdev](https://developer.ibm.com/wasdev/){: new_window}
-* [Dokumentation zu WebSphere Application Server](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/as_ditamaps/was855_welcome_ndmp.html){: new_window}
-* [Klassische WebSphere Application Server Version 9 Beta - Dokumentation](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}
+* [Dokumentation zu WebSphere Application Server V9](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}

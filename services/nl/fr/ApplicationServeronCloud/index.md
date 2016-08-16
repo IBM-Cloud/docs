@@ -12,26 +12,28 @@ copyright:
 # Initiation à IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #getting_started}
 
-*Dernière mise à jour : 13 juin 2016*
+*Dernière mise à jour : 24 juin 2016*
+{: .last-updated}
 
-{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} est un service permettant une configuration rapide sur une instance WebSphere Application Server Liberty, Network Deployment, ou Traditional, pré-configurée dans un environnement de cloud hébergé sur {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} est un service permettant une configuration rapide sur une instance WebSphere Application Server Liberty, Traditional Network Deployment ou Traditional WebSphere, pré-configurée dans un environnement de cloud hébergé sur {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 ## Présentation de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} fournit aux consommateurs des serveurs Traditional WebSphere et Liberty Profile préconfigurés. Il est hébergé sur des invités de machine virtuelle avec les droits d'accès de l'utilisateur root au système d'exploitation invité. Quand vous créez votre service, choisissez entre *Liberty*, *ND* ou *Traditional WebSphere*.
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} fournit aux consommateurs des serveurs Traditional WebSphere et Liberty Profile préconfigurés. Il est hébergé sur des invités de machine virtuelle avec les droits d'accès de l'utilisateur root au système d'exploitation invité. Quand vous créez votre service, choisissez entre *Liberty*, *Traditional ND* ou *Traditional WebSphere*.
+
+**Remarque :** les consommateurs sont maintenant en mesure de choisir entre V8.5 et V9.0 lors de la création d'une nouvelle instance *Traditional ND* ou *Traditional WebSphere*.
 
 Vous êtes initié à l'administration WebSphere et disposez d'un accès complet au système d'exploitation sous-jacent. Vous pouvez réutiliser vos scripts existants et apporter de petites personnalisations au système afin de travailler avec vos propres infrastructures ou des
 infrastructures tierces. Le centre d'administration et les consoles d'administration vous permettent d'administrer votre service WebSphere Application Server Liberty ou Traditional, de la même façon que vos configurations WebSphere sur site.
 
-**Remarque**: le plan WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment propose à présent davantage de fonctions. Il se compose d'un environnement de cellule WebSphere Application Server Network Deployment avec deux machines virtuelles, ou plus. La première machine virtuelle contient le gestionnaire de déploiement et IBM
-HTTP Server ; les autres machines virtuelles contiennent les noeuds personnalisés (agents de noeud) fédérés dans le gestionnaire de déploiement. Utilisez les scripts wsadmin existants pour créer votre configuration WebSphere ou servez-vous de la console d'administration WebSphere pour configurer
+La plan WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment se compose d'un environnement de cellule WebSphere Application Server Network Deployment avec deux machines virtuelles, ou plus. La première machine virtuelle contient le gestionnaire de déploiement et IBM HTTP Server ; les autres machines virtuelles contiennent les noeuds personnalisés (agents de noeud) fédérés dans le gestionnaire de déploiement. Utilisez les scripts wsadmin existants pour créer votre configuration WebSphere ou servez-vous de la console d'administration WebSphere pour configurer
 manuellement l'environnement. Ces nouvelles fonctions permettent aux utilisateurs de configurer un environnement en cluster pour la haute disponibilité, la
 reprise en ligne et l'évolutivité. La mise en cluster est un aspect essentiel de toute application d'entreprise middleware, et les clients peuvent désormais choisir de mettre en cluster une
 topologie afin d'équilibrer la charge des demandes entre deux instances, ou plus.
 
-Le plan WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core propose lui aussi désormais davantage de fonctions. Il inclut l'utilisation d'une collectivité Liberty, qui est un domaine d'administration pour un groupe de profils Liberty (serveurs) et qui se
+Le plan WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core inclut l'utilisation de Liberty Collective. Liberty Collective, qui est un domaine d'administration pour un groupe de profils Liberty (serveurs), se
 compose de deux machines virtuelles, ou plus. La première machine virtuelle contient le serveur Liberty du contrôleur de collectivité, qui constitue un point de contrôle pour la collectivité Liberty. En plus de la collectivité Liberty, cette machine virtuelle contient également le serveur IBM HTTP Server, qui permet l'accès à vos applications depuis un
 navigateur Web. Les autres machines virtuelles sont les hôtes de la collectivité sur lesquels résident les membres de la collectivité (serveurs de profil
 Liberty). Le centre d'administration Liberty est également activé sur le serveur du contrôleur Liberty.
@@ -117,7 +119,8 @@ contrôle et un noeud personnalisé configuré pendant au moins 15 minutes entra
 **Remarque** : du fait d'un volume spécifique de ressources de calcul, de mémoire et d'entrée/sortie, les clients sont facturés pour les instances accumulées dans l'état STOPPED à un taux réduit de 5 %. Les clients sont gérés par rapport à un nombre fixe d'instances STOPPED ne comportant pas plus de 10 adresses IP ou 64 Go de mémoire.
 
 # rellinks
+{: #rellinks}
 ## général
+{: #general}
 * [WASdev](https://developer.ibm.com/wasdev/){: new_window}
-* [Documentation de WebSphere Application Server](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/as_ditamaps/was855_welcome_ndmp.html){: new_window}
-* [Documentation de WebSphere Application Server Traditional v9 Beta](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}
+* [Documentation de WebSphere Application Server V9](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}

@@ -12,14 +12,27 @@ copyright:
 # Dernières mises à jour
 {: #latest_updates}
 
-*Dernière mise à jour : 13 juin 2016*
+*Dernière mise à jour : 24 juin 2016*
+{: .last-updated}
 
 Liste des dernières mises à jour du service.
+
+## 24 juin 2016 : Mise à jour de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* Nouvelle possibilité pour les clients de choisir entre V8.5 et V9.0 lors de la création d'une nouvelle instance *Traditional ND* ou *Traditional WebSphere*.
+* Mise à niveau des fichiers binaires de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} de façon à ce que le groupe de correctifs 16.0.0.2 soit installé sur les nouvelles instances de WebSphere Application Server Liberty (plans Core et ND). 16.0.0.2 est le groupe de correctifs qui suit 8.5.5.9. En ce qui concerne 16.0.0.2, toutes les fonctions facultatives Liberty autorisées prises en charge pour ces plans sont installées par défaut.
+* Correction de [plusieurs vulnérabilités de sécurité](http://www-01.ibm.com/support/docview.wss?uid=swg21984977){: new_window} affectant WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}, incluant :
+  * Vulnérabilité XML External Entity Injection (XXE) dans Apache Standard Taglibs qui affecte IBM WebSphere Application Server.
+  * Possibilité d'une faiblesse de sécurité lors de l'utilisation de la fonction API Discovery appliquée au profil WebSphere Application Server Liberty et des documents Swagger.
+  * Vulnérabilité potentielle de divulgation d'informations dans le centre d'administration pour IBM WebSphere Application Server Liberty.
+  * Vulnérabilité potentielle de fractionnement des réponses HTTP dans IBM WebSphere Application Server.
+  * Vulnérabilités OpenSSL révélées le 3 mai 2016 par OpenSSL Project.
 
 ## 13 juin 2016 : Mise à jour de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 
 * Nouvelle possibilité pour les clients de générer, provisionner, gérer et supprimer des instances de machine virtuelle via la création d'une application ou d'un script qui utilise des API WebSphere Application Server for Bluemix RESTful.
-* Nouvelle fonction qui permet à un client d'avoir un nombre fixe d'instances STOPPED ne comportant pas plus de 10 adresses IP ou 64 Go de mémoire. Les clients sont désormais facturés pour les instances accumulées à l'état STOPPED à un taux réduit de 5 %. 
+* Nouvelle fonction qui permet à un client d'avoir un nombre fixe d'instances STOPPED ne comportant pas plus de 10 adresses IP ou 64 Go de mémoire. Les clients sont désormais facturés pour les instances accumulées à l'état STOPPED à un taux réduit de 5 %.
+
 ## 26 avril 26 : Mise à jour de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 
 * Correction des [vulnérabilités potentielles en matière de sécurité](http://www-01.ibm.com/support/docview.wss?uid=swg21982128){: new_window} dans WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} si FIPS 140-2 est activé, ce qui inclut plusieurs vulnérabilités dans Samba - dont Badlock.

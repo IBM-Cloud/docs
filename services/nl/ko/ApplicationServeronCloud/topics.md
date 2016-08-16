@@ -13,6 +13,7 @@ copyright:
 {: #topics}
 
 *마지막 업데이트 날짜: 2016년 4월 15일*
+{: .last-updated}
 
 1. [개요](indexWAS4Bluemix.html)
 2. [유지보수 및 VM 업데이트](maintenanceAndUpdates.html)
