@@ -117,6 +117,7 @@ You can also use the event-driven capabilities in {{site.data.keyword.openwhisk_
 
 
 ## System details
+{: #openwhisk_system_details}
 
 You can find additional information about {{site.data.keyword.openwhisk_short}} in the following topics:
 
