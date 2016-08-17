@@ -650,7 +650,7 @@ The **Superuser** and **Basic Access**` permissions can be set to **On** or **Of
 
 Depending on your **Read** or **Write** access for the users' permissions, you can search for existing users, remove users, and add users individually or by a group. Note that if you have the **Superuser** permission, you have full access to complete any tasks for user management in the environment. Review the following user management tasks and the level of access needed to complete each task:
 
-* Locate users. If have **Read** or **Write** access and you know all or part of the user name, you can locate users in the table by using the **Search** field. You can also filter the list of users by their organization and permissions.
+* Locate users. If have **Read** or **Write** access and you know all or part of the user name, you can locate users in the table by using the **Search** field.
 
 * Add a single user. If you have **Superuser** permission or
 **Users** permission with **Write** access, you can add users.
