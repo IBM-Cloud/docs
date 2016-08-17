@@ -12,9 +12,21 @@ copyright:
 # 最新更新項目
 {: #latest_updates}
 
-*前次更新：2016 年 6 月 13 日*
+*前次更新：2016 年 6 月 24 日*
+{: .last-updated}
 
 服務最新更新項目的清單。
+
+## 2016 年 6 月 24 日：已更新 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* 新增的功能可讓客戶在建立新的*傳統 ND* 或*傳統 WebSphere* 實例時，選擇 8.5 版或 9.0 版。
+* 已升級 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 二進位檔，WebSphere Application Server Liberty（核心和 ND 方案）的新實例都會安裝修正套件 16.0.0.2。16.0.0.2 是 8.5.5.9 之後的下一個修正套件。從 16.0.0.2 開始，預設會安裝為這些方案支援的所有授權 Liberty 選購配件。
+* 已解決會影響 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 的[數個安全漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21984977){: new_window}，包括：
+  * Apache Standard Taglibs 中的 XML External Entity Injection (XXE) 漏洞，會影響 IBM WebSphere Application Server。
+  * 使用 WebSphere Application Server Liberty 設定檔 API Discovery 功能和 Swagger 文件時，安全可能不如預期。
+  * IBM WebSphere Application Server Liberty 的「管理中心」可能有資訊揭露的漏洞。
+  * IBM WebSphere Application Server 中可能有 HTTP 回應分割的漏洞。
+  * OpenSSL Project 於 2016 年 5 月 3 日揭露的 OpenSSL 漏洞。
 
 ## 2016 年 6 月 13 日：已更新 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 
@@ -33,7 +45,7 @@ copyright:
 * 整合式細項服務維護。
 
 ## 2016 年 2 月 19 日：已更新 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
-* 為應用程式佔用大量記憶體的客戶新增了一個選項，以套用更大型的虛擬機器來合理調整其環境的大小。客戶可以選取具有特定資源大小、且最多包含 32 GB RAM 虛擬機器的給定 WebSphere Application Server 元件或單一系統。
+* 為應用程式佔用大量記憶體的用戶端新增了一個選項，以套用更大型的虛擬機器來合理調整其環境的大小。用戶端可以選取具有特定資源大小、且最多包含 32 GB RAM 虛擬機器的給定 WebSphere Application Server 元件或單一系統。
 * 將 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 二進位從 8.5.5.7 升級到 8.5.5.8
 * 解決了 IBM SDK Java Technology Edition 中影響 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 運行的多個漏洞，通常將其稱為 [SLOTH](http://www-01.ibm.com/support/docview.wss?uid=swg21977244){: new_window}。
 * 解決了影響消費者使用 OAuth 提供者輸出的[跨網站 Script 編制](http://www-01.ibm.com/support/docview.wss?uid=swg21976337){: new_window}漏洞。
