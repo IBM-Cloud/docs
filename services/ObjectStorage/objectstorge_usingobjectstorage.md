@@ -563,35 +563,17 @@ The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog
 
 
 
-## Using Fine-grained Access Control with IBM {{site.data.keyword.objectstorageshort}} {: #fine-grained-access-control}
+## Securing files with fine-grained access control {: #fine-grained-access-control}
 
-You can use Fine-grained Access Control Lists, or ACLs, to help secure files when you have multiple users storing files in the same container. ACLs are enabled at the container level and are not available for the service instance, storage account, or at the project level.
+Fine-grained access control lists help secure files when you have multiple users who store files in the same container.
 
-
-
-### {{site.data.keyword.objectstorageshort}} users vs {{site.data.keyword.Bluemix_notm}} users {: #users}
-
-
-#### {{site.data.keyword.objectstorageshort}} users
-
-{{site.data.keyword.objectstorageshort}} uses Cloud Foundry Service Keys backed by the OpenStack Identity Service to manage users. The Identity Service provides for user authentication by using tokens and authorization by using ACLs.
-
-The {{site.data.keyword.Bluemix_notm}} GUI creates a default administrative user when an {{site.data.keyword.objectstorageshort}} instance is created. This user manages access to the storage service instance.
-
-For more information about service keys, see [the Cloud Foundry documentation](https://docs.cloudfoundry.org/devguide/services/service-keys.html).
-
-
-#### {{site.data.keyword.Bluemix_notm}} platform users
-
-The {{site.data.keyword.Bluemix_notm}} Single Sign On service authenticates platform users against the IBM identity provider. The account owner can manage the roles of existing team members in the organization and spaces, as well as, invite new team members. Currently, fine-grained access control cannot be enabled for the users who are assigned to your space. All users that have access to the space containing the {{site.data.keyword.objectstorageshort}} service have full management access to the lifecycle of the service.
-
-For more information about user roles, see [the {{site.data.keyword.Bluemix_notm}} documentation](https://new-console.ng.bluemix.net/docs/admin/users_roles.html).
+Note: Procedures that are outlined in this doc require the Swift CLI. For more information, see [using {{site.data.keyword.objectstorageshort}} with the Swift CLI](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli).
 
 
 
-### Authorizing {{site.data.keyword.objectstorageshort}} users {: #authorizing-users}
+### Types of access {: #access-types}
 
-Access to the service is controlled by user roles and container ACLs. {{site.data.keyword.objectstorageshort}} users can be either administrative or non-administrative.
+Access to the service is controlled by user roles and container access control lists. {{site.data.keyword.objectstorageshort}} users can be either administrative or non-administrative. Access control lists are enabled by administrative users at the container level and are not available for the service instance, storage account, or at the project level.
 
 <table>
   <tr>
@@ -614,41 +596,24 @@ Access to the service is controlled by user roles and container ACLs. {{site.dat
 
 *Table 1: User roles defined*
 
-
-Container ACLs can be defined to manage access to objects in Swift containers. You can use read access so that users are only allowed to download objects, or you can allow users to download and list objects. Write access allows the user to upload new objects to a container.
-
-Note: Procedures that are outlined in this doc require the Swift CLI. For more information, see [using {{site.data.keyword.objectstorageshort}} with the Swift CLI](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli).
+You can manage {{site.data.keyword.objectstorageshort}} users through the {{site.data.keyword.Bluemix_notm}} user interface, the Cloud Foundry API, or the Cloud Foundry CLI.
 
 
 
-### Managing {{site.data.keyword.objectstorageshort}} users {: #managing-users}
+### Generating {{site.data.keyword.objectstorageshort}} service credentials {: #generating}
 
-You can manage {{site.data.keyword.objectstorageshort}} users in the Service Credential tab on your dashboard, the Cloud Foundry API, or the Cloud Foundry CLI. You can create users using the GUI, CF API, or CF CLI.
-
-
-
-### Creating a user in the UI {: #creating-user-ui}
-
-Access control lists are available in the Object Storage dashboard of the new {{site.data.keyword.Bluemix_notm}} console. To see the new console, click **Try the new {{site.data.keyword.Bluemix_notm}}**. 
+From the new {{site.data.keyword.Bluemix_notm}} console, you can generate new service credentials for {{site.data.keyword.objectstorageshort}} users.  To see the new console, click **Try the new {{site.data.keyword.Bluemix_notm}}**.
 
 1.  Log in to {{site.data.keyword.Bluemix_notm}} as a user with a developer role. You must be located within the space of the service instance you want to manage.
-
 2. Click the **Service Credentials** tab.
-
 3. Click **New Credential**.
-
 4. Provide a name for the credential.
-
 5. In the **Add Inline Configuration Parameters** text field, input the credential information for the role you want to create. The information must be formatted as a JSON payload.
   - To create an administrative user: `{"role":"admin"}`
   - To create a non-administrative user: `{"role":"member"}`
+5. Click **Add**.
 
-6. Click **Add**.
-
-
-
-
-### Creating a user with the command line {: #creating-user-cli}
+To generate service credentials using cURL commands or the Swift CLI you can use the following steps.
 
 1. Log in to {{site.data.keyword.Bluemix_notm}} as a user with a developer role. You must be located within the space of the service instance you want to manage.
 
@@ -656,25 +621,25 @@ Access control lists are available in the Object Storage dashboard of the new {{
   cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
   ```
 
-2. You can use either the Cloud Foundry commands or cURL commands to create service credentials for a user. `service-key-name` will be the name of your credential. A user can have the role of an admin or a member.
+2. Generate service credentials. `service-key-name` will be the name of your credential. You can use either the Cloud Foundry command or the cURL command.
 
   Cloud Foundry command:
   ```
-  cf create-service-key "<object_storage_service_instance_name>" <service-key-name> -c '{"role":"<user_role>"}'
+  cf create-service-key "<object_storage_service_instance_name>" <service-key-name> -c '{"role":"<object_storage_role>"}'
   ```
 
-  Example command to create service credentials for a member user:
+  Example:
 
   ```
-  cf create-service-key "Object-Storage-AclTest" member1 -c '{"role":"member"}'
+  cf create-service-key "Object-Storage-AclTest" GeorgeKey -c '{"role":"member"}'
 
   ```
   cURL command:
   ```
-  curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name": "<user_name>", "role": "<user_role>"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: " -H "Cookie: "
+  curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name": "<user_name>", "role": "member"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: " -H "Cookie: "
   ```
 
-3. Validate credentials for the Service Key you created.
+3. Validate the credentials for Service Key you created.
 
   Cloud Foundry command:
   ```
@@ -701,17 +666,15 @@ Access control lists are available in the Object Storage dashboard of the new {{
   curl "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <bearer_token>" -H "Cookie: "
   ```
 
-You created and added a member to your  {{site.data.keyword.objectstorageshort}} instance.  However, this user does not have permission to read or write to any container. You must explicitly grant access to each container you want the member to have access to.
 
 
+### Assigning access {: #assigning-access}  
 
-### Granting a member read access to an {{site.data.keyword.objectstorageshort}} container {: #member-read-access}
+Only an {{site.data.keyword.objectstorageshort}} user with an admin role can grant read or write access to a container for another user.
 
-Only an admin user can grant read access to a container for a member user using the Swift CLI with the `-read-acl` or `-r` option.
+To grant read access in the CLI use either the `--read-acl` or the `-r` option.
 
-To grant read access you can use either Swift commands or cURL commands.
-
-1. Authenticate your credentials by using a CF Service Key.  You get your Object Storage URL and authentication token as an output.
+1. Authenticate your credentials by using the information in the service credentials you created.  You receive your Object Storage URL and authentication token as an output.
 
   Swift command:
   ```
@@ -764,10 +727,6 @@ To grant read access you can use either Swift commands or cURL commands.
   Date: Tue, 28 Jun 2016 20:57:58 GMT
   ```
 
-
-
-### Manipulating read ACLs {: #manipulating-read-acls}
-
 You can manipulate read ACL combinations.
 
 <table>
@@ -776,7 +735,7 @@ You can manipulate read ACL combinations.
     <th> Read ACL options </th>
   </tr>
   <tr>
-    <td> Read for all referers </td>
+    <td> Read for all referers regardless of account affiliation </td>
     <td> `.r,*` </td>
   </tr>
   <tr>
@@ -801,21 +760,14 @@ You can manipulate read ACL combinations.
   </tr>
 </table>
 
-*Table 2: ACL options that are available to manipulate object read ACLs*
+*Table 2: Read access permissions by option*
 
-Note: Use a comma (,) to separate ACLs. For example, `-read-acl project id:user_id1, project_id2:user_id2`.
-
-Note: The `.r:*` ACL specifies access for any referer regardless of account affiliation or user name. The `.rlistings` ACL allows to list the containers and read (download) objects.
+Note: Use a comma (,) to separate access control lists. For example, `-read-acl project id:user_id1, project_id2:user_id2`.
 
 
+To grant write access use the `--write-acl` or `-w` option through the Swift CLI.
 
-### Granting write access to a container for an  {{site.data.keyword.objectstorageshort}} member {: #member-write-access}
-
-Only an admin user can grant write access to a container. Access is granted through the Swift CLI with the `-write-acl` or `-w` option.
-
-To grant write access you can use either Swift commands or cURL commands.
-
-1. Authenticate your credentials using a CF Service Key.  You will get your Object Storage URL and authentication token as an output.
+1. Authenticate your credentials by using the information in the service credentials you created.  You receive your Object Storage URL and authentication token as an output.
 
   Swift command:
   ```
@@ -856,9 +808,6 @@ To grant write access you can use either Swift commands or cURL commands.
   ```
 
 
-
-### Manipulating write ACLs {: #manipulating-write-acls}
-
 You can manipulate write ACL combinations.
 
 <table>
@@ -884,14 +833,14 @@ You can manipulate write ACL combinations.
   </tr>
 </table>
 
-*Table 3: Write ACL permissions by option*
+*Table 3: Write access permissions by option*
 
-Note: Use a comma (,) to separate ACLs. For example, `--write-acl project id:user_id1, project_id2:user_id2`.
-
-
+Note: Use a comma (,) to separate access control lists. For example, `-write-acl project id:user_id1, project_id2:user_id2`.
 
 
-### Removing access control from a container {: #removing-access}
+
+
+### Removing access {: #removing-access}
 
 To remove read ACLs from a container:
 
