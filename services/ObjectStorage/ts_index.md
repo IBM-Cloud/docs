@@ -3,8 +3,10 @@
 # {{site.data.keyword.objectstorageshort}} troubleshooting
 {: #troubleshooting}
 
-*Last updated: 24 June 2016*
+*Last updated: 17 August 2016*
 {: .last-updated}
+
+Here are the answers to common troubleshooting questions about using {{site.data.keyword.objectstoragefull}}.
 
 ## Unrecognized token contentpack returned when using openstack4J with Liberty Profile
 {: #unrecognized_token}
@@ -35,3 +37,18 @@ To resolve the problem, follow these steps:
 
 1. Use reverse classloading (parentLast).
 2. Exclude jaxrs from the enabled features.
+
+## Getting help and support for {{site.data.keyword.objectstorageshort}}
+{: #gettinghelp}
+
+If you have problems or questions when using {{site.data.keyword.objectstoragefull}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
+
+When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
+
+* If you have technical questions about {{site.data.keyword.objectstorageshort}}, post your question on [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "object-storage".
+<!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
+* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window} forum. Include the  "object-storage" and "bluemix" tags.
+
+See [Getting help](https://console.ng.bluemix.net/docs/support/index.html#getting-help) for more details about using the forums.
+
+For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
