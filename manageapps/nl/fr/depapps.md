@@ -86,9 +86,9 @@ Un fichier `package.json` doit se trouver dans votre application Node.js pour qu
 
   ```
   {
-        "name": "MonNoeudJsUnique01",
+        "name": "MyUniqueNodejs01",
         "version": "0.0.1",
-        "description": "Exemple de fichier package.json",
+        "description": "A sample package.json file",
         "dependencies": {
                 "express": ">=3.4.7 <4",
                 "jade": ">=1.1.4"
@@ -153,16 +153,12 @@ cf push -f appManifest.yml
 |**host**	|Nom d'hôte de l'application dans {{site.data.keyword.Bluemix_notm}}. Cette valeur doit être unique dans l'environnement {{site.data.keyword.Bluemix_notm}}.	|`host: ` *nom_hôte*|
 |**name**	|Nom de l'application dans {{site.data.keyword.Bluemix_notm}}. Cette valeur doit être unique dans l'environnement {{site.data.keyword.Bluemix_notm}}.	|`name: ` *nom_app*|
 |**path**	|Emplacement de votre application. Cette valeur peut être un chemin relatif ou absolu.	|`path: ` *chemin_application*|
-|**command**	|Commande de démarrage personnalisée pour votre application ou commande d'exécution des fichiers script.	|`command:`
-*commande_personnalisée* `command:` *bash ./run.sh*|
+|**command**	|Commande de démarrage personnalisée pour votre application ou commande d'exécution des fichiers script.	|`command:` *commande_personnalisée* `command:` *bash ./run.sh*|
 |**memory**	|Quantité de mémoire à allouer à l'application. La valeur par défaut est 1G.	|`memory: 512M`|
 |**instances**	|Nombre d'instances à créer pour votre application.	|`instances: 2`|
 |**timeout**	|Délai de démarrage maximal de l'application, en secondes. La valeur par défaut est 60 secondes.	|`timeout: 80`|
-|**no-route**	|Valeur booléenne permettant d'empêcher d'affecter une route à l'application si l'application s'exécute seulement en
-arrière-plan. La valeur par défaut est
-**false**.	|`no-route: true`|
-|**random-route**	|Valeur booléenne permettant d'affecter une route aléatoire à l'application. La valeur par défaut est
-**false**.	|`random-route: true`|
+|**no-route**	|Valeur booléenne permettant d'empêcher d'affecter une route à l'application si l'application s'exécute seulement en arrière-plan. La valeur par défaut est **false**.	|`no-route: true`|
+|**random-route**	|Valeur booléenne permettant d'affecter une route aléatoire à l'application. La valeur par défaut est **false**.	|`random-route: true`|
 |**services**	|Services à lier à l'application.	|`services:   - mysql_maptest`|
 |**env**	|Variables d'environnement personnalisées pour l'application.|`env: DEV_ENV: production`|
 *Tableau 1. Options prises en charge dans le fichier manifest.yml*
