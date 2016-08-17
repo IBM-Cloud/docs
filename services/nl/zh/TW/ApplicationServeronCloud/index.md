@@ -12,21 +12,24 @@ copyright:
 # 開始使用 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #getting_started}
 
-*前次更新：2016 年 6 月 13 日*
+*前次更新：2016 年 6 月 24 日*
+{: .last-updated}
 
-{{site.data.keyword.IBM}}WebSphere Application Server for {{site.data.keyword.Bluemix}} 服務可協助您在 {{site.data.keyword.Bluemix_notm}} 所管理雲端環境中的預先配置 WebSphere Application Server Liberty、Network Deployment 或典型實例上快速設定。
+{{site.data.keyword.IBM}}WebSphere Application Server for {{site.data.keyword.Bluemix}} 服務可協助您在 {{site.data.keyword.Bluemix_notm}} 管理之雲端環境中的預先配置 WebSphere Application Server Liberty、傳統網路部署或傳統 WebSphere 實例上快速設定。
 {: shortdesc}
 
 ## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 概觀
 {: #overview}
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 提供消費者預先配置的傳統 WebSphere 及 Liberty Profile 伺服器。它在具有來賓作業系統之 root 存取權的虛擬機器訪客上進行管理。當您建立服務時，請選擇 *Liberty*、*ND* 或*傳統 WebSphere*。
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 提供消費者預先配置的傳統 WebSphere 及 Liberty Profile 伺服器。它在具有來賓作業系統之 root 存取權的虛擬機器訪客上進行管理。當您建立服務時，可選擇 *Liberty*、*傳統 ND* 或*傳統 WebSphere*。
+
+**附註：**消費者現在可在建立新的*傳統 ND* 或*傳統 WebSphere* 實例時，選擇 8.5 版或 9.0 版。
 
 您會有熟悉的 WebSphere 管理經驗，以及具有基礎作業系統的完整存取權。您可以重複使用現有 Script，並進行需要的少量系統調整，以便搭配您自己或協力廠商的架構來使用。「管理中心」及「管理主控台」的提供目的是管理 WebSphere Application Server Liberty、ND 或傳統服務（就像內部部署 WebSphere 配置一樣）。
 
-**附註**：WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment 方案現在具有更多功能。此方案包含具有兩個以上虛擬機器的 WebSphere Application Server Network Deployment Cell 環境。第一個虛擬機器包含部署管理程式及 IBM HTTP Server，而其餘虛擬機器包含聯合至部署管理程式的自訂節點（節點代理程式）。使用現有 wsadmin Script 來建立 WebSphere 配置，或使用「WebSphere 管理主控台」來手動配置環境。這些新的功能容許使用者設定叢集環境以獲得高可用性、失效接手及可擴充性。叢集作業是任何中介軟體企業應用程式的重要部分，而且用戶端現在可以選擇對拓蹼進行叢集處理，以負載平衡兩個以上「實例」的要求。
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment Plan 包含具有兩個以上虛擬機器的 WebSphere Application Server Network Deployment Cell 環境。第一個虛擬機器包含「部署管理程式」和 IBM HTTP Server，而其餘虛擬機器包含與「部署管理程式」聯合的自訂節點（節點代理程式）。使用現有 wsadmin Script 來建立 WebSphere 配置，或使用「WebSphere 管理主控台」來手動配置環境。這些新的功能容許使用者設定叢集環境以獲得高可用性、失效接手及可擴充性。叢集作業是任何中介軟體企業應用程式的重要部分，而且用戶端現在可以選擇對拓蹼進行叢集處理，以負載平衡兩個以上「實例」的要求。
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core Plan 也具有更多功能。此方案包括如何使用 Liberty Collective，而這是一組 Liberty 設定檔（伺服器）的管理網域，並且包含兩個以上的虛擬機器。第一個虛擬機器包含 Collective Controller Liberty 伺服器（即 Liberty Collective 的控制點）。除了 Liberty Collective 之外，此虛擬機器也會包含 IBM HTTP Server，其容許從 Web 瀏覽器存取應用程式。其餘虛擬機器是群體成員所在的群體主機（Liberty 設定檔伺服器）。在 Liberty 控制器伺服器上也會啟用「Liberty 管理中心」特性。
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core Plan 包括使用「Liberty 群體」。「Liberty 群體」是一組 Liberty 設定檔（伺服器）的管理網域，其中包含兩個以上的虛擬機器。第一個虛擬機器包含 Collective Controller Liberty 伺服器（即 Liberty Collective 的控制點）。除了 Liberty Collective 之外，此虛擬機器也會包含 IBM HTTP Server，其容許從 Web 瀏覽器存取應用程式。其餘虛擬機器是群體成員所在的群體主機（Liberty 設定檔伺服器）。在 Liberty 控制器伺服器上也會啟用「Liberty 管理中心」特性。
 
 下圖顯示 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment Cell 及 Liberty Collective 環境的架構。
 
@@ -45,7 +48,7 @@ IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 提供�
 ## 定價策略
 {: #pricing_strategy}
 
-IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 提供依 T 恤尺碼分級的實例，讓使用大量記憶體的客戶能套用更大型的虛擬機器來合理調整其環境的大小。客戶可以選取具有特定資源大小、且最多包含 32 GB RAM 虛擬機器的已佈建 WebSphere Application Server 元件或單一系統。
+IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 提供依 T 恤尺碼分級的實例，讓使用大量記憶體的客戶能套用更大型的虛擬機器來合理調整其環境的大小。用戶端可以選取具有特定資源大小、且最多包含 32 GB RAM 虛擬機器的已佈建 WebSphere Application Server 元件或單一系統。
 
 下表呈現了截至 2016 年 4 月 1 日的 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 方案價格，計價單位是美元 (USD)。
 
@@ -92,7 +95,8 @@ IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 提供�
 **附註**：由於特定量的運算、記憶體和 I/O 資源，客戶會因為處理停止狀態的累計實例，被收取減價 5% 的費用。客戶會被控制在固定數量的已停止實例，最多不超過 10 個 IP 位址或 64 GB 的記憶體。
 
 # 相關鏈結
+{: #rellinks}
 ## 一般
+{: #general}
 * [WASdev](https://developer.ibm.com/wasdev/){: new_window}
-* [WebSphere Application Server 文件](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/as_ditamaps/was855_welcome_ndmp.html){: new_window}
-* [WebSphere Application Server 傳統第 9 版測試版文件](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}
+* [WebSphere Application Server 第 9 版文件](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}

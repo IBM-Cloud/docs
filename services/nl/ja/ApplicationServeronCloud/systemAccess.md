@@ -25,14 +25,20 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} のインス
 * {{site.data.keyword.Bluemix_notm}} UI の {{site.data.keyword.Bluemix_notm}} カタログおよびサービス・ダッシュボードから。
 * RESTful API を使用したアプリケーションまたはスクリプトの作成から。
 
-Swagger 2.0 準拠 REST API を使用して、ポータルおよびダッシュボードで提供されるものと同じ機能にアクセスできます。サポートされる REST API とリソースについて詳しくは、WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API の資料](https://new-console.{DomainName}/apidocs/212){: new_window}を参照してください。
+Swagger 2.0 準拠 REST API を使用して、ポータルおよびダッシュボードで提供されるものと同じ機能にアクセスできます。サポートされる REST API とリソースについて詳しくは、WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API の資料](https://new-console.{DomainName}/apidocs/231){: new_window}を参照してください。
 
 **注:** サービス・インスタンスを作成した後、作成された T シャツ・サイズによっては、サービスがすぐに使用可能状態にならないことがあります。戻された JSON の **Status** フィールドを照会してサービス・インスタンスの現在の状態を判別することをお勧めします。
 
-**注:** デフォルトで、API BASE URL は、[米国南部地域](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}のエンドポイントを指します。英国地域またはシドニー地域を使用する場合は、アプリケーションが以下のいずれかのエンドポイントを使用することを確認してください。
+**注:** [REST API の資料](https://new-console.{DomainName}/apidocs/231){: new_window}のサンプル・コードで参照されている API 基本 URL は米国南部地域を指しています。他の地域を使用する場合は、アプリケーションで適切な API 基本 URL を参照するようにしてください。
 
-* [英国地域](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
-* [シドニー地域](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+*表 1. REST API 実装の API 基本 URL*
+
+| **地域名** | **地理的位置** | **地域接頭部** | **API 基本 URL** |       
+|:-------------:|:----------:|:--------------:|:-------------:|
+| 米国南部地域 | ダラス、テキサス、米国 | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
+| 英国地域 | ロンドン、イングランド | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
+| シドニー地域 | シドニー、オーストラリア | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+
 
 
 ## サービス・ダッシュボード
@@ -102,13 +108,15 @@ $ openvpn --config vt-wasaas-wasaas.ovpn  </pre>
 OpenSSH は通常、Linux 上で使用でき、Windows 上で実行される Cygwin でも使用できます。Windows コマンド・プロンプトから実行するようにインストールすることもできます。
 
 OpenSSH のインストールを確認するには、次のコマンドを入力します。
-```
+
+  ```
 $ ssh -V
   ```
   {: codeblock}
 
 応答は以下のようになります。
-```
+
+  ```
 OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
   ```
   {: codeblock}
@@ -178,7 +186,8 @@ IdentityFile /path/privateKeyFileName  </pre>
   * WebSphere Application Server for Bluemix の各ノードには、WAS_HOME/virtual/bin ディレクトリーに openFirewallPorts.sh スクリプトがあります。
   * 各 Liberty 集合ホスト上には、WAS_HOME/virtual/bin ディレクトリー内に openFirewallPorts.sh スクリプトがあります。
 
-使用法: ```
+使用法: 
+  ```
 $ openFirewallPorts.sh -ports <PORT>:<PROTOCOL>,... -persist true|false
   ```
   {: codeblock}

@@ -25,14 +25,20 @@ copyright:
 * 通过 {{site.data.keyword.Bluemix_notm}} UI 中的 {{site.data.keyword.Bluemix_notm}} 目录和服务仪表板。
 * 通过创建使用了我们提供的 RESTful API 的应用程序或脚本。
 
-使用我们提供的符合 Swagger 2.0 的 REST API，客户可访问通过门户网站和仪表板提供的相同功能。有关支持的 REST API 和资源的更多信息，请参阅 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文档](https://new-console.{DomainName}/apidocs/212){: new_window}。
+使用我们提供的符合 Swagger 2.0 的 REST API，客户可访问通过门户网站和仪表板提供的相同功能。有关支持的 REST API 和资源的更多信息，请参阅 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文档](https://new-console.{DomainName}/apidocs/231){: new_window}。
 
 **注：**创建服务实例之后，根据创建的 T 恤型号，可能无法立即使用您的服务。建议您查询 JSON 返回的**状态**字段，以确定服务实例的当前状态。
 
-**注：**缺省情况下，API BASE URL 指向[美国南部区域](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}中的端点。如果您使用英国或悉尼区域，请确保应用程序使用以下某个端点：
+**注**：[REST API 文档](https://new-console.{DomainName}/apidocs/231){: new_window}的样本代码中引用的 API 基本 URL 指向美国南部区域。如果要使用其他区域，请确保应用程序引用相应的 API 基本 URL。
 
-* [英国区域](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
-* [悉尼区域](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+*表1. REST API 实现的 API 基本 URL*
+
+| **区域名称** | **地理位置** | **区域前缀** | **API 基本 URL** |       
+|:-------------:|:----------:|:--------------:|:-------------:|
+| 美国南部区域 | 美国得克萨斯州达拉斯 | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
+| 英国区域 | 英国伦敦 | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
+| 悉尼区域 | 澳大利亚悉尼 | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+
 
 
 ## 服务仪表板
@@ -74,7 +80,7 @@ C:\Program Files\OpenVPN\Config  </pre>
 ### 使用以下指示信息，在 Linux 中设置 openVPN：
 1. 要安装 openVPN，请遵循以下[指示信息](https://openvpn.net/index.php/access-server/docs/admin-guides/182-how-to-connect-to-access-server-with-linux-clients.html){: new_window}。
   * 如果需要手动下载并安装 RPM 软件包管理器，请转至 [openVPN unix/linux 下载](https://openvpn.net/index.php/access-server/download-openvpn-as-sw.html){: new_window}。您可能需要 Linux 管理员的帮助。
-3. 在服务仪表板中，使用 WebSphere Application Server for Bluemix 实例的 OpenVPN 下载链接下载 VPN 配置文件。将文件解压缩到您计划要从中启动 openVPN 客户端的目录。需要全部 4 个文件位于相同目录。
+3. 在服务仪表板中，使用 WebSphere Application Server for Bluemix 实例的 OpenVPN 下载链接下载 VPN 配置文件。将文件解压缩到要从中启动 openVPN 客户端的目录。需要全部 4 个文件位于相同目录。
 3. 启动 openVPN 客户端程序。打开终端窗口，并转至包含配置文件的目录。以 root 用户身份运行以下命令：
 
   <pre>
@@ -93,12 +99,14 @@ $ openvpn --config vt-wasaas-wasaas.ovpn  </pre>
 这些指示信息假定您使用的是 OpenSSH 作为客户端。OpenSSH 通常适用于 Linux，也适用于在 Windows 上运行的 Cygwin。您还可以安装 OpenSSH，以从 Windows 命令提示符运行。
 
 要验证 OpenSSH 的安装信息，请输入命令：
+  
   ```
 $ ssh -V
   ```
   {: codeblock}
 
 您将收到以下类似响应：
+  
   ```
 OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
   ```

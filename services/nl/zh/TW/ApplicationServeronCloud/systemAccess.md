@@ -25,14 +25,20 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的實例
 * 從 {{site.data.keyword.Bluemix_notm}} 使用者介面的 {{site.data.keyword.Bluemix_notm}}「型錄」及「服務儀表板」。
 * 藉由建立使用 RESTful API 的應用程式或 Script。
 
-透過使用遵循 Swagger 2.0 的 REST API，客戶能夠存取與透過入口網站和儀表板所提供功能的相同功能。如需所支援之 REST API 和資源的相關資訊，請參閱 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文件](https://new-console.{DomainName}/apidocs/212){: new_window}。
+透過使用遵循 Swagger 2.0 的 REST API，客戶能夠存取與透過入口網站和儀表板所提供功能的相同功能。如需所支援之 REST API 和資源的相關資訊，請參閱 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文件](https://new-console.{DomainName}/apidocs/231){: new_window}。
 
 **附註：**建立服務實例之後，根據所建立的 T 恤尺碼，您的服務可能無法立即供使用。建議您查詢所傳回 JSON 的**狀態**欄位，以判斷服務實例的現行狀態。
 
-**附註：**依預設，API 基礎 URL 會指向[美國南部地區](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}中的端點。如果您使用英國或雪梨地區，請確定您的應用程式使用下列其中一個端點：
+**附註：**[REST API 文件](https://new-console.{DomainName}/apidocs/231){: new_window}的範例程式碼中所參照的 API 基本 URL 是指向「美國南部地區」。如果您是使用其他地區，請確定您的應用程式參照適當的 API 基本 URL。
 
-* [英國地區](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
-* [雪梨地區](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+*表 1. Rest API 的 API 基本 URL 實作*
+
+| **地區名稱** | **地理位置** | **地區字首** | **API 基本 URL** |       
+|:-------------:|:----------:|:--------------:|:-------------:|
+| 美國南部地區 | 美國德州達拉斯 | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
+| 英國地區 | 英國倫敦 | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
+| 雪梨地區 | 澳洲雪梨 | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+
 
 
 ## 服務儀表板
@@ -93,12 +99,14 @@ $ openvpn --config vt-wasaas-wasaas.ovpn  </pre>
 這些指示假設您是使用 OpenSSH 作為用戶端。OpenSSH 通常適用於 Linux，也適用於在 Windows 上執行的 Cygwin。您還可以安裝 OpenSSH，以從 Windows 命令提示字元執行。
 
 若要驗證 OpenSSH 的安裝，請輸入以下指令：
+  
   ```
 $ ssh -V
   ```
   {: codeblock}
 
 您將收到與以下內容類似的回應：
+  
   ```
 OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
   ```
@@ -166,9 +174,10 @@ Hostname 169.53.246.xxx
   * 在每一個 Liberty Collective 主機上，您會在 WAS_HOME/virtual/bin 目錄中找到 Script openFirewallPorts.sh。
 
 用法：
-```
+
+  ```
       $ openFirewallPorts.sh -ports <PORT>:<PROTOCOL>,... -persist true|false
-```
+  ```
   {: codeblock}
 
 * PORT 是埠號
