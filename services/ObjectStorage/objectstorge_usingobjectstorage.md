@@ -2,7 +2,7 @@
 
 # Start using {{site.data.keyword.objectstorageshort}}  {: #using-object-storage} 
 
-*Last updated: 29 July 2016*
+*Last updated: 13 August 2016*
 {: .last-updated}
 
 
