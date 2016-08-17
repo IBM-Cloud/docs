@@ -6,24 +6,24 @@ copyright:
 ---
 # Monitoring apps with {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
-*Last updated: 25 April 2016*
+Last updated: 8 August 2016
 {: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_full}} provides monitoring and analytics for your mobile applications. You can record client logs and monitor data with the {{site.data.keyword.mobileanalytics_short}} Client SDK. Developers can control when to send this data to the {{site.data.keyword.mobileanalytics_short}} Service. When data is delivered to {{site.data.keyword.mobileanalytics_short}}, you can use the {{site.data.keyword.mobileanalytics_short}} dashboard to get analytics insights about your mobile applications, devices, and client logs.
 {: shortdesc}
 
+<!--
+
 ## Visualizing data with custom charts
 {: #custom-charts}
 
-You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report..
-{: #shortdesc}
+You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
-Learn more about monitoring and troubleshooting your app crashes.
 
 ### Creating custom charts for client logs
 {: #custom-charts-client-logs}
 
-You can create a custom chart for client logs that contain log information that is sent with the platform's Logger API. The log information also includes contextual information about the device, including environment, app name, and app version.
+You can create a custom chart for client logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
 In this example, you use client log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
 
@@ -42,14 +42,12 @@ In this example, you use client log data to create a flow chart. The final graph
 
 
 1. Make sure that you have an application that is collecting device logs or gathering analytics.
-2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart based on the analytics messages that were sent to the server.
-3. Click **Create Chart** to create a new custom chart.
-4. Provide the following values:
+2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
+3. Click **Create Chart** to create a new custom chart and provide the following values:
   * Chart Title: Application and Log Levels
   * Event Type: Client Logs
   * Chart Type: Flow Chart
-5. Click the **Chart Definition** tab.
-6. Provide the following values:
+5. Click the **Chart Definition** tab and provide the following values:
   * Source: Application Name
   * Destination: Log Level
   * Property: your app name
@@ -58,7 +56,7 @@ In this example, you use client log data to create a flow chart. The final graph
 ### Exporting custom data
 {: #export-custom-data}
 
-The data from each custom chart can be exported into JSON, XML, or CSV format.
+You can export the data from each custom chart into JSON, XML, or CSV format.
 
 The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
 
@@ -85,13 +83,14 @@ You can also export and import custom chart definitions programmatically by usin
 
 **Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
 
+-->
+
 ## Setting alerts
 {: #alerts}
 
-You can set thresholds in alert definitions in the MobileFirst Analytics Console to better monitor your activities.
-{: #shortdesc}
+You can set thresholds in alert definitions in the {{site.data.keyword.mobileanalytics_short}} Console to better monitor your activities.
 
-You can configure thresholds, which if exceeded, trigger alerts to notify the MobileFirst Analytics Console monitor. The triggered alerts can be visualized on the console, or the alerts can be handled by a custom webhook. This feature provides a proactive means of detecting client log errors, server log errors, extended periods of network latency, and authentication failures. Reactive thresholds and alerts keep you from having to sift through your data and set thresholds at a wide spectrum of granularity.
+You can configure thresholds, which if exceeded, trigger alerts to notify the {{site.data.keyword.mobileanalytics_short}} Console monitor. The triggered alerts can be visualized on the console, or the alerts can be handled by a custom webhook. This feature provides a proactive means of detecting client log errors, server log errors, extended periods of network latency, and authentication failures. Reactive thresholds and alerts keep you from having to sift through your data and set thresholds at a wide spectrum of granularity.
 
 ### Creating an alert definition for client logs
 {: #alert-def-client-logs}
@@ -100,8 +99,8 @@ You can create an alert definition that is based on client logs.
 
 In this example, you use client log data to create an alert definition. The alert monitors all client logs that were received in the last 5 minutes, and continues to check every 5 minutes, until the alert definition is disabled or deleted. An alert is triggered for each device that sent 3 or more client error logs with the same app name and version.
 
-1. In the MobileFirst Analytics Console, click the bell icon to go to the **Alert Log** page.
-2. Go to the **Alert Management** page and click Create **Alert**.
+1. In the {{site.data.keyword.mobileanalytics_short}} Console, click **Definitions** to go to the Alert Definitions page.
+2. Click **Create Alert** to create an alert.
 3. Provide the following values:
 	* Alert Name: Alert for client logs
 	* Message: Error Message Alert
@@ -112,14 +111,14 @@ In this example, you use client log data to create an alert definition. The aler
 			* Threshold
 				* Threshold Type: Total for Application Instance
 
-					Note: If you choose the Average for Application option, the client logs are averaged by the number of devices. For example, if you have two devices, 					and one device sends six client logs while the other device sends three client logs, the average is 4.5 client logs.
+					**Note**: If you choose the Average for Application option, the client logs are averaged by the number of devices. For example, if you have two devices, and one device sends six client logs while the other device sends three client logs, the average is 4.5 client logs.
 				* Operator: is greater than or equals 3
 	<!-- insert alert definition tab image? -->
 
-4. Click **Next** or the **Distribution Method** tab, and provide the following value:
+4. Click **Next** and provide the following value:
 	* Method: Analytics Console Only
 
-		Note: Choose the Analytics Console and Network Post option if you want to additionally send a POST message with a JSON payload to your customized URL. The following fields are available if you choose this option:
+		**Note**: Choose the Analytics Console and Network Post option if you want to additionally send a POST message with a JSON payload to your customized URL. The following fields are available if you choose this option:
 		* Network Post URL
         * Headers
         * Authentication Type
@@ -134,8 +133,8 @@ You can create an alert definition based on app crashes.
 
 In this example, you use app crash data to create an alert definition. The alert monitors all app crashes in the last 2 minutes, and continues to check every 2 minutes, until the alert definition is disabled or deleted. An alert is triggered for each app that crashed 5 or more times. For more information about app crashes, see [App crashes](app_crash/c_op_analytics_crashes.html).
 
-1. In the MobileFirst Analytics Console, click the **Alerts** icon. This action brings up the Alert Log page.
-2. Click the **Alert Management** tab and click **Create Alert**.
+1. In the {{site.data.keyword.mobileanalytics_short}} Console, click **Definitions** to display the Alerts Definitions page.
+2. Click **Create Alert**.
 3. Provide the following values:
 	* Alert Name: Alert for App Crashes
 	* Message: App Crash Alert
@@ -154,24 +153,23 @@ In this example, you use app crash data to create an alert definition. The alert
       * Authentication Type (required)
 5. Click **Save**.
 
-### Managing Alert definitions
+### Managing alert definitions
 {: #managing-alert-definitions}
 
 In this example, you manage your alert definitions from the Alert Management page.
 
-1. In the MobileFirst Analytics Console, click the **Alerts** icon. This action opens the Alert Log page.
-2. Click the **Alerts Management** tab.
-3. Optional: Toggle the check-box under the **Enabled** column to enable or disable a specific alert definition.
-4. Optional: Click the **Duplicate** icon if you want to create a copy of an alert definition and change some values.
-5. Optional: Click the **Pencil** icon if you want to edit an alert definition.
-6. Optional: Click the **Trash** icon if you want to delete an alert definition.
+1. In the {{site.data.keyword.mobileanalytics_short}} Console, click **Logs**. This action opens the Alert Logs page.
+2. Optional: Toggle the check-box under the **Enabled** column to enable or disable a specific alert definition.
+3. Optional: Click the **Duplicate** icon if you want to create a copy of an alert definition and change some values.
+4. Optional: Click the **Pencil** icon if you want to edit an alert definition.
+5. Optional: Click the **Trash** icon if you want to delete an alert definition.
 
 ### Viewing alert details
 {: #viewing-alert-details}
 
 In this example, you view the details of your triggered alerts from the Alert Log page.
 
-1. In the MobileFirst Analytics Console, click the **Alerts** icon. This action brings up the Alert Log page.
+1. In the {{site.data.keyword.mobileanalytics_short}} Console, click **Logs**. This action brings up the Alert Log page.
 2. Click the **+** icon for any of the alerts. This action displays the **Alert Definition** and **Alert Instances** sections.
 
     **Note**: If the corresponding alert definition was not deleted or modified, you can edit the alert definition by clicking **Edit Alert**. Otherwise, the **Edit Alert** button is unavailable and the following message displays:
@@ -183,17 +181,12 @@ In this example, you view the details of your triggered alerts from the Alert Lo
 ## App crashes
 {: #monitor-app-crash}
 
-You can view information about your app crashes in the MobileFirst Analytics Console to better monitor and troubleshoot your apps.
-{: #shortdesc}
-
-Learn more about monitoring and troubleshooting your app crashes.
+You can view information about your app crashes in the {{site.data.keyword.mobileanalytics_short}} Console to better monitor and troubleshoot your apps.
 
 ### App crash monitoring
 {: #app-crash}
 
-You can quickly see information about your app crashes in the **Dashboard** section of the IBM MobileFirst™ Analytics Console.
-
-In the **Overview** page of the **Dashboard** section, the **Crashes** bar graph shows a histogram of crashes over time.
+You can quickly see information about your app crashes in the **Crashes** section of the {{site.data.keyword.mobileanalytics_short}} Console. <!--In the **Overview** page of the **Dashboard** section,--> The **Crashes** bar graph shows a histogram of crashes over time.
 
 You can display data in two ways:
 
@@ -204,7 +197,7 @@ You can display data in two ways:
 ### App crash troubleshooting
 {: #app-crash-troubleshooting}
 
-You can view the **Crashes** page in the **Applications** section of the IBM MobileFirst Analytics Console to better administer your apps.
+You can view the **Crashes** page in the <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} Console to better administer your apps.
 
 The **Crash Overview** table shows the following data columns:
 

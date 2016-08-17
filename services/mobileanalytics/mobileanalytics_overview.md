@@ -7,11 +7,12 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # About {{site.data.keyword.mobileanalytics_short}}  
-*Last updated: 21 April 2016*
+{: aboutmobileanalytics}
+Last updated: 21 April 2016
 {: .last-updated}
 
 {: shortdesc}
-The {{site.data.keyword.mobileanalytics_full}} service provides key app usage and performance insights for mobile app developers and app owners.  By using {{site.data.keyword.mobileanalytics_short}} app owners and developers can understand what is happening on the "user side", and they can use this insight to build better apps that are hyper-relevant to users and that stand out in the veritable sea of mobile apps. 
+The {{site.data.keyword.mobileanalytics_full}} service provides key app usage and performance insights for mobile app developers and app owners. By using {{site.data.keyword.mobileanalytics_short}} app owners and developers can understand what is happening on the user side, and they can use this insight to build better apps that are hyper-relevant to users and that stand out in the veritable sea of mobile apps. 
 
 {: #overview}  
 The service includes the {{site.data.keyword.mobileanalytics_short}} Console where developers and app owners can monitor mobile application performance, see usage statistics, and search device logs.  {{site.data.keyword.mobileanalytics_short}}  provides client SDKs for iOS 8+ (Swift only) and Android 4+.
@@ -37,7 +38,7 @@ With the {{site.data.keyword.mobileanalytics_short}} service you can:
 		<dd>Instrument apps with custom events, discover how users are interacting with your app, track purchases, and monitor app activity.  
 </dd>
 <dt>See metrics for all of your apps at-a-glance</dt>
-	<dd>The {{site.data.keyword.mobileanalytics_short}} console offers both ready-made and custom charts, without the need to write queries.</dd>
+	<dd>The {{site.data.keyword.mobileanalytics_short}} console offers <!-- both --> ready-made <!--and custom--> charts, without the need to write queries.</dd>
 <dt>Focus on what is important to you</dt>
 	<dd>Filter metrics by time, adapter, app, app version, OS, OS version, or device model.</dd>
 <dt>Rapidly discover issues</dt>
@@ -52,20 +53,20 @@ With the {{site.data.keyword.mobileanalytics_short}} service you can:
 
 With **pre-defined metrics** you can answer questions like:
 
-*How many new users do I have?*  
-*How many people are actively using my app?*  
-*How frequently are people using my app?*  
-*What time of day are people using my app?*  
-*What device models do my users prefer?*  
-*When should I deprecate support for legacy operation systems?*  
-*Which apps are experiencing performance issues?*  
+* How many new users do I have?  
+* How many people are actively using my app?  
+* How frequently are people using my app? 
+* What time of day are people using my app?  
+* What device models do my users prefer? 
+* When should I deprecate support for legacy operation systems? 
+* Which apps are experiencing performance issues?  
 
 By adding your own **custom events** you can answer questions like:  
 
-*What features are used most and least?*  
-*Where are users entering and leaving my app?*  
-*What activities are users viewing most?*  
-*Are users completing workflows in the app? (for example, conversion funnels)*  
+* What features are used most and least?  
+* Where are users entering and leaving my app?  
+* What activities are users viewing most?  
+* Are users completing workflows in the app (for example, conversion funnels)?   
 
 <!--Client-side logs and usage data are gathered automatically and sent to the Mobile Analytics -->
 <!-- service on demand. Developers and -->
@@ -77,15 +78,14 @@ By adding your own **custom events** you can answer questions like:
 
 All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. You can also create custom charts, based on data that is collected by the analytics service in the dashboard. In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. -->
 
-># Related Links {:class="linklist"}
-<!-->## Tutorials and samples {:id="samples"}-->
-<!-->* [Link1](https://github.com/)-->
->
-># Related Links {:class="linklist"}
->## Related links {:id="general"}
+
+# rellinks
+ {:class="linklist"}
+
 ## SDK
+{: rellink-sdk}
 <!-- Links to SDK download and SDK Developer Guide -->
-* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core )  
+* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)  
->
->{:elementKind="article" id="rellinks"}
+
+<!-- {:elementKind="article" id="rellinks"} -->
