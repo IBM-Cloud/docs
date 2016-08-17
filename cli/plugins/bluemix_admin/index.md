@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+
 
 ---
 
@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
-Last updated: 9 August 2016
+Last updated: 17 August 2016
 {: .last-updated}
 
 
@@ -53,7 +53,7 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomain of the URL for your {{site.data.keyword.Bluemix_notm}} instance.</dd>
+<dd class="pd">Subdomain of the URL for your {{site.data.keyword.Bluemix_notm}} instance. For example, <code>https://console.mycompany.bluemix.net/cli</code>.</dd>
 </dl>
 </li>
 <li>To install the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in, run the following command:<br/><br/>
@@ -118,7 +118,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**Note**: To add a user to a specific organization, you must be the manager of the organization, or you must have **Admin** or **User** permission with **Write** access.
+**Note**: To add a user to a specific organization, you must be the manager of the organization, or you must have **Admin** (available alternative is **Superuser**) or **User** permission with **Write** access.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -166,7 +166,7 @@ cf ba set-permissions <user_name> <permission> <access>
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">The name of the user in {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt class="pt dlterm">&lt;permission&gt;</dt>
-<dd class="pd">Set the permissions for the user: Admin, Login, Catalog (read or write access), Reports (read or write access), or Users (read or write access).</dd>
+<dd class="pd">Set the permissions for the user: Admin (available alternative is Superuser), Login (available alternative is Basic), Catalog (read or write access), Reports (read or write access), or Users (read or write access).</dd>
 <dt class="pt dlterm">&lt;access&gt;</dt>
 <dd class="pd">For Catalog, Reports, or Users permissions, you must also set the level of access as <code>read</code> or <code>write</code>.</dd>
 </dl>
@@ -575,6 +575,7 @@ entering the following command:
 
 **Tip:** You can also use **ba usb** as an alias for the longer
 **ba update-service-broker** command name.
+
 
 ### Working with application security groups
 
