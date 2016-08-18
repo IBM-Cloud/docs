@@ -8,29 +8,26 @@ copyright:
 {:new_window: target="_blank"}
 # Sending basic push notifications
 {: #push-send-notifications}
-Last updated: 14 June 2016
+Last updated: 16 August 2016
 {: .last-updated}
 
 After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files).
 
-
-Send basic push notifications.
+To send basic push notifications, complete the listed steps:
 
 1. In **Choose the Audience**, select one of the following audiences: **All Devices**, or by platform: **Only iOS devices** or **Only Anroid devices**.
 
-	**Note**: When you select the **All Devices** option, all the devices that have subscribed to push notifications receive your notification.
+**Note**: When you select the **All Devices** option, all devices subscribed to {{site.data.keyword.mobilepushshort}} will receive notifications.
 
-	![Notifications screen](images/tag_notification.jpg)
+![Notifications screen](images/tag_notification.jpg)
 
 2. In the **Create your Notification**, enter your message and then click **Send**.
-3. Verify that your devices have received your notification.
+3. Verify that your devices have received your notification. The following image shows an alert box handling a {{site.data.keyword.mobilepushshort}} in the foreground on a Android and iOS device.
 
-	The following screen shot shows an alert box handling a push
-notification in the foreground on a Android and iOS device.
+![Foreground push notification on Android](images/Android_Screenshot.jpg)
 
-	![Foreground push notification on Android](images/Android_Screenshot.jpg)
+![Foreground push notification on iOS](images/iOS_Screenshot.jpg)
 
-	![Foreground push notification on iOS](images/iOS_Screenshot.jpg)
+The following following screen shot shows a {{site.data.keyword.mobilepushshort}} in the background for Android.
 
-	The following following screen shot shows a push notification in the background for Android.
-	![Background push notification on Android](images/background.jpg)
+![Background push notification on Android](images/background.jpg)

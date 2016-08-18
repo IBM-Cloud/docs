@@ -7,20 +7,19 @@ copyright:
 
 # Handling silent notifications for iOS
 {: #silent-notifications}
-Last updated: 14 June 2016
+Last updated: 16 August 2016
 {: .last-updated}
 
 Silent notifications do not appear on the device screen. These notifications are received by the application in the background, which wakes up the application for up to 30 seconds to perform the specified background task. A user might not be aware of the notification arrival. To send silent notifications for iOS, use the [REST API](https://mobile.{DomainName}/imfpushrestapidocs/).   
 
 1. To send silent push notifications, implement the following method in the `appDelegate.m` file in your project.
 
-
-```
-//For Objective C
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
-{
-   NSNumber *contentAvailable = userInfo[@"aps"][@"content-available"];
-   if([contentAvailable intValue]== 1){
+	```
+	//For Objective C
+	 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
+    {
+    NSNumber *contentAvailable = userInfo[@"aps"][@"content-available"];
+    if([contentAvailable intValue]== 1){
        [[IMFPushClient sharedInstance] application:application didReceiveRemoteNotification:userInfo];
        
        //Perform background task
@@ -28,8 +27,8 @@ Silent notifications do not appear on the device screen. These notifications are
        NSLog(@"userInfo: %@", userInfo.description);
        _appDelegateVC.result.text = userInfo.description;
        handler(UIBackgroundFetchResultNewData);
-   }
-   else{
+    }
+    else{
        //Normal Notification
        [[IMFPushAppManager get] notificationReceived:userInfo];
        
@@ -38,17 +37,18 @@ Silent notifications do not appear on the device screen. These notifications are
        _appDelegateVC.result.text = userInfo.description;
        handler(UIBackgroundFetchResultNoData);
        
-   }
-   //Success
-}
-```
+     }
+    //Success
+    }
+	```
+	{: codeblock}
 
 For Swift, the `contentAvailable` value that is sent by the server for silent notifications is equal to 1.
 
-```
-//For Swift
+	```
+	//For Swift
 
-func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+	 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
        let contentAPS = userInfo["aps"] as [NSObject : AnyObject]
        if let contentAvailable = contentAPS["content-available"] as? Int {
            //silent or mixed push
@@ -58,9 +58,10 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
                completionHandler(UIBackgroundFetchResult.NoData)
            }
        } else {
-   //Default notification 
+    //Default notification 
            completionHandler(UIBackgroundFetchResult.NoData)
        }
     }
-```
+	```
+	{: codeblock}
 
