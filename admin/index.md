@@ -565,6 +565,8 @@ You can create spaces in your organization; for example, a *dev* space as a deve
 
 In the Quota Monitoring section, you can expand the section and view the following information:
 
+**Note**: The data is automatically refreshed every 4 hours. Click **Recalculate**, if you want to refresh the data on the page before it is automatically updated.
+
 - Environment memory usage. This section details the memory usage for the full system environment.
 	The chart provides information that includes used system memory, total system memory, quota that is
 	used, and the total quota allocated. The following list of terms defines the types of memory usage
