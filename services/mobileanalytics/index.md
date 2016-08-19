@@ -67,7 +67,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 	
 	```Swift
 	BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-	Analytics.initializeWithAppName(your_app_name, accessKey: your_access_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	Analytics.initializeWithAppName(your_app_name, apiKey: your_access_key, deviceEvents: DeviceEvent.LIFECYCLE)
 	```
 	{: codeblock}
 	
@@ -75,7 +75,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 	
 	```Swift
 	BMSClient.sharedInstance.initializeWithBluemixAppRoute(bluemixAppRoute: nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-	Analytics.initializeWithAppName(appName: your_app_name, accessKey: your_access_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	Analytics.initializeWithAppName(appName: your_app_name, apiKey: your_access_key, deviceEvents: DeviceEvent.LIFECYCLE)
 	```
 	{: codeblock}
 	
