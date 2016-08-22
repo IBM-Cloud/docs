@@ -4,11 +4,15 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Android app
 {: #custom-android}
 
-Last updated: 01 August 2016
+Last updated: 22 August 2016
 {: .last-updated}
 
 
@@ -40,6 +44,7 @@ You must have a resource that is protected by an instance of the {{site.data.key
     	// other dependencies  
 	}
 	```
+{: codeblock}
 
 1. Synchronize your project with Gradle. Click **Tools > Android > Sync Project with Gradle Files**.
 
@@ -49,6 +54,7 @@ Add the internet access permission under the `<manifest>` element:
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+{: codeblock}
 
 1. Initialize the SDK.  
 A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
@@ -60,6 +66,8 @@ Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GU
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
+{: codeblock}
+
 Replace the `BMSClient.REGION_UK` with the appropriate region.	 To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.				
 	
 
@@ -75,6 +83,8 @@ Call this method when a custom authentication challenge is received from the {{s
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
+
 #### Arguments
 {: #custom-android-onAuth-arg}
 
@@ -90,6 +100,7 @@ Call this method after a successful authentication. The arguments include the An
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### onAuthenticationFailure method
 {: #custom-android-authlistener-onfail}
@@ -97,6 +108,7 @@ Call this method after authentication fails. The arguments include Android Conte
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## AuthenticationContext interface
 {: #custom-android-authcontext}
@@ -106,9 +118,11 @@ The `AuthenticationContext` is supplied as an argument to the `onAuthenticationC
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## Sample implementation of a custom AuthenticationListener
 {: #custom-android-samplecustom}
@@ -168,6 +182,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
+{: codeblock}
 
 ## Registering a custom AuthenticationListener
 {: #custom-android-register}
@@ -175,13 +190,18 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 After you create a custom AuthenticationListener, register it with `BMSClient` before you start using the listener. Add the following code to your application. This code must be called before you send any requests to your protected resources.
 
 ```Java
-MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+MCAAuthorizationManager mcaAuthorizationManager = 
+      MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<MCAServiceTenantId>");
 mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
-Use the *realmName* that you specified in the {{site.data.keyword.amashort}} dashboard.
+In the code:
+* Replace `MCAServiceTenantId` with the `tenantId` value that you get when you click on the **Show 
+Credentials** button on the {{site.data.keyword.amashort}} service tile.
+* Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard.
 
 
 ## Testing the authentication
@@ -219,6 +239,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
 		}
 	});
 ```
+{: codeblock}
 
 1. 	When your request succeeds, the following output is in the LogCat tool:
 
@@ -229,6 +250,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+{: codeblock} 
 
  If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge that is received from the server again.
 

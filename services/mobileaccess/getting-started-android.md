@@ -11,10 +11,12 @@ copyright:
 # Setting up the Android SDK
 {: #getting-started-android}
 
-Last updated: 02 August 2016
+Last updated: 16 August 2016
 {: .last-updated}
 
-Instrument your Android application with the {{site.data.keyword.amashort}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.
+
+Instrument your Android application with the {{site.data.keyword.amafull}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.
+
 {:shortdesc}
 
 ## Before you begin
@@ -45,6 +47,7 @@ The {{site.data.keyword.amashort}} client SDK is distributed with Gradle, a depe
     	// other dependencies  
 }
 ```
+{: codeblock}
 
 1. Synchronize your project with Gradle. Click **Tools &gt; Android &gt; Sync Project with Gradle Files**.
 
@@ -63,15 +66,18 @@ Initialize the SDK by passing the `context`, `applicationGUID`, `applicationRout
 1. From the main page of the {{site.data.keyword.Bluemix_notm}} dashboard, click your app. Click **Mobile Options**. You need the **Application route** and **Application GUID** values to initialize the SDK.
 
 2. Initialize the {{site.data.keyword.amashort}} client SDK in your Android application.  A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
-<br/>Replace the *applicationRoute* and *applicationGUID* with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
-	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
+
+```Java
+  BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Replace the `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+{: codeblock}
+
+  * Replace the *applicationRoute* and *applicationGUID* with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
+  * Replace the `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
 
 ## Making a request to your mobile back-end application
 {: #request}
@@ -102,6 +108,7 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 		}
 	});
 	```
+{: codeblock}
 
 1. When your request succeeds, you will see the following output in the LogCat utility:
 
