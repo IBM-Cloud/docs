@@ -40,7 +40,7 @@ There is no way to guarantee that all captured data is preserved on the client s
 
 2. When your {{site.data.keyword.Bluemix_notm}} application dashboard is open, click a {{site.data.keyword.amashort}} tile.
 
-3. Click the **Monitoring** link in the {{site.data.keyword.amashort}} Dashboard navigation bar on the left.
+3. Click the **Monitoring** button in the {{site.data.keyword.amashort}} Dashboard navigation.
 
 
 ## Enabling, configuring, and using Logger
@@ -76,6 +76,7 @@ logger.warn("warning message");
 logger.error("error message");
 logger.fatal("fatal message");
 ```
+{: codeblock}
 
 #### iOS - Objective-C
 {: #enable-logger-objectc}
@@ -96,6 +97,7 @@ IMFLogger *logger = [IMFLogger loggerForName:@"myLogger"];
 [logger logFatalWithMessages:@"fatal"];
 
 ```
+{: codeblock}
 
 #### iOS - Swift
 {: #enable-logger-swift}
@@ -111,6 +113,7 @@ logger.logWarnWithMessages("warn");
 logger.logErrorWithMessages("error");
 logger.logFatalWithMessages("fatal");
 ```
+{: codeblock}
 
 **Note:** The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C, therefore you might need to add the `IMFLoggerExtension.swift` file to your Swift project to use the previous logger API. You can find this file in the [{{site.data.keyword.amashort}} client SDK archive](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
 
@@ -128,8 +131,8 @@ logger.info("info message");
 logger.warn("warning message");
 logger.error("error message");
 logger.fatal("fatal message");
-
 ```
+{: codeblock}
 
 You can find the following additional methods in Logger classes:
 
@@ -168,6 +171,7 @@ logger2.info("info message");
 // Send persisted logs to the {{site.data.keyword.amashort}} service
 Logger.send();
 ```
+{: codeblock}
 
 #### iOS - Objective-C
 {: #enable-logger-sample-objectc}
@@ -193,6 +197,7 @@ IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
 // Send persisted logs to the {{site.data.keyword.amashort}} service
 [IMFLogger send];
 ```
+{: codeblock}
 
 #### iOS - Swift
 {: #enable-logger-sample-swift}
@@ -217,8 +222,8 @@ logger2.logInfoWithMessages("info message")
 
 // Send persisted logs to the {{site.data.keyword.amashort}} service
 IMFLogger.send()
-
 ```
+{: codeblock}
 
 #### Cordova
 {: #enable-logger-sample-cordova}
@@ -241,6 +246,7 @@ logger2.info ("info message");
 // Send persisted logs to the {{site.data.keyword.amashort}} service
 MFPLogger.send(success, failure);
 ```
+{: codeblock}
 
 ### Enabling the {{site.data.keyword.amashort}} client SDK internal logs
 {: #enable-logger-sdklogs}
@@ -252,6 +258,7 @@ The {{site.data.keyword.amashort}} client SDK provides a better development expe
 ```
 Logger.setSDKInternalLoggingEnabled(true);
 ```
+{: codeblock}
 
 ## Gathering usage analytics
 {: #usage-analytics}
@@ -287,6 +294,7 @@ MFPAnalytics.logSessionEnd();
 // Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 MFPAnalytics.send();
 ```
+{: codeblock}
 
 #### iOS - Objective-C
 {: #usage-analytics-objectc}
@@ -306,6 +314,7 @@ The Objective-C SDK reports monitoring data to the Monitoring Console of the {{s
 // Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 [[IMFAnalytics sharedInstance] sendPersistedLogs];
 ```
+{: codeblock}
 
 #### iOS - Swift
 {: #usage-analytics-swift}
@@ -321,6 +330,7 @@ IMFAnalytics.sharedInstance().startRecordingApplicationLifecycleEvents()
 // Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 IMFAnalytics.sharedInstance().sendPersistedLogs()
 ```
+{: codeblock}
 
 #### Cordova
 {: #usage-analytics-cordova}
@@ -332,4 +342,6 @@ MFPAnalytics.enable();
 // Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 MFPAnalytics.send();
 ```
+{: codeblock}
+
 **Note:** When you are developing Cordova applications, use the native API to enable application lifecycle event recording.

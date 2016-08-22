@@ -4,11 +4,12 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc} {:codeblock:.codeblock}
 
 # Using {{site.data.keyword.amashort}} with a local development environment
 {: #protecting-local}
 
-Last updated: 16 August 2016
+Last updated: 22 July 2016
 {: .last-updated}
 
 You can configure your local development  to use the {{site.data.keyword.amafull}} service that is running on {{site.data.keyword.Bluemix}}. Specifically, you can develop code locally using the {{site.data.keyword.amashort}} server SDK and send {{site.data.keyword.amashort}} requests to the development server. These requests will be protected by the {{site.data.keyword.amashort}} service that is running on {{site.data.keyword.Bluemix}}.
@@ -33,6 +34,8 @@ To use {{site.data.keyword.amashort}} with a local development server, you must 
     application_id: "appGUID"
 }
 ```
+{: codeblock}
+
 Replace the *appGUID* variable with the value from the **Mobile Options** **AppGUID** field.
 
 1. Click **Show Credentials** on the {{site.data.keyword.amashort}} service tile in your mobile back-end application on the {{site.data.keyword.Bluemix_notm}} dashboard. A JSON object displays with access credentials that {{site.data.keyword.amashort}} provides to your mobile back-end application.
@@ -72,6 +75,8 @@ var MCABackendStrategy =
 
 // Rest of your code
 ```
+{: codeblock}
+
 Replace the occurrences of the *appGUID* value in the code with your mobile back-end *appGUID* value.
 
 
@@ -90,8 +95,11 @@ You might need to change `localhost` to an actual IP address of your development
 String baseRequestUrl = "http://localhost:3000";
 String bluemixAppRoute = "http://myapp.mybluemix.net";
 String bluemixAppGUID = "your-bluemix-app-guid";
+String tenantId = "your-MCA-service-tenantID";
 
 BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.REGION_UK);
+BMSClient.getInstance().setAuthorizationManager(
+                 MCAAuthorizationManager.createInstance(this, tenantId));
 
 Request request = new Request(baseRequestUrl + "/resource/path", Request.GET);
 
@@ -112,6 +120,7 @@ request.send(this, new ResponseListener() {
 	}
 });
 ```
+{: codeblock}
 
 
 ### iOS - Objective C
@@ -121,10 +130,13 @@ request.send(this, new ResponseListener() {
 NSString *baseRequestUrl = @"http://localhost:3000";
 NSString *bluemixAppRoute = @"http://myapp.mybluemix.net";
 NSString *bluemixAppGUID = @"your-bluemix-app-guid";
+NSString *tenantId = "your-MCA-service-tenantID";
 
-[[IMFClient sharedInstance]
-			initializeWithBackendRoute:bluemixAppRoute
+[[IMFClient sharedInstance] initializeWithBackendRoute:bluemixAppRoute
 			backendGUID:bluemixAppGUID];
+			
+[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: tenantId];
+
 
 NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
 								baseRequestUrl];
@@ -141,6 +153,7 @@ IMFResourceRequest *request =  [IMFResourceRequest
 	}
 }];
 ```
+{: codeblock}
 
 ### iOS - Swift
 {: #swift}
@@ -149,9 +162,12 @@ IMFResourceRequest *request =  [IMFResourceRequest
 let baseRequestUrl = "http://localhost:3000";
 let bluemixAppRoute = "http://myapp.mybluemix.net";
 let bluemixAppGUID = "your-bluemix-app-guid";
+Let tenantId = "your-MCA-service-tenantID";
 
 IMFClient.sharedInstance().initializeWithBackendRoute(bluemixAppRoute,
 	 							backendGUID: bluemixAppGuid)
+IMFAuthorizationManager.sharedInstance().initializeWithTenantId(tenantId)
+
 
 let requestPath = baseRequestUrl + "/resource/path"
 
@@ -166,6 +182,7 @@ request.sendWithCompletionHandler { (response, error) -> Void in
 };
 
 ```
+{: codeblock}
 
 ### Cordova
 {: #cordova}
@@ -174,6 +191,7 @@ request.sendWithCompletionHandler { (response, error) -> Void in
 var baseRequestUrl = "http://localhost:3000";
 var bluemixAppRoute = "http://myapp.mybluemix.net";
 var bluemixAppGUID = "your-bluemix-app-guid";
+Var tenantId = "your-MCA-service-tenantID";
 
 BMSClient.initialize(bluemixAppRoute, bluemixAppGUID);
 
@@ -190,3 +208,4 @@ var request = new MFPRequest(baseRequestUrl +
 
 request.send(success, failure);
 ```
+{: codeblock}

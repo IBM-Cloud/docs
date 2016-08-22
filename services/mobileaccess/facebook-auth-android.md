@@ -11,11 +11,11 @@ copyright:
 # Enabling Facebook authentication for Android apps
 {: #facebook-auth-android}
 
-Last updated: 04 August 2016
+Last updated: 22 August 2016
 {: .last-updated}
 
 
-To use Facebook as identity provider in your Android applications, add and configure the Android Platform for your Facebook application on the Facebook for Developers site.
+To use Facebook as identity provider in your {{site.data.keyword.amafull}} Android applications, add and configure the Android Platform for your Facebook application on the Facebook for Developers site.
 {:shortdesc}
 
 ## Before you begin
@@ -47,6 +47,7 @@ From the Facebook for Developers site (https://developers.facebook.com):
 		</intent-filter>
 	</activity>
 	```
+{: codeblock}
 
 1. For Facebook to ensure your application authenticity, you must specify a hash of your developer certificate SHA1.
 
@@ -60,6 +61,7 @@ From the Facebook for Developers site (https://developers.facebook.com):
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1 -binary | openssl base64
 	```
+{: codeblock}
 
 	**Tip**: You can use the same syntax for retrieving the key hash of your release mode certificate. Replace the alias and keystore path in the command.
 
@@ -102,6 +104,7 @@ Your Android project might have two `build.gradle` files:  for the project and a
     	// other dependencies  
 	}
 ```
+{: codeblock}
 
 	**Note:** You can remove the dependency on the `core` module of `com.ibm.mobilefirstplatform.clientsdk.android` group, if it is in your file. The `facebookauthentication` module downloads the `core` module, as well as Facebook's own SDK automatically.
 
@@ -119,6 +122,7 @@ Your Android project might have two `build.gradle` files:  for the project and a
 		<string name="facebook_app_id">522733366802111</string>
 	</resources>
 ```
+{: codeblock}
 
 1. In the `AndroidManifest.xml` file of your Android project:
    1. Add the internet access permission under the `<manifest>` element:
@@ -126,6 +130,7 @@ Your Android project might have two `build.gradle` files:  for the project and a
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
+{: codeblock}
   2. Add required metadata for the Facebook SDK to the `<application>` element:
 
 	```XML
@@ -139,6 +144,7 @@ Your Android project might have two `build.gradle` files:  for the project and a
 		<activity ...../>
 	</application>
 ```
+{: codeblock}
 
    1. Add a Facebook Activity element under your existing activities:
 
@@ -155,6 +161,7 @@ Your Android project might have two `build.gradle` files:  for the project and a
 
 	</application>
 ```
+{: codeblock}
 
 1. Initialize the client SDK and register Facebook authentication manager. Initialize the {{site.data.keyword.amashort}} client SDK by passing the context, app GUID (`applicationGUID`), and route (`applicationRoute`) parameters.<br/>
  A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.<br/>
@@ -167,11 +174,16 @@ Your Android project might have two `build.gradle` files:  for the project and a
 					BMSClient.REGION_UK);
 
 	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this));
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
-   Replace `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+{: codeblock}
+
+   * Replace `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+   
+   * Replace `<MCAServiceTenantId>` with the `tenantId` value that you see when you click  the **Show
+Credentials** button on the {{site.data.keyword.Bluemix_notm}} service tile.
    
   **Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 					
@@ -187,6 +199,7 @@ Your Android project might have two `build.gradle` files:  for the project and a
 			.onActivityResultCalled(requestCode, resultCode, data);
 	}
 ```
+{: codeblock}
 
 ## Testing the authentication
 After the client SDK is initialized and Facebook Authentication Manager is registered, you can start making requests to your mobile backend.
@@ -220,6 +233,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 		}
 	});
 ```
+{: codeblock}
 
 1. Run your application. A Facebook login screen displays.
 
@@ -238,6 +252,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
  ```
 FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+{: codeblock}
 
  If you call this code after a user is logged in with Facebook, the user is logged out of Facebook. When the user tries to log in again, they are prompted for their Facebook credentials.
 

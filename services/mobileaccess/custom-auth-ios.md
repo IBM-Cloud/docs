@@ -8,11 +8,11 @@ copyright:
 # Configuring {{site.data.keyword.amashort}} client SDK for iOS (Objective-C)
 {: #custom-ios}
 
-Last updated: 21 July 2016
+Last updated: 11 August 2016
 {: .last-updated}
 
 
-Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
+Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amafull}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
 
 **Note:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the new Swift SDK, see [Configuring {{site.data.keyword.amashort}} client SDK for iOS (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html).
 
@@ -48,7 +48,7 @@ CocoaPods installs added dependencies. The progress and which components were ad
 
 
 
-## Initializing the client SDK
+### Initializing the client SDK
 {: #custom-ios-sdk-initialize}
 
 Initialize the SDK by passing the application route (`applicationRoute`) and GUID (`applicationGUID`) parameters. A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate
@@ -77,7 +77,7 @@ Initialize the SDK by passing the application route (`applicationRoute`) and GUI
 
 1. Initialize the client SDK. Replace the applicationRoute and applicationGUID with the values for **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`) that you obtained from **Mobile Options**.
 
-	###Objective-C:
+	Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -85,7 +85,7 @@ Initialize the SDK by passing the application route (`applicationRoute`) and GUI
 			backendGUID:@"applicationGUID"];
 	```
 
-	###Swift:
+	Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
@@ -93,18 +93,20 @@ Initialize the SDK by passing the application route (`applicationRoute`) and GUI
 	```
 
 ## Initializing the AuthorizationManager
-Initialize the AuthorizationManager by passing the {{site.data.keyword.amashort}} service `tenantId` parameter that you get when you click the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+Initialize the AuthorizationManager by passing the {{site.data.keyword.amashort}} service `tenantId` parameter. You can find this value by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
 
-### Objective-C
-  ```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
-  ```
+
+### Objective-C:
+
+```Objective-
+ [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+```
 
 ### Swift:
- ```Swift
-  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
- ```
 
+```Swift
+ IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+```
 
 
 ## IMFAuthenticationHandler delegate

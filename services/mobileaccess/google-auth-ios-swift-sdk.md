@@ -11,10 +11,10 @@ copyright:
 # Enabling Google authentication for iOS apps (Swift SDK)
 {: #google-auth-ios}
 
-Last updated: 01 August 2016
+Last updated: 22 August 2016
 {: .last-updated}
 
-Use Google Sign-In to authenticate users on your {{site.data.keyword.amashort}} iOS Swift app. The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
+Use Google Sign-In to authenticate users on your {{site.data.keyword.amafull}} iOS Swift app. The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
 
 **Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
 
@@ -61,6 +61,7 @@ The following steps give you a brief outline of the tasks necessary for preparin
  ```
  #import <Google/SignIn.h>
  ```
+ {: codeblock}
 
  For more information about updating the bridging header file, see step 1. in [Enable sign-in](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in).
 
@@ -75,7 +76,7 @@ Now that you have an iOS client ID, you can enable Google authentication in the 
 
 1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}} dashboard loads.
 
-1. Click the **Configure* button on the  **Google** panel.
+1. Click the **Configure** button on the  **Google** panel.
 
 1. In **Application ID for iOS**, specify the `CLIENT_ID` value from the `GoogleService-Info.plist` file that you obtained earlier and click **Save**.
 
@@ -91,6 +92,8 @@ Now that you have an iOS client ID, you can enable Google authentication in the 
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
+
 For more information, see the [CocoaPods website](https://cocoapods.org/).
 
 ### Installing the {{site.data.keyword.amashort}} client Swift SDK with CocoaPods
@@ -104,6 +107,7 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
  use_frameworks!
  pod 'BMSGoogleAuthentication'
  ```
+ {: codeblock}
  
  **Note:** If you have already installed the {{site.data.keyword.amashort}} core SDK, you can remove this line: `pod 'BMSSecurity'`. The `BMSGoogleAuthentication` pod installs all necessary frameworks.
 	
@@ -133,17 +137,22 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSCore
  import BMSSecurity
  ```
+ {: codeblock}
 
-1. Use the following code to initialize the client SDK. Replace `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+1. Use the following code to initialize the client SDK. 
 
  ```Swift
  let backendURL = "<applicationRoute>"
  let backendGUID = "<applicationGUID>"
+ let tenantId = "<MCAServiceTenantId>"
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
  // Initialize the client SDK.  
  BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+ 
+ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+mcaAuthManager.initialize(tenantId: tenantId)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -162,6 +171,13 @@ A common, though not mandatory, place to put the initialization code is in the `
  return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, options: options)
   }
  ```
+{: codeblock}
+
+ In the code:
+ * Replace `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **AppGuid** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. 
+ * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+ * Replace `<MCAServiceTenantId>` with the `tenantId` value. You find this value when you click the **Show
+Credentials** button on the {{site.data.keyword.Bluemix_notm}} service tile.
 
 ## Testing the authentication
 {: #google-auth-ios-testing}
@@ -193,6 +209,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}}  boilerplate and alrea
 
  request.sendWithCompletionHandler(callBack)
 	```
+{: codeblock}
 
 1. Run your application. You will see a Google Login screen pop-up
 
@@ -218,6 +235,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}}  boilerplate and alrea
  ```
  GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
+ {: codeblock}
 
   If you call this code after a user is logged in with Google and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Google for authentication purposes. At that point, the user can click the user name <!--in the upper-right corner of the screen--> to select and log in with another user.
 
