@@ -7,6 +7,8 @@ copyright:
 
 # Usando APIs REST
 {: #push-api-rest}
+*Última atualização: 12 de julho de 2016*
+{: .last-updated}
 
 É possível usar uma API (interface de programação de aplicativo) REST (Representational State Transfer) para notificações push. É possível também usar o SDK e a [API Push](https://mobile.{DomainName}/imfpushrestapidocs/) para desenvolver melhor seus aplicativos cliente.
 
@@ -99,3 +101,9 @@ Para a API GET da assinatura, as combinações a seguir são suportadas:
 - O nome pode ser um destes campos: “name” ou “description”
 - Se o operador =@ for usado, o valor poderá ser uma subsequência.
 - Se == for usado, o valor deverá ser uma sequência correspondente exata.
+
+
+##Códigos de resposta de notificações push
+{: #push-api-response-codes}
+
+Status: 405 Método não permitido - Método apropriado esperado.

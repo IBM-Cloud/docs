@@ -1,4 +1,4 @@
----
+    ---
 
 copyright:
  years: 2015 2016
@@ -8,7 +8,8 @@ copyright:
 
 # 讓 Android 應用程式可接收推送通知
 {: #tag_based_notifications}
-
+*前次更新：2016 年 7 月 20 日*
+{: .last-updated}
 
 讓 Android 應用程式可接收推送通知，以及將推送通知傳送給您的裝置。
 
@@ -31,15 +32,14 @@ Bluemix® Mobile Services Push SDK 可以使用 Gradle 進行新增。Gradle 會
 	```
 
 
-1. 將下列相依關係新增至行動應用程式。下列數行會將 Bluemix™ Mobile Services Push Client SDK 及 Google Play Services SDK 新增至您的編譯範圍相依關係。
+2. 將下列相依關係新增至行動應用程式。下列數行會將 Bluemix™ Mobile Services Push Client SDK 及 Google Play Services SDK 新增至您的編譯範圍相依關係。
 
 	```
 	dependencies {
-	  compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:1.+' 
-compile 'com.google.android.gms:play-services:7.8.0' 
-}  
+	  compile 'com.google.android.gms:play-services:9.0.2' // Automatically pulls in version 2.0 core SDK3 compile group: 'com.ibm.mobilefirstplatform.clientsdk.android', name: 'push', version: '2.+', ext: 'aar', transitive: true
+	}  
 	```
-1. 在 **AndroidManifest.xml** 檔案中，新增下列許可權。若要檢視範例資訊清單，請參閱 [Android helloPush 範例應用程式](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)。若要檢視範例 Gradle 檔案，請參閱[範例建置 Gradle 檔案](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle)。
+3. 在 **AndroidManifest.xml** 檔案中，新增下列許可權。若要檢視範例資訊清單，請參閱 [Android helloPush 範例應用程式](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)。若要檢視範例 Gradle 檔案，請參閱[範例建置 Gradle 檔案](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle)。
 
 	```
 	<uses-permission android:name="android.permission.INTERNET"/>
@@ -54,17 +54,17 @@ compile 'com.google.android.gms:play-services:7.8.0'
 
 	您可以在這裡閱讀 [Android 許可權](http://developer.android.com/guide/topics/security/permissions.html)的相關資訊。
 
-1. 新增活動的通知目的設定。此設定會在使用者按一下通知區域中的接收通知時啟動應用程式。
+4. 新增活動的通知目的設定。此設定會在使用者按一下通知區域中的接收通知時啟動應用程式。
 
 	```
 	<intent-filter>  
 		<action android:name="<Your_Android_Package_Name.IBMPushNotification"/>   
 		<category  android:name="android.intent.category.DEFAULT"/>
 	</intent-filter>
-```
+	```
 	**附註**：將上面動作中的 *Your_Android_Package_Name* 取代為您應用程式中所使用的應用程式套件名稱。
 
-1. 新增 RECEIVE 事件通知的 Google Cloud Messaging (GCM) 目的服務及目的過濾器。
+5. 新增 RECEIVE 事件通知的 Google Cloud Messaging (GCM) 目的服務及目的過濾器。
 
 	```
 	service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
@@ -76,12 +76,12 @@ compile 'com.google.android.gms:play-services:7.8.0'
 	        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 
 	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
-	    </intent-filter>
+</intent-filter>
 	    <intent-filter>
 	        <action android:name="android.intent.action.BOOT_COMPLETED" />
 
-	        	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
-	    </intent-filter>
+	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
+</intent-filter>
 	</receiver>
 	```
 
@@ -98,7 +98,8 @@ compile 'com.google.android.gms:play-services:7.8.0'
 
 ```
 // Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
-BMSClient.getInstance().initialize(getApplicationContext(), "applicationRoute","applicationGUID", bluemixRegion:"Location where your app Hosted");
+BMSClient.getInstance().initialize(getApplicationContext(), appRoute , appGuid, bluemixRegionSuffix);
+
 ```
 
 
@@ -125,11 +126,14 @@ BMSClient.getInstance().initialize(getApplicationContext(), "applicationRoute","
 MFPPush push = MFPPush.getInstance();
 push.initialize(getApplicationContext());
 ```
+**pushTenantId**
+
+這是 Push Notification Service 的唯一索引鍵。
 
 ## 登錄 Android 裝置
 {: #android_register}
 
-使用 `IMFPush.register()` API，以向 Push Notification Service 登錄裝置。如需登錄 Android 裝置，您要先在 Bluemix Push 服務配置儀表板中新增 Google Cloud Messaging (GCM) 資訊。如需相關資訊，請參閱[配置 Google Cloud Messaging 的認證](t_push_provider_android.html)。
+請使用 `IMFPush.register()` API，向 Push Notification Service 登錄裝置。如需登錄 Android 裝置，您要先在 Bluemix 推送服務配置儀表板中新增 Google Cloud Messaging (GCM) 資訊。如需相關資訊，請參閱[配置 Google Cloud Messaging 的認證](t_push_provider_android.html)。
 
 複製下列程式碼 Snippet，並將其貼入 Android 行動應用程式。
 
@@ -186,7 +190,7 @@ push.initialize(getApplicationContext());
 
 傳送基本推送通知。
 
-1. 在**選擇對象**中，選取下列其中一個對象：**所有裝置**，或依平台：**僅限 iOS 裝置**或**僅限 Anroid 裝置**。
+1. 在**選擇對象**中，選取下列其中一個對象：**所有裝置**，或依平台：**僅限 IOS 裝置**或**僅限 Anroid 裝置**。
 
 	**附註**：當您選取**所有裝置**選項時，所有已訂閱推送通知的裝置都會接收到您的通知。
 
@@ -195,11 +199,9 @@ push.initialize(getApplicationContext());
 2. 在**建立您的通知**中，輸入您的訊息，然後按一下**傳送**。
 3. 驗證您的裝置已接收到通知。
 
-	下列擷取畫面顯示在 Android 及 iOS 裝置的前景中處理推送通知的警示框。
+	下列擷取畫面顯示在 Android 裝置的前景中處理推送通知的警示框。
 
 	![Android 上的前景推送通知](images/Android_Screenshot.jpg)
-
-	![iOS 上的前景推送通知](images/iOS_Screenshot.jpg)
 
 	下列擷取畫面顯示 Android 背景中的推送通知。
 	![Android 上的背景推送通知](images/background.jpg)
@@ -209,6 +211,6 @@ push.initialize(getApplicationContext());
 ## 後續步驟
 {: #next_steps_tags}
 
-順利設定基本通知之後，即可配置標籤型通知及進階選項。將這些 Push Notifications Service 特性新增至您的應用程式。
-若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。
-若要使用進階通知選項，請參閱[進階推送通知](t_advance_notifications.html)。
+順利設定基本通知之後，您就可以配置標籤型通知及進階選項。
+
+將這些推送通知服務特性新增至您的應用程式。若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。若要使用進階通知選項，請參閱[進階推送通知](t_advance_notifications.html)。

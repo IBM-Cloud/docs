@@ -7,6 +7,8 @@ copyright:
 
 # 対話式通知
 {: #interactive-notifications}
+*最終更新日: 2016 年 6 月 14 日*
+{: .last-updated}
 
 対話式通知を使用すると、ユーザーは通知が到着したときにアプリケーションを開かずにアクションを取ることができます。対話式通知が到着すると、デバイスは通知メッセージとともにアクション・ボタンを表示します。対話式通知は、バージョン 8 以降の iOS デバイスでサポートされています。対話式通知が iOS 8 より低いバージョンの iOS デバイスに送信された場合、通知アクションは表示されません。
 
@@ -29,20 +31,20 @@ Push ダッシュボードの通知タブの下で、「通知の送信 (Send No
 ```
 	if([application respondsToSelector:@selector(registerUserNotificationSettings:)]){
 	 UIUserNotificationType userNotificationTypes = UIUserNotificationTypeNone | UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge;
-	      
+	
 	 UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
 	 acceptAction.identifier = @"OK";
 	 acceptAction.title = @"OK";
-	      
+	
 	 UIMutableUserNotificationAction *rejetAction = [[UIMutableUserNotificationAction alloc] init];
 	 rejetAction.identifier = @"NOK";
 	 rejetAction.title = @"NOK";
-	      
+	
 	 UIMutableUserNotificationCategory *cateogory = [[UIMutableUserNotificationCategory alloc] init];
 	 cateogory.identifier = @"poll";
 	 [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextDefault];
 	 [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextMinimal];
-	      
+	
 	 NSSet *catgories = [NSSet setWithObject:cateogory];
 	 [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:catgories]];
 }
@@ -54,4 +56,4 @@ Push ダッシュボードの通知タブの下で、「通知の送信 (Send No
 	-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (ˆ)())completionHandler
 ``` 
 
-5. ユーザーがアクション・ボタンをクリックすると、この新しいコールバック・メソッドが呼び出されます。このメソッドの実装では、指定の識別子に関連付けられたアクションを実行し、`completionHandler` パラメーター内のブロックを実行する必要があります。
+5. ユーザーがアクション・ボタンをクリックすると、この新しいコールバック・メソッドが呼び出されます。このメソッドの実装では、指定の ID に関連付けられたタスクを行い、`completionHandler` パラメーター内のブロックを実行する必要があります。

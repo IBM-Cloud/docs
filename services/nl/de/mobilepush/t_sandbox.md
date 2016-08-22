@@ -7,8 +7,9 @@ copyright:
 
 {:new_window: target="_blank"}
 # Sandboxmodus und Produktionsmodus
-
 {: #push-sandboxandproduction-modes}
+*Letzte Aktualisierung: 14. Juni 2016*
+{: .last-updated}
 
 Sie können die Push-Benachrichtigungen in einem der folgenden Modi ausführen: Sandbox oder Produktion. Sandbox ist eine eigenständige Testumgebung für die Entwicklung und das Testen der Integration der Push-API mit dem Push-Service der Serveranwendung. Sie konfigurieren zuerst Sandbox- und Produktionsmodi über das Push-Dashboard. Sie können beim Betriebsmodus des Push-Service zwischen Sandboxmodus und Produktionsmodus mithilfe der [Push-REST-API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} wechseln. Standardmäßig ist der Sandboxmodus aktiviert. Auch wenn Sie zwischen den Modi wechseln können, werden die Tags, Geräte und Subskriptionen nicht von den Modi gemeinsam genutzt.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
  years: 2015, 2016
@@ -7,6 +7,8 @@ copyright:
 
 # Traitement des notifications silencieuses pour iOS
 {: #silent-notifications}
+*Dernière mise à jour : 14 juin 2016*
+{: .last-updated}
 
 Les notifications silencieuses n'apparaissent pas sur l'écran du
 périphérique. Elles sont
@@ -14,7 +16,7 @@ reçues par l'application en arrière-plan, qui sort alors de veille pendant une
 pour effectuer la tâche d'arrière-plan spécifiée. Un utilisateur peut ne pas
 être conscient de l'arrivée de la notification. Pour envoyer des notifications en mode silencieux pour iOS, utilisez l'[API REST](https://mobile.{DomainName}/imfpushrestapidocs/).   
 
-1. Pour envoyer des notifications push en mode silencieux, implémentez la méthode suivante dans le fichier `appDelegate.m` dans votre projet. 
+1. Pour envoyer des notifications push en mode silencieux, implémentez la méthode suivante dans le fichier `appDelegate.m` dans votre projet.
 
 
 ```

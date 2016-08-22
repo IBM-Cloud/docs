@@ -7,6 +7,8 @@ copyright:
 
 # iOS アプリケーションによるプッシュ通知受け取りの可能化
 {: #enable-push-ios-notifications}
+*最終更新日: 2016 年 6 月 14 日*
+{: .last-updated}
 
 iOS アプリケーションによるプッシュ通知の受け取りとデバイスへのプッシュ通知の送信を可能にします。
 
@@ -25,8 +27,7 @@ iOS アプリケーションによるプッシュ通知の受け取りとデバ�
 ```
 $ sudo gem install cocoapods
 ```
-2. ターミナルで以下のコマンドを入力して CocoaPods を初期化します。このコマンドを発行する際には、必ず、Xcode プロジェクトがあるディレクトリーで実行してください。`pod init` コマンドはファイルのタイトルを作成します。
-  
+2. ターミナルで以下のコマンドを入力して CocoaPods を初期化します。このコマンドを発行する際には、必ず、Xcode プロジェクトがあるディレクトリーで実行してください。`pod init` コマンドはファイルのタイトルを作成します。  
 ```
 $ pod init
 ```
@@ -56,7 +57,6 @@ $ pod init
 	end
 	```
 3. ターミナルで、プロジェクト・フォルダーに移動し、以下のコマンドを使用して依存関係をインストールします。
-
 ```
 $ pod update
 ```
@@ -66,6 +66,7 @@ $ pod update
 	$ open App.xcworkspace
 	```
 このワークスペースには、元のプロジェクトと、依存関係が含まれている Pods プロジェクトが含まれています。Bluemix Mobile Services ソース・フォルダーを変更したい場合は、Pods プロジェクト内の `Pods/yourImportedSourceFolder` の下にあります (例えば、`Pods/BMSPush`)。
+
 ##Carthage
 {: #carthage}
 
@@ -111,6 +112,7 @@ import BMSCore
 import BMSPush
 ```
 **重要**: Swift の Push の readme ファイルを確認するには、[Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master) にアクセスしてください。
+
 ##ビルド設定
 
 **「Xcode」>「ビルド設定」>「ビルド・オプション」に移動し、「Bitcode を使用可能に設定 (Set Enable Bitcode)」**を**「いいえ」**に設定します。
@@ -123,9 +125,7 @@ import BMSPush
 ## iOS アプリ用の Push SDK の初期化
 {: #enable-push-ios-notifications-initialize}
 
-初期化コードを配置する一般的な場所は、iOS アプリケーションのアプリケーション代行内です。
-Bluemix アプリケーション・ダッシュボード内の**「モバイル・オプション」**リンクをクリックして、アプリケーション経路と GUID を取得します。
-
+初期化コードを配置する一般的な場所は、iOS アプリケーションのアプリケーション代行内です。Bluemix アプリケーション・ダッシュボード内の**「モバイル・オプション」**リンクをクリックして、アプリケーション経路と GUID を取得します。
 
 ###Core SDK の初期化
 
@@ -141,7 +141,9 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
-let myBMSClient = BMSClient.sharedInstancemyBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
+let myBMSClient = BMSClient.sharedInstance
+
+myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
 myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
@@ -152,7 +154,8 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 
 ```
 //Initialize client Push SDK for Objective-C
-IMFPushClient _pushService = [IMFPushClient sharedInstance];
+IMFPushClient *push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 ```
 
 ####Swift
@@ -160,6 +163,7 @@ IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 //Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
+push.initializeBluemixPush()
 ```
 
 ### 経路、GUID、および Bluemix の地域
@@ -198,7 +202,6 @@ iOS のアプリケーションおよびデバイスを登録するには、以�
 ###バックエンド・アプリケーションの作成
 
 Bluemix® カタログの Boilerplates セクションでバックエンド・アプリケーションを作成します。これにより、プッシュ・サービスはこのアプリケーションに自動的にバインドされます。バックエンド・アプリを既に作成済みの場合は、必ずアプリを Push Notification Service にバインドしてください。
-
 
 ####Objective-C
 
@@ -246,6 +249,7 @@ Bluemix® カタログの Boilerplates セクションでバックエンド・�
 
  // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
      [ self  updateMessage:error .description];
@@ -262,6 +266,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
+   push.initializeBluemixPush()
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
             print( "Response during device registration : \(response)")
@@ -298,8 +303,10 @@ iOS デバイスでプッシュ通知を受け取るには、アプリケーシ�
 
 ```
  // For Swift
-func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {//UserInfo dictionary will contain data sent from the server
+func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+       //UserInfo dictionary will contain data sent from the server
    }
+
 ```
 
 
@@ -323,7 +330,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 
 	次のスクリーン・ショットは、iOS デバイス上のフォアグラウンドおよびバックグラウンドでプッシュ通知を処理しているアラート・ボックスを示しています。
 
-	![Android 上のフォアグラウンドのプッシュ通知](images/Android_Screenshot.jpg)
+	![Android 上のフォアグラウンドのプッシュ通知](images/iOS_Foreground.jpg)
 
 	![iOS 上のフォアグラウンドのプッシュ通知](images/iOS_Screenshot.jpg)
 
@@ -335,6 +342,4 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 
 基本通知を正常にセットアップしたら、タグ・ベースの通知および詳細オプションの構成を行うことができます。
 
-
-以下の Push Notifications Service の機能をご使用のアプリに追加します。タグ・ベースの通知を使用する場合は、[タグ・ベースの通知](c_tag_basednotifications.html)を参照してください。
-拡張通知オプションを使用する場合は、[拡張プッシュ通知](t_advance_notifications.html)を参照してください。
+以下の Push Notifications Service の機能をご使用のアプリに追加します。タグ・ベースの通知を使用する場合は、[タグ・ベースの通知](c_tag_basednotifications.html)を参照してください。拡張通知オプションを使用する場合は、[拡張プッシュ通知](t_advance_notifications.html)を参照してください。

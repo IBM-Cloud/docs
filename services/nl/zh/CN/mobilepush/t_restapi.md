@@ -7,6 +7,8 @@ copyright:
 
 # 使用 REST API
 {: #push-api-rest}
+*上次更新时间：2016 年 7 月 12 日*
+{: .last-updated}
 
 您可以将 REST（具象状态传输）API（应用程序编程接口）用于推送通知。还可以使用 SDK 和 [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) 来进一步开发您的客户机应用程序。
 
@@ -20,7 +22,7 @@ copyright:
 
 要获取 REST API 的基本 URL，请执行以下操作：
 
-1. 在 Bluemix®“目录”的“样板”部分中创建后端应用程序，这会自动将该 Push 服务绑定到此应用程序。如果已创建后端应用程序，请务必将该应用程序绑定到 Push Notification Service。 
+1. 在 Bluemix®“目录”的“样板”部分中创建后端应用程序，这会自动将该 Push 服务绑定到此应用程序。如果已创建后端应用程序，请务必将该应用程序绑定到 Push Notifications 服务。 
 
 1. 在 Bluemix“仪表板”的主页中，转至**应用程序**区域，然后单击您的应用程序。
 
@@ -102,3 +104,9 @@ copyright:
 - 名称可以是以下某个字段：“name”或“description”
 - 如果使用运算符 =@，那么值可以为子字符串。
 - 如果使用 ==，那么值必须为完全匹配的字符串。
+
+
+##推送通知响应代码
+{: #push-api-response-codes}
+
+状态：405 不允许的方法 - 应使用适当的方法。

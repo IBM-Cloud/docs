@@ -17,7 +17,8 @@ copyright:
 
 {:shortdesc}
 
-O serviço de notificações push fornece uma plataforma unificada para enviar e gerenciar notificações push móveis destinadas a plataformas iOS e Android. Esse serviço gerencia o mapeamento dos usuários de aplicativos para seus dispositivos, plataforma do
+O serviço de notificações push fornece uma plataforma unificada para enviar e
+gerenciar notificações push móveis que são destinadas a plataformas iOS e Android. Esse serviço gerencia o mapeamento dos usuários de aplicativos para seus dispositivos, plataforma do
 dispositivo e manipula o despacho de notificações push para eles. Com esse serviço, é
 possível enviar transmissões, unicasts, (com base no deviceID) e também notificações push
 de tags (ou tópicos) para seus usuários de aplicativo móvel. É possível também usar um
@@ -58,5 +59,6 @@ notificações](c_enable_push.html)
 {: #api}
 * [Referência de API Push (Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html){: new_window}
 * [Referência de API IMFPush (iOS)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window}
+* [Referência de API BMSPush iOS (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/blob/development/Apple Docs/index.html){: new_window}
 * [Referência da API REST
 ](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}

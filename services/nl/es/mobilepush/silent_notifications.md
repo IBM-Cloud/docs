@@ -7,10 +7,12 @@ copyright:
 
 # Manejo de notificaciones silenciosas para iOS
 {: #silent-notifications}
+*Última actualización: 14 de junio de 2016*
+{: .last-updated}
 
 Las notificaciones silenciosas no aparecen en la pantalla del dispositivo. Estas notificaciones se reciben mediante la aplicación en segundo plano, que activa la aplicación durante 30 segundos para realizar la tarea en segundo plano. Puede que el usuario no tenga en cuenta la llegada de la notificación. Para enviar notificaciones silenciosas para iOS, utilice la [API REST](https://mobile.{DomainName}/imfpushrestapidocs/).   
 
-1. Para envair notificaciones push silenciosas, implemente el siguiente método en el archivo `appDelegate.m` del proyecto.
+1. Para enviar notificaciones push silenciosas, implemente el siguiente método en el archivo `appDelegate.m` del proyecto.
 
 
 ```

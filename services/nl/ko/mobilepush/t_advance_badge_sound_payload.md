@@ -9,13 +9,15 @@ copyright:
 
 
 #고급 푸시 알림 사용
+*마지막 업데이트 날짜: 2016년 6월 14일*
+{: .last-updated}
 
 iOS 배지(badge), 사운드, 추가 JSON 페이로드, 조치 가능 알림, 보류 알림을 구성합니다. 
 
 ## 사운드, 페이로드 및 iOS 배지 구성
 {: #badge-sound-payload}
 
-iOS 배치, 사운드와 추가 JSON 페이로드를 구성하십시오. 
+iOS 배지, 사운드 및 추가적인 JSON 페이로드를 구성합니다. 
 
 1. 푸시 알림 대시보드에서 **알림** 탭으로 이동하십시오. 
 2. **선택적 필드** 섹션으로 이동하여 다음과 같은 푸시 알림 기능을 구성하십시오.  
@@ -88,8 +90,8 @@ protected void onPause() {
 	     /* Optional properties
 	     acceptAction.destructive = NO;
 	  acceptAction.authenticationRequired = NO; */
-	  
-	 ```
+
+	  ```
    Swift
 
 	```
@@ -157,7 +159,7 @@ protected void onPause() {
 
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 
-	[[UIApplication sharedApplication] registerForRemoteNotifications];
+ [[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
 
 	Swift
@@ -189,7 +191,8 @@ protected void onPause() {
 ###Swift
  
 ```
-func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {//must call completion handler when finished
+func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+      //must call completion handler when finished
       completionHandler()
   }
 ```    

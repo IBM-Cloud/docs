@@ -7,6 +7,8 @@ copyright:
 
 # Cordova アプリケーションによるプッシュ通知受け取りの可能化
 {: #cordova_enable}
+*最終更新日: 2016 年 6 月 14 日*
+{: .last-updated}
 
 Cordova は、JavaScript、CSS、および HTML を使用したハイブリッド・アプリケーションの構築用プラットフォームです。
 {{site.data.keyword.mobilepushshort}} は、Cordova ベースの iOS アプリケーションおよび Android アプリケーションの開発をサポートします。
@@ -56,8 +58,8 @@ cd your_app_name
 
 	```
 	<!-- add deployment target declaration -->
-	<platform name="android">    
-			  <preference name="android-minSdkVersion" value="15" />
+	<platform name="android">  
+<preference name="android-minSdkVersion" value="15" />
 			  <preference name="android-targetSdkVersion" value="23" />
 			</platform>
 	```
@@ -96,17 +98,19 @@ cd your_app_name
 
 	b. ブリッジング・ヘッダーを追加します。**「ビルド設定」>「Swift コンパイラー - コード生成」>「 Objective-C ブリッジング・ヘッダー」**に移動し、パス *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h** を追加します。
 
-	c. Frameworks パラメーターを追加します。**「ビルド設定」>「 リンク」>「実行パス検索パス (Runpath Search Paths)」**に移動し、以下のパラメーターを追加します。```
+	c. Frameworks パラメーターを追加します。**「ビルド設定」>「 リンク」>「実行パス検索パス (Runpath Search Paths)」**に移動し、以下のパラメーターを追加します。
+	```
 	@executable_path/Frameworks
 	```
 	d. ブリッジング・ヘッダーの以下の Push インポート・ステートメントをアンコメントします。 *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h** に移動します。
 
-	```
+ ```
 	//#import <IMFPush/IMFPush.h>
 	//#import <IMFPush/IMFPushClient.h>
 	//#import <IMFPush/IMFResponse+IMFPushCategory.h>
 	```
-	e. Xcode で、アプリケーションをビルドして実行します。1. (Android のみ)- コマンド **cordova build android** を使用して、Android プロジェクトをビルドします。
+	e. Xcode で、アプリケーションをビルドして実行します。
+1. (Android のみ)- コマンド **cordova build android** を使用して、Android プロジェクトをビルドします。
 
 	**注**: Android Studio でプロジェクトを開く前に、最初に Cordova CLI を使用して Cordova アプリケーションをビルドする必要があります。そうしないと、ビルド・エラーが発生します。
 
@@ -135,10 +139,12 @@ onDeviceReady: function() {
 ## デバイスの登録
 {: #cordova_register}
 
-デバイスを Push Notification Service に登録するには、登録メソッドを呼び出します。
+登録する前に、プッシュ通知サービスを初期化します。
+```
+    MFPPush.initializeBluemixPush();
+```
 
-デバイスを登録するには、次のコード・スニペットを Cordova アプリケーションにコピーして貼り付けます。
-
+デバイスをプッシュ通知サービスに登録するには、登録メソッドを呼び出します。デバイスを登録するために、次のコード・スニペットを Cordova アプリケーションにコピーします。
 
 ```
 	var success = function(message) { console.log("Success: " + message); };
@@ -148,7 +154,7 @@ onDeviceReady: function() {
 
 ### Android
 {: #cordova_register_android}
-Android では、settings パラメーターを使用しません。Android アプリのみをビルドする場合は、空のオブジェクトを受け渡します。例えば、次のようにします。
+Android では、settings パラメーターを使用しません。Android アプリのみをビルドする場合は、空のオブジェクトを渡します。例えば、次のようにします。
 
 ```
 	MFPPush.registerDevice({}, success, failure);
@@ -157,8 +163,7 @@ Android では、settings パラメーターを使用しません。Android ア�
 
 ### iOS
 {: #cordova_register_ios}
-アラート、バッジ、および音声のプロパティーをカスタマイズする場合は、次の JavaScript コード・スニペットを Cordova アプリケーションの Web パーツに追加します。
-
+アラート、バッジ、および音声のプロパティーをカスタマイズするには、次の JavaScript コード・スニペットを Cordova アプリケーションの Web パーツに追加します。
 
 ```
 	var settings = {
@@ -184,7 +189,7 @@ MFPPush.registerDevice({}, success, failure);```
 
 使用可能なキーは、`token`、`userId`、および `deviceId` です。
 
-以下の JavaScript コード・スニペットは、Bluemix Mobile Services クライアント SDK を初期化し、デバイスを Push Notification Service に登録し、プッシュ通知を listen する方法を示しています。このコードを Javascript ファイルに置きます。
+以下の JavaScript コード・スニペットは、Bluemix Mobile Services クライアント SDK を初期化し、デバイスをプッシュ通知サービスに登録し、プッシュ通知を listen する方法を示しています。このコードを Javascript ファイルに置きます。
 
 
 
@@ -205,7 +210,8 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 コードは **onDeviceReady: function()** 内に置きます。
 
 ```
-onDeviceReady: function() {app.receivedEvent('deviceready');
+onDeviceReady: function() {
+     app.receivedEvent('deviceready');
      BMSClient.initialize("https://http://myroute_mybluemix.net","my_appGuid");
      var success = function(message) { console.log("Success: " + message); };
      var failure = function(message) { console.log("Error: " + message); };
@@ -214,13 +220,15 @@ onDeviceReady: function() {app.receivedEvent('deviceready');
              alert: true,
              badge: true,
              sound: true
-         }   
+         }
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
          alert (notif.message);
      };
-     MFPPush.registerNotificationsCallback(notification);}
+     MFPPush.registerNotificationsCallback(notification);
+
+ }
 ```
 
 ### Objective-C
@@ -269,7 +277,6 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 
 デバイスでプッシュ通知を受け取るには、以下のコード・スニペットをコピーして貼り付けます。
 
-
 ###JavaScript
 
 以下の JavaScript コード・スニペットを Cordova アプリケーションの Web パーツに追加します。
@@ -299,11 +306,8 @@ MFPPush.registerNotificationsCallback(notification);
 * message - プッシュ通知メッセージ
 * payload - 通知ペイロードを含む JSON オブジェクト。
 action-loc-key - このストリングは、現行ローカリゼーションにおいて、「View」の代わりに右ボタンのタイトルに使用されるローカライズされたストリングを取得するためのキーとして使用されます。
-* badge - アプリ・アイコンのバッジとして表示する数。このプロパティーがないと、バッジは変更されません。
-バッジを削除するには、このプロパティーの値を 0 に設定します。
-
+* badge - アプリ・アイコンのバッジとして表示する数。このプロパティーがないと、バッジは変更されません。バッジを削除するには、このプロパティーの値を 0 に設定します。
 * sound - アプリ・バンドル内、またはアプリ・データ・コンテナーの Library/Sounds フォルダー内にある音声ファイルの名前。
-
 
 ###Objective-C
 
@@ -311,7 +315,9 @@ action-loc-key - このストリングは、現行ローカリゼーションに
 
 ```
 // Handle receiving a remote notification
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {[[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+
+ [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
 }
 ```
 
@@ -352,15 +358,17 @@ CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 基本プッシュ通知の送信を行います。
 
 1. **「対象者の選択 (Choose the Audience)」**で、**「すべてのデバイス (All Devices)」**、またはプラットフォームに従って**「iOS デバイスのみ (Only iOS devices)」**または**「Android デバイスのみ (Only Anroid devices)」**のいずれかの対象者を選択します。 
-	**注**: **「すべてのデバイス (All Devices)」**オプションを選択すると、プッシュ通知をサブスクライブしているすべてのデバイスが通知を受け取ることになります。
 
+	**注**: **「すべてのデバイス (All Devices)」**オプションを選択すると、プッシュ通知をサブスクライブしているすべてのデバイスが通知を受け取ることになります。
 
 	![「通知」画面](images/tag_notification.jpg)
 
 2. **「通知の作成 (Create your Notification)」**で、メッセージを入力して、**「送信」**をクリックします。
 3. デバイスが通知を受信していることを確認します。
 
-	次のスクリーン・ショットは、Android デバイスおよび iOS デバイス上のフォアグラウンドでプッシュ通知を処理しているアラート・ボックスを示しています。	![Android 上のフォアグラウンドのプッシュ通知](images/Android_Screenshot.jpg)
+	次のスクリーン・ショットは、Android デバイスおよび iOS デバイス上のフォアグラウンドでプッシュ通知を処理しているアラート・ボックスを示しています。
+
+	![Android 上のフォアグラウンドのプッシュ通知](images/Android_Screenshot.jpg)
 
 	![iOS 上のフォアグラウンドのプッシュ通知](images/iOS_Screenshot.jpg)
 
@@ -373,7 +381,6 @@ CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 {: #next_steps_tags}
 
 基本通知を正常にセットアップしたら、タグ・ベースの通知および詳細オプションの構成を行うことができます。
-
 
 以下の Push Notifications Service の機能を、ご使用のアプリに追加します。
 タグ・ベースの通知を使用する場合は、[タグ・ベースの通知](c_tag_basednotifications.html)を参照してください。

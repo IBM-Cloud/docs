@@ -7,8 +7,9 @@ copyright:
 
 {:new_window: target="_blank"}
 # 基本プッシュ通知の送信
-
 {: #push-send-notifications}
+*最終更新日: 2016 年 6 月 14 日*
+{: .last-updated}
 
 アプリケーションを開発したら、(タグ、バッジ、追加のペイロード、音声ファイルを使用することなく) 基本プッシュ通知を送信できます。
 

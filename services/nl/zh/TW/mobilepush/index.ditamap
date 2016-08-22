@@ -88,6 +88,12 @@ navtitle="訂閱及取消訂閱標籤" scope="peer"/>
 <topicref href="t_manage_tags.html#using_tags" format="html"
 navtitle="使用標籤型通知" scope="peer"/>
 </topicref>
+<topicref href="c_user_basednotifications.html" format="html"
+navtitle="啟用使用者型通知" scope="peer" chunk="to-content" linking="normal"
+outputclass="subsection">
+<topicref href="t_manage_user.html" format="html" navtitle="向使用者 ID 登錄裝置"
+scope="peer" linking="normal" outputclass="subsection"/>
+</topicref>
 <topicref href="t_advance_badge_sound_payload.html" outputclass="subsection" chunk="to-content"
 navtitle="進階通知" format="html" scope="peer">
 <topicref href="t_advance_badge_sound_payload.html#badge-sound-payload"

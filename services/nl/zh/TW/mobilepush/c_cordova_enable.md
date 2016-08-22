@@ -7,6 +7,8 @@ copyright:
 
 # 讓 Cordova 應用程式可接收推送通知
 {: #cordova_enable}
+*前次更新：2016 年 6 月 14 日*
+{: .last-updated}
 
 Cordova 是一個平台，可使用 JavaScript、CSS 及 HTML 來建置混合式應用程式。{{site.data.keyword.mobilepushshort}} 支援開發 Cordova 型 iOS 及 Android 應用程式。
 
@@ -52,7 +54,7 @@ cd your_app_name
 
 	```
 	<!-- add deployment target declaration -->
-	<platform name="android">  
+	<platform name="android">
 			  <preference name="android-minSdkVersion" value="15" />
 			  <preference name="android-targetSdkVersion" value="23" />
 			</platform>
@@ -94,7 +96,8 @@ cd your_app_name
 	b. 新增橋接標頭。移至**建置設定 > Swift 編譯器 - 產生程式碼 > Objective-C 橋接標頭**，然後新增下列路徑：*your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
 
 	c. 新增 Frameworks 參數。移至**建置設定 > 鏈結 > Runpath 搜尋路徑**，然後新增下列參數：
-```
+
+	```
 	@executable_path/Frameworks
 ```
 	d. 解除註解橋接標頭中的下列 Push import 陳述式。移至 *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
@@ -134,9 +137,12 @@ onDeviceReady: function() {
 ## 登錄裝置
 {: #cordova_register}
 
-若要向 Push Notification Service 登錄裝置，請呼叫 register 方法。
+登錄之前，起始設定 Push Notification Service。
+```
+    MFPPush.initializeBluemixPush();
+```
 
-複製下列程式碼 Snippet，並將其貼入 Cordova 應用程式，以登錄裝置。
+若要向 Push Notification Service 登錄裝置，請呼叫 register 方法。將下列程式碼 Snippet 複製至 Cordova 應用程式，以登錄裝置。
 
 ```
 	var success = function(message) { console.log("Success: " + message); };
@@ -146,7 +152,7 @@ onDeviceReady: function() {
 
 ### Android
 {: #cordova_register_android}
-Android 不使用 settings 參數。如果您只是建置 Android 應用程式，請傳遞空物件；例如：
+Android 不使用 settings 參數。如果您只是建置 Android 應用程式，請傳遞空物件。例如：
 
 ```
 	MFPPush.registerDevice({}, success, failure);
@@ -155,9 +161,7 @@ Android 不使用 settings 參數。如果您只是建置 Android 應用程式�
 
 ### iOS
 {: #cordova_register_ios}
-如果您要自訂警示、徽章及音效內容，請將下列 JavaScript 程式碼 Snippet 新增至 Cordova 應用程式的 Web 組件。
-
-
+若要自訂警示、徽章及音效內容，請將下列 JavaScript 程式碼 Snippet 新增至 Cordova 應用程式的 Web 組件。
 
 ```
 	var settings = {
@@ -182,7 +186,7 @@ MFPPush.registerDevice({}, success, failure);
 您可以使用 JSON.parse 存取 JavaScript 中成功回應參數的內容：**var token = JSON.parse(response).token**
 
 
-可用索引鍵如下：`token`、`userId` 及 `deviceId`。
+可用的索引鍵為：`token`、`userId` 及 `deviceId`。
 
 下列 JavaScript 程式碼 Snippet 顯示如何起始設定 Bluemix Mobile Services Client SDK、向 Push Notification Service 登錄裝置，以及接聽推送通知。將此程式碼放入 JavaScript 檔案中。
 
@@ -215,7 +219,7 @@ onDeviceReady: function() {
              alert: true,
              badge: true,
              sound: true
-         }   
+         }
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
@@ -261,9 +265,9 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 
 使用下列指令建置專案，然後執行專案：
 
-* Android - 依序執行 **cordova build android** 及 **cordova run android**
+	* Android - 依序執行 **cordova build android** 及 **cordova run android**
 
-* iOS - 依序執行 **cordova build ios** 及 **cordova run ios**
+	* iOS - 依序執行 **cordova build ios** 及 **cordova run ios**
 
 
 
@@ -363,7 +367,9 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 2. 在**建立您的通知**中，輸入您的訊息，然後按一下**傳送**。
 3. 驗證您的裝置已接收到通知。
 
-	下列擷取畫面顯示在 Android 及 iOS 裝置的前景中處理推送通知的警示框。	![Android 上的前景推送通知](images/Android_Screenshot.jpg)
+	下列擷取畫面顯示在 Android 及 iOS 裝置的前景中處理推送通知的警示框。
+
+	![Android 上的前景推送通知](images/Android_Screenshot.jpg)
 
 	![iOS 上的前景推送通知](images/iOS_Screenshot.jpg)
 
@@ -377,6 +383,4 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 順利設定基本通知之後，您就可以配置標籤型通知及進階選項。
 
-將這些 Push Notifications Service 特性新增至您的應用程式。
-若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。
-若要使用進階通知選項，請參閱[進階推送通知](t_advance_notifications.html)。
+將這些 Push Notifications Service 特性新增至您的應用程式。若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。若要使用進階通知選項，請參閱[進階推送通知](t_advance_notifications.html)。

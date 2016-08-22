@@ -7,6 +7,8 @@ copyright:
 
 # Cordova-Anwendungen für den Empfang von Push-Benachrichtigungen aktivieren
 {: #cordova_enable}
+*Letzte Aktualisierung: 14. Juni 2016*
+{: .last-updated}
 
 Cordova ist eine Plattform zum Erstellen von Hypridanwendungen mit JavaScript, CSS und HTML. {{site.data.keyword.mobilepushshort}} unterstützt die Entwicklung von iOS- und Android-Anwendungen, die auf Cordova basieren.
 
@@ -97,7 +99,7 @@ cordova create your_app_name
 	```
 	@executable_path/Frameworks
 	```
-	d. Entfernen Sie die Kommentarzeichen aus den folgenden Push-Importanweisungen im Bridging-Header. Wechseln Sie in das Verzeichnis *ihr_projektname***/Plugins/ibm-mfp-core/Bridging-Header.h**.
+	d. Entfernen Sie die Kommentarzeichen aus den folgenden Push-Importanweisungen im Bridging-Header. Wechseln Sie in das Verzeichnis *Ihr Projektname***/Plugins/ibm-mfp-core/Bridging-Header.h**
 
 	```
 	//#import <IMFPush/IMFPush.h>
@@ -135,9 +137,12 @@ onDeviceReady: function() {
 ## Geräte registrieren
 {: #cordova_register}
 
-Rufen Sie die Registrierungsfunktion auf, um ein Gerät für den Push-Benachrichtigungsservice zu registrieren.
+Vor der Registrierung müssen Sie den Push Notification-Service initialisieren.
+```
+    MFPPush.initializeBluemixPush();
+```
 
-Kopieren Sie das folgende Code-Snippet und fügen Sie es in Ihre Cordova-Anwendung ein, um ein Gerät zu registrieren.
+Rufen Sie die Registrierungsfunktion auf, um ein Gerät für den Push Notification-Service zu registrieren. Kopieren Sie das folgende Code-Snippet in Ihre Cordova-Anwendung, um ein Gerät zu registrieren.
 
 ```
 	var success = function(message) { console.log("Success: " + message); };
@@ -156,7 +161,7 @@ Android verwendet den Einstellungsparameter nicht. Wenn Sie nur eine Android-App
 
 ### iOS
 {: #cordova_register_ios}
-Wenn Sie die Eigenschaften für Alert, Badge und Audio anpassen möchten, fügen Sie das folgende JavaScript-Code-Snippet zur Webkomponente Ihrer Cordova-Anwendung hinzu.
+Um die Eigenschaften für Alert, Badge und Audio anzupassen, fügen Sie das folgende JavaScript-Code-Snippet zur Webkomponente Ihrer Cordova-Anwendung hinzu.
 
 ```
 	var settings = {
@@ -184,7 +189,7 @@ Sie können mit JSON.parse auf den Inhalt des Antwortparameters mit der Funktion
 
 Die folgenden Schlüssel sind verfügbar: `token`, `userId` und `deviceId`.
 
-Das folgende JavaScript-Code-Snippet zeigt, wie Sie das Bluemix Mobile Services-Client-SDK initialisieren, ein Gerät für den Push-Benachrichtigungsservice registrieren und Push-Benachrichtigungen überwachen können. Sie fügen diesen Code in Ihre Javascript-Datei ein.
+Das folgende JavaScript-Code-Snippet zeigt, wie Sie das Bluemix Mobile Services-Client-SDK initialisieren, ein Gerät für den Push Notification-Service registrieren und Push-Benachrichtigungen überwachen können. Sie fügen diesen Code in Ihre Javascript-Datei ein.
 
 
 
@@ -213,9 +218,9 @@ onDeviceReady: function() {
      var settings = {
          ios: {
              alert: true,
-             badge: true,
-             sound: true
-         }   
+	       badge: true,
+	       sound: true
+	   }   
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
@@ -270,8 +275,7 @@ Erstellen Sie das Projekt und führen Sie es mit den folgenden Befehlen aus:
 ## Push-Benachrichtigungen in Geräten empfangen
 {: #cordova_receive}
 
-Kopieren Sie die folgenden Code-Snippets und fügen Sie sie ein, um Push-Benachrichtigungen
-auf Geräten zu empfangen.
+Kopieren Sie das folgende Code-Snippet und fügen Sie es ein, um Push-Benachrichtigungen auf Geräten zu empfangen.
 
 ###JavaScript
 
@@ -380,5 +384,6 @@ Senden Sie einfache Push-Benachrichtigungen.
 
 Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte Benachrichtigungen und erweiterte Optionen konfigurieren.
 
-Fügen Sie die folgenden Funktionen des Push-Benachrichtigungsservice zu Ihrer App hinzu.Informationen zur Verwendung tagbasierter Benachrichtigungen finden Sie in [Tagbasierte Benachrichtigungen](c_tag_basednotifications.html).
+Fügen Sie die folgenden Funktionen des Push-Benachrichtigungsservice zu Ihrer App hinzu.
+Informationen zur Verwendung tagbasierter Benachrichtigungen finden Sie in [Tagbasierte Benachrichtigungen](c_tag_basednotifications.html).
 Informationen zur Verwendung erweiterter Benachrichtigungen finden Sie in [Erweiterte Push-Benachrichtigungen](t_advance_notifications.html).
