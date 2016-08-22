@@ -22,8 +22,8 @@ copyright:
     2. 輸入您應用程式的名稱及主機，然後按一下**建立**。
     3. 按一下**完成**。
 2. 從 GitHub 取得專案。您可以選擇性地使用 git clone 指令來取得專案。從您的電腦中，開啟終端機，然後輸入下列指令：
-```
-    git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
+    ```
+git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
     ```
 
 3. 在 `BMSClient.getInstance().initialize()` 函數內的 `try` 區塊，將 &lt;APPLICATION_ROUTE&gt; 及 &lt;APPLICATION_ID&gt; 取代為您的應用程式路徑和 GUID，以起始設定專案：
@@ -36,18 +36,21 @@ BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID
 
   **附註：**`Node.js` 運行環境程式碼提供於 MobileFirst Services Starter 樣板。如果未使用 MobileFirst Services Starter 樣板來建立後端應用程式，則不會順利連接應用程式。
 
-  當您順利在 Android Studio 中從行動應用程式連接 {{site.data.keyword.Bluemix_notm}} 時，即會顯示下列訊息：
-
+  順利從 Android Studio 中的行動應用程式連接至 {{site.data.keyword.Bluemix_notm}} 時，您會看到：
   `Yay! You are connected`
   {: screen}
 
-  ![Hello World 應用程式順利連接 {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "圖 1. Hello World 應用程式順利連接 Bluemix")
+<!--
+  ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+  -->
 
   如果連線失敗，您會看到：
   `Bummer. Something went wrong`
   {: screen}
 
-  ![Hello World 應用程式未連接 Bluemix](images/bummer_android.jpg "圖 2. Hello World 應用程式未連接 Bluemix")
+<!--
+  ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
+  -->
 
   您可以針對失敗的連線進行疑難排解，如下所示：
    * 驗證您已正確地貼上路徑及 GUID 值。
@@ -63,7 +66,7 @@ BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID
 # 相關鏈結
 
 ## 範例
-   * [Hello Bluemix 範例](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Hello Bluemix 範例 (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## SDK
    * [核心 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)

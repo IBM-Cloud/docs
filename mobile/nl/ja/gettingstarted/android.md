@@ -21,8 +21,9 @@ copyright:
     2. アプリの名前とホストを入力して**「作成」**をクリックします。
 
     3. **「完了」**をクリックします。
-2. GitHub からプロジェクトを入手します。オプションで、git clone コマンドを使用してプロジェクトを入手することも可能です。ご使用のコンピューターから、ターミナルを開いて次のコマンドを入力します。```
-    git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git```
+2. GitHub からプロジェクトを入手します。オプションで、git clone コマンドを使用してプロジェクトを入手することも可能です。ご使用のコンピューターから、ターミナルを開いて次のコマンドを入力します。
+    ```
+git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git```
 
 3. `try` ブロック内の `BMSClient.getInstance().initialize()` 関数内で、&lt;APPLICATION_ROUTE&gt; と &lt;APPLICATION_ID&gt; をご使用のアプリケーション経路と GUID に置き換えることで、プロジェクトを初期化します。
 ```
@@ -34,18 +35,21 @@ BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID
 
   **注:** `Node.js` ランタイム・コードは、MobileFirst Services Starter ボイラープレートで提供されます。バックエンド・アプリケーションが MobileFirst Services Starter ボイラープレートで作成されなかった場合、アプリケーションは正常に接続されません。
 
-  Android Studio のモバイル・アプリから {{site.data.keyword.Bluemix_notm}} への接続に成功すると、以下のメッセージが表示されます。
-
+  Android Studio のモバイル・アプリから {{site.data.keyword.Bluemix_notm}} への接続に成功すると、以下が表示されます。
   `成功! つながりました (Yay! You are connected)`
   {: screen}
 
-  ![Hello World アプリケーションから {{site.data.keyword.Bluemix_notm}} への接続に成功](images/yayconnected.jpg "図 1. Hello World アプリケーションから Bluemix への接続に成功")
+<!--
+  ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+  -->
 
   接続に失敗すると、以下が表示されます。
   `失敗。問題が発生しました (Bummer. Something went wrong)`
   {: screen}
 
-  ![Hello World アプリケーションから Bluemix へ接続されない](images/bummer_android.jpg "図 2. Hello World アプリケーションから Bluemix へ接続されない")
+<!--
+  ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
+  -->
 
   以下のようにして、失敗した接続をトラブルシューティングできます。
    * 経路値と GUID 値を正しく貼り付けたことを検証してください。
@@ -62,7 +66,7 @@ SDK の取得方法および SDK とモバイル・アプリの統合方法に�
 # 関連リンク
 
 ## サンプル
-   * [Hello Bluemix サンプル](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Hello Bluemix サンプル (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## sdk
    * [コア SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
