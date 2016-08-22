@@ -8,7 +8,7 @@ copyright:
 #	Acerca de {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
 
-*Última actualización: 15 de junio de 2016*
+*Última actualización: 20 de julio de 2016*
 {: .last-updated}
 
 El servicio {{site.data.keyword.mobilefoundation_short}} ofrece un modo de configurar rápidamente un entorno de servidor de
@@ -33,7 +33,7 @@ Con {{site.data.keyword.mobilefoundation_short}}, puede realizar las funciones s
 
 *	Proteger el dispositivo, la aplicación, los datos y la capa de red.
 
-*	Gestionar la cartera de aplicaciones móviles desde una interfaz centralizada y desarrollar aplicaciones móviles utilizando los IDE y las bibliotecas favoritas. 
+*	Gestionar la cartera de aplicaciones móviles desde una interfaz centralizada y desarrollar aplicaciones móviles utilizando los IDE y las bibliotecas favoritas.
 
 *	Utilizar servicios de datos escalables pera la sincronización de datos en línea y fuera de línea.
 
@@ -43,3 +43,18 @@ Puede utilizar la {{site.data.keyword.mfp_cli_long_notm}} (CLI) con {{site.data.
 
 El servicio {{site.data.keyword.mobilefoundation_short}} suministra un contenedor en su espacio en
 {{site.data.keyword.Bluemix_notm}}. Puede ver los detalles del contenedor creado, visualizar el rendimiento del contenedor y acceder a los registros del servidor desde el panel de instrumentos de {{site.data.keyword.Bluemix_notm}}.
+
+## Obtención de ayuda y soporte para {{site.data.keyword.mobilefoundation_short}}
+{: #getting_help_mobilefoundation}
+
+Si tiene problemas o preguntas sobre el uso de {{site.data.keyword.mobilefoundation_short}}, puede obtener ayuda buscando información o formulando preguntas en un foro. También puede abrir una incidencia de soporte.
+
+Al utilizar los foros para formular una pregunta, etiquete la pregunta de forma que la puedan ver los equipos de desarrollo de IBM {{site.data.keyword.Bluemix_notm}}.
+
+Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con {{site.data.keyword.mobilefoundation_short}}, publíquelas en [Stack Overflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} y etiquételas con `bluemix` e `ibm-mobilefirst`.
+
+Para formular preguntas sobre el servicio y obtener instrucciones de iniciación, utilice el foro [dW Answers de IBM developerWorks](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window}. Incluya las etiquetas `bluemix` y `mobilefirst`.
+
+Consulte [Obtención de ayuda](https://www.{DomainName}/docs/support/index.html#getting-help) para obtener más detalles sobre el uso de los foros.
+
+Para obtener información sobre cómo abrir una incidencia de soporte de IBM, o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Cómo obtener soporte](https://www.{DomainName}/docs/support/index.html#contacting-support).

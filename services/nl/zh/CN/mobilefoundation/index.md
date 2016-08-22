@@ -13,7 +13,7 @@ copyright:
 # {{site.data.keyword.mobilefoundation_short}} 入门
 {: #gettingstartedtemplate}
 
-*上次更新时间：2016 年 6 月 15 日*
+*上次更新时间：2016 年 7 月 20 日*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_long}} 加快设置 {{site.data.keyword.mfp_full}} 环境，您可在此环境中开发、测试和操作企业移动应用程序。{{site.data.keyword.mobilefoundation_short}} 提供了两种不同服务套餐：Developer 和 Professional 1 Application。
@@ -37,7 +37,7 @@ Professional 1 Application 套餐允许在可扩展容器组上部署 {{site.dat
 
 1.  连接到 {{site.data.keyword.Bluemix_notm}} 上的现有 {{site.data.keyword.dashdbshort}}: Enterprise Transactional 服务。
 
-    1.  从当前`组织`中可用的空间列表选择具有 {{site.data.keyword.dashdbshort_notm}} 服务实例的 {{site.data.keyword.Bluemix_notm}} `空间`。
+    1.  从所选`组织`中可用的空间列表中选择具有 {{site.data.keyword.dashdbshort_notm}} 服务实例的 {{site.data.keyword.Bluemix_notm}} `空间`。
 
     2.  选择 {{site.data.keyword.dashdbshort_notm}} `服务名称`和`凭证`以连接到现有 {{site.data.keyword.dashdbshort_notm}} 服务实例。
 

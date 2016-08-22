@@ -15,86 +15,40 @@
 </copyright>
 </topicmeta>
 
-<topicref href="../mdindex.html" linking="sourceonly" format="html" scope="peer"
-navtitle="Mobile Foundation (TEST)">
-<!-- <topicref href="../mdoverview.html" navtitle="About" format="html" scope="peer" linking="sourceonly"/> -->
-<topichead navtitle="A propos de" outputclass="subsection">
-<topicmeta>
-<shortdesc>Le serveur Mobile Foundation permet de configurer rapidement un
-environnement de serveur MobileFirst™ sur Bluemix®. Vous pouvez développer, tester et gérer des applications mobiles depuis cet environnement de cloud robuste.</shortdesc>
-</topicmeta>
-<topicref href="../mdoverview.html#overview_mobilefoundation" navtitle="Présentation" scope="peer"
-format="html" linking="sourceonly"/>
-<topicref href="../mdoverview.html#mobilefoundation_operational_env"
-navtitle="Environnement opérationnel" scope="peer" format="html" linking="sourceonly"/>
-</topichead>
-<topichead navtitle="Plan Developer" outputclass="subsection">
-<topicmeta>
-<shortdesc>Le plan Developer du service Mobile Foundation fournit un serveur
-Mobile Foundation dans un conteneur. Ce plan ne prend pas en charge
-l'utilisation de groupes de conteneurs ou de bases de données externes ; il est
-limité au développement et au test. Il permet de configurer rapidement un
-environnement de serveur MobileFirst™ sur Bluemix®. Vous pouvez développer, tester et gérer des applications mobiles depuis cet environnement de cloud robuste.</shortdesc>
-</topicmeta>
-<topicref href="../c_using_mfs_p1.html#using_mobilefoundation_p1" navtitle="Utilisation du plan Developer"
+<topicref href="index.html" format="html" scope="peer" navtitle="Mobile Foundation"
+locktitle="yes">
+<topicref href="index.html" format="html" scope="peer" navtitle="Initiation" locktitle="yes"/>
+<topicref href="mdoverview.html" navtitle="A propos de" format="html" scope="peer" linking="sourceonly"
+outputclass="subsection">
+<topicref format="html" scope="peer" href="mdoverview.html#getting_help_mobilefoundation"
+linking="sourceonly" navtitle="Aide et support"/>
+</topicref>
+<topicref href="c_using_mfs_p1.html" outputclass="subsection" navtitle="Plan Developer"
+format="html" scope="peer" linking="sourceonly">
+<topicref href="c_using_mfs_p1.html#start_mobilefoundation_p1" scope="peer" format="html"
+navtitle="Démarrage du serveur" linking="sourceonly"/>
+<topicref href="c_using_mfs_p1.html#recreate_mobilefoundation_p1" navtitle="Recréation du serveur"
 scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p1.html#start_mobilefoundation_p1" navtitle="Démarrage du serveur"
-scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p1.html#recreate_mobilefoundation_p1"
-navtitle="Recréation du serveur " scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p1.html#using_mfs_advanced_p1"
-navtitle="Paramétrage d'une configuration avancée" scope="peer" format="html" linking="sourceonly"/>
-</topichead>
-<topichead navtitle="Plan Professional 1 Application" outputclass="subsection" scope="peer">
-<topicmeta>
-<shortdesc>Le plan Professional 1 Application permet aux utilisateurs de créer
-et gérer une application mobile unique, avec un prix prévisible quel que soit le
-nombre d'utilisateurs de cette application ou de périphériques. Une telle
-application peut comporter plusieurs versions, comme iOS, Android, Windows
-et Mobile Web. Ce plan fournit le serveur Mobile Foundation dans un
-environnement de conteneur évolutif. Il requiert également un service de
-base de données. Le service de base de données pris en charge est le service IBM
-dashDB® avec le plan Enterprise Transactional sur Bluemix®. Vous pouvez
-rapidement développer un environnement de serveur MobileFirst™ sur Bluemix®
-afin de développer, tester et gérer des applications mobiles à partir de cet
-environnement de cloud robuste. </shortdesc>
-</topicmeta>
-<topicref href="../c_using_mfs_p2.html#using_mobilefoundation_p2"
-navtitle="Utilisation du plan Professional 1 Application" scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html#prerequisites_p2" navtitle="Conditions prérequises" scope="peer"
-format="html" linking="sourceonly"/>
-<topicref navtitle="Configuration de Mobile Foundation" chunk="to-content"
-href="../c_using_mfs_p2.html#configure_dashdb_p2" format="html" scope="peer">
-<!--<topicmeta>
-<shortdesc>The Mobile Foundation service with Professional 1 Application plan requires an external
-database service. IBM dashDB® service with enterprise transactional plan on Bluemix® is the
-supported database service. You will need to configure the connection to a dashDB service instance
-before proceeding with other configuration steps for Mobile Foundation.</shortdesc>
-</topicmeta>-->
-<topicref href="../c_using_mfs_p2.html#firststeps_p2" navtitle="Premières étapes" scope="peer"
-format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html#connect_dashdb_p2" navtitle="Configuration de la connexion à dashDB"
-scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html#start_mobilefoundation_p2" navtitle="Démarrage du serveur"
-scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html#recreate_mobilefoundation_p2"
-navtitle="Recréation du serveur " scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html#using_mfs_advanced_p2"
+<topicref href="c_using_mfs_p1.html#using_mfs_advanced_p1"
 navtitle="Paramétrage d'une configuration avancée" scope="peer" format="html" linking="sourceonly"/>
 </topicref>
-</topichead>
-
-<!-- <topichead navtitle="Using Mobile Foundation" outputclass="subsection">
-<topicmeta>
-<shortdesc>The Mobile Foundation service provides a way to quickly set up a MobileFirst™ Server
-environment on Bluemix®. You can then develop, test, and manage mobile apps from this robust cloud
-environment.</shortdesc>
-</topicmeta>
-<topicref href="../c_using_mfs_p1.html" navtitle="Developer Plan" scope="peer" format="html"
-linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html" navtitle="Professional 1 Application Plan" scope="peer"
-format="html" linking="sourceonly"/> 
-</topichead>-->
+<topicref href="c_using_mfs_p2.html" outputclass="subsection" navtitle="Professional 1 Application"
+format="html" scope="peer" linking="sourceonly">
+<topicref href="c_using_mfs_p2.html#prerequisites_p2" navtitle="Conditions prérequises" format="html"
+scope="peer" linking="sourceonly"/>
+<topicref href="c_using_mfs_p2.html#configure_dashdb_p2" navtitle="Ajout de la connexion à la base de données"
+format="html" scope="peer" linking="sourceonly"/>
+<topicref href="c_using_mfs_p2.html#start_mobilefoundation_p2" navtitle="Démarrage du serveur"
+scope="peer" format="html" linking="sourceonly"/>
+<topicref href="c_using_mfs_p2.html#recreate_mobilefoundation_p2" navtitle="Recréation du serveur"
+scope="peer" format="html" linking="sourceonly"/>
+<topicref href="c_using_mfs_p2.html#using_mfs_advanced_p2"
+navtitle="Paramétrage d'une configuration avancée" scope="peer" format="html" linking="sourceonly"/>
+</topicref>
+<topicref href="customdomainconfig.html" outputclass="subsection"
+navtitle="Configuration d'un domaine personnalisé" format="html" scope="peer"/>
+<topicref href="maint_updates.html" outputclass="subsection" navtitle="Maintenance et mises à jour"
+format="html" scope="peer"/>
 </topicref>
 </map>
 

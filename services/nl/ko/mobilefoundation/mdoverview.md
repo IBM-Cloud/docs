@@ -8,7 +8,7 @@ copyright:
 #	{{site.data.keyword.mobilefoundation_short}} 정보
 {: #overview_mobilefoundation}
 
-*마지막 업데이트 날짜: 2016년 6월 15일*
+*마지막 업데이트 날짜: 2016년 7월 20일*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} 서비스는 {{site.data.keyword.Bluemix}}에서 {{site.data.keyword.mobilefirst}} 서버 환경을 빠르게 설정하는 방법을 제공합니다. 그런 다음, 이 강력한 클라우드 환경에서 모바일 앱을
@@ -41,3 +41,18 @@ copyright:
 {{site.data.keyword.mobilefoundation_short}}에서 {{site.data.keyword.mfp_cli_long_notm}}(CLI)를 사용하여 손쉽게 앱을 작성하고 관리할 수 있습니다.
 
 {{site.data.keyword.mobilefoundation_short}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 사용자의 영역 내에서 컨테이너를 프로비저닝할 수 있습니다. 작성된 컨테이너의 세부사항을 보고 컨테이너 성능을 확인하며 {{site.data.keyword.Bluemix_notm}} 대시보드에서 서버 로그에 액세스할 수 있습니다.
+
+## {{site.data.keyword.mobilefoundation_short}}에 대한 도움말 및 지원 받기
+{: #getting_help_mobilefoundation}
+
+{{site.data.keyword.mobilefoundation_short}} 사용 중에 문제점이 발생하거나 질문이 있는 경우 정보를 검색하거나 포럼에서 질문을 작성하여 도움말 지원을 받을 수 있습니다. 또한 지원 티켓을 개설할 수도 있습니다. 
+
+질문을 작성하는 데 포럼을 사용하는 경우 IBM {{site.data.keyword.Bluemix_notm}} 개발 팀에서 확인할 수 있도록 질문에 태그를 지정하십시오. 
+
+{{site.data.keyword.mobilefoundation_short}}을 사용하여 개발 또는 배치하는 데 대한 기술적 질문이 있는 경우 [스택 오버플로우](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window}에서 질문을 게시하거나 `bluemix` 및 `ibm-mobilefirst`로 질문에 태그를 지정하십시오. 
+
+서비스 및 시작 지시사항에 대한 질문은 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window} 포럼을 사용하십시오. `bluemix` 및 `mobilefirst` 태그를 지정하십시오. 
+
+포럼 사용에 대한 세부사항은 [도움 받기](https://www.{DomainName}/docs/support/index.html#getting-help)를 참조하십시오. 
+
+IBM 지원 센터 티켓 개설 또는 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 센터에 문의](https://www.{DomainName}/docs/support/index.html#contacting-support)를 참조하십시오. 

@@ -13,7 +13,7 @@ copyright:
 # Introdução ao {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
 
-*Última atualização: 15 de junho de 2016*
+*Última atualização: 20 de julho de 2016*
 {: .last-updated}
 
 O {{site.data.keyword.mobilefoundation_long}} expede a configuração de um ambiente do {{site.data.keyword.mfp_full}} a partir do qual é possível desenvolver, testar e operar aplicativos móveis corporativos. O {{site.data.keyword.mobilefoundation_short}} está disponível em dois planos de serviços diferentes: Developer e Professional 1 Application.
@@ -38,7 +38,10 @@ Depois de criar uma instância do serviço {{site.data.keyword.mobilefoundation_
 
 1.  Conecte-se ao serviço {{site.data.keyword.dashdbshort}}: Enterprise Transactional tradicional no {{site.data.keyword.Bluemix_notm}}.
 
-    1.  Selecione o `Space` do {{site.data.keyword.Bluemix_notm}} no qual a instância de serviço {{site.data.keyword.dashdbshort_notm}} existe, na lista de espaços disponíveis na `Organization` atual.
+    1.  Selecione o `Space` do
+{{site.data.keyword.Bluemix_notm}}, no qual a instância de
+serviço do {{site.data.keyword.dashdbshort_notm}} existe, na
+lista de espaços disponíveis na `Organization` atual.
 
     2.  Selecione o `Service Name` e as `Credentials` do {{site.data.keyword.dashdbshort_notm}} para se conectar à instância de serviço {{site.data.keyword.dashdbshort_notm}} existente.
 

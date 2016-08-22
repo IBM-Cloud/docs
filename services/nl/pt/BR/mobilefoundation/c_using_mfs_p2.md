@@ -8,7 +8,7 @@ copyright:
 #	Usando o plano Professional 1 Application
 {: #using_mobilefoundation_p2}
 
-*Última atualização: 15 de junho de 2016*
+*Última atualização: 20 de julho de 2016*
 {: .last-updated}
 
 Depois de criar a instância de serviço {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, leia o procedimento a seguir para iniciar o serviço.
@@ -37,7 +37,9 @@ Depois de criar a instância de serviço {{site.data.keyword.mobilefoundation_sh
 
 Após a instância de serviço {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application ser criada, você verá a página *Visão geral* na qual precisará especificar informações de conexão para a instância de serviço {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional.
 
-1.  Selecione o `Space` do {{site.data.keyword.Bluemix_notm}} no qual a instância de serviço {{site.data.keyword.dashdbshort_notm}} existe, na lista de espaços disponíveis na `Organization` atual.
+1.  Selecione o `Space` do
+{{site.data.keyword.Bluemix_notm}}, no qual a instância de
+serviço do {{site.data.keyword.dashdbshort_notm}} existe, na lista de espaços disponíveis na `Organization` atual.
 
 + Selecione o `Service Name` e as `Credentials` do {{site.data.keyword.dashdbshort_notm}} para se conectar à instância de serviço {{site.data.keyword.dashdbshort_notm}} existente.
 
@@ -69,7 +71,7 @@ no qual é possível ver:
   -	A rota do servidor criada para você. Use essa rota para atingir o servidor móvel a partir da internet
 pública. Seus aplicativos móveis usam essa rota para acessar o servidor.
 
-  -	Seu `nome do usuário`` e `senha` para acessar o {{site.data.keyword.mfp_oc_short_notm}}. A `password fica oculta. Clique em **Mostrar senha** para visualizá-la.
+  -	Seu `nome do usuário` e `senha` para acessar o {{site.data.keyword.mfp_oc_short_notm}}. A `password` fica oculta. Clique em **Mostrar senha** para visualizá-la.
 
 *	Clique em **Ativar console** para abrir o {{site.data.keyword.mfp_oc_short_notm}}.
 

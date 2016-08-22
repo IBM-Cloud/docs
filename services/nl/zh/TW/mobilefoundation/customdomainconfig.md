@@ -13,27 +13,26 @@ copyright:
 # 配置 {{site.data.keyword.mobilefoundation_short}} 伺服器的自訂網域
 {: #configcustomdomain}
 
-*前次更新：2016 年 6 月 15 日*
+*前次更新：2016 年 6 月 20 日*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} 在 {{site.data.keyword.containerlong}} 佈建一個 {{site.data.keyword.mfserver_short_notm}} 作為容器群組。容器群組將對映到一個 URL，其網域名稱是根據 {{site.data.keyword.Bluemix_notm}} **地區**。您也可以自行配置自訂網域。
 {:shortdesc}
 
-容器群組建立時的 URL 或路徑，預設網域名稱是根據 {{site.data.keyword.Bluemix_notm}} `地區`。
+容器群組建立時的 URL 或路徑，預設網域名稱是根據 {{site.data.keyword.Bluemix_notm}} `Region`。
 
 *表 1. 應用程式網域名稱，根據 {{site.data.keyword.Bluemix_notm}} 中的地區*
 
   |網域 |  地區  |    
   |:----- | :----- |    
-  |`mybluemix.net` | 美國達拉斯  |    
-  |`eu-gb.mybluemix.net` | 英國倫敦  |    
-  |`au-syd.mybluemix.net`  | 澳洲雪梨 |  
+  |`mybluemix.net` | 美國南部 |    
+  |`eu-gb.mybluemix.net` | 英國  |    
 
 您需要執行下列步驟配置自訂網域，才能使用自己的網域：
 
 1.	藉由選擇其中一個支援的方案，建立 {{site.data.keyword.mobilefoundation_short}} 服務實例來建立 {{site.data.keyword.mfserver_short_notm}} 實例。
 
-+ 將您想要使用的自訂網域，新增至您的 {{site.data.keyword.Bluemix_notm}} `組織`。移至**管理組織 > 網域 > 新增網域**，以新增您自己的網域。
++ 將您想要使用的自訂網域，新增至您的 {{site.data.keyword.Bluemix_notm}} `Organization`。移至**管理組織 > 網域 > 新增網域**，以新增您自己的網域。
 
 + 設定容器群組的路徑以使用您的自訂網域。
 

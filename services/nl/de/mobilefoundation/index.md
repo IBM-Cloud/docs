@@ -13,7 +13,7 @@ copyright:
 # Einführung in {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
 
-*Letzte Aktualisierung: 15. Juni 2016*
+*Letzte Aktualisierung: 20. Juli 2016*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_long}} beschleunigt die Einrichtung einer {{site.data.keyword.mfp_full}}-Umgebung, von der Sie mobile Unternehmens-Apps entwickeln, testen und betreiben können. {{site.data.keyword.mobilefoundation_short}} ist mit zwei verschiedenen Serviceplänen verfügbar: Developer und Professional 1 Application.
@@ -23,7 +23,7 @@ Der Professional 1 Application-Plan ermöglicht die Bereitstellung des {{site.da
 
 ## Einführung in den {{site.data.keyword.mobilefoundation_short}}: Developer-Plan
 
-Nachdem Sie eine Instanz von {{site.data.keyword.mobilefoundation_short}}: Developer-Service erstellt haben, können Sie mit der Erstellung Ihres mobilen Kanals mit wenigen Klicks beginnen. 
+Nachdem Sie eine Instanz von {{site.data.keyword.mobilefoundation_short}}: Developer-Service erstellt haben, können Sie mit der Erstellung Ihres mobilen Kanals mit wenigen Klicks beginnen.
 
 *	Klicken Sie auf **Basisserver starten**, um eine {{site.data.keyword.mobilefirst_notm}}-Serverinstanz mit der Standardkonfiguration zu erstellen.
 
@@ -38,7 +38,7 @@ Nachdem Sie eine Instanz von {{site.data.keyword.mobilefoundation_short}}: Profe
 
 1.  Stellen Sie eine Verbindung zu einem vorhandenen {{site.data.keyword.dashdbshort}}: Enterprise Transactional-Service in {{site.data.keyword.Bluemix_notm}} her.
 
-    1.  Wählen Sie den {{site.data.keyword.Bluemix_notm}}-`Bereich`, in dem sich die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz befindet, in der Liste der Bereiche aus, die in der aktuellen `Organisation` verfügbar sind.
+    1.  Wählen Sie den {{site.data.keyword.Bluemix_notm}}-`Bereich`, in dem sich die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz befindet, in der Liste der Bereiche aus, die in der ausgewählten `Organisation` verfügbar sind.
 
     2.  Wählen Sie den `Servicenamen` und die `Berechtigungsnachweise` für {{site.data.keyword.dashdbshort_notm}} aus, um eine Verbindung zur vorhandenen {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz herzustellen.
 
