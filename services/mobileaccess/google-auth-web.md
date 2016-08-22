@@ -57,20 +57,20 @@ To start the process of authorization:
 1. Retrieve the authorization endpoint (`authorizationEndpoint`) and clientId (`clientId`) from the service credentials stored in the `VCAP_SERVICES` environment variable. 
 
     **Note:** If you created the {{site.data.keyword.amashort}} service before web support was added, you might not have authorization endpoints in the service credentials. In this case, use the following authorization endpoints, depending on your Bluemix region:
-
-
- 	US South: 
- 	```
- 	https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
- 	```
- 	London: 
- 	```
- 	https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
-  	```
-  	Sydney: 
-  	```
-  	https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
-  	```
+ 
+  US South: 
+  ```
+  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
+  ```
+  London: 
+  ```
+  https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization 
+  ```
+  Sydney: 
+  ```
+  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
+  ```
+  
 2. Build the authorization server URI using the `response_type("code")`, `client_id`, and `redirect_uri` as query parameters.
 3. Redirect from your web app to the generated URI.
   
