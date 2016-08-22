@@ -8,7 +8,7 @@ copyright:
 #	Professional 1 Application-Plan verwenden
 {: #using_mobilefoundation_p2}
 
-*Letzte Aktualisierung: 15. Juni 2016*
+*Letzte Aktualisierung: 20. Juli 2016*
 {: .last-updated}
 
 Nach der Erstellung der Serviceinstanz von {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application lesen Sie die folgende Prozedur, um die Arbeit mit dem Service zu beginnen.
@@ -37,7 +37,7 @@ Stimmen Sie nach der Erstellung der {{site.data.keyword.mobilefoundation_short}}
 
 Nachdem die Serviceinstanz {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application erstellt wurde, sehen Sie die Seite *Übersicht*, auf der Sie die Verbindungsinformationen für die Serviceinstanz {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional angeben müssen.
 
-1.  Wählen Sie den {{site.data.keyword.Bluemix_notm}}-`Bereich`, in dem sich die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz befindet, in der Liste der Bereiche aus, die in der aktuellen `Organisation` verfügbar sind.
+1.  Wählen Sie den {{site.data.keyword.Bluemix_notm}}-`Bereich`, in dem sich die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz befindet, in der Liste der Bereiche aus, die in der ausgewählten `Organisation` verfügbar sind.
 
 + Wählen Sie den `Servicenamen` und die `Berechtigungsnachweise` für {{site.data.keyword.dashdbshort_notm}} aus, um eine Verbindung zur vorhandenen {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz herzustellen.
 
@@ -84,7 +84,7 @@ Diese Konsole wird innerhalb des Containers ausgeführt. Mit der Konsole können
 * Diese Aktion stoppt Ihre vorhandenen Server und löscht diese. Eine neue Serverinstanz wird erstellt. Diese Aktion
 dauert einige Minuten.
 
-**Hinweis**: Alle Daten der vorherigen Serverinstanz einschließlich der Informationen zu den Apps und Adaptern sind in der konfigurierten {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz dauerhaft festgelegt. 
+**Hinweis**: Alle Daten der vorherigen Serverinstanz einschließlich der Informationen zu den Apps und Adaptern sind in der konfigurierten {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz dauerhaft festgelegt.
 
 ##	Erweiterte Konfiguration einrichten
 {: #using_mfs_advanced_p2}

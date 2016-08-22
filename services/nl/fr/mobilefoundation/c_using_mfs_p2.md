@@ -8,7 +8,7 @@ copyright:
 #	Utilisation du plan Professional 1 Application
 {: #using_mobilefoundation_p2}
 
-*Dernière mise à jour : 15 juin 2016*
+*Dernière mise à jour : 20 juillet 2016*
 {: .last-updated}
 
 Une fois que vous avez créé l'instance de service
@@ -53,7 +53,7 @@ Une fois que vous avez créé l'instance de service
 Application, acceptez les
 dispositions du contrat de licence
 d'{{site.data.keyword.mfp_full_notm}} version 8.0 pour commencer à
-utiliser le service. 
+utiliser le service.
 
 ### Configuration de la connexion à l'instance de service {{site.data.keyword.dashdbshort_notm}}
 {: #connect_dashdb_p2}
@@ -63,11 +63,7 @@ Une fois l'instance de service
 Professional 1 Application créée, la page *Overview* s'affiche et
 vous permet d'indiquer les informations de connexion à l'instance de service {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional.
 
-1.  Dans la liste des
-espaces disponibles de l'`Organisation` en cours, sélectionnez
-l'`Espace`
-{{site.data.keyword.Bluemix_notm}} dans lequel l'instance de service
-{{site.data.keyword.dashdbshort_notm}} existe.
+1.  Depuis la liste des espaces disponibles dans `Organisation`, sélectionnez l'élément `Espace` {{site.data.keyword.Bluemix_notm}} dans lequel se trouve l'instance de service {{site.data.keyword.dashdbshort_notm}},
 
 + Sélectionnez également le nom du service (`Service
 Name`) et les données d'identification
@@ -81,12 +77,11 @@ indiquée.
 
 +  Cliquez sur **Continue**. Cela permet de créer
 les tables requises dans l'instance de service de base de données
-{{site.data.keyword.dashdbshort_notm}} configurée. 
+{{site.data.keyword.dashdbshort_notm}} configurée.
 
 **Remarque** : Vous ne pouvez pas modifier l'instance
 de service {{site.data.keyword.dashdbshort_notm}} configurée pour être
-utilisée par votre instance de service  {{site.data.keyword.mobilefoundation_short}}. 
-Vous pouvez toutefois utiliser la même instance de service
+utilisée par votre instance de service  {{site.data.keyword.mobilefoundation_short}}. Vous pouvez toutefois utiliser la même instance de service
 {{site.data.keyword.dashdbshort_notm}} sur plusieurs instances de
 service {{site.data.keyword.mobilefoundation_short}}, car chaque
 instance de service {{site.data.keyword.mobilefoundation_short}} crée
@@ -120,10 +115,9 @@ message indique la progression de l'opération. A son terme, un tableau de bord 
   -	La route du serveur créé pour vous. Utilisez cette route pour joindre votre serveur mobile depuis l'Internet public. Vos applications mobiles utilisent cette
 route pour accéder au serveur.
 
-  -	Votre `nom_d'utilisateur` personnel et votre
-`mot_de_passe` pour accéder à la console
-{{site.data.keyword.mfp_oc_short_notm}}. Le `mot_de_passe`
-est masqué. Cliquez sur **Show Password** pour l'afficher.
+  -	Votre `nom_d'utilisateur` personnel et votre `mot_de_passe`
+pour accéder à la console {{site.data.keyword.mfp_oc_short_notm}}. Le
+`mot_de_passe` est masqué. Cliquez sur **Show Password** pour l'afficher.
 
 *	Cliquez sur **Launch Console** pour ouvrir la
 console {{site.data.keyword.mfp_oc_short_notm}}.
@@ -158,7 +152,7 @@ certains paramètres avancés.
 
 *	L'onglet **Topology** vous permet de sélectionner
 la taille de votre conteneur. Le serveur par défaut doté d'1 Go est idoine pour
-le développement et des tests sommaires. 
+le développement et des tests sommaires.
   - Sélectionnez la taille appropriée pour votre serveur compte tenu de
 vos besoins.
 

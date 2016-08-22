@@ -13,7 +13,7 @@ copyright:
 # Configuración de un dominio personalizado para el servidor {{site.data.keyword.mobilefoundation_short}}
 {: #configcustomdomain}
 
-*Última actualización: 15 de junio de 2016*
+*Última actualización: 20 de junio de 2016*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} suministra un {{site.data.keyword.mfserver_short_notm}} en {{site.data.keyword.containerlong}} como un grupo de contenedores. El grupo de contenedores se correlacionará con un URL que tienen los nombres de dominio basados en la {{site.data.keyword.Bluemix_notm}} **Región**. También puede configurar su propio dominio personalizado.
@@ -25,11 +25,10 @@ Un grupo de contenedores se crea con un URL o ruta que tiene los nombres de domi
 
   |Dominio |  Región  |    
   |:----- | :----- |    
-  |`mybluemix.net` | Dallas, EE UU  |    
-  |`eu-gb.mybluemix.net` | Londres, GB  |    
-  |`au-syd.mybluemix.net`  | Sídney, Australia |  
+  |`mybluemix.net` | EE.UU. sur |    
+  |`eu-gb.mybluemix.net` | Reino Unido  |    
 
-Para poder utilizar su propio dominio será necesario configurar el dominio personalizado realizando los siguientes pasos: 
+Para poder utilizar su propio dominio será necesario configurar el dominio personalizado realizando los siguientes pasos:
 
 1.	Cree una instancia de {{site.data.keyword.mfserver_short_notm}} creando la instancia de servicio de {{site.data.keyword.mobilefoundation_short}} seleccionando uno de los planes soportados.
 

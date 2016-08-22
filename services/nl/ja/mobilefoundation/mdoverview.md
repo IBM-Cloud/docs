@@ -8,7 +8,7 @@ copyright:
 #	{{site.data.keyword.mobilefoundation_short}} について
 {: #overview_mobilefoundation}
 
-*最終更新日: 2016 年 6 月 15 日*
+*最終更新日: 2016 年 7 月 20 日*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} サービスにより、{{site.data.keyword.Bluemix}} 上で {{site.data.keyword.mobilefirst}} サーバー環境を迅速にセットアップする方法が提供されます。その後、この強固なクラウド環境からモバイル・アプリを開発、テスト、および管理できます。
@@ -40,3 +40,18 @@ copyright:
 {{site.data.keyword.mobilefoundation_short}} とともに {{site.data.keyword.mfp_cli_long_notm}} (CLI) を使用して、アプリを簡単に作成して管理できます。
 
 {{site.data.keyword.mobilefoundation_short}} サービスは、{{site.data.keyword.Bluemix_notm}} 上のご使用のスペース内のコンテナーをプロビジョンします。{{site.data.keyword.Bluemix_notm}} ダッシュボードから、作成されるコンテナーの詳細を確認したり、コンテナーのパフォーマンスを表示したり、サーバー・ログにアクセスしたりできます。
+
+## {{site.data.keyword.mobilefoundation_short}} のヘルプおよびサポートの入手
+{: #getting_help_mobilefoundation}
+
+{{site.data.keyword.mobilefoundation_short}} をご使用中に問題が発生した場合、または質問がある場合は、情報を検索するか、フォーラムで質問してヘルプを得ることができます。また、サポート・チケットをオープンすることも可能です。
+
+フォーラムで質問する際には、IBM {{site.data.keyword.Bluemix_notm}} 開発チームによって認識されるように、質問にタグを付けてください。
+
+{{site.data.keyword.mobilefoundation_short}} によるアプリケーションの開発またはデプロイに関して技術的な質問がある場合は、[Stack Overflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} に質問を投稿し、質問に `bluemix` と `ibm-mobilefirst` のタグを付けてください。
+
+サービスおよび最初の手順に関する質問については、[IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window} フォーラムを使用してください。`bluemix` と `mobilefirst` のタグを含めてください。
+
+フォーラムの使用法の詳細については、[ヘルプの入手 (Getting help)](https://www.{DomainName}/docs/support/index.html#getting-help) を参照してください。
+
+IBM サポート・チケットのオープン、またはサポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://www.{DomainName}/docs/support/index.html#contacting-support)を参照してください。

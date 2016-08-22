@@ -8,7 +8,7 @@ copyright:
 #	使用 Professional 1 Application 套餐
 {: #using_mobilefoundation_p2}
 
-*上次更新时间：2016 年 6 月 15 日*
+*上次更新时间：2016 年 7 月 20 日*
 {: .last-updated}
 
 创建 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服务实例后，请阅读以下步骤以开始使用该服务。
@@ -37,7 +37,7 @@ copyright:
 
 创建 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服务实例后，将看到“*概述*”页面，在其中需要指定 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 服务实例的连接信息。
 
-1.  从当前`组织`中可用的空间列表选择具有 {{site.data.keyword.dashdbshort_notm}} 服务实例的 {{site.data.keyword.Bluemix_notm}} `空间`。
+1.  从所选`组织`中可用的空间列表中选择具有 {{site.data.keyword.dashdbshort_notm}} 服务实例的 {{site.data.keyword.Bluemix_notm}} `空间`。
 
 + 选择 {{site.data.keyword.dashdbshort_notm}} `服务名称`和`凭证`以连接到现有 {{site.data.keyword.dashdbshort_notm}} 服务实例。
 

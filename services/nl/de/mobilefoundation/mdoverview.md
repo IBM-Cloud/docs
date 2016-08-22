@@ -8,7 +8,7 @@ copyright:
 #	Informationen zu {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
 
-*Letzte Aktualisierung: 15. Juni 2016*
+*Letzte Aktualisierung: 20. Juli 2016*
 {: .last-updated}
 
 Mit dem Service {{site.data.keyword.mobilefoundation_short}} ist es möglich, in {{site.data.keyword.Bluemix}} eine {{site.data.keyword.mobilefirst}}-Serverumgebung einzurichten. Sie können dann
@@ -41,3 +41,18 @@ Mit {{site.data.keyword.mobilefoundation_short}} können Sie folgende Funktionen
 Sie können die {{site.data.keyword.mfp_cli_long_notm}} (CLI) mit {{site.data.keyword.mobilefoundation_short}} verwenden, um Apps ohne großen Aufwand zu erstellen und zu verwalten.
 
 Der {{site.data.keyword.mobilefoundation_short}}-Service bietet einen Container in Ihrem Bereich in {{site.data.keyword.Bluemix_notm}} an. Sie können die Details des Containers sehen, seine Leistung anzeigen  und auf die Serverprotokolle von Ihrem {{site.data.keyword.Bluemix_notm}}-Dashboard aus zugreifen.
+
+## Hilfe und Unterstützung für {{site.data.keyword.mobilefoundation_short}} anfordern
+{: #getting_help_mobilefoundation}
+
+Sollten bei der Verwendung von {{site.data.keyword.mobilefoundation_short}} Probleme auftreten oder Fragen entstehen, können Sie nach Informationen suchen oder Fragen in einem Forum stellen. Sie haben auch die Möglichkeit, ein Support-Ticket zu öffnen.
+
+Wenn Sie zum Stellen einer Frage die Foren nutzen, versehen Sie Ihre Frage mit entsprechenden Tags, damit die IBM {{site.data.keyword.Bluemix_notm}}-Entwicklerteams Ihre Frage auf Anhieb erkennen können.
+
+Bei technischen Fragen zur Entwicklung und zur Bereitstellung einer App mit {{site.data.keyword.mobilefoundation_short}} können Sie Ihre Frage an [Stack Overflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} richten; versehen Sie Ihre Frage mit den Tags `bluemix` und `ibm-mobilefirst`.
+
+Bei Fragen zum Service sowie zu einführenden Anweisungen können Sie das [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window}-Forum nutzen. Verwenden Sie dabei die Tags `bluemix` und `mobilefirst`.
+
+Weitere Details zur Nutzung der Foren finden Sie unter [Hilfe anfordern](https://www.{DomainName}/docs/support/index.html#getting-help).
+
+Informationen zum Öffnen eines IBM Support-Tickets oder zu Supportebenen und zur Priorität von Tickets finden Sie unter dem Thema [Kontaktaufnahme mit dem Support](https://www.{DomainName}/docs/support/index.html#contacting-support).

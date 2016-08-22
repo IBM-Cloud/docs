@@ -13,7 +13,7 @@ copyright:
 # 開始使用 {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
 
-*前次更新：2016 年 6 月 15 日*
+*前次更新：2016 年 7 月 20 日*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_long}} 可加速設定 {{site.data.keyword.mfp_full}} 環境，您可以從該環境中開發、測試及操作企業行動應用程式。
@@ -38,9 +38,9 @@ Professional 1 Application 方案容許 {{site.data.keyword.mobilefoundation_sho
 
 1.  連接至 {{site.data.keyword.Bluemix_notm}} 上的現有 {{site.data.keyword.dashdbshort}}: Enterprise Transactional 服務。
 
-    1.  從現行`組織`中可用的空間清單，選取 {{site.data.keyword.dashdbshort_notm}} 服務實例所存在的 {{site.data.keyword.Bluemix_notm}} `空間`。
+    1.  從所選取 `Organization` 中可用的空間清單，選取 {{site.data.keyword.dashdbshort_notm}} 服務實例所存在的 {{site.data.keyword.Bluemix_notm}} `Space`。
 
-    2.  選取 {{site.data.keyword.dashdbshort_notm}} `服務名稱`和`認證`，以連接至現有的 {{site.data.keyword.dashdbshort_notm}} 服務實例。
+    2.  選取 {{site.data.keyword.dashdbshort_notm}} `Service Name` 和 `Credentials`，以連接至現有的 {{site.data.keyword.dashdbshort_notm}} 服務實例。
 
     3.  按一下**測試連線**，以測試與所選取 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 服務實例的連線。
 

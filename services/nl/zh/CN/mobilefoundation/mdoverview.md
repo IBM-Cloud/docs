@@ -8,7 +8,7 @@ copyright:
 #	关于 {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
 
-*上次更新时间：2016 年 6 月 15 日*
+*上次更新时间：2016 年 7 月 20 日*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} 服务提供在 {{site.data.keyword.Bluemix}} 上快速设置 {{site.data.keyword.mobilefirst}} 服务器环境的方法。然后，可从这个稳健的云环境开发、测试和管理移动应用程序。
@@ -40,3 +40,18 @@ copyright:
 可以将 {{site.data.keyword.mfp_cli_long_notm}} (CLI) 与 {{site.data.keyword.mobilefoundation_short}} 搭配使用，轻松创建和管理应用程序。
 
 {{site.data.keyword.mobilefoundation_short}} 服务在 {{site.data.keyword.Bluemix_notm}} 的空间中供应容器。您可以在 {{site.data.keyword.Bluemix_notm}} 仪表板中查看所创建容器的详细信息、查看容器性能并访问服务器日志。
+
+## 获取有关 {{site.data.keyword.mobilefoundation_short}} 的帮助和支持
+{: #getting_help_mobilefoundation}
+
+如果您在使用 {{site.data.keyword.mobilefoundation_short}} 时有任何疑问或遇到任何问题，您可以在论坛中搜索相关信息或进行提问来获取帮助。还可以提交支持凭单。
+
+使用论坛进行提问时，请使用适当的标记来标注您的问题，以方便 IBM {{site.data.keyword.Bluemix_notm}} 开发团队识别。
+
+有关使用 {{site.data.keyword.mobilefoundation_short}} 开发或部署应用程序的技术问题，请将您的问题发布到 [Stack Overflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} 上，并使用 `bluemix` 和 `ibm-mobilefirst` 标记您的问题。
+
+有关服务的问题和入门指示信息，请使用 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window} 论坛。另请加上 `bluemix` 和 `mobilefirst` 标记。
+
+有关使用论坛的更多详细信息，请参阅[获取帮助](https://www.{DomainName}/docs/support/index.html#getting-help)。
+
+有关提交 IBM 支持凭单或支持级别和凭单严重性的信息，请参阅[联系支持人员](https://www.{DomainName}/docs/support/index.html#contacting-support)。

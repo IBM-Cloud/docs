@@ -15,72 +15,40 @@
 </copyright>
 </topicmeta>
 
-<topicref href="../mdindex.html" linking="sourceonly" format="html" scope="peer"
-navtitle="(テスト) Mobile Foundation">
-<!-- <topicref href="../mdoverview.html" navtitle="About" format="html" scope="peer" linking="sourceonly"/> -->
-<topichead navtitle="製品情報" outputclass="subsection">
-<topicmeta>
-<shortdesc>Mobile Foundation サービスにより、Bluemix® 上で MobileFirst™ サーバー環境を迅速にセットアップする方法が提供されます。その後、この強固なクラウド環境からモバイル・アプリを開発、テスト、および管理できます。</shortdesc>
-</topicmeta>
-<topicref href="../mdoverview.html#overview_mobilefoundation" navtitle="概説" scope="peer"
-format="html" linking="sourceonly"/>
-<topicref href="../mdoverview.html#mobilefoundation_operational_env"
-navtitle="稼働環境" scope="peer" format="html" linking="sourceonly"/>
-</topichead>
-<topichead navtitle="開発者プラン" outputclass="subsection">
-<topicmeta>
-<shortdesc>Mobile Foundation サービスの開発者プランは、コンテナー内の Mobile Foundation サーバーをプロビジョンします。このプランはコンテナー・グループおよび外部データベースの使用をサポートしておらず、開発およびテスト向けに制限されています。このプランにより、Bluemix® 上で MobileFirst™ サーバー環境を迅速にセットアップする方法が提供されます。その後、この強固なクラウド環境からモバイル・アプリを開発、テスト、および管理できます。</shortdesc>
-</topicmeta>
-<topicref href="../c_using_mfs_p1.html#using_mobilefoundation_p1" navtitle="開発者プランの使用"
+<topicref href="index.html" format="html" scope="peer" navtitle="Mobile Foundation"
+locktitle="yes">
+<topicref href="index.html" format="html" scope="peer" navtitle="概要" locktitle="yes"/>
+<topicref href="mdoverview.html" navtitle="製品情報" format="html" scope="peer" linking="sourceonly"
+outputclass="subsection">
+<topicref format="html" scope="peer" href="mdoverview.html#getting_help_mobilefoundation"
+linking="sourceonly" navtitle="ヘルプおよびサポートの入手"/>
+</topicref>
+<topicref href="c_using_mfs_p1.html" outputclass="subsection" navtitle="開発者プラン"
+format="html" scope="peer" linking="sourceonly">
+<topicref href="c_using_mfs_p1.html#start_mobilefoundation_p1" scope="peer" format="html"
+navtitle="サーバーの始動" linking="sourceonly"/>
+<topicref href="c_using_mfs_p1.html#recreate_mobilefoundation_p1" navtitle="サーバーの再作成"
 scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p1.html#start_mobilefoundation_p1" navtitle="サーバーの始動"
-scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p1.html#recreate_mobilefoundation_p1"
-navtitle="サーバーの再作成" scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p1.html#using_mfs_advanced_p1"
-navtitle="拡張構成のセットアップ" scope="peer" format="html" linking="sourceonly"/>
-</topichead>
-<topichead navtitle="「プロフェッショナル 1 アプリケーション」プラン" outputclass="subsection" scope="peer">
-<topicmeta>
-<shortdesc>「プロフェッショナル 1 アプリケーション」プランでは、モバイル・アプリのユーザーまたはデバイスの数にかかわらず、予測可能な料金で単一のモバイル・アプリケーションの作成および管理を行えます。単一のモバイル・アプリケーションは、iOS、Android、Windows、Mobile
-Web など、複数のフレーバーで構成することができます。このプランは、スケーラブル・コンテナー環境内の Mobile Foundation サーバーをプロビジョンします。このプランにはデータベース・サービスも必要です。Bluemix® の「エンタープライズ・トランザクション」プランを使用する IBM dashDB® サービスが、サポートされるデータベース・サービスです。Bluemix® 上で MobileFirst™ サーバー環境を迅速にセットアップし、この強固なクラウド環境からモバイル・アプリの開発、テスト、および管理を行えます。</shortdesc>
-</topicmeta>
-<topicref href="../c_using_mfs_p2.html#using_mobilefoundation_p2"
-navtitle="「プロフェッショナル 1 アプリケーション」プランの使用" scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html#prerequisites_p2" navtitle="前提条件" scope="peer"
-format="html" linking="sourceonly"/>
-<topicref navtitle="Mobile Foundation の構成" chunk="to-content"
-href="../c_using_mfs_p2.html#configure_dashdb_p2" format="html" scope="peer">
-<!--<topicmeta>
-<shortdesc>The Mobile Foundation service with Professional 1 Application plan requires an external
-database service. IBM dashDB® service with enterprise transactional plan on Bluemix® is the
-supported database service. You will need to configure the connection to a dashDB service instance
-before proceeding with other configuration steps for Mobile Foundation.</shortdesc>
-</topicmeta>-->
-<topicref href="../c_using_mfs_p2.html#firststeps_p2" navtitle="最初の手順" scope="peer"
-format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html#connect_dashdb_p2" navtitle="dashDB への接続のセットアップ"
-scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html#start_mobilefoundation_p2" navtitle="サーバーの始動"
-scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html#recreate_mobilefoundation_p2"
-navtitle="サーバーの再作成" scope="peer" format="html" linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html#using_mfs_advanced_p2"
+<topicref href="c_using_mfs_p1.html#using_mfs_advanced_p1"
 navtitle="拡張構成のセットアップ" scope="peer" format="html" linking="sourceonly"/>
 </topicref>
-</topichead>
-
-<!-- <topichead navtitle="Using Mobile Foundation" outputclass="subsection">
-<topicmeta>
-<shortdesc>The Mobile Foundation service provides a way to quickly set up a MobileFirst™ Server
-environment on Bluemix®. You can then develop, test, and manage mobile apps from this robust cloud
-environment.</shortdesc>
-</topicmeta>
-<topicref href="../c_using_mfs_p1.html" navtitle="Developer Plan" scope="peer" format="html"
-linking="sourceonly"/>
-<topicref href="../c_using_mfs_p2.html" navtitle="Professional 1 Application Plan" scope="peer"
-format="html" linking="sourceonly"/> 
-</topichead>-->
+<topicref href="c_using_mfs_p2.html" outputclass="subsection" navtitle="プロフェッショナル 1 アプリケーション"
+format="html" scope="peer" linking="sourceonly">
+<topicref href="c_using_mfs_p2.html#prerequisites_p2" navtitle="前提条件" format="html"
+scope="peer" linking="sourceonly"/>
+<topicref href="c_using_mfs_p2.html#configure_dashdb_p2" navtitle="データベース接続の追加"
+format="html" scope="peer" linking="sourceonly"/>
+<topicref href="c_using_mfs_p2.html#start_mobilefoundation_p2" navtitle="サーバーの始動"
+scope="peer" format="html" linking="sourceonly"/>
+<topicref href="c_using_mfs_p2.html#recreate_mobilefoundation_p2" navtitle="サーバーの再作成"
+scope="peer" format="html" linking="sourceonly"/>
+<topicref href="c_using_mfs_p2.html#using_mfs_advanced_p2"
+navtitle="拡張構成のセットアップ" scope="peer" format="html" linking="sourceonly"/>
+</topicref>
+<topicref href="customdomainconfig.html" outputclass="subsection"
+navtitle="カスタム・ドメインの構成" format="html" scope="peer"/>
+<topicref href="maint_updates.html" outputclass="subsection" navtitle="保守および更新"
+format="html" scope="peer"/>
 </topicref>
 </map>
 
