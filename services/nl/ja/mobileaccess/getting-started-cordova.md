@@ -9,7 +9,7 @@ copyright:
 # Cordova プラグインのセットアップ
 {: #getting-started-cordova}
 
-*最終更新日: 2016 年 5 月 25 日*
+*最終更新日: 2016 年 7 月 17 日*
 {: .last-updated}
 
 Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
@@ -18,14 +18,18 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
 
-* Cordova アプリケーション (または、既存のプロジェクトを使用します)。Cordova アプリケーションのセットアップ方法について詳しくは、[Cordova の Web サイト](https://cordova.apache.org/)を参照してください。
+
+
+
+
+* Cordova アプリケーションまたは既存のプロジェクト。Cordova アプリケーションのセットアップ方法について詳しくは、[Cordova の Web サイト](https://cordova.apache.org/)を参照してください。
 
 ## {{site.data.keyword.amashort}} Cordova プラグインのインストール
 {: #getting-started-cordova-plugin}
 
-{{site.data.keyword.amashort}} Client SDK for Cordova は、ネイティブ {{site.data.keyword.amashort}} Client SDK をラップしている Cordova プラグインです。これは、Cordova コマンド・ライン・インターフェース (CLI) と、Cordova プロジェクト用のプラグイン・リポジトリーである `npmjs` を使用して配布されます。Cordova CLI は自動的にリポジトリーからプラグインをダウンロードし、Cordova アプリケーションで使用できるようにします。
+{{site.data.keyword.amashort}} Client SDK for Cordova は、ネイティブ {{site.data.keyword.amashort}} Client SDK をラップする Cordova プラグインです。これは、Cordova コマンド・ライン・インターフェース (CLI) と、Cordova プロジェクト用のプラグイン・リポジトリーである `npmjs` を使用して配布されます。Cordova CLI は自動的にリポジトリーからプラグインをダウンロードし、Cordova アプリケーションで使用できるようにします。
 
 1. Android プラットフォームおよび iOS プラットフォームを Cordova アプリケーションに追加します。以下のコマンドのいずれかまたは両方をコマンド・ラインから実行します。
 
@@ -48,8 +52,6 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 	```
 
 	*minSdkVersion* の値は、`15` より大でなければなりません。*targetSdkVersion* の値は、Google から入手可能な最新の Android SDK でなければなりません。
-
-
 
 1. iOS オペレーティング・システムを追加した場合は、以下のように、ターゲット宣言で `<platform name="ios">` エレメントを更新してください。
 
@@ -80,7 +82,7 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 
 		Xcode プロジェクトを以下のように構成して、ビルド・エラーを回避します。
 
-		1. 最新バージョンの Xcode を使用して、&lt;*app_name*&gt;/platforms/ios ディレクトリー内の xcode.proj ファイルを開きます。
+		1. 最新バージョンの Xcode を使用して、`<app_name>/platforms/ios` ディレクトリー内の `xcode.proj` ファイルを開きます。
 
 		**重要:** 「最新の Swift 構文に変換 (Convert to Latest Swift Syntax)」するようにというメッセージが表示されたら、「キャンセル」をクリックします。
 
@@ -115,21 +117,21 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 *applicationRoute* および *applicationGUID* は、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**の値に置き換えます。
 
 	```JavaScript
-BMSClient.initialize("applicationRoute", "applicationGUID");
-```
+	BMSClient.initialize("applicationRoute", "applicationGUID");
+	```
 
-## モバイル・バックエンドへの要求の実行
+## モバイル・バックエンド・アプリケーションへの要求の実行
 {: #getting-started-request}
 
-{{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンドに要求を出すことができるようになります。
+{{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
-1. 新しいモバイル・バックエンドの、保護されたエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` 以下に例を示します。
+1. 新しいモバイル・バックエンド・アプリケーションの、保護されたエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` 以下に例を示します。
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected
 	```
 
-	MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。 `認証されていない`というメッセージがブラウザーに戻されます。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、このメッセージが返されます。
+	MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。 `認証されていない`というメッセージがブラウザーに戻されます。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、このメッセージが返されます。
 
 1. Cordova アプリケーションを使用して、同じエンドポイントに要求を実行します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 
@@ -139,7 +141,7 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 	}
 
 	var failure = function(error){
-		console.log("failure", error);
+	console.log("failure", error);
 	}
 
 	var request = new MFPRequest("/protected", MFPRequest.GET);

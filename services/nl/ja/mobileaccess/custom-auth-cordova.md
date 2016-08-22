@@ -5,8 +5,13 @@ copyright:
 
 ---
 
-# Cordova 用の {{site.data.keyword.amashort}} Client SDK の構成
+# {{site.data.keyword.amashort}} Cordova アプリ用のカスタム認証の構成
 {: #custom-cordova}
+
+*最終更新日: 2016 年 7 月 17 日*
+{: .last-updated}
+
+
 {{site.data.keyword.amashort}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する Cordova アプリケーションを構成します。
 
 
@@ -31,7 +36,7 @@ applicationGUID および applicationRoute パラメーターを渡すことに�
 	BMSClient.initialize(applicationRoute, applicationGUID);
 
 	```
- *applicationRoute* および *applicationGUID* を、{{site.data.keyword.Bluemix_notm}} ダッシュボード上のアプリケーションの**「モバイル・オプション」**パネルから取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。
+*applicationRoute* および *applicationGUID* を、{{site.data.keyword.Bluemix_notm}} ダッシュボード上のアプリケーションの**「モバイル・オプション」**パネルから取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。
 
 ## 認証リスナー・インターフェース
 {: #custom-cordva-auth}

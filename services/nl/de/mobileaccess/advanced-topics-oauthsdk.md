@@ -8,6 +8,9 @@ copyright:
 # Kommunikation von Back-End zu Back-End einrichten
 {: #backend-comm}
 
+*Letzte Aktualisierung: 16. Juni 2016*
+{: .last-updated}
+
 In bestimmten Szenarios müssen Sie möglicherweise Anforderungen aus Ihrer Back-End-Anwendung, die in {{site.data.keyword.Bluemix}} ausgeführt wird, an einen anderen Back-End-Service senden, der durch den {{site.data.keyword.amashort}}-Service geschützt wird (z. B. an den {{site.data.keyword.cloudant}}-Service). In diesen Fällen müssen Sie der Anforderung das OAuth-Token hinzufügen.
 
 Verwenden Sie das Modul `bms-mca-oauth-sdk npmjs`, um OAuth-Tokens abzurufen und in Anforderungen einzufügen.
@@ -38,12 +41,10 @@ var options = {
 
 	cacheSize: 100,
 
-	// Alle folgenden Eigenschaften werden automatisch abgerufen, wenn Ihre Node.js
-	// in {{site.data.keyword.Bluemix_notm}} aktiv ist und an eine Instanz des
- // {{site.data.keyword.amashort}}-Service gebunden ist.
+	// Alle folgenden Eigenschaften werden automatisch abgerufen, wenn Ihre Node.js-Anwendung
+	// in {{site.data.keyword.Bluemix_notm}} aktiv ist und an eine Instanz des {{site.data.keyword.amashort}}-Service gebunden ist.
 	// Alternativ können Sie diese Eigenschaftswerte ermitteln, indem Sie auf
-	// 'Berechtigungsnachweise anzeigen' auf der Kachel für den {{site.data.keyword.amashort}}-Service
- // in Ihrem {{site.data.keyword.Bluemix_notm}}-Anwendungsdashboard klicken.
+	// 'Berechtigungsnachweise anzeigen' auf der Kachel für den {{site.data.keyword.amashort}}-Service in Ihrem {{site.data.keyword.Bluemix_notm}}-Anwendungsdashboard klicken.
 
 	appId: "appId",				// Bluemix applicationGUID, auch: tenantId
 	clientId: "clientId",			

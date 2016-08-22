@@ -9,23 +9,27 @@ copyright:
 # Cordova 플러그인 설정
 {: #getting-started-cordova}
 
-*마지막 업데이트 날짜: 2016년 5월 25일*
+*마지막 업데이트 날짜: 2016년 7월 17일*
 {: .last-updated}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 Cordova 애플리케이션을 계측하고 SDK를 초기화하고 보호 및 비보호 자원을 요청하십시오.
+{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 Cordova 애플리케이션을 인스트루먼트하고, SDK를 초기화하며 보호 및 비보호 리소스에 대한 요청을 작성하십시오.
 {:shortdesc}
 
 ## 시작하기 전에
 {: #before-you-begin}
 다음이 있어야 합니다.
-* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오. 
+* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
 
-* Cordova 애플리케이션 또는 기존 프로젝트를 사용하십시오. Cordova 애플리케이션을 설정하는 방법에 대한 자세한 정보는 [Cordova 웹 사이트](https://cordova.apache.org/)를 참조하십시오. 
+
+
+
+
+* Cordova 애플리케이션 또는 기존 프로젝트. Cordova 애플리케이션을 설정하는 방법에 대한 자세한 정보는 [Cordova 웹 사이트](https://cordova.apache.org/)를 참조하십시오. 
 
 ## {{site.data.keyword.amashort}} Cordova 플러그인 설치
 {: #getting-started-cordova-plugin}
 
-Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 기본 {{site.data.keyword.amashort}} 클라이언트 SDK를 랩핑하는 Cordova 플러그인입니다. Cordova CLI(Command Line Interface) 및 `npmjs`, Cordova 프로젝트에 대한 플러그인 저장소를 사용하여 분배됩니다. Cordova CLI는 저장소에서 플러그인을 자동으로 다운로드하고 Cordova 애플리케이션에서 플러그인을 사용할 수 있게 합니다. 
+Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.data.keyword.amashort}} 클라이언트 SDK를 랩핑하는 Cordova 플러그인입니다. Cordova CLI(Command Line Interface) 및 `npmjs`, Cordova 프로젝트에 대한 플러그인 저장소를 사용하여 분배됩니다. Cordova CLI는 저장소에서 자동으로 플러그인을 다운로드하고 Cordova 애플리케이션에서 플러그인을 사용할 수 있게 합니다. 
 
 1. Android 및 iOS 플랫폼을 Cordova 애플리케이션에 추가하십시오. 명령행에서 다음 명령 중 하나 또는 둘 다 실행하십시오. 
 
@@ -64,7 +68,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 기본 {{site.d
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Android, iOS 또는 둘 다에 대해 플랫폼을 구성하십시오.
+1. Android, iOS 또는 둘 다에 대해 플랫폼을 구성하십시오. 
 
 	* **Android**
 
@@ -78,17 +82,17 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 기본 {{site.d
 
 		다음과 같이 Xcode 프로젝트를 구성하여 빌드 오류를 방지하십시오.
 
-		1. 최신 Xcode 버전을 사용하여 &lt;*app_name*&gt;/platforms/ios 디렉토리에서 xcode.proj 파일을 여십시오.
+		1. 최신 Xcode 버전을 사용하여 `<app_name>/platforms/ios` 디렉토리에서 `xcode.proj` 파일을 여십시오. 
 
 		**중요:** "최신 Swift 구문으로 변환"에 대한 메시지를 수신하는 경우 취소를 클릭하십시오.
 
-		2. **빌드 설정 > Swift 컴파일러 - 코드 생성 > Objective-C 브리징 헤더**로 이동하여 다음 경로를 추가하십시오.
+		2. **빌드 설정 > Swift 컴파일러 - 코드 생성 > Objective-C 브리징 헤더**로 이동하여 다음 경로를 추가하십시오. 
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. **빌드 설정 > 링크 > Runpath 검색 경로**로 이동하여 다음 프레임워크 매개변수를 추가하십시오.
+		3. **빌드 설정 > 링크 > Runpath 검색 경로**로 이동하여 다음 프레임워크 매개변수를 추가하십시오. 
 
 			```
 			@executable_path/Frameworks
@@ -96,7 +100,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 기본 {{site.d
 
 		4. Xcode로 애플리케이션을 빌드하고 실행하십시오.
 
-1. 다음 명령을 실행하여 플러그인이 올바르게 설치되었는지 확인하십시오. 
+1. 다음 명령을 실행하여 플러그인이 설치되었는지 확인하십시오. 
 
 	```Bash
 	cordova plugin list
@@ -115,10 +119,10 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 기본 {{site.d
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
 
-## 모바일 백엔드에 대한 요청 작성
+## 모바일 백엔드 애플리케이션에 대한 요청 작성
 {: #getting-started-request}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드 요청을 시작할 수 있습니다.
+{{site.data.keyword.amashort}} 클라이언트 SDK가 설치되고 나면 모바일 백엔드 애플리케이션에 대한 요청 작성을 시작할 수 있습니다. 
 
 1. 요청을 새 모바일 백엔드의 보호 엔드포인트로 전송하십시오. 브라우저에서 URL `{applicationRoute}/protected`를 여십시오. 예를 들면 다음과 같습니다. 
 

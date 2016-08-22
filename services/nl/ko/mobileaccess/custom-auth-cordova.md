@@ -5,14 +5,19 @@ copyright:
 
 ---
 
-# Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
+# {{site.data.keyword.amashort}} Cordova 앱용 사용자 정의 인증 구성
 {: #custom-cordova}
+
+*마지막 업데이트 날짜: 2016년 7월 17일*
+{: .last-updated}
+
+
 사용자 정의 인증을 사용하는 Cordova 애플리케이션이 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하고 애플리케이션을 {{site.data.keyword.Bluemix}}에 연결하도록 구성하십시오.
 
 
 ## 시작하기 전에
 {: #before-you-begin}
-사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스의 보호를 받는 자원이 있어야 합니다. 또한 모바일 앱이 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되어야 합니다. 자세한 정보는 다음 내용을 참조하십시오. 
+사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스의 보호를 받는 리소스가 있어야 합니다. 또한 모바일 앱이 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되어야 합니다. 자세한 정보는 다음 내용을 참조하십시오. 
  * [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Cordova SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
  * [사용자 정의 ID 제공자 사용](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -30,7 +35,7 @@ SDK를 초기화하려면 applicationGUID 및 applicationRoute 매개변수를 �
 	BMSClient.initialize(applicationRoute, applicationGUID);
 
 	```
- *applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션의 **모바일 옵션** 패널에 있는 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
+*applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션의 **모바일 옵션** 패널에 있는 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
 
 ## 인증 리스너 인터페이스
 {: #custom-cordva-auth}
@@ -126,7 +131,7 @@ var customAuthenticationListener = {
 ## 사용자 정의 인증 리스너 등록
 {: #custom-cordova-authreg}
 
-사용자 정의 인증 리스너를 작성한 후 리스너를 사용하기 전에 `BMSClient`에 등록하십시오. 애플리케이션에 다음 코드를 추가하십시오. 보호된 자원에 대한 요청을 전송하기 전에 다음 코드를 호출하십시오. 
+사용자 정의 인증 리스너를 작성한 후 리스너를 사용하기 전에 `BMSClient`에 등록하십시오. 애플리케이션에 다음 코드를 추가하십시오. 보호된 리소스에 대한 요청을 전송하기 전에 다음 코드를 호출하십시오. 
 
 ```Java
 BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener);
@@ -140,7 +145,7 @@ BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener
 
 ### 시작하기 전에
 {: #custom-cordova-testing-before}
-{{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받는 자원이 있어야 합니다. 
+{{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받는 리소스가 있어야 합니다. 
 
 
 1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송하십시오.

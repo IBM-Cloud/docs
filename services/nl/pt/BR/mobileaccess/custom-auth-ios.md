@@ -5,8 +5,12 @@ copyright:
 
 ---
 
-# Configurando o {{site.data.keyword.amashort}} client SDK para iOS
+# Configurando o SDK do cliente {{site.data.keyword.amashort}} para iOS (Objective-C)
 {: #custom-ios}
+
+*Última atualização: 18 de julho de 2016*
+{: .last-updated}
+
 
 Configure seu aplicativo iOS que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
 
@@ -38,7 +42,7 @@ Use o gerenciador de dependência CocoaPods para instalar o {{site.data.keyword.
 1. Na linha de comandos, execute `pod install`.
 O CocoaPods instala as dependências incluídas. O progresso e quais componentes foram incluídos são exibidos.
 
-**Importante**: deve-se agora abrir o projeto usando um arquivo xcworkspace que foi gerado por CocoaPods. Normalmente, o nome é `{your-project-name}.xcworkspace`.
+    **Importante**: deve-se agora abrir o projeto usando um arquivo xcworkspace que foi gerado por CocoaPods. Normalmente, o nome é `{your-project-name}.xcworkspace`.
 
 1. Execute `open {your-project-name}.xcworkspace` a partir da linha de comandos para abrir sua área de trabalho do projeto iOS.
 
@@ -268,7 +272,7 @@ Depois de inicializar o client SDK e registrar um `IMFAuthenticationDelegate` cu
  Deve-se ter um aplicativo que foi criado com o modelo do {{site.data.keyword.mobilefirstbp}} e ter um recurso que esteja protegido por {{site.data.keyword.amashort}} no terminal `/protected`.
 
 1. Envie uma solicitação para o terminal protegido do aplicativo backend móvel em seu navegador abrindo `{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`.
- O terminal `/protected` de um aplicativo backend móvel criado com o modelo {{site.data.keyword.mobilefirstbp}} está protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
+  O terminal `/protected` de um aplicativo backend móvel criado com o modelo {{site.data.keyword.mobilefirstbp}} está protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 1. Use seu aplicativo iOS para fazer solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient` e registrar seu `IMFAuthenticationDelegate` customizado:
 
 	Objective-C:

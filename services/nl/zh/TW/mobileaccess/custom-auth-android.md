@@ -5,9 +5,14 @@ copyright:
 
 ---
 
-# 配置適用於 Android 的 {{site.data.keyword.amashort}} 用戶端 SDK
+# 配置適用於 {{site.data.keyword.amashort}} Android 應用程式的自訂鑑別
 {: #custom-android}
-配置 Android 應用程式，這個應用程式利用自訂鑑別來使用 {{site.data.keyword.amashort}} 用戶端 SDK，並將您的應用程式連接至 {{site.data.keyword.Bluemix}}。
+
+*前次更新：2016 年 7 月 17 日*
+{: .last-updated}
+
+
+配置 Android 應用程式搭配自訂鑑別來使用 {{site.data.keyword.amashort}} 用戶端 SDK，並將您的應用程式連接至 {{site.data.keyword.Bluemix}}。
 
 ## 開始之前
 {: #before-you-begin}
@@ -21,10 +26,9 @@ copyright:
 
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #custom-android-initialize}
-1. 在 Android Studio 的 Android 專案中，開啟應用程式模組的 `build.gradle` 檔案。
-<br/>**提示：**Android 專案可能會有兩個 `build.gradle` 檔案，分別用於專案和應用程式模組。請使用應用程式模組的檔案。
+1. 在 Android Studio 的 Android 專案中，開啟應用程式模組的 `build.gradle` 檔案（不是專案 `build.gradle`）。
 
-1. 在 `build.gradle` 檔案中，尋找 `dependencies` 區段，並檢查下列編譯相依關係。請新增這個相依關係（如果尚未存在）。
+1. 在 `build.gradle` 檔案中，尋找 `dependencies` 區段，並檢查下列相依關係是否存在。
 
 	```Gradle
 	dependencies {
@@ -51,17 +55,20 @@ copyright:
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");					
-	```
+					"applicationGUID",
+					BMSClient.REGION_UK);
+```
+將 `BMSClient.REGION_UK` 取代為適當的地區。
+	
 
 ## AuthenticationListener 介面
 {: #custom-android-authlistener}
 
-{{site.data.keyword.amashort}} 用戶端 SDK 提供 `AuthenticationListener` 介面，讓您可以實作自訂鑑別流程。`AuthenticationListener` 介面公開在鑑別處理程序不同階段所呼叫的三種方法。
+{{site.data.keyword.amashort}} 用戶端 SDK 提供 `AuthenticationListener` 介面，讓您可以實作自訂鑑別流程。`AuthenticationListener` 介面會公開在鑑別處理期間於不同階段所呼叫的三個方法。
 
 ### onAuthenticationChallengeReceived 方法
 {: #custom-onAuth}
-從 {{site.data.keyword.amashort}} 服務接收自訂鑑別盤查時，會呼叫此方法。
+從 {{site.data.keyword.amashort}} 服務收到自訂鑑別盤查時，會呼叫此方法。
 
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
@@ -73,11 +80,11 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 * `JSONObject`：包含自訂身分提供者所傳回的自訂鑑別盤查。
 * `Context`：傳送要求時所使用的「Android 環境定義」的參照。此引數通常代表「Android 活動」。
 
-透過呼叫 `onAuthenticationChallengeReceived` 方法，{{site.data.keyword.amashort}} 用戶端 SDK 會將控制權委派給開發人員。服務會等待認證。開發人員必須收集認證，並使用其中一種 `AuthenticationContext` 介面方法將它們回報給 {{site.data.keyword.amashort}} 用戶端 SDK。
+透過呼叫 `onAuthenticationChallengeReceived` 方法，{{site.data.keyword.amashort}} 用戶端 SDK 會將控制權委派給開發人員。服務會等待認證。開發人員必須收集認證，並使用其中一個 `AuthenticationContext` 介面方法，將它們回報給 {{site.data.keyword.amashort}} 用戶端 SDK。
 
 ### onAuthenticationSuccess 方法
 {: #custom-android-authlistener-onsuccess}
-在成功鑑別之後，會呼叫此方法。引數包括「Android 環境定義」以及內含鑑別成功延伸資訊的選用 JSONObject。
+在成功鑑別之後，會呼叫此方法。引數包括「Android 環境定義」以及選用性的 JSONObject，其中包含鑑別成功的延伸資訊。
 
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
@@ -85,7 +92,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 
 ### onAuthenticationFailure 方法
 {: #custom-android-authlistener-onfail}
-在鑑別失敗之後，會呼叫此方法。引數包括「Android 環境定義」以及內含鑑別失敗延伸資訊的選用 JSONObject。
+在鑑別失敗之後，會呼叫此方法。引數包括「Android 環境定義」以及選用性的 JSONObject，其中包含鑑別失敗的延伸資訊。
 
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
@@ -94,7 +101,7 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ## AuthenticationContext 介面
 {: #custom-android-authcontext}
 
-`AuthenticationContext` 提供作為自訂 `AuthenticationListener` 的 `onAuthenticationChallengeReceived` 方法的引數。您必須收集認證，並使用 `AuthenticationContext` 方法將認證傳回給 {{site.data.keyword.amashort}} 用戶端 SDK 或報告失敗。請使用下列其中一種方法。
+`AuthenticationContext` 提供作為自訂 `AuthenticationListener` 的 `onAuthenticationChallengeReceived` 方法的引數。您必須收集認證，並使用 `AuthenticationContext` 方法將認證傳回給 {{site.data.keyword.amashort}} 用戶端 SDK 或報告失敗。請使用下列其中一個方法。
 
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
@@ -177,14 +184,14 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 
 ## 測試鑑別
 {: #custom-android-testing}
-起始設定用戶端 SDK 並登錄自訂 AuthenticationListener 之後，即可開始對行動後端提出要求。
+起始設定用戶端 SDK 並登錄自訂 AuthenticationListener 之後，即可開始對行動後端應用程式提出要求。
 
 ### 開始之前
 {: #custom-android-testing-before}
 您必須具有使用 {{site.data.keyword.mobilefirstbp}} 樣板所建立的應用程式，並在 `/protected` 端點具有 {{site.data.keyword.amashort}} 所保護的資源。
 
 
-1. 開啟 `{applicationRoute}/protected`（例如 `http://my-mobile-backend.mybluemix.net/protected`），以在瀏覽器中將要求傳送給行動後端應用程式的受保護端點。
+1. 從瀏覽器中將要求傳送至行動後端應用程式的受保護端點 (`{applicationRoute}/protected`)，例如 `http://my-mobile-backend.mybluemix.net/protected`。
 
 1. 使用 {{site.data.keyword.mobilefirstbp}} 樣板所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。因此，會在瀏覽器中顯示 `Unauthorized` 訊息。
 
@@ -213,13 +220,14 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 
 1. 	當要求成功時，LogCat 工具中會有下列輸出：
 
-![影像](images/android-custom-login-success.png)
+	![影像](images/android-custom-login-success.png)
 
  您也可以新增下列程式碼，來新增登出功能：
 
-```Java
+ ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- 如果您在使用者登入之後呼叫此程式碼，則會將使用者登出。使用者嘗試再次登入時，必須再次回答接收自伺服器的盤查。
-傳遞給 logout 函數的 `listener` 值可以是 `null`。
+ 如果您在使用者登入之後呼叫此程式碼，則會將使用者登出。使用者嘗試再次登入時，必須再次回答從伺服器收到的盤查。
+
+ 傳遞給 logout 函數的 `listener` 值可以是 `null`。

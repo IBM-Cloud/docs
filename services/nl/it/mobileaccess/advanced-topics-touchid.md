@@ -8,9 +8,12 @@ copyright:
 # Protezione dell'autorizzazione con Touch ID
 {: #before-you-begin}
 
+*Ultimo aggiornamento: 22 giugno 2016*
+{: .last-updated}
+
 Touch ID è una funzione di riconoscimento delle impronte digitali per i dispositivi iOS. Puoi utilizzare Touch ID per proteggere automaticamente le informazioni di autorizzazione per un uso futuro. 
 
-Touch ID è disponibile solo dall'SDK Objective-C  {{site.data.keyword.amashort}}.
+**Nota:** Touch ID è disponibile solo dall'SDK Objective-C  {{site.data.keyword.amashort}}.
 
 Per configurare la complessità della sicurezza, imposta una delle seguenti politiche di persistenza con il metodo `IMFAuthorizationManager.setAuthorizationPersistencePolicy()`.
 

@@ -11,34 +11,31 @@ copyright:
 # Facebook-Authentifizierung für Android-Apps aktivieren
 {: #facebook-auth-android}
 
-*Letzte Aktualisierung: 15. Juni 2016*
+*Letzte Aktualisierung: 05. Juli 2016*
 {: .last-updated}
 
 
-Wenn Sie Facebook als Identitätsprovider in Ihren Android-Anwendungen verwenden möchten, müssen Sie die Android-Plattform für Ihre Facebook-Anwendung hinzufügen und konfigurieren.
+Wenn Sie Facebook als Identitätsprovider in Ihren Android-Anwendungen verwenden möchten, müssen Sie die Android-Plattform für Ihre Facebook-Anwendung auf der Site 'Facebook for Developers' hinzufügen und konfigurieren.
 {:shortdesc}
 
 ## Vorbereitungen
 {: #facebook-auth-android-before}
 Voraussetzungen:
 * Android-Projekt, das für das Arbeiten mit Gradle konfiguriert ist. Das Projekt muss nicht mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
+* Eine Facebook-App mit einer Android-Plattform auf der Site 'Facebook for Developers' (https://developers.facebook.com).
 
-* Facebook-Anwendungs-ID. Weitere Informationen finden Sie in [Facebook-Anwendungs-ID vom Facebook-Entwicklerportal anfordern](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
-
-**Wichtig:** Sie müssen das Facebook-SDK (`com.facebook.FacebookSdk`) nicht separat installieren. Das Facebook-SDK wird automatisch von Gradle installiert, wenn Sie das {{site.data.keyword.amashort}}-Facebook-Client-SDK hinzufügen. Sie können den Schritt zum Hinzufügen des Facebook-SDK zum Projekt (**Add Facebook SDK to Your Project**) im Facebook-Entwicklerportal (Facebook Developer Portal) überspringen.
+**Wichtig:** Sie müssen das Facebook-SDK (`com.facebook.FacebookSdk`) nicht separat installieren. Das Facebook-SDK wird automatisch von Gradle installiert, wenn Sie das {{site.data.keyword.amashort}}-Facebook-Client-SDK hinzufügen. Sie können diesen Schritt überspringen, wenn Sie die Android-Plattform auf der Site 'Facebook for Developers' hinzufügen.
 
 ## Facebook-Anwendung für die Android-Plattform konfigurieren
 {: #facebook-auth-android-config}
-Zur Verwendung von Facebook als Identitätsprovider in Ihren Android-Anwendungen müssen Sie die Android-Plattform für Ihre Facebook-Anwendung hinzufügen und konfigurieren.
+Führen Sie die folgenden Schritte auf der Site 'Facebook for Developers' (https://developers.facebook.com) aus:
 
-1. Öffnen Sie Ihre Facebook-Anwendung im Facebook-Entwicklerportal (Facebook Developer Portal).
+1. Melden Sie sich auf der Site 'Facebook for Developers' bei Ihrem Konto an. 
+2. Fügen Sie die Android-Plattform hinzu oder konfigurieren Sie diese. Dort erhalten Sie weitere Details für die folgenden Schritte. 
+1. Geben Sie den Paketnamen Ihrer Android-Anwendung in der Eingabeaufforderung für 'Google Play Package Name' an. Zur Ermittlung des Paketnamens Ihrer Android-Anwendung suchen Sie nach `<manifest ..... package="{your-package-name}">` in der Datei `AndroidManifest.xml` im Android Studio-Projekt. 
 
-1. Klicken Sie auf **Settings &gt; Add Platform &gt; Android**.
-
-1. Geben Sie den Paketnamen Ihrer Android-Anwendung in die Eingabeaufforderung für 'Google Play Package Name'. Zur Ermittlung des Paketnamens Ihrer Android-Anwendung öffnen Sie die Dateien `AndroidManifest.xml` in Android Studio und suchen nach `<manifest ..... package="{your-package-name}">`.
-
-1. Geben Sie den Klassennamen Ihrer Hauptaktivität (Main) in der Eingabeaufforderung **Class Name** an. Zur Ermittlung des Namens der Hauptaktivitätsklasse Ihrer Android-Anwendung öffnen Sie die Datei `AndroidManifest.xml` und such nach der Aktivitätsdeklaration mit einem Intent-Filter ähnlich wie im folgenden Code-Snippet:
+1. Geben Sie den Klassennamen Ihrer Hauptaktivität (Main) in der Eingabeaufforderung **Class Name** an. Der Klassenname ist der Wert der Eigenschaft `android:name` im Abschnitt 'activity'. Sind in der Datei `AndroidManifest.xml` mehrere Aktivitäten angegeben, suchen Sie nach der Aktivität, die den Eintrag `<intent-filter>` enthält:
 
 	```XML
 	<activity
@@ -54,7 +51,7 @@ Zur Verwendung von Facebook als Identitätsprovider in Ihren Android-Anwendungen
 1. Damit Facebook Ihre Anwendungsauthentizität sicherstellt, müssen Sie einen Hashwert Ihres Entwicklerzertifikats SHA1 angeben.
 
 	**Weitere Informationen zur Android-Sicherheit:** Das Android-Betriebssystem erfordert, dass alle Anwendungen, die auf einem Android-Gerät installiert sind, mit einem Entwicklerzertifikat signiert sind. Die Android-Anwendung kann in zwei Modi erstellt werden: Debugmodus und Freigabemodus (Release). <br/>
-  Verwenden Sie verschiedene Zertifikate für den Debugmodus und den Freigabemodus.  Zertifikate, die zum Signieren von Android-Anwendungen im Debugmodus verwendet werden, werden in das Android-SDK gepackt, das von Android Studio in der Regel automatisch installiert wird. Wenn Sie Ihre App für den Google Play-Store freigeben möchten, müssen Sie Ihre App mit einem anderen Zertifikat signieren, das Sie normalerweise selbst generieren. <br/>Sie können zwei Gruppen von Schlüsselhashwerten mit Facebook eingeben: ein Schlüsselhashwert für Anwendungen, die mit einem Debugzertifikat im Debugmodus erstellt werden, und ein weiterer Schlüsselhashwert für Anwendungen, die mit einem Freigabezertifikat im Freigabemodus erstellt werden. Weitere Informationen finden Sie unter [Android-Anwendungen signieren](http://developer.android.com/tools/publishing/app-signing.html).
+  Verwenden Sie verschiedene Zertifikate für den Debugmodus und den Freigabemodus.  Zertifikate, die zum Signieren von Android-Anwendungen im Debugmodus verwendet werden, werden in das Android-SDK gepackt, das von Android Studio in der Regel automatisch installiert wird. Wenn Sie Ihre App für den Google Play-Store freigeben möchten, müssen Sie Ihre App mit einem anderen Zertifikat signieren, das Sie normalerweise selbst generieren. <br/>Sie können zwei Gruppen von Schlüsselhashwerten mit Facebook eingeben: einen Schlüsselhashwert für Anwendungen, die mit einem Debugzertifikat im Debugmodus erstellt werden, und einen weiteren Schlüsselhashwert für Anwendungen, die mit einem Freigabezertifikat im Freigabemodus erstellt werden. Weitere Informationen finden Sie unter [Android-Anwendungen signieren](http://developer.android.com/tools/publishing/app-signing.html).
 
 1. Der Keystore (Schlüsselspeicher), der das Zertifikat enthält, das Sie für die Entwicklungsumgebung verwenden, wird in der Datei `~/.android/debug.keystore` gespeichert. Das Standardkennwort für den Keystore ist: `android`. Verwenden Sie dieses Zertifikat zum Erstellen von Anwendungen im Debugmodus.
 
@@ -66,7 +63,7 @@ Zur Verwendung von Facebook als Identitätsprovider in Ihren Android-Anwendungen
 
 	**Tipp**: Mit derselben Syntax können Sie auch den Schlüsselhashwert Ihres Freigabemoduszertifikats abrufen. Ersetzen Sie in dem Befehl den Alias- und den Keystorepfad entsprechend.
 
-1. Kopieren Sie den Schlüsselhashwert, den Sie mit dem Befehl **keytool** abgerufen haben, und fügen Sie ihn in eine Eingabeaufforderung 'Development/Release Key Hashes' im Facebook-Entwicklerportal ein.
+1. Kopieren Sie den Schlüsselhashwert, den Sie mit dem Befehl **keytool** abgerufen haben, und fügen Sie ihn in eine Eingabeaufforderung 'Development/Release Key Hashes' auf der Site 'Facebook for Developers' ein.
 
 	**Tipp**: Wenn Sie planen, dieses Feature zu verwenden, sollten Sie in Betracht ziehen, die Single-Sign-on-Funktion zu aktivieren.
 
@@ -74,7 +71,7 @@ Zur Verwendung von Facebook als Identitätsprovider in Ihren Android-Anwendungen
 
 ## {{site.data.keyword.amashort}} für die Facebook-Authentifizierung konfigurieren
 {: #facebook-auth-android-mca}
-Nachdem Sie über eine Facebook-Anwendungs-ID verfügen und Ihre Facebook-Anwendung zur Bedienung von Android-Clients konfiguriert haben, können Sie die Facebook-Authentifizierung im Dashboard von {{site.data.keyword.amashort}} aktivieren.
+Nachdem Sie über eine Facebook-Anwendungs-ID verfügen und Ihre Facebook-Anwendung zur Bedienung von Android-Clients konfiguriert haben, können Sie die Facebook-Authentifizierung im {{site.data.keyword.amashort}}-Dashboard aktivieren. 
 
 1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard.
 
@@ -82,7 +79,7 @@ Nachdem Sie über eine Facebook-Anwendungs-ID verfügen und Ihre Facebook-Anwend
 
 1. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
 
-1. Klicken Sie auf die Kachel **Facebook**.
+1. Klicken Sie auf die Schaltfläche **Konfigurieren** in der Anzeige **Facebook**. 
 
 1. Geben Sie die Facebook-Anwendungs-ID an und klicken Sie auf **Speichern**.
 
@@ -97,12 +94,12 @@ Ihr Android-Projekt enthält möglicherweise zwei Dateien `build.gradle`: eine f
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
         name:'facebookauthentication',
         version: '2.+',
         ext: 'aar',
         transitive: true
-    	// weitere Abhängigkeiten  
+    	// andere Abhängigkeiten
 	}
 ```
 
@@ -113,7 +110,7 @@ Ihr Android-Projekt enthält möglicherweise zwei Dateien `build.gradle`: eine f
 
 1. Synchronisieren Sie Ihr Projekt mit Gradle. Klicken Sie auf **Tools > Android > Sync project with Gradle Files**.
 
-1. Öffnen Sie die Datei `res/values/strings.xml` und fügen Sie eine Zeichenfolge `facebook_app_id` hinzu, die Ihre Facebook-Anwendungs-ID enthält:
+1. Öffnen Sie die Datei `res/values/strings.xml` und fügen Sie eine Zeichenfolge `facebook_app_id` hinzu, die Ihre Facebook-Anwendungs-ID enthält: 
 
 	```XML
 	<resources>
@@ -129,7 +126,7 @@ Ihr Android-Projekt enthält möglicherweise zwei Dateien `build.gradle`: eine f
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
-  2. Fügen Sie die erforderlichen Metadaten für das Facebook-SDK dem Element `<application>` hinzu:
+  2. Fügen Sie die erforderlichen Metadaten für das Facebook-SDK dem Element `<application>` hinzu: 
 
 	```XML
 	<application .......>
@@ -166,11 +163,14 @@ Ihr Android-Projekt enthält möglicherweise zwei Dateien `build.gradle`: eine f
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");
+					"applicationGUID",
+					BMSClient.REGION_UK);
 
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
-
+,
+					
+Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region. 
 
 1. Fügen Sie Ihrer Aktivität den folgenden Code hinzu:
 
@@ -190,10 +190,10 @@ Nach der Initialisierung des Client-SDK und der Registrierung des Facebook-Authe
 {: #facebook-auth-android-testing-before}
 Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und bereits eine durch {{site.data.keyword.amashort}} geschützte Ressource am Endpunkt `/protected` haben. Wenn Sie einen Endpunkt `/protected` einrichten müssen, finden Sie weitere Informationen in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Versuchen Sie, in Ihrem Browser eine Anforderung an den geschützten Endpunkt Ihres neu erstellten mobilen Back-Ends zu senden. Öffnen Sie die folgende URL: `{applicationRoute}/protected`. Beispiel: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>Der Endpunkt `/protected` eines mobilen Back-Ends, der mit der MobileFirst Services Starter-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Eine Nachricht `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben. Diese Nachricht wird deshalb zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen können, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
+1. Versuchen Sie, in Ihrem Browser eine Anforderung an einen geschützten Endpunkt Ihrer neu erstellten mobilen Back-End-Anwendung zu senden. Öffnen Sie die folgende URL: `{applicationRoute}/protected`. Beispiel: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der MobileFirst Services Starter-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Eine Nachricht `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben. Diese Nachricht wird deshalb zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen können, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
 
-1. Verwenden Sie Ihre Android-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert und `FacebookAuthenticationManager` registriert haben.
+1. Senden Sie eine Anforderung über Ihre Android-Anwendung an denselben Endpunkt. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert und `FacebookAuthenticationManager` registriert haben.
 
 	```Java
 	Request request = new Request("/protected", Request.GET);

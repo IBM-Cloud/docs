@@ -7,18 +7,23 @@ copyright:
 
 # 使用定制身份提供者认证用户
 {: #custom-id}
-您可以创建定制身份提供者，并实现自己的逻辑来收集和验证凭证。定制身份提供者是一种用于公开 RESTful 接口的 Web 应用程序。可以在内部部署或 {{site.data.keyword.Bluemix}} 上托管定制身份提供者。唯一的要求是定制身份提供者必须可从公共因特网进行访问，以便其能与 {{site.data.keyword.amashort}} 服务进行通信。
 
-## {{site.data.keyword.amashort}} 概述
+*上次更新时间：2016 年 7 月 7 日*
+{: .last-updated}
+
+
+创建定制身份提供者，并实现自己的逻辑来收集和验证凭证。定制身份提供者是一种用于公开 RESTful 接口的 Web 应用程序。可以在内部部署或 {{site.data.keyword.Bluemix}} 上托管定制身份提供者。唯一的要求是定制身份提供者必须可从公共因特网进行访问，以便其能与 {{site.data.keyword.amashort}} 服务进行通信。
+
+## {{site.data.keyword.amashort}} 定制身份提供者概述
 {: #custom-id-ovr}
-下图演示了 {{site.data.keyword.amashort}} 如何与定制身份提供者进行集成。
+下图演示了 {{site.data.keyword.amashort}} 如何集成定制身份提供者。
 
 ![图像](images/mca-sequence-custom.jpg)
 
 1. 使用 {{site.data.keyword.amashort}} SDK 对受 {{site.data.keyword.amashort}} 服务器 SDK 保护的后端资源发起请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 检测到未授权的请求，然后返回 HTTP 401 和授权作用域。
 * {{site.data.keyword.amashort}} 客户端 SDK 自动检测到上述 HTTP 401，然后启动认证过程。
-* {{site.data.keyword.amashort}} 客户端 SDK 访问 {{site.data.keyword.amashort}} 服务，并要求发出 Authorization 头。
+* {{site.data.keyword.amashort}} 客户端 SDK 访问 {{site.data.keyword.amashort}} 服务，并请求 Authorization 头。
 * {{site.data.keyword.amashort}} 服务与定制身份提供者进行通信，以启动认证过程。
 * 定制身份提供者向 {{site.data.keyword.amashort}} 服务返回认证质询。
 * {{site.data.keyword.amashort}} 服务向 {{site.data.keyword.amashort}} 客户端 SDK 返回认证质询。
@@ -37,7 +42,7 @@ copyright:
 
 在创建定制身份提供者时，您可以执行以下操作：
 
-1. 定制要由 {{site.data.keyword.amashort}} 服务发送给移动客户端应用程序的认证质询。认证质询是包含任何定制数据的 JSON 对象。移动客户端可以使用此定制数据来定制认证流程。
+1. 定制要由 {{site.data.keyword.amashort}} 服务发送给移动或 Web 客户端应用程序的认证质询。认证质询是包含任何定制数据的 JSON 对象。客户端可以使用此定制数据来定制认证流程。
 
   定制认证质询示例：
 
@@ -52,9 +57,9 @@ copyright:
 	}
 	```
 
-1. 在移动客户端上实施任何定制凭证收集流程，包括多步认证和多形式认证。与定制认证质询类似，您必须设计定制认证质询回复的结构。
+1. 在客户端上实施任何定制凭证收集流程，包括多步认证和多形式认证。与定制认证质询类似，您必须设计定制认证质询回复的结构。
 
-  移动客户端发送的定制认证质询回复的示例：
+  客户端发送的定制认证质询回复的示例：
 
 	```JavaScript
 	{
@@ -65,7 +70,7 @@ copyright:
 	```
 1. 实现用于验证所提供认证质询回复的定制逻辑。
 
-1. 定义包含任何所需定制属性的定制用户身份对象。下面是成功认证后，移动客户端获取的定制用户身份对象的示例：
+1. 定义包含任何所需定制属性的定制用户身份对象。下面是成功认证后，客户端获取的定制用户身份对象的示例：
 
 	```JavaScript
 	{
@@ -88,9 +93,10 @@ copyright:
 
 ## {{site.data.keyword.amashort}} 服务器与定制身份提供者之间的典型通信
 {: #custom-id-comm}
+
 1. {{site.data.keyword.amashort}} 服务向定制身份提供者发送 `startAuthorization` 请求。
 1. 定制身份提供者使用要发送到客户端的定制认证质询进行响应。
-1. {{site.data.keyword.amashort}} 服务将接收自定制身份提供者的定制认证质询发送到移动客户端，并且最终接收来自移动客户端的认证质询回复。
+1. {{site.data.keyword.amashort}} 服务将接收自定制身份提供者的定制认证质询发送到客户端，并且最终接收来自客户端的认证质询回复。
 1. {{site.data.keyword.amashort}} 服务将包含认证质询回复的 `handleChallengeAnswer` 请求发送到定制身份提供者。
 1. 定制身份提供者验证认证质询回复，并使用包含用户身份信息的 success 应答进行响应。
 1. （可选）定制身份提供者从客户端收到质询回复后，可能会提供更多质询。通过发送多个质询，可支持多步认证过程。
@@ -102,7 +108,7 @@ copyright:
 ## 定制域
 {: #custom-id-custom}
 
-一个定制身份提供者支持一个定制认证域。要处理传入认证质询，请在移动客户端应用程序中创建并注册 `AuthenticationDelegate` / 	`AuthenticationListener` 的一个实例。在 {{site.data.keyword.amashort}}“仪表板”中配置定制身份提供者时，定义定制认证域名。此域名可用于确定请求是从特定 {{site.data.keyword.amashort}} 服务实例传入的。
+一个定制身份提供者支持一个定制认证域。要处理传入认证质询，请在客户端应用程序中创建并注册 `AuthenticationDelegate`/	`AuthenticationListener` 的一个实例。在 {{site.data.keyword.amashort}}“仪表板”中配置定制身份提供者时，定义定制认证域名。域会识别传入请求的特定 {{site.data.keyword.amashort}} 服务实例。
 
 ## 后续步骤
 {: #next-steps}

@@ -99,14 +99,16 @@ Remplacez *applicationRoute* et *applicationGUID* par les valeurs de **Route** e
 
 ## Test de l'authentification
 {: #facebook-auth-cordova-test}
-Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des demandes à votre back end mobile.
+Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des requêtes à
+votre application back end mobile.
 
 ### Avant de commencer
 Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et disposer au préalable d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Depuis votre navigateur, tentez d'envoyer une demande à un noeud final protégé de votre nouveau système de back end mobile. Ouvrez l'URL suivante :
+1. Essayez d'envoyer depuis votre navigateur une requête à un noeud final protégé de votre nouvelle application back end mobile. Ouvrez l'URL suivante :
 `{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
-<br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message signalant l'interdiction d'accéder au site (`Unauthorized`) est renvoyé au navigateur. Ce message est renvoyé car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
+<br/>Le noeud final `/protected` d'une application back end mobile créée avec le conteneur boilerplate MobileFirst Services Starter est
+protégée par {{site.data.keyword.amashort}}. Un message signalant l'interdiction d'accéder au site (`Unauthorized`) est renvoyé au navigateur. Ce message est renvoyé car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
 
 1. A l'aide de votre application Cordova, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
 
@@ -114,8 +116,8 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 	var success = function(data){
     	console.log("success", data);
     }
-	var failure = function(error)
-    	{console.log("failure", error);
+	var failure = function(error){
+    	console.log("failure", error);
     }
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 	request.send(success, failure);

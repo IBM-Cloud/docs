@@ -11,33 +11,31 @@ copyright:
 # 启用 Android 应用程序的 Facebook 认证
 {: #facebook-auth-android}
 
-*上次更新时间：2016 年 6 月 15 日*
+*上次更新时间：2016 年 7 月 5 日*
 {: .last-updated}
 
 
-要在 Android 应用程序中将 Facebook 用作身份提供者，请为 Facebook 应用程序添加并配置 Android 平台。
+要在 Android 应用程序中将 Facebook 用作身份提供者，请在 Facebook for Developers 站点上，为 Facebook 应用程序添加并配置 Android 平台。
 {:shortdesc}
 
 ## 开始之前
 {: #facebook-auth-android-before}
 您必须具有：
 * 配置为使用 Gradle 的 Android 项目。该项目不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。  
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
-* Facebook 应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
+* Facebook for Developers 站点 (https://developers.facebook.com) 上具有 Android 平台的 Facebook 应用程序。
 
-**重要信息**：您无需单独安装 Facebook SDK (`com.facebook.FacebookSdk`)。添加 {{site.data.keyword.amashort}} Facebook 客户端 SDK 时，Gradle 会自动安装 Facebook SDK。您可以跳过 Facebook 开发者门户网站中的**添加 Facebook SDK 到项目**步骤。
+**重要信息**：您无需单独安装 Facebook SDK (`com.facebook.FacebookSdk`)。添加 {{site.data.keyword.amashort}} Facebook 客户端 SDK 时，Gradle 会自动安装 Facebook SDK。在 Facebook for Developers 站点中添加 Android 平台时，可以跳过此步骤。
 
 ## 针对 Android 平台配置 Facebook 应用程序
 {: #facebook-auth-android-config}
-要在 Android 应用程序中将 Facebook 用作身份提供者，必须为 Facebook 应用程序添加并配置 Android 平台。
+从 Facebook for Developers 站点 (https://developers.facebook.com) 上：
 
-1. 在 Facebook 开发者门户网站中打开 Facebook 应用程序。
+1. 在 Facebook for Developers 站点上登录到您的帐户。
+2. 添加或配置 Android 平台。那里会提供以下步骤的更多详细信息。
+1. 在“Google Play 软件包名称”提示中，指定 Android 应用程序的软件包名称。要找到 Android 应用程序的软件包名称，请在 Android Studio 项目的 `AndroidManifest.xml` 文件中，查找 `<manifest ..... package="{your-package-name}">`。
 
-1. 单击**设置 &gt; 添加平台 &gt; Android**。
-
-1. 在“Google Play 软件包名称”提示中，指定 Android 应用程序的软件包名称。要找到 Android 应用程序的软件包名称，请在 Android Studio 中打开 `AndroidManifest.xml` 文件，然后查找 `<manifest ..... package="{your-package-name}">`。
-
-1. 在**类名**提示中，指定主 Activity 的类名。要找到 Android 应用程序的主 Activity 类名，请打开 `AndroidManifest.xml` 文件，然后使用类似于以下代码片段的意向过滤器来查找 Activity 声明：
+1. 在**类名**提示中，指定主 Activity 的类名。类名是活动箱中 `android:name` 属性的值。如果在 `AndroidManifest.xml` 文件中存在多个活动，请查找包含 `<intent-filter>` 的活动：
 
 	```XML
 	<activity
@@ -65,7 +63,7 @@ copyright:
 
 	**提示**：可以使用相同的语法来检索发布方式证书的密钥散列。请替换命令中的别名和密钥库路径。
 
-1. 复制使用 **keytool** 命令获取的密钥散列，并将其粘贴到 Facebook 开发者门户网站中的“开发/发布密钥散列”提示中。
+1. 复制使用 **keytool** 命令获取的密钥散列，并将其粘贴到 Facebook for Developers 站点中的“开发/发布密钥散列”提示中。
 
 	**提示**：如果计划使用单点登录，请考虑启用此功能。
 
@@ -73,7 +71,7 @@ copyright:
 
 ## 配置 {{site.data.keyword.amashort}} 进行 Facebook 认证
 {: #facebook-auth-android-mca}
-已拥有 Facebook 应用程序标识并且将 Facebook 应用程序配置为向 Android 客户端提供服务后，可以在 {{site.data.keyword.amashort}}“仪表板”中启用 Facebook 认证。
+已拥有 Facebook 应用程序标识并且将 Facebook 应用程序配置为向 Android 客户端提供服务后，可以在 {{site.data.keyword.amashort}} 仪表板中启用 Facebook 认证。
 
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。
 
@@ -81,7 +79,7 @@ copyright:
 
 1. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
 
-1. 单击 **Facebook** 磁贴。
+1. 单击 **Facebook** 面板上的**配置**按钮。
 
 1. 指定 Facebook 应用程序标识，然后单击**保存**。
 
@@ -148,8 +146,7 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 	<application .....>
 		<activity ...../>
 		<activity ...../>
-
-		<activity 	android:name="com.facebook.FacebookActivity"
+	<activity 	android:name="com.facebook.FacebookActivity"
 					android:configChanges=
 						"keyboard|keyboardHidden|screenLayout|screenSize|orientation"
 					android:theme="@android:style/Theme.Translucent.NoTitleBar"
@@ -165,11 +162,14 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");
+					"applicationGUID",
+					BMSClient.REGION_UK);
 
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
-
+,
+					
+将 `BMSClient.REGION_UK` 替换为相应的区域。
 
 1. 将以下代码添加到您的 Activity：
 
@@ -187,10 +187,10 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 
 ### 开始之前
 {: #facebook-auth-android-testing-before}
-您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
-1. 尝试在浏览器中对新创建的移动后端的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
-<br/>使用 MobileFirst Services Starter 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
+1. 尝试在浏览器中对新创建的移动后端应用程序的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
+<br/>使用 MobileFirst Services Starter 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
 
 1. 使用 Android 应用程序对同一端点发起请求。初始化 `BMSClient` 并注册 `FacebookAuthenticationManager` 后，添加以下代码。
 

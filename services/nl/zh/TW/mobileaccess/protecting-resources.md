@@ -10,7 +10,7 @@ copyright:
 # 使用 {{site.data.keyword.amashort}} 服務保護後端資源
 {: #protecting-resources}
 
-*前次更新：2016 年 4 月 30 日*
+*前次更新：2016 年 7 月 17 日*
 {: .last-updated}
 
 
@@ -19,7 +19,7 @@ copyright:
 
 ## 開始之前
 {: #before-you-begin}
-開始之前，請確定您已建立 Node.js 服務。
+開始之前，請確定 Node.js 服務存在於 {{site.data.keyword.Bluemix_notm}} 後端應用程式中。
 
 
 ## 授權過濾器
@@ -29,7 +29,7 @@ copyright:
 {: #auth-header}
 送入要求中的授權標頭由三個部分組成：Bearer、Access Token 及 ID Token，這三個部分是以空格區隔。`Access Token` 是必要元件，而 `ID Token` 是選用元件。
 
-送入的授權標頭是由個別的授權過濾器進行處理。過濾器會驗證存取記號及 ID 記號簽章、到期日及結構完整性。通過驗證之後，會將安全環境定義物件新增至要求物件。您可以使用個別 API 來取得安全環境定義的參照。
+送入的授權標頭是由個別的授權過濾器進行處理。過濾器會驗證存取記號及 ID 記號簽章、到期日及結構完整性。通過驗證之後，會將安全環境定義物件新增至要求物件。您可以使用相關 API 來取得安全環境定義的參照。
 
 安全環境定義包含使用下列結構儲存的主題、使用者、裝置及應用程式資訊：
 ```JSON

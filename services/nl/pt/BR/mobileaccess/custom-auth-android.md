@@ -5,9 +5,15 @@ copyright:
 
 ---
 
-# Configurando o {{site.data.keyword.amashort}} client SDK para Android
+# Configurando a autenticação customizada para seu aplicativo {{site.data.keyword.amashort}} Android
 {: #custom-android}
-Configure seu aplicativo Android que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
+
+*Última atualização: 17 de julho de 2016*
+{: .last-updated}
+
+
+Configure seu aplicativo Android com a autenticação customizada para usar o SDK do cliente {{site.data.keyword.amashort}} e
+conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
 
 ## Antes de Começar
 {: #before-you-begin}
@@ -22,10 +28,10 @@ ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mo
 
 ## Inicializando o {{site.data.keyword.amashort}} client SDK
 {: #custom-android-initialize}
-1. Em seu projeto do Android em Android Studio, abra o arquivo `build.gradle` de seu módulo do app.
-<br/>**Dica:** o projeto do Android pode ter dois arquivos `build.gradle`: para o projeto e para o módulo do aplicativo. Use o arquivo do módulo do aplicativo.
+1. Em seu projeto Android no Android Studio, abra o arquivo `build.gradle` do seu módulo de aplicativo (não o projeto `build.gradle`).
 
-1. No arquivo `build.gradle`, localize a seção `dependencies` e verifique a dependência de compilação a seguir. Inclua essa dependência se ela ainda não estiver lá.
+1. No arquivo `build.gradle`, localize a seção `dependencies` e verifique se a dependência a
+seguir existe:
 
 	```Gradle
 	dependencies {
@@ -40,7 +46,7 @@ ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mo
 
 1. Sincronizar seu projeto com o Gradle. Clique em **Ferramentas > Android > Sincronizar projeto com arquivos Gradle**.
 
-1. Abra o arquivo `AndroidManifest.xml` de seu projeto do Android.
+1. Abra o arquivo `AndroidManifest.xml` de seu projeto Android.
 Inclua a permissão de acesso à Internet no elemento `<manifest>`:
 
 	```XML
@@ -57,13 +63,16 @@ clica em **Opções móveis** em seu app no painel
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");					
-	```
+					"applicationGUID",
+					BMSClient.REGION_UK);
+```
+Substitua o `BMSClient.REGION_UK` pela região apropriada.
+	
 
 ## Interface AuthenticationListener
 {: #custom-android-authlistener}
 
-O {{site.data.keyword.amashort}} client SDK fornece a interface `AuthenticationListener` para que seja possível implementar um fluxo de autenticação customizada. A interface `AuthenticationListener` expõe três métodos que são chamados em fases diferentes do processo de autenticação.
+O {{site.data.keyword.amashort}} client SDK fornece a interface `AuthenticationListener` para que seja possível implementar um fluxo de autenticação customizada. A interface `AuthenticationListener` expõe três métodos que são chamados em diferentes fases durante o processo de autenticação.
 
 ### Método onAuthenticationChallengeReceived
 {: #custom-onAuth}
@@ -182,14 +191,15 @@ Use o *realmName* especificado no painel do {{site.data.keyword.amashort}}.
 
 ## Testando a Autenticação
 {: #custom-android-testing}
-Depois que o client SDK é inicializado e um AuthenticationListener customizado é registrado, é possível começar a fazer solicitações para seu backend móvel.
+Depois que o client SDK é inicializado e um AuthenticationListener customizado é registrado, é possível começar a fazer solicitações para seu aplicativo backend móvel.
 
 ### Antes de Começar
 {: #custom-android-testing-before}
 Deve-se ter um aplicativo que foi criado com o modelo do {{site.data.keyword.mobilefirstbp}} e ter um recurso que esteja protegido por {{site.data.keyword.amashort}} no terminal `/protected`.
 
 
-1. Envie uma solicitação para o terminal protegido do aplicativo backend móvel em seu navegador abrindo `{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`.
+1. Envie uma solicitação ao terminal protegido (`{applicationRoute}/protected`) do seu aplicativo backend móvel a partir do
+navegador, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`.
 
 1. O terminal `/protected` de um aplicativo backend móvel criado com o modelo {{site.data.keyword.mobilefirstbp}} está protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 

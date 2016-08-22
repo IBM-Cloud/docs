@@ -7,13 +7,21 @@ copyright:
 
 # 启用 Cordova 应用程序的 Google 认证
 {: #google-auth-cordova}
-为了配置 Cordova 应用程序进行 Google 认证集成，必须使用 Cordova 应用程序的本机代码（例如，Java、Objective-C 或 Swift）进行更改。每个平台必须分别进行配置。在本机开发环境中使用本机代码进行更改，例如在 Android Studio 或 Xcode 中更改。
+
+*上次更新时间：2016 年 6 月 28 日*
+{: .last-updated}
+
+要配置 Cordova 应用程序进行 Google 认证集成，必须在 Cordova 应用程序的本机代码（即 Java、Objective-C 或 Swift）中进行更改。每个平台必须分别进行配置。在本机开发环境中使用本机代码进行更改，例如在 Android Studio 或 Xcode 中更改。
 
 ## 开始之前
 {: #before-you-begin}
 您必须具有：
 * 已安装 {{site.data.keyword.amashort}} 客户端 SDK 的 Cordova 项目。有关更多信息，请参阅[设置 Cordova 插件](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)。  
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
+
+
+
+
 * （可选）请熟悉以下部分：
    * [在 Android 应用程序中启用 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [在 iOS 应用程序中启用 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
@@ -28,7 +36,7 @@ copyright:
 * 配置 {{site.data.keyword.amashort}} 进行 Google 认证
 * 针对 Android 配置 {{site.data.keyword.amashort}} 客户端 SDK
 
-配置 Cordova 应用程序时的唯一差别在于，必须使用 JavaScript 代码（而不是 Java 代码）来初始化 {{site.data.keyword.amashort}} 客户端 SDK。`GoogleAuthenticationManager` API 仍必须使用本机代码进行注册。
+对于 Cordova 应用程序，请在 JavaScript 代码中（而不是 Java 代码）初始化 {{site.data.keyword.amashort}} 客户端 SDK。`GoogleAuthenticationManager` API 仍必须使用本机代码进行注册。
 
 ## 配置 iOS 平台
 {: #google-auth-cordova-ios}
@@ -56,13 +64,13 @@ copyright:
 
 1. 执行 [Start integrating Google+ into your iOS app](https://developers.google.com/+/mobile/ios/getting-started) 教程中的步骤 2，以将 Google+ iOS SDK 集成到 Xcode 项目中。
 
-继续执行[配置 iOS 平台进行 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)的**配置 iOS 项目进行 Google 认证**部分。使用本机代码注册 `IMFGoogleAuthenticationHandler`，如“`初始化 {{site.data.keyword.amashort}} 客户端 SDK`”部分中所述。无需使用本机代码初始化 `IMFClient`，这将在稍后使用 JavaScript 代码完成。
+继续执行[配置 iOS 平台进行 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)的**配置 iOS 项目进行 Google 认证**部分。使用本机代码注册 `IMFGoogleAuthenticationHandler`，如“`初始化 {{site.data.keyword.amashort}} 客户端 SDK`”部分中所述。请不要在本机代码中初始化 `IMFClient`（客户端在以下部分的 JavaScript 中初始化）。
 
-将以下行添加到应用程序代表的 `application:openURL:sourceApplication:annotation` 方法。此行将确保向所有 Cordova 插件通知相应事件。
+将以下行添加到应用程序代表的 `application:openURL:sourceApplication:annotation` 方法。这将确保向所有 Cordova 插件通知相应事件。
 
 ```
-[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
-      
+[[NSNotificationCenter defaultCenter] postNotification:
+[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
 ```
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
@@ -78,16 +86,16 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 
 ## 测试认证
 {: #google-auth-cordova-test}
-初始化客户端 SDK 后，可以开始对移动后端发起请求。
+初始化客户端 SDK 后，可以开始对移动后端应用程序发起请求。
 
 ### 开始之前
 {: #google-auth-cordova-testing-before}
-您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+必须在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的后端应用程序。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 
-1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端的受保护端点发送请求
+1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求
 
-1. 使用 MobileFirst Services 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护，所以它只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
+1. 使用 MobileFirst Services 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护，所以它只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
 
 1. 使用 Cordova 应用程序对同一端点发起请求。初始化 `BMSClient` 后，添加以下代码。
 

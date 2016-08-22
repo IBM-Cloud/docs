@@ -7,13 +7,21 @@ copyright:
 
 # 啟用 Cordova 應用程式的 Google 鑑別
 {: #google-auth-cordova}
-若要配置 Cordova 應用程式進行 Google 鑑別整合，您必須以 Cordova 應用程式的原生程式碼（例如，以 Java、Objective-C、Swift）進行變更。每一個平台都必須分別進行配置。使用原生開發環境，以原生程式碼進行變更（例如，在 Android Studio 或 Xcode 中）。
+
+*前次更新：2016 年 6 月 28 日*
+{: .last-updated}
+
+若要配置 Cordova 應用程式進行 Google 鑑別整合，您必須以 Cordova 應用程式的原生程式碼（Java、Objective-C 或 Swift）進行變更。每一個平台都必須分別進行配置。使用原生開發環境，以原生程式碼進行變更（例如，在 Android Studio 或 Xcode 中）。
 
 ## 開始之前
 {: #before-you-begin}
 您必須具有：
 * 使用 {{site.data.keyword.amashort}} 用戶端 SDK 進行檢測的 Cordova 專案。如需相關資訊，請參閱[設定 Cordova 外掛程式](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)。  
-* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端的相關資訊，請參閱[開始使用](index.html)。
+* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
+
+
+
+
 * （選用）熟悉下列各節：
    * [在 Android 應用程式中啟用 Google 鑑別](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [在 iOS 應用程式中啟用 Google 鑑別](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
@@ -28,7 +36,7 @@ copyright:
 * 配置 {{site.data.keyword.amashort}} 進行 Google 鑑別
 * 配置適用於 Android 的 {{site.data.keyword.amashort}} 用戶端 SDK
 
-配置 Cordova 應用程式時的唯一差異是您必須以 JavaScript 程式碼（而非以 Java 程式碼）來起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。仍然必須以原生程式碼登錄 `GoogleAuthenticationManager` API。
+若為 Cordova 應用程式，起始設定 JavaScript 程式碼（而不是 Java 程式碼）中的 {{site.data.keyword.amashort}} 用戶端 SDK。仍然必須以原生程式碼登錄 `GoogleAuthenticationManager` API。
 
 ## 配置 iOS 平台
 {: #google-auth-cordova-ios}
@@ -56,13 +64,13 @@ copyright:
 
 1. 遵循[開始將 Google+ 整合至 iOS 應用程式](https://developers.google.com/+/mobile/ios/getting-started)指導教學的步驟 2，以將 Google+ iOS SDK 整合至 Xcode 專案。
 
-繼續[配置 iOS 平台進行 Google 鑑別](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)的**配置 iOS 專案進行 Google 鑑別**小節。以原生程式碼登錄 `IMFGoogleAuthenticationHandler`（如`起始設定 {{site.data.keyword.amashort}} 用戶端 SDK` 小節中所述）。您不需要以原生程式碼起始設定 `IMFClient`，這在不久後將以 JavaScript 程式碼完成。
+繼續[配置 iOS 平台進行 Google 鑑別](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)的**配置 iOS 專案進行 Google 鑑別**小節。以原生程式碼登錄 `IMFGoogleAuthenticationHandler`（如`起始設定 {{site.data.keyword.amashort}} 用戶端 SDK` 小節中所述）。請不要以原生程式碼起始設定 `IMFClient`（在下節中，是以 JavaScript 起始設定用戶端）。
 
-將下行新增至應用程式委派的 `application:openURL:sourceApplication:annotation` 方法。這行確保所有 Cordova 外掛程式都會收到個別事件的通知。
+將此行增至應用程式委派的 `application:openURL:sourceApplication:annotation` 方法。如此可確保所有 Cordova 外掛程式都會收到個別事件的通知。
 
 ```
 [[ NSNotificationCenter defaultCenter] postNotification:
-		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
+		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
 ```
 
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
@@ -78,16 +86,16 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 
 ## 測試鑑別
 {: #google-auth-cordova-test}
-起始設定用戶端 SDK 之後，即可開始對行動後端提出要求。
+起始設定用戶端 SDK 之後，即可開始對行動後端應用程式提出要求。
 
 ### 開始之前
 {: #google-auth-cordova-testing-before}
-您必須使用 {{site.data.keyword.mobilefirstbp}} 樣板，並且在 `/protected` 端點已具有 {{site.data.keyword.amashort}} 所保護的資源。如果您需要設定 `/protected` 端點，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+您必須在 `/protected` 端點具有 {{site.data.keyword.amashort}} 所保護的後端應用程式。如果您需要設定 `/protected` 端點，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 
-1. 開啟 `{applicationRoute}/protected`（例如 `http://my-mobile-backend.mybluemix.net/protected`），嘗試在桌面瀏覽器中將要求傳送給行動後端的受保護端點
+1. 開啟 `{applicationRoute}/protected`（例如 `http://my-mobile-backend.mybluemix.net/protected`），嘗試在桌面瀏覽器中將要求傳送給行動後端應用程式的受保護端點
 
-1. 使用「MobileFirst Services 樣板」所建立之行動後端的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護，所以只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取它。因此，您會在桌面瀏覽器中看到 `Unauthorized`。
+1. 使用「MobileFirst Services 樣板」所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護，所以只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取它。因此，您會在桌面瀏覽器中看到 `Unauthorized`。
 
 1. 使用 Cordova 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 之後，請新增下列程式碼。
 
@@ -103,7 +111,7 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
 
 
-1. 執行您的應用程式。即會蹦現「Google 登入」畫面。
+1. 執行您的應用程式。即會蹦現 Google 登入畫面。
 
 	![影像](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![影像](images/ios-google-login.png)
 	如果您未在裝置上安裝 Facebook 應用程式，或目前未登入 Facebook，則此畫面可能會稍微不同。

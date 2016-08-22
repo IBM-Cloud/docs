@@ -5,8 +5,13 @@ copyright:
 
 ---
 
-# 针对 iOS (Swift SDK) 配置 {{site.data.keyword.amashort}} 客户端 SDK
+# 针对 {{site.data.keyword.amashort}} iOS (Swift SDK) 应用程序配置定制认证
+
 {: #custom-ios}
+
+*上次更新时间：2016 年 7 月 18 日*
+{: .last-updated}
+
 
 将要使用定制认证的 iOS 应用程序配置为使用 {{site.data.keyword.amashort}} 客户端 SDK，并将该应用程序连接到 {{site.data.keyword.Bluemix}}。新发行的 {{site.data.keyword.amashort}} Swift SDK 为现有 Mobile Client Access Objective-C SDK 提供的功能增添了新功能，同时也改进了现有功能。
 
@@ -38,7 +43,7 @@ copyright:
 
  1. 在 **URL** 中，指定您的 applicationRoute。
 
- 1. 单击 **保存**。
+ 1. 单击**保存**。
 
 
 
@@ -46,7 +51,7 @@ copyright:
 ### 初始化客户端 SDK
 {: #custom-ios-sdk-initialize}
 
-通过传递 `applicationRoute` 和 `applicationGUID` 参数来初始化 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的
+通过传递 `applicationRoute` 和 `applicationGUID` 参数来初始化 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
 
 1. 获取应用程序参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。单击**移动选项**。**路径**和**应用程序 GUID** 字段中将显示 `applicationRoute` 和 `applicationGUID` 值。
 
@@ -58,11 +63,12 @@ copyright:
  import BMSSecurity
 ```
 
-1. 初始化 {{site.data.keyword.amashort}} 客户端 SDK，将授权管理器更改为 MCAAuthorizationManager，然后定义认证代表并将其注册。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。
+1. 初始化 {{site.data.keyword.amashort}} 客户端 SDK，将授权管理器更改为 MCAAuthorizationManager，然后定义认证代表并将其注册。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。 
 
-  将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击仪表板左上角的人脸图标 (![人脸](/face.png "人脸"))。
+  将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击仪表板左上角的人脸图标 (![人脸](/face.png "人脸"))。 
 
   对于 `<yourProtectedRealm>`，使用 {{site.data.keyword.amashort}} 仪表板**定制**磁贴中定义的**域名**。
+
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -70,14 +76,10 @@ copyright:
  let customRealm = "<yourProtectedRealm>"
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
-
- BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-
-  //Auth delegate for handling custom challenge
- class MyAuthDelegate : AuthenticationDelegate {
-      func onAuthenticationChallengeReceived(authContext: AuthenticationContext, challenge: AnyObject){
+ BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance//Auth delegate for handling custom challenge
+ class MyAuthDelegate : AuthenticationDelegate {func onAuthenticationChallengeReceived(authContext: AuthenticationContext, challenge: AnyObject){
           print("onAuthenticationChallengeReceived")
               let answer = <An answer to the challenge sent by the backend (Should be of type [String:AnyObject])>
               authContext.submitAuthenticationChallengeAnswer(answer)
@@ -97,29 +99,30 @@ copyright:
   let delegate = MyAuthDelegate()
   let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 
- do {
-      try mcaAuthManager.registerAuthenticationDelegate(delegate, realm: customRealm)
+ do {try mcaAuthManager.registerAuthenticationDelegate(delegate, realm: customRealm)
   } catch {
       print("error with register: \(error)")
   }
  return true
- }   
+ }
  ```
 
 ## 测试认证
 {: #custom-ios-testing}
 
-初始化客户端 SDK 并注册定制认证代表后，可以开始对移动后端发起请求。
+初始化客户端 SDK 并注册定制认证代表后，可以开始对移动后端应用程序发起请求。
+
 
 ### 开始之前
 {: #custom-ios-testing-before}
 
- 必须具有使用 {{site.data.keyword.mobilefirstbp}} 样板创建的应用程序，并且在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。
+ 您必须具有使用 {{site.data.keyword.mobilefirstbp}} 样板创建的应用程序，并且在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。
 
-1. 通过在浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端的受保护端点发送请求。
-  使用 {{site.data.keyword.mobilefirstbp}} 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，浏览器中会显示 `Unauthorized` 消息。
+1. 通过在浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。使用 {{site.data.keyword.mobilefirstbp}} 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，浏览器中会显示 `Unauthorized` 消息。
 
 1. 使用 iOS 应用程序对同一端点发起请求。初始化 `BMSClient` 并注册定制认证代表后，添加以下代码：
+
+ 
 
  ```Swift
  let customResourceURL = "<your protected resource's path>"
@@ -138,7 +141,7 @@ copyright:
 1. 	请求成功后，将在 Xcode 控制台中看到以下输出：
 
  ```
- onAuthenticationSuccess info = Optional({
+onAuthenticationSuccess info = Optional({
      attributes =     {
      };
      deviceId = don;
@@ -152,9 +155,9 @@ copyright:
 1. 通过添加以下代码，您还可以添加注销功能：
 
  ```
- MCAAuthorizationManager.sharedInstance.logout(callBack)
+MCAAuthorizationManager.sharedInstance.logout(callBack)
  ```  
 
-如果您在用户登录之后调用此代码，那么用户将注销。用户在尝试重新登录时，必须重新回答服务器发出的质询。
+ 如果您在用户登录之后调用此代码，那么用户将注销。用户在尝试重新登录时，必须重新回答服务器发出的质询。
 
  您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

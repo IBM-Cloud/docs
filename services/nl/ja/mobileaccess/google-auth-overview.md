@@ -11,14 +11,14 @@ copyright:
 # Google 資格情報を使用したユーザーの認証
 {: #google-auth}
 
-*最終更新日: 2016 年 6 月 15 日*
+*最終更新日: 2016 年 7 月 3 日*
 
-Google を ID プロバイダーとして使用してリソースを保護するように {{site.data.keyword.amashort}} サービスを構成できます。それにより、モバイル・アプリケーション・ユーザーは、Google の資格情報を認証に使用できるようになります。
+Google を ID プロバイダーとして使用してリソースを保護するように {{site.data.keyword.amashort}} サービスを構成できます。それにより、モバイル・アプリケーション・ユーザーまたは Web アプリケーション・ユーザーは、Google の資格情報を認証に使用できるようになります。
 {:shortdesc}
 
 **重要:** Google SDK を別個にインストールする必要はありません。Google SDK は、{{site.data.keyword.amashort}} Client SDK を構成した時に依存関係マネージャーによって自動的にインストールされます。
 
-## {{site.data.keyword.amashort}} のフロー
+## {{site.data.keyword.amashort}} の要求フロー
 {: #google-auth-overview}
 
 {{site.data.keyword.amashort}} が認証のための Google との統合をどのように行うかを理解するには、以下の簡素化された図を参照してください。
@@ -28,7 +28,7 @@ Google を ID プロバイダーとして使用してリソースを保護する
 1. {{site.data.keyword.amashort}} SDK を使用して、{{site.data.keyword.amashort}} Server SDK によって保護されているバックエンド・リソースへ要求を出します。
 * {{site.data.keyword.amashort}} Server SDK は無許可の要求を検出し、HTTP 401 コードと許可範囲を返します。
 * {{site.data.keyword.amashort}} Client SDK は自動的に HTTP 401 コードを検出し、認証プロセスを開始します。
-* {{site.data.keyword.amashort}} Client SDK は {{site.data.keyword.amashort}} サービスに連絡し、認証ヘッダーを送信するよう要求します。
+* {{site.data.keyword.amashort}} Client SDK は {{site.data.keyword.amashort}} サービスに連絡し、許可ヘッダーを要求します。
 * {{site.data.keyword.amashort}} サービスは、認証チャレンジを提供して、最初に Google での認証を行うようクライアントに要求します。
 * {{site.data.keyword.amashort}} Client SDK は、Google SDK を使用して認証プロセスを開始します。認証が正常に行われると、Google SDK は Google アクセス・トークンを返します。
 * Google アクセス・トークンは、認証チャレンジ応答と見なされます。このトークンは、{{site.data.keyword.amashort}} サービスに送信されます。

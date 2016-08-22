@@ -5,8 +5,12 @@ copyright:
 
 ---
 
-# 配置適用於 iOS 的 {{site.data.keyword.amashort}} 用戶端 SDK
+# 配置適用於 iOS 的 {{site.data.keyword.amashort}} 用戶端 SDK (Objective-C)
 {: #custom-ios}
+
+*前次更新：2016 年 7 月 18 日*
+{: .last-updated}
+
 
 配置 iOS 應用程式，這個應用程式利用自訂鑑別來使用 {{site.data.keyword.amashort}} 用戶端 SDK，並將您的應用程式連接至 {{site.data.keyword.Bluemix}}。
 
@@ -38,7 +42,7 @@ copyright:
 1. 從指令行執行 `pod install`。
 CocoaPods 將安裝新增的相依關係。即會顯示進度及新增的元件。
 
-**重要事項**：您現在必須使用 CocoaPods 所產生的 xcworkspace 檔案來開啟專案。名稱通常為 `{your-project-name}.xcworkspace`。
+    **重要事項**：您現在必須使用 CocoaPods 所產生的 xcworkspace 檔案來開啟專案。名稱通常為 `{your-project-name}.xcworkspace`。
 
 1. 從指令行執行 `open {your-project-name}.xcworkspace`，以開啟您的 iOS 專案工作區。
 
@@ -49,7 +53,7 @@ CocoaPods 將安裝新增的相依關係。即會顯示進度及新增的元件�
 
 透過傳遞應用程式路徑 (`applicationRoute`) 及 GUID (`applicationGUID`) 參數來起始設定 SDK。放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。
 
-1. 取得應用程式參數值。在 {{site.data.keyword.Bluemix_notm}} 儀表板中開啟應用程式。按一下**行動選項**，以查看**路徑** (`applicationRoute`) 及 **應用程式 GUID**(`applicationGUID`) 值。
+1. 取得應用程式參數值。在 {{site.data.keyword.Bluemix_notm}} 儀表板中開啟應用程式。按一下**行動選項**，以查看**路徑** (`applicationRoute`) 及**應用程式 GUID**(`applicationGUID`) 值。
 
 1. 在您要使用用戶端 SDK 的類別中，匯入 `IMFCore` 架構。
 
@@ -93,14 +97,14 @@ CocoaPods 將安裝新增的相依關係。即會顯示進度及新增的元件�
 {: #custom-ios-sdk-authhandler}
 
 
-{{site.data.keyword.amashort}} 用戶端 SDK 提供 `IMFAuthenticationHandler` 介面，以實作自訂鑑別流程。`IMFAuthenticationHandler` 公開在鑑別處理程序的不同階段所呼叫的三種方法。
+{{site.data.keyword.amashort}} 用戶端 SDK 提供 `IMFAuthenticationHandler` 介面，以實作自訂鑑別流程。`IMFAuthenticationHandler` 會公開在鑑別處理程序的不同階段所呼叫的三個方法。
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
  						didReceiveAuthenticationChallenge:(NSDictionary*)challenge;
 ```
 
-從「{{site.data.keyword.amashort}} 服務」接收自訂鑑別盤查時，會呼叫此方法。引數包括：
+從「{{site.data.keyword.amashort}} 服務」收到自訂鑑別盤查時，會呼叫此方法。引數包括：
 
 * `IMFAuthenticationContext` 通訊協定是由 {{site.data.keyword.amashort}} 用戶端 SDK 所提供，讓開發人員可以在認證收集期間回報鑑別盤查回答或失敗（例如：使用者已取消）。
 * `NSDictionary` 包含「自訂身分提供者」所傳回的自訂鑑別盤查。
@@ -125,7 +129,7 @@ CocoaPods 將安裝新增的相依關係。即會顯示進度及新增的元件�
 {: #custom-ios-sdk-authcontext}
 
 
-`IMFAuthenticationContext` 提供作為自訂 `IMFAuthenticationHandler` 的 `authenticationContext:didReceiveAuthenticationChallenge` 方法的引數。開發人員負責收集認證，然後使用 `IMFAuthenticationContext` 方法將認證傳回給 {{site.data.keyword.amashort}} 用戶端 SDK 或報告失敗。請使用下列其中一種方法。
+`IMFAuthenticationContext` 提供作為自訂 `IMFAuthenticationHandler` 的 `authenticationContext:didReceiveAuthenticationChallenge` 方法的引數。開發人員負責收集認證，然後使用 `IMFAuthenticationContext` 方法將認證傳回給 {{site.data.keyword.amashort}} 用戶端 SDK 或報告失敗。請使用下列其中一個方法。
 
 ```
 -(void) submitAuthenticationChallengeAnswer:(NSDictionary*) answer;
@@ -325,6 +329,6 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 	IMFAuthorizationManager.sharedInstance().logout(callBack)
 	```
 
- 如果您在使用者登入之後呼叫此程式碼，則會將使用者登出。使用者嘗試再次登入時，必須再次回答接收自伺服器的盤查。
+ 如果您在使用者登入之後呼叫此程式碼，則會將使用者登出。使用者嘗試再次登入時，必須再次回答從伺服器收到的盤查。
 
  將 `callBack` 傳遞給 logout 函數是選用性的作業。您也可以傳遞 `nil`。

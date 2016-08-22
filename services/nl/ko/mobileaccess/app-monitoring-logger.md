@@ -103,7 +103,7 @@ logger.fatal("fatal message");
 
 예를 들어, 캡처가 설정되어 있고 로거 레벨이 FATAL로 구성되어 있는 경우 로거는 미발견 예외를 캡처합니다. 미발견 예외는 종종 사용자에게 애플리케이션 충돌로 표시되지만, 충돌 이벤트까지 이어지는 로그는 캡처하지 않습니다. 그 대신 로거 레벨을 더 자세하게 지정하면 FATAL 로거 항목으로 이어지는 로그(예: WARN 및 ERROR)도 캡처됩니다. 
 
-**참고: ** 플랫폼별 전체 로거 API 참조는 [SDK, 샘플, API 참조](sdks-samples-apis.html)에 나와 있습니다. 로거 API는 {{site.data.keyword.amashort}} 클라이언트 SDK 코어의 일부입니다.
+**참고: ** 플랫폼별 전체 로거 API 참조는 [SDK, 샘플 및 API 참조](sdks-samples-apis.html)에 나와 있습니다. 로거 API는 {{site.data.keyword.amashort}} 클라이언트 SDK 코어의 일부입니다.
 
 
 ## 샘플 사용법
@@ -196,9 +196,7 @@ MFPLogger.setLevel(MFPLogger.INFO);
 
 // Create two logger instances
 var logger1 = MFPLogger.getInstance("logger1");
-var logger2 = MFPLogger.getInstance("logger2");    
-
-// Log messages with different levels
+var logger2 = MFPLogger.getInstance("logger2");// Log messages with different levels
 logger1.debug ("debug message");
 logger2.info ("info message");
 

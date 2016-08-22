@@ -48,8 +48,9 @@ copyright:
 1. 从 Web 应用程序重定向到以下授权服务器端点：https://imf-newauthserver.bluemix.net/oauth/v2/authorization。
 
 1. 添加以下查询参数：
+   
    ```
-    response_type='authorization_code'
+response_type='authorization_code'
     client_id= <bluemix_app_guid>
     redirect_uri= <uri for redirecting after receiving the authorization code>
     scope= 'openid'
@@ -68,16 +69,15 @@ copyright:
   https://imf-newauthserver.bluemix.net/oauth/v2/token
 
   使用以下查询参数：
+  
   ```
-  grant_type='authorization_code'
+grant_type='authorization_code'
   client_id= <bluemix_app_guid>
   code= <authorization code>
   ```
 `redirect_uri` 参数必须与步骤 2 的 `redirect_uri` 相匹配。
 `code` 值是步骤 3 结束时响应中接收的授权代码。
-请确保在 10 分钟内发送此 `POST` 请求，因为授权代码有效的最长时间为 10 分钟。
-
-  `POST` 响应主体应该包含以 Base64 编码的 `access_token` 和 `id_token`。
+请确保在 10 分钟内发送此 `POST` 请求，因为授权代码有效的最长时间为 10 分钟。  `POST` 响应主体应该包含以 Base64 编码的 `access_token` 和 `id_token`。
 
 ## 测试认证
 现在，您可以开始向受保护资源发出请求。

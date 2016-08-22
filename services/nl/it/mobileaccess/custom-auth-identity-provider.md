@@ -7,6 +7,11 @@ copyright:
 
 # Creazione di un provider di identità personalizzato
 {: #custom-create}
+
+*Ultimo aggiornamento: 16 giugno 2016*
+{: .last-updated}
+
+
 Per creare un provider di identità personalizzato, sviluppa un'applicazione web che espone un'API RESTful:
 
 ```
@@ -118,7 +123,7 @@ L'oggetto di identità utente viene utilizzato dal servizio {{site.data.keyword.
 
 Ciascuna richiesta dal servizio {{site.data.keyword.amashort}} a un provider di identità personalizzato contiene un'intestazione di autorizzazione in modo che il provider di identità personalizzato possa verificare che la richiesta sta provenendo da un'origine autorizzata. Anche se non è strettamente obbligatorio, valuta una convalida dell'intestazione di autorizzazione strumentando il tuo provider di identità personalizzato con un SDK server {{site.data.keyword.amashort}}. Per utilizzare questo SDK, nella tua applicazione di provider di identità personalizzato deve avere implementato il Node.js o Liberty for Java&trade;&trade; e deve essere in esecuzione su {{site.data.keyword.Bluemix_notm}}.
 
-L'intestazione di autorizzazione contiene informazioni sul client mobile e sull'applicazione mobile che hanno attivato il processo di autenticazione. Puoi utilizzare il contesto di sicurezza per recuperare questi dati. per ulteriori informazioni, consulta [Protezione delle risorse](protecting-resources.html)
+L'intestazione di autorizzazione contiene informazioni sul client mobile e sull'applicazione mobile che hanno attivato il processo di autenticazione. Puoi utilizzare il contesto di sicurezza per recuperare questi dati. Per ulteriori informazioni, vedi [Protezione delle risorse](protecting-resources.html).
 
 ## Implementazione di esempio del provider di identità personalizzato
 {: #custom-sample}
@@ -220,7 +225,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 ```
 --->
 
-## Passi successivi
+## Fasi successive
 {: #next-steps}
 * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](custom-auth-config-mca.html)
 * [Configurazione dell'autenticazione personalizzata per Android](custom-auth-android.html)

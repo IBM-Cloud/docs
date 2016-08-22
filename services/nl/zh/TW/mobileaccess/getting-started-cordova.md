@@ -9,7 +9,7 @@ copyright:
 # 設定 Cordova 外掛程式
 {: #getting-started-cordova}
 
-*前次更新：2016 年 5 月 25 日*
+*前次更新：2016 年 7 月 17 日*
 {: .last-updated}
 
 使用 {{site.data.keyword.amashort}} 用戶端 SDK 檢測 Cordova 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
@@ -18,9 +18,13 @@ copyright:
 ## 開始之前
 {: #before-you-begin}
 您必須具有：
-* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端的相關資訊，請參閱[開始使用](index.html)。
+* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
 
-* Cordova 應用程式，或使用現有專案。如需如何設定 Cordova 應用程式的相關資訊，請參閱 [Cordova 網站](https://cordova.apache.org/)。
+
+
+
+
+* Cordova 應用程式或現有專案。如需如何設定 Cordova 應用程式的相關資訊，請參閱 [Cordova 網站](https://cordova.apache.org/)。
 
 ## 安裝 {{site.data.keyword.amashort}} Cordova 外掛程式
 {: #getting-started-cordova-plugin}
@@ -42,8 +46,8 @@ copyright:
 	```XML
 	<platform name="android">  
 		<preference name="android-minSdkVersion" value="15"/>
-		<preference name="android-targetSdkVersion" value="23"/>
-		<!-- add minimum and target Android API level declaration -->
+  	<preference name="android-targetSdkVersion" value="23"/>
+  	<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
 
@@ -66,7 +70,7 @@ copyright:
 	cordova plugin add ibm-mfp-core
 	```
 
-1. 為 Android、iOS 或兩者配置您的平台。
+1. 為 Andro為 Android 或 iOS 配置您的平台，或兩者都配置。
 
 	* **Android**
 
@@ -80,7 +84,7 @@ copyright:
 
 		如下所示配置 Xcode 專案，以避免發生建置錯誤。
 
-		1. 使用最新版的 Xcode，開啟 &lt;*app_name*&gt;/platforms/ios 目錄中的 xcode.proj 檔案。
+		1. 使用最新版的 Xcode，開啟 `<app_name>/platforms/ios` 目錄中的 `xcode.proj` 檔案。
 
 		**重要事項：**如果您收到一則訊息指出「轉換為最新 Swift 語法」，請按一下「取消」。
 
@@ -99,7 +103,6 @@ copyright:
 		4. 使用 Xcode 建置並執行您的應用程式。
 
 1. 執行下列指令，驗證已順利安裝外掛程式：
-    
 
 	```Bash
 	cordova plugin list
@@ -118,18 +121,18 @@ copyright:
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
 
-## 對行動後端提出要求
+## 對行動後端應用程式提出要求
 {: #getting-started-request}
 
-起始設定 {{site.data.keyword.amashort}} 用戶端 SDK 之後，即可開始對行動後端提出要求。
+起始設定 {{site.data.keyword.amashort}} 用戶端 SDK 之後，即可開始對行動後端應用程式提出要求。
 
-1. 嘗試將要求傳送給新行動後端的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`。例如：
+1. 嘗試將要求傳送給新的行動後端應用程式的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`。例如：
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected
 	```
 
-	使用 MobileFirst Services Starter 樣板所建立之行動後端的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。瀏覽器中會傳回 `Unauthorized` 訊息。傳回此訊息的原因是只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才會存取這個端點。
+	使用 MobileFirst Services Starter 樣板所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。瀏覽器中會傳回 `Unauthorized` 訊息。傳回此訊息的原因是只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才會存取這個端點。
 
 
 

@@ -11,15 +11,22 @@ copyright:
 # Configuration du SDK Swift iOS
 {: #getting-started-ios}
 
-*Dernière mise à jour : 14 juin 2016*
+*Dernière mise à jour : 17 juillet 2016*
 {: .last-updated}
 
-Mobile Client Access a sorti un nouveau SDK Swift qui améliore les fonctionnalités fournies par le SDK Mobile Client Access Objective-C existant et en ajoute de nouvelles, facilitant l'authentification de votre application et fournissant une meilleure protection à vos ressources de back end. Instrumentez votre application iOS Swift avec le SDK de {{site.data.keyword.amashort}} SDK, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
+{{site.data.keyword.amashort}} a rendu disponible un nouveau SDK Swift qui enrichit et améliore les fonctionnalités du SDK
+{{site.data.keyword.amashort}} Objective-C existant, en facilitant l'authentification de votre application et en renforçant la protection
+de vos ressources de back end. Instrumentez votre application Swift iOS avec le SDK {{site.data.keyword.amashort}}, initialisez le  the SDK et envoyez des requêtes à des ressources protégées et
+non protégées.
 {:shortdesc}
 
-**Remarque :** le SDK Objective-C rapporte les données de surveillance à la console de surveillance du service Mobile Client Access. Si vous dépendez des fonctions de surveillance du service Mobile Client Access, vous devez continuer à utiliser le SDK Objective-C.
+**Remarque :** Le SDK Objective-C communique des données de surveillance à la console de surveillance du service {{site.data.keyword.amashort}}. Si vous
+êtes tributaire de la fonctionnalité de surveillance du service {{site.data.keyword.amashort}}, vous devez continuer à utiliser le SDK
+Objective-C.
 
-**Remarque :** alors que le SDK Objective-C reste complètement pris en charge et est toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix_notm}} Mobile Services, il est prévu qu'il soit interrompu plus tard dans l'année et remplacé par le nouveau SDK Swift. 
+Bien que le SDK Objective-C soit toujours totalement pris en charge et soit encore considéré comme le SDK principal de
+{{site.data.keyword.Bluemix_notm}} Mobile Services, il est envisagé de cesser de l'utiliser plus tard cette année et de le remplacer par ce nouveau SDK
+Swift. 
 
 
 
@@ -35,12 +42,15 @@ Vous devez disposer des éléments suivants :
 
 ## Installation du SDK client de {{site.data.keyword.amashort}}
 {: #install-mca-sdk-ios}
-Le SDK {{site.data.keyword.amashort}} est distribué avec CocoaPods, un gestionnaire de dépendances pour les projets iOS. CocoaPods télécharge automatiquement les artefacts à partir des référentiels et les met à la disposition de votre application iOS.
+Le SDK {{site.data.keyword.amashort}} est distribué avec CocoaPods, un gestionnaire de dépendances pour les projets iOS. CocoaPods télécharge automatiquement
+des artefacts depuis les référentiels et les rend disponibles depuis votre application iOS.
 
 
 ### Installation de CocoaPods
 {: #install-cocoapods}
-1. Ouvrez Terminal et lancez la commande **pod --version**. Si CocoaPods est déjà installé, le numéro de version est affiché. Vous pouvez passer à la section suivante pour installer le SDK.
+
+1. Depuis une fenêtre de terminal, lancez la commande **pod --version**. Si CocoaPods est déjà installé, le numéro de version est affiché
+et vous pouvez passer à la section suivante pour installer le SDK. 
 
 1. Si CocoaPods n'est pas installé, exécutez la commande :
 ```
@@ -64,8 +74,10 @@ CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définire
 	```
   **Astuce :** Vous pouvez ajouter `use_frameworks!` à votre cible Xcode au lieu du Podfile.
 
-1. Sauvegardez le fichier `Podfile` et exécutez `pod install` à partir de la ligne de commande. <br/>Cocoapods installe les dépendances appropriées et affiche les dépendances et pods ajoutés.<br/>
-**Important** : CocoaPods génère un fichier `xcworkspace`. A partir de ce moment, vous devrez toujours ouvrir ce fichier pour travailler sur votre projet.
+1. Enregistrez le fichier `Podfile` et lancez `pod install` depuis la ligne de commande. CocoaPods installe les dépendances
+pertinentes et affiche les dépendances et nacelles ajoutées.<br/>
+
+   **Important** : CocoaPods génère un fichier `xcworkspace`. A partir de ce moment, vous devrez toujours ouvrir ce fichier pour travailler sur votre projet.
 
 1. Ouvrez l'espace de travail de votre projet iOS. Ouvrez le fichier `xcworkspace` qui a été généré par CocoaPods. Par exemple : `{your-project-name}.xcworkspace`. Exécutez `open {your-project-name}.xcworkspace`.
 
@@ -86,7 +98,9 @@ CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définire
 
 1. Initialisez le SDK client {{site.data.keyword.amashort}}. Remplacez `<applicationRoute>` et
 `<applicationGUID>` par les valeurs de **Route** et **Identificateur global unique de l'application**
-de la section **Options pour application mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône face (![Face](/face.png "Face")) dans l'angle supérieur gauche du tableau de bord. 
+de la section **Options pour application mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour
+afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône face (![Face](images/face.png "Face")) à l'angle
+supérieur gauche du tableau de bord. 
 
 
  ```Swift
@@ -104,22 +118,24 @@ de la section **Options pour application mobile** dans le tableau de bord {{site
       }
  ```
 
-## Envoi d'une demande au système de back end mobile
+## Envoi d'une requête à votre application back end mobile
 {: #request}
 
-Une fois que le SDK client de {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
+Une fois que le SDK client {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des requêtes à votre application back end
+mobile. 
 
-1. Tentez d'envoyer une demande à un noeud final protégé sur votre système de back end mobile dans votre navigateur. Ouvrez l'URL suivante :
+1. Essayez d'envoyer depuis votre navigateur une requête à un noeud final protégé de votre application back end mobile. Ouvrez l'URL suivante :
 `http://{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
-<br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message `Unauthorized` est renvoyé à votre navigateur car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
-
+<br/>Le noeud final `/protected` d'une application back end mobile créée avec le conteneur boilerplate MobileFirst Services Starter est
+protégé par {{site.data.keyword.amashort}}. Un message `Non autorisé` est renvoyé à votre navigateur car ce noeud final n'est
+accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
 
  ```Swift
- let customResourceURL = "<chemin de votre ressource protégée>"
+ let customResourceURL = "<chemin_de_votre_ressource_protégée>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
-     if error == nil {
+ if error == nil {
          print ("réponse :\(response?.responseText), aucune erreur")
      } else {
          print ("erreur : \(error)")
@@ -132,7 +148,7 @@ Une fois que le SDK client de {{site.data.keyword.amashort}} est initialisé, vo
 1.  Lorsque votre demande aboutit, la sortie suivante figure dans la console Xcode :
 
  ```
- response:Optional("Bonjour, ceci est une ressource protégée de l'application back end mobile !"), no error
+response:Optional("Bonjour, ceci est une ressource protégée de l'application back end mobile !"), no error
  ```
 {: screen}
  

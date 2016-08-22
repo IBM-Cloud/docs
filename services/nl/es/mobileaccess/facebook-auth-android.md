@@ -11,33 +11,31 @@ copyright:
 # Habilitación de la autenticación de Facebook para apps de Android
 {: #facebook-auth-android}
 
-*Última actualización: 15 de junio de 2016*
+*Última actualización: 05 de julio de 2016*
 {: .last-updated}
 
 
-Para utilizar Facebook como proveedor de identidad en las aplicaciones de Android, añada y configure la plataforma Android para la aplicación de Facebook.
+Para utilizar Facebook como proveedor de identidad en las aplicaciones de Android, añada y configure la plataforma Android para la aplicación de Facebook en el sitio Facebook for Developers.
 {:shortdesc}
 
 ## Antes de empezar
 {: #facebook-auth-android-before}
-Debe tener lo siguiente: 
-* Un proyecto Android configurado para funcionar con Gradle. No es necesario instrumentar el proyecto con el SDK de cliente de {{site.data.keyword.amashort}}.   
-* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de un programa de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
-* Un ID de aplicación de Facebook. Para obtener más información, consulte [Cómo obtener un ID de aplicación de Facebook desde el portal de desarrolladores de Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+Debe tener lo siguiente:
+* Un proyecto Android configurado para funcionar con Gradle. No es necesario instrumentar el proyecto con el SDK de cliente de {{site.data.keyword.amashort}}.  
+* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de una aplicación de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
+* Una app de Facebook con una plataforma Android en el sitio Facebook for Developers (https://developers.facebook.com).
 
-**Importante:** no es necesario instalar de forma independiente el SDK de SDK (`com.facebook.FacebookSdk`). Gradle instala el SDK de Facebook automáticamente al añadir el SDK de cliente de Facebook {{site.data.keyword.amashort}}. Puede omitir el paso **Añadir el SDK de Facebook a su proyecto** de Facebook Developer Portal.
+**Importante:** no es necesario instalar de forma independiente el SDK de SDK (`com.facebook.FacebookSdk`). Gradle instala el SDK de Facebook automáticamente al añadir el SDK de cliente de Facebook {{site.data.keyword.amashort}}. Puede saltarse este paso al añadir la plataforma Android en el sitio Facebook for Developers.
 
 ## Configuración de una aplicación de Facebook para la plataforma Android
 {: #facebook-auth-android-config}
-Para utilizar Facebook como proveedor de identidad en las aplicaciones de Android, debe añadir y configurar la plataforma Android para la aplicación de Facebook.
+Desde el sitio Facebook for Developers (https://developers.facebook.com):
 
-1. Abra la aplicación de Facebook en el portal de desarrolladores de Facebook.
+1. Inicie la sesión en su cuenta en el sitio Facebook for Developers.
+2. Añada o configure la plataforma Android. Se proporcionan más detalles allí para los pasos siguientes.
+1. Indique el nombre del paquete de la aplicación de Android en la solicitud de nombre de paquete de Google Play. Para encontrar el nombre del paquete de la aplicación de Android, busque `<manifest ..... package="{your-package-name}">` en el archivo `AndroidManifest.xml` del proyecto Android Studio.
 
-1. Pulse **Settings &gt; Add Platform &gt; Android**.
-
-1. Indique el nombre del paquete de la aplicación de Android en la solicitud de nombre de paquete de Google Play. Para encontrar el nombre del paquete de la aplicación de Android, abra el archivo `AndroidManifest.xml` en Android Studio y busque `<manifest ..... package="{nombre-paquete}">`.
-
-1. Especifique el nombre de clase de su actividad principal en la solicitud **Class Name**. Para encontrar el nombre de clase de la actividad principal de la aplicación de Android, abra el archivo `AndroidManifest.xml` y busque la declaración con un filtro de intención parecido al siguiente fragmento de código:
+1. Especifique el nombre de clase de su actividad principal en la solicitud **Class Name**. El nombre de clase es el valor de la propiedad `android:name` en el alojamiento de la actividad. Si hay más de una actividad en el archivo `AndroidManifest.xml`, busque la actividad que contiene la `<intent-filter>`:
 
 	```XML
 	<activity
@@ -65,7 +63,7 @@ Para utilizar Facebook como proveedor de identidad en las aplicaciones de Androi
 
 	**Sugerencia**: puede utilizar la misma sintaxis para recuperar el hash de clave de su certificado de modo de depuración. Sustituya el alias y la vía de acceso al almacén de claves en el mandato.
 
-1. Copie y pegue el hash de clave que ha obtenido con el mandato **keytool** en una solicitud de hashes de clave de desarrollo/publicación en el portal de desarrolladores de Facebook.
+1. Copie y pegue el hash de clave que ha obtenido con el mandato **keytool** en una solicitud de hashes de clave de desarrollo/publicación en el sitio Facebook for Developers.
 
 	**Sugerencia**: piense en habilitar el inicio de sesión único si quiere utilizar esta característica.
 
@@ -73,7 +71,7 @@ Para utilizar Facebook como proveedor de identidad en las aplicaciones de Androi
 
 ## Configuración de {{site.data.keyword.amashort}} para la autenticación de Facebook
 {: #facebook-auth-android-mca}
-Cuando disponga de un ID de la aplicación de Facebook y cuando haya configurado su aplicación de Facebook para dar servicio a clientes de Android, puede habilitar la autenticación de Facebook en el panel de control de {{site.data.keyword.amashort}}.
+Cuando disponga de un ID de la aplicación de Facebook y cuando haya configurado su aplicación de Facebook para dar servicio a clientes de Android, puede habilitar la autenticación de Facebook con el panel de control de {{site.data.keyword.amashort}}.
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
@@ -81,7 +79,7 @@ Cuando disponga de un ID de la aplicación de Facebook y cuando haya configurado
 
 1. Pulse el mosaico de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
 
-1. Pulse el mosaico **Facebook**.
+1. Pulse el botón **Configurar** en el panel **Facebook**.
 
 1. Especifique el ID de aplicación de Facebook y haga clic en **Guardar**.
 
@@ -101,7 +99,7 @@ Es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el
         version: '2.+',
         ext: 'aar',
         transitive: true
-    	// otras dependencias  
+    	// other dependencies  
 	}
 ```
 
@@ -128,9 +126,9 @@ Es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
-  2. Añada los metadatos necesarios para el SDK de Facebook al elemento ``<application>``:
-  
-  ```XML
+  2. Añada los metadatos necesarios para el SDK de Facebook al elemento `<application>`:
+
+	```XML
 	<application .......>
 
 		<meta-data
@@ -165,11 +163,14 @@ Es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");
+					"applicationGUID",
+					BMSClient.REGION_UK);
 
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
-
+,
+					
+Sustituya `BMSClient.REGION_UK` con la región adecuada.
 
 1. Añada el código siguiente a la actividad:
 
@@ -182,17 +183,17 @@ Es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el
 	}
 ```
 
-## Probar la autenticación
-Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Facebook, puede empezar a realizar solicitudes al programa de fondo móvil.
+## Prueba de autenticación
+Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Facebook, puede empezar a realizar solicitudes al programa de fondo móvil.
 
 ### Antes de empezar
 {: #facebook-auth-android-testing-before}
 Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil recién creado en su navegador. Abra el siguiente URL: `{rutaAplicación}/protected`. Por ejemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>. El punto final `/protected` de un programa de fondo móivl creado con el contenedor modelo MobileFirst Services Starter se protege con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se puede acceder a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
+1. Intente enviar una solicitud a un punto final protegido de la aplicación de programa de fondo móvil recién creada en su navegador. Abra el siguiente URL: `{rutaAplicación}/protected`. Por ejemplo: `http://mi-programa-fondo-móvil.mybluemix.net/protected`
+<br/>El punto final `/protected` de una aplicación de programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se puede acceder a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
 
-1. Utilice la aplicación de Android para realizar una solicitud al mismo punto final. Añada el siguiente código después de inicializar `BMSClient` y registrar `FacebookAuthenticationManager`.
+1. Utilice la aplicación de Android para realizar solicitudes al mismo punto final. Añada el siguiente código después de inicializar `BMSClient` y registrar `FacebookAuthenticationManager`.
 
 	```Java
 	Request request = new Request("/protected", Request.GET);

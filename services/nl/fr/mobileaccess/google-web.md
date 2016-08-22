@@ -8,6 +8,9 @@ copyright:
 # Activation de l'authentification Google pour les applications Web
 {: #google-auth-web}
 
+*Dernière mise à jour : 1er juin 2016*
+{: .last-updated}
+
 Utilisez Google Sign-In pour authentifier les utilisateurs sur votre application Web.
 
 
@@ -42,7 +45,7 @@ Maintenant que vous disposez d'un ID d'application et d'une valeur confidentiell
 ## Utilisation de {{site.data.keyword.amashort}} pour l'authentification Web Google
 Pour démarrer le processus d'autorisation :
 
-1. Effectuez une redirection depuis votre application Web vers le noeud final suivant du serveur d'autorisation :   
+1. Effectuez une redirection depuis votre application Web vers le noeud final suivant du serveur d'autorisation :  
   https://imf-newauthserver.bluemix.net/oauth/v2/authorization
 
   en utilisant les paramètres de requête suivants :
@@ -56,8 +59,8 @@ Pour démarrer le processus d'autorisation :
 
   Le paramètre `state`, qui n'est pas utilisé pour l'instant, n'a pas besoin d'être renseigné.
 
-  L'URI de paramètre `redirect_uri` permet une redirection après une authentification aboutie ou échouée avec Google. La réponse retournée après une redirection contient le code d'autorisation dans les paramètres de requête de la demande. 
-1. Effectuez une demande `POST` vers le noeud final de jeton du serveur d'autorisation : 
+  Le paramètre `redirect_uri` est l'URI de redirection après l'aboutissement ou l'échec de l'authentification avec Google. La réponse retournée après une redirection contient le code d'autorisation dans les paramètres de requête de la demande.
+1. Effectuez une demande `POST` vers le noeud final de jeton du serveur d'autorisation :
 
  https://imf-newauthserver.bluemix.net/oauth/v2/token
 
@@ -70,7 +73,8 @@ Pour démarrer le processus d'autorisation :
     redirect_uri= <redirect_uri >
     code= <authorization code>
 	```
-  Le paramètre `redirect_uri` doit correspondre au paramètre `redirect_uri` de l'étape 1 et la valeur `<authorization code>` est reçue depuis la réponse. Prenez soin d'envoyer cette demande `POST` dans les 10 minutes, puisque le code d'accord n'est valide que pendant 10 minutes maximum.
+  Le paramètre `redirect_uri` doit correspondre au paramètre `redirect_uri` de l'étape 1 et la valeur `<authorization code>` est reçue depuis la réponse.
+  Prenez soin d'envoyer cette demande `POST` dans les 10 minutes, puisque le code d'accord n'est valide que pendant 10 minutes maximum.
 
 Le corps de la réponse `POST` doit contenir les paramètres `access_token` et `id_token` codés en base 64.
 

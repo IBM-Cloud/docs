@@ -11,7 +11,7 @@ copyright:
 # 启用 iOS 应用程序 (Swift SDK) 的 Facebook 认证
 {: #facebook-auth-ios}
 
-*上次更新时间：2016 年 6 月 15 日*
+*上次更新时间：2016 年 7 月 17 日*
 {: .last-updated}
 
 要在 iOS 应用程序中将 Facebook 用作身份提供者，请为 Facebook 应用程序添加并配置 iOS 平台。
@@ -21,32 +21,31 @@ copyright:
 {: #facebook-auth-ios-before}
 您必须具有
 * 设置为使用 CocoaPods 的 iOS 项目。有关更多信息，请参阅[设置 iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html) 中的**安装 CocoaPods**。
-**注：**继续之前，您无需安装核心 {{site.data.keyword.amashort}} 客户端 SDK。
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
-* Facebook 应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
+  **注：**继续之前，您无需安装核心 {{site.data.keyword.amashort}} 客户端 SDK。
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
+* Facebook for Developers 站点上的 Facebook 应用程序。 
 
 
-**重要信息**：您无需单独安装 Facebook 自己的 SDK。下面的 `BMSFacebookAuthentication` Pod 会自动安装 Facebook SDK。您可以跳过 **Facebook 开发者门户网站**中的**添加 Facebook SDK 到 Xcode 项目**步骤。
+**重要信息**：您无需单独安装 Facebook 自己的 SDK。下面的 `BMSFacebookAuthentication` Pod 会自动安装 Facebook SDK。在 Facebook for Developers 站点上添加或配置应用程序时，可以跳过 **添加 Facebook SDK 到 Xcode 项目**步骤。
 
 **注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用 Objective-C SDK，以支持此新的 Swift SDK。
 ## 针对 iOS 平台配置 Facebook 应用程序
 {: #facebook-auth-ios-config}
+在 Facebook for Developers 站点上：
 
-1. 登录到 [Facebook 应用程序仪表板](https://developers.facebook.com/apps/)。
-
-1. 记录应用程序的**应用程序标识**。配置 iOS 项目以进行 Facebook 认证时需要此值。
-
-1. 单击**设置 > 添加平台 > iOS**。
+1. 登录到帐户。
+1. 确保 iOS 平台已添加到应用程序。当您添加或配置 iOS 平台时，系统会提供有关以下步骤的更多详细信息。
 
 1. 指定 iOS 应用程序的 *bundleId*。要找到 iOS 应用程序的 *bundleId*，请在 `info.plist` 文件或 Xcode 项目的**常规**选项卡中查找**捆绑软件标识**。
-**提示**：如果计划使用 URL 方案后缀或单点登录，请考虑启用这些功能。
+
+  **提示**：如果计划使用 URL 方案后缀或单点登录，请考虑启用这些功能。
 
 1. 单击**保存设置**。
 
 ## 配置 {{site.data.keyword.amashort}} 进行 Facebook 认证
 {: #facebook-auth-ios-configmca}
 
-配置了 Facebook 应用程序标识并将 Facebook 应用程序配置为向 iOS 客户端提供服务后，可以在 {{site.data.keyword.amashort}} 中启用 Facebook 认证。
+配置 Facebook 应用程序标识并将 Facebook 应用程序配置为向 iOS 客户端提供服务后，可以在 {{site.data.keyword.amashort}} 中启用 Facebook 认证。
 
 1. 在 {{site.data.keyword.Bluemix}}“仪表板”中打开应用程序。
 
@@ -54,7 +53,7 @@ copyright:
 
 1. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
 
-1. 单击 **Facebook** 磁贴。
+1. 单击 **Facebook** 面板上的**配置**按钮。
 
 1. 指定 Facebook 应用程序标识，然后单击**保存**。
 
@@ -85,7 +84,7 @@ pod 'BMSFacebookAuthentication'
 
 	```
 
-   **注：**如果 Pod 文件有 `pod 'BMSSecurity'` 这一行，那么您必须移除该行。`BMSFacebookAuthentication` Pod 会安装所有必要的框架。
+   **注：**如果 Pod 文件有 `pod 'BMSSecurity'` 这一行，那么您必须除去该行。`BMSFacebookAuthentication` Pod 会安装所有必要的框架。
 
    **提示：**您可以将 `use_frameworks!` 添加到 Xcode 目标中，而不是置于 Podfile 中。
 
@@ -156,28 +155,27 @@ pod 'BMSFacebookAuthentication'
 	    </dict>
 	</dict>
 ```
-   使用 Facebook 应用程序标识更新 URL 方案和 FacebookappID 属性。将 FacebookDisplayName 更新为 Facebook 应用程序的名称。
+使用 Facebook 应用程序标识更新 URL 方案和 FacebookappID 属性。将 FacebookDisplayName 更新为 Facebook 应用程序的名称。
 
-**重要信息**：确保您未覆盖 `info.plist` 文件中的任何现有属性。如果您有重叠属性，必须手动进行合并。有关更多信息，请参阅 [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) 和 [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9)。
+    **重要信息**：确保您未覆盖 `info.plist` 文件中的任何现有属性。如果您有重叠属性，必须手动进行合并。有关更多信息，请参阅 [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) 和 [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9)。
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 Swift SDK
 {: #facebook-auth-ios-initalize-swift}
 
 通过传递 `applicationGUID` 和 `applicationRoute` 参数来初始化客户端 SDK。
 
-通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的
+通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
 
 1. 获取应用程序参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。单击**移动选项**。**路径**和**应用程序 GUID** 字段中将显示 `applicationRoute` 和 `applicationGUID` 值。
 
 1. 通过添加以下头，将所需框架导入要使用 {{site.data.keyword.amashort}} 客户端 SDK 的类中：
 
-	```swift
+ ```swift
  import UIKit
  import BMSCore
  import BMSSecurity
  ```
-2. 初始化客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。
-将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击仪表板左上角的人脸图标 (![人脸](images/face.jpg "人脸图标"))。
+2. 初始化客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击仪表板左上角的人脸图标 (![人脸](images/face.jpg "人脸图标"))。
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -198,11 +196,11 @@ pod 'BMSFacebookAuthentication'
   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)
  ```
 
-1. 将 `FacebookAuthenticationManager.swift` 文件从 `BMSFacebookAuthentication` Pod 源文件复制到项目目录中。
+1. 将 `FacebookAuthenticationManager.swift` 文件从 `BMSFacebookAuthentication` pod 源文件复制到项目目录中。
 
 1. 将以下代码添加到应用程序代表中。
 
-	```Swift
+ ```Swift
 	func application(application: UIApplication, openURL url: NSURL,
 					sourceApplication: String?, annotation: AnyObject) -> Bool {
 
@@ -214,16 +212,15 @@ pod 'BMSFacebookAuthentication'
 ## 测试认证
 {: #facebook-auth-ios-testing}
 
-初始化客户端 SDK 并注册 Facebook 认证管理器后，可以开始对移动后端发起请求。
+初始化客户端 SDK 并注册 Facebook 认证管理器后，可以开始对移动后端应用程序发起请求。
 
 ### 开始之前
 {: #facebook-auth-ios-testing-before}
 
 您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
-1. 尝试在浏览器中对新创建的移动后端的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。
-例如：`http://my-mobile-backend.mybluemix.net/protected`
-<br/>使用 MobileFirst Services Starter 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
+1. 尝试在浏览器中对新创建的移动后端应用程序的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
+<br/>使用 MobileFirst Services Starter 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
 
 1. 使用 iOS 应用程序对同一端点发起请求。
 
@@ -243,7 +240,7 @@ pod 'BMSFacebookAuthentication'
  ```
 
 1. 运行应用程序。这将弹出 Facebook 登录屏幕。
-
+ 
    ![图像](images/ios-facebook-login.png)
 
    如果您当前未登录到 Facebook，那么此屏幕的外观可能略有不同。
@@ -253,7 +250,7 @@ pod 'BMSFacebookAuthentication'
 1. 	请求成功后，将在 Xcode 控制台中显示以下输出：
 
  ```
- "onAuthenticationSuccess info = Optional({
+"onAuthenticationSuccess info = Optional({
      attributes =     {
      };
      deviceId = 218227041863639;

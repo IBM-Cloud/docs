@@ -8,6 +8,10 @@ copyright:
 # iOS Objective C アプリ用の Google 認証の使用可能化
 {: #google-auth-ios}
 
+
+*最終更新日: 2016 年 6 月 16 日*
+{: .last-updated}
+
 Google Sign-In を使用して、Mobile Client Access iOS アプリのユーザーを認証します。
 
 **注:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、この SDK は今年後半には廃止され、新しい Swift SDK が後継になる予定です。新規アプリケーションには Swift SDK を使用することを強くお勧めします。このページの手順は、{{site.data.keyword.amashort}} Client Objective-C SDK に適用されます。Swift SDK を使用する手順については、[iOS アプリ用の Google 認証の使用可能化 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html) を参照してください。
@@ -129,9 +133,7 @@ Google を ID プロバイダーとして使用することを開始するには
 	</array>
 
 	```
-	両方の URL スキーマを更新します。
-
-	**重要**: `info.plist` ファイル内の既存のプロパティーをオーバーライドしないでください。オーバーラップするプロパティーがある場合は、それらのプロパティーを手動でマージする必要があります。詳細については、[Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start) を参照してください。
+	両方の URL スキーマを更新します。	**重要**: `info.plist` ファイル内の既存のプロパティーをオーバーライドしないでください。オーバーラップするプロパティーがある場合は、それらのプロパティーを手動でマージする必要があります。詳細については、[Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start) を参照してください。
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #google-auth-ios-initialize}
@@ -208,15 +210,11 @@ Google を ID プロバイダーとして使用することを開始するには
 	```Objective-C
 	- (void)applicationDidBecomeActive:(UIApplication *)application {
 		[[IMFGoogleAuthenticationHandler sharedInstance] handleDidBecomeActive];
-	}
-
-	- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url
+	}- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url
 					sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
 
 		BOOL shouldHandleGoogleURL = [GPPURLHandler handleURL:url
-					sourceApplication:sourceApplication annotation:annotation];
-
-		[[IMFGoogleAuthenticationHandler sharedInstance] handleOpenURL:shouldHandleGoogleURL];
+					sourceApplication:sourceApplication annotation:annotation];[[IMFGoogleAuthenticationHandler sharedInstance] handleOpenURL:shouldHandleGoogleURL];
 		return  shouldHandleGoogleURL;
 	}
 	```
@@ -228,9 +226,7 @@ Google を ID プロバイダーとして使用することを開始するには
 					sourceApplication: String?, annotation: AnyObject) -> Bool {
 
 		let shouldHandleGoogleURL = GPPURLHandler.handleURL(url,
-				sourceApplication: sourceApplication, annotation: annotation)
-
-		IMFGoogleAuthenticationHandler.sharedInstance()
+				sourceApplication: sourceApplication, annotation: annotation)IMFGoogleAuthenticationHandler.sharedInstance()
 							.handleOpenURL(shouldHandleGoogleURL)
 
 		return shouldHandleGoogleURL;
@@ -241,12 +237,17 @@ Google を ID プロバイダーとして使用することを開始するには
 {: #google-auth-ios-testing}
 Client SDK が初期化されたら、モバイル・バックエンドへの要求の実行を開始できます。
 
+
+
 ### 開始する前に
 {: #google-auth-ios-testing-before}
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
-1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンドの保護エンドポイントへの要求の送信を試行します。
+
+
+1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば、`http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンドの保護エンドポイントへの要求の送信を試行します。
 
 1. MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} によって保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみです。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
+
 1. iOS アプリケーションを使用して、同じエンドポイントへ要求を出します。
 
 	Objective-C:
@@ -285,17 +286,21 @@ Client SDK が初期化されたら、モバイル・バックエンドへの要
 
 	```
 
-1. アプリケーションを実行します。Google のログイン画面のポップアップが表示されます。![image](images/ios-google-login.png)
+1. アプリケーションを実行します。Google のログイン画面のポップアップが表示されます。
 
-	この画面は、デバイスに Facebook アプリをインストールしていない場合、または現在 Facebook に ログインしていない場合は少し違って見えるかもしれません。
+	![image](images/ios-google-login.png)
+
+	この画面は、デバイスに Facebook アプリをインストールしていない場合、または現在 Facebook に ログインしていない場合は少し違って見えるかもしれません。 
 
 1. **「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。
 
-1. 	ユーザーの要求は正常に処理されます。LogCat に以下の出力が表示されます。![image](images/ios-google-login-success.png)
+1. 	ユーザーの要求は正常に処理されます。LogCat に以下の出力が表示されます。
+
+	![image](images/ios-google-login-success.png)
 		
 	次のコードを追加してログアウト機能を追加することもできます。
 
- Objective C:
+	Objective C:
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
@@ -307,4 +312,6 @@ Client SDK が初期化されたら、モバイル・バックエンドへの要
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	ユーザーが Google にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Google を使用することについての許可を求めるプロンプトが出されます。その時点で、画面の右上隅にあるユーザー名をクリックすると、別のユーザーを選択してログインすることができます。ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。
+	ユーザーが Google にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Google を使用することについての許可を求めるプロンプトが出されます。その時点で、画面の右上隅にあるユーザー名をクリックすると、別のユーザーを選択してログインすることができます。
+
+	ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。

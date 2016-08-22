@@ -8,6 +8,10 @@ copyright:
 # iOS Objective C 앱에서 Google 인증 사용
 {: #google-auth-ios}
 
+
+*마지막 업데이트 날짜: 2016년 6월 16일*
+{: .last-updated}
+
 모바일 클라이언트 액세스 iOS 앱에서 사용자를 인증하려면 Google 로그인을 사용하십시오.
 
 **참고:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만 새로운 Swift SDK를 위해 올해 말해 중단될 계획입니다. 새 애플리케이션에는 Swift SDK를 사용하는 것이 좋습니다. 이 페이지의 지시사항은 {{site.data.keyword.amashort}} 클라이언트 Objective-C SDK에 적용됩니다. Swift SDK 사용에 대한 지시사항은 [iOS 앱(Swift SDK)에서 Google 인증 사용](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)을 참조하십시오.
@@ -65,7 +69,7 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. 
 
-1. **모바일 옵션**을 클릭하고 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)를 기록해 두십시오. SDK를 초기화하는 경우 이 값이 필요합니다. 
+1. **모바일 옵션**을 클릭하고 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)를 기록해 두십시오. SDK를 초기화하는 경우 해당 값이 필요합니다. 
 
 1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
 
@@ -74,7 +78,7 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 1. **iOS용 애플리케이션 ID**에서 iOS용 Google 클라이언트 ID를 지정하고 **저장**을 클릭하십시오.
 
 	참고: Google 클라이언트 id와 함께, 클라이언트 구성에 대해 반대 값도 필요합니다(아래 참조). 두 값에 모두 액세스하려면 연필 아이콘을 사용하여 예제 plist를 다운로드하십시오.
- ![info.plist 파일 다운로드](images/download_plist.png)
+		![info.plist 파일 다운로드](images/download_plist.png)
 
 ## iOS용 {{site.data.keyword.amashort}} Google 클라이언트 SDK 구성
 {: #google-auth-ios-sdk}
@@ -131,9 +135,7 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 	</array>
 
 	```
-	두 URL 스키마를 모두 업데이트하십시오.
-
-	**중요**: `info.plist` 파일의 기존 특성을 대체하지 마십시오. 중첩된 특성이 있는 경우 특성을 수동으로 병합해야 합니다. 자세한 정보는 [Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start)를 참조하십시오.
+	두 URL 스키마를 모두 업데이트하십시오.	**중요**: `info.plist` 파일의 기존 특성을 대체하지 마십시오. 중첩된 특성이 있는 경우 특성을 수동으로 병합해야 합니다. 자세한 정보는 [Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start)를 참조하십시오.
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #google-auth-ios-initialize}
@@ -243,18 +245,20 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 {: #google-auth-ios-testing}
 클라이언트 SDK가 초기화되면 모바일 백엔드 요청을 시작할 수 있습니다.
 
+
+
 ### 시작하기 전에
 {: #google-auth-ios-testing-before}
-{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용해야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 자원이 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오.
+{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용 중 이어야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 리소스가 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [리소스 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
 
 1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 데스크탑 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송하십시오.
 
-1. MobileFirst 서비스 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호되므로 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 결과적으로 데스크탑 브라우저에 `권한 없음`이 표시됩니다.
+1. MobileFirst 서비스 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호되므로 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 결과적으로 데스크탑 브라우저에 `권한 없음`이 표시됩니다. 
 
-1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오.
+1. iOS 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. 
 
- Objective-C:
+	Objective-C:
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -290,21 +294,21 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 
 	```
 
-1. 애플리케이션을 실행하십시오. Google 로그인 화면이 팝업으로 표시됩니다.
+1. 애플리케이션을 실행하십시오. Google 로그인 화면이 팝업으로 표시됩니다. 
 
- ![이미지](images/ios-google-login.png)
+	![이미지](images/ios-google-login.png)
 
-	디바이스에 Facebook 앱이 설치되어 있지 않거나 현재 Facebook에 로그인하지 않은 경우 이 화면이 약간 다를 수 있습니다.
+	디바이스에 Facebook 앱이 설치되어 있지 않거나 현재 Facebook에 로그인하지 않은 경우 이 화면이 약간 다를 수 있습니다. 
 
-1. **확인**을 클릭하면 인증을 위해 Google 사용자 ID를 사용하도록 {{site.data.keyword.amashort}}에 권한을 부여합니다.
+1. **확인**을 클릭하여 인증을 위해 Google 사용자 ID를 사용하도록 {{site.data.keyword.amashort}}에 권한을 부여합니다. 
 
 1. 	요청이 성공적으로 처리되어야 합니다. LogCat에 다음 출력이 표시되어야 합니다.
 
- ![이미지](images/ios-google-login-success.png)
+	![이미지](images/ios-google-login-success.png)
 		
-	다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다.
+	다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 
- Objective C:
+	Objective C:
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
@@ -316,6 +320,6 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	Google에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우, 사용자에게는 인증 용도로 Google을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 이 시점에, 사용자는 화면 상단 오른쪽 모서리에서 사용자 이름을 클릭하여 다른 사용자를 선택하고 이를 사용하여 로그인할 수 있습니다.
+	Google에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우, 사용자에게는 인증 용도로 Google을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 이 시점에, 사용자는 화면 상단 오른쪽 모서리에서 사용자 이름을 클릭하여 다른 사용자를 선택하고 이를 사용하여 로그인할 수 있습니다. 
 
- 로그아웃 기능에 `callBack` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 
+	로그아웃 기능에 `callBack` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 

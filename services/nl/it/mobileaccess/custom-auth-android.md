@@ -5,9 +5,14 @@ copyright:
 
 ---
 
-# Configurazione dell'SDK client {{site.data.keyword.amashort}} per Android
+# Configurazione dell'autenticazione personalizzata per l'applicazione Android {{site.data.keyword.amashort}}
 {: #custom-android}
-Configura la tua applicazione Android che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connettere la tua applicazione a {{site.data.keyword.Bluemix}}.
+
+*Ultimo aggiornamento: 17 luglio 2016*
+{: .last-updated}
+
+
+Configura la tua applicazione Android con l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connettere la tua applicazione a {{site.data.keyword.Bluemix}}.
 
 ## Prima di cominciare
 {: #before-you-begin}
@@ -21,20 +26,18 @@ Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.
 
 ## Inizializzazione dell'SDK client {{site.data.keyword.amashort}}
 {: #custom-android-initialize}
-1. Nel tuo progetto Android in Android Studio, apri il file `build.gradle` del tuo modulo applicazione.
-<br/>**Suggerimento:** il tuo progetto Android potrebbe avere due file `build.gradle`: per il progetto
-e per il modulo applicazione. Utilizza il file di modulo applicazione.
+1. Nel tuo progetto Android in Android Studio, apri il file `build.gradle` del tuo modulo applicazione (non il progetto `build.gradle`).
 
-1. Nel file `build.gradle`, trova la sezione `dependencies` e controlla se è presente la seguente dipendenza di compilazione. Aggiungi questa dipendenza, se non è già presente.
+1. Nel file `build.gradle`, trova la sezione `dependencies` e controlla che esista la seguente dipendenza:
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
         name:'core',
         version: '1.+',
         ext: 'aar',
         transitive: true
-    	// altre dipendenze  
+    	// altre dipendenze
 	}
 	```
 
@@ -54,13 +57,16 @@ Sostituisci *applicationRoute* e *applicationGUID* con i valori di **Rotta** e *
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");					
-	```
+					"applicationGUID",
+					BMSClient.REGION_UK);
+```
+Sostituisci `BMSClient.REGION_UK` con la regione appropriata.					
+	
 
 ## Interfaccia AuthenticationListener
 {: #custom-android-authlistener}
 
-L'SDK client {{site.data.keyword.amashort}} fornisce l'interfaccia `AuthenticationListener` per consentirti di implementare un flusso di autenticazione personalizzato. L'interfaccia `AuthenticationListener` espone tre metodi richiamati in fasi differenti del processo di autenticazione.
+L'SDK client {{site.data.keyword.amashort}} fornisce l'interfaccia `AuthenticationListener` per consentirti di implementare un flusso di autenticazione personalizzato. L'interfaccia `AuthenticationListener` espone tre metodi richiamati in fasi differenti durante il processo di autenticazione.
 
 ### Metodo onAuthenticationChallengeReceived
 {: #custom-onAuth}
@@ -181,14 +187,14 @@ Utilizza il nome di area di autenticazione (*realmName*) che hai specificato nel
 
 ## Verifica dell'autenticazione
 {: #custom-android-testing}
-Dopo che l'SDK client è stato inizializzato e che un AuthenticationListener personalizzato è stato registrato, puoi iniziare a effettuare richieste al tuo back-end mobile.
+Dopo che l'SDK client è stato inizializzato e che un AuthenticationListener personalizzato è stato registrato, puoi iniziare a effettuare richieste alla tua applicazione di back-end mobile.
 
 ### Prima di cominciare
 {: #custom-android-testing-before}
 Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyword.mobilefirstbp}} e di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
 
 
-1. Invia una richiesta all'endpoint protetto della tua applicazione di back-end mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
+1. Invia una richiesta all'endpoint protetto (`{applicationRoute}/protected`) dell'applicaizone di backend mobile dal tuo browser, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
 
 1. L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
 

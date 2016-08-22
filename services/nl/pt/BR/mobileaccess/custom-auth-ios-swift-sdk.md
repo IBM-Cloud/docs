@@ -5,10 +5,17 @@ copyright:
 
 ---
 
-# Configurando o {{site.data.keyword.amashort}} client SDK para iOS (Swift SDK)
+# Configurando a autenticação customizada para seu aplicativo {{site.data.keyword.amashort}} iOS (Swift SDK)
+
 {: #custom-ios}
 
-Configure seu aplicativo iOS que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.  O {{site.data.keyword.amashort}} Swift SDK recém-liberado inclui e melhora a funcionalidade fornecida pelo Mobile Client Access Objective-C SDK existente.
+*Última atualização: 18 de julho de 2016*
+{: .last-updated}
+
+
+Configure seu aplicativo iOS que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.  O
+{{site.data.keyword.amashort}} Swift SDK recém-liberado inclui e melhora a funcionalidade fornecida pelo Mobile Client Access
+Objective-C SDK existente.
 
 **Nota:** embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuar o Objective-C SDK posteriormente este ano em favor deste novo Swift SDK.
 
@@ -51,7 +58,7 @@ autenticação customizada.
 {: #custom-ios-sdk-initialize}
 
 Inicialize o SDK passando os parâmetros `applicationRoute` e
-`applicationGUID`. Um local comum, mas não obrigatório, para colocar o código de inicialização é no método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo
+`applicationGUID`. Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo
 
 1. Obter valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. Os
 valores `applicationRoute` e `applicationGUID` são
@@ -65,14 +72,15 @@ exibidos nos campos **Rota** e **GUID do app**.
  import BMSSecurity
 ```
 
-1. Inicialize o {{site.data.keyword.amashort}} client SDK, mude o gerenciador de autorização para ser MCAAuthorizationManager, defina um delegado de autenticação e registre-o. Substitua os
-valores `<applicationRoute>` e
+1. Inicialize o {{site.data.keyword.amashort}} client SDK, mude o gerenciador de autorização para ser MCAAuthorizationManager e defina uma delegação de autenticação e registre-a. Substitua os valores
+`<applicationRoute>` e
 `<applicationGUID>` pelos valores de **Rota** e
 **GUID do app** que você obteve das **Opções
 móveis** no painel {{site.data.keyword.Bluemix_notm}}. 
 
-  Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de face (![Face](/face.png "Face")) no canto superior esquerdo do painel.
-Para `<yourProtectedRealm>`, use o **Nome da região** definido no quadro **Customizado** do painel do {{site.data.keyword.amashort}}.
+  Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de face (![Face](/face.png "Face")) no canto superior esquerdo do painel. 
+
+  Para `<yourProtectedRealm>`, use o **Nome da região** definido no quadro **Customizado** do painel do {{site.data.keyword.amashort}}.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -116,20 +124,21 @@ Para `<yourProtectedRealm>`, use o **Nome da região** definido no quadro **Cust
  }   
  ```
 
-## Testando a autenticação
+## Testando a Autenticação
 {: #custom-ios-testing}
 
-Depois de inicializar o client SDK e registrar uma delegação de autenticação customizada, será possível começar a fazer solicitações ao seu backend móvel.
+Após inicializar o SDK do cliente e registrar um delegado de autenticação customizado, é possível começar a fazer solicitações ao seu
+aplicativo backend móvel.
 
 ### Antes de iniciar
 {: #custom-ios-testing-before}
 
- Deve-se ter um aplicativo criado com o modelo do {{site.data.keyword.mobilefirstbp}} e ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`.
+ Deve-se ter um aplicativo que foi criado com o modelo {{site.data.keyword.mobilefirstbp}} e um recurso que seja protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`.
 
-1. Envie uma solicitação para o terminal protegido do backend móvel em seu navegador abrindo `{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`.
-  O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} está protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
+1. Envie uma solicitação para o terminal protegido do aplicativo backend móvel em seu navegador abrindo `{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`.
+  O terminal `/protected` de um aplicativo backend móvel criado com o modelo {{site.data.keyword.mobilefirstbp}} está protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
-1. Use seu aplicativo iOS para fazer solicitação para o mesmo terminal. Inclua o
+1. Use seu aplicativo iOS para fazer solicitação ao mesmo terminal. Inclua o
 código a seguir depois de inicializar `BMSClient` e registrar a
 delegação de autenticação customizada:
 
@@ -147,7 +156,7 @@ delegação de autenticação customizada:
  request.sendWithCompletionHandler(callBack)
  ```
 
-1.	Quando suas solicitações forem bem-sucedidas, você verá a saída a seguir no console Xcode:
+1. 	Quando suas solicitações forem bem-sucedidas, você verá a saída a seguir no console Xcode:
 
  ```
  onAuthenticationSuccess info = Optional({

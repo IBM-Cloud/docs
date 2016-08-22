@@ -7,6 +7,11 @@ copyright:
 
 # 建立自訂身分提供者
 {: #custom-create}
+
+*前次更新：2016 年 6 月 16 日*
+{: .last-updated}
+
+
 若要建立自訂身分提供者，請開發可公開 RESTful API 的 Web 應用程式：
 
 ```
@@ -27,10 +32,11 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 
 `startAuthorization` API 是用來作為鑑別處理程序的首要步驟。自訂身分提供者必須使用 "challenge"、"success" 或 "failure" 狀態進行回應。
 
-為了容許鑑別處理程序的最大彈性，自訂身分提供者可以存取要求內文中行動用戶端所傳送的所有 HTTP 標頭。標頭是以下列格式所提供：
+為了允許鑑別處理程序有最大的彈性，自訂身分提供者可以存取要求內文中行動用戶端所傳送的所有 HTTP 標頭。標頭是以下列格式所提供：
 
 ```JavaScript
-{"headers" : {
+{
+    "headers" : {
     	"header1": "value1",  
     	"header2" : "value2"
     }
@@ -110,7 +116,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 ## 安全考量
 {: #custom-security}
 
-從 {{site.data.keyword.amashort}} 服務到自訂身分提供者的每一個要求都會包含授權標頭，讓自訂身分提供者可以驗證要求是來自授權來源。雖然未嚴格強制要求，但是請考慮使用 {{site.data.keyword.amashort}} 伺服器 SDK 檢測您的自訂身分提供者，來驗證授權標頭。若要使用此 SDK，自訂身分提供者應用程式必須使用 Node.js 或 Liberty for Java&trade;&trade; 進行實作，並在 {{site.data.keyword.Bluemix_notm}} 上執行。
+從 {{site.data.keyword.amashort}} 服務到自訂身分提供者的每一個要求都會包含授權標頭，讓自訂身分提供者可以驗證要求是來自已獲授權的來源。雖然未嚴格強制要求，但是請考慮使用 {{site.data.keyword.amashort}} 伺服器 SDK 檢測您的自訂身分提供者，來驗證授權標頭。若要使用此 SDK，自訂身分提供者應用程式必須使用 Node.js 或 Liberty for Java&trade; 進行實作，並在 {{site.data.keyword.Bluemix_notm}} 上執行。
 
 授權標頭包含已觸發鑑別處理程序的行動用戶端及行動應用程式的相關資訊。您可以使用安全環境定義來擷取此資料。如需相關資訊，請參閱[保護資源](protecting-resources.html)。
 
@@ -217,6 +223,6 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 ## 後續步驟
 {: #next-steps}
 * [配置 {{site.data.keyword.amashort}} 進行自訂鑑別](custom-auth-config-mca.html)
-* [配置 Android 的自訂鑑別](custom-auth-android.html)
-* [配置 iOS 的自訂鑑別](custom-auth-ios.html)
-* [配置 Cordova 的自訂鑑別](custom-auth-cordova.html)
+* [配置適用於 Android 的自訂鑑別](custom-auth-android.html)
+* [配置適用於 iOS 的自訂鑑別](custom-auth-ios.html)
+* [配置適用於 Cordova 的自訂鑑別](custom-auth-cordova.html)

@@ -7,13 +7,18 @@ copyright:
 
 # Ativando a autenticação do Google para apps Cordova
 {: #google-auth-cordova}
-Para configurar aplicativos Cordova para integração de autenticação do Google, deve-se fazer mudanças no código nativo do aplicativo Cordova, por exemplo, em Java, Objective-C, Swift. Cada plataforma deve ser configurada separadamente. Use o ambiente de desenvolvimento nativo para fazer mudanças no código nativo, por exemplo, no Android Studio ou no Xcode.
+
+*Última atualização: 28 de junho de 2016*
+{: .last-updated}
+
+Para configurar aplicativos Cordova para integração de autenticação do Google, mudanças no código nativo do aplicativo Cordova deverão ser
+feitas (Java, Objective-C ou Swift). Cada plataforma deve ser configurada separadamente. Use o ambiente de desenvolvimento nativo para fazer mudanças no código nativo, por exemplo, no Android Studio ou no Xcode.
 
 ## Antes de Começar
 {: #before-you-begin}
 Você deve ter:
-* Um projeto do Cordova que seja instrumentado com o {{site.data.keyword.amashort}} client SDK. Para obter mais informações, consulte [Configurando o plug-in do Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
-* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
+* Um projeto do Cordova que seja instrumentado com o {{site.data.keyword.amashort}} client SDK.  Para obter mais informações, consulte [Configurando o plug-in do Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
+* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
 * (opcional) Familiarize-se com as seções a seguir:
    * [Ativando a autenticação do Google em apps Android](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [Ativando a autenticação do Google em apps iOS](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
@@ -31,7 +36,7 @@ a autenticação do Google em apps Android](https://console.{DomainName}/docs/se
 * Configurando o {{site.data.keyword.amashort}} para autenticação do Google
 * Configurando o {{site.data.keyword.amashort}} client SDK para Android
 
-A única diferença quando você estiver configurando aplicativos Cordova é que deve-se inicializar o {{site.data.keyword.amashort}} client SDK em seu código JavaScript em vez de no código Java. A API do `GoogleAuthenticationManager` ainda deve ser registrada no código nativo.
+Para aplicativos Cordova, inicialize o SDK do cliente {{site.data.keyword.amashort}} em seu código JavaScript em vez de no código Java. A API do `GoogleAuthenticationManager` ainda deve ser registrada no código nativo.
 
 ## Configurando a plataforma iOS
 {: #google-auth-cordova-ios}
@@ -62,9 +67,11 @@ Selecione o **Copiar arquivos...** ?
 
 1. Siga a Etapa 2 do tutorial [Iniciar a integração do Google+ ao app iOS](https://developers.google.com/+/mobile/ios/getting-started) para integrar o Google+ iOS SDK ao projeto do Xcode.
 
-Continue com a seção **Configurando o projeto do iOS para autenticação do Google** de [Configurando a plataforma iOS para autenticação do Google](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html). Registre o `IMFGoogleAuthenticationHandler` em código nativo, conforme descrito na seção `Inicializando o {{site.data.keyword.amashort}} client SDK`. Não é necessário inicializar `IMFClient` em seu código nativo, isso será feito no código JavaScript em breve.
+Continue com a seção **Configurando o projeto do iOS para autenticação do Google** de [Configurando a plataforma iOS para autenticação do Google](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html). Registre o `IMFGoogleAuthenticationHandler` em código nativo, conforme descrito na seção `Inicializando o {{site.data.keyword.amashort}} client SDK`. Não
+inicialize `IMFClient` em seu código nativo (o cliente é inicializado em JavaScript na seção a seguir).
 
-Inclua a linha a seguir no método `application:openURL:sourceApplication:annotation` de delegado do seu aplicativo. Essa linha assegura que todos os plug-ins do Cordova serão notificados sobre os respectivos eventos.
+Inclua esta linha no método `application:openURL:sourceApplication:annotation` do seu delegado do aplicativo. Isso
+assegurará que todos os plug-ins Cordova sejam notificados dos respectivos eventos.
 
 ```
 [[ NSNotificationCenter defaultCenter] postNotification:
@@ -87,18 +94,21 @@ móveis** de seu aplicativo no painel.
 
 ## Testando a Autenticação
 {: #google-auth-cordova-test}
-Após a inicialização do client SDK, é possível começar a fazer solicitações para seu backend móvel.
+Após o SDK do cliente ser inicializado, será possível começar a fazer solicitações ao seu aplicativo backend móvel.
 
 ### Antes de Começar
 {: #google-auth-cordova-testing-before}
-Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Deve-se ter um aplicativo backend protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel no navegador da área de trabalho abrindo `{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`
+1. Tente enviar uma solicitação para o terminal protegido do seu aplicativo backend móvel em seu navegador da área de trabalho, abrindo
+`{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`
 
-1. O terminal `/protected` de um backend móvel criado com o Modelo MobileFirst Services está protegido com o {{site.data.keyword.amashort}}, portanto, ele só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
+1. O terminal `/protected` de um aplicativo backend móvel criado com o MobileFirst Services Boilerplate é protegido com o
+{{site.data.keyword.amashort}}, portanto, só pode ser acessado pelos aplicativos móveis instrumentados com o SDK do cliente
+{{site.data.keyword.amashort}}. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
 
-1. Use seu aplicativo Cordova para fazer solicitação para o mesmo terminal. Inclua o código abaixo depois de inicializar `BMSClient`.
+1. Use seu aplicativo Cordova para fazer solicitação para o mesmo terminal. Inclua o código a seguir após inicializar `BMSClient`.
 
 	```JavaScript
 	var success = function(data){
@@ -112,11 +122,11 @@ Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter u
 	```
 
 
-1. Execute o aplicativo. A tela de Login do Google é exibida como pop-up.
+1. Execute o aplicativo. A tela de login do Google é exibida.
 
 	![image](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-google-login.png)
 Essa tela poderá parecer um pouco diferente se o app Facebook não estiver instalado em seu dispositivo, ou se você não estiver atualmente conectado ao Facebook.
-1. Ao clicar em **OK** você está autorizando o {{site.data.keyword.amashort}} a usar sua identidade de usuário do Google para propósitos de autenticação.
+1. Ao clicar em **OK**, você estará autorizando o {{site.data.keyword.amashort}} a usar sua identidade do usuário do Google para fins de autenticação.
 
 1. 	Sua solicitação deve ser bem-sucedida. Dependendo da plataforma que você estiver usando, você deverá ver a saída a seguir no console LogCat/Xcode
 

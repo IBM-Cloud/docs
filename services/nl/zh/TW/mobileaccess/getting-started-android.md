@@ -11,7 +11,7 @@ copyright:
 # 設定 Android SDK
 {: #getting-started-android}
 
-*前次更新：2016 年 5 月 25 日*
+*前次更新：2016 年 7 月 18 日*
 {: .last-updated}
 
 使用 {{site.data.keyword.amashort}} 用戶端 SDK 檢測 Android 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
@@ -20,8 +20,12 @@ copyright:
 ## 開始之前
 {: #before-you-begin}
 您必須具有：
-* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端的相關資訊，請參閱[開始使用](index.html)。
-* Android Studio 專案（包括 Gradle 及 Android Studio SDK）。如需如何設定 Android 開發環境的相關資訊，請參閱 [Google 開發人員工具](http://developer.android.com/sdk/index.html)。
+* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
+
+
+
+
+* 設定成使用 Gradle 的 Android Studio 專案。如需如何設定 Android 開發環境的相關資訊，請參閱 [Google 開發人員工具](http://developer.android.com/sdk/index.html)。
 
 
 ## 安裝 {{site.data.keyword.amashort}} 用戶端 SDK
@@ -31,8 +35,7 @@ copyright:
 
 1. 建立 Android Studio 專案，或開啟現有專案。
 
-1. 開啟 `build.gradle` 檔案。
-**提示**：Android 專案可能會有兩個 `build.gradle` 檔案：用於專案和應用程式模組。請使用應用程式模組檔案。
+1. 開啟適用於您的應用程式的 `build.gradle` 檔案（**不是**專案 `build.gradle` 檔案）。
 
 1. 尋找 `build.gradle` 檔案的 **dependencies** 區段。新增 {{site.data.keyword.amashort}} 用戶端 SDK 的編譯相依關係：
 
@@ -58,7 +61,7 @@ copyright:
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #initalize-mca-sdk}
 
-將 `context`、`applicationGUID` 及 `applicationRoute` 參數傳遞給 `initialize` 方法，以起始設定 SDK。
+將 `context`、`applicationGUID`、`applicationRoute` 及 `BMSClient.REGION_UK` 參數傳遞給 `initialize` 方法，以起始設定 SDK。
 
 
 1. 從 {{site.data.keyword.Bluemix_notm}} 儀表板的主頁面，按一下應用程式。按一下**行動選項**。您需要有**應用程式路徑**及**應用程式 GUID** 值，才能起始設定 SDK。
@@ -69,17 +72,18 @@ copyright:
 ```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");
+					"applicationGUID",
+					BMSClient.REGION_UK);
 ```
+將 `BMSClient.REGION_UK` 取代為適當的地區。	
 
-
-## 對行動後端提出要求
+## 對行動後端應用程式提出要求
 {: #request}
 
-起始設定 {{site.data.keyword.amashort}} 用戶端 SDK 之後，即可開始對行動後端提出要求。
+起始設定 {{site.data.keyword.amashort}} 用戶端 SDK 之後，即可開始對行動後端應用程式提出要求。
 
-1. 嘗試將要求傳送給新行動後端的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
-<br/>使用 MobileFirst Services Starter 樣板所建立之行動後端的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。在瀏覽器中會傳回 `Unauthorized` 訊息，因為只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
+1. 嘗試將要求傳送給新的行動後端應用程式的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`。
+<br/>使用 MobileFirst Services Starter 樣板所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。在瀏覽器中會傳回 `Unauthorized` 訊息，因為只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
 
 1. 使用 Android 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 之後，請新增下列程式碼：
 

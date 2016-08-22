@@ -5,9 +5,14 @@ copyright:
 
 ---
 
-# 针对 Android 配置 {{site.data.keyword.amashort}} 客户端 SDK
+# 针对 {{site.data.keyword.amashort}} Android 应用程序配置定制认证
 {: #custom-android}
-将要使用定制认证的 Android 应用程序配置为使用 {{site.data.keyword.amashort}} 客户端 SDK，并将该应用程序连接到 {{site.data.keyword.Bluemix}}。
+
+*上次更新时间：2016 年 7 月 17 日*
+{: .last-updated}
+
+
+配置 Android 应用程序进行定制认证，以使用 {{site.data.keyword.amashort}} 客户端 SDK，并将该应用程序连接到 {{site.data.keyword.Bluemix}}。
 
 ## 开始之前
 {: #before-you-begin}
@@ -21,10 +26,9 @@ copyright:
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #custom-android-initialize}
-1. 在 Android Studio 中的 Android 项目中，打开应用程序模块的 `build.gradle` 文件。
-<br/>**提示：**Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，一个用于应用程序模块。请使用应用程序模块文件。
+1. 在 Android Studio 中的 Android 项目中，打开应用程序模块的 `build.gradle` 文件（非项目的 `build.gradle`）。
 
-1. 在 `build.gradle` 文件中，找到 `dependencies` 部分，然后检查是否存在以下编译依赖关系。如果其中还没有此依赖关系，请进行添加。
+1. 在 `build.gradle` 文件中，找到 `dependencies` 部分，然后检查是否存在以下依赖关系：
 
 	```Gradle
 	dependencies {
@@ -53,8 +57,11 @@ copyright:
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");					
-	```
+					"applicationGUID",
+					BMSClient.REGION_UK);
+```
+将 `BMSClient.REGION_UK` 替换为相应的区域。
+	
 
 ## AuthenticationListener 接口
 {: #custom-android-authlistener}
@@ -80,6 +87,7 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 ### onAuthenticationSuccess 方法
 {: #custom-android-authlistener-onsuccess}
 认证成功后调用此方法。自变量包括“Android 上下文”和可选的 JSONObject（用于包含有关认证成功的扩展信息）。
+
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
@@ -87,6 +95,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 ### onAuthenticationFailure 方法
 {: #custom-android-authlistener-onfail}
 认证失败后调用此方法。自变量包括“Android 上下文”和可选的 JSONObject（用于包含有关认证失败的扩展信息）。
+
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
@@ -117,26 +126,17 @@ import com.ibm.mobilefirstplatform.clientsdk.android.security.api.Authentication
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class CustomAuthenticationListener implements AuthenticationListener {
-	@Override
+public class CustomAuthenticationListener implements AuthenticationListener {@Override
 	public void onAuthenticationChallengeReceived (AuthenticationContext authContext,
-											JSONObject challenge, Context context) {
-
-		log("onAuthenticationChallengeResceived :: " + challenge.toString());
-
-		// In this sample the AuthenticationListener immediatelly returns a hardcoded
+											JSONObject challenge, Context context) {log("onAuthenticationChallengeResceived :: " + challenge.toString());// In this sample the AuthenticationListener immediatelly returns a hardcoded
 		// set of credentials. In a real life scenario this is where developer would
 		// show a login screen, collect credentials and invoke
-		// authContext.submitAuthenticationChallengeAnswer() API
-
-		JSONObject challengeResponse = new JSONObject();
+		// authContext.submitAuthenticationChallengeAnswer() APIJSONObject challengeResponse = new JSONObject();
 		try {
 			challengeResponse.put("username", "john.lennon");
 			challengeResponse.put("password", "12345");
 			authContext.submitAuthenticationChallengeAnswer(challengeResponse);
-		} catch (JSONException e){
-
-			// In case there was a failure collecting credentials you need to report
+		} catch (JSONException e){// In case there was a failure collecting credentials you need to report
 			// it back to the AuthenticationContext. Otherwise Mobile Client
 			// Access client SDK will remain in a waiting-for-credentials state
 			// forever
@@ -149,9 +149,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	@Override
 	public void onAuthenticationSuccess (Context context, JSONObject info) {
 		log("onAuthenticationSuccess :: " + info.toString());
-	}
-
-	@Override
+	}@Override
 	public void onAuthenticationFailure (Context context, JSONObject info) {
 		log("onAuthenticationFailure :: " + info.toString());
 	}
@@ -177,14 +175,14 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 
 ## 测试认证
 {: #custom-android-testing}
-初始化客户端 SDK 并注册定制 AuthenticationListener 后，可以开始对移动后端发起请求。
+初始化客户端 SDK 并注册定制 AuthenticationListener 后，可以开始对移动后端应用程序发起请求。
 
 ### 开始之前
 {: #custom-android-testing-before}
-必须具有使用 {{site.data.keyword.mobilefirstbp}} 样板创建的应用程序，并且在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。
+您必须具有使用 {{site.data.keyword.mobilefirstbp}} 样板创建的应用程序，并且在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。
 
 
-1. 通过在浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。
+1. 通过浏览器向移动后端应用程序的受保护端点 (`{applicationRoute}/protected`) 发送请求，例如 `http://my-mobile-backend.mybluemix.net/protected`。
 
 1. 使用 {{site.data.keyword.mobilefirstbp}} 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，浏览器中会显示 `Unauthorized` 消息。
 
