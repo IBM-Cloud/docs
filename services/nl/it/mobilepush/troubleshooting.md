@@ -7,8 +7,10 @@ copyright:
 
 # Risoluzione dei problemi
 {: #errors}
+*Ultimo aggiornamento: 14 giugno 2016*
+{: .last-updated}
 
-Utilizza questa sezione come una guida per risolvere i problemi comuni di Push Notification.
+Utilizza questa sezione come una guida per risolvere i problemi comuni della notifica di push.
 
 
 ### Si è verificato un errore server interno. Per favore contatta l'amministratore. (Codice errore interno: PUSHD102E)

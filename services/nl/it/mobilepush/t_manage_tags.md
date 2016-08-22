@@ -7,6 +7,8 @@ copyright:
 
 # Gestione delle tag
 {: #manage_tags}
+*Ultimo aggiornamento: 14 giugno 2016*
+{: .last-updated}
 
 Utilizza il dashboard Push per creare ed eliminare tag per la tua applicazione e avviare quindi le notifiche basate sulle tag. La notifica basata sulle tag viene ricevuta dal dispositivo che ha sottoscritto la tag.
 
@@ -62,15 +64,15 @@ Utilizza l'API **getTags** per ottenere un elenco delle tag disponibili a cui pu
 
 ```
 // Ottieni un elenco di tag disponibili a cui può sottoscriversi il dispositivo
-push.getTags(new MFPPushResponseListener<List<String>>(){  
+push.getTags(new MFPPushResponseListener<List<String>>(){
    @Override
    public void onSuccess(List<String> tags){
-   updateTextView("Retrieved available tags: " + tags);  
+   updateTextView("Retrieved available tags: " + tags);
    System.out.println("Available tags are: "+tags);
-   availableTags = tags;   
-   subscribeToTag();   
-  }    
-  @Override    
+   availableTags = tags;
+   subscribeToTag();
+  }
+  @Override
   public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
@@ -127,8 +129,8 @@ Utilizza la seguente API **retrieveAvailableTags** per ottenere un elenco delle 
 //Ottieni un elenco di tag disponibili a cui può sottoscriversi il dispositivo
 [push retrieveAvailableTagsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error){
- if(error){    
-   [self  updateMessage:error.description];  
+ if(error){
+   [self updateMessage:error.description];
  } else {
    [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
@@ -337,5 +339,5 @@ Crea le tag sulla schermata **Tag**. Per informazioni su come creare le tag, ved
 1. Dal dashboard **Push Notification**, fai clic sulla scheda **Notifications**.
 1. Seleziona l'opzione **Tags** per inviare notifiche basate sulle tag.
 1. Nel campo **Search**, cerca le tag che vuoi utilizzare e fai quindi clic sul pulsante **+Add**.![Schermata notifiche](images/tag_notification.jpg)
-1. Vai all'area **Create Your Notifications** e, nel campo **Message Text**, immetti il testo che vuoi inviare nella tua notifica.
+1. Nel campo **Message Text**, immetti il testo che deve essere inviato come notifica ai destinatari sottoscritti.
 1. Fai clic sul pulsante **Send**.
