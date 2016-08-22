@@ -15,75 +15,78 @@ servizio {{site.data.keyword.mobileanalytics_short}}. Quando i dati vengono dist
 dashboard {{site.data.keyword.mobileanalytics_short}} per ottenere delle approfondite informazioni di analisi delle applicazioni mobili, dei dispositivi e dei log client.
 {: shortdesc}
 
-## Visualizzazione dei dati con i grafici personalizzati
+<!--
+
+## Visualizing data with custom charts
 {: #custom-charts}
 
-Puoi visualizzare i dati di analisi raccolti nel tuo repository di analisi. Questa visualizzazione è un modo efficace per ispezionare i dati per specifici casi d'uso. Puoi creare dei grafici con i dati già raccolti da Operational Analytics, in aggiunta ai dati personalizzati da te notificati.
+You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
-### Creazione di grafici personalizzati per i log client
+
+### Creating custom charts for client logs
 {: #custom-charts-client-logs}
 
-Puoi creare un grafico personalizzato per i log client che contengono le informazioni di log inviate con l'API Logger per la piattaforma. Le informazioni di log includono anche le informazioni contestuali sul dispositivo, compresi ambiente, nome dell'applicazione e versione dell'applicazione.
+You can create a custom chart for client logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
-In questo esempio, utilizzi i dati dei log client per creare un diagramma di flusso. Il grafico finale mostra la distribuzione dei livelli di log in una specifica applicazione. Hai anche a tua disposizione i seguenti dati da visualizzare in un grafico:
+In this example, you use client log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
 
-* Dati specifici
-  * Livello di log
-* Dati messaggio
-  * Data/Ora
-* Dati contestuali del sistema operativo del dispositivo
-  * Nome applicazione
-  * Versione applicazione
-  * Sistema operativo dispositivo
-* Dati di contesto del dispositivo
-  * ID dispositivo
-  * Modello dispositivo
-  * Versione del sistema operativo del dispositivo
+* Specific data
+  * Log level
+* Message data
+  * Timestamp
+* Device OS contextual data
+  * Application name
+  * Application version
+  * Device OS
+* Device contextual data
+  * Device ID
+  * Device model
+  * Device OS version
 
 
-1. Accertati di disporre di un'applicazione che stia raccogliendo i log dispositivo o l'analisi.
-2. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic sulla scheda **Grafici personalizzati** nella pagina **Dashboard**. Puoi creare un grafico basato sui messaggi di analisi inviati al server.
-3. Fai clic su **Crea grafico** per creare un nuovo grafico personalizzato e fornisci i seguenti valori:
-  * Titolo grafico: Applicazione e livelli di log
-  * Tipo di evento: Log client
-  * Tipo di grafico: Diagramma di flusso
-5. Fai clic sulla scheda **Definizione grafico** e fornisci i seguenti valori:
-  * Origine: Nome applicazione
-  * Destinazione: Livello di log
-  * Proprietà: il tuo nome applicazione
-7. Fai clic su **Salva**
+1. Make sure that you have an application that is collecting device logs or gathering analytics.
+2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
+3. Click **Create Chart** to create a new custom chart and provide the following values:
+  * Chart Title: Application and Log Levels
+  * Event Type: Client Logs
+  * Chart Type: Flow Chart
+5. Click the **Chart Definition** tab and provide the following values:
+  * Source: Application Name
+  * Destination: Log Level
+  * Property: your app name
+7. Click **Save**
 
-### Esportazione di dati personalizzati
+### Exporting custom data
 {: #export-custom-data}
 
-Puoi esportare i dati da ciascun grafico personalizzato in formato JSON, XML o CSV.
+You can export the data from each custom chart into JSON, XML, or CSV format.
 
-La struttura dei dati esportati dipende dal grafico in fase di esportazione. Per esportare i dati, fai clic sull'icona di esportazione nell'angolo superiore destro del grafico personalizzato.
+The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
 
 
 
-### Esportazione ed importazione di definizioni di grafico personalizzato
+### Exporting and importing custom chart definitions
 {: #export-import-custom}
 
-Puoi importare ed esportare definizioni di grafico personalizzato in modo programmatico oppure manualmente nel dashboard {{site.data.keyword.mobileanalytics_short}}.
+You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
-Accertati di disporre di almeno un grafico personalizzato nel dashboard {{site.data.keyword.mobileanalytics_short}}.
-In questo esempio, esporti ed importi manualmente delle definizioni di grafico personalizzate.
+Ensure that you have at least one custom chart in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
+In this example, you manually export and import custom chart definitions.
 
-1. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic sulla scheda **Grafici personalizzati** nella pagina **Dashboard**.
-2. Per esportare le definizioni di grafico personalizzato, fai clic su **Esporta grafici**. Questa azione visualizza
-una finestra di dialogo per salvare un file `customChartsDefinition.json`.
-3. Scegli un'ubicazione per salvare il file.
-4. Fai clic sull'icona **Elimina grafico** accanto a ciascun grafico personalizzato per eliminare tutti i grafici personalizzati.
-5. Per importare una definizione di grafico personalizzato, fai clic su **Importa grafici**. Questa azione visualizza una finestra di dialogo per scegliere un file.
-6. Scegli il file `customChartsDefinition.json` da te precedentemente esportato da aprire.
+1. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab in the **Dashboard** page.
+2. To export the custom chart definitions, click **Export Charts**. This action displays a dialog to save a `customChartsDefinition.json` file.
+3. Choose a location to save the file.
+4. Click the **Delete Chart** icon next to each custom chart to delete all custom charts.
+5. To import a custom chart definition, click **Import Charts**. This action displays a dialog to choose a file.
+6. Choose the `customChartsDefinition.json` file that you previously exported to open.
 
-Puoi anche esportare e importare definizioni di grafico personalizzato in modo programmatico utilizzando il client HTTP che preferisci (ad esempio CURL o postman):
-* L'endpoint GET per l'esportazione è `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
-* L'endpoint POST per l'importazione è `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
+You can also export and import custom chart definitions programmatically by using your HTTP client of choice (for example, CURL or postman):
+* The GET endpoint for export is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
+* The POST endpoint for import is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
 
-**Nota:**: se importi una definizione di grafico personalizzato esistente, finisci con il duplicare delle definizioni, il che significa anche che il
-dashboard {{site.data.keyword.mobileanalytics_short}} mostra dei grafici personalizzati duplicati.
+**Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
+
+-->
 
 ## Impostazione di avvisi
 {: #alerts}

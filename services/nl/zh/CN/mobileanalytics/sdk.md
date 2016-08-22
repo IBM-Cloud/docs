@@ -17,17 +17,18 @@ copyright:
 
 1.  预定义的数据：这种类别包含适用于所有应用程序的通用使用情况和设备信息。在这种类别中存在设备元数据（操作系统和设备模型）和使用情况数据（活动用户和应用程序会话），可指示应用程序使用的数量、频率和持续时间。当您在应用程序中初始化 {{site.data.keyword.mobileanalytics_short}} SDK 之后，会自动收集预定义的数据。
 2. 定制事件：这种类别包含您自行定义且特定于您应用程序的数据。此数据代表您应用程序中发生的事件，如查看页面、点击按钮或应用程序内采购。除了在您的应用程序中初始化 {{site.data.keyword.mobileanalytics_short}} SDK 之外，您还必须对要跟踪的每一个定制事件，添加一行代码。
-3. 客户机日志消息：这种类别使得开发人员可以在整个应用程序中添加记录定制消息的代码行，以协助开发和调试。开发人员向每一则日志消息分配严重性/详细程度级别，且后续可以根据已分配的级别对消息进行过滤，或者通过配置应用程序，忽略低于给定日志级别的消息，来保留存储空间。要收集客户机日志数据，您必须在应用程序内初始化 {{site.data.keyword.mobileanalytics_short}} SDK，并对每一则日志消息，添加一行代码。
+3. 客户机日志消息：这种类别使得开发人员可以在整个应用程序中添加记录定制消息的代码行，以协助开发和调试。开发人员会为每一则日志消息分配严重性/详细程度级别，这样就可以根据所分配的级别对消息进行过滤，或者通过将应用程序配置为忽略低于给定日志级别的消息来保留存储空间。要收集客户机日志数据，您必须在应用程序内初始化 {{site.data.keyword.mobileanalytics_short}} SDK，并对每一则日志消息，添加一行代码。
 
 目前，Android、iOS 和 WatchOS 可以使用 SDK。
 
-## 识别客户端密钥值
+## 识别服务凭证访问密钥
 {: #analytics-clientkey}
 
-在设置客户端 SDK 之前，先识别您的**客户端密钥**值。初始化客户端 SDK 时，需要客户端密钥。
+在设置客户端 SDK 之前，先识别您的**访问密钥**值。初始化客户端 SDK 时，需要访问密钥。
+
 1. 打开 {{site.data.keyword.mobileanalytics_short}} 服务仪表板。
-2. 单击扳手图标，以打开“API 密钥”选项卡。
-3. 在“API 密钥”选项卡中，注意客户端密钥值。
+2. 单击**服务凭证**选项卡。
+3. 复制您的访问密钥值。
 
 
 ## 初始化 Android 应用程序以收集分析
@@ -35,7 +36,7 @@ copyright:
 
 初始化应用程序以启用发送日志到 {{site.data.keyword.mobileanalytics_short}} 服务。
 
-1. 通过将下列 `import` 语句添加到项目文件的顶端，导入客户端 SDK：
+1. 通过将以下 `import` 语句添加到项目文件的开头，导入客户端 SDK：
 
   ```
   import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
@@ -60,7 +61,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. 使用 Android 应用程序对象并为其提供应用程序名称，来初始化 Analytics。您还需要[**客户端密钥**](#analytics-clientkey)值。
+3. 使用 Android 应用程序对象并为其提供应用程序名称，来初始化 Analytics。您还需要[**访问密钥**](#analytics-clientkey)值。
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -75,7 +76,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
 初始化应用程序以启用发送日志到 {{site.data.keyword.mobileanalytics_short}} 服务。iOS 和 watchOS 可以使用 Swift SDK。
 
-1. 通过将下列 `import` 语句添加到 `AppDelegate.swift` 项目文件的顶端，导入 `BMSCore` 和 `BMSAnalytics` 框架：
+1. 通过将以下 `import` 语句添加到 `AppDelegate.swift` 项目文件的开头，导入 `BMSCore` 和 `BMSAnalytics` 框架：
 
   ```Swift
   import BMSCore
@@ -98,7 +99,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. 通过为 Analytics 提供您的移动应用程序名称，对其进行初始化。您还需要[**客户端密钥**](#analytics-clientkey)值。
+3. 通过为 Analytics 提供您的移动应用程序名称，对其进行初始化。您还需要[**访问密钥**](#analytics-clientkey)值。
 
   应用程序名称用作过滤器，在 {{site.data.keyword.mobileanalytics_short}} 仪表板中搜索客户机日志。通过跨平台（例如 Android 和 iOS）使用相同的应用程序名称，您可以在相同的名称下，查看该应用程序的所有日志，而无论日志发自哪个平台。
 
@@ -262,7 +263,7 @@ Logger.storeLogs(true);
 // 缺省设置为 Logger.LEVEL.DEBUG
 Logger.setLogLevel(Logger.LEVEL.INFO);
 
-// 将日志发送至 {{site.data.keyword.mobileanalytics_short}} 服务
+// 将日志发送到 {{site.data.keyword.mobileanalytics_short}} 服务
 Logger.send();
 ```
 
@@ -286,7 +287,7 @@ logger2.info("info message");
 {: ios-logger-sample}
 
 ```
-// 配置记录器，将日志保存到设备，以便可以在以后将它们发送至 {{site.data.keyword.mobileanalytics_short}} 服务
+// 配置记录器，将日志保存到设备，以便可以在以后将它们发送到 {{site.data.keyword.mobileanalytics_short}} 服务
 // 缺省情况下会禁用；设置为 true 可启用
 Logger.logStoreEnabled = true
 
@@ -294,7 +295,7 @@ Logger.logStoreEnabled = true
 // 缺省设置为 LogLevel.Debug
 Logger.logLevelFilter = LogLevel.Info
 
-// 将日志发送至 {{site.data.keyword.mobileanalytics_short}} 服务
+// 将日志发送到 {{site.data.keyword.mobileanalytics_short}} 服务
 Logger.send()
 ```
 
@@ -396,7 +397,7 @@ Analytics.userIdentity = nil
 
   1. Visit the dashboard for the {{site.data.keyword.mobileanalytics_short}} service where you want to send analytics data and note the browser URL for the dashboard.
   2. Determine the value for reporting analytics, as follows:
-  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before ``/analytics/console/dashboard``.  
+  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before `/analytics/console/dashboard`.  
 
   		For example, if the dashboard URL is: `http://mobile-analytics-dashboard.ng.bluemix.net/analytics/console/dashboard?instanceId=12345abcde`
       {: screen}
@@ -504,4 +505,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## API 参考
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

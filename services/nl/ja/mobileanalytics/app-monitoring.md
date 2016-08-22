@@ -12,73 +12,78 @@ copyright:
 {{site.data.keyword.mobileanalytics_full}} には、モバイル・アプリケーションのモニタリングや分析を行う機能が備えられています。{{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用して、クライアント・ログを記録したりデータをモニターしたりできます。開発者は、このデータを {{site.data.keyword.mobileanalytics_short}} サービスに送信するタイミングを制御できます。データが {{site.data.keyword.mobileanalytics_short}} に送信されると、{{site.data.keyword.mobileanalytics_short}} ダッシュボードを使用して、モバイル・アプリケーションや、デバイス、クライアント・ログに関する分析の洞察を得ることができます。
 {: shortdesc}
 
-## カスタム・グラフによるデータの視覚化
+<!--
+
+## Visualizing data with custom charts
 {: #custom-charts}
 
-分析リポジトリーに収集された分析データを視覚化することができます。この視覚化は、特定のユース・ケースのデータを調べるための強力な方法です。グラフの作成は、報告するカスタム・データだけでなく、Operational Analytics によって既に収集されているデータを使って行えます。
+You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
-### クライアント・ログのカスタム・グラフの作成
+
+### Creating custom charts for client logs
 {: #custom-charts-client-logs}
 
-プラットフォームのロガー API を使用して送信されるログ情報を含むクライアント・ログのカスタム・グラフを作成できます。ログ情報には、環境やアプリ名、アプリのバージョンなどの、デバイスに関するコンテキスト情報も含まれます。
+You can create a custom chart for client logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
-この例では、クライアント・ログ・データを使用して、フローチャートを作成します。最終グラフには、特定のアプリのログ・レベルの分布が示されます。次のデータもグラフに表示できます。
+In this example, you use client log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
 
-* 特定のデータ
-  * ログ・レベル
-* メッセージ・データ
-  * タイム・スタンプ
-* デバイスの OS のコンテキスト・データ
-  * アプリケーション名
-  * アプリケーションのバージョン
-  * デバイスの OS
-* デバイスのコンテキスト・データ
-  * デバイス ID
-  * デバイス・モデル
-  * デバイスの OS バージョン
+* Specific data
+  * Log level
+* Message data
+  * Timestamp
+* Device OS contextual data
+  * Application name
+  * Application version
+  * Device OS
+* Device contextual data
+  * Device ID
+  * Device model
+  * Device OS version
 
 
-1. デバイス・ログまたは分析を収集するアプリケーションがあることを確認します。
-2. {{site.data.keyword.mobileanalytics_short}} コンソールの、**「ダッシュボード」**ページで、**「カスタム・グラフ (Custom Charts)」**タブをクリックします。サーバーに送信された分析メッセージに基づくグラフを作成できます。
-3. **「グラフの作成 (Create Chart)」**をクリックして、新規カスタム・グラフを作成し、以下の値を入力します。
-  * グラフのタイトル: アプリケーションとログ・レベル
-  * イベント・タイプ: クライアント・ログ
-  * グラフ・タイプ: フローチャート
-5. **「グラフの定義 (Chart Definition)」**タブをクリックし、以下の値を入力します。
-  * ソース : アプリケーション名
-  * 宛先: ログ・レベル
-  * プロパティー: アプリ名
-7. **「保存」**をクリックします。
+1. Make sure that you have an application that is collecting device logs or gathering analytics.
+2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
+3. Click **Create Chart** to create a new custom chart and provide the following values:
+  * Chart Title: Application and Log Levels
+  * Event Type: Client Logs
+  * Chart Type: Flow Chart
+5. Click the **Chart Definition** tab and provide the following values:
+  * Source: Application Name
+  * Destination: Log Level
+  * Property: your app name
+7. Click **Save**
 
-### カスタム・データのエクスポート
+### Exporting custom data
 {: #export-custom-data}
 
-各カスタム・グラフから JSON、XML、または CSV 形式にデータをエクスポートできます。
+You can export the data from each custom chart into JSON, XML, or CSV format.
 
-エクスポートされるデータの構造は、エクスポートされているグラフによって異なります。データをエクスポートするには、カスタム・グラフの右上のエクスポート・アイコンをクリックします。
+The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
 
 
 
-### カスタム・グラフ定義のエクスポートとインポート
+### Exporting and importing custom chart definitions
 {: #export-import-custom}
 
-カスタム・グラフ定義のインポートとエクスポートは、プログラムで行うことも、{{site.data.keyword.mobileanalytics_short}} ダッシュボードを使って手動で行うこともできます。
+You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
-{{site.data.keyword.mobileanalytics_short}} ダッシュボードに少なくとも 1 つのカスタム・グラフがあることを確認します。
-この例では、カスタム・グラフ定義を手動でエクスポートおよびインポートします。
+Ensure that you have at least one custom chart in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
+In this example, you manually export and import custom chart definitions.
 
-1. {{site.data.keyword.mobileanalytics_short}} コンソールの**「ダッシュボード」**ページの**「カスタム・グラフ (Custom Charts)」**タブをクリックします。
-2. カスタム・グラフ定義をエクスポートするには、**「グラフのエクスポート (Export Charts)」**をクリックします。このアクションにより、`customChartsDefinition.json` ファイルを保存するためのダイアログが表示されます。
-3. ファイルの保存先を選択します。
-4. すべてのカスタム・グラフを削除するには、各カスタム・グラフの横にある**「グラフの削除 (Delete Chart)」**アイコンをクリックします。
-5. カスタム・グラフ定義をインポートするには、**「グラフのインポート (Import Charts)」**をクリックします。このアクションにより、ファイルを選択するためのダイアログが表示されます。
-6. 開く事前にエクスポートしていた `customChartsDefinition.json` ファイルを選択します。
+1. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab in the **Dashboard** page.
+2. To export the custom chart definitions, click **Export Charts**. This action displays a dialog to save a `customChartsDefinition.json` file.
+3. Choose a location to save the file.
+4. Click the **Delete Chart** icon next to each custom chart to delete all custom charts.
+5. To import a custom chart definition, click **Import Charts**. This action displays a dialog to choose a file.
+6. Choose the `customChartsDefinition.json` file that you previously exported to open.
 
-選択する HTTP クライアント (例えば、CURL または postman) を使用してカスタム・グラフ定義をプログラムでエクスポートおよびインポートすることもできます。
-* エクスポートの GET エンドポイントは `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/` です。
-* インポートの POST エンドポイントは `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import` です。
+You can also export and import custom chart definitions programmatically by using your HTTP client of choice (for example, CURL or postman):
+* The GET endpoint for export is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
+* The POST endpoint for import is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
 
-**注**: 既存のカスタム・グラフ定義をインポートすると、定義が重複してしまうことになります。定義が重複すると、{{site.data.keyword.mobileanalytics_short}} ダッシュボードに表示されるカスタム・グラフも重複します。
+**Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
+
+-->
 
 ## アラートの設定
 {: #alerts}

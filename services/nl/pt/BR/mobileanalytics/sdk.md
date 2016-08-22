@@ -17,17 +17,20 @@ O {{site.data.keyword.mobileanalytics_short}} permite coletar três categorias d
 
 1.  Dados predefinidos - esta categoria inclui informações sobre uso genérico e dispositivo que se aplicam a todos os aplicativos. Nessa categoria estão os metadados do dispositivo (sistema operacional e modelo de dispositivo) e dados de uso (usuários ativos e sessões de aplicativo) que indicam o volume, frequência ou duração de uso do aplicativo. Os dados predefinidos são coletados automaticamente após a inicialização do SDK do {{site.data.keyword.mobileanalytics_short}} em seu aplicativo.
 2. Eventos customizados - esta categoria inclui dados que você mesmo define e que são específicos para seu aplicativo. Esses dados representam eventos que ocorrem no aplicativo, como visualizações da página, toques do botão ou compras do aplicativo. Além de inicializar o SDK do {{site.data.keyword.mobileanalytics_short}} no aplicativo, deve-se incluir uma linha de código para cada evento customizado que você desejar rastrear.
-3. Mensagens de log do cliente - esta categoria permite que o desenvolvedor inclua linhas de código em todo o aplicativo que registram mensagens customizadas para ajudar no desenvolvimento e na depuração. O desenvolvedor designa um nível de severidade/detalhamento a cada mensagem de log e pode, subsequentemente, filtrar mensagens de filtro por nível designado ou preservar espaço de armazenamento configurando o aplicativo para ignorar mensagens que estão abaixo de um determinado nível de log. Para coletar dados do log do cliente, deve-se inicializar o SDK do {{site.data.keyword.mobileanalytics_short}} dentro do aplicativo, bem como incluir uma linha de código para cada mensagem de log.
+3. Mensagens de log do cliente - esta categoria permite que o desenvolvedor inclua linhas de código em todo o aplicativo que registram mensagens customizadas para ajudar no desenvolvimento e na depuração. 
+O desenvolvedor designa um nível de severidade/detalhamento a cada mensagem de log e pode, subsequentemente, filtrar mensagens de filtro por nível designado ou preservar espaço de armazenamento configurando o aplicativo para ignorar mensagens que estão abaixo de um determinado nível de log. Para coletar dados do log do cliente, deve-se inicializar o SDK do {{site.data.keyword.mobileanalytics_short}} dentro do aplicativo, bem como incluir uma linha de código para cada mensagem de log.
 
 Atualmente os SDKs estão disponíveis para Android, iOS e WatchOS.
 
-## Identificando seu valor da Chave do cliente
+## Identificando a sua chave de acesso Credencias de serviço
 {: #analytics-clientkey}
 
-Identifique o valor da **Chave do cliente** antes de configurar o SDK do cliente. A Chave do cliente é necessária para inicializar o SDK do cliente.
+Identifique o valor da **chave de acesso** antes de configurar o SDK do cliente. A
+chave de acesso é necessária para inicializar o SDK do cliente.
+
 1. Abra o painel de serviço do {{site.data.keyword.mobileanalytics_short}}.
-2. Clique no ícone de chave inglesa para abrir a guia Chaves API.
-3. Na guia Chaves API, anote o valor da Chave do cliente.
+2. Clique na guia **Credenciais de serviço**.
+3. Copie o seu valor da chave de acesso.
 
 
 ## Inicializando o aplicativo Android para coletar análise
@@ -35,7 +38,9 @@ Identifique o valor da **Chave do cliente** antes de configurar o SDK do cliente
 
 Inicialize seu aplicativo para permitir o envio de logs para o serviço {{site.data.keyword.mobileanalytics_short}}.
 
-1. Importe o SDK do cliente incluindo a instrução `import` a seguir na parte superior do arquivo de projeto:
+1. Importe o SDK do cliente incluindo a instrução
+`import` a seguir, na parte superior do seu arquivo
+de projeto:
 
   ```
   import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
@@ -60,10 +65,13 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Inicialize o Analytics usando seu objeto de aplicativo Android e fornecendo a ele o nome de seu aplicativo. Também é necessário o valor da [**Chave do cliente**](#analytics-clientkey).
+3. Inicialize o Analytics usando seu objeto de aplicativo Android e fornecendo a ele o nome de seu aplicativo. 
+Também é necessário o valor da
+[**chave de acesso**](#analytics-clientkey).
 	
-	```Java 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE); 	// In this code example, Analytics is configured to record lifecycle
-events.
+	```Java
+	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
+	// In this code example, Analytics is configured to record lifecycle events.
 	```
   {: codeblock}
 
@@ -74,7 +82,9 @@ events.
 
 Inicialize seu aplicativo para permitir o envio de logs para o serviço {{site.data.keyword.mobileanalytics_short}}. O SDK do Swift está disponível para iOS e watchOS.
 
-1. Importe as estruturas `BMSCore` e `BMSAnalytics` incluindo as instruções `import` na parte superior do arquivo de projeto `AppDelegate.swift`:
+1. Importe as estruturas `BMSCore` e
+`BMSAnalytics` incluindo as instruções
+`import` a seguir, na parte superior do arquivo de projeto `AppDelegate.swift`:
 
   ```Swift
   import BMSCore
@@ -97,7 +107,9 @@ Inicialize seu aplicativo para permitir o envio de logs para o serviço {{site.d
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Inicialize o Analytics fornecendo a ele o nome de aplicativo móvel. Também é necessário o valor da [**Chave do cliente**](#analytics-clientkey).
+3. Inicialize o Analytics fornecendo a ele o nome de aplicativo móvel. Também é necessário o valor da
+[**chave de
+acesso](#analytics-clientkey).
 
   O nome do aplicativo é usado como um filtro para procurar logs do cliente em seu Painel do {{site.data.keyword.mobileanalytics_short}}. Usando o mesmo nome de aplicativo entre as plataformas (por exemplo, Android e iOS), é possível ver todos os logs desse aplicativo com o mesmo nome, independentemente de qual plataforma os logs foram enviados.
 
@@ -170,7 +182,8 @@ eventJSONObject.put("customProperty" , "propertyValue");
 
 // Enable recording of usage analytics Analytics.enabled = true
 
-// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service Analytics.send()
+// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
+Analytics.send()
 ```
 
 Amostra de análise de uso para registrar um evento:
@@ -242,12 +255,15 @@ Amostra de análise de uso para registrar um evento:
 {: #android-logger-sample}
 
 ```
-// Configure Logger to save logs to the device so that they // can later be sent to the {{site.data.keyword.mobileanalytics_short}} service // Disabled by default;
-set to true to enable Logger.storeLogs(true);
+// Configure Logger to save logs to the device so that they 
+// can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
+// Disabled by default; set to true to enable
+Logger.storeLogs(true);
 
 // Change the minimum log level (optional) // The default setting is Logger.LEVEL.DEBUG Logger.setLogLevel(Logger.LEVEL.INFO);
 
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service Logger.send();
+// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
+Logger.send();
 ```
 
 Cenários de criador de logs:
@@ -264,12 +280,14 @@ logged because the logLevelFilter is set to Info logger2.info("info message");
 {: ios-logger-sample}
 
 ```
-// Configure Logger to save logs to the device so that they can later be sent to the {{site.data.keyword.mobileanalytics_short}} service // Disabled by default; set
-to true to enable Logger.logStoreEnabled = true
+// Configure Logger to save logs to the device so that they can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
+// Disabled by default; set to true to enable
+Logger.logStoreEnabled = true
 
 // Change the minimum log level (optional) // The default setting is LogLevel.Debug Logger.logLevelFilter = LogLevel.Info
 
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service Logger.send()
+// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
+Logger.send()
 ```
 
 Cenários de criador de logs:
@@ -474,4 +492,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## Referência da API
 {: #api}
-* [API REST](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

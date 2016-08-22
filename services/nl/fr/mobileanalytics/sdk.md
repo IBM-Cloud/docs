@@ -21,13 +21,14 @@ Les logiciels SDK de {{site.data.keyword.mobileanalytics_full}} vous permettent 
 
 Actuellement, les logiciels SDK sont disponibles pour Android, iOS et WatchOS.
 
-## Identification de la valeur de clé de votre client
+## Identification de votre clé d'accès de données d'identification pour le service
 {: #analytics-clientkey}
 
-Identifiez la valeur de **clé de votre client** avant de configurer le logiciel SDK du client. La clé du client est requise pour initialiser le logiciel SDK du client.
+Identifiez la valeur de votre **clé d'accès** avant de configurer le logiciel SDK du client. La clé d'accès est requise pour initialiser le logiciel SDK du client.
+
 1. Ouvrez votre tableau de bord de service {{site.data.keyword.mobileanalytics_short}}.
-2. Cliquez sur l'icône en forme de clé pour ouvrir l'onglet Clés d'API.
-3. Dans l'onglet Clés d'API, notez la valeur de clé du client.
+2. Cliquez sur l'onglet **Données d'identification pour le service**. 
+3. Copiez la valeur de votre clé d'accès. 
 
 
 ## Initialisation de votre application Android pour la collecte d'analyses
@@ -60,12 +61,12 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Initialisez Analytics en utilisant votre objet d'application Android et en lui attribuant le nom de votre application. Vous avez également besoin de la valeur de [**clé du client**](#analytics-clientkey).
+3. Initialisez Analytics en utilisant votre objet d'application Android et en lui attribuant le nom de votre application. Vous avez également besoin de la valeur de [**clé d'accès**](#analytics-clientkey).
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
 	// Dans cet exemple de code, Analytics est configuré pour enregistrer les événements de cycle de vie.
-	```
+```
   {: codeblock}
 
 	**Astuce :** Le nom d'application est utilisé pour filtrer la recherche de journaux client dans le tableau de bord. Lorsque vous utilisez le même nom d'application sur plusieurs plateformes (par exemple, Android et iOS), tous les journaux issus de cette application s'affichent sous le même nom, quelle que soit la plateforme à partir de laquelle ils ont été envoyés.
@@ -98,7 +99,7 @@ Initialisez votre application pour qu'elle envoie des journaux au service {{site
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Initialisez Analytics en lui attribuant le nom de votre application mobile. Vous avez également besoin de la valeur de [**clé du client**](#analytics-clientkey).
+3. Initialisez Analytics en lui attribuant le nom de votre application mobile. Vous avez également besoin de la valeur de [**clé d'accès**](#analytics-clientkey).
 
   Le nom d'application est utilisé pour filtrer la recherche de journaux client dans votre tableau de bord {{site.data.keyword.mobileanalytics_short}}. Lorsque vous utilisez le même nom d'application sur plusieurs plateformes (par exemple, Android et iOS), tous les journaux issus de cette application s'affichent sous le même nom, quelle que soit la plateforme à partir de laquelle ils ont été envoyés.
 
@@ -178,7 +179,7 @@ Analytics.enabled = false
 // Activez l'enregistrement des analyses d'utilisation
 Analytics.enabled = true
 
-// Envoyez des analyses d'utilisation enregistrées au service {{site.data.keyword.mobileanalytics_short}}
+// Envoyez des analyses d'utilisation enregistrées au service {{site.data.keyword.mobileanalytics_short}} Service
 Analytics.send()
 ```
 
@@ -287,7 +288,7 @@ logger2.info("info message");
 {: ios-logger-sample}
 
 ```
-// Configurez le journal d'événements de manière à sauvegarder les journaux sur le périphérique afin de pouvoir les envoyer ultérieurement au service {{site.data.keyword.mobileanalytics_short}}
+// Configurez le journal d'événements de manière à sauvegarder les journaux sur le périphérique afin de pouvoir les envoyer ultérieurement auservice {{site.data.keyword.mobileanalytics_short}}
 // Désactivé par défaut ; affectez la valeur true pour l'activer
 Logger.logStoreEnabled = true
 
@@ -505,4 +506,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## Référence pour l'API
 {: #api}
-* [API REST](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

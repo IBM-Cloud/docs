@@ -4,9 +4,9 @@
 # 開始使用 HelloWorld 範例
 {: #gettingstarted-cordova}
 
-如果您要開始使用新的 Cordova 應用程式，可以使用 HelloWorld 應用程式。這個應用程式會示範如何從行動式應用程式連接到 Bluemix 後端而不需鑑別。應用程式已安裝 SDK。當您備妥時，即可取得想要在應用程式中使用的特定程式庫。
+如果您要開始使用新的 Cordova 應用程式，可以使用 HelloWorld 應用程式。這個應用程式會示範如何從行動應用程式連接到 Bluemix 後端而不需鑑別。應用程式已安裝 SDK。您準備好時，即可取得想要在應用程式中使用的特定程式庫。
 
-1. 在 Bluemix 中建立行動式後端。
+1. 在 Bluemix 中建立行動後端。
 <ol>
 	<li>在 Bluemix 型錄的「樣板」區段中，按一下 MobileFirst Services Starter。</li>
     	<li>輸入您應用程式的名稱及主機，然後按一下**建立**。</li>
@@ -82,7 +82,7 @@ route: "<APPLICATION_ROUTE>",
 GUID: "<APPLICATION_GUID>",
 ```
 
-7. 在行動式模擬器或裝置上執行範例。
+7. 在行動模擬器或裝置上執行範例。
 
    使用下列指令，來建置 Cordova 應用程式：
 	 ```
@@ -106,27 +106,26 @@ GUID: "<APPLICATION_GUID>",
 
 ![Hello World 應用程式順利連接至 Bluemix](images/yayconnected.jpg "圖 1. Hello World 應用程式順利連接至 Bluemix")
 
-從行動式應用程式順利連接至 Bluemix 時，會顯示訊息：「耶！您連上了」。
+從行動應用程式順利連接至 Bluemix 時，會顯示訊息：「耶！您連上了」。
 8. 解決所有問題。
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
-如果連線失敗，則會顯示訊息：「糟糕，出問題了」。包括錯誤的相關資訊。
-請檢查下列項目：
+如果連線失敗，則會顯示訊息：「糟糕，出問題了」。包括錯誤的相關資訊。請檢查下列項目：
  * 驗證您已正確地貼上路徑及 GUID 值。
  * 檢視 Xcode 或 Android 除錯日誌。
  * 在 Bluemix 中檢查您應用程式的狀態。
 
 ## 後續步驟：
 {: #next}
-如需如何取得 SDK 並整合至行動式應用程式的相關資訊，請參閱「設定 Cordova Client SDK」。
+如需如何取得 SDK 並整合至行動應用程式的相關資訊，請參閱「設定 Cordova Client SDK」。
 
 # 相關鏈結
 
 ## 範例
    * [HelloWorld (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
 
-## sdk
+## SDK
    * [bms-clientsdk-cordova-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 <!--## api

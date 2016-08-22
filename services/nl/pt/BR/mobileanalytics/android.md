@@ -22,8 +22,9 @@ constrói automaticamente seu projeto enviando por pull as dependências
 necessárias.
 3. Inicialize o projeto substituindo &lt;APPLICATION_ROUTE&gt; e &lt;APPLICATION_ID&gt; por seu GUID e rota do Aplicativo no bloco try na função `BMSClient.getInstance().initialize()`:
 ```
-// inicializar o SDK com o ID e a rota do aplicativo IBM Bluemix
-BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID>");
+// initialize SDK with IBM Bluemix application ID and route
+BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>",
+"<APPLICATION_ID>");
 ```
 {: codeblock}
 
