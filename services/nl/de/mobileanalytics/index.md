@@ -9,10 +9,10 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Erste Schritte mit {{site.data.keyword.mobileanalytics_short}} (Betaversion)  
+# Erste Schritte mit {{site.data.keyword.mobileanalytics_short}} (Experimentell)  
 
 {: #gettingstartedtemplate}
-*Letzte Aktualisierung: 17. Mai 2016*
+*Letzte Aktualisierung: 01. Juli 2016*
 {: .last-updated}
 
 Verwenden Sie den {{site.data.keyword.mobileanalytics_full}}-Service zum Messen von Status, Verhalten und Kontext der mobilen Anwendungen, Benutzer und Geräte.
@@ -22,9 +22,9 @@ Führen Sie die folgenden Schritte aus, damit der {{site.data.keyword.mobileanal
 
 1. Nach der [Instanzerstellen](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) des {{site.data.keyword.mobileanalytics_short}}-Service können Sie auf die {{site.data.keyword.mobileanalytics_short}}-Konsole zugreifen; klicken Sie hierzu auf die entsprechende Kachel im Abschnitt 'Services' des {{site.data.keyword.Bluemix}}-Dashboards.
 
-  **Wichtig:** Wenn Sie den neu erstellen Mobile Analytics-Service zum ersten Mal öffnen, wird ein Fenster angezeigt, in dem Sie bestätigen sollen, dass dem Service von {{site.data.keyword.Bluemix_notm}} die erforderlichen Informationen über Sie bereitgestellt werden sollen, damit Ihre Identität vom Service überprüft werden kann. Klicken Sie auf **Bestätigung**, um mit der {{site.data.keyword.mobileanalytics_short}}-Konsole fortzufahren. Wenn Sie abbrechen, wir die {{site.data.keyword.mobileanalytics_short}}-Konsole nicht geöffnet.
+  **Wichtig:** Wenn Sie den neu erstellen Mobile Analytics-Service zum ersten Mal öffnen, wird möglicherweise ein Fenster angezeigt, in dem Sie bestätigen sollen, dass dem Service von {{site.data.keyword.Bluemix_notm}} die erforderlichen Informationen über Sie bereitgestellt werden sollen, damit Ihre Identität vom Service überprüft werden kann. Klicken Sie auf **Bestätigung**, um mit der {{site.data.keyword.mobileanalytics_short}}-Konsole fortzufahren. Wenn Sie abbrechen, wir die {{site.data.keyword.mobileanalytics_short}}-Konsole nicht geöffnet.
 
-2. Installieren Sie die {{site.data.keyword.mobileanalytics_short}} [Client-SDKs](install-client-sdk.html).
+2. Installieren Sie die {{site.data.keyword.mobileanalytics_short}} [Client-SDKs](install-client-sdk.html). Sie können optional die {{site.data.keyword.mobileanalytics_short}}-[REST-API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window} verwenden.
 
 3. Importieren Sie die Client-SDKs und initialisieren Sie sie mit dem folgenden Codeausschnitt, um die Nutzungsanalysedaten aufzuzeichnen.
 
@@ -36,7 +36,7 @@ Führen Sie die folgenden Schritte aus, damit der {{site.data.keyword.mobileanal
 		import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
 		import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
 		```
-	2. Initialisieren Sie das Client-SDK unter Verwendung des Werts für den [Schlüsselwert](sdk.html#analytics-clientkey) im Anwendungscode, um Nutzungsanalysedaten und Anwendungssitzungen aufzuzeichnen.
+	2. Initialisieren Sie das Client-SDK unter Verwendung des Werts für den [Zugriffsschlüssel](sdk.html#analytics-clientkey) im Anwendungscode, um Nutzungsanalysedaten und Anwendungssitzungen aufzuzeichnen.
 
 		```Java
 			try {
@@ -45,7 +45,7 @@ Führen Sie die folgenden Schritte aus, damit der {{site.data.keyword.mobileanal
 			catch (MalformedURLException e) {
 	            //Die angegebene Bluemix-Region ist ungültig
 	        }
-				Analytics.init(getApplication(), your_app_name, your_client_key, Analytics.DeviceEvent.LIFECYCLE);
+				Analytics.init(getApplication(), your_app_name, your_access_key, Analytics.DeviceEvent.LIFECYCLE);
 		```
     Der Parameter **bluemixRegion** gibt an, welche Bluemix-Bereitstellung Sie verwenden, zum Beispiel `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` oder `BMSClient.REGION_SYDNEY`.
 
@@ -56,11 +56,11 @@ Führen Sie die folgenden Schritte aus, damit der {{site.data.keyword.mobileanal
     import BMSCore
     import BMSAnalytics
     ```
-  2. Initialisieren Sie das Client-SDK unter Verwendung des Werts für den [Schlüsselwert](sdk.html#analytics-clientkey) im Anwendungscode, um Nutzungsanalysedaten und Anwendungssitzungen aufzuzeichnen.
+  2. Initialisieren Sie das Client-SDK unter Verwendung des Werts für den [Zugriffsschlüssel](sdk.html#analytics-clientkey) im Anwendungscode, um Nutzungsanalysedaten und Anwendungssitzungen aufzuzeichnen.
  
 	```Swift
-	BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //Sie können die Region ändern
-	Analytics.initializeWithAppName(your_app_name, apiKey: your_client_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
+	Analytics.initializeWithAppName(your_app_name, apiKey: your_access_key, deviceEvents: DeviceEvent.LIFECYCLE)
 	```
   Der Parameter **bluemixRegion** gibt an, welche Bluemix-Bereitstellung Sie verwenden, zum Beispiel `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` oder `BMSClient.REGION_SYDNEY`.
 
@@ -87,7 +87,7 @@ Führen Sie die folgenden Schritte aus, damit der {{site.data.keyword.mobileanal
 	Lesen Sie den Abschnitt [Anwendung instrumentierenapplication](sdk.html).
 5. Kompilieren Sie die Anwendung und führen Sie sie im Emulator oder einem Gerät aus.
 
-6. Wechseln Sie zum {{site.data.keyword.mobileanalytics_short}} **Dashboard**, um die Analysedaten anzuzeigen, zum Beispiel neue Geräte oder die Gesamtsumme der Geräte, von denen die Anwendung verwendet wird. Sie können die App auh durch [Erstellen benutzerdefinierter Diagramme](app-monitoring.html#custom-charts), [Einrichten von Alerts](app-monitoring.html#alerts) und [Überwachen von App-Abstürzen](app-monitoring.html#monitor-app-crash) überwachen.
+6. Wechseln Sie zum {{site.data.keyword.mobileanalytics_short}} **Dashboard**, um die Analysedaten anzuzeigen, zum Beispiel neue Geräte oder die Gesamtsumme der Geräte, von denen die Anwendung verwendet wird. Sie können die App auch durch <!--[creating custom charts](app-monitoring.html#custom-charts),-->[Festlegen von Alerts](app-monitoring.html#alerts) und [Überwachen von App-Abstürzen](app-monitoring.html#monitor-app-crash) überwachen.
 
 
 # Zugehörige Links
@@ -95,3 +95,7 @@ Führen Sie die folgenden Schritte aus, damit der {{site.data.keyword.mobileanal
 ## SDK
 * [Android-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+
+## API-Referenz
+{: #api}
+* [REST-API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

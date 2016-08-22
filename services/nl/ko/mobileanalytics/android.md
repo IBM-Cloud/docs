@@ -27,7 +27,7 @@ BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID
 4. 개발 환경에서 샘플을 실행하십시오.
 Android Studio 도구 모음에서 **재생** 단추를 클릭하고 시뮬레이터를 선택하십시오.
 
-  시뮬레이터에서 **{{site.data.keyword.Bluemix_notm}} Ping**을 클릭하십시오. 샘플 앱이 {{site.data.keyword.Bluemix_notm}}의 `Node.js` 런타임에 있는 보호되는 자원으로 Get 요청을 전송합니다. 요청이 성공하면 연결이 확인되고 시뮬레이터의 텍스트가 업데이트됩니다.
+  시뮬레이터에서 **{{site.data.keyword.Bluemix_notm}} Ping**을 클릭하십시오. 샘플 앱이 {{site.data.keyword.Bluemix_notm}}의 `Node.js` 런타임에 있는 보호되는 리소스로 Get 요청을 전송합니다. 요청이 성공하면 연결이 확인되고 시뮬레이터의 텍스트가 업데이트됩니다.
 
   **참고:** `Node.js` 런타임 코드는 MobileFirst Services Starter 표준 유형으로 제공됩니다. 백엔드 애플리케이션이 MobileFirst Services Starter 표준 유형으로 작성되지 않은 경우, 애플리케이션이 성공적으로 연결되지 않습니다.
 

@@ -17,18 +17,18 @@ copyright:
 
 1.  사전 정의된 데이터 - 이 카테고리에는 모든 앱에 적용되는 일반 사용 및 디바이스 정보가 포함됩니다. 이 카테고리 내에는 볼륨, 빈도 또는 앱 사용 기간을 표시하는 디바이스 메타데이터(운영 체제 및 디바이스 모델) 및 사용 데이터(활성 사용자 및 앱 세션)이 있습니다. 사전 정의된 데이터는 사용자의 앱에서 {{site.data.keyword.mobileanalytics_short}} SDK를 초기화한 후에 자동으로 수집됩니다.
 2. 사용자 정의 이벤트 - 이 카테고리에는 사용자를 정의하는 데이터 및 특정 앱에 대한 데이터가 포함됩니다. 이 데이터는 페이지 보기, 단추 탭 또는 앱 내 구매와 같은 앱에서 발생하는 이벤트를 표시합니다. 앱 내에서의 {{site.data.keyword.mobileanalytics_short}} SDK 초기화 외에도 추적할 각 사용자 정의 이벤트에 대해 한 행을 추가해야 합니다.
-3. 클라이언트 로그 메시지 - 이 카테고리를 사용하면 개발자가 개발 및 디버깅을 지원하기 위해 사용자 정의 메시지를 로그하는 앱을 통해 코드의 행을 추가할 수 있습니다. 
-개발자는 각 로그 메시지에 심각도/상세도 레벨을 지정하며 레벨을 지정함으로써 후속적으로 메시지를 필터링하거나 지정된 로그 레벨 아래의 메시지를 무시하도록 앱을 구성하여 스토리지 공간을 유지할 수 있습니다. 클라이언트 로그 데이터를 수집하려면 각 로그 메시지에 대해 코드의 한 행을 추가하고 앱 내에서 {{site.data.keyword.mobileanalytics_short}} SDK를 초기화해야 합니다.
+3. 클라이언트 로그 메시지 - 이 카테고리를 사용하면 개발자가 개발 및 디버깅을 지원하기 위해 사용자 정의 메시지를 로그하는 앱을 통해 코드의 행을 추가할 수 있습니다. 개발자는 각 로그 메시지에 심각도/상세도 레벨을 지정하고, 레벨을 지정하여 후속적으로 메시지를 필터링하거나 지정된 로그 레벨보다 낮은 레벨의 메시지를 무시하도록 앱을 구성하여 스토리지 공간을 유지할 수 있습니다. 클라이언트 로그 데이터를 수집하려면 각 로그 메시지에 대해 코드의 한 행을 추가하고 앱 내에서 {{site.data.keyword.mobileanalytics_short}} SDK를 초기화해야 합니다.
 
 현재 SDK는 Android, iOS 및 WatchOS에 대해 사용 가능합니다.
 
-## 클라이언트 키 값 식별
+## 서비스 신임 정보 액세스 키 식별
 {: #analytics-clientkey}
 
-클라이언트 SDK를 설정하기 전에 **클라이언트 키** 값을 식별하십시오. 클라이언트 키는 클라이언트 SDK를 초기화하는 데 필수입니다.
+클라이언트 SDK를 설정하기 전에 **액세스 키** 값을 식별하십시오. 액세스 키는 클라이언트 SDK를 초기화하는 데 필요합니다. 
+
 1. {{site.data.keyword.mobileanalytics_short}} 서비스 대시보드를 여십시오.
-2. 렌치 아이콘을 클릭하여 API 키 탭을 여십시오.
-3. API 키 탭에서 클라이언트 키 값을 기록해 두십시오.
+2. **서비스 신임 정보** 탭을 클릭하십시오. 
+3. 액세스 키 값을 복사하십시오. 
 
 
 ## 분석을 수집하기 위해 Android 앱 초기화
@@ -36,10 +36,10 @@ copyright:
 
 {{site.data.keyword.mobileanalytics_short}} 서비스로 로그를 전송할 수 있도록 애플리케이션을 초기화하십시오.
 
-1. 다음 `import` 문을 프로젝트 파일의 맨 위에 추가하여 클라이언트 SDK를 가져오십시오.
+1. 다음 `import` 문을 프로젝트 파일의 시작 부분에 추가하여 클라이언트 SDK를 가져오십시오.
 
   ```
-  import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
+import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
 import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
 import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   ```
@@ -52,7 +52,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
             Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
-        } 
+        }
   ```
   {: codeblock}
 
@@ -61,7 +61,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Android 애플리케이션 오브젝트를 사용하고 사용자의 애플리케이션 이름을 제공하여 Analytics를 초기화하십시오. 또한 [**클라이언트 키**](#analytics-clientkey) 값이 필요합니다.
+3. Android 애플리케이션 오브젝트를 사용하고 사용자의 애플리케이션 이름을 제공하여 Analytics를 초기화하십시오. 또한 [**액세스 키**](#analytics-clientkey) 값이 필요합니다. 
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -76,7 +76,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
 {{site.data.keyword.mobileanalytics_short}} 서비스로 로그를 전송할 수 있도록 애플리케이션을 초기화하십시오. Swift SDK는 iOS 및 watchOS에 대해 사용 가능합니다.
 
-1. 다음 `import` 문을 `AppDelegate.swift` 프로젝트 파일의 맨 위에 추가하여 `BMSCore` 및 `BMSAnalytics` 프레임워크를 가져오십시오.
+1. 다음 `import` 문을 `AppDelegate.swift` 프로젝트 파일의 시작 부분에 추가하여 `BMSCore` 및 `BMSAnalytics` 프레임워크를 가져오십시오.
 
   ```Swift
   import BMSCore
@@ -99,7 +99,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. 사용자의 모바일 애플리케이션 이름을 제공하여 Analytics를 초기화하십시오. 또한 [**클라이언트 키**](#analytics-clientkey) 값이 필요합니다.
+3. 사용자의 모바일 애플리케이션 이름을 제공하여 Analytics를 초기화하십시오. 또한 [**액세스 키**](#analytics-clientkey) 값이 필요합니다. 
 
   애플리케이션 이름은 {{site.data.keyword.mobileanalytics_short}} 대시보드에서 클라이언트 로그를 검색하기 위한 필터로 사용됩니다. 플랫폼(예: Android 및 iOS)에 걸쳐 동일한 애플리케이션 이름을 사용함으로써 로그가 전송된 플랫폼에 상관없이 동일한 이름 아래에서 애플리케이션의 모든 로그를 볼 수 있습니다.
 
@@ -109,7 +109,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
+Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -203,16 +203,16 @@ Analytics.log(eventObject)
 
   {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK 로깅 프레임워크는 다음 로그 레벨을 지원합니다. 해당 로그 레벨은 가장 자세한 레벨부터 나열되며 권장되는 사용 가이드라인이 함께 제공됩니다.
 
-  * `심각` - 복구 불가능한 충돌 또는 정지에 대해 사용됩니다. `심각` 레벨은 애플리케이션이 충돌할 때 사용자에게 표시되는 복구 불가능한 오류를 로깅하기 위해 예약됩니다.
-  * `오류` - 예상치 못한 예외 또는 예상치 못한 네트워크 프로토콜 오류에 대해 사용됩니다.
-  * `경고` - 더 이상 사용되지 않는 API 또는 느린 네트워크 응답 등과 같이 중요한 오류로 간주되지 않는 사용 경고를 로깅하는 데 사용됩니다.
-  * `정보` - 중요하나 긴급하지는 않은 초기화 이벤트 및 기타 데이터를 보고하는 데 사용됩니다.
-  * `디버그` - 개발자가 애플리케이션 결함을 해결하는 데 도움을 주기 위해 디버그 명령문을 보고하는 데 사용됩니다.
+  * `FATAL` - 복구 불가능한 충돌 또는 정지에 대해 사용됩니다. `FATAL` 레벨은 애플리케이션이 충돌할 때 사용자에게 표시되는 복구 불가능한 오류를 로깅하기 위해 예약됩니다.
+  * `ERROR` - 예상치 못한 예외 또는 예상치 못한 네트워크 프로토콜 오류에 대해 사용됩니다.
+  * `WARN` - 더 이상 사용되지 않는 API 또는 느린 네트워크 응답 등과 같이 중요한 오류로 간주되지 않는 사용 경고를 로깅하는 데 사용됩니다.
+  * `INFO` - 중요하나 긴급하지는 않은 초기화 이벤트 및 기타 데이터를 보고하는 데 사용됩니다.
+  * `DEBUG` - 개발자가 애플리케이션 결함을 해결하는 데 도움을 주기 위해 디버그 명령문을 보고하는 데 사용됩니다.
 
     #### 로그 레벨 시나리오
     {: #log-level-scenario}
 
-    로거 레벨이 `심각`으로 구성된 경우, 로거가 미발견 예외를 캡처하나 충돌 이벤트를 발생시키는 임의의 로그를 캡처하지 않습니다. `심각` 로거 항목이 발생할 수 있는 로그(`경고` 및 `오류`)도 캡처되도록 더 자세한 로거 레벨을 설정할 수 있습니다.
+    로거 레벨이 `FATAL`로 구성된 경우, 로거가 미발견 예외를 캡처하나 충돌 이벤트를 발생시키는 임의의 로그를 캡처하지 않습니다. `FATAL` 로거 항목이 발생할 수 있는 로그(`WARN` 및 `ERROR`)도 캡처되도록 더 자세한 로거 레벨을 설정할 수 있습니다.
 
   <!--**Note:** Find full Logger API references for each platform at [SDKs, samples, API reference](sdks-samples-apis.html). The Logger API is part of the--> <!--{{site.data.keyword.mobileanalytics_short}} Client SDK Core.-->
 
@@ -242,10 +242,12 @@ Analytics.log(eventObject)
 {: #android-logger-sample}
 
 ```
-// Configure Logger to save logs to the device so that they
+// Configure Logger to save logs to the device so that they 
 // can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
 // Disabled by default; set to true to enable
-Logger.storeLogs(true);// Change the minimum log level (optional)
+Logger.storeLogs(true);
+
+// Change the minimum log level (optional)
 // The default setting is Logger.LEVEL.DEBUG
 Logger.setLogLevel(Logger.LEVEL.INFO);// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
 Logger.send();
@@ -271,7 +273,9 @@ logger2.info("info message");
 ```
 // Configure Logger to save logs to the device so that they can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
 // Disabled by default; set to true to enable
-Logger.logStoreEnabled = true// Change the minimum log level (optional)
+Logger.logStoreEnabled = true
+
+// Change the minimum log level (optional)
 // The default setting is LogLevel.Debug
 Logger.logLevelFilter = LogLevel.Info// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
 Logger.send()
@@ -481,4 +485,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## API 참조
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

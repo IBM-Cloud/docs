@@ -12,73 +12,78 @@ copyright:
 {{site.data.keyword.mobileanalytics_full}} 提供行動應用程式的監視及分析。您可以記錄用戶端日誌，以及使用 {{site.data.keyword.mobileanalytics_short}} Client SDK 來監視資料。開發人員可以控制何時將這項資料傳送至 {{site.data.keyword.mobileanalytics_short}} 服務。將資料遞送給 {{site.data.keyword.mobileanalytics_short}} 時，您可以使用 {{site.data.keyword.mobileanalytics_short}} 儀表板來深入分析行動應用程式、裝置及用戶端日誌。
 {: shortdesc}
 
-## 使用自訂圖表視覺化資料
+<!--
+
+## Visualizing data with custom charts
 {: #custom-charts}
 
-您可以視覺化分析儲存庫中收集到的分析資料。此視覺化是一種功能強大的方式，用來檢查特定使用案例的資料。除了您所報告的自訂資料之外，您還可以使用 Operational Analytics 已收集到的資料來建立圖表。
+You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
-### 建立用戶端日誌的自訂圖表
+
+### Creating custom charts for client logs
 {: #custom-charts-client-logs}
 
-您可以建立用戶端日誌的自訂圖表，而用戶端日誌包含使用平台的「日誌程式 API」所傳送的日誌資訊。日誌資訊也包括有關裝置的環境定義資訊（包括環境、應用程式名稱及應用程式版本）。
+You can create a custom chart for client logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
-在此範例中，您使用用戶端日誌資料來建立流程圖。最終圖形會顯示特定應用程式中記載層次的分佈。您也有可在圖表中顯示的下列資料：
+In this example, you use client log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
 
-* 特定資料
-  * 記載層次
-* 訊息資料
-  * 時間戳記
-* 裝置 OS 環境定義資料
-  * 應用程式名稱
-  * 應用程式版本
-  * 裝置 OS
-* 裝置環境定義資料
-  * 裝置 ID
-  * 裝置模型
-  * 裝置 OS 版本
+* Specific data
+  * Log level
+* Message data
+  * Timestamp
+* Device OS contextual data
+  * Application name
+  * Application version
+  * Device OS
+* Device contextual data
+  * Device ID
+  * Device model
+  * Device OS version
 
 
-1. 確定您的應用程式正在收集裝置日誌，或收集分析。
-2. 在 {{site.data.keyword.mobileanalytics_short}} 主控台中，按一下**儀表板**頁面上的**自訂圖表**標籤。您可以根據已傳送至伺服器的分析訊息來建立圖表。
-3. 按一下**建立圖表**來建立新的自訂圖表，然後提供下列值：
-  * 圖表標題：應用程式及記載層次
-  * 事件類型：用戶端日誌
-  * 圖表類型：流程圖
-5. 按一下**圖表定義**標籤，然後提供下列值：
-  * 來源：應用程式名稱
-  * 目的地：記載層次
-  * 內容：您的應用程式名稱
-7. 按一下**儲存**
+1. Make sure that you have an application that is collecting device logs or gathering analytics.
+2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
+3. Click **Create Chart** to create a new custom chart and provide the following values:
+  * Chart Title: Application and Log Levels
+  * Event Type: Client Logs
+  * Chart Type: Flow Chart
+5. Click the **Chart Definition** tab and provide the following values:
+  * Source: Application Name
+  * Destination: Log Level
+  * Property: your app name
+7. Click **Save**
 
-### 匯出自訂資料
+### Exporting custom data
 {: #export-custom-data}
 
-您可以將每一個自訂圖表中的資料匯出為 JSON、XML 或 CSV 格式。
+You can export the data from each custom chart into JSON, XML, or CSV format.
 
-匯出資料的結構取決於所匯出的圖表。若要匯出資料，請按一下自訂圖表右上方的匯出圖示。
+The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
 
 
 
-### 匯出及匯入自訂圖表定義
+### Exporting and importing custom chart definitions
 {: #export-import-custom}
 
-您可以透過程式設計方式，或在「{{site.data.keyword.mobileanalytics_short}} 儀表板」中手動匯入及匯出自訂圖表定義。
+You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
-請確定您在「{{site.data.keyword.mobileanalytics_short}} 儀表板」中至少有一個自訂圖表。
-在此範例中，您可以手動匯出及匯入自訂圖表定義。
+Ensure that you have at least one custom chart in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
+In this example, you manually export and import custom chart definitions.
 
-1. 在 {{site.data.keyword.mobileanalytics_short}} 主控台中，按一下**儀表板**頁面中的**自訂圖表**標籤。
-2. 若要匯出自訂圖表定義，請按一下**匯出圖表**。此動作會顯示用來儲存 `customChartsDefinition.json` 檔案的對話框。
-3. 選擇用來儲存檔案的位置。
-4. 按一下每一個自訂圖表旁的**刪除圖表**圖示，以刪除所有自訂圖表。
-5. 若要匯入自訂圖表定義，請按一下**匯入圖表**。此動作會顯示用來選擇檔案的對話框。
-6. 選擇您先前匯出的 `customChartsDefinition.json` 檔案以將它開啟。
+1. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab in the **Dashboard** page.
+2. To export the custom chart definitions, click **Export Charts**. This action displays a dialog to save a `customChartsDefinition.json` file.
+3. Choose a location to save the file.
+4. Click the **Delete Chart** icon next to each custom chart to delete all custom charts.
+5. To import a custom chart definition, click **Import Charts**. This action displays a dialog to choose a file.
+6. Choose the `customChartsDefinition.json` file that you previously exported to open.
 
-您也可以使用選擇的 HTTP 用戶端（例如，CURL 或 postman），透過程式設計方式匯出及匯入自訂圖表定義：
-* 進行匯出的 GET 端點是 `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`。
-* 進行匯入的 POST 端點是 `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`。
+You can also export and import custom chart definitions programmatically by using your HTTP client of choice (for example, CURL or postman):
+* The GET endpoint for export is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
+* The POST endpoint for import is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
 
-**附註**：如果您匯入已存在的自訂圖表定義，則最終定義會重複，這也表示「{{site.data.keyword.mobileanalytics_short}} 儀表板」會顯示重複的自訂圖表。
+**Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
+
+-->
 
 ## 設定警示
 {: #alerts}

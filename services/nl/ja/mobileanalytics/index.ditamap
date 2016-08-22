@@ -24,7 +24,7 @@ navtitle="Swift クライアント SDK のインストール" scope="peer"> </to
 <topicref format="html" href="sdk.html" navtitle="アプリケーションの装備" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="クライアント・キーの識別" scope="peer"> </topicref>
+navtitle="アクセス・キーの識別" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
 navtitle="Android アプリの初期化" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"
@@ -40,15 +40,7 @@ scope="peer"> </topicref>
 </topicref>
 <topicref format="html" href="app-monitoring.html" linking="sourceonly" navtitle="アプリのモニター"
 scope="peer" outputclass="subsection">
-<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="データの視覚化"
-scope="peer">
-<topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly"
-navtitle="カスタム・グラフの作成" scope="peer"> </topicref>
-<topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly"
-navtitle="カスタム・データのエクスポート" scope="peer"> </topicref>
-<topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly"
-navtitle="カスタム・グラフ定義のエクスポートとインポート" scope="peer"> </topicref>
-</topicref>
+<!--<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="Visualizing data" scope="peer" audience="blue"><topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly" navtitle="Creating custom charts" scope="peer"> </topicref><topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly" navtitle="Exporting custom data" scope="peer"> </topicref><topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly" navtitle="Exporting and importing custom chart definitions" scope="peer"> </topicref></topicref>-->
 <topicref format="html" href="app-monitoring.html#alerts" navtitle="アラートの設定" scope="peer">
 <topicref format="html" href="app-monitoring.html#alert-def-client-logs" linking="sourceonly"
 navtitle="クライアント・ログ・アラートの作成" scope="peer"> </topicref>

@@ -22,16 +22,16 @@ git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellowo
 Para inicializar o SDK, copie o código a seguir para o método `didFinishLaunchingWithOptions` no Aplicativo delegado.
    * Objective-C:
 ```
-// inicializar o SDK com o ID e a rota do aplicativo IBM Bluemix
+// initialize SDK with IBM Bluemix application ID and route
 IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:@"<insert route>" backendGUID:@"<insertGUID>"];
 return YES;
 ```{: codeblock}
    * Swift:
 ```
-// inicializar o SDK com o ID e a rota do aplicativo IBM Bluemix
-IMFClient.sharedInstance().initializeWithBackendRoute("<insert route>", backendGUID: "<insertGUID>")
-return true
+// initialize SDK with IBM Bluemix application ID and route
+IMFClient.sharedInstance().initializeWithBackendRoute("<insert
+route>", backendGUID: "<insertGUID>") return true
 ```{: codeblock}
 
 4. Execute a amostra em seu ambiente de desenvolvimento.

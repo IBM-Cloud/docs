@@ -33,7 +33,7 @@ copyright:
 	<dt>立即瞭解</dt>
 		<dd>即時查看效能及用法度量值。</dd>
 	<dt>快速實作</dt>
-		<dd>在 {{site.data.keyword.Bluemix}} 中建立服務實例、將 SDK 新增至專案、將兩行程式碼貼入應用程式，而且您已備妥可收集許多預先定義的度量值。</dd>
+		<dd>在 {{site.data.keyword.Bluemix}} 中建立服務實例、將 SDK 新增至專案、將兩行程式碼貼入應用程式，您就可以收集許多預先定義的度量值。</dd>
 	<dt>收集您要的任何資料</dt>
 		<dd>使用自訂事件來檢測應用程式、探索使用者如何與應用程式互動、追蹤採購，以及監視應用程式活動。  
 </dd>
@@ -78,8 +78,7 @@ copyright:
 
 All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. You can also create custom charts, based on data that is collected by the analytics service in the dashboard. In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. -->
 
->
-# 相關鏈結 {:class="linklist"}
+># 相關鏈結 {:class="linklist"}
 <!-->## 指導教學及範例 {:id="samples"}-->
 <!-->* [Link1](https://github.com/)-->
 >

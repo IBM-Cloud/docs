@@ -12,73 +12,78 @@ copyright:
 {{site.data.keyword.mobileanalytics_full}} 可监视和分析移动应用程序。您可以使用 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK 来记录客户机日志并监视数据。开发者可以控制何时将这些数据发送到 {{site.data.keyword.mobileanalytics_short}} 服务。数据传递到 {{site.data.keyword.mobileanalytics_short}} 后，可以使用 {{site.data.keyword.mobileanalytics_short}} 仪表板，来获取有关移动应用程序、设备和客户机日志的分析洞察。
 {: shortdesc}
 
-## 使用定制图表直观地显示数据
+<!--
+
+## Visualizing data with custom charts
 {: #custom-charts}
 
-您可以直观地显示分析存储库中收集的分析数据。这一可视化功能是一种检查特定用例数据的有用方式。除了报告的定制数据之外，您还可以使用由“运行分析”收集的数据，来创建图表。
+You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
-### 为客户机日志创建定制图表
+
+### Creating custom charts for client logs
 {: #custom-charts-client-logs}
 
-您可以为包含日志信息的客户机日志，创建定制图表，该日志信息会随平台的记录器 API 一起发送。该日志信息还包含设备的上下文信息，其中包括环境、应用程序名称和应用程序版本。
+You can create a custom chart for client logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
-在本示例中，将使用客户机日志数据来创建一个流程图。最终图形显示特定应用程序中日志级别的分布。此外，还将在图表中显示以下数据：
+In this example, you use client log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
 
-* 特定数据
-  * 日志级别
-* 消息数据
-  * 时间戳记
-* 设备操作系统上下文数据
-  * 应用程序名称
-  * 应用程序版本
-  * 设备操作系统
-* 设备上下文数据
-  * 设备标识
-  * 设备模型
-  * 设备操作系统版本
+* Specific data
+  * Log level
+* Message data
+  * Timestamp
+* Device OS contextual data
+  * Application name
+  * Application version
+  * Device OS
+* Device contextual data
+  * Device ID
+  * Device model
+  * Device OS version
 
 
-1. 请确定您具有收集设备日志或收集分析的应用程序。
-2. 在 {{site.data.keyword.mobileanalytics_short}} 控制台中，单击**仪表板**页面上的**定制图表**选项卡。您可以基于发送到伺服器的分析消息，创建图表。
-3. 单击**创建图表**，以创建新的定制图表，并提供下列值：
-  * 图表标题：应用程序和日志级别
-  * 事件类型：客户机日志
-  * 图表类型：流程图
-5. 单击**图表定义**选项卡并提供以下值：
-  * 源：应用程序名称
-  * 目标：日志级别
-  * 属性：应用程序名称
-7. 单击**保存**。
+1. Make sure that you have an application that is collecting device logs or gathering analytics.
+2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
+3. Click **Create Chart** to create a new custom chart and provide the following values:
+  * Chart Title: Application and Log Levels
+  * Event Type: Client Logs
+  * Chart Type: Flow Chart
+5. Click the **Chart Definition** tab and provide the following values:
+  * Source: Application Name
+  * Destination: Log Level
+  * Property: your app name
+7. Click **Save**
 
-### 导出定制数据
+### Exporting custom data
 {: #export-custom-data}
 
-您可以将数据从每一个定制图表导出为 JSON、XML 或 CSV 格式。
+You can export the data from each custom chart into JSON, XML, or CSV format.
 
-所导出数据的结构取决于正在导出的图表。要导出数据，请单击定制图表右上方的导出图标。
+The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
 
 
 
-### 导出和导入定制图表定义
+### Exporting and importing custom chart definitions
 {: #export-import-custom}
 
-您可以在 {{site.data.keyword.mobileanalytics_short}} 仪表板中，以编程方式或手动导入和导出定制图表定义。
+You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
-请确保在 {{site.data.keyword.mobileanalytics_short}} 仪表板中，至少有一个定制图表。
-在此示例中，您将手动导出和导入定制图表定义。
+Ensure that you have at least one custom chart in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
+In this example, you manually export and import custom chart definitions.
 
-1. 在 {{site.data.keyword.mobileanalytics_short}} 控制台中，单击**仪表板**页面中的**定制图表**选项卡。
-2. 要导出定制图表定义，请单击**导出图表**。此操作会显示一个对话框，供您保存 `customChartsDefinition.json` 文件。
-3. 选择用于保存该文件的位置。
-4. 单击每个定制图表旁的**删除图表**图标，以删除全部定制图表。
-5. 要导入定制图表定义，请单击**导入图表**。此操作会显示一个对话框，供您选择文件。
-6. 选择您先前导出的 `customChartsDefinition.json` 文件以将其打开。
+1. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab in the **Dashboard** page.
+2. To export the custom chart definitions, click **Export Charts**. This action displays a dialog to save a `customChartsDefinition.json` file.
+3. Choose a location to save the file.
+4. Click the **Delete Chart** icon next to each custom chart to delete all custom charts.
+5. To import a custom chart definition, click **Import Charts**. This action displays a dialog to choose a file.
+6. Choose the `customChartsDefinition.json` file that you previously exported to open.
 
-您还可以使用所选择的 HTTP 客户端（例如 CURL 或 postman），以编程方式导出和导入定制图表定义：
-* 导出的 GET 端点为 `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`。
-* 导入的 POST 端点为 `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`。
+You can also export and import custom chart definitions programmatically by using your HTTP client of choice (for example, CURL or postman):
+* The GET endpoint for export is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
+* The POST endpoint for import is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
 
-**注**：如果您导入已经存在的定制图表定义，那么您会以重复的定义结束，也就是说 {{site.data.keyword.mobileanalytics_short}} 仪表板会显示重复的定制图表。
+**Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
+
+-->
 
 ## 设置警报
 {: #alerts}

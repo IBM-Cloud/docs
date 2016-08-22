@@ -17,17 +17,18 @@ copyright:
 
 1.  事前定義データ - このカテゴリーには、すべてのアプリに適用される一般的な使用情報およびデバイス情報が含まれます。このカテゴリー内には、デバイス・メタデータ (オペレーティング・システムおよびデバイス・モデル) および使用データ (アクティブ・ユーザー数およびアプリ・セッション数) が含まれており、アプリ使用のボリューム、頻度、または期間を示します。事前定義データは、アプリで {{site.data.keyword.mobileanalytics_short}} SDK を初期設定すると自動的に収集されます。
 2. カスタム・イベント - このカテゴリーには、自身で定義したデータ、およびアプリに固有のデータが含まれます。このデータは、ページ・ビュー、ボタン・タップ、アプリ内購入など、アプリ内で発生するイベントを表します。アプリでの {{site.data.keyword.mobileanalytics_short}} SDK の初期設定に加えて、追跡対象の各カスタム・イベントに対してコードを 1 行追加する必要があります。
-3. クライアント・ログ・メッセージ - このカテゴリーを使用すると、カスタム・メッセージをログに記録するコード行を開発者がアプリ全体にわたって追加できるようになり、開発およびデバッグに役立ちます。開発者は重大度/詳細レベルを各ログ・メッセージに割り当て、その後、割り当てたレベルによってメッセージをフィルター操作したり、指定したログ・レベルを下回るメッセージを無視するようアプリを構成することでストレージ・スペースを確保したりできます。クライアント・ログ・データを収集するには、アプリ内の {{site.data.keyword.mobileanalytics_short}} SDK を初期設定し、また、各ログ・メッセージのコード行を追加する必要があります。
+3. クライアント・ログ・メッセージ - このカテゴリーを使用すると、カスタム・メッセージをログに記録するコード行を開発者がアプリ全体にわたって追加できるようになり、開発およびデバッグに役立ちます。開発者は重大度/詳細レベルを各ログ・メッセージに割り当て、その後、割り当てたレベルによってメッセージをフィルター操作したり、指定したログ・レベルの下位レベルのメッセージを無視するようにアプリを構成してストレージ・スペースを維持したりできます。クライアント・ログ・データを収集するには、アプリ内の {{site.data.keyword.mobileanalytics_short}} SDK を初期設定し、また、各ログ・メッセージのコード行を追加する必要があります。
 
 SDK は、現在 Android、iOS、および WatchOS で使用できます。
 
-## クライアント・キー値の識別
+## サービス資格情報アクセス・キーの識別
 {: #analytics-clientkey}
 
-クライアント SDK をセットアップする前に、**クライアント・キー**値を識別します。クライアント・キーは、クライアント SDK の初期設定に必要です。
+クライアント SDK をセットアップする前に、**アクセス・キー**値を識別します。アクセス・キーは、クライアント SDK の初期設定に必要です。
+
 1. {{site.data.keyword.mobileanalytics_short}} サービス・ダッシュボードを開きます。
-2. レンチ・アイコンをクリックして「API キー」タブを開きます。
-3. 「API キー」タブで、クライアント・キー値をメモに取ります。
+2. **「サービス資格情報」**タブをクリックします。
+3. アクセス・キー値をコピーします。
 
 
 ## 分析を収集するための Android アプリの初期設定
@@ -35,10 +36,10 @@ SDK は、現在 Android、iOS、および WatchOS で使用できます。
 
 {{site.data.keyword.mobileanalytics_short}} サービスにログを送れるようにアプリケーションを初期設定します。
 
-1. 以下の `import` ステートメントをプロジェクト・ファイルの先頭に追加して、クライアント SDK をインポートします:
+1. 以下の `import` ステートメントをプロジェクト・ファイルの先頭に追加して、クライアント SDK をインポートします。
 
   ```
-  import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
+import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
 import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
 import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   ```
@@ -60,7 +61,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Android アプリケーション・オブジェクトを使用して分析を初期設定し、アプリケーション名を付けます。また、[**クライアント・キー**](#analytics-clientkey)値も必要です。
+3. Android アプリケーション・オブジェクトを使用して分析を初期設定し、アプリケーション名を付けます。また、[**アクセス・キー**](#analytics-clientkey)値も必要です。
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -75,7 +76,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
 {{site.data.keyword.mobileanalytics_short}} サービスにログを送れるようにアプリケーションを初期設定します。Swift SDK は iOS および watchOS で使用できます。
 
-1. 以下の `import` ステートメントを `AppDelegate.swift` プロジェクト・ファイルの先頭に追加して、`BMSCore` および `BMSAnalytics` フレームワークをインポートします:
+1. 以下の `import` ステートメントを `AppDelegate.swift` プロジェクト・ファイルの先頭に追加して、`BMSCore` および `BMSAnalytics` フレームワークをインポートします。
 
   ```Swift
   import BMSCore
@@ -98,7 +99,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. モバイル・アプリケーション名を付けて分析を初期設定します。また、[**クライアント・キー**](#analytics-clientkey)値も必要です。
+3. モバイル・アプリケーション名を付けて分析を初期設定します。また、[**アクセス・キー**](#analytics-clientkey)値も必要です。
 
   アプリケーション名は、{{site.data.keyword.mobileanalytics_short}} ダッシュボードでクライアント・ログを検索する場合にフィルターとして使用されます。複数のプラットフォーム (例えば Android と iOS) で同じアプリケーション名を使用すると、ログの送信元がどのプラットフォームであっても、同じ名前のアプリケーションからのすべてのログを表示できます。
 
@@ -108,7 +109,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
+Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -253,7 +254,7 @@ Analytics.log(eventObject)
 {: #android-logger-sample}
 
 ```
-// Configure Logger to save logs to the device so that they
+// Configure Logger to save logs to the device so that they 
 // can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
 // Disabled by default; set to true to enable
 Logger.storeLogs(true);
@@ -504,4 +505,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## API リファレンス
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

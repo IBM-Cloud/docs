@@ -17,17 +17,18 @@ Los SDK de {{site.data.keyword.mobileanalytics_full}} le permiten preparar su ap
 
 1.  Datos predefinidos: esta categoría incluye información genérica de uso y de los dispositivos que se aplica a todas las apps. En esta categoría se encuentran los metadatos de dispositivo (sistema operativo y modelo de dispositivo) y los datos de uso (usuarios activos y sesiones de app), que indican el volumen, la frecuencia o el tiempo de uso de una app. Los datos predefinidos se recopilan automáticamente una vez inicializado el SDK de {{site.data.keyword.mobileanalytics_short}} en la app.
 2. Eventos personalizados: esta categoría incluye los datos definidos por el usuario y los específicos de la app. Estos datos representan eventos que se producen en la app (por ejemplo, visualizaciones de páginas, selección de botones o compras en la app). Además de inicializar el SDK de {{site.data.keyword.mobileanalytics_short}} en la app, debe añadir una línea de código para cada evento personalizado del que desee hacer un seguimiento.
-3. Mensajes de registro de cliente: esta categoría permite que los desarrolladores añadan líneas de código a la app que registran mensajes personalizados para ayudar al desarrollo y a la depuración. El desarrollador asigna un nivel de gravedad/detalle a todos los mensajes de registro y puede filtrarlos según el nivel asignado o bien conservar el espacio de almacenamiento configurando la app para que ignore los mensajes inferiores a un determinado nivel de registro. Para recopilar los datos de registro del cliente, debe inicializar el SDK de {{site.data.keyword.mobileanalytics_short}} en la app y añadir una línea de código para cada mensaje de registro.
+3. Mensajes de registro de cliente: esta categoría permite que los desarrolladores añadan líneas de código a la app que registran mensajes personalizados para ayudar al desarrollo y a la depuración. El desarrollador asigna un nivel de gravedad/detalle a todos los mensajes de registro y puede filtrarlos según el nivel asignado o bien conservar el espacio de almacenamiento configurando la app para que ignore los mensajes que estén a un nivel inferior a un determinado nivel de registro. Para recopilar los datos de registro del cliente, debe inicializar el SDK de {{site.data.keyword.mobileanalytics_short}} en la app y añadir una línea de código para cada mensaje de registro.
 
 En este momento, los SDK están disponibles para Android, iOS y WatchOS.
 
-## Identificación del valor de la clave de cliente
+## Identificación de la clave de acceso de Credenciales de servicio
 {: #analytics-clientkey}
 
-Identifique su valor **Clave de cliente** antes de configurar el SDK de cliente. La clave de cliente es necesaria para inicializar el SDK de cliente.
+Identifique su valor de **clave de acceso** antes de configurar el SDK de cliente. La clave de acceso es necesaria para inicializar el SDK de cliente.
+
 1. Abra el panel de control del servicio de {{site.data.keyword.mobileanalytics_short}}.
-2. Pulse el icono de la llave inglesa para abrir el separador Claves de API.
-3. En el separador Claves de API, anote el valor Clave de cliente.
+2. Pulse el separador **Credenciales de servicio**.
+3. Copie el valor de clave de acceso.
 
 
 ## Inicialización de la app de Android para recopilar análisis
@@ -60,7 +61,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Inicialice Analytics utilizando el objeto de la aplicación de Android y asignándole el nombre de su aplicación. También necesitará el valor [**Clave de cliente**](#analytics-clientkey).
+3. Inicialice Analytics utilizando el objeto de la aplicación de Android y asignándole el nombre de su aplicación. También necesitará el valor de [**clave de acceso**](#analytics-clientkey).
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -98,7 +99,7 @@ Inicialice la aplicación para habilitar el envío de registros al servicio de {
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Inicialice Analytics asignándole el nombre de su aplicación móvil. También necesitará el valor [**Clave de cliente**](#analytics-clientkey).
+3. Inicialice Analytics asignándole el nombre de su aplicación móvil. También necesitará el valor de [**clave de acceso**](#analytics-clientkey).
 
   El nombre de la aplicación se utiliza como filtro para buscar registros de cliente en el panel de control de {{site.data.keyword.mobileanalytics_short}}. Si utiliza el mismo nombre de aplicación en varias plataformas (por ejemplo, en Android e iOS), podrá ver todos los registros de esa aplicación con el mismo nombre, independientemente de la plataforma desde la que se han enviado los registros.
 
@@ -286,7 +287,8 @@ logger2.info("info message");
 {: ios-logger-sample}
 
 ```
-// Configurar el registrador para guardar los registros en el dispositivo y poder enviarlos posteriormente al servicio de {{site.data.keyword.mobileanalytics_short}} // Está inhabilitado de forma predeterminada; se debe establecer en "true" para habilitar Logger.logStoreEnabled = true
+// Configurar el registrador para guardar los registros en el dispositivo y poder enviarlos posteriormente al servicio de {{site.data.keyword.mobileanalytics_short}}
+// Está inhabilitado de forma predeterminada; se debe establecer en "true" para habilitar Logger.logStoreEnabled = true
 
 // Cambiar el nivel de registro mínimo (opcional)
 // El parámetro predeterminado es LogLevel.Debug
@@ -502,4 +504,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## Referencia de API
 {: #api}
-* [API REST](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
