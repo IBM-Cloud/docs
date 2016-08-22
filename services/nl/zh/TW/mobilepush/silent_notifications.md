@@ -7,6 +7,8 @@ copyright:
 
 # 處理 iOS 的無聲自動通知
 {: #silent-notifications}
+*前次更新：2016 年 6 月 14 日*
+{: .last-updated}
 
 無聲自動通知不會出現在裝置畫面上。這些通知由應用程式在背景接收，此情況會喚醒應用程式最多達 30 秒，以執行指定的背景作業。使用者可能不知道有通知送達。若要傳送 iOS 的無聲自動通知，請使用 [REST API](https://mobile.{DomainName}/imfpushrestapidocs/)。   
 
@@ -20,7 +22,6 @@ copyright:
    NSNumber *contentAvailable = userInfo[@"aps"][@"content-available"];
    if([contentAvailable intValue]== 1){
        [[IMFPushClient sharedInstance] application:application didReceiveRemoteNotification:userInfo];
-       
        //Perform background task
        NSLog(@"Received a silent push..");
        NSLog(@"userInfo: %@", userInfo.description);
@@ -30,13 +31,11 @@ copyright:
    else{
        //Normal Notification
        [[IMFPushAppManager get] notificationReceived:userInfo];
-       
        NSLog(@"Received a normal notification.");
        NSLog(@"userInfo: %@", userInfo.description);
        _appDelegateVC.result.text = userInfo.description;
        handler(UIBackgroundFetchResultNoData);
-       
-   }
+}
    //Success
 }
 ```

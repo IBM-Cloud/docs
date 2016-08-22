@@ -1,4 +1,4 @@
----
+    ---
 
 copyright:
  years: 2015 2016
@@ -8,7 +8,8 @@ copyright:
 
 # Habilitación de aplicaciones Android para recibir notificaciones push
 {: #tag_based_notifications}
-
+*Última actualización: 20 de julio de 2016*
+{: .last-updated}
 
 Habilite las aplicaciones Android para recibir notificaciones push y enviar notificaciones push a sus dispositivos.
 
@@ -35,15 +36,14 @@ El SDK push de servicios móviles de Bluemix® se puede añadir mediante Gradle.
 	```
 
 
-1. Añada las dependencias siguientes a la aplicación móvil. Las líneas siguientes añaden el SDK de cliente push de Bluemix™ Mobile Services y el SDK de Google Play Services a las dependencias de ámbito de compilación.
+2. Añada las dependencias siguientes a la aplicación móvil. Las líneas siguientes añaden el SDK de cliente push de servicios de Bluemix™ Mobile y el SDK de servicios de Google Play a las dependencias del ámbito de compilación.
 
 	```
 	dependencies {
-	  compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:1.+'
-	  compile 'com.google.android.gms:play-services:7.8.0'
-	}  
+	  compile 'com.google.android.gms:play-services:9.0.2' // Envía por push de forma automática en el grupo de compilación SDK3 principal versión 2.0: 'com.ibm.mobilefirstplatform.clientsdk.android', name: 'push', version: '2.+', ext: 'aar', transitive: true
+	}
 	```
-1. En el archivo **AndroidManifest.xml**, añada los permisos siguientes. Para ver un manifiesto de muestra, consulte [Aplicación de ejemplo helloPush de Android](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). Para ver un archivo Gradle de muestra, consulte [Archivo Gradle de compilación de muestra](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
+3. En el archivo **AndroidManifest.xml**, añada los permisos siguientes. Para ver un manifiesto de muestra, consulte [Aplicación de ejemplo helloPush de Android](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). Para ver un archivo Gradle de muestra, consulte [Archivo Gradle de compilación de muestra](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
 
 	```
 	<uses-permission android:name="android.permission.INTERNET"/>
@@ -58,7 +58,7 @@ El SDK push de servicios móviles de Bluemix® se puede añadir mediante Gradle.
 
 	Puede leer más información sobre los [permisos de Android](http://developer.android.com/guide/topics/security/permissions.html) aquí.
 
-1. Añade los valores de intención de notificación para la actividad. Este valor inicia la
+4. Añade los valores de intención de notificación para la actividad. Este valor inicia la
           aplicación cuando el usuario pulsa la notificación recibida desde el área de notificación.
 
 	```
@@ -69,7 +69,7 @@ El SDK push de servicios móviles de Bluemix® se puede añadir mediante Gradle.
 	```
 	**Nota**: sustituya *Your_Android_Package_Name* en la acción anterior con el nombre del paquete de aplicaciones utilizado en la aplicación.
 
-1. Añade el servicio de intento de Google Cloud Messaging (GCM) y los filtros de intento para las notificaciones de sucesos RECEIVE.
+5. Añade el servicio de intento de Google Cloud Messaging (GCM) y los filtros de intento para las notificaciones de sucesos RECEIVE.
 
 	```
 	service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
@@ -102,8 +102,9 @@ Pulse el enlace **Opciones móviles** en el Panel de control de aplicaciones de 
 ###Inicializar el SDK principal
 
 ```
-// Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
-BMSClient.getInstance().initialize(getApplicationContext(), "applicationRoute","applicationGUID", bluemixRegion:"Location where your app Hosted");
+// Inicialice el SDK for Java (Android) con IBM Bluemix AppGUID y la ruta
+BMSClient.getInstance().initialize(getApplicationContext(), appRoute , appGuid, bluemixRegionSuffix);
+
 ```
 
 
@@ -127,25 +128,28 @@ Especifica la ubicación donde se ha alojado la app. Puede utilizar uno de estos
 ###Inicializar el SDK push del cliente
 
 ```
-//Initialize client Push SDK for Java
+//Inicialice el SDK Push del cliente para Java
 MFPPush push = MFPPush.getInstance();
 push.initialize(getApplicationContext());
 ```
+**pushTenantId**
+
+Esta es la clave exclusiva del servicio de Notificaciones push.
 
 ## Registro de dispositivos Android
 {: #android_register}
 
-Utilice la API de `IMFPush.register()` para registrar el dispositivo con un servicio de notificaciones push. Para el registro con dispositivos Android, primero debe añadir la información de Google Cloud Messaging (GCM) en el panel de control de configuración del servicio push de Bluemix. Para obtener más información, consulte [Configuración de credenciales para Google Cloud Messaging](t_push_provider_android.html).
+Utilice la API de `IMFPush.register()` para registrar el dispositivo con un servicio de Notificaciones push. Para el registro con dispositivos Android, primero debe añadir la información de Google Cloud Messaging (GCM) en el panel de control de configuración del servicio push de Bluemix. Para obtener más información, consulte [Configuración de credenciales para Google Cloud Messaging](t_push_provider_android.html).
 
 Copie y pegue los siguientes fragmentos de código en la aplicación para móviles de
                     Android.
 
 ```
-	//Register Android devices
+	//Registre los dispositivos Android
 	push.register(new MFPPushResponseListener<String>() {
 	    @Override
 	    public void onSuccess(String deviceId) {
-	           //handle success here
+	           //maneje el éxito aquí
 	    }
 	    @Override
 	    public void onFailure(MFPPushException ex) {
@@ -155,11 +159,11 @@ Copie y pegue los siguientes fragmentos de código en la aplicación para móvil
 ```
 
 ```
-	//Handles the notification when it arrives
+	//Maneja la notificación cuando llega
 	MFPPushNotificationListener notificationListener = new MFPPushNotificationListener() {
 	    @Override
 	    public void onReceive (final MFPSimplePushNotification message){
-	      // Handle Push Notification
+	      // Manejar la notificación push
 	    }
 	};
 ```
@@ -201,19 +205,20 @@ Una vez que haya desarrollado sus aplicaciones, puede enviar notificaciones push
 
 Enviar notificaciones push básicas.
 
-1. En **Elegir la audiencia**, seleccione una de las siguientes audiencias: **Todos los dispositivos**, o por plataforma: **Sólo dispositivos iOS** o **Sólo dispositivos Android**.
-**Nota**: Cuando seleccione la opción **Todos los dispositivos**, todos los dispositivos que se han suscrito a las notificaciones push recibirán la notificación.
+1. En **Elegir la audiencia**, seleccione una de las siguientes audiencias:
+      **Todos los dispositivos**, o por plataforma: **Sólo dispositivos iOS** o
+      **Sólo dispositivos Android**. 
+
+	**Nota**: Cuando seleccione la opción **Todos los dispositivos**, todos los dispositivos que se han suscrito a las notificaciones push recibirán la notificación.
 
 	![pantalla Notificaciones](images/tag_notification.jpg)
 
-2. En **Crear la notificacion**, escriba el mensaje y, a continuación, pulse **Enviar**.
+2. En **Crear la notificación**, especifique el mensaje y, a continuación, pulse **Enviar**.
 3. Verifique que los dispositivos hayan recibido la notificación.
-La captura de pantalla siguiente muestra un recuadro de alerta que maneja una notificación push
-en el primer plano en un dispositivo Android e iOS.
 
+	La captura de pantalla siguiente muestra un recuadro de alerta que maneja una notificación push
+en el primer plano en un dispositivo Android.
 	![Notificación push en primer plano en Android](images/Android_Screenshot.jpg)
-
-	![Notificación push en primer plano en iOS](images/iOS_Screenshot.jpg)
 
 	La captura de pantalla siguiente muestra una notificación push en segundo plano para Android.
 	![Notificación push en el fondo en Android](images/background.jpg)

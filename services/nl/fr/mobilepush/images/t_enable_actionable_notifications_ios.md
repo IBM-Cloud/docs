@@ -92,7 +92,7 @@ catégorie.
 	Objective-C
 
 	```
-	// Pour Objective-C
+	//For Objective-C
 
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 

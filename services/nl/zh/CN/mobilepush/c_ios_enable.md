@@ -7,6 +7,8 @@ copyright:
 
 # 使 iOS 应用程序能够接收推送通知
 {: #enable-push-ios-notifications}
+*上次更新时间：2016 年 6 月 14 日*
+{: .last-updated}
 
 使 iOS 应用程序能够接收推送通知，并向您的设备发送推送通知。
 
@@ -35,7 +37,7 @@ $ pod init
    Objective-C
 
     ```
-    source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 	Copy the following list as is and remove the dependencies you do not need
 	pod 'IMFCore'
 	pod 'IMFPush'
@@ -152,7 +154,8 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 
 ```
 //Initialize client Push SDK for Objective-C
-IMFPushClient _pushService = [IMFPushClient sharedInstance];
+IMFPushClient *push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 ```
 
 ####Swift
@@ -160,6 +163,7 @@ IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 //Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
+push.initializeBluemixPush()
 ```
 
 ### 路径、GUID 和 Bluemix 区域
@@ -187,7 +191,7 @@ let push = BMSPushClient.sharedInstance
 {: #enable-push-ios-notifications-register}
 
 
-应用程序必须注册 APNS，才能接收远程通知，该注册通常发生在将应用程序安装到设备上之后。当应用程序收到 APNS 生成的设备令牌后，必须将该令牌传递回 Push Notifications Service。
+应用程序必须注册 APNS，才能接收远程通知，该注册通常发生在将应用程序安装到设备上之后。当应用程序收到 APNS 生成的设备令牌后，必须将该令牌传递回 Push Notifications 服务。
 
 要注册 iOS 应用程序和设备，请执行以下操作：
 
@@ -197,7 +201,7 @@ let push = BMSPushClient.sharedInstance
 
 ###创建后端应用程序
 
-在 Bluemix®“目录”的“样板”部分中创建后端应用程序，这会自动将该 Push 服务绑定到此应用程序。如果已创建后端应用程序，请务必将该应用程序绑定到 Push Notification Service。
+在 Bluemix®“目录”的“样板”部分中创建后端应用程序，这会自动将该 Push 服务绑定到此应用程序。如果已创建后端应用程序，请务必将该应用程序绑定到 Push Notifications 服务。
 
 ####Objective-C
 
@@ -245,6 +249,7 @@ let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | U
 
  // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
      [ self  updateMessage:error .description];
@@ -261,6 +266,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
+   push.initializeBluemixPush()
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
             print( "Response during device registration : \(response)")
@@ -296,7 +302,7 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
 要在 iOS 设备上接收推送通知，请将以下 Swift 方法添加到应用程序的应用程序代表中。
 
 ```
- // For Swift
+// For Swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
        //UserInfo dictionary will contain data sent from the server
    }
@@ -322,7 +328,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 2. 在**创建通知**中，输入消息，然后单击**发送**。
 3. 验证设备是否收到通知。
 
-	以下屏幕快照显示了在 iOS 设备上前台和后台处理推送通知的警报框。	![Android 上的前台推送通知](images/Android_Screenshot.jpg)
+	以下屏幕快照显示了在 iOS 设备上前台和后台处理推送通知的警报框。	![Android 上的前台推送通知](images/iOS_Foreground.jpg)
 
 	![iOS 上的前台推送通知](images/iOS_Screenshot.jpg)
 
@@ -334,4 +340,4 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 
 成功设置基本通知后，可以配置基于标记的通知和高级选项。
 
-将这些 Push Notifications Service 功能添加到应用程序中。要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。要使用高级通知选项，请参阅[高级推送通知](t_advance_notifications.html)。
+将这些 Push Notifications 服务功能添加到应用程序中。要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。要使用高级通知选项，请参阅[高级推送通知](t_advance_notifications.html)。

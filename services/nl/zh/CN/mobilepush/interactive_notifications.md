@@ -7,6 +7,8 @@ copyright:
 
 # 交互式通知
 {: #interactive-notifications}
+*上次更新时间：2016 年 6 月 14 日*
+{: .last-updated}
 
 交互式通知允许用户在通知到达时进行操作，而无需打开应用程序。当交互式通知到达时，设备会显示通知消息及相应的操作按钮。V8 和更高版本的 iOS 设备上支持交互式通知。如果向版本低于 8 的 iOS 设备发送交互式通知，那么不会显示通知操作。
 
@@ -29,21 +31,17 @@ copyright:
 ```
 	if([application respondsToSelector:@selector(registerUserNotificationSettings:)]){
 	 UIUserNotificationType userNotificationTypes = UIUserNotificationTypeNone | UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge;
-	      
-	 UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
+	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
 	 acceptAction.identifier = @"OK";
 	 acceptAction.title = @"OK";
-	      
-	 UIMutableUserNotificationAction *rejetAction = [[UIMutableUserNotificationAction alloc] init];
+	UIMutableUserNotificationAction *rejetAction = [[UIMutableUserNotificationAction alloc] init];
 	 rejetAction.identifier = @"NOK";
 	 rejetAction.title = @"NOK";
-	      
-	 UIMutableUserNotificationCategory *cateogory = [[UIMutableUserNotificationCategory alloc] init];
+	UIMutableUserNotificationCategory *cateogory = [[UIMutableUserNotificationCategory alloc] init];
 	 cateogory.identifier = @"poll";
 	 [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextDefault];
 	 [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextMinimal];
-	      
-	 NSSet *catgories = [NSSet setWithObject:cateogory];
+	NSSet *catgories = [NSSet setWithObject:cateogory];
 	 [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:catgories]];
 }
 ```
@@ -54,4 +52,4 @@ copyright:
 	-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (ˆ)())completionHandler
 ``` 
 
-5. 用户单击操作按钮时，将调用此新回调方法。实施此方法必须执行与指定标识关联的步骤，并执行 `completionHandler` 参数中的块。
+5. 用户单击操作按钮时，将调用此新回调方法。要实施此方法，必须执行与指定标识关联的任务，并执行 `completionHandler` 参数中的块。

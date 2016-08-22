@@ -9,6 +9,8 @@ copyright:
 
 
 #啟用進階推送通知
+*前次更新：2016 年 6 月 14 日*
+{: .last-updated}
 
 配置 iOS 徽章、音效、其他 JSON 有效負載、可採取動作的通知，以及保存通知。
 
@@ -86,8 +88,7 @@ if (push != null) {
 	     /* Optional properties
 	     acceptAction.destructive = NO;
 	  acceptAction.authenticationRequired = NO; */
-	  
-	 ```
+	  ```
    Swift
 
 	```
@@ -154,8 +155,7 @@ if (push != null) {
 	//For Objective-C
 
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-
-	[[UIApplication sharedApplication] registerForRemoteNotifications];
+[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
 
 	Swift

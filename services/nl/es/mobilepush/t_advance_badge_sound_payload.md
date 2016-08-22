@@ -9,13 +9,15 @@ copyright:
 
 
 #Habilitación de notificaciones push avanzadas
+*Última actualización: 14 de junio de 2016*
+{: .last-updated}
 
 Configure un identificador de iOS, un sonido, una carga útil de JSON adicional, notificaciones accionables y notificaciones retenidas.
 
 ## Configure un sonido y carga útil e identificador iOS
 {: #badge-sound-payload}
 
-Configure un identificador de iOS, un sonido y la carga útil adicional de JSON.
+Configure un identificador y un sonido de iOS, y carga útil adicional de JSON.
 
 1. En el panel de control Notificaciones Push, vaya al
                         separador **Notificaciones**.
@@ -34,7 +36,7 @@ Configure un identificador de iOS, un sonido y la carga útil adicional de JSON.
 
 ###Android
 
-Añada el archivo de sonido en el directorio `res/raw` de la aplicación android. Al enviar la notivicación, añada el nombre del archivo de sonido en el campo de sonido de la notificación push. 
+Añada el archivo de sonido en el directorio `res/raw` de la aplicación android. Al enviar la notificación, añada el nombre del archivo de sonido en el campo de sonido de la notificación push.
 
 ```
 "settings": {
@@ -176,7 +178,7 @@ A diferencia de las notificaciones push tradicionales, estas solicitan a los usu
 	//For Swift
 	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-    UIApplication.sharedApplication().registerForRemoteNotifications()
+    UIApplication.sharedApplication().registerForRemoteNotifications() 
 	```
 	
 ## Gestión de notificaciones de iOS accionables  

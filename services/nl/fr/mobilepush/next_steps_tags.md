@@ -7,8 +7,10 @@ copyright:
 
 # Etapes suivantes
 {: #next_steps_tags}
+*Dernière mise à jour : 14 juin 2016*
+{: .last-updated}
 
-Une fois que vous avez configuré des notifications de base, vous pouvez configurer des notifications en fonction d'une balise et des options
+Une fois que vous avez configuré les notifications de base, vous pouvez paramétrer les notifications basées sur les balises et les options
 avancées.
 
 Ajoutez ces fonctions du service Notifications push à votre application.

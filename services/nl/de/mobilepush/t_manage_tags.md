@@ -7,6 +7,8 @@ copyright:
 
 # Tags verwalten
 {: #manage_tags}
+*Letzte Aktualisierung: 14. Juni 2016*
+{: .last-updated}
 
 Mit dem Push-Dashboard können Sie Tags für Ihre Anwendungen erstellen oder löschen und anschließend tagbasierte Benachrichtigungen initialisieren. Die tagbasierte Benachrichtigung wird auf dem Gerät empfangen, von dem das Tag subskribiert wurde.
 
@@ -86,7 +88,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onFailure(MFPPushException ex) {
          updateTextView("Error getting subscriptions.. " + ex.getMessage());
-    }
+  }
 })
 ```
 
@@ -324,5 +326,5 @@ Erstellen Sie Tags in der Anzeige **Tag**. Informationen zum Erstellen von Tags 
 1. Klicken Sie im Push Notifications-Dashboard auf die Registerkarte **Benachrichtigungen**.
 1. Wählen Sie die Option **Tags** aus, um tagbasierte Benachrichtigungen zu senden.
 1. Suchen Sie mithilfe des Felds **Tags suchen** nach den Tags, die Sie verwenden möchten, und klicken Sie anschließend auf die Schaltfläche **Hinzufügen**.![Anzeige 'Benachrichtigungen](images/tag_notification.jpg)
-1. Navigieren Sie zum Bereich **Eigene Benachrichtigungen erstellen**  und geben Sie in das Feld **Nachrichtentext** den Text ein, den Sie in Ihrer Benachrichtigung senden möchten.
+1. Geben Sie im Feld **Nachrichtentext** den Text ein, der als Benachrichtigung an die subskribierte Benutzergruppe gesendet werden soll.
 1. Klicken Sie auf die Schaltfläche **Senden**.

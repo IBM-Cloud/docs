@@ -9,8 +9,10 @@ copyright:
 {:new_window: target="_blank"}
 # Berechtigungsnachweise für Google Cloud Messaging (GCM) konfigurieren
 {: #create-push-enable-gcm}
+*Letzte Aktualisierung: 14. Juni 2016*
+{: .last-updated}
 
-Rufen Sie Ihre Berechtigungsnachweise für Google Cloud Messaging (GCM) ab und richten Sie anschließend Push Notifications Service im Push-Dashboard ein.
+Rufen Sie Ihre Berechtigungsnachweise für Google Cloud Messaging (GCM) ab und richten Sie anschließend den Push Notifications-Service im Push-Dashboard ein.
 
 ##Absender-ID und API-Schlüssel abrufen
 

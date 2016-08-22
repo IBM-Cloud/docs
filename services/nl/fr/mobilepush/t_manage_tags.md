@@ -7,6 +7,8 @@ copyright:
 
 # Gestion des balises
 {: #manage_tags}
+*Dernière mise ç jour : 14 juin 2016*
+{: .last-updated}
 
 Utilisez le tableau de bord Push afin de créer et de supprimer des balises pour votre application, puis d'initier des notifications en
 fonction d'une balise. Une notification basée sur les balises est reçue sur le périphérique abonné à la balise.
@@ -59,7 +61,7 @@ abonné ainsi que la liste des balises disponibles.
 Utilisez l'API **getTags** pour obtenir la liste des balises disponibles auxquelles le périphérique peut s'abonner.
 
 ```
-// Obtenez la liste des balises disponibles auxquelles le périphérique peut s'abonner
+// Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
    public void onSuccess(List<String> tags){
@@ -78,7 +80,7 @@ push.getTags(new MFPPushResponseListener<List<String>>(){
 Utilisez l'API **getSubscriptions** pour obtenir la liste des balises auxquelles le périphérique est abonné.
 
 ```
-// Obtenez la liste des balises auxquelles le périphérique est abonné.
+// Get a list of tags that to which the device is subscribed.
 push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onSuccess(List<String> tags) {
@@ -90,7 +92,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onFailure(MFPPushException ex) {
          updateTextView("Error getting subscriptions.. " + ex.getMessage());
-    }
+  }
 })
 ```
 
@@ -101,7 +103,7 @@ Copiez les fragments de code ci-après dans votre application mobile afin d'obte
 Renvoyez un tableau des balises auxquelles le périphérique peut s'abonner.
 
 ```
-//Obtenez la liste des balises disponibles auxquelles le périphérique peut s'abonner
+//Get a list of available tags to which the device can subscribe
 MFPPush.retrieveAvailableTags(function(tags) {
     alert(tags);
 }, null);
@@ -109,7 +111,7 @@ MFPPush.retrieveAvailableTags(function(tags) {
 ```
 
 ```
-//Obtenez la liste des balises disponibles auxquelles le périphérique est abonné.
+//Get a list of available tags to which the device is subscribed.
 MFPPush.getSubscriptionStatus(function(tags) {
     alert(tags);
 }, null);
@@ -122,7 +124,7 @@ Copiez les fragments de code ci-après dans votre application iOS développée �
 Utilisez l'API **retrieveAvailableTags** ci-après pour obtenir la liste des balises disponibles auxquelles le périphérique peut s'abonner.
 
 ```
-//Obtenez la liste des balises disponibles auxquelles le périphérique peut s'abonner
+//Get a list of available tags to which the device can subscribe
 [push retrieveAvailableTagsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error){
  if(error){    
@@ -140,7 +142,7 @@ Utilisez l'API **retrieveSubscriptions** pour obtenir la liste des balises auxqu
 
 
 ```
-// Obtenez la liste des balises auxquelles le périphérique est abonné.
+// Get a list of tags that to which the device is subscribed.
 [push retrieveSubscriptionsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error) {
   if(error){
@@ -165,7 +167,7 @@ Copiez les fragments de code ci-après dans votre application mobile Swift afin 
 
 
 ```
-//Obtenez la liste des balises disponibles auxquelles le périphérique peut s'abonner
+//Get a list of available tags to which the device can subscribe
 push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -> Void in
 
     if error.isEmpty {
@@ -181,7 +183,7 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 ```
 
 ```
-//Obtenez la liste des balises disponibles auxquelles le périphérique est abonné
+//Get a list of available tags to which the device is subscribed
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
 
@@ -290,9 +292,9 @@ Utilisez l'API **subscribeToTags** pour vous abonner à une balise.
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
 	if (error != nil) {
-		//erreur lors de l'abonnement à des balises
+		//error while subscribing to tags
 	} else {
-		//l'abonnement aux balises var a abouti (subStatus = response.subscribeStatus();)
+		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
 }
 ```
@@ -330,6 +332,5 @@ voir [Création de balises](t_manage_tags.html).
 1. Dans le tableau de bord **Push Notifications**, cliquez sur l'onglet **Notifications**.
 1. Sélectionnez l'option **Tags** pour envoyer des notifications basées sur les balises.
 1. Dans la zone **Search** pour le balises, recherchez les balises que vous voulez utiliser, puis cliquez sur le bouton **+Add**.![Ecran Notifications](images/tag_notification.jpg)
-1. Accédez à la zone **Create Your Notifications** et dans la zone **Message Text**, entrez le texte à
-envoyer dans votre notification.
+1. Dans la zone **Message Text**, entrez le texte qui sera envoyé en tant que notification aux destinataires abonnés.
 1. Cliquez sur le bouton **Send**.

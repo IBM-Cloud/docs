@@ -7,8 +7,9 @@ copyright:
 
 {:new_window: target="_blank"}
 # Einfache Push-Benachrichtigungen senden
-
 {: #push-send-notifications}
+*Letzte Aktualisierung: 14. Juni 2016*
+{: .last-updated}
 
 Nach dem Entwickeln Ihrer Anwendungen können Sie einfache Push-Benachrichtigungen (ohne Tags, Badges, zusätzliche Nutzdaten oder Audiodateien) senden.
 

@@ -7,6 +7,8 @@ copyright:
 
 # 푸시 알림을 수신하도록 Cordova 애플리케이션 설정
 {: #cordova_enable}
+*마지막 업데이트 날짜: 2016년 6월 14일*
+{: .last-updated}
 
 Cordova는 JavaScript, CSS 및 HTML을 사용하여 하이브리드 애플리케이션을 빌드하는 플랫폼입니다. {{site.data.keyword.mobilepushshort}}는 Cordova 기반 iOS 및 Android 애플리케이션의 개발을 지원합니다. 
 
@@ -52,8 +54,8 @@ cd your_app_name
 
 	```
 	<!-- add deployment target declaration -->
-	<platform name="android">    
-			  <preference name="android-minSdkVersion" value="15" />
+	<platform name="android">  
+<preference name="android-minSdkVersion" value="15" />
 			  <preference name="android-targetSdkVersion" value="23" />
 			</platform>
 	```
@@ -94,10 +96,11 @@ cd your_app_name
 	b. 브릿지 헤더를 추가하십시오. **빌드 설정 > Swift 컴파일러 - 코드 생성 > Objective-C 브릿지 헤더**로 이동하여 다음 경로를 추가하십시오. *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
 
 	c. 프레임워크 매개변수를 추가하십시오. **빌드 설정 > 링크 > Runpath 검색 경로**로 이동하여 다음 매개변수를 추가하십시오.
+	
 	```
 	@executable_path/Frameworks
 	```
-	d. 브릿지 헤더에서 다음 푸시 가져오기 명령을 주석 해제하십시오. *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**로 이동하십시오. 
+	d. 브릿지 헤더에서 다음 푸시 가져오기 명령을 주석 해제하십시오. *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**로 이동하십시오.
 
 	```
 	//#import <IMFPush/IMFPush.h>
@@ -135,9 +138,12 @@ onDeviceReady: function() {
 ## 디바이스 등록
 {: #cordova_register}
 
-디바이스를 푸시 알림 서비스에 등록하려면 등록 메소드를 호출하십시오.
+등록하기 전에 푸시 알림 서비스를 초기화하십시오. 
+```
+    MFPPush.initializeBluemixPush();
+```
 
-디바이스를 등록하려면 다음 코드 스니펫을 복사하여 Cordova 애플리케이션에 붙여넣으십시오. 
+디바이스를 푸시 알림 서비스에 등록하려면 등록 메소드를 호출하십시오. 다음 코드 스니펫을 Cordova 애플리케이션에 복사하여 디바이스를 등록하십시오. 
 
 ```
 	var success = function(message) { console.log("Success: " + message); };
@@ -147,7 +153,7 @@ onDeviceReady: function() {
 
 ### Android
 {: #cordova_register_android}
-Android에서는 이 설정 매개변수를 사용하지 않습니다. Android 앱만 빌드할 경우에는 공백 오브젝트를 전달하십시오. 예를 들어 다음과 같습니다. 
+Android에서는 이 설정 매개변수를 사용하지 않습니다. Android 앱만 빌드하는 경우 빈 오브젝트를 전달하십시오. 예를 들면, 다음과 같습니다. 
 
 ```
 	MFPPush.registerDevice({}, success, failure);
@@ -156,16 +162,16 @@ Android에서는 이 설정 매개변수를 사용하지 않습니다. Android �
 
 ### iOS
 {: #cordova_register_ios}
-경보, 배지 및 사운드 특성을 사용자 정의하려면 다음의 JavaScript 코드 스니펫을 Cordova 애플리케이션의 웹 파트에 추가하십시오. 
+경보, 배지 및 사운드 특성을 사용자 정의하려면, 다음 JavaScript 코드 스니펫을 Cordova 애플리케이션의 웹 파트에 추가하십시오. 
 
 ```
 	var settings = {
     ios: {
         alert: true,
-	       badge: true,
-	       sound: true
-	   }
-	}
+        badge: true,
+        sound: true
+    }
+ }
 	MFPPush.registerDevice(settings, success, failure);
 ```
 
@@ -182,9 +188,9 @@ JSON.parse를 사용하여 Javascript에서 성공 응답 매개변수의 컨텐
 **var token = JSON.parse(response).token**
 
 
-사용 가능한 키는 다음과 같습니다. `token`, `userId`, `deviceId`.
+사용 가능한 키는 다음과 같습니다. `token`, `userId` 및 `deviceId`.
 
-다음 JavaScript 코드 스니펫은 Bluemix Mobile Services 클라이언트 SDK를 초기화하고, 푸시 알림 서비스를 사용하여 디바이스를 등록하고, 푸시 알림을 청취하는 방법을 보여줍니다. 이 코드를 Javascript 파일에 넣으십시오. 
+다음 JavaScript 코드 스니펫은 Bluemix Mobile Services 클라이언트 SDK를 초기화하고, 디바이스를 푸시 알림 서비스에 등록하고, 푸시 알림을 청취하는 방법을 보여줍니다. 이 코드를 Javascript 파일에 넣으십시오. 
 
 
 
@@ -213,15 +219,17 @@ onDeviceReady: function() {
      var settings = {
          ios: {
              alert: true,
-             badge: true,
-             sound: true
-         }   
-     };
+	            badge: true,
+	            sound: true
+	        }
+	    };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
          alert (notif.message);
      };
-     MFPPush.registerNotificationsCallback(notification);}
+     MFPPush.registerNotificationsCallback(notification);
+
+ }
 ```
 
 ### Objective-C
@@ -268,7 +276,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 ## 디바이스에서 푸시 알림 수신
 {: #cordova_receive}
 
-디바이스에서 푸시 알림을 수신하려면 다음 코드 스니펫을 복사하여 붙여넣으십시오. 
+디바이스에서 푸시 알림을 받으려면 다음 코드 스니펫을 복사하여 붙여넣으십시오. 
 
 ###JavaScript
 
@@ -307,7 +315,9 @@ action-loc-key - 문자열은 "보기" 대신 오른쪽 단추의 제목에 사�
 
 ```
 // Handle receiving a remote notification
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {[[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+
+ [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
 }
 ```
 
@@ -325,14 +335,17 @@ action-loc-key - 문자열은 "보기" 대신 오른쪽 단추의 제목에 사�
 
 ```
 // Handle receiving a remote notification
-funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
+funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){
+
+    CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
 }
 ```
 
 ```
 // Handle receiving a remote notification on launch
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+
+    CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 }
 
 ```
@@ -357,7 +370,9 @@ CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 3. 디바이스가 알림을 수신했는지 확인하십시오. 
 
 	다음 스크린샷은 Android와 iOS 디바이스의 포그라운드에서
-푸시 알림을 처리하는 경보 상자를 보여줍니다. 	![Android의 포그라운드 푸시 알림](images/Android_Screenshot.jpg)
+푸시 알림을 처리하는 경보 상자를 보여줍니다.
+
+	![Android의 포그라운드 푸시 알림](images/Android_Screenshot.jpg)
 
 	![iOS의 포그라운드 푸시 알림](images/iOS_Screenshot.jpg)
 

@@ -22,7 +22,7 @@ format="html" scope="peer" locktitle="yes"> </topicref>
 <topicref href="c_overview_push.html" navtitle="概要" linking="sourceonly" format="html"
 outputclass="subsection" scope="peer">
 <topicref href="c_overview_push.html#overview_push_process" format="html"
-navtitle="Push Notification Service プロセス" scope="peer"/>
+navtitle="プッシュ通知サービスのプロセス" scope="peer"/>
 <topicref href="c_overview_push.html#overview-push-types" format="html"
 navtitle="プッシュ通知のタイプ" scope="peer"/>
 </topicref>
@@ -87,6 +87,12 @@ format="html" navtitle="タグ・ベースの通知の使用可能化" scope="pe
 navtitle="タグのサブスクライブとアンサブスクライブ" scope="peer"/>
 <topicref href="t_manage_tags.html#using_tags" format="html"
 navtitle="タグ・ベースの通知の使用" scope="peer"/>
+</topicref>
+<topicref href="c_user_basednotifications.html" format="html"
+navtitle="ユーザー・ベースの通知の使用可能化" scope="peer" chunk="to-content" linking="normal"
+outputclass="subsection">
+<topicref href="t_manage_user.html" format="html" navtitle="ユーザー ID を使用したデバイスの登録"
+scope="peer" linking="normal" outputclass="subsection"/>
 </topicref>
 <topicref href="t_advance_badge_sound_payload.html" outputclass="subsection" chunk="to-content"
 navtitle="拡張通知" format="html" scope="peer">

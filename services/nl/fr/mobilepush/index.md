@@ -12,13 +12,13 @@ copyright:
 
 # Initiation à {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-*Dernière mise ç jour : 14 juin 2016*
+*Dernière mise à jour : 14 juin 2016*
 {: .last-updated}
 
 {:shortdesc}
 
-Le service de notification push met à disposition une plateforme unifiée pour l'envoi et la gestion de
-notifications push mobiles ciblées pour les plateformes iOS et Android. Il gère le mappage des utilisateurs de votre application aux périphériques et à
+Le service Notifications Push met à disposition une plateforme unifiée pour l'envoi et la gestion de
+Notifications push mobiles ciblées pour les plateformes iOS et Android. Il gère le mappage des utilisateurs de votre application aux périphériques et à
 la plateforme de périphérique, ainsi que la répartition des notifications push sur ces périphériques. Avec ce service, vous pouvez envoyer des
 notifications push de diffusion, des notifications push unicast (en fonction de l'ID de périphérique), mais également des notifications push basées sur les balises (ou les rubriques) aux utilisateurs de vos applications mobiles. Vous pouvez également utiliser un logiciel SDK et des [API REST](https://mobile.{DomainName}/imfpushrestapidocs/) pour développer davantage vos applications client.
 
@@ -52,4 +52,5 @@ notifications sont diffusées au lieu d'être envoyées à un ensemble spécifiq
 {: #api}
 * [Référence d'API Push (Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html){: new_window}
 * [Référence d'API IMFPush (iOS)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window}
+* [Référence d'API BMSPush iOS (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/blob/development/Apple Docs/index.html){: new_window}
 * [Référence d'API REST](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}

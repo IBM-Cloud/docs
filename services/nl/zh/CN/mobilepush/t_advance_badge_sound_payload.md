@@ -9,6 +9,8 @@ copyright:
 
 
 #启用高级推送通知
+*上次更新时间：2016 年 6 月 14 日*
+{: .last-updated}
 
 配置 iOS 角标、声音、其他 JSON 有效内容、可操作通知和暂停通知。
 
@@ -156,11 +158,8 @@ protected void onPause() {
 	```
 	//For Objective-C
 
-
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-
-
-	[[UIApplication sharedApplication] registerForRemoteNotifications];
+[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
 
 	Swift

@@ -9,13 +9,15 @@ copyright:
 
 
 #Activation des notifications push avancées
+*Dernière mise ç jour : 14 juin 2016*
+{: .last-updated}
 
 Configurez un badge iOS, un son, un contenu JSON supplémentaire, des notifications interactives et la conservation des notifications.
 
 ## Configuration d'un son, d'un contenu et d'un badge iOS
 {: #badge-sound-payload}
 
-Configurez un badge iOS, un son et un contenu JSON supplémentaire.
+Configurez un badge, un son et un contenu JSON supplémentaire iOS.
 
 1. Dans le tableau de bord Push Notifications, accédez à l'onglet **Notifications**.
 2. Accédez à la section des **zones facultatives** pour configurer les fonctions de notification push ci-après. 
@@ -28,7 +30,7 @@ chaîne du fichier son à utiliser.
 
 ###Android
 
-Ajoutez votre fichier son dans le répertoire `res/raw` de votre application Android. Lors de l'envoi de la notification, ajoutez le nom du fichier son dans la zone sound de la notification push. 
+Ajoutez votre fichier son dans le répertoire `res/raw` de votre application Android. Lors de l'envoi de la notification, ajoutez le nom du fichier son dans la zone son de la notification push.
 
 ```
 "settings":{
@@ -163,7 +165,7 @@ catégorie.
 	Objective-C
 
 	```
-	// Pour Objective-C
+	//For Objective-C
 
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 

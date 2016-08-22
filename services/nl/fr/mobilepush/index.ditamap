@@ -88,6 +88,12 @@ navtitle="Abonnement à des balises et désabonnement" scope="peer"/>
 <topicref href="t_manage_tags.html#using_tags" format="html"
 navtitle="Utilisation de notifications basées sur les balises" scope="peer"/>
 </topicref>
+<topicref href="c_user_basednotifications.html" format="html"
+navtitle="Activation des notifications utilisateur" scope="peer" chunk="to-content" linking="normal"
+outputclass="subsection">
+<topicref href="t_manage_user.html" format="html" navtitle="Enregistrement du périphérique avec l'ID utilisateur "
+scope="peer" linking="normal" outputclass="subsection"/>
+</topicref>
 <topicref href="t_advance_badge_sound_payload.html" outputclass="subsection" chunk="to-content"
 navtitle="Notifications avancées" format="html" scope="peer">
 <topicref href="t_advance_badge_sound_payload.html#badge-sound-payload"

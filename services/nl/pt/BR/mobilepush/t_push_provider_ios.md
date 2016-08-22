@@ -7,13 +7,14 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# Configurando credenciais para o Apple Push Notifications (APNS)
-
+# Configurando credenciais para APNS
 {: #create-push-credentials-apns}
+*Última atualização: 14 de junho de 2016*
+{: .last-updated}
 
 O Apple Push Notification Service (APNS) permite que os desenvolvedores de aplicativos enviem notificações remotas da instância do serviço push no Bluemix (o provedor) para dispositivos e aplicativos iOS. Mensagens são enviadas para um aplicativo de
-destino no dispositivo. Obtenha e configure suas credenciais APNS. Os certificados de APNs são gerenciados de forma segura pelo serviço de
-notificação push e usados para se conectar ao servidor APNS como um provedor.
+destino no dispositivo. Obtenha e configure suas credenciais APNS. Os certificados APNS são gerenciados com segurança pelo serviço de
+Notificação push e usados para se conectar ao servidor APNS como um provedor.
 
 1. Obtenha uma conta do [Apple Developers](https://developer.apple.com/).
 2. [Registre
@@ -231,16 +232,17 @@ Para criar um arquivo de certificado push .p12 válido, é necessário usar o ce
 desenvolvimento/distribuição. Conclua as etapas.
 
 ```
-//You can choose to pick up either the development or distribution certificate  
-	developer_identity.cer - Development profile downloaded from Apple 
-	apns.p12 - APNS .p12 exported from the keychain
-	openssl x509 -in developer_identity.cer -inform DER -out
-	developer_identity.pem -outform PEM
-	openssl pkcs12 -nocerts -in apns.p12 -out apns.pem
-	openssl pkcs12 -export -inkey apns.pem -in developer_identity.pem -out bluemixPush_dev.p12
+//You can choose to pick up either the development or distribution
+certificate 	developer_identity.cer - Development profile downloaded
+from Apple 	apns.p12 - APNS .p12 exported from the keychain 	openssl
+x509 -in developer_identity.cer -inform DER -out
+	developer_identity.pem -outform PEM 	openssl pkcs12 -nocerts -in
+apns.p12 -out apns.pem 	openssl pkcs12 -export -inkey apns.pem -in
+developer_identity.pem -out bluemixPush_dev.p12
 ```
 É necessário armazenar o arquivo `bluemixPush_dev.p12` em sua área de trabalho.
-##Configurando APNs no painel Notificação push
+
+##Configurando o APNS no Painel de Notificação push
 {: #create-push-credentials-apns-dashboard}
 
 Para usar o Push Notification Service para enviar notificações, faça upload dos certificados SSL necessários para o Apple Push Notification
@@ -255,9 +257,8 @@ de desenvolvimento e produção e a senha associada a cada tipo de
 certificado. Para obter informações, consulte Criando e configurando credenciais push
 para APNS.
 
-Os certificados necessários para o APNs são certificados .p12, que contêm a
-chave privada e os certificados SSL necessários para construir e publicar o
-aplicativo. Deve-se gerar os certificados a partir do Member Center do
+Os certificados que são necessários para APNS são certificados .p12, que contêm a chave privada e os certificados SSL que são necessários
+para construir e publicar seu aplicativo. Deve-se gerar os certificados a partir do Member Center do
 website do Apple Developer (para o qual é necessária uma conta válida do Apple Developer). São necessários certificados separados para o
 ambiente de desenvolvimento (ambiente de
 simulação) e para o ambiente de produção (distribuição).

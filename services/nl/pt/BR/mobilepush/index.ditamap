@@ -92,6 +92,12 @@ navtitle="Assinando e removendo assinatura de tags" scope="peer"/>
 <topicref href="t_manage_tags.html#using_tags" format="html"
 navtitle="Usando notificações baseada em tag" scope="peer"/>
 </topicref>
+<topicref href="c_user_basednotifications.html" format="html"
+navtitle="Ativando notificações baseadas no usuário" scope="peer" chunk="to-content" linking="normal"
+outputclass="subsection">
+<topicref href="t_manage_user.html" format="html" navtitle="Registrar dispositivo com ID do usuário"
+scope="peer" linking="normal" outputclass="subsection"/>
+</topicref>
 <topicref href="t_advance_badge_sound_payload.html" outputclass="subsection" chunk="to-content"
 navtitle="Notificações avançadas" format="html" scope="peer">
 <topicref href="t_advance_badge_sound_payload.html#badge-sound-payload"

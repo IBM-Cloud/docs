@@ -17,7 +17,7 @@ copyright:
 
 {:shortdesc}
 
-Der Push-Benachrichtigungsservice bietet eine gemeinsame Plattform zum Senden und Verwalten von mobilen Push-Benachrichtigungen, die als Ziel iOS- und Android-Plattformen haben. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten und zur Geräteplattform und führt das Senden von Push-Benachrichtigungen an die Benutzer aus. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID') sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und  [REST-APIs](https://mobile.{DomainName}/imfpushrestapidocs/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
+Der Push Notifications-Service bietet eine gemeinsame Plattform zum Senden und Verwalten von mobilen Push-Benachrichtigungen, die als Ziel iOS- und Android-Plattformen haben. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten und zur Geräteplattform und führt das Senden von Push-Benachrichtigungen an die Benutzer aus. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID') sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und  [REST-APIs](https://mobile.{DomainName}/imfpushrestapidocs/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
 
 In diesem Abschnitt wird beschrieben, wie einfache Push-Benachrichtigungen eingerichtet werden. Wenn Sie eine einfache Benachrichtigung verwenden, wird die Benachrichtigung als Rundsendung versendet und nicht mithilfe von Tags an einen bestimmten Benutzerkreis.
 
@@ -48,4 +48,5 @@ In diesem Abschnitt wird beschrieben, wie einfache Push-Benachrichtigungen einge
 {: #api}
 * [Push-API-Referenz (Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html){: new_window}
 * [IMFPush-API-Referenz (iOS)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window}
+* [BMSPush-API-Referenz (iOS) (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/blob/development/Apple Docs/index.html){: new_window}
 * [REST-API-Referenz](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}

@@ -7,11 +7,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# 为 Apple 推送通知 (APNS) 配置凭证
-
+# 为 APNS 配置凭证
 {: #create-push-credentials-apns}
+*上次更新时间：2016 年 6 月 14 日*
+{: .last-updated}
 
-通过 Apple 推送通知服务 (APNS)，应用程序开发者可以将远程通知从 Bluemix 上的推送服务实例（提供者）发送到 iOS 设备和应用程序。消息会发送到设备上的目标应用程序。获取并配置您的 APNS 凭证。APNS 证书由推送通知服务安全管理，作为提供者连接到 APNS 服务器时需要使用该证书。
+通过 Apple 推送通知服务 (APNS)，应用程序开发者可以将远程通知从 Bluemix 上的推送服务实例（提供者）发送到 iOS 设备和应用程序。消息会发送到设备上的目标应用程序。获取并配置您的 APNS 凭证。APNS 证书由 Push Notifications 服务安全管理，在连接到 APNS 服务器（提供者）时需要使用该证书。
 
 1. 获取 [Apple Developers](https://developer.apple.com/) 帐户。
 2. [注册应用程序标识](#create-push-credentials-apns-register)
@@ -27,7 +28,7 @@ copyright:
 {: #create-push-credentials-apns-register}
 
 
-应用程序标识（捆绑标识）是用于识别特定应用程序的唯一标识。每个应用程序都需要应用程序标识。像 Push Notifications Service 这类的服务都是配置给应用程序标识的。
+应用程序标识（捆绑标识）是用于识别特定应用程序的唯一标识。每个应用程序都需要应用程序标识。像 Push Notifications 服务这类的服务都是配置给应用程序标识的。
 
 
 
@@ -112,7 +113,7 @@ APNS 可在两种方式下使用：沙箱和生产。
 
 **开始之前**
 
-请确保您已执行以下操作：注册应用程序标识、针对 Push Notification Service 启用该标识，然后将其配置为使用开发和生产 APNS SSL 证书。
+请确保您已执行以下操作：注册应用程序标识、针对 Push Notifications 服务启用该标识，然后将其配置为使用开发和生产 APNS SSL 证书。
 
 创建开发供应概要文件。
 
@@ -149,10 +150,10 @@ APNS 可在两种方式下使用：沙箱和生产。
 ```
 需要将 `bluemixPush_dev.p12` 文件存储到桌面。
 
-##在推送通知仪表板上设置 APNs
+##在推送通知仪表板上设置 APNS
 {: #create-push-credentials-apns-dashboard}
 
-要使用 Push Notification Service 发送通知，请上传 Apple 推送通知服务 (APNS) 所需的 SSL 证书。此外，也可以使用 REST API 来上传 APNS 证书。
+要使用 Push Notifications 服务发送通知，请上传 Apple 推送通知服务 (APNS) 所需的 SSL 证书。此外，也可以使用 REST API 来上传 APNS 证书。
 
 
 **开始之前**
@@ -160,7 +161,7 @@ APNS 可在两种方式下使用：沙箱和生产。
 
 获取开发和生产 APNs SSL 证书，以及与每种类型的证书相关联的密码。有关信息，请参阅“为 APNs 创建和配置推送凭证”。
 
-APNs 所需的证书为 .p12 证书，其中包含构建和发布应用程序所需的专用密钥和 SSL 证书。您必须从 Apple Developer Web 站点的 Member Center 生成证书（此操作需要有效的 Apple Developer 帐户）。对于开发（沙箱）环境和生产（分发）环境，需要不同的证书。
+APNS 所需的证书为 .p12 证书，其中包含构建和发布应用程序所需的专用密钥和 SSL 证书。您必须从 Apple Developer Web 站点的 Member Center 生成证书（此操作需要有效的 Apple Developer 帐户）。对于开发（沙箱）环境和生产（分发）环境，需要不同的证书。
 
 **注**：当 **.cer** 出现在钥匙串访问中之后，请将其导出到您的计算机，以创建 .p12 证书。
 

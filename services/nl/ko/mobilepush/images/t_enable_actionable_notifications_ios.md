@@ -86,11 +86,9 @@ copyright:
 	```
 	//For Objective-C
 
-
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 
-
-	[[UIApplication sharedApplication] registerForRemoteNotifications];
+ [[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
 
 	Swift
@@ -100,6 +98,6 @@ copyright:
 	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
 	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
 
-	application.registerUserNotificationSettings(notificationSettings)
+ application.registerUserNotificationSettings(notificationSettings)
 	application.registerForRemoteNotifications()
 	```

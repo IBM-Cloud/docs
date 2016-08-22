@@ -7,6 +7,8 @@ copyright:
 
 # REST API 사용
 {: #push-api-rest}
+*마지막 업데이트 날짜: 2016년 7월 12일*
+{: .last-updated}
 
 푸시 알림을 위한 REST(Representational State Transfer) API(application program interface)를 사용할 수 있습니다. 또한 SDK 및 [Push API](https://mobile.{DomainName}/imfpushrestapidocs/)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다. 
 
@@ -102,3 +104,9 @@ appSecret 값을 확보하려면 다음을 수행하십시오.
 - 이름은 "이름" 또는 "설명" 필드 중 하나일 수 있습니다.
 - 연산자 =@을 사용할 경우 값이 하위 문자열이 될 수 있습니다.
 - ==를 사용할 경우 값이 정확히 일치하는 문자열이어야 합니다. 
+
+
+##푸시 알림 응답 코드
+{: #push-api-response-codes}
+
+상태: 405 허용되지 않은 메소드 - 적절한 메소드를 예상했습니다. 

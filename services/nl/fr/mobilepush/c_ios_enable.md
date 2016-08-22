@@ -7,6 +7,8 @@ copyright:
 
 # Configuration des applications iOS pour la réception de notifications push
 {: #enable-push-ios-notifications}
+*Dernière mise à jour : 14 juin 2016*
+{: .last-updated}
 
 Configurez les applications iOS pour qu'elles reçoivent des notifications push et qu'elles envoient des notifications push à vos
 périphériques.
@@ -59,7 +61,9 @@ $ pod init
 $ pod update
 ```
 Cette commande installe vos dépendances et crée un espace de travail Xcode.  **Remarque** : Prenez soin de toujours ouvrir le nouvel espace de travail Xcode au
-lieu du fichier de projet Xcode d'origine : ```
+lieu du fichier de projet Xcode d'origine :
+
+	```
 	$ open App.xcworkspace
 	```
 Cet espace de travail contient votre projet d'origine et le projet Pods contenant vos dépendances. Si
@@ -75,8 +79,8 @@ Ajoutez des infrastructures à votre projet à l'aide de [Carthage](https://gith
 ```
 github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 ```
-2. Exécutez la commande `carthage update`. Lorsque la construction est terminée, faites glisser `BMSPush.framework`, `BMSCore.framework` et `BMSAnalyticsAPI.framework` dans votre projet Xcode. 
-3. Suivez les instructions du site [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) pour terminer l'intégration. 
+2. Exécutez la commande `carthage update`. Lorsque la construction est terminée, faites glisser `BMSPush.framework`, `BMSCore.framework` et `BMSAnalyticsAPI.framework` dans votre projet Xcode.
+3. Suivez les instructions du site [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) pour terminer l'intégration.
 
 ##Utilisation d'infrastructures et de dossiers source importés
 
@@ -133,7 +137,7 @@ de l'application et l'identificateur global unique.
 ####Objective-C
 
 ```
-// Initialisez le logiciel SDK pour Object-C avec la route et l'identificateur global unique IBM Bluemix
+// Initialize the SDK for Object-C with IBM Bluemix GUID and route
 IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
 ```
@@ -141,7 +145,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 ####Swift
 
 ```
-// Initialisez le logiciel SDK de base pour Swift avec la route, l'identificateur global unique et la région IBM Bluemix
+// Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
 let myBMSClient = BMSClient.sharedInstance
 
 myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
@@ -154,15 +158,17 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ####Objective-C
 
 ```
-//Initialisez le logiciel SDK Push du client pour Objective-C
-IMFPushClient _pushService = [IMFPushClient sharedInstance];
+//Initialize client Push SDK for Objective-C
+IMFPushClient *push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 ```
 
 ####Swift
 
 ```
-//Initialisez le logiciel SDK Push du client pour Swift
+//Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
+push.initializeBluemixPush()
 ```
 
 ### Route, identificateur global unique et région Bluemix
@@ -178,7 +184,7 @@ valeur est sensible à la casse.
 
 **bluemixRegionSuffix**
 
-Indique l'emplacement où l'appli est hébergée. Le paramètre `bluemixRegion` spécifie le déploiement Bluemix que vous utilisez. ous pouvez définir cette valeur avec une propriété statique `BMSClient.REGION` et utiliser l'une des trois valeurs suivantes : 
+Indique l'emplacement où l'appli est hébergée. Le paramètre `bluemixRegion` spécifie le déploiement Bluemix que vous utilisez. ous pouvez définir cette valeur avec une propriété statique `BMSClient.REGION` et utiliser l'une des trois valeurs suivantes :
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK
@@ -193,12 +199,12 @@ Indique l'emplacement où l'appli est hébergée. Le paramètre `bluemixRegion` 
 
 Une application doit être enregistrée auprès d'APNS pour pouvoir recevoir des notifications distantes. Cet
 enregistrement s'effectue généralement après l'installation de l'application sur un périphérique. Une fois que le jeton de périphérique généré par APNS a
-été reçu par l'application, il doit être transmis au service de notification push. 
+été reçu par l'application, il doit être transmis au service de notification push.
 
 Pour enregistrer les applications et les périphériques iOS :
 
 1. Créez une application de back end
-2. Transmettez le jeton au service de notification push
+2. Transmettez le jeton au service Notifications push
 
 
 ###Créez une application de back end
@@ -208,7 +214,7 @@ Créez une application de back end dans la section Conteneurs boilerplate du cat
 ####Objective-C
 
 ```
-	//Pour Objective-C
+	//For Objective-C
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
 	    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
@@ -225,7 +231,7 @@ Créez une application de back end dans la section Conteneurs boilerplate du cat
 ####Swift
 
 ```
-	//Pour Swift
+	//For Swift
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
 		let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
@@ -234,14 +240,14 @@ Créez une application de back end dans la section Conteneurs boilerplate du cat
 	}
 ```
 
-###Transmettez le jeton au service Notification push
+###Transmettez le jeton au service de notification push
 
-Une fois que le jeton envoyé par APNS a été reçu, transmettez-le au service de notification push dans le cadre de la méthode `registerDevice:withDeviceToken`. 
+Une fois que le jeton envoyé par APNS a été reçu, transmettez-le au service de notification push dans le cadre de la méthode `registerDevice:withDeviceToken`.
 
 ####Objective-C
 
 ```
-//Pour Objective-C
+//For Objective-C
 -( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
 
    IMFClient *client = [IMFClient sharedInstance];
@@ -249,8 +255,9 @@ Une fois que le jeton envoyé par APNS a été reçu, transmettez-le au service 
  [client initializeWithBackendRoute: @"your-backend-route-here" backendGUID: @"Your-backend-GUID-here"];
 
 
- // obtenir une instance Push
+ // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
      [ self  updateMessage:error .description];
@@ -262,11 +269,12 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ####Swift
 
-Une fois que le jeton envoyé par APNS a été reçu, transmettez-le au service de notification push dans le cadre de la méthode `didRegisterForRemoteNotificationsWithDeviceToken`. 
+Une fois que le jeton envoyé par APNS a été reçu, transmettez-le au service de notification push dans le cadre de la méthode `didRegisterForRemoteNotificationsWithDeviceToken`.
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
+   push.initializeBluemixPush()
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
             print( "Response during device registration : \(response)")
@@ -292,9 +300,9 @@ Recevez des notifications push sur des périphériques iOS.
 Pour recevoir des notifications push sur des périphériques iOS, ajoutez la méthode Objective-C suivante au délégué d'application de votre application :
 
 ```
-// Pour Objective-C
+// For Objective-C
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-// le dictionnaire userInfo contiendra les données envoyées depuis le serveur
+//userInfo dictionary will contain data sent from server.
 }
 ```
 
@@ -302,9 +310,9 @@ Pour recevoir des notifications push sur des périphériques iOS, ajoutez la mé
 Pour recevoir des notifications push sur des périphériques iOS, ajoutez la méthode Swift suivante au délégué d'application de votre application :
 
 ```
- // Pour Swift
+ // For Swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-       //Le dictionnaire UserInfo contiendra les données envoyées depuis le serveur
+       //UserInfo dictionary will contain data sent from the server
    }
 
 ```
@@ -332,7 +340,8 @@ Envoyez des notifications push de base.
 3. Vérifiez que vos périphériques ont reçu votre notification.
 
 	La capture d'écran suivante présente une boîte de dialogue d'alerte qui traite une notification push qui s'exécute au premier plan et en arrière-plan sur un périphérique iOS.
-	![Notification push qui s'exécute au premier plan sur un périphérique Android](images/Android_Screenshot.jpg)
+
+	![Notification push qui s'exécute au premier plan sur un périphérique Android](images/iOS_Foreground.jpg)
 
 	![Notification push qui s'exécute au premier plan sur un périphérique iOS](images/iOS_Screenshot.jpg)
 

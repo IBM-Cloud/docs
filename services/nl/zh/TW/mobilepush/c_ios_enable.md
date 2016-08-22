@@ -7,6 +7,8 @@ copyright:
 
 # 讓 iOS 應用程式可接收推送通知
 {: #enable-push-ios-notifications}
+*前次更新：2016 年 6 月 14 日*
+{: .last-updated}
 
 讓 iOS 應用程式可接收推送通知，以及將推送通知傳送給您的裝置。
 
@@ -34,7 +36,7 @@ $ pod init
    Objective-C
 
     ```
-    source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 	Copy the following list as is and remove the dependencies you do not need
 	pod 'IMFCore'
 	pod 'IMFPush'
@@ -152,7 +154,8 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 
 ```
 //Initialize client Push SDK for Objective-C
-IMFPushClient _pushService = [IMFPushClient sharedInstance];
+IMFPushClient *push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 ```
 
 ####Swift
@@ -160,6 +163,7 @@ IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 //Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
+push.initializeBluemixPush()
 ```
 
 ### 路徑、GUID 及 Bluemix 地區
@@ -245,6 +249,7 @@ let push = BMSPushClient.sharedInstance
 
  // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
      [ self  updateMessage:error .description];
@@ -261,6 +266,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
+   push.initializeBluemixPush()
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
             print( "Response during device registration : \(response)")
@@ -296,7 +302,7 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
 若要在 iOS 裝置上接收推送通知，請將下列 Swift 方法新增至應用程式的應用程式委派。
 
 ```
- // For Swift
+// For Swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
        //UserInfo dictionary will contain data sent from the server
    }
@@ -324,7 +330,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 
 	下列擷取畫面顯示在 iOS 裝置的前景及背景中處理推送通知的警示框。
 
-	![Android 上的前景推送通知](images/Android_Screenshot.jpg)
+	![Android 上的前景推送通知](images/iOS_Foreground.jpg)
 
 	![iOS 上的前景推送通知](images/iOS_Screenshot.jpg)
 

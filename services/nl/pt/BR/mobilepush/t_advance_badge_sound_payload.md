@@ -9,6 +9,8 @@ copyright:
 
 
 #Ativando notificações push avançadas
+*Última atualização: 14 de junho de 2016*
+{: .last-updated}
 
 Configure um badge iOS, som, carga útil JSON adicional, notificações acionáveis e notificações de participação.
 
@@ -34,7 +36,7 @@ configure o valor dessa propriedade para 0.
 
 ###Android
 
-Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao enviar notificação, inclua o nome do arquivo
+Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao enviar a notificação, inclua o nome do arquivo
 de som no campo de som da notificação push.
 
 ```
@@ -170,9 +172,7 @@ categoria.
 	Objective-C
 
 	```
-	//For Objective-C
-
-	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
+	//For Objective-C 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
