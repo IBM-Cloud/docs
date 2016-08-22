@@ -19,8 +19,7 @@ Voraussetzungen:
 * Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
 
 ## Google-Anwendung für die Website konfigurieren
-Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der [Google Developer Console](https://console.developers.google.com) (Google-Entwicklerkonsole).
-Zum Erstellen eines Projekts gehört das Anfordern einer Google-Client-ID und eines geheimen Schlüssels. Die Google-Client-ID und der geheime Schlüssel sind die eindeutigen Kennungen für Ihre Anwendung, die von der Google-Authentifizierung verwendet werden und zum Einrichten der {{site.data.keyword.Bluemix_notm}}-Anwendung erforderlich sind.
+Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der [Google Developer Console](https://console.developers.google.com) (Google-Entwicklerkonsole). Zum Erstellen eines Projekts gehört das Anfordern einer Google-Client-ID und eines geheimen Schlüssels. Die Google-Client-ID und der geheime Schlüssel sind die eindeutigen Kennungen für Ihre Anwendung, die von der Google-Authentifizierung verwendet werden und zum Einrichten der {{site.data.keyword.Bluemix_notm}}-Anwendung erforderlich sind.
 
 1. Erstellen Sie ein Projekt mithilfe der Google+-API.
 1. Erstellen Sie unter Verwendung von **OAuth** Berechtigungsnachweise. Zum Erstellen der Berechtigungsnachweise müssen Sie folgende Schritte ausführen:
@@ -58,7 +57,7 @@ Gehen Sie wie folgt vor, um den Autorisierungsprozess zu starten:
   Der Parameter `state` ist momentan nicht im Gebrauch und kann leer gelassen werden.
 
   Der Parameter `redirect_uri` entspricht dem uri für die Weiterleitung nach erfolgreicher oder fehlgeschlagener Authentifizierung bei Google.
-Die nach der Weiterleitung zurückgegebene Antwort enthält den Autorisierungscode in den Abfrageparametern.
+  Die nach der Weiterleitung zurückgegebene Antwort enthält den Autorisierungscode in den Abfrageparametern.
 1. Senden Sie eine `POST`-Anforderung an den Token-Endpunkt des Autorisierungsservers:
 
  https://imf-newauthserver.bluemix.net/oauth/v2/token
@@ -73,7 +72,7 @@ Die nach der Weiterleitung zurückgegebene Antwort enthält den Autorisierungsco
     code= <authorization code>
 	```
   Der Parameter `redirect_uri` muss mit dem `redirect_uri` aus Schritt 1 übereinstimmen und der Wert für `<authorization code>` wird von der Antwort empfangen.
-    Sie müssen diese `POST`-Anforderung innerhalb von 10 Minuten senden, da der Autorisierungscode maximal 10 Minuten gültig ist.
+  Sie müssen diese `POST`-Anforderung innerhalb von 10 Minuten senden, da der Autorisierungscode maximal 10 Minuten gültig ist.
 
 Der Antwortteil von `POST` sollte das `access_token` und das `id_token` in Base64-Codierung enthalten.
 

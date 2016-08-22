@@ -12,13 +12,14 @@ copyright:
 {: #facebook-auth-ios}
 
 
-*前次更新：2016 年 6 月 15 日*
+*前次更新：2016 年 7 月 17 日*
 {: .last-updated}
 
 
-若要使用 Facebook 作為 iOS 應用程式中的身分提供者，請針對 Facebook 應用程式新增及配置 iOS 平台。{:shortdesc}
+若要使用 Facebook 作為 iOS 應用程式中的身分提供者，請針對 Facebook 應用程式新增及配置 iOS 平台。
+{:shortdesc}
 
-**附註：**雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix}} Mobile Services 的主要 SDK，不過預計在今年稍晚中斷使用它，改用新的 Swift SDK（請參閱[設定 iOS Swift SDK](facebook-auth-ios-swift-sdk.html)）。
+**附註：**雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用它，改用新的 Swift SDK（請參閱[設定 iOS Swift SDK](facebook-auth-ios-swift-sdk.html)）。
 
 ## 開始之前
 {: #facebook-auth-ios-before}
@@ -35,7 +36,7 @@ copyright:
 1. 在「Facebook 開發人員入口網站」的「Facebook 應用程式」中，按一下**設定 > 新增平台 > iOS**。
 
 1. 指定 iOS 應用程式的 *bundleId*。若要尋找 iOS 應用程式的 *bundleId*，請在 `info.plist` 檔案或 Xcode 專案**一般**標籤中尋找**軟體組 ID**。
-**提示**：如果您計劃使用這些特性，則請考慮啟用「URL 架構字尾」或「單一登入」。
+**提示**：如果您計劃使用「URL 架構字尾」或「單一登入」，則請考慮啟用這些特性。
 
 1. 按一下**儲存設定**。
 
@@ -46,11 +47,11 @@ copyright:
 
 1. 在 {{site.data.keyword.Bluemix}} 儀表板中開啟應用程式。
 
-1. 按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及 **應用程式 GUID** (`applicationGUID`)。起始設定 SDK 時，您需要這些值。
+1. 按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及**應用程式 GUID** (`applicationGUID`)。起始設定 SDK 時，您需要這些值。
 
 1. 按一下 {{site.data.keyword.amashort}} 磚。即會載入 {{site.data.keyword.amashort}} 儀表板。
 
-1. 按一下 **Facebook** 磚。
+1. 按一下 **Facebook** 畫面中的**配置**按鈕。
 
 1. 指定「Facebook 應用程式 ID」，然後按一下**儲存**。
 
@@ -140,14 +141,16 @@ copyright:
 	    </dict>
 	</dict>
 ```
-使用「Facebook 應用程式 ID」更新 URL 架構及 FacebookappID 內容。**重要事項**：請確定您未置換 `info.plist` 檔案中的任何現有內容。如果您具有重疊的內容，則必須手動進行合併。如需相關資訊，請參閱[配置 Xcode 專案](https://developers.facebook.com/docs/ios/getting-started/)及[準備 iOS9 的應用程式](https://developers.facebook.com/docs/ios/ios9)。
+使用「Facebook 應用程式 ID」更新 URL 架構及 FacebookappID 內容。 **重要事項**：請確定您未置換 `info.plist` 檔案中的任何現有內容。如果您具有重疊的內容，則必須手動進行合併。如需相關資訊，請參閱[配置 Xcode 專案](https://developers.facebook.com/docs/ios/getting-started/)及[準備 iOS9 的應用程式](https://developers.facebook.com/docs/ios/ios9)。
 
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #facebook-auth-ios-initalize}
 
-透過傳遞應用程式路徑 (`applicationRoute`) 及應用程式 GUID (`applicationGUID`) 來起始設定用戶端 SDK。放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。
+透過傳遞應用程式路徑 (`applicationRoute`) 及應用程式 GUID (`applicationGUID`) 來起始設定用戶端 SDK。
 
-1. 開啟 {{site.data.keyword.Bluemix_notm}} 儀表板的主頁面，然後按一下應用程式。按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及 **應用程式 GUID** (`applicationGUID`)。
+放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。
+
+1. 開啟 {{site.data.keyword.Bluemix_notm}} 儀表板的主頁面，然後按一下應用程式。按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及**應用程式 GUID** (`applicationGUID`)。
 
 1. 新增下列標頭，在您要使用 {{site.data.keyword.amashort}} 用戶端 SDK 的類別中匯入必要架構：
 
@@ -174,13 +177,13 @@ copyright:
 	#import <FacebookSDK/FacebookSDK.h>
 ```
 	* 在 Xcode 中按一下您的專案，然後選取**建置設定**標籤。
-	* 搜尋 **Objective-C Bridging Header*。
+	* 搜尋 **Objective-C Bridging Header**。
 	* 將值設為 `BridgingHeader.h` 檔案的位置（例如：`$(SRCROOT)/MyApp/BridgingHeader.h`）。
-	* 建置專案，以確定透過 Xcode 取得橋接標頭。您應該不會看到任何失敗訊息。
+	* 建置專案，以確定 Xcode 取得橋接標頭。您應該不會看到任何失敗訊息。
 
-3. 起始設定用戶端 SDK。將 *applicationRoute* 及 *applicationGUID* 取代為您取自 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的**路徑**及 **應用程式 GUID** 值。
+3. 起始設定用戶端 SDK。將 *applicationRoute* 及 *applicationGUID* 取代為您取自 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的**路徑**及**應用程式 GUID** 值。
 
- **Objective-C**
+	**Objective-C**
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -197,7 +200,7 @@ copyright:
 
 1. 將下列程式碼新增至應用程式委派中的 `application:didFinishLaunchingWithOptions` 方法，以通知 Facebook SDK 有關應用程式啟動的資訊，並登錄「Facebook 鑑別處理程式」。起始設定 IMFClient 實例之後，請立即新增此程式碼。
 
- **Objective-C**
+	**Objective-C**
 
 	```Objective-C
 		[FBAppEvents activateApp];
@@ -230,9 +233,7 @@ copyright:
 	func application(application: UIApplication, openURL url: NSURL,
 					sourceApplication: String?, annotation: AnyObject) -> Bool {
 
-		return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
-
-	}
+		return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)}
 ```
 
 ## 測試鑑別
@@ -244,7 +245,7 @@ copyright:
 您必須使用 {{site.data.keyword.mobilefirstbp}} 樣板，並且在 `/protected` 端點已具有 {{site.data.keyword.amashort}} 所保護的資源。如果您需要設定 `/protected` 端點，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 1. 嘗試在瀏覽器中將要求傳送給新建行動後端的受保護端點。開啟下列 URL：`{applicationRoute}/protected`。
-例如：`http://my-mobile-backend.mybluemix.net/protected`
+例如：`http://my-mobile-backend.mybluemix.net/protected`。
 <br/>使用 MobileFirst Services Starter 樣板所建立之行動後端的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。瀏覽器中會傳回 `Unauthorized` 訊息。傳回此訊息的原因是只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
 
 1. 使用 iOS 應用程式以對相同的端點提出要求。
@@ -284,18 +285,19 @@ copyright:
 	};
  ```
 
-1. 執行應用程式。即會蹦現 Facebook 登入畫面。![影像](images/ios-facebook-login.png)
+1. 執行您的應用程式。即會蹦現 Facebook 登入畫面。
+
+	![影像](images/ios-facebook-login.png)
 
 	如果您未在裝置上安裝 Facebook 應用程式，或目前未登入 Facebook，則此畫面可能會稍微不同。
 
-1. 按一下**確定**，以授權 {{site.data.keyword.amashort}} 使用 Facebook 使用者身分來進行鑑別。
+1. 按一下**確定**，以授權 {{site.data.keyword.amashort}} 使用您的 Facebook 使用者身分來進行鑑別。
 
-1. 	當要求成功時，會在 Xcode 主控台中顯示下列輸出：
-	![影像](images/ios-facebook-login-success.png)
+1. 	當要求成功時，會在 Xcode 主控台中顯示下列輸出：![影像](images/ios-facebook-login-success.png)
 
 	您也可以新增下列程式碼，來新增登出功能：
 
- **Objective-C**
+	**Objective-C**
 
 	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
@@ -307,5 +309,8 @@ copyright:
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	如果您在使用者使用 Facebook 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Facebook 進行鑑別。若要切換使用者，您必須呼叫此程式碼，而且使用者必須在其瀏覽器中登出 Facebook。
-將 `callBack` 傳遞給 logout 函數是選用性的作業。您也可以傳遞 `nil`。
+	如果您在使用者使用 Facebook 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Facebook 進行鑑別。
+
+	若要切換使用者，您必須呼叫此程式碼，而且使用者必須在其瀏覽器中登出 Facebook。
+
+  將 `callBack` 傳遞給 logout 函數是選用性的作業。您也可以傳遞 `nil`。

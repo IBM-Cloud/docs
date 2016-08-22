@@ -7,6 +7,11 @@ copyright:
 
 # Criando um provedor de identidade customizado
 {: #custom-create}
+
+*Última atualização: 16 de junho de 2016*
+{: .last-updated}
+
+
 Para criar um provedor de identidade customizado, desenvolva um aplicativo da web que exponha uma API RESTful:
 
 ```
@@ -117,7 +122,7 @@ Cada solicitação do serviço {{site.data.keyword.amashort}} para um provedor d
 implementado com o Node.js ou o Liberty for Java&trade;&trade; e executado no
 {{site.data.keyword.Bluemix_notm}}.
 
-O cabeçalho de autorização contém informações sobre o cliente móvel e o app móvel que acionou o processo de autenticação. É possível usar o contexto de segurança para recuperar esses dados. Para obter mais informações, consulte [Protegendo recursos](protecting-resources.html).
+O cabeçalho de autorização contém informações sobre o cliente móvel e o app móvel que acionou o processo de autenticação. É possível usar o contexto de segurança para recuperar esses dados. Para obter mais informações, veja [Protegendo recursos](protecting-resources.html).
 
 ## Implementação de amostra do provedor de identidade customizado
 {: #custom-sample}
@@ -219,7 +224,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 ```
 --->
 
-## Próximas etapas
+## Próximas Etapas
 {: #next-steps}
 * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](custom-auth-config-mca.html)
 * [Configurando a autenticação customizada para Android](custom-auth-android.html)

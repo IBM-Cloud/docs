@@ -11,14 +11,14 @@ copyright:
 # 使用 Google 凭证认证用户
 {: #google-auth}
 
-*上次更新时间：2016 年 6 月 15 日*
+*上次更新时间：2016 年 7 月 3 日*
 
-您可以将 {{site.data.keyword.amashort}} 服务配置为将 Google 用作身份提供者来保护资源。然后，您的移动应用程序用户可以使用自己的 Google 凭证进行认证。
+您可以将 {{site.data.keyword.amashort}} 服务配置为将 Google 用作身份提供者来保护资源。然后，您的移动或 Web 应用程序用户可以使用自己的 Google 凭证进行认证。
 {:shortdesc}
 
 **重要信息**：您无需单独安装 Google SDK。配置 {{site.data.keyword.amashort}} 客户端 SDK 时，依赖关系管理器会自动安装 Google SDK。
 
-## {{site.data.keyword.amashort}} 流程
+## {{site.data.keyword.amashort}} 请求流程
 {: #google-auth-overview}
 
 请参阅以下简化图，以了解 {{site.data.keyword.amashort}} 如何与 Google 集成进行认证。
@@ -28,7 +28,7 @@ copyright:
 1. 使用 {{site.data.keyword.amashort}} SDK 对受 {{site.data.keyword.amashort}} 服务器 SDK 保护的后端资源发起请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 检测到未授权的请求，然后返回 HTTP 401 代码和授权作用域。
 * {{site.data.keyword.amashort}} 客户端 SDK 自动检测到上述 HTTP 401 代码，然后启动认证过程。
-* {{site.data.keyword.amashort}} 客户端 SDK 访问 {{site.data.keyword.amashort}} 服务，并要求发出 Authorization 头。
+* {{site.data.keyword.amashort}} 客户端 SDK 访问 {{site.data.keyword.amashort}} 服务，并请求 Authorization 头。
 * {{site.data.keyword.amashort}} 服务通过提供认证质询，要求客户端先向 Google 进行认证。
 * {{site.data.keyword.amashort}} 客户端 SDK 使用 Google SDK 来启动认证过程。成功认证后，Google SDK 将返回 Google 访问令牌。
 * Google 访问令牌被视为认证质询回复。该令牌会发送到 {{site.data.keyword.amashort}} 服务。

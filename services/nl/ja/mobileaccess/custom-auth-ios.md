@@ -5,8 +5,12 @@ copyright:
 
 ---
 
-# iOS 用の {{site.data.keyword.amashort}} Client SDK の構成
+# iOS 用の {{site.data.keyword.amashort}} Client SDK の構成 (Objective-C)
 {: #custom-ios}
+
+*最終更新日: 2016 年 7 月 18 日*
+{: .last-updated}
+
 
 {{site.data.keyword.amashort}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する iOS アプリケーションを構成します。
 
@@ -39,7 +43,7 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 1. コマンド・ラインで `pod install` を実行します。
 追加された依存関係が CocoaPods によってインストールされます。進行状況および追加されたコンポーネントが表示されます。
 
-**重要**: この時点で、CocoaPods によって生成された xcworkspace ファイルを使用してプロジェクトを開く必要があります。通常、名前は `{your-project-name}.xcworkspace` です。
+    **重要**: この時点で、CocoaPods によって生成された xcworkspace ファイルを使用してプロジェクトを開く必要があります。通常、名前は `{your-project-name}.xcworkspace` です。
 
 1. コマンド・ラインから `open {your-project-name}.xcworkspace` を実行して、iOS プロジェクトのワークスペースを開きます。
 
@@ -57,7 +61,8 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 	Objective-C:
 
 	```Objective-C
-	#import <IMFCore/IMFCore.h>
+	  #import <IMFCore/IMFCore.h>
+	
 	```
 
 	Swift:

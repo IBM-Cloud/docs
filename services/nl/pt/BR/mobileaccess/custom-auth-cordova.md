@@ -5,8 +5,13 @@ copyright:
 
 ---
 
-# Configurando o {{site.data.keyword.amashort}} client SDK para Cordova
+# Configurando a autenticação customizada para seu aplicativo {{site.data.keyword.amashort}} Cordova
 {: #custom-cordova}
+
+*Última atualização: 17 de julho de 2016*
+{: .last-updated}
+
+
 Configure seu aplicativo Cordova que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
 
 
@@ -93,7 +98,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## Implementação de amostra de um listener de autenticação customizado
 {: #custom-cordova-authlisten-sample}
 
-Essa amostra de listener de autenticação foi projetada para trabalhar com um provedor de identidade customizado. É possível fazer download do provedor de identidade customizado a partir [deste repositório Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+Essa amostra de listener de autenticação foi projetada para trabalhar com um provedor de identidade customizado. É possível fazer download do provedor de identidade customizado a partir [deste repositório do Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
 
 ```JavaScript
 var customAuthenticationListener = {

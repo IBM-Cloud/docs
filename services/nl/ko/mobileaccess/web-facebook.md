@@ -21,7 +21,7 @@ Facebook을 사용하여 웹 앱에서 사용자를 인증하십시오.
 웹 사이트의 ID 제공자로 Facebook을 사용하려면 Facebook 애플리케이션에서 웹 사이트 플랫폼을 추가하여 구성해야 합니다.
 
 1. Facebook 개발자 포털에서 Facebook 애플리케이션을 여십시오. 
-1. 앱의 애플리케이션 ID 및 앱 본인확인정보를 기록해 두십시오. Facebook 인증용 웹 프로젝트를 구성할 때 이 값이 필요합니다.
+1. 앱의 애플리케이션 ID 및 앱 본인확인정보를 기록해 두십시오. Facebook 인증용 웹 프로젝트를 구성할 때 해당 값이 필요합니다.
 1. **설정** 페이지에서 **플랫폼 추가**를 클릭하고 **웹 사이트**를 선택하십시오.
 1. 변경사항을 저장하십시오.
 1. 왼쪽 표시줄에서 **Facebook 로그인**을 클릭하십시오.
@@ -47,9 +47,9 @@ Facebook 애플리케이션 ID 및 앱 본인확인정보가 있으며 Facebook 
 
 1. 웹 앱에서 권한 서버의 다음 엔드포인트로 경로를 재지정하십시오. https://imf-newauthserver.bluemix.net/oauth/v2/authorization.
 
-1. 다음 조회 매개변수를 추가하십시오.
+1. 다음 조회 매개변수를 추가하십시오. 
    ```
-    response_type='authorization_code'
+response_type='authorization_code'
     client_id= <bluemix_app_guid>
     redirect_uri= <권한 코드를 받은 후 경로를 재지정할 uri>
     scope= 'openid'
@@ -68,20 +68,18 @@ Facebook 애플리케이션 ID 및 앱 본인확인정보가 있으며 Facebook 
 
   https://imf-newauthserver.bluemix.net/oauth/v2/token
 
-    다음 조회 매개변수를 사용합니다.
-   ```
-  grant_type='authorization_code'
+    다음 조회 매개변수를 사용합니다. 
+  ```
+grant_type='authorization_code'
   client_id= <bluemix_app_guid>
   code= <authorization code>
   ```
 `redirect_uri` 매개변수는 2단계의 `redirect_uri`와 일치해야 합니다.
 `code` 값은 3단계 끝의 응답에서 받는 권한 코드입니다.
-권한 코드는 최대 10분 동안 유효하므로 이 `POST` 요청을 10분 내에 보내도록 하십시오.
-
-  `POST` 응답 본문에 base64로 인코딩된 `access_token` 및 `id_token`이 포함되어야 합니다.
+권한 코드는 최대 10분 동안 유효하므로 이 `POST` 요청을 10분 내에 보내도록 하십시오.  `POST` 응답 본문에 base64로 인코딩된 `access_token` 및 `id_token`이 포함되어야 합니다.
 
 ## 인증 테스트
-이제 보호 자원 요청을 시작할 수 있습니다.
-보호 자원의 모든 요청은 권한 요청 헤더 필드에 있는 `access_token`을 포함해야 합니다.
+이제 보호 리소스 요청을 시작할 수 있습니다.
+보호 리소스의 모든 요청은 권한 요청 헤더 필드에 있는 `access_token`을 포함해야 합니다.
 
 

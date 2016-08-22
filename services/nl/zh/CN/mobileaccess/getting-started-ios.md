@@ -6,10 +6,10 @@ copyright:
 ---
 {:shortdesc: .shortdesc}
 
-# 设置 iOS Objective-C SDK（不推荐）
+# 设置 iOS Objective-C SDK
 {: #getting-started-ios}
 
-*上次更新时间：2016 年 6 月 14 日*
+*上次更新时间：2016 年 7 月 17 日*
 {: .last-updated}
 
 在 iOS 应用程序中安装 {{site.data.keyword.amashort}} SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
@@ -20,7 +20,7 @@ copyright:
 ## 开始之前
 {: #before-you-begin}
 您必须具有：
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
 * Xcode 项目。  
 
 
@@ -35,6 +35,7 @@ copyright:
 1. 打开终端并运行 **pod --version** 命令。如果已经安装了 CocoaPods，那么将显示版本号。可以跳至下一部分来安装 SDK。
 
 1. 如果未安装 CocoaPods，请运行：
+
 ```
 sudo gem install cocoapods
 ```
@@ -70,15 +71,14 @@ sudo gem install cocoapods
 1. 通过添加以下头，将 `IMFCore` 框架导入要使用 {{site.data.keyword.amashort}} 客户端 SDK 的类中：
 
 	**Objective-C：**
-	 ```Objective-C
-	#import <IMFCore/IMFCore.h>
-	```
-
-
-	**Swift：**
 	
-	{{site.data.keyword.amashort}} 客户端 SDK 将通过 Objective-C 实现。您可能需要将桥接头添加到 Swift 项目：
-
+	```Objective-C
+	  #import <IMFCore/IMFCore.h>
+	
+	```
+	
+	**Swift:**
+{{site.data.keyword.amashort}} 客户端 SDK 将通过 Objective-C 实现。您可能需要将桥接头添加到 Swift 项目：
 	1. 在 Xcode 中右键单击项目，并选择**新建文件...**。
 	1. 在 **iOS 源**类别中，单击**头文件**。将文件命名为 `BridgingHeader.h`。
 	1. 将以下行添加到桥接头：`#import <IMFCore/IMFCore.h>`
@@ -86,7 +86,7 @@ sudo gem install cocoapods
 	1. 搜索 `Objective-C Bridging Header`。
 	1. 将值设置为您的 `BridgingHeader.h` 文件的位置，例如 `$(SRCROOT)/MyApp/BridgingHeader.h`。
 	1. 通过构建项目来确保 Xcode 选取了您的桥接头。您应该不会看到任何失败消息。
-
+	
 1. 使用以下代码来初始化 {{site.data.keyword.amashort}} 客户端 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。<br/>
 将 *applicationRoute* 和 *applicationGUID* 替换为 {{site.data.keyword.Bluemix_notm}}“仪表板”中**移动选项**中的值。
 
@@ -97,12 +97,9 @@ sudo gem install cocoapods
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-
-
 	**Swift：**
-
 	```Swift
-IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
+ 		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
 ## 对移动后端发起请求

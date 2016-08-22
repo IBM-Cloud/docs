@@ -28,7 +28,7 @@ copyright:
 1. 從**設定**頁面中，按一下**新增平台**，然後選擇**網站**。
 1. 儲存變更。
 1. 按一下左資訊看板中的 **Facebook 登入**。
-1. 在**有效 OAuth 重新導向 URI** 方框中，輸入授權伺服器回呼端點：https://imf-newauthserver.bluemix.net/oauth/{bluemix_app_guid}/callback。儲存變更。
+1. 在**有效 OAuth 重新導向 URI** 方框中，輸入授權伺服器回呼端點：`https://imf-newauthserver.bluemix.net/oauth/{bluemix_app_guid}/callback`。儲存變更。
 
 
 
@@ -48,11 +48,12 @@ copyright:
 
 若要啟動授權處理程序，請執行下列動作：
 
-1. 從您的 Web 應用程式重新導向至授權伺服器的下列端點：https://imf-newauthserver.bluemix.net/oauth/v2/authorization。
+1. 從您的 Web 應用程式重新導向至授權伺服器的下列端點：https://imf-newauthserver.bluemix.net/oauth/v2/authorization
 
 1. 新增下列查詢參數：
+
    ```
-    response_type='authorization_code'
+response_type='authorization_code'
     client_id= <bluemix_app_guid>
     redirect_uri= <uri for redirecting after receiving the authorization code>
     scope= 'openid'
@@ -72,18 +73,15 @@ copyright:
 
   使用下列查詢參數：
   ```
-  grant_type='authorization_code'
+grant_type='authorization_code'
   client_id= <bluemix_app_guid>
   code= <authorization code>
   ```
 `redirect_uri` 參數必須符合步驟 2 中的 `redirect_uri`。
-`code` 值是在步驟 3 結尾處的回應中接收到的授權碼。
-因為授權碼的有效時間最多為 10 分鐘，所以請一定要在 10 分鐘內傳送此 `POST` 要求。
-
-  `POST` 回應主體應該包含以 base64 編碼的 `access_token` 及 `id_token`。
+`code` 值是在步驟 3 結束時回應中接收到的授權碼。
+因為授權碼的有效時間最多為 10 分鐘，所以請一定要在 10 分鐘內傳送此 `POST` 要求。  `POST` 回應內文應該包含以 base64 編碼的 `access_token` 及 `id_token`。
 
 ## 測試鑑別
-現在，您可以開始對受保護資源提出要求。
-所有對受保護資源的要求都應該在「授權要求標頭」欄位中包含 `access_token`。
+現在，您可以開始對受保護資源提出要求。所有對受保護資源的要求都應該在「授權要求」標頭欄位中包含 `access_token`。
 
 

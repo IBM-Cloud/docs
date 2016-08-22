@@ -5,9 +5,14 @@ copyright:
 
 ---
 
-# Android 用の {{site.data.keyword.amashort}} Client SDK の構成
+# {{site.data.keyword.amashort}} Android アプリ用のカスタム認証の構成
 {: #custom-android}
-{{site.data.keyword.amashort}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する Android アプリケーションを構成します。
+
+*最終更新日: 2016 年 7 月 17 日*
+{: .last-updated}
+
+
+{{site.data.keyword.amashort}} Client SDK の使用のためにカスタム認証を使用するよう Android アプリケーションを構成し、アプリケーションを {{site.data.keyword.Bluemix}} に接続します。
 
 ## 開始する前に
 {: #before-you-begin}
@@ -22,8 +27,9 @@ copyright:
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #custom-android-initialize}
-1. Android Studio にある Android プロジェクトで、アプリケーション・モジュールの `build.gradle` ファイルを開きます。
-<br/>**ヒント:** Android プロジェクトには、プロジェクト用とアプリケーション・モジュール用に 2 つの `build.gradle` ファイルがある場合があります。アプリケーション・モジュールのファイルを使用してください。1. `build.gradle` ファイル内で `dependencies` セクションを見つけて、以下のコンパイル依存関係があるか確認します。以下の依存関係がまだない場合は追加します。
+1. Android Studio にある Android プロジェクトで、アプリケーション・モジュールの `build.gradle` ファイルを開きます (プロジェクト `build.gradle` ではありません)。
+
+1. `build.gradle` ファイル内で `dependencies` セクションを見つけて、以下の依存関係があるか確認します。
 
 	```Gradle
 	dependencies {
@@ -50,12 +56,16 @@ copyright:
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");```
+					"applicationGUID",
+					BMSClient.REGION_UK);
+```
+`BMSClient.REGION_UK` は適切な地域に置き換えてください。
+	
 
 ## AuthenticationListener インターフェース
 {: #custom-android-authlistener}
 
-{{site.data.keyword.amashort}} Client SDK は、カスタム認証フローを実装できるように `AuthenticationListener` インターフェースを提供しています。`AuthenticationListener` インターフェースは、認証プロセスの異なるフェーズで呼び出される 3 つのメソッドを公開します。
+{{site.data.keyword.amashort}} Client SDK は、カスタム認証フローを実装できるように `AuthenticationListener` インターフェースを提供しています。`AuthenticationListener` インターフェースは 3 つのメソッドを公開し、それらは認証プロセス中に異なるフェーズで呼び出されます。
 
 ### onAuthenticationChallengeReceived メソッド
 {: #custom-onAuth}
@@ -175,14 +185,14 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 
 ## 認証のテスト
 {: #custom-android-testing}
-Client SDK が初期化され、カスタム AuthenticationListener の登録が完了すると、モバイル・バックエンドに要求を出すことができるようになります。
+Client SDK が初期化され、カスタム AuthenticationListener の登録が完了すると、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
 ### 開始する前に
 {: #custom-android-testing-before}
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたアプリケーションと、 `/protected` エンドポイントで{{site.data.keyword.amashort}} により保護されているリソースを持っている必要があります。
 
 
-1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントに要求を送信します。
+1. モバイル・バックエンド・アプリケーションの保護エンドポイント (`{applicationRoute}/protected`) にブラウザーから要求を送信します。例えば、`http://my-mobile-backend.mybluemix.net/protected` です。
 
 1. {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
 
@@ -209,10 +219,16 @@ Client SDK が初期化され、カスタム AuthenticationListener の登録が
 	});
 ```
 
-1. 	要求が成功したら、LogCat ツールで以下のように出力されます。![image](images/android-custom-login-success.png)
+1. 	要求が成功したら、LogCat ツールで以下のように出力されます。
 
- 次のコードを追加してログアウト機能を追加することもできます。```Java
+	![image](images/android-custom-login-success.png)
+
+ 次のコードを追加してログアウト機能を追加することもできます。
+
+ ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。ログアウト機能に渡される `listener` の値は、`ヌル`にすることができます。
+ ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。
+
+ ログアウト機能に渡される `listener` の値は、`ヌル`にすることができます。

@@ -6,10 +6,10 @@ copyright:
 ---
 {:shortdesc: .shortdesc}
 
-# iOS-Objective-C-SDK einrichten (nicht mehr verwendet)
+# iOS-Objective-C-SDK einrichten
 {: #getting-started-ios}
 
-*Letzte Aktualisierung: 14. Juni 2016*
+*Letzte Aktualisierung: 17. Juli 2016*
 {: .last-updated}
 
 Instrumentieren Sie Ihre iOS-Anwendung mit dem {{site.data.keyword.amashort}}-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und nicht geschützte Ressourcen.
@@ -20,7 +20,7 @@ Instrumentieren Sie Ihre iOS-Anwendung mit dem {{site.data.keyword.amashort}}-SD
 ## Vorbereitungen
 {: #before-you-begin}
 Voraussetzungen:
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
 * Xcode-Projekt  
 
 
@@ -54,7 +54,7 @@ Weitere Informationen finden Sie auf der [CocoaPods-Website](https://cocoapods.o
 	pod 'IMFCore'
 	```
 
-1. Speichern Sie die `Podfile`-Datei und führen Sie den Befehl `pod install` über die Befehlszeile aus. <br/>Cocoapods installiert die hinzugefügten Abhängigkeiten. Der Fortschritt und die hinzugefügten Komponenten werden angezeigt.<br/>
+1. Speichern Sie die `Podfile`-Datei und führen Sie den Befehl `pod install` über die Befehlszeile aus. <br/>Cocoapods installiert hinzugefügte Abhängigkeiten. Der Fortschritt und die hinzugefügten Komponenten werden angezeigt.<br/>
 **Wichtig**: CocoaPods generiert eine `xcworkspace`-Datei.  Sie müssen diese Datei öffnen, um mit Ihrem Projekt in Zukunft arbeiten zu können.
 
 1. Öffnen Sie Ihren iOS-Projektarbeitsbereich. Öffnen Sie die `xcworkspace`-Datei, die von CocoaPods generiert wurde. Beispiel: `{your-project-name}.xcworkspace`. Führen Sie den Befehl `open {your-project-name}.xcworkspace` aus.
@@ -70,23 +70,22 @@ Zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK müssen Sie das SDK
 1. Importieren Sie das Framework `IMFCore` in die Klasse, in der Sie das {{site.data.keyword.amashort}}-Client-SDK verwenden möchten, indem Sie den folgenden Header hinzufügen:
 
 	**Objective-C:**
-	 ```Objective-C
-	#import <IMFCore/IMFCore.h>
-	```
-
-
-	**Swift:**
 	
+	```Objective-C
+	  #import <IMFCore/IMFCore.h>
+	
+	```
+	
+	**Swift:**
 	Das {{site.data.keyword.amashort}}-Client-SDK ist mit Objective-C implementiert. Sie müssen Ihrem Swift-Projekt möglicherweise einen Überbrückungsheader hinzufügen:
-
 	1. Klicken Sie mit der rechten Maustaste auf Ihr Projekt in Xcode und wählen Sie **New File** aus.
 	1. Wählen Sie in der Kategorie **iOS Source** die Option **Header file** aus. Geben Sie der Datei den Namen `BridgingHeader.h`.
 	1. Fügen Sie Ihrem Überbrückungsheader die folgende Zeile hinzu: `#import <IMFCore/IMFCore.h>`
-	1. Klicken Sie auf Ihr Projekt in Xcode und wählen Sie die Registerkarte **Build Settings** (Buildeinstellungen) aus.
+	1. Klicken Sie auf Ihr Projekt in Xcode und wählen Sie die Registerkarte **Build Settings**aus.
 	1. Suchen Sie nach `Objective-C Bridging Header`.
 	1. Setzen Sie den Wert auf die Position Ihrer Datei `BridgingHeader.h`. Beispiel: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Stellen Sie sicher, dass Ihr Überbrückungsheader von Xcode aufgenommen wird, indem Sie Ihr Projekt erstellen (Build). Dabei sollten keine Fehlernachrichten angezeigt werden.
-
+	
 1. Verwenden Sie den folgenden Code, um das {{site.data.keyword.amashort}}-Client-SDK zu initialisieren.  Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `application:didFinishLaunchingWithOptions` Ihres Anwendungsdelegats. <br/>
 Ersetzen Sie die Werte *applicationRoute* und *applicationGUID* durch die Werte unter **Mobile Systemerweiterungen** im {{site.data.keyword.Bluemix_notm}}-Dashboard.
 
@@ -97,12 +96,11 @@ Ersetzen Sie die Werte *applicationRoute* und *applicationGUID* durch die Werte 
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+	**Swift:
 
-
-	**Swift:**
-
+	**
 	```Swift
-IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
+ 		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
 ## Anforderung an das mobile Back-End senden
@@ -111,7 +109,7 @@ IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backend
 Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können Sie mit dem Senden von Anforderungen an Ihr mobiles Back-End beginnen.
 
 1. Versuchen Sie, in Ihrem Browser eine Anforderung an den Endpunkt '/protected' in Ihrem mobilen Back-End zu senden. Öffnen Sie die folgende URL: `{applicationRoute}/protected`. Beispiel: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>Der Endpunkt `/protected` eines mobilen Back-Ends, der mit der MobileFirst Services Starter-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Eine Nachricht des Typs `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen können, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
+<br/>Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der MobileFirst Services Starter-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Eine Nachricht des Typs `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen können, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
 
 1. Verwenden Sie Ihre iOS-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `IMFClient` initialisiert haben:
 

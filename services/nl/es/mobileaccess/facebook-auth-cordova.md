@@ -23,7 +23,7 @@ Utilice el entorno de desarrollo nativo para realizar cambios en el código nati
 
 ## Antes de empezar
 {: #facebook-auth-before}
-Debe tener lo siguiente: 
+Debe tener lo siguiente:
 * Un proyecto Cordova instrumentado con el SDK de cliente {{site.data.keyword.amashort}}; consulte [Configuración del plugin Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
 * Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre cómo crear un programa de fondo {{site.data.keyword.Bluemix_notm}, consulte [Cómo empezar](index.html).
 * Un ID de aplicación de Facebook. Para obtener más información, consulte [Cómo obtener un ID de aplicación de Facebook desde el portal de desarrolladores de Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
@@ -91,13 +91,13 @@ Sustituya *applicationRoute* y *applicationGUID* por los valores correspondiente
 
 ## Prueba de autenticación
 {: #facebook-auth-cordova-test}
-Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Facebook, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Facebook, puede empezar a realizar solicitudes a la aplicación de programa de fondo móvil.
 
 ### Antes de empezar
 Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil recién creado en su navegador. Abra el siguiente URL: `{rutaAplicación}/protected`. Por ejemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se puede acceder a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
+1. Intente enviar una solicitud al punto final protegido de la aplicación de programa de fondo móvil recién creada desde su navegador. Abra el siguiente URL: `{rutaAplicación}/protected`. Por ejemplo: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>El punto final `/protected` de una aplicación de programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se puede acceder a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
 
 1. Utilice la aplicación de Cordova para realizar solicitudes al mismo punto final. Añada el siguiente código después de inicializar `BMSClient`.
 
@@ -105,8 +105,8 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 	var success = function(data){
     	console.log("success", data);
     }
-	var failure = function(error)
-    	{console.log("failure", error);
+	var failure = function(error){
+    	console.log("failure", error);
     }
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 	request.send(success, failure);

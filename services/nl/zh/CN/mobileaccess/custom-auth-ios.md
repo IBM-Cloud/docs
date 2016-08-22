@@ -5,8 +5,12 @@ copyright:
 
 ---
 
-# 针对 iOS 配置 {{site.data.keyword.amashort}} 客户端 SDK
+# 针对 iOS (Objective-C) 配置 {{site.data.keyword.amashort}} 客户端 SDK
 {: #custom-ios}
+
+*上次更新时间：2016 年 7 月 18 日*
+{: .last-updated}
+
 
 将要使用定制认证的 iOS 应用程序配置为使用 {{site.data.keyword.amashort}} 客户端 SDK，并将该应用程序连接到 {{site.data.keyword.Bluemix}}。
 
@@ -38,7 +42,7 @@ copyright:
 1. 在命令行中，运行 `pod install`。
 CocoaPods 会安装添加的依赖关系。这将显示进度和添加的组件。
 
-**重要信息**：您现在必须使用 CocoaPods 生成的 xcworkspace 文件来打开项目。通常该文件的名称为 `{your-project-name}.xcworkspace`。
+    **重要信息**：您现在必须使用 CocoaPods 生成的 xcworkspace 文件来打开项目。通常该文件的名称为 `{your-project-name}.xcworkspace`。
 
 1. 在命令行中运行 `open {your-project-name}.xcworkspace` 以打开 iOS 项目工作空间。
 
@@ -47,7 +51,7 @@ CocoaPods 会安装添加的依赖关系。这将显示进度和添加的组件�
 ### 初始化客户端 SDK
 {: #custom-ios-sdk-initialize}
 
-传递应用程序路径 (`applicationRoute`) 和 GUID (`applicationGUID`) 参数，以初始化 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的
+传递应用程序路径 (`applicationRoute`) 和 GUID (`applicationGUID`) 参数，以初始化 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
 
 1. 获取应用程序参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。单击**移动选项**，以查看**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`) 的值。
 
@@ -183,7 +187,9 @@ CustomAuthenticationDelegate.h
 Swift 实现：
 
 ```Swift
-import Foundationclass CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{func authenticationContext(context: IMFAuthenticationContext!,
+import Foundation
+
+class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{func authenticationContext(context: IMFAuthenticationContext!,
 					didReceiveAuthenticationChallenge challenge: [NSObject : AnyObject]!) {
 
 		NSLog("didReceiveAuthenticationChallenge :: %@", challenge)// In this sample the IMFAuthenticationDelegate immediately returns a hardcoded
@@ -241,10 +247,9 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 ### 开始之前
 {: #custom-ios-testing-before}
-必须具有使用 {{site.data.keyword.mobilefirstbp}} 样板创建的应用程序，并且在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。
+您必须具有使用 {{site.data.keyword.mobilefirstbp}} 样板创建的应用程序，并且在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。
 
-1. 通过在浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。
-  使用 {{site.data.keyword.mobilefirstbp}} 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，浏览器中会显示 `Unauthorized` 消息。
+1. 通过在浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。使用 {{site.data.keyword.mobilefirstbp}} 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，浏览器中会显示 `Unauthorized` 消息。
 1. 使用 iOS 应用程序对同一端点发起请求。初始化 `BMSClient` 并注册定制 `IMFAuthenticationDelegate` 后，添加以下代码：
 
 	Objective-C：
@@ -288,7 +293,7 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 	通过添加以下代码，您还可以添加注销功能：
 
-	Objective C:
+	Objective C：
 
 	```Objective-C
 	[[IMFAuthorizationManager sharedInstance] logout : callBack]

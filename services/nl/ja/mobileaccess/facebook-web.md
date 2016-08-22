@@ -51,8 +51,9 @@ Facebook Application ID および App Secret を取得し、Web クライアン�
 1. Web アプリから、許可サーバーのエンドポイント (https://imf-newauthserver.bluemix.net/oauth/v2/authorization) にリダイレクトします。
 
 1. 以下の照会パラメーターを追加します。
+   
    ```
-    response_type='authorization_code'
+response_type='authorization_code'
     client_id= <bluemix_app_guid>
     redirect_uri= <uri for redirecting after receiving the authorization code>
     scope= 'openid'
@@ -72,15 +73,13 @@ Facebook Application ID および App Secret を取得し、Web クライアン�
 
   以下の照会パラメーターを使用します。
   ```
-  grant_type='authorization_code'
+grant_type='authorization_code'
   client_id= <bluemix_app_guid>
   code= <authorization code>
   ```
 `redirect_uri` パラメーターは、ステップ 2 の `redirect_uri` と一致している必要があります。
 `code` 値は、ステップ 3 の最後に応答で受け取った許可コードです。
-許可コードは最大 10 分間だけ有効であるため、この `POST` 要求を 10 分以内に送信するように注意してください。
-
-  `POST` 応答本体には、base64 でエンコードされた `access_token` および `id_token` が含まれている必要があります。
+許可コードは最大 10 分間だけ有効であるため、この `POST` 要求を 10 分以内に送信するように注意してください。  `POST` 応答本体には、base64 でエンコードされた `access_token` および `id_token` が含まれている必要があります。
 
 ## 認証のテスト
 これで、保護リソースに要求を出すことができるようになりました。

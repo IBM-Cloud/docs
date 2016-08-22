@@ -8,9 +8,12 @@ copyright:
 # Assegurando autorização com o Touch ID
 {: #before-you-begin}
 
+*Última atualização: 22 de junho de 2016*
+{: .last-updated}
+
 Touch ID é um recurso de reconhecimento de impressão digital para dispositivos iOS. É possível usar o Touch ID para assegurar informações de autorização automaticamente para uso futuro. 
 
-O Touch ID está disponível somente a partir do {{site.data.keyword.amashort}} Objective-C SDK.
+**Nota:** o ID de toque está disponível somente a partir do {{site.data.keyword.amashort}} Objective-C SDK.
 
 Para configurar a intensidade de segurança, defina uma das políticas de persistência a seguir com o método `IMFAuthorizationManager.setAuthorizationPersistencePolicy()`:
 

@@ -11,7 +11,7 @@ copyright:
 # Configuration du logiciel SDK Android
 {: #getting-started-android}
 
-*Dernière mise à jour : 25 mai 2016*
+*Dernière mise à jour : 18 juillet 2016*
 {: .last-updated}
 
 Instrumentez votre application Android avec le SDK client de {{site.data.keyword.amashort}}, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
@@ -21,7 +21,7 @@ Instrumentez votre application Android avec le SDK client de {{site.data.keyword
 {: #before-you-begin}
 Vous devez disposer des éléments suivants :
 * Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
-* Un projet Android Studio, incluant Gradle et le SDK Android Studio. Pour plus d'informations sur la configuration de votre environnement de développement Android,
+* Un projet Android Studio, configuré pour fonctionner avec Gradle. Pour plus d'informations sur la configuration de votre environnement de développement Android,
 voir [Google Developer Tools](http://developer.android.com/sdk/index.html).
 
 
@@ -29,29 +29,28 @@ voir [Google Developer Tools](http://developer.android.com/sdk/index.html).
 {: #install-mca-sdk}
 
 Le SDK client de {{site.data.keyword.amashort}} est distribué avec Gradle, un gestionnaire de dépendances pour les projets Android. Gradle
-télécharge automatiquement les artefacts à partir des référentiels et les met à la disposition de votre application Android.
+télécharge automatiquement des artefacts depuis les référentiels et les rend disponibles depuis votre application Android.
 
 1. Créez un projet Android Studio ou ouvrez un projet existant.
 
-1. Ouvrez le fichier `build.gradle`.
-**Astuce :** Votre projet Android peut contenir deux fichiers `build.gradle` : un pour le projet et un autre pour le module de l'application. Utilisez le fichier du module de l'application.
+1. Ouvrez le fichier `build.gradle` de votre application (**et non pas** le fichier de projet `build.gradle`).
 
-1. Localisez la section **Dependencies** dans le fichier `build.gradle`.  Ajoutez une dépendance de compilation pour le SDK client de {{site.data.keyword.amashort}} :
+1. Localisez la section **dependencies** dans le fichier `build.gradle`. Ajoutez une dépendance de compilation pour le SDK client de {{site.data.keyword.amashort}} :
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
         name:'core',
         version: '1.+',
         ext: 'aar',
         transitive: true
-    	// other dependencies  
+    	// autres dépendances
 }
 ```
 
 1. Synchronisez votre projet avec Gradle. Cliquez sur **Tools (Outils) &gt; Android &gt; Sync Project with Gradle Files (Synchroniser le projet avec les fichiers Gradle)**.
 
-1. Ouvrez le fichier `AndroidManifest.xml` pour votre projet Android. Ajoutez le droit d'accès à Internet sous l'élément `<manifest>` :
+1. Ouvrez le fichier `AndroidManifest.xml` de votre projet Android. Ajoutez le droit d'accès à Internet sous l'élément `<manifest>` :
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -60,7 +59,8 @@ télécharge automatiquement les artefacts à partir des référentiels et les m
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #initalize-mca-sdk}
 
-Initialisez le SDK en passant les paramètres `context`, `applicationGUID` et `applicationRoute` à la méthode `initialize`.
+Initialisez le SDK en passant les paramètres `context`, `applicationGUID`, `applicationRoute` et
+`BMSClient.REGION_UK` à la méthode `initialize`.
 
 
 1. Dans la page principale du tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur votre appli. Cliquez sur **Options pour application mobile**. Les valeurs de **Route de l'application** et d'**Identificateur global unique de l'application** sont nécessaires pour initialiser le SDK.
@@ -72,19 +72,24 @@ principale dans votre application Android, bien que cet emplacement ne soit pas 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");
+					"applicationGUID",
+					BMSClient.REGION_UK);
 ```
+Remplacez `BMSClient.REGION_UK` par la région appropriée.
 
-
-## Envoi d'une demande au système de back end mobile
+## Envoi d'une requête à votre application back end mobile
 {: #request}
 
-Une fois que le SDK client de {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
-1. Tentez d'envoyer une demande à un noeud final protégé de votre nouveau système de back end mobile. Dans votre navigateur, ouvrez l'URL suivante :
-`{applicationRoute}/protected`. Exemple : `http://my-mobile-backend.mybluemix.net/protected`
-<br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message `Unauthorized` est renvoyé à votre navigateur car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
+Une fois que le SDK client {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des requêtes à votre application back end
+mobile. 
 
-1. Utilisez votre application Android pour envoyer une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
+1. Essayez d'envoyer une requête à un noeud final protégé de votre nouvelle application back end mobile. Dans votre navigateur, ouvrez l'URL suivante :
+`{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
+<br/>Le noeud final `/protected` d'une application back end mobile créée avec le conteneur boilerplate
+MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message `Non autorisé` est renvoyé dans votre
+navigateur vu que ce noeud final n'est accessible que par les applications mobiles instrumentées avec le SDK client
+{{site.data.keyword.amashort}}.
+1. Utilisez votre application Android pour envoyer une requête au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
 
 	```Java
 	Request request = new Request("/protected", Request.GET);
@@ -106,7 +111,8 @@ Une fois que le SDK client de {{site.data.keyword.amashort}} est initialisé, vo
 	});
 	```
 
-1. Quand votre demande aboutit, la sortie suivante figure dans l'utilitaire LogCat :
+1. Si votre requête aboutit, la sortie suivante sera affichée dans l'utilitaire LogCat :
+
 	![image](images/getting-started-android-success.png)
 
 ## Etapes suivantes

@@ -86,13 +86,11 @@ logger.logFatalWithMessages("fatal");
 BMSClient.initialize(appRoute , appGUID);
 
 var logger = MFPLogger.getInstance("myLogger");
-
 logger.debug("debug info");
 logger.info("info message");
 logger.warn("warning message");
 logger.error("error message");
 logger.fatal("fatal message");
-
 ```
 
 您可以在 Logger 类中找到以下更多方法：
@@ -101,7 +99,7 @@ logger.fatal("fatal message");
 * `setLevel` - 设置要保存日志消息的最低日志级别。
 * `send` - 将持久存储的日志发送到 {{site.data.keyword.amashort}} 服务。
 
-例如，捕获已启用且记录器级别配置为 FATAL 时，记录器会捕获到未捕获的异常。未捕获的异常通常对于用户显示为应用程序崩溃，但并不捕获导致崩溃事件的任何日志。或者，更详细的记录器级别可确保同时捕获导致 FATAL 记录器条目的日志，例如 WARN 和 ERROR。
+例如，捕获已启用且记录器级别配置为 FATAL 时，记录器会捕获到未捕获的异常。未捕获的异常通常对于用户显示为应用程序崩溃，但并不捕获有关导致崩溃事件的任何日志。或者，更详细的记录器级别可确保同时捕获导致 FATAL 记录器条目的日志，例如 WARN 和 ERROR。
 
 **注：**在 [SDK、样本和 API 参考](sdks-samples-apis.html)中可找到每个平台的完整记录器 API 参考。记录器 API 是 {{site.data.keyword.amashort}} 客户端 SDK 核心的组成部分。
 
@@ -196,7 +194,7 @@ MFPLogger.setLevel(MFPLogger.INFO);
 
 // Create two logger instances
 var logger1 = MFPLogger.getInstance("logger1");
-var logger2 = MFPLogger.getInstance("logger2");    
+var logger2 = MFPLogger.getInstance("logger2");
 
 // Log messages with different levels
 logger1.debug ("debug message");
@@ -210,7 +208,7 @@ MFPLogger.send(success, failure);
 {: #enable-logger-sdklogs}
 此功能目前只可用于 Android 版本的 {{site.data.keyword.amashort}} 客户端 SDK。
 
-{{site.data.keyword.amashort}} 客户端 SDK 没有因其内部调试消息而不必要地增加 LogCat 输出，因此提供了更好的开发体验。所以，缺省情况下不会打印 {{site.data.keyword.amashort}} SDK 在 DEBUG 级别下生成的内部日志消息。可以使用以下 API 来启用 {{site.data.keyword.amashort}} 客户端 SDK 的所有内部日志消息的打印：
+{{site.data.keyword.amashort}} 客户端 SDK 没有用其内部调试消息来不必要地增加 LogCat 输出，因此提供了更好的开发体验。所以，缺省情况下不会输出 {{site.data.keyword.amashort}} SDK 在 DEBUG 级别下生成的内部日志消息。可以使用以下 API 来启用 {{site.data.keyword.amashort}} 客户端 SDK 的所有内部日志消息的输出：
 
 
 ```

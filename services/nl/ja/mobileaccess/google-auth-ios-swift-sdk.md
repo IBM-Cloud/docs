@@ -1,4 +1,4 @@
- ---
+---
 
 copyright:
   years: 2016
@@ -10,6 +10,10 @@ copyright:
 
 # iOS アプリ用の Google 認証の使用可能化 (Swift SDK)
 {: #google-auth-ios}
+
+*最終更新日: 2016 年 7 月 17 日*
+{: .last-updated}
+
 Google Sign-In を使用して、{{site.data.keyword.amashort}} iOS Swift アプリのユーザーを認証します。新しくリリースされた {{site.data.keyword.amashort}} Swift SDK は、既存の Mobile Client Access Objective-C SDK によって提供される機能を増強します。
 
 **注:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、この新しい Swift SDK が後継になる予定です。
@@ -21,7 +25,11 @@ Google Sign-In を使用して、{{site.data.keyword.amashort}} iOS Swift アプ
 以下が必要です。
 
 * Xcode の iOS プロジェクト。{{site.data.keyword.amashort}} Client SDK が装備されている必要はありません。  
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
+
+
+
+
 
 
 ## Google Sign-In 用のアプリの準備
@@ -52,7 +60,6 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
 
 1. Xcode プロジェクト内の URL スキームを、自分の `REVERSE_CLIENT_ID` およびバンドル ID によって更新します。詳しくは、[Add URL schemes to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project) を参照してください。
 
-
 1. アプリの project-Bridging-Header.h ファイルを以下のコードで更新します。
 
  ```
@@ -72,7 +79,7 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
 
 1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
 
-1. **「Google」**タイルをクリックします。
+1. **「Google」**パネルで**「構成」**ボタンをクリックします。
 
 1. **「iOS のアプリケーション ID (Application ID for iOS)」**で、前に取得した `GoogleService-Info.plist` ファイルからの `CLIENT_ID` の値を指定し、**「保存」**をクリックします。
 
@@ -85,9 +92,9 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
 1. 端末を開き、**pod --version** コマンドを実行します。既に CocoaPods がインストールされている場合は、バージョン番号が表示されます。次のセクションにスキップして SDK をインストールできます。
 
 1. CocoaPods をインストールしていない場合は、以下を実行します。
-
 ```
-sudo gem install cocoapods```
+sudo gem install cocoapods
+```
 詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。### CocoaPods を使用した {{site.data.keyword.amashort}} Client Swift SDK のインストール
 {: #facebook-auth-install-swift-cocoapods}
 
@@ -127,7 +134,7 @@ sudo gem install cocoapods```
  import UIKit
  import BMSCore
  import BMSSecurity
- ```
+```
 
 1. 以下のコードを使用して、Client SDK を初期化します。`<applicationRoute>` および `<applicationGUID>` を、{{site.data.keyword.Bluemix_notm}} ダッシュボードの**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。`<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、ダッシュボードの左上隅にある顔アイコン (![Face](/face.png "Face")) をクリックします。 
 
@@ -136,11 +143,7 @@ sudo gem install cocoapods```
  let backendGUID = "<applicationGUID>"
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
- // Initialize the client SDK.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)
-
- BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
+// Initialize the client SDK. BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
  GoogleAuthenticationManager.sharedInstance.register()
       return true
@@ -161,7 +164,7 @@ sudo gem install cocoapods```
 ## 認証のテスト
 {: #google-auth-ios-testing}
 
-Client SDK が初期化され、Google 認証マネージャーが登録されると、モバイル・バックエンドに要求を出すことができるようになります。
+Client SDK が初期化され、Google 認証マネージャーの登録が完了すると、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
 ### 開始する前に
 {: #google-auth-ios-testing-before}
@@ -169,25 +172,25 @@ Client SDK が初期化され、Google 認証マネージャーが登録され�
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
 
-1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば、`http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンドの保護エンドポイントへの要求の送信を試行します。
+1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。
 
-1. MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} によって保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみです。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
+1. MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} によって保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみです。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
 
 1. iOS アプリケーションを使用して、同じエンドポイントへ要求を出します。
 
  ```Swift
- let protectedResourceURL = "<Your protected resource URL>" // any protected resource
- let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
- let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
- if error == nil {
-    print ("response:\(response?.responseText), no error")
+  let protectedResourceURL = "<Your protected resource URL>" // any protected resource
+  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
+  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+  if error == nil {
+          print ("response:\(response?.responseText), no error")
  } else {
     print ("error: \(error)")
  }
  }
 
  request.sendWithCompletionHandler(callBack)
-	```
+ ```
 
 1. アプリケーションを実行します。Google のログイン画面のポップアップが表示されます。
 
@@ -195,7 +198,7 @@ Client SDK が初期化され、Google 認証マネージャーが登録され�
 
 1. ログインして**「OK」**をクリックすると、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可したことになります。
 
-1. 	ユーザーの要求は正常に処理されます。ログに以下の出力が表示されます。
+1. 	ユーザーの要求は正常に処理されます。以下の内容がログに出力されます。
 
  ```
  onAuthenticationSuccess info = Optional({attributes = {};
@@ -211,7 +214,7 @@ Client SDK が初期化され、Google 認証マネージャーが登録され�
 1. 次のコードを追加してログアウト機能を追加することもできます。
 
  ```
- GoogleAuthenticationManager.sharedInstance.logout(callBack)
+GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
   ユーザーが Google にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Google を使用することについての許可を求めるプロンプトが出されます。その時点で、画面の右上隅にあるユーザー名をクリックすると、別のユーザーを選択してログインすることができます。

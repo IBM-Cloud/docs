@@ -7,6 +7,11 @@ copyright:
 
 # Création d'un fournisseur d'identité personnalisé
 {: #custom-create}
+
+*Dernière mise à jour : 16 juin 2016*
+{: .last-updated}
+
+
 Pour créer un fournisseur d'identité personnalisé, développez une application Web qui expose une API RESTful :
 
 ```
@@ -34,8 +39,8 @@ Pour garantir la souplesse maximale du processus d'authentification, un fourniss
 ```JavaScript
 {
     "headers" : {
-    	"header1": "value1",  
-    	"header2" : "value2"
+    	"header1": "valeur1",
+    	"header2" : "valeur2"
     }
 }
 ```
@@ -76,9 +81,9 @@ Comme pour la demande `startAuthorization`, le fournisseur d'identité personnal
 ```JavaScript
 {
     "headers" : {
-    	"header1": "value1",  
-    	"header2" : "value2"
-	},
+    	"header1": "valeur1",
+    	"header2" : "valeur2"
+    },
     "stateId" : "123123123",
     "challengeAnswer" : {
     	"pinCode":12345
@@ -224,7 +229,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 
 ## Etapes suivantes
 {: #next-steps}
-* [Configuration d'{{site.data.keyword.amashort}} pour l'authentification personnalisée](custom-auth-config-mca.html)
+* [Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée](custom-auth-config-mca.html)
 * [Configuration de l'authentification personnalisée pour Android](custom-auth-android.html)
 * [Configuration de l'authentification personnalisée pour iOS](custom-auth-ios.html)
 * [Configuration de l'authentification personnalisée pour Cordova](custom-auth-cordova.html)

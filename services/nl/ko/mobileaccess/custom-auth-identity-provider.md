@@ -7,6 +7,11 @@ copyright:
 
 # 사용자 정의 ID 제공자 작성
 {: #custom-create}
+
+*마지막 업데이트 날짜: 2016년 6월 16일*
+{: .last-updated}
+
+
 사용자 정의 ID 제공자를 작성하려면 RESTful API를 표시하는 웹 애플리케이션을 개발하십시오. 
 
 ```
@@ -17,7 +22,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 * `tenant_id`: 테넌트의 고유 ID입니다. {{site.data.keyword.amashort}}는 이 API를 호출할 때 항상 {{site.data.keyword.Bluemix}} 앱 GUID(`applicationGUID`)를 제공합니다.
 * `realm_name`: {{site.data.keyword.amashort}} 대시보드에 정의된 사용자 정의 영역 이름을 지정합니다. 
 * `request_type`: 다음 중 하나를 지정합니다. 
-	* `startAuthorization`: 인증 프로세스의 첫 번째 단계를 지정합니다. 사용자 정의 ID 제공자는 "challenge", "success", "failure" 상태 중 하나로 응답해야 합니다. 
+	* `startAuthorization`: 인증 프로세스의 첫 번째 단계를 지정합니다. 사용자 정의 ID 제공자는 "challenge", "success" 또는 "failure" 상태로 응답해야 합니다. 
 	* `handleChallengeAnswer`: 모바일 클라이언트에서 인증 확인 응답을 처리합니다. 
 
 ## `startAuthorization` API
@@ -25,7 +30,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/startAuthorization`
 
-`startAuthorization` API는 인증 프로세스의 첫 번째 단계로 사용됩니다. 사용자 정의 ID 제공자는 "challenge", "success", "failure" 상태 중 하나로 응답해야 합니다. 
+`startAuthorization` API는 인증 프로세스의 첫 번째 단계로 사용됩니다. 사용자 정의 ID 제공자는 "challenge", "success" 또는 "failure" 상태로 응답해야 합니다. 
 
 인증 프로세스의 최대 유연성을 고려하려면 사용자 정의 ID 제공자가 요청 본문에서 모바일 클라이언트가 전송하는 모든 HTTP 헤더에 액세스할 수 있어야 합니다. 헤더는 다음과 같은 형식으로 제공됩니다. 
 
@@ -42,7 +47,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 
 * `status`: 요청의 `success`, `challenge`, `failure` 중 하나를 지정합니다. 
 * `stateId`(선택사항): 모바일 클라이언트에서 인증 세션을 식별하기 위해 무작위로 생성된 문자열 ID를 지정합니다. 사용자 정의 ID 제공자가 상태를 저장하지 않는 경우 이 속성을 생략할 수 있습니다. 
-* `challenge`: 모바일 클라이언트로 다시 전송할 인증 확인을 나타내는 JSON 오브젝트를 지정합니다. 상태가 `challenge`로 설정된 경우에만 이 속성이 전송됩니다. 
+* `challenge`: 모바일 클라이언트로 다시 전송할 인증 확인을 나타내는 JSON 오브젝트를 지정합니다. 상태가 `challenge`로 설정된 경우에만 이 속성이 클라이언트에 전송됩니다. 
 * `userIdentity`: 사용자 ID를 나타내는 JSON 오브젝트를 지정합니다. 사용자 ID는 `userName`, `displayName`, 속성 등의 특성으로 구성됩니다. 자세한 정보는 [사용자 ID 오브젝트](#custom-user-identity)를 참조하십시오. 상태가 `success`로 설정된 경우에만 이 특성이 모바일 클라이언트로 전송됩니다. 
 
 예를 들면 다음과 같습니다. 
@@ -113,7 +118,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 
 요청의 출처가 권한이 부여된 소스임을 사용자 정의 ID 제공자가 확인할 수 있도록 {{site.data.keyword.amashort}} 서비스에서 사용자 정의 ID 제공자로 전송되는 각 요청에는 권한 헤더가 포함되어 있습니다. 필수 사항은 아니지만 {{site.data.keyword.amashort}} 서버 SDK로 사용자 정의 ID 제공자를 계측하여 권한 헤더의 유효성을 검증하는 것을 고려하십시오. 이 SDK를 사용하려면 사용자 정의 ID 제공자 애플리케이션이 Node.js 또는 Liberty for Java&trade;&trade;를 사용하여 구현되고 {{site.data.keyword.Bluemix_notm}}에서 실행되어야 합니다.
 
-권한 헤더에는 인증 프로세스를 트리거한 모바일 클라이언트 및 모바일 앱에 대한 정보가 포함되어 있습니다. 보안 컨텍스트를 사용하여 이 데이터를 검색할 수 있습니다. 자세한 정보는 [자원 보호](protecting-resources.html)를 참조하십시오. 
+권한 헤더에는 인증 프로세스를 트리거한 모바일 클라이언트 및 모바일 앱에 대한 정보가 포함되어 있습니다. 보안 컨텍스트를 사용하여 이 데이터를 검색할 수 있습니다. 자세한 정보는 [리소스 보호](protecting-resources.html)를 참조하십시오. 
 
 ## 사용자 정의 ID 제공자의 샘플 구현
 {: #custom-sample}
@@ -217,7 +222,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 
 ## 다음 단계
 {: #next-steps}
-* [사용자 정의 인증용으로 {{site.data.keyword.amashort}} 구성](custom-auth-config-mca.html)
+* [사용자 정의 인증용 {{site.data.keyword.amashort}} 구성](custom-auth-config-mca.html)
 * [Android용 사용자 정의 인증 구성](custom-auth-android.html)
 * [iOS용 사용자 정의 인증 구성](custom-auth-ios.html)
 * [Cordova용 사용자 정의 인증 구성](custom-auth-cordova.html)

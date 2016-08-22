@@ -98,13 +98,14 @@ valores obtidos para **Rota** e **GUID do app** das
 
 ## Testando a Autenticação
 {: #facebook-auth-cordova-test}
-Depois que o client SDK for inicializado e o Gerenciador de autenticação do Facebook for registrado, será possível começar a fazer solicitações ao seu backend móvel.
+Após o SDK do cliente ser inicializado e o gerenciador de autenticação do Facebook ser registrado, é possível começar a fazer solicitações para o aplicativo backend móvel.
 
 ### Antes de Começar
 Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Para obter mais informações, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel recém-criado em seu navegador. Abra a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um backend móvel criado com o modelo MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
+1. Tente enviar uma solicitação para o terminal protegido do seu aplicativo backend móvel recém-criado a partir do seu navegador. Abra a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter
+é protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
 
 1. Use seu aplicativo Cordova para fazer solicitação para o mesmo terminal. Inclua o código abaixo depois de inicializar `BMSClient`:
 
@@ -112,14 +113,14 @@ Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter u
 	var success = function(data){
     	console.log("success", data);
     }
-	var failure = function(error)
-    	{console.log("failure", error);
+	var failure = function(error){
+    	console.log("failure", error);
     }
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 	request.send(success, failure);
 	```
 
-1. Execute o aplicativo. Uma tela de Login do Facebook é exibida como pop-up:
+1. Execute o aplicativo. Uma tela de login do Facebook é exibida:
 
 	![image](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-facebook-login.png)
 

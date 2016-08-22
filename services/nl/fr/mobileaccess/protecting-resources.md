@@ -10,29 +10,32 @@ copyright:
 # Protection des ressources de back-end avec le service {{site.data.keyword.amashort}}
 {: #protecting-resources}
 
-*Dernière mise à jour : 30 avril 2016*
+*Dernière mise à jour : 17 juillet 2016*
 {: .last-updated}
 
 
-Le service {{site.data.keyword.amashort}} permet de protéger les applications de back end Node.js et Java qui s'exécutent sur {{site.data.keyword.Bluemix_notm}} via des fonctions de surveillance et de sécurité OAuth pour périphériques mobiles.
+Le service {{site.data.keyword.amashort}} permet de protéger les applications de back end Node.js et Java qui s'exécutent sur {{site.data.keyword.Bluemix_notm}} via des fonctions de surveillance et de sécurité OAuth pour périphériques mobiles. 
 {:shortdesc}
 
 ## Avant de commencer
 {: #before-you-begin}
-Avant de commencer, prenez soin de créer le service Node.js.
+Avant de commencer, vérifiez que le service Node.js existe dans votre application de back end {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Filtre d'autorisation
 {: #auth-filter}
-Le SDK serveur de {{site.data.keyword.amashort}} contient des filtres d'autorisation qui peuvent vous servir à protéger vos applications de back end. Le filtre d'autorisation intercepte les demandes entrantes et vérifie la présence d'un en-tête d'autorisation. En cas d'absence ou d'invalidité de l'en-tête d'autorisation, le filtre renvoie une réponse d'erreur HTTP 401. Le SDK client de {{site.data.keyword.amashort}} sait intercepter une réponse HTTP 401 renvoyée par le SDK serveur de {{site.data.keyword.amashort}} et déclenche le flux d'authentification.
+Le SDK serveur de {{site.data.keyword.amashort}} contient des filtres d'autorisation qui peuvent vous servir à protéger vos applications de back end.  Le filtre d'autorisation intercepte les demandes entrantes et vérifie la présence d'un en-tête d'autorisation. En cas d'absence ou d'invalidité de l'en-tête d'autorisation, le filtre renvoie une réponse d'erreur HTTP 401. Le
+SDK client {{site.data.keyword.amashort}} sait comment intercepter une réponse HTTP 401 renvoyée par le SDK serveur
+{{site.data.keyword.amashort}} et déclencher le flux d'authentification.
 ## En-tête d'autorisation
 {: #auth-header}
 L'en-tête d'autorisation de la demande entrante se compose de trois parties : Bearer, le jeton d'accès et le jeton d'ID, qui sont
 séparées par des espaces. Le `jeton d'accès` est un composant nécessaire, alors que le `jeton d'ID est facultatif`.
 
-L'en-tête d'autorisation entrant est traité par le filtre d'autorisation correspondant. Le filtre valide les signatures, la date d'expiration, et l'intégrité structurelle des jetons d'accès et d'ID. Une fois que la validation a abouti, un objet de contexte de sécurité est ajouté à l'objet demande. Vous pouvez établir une référence au contexte de sécurité à l'aide d'une API.
+L'en-tête d'autorisation entrant est traité par le filtre d'autorisation correspondant. Le filtre valide les signatures, la date d'expiration, et l'intégrité structurelle des jetons d'accès et d'ID. Une fois que la validation a abouti, un objet de contexte de sécurité est ajouté à l'objet demande. Vous
+pouvez établir une référence au contexte de sécurité à l'aide de l'API pertinente.
 
-Le contexte de sécurité contient les informations sur le sujet, l'utilisateur, le périphérique et l'application, selon la structure suivante :
+Le contexte de sécurité contient les informations sur le sujet, l'utilisateur, l'unité et l'application, selon la structure suivante :
 ```JSON
 {
     "imf.sub":"myclientid",

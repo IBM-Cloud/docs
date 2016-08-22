@@ -11,15 +11,15 @@ copyright:
 # iOS Swift SDK のセットアップ
 {: #getting-started-ios}
 
-*最終更新日: 2016 年 6 月 14 日*
+*最終更新日: 2016 年 7 月 17 日*
 {: .last-updated}
 
-Mobile Client Access は、既存の Mobile Client Access Objective-C SDK によって提供される機能を増強する新しい Swift SDK をリリースしました。これによって、アプリの認証がより簡単になり、バックエンド・リソースの保護が強化されます。iOS Swift アプリケーションに {{site.data.keyword.amashort}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+{{site.data.keyword.amashort}} は、既存の {{site.data.keyword.amashort}} Objective-C SDK によって提供される機能を増強する新しい Swift SDK をリリースしました。これによって、アプリの認証がより簡単になり、バックエンド・リソースの保護が強化されます。iOS Swift アプリケーションに {{site.data.keyword.amashort}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
 {:shortdesc}
 
-**注:** Objective-C SDK は、モニター・データを Mobile Client Access サービスのモニタリング・コンソールに報告します。Mobile Client Access サービスのモニター機能に依存している場合は、Objective-C SDK を引き続き使用する必要があります。
+**注:** Objective-C SDK は、モニター・データを {{site.data.keyword.amashort}} サービスのモニタリング・コンソールに報告します。{{site.data.keyword.amashort}} サービスのモニター機能に依存している場合は、Objective-C SDK を引き続き使用する必要があります。
 
-**注:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、この新しい Swift SDK が後継になる予定です。 
+Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、この新しい Swift SDK が後継になる予定です。 
 
 
 
@@ -29,7 +29,11 @@ Mobile Client Access は、既存の Mobile Client Access Objective-C SDK によ
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
+
+
+
+
 * Xcode プロジェクト。iOS 開発環境のセットアップ方法について詳しくは、[Apple 開発者の Web サイト](https://developer.apple.com/support/xcode/)を参照してください。
 
 
@@ -40,12 +44,13 @@ Mobile Client Access は、既存の Mobile Client Access Objective-C SDK によ
 
 ### CocoaPods のインストール
 {: #install-cocoapods}
-1. 端末を開き、**pod --version** コマンドを実行します。既に CocoaPods がインストールされている場合は、バージョン番号が表示されます。次のセクションにスキップして SDK をインストールできます。
+
+1. 端末ウィンドウで **pod --version** コマンドを実行します。既に CocoaPods がインストールされている場合はバージョン番号が表示され、次のセクションにスキップして SDK をインストールできます。
 
 1. CocoaPods をインストールしていない場合は、以下を実行します。
-
 ```
-sudo gem install cocoapods```
+sudo gem install cocoapods
+```
 詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。### CocoaPods を使用した {{site.data.keyword.amashort}} Client SDK のインストール
 {: #install-sdk-cocoapods}
 
@@ -56,11 +61,12 @@ sudo gem install cocoapods```
 1. `Podfile` ファイルを編集し、必要なターゲットに以下の行を追加します。
 
 	```
-  use_frameworks!
+use_frameworks!
  pod 'BMSSecurity'
 	```
-  **ヒント:** `use_frameworks!` を、Podfile に含めるのではなく、Xcode ターゲットに追加できます。1. `Podfile` ファイルを保存し、コマンド・ラインから `pod install` を実行します。<br/>Cocoapods は、関連する依存関係をインストールし、追加された依存関係および pod を表示します。<br/>
-**重要**: CocoaPods は `xcworkspace` ファイルを生成します。プロジェクトの開発を進めるためには、このファイルを開く必要があります。
+  **ヒント:** `use_frameworks!` を、Podfile に含めるのではなく、Xcode ターゲットに追加できます。1. `Podfile` ファイルを保存し、コマンド・ラインから `pod install` を実行します。CocoaPods は、関連する依存関係をインストールし、追加された依存関係および pod を表示します。<br/>
+
+   **重要**: CocoaPods は `xcworkspace` ファイルを生成します。プロジェクトの開発を進めるためには、このファイルを開く必要があります。
 
 1. iOS プロジェクト・ワークスペースを開きます。CocoaPods によって生成された `xcworkspace` ファイルを開きます。例えば、`{your-project-name}.xcworkspace` などです。`open {your-project-name}.xcworkspace` を実行します。
 
@@ -78,7 +84,7 @@ sudo gem install cocoapods```
  import BMSSecurity
  ```  
 
-1. {{site.data.keyword.amashort}} Client SDK を初期化します。`<applicationRoute>` および `<applicationGUID>` を、{{site.data.keyword.Bluemix_notm}} ダッシュボードの**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。`<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、ダッシュボードの左上隅にある顔アイコン (![Face](/face.png "Face")) をクリックします。 
+1. {{site.data.keyword.amashort}} Client SDK を初期化します。`<applicationRoute>` および `<applicationGUID>` を、{{site.data.keyword.Bluemix_notm}} ダッシュボードの**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。`<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、ダッシュボードの左上隅にある顔アイコン (![Face](images/face.png "Face")) をクリックします。 
 
 
  ```Swift
@@ -87,8 +93,7 @@ sudo gem install cocoapods```
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-
- // Initialize the client SDK.  
+ // Initialize the client SDK.
  BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
@@ -97,15 +102,13 @@ sudo gem install cocoapods```
  }
  ```
 
-## モバイル・バックエンドへの要求の実行
+## モバイル・バックエンド・アプリケーションへの要求の実行
 {: #request}
 
-{{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンドに要求を出すことができるようになります。
+{{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
-
-
-1. ブラウザーで、モバイル・バックエンド上の保護されたエンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
+1. ブラウザーで、モバイル・バックエンド・アプリケーション上の保護されたエンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
+<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
 
 1. iOS アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 
@@ -113,7 +116,7 @@ sudo gem install cocoapods```
  let customResourceURL = "<your protected resource's path>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
-if error == nil {
+     if error == nil {
          print ("response:\(response?.responseText), no error")
      } else {
          print ("error: \(error)")
@@ -123,10 +126,10 @@ if error == nil {
  request.sendWithCompletionHandler(callBack)
  ```
 
-1.  要求が正常に実行されると、Xcode コンソールに以下の出力が表示されます。
+1.  要求が成功すると、以下の出力が Xcode コンソールに表示されます。
 
  ```
- response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
+ response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
  ```
 {: screen}
  

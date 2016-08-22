@@ -8,22 +8,24 @@ copyright:
 # Protegendo recursos do Liberty for Java com o {{site.data.keyword.amashort}}
 {: #protecting-liberty}
 
-*Última atualização: 15 de abril de 2016*
+*Última atualização: 30 de junho de 2016*
 {: .last-updated}
 
 
-O {{site.data.keyword.amashort}} server SDK fornece um módulo OAuthTAI para aplicativos Liberty for Java&trade; implementados no {{site.data.keyword.Bluemix}}. Deve-se instrumentar seu servidor Liberty com o módulo OAuthTAI para protegê-lo contra acesso não autorizado e obter informações de monitoramento.
+O SDK do servidor {{site.data.keyword.amashort}} fornece um módulo `OAuthTAI` para aplicativos Liberty for Java&trade; que são implementados no {{site.data.keyword.Bluemix}}. Deve-se instrumentar seu servidor Liberty com o módulo `OAuthTAI` para protegê-lo contra acesso não autorizado e reunir as informações de monitoramento.
 
 ## Antes de iniciar
 {: #before-you-begin}
-* Deve-se estar familiarizado com o desenvolvimento de aplicativos Liberty for Java no {{site.data.keyword.Bluemix}}. Para obter mais informações, consulte [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html).
+Deve-se estar familiarizado com o desenvolvimento dos aplicativos Liberty for Java no {{site.data.keyword.Bluemix}}. Para obter mais informações, consulte [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html).
 
 ## Instalando o {{site.data.keyword.amashort}} server SDK
 {: #installing-server-sdk}
 
-1. Faça download e extraia os [artefatos de OAuthTAI](https://imf-tai.{DomainName}/public/TAI.zip).
+1. Faça download e extraia [artefatos OAuthTAI](https://imf-tai.{DomainName}/public/TAI.zip).
 
-1. Copie o arquivo `com.ibm.worklight.oauth.tai_1.0.0.jar` para o diretório `${wlp.user.dir}/extensions/lib`.
+1. Copie o arquivo `com.ibm.worklight.oauth.tai_1.0.0.jar` no diretório
+`$<wlp.user.dir>/extensions/lib`.
+
 	**Dica:** `$<wlp.user.dir>` é o diretório do usuário do tempo de execução do Liberty for Java. O nome do diretório padrão é `usr`.
 
 1. Copie o diretório `OAuthTai-1.0.mf` para o diretório `$<wlp.user.dir>/extension/lib/features`.
@@ -32,7 +34,7 @@ O {{site.data.keyword.amashort}} server SDK fornece um módulo OAuthTAI para apl
 ## Configurando o servidor Liberty for Java para usar o {{site.data.keyword.amashort}} server SDK
 {: #configuring-liberty}
 
-1. Edite o arquivo `server.xml` e inclua recursos necessários.
+1. Edite o arquivo `server.xml` e inclua os recursos necessários.
 
 	```XML
 	<featureManager>
@@ -42,7 +44,7 @@ O {{site.data.keyword.amashort}} server SDK fornece um módulo OAuthTAI para apl
 	</featureManager>
 
 	```
-1. Continue editando o arquivo `server.xml` e configure o recurso OAuthTAI. A função de segurança `TAIUserRole` é mapeada para um assunto especial chamado `ALL_AUTHENTICATED_USERS`. O fragmento a seguir demonstra como proteger métodos GET do terminal `/protected`.
+1. Continue editando o arquivo `server.xml` e configure o recurso `OAuthTAI`. A função de segurança `TAIUserRole` é mapeada para um assunto especial chamado `ALL_AUTHENTICATED_USERS`. O fragmento a seguir demonstra como proteger métodos GET do terminal `/protected`.
 
 	```XML
 	<usr_OAuthTAI id="myOAuthTAI" realmName="imfAuthentication">
@@ -61,13 +63,14 @@ O {{site.data.keyword.amashort}} server SDK fornece um módulo OAuthTAI para apl
 	</application>
 	```
 
-1. Inclua a propriedade a seguir que contém a URL do serviço {{site.data.keyword.amashort}} nas variáveis de ambiente de seu aplicativo backend. É possível incluir a URL no arquivo `manifest.yml` ou `server.env`.
+1. Inclua a propriedade a seguir que contém a URL de serviço {{site.data.keyword.amashort}} nas variáveis do ambiente do seu
+aplicativo backend. É possível incluir a URL no arquivo `manifest.yml` ou `server.env`.
 
 	```
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
 	```
 
-### Protegendo recursos do Liberty for Java
+## Protegendo recursos do Liberty for Java
 {: #protecting-liberty-resources}
 
 Para proteger os recursos hospedados pelo aplicativo Liberty for Java, deve-se especificar `TAIUserRole` como a função de segurança Java. É possível definir a função de segurança no arquivo `web.xml` ou como uma anotação.
@@ -87,8 +90,8 @@ Por exemplo:
 	</security-constraint>
 
 	<security-role id="SecurityRole_TAIUserRole" >
-		<description>Essa é a função que o MFP
-OAuthTAI usa para proteger o recurso e ela precisa estar mapeada para 'ALL_AUTHENTICATED_USERS' no Liberty</description>
+		<description> Esta é a função que o MFP OAuthTAI usa para proteger o recurso e é necessário que seja mapeada para 'ALL_AUTHENTICATED_USERS'
+em Liberty</description>
 		<role-name>TAIUserRole</role-name>
 	</security-role>
 	```
@@ -122,7 +125,7 @@ Para obter mais informações, consulte [WSCredential](http://www-01.ibm.com/sup
 
 #### Propriedade com.worklight.oauth.tai.WLCredential
 {: #WLCredential}
-A interface `WLCredential` fornece APIs para obter os detalhes específicos do principal.
+A interface `WLCredential` fornece APIs para obter detalhes específicos sobre o usuário, dispositivo e aplicativo.
 
 ```Java
 

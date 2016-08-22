@@ -48,7 +48,7 @@ copyright:
   使用以下查询参数：
   
 	```
-   response_type='authorization_code'
+response_type='authorization_code'
    client_id= <bluemix_app_guid>
    redirect_uri= <uri which you want to return to after getting a grant code>
    scope= ‘openid’
@@ -72,7 +72,7 @@ copyright:
     redirect_uri= <redirect_uri >
     code= <authorization code>
 	```
-  `redirect_uri` 参数必须与步骤 1 的 `redirect_uri` 相匹配，`<authorization code>` 值为从响应接收的值。
+`redirect_uri` 参数必须与步骤 1 的 `redirect_uri` 相匹配，`<authorization code>` 值为从响应接收的值。
 请确保在 10 分钟内发送此 `POST` 请求，因为授权代码有效的最长时间为 10 分钟。`POST` 响应主体应该包含以 Base64 编码的 `access_token` 和 `id_token`。
 
 ## 测试认证

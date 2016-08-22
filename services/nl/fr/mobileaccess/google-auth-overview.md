@@ -11,14 +11,15 @@ copyright:
 # Authentification des utilisateurs avec des données d'identification Google
 {: #google-auth}
 
-*Dernière mise à jour : 15 juin 2016*
+*Dernière mise à jour : 3 juillet 2016* 
 
-Vous pouvez configurer la protection des ressources dans le service {{site.data.keyword.amashort}}, en utilisant Google en tant que fournisseur d'identité. Les utilisateurs de votre application mobile peuvent alors s'authentifier avec leurs données d'identification Google.
+Vous pouvez configurer la protection des ressources dans le service {{site.data.keyword.amashort}}, en utilisant Google en tant que fournisseur d'identité. 
+Les utilisateurs de votre application mobile ou Web peuvent alors s'authentifier avec leurs données d'identification Google.
 {:shortdesc}
 
 **Important** : Il n'est pas nécessaire d'installer séparément le SDK Google. Celui-ci est installé automatiquement par les gestionnaires de dépendances lors de la configuration du SDK client de {{site.data.keyword.amashort}}.
 
-## Flux {{site.data.keyword.amashort}}
+## Flux des demandes {{site.data.keyword.amashort}}
 {: #google-auth-overview}
 
 Le diagramme simplifié suivant représente l'intégration entre {{site.data.keyword.amashort}} et Google pour l'authentification.
@@ -28,7 +29,7 @@ Le diagramme simplifié suivant représente l'intégration entre {{site.data.key
 1. Utilisez le SDK de {{site.data.keyword.amashort}} pour envoyer une demande à vos ressources de back end qui sont protégées par le SDK serveur de {{site.data.keyword.amashort}}.
 * Le SDK serveur de {{site.data.keyword.amashort}} détecte une demande non autorisée et renvoie une erreur HTTP 401 et la portée d'autorisation.
 * Le SDK client de {{site.data.keyword.amashort}} détecte automatiquement l'erreur HTTP 401 et lance le processus d'authentification.
-* Le SDK client de {{site.data.keyword.amashort}} contacte le service {{site.data.keyword.amashort}} et lui demande d'émettre un en-tête d'autorisation.
+* Le SDK client {{site.data.keyword.amashort}} contacte le service {{site.data.keyword.amashort}} et réclame un en-tête d'autorisation.
 * Le service {{site.data.keyword.amashort}} demande au client de s'authentifier auprès de Google en fournissant une demande d'authentification.
 * Le SDK client de {{site.data.keyword.amashort}} utilise le SDK Google pour lancer le processus d'authentification. Lorsque l'authentification aboutit, le SDK Google renvoie un jeton d'accès Google.
 * Le jeton d'accès Google est considéré comme une réponse à la demande d'authentification. Il est envoyé au service {{site.data.keyword.amashort}}.

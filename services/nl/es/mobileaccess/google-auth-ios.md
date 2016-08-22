@@ -8,14 +8,18 @@ copyright:
 # Habilitación de la autenticación de Google para apps Objective C de iOS
 {: #google-auth-ios}
 
-Utilice el inicio de sesión de Google para autenticar usuarios en su app Mobile Client Access de iOS. 
+
+*Última actualización: 16 de junio de 2016*
+{: .last-updated}
+
+Utilice el inicio de sesión de Google para autenticar usuarios en su app Mobile Client Access de iOS.
 
 **Nota:** Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK a finales del año en favor del nuevo SDK de Swift. Para aplicaciones nuevas, se recomienda utilizar el SDK de Swift. Las instrucciones de esta página se aplican al SDK de Objective-C de cliente de {{site.data.keyword.amashort}}. Para obtener instrucciones sobre el uso de SDK de Swift, consulte [Habilitación de la autenticación de Google en apps de iOS (SDK de Swift)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
 
 ## Antes de empezar
 {: #google-auth-ios-before}
-Debe tener lo siguiente: 
-* Un proyecto de iOS en Xcode. No es necesario que esté instrumentado con el SDK del cliente {{site.data.keyword.amashort}}. 
+Debe tener lo siguiente:
+* Un proyecto de iOS en Xcode. No es necesario que esté instrumentado con el SDK del cliente {{site.data.keyword.amashort}}.
 * Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de un programa de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
 
 ## Configuración de un proyecto de Google para la plataforma iOS
@@ -61,7 +65,7 @@ Si ya dispone de un proyecto, puede omitir los pasos que describen la creación 
 ## Configuración de {{site.data.keyword.amashort}} para la autenticación de Google
 {: #google-auth-ios-config}
 
-Ahora que ya dispone de un ID de cliente de iOS de Google, puede activar la autenticación de Google en el panel de control de {{site.data.keyword.Bluemix_notm}}. 
+Ahora que ya dispone de un ID de cliente de iOS de Google, puede activar la autenticación de Google en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
@@ -73,7 +77,8 @@ Ahora que ya dispone de un ID de cliente de iOS de Google, puede activar la aute
 
 1. En **ID de aplicación para iOS**, especifique su ID de cliente Google para iOS y pulse **Guardar**.
 
-	Nota: además del ID de cliente de Google, también se necesita el valor inverso para la configuración del cliente (véase a continuación). Para acceder a ambos valores, descargue la lista plist de ejemplo mediante el icono de lápiz: ![Descarga del archivo info.plist](images/download_plist.png)
+	Nota: además del ID de cliente de Google, también se necesita el valor inverso para la configuración del cliente (véase a continuación). Para acceder a ambos valores, descargue la lista plist de ejemplo mediante el icono de lápiz:
+![Descarga del archivo info.plist](images/download_plist.png)
 
 ## Configuración del SDK del cliente de {{site.data.keyword.amashort}} para iOS de Google
 {: #google-auth-ios-sdk}
@@ -214,7 +219,8 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
 	- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url
 					sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
 
-		BOOL shouldHandleGoogleURL = [GPPURLHandler handleURL:url sourceApplication:sourceApplication annotation:annotation];
+		BOOL shouldHandleGoogleURL = [GPPURLHandler handleURL:url
+					sourceApplication:sourceApplication annotation:annotation];
 
 		[[IMFGoogleAuthenticationHandler sharedInstance] handleOpenURL:shouldHandleGoogleURL];
 		return  shouldHandleGoogleURL;
@@ -230,13 +236,14 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
 		let shouldHandleGoogleURL = GPPURLHandler.handleURL(url,
 				sourceApplication: sourceApplication, annotation: annotation)
 
-		IMFGoogleAuthenticationHandler.sharedInstance().handleOpenURL(shouldHandleGoogleURL)
+		IMFGoogleAuthenticationHandler.sharedInstance()
+							.handleOpenURL(shouldHandleGoogleURL)
 
 		return shouldHandleGoogleURL;
 	}
 ```
 
-## Prueba de la autenticación
+## Prueba de autenticación
 {: #google-auth-ios-testing}
 Después de inicializar el SDK del cliente, puede empezar a realizar solicitudes al programa de fondo móvil.
 
@@ -245,13 +252,13 @@ Después de inicializar el SDK del cliente, puede empezar a realizar solicitudes
 Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil en su navegador de escritorio; para ello, abra `{applicationRoute}/protected`. Por ejemplo, `http://my-mobile-backend.mybluemix.net/protected`.
+1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil en su navegador de escritorio; para ello, abra `{applicationRoute}/protected`. Por ejemplo, `http://mi-programa-fondo-móvil.mybluemix.net/protected`.
 
 1. El punto final `/protected` de un programa de fondo móvil creado con el contenedor modelo de MobileFirst Services está protegido con {{site.data.keyword.amashort}}; por tanto, solo se puede acceder al mismo mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Como resultado, verá `Unauthorized` en el navegador de escritorio.
 
-1. Utilice la aplicación de iOS para realizar una solicitud al mismo punto final.
+1. Utilice la aplicación de iOS para realizar solicitudes al mismo punto final.
 
-Objective-C:
+	Objective-C:
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -294,6 +301,7 @@ Objective-C:
 	Esta pantalla puede ser ligeramente diferente si no tiene instalada la app de Facebook en su dispositivo, o bien si no ha iniciado sesión en Facebook.
 
 1. Si pulsa **Aceptar** está autorizando que {{site.data.keyword.amashort}} utilice su identidad de usuario de Google para fines de autenticación.
+
 1. 	Su solicitud debería realizarse correctamente. Debería ver la salida siguiente en LogCat.
 
 	![imagen](images/ios-google-login-success.png)

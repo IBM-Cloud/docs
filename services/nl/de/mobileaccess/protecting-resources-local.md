@@ -8,10 +8,13 @@ copyright:
 # {{site.data.keyword.amashort}} mit einer lokalen Entwicklungsumgebung verwenden
 {: #protecting-local}
 
-*Letzte Aktualisierung: 15. April 2016*
+*Letzte Aktualisierung: 17. Juli 2016*
 {: .last-updated}
 
-Sie können Ihre lokale Entwicklungsumgebung so konfigurieren, dass sie den {{site.data.keyword.amashort}}-Service verwendet, der in {{site.data.keyword.Bluemix}} ausgeführt wird. Insbesondere können Sie das {{site.data.keyword.amashort}}-Server-SDK verwenden, wenn Sie serverseitigen Code mit einem lokalen Entwicklungsserver wie Node.js entwickeln.
+Sie können Ihre lokale Entwicklungsumgebung so konfigurieren, dass sie den {{site.data.keyword.amashort}}-Service verwendet, der in {{site.data.keyword.Bluemix}} ausgeführt wird. Insbesondere können Sie Code mit dem {{site.data.keyword.amashort}}-Server-SDK lokal entwickeln und {{site.data.keyword.amashort}}-Anforderungen an den Entwicklungsserver senden. Diese Anforderungen werden vom {{site.data.keyword.amashort}}-Service geschützt, der in {{site.data.keyword.Bluemix}} ausgeführt wird.
+
+## Server-SDK einrichten
+{: #serversetup}
 
 Das {{site.data.keyword.amashort}}-Server-SDK setzt voraus, dass zwei Umgebungsvariablen festgelegt werden. Wenn Sie serverseitigen Code in {{site.data.keyword.Bluemix_notm}} entwickeln, werden diese Variablen von der {{site.data.keyword.Bluemix_notm}}-Infrastruktur bereitgestellt.
 
@@ -20,9 +23,9 @@ Das {{site.data.keyword.amashort}}-Server-SDK setzt voraus, dass zwei Umgebungsv
 
 Zur Verwendung von {{site.data.keyword.amashort}} mit einem lokalen Entwicklungsserver müssen Sie diese Umgebungsvariablen manuell hinzufügen.
 
-1. Öffnen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard Ihres mobilen Back-Ends, das mit dem {{site.data.keyword.amashort}}-Service geschützt wird.
+1. Öffnen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard Ihrer mobilen Back-End-Anwendung, die mit dem {{site.data.keyword.amashort}}-Service geschützt wird.
 
-1. Klicken Sie auf **Mobile Systemerweiterungen** und kopieren Sie den Wert für **AppGUID**.
+1. Klicken Sie auf **Mobile Systemerweiterungen** und kopieren Sie den Wert für **AppGUID**. 
 
 1. Legen Sie in Ihrer lokalen Entwicklungsumgebung die Umgebungsvariable *VCAP_APPLICATION* fest. Die Variable muss ein in eine Zeichenfolge konvertiertes JSON-Objekt mit einer einzelnen Eigenschaft enthalten.
 ```JavaScript
@@ -30,16 +33,15 @@ Zur Verwendung von {{site.data.keyword.amashort}} mit einem lokalen Entwicklungs
     application_id: "appGUID"
 }
 ```
-Ersetzen Sie die Variable *appGUID* durch den Wert aus dem entsprechenden Feld unter **Mobile Systemerweiterungen**.
-
+Ersetzen Sie die Variable *appGUID* durch den Wert aus dem Feld **AppGUID** unter **Mobile Systemerweiterungen**.
 1. Klicken Sie auf **Berechtigungsnachweise anzeigen** auf der Kachel für den {{site.data.keyword.amashort}}-Service in Ihrer mobilen Back-End-Anwendung im {{site.data.keyword.Bluemix_notm}}-Dashboard. Es wird ein JSON-Objekt mit Zugriffsberechtigungsnachweisen angezeigt, die {{site.data.keyword.amashort}} für Ihre mobile Back-End-Anwendung bereitstellt.
 
 1. Legen Sie in Ihrer lokalen Entwicklungsumgebung die Umgebungsvariable `VCAP_SERVICES` fest. Der Wert dieser Variablen muss ein in eine Zeichenfolge konvertiertes JSON-Objekt sein, das die {{site.data.keyword.amashort}}-Berechtigungsnachweise enthält.  Weitere Informationen finden Sie im folgenden Beispiel.
 
-## Beispielcode
+## Beispielservercode
 {: #local-dev-sample}
 
-Zur Verwendung des {{site.data.keyword.amashort}}-Service in einer lokalen Node.js-Entwicklungsumgebung fügen Sie den folgenden Code hinzu, bevor Sie das Modul `bms-mca-token-validation-strategy` benötigen.
+Zur Verwendung des {{site.data.keyword.amashort}}-Service in einer lokalen Node.js-Entwicklungsumgebung fügen Sie den folgenden Code hinzu.   
 
 ```JavaScript
 var vcapApplication = {
@@ -63,6 +65,7 @@ var vcapServices = {
 process.env["VCAP_APPLICATION"] = JSON.stringify(vcapApplication);
 process.env["VCAP_SERVICES"] = JSON.stringify(vcapServices);
 
+// Nun können Sie das Modul bms-mca-token-validation-strategy anfordern:
 var MCABackendStrategy =
 	require('bms-mca-token-validation-strategy').MCABackendStrategy;
 
@@ -71,21 +74,23 @@ var MCABackendStrategy =
 Ersetzen Sie die Vorkommen des Werts *appGUID* im Code durch den Wert für *appGUID* aus Ihrem mobilen Back-End.
 
 
-## Mobile Anwendungen zur Arbeit mit einem lokalen Entwicklungsserver konfigurieren
+## {{site.data.keyword.amashort}}-Anwendungen zur Arbeit mit einem lokalen Entwicklungsserver konfigurieren
 {: #configuring-local}
 
 Initialisieren Sie die {{site.data.keyword.amashort}}-Client-SDKs mit der realen URL Ihrer {{site.data.keyword.Bluemix_notm}}-Anwendung und verwenden Sie den lokalen Host (localhost) oder die IP-Adresse in jeder Ihrer Anforderungen. Weitere Informationen finden Sie in den folgenden Beispielen.
 
+Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region. 
+
 Es ist möglich, dass Sie `localhost` in den folgenden Beispielen in die tatsächliche IP-Adresse Ihres Entwicklungsservers ändern müssen.
 
 ### Android
-
+{: #android}
 ```Java
 String baseRequestUrl = "http://localhost:3000";
 String bluemixAppRoute = "http://myapp.mybluemix.net";
 String bluemixAppGUID = "your-bluemix-app-guid";
 
-BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID);
+BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.REGION_UK);
 
 Request request =
 			new Request(baseRequestUrl + "/resource/path", Request.GET);
@@ -107,30 +112,10 @@ request.send(this, new ResponseListener() {
 	}
 });
 ```
-### Cordova
 
-```JavaScript
-var baseRequestUrl = "http://localhost:3000";
-var bluemixAppRoute = "http://myapp.mybluemix.net";
-var bluemixAppGUID = "your-bluemix-app-guid";
-
-BMSClient.initialize(bluemixAppRoute, bluemixAppGUID);
-
-var success = function(data){
-   	console.log("success", data);
-}
-
-var failure = function(error){
-	console.log("failure", error);
-}
-
-var request = new MFPRequest(baseRequestUrl +
-							"/resource/path", MFPRequest.GET);
-
-request.send(success, failure);
-```
 
 ### iOS - Objective C
+{: #objc}
 
 ```Objective-C
 NSString *baseRequestUrl = @"http://localhost:3000";
@@ -157,6 +142,7 @@ IMFResourceRequest *request =  [IMFResourceRequest requestWithPath:requestPath
 ```
 
 ### iOS - Swift
+{: #swift}
 
 ```Swift
 let baseRequestUrl = "http://localhost:3000";
@@ -178,4 +164,28 @@ request.sendWithCompletionHandler { (response, error) -> Void in
 	}
 };
 
+```
+
+### Cordova
+{: #cordova}
+
+```JavaScript
+var baseRequestUrl = "http://localhost:3000";
+var bluemixAppRoute = "http://myapp.mybluemix.net";
+var bluemixAppGUID = "your-bluemix-app-guid";
+
+BMSClient.initialize(bluemixAppRoute, bluemixAppGUID);
+
+var success = function(data){
+   	console.log("success", data);
+}
+
+var failure = function(error){
+	console.log("failure", error);
+}
+
+var request = new MFPRequest(baseRequestUrl +
+							"/resource/path", MFPRequest.GET);
+
+request.send(success, failure);
 ```

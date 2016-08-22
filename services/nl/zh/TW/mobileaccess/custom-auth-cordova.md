@@ -5,8 +5,13 @@ copyright:
 
 ---
 
-# 配置適用於 Cordova 的 {{site.data.keyword.amashort}} 用戶端 SDK
+# 配置適用於 {{site.data.keyword.amashort}} Cordova 應用程式的自訂鑑別
 {: #custom-cordova}
+
+*前次更新：2016 年 7 月 17 日*
+{: .last-updated}
+
+
 配置 Cordova 應用程式，這個應用程式利用自訂鑑別來使用 {{site.data.keyword.amashort}} 用戶端 SDK，並將您的應用程式連接至 {{site.data.keyword.Bluemix}}。
 
 
@@ -30,7 +35,7 @@ copyright:
 	BMSClient.initialize(applicationRoute, applicationGUID);
 
 	```
- 將 *applicationRoute* 及 *applicationGUID* 取代為來自 {{site.data.keyword.Bluemix_notm}} 儀表板上您的應用程式的**行動選項**畫面的**路徑**及**應用程式 GUID** 值。
+將 *applicationRoute* 及 *applicationGUID* 取代為來自 {{site.data.keyword.Bluemix_notm}} 儀表板上您的應用程式的**行動選項**畫面的**路徑**及**應用程式 GUID** 值。
 
 ## 鑑別接聽器介面
 {: #custom-cordva-auth}
@@ -49,7 +54,7 @@ var customAuthenticationListener = {
 
 ### onAuthenticationChallengeReceived 方法
 {: #onAuthenticationChallengeReceived}
-從 {{site.data.keyword.amashort}} 服務接收自訂鑑別盤查時，會呼叫此方法。
+從 {{site.data.keyword.amashort}} 服務收到自訂鑑別盤查時，會呼叫此方法。
 ```JavaScript
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
@@ -59,24 +64,26 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 * `authenticationContext`：由 {{site.data.keyword.amashort}} 用戶端 SDK 所提供，讓開發人員可以在認證收集期間回報鑑別盤查回答或失敗（例如取消鑑別要求的使用者）。
 * `challenge`：JSON 物件，包含自訂身分提供者所傳回的自訂鑑別盤查。
 
-透過呼叫 `onAuthenticationChallengeReceived` 方法，{{site.data.keyword.amashort}} 用戶端 SDK 會將控制權委派給開發人員。{{site.data.keyword.amashort}} 會等待認證。開發人員必須收集認證，並使用下列其中一種 `authContext` 介面方法將它們回報給 {{site.data.keyword.amashort}} 用戶端 SDK。
+透過呼叫 `onAuthenticationChallengeReceived` 方法，{{site.data.keyword.amashort}} 用戶端 SDK 會將控制權委派給開發人員。{{site.data.keyword.amashort}} 會等待認證。開發人員必須收集認證，並使用下列其中一個 `authContext` 介面方法，將它們回報給 {{site.data.keyword.amashort}} 用戶端 SDK。
 
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
 ```
 
-在成功鑑別之後，會呼叫此方法。引數包括內含鑑別成功延伸資訊的選用 JSONObject。
+在成功鑑別之後，會呼叫此方法。引數包括選用性的 JSONObject，其中包含鑑別成功的延伸資訊。
+
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
 
-在鑑別失敗之後，會呼叫此方法。引數包括內含鑑別失敗延伸資訊的選用 JSONObject。
+在鑑別失敗之後，會呼叫此方法。引數包括選用性的 JSONObject，其中包含鑑別失敗的延伸資訊。
+
 
 ## authenticationContext
 {: #custom-cordova-authcontext}
 
-`authenticationContext` 值提供作為自訂鑑別接聽器的 `onAuthenticationChallengeReceived` 方法的引數。開發人員必須收集認證，並使用 `authenticationContext` 方法將認證傳回給 {{site.data.keyword.amashort}} 用戶端 SDK 或報告失敗。請使用下列其中一種方法：
+`authenticationContext` 值提供作為自訂鑑別接聽器的 `onAuthenticationChallengeReceived` 方法的引數。開發人員必須收集認證，並使用 `authenticationContext` 方法將認證傳回給 {{site.data.keyword.amashort}} 用戶端 SDK 或報告失敗。請使用下列其中一個方法：
 
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);

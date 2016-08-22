@@ -1,4 +1,4 @@
- ---
+---
 
 copyright:
   years: 2016
@@ -10,6 +10,10 @@ copyright:
 
 # Ativando a autenticação do Google para apps iOS (Swift SDK)
 {: #google-auth-ios}
+
+*Última atualização: 17 de julho de 2016*
+{: .last-updated}
+
 Use o Google Sign-In para autenticar usuários em seu app {{site.data.keyword.amashort}} iOS Swift. O {{site.data.keyword.amashort}} Swift SDK recém-liberado inclui e melhora a funcionalidade fornecida pelo Mobile Client Access Objective-C SDK existente.
 
 **Nota:** embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuar o Objective-C SDK posteriormente este ano em favor deste novo Swift SDK.
@@ -21,7 +25,7 @@ Use o Google Sign-In para autenticar usuários em seu app {{site.data.keyword.am
 Você deve ter:
 
 * Um projeto do iOS em Xcode. Ele não precisa ser instrumentado com o {{site.data.keyword.amashort}} client SDK.  
-* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
+* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
 
 
 ## Preparando seu app para o Google Sign-In
@@ -55,7 +59,6 @@ As etapas a seguir fornecem um esboço resumido das tarefas necessárias para pr
 1. Atualize os Esquemas de URL em seu projeto do Xcode com o
 `REVERSE_CLIENT_ID` e o identificador de pacote configurável. Para obter mais informações, consulte [Incluir esquemas URL em seu projeto](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project).
 
-
 1. Atualize o arquivo project-Bridging-Header.h do seu app com o código a
 seguir:
 
@@ -81,7 +84,7 @@ app** (*applicationGUID*). Eles serão necessários ao inicializar o SDK.
 
 1. Clique no ladrilho {{site.data.keyword.amashort}}. O painel do {{site.data.keyword.amashort}} é carregado.
 
-1. Clique no ladrilho **Google**.
+1. Clique no botão **Configurar* no painel do **Google**.
 
 1. Em **ID do aplicativo para iOS**, especifique o valor
 `CLIENT_ID` do arquivo `GoogleService-Info.plist` que
@@ -165,10 +168,11 @@ exibidos nos campos **Rota** e **GUID do app**.
 
  GoogleAuthenticationManager.sharedInstance.register()
       return true
- }
+      }
 
  // [START openurl]
-      func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?,annotation: AnyObject) -> Bool {
+      func application(application: UIApplication,
+          openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
              return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
       }
 
@@ -181,7 +185,7 @@ exibidos nos campos **Rota** e **GUID do app**.
 ## Testando a Autenticação
 {: #google-auth-ios-testing}
 
-Após a inicialização do client SDK e o registro do Gerenciador de autenticação do Google, será possível começar a fazer solicitações para seu backend móvel.
+Após o SDK do cliente ser inicializado e o Google Authentication Manager ser registrado, será possível começar a fazer solicitações a seu aplicativo backend móvel.
 
 ### Antes de iniciar
 {: #google-auth-ios-testing-before}
@@ -189,11 +193,10 @@ Após a inicialização do client SDK e o registro do Gerenciador de autenticaç
 Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido por {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel no
-navegador do desktop abrindo `{applicationRoute}/protected`, por
-exemplo, `http://my-mobile-backend.mybluemix.net/protected`
+1. Tente enviar uma solicitação para o terminal protegido do seu aplicativo backend móvel em seu navegador da área de trabalho, abrindo
+`{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`
 
-1. O terminal `/protected` de um backend móvel criado com o Modelo do MobileFirst Services está protegido com o {{site.data.keyword.amashort}}; portanto, ele só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
+1. O terminal `/protected` de um aplicativo backend móvel criado com o MobileFirst Services Boilerplate é protegido com o {{site.data.keyword.amashort}}, portanto, só pode ser acessado pelos aplicativos móveis instrumentados com o SDK do cliente {{site.data.keyword.amashort}}. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
 
 1. Use seu aplicativo iOS para fazer solicitação para o mesmo terminal.
 
@@ -219,7 +222,7 @@ exemplo, `http://my-mobile-backend.mybluemix.net/protected`
 {{site.data.keyword.amashort}} a usar sua identidade de usuário do Google para
 propósitos de autenticação.
 
-1. 	Sua solicitação deve ser bem-sucedida. Você deverá ver a saída a seguir no log.
+1. 	Sua solicitação deve ser bem-sucedida. A saída a seguir aparece no log.
 
  ```
  onAuthenticationSuccess info = Optional({attributes = {};
@@ -238,6 +241,7 @@ propósitos de autenticação.
  GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  Se você chamar esse código depois que um usuário estiver conectado ao Google e ele tentar efetuar login novamente, ele será solicitado a autorizar o {{site.data.keyword.amashort}} a usar o Google para propósitos de autenticação. Neste ponto, o usuário pode clicar no nome do usuário no canto superior direito da tela para selecionar e efetuar login com outro usuário.
+  Se você chamar esse código depois que um usuário estiver conectado ao Google e ele tentar efetuar login novamente, ele será solicitado a autorizar o {{site.data.keyword.amashort}} a usar o Google para propósitos de autenticação. Nesse
+ponto, o usuário pode clicar no nome do usuário no canto direito superior da tela para selecionar e efetuar login com outro usuário.
 
    Passar `callBack` para a função de logout é opcional. Também é possível passar `nil`.
