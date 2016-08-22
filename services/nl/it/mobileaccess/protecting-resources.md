@@ -10,26 +10,26 @@ copyright:
 # Protezione delle risorse di back-end con il servizio {{site.data.keyword.amashort}}
 {: #protecting-resources}
 
-*Ultimo aggiornamento: 30 aprile 2016*
+*Ultimo aggiornamento: 17 luglio 2016*
 {: .last-updated}
 
 
-Con il servizio {{site.data.keyword.amashort}}, puoi proteggere le tue applicazioni di back-end basate su Java e Node.js in esecuzione su {{site.data.keyword.Bluemix_notm}} con monitoraggio e sicurezza OAth abilitati ai dispositivi mobili.
+Con il servizio {{site.data.keyword.amashort}}, puoi proteggere le tue applicazioni di back-end basate su Java e Node.js in esecuzione su {{site.data.keyword.Bluemix_notm}} con monitoraggio e sicurezza OAth abilitati ai dispositivi mobili. 
 {:shortdesc}
 
 ## Prima di cominciare
 {: #before-you-begin}
-Prima di iniziare, assicurati di aver creato il servizio Node.js.
+Prima di iniziare, assicurati che il servizio Node.js esista nella tua applicazione di backend {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Filtro di autorizzazione
 {: #auth-filter}
-L'SDK server {{site.data.keyword.amashort}} ha dei filtri di autorizzazione che puoi utilizzare per proteggere le tue applicazioni di back-end. Il filtro di autorizzazione intercetta le richieste in entrata e convalida se un'intestazione di autorizzazione è presente. Se l'intestazione di autorizzazione non è presente o non è valida, il filtro restituisce una risposta con HTTP 401. L'SDK client {{site.data.keyword.amashort}} sa come intercettare una risposta HTTP 401 restituita dall'SDK server {{site.data.keyword.amashort}} e attiva il flusso di autenticazione.
+L'SDK server {{site.data.keyword.amashort}} ha dei filtri di autorizzazione che puoi utilizzare per proteggere le tue applicazioni di back-end.  Il filtro di autorizzazione intercetta le richieste in entrata e convalida se un'intestazione di autorizzazione è presente. Se l'intestazione di autorizzazione non è presente o non è valida, il filtro restituisce una risposta con HTTP 401. L'SDK client {{site.data.keyword.amashort}} sa come intercettare una risposta HTTP 401 restituita dall'SDK server {{site.data.keyword.amashort}} e attiva il flusso di autenticazione.
 ## Intestazione di autorizzazione
 {: #auth-header}
 L'intestazione di autorizzazione nella richiesta in entrata consiste di tre parti: Bearer, Token di accesso e Token ID, separate da spazi. Il `Token di accesso` è un componente obbligatorio mentre il `Token ID` è facoltativo.
 
-L'intestazione di autorizzazione in entrata è elaborata dal rispettivo filtro di autorizzazione. Il filtro convalida l'integrità strutturale, la data di scadenza e le firme di token ID e token di accesso. Dopo che la convalida è stata superata, all'oggetto della richiesta viene aggiunto un oggetto di contesto di sicurezza. Puoi ottenere un riferimento al contesto di sicurezza utilizzando un'API rispettiva.
+L'intestazione di autorizzazione in entrata è elaborata dal rispettivo filtro di autorizzazione. Il filtro convalida l'integrità strutturale, la data di scadenza e le firme di token ID e token di accesso. Dopo che la convalida è stata superata, all'oggetto della richiesta viene aggiunto un oggetto di contesto di sicurezza. Puoi ottenere un riferimento al contesto di sicurezza utilizzando un'API pertinente.
 
 Il contesto di sicurezza contiene le informazioni su oggetto, utente, dispositivo e applicazione, memorizzate con la seguente struttura:
 ```JSON

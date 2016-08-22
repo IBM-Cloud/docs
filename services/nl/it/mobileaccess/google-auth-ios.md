@@ -8,6 +8,10 @@ copyright:
 # Abilitazione dell'autenticazione Google per le applicazioni Objective C iOS
 {: #google-auth-ios}
 
+
+*Ultimo aggiornamento: 16 giugno 2016*
+{: .last-updated}
+
 Utilizza l'accesso Google per autenticare gli utenti nella tua applicazione iOS Mobile Client Access.
 
 **Nota:** mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift. Per le nuove applicazioni consigliamo caldamente di utilizzare l'SDK Swift. Le istruzioni in questa pagina si applicano all'SDK Objective-C client {{site.data.keyword.amashort}}. Per istruzioni sull'utilizzo dell'SDK Swift, vedi [Abilitazione dell'autenticazione Google nelle applicazioni iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
@@ -215,8 +219,7 @@ dell'applicazione. Aggiungi questo codice subito dopo che hai inizializzato IMFC
 		[[IMFGoogleAuthenticationHandler sharedInstance] handleDidBecomeActive];
 	}
 
-	- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url
-					sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
+	- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
 
 		BOOL shouldHandleGoogleURL = [GPPURLHandler handleURL:url sourceApplication:sourceApplication annotation:annotation];
 

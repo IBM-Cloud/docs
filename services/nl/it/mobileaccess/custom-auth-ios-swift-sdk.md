@@ -5,8 +5,13 @@ copyright:
 
 ---
 
-# Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS (SDK Swift)
+# Configurazione dell'autenticazione personalizzata per la tua applicazione iOS (Swift SDK) {{site.data.keyword.amashort}}
+
 {: #custom-ios}
+
+*Ultimo aggiornamento: 18 luglio 2016*
+{: .last-updated}
+
 
 Configura la tua applicazione iOS che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connetti la tua applicazione a {{site.data.keyword.Bluemix}}.  La nuova SDK Swift rilasciata {{site.data.keyword.amashort}} aggiunge e migliora le funzionalità fornite dalla SDK Objective-C Mobile Client Access esistente.
 
@@ -61,7 +66,7 @@ Inizializza l'SDK passando i parametri `applicationRoute` e `applicationGUID`. U
 1. Inizializza l'SDK client {{site.data.keyword.amashort}}, modifica il gestore autorizzazione in modo che sia MCAAuthorizationManager e definisci un delegato di autenticazione e registralo. Sostituisci `<applicationRoute>` e `<applicationGUID>` con
 i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}. 
 
-  Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona viso (![Viso](/face.png "Viso")) nell'angolo in alto a sinistra del dashboard.
+  Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona viso (![Viso](/face.png "Viso")) nell'angolo in alto a sinistra del dashboard. 
 
   Per `<yourProtectedRealm>`, utilizza il **Realm name** che hai definito nel tile **Custom** del dashboard {{site.data.keyword.amashort}}.
 
@@ -110,15 +115,15 @@ i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mob
 ## Verifica dell'autenticazione
 {: #custom-ios-testing}
 
-Dopo che hai inizializzato l'SDK client e registrato un delegato di autenticazione personalizzato, puoi iniziare a effettuare richieste al tuo backend mobile.
+Dopo che hai inizializzato l'SDK client e registrato un delegato di autenticazione personalizzato, puoi iniziare a effettuare richieste al tuo back-end mobile.
 
 ### Prima di cominciare
 {: #custom-ios-testing-before}
 
  Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyword.mobilefirstbp}} e di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
 
-1. Invia una richiesta all'endpoint protetto del tuo backend mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
-  L'endpoint `/protected` di un backend mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
+1. Invia una richiesta all'endpoint protetto della tua applicazione di back-end mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
+  L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
 
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato `BMSClient` e registrato il tuo delegato di autenticazione personalizzato:
 

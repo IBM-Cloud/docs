@@ -8,6 +8,10 @@ copyright:
 # Abilitazione dell'autenticazione Google per le applicazioni Android
 {: #google-auth-android}
 
+
+*Ultimo aggiornamento: 16 giugno 2016*
+{: .last-updated}
+
 ## Prima di cominciare
 {: #before-you-begin}
 È necessario disporre di:
@@ -22,7 +26,7 @@ La configurazione dell'autenticazione Google per la tua applicazione Android {{s
 ## Creazione di un progetto con Google Developer Console
 {: #create-google-project}
 
-Per iniziare a usare Google come un provider di identità, creare un progetto nella [Google Developer Console](https://console.developers.google.com).
+Per iniziare a usare Google come un provider di identità, creare un progetto nella [Google Developer Console](https://console.developers.google.com). 
 Parte della creazione di un progetto consiste nell'ottenere un ID client Google.  L'ID client Google è un identificativo univoco per la tua applicazione utilizzato dall'autenticazione Google ed è necessario per la configurazione dell'applicazione {{site.data.keyword.Bluemix_notm}}.
 
 Dalla console:
@@ -30,7 +34,9 @@ Dalla console:
 1. Crea un progetto utilizzando l'API **Google+**.
 2. Aggiungi l'accesso utente **OAuth**.
 3. Prima di aggiungere le credenziali, devi scegliere la piattaforma (Android).
-4. Aggiungi le credenziali. Per completare la creazione delle credenziali, devi aggiungere l'**impronta digitale di certificato di firma**.
+4. Aggiungi le credenziali. 
+
+Per completare la creazione delle credenziali, devi aggiungere l'**impronta digitale di certificato di firma**.
 
 
 
@@ -59,7 +65,7 @@ Un keystore che contiene un certificato per gli ambienti di sviluppo è memorizz
 il file `AndroidManifest.xml` in Android Studio e cerca: `<manifest package="{il-tuo-nome-pacchetto}">`. 
 
 1. Al termine, fai
-clic su **Crea**. **Questo completa la creazione delle credenziali.**
+clic su **Crea**. Questo completa la creazione delle credenziali.
 
 ###ID client Google
 
@@ -77,7 +83,7 @@ Ora che hai un ID client Google per Android, puoi abilitare l'autenticazione Goo
 
 1. Fai clic sul tile {{site.data.keyword.amashort}}. Il dashboard {{site.data.keyword.amashort}} viene caricato.
 
-1. Fai clic sul tile **Google**.
+1. Fai clic sul pulsante **Configura** nel pannello **Google**.
 
 1. In **Application ID for Android**, specifica il tuo ID client Google per Android e fai clic su **Save**.
 
@@ -99,7 +105,7 @@ Ora che hai un ID client Google per Android, puoi abilitare l'autenticazione Goo
         version: '2.+',
         ext: 'aar',
         transitive: true
-    	// altr dipendenze  
+    	// other dependencies  
 	}
 	```
 
@@ -127,10 +133,16 @@ valori da **Rotta** e **GUID applicazione** dalla sezione **Opzioni mobili** nel
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");
-
+					"applicationGUID",
+					BMSClient.REGION_UK);
+						
 	GoogleAuthenticationManager.getInstance().register(this);
-	```
+```
+
+  Sostituisci `BMSClient.REGION_UK` con la regione appropriata.
+
+
+	
 
 1. Aggiungi il seguente codice alla tua attività:
 
@@ -147,9 +159,8 @@ valori da **Rotta** e **GUID applicazione** dalla sezione **Opzioni mobili** nel
 {: #google-auth-android-test}
 Dopo che l'SDK client è stato inizializzato e il gestore autenticazione Google è stato registrato, puoi iniziare a effettuare richieste alla tua applicazione di back-end mobile.
 
-### Prima di cominciare
-{: #google-auth-android-testing-before}
-Devi disporre di una applicazione di backend mobile creata con il contenitore tipo MobileFirst Services Starter e disporre già di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`. per ulteriori informazioni, consulta [Protezione delle risorse](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)
+
+Prima di iniziare, devi disporre di una applicazione di backend mobile creata con il contenitore tipo **MobileFirst Services Starter** e disporre già di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`. Per ulteriori informazioni, vedi [Protezione delle risorse](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Prova a inviare una richiesta all'endpoint protetto della tua applicazione di backend mobile nel tuo browser desktop aprendo `{applicationRoute}/protected`, ad esempio: `http://my-mobile-backend.mybluemix.net/protected`.
  L'endpoint `/protected` di una applicazione di back-end mobile creata con il contenitore tipo MobileFirst Services è protetto con {{site.data.keyword.amashort}}. Pertanto, a esso possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, vedrai `Unauthorized` nel tuo browser del desktop.
@@ -195,6 +206,6 @@ Devi disporre di una applicazione di backend mobile creata con il contenitore ti
  GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- Se richiami questo codice dopo che un utente ha eseguito l'accesso con Google, l'utente viene disconnesso da Google. Quando l'utente prova ad eseguire nuovamente l'accesso, deve selezionare un account Google con il quale verrà nuovamente eseguito il suo accesso. Quando prova ad accedere con un ID Google che aveva già in precedenza eseguito l'accesso, non gli vengono richieste nuovamente le credenziali. Perché gli vengano richieste nuovamente le credenziali di accesso, è necessario che l'utente rimuova il suo account Google dal dispositivo Android.
+ Se richiami questo codice dopo che un utente ha eseguito l'accesso con Google, l'utente viene disconnesso da Google. Quando l'utente prova ad eseguire nuovamente l'accesso, deve selezionare un account Google per accedere nuovamente. Quando prova ad accedere con un ID Google che aveva già in precedenza eseguito l'accesso, non gli vengono richieste nuovamente le credenziali. Perché gli vengano richieste nuovamente le credenziali di accesso, è necessario che l'utente rimuova il suo account Google dal dispositivo Android.
 
  Il valore per `listener` passato alla funzione di disconnessione può essere `null`.
