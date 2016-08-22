@@ -13,13 +13,13 @@ copyright:
 # Introduzione a {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
 
-*Ultimo aggiornamento: 15 giugno 2016*
+*Ultimo aggiornamento: 20 luglio 2016*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_long}} accelera l'impostazione di un ambiente {{site.data.keyword.mfp_full}} da cui puoi sviluppare, testare e operare applicazioni mobili aziendali. {{site.data.keyword.mobilefoundation_short}} è disponibile con due diversi piani di servizio: Developer e Professional 1 Application.
 {:shortdesc}
 
-Il piano Professional 1 Application consente di distribuire il server {{site.data.keyword.mobilefoundation_short}} in un gruppo di contenitori scalabile. Mediante il piano Professional 1 Application è possibile gestire una singola applicazione creata in una o tutte le piattaforme operative supportate quali  Android, iOS, Windows o Web mobili. Il piano Developer non supporta la distribuzione di {{site.data.keyword.mobilefoundation_short}} su un gruppo di contenitori con più di 1 nodo. Questo piano è consigliato per lo sviluppo e le operazioni di test. 
+Il piano Professional 1 Application consente di distribuire il server {{site.data.keyword.mobilefoundation_short}} in un gruppo di contenitori scalabile. Mediante il piano Professional 1 Application è possibile gestire una singola applicazione creata in una o tutte le piattaforme operative supportate quali  Android, iOS, Windows o Web mobili. Il piano Developer non supporta la distribuzione di {{site.data.keyword.mobilefoundation_short}} su un gruppo di contenitori con più di 1 nodo. Questo piano è consigliato per lo sviluppo e le operazioni di test.
 
 ## Introduzione al piano {{site.data.keyword.mobilefoundation_short}}: Developer
 
@@ -38,9 +38,9 @@ Dopo che hai creato un'istanza del servizio {{site.data.keyword.mobilefoundation
 
 1.  Connettiti a un servizio {{site.data.keyword.dashdbshort}}: Enterprise Transactional esistente su {{site.data.keyword.Bluemix_notm}}.
 
-    1.  Seleziona lo `Spazio`  {{site.data.keyword.Bluemix_notm}} in cui è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}, dall'elenco di spazi disponibili nell'`Organizzazione` corrente.
+    1.  Seleziona lo `Spazio`  {{site.data.keyword.Bluemix_notm}} in cui è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}, dall'elenco di spazi disponibili nell'`Organizzazione` selezionata. 
 
-    2.  Seleziona il `Nome servizio` {{site.data.keyword.dashdbshort_notm}} e le `Credenziali` per connetterti all'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} esistente. 
+    2.  Seleziona il `Nome servizio` {{site.data.keyword.dashdbshort_notm}} e le `Credenziali` per connetterti all'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} esistente.
 
     3.  Verifica la connessione all'istanza del servizio  {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional selezionata facendo clic su **Verifica connessione**.
 
