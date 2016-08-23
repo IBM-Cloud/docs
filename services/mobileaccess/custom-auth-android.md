@@ -44,7 +44,7 @@ You must have a resource that is protected by an instance of the {{site.data.key
     	// other dependencies  
 	}
 	```
-{: codeblock}
+
 
 1. Synchronize your project with Gradle. Click **Tools > Android > Sync Project with Gradle Files**.
 
@@ -54,7 +54,7 @@ Add the internet access permission under the `<manifest>` element:
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
-{: codeblock}
+
 
 1. Initialize the SDK.  
 A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
@@ -66,7 +66,6 @@ Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GU
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-{: codeblock}
 
 Replace the `BMSClient.REGION_UK` with the appropriate region.	 To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.				
 	
@@ -83,7 +82,7 @@ Call this method when a custom authentication challenge is received from the {{s
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
-{: codeblock}
+
 
 #### Arguments
 {: #custom-android-onAuth-arg}
@@ -100,7 +99,7 @@ Call this method after a successful authentication. The arguments include the An
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
-{: codeblock}
+
 
 ### onAuthenticationFailure method
 {: #custom-android-authlistener-onfail}
@@ -108,7 +107,7 @@ Call this method after authentication fails. The arguments include Android Conte
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
-{: codeblock}
+
 
 ## AuthenticationContext interface
 {: #custom-android-authcontext}
@@ -118,11 +117,11 @@ The `AuthenticationContext` is supplied as an argument to the `onAuthenticationC
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
-{: codeblock}
+
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
-{: codeblock}
+
 
 ## Sample implementation of a custom AuthenticationListener
 {: #custom-android-samplecustom}
@@ -182,7 +181,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
-{: codeblock}
+
 
 ## Registering a custom AuthenticationListener
 {: #custom-android-register}
