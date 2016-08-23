@@ -41,7 +41,7 @@ If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{si
 ## Notifications and event subscriptions
 {: #oc_eventsubscription}
 
-You can always know the status of your environment by checking the Status page. As they occur, incidents are reported on the Status page. {{site.data.keyword.Bluemix_notm}} also sends notifications to the Notifications area on the Administration page for events such as scheduled or pending maintenance updates.
+You can always know the status of your environment by [Viewing status](index.html##oc_status). As they occur, incidents and events, such as maintenance updates, are reported on the Status page. {{site.data.keyword.Bluemix_notm}} also sends notifications to the Notifications area on the Administration page for events such as scheduled or pending maintenance updates.
 
 ### Notifications
 
@@ -51,7 +51,7 @@ You can view notifications for your local or dedicated environment to monitor th
 
 | **Event Type** | **Notification method** |       
 |-----------------|-------------------|
-| Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications area on the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**. You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice. |
+| Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications area on the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**. You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  You are also alerted about maintenance notifications on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that sends an email to a recipient of your choice.|
 | Critical incidents | You are alerted about critical incidents on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that sends an email to a recipient of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  |  
 | {{site.data.keyword.Bluemix_notm}} Status | You can always view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**.  |
 
