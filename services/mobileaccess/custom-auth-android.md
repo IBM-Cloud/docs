@@ -100,14 +100,12 @@ Call this method after a successful authentication. The arguments include the An
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
 
-
 ### onAuthenticationFailure method
 {: #custom-android-authlistener-onfail}
 Call this method after authentication fails. The arguments include Android Context and an optional JSONObject that contains extended information about authentication failure.
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
-
 
 ## AuthenticationContext interface
 {: #custom-android-authcontext}
@@ -182,7 +180,6 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 }
 ```
 
-
 ## Registering a custom AuthenticationListener
 {: #custom-android-register}
 
@@ -238,7 +235,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
 		}
 	});
 ```
-{: codeblock}
+
 
 1. 	When your request succeeds, the following output is in the LogCat tool:
 
@@ -249,7 +246,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
-{: codeblock} 
+
 
  If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge that is received from the server again.
 

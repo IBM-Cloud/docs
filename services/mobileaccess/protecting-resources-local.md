@@ -4,12 +4,12 @@ copyright:
   years: 2015, 2016
 
 ---
-{:shortdesc: .shortdesc} {:codeblock:.codeblock}
+{:shortdesc: .shortdesc} 
 
 # Using {{site.data.keyword.amashort}} with a local development environment
 {: #protecting-local}
 
-Last updated: 22 July 2016
+Last updated: 23 July 2016
 {: .last-updated}
 
 You can configure your local development  to use the {{site.data.keyword.amafull}} service that is running on {{site.data.keyword.Bluemix}}. Specifically, you can develop code locally using the {{site.data.keyword.amashort}} server SDK and send {{site.data.keyword.amashort}} requests to the development server. These requests will be protected by the {{site.data.keyword.amashort}} service that is running on {{site.data.keyword.Bluemix}}.
@@ -34,7 +34,6 @@ To use {{site.data.keyword.amashort}} with a local development server, you must 
     application_id: "appGUID"
 }
 ```
-{: codeblock}
 
 Replace the *appGUID* variable with the value from the **Mobile Options** **AppGUID** field.
 
@@ -75,7 +74,7 @@ var MCABackendStrategy =
 
 // Rest of your code
 ```
-{: codeblock}
+
 
 Replace the occurrences of the *appGUID* value in the code with your mobile back-end *appGUID* value.
 
@@ -120,7 +119,7 @@ request.send(this, new ResponseListener() {
 	}
 });
 ```
-{: codeblock}
+
 
 
 ### iOS - Objective C
@@ -153,7 +152,7 @@ IMFResourceRequest *request =  [IMFResourceRequest
 	}
 }];
 ```
-{: codeblock}
+
 
 ### iOS - Swift
 {: #swift}
@@ -182,7 +181,7 @@ request.sendWithCompletionHandler { (response, error) -> Void in
 };
 
 ```
-{: codeblock}
+
 
 ### Cordova
 {: #cordova}
@@ -208,4 +207,4 @@ var request = new MFPRequest(baseRequestUrl +
 
 request.send(success, failure);
 ```
-{: codeblock}
+

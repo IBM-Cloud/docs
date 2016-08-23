@@ -6,12 +6,12 @@ copyright:
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
+
 
 # Setting up the iOS Swift SDK
 {: #getting-started-ios}
 
-Last updated: 22 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 
@@ -49,7 +49,7 @@ The {{site.data.keyword.amashort}} SDK is distributed with CocoaPods, a dependen
 ```
 sudo gem install cocoapods
 ```
-{: codeblock}
+
 
 For more information, see the [CocoaPods website](https://cocoapods.org/).
 
@@ -67,7 +67,7 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
   use_frameworks!
   pod 'BMSSecurity'
 	```
-{: codeblock}
+
   **Tip:** You can add `use_frameworks!` to your Xcode target instead of having it in the Podfile.
 
 1. Save the `Podfile` file, and run `pod install` from the command line. CocoaPods  installs the relevant dependencies, and displays the added dependencies and pods.<br/>
@@ -111,7 +111,7 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 
   * Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. 
   * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
-  * 
+   
 ## Making a request to your mobile back-end application
 {: #request}
 

@@ -6,13 +6,12 @@ copyright:
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 
 # Enabling Google authentication for Cordova apps
 {: #google-auth-cordova}
 
 
-Last updated: 22 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 To configure your {{site.data.keyword.amafull}} Cordova applications for Google authentication integration,  you must make changes in the native code of the Cordova application (Java, Objective-C, or Swift). Each platform must be configured separately. Use the native development environment to make changes in the native code, for example, in Android Studio or Xcode.

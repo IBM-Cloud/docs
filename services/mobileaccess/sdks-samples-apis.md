@@ -6,10 +6,10 @@ copyright:
 ---
 
 {:shortdesc: .shortdesc}
-{:codeblock:.codeblock}
+
 
 # {{site.data.keyword.amashort}} SDKs, samples, and API reference
-Last updated: 22 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 To add {{site.data.keyword.amafull}} SDKs to your app, choose the SDKs that you want to use. Then configure your dependency manager to pull the SDKs into your app.
@@ -249,9 +249,10 @@ npm install -save bms-mca-token-validation-strategy
 
 #### Install the Liberty SDK
 {: #libertysdk}
+
 1. Copy the `com.ibm.worklight.oauth.tai_1.0.0.jar` file to the `$<wlp.user.dir>/extensions/lib` directory.
 
-**Tip:** `$<wlp.user.dir>` is the user directory for the Liberty for Java runtime. The default directory name is `usr`.
+  **Tip:** `$<wlp.user.dir>` is the user directory for the Liberty for Java runtime. The default directory name is `usr`.
 
 1. Copy the `OAuthTai-1.0.mf` directory to the `$<wlp.user.dir>/extension/lib/features` directory.
 

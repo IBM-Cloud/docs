@@ -4,12 +4,12 @@ copyright:
   years: 2015, 2016
   
 ---
-{:shortdesc: .shortdesc} {:codeblock:.codeblock}
+{:shortdesc: .shortdesc} 
 
 # Setting up the Cordova plug-in
 {: #getting-started-cordova}
 
-Last updated: 22 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 
@@ -30,16 +30,18 @@ You must have:
 The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in that wraps the native {{site.data.keyword.amashort}} client SDKs. It is distributed using the Cordova Command Line Interface (CLI) and `npmjs`, a plug-in repository for Cordova projects. The Cordova CLI automatically downloads plug-ins from repositories, and makes them available to your Cordova application.
 
 1. Add Android and iOS platforms to your Cordova application. Run one or both of the following commands from the command line:
+   	
+	**Android**
 
-	```Bash
+	```
 	cordova platform add android
 	```
-{: codeblock}
+	
+	**iOS**
 
 	```Bash
 	cordova platform add ios
 	```
-{: codeblock}
 
 2. If you added the Android platform, you must add the minimum supported API level to the `config.xml` file of your Cordova application. Open the `config.xml` file, and add the following line to the `<platform name="android">` element:
 
@@ -50,26 +52,24 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
-{: codeblock}
-
 	The *minSdkVersion* value must be higher than `15`. The *targetSdkVersion* value must be the latest Android SDK that is available from Google.
 
 3. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
 
 	```XML
-	<platform name="ios">
+ 	  <platform name="ios">
 		<preference name="deployment-target" value="8.0"/>
 		<!-- add deployment target declaration -->
-	</platform>
+	 </platform>
 	```
-{: codeblock}
+
 
 4. Install the {{site.data.keyword.amashort}} Cordova plug-in:
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
-{: codeblock}
+
 
 5. Configure your platform for Android, iOS, or both.
 
@@ -81,7 +81,7 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	```Bash
 	cordova build android
 	```
-{: codeblock}
+
 
 	####iOS
 	{: #cordova-ios}
@@ -107,7 +107,7 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	```Bash
 	cordova plugin list
 	```
-{: codeblock}
+
 
 ## Initializing the {{site.data.keyword.amashort}} client plug-in
 {: #getting-started-cordova-initialize}
@@ -121,7 +121,6 @@ To use the {{site.data.keyword.amashort}} client SDK, you must initialize the SD
 	```JavaScript
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
-{: codeblock}
 
   * Replace the `applicationRoute` and `applicationGUID` with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
@@ -133,7 +132,7 @@ Use the following JavaScript code in your Cordova application to initialize the 
 ```JavaScript
 MFPAuthorizationManager.initialize("tenantId");
 ```
-{: codeblock}
+
 
 Replace the `tenantId` value with the {{site.data.keyword.amashort}} service `tenantId`. This value you can find by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
 
@@ -144,9 +143,7 @@ Replace the `tenantId` value with the {{site.data.keyword.amashort}} service `te
 
 After the {{site.data.keyword.amashort}} client SDK is initialized, you can start making requests to your mobile back-end application.
 
-1. Try to send a request to a protected endpoint of your new mobile back-end application. In your browser, open the following URL: `{applicationRoute}/protected`. For example:
-
-	`http://my-mobile-backend.mybluemix.net/protected`
+1. Try to send a request to a protected endpoint of your new mobile back-end application. In your browser, open the following URL: `{applicationRoute}/protected` (for example: `http://my-mobile-backend.mybluemix.net/protected`).
 
 	The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint is accessed only by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK.
 
@@ -165,7 +162,7 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 
 	request.send(success, failure);
 	```
-{: codeblock}
+
 
 1. When your request succeeds, you will see the following output in the LogCat or Xcode console (depending on the platform that you are using):
 

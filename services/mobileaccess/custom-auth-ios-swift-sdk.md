@@ -9,7 +9,7 @@ copyright:
 
 {: #custom-ios}
 
-Last updated: 16 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 

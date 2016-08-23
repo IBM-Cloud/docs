@@ -6,12 +6,11 @@ copyright:
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 
 # Enabling Google authentication for iOS apps (Swift SDK)
 {: #google-auth-ios}
 
-Last updated: 22 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 Use Google Sign-In to authenticate users on your {{site.data.keyword.amafull}} iOS Swift app. The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
@@ -137,8 +136,6 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSCore
  import BMSSecurity
  ```
- {: codeblock}
-
 1. Use the following code to initialize the client SDK. 
 
  ```Swift
@@ -171,7 +168,6 @@ mcaAuthManager.initialize(tenantId: tenantId)
  return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, options: options)
   }
  ```
-{: codeblock}
 
  In the code:
  * Replace `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **AppGuid** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. 
@@ -209,15 +205,13 @@ You must be using the {{site.data.keyword.mobilefirstbp}}  boilerplate and alrea
 
  request.sendWithCompletionHandler(callBack)
 	```
-{: codeblock}
-
 1. Run your application. You will see a Google Login screen pop-up
 
  ![image](images/ios-google-login.png)
 
 1. When you log in and click **OK**, you're authorizing {{site.data.keyword.amashort}} to use your Google user identity for authentication purposes.
 
-1. 	Your request should succeed. The following output appears in the log.
+1. Your request should succeed. The following output appears in the log.
 
  ```
  onAuthenticationSuccess info = Optional({attributes = {};
@@ -235,7 +229,6 @@ You must be using the {{site.data.keyword.mobilefirstbp}}  boilerplate and alrea
  ```
  GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
- {: codeblock}
 
   If you call this code after a user is logged in with Google and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Google for authentication purposes. At that point, the user can click the user name <!--in the upper-right corner of the screen--> to select and log in with another user.
 

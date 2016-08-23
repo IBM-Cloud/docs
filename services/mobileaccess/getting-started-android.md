@@ -6,12 +6,12 @@ copyright:
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+
 
 # Setting up the Android SDK
 {: #getting-started-android}
 
-Last updated: 16 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 
@@ -47,7 +47,7 @@ The {{site.data.keyword.amashort}} client SDK is distributed with Gradle, a depe
     	// other dependencies  
 }
 ```
-{: codeblock}
+
 
 1. Synchronize your project with Gradle. Click **Tools &gt; Android &gt; Sync Project with Gradle Files**.
 
@@ -74,7 +74,7 @@ Initialize the SDK by passing the `context`, `applicationGUID`, `applicationRout
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-{: codeblock}
+
 
   * Replace the *applicationRoute* and *applicationGUID* with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
   * Replace the `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
@@ -84,8 +84,9 @@ Initialize the SDK by passing the `context`, `applicationGUID`, `applicationRout
 
 After the {{site.data.keyword.amashort}} client SDK is initialized, you can start making requests to your mobile back-end application.
 
-1. Try to send a request to a protected endpoint of your new mobile back-end application. In your browser, open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser, because this endpoint can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK.
+1. Try to send a request to a protected endpoint of your new mobile back-end application. In your browser, open the following URL: `{applicationRoute}/protected` (for example `http://my-mobile-backend.mybluemix.net/protected`).
+	
+	The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser, because this endpoint can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK.
 
 1. Use your Android application to make a request to the same endpoint. Add the following code after you initialize `BMSClient`:
 
@@ -108,8 +109,6 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 		}
 	});
 	```
-{: codeblock}
-
 1. When your request succeeds, you will see the following output in the LogCat utility:
 
 	![image](images/getting-started-android-success.png)
