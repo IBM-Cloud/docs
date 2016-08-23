@@ -4,12 +4,12 @@ copyright:
   years: 2015, 2016
 
 ---
-{:shortdesc: .shortdesc} {:codeblock:.codeblock}
+{:shortdesc: .shortdesc}
 
 # Setting up the iOS Objective-C SDK
 {: #getting-started-ios}
 
-Last updated: 22 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 
@@ -40,7 +40,7 @@ The {{site.data.keyword.amashort}} SDK is distributed with CocoaPods, a dependen
 ```
 sudo gem install cocoapods
 ```
-{: codeblock}
+
 
 For more information, see the [CocoaPods website](https://cocoapods.org/).
 
@@ -57,8 +57,6 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 	```
 	pod 'IMFCore'
 	```
-{: codeblock}
-
 1. Save the `Podfile` file, and run `pod install` from the command line. <br/>Cocoapods installs added dependencies and displays the added components.<br/>
 **Important**: CocoaPods generates an `xcworkspace` file.  You must open this file to work on your project going forward.
 
@@ -68,7 +66,6 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 {: #init-mca-sdk-ios}
 
 To use the {{site.data.keyword.amashort}} client SDK, you must initialize the SDK by passing the **Route** (`applicationRoute`), and **App GUID** (`applicationGUID`) parameters.
-
 
 1. From the main page of the {{site.data.keyword.Bluemix_notm}} dashboard, click your app. Click **Mobile Options**. You need the **Route** and **App GUID** values to initialize the SDK.
 
@@ -81,8 +78,7 @@ To use the {{site.data.keyword.amashort}} client SDK, you must initialize the SD
 	  #import <IMFCore/IMFCore.h>
 	
 	```
-{: codeblock}
-	
+
 	####Swift
 	{: #sdk-swift}
 	
@@ -106,13 +102,12 @@ Replace the `applicationRoute` and vapplicationGUID` with the values from **Mobi
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-{: codeblock}
+
 	####Swift
 	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
-{: codeblock}
 
 
 ## Initializing the AuthorizationManager
@@ -123,14 +118,12 @@ Initialize the `AuthorizationManager` by passing the {{site.data.keyword.amashor
 ```Objective-C
   	   [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
 ```
-{: codeblock}
 
 ####Swift
 
 ```Swift
 	   IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
 ```
-{: codeblock}
 
 
 ## Making a request to your mobile back-end application
@@ -161,7 +154,6 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 		}
 	}];
 	```
-{: codeblock}
 
 	####Swift
 	{: #imfclientrequestpath-swift}
@@ -179,7 +171,6 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 	};
 
 	```
-{: codeblock}
 
 1.  When your request succeeds, you will see the following output the Xcode console:
 

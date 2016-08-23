@@ -8,7 +8,7 @@ copyright:
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Cordova app
 {: #custom-cordova}
 
-Last updated: 22 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 

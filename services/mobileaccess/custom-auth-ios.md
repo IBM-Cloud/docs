@@ -8,7 +8,7 @@ copyright:
 # Configuring {{site.data.keyword.amashort}} client SDK for iOS (Objective-C)
 {: #custom-ios}
 
-Last updated: 11 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 

@@ -6,12 +6,11 @@ copyright:
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 
 # Enabling Facebook authentication for iOS apps (Swift SDK)
 {: #facebook-auth-ios}
 
-Last updated: 22 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 
@@ -70,7 +69,6 @@ After you  configure the Facebook Application ID and your Facebook Application t
 ```
 sudo gem install cocoapods
 ```
-{: codeblock}
 
 For more information, see the [CocoaPods website](https://cocoapods.org/).
 
@@ -85,8 +83,6 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 use_frameworks!
 pod 'BMSFacebookAuthentication'
 	```
-{: codeblock}
-
    **Note:** If you have this line in your Pod file: `pod 'BMSSecurity'`, you must remove it. The `BMSFacebookAuthentication` pod installs all necessary frameworks.
 
    **Tip:** You can add `use_frameworks!` to your Xcode target instead of having it in the Podfile.
@@ -158,7 +154,6 @@ pod 'BMSFacebookAuthentication'
 	    </dict>
 	</dict>
 ```
-{: codeblock}
 
    Update the URL scheme and FacebookappID properties with your Facebook Application ID. Update the FacebookDisplayName with the name of your Facebook application.
 
@@ -180,8 +175,6 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSCore
  import BMSSecurity
  ```
- {: codeblock}
- 
 2. Initialize the client SDK.
 
  ```Swift
@@ -200,8 +193,6 @@ A common, though not mandatory, place to put the initialization code is in the `
 
  FacebookAuthenticationManager.sharedInstance.register()
  ```
- {: codeblock}
- 
  In the code:
  * Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
  * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
@@ -212,7 +203,6 @@ A common, though not mandatory, place to put the initialization code is in the `
  ```Swift
   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)
  ```
-{: codeblock}
 
 1. Copy the `FacebookAuthenticationManager.swift` file from the `BMSFacebookAuthentication` pod source files to your project directory.
 
@@ -226,7 +216,6 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 	}
  ```
-{: codeblock}
 
 ## Testing the authentication
 {: #facebook-auth-ios-testing}
@@ -258,7 +247,6 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
 
   request.sendWithCompletionHandler(callBack)
  ```
-{: codeblock}
 
 1. Run your application. A Facebook login screen pops up.
  
@@ -281,14 +269,14 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
  })
  response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
  ```
-  {: screen}
+ {: screen}
 
 1. You can also add logout functionality by adding the following code:
 
  ```
 FacebookAuthenticationManager.sharedInstance.logout(callBack)
 ```
-{: codeblock}
+
 
  If you call this code after a user is logged in with Facebook, and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Facebook for authentication purposes.
 

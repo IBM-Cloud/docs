@@ -6,13 +6,12 @@ copyright:
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 
 # Enabling Google authentication for Android apps
 {: #google-auth-android}
 
 
-Last updated: 22 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 Use Google to authenticate users on your {{site.data.keyword.amafull}} Android application. Add {{site.data.keyword.amashort}} security functionality.  {:shortdesc}
@@ -57,7 +56,6 @@ A keystore that contains a certificate for development environments is stored in
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 	```
-{: codeblock}
 
 	You can use same syntax for retrieving the key hash of your release mode certificate as well. Replace the alias and keystore path in the command.
 
@@ -67,7 +65,9 @@ A keystore that contains a certificate for development environments is stored in
 
 1. On the Credentials dialog, enter the package name of your Android application. 
 
-  To find the package name of your Android application, open the `AndroidManifest.xml` file in Android Studio and look for: `<manifest package="{your-package-name}">`. 
+  To find the package name of your Android application, open the `AndroidManifest.xml` file in Android Studio and look for: 
+  	
+  	`<manifest package="{your-package-name}">`. 
 
 1. When you are done, click **Create**. This completes the credentials creation.
 
@@ -112,8 +112,6 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
     	// other dependencies  
 	}
 	```
-{: codeblock}
-
 	**Note:** You can remove the dependency on the `core` module of the `com.ibm.mobilefirstplatform.clientsdk.android` group if you have it. The `googleauthentication` module downloads it automatically for you. The `googleauthentication` module downloads and installs the Google+ SDK in your Android project.
 
 1. Synchronize your project with Gradle by clicking **Tools > Android > Sync Project with Gradle Files**.
@@ -127,7 +125,6 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	```
-{: codeblock}
 
 1. To use the {{site.data.keyword.amashort}} client SDK, you must initialize it by passing the context, applicationGUID, and applicationRoute parameters.
 
@@ -142,11 +139,10 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 					BMSClient.REGION_UK);
 
 	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this), "<MCAServiceTenantId>");
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>");
 						
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
-{: codeblock}
 
   * Replace  `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
   * Replace `<MCAServiceTenantId>` with the `tenantId` value you can find by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
@@ -165,7 +161,6 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 			.onActivityResultCalled(requestCode, resultCode, data);
 	}
 	```
-{: codeblock}
 
 ## Testing the authentication
 {: #google-auth-android-test}
@@ -199,7 +194,6 @@ Before you begin testing, you must have a mobile back-end application that was c
 		}
 	});
 ```
-{: codeblock}
 
 1. Run your application. A Google Login screen pops up. After login, the app requests permission to access resources:
 
@@ -218,7 +212,6 @@ Before you begin testing, you must have a mobile back-end application that was c
  ```Java
  GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  ```
- {: codeblock}
 
  If you call this code after a user is logged in with Google, the user is logged out of Google. When the user tries to log in again, they must select a Google account for logging in again. When they try to log in with a previous logged in Google ID, the user is not prompted for their credentials again. To be prompted for login credentials again, the user must remove their Google account from the Android device.
 

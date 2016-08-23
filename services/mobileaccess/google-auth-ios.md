@@ -7,7 +7,6 @@ copyright:
 
 {:screen: .screen}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 
 
 # Enabling Google authentication for iOS Objective C apps

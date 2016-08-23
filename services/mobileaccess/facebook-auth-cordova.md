@@ -11,7 +11,7 @@ copyright:
 # Enabling Facebook authentication for Cordova apps
 {: #facebook-auth-cordova}
 
-Last updated: 22 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 
