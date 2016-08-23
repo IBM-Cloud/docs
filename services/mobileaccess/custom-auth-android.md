@@ -6,7 +6,7 @@ copyright:
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+
 
 
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Android app
@@ -196,7 +196,7 @@ mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuth
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
-{: codeblock}
+
 
 In the code:
 * Replace `MCAServiceTenantId` with the `tenantId` value that you get when you click on the **Show 
