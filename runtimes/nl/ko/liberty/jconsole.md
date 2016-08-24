@@ -51,14 +51,14 @@ copyright:
 JConsole은 Java 설치에 포함되어 있습니다. JConsole 앱을 시작하려면 &lt;java-home&gt;/bin으로 이동하여 다음 명령을 실행하십시오.
 
 ```
-    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
+$ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
 {: codeblock}
 
 Java trustStore를 구성하려면 추가 매개변수를 전달해야 할 수 있습니다. 대부분의 경우에 다음 매개변수가 작동되어야 합니다.
 
 ```
-    -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
+-J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
 ```
 {: codeblock}
 
@@ -75,7 +75,7 @@ Java trustStore를 구성하려면 추가 매개변수를 전달해야 할 수 �
 다음은 샘플 로깅 특성 파일입니다.
 
 ```
-    handlers= java.util.logging.FileHandler
+handlers= java.util.logging.FileHandler
     .level=INFO java.util.logging.FileHandler.pattern = /tmp/jmxtrace.log
     java.util.logging.FileHandler.limit = 50000
     java.util.logging.FileHandler.count = 1

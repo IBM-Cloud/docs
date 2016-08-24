@@ -11,9 +11,17 @@ copyright:
 # ASP.NET 核心 buildpack 的最新更新
 {: #latest_updates}
 
-*上次更新时间：2016 年 6 月 10 日*
+*上次更新时间：2016 年 7 月 7 日*
 
 aspnet buildpack 中最新更新的列表。
+
+## 2016 年 7 月 11 日：更新了 ASP.NET 核心 buildpack V0.9-20160706-1603
+
+此版本 buildpack 包含以下更改：
+
+* 此版本 buildpack 支持 .NET CLI 1.0 Preview 2 构建版和 .NET 核心 1.0 RTM
+* 该 buildpack 继续支持 .NET CLI 1.0 Preview 1 和 .NET 核心 1.0 RC2
+* 现在，要安装的缺省 .NET CLI 版本为 1.0.0-preview2-003121
 
 ## 2016 年 6 月 10 日：更新了 ASP.NET 核心 buildpack V0.8.1-20160526-0957
 
@@ -34,7 +42,7 @@ aspnet buildpack 中最新更新的列表。
 * 此版本 buildpack 支持 Beta 7 DNX 更改，并且可以通过以下定制启动命令，运行依赖于较低 Beta 发行版的应用程序：
 
 ```
-   dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
+dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
 ```
 {: codeblock}
 

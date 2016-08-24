@@ -4,14 +4,11 @@
 
 # Initiation à l'exemple HelloWorld
 {: #gettingstarted-ios}
-Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
-mobile sans authentification. Le logiciel SDK est déjà installé pour l'application. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans
-votre application.
+Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application mobile sans authentification. Le logiciel SDK est déjà installé pour l'application. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans votre application.
 
 1. Créez votre application de back end mobile dans {{site.data.keyword.Bluemix_notm}}.
 <ol>
-	<li>Dans la section Conteneurs boilerplate du catalogue {{site.data.keyword.Bluemix_notm}}, cliquez sur **MobileFirst Services
-Starter**.</li>
+	<li>Dans la section Conteneurs boilerplate du catalogue {{site.data.keyword.Bluemix_notm}}, cliquez sur **MobileFirst Services Starter**.</li>
     <li>Entrez un nom et un hôte pour votre application et cliquez sur **Créer**.</li>
     <li>Cliquez sur **Terminer**. </li>
 </ol>
@@ -39,13 +36,10 @@ return true
 
 4. Exécutez l'exemple dans votre environnement de développement.
 Dans Xcode, cliquez sur **Product&gt;Run**. Un simulateur iOS démarre.
-Dans le simulateur, cliquez sur **Ping {{site.data.keyword.Bluemix_notm}}**. Le modèle d'application obtient l'en-tête
-d'autorisation depuis le service Mobile Client Access. Si la commande ping aboutit, le texte
-dans le simulateur est mis à jour.
-<br/>Lorsque vous parvenez à vous connecter à {{site.data.keyword.Bluemix_notm}} depuis l'application mobile dans Xcode, le message "Yay! You
-are connected" s'affiche :<br/>
-![Application Hello
-World connectée à {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Application Hello World connectée à {{site.data.keyword.Bluemix_notm}}") <br/>
+Dans le simulateur, cliquez sur **Ping {{site.data.keyword.Bluemix_notm}}**. Le modèle d'application obtient l'en-tête d'autorisation depuis le service Mobile Client Access. Si la commande ping aboutit, le texte dans le simulateur est mis à jour.
+<br/>Lorsque vous parvenez à vous connecter à {{site.data.keyword.Bluemix_notm}} depuis l'application mobile dans Xcode, le message "Yay! You are connected" s'affiche :<br/>
+![Application Hello World connectée à {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Application Hello World connectée à {{site.data.keyword.Bluemix_notm}}")
+<br/>
 Si la connexion aboutit, le Xcode de connexion pour le débogage contient le message suivant :
 ```
 You have connected to {{site.data.keyword.Bluemix_notm}} successfully
@@ -69,8 +63,7 @@ Vous pouvez aussi consulter le journal de débogage pour plus d'informations.
 
 ## Etapes suivantes :
 {: #next}
-Pour des informations sur l'obtention du logiciel SDK et son intégration à votre application mobile, voir les informations sur la configuration des
-services {{site.data.keyword.Bluemix}}.
+Pour des informations sur l'obtention du logiciel SDK et son intégration à votre application mobile, voir les informations sur la configuration des services {{site.data.keyword.Bluemix}}.
    * [Mobile Client Access](../../services/mobileaccess/index.html)
    * [Push](../../services/mobilepush/index.html)
 

@@ -51,7 +51,7 @@ copyright:
 # Pricing
 {: #pricing}
 
-*Last updated: 1 June 2016*
+*Last updated: 16 August 2016*
 {: .last-updated}
 
 You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage Dashboard view for you to check the actual cost after you build your apps.
@@ -395,7 +395,7 @@ When all the items are added, the total price of the application is $384.15.
 
 As an account owner or a billing manager, you can use the Usage Dashboard view to see the real-time charges for the runtimes and services that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region and space, for the past 12 months.
 
-To open the Usage Dashboard view, click the **Account and Support** icon &gt; **Account** &gt; *your_account_name* &gt; **Usage Dashboard**. In the view, you can see a summary of the runtime and service usage for the account. Billing managers can see the details for only the organizations in which they are billing managers.
+To open the Usage Dashboard view, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Usage Dashboard**. In the view, you can see a summary of the runtime and service usage for the account. Billing managers can see the details for only the organizations in which they are billing managers.
 
 The account owner is charged for the total usage that is incurred across all organizations at the end of each billing cycle. Each billing cycle lasts one month.
 
@@ -408,14 +408,14 @@ If you select a specific organization for the **Organization**, you can see the 
 
 As an account owner or a billing manager, you can use the Usage Dashboard view to see any credits for your account. You might have credits if, for example, you linked a SoftLayer account with a {{site.data.keyword.Bluemix_notm}} account.
 
-To open the Usage Dashboard view, click the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg), then select **Account**. On the page that is displayed, click **Usage Dashboard**. In the view, you can see any credits, if they exist, and when they expire.
+To open the Usage Dashboard view, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg), then select **Account**. On the page that is displayed, click **Usage Dashboard**. In the view, you can see any credits, if they exist, and when they expire.
 
 ##Notifications
 {: #notifications}
 
 As an account manager of a Pay-As-You-Go account, you can set spending notifications against the total cost of your account, for your runtime, services, and for individual services, excluding third-party services. You receive notifications when you reach 80%, 90%, and 100% of the spending thresholds that you specify.
 
-To open the **Notifications** view, click the **Account and Support** icon &gt; **Account** &gt; *your_account_name* &gt; **Spending Notifications**. Enter a numeric value to set the spending threshold for triggering a notification for each type of spending notification as needed. You can also add and delete notifications for individual services.
+To open the **Notifications** view, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Spending Notifications**. Enter a numeric value to set the spending threshold for triggering a notification for each type of spending notification as needed. You can also add and delete notifications for individual services.
 
 ##How to change your plan
 {: #changing}

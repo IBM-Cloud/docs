@@ -27,9 +27,11 @@ copyright:
 * [Dynatrace 사용](dynatrace.html)
 * [New Relic 사용](newRelic.html)
 * [JRE 사용자 정의](customizingJRE.html)
+* [Oracle JRE](oracle_jre.html)
 * [로깅 및 추적](loggingAndTracing.html)
 * [환경 변수 ](environmentVariables.html)
 * [빌드팩 기본값](buildpackDefaults.html)
+* [오프라인 모드](offlineMode.html)
 * [최신 업데이트](updates.html)
 
 # 관련 링크

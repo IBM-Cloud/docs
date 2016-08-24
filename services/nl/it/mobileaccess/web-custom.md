@@ -32,15 +32,14 @@ che restituisce una identità utente dopo l'esito positivo dell'autenticazione. 
 
 1. Apri la tua applicazione nel dashboard {{site.data.keyword.Bluemix_notm}}.
 1. Fai clic sul tile {{site.data.keyword.amashort}}. Il dashboard {{site.data.keyword.amashort}} viene caricato.
-1. Fai clic sul tile Custom.
+1. Fai clic sul tile Personalizza.
 1. Immetti **custom realm**, **custom identity provider url** e **redirect_uri**. Fai clic su salva.
 
 ## Utilizzo di {{site.data.keyword.amashort}} per l'autenticazione web personalizzata
 
 Per avviare il processo di autorizzazione:
 
-1. Vai dalla tua applicazione web al seguente
- endpoint del server di autenticazione:
+1. Vai dalla tua applicazione web al seguente endpoint del server di autenticazione:
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
   

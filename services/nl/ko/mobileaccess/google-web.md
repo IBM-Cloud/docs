@@ -8,6 +8,9 @@ copyright:
 # 웹 앱에서 Google 인증 사용
 {: #google-auth-web}
 
+*마지막 업데이트 날짜: 2016년 6월 1일*
+{: .last-updated}
+
 웹 앱에서 사용자를 인증하려면 Google 로그인을 사용하십시오.
 
 
@@ -45,9 +48,9 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 1. 웹 앱에서 권한 서버의 다음 엔드포인트로 경로를 재지정하십시오.  
   https://imf-newauthserver.bluemix.net/oauth/v2/authorization
 
-  다음 조회 매개변수를 사용합니다. 
+    다음 조회 매개변수를 사용합니다. 
 	```
-   response_type='authorization_code'
+response_type='authorization_code'
    client_id= <bluemix_app_guid>
    redirect_uri= <권한 부여 코드를 받은 후 리턴할 uri>
    scope= ‘openid’
@@ -56,7 +59,7 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 
   `state` 매개변수는 현재 사용 중이지 않으므로 빈 상태로 둘 수 있습니다. 
 
-  `redirect_uri` 매개변수 uri는 Google로 인증하는 데 성공하거나 실패한 후 재지정되는 경로입니다.
+  `redirect_uri` 매개변수 URI는 Google로 인증하는 데 성공하거나 실패한 후 재지정되는 경로입니다.
   경로를 재지정한 후 리턴되는 응답에는 요청 조회 매개변수의 권한 코드가 포함되어 있습니다.
 1. 권한 서버 토큰 엔드포인트에 대한 `POST` 요청을 수행하십시오.
 
@@ -71,14 +74,14 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
     redirect_uri= <redirect_uri >
     code= <authorization code>
 	```
-  `redirect_uri` 매개변수는 1단계의 `redirect_uri`와 일치해야 하며 `<authorization code>` 값은 응답에서 받습니다.
+`redirect_uri` 매개변수는 1단계의 `redirect_uri`와 일치해야 하며 `<authorization code>` 값은 응답에서 받습니다.
   권한 부여 코드는 최대 10분 동안 유효하므로 이 `POST` 요청을 10분 내에 보내도록 하십시오.
 
 `POST` 응답 본문에 base64로 인코딩된 `access_token` 및 `id_token`이 포함되어야 합니다.
 
 ## 인증 테스트
 
-이제 보호 자원 요청을 시작할 수 있습니다.
-보호 자원의 모든 요청은 권한 요청 헤더 필드에 있는 액세스 토큰을 포함해야 합니다.
+이제 보호 리소스 요청을 시작할 수 있습니다.
+보호 리소스의 모든 요청은 권한 요청 헤더 필드에 있는 액세스 토큰을 포함해야 합니다.
 
 

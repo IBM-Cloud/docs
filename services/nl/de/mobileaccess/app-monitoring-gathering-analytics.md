@@ -22,7 +22,7 @@ Verwenden Sie die folgenden APIs, um die Aufzeichnung und das Senden von Nutzung
 {: #usage-analytics-android}
 
 ```Java
-// Aufzeichnung von Nutzungsanalysedaten aktivieren.
+// Aufzeichnung von Nutzungsanalysedaten aktivieren
 MFPAnalytics.enable();
 
 // Aufzeichnung der Anwendungsstartzeit starten.
@@ -38,7 +38,7 @@ MFPAnalytics.logApplicationStartup();
 MFPAnalytics.logSessionStart();
 MFPAnalytics.logSessionEnd();
 
-// Aufgezeichnete Nutzungsanalysedaten an {{site.data.keyword.amashort}}-Service senden
+// Aufgezeichnete Nutzungsanalysedaten an den {{site.data.keyword.amashort}}-Service senden
 MFPAnalytics.send();
 ```
 
@@ -57,7 +57,7 @@ Das Objective-C-SDK meldet Überwachungsdaten an die Überwachungskonsole des Se
 [[IMFAnalytics sharedInstance] startRecordingApplicationLifecycleEvents];
 
 
-// Aufgezeichnete Nutzungsanalysedaten an {{site.data.keyword.amashort}}-Service senden
+// Aufgezeichnete Nutzungsanalysedaten an den {{site.data.keyword.amashort}}-Service senden
 [[IMFAnalytics sharedInstance] sendPersistedLogs];
 ```
 
@@ -72,7 +72,7 @@ IMFAnalytics.sharedInstance().setEnabled(true)
 IMFAnalytics.sharedInstance().startRecordingApplicationLifecycleEvents()
 
 
-// Aufgezeichnete Nutzungsanalysedaten an {{site.data.keyword.amashort}}-Service senden
+// Aufgezeichnete Nutzungsanalysedaten an den {{site.data.keyword.amashort}}-Service senden
 IMFAnalytics.sharedInstance().sendPersistedLogs()
 ```
 
@@ -83,7 +83,7 @@ IMFAnalytics.sharedInstance().sendPersistedLogs()
 // Aufzeichnung von Nutzungsanalysedaten aktivieren
 MFPAnalytics.enable();
 
-// Aufgezeichnete Nutzungsanalysedaten an {{site.data.keyword.amashort}}-Service senden
+// Aufgezeichnete Nutzungsanalysedaten an den {{site.data.keyword.amashort}}-Service senden
 MFPAnalytics.send();
 ```
 **Anmerkung:** Wenn Sie Cordova-Anwendungen entwickeln, verwenden Sie die native API, um die Aufzeichnung von Anwendungslebenszyklusereignissen zu aktivieren.

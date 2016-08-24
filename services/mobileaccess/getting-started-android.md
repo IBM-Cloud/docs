@@ -6,15 +6,17 @@ copyright:
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+
 
 # Setting up the Android SDK
 {: #getting-started-android}
 
-Last updated: 02 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
-Instrument your Android application with the {{site.data.keyword.amashort}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.
+
+Instrument your Android application with the {{site.data.keyword.amafull}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.
+
 {:shortdesc}
 
 ## Before you begin
@@ -46,6 +48,7 @@ The {{site.data.keyword.amashort}} client SDK is distributed with Gradle, a depe
 }
 ```
 
+
 1. Synchronize your project with Gradle. Click **Tools &gt; Android &gt; Sync Project with Gradle Files**.
 
 1. Open the `AndroidManifest.xml` file for your Android project. Add internet access permission under the `<manifest>` element:
@@ -63,23 +66,27 @@ Initialize the SDK by passing the `context`, `applicationGUID`, `applicationRout
 1. From the main page of the {{site.data.keyword.Bluemix_notm}} dashboard, click your app. Click **Mobile Options**. You need the **Application route** and **Application GUID** values to initialize the SDK.
 
 2. Initialize the {{site.data.keyword.amashort}} client SDK in your Android application.  A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
-<br/>Replace the *applicationRoute* and *applicationGUID* with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
-	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
+
+```Java
+  BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Replace the `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+
+
+  * Replace the *applicationRoute* and *applicationGUID* with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
+  * Replace the `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
 
 ## Making a request to your mobile back-end application
 {: #request}
 
 After the {{site.data.keyword.amashort}} client SDK is initialized, you can start making requests to your mobile back-end application.
 
-1. Try to send a request to a protected endpoint of your new mobile back-end application. In your browser, open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser, because this endpoint can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK.
+1. Try to send a request to a protected endpoint of your new mobile back-end application. In your browser, open the following URL: `{applicationRoute}/protected` (for example `http://my-mobile-backend.mybluemix.net/protected`).
+	
+	The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser, because this endpoint can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK.
 
 1. Use your Android application to make a request to the same endpoint. Add the following code after you initialize `BMSClient`:
 
@@ -102,7 +109,6 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 		}
 	});
 	```
-
 1. When your request succeeds, you will see the following output in the LogCat utility:
 
 	![image](images/getting-started-android-success.png)

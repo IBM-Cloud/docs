@@ -6,14 +6,25 @@ copyright:
 ---
 # 使用 IMFURLProtocol 发送请求
 {: #imfurl}
+
+*上次更新时间：2016 年 6 月 22 日*
+{: .last-updated}
+
 在某些用例中，您可能无法使用 `IMFResourceRequest` 类向受保护资源发送请求；例如，对受保护资源的请求是通过一些第三方代码发送时。可能的解决方案是使用 `IMFURLProtocol` API 以及标准 `NSURLRequest (NSMutableURLRequest)` 调用。
 
-只有通过 {{site.data.keyword.amashort}} Objective-C SDK，才能使用 `IMFURLProtocol` API。
+**注：**只有通过 {{site.data.keyword.amashort}} Objective-C SDK，才能使用 `IMFURLProtocol` API。
 
 ## 安装 `IMFURLProtocol` pod
 {: #imfurl-pod}
 
-可以使用 CocoaPods 来安装 `IMFURLProtocol` pod。然后可以从 iOS 项目中引用 `IMFURLProtocol.h`。
+使用 CocoaPods 来安装 `IMFURLProtocol` pod。 
+
+编辑 Podfile 文件，添加以下行并运行：
+```Bash
+pod 'IMFURLProtocol'
+```
+
+然后，从 iOS 项目中引用 `IMFURLProtocol.h`。
 
 ## 使用 `IMFURLProtocol` API 发送请求
 {: #imfurl-send}
@@ -34,7 +45,9 @@ copyright:
 ### 步骤 1：添加协议实施并处理响应
 {: #imfurl-sample1}
 ```Swift
-import Foundationclass ViewController : UIViewController, NSURLConnectionDataDelegate {func connection(connection: NSURLConnection,
+import Foundation
+
+class ViewController : UIViewController, NSURLConnectionDataDelegate {func connection(connection: NSURLConnection,
 								didReceiveResponse response: NSURLResponse) {println("\(response.description)")
 	}
 

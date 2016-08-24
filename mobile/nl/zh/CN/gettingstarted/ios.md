@@ -13,72 +13,44 @@ copyright:
 *上次更新时间：2016 年 6 月 1 日*
 {: .last-updated}  
 
-如果想要从新的 iOS 应用程序开始操作，可以使用 HelloWorld 应用程序。此应用程序演示了如何在不认证的情况下，从移动应用程序连接到 {{site.data.keyword.Bluemix}} 后端。该应用程序已经安装有 SDK。准备就绪后，可以获取要在应用程序中使用的特定库。
+如果想要从新的 iOS 应用程序开始操作，可以使用 Hello Bluemix 应用程序。此应用程序演示了如何在不认证的情况下，从移动应用程序连接到 {{site.data.keyword.Bluemix}} 后端。准备就绪后，可以获取要在应用程序中使用的特定库。
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 中创建移动后端。
     1. 在 {{site.data.keyword.Bluemix_notm}}“目录”的“样板”部分中，单击 MobileFirst Services Starter。
     2. 输入应用程序的名称和主机，并单击**创建**。
     3. 单击**完成**。
-2. 从 GitHub 获取项目。您可以选择使用 git clone 命令获取项目。从您的计算机打开终端，然后输入以下命令：
-```
-    git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld.git
+2. 运行 Hello Bluemix 样本应用程序：
+	1. 从 GitHub 获取项目。您可以选择使用 git clone 命令获取项目。从您的计算机打开终端，然后输入以下命令：
     ```
+    git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix.git
+    ```
+	2. 从克隆了项目的 `bms-samples-swift-hellobluemix` 目录运行 `pod install` 命令。如果没有安装 Cocoapods，请从 [https://cocoapods.org](https://cocoapods.org) 获取 CocoaPods。
+	3. 使用 `open HelloBluemix.xcworkspace` 命令打开 Xcode 工作空间。
+	4. 在 `AppDelegate.swift` 文件中，将 appRoute 和 appGuid 值更新为从 Bluemix 后端中获取的早先创建的 appRoute 和 appGuid 值。
 
-3. 初始化项目。要初始化 SDK，请将以下代码复制到应用程序代表中的 `didFinishLaunchingWithOptions` 方法内。
+3. 在开发环境中运行样本。在 Xcode 中，单击**产品&gt;运行**。这将启动 iOS 模拟器。
 
-	###Ojbective-C
-	{: initializeobjc}
 
-	**重要**：虽然 Objective-C SDK 仍然完全受支持，且仍被视为 {{site.data.keyword.Bluemix}} Mobile Services 的主要 SDK，但是计划本年度稍后停用，将使用新的 Swift SDK 替代。
+	**重要信息**：appRoute 必须使用 `https` 协议，而不能使用 `http`，否则可能会因为应用程序传输安全性设置而发生连接失败。您可以在 [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/) 博客帖子中阅读有关这些设置的更多信息。
 
-	Objective-C SDK 会将监视数据报告给 {{site.data.keyword.amashort}} 服务的监视控制台。如果您依赖于 {{site.data.keyword.amashort}} 服务的监视功能，请继续使用 Objective-C SDK。
+4. 在模拟器中，单击**对 {{site.data.keyword.Bluemix_notm}} 执行 Ping 操作**。样本应用程序会从 Mobile Client Access 服务获取 Authorization 头。如果 ping 操作成功，模拟器中的文本将更新。
 
-	```
-	// initialize SDK with IBM Bluemix application ID and route
-IMFClient *imfClient = [IMFClient sharedInstance];
-[imfClient initializeWithBackendRoute:@"<insert route>" backendGUID:@"<insertGUID>"];
-return YES;
-```
-
-	###Swift
-	{: initializeswift}
-	```
-	// initialize SDK with IBM Bluemix application ID and route
-IMFClient.sharedInstance().initializeWithBackendRoute("<insert route>", backendGUID: "<insertGUID>")
-return true
-```
-
-4. 在开发环境中运行样本。在 Xcode 中，单击**产品&gt;运行**。这将启动 iOS 模拟器。
-
-5. 在模拟器中，单击**对 {{site.data.keyword.Bluemix_notm}} 执行 Ping 操作**。样本应用程序会从 Mobile Client Access 服务获取 Authorization 头。如果 ping 操作成功，模拟器中的文本将更新。
-
-  在 Xcode 中从移动应用程序成功连接到 {{site.data.keyword.Bluemix_notm}} 后，将显示以下消息：
-
-  `恭喜！您已建立连接`
+  在 Xcode 中从移动应用程序成功连接到 {{site.data.keyword.Bluemix_notm}} 后，您会看到：`哇！您已建立连接`
   {: screen}
 
-  ![Hello World 应用程序已成功连接到 {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "图 1. Hello World 应用程序已成功连接到 Bluemix")
+  <!--
+  ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+-->
 
   如果连接失败，您会看到：`糟糕，出错了`
   {: screen}
 
-  ![Hello World 应用程序未连接到 Bluemix](images/bummer_android.jpg "图 2. Hello World 应用程序未连接到 Bluemix")
+ <!--
+  ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
+  -->
 
 	您可以按如下所示对失败的连接进行故障诊断：
 	* 验证是否正确地粘贴了路径和 GUID 值。
-		####Objective-C
-		{: #objcvals}
-		```
-		[imfClient initializeWithBackendRoute:@"https://hellotest.mybluemix.net"
-  backendGUID:@"9d48d73a-0878-4254-test-bdcbe6c79c31"];
-  ```
-
-		####Swift
-		{: #swiftvals}
-		```
-		IMFClient.sharedInstance().initializeWithBackendRoute("https://hellotest.mybluemix.net", backendGUID: "9d48d73a-0878-4254-test-bdcbe6c79c31")
-  ```
-
 	* 查看调试日志以获取更多信息。
 
 
@@ -91,7 +63,7 @@ return true
 # 相关链接
 
 ## 样本
-   * [Hello Bluemix 样本](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Hello Bluemix 样本 (iOS)](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix)
 
 ## sdk
    * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)

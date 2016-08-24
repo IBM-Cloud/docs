@@ -12,7 +12,7 @@ copyright:
 
 # Go
 {: #go_runtime}
-*Letzte Aktualisierung: 16. März 2016*
+*Letzte Aktualisierung: 06. Juli 2016*
 
 Die Laufzeit von Go in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'go_buildpack'.
 Das Buildpack 'go_buildpack' bietet eine vollständige Laufzeitumgebung für Go-Apps.
@@ -33,7 +33,7 @@ Sie können die Version von Go, die von Ihrer App verwendet werden soll, durch F
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.3.3",
+	"GoVersion": "go1.6.1",
 	"Deps": []
 }
 ```
@@ -43,16 +43,14 @@ Weitere Informationen finden Sie in [godep](https://github.com/tools/godep){: ne
 ### Verfügbare Versionen:
 {: #available_versions}
 
-Folgende Go-Versionen stehen im [Go-Buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window} zur Verfügung, das derzeit in {{site.data.keyword.Bluemix}} installiert ist:
+Folgende Go-Versionen stehen im [Go-Buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.7.5){: new_window} zur Verfügung, das derzeit in {{site.data.keyword.Bluemix}} installiert ist:
 
-* 1.2.1
-* 1.2.2
-* 1.3.2
-* 1.3.3
 * 1.4.2
 * 1.4.3
-* 1.5
-* 1.5.1
+* 1.5.3
+* 1.5.4
+* 1.6
+* 1.6.1
 
 Wenn für Ihre App eine Go-Version erforderlich ist, die nicht aufgelistet ist, können Sie die Anwendung mit dem externen [Go-Buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} implementieren.
 

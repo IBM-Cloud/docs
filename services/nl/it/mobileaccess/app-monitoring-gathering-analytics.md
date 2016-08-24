@@ -57,7 +57,7 @@ La SDK Objective-C riporta i dati di monitoraggio alla console di monitoraggio d
 [[IMFAnalytics sharedInstance] startRecordingApplicationLifecycleEvents];
 
 
-// Invia le analisi di utilizzo registrate al servizio {{site.data.keyword.amashort}}
+// Invia l'analisi dell'utilizzo registrata al servizio {{site.data.keyword.amashort}}
 [[IMFAnalytics sharedInstance] sendPersistedLogs];
 ```
 

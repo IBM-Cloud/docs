@@ -30,7 +30,7 @@ Liberty 建置套件在 Bluemix 中經常更新。
   * 它未提供任何[測試版特性](usingBetaFeatures.html)。
   * 一般會每季進行更新。
 
-2. 最新的測試版
+2. 每月發行
   * 必須設定具有 **"version: +"** 值的 **JBP_CONFIG_LIBERTY** 環境變數，明確予以啟用。
   * 它會提供[測試版特性](usingBetaFeatures.html)。
   * 一般會每月進行更新。

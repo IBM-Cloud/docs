@@ -7,6 +7,8 @@ copyright:
 
 # Gerenciando Identificações
 {: #manage_tags}
+*Última atualização: 14 de junho de 2016*
+{: .last-updated}
 
 Use o painel Push para criar e excluir tags para
 seu aplicativo e depois inicializar notificações baseadas em
@@ -82,15 +84,15 @@ disponíveis as quais o dispositivo podem assinar.
 
 ```
 // Get a list of available tags to which the device can subscribe
-push.getTags(new MFPPushResponseListener<List<String>>(){  
+push.getTags(new MFPPushResponseListener<List<String>>(){
    @Override
    public void onSuccess(List<String> tags){
-   updateTextView("Retrieved available tags: " + tags);  
+   updateTextView("Retrieved available tags: " + tags);
    System.out.println("Available tags are: "+tags);
-   availableTags = tags;   
-   subscribeToTag();   
-  }    
-  @Override    
+   availableTags = tags;
+   subscribeToTag();
+  }
+  @Override
   public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
@@ -151,10 +153,10 @@ lista de tags disponíveis as quais o dispositivo pode assinar.
 
 ```
 //Get a list of available tags to which the device can subscribe
-[push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
- if(error){    
-   [self updateMessage:error.description];  
+[push retrieveAvailableTagsWithCompletionHandler: ^(IMFResponse
+*response, NSError *error){
+ if(error){
+   [self updateMessage:error.description];
  } else {
    [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
@@ -385,7 +387,5 @@ em tag.
 1. No campo **Procurar** tags, procure pelas tags que deseja
 usar e clique no botão
 **+Incluir**.![Tela de notificações](images/tag_notification.jpg)
-1. Acesse a área **Criar suas notificações **, e
-no campo **Texto da mensagem**,
-insira o texto que deseja enviar em sua notificação.
+1. No campo **Texto da mensagem**, insira o texto que seria enviado como uma notificação ao público inscrito.
 1. Clique no botão **Enviar**.

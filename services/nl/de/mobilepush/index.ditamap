@@ -88,6 +88,12 @@ navtitle="Tags subskribieren und die Subskribierung aufheben" scope="peer"/>
 <topicref href="t_manage_tags.html#using_tags" format="html"
 navtitle="Tagbasierte Benachrichtigungen verwenden" scope="peer"/>
 </topicref>
+<topicref href="c_user_basednotifications.html" format="html"
+navtitle="Benutzerbasierte Benachrichtigungen aktivieren " scope="peer" chunk="to-content" linking="normal"
+outputclass="subsection">
+<topicref href="t_manage_user.html" format="html" navtitle="Gerät mit Benutzer-ID registrieren "
+scope="peer" linking="normal" outputclass="subsection"/>
+</topicref>
 <topicref href="t_advance_badge_sound_payload.html" outputclass="subsection" chunk="to-content"
 navtitle="Erweiterte Benachrichtigungen" format="html" scope="peer">
 <topicref href="t_advance_badge_sound_payload.html#badge-sound-payload"

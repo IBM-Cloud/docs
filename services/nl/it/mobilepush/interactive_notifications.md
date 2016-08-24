@@ -7,6 +7,8 @@ copyright:
 
 # Notifiche interattive
 {: #interactive-notifications}
+*Ultimo aggiornamento: 14 giugno 2016*
+{: .last-updated}
 
 Le notifiche interattive consentono agli utenti di agire quando viene ricevuta una notifica senza aprire l'applicazione. Quando viene ricevuta una notifica, il dispositivo visualizza i pulsanti di azione insieme al messaggio di notifica. Le notifiche interattive sono supportare su dispositivi iOS con versione 8 o successiva. Se viene inviata una notifica interattiva a dispositivi iOS con una versione inferiore alla 8, le azioni di notifica non vengono visualizzate.
 
@@ -54,4 +56,4 @@ Devi seguire la seguente procedura per ricevere le notifiche interattive:
 	-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (ˆ)())completionHandler
 ``` 
 
-5. Questo nuovo metodo di callback viene richiamato quando l'utente fa clic sul pulsante azione. L'implementazione di questo metodo deve eseguire l'azione associata con l'identificativo specificato ed eseguire il blocco nel parametro `completionHandler`.
+5. Questo nuovo metodo di callback viene richiamato quando l'utente fa clic sul pulsante azione. L'implementazione di questo metodo deve eseguire le azioni associate con l'identificativo specificato ed eseguire il blocco nel parametro `completionHandler`.

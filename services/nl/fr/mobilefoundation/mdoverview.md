@@ -8,7 +8,7 @@ copyright:
 #	A propos de {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
 
-*Dernière mise à jour : 15 juin 2016*
+*Dernière mise à jour : 20 juillet 2016*
 {: .last-updated}
 
 Le service {{site.data.keyword.mobilefoundation_short}} permet de
@@ -61,3 +61,18 @@ Le service {{site.data.keyword.mobilefoundation_short}} fournit
 un conteneur dans votre espace dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez examiner les
 détails du conteneur créé, afficher ses performances, et accéder aux journaux du
 serveur depuis votre tableau de bord {{site.data.keyword.Bluemix_notm}}.
+
+## Aide et support pour {{site.data.keyword.mobilefoundation_short}}
+{: #getting_help_mobilefoundation}
+
+Si vous avez des problèmes ou de questions quand vous utilisez {{site.data.keyword.mobilefoundation_short}}, vous pouvez obtenir de l'aide en recherchant des informations précises ou en posant des questions via un forum. Vous pouvez aussi ouvrir un ticket de demande de service.
+
+Quand vous utilisez les forums pour poser une question, prenez soin d'étiqueter cette dernière de façon à ce qu'elle soit vue par les équipes de développement {{site.data.keyword.Bluemix_notm}}.
+
+Si vous avez des questions techniques sur le développement ou le déploiement d'une application avec {{site.data.keyword.mobilefoundation_short}}, postez votre question sur [stackoverflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} et marquez votre question avec les étiquettes `bluemix` et `ibm-mobilefirst`.
+
+Pour des questions relatives au service et aux instructions de mise en route, utilisez le forum [IBM developerWorks - dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window}. Incluez les étiquettes `bluemix` et `mobilefirst`.
+
+Voir la rubrique expliquant comment [obtenir de l'aide](https://www.{DomainName}/docs/support/index.html#getting-help) pour plus de détails sur l'utilisation des forums.
+
+Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM, sur les niveaux de support disponibles ou les niveaux de gravité des tickets, voir la rubrique décrivant [comment contacter le support](https://www.{DomainName}/docs/support/index.html#contacting-support).

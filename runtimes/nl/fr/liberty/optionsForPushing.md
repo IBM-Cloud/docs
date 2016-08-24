@@ -211,7 +211,9 @@ package de Liberty. Outre les fichiers de l'application et de configuration, le
 fichier de package de serveur peut contenir des ressources partagées et les
 fonctions utilisateur Liberty requises par l'application.
 
-Pour conditionner un serveur Liberty, utilisez la commande ./bin/server package à partir du répertoire d'installation de Liberty. Indiquez le nom de votre serveur et précisez l'option '––include=usr' option.
+Pour
+conditionner un serveur Liberty, utilisez la commande `./bin/server
+package` à partir du répertoire d'installation de Liberty. Spécifiez le nom de votre serveur et incluez l'option `--include=usr`.
 Par exemple, si le serveur Liberty se nomme defaultServer, exécutez la commande suivante :
 
 ```
@@ -219,8 +221,9 @@ Par exemple, si le serveur Liberty se nomme defaultServer, exécutez la commande
 ```
 {: codeblock}
 
-Cette commande génère un fichier serverName.zip dans le répertoire du serveur. Vous pouvez ensuite envoyer par commande push le fichier
-compressé à Bluemix à l'aide de la commande cf push.
+Cette commande génère un fichier serverName.zip dans le répertoire du serveur. Si vous avez utilisé l'option `--archive` pour spécifier un fichier d'archive différent, assurez-vous qu'il a l'extension `.zip` au lieu de `.jar`. **Ce pack de construction ne prend pas en charge les fichiers de package de serveur créés avec l'extension .jar**.
+
+Vous pouvez ensuite envoyer par push vers Bluemix le fichier `.zip` généré avec la commande `cf push`.
 Par exemple :
 
 ```

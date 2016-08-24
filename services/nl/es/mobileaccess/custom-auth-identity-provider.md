@@ -1,12 +1,17 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
 
 ---
 
 # Creación de un proveedor de identidad personalizado
 {: #custom-create}
+
+*Última actualización: 16 de junio de 2016*
+{: .last-updated}
+
+
 Para crear un proveedor de identidad personalizado, desarrolle una aplicación web que exponga una API RESTful:
 
 ```
@@ -43,7 +48,7 @@ El proveedor de identidad personalizada puede responder con un cambio de autenti
 * `status`: especifica el estado `success`, `challenge` o `failure` de la solicitud.
 * `stateId` (opcional): indica un identificador de serie generado de forma aleatoria para identificar la sesión de autenticación con el cliente móvil. Este atributo se puede omitir si el proveedor de identidad personalizado no almacena ningún estado.
 * `challenge`: especifica un objeto JSON que representa un cambio de autenticación que se volverá a enviar al cliente móvil. Este atributo solo se envía al cliente si el estado se define en `challenge`.
-* `userIdentity`: indica un objeto JSON que representa una identidad de usuario.  La identidad de usuario consiste en propiedades como `userName`, `displayName` y attributes.  Para obtener más información, consulte [Objeto de identidad de usuario](#custom-user-identity). Esta propiedad solo se envía al cliente móvil si el estado se establece en `success`.
+* `userIdentity`: indica un objeto JSON que representa una identidad de usuario.  La identidad de usuario consiste en propiedades como `userName`, `displayName` y atributos.  Para obtener más información, consulte [Objeto de identidad de usuario](#custom-user-identity). Esta propiedad solo se envía al cliente móvil si el estado se establece en `success`.
 
 Por ejemplo:
 
@@ -113,7 +118,7 @@ El objeto de identidad de usuario se utiliza en el servicio de {{site.data.keywo
 
 Cada solicitud del servicio de {{site.data.keyword.amashort}} a un proveedor de identidad personalizado contiene una cabecera de autorización, de forma que el proveedor pueda verificar que la solicitud proviene de un origen autorizado. Aunque no es estrictamente obligatorio, piense en la posibilidad de validar la cabecera de autorización instrumentando el proveedor de identidad personalizado con un SDK del servidor de {{site.data.keyword.amashort}}. Para utilizar este SDK, la aplicación del proveedor de identidad personalizado debe implementarse en con Node.js o Liberty for Java&trade;&trade; y ejecutarse en {{site.data.keyword.Bluemix_notm}}.
 
-La cabecera de autorización contiene información sobre el cliente móvil y la app móvil que han activado el proceso de autenticación. Puede utilizar el contexto de seguridad para recuperar estos datos. Para obtener más información, consulte [Protección de recursos](protecting-resources.html)
+La cabecera de autorización contiene información sobre el cliente móvil y la app móvil que han activado el proceso de autenticación. Puede utilizar el contexto de seguridad para recuperar estos datos. Para obtener más información, consulte [Protección de recursos](protecting-resources.html).
 
 ## Implementación de ejemplo de un proveedor de identidad personalizado
 {: #custom-sample}

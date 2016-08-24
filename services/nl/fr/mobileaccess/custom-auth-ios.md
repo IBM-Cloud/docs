@@ -5,8 +5,12 @@ copyright:
 
 ---
 
-# Configuration du SDK client de {{site.data.keyword.amashort}} pour iOS
+# Configuration du SDK client {{site.data.keyword.amashort}} pour iOS (Objective-C)
 {: #custom-ios}
+
+*Dernière mise à jour : 18 juillet 2016*
+{: .last-updated}
+
 
 Configurez votre application iOS qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
 
@@ -38,7 +42,7 @@ Utilisez le gestionnaire de dépendances CocoaPods pour installer le SDK client 
 1. Depuis la ligne de commande, exécutez `pod install`.
 CocoaPods installe les dépendances qui ont été ajoutées. La progression et les composants ajoutés s'affichent.
 
-**Important** : A partir de ce moment, vous devrez toujours ouvrir votre projet à l'aide d'un fichier `xcworkspace` généré par CocoaPods. Son nom est généralement `{your-project-name}.xcworkspace`.
+    **Important** : A partir de ce moment, vous devrez toujours ouvrir votre projet à l'aide d'un fichier `xcworkspace` généré par CocoaPods. Son nom est généralement `{your-project-name}.xcworkspace`.
 
 1. Exécutez `open {your-project-name}.xcworkspace` depuis la ligne de commande pour ouvrir l'espace de travail de votre projet iOS.
 

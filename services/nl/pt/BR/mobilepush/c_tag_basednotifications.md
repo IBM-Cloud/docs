@@ -1,5 +1,8 @@
 ---
 
+Título: ativando Notificações push baseadas em tag
+
+Palavras-chave: Notificações push baseadas em tag, tags de definição, tagNames
 copyright:
  years: 2015, 2016
 
@@ -7,6 +10,8 @@ copyright:
 
 # Ativando notificações baseadas em tag
 {: #tag_based_notifications}
+*Última atualização: 13 de julho de 2016*
+{: .last-updated}
 
 Mensagens de notificação baseadas em tag se destinam a todos os
 dispositivos inscritos em uma tag específica. É possível

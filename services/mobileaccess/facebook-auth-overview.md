@@ -12,10 +12,13 @@ copyright:
 # Authenticating users with Facebook credentials
 {: #facebook-auth-overview}
 
-Last updated: 22 July 2016
+Last updated: 16 August 2016
 {: .last-updated}
 
-You can configure the {{site.data.keyword.amashort}} service to protect resources by using Facebook as an identity provider. Your mobile or web application users can use their Facebook credentials for authentication.
+
+
+You can configure the {{site.data.keyword.amafull}} service to protect resources by using Facebook as an identity provider. Your mobile or web application users can use their Facebook credentials for authentication.
+
 {:shortdesc}
 
 **Important**: You do not need to separately install the client SDK provided by Facebook. The Facebook SDK installs automatically by dependency managers when you configure the {{site.data.keyword.amashort}} Facebook client SDK.

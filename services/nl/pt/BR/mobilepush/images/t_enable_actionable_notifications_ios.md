@@ -89,9 +89,7 @@ categoria.
 	Objective-C
 
 	```
-	//For Objective-C
-
-	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
+	//For Objective-C 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```

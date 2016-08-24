@@ -12,7 +12,7 @@ copyright:
 
 # Go
 {: #go_runtime}
-*最終更新日時: 2016 年 3 月 16 日*
+*最終更新日: 2016 年 7 月 6 日*
 
 {{site.data.keyword.Bluemix}} の Go ランタイムには go_buildpack が採用されています。
 go_buildpack は、Go アプリケーションのための完全なランタイム環境を提供します。
@@ -33,7 +33,7 @@ go_buildpack は、アプリケーションに *.go という名前のファイ�
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.3.3",
+	"GoVersion": "go1.6.1",
 	"Deps": []
 }
 ```
@@ -41,16 +41,14 @@ go_buildpack は、アプリケーションに *.go という名前のファイ�
 詳しくは、[『godep』](https://github.com/tools/godep){: new_window}を参照してください。### 使用可能なバージョン:
 {: #available_versions}
 
-現在 {{site.data.keyword.Bluemix}} にインストールされている [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window}では、以下のバージョンの Go が使用できます。
+現在 {{site.data.keyword.Bluemix}} にインストールされている [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.7.5){: new_window}では、以下のバージョンの Go が使用できます。
 
-* 1.2.1
-* 1.2.2
-* 1.3.2
-* 1.3.3
 * 1.4.2
 * 1.4.3
-* 1.5
-* 1.5.1
+* 1.5.3
+* 1.5.4
+* 1.6
+* 1.6.1
 
 アプリケーションが、リストされていないバージョンの Go を必要とする場合は、外部の [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack.git){: new_window}を使用してアプリケーションをデプロイできます。
 

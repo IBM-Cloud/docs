@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 9 August 2016*
+*Last updated: 22 August 2016*
 {: .last-updated}
 
 
@@ -69,6 +69,10 @@ There are optional components that are available for you to purchase to scale an
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | One database per service instance on a dedicated server with 64 GB RAM, 16 vCPUs. Recommended for up to 1 TB of pre-load data, based on typical compression.  |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | One database per service instance on a dedicated bare metal server with 256 GB RAM, 32 cores. Recommended for up to 4 TB of pre-load data, based on typical compression. |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.12  | One database per service instance on a dedicated bare metal server with 256 GB RAM, 32 Cores. Recommended for up to 12 TB of pre-load data, based on typical compression. This is a storage dense plan suitable for environments where data volumes are higher and queries do not need to run at in-memory speeds. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions 2.8.500 | Dedicated instance supporting Online Transaction Processing (OLTP) workloads with 8GB RAM and 500 GB of space for data and logs. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions 12.128.1400 | Dedicated instance supporting Online Transaction Processing (OLTP) workloads with 128GB RAM and 1.4 TB SSD storage for data and logs. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 2.8.500 | Dedicated instance supporting Online Transaction Processing (OLTP) workloads with 8GB RAM and 500 GB of space for data and logs, and it includes an additional Standby server for high availability. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | Dedicated instance supporting Online Transaction Processing (OLTP) workloads with 128GB RAM and 1.4 TB SSD storage for data and logs, and it includes an additional Standby server for high availability. |
 |Dedicated Direct Link 1 Gbps capacity | A dedicated network link that connects directly to the appropriate SoftLayer network point of presence designed for data transfers of up to 1 Gbps. |
 |Dedicated Direct Link 10 Gbps capacity | A dedicated network link that connects directly to the appropriate SoftLayer network point of presence designed for data transfers of up to 10 Gbps. |
 |{{site.data.keyword.Bluemix_notm}} Dedicated community services  | An environment that permits deploying and running  community services up to a total of 50 instances for each community service.  |

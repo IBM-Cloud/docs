@@ -1,5 +1,8 @@
 ---
 
+Título: Habilitación de notificaciones Push basadas en etiquetas
+
+Palabras clave: Notificaciones Push basadas en etiquetas, definición de etiquetas, tagNames
 copyright:
  years: 2015, 2016
 
@@ -7,6 +10,8 @@ copyright:
 
 # Habilitación de notificaciones basadas en etiquetas
 {: #tag_based_notifications}
+*Última actualización: 13 de julio de 2016*
+{: .last-updated}
 
 Mensajes de notificaciones basadas en etiquetas que están pensados para todos los dispositivos suscritos a una etiqueta determinada. Puede definir etiquetas y, a continuación, enviar y recibir mensajes mediante
   etiquetas. Primero debe

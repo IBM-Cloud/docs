@@ -19,6 +19,7 @@ Cordova アプリケーションを Facebook 認証統合用に構成するに�
 
 
 ネイティブ・コードの変更は、Android Studio や Xcode などのネイティブ開発環境で行ってください。
+
 {:shortdesc}
 
 ## 開始する前に
@@ -96,13 +97,13 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 
 ## 認証のテスト
 {: #facebook-auth-cordova-test}
-Client SDK が初期化され、Facebook 認証マネージャーの登録が完了すると、モバイル・バックエンドに要求を出すことができるようになります。
+Client SDK が初期化され、Facebook 認証マネージャーの登録が完了すると、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
 ### 開始する前に
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
-1. ブラウザーで、新しく作成されたモバイル・バックエンドの保護エンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。 `認証されていない`というメッセージがブラウザーに戻されます。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能であるため、このメッセージが戻されます。
+1. ブラウザーから、新しく作成されたモバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
+<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。 `認証されていない`というメッセージがブラウザーに戻されます。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能であるため、このメッセージが戻されます。
 
 1. Cordova アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後で次のコードを追加します。
 

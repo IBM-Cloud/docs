@@ -9,8 +9,10 @@ copyright:
 {:new_window: target="_blank"}
 # GCM(Google cloud messaging)에 대한 신임 정보 구성
 {: #create-push-enable-gcm}
+*마지막 업데이트 날짜: 2016년 6월 14일*
+{: .last-updated}
 
-사용자의 GCM(Google Cloud Messaging) 신임 정보를 가져온 다음 푸시 대시보드에서 푸시 알림 서비스를 설정합니다. 
+GCM(Google Cloud Messaging) 신임 정보를 가져온 다음 푸시 대시보드에서 푸시 알림 서비스를 설정합니다. 
 
 ##발신인 ID 및 API 키 가져오기
 

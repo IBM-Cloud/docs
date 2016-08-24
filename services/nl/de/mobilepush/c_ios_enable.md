@@ -7,6 +7,8 @@ copyright:
 
 # iOS-Anwendungen für den Empfang von Push-Benachrichtigungen aktivieren
 {: #enable-push-ios-notifications}
+*Letzte Aktualisierung: 14. Juni 2016*
+{: .last-updated}
 
 Aktivieren Sie iOS-Anwendungen für den Empfang von Push-Benachrichtigungen und für das
 Senden von Push-Benachrichtigungen an Ihre Geräte.
@@ -153,7 +155,8 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 
 ```
 //Initialize client Push SDK for Objective-C
-IMFPushClient _pushService = [IMFPushClient sharedInstance];
+IMFPushClient *push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 ```
 
 ####Swift
@@ -161,6 +164,7 @@ IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 //Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
+push.initializeBluemixPush()
 ```
 
 ### Route, GUID und Bluemix-Region
@@ -246,6 +250,7 @@ Sobald das Token von APNS empfangen wird, leiten Sie es als Teil der Methode `re
 
  // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
      [ self  updateMessage:error .description];
@@ -262,6 +267,7 @@ Sobald das Token von APNs empfangen wird, leiten Sie es als Teil der Methode `re
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
+   push.initializeBluemixPush()
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
             print( "Response during device registration : \(response)")
@@ -329,7 +335,7 @@ Push-Benachrichtigungen subskribiert haben, Ihre Benachrichtigung.
 	Der folgende Screenshot zeigt ein Alertfeld bei der Verarbeitung einer
 Push-Benachrichtigung im Vordergrund und Hintergrund eines iOS-Geräts.
 
-	![Push-Benachrichtigung im Vordergrund auf einem Android-Gerät](images/Android_Screenshot.jpg)
+	![Push-Benachrichtigung im Vordergrund auf einem Android-Gerät](images/iOS_Foreground.jpg)
 
 	![Push-Benachrichtigung im Vordergrund auf einem iOS-Gerät](images/iOS_Screenshot.jpg)
 

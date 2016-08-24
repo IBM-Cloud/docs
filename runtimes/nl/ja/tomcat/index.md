@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 7 月 13 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Tomcat ランタイムには java_buildpack が採用されています。
@@ -36,12 +36,13 @@ Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](http
 アプリケーションで使用する Java のバージョンは、JBP_CONFIG_OPEN_JDK_JRE 環境変数を使用して変更できます。
 これらはいずれも、アプリケーションのマニフェスト・ファイルで指定できます。例えば、次のように指定します。
 ```
-    env:
+env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-現行のデフォルト Tomcat バージョンは 8.0.30 です。現行のデフォルト Java バージョンは 1.8.0_65 です。詳しくは、[java-buildpack のリリース](https://github.com/cloudfoundry/java-buildpack/releases) を参照してください。# 関連リンク
+現在の java_buildpack バージョンは v3.6 です。これには、デフォルトの Tomcat バージョン 8.30.0 とデフォルトの Java バージョン 1.8.0_71 が含まれています。
+詳しくは、[java-buildpack のリリース](https://github.com/cloudfoundry/java-buildpack/releases) を参照してください。# 関連リンク
 {: #rellinks}
 ## 一般
 {: #general}

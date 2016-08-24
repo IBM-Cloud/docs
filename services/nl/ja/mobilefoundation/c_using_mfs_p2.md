@@ -8,7 +8,7 @@ copyright:
 #	「プロフェッショナル 1 アプリケーション」プランの使用
 {: #using_mobilefoundation_p2}
 
-*最終更新日: 2016 年 6 月 15 日*
+*最終更新日: 2016 年 7 月 20 日*
 {: .last-updated}
 
 「{{site.data.keyword.mobilefoundation_short}}: プロフェッショナル 1 アプリケーション」サービス・インスタンスの作成後、以下の手順を読んでサービスを開始してください。
@@ -37,7 +37,7 @@ copyright:
 
 「{{site.data.keyword.mobilefoundation_short}}: プロフェッショナル 1 アプリケーション」サービス・インスタンスの作成後、*「概要」* ページが表示されます。ここで「{{site.data.keyword.dashdbshort_notm}}: エンタープライズ・トランザクション」サービス・インスタンスの接続情報を指定する必要があります。
 
-1.  現在の `組織` で使用可能なスペースのリストから、{{site.data.keyword.dashdbshort_notm}} サービス・インスタンスが存在する {{site.data.keyword.Bluemix_notm}} `スペース` を選択します。
+1.  選択された`組織`で使用可能なスペースのリストから、{{site.data.keyword.dashdbshort_notm}} サービス・インスタンスが存在する、{{site.data.keyword.Bluemix_notm}} の`スペース`を選択します。
 
 + 既存の {{site.data.keyword.dashdbshort_notm}} サービス・インスタンスに接続するための {{site.data.keyword.dashdbshort_notm}} `サービス名` および `資格情報` を選択します。
 
@@ -65,7 +65,7 @@ copyright:
 
   -	自動的に作成されたサーバーの経路。この経路を使用して、公衆インターネットからモバイル・サーバーに到達します。モバイル・アプリは、この経路を使用してサーバーにアクセスします。
 
-  -	{{site.data.keyword.mfp_oc_short_notm}} にアクセスするための個人の`ユーザー名` と `パスワード`。`パスワード` は非表示です。表示するには**「パスワードの表示」**をクリックします。
+  -	{{site.data.keyword.mfp_oc_short_notm}} にアクセスするための個人の`ユーザー名` と`パスワード`。`パスワード` は非表示です。表示するには**「パスワードの表示」**をクリックします。
 
 *	**「コンソールの起動」**をクリックして {{site.data.keyword.mfp_oc_short_notm}} を開きます。
 

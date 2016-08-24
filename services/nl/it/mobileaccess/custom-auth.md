@@ -5,11 +5,16 @@ copyright:
 
 ---
 
-# Autenticazione degli utenti utilizzando un provider di identità personalizzato
+# Autenticazione utenti con un provider di identità personalizzato
 {: #custom-id}
-Puoi creare un provider di identità personalizzato e implementare la tua logica per la raccolta e la convalida di credenziali. Un provider di identità personalizzato è un'applicazione web che espone un'interfaccia RESTful. Puoi ospitare il provider di identità personalizzato in loco oppure su {{site.data.keyword.Bluemix}}. Il solo requisito è che il provider di identità personalizzato deve essere accessibile da internet pubblica in modo che possa comunicare con il servizio {{site.data.keyword.amashort}}.
 
-## Panoramica di {{site.data.keyword.amashort}}
+*Ultimo aggiornamento: 07 luglio 2016*
+{: .last-updated}
+
+
+Crea un provider di identità personalizzato e implementare la tua logica per la raccolta e la convalida di credenziali. Un provider di identità personalizzato è un'applicazione web che espone un'interfaccia RESTful. Puoi ospitare il provider di identità personalizzato in loco oppure su {{site.data.keyword.Bluemix}}. Il solo requisito è che il provider di identità personalizzato deve essere accessibile da internet pubblica in modo che possa comunicare con il servizio {{site.data.keyword.amashort}}.
+
+## Panoramica del provider di identità personalizzato {{site.data.keyword.amashort}}
 {: #custom-id-ovr}
  Il seguente diagramma illustra come {{site.data.keyword.amashort}} si integra con un provider di identità personalizzato.
 
@@ -18,7 +23,7 @@ Puoi creare un provider di identità personalizzato e implementare la tua logica
 1. Utilizza l'SDK {{site.data.keyword.amashort}} per effettuare una richiesta alle tue risorse di back-end che sono protette con l'SDK server {{site.data.keyword.amashort}}.
 * L'SDK server {{site.data.keyword.amashort}} rileva una richiesta non autorizzata e restituisce il codice HTTP 401 e l'ambito di autorizzazione.
 * L'SDK client {{site.data.keyword.amashort}} rileva automaticamente l'HTTP 401 e avvia il processo di autenticazione.
-* L'SDK client {{site.data.keyword.amashort}} contatta il servizio {{site.data.keyword.amashort}} e chiede di emettere un'intestazione di autorizzazione.
+* L'SDK client {{site.data.keyword.amashort}} contatta il servizio {{site.data.keyword.amashort}} e richiede un'intestazione di autorizzazione.
 * Il servizio {{site.data.keyword.amashort}} comunica con il provider di identità personalizzato per avviare il processo di autenticazione.
 * Il provider di identità personalizzato restituisce una richiesta di verifica dell'autenticazione al servizio {{site.data.keyword.amashort}}.
 * Il servizio {{site.data.keyword.amashort}} restituisce la richiesta di verifica dell'autenticazione all'SDK client {{site.data.keyword.amashort}}.
@@ -37,7 +42,7 @@ Con un provider di identità personalizzato, puoi fornire delle richieste di ver
 
 Quando crei un provider di identità personalizzato, puoi:
 
-1. Personalizzare una richiesta di verifica dell'autenticazione da inviare dal servizio {{site.data.keyword.amashort}} all'applicazione client mobile. Una richiesta di verifica dell'autenticazione è un oggetto JSON che contiene dati personalizzati. Il client mobile può utilizzare questi dati personalizzati per personalizzare i flussi di autenticazione.
+1. Personalizzare una richiesta di verifica dell'autenticazione da inviare dal servizio {{site.data.keyword.amashort}} all'applicazione client mobile o web. Una richiesta di verifica dell'autenticazione è un oggetto JSON che contiene dati personalizzati. Il client può utilizzare questi dati personalizzati per personalizzare i flussi di autenticazione.
 
   Esempio di una richiesta di verifica dell'autenticazione personalizzata:
 
@@ -52,9 +57,9 @@ Quando crei un provider di identità personalizzato, puoi:
 	}
 	```
 
-1. Implementa l'eventuale flusso di raccolta delle credenziali personalizzato sul client mobile, compresa l'autenticazione in più passi e in più moduli. Analogamente alla richiesta di verifica dell'autenticazione personalizzata, devi progettare la struttura di una risposta alla richiesta di verifica dell'autenticazione personalizzata.
+1. Implementa l'eventuale flusso di raccolta delle credenziali personalizzato sul client, compresa l'autenticazione in più passi e in più moduli. Analogamente alla richiesta di verifica dell'autenticazione personalizzata, devi progettare la struttura di una risposta alla richiesta di verifica dell'autenticazione personalizzata.
 
-  Esempio di una risposta a una richiesta di verifica dell'autenticazione personalizzata inviata dal client mobile:
+  Esempio di una risposta a una richiesta di verifica dell'autenticazione personalizzata inviata dal client:
 
 	```JavaScript
 	{
@@ -65,7 +70,7 @@ Quando crei un provider di identità personalizzato, puoi:
 	```
 1. Implementa la logica personalizzata di convalida della risposta alla richiesta di verifica dell'autenticazione fornita.
 
-1. Definisci un oggetto di identità utente personalizzato che contiene le eventuali proprietà personalizzate richieste. Un esempio di un oggetto di identità utente personalizzato ottenuto dal client mobile dopo l'autenticazione eseguita con esito positivo:
+1. Definisci un oggetto di identità utente personalizzato che contiene le eventuali proprietà personalizzate richieste. Questo è un esempio di un oggetto di identità utente personalizzato ottenuto dal client dopo l'autenticazione eseguita con esito positivo:
 
 	```JavaScript
 	{
@@ -81,19 +86,19 @@ Quando crei un provider di identità personalizzato, puoi:
 
 ### Implementazione di esempio del provider di identità personalizzato
 {: #custom-sample}
-Puoi utilizzare una qualsiasi delle seguenti implementazioni di esempio Node.js di un provider di identità personalizzato come un riferimento quando sviluppi il tuo provider di identità personalizzato. Scarica il codice dell'applicazione integrale dai repository GitHub.
+Utilizza una qualsiasi delle seguenti implementazioni di esempio Node.js di un provider di identità personalizzato come un riferimento quando sviluppi il tuo provider di identità personalizzato. Scarica il codice dell'applicazione integrale dai repository GitHub.
 
  * [Esempio semplice](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
  * [Esempio avanzato](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## Tipiche comunicazioni tra il server {{site.data.keyword.amashort}} e un provider di identità personalizzato
 {: #custom-id-comm}
+
 1. Il servizio {{site.data.keyword.amashort}} invia una richiesta `startAuthorization` al provider di identità personalizzato.
 1. Il provider di identità personalizzato risponde con una richiesta di verifica dell'autenticazione personalizzata da inviare al client.
-1. Il servizio {{site.data.keyword.amashort}} invia la richiesta di verifica dell'autenticazione personalizzata ricevuta dal provider di identità personalizzato al client mobile e, infine, riceve una risposta alla richiesta di verifica dell'autenticazione dal client mobile.
+1. Il servizio {{site.data.keyword.amashort}} invia la richiesta di verifica dell'autenticazione personalizzata ricevuta dal provider di identità personalizzato al client e, infine, riceve una risposta alla richiesta di verifica dell'autenticazione dal client.
 1. Il servizio {{site.data.keyword.amashort}} invia una richiesta `handleChallengeAnswer` con la risposta alla richiesta di verifica dell'autenticazione al provider di identità personalizzato.
-1. Il provider di identità personalizzato verifica la risposta alla richiesta di verifica dell'autenticazione e replica con una risposta di esito positivo che contiene le informazioni sull'identità
-dell'utente.
+1. Il provider di identità personalizzato verifica la risposta alla richiesta di verifica dell'autenticazione e replica con una risposta di esito positivo che contiene le informazioni sull'identità dell'utente.
 1. Facoltativamente, il provider di identità personalizzato potrebbe fornire ulteriori richieste di verifica dopo aver ricevuto una risposta alla richiesta di verifica dal client. L'invio
 di più richieste di verifica consente un processo di autenticazione articolato in più fasi.
 
@@ -104,7 +109,7 @@ Per impostazione predefinita, il provider di identità personalizzato è conside
 ## Area di autenticazione personalizzata
 {: #custom-id-custom}
 
-Un provider di identità personalizzato fornisce un'area di autenticazione personalizzata. Per gestire le richieste di verifica dell'autenticazione in entrata, crea e registra un'istanza `AuthenticationDelegate` / 	`AuthenticationListener` nella tua applicazione client mobile. Definisci il nome dell'area di autenticazione personalizzata dove configuri un provider di identità personalizzato nel dashboard {{site.data.keyword.amashort}}. Può essere utilizzata per identificare che la richiesta proviene da una specifica istanza del servizio {{site.data.keyword.amashort}}.
+Un provider di identità personalizzato fornisce un'area di autenticazione personalizzata. Per gestire le richieste di verifica dell'autenticazione in entrata, crea e registra un'istanza `AuthenticationDelegate` / 	`AuthenticationListener`  nella tua applicazione client. Definisci il nome dell'area di autenticazione personalizzata dove configuri un provider di identità personalizzato nel dashboard {{site.data.keyword.amashort}}. Il realm identifica l'istanza del servizio {{site.data.keyword.amashort}} specifica di una richiesta in entrata.
 
 ## Fasi successive
 {: #next-steps}

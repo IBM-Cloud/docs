@@ -7,6 +7,11 @@ copyright:
 
 # カスタム ID プロバイダーの作成
 {: #custom-create}
+
+*最終更新日: 2016 年 6 月 16 日*
+{: .last-updated}
+
+
 カスタム ID プロバイダーを作成するには、次の RESTful API を公開する Web アプリケーションを開発します。
 
 ```
@@ -75,7 +80,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
     "headers" : {
     	"header1": "value1",  
     	"header2" : "value2"
-	},
+    },
     "stateId" : "123123123",
     "challengeAnswer" : {
     	"pinCode":12345
@@ -217,7 +222,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 
 ## 次のステップ
 {: #next-steps}
-* [カスタム認証用の {{site.data.keyword.amashort}} の構成](custom-auth-config-mca.html)
-* [Android 用のカスタム認証の構成](custom-auth-android.html)
-* [iOS 用のカスタム認証の構成](custom-auth-ios.html)
-* [Cordova 用のカスタム認証の構成](custom-auth-cordova.html)
+* [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](custom-auth-config-mca.html)
+* [Android 用のカスタム認証の構成 ](custom-auth-android.html)
+* [iOS 用のカスタム認証の構成 ](custom-auth-ios.html)
+* [Cordova 用のカスタム認証の構成 ](custom-auth-cordova.html)

@@ -12,7 +12,7 @@ copyright:
 # Liberty トピック
 {: #topics}
 
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 6 月 10 日*
 {: .last-updated}
 
 * [Liberty ランタイム](index.html)
@@ -27,9 +27,11 @@ copyright:
 * [Dynatrace の使用](dynatrace.html)
 * [New Relic の使用](newRelic.html)
 * [JRE のカスタマイズ](customizingJRE.html)
+* [Oracle JRE](oracle_jre.html)
 * [ロギングとトレース](loggingAndTracing.html)
 * [環境変数](environmentVariables.html)
 * [ビルドパックのデフォルト](buildpackDefaults.html)
+* [オフライン・モード](offlineMode.html)
 * [最新の更新](updates.html)
 
 # 関連リンク

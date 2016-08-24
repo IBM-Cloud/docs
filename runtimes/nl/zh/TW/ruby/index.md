@@ -11,11 +11,10 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*前次更新：2016 年 6 月 10 日*
+*前次更新：2016 年 7 月 6 日*
 {: .last-updated}
 
-{{site.data.keyword.Bluemix}} 上的 Ruby 運行環境是採用 ruby_buildpack 技術。
-ruby_buildpack 為 Ruby 應用程式提供完整的運行環境。
+{{site.data.keyword.Bluemix}} 上的 Ruby 運行環境是採用 ruby_buildpack 技術。ruby_buildpack 為 Ruby 應用程式提供完整的運行環境。
 {: shortdesc}
 
 如果您應用程式的根目錄含有 Gemfile，則會使用 ruby_buildpack。然後，它將使用「連結器」來安裝您的相依關係。
@@ -40,18 +39,18 @@ ruby_buildpack 為 Ruby 應用程式提供完整的運行環境。
 ```
 {: codeblock}
 
-如果未指定版本，依預設會選擇 2.2.2 版。
+如果未指定版本，依預設會選擇 2.2.4 版。
 
 ### 可用的版本：
 {: #available_versions}
 
-目前安裝在 {{site.data.keyword.Bluemix}} 中的 [Ruby 建置套件](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.7?cm_mc_uid=02162397679414470795470&cm_mc_sid_50200000=1447951462)提供下列 Ruby 版本：
+目前安裝在 {{site.data.keyword.Bluemix}} 中的 [Ruby 建置套件](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.16)提供下列 Ruby 版本：
 
-* 2.0.0
-* 2.1.6
-* 2.1.7
-* 2.2.2
+* 2.1.8
+* 2.1.9
 * 2.2.3
+* 2.2.4
+* 2.3.0
 
 如果您的應用程式需要未列出的 Ruby 版本，您可以使用外部 [Ruby 建置套件](https://github.com/cloudfoundry/ruby-buildpack)來部署該應用程式。
 
@@ -60,4 +59,4 @@ ruby_buildpack 為 Ruby 應用程式提供完整的運行環境。
 ## 一般
 {: #general}
 * [Cloud Foundry buildpack for Ruby, Sinatra and Rails](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails 文件](http://rubyonrails.org/documentation/)
+* [Ruby on Rails 文件](http://api.rubyonrails.org/)

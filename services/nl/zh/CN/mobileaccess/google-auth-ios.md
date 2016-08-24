@@ -8,6 +8,10 @@ copyright:
 # 启用 iOS Objective C 应用程序的 Google 认证
 {: #google-auth-ios}
 
+
+*上次更新时间：2016 年 6 月 16 日*
+{: .last-updated}
+
 使用 Google 登录，在 Mobile Client Access iOS 应用程序上认证用户。
 
 **注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK。有关我们强烈建议使用 Swift SDK 的新应用程序。本页面中的指示信息适用于 {{site.data.keyword.amashort}} 客户端 Objective-C SDK。有关使用 Swift SDK 的指示信息，请参阅[在 iOS 应用程序 (Swift SDK) 中启用 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)。
@@ -24,8 +28,7 @@ copyright:
 
 
 
-1. 在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。
-如果已经有项目，那么可以跳过描述项目创建的步骤，而开始添加凭证。
+1. 在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。如果已经有项目，那么可以跳过描述项目创建的步骤，而开始添加凭证。
    1.    打开新项目菜单。
 
          ![图像](images/FindProject.jpg)
@@ -41,7 +44,7 @@ copyright:
 
 1. 在下一个屏幕中，单击**启用**。
 
-1. 选择**同意屏幕**选项卡，然后提供向用户显示的产品名称。其他值为可选项。单击 **保存**。
+1. 选择**同意屏幕**选项卡，然后提供向用户显示的产品名称。其他值为可选项。单击**保存**。
 
     ![图像](images/consentScreen.png)
 
@@ -73,8 +76,7 @@ copyright:
 
 1. 在 **iOS 的应用程序标识**中，指定 iOS 的 Google 客户端标识，然后单击**保存**。
 
-	注：除了 Google 客户端标识，您还需要逆向值进行客户端配置（请参见下文）。要访问这两个值，请使用画笔图标下载示例 plist：
-		![下载 info.plist 文件](images/download_plist.png)
+	注：除了 Google 客户端标识，您还需要逆向值进行客户端配置（请参见下文）。要访问这两个值，请使用画笔图标下载示例 plist：![下载 info.plist 文件](images/download_plist.png)
 
 ## 针对 iOS 配置 {{site.data.keyword.amashort}} Google 客户端 SDK
 {: #google-auth-ios-sdk}
@@ -131,9 +133,8 @@ copyright:
 	</array>
 
 	```
-	更新这两个 URL 方案。
+	更新这两个 URL 方案。	**重要信息**：请不要覆盖 `info.plist` 文件中的任何现有属性。如果您有重叠属性，那么需要手动合并属性。有关更多信息，请参阅[尝试针对 iOS 执行登录](https://developers.google.com/identity/sign-in/ios/start)。
 
-	**重要信息**：请不要覆盖 `info.plist` 文件中的任何现有属性。如果您有重叠属性，那么需要手动合并属性。有关更多信息，请参阅[尝试针对 iOS 执行登录](https://developers.google.com/identity/sign-in/ios/start)。
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #google-auth-ios-initialize}
@@ -212,13 +213,13 @@ copyright:
 		[[IMFGoogleAuthenticationHandler sharedInstance] handleDidBecomeActive];
 	}
 
-	- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url
+- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url
 					sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
 
 		BOOL shouldHandleGoogleURL = [GPPURLHandler handleURL:url
 					sourceApplication:sourceApplication annotation:annotation];
 
-		[[IMFGoogleAuthenticationHandler sharedInstance] handleOpenURL:shouldHandleGoogleURL];
+[[IMFGoogleAuthenticationHandler sharedInstance] handleOpenURL:shouldHandleGoogleURL];
 		return  shouldHandleGoogleURL;
 	}
 	```
@@ -232,10 +233,10 @@ copyright:
 		let shouldHandleGoogleURL = GPPURLHandler.handleURL(url,
 				sourceApplication: sourceApplication, annotation: annotation)
 
-		IMFGoogleAuthenticationHandler.sharedInstance()
+IMFGoogleAuthenticationHandler.sharedInstance()
 							.handleOpenURL(shouldHandleGoogleURL)
 
-		return shouldHandleGoogleURL;
+return shouldHandleGoogleURL;
 	}
 ```
 
@@ -248,7 +249,7 @@ copyright:
 您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 
-1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端的受保护端点发送请求
+1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端的受保护端点发送请求。
 
 1. 使用 MobileFirst Services 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护，所以它只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
 

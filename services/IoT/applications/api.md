@@ -31,9 +31,9 @@ The {{site.data.keyword.iot_short_notm}} HTTP REST API supports the following ca
 - Device operations (list, add, remove, view details, update, view location, and view management information)
 - Device diagnostic operations (clear logs, retrieve logs, add log information, delete logs, get specific logs, clear error codes, get device error codes, and add error codes)
 - Connection problem determination (list device connection log events)
-- Historical event retrieval (view events for all devices, view events by device type, and view events for a specific device)
+- Last event cache (view last event for a specific device)
 - Device management request operations (list device management requests, initiate requests, clear request status, get details of a request, list all request statuses by device, and get the request status for a specific device)
-- Usage management operations (retrieve number of active devices over a period, retrieve total amount of storage that is used by historical event data, and retrieve total amount of data used)
+- Usage management operations (retrieve total amount of data used)
 - Device event publishing (beta)
 - Service status querying (retrieve service statuses by organization)
 

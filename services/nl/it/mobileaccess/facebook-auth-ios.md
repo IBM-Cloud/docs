@@ -8,11 +8,11 @@ copyright:
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 
-# Abilitazione dell'autenticazione Facebook per le applicazioni iOS (SDK Objective-C)
+# Abilitazione dell'autenticazione Facebook per le tue applicazioni iOS (SDK Objective-C)
 {: #facebook-auth-ios}
 
 
-*Ultimo aggiornamento: 15 giugno 2016*
+*Ultimo aggiornamento: 17 luglio 2016*
 {: .last-updated}
 
 
@@ -24,9 +24,9 @@ Per utilizzare Facebook come provider di identità nelle tue applicazioni iOS, a
 ## Prima di cominciare
 {: #facebook-auth-ios-before}
 È necessario disporre di:
-* Un progetto iOS configurato per lavorare con CocoaPods.  Per ulteriori informazioni, vedi **Installa CocoaPods** in  [Configurazione dell'SDK iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).
+* Un progetto iOS configurato per lavorare con CocoaPods.  Per ulteriori informazioni, vedi **Installa CocoaPods** in  [Configurazione dell'SDK iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
    **Nota:** non è necessario installare l'SDK {{site.data.keyword.amashort}} core prima di procedere.
-* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html). 
+* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html).
 * Un ID dell'applicazione Facebook. Per ulteriori informazioni, vedi [Ottenimento di un ID applicazione Facebook dal portale sviluppatori Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configurazione della tua applicazione Facebook per la piattaforma iOS
@@ -52,7 +52,7 @@ Dopo che hai configurato l'ID applicazione Facebook e la tua applicazione Facebo
 
 1. Fai clic sul tile {{site.data.keyword.amashort}}. Il dashboard {{site.data.keyword.amashort}} viene caricato.
 
-1. Fai clic sul tile **Facebook**.
+1. Fai clic sul pulsante **Configura** nel pannello **Facebook**.
 
 1. Specifica l'ID applicazione Facebook e fai clic su **Save**.
 
@@ -202,7 +202,8 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	 							backendGUID: "applicationGUID")
 	```
 
-1. Segnala all'SDK Facebook l'attivazione dell'applicazione e registra il gestore autenticazione Facebook aggiungendo il seguente codice al metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applicazione. Aggiungi questo codice subito dopo che hai inizializzato l'istanza IMFClient.
+1. Segnala all'SDK Facebook l'attivazione dell'applicazione e registra il gestore autenticazione Facebook aggiungendo il seguente codice al
+metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applicazione. Aggiungi questo codice subito dopo che hai inizializzato l'istanza IMFClient.
 
 	**Objective-C**
 

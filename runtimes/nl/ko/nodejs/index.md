@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*마지막 업데이트 날짜: 2016년 6월 10일*
+*마지막 업데이트 날짜: 2016년 7월 7일*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}}의 Node.js 런타임은 sdk-for-nodejs 빌드팩을 통해 제공됩니다. sdk-for-nodejs 빌드팩은 Node.js 앱을 위한 완전한 런타임 환경을 제공합니다.
@@ -54,7 +54,7 @@ web: node app.js
 시작 스크립트 항목이 **package.json**에 있는 경우 **Procfile**이 자동으로 생성됩니다. 자동 생성된 **Procfile**의 컨텐츠는 다음과 같습니다.
 
 ```
-    web: npm start
+web: npm start
 ```
 {: codeblock}
 
@@ -73,7 +73,12 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 ```
 {: codeblock}
 
-애플리케이션이 Bluemix에서 실행되는 경우 이 코드를 사용하여 VCAP_APP_HOST 및 VCAP_APP_PORT 환경 변수에 Bluemix 내부에 있고 앱이 수신 연결을 위해 청취하는 호스트와 포트 값을 포함시키십시오. 애플리케이션이 로컬에서 실행되는 경우 VCAP_APP_HOST 및 VCAP_APP_PORT가 정의되지 않으므로 **localhost**가 호스트로 사용되고 **3000**이 포트 번호로 사용됩니다. 이런 방식으로 작성하면 애플리케이션을 테스트 목적으로 실행하고 Bluemix에서는 추가 변경 없이 실행할 수 있습니다. 
+애플리케이션이 Bluemix에서 실행되는 경우 이 코드를 사용하여 VCAP_APP_HOST 및 VCAP_APP_PORT 환경 변수에 Bluemix 내부에 있고 앱이 수신 연결을 위해 청취하는 호스트와 포트 값을 포함시키십시오. 애플리케이션이 로컬에서 실행되는 경우 VCAP_APP_HOST 및 VCAP_APP_PORT가 정의되지 않으므로 **localhost**가 호스트로 사용되고 **3000**이 포트 번호로 사용됩니다. 이런 방식으로 작성하면 애플리케이션을 테스트 목적으로 로컬에서 실행하고 Bluemix에서는 추가 변경 없이 실행할 수 있습니다. 
+
+## 오프라인 모드
+{: #offline_mode}
+
+외부 사이트에 대한 빌드팩의 액세스를 제어하는 데 대한 정보는 [오프라인 모드](offlineMode.html)를 참조하십시오. 
 
 ## 앱 관리
 {{site.data.keyword.Bluemix}}는 Node.js 앱을 관리하고 디버깅하는 몇 가지 유틸리티를 제공합니다. 전체 세부사항은 [앱 관리](../../manageapps/app_mng.html)를 참조하십시오. 
@@ -119,7 +124,7 @@ NPM은 사용자 node_modules가 설치되기 전과 후에 적용되는 **prein
 Node 빌드팩이 이전 빌드의 캐시를 사용할지 또는 무시할지를 판별하려면 NODE_MODULES_CACHE 변수를 사용하십시오. 기본값은 true입니다. 캐싱을 사용 안함으로 설정하려면 NODE_MODULES_CACHE를 false로 설정하십시오. 예를 들어 cf 명령행을 사용하는 경우 다음과 같습니다.
 
 ```
-    $ cf set-env myapp NODE_MODULES_CACHE false
+$ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
@@ -142,14 +147,14 @@ Nodejs 빌드팩 버전 v3.2-20160315-1257 이상에서 [FIPS](https://en.wikipe
 예: 
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+$ cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
 FIPS_MODE가 true일 때 일부 노드 모듈이 작동하지 않을 수도 있음을 인지하는 것이 중요합니다. 예를 들어, [Express](http://expressjs.com/)와 같은 **[MD5](https://en.wikipedia.org/wiki/MD5)를 사용하는 노드 모듈이 실패하게 됩니다.**Expess의 경우 [etag](http://expressjs.com/en/api.html)를 false로 설정하면 그 문제를 임시로 해결하도록 도울 수 있습니다. 예를 들면, 코드에서 다음과 같이 할 수 있습니다.
 
 ```
-    app.set('etag', false);
+app.set('etag', false);
 ```
 {: codeblock}
 자세한 정보는 이 [스택오버플로우 포스트](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)를
@@ -271,7 +276,7 @@ sdk_for_nodejs                            2          true      false    buildpac
 {: #rellinks}
 ## 일반
 {: #general}
-* [Node.js 빌드팩의 최신 업데이트](updates.html)
+* [Node.js 빌드팩의 최신 업데이트](../../runtimes/nodejs/updates.html)
 * [앱 관리](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

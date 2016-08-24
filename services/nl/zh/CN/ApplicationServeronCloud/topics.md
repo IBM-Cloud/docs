@@ -13,6 +13,7 @@ copyright:
 {: #topics}
 
 *上次更新时间：2016 年 4 月 15 日*
+{: .last-updated}
 
 1. [概述](indexWAS4Bluemix.html)
 2. [维护和更新](maintenanceAndUpdates.html)

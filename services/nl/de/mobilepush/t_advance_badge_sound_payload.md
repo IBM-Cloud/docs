@@ -9,13 +9,15 @@ copyright:
 
 
 #Erweiterte Push-Benachrichtigungen aktivieren
+*Letzte Aktualisierung: 14. Juni 2016*
+{: .last-updated}
 
 Konfigurieren Sie ein iOS Badge, zusätzliche JSON-Nutzdaten, umsetzbare Benachrichtigungen und Blockierungsnachrichten.
 
 ## Audio, Nutzdaten und iOS Badge konfigurieren
 {: #badge-sound-payload}
 
-Konfigurieren Sie ein iOS Badge, Audio und zusätzliche JSON-Nutzdaten.
+Konfigurieren Sie ein iOS Badge, eine Audiodatei und zusätzliche JSON-Nutzdaten.
 
 1. Navigieren Sie im Dashboard für Push-Benachrichtigungen zur Registerkarte **Benachrichtigungen**.
 2. Konfigurieren Sie im Abschnitt **Optionale Felder** die folgenden Komponenten für Push-Benachrichtigungen: 
@@ -27,7 +29,7 @@ Konfigurieren Sie ein iOS Badge, Audio und zusätzliche JSON-Nutzdaten.
 
 ###Android
 
-Fügen Sie die Audiodatei zum Verzeichnis `res/raw` der Android-Anwendung hinzu. Fügen Sie beim Senden einer Benachrichtigung den Namen der Audiodatei zum entsprechenden Feld der Push-Benachrichtigung hinzu. 
+Fügen Sie die Audiodatei zum Verzeichnis `res/raw` der Android-Anwendung hinzu. Fügen Sie beim Senden einer Benachrichtigung den Namen der Audiodatei zum entsprechenden Feld der Push-Benachrichtigung hinzu.
 
 ```
 "settings": {

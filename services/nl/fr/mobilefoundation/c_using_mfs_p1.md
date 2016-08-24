@@ -73,7 +73,7 @@ vous permet d'accéder à certains paramètres avancés.
 
 *	L'onglet **Topology** vous permet de sélectionner
 la taille de votre conteneur. Le serveur par défaut doté d'1 Go
-est idoine pour le développement et des tests sommaires. 
+est idoine pour le développement et des tests sommaires.
 
   - Sélectionnez la taille appropriée pour votre serveur compte tenu de
 vos besoins.

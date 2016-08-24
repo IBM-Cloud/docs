@@ -12,7 +12,7 @@ copyright:
 # Registro y rastreo
 {: #logging_tracing}
 
-*Última actualización: 10 de junio de 2016*
+*Última actualización: 21 de junio de 2016*
 {: .last-updated}
 
 ## Archivos de registro
@@ -35,7 +35,7 @@ En la interfaz de usuario de IBM Bluemix, dispone de funciones de rastreo y volc
 traceSpecification en instancias de la aplicación en ejecución.
 * Utilice Dump para crear y manipular volcados de hebras y de almacenamiento dinámico en instancias de la aplicación en ejecución.
 
-Para realizar esta acción, seleccione una aplicación de Liberty en la interfaz de usuario. Bajo Tiempo de ejecución en el panel de navegación de la izquierda, puede abrir los detalles de la instancia. Seleccione una o varias instancias. Bajo el menú Acciones, puede elegir TRACE o DUMP.
+Para realizar esta acción, seleccione una aplicación de Liberty en la interfaz de usuario. En la categoría Tiempo de ejecución en la navegación, puede abrir los detalles de la instancia. Seleccione una o varias instancias. En el menú Acciones, puede elegir TRACE o DUMP.
 
 # rellinks
 {: #rellinks}

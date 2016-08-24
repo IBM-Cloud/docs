@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*Dernière mise à jour : 10 juin 2016*
+*Dernière mise à jour : 07 juillet 2016*
 {: .last-updated}
 
 L'environnement d'exécution Node.js sur {{site.data.keyword.Bluemix}} utilise la technologie du pack de construction sdk-for-nodejs.
@@ -76,6 +76,11 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 
 Avec ce code, lorsque l'application s'exécute sur Bluemix,
 les variables d'environnement VCAP_APP_HOST et VCAP_APP_PORT contiennent des valeurs d'hôte et de port internes à Bluemix, sur lesquelles l'app est à l'écoute des connexions entrantes. Lorsque l'application s'exécute en local, VCAP_APP_HOST et VCAP_APP_PORT ne sont pas définies. L'hôte utilisé est **localhost** et le port est **3000**. Le code rédigé ainsi permet d'exécuter l'application localement à des fins de test et sur Bluemix sans autres modifications.
+
+## Mode Hors ligne
+{: #offline_mode}
+
+Voir [Mode Hors ligne](offlineMode.html) pour plus d'informations sur le contrôle de l'accès du pack de construction aux sites externes. 
 
 ## App Management
 {{site.data.keyword.Bluemix}} fournit un certain nombre d'utilitaires pour la gestion et le débogage de l'appli Node.js.  Voir [App Management](../../manageapps/app_mng.html) pour des informations plus complètes.
@@ -151,20 +156,18 @@ Par exemple :
 ```
 {: codeblock}
 
-Il est important de comprendre que lorsque la variable d'environnement FIPS_MODE a pour valeur true, certains modules de noeud peuvent ne pas fonctionner. Par exemple, les **modules de noeud qui utilisent [MD5](https://en.wikipedia.org/wiki/MD5) échoueront**, par exemple, [Express](http://expressjs.com/). Pour Express, le fait d'affecter la valeur false à [etag](http://expressjs.com/en/api.html) dans votre application Express peut vous permettre de contourner ce problème.
-Ainsi, vous pouvez introduire la commande suivante dans votre code :
+Il est important de comprendre que lorsque la variable d'environnement FIPS_MODE a pour valeur true, certains modules de noeud peuvent ne pas fonctionner.  Par exemple, les **modules de noeud qui utilisent [MD5](https://en.wikipedia.org/wiki/MD5) échoueront**, par exemple, [Express](http://expressjs.com/).  Pour Express, le fait d'affecter la valeur false à [etag](http://expressjs.com/en/api.html) dans votre application Express peut vous permettre de contourner ce problème. Ainsi, vous pouvez introduire la commande suivante dans votre code :
 ```
     app.set('etag', false);
 ```
 {: codeblock}
 Voir cet [article stackoverflow](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js) pour plus d'informations.
 
-**REMARQUE** : les variables d'environnement [App Management](../../manageapps/app_mng.html) et FIPS_MODE ne peuvent *PAS* être utilisées en même temps. Si la variable d'environnement BLUEMIX_APP_MGMT_ENABLE est définie et que la variable d'environnement FIPS_MODE a pour valeur true, la reconstitution de l'application échoue.
+**REMARQUE** : les variables d'environnement [App Management](../../manageapps/app_mng.html) et FIPS_MODE ne peuvent *PAS* être utilisées en même temps.  Si la variable d'environnement BLUEMIX_APP_MGMT_ENABLE est définie et que la variable d'environnement FIPS_MODE a pour valeur true, la reconstitution de l'application échoue.
 
 Il existe diverses méthodes permettant de vérifier l'état de FIPS_MODE :
 <ul>
-<li> Vous pouvez rechercher dans le fichier staging_task.log de votre application un message semblable à celui présenté ci-dessous :
-    
+<li> Vous pouvez rechercher dans le fichier staging_task.log de votre application un message semblable à celui présenté ci-dessous :    
 
   <pre>
   Installing FIPS-enabled IBM SDK for Node.js (4.4.3) from cache
@@ -206,18 +209,18 @@ Le tableau suivant explique le comportement de node.js V4 avec FIPS :
 |FIPS_MODE !=true |success (2)    |
 
 * success (1)
-  * FIPS est utilisé. 
+  * FIPS est utilisé.
   * Le fichier staging_task.log contiendra le message *Installing FIPS-enabled IBM SDK for Node.js*.
   * La valeur renvoyée par process.versions.openssl contiendra "fips".
 * success (2)
-  * FIPS n'est *PAS* utilisé. 
+  * FIPS n'est *PAS* utilisé.
   * Le fichier staging_task.log ne contiendra *PAS* le message *Installing FIPS-enabled IBM SDK for Node.js*.
   * La valeur renvoyée par process.versions.openssl ne contiendra *PAS* "fips".
 
 #### Nodejs v6
 {: #nodejs_v6_fips}
 
-Pour exécuter le mode FIPS avec Node.js version 6 en plus de définir **FIPS_MODE=true**, vous devez également inclure **--enable-fips** dans votre commande start, comme dans l'exemple suivant : 
+Pour exécuter le mode FIPS avec Node.js version 6 en plus de définir **FIPS_MODE=true**, vous devez également inclure **--enable-fips** dans votre commande start, comme dans l'exemple suivant :
 ```
 {
     ...   
@@ -236,24 +239,24 @@ Le tableau suivant explique le comportement de node.js V6 avec FIPS :
 |FIPS_MODE !=true |failure (3)    |success (4)      |
 
 * success (1)
-  * FIPS est utilisé. 
+  * FIPS est utilisé.
   * Le fichier staging_task.log contiendra le message *Installing FIPS-enabled IBM SDK for Node.js*.
   * La valeur renvoyée par process.versions.openssl contiendra "fips".
   * crypto.fips renverra 1 pour indiquer que FIPS est utilisé.
 * success (2)
-  * FIPS n'est *PAS* utilisé. 
+  * FIPS n'est *PAS* utilisé.
   * Le fichier staging_task.log contiendra le message *Installing FIPS-enabled IBM SDK for Node.js*.
   * La valeur renvoyée par process.versions.openssl contiendra "fips".
-  * crypto.fips renverra 0 pour indiquer que FIPS n'est *PAS* utilisé. 
+  * crypto.fips renverra 0 pour indiquer que FIPS n'est *PAS* utilisé.
 * failure (3)
-  * FIPS n'est *PAS* utilisé. 
+  * FIPS n'est *PAS* utilisé.
   * Le fichier staging_task.log ne contiendra *PAS* le message *Installing FIPS-enabled IBM SDK for Node.js*.
   * La reconstitution échouera avec le message "ERR node: bad option: --enable-fips".
 * success (4)
-  * FIPS n'est *PAS* utilisé. 
+  * FIPS n'est *PAS* utilisé.
   * Le fichier staging_task.log ne contiendra *PAS* le message *Installing FIPS-enabled IBM SDK for Node.js*.
   * La valeur renvoyée par process.versions.openssl ne contiendra *PAS* "fips".
-  * crypto.fips renverra 0 pour indiquer que FIPS n'est *PAS* utilisé. 
+  * crypto.fips renverra 0 pour indiquer que FIPS n'est *PAS* utilisé.
 
 
 ## Packs de construction Node.js
@@ -284,7 +287,7 @@ Généralement, le pack de construction **sdk-for-nodejs** en cours et une versi
 {: #rellinks}
 ## general
 {: #general}
-* [Mises à jour les plus récentes du pack de construction Node.js](updates.html)
+* [Mises à jour les plus récentes du pack de construction Node.js](../../runtimes/nodejs/updates.html)
 * [App Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

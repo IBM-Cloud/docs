@@ -24,7 +24,7 @@ navtitle="Swift 클라이언트 SDK 설치" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html" navtitle="애플리케이션 인스트루먼트" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="클라이언트 키 식별" scope="peer"> </topicref>
+navtitle="액세스 키 식별" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
 navtitle="Android 앱 초기화" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"
@@ -40,15 +40,7 @@ scope="peer"> </topicref>
 </topicref>
 <topicref format="html" href="app-monitoring.html" linking="sourceonly" navtitle="앱 모니터링"
 scope="peer" outputclass="subsection">
-<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="데이터 시각화"
-scope="peer">
-<topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly"
-navtitle="사용자 정의 차트 작성" scope="peer"> </topicref>
-<topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly"
-navtitle="사용자 정의 데이터 내보내기" scope="peer"> </topicref>
-<topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly"
-navtitle="사용자 정의 차트 정의 내보내기 및 가져오기" scope="peer"> </topicref>
-</topicref>
+<!--<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="Visualizing data" scope="peer" audience="blue"><topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly" navtitle="Creating custom charts" scope="peer"> </topicref><topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly" navtitle="Exporting custom data" scope="peer"> </topicref><topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly" navtitle="Exporting and importing custom chart definitions" scope="peer"> </topicref></topicref>-->
 <topicref format="html" href="app-monitoring.html#alerts" navtitle="경보 설정" scope="peer">
 <topicref format="html" href="app-monitoring.html#alert-def-client-logs" linking="sourceonly"
 navtitle="클라이언트 로그 경보 작성" scope="peer"> </topicref>

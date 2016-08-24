@@ -7,6 +7,8 @@ copyright:
 
 # Ativando aplicativos Cordova para receber notificações push
 {: #cordova_enable}
+*Última atualização: 14 de junho de 2016*
+{: .last-updated}
 
 Cordova é uma plataforma para construir aplicativos híbridos com JavaScript, CSS e HTML. O {{site.data.keyword.mobilepushshort}} suporta o desenvolvimento de aplicativos iOS e Android baseados em Cordova.
 
@@ -100,7 +102,6 @@ o caminho a seguir: *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h
 	@executable_path/Frameworks
 	```
 	d. Remova o comentário das instruções de importação Push a seguir em seu cabeçalho de ponte. Acesse *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
-
 	```
 	//#import <IMFPush/IMFPush.h>
 	//#import <IMFPush/IMFPushClient.h>
@@ -138,9 +139,12 @@ onDeviceReady: function() {
 ## Registrando Dispositivos
 {: #cordova_register}
 
-Para registrar um dispositivo com o serviço de notificação push, chame o método de registro.
+Antes de registrar, inicialize o serviço de Notificação push.
+```
+    MFPPush.initializeBluemixPush();
+```
 
-Copie e cole o fragmento de código a seguir em seu aplicativo Cordova para registrar um dispositivo.
+Para registrar um dispositivo com o serviço de Notificação push, chame o método de registro. Copie o fragmento de código a seguir em seu aplicativo Cordova para registrar um dispositivo.
 
 ```
 	var success = function(message) { console.log("Success: " + message); };
@@ -150,7 +154,7 @@ Copie e cole o fragmento de código a seguir em seu aplicativo Cordova para regi
 
 ### Android
 {: #cordova_register_android}
-O Android não usa o parâmetro de definições. Se você estiver somente construindo um app Android, passe um objeto vazio; por exemplo:
+O Android não usa o parâmetro de definições. Se você estiver somente construindo um aplicativo Android, passe um objeto vazio. Por exemplo:
 
 ```
 	MFPPush.registerDevice({}, success, failure);
@@ -159,7 +163,7 @@ O Android não usa o parâmetro de definições. Se você estiver somente constr
 
 ### iOS
 {: #cordova_register_ios}
-Se deseja customizar o alerta, badge e propriedades de som, inclua o fragmento de código JavaScript a seguir na web part de seu aplicativo Cordova.
+Para customizar o alerta, badge e propriedades do som, inclua o fragmento de código JavaScript a seguir na web part do seu aplicativo Cordova.
 
 ```
 	var settings = {
@@ -185,9 +189,9 @@ MFPPush.registerDevice({}, success, failure);
 **var token = JSON.parse(response).token**
 
 
-As chaves disponíveis são como a seguir: `token`, `userId` e `deviceId`.
+As chaves disponíveis são: `token`, `userId` e `deviceId`.
 
-O fragmento de código JavaScript a seguir mostra como inicializar seu SDK do cliente Bluemix Mobile Services, registrar um dispositivo com o serviço de notificação push e atender a notificações push. Coloque esse código em seu arquivo Javascript.
+O fragmento de código JavaScript a seguir mostra como inicializar seu SDK do cliente Bluemix Mobile Services, registrar um dispositivo com o serviço de Notificação push e atender a notificações push. Coloque esse código em seu arquivo Javascript.
 
 
 
@@ -216,9 +220,9 @@ onDeviceReady: function() {
      var settings = {
          ios: {
              alert: true,
-             badge: true,
-             sound: true
-         }   
+	       badge: true,
+	       sound: true
+	   }   
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
@@ -235,8 +239,9 @@ Inclua o fragmento de código Objective-C a seguir em sua classe de delegação 
 
 ```
 	// Register the device token with Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
+	- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData
+*)deviceToken { 	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
 	}
 	// Handle error when failed to register device token with APNs
 	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
@@ -273,7 +278,7 @@ Compile seu projeto e, em seguida, execute-o usando os comandos a seguir:
 ## Recebendo notificações push em dispositivos
 {: #cordova_receive}
 
-Copie e cole os fragmentos de código a seguir para receber notificações push em dispositivos.
+Copie e cole o fragmento de código a seguir para receber notificações push nos dispositivos.
 
 ###JavaScript
 
@@ -312,8 +317,10 @@ Inclua os fragmentos de código Objective-C a seguir em sua classe de delegaçã
 
 ```
 // Handle receiving a remote notification
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-
+-(void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void
+(^)(UIBackgroundFetchResult))completionHandler {
  [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
 }
 ```
@@ -359,6 +366,7 @@ Envie notificações push básicas.
 
 1. Em **Escolher o público**, selecione um dos seguintes públicos: **Todos os dispositivos** ou por plataforma: **Apenas dispositivos iOS** ou **Apenas
 dispositivos Android**. 
+
 	**Nota**: ao selecionar a opção **Todos os dispositivos**, todos os dispositivos inscritos para notificações push recebem sua notificação.
 
 	![Tela de notificações](images/tag_notification.jpg)

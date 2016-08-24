@@ -8,22 +8,23 @@ copyright:
 # Liberty for Java-Ressourcen mit {{site.data.keyword.amashort}} schützen
 {: #protecting-liberty}
 
-*Letzte Aktualisierung: 15. April 2016*
+*Letzte Aktualisierung: 30. Juni 2016*
 {: .last-updated}
 
 
-Das {{site.data.keyword.amashort}}-Server-SDK stellt ein OAuthTAI-Modul für Liberty for Java&trade;-Anwendungen zur Verfügung, die in {{site.data.keyword.Bluemix}} bereitgestellt werden. Sie müssen Ihren Liberty-Server mit dem OAuthTAI-Modul instrumentieren, um den Server gegen unbefugten Zugriff zu schützen und Überwachungsdaten zu erfassen.
+Das {{site.data.keyword.amashort}}-Server-SDK stellt ein `OAuthTAI`-Modul für Liberty for Java&trade;-Anwendungen zur Verfügung, die in {{site.data.keyword.Bluemix}} bereitgestellt werden. Sie müssen Ihren Liberty-Server mit dem `OAuthTAI`-Modul instrumentieren, um den Server gegen unbefugten Zugriff zu schützen und Überwachungsdaten zu erfassen. 
 
 ## Vorbereitungen
 {: #before-you-begin}
-* Sie müssen mit der Entwicklung von Liberty for Java-Anwendungen in {{site.data.keyword.Bluemix}} vertraut sein. Weitere Informationen finden Sie in [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html).
+Sie müssen mit der Entwicklung von Liberty for Java-Anwendungen in {{site.data.keyword.Bluemix}} vertraut sein. Weitere Informationen finden Sie in [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html).
 
 ## {{site.data.keyword.amashort}}-Server-SDK installieren
 {: #installing-server-sdk}
 
-1. Laden Sie die [OAuthTAI-Artefakte](https://imf-tai.{DomainName}/public/TAI.zip) herunter und extrahieren Sie sie.
+1. Laden Sie [OAuthTAI-Artefakte](https://imf-tai.{DomainName}/public/TAI.zip) herunter und extrahieren Sie sie.
 
-1. Kopieren Sie die Datei `com.ibm.worklight.oauth.tai_1.0.0.jar` in das Verzeichnis `${wlp.user.dir}/extensions/lib`.
+1. Kopieren Sie die Datei `com.ibm.worklight.oauth.tai_1.0.0.jar` in das Verzeichnis `$<wlp.user.dir>/extensions/lib`. 
+
 	**Tipp:** `$<wlp.user.dir>` ist das Benutzerverzeichnis für die Liberty for Java-Laufzeit. Der Standardverzeichnisname ist `usr`.
 
 1. Kopieren Sie das Verzeichnis `OAuthTai-1.0.mf` in das Verzeichnis `$<wlp.user.dir>/extension/lib/features`.
@@ -42,7 +43,7 @@ Das {{site.data.keyword.amashort}}-Server-SDK stellt ein OAuthTAI-Modul für Lib
 	</featureManager>
 
 	```
-1. Setzen Sie die Bearbeitung der Datei `server.xml` fort und konfigurieren Sie das OAuthTAI-Feature. Die Sicherheitsrolle `TAIUserRole` ist einem bestimmten Subjekt mit dem Namen `ALL_AUTHENTICATED_USERS` zugeordnet. Das folgende Snippet demonstriert, wie GET-Methoden für den Endpunkt `/protected` geschützt werden.
+1. Setzen Sie die Bearbeitung der Datei `server.xml` fort und konfigurieren Sie das `OAuthTAI`-Feature. Die Sicherheitsrolle `TAIUserRole` ist einem bestimmten Subjekt mit dem Namen `ALL_AUTHENTICATED_USERS` zugeordnet. Das folgende Snippet demonstriert, wie GET-Methoden für den Endpunkt `/protected` geschützt werden.
 
 	```XML
 	<usr_OAuthTAI id="myOAuthTAI" realmName="imfAuthentication">
@@ -67,7 +68,7 @@ Das {{site.data.keyword.amashort}}-Server-SDK stellt ein OAuthTAI-Modul für Lib
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
 	```
 
-### Liberty for Java-Ressourcen schützen
+## Liberty for Java-Ressourcen schützen
 {: #protecting-liberty-resources}
 
 Zum Schützen der Ressourcen, die von Ihrer Liberty for Java-Anwendung gehostet werden, müssen Sie `TAIUserRole` als Java-Sicherheitsrolle angeben. Sie können die Sicherheitsrolle in der Datei `web.xml` oder als Annotation definieren.
@@ -87,7 +88,7 @@ Beispiel:
 	</security-constraint>
 
 	<security-role id="SecurityRole_TAIUserRole" >
-		<description>This is the role that MFP OAuthTAI uses to protect the resource, and it is required to be mapped to 'ALL_AUTHENTICATED_USERS' in Liberty</description>
+		<description>Dies ist die Rolle, die MFP OAuthTAI zum Schutz der Ressource verwendet; sie muss 'ALL_AUTHENTICATED_USERS' in Liberty zugeordnet werden</description>
 		<role-name>TAIUserRole</role-name>
 	</security-role>
 	```
@@ -121,7 +122,7 @@ Weitere Informationen finden Sie in [WSCredential](http://www-01.ibm.com/support
 
 #### Eigenschaft com.worklight.oauth.tai.WLCredential
 {: #WLCredential}
-Mit der Schnittstelle `WLCredential` werden APIs zum Abrufen der spezifischen Prinzipaldetails bereitgestellt.
+Mit der Schnittstelle `WLCredential` werden APIs zum Abrufen der spezifischen Details zum Benutzer, Gerät und zur Anwendung bereitgestellt.
 
 ```Java
 

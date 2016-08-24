@@ -39,7 +39,7 @@ Nachdem Sie über eine Facebook-Anwendungs-ID und den geheimen Schlüssel der Ap
 1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard.
 1. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
 1. Klicken Sie auf die Kachel für Facebook.
-1. Geben Sie die Facebook-Anwendungs-ID und den geheimen Schlüssel der App ein und speichern Sie die Eingaben. 
+1. Geben Sie die Facebook-Anwendungs-ID und den geheimen Schlüssel der App ein und speichern Sie die Eingaben.
 
 
 
@@ -47,7 +47,6 @@ Nachdem Sie über eine Facebook-Anwendungs-ID und den geheimen Schlüssel der Ap
 ## Mobile Client Access für Facebook-Webauthentifizierung verwenden
 
 Gehen Sie wie folgt vor, um den Autorisierungsprozess zu starten:
-
 
 1. Leiten Sie von Ihrer Web-App zum folgenden Endpunkt des Autorisierungsservers weiter: https://imf-newauthserver.bluemix.net/oauth/v2/authorization.
 
@@ -62,7 +61,7 @@ Gehen Sie wie folgt vor, um den Autorisierungsprozess zu starten:
 
 
   Der Parameter `state` ist momentan nicht im Gebrauch und kann leer gelassen werden.
-  Der Parameter `redirect_uri` entspricht dem uri für die Weiterleitung nach erfolgreicher oder fehlgeschlagener Authentifizierung bei Facebook.
+  Der Parameter `redirect_uri` entspricht dem URI für die Weiterleitung nach erfolgreicher oder fehlgeschlagener Authentifizierung bei Facebook.
 
 1. Nach der Weiterleitung zum Autorisierungsendpunkt wird ein Anmeldeformular von
    Facebook angezeigt. Geben Sie den Benutzernamen und das Kennwort für die Weiterleitung an den `redirect_uri` ein.
@@ -73,7 +72,7 @@ Gehen Sie wie folgt vor, um den Autorisierungsprozess zu starten:
   https://imf-newauthserver.bluemix.net/oauth/v2/token
 
   Verwenden Sie dabei die folgenden Abfrageparameter:
- ```
+  ```
   grant_type='authorization_code'
   client_id= <bluemix_app_guid>
   code= <authorization code>

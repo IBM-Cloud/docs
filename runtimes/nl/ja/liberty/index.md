@@ -12,7 +12,7 @@ copyright:
 # Liberty for Java
 {: #liberty_runtime}
 
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 6 月 10 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Java アプリケーション用 Liberty には liberty-for-java ビルドパックが採用されています。liberty-for-java ビルドパックは、Liberty プロファイルに加えて、Java EE 7 アプリケーションおよび OSGi アプリケーションを実行するための完全なランタイム環境を提供します。また、Spring のような一般的なフレームワークをサポートし、IBM JRE を含んでいます。WebSphere Liberty は素早いアプリケーション開発を可能にし、これはクラウドによく適しています。

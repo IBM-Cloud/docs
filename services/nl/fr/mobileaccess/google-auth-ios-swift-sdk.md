@@ -1,4 +1,4 @@
- ---
+---
 
 copyright:
   years: 2016
@@ -10,9 +10,16 @@ copyright:
 
 # Activation de l'authentification Google pour les applications iOS (SDK Swift)
 {: #google-auth-ios}
+
+*Dernière mise à jour : 17 juillet 2016*
+{: .last-updated}
+
 Utilisez Google Sign-In pour authentifier les utilisateurs sur votre application iOS Swift {{site.data.keyword.amashort}}. Le nouveau SDK Swift {{site.data.keyword.amashort}} qui vient de sortir améliore les fonctionnalités fournies par le SDK Mobile Client Access Objective-C existant et en ajoute de nouvelles.
 
-**Remarque :** alors que le SDK Objective-C reste complètement pris en charge et est toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix_notm}} Mobile Services, il est prévu qu'il soit interrompu plus tard dans l'année et remplacé par le nouveau SDK Swift.
+**Remarque :** Bien que le SDK Objective-C reste complètement pris en charge et soit toujours considéré comme le SDK principal pour
+{{site.data.keyword.Bluemix_notm}} Mobile Services, il est envisagé de le retirer plus tard dans l'année et de le remplacer par le
+nouveau SDK
+Swift.
 
 
 
@@ -53,7 +60,6 @@ Les étapes suivantes offrent un bref aperçu des tâches nécessaires à la pr�
 
 1. Mettez à jour les schémas d'URL dans votre projet Xcode en indiquant votre `REVERSE_CLIENT_ID` et votre identificateur de bundle. Pour plus d'informations, voir [Add URL schemes to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project).
 
-
 1. Mettez à jour le fichier project-Bridging-Header.h de votre application avec le code suivant :
 
  ```
@@ -74,7 +80,7 @@ Maintenant que vous disposez d'un ID client iOS, vous pouvez activer l'authentif
 
 1. Cliquez sur la vignette {{site.data.keyword.amashort}}. Le tableau de bord {{site.data.keyword.amashort}} se charge.
 
-1. Cliquez sur la vignette **Google** .
+1. Cliquez sur le bouton **Configurer* dans le panneau **Google**.
 
 1. Dans **ID application pour iOS**, spécifiez la valeur `CLIENT_ID` figurant dans le fichier
 `GoogleService-Info.plist` que vous vous êtes procuré auparavant et cliquez sur **Sauvegarder**.
@@ -105,7 +111,8 @@ Pour plus d'informations, reportez-vous au [site Web CocoaPods](https://cocoapod
  pod 'BMSGoogleAuthentication'
  ```
  
- **Remarque :** si vous avez déjà installé le SDK principal de {{site.data.keyword.amashort}}, vous pouvez retirer la ligne : `pod 'BMSSecurity'`. Le pod `BMSGoogleAuthentication` installe toutes les infrastructures nécessaires.
+ **Remarque :** si vous avez déjà installé le SDK principal de {{site.data.keyword.amashort}}, vous pouvez retirer la ligne : `pod 'BMSSecurity'`. La
+nacelle `BMSGoogleAuthentication` installe toutes les infrastructures nécessaires.
 	
  **Astuce :** Vous pouvez ajouter `use_frameworks!` à votre cible Xcode au lieu du Podfile.
 
@@ -170,8 +177,8 @@ valeurs `applicationRoute` et `applicationGUID` sont affichées dans les zones
 ## Test de l'authentification
 {: #google-auth-ios-testing}
 
-Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Google est enregistré, vous pouvez commencer à envoyer des
-demandes à votre back end mobile.
+Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Google est enregistré, vous pouvez commencer à envoyer des requêtes
+à votre application back end mobile.
 
 ### Avant de commencer
 {: #google-auth-ios-testing-before}
@@ -179,15 +186,17 @@ demandes à votre back end mobile.
 Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et disposer au préalable d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour configurer un noeud final `/protected`, voir la rubrique [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Essayez d'envoyer une demande à un noeud final protégé de votre back end mobile dans votre navigateur de bureau en ouvrant
-`{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`
+1. Essayez d'envoyer une requête à un noeud final protégé de votre application back end mobile depuis le navigateur de votre ordinateur en ouvrant
+`{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 
-1. Le noeud final `/protected` d'un système de back end mobile créé avec le conteneur boilerplate MobileFirst Services est protégé par {{site.data.keyword.amashort}}, par conséquent, seules les applications mobiles instrumentées avec le logiciel SDK client de {{site.data.keyword.amashort}} peuvent y accéder. Pour cette raison, le message `Unauthorized` s'affiche dans votre navigateur de bureau.
+1. Le noeud final `/protected` d'une application back end mobile créée par le conteneur boilerplate MobileFirst Services Boilerplate étant
+protégé par {{site.data.keyword.amashort}}, il n'est accessible que par les applications mobiles instrumentées avec le SDK client
+{{site.data.keyword.amashort}}. Pour cette raison, le message `Unauthorized` s'affiche dans votre navigateur de bureau.
 
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final.
 
  ```Swift
- let protectedResourceURL = "<URL de votre ressource protégée>" // ressource protégée de votre choix
+ let protectedResourceURL = "<URL_de_votre_ressource_protégée>" // any protected resource
  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
  if error == nil {
@@ -207,7 +216,7 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 1. Lorsque vous vous connectez et cliquez sur **OK**, vous autorisez {{site.data.keyword.amashort}}
 à utiliser votre identité utilisateur Google à des fins d'authentification.
 
-1. 	Votre demande doit aboutir. La sortie suivante devrait figurer dans le journal.
+1. 	Votre demande doit aboutir. La sortie suivante devrait être consignée dans le journal.
 
  ```
  onAuthenticationSuccess info = Optional({attributes = {};

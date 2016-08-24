@@ -36,7 +36,7 @@ Nachdem Sie über eine Facebook-Anwendungs-ID und den geheimen Schlüssel der Ap
 1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard.
 1. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
 1. Klicken Sie auf die Kachel für Facebook.
-1. Geben Sie die Facebook-Anwendungs-ID und den geheimen Schlüssel der App ein und speichern Sie die Eingaben. 
+1. Geben Sie die Facebook-Anwendungs-ID und den geheimen Schlüssel der App ein und speichern Sie die Eingaben.
 
 
 
@@ -69,7 +69,7 @@ Gehen Sie wie folgt vor, um den Autorisierungsprozess zu starten:
   https://imf-newauthserver.bluemix.net/oauth/v2/token
 
   Verwenden Sie dabei die folgenden Abfrageparameter:
- ```
+  ```
   grant_type='authorization_code'
   client_id= <bluemix_app_guid>
   code= <authorization code>

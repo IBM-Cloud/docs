@@ -7,6 +7,8 @@ copyright:
 
 # Abilitazione delle applicazioni Cordova alla ricezione di notifiche di push
 {: #cordova_enable}
+*Ultimo aggiornamento: 14 giugno 2016*
+{: .last-updated}
 
 Cordova è una piattaforma per creare applicazioni ibride con JavaScript, CSS e HTML. Il {{site.data.keyword.mobilepushshort}} supporta lo sviluppo di applicazioni Android e iOS basate su Cordova.
 
@@ -136,10 +138,12 @@ onDeviceReady: function() {
 ## Registrazione di dispositivi
 {: #cordova_register}
 
-Per registrare un dispositivo con il push notification service, richiama il metodo di registro.
+Prima della registrazione, inizializza il Push Notification service.
+```
+    MFPPush.initializeBluemixPush();
+```
 
-Copia e incolla il seguente frammento di codice nella tua applicazione Cordova per registrare
-                    un dispositivo.
+Per registrare un dispositivo con il Push Notification service, richiama il metodo. Copia il seguente frammento di codice nella tua applicazione Cordova per registrare un dispositivo.
 
 ```
 	var success = function(message) { console.log("Success: " + message); };
@@ -149,7 +153,7 @@ Copia e incolla il seguente frammento di codice nella tua applicazione Cordova p
 
 ### Android
 {: #cordova_register_android}
-Android non utilizza il parametro delle impostazioni. Se stai soltanto creando un'applicazione Android, invia un oggetto vuoto; ad esempio:
+Android non utilizza il parametro delle impostazioni. Se stai soltanto creando un'applicazione Android, invia un oggetto vuoto. Ad esempio:
 
 ```
 	MFPPush.registerDevice({}, success, failure);
@@ -158,9 +162,7 @@ Android non utilizza il parametro delle impostazioni. Se stai soltanto creando u
 
 ### iOS
 {: #cordova_register_ios}
-Se vuoi personalizzare le proprietà di avviso, badge e audio,
-                    aggiungi il seguente frammento di codice JavaScript alla parte web della tua applicazione
-                    Cordova.
+Per personalizzare le proprietà di avviso, badge e audio, aggiungi il seguente frammento di codice JavaScript alla parte web della tua applicazione Cordova.
 
 ```
 	var settings = {
@@ -186,9 +188,9 @@ Puoi accedere ai contenuti del parametro di risposta con esito positivo in Javas
 **var token = JSON.parse(response).token**
 
 
-Le chiavi disponibili sono le seguenti: `token`, `userId` e `deviceId`.
+Le chiavi disponibili sono: `token`, `userId` e `deviceId`.
 
-Il seguente frammento di codice JavaScript mostra come inizializzare il tuo Bluemix Mobile Services client SDK, registra un dispositivo ed è in ascolto per le notifiche push. Inserisci questo codice nel tuo file Javascript.
+Il seguente frammento di codice JavaScript mostra come inizializzare il tuo Bluemix Mobile Services client SDK, registra un dispositivo con il Push Notification service e ascolta le notifich push. Inserisci questo codice nel tuo file Javascript.
 
 
 
@@ -217,9 +219,9 @@ onDeviceReady: function() {
      var settings = {
          ios: {
              alert: true,
-             badge: true,
-             sound: true
-         }   
+	       badge: true,
+	       sound: true
+	   }   
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
@@ -274,7 +276,7 @@ Crea il tuo progetto e quindi eseguilo utilizzando i seguenti comandi:
 ## Ricezione di notifiche di push sui dispositivi
 {: #cordova_receive}
 
-Copia e incolla i seguenti dispositivi di codice per ricevere notifiche di push sui dispositivi.
+Copia e incolla i seguenti frammenti di codice per ricevere notifiche di push sui dispositivi.
 
 ###JavaScript
 

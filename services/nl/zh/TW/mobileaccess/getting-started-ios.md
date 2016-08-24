@@ -6,21 +6,25 @@ copyright:
 ---
 {:shortdesc: .shortdesc}
 
-# 設定 iOS Objective-C SDK（已淘汰）
+# 設定 iOS Objective-C SDK
 {: #getting-started-ios}
 
-*前次更新：2016 年 6 月 14 日*
+*前次更新：2016 年 7 月 17 日*
 {: .last-updated}
 
 使用 {{site.data.keyword.amashort}} SDK 檢測 iOS 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
 {:shortdesc}
 
-**重要事項：**雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚中斷使用此 SDK，改用新的 Swift SDK。對於新的應用程式，高度建議使用 Swift SDK（請參閱[設定 iOS Swift SDK](getting-started-ios-swift-sdk.html)）。
+**重要事項：**雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用此 SDK，改用新的 Swift SDK。對於新的應用程式，強烈建議使用 Swift SDK（請參閱[設定 iOS Swift SDK](getting-started-ios-swift-sdk.html)）。
 
 ## 開始之前
 {: #before-you-begin}
 您必須具有：
-* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端的相關資訊，請參閱[開始使用](index.html)。
+* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
+
+
+
+
 * Xcode 專案。  
 
 
@@ -54,7 +58,7 @@ sudo gem install cocoapods
 	pod 'IMFCore'
 	```
 
-1. 儲存 `Podfile` 檔案，並從指令行執行 `pod install`。<br/>Cocoapods 將安裝新增的相依關係。您可以看到進度及新增的元件。<br/>**重要事項**：CocoaPods 會產生 `xcworkspace` 檔案。您必須開啟此檔案，才能繼續處理專案。
+1. 儲存 `Podfile` 檔案，然後從指令行執行 `pod install`。<br/>Cocoapods 將安裝新增的相依關係。您可以看到進度及新增的元件。<br/>**重要事項**：CocoaPods 會產生 `xcworkspace` 檔案。您必須開啟此檔案，才能繼續處理專案。
 
 1. 開啟 iOS 專案工作區。開啟 CocoaPods 所產生的 `xcworkspace` 檔案。例如：`{your-project-name}.xcworkspace`。執行 `open {your-project-name}.xcworkspace`。
 
@@ -68,16 +72,15 @@ sudo gem install cocoapods
 
 1. 新增下列標頭，在您要使用 {{site.data.keyword.amashort}} 用戶端 SDK 的類別中匯入 `IMFCore` 架構：
 
-	 **Objective-C：**
-```Objective-C
-	#import <IMFCore/IMFCore.h>
-	```
-
-
-	**Swift：**
+	**Objective-C：**
 	
+	```Objective-C
+	  #import <IMFCore/IMFCore.h>
+	
+	```
+	
+	**Swift：**
 	{{site.data.keyword.amashort}} 用戶端 SDK 是使用 Objective-C 進行實作。您可能需要將橋接標頭新增至 Swift 專案：
-
 	1. 在 Xcode 中的專案上按一下滑鼠右鍵，然後選取**新建檔案...**。
 	1. 在 **iOS 來源**種類中，按一下**標頭檔**。將檔案命名為 `BridgingHeader.h`。
 	1. 將下行新增至橋接標頭：`#import <IMFCore/IMFCore.h>`。
@@ -85,7 +88,7 @@ sudo gem install cocoapods
 	1. 搜尋 `Objective-C Bridging Header`。
 	1. 將值設為 `BridgingHeader.h` 檔案的位置（例如 `$(SRCROOT)/MyApp/BridgingHeader.h`）。
 	1. 建置專案，以確定 Xcode 取得橋接標頭。您應該不會看到任何失敗訊息。
-
+	
 1. 使用下列程式碼來起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。<br/>請將 *applicationRoute* 及 *applicationGUID* 取代為 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的值。
 
 	**Objective-C：**
@@ -95,12 +98,9 @@ sudo gem install cocoapods
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-
-
 	**Swift：**
-
 	```Swift
-IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
+ 		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
 ## 對行動後端提出要求

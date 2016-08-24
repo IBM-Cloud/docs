@@ -11,15 +11,23 @@ copyright:
 # Últimas actualizaciones del paquete de compilación sdk-for-nodejs
 {: #latest_updates}
 
-*Última actualización: 22 de junio de 2016*
+*Última actualización: 18 de julio de 2016*
 {: .last-updated}
 
 Una lista de las últimas actualizaciones del paquete de compilación sdk-for-nodejs.
-## 22 de junio de 2016: se ha actualizado el paquete de compilación de Node.js v3.5-20160608-1102
+## 22 de julio de 2016: Se ha actualizado el paquete de compilación de Node.js v3.6-20160715-0749
+Este release del paquete de compilación da soporte a las versiones de tiempo de ejecución de IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 y 6.2.2. El valor predeterminado es ahora 4.4.7.
+
+Este release incluye un proxy actualizado de App Management que da soporte a los inicios de sesión federados.
+
+Se incluyen arreglos para las siguientes vulnerabilidades de seguridad:
+* [CVE-2016-1669](http://www-01.ibm.com/support/docview.wss?uid=swg21986383)
+
+## 22 de junio de 2016: Se ha actualizado el paquete de compilación de Node.js v3.5-20160609-1608
 
 Este release del paquete de compilación añade el tiempo de ejecución de IBM SDK for Node.js versiones 4.4.5 y 6.2.0. El valor predeterminado es 4.4.5.
 
-El release elimina soporte para versiones de tiempo de ejecución anteriores tal como se ha publicado en [Paquete de compilación Bluemix Node.js v3.3 – modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). El paquete de compilación ahora da soporte a  0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0 y 6.2.0.
+El release elimina soporte para versiones de tiempo de ejecución anteriores tal como se ha publicado en [Paquete de compilación Bluemix Node.js v3.3 – modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). El paquete de compilación ahora da soporte a 0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0 y 6.2.0.
 
 Este release incluye correcciones de errores del [paquete de compilación Node.js de Cloud Foundry 1.5.14](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.14).
 
@@ -27,12 +35,11 @@ Este release incluye correcciones de errores del [paquete de compilación Node.j
 
 Este release del paquete de compilación añade IBM SDK para Node.js versiones 0.10.45, 0.12.14, 4.4.4, 6.0.0 y 6.1.0. El valor predeterminado es ahora 4.4.4.
 
-Se incluyen arreglos para las siugientes vulnerabilidades de seguridad: 
+Se incluyen arreglos para las siguientes vulnerabilidades de seguridad:
 * [CVE-2015-8855](http://www-01.ibm.com/support/docview.wss?uid=swg21982852)
 * [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176](https://www.openssl.org/news/secadv/20160503.txt)
 
-Observe que hay un problema conocido con npm v3 y el programa de utilidad del inspector de App Management.
-npm 3.8.6 es el valor predeterminado con los tiempos de ejecución de 6.0.0 y 6.1.0. Si desea utilizar los tiempos de ejecución 6.x y el programa de utilidad del inspector, debe especificar una versión 2.x npm en package.json como un método alternativo temporal.
+Observe que hay un problema conocido con npm v3 y el programa de utilidad del inspector de App Management. npm 3.8.6 es el valor predeterminado con los tiempos de ejecución de 6.0.0 y 6.1.0. Si desea utilizar los tiempos de ejecución 6.x y el programa de utilidad del inspector, debe especificar una versión 2.x npm en package.json como un método alternativo temporal.
 
 ## 29 de abril de 2016: se ha actualizado el paquete de compilación Node.js v3.3-20160428-1409
 
@@ -71,7 +78,7 @@ Este release está totalmente sincronizado con el paquete de compilación de [Cl
 
 * Actualizaciones de memoria caché:
 
-  * Si se inhabilita la memoria caché (NODE_MODULES_CACHE=false), el paquete de compilación no intentará almacenar en la memoria caché ningún módulo/componente. Anteriormente, este valor hizo que la memoria caché no emergiera, pero aún puede almacenar en memoria caché los módulos instalados para despliegues futuros. Ahora no se hará emerger la memoria caché ni se intentará almacenar ninguna memoria caché. 
+  * Si se inhabilita la memoria caché (NODE_MODULES_CACHE=false), el paquete de compilación no intentará almacenar en la memoria caché ningún módulo/componente. Anteriormente, este valor hizo que la memoria caché no emergiera, pero aún puede almacenar en memoria caché los módulos instalados para despliegues futuros. Ahora no se hará emerger la memoria caché ni se intentará almacenar ninguna memoria caché.
 
   * Bower_components se almacenan en la memoria caché de forma predeterminada además de node_modules.
 
@@ -108,7 +115,7 @@ Para enviar por push su aplicación con v3.0beta:
 ```
 {: codeblock}
 
-Este cambio en el tiempo de ejecución predeterminado no afectará a su aplicación si ha configurado una versión específica de Node.js en el archivo package.json de la aplicación. **Nota:** siempre puede especificar la versión de Node.js para ejecutar la aplicación utilizando la entrada engines.node en el package.json, como se explica en [Versiones disponibles](index.html#available_versions). 
+Este cambio en el tiempo de ejecución predeterminado no afectará a su aplicación si ha configurado una versión específica de Node.js en el archivo package.json de la aplicación. **Nota:** siempre puede especificar la versión de Node.js para ejecutar la aplicación utilizando la entrada engines.node en el package.json, como se explica en [Versiones disponibles](index.html#available_versions).
 
 ## 23 de noviembre de 2015: se ha actualizado el paquete de compilación de Node.js v2.7-20151118-1003
 
@@ -162,7 +169,7 @@ Además, hemos reformado la característica de gestión de aplicaciones del paqu
 * El paquete de compilación Node.js ahora incluye soporte para la configuración dinámica de registros. Con este soporte, los desarrolladores pueden cambiar dinámicamente el nivel de registro de su aplicación si dicha aplicación utiliza módulos log4js, bunyan o ibmbluemix para el registro.
 * El paquete de compilación Node.js se suministra ahora con [IBM SDK for Node.js v0.10.33](https://developer.ibm.com/node/sdk/). Esta actualización incluye arreglos para el problema de POODLE.
 
-## 23 de octubre de 2014: se ha actualizado el paquete de compilación Node.js v1.6-20141013-1736
+## 23 de octubre de 2014: Se ha actualizado el paquete de compilación de Node.js v1.6-20141013-1736
 
 * El paquete de compilación Node.js se suministra ahora con [IBM SDK for Node.js v1.1.0.8](https://developer.ibm.com/node/sdk/). Esta actualización significa que obtiene un soporte completo al tiempo de ejecución de IBM Node.js
 cuando especifique el tiempo de ejecución Node.js más estable para la aplicación, v0.10.32. Este último SDK incluye un arreglo de un problema con el módulo qs incorporado que provocaba un a denegación de servicio. También contiene una versión actualizada del módulo npm y otras mejoras en los módulos http y url. Para obtener más detalles, consulte el [registro de cambios de v0.10.32](https://raw.githubusercontent.com/joyent/node/v0.10.32/ChangeLog).
@@ -171,8 +178,8 @@ cuando especifique el tiempo de ejecución Node.js más estable para la aplicaci
 ## 30 de septiembre de 2014: se ha actualizado el paquete de compilación Node.js v1.4-20140908-1746
 
 * El paquete de compilación Node.js se suministra ahora con [IBM SDK for Node.js v1.1.0.7](https://developer.ibm.com/node/sdk/). Esta actualización significa que obtiene un soporte completo al tiempo de ejecución de IBM Node.js
-cuando especifique el tiempo de ejecución Node.js más estable para la aplicación, v0.10.31. Con un tiempo de ejecución de Node.js con soporte completo, los clientes reciben una experiencia de soporte coherente. 
-* El paquete de compilación contiene una infraestructura de servicio mejorada. En concreto, funciona mejor al enlazar el servicio Monitoring and Analytics y proporciona más información de diagnóstico en caso de que el servicio falle. 
+cuando especifique el tiempo de ejecución Node.js más estable para la aplicación, v0.10.31. Con un tiempo de ejecución de Node.js con soporte completo, los clientes reciben una experiencia de soporte coherente.
+* El paquete de compilación contiene una infraestructura de servicio mejorada. En concreto, funciona mejor al enlazar el servicio Monitoring and Analytics y proporciona más información de diagnóstico en caso de que el servicio falle.
 
 ## 28 de agosto de 2014: se ha actualizado el paquete de compilación Node.js v1.3-20140821-1143
 

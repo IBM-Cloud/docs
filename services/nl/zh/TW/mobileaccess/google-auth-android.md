@@ -8,6 +8,10 @@ copyright:
 # 啟用 Android 應用程式的 Google 鑑別
 {: #google-auth-android}
 
+
+*前次更新：2016 年 6 月 16 日*
+{: .last-updated}
+
 ## 開始之前
 {: #before-you-begin}
 您必須具有：
@@ -30,14 +34,16 @@ copyright:
 1. 使用 **Google+** API 建立專案。
 2. 新增 **OAuth** 使用者存取權。
 3. 在您新增認證之前，必須選擇平台 (Android)。
-4. 新增認證。若要完成認證建立作業，您需要新增**簽署憑證指紋**。
+4. 新增認證。 
+
+若要完成認證建立作業，您需要新增**簽署憑證指紋**。
 
 
 
 ### 設定簽署憑證
 為了讓 Google 驗證應用程式確實性，您必須指定簽署憑證指紋。
 
-Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所有應用程式。Android 應用程式可以使用兩種模式建置：除錯及發行。通常建議針對除錯及發行模式使用不同的憑證。用於以除錯模式簽署 Android 應用程式的憑證會與 Android SDK 組合。Android Studio 通常會自動安裝 Android SDK。當您要將應用程式發行到 Google Play 時，必須使用通常自行產生的另一個憑證來簽署應用程式。如需相關資訊，請參閱[簽署 Android 應用程式](http://developer.android.com/tools/publishing/app-signing.html)。
+Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所有應用程式。Android 應用程式可以使用兩種模式建置：除錯及發行。通常建議針對除錯及發行模式使用不同的憑證。用於以除錯模式簽署 Android 應用程式的憑證會與 Android SDK 組合。Android Studio 通常會自動安裝 Android SDK。當您要將應用程式發行到 Google Play 時，必須使用另一個憑證來簽署應用程式（您通常會自行產生另一個憑證）。如需相關資訊，請參閱[簽署 Android 應用程式](http://developer.android.com/tools/publishing/app-signing.html)。
 
 包含開發環境憑證的金鑰儲存庫儲存在 `~/.android/debug.keystore` 檔案中。預設金鑰儲存庫密碼為 `android`。此憑證用來以除錯模式建置應用程式。
 
@@ -56,7 +62,7 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
   若要尋找 Android 應用程式的套件名稱，請在 Android Studio 中開啟 `AndroidManifest.xml` 檔案，並尋找：`<manifest package="{your-package-name}">`。 
 
-1. 完成時，請按一下**建立**。**這會完成認證建立作業。**
+1. 完成時，請按一下**建立**。這會完成認證建立作業。
 
 ###Google 用戶端 ID
 
@@ -70,11 +76,11 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板中開啟應用程式。
 
-1. 按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及 **應用程式 GUID** (`applicationGUID`)。起始設定 SDK 時，您需要這些值。
+1. 按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及**應用程式 GUID** (`applicationGUID`)。起始設定 SDK 時，您需要這些值。
 
 1. 按一下 {{site.data.keyword.amashort}} 磚。即會載入 {{site.data.keyword.amashort}} 儀表板。
 
-1. 按一下 **Google** 磚。
+1. 按一下 **Google** 畫面上的**配置**按鈕。
 
 1. 在**適用於 Android 的應用程式 ID** 中，指定適用於 Android 的「Google 用戶端 ID」，然後按一下**儲存**。
 
@@ -85,7 +91,7 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
 1. 開啟應用程式模組的 `build.gradle` 檔案。
 
-	Android 專案可能會有兩個 `build.gradle` 檔案：一個用於專案，另一個用於應用程式模組。請使用應用程式模組。
+	Android 專案可能會有兩個 `build.gradle` 檔案：一個用於專案，另一個用於應用程式模組。請使用應用程式模組的檔案。
 
   尋找 dependencies 區段，並新增用戶端 SDK 的編譯相依關係：
 
@@ -123,12 +129,18 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");
+					"applicationGUID",
+					BMSClient.REGION_UK);
 
 	GoogleAuthenticationManager.getInstance().register(this);
 	```
 
-1. 將下列程式碼新增至「活動」：
+  將 `BMSClient.REGION_UK` 取代為適當的地區。
+
+
+	
+
+1. 將下列程式碼新增至您的活動中：
 
 	```Java
 	@Override
@@ -143,9 +155,8 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 {: #google-auth-android-test}
 起始設定用戶端 SDK 並登錄「Google 鑑別管理程式」之後，即可開始對行動後端應用程式提出要求。
 
-### 開始之前
-{: #google-auth-android-testing-before}
-您必須具有使用 MobileFirst Services Starter 樣板所建立的行動後端應用程式，並在 `/protected` 端點已具有 {{site.data.keyword.amashort}} 所保護的資源。如需相關資訊，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+
+開始測試之前，您必須具有使用 **MobileFirst Services Starter** 樣板所建立的行動後端應用程式，並在 `/protected` 端點已具有 {{site.data.keyword.amashort}} 所保護的資源。如需相關資訊，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 1. 開啟 `{applicationRoute}/protected`（例如：`http://my-mobile-backend.mybluemix.net/protected`），嘗試在桌面瀏覽器中將要求傳送給行動後端應用程式的受保護端點。
  使用「MobileFirst Services 樣板」所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。因此，只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取它。因此，您會在桌面瀏覽器中看到 `Unauthorized`。
@@ -173,11 +184,17 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 	});
 ```
 
-1. 執行應用程式。即會蹦現「Google 登入」畫面。登入之後，應用程式會要求資源的存取權：![影像](images/android-google-login.png)
+1. 執行您的應用程式。即會蹦現「Google 登入」畫面。登入之後，應用程式會要求資源的存取權：
 
-	根據 Android 裝置以及目前是否登入 Google，您可能會有不同的使用者介面。按一下**確定**，即會授權 {{site.data.keyword.amashort}} 使用 Google 使用者身分來進行鑑別。
+	![影像](images/android-google-login.png)
 
-1. 	要求成功之後，您會在 LogCat 工具中看到下列輸出：![影像](images/android-google-login-success.png)
+	根據 Android 裝置以及目前是否已登入 Google，您可能會有不同的使用者介面。
+
+  按一下**確定**，即會授權 {{site.data.keyword.amashort}} 使用 Google 使用者身分來進行鑑別。
+
+1. 	要求成功之後，您會在 LogCat 工具中看到下列輸出：
+
+	![影像](images/android-google-login-success.png)
 
  您也可以新增下列程式碼，來新增登出功能：
 
@@ -185,4 +202,6 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
  GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- 如果您在使用者使用 Google 登入之後呼叫此程式碼，則會將使用者登出 Google。使用者嘗試再次登入時，必須選取將用來再次登入的 Google 帳戶。他們嘗試使用先前登入的 Google ID 進行登入時，不會提示使用者再次輸入其認證。若要讓系統再次提示輸入登入認證，使用者必須從 Android 裝置中移除其 Google 帳戶。傳遞給 logout 函數的 `listener` 值可以是 `null`。
+ 如果您在使用者使用 Google 登入之後呼叫此程式碼，則會將使用者登出 Google。使用者嘗試再次登入時，他們必須選取 Google 帳戶才能再次登入。他們嘗試使用先前登入的 Google ID 進行登入時，不會提示使用者再次輸入其認證。若要讓系統再次提示輸入登入認證，使用者必須從 Android 裝置中移除其 Google 帳戶。
+
+ 傳遞給 logout 函數的 `listener` 值可以是 `null`。

@@ -5,14 +5,18 @@ copyright:
 
 ---
 
+{:screen: .screen}
+{:shortdesc: .shortdesc}
+
+
 # Enabling Google authentication for iOS Objective C apps
 {: #google-auth-ios}
 
 
-Last updated: 27 June 2016
+Last updated: 22 August 2016
 {: .last-updated}
 
-Use Google Sign-In to authenticate users on your Mobile Client Access iOS app.
+Use Google Sign-In to authenticate users on your {{site.data.keyword.amafull}} iOS app.
 
 **Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue this SDK later this year in favor of the new Swift SDK. For new applications we highly recommend using the Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the Swift SDK, see [Enabling Google authentication in iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
 
@@ -77,8 +81,6 @@ Now that you have a Google iOS client ID, you can enable Google authentication i
 
 1. In **Application ID for iOS**, specify your Google client ID for iOS and click **Save**.
 
-	Note: In addition to the Google client ID, the reverse value is also needed for your client configuration. To access both values, download the example plist using the pencil icon:
-		![info.plist file download](images/download_plist.png)
 
 ## Configuring the {{site.data.keyword.amashort}} Google client SDK for iOS
 {: #google-auth-ios-sdk}
@@ -93,6 +95,7 @@ Now that you have a Google iOS client ID, you can enable Google authentication i
 	```
 	pod 'IMFGoogleAuthentication'
 	```
+{: codeblock}
 
 1. Save the `Podfile` and run `pod install` from the command line. CocoaPods  installs the dependencies. You will see the progress and which components were added.
 
@@ -135,6 +138,8 @@ Configure Google integration by updating the `info.plist` file. The `info.plist`
 	</array>
 
 	```
+{: codeblock}
+
 	Update both URL Schemas.
 
 	**Important**: Do not override any existing properties in the `info.plist` file. If you have overlapping properties, you will need to merge the properties manually. For more information, see [Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start).
@@ -150,14 +155,15 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 1. Import the required frameworks in the class where you want to use the {{site.data.keyword.amashort}} client SDK. Add the following headers:
 
-	Objective-C:
+	#### Objective-C:
 
 	```Objective-C
 	#import <IMFCore/IMFCore.h>
 	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
 	```
+{: codeblock}
 
-	Swift:
+	#### Swift:
 
 	The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project to use the SDK.
 
@@ -166,50 +172,72 @@ A common, though not mandatory, place to put the initialization code is in the `
 	3. Name it `BridgingHeader.h`
 	4. Add the following imports to your bridging header:
 
-	```Objective-C
+	```Swift
 	#import <IMFCore/IMFCore.h>
 	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
 	```
+{: codeblock}
 	5. Click your project in Xcode and select the **Build Settings** tab.
 	6. Search for `Objective-C Bridging Header`.
 	7. Set the value to the location of your `BridgingHeader.h` file, for example: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	8. Make sure your bridging header is being picked up by Xcode by building your project.
 
 
-3. Use the following code to initialize the client SDK.  Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values that you obtained from **Mobile Options**.
+3. Use the following code to initialize the client SDK.  Replace `applicationRoute` and `applicationGUID` with the **Route** and **App GUID** values that you obtained from **Mobile Options**.
 
-	Objective-C:
+	#### Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+{: codeblock}
 
-	Swift:
+	#### Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+{: codeblock}
+
+1. Initialize the `AuthorizationManager` by passing the {{site.data.keyword.amashort}} service `tenantId` parameter. You can find this value by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+
+  ####Objective-C
+	
+  ```Objective-C
+
+  	   [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+ {: codeblock}
+
+  ####Swift
+
+  ```Swift
+	   IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+  ```
+ {: codeblock}
 
 1. Register Google Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code immediately after you initialize the IMFClient:
 
-	Objective-C:
+	#### Objective-C:
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 	```
+{: codeblock}
 
-	Swift:
+	#### Swift:
 
 	```Swift
 	IMFGoogleAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
 	```
+{: codeblock}
 
 1. Add the following code to your app delegate.
 
-	Objective-C:
+	#### Objective-C:
 
 	```Objective-C
 	- (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -226,8 +254,9 @@ A common, though not mandatory, place to put the initialization code is in the `
 		return  shouldHandleGoogleURL;
 	}
 	```
+{: codeblock}
 
-	Swift:
+	#### Swift:
 
 	```Swift
 	func application(application: UIApplication, openURL url: NSURL,
@@ -242,6 +271,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 		return shouldHandleGoogleURL;
 	}
 ```
+{: codeblock}
 
 ## Testing the authentication
 {: #google-auth-ios-testing}
@@ -258,7 +288,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 
 1. Use your iOS application to make request to the same endpoint.
 
-	Objective-C:
+	#### Objective-C:
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -276,8 +306,9 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 		}
 	}];
 	```
+{: codeblock}
 
-	Swift:
+	#### Swift:
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"
@@ -293,6 +324,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 	};
 
 	```
+{: codeblock}
 
 1. Run your application. You will see a Google Login screen pop-up
 
@@ -308,17 +340,19 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 		
 	You can also add logout functionality by adding the following code:
 
-	Objective C:
+	#### Objective C:
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
 	```
+{: codeblock}
 
-	Swift:
+	#### Swift:
 
 	```Swift
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
+{: codeblock}
 
 	If you call this code after a user is logged in with Google and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Google for authentication purposes. At that point, the user can click the user name <!--in the upper-right corner of the screen--> to select and login with another user.
 

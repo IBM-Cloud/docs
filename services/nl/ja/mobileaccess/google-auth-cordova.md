@@ -7,13 +7,17 @@ copyright:
 
 # Cordova アプリ用の Google 認証の使用可能化
 {: #google-auth-cordova}
-Cordova アプリケーションを Google 認証統合用に構成するには、Cordova アプリケーションのネイティブ・コード (例えば、Java、Objective-C、Swift) で変更を行う必要があります。各プラットフォームは別々に構成する必要があります。ネイティブ・コードの変更は、Android Studio や Xcode などのネイティブ開発環境で行ってください。
+
+*最終更新日: 2016 年 6 月 28 日*
+{: .last-updated}
+
+Cordova アプリケーションを Google 認証統合用に構成するには、Cordova アプリケーションのネイティブ・コード (Java、Objective-C、または Swift) で変更を行う必要があります。各プラットフォームは別々に構成する必要があります。ネイティブ・コードの変更は、Android Studio や Xcode などのネイティブ開発環境で行ってください。
 
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
 * {{site.data.keyword.amashort}} Client SDK が装備された Cordova プロジェクト。詳しくは、[Cordova プラグインのセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)を参照してください。  
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
 * (オプション) 次のセクションの内容をよく理解してください。
    * [Android アプリでの Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [iOS アプリでの Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
@@ -28,7 +32,7 @@ Cordova アプリケーションの Android プラットフォームを Google �
 * Google 認証用の {{site.data.keyword.amashort}} の構成
 * Android 用の {{site.data.keyword.amashort}} Client SDK の構成
 
-Cordova アプリケーションを構成する際の唯一の違いは、Java コードではなく JavaScript コードで {{site.data.keyword.amashort}} Client SDK を初期化する必要がある点です。ネイティブ・コードでの `GoogleAuthenticationManager` API の登録はまだ必要になります。
+Cordova アプリケーションの場合、Java コードではなく JavaScript コードで {{site.data.keyword.amashort}} Client SDK を初期化する必要があります。ネイティブ・コードでの `GoogleAuthenticationManager` API の登録はまだ必要になります。
 
 ## iOS プラットフォームの構成
 {: #google-auth-cordova-ios}
@@ -45,13 +49,9 @@ Cordova アプリケーションの iOS プラットフォームを Google 認�
 1. `Sources/Authenticators/IMFGoogleAuthentication` ディレクトリーに移動し、すべてのファイルを Xcode で iOS プロジェクトにコピー (ドラッグ・アンド・ドロップ) します。コピーする必要があるファイルは以下のとおりです。
 
 	> * IMFDefaultGoogleAuthenticationDelegate.h
-
 	> * IMFDefaultGoogleAuthenticationDelegate.m
-
 	> * IMFGoogleAuthenticationDelegate.h
-
 	> * IMFGoogleAuthenticationHandler.h
-
 	> * IMFGoogleAuthenticationHandler.m
 
 **「Copy files....(ファイルのコピー)」**チェック・ボックスを選択します。
@@ -60,13 +60,13 @@ Cordova アプリケーションの iOS プラットフォームを Google 認�
 
 1. [Start integrating Google+ into your iOS app](https://developers.google.com/+/mobile/ios/getting-started) チュートリアルのステップ 2 に従って、Google+ iOS SDK を Xcode プロジェクトに統合します。
 
-[Google 認証用の iOS プラットフォームの構成](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)の **Google 認証用の iOS プロジェクトの構成**セクションに進みます。`{{site.data.keyword.amashort}} Client SDK の初期化`セクションの説明に従って、ネイティブ・コードで `IMFGoogleAuthenticationHandler` を登録します。`IMFClient` をネイティブ・コードで初期化する必要はありません。これは、すぐに JavaScript コードで行われます。
+[Google 認証用の iOS プラットフォームの構成](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)の **Google 認証用の iOS プロジェクトの構成**セクションに進みます。`{{site.data.keyword.amashort}} Client SDK の初期化`セクションの説明に従って、ネイティブ・コードで `IMFGoogleAuthenticationHandler` を登録します。ネイティブ・コードで `IMFClient` を初期化しないでください (クライアントは次のセクションで JavaScript で初期化されます)。
 
-アプリケーション代行の `application:openURL:sourceApplication:annotation` メソッドに以下の行を追加します。この行により、すべての Cordova プラグインに各イベントが確実に通知されます。
+アプリケーション代行の `application:openURL:sourceApplication:annotation` メソッドに以下の行を追加します。これにより、すべての Cordova プラグインに各イベントが確実に通知されます。
 
 ```
 [[ NSNotificationCenter defaultCenter] postNotification:
-		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
+		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
 ```
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
@@ -82,18 +82,18 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 
 ## 認証のテスト
 {: #google-auth-cordova-test}
-Client SDK が初期化されたら、モバイル・バックエンドに要求を出すことができるようになります。
+Client SDK が初期化されたら、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
 ### 開始する前に
 {: #google-auth-cordova-testing-before}
-{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+`/protected` エンドポイントに {{site.data.keyword.amashort}} によって保護されたバックエンド・アプリケーションがなければなりません。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
 
-1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンドの保護エンドポイントへの要求の送信を試行します。
+1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。
 
-1. MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} によって保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみです。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
+1. MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} によって保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみです。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
 
-1. Cordova アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後に、以下のコードを追加します。
+1. Cordova アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 
 	```JavaScript
 	var success = function(data){
@@ -110,7 +110,8 @@ Client SDK が初期化されたら、モバイル・バックエンドに要求
 1. アプリケーションを実行します。Google のログイン画面が表示されます。
 
 	![image](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-google-login.png)
-	この画面は、ご使用のデバイスに Facebook アプリがインストールされていない場合や現在 Facebook にログインしていない場合、若干異なって見える可能性があります。1. **「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。
+	この画面は、ご使用のデバイスに Facebook アプリがインストールされていない場合や現在 Facebook にログインしていない場合、若干異なって見える可能性があります。
+1. **「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。
 
 1. 	ユーザーの要求は正常に処理されます。ご使用のプラットフォームに応じて、LogCat コンソールまたは Xcode コンソールに以下の出力が表示されます。
 

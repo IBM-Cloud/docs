@@ -23,7 +23,7 @@ bei erfolgreicher Authentifizierung eine Benutzeridentität zurückgibt. Die fol
   displayName: <displayName>;
  };
 ```
-* Eine Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
 
 
 
@@ -31,16 +31,15 @@ bei erfolgreicher Authentifizierung eine Benutzeridentität zurückgibt. Die fol
 
 
 1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard.
-1. Klicken Sie auf die Kachel {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
+1. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
 1. Klicken Sie auf die Kachel 'Angepasst'.
-1. Geben Sie das **angepasste Realm**, die **angepasste Identitätsprovider-URL** und den **redirect_uri** an. Klicken Sie auf 'Speichern'.
+1. Geben Sie das **angepasste Realm**, die **angepasste Identitätsprovider-URL** und den **Weiterleitungs-URI** an. Klicken Sie auf 'Speichern'.
 
 ## {{site.data.keyword.amashort}} für angepasste Webauthentifizierung verwenden
 
 Gehen Sie wie folgt vor, um den Autorisierungsprozess zu starten:
 
-1. Leiten Sie von Ihrer Web-App zum folgenden
- Endpunkt des Autorisierungsservers weiter:
+1. Leiten Sie von Ihrer Web-App zum folgenden Endpunkt des Autorisierungsservers weiter:
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
   
@@ -73,7 +72,7 @@ Die nach erfolgreicher Authentifizierung zurückgegebene Antwort enthält den Au
  redirect_uri = <redirect_uri>
  code = <authorization code>
  ```
-  Der Parameter `redirect_uri` muss mit dem `redirect_uri` aus Schritt 1 übereinstimmen. Der Autorisierungscode wurde von der Anforderung in Schritt 2 zurückgegeben.
+  Der Parameter `redirect_uri` muss mit dem `redirect_uri` aus Schritt 1 übereinstimmen. Der Autorisierungscode wurde von der Anforderung in Schritt 2 zurückgegeben. 
   
   Sie müssen diese `POST`-Anforderung innerhalb von 10 Minuten senden, da der Autorisierungscode maximal 10 Minuten gültig ist.
 
@@ -85,6 +84,7 @@ Der Antwortteil von `POST` enthält das *access_token* und das
 
 Nun können Sie mit dem Senden von Anforderungen an Ihre geschützten Ressourcen beginnen.
 Alle Anforderungen an geschützte Ressourcen sollten das `access_token` enthalten.
-Senden Sie das Zugriffstoken im Headerfeld für die Autorisierungsanforderung (`the-Authorization-request`).
+Senden Sie das Zugriffstoken im Headerfeld für die `Autorisierungsanforderung`.
+
 
 

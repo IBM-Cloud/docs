@@ -24,7 +24,7 @@ navtitle="安装 Swift 客户端 SDK" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html" navtitle="检测应用程序" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="识别客户端密钥" scope="peer"> </topicref>
+navtitle="识别访问密钥" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
 navtitle="初始化 Android 应用程序" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"
@@ -40,15 +40,7 @@ scope="peer"> </topicref>
 </topicref>
 <topicref format="html" href="app-monitoring.html" linking="sourceonly" navtitle="监视应用程序"
 scope="peer" outputclass="subsection">
-<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="直观显示数据"
-scope="peer">
-<topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly"
-navtitle="创建定制图表" scope="peer"> </topicref>
-<topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly"
-navtitle="导出定制数据" scope="peer"> </topicref>
-<topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly"
-navtitle="导出和导入定制图表定义" scope="peer"> </topicref>
-</topicref>
+<!--<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="Visualizing data" scope="peer" audience="blue"><topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly" navtitle="Creating custom charts" scope="peer"> </topicref><topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly" navtitle="Exporting custom data" scope="peer"> </topicref><topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly" navtitle="Exporting and importing custom chart definitions" scope="peer"> </topicref></topicref>-->
 <topicref format="html" href="app-monitoring.html#alerts" navtitle="设置警报" scope="peer">
 <topicref format="html" href="app-monitoring.html#alert-def-client-logs" linking="sourceonly"
 navtitle="创建客户端日志警报" scope="peer"> </topicref>

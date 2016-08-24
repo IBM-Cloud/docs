@@ -7,11 +7,11 @@ copyright:
 
 {:new_window: target="_blank"}
 # Modalidades de pruebas y de producción
-
 {: #push-sandboxandproduction-modes}
+*Última actualización: 14 de junio de 2016*
+{: .last-updated}
 
-Puede utilizar las Notificaciones push en una de las modalidades siguientes: prueba o
-                producción. El recinto de pruebas es un entorno de prueba autocontenido para desarrollar y probar la integración de API push
+Puede utilizar las notificaciones push en una de las modalidades siguientes: prueba o producción. El recinto de pruebas es un entorno de prueba autocontenido para desarrollar y probar la integración de API push
                 con el servicio push de la aplicación de servidor. Configure en primer lugar las modalidades de pruebas y de producción utilizando el Panel de instrumentos Push. Conmute la modalidad de operación del servicio push entre pruebas y producción utilizando la [API REST de Push](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}. De forma predeterminada,
                 estará habilitada la modalidad de pruebas. Sin embargo, cuando se cambia entre modalidades, las etiquetas, los dispositivos y las suscripciones no se comparten entre estas modalidades.
 

@@ -6,14 +6,25 @@ copyright:
 ---
 # Anforderungen mit IMFURLProtocol senden
 {: #imfurl}
+
+*Letzte Aktualisierung: 22. Juni 2016*
+{: .last-updated}
+
 In einigen Fällen ist es vielleicht nicht möglich, die Klasse `IMFResourceRequest` zum Senden von Anforderungen an geschützte Ressourcen zu verwenden. Dies ist beispielsweise der Fall, wenn eine Anforderung an eine geschützte Ressource durch einen Code eines Drittanbieters gesendet wird. Eine mögliche Lösung besteht in der Verwendung der API `IMFURLProtocol` in Kombination mit dem Standardaufruf `NSURLRequest (NSMutableURLRequest)`.
 
-Die API `IMFURLProtocol` ist nur über das {{site.data.keyword.amashort}}-Objective-C-SDK verfügbar.
+**Anmerkung:** Die API `IMFURLProtocol` ist nur über das {{site.data.keyword.amashort}}-Objective-C-SDK verfügbar. 
 
 ## Pod `IMFURLProtocol` installieren
 {: #imfurl-pod}
 
-Mithilfe von CocoaPods können Sie den Pod `IMFURLProtocol` installieren. Anschließend können Sie `IMFURLProtocol.h` in Ihrem iOS-Projekt referenzieren.
+Verwenden Sie CocoaPods, um den Pod `IMFURLProtocol` zu installieren.  
+
+Bearbeiten Sie die Podfile-Datei und fügen Sie die folgende Zeile hinzu; führen Sie die Datei anschließend aus: 
+```Bash
+pod 'IMFURLProtocol'
+```
+
+Referenzieren Sie anschließend `IMFURLProtocol.h` in Ihrem iOS-Projekt. 
 
 ## Anforderungen mit der API `IMFURLProtocol` senden
 {: #imfurl-send}

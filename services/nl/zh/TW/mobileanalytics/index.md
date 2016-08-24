@@ -9,10 +9,10 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 開始使用 {{site.data.keyword.mobileanalytics_short}}（測試版）  
+# 開始使用 {{site.data.keyword.mobileanalytics_short}}（實驗性）  
 
 {: #gettingstartedtemplate}
-*前次更新：2016 年 5 月 17 日*
+*前次更新：2016 年 7 月 1 日*
 {: .last-updated}
 
 使用 {{site.data.keyword.mobileanalytics_full}} 服務來測量行動應用程式、行動使用者及行動裝置的狀態、行為及環境定義。
@@ -22,9 +22,9 @@ copyright:
 
 1. 為 {{site.data.keyword.mobileanalytics_short}} 服務[建立實例](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)之後，可以在「{{site.data.keyword.Bluemix}} 儀表板」的「服務」區段中按一下您的磚，以存取「{{site.data.keyword.mobileanalytics_short}} 主控台」。
 
-  **重要事項：**當您一開始開啟新建立的 Mobile Analytics 服務時，會顯示一個視窗，確認您允許 {{site.data.keyword.Bluemix_notm}} 將有關您的必要資訊提供給服務，讓服務可以驗證您的身分。按一下**確認**，繼續移至 {{site.data.keyword.mobileanalytics_short}} 主控台。如果您取消，將不會開啟 {{site.data.keyword.mobileanalytics_short}} 主控台。
+  **重要事項：**當您一開始開啟新建立的 Mobile Analytics 服務時，可能會顯示一個視窗，確認您允許 {{site.data.keyword.Bluemix_notm}} 將有關您的必要資訊提供給服務，讓服務可以驗證您的身分。按一下**確認**，繼續移至 {{site.data.keyword.mobileanalytics_short}} 主控台。如果您取消，將不會開啟 {{site.data.keyword.mobileanalytics_short}} 主控台。
 
-2. 安裝 {{site.data.keyword.mobileanalytics_short}} [Client SDK](install-client-sdk.html)。
+2. 安裝 {{site.data.keyword.mobileanalytics_short}} [Client SDK](install-client-sdk.html)。您可以選擇性地使用 {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}。
 
 3. 匯入 Client SDK，並使用下列程式碼 Snippet 起始設定它們，以記錄用法分析。
 
@@ -36,7 +36,7 @@ copyright:
 		import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
 		import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
 		```
-	2. 使用[用戶端金鑰](sdk.html#analytics-clientkey)值，以在應用程式碼內起始設定 Client SDK，來記錄用法分析及應用程式階段作業。
+	2. 使用[存取金鑰](sdk.html#analytics-clientkey)值，以在應用程式碼內起始設定 Client SDK，來記錄用法分析及應用程式階段作業。
 
 		```Java
 			try {
@@ -45,24 +45,24 @@ copyright:
 			catch (MalformedURLException e) {
 	            //The Bluemix region provided is invalid
 	        }
-				Analytics.init(getApplication(), your_app_name, your_client_key, Analytics.DeviceEvent.LIFECYCLE);
+				Analytics.init(getApplication(), your_app_name, your_access_key, Analytics.DeviceEvent.LIFECYCLE);
 		```
-    **bluemixRegion** 參數指定您所使用的 Bluemix 部署（例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`）。
-
+**bluemixRegion** 參數指定您所使用的 Bluemix 部署（例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`）。
   #### iOS
   {: #ios-initialize}
   1. 匯入 `BMSCore` 及 `BMSAnalytics` 架構：
+  
   ```
-    import BMSCore
+import BMSCore
     import BMSAnalytics
     ```
-  2. 使用[用戶端金鑰](sdk.html#analytics-clientkey)值，以在應用程式碼內起始設定 Client SDK，來記錄用法分析及應用程式階段作業。
+  2. 使用[存取金鑰](sdk.html#analytics-clientkey)值，以在應用程式碼內起始設定 Client SDK，來記錄用法分析及應用程式階段作業。
  
 	```Swift
 	BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-	Analytics.initializeWithAppName(your_app_name, apiKey: your_client_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	Analytics.initializeWithAppName(your_app_name, apiKey: your_access_key, deviceEvents: DeviceEvent.LIFECYCLE)
 	```
-  **bluemixRegion** 參數指定您所使用的 Bluemix 部署（例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`）。
+**bluemixRegion** 參數指定您所使用的 Bluemix 部署（例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`）。
 4. 將記錄的用法分析傳送至「Mobile Analytics 服務」。簡單的測試分析方式是在應用程式啟動時執行下列程式碼：
 
 	#### Android
@@ -86,7 +86,7 @@ copyright:
 	請閱讀[檢測應用程式](sdk.html)主題。
 5. 在模擬器或裝置上編譯並執行應用程式。
 
-6. 移至 {{site.data.keyword.mobileanalytics_short}} **儀表板**以查看用法分析（例如，使用應用程式的新裝置及裝置總數）。您也可以[建立自訂圖表](app-monitoring.html#custom-charts)、[設定警示](app-monitoring.html#alerts)及[監視應用程式損毀](app-monitoring.html#monitor-app-crash)來監視應用程式。
+6. 移至 {{site.data.keyword.mobileanalytics_short}} **儀表板**以查看用法分析（例如，使用應用程式的新裝置及裝置總數）。您也可以<!--[creating custom charts](app-monitoring.html#custom-charts),-->[設定警示](app-monitoring.html#alerts)及[監視應用程式損毀](app-monitoring.html#monitor-app-crash)來監視應用程式。
 
 
 # 相關鏈結
@@ -94,3 +94,7 @@ copyright:
 ## SDK
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+
+## API 參考資料
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

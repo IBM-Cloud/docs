@@ -12,7 +12,7 @@ copyright:
 {: #facebook-auth-ios}
 
 
-*上次更新时间：2016 年 6 月 15 日*
+*上次更新时间：2016 年 7 月 17 日*
 {: .last-updated}
 
 
@@ -51,7 +51,7 @@ copyright:
 
 1. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
 
-1. 单击 **Facebook** 磁贴。
+1. 单击 **Facebook** 面板中的**配置**按钮。
 
 1. 指定 Facebook 应用程序标识，然后单击**保存**。
 
@@ -143,12 +143,14 @@ copyright:
 ```
 使用 Facebook 应用程序标识更新 URL 方案和 FacebookappID 属性。
 
- **重要信息**：确保您未覆盖 `info.plist` 文件中的任何现有属性。如果您有重叠属性，必须手动进行合并。有关更多信息，请参阅 [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) 和 [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9)。
+  **重要信息**：确保您未覆盖 `info.plist` 文件中的任何现有属性。如果您有重叠属性，必须手动进行合并。有关更多信息，请参阅 [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) 和 [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9)。
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #facebook-auth-ios-initalize}
 
 传递应用程序路径 (`applicationRoute`) 和应用程序 GUID (`applicationGUID`)，以初始化客户端 SDK。
+
+
 
 通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
 
@@ -158,7 +160,7 @@ copyright:
 
 	**Objective-C**
 
-	```Objective-C
+		```Objective-C
 	#import <IMFCore/IMFCore.h>
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
@@ -178,16 +180,21 @@ copyright:
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
-	* 在 Xcode 中单击项目，然后选择**构建设置** 选项卡。
+	* 在 Xcode 中单击项目，然后选择**构建设置**选项卡。
 	* 搜索 **Objective-C Bridging Header**。
- * 将值设置为您的 `BridgingHeader.h` 文件的位置，例如：`$(SRCROOT)/MyApp/BridgingHeader.h`。
- * 通过构建项目来确保 Xcode 选取了您的桥接头。您应该不会看到任何失败消息。
+	* 将值设置为您的 `BridgingHeader.h` 文件的位置，例如：`$(SRCROOT)/MyApp/BridgingHeader.h`。
+
+	* 通过构建项目来确保 Xcode 选取了您的桥接头。您应该不会看到任何失败消息。
+
+
 
 3. 初始化客户端 SDK。将 *applicationRoute* 和 *applicationGUID* 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。
 
-**Objective-C**
 
-	```Objective-C
+
+	**Objective-C**
+
+		```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
@@ -202,9 +209,11 @@ copyright:
 
 1. 通过将以下代码添加到应用程序代表中的 `application:didFinishLaunchingWithOptions` 方法，通知 Facebook SDK 有关应用程序激活的信息，并注册 Facebook 认证处理程序。初始化 IMFClient 实例后，立即添加以下代码。
 
+	
+
 	**Objective-C**
 
-	```Objective-C
+		```Objective-C
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 ```
@@ -220,7 +229,7 @@ copyright:
 
 	**Objective-C**
 
-	```Objective-C
+		```Objective-C
 	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
 			sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 
@@ -235,9 +244,7 @@ copyright:
 	func application(application: UIApplication, openURL url: NSURL,
 					sourceApplication: String?, annotation: AnyObject) -> Bool {
 
-		return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
-
-	}
+		return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)}
 ```
 
 ## 测试认证
@@ -256,7 +263,7 @@ copyright:
 
 	**Objective-C**
 
-	```Objective-C
+		```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
 								[[IMFClient sharedInstance] backendRoute]];
 
@@ -291,7 +298,7 @@ copyright:
 
 1. 运行应用程序。这将弹出 Facebook 登录屏幕。
 
- ![图像](images/ios-facebook-login.png)
+	![图像](images/ios-facebook-login.png)
 
 	如果设备上未安装 Facebook 应用程序，或者如果您当前未登录到 Facebook，那么此屏幕的外观可能略有不同。
 
@@ -300,11 +307,11 @@ copyright:
 1. 	请求成功后，将在 Xcode 控制台中显示以下输出：
 	![图像](images/ios-facebook-login-success.png)
 
-	通过添加以下代码，您还可以添加注销功能：
+		通过添加以下代码，您还可以添加注销功能：
 
-**Objective-C**
+	**Objective-C**
 
-	```Objective-C
+		```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
 	```
 
@@ -316,6 +323,6 @@ copyright:
 
 	如果您在用户登录 Facebook 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Facebook 进行认证。
 
-要切换用户，您必须调用此代码，并且用户必须在浏览器中注销 Facebook。
+	要切换用户，您必须调用此代码，并且用户必须在浏览器中注销 Facebook。
 
   您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

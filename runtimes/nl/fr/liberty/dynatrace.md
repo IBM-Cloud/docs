@@ -18,11 +18,11 @@ Dynatrace est un service tiers qui offre une fonction de surveillance pour votre
 
 Pour plus d'informations sur les fonctions offertes par le service Dynatrace, voir [Dynatrace Application Monitoring](http://www.dynatrace.com/en/products/application-monitoring.html).
 
-Si votre application est configurée pour utiliser Dynatrace, par défaut, l'environnement d'exécution Liberty acquiert un fichier JAR d'agent Dynatrace à partir d'un site Dynatrace et exécute l'agent Dynatrace avec votre application. Avec ce comportement par défaut, la configuration minimale nécessaire pour utiliser Dynatrace consiste à créer un service fourni par l'utilisateur qui pointe vers votre collecteur Dynatrace. 
+Si votre application est configurée pour utiliser Dynatrace, par défaut, l'environnement d'exécution Liberty acquiert un fichier JAR d'agent Dynatrace à partir d'un site Dynatrace et exécute l'agent Dynatrace avec votre application.  Avec ce comportement par défaut, la configuration minimale nécessaire pour utiliser Dynatrace consiste à créer un service fourni par l'utilisateur qui pointe vers votre collecteur Dynatrace.
 
 ## Création d'un service fourni par l'utilisateur qui pointe vers votre collecteur Dynatrace
 
-Tout d'abord, vous devez configurez un collecteur Dynatrace. Ensuite, vous devez créer un service fourni par l'utilisateur afin de transmettre des informations qui permettront à l'agent Dynatrace de se connecter au collecteur Dynatrace. Pour mieux comprendre la relation entre les composants Dynatrace, voir [Dynatrace Architecture](https://community.dynatrace.com/community/display/DOCDT63/Architecture).
+Tout d'abord, vous devez configurez un collecteur Dynatrace.  Ensuite, vous devez créer un service fourni par l'utilisateur afin de transmettre des informations qui permettront à l'agent Dynatrace de se connecter au collecteur Dynatrace. Pour mieux comprendre la relation entre les composants Dynatrace, voir [Dynatrace Architecture](https://community.dynatrace.com/community/display/DOCDT63/Architecture).
 
 <ol>
 <li>Configurez un collecteur Dynatrace.
@@ -65,10 +65,9 @@ Pour plus d'informations sur les options disponibles, voir [Agent Setting sectio
 ## Configuration facultative
 {: #optional_configuration}
 
-Vous pouvez choisir d'acquérir et d'héberger vous-même le fichier JAR d'agent Dynatrace. Dans ce cas, les étapes de configuration supplémentaires suivantes sont nécessaires.
-
+Vous pouvez choisir d'acquérir et d'héberger vous-même le fichier JAR d'agent Dynatrace.  Dans ce cas, les étapes de configuration supplémentaires suivantes sont nécessaires.
 1. Procurez-vous et hébergez le fichier JAR d'agent Dynatrace de sorte que le pack de construction Liberty puisse le télécharger.
-2. Configurez votre application Liberty de sorte qu'elle puisse télécharger l'agent Dynatrace. 
+2. Configurez votre application Liberty de sorte qu'elle puisse télécharger l'agent Dynatrace.
 
 ### Hébergement de l'agent Dynatrace
 {: #hosting_dynatrace_agent}

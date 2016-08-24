@@ -12,9 +12,21 @@ copyright:
 # 最新更新
 {: #latest_updates}
 
-*上次更新时间：2016 年 6 月 13 日*
+*上次更新时间：2016 年 6 月 24 日*
+{: .last-updated}
 
 服务的最新更新的列表。
+
+## 2016 年 6 月 24 日：更新了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* 为客户新增了在创建新的*传统 ND* 或*传统 WebSphere* 实例时，可以选择 V8.5 或 V9.0 的能力。
+* 升级了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 二进制文件，以便 WebSphere Application Server Liberty（核心和 ND 套餐）的新实例将安装 FP16.0.0.2。16.0.0.2 是 8.5.5.9 之后的下一个修订包。从 16.0.0.2 开始，缺省情况下将安装这些套餐支持的所有授权 Liberty 可选功能部件。
+* 解决了影响 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 的[若干安全漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21984977){: new_window}，包括：
+  * Apache Standard Taglibs 中的 XML 外部实体注入 (XXE) 漏洞，该漏洞会影响到 IBM WebSphere Application Server。
+  * 使用 WebSphere Application Server Liberty 概要文件 API 发现功能部件和 Swagger 文档时，可能会导致降低预期安全性的漏洞。
+  * IBM WebSphere Application Server Liberty 管理中心内的潜在信息披露漏洞。
+  * IBM WebSphere Application Server 中的潜在 HTTP 响应分割漏洞。
+  * 2016 年 5 月 3 日由 OpenSSL Project 披露的 OpenSSL 漏洞。
 
 ## 2016 年 6 月 13 日：更新了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 

@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*上次更新时间：2016 年 6 月 10 日*
+*上次更新时间：2016 年 7 月 13 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Tomcat 运行时由 java_buildpack 提供技术支持。
@@ -38,13 +38,12 @@ copyright:
 可以使用 JBP_CONFIG_OPEN_JDK_JRE 环境变量来更改应用程序要使用的 Java 版本。
 这两个环境变量都可以在应用程序的清单文件中指定。例如：
 ```
-    env:
+env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-当前缺省 Tomcat 版本为 8.0.30。当前缺省 Java 版本为 1.8.0_65。
-有关更多信息，请参阅 [java-buildpack 发行版](https://github.com/cloudfoundry/java-buildpack/releases)。
+当前的 java_buildpack 版本为 V3.6，其中包含缺省 Tomcat V8.30.0 和缺省 Java V1.8.0_71。有关更多信息，请参阅 [java-buildpack 发行版](https://github.com/cloudfoundry/java-buildpack/releases)。
 
 # 相关链接
 {: #rellinks}

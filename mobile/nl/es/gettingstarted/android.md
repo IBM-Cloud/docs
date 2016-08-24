@@ -36,18 +36,21 @@ En la barra de herramientas de Android Studio, pulse el botón **Play** y selecc
 
   **Nota:** El código de tiempo de ejecución de `Node.js` se proporciona en el contenedor modelo de MobileFirst Services Starter. Si la aplicación de fondo no se ha creado con el contenedor modelo de MobileFirst Services Starter, la aplicación no se conectará satisfactoriamente.
 
-  Cuando se conecte correctamente a {{site.data.keyword.Bluemix_notm}} desde la app móvil en Android Studio, se mostrará el siguiente mensaje:
-
-  `Yay! You are connected`
+  Cuando se conecte correctamente a {{site.data.keyword.Bluemix_notm}} desde la app móvil en Android Studio, verá:
+  `¡Se ha conectado!`
   {: screen}
 
-  ![Aplicación Hello World conectada correctamente a {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figura 1. Aplicación Hello World conectada correctamente a Bluemix")
+<!--
+  ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+  -->
 
   Si la conexión falla, verá:
   `Bummer. Something went wrong`
   {: screen}
 
-  ![Aplicación Hello World no conectada a Bluemix](images/bummer_android.jpg "Figura 2. Aplicación Hello World no conectada a Bluemix")
+<!--
+  ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
+  -->
 
   Puede resolver los problemas de la conexión fallida de la forma siguiente:
    * Compruebe que ha pegado correctamente los valores de ruta y de GUID:
@@ -63,7 +66,7 @@ Para obtener información sobre cómo obtener el SDK e integrarlo en la app para
 # rellinks
 
 ## samples
-   * [Ejemplo de Hello Bluemix](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Ejemplo de Hello Bluemix (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## sdk
    * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)

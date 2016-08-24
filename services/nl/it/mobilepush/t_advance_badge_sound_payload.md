@@ -9,6 +9,8 @@ copyright:
 
 
 #Abilitazione delle notifiche di push avanzate
+*Ultimo aggiornamento: 14 giugno 2016*
+{: .last-updated}
 
 Configura un badge iOS, audio, payload JSON aggiuntivo, notifiche operative e notifiche messe in pausa.
 

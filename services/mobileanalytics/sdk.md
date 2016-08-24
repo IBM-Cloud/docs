@@ -7,7 +7,7 @@ copyright:
 
 # Instrumenting your application to use the {{site.data.keyword.mobileanalytics_short}} client SDKs
 {: #mobileanalytics_sdk}
-*Last updated: 1 August 2016*
+Last updated: 16 August 2016
 {: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_full}} SDKs enable you to instrument your mobile application.
@@ -19,16 +19,16 @@ The {{site.data.keyword.mobileanalytics_full}} SDKs enable you to instrument you
 2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track.
 3. Client log messages - This category enables the developer to add lines of code throughout the app that log custom messages to assist in development and debugging. The developer assigns a severity/verbosity level to each log message and can subsequently filter messages by assigned level or preserve storage space by configuring the app to ignore messages that are at a lower level of a given log level. To collect client log data, you must initialize the {{site.data.keyword.mobileanalytics_short}} SDK within your app, as well as add a line of code for each log message.
 
-Currently SDKs are available for Android, iOS and WatchOS.
+Currently SDKs are available for Android, iOS, and WatchOS.
 
-## Identifying your Access Key value
+## Identifying your Service Credentials Access Key value
 {: #analytics-clientkey}
 
 Identify your **Access Key** value before you set up the client SDK. The Access Key is required for initializing the client SDK.
 
 1. Open your {{site.data.keyword.mobileanalytics_short}} service dashboard.
 2. Click the **Service Credentials** tab.
-3. Copy your Access key value.
+3. Copy your Access Key value.
 
 
 ## Initializing your Android app to collect analytics
@@ -36,7 +36,7 @@ Identify your **Access Key** value before you set up the client SDK. The Access 
 
 Initialize your application to enable sending logs to the {{site.data.keyword.mobileanalytics_short}} service.
 
-1. Import the Client SDK by adding the following `import` statement to the beginning of your project file:
+1. Import the Client SDK by adding the following `import` statement at the beginning of your project file:
 
   ```
   import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
@@ -51,7 +51,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
-            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
+            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -82,14 +82,25 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
   import BMSCore
   import BMSAnalytics
   ```
-  {: screen}
+  {: codeblock}
 
 2. To use the {{site.data.keyword.mobileanalytics_short}} Client SDK, you must first initialize the `BMSClient` class, using the following code.
 
   Place the initialization code in the `application(_:didFinishLaunchingWithOptions:)` method of your application delegate, or in a location that works best for your project.
-
-    ```Swift
+	
+	#### Swift 2
+	{: initialize-swift-2}
+	
+    ```Swift 
     BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH)`
+    ```
+    {: codeblock}
+    
+    #### Swift 3
+    {: initialize-swift-3}
+    
+    ```Swift 
+    BMSClient.sharedInstance.initializeWithBluemixAppRoute(bluemixAppRoute: nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH)`
     ```
     {: codeblock}
 
@@ -105,20 +116,45 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 
   An optional `deviceEvents` parameter automatically gathers analytics for device-level events.
 
-  ### iOS
-    {: #ios-initialize-analytics}
+	### iOS
+	{: #ios-initialize-analytics}
+	
+	#### Swift 2
+	{: deviceevents-analytics-swift-2}
 
-      ```
-      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
+      ```Swift
+      Analytics.initializeWithAppName("AppName", apiKey: your_access_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
+      {: codeblock}
+      
+	#### Swift 3
+	{: deviceevents-analytics-swift-3}   
+	   
+      ```Swift
+      Analytics.initializeWithAppName(appName: "AppName", apiKey: your_access_key,
+      deviceEvents: DeviceEvent.LIFECYCLE)
+      ```
+      {: codeblock}
 
-  ### watchOS
+	### watchOS
   {: #watchos-initialize-analytics}
+  
+	#### Swift 2
+	{: initializeanalyticsswift2watchos}
 
+	```Swift
+	  Analytics.initializeWithAppName("AppName", accessKey: your_access_key)
 	```
-	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
+	{: codeblock}
+
+	#### Swift 3
+	{: initializeanalyticsswift3watch}
+	
+	```Swift
+	  Analytics.initializeWithAppName(appName: "AppName", accessKey: your_access_key)
 	```
+	{: codeblock}
 
   You can record device events on WatchOS by using the `Analytics.recordApplicationDidBecomeActive()` and `Analytics.recordApplicationWillResignActive()` methods.
   
@@ -158,6 +194,7 @@ Analytics.log(eventJSONObject);
 // Send recorded usage analytics to the Mobile Analytics Service
 Analytics.send();
 ```
+{: codeblock}
 	
 Sample usage analytics for logging an event:
 	
@@ -167,6 +204,7 @@ JSONObject eventJSONObject = new JSONObject();
 	
 eventJSONObject.put("customProperty" , "propertyValue");
 ```
+{: codeblock}
 
 #### iOS - Swift
 {: #ios-usage-api}
@@ -182,14 +220,29 @@ Analytics.enabled = true
 // Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
 Analytics.send()
 ```
+{: codeblock}
 
 Sample usage analytics for logging an event:
 
-```
+#### Swift 2
+{: customchartsswift2}
+
+```Swift
 // Log a custom analytics event for custom charts
 let eventObject = ["customProperty": "propertyValue"]
 Analytics.log(eventObject)
 ```
+{: codeblock}
+
+#### Swift 3
+{: customchartsswift3}
+	
+```Swift
+// Log a custom analytics event for custom charts
+let eventObject = ["customProperty": "propertyValue"]
+Analytics.log(eventObject)
+```
+{: codeblock}
 
   <!--Removing Cordova for experimental-->
   <!--### Cordova-->
@@ -203,6 +256,8 @@ Analytics.log(eventObject)
   <!--Analytics.send();-->
   <!--```-->
   <!--**Note:** When you are developing Cordova applications, use the native API to enable application lifecycle event recording.-->
+  
+  **Tip:** Call `Logger.send()` and `Analytics.send()` to see crash details and troubleshooting information.
 
 ## Enabling, configuring, and using Logger
 {: #app-monitoring-logger}
@@ -246,7 +301,7 @@ Analytics.log(eventObject)
 ### Sample Logger usage
 {: #sample-logger-usage}
 
-**Note:** Make sure that you have instrumented your app to use the [{{site.data.keyword.mobileanalytics_short}} Client SDK](sdk.html) before using the logging framework.
+**Note:** Make sure that you have instrumented your app to use the {{site.data.keyword.mobileanalytics_short}} Client SDK before you use the logging framework.
  
   The following code snippets show sample Logger usage:
 
@@ -255,7 +310,7 @@ Analytics.log(eventObject)
 
 ```
 // Configure Logger to save logs to the device so that they 
-// can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
+// can later be sent to the Mobile Analytics service
 // Disabled by default; set to true to enable
 Logger.storeLogs(true);
 
@@ -263,13 +318,6 @@ Logger.storeLogs(true);
 // The default setting is Logger.LEVEL.DEBUG
 Logger.setLogLevel(Logger.LEVEL.INFO);
 
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
-Logger.send();
-```
-
-Logger scenarios:
-
-```
 // Create two logger instances
 // You can create multiple log instances to organize your logs
 Logger logger1 = Logger.getLogger("logger1");
@@ -281,13 +329,17 @@ Logger logger2 = Logger.getLogger("logger2");
 logger1.debug("debug message"); 
 //the logger1.debug message is not logged because the logLevelFilter is set to Info
 logger2.info("info message");
-```
 
-#### iOS - Swift
-{: ios-logger-sample}
+// Send logs to the Mobile Analytics Service
+Logger.send();
+```
+{: codeblock}
+
+#### iOS - Swift 2
+{: ios-logger-sample-swift2}
 
 ```
-// Configure Logger to save logs to the device so that they can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
+// Configure Logger to save logs to the device so that they can later be sent to the Mobile Analytics service
 // Disabled by default; set to true to enable
 Logger.logStoreEnabled = true
 
@@ -295,25 +347,51 @@ Logger.logStoreEnabled = true
 // The default setting is LogLevel.Debug
 Logger.logLevelFilter = LogLevel.Info
 
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
-Logger.send()
-```
-
-Logger scenarios:
-    
-```
 // Create two logger instances
 // You can create multiple log instances to organize your logs
 let logger1 = Logger.logger(forName: "feature1Logger")
 let logger2 = Logger.logger(forName: "feature2Logger")
-	
+
 // Log messages with different levels
 logger1.debug("debug message for feature 1") 
 //the logger1.debug message is not logged because the logLevelFilter is set to Info
 logger2.info("info message for feature 2")
-```
 
-**Tip**: For privacy concerns, you can disable Logger output for applications that are built in release mode. By default, the Logger class prints logs to the Xcode console. In the build settings for your target, add a `-D RELEASE_BUILD` flag to the **Other Swift Flags** section of the release build configuration.
+// Send logs to the Mobile Analytics Service
+Logger.send()
+```
+{: codeblock}
+
+#### iOS - Swift 3
+{: ios-logger-sample-swift3}
+
+```
+// Configure Logger to save logs to the device so that they can later be sent to the Mobile Analytics service
+// Disabled by default; set to true to enable
+Logger.logStoreEnabled = true
+
+// Change the minimum log level (optional)
+// The default setting is LogLevel.Debug
+Logger.logLevelFilter = LogLevel.Info
+
+// Create two logger instances
+// You can create multiple log instances to organize your logs
+let logger1 = Logger.logger(forName: "feature1Logger")
+let logger2 = Logger.logger(forName: "feature2Logger")
+
+// Log messages with different levels
+logger1.debug(message: "debug message for feature 1") 
+//the logger1.debug message is not logged because the logLevelFilter is set to Info
+logger2.info(message: "info message for feature 2")
+
+// Send logs to the Mobile Analytics Service
+Logger.send()
+```
+{: codeblock}
+
+**Tip:** For privacy concerns, you can disable Logger output for applications that are built in release mode. By default, the Logger class prints logs to the Xcode console. In the build settings for your target, add a `-D RELEASE_BUILD` flag to the **Other Swift Flags** section of the release build configuration.
+
+Call `Logger.send()` and `Analytics.send()` to see crash details and troubleshooting information.
     
 
   <!-- ### Cordova-->
@@ -344,8 +422,10 @@ logger2.info("info message for feature 2")
 {: #enable-logger-print-android}
 
 ```
+{: codeblock}
 Logger.setSDKDebugLoggingEnabled(true);
 ```
+{: codeblock}
 
 #### iOS - Swift
 {: #enable-logger-print-swift}
@@ -353,6 +433,7 @@ Logger.setSDKDebugLoggingEnabled(true);
 ```
 Logger.sdkDebugLoggingEnabled = true
 ```
+{: codeblock}
 -->
 
 ## Tracking active users
@@ -367,12 +448,14 @@ Add the following code for when the user logs in:
 ```
 Analytics.setUserIdentity("username");
 ```
+{: codeblock}
 
 Add the following code for when the user logs out:
 
 ```
 Analytics.clearUserIdentity();
 ```
+{: codeblock}
 
 #### iOS - Swift
 {: #ios-tracking-users}
@@ -382,12 +465,14 @@ Add the following code for when the user logs in:
 ```
 Analytics.userIdentity = "username"
 ```
+{: codeblock}
 
 Add the following code for when the user logs out:
 
 ```
 Analytics.userIdentity = nil
 ```
+{: codeblock}
 
 <!--## Configuring MobileFirst Platform Foundation servers to use the {{site.data.keyword.mobileanalytics_short}} service (optional)
 {: #configmfp}
@@ -500,3 +585,9 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
+
+# rellinks
+
+## API Reference
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

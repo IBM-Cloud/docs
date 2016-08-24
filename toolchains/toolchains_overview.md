@@ -11,7 +11,7 @@ copyright:
 # Getting started with toolchains (Experimental)
 {: #toolchains_getting_started}
 
-*Last updated: 12 August 2016*
+Last updated: 17 August 2016
 {: .last-updated}  
 
 Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app.
@@ -30,7 +30,11 @@ Each toolchain is associated with a specific organization (org) and any user tha
 
 You can use a template as a starting point to create a toolchain that includes a specific set of tool integrations.
 
-1. On the DevOps dashboard, on the **Toolchains** tab, click **Create a Toolchain** to create your first toolchain. If you already have a toolchain, click the add button (+) to create another toolchain.
+1. If you are creating your first toolchain, make sure that toolchains are enabled in your org:
+   1. Open the DevOps dashboard and click the **Toolchains** tab.
+   2. If the **Enable Toolchains** button is shown, click it, and follow the prompts to create your toolchain.
+   3. If the **Enable Toolchains** button isn't shown, toolchains are already enabled. Continue to step 2.
+1. On the DevOps dashboard, on the **Toolchains** tab, click the add button (+) to create a toolchain.
 1. Click a toolchain template. For example, to use an online store sample to create the toolchain, click **Microservices toolchain**. 
 1. On the toolchain creation page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain. The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
 ![Toolchain diagram](images/toolchain_diagram.png)
@@ -52,6 +56,10 @@ You can use a template as a starting point to create a toolchain that includes a
 
 You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. When you push changes to the toolchain's GitHub repo, the pipeline automatically builds and deploys the app.  
 
+1. If you are creating your first toolchain, make sure that toolchains are enabled in your org:
+   1. Open the DevOps dashboard and click the **Toolchains** tab.
+   2. If the **Enable Toolchains** button is shown, click it, and follow the prompts to create your toolchain.
+   3. If the **Enable Toolchains** button isn't shown, toolchains are already enabled. Continue to step 2.
 1. On your app's Overview page, on the Continuous Delivery tile, click **Add Toolchain**. Alternatively, in the {{site.data.keyword.Bluemix_notm}} Classic Experience, in the upper-right corner of your app's Overview page, click **Add Toolchain**. Your app is configured for continuous delivery from a new GitHub repo that is populated with the app starter code.
 1. On the toolchain creation page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you already have a toolchain with that name, or if you want to use a different name, change the toolchain's name.
@@ -76,7 +84,11 @@ Each toolchain is associated with a specific organization (org) and any user tha
 
 You can use a template as a starting point to create a toolchain that includes a specific set of tool integrations.
 
-1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, on the **DEVOPS** tab, click **Create a Toolchain** to create your first toolchain. If you already have a toolchain, click the add button (+) to create another toolchain.
+1. If you are creating your first toolchain, make sure that toolchains are enabled in your org:
+   1. Open the DevOps dashboard and click the **Toolchains** tab.
+   2. If the **Enable Toolchains** button is shown, click it, and follow the prompts to create your toolchain.
+   3. If the **Enable Toolchains** button isn't shown, toolchains are already enabled. Continue to step 2.
+1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, on the **DEVOPS** tab, click the add button (+) to create a toolchain.
 1. Click a toolchain template. For example, to create a simple toolchain to deploy a new Cloud Foundry app, click **Simple Cloud Foundry toolchain**. 
 1. On the toolchain creation page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain. The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
 ![Dedicated toolchain diagram](images/toolchain_dedicated_diagram.png)
@@ -95,6 +107,10 @@ You can use a template as a starting point to create a toolchain that includes a
 
 You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. When you push changes to the toolchain's GitHub Enterprise repo, the pipeline automatically builds and deploys the app.  
 
+1. If you are creating your first toolchain, make sure that toolchains are enabled in your org:
+   1. Open the DevOps dashboard and click the **Toolchains** tab.
+   2. If the **Enable Toolchains** button is shown, click it, and follow the prompts to create your toolchain.
+   3. If the **Enable Toolchains** button isn't shown, toolchains are already enabled. Continue to step 2.
 1. In the upper-right corner of your app's Overview page, click **Add Toolchain**. Your app is configured for continuous delivery from a new GitHub Enterprise repo that is populated with the app starter code.
 1. On the toolchain creation page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you already have a toolchain with that name, or if you want to use a different name, change the toolchain's name.

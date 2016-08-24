@@ -11,14 +11,15 @@ copyright:
 # Autenticando usuários com as credenciais do Google
 {: #google-auth}
 
-*Última atualização: 15 de junho de 2016*
+*Última atualização: 03 de julho de 2016*
 
-É possível configurar o serviço {{site.data.keyword.amashort}} para proteger recursos usando o Google como provedor de identidade. Seu aplicativo móvel pode então usar suas credenciais do Google para autenticação.
+É possível configurar o serviço {{site.data.keyword.amashort}} para proteger recursos usando o Google como provedor de identidade. Seus
+usuários de aplicativo móvel ou da web podem usar suas credenciais do Google para autenticação.
 {:shortdesc}
 
 **Importante:** não é necessário instalar separadamente o SDK do Google. O Google SDK é instalado automaticamente por gerenciadores de dependência quando você configura o {{site.data.keyword.amashort}} client SDK.
 
-## Fluxo do {{site.data.keyword.amashort}}
+## Fluxo de solicitação do {{site.data.keyword.amashort}}
 {: #google-auth-overview}
 
 Veja o diagrama simplificado a seguir para entender como o {{site.data.keyword.amashort}} se integra ao Google para autenticação.
@@ -28,7 +29,7 @@ Veja o diagrama simplificado a seguir para entender como o {{site.data.keyword.a
 1. Use o {{site.data.keyword.amashort}} SDK para fazer uma solicitação para seus recursos de backend que são protegidos com o {{site.data.keyword.amashort}} server SDK.
 * O {{site.data.keyword.amashort}} server SDK detecta a solicitação não autorizada e retorna um código HTTP 401 e um escopo de autorização.
 * O {{site.data.keyword.amashort}} client SDK detecta automaticamente o código HTTP 401 e inicia o processo de autenticação.
-* O {{site.data.keyword.amashort}} client SDK entra em contato com o serviço {{site.data.keyword.amashort}} e pede para emitir um cabeçalho de autorização.
+* O SDK do cliente {{site.data.keyword.amashort}} entra em contato com o serviço {{site.data.keyword.amashort}} e solicita um cabeçalho de autorização.
 * O serviço {{site.data.keyword.amashort}} solicita que o cliente primeiro autentique com o Google fornecendo um desafio de autenticação.
 * O {{site.data.keyword.amashort}} client SDK usa o Google SDK para iniciar o processo de autenticação. Após uma autenticação bem-sucedida, o SDK do Google retorna um token de acesso do Google.
 * O token de acesso do Google é considerado uma resposta ao desafio de autenticação. O token é enviado ao serviço {{site.data.keyword.amashort}}.

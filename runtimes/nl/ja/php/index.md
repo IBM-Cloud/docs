@@ -11,7 +11,7 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 7 月 6 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} の PHP ランタイムには php_buildpack が採用されています。
@@ -36,25 +36,24 @@ php_buildpack は、以下のいずれかの条件下で使用されます。
 ```
 {
     "require": {
-        "php": "5.6.*"
+        "php": "7.0.*"
     }
 }
 ```
 {: codeblock}
-詳しくは、[『Composer Package links』](https://getcomposer.org/doc/04-schema.md#package-links)を参照してください。バージョンを指定しない場合は、デフォルトでバージョン 5.5.30 が選択されます。
+詳しくは、[『Composer Package links』](https://getcomposer.org/doc/04-schema.md#package-links)を参照してください。バージョンを指定しない場合は、デフォルトでバージョン 5.5.34 が選択されます。
 
 ### 使用可能なバージョン:
 {: #available_versions}
 
-現在 {{site.data.keyword.Bluemix}} にインストールされている [PHP ビルドパック](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.1.5)では、以下のバージョンの PHP が使用できます。
+現在 {{site.data.keyword.Bluemix}} にインストールされている [PHP ビルドパック](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.10)では、以下のバージョンの PHP が使用できます。
 
-* 5.4.44
-* 5.4.45
-* 5.5.29
-* 5.5.30
-* 5.6.30
-* 5.6.13
-* 5.6.14
+* 5.5.33
+* 5.5.34
+* 5.6.19
+* 5.6.20
+* 7.0.4
+* 7.0.5
 
 アプリケーションが、リストされていないバージョンの PHP を必要とする場合は、外部の [PHP ビルドパック](https://github.com/cloudfoundry/php-buildpack.git)を使用してアプリケーションをデプロイできます。
 

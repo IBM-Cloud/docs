@@ -7,6 +7,8 @@ copyright:
 
 # 管理标记
 {: #manage_tags}
+*上次更新时间：2016 年 6 月 14 日*
+{: .last-updated}
 
 使用“推送”仪表板，可以创建和删除应用程序的标记，然后初始化基于标记的通知。预订了标记的设备会收到基于该标记的通知。
 
@@ -63,11 +65,9 @@ push.getTags(new MFPPushResponseListener<List<String>>(){
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
-subscribeToTag();
-   
+   subscribeToTag();   
   }    
-@Override
-    
+  @Override    
   public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
@@ -89,7 +89,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onFailure(MFPPushException ex) {
          updateTextView("Error getting subscriptions.. " + ex.getMessage());
-    }
+  }
 })
 ```
 
@@ -123,9 +123,8 @@ alert(tags);
 [push retrieveAvailableTagsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error){
  if(error){    
-[self updateMessage:error.description];
-  
-} else {
+   [self updateMessage:error.description];  
+ } else {
 [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];
@@ -312,7 +311,7 @@ print( "Error during  unsubscribed tags \(error) ")
 {: #using_tags}
 
 
-基于标记的通知是针对预订了特定标记的所有设备的通知消息。每个设备都可以预订任意数量的标记。本部分描述了如何发送基于标记的通知。预订通过 Push Notification Service Bluemix 实例进行维护。删除标记时，与该标记关联的所有信息（包括其订户和设备）都会一并删除。无需对此标记自动取消预订，因为此标记不再存在，因此也不需要从客户机端执行进一步的操作。
+基于标记的通知是针对预订了特定标记的所有设备的通知消息。每个设备都可以预订任意数量的标记。本部分描述了如何发送基于标记的通知。预订通过 Push Notifications 服务 Bluemix 实例进行维护。删除标记时，与该标记关联的所有信息（包括其订户和设备）都会一并删除。无需对此标记自动取消预订，因为此标记不再存在，因此也不需要从客户机端执行进一步的操作。
 
 **开始之前**
 
@@ -321,5 +320,5 @@ print( "Error during  unsubscribed tags \(error) ")
 1. 在**推送通知**仪表板中，单击**通知**选项卡。
 1. 选择**标记**选项，以发送基于标记的通知。
 1. 在**搜索标记**字段中，搜索要使用的标记，然后单击 **+添加**按钮。![“通知”屏幕](images/tag_notification.jpg)
-1. 转至**创建通知**区域，然后在**消息文本**字段中输入要在通知中发送的文本。
+1. 在**消息文本**字段中，输入将作为通知发送给订阅受众的文本。
 1. 单击**发送**按钮。

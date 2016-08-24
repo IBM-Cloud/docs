@@ -8,6 +8,10 @@ copyright:
 # Google-Authentifizierung für iOS-Objective-C-Apps aktivieren
 {: #google-auth-ios}
 
+
+*Letzte Aktualisierung: 16. Juni 2016*
+{: .last-updated}
+
 Verwenden Sie die Google-Anmeldung, um Benutzer für Ihre Mobile Client Access-iOS-App zu authentifizieren.
 
 **Hinweis:** Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, die Verwendung und Unterstützung dieses SDK sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden. Für neue Anwendungen wird dringend die Verwendung des Swift-SDK empfohlen. Die Anweisungen auf dieser Seite gelten für das {{site.data.keyword.amashort}}-Client-Objective-C-SDK. Anweisungen für die Verwendung des Swift-SDK finden Sie in [Google-Authentifizierung in iOS-Apps aktivieren (Swift-SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
@@ -172,7 +176,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 	8. Stellen Sie sicher, dass Ihr Überbrückungsheader von Xcode aufgenommen wird, indem Sie Ihr Projekt erstellen (Build).
 
 
-3. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren. Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** ermittelt haben.
+3. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren.  Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** ermittelt haben.
 
 	Objective-C:
 
@@ -250,7 +254,7 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 
 1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihres mobilen Back-Ends zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
 
-1. Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der MobileFirst Services-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Deshalb kann auf ihn nur mit mobilen Anwendungen zugegriffen werden, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
+1. Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der MobileFirst Services-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Deshalb kann auf ihn nur mit mobilen Anwendungen zugegriffen werden, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert wurden. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
 
 1. Verwenden Sie Ihre iOS-Anwendung, um eine Anforderung an denselben Endpunkt zu senden.
 

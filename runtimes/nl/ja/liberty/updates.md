@@ -13,11 +13,19 @@ copyright:
 
 ## Liberty ビルドパックの最新更新のリスト。
 
-*最終更新日時: 2016 年 6 月 17 日*
+*最終更新日: 2016 年 7 月 20 日*
 {: .last-updated}
 
+### 2016 年 7 月 22 日: 更新された Liberty ビルドパック v3.1-20160717-2254
+* [アプリケーション管理](../../manageapps/app_mng.html)機能が更新され、フェデレーテッド認証をサポートするようになりました。また、`devconsole` ユーティリティーと `shell` ユーティリティーによって使用される Node.js ランタイムが、最新バージョンの `0.12.15` に更新されました。 
+* このビルドパックは、[Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/) アプリケーション・モニター・エージェントに対するサポートを追加します。
+* このビルドパックでは、[Monitoring and Analytics サービス](../../services/monana/index.html#monana_oview)用の更新されたデータ・コレクターが提供されます。
+* このビルドパックでは、[Auto-Scaling サービス](../../services/Auto-Scaling/index.html)用の更新版のエージェントも提供されます。 
+* 月次 Liberty ランタイム・バージョンが [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/) リリースに更新されました。
+
 ### 2016 年 6 月 17 日: 更新された Liberty ビルドパック v3.0-20160608-1450
-* ビルドパックには、WebSphere Liberty の 2 つのバージョン (最新の安定リリースと最新のベータ版) が含まれるようになりました。具体的には、[16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 安定リリースと [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) ベータ版が提供されます。デフォルトでは、安定リリースが使用されます。詳しくは、[『Liberty のバージョン』](buildpackDefaults.html#liberty_versions)を参照してください。 
+* ビルドパックには、WebSphere Liberty の 2 つのバージョン (最新の安定リリースと最新の月次リリース) が含まれるようになりました。具体的には、[16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 安定リリースと [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) 月次リリースが提供されます。デフォルトでは、安定リリースが使用されます。詳しくは、[『Liberty のバージョン』](buildpackDefaults.html#liberty_versions)を参照してください。 
+* このビルドパックには、[Apache Standard Taglibs の脆弱性](http://www-01.ibm.com/support/docview.wss?uid=swg21985531)に対するセキュリティー・フィックスも含まれています。
 
 ### 2016 年 5 月 25 日: 更新された Liberty ビルドパック v2.9-20160519-1249
 * このビルドパックには、[May beta](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/) に基づく更新版の WebSphere Liberty が含まれています。この更新版の Liberty により、*bluemixLogCollector-1.1* および *logstashCollector-1.1* の各ベータ・フィーチャーが Bluemix で使用可能になります。

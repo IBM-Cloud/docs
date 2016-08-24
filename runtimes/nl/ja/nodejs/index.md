@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 7 月 7 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Node.js ランタイムには sdk-for-nodejs ビルドパックが採用されています。
@@ -55,7 +55,7 @@ web: node app.js
 開始スクリプト項目が **package.json** にある場合は、**Procfile** が自動的に生成されます。自動生成された **Procfile** の内容は次のようになります。
 
 ```
-    web: npm start
+web: npm start
 ```
 {: codeblock}
 
@@ -75,6 +75,11 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 {: codeblock}
 
 このコードでは、アプリケーションが Bluemix 上で実行される場合、VCAP_APP_HOST および VCAP_APP_PORT の環境変数には、Bluemix に対して内部であり、アプリケーションが着信接続を listen するホスト値およびポート値が含まれます。アプリケーションがローカルに実行される場合、VCAP_APP_HOST および VCAP_APP_PORT は定義されないため、**localhost** がホストとして、また **3000** がポート番号として使用されます。このような方法でコードを書くと、アプリケーションをテスト目的でローカルに実行でき、またさらに変更を行うことなく Bluemix 上で実行できます。
+
+## オフライン モード
+{: #offline_mode}
+
+ビルドパックの外部サイトへのアクセスの制御については、[『オフライン・モード』](offlineMode.html)を参照してください。 
 
 ## アプリケーション管理
 {{site.data.keyword.Bluemix}} には、Node.js アプリケーションを管理およびデバッグするために数多くのユーティリティーが用意されています。詳しくは、[『アプリケーション管理』](../../manageapps/app_mng.html)を参照してください。
@@ -120,7 +125,7 @@ NPM は、スクリプトの実行を可能にするスクリプティング機�
 Node ビルドパックが以前のビルドからのキャッシュを使用するか無視するかを決定するには、NODE_MODULES_CACHE 変数を使用します。デフォルト値は true です。キャッシングを無効にするには、NODE_MODULES_CACHE を (例えば cf コマンド・ラインで) false に設定します。
 
 ```
-    $ cf set-env myapp NODE_MODULES_CACHE false
+$ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
@@ -143,14 +148,14 @@ Nodejs ビルドパック v3.2-20160315-1257 以降では [FIPS](https://en.wiki
 例えば、以下のように指定します。
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+$ cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
 FIPS_MODE が true の場合、一部のノード・モジュールが機能しない可能性があることを認識しておくことが重要です。例えば、[Express](http://expressjs.com/) のように、**[MD5](https://en.wikipedia.org/wiki/MD5) を使用するノード・モジュールは失敗します**。Express の場合、Expess アプリケーションで [etag](http://expressjs.com/en/api.html) を false に設定すると、こうした失敗を回避するのに役立つことがあります。例えば、コードで以下のようにすることができます。
 
 ```
-    app.set('etag', false);
+app.set('etag', false);
 ```
 {: codeblock}
 詳しくは、[stackoverflow の投稿](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)を参照してください。**注:** [アプリケーション管理](../../manageapps/app_mng.html)と FIPS_MODE は、同時にはサポートされ*ません*。BLUEMIX_APP_MGMT_ENABLE 環境変数が設定され、かつ FIPS_MODE 環境変数が true に設定されると、アプリケーションはステージングに失敗します。
@@ -207,7 +212,7 @@ SSL バージョンに「fips」が含まれている場合、使用されてい
 #### Nodejs v6
 {: #nodejs_v6_fips}
 
-**FIPS_MODE=true** の設定に加えて、Node.js バージョン 6 で FIPS モードで実行するには、次の例のように、開始コマンドに **--enable-fips** を含めることも必要です。
+Node.js バージョン 6 を使用して FIPS モードで実行するには、**FIPS_MODE=true** の設定に加えて、次の例のように、開始コマンドに **--enable-fips** を含めることも必要です。
 ```
 {
     ...   
@@ -270,7 +275,7 @@ Bluemix は、複数バージョンの Node.js ビルドパックを提供しま
 {: #rellinks}
 ## 一般
 {: #general}
-* [Node.js ビルドパックに対する最新の更新](updates.html)
+* [Node.js ビルドパックに対する最新の更新](../../runtimes/nodejs/updates.html)
 * [アプリケーション管理](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

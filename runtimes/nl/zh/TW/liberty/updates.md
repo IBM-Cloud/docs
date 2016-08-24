@@ -13,11 +13,19 @@ copyright:
 
 ## Liberty 建置套件中的最新更新項目清單。
 
-*前次更新：2016 年 6 月 17 日*
+*前次更新：2016 年 7 月 20 日*
 {: .last-updated}
 
+### 2016 年 7 月 22 日：已更新 Liberty 建置套件 v3.1-20160717-2254
+* 已更新[應用程式管理](../../manageapps/app_mng.html)功能來支援聯合鑑別。此外，`devconsole` 和 `shell` 公用程式所使用的 Node.js 運行環境也已更新為最新的 `0.12.15` 版。 
+* 建置套件新增對 [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/) 應用程式監視代理程式的支援。
+* 建置套件提供用於 [Monitoring and Analytics 服務](../../services/monana/index.html#monana_oview)的已更新資料收集器。
+* 建置套件也有提供適用於[自動調整服務務](../../services/Auto-Scaling/index.html)的代理程式更新版本。 
+* 每月的 Liberty 運行環境版本已更新至 [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/) 版。
+
 ### 2016 年 6 月 17 日：已更新 Liberty 建置套件 v3.0-20160608-1450
-* 建置套件現在包含兩個版本的 WebSphere Liberty：最新的穩定版本和最新的測試版。具體而言，它提供 [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 穩定版本和 [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) 測試版。依預設將會使用穩定版本。如需其他詳細資料，請參閱 [Liberty 版本](buildpackDefaults.html#liberty_versions)。 
+* 現在建置套件包含兩個版本的 WebSphere Liberty：最新的穩定版本和最新的每月發行版本。具體而言，它提供 [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 穩定版本和 [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) 每月發行版本。依預設將會使用穩定版本。如需其他詳細資料，請參閱 [Liberty 版本](buildpackDefaults.html#liberty_versions)。 
+* 建置套件也有包含 [Apache Standard Taglibs 漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21985531)的安全修正程式。
 
 ### 2016 年 5 月 25 日：已更新 Liberty 建置套件 v2.9-20160519-1249
 * 建置套件包含根據 [5 月的測試版](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/)之 WebSphere Liberty 的更新版本。Liberty 的更新版本讓 *bluemixLogCollector-1.1* 和 *logstashCollector-1.1* 測試版特性可在 Bluemix 中使用。

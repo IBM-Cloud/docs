@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Node.js
 {: #nodejs_runtime}
-*Última actualización: 10 de junio de 2016*
+*Última actualización: 07 de julio de 2016*
 {: .last-updated}
 
 El tiempo de ejecución de Node.js en {{site.data.keyword.Bluemix}} está basado en el paquete de compilación de sdk-for-nodejs.
@@ -72,6 +72,11 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 {: codeblock}
 
 Con este código, cuando la aplicación se esté ejecutando en Bluemix, las variables de entorno VCAP_APP_HOST y VCAP_APP_PORT contienen los valores host y puerto que son internos para Bluemix, y en el que la app escucha conexiones entrantes. Cuando la aplicación se ejecute de manera local, VCAP_APP_HOST y VCAP_APP_PORT no están definidas, de modo que **localhost** se utiliza como el host y **3000** se utiliza como el número de puerto. Grabados de esta forma, puede ejecutar la aplicación localmente a efectos de prueba y en Bluemix sin realizar más cambios.
+
+## Modo fuera de línea
+{: #offline_mode}
+
+Consulte [Modo fuera de línea](offlineMode.html) para ver información sobre el control del acceso al paquete de compilación a sitios externos. 
 
 ## App Management
 {{site.data.keyword.Bluemix}} proporciona un número de programas de utilidad para gestionar y depurar la app de Node.js.  Consulte [App Management](../../manageapps/app_mng.html) para obtener más detalles.
@@ -144,7 +149,7 @@ Por ejemplo:
 ```
 {: codeblock}
 
-Es importante comprender que cuando FIPS_MODE es true algunos módulos de nodo pueden no funcionar. Por ejemplo, **los módulos de nodo que utilizan [MD5](https://en.wikipedia.org/wiki/MD5) fallarán**, como por ejemplo [Express](http://expressjs.com/).  Para Express, el establecimiento de [etag](http://expressjs.com/en/api.html) en false en la app
+Es importante comprender que cuando FIPS_MODE es true algunos módulos de nodo pueden no funcionar.  Por ejemplo, **los módulos de nodo que utilizan [MD5](https://en.wikipedia.org/wiki/MD5) fallarán**, como por ejemplo [Express](http://expressjs.com/).  Para Express, el establecimiento de [etag](http://expressjs.com/en/api.html) en false en la app
 Expess puede ayudar a solucionarlo. Por ejemplo, puede realizar lo siguiente en el código:
 ```
     app.set('etag', false);
@@ -153,12 +158,11 @@ Expess puede ayudar a solucionarlo. Por ejemplo, puede realizar lo siguiente en 
 Consulte esta [publicación de stackoverflow](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 para obtener más información.
 
-**NOTE** [App Management](../../manageapps/app_mng.html) y FIPS_MODE  *NO* están soportados simultáneamente. Si se ha establecido la variable de entorno BLUEMIX_APP_MGMT_ENABLE y las variables de entorno se han establecido en true, la app no se podrá transferir.
+**NOTE** [App Management](../../manageapps/app_mng.html) y FIPS_MODE *NO* están soportados simultáneamente.  Si se ha establecido la variable de entorno BLUEMIX_APP_MGMT_ENABLE y las variables de entorno se han establecido en true, la app no se podrá transferir.
 
 A continuación se muestran varios métodos para comprobar el estado de FIPS_MODE:
 <ul>
-<li> Puede comprobar staging_task.log para la aplicación para obtener un mensaje parecido al siguiente:
-    
+<li> Puede comprobar staging_task.log para la aplicación para obtener un mensaje parecido al siguiente:    
 
   <pre>
   Instalación de IBM SDK habilitado para FIPS para Node.js (4.4.3) desde la memoria caché
@@ -179,7 +183,8 @@ Si la versión SSL contiene "fips", la versión de SSL que está en uso da sopor
 </li>
 
 <li> Para node.js versión 6 y posterior, puede comprobar el valor devuelto por crypto.fips en el código como el siguiente:
-<pre>
+
+  <pre>
   console.log('crypto.fips== [' +crypto.fips +']');
   </pre>
   {: codeblock}
@@ -275,7 +280,7 @@ Normalmente, están disponibles el paquete de compilación **sdk-for-nodejs** ac
 {: #rellinks}
 ## general
 {: #general}
-* [Últimas actualizaciones del paquete de compilación Node.js](updates.html)
+* [Últimas actualizaciones del paquete de compilación Node.js](../../runtimes/nodejs/updates.html)
 * [App Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

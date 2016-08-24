@@ -28,7 +28,7 @@ Liberty buildpack 在 Bluemix 中会频繁更新。每个发行版都可能包�
   * 该版本不提供任何 [Beta 功能](usingBetaFeatures.html)。
   * 通常按季度更新。
 
-2. 最新的 Beta 发行版
+2. 每月发行版
   * 必须使用 **"version: +"** 值设置 **JBP_CONFIG_LIBERTY** 环境变量以明确启用该发行版。
   * 提供 [Beta 功能](usingBetaFeatures.html)。
   * 通常按月更新。

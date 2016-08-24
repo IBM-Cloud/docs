@@ -9,7 +9,7 @@ copyright:
 # Cordova-Plug-in einrichten
 {: #getting-started-cordova}
 
-*Letzte Aktualisierung: 25. Mai 2016*
+*Letzte Aktualisierung: 17. Juli 2016*
 {: .last-updated}
 
 Instrumentieren Sie Ihre Cordova-Anwendung mit dem {{site.data.keyword.amashort}}-Client-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und nicht geschützte Ressourcen.
@@ -18,7 +18,7 @@ Instrumentieren Sie Ihre Cordova-Anwendung mit dem {{site.data.keyword.amashort}
 ## Vorbereitungen
 {: #before-you-begin}
 Voraussetzungen:
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
 
 * Cordova-Anwendung oder ein vorhandenes Projekt. Weitere Informationen zur Einrichtung Ihrer Cordova-Anwendung finden Sie auf der [Cordova-Website](https://cordova.apache.org/).
 
@@ -78,7 +78,7 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 
 		Konfigurieren Sie Ihr Xcode-Projekt wie nachfolgend angegeben, um Buildfehler zu vermeiden.
 
-		1. Öffnen Sie Ihre Xcode-Projektdatei (xcode.proj) mit der neuesten Version von Xcode im Verzeichnis &lt;*app_name*&gt;/platforms/ios.
+		1. Öffnen Sie Ihre Datei `xcode.proj` mit der neuesten Version von Xcode im Verzeichnis `<app_name>/platforms/ios`.
 
 		**Wichtig:** Wenn die Nachricht "Convert to Latest Swift Syntax" ausgegeben wird, klicken Sie auf 'Cancel' (Abbrechen).
 
@@ -88,7 +88,7 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. Navigieren Sie zu **Build settings > Linking > Runpath Search Paths** und fügen Sie den folgenden Frameworks-Parameter hinzu:
+		3. Navigieren Sie zu **Build Settings > Linking > Runpath Search Paths** und fügen Sie den folgenden Frameworks-Parameter hinzu:
 
 			```
 			@executable_path/Frameworks
@@ -115,18 +115,18 @@ Zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK müssen Sie das SDK
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
 
-## Anforderung an das mobile Back-End senden
+## Anforderung an mobile Back-End-Anwendung senden
 {: #getting-started-request}
 
-Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können Sie mit dem Senden von Anforderungen an Ihr mobiles Back-End beginnen.
+Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen. 
 
-1. Versuchen Sie, eine Anforderung an den Endpunkt '/protected' Ihres mobilen Back-Ends zu senden. Öffnen Sie in Ihrem Browser die folgende URL: `{applicationRoute}/protected`. Beispiel:
+1. Versuchen Sie, eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung zu senden. Öffnen Sie in Ihrem Browser die folgende URL: `{applicationRoute}/protected`. Beispiel:
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected
 	```
 
-	Der Endpunkt `/protected` eines mobilen Back-Ends, der mit der Boilerplate 'MobileFirst Services Starter' erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Eine Nachricht `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben. Diese Nachricht wird deshalb zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
+	Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der MobileFirst Services Starter-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Eine Nachricht `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben. Diese Nachricht wird deshalb zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
 
 1. Verwenden Sie Ihre Cordova-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert haben:
 
@@ -136,7 +136,7 @@ Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können S
 	}
 
 	var failure = function(error){
-		console.log("failure", error);
+	console.log("failure", error);
 	}
 
 	var request = new MFPRequest("/protected", MFPRequest.GET);

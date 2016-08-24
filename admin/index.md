@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Last updated: 9 August 2016
+Last updated: 16 August 2016
 {: .last-updated}
 
 If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
@@ -41,7 +41,7 @@ If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{si
 ## Notifications and event subscriptions
 {: #oc_eventsubscription}
 
-You can always know the status of your environment by checking the Status page. As they occur, incidents are reported on the Status page. {{site.data.keyword.Bluemix_notm}} also sends notifications to the Notifications area on the Administration page for events such as scheduled or pending maintenance updates.
+You can always know the status of your environment by [Viewing status](index.html##oc_status). As they occur, incidents and events, such as maintenance updates, are reported on the Status page. {{site.data.keyword.Bluemix_notm}} also sends notifications to the Notifications area on the Administration page for events such as scheduled or pending maintenance updates.
 
 ### Notifications
 
@@ -51,7 +51,7 @@ You can view notifications for your local or dedicated environment to monitor th
 
 | **Event Type** | **Notification method** |       
 |-----------------|-------------------|
-| Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications area on the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**. You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice. |
+| Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications area on the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**. You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  You are also alerted about maintenance notifications on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that sends an email to a recipient of your choice.|
 | Critical incidents | You are alerted about critical incidents on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that sends an email to a recipient of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  |  
 | {{site.data.keyword.Bluemix_notm}} Status | You can always view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**.  |
 
@@ -59,7 +59,7 @@ You can view notifications for your local or dedicated environment to monitor th
 
 You can extend the functionality of the notifications that are sent to the Administration page and the Status page by using event subscriptions to set up a custom email or use webhooks to integrate with a tool of your choice. If you select the webhooks option, your notifications are routed directly to a destination of your choice, such as a phone number (by SMS message). You can customize the type of notification, specifically maintenance updates or critical incident alerts, and the information that is included in the body of each notification.
 
-**Note**: Only users with the Admin permission (`ops.admin`) can set up event subscriptions.
+**Note**: Only users with the Superuser permission (`ops.admin`) can set up event subscriptions.
 
 To access the **Event Subscriptions** page, complete the following steps:
 
@@ -148,9 +148,9 @@ You can view scheduled and pending maintenance updates by going to **ADMINISTRAT
 
 Before you start scheduling and approving updates, you must set your preapproved maintenance windows. Non-disruptive updates are scheduled during the preapproved window times.
 
-You are required to set a minimum of 12 available hours in a week for a minimum of two days during each week. For example, you can set 6-hour windows across two separate days, or you can set 4-hour windows across three separate days. To ensure that the windows provide enough time for an update to be applied, each window must be a minimum of four hours in duration. To ensure that the windows provide enough time for an update to be applied, each window must be a minimum of four hours in duration.
+You are required to set a minimum of 12 available hours in a week for a minimum of two days during each week. For example, you can set 6-hour windows across two separate days, or you can set 4-hour windows across three separate days. To ensure that the windows provide enough time for an update to be applied, each window must be a minimum of four hours in duration.
 
-**Note**: Only users with the Admin permission (`ops.admin`) can schedule and approve maintenance updates.
+**Note**: Only users with the Superuser permission (`ops.admin`) can schedule and approve maintenance updates.
 
 1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending &gt; Manage Availability**.
 2. Expand the **Manage Available Update Windows** section.
@@ -565,6 +565,8 @@ You can create spaces in your organization; for example, a *dev* space as a deve
 
 In the Quota Monitoring section, you can expand the section and view the following information:
 
+**Note**: The data is automatically refreshed every 4 hours. Click **Recalculate**, if you want to refresh the data on the page before it is automatically updated.
+
 - Environment memory usage. This section details the memory usage for the full system environment.
 	The chart provides information that includes used system memory, total system memory, quota that is
 	used, and the total quota allocated. The following list of terms defines the types of memory usage
@@ -641,19 +643,18 @@ In the Organization List section, you can view all organizations in the
 ## Managing users and permissions
 {: #oc_useradmin}
 
-You can add users singly or in groups, and view user permissions. Commonly, users are added to your {{site.data.keyword.Bluemix_notm}} instance from your company's user registry through Lightweight Directory Access Protocol (LDAP). If you are assigned **Admin** permission, you can also set and manage permissions for other users. Click **ADMINISTRATION &gt; USER ADMINISTRATION**.
+You can add users singly or in groups, and view user permissions. Commonly, users are added to your {{site.data.keyword.Bluemix_notm}} instance from your company's user registry through Lightweight Directory Access Protocol (LDAP). If you are assigned **Superuser** permission, you can also set and manage permissions for other users. Click **ADMINISTRATION &gt; USER ADMINISTRATION**.
 
-The User Administration page displays all users for the local or dedicated instance. Permissions for each user are displayed using icons in the table. Permissions can be the following: None, **Admin**, **Login**, **Catalog**, **Reports**, and **Users**.
-The **Admin** and **Login**` permissions can be set to **On** or **Off**, while the remaining permissions are enabled or disabled with specific access types, including **Read** or **Write** access for that permission, as represented by icons. See [Permissions](#permissions) for descriptions of each type and explanation of the icons.
+The User Administration page displays all users for the local or dedicated instance. Permissions for each user are displayed using icons in the table. Permissions can be the following: None, **Superuser**, **Basic Access**, **Catalog**, **Reports**, and **Users**.
+The **Superuser** and **Basic Access**` permissions can be set to **On** or **Off**, while the remaining permissions are enabled or disabled with specific access types, including **Read** or **Write** access for that permission, as represented by icons. See [Permissions](#permissions) for descriptions of each type and explanation of the icons.
 
 ### Working with users
 
-Depending on your **Read** or **Write** access for the users' permissions, you can search for existing users, remove users, and add users individually or by a group. Note that if you have the **Admin** permission, you have full access to complete any tasks for user management in the environment. The following tasks can be completed to manage users. Review the following list to see if your level of access enables you to complete specific user management tasks:
+Depending on your **Read** or **Write** access for the users' permissions, you can search for existing users, remove users, and add users individually or by a group. Note that if you have the **Superuser** permission, you have full access to complete any tasks for user management in the environment. Review the following user management tasks and the level of access needed to complete each task:
 
-* Locate users. You can locate users in the table by using the **Search**
-field with **Read** or **Write** access for the users permission.
+* Locate users. If have **Read** or **Write** access and you know all or part of the user name, you can locate users in the table by using the **Search** field.
 
-* Add a single user. If you have **Admin** permission or
+* Add a single user. If you have **Superuser** permission or
 **Users** permission with **Write** access, you can add users.
 
   1. To add a single user from your LDAP directory, click **Add User**.
@@ -663,7 +664,7 @@ field with **Read** or **Write** access for the users permission.
 
   **Note**: When the add operation is successful, the user is added to the table for you to view and search. When users are added, they have no assigned permissions.
 
-* Add a group of users from your LDAP directory. If you have **Admin** permission or
+* Add a group of users from your LDAP directory. If you have **Superuser** permission or
 **Users** permission with **Write** access, you can add users.
 
   1. Click **Add User Group**.
@@ -673,7 +674,7 @@ field with **Read** or **Write** access for the users permission.
 
   **Note**: Groups of more than 50 users are added through a background batch job. When the add operation is successful, the user or group is added to the table for you to view and search. When users are added, they have no assigned permissions.
 
-* Add a group of users by importing a spreadsheet that includes user IDs, user email addresses, and the organization to which you plan to add the user. If you have **Admin** permission or **Users** permission with **Write** access, you can add users.
+* Add a group of users by importing a spreadsheet that includes user IDs, user email addresses, and the organization to which you plan to add the user. If you have **Superuser** permission or **Users** permission with **Write** access, you can add users.
 
 **Note**: Enter user IDs that match the values used in your user registry.
 
@@ -684,20 +685,20 @@ field with **Read** or **Write** access for the users permission.
 
   **Note**: The columns within your spreadsheet can be in any order as long as you have all of the required columns. If the import was successful, you receive a confirmation message that states that all users were added. If the import was successful for some users, but not others, review the error message to take action on the users that could not be added.
 
-* Remove users. If you have **Admin** permission or **Users** permission with **Write** access, you can remove users from the environment permanently.
+* Remove users. If you have **Superuser** permission or **Users** permission with **Write** access, you can remove users from the environment permanently.
 
     1. Locate the user and click the ![Delete](images/icon_trash.svg) icon.
     2. Click **Remove**.
 
-* Editing permissions and organizations to which users belong requires you to have **Admin** permission. To edit permissions for users, locate the user and click the user name. From the **Edit User** page, you can enable or disable permissions:
+* Editing permissions and organizations to which users belong requires you to have **Superuser** permission. To edit permissions for users, locate the user and click the user name. From the **Edit User** page, you can enable or disable permissions:
 
-    * Select **On** from the list to enable the **Admin** or **Login** permission.
+    * Select **On** from the list to enable the **Superuser** or **Basic Access** permission.
     * Select **Read** from the list to allow the user to have **Read** (read-only) access for that permission, or select **Write** to allow **Write** (edit, or add and remove) access for that permission.
     * Select **Off** to disable any of the permissions.
 
-    **Note**: Setting the **Admin** permission to **On** sets all other permissions with **Write** access.
+    **Note**: Setting the **Superuser** permission to **On** sets all other permissions with **Write** access.
 
-* To add or remove a user from a specific org, you must have **Admin** permission or **Users** permission with **Write** access.
+* To add or remove a user from a specific org, you must have **Superuser** permission or **Users** permission with **Write** access.
 
     1. To add a user to an org, select the user name from the table to access the **Edit User** page. Then, use the search field to locate an org, select the org from the list, and click **Save**.
     2. To remove a user from an org, select the user name from the table to access the **Edit User** page. Then, click ![Remove](images/icon_remove.svg) for the org from which you want to remove the user, and click **Save**.
@@ -711,8 +712,8 @@ Users can be assigned the following permissions with specific access levels that
 
 | **User permission** | **Description** |       
 |-----------------|-------------------|
-| Admin | Users with **Admin** permission set to **On** are allowed to edit permissions for other users. If you have the permission on, it automatically enables full access to all other permissions. In addition to the tasks outlined for each permission in this table, the admin can also set up event subscriptions to get alerted directly about maintenance or incidents, schedule maintenance, run verification checks on console components, and create orgs and spaces for the environment. |
-| Login | Users with **Login** permission set to **On** are allowed to see the Administration page option in the {{site.data.keyword.Bluemix_notm}} user interface. Users with the permission enabled can access the [System Information](#oc_system) and [Resource Usage](#oc_resource) tiles. Without this permission, users cannot see or access the Administration menu option. |
+| Superuser | Users with **Superuser** permission set to **On** are allowed to edit permissions for other users. If you have the permission on, it automatically enables full access to all other permissions. In addition to the tasks outlined for each permission in this table, they can also set up event subscriptions to get alerted directly about maintenance or incidents, schedule maintenance, run verification checks on console components, and create orgs and spaces for the environment. This permission is equivalent to the administrator (admin) role for the admin console.  |
+| Basic Access | Users with **Basic Access** permission set to **On** are allowed to see the Administration page option in the {{site.data.keyword.Bluemix_notm}} user interface. Users with the permission enabled can access the [System Information](#oc_system) and [Resource Usage](#oc_resource) tiles. Without this permission, users cannot see or access the Administration menu option. This permission is equivalent to the administrator (admin) role for the admin console. This permission is equivalent to the previously used login permission for the admin console. |
 | Catalog | Users with **Catalog** permission can be assigned the access to **Read** or **Write** (modify) which services are available in the local or dedicated instance. Read access allows the user to access the Catalog Management tile to view available services. Write access allows the user to access the [Catalog Management](#oc_catalog) tile to view services, edit the visibility of services, register custom services, and control the buildpack priority list. |  
 | Reports | Users with **Reports** permission can be assigned the access to **Read** or **Write** (modify) security reports. Read access allows the user to access the Reports and Logs tile to download reports. Write access allows the user to view the [Reports and Logs](#oc_report) tile as well as use the CLI to upload new reports and create new categories for users to access. |
 | Users | Users with **Users** permission can be assigned the access to **Read** (view) the list of users or **Write** (add or remove) users. This permission doesn't allow you to set permissions for other users. Write access allows the user to add new users to the environment, delete users from the environment, and add existing users to organizations that already exist within the environment. In addition, **Write** access allows the user to add new organizations, delete organizations, and edit the users within the organizations. |
@@ -746,9 +747,9 @@ input and provides easy-to-read output. You can download Python from the [Python
 ### Logging in to the Admin Console
 
 Before you can run any `Admin` API requests, you must log in to the
-Admin Console. If you have **Admin** permission or **Users**
+Admin Console. If you have **Superuser** permission or **Users**
 permission with **Write** access, you can add or remove users. You must have
-**Admin** permission to edit other users' permissions.
+**Superuser** permission to edit other users' permissions.
 
 To log in to the Admin Console, you can use basic access authentication on the
 `https://<your_host>.ibm.com/login` endpoint. The server returns a cookie with your
@@ -916,7 +917,7 @@ The following example shows output from this command:
 You can use the `Admin` REST API to add users to the
 {{site.data.keyword.Bluemix_notm}} instance. You must
 have **Users** permission with **Write** access to add
-users, or the Admin permission (ops.admin) for the admin console. Additionally, as the Admin, you can allow organization members who do not have general admin console `user` or `admin` permission the ability to add new users to their organization only. Use the following API command for this specific capability for organization managers:
+users, or the **Superuser** permission (ops.admin) for the admin console. Additionally, as the Admin, you can allow organization members who do not have general admin console `user` or `superuser` permission the ability to add new users to their organization only. Use the following API command for this specific capability for organization managers:
 
 ```
 PUT console.<subdomain>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE or FALSE>

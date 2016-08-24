@@ -13,23 +13,29 @@ copyright:
 
 ## Una lista de las últimas actualizaciones del paquete de compilación de Liberty.
 
-*Última actualización: 17 de junio de 2016*
+*Última actualización: 20 de julio de 2016*
 {: .last-updated}
 
+### 22 de julio de 2016: Se ha actualizado el paquete de compilación de Liberty v3.1-20160717-2254
+* La funcionalidad [App Management](../../manageapps/app_mng.html) se ha actualizado para dar soporte a la autenticación federada. Igualmente, el tiempo de ejecución de Node.js utilizado por los programas de utilidad `devconsole` y `shell` se ha actualizado a la versión `0.12.15` más reciente. 
+* El paquete de compilación añade soporte para el agente de supervisión de aplicación de [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/).
+* El paquete de compilación proporciona un recopilador de datos actualizado para el [servicio Monitoring and Analytics](../../services/monana/index.html#monana_oview).
+* El paquete de compilación también proporciona una versión actualizada del agente para el [Servicio de escalado automático](../../services/Auto-Scaling/index.html). 
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/).
+
 ### 17 de junio de 2016: Paquete de compilación de Liberty actualizado v3.0-20160608-1450
-* El paquete de compilación ahora contiene dos versiones de WebSphere Liberty, el último release estable y el último release beta. De forma específica, proporciona el release estable [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) y el release estable [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/).
-De forma predeterminada se utilizará el release estable. Consulte [versiones de Liberty](buildpackDefaults.html#liberty_versions) para obtener más detalles. 
+* El paquete de compilación ahora contiene dos versiones de WebSphere Liberty, el último release estable y el último release mensual. De forma específica, proporciona el release estable [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) y el release mensual [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). De forma predeterminada se utilizará el release estable. Consulte [versiones de Liberty](buildpackDefaults.html#liberty_versions) para obtener más detalles. 
+* El paquete de compilación también contiene arreglos de seguridad para la [Vulnerabilidad de Apache Standard Taglibs](http://www-01.ibm.com/support/docview.wss?uid=swg21985531).
 
 ### 25 de mayo de 2016: se ha actualizado el paquete de compilación de Liberty v2.9-20160519-1249
-* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de mayo](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). La versión actualizada de Liberty hace que las funciones beta *bluemixLogCollector-1.1* y  *logstashCollector-1.1* disponibles en Bluemix.
+* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de mayo](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). La versión actualizada de Liberty hace que las funciones beta *bluemixLogCollector-1.1* y *logstashCollector-1.1* disponibles en Bluemix.
 
 ### 5 de mayo de 2016: se ha actualizado el paquete de compilación de Liberty v2.8-20160430-1011
 * El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de abril](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). La versión actualizada de Liberty hace que la función GA *logstashCollector-1.0* y la función beta de *logmetCollector-1.0* esté disponible en Bluemix.
 * El paquete de compilación también contiene versiones de IBM JRE: 8 SR3 y 7.1 SR3 FP40. 
 * El paquete de compilación añade soporte inicial para el agente de supervisión de aplicación de [AppDynamics](https://www.appdynamics.com/).
-
-* Se ha mejorado el soporte de [Dynatrace](dynatrace.html) para simplificar la instalación del agente. 
-* El paquete de compilación proporciona un recopilador de datos actualizado para el [servicio Monitoring and Analytics](../../services/monana/index.html#monana_oview). Contiene un arreglo para un problema con recopilación de los datos de almacenamiento dinámico máximo. 
+* Se ha mejorado el soporte de [Dynatrace](dynatrace.html) para simplificar la instalación del agente.
+* El paquete de compilación proporciona un recopilador de datos actualizado para el [servicio Monitoring and Analytics](../../services/monana/index.html#monana_oview). Contiene un arreglo para un problema con recopilación de los datos de almacenamiento dinámico máximo.
 * El tiempo de ejecución de Node.js utilizado por los [programas de utilidad devconsole y shell App Management](../../manageapps/app_mng.html#app_management) se ha actualizado a la última versión 0.12.13.
 
 ### 25 de marzo de 2016: se ha actualizado el paquete de compilación de Liberty v2.7-20160321-1358
@@ -184,7 +190,7 @@ perfil de Liberty e IBM JRE.
 ### 19 de diciembre de 2014: se ha actualizado el paquete de compilación de Liberty v1.10-20141218-0103
 * El paquete de compilación proporciona una modalidad de desarrollo de aplicaciones. La modalidad de desarrollo es una modalidad especial que permite a los desarrolladores realizar muchas actividades para una instancia de aplicación que antes no era posible realizar. Con esta característica, esta versión de IBM Eclipse Tools for Bluemix da soporte a la depuración remota con actualizaciones incrementales de archivo sobre una aplicación Liberty que se ejecuta en Bluemix. Por eso resulta cómodo para el desarrollador que utiliza Eclipse para depurar una aplicación en la nube y aplicar los cambios a dicha aplicación de forma instantánea.
 * El paquete de compilación también contiene una versión actualizada del perfil de Liberty basado en la versión [beta de diciembre](https://developer.ibm.com/wasdev/blog/2014/12/10/announcing-liberty-beta-december/).
-* Además, las cuatro siguientes características de Liberty que antes estaban disponibles como funciones  beta ahora están listas para producción:
+* Además, las cuatro siguientes características de Liberty que antes estaban disponibles como funciones beta ahora están listas para producción:
   * concurrent-1.0
   * jsonp-1.0
   * servlet-3.1

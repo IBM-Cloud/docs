@@ -12,73 +12,78 @@ copyright:
 Von {{site.data.keyword.mobileanalytics_full}} werden Überwachungs- und Analysefunktionen für mobile Anwendungen bereitgestellt. Mit dem {{site.data.keyword.mobileanalytics_short}}-Client-SDK können Sie Clientprotokolle aufzeichnen und Daten überwachen. Entwickler können steuern, wann diese Daten an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden sollen. Wenn die Daten an {{site.data.keyword.mobileanalytics_short}} übergeben werden, können Sie mit {{site.data.keyword.mobileanalytics_short}} Erkenntnisse aus Analysen zu mobilen Anwendungen, Geräten und Clientprotokollen verwenden.
 {: shortdesc}
 
-## Daten mit angepassten Diagrammen darstellen
+<!--
+
+## Visualizing data with custom charts
 {: #custom-charts}
 
-Sie können die erfassten Analysedaten im Analyse-Repository darstellen. Diese Darstellung ist eine hervorragende Möglichkeit, um Daten auf bestimmte Anwendungsfälle hin zu untersuchen. Zusätzlich zu den angepassten Daten in einem Bericht können Sie Diagramme mit Daten erstellen, die bereits mit Operational Analytics erfasst wurden.
+You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
-### Benutzerdefinierte Diagramme für Clientprotokolle erstellen
+
+### Creating custom charts for client logs
 {: #custom-charts-client-logs}
 
-Sie können ein benutzerdefiniertes Diagramm für Clientprotokolle erstellen, die Protokollinformationen enthalten, die mit der Protokollfunktions-API für die Plattform gesendet wurden. Die Protokollinformationen umfassen auch Kontextinformationen zum Gerät, einschließlich Umgebung, App-Name und App-Version.
+You can create a custom chart for client logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
-Im folgenden Beispiel wird aus den Daten eines Clientprotokolls ein Ablaufdiagramm erstellt. Im endgültigen Diagramm wird die Verteilung der Protokollebenen in einer bestimmten App dargestellt. Außerdem können folgende Daten in einem Diagramm angezeigt werden:
+In this example, you use client log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
 
-* Specific data (Spezifische Daten)
-  * Log level (Protokollebene)
-* Message data (Nachrichtendaten)
-  * Timestamp (Zeitmarke)
-* Device OS contextual data (Kontextdaten des Betriebssystems des Geräts)
-  * Application name (Anwendungsname)
-  * Application version (Anwendungsversion)
-  * Device OS (Betriebssystem des Geräts)
-* Device contextual data (Kontextdaten des Geräts)
-  * Device ID (Geräte-ID)
-  * Device model (Gerätemodell)
-  * Device OS version (Version des Betriebssystems des Geräts)
+* Specific data
+  * Log level
+* Message data
+  * Timestamp
+* Device OS contextual data
+  * Application name
+  * Application version
+  * Device OS
+* Device contextual data
+  * Device ID
+  * Device model
+  * Device OS version
 
 
-1. Stellen Sie sicher, dass Sie über eine Anwendung verfügen, von der Geräteprotokolle oder Analysedaten erfasst werden.
-2. Klicken Sie in der {{site.data.keyword.mobileanalytics_short}}-Konsole auf der Seite **Dashboard** auf die Registerkarte **Benutzerdefinierte Diagramme**. Sie können ein Diagramm auf der Basis der Analysenachrichten erstellen, die an den Server gesendet wurden.
-3. Klicken Sie auf **Diagramm erstellen**, um ein neues angepasstes Diagramm zu erstellen, und geben Sie die folgenden Werte an:
-  * Chart Title: Application and Log Levels (Diagrammtitel: Anwendung und Protokollebenen)
-  * Event Type: Client Logs (Ereignistyp: Clientprotokolle)
-  * Chart Type: Flow Chart (Diagrammtyp: Ablaufdiagramm)
-5. Klicken Sie auf die Registerkarte **Diagrammdefinition** und geben Sie die folgenden Werte an:
-  * Source: Application Name (Quelle: Anwendungsname)
-  * Destination: Log Level (Ziel: Protokollebene)
-  * Property: your app name (Eigenschaft: App-Name)
-7. Klicken Sie auf **Speichern**.
+1. Make sure that you have an application that is collecting device logs or gathering analytics.
+2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
+3. Click **Create Chart** to create a new custom chart and provide the following values:
+  * Chart Title: Application and Log Levels
+  * Event Type: Client Logs
+  * Chart Type: Flow Chart
+5. Click the **Chart Definition** tab and provide the following values:
+  * Source: Application Name
+  * Destination: Log Level
+  * Property: your app name
+7. Click **Save**
 
-### Angepasste Daten exportieren
+### Exporting custom data
 {: #export-custom-data}
 
-Sie können die Daten jedes benutzerdefinierten Diagramms in das JSON-, XML- oder CSV-Format exportieren.
+You can export the data from each custom chart into JSON, XML, or CSV format.
 
-Die Struktur der exportierten Daten hängt vom jeweils exportierten Diagramm ab. Klicken Sie zum Exportieren der Daten auf das Exportsymbol in der rechten oberen Ecke des angepassten Diagramms.
+The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
 
 
 
-### Benutzerdefinierte Diagrammdefinitionen exportieren und importieren
+### Exporting and importing custom chart definitions
 {: #export-import-custom}
 
-Sie können benutzerdefinierte Diagrammdefinitionen programmgestützt oder manuell im {{site.data.keyword.mobileanalytics_short}}-Dashboard importieren oder exportieren.
+You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
-Stellen Sie sicher, dass Sie im {{site.data.keyword.mobileanalytics_short}}-Dashboard über mindestens ein benutzerdefiniertes Diagramm verfügen.
-Im folgenden Beispiel exportieren und importieren Sie die Definitionen benutzerdefinierter Diagramme manuell.
+Ensure that you have at least one custom chart in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
+In this example, you manually export and import custom chart definitions.
 
-1. Klicken Sie in der {{site.data.keyword.mobileanalytics_short}}-Konsole auf der Seite **Dashboard** auf die Registerkarte **Benutzerdefinierte Diagramme**.
-2. Klicken Sie zum Exportieren der angepassten Diagrammdefinitionen auf **Diagramme exportieren**. Daraufhin wird ein Dialogfenster zum Speichern der Datei `customChartsDefinition.json` angezeigt.
-3. Wählen Sie eine Position zum Speichern der Datei aus.
-4. Klicken Sie auf das Symbol **Diagramm löschen** neben jedem angepassten Diagramm, um alle angepassten Diagramme zu löschen.
-5. Klicken Sie zum Importieren einer angepassten Diagrammdefinition auf **Diagramme importieren**. Daraufhin wird ein Dialogfenster zum Auswählen einer Datei angezeigt.
-6. Wählen Sie die Datei `customChartsDefinition.json` zum Öffnen aus, die Sie vorher exportiert haben.
+1. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab in the **Dashboard** page.
+2. To export the custom chart definitions, click **Export Charts**. This action displays a dialog to save a `customChartsDefinition.json` file.
+3. Choose a location to save the file.
+4. Click the **Delete Chart** icon next to each custom chart to delete all custom charts.
+5. To import a custom chart definition, click **Import Charts**. This action displays a dialog to choose a file.
+6. Choose the `customChartsDefinition.json` file that you previously exported to open.
 
-Sie können benutzerdefinierte Diagrammdefinitionen mit einem HTTP-Client Ihrer Wahl (zum Beispiel CURL oder postman) auch programmgesteuert exportieren und importieren:
-* Der GET-Endpunkt für den Export lautet `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
-* Der POST-Endpunkt für den Import lautet `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
+You can also export and import custom chart definitions programmatically by using your HTTP client of choice (for example, CURL or postman):
+* The GET endpoint for export is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
+* The POST endpoint for import is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
 
-**Hinweis:** Wenn Sie eine benutzerdefinierte Diagrammdefinition importieren, die bereits vorhanden ist, ist diese Definition doppelt vorhanden; dies bedeutet auch, dass das benutzerdefinierte Diagramm im {{site.data.keyword.mobileanalytics_short}}-Dashboard doppelt angezeigt wird.
+**Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
+
+-->
 
 ## Alerts einstellen
 {: #alerts}

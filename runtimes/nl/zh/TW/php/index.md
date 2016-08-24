@@ -11,11 +11,10 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*前次更新：2016 年 6 月 10 日*
+*前次更新：2016 年 7 月 6 日*
 {: .last-updated}
 
-{{site.data.keyword.Bluemix}} 上的 PHP 運行環境是採用 php_buildpack 技術。
-php_buildpack 為 PHP 應用程式提供完整的運行環境。
+{{site.data.keyword.Bluemix}} 上的 PHP 運行環境是採用 php_buildpack 技術。php_buildpack 為 PHP 應用程式提供完整的運行環境。
 {: shortdesc}
 
 在下列狀況下將使用 php_buildpack：
@@ -36,27 +35,26 @@ php_buildpack 為 PHP 應用程式提供完整的運行環境。
 ```
 {
     "require": {
-        "php": "5.6.*"
+        "php": "7.0.*"
     }
 }
 ```
 {: codeblock}
 如需相關資訊，請參閱 [Composer 套件鏈結](https://getcomposer.org/doc/04-schema.md#package-links)。
 
-如果未指定版本，依預設會選擇 5.5.30 版。
+如果未指定版本，依預設會選擇 5.5.34 版。
 
 ### 可用的版本：
 {: #available_versions}
 
-目前安裝在 {{site.data.keyword.Bluemix}} 中的 [PHP 建置套件](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.1.5)提供下列 PHP 版本：
+目前安裝在 {{site.data.keyword.Bluemix}} 中的 [PHP 建置套件](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.10)提供下列 PHP 版本：
 
-* 5.4.44
-* 5.4.45
-* 5.5.29
-* 5.5.30
-* 5.6.30
-* 5.6.13
-* 5.6.14
+* 5.5.33
+* 5.5.34
+* 5.6.19
+* 5.6.20
+* 7.0.4
+* 7.0.5
 
 如果您的應用程式需要未列出的 PHP 版本，您可以使用外部 [PHP 建置套件](https://github.com/cloudfoundry/php-buildpack.git)來部署該應用程式。
 

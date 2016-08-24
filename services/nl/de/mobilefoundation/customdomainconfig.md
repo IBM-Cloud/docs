@@ -13,7 +13,7 @@ copyright:
 # Benutzerdefinierte Domäne für {{site.data.keyword.mobilefoundation_short}}-Server konfigurieren
 {: #configcustomdomain}
 
-*Letzte Aktualisierung: 15. Juni 2016*
+*Letzte Aktualisierung: 20. Juni 2016*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} stellt einen {{site.data.keyword.mfserver_short_notm}} in {{site.data.keyword.containerlong}} als Containergruppe bereit. Die Containergruppe wird einer URL zugeordnet, wobei die Domänennamen auf der jeweiligen {{site.data.keyword.Bluemix_notm}}-**Region** basieren. Sie können auch eine eigene benutzerdefinierte Domäne erstellen.
@@ -25,13 +25,12 @@ Eine Containergruppe wird mit einer URL oder Route erstellt, wobei die Standardd
 
   |Domäne |  Region  |    
   |:----- | :----- |    
-  |`mybluemix.net` | Dallas, USA  |    
-  |`eu-gb.mybluemix.net` | London, Vereinigtes Königreich  |    
-  |`au-syd.mybluemix.net`  | Sydney, Australien |  
+  |`mybluemix.net` | US - Süden |    
+  |`eu-gb.mybluemix.net` | Vereinigtes Königreich  |    
 
 Zur Verwendung einer eigenen Domäne müssen Sie eine benutzerdefinierte Domäne konfigurieren, indem Sie die folgenden Schritte ausführen:
 
-1.	Erstellen Sie eine {{site.data.keyword.mfserver_short_notm}}-Instanz, indem Sie die {{site.data.keyword.mobilefoundation_short}}-Serviceinstanz durch die Auswahl eines unterstützten Plans erstellen. 
+1.	Erstellen Sie eine {{site.data.keyword.mfserver_short_notm}}-Instanz, indem Sie die {{site.data.keyword.mobilefoundation_short}}-Serviceinstanz durch die Auswahl eines unterstützten Plans erstellen.
 
 + Fügen Sie die benutzerdefinierte Domäne, die Sie verwenden möchten, zu Ihrer {{site.data.keyword.Bluemix_notm}}-`Organisation` hinzu. Rufen Sie **Organisationen verwalten > Domänen > Domäne hinzufügen** auf, um eine eigene Domäne hinzuzufügen.
 

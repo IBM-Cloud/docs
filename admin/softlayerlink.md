@@ -19,7 +19,7 @@ copyright:
 
 #Linking SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts
 {: #softlayerlink}
-*Last updated: 7 July 2016*
+*Last updated: 15 August 2016*
 {: .last-updated}
 
 You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts. When you link your accounts, you are billed through SoftLayer for both SoftLayer and {{site.data.keyword.Bluemix_notm}} resources. If you have an existing account, billing through SoftLayer for {{site.data.keyword.Bluemix_notm}} takes effect for the new billing cycle that starts after the accounts are linked.
@@ -63,7 +63,7 @@ From the {{site.data.keyword.Bluemix_notm}} user interface, you can select to in
 You must be a Master User in the SoftLayer account to invite team members to the {{site.data.keyword.Bluemix_notm}} account.
 
 To invite team members through {{site.data.keyword.Bluemix_notm}}:
- 1. Go to the **Account and Support** icon ![Account and Support](images/account_support.svg) > **Accounts** > **Invite Team Members**.
+ 1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) > **Accounts** > **Invite Team Members**.
  2. Click **Add** to authenticate into your SoftLayer account and view a list of team members from your SoftLayer account.
  3. Select the team members to invite and click **Send**.
 

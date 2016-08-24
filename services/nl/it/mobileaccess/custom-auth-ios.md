@@ -5,8 +5,12 @@ copyright:
 
 ---
 
-# Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS
+# Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS (Objective-C)
 {: #custom-ios}
+
+*Ultimo aggiornamento: 18 luglio 2016*
+{: .last-updated}
+
 
 Configura la tua applicazione iOS che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connetti la tua applicazione a {{site.data.keyword.Bluemix}}.
 
@@ -38,7 +42,7 @@ Utilizza il gestore dipendenze CocoaPods per installare l'SDK client {{site.data
 1. Dalla riga di comando, esegui `pod install`.
 CocoaPods installa le dipendenze aggiunte. Vengono visualizzati lo stato di avanzamento e quali componenti sono stati aggiunti.
 
-**Importante**: devi ora aprire il tuo progetto utilizzando un file xcworkspace che è stato generato da CocoaPods. Di norma, il
+    **Importante**: devi ora aprire il tuo progetto utilizzando un file xcworkspace che è stato generato da CocoaPods. Di norma, il
 nome è `{il-tuo-nome-progetto}.xcworkspace`.
 
 1. Esegui `open {il-tuo-nome-progetto}.xcworkspace` dalla riga di comando per aprire il tuo spazio di lavoro del progetto iOS.
@@ -272,7 +276,7 @@ Dopo che hai inizializzato l'SDK client e registrato un `IMFAuthenticationDelega
  Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyword.mobilefirstbp}} e di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
 
 1. Invia una richiesta all'endpoint protetto della tua applicazione di back-end mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
-L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
+  L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo aver inizializzato `BMSClient` e registrato il tuo `IMFAuthenticationDelegate` personalizzato:
 
 	Objective-C:

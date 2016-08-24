@@ -11,7 +11,7 @@ copyright:
 # Android SDK のセットアップ
 {: #getting-started-android}
 
-*最終更新日: 2016 年 5 月 25 日*
+*最終更新日: 2016 年 7 月 18 日*
 {: .last-updated}
 
 Android アプリケーションに {{site.data.keyword.amashort}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
@@ -20,8 +20,8 @@ Android アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
-* Gradle および Android Studio SDK を含む Android Studio プロジェクト。Android 開発環境のセットアップ方法について詳しくは、[Google Developer Tools](http://developer.android.com/sdk/index.html) を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
+* Gradle と連動して機能するようにセットアップされた Android Studio プロジェクト。Android 開発環境のセットアップ方法について詳しくは、[Google Developer Tools](http://developer.android.com/sdk/index.html) を参照してください。
 
 
 ## {{site.data.keyword.amashort}} Client SDK のインストール
@@ -31,10 +31,9 @@ Android アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 
 1. Android Studio プロジェクトを作成するか、既存のプロジェクトを開きます。
 
-1. `build.gradle` ファイルを開きます。
-**ヒント**: Android プロジェクトには、プロジェクト用とアプリケーション・モジュール用の 2 つの `build.gradle` ファイルがある場合があります。アプリケーション・モジュールのファイルを使用してください。
+1. アプリケーションの `build.gradle` ファイルを開きます (プロジェクト `build.gradle` ファイル**ではありません**)。
 
-1. `build.gradle` ファイルの **Dependencies** セクションを見つけます。以下のようにして、{{site.data.keyword.amashort}} Client SDK のコンパイル依存関係を追加します。
+1. `build.gradle` ファイルの **dependencies** セクションを見つけます。以下のようにして、{{site.data.keyword.amashort}} Client SDK のコンパイル依存関係を追加します。
 
 	```Gradle
 	dependencies {
@@ -44,43 +43,48 @@ Android アプリケーションに {{site.data.keyword.amashort}} Client SDK �
         ext: 'aar',
         transitive: true
     	// other dependencies  
-}
-```
+	}
+	```
 
 1. プロジェクトを Gradle と同期化します。**「ツール」&gt;「Android」&gt;「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**とクリックします。
+
 1. Android プロジェクトの `AndroidManifest.xml` ファイルを開きます。以下のようにして、`<manifest>` エレメントにインターネット・アクセス許可を追加します。
 
- ```XML
+	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #initalize-mca-sdk}
 
-`context` パラメーター、`applicationGUID` パラメーター、および `applicationRoute` パラメーターを `initialize` メソッドに渡すことによって、SDK を初期化します。
+`context` パラメーター、`applicationGUID` パラメーター、`applicationRoute` パラメーター、および `BMSClient.REGION_UK` パラメーターを `initialize` メソッドに渡すことによって、SDK を初期化します。
 
 
 1. {{site.data.keyword.Bluemix_notm}} ダッシュボードのメインページからアプリをクリックします。「**Mobile オプション**」をクリックします。SDK を初期化するには、**「アプリケーション経路 (Application route)」**と**アプリケーション GUID (Application GUID)」**の値が必要です。
 
 2. Android アプリケーションで {{site.data.keyword.amashort}} Client SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。
 <br/>*applicationRoute* および *applicationGUID* は、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**の値に置換します。
-```Java
+
+ ```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");```
+					"applicationGUID",
+					BMSClient.REGION_UK);
+```
+`
+BMSClient.REGION_UK` は適切な地域に置き換えてください。 	
 
-
-## モバイル・バックエンドへの要求の実行
+## モバイル・バックエンド・アプリケーションへの要求の実行
 {: #request}
 
-{{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンドに要求を出すことができるようになります。
+{{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
-1. 新しいモバイル・バックエンドの保護エンドポイントへの要求の送信を試行します。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` (例: `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
+1. 新しいモバイル・バックエンド・アプリケーションの、保護されたエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
+<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
 
 1. Android アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 
- ```Java
+	```Java
 	Request request = new Request("/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
@@ -110,4 +114,4 @@ Android アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 保護されているエンドポイントに繋がった場合、資格情報は必要とされません。アプリケーションにユーザーのログインを要求する場合、Facebook、Google またはカスタム認証を構成する必要があります。
 * [Facebook](facebook-auth-android.html)
 * [Google](google-auth-android.html)
-* [Custom](custom-auth-android.html)
+* [カスタム](custom-auth-android.html)

@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*Última atualização: 10 de junho de 2016*
+*Última atualização: 13 de julho de 2016*
 {: .last-updated}
 
 O tempo de execução do Tomcat no {{site.data.keyword.Bluemix}} foi desenvolvido com o java_buildpack.
@@ -44,7 +44,7 @@ Ambos podem ser especificados no arquivo manifest do aplicativo.  Por exemplo:
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-A versão padrão atual do Tomcat é 8.0.30.  A versão padrão atual do Java é 1.8.0_65.
+A versão atual do java_buildpack é v3.6, que contém o Tomcat versão 8.30.0 padrão e o Java versão 1.8.0_71 padrão.
 Para obter mais informações veja [Liberações do java-buildpack](https://github.com/cloudfoundry/java-buildpack/releases).
 
 # rellinks

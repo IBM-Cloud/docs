@@ -7,12 +7,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# Configuración de credenciales para notificaciones push de Apple (APNS)
-
+# Configuración de credenciales para APNS
 {: #create-push-credentials-apns}
+*Última actualización: 14 de junio de 2016*
+{: .last-updated}
 
 El servicio de notificaciones push de Apple (APNS) permite a los desarrolladores de aplicaciones enviar
-notificaciones remotas desde la instancia de servicio push en Bluemix (el proveedor) en dispositivos y aplicaciones de iOS. Los mensajes se envían a una aplicación de destino del dispositivo. Obtenga y configure las credenciales de APNS. Los certificados de APNse gestionan de forma segura mediante el servicio de notificaciones y se utilizan para conectarse al servidor APNS como proveedor.
+notificaciones remotas desde la instancia de servicio push en Bluemix (el proveedor) en dispositivos y aplicaciones de iOS. Los mensajes se envían a una aplicación de destino del dispositivo. Obtenga y configure las credenciales de APNS. Los certificados de APNS se gestionan de forma segura mediante el servicio de Notificación push y se utilizan para conectarse al servidor APNS como proveedor.
 
 1. Obtenga una cuenta de [Apple Developers](https://developer.apple.com/).
 2. [Registrar un ID de
@@ -76,7 +77,7 @@ Debe obtener certificados independientes para los entornos de desarrollo y de
                     distribución. Los certificados están asociados con un ID de App para la app que es
                     el destinatario de las notificaciones remotas. Para la producción, puede crear un máximo de dos
                     certificados. Bluemix utiliza los certificados para establecer una conexión SSL con
-                    APNS. 
+                    APNS.
 
 Crear un certificado SSL de desarrollo y distribución.
 
@@ -178,17 +179,17 @@ Utilice el perfil de suministro del almacén para enviar la app para su distribu
 Para crear un archivo de certificado push .p12 válido, es necesario utilizar el certificado .p12 de APNS junto con el certificado de perfil de desarrollo/distribución. Complete los pasos.
 
 ```
-//You can choose to pick up either the development or distribution certificate  
-	developer_identity.cer - Development profile downloaded from Apple 
+//Puede elegir seleccionar el certificado de desarrollo o de distribución
+	developer_identity.cer - Development profile downloaded from Apple
 	apns.p12 - APNS .p12 exported from the keychain
 	openssl x509 -in developer_identity.cer -inform DER -out
 	developer_identity.pem -outform PEM
 	openssl pkcs12 -nocerts -in apns.p12 -out apns.pem
 	openssl pkcs12 -export -inkey apns.pem -in developer_identity.pem -out bluemixPush_dev.p12
 ```
-You need to store the `bluemixPush_dev.p12` file to your desktop.
+Debe almacenar el archivo `bluemixPush_dev.p12` en el escritorio.
 
-##Configuración de APN en el Panel de control de notificaciones Push
+##Configuración de APNS en el Panel de control de notificaciones push
 {: #create-push-credentials-apns-dashboard}
 
 Para utilizar el Servicio de notificaciones push para enviar notificaciones, cargue los certificados SSL
@@ -201,7 +202,7 @@ que son necesarios para el servicio de notificaciones push de Apple (APNS). Tamb
 Obtenga el certificado SSL APN de producción y desarrollo y la contraseña
                     asociada con cada tipo de certificado. Para obtener más información, consulte Creación y configuración de las credenciales de push para APN.
 
-Los certificados que son necesarios para las APN son certificados p12, que contienen la clave privada y certificados SSL que son necesarios para crear y publicar la aplicación. Debe generar los certificados desde el Centro de miembros del
+Los certificados que son necesarios para APNS son certificados .p12, que contienen la clave privada y los certificados SSL necesarios para crear y publicar la aplicación. Debe generar los certificados desde el Centro de miembros del
                     sitio web Desarrollador de Apple (es necesaria una cuenta válida de desarrollador de Apple). Los certificados independientes son necesarios para el entorno de desarrollo (pruebas) y
                     el entorno de producción (distribución).
 

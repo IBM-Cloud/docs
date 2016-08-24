@@ -11,7 +11,7 @@ copyright:
 *마지막 업데이트 날짜: 2016년 6월 15일*
 {: .last-updated}
 
-{{site.data.keyword.mobilefoundation_short}}: Developer 서비스 인스턴스를 작성한 후에 {{site.data.keyword.mfp_full_notm}} V8.0에 대한 라이센스 조항에 동의하여 시작하십시오. 잠시 후에는 {{site.data.keyword.mobilefoundation_short}} 서비스를 시작하는 데 도움이 되는 학습서 및 비디오를 제공하는 {{site.data.keyword.Bluemix_notm}}의 `개요` 페이지에 액세스할 수 있습니다.
+{{site.data.keyword.mobilefoundation_short}}: Developer 서비스 인스턴스를 작성한 후에 {{site.data.keyword.mfp_full_notm}} V8.0에 대한 라이센스 조항에 동의하여 시작하십시오. 잠시 후에는 {{site.data.keyword.mobilefoundation_short}} 서비스를 시작하는 데 도움이 되는 튜토리얼 및 동영상을 제공하는 {{site.data.keyword.Bluemix_notm}}의 `Overview` 페이지에 액세스할 수 있습니다.
 
 ## {{site.data.keyword.mobilefirst}} 서버 시작
 {: #start_mobilefoundation_p1}
@@ -27,7 +27,7 @@ copyright:
 
 *	사용자를 위해 작성된 서버 라우트. 이 라우트를 사용하여 공용 인터넷에서 모바일 서버에 접속할 수 있습니다. 모바일 애플리케이션은 해당 라우트를 사용하여 서버에 액세스합니다. 
 
-*	{{site.data.keyword.mfp_oc_short_notm}}에 액세스하기 위한 개인 `사용자 이름` 및 `비밀번호`. `비밀번호`는 숨겨집니다.  **비밀번호 표시**를 클릭하여 이를 볼 수 있습니다. 
+*	{{site.data.keyword.mfp_oc_short_notm}}에 액세스하기 위한 개인 `username` 및 `password`. `password`는 숨겨집니다.  **비밀번호 표시**를 클릭하여 이를 볼 수 있습니다. 
 
 *	**콘솔 실행**을 클릭하여 {{site.data.keyword.mfp_oc_short_notm}}을 실행하십시오.
 
@@ -44,7 +44,7 @@ copyright:
 ##	고급 구성 설정
 {: #using_mfs_advanced_p1}
 
-`개요` 페이지에서 **고급 구성으로 서버 시작**을 사용하면 고급 또는 사용자 정의 설정으로 서버를 작성할 수 있습니다. 또한 **구성** 탭을 클릭하여 서버 구성을 사용자 정의할 수 있도록 서버 설정을 업데이트할 수도 있습니다. {{site.data.keyword.mobilefoundation_short}}은 일부 고급 설정에 대한 액세스를 제공합니다.
+`Overview` 페이지에서 **고급 구성으로 서버 시작**을 사용하면 고급 또는 사용자 정의 설정으로 서버를 작성할 수 있습니다. 또한 **구성** 탭을 클릭하여 서버 구성을 사용자 정의할 수 있도록 서버 설정을 업데이트할 수도 있습니다. {{site.data.keyword.mobilefoundation_short}}은 일부 고급 설정에 대한 액세스를 제공합니다.
 
 *	**토폴로지** 탭에서 컨테이너의 크기를 선택할 수 있습니다. 기본값인 1GB 서버는 개발 및 중간 규모의 테스트에 충분합니다. 
 

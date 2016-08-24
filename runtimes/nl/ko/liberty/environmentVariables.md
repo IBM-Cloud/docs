@@ -71,7 +71,7 @@ Java용 Liberty에서 지원하는 환경 변수
 
 <tr>
 <td>JBP_LOG_LEVEL</td>
-<td>빌드팩의 로깅 레벨을 설정합니다. 가능한 값: <b>DEBUG</b>, <b>INFO</b> (default), <b>WARN</b>, <b>ERROR</b> 또는 <b>FATAL</b></td>
+<td>빌드팩의 로깅 레벨을 설정합니다. 가능한 값: <b>DEBUG</b>, <b>INFO</b>(기본값), <b>WARN</b>, <b>ERROR</b> 또는 <b>FATAL</b></td>
 </tr>
 
 <tr>

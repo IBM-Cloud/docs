@@ -12,7 +12,7 @@ copyright:
 # Liberty アプリケーションのプッシュのオプション
 {: #options_for_pushing}
 
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 6 月 10 日*
 {: .last-updated}
 
 Bluemix における Liberty サーバーの動作は、Liberty ビルドパックによって制御されます。 ビルドパックは、特定のクラスのアプリケーションに対して、完全なランタイム環境を提供することができます。また、
@@ -37,7 +37,7 @@ WAR または EAR ファイルなどのスタンドアロン・アプリケー�
 スタンドアロン・アプリケーションをデプロイするには、WAR または EAR ファイルをポイントする -p パラメーターを使用して cf push コマンドを実行します。例えば、次のとおりです。
 
 ```
-    $ cf push <yourappname> -p myapp.war
+$ cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -64,7 +64,7 @@ WAR または EAR ファイルなどのスタンドアロン・アプリケー�
 jsp-2.3 フィーチャーと websocket-1.1 フィーチャーのみを使用可能にするには、次のコマンドを実行し、アプリケーションの再ステージングを行います。
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -75,7 +75,7 @@ WAR ファイルをデプロイした場合、Web アプリケーションは組
 
 
 ```
-    http://<yourappname>.mybluemix.net/
+http://<yourappname>.mybluemix.net/
 ```
 {: codeblock}
 
@@ -84,7 +84,7 @@ EAR ファイルをデプロイした場合、組み込み Web アプリケー�
 
 
 ```
-    http://<yourappname>.mybluemix.net/acme/
+http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -132,14 +132,14 @@ EAR ファイルをデプロイした場合、組み込み Web アプリケー�
 例えば、次のとおりです。
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 重要: 環境変数の変更を有効にするには、次のようにアプリケーションの再ステージングを実行する必要があります。
 
 ```
-    $ cf restage myapp
+$ cf restage myapp
 ```
 {: codeblock}
 
@@ -152,7 +152,7 @@ Liberty プロファイルをワークステーションにインストールし
 例えば、Liberty サーバーの名前が defaultServer の場合、次のコマンドを実行します。
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
+$ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -180,14 +180,14 @@ Liberty プロファイルをワークステーションにインストールし
 サーバー・ディレクトリーの準備ができたら、それを Bluemix にデプロイできます。
 
 ```
-    $ cf push <yourappname> -p defaultServer
+$ cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
 注: サーバー・ディレクトリーの一部としてデプロイされた Web アプリケーションは、[Liberty プロファイルで決定されたコンテキスト・ルート](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)からアクセス可能です。例えば、次のとおりです。
 
 ```
-    http://<yourappname>.mybluemix.net/acme/
+http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -196,17 +196,21 @@ Liberty プロファイルをワークステーションにインストールし
 
 パッケージされたサーバー・ファイルを Bluemix にプッシュすることもできます。パッケージされたサーバー・ファイルは、Liberty のサーバー・パッケージ・コマンドを使用して作成されます。アプリケーションと構成ファイルに加えて、パッケージされたサーバー・ファイルも、アプリケーションに必要な共有リソースおよび Liberty ユーザー・フィーチャーを含むことができます。
 
-Liberty サーバーをパッケージするには、Liberty インストール・ディレクトリーから ./bin/server package コマンドを使用します。サーバー名を指定して、'––include=usr' オプションを含めます。例えば、Liberty サーバーが defaultServer の場合、次のコマンドを実行します。
+Liberty サーバーをパッケージするには、Liberty インストール・ディレクトリーから `./bin/server package` コマンドを使用します。サーバー名を指定して、`--include=usr` オプションを含めます。
+例えば、Liberty サーバーが defaultServer の場合、次のコマンドを実行します。
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+$ wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
-このコマンドはサーバーのディレクトリーに serverName.zip ファイルを生成します。その後 cf push コマンドで圧縮ファイルを Bluemix にプッシュできます。例えば、次のとおりです。
+このコマンドはサーバーのディレクトリーに serverName.zip ファイルを生成します。`--archive` オプションを使用して別のアーカイブ・ファイルを指定した場合は、拡張子が `.jar` ではなく `.zip` であることを確認してください。**ビルドパックは、拡張子「.jar」を使用して作成されたパッケージ済みサーバー・ファイルをサポートしません**。
+
+その後、`cf push` コマンドを使用して、生成された `.zip` ファイルを Bluemix にプッシュできます。
+例えば、次のとおりです。
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+$ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 

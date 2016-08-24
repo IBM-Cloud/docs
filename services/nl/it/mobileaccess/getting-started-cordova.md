@@ -9,7 +9,7 @@ copyright:
 # Configurazione del plugin Cordova
 {: #getting-started-cordova}
 
-*Ultimo aggiornamento: 25 maggio 2016*
+*Ultimo aggiornamento: 17 luglio 2016*
 {: .last-updated}
 
 Strumenta la tua applicazione Cordova con l'SDK client {{site.data.keyword.amashort}}, inizializza l'SDK ed effettua richieste alle risorse protette e non protette.
@@ -18,9 +18,9 @@ Strumenta la tua applicazione Cordova con l'SDK client {{site.data.keyword.amash
 ## Prima di cominciare
 {: #before-you-begin}
 È necessario disporre di:
-* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html).
+* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un'applicazione di back-end {{site.data.keyword.Bluemix_notm}}, vedi [Introduzione](index.html).
 
-* Crea un'applicazione Cordova o utilizza un progetto esistente. Per ulteriori informazioni su come configurare la tua applicazione Cordova, consulta il [sito web di Cordova](https://cordova.apache.org/).
+* Crea un'applicazione Cordova o un progetto esistente. Per ulteriori informazioni su come configurare la tua applicazione Cordova, consulta il [sito web di Cordova](https://cordova.apache.org/).
 
 ## Installazione del plugin Cordova {{site.data.keyword.amashort}}
 {: #getting-started-cordova-plugin}
@@ -66,7 +66,7 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Configura la tua piattaforma per Android, iOS o entrambi.
+1. Configura la tua piattaforma per Android, iOS o per entrambi.
 
 	* **Android**
 
@@ -80,7 +80,7 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 
 		Per evitare errori durante la generazione, configura il tuo progetto Xcode nel seguente modo.
 
-		1. Utilizza la versione più recente di Xcode per aprire il tuo file xcode.proj nella directory &lt;*nome_applicazione*&gt;/platforms/ios.
+		1. Utilizza la versione più recente di Xcode per aprire il tuo file `xcode.proj` nella directory `<app_name>/platforms/ios`.
 
 		**Importante:** se ricevi un messaggio che indica di eseguire la conversione alla sintassi Swift più recente ("Convert to Latest Swift Syntax"), fai clic su Cancel.
 
@@ -98,7 +98,7 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 
 		4. Genera ed esegui la tua applicazione con Xcode.
 
-1. Verifica che il plugin sia stato installato correttamente eseguendo questo comando:
+1. Verifica che il plug-in sia stato installato correttamente eseguendo questo comando:
 
 	```Bash
 	cordova plugin list
@@ -114,21 +114,21 @@ Per utilizzare l'SDK client {{site.data.keyword.amashort}}, devi inizializzare l
 3. Aggiungi la seguente chiamata al tuo file `index.js` per inizializzare l'SDK client {{site.data.keyword.amashort}}. Sostituisci *applicationRoute* e *applicationGUID* con i valori da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
 	```JavaScript
-	BMSClient.initialize("applicationRoute", "applicationGUID");
+BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
 
-## Effettuazione di una richiesta al backend mobile
+## Effettuare una richiesta all'applicazione di back-end mobile
 {: #getting-started-request}
 
-Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puoi iniziare a effettuare richieste al tuo backend mobile.
+Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puoi iniziare a effettuare richieste alla tua applicazione di back-end mobile.
 
-1. Prova a inviare una richiesta a un endpoint protetto del tuo nuovo backend mobile. Nel tuo browser, apri il seguente URL: `{applicationRoute}/protected`. Ad esempio:
+1. Prova a inviare una richiesta a un endpoint protetto della tua nuova applicazione di back-end mobile. Nel tuo browser, apri il seguente URL: `{applicationRoute}/protected`. Ad esempio:
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected
 	```
 
-	L'endpoint `/protected` di un backend mobile creato con il contenitore tipo MobileFirst Services Starter è protetto con {{site.data.keyword.amashort}}. Nel tuo browser viene restituito un messaggio `Unauthorized`. Questo messaggio viene restituito perché a questo endpoint accedono solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}.
+	L'endpoint `/protected` di un'applicazione di backend mobile creato con il contenitore tipo MobileFirst Services Starter è protetto con {{site.data.keyword.amashort}}. Nel tuo browser viene restituito un messaggio `Unauthorized`. Questo messaggio viene restituito perché a questo endpoint accedono solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}.
 
 1. Utilizza la tua applicazione Cordova per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato `BMSClient`:
 
@@ -138,7 +138,7 @@ Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puo
 	}
 
 	var failure = function(error){
-		console.log("failure", error);
+	console.log("failure", error);
 	}
 
 	var request = new MFPRequest("/protected", MFPRequest.GET);

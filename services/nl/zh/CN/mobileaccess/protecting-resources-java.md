@@ -8,22 +8,23 @@ copyright:
 # 通过 {{site.data.keyword.amashort}} 保护 Liberty for Java 资源
 {: #protecting-liberty}
 
-*上次更新时间：2016 年 4 月 15 日*
+*上次更新时间：2016 年 6 月 30 日*
 {: .last-updated}
 
 
-{{site.data.keyword.amashort}} 服务器 SDK 为部署在 {{site.data.keyword.Bluemix}} 上的 Liberty for Java&trade; 应用程序提供了 OAuthTAI 模块。必须在 Liberty 服务器中安装 OAuthTAI 模块，以保护其不受未经授权的访问，并获取监视信息。
+{{site.data.keyword.amashort}} 服务器 SDK 为部署在 {{site.data.keyword.Bluemix}} 上的 Liberty for Java&trade; 应用程序提供了 `OAuthTAI` 模块。必须在 Liberty 服务器中安装 `OAuthTAI` 模块，以保护其不受未经授权的访问，并获取监视信息。
 
 ## 开始之前
 {: #before-you-begin}
-* 您必须熟悉如何在 {{site.data.keyword.Bluemix}} 上开发 Liberty for Java 应用程序。有关更多信息，请参阅 [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html)。
+您必须熟悉如何在 {{site.data.keyword.Bluemix}} 上开发 Liberty for Java 应用程序。有关更多信息，请参阅 [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html)。
 
 ## 安装 {{site.data.keyword.amashort}} 服务器 SDK
 {: #installing-server-sdk}
 
 1. 下载并抽取 [OAuthTAI 工件](https://imf-tai.{DomainName}/public/TAI.zip)。
 
-1. 将 `com.ibm.worklight.oauth.tai_1.0.0.jar` 文件复制到 `${wlp.user.dir}/extensions/lib` 目录。
+1. 将 `com.ibm.worklight.oauth.tai_1.0.0.jar` 文件复制到 `$<wlp.user.dir>/extensions/lib` 目录。
+
 	**提示：**`$<wlp.user.dir>` 是 Liberty for Java 运行时的用户目录。缺省目录名称为 `usr`。
 
 1. 将 `OAuthTai-1.0.mf` 目录复制到 `$<wlp.user.dir>/extension/lib/features` 目录。
@@ -42,7 +43,7 @@ copyright:
 	</featureManager>
 
 	```
-1. 继续编辑 `server.xml` 文件，并配置 OAuthTAI 功能。安全角色 `TAIUserRole` 将映射到名为 `ALL_AUTHENTICATED_USERS` 的特殊主题。以下片段演示了如何保护 `/protected` 端点 GET 方法。
+1. 继续编辑 `server.xml` 文件，并配置 `OAuthTAI` 功能。安全角色 `TAIUserRole` 将映射到名为 `ALL_AUTHENTICATED_USERS` 的特殊主题。以下片段演示了如何保护 `/protected` 端点 GET 方法。
 
 	```XML
 	<usr_OAuthTAI id="myOAuthTAI" realmName="imfAuthentication">
@@ -67,7 +68,7 @@ copyright:
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
 	```
 
-### 保护 Liberty for Java 资源
+## 保护 Liberty for Java 资源
 {: #protecting-liberty-resources}
 
 要保护 Liberty for Java 应用程序托管的资源，必须将 `TAIUserRole` 指定为 Java 安全角色。可以在 `web.xml` 文件中定义安全角色，或者将安全角色定义为注释。
@@ -87,7 +88,7 @@ copyright:
 	</security-constraint>
 
 	<security-role id="SecurityRole_TAIUserRole" >
-		<description>This is the role that MFP OAuthTAI uses to protect the resource, and it is required to be mapped to 'ALL_AUTHENTICATED_USERS' in Liberty</description>
+<description>This is the role that MFP OAuthTAI uses to protect the resource, and it is required to be mapped to 'ALL_AUTHENTICATED_USERS' in Liberty</description>
 		<role-name>TAIUserRole</role-name>
 	</security-role>
 	```
@@ -112,6 +113,7 @@ copyright:
 
 `WSCredential` 接口会定义一个凭证来代表 Liberty for Java 运行时的认证主体。例如：
 
+
 ```Java
 Subject callerSubject = WSSubject.getCallerSubject();
 WSCredential callerCredential =
@@ -121,7 +123,7 @@ WSCredential callerCredential =
 
 #### com.worklight.oauth.tai.WLCredential 属性
 {: #WLCredential}
-`WLCredential` 接口会提供 API 来获取特定于主体的详细信息。
+`WLCredential` 接口提供 API 来获取有关用户、设备和应用程序的特定详细信息。
 
 ```Java
 

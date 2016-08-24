@@ -7,10 +7,11 @@ copyright:
 
 {:new_window: target="_blank"}
 # Mode bac à sable et mode production
-
 {: #push-sandboxandproduction-modes}
+*Dernière mise à jour : 14 juin 2016*
+{: .last-updated}
 
-Vous pouvez utiliser Push Notifications dans l'un des deux modes suivants : bac à sable ou production. Le bac à sable est un environnement de test autonome dans lequel vous pouvez développer et tester l'intégration d'API Push avec le service Push
+Vous pouvez utiliser les notifications push dans l'un des deux modes suivants : bac à sable ou production. Le bac à sable est un environnement de test autonome dans lequel vous pouvez développer et tester l'intégration d'API Push avec le service Push
 d'application serveur. Vous devez d'abord configurer les modes bac à sable et production à l'aide du tableau de bord Push. Pour passer du mode bac à sable au mode production, utilisez l'[API REST Push](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}. Par défaut, le mode bac à sable est activé. Toutefois, lors du passage d'un mode à l'autre, balises, les périphériques et les abonnements ne sont pas partagés.
 
 

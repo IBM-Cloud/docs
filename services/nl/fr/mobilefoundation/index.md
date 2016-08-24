@@ -13,7 +13,7 @@ copyright:
 # Initiation à {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
 
-*Dernière mise à jour : 15 juin 2016*
+*Dernière mise à jour : 20 juillet 2016*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_long}} accélère la
@@ -38,7 +38,7 @@ développement et au test.
 
 Après avoir créé une instance de
 {{site.data.keyword.mobilefoundation_short}}: Developer, vous pouvez
-commencer à générer votre canal d'accès mobile en quelques clics. 
+commencer à générer votre canal d'accès mobile en quelques clics.
 
 *	Pour créer une instance de serveur
 {{site.data.keyword.mobilefirst_notm}} avec la configuration par
@@ -66,11 +66,7 @@ procédant comme suit :
 {{site.data.keyword.dashdbshort}}: Enterprise Transactional
 existant sur {{site.data.keyword.Bluemix_notm}}.
 
-    1.  Dans la liste des espaces disponibles de
-l'`Organisation` en cours, sélectionnez
-l'`Espace` {{site.data.keyword.Bluemix_notm}} dans
-lequel l'instance de service {{site.data.keyword.dashdbshort_notm}}
-existe.
+    1.  Depuis la liste des espaces disponibles dans `Organisation`, sélectionnez l'élément `Espace` {{site.data.keyword.Bluemix_notm}} dans lequel se trouve l'instance de service {{site.data.keyword.dashdbshort_notm}},
 
     2.  Sélectionnez également le nom du service (`Service
 Name`) et les données d'identification
@@ -84,9 +80,8 @@ sélectionnée en cliquant sur **Test Connection**.
 
     4.  Cliquez sur **Add**, puis sur
 **Continue** dans la fenêtre en incrustation vous demandant
-de confirmer la sélection du service {{site.data.keyword.dashdbshort_notm}}. 
-Cela permet de créer les tables requises dans l'instance de service de base de
-données {{site.data.keyword.dashdbshort_notm}} configurée. 
+de confirmer la sélection du service {{site.data.keyword.dashdbshort_notm}}. Cela permet de créer les tables requises dans l'instance de service de base de
+données {{site.data.keyword.dashdbshort_notm}} configurée.
 
 2.  Créez et démarrez le serveur.
 

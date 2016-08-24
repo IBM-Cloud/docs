@@ -5,7 +5,7 @@
 
 # Swift 런타임
 {: #swift_runtime}
-*마지막 업데이트 날짜: 2016년 6월 10일*
+*마지막 업데이트 날짜: 2016년 6월 21일*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}}의 Swift 런타임은 Bluemix용 Swift 빌드팩(예: swift_buildpack)을 통해 제공됩니다.
@@ -32,7 +32,7 @@ swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a
 ```
 {: pre}
 
-`.swift-version` 파일을 포함하는 것 외에 다음과 같이 `-b https://github.com/IBM-Swift/swift-buildpack` 매개변수를 `cf push` 명령에 추가해야 합니다. 
+`.swift-version` 파일을 포함하는 것 외에 다음 예제에 표시된 대로 `-b https://github.com/IBM-Swift/swift-buildpack` 매개변수를 `cf push` 명령에 추가해야 합니다.
 
 ```
 cf push -b https://github.com/IBM-Swift/swift-buildpack
@@ -42,7 +42,7 @@ Swift 지원 버전의 전체 목록은 빌드팩의 [manifest.yml](https://gith
 
 {{site.data.keyword.Bluemix}}에 설치된 Swift 빌드팩의 현재 버전에 대해 알아보려면 빌드팩의 [릴리스 정보](https://github.com/IBM-Swift/swift-buildpack/releases/tag/1.1.1)를 참조하십시오.
 
-Swift 언어는 자주 변경되므로 사용자 애플리케이션이 함께 작동하는 것으로 알려진 Swift 버전에 "고정"되도록 `.swift-version` 파일을 포함해야 합니다. `DEVELOPMENT-SNAPSHOT-2016-05-03-a` 이외의 Swift 버전을 사용 중이라면 앱을 푸시할 때 `-b https://github.com/IBM-Swift/swift-buildpack` 매개변수를 지정해야 합니다(아래 참조).
+Swift 언어는 자주 변경되므로 사용자 애플리케이션이 함께 작동하는 것으로 알려진 Swift 버전에 "고정"되도록 `.swift-version` 파일을 포함해야 합니다. 또한 `DEVELOPMENT-SNAPSHOT-2016-05-03-a` 이외의 Swift 버전을 사용 중인 경우 이전에 표시된 대로 앱을 푸시할 때 `-b https://github.com/IBM-Swift/swift-buildpack` 매개변수를 지정해야 합니다.
 
 # 관련 링크
 {: #rellinks}

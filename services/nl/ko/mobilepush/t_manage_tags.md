@@ -7,6 +7,8 @@ copyright:
 
 # 태그 관리
 {: #manage_tags}
+*마지막 업데이트 날짜: 2016년 6월 14일*
+{: .last-updated}
 
 푸시 대시보드를 사용하여 사용자 애플리케이션의 태그를 작성 및 삭제하고 태그 기반 알림을 시작합니다. 태그에 등록된 디바이스에서 태그 기반 알림이 수신됩니다. 
 
@@ -86,7 +88,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onFailure(MFPPushException ex) {
          updateTextView("Error getting subscriptions.. " + ex.getMessage());
-    }
+  }
 })
 ```
 
@@ -324,5 +326,5 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
 1. **푸시 알림** 대시보드에서 **알림** 탭을 클릭하십시오. 
 1. 태그 기반 알림을 전송할 **태그** 옵션을 선택하십시오. 
 1. **검색** 태그 필드에서 사용할 태그를 검색하고 **+추가** 단추를 클릭하십시오. ![알림 화면](images/tag_notification.jpg)
-1. **메시지 텍스트** 필드의 **알림 작성** 영역으로 이동하여 알림에서 전송할 텍스트를 입력하십시오. 
+1. **메시지 텍스트** 필드에서 알림으로 구독자에게 전송될 텍스트를 입력하십시오. 
 1. **전송** 단추를 클릭하십시오. 

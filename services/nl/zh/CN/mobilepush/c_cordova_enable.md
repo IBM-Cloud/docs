@@ -7,6 +7,8 @@ copyright:
 
 # 使 Cordova 应用程序能够接收推送通知
 {: #cordova_enable}
+*上次更新时间：2016 年 6 月 14 日*
+{: .last-updated}
 
 Cordova 是一种平台，用于通过 JavaScript、CSS 和 HTML 构建混合应用程序。{{site.data.keyword.mobilepushshort}} 支持开发基于 Cordova 的 iOS 和 Android 应用程序。
 
@@ -93,6 +95,7 @@ cordova create your_app_name
 	b. 添加桥接头。转至**构建设置 > Swift 编译器 - 代码生成 > Objective-C 桥接头**，然后添加以下路径：*your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
 
 	c. 添加 Frameworks 参数。转至**构建设置 > 链接 > Runpath 搜索路径**，然后添加以下参数：
+	
 	```
 	@executable_path/Frameworks
 	```
@@ -113,7 +116,7 @@ cordova create your_app_name
 ## 初始化 Cordova 插件
 {: #cordova_initialize}
 
-可以使用推送通知服务 Cordova 插件之前，需要通过传递应用程序路径和应用程序 GUID 对其进行初始化。初始化该插件后，可以连接到在 Bluemix“仪表板”中创建的服务器应用程序。 Cordova 插件是 Android 和 iOS 客户机 SDK 的包装程序，可以使 Cordova 应用程序能够与 Bluemix 服务进行通信。
+可以使用 Push Notifications 服务 Cordova 插件之前，需要通过传递应用程序路径和应用程序 GUID 对其进行初始化。初始化该插件后，可以连接到在 Bluemix“仪表板”中创建的服务器应用程序。 Cordova 插件是 Android 和 iOS 客户机 SDK 的包装程序，可以使 Cordova 应用程序能够与 Bluemix 服务进行通信。
 
 1. 通过将以下代码片段复制并粘贴到主 JavaScript 文件（通常位于 **www/js** 目录下）中来初始化 BMSClient。
 
@@ -134,9 +137,12 @@ onDeviceReady: function() {
 ## 注册设备
 {: #cordova_register}
 
-要为设备注册推送通知服务，请调用 register 方法。
+注册之前，初始化 Push Notifications 服务。
+```
+    MFPPush.initializeBluemixPush();
+```
 
-将以下代码片段复制并粘贴到 Cordova 应用程序中，以注册设备。
+要向 Push Notifications 服务注册设备，请调用 register 方法。将以下代码片段复制到 Cordova 应用程序中，以注册设备。
 
 ```
 	var success = function(message) { console.log("Success: " + message); };
@@ -146,7 +152,7 @@ onDeviceReady: function() {
 
 ### Android
 {: #cordova_register_android}
-Android 不使用 settings 参数。如果要仅构建 Android 应用程序，请传递空对象；例如：
+Android 不使用 settings 参数。如果只是构建 Android 应用程序，请传递空对象。例如：
 
 ```
 	MFPPush.registerDevice({}, success, failure);
@@ -155,7 +161,7 @@ Android 不使用 settings 参数。如果要仅构建 Android 应用程序，�
 
 ### iOS
 {: #cordova_register_ios}
-如果想要定制警报、角标和声音属性，请将以下 JavaScript 代码片段添加到 Cordova 应用程序的 Web 部分中。
+要定制警报、角标和声音属性，请将以下 JavaScript 代码片段添加到 Cordova 应用程序的 Web 部分中。
 
 ```
 	var settings = {
@@ -181,9 +187,9 @@ MFPPush.registerDevice({}, success, failure);
 **var token = JSON.parse(response).token**
 
 
-可用密钥如下所示：`token`、`userId` 和 `deviceId`。
+可用的键如下：`token`、`userId` 和 `deviceId`。
 
-以下 JavaScript 代码片段显示如何初始化 Bluemix Mobile Services 客户机 SDK、为设备注册推送通知服务以及侦听推送通知。将此代码放入 JavaScript 文件中。
+以下 JavaScript 代码片段显示如何初始化 Bluemix Mobile Services 客户机 SDK，向 Push Notifications 服务注册设备以及侦听推送通知。将此代码放入 JavaScript 文件中。
 
 
 
@@ -212,10 +218,10 @@ onDeviceReady: function() {
      var settings = {
          ios: {
              alert: true,
-             badge: true,
-             sound: true
-         }   
-     };
+	       badge: true,
+	       sound: true
+	   }
+	};
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
          alert (notif.message);

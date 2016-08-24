@@ -79,7 +79,7 @@ copyright:
 All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. You can also create custom charts, based on data that is collected by the analytics service in the dashboard. In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. -->
 
 ># 관련 링크 {:class="linklist"}
-<!-->## 학습서 및 샘플 {:id="samples"}-->
+<!-->## 튜토리얼 및 샘플 {:id="samples"}-->
 <!-->* [Link1](https://github.com/)-->
 >
 ># 관련 링크 {:class="linklist"}

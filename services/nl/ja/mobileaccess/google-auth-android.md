@@ -8,6 +8,10 @@ copyright:
 # Android アプリ用の Google 認証の使用可能化
 {: #google-auth-android}
 
+
+*最終更新日: 2016 年 6 月 16 日*
+{: .last-updated}
+
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
@@ -30,7 +34,9 @@ Google を ID プロバイダーとして使用し始めるには、[Google Deve
 1. **Google+** API を使用してプロジェクトを作成します。
 2. **OAuth** ユーザー・アクセス権限を追加します。
 3. 資格情報を追加する前に、プラットフォーム (Android) を選択する必要があります。
-4. 資格情報を追加します。資格情報の作成を完了するには、**署名証明書のフィンガープリント**を追加する必要があります。
+4. 資格情報を追加します。 
+
+資格情報の作成を完了するには、**署名証明書のフィンガープリント**を追加する必要があります。
 
 
 
@@ -56,7 +62,7 @@ Android OS では、Android デバイスにインストールされたすべて�
 
   Android アプリケーションのパッケージ名を見つけるには、Android Studio で `AndroidManifest.xml` ファイルを開き、`<manifest package="{your-package-name}">` を探してください。 
 
-1. 完了したら、**「Create (作成)」**をクリックします。**これで資格情報の作成は完了します。**
+1. 完了したら、**「Create (作成)」**をクリックします。これで資格情報の作成は完了します。
 
 ###Google Client ID
 
@@ -74,7 +80,7 @@ Android OS では、Android デバイスにインストールされたすべて�
 
 1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
 
-1. **「Google」**タイルをクリックします。
+1. **「Google」**パネルで**「構成」**ボタンをクリックします。
 
 1. **「Android のアプリケーション ID (Application ID for Android)」**で、Android の Google Client ID を指定し、**「保存」**をクリックします。
 
@@ -106,7 +112,6 @@ Android OS では、Android デバイスにインストールされたすべて�
 
 1. Android プロジェクトの `AndroidManifest.xml` ファイルを開きます。
 
-
 1. 以下のようにして、`<manifest>` エレメントにインターネット・アクセス許可を追加します。
 
 	```XML
@@ -124,9 +129,16 @@ Android OS では、Android デバイスにインストールされたすべて�
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");
+					"applicationGUID",
+					BMSClient.REGION_UK);
+						
+	GoogleAuthenticationManager.getInstance().register(this);
+```
 
-	GoogleAuthenticationManager.getInstance().register(this);```
+  `BMSClient.REGION_UK` は適切な地域に置き換えてください。
+
+
+	
 
 1. 以下のコードをアクティビティーに追加します。
 
@@ -143,9 +155,8 @@ Android OS では、Android デバイスにインストールされたすべて�
 {: #google-auth-android-test}
 Client SDK が初期化され、Google 認証マネージャーの登録が完了すると、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
-### 開始する前に
-{: #google-auth-android-testing-before}
-MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションがあり、`/protected` エンドポイントに {{site.data.keyword.amashort}} によって保護されたリソースが既に存在している必要があります。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+
+テストを開始する前に、**MobileFirst Services Starter** ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションがなければならず、また、`/protected` エンドポイントに {{site.data.keyword.amashort}} によって保護されているリソースが既に存在している必要があります。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
 1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。
  MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみになります。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
@@ -173,11 +184,24 @@ MobileFirst Services Starter ボイラープレートを使用して作成され
 	});
 ```
 
-1. アプリケーションを実行します。Google のログイン画面が表示されます。ログイン後、アプリは、リソースへのアクセス許可を要求します。![image](images/android-google-login.png)
+1. アプリケーションを実行します。Google のログイン画面が表示されます。ログイン後、アプリは、リソースへのアクセス許可を要求します。
 
-	ご使用の Android デバイスと、現在 Google にログインしているかどうかによって、UI が異なる可能性があります。**「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。
-1. 	要求が正常に実行されると、LogCat ツールに以下の出力が表示されます。![image](images/android-google-login-success.png)
+	![image](images/android-google-login.png)
 
- 次のコードを追加してログアウト機能を追加することもできます。```Java
+	ご使用の Android デバイスと、現在 Google にログインしているかどうかによって、UI が異なる可能性があります。
+
+  **「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。
+
+1. 	要求が正常に実行されると、LogCat ツールに以下の出力が表示されます。
+
+	![image](images/android-google-login-success.png)
+
+ 次のコードを追加してログアウト機能を追加することもできます。
+
+ ```Java
  GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
- ```ユーザーが Google にログインした後で、このコードを呼び出すと、そのユーザーは Google からログアウトされます。そのユーザーが再度ログインしようとする場合は、再度のログイン先での、Google アカウントを選択する必要があります。以前にログインした Google ID を使用してログインしようとする場合は、資格情報を求めるプロンプトが再度ユーザーに出されることはありません。ログインの資格情報を求めるプロンプトが再度出されるようにするには、ユーザーは、Android デバイスから Google アカウントを削除する必要があります。ログアウト機能に渡される `listener` の値は、`ヌル`にすることができます。
+ ```
+
+ ユーザーが Google にログインした後で、このコードを呼び出すと、そのユーザーは Google からログアウトされます。そのユーザーが再度ログインしようとするときには、再度ログインするための Google アカウントを選択する必要があります。以前にログインした Google ID を使用してログインしようとする場合は、資格情報を求めるプロンプトが再度ユーザーに出されることはありません。ログインの資格情報を求めるプロンプトが再度出されるようにするには、ユーザーは、Android デバイスから Google アカウントを削除する必要があります。
+
+ ログアウト機能に渡される `listener` の値は、`ヌル`にすることができます。

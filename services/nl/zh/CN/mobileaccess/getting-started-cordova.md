@@ -9,7 +9,7 @@ copyright:
 # 设置 Cordova 插件
 {: #getting-started-cordova}
 
-*上次更新时间：2016 年 5 月 25 日*
+*上次更新时间：2016 年 7 月 17 日*
 {: .last-updated}
 
 在 Cordova 应用程序中安装 {{site.data.keyword.amashort}} 客户端 SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
@@ -18,9 +18,13 @@ copyright:
 ## 开始之前
 {: #before-you-begin}
 您必须具有：
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
 
-* Cordova 应用程序或使用现有项目。有关如何设置 Cordova 应用程序的更多信息，请参阅 [Cordova Web 站点](https://cordova.apache.org/)。
+
+
+
+
+* Cordova 应用程序或现有项目。有关如何设置 Cordova 应用程序的更多信息，请参阅 [Cordova Web 站点](https://cordova.apache.org/)。
 
 ## 安装 {{site.data.keyword.amashort}} Cordova 插件
 {: #getting-started-cordova-plugin}
@@ -80,7 +84,7 @@ copyright:
 
 		为避免发生构建错误，请按如下所示配置 Xcode 项目。
 
-		1. 使用最新版本 Xcode 打开 &lt;*app_name*&gt;/platforms/ios 目录中的 xcode.proj 文件。
+		1. 使用最新版本 Xcode 打开 `<app_name>/platforms/ios` 目录中的 `xcode.proj` 文件。
 
 		**重要信息：**如果收到消息，提示您“转换为最新 Swift 语法”，请单击“取消”。
 
@@ -118,19 +122,19 @@ copyright:
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
 
-## 对移动后端发起请求
+## 对移动后端应用程序发起请求
 {: #getting-started-request}
 
-初始化 {{site.data.keyword.amashort}} 客户端 SDK 后，可以开始对移动后端发起请求。
+初始化 {{site.data.keyword.amashort}} 客户端 SDK 后，可以开始对移动后端应用程序发起请求。
 
-1. 尝试对新移动后端的受保护端点发送请求。在浏览器中，打开以下 URL：`{applicationRoute}/protected`。例如：
+1. 尝试对新移动后端应用程序的受保护端点发送请求。在浏览器中，打开以下 URL：`{applicationRoute}/protected`。例如：
 
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected
 	```
 
-	使用 MobileFirst Services Starter 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
+	使用 MobileFirst Services Starter 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
 
 
 
@@ -142,7 +146,7 @@ copyright:
 	}
 
 	var failure = function(error){
-		console.log("failure", error);
+	console.log("failure", error);
 	}
 
 	var request = new MFPRequest("/protected", MFPRequest.GET);

@@ -64,7 +64,7 @@ Estas características corresponden a las características de Java EE 7 Web Prof
 ```
 {: codeblock}
 
-Nota: Para obtener los mejores resultados, establezca las características de Liberty con la variable de entorno JBP_CONFIG_LIBERTY o despliegue su aplicación como un [directorio de servidor](optionsForPushing.html#server_directory) o [servidor empaquetado](optionsForPushing.html#packaged_server) con un archivo server.xml personalizado. Setting this environment variable ensures that your application uses only the feature that it needs and it is not affected by the buildpack's default Liberty feature set changes. Si necesita proporcionar configuración adicional de Liberty más allá del conjunto de características, utilice el 					[directorio de servidor](optionsForPushing.html#server_directory) o la opción [servidor empaquetado](optionsForPushing.html#packaged_server) para desplegar su aplicación.
+Nota: Para obtener los mejores resultados, establezca las características de Liberty con la variable de entorno JBP_CONFIG_LIBERTY o despliegue su aplicación como un [directorio de servidor](optionsForPushing.html#server_directory) o [servidor empaquetado](optionsForPushing.html#packaged_server) con un archivo server.xml personalizado. El establecimiento de esta variable de entorno garantiza que la aplicación utilice únicamente la característica que necesita y si no está afectada por los cambios del conjunto de características de Liberty predeterminadas del paquete de compilación. Si necesita proporcionar configuración adicional de Liberty más allá del conjunto de características, utilice el 					[directorio de servidor](optionsForPushing.html#server_directory) o la opción [servidor empaquetado](optionsForPushing.html#packaged_server) para desplegar su aplicación.
 
 Si ha desplegado un archivo WAR, la aplicación web estará accesible bajo la raíz de contexto según lo establecido en el archivo ibm-web-ext.xml incorporado. Si el archivo ibm-web-ext.xml no existe, o no especifica la raíz de contexto, se puede acceder a la aplicación bajo el contexto raíz. Por ejemplo,
 
@@ -188,7 +188,7 @@ Nota: Se puede acceder a las aplicaciones web desplegadas como parte del directo
 
 Puede enviar por push un archivo del servidor empaquetado a Bluemix. El archivo del servidor empaquetado se crea mediante el mandato server package de Liberty. Además de los archivos de la aplicación y de configuración, el archivo del servidor empaquetado puede contener recursos compartidos y las características de usuario de Liberty que necesita la aplicación.
 
-Para empaquetar un servidor Liberty, utilice el mandato ./bin/server package desde el directorio de instalación de Liberty. Especifique el nombre del servidor e incluya la opción '––include=usr'.
+Para empaquetar un servidor Liberty, utilice el mandato `./bin/server package` desde el directorio de instalación de Liberty. Especifique el nombre del servidor e incluya la opción `--include=usr`.
 Por ejemplo, si el servidor Liberty es defaultServer, ejecute el mandato:
 
 ```
@@ -196,7 +196,9 @@ Por ejemplo, si el servidor Liberty es defaultServer, ejecute el mandato:
 ```
 {: codeblock}
 
-Este mandato genera un archivo serverName.zip en el directorio del servidor. Luego puede enviar por push este archivo comprimido a Bluemix con el mandato cf push.
+Este mandato genera un archivo serverName.zip en el directorio del servidor. Si ha utilizado la opción ``--archive`` para especificar un archivo de archivado distinto, asegúrese de que tenga la extensión ``.zip` en lugar de ``.jar`. **El paquete de compilación no da soporte a los archivos del servidor empaquetados creados con la extensión `.jar`**.
+
+Luego puede enviar por push el archivo `.zip` generado a Bluemix con el mandato `cf push`.
 Por ejemplo:
 
 ```

@@ -8,9 +8,13 @@ copyright:
 # 啟用 iOS Objective C 應用程式的 Google 鑑別
 {: #google-auth-ios}
 
+
+*前次更新：2016 年 6 月 16 日*
+{: .last-updated}
+
 在 Mobile Client Access iOS 應用程式上，使用「Google 登入」來鑑別使用者。
 
-**附註：**雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚中斷使用此 SDK，改用新的 Swift SDK。對於新的應用程式，高度建議使用 Swift SDK。此頁面上的指示適用於 {{site.data.keyword.amashort}} 用戶端 Objective-C SDK。如需使用 Swift SDK 的相關指示，請參閱[在 iOS 應用程式中啟用 Google 鑑別 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)。
+**附註：**雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用此 SDK，改用新的 Swift SDK。對於新的應用程式，強烈建議使用 Swift SDK。此頁面上的指示適用於 {{site.data.keyword.amashort}} 用戶端 Objective-C SDK。如需使用 Swift SDK 的相關指示，請參閱[在 iOS 應用程式中啟用 Google 鑑別 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)。
 
 ## 開始之前
 {: #google-auth-ios-before}
@@ -65,7 +69,7 @@ copyright:
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板中開啟應用程式。
 
-1. 按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及 **應用程式 GUID** (`applicationGUID`)。起始設定 SDK 時，您需要這些值。
+1. 按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及**應用程式 GUID** (`applicationGUID`)。起始設定 SDK 時，您需要這些值。
 
 1. 按一下 {{site.data.keyword.amashort}} 磚。即會載入 {{site.data.keyword.amashort}} 儀表板。
 
@@ -246,6 +250,7 @@ copyright:
 {: #google-auth-ios-testing-before}
 您必須使用 {{site.data.keyword.mobilefirstbp}} 樣板，並且在 `/protected` 端點已具有 {{site.data.keyword.amashort}} 所保護的資源。如果您需要設定 `/protected` 端點，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
+
 1. 開啟 `{applicationRoute}/protected`（例如 `http://my-mobile-backend.mybluemix.net/protected`），嘗試在桌面瀏覽器中將要求傳送給行動後端的受保護端點
 
 1. 使用「MobileFirst Services 樣板」所建立之行動後端的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護，所以只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取它。因此，您會在桌面瀏覽器中看到 `Unauthorized`。
@@ -288,17 +293,21 @@ copyright:
 
 	```
 
-1. 執行應用程式。您將看到「Google 登入」蹦現畫面。![影像](images/ios-google-login.png)
+1. 執行您的應用程式。您將看到「Google 登入」蹦現畫面。
+
+	![影像](images/ios-google-login.png)
 
 	如果您未在裝置上安裝 Facebook 應用程式，或目前未登入 Facebook，則此畫面可能會稍微不同。
 
-1. 按一下**確定**，即會授權 {{site.data.keyword.amashort}} 使用 Google 使用者身分來進行鑑別。
+1. 按一下**確定**，即會授權 {{site.data.keyword.amashort}} 使用您的 Google 使用者身分來進行鑑別。
 
-1. 	您的要求應該會成功。您應該會在 LogCat 中看到下列輸出：![影像](images/ios-google-login-success.png)
+1. 	您的要求應該會成功。您應該會在 LogCat 中看到下列輸出：
+
+	![影像](images/ios-google-login-success.png)
 		
 	您也可以新增下列程式碼，來新增登出功能：
 
- Objective C：
+	Objective C:
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
@@ -310,4 +319,6 @@ copyright:
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	如果您在使用者使用 Google 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Google 進行鑑別。此時，使用者可以按一下畫面右上角的使用者名稱來進行選取，並使用另一位使用者來登入。將 `callBack` 傳遞給 logout 函數是選用性的作業。您也可以傳遞 `nil`。
+	如果您在使用者使用 Google 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Google 進行鑑別。此時，使用者可以按一下畫面右上角的使用者名稱來進行選取，並使用另一位使用者來登入。
+
+	將 `callBack` 傳遞給 logout 函數是選用性的作業。您也可以傳遞 `nil`。

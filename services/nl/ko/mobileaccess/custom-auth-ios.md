@@ -5,8 +5,12 @@ copyright:
 
 ---
 
-# iOS용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
+# iOS용 {{site.data.keyword.amashort}} 클라이언트 SDK(Objective-C) 구성
 {: #custom-ios}
+
+*마지막 업데이트 날짜: 2016년 7월 18일*
+{: .last-updated}
+
 
 사용자 정의 인증을 사용하는 iOS 애플리케이션이 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하고 애플리케이션을 {{site.data.keyword.Bluemix}}에 연결하도록 구성하십시오.
 
@@ -14,7 +18,7 @@ copyright:
 
 ## 시작하기 전에
 {: #before-you-begin}
-사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스의 보호를 받는 자원이 있어야 합니다. 또한 모바일 앱이 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되어야 합니다. 자세한 정보는 다음 내용을 참조하십시오. 
+사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스의 보호를 받는 리소스가 있어야 합니다. 또한 모바일 앱이 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되어야 합니다. 자세한 정보는 다음 내용을 참조하십시오. 
  * [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [iOS Objective-C SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
  * [사용자 정의 ID 제공자 사용](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -38,7 +42,7 @@ CocoaPods 종속성 관리자를 사용하여 {{site.data.keyword.amashort}} 클
 1. 명령행에서 `pod install`을 실행하십시오.
 CocoaPods가 추가된 종속 항목을 설치합니다. 진행상태 및 추가된 컴포넌트가 표시됩니다. 
 
-**중요**: 이제 CocoaPods에서 생성한 xcworkspace 파일을 사용하여 프로젝트를 열어야 합니다. 일반적으로 이름은 `{your-project-name}.xcworkspace`입니다. 
+    **중요**: 이제 CocoaPods에서 생성한 xcworkspace 파일을 사용하여 프로젝트를 열어야 합니다. 일반적으로 이름은 `{your-project-name}.xcworkspace`입니다. 
 
 1. 명령행에서 `open {your-project-name}.xcworkspace`를 실행하여 iOS 프로젝트 작업공간을 여십시오. 
 
@@ -240,7 +244,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 ## 사용자 정의 IMFAuthenticationDelegate 등록
 
-사용자 정의 IMFAuthenticationDelegate를 작성한 후 `IMFClient`에 등록하십시오. 보호된 자원에 대한 요청을 전송하기 전에 애플리케이션에서 다음 코드를 호출하십시오. {{site.data.keyword.amashort}} 대시보드에서 지정한 realmName을 사용하십시오. 
+사용자 정의 IMFAuthenticationDelegate를 작성한 후 `IMFClient`에 등록하십시오. 보호된 리소스에 대한 요청을 전송하기 전에 애플리케이션에서 다음 코드를 호출하십시오. {{site.data.keyword.amashort}} 대시보드에서 지정한 realmName을 사용하십시오. 
 
 Objective-C 애플리케이션:
 
@@ -265,7 +269,7 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 ### 시작하기 전에
 {: #custom-ios-testing-before}
-{{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받는 자원이 있어야 합니다. 
+{{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받는 리소스가 있어야 합니다. 
 
 1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송하십시오.
   {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 

@@ -6,22 +6,22 @@ copyright:
 ---
 {:shortdesc: .shortdesc}
 
-# Configuración del SDK de Objective-C de iOS (en desuso)
+# Configuración del SDK de Objective-C de iOS
 {: #getting-started-ios}
 
-*Última actualización: 14 de junio de 2016*
+*Última actualización: 17 de julio de 2016*
 {: .last-updated}
 
-Instrumente su aplicación de iOS con el SDK de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
+Instrumente su aplicación de iOS con el SDK de {{site.data.keyword.amashort}}, inicialice el SDK, y realice solicitudes a los recursos protegidos y no protegidos.
 {:shortdesc}
 
 **Importante:** Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK a finales del año en favor del nuevo SDK de Swift. Para aplicaciones nuevas, se recomienda utilizar el SDK de Swift (consulte [Configuración del SDK de Swift para iOS](getting-started-ios-swift-sdk.html)).
 
 ## Antes de empezar
 {: #before-you-begin}
-Debe tener lo siguiente: 
-* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de un programa de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
-* Un proyecto Xcode.   
+Debe tener lo siguiente:
+* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de una aplicación de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
+* Un proyecto Xcode.  
 
 
 ## Instalación del SDK del cliente de {{site.data.keyword.amashort}}
@@ -48,7 +48,7 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
 1. Si aún no ha inicializado el espacio de trabajo para CocoaPods, ejecute el mandato `pod init`.<br/>
  CocoaPods crea un archivo `Podfile`, que es donde debe definir las dependencias para el proyecto de iOS.
 
-1. Edite el archivo `Podfile` y añada la siguiente línea a los destinos necesarios:
+1. Edite el archivo `Podfile` y añada la línea siguiente a los destinos necesarios:
 
 	```
 	pod 'IMFCore'
@@ -70,23 +70,22 @@ Para poder utilizar el SDK de cliente de {{site.data.keyword.amashort}}, debe in
 1. Importe la infraestructura `IMFCore` en la clase en la que desea utilizar el SDK de cliente de {{site.data.keyword.amashort}} añadiendo la siguiente cabecera:
 
 	**Objective-C:**
-	 ```Objective-C
-	#import <IMFCore/IMFCore.h>
-	```
-
-
-	**Swift:**
 	
+	```Objective-C
+	  #import <IMFCore/IMFCore.h>
+	
+	```
+	
+	**Swift:**
 	El SDK del cliente de {{site.data.keyword.amashort}} se ha implementado con Objective-C. Es posible que necesite añadir una cabecera puente al proyecto de Swift:
-
-	1. Pulse el botón derecho del ratón en el proyecto en Xcode y seleccione **Nuevo archivo...**
+	1. Pulse el botón derecho del ratón en el proyecto en Xcode, y seleccione **Nuevo archivo...**.
 	1. En la categoría **Origen de iOS**, pulse **Archivo de cabecera**. Asígnele el nombre `BridgingHeader.h`.
 	1. Añada la siguiente línea a la cabecera puente: `#import <IMFCore/IMFCore.h>`
-	1. Pulse el proyecto en Xcode y seleccione el separador **Crear configuración**.
+	1. Pulse el proyecto en Xcode, y seleccione el separador **Crear configuración**.
 	1. Busque `Objective-C Bridging Header`.
 	1. Defina el valor en la ubicación del archivo `BridgingHeader.h`, por ejemplo:`$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Asegúrese de que la cabecera puente se selecciona en Xcode al crear el proyecto. No debería ver mensajes de error.
-
+	
 1. Utilice el código siguiente para inicializar el SDK del cliente de {{site.data.keyword.amashort}}.  Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación. <br/>
 Sustituya *applicationRoute* y *applicationGUID* por los valores de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
@@ -97,12 +96,9 @@ Sustituya *applicationRoute* y *applicationGUID* por los valores de **Opciones m
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-
-
 	**Swift:**
-
 	```Swift
-IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
+ 		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
 ## Cómo realizar una solicitud al programa de fondo móvil

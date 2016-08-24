@@ -1,54 +1,123 @@
-# 创建移动应用程序
+---
+
+copyright:
+  years: 2016
+
+---
+{:new_window: target="_blank"}
+
+# 在移动仪表板中创建移动项目
 {: #mobile}
-*上次更新时间：2016 年 1 月 28 日*
-{: .last-updated} 
+*上次更新时间：2016 年 7 月 18 日*
+{: .last-updated}
 
 使用 {{site.data.keyword.Bluemix}} Mobile Services，可以在不依赖于 IT 人员参与的情况下，将预构建、受管理且可扩展的云服务合并到您的移动应用程序中。您可以专注于移动应用程序的构建，而不用担心管理后端基础架构的复杂性。
 
-<table><caption>表 1. MobileFirst&trade; Services Starter 样板</caption>
+“移动”仪表板提供了对 {{site.data.keyword.Bluemix_notm}} 的完整体验。您可以在该仪表板中轻松创建新的移动项目。通过**项目**视图，可以在一个位置中管理所有项目。**服务**视图显示您现有的移动服务实例。
+
+要查看“移动”仪表板，请单击 {{site.data.keyword.Bluemix_notm}} 主页中的**移动**类别。
+<img src="images/mobile_dashboard.jpg" alt="{{site.data.keyword.Bluemix_notm}} 主页">
+
+首先，在“移动”仪表板的**项目**视图中，单击**新建项目**。
+
+## {{site.data.keyword.Bluemix_notm}} Mobile Services 概述。
+{: #mobile_services_overview}
+
+下表描述了可用的 {{site.data.keyword.Bluemix_notm}} Mobile Services。您可以使用 {{site.data.keyword.Bluemix_notm}}“目录”中的单个服务，也可以将这些服务集成到您的移动项目中。
+
+<table summary="此表描述了 {{site.data.keyword.Bluemix_notm}} Mobile services，并提供了服务文档的链接">
+<caption>表 1. {{site.data.keyword.Bluemix_notm}} Mobile Services</caption>
+<th>{{site.data.keyword.Bluemix_notm}} Mobile Services</th>
+<th>描述</th>
 <tr>
-	<td>每个移动服务都可以独立使用。您也可以将它们放在一起使用，从而获取最大好处。要开始操作，请使用 {{site.data.keyword.mobilefirstbp}} Starter 来创建您的应用程序。此样板会：<ul>
-			<li>创建具有模板应用程序的 Node.js 运行时。您可以使用此应用程序来提供服务器端功能，例如 RESTful API 和静态文件。<!-- You can read more about operating this application in the Developing Mobile Backend section.--> </li>
-			<li>
-供应每个 {{site.data.keyword.Bluemix_notm}} Mobile Services 的实例，并将该服务绑定到 Node.js 应用程序。</li>
-		</ul>
-	</td>
-	<td> <img src="images/mf_boiler_icon.png" alt="Bluemix 移动服务" width="500"> {{site.data.keyword.mobilefirstbp}} Starter 样板</td>
-</tr>
-</table>
-
-在使用 {{site.data.keyword.mobilefirstbp}} Starter 样板创建您的应用程序之后，可以获取每个服务的 HelloWorld 样本，也可以配置您的现有应用程序以使用 {{site.data.keyword.Bluemix_notm}} 服务。
-
-
-## 服务概述
-{: #services-overview}
-您可以通过 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobilefirstbp}} Starter 样板统一使用所有 {{site.data.keyword.Bluemix_notm}} Mobile Services，也可以从 {{site.data.keyword.Bluemix_notm}}“目录”中使用单个服务。下图概述了 {{site.data.keyword.Bluemix_notm}} Mobile Services 的所有组件。
-
-![{{site.data.keyword.Bluemix_notm}} Mobile Services 体系结构](images/bms_architecture.jpg)
-
-<table>
-<caption>表 2. {{site.data.keyword.Bluemix_notm}} 和企业系统</caption>
-<th>{{site.data.keyword.Bluemix_notm}}</th>
-<th>企业系统</th>
-<tr>
-<td> <img src="images/i_js_64.png" alt="Node.js 运行时图标"> <b>Node.js</b><br/>Node.js 运行时（托管一个模板应用程序）是作为 {{site.data.keyword.mobilefirstbp}} Starter 样板的一部分来提供的。您可以使用该模板应用程序来提供服务器端功能，例如 RESTful API 和静态文件。<br/>例如，您可以在您所在公司的现有基础架构中扩展 Node.js 应用程序，以便处理定制逻辑或与 REST API 相连接。您在 {{site.data.keyword.Bluemix_notm}} 上创建的每个应用程序都具有唯一的应用程序标识。您的移动应用程序会将此标识与 SDK 配合使用，以访问与该应用程序相关联的服务。平台会将应用程序标识用作常用功能（例如测量和日志记录）的上下文。您可以在“开发移动后端”部分中阅读有关操作此应用程序的更多信息。</td>
-<td valign="top"><b>信息提供者</b> <br/>您可以使用 {{site.data.keyword.Bluemix_notm}} 上托管的 Node.js 运行时来连接到任何种类的信息提供者：<ul>
-	<li>企业后端</li>
-	<li>数据库</li>
-	<li>其他托管的第三方服务</li>
-</ul>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} 图标"><br/><b>{{site.data.keyword.mobileanalytics_short}}（试验性）</b></td>
+<td valign="top">使用 {{site.data.keyword.mobileanalytics_full}} 服务可度量移动应用程序、移动用户和移动设备的状态、行为与上下文。<br/><br/>
+请在 <a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 文档链接">{{site.data.keyword.mobileanalytics_short}} 文档</a>中阅读有关使用此服务的更多信息。
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}}服务图标"> <b>{{site.data.keyword.amashort}}</b><br/>使用 {{site.data.keyword.amafull}} 服务可保护 {{site.data.keyword.Bluemix_notm}} 上托管的 Node.js 和 Java for Liberty 应用程序。为您的移动应用程序配备 {{site.data.keyword.amashort}} SDK 后，就可以要求用户必须登录才能访问 Node.js 或 {{site.data.keyword.Bluemix_notm}} Mobile Services。除安全功能外，{{site.data.keyword.amashort}} 还会收集分析数据，便于您监视移动应用程序性能以及收集客户机日志和使用情况统计信息。</td>
-<td valign="top"><b>用户身份提供者</b> <br/>您可以使用以下身份提供者：<ul><li>Facebook</li><li>Google</li></ul></td>
+<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} 服务图标"><br/><b>{{site.data.keyword.amashort}}</b></td>
+<td valign="top">使用 {{site.data.keyword.amafull}} 服务可向移动应用程序添加安全功能。您可以配置客户机认证和身份提供者，以便用户可以使用自己现有的 Google 或 Facebook 帐户登录到应用程序。<br/><br/>
+请在 <a href="../services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} 文档链接">{{site.data.keyword.amashort}} 文档</a>中阅读有关使用此服务的更多信息。</td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Push Notifications 服务图标"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} 服务提供一个统一平台来发送和管理针对 iOS 和 Android 平台的移动推送通知。此服务会管理您的应用程序用户与其设备和设备平台之间的映射，还会处理将推送通知派送给设备。使用此服务，可以向移动应用程序用户发送广播、单点广播（根据设备标识）和基于标记（或基于主题）的推送通知。</td>
-<td valign="top"><b>推送服务提供者</b><ul><li>Apple 推送通知服务</li><li>Google 云消息传递</li></ul></td>
+<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} 服务图标"><br/> <b>{{site.data.keyword.mobilefoundation_short}}</b></td>
+<td valign="top">使用 {{site.data.keyword.mobilefoundation_long}} 服务可加快设置 {{site.data.keyword.mfp_full}} 环境，在该环境中，可以开发、测试和使用企业移动应用程序。<br/><br/>
+请在 <a href="../services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} 文档链接">{{site.data.keyword.mobilefoundation_short}} 文档</a>中阅读有关使用此服务的更多信息。</td>
 </tr>
 <tr>
-<td><img src="images/cloudant64.png" alt="Cloudant 服务图标"> <b>Cloudant NoSQLDB</b><br/>Cloudant 是一种 NoSQL 数据库即服务 (DBaaS)。它从头开始构建，用于在全球范围内进行扩展，实现不间断运行，以及处理各种数据类型，例如 JSON、全文本和地理空间。</td>
-<td>Cloudant.com</td>
+<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} 服务图标"><br/><b>{{site.data.keyword.mqa}}</b></td>
+<td valign="top">使用 {{site.data.keyword.mqafull}} 服务可发现移动质量服务，并为您的应用程序设置这些服务。您可以查看移动应用程序的高级别质量度量值，以快速了解正在处理的应用程序的问题。这些度量值包括崩溃、错误、用户反馈和用户观点等信息。通过查看应用程序的这些信息，可以确定是否要进一步调查特定问题。<br/><br/>
+请在 <a href="../services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 文档链接">{{site.data.keyword.mqa}} 文档</a>中阅读有关使用此服务的更多信息。</td>
 </tr>
+<tr>
+<td><img src="images/catalog_icons-09.png" alt="Push Notifications 服务图标"><br/><b>{{site.data.keyword.mobilepushshort}}</b></td>
+<td valign="top">使用 {{site.data.keyword.mobilepushfull}} 服务可发送并管理发给 iOS 和 Android 平台的移动推送通知。此服务会管理您的应用程序用户与其设备和设备平台之间的映射，还会处理将推送通知派送给设备。使用此服务，可以向移动应用程序用户发送广播、单点广播（根据用户标识和设备标识）和基于标记（或基于主题）的推送通知。<br/><br/>
+请在 <a href="../services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 文档链接">{{site.data.keyword.mobilepushshort}} 文档</a>中阅读有关使用此服务的更多信息。</td>
 </table>
+
+## 集成 Mobile Services
+{: #services_integration}
+您可以将现有的 {{site.data.keyword.Bluemix_notm}} Mobile Services（例如 {{site.data.keyword.mobilepushshort}} 和 {{site.data.keyword.cloudant}}）集成到您的项目中。
+
+#### 集成 {{site.data.keyword.mobilepushshort}}
+{: #push_integration}
+
+要集成现有 {{site.data.keyword.mobilepushshort}} 服务，请执行以下步骤：
+
+1. 单击 {{site.data.keyword.mobilepushshort}} 服务实例。
+2. 单击**移动选项**，然后复制**路径**和 **AppGuid** 值。
+
+   **注**：您的 {{site.data.keyword.mobilepushshort}} 服务必须绑定到应用程序后，才会显示**移动选项**。
+
+3. 导航回“移动”仪表板的**项目**视图。
+4. 单击项目以对其进行编辑。
+5. 单击**推送**，然后启用通知。
+6. 提供先前复制到**应用程序标识**中的 **AppGuid** 值。
+7. 提供先前复制到**应用程序路径 URL** 中的**路径**值。
+
+#### 集成 {{site.data.keyword.cloudant}}
+{: #cloudant_integration}
+
+要集成现有 {{site.data.keyword.cloudant}} 服务，请执行以下步骤：
+
+1. 单击 {{site.data.keyword.cloudant}} 服务实例。
+2. 单击**启动**。
+3. 在**数据库**视图中，单击“数据库名称”。
+4. 单击 **API**，然后通过数据库名称复制 **API 密钥**值。
+
+   **注**：请勿复制数据库名称之后的内容。
+
+5. 单击**许可权** > **生成 API 密钥**，然后复制**密钥**和**密码**值。
+6. 导航回“移动”仪表板的**项目**视图。
+7. 单击项目以对其进行编辑。
+8. 单击**数据** > **+ 数据源** > **Cloudant**，提供数据源名称，然后单击**添加**。
+9. 单击 **Cloudant 配置**。
+10. 提供先前复制到 **API URL** 中的 **API 密钥**值。
+11. 提供先前复制到**用户**中的**密钥**值。
+12. 提供先前复制到**密码**中的**密码**值。
+13. 单击**确定**。
+
+
+# 相关链接
+{: #rellinks}
+
+<!-- links to internal services don't work
+## {{site.data.keyword.Bluemix_notm}} Mobile services
+{: #general}
+* [Mobile Analytics (Experimental)](../services/mobileanalytics/index.html){: new_window}
+* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
+* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
+* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
+* [Push Notifications](../services/mobilepush/index.html){: new_window}
+-->
+
+## 博客帖子
+{: #general}
+* [博客帖子：Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
+* [博客帖子：Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
+* [博客帖子：Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+
+## 教程和样本
+{: #samples}
+* [Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}

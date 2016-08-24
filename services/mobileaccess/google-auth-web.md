@@ -5,13 +5,15 @@ copyright:
 
 ---
 
+{:shortdesc: .shortdesc}
+
 # Enabling Google authentication for web applications
 {: #google-auth-web}
 
-Last updated: 18 July 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
-Use Google Sign-In to authenticate users on your web application. Add {{site.data.keyword.amashort}} security functionality. 
+Use Google Sign-In to authenticate users on your web application. Add {{site.data.keyword.amafull}} security functionality. 
 
 
 ## Before you begin
@@ -56,21 +58,19 @@ To start the process of authorization:
 
 1. Retrieve the authorization endpoint (`authorizationEndpoint`) and clientId (`clientId`) from the service credentials stored in the `VCAP_SERVICES` environment variable. 
 
-    **Note:** If you created the {{site.data.keyword.amashort}} service before web support was added, you might not have authorization endpoints in the service credentials. In this case, use the following authorization endpoints, depending on your Bluemix region:
+	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
+ 
+	US South: 
 
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
 
- 	US South: 
- 	```
- 	https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
- 	```
- 	London: 
- 	```
- 	https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
-  	```
-  	Sydney: 
-  	```
-  	https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
-  	```
+	London: 
+
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+
+	Sydney: 
+
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
 2. Build the authorization server URI using the `response_type("code")`, `client_id`, and `redirect_uri` as query parameters.
 3. Redirect from your web app to the generated URI.
   
@@ -102,6 +102,7 @@ The following example retrieves the parameters from the `VCAP_SERVICES` variable
 	} 
 } 
 ```
+{: codeblock}
 
 Note that the `redirect_uri` parameter represents your web application redirect URI and must be equal to the one defined in the {{site.data.keyword.amashort}} dashboard.
 After redirecting to the authorization end-point the user will get a login form from Google. After user grants permissions to be logged in using their Google identity, the {{site.data.keyword.amashort}} service calls your web application redirect URI by supplying the grant code as a query parameter.
@@ -110,22 +111,20 @@ After redirecting to the authorization end-point the user will get a login form 
 The next step is to obtain access token and identity tokens using the previously received grant code. 
 
 1. Retrieve token `tokenEndpoint`, `clientId`, and `secret` from service credentials, stored in the `VCAP_SERVICES` environment variable. 
-  
-    **Note:** If you created the {{site.data.keyword.amashort}} service before web support was added, you might not have authorization endpoints in the service credentials. In this case, use the following authorization endpoints, depending on your Bluemix region:
  
- 	US South: 
- 	```
- 	https:// mobileclientaccess.ng.bluemix.net/oauth/v2/token 
-  	```
- 	London: 
-  	```
-  	https:// mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
-   	```
-   	Sydney: 
-  	```
-   	https:// mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
-  	```
+	**Note:** If you used {{site.data.keyword.amashort}} before web support was added, you might not have a token endpoint in service credentials. Instead, use the following URLs, depending on your Bluemix region: 
 
+	US South: 
+  
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
+ 
+	London: 
+ 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
+ 
+	Sydney: 
+ 
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
 2. Send a post request to the token server URI with grant_type ("authorization_code"), client_id, redirect_uri, and code as form parameters. Send the `clientId` and `clientSecret` as Basic HTTP authentication credentials.
  
 The following code retrieves the necessary values, and sends them with a post request.
@@ -161,6 +160,7 @@ The following code retrieves the necessary values, and sends them with a post re
   }
 ); 
 ```
+{: codeblock}
 
 The `redirect_uri` parameter is the URI for redirecting, after the successful or failed authentication with Google+, and must match the `redirect_uri` from step 1.  
    

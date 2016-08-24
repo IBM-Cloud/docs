@@ -7,6 +7,8 @@ copyright:
 
 # Utilisation des API REST
 {: #push-api-rest}
+*Dernière mise à jour : 12 juillet 2016*
+{: .last-updated}
 
 Vous pouvez utiliser une API REST (Representational State Transfer) pour les notifications push. Vous pouvez aussi utiliser le logiciel SDK et les [API Push](https://mobile.{DomainName}/imfpushrestapidocs/) pour développer davantage vos applications client.
 
@@ -102,3 +104,9 @@ Pour l'API GET d'abonnement, les combinaisons suivantes sont prises en charge :
 - Le nom peut être l'une des zones suivantes : “name” ou “description”
 - Si l'opérateur =@ est utilisé, la valeur peut être une sous-chaîne.
 - Si l'opérateur == est utilisé, la valeur doit être une chaîne qui correspond exactement.
+
+
+##Codes de réponse des notifications push
+{: #push-api-response-codes}
+
+Status: 405 Method Not Allowed - Appropriate method expected.

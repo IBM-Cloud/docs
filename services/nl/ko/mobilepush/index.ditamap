@@ -88,6 +88,12 @@ navtitle="태그 구독 및 구독 해지" scope="peer"/>
 <topicref href="t_manage_tags.html#using_tags" format="html"
 navtitle="태그 기반 알림 사용" scope="peer"/>
 </topicref>
+<topicref href="c_user_basednotifications.html" format="html"
+navtitle="사용자 기반 알림 사용" scope="peer" chunk="to-content" linking="normal"
+outputclass="subsection">
+<topicref href="t_manage_user.html" format="html" navtitle="사용자 ID를 사용하여 디바이스 등록"
+scope="peer" linking="normal" outputclass="subsection"/>
+</topicref>
 <topicref href="t_advance_badge_sound_payload.html" outputclass="subsection" chunk="to-content"
 navtitle="고급 알림" format="html" scope="peer">
 <topicref href="t_advance_badge_sound_payload.html#badge-sound-payload"

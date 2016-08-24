@@ -5,13 +5,18 @@ copyright:
 
 ---
 
-# Android용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
+# {{site.data.keyword.amashort}} Android 앱용 사용자 정의 인증 구성 
 {: #custom-android}
-사용자 정의 인증을 사용하는 Android 애플리케이션이 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하고 애플리케이션을 {{site.data.keyword.Bluemix}}에 연결하도록 구성하십시오.
+
+*마지막 업데이트 날짜: 2016년 7월 17일*
+{: .last-updated}
+
+
+{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하고, 애플리케이션을 {{site.data.keyword.Bluemix}}에 연결하도록 사용자 정의 인증을 사용하여 Android 애플리케이션을 구성하십시오.
 
 ## 시작하기 전에
 {: #before-you-begin}
-사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스의 보호를 받는 자원이 있어야 합니다. 또한 모바일 앱이 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되어야 합니다. 자세한 정보는 다음 내용을 참조하십시오. 
+사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스의 보호를 받는 리소스가 있어야 합니다. 또한 모바일 앱이 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되어야 합니다. 자세한 정보는 다음 내용을 참조하십시오. 
  * [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Android SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
  * [사용자 정의 ID 제공자 사용](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -21,10 +26,9 @@ copyright:
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #custom-android-initialize}
-1. Android Studio의 Android 프로젝트에서 앱 모듈의 `build.gradle` 파일을 여십시오. 
-<br/>**팁:** Android 프로젝트에는 두 개의 `build.gradle` 파일(프로젝트용 및 애플리케이션 모듈용)이 있습니다. 애플리케이션 모듈 파일을 사용하십시오.
+1. Android Studio의 Android 프로젝트에서, 앱 모듈의 `build.gradle` 파일을 여십시오(`build.gradle` 프로젝트가 아님). 
 
-1. `build.gradle` 파일에서 `dependencies` 섹션을 찾아 다음 컴파일 종속성을 확인하십시오. 없는 경우 이 종속성을 추가하십시오. 
+1. `build.gradle` 파일에서 `dependencies` 섹션을 찾아 다음 종속 항목이 있는지 확인하십시오. 
 
 	```Gradle
 	dependencies {
@@ -53,13 +57,16 @@ copyright:
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");					
-	```
+					"applicationGUID",
+					BMSClient.REGION_UK);
+```
+`BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오.
+
 
 ## AuthenticationListener 인터페이스
 {: #custom-android-authlistener}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK는 사용자가 사용자 정의 인증 플로우를 구현할 수 있도록 `AuthenticationListener` 인터페이스를 제공합니다. `AuthenticationListener` 인터페이스는 인증 프로세스의 서로 다른 단계에서 호출되는 세 개의 메소드를 표시합니다. 
+{{site.data.keyword.amashort}} 클라이언트 SDK는 사용자가 사용자 정의 인증 플로우를 구현할 수 있도록 `AuthenticationListener` 인터페이스를 제공합니다. `AuthenticationListener` 인터페이스는 인증 프로세스 중에 서로 다른 단계에서 호출되는 세 개의 메소드를 표시합니다. 
 
 ### onAuthenticationChallengeReceived 메소드
 {: #custom-onAuth}
@@ -165,7 +172,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 ## 사용자 정의 AuthenticationListener 등록
 {: #custom-android-register}
 
-사용자 정의 AuthenticationListener를 작성한 후 리스너를 사용하기 전에 `BMSClient`에 등록하십시오. 애플리케이션에 다음 코드를 추가하십시오. 이 코드는 보호된 자원에 대한 요청을 전송하기 전에 호출해야 합니다. 
+사용자 정의 AuthenticationListener를 작성한 후 리스너를 사용하기 전에 `BMSClient`에 등록하십시오. 애플리케이션에 다음 코드를 추가하십시오. 이 코드는 보호된 리소스에 대한 요청을 전송하기 전에 호출해야 합니다. 
 
 ```Java
 BMSClient.getInstance().registerAuthenticationListener(realmName,
@@ -177,16 +184,16 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 
 ## 인증 테스트
 {: #custom-android-testing}
-클라이언트 SDK가 초기화되고 사용자 정의 AuthenticationListener가 등록되면 모바일 백엔드 요청을 시작할 수 있습니다.
+클라이언트 SDK가 초기화되고 사용자 정의 AuthenticationListener가 등록되면 모바일 백엔드 애플리케이션 요청을 시작할 수 있습니다.
 
 ### 시작하기 전에
 {: #custom-android-testing-before}
-{{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받는 자원이 있어야 합니다. 
+{{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받는 리소스가 있어야 합니다. 
 
 
-1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송하십시오. 
+1. 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트(`{applicationRoute}/protected`)에 요청을 전송하십시오(예: `http://my-mobile-backend.mybluemix.net/protected`). 
 
-1. {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 
+1. {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 
 
 1. Android 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화하고 사용자 정의 AuthenticationListener를 등록한 후 다음 코드를 추가하십시오. 
 
@@ -211,16 +218,16 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 	});
 ```
 
-1. 	요청이 성공하면 LogCat 도구에 다음과 같은 출력이 표시됩니다.
+1. 	요청이 성공하면 LogCat 도구에 다음과 같은 출력이 표시됩니다. 
 
- ![이미지](images/android-custom-login-success.png)
+	![이미지](images/android-custom-login-success.png)
 
-	다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다.
+ 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 
  ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 사용자가 다시 로그인을 시도하는 경우, 사용자는 서버에서 수신된 인증 확인에 다시 응답해야 합니다.
+ 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 사용자가 다시 로그인하려고 시도하는 경우 서버에서 수신된 확인에 다시 응답해야 합니다. 
 
  로그아웃 기능에 전달된 `listener` 값은 `null`일 수 있습니다.

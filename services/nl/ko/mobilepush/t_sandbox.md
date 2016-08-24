@@ -7,8 +7,9 @@ copyright:
 
 {:new_window: target="_blank"}
 # 샌드박스 및 프로덕션 모드
-
 {: #push-sandboxandproduction-modes}
+*마지막 업데이트 날짜: 2016년 6월 14일*
+{: .last-updated}
 
 샌드박스 또는 프로덕션 모드 중 하나에서 푸시 알림을 사용할 수 있습니다. 샌드박스는 서버 애플리케이션 푸시 서비스와 푸시 API 통합을 개발 및 테스트하는 자체 포함된 테스트 환경입니다. 먼저 푸시 대시보드를 사용하여 샌드박스와 프로덕션 모드를 구성합니다. [Push REST API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}를 사용하여 샌드박스와 프로덕션 간의 푸시 서비스 조작 모드를 전환합니다. 기본적으로 샌드박스 모드가 사용 가능합니다.그러나 모드 간에 전환할 경우 해당 모드 사이에서 태그, 디바이스 및 구독이 공유되지 않습니다. 
 

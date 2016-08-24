@@ -20,7 +20,8 @@ Las aplicaciones se ejecutan en entorno de tiempo de ejecución Java (JRE), prop
 
 De forma predeterminada, las aplicaciones se configuran para ejecutarse con una versión reducida de IBM JRE. Esta versión ligera de JRE se ha limitado para ofrecer la función esencial con una ocupación de memoria y de disco mucho más reducida. Para obtener más información sobre el contenido del JRE ligero, consulte [Tiempo de ejecución de Liberty for Java](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html).
 
-Se utiliza IBM JRE versión 8 de forma predeterminada. Utilice la variable de entorno JBP_CONFIG_IBMJDK para especificar una versión alternativa de IBM JRE. Por ejemplo, para utilizar la versión más reciente de IBM JRE 7.1, establezca la variable de entorno siguiente:
+Se utiliza IBM JRE versión 8 de forma predeterminada. Utilice la variable de entorno JBP_CONFIG_IBMJDK para especificar una versión alternativa de IBM JRE. Por ejemplo, para utilizar la versión
+				más reciente de IBM JRE 7.1, establezca la variable de entorno siguiente:
 ```
     $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
@@ -44,6 +45,11 @@ Si está habilitado, se utiliza OpenJDK versión 8 de forma predeterminada. Util
 {: codeblock}
 
 La propiedad de la versión se puede establecer en un rango de versiones como 1.7.+ o cualquier versión específica listada en la [lista de versiones de OpenJDK disponibles](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Para obtener los mejores resultados, utilice Java 8.
+
+## Oracle JRE
+{: #oracle_jre}
+
+Consulte [Uso de Oracle JRE](oracle_jre.html) para obtener información sobre cómo utilizar el Oracle JRE.
 
 ## Configuración de las opciones de JRE
 {: #configuring_jre}
@@ -207,7 +213,6 @@ Despliegue de una aplicación con las opciones personalizadas de JVM para habili
   {: codeblock}    
 
 * Para actualizar la opción de JVM de IBM JRE de una aplicación desplegada para desencadenar un heap, snap y javacore en una condición OutOfMemory, establezca la variable de entorno de la aplicación con la opción JVM y reinicie la aplicación:
-
 
   <pre>
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'

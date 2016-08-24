@@ -12,7 +12,7 @@ copyright:
 # バインドされたサービスの自動構成
 {: #auto_config}
 
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 6 月 10 日*
 {: .last-updated}
 
 さまざまなサービスを Liberty アプリケーションにバインドすることができます。
@@ -99,7 +99,7 @@ services_autoconfig_excludes 環境変数を使用します。この環境変数
 より正式に表すと、このストリングの文法は以下のようになります。
 
 ```
-    Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
+Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
     <service_type_specification> :: <service_type>=<option>
     <service_type> :: service type (service label as it appears in VCAP_SERVICES)
     <option> :: all | config
@@ -115,7 +115,7 @@ services_autoconfig_excludes 環境変数を使用します。この環境変数
 以下に、Mongo シナリオと SQLDB シナリオの manifest.yml ファイル内のオプトアウト指定の例を示します。
 
 ```
-    env:
+env:
       services_autoconfig_excludes: mongodb-2.2=allenv:
       services_autoconfig_excludes: sqldb=configenv:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
@@ -126,7 +126,7 @@ services_autoconfig_excludes 環境変数を使用します。この環境変数
 コマンド・ライン・インターフェースを使用して、アプリケーションの myapp の services_autoconfig_excludes 環境変数を設定する方法を示します。
 
 ```
-    $ cf set-env myapp services_autoconfig_excludes sqldb=config
+$ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}

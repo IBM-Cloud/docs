@@ -21,13 +21,13 @@ Weitere Informationen zu Bereitstellungen des Service Dynatrace finden Sie in [D
 Wenn Ihre Liberty-Anwendung für die Verwendung von Dynatrace konfiguriert ist,
 ist das Standardverhalten wie folgt: Die Liberty-Laufzeit fordert von einer Dynatrace-Site
 die JAR-Datei eines Dynatrace-Agenten an und führt diesen Dynatrace-Agenten mit Ihrer
-App aus. Bei diesem Standardverhalten besteht die minimal notwendige Konfiguration für die
+App aus.  Bei diesem Standardverhalten besteht die minimal notwendige Konfiguration für die
 Verwendung von Dynatrace im Erstellen eines vom Benutzer zur Verfügung gestellten Service,
 der auf Ihren Dynatrace-Kollektor verweist.
 
 ## Einen vom Benutzer zur Verfügung gestellten Service erstellen, der auf Ihren Dynatrace-Kollektor verweist
 
-Zunächst müssen Sie einen Dynatrace-Kollektor einrichten. Dann müssen Sie einen vom Benutzer zur Verfügung gestellten
+Zunächst müssen Sie einen Dynatrace-Kollektor einrichten.  Dann müssen Sie einen vom Benutzer zur Verfügung gestellten
 Service erstellen, um Informationen zu übergeben, damit der Dynatrace-Agent eine Verbindung zum Dynatrace-Kollektor herstellt. Lesen Sie [Dynatrace Architecture](https://community.dynatrace.com/community/display/DOCDT63/Architecture), um die Beziehung zwischen Dynatrace-Komponenten besser zu verstehen.
 
 <ol>
@@ -71,7 +71,7 @@ Im [Abschnitt 'Agent Settings' von 'Agent Configuration'](https://community.dyna
 ## Optionale Konfiguration
 {: #optional_configuration}
 
-Sie können die JAR-Datei des Dynatrace-Agenten selbst anfordern und hosten. In diesem Fall sind die folgenden
+Sie können die JAR-Datei des Dynatrace-Agenten selbst anfordern und hosten.  In diesem Fall sind die folgenden
 zusätzlichen Konfigurationsschritte erforderlich.
 1. Fordern Sie die JAR-Datei des Dynatrace-Agenten an und hosten Sie sie, damit das Liberty-Buildpack sie herunterladen kann.
 2. Konfigurieren Sie Ihre Liberty-App, damit sie den Dynatrace-Agenten herunterladen kann.

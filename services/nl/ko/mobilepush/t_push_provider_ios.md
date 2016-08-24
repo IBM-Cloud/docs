@@ -7,11 +7,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# Apple 푸시 알림(APNS)에 대한 신임 정보 구성
-
+# APNS에 대한 신임 정보 구성
 {: #create-push-credentials-apns}
+*마지막 업데이트 날짜: 2016년 6월 14일*
+{: .last-updated}
 
-애플리케이션 개발자는 APNS(Apple Push Notification Service)를 이용하여 Bluemix의 푸시 서비스 인스턴스(제공자)에서 iOS 디바이스와 애플리케이션으로 원격 알림을 전송할 수 있습니다. 디바이스의 대상 애플리케이션으로 메시지가 전송됩니다. APNS 신임 정보를 획득하여 구성하십시오. APNS 인증서는 푸시 알림 서비스에서 안전하게 관리하며 제공자로서 APNS 서버에 연결할 때 사용됩니다. 
+애플리케이션 개발자는 APNS(Apple Push Notification Service)를 이용하여 Bluemix의 푸시 서비스 인스턴스(제공자)에서 iOS 디바이스와 애플리케이션으로 원격 알림을 전송할 수 있습니다. 디바이스의 대상 애플리케이션으로 메시지가 전송됩니다. APNS 신임 정보를 획득하여 구성하십시오. APNS 인증서는 푸시 알림 서비스에서 안전하게 관리하며 제공자로 APNS 서버에 연결하는 데 사용됩니다. 
 
 1. [Apple 개발자](https://developer.apple.com/) 계정을 확보하십시오. 
 2. [앱 ID를 등록하십시오.](#create-push-credentials-apns-register)
@@ -48,7 +49,7 @@ copyright:
 ##개발 및 배포 APNS SSL 인증서를 작성하십시오.
 {: #create-push-credentials-apns-ssl}
 
-APNS 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성하여 이를 Apple 인증 기관(CA)에 제출해야 합니다. CSR에는 사용자의 회사, Apple 푸시 알림에 서명할 때 사용하는 공용 및 개인 키를 식별하는 정보가 포함됩니다. 그런 다음 iOS 개발자 포털에서 SSL 인증서를 생성하십시오. 인증서와 이의 공용 및 개인 키는 Keychain Access에 저장됩니다. 
+APNS 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성하여 이를 Apple 인증 기관(CA)에 제출해야 합니다. CSR에는 사용자의 회사, Apple 푸시 알림에 서명할 때 사용하는 공개 및 개인 키를 식별하는 정보가 포함됩니다. 그런 다음 iOS 개발자 포털에서 SSL 인증서를 생성하십시오. 인증서와 이의 공개 및 개인 키는 Keychain Access에 저장됩니다. 
 
 **시작하기 전에**
 
@@ -68,7 +69,6 @@ APNS는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 2. **ID** 영역에서 **앱 ID**를 클릭하십시오. 
 3. 앱 ID 목록에서 새로 작성한 앱 ID를 선택한 다음 **설정**을 선택하십시오. 
 4. **푸시 알림** 영역에서 개발 SSL 인증서를 작성한 다음 프로덕션 SSL 인증서를 작성하십시오.
-
 
 	![푸시 알림 SSL 인증서](images/certificate_createssl.jpg)
 
@@ -112,9 +112,7 @@ APNS는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 
 **시작하기 전에**
 
-앱 ID를 등록하고 이를 푸시 알림 서비스에 사용할 수 있도록 설정하였으며
-개발 및 프로덕션 APNS SSL 인증서를 사용하도록 구성했는지 확인하십시오.
-
+앱 ID를 등록하고 이를 푸시 알림 서비스에 사용할 수 있도록 설정하였으며 개발 및 프로덕션 APNS SSL 인증서를 사용하도록 구성했는지 확인하십시오.
 
 개발 프로비저닝 프로파일을 작성하십시오. 
 
@@ -142,7 +140,7 @@ APNS는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 
 ```
 //You can choose to pick up either the development or distribution certificate  
-	developer_identity.cer - Development profile downloaded from Apple
+	developer_identity.cer - Development profile downloaded from Apple 
 	apns.p12 - APNS .p12 exported from the keychain
 	openssl x509 -in developer_identity.cer -inform DER -out
 	developer_identity.pem -outform PEM
@@ -151,7 +149,7 @@ APNS는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 ```
 데스크탑에 `bluemixPush_dev.p12` 파일을 저장해야 합니다.
 
-##푸시 알림 대시보드에서 APNs 설정
+##푸시 알림 대시보드에서 APNS 설정
 {: #create-push-credentials-apns-dashboard}
 
 푸시 알림 서비스를 사용하여 알림을 전송하려면 APNS(Apple Push Notification Service)에 필요한 SSL 인증서를 업로드하십시오. 또한 REST API를 사용하여 APNS 인증서를 업로드할 수 있습니다. 
@@ -162,8 +160,7 @@ APNS는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 
 개발 및 프로덕션 APNS SSL 인증서와, 각 인증서 유형과 연관된 비밀번호를 확인해두십시오. 자세한 정보는 APNS를 위한 푸시 알림 작성 및 구성을 참조하십시오. 
 
-APNs에 필요한 인증서는 .p12 인증서이며 이 인증서에는 애플리케이션을 빌드하고 공개하는 데 필요한 SSL 인증서와 개인 키가 포함되어 있습니다. Apple Developer 웹 사이트의 Member Center에서 인증서를 생성해야 합니다(유효한 Apple Developer 계정 필요). 개발 환경(샌드박스)과 프로덕션(배포) 환경에 대해 별도의 인증서가 필요합니다.
-
+APNS에 필요한 인증서는 .p12 인증서이며, 애플리케이션을 빌드하고 공개하는 데 필요한 SSL 인증서와 개인 키가 포함되어 있습니다. Apple Developer 웹 사이트의 Member Center에서 인증서를 생성해야 합니다(유효한 Apple Developer 계정 필요). 개발 환경(샌드박스)과 프로덕션(배포) 환경에 대해 별도의 인증서가 필요합니다.
 
 **참고**: **cer**이 키 체인 액세스에 있으면 이를 컴퓨터로 내보내서 .p12 인증서를 작성하십시오. 
 

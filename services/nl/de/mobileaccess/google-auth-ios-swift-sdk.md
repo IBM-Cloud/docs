@@ -1,4 +1,4 @@
- ---
+---
 
 copyright:
   years: 2016
@@ -10,6 +10,10 @@ copyright:
 
 # Google-Authentifizierung für iOS-Apps aktivieren (Swift-SDK)
 {: #google-auth-ios}
+
+*Letzte Aktualisierung: 17. Juli 2016*
+{: .last-updated}
+
 Verwenden Sie die Google-Anmeldung, um Benutzer für Ihre {{site.data.keyword.amashort}}-iOS-Swift-App zu authentifizieren. Das neu freigegebene {{site.data.keyword.amashort}}-Swift-SDK ergänzt und verbessert die vom vorhandenen Objective-C-SDK Mobile Client Access bereitgestellte Funktionalität.
 
 **Hinweis:** Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden.
@@ -21,7 +25,7 @@ Verwenden Sie die Google-Anmeldung, um Benutzer für Ihre {{site.data.keyword.am
 Voraussetzungen:
 
 * iOS-Projekt in Xcode. Das Projekt muss nicht mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
 
 
 ## App für Google-Anmeldung vorbereiten
@@ -52,7 +56,6 @@ Die folgenden Schritte stellen eine Kurzfassung der Aufgaben dar, die zum Vorber
 
 1. Aktualisieren Sie die URL-Schemas in Ihrem Xcode-Projekt mit Ihrer `REVERSE_CLIENT_ID` und mit der Bundle-ID. Weitere Informationen finden Sie in [Add URL schemes to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project).
 
-
 1. Aktualisieren Sie die Datei 'project-Bridging-Header.h' für Ihre App mit dem folgenden Code:
 
  ```
@@ -72,7 +75,7 @@ Jetzt, da Sie eine iOS-Client-ID haben, können Sie die Google-Authentifizierung
 
 1. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
 
-1. Klicken Sie auf die Kachel für **Google**.
+1. Klicken Sie auf die Schaltfläche **Konfigurieren** in der Anzeige **Google**. 
 
 1. Geben Sie in **Application ID for iOS** (Anwendungs-ID für iOS) den Wert für `CLIENT_ID` aus der Datei `GoogleService-Info.plist` an, den Sie zuvor notiert hatten, und klicken Sie auf **Speichern**.
 
@@ -131,8 +134,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
  import BMSSecurity
  ```
 
-1. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren. Ersetzen Sie `<applicationRoute>` und `<applicationGUID>` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** des {{site.data.keyword.Bluemix_notm}}-Dashboards ermittelt haben. Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol mit dem Gesicht (![Gesicht](/face.png "Gesicht")) in der linken oberen Ecke des Dashboards.
- 
+1. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren. Ersetzen Sie `<applicationRoute>` und `<applicationGUID>` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** des {{site.data.keyword.Bluemix_notm}}-Dashboards ermittelt haben. Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol mit dem Gesicht (![Gesicht](/face.png "Gesicht")) in der linken oberen Ecke des Dashboards. 
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -147,7 +149,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 
  GoogleAuthenticationManager.sharedInstance.register()
       return true
- }
+      }
 
  // [START openurl]
       func application(application: UIApplication,
@@ -164,7 +166,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 ## Authentifizierung testen
 {: #google-auth-ios-testing}
 
-Nach der Initialisierung des Client-SDK und der Registrierung des Google-Authentifizierungsmanagers können Sie mit dem Senden von Anforderungen an Ihr mobiles Back-End beginnen.
+Nach der Initialisierung des Client-SDK und der Registrierung des Google-Authentifizierungsmanagers können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen.
 
 ### Vorbereitungen
 {: #google-auth-ios-testing-before}
@@ -172,9 +174,9 @@ Nach der Initialisierung des Client-SDK und der Registrierung des Google-Authent
 Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und bereits eine durch {{site.data.keyword.amashort}} geschützte Ressource am Endpunkt `/protected` haben. Wenn Sie einen Endpunkt `/protected` einrichten müssen, finden Sie weitere Informationen in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihres mobilen Back-Ends zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
+1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anforderung zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`). 
 
-1. Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der MobileFirst Services-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Deshalb kann auf ihn nur mit mobilen Anwendungen zugegriffen werden, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert wurden. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
+1. Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der MobileFirst Services-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Deshalb kann auf ihn nur mit mobilen Anwendungen zugegriffen werden, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert wurden. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
 
 1. Verwenden Sie Ihre iOS-Anwendung, um eine Anforderung an denselben Endpunkt zu senden.
 
@@ -182,14 +184,14 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
  let protectedResourceURL = "<Your protected resource URL>" // any protected resource
  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
- if error == nil {
+  if error == nil {
     print ("response:\(response?.responseText), no error")
  } else {
     print ("error: \(error)")
  }
  }
 
- request.sendWithCompletionHandler(callBack)
+  request.sendWithCompletionHandler(callBack)
 	```
 
 1. Führen Sie Ihre Anwendung aus. Ein Popup-Fenster für die Google-Anmeldung wird angezeigt.
@@ -198,7 +200,7 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 
 1. Wenn Sie sich anmelden und auf **OK** klicken, berechtigen Sie {{site.data.keyword.amashort}}, Ihre Google-Benutzeridentität zu Authentifizierungszwecken zu nutzen.
 
-1. 	Ihre Anforderung sollte erfolgreich ausgeführt werden. Die folgende Ausgabe sollte im Protokoll angezeigt werden.
+1. 	Ihre Anforderung sollte erfolgreich ausgeführt werden. Die folgende Ausgabe wird im Protokoll angezeigt. 
 
  ```
  onAuthenticationSuccess info = Optional({attributes = {};

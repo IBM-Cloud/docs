@@ -7,6 +7,8 @@ copyright:
 
 # 管理標籤
 {: #manage_tags}
+*前次更新：2016 年 6 月 14 日*
+{: .last-updated}
 
 使用 Push 儀表板來建立及刪除您應用程式的標籤，然後起始標籤型通知。標籤型通知是在訂閱標籤的裝置上接收。
 
@@ -22,6 +24,7 @@ copyright:
    a. 在**名稱**欄位中，輸入標籤的名稱。例如，"coupons"。
 
    b. 在**說明**欄位中，輸入標籤說明。
+   
 
    c. 按一下**儲存**。
 
@@ -86,7 +89,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onFailure(MFPPushException ex) {
          updateTextView("Error getting subscriptions.. " + ex.getMessage());
-    }
+  }
 })
 ```
 
@@ -122,7 +125,7 @@ alert(tags);
  if(error){    
    [self updateMessage:error.description];  
  } else {
-   [self updateMessage:@"Successfully retrieved available tags."];
+        [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];
 [self.appDelegateVC updateMessage:availableTags.description];
@@ -322,5 +325,5 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
 1. 從**推送通知**儀表板中，按一下**通知**標籤。
 1. 選取**標籤**選項，以傳送標籤型通知。
 1. 在**搜尋標籤**欄位中，搜尋您要使用的標籤，然後按一下 **+ 新增**按鈕。![通知畫面](images/tag_notification.jpg)
-1. 移至**建立您的通知**區域，然後在**訊息文字**欄位中輸入要在通知中傳送的文字。
+1. 在**訊息文字**欄位中，輸入將當作通知傳送給已訂閱讀者的文字。
 1. 按一下**傳送**按鈕。

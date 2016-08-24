@@ -7,6 +7,8 @@ copyright:
 
 # Notificações interativas
 {: #interactive-notifications}
+*Última atualização: 14 de junho de 2016*
+{: .last-updated}
 
 As notificações interativas permitem que os usuários executem uma ação quando uma notificação chega, sem abrir o aplicativo. Quando uma notificação interativa chega, o dispositivo mostra os botões de ação junto com a mensagem de notificação. As notificações interativas são suportadas em dispositivos iOS com a versão 8 e
 posterior. Se uma notificação interativa for enviada a dispositivos iOS com a versão menor que 8, as ações de notificação não serão exibidas.
@@ -58,4 +60,4 @@ algumas das ações forem ativadas para segundo plano.
 	-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (ˆ)())completionHandler
 ``` 
 
-5. Este novo método de retorno de chamada é chamado quando o usuário clica no botão de ação. A implementação desse método deve executar a tarefa que está associada ao identificador especificado e executar o bloco no parâmetro `completionHandler`.
+5. Este novo método de retorno de chamada é chamado quando o usuário clica no botão de ação. A implementação desse método deve executar tarefas associadas ao identificador especificado e executar o bloco no parâmetro `completionHandler`.

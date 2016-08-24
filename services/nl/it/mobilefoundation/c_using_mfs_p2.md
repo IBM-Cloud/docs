@@ -8,7 +8,7 @@ copyright:
 #	Utilizzo del piano Professional 1 Application
 {: #using_mobilefoundation_p2}
 
-*Ultimo aggiornamento: 15 giugno 2016*
+*Ultimo aggiornamento: 20 luglio 2016*
 {: .last-updated}
 
 Dopo che hai creato l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, leggi la seguente procedura introduttiva al servizio.
@@ -39,15 +39,15 @@ Dopo aver creato l'istanza del servizio {{site.data.keyword.mobilefoundation_sho
 Dopo che l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application è stata creata, vedrai la pagina *Panoramica*,
 dove dovrai specificare le informazioni di connessione per l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional.
 
-1.  Seleziona lo `Spazio`  {{site.data.keyword.Bluemix_notm}} in cui è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}, dall'elenco di spazi disponibili nell'`Organizzazione` corrente.
+1.  Seleziona lo `Spazio`  {{site.data.keyword.Bluemix_notm}} in cui è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}, dall'elenco di spazi disponibili nell'`Organizzazione` selezionata. 
 
-+ Seleziona il `Nome servizio` {{site.data.keyword.dashdbshort_notm}} e le `Credenziali` per connetterti all'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} esistente. 
++ Seleziona il `Nome servizio` {{site.data.keyword.dashdbshort_notm}} e le `Credenziali` per connetterti all'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} esistente.
 
 +  Verifica la connessione all'istanza del servizio {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional specificata.
 
 +  Fai clic su **Continua**. Questa azione crea le tabelle richieste nell'istanza del servizio database {{site.data.keyword.dashdbshort_notm}} configurato.
 
-**Nota**: non puoi modificare l'istanza del servizio {{site.data.keyword.dashdbshort_notm}} configurata per essere utilizzata dalla tua istanza del servizio {{site.data.keyword.mobilefoundation_short}}. Tuttavia, puoi utilizzare la stessa istanza del servizio {{site.data.keyword.dashdbshort_notm}} tra più istanze del servizio {{site.data.keyword.mobilefoundation_short}}, poiché ogni istanza di {{site.data.keyword.mobilefoundation_short}} crea il proprio schema nell'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} selezionata. 
+**Nota**: non puoi modificare l'istanza del servizio {{site.data.keyword.dashdbshort_notm}} configurata per essere utilizzata dalla tua istanza del servizio {{site.data.keyword.mobilefoundation_short}}. Tuttavia, puoi utilizzare la stessa istanza del servizio {{site.data.keyword.dashdbshort_notm}} tra più istanze del servizio {{site.data.keyword.mobilefoundation_short}}, poiché ogni istanza di {{site.data.keyword.mobilefoundation_short}} crea il proprio schema nell'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} selezionata.
 
 * Dopo pochi secondi, puoi accedere alla pagina `Panoramica` che ti fornisce le esercitazioni e i video per aiutarti a iniziare a lavorare con il servizio  {{site.data.keyword.mobilefoundation_short}}.
 
@@ -71,7 +71,7 @@ dove puoi vedere:
   -	La rotta del server creata per te. Utilizza questa rotta per raggiungere il server mobile da
 internet pubblico. Le tue applicazioni mobili utilizzano questa rotta per accedere al server.
 
-  -	I tuoi ``nomeutente`` e `` password ` personali per accedere a {{site.data.keyword.mfp_oc_short_notm}}. La `password` è nascosta. Fai clic su **Mostra password** per visualizzarla.
+  -	I tuoi `nomeutente` e `password` personali per accedere a {{site.data.keyword.mfp_oc_short_notm}}. La `password` è nascosta. Fai clic su **Mostra password** per visualizzarla.
 
 *	Fai clic su **Avvia console** per aprire {{site.data.keyword.mfp_oc_short_notm}}.
 

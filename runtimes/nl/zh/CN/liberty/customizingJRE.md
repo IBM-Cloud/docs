@@ -23,7 +23,7 @@ copyright:
 缺省情况下，将使用 IBM JRE V8。使用 JBP_CONFIG_IBMJDK 环境变量可指定 IBM JRE 的替代版本。例如，要使用最新版本的 IBM JRE 7.1，请设置以下环境变量：
 
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+$ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -35,18 +35,23 @@ version 属性可以设置为版本范围。支持两种版本范围：1.7.+ 和
 （可选）应用程序可以配置为以 OpenJDK 作为 JRE 来运行。要支持应用程序使用 OpenJDK 运行，请将 JVM 环境变量设置为“openjdk”。例如，使用 cf 命令行工具运行以下命令：
 
 ```
-    $ cf set-env myapp JVM 'openjdk'
+$ cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 如果启用，缺省情况下，将使用 OpenJDK V8。使用 JBP_CONFIG_OPENJDK 环境变量可指定 OpenJDK 的替代版本。例如，要使用最新版本的 OpenJDK 7，请设置以下环境变量：
 
 ```
-    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+$ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
 version 属性可以设置为版本范围（例如，1.7.+）或[可用 OpenJDK 版本列表](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)上列出的任何特定版本。为了获得最佳结果，请使用 Java 8。
+
+## Oracle JRE
+{: #oracle_jre}
+
+有关使用 Oracle JRE 的信息，请参阅[使用 Oracle JRE](oracle_jre.html)。
 
 ## 配置 JRE 选项
 {: #configuring_jre}
@@ -73,7 +78,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 
 下面是缺省 JVM 配置的示例，它是由 buildpack 为具有 512 M 内存限制的已部署应用程序生成的：   
 ```
-    -Xtune:virtualized
+-Xtune:virtualized
     -Xmx384M
     -Xdump:none
     -Xdump:heap:defaults:file=../../../../../dumps/heapdump.%Y%m%d.%H%M%S.%pid.%seq.phd
@@ -172,7 +177,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 独立 Java 应用程序的 JVM 选项会持久存储为命令行选项。可在 staging_info.yml 文件中查看这些选项。
 
 ```
-    $ cf files myapp staging_info.yml
+$ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
@@ -181,14 +186,14 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 要查看 jvm.options 文件中的 WAR、EAR 和服务器目录，请运行以下命令：
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+$ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 要查看 jvm.options 文件中的打包服务器，请将 &lt;serverName> 替换为您服务器的名称，并运行以下命令：
 
 ```
-    $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+$ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
 ```
 {: codeblock}
 
@@ -277,7 +282,7 @@ Snap.20141106.100252.81.0003.trc           307.3K
 例如，如果要使用 AES 256 位加密，那么需要覆盖以下 Java 策略文件：
 
 ```
-    .java\jre\lib\security\US_export_policy.jar
+.java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
 ```
 {: codeblock}
@@ -285,7 +290,7 @@ Snap.20141106.100252.81.0003.trc           307.3K
 下载相应的不受限制的策略文件，并将其添加到应用程序，如下所示：
 
 ```
-    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
+resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: codeblock}

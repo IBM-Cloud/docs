@@ -12,7 +12,7 @@ copyright:
 # ビルドパックのデフォルト
 {: #buildpack_defauts}
 
-*最終更新日時: 2016 年 6 月 10 日*
+*最終更新日: 2016 年 6 月 10 日*
 {: .last-updated}
 
 Liberty ビルドパックは Bluemix で頻繁に更新されます。
@@ -30,7 +30,7 @@ Liberty ビルドパックは Bluemix で頻繁に更新されます。
   * [ベータ・フィーチャー](usingBetaFeatures.html)は提供しません。
   * 通常、四半期ベースで更新されます。
 
-2. 最新のベータ版
+2. 月次リリース
   * **JBP_CONFIG_LIBERTY** 環境変数で **"version: +"** 値を設定して、明示的に使用可能にする必要があります。
   * [ベータ・フィーチャー](usingBetaFeatures.html)を提供します。
   * 通常、月次ベースで更新されます。

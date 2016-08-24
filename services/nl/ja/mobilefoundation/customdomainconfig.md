@@ -13,7 +13,7 @@ copyright:
 # {{site.data.keyword.mobilefoundation_short}} サーバーのカスタム・ドメインの構成
 {: #configcustomdomain}
 
-*最終更新日: 2016 年 6 月 15 日*
+*最終更新日: 2016 年 6 月 20 日*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} は、コンテナー・グループとして {{site.data.keyword.containerlong}} で {{site.data.keyword.mfserver_short_notm}} をプロビジョンします。コンテナー・グループは、{{site.data.keyword.Bluemix_notm}} **地域**に基づいたドメイン名を含む URL にマップされます。独自のカスタム・ドメインを構成することも可能です。
@@ -25,9 +25,8 @@ copyright:
 
   |ドメイン |  地域  |    
   |:----- | :----- |    
-  |`mybluemix.net` | 米国、ダラス  |    
-  |`eu-gb.mybluemix.net` | 英国、ロンドン  |    
-  |`au-syd.mybluemix.net`  | オーストラリア、シドニー |  
+  |`mybluemix.net` | 米国南部 |    
+  |`eu-gb.mybluemix.net` | 英国  |    
 
 独自ドメインを使用できるようにするには、以下のステップを実行してカスタム・ドメインを構成する必要があります。
 

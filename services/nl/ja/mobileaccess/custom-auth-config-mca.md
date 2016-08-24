@@ -7,6 +7,11 @@ copyright:
 
 # カスタム認証用の {{site.data.keyword.amashort}} の構成
 {: #custom-dash}
+
+*最終更新日: 2016 年 7 月 17 日*
+{: .last-updated}
+
+
 モバイル・アプリケーションでカスタム認証を使用するには、{{site.data.keyword.amashort}} サービス・ダッシュボードで、カスタム ID プロバイダーのカスタム認証レルムとベース URL を登録する必要があります。
 
 ## 開始する前に
@@ -17,11 +22,11 @@ copyright:
 
 ## {{site.data.keyword.Bluemix}} ダッシュボードでのカスタム認証の構成
 {: #custom-dash-config}
-{{site.data.keyword.amashort}} ダッシュボードを使用してカスタム認証を構成します。
+{{site.data.keyword.Bluemix}} ダッシュボードを使用してカスタム認証を構成します。
 
 1. {{site.data.keyword.Bluemix}}ダッシュボードでアプリを開きます。
 
-1. **「モバイル・オプション」**をクリックし、**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) のメモを取ります。SDK を初期化する際に、これらの値が必要になります。
+1. **「モバイル・オプション」**をクリックし、**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) のメモを取ります。SDK を初期化するために、これらの値が必要になります。
 
 1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
 

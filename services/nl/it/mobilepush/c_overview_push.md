@@ -7,59 +7,52 @@ copyright:
 
 # Informazioni su Push Notifications
 {: #overview-push}
+*Ultimo aggiornamento: 14 giugno 2016*
+{: .last-updated}
 
-Push Notifications è un servizio che puoi utilizzare per inviare notifiche al dispositivo iOS e Android. Le notifiche possono essere destinate a tutti gli utenti dell'applicazione oppure a uno specifico insieme di utenti e dispositivi facendo uso delle tag. Puoi amministrare dispositivi, tag e sottoscrizioni. Puoi anche utilizzare API (application program interface) REST (Representational State Transfer) e SDK (software development kit) per sviluppare ulteriormente le tue applicazioni client. Per informazioni sul servizio dedicato Push, vedi [Servizi dedicati](../../dedicated/index.html). 
+Push Notifications è un servizio che puoi utilizzare per inviare notifiche al dispositivo iOS e Android. Le notifiche possono essere destinate a tutti gli utenti dell'applicazione oppure a uno specifico insieme di utenti e dispositivi facendo uso delle tag. Puoi amministrare dispositivi, tag e sottoscrizioni. Puoi anche utilizzare API (application program interface) REST (Representational State Transfer) e SDK (software development kit) per sviluppare ulteriormente le tue applicazioni client. 
+
+Push Notification è anche disponibile come servizio Bluemix Dedicato. Per informazioni sul servizio dedicato Push, vedi [Servizi dedicati](../../dedicated/index.html). Tieni presente che la scheda di monitoraggio di Push Notifications non visualizza dati di analisi.
+
+Il Push Notification service è ora abilitato con OpenWhisk. Per ulteriori informazioni, vedi [OpenWhisk](../../openwhisk/index.html).
 
 
-## Processo Push notification service
+## Processo Push Notification service
 {: #overview_push_process}
 
-I client mobili possono sottoscrivere e registrarsi per il Push Notification Service. All'avvio,
-                le applicazioni mobili si registrano al Push
-                Notification Service e lo sottoscrivono. Le notifiche vengono spedite
-                al servizio APNS (Apple Push Notification Service) o al server GCM (Google Cloud Messaging)
-                e inviate quindi ai client mobili registrati.
+I client mobili possono sottoscrivere e registrarsi per il Push Notification service. All'avvio, le applicazioni mobili si registrano al Push Notification service e lo sottoscrivono. Le notifiche vengono spedite al servizio APNS (Apple Push Notification Service) o al server GCM (Google Cloud Messaging) e inviate quindi ai client mobili registrati.
 
 ![Panoramica Push](images/overview.jpg)
 
 
 ###applicazioni mobili
 
-All'avvio, le applicazioni mobili si registrano al Push Notification Service e lo sottoscrivono per ricevere notifiche.
+All'avvio, le applicazioni mobili si registrano al Push Notification service e lo sottoscrivono per ricevere notifiche.
 
 ###Applicazioni di backend
 
-Le applicazioni di backend possono essere in loco o in un cloud pubblico. Le applicazioni di backend utilizzano il Push
-                        Notification Service per inviare notifiche sensibili al contesto agli utenti
-                        mobili. Le applicazioni di backend non devono necessariamente conservare e gestire
-                        informazioni sugli utenti e i dispositivi mobili per inviare notifiche di push. Le
-                        applicazioni di backend possono invece utilizzare il Push Notification Service.
+Le applicazioni di backend possono essere in loco o in un cloud pubblico. Le applicazioni di backend utilizzano il Push Notification service per inviare notifiche sensibili al contesto agli utenti mobili. Le applicazioni di backend non devono necessariamente conservare e gestire
+                        informazioni sugli utenti e i dispositivi mobili per inviare notifiche di push. Le applicazioni di backend possono invece utilizzare il Push Notification service.
 
 ###Proprietario backend applicazione
 
-Il ruolo che ha creato l'applicazione di backend mobile che aggrega un'istanza del Push Notification Service. Questa persona configura
-                        e imposta il Push Notification Service in modo adatto alle applicazioni di backend che utilizzano
-                        il Push Notification Service e alle applicazioni mobili che sono la destinazione delle notifiche di push.
+Il ruolo che ha creato l'applicazione di backend mobile che aggrega un'istanza del Push Notification service. Questa persona configura e imposta il Push Notification service in modo adatto alle applicazioni di backend che utilizzano il Push Notification service e alle applicazioni mobili che sono la destinazione delle notifiche di push.
 
-###Push Notification Service
+###Push Notification service
 
-Il Push Notification Service gestisce tutte le informazioni correlate ai dispositivi che eseguono la registrazione per le notifiche. Il servizio fornisce alle tue applicazioni la trasparenza dei dettagli di tecnologia relativi all'invio di notifiche a queste eterogenee piattaforme mobili, gestendo tutto questo internamente.
+Il Push Notification service gestisce tutte le informazioni correlate ai dispositivi che eseguono la registrazione per le notifiche. Il servizio fornisce alle tue applicazioni la trasparenza dei dettagli di tecnologia relativi all'invio di notifiche a queste eterogenee piattaforme mobili, gestendo tutto questo internamente.
 
 ###Gateway
 
-Servizi cloud specifici per piattaforme di dispositivi mobili quali GCM (Google Cloud
-                        Messaging) o APNS (Apple Push Notification Service) utilizzando il Push
-                        Notification Service per inviare notifiche alle applicazioni mobili.
+Servizi cloud specifici per piattaforme di dispositivi mobili quali GCM (Google Cloud Messaging) o APNS (Apple Push Notification Service) utilizzando il Push Notification service per inviare notifiche alle applicazioni mobili.
 
 ## Tipi di notifica di push
 {: #overview-push-types}
 
 ###Broadcast
 
-Quando un'applicazione mobile si registra al Push Notification Service, può iniziare a ricevere i broadcast. Le notifiche broadcast sono messaggi di notifica destinati a tutti i
-                        dispositivi che hanno l'applicazione installata e configurata per il Push
-                        Notification Service. Le notifiche broadcast sono abilitate per impostazione predefinita con qualsiasi
-                        applicazione abilitata per le notifiche di push. Qualsiasi applicazione abilitata per il Push Notification Service ha una sottoscrizione predefinita alla tag Push.ALL, che viene utilizzata dal server per eseguire il broadcast dei messaggi di notifica a tutti i dispositivi. Per inviare una notifica broadcast che utilizza la API Push
+Quando un'applicazione mobile si registra al Push Notification service, può iniziare a ricevere i broadcast. Le notifiche broadcast sono messaggi di notifica destinati a tutti i dispositivi che hanno l'applicazione installata e configurata per il Push Notification service. Le notifiche broadcast sono abilitate per impostazione predefinita con qualsiasi
+                        applicazione abilitata per le notifiche di push. Qualsiasi applicazione abilitata per il Push Notification service ha una sottoscrizione predefinita alla tag Push.ALL, che viene utilizzata dal server per eseguire il broadcast dei messaggi di notifica a tutti i dispositivi. Per inviare una notifica broadcast che utilizza la API Push
                         REST, assicurati che la destinazione ("target") sia un JSON vuoto all'inserimento nella
                         risorsa messaggi.
 
@@ -94,3 +87,16 @@ Il recapito delle notifiche può essere destinato a una specifica piattaforma di
                             le piattaforme come un array. Le piattaforme supportate sono:
 * A (Apple)
 * G (Google)
+
+## Dimensione messaggio di Push Notification
+{: #push-message-size}
+
+La dimensione del payload del messaggi di Push Notification dipende dai mediatori. 
+
+###iOS
+
+Per iOS 8 e successivi, la dimensione massima consentita è 2 kilobyte. Il Push Notification service per Apple non invia notifiche che superano questo limite.
+
+###Android
+
+Non esistono limitazione nella piattaforma Android.

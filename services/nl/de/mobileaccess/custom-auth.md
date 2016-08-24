@@ -5,20 +5,25 @@ copyright:
 
 ---
 
-# Benutzer mithilfe eines angepassten Identitätsproviders authentifizieren
+# Benutzer mit angepasstem Identitätsprovider authentifizieren
 {: #custom-id}
-Sie können einen angepassten Identitätsprovider erstellen und eigene Logik zur Erfassung und Validierung von Berechtigungsnachweisen implementieren. Ein angepasster Identitätsprovider ist eine Webanwendung, die eine REST-konforme Schnittstelle bereitstellt. Sie können einen angepassten Identitätsprovider in eigenen Räumlichkeiten oder auf {{site.data.keyword.Bluemix}} betreiben. Die einzige Voraussetzung besteht darin, dass der angepasste Identitätsprovider über das öffentliche Internet erreichbar sein muss, sodass er mit dem {{site.data.keyword.amashort}}-Service kommunizieren kann.
 
-## Übersicht über {{site.data.keyword.amashort}}
+*Letzte Aktualisierung: 07. Juli 2016*
+{: .last-updated}
+
+
+Erstellen Sie einen angepassten Identitätsprovider und implementieren Sie eigene Logik zur Erfassung und Validierung von Berechtigungsnachweisen. Ein angepasster Identitätsprovider ist eine Webanwendung, die eine REST-konforme Schnittstelle bereitstellt. Sie können den angepassten Identitätsprovider lokal oder auf {{site.data.keyword.Bluemix}} betreiben. Die einzige Voraussetzung besteht darin, dass der angepasste Identitätsprovider über das öffentliche Internet erreichbar sein muss, sodass er mit dem {{site.data.keyword.amashort}}-Service kommunizieren kann.
+
+## Angepasster {{site.data.keyword.amashort}}-Identitätsprovider - Übersicht
 {: #custom-id-ovr}
- Das folgende Diagramm zeigt, wie {{site.data.keyword.amashort}} in einen angepassten Identitätsprovider integriert wird.
+ Das folgende Diagramm zeigt, wie {{site.data.keyword.amashort}} einen angepassten Identitätsprovider integriert. 
 
 ![Bild](images/mca-sequence-custom.jpg)
 
 1. Verwenden Sie das {{site.data.keyword.amashort}}-SDK, um eine Anforderung an Ihre Back-End-Ressourcen zu senden, die mit dem {{site.data.keyword.amashort}}-Server-SDK geschützt werden.
 * Das {{site.data.keyword.amashort}}-Server-SDK erkennt eine nicht autorisierte Anforderung und gibt den Status HTTP 401 sowie den Berechtigungsbereich zurück.
 * Das {{site.data.keyword.amashort}}-Client-SDK erkennt den oben genannten Status HTTP 401 automatisch und startet den Authentifizierungsprozess.
-* Das {{site.data.keyword.amashort}}-Client-SDK kontaktiert den {{site.data.keyword.amashort}}-Service und fordert die Ausgabe eines Berechtigungsheaders an.
+* Das {{site.data.keyword.amashort}}-Client-SDK kontaktiert den {{site.data.keyword.amashort}}-Service und fordert einen Berechtigungsheader an.
 * Der {{site.data.keyword.amashort}}-Service kommuniziert mit dem angepassten Identitätsprovider, um den Authentifizierungsprozess zu starten.
 * Der angepasste Identitätsprovider gibt eine Authentifizierungsanforderung (Challenge) an den {{site.data.keyword.amashort}}-Service zurück.
 * Der {{site.data.keyword.amashort}}-Service gibt die Authentifizierungsanforderung an das {{site.data.keyword.amashort}}-Client-SDK zurück.
@@ -37,7 +42,7 @@ Mit einem angepassten Identitätsprovider können Sie angepasste Authentifizieru
 
 Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglichkeiten:
 
-1. Sie können eine Authentifizierungsanforderung (Challenge) anpassen, die vom {{site.data.keyword.amashort}}-Service an die mobile Clientanwendung gesendet werden soll. Eine Authentifizierungsanforderung ist ein JSON-Objekt, das angepasste Daten enthält. Der mobile Client kann mithilfe dieser angepassten Daten Authentifizierungsabläufe anpassen.
+1. Sie können eine Authentifizierungsanforderung (Challenge) anpassen, die vom {{site.data.keyword.amashort}}-Service an die mobile Anwendung oder an die Web-Clientanwendung gesendet werden soll. Eine Authentifizierungsanforderung ist ein JSON-Objekt, das angepasste Daten enthält. Der Client kann mithilfe dieser angepassten Daten Authentifizierungsabläufe anpassen.
 
   Beispiel für eine angepasste Authentifizierungsanforderung:
 
@@ -52,9 +57,9 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 	}
 	```
 
-1. Sie können einen angepassten Ablauf für die Erfassung von Berechtigungsnachweisen auf dem mobilen Client, einschließlich einer Authentifizierung in mehreren Schritten und mit mehreren Formularen, implementieren. Ähnlich wie bei der angepassten Authentifizierungsanforderung müssen Sie die Struktur einer Antwort auf eine angepasste Authentifizierungsanforderung gestalten.
+1. Sie können einen angepassten Ablauf für die Erfassung von Berechtigungsnachweisen auf dem Client implementieren, einschließlich einer Authentifizierung in mehreren Schritten und mit mehreren Formularen. Ähnlich wie bei der angepassten Authentifizierungsanforderung müssen Sie die Struktur einer Antwort auf eine angepasste Authentifizierungsanforderung gestalten.
 
-  Beispiel für eine Antwort auf eine angepasste Authentifizierungsanforderung, die von einem mobilen Client gesendet wird:
+  Beispiel für eine Antwort auf eine angepasste Authentifizierungsanforderung, die vom Client gesendet wird:
 
 	```JavaScript
 	{
@@ -65,7 +70,7 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 	```
 1. Sie können angepasste Logik für die Validierung der bereitgestellten Antwort auf eine Authentifizierungsanforderung implementieren.
 
-1. Sie können ein angepasstes Benutzeridentitätsobjekt definieren, das beliebige erforderliche angepasste Eigenschaften enthält. Ein Beispiel für ein angepasstes Benutzeridentitätsobjekt, das nach einer erfolgreichen Authentifizierung vom mobilen Client abgerufen wird:
+1. Sie können ein angepasstes Benutzeridentitätsobjekt definieren, das beliebige erforderliche angepasste Eigenschaften enthält. Es folgt ein Beispiel für ein angepasstes Benutzeridentitätsobjekt, das nach einer erfolgreichen Authentifizierung vom Client abgerufen wird: 
 
 	```JavaScript
 	{
@@ -81,16 +86,17 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 
 ### Beispielimplementierung eines angepassten Identitätsproviders
 {: #custom-sample}
-Sie können beliebige der folgenden Beispiele für Node.js-Implementierungen eines angepassten Identitätsproviders als Referenz verwenden, wenn Sie Ihren angepassten Identitätsprovider entwickeln. Laden Sie den vollständigen Anwendungscode aus den GitHub-Repositorys herunter.
+Verwenden Sie beliebige der folgenden Beispiele für Node.js-Implementierungen eines angepassten Identitätsproviders als Referenz, wenn Sie Ihren angepassten Identitätsprovider entwickeln. Laden Sie den vollständigen Anwendungscode aus den GitHub-Repositorys herunter.
 
  * [Einfaches Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
  * [Erweitertes Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## Typische Kommunikation zwischen dem {{site.data.keyword.amashort}}-Server und einem angepassten Identitätsprovider
 {: #custom-id-comm}
+
 1. Der {{site.data.keyword.amashort}}-Service sendet eine Anforderung `startAuthorization` an den angepassten Identitätsprovider.
 1. Der angepasste Identitätsprovider antwortet mit einer angepassten Authentifizierungsanforderung (Challenge), die an den Client gesendet werden soll.
-1. Der {{site.data.keyword.amashort}}-Service sendet die vom angepassten Identitätsprovider empfangene angepasste Authentifizierungsanforderung an den mobilen Client und empfängt schließlich eine Antwort auf die Authentifizierungsanforderung vom mobilen Client.
+1. Der {{site.data.keyword.amashort}}-Service sendet die vom angepassten Identitätsprovider empfangene angepasste Authentifizierungsanforderung an den Client und empfängt schließlich eine Antwort auf die Authentifizierungsanforderung vom Client.
 1. Der {{site.data.keyword.amashort}}-Service sendet eine Anforderung `handleChallengeAnswer` mit der Antwort auf die Authentifizierungsanforderung an den angepassten Identitätsprovider.
 1. Der angepasste Identitätsprovider prüft die Antwort auf die Authentifizierungsanforderung und reagiert mit einer Antwort mit dem Status 'success', die die Benutzeridentitätsinformationen enthält.
 1. Optional: Der angepasste Identitätsprovider stellt möglicherweise weitere Anforderungen (Challenges) bereit, nachdem er eine Antwort auf eine Anforderung vom Client empfangen hat. Das Senden mehrerer Anforderungen ermöglicht einen Authentifizierungsprozess mit mehreren Schritten.
@@ -102,7 +108,7 @@ Der angepasste Identitätsprovider wird standardmäßig als statusunabhängige A
 ## Angepasster Realm
 {: #custom-id-custom}
 
-Ein angepasster Identitätsprovider unterstützt genau einen angepassten Authentifizierungsrealm. Zur Verarbeitung eingehender Authentifizierungsanforderungen (Challenges) erstellen und registrieren Sie eine Instanz von `AuthenticationDelegate` /	`AuthenticationListener` in Ihrer mobilen Clientanwendung. Definieren Sie den angepassten Authentifizierungsrealmnamen, wenn Sie einen angepassten Identitätsprovider im {{site.data.keyword.amashort}}-Dashboard konfigurieren. Dieser kann dazu verwendet werden, die Anforderung zu identifizieren, die von einer bestimmten {{site.data.keyword.amashort}}-Serviceinstanz eingeht.
+Ein angepasster Identitätsprovider unterstützt genau einen angepassten Authentifizierungsrealm. Zur Verarbeitung eingehender Authentifizierungsanforderungen (Challenges) erstellen und registrieren Sie eine Instanz von `AuthenticationDelegate` /	`AuthenticationListener` in Ihrer Clientanwendung. Definieren Sie den angepassten Authentifizierungsrealmnamen, wenn Sie einen angepassten Identitätsprovider im {{site.data.keyword.amashort}}-Dashboard konfigurieren. Das Realm gibt die spezifische {{site.data.keyword.amashort}}-Serviceinstanz einer eingehenden Anforderung an. 
 
 ## Nächste Schritte
 {: #next-steps}

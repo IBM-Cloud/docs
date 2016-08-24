@@ -5,8 +5,7 @@ copyright:
 
 ---
 
-# 安裝 {{site.data.keyword.mobileanalytics_short}}
-Client SDK
+# 安裝 {{site.data.keyword.mobileanalytics_short}} Client SDK
 {: #mobileanalytics_sdk}
 *前次更新：2016 年 4 月 21 日*
 {: .last-updated}
@@ -29,7 +28,7 @@ Client SDK 目前適用於 Android、iOS 及 WatchOS。
 3. 找到 `build.gradle` 檔案的 `Dependencies` 區段，並新增 {{site.data.keyword.mobileanalytics_short}} Client SDK 的編譯相依關係，如下所示：
 
   ```Gradle
-compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
       name:'analytics',
       version: '1.+',
       ext: 'aar',
@@ -41,12 +40,12 @@ compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
 
 	```Gradle
       dependencies {
-        compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+        compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
           name:'analytics',
           version: '1.+',
           ext: 'aar',
           transitive: true
-    	// other dependencies  
+    	// other dependencies
       }
   ```
   {: screen}
@@ -78,11 +77,11 @@ compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
 1. 如果未安裝 CocoaPods，請執行：
 
     ```
-    sudo gem install cocoapods
+sudo gem install cocoapods
     ```
     {: codeblock}
 
-2. 如果您尚未針對 CocoaPods 起始設定工作區，請在您專案的根目錄中執行 `pod init` 指令。CocoaPods 會為您建立 `Podfile` 檔案，您可以在其中定義 Xcode 專案的相依關係。
+2. 如果您尚未針對 CocoaPods 起始設定工作區，請在您 Xcode 專案的根目錄中執行 `pod init` 指令。CocoaPods 會為您建立 `Podfile` 檔案，您可以在其中定義 Xcode 專案的相依關係。
 
 3. 將 `BMSAnalytics` pod 新增至 Podfile 中的目標，例如：
 
@@ -92,7 +91,7 @@ compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
   use_frameworks!
 
   target 'MyApp' do
-platform :ios, '8.0'
+     platform :ios, '8.0'
      pod 'BMSAnalytics'
   end
   ```
@@ -107,8 +106,9 @@ platform :ios, '8.0'
 使用 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)，來新增您專案的架構。
 
 1. 將 `BMSAnalytics` 架構新增至 Cartfile：
+  
   ```
-  github "ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"
+github "ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"
   ```
 2. 執行 `carthage update` 指令。建置完成時，請將 `BMSAnalytics.framework`、`BMSCore.framework` 及 `BMSAnalyticsAPI.framework` 拖曳至 Xcode 專案。
 3. 遵循 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 網站上的指示，來完成整合。
@@ -121,4 +121,4 @@ platform :ios, '8.0'
 
 ## API 參考資料
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

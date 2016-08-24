@@ -7,13 +7,17 @@ copyright:
 
 # Habilitación de la autenticación de Google para apps de Cordova
 {: #google-auth-cordova}
-Para configurar aplicaciones de Cordova para la integración de la autenticación de Google, debe realizar cambios en el código nativo de la aplicación de Cordova; por ejemplo, en Java, Objective-C o Swift. Debe configurar cada plataforma por separado. Utilice el entorno de desarrollo nativo para realizar cambios en el código nativo; por ejemplo, en Android Studio o Xcode.
+
+*Última actualización: 28 de junio de 2016*
+{: .last-updated}
+
+Para configurar aplicaciones de Cordova para la integración de la autenticación de Google, debe realizar cambios en el código nativo de la aplicación de Cordova (Java, Objective-C o Swift). Debe configurar cada plataforma por separado. Utilice el entorno de desarrollo nativo para realizar cambios en el código nativo; por ejemplo, en Android Studio o Xcode.
 
 ## Antes de empezar
 {: #before-you-begin}
-Debe tener lo siguiente: 
+Debe tener lo siguiente:
 * Un proyecto Cordova que esté instrumentado con el SDK de cliente {{site.data.keyword.amashort}}.  Para obtener más información, consulte [Configuración del plugin de Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
-* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de un programa de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
+* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de una aplicación de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
 * (opcional) Familiarícese con las secciones siguientes:
    * [Habilitación de la autenticación de Google en apps de Android](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [Habilitación de la autenticación de Google en apps de iOS](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
@@ -28,7 +32,7 @@ Los pasos necesarios para configurar la plataforma Android de una aplicación de
 * Configuración de {{site.data.keyword.amashort}} para la autenticación de Google
 * Configuración del SDK del cliente de {{site.data.keyword.amashort}} para Android
 
-La única diferencia que existe cuando se configuran aplicaciones de Cordova es que se debe inicializar el SDK del cliente de {{site.data.keyword.amashort}} en código JavaScript en lugar de código Java. La API `GoogleAuthenticationManager` debe registrarse en código nativo.
+Para aplicaciones de Cordova, inicialice el SDK del cliente de {{site.data.keyword.amashort}} en código JavaScript en lugar de código Java. La API `GoogleAuthenticationManager` debe registrarse en código nativo.
 
 ## Configuración de la plataforma iOS
 {: #google-auth-cordova-ios}
@@ -56,9 +60,9 @@ Seleccione el recuadro **Copiar archivos...**.
 
 1. Siga el paso 2 de la guía de aprendizaje [Iniciar la integración de Google+ en su app de iOS ](https://developers.google.com/+/mobile/ios/getting-started) para integrar el SDK de Google+ para iOS en el proyecto Xcode.
 
-Continúe en la sección **Configuración del proyecto de iOS para la autenticación de Google** de [Configuración de la plataforma iOS para la autenticación de Google](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html). Registre `IMFGoogleAuthenticationHandler` en código nativo tal como se describe en la sección `Inicialización del SDK del cliente de {{site.data.keyword.amashort}}`. No es necesario para inicializar `IMFClient` en el código nativo, esto se realizará en código JavaScript en breve.
+Continúe en la sección **Configuración del proyecto de iOS para la autenticación de Google** de [Configuración de la plataforma iOS para la autenticación de Google](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html). Registre `IMFGoogleAuthenticationHandler` en código nativo tal como se describe en la sección `Inicialización del SDK del cliente de {{site.data.keyword.amashort}}`. No inicialice `IMFClient` en el código nativo (el cliente se inicializa en JavaScript en la sección siguiente).
 
-Añada la línea siguiente al método `application:openURL:sourceApplication:annotation` del delegado de la aplicación. Esta línea garantiza que todos los plug-ins de Cordova reciban notificación de los sucesos correspondientes.
+Añada esta línea al método `application:openURL:sourceApplication:annotation` del delegado de la aplicación. Esto garantiza que todos los plug-ins de Cordova reciban notificación de los sucesos correspondientes.
 
 ```
 [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
@@ -77,17 +81,16 @@ Sustituya los valores *applicationRoute* y *applicationGUID* por los valores de 
 
 ## Prueba de autenticación
 {: #google-auth-cordova-test}
-Después de inicializar el SDK del cliente, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente, puede empezar a realizar solicitudes a la aplicación de programa de fondo móvil.
 
 ### Antes de empezar
 {: #google-auth-cordova-testing-before}
-Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Debe disponer de una aplicación de programa de fondo protegida por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil en su navegador de escritorio; para ello, abra `{applicationRoute}/protected`. Por ejemplo, `http://my-mobile-backend.mybluemix.net/protected`.
+1. Intente enviar una solicitud al punto final protegido de la aplicación de programa de fondo móvil en su navegador de escritorio abriendo `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`
 
-
-1. El punto final `/protected` de un programa de fondo móvil creado con el contenedor modelo de MobileFirst Services está protegido con {{site.data.keyword.amashort}}; por tanto, solo se puede acceder al mismo mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Como resultado, verá `Unauthorized` en el navegador de escritorio.
+1. El punto final `/protected` de una aplicación de programa de fondo móvil creado con MobileFirst Services Boilerplate está protegido con {{site.data.keyword.amashort}}; por tanto, solo se puede acceder al mismo mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Como resultado, verá `Unauthorized` en el navegador de escritorio.
 
 1. Utilice la aplicación de Cordova para realizar solicitudes al mismo punto final. Añada el siguiente código después de inicializar `BMSClient`.
 

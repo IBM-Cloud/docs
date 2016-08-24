@@ -5,8 +5,7 @@ copyright:
 
 ---
 
-# {{site.data.keyword.mobileanalytics_short}} installieren
-Client-SDKs
+# {{site.data.keyword.mobileanalytics_short}}-Client-SDKs installieren
 {: #mobileanalytics_sdk}
 *Letzte Aktualisierung: 21. April 2016*
 {: .last-updated}
@@ -45,7 +44,7 @@ Im Lieferumfang des Client-SDKs für {{site.data.keyword.mobileanalytics_short}}
           version: '1.+',
           ext: 'aar',
           transitive: true
-    	// weitere Abhängigkeiten  
+    	// other dependencies  
       }
   ```
   {: screen}
@@ -81,7 +80,7 @@ Das {{site.data.keyword.mobileanalytics_short}}-SDK ist im Lieferumfang von [Coc
     ```
     {: codeblock}
 
-2. Wenn der Arbeitsbereich noch nicht für CocoaPods initialisiert ist, führen Sie den Befehl `pod init` im Stammverzeichnis des Projekts aus. Von CocoaPods wird die Datei `Podfile` erstellt, in der Sie die Abhängigkeiten für das Xcode-Projekt definieren.
+2. Wenn der Arbeitsbereich noch nicht für CocoaPods initialisiert ist, führen Sie den Befehl `pod init` im Stammverzeichnis des Xcode-Projekts aus. Von CocoaPods wird die Datei `Podfile` erstellt, in der Sie die Abhängigkeiten für das Xcode-Projekt definieren.
 
 3. Fügen Sie den Pod `BMSAnalytics` zum Ziel in der Datei 'Podfile' hinzu; Beispiel:
 
@@ -120,4 +119,4 @@ Fügen Sie Frameworks mit [Carthage](https://github.com/Carthage/Carthage#if-you
 
 ## API-Referenz
 {: #api}
-* [REST-API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [REST-API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

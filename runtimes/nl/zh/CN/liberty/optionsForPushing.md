@@ -35,7 +35,7 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 例如：
 
 ```
-    $ cf push <yourappname> -p myapp.war
+$ cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -61,7 +61,7 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 这些功能与 Java EE 7 Web 概要文件功能对应。可以通过设置 JBP_CONFIG_LIBERTY 环境变量来指定其他 Liberty 功能集。例如，要仅启用 jsp-2.3 和 websocket-1.1 功能，请运行以下命令并对应用程序重新编译打包：
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -70,14 +70,14 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 如果部署了 WAR 文件，那么可以像在内嵌 ibm-web-ext.xml 文件中所设置的那样，在上下文根下访问 Web 应用程序。如果 ibm-web-ext.xml 文件不存在，或者未指定上下文根，那么可在根上下文下访问应用程序。例如，
 
 ```
-    http://<yourappname>.mybluemix.net/
+http://<yourappname>.mybluemix.net/
 ```
 {: codeblock}
 
 如果部署了 EAR 文件，那么可在根上下文下访问内嵌的 Web 应用程序，如 EAR 部署描述符中所定义。例如，
 
 ```
-    http://<yourappname>.mybluemix.net/acme/
+http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -125,14 +125,14 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 例如：
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 重要信息：为了使环境变量更改生效，您必须重新编译打包应用程序：
 
 ```
-    $ cf restage myapp
+$ cf restage myapp
 ```
 {: codeblock}
 
@@ -144,7 +144,7 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 如果 Liberty 概要文件已安装在工作站上，且已经为应用程序创建 Liberty 服务器，那么可以将该目录的内容推送到 Bluemix。例如，如果 Liberty 服务器名称为 defaultServer，请运行以下命令：
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
+$ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -173,14 +173,14 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 准备好服务器目录后，可以将其部署到 Bluemix。
 
 ```
-    $ cf push <yourappname> -p defaultServer
+$ cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
 注：作为服务器目录的一部分部署的 Web 应用程序可在[上下文根下访问，正如在 Liberty 概要文件中确定的那样](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)。例如：
 
 ```
-    http://<yourappname>.mybluemix.net/acme/
+http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -189,17 +189,19 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 
 您还可以将打包服务器文件推送到 Bluemix。打包服务器文件是使用 Liberty 服务器软件包命令创建的。除了应用程序和配置文件之外，打包服务器文件中还包含应用程序所需的共享资源和 Liberty 用户功能。
 
-要打包 Liberty 服务器，请从 Liberty 安装目录使用 ./bin/server package 命令。指定服务器名称，并包含“––include=usr”选项。例如，如果 Liberty 服务器为 defaultServer，请运行以下命令：
+要打包 Liberty 服务器，请从 Liberty 安装目录使用 `./bin/server package` 命令。指定服务器名称，并包含 `--include=usr` 选项。例如，如果 Liberty 服务器为 defaultServer，请运行以下命令：
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+$ wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
-此命令会在服务器目录中生成 serverName.zip 文件。然后，您可以使用 cf push 命令将该压缩文件推送到 Bluemix。例如：
+此命令会在服务器目录中生成 serverName.zip 文件。如果使用了 `--archive` 选项来指定其他归档文件，请确保该文件的扩展名为 `.zip`，而不是 `.jar`。**该 buildpack 不支持使用“.jar”扩展名创建的打包服务器文件**。
+
+然后，可以使用 `cf push` 命令将生成的 `.zip` 文件推送到 Bluemix。例如：
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+$ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 

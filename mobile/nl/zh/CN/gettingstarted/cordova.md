@@ -29,12 +29,14 @@ copyright:
 3. 从项目目录运行以下命令，以添加 Android 和 iOS 平台环境：
 
 	### Android
+	{: #cordova-android-run}
 
 	```Bash
 	cordova platform add android
 	```
 
 	### iOS
+	{: #cordova-ios-run}
 
 	```Bash
 	cordova platform add ios
@@ -62,7 +64,8 @@ copyright:
 6. 为 iOS 配置 Cordova 应用程序。Android 平台不需要额外的配置。
 
 	### iOS
-  为避免发生构建错误，请按如下所示配置 Xcode 项目。
+	{: #cordova-ios-configure}
+为避免发生构建错误，请按如下所示配置 Xcode 项目。
 
 	1. 使用最新版本 Xcode 打开 *&lt;app_name&gt;*/platforms/ios 目录中的 `xcode.proj` 文件。
 
@@ -83,6 +86,7 @@ copyright:
 7. 构建样本并在移动仿真器或设备上运行该样本。
 
   ### Android
+  {: #cordova-android-build}
 	1. 使用以下命令构建 Cordova 应用程序：
 
     **重要信息：**在 Android Studio 中打开项目之前，您必须先通过 Cordova 命令行界面 (CLI) 构建 Cordova 应用程序。否则，将遇到构建错误。
@@ -94,6 +98,7 @@ copyright:
 	2. 在 Android Studio 中运行样本应用程序。
 
   ### iOS
+  {: #cordova-ios-build}
   1. 在 Xcode 中构建 Cordova 应用程序。
 
     **提示：**在 Xcode 中构建会为您提供更多选项，如调试和项目配置。
@@ -102,16 +107,22 @@ copyright:
 
 此时将显示一个视图应用程序，其中含有 **PING BLUEMIX** 按钮。点击该按钮，应用程序将测试客户机到后端 {{site.data.keyword.Bluemix_notm}} 应用程序的连接。应用程序使用您在 `index.js` 文件中指定的应用程序路径测试此连接。
 
+<!--
+![Hello World application successfully connected to Bluemix](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+-->
 
-![Hello World 应用程序已成功连接到 Bluemix](images/yayconnected.jpg "图 1. Hello World 应用程序已成功连接到 Bluemix")
-
-
-从移动应用程序成功连接到 {{site.data.keyword.Bluemix_notm}} 后，将显示消息“恭喜！您已建立连接”。
+  在 Android Studio 中从移动应用程序成功连接到 {{site.data.keyword.Bluemix_notm}} 后，您会看到：
+  `哇！您已建立连接`
+  {: screen}
 
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
-如果连接失败，将显示错误消息。该消息包含有关错误的更多信息。您可以检查以下各项，对错误进行故障诊断：
+如果连接失败，您会看到：
+  `糟糕，出错了`
+  {: screen}
+
+该消息包含有关错误的更多信息。您可以检查以下各项，对错误进行故障诊断：
 
 - 验证是否正确地粘贴了路径和 GUID 值。
 - 查看 Xcode 或 Android 调试日志。

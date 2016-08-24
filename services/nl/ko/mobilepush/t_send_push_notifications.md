@@ -7,8 +7,9 @@ copyright:
 
 {:new_window: target="_blank"}
 # 기본 푸시 알림 전송
-
 {: #push-send-notifications}
+*마지막 업데이트 날짜: 2016년 6월 14일*
+{: .last-updated}
 
 애플리케이션이 개발된 후에는 (태그, 배지, 추가 페이로드 또는 사운드 파일을 사용하지 않아도) 기본 푸시 알림을 전송할 수 있습니다. 
 
@@ -25,7 +26,9 @@ copyright:
 3. 디바이스가 알림을 수신했는지 확인하십시오. 
 
 	다음 스크린샷은 Android와 iOS 디바이스의 포그라운드에서
-푸시 알림을 처리하는 경보 상자를 보여줍니다. 	![Android의 포그라운드 푸시 알림](images/Android_Screenshot.jpg)
+푸시 알림을 처리하는 경보 상자를 보여줍니다.
+
+	![Android의 포그라운드 푸시 알림](images/Android_Screenshot.jpg)
 
 	![iOS의 포그라운드 푸시 알림](images/iOS_Screenshot.jpg)
 

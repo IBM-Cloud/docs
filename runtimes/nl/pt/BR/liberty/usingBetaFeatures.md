@@ -76,9 +76,7 @@ e ativar os recursos beta em seu aplicativo.  Por exemplo:
 ```
 
 3. Configure a variável de ambiente **JBP_CONFIG_LIBERTY** como
-**"version: +"**. Essa variável ativa o
-[tempo de execução beta do
-Liberty](buildpackDefaults.html#liberty_versions) que suporta recursos beta. Por exemplo:
+**"version: +"**. Essa variável ativa o [tempo de execução mensal do Liberty](buildpackDefaults.html#liberty_versions) que suporta recursos beta. Por exemplo:
   * usando a ferramenta de linha de comandos cf:
 ```
        $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"

@@ -90,6 +90,12 @@ navtitle="Sottoscrizione e annullamento di sottoscrizioni di tag" scope="peer"/>
 <topicref href="t_manage_tags.html#using_tags" format="html"
 navtitle="Utilizzo delle notifiche basate sulle tag" scope="peer"/>
 </topicref>
+<topicref href="c_user_basednotifications.html" format="html"
+navtitle="Abilitazione delle notifiche basate sull'utente " scope="peer" chunk="to-content" linking="normal"
+outputclass="subsection">
+<topicref href="t_manage_user.html" format="html" navtitle="Registrazione del dispositivo con l'ID utente "
+scope="peer" linking="normal" outputclass="subsection"/>
+</topicref>
 <topicref href="t_advance_badge_sound_payload.html" outputclass="subsection" chunk="to-content"
 navtitle="Notifiche avanzate" format="html" scope="peer">
 <topicref href="t_advance_badge_sound_payload.html#badge-sound-payload"

@@ -11,14 +11,15 @@ copyright:
 # Configuración del SDK de Swift de iOS
 {: #getting-started-ios}
 
-*Última actualización: 14 de junio de 2016*
+*Última actualización: 17 de julio de 2016*
 {: .last-updated}
 
-Mobile Client Access ha lanzado un nuevo SDK de Swift que añade y mejora la funcionalidad proporcionada por el SDK de Objective-C de Mobile Client Access existente, lo que facilita la autenticación de la app y proporciona más protección para los recursos de fondo. Instrumente su aplicación Swift de iOS con el SDK de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos. {:shortdesc}
+{{site.data.keyword.amashort}} ha lanzado un nuevo SDK de Swift que añade y mejora la funcionalidad proporcionada por el SDK de Objective-C de {{site.data.keyword.amashort}} existente, lo que facilita la autenticación de la app y proporciona más protección para los recursos de fondo. Instrumente su aplicación Swift de iOS con el SDK de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
+{:shortdesc}
 
-**Nota:** el SDK de Objective-C notifica los datos de supervisión al servicio de consola de supervisión de Mobile Client Access. Si confía en la funcionalidad de supervisión del servicio Mobile Client Access, debe seguir utilizando el SDK de Objective-C.
+**Nota:** el SDK de Objective-C notifica los datos de supervisión al servicio de consola de supervisión de {{site.data.keyword.amashort}}. Si confía en la funcionalidad de supervisión del servicio {{site.data.keyword.amashort}}, debe seguir utilizando el SDK de Objective-C.
 
-**Nota:** Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK a finales del año en favor del nuevo SDK de Swift.  
+Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK de Objective-C a finales de este año en favor del nuevo SDK de Swift. 
 
 
 
@@ -27,8 +28,8 @@ Mobile Client Access ha lanzado un nuevo SDK de Swift que añade y mejora la fun
 
 ## Antes de empezar
 {: #before-you-begin}
-Debe tener lo siguiente: 
-* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de un programa de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
+Debe tener lo siguiente:
+* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de una aplicación de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
 * Un proyecto Xcode. Para ver más información sobre la configuración del entorno de desarrollo de iOS, consulte el [sitio web de Apple Developer](https://developer.apple.com/support/xcode/).
 
 
@@ -39,7 +40,8 @@ El SDK de {{site.data.keyword.amashort}} se distribuye con CocoaPods, un gestor 
 
 ### Instalación de CocoaPods
 {: #install-cocoapods}
-1. Abra Terminal y ejecute el mandato **pod --version**. Si ya tiene CocoaPods instalado, se muestra el número de versión. Puede omitir la sección siguiente para instalar el SDK.
+
+1. En una ventana de terminal, ejecute el mandato **pod --version**. Si ya tiene CocoaPods instalado, se muestra el número de versión y puede saltar a la siguiente sección para instalar el SDK.
 
 1. Si CocoaPods no está instalado, ejecute:
 ```
@@ -50,7 +52,7 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
 ### Instalación del SDK del cliente de {{site.data.keyword.amashort}} con CocoaPods
 {: #install-sdk-cocoapods}
 
-1. En una ventana de terminal, navegue hasta el directorio raíz del proyecto de iOS. 
+1. En una ventana de terminal, navegue hasta el directorio raíz del proyecto de iOS.
 
 1. Si aún no ha inicializado el espacio de trabajo para CocoaPods, ejecute el mandato `pod init`.<br/>
  CocoaPods crea un archivo `Podfile`, que es donde debe definir las dependencias para el proyecto de iOS.
@@ -63,8 +65,9 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
 	```
   **Consejo:** puede añadir `use_frameworks!` al destino de Xcode en lugar de especificarlo en el archivo Podfile.
 
-1. Guarde el archivo `Podfile` y ejecute `pod install` desde la línea de mandatos. <br/>Cocoapods instala las dependencias relevantes y muestra las dependencias y pods añadidos.<br/>
-**Importante**: CocoaPods genera un archivo `xcworkspace`. A partir de ahora, debe abrirlo para trabajar en el proyecto.
+1. Guarde el archivo `Podfile` y ejecute `pod install` desde la línea de mandatos. CocoaPods instala las dependencias relevantes, y muestra las dependencias y los pods añadidos.<br/>
+
+   **Importante**: CocoaPods genera un archivo `xcworkspace`. A partir de ahora, debe abrirlo para trabajar en el proyecto.
 
 1. Abra el espacio de trabajo del proyecto de iOS. Abra el archivo `xcworkspace` que ha generado CocoaPods. Por ejemplo: `{nombre-proyecto}.xcworkspace`. Ejecute `open {nombre-proyecto}.xcworkspace`.
 
@@ -82,7 +85,7 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
  import BMSSecurity
  ```  
 
-1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}m pulse en el icono de c ara (![Cara](/face.png "Cara")) que se encuentra en la esquina superior derecha del panel de control.  
+1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse en el icono de cara (![Cara](images/face.png "Cara")) que se encuentra en la esquina superior izquierda del panel de control. 
 
 
  ```Swift
@@ -100,13 +103,13 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
  }
  ```
 
-## Cómo realizar una solicitud al programa de fondo móvil
+## Cómo realizar una solicitud a la aplicación de programa de fondo móvil
 {: #request}
 
-Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, puede empezar a realizar solicitudes a la aplicación de programa de fondo móvil.
 
-1. Intente enviar una solicitud a un punto final protegido del programa de fondo móvil en el navegador. Abra el siguiente URL: `{rutaAplicación}/protected`. Por ejemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` al navegador porque solo se puede acceder a este punto final mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
+1. Intente enviar una solicitud a un punto final protegido de la aplicación de fondo móvil en el navegador. Abra el siguiente URL: `{rutaAplicación}/protected`. Por ejemplo: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>El punto final `/protected` de una aplicación de programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` al navegador porque solo se puede acceder a este punto final mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
 
 1. Utilice la aplicación de iOS para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
 
@@ -114,7 +117,7 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
  let customResourceURL = "<your protected resource's path>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
-     if error == nil {
+  if error == nil {
          print ("response:\(response?.responseText), no error")
      } else {
          print ("error: \(error)")
@@ -124,10 +127,10 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
  request.sendWithCompletionHandler(callBack)
  ```
 
-1.  Cuando la solicitud se realiza correctamente, verá la siguiente salida en la consola de Xcode:
+1.  Cuando la solicitud se realiza correctamente, se muestra la salida siguiente en la consola de Xcode:
 
  ```
- response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
+ response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
  ```
 {: screen}
  

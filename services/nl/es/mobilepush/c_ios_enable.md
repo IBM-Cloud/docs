@@ -7,6 +7,8 @@ copyright:
 
 # Habilitación de aplicaciones iOS para recibir notificaciones push
 {: #enable-push-ios-notifications}
+*Última actualización: 14 de junio de 2016*
+{: .last-updated}
 
 Habilite las aplicaciones iOS para recibir notificaciones push y enviar notificaciones push a
   sus dispositivos.
@@ -44,7 +46,7 @@ $ pod init
 
 	```
 	source 'https://github.com/CocoaPods/Specs.git'
-	// Copy the following list as is and remove the dependencies you do not need.
+	// Copie la lista siguiente tal cual y elimine las dependencias que no necesite.
 	use_frameworks!
 
 	target 'MyApp' do
@@ -135,7 +137,7 @@ Un lugar común para colocar el código de inicialización se encuentra en el de
 ####Objective-C
 
 ```
-// Initialize the SDK for Object-C with IBM Bluemix GUID and route
+// Inicialice el SDK for Object-C con la GUID y la ruta de IBM Bluemix
 IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
 ```
@@ -143,7 +145,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 ####Swift
 
 ```
-// Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
+// Inicialice el Core SDK for Swift con la GUID, la ruta y la región de IBM Bluemix
 let myBMSClient = BMSClient.sharedInstance
 
 myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
@@ -156,15 +158,17 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ####Objective-C
 
 ```
-//Initialize client Push SDK for Objective-C
-IMFPushClient _pushService = [IMFPushClient sharedInstance];
+//Inicialice el SDK de Push del cliente para Objective-C
+IMFPushClient *push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 ```
 
 ####Swift
 
 ```
-//Initialize client Push SDK for Swift
+//Inicialice el SDK de Push del cliente para Swift
 let push = BMSPushClient.sharedInstance
+push.initializeBluemixPush()
 ```
 
 ### Ruta, GUID, y región Bluemix
@@ -211,7 +215,7 @@ Cree una aplicación de fondo en el catálogo Bluemix® de la sección de Conten
 ####Objective-C
 
 ```
-	//For Objective-C
+	//Para Objective-C
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
 	    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
@@ -244,7 +248,7 @@ Después de recibir la señal desde las APNS, pase la señal a Notificaciones Pu
 ####Objective-C
 
 ```
-//For Objective-C
+//Para Objective-C
 -( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
 
    IMFClient *client = [IMFClient sharedInstance];
@@ -254,6 +258,7 @@ Después de recibir la señal desde las APNS, pase la señal a Notificaciones Pu
 
  // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
      [ self  updateMessage:error .description];
@@ -270,6 +275,7 @@ Después de recibir la señal desde las APNS, pase la señal a Notificaciones Pu
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
+   push.initializeBluemixPush()
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
             print( "Response during device registration : \(response)")
@@ -295,9 +301,9 @@ Recibir notificaciones push en dispositivos iOS.
 Para recibir notificaciones push en dispositivos iOS, añada el método Objective-C siguiente en la aplicación delegada de la aplicación.
 
 ```
-// For Objective-C
+// Para Objective-C
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-//userInfo dictionary will contain data sent from server.
+//El diccionario userInfo contendrá datos que ha enviado el servidor.
 }
 ```
 
@@ -305,9 +311,9 @@ Para recibir notificaciones push en dispositivos iOS, añada el método Objectiv
 Para recibir notificaciones push en dispositivos iOS, añada el método Swift siguiente a la aplicación delegada de la aplicación.
 
 ```
- // For Swift
+ // Para Swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-       //UserInfo dictionary will contain data sent from the server
+       //El diccionario UserInfo contendrá datos que ha enviado el servidor
    }
 
 ```
@@ -337,7 +343,7 @@ Enviar notificaciones push básicas.
 	La captura de pantalla siguiente muestra un recuadro de alerta que maneja una notificación push
 en el primer plano y segundo plano de un dispositivo iOS.
 
-	![Notificación push en primer plano en Android](images/Android_Screenshot.jpg)
+	![Notificación push en primer plano en Android](images/iOS_Foreground.jpg)
 
 	![Notificación push en primer plano en iOS](images/iOS_Screenshot.jpg)
 

@@ -11,11 +11,19 @@ copyright:
 # sdk-for-nodejs buildpack 的最新更新
 {: #latest_updates}
 
-*上次更新时间：2016 年 6 月 22 日*
+*上次更新时间：2016 年 7 月 18 日*
 {: .last-updated}
 
 sdk-for-nodejs buildpack 中最新更新的列表。
-## 2016 年 6 月 22 日：更新了 Node.js buildpack v3.5-20160608-1102
+## 2016 年 7 月 22 日：更新了 Node.js buildpack V3.6-20160715-0749
+此 buildpack 发行版添加了以下 IBM SDK for Node.js 运行时版本：0.10.45、0.10.46、0.12.14、0.12.15、4.4.6、4.4.7、6.2.1 和 6.2.2。现在的缺省版本为 4.4.7。
+
+此发行版包含更新的“应用程序管理”代理，该代理支持联合登录。
+
+其中包含对以下安全漏洞的修订：
+* [CVE-2016-1669](http://www-01.ibm.com/support/docview.wss?uid=swg21986383)
+
+## 2016 年 6 月 22 日：更新了 Node.js buildpack V3.5-20160609-1608
 
 此 buildpack 发行版添加了 IBM SDK for Node.js 运行时 V4.4.5 和 6.2.0。缺省版本变为 4.4.5。
 
@@ -97,14 +105,14 @@ sdk-for-nodejs buildpack 中最新更新的列表。
 
 
 ```
-        cf push -b sdk-for-nodejs-v3beta
+cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
 * 或者在 manifest.yml 文件中使用“buildpack”选项：
 
 ```
-        buildpack: sdk-for-nodejs-v3beta
+buildpack: sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -133,7 +141,7 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
 * 如果应用程序未在其 package.json 文件中指定运行时，那么现在应用程序将使用 V0.12.1 启动，而不使用 V0.10.x。如果需要使用先前的版本，请在 package.json 中指定 V0.10.x，如下所示。
 
 ```
-        "engines": {
+"engines": {
 "node": "0.10.x"
 }
 ```

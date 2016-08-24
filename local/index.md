@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 9 August 2016*
+*Last updated: 16 August 2016*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
@@ -346,7 +346,9 @@ The final stage of completion represents the end of the relationship between you
 ## {{site.data.keyword.Bluemix_notm}} Local infrastructure requirements
 {: #localinfra}
 
-For {{site.data.keyword.Bluemix_notm}} Local, you own the physical security and the infrastructure for hosting the local instance. IBM sets the following minimum requirements for setting up {{site.data.keyword.Bluemix_notm}} Local.
+For {{site.data.keyword.Bluemix_notm}} Local, you own the physical security and the infrastructure for hosting the local instance.
+
+IBM sets the following minimum requirements for setting up {{site.data.keyword.Bluemix_notm}} Local.
 
 ### Hardware
 
@@ -357,8 +359,8 @@ While there are requirements for the type and size of available hardware, you ca
 <dd>
 ESXi is a virtualization layer that runs on physical servers and that abstracts processor, memory, storage, and resources into multiple virtual machines. Choose any combination that meets the following resource totals, on the condition that minimum physical core count per ESXi is eight. The following specifications are for the {{site.data.keyword.Bluemix_notm}} core runtime only.
 <ul>
-<li>48 Physical cores at 2.0 or more GHz each</li>
-<li>756 GB of physical RAM</li>
+<li>32 physical cores at 2.0 or more GHz each</li>
+<li>512 GB of physical RAM</li>
 <li>Total datastore size of 7.5 TB
 <ul>
 <li>7 TB datastore to hold {{site.data.keyword.Bluemix_notm}}</li>
@@ -370,8 +372,8 @@ ESXi is a virtualization layer that runs on physical servers and that abstracts 
 </dd>
 <dt>**High availability**</dt>
 <dd>
-To support a single node failure, you must have n+1 ESXi. For example, if three ESXis are used, meaning 16x cores each, then a fourth is needed.
-<p><strong>Note:</strong> The customer VMware administrator can decide to enforce strict high availability failover in the cluster to guarantee resources.</p>
+To support a single node failure, you must have n+1 ESXi. For example, if the 32 core and 512 GB of memory is met using two 16x cores with 256 GB ESXi servers, you need three of these servers to support a complete failure of a single node. 
+<p><strong>Note:</strong> The customer's VMware administrator can decide to enforce strict high availability failover in the cluster to guarantee resources. If you choose to proceed without high availability failover, you can meet the minimum 32 core and 512 GB resource requirement.</p>
 </dd>
 <dt>**Network**</dt>
 <dd>
@@ -451,9 +453,9 @@ Set the following roles and permissions. Propagation is set for each permission.
 
 ### Increasing the Droplet Execution Agent (DEA) pool
 Each DEA is configured with:
-- 16 - 32 GB of RAM
-- 2x - 4x vCPU
-- 150 - 300 GB of storage
+- 16 or 32 GB of RAM
+- 2x or 4x vCPU
+- 150 or 300 GB of storage
 
 For example, if the ESXi host size is 256 GB of memory with 16x cores, then eight DEAs are added. If the ESXi host size is 64 GB of memory with 8x cores, then two ESXis and four DEAs are required to be added. An additional 1.5 TB of storage is required for every four DEAs. This example is based on a DEA configured with 32 GB of RAM, 4x vCPU, and 300 GB of storage.
 

@@ -13,7 +13,7 @@ copyright:
 # Configuration d'un domaine personnalisé pour le serveur {{site.data.keyword.mobilefoundation_short}}
 {: #configcustomdomain}
 
-*Dernière mise à jour : 15 juin 2016*
+*Dernière mise à jour : 20 juin 2016*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} fournit un
@@ -32,17 +32,16 @@ dans {{site.data.keyword.Bluemix_notm}}*
 
   |Domaine |  Région  |    
   |:----- | :----- |    
-  |`mybluemix.net` | Dallas, US  |    
-  |`eu-gb.mybluemix.net` | London, UK  |    
-  |`au-syd.mybluemix.net`  | Sydney, Australia |  
+  |`mybluemix.net` | Sud des Etats-Unis |    
+  |`eu-gb.mybluemix.net` | Royaume-Uni  |    
 
 Pour pouvoir utiliser votre propre domaine, vous devez configurer un
-domaine personnalisé en procédant comme suit : 
+domaine personnalisé en procédant comme suit :
 
 1.	Créez une instance {{site.data.keyword.mfserver_short_notm}}
 en créant l'instance de service
 {{site.data.keyword.mobilefoundation_short}} en sélectionnant
-l'un des plans pris en charge. 
+l'un des plans pris en charge.
 
 + Ajoutez dans votre `Organisation`
 {{site.data.keyword.Bluemix_notm}} le domaine personnalisé que vous
@@ -50,12 +49,12 @@ souhaitez utiliser. Accédez à **Gérer les organisations > Domaines >
 Ajouter un domaine** pour ajouter votre propre domaine.
 
 + Configurez une route permettant à votre groupe de conteneurs
-d'utiliser votre domaine personnalisé. 
+d'utiliser votre domaine personnalisé.
 
 + Accédez au fournisseur DNS de votre domaine et ajoutez une entrée
 CNAME, qui acheminera le trafic de votre domaine vers la route
 {{site.data.keyword.Bluemix_notm}} par défaut, dans laquelle le
-groupe de conteneurs est exécuté. 
+groupe de conteneurs est exécuté.
 
 + Si vous voulez configurer `https` pour votre domaine
 personnalisé, transférez le certificat SSL de votre domaine dans {{site.data.keyword.Bluemix_notm}}. Pour

@@ -9,8 +9,10 @@ copyright:
 {:new_window: target="_blank"}
 # Configuration de données d'identification pour Google Cloud Messaging (GCM)
 {: #create-push-enable-gcm}
+*Dernière mise à jour : 14 juin 2016*
+{: .last-updated}
 
-Obtenez vos données d'identification Google Cloud Messaging (GCM), puis configurez le service Push Notifications dans le tableau de bord Push.
+Obtenez vos données d'identification GCM (Google Cloud Messaging) puis configurez le service Notifications push sur le tableau de bord Push.
 
 ##Obtention de votre ID d'émetteur et de la clé d'API
 

@@ -5,9 +5,16 @@ copyright:
 
 ---
 
-# Configuration du SDK client de {{site.data.keyword.amashort}} pour Android
+# Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}}
+Android
 {: #custom-android}
-Configurez votre application Android qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
+
+*Dernière mise à jour : 17 juillet 2016*
+{: .last-updated}
+
+
+Configurez votre application Android avec authentification personnalisée afin d'utiliser le SDK client
+{{site.data.keyword.amashort}} et connectez votre application à {{site.data.keyword.Bluemix}}.
 
 ## Avant de commencer
 {: #before-you-begin}
@@ -21,19 +28,19 @@ Vous devez disposer d'une ressource protégée par une instance du service {{sit
 
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #custom-android-initialize}
-1. Si votre projet Android est dans Android Studio, ouvrez le fichier `build.gradle` du module de votre appli.
-<br/>**Astuce :** Votre projet Android peut contenir deux fichiers `build.gradle` : un pour le projet et un autre pour le module de l'application. Utilisez le fichier du module de l'application.
+1. Dans votre projet Android dans Android Studio, ouvrez le fichier `build.gradle` de votre module d'application (et non pas le fichier
+`build.gradle` du projet).
 
-1. Dans le fichier `build.gradle`, recherchez la section `dependencies` et vérifiez si elle contient la dépendance de compilation suivante. Ajoutez cette dépendance si elle n'existe pas.
+1. Dans le fichier `build.gradle`, localisez la section `dependencies` et vérifiez que la dépendance suivante existe :
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
         name:'core',
         version: '1.+',
         ext: 'aar',
         transitive: true
-    	// other dependencies  
+    	// autres dépendances
 	}
 	```
 
@@ -56,13 +63,15 @@ de bord {{site.data.keyword.Bluemix_notm}}.
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");					
-	```
-
+					"applicationGUID",
+					BMSClient.REGION_UK);
+```
+Remplacez `BMSClient.REGION_UK` par la région appropriée.
 ## Interface du programme d'écoute d'authentification
 {: #custom-android-authlistener}
 
-Le SDK client de {{site.data.keyword.amashort}} fournit l'interface `AuthenticationListener` qui vous permet d'implémenter un flux d'authentification personnalisé. L'interface `AuthenticationListener` expose trois méthodes qui sont appelées dans différentes phases du processus d'authentification.
+Le SDK client de {{site.data.keyword.amashort}} fournit l'interface `AuthenticationListener` qui vous permet d'implémenter un flux d'authentification personnalisé. 
+L'interface `AuthenticationListener` expose trois méthodes qui sont appelées dans des phases différentes du processus d'authentification.
 
 ### Méthode onAuthenticationChallengeReceived
 {: #custom-onAuth}
@@ -180,14 +189,15 @@ Utilisez le nom de domaine que vous avez défini dans le tableau de bord {{site.
 
 ## Test de l'authentification
 {: #custom-android-testing}
-Une fois que le SDK client est initialisé et qu'un programme AuthenticationListener personnalisé est enregistré, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
+Une fois que le SDK client est initialisé et qu'un programme AuthenticationListener est enregistré, vous pouvez commencer à envoyer des demandes à votre application de back end mobile.
 
 ### Avant de commencer
 {: #custom-android-testing-before}
 Vous devez disposer d'une application créée avec un conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`.
 
 
-1. Envoyez une demande à un noeud final protégé de votre application de back end mobile dans votre navigateur en ouvrant `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
+1. Envoyez une requête au noeud final protégé (`{applicationRoute}/protected`) de votre application back end mobile
+depuis votre navigateur. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
 
 1. Le noeud final `/protected` d'une application de back end mobile qui a été créée avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} est protégé par {{site.data.keyword.amashort}}. Ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. En conséquence, un message `Unauthorized` s'affiche dans le navigateur.
 
@@ -224,7 +234,7 @@ Vous devez disposer d'une application créée avec un conteneur boilerplate {{si
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Lorsque l'utilisateur tente de se reconnecter, il doit à nouveau
-soumettre ses données d'identification.
+ Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Si l'utilisateur tente à nouveau de se connecter, il doit à
+nouveau soumettre ses données d'identification au serveur.
 
  La valeur `listener` transmise à la fonction de déconnexion peut être `null`.
