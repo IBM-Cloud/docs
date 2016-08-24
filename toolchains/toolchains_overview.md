@@ -11,13 +11,13 @@ copyright:
 # Getting started with toolchains (Experimental)
 {: #toolchains_getting_started}
 
-*Last updated: 9 August 2016*
+*Last updated: 12 August 2016*
 {: .last-updated}  
 
 Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app.
 {: shortdesc}
 
-**Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. To use toolchains on {{site.data.keyword.Bluemix_notm}} Public, you must make a one-time [request for access](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
+**Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
 
 
 ##Getting started with toolchains: Public
@@ -28,7 +28,7 @@ Each toolchain is associated with a specific organization (org) and any user tha
 ###Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template}
 
-After your request to access toolchains is approved, you can use a template as a starting point to create a toolchain that includes a specific set of tool integrations.
+You can use a template as a starting point to create a toolchain that includes a specific set of tool integrations.
 
 1. On the DevOps dashboard, on the **Toolchains** tab, click **Create a Toolchain** to create your first toolchain. If you already have a toolchain, click the add button (+) to create another toolchain.
 1. Click a toolchain template. For example, to use an online store sample to create the toolchain, click **Microservices toolchain**. 
@@ -50,7 +50,7 @@ After your request to access toolchains is approved, you can use a template as a
 ###Creating a toolchain from an app
 {: #creating_a_toolchain_from_an_app}
 
-After your request to access toolchains is approved, you can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. When you push changes to the toolchain's GitHub repo, the pipeline automatically builds and deploys the app.  
+You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. When you push changes to the toolchain's GitHub repo, the pipeline automatically builds and deploys the app.  
 
 1. On your app's Overview page, on the Continuous Delivery tile, click **Add Toolchain**. Alternatively, in the {{site.data.keyword.Bluemix_notm}} Classic Experience, in the upper-right corner of your app's Overview page, click **Add Toolchain**. Your app is configured for continuous delivery from a new GitHub repo that is populated with the app starter code.
 1. On the toolchain creation page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.

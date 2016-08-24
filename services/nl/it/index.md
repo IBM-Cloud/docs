@@ -36,6 +36,7 @@ laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4
 *Tabella 1. Informazioni sul supporto dei servizi {{site.data.keyword.Bluemix_notm}}*
 
 ##Servizi sperimentali
+{: #experimental_services}
 
 {{site.data.keyword.Bluemix_notm}} offre anche dei servizi sperimentali che puoi provare. Per visualizzare tutti i servizi sperimentali, i contenitori tipo e i runtime disponibili, accedi a {{site.data.keyword.Bluemix_notm}}, scorri fino alla parte inferiore del catalogo e fai quindi clic su **Catalogo Lab {{site.data.keyword.Bluemix_notm}}Servizi sperimentali**.
 
@@ -44,6 +45,7 @@ e tale problema viene considerato come un difetto in un servizio sperimentale,
 IBM non è tenuto a fornire una correzione.
 
 ##Servizi per regione
+{: #services_region}
 
 Non tutti i servizi sono
 disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabella mostra i servizi forniti da IBM.
@@ -107,7 +109,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.retrieveandrankshort}}	|Sì 		|Sì 		|Sì|
 |{{site.data.keyword.SecureGateway}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.servicediscoveryshort}}		|Sì		|Sì		|No|
-|{{site.data.keyword.serviceproxyshort}}		|Sì		|No		|No|
+|{{site.data.keyword.serviceproxyshort}}		|Sì		|Sì		|No|
 |{{site.data.keyword.sescashort}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.ssofull}}			|Sì		|No		|No|
 |{{site.data.keyword.speechtotextshort}}	|Sì 		|Sì	 	|Sì|
@@ -127,6 +129,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 *Tabella 2. Disponibilità dei servizi*
 
 ## Disponibilità continua per i servizi
+{: #services_availability}
 {{site.data.keyword.Bluemix_notm}} ha identificato una serie di servizi come di Livello 1. IBM non ritirerà alcun servizio di Livello 1 senza rendere disponibile un suo equivalente funzionale o senza fornire almeno un preavviso di ritiro di cinque anni. 
 
 I seguenti servizi sono classificati come di Livello 1:
@@ -144,5 +147,6 @@ I seguenti servizi sono classificati come di Livello 1:
 Per ulteriori informazioni sui termini di utilizzo per i servizi, vedi [Termini di {{site.data.keyword.Bluemix_notm}}](../navigation/notices.html#terms).
 
 ## Deprecazione servizio
+{: #service_deprecation}
 
 IBM fornirà un avviso di almeno 30 giorni se intende sospendere o sostituire un servizio generalmente disponibile. Se non viene fornita una sostituzione equivalente, per almeno 12 mesi dalla data dell'annuncio, IBM si impegna a prendere tutte le misure necessarie per continuare l'operazione e supportare le istanze del servizio distribuite precedentemente. 

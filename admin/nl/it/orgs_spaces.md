@@ -17,7 +17,8 @@ copyright:
 
 # Gestione di organizzazioni e spazi
 {: #orgsspacesusers}
-*Ultimo aggiornamento: 16 maggio 2016*
+Ultimo aggiornamento: 16 maggio 2016
+{: .last-updated}
 
 In qualità di proprietario dell'account, puoi gestire le tue organizzazioni andando all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; pagina **Gestisci organizzazioni**. I gestori dell'organizzazione possono anche utilizzare la pagina Gestisci organizzazioni per gestire le organizzazioni dove sono impostati come gestore.
 {:shortdesc}

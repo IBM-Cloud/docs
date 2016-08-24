@@ -14,6 +14,7 @@ copyright:
 # Utilizzo dell'SDK mobile {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
 *Ultimo aggiornamento: 28 marzo 2016*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} fornisce un SDK mobile per dispositivi iOS e watchOS 2 che abilita le applicazioni mobili ad attivare facilmente dei trigger remoti e richiamare azioni remote. Una versione per Android non è attualmente disponibile; gli sviluppatori Android possono utilizzare la API REST {{site.data.keyword.openwhisk}} direttamente.
 {: shortdesc}
@@ -26,7 +27,7 @@ Puoi installare l'SDK mobile utilizzando CocoaPods, Carthage oppure dalla direct
 
 ### Installazione utilizzando CocoaPods 
 
-L'SDK {{site.data.keyword.openwhisk_short}} per dispositivi mobili è disponibile per la distribuzione pubblica tramite CocoaPods. Presumendo che Cocoapods sia installato, inserisci le seguenti righe in un file denominato 'Podfile' all'interno della directory del progetto dell'applicazione starter. 
+L'SDK {{site.data.keyword.openwhisk_short}} per dispositivi mobili è disponibile per la distribuzione pubblica tramite CocoaPods. Ponendo che CocoaPods sia installato, inserisci le seguenti righe in un file denominato 'Podfile' all'interno della directory del progetto applicazione starter. 
 
 ```
 source 'https://github.com/openwhisk/openwhisk-podspecs.git'
@@ -45,21 +46,26 @@ end
 ```
 {: codeblock}
 
-Dalla riga di comando, immetti "pod install". Questo installerà l'SDK per un'applicazione iOS con un'estensione watchOS 2.  Utilizza il file di spazio di lavoro che Cocoapods crea per la tua applicazione per aprire il progetto in Xcode.
+Nella riga di comando, digita `pod install`. Questo installerà l'SDK per un'applicazione iOS con un'estensione watchOS 2.  Utilizza il file spazio di lavoro creato da CocoaPods per la tua applicazione, per l'apertura del progetto in Xcode.
 
 ### Installazione utilizzando Carthage
 
-Crea un file nella directory del progetto della tua applicazione e denominalo 'Cartfile'. Inserisci le seguenti righe nel Cartfile:
+Crea un file nella directory del progetto della tua applicazione e denominalo 'Cartfile'. Inserisci la seguente riga in Cartfile:
 ```
-github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 {: codeblock}
 
-Dalla riga di comando, immetti 'carthage update --platform ios'. Carthage scarica e genera l'SDK, crea una directory denominata Carthage nella directory del progetto della tua applicazione e inserisce un file OpenWhisk.framework in Carthage/build/iOS. Aggiungi OpenWhisk.framework ai framework incorporati nel tuo progetto Xcode.
+Nella riga di comando, digita `carthage update --platform ios`. Carthage scarica e genera l'SDK, crea una directory denominata Carthage nella directory del progetto della tua applicazione e inserisce un file OpenWhisk.framework in Carthage/build/iOS.
+
+Devi quindi aggiungere OpenWhisk.framework ai framework integrati nel tuo progetto Xcode
 
 ### Installazione dal codice sorgente
 
-Il codice sorgente è disponibile in https://github.com/openwhisk//openwhisk-client-swift.git. Apri il progetto utilizzando il file OpenWhisk.xcodeproj in Xcode.  Il progetto contiene due schemi "OpenWhisk" e "OpenWhiskWatch" destinati, rispettivamente, a iOS e WathOS2.  Genera il progetto per le destinazioni che ti servono e aggiungi i framework risultanti alla tua applicazione (di norma in ~/Library/Developer/Xcode/DerivedData/il nome della tua applicazione).
+Il codice sorgente è disponibile all'indirizzo https://github.com/openwhisk/openwhisk-client-swift.git.
+Apri il progetto utilizzando `OpenWhisk.xcodeproj` utilizzando Xcode.
+Il progetto contiene due schemi, "OpenWhisk" e "OpenWhiskWatch", destinati rispettivamente a iOS e watchOS 2.
+Genera il progetto per le destinazioni che ti servono e aggiungi i framework risultanti alla tua applicazione (di norma in ~/Library/Developer/Xcode/DerivedData/il nome della tua applicazione).
 
 ## Installazione dell'esempio di applicazione starter
 {: #openwhisk_install_sdkstart}
@@ -70,8 +76,15 @@ Per installare l'esempio di applicazione starter, immetti il seguente comando:
 ```
 wsk sdk install iOS
 ```
-Verrà scaricato un file zip che contiene l'applicazione starter.  Nella directory del progetto è presente un Podfile.  Esegui "pod install" da un terminale per l'installare l'SDK.
 {: pre}
+
+Verrà scaricato un file zip che contiene l'applicazione starter. Nella directory del progetto è presente un Podfile. 
+
+Per installare l'SDK, immetti il seguente comando:
+```
+pod install
+```
+{: pre} 
 
 ## Introduzione all'SDK
 {: #openwhisk_sdk_getstart}
@@ -109,9 +122,9 @@ Per richiamare un'azione remota, puoi richiamare `invokeAction` con il nome dell
 Ad esempio:
 
 ```
-// In questo esempio, stiamo richiamando un'azione per stampare un messaggio sulla console OpenWhisk
+// In questo esempio, richiamiamo un'azione di stampa di un messaggio nella Console OpenWhisk
 var params = Dictionary<String, String>()
-params["payload"] = "Salve dal dispositivo mobile"
+params["payload"] = "Hi from mobile"
 
 do {
     try whisk.invokeAction(name: "helloConsole", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: false, callback: {(reply, error) -> Void in
@@ -119,7 +132,7 @@ do {
             //do something
             print("Errore di richiamo dell'azione \(error.localizedDescription)")
         } else {
-            print("Azione richiamata!")
+            print("Action invoked!")
         }
 
     })
@@ -174,7 +187,7 @@ do {
 
         } else {
             var result = reply["result"]
-            print("È stato ottenuto il risultato \(result)")
+            print("Got result \(result)")
         }
 
 
@@ -244,7 +257,7 @@ whiskButton.setupWhiskAction("helloConsole", package: "mypackage", namespace: "_
 
 let myParams = ["name":"value"]
 
-// Richiama quanto segue quando rilevi un evento di selezione pulsante, ad es, in una IBAction, per richiamare l'azione
+// Richiamalo quando rilevi un evento di stampa, ad esempio in un'IBAction, per richiamare l'azione
 whiskButton.invokeAction(parameters: myParams, callback: { reply, error in
     if let error = error {
         print("Spiacenti; si è verificato un errore: \(error)")

@@ -29,6 +29,7 @@ copyright:
 
 # Distribuzione della tua applicazione con l'interfaccia riga di comando
 *Ultimo aggiornamento: 24 febbraio 2016*
+{: .last-updated}
 
 Puoi usare l'interfaccia riga di comando per distribuire e modificare applicazioni e istanze del servizio.
 {:shortdesc}
@@ -36,7 +37,7 @@ Puoi usare l'interfaccia riga di comando per distribuire e modificare applicazio
 Prima di iniziare, installa le interfacce riga di comando Cloud Foundry e {{site.data.keyword.Bluemix}}.
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica l'interfaccia riga di comando {{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_cf_commandline.svg" alt="Scarica l'interfaccia riga di comando Cloud Foundry" /> </a> 
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_cf_commandline.svg" alt="Scarica l'interfaccia riga di comando Cloud Foundry" /> </a>  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica l'interfaccia riga di comando {{site.data.keyword.Bluemix}}" /> </a>
 </p>
 
 **Limitazione:** gli strumenti della riga di comando non sono supportati da Cygwin. Utilizzali in una finestra della riga di comando diversa da quella di Cygwin.
@@ -65,7 +66,7 @@ Una volta installate le interfacce riga di comando, puoi iniziare a lavorare:
   
   7. Distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni sul comando cf push, vedi [Caricamento della tua applicazione](./upload_app.html).
   
-  <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">nomeapplicazione</var></pre>
+  <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">nome_applicazione</var></pre>
   
   8. Accedi alla tua applicazione immettendo il seguente URL
 nel browser:

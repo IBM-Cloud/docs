@@ -18,7 +18,9 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} Admin CLI
 {: #bluemixadmincli}
 
-*Ultimo aggiornamento: 3 marzo 2016*
+*Ultimo aggiornamento: 22 giugno 2016*
+{: .last-updated}
+
 
 Puoi gestire gli utenti per il tuo ambiente
 {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato
@@ -238,7 +240,7 @@ cf ba set-org <nome_utente> <organizzazione> [<ruolo>]
 <dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} a cui assegnare l'utente.</dd>
 <dt class="pt dlterm">&lt;ruolo&gt;</dt>
-<dd class="pd">Vedi [Ruoli](../../../admin/adminpublic.html#orgsandspaces) per i ruoli utente di {{site.data.keyword.Bluemix_notm}} e le relative
+<dd class="pd">Vedi [Ruoli](../../../admin/users_roles.html) per i ruoli utente di {{site.data.keyword.Bluemix_notm}} e le relative
 descrizioni.</dd>
 </dl>
 
@@ -261,7 +263,7 @@ cf ba unset-org <nome_utente> <organizzazione> [<ruolo>]
 <dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} a cui assegnare l'utente.</dd>
 <dt class="pt dlterm">&lt;ruolo&gt;</dt>
-<dd class="pd">Vedi [Ruoli](../../../admin/adminpublic.html#orgsandspaces) per i ruoli utente di {{site.data.keyword.Bluemix_notm}} e le relative
+<dd class="pd">Vedi [Ruoli](../../../admin/users_roles.html) per i ruoli utente di {{site.data.keyword.Bluemix_notm}} e le relative
 descrizioni.</dd>
 </dl>
 
@@ -312,9 +314,11 @@ Puoi aggiungere, eliminare e richiamare report di sicurezza.
 * Per aggiungere un report, immetti il seguente comando:
 
 ```
-cf ba add-report <categoria> <date> <PDF|TXT|LOG> <RTF>
+cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
+
+**Nota**: se hai accesso in scrittura per l'autorizzazione dei report, puoi creare una nuova categoria e aggiungere un report in uno qualsiasi dei formati accettati per i tuoi utenti. Immetti il nome della nuova categoria per il parametro `categoria` o aggiungi il nuovo report a una categoria esistente.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;categoria&gt;</dt>
@@ -384,8 +388,7 @@ cf ba enable-service-plan <identificativo_piano>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificativo_piano&gt;</dt>
-<dd class="pd">Il nome o GUID del servizio che vuoi abilitare. Se immetti un nome servizio non univoco,
-ti verrà richiesto di scegliere tra dei piani di servizio.</dd>
+<dd class="pd">Il nome o il GUID del piano di servizio che desideri abilitare. Se immetti un nome servizio non univoco, ad esempio "Standard" o "Basic", ti verrà richiesto di scegliere tra dei piani di servizio. Per identificare il nome di un piano di servizio, seleziona la categoria di servizio dalla homepage, quindi fai clic su **Aggiungi** per visualizzarne i servizi. Fai clic sul nome del servizio per aprire la vista Dettagli, da cui puoi visualizzare i nomi dei piani di servizi disponibili per il servizio. </dd>
 </dl>
 
 **Suggerimento:** puoi anche utilizzare **ba esp** come alias per il più lungo
@@ -400,8 +403,7 @@ cf ba disable-service-plan <identificativo_piano>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificativo_piano&gt;</dt>
-<dd class="pd">Il nome o GUID del servizio che vuoi disabilitare. Se immetti un nome servizio non univoco,
-ti verrà richiesto di scegliere tra dei piani di servizio.</dd>
+<dd class="pd">Il nome o il GUID del piano di servizio che desideri abilitare. Se immetti un nome servizio non univoco, ad esempio "Standard" o "Basic", ti verrà richiesto di scegliere tra dei piani di servizio. Per identificare il nome di un piano di servizio, seleziona la categoria di servizio dalla homepage, quindi fai clic su **Aggiungi** per visualizzarne i servizi. Fai clic sul nome del servizio per aprire la vista Dettagli, da cui puoi visualizzare i nomi dei piani di servizi disponibili per il servizio. </dd>
 </dl>
 
 **Suggerimento: ** puoi anche utilizzare **ba dsp** come alias per il più
@@ -420,8 +422,7 @@ cf ba add-service-plan-visibility <identificativo_piano> <organizzazione>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificativo_piano&gt;</dt>
-<dd class="pd">Il nome o GUID del servizio per il quale vuoi aggiungere la visibilità. Se immetti un nome servizio non univoco,
-ti verrà richiesto di scegliere tra dei piani di servizio.</dd>
+<dd class="pd">Il nome o il GUID del piano di servizio che desideri abilitare. Se immetti un nome servizio non univoco, ad esempio "Standard" o "Basic", ti verrà richiesto di scegliere tra dei piani di servizio. Per identificare il nome di un piano di servizio, seleziona la categoria di servizio dalla homepage, quindi fai clic su **Aggiungi** per visualizzarne i servizi. Fai clic sul nome del servizio per aprire la vista Dettagli, da cui puoi visualizzare i nomi dei piani di servizi disponibili per il servizio. </dd>
 <dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o il GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} da aggiungere all'elenco di visibilità del servizio.</dd>
 </dl>
@@ -439,8 +440,7 @@ cf ba remove-service-plan-visibility <identificativo_piano> <organizzazione>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificativo_piano&gt;</dt>
-<dd class="pd">Il nome o GUID del servizio per il quale vuoi rimuovere la visibilità. Se immetti un nome servizio non univoco,
-ti verrà richiesto di scegliere tra dei piani di servizio.</dd>
+<dd class="pd">Il nome o il GUID del piano di servizio che desideri abilitare. Se immetti un nome servizio non univoco, ad esempio "Standard" o "Basic", ti verrà richiesto di scegliere tra dei piani di servizio. Per identificare il nome di un piano di servizio, seleziona la categoria di servizio dalla homepage, quindi fai clic su **Aggiungi** per visualizzarne i servizi. Fai clic sul nome del servizio per aprire la vista Dettagli, da cui puoi visualizzare i nomi dei piani di servizi disponibili per il servizio. </dd>
 <dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o il GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} da rimuovere dall'elenco di visibilità del servizio.</dd>
 </dl>
@@ -459,8 +459,7 @@ cf ba edit-service-plan-visibilities <identificativo_piano> <organizzazione_1> <
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificativo_piano&gt;</dt>
-<dd class="pd">Il nome o GUID del servizio che desideri rendere visibile. Se immetti un nome servizio non univoco,
-ti verrà richiesto di scegliere tra dei piani di servizio.</dd>
+<dd class="pd">Il nome o il GUID del piano di servizio che desideri abilitare. Se immetti un nome servizio non univoco, ad esempio "Standard" o "Basic", ti verrà richiesto di scegliere tra dei piani di servizio. Per identificare il nome di un piano di servizio, seleziona la categoria di servizio dalla homepage, quindi fai clic su **Aggiungi** per visualizzarne i servizi. Fai clic sul nome del servizio per aprire la vista Dettagli, da cui puoi visualizzare i nomi dei piani di servizi disponibili per il servizio. </dd>
 <dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o il GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} per cui aggiungere la visibilità. Puoi abilitare la visibilità del servizio per più di una singola organizzazione immettendo i GUID o i nomi organizzazione aggiuntivi nel comando.</dd>
 </dl>
@@ -480,7 +479,7 @@ cf ba service-brokers <nome_broker>
 ```
 {: codeblock}
 
-**Nota**: per elencare tutti i broker dei servizi, immetti il comando omettendo il parametro `nome_broker`. 
+**Nota**: per elencare tutti i broker dei servizi, immetti il comando omettendo il parametro `nome_broker`.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nome_broker&gt;</dt>

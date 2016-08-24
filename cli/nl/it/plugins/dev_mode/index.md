@@ -14,10 +14,13 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# CLI modalità di sviluppo
+# (Obsoleto) CLI modalità di sviluppo
 {: #devmodecli}
 
-*Ultimo aggiornamento: 11 aprile 2016*
+*Ultimo aggiornamento: 23 giugno 2016*
+{: .last-updated}
+
+**Questa CLI è obsoleta:** invece di utilizzare la CLI modalità di sviluppo (dev_mode), utilizza IBM Eclipse Tools for Bluemix o DevOps Web IDE. Puoi continuare a utilizzare la CLI dev_mode fino al 30 giugno 2016.
 
 Con l'interfaccia riga di comando in modalità di sviluppo di Bluemix (CLI dev_mode), puoi aggiornare le tue applicazioni mentre sono in esecuzione nel cloud. La CLI dev_mode è stata messa a punto come un plug-in CLI cf e supporta sia applicazioni Node.js IBM sia Liberty.
 {: shortdesc}
@@ -35,10 +38,10 @@ Puoi eseguire le seguenti attività con la CLI dev_mode:
 Utilizza uno dei seguenti metodi per installare lo strumento riga di comando dev_mode:
 - Installa in locale.
   1. Scarica il plug-in dev_mode per la tua piattaforma da [IBM Bluemix CLI Plugin Repository](http://plugins.{DomainName}).
-  2. Installa il plug-in dev_mode utilizzando il comando cf install-plugin:
+  2. Passa alla cartella di salvataggio del plug-in dev_mode e installalo utilizzando il comando cf install-plugin. Per esempio: 
   
         ```
-        cf install-plugin dev_mode-linux_amd64
+        cf install-plugin dev_mode-linux64
         ```
 
 - Installa dal repository CLI Bluemix.
@@ -61,7 +64,8 @@ Utilizza uno dei seguenti metodi per installare lo strumento riga di comando dev
         ```
 
 ## Visualizzazione dei comandi dev_mode
-**Per visualizzare tutti i comandi della CLI dev_mode, utilizza il seguente comando:**
+
+Per visualizzare tutti i comandi della CLI dev_mode, utilizza il seguente comando:
 
 ```
 cf plugins
@@ -111,7 +115,7 @@ cf help <nomeComando>
 Modifica la modalità dell'applicazione.
 
 ```
-cf mode <nomeApplicazione> <dev|normal>
+cf mode <appName> <dev|normal>
 ```
 <strong>Opzioni del comando</strong>:
 
@@ -207,10 +211,8 @@ cf restart-inplace <nomeApplicazione>
 
 ## Link correlati
 {: #general}
-
-<!-- Include a link to your full product documentation, pricing sheet, IBM Bluemix prerequisites -->
-
-
-* [CLI e strumenti di sviluppo](../../index.html#cli){:new_window}
+* [CLI modalità di sviluppo](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
+* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

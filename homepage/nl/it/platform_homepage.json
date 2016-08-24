@@ -1,6 +1,6 @@
 {
-	"id": "docs_homepage",
-	"descriptionTitle": "Sezione della piattaforma di home page dei documenti",
+	"id": "docs_homepage_platform",
+	"title": "Come utilizzare la piattaforma Bluemix",
 	"items": [{
 		"title": "CLI e strumenti di sviluppo",
 		"description": "Strumenti di accesso, come un'interfaccia riga di comando unificata e i plug-in delle CLI.",
@@ -12,10 +12,10 @@
 		"img": "homepage/images/manage_apps.svg",
 		"href": "manageapps/mngapps.html"
 	}, {
-		"title": "Amministrazione degli account",
+		"title": "Amministrazione ",
 		"description": "Gestisci organizzazioni e spazi, compreso l'accesso utente.",
 		"img": "homepage/images/admin.svg",
-		"href": "/admin/adminpublic.html"
+		"href": "admin/adminpublic.html"
 	}, {
 		"title": "Monitoraggio e registrazione",
 		"description": "Segui il flusso dei dati e l'utilizzo delle applicazioni per comprendere meglio la tua distribuzione.",
@@ -32,7 +32,7 @@
 		"img": "homepage/images/troubleshoot.svg",
 		"href": "troubleshoot/troubleshoot.html"
 	}, {
-		"title": "Sicurezza della piattaforma",
+		"title": "Sicurezza Bluemix",
 		"description": "Informazioni su come Bluemix fornisce la sicurezza funzionale, delle infrastrutture, operativa e fisica.",
 		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
@@ -42,5 +42,6 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}]
+
 }
 

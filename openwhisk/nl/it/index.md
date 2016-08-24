@@ -17,19 +17,26 @@ copyright:
 {:pre: .pre}
 
 # Introduzione a {{site.data.keyword.openwhisk_short}}
-*Ultimo aggiornamento: 17 febbraio 2016*
+*Ultimo aggiornamento: 28 giugno 2016*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} è un servizio di calcolo distribuito guidato dagli eventi. {{site.data.keyword.openwhisk_short}} esegue la logica dell'applicazione in risposta a eventi o chiamate dirette provenienti da applicazioni Web o mobile su HTTP. Gli eventi possono essere forniti da servizi Bluemix quali Cloudant e da fonti esterne. Gli sviluppatori possono concentrarsi sulla scrittura della logica dell'applicazione e sulla creazione di azioni eseguite su richiesta. Il tasso di esecuzione delle azioni corrisponde sempre al tasso degli eventi, con conseguenti utilizzo ottimale e resilienza e ridimensionamento intrinsechi. Paghi solo per ciò che usi e non devi gestire alcun server. Puoi anche ottenere il [codice sorgente](https://github.com/openwhisk/openwhisk) ed eseguire il sistema autonomamente.
 {: shortdesc}
 
 Per ulteriori dettagli sul funzionamento di {{site.data.keyword.openwhisk_short}}, vedi [Informazioni su {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
-## Configurazione di {{site.data.keyword.openwhisk_short}}
-Puoi utilizzare l'interfaccia di riga comando (CLI) {{site.data.keyword.openwhisk_short}} per configurare il tuo spazio dei nomi e la tua chiave di autorizzazione. Passa a [Configura CLI](https://console.{DomainName}/openwhisk/cli){: new_window} e segui la procedura di installazione guidata. Nota che per utilizzare la CLI è necessario che Python 2.7 sia installato sul tuo sistema.
+## Configurazione della CLI {{site.data.keyword.openwhisk_short}}
+{: #openwhisk_start_configure_cli}
+
+Puoi utilizzare l'interfaccia di riga comando (CLI) {{site.data.keyword.openwhisk_short}} per configurare il tuo spazio dei nomi e la tua chiave di autorizzazione. 
+Passa a [Configura CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e segui le istruzioni per installarla.
+Nota che per utilizzare la CLI è necessario che Python 2.7 sia installato sul tuo sistema.
 
 Una volta configurato {{site.data.keyword.openwhisk_short}} con la CLI, puoi iniziare a utilizzarlo dalla riga di comando o attraverso le API REST.
 
 ## Utilizzo della CLI {{site.data.keyword.openwhisk_short}}
+{: #openwhisk_start_using_cli}
+
 Una volta configurato il tuo ambiente, puoi iniziare a utilizzare la CLI {{site.data.keyword.openwhisk_short}} per effettuare le seguenti operazioni:
 
 * Eseguire i tuoi frammenti di codice, o le azioni, su {{site.data.keyword.openwhisk_short}}. Vedi [Creazione e richiamo di azioni](./openwhisk_actions.html).
@@ -39,12 +46,17 @@ Una volta configurato il tuo ambiente, puoi iniziare a utilizzare la CLI {{site.
 
 
 ## Utilizzo di {{site.data.keyword.openwhisk_short}} da un'applicazione iOS
+{: #openwhisk_start_using_ios}
+
 Puoi utilizzare {{site.data.keyword.openwhisk_short}} dalla tua applicazione mobile iOS o Apple Watch, attraverso l'SDK iOS {{site.data.keyword.openwhisk_short}}. Per maggiori dettagli, fai riferimento alla documentazione di [iOS](./openwhisk_mobile_sdk.html).
 
 ## Utilizzo delle API REST con {{site.data.keyword.openwhisk_short}}
-Una volta abilitato il tuo ambiente {{site.data.keyword.openwhisk_short}}, puoi utilizzare {{site.data.keyword.openwhisk_short}} con le tue applicazioni Web o mobile con chiamate API REST. Per ulteriori dettagli sull'utilizzo delle API per azioni, attivazioni, pacchetti, regole e trigger, vedi la [{{site.data.keyword.openwhisk_short}} API documentation](https://new-console.{DomainName}/apidocs/98).
+{: #openwhisk_start_using_restapi}
+
+Una volta abilitato il tuo ambiente {{site.data.keyword.openwhisk_short}}, puoi utilizzare {{site.data.keyword.openwhisk_short}} con le tue applicazioni Web o mobile con chiamate API REST. Per ulteriori dettagli sull'utilizzo delle API per azioni, attivazioni, pacchetti, regole e trigger, vedi la [{{site.data.keyword.openwhisk_short}} documentazione API](https://new-console.{DomainName}/apidocs/98).
 
 ## {{site.data.keyword.openwhisk_short}}Esempio Hello World
+{: #openwhisk_start_hello_world}
 Per iniziare a utilizzare {{site.data.keyword.openwhisk_short}}, prova il seguente esempio di codice JavaScript.
 
 ```
@@ -66,14 +78,14 @@ Per utilizzare questo esempio, completa la seguente procedura:
 
     ```
     wsk action create hello hello.js
-```
+    ```
     {: pre}
 
 3. Quindi, richiama l'azione immettendo i seguenti comandi.
 
     ```
     wsk action invoke hello --blocking --result
-```
+    ```
     {: pre}  
 
     Questo comando ha il seguente output:
@@ -82,12 +94,12 @@ Per utilizzare questo esempio, completa la seguente procedura:
     {
         "payload": "Hello, World!"
     }
-```
+    ```
     {: screen}
 
     ```
     wsk action invoke hello --blocking --result --param name Fred
-```
+    ```
     {: pre}  
 
     Questo comando ha il seguente output:
@@ -96,7 +108,7 @@ Per utilizzare questo esempio, completa la seguente procedura:
     {
         "payload": "Hello, Fred!"
     }
-```
+    ```
     {: screen}
 
 Puoi anche utilizzare le funzionalità guidate dagli eventi in {{site.data.keyword.openwhisk_short}} per richiamare questa azione in risposta agli eventi. Segui l'[esempio di servizio di allerta](./openwhisk_packages.html#openwhisk_packages_trigger) per configurare un'origine eventi che richiami l'azione `hello` ogni volta che viene generato un evento periodico.
@@ -113,7 +125,7 @@ Puoi trovare ulteriori informazioni su {{site.data.keyword.openwhisk_short}} nei
 
 # rellinks
 ## api
-* [Documentazione API REST](https://new-console.{DomainName}/apidocs/98){:new_window}
+* [Documentazione API REST](./openwhisk_reference.html#openwhisk_ref_restapi)
 
 ## generale
 * [Scopri: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}

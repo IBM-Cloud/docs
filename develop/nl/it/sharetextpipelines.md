@@ -35,10 +35,10 @@ Quando un progetto viene clonato utilizzando il pulsante Distribuisci a {{site.d
 
 Esempio: 
 ``` 
-<root esempio>
+<sample root>
 	.bluemix
 		pipeline.yml
-	<altro contenuto di esempio>
+	<other sample content>
 ```
 {: codeblock} 
 
@@ -102,7 +102,7 @@ stages:
 ```
 {: codeblock} 
 
-Stage: 
+Fase: 
 ```
 ---
 name: <name>
@@ -216,7 +216,7 @@ anche l'altro.
 Variabile | Descrizione 
 ---------------- | ---------------- 
 CF_TARGET_URL |	URL di destinazione Bluemix
-CF_ORGANIZATION	| Nome dell'organizzazione
+CF_ORGANIZATION	| Nome organizzazione
 CF_ORGANIZATION_ID	| GUID organizzazione
 CF_SPACE |	Nome spazio
 CF_SPACE_ID |	GUID spazio

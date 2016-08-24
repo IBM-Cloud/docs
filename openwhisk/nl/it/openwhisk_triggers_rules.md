@@ -19,6 +19,7 @@ copyright:
 # Creazione di trigger e regole
 {: #openwhisk_triggers}
 *Ultimo aggiornamento: 22 febbraio 2016*
+{: .last-updated}
 
 I trigger e le regole {{site.data.keyword.openwhisk}} forniscono alla piattaforma funzionalità guidate dagli eventi. Gli eventi provenienti da origini eventi interne ed esterne vengono incanalati attraverso un trigger e le regole consentono alle tue azioni di reagire a tali eventi.
 {: shortdesc}
@@ -70,45 +71,45 @@ Ad esempio, crea un trigger per l'invio di aggiornamenti sull'ubicazione dell'ut
 
 1. Immetti il seguente comando per creare il trigger:
  
-```
+  ```
   wsk trigger create locationUpdate
-```
+  ```
   {: pre}
  
-```
+  ```
   ok: created trigger locationUpdate
-```
+  ```
   {: screen}
 
 2. Verifica di aver creato il trigger, elencando l'insieme dei trigger.
 
-```
+  ```
   wsk trigger list
-```
+  ```
   {: pre}
  
-```
+  ```
   triggers
   /someNamespace/locationUpdate                            private
-```
+  ```
   {: screen}
 
   Finora hai creato un determinato "canale" per cui possono essere attivati gli eventi.
 
 3. Successivamente, attiverai un evento trigger specificandone il nome e i parametri:
 
-```
+  ```
   wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
-```
+  ```
   {: pre}
 
-```
+  ```
   ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
-```
+  ```
   {: screen}
 
-   Qualsiasi evento attivato per il trigger statusUpdate non ha attualmente alcun effetto. Per essere utile, il trigger necessita di una regola che lo associ a un'azione.
-
+Un trigger che viene attivato senza una regola di accompagnamento da soddisfare non ha un effetto visibile.
+I trigger non possono essere creati in un pacchetto, devono essere direttamente creati in uno spazio dei nomi.
 
 ## Utilizzo delle regole per l'associazione di trigger e azioni
 {: #openwhisk_rules}
@@ -131,9 +132,9 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
   ```
   {: pre}
   
-```
+  ```
   wsk action update hello hello.js
-```
+  ```
   {: pre}
 
 3. Crea e abilita la regola. I tre parametri sono il nome della regola, il trigger e l'azione.
@@ -148,9 +149,9 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
   ```
   {: pre}
   
-```
+  ```
   ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
-```
+  ```
   {: screen}
 
 5. Verifica che l'azione sia stata richiamata, controllando l'attivazione più recente.
@@ -159,23 +160,26 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
   ```
   {: pre}
   
-```
+  ```
   activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
-```
+  ```
   {: screen}
   
-```
+  ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
-```
+  ```
   {: pre}
-```
+  ```
   {
      "payload": "Hello, Donald from Washington, D.C."
   }
-```
+  ```
   {: screen}
 
   Puoi vedere che l'azione "hello" ha ricevuto il payload dell'evento e ha restituito la stringa prevista.
 
-  Puoi creare più regole che associano lo stesso trigger ad azioni differenti.
+Puoi creare più regole che associano lo stesso trigger ad azioni differenti.
+Il trigger e l'azione che crea una regola devono essere nello stesso spazio dei nomi e non possono appartenere allo stesso pacchetto.
+Se desideri utilizzare un'azione che appartiene a un paccheto, puoi copiare l'azione nel tuo spazio dei nomi, ad esempio `wsk action create echo --copy /whisk.system/samples/echo`.
+

@@ -18,6 +18,7 @@ copyright:
 
 # Monitoraggio dell'attività {{site.data.keyword.openwhisk_short}} con il dashboard {{site.data.keyword.openwhisk_short}}
 *Ultimo aggiornamento: 9 febbraio 2016*
+{: .last-updated}
 
 Il [dashboard {{site.data.keyword.openwhisk}}](https://{DomainName}/whisk/dashboard/) fornisce un riepilogo grafico della tua attività. Utilizza il dashboard per determinare le prestazioni e l'integrità delle tue azioni su {{site.data.keyword.openwhisk_short}}. 
 {:shortdesc}

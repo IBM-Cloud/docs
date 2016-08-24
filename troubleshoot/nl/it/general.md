@@ -33,7 +33,8 @@ potresti ricevere un messaggio di errore.
 {:shortdesc}
 
 
-Quando provi a eliminare un'istanza del servizio, vedi il messaggio di errore del broker dei servizi, ```Timeout gateway```.
+Quando tenti di eliminare un'istanza del servizio, visualizzi
+il messaggio di errore del broker dei servizi, ```Timeout gateway```.
 {: tsSymptoms}
 
 

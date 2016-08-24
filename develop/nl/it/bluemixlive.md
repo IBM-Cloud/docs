@@ -17,7 +17,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Ultimo aggiornamento: 7 aprile 2016*  
+*Ultimo aggiornamento: 24 giugno 2016*
+{: .last-updated}  
 
 Se stai creando un'applicazione Node.js, puoi utilizzare {{site.data.keyword.Bluemix}} Live Sync per aggiornare rapidamente l'istanza dell'applicazione su {{site.data.keyword.Bluemix_notm}} e sviluppare come faresti sul desktop senza rieseguire la distribuzione.   
 {: shortdesc}
@@ -78,8 +79,10 @@ Per ulteriori dettagli sui comandi, vedi [Comandi Bluemix Live Sync (bl)](bluemi
 
 <strong>Importante:</strong> lo strumento riga di comando bl è disponibile solo per  Windows 7 e 8 e per Mac OS X versione 10.9 o successive. </li>
 
-<li>Su una riga di comando, accedi utilizzando il seguente comando. Ti verranno richiesti il tuo ID e la tua password IBM.  
+<li>Su una riga di comando, accedi utilizzando il seguente comando. Ti verranno richiesti i tuoi ID utente e password.  
 <pre class="codeblock">bl login</pre>
+
+<strong>Nota:</strong> il tuo ID utente per i servizi DevOps può essere un ID IBM o un ID federato (ID aziendale). Se utilizzi l'autenticazione federata per accedere al client della riga di comando Bluemix Live Sync, devi utilizzare un token di accesso personale invece di una password. Se non utilizzi l'autenticazione federata, i tuoi ID e password IBM funzionano con tutti i client. Per ulteriori informazioni sulla creazione di un token di accesso personale, consulta <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a> 
 </li>
 
 <li>Visualizza l'elenco dei progetti disponibili per la sincronizzazione di {{site.data.keyword.Bluemix_notm}} Live Sync immettendo il seguente comando:
@@ -203,7 +206,9 @@ L'applicazione deve utilizzare il pacchetto di build IBM SDK for Node.js. I pacc
 Una volta installato Debug di {{site.data.keyword.Bluemix_notm}} Live,
 puoi utilizzare gli strumenti debug.
 
-Distribuisci l'applicazione e vai quindi a `https://app-host.mybluemix.net/bluemix-debug/manage` per accedere all'interfaccia utente di debug {{site.data.keyword.Bluemix_notm}}. Quando ti viene richiesto, immetti il tuo ID e la tua password IBM per autenticarti.
+Distribuisci l'applicazione e vai quindi a `https://app-host.mybluemix.net/bluemix-debug/manage` per accedere all'interfaccia utente di debug {{site.data.keyword.Bluemix_notm}}. Quando ti viene richiesto di autenticarti, immetti il tuo ID utente e il token di accesso personale o la password IBM.    
+
+   **Nota**: il tuo ID utente per i servizi DevOps può essere un ID IBM o un ID federato (ID aziendale). Se utilizzi l'autenticazione federata per accedere al client della riga di comando Bluemix Live Sync, devi utilizzare un token di accesso personale invece di una password. Se non utilizzi l'autenticazione federata, i tuoi ID e password IBM funzionano con tutti i client. Per ulteriori informazioni sulla creazione di un token di accesso personale, consulta [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 ###Ripristino delle configurazioni dell'applicazione e disabilitazione di Debug di Bluemix Live {: #restore_live_debug}
 
@@ -239,7 +244,7 @@ Per ulteriori informazioni sul download e l'utilizzo del comando bl, vedi [Bluem
 La riga di comando {{site.data.keyword.Bluemix_live}}, **bl**, ha la seguente sintassi:
 
 ```
-bl command [arguments][options] [--help]
+bl command [arguments] [options] [--help]
 ```
 {: pre}
 
@@ -311,7 +316,7 @@ bl sync --help
 {: bl_login}
 
 ```
-bl login | l [ -u nomeutente ][-p password ][ -s server ]
+bl login | l [ -u username ] [-p password ][ -s server ]
 ```
 {: pre}
 
@@ -326,11 +331,13 @@ effettuare l'accesso solo una volta per sessione.
 
 **Opzioni**
 
--u *nomeutente*: il tuo ID IBM da utilizzare per l'accesso a {{site.data.keyword.Bluemix_notm}}.
+-u *username*: il tuo ID utente per accedere a {{site.data.keyword.Bluemix_notm}}.
 
--p *password*: la password del tuo ID IBM.
+-p *password*: il tuo token di accesso personale o la password dell'ID IBM.
 
--s *server*: il nome server o l'indirizzo IP del server {{site.data.keyword.jazzhub_short}}.
+-s *server*: il nome server o l'indirizzo IP del server {{site.data.keyword.jazzhub_short}}.    
+
+   **Nota**: il tuo ID utente per i servizi DevOps può essere un ID IBM o un ID federato (ID aziendale). Se utilizzi l'autenticazione federata per accedere al client della riga di comando Bluemix Live Sync, devi utilizzare un token di accesso personale invece di una password. Se non utilizzi l'autenticazione federata, i tuoi ID e password IBM funzionano con tutti i client. Per ulteriori informazioni sulla creazione di un token di accesso personale, consulta [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 **Esempi**
 
@@ -356,7 +363,7 @@ bl login –u name@company.com –p “pa55 w0rd”
 ```
 {: pre}
 
-## Disconnettiti
+## Disconnetti
 {: bl_logout}
 
 ```
@@ -385,7 +392,7 @@ da parte dell'utente che ha effettuato l'accesso.
 {: bl_sync}
 
 ```
-bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
 ```
 {: pre}
 
@@ -447,11 +454,11 @@ bl sync myproject –d  myfolder
 ```
 {: pre}
 
-## Crea
+## Creazione
 {: bl_create}
 
 ```
-bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
 ```
 {: pre}
 
@@ -497,7 +504,7 @@ Questo
 comando crea un progetto pubblico denominato `myNewProject`.
 
 ```
-bl create -n myNewProject --public
+bl create -n mioNuovoProgetto --public
 ```
 {: pre}
 
@@ -545,11 +552,11 @@ bl status “my pro ject”
 ```
 {: pre}
 
-## Avvia
+## pianificazione
 {: bl_start}
 
 ```
-bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
 ```
 {: pre}
 
@@ -628,7 +635,7 @@ Utilizzare questo comando per arrestare l'istanza dell'applicazione associata al
 
 **Opzioni**
 
--l *launchConfiguration*: il nome della configurazione di avvio (ad esempio `mylaunchconfig`), il nome file (ad esempio `mylaunchconfig.launch` o un percorso relativo al progetto al file di configurazione di avvio (ad esempio `launchConfigurations/mylaunchconf.launch`).
+-l *launchConfiguration*: il nome della configurazione di avvio (ad esempio `mylaunchconfig`), il nome file (ad esempio `mylaunchconfig.launch`, o un percorso relativo al progetto al file di configurazione di avvio (ad esempio `launchConfigurations/mylaunchconf.launch`).
 
 **Esempi**
 
@@ -660,7 +667,7 @@ bl stop –l “launchConfigurations/mylaunchconfig.launch”
 
 ># Link correlati {:class="linklist"}
 >## Esercitazioni ed esempi {:id="samples"}
->* [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
+>* [Verificare ed eseguire il debug di un'applicazione Node.js con Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
 >
 ># Link correlati {:class="linklist"}
 >## Link correlati {:id="general"}

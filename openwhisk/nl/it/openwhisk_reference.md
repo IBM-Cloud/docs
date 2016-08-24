@@ -19,6 +19,7 @@ copyright:
 # Dettagli del sistema {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_reference}
 *Ultimo aggiornamento: 14 aprile 2016*
+{: .last-updated}
 
 Le seguenti sezioni forniscono ulteriori dettagli sul sistema {{site.data.keyword.openwhisk}}.
 {: shortdesc}
@@ -51,9 +52,9 @@ sono riportati esempi di nomi completi di una serie di entità e i rispettivi al
 
 | Nome completo | Alias | Spazio dei nomi | Pacchetto | Nome |
 | --- | --- | --- | --- | --- |
-| `/whisk.system/cloudant/read` | - | `/whisk.system` | `cloudant` | `read` |
+| `/whisk.system/cloudant/read` |  | `/whisk.system` | `cloudant` | `read` |
 | `/myOrg/video/transcode` | `video/transcode` | `/myOrg` | `video` | `transcode` |
-| `/myOrg/filter` | `filter` | `/myOrg` | - | `filter` |
+| `/myOrg/filter` | `filter` | `/myOrg` |  | `filter` |
 
 Userai questo schema di denominazione quando utilizzi, ad esempio, la CLI {{site.data.keyword.openwhisk_short}}.
 
@@ -88,7 +89,7 @@ L'input da/l'output verso un'azione costituiscono un dizionario di coppie chiave
 
 Le chiamate di un'azione non sono ordinate. Se l'utente richiama un'azione due volte dalla riga di comando o dall'API REST, la seconda chiamata potrebbe essere eseguita prima della precedente. Se le azioni hanno effetti secondari, questi potrebbero essere osservati in qualsiasi ordine.
 
-Inoltre, non vi è alcuna garanzia che le azioni vengano eseguire automaticamente. Due azioni possono essere eseguite contemporaneamente e avere effetti secondari interfoliati. Qualsiasi effetto secondario dipenderà dall'implementazione.
+Inoltre, non vi è alcuna garanzia che le azioni vengano eseguire automaticamente. Due azioni possono essere eseguite contemporaneamente e avere effetti secondari interfoliati.  OpenWhisk non garantisce uno specifico modello di coerenza simultanea per gli effetti secondari. Qualsiasi effetto secondario dipenderà dall'implementazione.
 
 ### Semantica at most once
 {: #openwhisk_atmostonce}
@@ -124,7 +125,7 @@ Un record di attivazione contiene i seguenti campi:
 - *activationId*: l'ID dell'attivazione.
 - *start* e *end*: data/ora di inizio e fine dell'attivazione. I valori sono espressi nel [formato temporale UNIX](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15).
 - *namespace* e `nome`: lo spazio dei nomi e il nome dell'entità.
-- *logs*: un array di stringhe con i log prodotti dall'azione durante la sua attivazione. Ogni elemento dell'array corrisponde a un riga di output emessa dall'azione in stdout o stderr e include il tempo e il flusso dell'output del log. La struttura è la seguente: ```FLUSSO DATA/ORA: OUTPUT_LOG```.
+- *logs*: un array di stringhe con i log prodotti dall'azione durante la sua attivazione. Ogni elemento dell'array corrisponde a un riga di output emessa dall'azione in stdout o stderr e include il tempo e il flusso dell'output del log. La struttura è la seguente: ```TIMESTAMP STREAM: LOG_OUTPUT```.
 - *response*: un dizionario che definisce le chiavi `success`, `status` e `result`:
   - *status*: il risultato dell'attivazione, che può assumere uno dei seguenti valori: "success", "application error", "action developer error", "whisk internal error".
   - *success*: è `true` se, e solo se, lo stato è `"success"`
@@ -161,7 +162,7 @@ Le funzioni JavaScript proseguono comunemente la loro esecuzione in una funzione
 Un'attivazione dell'azione JavaScript è **sincrona** se la funzione principale termina in una delle seguenti condizioni:
 
 - La funzione principale termina senza eseguire un'istruzione ```return```.
-- La funzione principale termina con l'esecuzione di un'istruzione ```return``` che restituisce valore *diverso da* ```whisk.async()``.
+- La funzione principale termina con l'esecuzione di un'istruzione ```return``` che restituisce ogni valore *eccetto* ```whisk.async()```.
 
 Seguono due esempi di azioni sincrone.
 
@@ -188,7 +189,7 @@ function main(params) {
 {: codeblock}
 
 Un'attivazione dell'azione JavaScript è **asincrona** se la funzione principale termina richiamando ```return whisk.async();```.  In questo caso, il sistema presuppone che l'azione sia ancora in esecuzione, finché essa non esegue:
-- ```return whisk.done();``` o
+- ```return whisk.done();```
 - ```return whisk.error();```
 
 Di seguito è riportato un esempio di azione eseguita in modo asincrono.
@@ -229,7 +230,7 @@ La funzione `whisk.invoke()` richiama un'altra azione. Essa prende come argoment
 
 - *name*: il nome completo dell'azione da richiamare,
 - *parameters*: un oggetto JSON che rappresenta l'input dell'azione richiamata. Se omesso, il valore predefinito è un oggetto vuoto.
-- *apiKey*: la chiave di autorizzazione con cui richiamare l'azione. Il valore predefinito è `whisk.getAuthKey()`. 
+- *apiKey*: la chiave di autorizzazione con cui richiamare l'azione. Il valore predefinito è `whisk.getAuthKey()`.
 - *blocking*: indica se l'azione deve essere richiamata in modalità bloccante o non bloccante. Il valore predefinito è `false`, che indica una chiamata non bloccante.
 - *next*: una funzione di callback facoltativa da eseguire al completamento della chiamata.
 
@@ -259,12 +260,13 @@ La funzione `whisk.getAuthKey()` restituisce la chiave di autorizzazione con cui
 ### Ambiente runtime
 {: #openwhisk_ref_runtime_environment}
 
-Le azioni JavaScript vengono eseguite in un ambiente Node.js versione 0.12.9 con i seguenti pacchetti utilizzabili dall'azione:
+Le azioni JavaScript vengono eseguite in un ambiente Node.js versione 0.12.14 con i seguenti pacchetti utilizzabili dall'azione:
 
 - apn
 - async
 - body-parser
 - btoa
+- cheerio
 - cloudant
 - commander
 - consul
@@ -273,6 +275,7 @@ Le azioni JavaScript vengono eseguite in un ambiente Node.js versione 0.12.9 con
 - errorhandler
 - express
 - express-session
+- gm
 - jade
 - log4js
 - unire
@@ -287,11 +290,13 @@ Le azioni JavaScript vengono eseguite in un ambiente Node.js versione 0.12.9 con
 - semver
 - serve-favicon
 - socket.io
+- socket.io-client
 - superagent
 - swagger-tools
 - tmp
 - watson-developer-cloud
 - when
+- ws
 - xml2js
 - xmlhttprequest
 - yauzl
@@ -306,10 +311,74 @@ Il parametro "payload" di input dell'azione viene trasmesso al programma binario
 
 La struttura di base Docker può essere opportunamente utilizzata per la creazione di immagini Docker compatibili con {{site.data.keyword.openwhisk_short}}. Puoi installare la struttura di base con il comando CLI `wsk sdk install docker`.
 
-Il programma binario principale deve essere copiato sul file `dockerSkeleton/client/clientApp`. Qualsiasi libreria o file complementare può risiedere nella directory `dockerSkeleton/client`.
+Il programma binario principale deve essere copiato sul file `dockerSkeleton/client/action`. Qualsiasi libreria o file complementare può risiedere nella directory `dockerSkeleton/client`.
 
 Puoi anche includere qualsiasi procedura di compilazione o dipendenza modificando il `dockerSkeleton/Dockerfile`. Ad esempio, se la tua azione è uno script Python, puoi installare Python.
 
+
+## API REST
+{: #openwhisk_ref_restapi}
+
+Tutte le funzionalità del sistema sono disponibili tramite API REST. Sono presenti endpoint di raccolta e di entità per le azioni, i trigger, le regole, i pacchetti, le attivazioni e gli spazi dei nomi.
+
+Gli endpoint di raccolta sono:
+
+- `https://{BASE URL}/api/v1/namespaces`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+
+`{BASE URL}` è il nome host API OpenWhisk (ad es. openwhisk.ng.bluemix.net, 172.17.0.1, ecc..)
+
+Per `{namespace}` può essere utilizzato il carattere `_` per specificare lo *spazio dei nomi
+predefinito* dell'utente (ad es. l'indirizzo email)
+
+Puoi effettuare una richiesta GET sugli endpoint di raccolta per richiamare un elenco di entità della raccolta.
+
+Sono presenti endpoint per ciascun tipo di entità:
+
+- `https://{BASE URL}/api/v1/namespaces/{namespace}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{activationName}`
+
+Gli endpoint namespace e activation supportano solo richieste GET. Gli endpoint actions, triggers, rules e packages supportano richieste GET, PUT e DELETE. Gli endpoint actions, triggers e rules supportano richieste POST, che vengono utilizzate per richiamare le azioni e i trigger e abilitare o disabilitare le regole. Per informazioni dettagliate, consulta la [Guida di riferimento API](https://new-console.{DomainName}/apidocs/98).
+
+Tutte le API sono protette tramite autenticazione base HTTP. Le credenziali per l'autenticazione di base si trovano nella proprietà `AUTH` del tuo file `~/.wskprops` e sono delimitate dai due punti. Puoi richiamarle anche nella [procedura di configurazione della CLI](../README.md#setup-cli).
+
+Di seguito viene riportato un esempio che utilizza il comando cURL per ottenere un elenco di tutti i pacchetti dello spazio dei nomi `whisk.system`:
+
+```
+curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
+```
+{: pre}
+```
+[
+  {
+    "name": "slack",
+    "binding": false,
+    "publish": true,
+    "annotations": [
+      {
+        "key": "description",
+        "value": "Package which contains actions to interact with the Slack messaging service"
+      }
+    ],
+    "version": "0.0.9",
+    "namespace": "whisk.system"
+  },
+  ...
+]
+```
+{: screen}
+
+L'API OpenWhisk supporta chiamate di richiesta-risposta dai client web. OpenWhisk risponde alle richieste `OPTIONS` con le intestazione Cross-Origin Resource Sharing. Al momento, sono consentite tutte le origini (ad es., Access-Control-Allow-Origin è "`*`") e Access-Control-Allow-Headers produce Authorization and Content-Type.
+
+**Visto che OpenWhisk supporta al momento solo una chiave per account, ti raccomandiamo di utilizzare CORS al di fuori degli esperimenti semplici. La tua chiave ha bisogno di essere integrata nel codice del lato client rendendola visibile al pubblico. Utilizzarla con cautela.**
 
 ## Limiti di sistema
 {: #openwhisk_syslimits}
@@ -334,13 +403,29 @@ Puoi anche includere qualsiasi procedura di compilazione o dipendenza modificand
 * L'utente può modificare il limite durante la creazione dell'azione.
 * A un contenitore non può essere assegnata una quantità di memoria superiore al limite.
 
-### Numero di chiamate simultanee per spazio dei nomi (n.) (valore predefinito: 100)
+### Risorsa per azione (MB) (valore fisso: 1MB)
+* La dimensione del codice massima per l'azione è 1MB.
+* Per un'azione Java ti raccomandiamo di utilizzare uno strumento per concatenare tutto il codice di origine incluse le dipendenze in un singolo file di bundle.
+
+### Dimensione payload di attivazione (MB) (valore fisso: 1MB)
+* La dimensione del contenuto POST massima più tutti i parametri sottoposti a currying per la chiamata di un'azione o l'attivazione di un trigger è 1MB.
+
+### Chiamata simultanea per lo spazio dei nomi (valore predefinito: 100)
 * Il numero di attivazioni attualmente elaborate per uno spazio dei nomi non essere maggiore di 100.
 * Il limite predefinito può essere configurato statisticamente da Whisk in consul kvstore.
 * L'utente non può attualmente modificare questi limiti.
 
-
-### Chiamate al minuto/all'ora (n.) (valore fisso: 120/3600)
+### Chiamate al minuto/all'ora (valore fisso: 120/3600)
 * Il limite di frequenza N è impostato su 120/3600 e limita il numero di chiamate di azioni possibili in un'unica finestra temporale espressa in minuti/ore.
 * L'utente non può modificare questo limite durante la creazione dell'azione.
 * Una chiamata CLI che superi questo limite riceverà un codice di errore corrispondente a TOO_MANY_REQUESTS.
+
+### Numero limite dei file aperti dall'azione Docker (valore fisso: 64:64)
+* Il numero massimo di file aperti è 64 (si applica sia ai limiti hard che soft).
+* Il comando docker run utilizza l'argomento `--ulimit nofile=64:64`.
+* Per ulteriori informazioni sul numero limite di file aperti consulta la documentazione [docker run](https://docs.docker.com/engine/reference/commandline/run).
+
+### Numero limite del numero di processi dell'azione Docker (valore fisso: 512:512)
+* Il numero massimo di processi disponibili per un utente è 512 (si applica sia ai limiti hard che soft).
+* Il comando docker run utilizza l'argomento `--ulimit nproc=512:512`.
+* Per ulteriori informazioni sul numero limite di processi consulta la documentazione [docker run](https://docs.docker.com/engine/reference/commandline/run).

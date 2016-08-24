@@ -15,7 +15,8 @@ copyright:
 {:download: .download}
 
 # Inizia a codificare con Git
-*Ultimo aggiornamento: 2 marzo 2016*  
+*Ultimo aggiornamento: 2 marzo 2016*
+{: .last-updated}  
 
 Puoi creare un repository Git ospitato che viene distribuito automaticamente a {{site.data.keyword.Bluemix}}. Puoi poi modificare il codice eseguito nella tua applicazione eseguendo il push
 delle modifiche nel repository Git. 

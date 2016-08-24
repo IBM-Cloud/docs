@@ -17,7 +17,8 @@ copyright:
 
 # Gestione di {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato
 {: #mng}
-*Ultimo aggiornamento: 16 maggio 2016*
+Ultimo aggiornamento: 5 luglio 2016
+{: .last-updated}
 
 Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vai alla pagina **Amministrazione** per gestire risorse, monitorare l'utilizzo delle quote, amministrare le autorizzazioni utente, pianificare le notifiche di aggiornamento, visualizzare log e report di sicurezza e altro. Puoi gestire le tue organizzazioni creando degli spazi e impostando dei [ruoli e delle autorizzazioni per gli utenti](index.html#oc_useradmin); vedi [Gestione delle tue organizzazioni](../admin/orgs_spaces.html).
 {:shortdesc}
@@ -39,101 +40,126 @@ Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix_notm
 ## Notifiche e sottoscrizioni di eventi
 {: #oc_eventsubscription}
 
-Puoi sempre conoscere lo stato del tuo ambiente consultando la pagina Stato. {{site.data.keyword.Bluemix_notm}} invia inoltre all'area Notifiche le eventuali notifiche riguardanti la pagina Amministrazione in relazione a eventi quali aggiornamenti e manutenzione pianificati. Gli incidenti vengono segnalati nella pagina Stato.
+Puoi sempre conoscere lo stato del tuo ambiente consultando la pagina Stato. Non appena si verificano, gli incidenti vengono segnalati nella pagina Stato. {{site.data.keyword.Bluemix_notm}} invia inoltre alla pagina Amministrazione dell'area Notifiche le eventuali notifiche riguardanti eventi quali aggiornamenti di manutenzione pianificati o in sospeso.
 
 ### Notifiche
 
-Puoi visualizzare le notifiche inviate da IBM per il tuo ambiente locale o dedicato per monitorare lo stato del tuo ambiente. Consulta la seguente tabella per informazioni sui diversi tipi di notifiche e sui punti in cui vengono pubblicate.
+Puoi visualizzare le notifiche riguardanti il tuo ambiente locale o dedicato, al fine di monitorare lo stato del tuo ambiente. Consulta la seguente tabella per informazioni sui diversi tipi di notifiche e sui rispettivi punti di pubblicazione.
 
 *Tabella 2. Tipi di evento e metodi di notifica*
 
 | **Tipo di evento** | **Metodo di notifica** |       
 |-----------------|-------------------|
-| Aggiornamenti di manutenzione | Vieni avvisato dei prossimi aggiornamenti di manutenzione nella pagina Notifiche per l'amministrazione. Vai alla pagina **Amministrazione**, quindi seleziona l'icona **Notifiche** ![Notifiche](images/icon_announcement.svg). Per visualizzare un storico e un elenco completo delle tue notifiche complete e in sospeso, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI SUL SISTEMA** &gt; *Numero* **aggiornamenti in sospeso**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione evento che integri gli avvisi di aggiornamento di manutenzione provenienti dalla pagina Amministrazione con un servizio Web a scelta che instradi i messaggi a un indirizzo e-mail di help desk o che invii un messaggio SMS a un numero telefonico prescelto. |
-| Incidenti critici | Vieni avvisato degli incidenti critici sulla pagina Stato. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione evento che integri gli avvisi di incidente provenienti dalla pagina Stato con un servizio Web a scelta che instradi i messaggi a un indirizzo e-mail di help desk o che invii un messaggio SMS a un numero telefonico prescelto. |  
-| Stato | Puoi visualizzare l'ultimo stato della piattaforma, dei servizi e della tua istanza {{site.data.keyword.Bluemix_notm}}. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**.  |
+| Aggiornamenti di manutenzione | L'avviso dei prossimi aggiornamenti di manutenzione viene effettuato nella pagina Amministrazione dell'area Notifiche. Vai alla pagina **Amministrazione**, quindi seleziona l'icona **Notifiche** ![Notifiche](images/icon_announcement.svg). Per visualizzare uno storico e un elenco completo delle tue notifiche complete e in sospeso, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** &gt; *Numero* **in sospeso**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione che invia un'email a destinatari di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta. |
+| Incidenti critici | Vieni avvisato degli incidenti critici sulla pagina Stato. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione evento che invia un'email a un destinatario di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.  |  
+| Stato di {{site.data.keyword.Bluemix_notm}} | In qualsiasi momento puoi visualizzare l'ultimo stato della piattaforma, dei servizi e della tua istanza {{site.data.keyword.Bluemix_notm}} nella pagina Stato. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**.  |
 
 ### Impostazione di sottoscrizioni evento
 
-Puoi estendere la funzionalità delle notifiche inviate alle pagine Amministrazione e Stato, utilizzando le sottoscrizioni evento che implementano hook Web. Gli hook Web instradano le tue notifiche direttamente a una destinazione a scelta, ad esempio un indirizzo e-mail help desk (tramite e-mail) o un numero di telefono (tramite messaggio SMS). Puoi personalizzare il tipo di notifica, in particolare gli aggiornamenti di manutenzione o gli avvisi di incidente critico, e le informazioni incluse nella notifica.
+Puoi estendere la funzionalità delle notifiche inviate alle pagine Amministrazione e Stato, utilizzando le sottoscrizioni evento per configurare un'e-mail personalizzata o utilizzare dei webhook da integrare con uno strumento a scelta. Se selezioni l'opzione webhook, le tue notifiche vengono indirizzate direttamente a una destinazione a scelta, ad esempio un numero di telefono (tramite messaggio SMS). Puoi personalizzare il tipo di notifica, in particolare aggiornamenti di manutenzione o avvisi di incidente critico, e le informazioni incluse nel corpo della notifica.
 
-Per utilizzare gli hook Web per l'impostazione di una sottoscrizione evento specifica, completa la seguente procedura:
+**Nota**: solo gli utenti con autorizzazione di amministratore (`ops.admin`) possono impostare delle sottoscrizioni evento.
 
-* Per le notifiche di aggiornamento di manutenzione, vai a **INFORMAZIONI SUL SISTEMA** &gt; *Numero* **aggiornamenti in sospeso**, quindi fai clic sull'icona **Sottoscrivi** ![Sottoscrivi](images/icon_subscribe.svg).
-* Per le notifiche di avviso di incidente, fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg) &gt; **Stato**, quindi fai clic sull'icona **Sottoscrivi** ![Sottoscrivi](images/icon_subscribe.svg).
+Per accedere alla pagina **Sottoscrizioni evento**, completa la seguente procedura:
+
+* Per le notifiche di aggiornamento di manutenzione, vai a **INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso &gt; Sottoscrizioni**.
+* Per le notifiche di incidente, fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg) &gt; **Stato**, quindi fai clic sull'icona **Sottoscrivi** ![Sottoscrivi](images/icon_subscribe.svg).
 
 **Nota**: puoi accedere alla pagina di sottoscrizione evento per entrambi i tipi di notifica, utilizzando uno qualsiasi dei due metodi descritti.
 
+Per creare una sottoscrizione webhook o e-mail dalla pagina **Sottoscrizioni evento**, completa la seguente procedura:
+
 1. Fai clic su **Aggiungi sottoscrizione**.
+2. Compila il modulo di sottoscrizione evento. Per informazioni sui campi del modulo e sui valori da utilizzare nella sezione del payload e nel corpo del messaggio del template e-mail, consulta le seguenti tabelle.
+3. Una volta completato il modulo, puoi scegliere tra le seguenti opzioni:
 
-2. Compila il modulo di sottoscrizione evento. Per informazioni sui campi nel modulo e i valori da utilizzare nella sezione di payload, consulta le seguenti tabelle:
+  * Fare clic su **Salva** per salvare la sottoscrizione al tuo elenco di sottoscrizioni evento. 
+  * Fare clic su **Salva e verifica** per salvare e verificare la notifica. 
+  * Fare clic su **Salva e chiudi** per salvare la sottoscrizione al tuo elenco di sottoscrizioni evento e tornare alla pagina precedente.
 
-*Tabella 3. Campi del modulo di sottoscrizione evento*
+*Tabella 3. Campi del modulo di sottoscrizione evento per una sottoscrizione e-mail*
 
 | **Campo** | **Descrizione** |
 |-----------------|-------------------|
-| Tipo | Seleziona l'hook Web. |
-| Metodo | Seleziona GET o POST. |
-| Evento | Selezionalo per sottoscrivere le notifiche di aggiornamenti o incidenti. |
-| URL | Immetti l'URL per agganciarti al tuo servizio Web. |
-| Descrizione | Aggiungi una descrizione della sottoscrizione evento che stai creando. |
+| Tipo | Seleziona **E-mail**. |
+| Evento | Selezionalo per sottoscrivere le notifiche di un aggiornamento o incidente. |
+| Abilitato | Seleziona questa opzione per abilitare le notifiche e-mail. Deselezionare l'opzione per disabilitare la notifica e-mail. Le sottoscrizioni sono abilitate per impostazione predefinita. |
+| Oggetto | Compila la riga oggetto dell'e-mail. Questo campo è obbligatorio.  |
+| Corpo | Immetti il testo del corpo del messaggio da inviare nell'e-mail. Puoi utilizzare i valori payload IBM per inserire nella notifica e-mail informazioni pertinenti. Vedi la tabella [Valori della sezione di payload](index.html#payload) per identificare i valori utilizzabili. Utilizza tag HTML di base per strutturare l'e-mail. Se non immetti informazioni in questa sezione, ricevi una notifica priva di informazioni aggiuntive. Questo campo è obbligatorio. |
+| A: | Immetti uno o più indirizzi e-mail tramite elenco separato da virgole per indicare i destinatari della notifica e-mail. Espandi le opzioni "cc" o "bcc" per inviare copia dell'e-mail ad altri destinatari. Questo campo è obbligatorio. |
+| Descrizione | Aggiungi una descrizione univoca della sottoscrizione e stai creando. |
+
+
+*Tabella 4. Campi del modulo di sottoscrizione evento per una sottoscrizione webhook*
+
+| **Campo** | **Descrizione** |
+|-----------------|-------------------|
+| Tipo | Seleziona **Webhook** |
+| Metodo | Seleziona **GET** o **POST**. |
+| Evento | Selezionalo per sottoscrivere le notifiche di un aggiornamento o incidente. |
+| URL | Immetti l'URL per la connessione al tuo servizio Web. |
+| Descrizione | Aggiungi una descrizione univoca della sottoscrizione e stai creando. |
 | Nome utente | Immetti il tuo nome utente per il tuo servizio Web. Se non desideri utilizzare le tue credenziali personali, puoi impostare un ID funzionale da utilizzare specificatamente con {{site.data.keyword.Bluemix_notm}}. |
 | Password | Immetti la password per il tuo servizio Web. |
-| Payload | Se hai selezionato il metodo POST, immetti le proprietà specifiche del servizio Web che stai utilizzando insieme i valori utilizzati per la notifica IBM. Consulta la seguente tabella per i valori IBM che puoi utilizzare per compilare la tua notifica. Se non immetti informazioni in questa sezione, ricevi una notifica priva di informazioni aggiuntive. |
+| Payload | Se hai selezionato il metodo POST, immetti le proprietà specifiche del servizio Web che stai utilizzando insieme i valori di payload utilizzati per la notifica IBM. Vedi la tabella [Valori della sezione di payload](index.html#payload) per identificare i valori utilizzabili. Se non immetti informazioni in questa sezione, ricevi una notifica priva di informazioni aggiuntive. |
 
-*Tabella 4. Valori della sezione di payload*
+*Tabella 5. Valori della sezione payload*
+{: #payload}
 
 | **Valore IBM** | **Descrizione** | **Tipo di evento** |
 |----------------|----------------|------------------------|
 | {{content.title}} | Titolo del messaggio |  Aggiornamento e incidente  |
-| {{status}} | Stato dell'aggiornamento o dell'incidente. | Aggiornamento e incidente |
 | {{type}} | Aggiornamento o incidente | Aggiornamento e incidente | 
 | {{region}} | Regione interessata | Aggiornamento e incidente |
 | {{content.message}} | Descrizione del messaggio |   Aggiornamento e incidente  |
 | {{content.severity}} | Classificazione della severità | Incidente |
 | {{content.category}} | Servizi interessati | Incidente |
 | {{content.subCategoryName}} | Componenti interessati | Incidente |
-| {{content.scheduleWindow}} | La data pianificata per l'aggiornamento | Aggiornamento |
+| {{status}} | Stato dell'aggiornamento | Aggiornamento |
+| {{content.scheduleWindow.start}} | La data di inizio pianificata per l'aggiornamento | Aggiornamento |
+| {{content.scheduleWindow.end}} | L'ora di fine pianificata per l'aggiornamento | Aggiornamento |
 | {{content.disruption}} | Componenti interessati | Aggiornamento |
 
-Quando salvi la tua sottoscrizione evento, ricevi notifiche attraverso il metodo che hai impostato attraverso il tuo servizio Web. Le notifiche vengono ancora pubblicate nella pagina Stato per quanto riguarda gli incidenti e nell'area Notifiche della pagina Amministrazione per quanto riguarda gli aggiornamenti di manutenzione.
+Quando salvi la tua sottoscrizione evento, ricevi notifiche attraverso il metodo che hai impostato. Le notifiche vengono ancora pubblicate nella pagina Stato per quanto riguarda gli incidenti e nell'area Notifiche della pagina Amministrazione per quanto riguarda gli aggiornamenti di manutenzione.
 
-Puoi selezionare qualsiasi sottoscrizione evento salvata e visualizzare l'attività recente. Puoi fare clic per espandere qualsiasi voce delle attività recenti per visualizzare i dettagli. I dettagli includono i valori IBM per la notifica utilizzabili nella sezione payload. Per visualizzare questi valori, espandi la voce dell'attività recente, l'**Evento** e infine l'**Oggetto**.
+Puoi selezionare qualsiasi sottoscrizione evento salvata, visualizzare le attività recenti o modificarle come necessario. Fai clic per espandere qualsiasi voce delle attività recenti per visualizzare i dettagli della cronologia.
 
 ## Aggiornamenti di manutenzione
 {: #oc_schedulemaintenance}
 
-Puoi visualizzare gli aggiornamenti di manutenzione pianificati o in sospeso andando a **AMMINISTRAZIONE &gt; INFORMAZIONI SUL SISTEMA &gt; *Numero* aggiornamenti in attesa** per accedere alla pagina **Aggiornamenti di sistema**. 
+Puoi visualizzare e pianificati gli aggiornamenti di manutenzione pianificati e in sospeso passando ad **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso** per accedere alla pagina **Aggiornamenti di sistema**. 
 
-**Nota**: per iniziare, consulta la seguente sezione per Impostazione delle finestre di manutenzione preapprovate. Queste finestre devono essere impostate per consentire a IBM di pianificare la manutenzione per il tuo ambiente.
+**Nota**: consultare la seguente sezione per [Impostazione di finestre di manutenzione preapprovate](index.html#preapprovedmaintenance). Queste finestre devono essere impostate per consentire a IBM di pianificare la manutenzione per il tuo ambiente.
 
 <dl>
 <dt>Aggiornamenti che non comportano interruzioni del servizio</dt>
 <dd>Un aggiornamento che non comporta interruzioni del servizio non influenza il tuo ambiente, le tue applicazioni in esecuzione o l'accesso dei tuoi utenti alle tue applicazioni. Questo tipo di aggiornamento non richiede un'approvazione caso per caso e verrà applicato durante le finestre di manutenzione disponibili preapprovate da te impostate dalla pagina Aggiornamenti di sistema.</dd>
 <dt>Aggiornamenti che comportano interruzioni del servizio</dt>
-<dd>Un aggiornamento che comporta interruzioni del servizio può influenzare il tuo ambiente, le applicazioni in esecuzione o l'accesso dei tuoi utenti alle tue applicazioni. Devi pianificare e approvare ciascuno di questi aggiornamenti di manutenzione entro la finestra di manutenzione di 21 giorni assegnata. Puoi selezionare la data e l'ora di distribuzione consigliata che è basata sulle tue finestre di aggiornamento preapprovate oppure puoi selezionare due ore e date aggiuntive da cui IBM può scegliere quando pianifica l'aggiornamento.</dd>
+<dd>Un aggiornamento che comporta interruzioni del servizio può influenzare il tuo ambiente, le applicazioni in esecuzione o l'accesso dei tuoi utenti alle tue applicazioni. Devi pianificare e approvare ciascuno di questi aggiornamenti di manutenzione entro la finestra di manutenzione di 21 giorni assegnata. Puoi selezionare l'ora e la data di distribuzione suggerita, l'opzione per qualsiasi finestra preapprovata da te oppure aprire il calendario per selezionare tre date/ore specifiche tra cui IBM può scegliere durante la pianificazione dell'aggiornamento.</dd>
 </dl>
 
 
 ### Impostazione delle finestre di manutenzione preapprovate
 {: #preapprovedmaintenance}
 
-Prima di iniziare la pianificazione e l'approvazione di aggiornamenti, devi impostare le tue finestre di manutenzione preapprovate. Gli aggiornamenti che non comportano interruzioni del servizio sono pianificate durante i periodi preapprovati. Un aggiornamento che non comporta interruzioni del servizio non influenza il tuo ambiente, le applicazioni in esecuzione o l'accesso dei tuoi utenti alle tue applicazioni. Questo tipo di aggiornamento non richiede un'approvazione caso per caso e verrà applicato nelle finestre di manutenzione disponibili preapprovate da te impostate dalla pagina Aggiornamenti di sistema.
+Prima di iniziare la pianificazione e l'approvazione di aggiornamenti, devi impostare le tue finestre di manutenzione preapprovate. Gli aggiornamenti che non comportano interruzioni del servizio vengono pianificati in modo che vengano eseguiti all'interno delle finestre temporali preapprovate. 
 
-Devi impostare un minimo di 24 ore disponibili per una settimana per un minimo di 3 giorni durante tale settimana. Ad esempio, puoi impostare tre finestre di 8 ore su tre giorni separati oppure puoi impostare delle finestre di 6 ore su quattro giorni separati. Per assicurarti che le finestre forniscano tempo a sufficienza per l'applicazione di un aggiornamento, ciascuna finestra deve avere una durata minima di 4 ore.
+Devi impostare un minimo di 24 ore disponibili per una settimana per un periodo minimo di tre giorni per ogni settimana. Ad esempio, puoi impostare tre finestre temporali di otto ore in tre giorni distinti o puoi impostare le finestre temporali di sei ore in quattro giorni differenti. Per accertarti che le finestre temporali siano sufficienti per consentire l'applicazione di un aggiornamento, la durata minima di ciascuna finestra deve essere pari a quattro ore.
 
-1. Vai a **AMMINISTRAZIONE &gt; INFORMAZIONI SUL SISTEMA &gt; *Numero* aggiornamenti in sospeso &gt; Gestisci disponibilità**.
+**Nota**: solo gli utenti con autorizzazione di amministratore (`ops.admin`) possono pianificare e approvare aggiornamenti di manutenzione.
+
+1. Vai a **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso &gt; Gestisci disponibilità**.
 2. Espandi la sezione **Gestisci finestre di aggiornamento disponibili**.
 3. Fai clic su **Aggiungi nuovo** ![Aggiungi nuovo](images/add-new.png).
 4. Imposta la prima finestra di disponibilità selezionando la frequenza, la durata e l'ora di inizio per la finestra.
 5. Fai clic su **Inoltra**.
-6. Ripeti questo processo finché non avrai soddisfatto i requisiti minimi per le finestre settimanali.
+6. Ripeti questo processo finché non hai soddisfatto i requisiti minimi per le finestre temporali settimanali.
 
 ### Impostazione delle finestre di manutenzione non disponibili
 
 Dopo che hai impostato le tue finestre di manutenzione disponibili preapprovate, puoi scegliere di impostare specifiche date e ore per cui il tuo ambiente non è disponibile per gli aggiornamenti. Ad esempio, puoi scegliere un fine settimana o una vacanza ad alto traffico durante la quale non vuoi che venga applicata alcuna manutenzione per garantire che le tue applicazioni siano disponibili ai tuoi utenti.
 
-1. Vai a **AMMINISTRAZIONE &gt; INFORMAZIONI SUL SISTEMA &gt; *Numero* aggiornamenti in sospeso &gt; Gestisci disponibilità**.
+1. Vai a **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso &gt; Gestisci disponibilità**.
 2. Espandi la sezione **Gestisci finestre di aggiornamento non disponibili**.
 3. Fai clic su **Aggiungi nuovo** ![Aggiungi nuovo](images/add-new.png).
 4. Imposta la tua finestra non disponibile selezionando la frequenza, la durata e l'ora di inizio per la finestra.
@@ -146,40 +172,28 @@ Dopo che hai impostato le tue finestre di manutenzione preapprovate, gli aggiorn
 
 Per visualizzare i dettagli per un aggiornamento che non comporta l'interruzione del servizio, completa la seguente procedura:
 
-1. Vai a **AMMINISTRAZIONE &gt; INFORMAZIONI SUL SISTEMA &gt; *Numero* aggiornamenti in sospeso**. 
-2. Identifica le righe di aggiornamento che hanno **Pianificazione cliente richiesta** impostate su **No**.
+1. Vai a **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso**
+2. Identifica le righe in cui **Pianificazione cliente obbligatoria** è impostato su **No**.
 3. Seleziona la riga per l'aggiornamento di cui visualizzare i dettagli.
 
-Un aggiornamento che comporta interruzioni del servizio può influenzare il tuo ambiente, le applicazioni in esecuzione o l'accesso dei tuoi utenti alle tue applicazioni. Devi pianificare e approvare ciascuno di questi aggiornamenti di manutenzione entro la finestra di manutenzione di 21 giorni assegnata. Puoi selezionare la data e l'ora di distribuzione consigliata che è basata sulle tue finestre di aggiornamento preapprovate oppure puoi selezionare due ore e date aggiuntive da cui IBM può scegliere quando pianifica l'aggiornamento.
+Un aggiornamento che comporta interruzioni del servizio può influenzare il tuo ambiente, le applicazioni in esecuzione o l'accesso dei tuoi utenti alle tue applicazioni. Devi pianificare e approvare ciascuno di questi aggiornamenti di manutenzione entro la finestra di manutenzione di 21 giorni assegnata. Puoi selezionare l'ora e la data di distribuzione suggerita, l'opzione per qualsiasi finestra preapprovata da te oppure aprire il calendario per selezionare tre date/ore specifiche tra cui IBM può scegliere durante la pianificazione dell'aggiornamento.
 
 Per gli aggiornamenti che comportano un'interruzione del servizio che richiedono la tua approvazione, completa la seguente procedura:
 
-1. Vai a **AMMINISTRAZIONE &gt; INFORMAZIONI SUL SISTEMA &gt; *Numero* aggiornamenti in sospeso**. 
-2. Identifica le righe di aggiornamento che hanno **Pianificazione cliente richiesta** impostate su **Sì**.
+1. Vai a **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso**
+2. Identifica le righe in cui **Pianificazione cliente obbligatoria** è impostato su **Sì**.
 3. Seleziona la riga per di un aggiornamento per esaminarne i dettagli, compresi la sua descrizione, la sua data e ora consigliata, i componenti interessati e la sua durata.
 4. Seleziona **Pianifica e approva**.
-5. Scegli dalle seguenti opzioni: **Data consigliata**, **Date alternative** o **Tutte le finestre preapprovate**.
-6. Seleziona **Inoltra**. 
+5. Scegli una delle seguenti opzioni: **Data suggerita**, **Date specifiche** o **Qualsiasi finestra preapprovata**. Se selezioni **Date specifiche**, puoi aprire il calendario per selezionare tre opzioni tra cui può scegliere IBM.
+6. Quando hai finito, seleziona **Invia**. 
 
-In base alla tua selezione, l'aggiornamento viene applicato durante la data consigliata da te accettata, durante una delle tue finestre preapprovate o una delle date e ore alternative. Quando la data di pianificazione per il tuo aggiornamento viene finalizzata da IBM, vedi la data pianificata riflessa nei dettagli per l'aggiornamento nella pagina **Aggiornamenti di sistema**.
+A seconda della tua selezione, l'aggiornamento viene pianificato in modo da essere distribuito durante la data suggerita che hai accettato, durante una delle tue finestre temporali preapprovate o in una delle date e ore specifiche che hai selezionato. Quando IBM pianifica la distribuzione dell'aggiornamento, la data prevista viene rispecchiata nei dettagli dell'aggiornamento, sulla pagina **Aggiornamenti di sistema**.
 
-### Impostazione di un feed di calendario per gli aggiornamenti pianificati
-
-Dalla pagina Aggiornamenti di sistema, puoi scegliere di tracciare la pianificazione dei tuoi aggiornamenti facendo clic sull'icona **Calendario** ![Calendario](images/icon_calendar.svg) e scaricando il file `.ics` per importare i tuoi aggiornamenti pianificati in un'applicazione calendario a scelta:
-
-<ol>
-<li>Apri la tua applicazione calendario.</li>
-<li>Scarica il file calendario facendo clic sull'icona **Calendario** ![Calendario](images/icon_calendar.svg), quindi importalo nella tua applicazione calendario attraverso il file `.ics`.</li>
-<li>Immetti le tue credenziali.</li>
-<li>Visualizza i tuoi aggiornamenti pianificati.</li>
-</ol>
-
-Puoi anche estendere la funzionalità di notifica per la pagina Amministrazione utilizzando delle sottoscrizioni evento da integrare con un servizio Web a scelta. Per impostare una sottoscrizione di notifica evento per un aggiornamento o un incidente, vedi [Notifiche e sottoscrizioni evento](index.html#oc_eventsubscription).
 
 ## Visualizzazione delle informazioni sul sistema
 {: #oc_system}
 
-Per visualizzare le informazioni sul sistema, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI SUL SISTEMA**.
+Per visualizzare le informazioni sul sistema, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA**.
 
 Puoi espandere e visualizzare diverse sezioni relative ad aggiornamenti di manutenzione in sospeso, informazioni sul sistema generali e dettagli della configurazione LDAP.
 
@@ -309,7 +323,7 @@ per scaricare il report.
 
 La seguente tabella mostra l'elenco dei report di sicurezza generati per {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato.
 
-*Tabella 5. Elenco dei report di sicurezza*
+*Tabella 6. Elenco dei report di sicurezza*
 
 | **Categoria** | **Report** | **Descrizione** |      
 |-----------------|-------------------|---------------------|
@@ -340,7 +354,7 @@ Puoi visualizzare lo stato per l'ambiente {{site.data.keyword.Bluemix_notm}} e p
 
 Puoi monitorare lo stato per la tua istanza {{site.data.keyword.Bluemix_notm}} utilizzando la pagina Stato di {{site.data.keyword.Bluemix_notm}}. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**.
 
-La pagina Stato è la posizione centrale per trovare notifiche e annunci sugli eventi chiave che interessano la piattaforma {{site.data.keyword.Bluemix_notm}} e i servizi principali in {{site.data.keyword.Bluemix_notm}}. Puoi sottoscrivere a un feed RSS per le notifiche in modo da non doverle controllare personalmente. Per ulteriori informazioni sulla pagina Stato e sull'impostazione del feed RSS, vedi [Visualizzazione di {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
+La pagina Stato è la posizione centrale per trovare notifiche e annunci sugli eventi chiave che interessano la piattaforma {{site.data.keyword.Bluemix_notm}} e i servizi principali in {{site.data.keyword.Bluemix_notm}}. Puoi sottoscrivere a un feed RSS per le notifiche in modo da non doverle controllare personalmente. Per ulteriori informazioni sulla pagina Stato e sulla configurazione del feed RSS, vedi [Visualizzazione di {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
 ### Stato della console di gestione
 
@@ -365,7 +379,13 @@ seleziona **DISABILITA TUTTI I PIANI**.
 il menu a discesa per selezionare **Abilita per tutte le organizzazioni**, **Disabilita per
 tutte le organizzazioni** o **Abilita piano per specifiche organizzazioni**.
 
-<!-- staging only start -->
+Puoi inoltre gestire l'ordine di priorità dei pacchetti di build disponibili da scegliere in base alla compatibilità, che i tuoi sviluppatori utilizzeranno durante la creazione di applicazioni.
+
+1. Vai a **AMMINISTRAZIONE &gt; GESTIONE CATALOGO**.
+2. Vai alla sezione **Calcola**.
+3. Seleziona **Priorità pacchetto di build**.
+4. Seleziona l'opzione pacchetto di build a cui vuoi dare priorità nell'elenco.
+5. Con l'opzione selezionata, utilizza le frecce per spostare l'opzione all'interno dell'elenco. La priorità viene impostata elencando l'elemento maggiormente prioritario in cima all'elenco.
 
 ### Registrazione di un broker dei servizi
 {: #servicebrokerui}
@@ -397,18 +417,18 @@ Completa la seguente procedura per registrare il tuo broker dei servizi:
       "tags":[
          "customer_dedicated"
       ],
-      "metadata":{
+      "metadata": {
          "displayName":"Cool Service",
          "serviceMonitorApi":"https://myservicesstatus.mybluemix.net/healthcheck/",
          "providerDisplayName":"Cool company",
          "longDescription":"Cool Service è una soluzione di immagazzinamento e di analisi dei dati. Puoi spostare rapidamente i tuoi dati in un database in-memoria a colonne di prossima generazione e iniziare ad eseguire query analitiche complesse.",
          "bullets":[
             {
-               "title":"Rapida e semplice",
-               "description":"Cool Service utilizza innovazioni e tecnologia a colonne in memoria dinamiche, come l'elaborazione vettoriale parallela e una compressione su cui è possibile intervenire per eseguire rapidamente la scansione dei dati pertinenti ed eseguirne la restituzione."
+               "title": "Rapido e semplice",
+               "description": "Cool Service utilizza innovazioni e tecnologia a colonne in memoria dinamiche, come l'elaborazione vettoriale parallela e una compressione su cui è possibile intervenire per eseguire rapidamente la scansione dei dati pertinenti ed eseguirne la restituzione."
             },
             {
-               "title":"Connettività",
+               "title": "Connettività,
                "description":"Cool Service è progettato per consentirti di connetterti facilmente a tutti i servizi e a tutte le applicazioni. Puoi iniziare immediatamente ad analizzare i tuoi dati con strumenti familiari."
             }
          ],
@@ -423,27 +443,26 @@ Completa la seguente procedura per registrare il tuo broker dei servizi:
             {
                "type":"youtube",
                "thumbnailUrl":"http://path/to/thumbnail.png",
-               "url":"http://path/to/youtube/video",
-               "caption":"Come usare Cool Service in 60 secondi"
+               "url": "http://path/to/youtube/video",
+               "caption"Come usare Cool Service in 60 secondi:""
             },
             {
                "type":"image",
                "thumbnailUrl":"http://path/to/thumbnail.png",
-               "url":"http://path/to/image_file.png",
+               "url": "http://path/to/image_file.png",
                "caption":"Connessione di applicazioni con Cool Service"
             },
             {
-               "type":"video",
-               "thumbnailUrl":"http://path/to/thumb.png",
-               "caption":"Utilizzo delle tabelle da parte di Cool Service",
-               "source":[
-                  {
+               "type": "video",
+               "thumbnailUrl": "http://path/to/thumb.png",
+               "caption": "Cool Service gestisce le tabelle"
+               "source": [{
                      "type":"video/mp4",
-                     "url":"http://path/to/video_file.mp4"
+                     "url": "http://path/to/video_file.mp4"
                   },
                   {
                      "type":"video/ogg",
-                     "url":"http://path/to/video_file.ogg"
+                     "url": "http://path/to/video_file.ogg"
                   }
                ]
             }
@@ -455,9 +474,9 @@ Completa la seguente procedura per registrare il tuo broker dei servizi:
             "description":"Spazio tabelle e schema dedicati per istanza di servizio su un server condiviso. L'archiviazione dei database compressi da 1 e 10 GB può contenere fino a, rispettivamente, 5 e 50 GB di dati non compressi, con rapporti di compressione standard.",
             "free":false,
             "id":"cool-service-plan-id",
-            "metadata":{
+            "metadata": {
                "bullets":[
-                  "Minimo 1 GB per istanza. Massimo 10 GB per istanza."
+                  "1 GB per istanza. 10 GB Max per istanza."
                ],
                "costs":[
                   {
@@ -520,7 +539,8 @@ Per creare una nuova organizzazione e aggiungere gestori, completa la seguente p
 Puoi creare degli spazi nella tua organizzazione; ad esempio,
 uno spazio *dev* come un ambiente di sviluppo,
 uno spazio *test* come un ambiente di test e uno
-spazio *production* come un ambiente di produzione. Puoi quindi associare le tue applicazioni agli spazi. Per creare uno spazio completa la seguente procedura:
+spazio *production* come un ambiente di produzione. Puoi quindi associare
+le tue applicazioni agli spazi. Per creare uno spazio completa la seguente procedura:
 
 1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; pagina **Gestisci organizzazioni**.
 2. Seleziona l'organizzazione a cui vuoi aggiungere uno spazio.
@@ -541,8 +561,8 @@ Nella sezione Monitoraggio quota, puoi espandere la sezione e visualizzare le se
 	<dt><strong>Memoria totale di sistema</strong></dt>
 	<dd>La memoria fisica totale disponibile nel tuo ambiente.</dd>
 	<dt><strong>Quota distribuita</strong></dt>
-	<dd>La somma di memoria assegnata per tutte le applicazioni distribuite, su tutte le organizzazioni. La somma
-	della quota distribuita può superare la memoria totale di sistema fisica per il tuo ambiente. Ad esempio,
+	<dd>La somma di memoria assegnata per tutte le applicazioni distribuite, su tutte le organizzazioni. Il totale
+	della quota distribuita può superare la memoria fisica totale di sistema per il tuo ambiente. Ad esempio,
 se disponi di una memoria totale di sistema pari a 16 GB e assegni 4 GB di memoria ciascuna per un totale di cinque diverse organizzazioni, la quota totale supera la
 memoria di sistema totale che ti è stata assegnata per tutte le organizzazioni. Tuttavia, in molti casi,
 è possibile che le organizzazioni non utilizzino la quota totale assegnata singolarmente a ciascuna di esse. Inoltre, è possibile che le organizzazioni non utilizzino contemporaneamente
@@ -557,9 +577,8 @@ in base all'utilizzo massimo della memoria per ogni organizzazione e, per impost
 
 	<dl>
 	<dt><strong>Utilizzo massimo memoria</strong></dt>
-	<dd>Usa questa opzione per identificare l'organizzazione che utilizza la maggior quantità di memoria. Ordina per Utilizzo
-	massimo memoria per identificare le organizzazioni che stanno utilizzando la maggiore quantità di
-memoria. L'elenco viene ordinato in base alla quota distribuita. </dd>
+	<dd>Usa questa opzione per identificare l'organizzazione che utilizza la maggior quantità di memoria. Ordina in base all'utilizzo
+massimo della memoria per identificare le organizzazioni che stanno utilizzando la maggiore quantità di memoria. L'elenco viene ordinato in base alla quota distribuita. </dd>
 	<dt><strong>Assegnazione memoria in eccesso</strong></dt>
 	<dd>Usa questa opzione per identificare le organizzazioni che hanno un piano di quota superiore a quello necessario.
 	Ordina per Assegnazione memoria in eccesso per identificare le organizzazioni che utilizzano
@@ -603,27 +622,22 @@ nell'elenco. Nella pagina **Gestisci organizzazioni** dell'organizzazione selezi
 ## Gestione di utenti e autorizzazioni
 {: #oc_useradmin}
 
-Puoi aggiungere degli utenti alla tua istanza {{site.data.keyword.Bluemix_notm}} dal registro utenti della tua azienda tramite LDAP. Puoi aggiungere gli utenti singolarmente
-o in gruppi e visualizzarne le autorizzazioni. Se disponi dell'autorizzazione `ammin`,
-puoi anche impostare e gestire le autorizzazioni per gli altri utenti. Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE UTENTI**.
+Puoi aggiungere gli utenti singolarmente
+o in gruppi e visualizzarne le autorizzazioni. In genere, gli utenti vengono aggiunti alla tua istanza {{site.data.keyword.Bluemix_notm}} dal registro utenti della tua azienda tramite LDAP (Lightweight Directory Access Protocol). Se disponi dell'autorizzazione **Admin** puoi anche impostare e gestire le autorizzazioni per gli altri utenti. Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE UTENTI**.
 
-La pagina Amministrazione utenti visualizza tutti gli utenti per l'istanza locale o dedicata.
-Sono visualizzate le autorizzazioni per ciascun utente. Le autorizzazioni possono essere: Nessuna,
-`Ammin`, `Catalogo`, `Accesso`,
-`Report` e `Utenti`. È possibile abilitare le autorizzazioni oppure
-fornire agli utenti l'accesso in `visualizzazione` o `scrittura` per
-l'autorizzazione indicata, come indicato dalle icone. Consulta [Autorizzazioni](index.html#permissions) per delle descrizioni di
+La pagina Amministrazione utenti visualizza tutti gli utenti per l'istanza locale o dedicata. Sono visualizzate le autorizzazioni per ciascun utente utilizzando le icone nella tabella. Le autorizzazioni possono essere: Nessuna, **Ammin**, **Accesso**, **Catalogo**, **Report** e **Utenti**.
+Le autorizzazioni **Ammin** e **Accesso**` possono essere impostate su **Attivo** o **Disattivo**, mentre le rimanenti autorizzazioni sono abilitate o disabilitate con tipi di accesso specifici, incluso l'accesso di **Lettura** o **Scrittura** per tale autorizzazione, come rappresentato dalle icone. Consulta [Autorizzazioni](#permissions) per delle descrizioni di
 ciascun tipo e una spiegazione delle icone.
 
 ### Gestione degli utenti
 
-Puoi cercare utenti esistenti, rimuovere utenti e aggiungere utenti singolarmente o in base a un gruppo. Scegli tra le seguenti opzioni:
+A seconda del tuo accesso di **Lettura** o **Scrittura** per le autorizzazioni dell'utente, puoi cercare utenti esistenti, rimuovere utenti e aggiungere utenti singolarmente o in base a un gruppo. Tieni presente che se hai l'autorizzazione **Ammin**, disponi dell'accesso completo per completare tutte le attività per la gestione utente nell'ambiente. Le seguenti attività possono essere completate per gestire gli utenti. Rivedi il seguente elenco per visualizzare se il tuo livello di accesso ti abilita a completare attività di gestione utente specifiche:
 
-* Individuare utenti. Puoi individuare gli utenti nella tabella utilizzando il campo
-**Ricerca**.
+* Individua utenti. Puoi individuare gli utenti nella tabella utilizzando il campo **Ricerca**
+con l'accesso di **Lettura** o **Scrittura** per l'autorizzazione utenti.
 
-* Aggiungi un singolo utente. Se disponi dell'autorizzazione `ammin` o
-dell'autorizzazione `utenti` con accesso in `scrittura`, puoi aggiungere utenti.
+* Aggiungi un singolo utente. Se disponi dell'autorizzazione **Ammin** o
+dell'autorizzazione **Utenti** con accesso in **Scrittura**, puoi aggiungere utenti.
 
   1. Per aggiungere un singolo utente dalla tua directory LDAP, fai clic su **Aggiungi utente**.
   2. Nel campo **Ricerca**, immetti l'indirizzo email per l'utente e seleziona quindi l'utente dall'elenco compilato.
@@ -633,68 +647,70 @@ dell'autorizzazione `utenti` con accesso in `scrittura`, puoi aggiungere utenti.
   **Nota**: quando l'operazione di aggiunta viene eseguita con esito positivo, l'utente viene aggiunto alla tabella per consentirti operazioni di visualizzazione e ricerca. Quando gli utenti vengono aggiunti,
 non dispongono di autorizzazioni.
 
-* Aggiunta di un gruppo di utenti dalla tua directory LDAP.
+* Aggiunta di un gruppo di utenti dalla tua directory LDAP. Se disponi dell'autorizzazione **Ammin** o
+dell'autorizzazione **Utenti** con accesso in **Scrittura**, puoi aggiungere utenti.
 
   1. Fai clic su **Aggiungi gruppo di utenti**.
   2. Nel campo **Ricerca**, immetti un nome gruppo da cercare e seleziona il nome gruppo dall'elenco compilato.
   3. Quindi, dal campo **Organizzazione**, scegli l'organizzazione a cui vuoi aggiungere il gruppo di utenti immettendo il nome dell'organizzazione e selezionandolo dall'elenco compilato.
   4. Per aggiungere il gruppo di utenti all'organizzazione selezionata, fai clic su **Aggiungi utenti**.
+  
   **Nota**: i gruppi di più di 50 utenti vengono aggiunti tramite un lavoro batch in background. Se l'operazione di aggiunta viene
 completata correttamente, l'utente o il gruppo viene aggiunto alla tabella per consentirti operazioni di visualizzazione e ricerca. Quando gli utenti vengono aggiunti,
 non dispongono di autorizzazioni.
 
-* Aggiungi un gruppo di utenti importando un foglio di calcolo che include ID utente, indirizzi email utente e l'organizzazione a cui intendi aggiungere l'utente.
+* Aggiungi un gruppo di utenti importando un foglio di calcolo che include ID utente, indirizzi email utente e l'organizzazione a cui intendi aggiungere l'utente. Se disponi dell'autorizzazione **Ammin** o
+dell'autorizzazione **Utenti** con accesso in **Scrittura**, puoi aggiungere utenti.
 
-  1. Fai clic su **Importa utenti**.
-  2. Fai clic su **Scarica template (.CSV)** per scaricare un foglio di calcolo con le colonne richieste che puoi compilare oppure creane uno tuo con almeno le intestazioni colonna obbligatorie: **ID utente**, **Email**, **Organizzazione**.
-  3. Compila i valori utente per le colonne obbligatorie. Se non stai utilizzando una directory LDAP, utilizza le intestazioni colonna obbligatorie e facoltative, **Nome** e **Cognome** per la tua importazione utente.
-  4. Salva il tuo file e fai clic su **Carica file**.
- 
+**Nota**: immetti gli ID utente che corrispondono ai valori utilizzati nel tuo registro utenti. 
 
-  **Nota**: immetti gli ID utente che corrispondono ai valori utilizzati nel tuo registro utenti. Le colonne nel tuo foglio di calcolo possono essere in qualsiasi ordine, a condizione che tu abbia tutte le colonne obbligatorie. Ricevi un messaggio di conferma che indica che sono stati aggiunti tutti gli utenti, se l'importazione ha avuto esito positivo. Se l'importazione ha avuto esito positivo per qualche utente ma non per altri, esamina il messaggio di errore per intervenire sugli utenti che non è stato possibile aggiungere.
+   1. Fai clic su **Importa utenti**.
+   2. Fai clic su **Scarica modello (.CSV)** per scaricare un foglio di calcolo con le colonne richieste compilabili. In alternativa puoi crearne uno personalizzato, utilizzando un foglio di calcolo che includa le intestazioni di colonna richieste: **ID utente**, **Email** e **Organizzazione**.  Il template include anche due colonne facoltative: **Nome** e **Cognome**.
+   3. Compila i valori utente per le colonne obbligatorie. Se non utilizzi una directory LDAP, utilizza le intestazioni colonna obbligatorie e facoltative per gli utenti di importazione.
+   4. Salva il tuo file e fai clic su **Carica file**.
 
-* Rimuovere utenti. Se disponi dell'autorizzazione `ammin` o
-dell'autorizzazione `utenti` con accesso in `scrittura`, puoi rimuovere utenti.
+  **Nota**: le colonne nel tuo foglio di calcolo possono essere in qualsiasi ordine, a condizione che tu abbia tutte le colonne obbligatorie. Se l'importazione ha avuto esito positivo, ricevi un messaggio di conferma che indica che sono stati aggiunti tutti gli utenti. Se l'importazione ha avuto esito positivo per qualche utente ma non per altri, esamina il messaggio di errore per intervenire sugli utenti che non è stato possibile aggiungere.
+
+* Rimuovere utenti. Se disponi dell'autorizzazione **Ammin** o dell'autorizzazione **Utenti** con accesso in **Scrittura**, puoi rimuovere gli utenti dall'ambiente in modo permanente.
 
     1. Individua l'utente e fai clic sull'icona ![Elimina](images/icon_trash.svg).
     2. Fai clic su **Rimuovi**.
 
+* La modifica di autorizzazioni e organizzazioni per altri utenti richiede che tu disponga dell'autorizzazione **Ammin**. Per modificare le autorizzazioni per gli utenti, individua l'utente e fai clic sul nome utente. Dalla pagina **Modifica utente**, puoi abilitare o disabilitare le autorizzazioni:
+
+    * Seleziona **Attivo** dall'elenco per abilitare l'autorizzazione **Ammin** o **Accesso**.
+    * Seleziona **Lettura** dall'elenco per consentire all'utente di disporre dell'accesso in **Visualizzazione** (sola lettura) per tale autorizzazione oppure seleziona **Scrittura** per consentire l'accesso in **Scrittura** (modifica o aggiunta e rimozione) per tale autorizzazione.
+    * Seleziona **Disattivo** per disabilitare tutte le autorizzazioni.
+    
+    **Nota**: l'impostazione dell'autorizzazione **Ammin** su **Attivo** imposta tutte le altre autorizzazioni con l'accesso in **Scrittura**.
+
+* Per aggiungere o rimuovere un utente da un'organizzazione specifica, devi disporre dell'autorizzazione **Ammin** o **Utenti** con l'accesso in **Scrittura**.
+
+    1. Per aggiungere un utente a un'organizzazione, seleziona il nome utente dalla tabella per accedere alla pagina **Modifica utente**. Utilizza quindi il campo di ricerca per individuare un'organizzazione, seleziona l'organizzazione dall'elenco e fai clic su **Salva**.
+    2. Per rimuovere un utente da un'organizzazione, seleziona il nome utente dalla tabella per accedere alla pagina **Modifica utente**. Fai quindi clic su ![Rimuovi](images/icon_remove.svg) per l'organizzazione da cui vuoi rimuovere l'utente e fai clic su **Salva**.
+
 ### Autorizzazioni
 {: #permissions}
 
-È possibile assegnare agli utenti le seguenti autorizzazioni:
+È possibile assegnare agli utenti le seguenti autorizzazioni con livelli di accesso specifici che abilitano l'utente a completare attività specifiche:
 
-*Tabella 6. Autorizzazioni*
+*Tabella 7. Autorizzazioni*
 
 | **Autorizzazione utente** | **Descrizione** |       
 |-----------------|-------------------|
-| Ammin | Gli utenti con l'autorizzazione `ammin` possono
-modificare le autorizzazioni per gli altri utenti. |
-| Catalogo | Agli utenti con autorizzazione `catalogo` può essere assegnato l'accesso in `visualizzazione` o in `scrittura` (modifica) per i servizi disponibili nell'istanza locale o dedicata. |  
-| Accesso | Agli utenti con autorizzazione `accesso` è consentito visualizzare la pagina Amministrazione. Senza questa autorizzazione, gli utenti non possono vedere l'opzione di menu Amministrazione. |
-| Report | Agli utenti con autorizzazione `report` può essere assegnato l'accesso in `visualizzazione` o in `scrittura` (modifica) per i report di sicurezza. |
-| Utenti | Agli utenti con autorizzazione `utenti` può essere assegnato l'accesso in `visualizzazione` per l'elenco di utenti o in `scrittura` (aggiunta o rimozione) per gli utenti. Questa autorizzazione non ti consente di impostare le autorizzazioni per gli altri utenti.|
+| Ammin | Gli utenti con l'autorizzazione **Ammin** impostata su **Attivo** possono modificare le autorizzazioni per gli altri utenti. Se hai l'autorizzazione attiva, ti viene automaticamente abilitato l'accesso completo alle altre autorizzazioni. In aggiunta alle attività descritte per ogni autorizzazione nella tabella, ammin può inoltre impostare la sottoscrizione di eventi per avvertirti direttamente sulla manutenzione o gli incidenti, pianificare la manutenzione, eseguire i controlli di verifica sui componenti della console e creare organizzazioni e spazi per l'ambiente. |
+| Accesso | Gli utenti con l'autorizzazione **Accesso** impostata su **Attivo** possono visualizzare l'opzione della pagina di gestione nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Gli utenti con l'autorizzazione abilitata possono avere accesso alle [Informazioni di sistema](#oc_system) e ai tile [Utilizzo della risorsa](#oc_resource). Senza questa autorizzazione, gli utenti non possono visualizzare o accedere all'opzione di menu Amministrazione. |
+| Catalogo | Agli utenti con autorizzazione **Catalogo** può essere assegnato l'accesso in **Lettura** o in **Scrittura** (modifica) per i servizi disponibili nell'istanza locale o dedicata. L'accesso in lettura consente all'utente di accedere al tile di gestione del catalogo per visualizzare i servizi disponibili. L'accesso in scrittura consente all'utente di accedere al tile [Gestione catalogo](#oc_catalog) per visualizzare i servizi, modificare la visibilità dei servizi, registrare i servizi personalizzati e controllare l'elenco di priorità del pacchetto di build. |  
+| Report | Agli utenti con autorizzazione **Report** può essere assegnato l'accesso in **Lettura** o in **Scrittura** (modifica) per i report di sicurezza. L'accesso in visualizzazione consente agli utenti di accedere al tile Report e log per scaricare i report. L'accesso in scrittura consente agli utenti di visualizzare il tile [Report e log](#oc_report) così come di utilizzare la CLI per caricare nuovi report e creare nuove categorie per l'accesso degli utenti. |
+| Utenti | Agli utenti con autorizzazione **Utenti** può essere assegnato l'accesso in  **Lettura ** (visualizzazione) per l'elenco di utenti o in **Scrittura** (aggiunta o rimozione) per gli utenti. Questa autorizzazione non ti consente di impostare le autorizzazioni per gli altri utenti. L'accesso in scrittura consente all'utente di aggiungere nuovi utenti all'ambiente, eliminare utenti dall'ambiente e aggiungere utenti esistenti all'organizzazione che già esistono nell'ambiente. In aggiunta, l'accesso in **Scrittura** consente agli utenti di aggiungere nuove organizzazioni, eliminare le organizzazioni e modificare gli utenti nelle organizzazioni. |
 
 
-È possibile abilitare le autorizzazioni o fornire agli utenti l'accesso in `visualizzazione` o
-in `scrittura` per l'autorizzazione indicata, come indicato dalle seguenti icone:
+È possibile abilitare le autorizzazioni per gli utenti con acceso in **Lettura** o in
+**Scrittura** per l'autorizzazione indicata, come indicato dalle seguenti icone:
 
-* L'icona ![Abilitato, rappresentata da un segno di spunta](images/icon_enabled.svg) accanto a un'autorizzazione significa che essa è abilitata.
-* L'icona ![Visualizza, rappresentata da un occhio](images/icon_read.svg) indica che l'utente dispone di un accesso in `visualizzazione` (sola lettura) per tale autorizzazione.
-* L'icona ![Scrittura, rappresentata da una matita](images/icon_write.svg) indica che l'utente dispone di un accesso in `scrittura` (modifica, aggiunta o rimozione) per tale autorizzazione.
-
-La modifica di autorizzazioni e organizzazioni per altri utenti richiede che tu disponga dell'autorizzazione `admin`. Per modificare le autorizzazioni, individua
-l'utente e fai clic sul nome utente. Dalla pagina **Modifica utente**, puoi abilitare o disabilitare le autorizzazioni:
-
-* Seleziona **Attivo** dall'elenco per abilitare un'autorizzazione.
-* Seleziona **Lettura** dall'elenco per consentire all'utente di disporre dell'accesso in `visualizzazione` (sola lettura) per tale autorizzazione oppure seleziona **Scrittura** per consentire l'accesso in `scrittura` (modifica o aggiunta e rimozione) per tale autorizzazione.
-* Seleziona **Disattivo** per disabilitare l'autorizzazione.
-
-Per aggiungere o rimuovere un utente da un'organizzazione, seleziona dalle seguenti opzioni:
-
-* Per aggiungere un utente a un'organizzazione, seleziona il nome utente dalla tabella per accedere alla schermata **Modifica utente**. Utilizza quindi il campo di ricerca per individuare un'organizzazione, seleziona l'organizzazione dall'elenco e fai quindi clic su **Salva**.
-* Per rimuovere un utente da un'organizzazione, seleziona il nome utente dalla tabella per accedere alla schermata **Modifica utente**. Fai quindi clic su ![Rimuovi](images/icon_remove.svg) per l'organizzazione da cui vuoi rimuovere l'utente e fai clic su **Salva**.
-
+* L'icona ![Abilitato, rappresentata da un segno di spunta](images/icon_enabled.svg) associata a un'autorizzazione significa che essa è abilitata.
+* L'icona ![Lettura, rappresentata da un occhio](images/icon_read.svg) indica che l'utente dispone di un accesso in **Lettura** (sola lettura) per tale autorizzazione.
+* L'icona ![Scrittura, rappresentata da una matita](images/icon_write.svg) indica che l'utente dispone di un accesso in **Scrittura** (modifica, aggiunta o rimozione) per tale autorizzazione.
 
 ## Gestione degli utenti con la API REST Admin
 {: #usingadminapi}
@@ -751,8 +767,8 @@ Il seguente esempio mostra l'output di questo
 {
     "message": "Logged in",
     "name": {
-        "familyName": "*cognome*",
-        "givenName": "*nome*"
+        "familyName": "*last_name*",
+        "givenName": "*first_name*"
     }
 }
 ```
@@ -984,7 +1000,7 @@ Il seguente esempio mostra l'output di questo
  < connection: close
  < transfer-encoding: chunked
  < X-Time_Check: Proxy Time: 5612 msec
-```
+ ```
 {: screen}
 
 ### Rimozione di un utente
@@ -1023,7 +1039,7 @@ Il seguente esempio mostra l'output di questo
  < transfer-encoding: chunked
  < X-Time_Check: Proxy Time: 1922 msec
  <
-```
+ ```
 {: screen}
 
 
@@ -1032,7 +1048,7 @@ Il seguente esempio mostra l'output di questo
 
 Sono disponibili tre API che ti consentono di registrare o creare un nuovo servizio, di aggiornare un servizio e di eliminare un servizio.
 
-Tutte le API sono relative a <code>https://console.&lt;dominiosecondario&gt;.bluemix.net/</code>.
+Tutte le API sono relative a <code>https://console.&lt;subdomain&gt;.bluemix.net/</code>.
 
 <dl>
 <dt><strong>&lt;dominiosecondario&gt;</strong></dt>
@@ -1055,7 +1071,7 @@ POST /codi/v1/serviceBrokers
 ### Richiesta
 {: #registerrequest}
 
-*Tabella 7. Campi*
+*Tabella 8. Campi*
 
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
@@ -1136,7 +1152,7 @@ Utilizza i seguenti esempi di API e codice per aggiornare un servizio.
 ### Richiesta
 {: #updaterequest}
 
-*Tabella 8. Campi*
+*Tabella 9. Campi*
 
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
@@ -1208,7 +1224,7 @@ Content-Type: application/json
 
 Utilizza i seguenti esempi di API e codice per eliminare un servizio.
 
-*Tabella 9. Parametro*
+*Tabella 10. Parametro*
 
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|

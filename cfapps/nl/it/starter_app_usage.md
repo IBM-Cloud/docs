@@ -14,6 +14,7 @@ copyright:
 {:new_window: target="_blank"}
 
 *Ultimo aggiornamento: 12 gennaio 2016*
+{: .last-updated}
 
 # Utilizzo delle applicazioni starter
 {: #using_starter_applications}

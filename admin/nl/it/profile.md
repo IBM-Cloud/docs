@@ -17,7 +17,8 @@ copyright:
 
 # Impostazioni del profilo
 {: #usersettings}
-*Ultimo aggiornamento: 16 maggio 2016*
+Ultimo aggiornamento: 23 giugno 2016
+{: .last-updated}
 
 Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; **Account** &gt; **Profilo** per aggiornare le impostazioni del tuo profilo.
 {:shortdesc}

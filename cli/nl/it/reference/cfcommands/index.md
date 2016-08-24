@@ -16,7 +16,8 @@ copyright:
 
 # Comandi Cloud Foundry (cf)
 
-*Ultimo aggiornamento: 29 gennaio 2016*
+*Ultimo aggiornamento: 8 luglio 2016*
+{: .last-updated}
 
 Puoi utilizzare i comandi Cloud Foundry (cf) per gestire le tue applicazioni.
 {:shortdesc}
@@ -36,7 +37,7 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>L'URL dell'endpoint API Bluemix che devi specificare quando stabilisci una connessione a {{site.data.keyword.Bluemix_notm}}. Di norma, questo URL è https://api.{DomainName}.
+<dd>L'URL dell'endpoint API Bluemix che devi specificare quando stabilisci una connessione a {{site.data.keyword.Bluemix_notm}}. Di norma, questo URL è https://api.{DomainName}. 
 Se vuoi visualizzare l'URL dell'endpoint API che stai attualmente utilizzando, non hai bisogno di specificare questo parametro per il comando cf api.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Disabilita il processo di convalida SSL. L'utilizzo di questo parametro può causare problemi di sicurezza.</dd>
@@ -56,7 +57,7 @@ Presumi di avere una istanza per un'applicazione; nella colonna delle istanze de
 Esegue il bind di un'istanza del servizio
 esistente alla tua applicazione.
 ```
-cf bind-service nomeapplicazione istanza_servizio
+cf bind-service nome_applicazione istanza_servizio
 ```
 
 Ad esempio, se
@@ -113,7 +114,7 @@ cf create-space nome_spazio
 Elimina
 un'applicazione esistente.
 ```
-cf delete nomeapplicazione
+cf delete nome_applicazione
 ```
 <dl>
 <dt>nomeapplicazione</dt>
@@ -143,7 +144,7 @@ cf delete-space nome_spazio
 Visualizza
 gli eventi di runtime che sono correlati ad un'applicazione.
 ```
-cf events nomeapplicazione
+cf events nome_applicazione
 ```
 <dl>
 <dt>nomeapplicazione</dt>
@@ -168,6 +169,11 @@ comandi cf.</dd>
 ## cf login
 
 Ti fa accedere a {{site.data.keyword.Bluemix_notm}}.
+
+<!-- staging only for atlas 45 -->
+
+**Nota**: se stai eseguendo l'accesso con un ID federato, devi utilizzare il parametro SSO (single sign-on) per accedere. 
+
 ```
 cf login
 ```
@@ -181,6 +187,8 @@ Puoi utilizzare uno o più dei seguenti parametri quando immetti il comando cf l
 <dd>La tua password.</dd>
 <dd>*Importante:* se fornisci la tua password utilizzando il parametro *-p* sull'interfaccia riga di comando, la password potrebbe essere registrata nella cronologia della riga di comando. Per motivi di sicurezza, evita di fornire la password utilizzando il parametro
 -p. Immetti invece la password quando te lo chiede l'interfaccia riga di comando.</dd>
+<dt>*-sso*</dt>
+<dd>Devi utilizzare l'opzione SSO (single sign-on option) quando accedi con un ID federato. Questo parametro non è necessario quando accedi con un ID IBM. Se tenti di collegarti con un ID federato e non specifichi il parametro SSO, ti verrà rischiesto di includerlo. Utilizza la richiesta del parametro SSO per immettere la passcode monouso all'accesso.</dd>
 <dt>*-o*nome_organizzazione</dt>
 <dd>Il nome dell'organizzazione alla quale desideri effettuare l'accesso.</dd>
 <dt>*-s*nome_spazio</dt>
@@ -188,6 +196,8 @@ Puoi utilizzare uno o più dei seguenti parametri quando immetti il comando cf l
 <dt>*--skip-ssl-validation*</dt>
 <dd>Disabilita il processo di convalida SSL. L'utilizzo di questo parametro può causare problemi di sicurezza.</dd>
 </dl>
+
+<!-- staging only content for the sso parameter and note for federated ID atlas 45 work -->
 
 *Nota:* se fornisci la tua password nel parametro *-p* di questo comando, la tua password potrebbe essere registrata nel file di cronologia dei comandi della shell e potrebbe essere visibile ad altri utenti del sistema operativo locale.
 
@@ -200,7 +210,7 @@ STDOUT e STDERR di un'applicazione.
 cf logs nomeapplicazione
 ```
 <dl>
-<dt>nomeapplicazione</dt>
+<dt>nome_applicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 <dt>*--recent*</dt>
 <dd>Richiama i log recenti.</dd>
@@ -218,10 +228,10 @@ cf marketplace
 
 Distribuisce una nuova applicazione a Bluemix oppure aggiorna un'applicazione esistente in Bluemix.
 ```
-cf push nomeapplicazione 
+cf push nome_applicazione 
 ```
 <dl>
-<dt>nomeapplicazione</dt>
+<dt>nome_applicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 <dt>*-b*nome_pacchettodibuild</dt>
 <dd>Il nome del pacchetto di build. Il nome_pacchettodibuild può essere un pacchetto di build personalizzato in base al nome oppure un URL GIT, ad esempio `my-buildpack` o `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
@@ -232,29 +242,26 @@ esempio:</dd>
 cf push nomeapplicazione -c null
 ```</dd>
 <dd>Puoi anche utilizzare questa
-opzione per eseguire i file script. Ad
-                                    esempio:
+opzione per eseguire i file script. Per esempio:
 ```
 cf push nomeapplicazione -c “bash ./<run.sh>"
 ```</dd>
-<dt>*-f*percorso_manifest</dt>
+<dt>*-f* manifest_path</dt>
 <dd>Il percorso al file manifest. Il file manifest predefinito è manifest.yml sotto la directory root della tua applicazione.</dd>
-<dt>*-i*numero_istanze</dt>
+<dt>*-i* instance_number</dt>
 <dd>Il numero di istanze.</dd>
-<dt>*-k*limite_disco</dt>
-<dd>Il limite di disco per l'applicazione, ad esempio *256M*, *1024M*
-o *1G*.</dd>
-<dt>*-m*limite_memoria</dt>
-<dd>Il limite di memoria per l'applicazione, ad esempio *256M*, *1024M*
-o *1G*.</dd>
-<dt>*-n*nome_host</dt>
+<dt>*-k* disk_limit</dt>
+<dd>Il limite di disco per l'applicazione, ad esempio *256M*, *1024M* o *1G*.</dd>
+<dt>*-m* memory_limit</dt>
+<dd>Il limite di memoria per l'applicazione, ad esempio *256M*, *1024M* o *1G*.</dd>
+<dt>*-n* host_name</dt>
 <dd>Il nome host per l'applicazione, ad esempio *my-subdomain*.</dd>
-<dt>*-p*percorso_applicazione</dt>
+<dt>*-p* app_path</dt>
 <dd>Il percorso alla directory dell'applicazione o al file di archivio dell'applicazione.</dd>
-<dt>*-t*timeout</dt>
+<dt>*-t* timeout</dt>
 <dd>Il tempo massimo in secondi per l'avvio dell'applicazione. Altri timeout lato server potrebbero
 sovrascrivere questo valore.</dd>
-<dt>*-s* nomestack</dt>
+<dt>*-s* stackname</dt>
 <dd>Lo stack per l'esecuzione delle applicazioni. Uno stack è un file system precostruito che include il sistema operativo. Utilizza `cf stacks` per visualizzare gli stack disponibili in {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*--no-hostname*</dt>
 <dd>Associa il dominio di sistema Bluemix a questa applicazione.</dd>
@@ -273,19 +280,17 @@ sovrascrivere questo valore.</dd>
 Visualizza o modifica il numero di istanze,
 il limite di spazio su disco e il limite di memoria per un'applicazione.
 ```
-cf scale nomeapplicazione -i numero_istanze -k limite_disco -m limite_memoria
+cf scale nome_applicazione -i numero_istanze -k limite_disco -m limite_memoria
 ```
 <dl>
-<dt>nomeapplicazione</dt>
+<dt>nome_applicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
-<dt>*-i*numero_istanze</dt>
+<dt>*-i* instance_number</dt>
 <dd>Il numero di istanze</dd>
-<dt>*-k*limite_disco</dt>
-<dd>Il limite di disco per l'applicazione, ad esempio *256M*, *1024M*
-o *1G*.</dd>
-<dt>*-m*limite_memoria</dt>
-<dd>Il limite di memoria per l'applicazione, ad esempio *256M*, *1024M*
-o *1G*.</dd>
+<dt>*-k* disk_limit</dt>
+<dd>Il limite di disco per l'applicazione, ad esempio *256M*, *1024M* o *1G*.</dd>
+<dt>*-m* memory_limit</dt>
+<dd>Il limite di memoria per l'applicazione, ad esempio *256M*, *1024M* o *1G*.</dd>
 <dt>*-f*</dt>
 <dd>Forza il riavvio dell'applicazione senza che venga presentata alcuna richiesta.</dd>
 </dl>
@@ -327,10 +332,10 @@ cf stacks
 
 Arresta un'applicazione.
 ```
-cf stop nomeapplicazione
+cf stop nome_applicazione
 ```
 <dl>
-<dt>nomeapplicazione</dt>
+<dt>nome_applicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 </dl>
 
