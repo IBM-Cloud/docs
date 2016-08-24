@@ -11,9 +11,9 @@ copyright:
 # Authenticating users with Google credentials
 {: #google-auth}
 
-Last updated: 22 July 2016
+Last updated: 16 August 2016
 
-You can configure the {{site.data.keyword.amashort}} service to protect resources, using Google as an identity provider. Your mobile or web application users can then use their Google credentials for authentication.
+You can configure the {{site.data.keyword.amafull}} service to protect resources, using Google as an identity provider. Your mobile or web application users can then use their Google credentials for authentication.
 {:shortdesc}
 
 **Important:** You do not need to separately install the client SDK provided by Google. The Google SDK installs automatically by dependency managers when you configure the {{site.data.keyword.amashort}} client SDK.

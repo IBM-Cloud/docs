@@ -8,6 +8,9 @@ copyright:
 # Web アプリのカスタム認証
 {: #custom-web}
 
+*最終更新日: 2016 年 6 月 16 日*
+{: .last-updated}
+
 Web アプリにカスタム認証を追加します。
 
 ## 開始する前に
@@ -20,8 +23,7 @@ Web アプリにカスタム認証を追加します。
   userIdentity: {
   userName: <username>,
   displayName: <displayName>;
- };
-```
+ };```
 * {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
 
 
@@ -29,10 +31,12 @@ Web アプリにカスタム認証を追加します。
 ## カスタム認証用の {{site.data.keyword.amashort}} アプリの構成
 
 
-1. {{site.data.keyword.Bluemix_notm}} ダッシュボードでアプリを開きます。
+1. {{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。
 1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
 1. 「カスタム」タイルをクリックします。
 1. **カスタム・レルム**、**カスタム ID プロバイダー URL**、および **redirect_uri** を入力します。「保存」をクリックします。
+
+
 
 ## カスタム Web 認証用の {{site.data.keyword.amashort}} の使用
 
@@ -69,11 +73,12 @@ Web アプリにカスタム認証を追加します。
  redirect_uri = <redirect_uri>
  code = <authorization code>
  ```
-  `redirect_uri` パラメーターは、ステップ 1 の `redirect_uri` と一致している必要があります。許可コードはステップ 2 の要求で返されました。
+`redirect_uri` パラメーターは、ステップ 1 の `redirect_uri` と一致している必要があります。許可コードはステップ 2 の要求で返されました。
   
-  認可コードは最大 10 分間だけ有効であるため、この `POST` 要求を 10 分以内に送信するように注意してください。
+    認可コードは最大 10 分間だけ有効であるため、この `POST` 要求を 10 分以内に送信するように注意してください。
 
-`POST` 応答本体には、base64 でエンコードされた *access_token* および *id_token* が含まれます。
+`POST` 応答本体には、base64 でエンコードされた *access_token* および
+*id_token* が含まれます。
 
 ## 認証のテスト
 

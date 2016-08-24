@@ -13,7 +13,7 @@ copyright:
 # 为 {{site.data.keyword.mobilefoundation_short}} 服务器配置定制域
 {: #configcustomdomain}
 
-*上次更新时间：2016 年 6 月 15 日*
+*上次更新时间：2016 年 6 月 20 日*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}} 在 {{site.data.keyword.containerlong}} 上将 {{site.data.keyword.mfserver_short_notm}} 作为容器组供应。容器组将映射到域名基于 {{site.data.keyword.Bluemix_notm}} **区域**的 URL。您还可以配置自己的定制域。
@@ -25,9 +25,8 @@ copyright:
 
   |域 |  区域  |    
   |:----- | :----- |    
-  |`mybluemix.net` | 美国达拉斯  |    
-  |`eu-gb.mybluemix.net` | 英国伦敦  |    
-  |`au-syd.mybluemix.net`  | 澳大利亚悉尼 |  
+  |`mybluemix.net` | 美国南部 |    
+  |`eu-gb.mybluemix.net` | 英国  |    
 
 为了可以使用您自己的域，将需要执行以下步骤来配置定制域：
 

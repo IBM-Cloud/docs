@@ -1,4 +1,4 @@
----
+    ---
 
 copyright:
  years: 2015 2016
@@ -8,7 +8,8 @@ copyright:
 
 # Android-Anwendungen für den Empfang von Push-Benachrichtigungen aktivieren
 {: #tag_based_notifications}
-
+*Letzte Aktualisierung: 20. Juli 2016*
+{: .last-updated}
 
 Aktivieren Sie Android-Anwendungen für den Empfang von Push-Benachrichtigungen und für das Senden von Push-Benachrichtigungen an Ihre Geräte.
 
@@ -31,16 +32,14 @@ Das Push-SDK für mobile Bluemix®-Services kann mithilfe von Gradle hinzugefüg
 	```
 
 
-1. Fügen Sie die folgenden Abhängigkeiten zu Ihrer mobilen Anwendung hinzu. Mit den folgenden
-Zeilen wird das Push-Client-SDK von Bluemix™ Mobile Services und das Google Play Services-SDK zu Ihren Abhängigkeiten für den Kompilierungsbereich hinzugefügt.
+2. Fügen Sie die folgenden Abhängigkeiten zu Ihrer mobilen Anwendung hinzu. Mit den folgenden Zeilen wird das Push-Client-SDK der Bluemix™ Mobile-Services und das Google Play Services-SDK zu Ihren Abhängigkeiten für den Kompilierungsbereich hinzugefügt.
 
 	```
 	dependencies {
-	  compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:1.+'
-	  compile 'com.google.android.gms:play-services:7.8.0'
+	  compile 'com.google.android.gms:play-services:9.0.2' // Automatically pulls in version 2.0 core SDK3 compile group: 'com.ibm.mobilefirstplatform.clientsdk.android', name: 'push', version: '2.+', ext: 'aar', transitive: true
 	}  
 	```
-1. Fügen Sie die folgenden Berechtigungen in der Datei **AndroidManifest.xml** hinzu. Ein Beispielmanifest
+3. Fügen Sie die folgenden Berechtigungen in der Datei **AndroidManifest.xml** hinzu. Ein Beispielmanifest
 finden Sie in [Android helloPush Sample Application](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). Eine Gradle-Beispieldatei finden Sie unter [Sample Build Gradle file](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
 
 	```
@@ -56,17 +55,17 @@ finden Sie in [Android helloPush Sample Application](https://github.com/ibm-blue
 
 	Weitere Informationen zu Android-Berechtigungen finden Sie [hier](http://developer.android.com/guide/topics/security/permissions.html).
 
-1. Fügen Sie die Einstellungen für die Benachrichtigungsabsicht für die Aktivität hinzu. Mit dieser Einstellung wird die Anwendung gestartet, wenn der Benutzer im Benachrichtigungsbereich auf die empfangene Benachrichtigung klickt.
+4. Fügen Sie die Einstellungen für die Benachrichtigungsabsicht für die Aktivität hinzu. Mit dieser Einstellung wird die Anwendung gestartet, wenn der Benutzer im Benachrichtigungsbereich auf die empfangene Benachrichtigung klickt.
 
 	```
 	<intent-filter>  
-		<action android:name="<ihr_android-paketname.IBMPushNotification"/>   
+		<action android:name="<Your_Android_Package_Name.IBMPushNotification"/>   
 		<category  android:name="android.intent.category.DEFAULT"/>
 	</intent-filter>
 	```
 	**Hinweis**: Ersetzen Sie *ihr_android-paketname* in der obigen Aktion durch den Namen des Anwendungspakets, der in Ihrer Anwendung verwendet wird.
 
-1. Fügen Sie den Absichtsservice und Absichtsfilter von Google Cloud Messaging (GCM) für die Ereignisbenachrichtigungen des Typs RECEIVE hinzu.
+5. Fügen Sie den Absichtsservice und Absichtsfilter von Google Cloud Messaging (GCM) für die Ereignisbenachrichtigungen des Typs RECEIVE hinzu.
 
 	```
 	service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
@@ -100,7 +99,8 @@ Klicken Sie auf den Link **Mobile Optionen** in Ihrem Bluemix-Anwendungsdashboar
 
 ```
 // Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
-BMSClient.getInstance().initialize(getApplicationContext(), "applicationRoute","applicationGUID", bluemixRegion:"Location where your app Hosted");
+BMSClient.getInstance().initialize(getApplicationContext(), appRoute , appGuid, bluemixRegionSuffix);
+
 ```
 
 
@@ -127,11 +127,14 @@ Gibt den Standort an, an dem die App gehostet ist. Sie können einen von drei We
 MFPPush push = MFPPush.getInstance();
 push.initialize(getApplicationContext());
 ```
+**pushTenantId**
+
+Dies ist der eindeutige Schlüssel des Push Notifications-Service.
 
 ## Android-Geräte registrieren
 {: #android_register}
 
-Verwenden Sie die API `IMFPush.register()`, um das Gerät beim Push-Benachrichtigungsservice zu registrieren. Für die Registrierung bei Android-Geräten müssen Sie zunächst die GCM-Angaben (Google Cloud Messaging) im Bluemix-Dashboard für die Konfiguration des Push-Service hinzufügen. Weitere Informationen finden Sie im Abschnitt zur [Konfiguration von Berechtigungsnachweisen für Google Cloud Messaging](t_push_provider_android.html).
+Verwenden Sie die API `IMFPush.register()`, um das Gerät beim Push Notification-Service zu registrieren. Für die Registrierung bei Android-Geräten müssen Sie zunächst die GCM-Angaben (Google Cloud Messaging) im Bluemix-Dashboard für die Konfiguration des Push-Service hinzufügen. Weitere Informationen finden Sie im Abschnitt zur [Konfiguration von Berechtigungsnachweisen für Google Cloud Messaging](t_push_provider_android.html).
 
 Kopieren Sie die folgenden Code-Snippets und fügen Sie sie in Ihre mobile Android-Anwendung ein.
 
@@ -188,20 +191,22 @@ Nach dem Entwickeln Ihrer Anwendungen können Sie einfache Push-Benachrichtigung
 
 Senden Sie einfache Push-Benachrichtigungen.
 
-1. Wählen Sie unter **Zielgruppe auswählen** eine der folgenden Zielgruppen aus: **Alle Geräte** oder die Plattform **Nur iOS-Geräte** oder **Nur Android-Geräte**.
+1. Wählen Sie unter **Zielgruppe auswählen** eine der folgenden Zielgruppen aus:
+**Alle Geräte** oder die Plattform **Nur iOS-Geräte** oder
+**Nur Android-Geräte**. 
 
-	**Hinweis**: Wenn Sie die Option **Alle Geräte** auswählen, erhalten alle Geräte, die Push-Benachrichtigungen subskribiert haben, Ihre Benachrichtigung.
+	**Hinweis**: Wenn Sie die Option **Alle Geräte** auswählen, erhalten alle Geräte, die
+Push-Benachrichtigungen subskribiert haben, Ihre Benachrichtigung.
 
 	![Anzeige 'Benachrichtigungen'](images/tag_notification.jpg)
 
 2. Geben Sie in **Eigene Benachrichtigung erstellen** die gewünschte Nachricht ein und klicken Sie auf **Senden**.
 3. Überprüfen Sie, ob die Geräte Ihre Benachrichtigung empfangen haben.
 
-	Der folgende Screenshot zeigt ein Alertfeld bei der Verarbeitung einer Push-Benachrichtigung im Vordergrund eines Android- und iOS-Geräts.
+	Der folgende Screenshot zeigt ein Alertfeld bei der Verarbeitung einer Push-Benachrichtigung
+im Vordergrund auf einem Android-Gerät.
 
 	![Push-Benachrichtigung im Vordergrund auf einem Android-Gerät](images/Android_Screenshot.jpg)
-
-	![Push-Benachrichtigung im Vordergrund auf einem iOS-Gerät](images/iOS_Screenshot.jpg)
 
 	Der folgende Screenshot zeigt eine Push-Benachrichtigung im Hintergrund auf einem Android-Gerät.
 	![Push-Benachrichtigung im Hintergrund auf einem Android-Gerät](images/background.jpg)

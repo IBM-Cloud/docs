@@ -17,17 +17,18 @@ Mit den {{site.data.keyword.mobileanalytics_full}}-SDKs können Sie die mobile A
 
 1.  Vordefinierte Daten - Diese Kategorie umfasst Informationen zur allgemeinen Nutzung und zum Gerät, die auf alle Apps angewendet werden. Die Daten in dieser Kategorie werden in Gerätemetadaten (Betriebssystem und Gerätemodell) und Nutzungsdaten (aktive Benutzer und App-Sitzungen) unterteilt, aus denen Ausmaß, Häufigkeit und Dauer der App-Nutzung hervorgehen. Vordefinierte Daten werden nach der Initialisierung des {{site.data.keyword.mobileanalytics_short}}-SDKs in der App automatisch erfasst.
 2. Benutzerdefinierte Ereignisse - Diese Kategorie umfasst Daten, die Sie selbst definieren und die für die App spezifisch sind. Diese Daten stellen Ereignisse dar, die in der App auftreten, zum Beispiel Seitenansichten, das Antippen von Schaltflächen oder In-App-Käufe. Zusätzlich zum Initialisieren des {{site.data.keyword.mobileanalytics_short}}-SDKs in der App müssen Sie eine Codezeile für jedes benutzerdefinierte Ereignis hinzufügen, das Sie verfolgen möchten.
-3. Clientprotokollnachrichten - Diese Kategorie ermöglicht dem Entwickler das Hinzufügen von Codezeilen in der App, von denen benutzerdefinierte Nachrichten zur Erleichterung der Entwicklung und Fehlerbehebung protokolliert werden. Der Entwickler weist jeder Protokollnachricht eine Ebene für den Schweregrad bzw. die Ausführlichkeit zu und kann die Nachrichten danach anhand der zugewiesenen Ebene filtern; alternativ kann er konfigurieren, dass Nachrichten unter einer bestimmten Protokollebene ignoriert werden sollen, um Speicherplatz zu sparen. Wenn Sie Clientprotokolldaten erfassen möchten, müssen Sie das {{site.data.keyword.mobileanalytics_short}}-SDK mit der App initialisieren und eine Codezeile für jede Protokollnachricht hinzufügen.
+3. Clientprotokollnachrichten - Diese Kategorie ermöglicht dem Entwickler das Hinzufügen von Codezeilen in der App, von denen benutzerdefinierte Nachrichten zur Erleichterung der Entwicklung und Fehlerbehebung protokolliert werden. Der Entwickler weist jeder Protokollnachricht eine Ebene für den Schweregrad bzw. die Ausführlichkeit zu und kann die Nachrichten danach anhand der zugewiesenen Ebene filtern; alternativ kann er konfigurieren, dass Nachrichten auf einer niedrigeren Ebene einer bestimmten Protokollebene ignoriert werden sollen, um Speicherplatz zu sparen. Wenn Sie Clientprotokolldaten erfassen möchten, müssen Sie das {{site.data.keyword.mobileanalytics_short}}-SDK mit der App initialisieren und eine Codezeile für jede Protokollnachricht hinzufügen.
 
 Derzeit sind SDKs für Android, iOS und WatchOS verfügbar.
 
-## Wert für Clientschlüssel angeben
+## Eigenen Zugriffsschlüssel für Serviceberechtigungsnachweise ermitteln
 {: #analytics-clientkey}
 
-Geben Sie einen Wert für den **Clientschlüssel** an, bevor Sie das Client-SDK konfigurieren. Der Clientschlüssel ist für die Initialisierung des Client-SDKs erforderlich.
+Geben Sie einen Wert für den **Zugriffsschlüssel** an, bevor Sie das Client-SDK einrichten. Der Zugriffsschlüssel ist für die Initialisierung des Client-SDKs erforderlich.
+
 1. Öffnen Sie das Dashboard für den {{site.data.keyword.mobileanalytics_short}}-Service.
-2. Klicken Sie in der Registerkarte für die API-Schlüssel auf das Schraubenschlüsselsymbol.
-3. Notieren Sie in der Registerkarte für API-Schlüssel den Wert für den Clientschlüssel.
+2. Klicken Sie auf die Registerkarte **Serviceberechtigungsnachweise**.
+3. Kopieren Sie den Wert für Ihren Zugriffsschlüssel.
 
 
 ## Android-App zum Erfassen der Analysedaten initialisieren
@@ -35,7 +36,7 @@ Geben Sie einen Wert für den **Clientschlüssel** an, bevor Sie das Client-SDK 
 
 Initialisieren Sie die Anwendung, damit Protokolle an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden können.
 
-1. Importieren Sie das Client-SDK durch Hinzufügen der folgenden `import`-Anweisung ganz oben in der Projektdatei:
+1. Importieren Sie das Client-SDK durch Hinzufügen der folgenden `import`-Anweisung oben in der Projektdatei:
 
   ```
   import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
@@ -61,7 +62,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Initialisieren Sie Analytics mithilfe des Android-Anwendungsobjekts und legen Sie dafür den Namen der Anwendung fest. Außerdem benötigen Sie den Wert für den [**Clientschlüssel**](#analytics-clientkey).
+3. Initialisieren Sie Analytics mithilfe des Android-Anwendungsobjekts und legen Sie dafür den Namen der Anwendung fest. Außerdem benötigen Sie den Wert für den [**Zugriffsschlüssel**](#analytics-clientkey).
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -76,7 +77,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
 Initialisieren Sie die Anwendung, damit Protokolle an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden können. Das Swift-SDK ist für iOS und WatchOS verfügbar.
 
-1. Importieren Sie die Frameworks `BMSCore` und `BMSAnalytics` durch Hinzufügen der folgenden `import`-Anweisungen ganz oben in der Projektdatei `AppDelegate.swift`:
+1. Importieren Sie die Frameworks `BMSCore` und `BMSAnalytics` durch Hinzufügen der folgenden `import`-Anweisungen oben in der Projektdatei `AppDelegate.swift`:
 
   ```Swift
   import BMSCore
@@ -99,7 +100,7 @@ Initialisieren Sie die Anwendung, damit Protokolle an den {{site.data.keyword.mo
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Initialisieren Sie Analytics durch Festlegen des Namens der mobilen Anwendung. Außerdem benötigen Sie den Wert für den [**Clientschlüssel**](#analytics-clientkey).
+3. Initialisieren Sie Analytics durch Festlegen des Namens der mobilen Anwendung. Außerdem benötigen Sie den Wert für den [**Zugriffsschlüssel**](#analytics-clientkey).
 
   Der Anwendungsname wird als Filter für die Suche nach Clientprotokollen im {{site.data.keyword.mobileanalytics_short}}-Dashboard verwendet. Wenn Sie plattformübergreifend (zum Beispiel für Android und iOS) denselben Anwendungsnamen verwenden, können Sie unter einem Namen unabhängig von der Plattform, von der die Protokolle stammen, alle Protokolle zu dieser Anwendung anzeigen.
 
@@ -179,7 +180,7 @@ Analytics.enabled = false
 // Aufzeichnung der Nutzungsanalysedaten aktivieren
 Analytics.enabled = true
 
-// Aufgezeichnete Nutzungsanalysedaten an {{site.data.keyword.mobileanalytics_short}}-Service senden
+// Aufgezeichnete Nutzungsanalysedaten an den {{site.data.keyword.mobileanalytics_short}}-Service senden
 Analytics.send()
 ```
 
@@ -287,8 +288,7 @@ logger2.info("info message");
 {: ios-logger-sample}
 
 ```
-// Protokollfunktion zum Speichern der Protokolle auf dem Gerät konfigurieren, sodass sie später
-// an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden können
+// Protokollfunktion zum Speichern der Protokolle auf dem Gerät konfigurieren, sodass sie später an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden können
 // Standardmäßig inaktiviert; zum Aktivieren auf true setzen
 Logger.logStoreEnabled = true
 
@@ -506,4 +506,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## API-Referenz
 {: #api}
-* [REST-API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [REST-API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

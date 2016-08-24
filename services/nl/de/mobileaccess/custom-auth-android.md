@@ -5,9 +5,14 @@ copyright:
 
 ---
 
-# {{site.data.keyword.amashort}}-Client-SDK für Android konfigurieren
+# Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Android-App konfigurieren
 {: #custom-android}
-Konfigurieren Sie Ihre Android-Anwendung, die mit der angepassten Authentifizierung arbeitet, zur Verwendung des {{site.data.keyword.amashort}}-Client-SDKs und verbinden Sie Ihre Anwendung mit {{site.data.keyword.Bluemix}}.
+
+*Letzte Aktualisierung: 17. Juli 2016*
+{: .last-updated}
+
+
+Konfigurieren Sie Ihre Android-Anwendung mit angepasster Authentifizierung zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK und verbinden Sie Ihre Anwendung mit {{site.data.keyword.Bluemix}}.
 
 ## Vorbereitungen
 {: #before-you-begin}
@@ -21,19 +26,18 @@ Sie müssen über eine Ressource verfügen, die durch eine Instanz des {{site.da
 
 ## {{site.data.keyword.amashort}}-Client-SDK initialisieren
 {: #custom-android-initialize}
-1. Öffnen Sie in Ihrem Android-Projekt in Android Studio die Datei `build.gradle` Ihres App-Moduls.
-<br/>**Tipp:** Ihr Android-Projekt enthält möglicherweise zwei Dateien `build.gradle`: eine für das Projekt und eine für das Anwendungsmodul. Verwenden Sie die Datei für das Anwendungsmodul.
+1. Öffnen Sie in Android Studio in Ihrem Android-Projekt die Datei `build.gradle` Ihres App-Moduls (nicht die Datei `build.gradle` des Projekts).
 
-1. Suchen Sie in der Datei `build.gradle` den Abschnitt `dependencies` und prüfen Sie, ob die folgende Abhängigkeit 'compile' vorhanden ist. Fügen Sie diese Abhängigkeit hinzu, falls sie noch nicht vorhanden ist.
+1. Suchen Sie in der Datei `build.gradle` den Abschnitt `dependencies` und prüfen Sie, ob die folgende Abhängigkeit vorhanden ist: 
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
         name:'core',
         version: '1.+',
         ext: 'aar',
         transitive: true
-    	// weitere Abhängigkeiten  
+    	// andere Abhängigkeiten
 	}
 	```
 
@@ -53,8 +57,11 @@ Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Rou
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");					
-	```
+					"applicationGUID",
+					BMSClient.REGION_UK);
+```
+Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region.
+
 
 ## Schnittstelle 'AuthenticationListener'
 {: #custom-android-authlistener}
@@ -177,14 +184,14 @@ Verwenden Sie den Wert für *realmName*, den Sie im {{site.data.keyword.amashort
 
 ## Authentifizierung testen
 {: #custom-android-testing}
-Nach der Initialisierung des Client-SDK und der Registrierung der angepassten Schnittstelle 'AuthenticationListener' können Sie mit dem Senden von Anforderungen an Ihr mobiles Back-End beginnen.
+Nach der Initialisierung des Client-SDK und der Registrierung der angepassten Schnittstelle 'AuthenticationListener' können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen.
 
 ### Vorbereitungen
 {: #custom-android-testing-before}
 Sie müssen eine Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, sowie eine Ressource, die durch {{site.data.keyword.amashort}} geschützt wird, am Endpunkt `/protected` haben.
 
 
-1. Senden Sie eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung in Ihrem Browser, indem Sie die Adresse `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`). 
+1. Senden Sie eine Anforderung an den geschützten Endpunkt (`{applicationRoute}/protected`) Ihrer mobilen Back-End-Anwendung über Ihren Browser, zum Beispiel `http://my-mobile-backend.mybluemix.net/protected`.
 
 1. Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
 

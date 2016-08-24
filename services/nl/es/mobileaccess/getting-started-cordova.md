@@ -9,20 +9,20 @@ copyright:
 # Configuración del plug-in de Cordova
 {: #getting-started-cordova}
 
-*Última actualización: 25 de mayo de 2016*
+*Última actualización: 17 de julio de 2016*
 {: .last-updated}
 
-Instrumente su aplicación de Cordova con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
+Instrumente su aplicación de Cordova con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos y no protegidos.
 {:shortdesc}
 
 ## Antes de empezar
 {: #before-you-begin}
-Debe tener lo siguiente: 
-* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de un programa de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
+Debe tener lo siguiente:
+* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de una aplicación de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
 
 * Una aplicación de Cordova o un proyecto existente. Para obtener más información sobre la configuración de aplicaciones de Cordova, consulte el [sitio web de Cordova](https://cordova.apache.org/).
 
-## Instalación del plug-in de Cordova para {{site.data.keyword.amashort}}
+## Instalación del plug-in de Cordova de {{site.data.keyword.amashort}}
 {: #getting-started-cordova-plugin}
 
 El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in de Cordova que incluye los SDK del cliente de {{site.data.keyword.amashort}} nativos. Se distribuye con la CLI (interfaz de línea de mandatos) y `npmjs`, un repositorio de plug-ins para proyectos de Cordova. La CLI de Cordova descarga los plug-ins automáticamente desde los repositorios y los pone a disposición de la aplicación de Cordova.
@@ -64,7 +64,7 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Configure la plataforma para Android, iOS o ambos.
+1. Configure la plataforma para Android, iOS, o ambos.
 
 	* **Android**
 
@@ -78,17 +78,17 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 
 		Configure el proyecto Xcode del siguiente modo para evitar errores de compilación.
 
-		1. Utilice la versión más reciente de Xcode para abrir el archivo xcode.proj en el directorio &lt;*nombre_app*&gt;/platforms/ios.
+		1. Utilice la versión más reciente de Xcode para abrir el archivo `xcode.proj` en el directorio `<nombre_app>/platforms/ios`.
 
 		**Importante:** si recibe el mensaje "Convertir a última sintaxis de Swift", pulse Cancelar.
 
-		2. Vaya a **Valores de compilación > Compilador de Swift - Generación de código > Cabecera puente de Objective-C** y añada la siguiente vía de acceso:
+		2. Vaya a **Valores de compilación > Compilador de Swift - Generación de código > Cabecera puente de Objective-C**, y añada la siguiente vía de acceso:
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. Vaya a **Valores de compilación > Enlazar > Vías de acceso de búsqueda de Runpath** y añada los siguientes parámetros de Frameworks:
+		3. Vaya a **Valores de compilación > Enlazar > Vías de acceso de búsqueda de Runpath**, y añada el siguiente parámetro de Frameworks:
 
 			```
 			@executable_path/Frameworks
@@ -115,18 +115,18 @@ Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, debe inicial
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
 
-## Cómo realizar una solicitud al programa de fondo móvil
+## Cómo realizar una solicitud a la aplicación de programa de fondo móvil
 {: #getting-started-request}
 
-Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, puede empezar a realizar solicitudes a la aplicación de programa de fondo móvil.
 
-1. Intente enviar una solicitud al punto final protegido del nuevo programa de fondo móvil. En el navegador, abra el siguiente URL: `{applicationRoute}/protected`. Por ejemplo:
+1. Intente enviar una solicitud a un punto final protegido de la nueva aplicación de programa de fondo móvil. En el navegador, abra el siguiente URL: `{applicationRoute}/protected`. Por ejemplo:
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected
 	```
 
-	El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se accede a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
+	El punto final `/protected` de una aplicación de programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se accede a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
 
 1. Utilice la aplicación de Cordova para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
 
@@ -136,7 +136,7 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
 	}
 
 	var failure = function(error){
-		console.log("failure", error);
+	console.log("failure", error);
 	}
 
 	var request = new MFPRequest("/protected", MFPRequest.GET);

@@ -5,8 +5,13 @@ copyright:
 
 ---
 
-# Configuration du SDK client de {{site.data.keyword.amashort}} pour Cordova
+# Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}} Cordova
 {: #custom-cordova}
+
+*Dernière mise à jour : 17 juillet 2016*
+{: .last-updated}
+
+
 Configurez votre application Cordova qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amashort}} client SDK et connectez-la à {{site.data.keyword.Bluemix}}.
 
 

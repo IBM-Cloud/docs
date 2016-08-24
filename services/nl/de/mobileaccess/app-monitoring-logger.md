@@ -127,7 +127,9 @@ Logger logger2 = Logger.getInstance("logger2");
 
 // Nachrichten mit unterschiedlichen Stufen protokollieren
 logger1.debug("debug message");
-logger2.info("info message");// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
+logger2.info("info message");
+
+// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
 Logger.send();
 ```
 
@@ -198,7 +200,9 @@ var logger2 = MFPLogger.getInstance("logger2");
 
 // Nachrichten mit unterschiedlichen Stufen protokollieren
 logger1.debug("debug message");
-logger2.info("info message");// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
+logger2.info("info message");
+
+// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
 MFPLogger.send(success, failure);
 ```
 

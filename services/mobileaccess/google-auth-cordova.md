@@ -4,15 +4,17 @@ copyright:
   years: 2015, 2016
 
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
 
 # Enabling Google authentication for Cordova apps
 {: #google-auth-cordova}
 
 
-Last updated: 21 July 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
-To configure Cordova applications for Google authentication integration you must make changes in the native code of the Cordova application (Java, Objective-C, or Swift). Each platform must be configured separately. Use the native development environment to make changes in the native code, for example, in Android Studio or Xcode.
+To configure your {{site.data.keyword.amafull}} Cordova applications for Google authentication integration,  you must make changes in the native code of the Cordova application (Java, Objective-C, or Swift). Each platform must be configured separately. Use the native development environment to make changes in the native code, for example, in Android Studio or Xcode.
 
 ## Before you begin
 {: #before-you-begin}
@@ -20,8 +22,8 @@ You must have:
 * A Cordova project that is instrumented with {{site.data.keyword.amashort}} client SDK.  For more information, see  [Setting up the Cordova plug-in](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
 * (optional) Get familiar with the following sections:
-   * [Enabling Google authentication in Android apps](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
-   * [Enabling Google authentication in iOS apps](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
+   * [Enabling Google authentication for Android apps](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
+   * [Enabling Google authentication for iOS apps](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
 
 
 ## Configuring the Android Platform
@@ -69,6 +71,7 @@ Add this line to the `application:openURL:sourceApplication:annotation` method o
 [[ NSNotificationCenter defaultCenter] postNotification:
 		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
 ```
+{: codeblock}
 
 ## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #google-auth-cordova-initialize}
@@ -78,8 +81,25 @@ Use the following JavaScript code in your Cordova application to initialize the 
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
 ```
+{: codeblock}
 
-Replace *applicationRoute* and *applicationGUID* values with the **Route** and **App GUID** values that you obtained from **Mobile Options** section of your application on the dashboard.
+Replace the `applicationRoute` and `applicationGUID` values with the application **Route** and **AppGuid** values. You can find these values by clicking the **Mobile Options** button from within the application page on the dashboard.
+	
+
+
+
+##Initializing the {{site.data.keyword.amashort}} AuthorizationManager
+Use the following JavaScript code in your Cordova application to initialize the {{site.data.keyword.amashort}} AuthorizationManager.
+```JavaScript
+MFPAuthorizationManager.initialize("tenantId");
+```
+{: codeblock}
+
+Replace the `tenantId` value with the {{site.data.keyword.amashort}} service `tenantId`. This value you can find by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+
+
+
+
 
 ## Testing the authentication
 {: #google-auth-cordova-test}
@@ -106,11 +126,13 @@ You must have a back-end application protected by {{site.data.keyword.amashort}}
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 	request.send(success, failure);
 	```
+{: codeblock}
 
 
 1. Run your application. The Google login screen displays.
 
 	![Google login screen](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Google login screen](images/ios-google-login.png)
+	
 	This screen might look slightly different if you do not have the Facebook app installed on your device, or if you are not currently logged in to Facebook.
 1. By clicking **OK** you are authorizing {{site.data.keyword.amashort}} to use your Google user identity for authentication purposes.
 

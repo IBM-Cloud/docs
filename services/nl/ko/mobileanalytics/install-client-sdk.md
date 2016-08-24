@@ -5,8 +5,7 @@ copyright:
 
 ---
 
-# {{site.data.keyword.mobileanalytics_short}} 설치
-클라이언트 SDK
+# {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK 설치
 {: #mobileanalytics_sdk}
 *마지막 업데이트 날짜: 2016년 4월 21일*
 {: .last-updated}
@@ -29,7 +28,7 @@ copyright:
 3. `build.gradle` 파일의 `Dependencies` 섹션을 찾아서 다음과 같이 {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK에 대한 컴파일 종속성을 추가하십시오.
 
   ```Gradle
-compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
       name:'analytics',
       version: '1.+',
       ext: 'aar',
@@ -78,21 +77,19 @@ Xcode를 올바르게 설정했는지 확인하십시오. iOS 개발 환경을 �
 1. CocoaPods이 설치되지 않은 경우, 다음을 실행하십시오.
 
     ```
-    sudo gem install cocoapods
+sudo gem install cocoapods
     ```
     {: codeblock}
 
-2. 아직 CocoaPods에 대한 작업공간을 초기화하지 않은 경우, 프로젝트의 루트 디렉토리에서 `pod init` 명령을 실행하십시오. 그러면 CocoaPods이 Xcode 프로젝트에 대한 종속성을 정의하는 `Podfile` 파일을 작성합니다.
+2. 아직 CocoaPods에 대한 작업공간을 초기화하지 않은 경우, Xcode 프로젝트의 루트 디렉토리에서 `pod init` 명령을 실행하십시오. 그러면 CocoaPods이 Xcode 프로젝트에 대한 종속성을 정의하는 `Podfile` 파일을 작성합니다.
 
 3. `BMSAnalytics` 팟을 Podfile 내의 대상에 추가하십시오. 예를 들어, 다음과 같습니다.
 
 	### iOS
 
   ```
-  use_frameworks!
-
-  target 'MyApp' do
-platform :ios, '8.0'
+use_frameworks!target 'MyApp' do
+     platform :ios, '8.0'
      pod 'BMSAnalytics'
   end
   ```
@@ -107,8 +104,9 @@ platform :ios, '8.0'
 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)를 사용하여 프로젝트에 프레임워크를 추가하십시오.
 
 1. `BMSAnalytics` 프레임워크를 Cartfile에 추가하십시오.
+  
   ```
-  github "ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"
+github "ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"
   ```
 2. `carthage update` 명령을 실행하십시오. 빌드가 완료되면 `BMSAnalytics.framework`, `BMSCore.framework` 및 `BMSAnalyticsAPI.framework`를 Xcode 프로젝트로 끄십시오.
 3. [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 사이트의 지시사항에 따라 통합을 완료하십시오.
@@ -121,4 +119,4 @@ platform :ios, '8.0'
 
 ## API 참조
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

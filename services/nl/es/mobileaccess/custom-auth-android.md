@@ -5,8 +5,13 @@ copyright:
 
 ---
 
-# Configuración del SDK del cliente de {{site.data.keyword.amashort}} para Android
+# Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} Android
 {: #custom-android}
+
+*Última actualización: 17 de julio de 2016*
+{: .last-updated}
+
+
 Configure su aplicación de Android con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amashort}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.
 
 ## Antes de empezar
@@ -21,10 +26,9 @@ Debe tener un recurso que esté protegido por una instancia del servicio de {{si
 
 ## Inicialización del SDK del cliente de {{site.data.keyword.amashort}}
 {: #custom-android-initialize}
-1. En el proyecto de Android en Android Studio, abra el archivo `build.gradle` del módulo de la app.
-<br/>**Sugerencia:** es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el proyecto y para el módulo de la aplicación. Utilice el archivo del módulo de la aplicación.
+1. En el proyecto de Android en Android Studio, abra el archivo `build.gradle` del módulo de la app (no el proyecto `build.gradle`).
 
-1. En el archivo `build.gradle`, busque la sección `dependencies` y compruebe la siguiente dependencia de compilación. Añada esta dependencia si todavía no existe.
+1. En el archivo `build.gradle`, busque la sección `dependencies` y compruebe que exista la siguiente dependencia:
 
 	```Gradle
 	dependencies {
@@ -33,7 +37,7 @@ Debe tener un recurso que esté protegido por una instancia del servicio de {{si
         version: '1.+',
         ext: 'aar',
         transitive: true
-    	// otras dependencias  
+    	// other dependencies  
 	}
 	```
 
@@ -53,13 +57,16 @@ Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e *
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");					
-	```
+					"applicationGUID",
+					BMSClient.REGION_UK);
+```
+Sustituya el `BMSClient.REGION_UK` con la región adecuada.					
+	
 
 ## Interfaz AuthenticationListener
 {: #custom-android-authlistener}
 
-El SDK del cliente de {{site.data.keyword.amashort}} proporciona la interfaz `AuthenticationListener` para poder implementar un flujo de autenticación personalizada. La interfaz `AuthenticationListener` expone tres métodos a los que se llama en distintas fases del proceso de autenticación.
+El SDK del cliente de {{site.data.keyword.amashort}} proporciona la interfaz `AuthenticationListener` para poder implementar un flujo de autenticación personalizada. La interfaz `AuthenticationListener` expone tres métodos a los que se llama en distintas fases durante el proceso de autenticación.
 
 ### Método onAuthenticationChallengeReceived
 {: #custom-onAuth}
@@ -176,14 +183,14 @@ Utilice el valor de *realmName* que indicó en el panel de control de {{site.dat
 
 ## Prueba de autenticación
 {: #custom-android-testing}
-Después de inicializar el SDK del cliente y registrar una AuthenticationListener personalizada, puede empezar a realizar solicitudes al programa de fondo móvil. 
+Después de inicializar el SDK del cliente y registrar una AuthenticationListener personalizada, puede empezar a realizar solicitudes a la aplicación de fondo móvil.
 
 ### Antes de empezar
 {: #custom-android-testing-before}
 Debe tener una aplicación que se haya creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y que disponga de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`.
 
 
-1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`. 
+1. Envíe una solicitud al punto final protegido (`{applicationRoute}/protected`) de la aplicación de fondo móvil del navegador, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`.
 
 1. El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
 

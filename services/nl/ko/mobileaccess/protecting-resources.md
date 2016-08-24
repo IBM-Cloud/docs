@@ -7,10 +7,10 @@ copyright:
 
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.amashort}} 서비스로 백엔드 자원 보호
+# {{site.data.keyword.amashort}} 서비스로 백엔드 리소스 보호
 {: #protecting-resources}
 
-*마지막 업데이트 날짜: 2016년 4월 30일*
+*마지막 업데이트 날짜: 2016년 7월 17일*
 {: .last-updated}
 
 
@@ -19,7 +19,7 @@ copyright:
 
 ## 시작하기 전에
 {: #before-you-begin}
-시작하기 전에 Node.js 서비스를 작성하십시오.
+시작하기 전에, {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션에 Node.js 서비스가 있는지 확인하십시오. 
 
 
 ## 권한 필터
@@ -29,7 +29,7 @@ copyright:
 {: #auth-header}
 수신 요청의 권한 헤더는 운반자, 액세스 토큰 및 ID 토큰 세 가지로 구성되며 공백으로 구분됩니다. `ID 토큰`이 선택사항인 반면 `액세스 토큰`은 필수 컴포넌트입니다. 
 
-수신 권한 헤더는 각각의 권한 필터에서 처리합니다. 필터는 액세스 토큰 및 ID 토큰 서명, 만기 날짜 및 구조 무결성의 유효성을 검사합니다. 유효성 검사에 통과하면 보안 컨텍스트 오브젝트가 요청 오브젝트에 추가됩니다. 각 API를 사용하여 보안 컨텍스트에 대한 참조를 가져올 수 있습니다. 
+수신 권한 헤더는 각각의 권한 필터에서 처리합니다. 필터는 액세스 토큰 및 ID 토큰 서명, 만기 날짜 및 구조 무결성의 유효성을 검사합니다. 유효성 검사에 통과하면 보안 컨텍스트 오브젝트가 요청 오브젝트에 추가됩니다. 관련 API를 사용하여 보안 컨텍스트에 대한 참조를 가져올 수 있습니다. 
 
 보안 컨텍스트에는 제목, 사용자, 디바이스 및 다음 구조로 저장된 애플리케이션 정보가 포함되어 있습니다. 
 ```JSON
@@ -59,6 +59,6 @@ copyright:
 
 ## 다음 단계
 {: #next-steps}
-* [Node.js 자원 보호](protecting-resources-nodejs.html)
-* [Liberty for Java&trade; 자원 보호](protecting-resources-java.html)
+* [Node.js 리소스 보호](protecting-resources-nodejs.html)
+* [Liberty for Java&trade; 리소스 보호](protecting-resources-java.html)
 * [로컬 개발](protecting-resources-local.html)

@@ -6,10 +6,10 @@ copyright:
 ---
 {:shortdesc: .shortdesc}
 
-# iOS Objective-C SDK のセットアップ (非推奨)
+# iOS Objective-C SDK のセットアップ
 {: #getting-started-ios}
 
-*最終更新日: 2016 年 6 月 14 日*
+*最終更新日: 2016 年 7 月 17 日*
 {: .last-updated}
 
 iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
@@ -20,7 +20,11 @@ iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し�
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
+
+
+
+
 * Xcode プロジェクト。  
 
 
@@ -35,10 +39,12 @@ iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し�
 1. 端末を開き、**pod --version** コマンドを実行します。既に CocoaPods がインストールされている場合は、バージョン番号が表示されます。次のセクションにスキップして SDK をインストールできます。
 
 1. CocoaPods をインストールしていない場合は、以下を実行します。
-
 ```
-sudo gem install cocoapods```
-詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。### CocoaPods を使用した {{site.data.keyword.amashort}} Client SDK のインストール
+sudo gem install cocoapods
+```
+詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。
+
+### CocoaPods を使用した {{site.data.keyword.amashort}} Client SDK のインストール
 {: #install-sdk-cocoapods}
 
 1. 端末で、iOS プロジェクトのルート・ディレクトリーにナビゲートします。
@@ -67,15 +73,14 @@ sudo gem install cocoapods```
 1. 以下のヘッダーを追加することで、{{site.data.keyword.amashort}} Client SDK を使用するクラスに `IMFCore` フレームワークをインポートします。
 
 	**Objective-C:**
-	 ```Objective-C
-	#import <IMFCore/IMFCore.h>
-	```
-
-
-	**Swift:**
 	
+	```Objective-C
+	  #import <IMFCore/IMFCore.h>
+	
+	```
+	
+	**Swift:**
 	{{site.data.keyword.amashort}} Client SDK は Objective-C によって実装されます。以下の手順に従って、Swift プロジェクトにブリッジング・ヘッダーを追加する必要がある場合があります。
-
 	1. Xcode 内のプロジェクトを右クリックし、「**New File..**」を選択します。
 	1. 「**iOS Source**」カテゴリーから「**Header file**」をクリックします。このファイルに `BridgingHeader.h` という名前を付けます。
 	1. 次の行をブリッジング・ヘッダーに追加します。`#import <IMFCore/IMFCore.h>`
@@ -83,7 +88,7 @@ sudo gem install cocoapods```
 	1. `Objective-C Bridging Header` を探します。
 	1. 値を、`BridgingHeader.h` ファイルのロケーション (例えば、`$(SRCROOT)/MyApp/BridgingHeader.h`) に設定します。
 	1. プロジェクトをビルドすることで、Xcode によってご使用のブリッジング・ヘッダーが選択されることを確認してください。失敗メッセージは表示されないはずです。
-
+	
 1. 以下のコードを使用して、{{site.data.keyword.amashort}} Client SDK を初期化します。初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。<br/>
 *applicationRoute* および *applicationGUID* は、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**の値に置換します。
 
@@ -94,12 +99,9 @@ sudo gem install cocoapods```
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-
-
 	**Swift:**
-
 	```Swift
-IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
+ 		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
 ## モバイル・バックエンドへの要求の実行

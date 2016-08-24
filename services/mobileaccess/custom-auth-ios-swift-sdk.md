@@ -9,11 +9,11 @@ copyright:
 
 {: #custom-ios}
 
-Last updated: 01 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 
-Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.  The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves on the functionality provided by the existing Mobile Client Access Objective-C SDK.
+Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amafull}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.  The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves on the functionality provided by the existing Mobile Client Access Objective-C SDK.
 
 **Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
 
@@ -33,7 +33,7 @@ You must have a resource that is protected by an instance of the {{site.data.key
 
  1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
- 1. Click **Mobile Options** and take note of **Route** (*applicationRoute*) and **App GUID** (*applicationGUID*). You need these values when you initialize the SDK.
+ 1. Click **Mobile Options** and take note of **Route** (*applicationRoute*) and **AppGuid** (*applicationGUID*). You need these values when you initialize the SDK.
 
  1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}} dashboard loads.
 
@@ -53,7 +53,7 @@ You must have a resource that is protected by an instance of the {{site.data.key
 
 Initialize the SDK by passing the `applicationRoute`and `applicationGUID` parameters. A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate
 
-1. Get your application parameter values. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `applicationRoute` and `applicationGUID` values are displayed in the **Route** and **App GUID** fields.
+1. Get your application parameter values. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `applicationRoute` and `applicationGUID` values are displayed in the **Route** and **AppGuid** fields.
 
 1. Import the required frameworks in the class where you want to use {{site.data.keyword.amashort}} client SDK.
 
@@ -63,17 +63,13 @@ Initialize the SDK by passing the `applicationRoute`and `applicationGUID` parame
  import BMSSecurity
 ```
 
-1. Initialize the {{site.data.keyword.amashort}} client SDK, change the authorization manager to be MCAAuthorizationManager, and define an authentication delegate and register it. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. 
-
-  Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the Account and Support widget.
-  <!--upper-left corner of the -->
-
-  For `<yourProtectedRealm>`, use the **Realm name** you defined in the **Custom** tile of {{site.data.keyword.amashort}} dashboard.
+1. Initialize the {{site.data.keyword.amashort}} client SDK, change the authorization manager to the  `MCAAuthorizationManager`, and define and register an authentication delegate.
 
  ```Swift
  let backendURL = "<applicationRoute>"
  let backendGUID = "<applicationGUID>"
  let customRealm = "<yourProtectedRealm>"
+ let tenantId = "<MCAServiceTenantId>"
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
@@ -102,7 +98,7 @@ Initialize the SDK by passing the `applicationRoute`and `applicationGUID` parame
 
   let delegate = MyAuthDelegate()
   let mcaAuthManager = MCAAuthorizationManager.sharedInstance
-
+  mcaAuthManager.initialize(tenantId: tenantId)
  do {
       try mcaAuthManager.registerAuthenticationDelegate(delegate, realm: customRealm)
   } catch {
@@ -112,6 +108,16 @@ Initialize the SDK by passing the `applicationRoute`and `applicationGUID` parame
  }   
  ```
 
+In the code:
+ * Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **AppGuid** that you obtained from **Mobile   Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. 
+
+* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the Account and Support widget.
+
+* Replace `<yourProtectedRealm>` with the **Realm name** value you defined in the **Custom** tile of {{site.data.keyword.amashort}} dashboard.
+  
+* Replace `<MCAServiceTenantId>` with the `tenantId` value. You can find this value by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+   
+  
 ## Testing the authentication
 {: #custom-ios-testing}
 

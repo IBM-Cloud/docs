@@ -23,7 +23,9 @@ copyright:
 
 ```Java
 // Enable recording of usage analytics
-MFPAnalytics.enable();// Start recording application startup time
+MFPAnalytics.enable();
+
+// Start recording application startup time
 // Add this code in the onCreate method of your main Activity
 MFPAnalytics.startLoggingApplicationStartup();// Record the duration of application startup
 // Add this code in the onStart method of your main Activity
@@ -43,7 +45,9 @@ Objective-C SDK 会将监视数据报告给 {{site.data.keyword.amashort}} 服�
 
 ```Objective-C
 // Enable usage analytics recording
-[[IMFAnalytics sharedInstance] setEnabled:YES];// Start recording application lifecycle events
+[[IMFAnalytics sharedInstance] setEnabled:YES];
+
+// Start recording application lifecycle events
 [[IMFAnalytics sharedInstance] startRecordingApplicationLifecycleEvents];// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 [[IMFAnalytics sharedInstance] sendPersistedLogs];
 ```
@@ -53,7 +57,9 @@ Objective-C SDK 会将监视数据报告给 {{site.data.keyword.amashort}} 服�
 
 ```Swift
 // Enable usage analytics recording
-IMFAnalytics.sharedInstance().setEnabled(true)// Start recording application lifecycle events
+IMFAnalytics.sharedInstance().setEnabled(true)
+
+// Start recording application lifecycle events
 IMFAnalytics.sharedInstance().startRecordingApplicationLifecycleEvents()// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 IMFAnalytics.sharedInstance().sendPersistedLogs()
 ```
@@ -63,7 +69,9 @@ IMFAnalytics.sharedInstance().sendPersistedLogs()
 
 ```JavaScript
 // Enable usage analytics recording
-MFPAnalytics.enable();// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
+MFPAnalytics.enable();
+
+// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 MFPAnalytics.send();
 ```
 **注：**开发 Cordova 应用程序时，请使用本机 API 来启用应用程序生命周期事件记录。

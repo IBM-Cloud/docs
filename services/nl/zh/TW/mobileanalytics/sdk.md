@@ -21,13 +21,14 @@ copyright:
 
 SDK 目前適用於 Android、iOS 及 WatchOS。
 
-## 識別用戶端金鑰值
+## 識別服務認證存取金鑰
 {: #analytics-clientkey}
 
-識別設定 Client SDK 之前的**用戶端金鑰**值。需要有「用戶端金鑰」，才能起始設定 Client SDK。
+設定用戶端 SDK 之前請識別您的**存取金鑰**值。需要有「存取金鑰」，才能起始設定用戶端 SDK。
+
 1. 開啟 {{site.data.keyword.mobileanalytics_short}} 服務儀表板。
-2. 按一下扳手圖示來開啟「API 金鑰」標籤。
-3. 在「API 金鑰」標籤中，記下「用戶端金鑰」值。
+2. 按一下**服務認證**標籤。
+3. 複製您的存取金鑰值。
 
 
 ## 起始設定 Android 應用程式來收集分析
@@ -35,10 +36,10 @@ SDK 目前適用於 Android、iOS 及 WatchOS。
 
 起始設定應用程式，以啟用將日誌傳送至 {{site.data.keyword.mobileanalytics_short}} 服務。
 
-1. 將下列 `import` 陳述式新增至專案檔頂端，以匯入 Client SDK：
+1. 將下列 `import` 陳述式新增至專案檔開頭處，以匯入 Client SDK：
 
   ```
-  import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
+import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
 import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
 import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   ```
@@ -60,7 +61,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. 起始設定 Analytics，方法是使用 Android 應用程式物件，並將您的應用程式名稱提供給它。您也需要[**用戶端金鑰**](#analytics-clientkey)值。
+3. 起始設定 Analytics，方法是使用 Android 應用程式物件，並將您的應用程式名稱提供給它。您也需要[**存取金鑰**](#analytics-clientkey)值。
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -75,7 +76,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
 起始設定應用程式，以啟用將日誌傳送至 {{site.data.keyword.mobileanalytics_short}} 服務。Swift SDK 適用於 iOS 及 watchOS。
 
-1. 將下列 `import` 陳述式新增至 `AppDelegate.swift` 專案檔頂端，以匯入 `BMSCore` 及 `BMSAnalytics` 架構：
+1. 將下列 `import` 陳述式新增至 `AppDelegate.swift` 專案檔開頭處，以匯入 `BMSCore` 及 `BMSAnalytics` 架構：
 
   ```Swift
   import BMSCore
@@ -88,8 +89,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   將起始設定碼放在應用程式委派的 `application(_:didFinishLaunchingWithOptions:)` 方法中或最適合您專案的位置中。
 
     ```Swift
-    BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH)
-```
+    BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH)`
+    ```
     {: codeblock}
 
     若要使用 {{site.data.keyword.mobileanalytics_short}} Client SDK，您必須起始設定 `BMSClient` 與 **bluemixRegion** 參數。在起始設定程式中，**bluemixRegion** 值指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署（例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`）。
@@ -98,7 +99,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. 起始設定 Analytics，方法是將行動應用程式的名稱提供給它。您也需要[**用戶端金鑰**](#analytics-clientkey)值。
+3. 起始設定 Analytics，方法是將行動應用程式的名稱提供給它。您也需要[**存取金鑰**](#analytics-clientkey)值。
 
   應用程式名稱是用來作為過濾器，以在「{{site.data.keyword.mobileanalytics_short}} 儀表板」中搜尋用戶端日誌。跨平台（例如，Android 及 iOS）使用相同的應用程式名稱，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
 
@@ -110,7 +111,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
       ```
       Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
-```
+      ```
 
   ### watchOS
   {: #watchos-initialize-analytics}
@@ -147,8 +148,14 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 ```
 // Disable recording of usage analytics (for example, to save disk space)
 // Recording is enabled by default
-Analytics.disable();// Enable recording of usage analytics
-Analytics.enable();Analytics.log(eventJSONObject);// Send recorded usage analytics to the Mobile Analytics Service
+Analytics.disable();
+	
+// Enable recording of usage analytics
+Analytics.enable();
+	
+Analytics.log(eventJSONObject);
+	
+// Send recorded usage analytics to the Mobile Analytics Service
 Analytics.send();
 ```
 	
@@ -156,7 +163,9 @@ Analytics.send();
 	
 ```
 // Log a custom analytics event for custom charts, which is represented by a JSON object:
-JSONObject eventJSONObject = new JSONObject();eventJSONObject.put("customProperty" , "propertyValue");
+JSONObject eventJSONObject = new JSONObject();
+	
+eventJSONObject.put("customProperty" , "propertyValue");
 ```
 
 #### iOS - Swift
@@ -165,8 +174,12 @@ JSONObject eventJSONObject = new JSONObject();eventJSONObject.put("customPropert
 ```
 // Disable recording of usage analytics (for example, to save disk space)
 // Recording is enabled by default
-Analytics.enabled = false// Enable recording of usage analytics
-Analytics.enabled = true// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
+Analytics.enabled = false
+
+// Enable recording of usage analytics
+Analytics.enabled = true
+
+// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
 Analytics.send()
 ```
 
@@ -244,9 +257,13 @@ Analytics.log(eventObject)
 // Configure Logger to save logs to the device so that they 
 // can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
 // Disabled by default; set to true to enable
-Logger.storeLogs(true);// Change the minimum log level (optional)
+Logger.storeLogs(true);
+
+// Change the minimum log level (optional)
 // The default setting is Logger.LEVEL.DEBUG
-Logger.setLogLevel(Logger.LEVEL.INFO);// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
+Logger.setLogLevel(Logger.LEVEL.INFO);
+
+// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
 Logger.send();
 ```
 
@@ -256,10 +273,12 @@ Logger.send();
 // Create two logger instances
 // You can create multiple log instances to organize your logs
 Logger logger1 = Logger.getLogger("logger1");
-Logger logger2 = Logger.getLogger("logger2");// Log messages with different levels
+Logger logger2 = Logger.getLogger("logger2");
+
+// Log messages with different levels
 // Debug message for feature 1
 // Info message for feature 2
-logger1.debug("debug message"); 
+logger1.debug("debug message");
 //the logger1.debug message is not logged because the logLevelFilter is set to Info
 logger2.info("info message");
 ```
@@ -270,9 +289,13 @@ logger2.info("info message");
 ```
 // Configure Logger to save logs to the device so that they can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
 // Disabled by default; set to true to enable
-Logger.logStoreEnabled = true// Change the minimum log level (optional)
+Logger.logStoreEnabled = true
+
+// Change the minimum log level (optional)
 // The default setting is LogLevel.Debug
-Logger.logLevelFilter = LogLevel.Info// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
+Logger.logLevelFilter = LogLevel.Info
+
+// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
 Logger.send()
 ```
 
@@ -282,8 +305,10 @@ Logger.send()
 // Create two logger instances
 // You can create multiple log instances to organize your logs
 let logger1 = Logger.logger(forName: "feature1Logger")
-let logger2 = Logger.logger(forName: "feature2Logger")// Log messages with different levels
-logger1.debug("debug message for feature 1") 
+let logger2 = Logger.logger(forName: "feature2Logger")
+	
+// Log messages with different levels
+logger1.debug("debug message for feature 1")
 //the logger1.debug message is not logged because the logLevelFilter is set to Info
 logger2.info("info message for feature 2")
 ```
@@ -480,4 +505,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## API 參考資料
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

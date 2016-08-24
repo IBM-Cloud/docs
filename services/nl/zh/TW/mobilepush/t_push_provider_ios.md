@@ -7,11 +7,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# 配置 Apple Push Notifications (APNS) 的認證
-
+# 配置 APNS 的認證
 {: #create-push-credentials-apns}
+*前次更新：2016 年 6 月 14 日*
+{: .last-updated}
 
-Apple Push Notification Service (APNS) 容許應用程式開發人員將遠端通知從 Bluemix（提供者）上的推送服務實例傳送給 iOS 裝置及應用程式。訊息會傳送至裝置上的目標應用程式。請取得並配置 APNS 認證。APNs 憑證是透過 Push Notification Service 安全地進行管理，並且用來連接至作為提供者的 APNS 伺服器。
+Apple Push Notification Service (APNS) 容許應用程式開發人員將遠端通知從 Bluemix（提供者）上的推送服務實例傳送給 iOS 裝置及應用程式。訊息會傳送至裝置上的目標應用程式。請取得並配置 APNS 認證。APNS 憑證是透過 Push Notification Service 安全地進行管理，並且用來連接至作為提供者的 APNS 伺服器。
 
 1. 取得 [Apple Developer](https://developer.apple.com/) 帳戶。
 2. [登錄應用程式 ID](#create-push-credentials-apns-register)
@@ -82,7 +83,7 @@ Apple Push Notification Service (APNS) 容許應用程式開發人員將遠端�
 8. 選取**已儲存至磁碟**，以將 **.certSigningRequest** 檔案下載至您的桌面，然後按一下**繼續**。
 9. 在**另存新檔**中，命名 **.certSigningRequest** 檔案（例如 **sandbox.certSigningRequest**），然後按一下**儲存**。
 10. 按一下**完成**。您現在有 CSR。
-11. 從**關於建立憑證簽署要求 (CSR)** 中，按一下**繼續**。12. ![憑證簽署要求](images/request.jpg)
+11. 從**關於建立憑證簽署要求 (CSR)** 中，按一下**繼續**。 ![憑證簽署要求](images/request.jpg)
 12. 從**產生**畫面中，按一下**選擇檔案...**，然後選取您儲存在桌面上的 CSR 檔案。然後，按一下**產生**。
 
 	![產生憑證](images/generate_certificate.jpg)
@@ -148,7 +149,7 @@ Apple Push Notification Service (APNS) 容許應用程式開發人員將遠端�
 ```
 您需要將 `bluemixPush_dev.p12` 檔案儲存在桌面上。
 
-##在 Push Notification 儀表板上設定 APNs
+##在 Push Notifications 儀表板上設定 APNS
 {: #create-push-credentials-apns-dashboard}
 
 若要使用 Push Notification Service 來傳送通知，請上傳 Apple Push Notification Service (APNS) 所需的 SSL 憑證。您也可以使用 REST API 來上傳 APNS 憑證。
@@ -159,7 +160,7 @@ Apple Push Notification Service (APNS) 容許應用程式開發人員將遠端�
 
 請取得開發及正式作業 APNs SSL 憑證，以及與每一種憑證類型相關聯的密碼。如需相關資訊，請參閱「建立及配置 APNs 的推送認證」。
 
-APNs 所需的憑證是 .p12 憑證，其中包含私密金鑰以及建置和發佈應用程式所需的 SSL 憑證。您必須從 Apple Developer 網站的 Member Center 產生憑證（這需要有效的 Apple Developer 帳戶）。開發環境（沙盤推演）和正式作業（配送）環境需要個別憑證。
+APNS 所需的憑證是 .p12 憑證，其中包含私密金鑰以及建置和發佈應用程式所需的 SSL 憑證。您必須從 Apple Developer 網站的 Member Center 產生憑證（這需要有效的 Apple Developer 帳戶）。開發環境（沙盤推演）和正式作業（配送）環境需要個別憑證。
 
 **附註**：.**cer** 位於您的金鑰鏈存取之後，請將它匯出至您的電腦，以建立 .p12 憑證。
 

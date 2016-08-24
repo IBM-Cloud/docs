@@ -8,7 +8,7 @@ copyright:
 #	使用 Professional 1 Application 方案
 {: #using_mobilefoundation_p2}
 
-*前次更新：2016 年 6 月 15 日*
+*前次更新：2016 年 7 月 20 日*
 {: .last-updated}
 
 建立 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服務實例之後，請閱讀下列程序，以開始使用該服務。
@@ -21,7 +21,7 @@ copyright:
 
 * {{site.data.keyword.dashdbshort_notm}} 服務實例及其認證必須可供使用，您才能配置 {{site.data.keyword.mobilefoundation_short}} 服務實例的設定。
 
-**附註**：{{site.data.keyword.dashdbshort_notm}} 服務實例可存在於 {{site.data.keyword.Bluemix_notm}} `組織` 的任何`空間`中。如果您選擇部署 {{site.data.keyword.mobilefoundation_short}} 服務至 {{site.data.keyword.Bluemix_notm}} `空間`，且它不是 {{site.data.keyword.dashdbshort_notm}} 服務所存在的空間，則您必須確定您有權限可以存取 {{site.data.keyword.dashdbshort_notm}} 服務。
+**附註**：{{site.data.keyword.dashdbshort_notm}} 服務實例可存在於 {{site.data.keyword.Bluemix_notm}} `Organization` 的任何 `Space` 中。如果您選擇部署 {{site.data.keyword.mobilefoundation_short}} 服務至 {{site.data.keyword.Bluemix_notm}} `Space`，且它不是 {{site.data.keyword.dashdbshort_notm}} 服務所存在的空間，則您必須確定您有權限可以存取 {{site.data.keyword.dashdbshort_notm}} 服務。
 
 
 ## 新增資料庫連線
@@ -37,9 +37,9 @@ copyright:
 
 建立 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服務實例之後，就會看到*概觀* 頁面，您必須在此頁面中指定 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 服務實例的連線資訊。
 
-1.  從現行`組織`中可用的空間清單，選取 {{site.data.keyword.dashdbshort_notm}} 服務實例所存在的 {{site.data.keyword.Bluemix_notm}} `空間`。
+1.  從所選取 `Organization` 中可用的空間清單，選取 {{site.data.keyword.dashdbshort_notm}} 服務實例所存在的 {{site.data.keyword.Bluemix_notm}} `Space`。
 
-+ 選取 {{site.data.keyword.dashdbshort_notm}} `服務名稱`和`認證`，以連接至現有的 {{site.data.keyword.dashdbshort_notm}} 服務實例。
++ 選取 {{site.data.keyword.dashdbshort_notm}} `Service Name` 和 `Credentials`，以連接至現有的 {{site.data.keyword.dashdbshort_notm}} 服務實例。
 
 +  測試所指定的 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 服務實例的連線。
 
@@ -47,7 +47,7 @@ copyright:
 
 **附註**：您無法變更配置來供 {{site.data.keyword.mobilefoundation_short}} 服務實例使用的 {{site.data.keyword.dashdbshort_notm}} 服務實例。不過，您能夠在多個 {{site.data.keyword.mobilefoundation_short}} 服務實例之間使用相同的 {{site.data.keyword.dashdbshort_notm}} 服務實例，因為每一個 {{site.data.keyword.mobilefoundation_short}} 服務實例都會在所選取的 {{site.data.keyword.dashdbshort_notm}} 服務實例中建立自己的綱目。
 
-* 幾秒過後，您就可以存取`概觀` 頁面，而此頁面提供指導教學及視訊，協助您開始使用 {{site.data.keyword.mobilefoundation_short}} 服務。
+* 幾秒過後，您就可以存取 `Overview` 頁面，而此頁面提供指導教學及視訊，協助您開始使用 {{site.data.keyword.mobilefoundation_short}} 服務。
 
 ## 啟動 {{site.data.keyword.mobilefirst}} 伺服器
 {: #start_mobilefoundation_p2}
@@ -65,7 +65,7 @@ copyright:
 
   -	為您建立的伺服器路徑。使用此路徑，可以從公用網際網路連接行動伺服器。行動應用程式會使用該路徑來存取伺服器。
 
-  -	用來存取 {{site.data.keyword.mfp_oc_short_notm}} 的`使用者名稱`和`密碼`。會隱藏`密碼`。按一下**顯示密碼**，即可進行視覺化。
+  -	用來存取 {{site.data.keyword.mfp_oc_short_notm}} 的 `username` 和 `password`。會隱藏 `password`。按一下**顯示密碼**，即可進行視覺化。
 
 *	按一下**啟動主控台**，以啟動 {{site.data.keyword.mfp_oc_short_notm}}。
 
@@ -84,7 +84,7 @@ copyright:
 ##	設定進階配置
 {: #using_mfs_advanced_p2}
 
-使用`概觀` 頁面中的**使用進階配置啟動伺服器**頁面，以使用進階或自訂設定來建立伺服器。您也可以更新伺服器設定來自訂伺服器配置，方法是按一下**配置**標籤。{{site.data.keyword.mobilefoundation_short}} 可讓您存取一些進階設定。
+使用 `Overview` 頁面中的**使用進階配置啟動伺服器**頁面，以使用進階或自訂設定來建立伺服器。您也可以更新伺服器設定來自訂伺服器配置，方法是按一下**配置**標籤。{{site.data.keyword.mobilefoundation_short}} 可讓您存取一些進階設定。
 
 *	從**拓蹼**標籤中，您可以選取容器的大小。預設 1 GB 伺服器就足以進行開發及輕量型測試。
   - 根據您的需求，選取正確的伺服器大小。

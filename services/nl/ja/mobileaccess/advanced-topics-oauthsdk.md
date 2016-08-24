@@ -8,6 +8,9 @@ copyright:
 # バックエンドからバックエンドへの通信のセットアップ
 {: #backend-comm}
 
+*最終更新日: 2016 年 6 月 16 日*
+{: .last-updated}
+
 場合によっては、{{site.data.keyword.Bluemix}} 上で実行しているバックエンド・アプリケーションから、{{site.data.keyword.amashort}} サービスで保護されている別のバックエンド・サービス (例えば {{site.data.keyword.cloudant}} サービス) に要求を送信する必要があります。そういったケースでは、要求に OAuth トークンを追加する必要があります。
 
 OAuth トークンを取得して要求に注入するには、`bms-mca-oauth-sdk npmjs` モジュールを使用します。

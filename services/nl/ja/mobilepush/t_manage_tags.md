@@ -7,16 +7,16 @@ copyright:
 
 # タグの管理
 {: #manage_tags}
+*最終更新日: 2016 年 6 月 14 日*
+{: .last-updated}
 
-Push ダッシュボードを使用して、ご使用のアプリケーションのタグを作成および削除し、タグ・ベースの通知を開始します。
-タグをサブスクライブしているデバイスでタグ・ベースの通知を受け取るようになります。
+Push ダッシュボードを使用して、ご使用のアプリケーションのタグを作成および削除し、タグ・ベースの通知を開始します。タグをサブスクライブしているデバイスでタグ・ベースの通知を受け取るようになります。
 
 
 ## タグの作成
 {: #create_tags}
 
-タグ・ベースの通知は、特定のタグにサブスクライブしているすべてのデバイスをターゲットとする通知メッセージです。
-各デバイスは、任意の数のタグにサブスクライブできます。タグが削除されると、そのタグに関連付けられているすべての情報 (サブスクライバーやデバイスを含む) が削除されます。このタグはもはや存在せず、クライアント・サイドから必要な追加アクションはないので、このタグの自動アンサブスクライブは必要ありません。
+タグ・ベースの通知は、特定のタグにサブスクライブしているすべてのデバイスをターゲットとする通知メッセージです。各デバイスは、任意の数のタグにサブスクライブできます。タグが削除されると、そのタグに関連付けられているすべての情報 (サブスクライバーやデバイスを含む) が削除されます。このタグはもはや存在せず、クライアント・サイドから必要な追加アクションはないので、このタグの自動アンサブスクライブは必要ありません。
 
 1. Push ダッシュボードで、**「タグ」**タブを選択します。
 1. **「+ タグを作成 (+ Create Tag)」**ボタンをクリックします。   
@@ -28,15 +28,12 @@ Push ダッシュボードを使用して、ご使用のアプリケーション
    c. **「保存」**をクリックします。
 
 1. **「コード・スニペット (Code Snippets)」**エリアで、ご使用のモバイル・アプリケーションのプラットフォームを選択します。
-
 1. エラー処理をするコード・スニペットを変更し、各タグに対するコード・スニペットをご使用のモバイル・アプリケーションにコピーします。
-
 
 ## タグの削除
 {: #delete_tags}
 
 1. **「タグ」**タブで、削除するタグを選択し「削除」アイコンをクリックします。
-
 1. **「OK」**をクリックします。
 
 ## タグの説明の編集
@@ -49,8 +46,7 @@ Push ダッシュボードを使用して、ご使用のアプリケーション
 # タグの取得
 {: #get_tags}
 
-タグは、ユーザーの関心に基づいてユーザーにターゲット通知を送信する手段となります。この点は、すべてのアプリケーションに送信される一般ブロードキャストと異なります。タグを作成および管理するには、Push ダッシュボードの「タグ」タブを使用するか、または REST API を使用します。以下のセクションのコード・スニペットを使用して、モバイル・アプリケーションのタグ・サブスクリプションを管理および照会できます。これらのコード・スニペットを使用して、サブスクリプションの取得、タグへのサブスクライブ、タグからのアンサブスクライブ、使用可能なタグのリストの取得を行うことができます。
-これらのコード・スニペットは、モバイル・アプリケーションにコピー・アンド・ペーストします。
+タグは、ユーザーの関心に基づいてユーザーにターゲット通知を送信する手段となります。この点は、すべてのアプリケーションに送信される一般ブロードキャストと異なります。タグを作成および管理するには、Push ダッシュボードの「タグ」タブを使用するか、または REST API を使用します。以下のセクションのコード・スニペットを使用して、モバイル・アプリケーションのタグ・サブスクリプションを管理および照会できます。これらのコード・スニペットを使用して、サブスクリプションの取得、タグへのサブスクライブ、タグからのアンサブスクライブ、使用可能なタグのリストの取得を行うことができます。これらのコード・スニペットは、モバイル・アプリケーションにコピー・アンド・ペーストします。
 
 ## Android
 
@@ -58,20 +54,19 @@ Push ダッシュボードを使用して、ご使用のアプリケーション
 
 デバイスのサブスクライブ対象タグ・リストを取得し、使用可能なタグのリストを取得するには、Android モバイル・アプリケーションに以下のコード・スニペットをコピーします。
 
-
 以下の **getTags** API を使用して、デバイスをサブスクライブできる使用可能なタグのリストを取得します。
 
 ```
 // Get a list of available tags to which the device can subscribe
-push.getTags(new MFPPushResponseListener<List<String>>(){  
+push.getTags(new MFPPushResponseListener<List<String>>(){
    @Override
    public void onSuccess(List<String> tags){
-   updateTextView("Retrieved available tags: " + tags);  
+   updateTextView("Retrieved available tags: " + tags);
    System.out.println("Available tags are: "+tags);
-   availableTags = tags;   
-   subscribeToTag();   
-  }    
-  @Override    
+   availableTags = tags;
+   subscribeToTag();
+  }
+  @Override
   public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
@@ -79,7 +74,6 @@ push.getTags(new MFPPushResponseListener<List<String>>(){
 ```
 
 **getSubscriptions** API を使用して、デバイスがサブスクライブする対象タグのリストを取得します。
-
 
 ```
 // Get a list of tags that to which the device is subscribed.
@@ -94,7 +88,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onFailure(MFPPushException ex) {
          updateTextView("Error getting subscriptions.. " + ex.getMessage());
-    }
+  }
 })
 ```
 
@@ -129,10 +123,10 @@ MFPPush.getSubscriptionStatus(function(tags) {
 //Get a list of available tags to which the device can subscribe
 [push retrieveAvailableTagsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error){
- if(error){    
-   [self updateMessage:error.description];  
+ if(error){
+   [self updateMessage:error.description];
  } else {
-   [self updateMessage:@"Successfully retrieved available tags."];
+        [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];
 [self.appDelegateVC updateMessage:availableTags.description];
@@ -141,7 +135,6 @@ MFPPush.getSubscriptionStatus(function(tags) {
 ```
 
 **retrieveSubscriptions** API を使用して、デバイスがサブスクライブする対象タグのリストを取得します。
-
 
 
 ```
@@ -324,8 +317,7 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
 {: #using_tags}
 
 
-タグ・ベースの通知は、特定のタグにサブスクライブしているすべてのデバイスをターゲットとする通知メッセージです。
-各デバイスは、任意の数のタグにサブスクライブできます。このセクションでは、タグ・ベースの通知の送信方法を説明します。サブスクリプションは、Push Notifications Service Bluemix インスタンスによって維持されます。タグが削除されると、そのタグに関連付けられているすべての情報 (サブスクライバーやデバイスを含む) が削除されます。このタグはもはや存在せず、クライアント・サイドから必要な追加アクションはないので、このタグの自動アンサブスクライブは必要ありません。
+タグ・ベースの通知は、特定のタグにサブスクライブしているすべてのデバイスをターゲットとする通知メッセージです。各デバイスは、任意の数のタグにサブスクライブできます。このセクションでは、タグ・ベースの通知の送信方法を説明します。サブスクリプションは、Push Notifications Service Bluemix インスタンスによって維持されます。タグが削除されると、そのタグに関連付けられているすべての情報 (サブスクライバーやデバイスを含む) が削除されます。このタグはもはや存在せず、クライアント・サイドから必要な追加アクションはないので、このタグの自動アンサブスクライブは必要ありません。
 
 **始めに**
 
@@ -334,6 +326,5 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
 1. **「Push Notification」**ダッシュボードで、**「通知」**タブをクリックします。
 1. タグ・ベースの通知を送信する**「タグ」**オプションを選択します。
 1. **「タグの検索 (Search tags)」**フィールドで、使用するタグを検索し**「+ 追加 (+Add)」**ボタンをクリックします。![「通知」画面](images/tag_notification.jpg)
-1. **「通知の作成 (Create Your Notifications)」**エリアに移動し、**「メッセージ・テキスト (Message Text)」**フィールドで、通知で送信したいテキストを入力します。
-
+1. **「メッセージ・テキスト」**フィールドに、サブスクライブした対象者に通知として送信されるテキストを入力します。
 1. **「送信」**ボタンをクリックします。

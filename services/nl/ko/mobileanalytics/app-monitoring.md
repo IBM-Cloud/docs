@@ -12,73 +12,78 @@ copyright:
 {{site.data.keyword.mobileanalytics_full}}는 모바일 애플리케이션에 대한 모니터링 및 분석을 제공합니다. 클라이언트 로그를 기록하고 {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 사용하여 데이터를 모니터링할 수 있습니다. 개발자는 이 데이터를 {{site.data.keyword.mobileanalytics_short}} 서비스에 전송할 시기를 제어할 수 있습니다. 데이터가 {{site.data.keyword.mobileanalytics_short}}에 전달될 때 {{site.data.keyword.mobileanalytics_short}} 대시보드를 사용하여 모바일 애플리케이션, 디바이스 및 클라이언트 로그에 대한 분석 통찰을 가져올 수 있습니다.
 {: shortdesc}
 
-## 사용자 정의 차트를 사용하여 데이터 시각화
+<!--
+
+## Visualizing data with custom charts
 {: #custom-charts}
 
-분석 저장소에서 수집된 분석 데이터를 시각화할 수 있습니다. 이 시각화는 특정 유스 케이스에 대한 데이터를 조사할 수 있는 강력한 방법입니다. 보고하는 사용자 정의 데이터 외에 Operational Analytics에 의해 이미 수집된 데이터를 사용하여 차트를 작성할 수 있습니다.
+You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
-### 클라이언트 로그에 대한 사용자 정의 차트 작성
+
+### Creating custom charts for client logs
 {: #custom-charts-client-logs}
 
-플랫폼에 대한 로거 API를 사용하여 전송된 로그 정보를 포함하는 클라이언트 로그에 대한 사용자 정의 차트를 작성할 수 있습니다. 또한 로그 정보는 환경, 앱 이름 및 앱 버전을 포함하여 디바이스에 대한 컨텍스트 정보를 포함합니다.
+You can create a custom chart for client logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
-이 예에서는 클라이언트 로그 데이터를 사용하여 순서도를 작성할 수 있습니다. 최종 그래프는 특정 앱의 로그 레벨의 배포를 표시합니다. 또한 차트에서 다음 데이터를 볼 수 있습니다.
+In this example, you use client log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
 
-* 특정 데이터
-  * 로그 레벨
-* 메시지 데이터
-  * 시간소인
-* 디바이스 OS 컨텍스트 데이터
-  * 애플리케이션 이름
-  * 애플리케이션 버전
-  * 디바이스 OS
-* 디바이스 컨텍스트 데이터
-  * 디바이스 ID
-  * 디바이스 모델
-  * 디바이스 OS 버전
+* Specific data
+  * Log level
+* Message data
+  * Timestamp
+* Device OS contextual data
+  * Application name
+  * Application version
+  * Device OS
+* Device contextual data
+  * Device ID
+  * Device model
+  * Device OS version
 
 
-1. 디바이스 로그를 수집하거나 분석을 수집하는 애플리케이션이 있는지 확인하십시오.
-2. {{site.data.keyword.mobileanalytics_short}} 콘솔에서 **대시보드** 페이지의 **사용자 정의 차트** 탭을 클릭하십시오. 서버에 전송된 분석 메시지를 기반으로 하여 차트를 작성할 수 있습니다.
-3. **차트 작성**을 클릭하여 새 사용자 정의 차트를 작성하고 다음 값을 제공하십시오.
-  * 차트 제목: 애플리케이션 및 로그 레벨
-  * 이벤트 유형: 클라이언트 로그
-  * 차트 유형: 순서도
-5. **차트 정의** 탭을 클릭하여 다음 값을 제공하십시오.
-  * 소스: 애플리케이션 이름
-  * 대상: 로그 레벨
-  * 특성: 사용자의 앱 이름
-7. **저장**을 클릭하십시오.
+1. Make sure that you have an application that is collecting device logs or gathering analytics.
+2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
+3. Click **Create Chart** to create a new custom chart and provide the following values:
+  * Chart Title: Application and Log Levels
+  * Event Type: Client Logs
+  * Chart Type: Flow Chart
+5. Click the **Chart Definition** tab and provide the following values:
+  * Source: Application Name
+  * Destination: Log Level
+  * Property: your app name
+7. Click **Save**
 
-### 사용자 정의 데이터 내보내기
+### Exporting custom data
 {: #export-custom-data}
 
-각 사용자 정의 차트에서 JSON, XML 또는 CSV 형식으로 데이터를 내보낼 수 있습니다.
+You can export the data from each custom chart into JSON, XML, or CSV format.
 
-내보낸 데이터의 구조는 내보내는 차트에 따라 다릅니다. 데이터를 내보내려면 사용자 정의 차트의 오른쪽 상단에서 내보내기 아이콘을 클릭하십시오.
+The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
 
 
 
-### 사용자 정의 차트 정의 내보내기 및 가져오기
+### Exporting and importing custom chart definitions
 {: #export-import-custom}
 
-{{site.data.keyword.mobileanalytics_short}} 대시보드에서 프로그래밍 방식 또는 수동으로 사용자 정의 차트 정의를 가져오거나 내보낼 수 있습니다.
+You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
-{{site.data.keyword.mobileanalytics_short}} 대시보드에 하나 이상의 사용자 정의 차트가 있는지 확인하십시오.
-이 예에서는 수동으로 사용자 정의 차트 정의를 내보내고 가져옵니다.
+Ensure that you have at least one custom chart in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
+In this example, you manually export and import custom chart definitions.
 
-1. {{site.data.keyword.mobileanalytics_short}} 콘솔에서 **대시보드** 페이지의 **사용자 정의 차트** 탭을 클릭하십시오. 
-2. 사용자 정의 차트 정의를 내보내려면 **차트 내보내기**를 클릭하십시오. 이 조치는 `customChartsDefinition.json` 파일을 저장하기 위한 대화 상자를 표시합니다.
-3. 파일을 저장할 위치를 선택하십시오.
-4. 각 사용자 정의 차트 옆의 **차트 삭제** 아이콘을 클릭하여 모든 사용자 정의 차트를 삭제하십시오.
-5. 사용자 정의 차트 정의를 가져오려면 **차트 가져오기**를 클릭하십시오. 이 조치는 파일을 선택하기 위한 대화 상자를 표시합니다.
-6. 이전에 내보낸 `customChartsDefinition.json` 파일을 선택하여 여십시오.
+1. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab in the **Dashboard** page.
+2. To export the custom chart definitions, click **Export Charts**. This action displays a dialog to save a `customChartsDefinition.json` file.
+3. Choose a location to save the file.
+4. Click the **Delete Chart** icon next to each custom chart to delete all custom charts.
+5. To import a custom chart definition, click **Import Charts**. This action displays a dialog to choose a file.
+6. Choose the `customChartsDefinition.json` file that you previously exported to open.
 
-또한 선택한 HTTP 클라이언트(예: CURL 또는 postman)를 사용하여 프로그래밍 방식으로 사용자 정의 차트를 내보내고 가져올 수 있습니다.
-* 내보내기에 대한 GET 엔드포인트는 `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`입니다.
-* 가져오기에 대한 POST 엔드포인트는 `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`입니다.
+You can also export and import custom chart definitions programmatically by using your HTTP client of choice (for example, CURL or postman):
+* The GET endpoint for export is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
+* The POST endpoint for import is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
 
-**참고**: 존재하는 사용자 정의 차트 정의를 가져오는 경우, 결과적으로 중복 정의가 발생하며 {{site.data.keyword.mobileanalytics_short}} 대시보드가 중복 사용자 정의 차트를 표시함을 의미합니다.
+**Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
+
+-->
 
 ## 경보 설정
 {: #alerts}
@@ -170,7 +175,7 @@ copyright:
 
     **참고**: 해당 경보 정의가 삭제되거나 수정되지 않은 경우, **경보 편집**을 클릭하여 경보 정의를 편집할 수 있습니다. 그렇지 않으면 **경보 편집** 단추가 사용 불가능하거나 다음 메시지가 표시됩니다.
 
-    `이 경보 정의가 수정되었거나 삭제되었습니다.`
+    `This alert definition has since been modified or deleted.`
 
 3. 선택사항: 경보를 선택하고 **휴지통** 아이콘을 클릭하여 경보를 삭제하십시오.
 

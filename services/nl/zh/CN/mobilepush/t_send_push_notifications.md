@@ -7,8 +7,9 @@ copyright:
 
 {:new_window: target="_blank"}
 # 发送基本推送通知
-
 {: #push-send-notifications}
+*上次更新时间：2016 年 6 月 14 日*
+{: .last-updated}
 
 开发应用程序后，可以发送基本推送通知（不使用标记、角标、其他有效内容或声音文件）。
 
@@ -24,7 +25,9 @@ copyright:
 2. 在**创建通知**中，输入消息，然后单击**发送**。
 3. 验证设备是否收到通知。
 
-	以下屏幕快照显示了在 Android 和 iOS 设备上前台处理推送通知的警报框。	![Android 上的前台推送通知](images/Android_Screenshot.jpg)
+	以下屏幕快照显示了在 Android 和 iOS 设备上前台处理推送通知的警报框。
+
+	![Android 上的前台推送通知](images/Android_Screenshot.jpg)
 
 	![iOS 上的前台推送通知](images/iOS_Screenshot.jpg)
 

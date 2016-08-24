@@ -5,10 +5,14 @@ copyright:
 
 ---
 
-# {{site.data.keyword.amashort}}-Client-SDK für iOS konfigurieren
+# {{site.data.keyword.amashort}}-Client-SDK für iOS konfigurieren (Objective-C)
 {: #custom-ios}
 
-Konfigurieren Sie Ihre iOS-Anwendung, die mit der angepassten Authentifizierung arbeitet, zur Verwendung des {{site.data.keyword.amashort}}-Client-SDKs und verbinden Sie Ihre Anwendung mit {{site.data.keyword.Bluemix}}.
+*Letzte Aktualisierung: 18. Juli 2016*
+{: .last-updated}
+
+
+Konfigurieren Sie Ihre iOS-Anwendung, die mit der angepassten Authentifizierung arbeitet, zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK und verbinden Sie Ihre Anwendung mit {{site.data.keyword.Bluemix}}.
 
 **Hinweis:** Wenn Sie Ihre iOS-App mit Swift entwickeln, sollten Sie die Verwendung von {{site.data.keyword.amashort}}-Client-Swift-SDK in Erwägung ziehen. Die Anweisungen auf dieser Seite gelten für das {{site.data.keyword.amashort}}-Client-Objective-C-SDK. Anweisungen für die Verwendung des neuen Swift-SDK finden Sie in [{{site.data.keyword.amashort}}-Client-SDK für iOS konfigurieren (Swift-SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html).
 
@@ -38,7 +42,7 @@ Verwenden Sie den CocoaPods-Abhängigkeitenmanager, um das {{site.data.keyword.a
 1. Führen Sie über die Befehlszeile den Befehl `pod install` aus.
 CocoaPods installiert die hinzugefügten Abhängigkeiten. Der Fortschritt und die hinzugefügten Komponenten werden angezeigt.
 
-**Wichtig**: Sie müssen Ihr Projekt jetzt über eine von CocoaPods generierte xcworkspace-Datei öffnen. In der Regel hat die Datei den Namen `{your-project-name}.xcworkspace`.
+    **Wichtig**: Sie müssen Ihr Projekt jetzt über eine von CocoaPods generierte xcworkspace-Datei öffnen. In der Regel hat die Datei den Namen `{your-project-name}.xcworkspace`.
 
 1. Führen Sie den Befehl `open {your-project-name}.xcworkspace` über die Befehlszeile aus, um Ihren iOS-Projektarbeitsbereich zu öffnen.
 
@@ -267,7 +271,8 @@ Nach der Initialisierung des Client-SDK und der Registrierung des angepassten De
 {: #custom-ios-testing-before}
  Sie müssen eine Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, sowie eine Ressource, die durch {{site.data.keyword.amashort}} geschützt wird, am Endpunkt `/protected` haben.
 
-1. Senden Sie eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung in Ihrem Browser, indem Sie die Adresse `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`). Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
+1. Senden Sie eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung in Ihrem Browser, indem Sie die Adresse `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
+  Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
 1. Verwenden Sie Ihre iOS-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert und Ihr angepasstes `IMFAuthenticationDelegate` registriert haben:
 
 	Objective-C:

@@ -11,7 +11,7 @@ copyright:
 # 设置 Android SDK
 {: #getting-started-android}
 
-*上次更新时间：2016 年 5 月 25 日*
+*上次更新时间：2016 年 7 月 18 日*
 {: .last-updated}
 
 在 Android 应用程序中安装 {{site.data.keyword.amashort}} 客户端 SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
@@ -20,8 +20,12 @@ copyright:
 ## 开始之前
 {: #before-you-begin}
 您必须具有：
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
-* Android Studio 项目，包括 Gradle 和 Android Studio SDK。有关如何设置 Android 开发环境的更多信息，请参阅 [Google Developer Tools](http://developer.android.com/sdk/index.html)。
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
+
+
+
+
+* Android Studio 项目，设置为使用 Gradle。有关如何设置 Android 开发环境的更多信息，请参阅 [Google Developer Tools](http://developer.android.com/sdk/index.html)。
 
 
 ## 安装 {{site.data.keyword.amashort}} 客户端 SDK
@@ -31,10 +35,9 @@ copyright:
 
 1. 创建 Android Studio 项目或打开现有项目。
 
-1. 打开 `build.gradle` 文件。
-**提示：**Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，一个用于应用程序模块。请使用应用程序模块文件。
+1. 打开应用程序的 `build.gradle` 文件（**非** 项目的 `build.gradle` 文件）。
 
-1. 找到 `build.gradle` 文件的 **Dependencies** 部分。添加 {{site.data.keyword.amashort}} 客户端 SDK 的编译依赖关系：
+1. 找到 `build.gradle` 文件的 **dependencies** 部分。添加 {{site.data.keyword.amashort}} 客户端 SDK 的编译依赖关系：
 
 	```Gradle
 	dependencies {
@@ -49,7 +52,8 @@ copyright:
 
 1. 使用 Gradle 同步项目。单击**工具 &gt; Android &gt; 使用 Gradle 文件同步项目**。
 
-1. 打开 Android 项目的 `AndroidManifest.xml` 文件。在 `<manifest>` 元素下添加因特网访问许可权：
+1. 打开 Android 项目的 `AndroidManifest.xml` 文件。
+在 `<manifest>` 元素下添加因特网访问许可权：
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -58,7 +62,7 @@ copyright:
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #initalize-mca-sdk}
 
-通过将 `context`、`applicationGUID` 和 `applicationRoute` 参数传递到 `initialize` 方法来初始化 SDK。
+通过将 `context`、`applicationGUID`、`applicationRoute` 和 `BMSClient.REGION_UK` 参数传递到 `initialize` 方法来初始化 SDK。
 
 
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”的主页中，单击您的应用程序。单击**移动选项**。您需要**应用程序路径**和**应用程序 GUID** 值来初始化 SDK。
@@ -69,17 +73,18 @@ copyright:
 ```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");
+					"applicationGUID",
+					BMSClient.REGION_UK);
 ```
+将 `BMSClient.REGION_UK` 替换为相应的区域。
 
-
-## 对移动后端发起请求
+## 对移动后端应用程序发起请求
 {: #request}
 
-初始化 {{site.data.keyword.amashort}} 客户端 SDK 后，可以开始对移动后端发起请求。
+初始化 {{site.data.keyword.amashort}} 客户端 SDK 后，可以开始对移动后端应用程序发起请求。
 
-1. 尝试对新移动后端的受保护端点发送请求。在浏览器中，打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
-<br/>使用 MobileFirst Services Starter 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会在浏览器中返回 `Unauthorized` 消息。
+1. 尝试对新移动后端应用程序的受保护端点发送请求。在浏览器中，打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
+<br/>使用 MobileFirst Services Starter 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会在浏览器中返回 `Unauthorized` 消息。
 
 1. 使用 Android 应用程序对同一端点发起请求。初始化 `BMSClient` 后，添加以下代码：
 
@@ -104,6 +109,7 @@ copyright:
 	```
 
 1. 请求成功后，将在 LogCat 实用程序中看到以下输出：
+
 
 	![图像](images/getting-started-android-success.png)
 

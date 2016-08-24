@@ -76,7 +76,6 @@ copyright:
 
 ```
 [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
-      
 ```
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
@@ -92,13 +91,13 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 
 ## 测试认证
 {: #facebook-auth-cordova-test}
-初始化客户端 SDK 并注册 Facebook 认证管理器后，可以开始对移动后端发起请求。
+初始化客户端 SDK 并注册 Facebook 认证管理器后，可以开始对移动后端应用程序发起请求。
 
 ### 开始之前
 您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
-1. 尝试在浏览器中对新创建的移动后端的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
-<br/>使用 MobileFirst Services Starter 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
+1. 尝试从浏览器对新创建的移动后端应用程序的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
+<br/>使用 MobileFirst Services Starter 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
 
 1. 使用 Cordova 应用程序对同一端点发起请求。初始化 `BMSClient` 后，添加以下代码：
 
@@ -106,8 +105,8 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 	var success = function(data){
     	console.log("success", data);
     }
-	var failure = function(error)
-    	{console.log("failure", error);
+	var failure = function(error){
+    	console.log("failure", error);
     }
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 	request.send(success, failure);

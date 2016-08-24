@@ -15,7 +15,7 @@ copyright:
 *上次更新时间：2016 年 6 月 15 日*
 {: .last-updated}
 
-您可以将 {{site.data.keyword.amashort}} 服务配置为通过将 Facebook 用作身份提供者来保护资源。移动应用程序用户可以使用自己的 Facebook 凭证进行认证。
+您可以将 {{site.data.keyword.amashort}} 服务配置为通过将 Facebook 用作身份提供者来保护资源。您的移动或 Web 应用程序用户可以使用自己的 Facebook 凭证进行认证。
 {:shortdesc}
 
 **重要信息**：您无需单独安装 Facebook 提供的 SDK。配置 {{site.data.keyword.amashort}} 客户端 SDK 时，依赖关系管理器会自动安装 Facebook SDK。
@@ -30,7 +30,7 @@ copyright:
 1. 使用 {{site.data.keyword.amashort}} 客户端 SDK 对受 {{site.data.keyword.amashort}} 服务器 SDK 保护的后端资源发起请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 检测到未授权的请求，然后返回 HTTP 401 代码和授权作用域。
 * {{site.data.keyword.amashort}} 客户端 SDK 自动检测到上述 HTTP 401 代码，然后启动认证过程。
-* {{site.data.keyword.amashort}} 客户端 SDK 访问 {{site.data.keyword.amashort}} 服务，并要求发出 Authorization 头。
+* {{site.data.keyword.amashort}} 客户端 SDK 访问 {{site.data.keyword.amashort}} 服务，并请求 Authorization 头。
 * {{site.data.keyword.amashort}} 服务通过提供认证质询，要求客户端先向 Facebook 进行认证。
 * {{site.data.keyword.amashort}} 客户端 SDK 使用 Facebook SDK 来启动认证过程。成功认证后，Facebook SDK 将返回 Facebook 访问令牌。
 * Facebook 访问令牌被视为认证质询回复。该令牌会发送到 {{site.data.keyword.amashort}} 服务。
@@ -40,6 +40,15 @@ copyright:
 * {{site.data.keyword.amashort}} 客户端 SDK 自动重新发送触发了授权流程的原始请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 从请求中抽取 Authorization 头，通过 {{site.data.keyword.amashort}} 服务对其进行验证，然后授予对后端资源的访问权。
 
+## {{site.data.keyword.amashort}} Web 应用程序请求流
+{: #mca-facebook-sequence}
+{{site.data.keyword.amashort}} Web 应用程序请求流类似于移动客户端流。但是，{{site.data.keyword.amashort}} 保护 Web 应用程序而非 {{site.data.keyword.Bluemix_notm}} 后端资源。
+
+  * Web 应用程序会发送初始请求（例如，通过登录表单）。
+  * 最终重定向会指向 Web 应用程序本身而非后端受保护资源。 
+
+
+
 ## 从 Facebook 开发者门户网站获取 Facebook 应用程序标识
 {: #facebook-appID}
 
@@ -48,11 +57,11 @@ copyright:
 1. 打开 [Facebook 开发者门户网站](https://developers.facebook.com)。
 
 1. 单击顶部菜单中的**我的应用程序**，然后选择**新建应用程序**。
-如果显示有选项供您选择 iOS 或 Android 应用程序，请选取其中一个应用程序，然后在下一个屏幕上单击**跳过并创建应用程序标识**。
+选取 iOS 或 Android 应用程序，然后在下一个屏幕上单击**跳过并创建应用程序标识**。
 
 1. 设置所选的应用程序显示名称，并选取类别。单击**创建应用程序标识**以继续。
 
-1. 复制显示的**应用程序标识**。此值是您的 Facebook 应用程序标识。配置对移动应用程序的 Facebook 认证时需要此值。
+1. 复制显示的**应用程序标识**。此值是您的 Facebook 应用程序标识。配置对移动或 Web 应用程序的 Facebook 认证时需要此值。
 
 ## 后续步骤
 {: #next-steps}

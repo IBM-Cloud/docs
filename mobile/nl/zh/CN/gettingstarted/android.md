@@ -20,8 +20,8 @@ copyright:
     2. 输入应用程序的名称和主机，并单击**创建**。
     3. 单击**完成**。
 2. 从 GitHub 获取项目。您可以选择使用 git clone 命令获取项目。从您的计算机打开终端，然后输入以下命令：
-```
-    git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
+    ```
+git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
 ```
 
 3. 要初始化项目，请在 `BMSClient.getInstance().initialize()` 函数内的 `try` 块中将 &lt;APPLICATION_ROUTE&gt; 和 &lt;APPLICATION_ID&gt; 替换为您的应用程序路径和 GUID：
@@ -34,17 +34,19 @@ BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID
 
   **注**：`Node.js` 运行时代码在 MobileFirst Services Starter 样板中提供。如果后端应用程序不是使用 MobileFirst Services Starter 样板创建的，那么该应用程序将不会成功连接。
 
-  在 Android Studio 中从移动应用程序成功连接到 {{site.data.keyword.Bluemix_notm}} 后，将显示以下消息：
-
-  `恭喜！您已建立连接`
+  在 Android Studio 中从移动应用程序成功连接到 {{site.data.keyword.Bluemix_notm}} 后，您会看到：`哇！您已建立连接`
   {: screen}
 
-  ![Hello World 应用程序已成功连接到 {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "图 1. Hello World 应用程序已成功连接到 Bluemix")
+<!--
+  ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+  -->
 
   如果连接失败，您会看到：`糟糕，出错了`
   {: screen}
 
-  ![Hello World 应用程序未连接到 Bluemix](images/bummer_android.jpg "图 2. Hello World 应用程序未连接到 Bluemix")
+<!--
+  ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
+  -->
 
   您可以按如下所示对失败的连接进行故障诊断：
    * 验证是否正确地粘贴了路径和 GUID 值。
@@ -60,7 +62,7 @@ BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID
 # 相关链接
 
 ## 样本
-   * [Hello Bluemix 样本](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Hello Bluemix 样本 (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## sdk
    * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)

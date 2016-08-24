@@ -7,6 +7,8 @@ copyright:
 
 # 使用 REST API
 {: #push-api-rest}
+*前次更新：2016 年 7 月 12 日*
+{: .last-updated}
 
 您可對推送通知使用 REST（具象狀態傳輸）API（應用程式介面）。也可以使用 SDK 及 [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) 來進一步開發用戶端應用程式。
 
@@ -102,3 +104,9 @@ copyright:
 - 名稱可以是下列其中一個欄位：name 或 description。
 - 如果使用運算子 =@，則值可以是子字串。
 - 如果使用 ==，則值必須是完全相符的字串。
+
+
+##「推送通知」回應碼
+{: #push-api-response-codes}
+
+狀態：405 不接受方法 - 預期適當的方法。

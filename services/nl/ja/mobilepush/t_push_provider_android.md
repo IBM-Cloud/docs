@@ -9,8 +9,10 @@ copyright:
 {:new_window: target="_blank"}
 # Google Cloud Messaging (GCM) の資格情報の構成
 {: #create-push-enable-gcm}
+*最終更新日: 2016 年 6 月 14 日*
+{: .last-updated}
 
-Google Cloud Messaging (GCM) 資格情報を取得し、Push ダッシュボードで Push Notification Service をセットアップします。
+Google Cloud Messaging (GCM) 資格情報を取得してから、Push ダッシュボード上でプッシュ通知サービスをセットアップします。
 
 ##送信側 ID と API キーの取得
 
@@ -23,7 +25,8 @@ API キーは、Push Notification Service が安全に保管し、GCM サーバ�
 	![プロジェクトの作成](images/gcm_createproject.jpg)
 
 3. **「プロジェクト名」**に、プロジェクトの名前を入力し、**「作成」**ボタンをクリックします。
-4. **「ホーム」**をクリックして、プロジェクト番号を表示します。プロジェクト番号を記録してください。
+4. **「ホーム」**をクリックして、プロジェクト番号を表示します。
+プロジェクト番号を記録してください。
 
 	![GCM プロジェクト番号](images/gcm_projectnumber.jpg)
 
@@ -34,11 +37,9 @@ API キーは、Push Notification Service が安全に保管し、GCM サーバ�
 	![API](images/gcm_mobileapi.jpg)
 
 6. **「API」**をクリックし、次に**「API を有効にする」**ボタンをクリックして、ご使用のプロジェクトに対する API キーを作成します。
-
 	![API を有効にする](images/gcm_enable_api.jpg)
 
 7. **「API と認証」->「資格情報」**画面に移動します。**「認証情報を追加」**をクリックしてから、**「API キー」**をクリックします。
-
 	![API 資格情報](images/api_credentials.jpg)
 
 8. **「サーバーキー」**オプションを選び、Bluemix Push ダッシュボードで使用することになる GCM API キーを生成します。
@@ -46,8 +47,7 @@ API キーは、Push Notification Service が安全に保管し、GCM サーバ�
 
 	![GCM サーバー・キー](images/gcm_serverkey.jpg)
 
-10. **「作成」**ボタンをクリックします。
-API キーが表示されます。
+10. **「作成」**ボタンをクリックします。API キーが表示されます。
 
 	![GCM API キー](images/gcm_apikey.jpg)
 
@@ -70,7 +70,6 @@ GCM の API キーと送信側 ID (プロジェクト番号) を取得します�
 	![プッシュのセットアップ](images/setup_push_main.jpg)
 
 2. **「プッシュのセットアップ (Setup Push)」**ボタンをクリックし、GCM 資格情報を構成します。
-
 1. **「構成」**タブで、**「Google Cloud Messaging」**セクションに移動し、送信側 ID (GCM プロジェクト番号) と API キーを構成します。
 
 4. **「保存」**ボタンをクリックします。 

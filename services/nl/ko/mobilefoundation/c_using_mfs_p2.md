@@ -8,7 +8,7 @@ copyright:
 #	Professional 1 Application 플랜 사용
 {: #using_mobilefoundation_p2}
 
-*마지막 업데이트 날짜: 2016년 6월 15일*
+*마지막 업데이트 날짜: 2016년 7월 20일*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 서비스 인스턴스를 작성한 후에 다음 프로시저를 읽고 서비스를 시작합니다.
@@ -21,7 +21,7 @@ copyright:
 
 * {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스 설정을 구성하기 전에 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스 및 신임 정보를 사용할 수 있어야 합니다.
 
-**참고**: {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스는 {{site.data.keyword.Bluemix_notm}} `조직` 내의 임의의 `영역`에 존재할 수 있습니다.{{site.data.keyword.mobilefoundation_short}} 서비스를 {{site.data.keyword.dashdbshort_notm}} 서비스가 존재하는 영역이 아닌 다른 {{site.data.keyword.Bluemix_notm}} `영역`에 배치하도록 선택한 경우 {{site.data.keyword.dashdbshort_notm}} 서비스에 액세스할 수 있는 권한이 있는지 확인해야 합니다. 
+**참고**: {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스는 {{site.data.keyword.Bluemix_notm}} `Organization` 내의 임의의 `Space`에 존재할 수 있습니다.{{site.data.keyword.mobilefoundation_short}} 서비스를 {{site.data.keyword.dashdbshort_notm}} 서비스가 존재하는 영역이 아닌 다른 {{site.data.keyword.Bluemix_notm}} `Space`에 배치하도록 선택한 경우 {{site.data.keyword.dashdbshort_notm}} 서비스에 액세스할 수 있는 권한이 있는지 확인해야 합니다. 
 
 
 ## 데이터베이스 연결 추가
@@ -37,9 +37,9 @@ copyright:
 
 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 서비스 인스턴스가 작성된 후에 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 서비스 인스턴스에 대한 연결 정보를 지정하는 데 필요한 *개요* 페이지가 표시됩니다.
 
-1.  현재 `조직`에 사용 가능한 영역 목록에서 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스가 존재하는 {{site.data.keyword.Bluemix_notm}} `영역`을 선택하십시오. 
+1.  선택된 `Organization`에 사용 가능한 영역 목록에서 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스가 존재하는 {{site.data.keyword.Bluemix_notm}} `Space`를 선택하십시오. 
 
-+ {{site.data.keyword.dashdbshort_notm}} `서비스 이름` 및 `신임 정보`를 선택하여 기존 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스에 연결하십시오.
++ {{site.data.keyword.dashdbshort_notm}} `Service Name` 및 `Credentials`를 선택하여 기존 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스에 연결하십시오.
 
 +  지정된 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 서비스 인스턴스에 대한 연결을 테스트하십시오.
 
@@ -47,7 +47,7 @@ copyright:
 
 **참고**: 사용자의 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 의해 사용되도록 구성된 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스를 변경할 수 없습니다. 그러나 각 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스가 선택된 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스 내에 자체 스키마를 작성하므로, 다중 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 걸쳐 동일한 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스를 사용할 수 있습니다.
 
-* 잠시 후에는 {{site.data.keyword.mobilefoundation_short}} 서비스를 시작하는 데 도움이 되는 학습서 및 비디오를 제공하는 `개요` 페이지에 액세스할 수 있습니다.
+* 잠시 후에는 {{site.data.keyword.mobilefoundation_short}} 서비스를 시작하는 데 도움이 되는 튜토리얼 및 동영상을 제공하는 `Overview` 페이지에 액세스할 수 있습니다.
 
 ## {{site.data.keyword.mobilefirst}} 서버 시작
 {: #start_mobilefoundation_p2}
@@ -65,7 +65,7 @@ copyright:
 
   -	사용자를 위해 작성된 서버 라우트. 이 라우트를 사용하여 공용 인터넷에서 모바일 서버에 접속할 수 있습니다. 모바일 애플리케이션은 해당 라우트를 사용하여 서버에 액세스합니다. 
 
-  -	{{site.data.keyword.mfp_oc_short_notm}}에 액세스하기 위한 개인 `사용자 이름`` 및 `비밀번호`. `비밀번호는 숨겨집니다.  **비밀번호 표시**를 클릭하여 이를 볼 수 있습니다. 
+  -	{{site.data.keyword.mfp_oc_short_notm}}에 액세스하기 위한 개인 `username` 및 `password`. `password`는 숨겨집니다.  **비밀번호 표시**를 클릭하여 이를 볼 수 있습니다. 
 
 *	**콘솔 실행**을 클릭하여 {{site.data.keyword.mfp_oc_short_notm}}을 여십시오.
 
@@ -84,7 +84,7 @@ copyright:
 ##	고급 구성 설정
 {: #using_mfs_advanced_p2}
 
-`개요` 페이지에서 **고급 구성으로 서버 시작**을 사용하면 고급 또는 사용자 정의 설정으로 서버를 작성할 수 있습니다. 또한 **구성** 탭을 클릭하여 서버 구성을 사용자 정의할 수 있도록 서버 설정을 업데이트할 수도 있습니다. {{site.data.keyword.mobilefoundation_short}}은 일부 고급 설정에 대한 액세스를 제공합니다.
+`Overview` 페이지에서 **고급 구성으로 서버 시작**을 사용하면 고급 또는 사용자 정의 설정으로 서버를 작성할 수 있습니다. 또한 **구성** 탭을 클릭하여 서버 구성을 사용자 정의할 수 있도록 서버 설정을 업데이트할 수도 있습니다. {{site.data.keyword.mobilefoundation_short}}은 일부 고급 설정에 대한 액세스를 제공합니다.
 
 *	**토폴로지** 탭에서 컨테이너의 크기를 선택할 수 있습니다. 기본값인 1GB 서버는 개발 및 간단한 테스트에 충분합니다. 
   - 사용자 요구사항에 따라 적절한 서버 크기를 선택하십시오.

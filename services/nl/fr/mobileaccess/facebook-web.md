@@ -25,7 +25,7 @@ Pour utiliser Facebook comme fournisseur d'identité dans votre site Web, vous d
 
 1. Ouvrez votre application Facebook dans le portail Facebook Developer.
 1. Prenez note de l'ID d'application et de la valeur confidentielle. Vous en aurez besoin pour configurer votre projet Web pour l'authentification Facebook.
-1. Depuis la page **Paramètres**, cliquez sur la commande d'ajout de plateforme et choisissez l'option relative au site Web. 
+1. Depuis la page **Paramètres**, cliquez sur la commande d'ajout de plateforme et choisissez l'option relative au site Web.
 1. Enregistrez les changements.
 1. Cliquez sur la commande de connexion à Facebook dans la barre latérale de gauche.
 1. Entrez le noeud final de rappel du serveur d'autorisation dans la zone relative aux URI de redirection OAuth valides : https://imf-newauthserver.bluemix.net/oauth/{bluemix_app_guid}/callback. Enregistrez les changements.
@@ -50,7 +50,9 @@ Pour démarrer le processus d'autorisation :
 
 1. Effectuez une redirection depuis votre application Web vers le noeud final suivant du serveur d'autorisation : https://imf-newauthserver.bluemix.net/oauth/v2/authorization.
 
-1. Ajoutez les paramètres de requête suivants :```
+1. Ajoutez les paramètres de requête suivants :
+   
+   ```
     response_type='authorization_code'
     client_id= <bluemix_app_guid>
     redirect_uri= <uri for redirecting after receiving the authorization code>
@@ -59,12 +61,13 @@ Pour démarrer le processus d'autorisation :
     ```
 
 
-  Le paramètre `state`, qui n'est pas utilisé pour l'instant, n'a pas besoin d'être renseigné. Le paramètre `redirect_uri` est l'identificateur URI qui permet une redirection après une authentification aboutie ou échouée avec Facebook.
+  Le paramètre `state`, qui n'est pas utilisé pour l'instant, n'a pas besoin d'être renseigné.
+  Le paramètre `redirect_uri` est l'URI de redirection après l'aboutissement ou l'échec de l'authentification avec Facebook.
 
 1. Après redirection vers le noeud final d'autorisation, un formulaire de connexion vous est envoyé par Facebook. Entrez le nom d'utilisateur et le mot de passe pour effectuer la redirection vers l'URI `redirect_uri`.
    La réponse retournée après une redirection contient le code d'autorisation dans les paramètres de requête de la demande.
 
-1. Effectuez une demande `POST` vers le noeud final de jeton du serveur d'autorisation : 
+1. Effectuez une demande `POST` vers le noeud final de jeton du serveur d'autorisation :
 
   https://imf-newauthserver.bluemix.net/oauth/v2/token
 

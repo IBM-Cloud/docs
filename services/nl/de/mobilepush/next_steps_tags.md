@@ -7,9 +7,10 @@ copyright:
 
 # Nächste Schritte
 {: #next_steps_tags}
+*Letzte Aktualisierung: 14. Juni 2016*
+{: .last-updated}
 
-Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte
-Benachrichtigungen und erweiterte Optionen konfigurieren.
+Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte Benachrichtigungen und erweiterte Optionen konfigurieren.
 
 Fügen Sie die folgenden Funktionen von Push Notifications Service
 zu Ihrer App hinzu.

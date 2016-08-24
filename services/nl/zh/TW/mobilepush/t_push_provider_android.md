@@ -9,6 +9,8 @@ copyright:
 {:new_window: target="_blank"}
 # 配置 Google Cloud Messaging (GCM) 的認證
 {: #create-push-enable-gcm}
+*前次更新：2016 年 6 月 14 日*
+{: .last-updated}
 
 取得 Google Cloud Messaging (GCM) 認證，然後在 Push 儀表板上設定 Push Notification Service。
 

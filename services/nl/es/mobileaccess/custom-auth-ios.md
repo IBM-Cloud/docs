@@ -5,12 +5,16 @@ copyright:
 
 ---
 
-# Configuración del SDK del cliente de {{site.data.keyword.amashort}} para iOS
+# Configuración del SDK del cliente de {{site.data.keyword.amashort}} para iOS (Objective-C)
 {: #custom-ios}
+
+*Última actualización: 18 de julio de 2016*
+{: .last-updated}
+
 
 Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amashort}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.
 
-**Nota:** si está desarrollando su app iOS en Swift, tenga en cuenta la posibilidad de utilizar el SDK de Swift de cliente de {{site.data.keyword.amashort}}. Las instrucciones de esta página se aplican al SDK de Objective-C de cliente de {{site.data.keyword.amashort}}. Para ver instrucciones sobre cómo utiliza el nuevo SDK de Swift, consulte el apartado sobre [Configuración del SDK de cliente de {{site.data.keyword.amashort}} para iOS (SDK de Swift)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html). 
+**Nota:** si está desarrollando su app iOS en Swift, tenga en cuenta la posibilidad de utilizar el SDK de Swift de cliente de {{site.data.keyword.amashort}}. Las instrucciones de esta página se aplican al SDK de Objective-C de cliente de {{site.data.keyword.amashort}}. Para ver instrucciones sobre cómo utiliza el nuevo SDK de Swift, consulte el apartado sobre [Configuración del SDK de cliente de {{site.data.keyword.amashort}} para iOS (SDK de Swift)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html).
 
 ## Antes de empezar
 {: #before-you-begin}
@@ -38,7 +42,7 @@ Utilice el gestor de dependencias CocoaPods para instalar el SDK del cliente de 
 1. Desde la línea de mandatos, ejecute `pod install`.
 CocoaPods instala las dependencias añadidas. Se mostrarán el progreso y los componentes que se han añadido.
 
-**Importante**: ahora debe abrir el proyecto con un archivo xcworkspace que ha generado CocoaPods. El nombre suele ser `{nombre-proyecto}.xcworkspace`.
+    **Importante**: ahora debe abrir el proyecto con un archivo xcworkspace que ha generado CocoaPods. El nombre suele ser `{nombre-proyecto}.xcworkspace`.
 
 1. Ejecute `open {nombre-proyecto}.xcworkspace` desde una línea de mandatos para abrir su espacio de trabajo de iOS.
 
@@ -202,7 +206,8 @@ import Foundation
 
 class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
-	func authenticationContext(context: IMFAuthenticationContext!, didReceiveAuthenticationChallenge challenge: [NSObject : AnyObject]!) {
+	func authenticationContext(context: IMFAuthenticationContext!,
+					didReceiveAuthenticationChallenge challenge: [NSObject : AnyObject]!) {
 
 		NSLog("didReceiveAuthenticationChallenge :: %@", challenge)
 
@@ -230,7 +235,8 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 		NSLog("didReceiveAuthenticationSuccess")
 	}
 
-	func authenticationContext(context: IMFAuthenticationContext!, didReceiveAuthenticationFailure userInfo: [NSObject : AnyObject]!) {
+	func authenticationContext(context: IMFAuthenticationContext!,
+					didReceiveAuthenticationFailure userInfo: [NSObject : AnyObject]!) {
 		NSLog("didReceiveAuthenticationFailure")
 	}
 }
@@ -259,13 +265,14 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 ## Prueba de autenticación
 {: #custom-ios-testing}
-Después de inicializar el SDK del cliente y registrar un `IMFAuthenticationDelegate` personalizado, puede empezar a realizar solicitudes a la aplicación de fondo móvil. 
+Después de inicializar el SDK del cliente y registrar un `IMFAuthenticationDelegate` personalizado, puede empezar a realizar solicitudes a la aplicación de fondo móvil.
 
 ### Antes de empezar
 {: #custom-ios-testing-before}
  Debe tener una aplicación que se haya creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y que disponga de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`.
 
-1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`. El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
+1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`.
+  El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
 1. Utilice la aplicación de iOS para realizar solicitudes al mismo punto final. Añada el código siguiente para inicializar `BMSClient` y registrar el `IMFAuthenticationDelegate` personalizado:
 
 	Objective-C:

@@ -41,7 +41,7 @@ Xcode에서 **제품 &gt; 실행**을 클릭하십시오. iOS 시뮬레이터가
 <br/>
 연결되면 디버그 로그인 Xcode에 다음 메시지가 포함됩니다.
 ```
-성공적으로 {{site.data.keyword.Bluemix_notm}}에 연결했습니다.
+You have connected to {{site.data.keyword.Bluemix_notm}} successfully
 ```
 5. 모든 문제를 해결하십시오.
 연결이 실패하면 "문제점이 발생했습니다."라는 메시지가 표시됩니다. 오류에 대한 자세한 정보가 포함됩니다.<br/>
@@ -49,12 +49,12 @@ Xcode에서 **제품 &gt; 실행**을 클릭하십시오. iOS 시뮬레이터가
 <br/>라우트 및 GUID 값을 올바르게 붙여넣었는지 확인하십시오.
    * Objective-C:
   ```
-  [imfClient initializeWithBackendRoute:@"https://hellotest.mybluemix.net"
+[imfClient initializeWithBackendRoute:@"https://hellotest.mybluemix.net"
   backendGUID:@"9d48d73a-0878-4254-test-bdcbe6c79c31"];
   ``` {: codeblock}
    * Swift:
   ```
-  IMFClient.sharedInstance().initializeWithBackendRoute("https://hellotest.mybluemix.net", backendGUID: "9d48d73a-0878-4254-test-bdcbe6c79c31")
+IMFClient.sharedInstance().initializeWithBackendRoute("https://hellotest.mybluemix.net", backendGUID: "9d48d73a-0878-4254-test-bdcbe6c79c31")
   ```{: codeblock}
 
 

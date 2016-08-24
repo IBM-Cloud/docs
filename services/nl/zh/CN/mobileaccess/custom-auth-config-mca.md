@@ -7,6 +7,11 @@ copyright:
 
 # 配置 {{site.data.keyword.amashort}} 进行定制认证
 {: #custom-dash}
+
+*上次更新时间：2016 年 7 月 17 日*
+{: .last-updated}
+
+
 要将定制认证用于移动应用程序，必须在 {{site.data.keyword.amashort}} 服务仪表板中注册定制身份提供者的定制认证域和基本 URL。
 
 ## 开始之前
@@ -17,17 +22,17 @@ copyright:
 
 ## 在 {{site.data.keyword.Bluemix}}“仪表板”中配置定制认证
 {: #custom-dash-config}
-使用 {{site.data.keyword.amashort}}“仪表板”可配置定制认证。
+使用 {{site.data.keyword.Bluemix}}“仪表板”可配置定制认证。
 
 1. 在 {{site.data.keyword.Bluemix}}“仪表板”中打开应用程序。
 
-1. 单击**移动选项**，然后记录**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`)。初始化 SDK 时需要这些值。
+1. 单击**移动选项**，然后记录**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`)。您需要这些值才能初始化 SDK。
 
 1. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
 
 1. 单击**定制**磁贴。
 
-1. 输入定制身份提供者的**域名** 和**基本 URL**，然后保存更改。
+1. 输入定制身份提供者的**域名**和**基本 URL**，然后保存更改。
 
 ## 后续步骤
 {: #next-steps}

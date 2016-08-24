@@ -11,7 +11,8 @@ copyright:
 *Letzte Aktualisierung: 15. Juni 2016*
 {: .last-updated}
 
-Stimmen Sie nach der Erstellung der {{site.data.keyword.mobilefoundation_short}}: Developer-Serviceinstanz den Lizenzbedingungen für {{site.data.keyword.mfp_full_notm}} Version 8.0 zu, um mit der Verwendung des Service zu beginnen. Nach ein paar Sekunden können Sie in {{site.data.keyword.Bluemix_notm}} auf die Seite `Übersicht` zugreifen, die Ihnen Lernprogramme und Videos bietet, die Ihnen den Einstieg in den Service {{site.data.keyword.mobilefoundation_short}} erleichtern.
+Stimmen Sie nach der Erstellung der {{site.data.keyword.mobilefoundation_short}}: Developer-Serviceinstanz den Lizenzbedingungen für {{site.data.keyword.mfp_full_notm}} Version 8.0 zu, um mit der Verwendung des Service zu beginnen.
+Nach ein paar Sekunden können Sie in {{site.data.keyword.Bluemix_notm}} auf die Seite `Übersicht` zugreifen, die Ihnen Lernprogramme und Videos bietet, die Ihnen den Einstieg in den Service {{site.data.keyword.mobilefoundation_short}} erleichtern.
 
 ## {{site.data.keyword.mobilefirst}} Server starten
 {: #start_mobilefoundation_p1}
@@ -31,7 +32,7 @@ Informationen angezeigt:
 
 *	Für Sie erstellte Serverroute. Mit dieser Route können Sie Ihren mobilen Server aus dem öffentlichen Internet erreichen. Ihre mobilen Anwendungen nutzen diese Route, um auf den Server zuzugreifen.
 
-*	Ihr persönlicher `Benutzername` und das `Kennwort` für den Zugriff auf die {{site.data.keyword.mfp_oc_short_notm}}. Das `Kennwort` wird ausgeblendet. Klicken Sie auf **Kennwort anzeigen**, um es einzublenden. 
+*	Ihr persönlicher `Benutzername` und das `Kennwort` für den Zugriff auf die {{site.data.keyword.mfp_oc_short_notm}}. Das `Kennwort` wird ausgeblendet. Klicken Sie auf **Kennwort anzeigen**, um es einzublenden.
 
 *	Klicken Sie auf **Konsole starten**, um die {{site.data.keyword.mfp_oc_short_notm}} zu starten.
 

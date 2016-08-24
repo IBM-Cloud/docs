@@ -7,8 +7,10 @@ copyright:
 
 # Conservation des notifications pour Android
 {: #hold-notifications-android}
+*Dernière mise à jour : 14 juin 2016*
+{: .last-updated}
 
-Lorsque votre application passe en arrière-plan, il peut être judicieux que Push conserve les notifications qui lui sont envoyées. Pour conserver des notifications, appelez la méthode hold() dans la méthode onPause() de l'activité qui traite les notifications push.
+Quand votre application passe en arrière-plan, vous pouvez vouloir que le service Notifications Push conserve les notifications qui sont envoyées à cette application. Pour conserver des notifications, appelez la méthode hold() dans la méthode onPause() de l'activité qui traite les notifications push.
 
 ```
 @Override

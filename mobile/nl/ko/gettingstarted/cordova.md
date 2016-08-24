@@ -29,12 +29,14 @@ copyright:
 3. 프로젝트 디렉토리에서 다음 명령을 실행하여 Android 및 iOS 플랫폼 환경을 추가하십시오.
 
 	### Android
+	{: #cordova-android-run}
 
 	```Bash
 	cordova platform add android
 	```
 
 	### iOS
+	{: #cordova-ios-run}
 
 	```Bash
 	cordova platform add ios
@@ -62,6 +64,7 @@ copyright:
 6. iOS용 Cordova 앱을 구성하십시오. Android 플랫폼에서는 추가 구성이 필요하지 않습니다.
 
 	### iOS
+	{: #cordova-ios-configure}
   다음과 같이 Xcode 프로젝트를 구성하여 빌드 오류를 방지하십시오.
 
 	1. 최신 Xcode 버전을 사용하여 *&lt;app_name&gt;*/platforms/ios 디렉토리에서 `xcode.proj` 파일을 여십시오.
@@ -83,6 +86,7 @@ copyright:
 7. 모바일 에뮬레이터 또는 디바이스에서 샘플을 빌드하고 실행하십시오.
 
   ### Android
+  {: #cordova-android-build}
 	1. 다음 명령을 사용하여 Cordova 앱을 빌드하십시오.
 
     **중요:** Android Studio에서 프로젝트를 열기 전에, 우선 Cordova 명령행 인터페이스(CLI)를 통해 Cordova 애플리케이션을 빌드해야 합니다. 그렇지 않으면, 빌드 오류가 발생합니다.
@@ -94,6 +98,7 @@ copyright:
 	2. Android Studio에서 샘플 앱을 실행하십시오.
 
   ### iOS
+  {: #cordova-ios-build}
   1. Xcode에서 Cordova 앱을 빌드하십시오.
 
     **팁:** Xcode에서 빌드하면 디버깅, 프로젝트 구성과 같은 추가 옵션을 사용할 수 있습니다.
@@ -102,16 +107,22 @@ copyright:
 
 **PING BLUEMIX** 단추가 있는 단일 보기 애플리케이션이 표시됩니다. 단추를 누르면 애플리케이션이 클라이언트에서 백엔드 {{site.data.keyword.Bluemix_notm}} 애플리케이션으로의 연결을 테스트합니다. `index.js` 파일에 지정한 애플리케이션 라우트를 사용하여 연결을 테스트합니다.
 
+<!--
+![Hello World application successfully connected to Bluemix](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+-->
 
-![Hello World 애플리케이션이 Bluemix에 성공적으로 연결됨](images/yayconnected.jpg "그림 1. Hello World 애플리케이션이 Bluemix에 성공적으로 연결됨")
-
-
-모바일 앱에서 {{site.data.keyword.Bluemix_notm}}에 연결되면 "Yay! You are connected"라는 메시지가 표시됩니다.
+  Android Studio의 모바일 앱에서 {{site.data.keyword.Bluemix_notm}}에 연결하면 다음이 표시됩니다.
+  `Yay! You are connected`
+  {: screen}
 
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
-연결이 실패하면 오류 메시지가 표시됩니다. 오류에 대한 자세한 정보가 메시지에 포함되어 있습니다. 다음 항목을 확인하여 오류의 문제점을 해결할 수 있습니다.
+연결이 실패하면 다음이 표시됩니다.
+  `Bummer. Something went wrong`
+  {: screen}
+
+오류에 대한 자세한 정보가 메시지에 포함되어 있습니다. 다음 항목을 확인하여 오류의 문제점을 해결할 수 있습니다.
 
 - 라우트 및 GUID 값을 올바로 붙여넣었는지 확인하십시오.
 - Xcode 또는 Android 디버그 로그를 보십시오.

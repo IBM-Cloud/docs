@@ -7,6 +7,8 @@ copyright:
 
 # Configuration des applications Cordova pour la réception de notifications push
 {: #cordova_enable}
+*Dernière mise à jour : 14 juin 2016*
+{: .last-updated}
 
 Cordova est une plateforme permettant de construire des applications hybrides avec JavaScript, CSS et HTML. Le service {{site.data.keyword.mobilepushshort}} prend en charge le développement d'applications iOS et Android reposant sur Cordova.
 
@@ -50,7 +52,7 @@ nom de votre choix, plutôt que d'utiliser le nom HelloCordova par défaut.
 	Pour corriger ce problème, spécifiez l'ID de bundle approprié dans Xcode ou dans le fichier **config.xml** de votre appli Cordova.
 
 1. Ajoutez l'API minimale prise en charge ou la déclaration de cible de déploiement dans le fichier config.xml de votre application Cordova. La valeur de minSdkVersion doit être supérieure à 15. La valeur de targetSdkVersion doit toujours refléter le logiciel SDK Android le plus récent disponible auprès de Google.
-	* **Android** - A l'aide de votre éditeur, ouvrez le fichier config.xml et mettez à jour l'élément `<platform name="android">` avec les versions SDK minimum et cible : 
+	* **Android** - A l'aide de votre éditeur, ouvrez le fichier config.xml et mettez à jour l'élément `<platform name="android">` avec les versions SDK minimum et cible :
 
 	```
 	<!-- add deployment target declaration -->
@@ -125,9 +127,9 @@ l'identificateur global unique de l'application. Une fois le plug-in initialisé
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. Modifiez le fragment de code pour qu'il utilise vos paramètres de route et d'identificateur global unique Bluemix. Cliquez sur le lien **Options pour application mobile** dans le tableau de bord de votre application Bluemix pour obtenir la route et l'identificateur global unique de l'application. Utilisez les valeurs Route et Identificateur global unique de l'application comme paramètres dans votre fragment de code `BMSClient.initialize`. 
+1. Modifiez le fragment de code pour qu'il utilise vos paramètres de route et d'identificateur global unique Bluemix. Cliquez sur le lien **Options pour application mobile** dans le tableau de bord de votre application Bluemix pour obtenir la route et l'identificateur global unique de l'application. Utilisez les valeurs Route et Identificateur global unique de l'application comme paramètres dans votre fragment de code `BMSClient.initialize`.
 
-	**Remarque** : Si vous avez créé une appli Cordova à l'aide de l'interface CLI Cordova, par exemple, la commande Cordova create app-name, placez ce code Javascript dans le fichier **index.js**, après la fonction `app.receivedEvent` dans la fonction `onDeviceReady: function()` afin d'initialiser le client BMS. 
+	**Remarque** : Si vous avez créé une appli Cordova à l'aide de l'interface CLI Cordova, par exemple, la commande Cordova create app-name, placez ce code Javascript dans le fichier **index.js**, après la fonction `app.receivedEvent` dans la fonction `onDeviceReady: function()` afin d'initialiser le client BMS.
 
 ```
 onDeviceReady: function() {
@@ -139,9 +141,12 @@ onDeviceReady: function() {
 ## Enregistrement des périphériques
 {: #cordova_register}
 
-Pour enregistrer un périphérique auprès du service de notification push, appelez la méthode d'enregistrement.
+Avant de procéder à l'enregistrement, initialisez le service Notifications push.
+```
+    MFPPush.initializeBluemixPush();
+```
 
-Copiez et collez le fragment de code suivant dans votre application Cordova pour enregistrer un périphérique :
+Pour enregistrer un périphérique auprès du service Notifications push, appelez la méthode d'enregistrement. Copiez le fragment de code suivant dans votre application Cordova pour enregistrer un périphérique.
 
 ```
 	var success = function(message) { console.log("Success: " + message); };
@@ -151,7 +156,7 @@ Copiez et collez le fragment de code suivant dans votre application Cordova pour
 
 ### Android
 {: #cordova_register_android}
-Android n'utilise pas le paramètre settings. Si vous générez uniquement un appli Android, indiquez un objet vide. Par exemple :
+Android n'utilise pas le paramètre settings. Si vous ne générez qu'une application Android, passez un objet vide, par exemple :
 
 ```
 	MFPPush.registerDevice({}, success, failure);
@@ -188,19 +193,19 @@ Vous pouvez accéder au contenu du paramètre de réponse success dans Javascrip
 
 Les clés disponibles sont les suivantes : `token`, `userId` et `deviceId`.
 
-Le fragment de code JavaScript ci-après montre comment initialiser votre logiciel SDK du client Bluemix Mobile Services, enregistrer un périphérique à l'aide du service de notification push et passer en mode écoute sur les notifications push. Placez ce code dans votre fichier Javascript.
+Le fragment de code JavaScript ci-après montre comment initialiser votre logiciel SDK du client Bluemix Mobile Services, enregistrer un périphérique avec le service Notifications push et passer en mode écoute sur les notifications push. Placez ce code dans votre fichier Javascript.
 
 
 
 ```
-//Enregistrez le jeton de périphérique auprès du service Notification push de Bluemix
+//Register device token with Bluemix Push Notification Service
 funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
   CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
 }
 ```
 
 ```
-//Traitez l'erreur en cas d'échec de l'enregistrement du jeton de périphérique auprès de APNs
+//Handle error when failed to register device token with APNs
 funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
 CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 }
@@ -210,16 +215,16 @@ Dans **onDeviceReady: function()**.
 
 ```
 onDeviceReady: function() {
-    app.receivedEvent('deviceready');
+     app.receivedEvent('deviceready');
      BMSClient.initialize("https://http://myroute_mybluemix.net","my_appGuid");
      var success = function(message) { console.log("Success: " + message); };
      var failure = function(message) { console.log("Error: " + message); };
      var settings = {
          ios: {
              alert: true,
-             badge: true,
-             sound: true
-         }   
+	       badge: true,
+	       sound: true
+	   }   
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
@@ -235,11 +240,11 @@ onDeviceReady: function() {
 Ajoutez le fragment de code Objective-C suivant à la classe de votre délégué d'application :
 
 ```
-	// Enregistrez le jeton de périphérique auprès de Bluemix Push Notification Service
+	// Register the device token with Bluemix Push Notification Service
 	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
 	}
-	// Traitez l'erreur en cas d'échec de l'enregistrement du jeton de périphérique auprès de APNs
+	// Handle error when failed to register device token with APNs
 	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
 	   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
 	}
@@ -253,9 +258,9 @@ Ajoutez le fragment de code Swift suivant à la classe de votre délégué d'app
 funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
 }
-//Traitez l'erreur en cas d'échec de l'enregistrement du jeton de périphérique auprès de APNs
+// Handle error when failed to register device token with APNs
 funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
-CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
+   CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 }
 ```
 
@@ -274,7 +279,7 @@ Générez votre projet, puis exécutez-le à l'aide des commandes suivantes :
 ## Réception de notifications push sur les périphériques
 {: #cordova_receive}
 
-Copiez et collez les fragments de code ci-après pour recevoir des notifications push sur les périphériques.
+Copiez et collez le fragment de code ci-après pour recevoir des notifications push sur les périphériques. 
 
 ###JavaScript
 
@@ -312,7 +317,7 @@ action-loc-key - Chaîne utilisée comme clé pour obtenir une chaîne localisé
 Ajoutez les fragments de code Objective-C suivants à la classe de votre délégué d'application :
 
 ```
-// Traitez la réception d'une notification distante
+// Handle receiving a remote notification
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 
  [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
@@ -320,7 +325,7 @@ Ajoutez les fragments de code Objective-C suivants à la classe de votre délég
 ```
 
 ```
-// Traitez la réception d'une notification distante lors du lancement
+// Handle receiving a remote notification on launch
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 
     [[CDVMFPPush sharedInstance] didReceiveRemoteNotificationOnLaunch:launchOptions];
@@ -332,7 +337,7 @@ Ajoutez les fragments de code Objective-C suivants à la classe de votre délég
 Ajoutez les fragments de code Swift suivants à la classe de votre délégué d'application :
 
 ```
-// Traitez la réception d'une notification distante
+// Handle receiving a remote notification
 funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){
 
     CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
@@ -340,7 +345,7 @@ funcapplication(application: UIApplication, didReceiveRemoteNotification userInf
 ```
 
 ```
-// Traitez la réception d'une notification distante lors du lancement
+// Handle receiving a remote notification on launch
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
     CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)

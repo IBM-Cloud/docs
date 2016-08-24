@@ -32,12 +32,14 @@ terminal, puis entrez la commande suivante :
 3. Exécutez les commandes suivantes depuis votre répertoire de projet afin d'ajouter les environnements de plateforme Android et iOS :
 
 	### Android
+	{: #cordova-android-run}
 
 	```Bash
 	cordova platform add android
 	```
 
 	### iOS
+	{: #cordova-ios-run}
 
 	```Bash
 	cordova platform add ios
@@ -58,7 +60,7 @@ terminal, puis entrez la commande suivante :
 		**Remarque :** assurez-vous que votre route utilise le protocole https pour la sécurité.
 
 		```Javascript
-		// Données d'identification Bluemix
+		// Bluemix credentials
 		route: "<APPLICATION_ROUTE>",
 		GUID: "<APPLICATION_GUID>",
 		```
@@ -66,6 +68,7 @@ terminal, puis entrez la commande suivante :
 6. Configurez votre appli Cordova pour iOS. La plateforme Android ne nécessite pas de configuration supplémentaire.
 
 	### iOS
+	{: #cordova-ios-configure}
   Configurez votre projet Xcode comme suit afin d'éviter toute erreur de génération.
 
 	1. Utilisez la version la plus récente de Xcode pour ouvrir votre fichier `xcode.proj` dans le répertoire *&lt;nom_app&gt;*/platforms/ios.
@@ -87,6 +90,7 @@ terminal, puis entrez la commande suivante :
 7. Créez et exécutez l'exemple sur votre émulateur ou périphérique mobile.
 
   ### Android
+  {: #cordova-android-build}
 	1. Générez l'appli Cordova avec la commande suivante :
 
     **Important :** Avant d'ouvrir votre projet dans Android Studio, vous devez d'abord générer votre appli Cordova via l'interface de ligne de commande Cordova (CLI). Si vous ne le faites pas, vous des erreurs de génération se produisent.
@@ -98,6 +102,7 @@ terminal, puis entrez la commande suivante :
 	2. Exécutez l'exemple dans Android Studio.
 
   ### iOS
+  {: #cordova-ios-build}
   1. Générez l'appli Cordova dans Xcode.
 
     **Astuce :** La génération dans Xcode permet d'avoir accès à d'autres options, telles que le débogage et la configuration des projets.
@@ -108,17 +113,21 @@ Une application avec une vue unique comportant un bouton **PING BLUEMIX** s'affi
 la connexion du client à l'application {{site.data.keyword.Bluemix_notm}} de back end. La connexion est testée avec la route d'application que
 vous avez spécifiée dans le fichier `index.js`.
 
+<!--
+![Hello World application successfully connected to Bluemix](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+-->
 
-![Application Hello World
-connectée à Bluemix](images/yayconnected.jpg "Figure 1. Application Hello World connectée à Bluemix")
-
-
-Si vous parvenez à vous connecter à {{site.data.keyword.Bluemix_notm}} depuis votre application mobile, le message "Yay! You are connected" s'affiche.
+  Quand vous vous connectez à {{site.data.keyword.Bluemix_notm}} depuis l'application mobile dans Android Studio, le message suivant s'affiche :
+  `Yay! You are connected`
+  {: screen}
 
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
-Si la connexion échoue, un message d'erreur s'affiche. Ce dernier inclut des informations supplémentaires sur l'erreur. Vous pouvez vérifier les éléments suivants afin de traiter votre erreur :
+Si la connexion échoue, le message suivant s'affiche : `Bummer. Something went wrong`
+  {: screen}
+
+Ce dernier inclut des informations supplémentaires sur l'erreur. Vous pouvez vérifier les éléments suivants afin de traiter votre erreur :
 
 - Assurez-vous d'avoir collé correctement les valeurs de route et d'identificateur global unique.
 - Affichez le journal de débogage de Xcode ou Android.

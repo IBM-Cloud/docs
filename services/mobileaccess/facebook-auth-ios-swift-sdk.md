@@ -6,15 +6,15 @@ copyright:
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 
 # Enabling Facebook authentication for iOS apps (Swift SDK)
 {: #facebook-auth-ios}
 
-Last updated: 01 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
-To use Facebook as an identity provider in your iOS applications, add and configure the iOS Platform for your Facebook application.
+
+To use Facebook as an identity provider in your {{site.data.keyword.amafull}} iOS applications, add and configure the iOS Platform for your Facebook application.
 {:shortdesc}
 
 ## Before you begin
@@ -69,21 +69,20 @@ After you  configure the Facebook Application ID and your Facebook Application t
 ```
 sudo gem install cocoapods
 ```
+
 For more information, see the [CocoaPods website](https://cocoapods.org/).
 
 ### Installing the {{site.data.keyword.amashort}} client Swift SDK with CocoaPods
 {: #facebook-auth-install-swift-cocoapods}
 
-1. If you have no `Podfile` in your iOS project, run `pod init` to created the file.
+1. If you have no `Podfile` in your iOS project, run `pod init` to create the file.
 
 1. Edit the `Podfile` and add the following lines:
 
  ```
 use_frameworks!
 pod 'BMSFacebookAuthentication'
-
 	```
-
    **Note:** If you have this line in your Pod file: `pod 'BMSSecurity'`, you must remove it. The `BMSFacebookAuthentication` pod installs all necessary frameworks.
 
    **Tip:** You can add `use_frameworks!` to your Xcode target instead of having it in the Podfile.
@@ -155,6 +154,7 @@ pod 'BMSFacebookAuthentication'
 	    </dict>
 	</dict>
 ```
+
    Update the URL scheme and FacebookappID properties with your Facebook Application ID. Update the FacebookDisplayName with the name of your Facebook application.
 
     **Important**: Make sure you are not overriding any existing properties in  the `info.plist` file. If you have overlapping properties, you must merge manually. For more information, see [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) and [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9).
@@ -164,7 +164,7 @@ pod 'BMSFacebookAuthentication'
 
 Initialize the client SDK by passing the `applicationGUID` and `applicationRoute` parameters.
 
-A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate
+A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate.
 
 1. Get your application parameter values. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `applicationRoute` and `applicationGUID` values are displayed in the **Route** and **App GUID** fields.
 
@@ -175,21 +175,28 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSCore
  import BMSSecurity
  ```
-2. Initialize the client SDK.	Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
-Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+2. Initialize the client SDK.
 
  ```Swift
  let backendURL = "<applicationRoute>"
  let backendGUID = "<applicationGUID>"
+ let tenantId = "<MCAServiceTenantId>"
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
  BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+ 
+ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+ mcaAuthManager.initialize(tenantId: tenantId)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
  FacebookAuthenticationManager.sharedInstance.register()
  ```
+ In the code:
+ * Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
+ * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+ * Replace `<MCAServiceTenantId>` with the `tenantId` value. You find this value when you click the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
 
 1. Notify the Facebook SDK about the app activation and register the Facebook Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code after you initialize the BMSClient instance and register Facebook as the authentication manager.
 
@@ -262,13 +269,14 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
  })
  response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
  ```
-  {: screen}
+ {: screen}
 
 1. You can also add logout functionality by adding the following code:
 
  ```
 FacebookAuthenticationManager.sharedInstance.logout(callBack)
 ```
+
 
  If you call this code after a user is logged in with Facebook, and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Facebook for authentication purposes.
 

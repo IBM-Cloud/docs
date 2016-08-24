@@ -8,6 +8,9 @@ copyright:
 # 啟用 Web 應用程式的 Google 鑑別
 {: #google-auth-web}
 
+*前次更新：2016 年 6 月 1 日*
+{: .last-updated}
+
 在 Web 應用程式上使用「Google 登入」來鑑別使用者。
 
 
@@ -51,35 +54,30 @@ copyright:
    response_type='authorization_code'
    client_id= <bluemix_app_guid>
    redirect_uri= <uri which you want to return to after getting a grant code>
-   scope= ‘openid’
+   scope= 'openid'
    state= <state>
 	```
 
   `state` 參數目前未在使用中，可以將它保留空白。
 
-  `redirect_uri` 參數 URI 是使用 Google 進行成功或失敗鑑別之後的重新導向。
-重新導向之後所取得的回應包含要求查詢參數中的授權碼。
-1. 對授權伺服器記號端點提出 `POST` 要求：
-
+  `redirect_uri` 參數 URI 是使用 Google 進行成功或失敗鑑別之後的重新導向。重新導向之後所取得的回應包含要求查詢參數中的授權碼。
+1. 對授權伺服器記號端點提出 `POST` 要求：  
  https://imf-newauthserver.bluemix.net/oauth/v2/token
-
 
   使用下列查詢參數：
 
 	```
-  	grant_type=’authorization_code’
+  	 grant_type='authorization_code'
     client_id= < bluemix_app_guid >
     redirect_uri= <redirect_uri >
     code= <authorization code>
 	```
-  `redirect_uri` 參數必須符合步驟 1 中的 `redirect_uri`，而 `<authorization code>` 值是接收自回應。
-    因為授權碼的有效時間最多為 10 分鐘，所以請一定要在 10 分鐘內傳送此 `POST` 要求。
+  `redirect_uri` 參數必須符合步驟 1 中的 `redirect_uri`，而 `<authorization code>` 值是接收自回應。因為授權碼的有效時間最多為 10 分鐘，所以請一定要在 10 分鐘內傳送此 `POST` 要求。
 
-`POST` 回應主體應該包含以 base64 編碼的 `access_token` 及 `id_token`。
+`POST` 回應內文應該包含以 base64 編碼的 `access_token` 及 `id_token`。
 
 ## 測試鑑別
 
-現在，您可以開始對受保護資源提出要求。
-所有對受保護資源的要求都應該在授權要求標頭欄位中包含存取記號。
+現在，您可以開始對受保護資源提出要求。所有對受保護資源的要求都應該在授權要求標頭欄位中包含存取記號。
 
 

@@ -8,9 +8,16 @@ copyright:
 # Activation de l'authentification Google pour les applications iOS Objective C
 {: #google-auth-ios}
 
+
+*Dernière mise à jour : 16 juin 2016*
+{: .last-updated}
+
 Utilisez Google Sign-In pour authentifier les utilisateurs sur vos applications iOS Mobile Client Access.
 
-**Remarque :** alors que le SDK Objective-C reste complètement pris en charge et est toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix_notm}} Mobile Services, il est prévu qu'il soit interrompu plus tard dans l'année et remplacé par le nouveau SDK Swift. Pour les nouvelles applications, il est vivement recommandé d'utiliser le SDK Swift. Les instructions de cette page s'appliquent au SDK client Objective-C de {{site.data.keyword.amashort}}. Pour les instructions d'utilisation du SDK Swift, voir [Activation de l'authentification Google dans les applications iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
+**Remarque :** Bien que le SDK Objective-C reste complètement pris en charge et soit toujours considéré comme le SDK principal pour
+{{site.data.keyword.Bluemix_notm}} Mobile Services, il est envisagé de le retirer plus tard dans l'année et de le remplacer par le
+nouveau SDK
+Swift. Pour les nouvelles applications, il est vivement recommandé d'utiliser le SDK Swift. Les instructions de cette page s'appliquent au SDK client Objective-C de {{site.data.keyword.amashort}}. Pour les instructions d'utilisation du SDK Swift, voir [Activation de l'authentification Google dans les applications iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
 
 ## Avant de commencer
 {: #google-auth-ios-before}
@@ -225,8 +232,7 @@ dans votre délégué d'application. Ajoutez ce code immédiatement après l'ini
 		[[IMFGoogleAuthenticationHandler sharedInstance] handleDidBecomeActive];
 	}
 
-	- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url
-					sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
+	- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
 
 		BOOL shouldHandleGoogleURL = [GPPURLHandler handleURL:url sourceApplication:sourceApplication annotation:annotation];
 
@@ -259,8 +265,10 @@ Une fois que le SDK client est initialisé, vous pouvez commencer à envoyer des
 Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et disposer au préalable d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour configurer un noeud final `/protected`, voir la rubrique [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Essayez d'envoyer une demande à un noeud final protégé de votre système de back end mobile dans votre navigateur de bureau en ouvrant `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
-1. Le noeud final `/protected` d'un système de back end mobile créé avec le conteneur boilerplate MobileFirst Services est protégé par {{site.data.keyword.amashort}}, par conséquent, seules les applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}} peuvent y accéder. Pour cette raison, le message `Unauthorized` s'affiche dans votre navigateur de bureau.
+1. Essayez d'envoyer une demande à un noeud final protégé de votre back end mobile dans votre navigateur de bureau en ouvrant
+`{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`
+
+1. Le noeud final `/protected` d'un système de back end mobile créé avec le conteneur boilerplate MobileFirst Services est protégé par {{site.data.keyword.amashort}}, par conséquent, seules les applications mobiles instrumentées avec le logiciel SDK client de {{site.data.keyword.amashort}} peuvent y accéder. Pour cette raison, le message `Unauthorized` s'affiche dans votre navigateur de bureau.
 
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final.
 
@@ -306,7 +314,8 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 
 	Cet écran peut être légèrement différent si l'appli Facebook n'est pas installée sur votre périphérique, ou si vous n'y êtes pas connecté.
 
-1. Cliquez sur **OK** pour autoriser {{site.data.keyword.amashort}} à se servir de votre identité d'utilisateur Google pour l'authentification.
+1. Cliquez sur **OK** pour autoriser {{site.data.keyword.amashort}} à utiliser votre ID utilisateur Google pour l'authentification.
+
 1. 	Votre demande doit aboutir. La sortie suivante figure alors dans l'outil LogCat :
 
 	![image](images/ios-google-login-success.png)
@@ -329,4 +338,5 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 {{site.data.keyword.amashort}} à utiliser Google aux fins d'authentification. A ce stade, l'utilisateur peut cliquer sur un nom d'utilisateur à l'angle
 supérieur droit de l'écran pour sélectionner et se connecter sous un autre nom d'utilisateur.
 
-	La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre la valeur `nil`.
+	La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre
+la valeur `nil`.

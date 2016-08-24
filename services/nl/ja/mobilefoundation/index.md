@@ -13,7 +13,7 @@ copyright:
 # {{site.data.keyword.mobilefoundation_short}} の概要
 {: #gettingstartedtemplate}
 
-*最終更新日: 2016 年 6 月 15 日*
+*最終更新日: 2016 年 7 月 20 日*
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_long}} は {{site.data.keyword.mfp_full}} 環境 (この環境からエンタープライズ・モバイル・アプリの開発、テスト、操作が可能です) のセットアップを迅速に処理します。
@@ -39,7 +39,7 @@ copyright:
 
 1.  {{site.data.keyword.Bluemix_notm}} 上の既存の {{site.data.keyword.dashdbshort}}: エンタープライズ・トランザクション」サービスに接続します。
 
-    1.  現在の `組織` で使用可能なスペースのリストから、{{site.data.keyword.dashdbshort_notm}} サービス・インスタンスが存在する {{site.data.keyword.Bluemix_notm}} `スペース` を選択します。
+    1.  選択された`組織`で使用可能なスペースのリストから、{{site.data.keyword.dashdbshort_notm}} サービス・インスタンスが存在する、{{site.data.keyword.Bluemix_notm}} の`スペース`を選択します。
 
     2.  既存の {{site.data.keyword.dashdbshort_notm}} サービス・インスタンスに接続するための {{site.data.keyword.dashdbshort_notm}} `サービス名` および `資格情報` を選択します。
 
@@ -49,8 +49,7 @@ copyright:
 
 2.  サーバーを作成して始動します。
 
-    * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。
-		
+    * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。 
 
       `基本サーバー・インスタンスには、単一のノード、1 GB のメモリー、および 64 GB のストレージ容量が含まれています。`
 

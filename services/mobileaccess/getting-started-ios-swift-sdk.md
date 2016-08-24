@@ -6,15 +6,17 @@ copyright:
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
+
 
 # Setting up the iOS Swift SDK
 {: #getting-started-ios}
 
-Last updated: 01 August 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
-{{site.data.keyword.amashort}} has released a new Swift SDK, that adds to, and improves, the functionality provided by the existing {{site.data.keyword.amashort}} Objective-C SDK, making it easier to authenticate your app and providing better protection for your back-end resources. Instrument your iOS Swift application with the {{site.data.keyword.amashort}} SDK, initialize the SDK, and make requests to protected and unprotected resources.
+
+{{site.data.keyword.amafull}} has released a new Swift SDK, that adds to, and improves, the functionality provided by the existing {{site.data.keyword.amashort}} Objective-C SDK, making it easier to authenticate your app and providing better protection for your back-end resources. Instrument your iOS Swift application with the {{site.data.keyword.amashort}} SDK, initialize the SDK, and make requests to protected and unprotected resources.
+
 {:shortdesc}
 
 **Note:** The Objective-C SDK reports monitoring data to the Monitoring Console of {{site.data.keyword.amashort}} service. In case you’re relying on the monitoring functionality of {{site.data.keyword.amashort}} service you need to continue using the Objective-C SDK.
@@ -47,6 +49,8 @@ The {{site.data.keyword.amashort}} SDK is distributed with CocoaPods, a dependen
 ```
 sudo gem install cocoapods
 ```
+
+
 For more information, see the [CocoaPods website](https://cocoapods.org/).
 
 ### Install the {{site.data.keyword.amashort}} client SDK with CocoaPods
@@ -63,6 +67,7 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
   use_frameworks!
   pod 'BMSSecurity'
 	```
+
   **Tip:** You can add `use_frameworks!` to your Xcode target instead of having it in the Podfile.
 
 1. Save the `Podfile` file, and run `pod install` from the command line. CocoaPods  installs the relevant dependencies, and displays the added dependencies and pods.<br/>
@@ -83,10 +88,10 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
  ```Swift
  import BMSCore
  import BMSSecurity
- ```  
+ ```
+ {: codeblock}
 
-1. Initialize the {{site.data.keyword.amashort}} client SDK. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
-
+1. Initialize the {{site.data.keyword.amashort}} client SDK.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -102,7 +107,11 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
  return true
  }
  ```
+ {: codeblock}
 
+  * Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. 
+  * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+   
 ## Making a request to your mobile back-end application
 {: #request}
 
@@ -126,6 +135,7 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 
  request.sendWithCompletionHandler(callBack)
  ```
+ {: codeblock}
 
 1.  When your request succeeds, the following output appears in the Xcode console:
 

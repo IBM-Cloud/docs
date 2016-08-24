@@ -37,23 +37,25 @@ Na barra de ferramentas do Android Studio, clique no botão **Executar** e selec
 solicitação for bem-sucedida, a conexão será verificada e o texto no
 simulador será atualizado.
 
-  **Nota:** o código de tempo de execução de `Node.js` é fornecido no modelo MobileFirst Services Starter. 
-Se o aplicativo backend não tiver sido criado com o modelo do
+  **Nota:** o código de tempo de execução de `Node.js` é fornecido no modelo MobileFirst Services Starter. Se o aplicativo backend não tiver sido criado com o modelo do
 MobileFirst Services Starter, o aplicativo não será conectado com
 êxito.
 
-  Quando você se conectar com sucesso ao {{site.data.keyword.Bluemix_notm}} a partir do app móvel no Android Studio, a mensagem a seguir será exibida:
-
-  `Oba! você está conectado`
+  Quando você se conectar com sucesso ao {{site.data.keyword.Bluemix_notm}} a partir do aplicativo móvel no Android Studio,
+verá: `Oba! você está conectado`
   {: screen}
 
-  ![Aplicativo Hello World conectado com sucesso ao {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figura 1. Aplicativo Hello World conectado com sucesso ao Bluemix")
+<!--
+  ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+  -->
 
   Se a conexão falhar, você verá:
   `Que pena. Algo saiu errado`
   {: screen}
 
-  ![Aplicativo Hello World não conectado ao Bluemix](images/bummer_android.jpg "Figura 2. Aplicativo Hello World não conectado ao Bluemix")
+<!--
+  ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
+  -->
 
   É possível solucionar problemas da falha de conexão da
 maneira a
@@ -72,7 +74,7 @@ Para obter informações sobre como obter o SDK e o integrar ao app móvel, cons
 # rellinks
 
 ## exemplos
-   * [Amostra de Hello Bluemix](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Amostra Hello Bluemix (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## sdk
    * [SDK principal](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)

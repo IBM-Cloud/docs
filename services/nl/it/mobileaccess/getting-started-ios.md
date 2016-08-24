@@ -6,10 +6,10 @@ copyright:
 ---
 {:shortdesc: .shortdesc}
 
-# Configurazione dell'SDK Objective-C iOS (obsoleto)
+# Configurazione dell'SDK Objective-C iOS
 {: #getting-started-ios}
 
-*Ultimo aggiornamento: 14 giugno 2016*
+*Ultimo aggiornamento: 17 luglio 2016*
 {: .last-updated}
 
 Strumenta la tua applicazione iOS con l'SDK {{site.data.keyword.amashort}}, inizializza l'SDK ed effettua richieste a risorse protette e non protette.
@@ -20,7 +20,7 @@ Strumenta la tua applicazione iOS con l'SDK {{site.data.keyword.amashort}}, iniz
 ## Prima di cominciare
 {: #before-you-begin}
 È necessario disporre di:
-* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html).
+* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un'applicazione di back-end {{site.data.keyword.Bluemix_notm}}, vedi [Introduzione](index.html).
 * Un progetto Xcode.  
 
 
@@ -70,15 +70,14 @@ Per utilizzare l'SDK client {{site.data.keyword.amashort}}, devi inizializzare l
 1. Importa il framework `IMFCore` nella classe che desideri utilizzi l'SDK client {{site.data.keyword.amashort}} aggiungendo la seguente intestazione:
 
 	**Objective-C:**
-	 ```Objective-C
-	#import <IMFCore/IMFCore.h>
-	```
-
-
-	**Swift:**
 	
+	```Objective-C
+	#import <IMFCore/IMFCore.h>
+	
+	```
+	
+	**Swift:**
 	L'SDK client {{site.data.keyword.amashort}} viene implementato con Objective-C. Potresti dover aggiungere un'intestazione di collegamento al tuo progetto Swift:
-
 	1. Fai clic con il pulsante destro del mouse sul tuo progetto in Xcode e seleziona **New File..**.
 	1. Nella categoria **iOS Source**, fai clic su **Header file**. Denomina il file `BridgingHeader.h`.
 	1. Aggiungi la seguente riga all'intestazione di collegamento: `#import <IMFCore/IMFCore.h>`
@@ -86,7 +85,7 @@ Per utilizzare l'SDK client {{site.data.keyword.amashort}}, devi inizializzare l
 	1. Cerca `Objective-C Bridging Header`.
 	1. Imposta il valore sull'ubicazione del tuo file `BridgingHeader.h`, ad esempio `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Assicurati che la tua intestazione di collegamento venga rilevata da Xcode compilando il tuo progetto. Non dovresti vedere alcun messaggio di errore.
-
+	
 1. Utilizza il seguente codice per inizializzare l'SDK client {{site.data.keyword.amashort}}.  Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione. <br/>Sostituisci *applicationRoute* e *applicationGUID* con i valori da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
 	**Objective-C:**
@@ -96,12 +95,11 @@ Per utilizzare l'SDK client {{site.data.keyword.amashort}}, devi inizializzare l
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+	**Swift:
 
-
-	**Swift:**
-
+	**
 	```Swift
-IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
+ 		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
 ## Effettuazione di una richiesta al tuo backend mobile

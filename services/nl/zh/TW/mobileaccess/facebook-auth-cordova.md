@@ -76,7 +76,7 @@ copyright:
 
 ```
 [[ NSNotificationCenter defaultCenter] postNotification:
-		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
+		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
 ```
 
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
@@ -92,13 +92,13 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 
 ## 測試鑑別
 {: #facebook-auth-cordova-test}
-在起始設定用戶端 SDK 並登錄 Facebook 鑑別管理程式之後，即可開始對行動後端提出要求。
+在起始設定用戶端 SDK 並登錄 Facebook 鑑別管理程式之後，即可開始對行動後端應用程式提出要求。
 
 ### 開始之前
 您必須使用 {{site.data.keyword.mobilefirstbp}} 樣板，並且在 `/protected` 端點已具有 {{site.data.keyword.amashort}} 所保護的資源。如需相關資訊，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
-1. 嘗試在瀏覽器中將要求傳送給新建行動後端的受保護端點。開啟下列 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`。
-<br/>使用 MobileFirst Services Starter 樣板所建立之行動後端的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。瀏覽器中會傳回 `Unauthorized` 訊息。傳回此訊息的原因是只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
+1. 嘗試從瀏覽器中將要求傳送給新建的行動後端應用程式的受保護端點。開啟下列 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`。
+<br/>使用 MobileFirst Services Starter 樣板所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。瀏覽器中會傳回 `Unauthorized` 訊息。傳回此訊息的原因是只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
 
 1. 使用 Cordova 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 之後，請新增下列程式碼：
 
@@ -113,13 +113,13 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 	request.send(success, failure);
 	```
 
-1. 執行您的應用程式。即會蹦現「Facebook 登入」畫面：
+1. 執行您的應用程式。即會蹦現 Facebook 登入畫面：
 
 	![影像](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![影像](images/ios-facebook-login.png)
 
 	> 如果您未在裝置上安裝 Facebook 應用程式，或目前未登入 Facebook，則此畫面可能會稍微不同。
 
-1. 按一下**確定**，以授權 {{site.data.keyword.amashort}} 使用 Facebook 使用者身分來進行鑑別。
+1. 按一下**確定**，以授權 {{site.data.keyword.amashort}} 使用您的 Facebook 使用者身分來進行鑑別。
 
 1. 	當要求成功時，在 LogCat 公用程式或 Xcode 主控台中會有下列輸出：
 

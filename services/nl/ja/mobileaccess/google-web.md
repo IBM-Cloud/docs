@@ -8,6 +8,9 @@ copyright:
 # Web アプリ用の Google 認証の使用可能化
 {: #google-auth-web}
 
+*最終更新日: 2016 年 6 月 1 日*
+{: .last-updated}
+
 Google Sign-In を使用して、Web アプリのユーザーを認証します。
 
 
@@ -47,7 +50,7 @@ Google Application ID および Secret を作成した後、{{site.data.keyword.
 
   以下の照会パラメーターを使用します。
 	```
-   response_type='authorization_code'
+response_type='authorization_code'
    client_id= <bluemix_app_guid>
    redirect_uri= <uri which you want to return to after getting a grant code>
    scope= ‘openid’
@@ -56,7 +59,7 @@ Google Application ID および Secret を作成した後、{{site.data.keyword.
 
   `state` パラメーターは、現在は使用されていないため、空のままにしておくことができます。
 
-  `redirect_uri` パラメーターの uri は、Google での認証が成功または失敗した後のリダイレクトです。
+  `redirect_uri` パラメーターの URI は、Google での認証が成功または失敗した後のリダイレクトです。
   リダイレクトの後に得られる応答には、要求照会パラメーター中の許可コードが含まれます。
 1. 許可サーバーのトークン・エンドポイントへの `POST` 要求を実行します。
 
@@ -71,7 +74,7 @@ Google Application ID および Secret を作成した後、{{site.data.keyword.
     redirect_uri= <redirect_uri >
     code= <authorization code>
 	```
-  `redirect_uri` パラメーターは、ステップ 1 の `redirect_uri` と一致している必要があり、`<authorization code>` 値は応答から受け取られます。
+`redirect_uri` パラメーターは、ステップ 1 の `redirect_uri` と一致している必要があり、`<authorization code>` 値は応答から受け取られます。
   認可コードは最大 10 分間だけ有効であるため、この `POST` 要求を 10 分以内に送信するように注意してください。
 
 `POST` 応答本体には、base64 でエンコードされた `access_token` および `id_token` が含まれている必要があります。

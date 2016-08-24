@@ -8,22 +8,23 @@ copyright:
 # {{site.data.keyword.amashort}} を使用した Liberty for Java リソースの保護
 {: #protecting-liberty}
 
-*最終更新日: 2016 年 4 月 15 日*
+*最終更新日: 2016 年 6 月 30 日*
 {: .last-updated}
 
 
-{{site.data.keyword.amashort}} Server SDK は、{{site.data.keyword.Bluemix}} にデプロイされる Liberty for Java&trade; アプリケーション用の OAuthTAI モジュールを提供します。Liberty サーバーに OAuthTAI モジュールを装備してサーバーを無許可アクセスから保護し、モニタリング情報を取得する必要があります。
+{{site.data.keyword.amashort}} Server SDK は、{{site.data.keyword.Bluemix}} にデプロイされる Liberty for Java&trade; アプリケーション用の `OAuthTAI` モジュールを提供します。Liberty サーバーを無許可アクセスから保護し、モニタリング情報を収集するには、`OAuthTAI` モジュールをサーバーに装備する必要があります。
 
 ## 開始する前に
 {: #before-you-begin}
-* {{site.data.keyword.Bluemix}} での Liberty for Java アプリケーションの開発に精通している必要があります。詳細については、[Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html) を参照してください。
+{{site.data.keyword.Bluemix}} での Liberty for Java アプリケーションの開発に精通している必要があります。詳細については、[Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html) を参照してください。
 
 ## {{site.data.keyword.amashort}} Server SDK のインストール
 {: #installing-server-sdk}
 
 1. [OAuthTAI 成果物](https://imf-tai.{DomainName}/public/TAI.zip)をダウンロードし解凍します。
 
-1. `com.ibm.worklight.oauth.tai_1.0.0.jar` ファイルを `${wlp.user.dir}/extensions/lib` ディレクトリーにコピーします。
+1. `com.ibm.worklight.oauth.tai_1.0.0.jar` ファイルを `$<wlp.user.dir>/extensions/lib` ディレクトリーにコピーします。
+
 	**ヒント:** `$<wlp.user.dir>` は、Liberty for Java ランタイム用のユーザー・ディレクトリーです。デフォルトのディレクトリー名は `usr` です。
 
 1. `OAuthTai-1.0.mf` ディレクトリーを `$<wlp.user.dir>/extension/lib/features` ディレクトリーにコピーします。
@@ -40,8 +41,9 @@ copyright:
 		<feature>usr:OAuthTai-1.0</feature>
 		<!--other required features-->
 	</featureManager>
-                        	```
-1. `server.xml` ファイルの編集を続行し、OAuthTAI フィーチャーを構成します。セキュリティー役割 `TAIUserRole` は、`ALL_AUTHENTICATED_USERS` という名前の特殊サブジェクトにマップされます。以下のスニペットは、`/protected` エンドポイントの GET メソッドの保護方法を示しています。
+
+	```
+1. `server.xml` ファイルの編集を続行し、`OAuthTAI` フィーチャーを構成します。セキュリティー役割 `TAIUserRole` は、`ALL_AUTHENTICATED_USERS` という名前の特殊サブジェクトにマップされます。以下のスニペットは、`/protected` エンドポイントの GET メソッドの保護方法を示しています。
 
 	```XML
 	<usr_OAuthTAI id="myOAuthTAI" realmName="imfAuthentication">
@@ -66,7 +68,7 @@ copyright:
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
 	```
 
-### Liberty for Java リソースの保護
+## Liberty for Java リソースの保護
 {: #protecting-liberty-resources}
 
 Liberty for Java アプリケーションによってホストされているリソースを保護するには、`TAIUserRole` を Java セキュリティー役割として指定する必要があります。セキュリティー役割は、`web.xml` ファイルに定義するか、アノテーションとして定義できます。
@@ -117,8 +119,7 @@ WSCredential callerCredential =
 ```
 詳しくは、[WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html)を参照してください。#### com.worklight.oauth.tai.WLCredential プロパティー
 {: #WLCredential}
-`WLCredential` インターフェースは、固有のプリンシパル詳細を取得するための API を提供します。
-
+`WLCredential` インターフェースは、ユーザー、デバイス、およびアプリケーションについての固有の詳細情報を取得するための API を提供します。
 
 ```Java
 

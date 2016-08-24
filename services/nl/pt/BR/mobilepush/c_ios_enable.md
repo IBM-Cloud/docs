@@ -7,6 +7,8 @@ copyright:
 
 # Ativando aplicativos iOS para receber notificações push
 {: #enable-push-ios-notifications}
+*Última atualização: 14 de junho de 2016*
+{: .last-updated}
 
 Ative aplicativos iOS para receber notificações push e
 enviar notificações push para seus dispositivos.
@@ -64,6 +66,7 @@ Esse comando instala suas dependências e cria uma nova área de trabalho Xcode.
 	$ open App.xcworkspace
 	```
 A área de trabalho contém o projeto original e o projeto Pods que contém suas dependências. Se você desejar modificar uma pasta de origem do Bluemix Mobile Services, será possível localizá-la no projeto Pods, em `Pods/yourImportedSourceFolder`, por exemplo: `Pods/BMSPush`.
+
 ##Carthage
 {: #carthage}
 
@@ -109,6 +112,7 @@ import BMSCore
 import BMSPush
 ```
 **Atenção**: para visualizar o arquivo leia-me de Swift Push, acesse [Leia-me](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master)
+
 ##Configurações de Compilação
 
 Acesse **Xcode > Configurações de criação > Opções de criação e configure Ativar Bitcode** como **Não**.
@@ -150,26 +154,28 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ####Objective-C
 
 ```
-//Initialize client Push SDK for Objective-C
-IMFPushClient _pushService = [IMFPushClient sharedInstance];
+//Initialize client Push SDK for Objective-C IMFPushClient *push =
+[IMFPushClient sharedInstance]; [push initializeBluemixPush]
 ```
 
 ####Swift
 
 ```
-//Initialize client Push SDK for Swift
-let push = BMSPushClient.sharedInstance
+//Initialize client Push SDK for Swift let push =
+BMSPushClient.sharedInstance push.initializeBluemixPush()
 ```
 
 ### Rota, GUID e região do Bluemix
 
 **appRoute**
 
-Especifica a rota que é designada ao aplicativo do servidor que você criou no Bluemix.
+Especifica a rota que é designada ao aplicativo do servidor que você criou no
+Bluemix.
 
 **GUID**
 
-Especifica a chave exclusiva que é designada ao aplicativo que você criou no Bluemix. Esse valor faz distinção entre maiúsculas e minúsculas.
+Especifica a chave exclusiva que é designada ao aplicativo que você criou no
+Bluemix. Esse valor faz distinção entre maiúsculas e minúsculas.
 
 **bluemixRegionSuffix**
 
@@ -202,8 +208,8 @@ Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos que liga
 ####Objective-C
 
 ```
-	//For Objective-C
-	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	//For Objective-C 	
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
 	    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 	    [[UIApplication sharedApplication] registerForRemoteNotifications];
@@ -237,7 +243,6 @@ Após o token ser recebido do APNS, transmita o token para Notificações push c
 ```
 //For Objective-C
 -( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
-
    IMFClient *client = [IMFClient sharedInstance];
 
  [client initializeWithBackendRoute:@"your-backend-route-here" backendGUID:@"Your-backend-GUID-here"];
@@ -245,6 +250,7 @@ Após o token ser recebido do APNS, transmita o token para Notificações push c
 
  // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
      [ self  updateMessage:error .description];
@@ -261,6 +267,7 @@ Após o token ser recebido do APNS, transmita o token para Notificações push c
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
+   push.initializeBluemixPush()
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
             print( "Response during device registration : \(response)")
@@ -286,8 +293,8 @@ Receba notificações push em dispositivos iOS
 Para receber notificações push em dispositivos iOS, inclua o método Objective-C a seguir na delegação de seu aplicativo.
 
 ```
-// For Objective-C
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+// For Objective-C -(void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
 //O dicionário userInfo conterá dados enviados do servidor.
 }
 ```
@@ -321,12 +328,13 @@ dispositivos Android**.
 
 	![Tela de notificações](images/tag_notification.jpg)
 
-2. Em **Criar sua notificação**, insira sua mensagem e clique em **Enviar**.
+2. Em **Criar sua notificação**, insira sua mensagem e clique
+em **Enviar**.
 3. Verifique se seus dispositivos receberam sua notificação.
 
 	A captura de tela a seguir mostra uma caixa de alerta que manipula uma notificação push no primeiro plano e no segundo plano em um dispositivo iOS.
 
-	![Notificação push de primeiro plano no Android](images/Android_Screenshot.jpg)
+	![Notificação push de primeiro plano no Android](images/iOS_Foreground.jpg)
 
 	![Notificação push de primeiro plano no iOS](images/iOS_Screenshot.jpg)
 

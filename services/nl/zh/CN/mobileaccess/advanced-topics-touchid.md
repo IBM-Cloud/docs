@@ -8,9 +8,12 @@ copyright:
 # 通过 Touch 标识保护授权
 {: #before-you-begin}
 
+*上次更新时间：2016 年 6 月 22 日*
+{: .last-updated}
+
 Touch 标识是 iOS 设备的一种指纹识别功能。可以使用 Touch 标识来自动保护授权信息以供未来使用。 
 
-只有通过 {{site.data.keyword.amashort}} Objective-C SDK，才能使用 Touch 标识。
+**注：**只有通过 {{site.data.keyword.amashort}} Objective-C SDK，才能使用 Touch 标识。
 
 要配置安全强度，请通过 `IMFAuthorizationManager.setAuthorizationPersistencePolicy()` 方法设置下列其中一个持久存储策略。
 

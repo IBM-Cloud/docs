@@ -30,12 +30,14 @@ computador, abra o terminal e, em seguida, insira o comando a seguir:
 3. Execute os seguintes comandos usando o diretório do projeto para incluir os ambientes de plataforma Android e iOS:
 
 	### Android
+	{: #cordova-android-run}
 
 	```Bash
 	cordova platform add android
 	```
 
 	### iOS
+	{: #cordova-ios-run}
 
 	```Bash
 	cordova platform add ios
@@ -63,6 +65,7 @@ computador, abra o terminal e, em seguida, insira o comando a seguir:
 6. Configure o aplicativo Cordova para iOS. A plataforma Android não requer configuração adicional.
 
 	### iOS
+	{: #cordova-ios-configure}
   Configure seu projeto Xcode da seguinte maneira para evitar erros de compilação.
 
 	1. Use a versão mais recente do Xcode para abrir o arquivo `xcode.proj` no diretório *&lt;app_name&gt;*/platforms/ios.
@@ -84,6 +87,7 @@ computador, abra o terminal e, em seguida, insira o comando a seguir:
 7. Construa e execute a amostra no seu emulador móvel ou dispositivo.
 
   ### Android
+  {: #cordova-android-build}
 	1. Construa o aplicativo Cordova usando o seguinte comando:
 
     **Importante:** antes de abrir o projeto no Android Studio, deve-se primeiro construir o aplicativo
@@ -96,6 +100,7 @@ Cordova através da interface da linha de comando (CLI) do Cordova. Caso contrá
 	2. Execute o aplicativo de amostra no Android Studio.
 
   ### iOS
+  {: #cordova-ios-build}
   1. Construa o aplicativo Cordova em Xcode.
 
     **Dica:** a construção em Xcode oferece mais opções, como depuração e configuração do projeto.
@@ -104,16 +109,22 @@ Cordova através da interface da linha de comando (CLI) do Cordova. Caso contrá
 
 Um aplicativo de visualização única com um botão **PING BLUEMIX** é exibido. Quando você toca no botão, o aplicativo testa a conexão do cliente ao aplicativo de backend {{site.data.keyword.Bluemix_notm}}. A conexão é testada usando a rota do aplicativo especificada no arquivo `index.js`.
 
+<!--
+![Hello World application successfully connected to Bluemix](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+-->
 
-![Aplicativo Hello World conectado com êxito ao Bluemix](images/yayconnected.jpg "Figura 1. Aplicativo Hello World conectado com êxito ao Bluemix")
-
-
-Ao conectar-se com sucesso ao {{site.data.keyword.Bluemix_notm}} usando o aplicativo móvel, uma mensagem dizendo "Eba! Você está conectado" é exibida.
+  Quando você se conectar com sucesso ao {{site.data.keyword.Bluemix_notm}} a partir do aplicativo móvel no Android Studio, verá:
+`Oba! você está conectado`
+  {: screen}
 
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
-Se a conexão falhar, uma mensagem de erro será exibida. Mais informações sobre o erro estão incluídas na mensagem. É possível verificar os seguintes itens para solucionar seu erro:
+Se a conexão falhar, você verá:
+  `Que pena. Algo saiu errado`
+  {: screen}
+
+Mais informações sobre o erro estão incluídas na mensagem. É possível verificar os seguintes itens para solucionar seu erro:
 
 - Verifique se você colou corretamente os valores de
 rota e GUID.

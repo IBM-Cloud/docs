@@ -8,28 +8,28 @@ copyright:
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 
-# Activation de l'authentification Facebook pour les applications iOS (SDK Objective-C)
+# Activation de l'authentification Facebook pour vos applications iOS (SDK Objective-C)
 {: #facebook-auth-ios}
 
 
-*Dernière mise à jour : 15 juin 2016*
+*Dernière mise à jour : 17 juillet 2016*
 {: .last-updated}
 
 
 Pour utiliser Facebook comme fournisseur d'identité dans vos applications iOS, ajoutez et configurez la plateforme iOS pour votre application Facebook.
 {:shortdesc}
 
-**Remarque :** alors que le SDK Objective-C reste complètement pris en charge et est toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix}} Mobile Services, il est prévu qu'il soit interrompu plus tard dans l'année et remplacé par le nouveau SDK Swift (voir [Configuration du SDK Swift iOS](facebook-auth-ios-swift-sdk.html)).
+**Remarque :** Bien que le SDK Objective-C reste complètement pris en charge et soit toujours considéré comme le SDK principal pour
+{{site.data.keyword.Bluemix}} Mobile Services, il est envisagé de le retirer plus tard dans l'année et de le remplacer par le nouveau SDK
+Swift (voir
+[Configuration du SDK Swift iOS](facebook-auth-ios-swift-sdk.html)).
 
 ## Avant de commencer
 {: #facebook-auth-ios-before}
-Vous devez disposer des éléments suivants : 
-* Un projet iOS qui est configuré pour fonctionner avec CocoaPods. Pour plus d'informations, voir **Installation de CocoaPods** dans  [Configuration du SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).
+Vous devez disposer des éléments suivants :
+* Un projet iOS qui est configuré pour fonctionner avec CocoaPods.  Pour plus d'informations, voir **Installation de CocoaPods** dans  [Configuration du SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
    **Remarque :** il n'est pas nécessaire d'installer le SDK client de {{site.data.keyword.amashort}} principal avant de poursuivre.
 * Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
-
-
-
 * Un ID d'application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le portail Facebook Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configuration d'une application Facebook pour la plateforme iOS
@@ -54,7 +54,7 @@ Après avoir configuré l'ID d'application Facebook, ainsi que votre application
 
 1. Cliquez sur la vignette {{site.data.keyword.amashort}}. Le tableau de bord {{site.data.keyword.amashort}} se charge.
 
-1. Cliquez sur la vignette **Facebook** .
+1. Cliquez sur le bouton **Configurer** dans le panneau **Facebook**.
 
 1. Entrez l'ID d'application Facebook et cliquez sur **Sauvegarder**.
 
@@ -103,12 +103,12 @@ Vous pouvez aussi mettre à jour le fichier `info.plist` en cliquant avec le bou
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb{your-facebook-application-id}</string>
+				<string>fb{votre_ID_d'application_Facebook}</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>{your-facebook-application-id}</string>
+	<string>{votre_ID_d'application_Facebook}</string>
 	<key>FacebookDisplayName</key>
 	<string>MyApp</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -123,7 +123,7 @@ Vous pouvez aussi mettre à jour le fichier `info.plist` en cliquant avec le bou
 	        <key>facebook.com</key>
 	        <dict>
 	            <key>NSIncludesSubdomains</key>
-	            <true/>                
+	            <true/>
 	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 	            <false/>
 	        </dict>
@@ -148,15 +148,17 @@ Mettez à jour les propriétés de schéma d'URL et d'ID d'appli Facebook avec v
 
  **Important** : Veillez à ne pas remplacer les propriétés existantes du fichier `info.plist`. Si certaines propriétés se chevauchent, vous devez les fusionner manuellement. Pour plus d'informations, voir [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) et [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9).
 
-## Initialisation du SDK client {{site.data.keyword.amashort}}
+## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #facebook-auth-ios-initalize}
 
 Initialisez le SDK client en transmettant la route de votre application (`applicationRoute`) et l'identificateur global unique de l'application (`applicationGUID`).
 
-Bien que ceci ne soit pas obligatoire, le code d'initialisation est souvent placé dans la méthode `application:didFinishLaunchingWithOptions` de votre délégué d'application.
+Bien que ceci ne soit pas obligatoire, le code d'initialisation est souvent placé dans la méthode `application:didFinishLaunchingWithOptions`
+de votre délégué d'application
+
 1. Ouvrez la page principale du tableau de bord {{site.data.keyword.Bluemix_notm}} et cliquez sur votre application. Cliquez sur **Options pour application mobile** et notez la valeur de **Route** (`applicationRoute`) et **Identificateur global unique de l'application** (`applicationGUID`).
 
-1. Importez l'infrastructure requise dans la classe qui doit utiliser le SDK client de {{site.data.keyword.amashort}} en ajoutant les en-têtes suivants :
+1. Importez la structure requise dans la classe devant utiliser le SDK client {{site.data.keyword.amashort}} en ajoutant les en-têtes suivants :
 
 	**Objective-C**
 
@@ -180,9 +182,10 @@ Bien que ceci ne soit pas obligatoire, le code d'initialisation est souvent plac
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
-	* Cliquez sur votre projet dans Xcode et sélectionnez l'onglet **Build Settings**.
+	* Cliquez sur votre projet dans Xcode et sélectionnez l'onglet **Build Settings (Paramètres de génération)**.
 	* Recherchez **Objective-C Bridging Header**.
-	* Définissez la valeur sur l'emplacement de votre fichier `BridgingHeader.h`, par exemple : `$(SRCROOT)/MyApp/BridgingHeader.h`.
+	* Définissez la valeur sur l'emplacement de votre fichier `BridgingHeader.h`. Par exemple,
+`$(SRCROOT)/MyApp/BridgingHeader.h`.
 	* Vérifiez que l'en-tête de pontage est prélevé par Xcode lors de la génération de votre projet. Vous ne devez voir aucun message d'erreur.
 
 3. Initialisez le SDK client.	Remplacez *applicationRoute* et *applicationGUID* par les valeurs de
@@ -205,7 +208,8 @@ dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 	 							backendGUID: "applicationGUID")
 	```
 
-1. Signalez au SDK Facebook l'activation de l'application et enregistrez le gestionnaire d'authentification Facebook en ajoutant le code suivant à la méthode `application:didFinishLaunchingWithOptions` dans votre délégué d'application. Entrez ce code juste après avoir initialisé l'instance IMFClient.
+1. Avisez le SDK Facebook de l'activation de l'application et enregistrez le gestionnaire d'authentification Facebook en ajoutant le code suivant à
+la méthode `application:didFinishLaunchingWithOptions` dans votre délégué d'application. Entrez ce code juste après avoir initialisé l'instance IMFClient.
 
 	**Objective-C**
 
@@ -221,7 +225,7 @@ dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 		IMFFacebookAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
 ```
 
-1. Ajoutez le code suivant au délégué de votre application.
+1. Ajoutez le code suivant au délégué de votre appli.
 
 	**Objective-C**
 
@@ -254,12 +258,12 @@ demandes à votre back end mobile.
 {: #facebook-auth-ios-testing-before}
 Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et disposer au préalable d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour configurer un noeud final `/protected`, voir la rubrique [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Tentez d'envoyer une demande à un noeud final protégé de votre nouveau système de back end mobile dans votre navigateur. Ouvrez l'URL suivante :
+1. Depuis votre navigateur, tentez d'envoyer une demande à un noeud final protégé de votre nouveau système de back end mobile. Ouvrez l'URL suivante :
 `http://{applicationRoute}/protected`.
-Exemple : `http://my-mobile-backend.mybluemix.net/protected`
+Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message signalant l'interdiction d'accéder au site (`Unauthorized`) est renvoyé au navigateur. Ce message est renvoyé car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
 
-1. Utilisez votre application iOS pour envoyer une demande au même noeud final.
+1. A l'aide de votre application iOS, envoyez une demande au même noeud final.
 
 	**Objective-C**
 
@@ -302,7 +306,7 @@ Exemple : `http://my-mobile-backend.mybluemix.net/protected`
 
 	Cet écran peut être légèrement différent si l'appli Facebook n'est pas installée sur votre périphérique, ou si vous n'y êtes pas connecté.
 
-1. Cliquez sur **OK** pour autoriser {{site.data.keyword.amashort}} à utiliser votre identité d'utilisateur Facebook pour le processus d'authentification.
+1. Cliquez sur **OK** pour autoriser {{site.data.keyword.amashort}} à utiliser votre ID utilisateur Facebook pour l'authentification.
 
 1. 	Si votre demande aboutit, la sortie suivante s'affiche dans la console Xcode :
 	![image](images/ios-facebook-login-success.png)
@@ -328,4 +332,5 @@ Exemple : `http://my-mobile-backend.mybluemix.net/protected`
 dans son navigateur.
 
   La transmission de
-`callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre la valeur `nil`.
+`callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre
+la valeur `nil`.

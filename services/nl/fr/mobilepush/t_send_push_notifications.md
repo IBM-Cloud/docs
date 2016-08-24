@@ -7,8 +7,9 @@ copyright:
 
 {:new_window: target="_blank"}
 # Envoi de notifications push de base
-
 {: #push-send-notifications}
+*Dernière mise à jour : 14 juin 2016*
+{: .last-updated}
 
 Une fois que vous avez développé vos applications, vous pouvez envoyer des notifications push de base (sans utiliser de balise, de badge, de
 contenu supplémentaire ou de fichier son).

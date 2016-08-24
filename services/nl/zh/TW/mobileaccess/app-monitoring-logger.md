@@ -18,13 +18,13 @@ copyright:
 
 * `FATAL` - 用於無法復原的當機或停滯。FATAL 層次保留用於記載無法復原的錯誤，這些錯誤對於使用者會顯示為應用程式當機。
 * `ERROR` - 用於非預期的異常狀況或非預期的網路通訊協定錯誤。
-* `WARN` - 記載未視為重大錯誤的使用警告（例如使用已淘汰的 API 或網路回應緩慢）。
+* `WARN` - 記載未視為嚴重錯誤的使用警告（例如使用已淘汰的 API 或網路回應緩慢）。
 * `INFO` - 用於報告起始設定事件以及其他可能有用的資料。
 * `DEBUG` - 用於報告除錯陳述，以協助開發人員解決應用程式問題報告。
 
-請確定已在使用記載架構之前起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。下列範例示範 {{site.data.keyword.amashort}} 用戶端 SDK 記載架構的基本用法。
+請確定您已起始設定 {{site.data.keyword.amashort}} 用戶端 SDK，然後才使用記載架構。下列範例示範 {{site.data.keyword.amashort}} 用戶端 SDK 記載架構的基本用法。
 
-**重要事項**：{{site.data.keyword.amashort}} 服務的監視功能，預計會移轉至新的 [{{site.data.keyword.mobileanalytics_short}} 服務](https://console.ng.bluemix.net/catalog/services/mobile-analytics)。新的 Swift SDK 會利用新的 {{site.data.keyword.mobileanalytics_short}} 服務，它服務提供更豐富的分析體驗。{{site.data.keyword.mobileanalytics_short}} 服務目前處於實驗階段，預計在今年稍晚正式上市。由於預計會在 {{site.data.keyword.mobileanalytics_short}} 正式上市時停止使用 {{site.data.keyword.amashort}} 服務的監視功能，因此建議您先研究移轉應用程式以使用新的 {{site.data.keyword.mobileanalytics_short}} 服務及 Swift SDK。
+**重要事項**：{{site.data.keyword.amashort}} 服務的監視功能，預計會移轉至新的 [{{site.data.keyword.mobileanalytics_short}} 服務](https://console.ng.bluemix.net/catalog/services/mobile-analytics)。新的 Swift SDK 會利用新的 {{site.data.keyword.mobileanalytics_short}} 服務，此服務提供更豐富的分析體驗。{{site.data.keyword.mobileanalytics_short}} 服務目前處於實驗階段，預計在今年稍晚正式上市。由於預計會在 {{site.data.keyword.mobileanalytics_short}} 正式上市時停止使用 {{site.data.keyword.amashort}} 服務的監視功能，因此建議您先研究移轉應用程式以使用新的 {{site.data.keyword.mobileanalytics_short}} 服務及 Swift SDK。
 
 ### Android
 {: #enable-logger-android}
@@ -44,7 +44,7 @@ logger.fatal("fatal message");
 ### iOS - Objective-C
 {: #enable-logger-objectc}
 
-**重要事項**：雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix}} Mobile Services 的主要 SDK，不過預計在今年稍晚中斷，改用新的 Swift SDK。
+**重要事項**：雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用，改用新的 Swift SDK。
 
 Objective-C SDK 會向 {{site.data.keyword.amashort}} 服務的「監視主控台」報告監視資料。如果您依賴 {{site.data.keyword.amashort}} 服務的監視功能，請繼續使用 Objective-C SDK。
 
@@ -97,11 +97,11 @@ logger.fatal("fatal message");
 
 您可以在 Logger 類別中找到下列其他方法：
 
-* `setCapture` - 啟用或停用稍後要傳送至 {{site.data.keyword.amashort}} 服務之日誌資訊的持續保存。
+* `setCapture` - 啟用或停用稍後要傳送給 {{site.data.keyword.amashort}} 服務之日誌資訊的持續保存。
 * `setLevel` - 設定儲存日誌訊息的最低記載層次。
 * `send` - 將持續保存的日誌傳送給 {{site.data.keyword.amashort}} 服務。
 
-例如，當擷取為「開啟」狀態，並將日誌程式層次配置為 FATAL 時，日誌程式會擷取未捕捉的異常狀況。未捕捉的異常狀況通常對於使用者會顯示為應用程式當機，但並不會擷取任何導致當機事件的日誌。或者，更詳細的日誌程式層次可確保也會擷取導致 FATAL 日誌程式項目的日誌，例如 WARN 及 ERROR。
+例如，當擷取為開啟狀態，並將日誌程式層次配置為 FATAL 時，日誌程式會擷取未捕捉的異常狀況。未捕捉的異常狀況通常對於使用者會顯示為應用程式當機，但並不會擷取任何導致當機事件的日誌。或者，更詳細的日誌程式層次可確保也會擷取導致 FATAL 日誌程式項目的日誌，例如 WARN 及 ERROR。
 
 **附註：**在 [SDK、範例、API 參考資料](sdks-samples-apis.html)中，尋找每一個平台的完整「日誌程式 API」參考資料。「日誌程式 API」是「{{site.data.keyword.amashort}} 用戶端 SDK 核心」的一部分。
 
@@ -196,9 +196,7 @@ MFPLogger.setLevel(MFPLogger.INFO);
 
 // Create two logger instances
 var logger1 = MFPLogger.getInstance("logger1");
-var logger2 = MFPLogger.getInstance("logger2");    
-
-// Log messages with different levels
+var logger2 = MFPLogger.getInstance("logger2");// Log messages with different levels
 logger1.debug ("debug message");
 logger2.info ("info message");
 
@@ -210,7 +208,7 @@ MFPLogger.send(success, failure);
 {: #enable-logger-sdklogs}
 目前只有 Android 版的 {{site.data.keyword.amashort}} 用戶端 SDK 才提供此特性。
 
-{{site.data.keyword.amashort}} 用戶端 SDK 可提供較佳的開發體驗，原因是內部除錯訊息不會額外增加 Logcat 輸出。因此，預設不會列印由 {{site.data.keyword.amashort}} SDK 所產生且層次為 DEBUG 的內部日誌訊息。您可以使用下列 API，來啟用 {{site.data.keyword.amashort}} 用戶端 SDK 之所有內部日誌訊息的列印：
+{{site.data.keyword.amashort}} 用戶端 SDK 可提供較佳的開發體驗，原因是不會不必要地因為內部除錯訊息而增加 Logcat 輸出。因此，預設不會列印由 {{site.data.keyword.amashort}} SDK 所產生且層次為 DEBUG 的內部日誌訊息。您可以使用下列 API，來啟用 {{site.data.keyword.amashort}} 用戶端 SDK 之所有內部日誌訊息的列印：
 
 
 ```

@@ -10,7 +10,7 @@ copyright:
 # 使用 {{site.data.keyword.amashort}} 服务保护后端资源
 {: #protecting-resources}
 
-*上次更新时间：2016 年 4 月 30 日*
+*上次更新时间：2016 年 7 月 17 日*
 {: .last-updated}
 
 
@@ -19,7 +19,7 @@ copyright:
 
 ## 开始之前
 {: #before-you-begin}
-开始之前，请确保创建 Node.js 服务。
+开始之前，请确保 {{site.data.keyword.Bluemix_notm}} 后端应用程序中存在 Node.js 服务。
 
 
 ## 授权过滤器
@@ -29,11 +29,12 @@ copyright:
 {: #auth-header}
 传入请求中的 Authorization 头由三个部分组成：Bearer、Access Token 和 ID Token，这三部分之间用空格分隔。`Access Token` 是必需的组成部分，而 `ID Token` 是可选的。
 
-传入的 Authorization 头由各自的授权过滤器进行处理。过滤器会验证访问令牌和标识令牌特征符、到期日期和结构完整性。验证通过后，会将安全上下文对象添加到请求对象。可以使用相应的 API 来获取对安全上下文的引用。
+传入的 Authorization 头由各自的授权过滤器进行处理。过滤器会验证访问令牌和标识令牌特征符、到期日期和结构完整性。验证通过后，会将安全上下文对象添加到请求对象。可以使用相关 API 来获取对安全上下文的引用。
 
 安全上下文包含主体、用户、设备和应用程序信息，这些信息按以下结构存储：
 ```JSON
-{"imf.sub":"myclientid",
+{
+    "imf.sub":"myclientid",
     "imf.user": {
         "id":"user-name",
         "authBy":"myrealm",

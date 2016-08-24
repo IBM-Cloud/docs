@@ -7,8 +7,10 @@ copyright:
 
 # Fehlerbehebung
 {: #errors}
+*Letzte Aktualisierung: 14. Juni 2016*
+{: .last-updated}
 
-In diesem Abschnitt finden Sie Anweisungen für die Behebung von allgemeinen Fehlern bei Push Notifications.
+In diesem Abschnitt finden Sie Anweisungen für die Behebung von allgemeinen Fehlern bei Push-Benachrichtigungen.
 
 
 ### Internal server error occurred. Please contact admin. (Internal error code: PUSHD102E)

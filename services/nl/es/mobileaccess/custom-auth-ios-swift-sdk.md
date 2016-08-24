@@ -5,12 +5,17 @@ copyright:
 
 ---
 
-# Configuración del SDK del cliente de {{site.data.keyword.amashort}} para iOS (SDK de Swift)
+# Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} iOS (Swift SDK)
+
 {: #custom-ios}
 
-Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amashort}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.  El nuevo SDK de {{site.data.keyword.amashort}} Swift amplia y mejora la funcionalidad proporcionada por el SDK Objetive-C de Mobile Client Access existente. 
+*Última actualización: 18 de julio de 2016*
+{: .last-updated}
 
-**Nota:** Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK a finales del año en favor del nuevo SDK de Swift. 
+
+Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amashort}} y conecte la aplicación a {{site.data.keyword.Bluemix}}. El nuevo SDK de {{site.data.keyword.amashort}} Swift amplía y mejora la funcionalidad proporcionada por el SDK Objetive-C de Mobile Client Access existente.
+
+**Nota:** Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK a finales del año en favor del nuevo SDK de Swift.
 
 ## Antes de empezar
 {: #before-you-begin}
@@ -60,7 +65,9 @@ Para inicializar el SDK, especifique los parámetros `applicationRoute` y `appli
 
 1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}, cambie el gestor de autorización por MCAAuthorizationManager y defina un delegado de autenticación y regístrelo. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. 
 
-  Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}m pulse en el icono de c ara (![Cara](/face.png "Cara")) que se encuentra en la esquina superior derecha del panel de control. Para `<yourProtectedRealm>`, utilice el **nombre de reino** que ha definido en el título **Custom** del panel de control de {{site.data.keyword.amashort}}.
+  Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}m pulse en el icono de c ara (![Cara](/face.png "Cara")) que se encuentra en la esquina superior derecha del panel de control. 
+
+  Para `<yourProtectedRealm>`, utilice el **nombre de reino** que ha definido en el título **Custom** del panel de control de {{site.data.keyword.amashort}}.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -101,22 +108,23 @@ Para inicializar el SDK, especifique los parámetros `applicationRoute` y `appli
       print("error with register: \(error)")
   }
  return true
- }   
+      }   
  ```
 
-## Prueba de la autenticación
+## Prueba de autenticación
 {: #custom-ios-testing}
 
-Después de inicializar el SDK del cliente y registrar un delegado de autorización personalizado, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente y registrar un delegado de autorización personalizado, puede empezar a realizar solicitudes a la aplicación de programa de fondo móvil.
 
 ### Antes de empezar
 {: #custom-ios-testing-before}
 
  Debe tener una aplicación que se haya creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y que disponga de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`.
 
-1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`. El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
+1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`.
+  El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
 
-1. Utilice la aplicación de iOS para realizar una solicitud al mismo punto final. Añada el código siguiente para inicializar `BMSClient` y registrar el delegado de autorización personalizad:
+1. Utilice la aplicación de iOS para realizar solicitudes al mismo punto final. Añada el código siguiente para inicializar `BMSClient` y registrar el delegado de autorización personalizad:
 
  ```Swift
  let customResourceURL = "<your protected resource's path>"
@@ -147,7 +155,8 @@ Después de inicializar el SDK del cliente y registrar un delegado de autorizaci
  ```
 
 1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código:
-```
+
+ ```
  MCAAuthorizationManager.sharedInstance.logout(callBack)
  ```  
 

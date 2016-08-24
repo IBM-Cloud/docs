@@ -62,14 +62,14 @@ Para iniciar o processo de autorização:
 
 1. Depois de redirecionar para o terminal de autorização, você obtém um formulário de login do
 Facebook. Insira o nome do usuário e a senha para redirecionar para o `redirect_uri`.
-A resposta obtida após o redirecionamento contém o código de autorização nos parâmetros de consulta da solicitação.
+   A resposta obtida após o redirecionamento contém o código de autorização nos parâmetros de consulta da solicitação.
 
 1. Faça uma solicitação `POST` para o terminal de token do servidor de autorizações:
 
   https://imf-newauthserver.bluemix.net/oauth/v2/token
 
   usando os parâmetros de consulta a seguir:
-   ```
+  ```
   grant_type='authorization_code'
   client_id= <bluemix_app_guid>
   code= <authorization code>

@@ -8,22 +8,23 @@ copyright:
 # 使用 {{site.data.keyword.amashort}} 保護 Liberty for Java 資源
 {: #protecting-liberty}
 
-*前次更新：2016 年 4 月 15 日*
+*前次更新：2016 年 6 月 30 日*
 {: .last-updated}
 
 
-{{site.data.keyword.amashort}} 伺服器 SDK 提供 {{site.data.keyword.Bluemix}} 上所部署之 Liberty for Java&trade; 應用程式的 AuthTAI 模組。您必須使用 OAuthTAI 模組來檢測 Liberty 伺服器，以保護它免於遭受未獲授權的存取，以及取得監視資訊。
+{{site.data.keyword.amashort}} 伺服器 SDK 提供 {{site.data.keyword.Bluemix}} 上所部署之 Liberty for Java&trade; 應用程式的 `OAuthTAI` 模組。您必須使用 `OAuthTAI` 模組來檢測 Liberty 伺服器，以保護它免於遭受未獲授權的存取，以及收集監視資訊。
 
 ## 開始之前
 {: #before-you-begin}
-* 您必須熟悉如何在 {{site.data.keyword.Bluemix}} 上開發 Liberty for Java 應用程式。如需相關資訊，請參閱 [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html)。
+您必須熟悉如何在 {{site.data.keyword.Bluemix}} 上開發 Liberty for Java 應用程式。如需相關資訊，請參閱 [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html)。
 
 ## 安裝 {{site.data.keyword.amashort}} 伺服器 SDK
 {: #installing-server-sdk}
 
 1. 下載並擷取 [OAuthTAI 構件](https://imf-tai.{DomainName}/public/TAI.zip)。
 
-1. 將 `com.ibm.worklight.oauth.tai_1.0.0.jar` 檔案複製到 `${wlp.user.dir}/extensions/lib` 目錄。
+1. 將 `com.ibm.worklight.oauth.tai_1.0.0.jar` 檔案複製到 `$<wlp.user.dir>/extensions/lib` 目錄。
+
 	**提示：**`$<wlp.user.dir>` 是 Liberty for Java 運行環境的使用者目錄。預設目錄名稱是 `usr`。
 
 1. 將 `OAuthTai-1.0.mf` 目錄複製到 `$<wlp.user.dir>/extension/lib/features` 目錄。
@@ -42,7 +43,7 @@ copyright:
 	</featureManager>
 
 	```
-1. 繼續編輯 `server.xml` 檔案，並配置 OAuthTAI 特性。安全角色 `TAIUserRole` 會對映至名為 `ALL_AUTHENTICATED_USERS` 的特殊主題。下列 Snippet 示範如何保護 `/protected` 端點 GET 方法。
+1. 繼續編輯 `server.xml` 檔案，並配置 `OAuthTAI` 特性。安全角色 `TAIUserRole` 會對映至名為 `ALL_AUTHENTICATED_USERS` 的特殊主題。下列 Snippet 示範如何保護 `/protected` 端點 GET 方法。
 
 	```XML
 	<usr_OAuthTAI id="myOAuthTAI" realmName="imfAuthentication">
@@ -67,7 +68,7 @@ copyright:
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
 	```
 
-### 保護 Liberty for Java 資源
+## 保護 Liberty for Java 資源
 {: #protecting-liberty-resources}
 
 若要保護 Liberty for Java 應用程式所管理的資源，您必須指定 `TAIUserRole` 作為 Java 安全角色。您可以在 `web.xml` 檔案中定義安全角色，或將安全角色定義為註釋。
@@ -110,7 +111,7 @@ copyright:
 #### com.ibm.websphere.security.cred.WSCredential 內容
 {: #WSCredential}
 
-`WSCredential` 介面定義可對 Liberty for Java 運行環境代表鑑別主體的認證。例如：
+`WSCredential` 介面定義向 Liberty for Java 運行環境指出鑑別內文的認證。例如：
 
 ```Java
 Subject callerSubject = WSSubject.getCallerSubject();
@@ -121,7 +122,7 @@ WSCredential callerCredential =
 
 #### com.worklight.oauth.tai.WLCredential 內容
 {: #WLCredential}
-`WLCredential` 介面提供一些 API，用來取得特定主體的詳細資料。
+`WLCredential` 介面提供一些 API，用來取得使用者、裝置及應用程式的特定詳細資料。
 
 ```Java
 

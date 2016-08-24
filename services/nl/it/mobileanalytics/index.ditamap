@@ -24,7 +24,7 @@ navtitle="Installazione dell'SDK client Swift" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html" navtitle="Strumentazione della tua applicazione" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="Identificazione della chiave client" scope="peer"> </topicref>
+navtitle="Identificazione della chiave di accesso " scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
 navtitle="Inizializzazione dell'applicazione Android" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"
@@ -40,15 +40,7 @@ scope="peer"> </topicref>
 </topicref>
 <topicref format="html" href="app-monitoring.html" linking="sourceonly" navtitle="Monitoraggio delle applicazioni"
 scope="peer" outputclass="subsection">
-<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="Visualizzazione dei dati"
-scope="peer">
-<topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly"
-navtitle="Creazione di grafici personalizzati" scope="peer"> </topicref>
-<topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly"
-navtitle="Esportazione di dati personalizzati" scope="peer"> </topicref>
-<topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly"
-navtitle="Esportazione ed importazione di definizioni di grafico personalizzato" scope="peer"> </topicref>
-</topicref>
+<!--<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="Visualizing data" scope="peer" audience="blue"><topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly" navtitle="Creating custom charts" scope="peer"> </topicref><topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly" navtitle="Exporting custom data" scope="peer"> </topicref><topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly" navtitle="Exporting and importing custom chart definitions" scope="peer"> </topicref></topicref>-->
 <topicref format="html" href="app-monitoring.html#alerts" navtitle="Impostazione di avvisi" scope="peer">
 <topicref format="html" href="app-monitoring.html#alert-def-client-logs" linking="sourceonly"
 navtitle="Creazione di avvisi di log del client" scope="peer"> </topicref>

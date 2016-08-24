@@ -7,22 +7,29 @@ copyright:
 
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.amashort}} SDK、範例、API 參考資料
-*前次更新：2016 年 4 月 30 日*
+# {{site.data.keyword.amashort}} SDK、範例及 API 參考資料
+*前次更新：2016 年 7 月 17 日*
 {: .last-updated}
 
-若要將 {{site.data.keyword.amashort}} SDK 新增至應用程式，請選擇您要使用的 SDK，然後配置相依關係管理程式將 SDK 拉出到應用程式。{:shortdesc}
+若要將 {{site.data.keyword.amashort}} SDK 新增至應用程式，請選擇您要使用的 SDK。然後，配置相依關係管理程式將 SDK 取回至應用程式。
+{:shortdesc}
+
+**附註：**後續的小節會提供安裝 SDK 的相關資訊。
 
 ## 核心 SDK
 {: #coresdk}
-「核心 SDK」包括用於啟用自訂鑑別、監視及登入行動應用程式的 API。
+
+「核心 SDK」包括用於啟用自訂鑑別、記載及監視行動應用程式的 API。
 
 ### Android
 {: #coresdk-android}
-[Git 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)、[API 參考資料](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+
+[GitHub 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)、[API 參考資料](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
 
 #### 使用 Gradle 安裝核心 SDK
 {: #coresdk-android-gradle}
+
+將編譯相依關係新增至應用程式的 `build.gradle` 檔案：
 
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
@@ -35,10 +42,11 @@ copyright:
 ### iOS (Swift SDK)
 {: #coresdk-ios-swift}
 
-[Git 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security)
+[GitHub 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security)
 
 #### 使用 CocoaPods 安裝核心 SDK
 {: #coresdk-ios-siwft-cocoapods}
+編輯 Podfile，然後將下行新增至必要目標並執行：
 
 ```
 use_frameworks!
@@ -48,13 +56,14 @@ pod 'BMSSecurity'
 ### iOS (Objective-C SDK)
 {: #coresdk-ios}
 
-雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚中斷使用它，改用新的 Swift SDK（請參閱[設定 iOS Swift SDK](getting-started-ios-swift-sdk.html)）。
+雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用它，改用新的 Swift SDK（請參閱[設定 iOS Swift SDK](getting-started-ios-swift-sdk.html)）。
 
 [Git 儲存庫](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)、[API 參考資料](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
 
 #### 使用 CocoaPods 安裝核心 SDK
 {: #coresdk-ios-cocoapods}
 
+編輯 Podfile，然後將下行新增至必要目標並執行：
 ```Bash
 pod 'IMFCore'
 ```
@@ -62,26 +71,28 @@ pod 'IMFCore'
 ### Cordova
 {: #coresdk-cordova}
 
-[Git 儲存庫及 API 參考資料](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub 儲存庫及 API 參考資料](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 #### 使用 Cordova CLI 安裝核心 SDK
 {: #coresdk-cordova-cli}
 
+安裝 Mobile Client Access Cordova 外掛程式：
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
 
-## 用於 Facebook 鑑別的 {{site.data.keyword.amashort}} 用戶端 SDK
+## 用於 Facebook 鑑別的用戶端 SDK
 {: #facebooksdk}
 
 ### Android
 {: #facebooksdk-android}
 
-[Git 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication)、[API 參考資料](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html)
+[GitHub 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication)、[API 參考資料](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html)
 
 #### 使用 Gradle 安裝 Facebook SDK
 {: #facebooksdk-android-gradle}
 
+將編譯相依關係新增至應用程式的 `build.gradle` 檔案：
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
     	name:'facebookauthentication',
@@ -93,11 +104,12 @@ cordova plugin add ibm-mfp-core
 ### iOS (Swift SDK)
 {: #facebooksdk-ios-swift}
 
-[Git 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
+[GitHub 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
 
 #### 使用 CocoaPods 安裝 Facebook SDK
 {: #facebooksdk-ios-swift-cocoapods}
 
+編輯 Podfile，然後將下行新增至必要目標並執行：
 ```
 use_frameworks!
 pod 'BMSFacebookAuthentication'
@@ -108,9 +120,11 @@ pod 'BMSFacebookAuthentication'
 
 [Git 儲存庫](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git)、[API 參考資料](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
-*附註：*雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚中斷使用此 SDK，改用新的 Swift SDK。對於新的應用程式，高度建議使用 Swift SDK（請參閱「設定 iOS Swift SDK」）。
+*附註：*雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚將停止使用此 SDK，改用新的 Swift SDK。對於新的應用程式，強烈建議使用 Swift SDK（請參閱「設定 iOS Swift SDK」）。
 #### 使用 CocoaPods 安裝 Facebook SDK
 {: #facebooksdk-ios-cocoapods}
+
+編輯 Podfile，然後新增下行並執行：
 
 ```Bash
 pod 'IMFFacebookAuthentication'
@@ -119,25 +133,29 @@ pod 'IMFFacebookAuthentication'
 ### Cordova
 {: #facebooksdk-cordova}
 
-[Github 儲存庫及 API 參考資料](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub 儲存庫及 API 參考資料](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 #### 使用 Cordova CLI 安裝 Facebook SDK
 {: #facebooksdk-cordova-cli}
 
+安裝 Cordova 外掛程式：
+
 ```Bash
 cordova plugin add ibm-mfp-core
-	```
+```
 
-## 用於 Google 鑑別的 {{site.data.keyword.amashort}} 用戶端 SDK
+## 用於 Google 鑑別的用戶端 SDK
 {: #googlesdk}
 
 ### Android
 {: #googlesdk-android}
 
-[Github 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication)、[API 參考資料](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
+[GitHub 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication)、[API 參考資料](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
 
 #### 使用 Gradle 安裝 Google+ SDK
 {: #googlesdk-android-gradle}
+
+將編譯相依關係新增至應用程式的 `build.gradle` 檔案：
 
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
@@ -150,10 +168,12 @@ cordova plugin add ibm-mfp-core
 ### iOS (Swift SDK)
 {: #googlesdk-ios-swift}
 
-[Git 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication)
+[GitHub 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication)
 
 #### 使用 CocoaPods 安裝 Google+ SDK
 {: #googlesdk-ios-swift-cocoapods}
+
+編輯 Podfile，然後新增下行並執行：
 
 ```
 use_frameworks!
@@ -168,6 +188,8 @@ pod 'BMSGoogleAuthentication'
 #### 使用 CocoaPods 安裝 Google+ SDK
 {: #googlesdk-ios-cocoapods}
 
+編輯 Podfile，然後新增下行並執行：
+
 ```Bash
 pod 'IMFGoogleAuthentication'
 ```
@@ -175,40 +197,54 @@ pod 'IMFGoogleAuthentication'
 ### Cordova
 {: #googlesdk-cordova}
 
-[Git 儲存庫及 API 參考資料](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub 儲存庫及 API 參考資料](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 #### 使用 Cordova CLI 安裝 Google+ SDK
 {: #googlesdk-cordova-cli}
 
+安裝外掛程式：
+
 ```Bash
 cordova plugin add ibm-mfp-core
-	```
+```
 
-## 用於 Node.js 伺服器的 {{site.data.keyword.amashort}} 伺服器 SDK
+## 用於 Node.js 伺服器的伺服器 SDK
 {: #serversdk}
 
-[Git 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy)
+[GitHub 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy)
 
 #### 使用 npm 安裝伺服器 SDK
 {: #serversdk-npm}
+
+執行 NPM 來安裝 SDK：
 
 ```Bash
 npm install -save bms-mca-token-validation-strategy
 ```
 
-## 用於 Liberty for Java&trade; 伺服器的 {{site.data.keyword.amashort}} 伺服器 SDK
+## 用於 Liberty for Java&trade; 伺服器的伺服器 SDK
 {: #serverlibertysdk}
 
 [下載 TAI 構件](https://imf-tai.{DomainName}/public/TAI.zip)
 
-## {{site.data.keyword.amashort}} Node.js OAuth SDK
+#### 安裝 Liberty SDK
+{: #libertysdk}
+1. 將 `com.ibm.worklight.oauth.tai_1.0.0.jar` 檔案複製到 `$<wlp.user.dir>/extensions/lib` 目錄。
+
+**提示：**`$<wlp.user.dir>` 是 Liberty for Java 運行環境的使用者目錄。預設目錄名稱是 `usr`。
+
+1. 將 `OAuthTai-1.0.mf` 目錄複製到 `$<wlp.user.dir>/extension/lib/features` 目錄。
+
+
+## Node.js OAuth SDK
 {: #serverlibertysdk-github}
 
-[Git 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk)
+[GitHub 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk)
 
 #### 使用 npm 安裝 OAuth SDK
 {: #oauthsdk}
 
+執行 NPM 來安裝 SDK：
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
@@ -216,8 +252,8 @@ npm install -save bms-mca-oauth-sdk
 ## 自訂身分提供者範例
 {: #customidprovider}
 
-[簡單範例 Git 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
-[進階範例 Git 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+[簡單範例 GitHub 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+[進階範例 GitHub 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## IMFURLProtocol
 {: #IMFURLProtocol}
@@ -226,6 +262,8 @@ npm install -save bms-mca-oauth-sdk
 
 #### 使用 CocoaPods 安裝 IMFURLProtocol
 {: #IMFURLProtocol-cocoapods}
+
+編輯 Podfile，然後新增下行並執行：
 
 ```Bash
 pod 'IMFURLProtocol'

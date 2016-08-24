@@ -7,6 +7,8 @@ copyright:
 
 # Gestión de etiquetas
 {: #manage_tags}
+*Última actualización: 14 de junio de 2016*
+{: .last-updated}
 
 Utilice el panel de control de Push para crear y suprimir etiquetas para la aplicación y, a continuación, iniciar
   las notificaciones basadas en etiquetas. La notificación basada en etiquetas se recibe en el dispositivo suscrito a la etiqueta.
@@ -65,16 +67,16 @@ Copie los fragmentos de código siguientes en la aplicación para móviles de An
 Utilice la API **getTags** siguiente para obtener una lista de etiquetas disponibles a las que el dispositivo se puede suscribir.
 
 ```
-// Get a list of available tags to which the device can subscribe
-push.getTags(new MFPPushResponseListener<List<String>>(){  
+// Obtenga una lista de etiquetas disponibles a las que se puede suscribir el dispositivo
+push.getTags(new MFPPushResponseListener<List<String>>(){
    @Override
    public void onSuccess(List<String> tags){
-   updateTextView("Retrieved available tags: " + tags);  
+   updateTextView("Retrieved available tags: " + tags);
    System.out.println("Available tags are: "+tags);
-   availableTags = tags;   
-   subscribeToTag();   
-  }    
-  @Override    
+   availableTags = tags;
+   subscribeToTag();
+  }
+  @Override
   public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
@@ -97,7 +99,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onFailure(MFPPushException ex) {
          updateTextView("Error getting subscriptions.. " + ex.getMessage());
-    }
+  }
 })
 ```
 
@@ -129,11 +131,11 @@ Copie los siguientes fragmentos de código en la aplicación iOS desarrollada ut
 Utilice la API **retrieveAvailableTags** siguiente para obtener una lista de etiquetas disponibles a las que está suscrito el dispositivo.
 
 ```
-//Get a list of available tags to which the device can subscribe
+//Obtenga una lista de etiquetas disponibles a las que se puede suscribir el dispositivo
 [push retrieveAvailableTagsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error){
- if(error){    
-   [self updateMessage:error.description];  
+ if(error){
+   [self updateMessage:error.description];
  } else {
    [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
@@ -338,6 +340,5 @@ Cree etiquetas en la pantalla **Etiquetas**. Para obtener más información sobr
       **Notificaciones**.
 1. Seleccione la opción **Etiquetas** a enviar mediante las notificaciones basadas en etiquetas.
 1. En el campo **Búsqueda** de etiquetas, busque las etiquetas que desee utilizar y, a continuación, el botón **+Añadir**.![Pantalla de notificaciones](images/tag_notification.jpg)
-1. Vaya al área **Crear sus notificaciones** y, en el campo
-      **Texto del mensaje**, especifique texto que desee enviar en la notificación.
+1. En el campo **Texto del mensaje**, especifique texto que desee enviar como notificación a la audiencia suscrita.
 1. Pulse el botón **Enviar**.

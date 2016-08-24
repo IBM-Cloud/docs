@@ -22,7 +22,7 @@ format="html" scope="peer" locktitle="yes"> </topicref>
 <topicref href="c_overview_push.html" navtitle="关于" linking="sourceonly" format="html"
 outputclass="subsection" scope="peer">
 <topicref href="c_overview_push.html#overview_push_process" format="html"
-navtitle="Push Notification Service 过程" scope="peer"/>
+navtitle="Push Notifications 服务过程" scope="peer"/>
 <topicref href="c_overview_push.html#overview-push-types" format="html"
 navtitle="推送通知类型" scope="peer"/>
 </topicref>
@@ -87,6 +87,12 @@ format="html" navtitle="启用基于标记的通知" scope="peer">
 navtitle="预订和取消预订标记" scope="peer"/>
 <topicref href="t_manage_tags.html#using_tags" format="html"
 navtitle="使用基于标记的通知" scope="peer"/>
+</topicref>
+<topicref href="c_user_basednotifications.html" format="html"
+navtitle="启用基于用户的通知" scope="peer" chunk="to-content" linking="normal"
+outputclass="subsection">
+<topicref href="t_manage_user.html" format="html" navtitle="使用用户标识注册设备"
+scope="peer" linking="normal" outputclass="subsection"/>
 </topicref>
 <topicref href="t_advance_badge_sound_payload.html" outputclass="subsection" chunk="to-content"
 navtitle="高级通知" format="html" scope="peer">

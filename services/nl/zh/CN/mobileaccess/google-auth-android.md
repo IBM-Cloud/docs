@@ -8,6 +8,10 @@ copyright:
 # 启用 Android 应用程序的 Google 认证
 {: #google-auth-android}
 
+
+*上次更新时间：2016 年 6 月 16 日*
+{: .last-updated}
+
 ## 开始之前
 {: #before-you-begin}
 您必须具有：
@@ -22,15 +26,16 @@ copyright:
 ## 在 Google 开发者控制台上创建项目
 {: #create-google-project}
 
-要开始将 Google 用作身份提供者，请在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。
-创建项目的步骤之一是获取 Google 客户端标识。Google 客户端标识是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.Bluemix_notm}} 应用程序时需要该标识。
+要开始将 Google 用作身份提供者，请在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。创建项目的步骤之一是获取 Google 客户端标识。Google 客户端标识是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.Bluemix_notm}} 应用程序时需要该标识。
 
 从控制台中：
 
 1. 使用 **Google+** API 创建项目。
 2. 添加 **OAuth** 用户访问权。
 3. 添加凭证之前，您必须选择平台 (Android)。
-4. 添加凭证。要完成凭证的创建，您需要添加**签署证书指纹**。
+4. 添加凭证。 
+
+要完成凭证的创建，您需要添加**签署证书指纹**。
 
 
 
@@ -56,7 +61,7 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 
   要找到 Android 应用程序的软件包名称，请在 Android Studio 中打开 `AndroidManifest.xml` 文件，然后查找：`<manifest package="{your-package-name}">`。 
 
-1. 完成后，单击**创建**。**这将完成凭证创建。**
+1. 完成后，单击**创建**。这将完成凭证创建。
 
 ###Google 客户端标识
 
@@ -74,7 +79,7 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 
 1. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
 
-1. 单击 **Google** 磁贴。
+1. 单击 **Google** 面板上的**配置**按钮。
 
 1. 在 **Android 的应用程序标识**中，指定 Android 的 Google 客户端标识，然后单击**保存**。
 
@@ -100,7 +105,7 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 	}
 	```
 
-	**注：**您可以移除对 `com.ibm.mobilefirstplatform.clientsdk.android` 组的 `core` 模块的依赖关系（如果有的话）。`googleauthentication` 模块会自动下载此依赖关系。`googleauthentication` 模块会下载 Google SDK 并将其安装在 Android 项目中。
+	**注：**您可以除去对 `com.ibm.mobilefirstplatform.clientsdk.android` 组的 `core` 模块的依赖关系（如果有的话）。`googleauthentication` 模块会自动下载此依赖关系。`googleauthentication` 模块会下载 Google SDK 并将其安装在 Android 项目中。
 
 1. 通过单击**工具 > Android > 使用 Gradle 文件同步项目**来使用 Gradle 同步项目。
 
@@ -111,22 +116,28 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
-	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
-	```
+<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+```
 
 1. 要使用 {{site.data.keyword.amashort}} 客户端 SDK，您必须通过传递 context、applicationGUID 和 applicationRoute 参数来对其进行初始化。
 
-	在 Android 应用程序中，通常会将初始化代码放置在主 Activity 的 onCreate 方法中，但这不是强制性的
+	在 Android 应用程序中，通常会将初始化代码放置在主 Activity 的 onCreate 方法中，但这不是强制性的。
 
 1. 初始化客户端 SDK，然后注册 Google 认证管理器。将 *applicationRoute* 和 *applicationGUID* 替换为仪表板中**移动选项**部分中的**路径**和**应用程序 GUID** 值。
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");
-
+					"applicationGUID",
+					BMSClient.REGION_UK);
+						
 	GoogleAuthenticationManager.getInstance().register(this);
-	```
+```
+
+  将 `BMSClient.REGION_UK` 替换为相应的区域。
+
+
+	
 
 1. 将以下代码添加到您的 Activity：
 
@@ -143,12 +154,10 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 {: #google-auth-android-test}
 初始化客户端 SDK 并注册 Google 认证管理器后，可以开始对移动后端应用程序发起请求。
 
-### 开始之前
-{: #google-auth-android-testing-before}
-必须具有使用 MobileFirst Services Starter 样板创建的移动后端应用程序，并且在 `/protected` 端点必须已经具有受 {{site.data.keyword.amashort}} 保护的资源。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)
 
-1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。
- 使用 MobileFirst Services 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。所以此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
+开始测试之前，您必须具有使用 **MobileFirst Services Starter** 样板创建的移动后端应用程序，并且在 `/protected` 端点必须已经具有受 {{site.data.keyword.amashort}} 保护的资源。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+
+1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。使用 MobileFirst Services 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。所以此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
 
 1. 使用 Android 应用程序对同一端点发起请求。初始化 `BMSClient` 实例并注册 `GoogleAuthenticationManager` 后，添加以下代码。
 
@@ -191,6 +200,6 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
  GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- 如果您在用户登录 Google 之后调用此代码，那么用户将从 Google 注销。当用户尝试重新登录时，他们必须重新选择将要登录的 Google 帐户。如果他们尝试登录先前所登录的 Google 标识，那么不再提示用户输入凭证。如果要重新提示输入登录凭证，用户必须从 Android 设备移除其 Google 帐户。
+ 如果您在用户登录 Google 之后调用此代码，那么用户将从 Google 注销。当用户尝试重新登录时，他们必须重新选择将要登录的 Google 帐户。如果他们尝试登录先前所登录的 Google 标识，那么不再提示用户输入凭证。如果要重新提示输入登录凭证，用户必须从 Android 设备除去其 Google 帐户。
 
  传递给注销功能的 `listener` 值可以为 `null`。

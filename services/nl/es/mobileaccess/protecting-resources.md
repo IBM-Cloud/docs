@@ -10,26 +10,26 @@ copyright:
 # Protección de recursos de fondo con el servicio {{site.data.keyword.amashort}}
 {: #protecting-resources}
 
-*Última actualización: 30 de abril de 2016*
+*Última actualización: 17 de julio de 2016*
 {: .last-updated}
 
 
-Con el servicio de {{site.data.keyword.amashort}}, puede proteger las aplicaciones de fondo basadas en Java y Node.js que se estén ejecutando en {{site.data.keyword.Bluemix_notm}} con la supervisión y la seguridad OAuth habilitada para móviles.
+Con el servicio de {{site.data.keyword.amashort}}, puede proteger las aplicaciones de fondo basadas en Java y Node.js que se estén ejecutando en {{site.data.keyword.Bluemix_notm}} con la supervisión y la seguridad OAuth habilitada para móviles. 
 {:shortdesc}
 
 ## Antes de empezar
 {: #before-you-begin}
-Antes de empezar, asegúrese de que crea el servicio Node.js. 
+Antes de empezar, asegúrese de que existe el servicio Node.js en la aplicación de fondo de {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Filtro de autorización
 {: #auth-filter}
-El SDK del servidor de {{site.data.keyword.amashort}} dispone de filtros de autorización que se pueden utilizar para proteger las aplicaciones de fondo. El filtro de autorización intercepta las solicitudes entrantes y las valida si existe una cabecera de autorización. Si no existe cabecera de autorización o esta no es válida, el filtro devuelve una respuesta con el código HTTP 401. El SDK del cliente de {{site.data.keyword.amashort}} sabe cómo interceptar una respuesta HTTP 401 devuelta por el SDK del servidor de {{site.data.keyword.amashort}} y activa el flujo de autenticación.
+El SDK del servidor de {{site.data.keyword.amashort}} dispone de filtros de autorización que se pueden utilizar para proteger las aplicaciones de fondo.  El filtro de autorización intercepta las solicitudes entrantes y las valida si existe una cabecera de autorización. Si no existe cabecera de autorización o esta no es válida, el filtro devuelve una respuesta con el código HTTP 401. El SDK del cliente de {{site.data.keyword.amashort}} sabe cómo interceptar una respuesta HTTP 401 devuelta por el SDK del servidor de {{site.data.keyword.amashort}} y activa el flujo de autenticación.
 ## Cabecera de autorización
 {: #auth-header}
 La cabecera de autorización de la solicitud entrante consta de tres partes: bearer, la señal de acceso y la señal de ID separados por espacios. La `señal de acceso` es un componente obligatorio mientras que la `señal de ID` es opcional.
 
-Cada filtro de autorización procesa la cabecera de autorización entrante correspondiente. El filtro valida las firmas de la señal de acceso y la señal de ID, la fecha de caducidad y la integridad estructural. Tras superar la validación, se añade un objeto de contexto de seguridad al objeto de solicitud. Puede obtener una referencia al contexto de seguridad con la API respectiva.
+Cada filtro de autorización procesa la cabecera de autorización entrante correspondiente. El filtro valida las firmas de la señal de acceso y la señal de ID, la fecha de caducidad y la integridad estructural. Tras superar la validación, se añade un objeto de contexto de seguridad al objeto de solicitud. Puede obtener una referencia al contexto de seguridad con la API relevante.
 
 El contexto de seguridad almacena el sujeto, el usuario, el dispositivo y la información de la aplicación con la siguiente estructura:
 ```JSON

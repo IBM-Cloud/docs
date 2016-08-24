@@ -7,9 +7,10 @@ copyright:
 
 # Fasi successive
 {: #next_steps_tags}
+*Ultimo aggiornamento: 14 giugno 2016*
+{: .last-updated}
 
-Dopo che hai correttamente configurato le notifiche di base, puoi configurare le notifiche
-        basate sulle tag e le opzioni avanzate.
+Dopo che hai correttamente configurato le notifiche di base, puoi configurare le notifiche basate sulle tag e le opzioni avanzate.
 
 Aggiungi queste funzioni del Servizio Push Notifications alla tua applicazione.
 Per utilizzare le notifiche basate sulle tag, vedi [Notifiche basate sulle tag](c_tag_basednotifications.html).

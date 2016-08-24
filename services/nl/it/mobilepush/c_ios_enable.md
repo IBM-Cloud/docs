@@ -7,6 +7,8 @@ copyright:
 
 # Abilitazione delle applicazioni iOS alla ricezione di notifiche di push
 {: #enable-push-ios-notifications}
+*Ultimo aggiornamento: 14 giugno 2016*
+{: .last-updated}
 
 Abilita le applicazioni iOS a ricevere notifiche di push e invia notifiche di push ai tuoi dispositivi.
 
@@ -63,6 +65,7 @@ Tale comando installa le tue dipendenze e crea un nuovo spazio di lavoro Xcode. 
 	$ open App.xcworkspace
 	```
 Lo spazio di lavoro contiene il tuo progetto originale e il progetto Pods che contiene le tue dipendenze. Se vuoi modificare una cartella di origine Bluemix Mobile Services, puoi trovarla nel tuo progetto Pods, in `Pods/yourImportedSourceFolder`, ad esempio: `Pods/BMSPush`.
+
 ##Carthage
 {: #carthage}
 
@@ -151,7 +154,8 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 
 ```
 //Inizializza il Push SDK for Objective-C client
-IMFPushClient _pushService = [IMFPushClient sharedInstance];
+IMFPushClient *push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 ```
 
 ####Swift
@@ -159,6 +163,7 @@ IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 //Inizializza il Push SDK for Swift client
 let push = BMSPushClient.sharedInstance
+push.initializeBluemixPush()
 ```
 
 ### Rotta, GUID e area Bluemix
@@ -247,6 +252,7 @@ Dopo che il token viene ricevuto da APNS, passa il token a Push Notifications co
 
  // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
      [ self  updateMessage:error .description];
@@ -263,6 +269,7 @@ Dopo che il token viene ricevuto da APNS, passa il token a Push Notifications co
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
+   push.initializeBluemixPush()
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
             print( "Response during device registration : \(response)")
@@ -329,7 +336,7 @@ Invia notifiche di push di base.
 	Il seguente screenshot mostra una casella di avviso che gestisce una notifica push
 in primo piano e in background su un dispositivo iOS.
 
-	![Notifica push in primo piano su Android](images/Android_Screenshot.jpg)
+	![Notifica push in primo piano su Android](images/iOS_Foreground.jpg)
 
 	![Notifica push in primo piano su iOS](images/iOS_Screenshot.jpg)
 

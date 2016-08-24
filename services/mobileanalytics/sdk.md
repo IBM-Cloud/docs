@@ -123,7 +123,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 	{: deviceevents-analytics-swift-2}
 
       ```Swift
-      Analytics.initializeWithAppName("AppName", accessKey: your_access_key,
+      Analytics.initializeWithAppName("AppName", apiKey: your_access_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
       {: codeblock}
@@ -132,7 +132,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 	{: deviceevents-analytics-swift-3}   
 	   
       ```Swift
-      Analytics.initializeWithAppName(appName: "AppName", accessKey: your_access_key,
+      Analytics.initializeWithAppName(appName: "AppName", apiKey: your_access_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
       {: codeblock}

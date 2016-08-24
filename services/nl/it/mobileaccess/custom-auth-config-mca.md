@@ -7,21 +7,26 @@ copyright:
 
 # Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata
 {: #custom-dash}
+
+*Ultimo aggiornamento: 17 luglio 2016*
+{: .last-updated}
+
+
 Per utilizzare l'autenticazione personalizzata con la tua applicazione mobile, devi registrare un'area di autenticazione personalizzata e l'URL di base del tuo provider di identità personalizzato nel dashboard del servizio {{site.data.keyword.amashort}}.
 
 ## Prima di cominciare
 {: #custom-dash-begin}
 * Leggi [Introduzione](index.html).
-* Proteggi la tua applicazione di back-end con l'SDK server {{site.data.keyword.amashort}}. Per ulteriori informazioni, vedi [Protezione delle risorse](protecting-resources.html).
+* Proteggi la tua applicazione di back-end con l'SDK server {{site.data.keyword.amashort}}.  Per ulteriori informazioni, vedi [Protezione delle risorse](protecting-resources.html).
 * Fai in modo che ci sia un'applicazione del provider di identità personalizzato in esecuzione.
 
 ## Configura l'autenticazione personalizzata nel dashboard {{site.data.keyword.Bluemix}}
 {: #custom-dash-config}
-Utilizza il dashboard {{site.data.keyword.amashort}} per configurare l'autenticazione personalizzata.
+Utilizza il dashboard {{site.data.keyword.Bluemix}} per configurare l'autenticazione personalizzata.
 
 1. Apri la tua applicazione nel dashboard {{site.data.keyword.Bluemix}}.
 
-1. Fai clic su **Opzioni mobili** e annota la tua **Rotta** (`applicationRoute`) e il tuo **GUID applicazione** (`applicationGUID`). Questi valori ti servono quando inizializzi l'SDK.
+1. Fai clic su **Opzioni mobili** e annota la tua **Rotta** (`applicationRoute`) e il tuo **GUID applicazione** (`applicationGUID`). Questi valori ti servono per inizializzare l'SDK.
 
 1. Fai clic sul tile {{site.data.keyword.amashort}}. Il dashboard {{site.data.keyword.amashort}} viene caricato.
 

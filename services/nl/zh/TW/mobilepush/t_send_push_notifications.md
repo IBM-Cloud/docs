@@ -7,8 +7,9 @@ copyright:
 
 {:new_window: target="_blank"}
 # 傳送基本推送通知
-
 {: #push-send-notifications}
+*前次更新：2016 年 6 月 14 日*
+{: .last-updated}
 
 開發應用程式之後，您可以傳送基本推送通知（不需要使用標籤、徽章、其他有效負載或音效檔）。
 

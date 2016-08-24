@@ -11,7 +11,7 @@ copyright:
 # Configurazione dell'SDK Android
 {: #getting-started-android}
 
-*Ultimo aggiornamento: 25 maggio 2016*
+*Ultimo aggiornamento: 18 luglio 2016*
 {: .last-updated}
 
 Strumenta la tua applicazione Android con l'SDK client {{site.data.keyword.amashort}}, inizializza l'SDK e effettua richieste a risorse protette e non protette.
@@ -20,8 +20,8 @@ Strumenta la tua applicazione Android con l'SDK client {{site.data.keyword.amash
 ## Prima di cominciare
 {: #before-you-begin}
 È necessario disporre di:
-* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html).
-* Un progetto Android Studio, che include Gradle e l'SDK Android Studio. Per ulteriori informazioni su come configurare il tuo ambiente di sviluppo Android, vedi gli [strumenti per sviluppatori Google](http://developer.android.com/sdk/index.html).
+* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un'applicazione di back-end {{site.data.keyword.Bluemix_notm}}, vedi [Introduzione](index.html).
+* Un progetto Android Studio, configurato per lavorare con Gradle. Per ulteriori informazioni su come configurare il tuo ambiente di sviluppo Android, vedi gli [strumenti per sviluppatori Google](http://developer.android.com/sdk/index.html).
 
 
 ## Installazione dell'SDK client {{site.data.keyword.amashort}}
@@ -31,20 +31,19 @@ L'SDK client {{site.data.keyword.amashort}} viene distribuito con Gradle, un ges
 
 1. Crea un progetto Android Studio oppure apri un progetto esistente.
 
-1. Apri il file `build.gradle`.
-**Suggerimento**: il tuo progetto Android potrebbe avere due file `build.gradle`: per il progetto e per il modulo applicazione. Utilizza il file di modulo applicazione.
+1. Apri il file `build.gradle` per la tua applicazione (**non** il file `build.gradle` del progetto).
 
-1. Trova la sezione **Dependencies** del file `build.gradle`.  Aggiungi una dipendenza di compilazione per l'SDK client {{site.data.keyword.amashort}}:
+1. Trova la sezione **dependencies** del file `build.gradle`.  Aggiungi una dipendenza di compilazione per l'SDK client {{site.data.keyword.amashort}}:
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
         name:'core',
         version: '1.+',
         ext: 'aar',
         transitive: true
-    	// altre dipendenze  
-}
+    	// altre dipendenze
+	}
 ```
 
 1. Sincronizza il tuo progetto con Gradle. Fai clic su **Tools &gt; Android &gt; Sync Project with Gradle Files**.
@@ -58,7 +57,7 @@ L'SDK client {{site.data.keyword.amashort}} viene distribuito con Gradle, un ges
 ## Inizializzazione dell'SDK client {{site.data.keyword.amashort}}
 {: #initalize-mca-sdk}
 
-Inizializza l'SDK passando i parametri `context`, `applicationGUID` e `applicationRoute` al metodo `initialize`.
+Inizializza l'SDK passando i parametri `context`, `applicationGUID`, `applicationRoute` e `BMSClient.REGION_UK` al metodo `initialize`.
 
 
 1. Dalla pagina principale del dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sulla tua applicazione. Fai clic su **Opzioni mobili**. Per inizializzare l'SDK ti servono i valori rotta applicazione (**Application Route**) e GUID applicazione (**Application GUID**).
@@ -69,17 +68,18 @@ Inizializza l'SDK passando i parametri `context`, `applicationGUID` e `applicati
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
-					"applicationGUID");
+					"applicationGUID",
+					BMSClient.REGION_UK);
 ```
+Sostituisci `BMSClient.REGION_UK` con la regione appropriata.
 
-
-## Effettuazione di una richiesta al tuo back-end mobile
+## Effettuare una richiesta alla tua applicazione di back-end mobile
 {: #request}
 
-Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puoi iniziare a effettuare richieste al tuo back-end mobile.
+Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puoi iniziare a effettuare richieste alla tua applicazione di back-end mobile.
 
-1. Prova a inviare una richiesta a un endpoint protetto del tuo nuovo back-end mobile. Nel tuo browser, apri il seguente URL: `{applicationRoute}/protected`. Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>L'endpoint `/protected` di un back-end mobile creato con il contenitore tipo MobileFirst Services Starter è protetto con {{site.data.keyword.amashort}}. Nel tuo browser viene restituito un messaggio `Unauthorized` perché a questo endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}.
+1. Prova a inviare una richiesta a un endpoint protetto della tua nuova applicazione di back-end mobile. Nel tuo browser, apri il seguente URL: `{applicationRoute}/protected`. Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo MobileFirst Services Starter è protetto con {{site.data.keyword.amashort}}. Nel tuo browser viene restituito un messaggio `Unauthorized` perché a questo endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}.
 
 1. Utilizza la tua applicazione Android per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato `BMSClient`:
 
@@ -107,7 +107,7 @@ Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puo
 
 	![immagine](images/getting-started-android-success.png)
 
-## Passi successivi
+## Fasi successive
 {: #next-steps}
 
 Quando ti sei connesso all'endpoint protetto, non è stata richiesta alcuna credenziale. Per richiedere ai tuoi utenti di accedere alla tua applicazione, devi configurare l'autenticazione Facebook, Google o personalizzata.

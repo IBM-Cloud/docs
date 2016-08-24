@@ -5,8 +5,11 @@ copyright:
   
 ---
 
-# Configuration des communications de système de back end à système de back end
+# Configuration des communications de système back end à système back end
 {: #backend-comm}
+
+*Dernière mise à jour : 16 juin 2016*
+{: .last-updated}
 
 Dans certains scénarios, vous pouvez être amené à envoyer des demandes à partir d'une application de back end qui s'exécute sur {{site.data.keyword.Bluemix}} à un autre système de back end qui est protégé par le service {{site.data.keyword.amashort}} (le service {{site.data.keyword.cloudant}}, par exemple). Dans ce cas, vous devez ajouter un jeton OAuth à la demande.
 
@@ -37,10 +40,10 @@ var options = {
 
 	cacheSize: 100,
 
-	// All of the below properties are retrieved automatically when your Node.js
-	// runs on {{site.data.keyword.Bluemix_notm}} and bound to an instance of {{site.data.keyword.amashort}} Service.
-	// Alternatively you can get these properties values by clicking Show Credentials
-	// on the {{site.data.keyword.amashort}} Service tile in your {{site.data.keyword.Bluemix_notm}} application dashboard
+	// Toutes les propriétés ci-dessous sont extraites automatiquement lorsque votre Node.js
+	// s'exécute sur {{site.data.keyword.Bluemix_notm}} et est lié à une instance du service {{site.data.keyword.amashort}}.
+	// Vous pouvez également obtenir ces valeurs de propriétés en cliquant sur Afficher les données d'identification
+	// sur la vignette du service {{site.data.keyword.amashort}} dans le tableau de bord de votre application {{site.data.keyword.Bluemix_notm}}
 
 	appId: "appId",				// Bleumix applicationGUID, a.k.a tenantId
 	clientId: "clientId",			

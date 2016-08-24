@@ -29,12 +29,14 @@ Wenn Sie mit einer neuen Cordova-Anwendung arbeiten möchten, können Sie die Ap
 3. Führen Sie in Ihrem Projektverzeichnis die folgenden Befehle aus, um die Android- und die iOS-Plattformumgebungen hinzuzufügen:
 
 	### Android
+	{: #cordova-android-run}
 
 	```Bash
 	cordova platform add android
 	```
 
 	### iOS
+	{: #cordova-ios-run}
 
 	```Bash
 	cordova platform add ios
@@ -62,6 +64,7 @@ Wenn Sie mit einer neuen Cordova-Anwendung arbeiten möchten, können Sie die Ap
 6. Konfigurieren Sie Ihre Cordova-App für iOS. Für die Android-Plattform ist keine zusätzliche Konfiguration erforderlich.
 
 	### iOS
+	{: #cordova-ios-configure}
   Konfigurieren Sie Ihr Xcode-Projekt zur Vermeidung von Buildfehlern wie folgt.
 
 	1. Verwenden Sie die neueste Version von Xcode, um Ihre Datei `xcode.proj` im Verzeichnis *&lt;App-Name&gt;*/platforms/ios zu öffnen.
@@ -83,6 +86,7 @@ Wenn Sie mit einer neuen Cordova-Anwendung arbeiten möchten, können Sie die Ap
 7. Erstellen Sie das Beispiel auf Ihrem mobilen Emulator oder Ihrem mobilen Gerät und führen Sie es aus.
 
   ### Android
+  {: #cordova-android-build}
 	1. Erstellen Sie mithilfe des folgenden Befehls die Cordova-App:
 
     **Wichtig:** Bevor Sie Ihr Projekt in Android Studio öffnen, müssen Sie zunächst Ihre Cordova-Anwendung über die Cordova-CLI (Befehlszeilenschnittstelle) erstellen. Ansonsten kommt es zu Buildfehlern.
@@ -94,6 +98,7 @@ Wenn Sie mit einer neuen Cordova-Anwendung arbeiten möchten, können Sie die Ap
 	2. Führen Sie die Beispiel-App in Android Studio aus.
 
   ### iOS
+  {: #cordova-ios-build}
   1. Erstellen Sie die Cordova-App in Xcode.
 
     **Tipp:** Die Erstellung in Xcode bietet weitere Optionnen, z. B. Debugging und Projektkonfiguration.
@@ -102,16 +107,22 @@ Wenn Sie mit einer neuen Cordova-Anwendung arbeiten möchten, können Sie die Ap
 
 Es wird eine eine Anwendung mit einer einzelnen Ansicht mit der Schaltfläche **PING BLUEMIX** angezeigt. Wenn Sie die Schaltfläche antippen, testet die Anwendung die Verbindung zwischen dem Client und der {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung. Die Verbindung wird mithilfe der Anwendungsroute getestet, die Sie in der Datei `index.js` angegeben haben.
 
+<!--
+![Hello World application successfully connected to Bluemix](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+-->
 
-![Verbindung zwischen Anwendung 'Hello World' und Bluemix erfolgreich hergestellt](images/yayconnected.jpg "Abbildung 1. Erfolgreiche Verbindung zwischen Anwendung 'Hello World' und Bluemix")
-
-
-Wenn Sie erfolgreich eine Verbindung von der mobilen App zu {{site.data.keyword.Bluemix_notm}} hergestellt haben, wird folgende Nachricht angezeigt: "Yay! You are connected".
+  Wenn Sie in Android Studio erfolgreich eine Verbindung zwischen der mobilen App und {{site.data.keyword.Bluemix_notm}} hergestellt haben, wird die folgende Nachricht angezeigt:
+  `Yay! You are connected`
+  {: screen}
 
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
-Falls die Verbindung fehlschlägt, wird eine Fehlernachricht angezeigt. Sie finden dort auch weitere Informationen zu dem Fehler. Sie können die folgenden Punkte prüfen, um Ihren Fehler zu beheben:
+Falls die Verbindung fehlschlägt, wird folgende Nachricht angezeigt:
+  `Bummer. Something went wrong`
+  {: screen}
+
+Sie finden dort auch weitere Informationen zu dem Fehler. Sie können die folgenden Punkte prüfen, um Ihren Fehler zu beheben:
 
 - Überprüfen Sie, dass Sie die Werte für die Route und die GUID ordnungsgemäß eingefügt haben.
 - Ziehen Sie das Xcode- oder das Android-Debugprotokoll zurate.

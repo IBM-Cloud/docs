@@ -48,7 +48,9 @@ logger.fatal("fatal message");
 ### iOS - Objective-C
 {: #enable-logger-objectc}
 
-**Important** : alors que le SDK Objective-C reste complètement pris en charge et est toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix}} Mobile Services, il est prévu qu'il soit interrompu plus tard dans l'année et remplacé par le nouveau SDK Swift.
+**Important** : Bien que le SDK Objective-C reste complètement pris en charge et soit toujours considéré comme le SDK principal pour
+{{site.data.keyword.Bluemix}} Mobile Services, il est envisagé de le retirer plus tard dans l'année et de le remplacer par le nouveau SDK
+Swift.
 
 Le SDK Objective-C rapporte les données de surveillance à la console de surveillance du service {{site.data.keyword.amashort}}. Si vous dépendez des fonctions de surveillance du service {{site.data.keyword.amashort}}, continuez à utiliser le SDK Objective-C.
 
@@ -123,7 +125,7 @@ Le fragment de code suivant est un exemple d'utilisation de Logger :
 {: #enable-logger-sample-android}
 
 ```Java
-// Enable persisting logs
+// Activation de journaux persistants
 Logger.setCapture(true);
 
 // Set the minimum log level to be printed and persisted
@@ -145,7 +147,7 @@ Logger.send();
 {: #enable-logger-sample-objectc}
 
 ```Objective-C
-// Enable persisting logs
+// Activation de journaux persistants
 [IMFLogger setCapture:YES];
 
 // Start capturing uncaught exceptions
@@ -170,7 +172,7 @@ IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
 {: #enable-logger-sample-swift}
 
 ```Swift
-// Enable persisting logs
+// Activation de journaux persistants
 IMFLogger.setCapture(true)
 
 // Start capturing uncaught exceptions
@@ -196,7 +198,7 @@ IMFLogger.send()
 {: #enable-logger-sample-cordova}
 
 ```JavaScript
-// Enable persisting logs
+// Activation de journaux persistants
 MFPLogger.setCapture(true);
 
 // Set the minimum log level to be printed and persisted

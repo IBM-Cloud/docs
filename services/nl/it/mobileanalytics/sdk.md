@@ -19,18 +19,18 @@ Gli SDK {{site.data.keyword.mobileanalytics_full}} consentono di strumentare la 
 durata dell'utilizzo delle applicazioni. I dati predefiniti vengono raccolti automaticamente dopo che hai inizializzato
 l'SDK {{site.data.keyword.mobileanalytics_short}} nella tua applicazione.
 2. Eventi personalizzati - questa categoria include i dati che definisci tu stesso e che sono specifici per la tua applicazione. Questi dati rappresentano gli eventi che si verificano nella tua applicazione, come le visualizzazioni di pagine, le selezioni di pulsanti o gli acquisti all'interno dell'applicazione. Oltre a inizializzare l'SDK {{site.data.keyword.mobileanalytics_short}} nella tua applicazione, devi aggiungere una riga di codice per ciascun evento personalizzato che vuoi tracciare.
-3. Messaggi di log client - questa categoria consente allo sviluppatore di aggiungere delle righe di codice in tutta l'applicazione che registrano dei messaggi personalizzati di supporto nelle attività di sviluppo e debug. Lo sviluppatore assegna un livello di severità/dettaglio a ciascun messaggio di log e può successivamente filtrare i messaggi in base al livello assegnato oppure risparmiare spazio di archiviazione configurando l'applicazione in modo che ignori i messaggi che sono al di sotto di un certo livello
-di log. Per raccogliere i dati di log client, devi inizializzare l'SDK {{site.data.keyword.mobileanalytics_short}} nella tua applicazione, nonché aggiungere una riga di codice per ciascun messaggio di log.
+3. Messaggi di log client - questa categoria consente allo sviluppatore di aggiungere delle righe di codice in tutta l'applicazione che registrano dei messaggi personalizzati di supporto nelle attività di sviluppo e debug. Lo sviluppatore assegna un livello di severità/dettaglio a ciascun messaggio di log e può successivamente filtrare i messaggi in base al livello assegnato oppure risparmiare spazio di archiviazione configurando l'applicazione in modo che ignori i messaggi che sono al di sotto di un livello di log fornito. Per raccogliere i dati di log client, devi inizializzare l'SDK {{site.data.keyword.mobileanalytics_short}} nella tua applicazione, nonché aggiungere una riga di codice per ciascun messaggio di log.
 
 Attualmente, gli SDK sono disponibili per Android, iOS e WatchOS.
 
-## Identificazione del tuo valore Chiave client
+## Identificazione della tua chiave di accesso alle credenziali del servizio
 {: #analytics-clientkey}
 
-Identifica il tuo valore **Chiave client** prima di impostare l'SDK client. La chiave client è necessaria per inizializzare l'SDK client.
+Identifica il tuo valore **chiave di accesso** prima di impostare l'SDK client. La chiave di accesso è necessaria per inizializzare l'SDK client. 
+
 1. Apri il tuo dashboard del servizio {{site.data.keyword.mobileanalytics_short}}.
-2. Fai clic sull'icona che rappresenta una chiave inglese per aprire la scheda Chiavi API.
-3. Nella scheda Chiavi API, annota il valore di Chiave client.
+2. Fai clic sulla scheda **Credenziali del servizio**.
+3. Copia il tuo valore della chiave di accesso.
 
 
 ## Inizializzazione della tua applicazione Android per raccogliere l'analisi
@@ -38,7 +38,7 @@ Identifica il tuo valore **Chiave client** prima di impostare l'SDK client. La c
 
 Inizializza la tua applicazione per abilitare l'invio di log al servizio {{site.data.keyword.mobileanalytics_short}}.
 
-1. Importa l'SDK client aggiungendo la seguente istruzione `import` all'inizio del tuo file di progetto:
+1. Importa l'SDK client aggiungendo la seguente istruzione `import` all'inizio del tuo file di progetto: 
 
   ```
   import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
@@ -54,7 +54,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Accertati di puntare alla tua regione
         } catch (MalformedURLException e) {
             Log.e(il_nome_della_tua_applicazione,"L'URL non deve avere un formato non corretto:  " + e.getLocalizedMessage());
-        }
+        } 
   ```
   {: codeblock}
 
@@ -65,8 +65,7 @@ distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `B
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Avvia Analytics utilizzando il tuo oggetto applicazione Android e fornendo ad esso il nome della tua applicazione. Ti serve anche
-il valore [**Chiave client**](#analytics-clientkey).
+3. Avvia Analytics utilizzando il tuo oggetto applicazione Android e fornendo ad esso il nome della tua applicazione. Ti serve anche il valore [**chiave di accesso**](#analytics-clientkey). 
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -81,8 +80,7 @@ il valore [**Chiave client**](#analytics-clientkey).
 
 Inizializza la tua applicazione per abilitare l'invio di log al servizio {{site.data.keyword.mobileanalytics_short}}. L'SDK Swift è disponibile per iOS e watchOS.
 
-1. Importa i framework `BMSCore` e `BMSAnalytics` aggiungendo le seguenti istruzioni `import` all'inizio
-del tuo file di progetto `AppDelegate.swift`:
+1. Importa i framework `BMSCore` e `BMSAnalytics` aggiungendo le seguenti istruzioni `import` all'inizio del tuo file di progetto `AppDelegate.swift`: 
 
   ```Swift
   import BMSCore
@@ -107,7 +105,7 @@ distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `B
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Inizializza Analytics fornendo ad esso il nome della tua applicazione mobile. Ti serve anche il valore [**Chiave client**](#analytics-clientkey).
+3. Inizializza Analytics fornendo ad esso il nome della tua applicazione mobile. Ti serve anche il valore [**chiave di accesso**](#analytics-clientkey). 
 
   Il nome applicazione viene utilizzato come un filtro per cercare i log client nel tuo dashboard {{site.data.keyword.mobileanalytics_short}}. Utilizzando lo stesso nome applicazione su diverse piattaforme (ad esempio Android e iOS), puoi visualizzare tutti i log da tale applicazione sotto lo stesso nome, indipendentemente da quale sia la piattaforma dalla quale i log erano stati inviati.
 
@@ -516,4 +514,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## Riferimento API
 {: #api}
-* [API REST](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}
+* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

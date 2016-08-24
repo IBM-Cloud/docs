@@ -7,6 +7,8 @@ copyright:
 
 # 푸시 알림을 수신하도록 iOS 애플리케이션 설정
 {: #enable-push-ios-notifications}
+*마지막 업데이트 날짜: 2016년 6월 14일*
+{: .last-updated}
 
 iOS 애플리케이션이 푸시 알림을 수신하고 사용자 디바이스에 푸시 알림을 전송하도록 설정합니다. 
 
@@ -33,7 +35,7 @@ $ pod init
    Objective-C
 
     ```
-    source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 	Copy the following list as is and remove the dependencies you do not need
 	pod 'IMFCore'
 	pod 'IMFPush'
@@ -151,7 +153,8 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 
 ```
 //Initialize client Push SDK for Objective-C
-IMFPushClient _pushService = [IMFPushClient sharedInstance];
+IMFPushClient *push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 ```
 
 ####Swift
@@ -159,6 +162,7 @@ IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 //Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
+push.initializeBluemixPush()
 ```
 
 ### 라우트, GUID 및 Bluemix 리젼
@@ -237,13 +241,14 @@ APNS로부터 토큰이 수신되면 `registerDevice:withDeviceToken` 메소드�
 //For Objective-C
 -( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
 
-   IMFClient *client = [IMFClient sharedInstance];
+      IMFClient *client = [IMFClient sharedInstance];
 
  [client initializeWithBackendRoute:@"your-backend-route-here" backendGUID:@"Your-backend-GUID-here"];
 
 
- // get Push instance
+// get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
+[push initializeBluemixPush]
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
      [ self  updateMessage:error .description];
@@ -260,6 +265,7 @@ APNS로부터 토큰이 수신되면 `didRegisterForRemoteNotificationsWithDevic
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
+   push.initializeBluemixPush()
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
             print( "Response during device registration : \(response)")
@@ -295,7 +301,7 @@ iOS 디바이스에서 푸시 알림을 수신하려면 애플리케이션의 �
 iOS 디바이스에서 푸시 알림을 수신하려면 애플리케이션의 위임자에 다음 Swift 메소드를 추가하십시오.
 
 ```
- // For Swift
+// For Swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
        //UserInfo dictionary will contain data sent from the server
    }
@@ -324,7 +330,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 	다음 스크린샷은 iOS 디바이스의 포그라운드 및 백그라운드에서
 푸시 알림을 처리하는 경보 상자를 보여줍니다.
 
-	![Android의 포그라운드 푸시 알림](images/Android_Screenshot.jpg)
+	![Android의 포그라운드 푸시 알림](images/iOS_Foreground.jpg)
 
 	![iOS의 포그라운드 푸시 알림](images/iOS_Screenshot.jpg)
 

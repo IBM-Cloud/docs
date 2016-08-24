@@ -7,8 +7,10 @@ copyright:
 
 # Traitement des incidents
 {: #errors}
+*Dernière mise à jour : 14 juin 2016*
+{: .last-updated}
 
-Utilisez cette section pour traiter les incidents courants liés à Push Notification.
+Utilisez cette section pour traiter les incidents courants liés à la notification push.
 
 
 ### Une erreur serveur interne s'est produite. Veuillez contacter l'administrateur. (Code d'erreur interne : PUSHD102E)

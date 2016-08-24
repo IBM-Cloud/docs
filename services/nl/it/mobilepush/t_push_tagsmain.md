@@ -8,7 +8,8 @@ copyright:
 {:new_window: target="_blank"}
 # Notifiche basate sulle tag 
 {: #push-ios-main-tags}
-
+*Ultimo aggiornamento: 14 giugno 2016*
+{: .last-updated}
 
 Le notifiche basate sulle tag sono messaggi destinati a tutti i dispositivi che hanno sottoscritto una specifica tag. Puoi definire le tag e quindi utilizzarle per
                         inviare e ricevere messaggi. Devi prima creare le tag per l'applicazione, impostare

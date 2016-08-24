@@ -9,23 +9,25 @@ copyright:
 # Configurando o plug-in do Cordova
 {: #getting-started-cordova}
 
-*Última atualização: 25 de maio de 2016*
+*Última atualização: 17 de julho de 2016*
 {: .last-updated}
 
-Instrumente seu aplicativo Cordova com o {{site.data.keyword.amashort}} client SDK, inicialize o SDK e faça solicitações para recursos protegidos e não protegidos.
+Instrumente seu aplicativo Cordova com o SDK do cliente {{site.data.keyword.amashort}}, inicialize o SDK e faça solicitações aos
+recursos protegidos e não protegidos.
 {:shortdesc}
 
 ## Antes de Começar
 {: #before-you-begin}
 Você deve ter:
-* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
+* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
 
-* Um aplicativo Cordova ou usar um projeto existente. Para obter mais informações sobre como configurar seu aplicativo Cordova, consulte o [website do Cordova](https://cordova.apache.org/).
+* Um aplicativo Cordova ou um projeto existente. Para obter mais informações sobre como configurar seu aplicativo Cordova, consulte o [website do Cordova](https://cordova.apache.org/).
 
-## Instalando o plug-in do Cordova do {{site.data.keyword.amashort}}
+## Instalando o plug-in {{site.data.keyword.amashort}} Cordova
 {: #getting-started-cordova-plugin}
 
-O {{site.data.keyword.amashort}} client SDK para Cordova é um plug-in do Cordova que está agrupando os {{site.data.keyword.amashort}} client SDKs nativos. Ele é distribuído usando a interface de linha de comandos (CLI) do Cordova e `npmjs`, um repositório de plug-in para projetos do Cordova. O Cordova CLI faz download automaticamente de plug-ins de repositórios e os torna disponíveis para seu aplicativo Cordova.
+O SDK do cliente {{site.data.keyword.amashort}} para Cordova é um plug-in Cordova que agrupa os SDKs do cliente
+{{site.data.keyword.amashort}} nativos. Ele é distribuído usando a interface de linha de comandos (CLI) do Cordova e `npmjs`, um repositório de plug-in para projetos do Cordova. A CLI Cordova faz download automaticamente dos plug-ins a partir dos repositórios e os disponibiliza ao seu aplicativo Cordova.
 
 1. Inclua as plataformas Android e iOS em seu aplicativo Cordova. Execute um ou ambos os comandos a seguir a partir da linha de comandos:
 
@@ -37,7 +39,9 @@ O {{site.data.keyword.amashort}} client SDK para Cordova é um plug-in do Cordov
 	cordova platform add ios
 	```
 
-1. Se você incluiu a plataforma Android, deve-se incluir o nível mínimo de API suportado no arquivo `config.xml` do aplicativo Cordova. Abra o arquivo `config.xml` e inclua a linha a seguir no elemento `<platform name="android">`:
+1. Se você incluiu a plataforma Android, deve-se incluir o nível mínimo de API suportado no arquivo `config.xml` do aplicativo Cordova. Abra
+o arquivo `config.xml` e inclua a linha a seguir no elemento `<platform
+name="android">`:
 
 	```XML
 	<platform name="android">  
@@ -64,7 +68,7 @@ O {{site.data.keyword.amashort}} client SDK para Cordova é um plug-in do Cordov
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Configure a plataforma do Android e/ou iOS.
+1. Configure sua plataforma para Android, iOS ou ambos.
 
 	* **Android**
 
@@ -79,20 +83,18 @@ por meio da interface da linha de comandos (CLI) para evitar erros de compilaç�
 
 		Configure seu projeto Xcode conforme a seguir, para evitar erros de compilação.
 
-		1. Use a versão mais recente do Xcode para abrir o arquivo xcode.proj no
-diretório &lt;*app_name*&gt;/platforms/ios.
+		1. Use a versão mais recente do Xcode para abrir seu arquivo `xcode.proj` no diretório `<app_name>/platforms/ios`.
 
 		**Importante:** se você receber uma mensagem para "Converter na sintaxe mais recente do Swift", clique em Cancelar.
 
-		2. Acesse **Configurações de compilação > Compilador Swift - Geração de
-códigos > Cabeçalho de ponte Objective-C** e inclua o caminho a seguir:
+		2. Acesse **Configurações de compilação > Compilador Swift - Geração de código > Cabeçalho de ponte do Objective-C** e
+inclua o caminho a seguir:
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. Acesse **Configurações de compilação > Link > Caminhos da procura
-Runpath** e inclua o parâmetro Frameworks a seguir:
+		3. Acesse **Configurações de compilação > Vinculação > Caminhos de procura Runpath** e inclua o parâmetro Frameworks a seguir:
 
 			```
 			@executable_path/Frameworks
@@ -100,7 +102,7 @@ Runpath** e inclua o parâmetro Frameworks a seguir:
 
 		4. Compile e execute seu aplicativo com Xcode.
 
-1. Verifique se o plug-in foi instalado com êxito executando o comando a seguir:
+1. Verifique se o plug-in foi instalado com sucesso, executando o comando a seguir:
 
 	```Bash
 	cordova plugin list
@@ -111,7 +113,7 @@ Runpath** e inclua o parâmetro Frameworks a seguir:
 
 Para usar o {{site.data.keyword.amashort}} client SDK, deve-se inicializar o SDK passando os parâmetros *applicationGUID* e *applicationRoute*.
 
-1. Localize os valores de rota e de GUID do app na página principal do painel do {{site.data.keyword.Bluemix_notm}}. Clique no nome do app e, em seguida, em **Opções de dispositivo móvel** para exibir os valores **Application route** e **Application GUID** para inicializar o SDK.
+1. Localize os valores de rota e de GUID do app na página principal do painel do {{site.data.keyword.Bluemix_notm}}. Clique no nome do seu aplicativo e depois em **Opções móveis** para exibir os valores **Rota de aplicativo** e **GUID de aplicativo** para inicializar o SDK.
 
 3. Inclua a chamada a seguir no arquivo `index.js` para inicializar o {{site.data.keyword.amashort}} client SDK. Substitua
 *applicationRoute* e *applicationGUID* pelos valores das
@@ -122,20 +124,18 @@ Para usar o {{site.data.keyword.amashort}} client SDK, deve-se inicializar o SDK
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
 
-## Fazendo uma solicitação para o backend móvel
+## Fazendo uma solicitação ao aplicativo backend móvel
 {: #getting-started-request}
 
-Depois que o {{site.data.keyword.amashort}} client SDK for inicializado, será possível começar a fazer solicitações para o seu backend móvel.
+Após o SDK do cliente {{site.data.keyword.amashort}} ser inicializado, será possível começar a fazer solicitações ao seu aplicativo backend móvel.
 
-1. Tente enviar uma solicitação para um terminal protegido de seu novo backend móvel. Em seu navegador, abra esta URL: `{applicationRoute}/protected`. Por exemplo:
+1. Tente enviar uma solicitação a um terminal protegido do seu novo aplicativo backend móvel. Em seu navegador, abra esta URL: `{applicationRoute}/protected`. Por exemplo:
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected
 	```
 
-	O terminal `/protected` de um backend móvel que foi criado com o
-modelo MobileFirst Services Starter é protegido com
-{{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal é acessado somente por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
+	O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter é protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal é acessado somente por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
 
 1. Use seu aplicativo Cordova para fazer uma solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient`:
 
@@ -145,7 +145,7 @@ modelo MobileFirst Services Starter é protegido com
 	}
 
 	var failure = function(error){
-		console.log("failure", error);
+	console.log("failure", error);
 	}
 
 	var request = new MFPRequest("/protected", MFPRequest.GET);

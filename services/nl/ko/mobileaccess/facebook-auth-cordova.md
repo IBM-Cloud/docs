@@ -25,7 +25,7 @@ Facebook 인증 통합을 위해 Cordova 애플리케이션을 구성하려면 J
 {: #facebook-auth-before}
 다음이 있어야 합니다.
 * {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 Cordova 프로젝트는 [Cordova 플러그인 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)을 참조하십시오.
-* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm} 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
+* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm} 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
 * Facebook 애플리케이션 ID. 자세한 정보는 [Facebook 개발자 포털에서 Facebook 애플리케이션 ID 얻기](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)를 참조하십시오. 
 
 
@@ -75,8 +75,8 @@ Facebook 인증을 통합하도록 Cordova 애플리케이션의 iOS 플랫폼�
 애플리케이션 위임자의 `application:openURL:sourceApplication:annotation` 메소드에 다음 행을 추가하십시오. 이 코드는 모든 Cordova 플러그인에서 각각의 이벤트에 대한 알림을 수신하도록 합니다.
 
 ```
-[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
-      
+[[ NSNotificationCenter defaultCenter] postNotification:
+		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
 ```
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
@@ -92,13 +92,13 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 
 ## 인증 테스트
 {: #facebook-auth-cordova-test}
-클라이언트 SDK가 초기화되고 Facebook 인증 관리자가 등록되면 모바일 백엔드 요청을 시작할 수 있습니다.
+클라이언트 SDK가 초기화되고 Facebook 인증 관리자가 등록되면 모바일 백엔드 애플리케이션에 대한 요청을 시작할 수 있습니다. 
 
 ### 시작하기 전에
-{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용하고 있어야 하며, `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받은 자원이 있어야 합니다. 자세한 정보는 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
+{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용 중 이어야 하며, `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받은 리소스가 있어야 합니다. 자세한 정보는 [리소스 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
-1. 브라우저에서 새로 작성한 모바일 백엔드의 보호 엔드포인트로 요청을 전송해 보십시오. URL `{applicationRoute}/protected`를 여십시오. 예를 들면 `http://my-mobile-backend.mybluemix.net/protected`와 같습니다. 
-<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다. `Unauthorized` 메시지가 브라우저에 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 이 메시지가 리턴됩니다.
+1. 브라우저에서 새로 작성한 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송해 보십시오. URL `{applicationRoute}/protected`를 여십시오. 예를 들면 `http://my-mobile-backend.mybluemix.net/protected`와 같습니다. 
+<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. `Unauthorized` 메시지가 브라우저에 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 이 메시지가 리턴됩니다.
 
 1. Cordova 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화한 후 아래 코드를 추가하십시오. 
 
