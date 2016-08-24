@@ -8,7 +8,11 @@ copyright:
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
+<<<<<<< HEAD
 Last updated: 23 August 2016
+=======
+Last updated: 16 August 2016
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 {: .last-updated}
 
 You can enable Android applications to receive and send {{site.data.keyword.mobilepushshort}} to your devices.
@@ -167,8 +171,13 @@ Copy the following code snippets to your Android mobile application.
 	});
 	```
 	{: codeblock}
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 	```
 	//Handles the notification when it arrives
 	MFPPushNotificationListener notificationListener = new MFPPushNotificationListener() {
@@ -220,11 +229,16 @@ notification in the foreground on a Android device.
 ![Foreground push notification on Android](images/Android_Screenshot.jpg)
 
 The following following screen shot shows a push notification in the background for Android.
+<<<<<<< HEAD
 
 ![Background push notification on Android](images/background.jpg)
 
 ### Optional settings for sending notifications
 {: #send_otpional_setting}
+=======
+
+![Background push notification on Android](images/background.jpg)
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 You can further customize the {{site.data.keyword.mobilepushshort}} settings for sending notifications to Android devices. The following optional customization options are supported.
 ![Android custom settings](images/android_custom_settings.jpg)

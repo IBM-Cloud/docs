@@ -8,16 +8,26 @@ copyright:
 
 # Registering a device with userId
 {: #register_device_with_userId}
+<<<<<<< HEAD
 Last updated: 23 August 2016
+=======
+Last updated: 16 August 2016
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 {: .last-updated}
 
 To register for userId-based notification, complete the following steps:
 
 ## Android
 {: android-register}
+<<<<<<< HEAD
 
 Initialize the MFPPush class with the `AppGUID` and `clientSecret` key of {{site.data.keyword.mobilepushshort}} service.
 
+=======
+ 
+Initialize the MFPPush class with the `AppGUID` and `clientSecret` key of {{site.data.keyword.mobilepushshort}} service.
+
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 	```
 	// Initialize the MFPPush
 	push = MFPPush.getInstance();
@@ -57,9 +67,15 @@ Use the **registerDeviceWithUserId** API to register the device for {{site.data.
 ####userId
 {: android-user-id}
 
+<<<<<<< HEAD
 Pass the unique userId value for registering for {{site.data.keyword.mobilepushshort}}.
 
 **Note:** To enable {{site.data.keyword.mobilepushshort}} targeted by UserId, ensure that you register the device with a userId and also pass the 'clientSecret' that is allocated when the {{site.data.keyword.mobilepushshort}} services are provisioned. Device registration will fail without a valid clientSecret.
+=======
+Pass the unique User ID value for registering for {{site.data.keyword.mobilepushshort}}.
+
+**Note:** To enable {{site.data.keyword.mobilepushshort}} targeted by UserId, ensure that you register the device with a UserId and also pass the 'clientSecret' that is allocated when the {{site.data.keyword.mobilepushshort}} services are provisioned. If you do not pass a valid clientSecret, the device registration will fail.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 
 ## Cordova
@@ -77,7 +93,11 @@ Initialize `MFPPush` with `clientsecret`.
 ###appGUID
 {: cordova-pushappguid}
 
+<<<<<<< HEAD
 This is the AppGUID key of the {{site.data.keyword.mobilepushshort}} service.
+=======
+This is the AppGUID key of the {{site.data.keyword.mobilepushshort}} service. 
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ####clientSecret
 {: cordova-client-secret}
@@ -87,7 +107,11 @@ This is the clientSecret key of the {{site.data.keyword.mobilepushshort}} servic
 	```
 	//Register for {{site.data.keyword.mobilepushshort}} with userId
 	var userId = "userId";
+<<<<<<< HEAD
 	MFPPush.registerDevice({},success,failure,userId);
+=======
+	MFPPush.registerDevice({},success,failure,userId); 
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 	```
 	{: codeblock}
 
@@ -101,6 +125,7 @@ Pass the unique userId value for registering for {{site.data.keyword.mobilepushs
 {: objc-register}
 
 Use the following APIs to register for UserId based {{site.data.keyword.mobilepushshort}}.
+<<<<<<< HEAD
 
 	```
 	// Initialize the MFPPush
@@ -110,6 +135,17 @@ Use the following APIs to register for UserId based {{site.data.keyword.mobilepu
 	{: codeblock}
 
 ###AppGUID
+=======
+
+	```
+	// Initialize the MFPPush
+	IMFPushClient* push = [IMFPushClient sharedInstance];
+	[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"]; 
+	```
+	{: codeblock}
+
+###AppGUID 
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 {: objc-pushappguid}
 
 This is the AppGUID key of the {{site.data.keyword.mobilepushshort}} service.
@@ -140,7 +176,11 @@ Use the **registerWithUserId** API to register the device for {{site.data.keywor
 ####userId
 {: objc-user-id}
 
+<<<<<<< HEAD
 Pass the unique userId value for registering for {{site.data.keyword.mobilepushshort}}.
+=======
+Pass the unique User ID value for registering for {{site.data.keyword.mobilepushshort}}.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ## Swift
 {: swift-register}
@@ -183,6 +223,7 @@ Use the **registerWithUserId** API to register the device for {{site.data.keywor
 ####userId
 {: swift-user-id}
 
+<<<<<<< HEAD
 Pass the unique userId value for registering for {{site.data.keyword.mobilepushshort}}.
 
 ## Google Chrome and Mozilla Firefox
@@ -213,6 +254,12 @@ After successfully initialized register the web application with userId.
 	{: codeblock}
 
 # Using userId-based notifications
+=======
+Pass the unique User ID value for registering for {{site.data.keyword.mobilepushshort}}.
+
+
+# Using User ID-based notifications
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 {: #using_userid}
 
 

@@ -7,16 +7,27 @@ copyright:
 
 # Managing tags
 {: #manage_tags}
+<<<<<<< HEAD
 Last updated: 23 August 2016
 {: .last-updated}
 
 Use the {{site.data.keyword.mobilepushshort}} dashboard to create and delete tags for your application and then initiate tag-based notifications. The tag-based notification is received on devices that are subscribed to tags.
+=======
+Last updated: 16 August 2016
+{: .last-updated}
+
+Use the Push dashboard to create and delete tags for your application and then initiate tag-based notifications. The tag-based notification is received on devices that are subscribed to the tag.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 
 ## Creating tags
 {: #create_tags}
 
+<<<<<<< HEAD
 Tag-based notifications are messages targeted to all devices subscribed to a particular tag. Each device can subscribe to any number of tags. When a tag is deleted, information associated with that tag, including its subscribers and devices, are deleted. Automatic unsubscribe is not required, as the tag no longer exists. No further action is required from the client side.
+=======
+Tag-based notifications are messages targeted to all devices subscribed to a particular tag. Each device can subscribe to any number of tags. When a tag is deleted, information associated with that tag, including its subscribers and devices, are deleted. No automatic unsubscribe is needed for this tag since it no longer exists and no further action is required from the client side.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 1. On the {{site.data.keyword.mobilepushshort}} dashboard, select the **Tags** tab.
 1. Click the + **Create Tag** button.   
@@ -43,7 +54,11 @@ Tag-based notifications are messages targeted to all devices subscribed to a par
 # Getting tags
 {: #get_tags}
 
+<<<<<<< HEAD
 Tags provide a way to send targeted notifications to users based on their interests, unlike general broadcasts that are sent to all applications. You can create and manage tags by using the Tag tab on the {{site.data.keyword.mobilepushshort}} dashboard or use REST APIs. You can use code snippets to manage and query your tag subscriptions for your mobile application. You can use these code snippets to get subscriptions, subscribe to a tag, unsubscribe from a tag, or get a list of available tags. Copy these code snippets to your mobile application.
+=======
+Tags provide a way to send targeted notifications to users based their interests, unlike general broadcasts that are sent to all applications. You can create and manage tags by using the Tag tab on the Push dashboard or use REST APIs. You can use code snippets to manage and query your tag subscriptions for your mobile application. You can use these code snippets to get subscriptions, subscribed to a tag, unsubscribed from a tag, get a list of available tags. Copy these code snippets into your mobile application.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ## Android
 {: android-get-tags}
@@ -54,7 +69,11 @@ Copy the following code snippets to your Android mobile application to get a lis
 
 Use the following **getTags** API to get a list of available tags to which the device can subscribe.
 
+<<<<<<< HEAD
         	```
+=======
+	```
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 	// Get a list of available tags to which the device can subscribe
 	push.getTags(new MFPPushResponseListener<List<String>>(){  
     @Override
@@ -200,6 +219,7 @@ Copy the following code snippets into your Swift mobile application to get a lis
 	}
 	```
 	{: codeblock}
+<<<<<<< HEAD
 
 ## Google Chrome and Mozilla Firefox
 {: web-get-tags}
@@ -231,6 +251,8 @@ Use the `retrieveSubscriptions` API to get a list of tags that to which the web 
   })
 ```
 	{: codeblock}
+=======
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 # Subscribing and unsubscribing tags
 {: #Subscribe_tags}
@@ -248,7 +270,11 @@ Copy and paste this code snippet to your Android mobile application.
     @Override
     public void onFailure(MFPPushException ex) {
     updateTextView("Error subscribing to Tag1.."
+<<<<<<< HEAD
              + ex.getMessage());
+=======
+           + ex.getMessage());
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
     }
     @Override
     public void onSuccess(String arg0) {
@@ -362,6 +388,7 @@ Use the **unsubscribeFromTags** API to unsubscribe from a tag.
 	}
 	```
 	{: codeblock}
+<<<<<<< HEAD
 
 ## Google Chrome and Mozilla Firefox
 {: web-subscribe-tags}
@@ -385,11 +412,18 @@ var tagsArray = ["tag1", "Tag2"]
 })
 ```
 	{: codeblock}
+=======
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 # Using tag-based notifications
 {: #using_tags}
 
+<<<<<<< HEAD
 Tag-based notifications are messages targeted to all devices that are subscribed to a particular tag. Each device can be subscribed to any number of tags. This topic describes how to send tag-based notifications. Subscriptions are maintained by the {{site.data.keyword.mobilepushshort}} service Bluemix instance. When a tag is deleted, all information associated with that tag, including its subscribers and devices are deleted. No automatic unsubscribe is needed for this tag since it no longer exists and no further action is required from the client side.
+=======
+
+Tag-based notifications are messages targeted to all devices that are subscribed to a particular tag. Each device can be subscribed to any number of tags. This section describes how to send tag-based notifications. Subscriptions are maintained by the {{site.data.keyword.mobilepushshort}} service Bluemix instance. When a tag is deleted, all information associated with that tag, including its subscribers and devices are deleted. No automatic unsubscribe is needed for this tag since it no longer exists and no further action is required from the client side.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ###Before you begin
 {: before-you-begin}

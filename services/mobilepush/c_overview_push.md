@@ -7,10 +7,17 @@ copyright:
 
 # About {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
+<<<<<<< HEAD
 Last updated: 23 August 2016
 {: .last-updated}
 
 IBM {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android mobile devices, and to Google Chrome and Mozilla Firefox web browsers. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
+=======
+Last updated: 16 August 2016
+{: .last-updated}
+
+IBM {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android devices. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 {{site.data.keyword.mobilepushshort}} is also available as a Bluemix Dedicated service. For information about {{site.data.keyword.mobilepushshort}} as a dedicated service, see [Dedicated Services](../../dedicated/index.html). Note that the {{site.data.keyword.mobilepushshort}} monitoring tab does not show analytics data.
 
@@ -20,7 +27,11 @@ The {{site.data.keyword.mobilepushshort}} service is now OpenWhisk enabled. For 
 ## {{site.data.keyword.mobilepushshort}} service process
 {: #overview_push_process}
 
+<<<<<<< HEAD
 Mobile and browser clients can subscribe and register for the {{site.data.keyword.mobilepushshort}} service. On startup, the client applications will register and subscribe themselves to the {{site.data.keyword.mobilepushshort}} service. The notifications are dispatched to the Apple Push Notification Service (APNs) or Google Cloud Messaging (GCM) server and then sent to registered mobile or browser clients.
+=======
+Mobile clients can subscribe and register for the {{site.data.keyword.mobilepushshort}} service. On startup, mobile applications wil register and subscribe themselves to the {{site.data.keyword.mobilepushshort}} service. The notifications are dispatched to the Apple Push Notification Service (APNs) or Google Cloud Messaging (GCM) server and then sent to registered mobile clients.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ![Push Overview](images/overview.jpg)
 
@@ -28,32 +39,56 @@ Mobile and browser clients can subscribe and register for the {{site.data.keywor
 ###Mobile and browser applications
 {: mobile-applications}
 
+<<<<<<< HEAD
 On startup, mobile and browser applications register and subscribe themselves to the {{site.data.keyword.mobilepushshort}} service to receive notifications.
+=======
+On startup, mobile applications register and subscribe themselves to the {{site.data.keyword.mobilepushshort}} service to receive notifications.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ###Back end applications
 {: backend-applications}
 
+<<<<<<< HEAD
 Back end applications can be either on premise, or in a public cloud. Back end applications will use the {{site.data.keyword.mobilepushshort}} service to send context-sensitive notifications to mobile and browser application users. The back end applications are not required to maintain and manage mobile devices, browser agents and user information for sending push notifications. Instead, back end applications can use the {{site.data.keyword.mobilepushshort}} service which will manage and maintain them.
+=======
+Back end applications can be either on premise, or in a public cloud. Back end applications will use the {{site.data.keyword.mobilepushshort}} service to send context-sensitive notifications to mobile users. The back end applications are not required to maintain and manage mobile devices and user information for sending push notifications. Instead, back end applications can use the {{site.data.keyword.mobilepushshort}} service.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ###App backend owner
 {: app-backend-owner}
 
+<<<<<<< HEAD
 The App backend owner creates the mobile back end application which bundles an instance of the {{site.data.keyword.mobilepushshort}} service. The App back end owner also configures and sets up the {{site.data.keyword.mobilepushshort}} service to suit the back end applications using the service along with mobile  and browser applications that are target for {{site.data.keyword.mobilepushshort}}.
+=======
+The App backend owner creates the mobile back end application which bundles an instance of the {{site.data.keyword.mobilepushshort}} service. The App back end owner also configures and sets up the {{site.data.keyword.mobilepushshort}} service to suit the back end applications using the service along with mobile applications that are target for {{site.data.keyword.mobilepushshort}}.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ###{{site.data.keyword.mobilepushshort}} service
 {: push-notification-service}
 
+<<<<<<< HEAD
 The {{site.data.keyword.mobilepushshort}} service manages all information related to mobile devices and web browser clients that are registered for notifications. The service keeps your applications transparent to the technology details of sending notifications to heterogeneous mobile and web browser platforms, handling all of this within.
+=======
+The {{site.data.keyword.mobilepushshort}} service manages all information related to devices that are registered for notifications. The service keeps your applications transparent to the technology details of sending notifications to heterogeneous mobile platforms, handling all of this within.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ###Gateways
 {: gateways}
 
+<<<<<<< HEAD
 Platform specific Push Notifications cloud services such as Google Cloud Messaging (GCM) or Apple Push Notification Service (APNs) that is used by IBM {{site.data.keyword.mobilepushshort}} service to dispatch notifications to the mobile and browser applications.
+=======
+Mobile device platform-specific cloud services such as Google Cloud Messaging (GCM) or Apple Push Notification Service (APNs) use the {{site.data.keyword.mobilepushshort}} service to dispatch notifications to the mobile applications.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ###Push Security
 {: push-security}
 
+<<<<<<< HEAD
 {{site.data.keyword.mobilepushshort}} APIs are secured by two types of secrets - i) appSecret ii) clientSecret.  The 'appSecret' protects APIs that are typically invoked by back end applications- such as the API to send {{site.data.keyword.mobilepushshort}} and the API to configure settings.   The'clientSecret' protects APIs that are typically invoked by mobile client applications.  At present, there is only one API related to registration of a device with an associated UserId that requires this 'clientSecret'. None of the other APIs invoked from mobile clients require the clientSecret. The 'appSecret' and 'clientSecret' are allocated to every service instance at the time of binding an application with {{site.data.keyword.mobilepushshort}} service. Refer the ReST API documentation for more information on how the secrets are to be passed and for what APIs.
+=======
+{{site.data.keyword.mobilepushshort}} APIs are secured by two types of secrets - i) appSecret ii) clientSecret.  The 'appSecret' protects APIs that are typically invoked by backend applications such as the API to send {{site.data.keyword.mobilepushshort}}, the API configure to configure settings.   The'clientSecret' protects APIs that are typically invoked by mobile client applications.  At present, there is only one API related to registration of a device with an associated UserId that requires this 'clientSecret'. All other APIs invoked from mobile clients do not require the clientSecret. The 'appSecret' and 'clientSecret' are allocated to every service instance at the time of binding an application with {{site.data.keyword.mobilepushshort}} service. Refer the ReST API documentation for more information on how the secrets are to be passed and for what APIs.
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ## {{site.data.keyword.mobilepushshort}} types
 {: #overview-push-types}
@@ -94,7 +129,11 @@ Notifications can be targeted to reach a particular device platform. For example
 ## {{site.data.keyword.mobilepushshort}} message size
 {: #push-message-size}
 
+<<<<<<< HEAD
 The {{site.data.keyword.mobilepushshort}} message payload size is dependent on the constraints laid out by the Gateways (GCM, APNs) and client platforms. 
+=======
+The {{site.data.keyword.mobilepushshort}} message payload size is dependent on the mediators. 
+>>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ###iOS
 {: ios-message-size}
