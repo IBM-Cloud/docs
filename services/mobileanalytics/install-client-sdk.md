@@ -7,7 +7,7 @@ copyright:
 
 # Installing the {{site.data.keyword.mobileanalytics_short}} Client SDKs
 {: #mobileanalytics_sdk}
-Last updated: 15 August 2016
+Last updated: 25 August 2016
 {: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_short}}
