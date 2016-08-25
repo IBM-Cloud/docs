@@ -12,58 +12,33 @@ copyright:
 {:pre: .pre}
 
 # Initiation à {{site.data.keyword.iotdriverinsights_short}}
-{: #gettingstartedtemplate}
-*Dernière mise à jour : 13 mai 2016*
+{: #getting_started_iotdriverinsights}
 
-Avec {{site.data.keyword.iotdriverinsights_full}}, vous pouvez effectuer des analyses sur les conducteurs de véhicules en utilisant l'API {{site.data.keyword.iotdriverinsights_short}} pour collecter et analyser des données de détection des véhicules et des données contextuelles.
+Dernière mise à jour : 16 juin 2016
+{: .last-updated}
+
+{{site.data.keyword.iotdriverinsights_full}} est un ensemble de services sur {{site.data.keyword.Bluemix_notm}} que vous pouvez utiliser pour collecter et analyser le comportement des conducteurs.
+
 {:shortdesc}
 
-Procédez comme suit pour intégrer votre application à l'API {{site.data.keyword.iotdriverinsights_short}} après avoir créé et déployé une instance de service non lié. 
 
-1. (Facultatif) Avant d'envoyer des données de détection de véhicules vers l'API {{site.data.keyword.iotdriverinsights_short}}, vous pouvez ajouter des données supplémentaires à ces données en utilisant l'API {{site.data.keyword.iotmapinsights_short}}.
-     - Obtenez une mise en correspondance des données de détection de véhicules et des cartes routières en utilisant l'API `mapMatching`.
-        - [Demande] Données de détection de véhicules
-        - [Réponse] Mise en correspondance des données de détection de véhicules et des cartes routières
-     - Obtenez des données de type de route en utilisant l'API `getLinkInformation`.
-        - [Demande] ID de tronçon de route
-        - [Réponse] Type de route
-2. Envoyez les données de détection de véhicules à stocker et analyser en utilisant l'API `sendCarProbe`.
-   - [Demande] Mise en correspondance des données de détection de véhicules et des types de route
-3. Envoyez une demande de travail pour analyser les données de détection de véhicules en utilisant l'API `sendJobRequest`.
-   - [Demande] Données de détection
-   - [Réponse] ID travail
-4. Vérifiez le statut de travail en utilisant l'API `getJobInfo`.
-   - [Demande] ID travail
-   - [Réponse] Statut de travail
-5. Obtenez la liste récapitulative des trajets analysés en utilisant l'API `getAnalyzedTripSummaryList`.
-   - [Demande] ID travail
-   - [Réponse] Liste récapitulative des trajets analysés
-6. Obtenez des informations de trajets analysées et détaillées en utilisant l'API `getAnalyzedTripInfo`.
-   - [Demande] Identificateur UUID de trajet
-   - [Réponse] Détail du trajet analysé 
+Le service {{site.data.keyword.iotdriverinsights_short}} inclut les services suivants, qui fournissent des fonctionnalités d'analyse puissantes  applicables à de gros volumes de données automobiles.
 
-Le diagramme de séquence suivant montre la séquence des étapes.
-
-![Séquence d'analyse type](images/sequence_diagram.png "Séquence d'analyse type")
-
-Voir la rubrique [A propos de {{site.data.keyword.iotdriverinsights_short}}](iotdriverinsights_overview.html) pour plus de détails sur les comportements et contextes analysables.
-Utilisez le [tutoriel - partie 1 - {{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}}](https://github.com/IBM-Bluemix/car-data-management){:new_window} pour tester une application exemple avec des données exemple de détection de véhicules.
+|Service|Description|Initiation|A propos de|
+|:---|:---|:---|:---|
+|Analyse du type de conduite|Service que vous pouvez utiliser pour collecter et analyser des informations sur le comportement des conducteurs à partir de données contextuelles et de données d'exploration de véhicules.| [Initiation à l'analyse du type de conduite](./drb_index.html)|[A propos de l'analyse du type de conduite](drb_iotdriverinsights_overview.html)|
+|Analyse des modèles de trajectoire|Service que vous pouvez utiliser pour analyser les modèles O/D (Origine/Destination) et les modèles de route des trajets en voiture depuis des données d'exploration de véhicules.| [Initiation à l'analyse des modèles de trajectoire](./tp_index.html)|[A propos de l'analyse des modèles de trajectoire](tp_iotdriverinsights_overview.html)|
 
 
 # Liens connexes
 {: #rellinks}
-## Tutoriels et exemples
-{: #samples}
-
-* [Tutoriel - Partie 1 - {{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}}](https://github.com/IBM-Bluemix/car-data-management){:new_window}
-* [Tutoriel - Partie Z - {{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}}](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
 
 ## Référence d'API
 {: #api}
 
 * [Docs API](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}
 
-## Liens connexes
+## Autres ressources
 {: #general}
 
 * [Initiation à {{site.data.keyword.iotmapinsights_short}}](../IotMapInsights/index.html){:new_window}
@@ -71,4 +46,3 @@ Utilisez le [tutoriel - partie 1 - {{site.data.keyword.iotmapinsights_short}} / 
 * [dW Answers sur IBM developerWorks](https://developer.ibm.com/answers/topics/iot-driver-behavior){:new_window}
 * [Stack Overflow](http://stackoverflow.com/questions/tagged/iot-driver-behavior){:new_window}
 * [Nouveautés dans les services Bluemix](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
-

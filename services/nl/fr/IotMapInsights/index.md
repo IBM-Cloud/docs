@@ -13,105 +13,96 @@ copyright:
 
 
 # Initiation à {{site.data.keyword.iotmapinsights_short}}
-{: #gettingstartedtemplate}
-*Dernière mise à jour : 13 mai 2016*
+{: #iotdriverinsights_index}
+Dernière mise à jour : 22 juin 2016
+{: .last-updated}
 
-{{site.data.keyword.iotmapinsights_full}} permet aux développeurs
-d'activer facilement leurs applications en vue de l'utilisation de fonctions
-géospatiales, comme l'utilisation des données d'une carte et la recherche du
-chemin le plus court basée sur les réseaux routiers du monde entier.
+{{site.data.keyword.iotmapinsights_full}} est un service sur {{site.data.keyword.Bluemix}} que vous pouvez utiliser pour activer dans vos applications des fonctions géospatiales telles que la mise en correspondance de carte et la recherche du chemin le plus court sur des réseaux routiers à travers le globe.  
 {:shortdesc}
 
-Vous pouvez utiliser les fonctions suivantes grâce à l'API REST de
-{{site.data.keyword.iotmapinsights_short}} :
+Les fonctions suivantes sont disponibles via l'API REST de {{site.data.keyword.iotmapinsights_short}} :
 
-- Mise en correspondance de carte haute précision qui utilise la
-géométrie du réseau routier
-- Manipulation des événements en temps réel sur une carte, comme la
-circulation 
-- Recherche dynamique du chemin le plus court (recherche de trajet) en
-tenant compte des événements en temps réel comme la circulation 
-- Extraction des données de géométrie de route qui peuvent être
-utilisées pour le dessin des formes de route sur une carte 
+|Fonction|Utilisation...|
+|:---|:---|
+|Mise en correspondance de carte à haute précision|Mise en correspondance de votre position GPS avec le réseau routier réel cartographié|
+|Extraction des données de géométrie de route|Extraction du réseau routier cartographié pour dessin de formes de route sur une carte|
+|Recherche dynamique de l'itinéraire le plus court|Recherche de l'itinéraire le plus court en intégrant les événements en temps réel tels que le trafic|
+|Manipulation des événements du trafic en temps réel|Ajout à la carte d'événements en temps réel (par exemple, des conditions de circulation), pour améliorer la planification d'itinéraire|
 
-Le service {{site.data.keyword.iotmapinsights_short}}
-utilise les données du réseau routier, en coordonnées WGS84, qui sont extraites
-d'OpenStreetMap. Seules les routes pouvant être empruntées par un véhicule sont
-utilisées pour l'analyse. 
+## Avant de commencer
+{: #byb}
 
-Les régions de carte prises en charge sont les suivantes :
+1. Lorsque vous ajoutez une instance du service depuis le [catalogue {{site.data.keyword.Bluemix_notm}}](https://console.stage1.ng.bluemix.net/catalog/services/iot-automotive/){: new_window}, vérifiez qu'il n'est pas lié à une application et notez les valeurs de l'ID de locataire, de nom d'utilisateur et de mot de passe générés automatiquement. Vous en aurez besoin plus tard pour accéder au service via l'API {{site.data.keyword.iotmapinsights_short}}.
 
-- Europe (map_id=1)
-- Afrique (map_id=2)
-- Asie (map_id=3)
-- Australie-Océanie (map_id=4)
-- Amérique du Nord (map_id=5)
-- Amérique Centrale (map_id=6)
-- Amérique du Sud (map_id=7)
+2. Familiarisez-vous avec [OpenStreetMap](http://www.openstreetmap.org/){: new_window}.  
 
+ Le service {{site.data.keyword.iotmapinsights_short}} utilise les données du réseau routier, sous forme de coordonnées WGS84, extraites depuis [OpenStreetMap](http://www.openstreetmap.org/){: new_window}. Seules les routes sur lesquelles une voiture peut circuler sont utilisées pour l'analyse.  
 
-Suivez la procédure ci-après pour utiliser les fonctions analytiques du
-service {{site.data.keyword.iotmapinsights_short}}.
+ Les régions cartographiques suivantes sont prises en charge :
 
-## Utilisation de {{site.data.keyword.iotmapinsights_short}}
-pour la mise en correspondance de carte
+|Région|ID de carte|
+|:---|:---|
+|Europe|map_id=1|
+|Afrique|map_id=2|
+|Asie|map_id=3|
+|Australie - Océanie|map_id=4|
+|Amérique du Nord|map_id=5|
+|Amérique Centrale|map_id=6|
+|Amérique du Sud|map_id=7|
 
-1. Préparez un ensemble de données de coordonnées GPS brutes à analyser. 
-2. Envoyez les données de coordonnées GPS brutes dans l'ordre d'une série
-temporelle au service {{site.data.keyword.iotmapinsights_short}} via l'API
-REST `mapMatching`. Vous pouvez, si vous le
-souhaitez, définir un angle de tête de chaque position en degrés (Nord = 0,
-angle dans le sens horaire) pour indiquer la direction du trajet.
-3. Recevez les coordonnées mises en correspondance avec la carte et
-les informations sur les tronçons de route en réponse à l'appel de l'API
-REST `mapMatching`.
-4. Vous pouvez, si vous le souhaitez, extraire les données de
-forme de route du tronçon de route mis en correspondance avec la carte à l'aide
-de l'API `getLinkInformation`. Appelez l'API REST
-`getLinkInformation` avec un ID de tronçon pour obtenir une
-série de coordonnées qui constituent une forme de route. 
+## Mise en correspondance de carte
+{: #map_matching}
+Pour mapper des coordonnées GPS brutes à des coordonnées cartographiées, procédez comme suit :
 
-## Utilisation de {{site.data.keyword.iotmapinsights_short}}
-pour la recherche de trajet
+1. Préparez un ensemble de coordonnées GPS brutes à analyser. 
+2. Envoyez les cordonnées GPS brutes à l'aide de la commande `mapMatching`. Vous pouvez, si vous le désirez, définir un cap en degrés depuis chaque position pour spécifier la direction du déplacement.
+ - Requête : données GPS brutes
+ - Réponse : données GPS cartographiées, ID de lien
+3. Facultatif : obtention du type de route à l'aide de la commande d'API `getLinkInformation`. Vous pouvez extraire les données de forme de
+route correspondantes sous forme d'une série de coordonnées via l'API REST `getLinkInformation`.
+ - Requête : ID de lien
+ - Réponse : type de route
 
-1. Déterminez des positions de début et de fin pour lesquelles vous
-souhaitez obtenir le chemin le plus court.
-2. Envoyez les données de début et de fin au service
-{{site.data.keyword.iotmapinsights_short}} à l'aide de l'API REST
-`routeSearch`. Vous pouvez, si vous le souhaitez, définir un
-angle de tête de chaque position en degrés (Nord = 0, angle dans le sens
-horaire) pour indiquer la direction du trajet.
-3. Recevez une liste de tronçons de route en réponse à l'appel de
-l'API REST `routeSearch`. Vous pouvez dessiner la forme du
-chemin trouvé sur une carte en utilisant les données de forme incluses dans les
-données du résultat. 
+## Recherche d'itinéraire
+{: #route_searching}
 
-## Utilisation de {{site.data.keyword.iotmapinsights_short}}
-pour la manipulation d'événement de circulation 
+Extrayez les informations de l'itinéraire le plus court entre les coordonnées d'origine et de destination spécifiées en procédant comme suit :
 
-1. Déterminez un type et une position d'un événement de circulation à
-créer. 
-2. Envoyez les informations relatives à cet événement de circulation au
-service {{site.data.keyword.iotmapinsights_short}} à l'aide de
-l'API REST `createEvent`.
-3. Recevez un ID de l'événement de circulation créé en
-réponse à l'appel de l'API REST `createEvent`.
-4. Recherchez les événements de circulation dans une zone rectangulaire
-spécifique et éventuellement avec un type d'événement de circulation donné à
-l'aide de l'API REST `queryEvent`.
+1. Déterminez une position de départ et d'arrivée pour l'itinéraire le plus court.
+2. Envoyez les coordonnées de départ et d'arrivée via l'API REST `routeSearch`.
+Indiquez, si vous le désirez, un cap en degrés depuis chaque position pour spécifier la direction du déplacement.
+ - Requête : coordonnées de l'origine et de la destination
+ - Réponse : itinéraire le plus court cartographié
 
-- Si vous le souhaitez, supprimez un événement de circulation qui n'est
-plus valide à l'aide de l'API REST `deleteEvent`.
-- Si vous le souhaitez, procédez à l'extraction d'une zone sur la route
-affectée par un événement de circulation à l'aide de l'API REST `getAffectedLinksInformation`.
+Utilisez les données de la forme de lien renvoyée pour tracer la forme de l'itinéraire identifié sur une carte.
 
+## Ajout d'événements de trafic
+{: #traffic_events}
+
+Pour ajouter des informations d'événements de trafic au service {{site.data.keyword.iotmapinsights_short}}, procédez comme suit :
+
+1. Choisissez le type et la position de l'événement de trafic que vous désirez créer.
+2. Injectez l'événement via la commande d'API `createEvent`.
+Envoyez les informations de l'événement de trafic au service {{site.data.keyword.iotmapinsights_short}}.
+ - Requête : informations d'événement
+ - Réponse : ID d'événement
+3. Recherchez des événements via la commande d'API REST `queryEvent`.
+Recherchez des événements de trafic survenus dans une zone rectangulaire donnée, et éventuellement correspondant à un événement de trafic spécifique.
+ - Requête : informations de zone.
+ - Réponse : informations d'événements.  
+4. Facultatif : supprimez un événement de trafic qui n'est plus valide à l'aide de la commande d'API `deleteEvent`.
+5. Facultatif : identifiez une zone sur la route affectée par un événement de trafic à l'aide de la commande d'API
+`getAffectedLinksInformation`.
 
 # Liens connexes
 {: #rellinks}
+
 ## Tutoriels et exemples
 {: #samples}
+
 * [Tutoriel - Partie 1 - {{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}}](https://github.com/IBM-Bluemix/car-data-management){:new_window}
 * [Tutoriel - Partie Z - {{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}}](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
+* [IoT for Automotive Starter Application](https://iot-automotive-starter.mybluemix.net){:new_window}
 
 ## Référence d'API
 {: #api}
@@ -120,10 +111,12 @@ affectée par un événement de circulation à l'aide de l'API REST `getAffected
 
 ## Liens connexes
 {: #general}
+
 * [Initiation à {{site.data.keyword.iotdriverinsights_short}}](../IotDriverInsights/index.html){:new_window}
 * [Initiation à {{site.data.keyword.iot_full}}](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
 * [dW Answers sur IBM developerWorks](https://developer.ibm.com/answers/topics/iot-context-mapping){:new_window}
 * [Dépassement de pile](http://stackoverflow.com/questions/tagged/iot-context-mapping){:new_window}
 * [Nouveautés dans les services Bluemix](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
 * [OpenStreetMap](http://www.openstreetmap.org/){:new_window}
-
+* [&copy; OpenStreetMap contributors](http://www.openstreetmap.org/copyright){:new_window}
+* [Open Data Commons Open Database License (ODbL)](http://opendatacommons.org/licenses/odbl/){:new_window}

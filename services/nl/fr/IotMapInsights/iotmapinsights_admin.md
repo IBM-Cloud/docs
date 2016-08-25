@@ -13,39 +13,39 @@ copyright:
 
 
 # Administration
-{: #1stanchor}
-*Dernière mise à jour : 6 mai 2016*
+{: #iotmapinsights_admin}
+Dernière mise à jour : 22 juin 2016
+{: .last-updated}
 
+Gérez votre instance de service {{site.data.keyword.iotmapinsights_full}} à l'aide de la console d'administration
+dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Depuis la console d'administration, vous pouvez configurer des paramètres pour
+{{site.data.keyword.iotmapinsights_short}} et gérer les données stockées dans le service. Vous pouvez également examiner les informations du locataire
+et réinitialiser son mot de passe.
+{:shortdesc}
 
-L'administration d'{{site.data.keyword.iotmapinsights_full}}
-inclut les activités suivantes : 
-- Affichages des informations relatives au locataire
-- Réinitialisation du mot de passe du locataire{:shortdesc}
+## Démarrage de la console d'administration
+{: #start_admin_console}
 
-Vous pouvez gérer ces activités à l'aide de la console d'administration
-d'**{{site.data.keyword.iotmapinsights_full}}**.
+Pour accéder à la console d'administration du service {{site.data.keyword.iotmapinsights_short}}, procédez comme suit :
 
-Pour accéder à la **Console d'administration** :
+1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette du service {{site.data.keyword.iotmapinsights_short}}.
+2. Sélectionnez la vue **Gérer** de votre instance de service.
+Notez les informations relatives au nom d'utilisateur et à son mot de passe car vous en aurez besoin par la suite. Pour accéder à la console d'administration,
+votre ID IBM est requis (et n'est pas nécessairement identique à vos données d'identification {{site.data.keyword.Bluemix_notm}}).
+3. Cliquez sur **Lancer** et, à l'invite, entrez vos données d'identification IBM.
+4. Cliquez sur **Connexion**. La fenêtre **Console d'administration** s'affiche.
 
-1. Accédez à la vue **Gérer** de votre instance de service.
-2. Cliquez sur **Lancer**. La console d'administration s'ouvre, dans une nouvelle fenêtre.
-3. Renseignez les zones *Nom d'utilisateur* et *Mot de passe* présentées dans la vue **Gérer** puis cliquez sur **SE CONNECTER**.
+## Gestion des informations relatives au locataire
+{: #view_tenant_info}
 
-## Affichages des informations relatives au locataire
-{: #viewtenantinfo}
+Pour afficher les informations du locataire, cliquez sur **Informations sur le locataire**.
 
-Une fois connecté à la **Console d'administration**,
-vous pouvez afficher la vue **Tenant Information** qui
-contient les informations sur le locataire. 
+### Réinitialisation du mot de passe du locataire
+{: #reset_tenant_password}
 
-## Réinitialisation du mot de passe du locataire
-{: #resettenantpassword}
+Pour réinitialiser le mot de passe du locataire, procédez comme suit :
 
-Dans la vue **Tenant Information** :
-
-1. Cliquez sur **RESET**.
-2. Dans la boîte de dialogue de confirmation, cliquez sur **OK**.
-Le nouveau mot de passe s'affiche ensuite dans la vue **Tenant Information**.
-3. Si vous souhaitez quitter la **Console
-d'administration**, cliquez sur **DECONNEXION**
-dans la vue.
+1. Dans la fenêtre **Informations sur le locataire**, cliquez sur **Réinitialiser**.
+2. Dans la boîte de dialogue, cliquez sur **OK**.
+Un nouveau mot de passe est généré et affiché dans la vue **Informations sur le locataire**. **Important :** Prenez soin
+d'actualiser le mot de passe dans toutes vos applications accédant à l'API {{site.data.keyword.iotmapinsights_short}}.
