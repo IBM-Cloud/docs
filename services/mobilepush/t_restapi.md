@@ -7,11 +7,7 @@ copyright:
 
 # Using REST APIs
 {: #push-api-rest}
-<<<<<<< HEAD
 Last updated: 23 August 2016
-=======
-Last updated: 16 August 2016
->>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 {: .last-updated}
 
 You can use a REST (Representational State Transfer) API (application program interface) for {{site.data.keyword.mobilepushshort}}. You can also use the SDK and [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) to further develop your client applications.
@@ -47,15 +43,9 @@ The "Accept-Language" header specifies which language to use for the error messa
 ## appSecret and clientSecret
 {: #push-api-rest-secret}
 
-<<<<<<< HEAD
 Push Notifications APIs are secured by two types of secrets - appSecret and clientSecret. The 'appSecret' protects APIs that are typically invoked by back end applications; such as the API to send Push Notifications and the API to configure settings. The'clientSecret' protects APIs that are typically invoked by mobile client applications.  With an instance of  {{site.data.keyword.mobilepushshort}}, the service generates an appSecret and a clientSecret (each of which is a unique key) and passes it in the response header. 
 
 If you are using the IBM® {{site.data.keyword.mobilepushshort}} for Bluemix Rest API, use the REST API reference to obtain information on which APIs you need to secure with which type of secret. For information about the REST API, see REST API Reference.  The request header must contain the appSecret or the clientSecret as required by the API being used. If not, the server returns a 401 Unauthorized Error code. 
-=======
-When an application binds to the {{site.data.keyword.mobilepushshort}}, the service generates an appSecret (a unique key) and passes it in the response header. If you are using the IBM® {{site.data.keyword.mobilepushshort}} for Bluemix Rest API, use the REST API reference to obtain information on which APIs you need to secure. For information about the REST API, see REST API Reference.
-
-The request header must contain the appSecret. If not, the server returns a 401 Unauthorized Error code. When the {{site.data.keyword.mobilepushshort}} is added to an application, a specific AppID is created. As part of the response, you get a header called appSecret that is used for creating Tags or sending messages. The operation happens through services in the catalog or the boilerplate.
->>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 To get the appSecret and clientSecret value:
 
@@ -82,11 +72,8 @@ The **Show Credentials** screen shows information about the AppSecret:
     }
    ```
 	{: codeblock} 
-<<<<<<< HEAD
 
 Alternatively, the appSecret and clientSecret for a service instance can also be obtained from the service instance's PushDashboard.  Navigate to the Configuration panes to see the secrets assigned to the service instance.
-=======
->>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ##Push REST API filters
 {: #push-api-rest-filters}

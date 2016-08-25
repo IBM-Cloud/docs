@@ -10,17 +10,10 @@ copyright:
 
 # Enabling user-based notifications
 {: #user_based_notifications}
-<<<<<<< HEAD
 Last updated: 22 August 2016
 {: .last-updated}
 
 User ID-based {{site.data.keyword.mobilepushshort}} are targeted at mobile app users with customized messages. With user-based notifications, you can choose to notify specific individuals based on their preferences.
-=======
-Last updated: 16 August 2016
-{: .last-updated}
-
-User ID-based {{site.data.keyword.mobilepushshort}} are targeted at mobile app users with customized messages. User-based notifications can assist engaging specific individuals in taking advantage of their personal preferences and choices.  
->>>>>>> 659bec289ef614725483fb60c244d9f26cadce1f
 
 ## Register device with User ID
 To enable push notifications targeted by User ID, ensure that you register the device with a User ID and also pass the 'clientSecret' that is allocated when the {{site.data.keyword.mobilepushshort}} services is provisioned. The device registration will fail without a valid 'clientSecret'.  
