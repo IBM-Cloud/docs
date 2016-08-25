@@ -6,7 +6,7 @@ copyright:
 ---
 # Monitoring apps with {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
-Last updated: 8 August 2016
+Last updated: 24 August 2016
 {: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_full}} provides monitoring and analytics for your mobile applications. You can record client logs and monitor data with the {{site.data.keyword.mobileanalytics_short}} Client SDK. Developers can control when to send this data to the {{site.data.keyword.mobileanalytics_short}} Service. When data is delivered to {{site.data.keyword.mobileanalytics_short}}, you can use the {{site.data.keyword.mobileanalytics_short}} dashboard to get analytics insights about your mobile applications, devices, and client logs.
@@ -90,7 +90,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 You can set thresholds in alert definitions in the {{site.data.keyword.mobileanalytics_short}} Console to better monitor your activities.
 
-You can configure thresholds, which if exceeded, trigger alerts to notify the {{site.data.keyword.mobileanalytics_short}} Console monitor. The triggered alerts can be visualized on the console, or the alerts can be handled by a custom webhook. This feature provides a proactive means of detecting client log errors, server log errors, extended periods of network latency, and authentication failures. Reactive thresholds and alerts keep you from having to sift through your data and set thresholds at a wide spectrum of granularity.
+You can configure thresholds, which if exceeded, trigger alerts to notify the {{site.data.keyword.mobileanalytics_short}} Console monitor. The triggered alerts can be visualized on the console, or the alerts can be handled by a custom webhook. <!-- This feature provides a proactive means of detecting client log errors, server log errors, extended periods of network latency, and authentication failures.--> This feature provides a proactive means of detecting client log errors and application crashes server log errors. Reactive thresholds and alerts keep you from having to sift through your data and set thresholds at a wide spectrum of granularity.
 
 ### Creating an alert definition for client logs
 {: #alert-def-client-logs}

@@ -7,28 +7,30 @@ copyright:
 
 # Instrumenting your application to use the {{site.data.keyword.mobileanalytics_short}} client SDKs
 {: #mobileanalytics_sdk}
-Last updated: 16 August 2016
+Last updated: 20 August 2016
 {: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_full}} SDKs enable you to instrument your mobile application.
 {: shortdesc}
 
-{{site.data.keyword.mobileanalytics_short}} enables you to collect three categories of data, and each requires a different degree of instrumentation:
+{{site.data.keyword.mobileanalytics_short}} enables you to collect two <!--three--> categories of data, and each requires a different degree of instrumentation:
 
-1.  Pre-defined data - This category includes generic usage and device information that applies to all apps. Within this category is device metadata (operating system and device model) and usage data (active users and app sessions) that indicates the volume, frequency, or duration of app use. Pre-defined data is collected automatically after you initialize the {{site.data.keyword.mobileanalytics_short}} SDK in your app.
-2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track.
-3. Client log messages - This category enables the developer to add lines of code throughout the app that log custom messages to assist in development and debugging. The developer assigns a severity/verbosity level to each log message and can subsequently filter messages by assigned level or preserve storage space by configuring the app to ignore messages that are at a lower level of a given log level. To collect client log data, you must initialize the {{site.data.keyword.mobileanalytics_short}} SDK within your app, as well as add a line of code for each log message.
+1. Pre-defined data - This category includes generic usage and device information that applies to all apps. Within this category is device metadata (operating system and device model) and usage data (active users and app sessions) that indicates the volume, frequency, or duration of app use. Pre-defined data is collected automatically after you initialize the {{site.data.keyword.mobileanalytics_short}} SDK in your app.
+
+2. Client log messages - This category enables the developer to add lines of code throughout the app that log custom messages to assist in development and debugging. The developer assigns a severity/verbosity level to each log message and can subsequently filter messages by assigned level or preserve storage space by configuring the app to ignore messages that are at a lower level of a given log level. To collect client log data, you must initialize the {{site.data.keyword.mobileanalytics_short}} SDK within your app, as well as add a line of code for each log message.
+
+<!--2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track. -->
 
 Currently SDKs are available for Android, iOS, and WatchOS.
 
-## Identifying your Service Credentials Access Key value
+## Identifying your Service Credentials API Key value
 {: #analytics-clientkey}
 
-Identify your **Access Key** value before you set up the client SDK. The Access Key is required for initializing the client SDK.
+Identify your **API Key** value before you set up the client SDK. The API Key is required for initializing the client SDK.
 
 1. Open your {{site.data.keyword.mobileanalytics_short}} service dashboard.
 2. Click the **Service Credentials** tab.
-3. Copy your Access Key value.
+3. Copy your API Key value.
 
 
 ## Initializing your Android app to collect analytics
@@ -61,7 +63,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Initialize Analytics by using your Android application object and giving it your application’s name. You also need the [**Access Key**](#analytics-clientkey) value.
+3. Initialize Analytics by using your Android application object and giving it your application’s name. You also need the [**API Key**](#analytics-clientkey) value.
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -110,7 +112,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Initialize Analytics by giving it your mobile application’s name. You also need the [**Access Key**](#analytics-clientkey) value.
+3. Initialize Analytics by giving it your mobile application’s name. You also need the [**API Key**](#analytics-clientkey) value.
 
   The application name is used as a filter to search for client logs in your {{site.data.keyword.mobileanalytics_short}} Dashboard. By using the same application name across platforms (for example, Android and iOS), you can see all logs from that application under the same name, regardless of which platform the logs were sent from.
 
@@ -123,7 +125,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 	{: deviceevents-analytics-swift-2}
 
       ```Swift
-      Analytics.initializeWithAppName("AppName", apiKey: your_access_key,
+      Analytics.initializeWithAppName("AppName", apiKey: your_api_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
       {: codeblock}
@@ -132,7 +134,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 	{: deviceevents-analytics-swift-3}   
 	   
       ```Swift
-      Analytics.initializeWithAppName(appName: "AppName", apiKey: your_access_key,
+      Analytics.initializeWithAppName(appName: "AppName", apiKey: your_api_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
       {: codeblock}
@@ -144,7 +146,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 	{: initializeanalyticsswift2watchos}
 
 	```Swift
-	  Analytics.initializeWithAppName("AppName", accessKey: your_access_key)
+	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
 	```
 	{: codeblock}
 
@@ -152,7 +154,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 	{: initializeanalyticsswift3watch}
 	
 	```Swift
-	  Analytics.initializeWithAppName(appName: "AppName", accessKey: your_access_key)
+	  Analytics.initializeWithAppName(appName: "AppName", apiKey: your_api_key)
 	```
 	{: codeblock}
 
@@ -195,7 +197,8 @@ Analytics.log(eventJSONObject);
 Analytics.send();
 ```
 {: codeblock}
-	
+
+<!--	
 Sample usage analytics for logging an event:
 	
 ```
@@ -205,6 +208,7 @@ JSONObject eventJSONObject = new JSONObject();
 eventJSONObject.put("customProperty" , "propertyValue");
 ```
 {: codeblock}
+-->
 
 #### iOS - Swift
 {: #ios-usage-api}
@@ -222,6 +226,7 @@ Analytics.send()
 ```
 {: codeblock}
 
+<!--
 Sample usage analytics for logging an event:
 
 #### Swift 2
@@ -243,6 +248,8 @@ let eventObject = ["customProperty": "propertyValue"]
 Analytics.log(eventObject)
 ```
 {: codeblock}
+
+-->
 
   <!--Removing Cordova for experimental-->
   <!--### Cordova-->

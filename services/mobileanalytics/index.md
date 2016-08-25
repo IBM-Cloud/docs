@@ -9,10 +9,10 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Getting started with {{site.data.keyword.mobileanalytics_short}} (Experimental)  
+# Getting started with {{site.data.keyword.mobileanalytics_short}} (Beta)  
 
 {: #gettingstartedtemplate}
-Last updated: 16 August 2016
+Last updated: 20 August 2016
 {: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} provides developers, IT administrators, and business stakeholders insight into how their mobile apps are performing and how they are being used. Monitor performance and usage of all your applications from your desktop or tablet. Quickly identify trends and anomalies, drill down to resolve issues, and trigger alerts when key metrics cross critical thresholds. 
@@ -36,7 +36,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 		```
 		{: codeblock}
 		
-	2. Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [Access Key](sdk.html#analytics-clientkey) value.
+	2. Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [API Key](sdk.html#analytics-clientkey) value.
 
 		```Java
 			try {
@@ -45,7 +45,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 			catch (MalformedURLException e) {
 	            //The Bluemix region provided is invalid
 	        }
-				Analytics.init(getApplication(), your_app_name, your_access_key, Analytics.DeviceEvent.LIFECYCLE);
+				Analytics.init(getApplication(), your_app_name, your_api_key, Analytics.DeviceEvent.LIFECYCLE);
 		```
 		{: codeblock}
 		
@@ -61,13 +61,13 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 	```
 	{: codeblock}
     
-  2. Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [Access key](sdk.html#analytics-clientkey) value.
+  2. Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [API Key](sdk.html#analytics-clientkey) value.
  
 	Swift 2:
 	
 	```Swift
 	BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-	Analytics.initializeWithAppName(your_app_name, apiKey: your_access_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	Analytics.initializeWithAppName(your_app_name, apiKey: your_api_key, deviceEvents: DeviceEvent.LIFECYCLE)
 	```
 	{: codeblock}
 	
@@ -75,7 +75,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 	
 	```Swift
 	BMSClient.sharedInstance.initializeWithBluemixAppRoute(bluemixAppRoute: nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-	Analytics.initializeWithAppName(appName: your_app_name, apiKey: your_access_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	Analytics.initializeWithAppName(appName: your_app_name, apiKey: your_api_key, deviceEvents: DeviceEvent.LIFECYCLE)
 	```
 	{: codeblock}
 	

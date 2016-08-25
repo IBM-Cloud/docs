@@ -8,7 +8,7 @@ copyright:
 
 # About {{site.data.keyword.mobileanalytics_short}}  
 {: aboutmobileanalytics}
-Last updated: 21 April 2016
+Last updated: 20 August 2016
 {: .last-updated}
 
 {: shortdesc}
@@ -34,9 +34,9 @@ With the {{site.data.keyword.mobileanalytics_short}} service you can:
 		<dd>See performance and usage metrics in real time.</dd>
 	<dt>Implement in minutes</dt>
 		<dd>Create a service instance in {{site.data.keyword.Bluemix}}, add the SDK to your project, paste two lines of code into your app and you are ready to collect dozens of pre-defined metrics.</dd>
-	<dt>Collect any data you want</dt>
-		<dd>Instrument apps with custom events, discover how users are interacting with your app, track purchases, and monitor app activity.  
-</dd>
+	<!--<dt>Collect any data you want</dt>-->
+		<!--<dd>Instrument apps with custom events, discover how users are interacting with your app, track purchases, and monitor app activity.  
+</dd>-->
 <dt>See metrics for all of your apps at-a-glance</dt>
 	<dd>The {{site.data.keyword.mobileanalytics_short}} console offers <!-- both --> ready-made <!--and custom--> charts, without the need to write queries.</dd>
 <dt>Focus on what is important to you</dt>
@@ -61,12 +61,12 @@ With **pre-defined metrics** you can answer questions like:
 * When should I deprecate support for legacy operation systems? 
 * Which apps are experiencing performance issues?  
 
-By adding your own **custom events** you can answer questions like:  
+<!--By adding your own **custom events** you can answer questions like:--> 
 
-* What features are used most and least?  
-* Where are users entering and leaving my app?  
-* What activities are users viewing most?  
-* Are users completing workflows in the app (for example, conversion funnels)?   
+<!--* What features are used most and least?-->  
+<!--* Where are users entering and leaving my app?-->  
+<!--* What activities are users viewing most? --> 
+<!--* Are users completing workflows in the app (for example, conversion funnels)? -->  
 
 <!--Client-side logs and usage data are gathered automatically and sent to the Mobile Analytics -->
 <!-- service on demand. Developers and -->
