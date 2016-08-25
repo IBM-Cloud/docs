@@ -14,7 +14,7 @@ copyright:
 # {{site.data.keyword.GlobalizationPipeline_short}} troubleshooting
 {: #globalizationpipelinets}
 
-*Last updated: 25 August 2016*
+*Last updated: 13 July 2016*
 {: .last-updated}
 
 Here are some answers to common questions about using {{site.data.keyword.GlobalizationPipeline_short}}. 
