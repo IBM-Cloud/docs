@@ -11,7 +11,7 @@ copyright:
 {: #google-auth-android}
 
 
-Last updated: 23 August 2016
+Last updated: 25 August 2016
 {: .last-updated}
 
 Use Google to authenticate users on your {{site.data.keyword.amafull}} Android application. Add {{site.data.keyword.amashort}} security functionality.  {:shortdesc}
@@ -139,7 +139,7 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 					BMSClient.REGION_UK);
 
 	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>");
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 						
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
