@@ -8,7 +8,7 @@ copyright:
 
 # Creating mobile projects from the Mobile dashboard
 {: #mobile}
-Last Updated: 21 July 2016
+Last Updated: 24 August 2016
 {: .last-updated} 
 
 With {{site.data.keyword.Bluemix}} Mobile services, you can incorporate pre-built, managed, and scalable cloud services into your mobile applications without relying on IT involvement. You can focus on building your mobile apps instead of the complexities of managing the back-end infrastructure.
@@ -30,8 +30,8 @@ The following table depicts the available {{site.data.keyword.Bluemix_notm}} Mob
 <th>{{site.data.keyword.Bluemix_notm}} Mobile service</th>
 <th>Description</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icon"><br/>{{site.data.keyword.mobileanalytics_short}} (Experimental)</td>
-<td valign="top">Use the {{site.data.keyword.mobileanalytics_full}} service to measure the state, behavior, and context of your mobile apps, mobile users, and mobile devices.<br/><br/>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icon"><br/>{{site.data.keyword.mobileanalytics_short}} (Beta)</td>
+<td valign="top">Use the {{site.data.keyword.mobileanalytics_full}} service to gain insight into how your mobile apps are performing and how they are being used.<br/><br/>
 Read more about operating this service in the <a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} documentation link">{{site.data.keyword.mobileanalytics_short}} documentation</a>.
 </td>
 </tr>
@@ -105,7 +105,7 @@ To integrate your existing {{site.data.keyword.cloudant}} service, follow these 
 <!-- links to internal services don't work
 ## {{site.data.keyword.Bluemix_notm}} Mobile services
 {: #general}
-* [Mobile Analytics (Experimental)](../services/mobileanalytics/index.html){: new_window}
+* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
 * [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
 * [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
 * [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
