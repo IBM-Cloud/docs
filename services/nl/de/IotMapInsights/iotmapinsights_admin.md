@@ -13,33 +13,35 @@ copyright:
 
 
 # Verwalten
-{: #1stanchor}
-*Letzte Aktualisierung: 6. Mai 2016*
+{: #iotmapinsights_admin}
+Letzte Aktualisierung: 22. Juni 2016
+{: .last-updated}
 
-
-Die Verwaltung von {{site.data.keyword.iotmapinsights_full}} umfasste folgende Aktivitäten: 
-- Tenant-Informationen anzeigen
-- Tenant-Kennwort zurücksetzen
+Verwalten Sie die {{site.data.keyword.iotmapinsights_full}}-Serviceinstanz über die Administrationskonsole im {{site.data.keyword.Bluemix_notm}}-Dashboard. Über die Administrationskonsole können Sie Parameter für {{site.data.keyword.iotmapinsights_short}} konfigurieren und die im Service gespeicherten Daten verwalten. Außerdem können Sie die Tenantinformationen anzeigen und das Tenantkennwort zurücksetzen.
 {:shortdesc}
 
-Diese Aktivitäten können Sie in der **Verwaltungskonsole von {{site.data.keyword.iotmapinsights_full}}** ausführen. 
+## Administrationskonsole starten
+{: #start_admin_console}
 
-Gehen Sie wie folgt vor, um auf die **Verwaltungskonsole** zuzugreifen: 
+Gehen Sie wie folgt vor, um auf die Administrationskonsole für den {{site.data.keyword.iotmapinsights_short}}-Service zuzugreifen:
 
-1. Wechseln Sie zur Ansicht **Verwalten** der Serviceinstanz. 
-2. Klicken Sie auf **Starten**. Die **Verwaltungskonsole** wird als neues Fenster geöffnet. 
-3. Geben Sie Werte für *Benutzername* und *Kennwort* wie in der Ansicht **Verwalten** dargestellt ein und klicken Sie auf **ANMELDEN**. 
+1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die Kachel für den {{site.data.keyword.iotmapinsights_short}}-Service. 
+2. Wählen Sie die Ansicht **Verwalten** Ihrer Serviceinstanz aus.
+Notieren Sie die Berechtigungsnachweise aus Benutzername und Kennwort, die Sie zu einen späteren Zeitpunkt benötigen. Für den Zugriff auf die Administrationskonsole benötigen Sie Ihre IBM ID, die unter Umständen nicht mit den Berechtigungsnachweisen für {{site.data.keyword.Bluemix_notm}} identisch ist. 
+3. Klicken Sie auf **Starten** und geben Sie bei der entsprechenden Eingabeaufforderung die Berechtigungsnachweise für Ihre IBM ID ein. 
+4. Klicken Sie auf **Anmelden**. Das Fenster **Administrationskonsole** wird geöffnet. 
 
-## Tenant-Informationen anzeigen
-{: #viewtenantinfo}
+## Tenantinformationen verwalten
+{: #view_tenant_info}
 
-Nach dem Anmelden an der **Verwaltungskonsole** wird die Ansicht mit den **Tenant-Informationen** angezeigt, in der die Tenant-Informationen aufgeführt werden. 
+Klicken Sie zum Anzeigen der Tenantinformationen auf **Tenantinformationen**.
 
-## Tenant-Kennwort zurücksetzen
-{: #resettenantpassword}
+### Tenantkennwort zurücksetzen
+{: #reset_tenant_password}
 
-Gehen Sie in der Ansicht mit den **Tenant-Informationen** wie folgt vor: 
+Gehen Sie wie folgt vor, um das Tenantkennwort zurückzusetzen:
 
-1. Klicken Sie auf **ZURÜCKSETZEN**. 
-2. Klicken Sie im Bestätigungsdialog auf **OK**. Anschließend wird das neue Kennwort in der Anschicht mit den **Tenant-Informationen** angezeigt. 
-3. Wenn Sie die **Verwaltungskonsole** beenden möchten, klicken Sie in der Ansicht auf **ABMELDEN**. 
+1. Klicken Sie im Fenster **Tenantinformationen** auf **Zurücksetzen**.
+2. Klicken Sie im Dialogfenster auf **OK**.
+Ein neues Kennwort wird generiert und in der Ansicht **Tenantinformationen** angezeigt.
+**Wichtig:** Stellen Sie sicher, dass Sie das Kennwort in allen Anwendungen aktualisieren, die auf die {{site.data.keyword.iotmapinsights_short}}-API zugreifen.

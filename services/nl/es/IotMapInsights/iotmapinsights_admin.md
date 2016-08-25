@@ -13,33 +13,35 @@ copyright:
 
 
 # Administración
-{: #1stanchor}
-*Última actualización: 6 de mayo de 2016*
+{: #iotmapinsights_admin}
+Última actualización: 22 de junio de 2016
+{: .last-updated}
 
-
-La administración de {{site.data.keyword.iotmapinsights_full}} incluye las siguientes actividades:
-- Visualización de información de arrendatario
-- Restablecimiento de la contraseña del arrendatario
+Administre la instancia de servicio de {{site.data.keyword.iotmapinsights_full}} mediante la consola de administración del panel de control de {{site.data.keyword.Bluemix_notm}}. Desde la consola de administración, puede configurar los parámetros de {{site.data.keyword.iotmapinsights_short}} y gestionar los datos que se almacenan en el servicio. Además, puede visualizar la información de arrendatario, así como restablecer su contraseña.
 {:shortdesc}
 
-Puede trabajar en estas actividades mediante la Consola de administración de **{{site.data.keyword.iotmapinsights_full}} (Consola de administración)**.
+## Inicio de la consola de administración
+{: #start_admin_console}
 
-Para acceder a la **Consola de administración**:
+Para acceder a la consola de administración del servicio {{site.data.keyword.iotmapinsights_short}}: 
 
-1. Vaya a la vista **Gestionar** de la instancia de servicio.
-2. Pulse **Iniciar**. Se abrirá la **Consola de administración** como una nueva ventana.
-3. Especifique el *nombreusuario* y la *contraseña* tal como se muestra en la vista **Gestionar** y, a continuación, pulse **INICIAR SESIÓN**.
+1. En el panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el mosaico del servicio {{site.data.keyword.iotmapinsights_short}}. 
+2. Seleccione la vista **Gestionar** de la instancia de servicio.
+Anote las credenciales de nombre de usuario y contraseña ya que las necesitará más adelante. Para acceder a la consola de administración, necesita el ID de IBM, que puede no ser el mismo que las credenciales de {{site.data.keyword.Bluemix_notm}}.
+3. Pulse **Iniciar** y, cuando se solicite, indique las credenciales de IBM.
+4. Haga clic en **INICIAR SESIÓN**. Se abrirá la ventana **Consola de administración**.
 
-## Visualización de información de arrendatario
-{: #viewtenantinfo}
+## Gestión de la información de arrendatario
+{: #view_tenant_info}
 
-Tras iniciar sesión en la **Consola de administración**, puede consultar la vista **Información de arrendatario** que contiene la información de arrendatario.
+Para ver la información de arrendatario, haga clic en **Información de arrendatario**.
 
-## Restablecimiento de la contraseña del arrendatario
-{: #resettenantpassword}
+### Restablecimiento de la contraseña de arrendatario
+{: #reset_tenant_password}
 
-En la vista **Información del arrendatario**:
+Para restablecer la contraseña del arrendatario:
 
-1. Pulse **RESTABLECER**.
-2. En el diálogo de confirmación, pulse **Aceptar**. A continuación, se mostrará la nueva contraseña en la vista **Información de arrendatario**.
-3. Si desea salir de la **Consola de administración**, pulse **FINALIZAR SESIÓN** en la vista.
+1. En la ventana **Información de arrendatario**, pulse **RESTABLECER**.
+2. En el recuadro de diálogo, haga clic en **Aceptar**.
+Se generará una contraseña nueva, que se mostrará en la vista **Información de arrendatario**.
+**Importante:** asegúrese de actualizar la contraseña en todas las aplicaciones que acceden a la API de {{site.data.keyword.iotmapinsights_short}}. 

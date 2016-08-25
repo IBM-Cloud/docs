@@ -14,102 +14,105 @@ copyright:
 
 # A propos de {{site.data.keyword.iotmapinsights_short}}
 {: #iotmapinsights_overview}
+Dernière mise à jour : 20 juillet 2016
+{: .last-updated}
 
-Le service {{site.data.keyword.iotmapinsights_short}} repose
-sur les données du réseau routier stockées dans la mémoire cache. Il offre un
-accès à haute vitesse aux données statiques du réseau routier, aux
-données d'événement dynamiques et aux outils géospatiaux basés sur le réseau routier qui
-permettent à votre application d'intégrer des fonctionnalités géospatiales.
+{{site.data.keyword.iotmapinsights_full}} est un service sur {{site.data.keyword.Bluemix_notm}} que vous pouvez utiliser pour accès rapide aux
+données de réseau routier statique et aux données d'événement dynamiques. {{site.data.keyword.iotmapinsights_short}} fournit également des outils géospatiaux
+pour les réseaux routiers, que vous pouvez utiliser pour intégrer des capacités géospatiales dans vos applications.
 {:shortdesc}
 
-## Requête sur les données de carte statiques
+Le service {{site.data.keyword.iotmapinsights_short}} offre les fonctions suivantes :
+
+- Données de carte statiques
+- Données d'événement dynamiques
+- Outils géospatiaux
+
+Le service {{site.data.keyword.iotmapinsights_short}} collecte et utilise les données de réseau routier
+[OpenStreetMap](http://www.openstreetmap.org/){: new_window} stockées dans le cache du service pour traitement.
+
+Les données d'OpenStreetMap sont rendues disponibles au titre de la licence ODbL (Open Data Common Open Database License) par l'organisme OpenStreetMap
+Foundation (OSMF). Pour plus d'informations, voir [OpenStreetMap Copyright and
+License](http://www.openstreetmap.org/copyright){: new_window}.
+
+## Données de carte statiques
 {: #static_map_data_query}
 
-Pour accéder aux données d'attribut de tronçon de route, le service
-{{site.data.keyword.iotmapinsights_short}} fournit une interface
-API REST de requête de tronçon. Cette dernière reçoit un ID de tronçon sous forme de
-paramètre pouvant être identifié par une fonction de mise en correspondance de
-carte et renvoie des informations détaillées sur le tronçon demandé, comme le
-type de route, sa longueur, un tableau précis des points de forme, les noeuds
-adjacents, ainsi que les tronçons adjacents. Grâce aux informations
-détaillées relatives au tronçon, votre application peut traverser un réseau de
-tronçons routiers en observant les informations sur les tronçons adjacents. 
+L'une des caractéristiques principales du produit est la possibilité d'extraire des informations routières détaillées afin de les utiliser dans vos
+applications. Utilisez l'interface de l'API REST Link Query pour rechercher des données d'attribut de route de carte statique d'après un ID de lien. Utilisez la
+fonction de [mise en correspondance de carte](#map_matching) de {{site.data.keyword.iotmapinsights_short}} pour identifier le paramètre
+d'ID de lien requis.
+
+Les données renvoyées incluent les informations suivantes sur l'ID de lien requis :
+
+- Type de route
+- Longueur de la route
+- Un tableau de formes détaillées par des points
+- Des informations sur les noeuds et liens adjacents
+
+En recherchant des informations de liens routiers détaillées, votre application peut sillonner un réseau de liens routiers en utilisant intelligemment
+les informations de liens adjacents renvoyées.
 
 ## Données d'événement dynamiques
 {: #dynamic_event_data}
 
-Dans le service {{site.data.keyword.iotmapinsights_short}}, un
-événement est un modèle d'objet d'événement de circulation placé dynamiquement
-sur un tronçon routier spécifique. L'événement est doté des attributs de base
-d'un événement de circulation, comme les coordonnées GPS, l'heure, le type, la
-durée de l'événement et la longueur concernée. Vous pouvez injecter et
-supprimer des événements de manière dynamique. 
+Outres les données de carte statiques, les conditions de route réelles incluent nécessairement des événements dynamiques tels que les embouteillages et les
+travaux. Utilisez {{site.data.keyword.iotmapinsights_short}} pour créer, gérer et incorporer les événements du trafic avec
+les [recherches de liens affectés](#link_search) pour planification de l'itinéraire.
 
-## Injection et suppression d'événement
+### Injection et suppression d'événements
 {: #inject_event}
 
-L'interface API REST d'injection d'événement vous permet de stocker un
-événement sur une carte. Pour injecter un événement, vous pouvez envoyer les
-informations relatives à l'événement à l'interface avec un type d'événement
-défini afin de classifier les événements et leurs attributs en fonction de
-l'utilisation souhaitée de votre application. L'interface API REST de
-suppression d'événement vous permet de supprimer des événements de la carte
-afin de pouvoir gérer les événements passés. 
+Utilisez l'API REST d'injection d'événement du service {{site.data.keyword.iotmapinsights_short}} pour injecter et supprimer
+dynamiquement des événements du trafic sous forme de modèles d'objet de carte placés sur des tronçons routiers spécifiques. Chaque événement inclut des attributs
+de base, comme des coordonnées GPS, l'heure de début, le type d'événement, sa durée et la longueur de route affectée.
 
-## Requête d'événement
+Utilisez l'interface de l'PI REST de suppression d'événement pour supprimer des événements de la carte lorsqu'ils se sont terminés.
+
+### Requête d'événement
 {: #query_event}
 
-L'interface API REST de requête d'événement vous permet de lancer une
-requête sur des événements avec des conditions indiquées définies sous forme de
-paramètres de demande. Dans une condition de requête, vous pouvez définir la
-zone avec une plage de longitudes et de latitudes, ainsi que des attributs
-d'événement pour affiner les événements cible renvoyés dans la réponse à la
-demande.
+Utilisez l'API REST de requête d'événements pour obtenir des informations détaillées sur tous les événements dynamiques affectant une zone géographique
+spécifique. Vous pouvez effectuer une recherche sur une zone en indiquant une plage de longitudes et de latitudes, et inclure des attributs d'événement pour
+circonscrire le nombre d'événements cible renvoyés.
 
 ## Outils géospatiaux
 {: #geospatial_tools}
 
-En guise d'outils géospatiaux, le service
-{{site.data.keyword.iotmapinsights_short}} fournit une API REST
-pour la mise en correspondance de carte et les fonctions de recherche de
-trajet.
+Etoffez votre application avec les fonctions de mise en correspondance de carte et de recherche d'itinéraire fournies par les outils géospatiaux de
+{{site.data.keyword.iotmapinsights_short}}.
 
-## Mise en correspondance de carte
+### Mise en correspondance de carte
 {: #map_matching}
 
-Si les données GPS des périphériques ne sont pas assez précises pour
-l'analyse ou la visualisation, ou si les attributs du réseau de tronçons de
-route sont requis pour votre application, vous pouvez utiliser l'interface API
-REST de mise en correspondance de carte. Cette API permet à votre application
-d'adapter un point de données GPS brut à un point mis en correspondance sur le
-tronçon de route. Elle reçoit un point défini par des données de coordonnées
-GPS de longitude et de latitude et renvoie un point mis en correspondance avec
-la carte. Ce point est analysé grâce à l'examen des données d'historique de
-chaque véhicule pendant une période donnée qui vise à trouver le point le plus
-probable en temps réel. Pour les points dépourvus de données de localisation
-historiques, l'interface de mise en correspondance de carte renvoie le point le
-plus proche sur le tronçon de route à partir du point GPS demandé. 
+Utilisez la fonction de mise en correspondance de carte de l'API REST avec votre application pour mapper les coordonnées GPS effectives
+de votre appareil aux données du réseau routier [OpenStreetMap](http://www.openstreetmap.org/){: new_window} afin
+d'améliorer la précision de votre position en cas de données GPS imprécises. Vous pouvez également recevoir des informations sur les attributs de route en fonction
+de votre emplacement. L'API REST de mise en correspondance de carte permet à votre application d'associer un point de données GPS brut à un point correspondant sur le
+lien de route.
 
-## Recherche de trajet
+Elle reçoit un point défini par des données de coordonnées
+GPS de longitude et de latitude et renvoie un point mis en correspondance avec
+la carte. Le point mis en correspondance sur la carte est analysé compte tenu de données historiques pour chaque véhicule
+sur une période de temps spécifique afin d'identifier le point le plus probable en temps réel. Pour les points dépourvus de données d'emplacement historiques,
+l'interface de mise en correspondance de carte renvoie le point le plus proche sur le lien de route à partir du point
+GPS demandé.
+
+### Recherche de trajet
 {: #route_search}
 
-Si vous avez besoin d'implémenter une application avec des fonctions
-géospatiales, vous devez rechercher le chemin le plus court entre deux points. L'interface
-API REST de recherche de trajet du service
-{{site.data.keyword.iotmapinsights_short}} calcule le chemin le plus
-court entre les coordonnées GPS du point de départ et celles du point
-d'arrivée. Les coordonnées reçues sont mises en correspondance avec le tronçon
+L'une des caractéristiques élémentaires d'une application dotée de fonctions géospatiales est la capacité d'identifier le chemin le plus court entre deux points.  
+
+L'interface d'API REST de recherche d'itinéraire du service {{site.data.keyword.iotmapinsights_short}} calcule le chemin le plus court entre les
+coordonnées de point GPS de départ et d'arrivée. Les coordonnées reçues sont mises en correspondance avec le tronçon
 le plus proche de la carte grâce à la fonction de mise en correspondance de
 carte, et le chemin le plus court entre ces points mis en correspondance avec la
-carte est calculé. 
+carte est calculé.
 
-## Recherche de tronçon affecté
+### Recherche de tronçon affecté
 {: #link_search}
 
 Lorsqu'un événement se produit sur un route, il est susceptible
-d'affecter plusieurs tronçons de route. Vous pouvez utiliser des API REST pour
-rechercher les tronçons affectés et les tronçons de route sur lesquels les
-véhicules risquent de rencontrer l'événement. Cette recherche tient compte de la
-distance des véhicules par rapport à l'événement, mais aussi de la topologie du
-réseau routier. 
-
+d'affecter plusieurs tronçons de route. Vous pouvez utiliser des API REST pour détecter des liens affectés et également pour identifier les tronçons sur
+lesquels des véhicules pourraient rencontrer l'événement. La recherche prend en compte la topologie du réseau de liens routiers et non pas seulement la distance des véhicules
+à l'événement.

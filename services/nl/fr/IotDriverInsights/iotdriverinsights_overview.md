@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  années : 2016
+  years: 2016
 
 ---
 
@@ -15,12 +15,12 @@ copyright:
 # A propos de {{site.data.keyword.iotdriverinsights_short}}
 {: #iotdriverinsights_overview}
 
-Vous pouvez utiliser {{site.data.keyword.iotdriverinsights_full}} pour analyser le comportement du conducteur à partir de données de détection de véhicules et de données contextuelles.
+Vous pouvez utiliser {{site.data.keyword.iotdriverinsights_full}} pour analyser le comportement du conducteur à partir de données d'exploration de véhicules et de données contextuelles.
 {:shortdesc}
 
 ## Analyse du comportement du conducteur
 {: #driver_behavior_analysis}
-A partir des données de détection de véhicules et des données contextuelles, vous pouvez analyser le comportement d'un conducteur, et plus particulièrement ce type d'actions : accélérations ou freinages brusques, freinages fréquents, excès de vitesse, virages serrés et autres actions similaires.
+A partir des données d'exploration de véhicules et des données contextuelles, vous pouvez analyser le comportement d'un conducteur, et plus particulièrement ce type d'actions : accélérations ou freinages brusques, freinages fréquents, excès de vitesse, virages serrés et autres actions similaires.
 
 Les activités et contextes suivants sont inclus :
  - Types de conduite 
@@ -58,15 +58,15 @@ Les activités et contextes suivants sont inclus :
 
 ## Infrastructure d'analyse Big Data
 {: #big_data_analysis_infrastructure}
-{{site.data.keyword.iotdriverinsights_short}} utilise Hadoop comme infrastructure de back end. Bénéficiant ainsi d'une grande extensibilité, {{site.data.keyword.iotdriverinsights_short}} peut analyser des données de détection de véhicules et des données contextuelles.
+{{site.data.keyword.iotdriverinsights_short}} utilise Hadoop comme infrastructure de back end. Bénéficiant ainsi d'une grande extensibilité, {{site.data.keyword.iotdriverinsights_short}} peut analyser des données d'exploration de véhicules et des données contextuelles.
 
 ## API REST
 {: #rest_api}
 Les développeurs peuvent extraire les résultats d'analyse via l'API REST et les utiliser dans l'application {{site.data.keyword.Bluemix_notm}}.
  1. Données de véhicule
-   - `sendCarProbeData` envoie les données de détection de véhicules à analyser.
-   - `getCarProbeDataListAsDate` renvoie la liste de données de détection de véhicules par date.
-   - `deleteCarProbeDataListByDate` supprime les données de détection de véhicules.
+   - `sendCarProbeData` envoie les données d'exploration de véhicules à analyser.
+   - `getCarProbeDataListAsDate` renvoie la liste de données d'exploration de véhicules par date.
+   - `deleteCarProbeDataListByDate` supprime les données d'exploration de véhicules.
  2. Travail d'analyse
    - `sendJobRequest` envoie la demande de travail d'analyse du type de conduite.
    - `getJobInfo` renvoie les informations relatives au travail spécifié.
