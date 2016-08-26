@@ -10,7 +10,7 @@ copyright:
 # Enabling Google authentication for iOS apps (Swift SDK)
 {: #google-auth-ios}
 
-Last updated: 23 August 2016
+Last updated: 26 August 2016
 {: .last-updated}
 
 Use Google Sign-In to authenticate users on your {{site.data.keyword.amafull}} iOS Swift app. The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
@@ -60,7 +60,6 @@ The following steps give you a brief outline of the tasks necessary for preparin
  ```
  #import <Google/SignIn.h>
  ```
- {: codeblock}
 
  For more information about updating the bridging header file, see step 1. in [Enable sign-in](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in).
 
@@ -106,7 +105,6 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
  use_frameworks!
  pod 'BMSGoogleAuthentication'
  ```
- {: codeblock}
  
  **Note:** If you have already installed the {{site.data.keyword.amashort}} core SDK, you can remove this line: `pod 'BMSSecurity'`. The `BMSGoogleAuthentication` pod installs all necessary frameworks.
 	
@@ -136,6 +134,7 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSCore
  import BMSSecurity
  ```
+
 1. Use the following code to initialize the client SDK. 
 
  ```Swift
@@ -184,7 +183,6 @@ After the client SDK is initialized and Google Authentication Manager is registe
 {: #google-auth-ios-testing-before}
 
 You must be using the {{site.data.keyword.mobilefirstbp}}  boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
-
 
 1. Try to send a request to protected endpoint of your mobile back-end application in your desktop browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`
 
