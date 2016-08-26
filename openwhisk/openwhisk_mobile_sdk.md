@@ -13,7 +13,7 @@ copyright:
 
 # Using the {{site.data.keyword.openwhisk_short}} mobile SDK
 {: #openwhisk_mobile_sdk}
-Last updated: 4 August 2016
+Last updated: 26 August 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} provides a mobile SDK for iOS and watchOS 2 devices that enables mobile apps to easily fire remote triggers and invoke remote actions. A version for Android is currently not available; Android developers can use the {{site.data.keyword.openwhisk}} REST API directly.
@@ -32,18 +32,15 @@ You can install the mobile SDK by using CocoaPods, Carthage, or from the source 
 The {{site.data.keyword.openwhisk_short}} SDK for mobile is available for public distribution through CocoaPods. Assuming CocoaPods is installed, put the following lines into a file called 'Podfile' inside the starter app project directory. 
 
 ```
-source 'https://github.com/openwhisk/openwhisk-podspecs.git'
-
+install! 'cocoapods', :deterministic_uuids => false
 use_frameworks!
 
 target 'MyApp' do
-     platform :ios, '9.0'
-     pod 'OpenWhisk'
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 
-target 'MyApp WatchKit Extension' do
-     platform :watchos, '2.0'
-     pod 'OpenWhisk-Watch'
+target 'MyApp WatchKit Extension' do 
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 ```
 {: codeblock}
@@ -55,7 +52,7 @@ From the command line, type `pod install`. This command installs the SDK for an 
 
 Create a file in your app's project directory and name it 'Cartfile'. Put the following line in the file:
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Or latest version
 ```
 {: codeblock}
 

@@ -93,15 +93,14 @@ Invocations of an action are not ordered. If the user invokes an action twice fr
 
 Additionally, there is no guarantee that actions will execute atomically. Two actions can run concurrently and their side effects can be interleaved. OpenWhisk does not ensure any particular concurrent consistency model for side effects. Any concurrency side effects will be implementation-dependent.
 
-### At-most-once semantics
+### Action execution guarantees
 {: #openwhisk_atmostonce}
-
-The system supports at-most-once invocation of actions.
 
 When an invocation request is received, the system records the request and dispatches an activation.
 
-The system returns an activation ID (in the case of a nonblocking invocation) to confirm that the invocation was received. Notice that even in the absence of this response (perhaps due to a broken network connection), it is possible
-that the invocation was received.
+The system returns an activation ID (in the case of a nonblocking invocation) to confirm that the invocation was received. 
+Notice that if there's a network failure or other failure which intervenes before you receive an HTTP response, it is possible 
+that {{site.data.keyword.openwhisk_short}}  received and processed the request.
 
 The system attempts to invoke the action once, resulting in one of the following four outcomes:
 - *success*: the action invocation completed successfully.
@@ -111,6 +110,11 @@ The system attempts to invoke the action once, resulting in one of the following
 The outcome is recorded in the `status` field of the activation record, as document in a following section.
 
 Every invocation that is successfully received, and that the user might be billed for, will eventually have an activation record.
+
+Note that in the case of *action developer error*, the action may have partially run and generated externally visible
+side effects.   It is the user's responsibility to check whether such side effects actually happened, and issue retry
+logic if desired.   Also note that certain *whisk internal errors* will indicate that an action started running but the
+system failed before the action registered completion.
 
 
 ## Activation record
@@ -226,7 +230,7 @@ It is possible for an action to be synchronous on some inputs and asynchronous o
          return {done: true};
       }
   }
-````
+```
 {: codeblock}
 
 Notice that regardless of whether an activation is synchronous or asynchronous, the invocation of the action can be blocking or non-blocking.
@@ -240,15 +244,46 @@ The `whisk.invoke()` function invokes another action. It takes as an argument a 
 - *parameters*: A JSON object that represents the input to the invoked action. If omitted, defaults to an empty object.
 - *apiKey*: The authorization key with which to invoke the action. Defaults to `whisk.getAuthKey()`. 
 - *blocking*: Whether the action should be invoked in blocking or non-blocking mode. Defaults to `false`, indicating a non-blocking invocation.
-- *next*: An optional callback function to be executed when the invocation completes.
+- *next*: An optional callback function to be executed when the invocation completes. If next is not supplied, `whisk.invoke()` returns a promise.
 
 The signature for `next` is `function(error, activation)`, where:
 
-- `error` is `false` if the invocation succeeded, and a *truthy* value (a value that translates to true when evaluated in a Boolean context) if it failed, usually a string that describes the error.
-- On errors, `activation` might be undefined, depending on the failure mode.
-- When defined, `activation` is a dictionary with the following fields:
-  - *activationId*: The activation ID:
-  - *result*: If the action was invoked in blocking mode: The action result as a JSON object, else `undefined`.
+  - `error` is `false` if the invocation succeeded, and a *truthy* value (a value that translates to true when evaluated in a Boolean context) if it failed, usually a string that describes the error.
+  - On errors, `activation` might be undefined, depending on the failure mode.
+  - When defined, `activation` is a dictionary with the following fields:
+    - *activationId*: The activation ID:
+    - *result*: If the action was invoked in blocking mode: The action result as a JSON object, else `undefined`.
+
+  If `next` is not provided, then `whisk.invoke()` returns a promise.
+  - If the invocation fails, the promise will reject with an object describing the failed invocation. It will potentially have two fields:
+    - *error*: An object describing the error - usually a string.
+    - *activation*: An optional dictionary that may or may not be present depending on the nature of the invocation failure. If present, it will have the following fields:
+      - *activationId*: The activation ID:
+      - *result*: If the action was invoked in blocking mode: The action result as a JSON object, else `undefined`.
+  - If the invocation succeeds, the promise will resolve with a dictionary describing the activation with fields *activationId* and *result* as described above.
+
+  Below is an example of a blocking invocation that utilizes the returned promise:
+  ```
+  whisk.invoke({
+    name: 'myAction',
+    blocking: true
+  })
+  .then(function (activation) {
+      // activation completed successfully, activation contains the result
+      console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
+  })
+  .catch(function (reason) {
+      console.log('An error has occured ' + reason.error);
+
+      if(reason.activation) {
+        console.log('Please check activation ' + reason.activation.activationId + ' for details.');
+      } else {
+        console.log('Failed to create activation.');
+      }
+  });
+  ```
+  {: codeblock}
+
 
 The `whisk.trigger()` function fires a trigger. It takes as an argument a JSON object with the following parameters:
 
@@ -263,9 +298,13 @@ The signature for `next` is `function(error, activation)`, where:
 - On errors, `activation` might be undefined, depending on the failure mode.
 - When defined, `activation` is a dictionary with an `activationId` field that contains the activation ID.
 
+  If `next` is not provided, then `whisk.trigger()` returns a promise.
+  - If the trigger fails, the promise will reject with an object describing the error.
+  - If the trigger succeeds, the promise will resolve with a dictionary with an `activationId` field containing the activation ID.
+
 The `whisk.getAuthKey()` function returns the authorization key under which the action is running. Usually, you do not need to invoke this function directly because it is used implicitly by the `whisk.invoke()` and `whisk.trigger()` functions.
 
-### Node.js runtime environments
+### JavaScript runtime environments
 
 JavaScript actions are executed by default in a Node.js version 6.2.0 environment.  The 6.2.0 environment will also be used for an action if the `--kind` flag is explicitly specified with a value of 'nodejs:6' when creating/updating the action.
 The following packages are available to be used in the Node.js 6.2.0 environment:
@@ -362,14 +401,11 @@ The following packages are available to be used in the Node.js 0.12.14 environme
 
 Docker actions run a user-supplied binary in a Docker container. The binary runs in a Docker image based on Ubuntu 14.04 LTD, so the binary must be compatible with this distribution.
 
-The action input "payload" parameter is passed as a positional argument to the binary program, and the standard output from the execution of the program is returned in the "result" parameter.
+The Docker skeleton is a convenient way to build OpenWhisk-compatible Docker images. You can install the skeleton with the `wsk sdk install docker` CLI command.
 
-The Docker skeleton is a convenient way to build {{site.data.keyword.openwhisk_short}}-compatible Docker images. You can install the skeleton with the `wsk sdk install docker` CLI command.
+The main binary program must be located in `/action/exec` inside the container. The executable receives the input arguments via `stdin` and must return a result via `stdout`.
 
-The main binary program is copied to the `dockerSkeleton/client/action` file. Any companion files or library can exist in the `dockerSkeleton/client` directory.
-
-You can also include any compilation steps or dependencies by modifying the `dockerSkeleton/Dockerfile`. For example,you can install Python if your action is a Python script.
-
+You may include any compilation steps or dependencies by modifying the `Dockerfile` included in the `dockerSkeleton`.
 
 ## REST API
 {: #openwhisk_ref_restapi}
@@ -378,14 +414,14 @@ All the capabilities in the system are available through a REST API. There are c
 
 These are the collection endpoints:
 
-- `https://{BASE URL}/api/v1/namespaces`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+- `https://openwhisk.{DomainName}/api/v1/namespaces`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
 
-The `{BASE URL}` is the OpenWhisk API hostname (for example, openwhisk.ng.bluemix.net, 172.17.0.1, and so on).
+The `openwhisk.{DomainName}` is the OpenWhisk API hostname (for example, openwhisk.ng.bluemix.net, 172.17.0.1, and so on).
 
 For the `{namespace}`, the character `_` can be used to specify the user's *default
 namespace* (that is, email address).
@@ -394,12 +430,12 @@ You can perform a GET request on the collection endpoints to fetch a list of ent
 
 There are entity endpoints for each type of entity:
 
-- `https://{BASE URL}/api/v1/namespaces/{namespace}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
 
 The namespace and activation endpoints support only GET requests. The actions, triggers, rules, and packages endpoints support GET, PUT, and DELETE requests. The endpoints of actions, triggers, and rules also support POST requests, which are used to invoke actions and triggers and enable or disable rules. Refer to the [API reference](https://new-console.{DomainName}/apidocs/98) for details.
 
@@ -474,6 +510,10 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 * The maximum code size for the action is 48MB.
 * It is recommended for a JavaScript action to use a tool to concatenate all source code including dependencies into a single bundled file.
 
+### Per activation payload size (MB) (Fixed: 1MB)
+{: #openwhisk_syslimits_activationsize}
+* The maximum POST content size plus any curried parameters for an action invocation or trigger firing is 1MB.
+
 ### Per namespace concurrent invocation (Default: 100)
 {: #openwhisk_syslimits_concur}
 * The number of activations that are currently processed for a namespace cannot exceed 100.
@@ -484,7 +524,7 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 {: #openwhisk_syslimits_invocations}
 * The rate limit N is set to 120/3600 and limits the number of action invocations in one minute/hour windows.
 * A user cannot change this limit when creating the action.
-* A CLI call that exceeds this limit receives an error code corresponding to TOO_MANY_REQUESTS.
+* A CLI or API call that exceeds this limit receives an error code corresponding to HTTP status code `429: TOO MANY REQUESTS`.
 
 ### Size of the parameters (Fixed: 1MB)
 {: #openwhisk_syslimits_parameters}
@@ -503,3 +543,18 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 * The maximum number of processes available to a user is 512 (for both hard and soft limits).
 * The docker run command use the argument `--ulimit nproc=512:512`.
 * For more information about the ulimit for maximum number of processes see the [docker run](https://docs.docker.com/engine/reference/commandline/run) documentation.
+
+### Triggers
+
+Triggers are subject to a firing rate per minute and per hour as documented in the table below.
+
+| limit | description | configurable | unit | default |
+| ----- | ----------- | ------------ | -----| ------- |
+| minuteRate | a user cannot fire more than this many triggers per minute | per user | number | 60 |
+| hourRate | a user cannot fire more than this many triggers per hour | per user | number | 720 |
+
+### Triggers per minute/hour (Fixed: 60/720)
+{: #openwhisk_syslimits_triggerratelimit}
+* The rate limit N is set to 60/720 and limits the number of triggers that may be fired in one minute/hour windows.
+* A user cannot change this limit when creating the trigger.
+* A CLI or API call that exceeds this limit receives an error code corresponding to HTTP status code `429: TOO MANY REQUESTS`.

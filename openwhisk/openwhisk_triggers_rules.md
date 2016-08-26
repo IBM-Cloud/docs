@@ -138,9 +138,15 @@ As an example, create a rule that calls the hello action whenever a location upd
   ```
   {: pre}
 
-3. Create and enable the rule. The three parameters are the name of the rule, the trigger, and the action.
+3. Create the rule. Note that the rule will be enabled upon creation, meaning that it will be immediately available to respond to activations of your trigger. The three parameters are the name of the rule, the trigger, and the action.
   ```
-  wsk rule create --enable myRule locationUpdate hello
+  wsk rule create myRule locationUpdate hello
+  ```
+  {: pre}
+
+  At any time, you can choose to disable a rule.
+  ```
+  wsk rule disable myRule
   ```
   {: pre}
 
