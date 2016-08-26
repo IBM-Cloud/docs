@@ -4,13 +4,15 @@
 # About {{site.data.keyword.blockstorageshort}}
 {: #about-block-storage}
 
-Last updated: 01 August 2016
+Last updated: 26 August 2016
 {: .last-updated}
+
+The IBM {{site.data.keyword.blockstorageshort}} service allows you to add persistent storage to a virtual server.  To use the storage, you attach the block volumes to your virtual servers. The data in block storage volumes persists beyond the lifecycle of your virtual server. This means that you can detach the volumes from a server instance and reattach to another server instance, without any changes to your data. {{site.data.keyword.blockstorageshort}} uses OpenStack Cinder to manage the volume lifecycle. 
+
+The storage is accessed on a block device that you can partition, format, and mount to, such as /dev/vdb. The data persists until you delete it. 
 
 ## Volumes 
 {: #using-volumes-concept}
-
-You can use IBM {{site.data.keyword.blockstorageshort}} to create volumes and attach them to virtual servers. By default, IBM {{site.data.keyword.virtualmachinesshort}} do not have persistent storage, and revert to the default image when they are restarted. {{site.data.keyword.blockstorageshort}} provides persistent storage for your virtual server. The data in block storage volumes persists beyond the lifecycle of your virtual server. {{site.data.keyword.blockstorageshort}} uses OpenStack Cinder to manage the volume lifecycle.
 
 {{site.data.keyword.blockstorageshort}} volumes are created through a {{site.data.keyword.blockstorageshort}} service instance. You can attach the volumes to a virtual server in the following ways:
   
@@ -23,7 +25,16 @@ The virtual server performs its I/O operations directly with the specified devic
 ## Snapshots 
 {: #using-snapshots-concept}
 
-You can also create block-level snapshots of volumes. You can't create snapshots while the volume is attached, so the resulting snapshots will be crash-consistent. 
+You can also create block-level snapshots of volumes. A snapshot captures data on the block storage volume at a specific point in time. You can use snapshots to perform incremental backups of your data. 
+
+**Note**: You cannot create snapshots while a volume is attached to a server instance, so the resulting snapshots are crash-consistent. 
+
+When you create a volume from a snapshot, a new volume is created that exists in the same state the original volume was in at the time you took the snapshot. 
+
+Creating a volume from a snapshot has the following impact:
+
+* Existing volumes are not removed.
+* Data that is created, modified, or deleted after the relevant snapshot is taken is not included in the new volume.
 
 What's next?
 
