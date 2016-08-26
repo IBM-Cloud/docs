@@ -62,15 +62,11 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 		<!-- add deployment target declaration -->
 	 </platform>
 	```
-
-
 4. Install the {{site.data.keyword.amashort}} Cordova plug-in:
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
-
-
 5. Configure your platform for Android, iOS, or both.
 
 	####Android
