@@ -11,7 +11,7 @@ copyright:
 {: #google-auth-android}
 
 
-Last updated: 25 August 2016
+Last updated: 26 August 2016
 {: .last-updated}
 
 Use Google to authenticate users on your {{site.data.keyword.amafull}} Android application. Add {{site.data.keyword.amashort}} security functionality.  {:shortdesc}
@@ -41,8 +41,6 @@ From the console:
 4. Add the credentials. 
 
 To complete the credentials creation, you need to add the **signing certificate fingerprint**.
-
-
 
 ### Setting up the signing certificate
 For Google to verify your application authenticity, you must specify a signing certificate fingerprint.
@@ -74,7 +72,6 @@ A keystore that contains a certificate for development environments is stored in
 ###Google Client ID
 
 Once the credentials are successfully created, the credential page displays your Google Client ID. Take note of this value. You need to register this value in the {{site.data.keyword.Bluemix}} application.
-
 
 ## Configuring {{site.data.keyword.amashort}} for Google authentication
 {: #google-auth-android-config}
@@ -112,6 +109,7 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
     	// other dependencies  
 	}
 	```
+	
 	**Note:** You can remove the dependency on the `core` module of the `com.ibm.mobilefirstplatform.clientsdk.android` group if you have it. The `googleauthentication` module downloads it automatically for you. The `googleauthentication` module downloads and installs the Google+ SDK in your Android project.
 
 1. Synchronize your project with Gradle by clicking **Tools > Android > Sync Project with Gradle Files**.
@@ -147,8 +145,6 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
   * Replace  `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
   * Replace `<MCAServiceTenantId>` with the `tenantId` value you can find by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
 
-
-
    **Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
 1. Add the following code to your Activity:
@@ -164,8 +160,8 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 
 ## Testing the authentication
 {: #google-auth-android-test}
-After the client SDK is initialized and the Google Authentication Manager is registered, you can start making requests to your mobile back-end application.
 
+After the client SDK is initialized and the Google Authentication Manager is registered, you can start making requests to your mobile back-end application.
 
 Before you begin testing, you must have a mobile back-end application that was created with the **MobileFirst Services Starter** boilerplate, and already have a resource protected by the  {{site.data.keyword.amashort}} `/protected` endpoint. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
