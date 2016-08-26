@@ -9,7 +9,7 @@ copyright:
 # Setting up the Cordova plug-in
 {: #getting-started-cordova}
 
-Last updated: 23 August 2016
+Last updated: 26 August 2016
 {: .last-updated}
 
 
@@ -36,7 +36,7 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	```
 	cordova platform add android
 	```
-	
+
 	**iOS**
 
 	```Bash
@@ -52,6 +52,7 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
+	
 	The *minSdkVersion* value must be higher than `15`. The *targetSdkVersion* value must be the latest Android SDK that is available from Google.
 
 3. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
@@ -62,6 +63,7 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 		<!-- add deployment target declaration -->
 	 </platform>
 	```
+	
 4. Install the {{site.data.keyword.amashort}} Cordova plug-in:
 
  	```Bash
@@ -77,7 +79,6 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	```Bash
 	cordova build android
 	```
-
 
 	####iOS
 	{: #cordova-ios}
@@ -104,7 +105,6 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	cordova plugin list
 	```
 
-
 ## Initializing the {{site.data.keyword.amashort}} client plug-in
 {: #getting-started-cordova-initialize}
 
@@ -128,7 +128,6 @@ Use the following JavaScript code in your Cordova application to initialize the 
 ```JavaScript
 MFPAuthorizationManager.initialize("tenantId");
 ```
-
 
 Replace the `tenantId` value with the {{site.data.keyword.amashort}} service `tenantId`. This value you can find by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
 
@@ -158,7 +157,6 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 
 	request.send(success, failure);
 	```
-
 
 1. When your request succeeds, you will see the following output in the LogCat or Xcode console (depending on the platform that you are using):
 
