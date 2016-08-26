@@ -2,33 +2,45 @@
 
 
 # Using {{site.data.keyword.blockstorageshort}} snapshot {: #using-block-storage-snapshot} 
-
-*Last updated: 20 June 2016*
+Last updated: 26 August 2016
 {: .last-updated}
+
+To use snapshots, follow these steps:
 
 ## Creating a snapshot {: #creating-snapshot} 
 
-1.	Select the **Volumes** tab to get a list of volumes.
-2.	Select the volume that you want to create a snapshot of in the unattached volumes column. Make sure that the volume you select is unattached. The selected volume is highlighted. 
-3.	Click **Actions** and select **Create Snapshot** from the drop-down list.
-4.	Give the snapshot a name and click **Create**.
+Before creating a snapshot, ensure you have enough space to save it. If there is not enough space, the snapshot might become corrupted.
 
-**Note:** You cannot delete a volume while snapshots for the volume exist. 
+1.	Open the {{site.data.keyword.blockstorageshort}} service.
+2.	Select the **Manage** tab.
+3.	On the **Manage** page, select the **Volumes** tab to get a list of volumes.
+4.	Select the volume that you want to create a snapshot of in the unattached volumes column. Make sure that the volume you select is   unattached. The selected volume is highlighted. 
+5.	Click **Actions** and select **Create Snapshot** from the drop-down list.
+6.	Give the snapshot a name and click **Create**.
+
+**Note:** 
+
+* You cannot delete a volume while snapshots for the volume exist. 
+* The size of the snapshot is automatically set to be the same as that of the original volume.
 
 ## Creating a volume from a snapshot {: #creating-volume-from-snapshot}
 
-1.	Select the **Snapshots** tab to get a list of snapshots.
-2.	Select the snapshot that you want to create a volume from. The selected snapshot is highlighted.
-3.	Click **Actions** and select **Create Volume** from the drop-down list.
-4.	Give the new volume a name and optionally a new size and click **Create**. 
+1.	Open the {{site.data.keyword.blockstorageshort}} service.
+2.	Select the **Manage** tab.
+3.	On the **Manage** page, select the **Snapshots** tab to get a list of snapshots.
+4.	Select the snapshot that you want to create a volume from. The selected snapshot is highlighted.
+5.	Click **Actions** and select **Create Volume** from the drop-down list.
+6.	Give the new volume a name and optionally a new size and click **Create**. 
 
 **Note:** The new volume size must be equal or greater than the snapshot size. 
 
 ## Deleting a snapshot {: #deleting-snapshot}
 
-1.	Select the **Snapshots** tab to get a list of snapshots.
-2.	Select the snapshot that you want to delete. The selected snapshot is highlighted.
-3.	Click **Actions** and select **Delete**. 
+1.	Open the {{site.data.keyword.blockstorageshort}} service.
+2.	Select the **Manage** tab.
+3.	On the **Manage** page, select the **Snapshots** tab to get a list of snapshots.
+4.	Select the snapshot that you want to delete. The selected snapshot is highlighted.
+5.	Click **Actions** and select **Delete**. 
 
 
 
