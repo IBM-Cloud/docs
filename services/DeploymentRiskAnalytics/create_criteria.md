@@ -14,7 +14,7 @@ copyright:
 # Defining policies
 {: #DRA_criteria}
 
-Last updated: 22 July 2016
+Last updated: 25 August 2016
 {: .last-updated}
 
 With {{site.data.keyword.DRA_short}}, defining the policies for your application is easy. To get started, follow these steps:
@@ -41,7 +41,7 @@ Policies are created in the {{site.data.keyword.Bluemix_notm}} organization that
 
 * Functional Verification Test (Mocha, JUnit)
 * Unit Test (Mocha, JUnit, Karma/Mocha)
-* Code Coverage (Istanbul, Blanket.js)
+* Code Coverage (Istanbul as JSON summary report format, Blanket.js)
 
 {{site.data.keyword.DRA_short}} also supports Selenium and Jasmine tests, though these must be included within the previously mentioned tools, such as JUnit, xUnit, and Mocha. To learn more about using {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.DRA_short}}, and Selenium together, see [Running Selenium tests from the command line on a delivery pipeline](https://developer.ibm.com/devops-services/2016/07/21/running-selenium-tests-command-line-delivery-pipeline/).
 
