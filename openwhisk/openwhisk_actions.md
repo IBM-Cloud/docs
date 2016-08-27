@@ -574,7 +574,8 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   Notice that part of the example.c file is compiled as part of the Docker image build process, so you do not need C compiled on your machine.
   In fact, unless you are compiling the binary on a compatible host machine, it may not run inside the container since formats will not match.
 
-4. Use your Docker container as an {{site.data.keyword.openwhisk_short}} action.
+  Your Docker container may now be used as an {{site.data.keyword.openwhisk_short}}  action.
+
   ```
   wsk action create --docker example janesmith/blackboxdemo
   ```
@@ -597,7 +598,7 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   ```
   {: screen}
 
-5. To update the Docker image, run `buildAndPush.sh` to refresh the image on Docker Hub, then run `wsk action update` to make the system to fetch the new image. New invocations will start using the new image and not a warm image with the old code.
+  To update the Docker image, run `buildAndPush.sh` to refresh the image on Docker Hub, then run `wsk action update` to make the system to fetch the new image. New invocations will start using the new image and not a warm image with the old code.
 
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
