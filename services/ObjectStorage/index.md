@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # Getting started with {{site.data.keyword.objectstorageshort}}  {: #getting-started-with-object-storage}
