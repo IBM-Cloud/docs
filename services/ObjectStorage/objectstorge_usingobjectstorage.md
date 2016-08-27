@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # Start using {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
