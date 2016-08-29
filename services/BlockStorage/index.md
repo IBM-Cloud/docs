@@ -18,11 +18,15 @@ Complete these steps to get started with {{site.data.keyword.blockstorageshort}}
    
    a. Open the {{site.data.keyword.blockstorageshort}} service.
 
-   b. Click **Create** to start the **Create Volume** dialog.
+   b. Click **Create** to start the Create Volume dialog.
 
-   c.	Provide the size of the volume that you want. Decimal numbers are not accepted. The size is limited by the quota that is assigned to    your organization.
+   c.	Provide a name. 
    
-   d.	Provide a name. The name is for display purposes only.
+      **Note:** The name is for display purposes only.
+   
+   d. Provide the size of the volume that you want. 
+   
+      **Note:** Decimal numbers are not accepted. The size is limited by the quota that is assigned to your organization.
    
    e.	Optionally, provide a more detailed description of the volume.
    
@@ -40,7 +44,9 @@ Complete these steps to get started with {{site.data.keyword.blockstorageshort}}
    
    d.	In the Attach dialog, select an instance of a virtual server from the drop-down list. 
    
-   e.	Optionally, specify the device to be used to attach this volume. If you do not specify the device, the system automatically selects the first available device on the virtual server.
+   e.	Optionally, specify the device to be used to attach this volume. 
+   
+      **Note:** If you do not specify the device, the system automatically selects the first available device on the virtual server.
    
    f.	Click **Attach** to submit the information and close the dialog.
    
