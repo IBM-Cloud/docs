@@ -11,7 +11,7 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Developing gateways on {{site.data.keyword.iot_short}}
+# Developing gateways
 {: #gw_dev_index}
 
 Last updated: 15 August 2016
