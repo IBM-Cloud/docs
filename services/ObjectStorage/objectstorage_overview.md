@@ -9,7 +9,7 @@ copyright:
 
 # About {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Last updated: 26 August 2016*
+*Last updated: 29 August 2016*
 {: .last-updated}
 
 
