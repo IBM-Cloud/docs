@@ -13,8 +13,13 @@ copyright:
 
 ## A list of the latest updates in the Liberty buildpack.
 
-*Last Updated: 20 July 2016*
+Last Updated: 23 August 2016
 {: .last-updated}
+
+### August 26, 2016: Updated Liberty buildpack v3.2-20160822-2200
+* The buildpack contains updated versions of IBM JRE: 8 SR3 FP10 and 7.1 SR3 FP50.
+* The monthly Liberty runtime version was updated to the [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/) release.
+* The service plug-in that provides [auto-configuration support](autoConfig.html) for the [SQL Database](../../services/SQLDB/index.html#SQLDB) service was updated to always use the JVM's trusted certificates when connecting to the service over TLS.
 
 ### July 22, 2016: Updated Liberty buildpack v3.1-20160717-2254
 * The [App Management](../../manageapps/app_mng.html) functionality was updated to support federated authentication. Also, the Node.js runtime that is used by the `devconsole` and `shell` utilities was updated to the latest `0.12.15` version. 

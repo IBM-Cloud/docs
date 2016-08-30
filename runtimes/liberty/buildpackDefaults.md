@@ -12,7 +12,7 @@ copyright:
 # Buildpack defaults
 {: #buildpack_defauts}
 
-*Last Updated: 10 June 2016*
+Last Updated: 10 June 2016
 {: .last-updated}
 
 The Liberty buildpack is updated frequently in Bluemix. Each release might contain security fixes or feature enhancements.
