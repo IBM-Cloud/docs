@@ -45,7 +45,6 @@ You must have a resource that is protected by an instance of the {{site.data.key
 	}
 	```
 
-
 1. Synchronize your project with Gradle. Click **Tools > Android > Sync Project with Gradle Files**.
 
 1. Open the `AndroidManifest.xml` file of your Android project.
@@ -55,10 +54,9 @@ Add the internet access permission under the `<manifest>` element:
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
 
-
 1. Initialize the SDK.  
-A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
-Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values you get when you click **Mobile Options** in your app on the {{site.data.keyword.Bluemix_notm}} dashboard.
+	A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
+	Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values you get when you click **Mobile Options** in your app on the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -235,7 +233,6 @@ You must have an application that was created with the {{site.data.keyword.mobil
 		}
 	});
 ```
-
 
 1. 	When your request succeeds, the following output is in the LogCat tool:
 

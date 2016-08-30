@@ -42,7 +42,6 @@ If you already have a project, you can skip the steps that describe project crea
 
          ![image](images/CreateAProject.jpg)
 
-
 1. From the **Social APIs** list, choose **Google+ API**.
 
      ![image](images/chooseGooglePlus.jpg)
@@ -56,8 +55,6 @@ If you already have a project, you can skip the steps that describe project crea
 1. From the **Credentials** list, choose OAuth client ID.
 
      ![image](images/chooseCredentials.png)
-
-
 
 1. At this point you will be presented with an application type choice. Select **iOS**.
 
@@ -167,21 +164,26 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 	The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project to use the SDK.
 
-	1. Right-click your project in Xcode and select **New File...**
+	1. Right-click your project in Xcode and select **New File...**.
+
 	2. In the **iOS Source** category, pick **Header file**.
-	3. Name it `BridgingHeader.h`
+
+	3. Name it `BridgingHeader.h`.
+
 	4. Add the following imports to your bridging header:
 
 	```Swift
 	#import <IMFCore/IMFCore.h>
 	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
 	```
-{: codeblock}
-	5. Click your project in Xcode and select the **Build Settings** tab.
-	6. Search for `Objective-C Bridging Header`.
-	7. Set the value to the location of your `BridgingHeader.h` file, for example: `$(SRCROOT)/MyApp/BridgingHeader.h`.
-	8. Make sure your bridging header is being picked up by Xcode by building your project.
 
+	5. Click your project in Xcode and select the **Build Settings** tab.
+
+	6. Search for `Objective-C Bridging Header`.
+
+	7. Set the value to the location of your `BridgingHeader.h` file, for example: `$(SRCROOT)/MyApp/BridgingHeader.h`.
+
+	8. Make sure your bridging header is being picked up by Xcode by building your project.
 
 3. Use the following code to initialize the client SDK.  Replace `applicationRoute` and `applicationGUID` with the **Route** and **App GUID** values that you obtained from **Mobile Options**.
 

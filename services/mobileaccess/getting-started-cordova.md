@@ -9,7 +9,7 @@ copyright:
 # Setting up the Cordova plug-in
 {: #getting-started-cordova}
 
-Last updated: 26 August 2016
+Last updated: 25 August 2016
 {: .last-updated}
 
 
@@ -31,13 +31,15 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 
 1. Add Android and iOS platforms to your Cordova application. Run one or both of the following commands from the command line:
    	
-	**Android**
+	###Android
+	{: #install-cordova-android}
 
 	```
 	cordova platform add android
 	```
-
-	**iOS**
+	
+	###iOS
+	{: #install-cordova-ios}
 
 	```Bash
 	cordova platform add ios
@@ -53,7 +55,7 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	</platform>
 	```
 	
-	The *minSdkVersion* value must be higher than `15`. The *targetSdkVersion* value must be the latest Android SDK that is available from Google.
+	The *minSdkVersion* value must be `15` or higher. The *targetSdkVersion* value must be the latest Android SDK that is available from Google.
 
 3. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
 
@@ -63,23 +65,24 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 		<!-- add deployment target declaration -->
 	 </platform>
 	```
-	
+
 4. Install the {{site.data.keyword.amashort}} Cordova plug-in:
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
+
 5. Configure your platform for Android, iOS, or both.
 
 	####Android
 	{: #cordova-android}
 
 	Before opening your project in Android Studio, build your Cordova application through your command-line interface (CLI) to avoid build errors.
-
+	
 	```Bash
 	cordova build android
 	```
-
+	
 	####iOS
 	{: #cordova-ios}
 
@@ -120,18 +123,16 @@ To use the {{site.data.keyword.amashort}} client SDK, you must initialize the SD
 
   * Replace the `applicationRoute` and `applicationGUID` with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
-
-
-
 ##Initializing the {{site.data.keyword.amashort}} AuthorizationManager
+{: #initializing-auth-manager}
+
 Use the following JavaScript code in your Cordova application to initialize the {{site.data.keyword.amashort}} AuthorizationManager.
+
 ```JavaScript
 MFPAuthorizationManager.initialize("tenantId");
 ```
 
 Replace the `tenantId` value with the {{site.data.keyword.amashort}} service `tenantId`. This value you can find by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
-
-
 
 ## Making a request to the mobile back-end application
 {: #getting-started-request}
@@ -142,7 +143,7 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 
 	The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint is accessed only by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK.
 
-1. Use your Cordova application to make a request to the same endpoint. Add the following code after you initialize `BMSClient`:
+2. Use your Cordova application to make a request to the same endpoint. Add the following code after you initialize `BMSClient`:
 
 	```Javascript
 	var success = function(data){
@@ -158,7 +159,7 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 	request.send(success, failure);
 	```
 
-1. When your request succeeds, you will see the following output in the LogCat or Xcode console (depending on the platform that you are using):
+3. When your request succeeds, you will see the following output in the LogCat or Xcode console (depending on the platform that you are using):
 
 	![image](images/getting-started-android-success.png)
 
