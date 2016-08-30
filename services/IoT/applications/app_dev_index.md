@@ -14,7 +14,7 @@ copyright:
 # Developing applications on {{site.data.keyword.iot_short}}
 {: #app_dev_index}
 
-Last updated: 15 August 2016
+Last updated: 26 August 2016
 {: .last-updated}
 
 Client libraries, samples, and information are provided to help you to build applications for your {{site.data.keyword.iot_full}} organization.
@@ -29,4 +29,4 @@ You can write code to build and manage applications that interact with and use i
 - Node-RED
 - Python
 
-For more information and links to the client libraries that are available for developing on {{site.data.keyword.iot_short}}, see [Client libraries for {{site.data.keyword.iot_short}} development] (../iot_platform_client_lib.html).
+For more information and links to the client libraries that are available for developing on {{site.data.keyword.iot_short}}, see [Client libraries for {{site.data.keyword.iot_short}} development](../iot_platform_client_lib.html).
