@@ -20,3 +20,4 @@ You can integrate {{site.data.keyword.GlobalizationPipeline_short}} with {{site.
 
 {{site.data.keyword.jazzhub_title}} uses {{site.data.keyword.GlobalizationPipeline_full}}'s default machine translation engine to translate your application into the languages you select,  unless you configure an alternative machine translation engine using the {{site.data.keyword.GlobalizationPipeline_short}} dashboard.
 
+
