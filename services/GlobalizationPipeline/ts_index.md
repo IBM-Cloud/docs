@@ -14,7 +14,7 @@ copyright:
 # {{site.data.keyword.GlobalizationPipeline_short}} troubleshooting
 {: #globalizationpipelinets}
 
-*Last updated: 13 July 2016*
+*Last updated: 30 August 2016*
 {: .last-updated}
 
 Here are some answers to common questions about using {{site.data.keyword.GlobalizationPipeline_short}}. 
@@ -77,22 +77,6 @@ Ensure that the resource file conforms to the following guidelines:
 * Each translation project can contain a maximum of 500 key / value pairs.
 * A resource file can be no larger than 2 MB.
 
-
-
-## A non-English resource file is not being properly translated to other languages
-{: #problem4}
-
-An non-English sourced resource file is not translating properly.
-{:shortdesc}
-
-When a resource file that is not sourced in English is uploaded to a translation bundle, the generated translations are not correct.
-{: tsSymptoms}
-
-{{site.data.keyword.GlobalizationPipeline_short}} currently only supports English as a source language.
-{: tsCauses}
-
-Translation of non-English resource files is not yet supported.
-{: tsResolve}
 
 
 

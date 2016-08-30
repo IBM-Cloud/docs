@@ -14,7 +14,7 @@ copyright:
 
 # Developing smart contracts for {{site.data.keyword.iot_short_notm}} blockchain integration
 {: #iotblockchain_link}
-*Last updated: 18 July 2016*
+Last updated: 29 August 2016
 {: .last-updated}
 
 Use {{site.data.keyword.blockchainfull}} and the Hyperledger development environment to create and test your own smart contracts deriving from IBM-provided sample contracts.
@@ -245,7 +245,7 @@ To download the sample contracts:
      **Tip:** To find the event types for a device, go to the **Devices** page and click the device name to open the device details page. Scroll down to the **Sensor Information** section to see a list of the available events and data points for the device.
 
    11. Map the available device properties to contract parameters.   
-   **Important:** Do not include the `d.` that is prepended to the data point in the device message. Also, verify that the data type for each data point that you map corresponds to the data type that is required by the contract parameter that you map it to.  
+   **Important:** Verify that the data type for each data point that you map corresponds to the data type that is required by the contract parameter that you map it to.  
    For example, a contract property such as Asset ID of the type string must be mapped to a property of the type string. The contract parameter requirements are defined in the `type` definitions in the contract go-code.  
    For example, the basic IBM-provided contract has the following contract parameter requirements:  
     <ul>
@@ -257,7 +257,8 @@ To download the sample contracts:
     </ul>
     <li>  Temperature - float64  
     <li>  Carrier - string   
-    </ul>
+    </ul>  
+    For more information about how to map device data to contracts, see the [Data mapping example](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example) in the IoT Blockchain samples wiki on GitHub.
    12. In the summary page, verify that the information is correct.
    13. The device data to contract mapping is shown in the Blockchain page.
 

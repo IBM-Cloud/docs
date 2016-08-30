@@ -14,7 +14,7 @@ copyright:
 # Working with bundles
 {: #globalizationpipeline_workingwithbundles}
 
-*Last updated: 13 July 2016*
+*Last updated: 30 August 2016*
 {: .last-updated}
 
 Each bundle you create contains the key value pairs from your resource file and the complete set of translations that have been generated.
@@ -131,7 +131,7 @@ After you upload a resource file, you can  translate its contents into any of th
 </tbody>
 </table>
 
-**Note:** English is currently the only supported source language. As the {{site.data.keyword.GlobalizationPipeline_short}} service evolves, additional source and target languages will be added.
+**Note:** {{site.data.keyword.GlobalizationPipeline_short}}'s default machine translation engine only provides support for English as a source language. However, alternative machine translation engines available for configuration within {{site.data.keyword.GlobalizationPipeline_short}} support the translation of other non-English source languages/language pairs.
 
 As you create bundles, they are added to the **Bundles** tab to make them easily accessible. From there, additional tasks can be performed on your translations.
 
