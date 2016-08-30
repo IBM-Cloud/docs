@@ -10,7 +10,7 @@ copyright:
 # Enabling Google authentication for iOS apps (Swift SDK)
 {: #google-auth-ios}
 
-Last updated: 26 August 2016
+Last updated: 25 August 2016
 {: .last-updated}
 
 Use Google Sign-In to authenticate users on your {{site.data.keyword.amafull}} iOS Swift app. The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
@@ -60,6 +60,7 @@ The following steps give you a brief outline of the tasks necessary for preparin
  ```
  #import <Google/SignIn.h>
  ```
+ {: codeblock}
 
  For more information about updating the bridging header file, see step 1. in [Enable sign-in](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in).
 
@@ -105,6 +106,7 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
  use_frameworks!
  pod 'BMSGoogleAuthentication'
  ```
+ {: codeblock}
  
  **Note:** If you have already installed the {{site.data.keyword.amashort}} core SDK, you can remove this line: `pod 'BMSSecurity'`. The `BMSGoogleAuthentication` pod installs all necessary frameworks.
 	
@@ -134,7 +136,6 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSCore
  import BMSSecurity
  ```
-
 1. Use the following code to initialize the client SDK. 
 
  ```Swift
@@ -169,10 +170,10 @@ mcaAuthManager.initialize(tenantId: tenantId)
  ```
 
  In the code:
- * Replace `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **AppGuid** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. 
- * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
- * Replace `<MCAServiceTenantId>` with the `tenantId` value. You find this value when you click the **Show
-Credentials** button on the {{site.data.keyword.Bluemix_notm}} service tile.
+ 	* Replace `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **AppGuid** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. 
+	* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+	* Replace `tenantId` with the **tenantId** value. You can find this value by clicking the **Show Credentials** button on the  {{site.data.keyword.amashort} service tile.
+
 
 ## Testing the authentication
 {: #google-auth-ios-testing}
@@ -183,6 +184,7 @@ After the client SDK is initialized and Google Authentication Manager is registe
 {: #google-auth-ios-testing-before}
 
 You must be using the {{site.data.keyword.mobilefirstbp}}  boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+
 
 1. Try to send a request to protected endpoint of your mobile back-end application in your desktop browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`
 

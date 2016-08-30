@@ -66,6 +66,7 @@ After you  configure the Facebook Application ID and your Facebook Application t
 1. Open Terminal and run the **pod --version** command. If CocoaPods is installed, the version number displays. You can skip to the next section to install the SDK.
 
 1. If you do not have CocoaPods installed, run:
+
 ```
 sudo gem install cocoapods
 ```
@@ -103,7 +104,7 @@ pod 'BMSFacebookAuthentication'
    ![image](images/ios-facebook-infoplist-settings.png)
 
 
-   Update URL scheme and FacebookappID properties with your Facebook Application ID
+   Update the URL scheme and FacebookAppID properties with your Facebook Application ID.
 
    You can also update the `info.plist` file by right-clicking the file, selecting **Open as > Source Code** and adding the following XML:
 
@@ -155,9 +156,9 @@ pod 'BMSFacebookAuthentication'
 	</dict>
 ```
 
-   Update the URL scheme and FacebookappID properties with your Facebook Application ID. Update the FacebookDisplayName with the name of your Facebook application.
+   Update the `CFBundleURLSchemes` and `FacebookappID` properties with your Facebook Application ID. Update the `FacebookDisplayName` with the name of your Facebook application.
 
-    **Important**: Make sure you are not overriding any existing properties in  the `info.plist` file. If you have overlapping properties, you must merge manually. For more information, see [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) and [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9).
+   **Important**: Make sure you are not overriding any existing properties in  the `info.plist` file. If you have overlapping properties, you must merge manually. For more information, see [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) and [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9).
 
 ## Initializing the {{site.data.keyword.amashort}} client Swift SDK
 {: #facebook-auth-ios-initalize-swift}
@@ -196,7 +197,7 @@ A common, though not mandatory, place to put the initialization code is in the `
  In the code:
  * Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
  * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
- * Replace `<MCAServiceTenantId>` with the `tenantId` value. You find this value when you click the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+ * Replace `tenantId` with the **tenantId** value. You find this value when you click the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
 
 1. Notify the Facebook SDK about the app activation and register the Facebook Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code after you initialize the BMSClient instance and register Facebook as the authentication manager.
 

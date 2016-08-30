@@ -115,7 +115,7 @@ In the code:
 
 * Replace `<yourProtectedRealm>` with the **Realm name** value you defined in the **Custom** tile of {{site.data.keyword.amashort}} dashboard.
   
-* Replace `<MCAServiceTenantId>` with the `tenantId` value. You can find this value by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+* Replace `tenantId` with the **tenantId** value. You can find this value by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
    
   
 ## Testing the authentication

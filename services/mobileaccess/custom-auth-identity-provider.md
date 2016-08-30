@@ -14,9 +14,7 @@ Last updated: 16 June 2016
 
 To create a custom identity provider, develop a web application that exposes a RESTful API:
 
-```
-POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
-```
+`POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>`
 
 * `base_url`: Specifies the base URL of the custom identity provider web application. The base URL is the URL to be registered in the {{site.data.keyword.amashort}} dashboard.
 * `tenant_id` : Specifies the unique identifier of the tenant. When the {{site.data.keyword.amashort}} invokes this API, it always supplies the {{site.data.keyword.Bluemix}} app GUID (`applicationGUID`).
