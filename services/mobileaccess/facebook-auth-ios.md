@@ -12,7 +12,7 @@ copyright:
 {: #facebook-auth-ios}
 
 
-Last updated: 23 August 2016
+Last updated: 25 August 2016
 {: .last-updated}
 
 
@@ -155,7 +155,7 @@ Update the URL scheme and FacebookappID properties with your Facebook Applicatio
 
 Initialize the client SDK by passing your app's route (`applicationRoute`) and app GUID (`applicationGUID`).
 
-A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate
+A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate.
 
 1. Open the main page of the {{site.data.keyword.Bluemix_notm}} dashboard and click your app. Click **Mobile Options** and take note of your **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`).
 
@@ -177,8 +177,8 @@ A common, though not mandatory, place to put the initialization code is in the `
 	The {{site.data.keyword.amashort}} client SDK is implemented using Objective-C, therefore you might need to add a bridging header to your swift project.
 
 	1. Right-click your project in Xcode and select **New File...**
-	* In the **iOS Source** category, pick `Header file`
-	* Name it `BridgingHeader.h`
+	* In the **iOS Source** category, pick `Header file`.
+	* Name it `BridgingHeader.h`.
 	* Add imports to your bridging header:
 
 	```Objective-C

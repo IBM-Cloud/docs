@@ -21,15 +21,15 @@ Instrument your iOS application with the {{site.data.keyword.amafull}} SDK, init
 
 ## Before you begin
 {: #before-you-begin}
-
 You must have:
 * An instance of a {{site.data.keyword.Bluemix_notm}} application that is protected by the {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
 * An Xcode project.  
 
+
 ## Installing the {{site.data.keyword.amashort}} client SDK
 {: #install-mca-sdk-ios}
-
 The {{site.data.keyword.amashort}} SDK is distributed with CocoaPods, a dependency manager for iOS projects. CocoaPods automatically downloads artifacts from repositories, and makes them available to your iOS application.
+
 
 ### Install CocoaPods
 {: #install-cocoapods}
@@ -38,9 +38,9 @@ The {{site.data.keyword.amashort}} SDK is distributed with CocoaPods, a dependen
 
 1. If you do not have CocoaPods installed, run:
 
-	```
-	sudo gem install cocoapods
-	```
+```
+sudo gem install cocoapods
+```
 
 For more information, see the [CocoaPods website](https://cocoapods.org/).
 
@@ -57,6 +57,7 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 	```
 	pod 'IMFCore'
 	```
+
 1. Save the `Podfile` file, and run `pod install` from the command line. <br/>Cocoapods installs added dependencies and displays the added components.<br/>
 
 	**Important**: CocoaPods generates an `xcworkspace` file.  You must open this file to work on your project going forward.
@@ -77,7 +78,6 @@ To use the {{site.data.keyword.amashort}} client SDK, you must initialize the SD
 	
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
-	
 	```
 
 	####Swift
@@ -177,7 +177,7 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 
 ## Next steps
 {: #next-steps}
-When you connected to the protected endpoint, no credentials were required. To require your users to log in to your application, you must configure Facebook, Google, or custom authentication.
+When you connect to the protected endpoint, no credentials were required. To require your users to log in to your application, you must configure Facebook, Google, or custom authentication.
   * [Facebook](facebook-auth-ios.html)
   * [Google](google-auth-ios.html)
   * [Custom](custom-auth-ios.html)
