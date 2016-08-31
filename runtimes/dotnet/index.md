@@ -12,7 +12,7 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-*Last updated: 30 May 2016*
+Last updated: 30 May 2016
 
 The ASP.NET Core runtime on {{site.data.keyword.Bluemix}} is powered by the ASP.NET Core buildpack. ASP.NET Core 
 is a modular open source framework for building .NET web applications.
@@ -40,7 +40,7 @@ Control the .NET CLI version with an optional global.json in the application's r
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview1-002702"
+        "version": "1.0.0-preview2-003121"
       }
    }
 ```
@@ -71,10 +71,12 @@ To most closely match how the application runs in Bluemix, follow the Linux inst
 The Yeoman tool can be used to generate new project templates as described in
 [Building Projects with Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
+For information about developing locally using Visual Studio, see [Developing with Visual Studio](../../starters/deploy_vs.html){: new_window}.
+
 ## Pushing a Published Application
 
 If you want your application to contain all its required binaries so that the buildpack does not download any 
-external binaries, you can push a published *self-contained* application.  See [Types of portability in .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}
+external binaries, you can push a published *self-contained* application.  See [.NET Core App Types](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}
 for more information on self-contained applications.
 
 To publish an application issue a command such as:
@@ -109,7 +111,7 @@ In this example, the buildpack would automatically compile the *MyApp.DAL* and *
 ```
 {: codeblock}
 
-## Using samples from the cli-samples repository and Visual Studio template
+## Configuring your application to listen on the proper port
 
 The buildpack will run your application with the *dotnet run* command and pass the command-line argument that follows
 ```
@@ -130,20 +132,33 @@ Modifications are required to the Main method as noted by the comments in the ex
     var config = new ConfigurationBuilder() //ADD THESE 3 LINES AT THE TOP OF THE MAIN METHOD
         .AddCommandLine(args)
         .Build();
-    
+
     var host = new WebHostBuilder()
         .UseKestrel()
         .UseConfiguration(config) //ADD THIS LINE BEFORE 'UseStartup'
-        .UseStartup&lt;Startup&gt;()  
+        .UseStartup&lt;Startup&gt;()
         .Build();
     host.Run();
 }
-</pre>  
+</pre>
 {: codeblock}
 
 Add the following dependency to project.json: 
 ```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+```
+{: codeblock}
+
+Add the following property to the `buildOptions` section of project.json:
+```
+  "copyToOutput": {
+    "include": [
+      "wwwroot",
+      "Areas/**/Views",
+      "Views",
+      "appsettings.json"
+    ]
+  }
 ```
 {: codeblock}
 
@@ -152,6 +167,20 @@ Add a *using* statement to the file which contains your Main method:
   using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
+
+In Startup.cs `Startup` method, remove the following line:
+```
+  .SetBasePath(env.ContentRootPath)
+```
+{: codeblock}
+
+In Program.cs `Main` method, remove the following line:
+```
+  .UseContentRoot(Directory.GetCurrentDirectory())
+```
+{: codeblock}
+
+These changes should allow the .NET CLI to find your application's `Views` as they will now be copied to the build output when the `dotnet run` command executes.  If your application has any other files, such as json configuration files, which are required at runtime then you should also add those to the `include` section of `copyToOutput` in the project.json file.
 
 # rellinks
 {: #rellinks}
