@@ -18,7 +18,7 @@ copyright:
 # CLI and dev tools
 {: #cli}
 
-*Last updated: 28 June 2016*
+*Last updated: 31 August 2016*
 {: .last-updated}
 
 With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such as a unified command line interface and CLI plug-ins. Each of these CLI downloads are all available to support your {{site.data.keyword.Bluemix_notm}} experience.
