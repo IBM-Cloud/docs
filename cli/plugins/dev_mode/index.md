@@ -14,7 +14,7 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# (Deprecated)Development mode CLI
+# (Deprecated) Development mode CLI
 {: #devmodecli}
 
 *Last updated: 23 June 2016*
