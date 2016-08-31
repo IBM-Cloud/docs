@@ -7,10 +7,10 @@ copyright:
 
 # About {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Last updated: 23 August 2016
+Last updated: 29 August 2016
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android mobile devices, and to Google Chrome and Mozilla Firefox web browsers. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
+IBM {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android mobile devices. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
 
 {{site.data.keyword.mobilepushshort}} is also available as a Bluemix Dedicated service. For information about {{site.data.keyword.mobilepushshort}} as a dedicated service, see [Dedicated Services](../../dedicated/index.html). Note that the {{site.data.keyword.mobilepushshort}} monitoring tab does not show analytics data.
 
@@ -25,7 +25,7 @@ Mobile and browser clients can subscribe and register for the {{site.data.keywor
 ![Push Overview](images/overview.jpg)
 
 
-###Mobile and browser applications
+###Mobile applications
 {: mobile-applications}
 
 On startup, mobile and browser applications register and subscribe themselves to the {{site.data.keyword.mobilepushshort}} service to receive notifications.
@@ -43,7 +43,7 @@ The App backend owner creates the mobile back end application which bundles an i
 ###{{site.data.keyword.mobilepushshort}} service
 {: push-notification-service}
 
-The {{site.data.keyword.mobilepushshort}} service manages all information related to mobile devices and web browser clients that are registered for notifications. The service keeps your applications transparent to the technology details of sending notifications to heterogeneous mobile and web browser platforms, handling all of this within.
+The {{site.data.keyword.mobilepushshort}} service manages all information related to mobile devices that are registered for notifications. The service keeps your applications transparent to the technology details of sending notifications to heterogeneous mobile platforms, handling all of this within.
 
 ###Gateways
 {: gateways}
@@ -75,7 +75,7 @@ Unicast notifications are messages targeted to a particular device or user. Unic
 
 However, Unicast notifications targeted at users require:
 
-- Associating a user ID with a device at the time of registering the mobile device or web browser client for {{site.data.keyword.mobilepushshort}}.  
+- Associating a user ID with a device at the time of registering the mobile device for {{site.data.keyword.mobilepushshort}}.  
 
 - Authorizing such a user ID registration by passing a 'clientSecret' which is allocated when binding a back-end application to the {{site.data.keyword.mobilepushshort}} service. 
 
@@ -85,11 +85,10 @@ To send a Unicast notifications through REST API, ensure that the deviceIds or u
 ###Platform-based notifications
 {: platform-based-notifications}
 
-Notifications can be targeted to reach a particular device platform. For example, a notification can be sent to all Android users or Google Chrome users only. To send a platform-based notification that uses the REST API, make sure that the targeted platforms are provided when posting to a message resource. Specify the platforms as an array. The supported platforms are as follows:
+Notifications can be targeted to reach a particular device platform. For example, a notification can be sent to all Android users only. To send a platform-based notification that uses the REST API, make sure that the targeted platforms are provided when posting to a message resource. Specify the platforms as an array. The supported platforms are as follows:
 * A (Apple)
 * G (Google)
-* WEB_CHROME (Google Chrome Browser WebPush)
-* WEB_FIREFOX (Mozilla Firefox Browser WebPush)
+
 
 ## {{site.data.keyword.mobilepushshort}} message size
 {: #push-message-size}
@@ -101,7 +100,7 @@ The {{site.data.keyword.mobilepushshort}} message payload size is dependent on t
 
 For iOS 8 and later, the maximum size allowed is 2 kilobytes. Apple Push Notification service does not send notifications that exceeds this limit.
 
-###Android, Chrome and Firefox Browsers
+###Android
 {: android-message-size}
 
 There is a limitation of 4 kilobyes as the maximum allowed message size.  

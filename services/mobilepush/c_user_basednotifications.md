@@ -10,7 +10,7 @@ copyright:
 
 # Enabling user-based notifications
 {: #user_based_notifications}
-Last updated: 22 August 2016
+Last updated: 29 August 2016
 {: .last-updated}
 
 User ID-based {{site.data.keyword.mobilepushshort}} are targeted at mobile app users with customized messages. With user-based notifications, you can choose to notify specific individuals based on their preferences.

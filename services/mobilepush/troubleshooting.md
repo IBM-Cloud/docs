@@ -7,7 +7,7 @@ copyright:
 
 # Troubleshooting
 {: #errors}
-Last updated: 16 August 2016
+Last updated: 29 August 2016
 {: .last-updated}
 
 Use this section as a guide to troubleshooting common {{site.data.keyword.mobilepushshort}} issues.
