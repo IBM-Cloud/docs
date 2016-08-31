@@ -40,7 +40,6 @@ When creating a custom identity provider you must define a POST method  with a r
 The request body will contain a `challengeAnswer` object that contains  `username` and `password`.
 After validating the user, this route must return a JSON object of the following structure.. 
 
-
 ```json
 { 
             status: "success", 
