@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # Configuring credentials for APNs
 {: #create-push-credentials-apns}
-Last updated: 16 August 2016
+Last updated: 29 August 2016
 {: .last-updated}
 
 Apple Push Notification Service (APNs) allows application developers to send remote notifications from the {{site.data.keyword.mobilepushshort}} service instance on Bluemix (the provider) to iOS devices and applications. Messages are sent to a target application on the device. Obtain and configure your APNs credentials. The APNs certificates are securely managed by {{site.data.keyword.mobilepushshort}} service and used to connect to APNs server as a provider.

@@ -7,7 +7,7 @@ copyright:
 
 #Enabling iOS applications to receive and send {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-Last updated: 16 August 2016
+Last updated: 29 August 2016
 {: .last-updated}
 
 You can enable iOS applications to receive and send {{site.data.keyword.mobilepushshort}} to your devices.
