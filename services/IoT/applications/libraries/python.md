@@ -192,7 +192,7 @@ To process the events that are received by your subscriptions, you need to regis
 |``event.deviceType``|String|Identifies the device type. Typically, the deviceType is a grouping for devices that perform a specific task, for example "weatherballoon".|
 |``event.deviceId``|String|Represents the ID of the device. Typically, for a given device type, the deviceId is a unique identifier of that device, for example a serial number or MAC address.|
 |``event.event``|String|Typically used to group specific events, for example "status", "warning" and "data".
-|``event.format``|String|The format can be any string, for example JSON. 
+|``event.format``|String|The format can be any string, for example JSON.
 |``event.data``|Dictionary|The data for the message payload. Maximum length is 131072 bytes.
 |``event.timestamp``|Date and time|The date and time of the event|
 
@@ -855,53 +855,3 @@ apiCli.getDeviceConnectionLogs(deviceTypeId, deviceId)
 ```
 
 The response includes a list of log entries, which contain log messages and time stamps.
-
-## Historical event retrieval
-{: #historical_event_retrieval}
-
-Historical event retrieval operations can be used to view events from all devices, view events from a device type, or to view events for a specific device.
-
-For information about the query parameters, the request and response model, and HTTP status codes, see the 'Historical event retrieval' section of the [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
-
-
-### Viewing events from all devices
-
-Use the ``getHistoricalEvents()`` method to view events across all devices that are registered to the organization.
-
-```python
-print("Historical Events = ", apiCli.getHistoricalEvents())
-```
-
-The response of the ``getHistoricalEvents()`` method contains some parameters, and the application needs to retrieve the JSON element *events* from the response to get the array of events returned. Other parameters in the response are required to make more calls, for example, the *_bookmark* element can be used to page through results. Submit the first request without specifying a bookmark, then take the bookmark that is returned in the response and provide it on the request for the next page. Repeat until the end of the result set, which is indicated by the absence of a bookmark. Each request must use the same values for the other parameters, otherwise the results will be undefined.
-
-To pass the *_bookmark* or any other condition, the overloaded method must be used. The overloaded method takes the parameters in the form of dictionary as shown in the following code sample:
-
-```python
-startTime = math.floor(time.mktime((2013, 10, 10, 17, 3, 38, 0, 0, 0)) * 1000)
-endTime =  math.floor(time.mktime((2015, 10, 29, 17, 3, 38, 0, 0, 0)) * 1000)
-duration = {'start' : startTime, 'end' : endTime }
-apiCli.getHistoricalEvents(options = duration))
-```
-The previous code sample returns the events between the start and end time.
-
-### Viewing events from a device type
-
-Use the ``getHistoricalEvents()`` method to view events from all the devices of a particular device type.
-
-```python
-apiCli.getHistoricalEvents(deviceType = 'iotsample-arduino', options = duration)
-```
-
-The response contains some parameters, and the application needs to retrieve the JSON element *events* from the response to get the array of events returned. As mentioned in the *view events from all devices* section, the overloaded method can be used to control the output.
-
-
-### Viewing events from a device
-
-
-Use the ``getHistoricalEvents()`` method to view events from a specific device. To use this method, the deviceTypeId and deviceId parameters are required.
-
-```python
-apiCli.getHistoricalEvents(deviceType, deviceId, options = duration)
-```
-
-The response of the ``getHistoricalEvents()`` method contains more parameters, and the application needs to retrieve the JSON element *events* from the response to get the array of events returned.

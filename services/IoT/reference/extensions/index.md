@@ -13,7 +13,7 @@ copyright:
 
 # External service integrations
 {: #ref-index}
-*Last updated: 18 July 2016*
+Last updated: 18 July 2016
 {: .last-updated}
 
 External service integration allows you to bind metadata or function supported by another service to your {{site.data.keyword.iot_full}} organization.
@@ -31,7 +31,7 @@ The built-in Jasper integration that is provided by our platform provides suppor
 
 - View overall Jasper data
   - Shows: Status, Rate Plan, month-to-date data usage, month-to-date SMS usage, month-to-date voice usage, overage limits, date added, and date modified.
-- Change SIM activation state.
+- Change SIM activation state
   - Select from: Inventory, Activation Ready, Activated, Deactivated, and Retired.
 - View SIM Usage
   - Shows: Cycle start date, billable and total data, billable and total SMS, billable and total voice.
@@ -39,26 +39,26 @@ The built-in Jasper integration that is provided by our platform provides suppor
 - Send SMS to SIM
 - Change rate plan
 
-You can access the supported operations in the device drilldown of a Jasper connected device after the following configuration steps are completed.
+You can access the supported operations in the device drilldown of a Jasper-connected device after the following configuration steps are completed.
 
 
 ### Configuration
 
-In order to connect your {{site.data.keyword.iot_short_notm}} platform organization with your Jasper account, there are two stages of configuration that must first be done. Complete the the organization configuration and then configure your devices.
+In order to connect your {{site.data.keyword.iot_short_notm}} platform organization with your Jasper account, there are two stages of configuration that must first be done. Complete the organization configuration and then configure your devices.
 
 
 1. Enable the Jasper extension   
 To enable Jasper integration with your {{site.data.keyword.iot_short_notm}} organization, complete the following steps:
  1. From the {{site.data.keyword.iot_short_notm}} dashboard select  ![Settings.](../../blockchain/images/platform_settings.png "Settings") in the menu side bar.
- 2. Scroll down the to the Extensions section, and set Jasper to **On**.
+ 2. Scroll down to the Extensions section, and set Jasper to **On**.
  3. Enter your Jasper user name, password, license key, and API endpoint.
- 4. Click **Save**
+ 4. Click **Save**.
 
-2. Configure your devices
+2. Configure your devices   
 You can configure the devices that are connected to both your {{site.data.keyword.iot_short_notm}} organization and your Jasper account to display data from Jasper in the {{site.data.keyword.iot_short_notm}} dashboard.  
 **Important:** The Jasper configuration cannot be applied as part of the Add Device process, as only already connected devices can be configured with Jasper.  
 To configure your Jasper-connected devices, complete the following steps:  
- 1. In the devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the Jasper-connected device to be configured.
+ 1. In the Devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the Jasper-connected device to be configured.
  2. Select the device to open the *Device Drilldown* view.
  3. Scroll down to *Extension Configuration*.
  4. Enter the extension configuration by using the following JSON format, and then click **Confirm changes** to save your configuration.  
@@ -133,7 +133,7 @@ When the organization is successfully configured, the *Extensions* section displ
 ### Configuration
 
 {{site.data.keyword.iot_short_notm}} blockchain integration is a services offering  that is not activated by default in {{site.data.keyword.iot_short_notm}}. To activate the feature in your environment, complete the following steps:
- 1. From the {{site.data.keyword.iot_short_notm}} dashboard click, ![Settings.](../../blockchain/images/platform_settings.png "Settings") in the menu side bar.
+ 1. From the {{site.data.keyword.iot_short_notm}} dashboard, click ![Settings.](../../blockchain/images/platform_settings.png "Settings") in the menu side bar.
  2. Scroll down to the Extensions section.
  2. Click the **Tell me more** link next to the Blockchain extension to go to the IoT Blockchain Services Offering page.
  3. Fill out and submit the service request form.   
