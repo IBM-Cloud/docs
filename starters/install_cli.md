@@ -66,7 +66,7 @@ After the command line interfaces are installed, you can get started:
   
   7. Deploy your app to {{site.data.keyword.Bluemix_notm}}. For more information about cf push command, see [Uploading your application](/docs/starters/upload_app.html).
   
-  <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></pre>
+  <pre class="pre">cf push "<var class="keyword varname" data-hd-keyref="app_name">app_name</var>"</pre>
   
   8. Access your app by entering the following URL into your browser:
   
