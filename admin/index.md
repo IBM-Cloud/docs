@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Last updated: 29 August 2016
+Last updated: 1 September 2016
 {: .last-updated}
 
 If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
@@ -354,7 +354,7 @@ filter your search by **Administration Events**, **DataPower Reports**, **Firewa
 - When displaying a report or log, you can click the ![Download](images/icon_download.png)
 icon to download the report.
 
-The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated.
+The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated. Most reports are generated on a daily basis. However, the encryption and key management events reports are generated monthly. All reports are retained for 90 days in the administration console for your retrieval. After that 90 days, the reports are available offline per request from {{site.data.keyword.Bluemix_notm}} for 9 months. In total, reports are available for retrieval for up to 1 year.
 
 *Table 6. Security report list*
 
