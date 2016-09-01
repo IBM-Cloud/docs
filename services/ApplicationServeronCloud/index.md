@@ -16,7 +16,7 @@ copyright:
 {: .last-updated}
 
 {{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} is a service that facilitates quick setup on a pre-configured WebSphere Application Server Liberty, Traditional Network Deployment, or Traditional WebSphere instance in a hosted cloud environment on {{site.data.keyword.Bluemix_notm}}.
-{: shortdesc}
+{:shortdesc}
 
 ## Overview of WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #overview}

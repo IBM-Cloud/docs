@@ -8,7 +8,7 @@ copyright:
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 23 August 2016
+Last updated: 29 August 2016
 {: .last-updated}
 
 You can enable Android applications to receive and send {{site.data.keyword.mobilepushshort}} to your devices.
@@ -18,7 +18,7 @@ You can enable Android applications to receive and send {{site.data.keyword.mobi
 
 This section describes how to install and use the client Push SDK to further develop your Android applications.
 
-Bluemix® Mobile Services Push SDK can be added using Gradle. Gradle automatically downloads artifacts from repositories and makes them available to your Android application. Make sure that you correctly set up Android Studio and the Android Studio SDK. For more information about how to set up your system, see [Android Studio Overview](https://developer.android.com/tools/studio/index.html). For information about Gradle, see [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
+Bluemix® Mobile Services Push SDK can be added using Gradle. Gradle automatically downloads artifacts from repositories and makes them available to your Android application. Ensure that you correctly set up Android Studio and the Android Studio SDK. For more information about how to set up your system, see [Android Studio Overview](https://developer.android.com/tools/studio/index.html). For information about Gradle, see [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
 
 1. In Android Studio, after creating and opening your mobile application, open your application **build.gradle** file. 
 2. Add the following dependencies to your mobile application. These import statements are required for code snippets:

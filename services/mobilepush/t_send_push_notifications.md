@@ -8,7 +8,7 @@ copyright:
 {:new_window: target="_blank"}
 # Sending basic push notifications
 {: #push-send-notifications}
-Last updated: 16 August 2016
+Last updated: 29 August 2016
 {: .last-updated}
 
 After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files).
@@ -22,7 +22,7 @@ To send basic push notifications, complete the listed steps:
 ![Notifications screen](images/tag_notification.jpg)
 
 2. In the **Create your Notification**, enter your message and then click **Send**.
-3. Verify that your devices have received your notification. The following image shows an alert box handling a {{site.data.keyword.mobilepushshort}} in the foreground on a Android and iOS device.
+3. Verify that your devices have received your notification. The following image shows an alert box handling a {{site.data.keyword.mobilepushshort}} in the foreground on an Android and iOS device.
 
 ![Foreground push notification on Android](images/Android_Screenshot.jpg)
 

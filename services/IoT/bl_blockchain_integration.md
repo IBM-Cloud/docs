@@ -14,7 +14,7 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} blockchain integration
 {: #gettingstartedtemplate}
-*Last updated: 18 July 2016*
+Last updated: 30 August 2016
 {: .last-updated}
 
 {{site.data.keyword.iot_short_notm}} blockchain integration enables IoT devices to provide data to blockchain transactions, which stores the data in the blockchain's immutable ledger and uses it in the business rules that are implemented in the blockchain's smart contracts.
@@ -29,7 +29,7 @@ A generic {{site.data.keyword.iot_short_notm}} blockchain integration environmen
 - One or more devices that produces data that you want to write into a blockchain ledger.
 - {{site.data.keyword.Bluemix_notm}} organization:
  - {{site.data.keyword.iot_short_notm}} service with IoT blockchain integration enabled.
- - {{site.data.keyword.blockchainfull}} or Hyperledger fabric with one or more smart contracts deployed.
+ - {{site.data.keyword.blockchainfull_notm}} or Hyperledger fabric with one or more smart contracts deployed.
 - Local environment:
  - IoT Blockchain Monitoring UI
 
@@ -75,7 +75,7 @@ The following architecture diagram illustrates the components that are required 
 
 ## Connect to a blockchain fabric
 {: #getting_started}
-Because {{site.data.keyword.iot_short_notm}} blockchain integration is enabled, you can now connect to blockchain fabrics that are hosted by {{site.data.keyword.blockchainfull}} or the Linux Foundation Hyperledger.
+Because {{site.data.keyword.iot_short_notm}} blockchain integration is enabled, you can now connect to blockchain fabrics that are hosted by {{site.data.keyword.blockchainfull_notm}} or the Linux Foundation Hyperledger.
 
 
 1. Connect to a blockchain fabric

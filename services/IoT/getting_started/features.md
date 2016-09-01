@@ -61,48 +61,6 @@ seamlessly interact with those services without ever leaving the comfort of the 
 may include changes incompatible with the current version of this feature. Try it out and [let us know what you think](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 
 
-## Historian
-{: #historical-event-storage}
-
-Configure the {{site.data.keyword.iot_short}} to store a record of the events your devices generate.
-
-**Warning:** **Message format restrictions apply to the Historian**
-
-The Historian feature supports JSON messages that meet the following criteria:
-
-- The message is a valid JSON object (not an array) with only two top level elements: ``d`` and ``ts``
-- The message is UTF-8 encoded
-- The message is less than 4KB
-
-**Data**
-
-The **d** element is where you include all data for the event (or command) that is transmitted in the message.
-
-- This element is required for your message to meet the {{site.data.keyword.iot_short}} message specification.
-- This must always be a JSON object (not an array)
-- In the case where you wish to send no data the **d** element should still be present, but contain an empty object.
-
-**Time stamp**
-
-The **ts** element is optional, and you can use this to associate an event or command with a valid ISO8601 time stamp.
-
-**Example**
-
-```
-  {
-    "d": {
-      "host": "IBM700-R9E683D",
-      "mem": 54.9,
-      "network": {
-        "up": 1.22,
-        "down": 0.55
-      },
-      "cpu": 1.3,
-    },
-    "ts": "2014-12-30T14:47:36+00:00"
-  }
-  ```
-
 ## Last event cache
 {: #last-event-cache}
 

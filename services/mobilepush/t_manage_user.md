@@ -8,7 +8,7 @@ copyright:
 
 # Registering a device with userId
 {: #register_device_with_userId}
-Last updated: 23 August 2016
+Last updated: 29 August 2016
 {: .last-updated}
 
 To register for userId-based notification, complete the following steps:
@@ -185,33 +185,6 @@ Use the **registerWithUserId** API to register the device for {{site.data.keywor
 
 Pass the unique userId value for registering for {{site.data.keyword.mobilepushshort}}.
 
-## Google Chrome and Mozilla Firefox
-{: web-register}
-
-Use the following APIs to register for userId based notifications. Initialize the SDK with `app GUID`, `app Region` and `Client Secret`.
-
-  ```
-    var bmsPush = new bmsPush();
-    var params = {
-        "appGUID":"push app GUID",
-        "appRegion":"App Region"
-        "clientSecret":"Push Client Secret" (optional)
-      }
-      bmsPush.initialize(params, function(response){
-          alert(response.response)
-      })
-  ```
-	{: codeblock}
-  
-After successfully initialized register the web application with userId.
-
-  ```
-    bmsPush.registerWithUserId("UserId", function(response) {
-      alert(response.response)
-    })
-  ```
-	{: codeblock}
-
 # Using userId-based notifications
 {: #using_userid}
 
@@ -220,6 +193,6 @@ The userId-based notifications are notification messages that are targeted to a 
 
 1. From the **Push Notification** dashboard, click the **Notifications** tab.
 1. Select the **UserId** option to send userId-based notifications.
-1. In the **Search** UserId field, search for the userid that you want to use and then click the **+Add** button.![Notifications Screen](images/user_notification.jpg)
+1. In the **Search** User Id field, search for the user Id that you want to use and then click the **+Add** button.![Notifications Screen](images/user_notification.jpg)
 1. In the **Message Text** field, enter text that want to send in your notification.
 1. Click the **Send** button.

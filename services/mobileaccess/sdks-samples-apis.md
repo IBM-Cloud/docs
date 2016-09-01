@@ -9,7 +9,7 @@ copyright:
 
 
 # {{site.data.keyword.amashort}} SDKs, samples, and API reference
-Last updated: 23 August 2016
+Last updated: 25 August 2016
 {: .last-updated}
 
 To add {{site.data.keyword.amafull}} SDKs to your app, choose the SDKs that you want to use. Then configure your dependency manager to pull the SDKs into your app.
@@ -131,7 +131,7 @@ pod 'BMSFacebookAuthentication'
 [Git repo](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
 [API reference](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
-*Note:* While the Objective-C SDK remains fully supported, and still considered the primary SDK for {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue this SDK later this year in favor of the new Swift SDK. For new applications we highly recommend the Swift SDK (see Setting up the iOS Swift SDK).
+**Note:** While the Objective-C SDK remains fully supported, and still considered the primary SDK for {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue this SDK later this year in favor of the new Swift SDK. For new applications we highly recommend the Swift SDK (see Setting up the iOS Swift SDK).
 #### Install the Facebook SDK with CocoaPods
 {: #facebooksdk-ios-cocoapods}
 
