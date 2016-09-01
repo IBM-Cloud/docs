@@ -11,7 +11,7 @@ copyright:
 # Enabling Facebook authentication for Android apps
 {: #facebook-auth-android}
 
-Last updated: 23 August 2016
+Last updated: 29 August 2016
 {: .last-updated}
 
 
@@ -106,7 +106,6 @@ Your Android project might have two `build.gradle` files:  for the project and a
 
 	After you save your updates, the `facebookauthentication` module downloads and installs all necessary SDKs in your Android project.
 
-
 1. Synchronize your project with Gradle. Click **Tools > Android > Sync project with Gradle Files**.
 
 1. Open the `res/values/strings.xml` file and add a `facebook_app_id` string that contains your Facebook Application ID:
@@ -168,17 +167,14 @@ Your Android project might have two `build.gradle` files:  for the project and a
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 
 	FacebookAuthenticationManager.getInstance().register(this);
-```
+	```
 
    * Replace `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
    
-   * Replace `<MCAServiceTenantId>` with the `tenantId` value that you see when you click  the **Show
-Credentials** button on the {{site.data.keyword.Bluemix_notm}} service tile.
+   * Replace `<MCAServiceTenantId>` with the `tenantId` value that you see when you click  the **Show Credentials** button on the {{site.data.keyword.Bluemix_notm}} service tile.
    
   **Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
-					
-
-
+	
 1. Add the following code to your Activity:
 
 	```Java

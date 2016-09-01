@@ -8,7 +8,7 @@ copyright:
 {:new_window: target="_blank"}
 # Sandbox and production modes
 {: #push-sandboxandproduction-modes}
-Last updated: 16 August 2016
+Last updated: 29 August 2016
 {: .last-updated}
 
 You can use {{site.data.keyword.mobilepushshort}} in one of the following modes: sandbox or production. Sandbox is a self-contained test environment to develop and test push API integration with the server application push service. You first configure sandbox and production modes by using the Push Dashboard. You switch the mode of operation of push service between sandbox and production by using the [Push REST API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} . By default, the sandbox mode is enabled. However, when you switch between modes, the tags, devices, and subscriptions are not shared between these modes.

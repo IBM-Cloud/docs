@@ -10,7 +10,7 @@ copyright:
 
 # Enabling tag-based notifications
 {: #tag_based_notifications}
-Last updated: 16 August 2016
+Last updated: 29 August 2016
 {: .last-updated}
 
 Tag-based notification messages are targeted to all devices that are subscribed to a particular tag. 

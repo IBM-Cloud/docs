@@ -40,14 +40,14 @@ You can also use the command line to get the service credentials:
 
 The "Accept-Language" header specifies which language to use for the error messages that are output by [Push REST API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}. The following languages are supported for error messages: Chinese (Simplified), Chinese, (Traditional), English (US), German, French, Italian, Japanese, Korean, Portuguese, and Spanish.
 
-## appSecret and clientSecret
+## appSecret 
 {: #push-api-rest-secret}
 
-Push Notifications APIs are secured by two types of secrets - appSecret and clientSecret. The 'appSecret' protects APIs that are typically invoked by back end applications; such as the API to send Push Notifications and the API to configure settings. The'clientSecret' protects APIs that are typically invoked by mobile client applications.  With an instance of  {{site.data.keyword.mobilepushshort}}, the service generates an appSecret and a clientSecret (each of which is a unique key) and passes it in the response header. 
+When an application binds to the {{site.data.keyword.mobilepushshort}}, the service generates an appSecret (a unique key) and passes it in the response header. If you are using the IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API, use the REST API reference to obtain information on which APIs you need to secure. For information about the REST API, see REST API Reference.
 
-If you are using the IBM® {{site.data.keyword.mobilepushshort}} for Bluemix Rest API, use the REST API reference to obtain information on which APIs you need to secure with which type of secret. For information about the REST API, see REST API Reference.  The request header must contain the appSecret or the clientSecret as required by the API being used. If not, the server returns a 401 Unauthorized Error code. 
+The request header must contain the appSecret. If not, the server returns a 401 Unauthorized Error code. When the {{site.data.keyword.mobilepushshort}} is added to an application, a specific AppID is created. As part of the response, you get a header called appSecret that is used for creating Tags or sending messages. The operation happens through services in the catalog or the boilerplate.
 
-To get the appSecret and clientSecret value:
+To get the appSecret value:
 
 1. Click the *app-name* that is bound to the push service.
 2. Click the **Show Credentials** link to display the appSecret (AppID).
@@ -65,15 +65,12 @@ The **Show Credentials** screen shows information about the AppSecret:
        "url": "http://imfpush.ng.bluemix.net/imfpush/v1/apps/b615b280-b37e-4042-8815-38a758f234e2",
        "admin_url": "//mobile.ng.bluemix.net/imfpushdashboard/?appGuid=b615b280-b37e-4042-8815-38a758f234e2",
        "appSecret": "8dac71a5-2219-42b3-a9f3-dbb828ba1f04",
-       "clientSecret": "be2242f8-58c7-437d-b580-7f50de7e3413"
        }
      }
     ]
     }
    ```
 	{: codeblock} 
-
-Alternatively, the appSecret and clientSecret for a service instance can also be obtained from the service instance's PushDashboard.  Navigate to the Configuration panes to see the secrets assigned to the service instance.
 
 ##Push REST API filters
 {: #push-api-rest-filters}
