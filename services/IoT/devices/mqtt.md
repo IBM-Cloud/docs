@@ -5,84 +5,133 @@ copyright:
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-
 # MQTT connectivity for devices
 {: #mqtt}
-Last updated: 31 August 2016
+Last updated: 7 July 2016
 {: .last-updated}
-
-MQTT is the primary protocol that devices and applications use to communicate with the {{site.data.keyword.iot_full}}. Client libraries, information, and samples are provided to help you to connect and integrate your devices with {{site.data.keyword.iot_short_notm}}.
-{:shortdesc}
 
 ## Client connections
 {: #client_connections}
 
-For information about client security and how to connect MQTT clients to devices in {{site.data.keyword.iot_short_notm}}, see [Connecting applications, devices, and gateways to {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
+To connect MQTT clients for devices that are in your {{site.data.keyword.iot_short}} instance, use the following URL:
+
+<pre class="pre"><var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com</pre>
+{: codeblock}
+
+Where *orgId* is the unique organization ID that was generated when you registered the service instance.
+
+### Unencrypted client connections
+
+For unencrypted client connections, connect on port **1883**.
+
+**Important:** Devices submit information to the {{site.data.keyword.iot_full}} as plain text, including the authentication credentials for the device. To secure the transmission, always use an encrypted connection.
 
 
-## Connecting devices to the Quickstart service
+### Encrypted client connections
 
-The Quickstart service is the fastest level of service. It offers no confirmation of receipt and does not support MQTT quality of service (QoS) levels greater than zero. When you connect to the Quickstart service, authentication or registration is not required, and the ``orgId`` must be set to ``quickstart``.
+For encrypted client connections, connect on port **8883**, or for WebSockets, connect on port **443**.
 
-If you are writing device code for use with Quickstart, be aware that the following {{site.data.keyword.iot_short_notm}} service features are not supported in Quickstart mode:
+Many client libraries require that you provide the server's public certificate in PEM format. To view the entire certificate chain for \*.messaging.internetofthings.ibmcloud.com, go to [messaging.pem](https://github.com/ibm-messaging/iot-python/blob/master/src/ibmiotf/messaging.pem).
+
+**Tip:** Some SSL client libraries do not support domains that include a wildcard. If you cannot successfully change libraries, disable certificate checking.
+
+**Prerequisites:** {{site.data.keyword.iot_short_notm}} requires Transport Layer Security (TLS) V1.2 and the following cipher suites:
+
+- ECDHE-RSA-AES256-GCM-SHA384
+- AES256-GCM-SHA384
+- ECDHE-RSA-AES128-GCM-SHA256
+- AES128-GCM-SHA256 *(as of 1 June 2015)*
+
+
+
+**Note:** **Device support in Quickstart**
+
+When you connect to the Quickstart service, authentication (or registration) is not required and the ``orgId`` must be set to ``quickstart``.
+
+The Quickstart service does not currently support MQTT quality of service (QoS) levels greater than zero. This is the fastest level and offers no confirmation of receipt.
+
+If you are writing device code for use with Quickstart, be aware that some of the  {{site.data.keyword.iot_short_notm}} service features are not supported. The following features are not supported in Quickstart mode:
 
 -  Subscribing to commands
 -  Device Management Protocol
 -  Clean or durable sessions
 
-**Important:** Messages that are sent from devices at a rate greater than one per second might be discarded.
+Also, messages sent from devices at a rate greater than 1 per second might be discarded.
+
+## MQTT client identifier
+{: #mqtt_client_id}
+
+For a device to successfully authenticate, define each MQTT client ID in the following format:
+
+<pre class="pre">d:<var class="keyword varname">orgId</var>:<var class="keyword varname">deviceType</var>:<var class="keyword varname">deviceId</var></pre>
+{: codeblock}
+
+Where:
+-  The lowercase **d** character means that the connecting client is a device.
+-  *orgId* is the unique six character organization ID that was generated when you registered the service alphanumeric string that was assigned when you first registered the service.
+-  *deviceType* is the identifier for the type of device that is connecting. It might be useful to think of this as analogous
+   to a model number.
+-  *deviceId* must uniquely identify a device across all devices of a specific device_type, it might be useful to think of this as analogous to a serial number.
+
+**Note:** When you assign values for *typeId* and *deviceId* parameters, you can use any scheme of your choice, however the following restrictions apply:
+
+- The maximum length is 36 characters, which can consist of any of the following:
+    - Alpha-numeric characters (``a-z``, ``A-Z``, ``0-9``)
+    - Dashes (-)
+    - Underscores (_)
+    - Dots(.)
 
 
 ## MQTT authentication
 {: #mqtt_authentication}
 
-For gateways and devices, {{site.data.keyword.iot_short_notm}} uses MQTT token-based authentication.
+### User names
 
-To enable MQTT authentication, submit a user name and password when you make an MQTT connection.
+The {{site.data.keyword.iot_short_notm}} service currently supports token-based authentication only for devices, as such there is only one valid user name for devices today.
 
-### User name
+A value of ``use-token-auth`` indicates to the service that the authentication token for the device will be passed as the password for the MQTT connection.
 
-The user name is the same value for all devices: ``use-token-auth``. This value causes {{site.data.keyword.iot_short_notm}} to use the device's authentication token, which is specified as the password.
 
 ### Password
 
-The password for each device is the unique authentication token that was generated when the device was registered with {{site.data.keyword.iot_short_notm}}.
+If you are using token based authentication, submit the device authentication token as the password when making your MQTT connection.
+
 
 ## Publishing events
 {: #publishing_events}
 
-Devices publish to the event topics in the following format:
+Devices can only publish to the event topics in the following format:
 
 <pre class="pre">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
 {: codeblock}
 
-Where
+Where:
 
--  **event_id** is the ID of the event, for example ``status``.  The event ID can be any string that is valid in MQTT. If wildcards are not used, subscriber applications must use this string in their subscription topic to receive the events that are published on their topic.
--  **format_string** is the format of the event payload, for example ``json``. The format can be any string that is valid in MQTT. If wildcards are not used, subscriber applications must use this string in their subscription topic to receive events that are published on their topic. 
+-  **event\_id** is the ID of the event, for example "status".  The event ID can be any string permitted by MQTT.  Subscriber applications must use this string in their subscription topic to receive the events published on this topic if wildcards are not used.
+-  **format\_string** is the format of the event payload, for example "json".  The format can be any string permitted by MQTT.  Subscriber applications must use this string in their subscription topic to receive events published on this topic if wildcards are not used.  If the format is not "json", then messages will not be stored in the Historian.
 
-**Important:** The message payload is limited to a maximum of 131072 bytes. Messages larger than this limit are rejected.
+**Important:** The message payload is limited to a maximum of 131072 bytes.  Messages larger than this will be rejected.
 
 
 ## Subscribing to commands
 {: #subscribing_to_commands}
 
-Devices can subscribe to command topics in the following format:
+Devices can only subscribe to command topics in the following format:
 
 <pre class="pre">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
 {: codeblock}
 
-Where
- - **command_id** is the ID of the command, for example, ``update``. The command ID can be any string that is valid in the MQTT protocol.  If wildcards are not used, a device must use this string in its subscription topic to receive commands that are published on their topic.
- - **format_string** is the format of the command payload, for example ``json``. The format can be any string that is valid in the MQTT protocol. If wildcards are not used, a device must use this string in its subscription topic to receive commands that are published on their topic.
+Where:
+ - **command\_id** is the ID of the command, for example, "update".  The command ID can be any string that is permitted by the MQTT protocol.  A device must use this string in its subscription topic to receive commands published on this topic if wildcards are not used.
+ - **format\_string** is the format of the command payload, for example "json".  The format can be any string that is permitted by the MQTT protocol.  A device must use this string in its subscription topic in order to receive commands published on this topic if wildcards are not used.
 
-Devices cannot subscribe to events from other devices. A device receives commands that are published only to its own device.
+Devices cannot subscribe to events from other devices. A device receives commands that are published specifically to only its own device.
 
 ## Managed devices
 {: #managed-devices}
@@ -91,14 +140,19 @@ Support for device lifecycle management is optional. The Device Management Proto
 
 ### Quality of service levels and clean session
 
-Managed devices can publish messages that have a quality of service (QoS) level of 0 or 1. Messages from the device must not be retained messages.
+Managed devices can publish messages with a quality of service (QoS) level of zero or one. If a QoS value of one is set, messages from the device are queued, if necessary. Messages from
+the device must not be retained messages.
 
-Messages with QoS=0 can be discarded and do not persist after the messaging server is restarted. Messages with QoS=1 can be queued and do persist after the messaging server is restarted. The durability of the subscription determines whether a request is queued. The ``cleansession`` parameter of the connection that made the subscription determines the durability of the subscription.  
-
-{{site.data.keyword.iot_short_notm}} publishes requests that have a QoS level of 1 to support queuing of messages. To queue messages that are sent while a managed device is not connected, configure the device not to use clean sessions by setting the ``cleansession`` parameter to false.
+{{site.data.keyword.iot_short_notm}} publishes requests with a QoS level of one to a support queue of messages. To queue messages that are sent when a managed device is offline, configure the device to use ``cleansession=false``.
 
 **Warning:**
-  If your managed device uses a durable subscription, any device management commands that are sent to your device while it is offline are reported as failed operations if the device does not reconnect to the service before the request times out. However, when the device reconnects, those requests are processed by the device. A durable subscription is specified by the ``cleansession=false`` parameter.
+  If your managed device uses a durable subscription of ``cleansession=false``, any device management commands that are sent to your device while it is offline will be
+  reported as failed operations if the device does not reconnect to the service before the
+  request times out. However, when the device reconnects, those requests will
+  be actioned by the device.
+
+
+When handling request failures, it is important to take this into account if you are using durable subscriptions for your managed devices.
 
 ### Topics
 
@@ -109,30 +163,31 @@ iotdm-1/#
 ```
 
 
-A managed device publishes to topics that are specific to the type of management request that is being performed:
+A managed device publishes to topics specific to the type of management request that is being performed, as follows:
 
-- The managed device publishes device management responses on ``iotdevice-1/response``.
-- For other topics that a managed device can publish to, see [Device Management Protocol](device_mgmt/index.html) and [Device management requests](device_mgmt/requests.html).
+- The managed device will publish device management responses on ``iotdevice-1/response``
+- For other topics that a managed device might publish to, see [Device Management Protocol](device_mgmt/index.html) and [Device management requests](device_mgmt/requests.html)
 
 
 
 ### Message format
 
-All messages are sent in JSON format.
+All messages are sent in JSON format. There are two types of messages.
 
-**Requests**  
-Requests are formatted as shown in the following code sample:
+
+1. Requests  
+Requests are formatted as outlined in the following code sample:
 
 <pre class="pre">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</pre>
 {: codeblock}
 
 Where:
 
- - **d** carries any data that is relevant to the request.
- - **reqId** is an identifier of the request and must be copied into a response. If a response is not required, you can omit the *reqId* field.
+ - ``d`` carries any data relevant to the request.
+ - *reqId* is an identifier of the request, and must be copied into a response. If a response is not required, you can omit the *reqId* field.
 
-**Responses**  
-Responses are formatted as shown in the following code sample:
+2. Responses  
+Responses are formatted as outlined in the following code sample:
 ```
         {
             "rc": 0,
@@ -142,9 +197,9 @@ Responses are formatted as shown in the following code sample:
         }
 ```
 Where:  
- - **rc** is a result code of the original request.
- - **message** is an optional element with a text description of the response code.
- - **d** is an optional data element that accompanies the response.
- - **reqId** is the request ID of the original request, which is used to correlate responses with requests. The device must ensure that all request IDs are unique. Responses to {{site.data.keyword.iot_short_notm}} requests must include the correct **reqId** value.
+ - "rc" is a result code of the original request.
+ - ``message`` is an optional element with a text description of the response code.
+ - ``d`` is an optional data element accompanying the response.
+ - ``reqId`` is the request ID of the original request, which is used to correlate responses with requests. The device must ensure that all request IDs are unique.  When responding to {{site.data.keyword.iot_short_notm}} requests, the correct ``reqId`` value must be sent in the response.
 
 For more information about specific request and response messages, see [Device Management Protocol](device_mgmt/index.html) and [Device Management Requests](device_mgmt/requests.html).
