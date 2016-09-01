@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
-Last updated: 29 August 2016
+Last updated: 1 September 2016
 {: .last-updated}
 
 
@@ -71,7 +71,9 @@ If you need to uninstall the plug-in, you can use the following commands, then y
 
 ## Using the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
 
-You can use the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks. To see a list of commands, run the following
+You can use the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks. Special characters such as spaces, plus signs (+), and ampersands (&) are not supported when you create org names, space names, and application security groups. Try using mixed capitalization or underscores to create unique names.
+
+To see a list of commands, run the following
 command:
 
 ```
