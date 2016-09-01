@@ -15,7 +15,7 @@ copyright:
 {: #feature_overview}
 
 Last updated: 29 June 2016
-{: .last-updated}
+{: .last-updated} 
 
 The {{site.data.keyword.iot_full}} is built on the following key areas:
 
