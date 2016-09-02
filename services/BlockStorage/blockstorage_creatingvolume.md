@@ -9,7 +9,7 @@ Last updated: 26 August 2016
 
 To create a volume, follow these steps:
 
-1.	Open the {{site.data.keyword.blockstorageshort}} service.
+1.	In the Bluemix UI, select **Console > Storage > Block Storage**.
 2.	Click **Create** to start the **Create Volume** dialog.
 3.	Provide the size of the volume that you want. Decimal numbers are not accepted. The size is limited by the quota that is assigned to your organization.
 4.	Provide a name. The name is for display purposes only.
