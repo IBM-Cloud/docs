@@ -37,4 +37,4 @@ Se instala un Liberty Collective y se configura siguiendo una estructura de dire
 
 **Nota**:
 * El mantenimiento puede aplicarse utilizando el [gestor de instalación](http://www.ibm.com/support/knowledgecenter/SSDV2W_1.8.3/com.ibm.cic.agent.ui.doc/helpindex_imic.html){: new_window} instalado en el directorio /home/virtuser/IBM/Installation Manager. Dado que los binarios subyacentes se han instalado como virtuser, asegúrese de que todos los fixpacks y arreglos temporales se instalen como virtuser.
-* Asegúrese de que los servidores se inician y detienen desde la línea de mandatos utilizando el ID administrativo de WebSphere,  no el usuario virtuser.
+* Asegúrese de que los servidores se inician y detienen desde la línea de mandatos utilizando el ID administrativo de WebSphere, no el usuario virtuser.

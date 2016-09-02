@@ -11,11 +11,13 @@ copyright:
 
 #系統存取
 {: #system_access}
+前次更新：2016 年 8 月 17 日
+{: .last-updated}
+
+
 以下主題包括建立及管理服務實例的方法，以及如何存取系統以及如何設定存取系統的多種方法。
 {: shortdesc}
 
-*前次更新：2016 年 6 月 8 日*
-{: .last-updated}
 
 ## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的 REST API 使用
 {: #restapi_usage}
@@ -25,19 +27,19 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的實例
 * 從 {{site.data.keyword.Bluemix_notm}} 使用者介面的 {{site.data.keyword.Bluemix_notm}}「型錄」及「服務儀表板」。
 * 藉由建立使用 RESTful API 的應用程式或 Script。
 
-透過使用遵循 Swagger 2.0 的 REST API，客戶能夠存取與透過入口網站和儀表板所提供功能的相同功能。如需所支援之 REST API 和資源的相關資訊，請參閱 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文件](https://new-console.{DomainName}/apidocs/231){: new_window}。
+透過使用遵循 Swagger 2.0 的 REST API，客戶能夠存取與透過入口網站和儀表板所提供功能的相同功能。如需所支援之 REST API 和資源的相關資訊，請參閱 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文件](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}。如需協助使用 REST API 的範例程式碼，請下載 Git Host 的 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 範例](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}。
 
 **附註：**建立服務實例之後，根據所建立的 T 恤尺碼，您的服務可能無法立即供使用。建議您查詢所傳回 JSON 的**狀態**欄位，以判斷服務實例的現行狀態。
 
-**附註：**[REST API 文件](https://new-console.{DomainName}/apidocs/231){: new_window}的範例程式碼中所參照的 API 基本 URL 是指向「美國南部地區」。如果您是使用其他地區，請確定您的應用程式參照適當的 API 基本 URL。
+**附註：**[REST API 範例](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}中所參照的 **apiEndpoint** URL 指向「美國南部地區」。如果您是使用其他地區，請確定您的應用程式參照適當的 **apiEndpoint**。
 
-*表 1. Rest API 的 API 基本 URL 實作*
+*表 1. Rest API 的 API 端點 URL 實作*
 
-| **地區名稱** | **地理位置** | **地區字首** | **API 基本 URL** |       
+| **地區名稱** | **地理位置** | **地區字首** | **API 端點 URL** |       
 |:-------------:|:----------:|:--------------:|:-------------:|
-| 美國南部地區 | 美國德州達拉斯 | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
-| 英國地區 | 英國倫敦 | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
-| 雪梨地區 | 澳洲雪梨 | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+| 美國南部地區 | 美國德州達拉斯 | ng | https://wasaas-broker.ng.bluemix.net/wasaas-broker/api  |
+| 英國地區 | 英國倫敦 | eu-gb | https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api  |
+| 雪梨地區 | 澳洲雪梨 | au-syd | https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api  |
 
 
 
