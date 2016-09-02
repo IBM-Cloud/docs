@@ -17,13 +17,13 @@ copyright:
 {:pre: .pre}
 
 # 使用 {{site.data.keyword.openwhisk_short}} 儀表板監視 {{site.data.keyword.openwhisk_short}} 活動
-*前次更新：2016 年 2 月 9 日*
+前次更新：2016 年 8 月 2 日
 {: .last-updated}
 
 [{{site.data.keyword.openwhisk}} 儀表板](https://{DomainName}/whisk/dashboard/)提供活動的圖形摘要。使用儀表板，以判定 {{site.data.keyword.openwhisk_short}} 動作的效能及性能。
 {:shortdesc}
 
-隨時按一下「重新載入」，以使用最新啟動日誌資料來更新儀表板。
+隨時按一下**重新載入**，以使用最新啟動日誌資料來更新儀表板。
 
 ## 活動摘要
 {: #summary}
@@ -49,7 +49,7 @@ copyright:
 {: #log}
 
 此視圖顯示啟動日誌的格式化版本。它會顯示每次啟動的詳細資料，但是一分鐘會輪詢一次來尋找新的啟動。按一下動作來顯示詳細日誌。
-**附註**：若要使用 CLI 來取得「活動日誌」中顯示的輸出，請使用下列指令： 
+**附註：**若要使用 CLI 來取得「活動日誌」中顯示的輸出，請使用下列指令： 
 
   ```
 wsk activation poll
@@ -61,4 +61,4 @@ wsk activation poll
 
 選取您要檢視的動作日誌，以及選取所記載活動的時間範圍。 
 
-**附註**：這些過濾器會套用至儀表板上的所有視圖。
+**附註：**這些過濾器會套用至儀表板上的所有視圖。

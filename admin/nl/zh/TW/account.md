@@ -17,23 +17,37 @@ copyright:
 
 # 管理 {{site.data.keyword.Bluemix_notm}} 帳戶
 {: #mngacct}
-*前次更新：2016 年 7 月 12 日*
+*前次更新：2016 年 8 月 16 日*
 {: .last-updated}
 
-移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **帳戶**，以設定您帳戶的通知、檢視您帳戶的用量，或檢視您的帳單。
+移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶**，以設定您帳戶的通知、檢視您帳戶的使用情形，或檢視您的帳單。
 {:shortdesc}
+
+## 註冊 {{site.data.keyword.Bluemix_notm}}
+{: #signup}
+
+您可以使用現有 IBM ID 來註冊 {{site.data.keyword.Bluemix_notm}} 帳戶，方法是建立新的 IBM ID 或使用聯合 ID。聯合 ID 是公司網域內已向 IBM 註冊的 ID，因此您可以使用網域及使用者認證來存取 IBM Web 應用程式。  
+
+只有在公司已與 IBM 合作登錄時，才能使用聯合 ID 來註冊 {{site.data.keyword.Bluemix_notm}}。向 IBM 登錄公司網域，可讓使用者使用其現有公司使用者認證來登入 IBM 產品和服務。然後，透過公司的身分提供者來處理鑑別。當您使用聯合 ID 登入 {{site.data.keyword.Bluemix_notm}} 時，系統會提示您透過公司的登入頁面進行登入。如需要求向 IBM 登錄公司或組織網域的相關資訊，或程序的相關資訊，請參閱 [IBM ID Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}。當您要求登錄聯合 ID 時，需要有 IBM 贊助者（例如供應項目代言人或用戶端代言人）。
+
+*表 1. 註冊方法*
+
+| 註冊方法 | 詳細資料 |    
+|-----------------|---------|
+|現有 IBM ID | 如果您已經有 IBM ID，請使用用於其他 IBM 產品及服務的現有認證來註冊 {{site.data.keyword.Bluemix_notm}}。您需要在註冊時輸入電話號碼。 |
+|新的 IBM ID | 如果您還沒有 IBM ID，則可以選擇建立 IBM ID。IBM ID 可讓您將一個登入使用者名稱用於所有使用的 IBM 產品及服務（包括 {{site.data.keyword.Bluemix_notm}}）。您需要輸入個人資訊，包括新認證的名字和姓氏、電話號碼及密碼。使用其他 IBM 產品及服務時，您可以使用此 IBM ID 進行登入。  |
+|聯合 ID | 如果您的公司要求向 IBM 登錄公司網域中的使用者認證，您可以使用已用於公司登入的認證來註冊 {{site.data.keyword.Bluemix_notm}}。您需要在註冊時輸入電話號碼。 |
 
 ## 設定通知
 {: #notifications}
 
-移至**帳戶和支援** &gt; **帳戶** &gt; **通知**，以設定一般帳戶和消費通知。消費通知僅適用於「訂閱」和「隨收隨付制」的 {{site.data.keyword.Bluemix_notm}} 帳戶擁有者。
+移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; **通知**，以設定一般帳戶和消費通知。消費通知僅適用於「訂閱」和「隨收隨付制」的 {{site.data.keyword.Bluemix_notm}} 帳戶擁有者。
 
-您可以針對 {{site.data.keyword.Bluemix_notm}} 事件和計劃的維護作業設定平台電子郵件通知，並可設定消費通知，以在帳戶接近您指定的消費臨界值時警示您。請完成下列作業，為您的帳戶設定不同的通知類型。
+您可以針對 {{site.data.keyword.Bluemix_notm}} 事件和計劃性的維護作業設定平台電子郵件通知，並可設定消費通知，以在帳戶接近您指定的消費臨界值時警示您。請完成下列作業，為您的帳戶設定不同的通知類型。
 
 ### 設定平台通知
 
-移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **帳戶** &gt; **平台**，以針對 {{site.data.keyword.Bluemix_notm}} 事件和計劃的維護作業來設定電子郵件通知。
-您可以選取或清除每一個選項，以啟用或停用電子郵件通知。
+移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; **通知** &gt; **平台**，以設定 {{site.data.keyword.Bluemix_notm}} 事件和計劃性維護的電子郵件通知。您可以選取或清除每一個選項，以啟用或停用電子郵件通知。
 
 ### 設定消費通知
 {: #spendingnotifications}
@@ -64,7 +78,7 @@ copyright:
 
 身為組織的帳戶擁有者或帳單管理員，您可以使用「用量儀表板」視圖，來查看組織中每個月所使用的運行環境、容器、服務及支援的即時費用。您可以查看所有地區的運行環境 GB-小時和服務耗用量，或選擇查看特定地區。
 
-若要開啟「用量儀表板」視圖，請按一下**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **用量儀表板**。帳單管理員只能看到他們在其中身為帳單管理員之組織的詳細資料。
+若要開啟「用量儀表板」視圖，請按一下**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **用量儀表板**。帳單管理員只能針對他們身為帳單管理員的組織看到其詳細資料。
 
 在每一個計費週期的結尾，會針對跨所有組織發生的用量總計，向帳戶擁有者收費。身為帳戶擁有者，您可以依地區和組織來過濾用量摘要。您也可以按一下特定月份，以查看該月份的用量。從**組織**清單中選取**所有組織**，以查看帳戶中所有組織的用量。
 
@@ -72,6 +86,6 @@ copyright:
 ## 更新計費資訊
 {: #account_billing}
 
-身為帳戶擁有者，您可以編輯、新增或移除與 {{site.data.keyword.Bluemix_notm}} 帳戶相關聯的預存信用卡資訊。移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **計費**。
+身為帳戶擁有者，您可以編輯、新增或移除與 {{site.data.keyword.Bluemix_notm}} 帳戶相關聯的預存信用卡資訊。移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **計費**。
 
 如果您有 SoftLayer 帳戶鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶，請參閱[帳戶鏈結後的 {{site.data.keyword.Bluemix_notm}} 使用計費](../admin/softlayerlink.html#bill_usage)，以取得計費方式的相關資訊。

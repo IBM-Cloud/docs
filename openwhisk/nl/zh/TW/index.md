@@ -17,7 +17,7 @@ copyright:
 {:pre: .pre}
 
 # 開始使用 {{site.data.keyword.openwhisk_short}}
-*前次更新：2016 年 6 月 28 日*
+前次更新：2016 年 8 月 4 日
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} 是分散式事件驅動運算服務。{{site.data.keyword.openwhisk_short}} 會執行應用程式邏輯，以回應來自 Web 或透過 HTTP 的行動應用程式的事件或直接呼叫。事件可以從 Bluemix 服務（如 Cloudant）以及外部來源提供。開發人員可以關注撰寫應用程式邏輯，以及建立依需求執行的動作。執行動作的比率一律會符合事件比率，導致固有擴充及備援以及最佳使用率。只需為您的使用量付費，而且不需要管理伺服器。您也可以取得[原始碼](https://github.com/openwhisk/openwhisk)，以及自行執行系統。
@@ -28,9 +28,12 @@ copyright:
 ## 設定 {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_configure_cli}
 
-您可以使用 {{site.data.keyword.openwhisk_short}} 指令行介面 (CLI) 來設定名稱空間及授權金鑰。移至[配置 CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window}，並遵循指示進行安裝。請注意，您必須已在系統上安裝 Python 2.7，才能使用 CLI。
+您可以使用 {{site.data.keyword.openwhisk_short}} 指令行介面 (CLI) 來設定名稱空間及授權金鑰。移至[配置 CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window}，並遵循指示進行安裝。 
 
-使用 CLI 設定 {{site.data.keyword.openwhisk_short}} 之後，您可以從指令行或透過 REST API 開始使用它。
+**淘汰注意事項**：有不需要安裝 Python 的新 CLI。
+先前的 CLI（Python 型）目前已淘汰，而且僅適合作為備份下載選項。如果您選擇使用已淘汰的 CLI，則必須已在系統上安裝 Python 2.7。 
+
+使用 CLI 設定 {{site.data.keyword.openwhisk_short}} 之後，您可以從指令行開始使用它。
 
 ## 使用 {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_using_cli}
@@ -51,7 +54,7 @@ copyright:
 ## 使用 REST API 與 {{site.data.keyword.openwhisk_short}} 搭配
 {: #openwhisk_start_using_restapi}
 
-啟用 {{site.data.keyword.openwhisk_short}} 環境之後，您可以使用 REST API 呼叫來搭配使用 {{site.data.keyword.openwhisk_short}} 與 Web 應用程式或行動應用程式。如需動作、啟動、套件、規則及觸發程式的 API 的詳細資料，請參閱 [{{site.data.keyword.openwhisk_short}} API 文件](https://new-console.{DomainName}/apidocs/98)。
+啟用 {{site.data.keyword.openwhisk_short}} 環境之後，您可以使用 REST API 呼叫來搭配使用 {{site.data.keyword.openwhisk_short}} 與 Web 應用程式或行動應用程式。如需有關動作、啟動、套件、規則及觸發程式的 API 的詳細資料，請參閱 [{{site.data.keyword.openwhisk_short}} API 文件](https://new-console.{DomainName}/apidocs/98)。
 
 ## {{site.data.keyword.openwhisk_short}} Hello World 範例
 {: #openwhisk_start_hello_world}
@@ -113,6 +116,7 @@ wsk action invoke hello --blocking --result --param name Fred
 
 
 ## 系統詳細資料
+{: #openwhisk_system_details}
 
 您可以在下列主題中尋找 {{site.data.keyword.openwhisk_short}} 的其他資訊：
 
@@ -122,9 +126,14 @@ wsk action invoke hello --blocking --result --param name Fred
 * [REST API](https://new-console.{DomainName}/apidocs/98)
 
 # 相關鏈結
-## api
-* [REST API 文件](./openwhisk_reference.html#openwhisk_ref_restapi)
+{: #rellinks}
 
-## 一般
+## API 參考資料
+{: #api}
+* [REST API 文件](./openwhisk_reference.html#openwhisk_ref_restapi)
+* [REST API](https://new-console.{DomainName}/apidocs/98){:new_window}
+
+## 相關鏈結
+{: #general}
 * [探索：{{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
 * [IBM developerWorks 上的 {{site.data.keyword.openwhisk_short}}](https://developer.ibm.com/openwhisk/){:new_window}

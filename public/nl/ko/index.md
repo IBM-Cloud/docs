@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 퍼블릭
 {: #public}
-*마지막 업데이트 날짜: 2016년 5월 19일*
+마지막 업데이트 날짜: 2016년 8월 8일
 {: .last-updated}
 
 
@@ -165,39 +165,25 @@ copyright:
 ## 지역
 {: #ov_intro_reg}
 
-{{site.data.keyword.Bluemix_notm}} 지역은 앱을 배치할 수 있는 정의된 지리적 영역입니다. 애플리케이션 관리를 위한 동일한 {{site.data.keyword.Bluemix_notm}} 인프라 및 대금 청구를 위한 동일한 사용량 세부사항을 사용하여 다른 지역에 앱 및 서비스 인스턴스를 작성할 수 있습니다. 고객과 가장 가까이에 있는 지역을 선택하고
-이 지역에 앱을 배치하여 애플리케이션 대기 시간을 단축할 수 있습니다. 또한 보안 문제를 해결하기 위해
-애플리케이션 데이터를 보관할 지역을
-선택할 수도 있습니다. 앱을 여러 지역에서 빌드할 경우
-이 중 한 지역의 작동이 중지되면 다른 지역에 있는 앱은 계속 실행됩니다.
-허용되는 리소스 양은 사용하는 각 지역마다 동일합니다.
+{{site.data.keyword.Bluemix_notm}} 지역은 앱을 배치할 수 있는 정의된 지리적 영역입니다. 애플리케이션 관리를 위한 동일한 {{site.data.keyword.Bluemix_notm}} 인프라 및 요금 청구를 위한 동일한 사용량 세부사항을 사용하여 다른 지역에 앱 및 서비스 인스턴스를 작성할 수 있습니다. 고객과 가장 가까이에 있는 지역을 선택하고 이 지역에 앱을 배치하여 애플리케이션 대기 시간을 단축할 수 있습니다. 또한 보안 문제를 해결하기 위해 애플리케이션 데이터를 보관할 지역을 선택할 수도 있습니다. 앱을 여러 지역에서 빌드할 경우 이 중 한 지역의 작동이 중지되면 다른 지역에 있는 앱은 계속 실행됩니다. 허용되는 리소스 양은 사용하는 각 지역마다 동일합니다.
 
-{{site.data.keyword.Bluemix_notm}}
-사용자 인터페이스를 사용하고 있는 경우 다른 지역으로 전환하여
-해당 지역의 영역에 대해 작업할 수 있습니다. **계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg)으로 이동하고 **지역** 선택기를 펼치십시오. 그리고 목록에서 다른 지역을 선택할 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하고 있는 경우 다른 지역으로 전환하여 해당 지역의 영역에 대해 작업할 수 있습니다. **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg)을 클릭하고 **지역** 선택기를 펼치십시오. 그런 다음 목록에서 다른 지역을 선택할 수 있습니다. 
 
-cf 명령행 인터페이스를 사용하고 있는 경우 cf api 명령을 사용하고 지역의 API 엔드포인트를 지정하여 작업하려는 {{site.data.keyword.Bluemix_notm}} 지역에 연결해야 합니다. 예를 들어,
-{{site.data.keyword.Bluemix_notm}} 유럽 영국 지역에 연결하려면 다음 명령을 입력하십시오.
+cf 명령행 인터페이스를 사용하고 있는 경우 cf api 명령을 사용하고 지역의 API 엔드포인트를 지정하여 작업하려는 {{site.data.keyword.Bluemix_notm}} 지역에 연결해야 합니다. 예를 들어, {{site.data.keyword.Bluemix_notm}} 유럽 영국 지역에 연결하려면 다음 명령을 입력하십시오.
 
 ```
 cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 ```
 
-Eclipse 도구를 사용하고 있는 경우
-{{site.data.keyword.Bluemix_notm}} 서버를 작성하고
-지역의 API 엔드포인트를 지정하여
-작업하려는 {{site.data.keyword.Bluemix_notm}} 지역에 연결해야 합니다.
-Eclipse 도구를 사용하는 방법에 대한 자세한 정보는 [{{site.data.keyword.IBM_notm}} Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.html#toolsinstall)를 참조하십시오.
+Eclipse 도구를 사용하고 있는 경우 {{site.data.keyword.Bluemix_notm}} 서버를 작성하고 지역의 API 엔드포인트를 지정하여 작업하려는 {{site.data.keyword.Bluemix_notm}} 지역에 연결해야 합니다. Eclipse 도구를 사용하는 방법에 대한 자세한 정보는 [{{site.data.keyword.IBM_notm}} Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.html#toolsinstall)를 참조하십시오.
 
-각 지역에
-고유한 접두부가 지정됩니다. {{site.data.keyword.Bluemix_notm}}는
-다음과 같은 지역 및 지역 접두부를 제공합니다. 
+각 지역에 고유한 접두부가 지정됩니다. {{site.data.keyword.Bluemix_notm}}는 다음과 같은 지역 및 지역 접두부를 제공합니다. 
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
 | **지역 이름** | **지리적 위치** | **지역 접두부** | **cf API 엔드포인트** | **UI 콘솔** |       
 |-----------------|-------------------------|-------------------|---------------------|----------------|
-| 미국 남부 지역 | 달라스, 미국 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| 미국 남부 지역 | 댈러스, 미국 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 영국 지역 | 런던, 영국 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 시드니 지역 | 시드니, 호주 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
@@ -244,10 +230,9 @@ SOR(System of Record) 및 SOE(System of Engagement)를 연결함으로써 개발
 *SOR(System of Record)*에는 비즈니스 레코드를 저장하고 표준화된 프로세스를 자동화하는 앱 및 데이터베이스가 포함됩니다. *SOE(System of Engagement)*는 SOR(System of Record)의 유용성을 확장하고
 사용자에게 보다 광범위하게 적용할 수 있도록 만드는 기능입니다. {{site.data.keyword.Bluemix_notm}}에서 작성한 앱과 SOR(System of Record)을 통합하여 다음 조치를 수행할 수 있습니다.
 
- * 사내 구축형 보안 커넥터를 다운로드하고 설치하여 앱과 백엔드 데이터베이스 간의 보안 통신을 사용하도록 합니다.
+ * 사내 구축 환경에 보안 커넥터를 다운로드하고 설치하여 앱과 백엔드 데이터베이스 간 보안 통신을 사용합니다. 
  * 데이터베이스를 안전한 방식으로 호출합니다.
- * 고객 관계 관리 시스템과 같이 데이터베이스 및 백엔드 시스템이 있는
-통합 플로우에서 API를 작성합니다.
+ * 고객 관계 관리 시스템과 같은 데이터베이스와 백엔드 시스템이 있는 통합 플로우에서 API를 작성합니다. 
  * 앱에 노출할 스키마 및 테이블만 노출합니다.
  * {{site.data.keyword.Bluemix_notm}}
 조직 관리자로서 조직 구성원에게만 표시되는

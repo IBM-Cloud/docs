@@ -4,7 +4,7 @@
 
 copyright:
 
-  années : 2015, 2016
+  years: 2015, 2016
 
  
 
@@ -51,7 +51,7 @@ copyright:
 # Tarification
 {: #pricing}
 
-*Dernière mise à jour : 1er juin 2016*
+*Dernière mise à jour : 16 août 2016*
 {: .last-updated}
 
 Vous pouvez exécuter des applications dans {{site.data.keyword.Bluemix}} et essayer des services
@@ -136,8 +136,7 @@ mensuel minimum. L'environnement {{site.data.keyword.Bluemix_notm}} dédié et l
 Vous pouvez convertir à tout moment votre version d'évaluation en compte facturable. Toutes les informations du compte sans facturation dans le cadre de votre essai gratuit, ainsi que les solutions {{site.data.keyword.Bluemix_notm}} seront fusionnées directement dans le nouveau compte de facturation.
 
 Après avoir créé un compte de facturation, vous pouvez éditer les informations que vous avez indiquées. Cliquez sur l'icône **Paramètres de
-profil** dans le coin supérieur droit de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, puis cliquez sur **Compte &gt; Type de compte** pour éditer
-vos informations.
+profil**, puis sur **Compte &gt; Type de compte** pour éditer vos informations.
 
 Si vous rencontrez des problèmes liés à {{site.data.keyword.Bluemix_notm}} lorsque vous utilisez un compte de type Paiement à la carte ou
 Abonnement, lisez la page [Comment obtenir de
@@ -518,9 +517,7 @@ les
 frais en temps réel pour les contextes d'exécution et les services que vous utilisez par mois dans vos organisations. Vous pouvez afficher le nombre de Go/heure utilisés pour le contexte d'exécution, ainsi que la consommation des services dans toutes les
 régions, ou sélectionner une région et un espace particuliers, pour les 12 derniers mois.
 
-Pour ouvrir la vue Tableau de bord de l'utilisation, cliquez sur l'icône **Compte et support** &gt; **Compte**
-&gt;
-*nom_de_votre_compte* &gt; **Tableau de bord de l'utilisation**. Dans la vue, vous pouvez afficher un
+Pour ouvrir la vue Tableau de bord de l'utilisation, cliquez sur l'icône **{{site.data.keyword.avatar}}**![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; *nom_votre_compte* &gt; **Tableau de bord de l'utilisation**. Dans la vue, vous pouvez afficher un
 récapitulatif de l'utilisation des contextes d'exécution et des services pour le compte. Les responsables de la facturation ne peuvent afficher les détails que pour les organisations pour lesquelles ils sont responsables de la
 facturation.
 
@@ -547,8 +544,7 @@ de bord de l'utilisation afin de visualiser les crédits éventuels dont bénéf
 compte
 SoftLayer avec un compte {{site.data.keyword.Bluemix_notm}}.
 
-Pour ouvrir la vue Tableau de bord de l'utilisation, cliquez sur l'icône **Compte et support**
-![Icône Compte et support](../admin/images/account_support.svg), puis sélectionnez **Compte**. Sur la page qui s'affiche,
+Pour ouvrir la vue Tableau de bord de l'utilisation, cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg), puis sélectionnez **Compte**. Sur la page qui s'affiche,
 cliquez sur **Tableau de bord de l'utilisation**. La vue présente vos crédits éventuels, ainsi que leur date d'expiration.
 
 ##Notifications
@@ -558,8 +554,7 @@ En tant que responsable d'un compte de type Paiement à la carte, vous pouvez d�
 total de votre compte, pour votre contexte d'exécution et vos services et pour des services individuels, à l'exception des services de tiers. Vous recevez des
 notifications lorsque vous atteignez 80 %, 90 % et 100 % des seuils que vous avez spécifiés pour les dépenses.
 
-Pour ouvrir la vue **Notifications**, cliquez sur l'icône **Compte et support** &gt; **Compte**
-&gt; *nom_de_votre_compte* &gt; **Notifications relatives aux dépenses**. Entrez une valeur numérique afin de définir un
+Pour ouvrir la vue **Notifications**, cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Comptet** &gt; *nom_votre_compte* &gt; **Notifications relatives aux dépenses**. Entrez une valeur numérique afin de définir un
 seuil pour les dépenses, en fonction duquel une notification sera déclenchée, pour chaque type de notification relative aux dépenses, si nécessaire. Vous pouvez aussi ajouter et supprimer des notifications pour des services individuels.
 
 ##Changement de plan
@@ -568,7 +563,7 @@ seuil pour les dépenses, en fonction duquel une notification sera déclenchée,
 Vous pouvez changer de plan de service dans {{site.data.keyword.Bluemix_notm}} dans le tableau de bord du service, si le changement de plan est possible pour ce service.
 
 Certains services seulement vous permettent de changer de plan de service. Si le changement de plan est possible pour le service, le tableau de bord
-du service affiche l'option **Plan** dans la navigation de gauche. Chaque service propose un
+du service affiche l'option **Plan** dans la navigation. Chaque service propose un
 ensemble différent d'étapes à suivre si vous changez de plan.
 
 1. Pour changer de plan, dans le tableau de bord du service, cliquez sur **Plan**. En général, vous pouvez mettre à niveau votre plan ou passer à un plan de niveau inférieur.

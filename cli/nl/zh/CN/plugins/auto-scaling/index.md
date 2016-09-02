@@ -105,7 +105,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 </dl>
 
 
-## 显示应用程序的 Auto-Scaling 历史记录
+## 显示应用程序的自动扩展历史记录
 
 可以显示特定应用程序的自动扩展活动历史记录。自动扩展历史记录表将显示在命令行界面中。
 

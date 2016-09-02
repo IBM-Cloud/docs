@@ -17,13 +17,12 @@ copyright:
 
 # Gestion des membres d'équipe et des rôles
 {: #userroles}
-Dernière mise à jour : 12 juillet 2016
+Dernière mise à jour : 16 août 2016
 {: .last-updated}
 
 Depuis la page **Répertoire d'équipe** pour votre compte, vous pouvez gérer les membres d'équipe existants et leurs rôles dans votre
 organisation et vos espaces, ainsi qu'inviter de nouveaux membres d'équipe. Afin d'accéder au répertoire d'équipe pour votre compte,
-cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg) &gt;
-**Compte** &gt; *nom_de_votre_compte* &gt; **Répertoire d'équipe**. 
+cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *nom_votre_compte* &gt; **répertoire d'équipe**.
 {:shortdesc}
 
 Un propriétaire de compte effectue toutes les opérations sur les organisations et les espaces, y compris la gestion des membres d'équipe et des
@@ -90,14 +89,13 @@ d'environnement VCAP_SERVICES. Toutefois, un membre d'équipe possédant le rôl
 ## Ajustement de la visibilité du répertoire d'équipe
 {: #teamdirectoryvisibility}
 
-Selon la manière dont vos comptes et organisations {{site.data.keyword.Bluemix_notm}} sont configurés, vous souhaiterez peut-être modifier la visibilité de la page du répertoire d'équipe. Par défaut, tous les membres d'équipe de votre compte peuvent voir la liste complète des membres de l'équipe du compte, y compris tous les membres de toutes les organisations au sein du compte. Il se peut que pour des questions de confidentialité ou de sécurité, vous soyez amené à ajuster la visibilité de la page du répertoire d'équipe. Deux options s'offrent à vous pour la configuration de la visibilité de la page du répertoire d'équipe : tous les membres d'équipe ou juste vous, en tant que propriétaire du compte. 
+Selon la manière dont vos comptes et organisations {{site.data.keyword.Bluemix_notm}} sont configurés, vous souhaiterez peut-être modifier la visibilité de la page du répertoire d'équipe. Par défaut, tous les membres d'équipe de votre compte peuvent voir la liste complète des membres de l'équipe du compte, y compris tous les membres de toutes les organisations au sein du compte. Il se peut que pour des questions de confidentialité ou de sécurité, vous soyez amené à ajuster la visibilité de la page du répertoire d'équipe. Deux options s'offrent à vous pour la configuration de la visibilité de la page du répertoire d'équipe : tous les membres d'équipe ou juste vous, en tant que propriétaire du compte.
 
 Pour modifier la visibilité de la page du répertoire d'équipe, procédez comme suit :
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; **Compte** &gt; *nom_de_votre_compte* &gt; **Répertoire d'équipe**. 
-2. Pour l'option **Visibilité pour**, cliquez sur la sélection en cours pour afficher les options. 
-3. Sélectionnez ensuite **Tous** ou **Moi seulement** selon les besoins en cours pour votre compte. 
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; *nom_votre_compte* &gt; **répertoire d'équipe**. 
+2. Pour l'option **Visibilité pour**, cliquez sur la sélection en cours pour afficher les options.
+3. Sélectionnez ensuite **Tous** ou **Moi seulement** selon les besoins en cours pour votre compte.
 
 ## Invitation de membres d'équipe
 {: #inviteteammembers}
@@ -107,8 +105,7 @@ des membres d'équipe. Lorsque vous ajoutez de nouveaux membres d'équipe, le r�
 ultérieurement dans la page Répertoire d'équipe. Pour inviter un membre d'équipe, procédez comme suit :
 
 <ol>
-<li>Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg) &gt;
-**Compte** &gt; *nom_de_votre_compte* &gt; **Inviter des membres d'équipe**.</li>
+<li>Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; *nom_votre_compte* &gt; **Inviter des membres d'équipe**.</li>
 <li>Sélectionnez l'organisation dans laquelle inviter les membres d'équipe.</li>
 <li>Cliquez sur **Suivant**.</li>
 <li>Sélectionnez les espaces auxquels vos membre d'équipe doivent pouvoir accéder.</li>
@@ -127,9 +124,7 @@ adresses électroniques auxquelles envoyer les invitations, puis cliquez sur **E
 Cliquez sur **Afficher les éléments en attente** pour déterminer si les invitations sont en attente ou ont été acceptées. Vous
 pouvez choisir de renvoyer le courrier électronique d'invitation ou d'annuler l'invitation pour une invitation en attente à tout moment.
 
-Si vous avez un compte SoftLayer lié à votre compte {{site.data.keyword.Bluemix_notm}}, vous pouvez ajouter les membres de votre équipe SoftLayer. Accédez à
-l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg) pour accéder à la page &gt;
-**Compte** &gt; *nom_de_votre_compte* &gt; **Inviter des membres d'équipe**. Cliquez ensuite sur
+Si vous avez un compte SoftLayer lié à votre compte {{site.data.keyword.Bluemix_notm}}, vous pouvez ajouter les membres de votre équipe SoftLayer. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; *nom_votre_compte* &gt; **Inviter des membres d'équipe**. Cliquez ensuite sur
 **Ajouter** dans la section **Ajouter des membres d'équipe SoftLayer** pour vous authentifier dans votre compte
 SoftLayer et afficher la liste des membres d'équipe de votre compte SoftLayer. Pour plus d'informations sur l'ajout de membres d'équipe de votre compte
 SoftLayer, voir [Invitation de membres d'équipe SoftLayer dans {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users).
@@ -140,8 +135,7 @@ SoftLayer, voir [Invitation de membres d'équipe SoftLayer dans {{site.data.keyw
 Les propriétaires de compte et les responsables de l'organisation peuvent éditer les rôles d'organisation et d'espace pour
 les membres d'équipe existants dans la page **Répertoire d'équipe**. 
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; **Compte** &gt; *nom_de_votre_compte* &gt; **Répertoire d'équipe**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; *nom_votre_compte* &gt; **répertoire d'équipe**.
 2. Localisez le membre d'équipe dont vous voulez éditer les rôles.
 3. Cliquez sur **Afficher les rôles**.
 4. Sélectionnez ou désélectionner les rôles d'organisation afin de modifier l'accès du membre d'équipe aux organisations.
@@ -152,8 +146,7 @@ les membres d'équipe existants dans la page **Répertoire d'équipe**.
 
 Un gestionnaire de l'espace peut éditer les rôles des membres d'équipe dans son espace dans la page **Gérer les organisations**.
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; **Compte** &gt; *nom_de_votre_compte* &gt; **Gérer les organisations**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; *nom_votre_compte* &gt; **Gérer les organisations**.
 2. Localisez l'organisation dans laquelle se trouve votre espace.
 3. Cliquez sur **Afficher les détails**.
 4. Localisez votre espace et cliquez sur l'option d'**édition de l'espace**.

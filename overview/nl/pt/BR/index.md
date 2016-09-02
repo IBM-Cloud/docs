@@ -598,8 +598,7 @@ A tabela a seguir lista os idiomas nacionais suportados e os códigos de idioma 
 * [Pré-requisitos
 do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
 * [O que há de novo no {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
-* [Problemas
-conhecidos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
+* [Problemas conhecidos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}} glossário](glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} Folha de precificação](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)

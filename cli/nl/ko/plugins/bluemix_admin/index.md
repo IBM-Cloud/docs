@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+
 
 ---
 
@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 관리 CLI
 {: #bluemixadmincli}
 
-*마지막 업데이트 날짜: 2016년 6월 22일*
+마지막 업데이트 날짜: 2016년 8월 17일
 {: .last-updated}
 
 
@@ -53,7 +53,7 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 인스턴스 URL의 하위 도메인입니다.</dd>
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} 인스턴스 URL의 하위 도메인입니다. 예를 들면, <code>https://console.mycompany.bluemix.net/cli</code>입니다. </dd>
 </dl>
 </li>
 <li>{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오. <br/><br/>
@@ -62,6 +62,12 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>
 </li>
 </ol>
+
+플러그인을 설치 제거해야 하는 경우 다음 명령을 사용한 후 업데이트된 저장소를 추가하고 최신 플러그인을 설치할 수 있습니다. 
+
+* 플러그인 설치 제거: `cf uninstall-plugin-repo BluemixAdminCLI`
+* 플러그인 저장소 제거: `cf remove-plugin-repo BluemixAdmin`
+
 
 ## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 사용
 
@@ -102,7 +108,7 @@ cf login
 
 ### 사용자 추가
 
-LDAP 레지스트리에서
+환경의 사용자 레지스트리에서
 {{site.data.keyword.Bluemix_notm}} 환경에
 사용자를 추가할 수 있습니다. 다음 명령을 입력하십시오. 
 
@@ -110,6 +116,8 @@ LDAP 레지스트리에서
 cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
+
+**참고**: 특정 조직에 사용자를 추가하려면 조직의 관리자이거나 **관리자**(사용 가능한 대체는 **수퍼유저**) 또는 **쓰기** 액세스 권한이 포함된 **사용자** 권한이 있어야 합니다. 
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -158,7 +166,7 @@ cf ba set-permissions <user_name> <permission> <access>
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 내의 사용자 이름입니다.</dd>
 <dt class="pt dlterm">&lt;permission&gt;</dt>
-<dd class="pd">사용자의 권한을 설정합니다. 권한은 관리, 로그인, 카탈로그(읽기 또는 쓰기 액세스), 보고서(읽기 또는 쓰기 액세스) 또는 사용자(읽기 또는 쓰기 액세스)입니다.</dd>
+<dd class="pd">사용자의 권한을 설정합니다. 권한은 관리(사용 가능한 대체는 수퍼유저), 로그인(사용 가능한 대체는 기본), 카탈로그(읽기 또는 쓰기 액세스 권한), 보고서(읽기 또는 쓰기 액세스 권한) 또는 사용자(읽기 또는 쓰기 액세스 권한)입니다. </dd>
 <dt class="pt dlterm">&lt;access&gt;</dt>
 <dd class="pd">카탈로그, 보고서 또는 사용자 권한의 경우 <code>read</code> 또는 <code>write</code>로 액세스 레벨을 설정해야 합니다. </dd>
 </dl>
@@ -391,7 +399,7 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름을 입력하는 경우(예: "Standard" 또는 "Basic"), 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
+<dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름(예: "표준" 또는 "기본")을 입력하면 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
 </dl>
 
 **팁:** 긴 **ba enable-service-plan** 명령어에 대한
@@ -407,7 +415,7 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름을 입력하는 경우(예: "Standard" 또는 "Basic"), 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
+<dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름(예: "표준" 또는 "기본")을 입력하면 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
 </dl>
 
 **팁:** 긴 **ba disable-service-plan** 명령어에 대한
@@ -430,7 +438,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름을 입력하는 경우(예: "Standard" 또는 "Basic"), 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
+<dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름(예: "표준" 또는 "기본")을 입력하면 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">서비스의 가시성 목록에 추가할 {{site.data.keyword.Bluemix_notm}} 조직의
 이름 또는 GUID입니다. </dd>
@@ -449,7 +457,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">사용으로 설정할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름을 입력하는 경우(예: "Standard" 또는 "Basic"), 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
+<dd class="pd">사용으로 설정할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름(예: "표준" 또는 "기본")을 입력하면 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">서비스의 가시성 목록에서 제거할 {{site.data.keyword.Bluemix_notm}} 조직의
 이름 또는 GUID입니다. </dd>
@@ -472,7 +480,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름을 입력하는 경우(예: "Standard" 또는 "Basic"), 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
+<dd class="pd">사용할 서비스 플랜의 이름 또는 GUID입니다. 고유하지 않은 서비스 플랜 이름(예: "표준" 또는 "기본")을 입력하면 선택할 수 있는 서비스 플랜이 프롬프트됩니다. 서비스 플랜 이름을 식별하려면, 홈 페이지에서 서비스 카테고리를 선택한 후에 **추가**를 선택하여 해당 카테고리의 서비스를 보십시오. 서비스 이름을 클릭하여 세부사항 보기를 여십시오. 그러면 해당 서비스에 사용 가능한 서비스 플랜의 이름을 볼 수 있습니다.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">가시성을 추가할 {{site.data.keyword.Bluemix_notm}} 조직의
 이름 또는 GUID입니다. 명령에 추가로 조직 이름 또는 GUID를 입력하여 둘 이상의 조직에 대해 서비스의 가시성을 사용으로
@@ -559,3 +567,208 @@ cf ba delete-service-broker <service_broker>
 
 **팁:** 긴 **ba update-service-broker** 명령어에 대한
 별명으로 **ba usb**를 사용할 수도 있습니다.
+
+
+### 애플리케이션 보안 그룹 관련 작업
+
+애플리케이션 보안 그룹(ASG)에 대해 작업하려면 로컬 또는 전용 환경의 전체 액세스 관리자여야 합니다. 환경의 모든 사용자는 명령으로 대상이 되는 조직의 사용 가능한 ASG를 나열할 수 있습니다. 그러나 ASG의 작성, 업데이트 또는 바인드를 수행하려면 {{site.data.keyword.Bluemix_notm}} 환경의 관리자여야 합니다. 
+
+ASG는 {{site.data.keyword.Bluemix_notm}} 환경에서 애플리케이션의 아웃바운드 트래픽을 제어하는 가상 방화벽 역할을 합니다. 각 ASG는 네트워크 안팎으로 특정 트래픽과 통신을 허용하는 규칙의 목록으로 구성됩니다. 하나 이상의 ASG를 특정 보안 그룹 세트(예: 글로벌 액세스를 적용하는 데 사용되는 그룹 세트)에 바인딩하거나 {{site.data.keyword.Bluemix_notm}} 환경에서 조직 내의 영역에 바인딩할 수 있습니다. 
+
+{{site.data.keyword.Bluemix_notm}}는 처음에 외부 네트워크에 대한 모든 액세스가 제한된 상태로 설정됩니다. IBM에서 작성한 두 보안 그룹(`public_networks`, `dns`)을 사용하면 이들 그룹을 기본 Cloud Foundry 보안 그룹 세트에 바인딩할 때 외부 네트워크에 대한 글로벌 액세스가 가능합니다. 글로벌 액세스를 적용하는 데 사용되는 Cloud Foundry의 두 보안 그룹 세트는 **기본 스테이징** 그룹 세트와 **기본 실행** 그룹 세트입니다. 이 그룹 세트는 모든 실행 중인 앱 또는 모든 스테이징 앱에 대한 트래픽을 허용하는 규칙을 적용합니다. 이 두 개의 보안 그룹 세트에 바인딩하지 않으려면 Cloud Foundry 그룹 세트에서 바인드를 해제한 후 특정 영역에 보안 그룹을 바인딩할 수 있습니다. 자세한 정보는 [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}의 내용을 참조하십시오. 
+
+**참고**: 보안 그룹 관련 작업을 수행할 수 있는 다음 명령은 Cloud Foundry 1.6 버전을 기반으로 합니다. 
+
+#### 보안 그룹 나열, 작성, 업데이트, 삭제
+
+보안 그룹 작성과 출력 트래픽을 정의하는 규칙에 대한 자세한 정보는 [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}의 내용을 참조하십시오. 
+
+* 다음 명령을 입력하여 모든 보안
+그룹을 나열할 수 있습니다. 
+
+```
+cf ba security-groups
+```
+{: codeblock}
+
+**팁:** 긴 **ba security-groups** 명령어의 별명으로
+**ba sgs**를 사용할 수도 있습니다. 
+
+* 다음 명령을 입력하여 특정 보안 그룹의
+세부사항을 표시할 수 있습니다. 
+
+```
+cf ba security-groups <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">보안 그룹의 이름</dd>
+</dl>
+
+**팁:** `security-group` 매개변수가 있는 긴 **ba security-groups**
+명령어의 별명으로 **ba sg**를 사용할 수도 있습니다. 
+
+
+* 다음 명령을 입력하여 보안 그룹을
+작성할 수 있습니다. 작성하는 각 보안 그룹의 이름에 접두부 `adminconsole_`이 추가되어 IBM에서 작성한 보안 그룹과 구별됩니다. 
+
+```
+cf ba create-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">보안 그룹의 이름</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">규칙 파일의 절대 또는 상대 경로</dd>
+</dl>
+
+**팁:** 긴 **ba create-security-group** 명령어의
+별명으로 **ba csg**를 사용할 수도 있습니다. 
+
+* 다음 명령을 입력하여 보안
+그룹을 업데이트할 수 있습니다. 
+
+```
+cf ba update-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">보안 그룹의 이름</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">규칙 파일의 절대 또는 상대 경로</dd>
+</dl>
+
+**팁:** 긴 **ba update-security-group** 명령어의
+별명으로 **ba usg**를 사용할 수도 있습니다. 
+
+* 다음 명령을 입력하여 보안
+그룹을 삭제할 수 있습니다. 
+
+```
+cf ba delete-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">보안 그룹의 이름</dd>
+</dl>
+
+**팁:** 긴 **ba delete-security-group** 명령어의
+별명으로 **ba dsg**를 사용할 수도 있습니다. 
+
+
+#### 바인딩된 보안 그룹 바인드, 바인드 해제, 나열
+
+보안 그룹 바인드와 바인드 해제에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} 및 [애플리케이션 보안 그룹 바인딩 해제](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}의 내용을 참조하십시오. 
+
+* 다음 명령을 입력하여 기본 스테이징 보안 그룹
+세트에 바인딩할 수 있습니다. 
+
+```
+cf ba bind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">보안 그룹의 이름</dd>
+</dl>
+
+**팁:** 긴 **ba bind-staging-security-group** 명령어의
+별명으로 **ba bssg**를 사용할 수도 있습니다. 
+
+* 다음 명령을 입력하여 기본 실행 보안 그룹
+세트에 바인딩할 수 있습니다. 
+
+```
+cf ba bind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">보안 그룹의 이름</dd>
+</dl>
+
+**팁:** 긴 **ba bind-running-security-group** 명령어의
+별명으로 **ba brsg**를 사용할 수도 있습니다. 
+
+* 다음 명령을 입력하여 기본 스테이징 보안 그룹 세트에
+대한 바인드를 해제할 수 있습니다. 
+
+```
+cf ba cf ba unbind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">보안 그룹의 이름</dd>
+</dl>
+
+**팁:** 긴 **ba unbind-staging-security-group** 명령어의
+별명으로 **ba ussg**를 사용할 수도 있습니다. 
+
+* 다음 명령을 입력하여 기본 실행 보안 그룹 세트에
+대한 바인드를 해제할 수 있습니다. 
+
+```
+cf ba unbind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">보안 그룹의 이름</dd>
+</dl>
+
+**팁:** 긴 **ba bind-running-security-group** 명령어의
+별명으로 **ba brsg**를 사용할 수도 있습니다. 
+
+* 다음 명령을 입력하여 영역에 보안
+그룹을 바인딩할 수 있습니다. 
+
+```
+cf ba bind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">보안 그룹의 이름</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">보안 그룹을 바인딩할 대상 조직의 이름</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">보안 그룹을 바인딩할 대상 조직 내의 영역 이름</dd>
+</dl>
+
+**팁:** 긴 **ba bind-security-group** 명령어의
+별명으로 **ba bsg**를 사용할 수도 있습니다. 
+
+* 다음 명령을 입력하여 영역에 대한 보안
+그룹의 바인드를 해제할 수 있습니다. 
+
+```
+cf ba unbind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">보안 그룹의 이름</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">보안 그룹을 바인딩할 대상 조직의 이름</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">보안 그룹을 바인딩할 대상 조직 내의 영역 이름</dd>
+</dl>
+
+**팁:** 긴 **ba unbind-staging-security-group** 명령어의
+별명으로 **ba usg**를 사용할 수도 있습니다. 
+

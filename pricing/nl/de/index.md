@@ -51,7 +51,7 @@ copyright:
 # Preisstruktur
 {: #pricing}
 
-*Letzte Aktualisierung: 1. Juni 2016*
+*Letzte Aktualisierung: 16. August 2016*
 {: .last-updated}
 
 Sie können kostenfrei Anwendungen in {{site.data.keyword.Bluemix}} ausführen und {{site.data.keyword.Bluemix_notm}}-Services testen. Sie können sich für einen kostenfreien 30-Tage-Test anmelden, bei dem Sie zusätzliche Leistungen, einschließlich kostenloser Unterstützung, erhalten. Nach 30 Tagen können Sie einen Kontotyp auswählen und nur für das bezahlen, was Sie über die kostenfreien Leistungen hinaus nutzen. Bluemix stellt Ihnen eine Berechnungsfunktion zur Verfügung, sodass Sie die Kosten im Voraus einschätzen können, sowie die Ansicht 'Nutzungsdashboard', in der Sie die tatsächlichen Kosten nach dem Erstellen Ihrer Apps überprüfen können.
@@ -131,7 +131,7 @@ und -Services in Rechnung gestellt. Bei einem Abonnementkonto können Sie einen 
 
 Sie können Ihre kostenlose Testversion jederzeit in ein belastbares Konto konvertieren. Die gesamten Kontoinformationen der kostenlosen, nicht fakturierbaren Testversion sowie die {{site.data.keyword.Bluemix_notm}}-Lösungen werden ohne Reibungsverluste in das neue belastbares Konto übernommen.
 
-Nach der Erstellung eines belastbaren Kontos können Sie die von Ihnen angegebenen Informationen bearbeiten. Klicken Sie auf das Symbol **Profileinstellungen** in der rechten oberen Ecke der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle und klicken Sie anschließend auf **Konto &gt; Kontotyp**, um Ihre Informationen zu bearbeiten.
+Nach der Erstellung eines belastbaren Kontos können Sie die von Ihnen angegebenen Informationen bearbeiten. Klicken Sie auf das Symbol **Profileinstellungen** und klicken Sie anschließend auf **Konto &gt; Kontotyp**, um Ihre Informationen zu bearbeiten.
 
 Falls während der Verwendung eines Kontos vom Typ Nutzungsabhängige Zahlung oder Abonnement Probleme mit {{site.data.keyword.Bluemix_notm}} auftreten, finden Sie weitere Informationen unter [Onlinehilfe abrufen](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help).
 
@@ -475,7 +475,7 @@ der Anwendung $384,15.
 
 Als Kontoeigner oder Abrechnungsmanager können Sie die Ansicht 'Nutzungsdashboard' verwenden, um die Gebühren für die Laufzeiten und Services, die monatlich in Ihrer Organisation genutzt werden, anzuzeigen. Sie können die GB-Stunden für Laufzeiten und die Servicenutzung in allen Regionen anzeigen oder eine bestimmte Region und einen bestimmten Bereich für die Anzeige der vergangenen 12 Stunden auswählen.
 
-Um die Ansicht 'Nutzungsdashboard' zu öffnen, klicken Sie auf das Symbol **Konto und Unterstützung** &gt; **Konto** &gt; *ihr_kontoname* &gt; **Nutzungsdashboard**. In dieser Ansicht finden Sie eine Zusammenfassung der Laufzeit- und Servicenutzung für das Konto. Abrechnungsmanager können nur die Details für die Organisationen anzeigen, in denen ihnen die Rolle des Abrechnungsmanagers zugewiesen ist.
+Um die Ansicht 'Nutzungsdashboard' zu öffnen, klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Nutzungsdashboard**. In dieser Ansicht finden Sie eine Zusammenfassung der Laufzeit- und Servicenutzung für das Konto. Abrechnungsmanager können nur die Details für die Organisationen anzeigen, in denen ihnen die Rolle des Abrechnungsmanagers zugewiesen ist.
 
 Dem Kontoeigner werden die Gebühren für die Gesamtnutzung, die für alle Organisationen anfallen, am Ende jedes Abrechnungszyklus in Rechnung gestellt. Jeder Abrechnungszyklus dauert einen Monat.
 
@@ -488,14 +488,14 @@ Wenn Sie unter **Organisation** eine bestimmte Organisation auswählen, können 
 
 Als Kontoeigner oder Abrechnungsmanager können Sie in der Ansicht 'Nutzungsdashboard' Guthaben für Ihr Konto anzeigen. Sie könnten beispielsweise über Guthaben verfügen, wenn Sie ein SoftLayer-Konto mit einem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft haben.
 
-Klicken Sie zum Öffnen der Ansicht 'Nutzungsdashboard' auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und wählen Sie **Konto** aus. Klicken Sie auf der angezeigten Seite auf **Nutzungsdashboard**. In dieser Ansicht werden gegebenenfalls die bestehenden Guthaben und die entsprechenden Ablaufdaten angezeigt.
+Klicken Sie zum Öffnen der Ansicht 'Nutzungsdashboard' auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) und wählen Sie **Konto** aus. Klicken Sie auf der angezeigten Seite auf **Nutzungsdashboard**. In dieser Ansicht werden gegebenenfalls die bestehenden Guthaben und die entsprechenden Ablaufdaten angezeigt.
 
 ##Benachrichtigungen
 {: #notifications}
 
 Als Manager eines Kontos vom Typ Nutzungsabhängige Zahlung können Sie Benachrichtigungen über Ausgaben für die Gesamtkosten Ihres Kontos, für Laufzeit, Services und für individuelle Services einrichten, mit Ausnahme von Services anderer Anbieter. Sie erhalten Benachrichtigungen, wenn Sie 80 %, 90 % und 100 % des angegebenen Schwellenwerts für die Ausgaben erreicht haben.
 
-Um die Ansicht **Benachrichtigungen** zu öffnen, klicken Sie auf das Symbol **Konto und Unterstützung** &gt; **Konto** &gt; *ihr_kontoname* &gt; **Benachrichtigungen über Ausgaben**. Geben Sie einen numerischen Wert ein, um bei Bedarf das Ausgabelimit für das Auslösen einer Benachrichtigung für jeden Typ der Benachrichtigung über Ausgaben festzulegen. Sie können auch Benachrichtigungen
+Um die Ansicht **Benachrichtigungen** zu öffnen, klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Benachrichtigungen über Ausgaben**. Geben Sie einen numerischen Wert ein, um bei Bedarf das Ausgabelimit für das Auslösen einer Benachrichtigung für jeden Typ der Benachrichtigung über Ausgaben festzulegen. Sie können auch Benachrichtigungen
 für einzelne Services hinzufügen und löschen.
 
 ##Vorgehensweise zum Ändern des Plans
@@ -503,7 +503,7 @@ für einzelne Services hinzufügen und löschen.
 
 Sie können Ihren Serviceplan in {{site.data.keyword.Bluemix_notm}} im Dashboard für den Service ändern, falls diese Funktion für den betreffenden Service aktiviert ist.
 
-Nur bestimmte Services ermöglichen Ihnen das Ändern des Serviceplans. Wenn Planänderungen für den Service aktiviert sind, wird im Dashboard für den Service die Option **Plan** im linken Navigationsbereich angezeigt. Für jeden Service müssen unterschiedliche weitere Schritte ausgeführt werden, wenn Sie Ihren Plan ändern.
+Nur bestimmte Services ermöglichen Ihnen das Ändern des Serviceplans. Wenn Planänderungen für den Service aktiviert sind, wird im Dashboard für den Service die Option **Plan** im Navigationsbereich angezeigt. Für jeden Service müssen unterschiedliche weitere Schritte ausgeführt werden, wenn Sie Ihren Plan ändern.
 
 1. Klicken Sie zum Ändern des Plans im Dashboard für den Service auf **Plan**. Normalerweise können Sie ein Upgrade oder eine Herabstufung für Ihren Plan vornehmen.
 2. Nach dem Ändern des Plans müssen Sie eine Reihe weiterer Schritte ausführen. Die Schritte variieren abhängig von der Art der Planänderung und vom Service. Wenn Sie Ihren Plan beispielsweise herabstufen, ist möglicherweise ein erneutes Staging für Ihre App erforderlich. Wenn Sie für Ihren Plan ein Upgrade durchführen, müssen Sie möglicherweise ein erneutes Staging für Ihre App sowie weitere Aktionen durchführen.<br/><br/>Für ein erneutes Staging Ihrer App rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf und suchen Sie nach der App, an die der Service gebunden ist. Wählen Sie im Menü der App **Anwendung erneut starten** aus.<br/><br/>Weitere nachfolgende Aktionen sind vom Service abhängig. In der folgenden Tabelle sind bestimmte Aktionen aufgeführt.

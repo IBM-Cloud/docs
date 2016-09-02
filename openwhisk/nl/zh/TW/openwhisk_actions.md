@@ -19,7 +19,7 @@ copyright:
 # 建立及呼叫 {{site.data.keyword.openwhisk_short}} 動作
 {: #openwhisk_actions}
 
-*前次更新：2016 年 3 月 22 日*
+前次更新：2016 年 8 月 4 日
 {: .last-updated}
 
 動作是在 {{site.data.keyword.openwhisk}} 平台上執行的無狀態程式碼 Snippet。動作可以是 JavaScript 函數、Swift 函數，或包裝在 Docker 容器中的自訂可執行程式。例如，動作可以用來偵測映像檔中的樣式、聚集一組 API 呼叫，或張貼推文。
@@ -32,7 +32,7 @@ copyright:
 ## 建立及呼叫 JavaScript 動作
 {: #openwhisk_create_action_js}
 
-下列各節會引導您透過 JavaScript 逐步執行動作。從建立及呼叫簡單動作開始，接著將參數新增至動作並使用參數來呼叫該動作、設定並呼叫預設參數、建立非同步動作，最後是使用動作序列。
+下列各節會引導您透過 JavaScript 逐步執行動作。您可以開始建立及呼叫簡單動作。然後，您可以將參數新增至動作，並使用參數來呼叫該動作。接下來是設定並呼叫預設參數。然後，您可以建立非同步動作，最後使用動作序列。
 
 
 ### 建立及呼叫簡單 JavaScript 動作
@@ -213,22 +213,28 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
 ### 建立非同步動作
 {: #openwhisk_asynchrony_js}
 
-傳回 `main` 函數之後，在回呼函數中繼續執行的 JavaScript 函數可能需要傳回啟動結果。這項作業的完成方式是在動作中使用 `whisk.async()` 及 `whisk.done()` 函數。
+傳回 `main` 函數之後，非同步執行的 JavaScript 函數可能需要傳回啟動結果。作法是在動作中傳回 Promise。
 
 1. 將下列內容儲存至稱為 `asyncAction.js` 的檔案中。
 
   ```
-function main() {setTimeout(function() {
-          return whisk.done({done: true});
-      }, 20000);
-      return whisk.async();
-  }
+  function main(args) {
+       return new Promise(function(resolve, reject) {
+         setTimeout(function() {
+          resolve({ done: true });
+         }, 2000);
+      })
+   }
   ```
   {: codeblock}
 
-  請注意，會立即傳回 `main` 函數，而 `whisk.async()` 回覆值指出此啟動應該繼續執行。
+  請注意，`main` 函數會傳回 Promise，這表示啟動尚未完成，但預期未來可完成。
 
-  在此情況下，`setTimeout()` JavaScript 函數會先等待 20 秒，再呼叫回呼函數，其中，`whisk.done()` 呼叫指出啟動已完成。
+  在此情況下，`setTimeout()` JavaScript 函數會先等待 20 秒，再呼叫回呼函數。這代表非同步程式碼，並移至 Promise 的回呼函數內。
+
+  Promise 的回呼接受兩個引數（resolve 及 reject），而這兩者同時也是函數。`resolve()` 呼叫可滿足 Promise，並指出啟動正常完成。
+
+  `reject()` 呼叫可以用來拒絕 Promise，並發出信號指出啟動異常完成。
 
 2. 執行下列指令，以建立並呼叫動作：
 
@@ -292,20 +298,28 @@ var request = require('request');function main(params) {
      var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
     
-        request.get(url, function(error, response, body) {
-            var condition = JSON.parse(body).query.results.channel.item.condition;
-            var text = condition.text;
-            var temperature = condition.temp;
-            var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-            whisk.done({msg: output});
-        });return whisk.async();
+        return new Promise(function(resolve, reject) {
+            request.get(url, function(error, response, body) {
+            if (error) {
+                    reject(error);    
+                }
+                else {
+                    var condition = JSON.parse(body).query.results.channel.item.condition;
+                    var text = condition.text;
+                    var temperature = condition.temp;
+                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                    resolve({msg: output});
+                }
+            });
+        });
     }
   ```
   {: codeblock}
 
-  請注意，此範例中的動作使用 JavaScript `request` 程式庫，對 Yahoo Weather API 發出 HTTP 要求，以及從 JSON 結果中擷取欄位。[參照](./openwhisk_reference.html#runtime_ref_runtime_environment)詳述可在動作中使用的 Node.js 套件。
-  
-  此範例也會顯示需要非同步動作。此動作會傳回 `whisk.async()`，指出傳回該函數時還無法使用這個動作的結果。而是，在完成 HTTP 呼叫之後，可以在 `request` 回呼中取得結果，並將它當作 `whisk.done()` 函數的引數來傳遞。
+  請注意，此範例中的動作使用 JavaScript `request` 程式庫，對 Yahoo Weather API 發出 HTTP 要求，以及從 JSON 結果中擷取欄位。[參照](./reference.md#runtime-environment)詳述可在動作中使用的 Node.js 套件。
+
+  此範例也會顯示需要非同步動作。此動作會傳回 Promise，指出傳回該函數時還無法使用這個動作的結果。而是，在完成 HTTP 呼叫之後，可以在 `request` 回呼中取得結果，並將它當作 `resolve()` 函數的引數來傳遞。
+
 
 2. 執行下列指令，以建立並呼叫動作：
   ```
@@ -389,6 +403,37 @@ wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)
 **附註**：如需使用多個具名參數來呼叫動作序列的相關資訊，請參閱[設定預設參數](./actions.md#setting-default-parameters)。
 
 
+## 建立 Python 動作
+{: #openwhisk_actions_python}
+
+建立 Python 動作的程序，與建立 JavaScript 動作的程序類似。下列各節會引導您建立及呼叫單一 Python 動作，以及將參數新增至該動作。
+
+### 建立及呼叫動作
+{: #openwhisk_actions_python_invoke}
+
+動作只是最上層 Python 函數，這表示它必須要有名為 `main` 的方法。例如，建立稱為 `hello.py` 且含有下列內容的檔案：
+
+```
+    def main(dict):
+        name = dict.get("name", "stranger")
+        greeting = "Hello " + name + "!"
+        print(greeting)
+        return {"greeting": greeting}
+```
+{: codeblock}
+
+Python 動作一律會使用某個字典，並產生一個字典。
+
+您可以從此函數建立稱為 `helloPython` 的 OpenWhisk 動作，如下所示：
+
+```
+wsk action create helloPython hello.py
+```
+{: pre}
+
+使用指令行及 `.py` 原始檔時，不需要指定是在建立 Python 動作（相對於 JavaScript 動作）；工具是透過副檔名來判斷。
+
+
 
 ## 建立 Swift 動作
 {: #openwhisk_actions_swift}
@@ -438,8 +483,6 @@ wsk action invoke --blocking --result helloSwift --param name World
 {: screen}
 
 **注意：**Swift 動作是在 Linux 環境中執行。Swift on Linux 仍在開發中，而且 {{site.data.keyword.openwhisk_short}} 通常會使用最新的可用版本，但此版本不一定是穩定的。此外，與 {{site.data.keyword.openwhisk_short}} 搭配使用的 Swift 版本，可能與 MacOS 上穩定 XCode 版本的 Swift 版本不一致。
-
-
 
 ## 建立 Docker 動作
 {: #openwhisk_actions_docker}

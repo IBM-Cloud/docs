@@ -77,7 +77,7 @@ copyright:
 
 * 不要手動安裝應用程式。
 
-  您的應用程式可能會經常要視需求安裝在動態雲端環境上。安裝處理程序必須 Script 化且可靠，而且必須將配置資料從 Script 裡外部化 (externalize) 出來。
+  您的應用程式可能會經常要視需求安裝在動態雲端環境上。安裝處理程序必須 Script 化且可靠，而且必須將配置資料與 Script 分開 (externalize)。
 
   最起碼要將應用程式安裝擷取為一組統一且與作業系統無關的 Script。請將應用程式安裝保持到最小並為可攜式，以適合不同的自動化技術。此外，也請將應用程式安裝所需的相依關係降到最少。
 
@@ -86,7 +86,7 @@ copyright:
 ##移轉應用程式
 {: #ht_hostapp}
 
-您可以使用漸進式方式將應用程式移轉至 {{site.data.keyword.Bluemix_notm}}，而不是完整將應用程式轉移至雲端環境。您可以先移轉應用程式的某個部分，並使用 Cloud Integration 服務以連接至現有資料或記錄系統。
+您可以使用漸進式方式將應用程式移轉至 {{site.data.keyword.Bluemix_notm}}，而不要將應用程式全面轉移至雲端環境。您可以先移轉應用程式的某個部分，並使用 Cloud Integration 服務以連接至現有資料或記錄系統。
 
 在您的雲端應用程式中，您可能需要存取後端資料或服務（例如，記錄系統）。在 {{site.data.keyword.Bluemix_notm}} 中，您可以使用 Secure Gateway 服務以在 {{site.data.keyword.Bluemix_notm}} 組織與企業後端網路之間建立安全通道。服務可讓 {{site.data.keyword.Bluemix_notm}} 上的應用程式存取後端網路的資料及服務。如需詳細資料，請參閱 [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}。
 
@@ -186,7 +186,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 ## 相關鏈結
 {: #general}
 
-* [IBM Containers](../containers/container_cli_ov.html)
+* [IBM Containers](../containers/container_index.html)
 * [Virtual Machines](../virtualmachines/vm_index.html)
 * [開始使用 Delivery Pipeline](../services/DeliveryPipeline/index.html)
 * [使用 IBM Eclipse Tools for Bluemix 來部署應用程式](../manageapps/eclipsetools/eclipsetools.html)

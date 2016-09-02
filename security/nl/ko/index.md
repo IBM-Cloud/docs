@@ -15,20 +15,18 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 보안
 {: #security}
-*마지막 업데이트 날짜: 2016년 6월 22일*
+마지막 업데이트 날짜: 2016년 7월 22일
 {: .last-updated}
 
 보안 엔지니어링 방식으로 디자인된
 {{site.data.keyword.Bluemix}} 플랫폼에는
-네트워크 및 인프라에서 계층화된 보안 제어가 있습니다. {{site.data.keyword.Bluemix_notm}}에서는 자체 모바일 및 웹 앱을 보호하기 위해
-애플리케이션 개발자가 사용할 수 있는 보안 서비스 그룹을 제공합니다. 이러한 요소가 결합되어 {{site.data.keyword.Bluemix_notm}}는
+네트워크 및 인프라에서 계층화된 보안 제어가 있습니다. {{site.data.keyword.Bluemix_notm}}에서는 모바일 앱과 웹 앱을 보호하기 위해 애플리케이션 개발자가 사용할 수 있는 보안 서비스의 그룹을 제공합니다. 이러한 요소가 결합되어 {{site.data.keyword.Bluemix_notm}}는
 보안 애플리케이션 개발을 위한 명확한 선택사항을 보유한 플랫폼이 됩니다.
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}}는 시스템, 네트워킹 및 보안 엔지니어링과 관련한 IBM의 우수 사례에 의해 구동되는 보안 정책을 고수함으로써 보안 준비성을 보장합니다. 이러한 정책에는 소스 코드 스캔, 동적 스캔, 위협 모델링 및 침입 테스트 등의 실행이 포함됩니다. {{site.data.keyword.Bluemix_notm}}는 보안 인시던트 관리를 위해 IBM PSIRT(Product Security Incident Response Team) 프로세스를 따릅니다. 세부사항은 [IBM Security Vulnerability Management(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 사이트를 참조하십시오.
 
-{{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드는 IBM SoftLayer IaaS(Infrastructure-as-a-Service) 클라우드 서비스를 사용하고
-해당 보안 아키텍처를 완전히 활용합니다. SoftLayer IaaS는 애플리케이션 및 데이터에 대한 다중의 중첩된 보안 계층을 제공합니다. {{site.data.keyword.Bluemix_notm}} 로컬의 경우
+{{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드에서는 IBM SoftLayer IaaS(Infrastructure as a Service) 클라우드 서비스를 사용하고 해당 보안 아키텍처를 완전히 활용합니다. SoftLayer IaaS는 애플리케이션과 데이터에 대한 다중의 중첩된 보안 티어를 제공합니다. {{site.data.keyword.Bluemix_notm}} 로컬의 경우
 사용자는 회사 방화벽 뒤의 사용자 소유 데이터 센터에서 {{site.data.keyword.Bluemix_notm}} 로컬을
 호스트하여 물리적 보안을 소유하고 인프라를 제공합니다. 또한 {{site.data.keyword.Bluemix_notm}}는
 다양한 카테고리(플랫폼, 데이터 및 애플리케이션)의 PaaS(Platform as a Service) 계층에서 보안 기능을 추가합니다.
@@ -85,23 +83,22 @@ IBM은 {{site.data.keyword.Bluemix_notm}} 로컬에 포함된 전달 기능인 R
 <dt>데이터 보호</dt>
 <dd> 모든 {{site.data.keyword.Bluemix_notm}} 트랙픽은 리버스 프록시, SSL 종료 및 로드 밸런싱 기능을 제공하는 IBM WebSphere® DataPower® SOA 어플라이언스를 통과합니다.
 다음과 같은 HTTP 메소드를 사용할 수 있습니다.
- * DELETE
- * GET
- * HEAD
- * OPTIONS
- * POST
- * PUT
- * TRACE
-
-HTTP 비활성 제한시간은 2분입니다.
-
-다음 헤더는 DataPower로 채워집니다.
-<dl>
+<ul>
+<li>DELETE</li>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+<li>POST</li>
+<li>PUT</li>
+<li>TRACE</li>
+</ul>
+HTTP 비활성 제한시간은 2분입니다.</dd>
+<dd>
+다음 헤더는 DataPower로 채워집니다.<dl>
 <dt>$wsis</dt>
 <dd>클라이언트 측 연결이 안전(HTTPS)하면 true로 설정합니다. 그렇지 않으면 false로 설정합니다.</dd>
 <dt>$wssc</dt>
-<dd>클라이언트 연결 스킴(https, http, ws, wss) 중 하나로
-설정합니다.</dd>
+<dd>클라이언트 연결 스킴(https, http, ws, wss) 중 하나로 설정합니다.</dd>
 <dt>$wssn</dt>
 <dd>클라이언트가 보내는 호스트 이름으로 설정합니다.</dd>
 <dt>$wssp</dt>
@@ -123,10 +120,10 @@ HTTP 비활성 제한시간은 2분입니다.
 
 <dl>
 <dt>환경 격리</dt>
-<dd> {{site.data.keyword.Bluemix_notm}} 퍼블릭의 경우 개발 및 프로덕션 환경은 애플리케이션 안정성 및 보안성을 높이기 위해 서로 격리됩니다.</dd>
+<dd>{{site.data.keyword.Bluemix_notm}} 퍼블릭의 경우 개발 및 프로덕션 환경은 애플리케이션 안정성 및 보안성을 높이기 위해 서로 격리됩니다.</dd>
 
 <dt>방화벽</dt>
-<dd> 방화벽은 {{site.data.keyword.Bluemix_notm}} 네트워크에 대한 액세스를 제한하기 위해 적절히 갖춰져 있습니다. {{site.data.keyword.Bluemix_notm}} 로컬의 경우 사용자의 회사 방화벽은 사용자의 나머지 네트워크를 {{site.data.keyword.Bluemix_notm}} 인스턴스에서 분리합니다.</dd>
+<dd>방화벽은 {{site.data.keyword.Bluemix_notm}} 네트워크에 대한 액세스를 제한하기 위해 적절히 갖춰져 있습니다. {{site.data.keyword.Bluemix_notm}} 로컬의 경우 사용자의 회사 방화벽은 사용자의 나머지 네트워크를 {{site.data.keyword.Bluemix_notm}} 인스턴스에서 분리합니다.</dd>
 
 <dt>침입 방지</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드에서는 위협을 발견하여 이를 처리할 수 있도록 침입 방지를 사용합니다. 침입 방지 정책은 방화벽에서 사용됩니다.</dd>
@@ -155,13 +152,13 @@ HTTP 비활성 제한시간은 2분입니다.
 <dt>사용자 액세스 관리</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 내에서는 업무 분리 가이드라인에 따라 사용자에게 세부 단위의 액세스 권한을 지정하며 사용자가 최소 권한 원칙에 따라 자체 작업의 수행에 필요한 액세스 권한만 갖도록 보장합니다.
 
-{{site.data.keyword.Bluemix_notm}} 데디케이티드 및 로컬 환경 내에서는 지정된 관리자가 관리 콘솔을 사용하여 조직 내 {{site.data.keyword.Bluemix_notm}} 사용자의 역할 및 권한을 관리할 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}} 로컬 및 데디케이티드 관리](../admin/index.html#mng)를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 데디케이티드 환경과 로컬 환경에서는 지정된 관리자가 관리 콘솔을 사용하여 조직 내 {{site.data.keyword.Bluemix_notm}} 사용자의 역할과 권한을 관리할 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}} 로컬 및 데디케이티드 관리](../admin/index.html#mng)를 참조하십시오.
 </dd>
 </dl>
 
 ### 물리적 보안
 
-{{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드에서는 실제 네트워크 보안을 위해 SoftLayer의 네트워크 내 네트워크(network-within-a-network) 토폴로지에 의존합니다. 이러한 네트워크 내 네트워크 아키텍처를 사용하여 권한 있는 사용자만 시스템에 완전히 액세스할 수 있도록 할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 로컬에 대해 사용자는 로컬 인스턴스에 대한 물리적 보안을 소유합니다. 데이터 센터는 회사 방화벽 뒤에서 보호됩니다.
+{{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드에서는 실제 네트워크 보안을 위해 SoftLayer의 네트워크 내 네트워크(network-within-a-network) 토폴로지를 사용합니다. 이러한 네트워크 내 네트워크 아키텍처를 사용하여 권한 있는 사용자만 시스템에 완전히 액세스할 수 있도록 할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 로컬에 대해 사용자는 로컬 인스턴스에 대한 물리적 보안을 소유합니다. 데이터 센터는 회사 방화벽 뒤에서 보호됩니다.
 
 SoftLayer 네트워크 내 네트워크(network-within-a-network)에서 공용 네트워크 계층은 호스팅된 웹 사이트 또는 온라인 리소스에 대한 공용 트래픽을 처리합니다. 사설 네트워크 계층을 사용하면 SSL, PPTP 또는 IPSec VPN 게이트웨이에서 개별 독립형 써드파티 업체를 통해 진정한 대역 외 관리를 수행할 수 있습니다. 데이터 센터 간 네트워크 계층은 개별 SoftLayer 설비에 포함된 서버 간의 무료 보안 연결을 제공합니다.
 
@@ -187,7 +184,7 @@ SoftLayer 네트워크 내 네트워크(network-within-a-network)에서 공용 �
 
 각각의 데이터 유형은 데이터 보안을 계획할 때 고려되어야 합니다.
 
-{{site.data.keyword.Bluemix_notm}} 플랫폼은 {{site.data.keyword.Bluemix_notm}} 내부 네트워크의 경계에서 데이터가 IBM DataPower Gateway에 도달할 때까지 네트워크를 통해 SSL을 사용하여 애플리케이션에 대한 일반 사용자 액세스를 보호함으로써 전송 중 데이터를 보호합니다. IBM DataPower Gateway는 리버스 프록시 역할을 하며 SSL 종료를 제공합니다.
+{{site.data.keyword.Bluemix_notm}} 플랫폼은 데이터가 {{site.data.keyword.Bluemix_notm}} 내부 네트워크의 경계에서 IBM DataPower Gateway에 도달할 때까지 네트워크를 통해 SSL을 사용하여 애플리케이션에 대한 일반 사용자 액세스를 보호함으로써 전송 중 데이터를 보호합니다. IBM DataPower Gateway는 리버스 프록시 역할을 하며 SSL 종료를 제공합니다. 여기서 애플리케이션까지 IPSEC를 사용하여 데이터가 IBM DataPower Gateway에서 애플리케이션까지 이동할 때 데이터를 보호합니다. 
 
 사용 중 데이터 및 저장 데이터 둘 다에 대한 보안은 애플리케이션 개발 중에 사용자의 책임입니다. {{site.data.keyword.Bluemix_notm}} 카탈로그에서 사용 가능한 다수의 데이터 관련 서비스를 활용하면 이와 관련하여 도움을 받을 수 있습니다.
 
@@ -202,7 +199,7 @@ SoftLayer 네트워크 내 네트워크(network-within-a-network)에서 공용 �
 여러 {{site.data.keyword.Bluemix_notm}} 서비스에서 제공하는 보안 기능을 사용하여
 애플리케이션을 보호할 수 있습니다. IBM에서 생성하는 모든 {{site.data.keyword.Bluemix_notm}} 서비스는 IBM 보안 엔지니어링 개발 방식을 따릅니다.
 
-**참고:** 여기에 설명된 서비스 중 일부는 Bluemix 데디케이티드 또는 로컬 인스턴스에 적용되지 않을 수 있습니다.
+**참고:** 여기에 설명된 서비스 중 일부는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 인스턴스 또는 로컬 인스턴스에 적용되지 않을 수 있습니다. 
 
 ### SSO 서비스
 
@@ -216,7 +213,7 @@ Single Sign On 서비스는 사용자의 신임 정보가 저장된 다수의 ID
 <dd>인증을 수행하며 SAML 토큰 교환을 사용하는 사용자 레지스트리입니다.</dd>
 
 <dt>클라우드 디렉토리</dt>
-<dd>IBM Cloud에서 호스팅되는 사용자 레지스트리입니다.</dd>
+<dd>IBM 클라우드에서 호스팅되는 사용자 레지스트리입니다.</dd>
 
 <dt>소셜 ID 소스</dt>
 <dd> Google, Facebook 및 LinkedIn에서 유지보수하는 사용자 레지스트리입니다.</dd>
@@ -269,7 +266,7 @@ You can use security information and event management (SIEM) 도구를 사용하
  3. 네트워크 라우터를 통해.
  4. DEA(Droplet Execution Agent)에서 애플리케이션 런타임에 도달합니다.
 
-{{site.data.keyword.Bluemix_notm}} *개발자*는 두 개의 기본 플로우(로그인용과 개발 및 배치용)를 따릅니다.
+{{site.data.keyword.Bluemix_notm}} *개발자*는 두 개의 기본 플로우(로그인용, 개발 및 배치용)를 따릅니다. 
  * **개발자 로그인 플로우**에는 다음이 포함됩니다.
     * {{site.data.keyword.Bluemix_notm}} 퍼블릭에 로그인한 개발자의 경우
 플로우는 다음과 같습니다.

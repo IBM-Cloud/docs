@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+  
 
 ---
 
@@ -15,8 +16,9 @@ copyright:
 # Resolução de problemas para acessar o {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Última atualização: 14 de julho de 2016*
+Última atualização: 11 de agosto de 2016
 {: .last-updated}
+
 
 Problemas gerais com o acesso ao {{site.data.keyword.Bluemix}}
 podem incluir um usuário que não foi capaz de efetuar login no {{site.data.keyword.Bluemix_notm}},
@@ -27,30 +29,32 @@ problemas seguindo algumas etapas simples.
 ## Não é possível efetuar login no {{site.data.keyword.Bluemix_notm}}
 {: #ts_logintobm}
 
-Deve-se ter um ID e uma senha da IBM válidos para efetuar login no {{site.data.keyword.Bluemix_notm}}.
+Deve-se ter um ID IBM e uma senha válidos para efetuar login no {{site.data.keyword.Bluemix_notm}}.
 
 
 Ao tentar efetuar conectar ao {{site.data.keyword.Bluemix_notm}},
 você verá a mensagem de erro a seguir: 
 {: tsSymptoms} 
 
-`O ID e/ou a senha da IBM
-inserida abaixo está incorreta. Tente novamente.`
+`A senha inserida não está correta.`
 
 
-O ID e a senha da IBM que você usa para conectar ao {{site.data.keyword.Bluemix_notm}} é
-inválido.
+O ID IBM e a senha que você usa para conectar-se ao {{site.data.keyword.Bluemix_notm}} são inválidos.
 {: tsCauses} 
  
 
-Para obter um ID IBM e senha válidos, acesse a página Meu perfil IBM e conclua uma das etapas a seguir:
+Para obter um ID IBM e uma senha válidos, acesse a página Meu perfil IBM e conclua
+uma das etapas a seguir:
 {: tsResolve}
-  * Se você já registrou um ID IBM e deseja verificar se seu ID e senha são válidos, clique em **Conectar** e insira seu ID IBM e senha na página Conectar. Se você esqueceu sua senha, clique em **Esqueceu sua
-senha** à direita da página Conectar para redefinir sua senha. Caso tenha esquecido o seu ID IBM ou se continuar a ter problemas com a senha, entre em contato com o Help Desk de registro IBM mundial para obter ajuda. 
-  * Se você não tiver um ID da IBM, clique em **Registrar** para registrar um ID e uma senha
-da IBM. 
+  * Se você já tiver registrado um ID IBM e desejar verificar se seu ID e senha são
+válidos, clique em **Conectar** e insira seu ID IBM e sua senha na
+página Conectar. Caso tenha esquecido sua senha, clique em **Esqueceu sua
+senha** na página Conectar para reconfigurar sua senha. Caso tenha esquecido
+seu ID IBM ou continue a ter problemas com a senha, entre em contato com o Help desk de registro IBM mundial para obter ajuda.  
+  * Se você não tiver um ID IBM, clique em **Registrar** para registrar um ID IBM e uma senha.  
   
-**Nota:** Para funcionários IBM, o ID IBM pode ser diferente do ID de login da intranet. 
+**Nota:** Para funcionários IBM, o ID IBM pode ser diferente
+do ID de login da intranet. 
 
 
 
@@ -180,8 +184,9 @@ para alterar a sua função. Para identificar o gerente da organização, conclu
 etapas a seguir:
 {: tsResolve}
 
-  1. Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone **Conta e suporte** ![Conta e suporte](images/account_support.svg) na barra de
-menus e selecione **Gerenciar organizações**.
+  1. Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone
+{{site.data.keyword.avatar}} ![ícone Avatar](images/account_support.svg) na barra de menus e
+selecione **Gerenciar organizações**.
   2. Acesse sua organização e visualize as informações sobre o gerente da organização na guia **USUÁRIOS**.  
   
 Se você não conseguir convidar os usuários porque é um colaborador
@@ -220,8 +225,8 @@ Para registrar vários usuários para o {{site.data.keyword.Bluemix_notm}},
 deve-se concluir as etapas a seguir para cada usuário:
 {: tsResolve}
 
-  1. Clique em **SIGN UP** no canto superior direito
-da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
+  1. Clique em **INSCREVER** na interface com o usuário do
+{{site.data.keyword.Bluemix_notm}}.
   2. Conclua as etapas seguindo o assistente.
 
     
@@ -258,38 +263,6 @@ efetuar login novamente.
   
   
   
-  
-  
-## A barra de menus superior do {{site.data.keyword.Bluemix_notm}}
-desaparece
-{: #ts_topmenubar}
-
-Você pode não conseguir ver a barra de menus superior do {{site.data.keyword.Bluemix_notm}}
-ao redimensionar a janela do navegador ou ao usar um dispositivo
-móvel.
-
-
-Ao diminuir o tamanho da janela do navegador ou
-usar um dispositivo móvel, a barra de menus superior do{{site.data.keyword.Bluemix_notm}}
-desaparece. Quando a barra de menus superior desaparece, o menu de gaveta
-lateral que é exibido como um ícone de linha empilhada aparece no canto superior
-esquerdo. 
-{: tsSymptoms}
-
- 
-
-A interface com o usuário do {{site.data.keyword.Bluemix_notm}}
-possui um design responsivo. Quando o ambiente de visualização é alterado,
-o layout da interface com o usuário do {{site.data.keyword.Bluemix_notm}}
-também pode ser alterado. 
-{: tsCauses}
- 
-
-Use o menu de gaveta lateral no canto superior esquerdo em seu lugar.
-{: tsResolve}
-
-
-
 
 
 
@@ -383,6 +356,48 @@ Se a sua JVM de ambiente de trabalho for IBM JVM 7 ou 8, ou uma versão anterior
   3. Verifique se a propriedade `eclipse.vm` aponta para sua nova instalação do Oracle JVM 8.
 
 
+  
+## Não é possível reutilizar nomes de aplicativos excluídos
+{: #ts_reuse_appname}
+  
+Depois de excluir um app, é possível reutilizar o nome do app somente depois de
+excluir a rota do app. 
+
+Quando você tentar reutilizar o nome do app, receberá a mensagem a seguir:
+{: tsSymptoms}
+
+`O nome já é usado por outro app.`
+
+Quando um app é excluído, sua rota, que é a URL do app, não é automaticamente
+excluída. Portanto, não está disponível para reutilização. Deve-se acessar o espaço em
+que o app foi criado para excluir a rota para que ele possa ser reutilizado.
+{: tsCauses}
+
+Execute as etapas a seguir para excluir a rota não utilizada:
+{: tsResolve}
+
+  1. Verifique se a rota pertence ao espaço atual inserindo o comando a seguir: 
+     ```
+	 cf routes 	 ```
+  2. Se a rota não pertencer ao espaço atual, alterne para o espaço ou a
+organização à qual ela pertence inserindo o comando a seguir: 
+     ```
+	 cf target -o org_name -s space_name 	 ```
+  3. Exclua a rota do app inserindo o comando a seguir:
+     ```
+	 cf delete-route domain_name -n host_name 	 ```
+	 Por
+exemplo:
+	 ```
+	 cf delete-route mybluemix.net -n app001 	 ```
+
+  
+  
+  
+  
+  
+  
+  
 ## Não é possível recuperar espaços na organização
 {: #ts_retrieve_space}
 
@@ -393,18 +408,19 @@ Ao tentar criar um aplicativo no Bluemix, você vê a mensagem de erro a seguir:
 
 `BXNUI0515E: A tentativa de recuperar os espaços na organização falhou devido a um problema de conexão de rede.`
 
-Esse erro geralmente é recebido na primeira vez em que você tenta criar um aplicativo ou um serviço a partir do Catálogo quando um espaço ainda não estiver criado.
+Esse erro geralmente é recebido na primeira vez em que você tenta criar um aplicativo ou um serviço a partir do Catálogo quando um espaço ainda não estiver criado. 
 {: tsCauses}
 
-Certifique-se de que você criou um espaço em sua organização atual. Para criar um espaço, use um dos métodos a seguir:
+Certifique-se de que você criou um espaço em sua organização atual.  Para criar um espaço, use um dos métodos a seguir:
 {: tsResolve}
 
-  * A partir de Conta e suporte ![Conta e suporte](images/account_support.svg), selecione a organização na qual você deseja criar o espaço e, em seguida, clique em
-**Criar um espaço**.
+  * Clique no ícone {{site.data.keyword.avatar}}
+![ícone Avatar](images/account_support.svg) para abrir o widget Conta
+e Suporte, selecione a organização na qual você deseja criar o espaço e, em seguida,
+clique em **Criar um espaço**.
   * Na interface de linha de comandos cf, digite `cf create-space <space_name> -o <organization_name>`.
 
-Tente novamente. Se você vir essa mensagem novamente, acesse a página de [status do Bluemix](https://status.eu-gb.bluemix.net/){: new_window} para verificar se um serviço ou
-componente tem um problema.
+Tente novamente. Se você vir essa mensagem novamente, acesse a página de [status do Bluemix](http://ibm.biz/bluemixstatus){: new_window} para verificar se um serviço ou componente tem um problema.
 
 
 
@@ -523,10 +539,7 @@ os dropouts do provedor de serviços da Internet (ISP), configurações de firew
 
  
 
-Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, primeiro verifique a página [Status do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#status){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução
-alternativa. As informações detalhadas estão disponíveis em
-[Usando serviços em outra região](../services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal,
-tente as etapas a seguir para resolver o problema: 
+Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, primeiro verifique a página [Status do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução alternativa. As informações detalhadas estão disponíveis em [Usando serviços em outra região](../services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal, tente as etapas a seguir para resolver o problema:
 {: tsResolve}
 
   * Tente novamente a ação:
@@ -535,8 +548,7 @@ funcionar, limpe os cookies e o cache do seu navegador e, em seguida, recarregue
 	* Usar um navegador diferente.
 	* Reinicializar seu roteador, seu modem e seu computador. Reinicializar esses dispositivos pode limpar diversos erros
 que conduzem ao erro 502. 
-  * Aguardar e tentar novamente mais tarde. Em algumas instâncias, os problemas temporários podem ocorrer com seu provedor
-de serviços da Internet ou serviços do {{site.data.keyword.Bluemix_notm}}. É possível aguardar até que os problemas temporários sejam resolvidos.
+  * Aguardar e tentar novamente mais tarde. Em algumas instâncias, os problemas temporários podem ocorrer com seu provedor de serviços da Internet ou serviços do {{site.data.keyword.Bluemix_notm}}. É possível aguardar até que os problemas temporários sejam resolvidos.
   * Se o problema ainda existir, entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}. Veja [Entrando em contato com o Suporte do {{site.data.keyword.Bluemix_notm}}](../support/index.html#contacting-bluemix-support){: new_window} para obter mais informações. 
 
 
@@ -571,8 +583,7 @@ especificar sua cota do disco. A cota máxima de disco que você pode especifica
     ```
 	disk_quota: <disk_quota>
 	```
-  * Use a opção **-k** com o comando `cf push` quando enviar por push seu
-app para {{site.data.keyword.Bluemix_notm}}:
+  * Use a opção **-k** com o comando `cf push` quando enviar por push seu app para {{site.data.keyword.Bluemix_notm}}:
     ```
 	cf push appname -p app_path -k <disk_quota>
 	```
@@ -680,9 +691,9 @@ o limite no número de instâncias de serviços que você pode ter.
   * Para excluir a instância de serviços, é possível usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}
 ou a interface com o usuário.
     Para usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} para excluir uma instância de serviço, conclua as etapas a seguir:
-	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique em **SERVIÇOS** na área de janela à esquerda. Os azulejos dos
-serviços são exibidos. 
-	  2. No azulejo do serviço que você deseja excluir, clique no ícone **Menu**.
+	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no serviço
+que você deseja acessar. O quadro do serviço é exibido. 
+	  2. No quadro do serviço, clique no ícone **Menu**.
 	  3. Clique em **Excluir serviço**. Depois de excluir
 a instância de serviço, você será solicitado a refazer o estágio no aplicativo
 ao qual a instância de serviço foi vinculada. 
@@ -1366,8 +1377,72 @@ o código usando comandos Git:
 	```
 	<appname> open
 	```
-	
 
+## Falha ao implementar um app a partir da barra de execução
+{: #deployinganappfromtherunbarfails}
+
+Nesse cenário, a implementação falha em um estado amarelo, "não sincronizado". 
+
+O app que você está implementando tem a mesma rota de outro app que está em
+execução. Para corrigir esse problema, mude o caminho para ser exclusivo.
+
+## A barra de execução não pode ser encontrada
+{: #runbarcannotbefound}
+
+Caso você não veja a barra de execução no Eclipse Orion
+{{site.data.keyword.webide}}, um destes problemas ocorreu:
+
+1. O {{site.data.keyword.jazzhub}} não está identificando seu projeto como
+um projeto.
+   * Correção: no diretório raiz do seu projeto, crie um arquivo
+`project.json`.
+2. O {{site.data.keyword.jazzhub_short}} falhou ao determinar em qual
+pasta seu app está.
+   * Correção: se seu app estiver em um diretório diferente da raiz do projeto,
+execute uma destas etapas:
+      * No diretório raiz do seu projeto, crie um arquivo
+`manifest.yml`. Em seguida, edite o arquivo para que ele aponte para o
+local de seu app; por exemplo, `path: path_to_your_app`
+      * Mova seu app para que ele fique no diretório raiz do seu projeto.
+3. O {{site.data.keyword.jazzhub_short}} não detecta que seu app é um app
+Node.js.
+   * Correção: na pasta do app de seu projeto, crie um arquivo
+`package.json`.
+   
+
+## O gancho do GitHub não está funcionando
+{: #githubhookisntworking}
+
+Se você configurou seu projeto GitHub para criar links de itens de trabalho quando
+você enviar por push confirmações e os links não estiverem funcionando conforme o
+esperado, siga estas etapas para encontrar o problema:
+
+1. Em seu repositório GitHub, clique em **Configurações**.
+   ![Link de configurações do GitHub](images/githubSettings1_small.png)
+
+2. Clique em **Webhooks & serviços**.
+   ![Link de webhooks e serviços do
+GitHub](images/githubHooks1_small.png)
+
+3. Para visualizar a mensagem, passe o mouse sobre o ícone de status do
+{{site.data.keyword.jazzhub}}.
+   ![Mensagem de erro no gancho de
+serviço](images/troubleshoothook1_small.png)
+
+4. Resolva o erro de acordo com a mensagem do GitHub.
+
+5. Para verificar se a correção funcionou, confirme e envie por push outra
+mudança, ou acesse a página de serviço do {{site.data.keyword.jazzhub_short}} e
+clique em **Testar serviço**.
+   ![botão Testar serviço do
+GitHub](images/githubTestService_small.png)
+
+6. Confirme se não há erros verificando o ícone de status novamente.
+![Ícone de status sem erros](images/githubResolved_small.png)
+
+Para obter mais informações, consulte
+[Configurando projetos do GitHub para
+o Bluemix DevOps Services](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Resolução de problemas para gerenciamento de contas
@@ -1400,7 +1475,8 @@ O status de sua conta do {{site.data.keyword.Bluemix_notm}} torna-se inativo qua
 Para reativar sua conta, entre em contato com o [Suporte {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. No email, deve-se incluir as informações a seguir:
 {: tsResolve}
 
-  * O ID IBM usado para efetuar login no {{site.data.keyword.Bluemix_notm}}.
+  * O ID IBM que você usa para efetuar login no
+{{site.data.keyword.Bluemix_notm}}.
   * O nome da organização em que seu app está sendo criado. Essas informações podem ajudar a equipe de suporte a determinar se você está designado às funções ou associação corretas em sua organização.
 
 

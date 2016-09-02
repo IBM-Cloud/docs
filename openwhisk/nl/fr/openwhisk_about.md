@@ -16,9 +16,9 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# A propos de {{site.data.keyword.openwhisk}}
+# A propos de {{site.data.keyword.openwhisk_short}}
 
-*Dernière mise à jour : 22 février 2016*
+Dernière mise à jour : 2 août 2016
 {: .last-updated}
 
 Les sections ci-après présentent {{site.data.keyword.openwhisk}} en détail.
@@ -39,7 +39,7 @@ dépassant une certaine température, de nouvelles validations de code dans un r
 d'applications Web ou mobiles. Les événements provenant de sources d'événements externes et internes sont canalisés via un déclencheur, et des règles
 permettent de réagir à ces événements par le biais d'actions.
 
-Les actions peuvent être de petits fragments de code JavaScript ou Swift, ou des fichiers binaires personnalisés imbriqués dans un conteneur Docker. Les
+Les actions peuvent être de petits fragments de code JavaScript ou Swift ou un code binaire personnalisé imbriqué dans un conteneur Docker. Les
 actions dans {{site.data.keyword.openwhisk_short}} sont instantanément déployées et exécutées à chaque fois qu'un déclencheur est exécuté. Plus le
 nombre de déclencheurs exécutés est élevé, plus le nombre d'actions appelées est élevé. Si aucun déclencheur n'est exécuté, aucun code d'action n'est
 exécuté et par conséquent, aucun frais n'est engendré.
@@ -53,7 +53,7 @@ Avec les machines virtuelles ou les conteneurs à exécution longue classiques, 
 pour assurer la résilience en cas d'indisponibilité d'une instance unique. Toutefois, {{site.data.keyword.openwhisk_short}} propose un modèle
 alternatif sans coût supplémentaire lié à la résilience. L'exécution des actions à la demande assure une évolutivité inhérente et une utilisation
 optimale car le nombre d'actions en cours d'exécution correspond toujours à la fréquence de déclenchement. De plus, le développeur se consacre désormais
-uniquement à son code et ne se préoccupe pas de la surveillance, de la mise à jour et de la sécurisation de l'infrastructure de serveur, de
+uniquement au code et ne se préoccupe pas de la surveillance, de la mise à jour et de la sécurisation de l'infrastructure de serveur, de
 stockage, de réseau et de système d'exploitation sous-jacente.
 
 Des intégrations à des services et à des fournisseurs d'événements supplémentaires peuvent être ajoutées à l'aide de packages. Un package est un
@@ -74,11 +74,15 @@ Le modèle d'exécution proposé par {{site.data.keyword.openwhisk_short}} prend
 présentent des exemples classiques.
 
 ### Décomposition d'applications en microservices
+{: #openwhisk_use_cases_decomp}
+
 La nature modulaire et intrinsèquement évolutive d'{{site.data.keyword.openwhisk_short}} en fait un service idéal pour
 l'implémentation d'éléments de logique granulaires dans les actions. Par exemple, {{site.data.keyword.openwhisk_short}} peut être utile pour éliminer des tâches (d'arrière-plan) dont la charge est intensive et
 potentiellement pointues, et pour implémenter ces tâches en tant qu'actions.
 
 ### Système de back end mobile
+{: #openwhisk_use_cases_mobile_backend}
+
 De nombreuses applications mobiles requièrent une logique côté serveur. Etant donné que les développeurs d'applications mobiles ne possèdent
 généralement pas d'expérience en matière de logique côté serveur et préfèrent se consacrer à l'exécution de l'application sur le périphérique,
 l'utilisation
@@ -86,14 +90,15 @@ d'{{site.data.keyword.openwhisk_short}} comme système de back end côté serveu
 de Swift permet aux développeurs de réutiliser leurs compétences en programmation iOS.
 
 ### Traitement de données
+{: #openwhisk_use_cases_data_proc}
+
 Etant donné la quantité de données désormais disponible, le développement d'applications doit pouvoir traiter de nouvelles données, et
 éventuellement y
 réagir. Cette exigence inclut le traitement d'enregistrements de base de données structurés ainsi que de vidéos, d'images ou de documents non structurés.
 
 ### IoT
+{: #openwhisk_use_cases_iot}
+
 Souvent, les scénarios Internet of Things dépendent intrinsèquement d'un capteur. Par exemple, une action dans
 {{site.data.keyword.openwhisk_short}} peut être déclenchée s'il est nécessaire de réagir à un relevé de capteur dépassant une température
 particulière.
-
-
-

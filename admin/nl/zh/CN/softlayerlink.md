@@ -19,7 +19,7 @@ copyright:
 
 #链接 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 缴费帐户
 {: #softlayerlink}
-*上次更新时间：2016 年 7 月 7 日*
+*上次更新时间：2016 年 8 月 15 日*
 {: .last-updated}
 
 现在，您可以链接 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 缴费帐户。当您链接帐户时，您可以通过 SoftLayer，同时对 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 资源进行记帐。如果您具有现有的帐户，那么通过 SoftLayer 对 {{site.data.keyword.Bluemix_notm}} 进行记帐会在链接帐户之后启动的新记帐周期生效。
@@ -63,7 +63,7 @@ copyright:
 您必须是 SoftLayer 帐户中的主用户，才能邀请团队成员加入 {{site.data.keyword.Bluemix_notm}} 帐户。
 
 要通过 {{site.data.keyword.Bluemix_notm}} 邀请团队成员：
- 1. 转至**帐户和支持**图标 ![帐户和支持](images/account_support.svg) > **帐户** > **邀请团队成员**。
+ 1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) > **帐户** > **邀请团队成员**。
  2. 单击**添加**，以在 SoftLayer 帐户中进行认证，并查看 SoftLayer 帐户的团队成员列表。
  3. 选择要邀请的团队成员，然后单击**发送**。
 

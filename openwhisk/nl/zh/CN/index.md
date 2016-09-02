@@ -17,10 +17,10 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} 入门
-*上次更新时间：2016 年 6 月 28 日*
+上次更新时间：2016 年 8 月 4 日
 {: .last-updated}
 
-{{site.data.keyword.openwhisk}} 是一种分布式事件驱动型计算服务。{{site.data.keyword.openwhisk_short}} 执行应用程序逻辑以响应通过 HTTP 从 Web 或移动应用程序发出的事件或直接调用。事件可以通过 Bluemix 服务（如 Cloudant）提供，也可以从外部源提供。开发者可以专注于编写应用程序逻辑，以及创建按需执行的操作。执行操作的速率始终与事件速率相匹配，从而产生固有的扩展和弹性以及最佳利用率。您只需为您使用的内容付费，而且不必管理服务器。您也可以获取[源代码](https://github.com/openwhisk/openwhisk)，然后自行运行系统。
+{{site.data.keyword.openwhisk}} 是一种分布式事件驱动型计算服务。{{site.data.keyword.openwhisk_short}} 运行应用程序逻辑以响应通过 HTTP 从 Web 或移动应用程序发出的事件或直接调用。事件可以通过 Bluemix 服务（如 Cloudant）提供，也可以从外部源提供。开发者可以专注于编写应用程序逻辑，以及创建按需执行的操作。执行操作的速率始终与事件速率相匹配，从而产生固有的扩展和弹性以及最佳利用率。您只需为您使用的内容付费，而且不必管理服务器。您也可以获取[源代码](https://github.com/openwhisk/openwhisk)，然后自行运行系统。
 {: shortdesc}
 
 有关 {{site.data.keyword.openwhisk_short}} 如何工作的更多详细信息，请参阅[关于 {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html)。
@@ -28,9 +28,12 @@ copyright:
 ## 设置 {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_configure_cli}
 
-可以使用 {{site.data.keyword.openwhisk_short}} 命令行界面 (CLI) 来设置名称空间和授权密钥。转至[配置 CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window}，然后遵循指示信息来进行安装。请注意，必须在系统上安装 Python 2.7，才能使用该 CLI。
+可以使用 {{site.data.keyword.openwhisk_short}} 命令行界面 (CLI) 来设置名称空间和授权密钥。转至[配置 CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window}，然后遵循指示信息来进行安装。 
 
-使用 CLI 设置 {{site.data.keyword.openwhisk_short}} 后，可以通过命令行或 REST API 开始使用 OpenWhisk。
+**废弃通知** 现在提供新的 CLI，不需要安装 Python。
+之前的 CLI（基于 Python）目前已废弃，仅可作为备用下载选项。如果您选择使用已废弃的 CLI，那么必须在系统上安装 Python 2.7。 
+
+使用 CLI 设置 {{site.data.keyword.openwhisk_short}} 后，可以通过命令行对其开始使用。
 
 ## 使用 {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_using_cli}
@@ -113,6 +116,7 @@ wsk action invoke hello --blocking --result --param name Fred
 
 
 ## 系统详细信息
+{: #openwhisk_system_details}
 
 可以在以下主题中找到有关 {{site.data.keyword.openwhisk_short}} 的更多信息：
 
@@ -122,9 +126,14 @@ wsk action invoke hello --blocking --result --param name Fred
 * [REST API](https://new-console.{DomainName}/apidocs/98)
 
 # 相关链接
-## api
-* [REST API 文档](./openwhisk_reference.html#openwhisk_ref_restapi)
+{: #rellinks}
 
-## 常规
+## API 参考
+{: #api}
+* [REST API 文档](./openwhisk_reference.html#openwhisk_ref_restapi)
+* [REST API](https://new-console.{DomainName}/apidocs/98){:new_window}
+
+## 相关链接
+{: #general}
 * [Discover: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
 * [{{site.data.keyword.openwhisk_short}} on IBM developerWorks](https://developer.ibm.com/openwhisk/){:new_window}

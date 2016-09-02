@@ -17,11 +17,10 @@ copyright:
 
 # Gestion des organisations et des espaces
 {: #orgsspacesusers}
-Dernière mise à jour : 16 mai 2016
+Dernière mise à jour : 16 août 2016
 {: .last-updated}
 
-En tant que propriétaire de compte, vous pouvez gérer vos organisations en cliquant sur l'icône **Compte et support**
-![Icône Compte et support](../admin/images/account_support.svg) &gt; page **Gérer les organisations**. Un
+En tant que propriétaire de compte, vous pouvez gérer vos organisations en cliquant sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Gérer les organisations**. Un
 responsable de l'organisation peut également utiliser la page Gérer les organisations afin de gérer les organisations dont il est responsable.
 {:shortdesc}
 
@@ -112,8 +111,7 @@ spécifiques pouvant être attribués aux membres d'équipe :
 
 Seuls les propriétaires de compte de type Paiement à la carte peuvent créer une organisation. Vous pouvez créer une organisation comme suit :
 
-1. Cliquez sur l'icône **Compte et support**
-![Icône Compte et support](../admin/images/account_support.svg) &gt; page **Gérer les organisations**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Gérer les organisations**. 
 2. Cliquez sur **Ajouter une nouvelle organisation**.
 3. Entrez le nom de l'organisation.
 4. Cliquez sur **Ajouter**.
@@ -122,8 +120,7 @@ Vous pouvez créer des espaces dans votre organisation, par exemple un espace *d
 *test* comme environnement de test et un espace *production* comme environnement de production. Ensuite, vous pouvez
 associer vos applications à des espaces. Procédez comme suit pour créer un espace :
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Gérer les organisations**. 
 2. Identifiez l'organisation à laquelle ajouter un espace, puis sélectionnez **Afficher les détails**.
 3. Cliquez sur **Editer**.
 4. Cliquez sur **Ajouter un espace**.
@@ -136,8 +133,7 @@ associer vos applications à des espaces. Procédez comme suit pour créer un es
 
 Procédez comme suit pour renommer votre organisation :
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Gérer les organisations**. 
 2. Identifiez l'organisation à éditer, puis sélectionnez **Afficher les détails**.
 3. Sélectionnez **Editer**.
 4. Sélectionnez **Editer** pour le titre de l'organisation.
@@ -155,8 +151,7 @@ associés à l'organisation.
 
 Vous pouvez supprimer un espace depuis la page **Gérer les organisations** :
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Gérer les organisations**. 
 2. Identifiez l'organisation à éditer, puis sélectionnez **Afficher les détails**.
 3. Identifiez l'espace à supprimer, puis sélectionnez **Editer**.
 4. Cliquez sur **Supprimer un espace**.
@@ -166,8 +161,7 @@ Vous pouvez supprimer un espace depuis la page **Gérer les organisations** :
 
 Procédez comme suit pour répertorier les membres d'une organisation spécifique :
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; **Gérer les organisations**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Gérer les organisations**.
 2. Identifiez l'organisation dont vous voulez afficher les membres, puis cliquez sur **Afficher les détails**.
 3. Cliquez sur **Editer**.
 4. Vous pouvez afficher les membres de votre organisation et leurs rôles dans l'onglet
@@ -175,8 +169,7 @@ Procédez comme suit pour répertorier les membres d'une organisation spécifiqu
 
 Procédez comme suit pour répertorier les membres d'un espace spécifique :
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Gérer les organisations**. 
 2. Identifiez l'organisation dont vous voulez afficher les membres, puis cliquez sur **Afficher les détails**.
 3. Identifiez l'espace dont vous voulez afficher les membres, puis cliquez sur **Editer**.
 4. Les membres de votre espace et leurs rôles s'affichent dans l'onglet **Utilisateurs**.
@@ -188,15 +181,14 @@ En tant que propriétaire de compte ou responsable de l'organisation, vous pouve
 
 Pour afficher le quota de votre organisation, procédez comme suit :
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Gérer les organisations**. 
 2. Identifiez l'organisation pour laquelle afficher le quota, puis cliquez sur **Afficher les détails**.
 3. Cliquez sur **Editer**.
 4. Sélectionnez l'onglet **Quota**.
 
 Afin de mettre à jour le quota pour votre organisation, vous devez ouvrir un ticket de demande de service. Pour plus d'informations sur l'ouverture d'un ticket de demande de service, voir [Support
 client](../support/index.html#contacting-support). Pour plus d'informations sur le quota pour les conteneurs, voir
-[Quota](../containers/container_creating_ov.html#container_quota) dans la documentation relative aux conteneurs.
+[Quota](../containers/container_planning_org_ov.html##container_planning_quota) dans la documentation relative aux conteneurs.
 
 ## Gestion des domaines
 {: #managedomains}
@@ -205,8 +197,7 @@ En tant que propriétaire de compte ou responsable de l'organisation, vous pouve
 données personnalisés pour les applications construites dans une organisation et ses espaces. Si vous êtes responsable de l'espace, l'onglet
 **Domaines** d'un espace est une liste en lecture seule des domaines affectés à l'espace. 
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Gérer les organisations**. 
 2. Identifiez l'organisation pour laquelle afficher ou éditer les domaines.
 3. Sélectionnez **Afficher les détails** pour cette organisation.
 4. Cliquez sur **Editer**.

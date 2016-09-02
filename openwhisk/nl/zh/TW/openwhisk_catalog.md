@@ -16,9 +16,9 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 使用已啟用 {{site.data.keyword.openwhisk_short}} 功能的服務 
+# 使用針對 {{site.data.keyword.openwhisk_short}} 啟用的 {{site.data.keyword.Bluemix_notm}} 服務
 {: #openwhisk_ecosystem}
-*前次更新：2016 年 3 月 28 日*
+前次更新：2016 年 8 月 4 日
 {: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，套件的型錄可讓您輕鬆地使用有用的功能來加強應用程式，以及在生態系統中存取外部服務。已啟用 {{site.data.keyword.openwhisk_short}} 功能的外部服務範例包括 Cloudant、The Weather Company、Slack 及 GitHub。
@@ -42,6 +42,7 @@ copyright:
 下列各主題逐步說明如何設定 Cloudant 資料庫、配置關聯的套件，以及使用 `/whisk.system/cloudant` 套件中的動作及資訊來源。
 
 ### 在 {{site.data.keyword.Bluemix_notm}} 中設定 Cloudant 資料庫
+{: #openwhisk_catalog_cloudant_in}
 
 如果您是從 {{site.data.keyword.Bluemix}} 使用 {{site.data.keyword.openwhisk_short}}，則 {{site.data.keyword.openwhisk_short}} 會自動建立 {{site.data.keyword.Bluemix_notm}} Cloudant 服務實例的套件連結。如果您不是從 {{site.data.keyword.Bluemix_notm}} 使用 {{site.data.keyword.openwhisk_short}} 及 Cloudant，請跳到下一步。
 
@@ -80,7 +81,7 @@ wsk package list
   ```
   {: screen}
 
-  您應該會看到對應至 {{site.data.keyword.Bluemix_notm}} Cloudant 服務實例的套件連結的完整名稱。
+  您可以看到對應至 {{site.data.keyword.Bluemix_notm}} Cloudant 服務實例的套件連結的完整名稱。
 
 4. 確認先前建立的套件連結是使用 Cloudant {{site.data.keyword.Bluemix_notm}} 服務實例主機及認證所配置。
 
@@ -110,6 +111,7 @@ wsk package list
   {: screen}
 
 ### 在 {{site.data.keyword.Bluemix_notm}} 外部設定 Cloudant 資料庫
+{: #openwhisk_catalog_cloudant_outside}
 
 如果您不是在 {{site.data.keyword.Bluemix_notm}} 中使用 {{site.data.keyword.openwhisk_short}}，或者要在 {{site.data.keyword.Bluemix_notm}} 外部設定 Cloudant 資料庫，則必須手動建立 Cloudant 帳戶的套件連結。您需要 Cloudant 帳戶主機名稱、使用者名稱及密碼。
 
@@ -134,6 +136,7 @@ packages
 
 
 ### 接聽 Cloudant 資料庫的變更
+{: #openwhisk_catalog_cloudant_listen}
 
 您可以使用 `changes` 資訊來源，配置服務在每次變更 Cloudant 資料庫時發動觸發程式。參數如下所示：
 
@@ -163,11 +166,11 @@ wsk activation poll
 
 4. 觀察每一個文件變更的 `myCloudantTrigger` 觸發程式的新啟動。
 
-**附註**：如果您無法觀察到新啟動，請參閱有關在 Cloudant 資料庫中讀取及寫入的後續各節。測試下面的讀取及寫入步驟，有助於驗證 Cloudant 認證正確無誤。
+**附註**：如果您無法觀察到新啟動，請參閱有關在 Cloudant 資料庫中讀取及寫入的後續各節。測試下列讀取及寫入步驟，有助於驗證 Cloudant 認證正確無誤。
 
 您現在可以建立規則，並將它們關聯至可反應文件更新的動作。
 
-所產生事件的內容取決於建立觸發程式時的 `includeDoc` 值。如果設為 true，發動的每一個觸發程式事件都會包括已修改的 Cloudant 文件。例如，請考量下列已修改的文件：
+所產生事件的內容取決於建立觸發程式時的 `includeDoc` 參數值。如果參數設為 true，所發動的每一個觸發程式事件都會包括已修改的 Cloudant 文件。例如，請考量下列已修改的文件：
 
   ```
   {
@@ -202,6 +205,7 @@ wsk activation poll
 
 
 ### 寫入 Cloudant 資料庫
+{: #openwhisk_catalog_cloudant_write}
 
 您可以使用動作，將文件儲存至稱為 `testdb` 的 Cloudant 資料庫。請確定此資料庫存在於 Cloudant 帳戶中。
 
@@ -227,6 +231,7 @@ wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbnam
 
 
 ### 讀取 Cloudant 資料庫
+{: #openwhisk_catalog_cloudant_read}
 
 您可以使用動作，從稱為 `testdb` 的 Cloudant 資料庫中提取文件。請確定此資料庫存在於 Cloudant 帳戶中。
 
@@ -260,10 +265,11 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 
 
 ### 定期發動觸發程式事件
+{: #openwhisk_catalog_alarm_fire}
 
 `/whisk.system/alarms/alarm` 資訊來源會配置「警示」服務依指定的頻率發動觸發程式事件。參數如下所示：
 
-- `cron`：指出何時發動觸發程式的字串（根據 Unix crontab 語法）（世界標準時間 (UTC)）。字串是六個連串的欄位，以空格區隔：`X X X X X X `。如需使用 cron 語法的詳細資料，請參閱：https://github.com/ncb000gt/node-cron。以下是該字串指出的部分頻率範例：
+- `cron`：指出何時發動觸發程式的字串（根據 UNIX crontab 語法）（世界標準時間 (UTC)）。字串是六個連串的欄位，以空格區隔：`X X X X X X `。如需使用 cron 語法的詳細資料，請參閱：https://github.com/ncb000gt/node-cron。下列是該字串指出的部分頻率範例：
 
   - `* * * * * *`：每秒。
   - `0 * * * * *`：每分鐘整分。
@@ -274,7 +280,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 
 - `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。您可以將其設定至上限 10,000。如果您嘗試設定超過 10,000 的值，將會拒絕要求。
 
-以下範例使用觸發程式事件中的 `name` 及 `place` 值來建立每 20 秒發動一次的觸發程式。
+下列範例說明如何使用觸發程式事件中的 `name` 及 `place` 值來建立每 20 秒發動一次的觸發程式。
 
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
@@ -287,28 +293,30 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 ## 使用 Weather 套件
 {: #openwhisk_catalog_weather}
 
-`/whisk.system/weather` 套件提供一種簡便的方式來呼叫 IBM Weather Insights API。
+`/whisk.system/weather` 套件提供一種簡便的方式來呼叫 Weather Company Data for IBM Bluemix API。
 
 該套件包括下列動作。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | 套件 | apiKey | IBM Weather Insights API 的服務  |
-| `/whisk.system/weather/forecast` | 動作 | apiKey、latitude、longitude、timePeriod | 指定時段的預報|
+| `/whisk.system/weather` | 套件 | username、password | Weather Company Data for IBM Bluemix API 的服務  |
+| `/whisk.system/weather/forecast` | 動作 | latitude、longitude、timePeriod | 指定時段的預報|
 
-儘管不是必要的，但是建議您使用 `apiKey` 值建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定金鑰。
+建議使用 `username` 及 `password` 值來建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定認證。
 
 ### 取得某個位置的天氣預報
+{: #openwhisk_catalog_weather_forecast}
 
 `/whisk.system/weather/forecast` 動作會從 The Weather Company 呼叫 API，以傳回某個位置的天氣預報。參數如下所示：
 
-- `apiKey`：獲授權呼叫預報 API 的 The Weather Company 的 API 金鑰。
+- `username`：獲授權呼叫預報 API 的 The Weather Company Data for IBM Bluemix 的使用者名稱。
+- `password`：獲授權呼叫預報 API 的 The Weather Company Data for IBM Bluemix 的密碼。
 - `latitude`：位置的緯度座標。
 - `longitude`：位置的經度座標。
 - `timeperiod`：預報的時段。有效選項為 '10day' -（預設值）傳回 10 天的每日預報、'24hour' - 傳回 2 天的每小時預報、'current' - 傳回目前的天氣狀況、'timeseries' - 傳回目前的觀察，以及從目前日期和時間起，過去最多 24 小時的觀察。 
 
 
-以下範例說明如何建立套件連結，然後取得 10 天預報。
+下列範例說明如何建立套件連結，然後取得 10 天預報。
 
 1. 使用 API 金鑰建立套件連結。
 
@@ -364,15 +372,16 @@ wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7'
 | `/whisk.system/watson/speechToText` | 動作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 將音訊轉換成文字 |
 | `/whisk.system/watson/textToSpeech` | 動作 | payload、voice、accept、encoding、username、password | 將文字轉換成音訊 |
 
-儘管不是必要的，但是建議您使用 `username` 及 `password` 值建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定這些認證。
+建議使用 `username` 及 `password` 值來建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定這些認證。
 
 ### 翻譯文字
+{: #openwhisk_catalog_watson_translate}
 
 `/whisk.system/watson/translate` 動作會將文字從某種語言翻譯成另一種語言。參數如下所示：
 
 - `username`：Watson API 使用者名稱。
 - `password`：Watson API 密碼。
-- `translateParam`：要翻譯的輸入參數。例如，如果 `translateParam=payload`，則會翻譯傳遞給動作的 `payload` 參數值。
+- `translateParam`：指出要翻譯的文字的輸入參數。例如，如果 `translateParam=payload`，則會翻譯傳遞給動作的 `payload` 參數值。
 - `translateFrom`：兩位數的來源語言代碼。
 - `translateTo`：兩位數的目標語言代碼。
 
@@ -401,6 +410,7 @@ wsk action invoke myWatson/translate --blocking --result --param payload 'Blue s
 
 
 ### 識別一些文字的語言
+{: #openwhisk_catalog_watson_identifylang}
 
 `/whisk.system/watson/languageId` 動作識別一些文字的語言。參數如下所示：
 
@@ -408,7 +418,7 @@ wsk action invoke myWatson/translate --blocking --result --param payload 'Blue s
 - `password`：Watson API 密碼。
 - `payload`：要識別的文字。
 
-以下範例說明如何建立套件連結以及識別一些文字的語言。
+下列範例說明如何建立套件連結，以及識別一些文字的語言。
 
 1. 使用 Watson 認證建立套件連結。
 
@@ -434,6 +444,7 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
 
 
 ### 將部分文字轉換成語音
+{: #openwhisk_catalog_watson_texttospeech}
 
 `/whisk.system/watson/textToSpeech` 動作會將部分文字轉換成音訊語音。參數如下所示：
 
@@ -468,6 +479,7 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
 
 
 ### 將語音轉換成文字
+{: #openwhisk_catalog_watson_speechtotext}
 
 `/whisk.system/watson/speechToText` 動作會將音訊語音轉換成文字。參數如下所示：
 
@@ -524,9 +536,10 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 | `/whisk.system/slack` | 套件 | url、channel、username | 與 Slack API 互動 |
 | `/whisk.system/slack/post` | 動作 | text、url、channel、username | 將訊息張貼至 Slack 通道 |
 
-儘管不是必要的，但是建議您使用 `username`、`url` 及 'channel' 值建立套件連結。使用連結，您就不需要每次在呼叫套件中的動作時都指定值。
+建議使用 `username`、`url` 及 `channel` 值來建立套件連結。使用連結，您就不需要每次在呼叫套件中的動作時都指定值。
 
 ### 將訊息張貼至 Slack 通道
+{: #openwhisk_catalog_slack_post}
 
 `/whisk.system/slack/post` 動作會將訊息張貼至指定的 Slack 通道。參數如下所示：
 
@@ -539,7 +552,7 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 
 1. 針對您的團隊配置 Slack [送入的 Webhook](https://api.slack.com/incoming-webhooks)。
 
-  配置 Slack 之後，您應該取得與下列類似的 Webhook URL：`https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`。在下一步中，您需要此項目。
+  配置 Slack 之後，您可以取得與下列類似的 Webhook URL：`https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`。在下一步中，您需要此項目。
 
 2. 使用 Slack 認證、要張貼至其中的通道，以及用來進行張貼的使用者名稱，來建立套件連結。
 
@@ -568,9 +581,10 @@ wsk action invoke mySlack/post --blocking --result --param text 'Hello from Open
 | `/whisk.system/github` | 套件 | username、repository、accessToken | 與 GitHub API 互動 |
 | `/whisk.system/github/webhook` | 資訊來源 | events、username、repository、accessToken | 在 GitHub 活動時發動觸發程式事件 |
 
-儘管不是必要的，但是建議您使用 `username`、`repository` 及 `accessToken` 值建立套件連結。使用連結，您就不需要每次使用套件中的資訊來源時都指定值。
+建議使用 `username`、`repository` 及 `accessToken` 值來建立套件連結。使用連結，您就不需要每次使用套件中的資訊來源時都指定值。
 
 ### 發動 GitHub 活動的觸發程式事件
+{: #openwhisk_catalog_github_fire}
 
 `/whisk.system/github/webhook` 資訊來源會配置服務在指定 GitHub 儲存庫中有活動時發動觸發程式。參數如下所示：
 
@@ -599,27 +613,29 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
   ```
   {: pre}
 
-透過 `git push` 來確定 Github 儲存庫時，將會導致 webhook 發動觸發程式。如果有符合觸發程式的規則，則會呼叫相關聯的動作。
-此動作會接收 Github webhook 有效負載作為輸入參數。每個 Github webhook 事件的 JSON 綱目都很類似，但其事件類型會決定唯一的有效負載物件。
-如需有效負載內容的相關資訊，請參閱 [Github 事件和有效負載](https://developer.github.com/v3/activity/events/types/) API 文件。
+使用 `git push` 來確定 GitHub 儲存庫時，會導致 Webhook 發動觸發程式。如果有符合觸發程式的規則，則會呼叫相關聯的動作。
+此動作會接收 GitHub Webhook 有效負載作為輸入參數。每一個 GitHub Webhook 事件的 JSON 綱目都類似，但是為其事件類型所決定的唯一有效負載物件。
+如需有效負載內容的相關資訊，請參閱 [GitHub 事件和有效負載](https://developer.github.com/v3/activity/events/types/) API 文件。
 
 
 ## 使用 Push 套件
 {: #openwhisk_catalog_pushnotifications}
 
-`/whisk.system/pushnotifications` 套件可讓您使用推送服務。 
+`/whisk.system/pushnotifications` 套件可讓您使用 Push 服務。 
 
-該套件包括下列資訊來源：
+該套件包括下列動作及資訊來源：
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
 | `/whisk.system/pushnotifications` | 套件 | appId、appSecret  | 使用 Push 服務 |
-| `/whisk.system/pushnotifications/sendMessage` | 動作 | text、url、deviceIds、platforms、tagNames、apnsBadge、apnsCategory、apnsActionKeyTitle、apnsSound、apnsPayload、apnsType、gcmCollapseKey、gcmDelayWhileIdle、gcmPayload、gcmPriority、gcmSound、gcmTimeToLive | 將推送通知傳送至指定的裝置 |
-| `/whisk.system/pushnotifications/webhook` | 資訊來源 | 事件 | 在「Push 服務」中產生裝置活動（裝置（取消）登錄 /（取消）訂閱）時發動觸發事件 |
-雖然不是必要的，但還是建議您使用 `appId` 和 `appSecret` 值來建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定這些認證。
-### 設定 IBM Push Notifications 套件
+| `/whisk.system/pushnotifications/sendMessage` | 動作 | text、url、deviceIds、platforms、tagNames、apnsBadge、apnsCategory、apnsActionKeyTitle、apnsSound、apnsPayload、apnsType、gcmCollapseKey、gcmDelayWhileIdle、gcmPayload、gcmPriority、gcmSound、gcmTimeToLive | 將推送通知傳送至一個以上的指定裝置 |
+| `/whisk.system/pushnotifications/webhook` | 資訊來源 | 事件 | 在 Push 服務上產生裝置活動（裝置登錄、取消註冊、訂閱或取消訂閱）時發動觸發程式事件 |
+建議使用 `appId` 及 `appSecret` 值來建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定這些認證。
 
-建立IBM Push Notifications 套件時，您必須提供下列參數：
+### 建立 Push 套件連結
+{: #openwhisk_catalog_pushnotifications_create}
+
+建立 Push Notifications 套件連結時，您必須指定下列參數：
 
 -  `appId`：Bluemix 應用程式 GUID。
 -  `appSecret`：Bluemix 推送通知服務 appSecret。
@@ -630,7 +646,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 
 2. 起始設定「推送通知服務」，並將該服務連結至 Bluemix 應用程式。
 
-3. 配置 [IBM 推送通知應用程式](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)。
+3. 配置 [Push Notification 應用程式](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)。
 
   請務必記住您建立之 Bluemix 應用程式的 `App GUID` 和 `App Secret`。
 
@@ -656,22 +672,23 @@ wsk package list
   {: screen}
 
 ### 傳送推送通知
+{: #openwhisk_catalog_pushnotifications_send}
 
 `/whisk.system/pushnotifications/sendMessage` 動作會將推送通知傳送至已登錄的裝置。參數如下所示：
-- `text` - 要對使用者顯示的通知訊息。例如：-p text "Hi ,{{site.data.keyword.openwhisk}} send a notification"。
-- `url` - 可隨著警示一起傳送的選用性 URL。例如：-p url "https:\\www.w3.ibm.com"。
-- `gcmPayload` - 會放在通知訊息中一起傳送的自訂 JSON 有效負載。例如：-p gcmPayload "{"hi":"hello"}"。
-- `gcmSound` - 當通知到達裝置時，將會嘗試播放的音效檔（在裝置上）。
-- `gcmCollapseKey` - 此參數可識別訊息的群組。
-- `gcmDelayWhileIdle` - 當此參數設為 true 時，表示要等到裝置變成作用中時，才會傳送訊息。
-- `gcmPriority` - 設定訊息的優先順序。
-- `gcmTimeToLive` - 此參數指定當裝置離線時，訊息應保留在 GCM 儲存空間中多久（以秒為單位）。
-- `apnsBadge` - 要顯示成應用程式圖示徽章的數字。
-- `apnsCategory` -  要用於互動式推送通知的種類 ID。
-- `apnsIosActionKey` - 動作鍵的標題。
-- `apnsPayload` - 會放在通知訊息中一起傳送的自訂 JSON 有效負載。
-- `apnsType` - ['DEFAULT'、'MIXED'、'SILENT']。
-- `apnsSound` - 應用程式組合中的音效檔名稱。將會播放此檔案的音效作為警示。
+- `text`：要對使用者顯示的通知訊息。例如：`-p text "Hi ,OpenWhisk send a notification"`。
+- `url` - 可隨著警示一起傳送的選用性 URL。例如：`-p url "https:\\www.w3.ibm.com"`。
+- `gcmPayload`：會放在通知訊息中一起傳送的自訂 JSON 有效負載。例如：`-p gcmPayload "{"hi":"hello"}"`
+- `gcmSound`：當通知到達裝置時，將會嘗試播放的音效檔（在裝置上）。
+- `gcmCollapseKey`：此參數可識別訊息的群組。
+- `gcmDelayWhileIdle`：當此參數設為 true 時，表示要等到裝置變成作用中時才會傳送訊息。
+- `gcmPriority`：設定訊息的優先順序。
+- `gcmTimeToLive`：此參數指定當裝置離線時，訊息保留在 GCM 儲存空間中多久（以秒為單位）。
+- `apnsBadge`：要顯示成應用程式圖示徽章的數字。
+- `apnsCategory`：要用於互動式推送通知的種類 ID。
+- `apnsIosActionKey`：動作鍵的標題。
+- `apnsPayload`：會放在通知訊息中一起傳送的自訂 JSON 有效負載。
+- `apnsType`：['DEFAULT'、'MIXED'、'SILENT']。
+- `apnsSound`：應用程式組合中的音效檔名稱。將會播放此檔案的音效作為警示。
 
 下面是從推送通知套件傳送推送通知的範例。
 
@@ -693,26 +710,27 @@ wsk package list
   ```
   {: screen}
 
-### 在產生 IBM Push Notifications 服務活動時發動觸發事件
+### 發動 Push 活動的觸發程式事件
+{: #openwhisk_catalog_pushnotifications_fire}
 
-`/whisk.system/pushnotifications/webhook` 將 IBM Push Notifications 服務配置成：當指定的應用程式中有裝置活動（例如裝置登錄 / 取消登錄或訂閱 / 取消訂閱）時，即發動觸發程式
+`/whisk.system/pushnotifications/webhook` 將 Push 服務配置成：當指定的應用程式中有裝置活動（例如裝置登錄/取消登錄或訂閱/取消訂閱）時，即發動觸發程式
 
 參數如下所示：
 
-- `appId`：Bluemix 推送通知服務 appSecret。
-- `appSecret`：Bluemix 應用程式 GUID。
+- `appId`：Bluemix 應用程式 GUID。
+- `appSecret`：Bluemix 推送通知服務 appSecret。
 - `events`：支援的事件為 `onDeviceRegister`、`onDeviceUnregister`、`onDeviceUpdate`、`onSubscribe`、`onUnsubscribe`。如果所有事件都要通知，請使用萬用字元 `*`。
 
-下列範例說明如何建立在每次有新裝置向「IBM Push Notifications 服務」應用程式登錄時，即發動的觸發程式。
+下列範例說明如何建立在每次有新裝置向 Push Notifications 服務應用程式登錄時即發動的觸發程式。
 
-1. 以您的 appId 和 appSecret 來建立為 IBM Push Notifications 服務配置的套件連結。
+1. 使用 appId 和 appSecret 來建立為 Push Notifications 服務所配置的套件連結。
 
   ```
   wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
   ```
   {: pre}
 
-2. 使用 `myPush/webhook` 資訊來源，為「IBM Push Notifications 服務」的 `onDeviceRegister` 事件類型建立觸發程式。
+2. 使用 `myPush/webhook` 資訊來源，為 Push Notifications 服務的 `onDeviceRegister` 事件類型建立觸發程式。
 
   ```
   wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister

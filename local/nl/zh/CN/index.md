@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*上次更新时间：2016 年 7 月 7 日*
+*上次更新时间：2016 年 8 月 16 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} Local 将为您的数据中心带来 {{site.data.keyword.Bluemix_notm}} 基于云的平台的能力和敏捷性。通过 {{site.data.keyword.Bluemix_notm}} Local，在与 {{site.data.keyword.Bluemix_notm}} Public 保持安全连接并与之同步的同时，可以在公司防火墙后保护您最敏感的工作负载。
@@ -37,7 +37,8 @@ IBM® 使用云操作即服务来监视和维护您的环境，让您可以专�
 |内含 | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | 根据策略，动态增大或减小应用程序的计算资源容量。通过此服务，您在 {{site.data.keyword.Bluemix}} Local 环境中的使用不受限制。|
 |可选 | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 将 {{site.data.keyword.APIM}} 和 IBM StrongLoop 集成到单个产品中，以提供一个综合解决方案来创建、运行、管理和强制执行 API 与微型服务。 |
 |可选 | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | 使用 {{site.data.keyword.APIMfull}} 服务可编写、管理和社交化 API。可以使用资源导入 API，方法是使用代理 URL 或从 HTTP 数据源组合数据。使用 {{site.data.keyword.APIM}} 服务的好处是，您可以管理 API 的使用方式。 |
-|可选 | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供了对始终启用的完全受管 NoSQL JSON 数据层的访问。此服务兼容 CouchDB，并且可通过易用的 HTTP 接口供移动和 Web 应用程序模型访问。 |
+|可选 | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供了对始终启用的完全受管 NoSQL JSON 数据层的访问。此服务兼容 CouchDB，并且可通过易用的 HTTP 接口供移动和 Web 应用程序模型访问。有关更多信息，请参阅本地环境的完整[文档](http://docs.cloudant.com/BluemixLocal.html){: new_window}和[硬件需求](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window}。 |
+|可选 (Beta) | {{site.data.keyword.containershort}} | 在 {{site.data.keyword.Bluemix_notm}} Local 上运行 Docker 容器。容器是包含应用程序运行所需的所有元素的虚拟软件对象。容器不仅具有资源隔离和分配的好处，而且还比虚拟机器（举例来说）的可移植性更好，且更有效率。 |
 |可选 | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
 |可选 | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 为了提高冗余度，{{site.data.keyword.sescashort}} 提供了高速缓存中存储的会话的副本。因此，万一发生掉线或中断，客户机应用程序会保持对高速缓存中的会话的访问。此服务支持 Web 和移动应用程序的会话高速缓存场景。 |
 |可选 | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | 此服务允许应用程序与连接的设备、传感器和网关进行通信，以及使用这些设备、传感器和网关收集的数据。本地基本产品包括初始环境，允许在本地环境中运行 IBM {{site.data.keyword.iot_full}} 的专用版本，容量为 100,000 个并行连接设备或应用程序，数据交换量为 1.6 TB。 |
@@ -206,7 +207,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 <li>您与 IBM 一起来验证您在前一任务中提供的凭证。</li>
 <li>您提供自己网络上的 7 个 IP 地址。如果您有安全 Web 代理支持内部 {{site.data.keyword.Bluemix_notm}} 组件对因特网进行出站访问，那么必须提供用于连接到该代理的凭证。<p>**注**：如果您的 Web 代理不是安全代理，那么无需提供凭证。另请注意，并非所有 {{site.data.keyword.Bluemix_notm}} Local 客户都使用 Web 代理。</p></li>
 <li>IBM 提供了一个 URL 白名单，在开始部署之前，您必须允许这些 URL 通过您的 Web 代理。<br />
-<p>**注**：此 URL 白名单包含诸如 twitter.com、facebook.com 和 youtube.com 之类的 Web 站点。如果不允许这些 URL，那么 {{site.data.keyword.Bluemix_notm}} 的特定服务和区域可能无法使用。</p>
+<p>**注**：为了确保您现有的或新的应用程序可以访问必要的资源，您可能必须采取额外的步骤，将资源与 buildpack 捆绑在一起，或者与安全团队一起工作，以制作运行应用程序所需的 URL 白名单。有关使用 node.js 和 Liberty for Java buildpack 的更多信息，请参阅 <a href="../runtimes/nodejs/offlineMode.html">node.js 的脱机方式</a>和 <a href="../runtimes/liberty/offlineMode.html">Liberty for Java 的脱机方式</a>。</p>
 </li>
 <li>您为部署指定域名，以及要使用的标识。设置本地实例时，您会得到两个部分定义的域，请选取这两个域的前缀。例如，选取 <code>*mycompany*.bluemix.net</code> 和 <code>*mycompany*.mybluemix.net</code> 的前缀。然后，还可以选择完整域来创建定制域。<p>您可以根据自己的需要选择任意数量的定制域。不过，您应负责获取定制域的证书。有关创建定制域的信息，请参阅<a href="../manageapps/updapps.html#domain">创建和使用定制域</a>。</p></li>
 <li>选择要使用何种技术（IPSec 或 OpenVPN 隧道）来配置中继，以便连回 IBM 操作中心。</li>
@@ -342,7 +343,9 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 ## {{site.data.keyword.Bluemix_notm}} Local 基础架构需求
 {: #localinfra}
 
-对于 {{site.data.keyword.Bluemix_notm}} Local，您拥有物理安全和用于托管本地实例的基础架构。针对 {{site.data.keyword.Bluemix_notm}} Local 的安装，IBM 设置了以下最低需求。
+对于 {{site.data.keyword.Bluemix_notm}} Local，您拥有物理安全和用于托管本地实例的基础架构。
+
+针对 {{site.data.keyword.Bluemix_notm}} Local 的安装，IBM 设置了以下最低需求。
 
 ### 硬件
 
@@ -353,8 +356,8 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 <dd>
 ESXi 是一种在物理服务器上运行的虚拟化层，可将处理器、内存、存储器和资源抽取到多个虚拟机中。选择满足以下资源总数的任意组合，但条件是每个 ESXi 的最小物理核心计数为 8。以下规范仅适用于 {{site.data.keyword.Bluemix_notm}} 核心运行时。
 <ul>
-<li>48 个物理核心，每个核心 2.0 GHz 或更高</li>
-<li>756 GB 物理 RAM</li>
+<li>32 个物理核心，每个核心 2.0 GHz 或更高</li>
+<li>512 GB 物理 RAM</li>
 <li>数据存储总大小为 7.5 TB <ul>
 <li>7 TB 数据存储，用于容纳 {{site.data.keyword.Bluemix_notm}}</li>
 <li>500 GB 数据存储，用于容纳先启虚拟机</li>
@@ -365,7 +368,8 @@ ESXi 是一种在物理服务器上运行的虚拟化层，可将处理器、内
 </dd>
 <dt>**高可用性**</dt>
 <dd>
-为了针对单节点故障提供支持，必须有 n+1 个 ESXi。例如，如果使用 3 个 ESXi（意味着每个 ESXi 有 16 个核心），那么需要第四个 ESXi。<p><strong>注：</strong>客户 VMware 管理员可以决定是否在集群中强制执行严格的高可用性故障转移以保证有足够的资源。</p>
+为了针对单节点故障提供支持，必须有 n+1 个 ESXi。例如，如果使用两个 16x 核心 256 GB ESXi 的服务器满足 32 核心和 512 GB 的内存，那么您需要三个这样的服务器，以针对单节点的完全故障提供支持。
+<p><strong>注：</strong>客户的 VMware 管理员可以决定是否在集群中强制执行严格的高可用性故障转移以保证有足够的资源。如果选择继续而没有高可用性故障转移，那么您可以满足最低 32 核心和 512 GB 的资源需求。</p>
 </dd>
 <dt>**网络**</dt>
 <dd>
@@ -443,9 +447,9 @@ vSphere Enterprise plus（如果计划使用分布式虚拟交换机）</dd>
 
 ### 增大 Droplet Execution Agent (DEA) 池
 每个 DEA 都会配置为：
-- 16 - 32 GB RAM
-- 2 - 4 个 vCPU
-- 150 - 300 GB 存储器
+- 16 或 32 GB RAM
+- 2x 或 4x vCPU
+- 150 或 300 GB 存储器
 
 例如，如果 ESXi 主机大小为 256 GB 内存，16 个核心，那么将添加 8 个 DEA。如果 ESXi 主机大小为 64 GB 内存，8 个核心，那么将需要添加 2 个 ESXi 和 4 个 DEA。每四个 DEA 还需要额外添加 1.5 TB 的存储器。此示例基于配置有 32 GB RAM、4 个 vCPU 和 300 GB 存储器的 DEA。
 

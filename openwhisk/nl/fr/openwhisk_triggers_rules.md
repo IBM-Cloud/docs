@@ -18,7 +18,7 @@ copyright:
 
 # Création de déclencheurs et de règles
 {: #openwhisk_triggers}
-*Dernière mise à jour : 22 février 2016*
+Dernière mise à jour : 22 février 2016
 {: .last-updated}
 
 Les déclencheurs et les règles {{site.data.keyword.openwhisk}} apportent des capacités gérées par des événements sur la
@@ -26,7 +26,8 @@ plateforme. Les événements provenant de sources d'événements externes et int
 à réagir à ces événements.
 {: shortdesc}
 
-## Déclencheurs
+## Création de déclencheurs
+{: #openwhisk_triggers_create}
 
 Les déclencheurs constituent un canal nommé pour une classe d'événements. Voici des exemples de déclencheur :
 - Déclencheur d'événements de mise à jour d'emplacement
@@ -43,7 +44,8 @@ des exemples de flux :
 - Flux de modifications de données Cloudant qui exécute un déclencheur à chaque fois qu'un document dans une base de données est ajouté ou modifié
 - Flux Git qui exécute un déclencheur pour chaque validation dans un référentiel Git
 
-## Règles
+## Utilisation de règles
+{: #openwhisk_rules_use}
 
 Une règle associe un déclencheur à une action, chaque exécution du déclencheur entraînant l'appel de l'action correspondante avec l'événement
 déclencheur en entrée.
@@ -69,7 +71,7 @@ Les trois règles établissent le comportement suivant : les images dans les twe
 sont classées, et une version miniature est générée. 
 
 ## Création et exécution de déclencheurs
-{: #openwhisk_triggers}
+{: #openwhisk_triggers_fire}
 
 Des déclencheurs peuvent être exécutés lorsque certains événements surviennent, ou manuellement.
 
@@ -117,8 +119,8 @@ Par exemple, créez un déclencheur pour envoyer les mises à jour de l'emplacem
 Un déclencheur qui est lancé sans aucune règle associée n'a aucun effet visible.
 Les déclencheurs ne peuvent pas être créés au sein d'un package ; ils doivent être créés directement sous un espace de noms. 
 
-## Utilisation de règles pour associer des déclencheurs et des actions
-{: #openwhisk_rules}
+## Association de déclencheurs et d'actions à l'aide de règles
+{: #openwhisk_rules_assoc}
 
 Des règles sont utilisées pour associer un déclencheur à une action. A chaque fois qu'un événement déclencheur est exécuté, l'action est appelée
 avec les paramètres d'événement.
@@ -189,5 +191,4 @@ d'événement.
 
 Vous pouvez créer plusieurs règles qui associent le même déclencheur à des actions différentes.
 Le déclencheur et l'action qui constituent une règle doivent figurer dans le même espace de noms et ne peuvent pas appartenir à un package.
-Si vous souhaitez utiliser une action qui appartient à un package, vous pouvez copier l'action dans votre espace de noms, par exemple, `wsk action create echo --copy /whisk.system/samples/echo`.
-
+Si vous souhaitez utiliser une action qui appartient à un package, vous pouvez copier l'action dans votre espace de noms. Par exemple : `wsk action create echo --copy /whisk.system/samples/echo`.

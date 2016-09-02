@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} 本端
 {: #local}
-*前次更新：2016 年 7 月 7 日*
+*前次更新：2016 年 8 月 16 日*
 {: .last-updated}
 
 「{{site.data.keyword.Bluemix}} 本端」將 {{site.data.keyword.Bluemix_notm}} 雲端型平台的功能及靈活性帶給資料中心。使用「{{site.data.keyword.Bluemix_notm}} 本端」，您可以利用公司防火牆來保護最機密的工作負載，同時安全地連接至「{{site.data.keyword.Bluemix_notm}} 公用」並與它同步。
@@ -37,7 +37,8 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |內含 | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | 根據原則，動態增加或減少應用程式的運算資源能力。使用此服務，即可在「{{site.data.keyword.Bluemix}} 本端」環境中無限制地使用。|
 |選用 | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 將 {{site.data.keyword.APIM}} 及 IBM StrongLoop 整合成單一供應項目，提供綜合性解決方案來建立、執行、管理及強制執行 API 和微服務。 |
 |選用 | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | 使用 {{site.data.keyword.APIMfull}} 服務來組合、管理及社交化 API。您可以使用 Proxy URL 或組合來自 HTTP 資料來源中的資料，以匯入 API 與資源。使用 {{site.data.keyword.APIM}} 服務的好處是您可以管理 API 的使用方式。 |
-|選用 | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動及 Web 應用程式模型。 |
+|選用 | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動及 Web 應用程式模型。如需相關資訊，請參閱完整本端環境的[文件](http://docs.cloudant.com/BluemixLocal.html){: new_window}及[硬體需求](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window}。 |
+|選用（測試版） | {{site.data.keyword.containershort}} | 在「{{site.data.keyword.Bluemix_notm}} 本端」上執行 Docker 容器。容器是虛擬軟體物件，其包括應用程式需要執行的所有元素。容器具有資源隔離及配置的優點，而且比虛擬機器（舉例來說）更容易攜帶且更具效率。 |
 |選用 | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | 此服務提供記憶體內的資料網格，它支援應用程式的分散式快取情境。包含 50 GB 的記憶體內快取。 |
 |選用 | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 為了提高備援，{{site.data.keyword.sescashort}} 會提供快取中所儲存階段作業的抄本。因此，電壓過低或作業中斷時，用戶端應用程式仍然保有快取中階段作業的存取權。此服務支援 Web 及行動應用程式的階段作業快取情境。 |
 |選用 | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | 此服務可讓您的應用程式與已連接的裝置、感應器及閘道進行通訊，並且耗用這些項目所收集的資料。本端基本供應項目包括起始環境，此環境允許在本端環境內執行專用版本的 {{site.data.keyword.iot_full}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 1.6 TB 的資料交換。 |
@@ -181,7 +182,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 	</ol>
 	</li>
 <li>建立平台及帳戶之後，識別組織中負責維持本端實例運作所需角色的人員。如需您可指派之角色的相關資訊，請參閱<a href="index.html#rolesresponsibilities" target="_blank">「{{site.data.keyword.Bluemix_notm}} 本端」角色及責任</a>。</li>
-<li>您提供硬體，而 IBM 協助您定義並建立公司網路與「{{site.data.keyword.Bluemix_notm}} 本端」實例之間的網路連線功能。如需基礎架構需求的相關資訊，請參閱<a href="index.html#localinfra">「{{site.data.keyword.Bluemix_notm}} 本端」基礎架構需求</a>。
+<li>您提供硬體，而 IBM 協助您定義並建立組織網路與「{{site.data.keyword.Bluemix_notm}} 本端」實例之間的網路連線功能。如需基礎架構需求的相關資訊，請參閱<a href="index.html#localinfra">「{{site.data.keyword.Bluemix_notm}} 本端」基礎架構需求</a>。
 	<ol type="a">
 	<li>IBM 會根據您提供的資訊，配置網路存取權及 LDAP。管理存取權會授與給您指定的聯絡人。您也必須指定聯絡人來負責支援及計費。</li>
 	<li>IBM 會在您的本端環境中設定聯合型錄，以顯示您的本端服務及許多公用 {{site.data.keyword.Bluemix_notm}} 服務。</li>
@@ -207,7 +208,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 <li>您提供自己網路上的 7 個 IP 位址。如果您有安全的 Web Proxy，容許內部 {{site.data.keyword.Bluemix_notm}} 元件對網際網路進行出埠存取，則必須提供認證以便進行連接。
 <p>**附註**：如果您的 Web Proxy 不是安全的 Proxy，則無需提供認證。另請注意，並非所有「{{site.data.keyword.Bluemix_notm}} 本端」客戶都使用 Web Proxy。</p></li>
 <li>IBM 提供一個 URL 白名單，在開始部署之前，您必須容許這些 URL 可通過您的 Web Proxy。<br />
-<p>**附註**：URL 白名單確實包含例如 twitter.com、facebook.com 及 youtube.com 等網站。如果不容許這些 URL，則可能無法使用 {{site.data.keyword.Bluemix_notm}} 的特定服務及區域。</p>
+<p>**附註**：若要確保現有或新的應用程式可以存取必要資源，您可能需要採取額外的步驟來組合資源與建置套件，或與安全團隊一起合作將執行應用程式所需的 URL 設為白名單。如需使用 node.js 及 Liberty for Java 建置套件的相關資訊，請參閱 <a href="../runtimes/nodejs/offlineMode.html">node.js 的離線模式</a>及 <a href="../runtimes/liberty/offlineMode.html">Liberty for Java 的離線模式</a>。</p>
 </li>
 <li>您為部署指定網域名稱，以及要使用的 ID。設定本端實例時，您會得到兩個局部定義的網域，請挑選這兩個網域的字首。例如，挑選 <code>*mycompany*.bluemix.net</code> 和 <code>*mycompany*.mybluemix.net</code> 的字首。然後，還可以選擇完整網域來建立自訂網域。
 <p>您可以根據自己的需要選擇任意數量的自訂網域。不過，您應負責取得自訂網域的憑證。如需建立自訂網域的相關資訊，請參閱<a href="../manageapps/updapps.html#domain">建立及使用自訂網域</a>。</p></li>
@@ -215,7 +216,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 <li>IBM 在 {{site.data.keyword.Bluemix_notm}} 叢集內安裝並啟動初始虛擬機器。如果您提供自己的 VMware，則 IBM 業務代表會協助您的客戶代表來完成此作業。</li>
 <li>IBM 配置「轉遞」，以便連回 IBM 作業中心與之進行通訊。</li>
 <li>初始虛擬機器儲存庫拉入更新後的建置構件。</li>
-<li>您提供認證，供 IBM 連接至公司的 LDAP 目錄實例。</li>
+<li>您提供認證，供 IBM 連接至組織 LDAP 目錄實例。</li>
 <li>IBM 使用自動化來部署核心 {{site.data.keyword.Bluemix_notm}} 平台。</li>
 <li>IBM 部署核心平台，其中包含彈性運行環境、主控台、管理特性及監視。</li>
 <li>IBM 配置您對環境的管理存取權。</li>
@@ -271,7 +272,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 
 - 審查財務合約，並建立交付的里程碑日期。
 - 建立 {{site.data.keyword.Bluemix_notm}} 平台，並提供運行環境及服務的存取權。
-- 定義並建立貴公司網路與 {{site.data.keyword.Bluemix_notm}} 作業之間的網路連線功能。
+- 定義並建立貴組織網路與 {{site.data.keyword.Bluemix_notm}} 作業之間的網路連線功能。
 - 識別並指派管理團隊的角色。
 
 *表 4. 初始階段作業*
@@ -293,7 +294,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 |安裝 VPN 解決方案 | 安裝雙向 VPN 解決方案。 | IBM |
 |安裝平台、應用程式，以及監視和管理元件 | 安裝、配置及驗證平台元件（例如 BOSH Director、「雲端控制器」、「性能管理程式」、傳訊、路由器、DEA 及服務提供者），以及提升及問題偵測計劃中所定義的監視元件。 | IBM |
 |安裝並配置安全元件 | 安裝並配置嵌入監視及提升計劃的安全元件（包括 IBM QRadar、認證儲存庫、侵入防禦系統、IBM BigFix 及「IBM Security 特許身分管理」）。 | IBM |
-|配置登入伺服器 | 配置要與公司 LDAP 搭配使用的登入伺服器。 | IBM |
+|配置登入伺服器 | 配置要與組織 LDAP 搭配使用的登入伺服器。 | IBM |
 |安裝並配置自訂元件 |  	安裝並配置位在 {{site.data.keyword.Bluemix_notm}} 產品及服務範圍外部的自訂元件。 | 客戶 |
 |連接 {{site.data.keyword.Bluemix_notm}} 管線 | 連接 {{site.data.keyword.Bluemix_notm}} 持續整合及持續交付管線與 IBM 儲存庫。 | IBM |
 |自訂外部解決方案元件 | 針對災難回復情境自訂負載平衡器。 | 客戶 |
@@ -344,7 +345,9 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 ## {{site.data.keyword.Bluemix_notm}} 本端基礎架構需求
 {: #localinfra}
 
-若為「{{site.data.keyword.Bluemix_notm}} 本端」，您掌控了管理本端實例的實體安全及基礎架構。IBM 針對設定「{{site.data.keyword.Bluemix_notm}} 本端」，設定了下列最低需求。
+若為「{{site.data.keyword.Bluemix_notm}} 本端」，您掌控了管理本端實例的實體安全及基礎架構。
+
+IBM 針對設定「{{site.data.keyword.Bluemix_notm}} 本端」，設定了下列最低需求。
 
 ### 硬體
 
@@ -355,8 +358,8 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 <dd>
 ESXi 是一種在實體伺服器上執行的虛擬化層級，它會將處理器、記憶體、儲存空間及資源抽象化成為多個虛擬機器。請根據每個 ESXi 的實體核心計數下限為八的條件，選擇符合下列資源總計的任何組合。下列規格僅適用於 {{site.data.keyword.Bluemix_notm}} 核心運行環境。
 <ul>
-<li>48 個實體核心，每個皆為 2.0 GHz 以上</li>
-<li>756 GB 的實體 RAM</li>
+<li>32 個實體核心，每一個為 2.0 以上的 GHz</li>
+<li>512 GB 的實體 RAM</li>
 <li>總計 7.5 TB 的資料儲存庫大小
 <ul>
 <li>7 TB 資料儲存庫，用來存放 {{site.data.keyword.Bluemix_notm}}</li>
@@ -368,8 +371,8 @@ ESXi 是一種在實體伺服器上執行的虛擬化層級，它會將處理器
 </dd>
 <dt>**高可用性**</dt>
 <dd>
-若要支援單一節點失效，您必須具有 n+1 個 ESXi。例如，如果使用三個 ESXi（表示每一個有 16 個核心），則需要有第四個 ESXi。
-<p><strong>附註：</strong>為了保證資源，客戶 VMware 管理者可能會決定要在叢集內施行嚴格的高可用性失效接手。</p>
+若要支援單一節點失效，您必須具有 n+1 個 ESXi。例如，如果搭配使用兩個 16x 核心與 256 GB ESXi 伺服器以符合 32 個核心及 512 GB 的記憶體，您需要其中三部伺服器來支援單一節點的完整失敗。
+<p><strong>附註：</strong>為了保證資源，客戶的 VMware 管理者可能會決定要在叢集內強制執行嚴格的高可用性失效接手。如果您選擇繼續，而不使用高可用性失效接手，則可以符合最低的 32 個核心及 512 GB 資源需求。</p>
 </dd>
 <dt>**網路**</dt>
 <dd>
@@ -449,9 +452,9 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 
 ### 增加 Droplet Execution Agent (DEA) 儲存區
 每一個 DEA 都配置有：
-- 16 - 32 GB 的 RAM
-- 2x - 4x vCPU
-- 150 - 300 GB 的儲存空間
+- 16 或 32 GB 的 RAM
+- 2x 或 4x vCPU
+- 150 或 300 GB 的儲存空間
 
 例如，如果 ESXi 主機大小為 256 GB 記憶體且具有 16 個核心，則會新增八個 DEA。如果 ESXi 主機大小為 64 GB 記憶體且具有 8 個核心，則需要新增兩個 ESXi 及四個 DEA。每四個 DEA 需要額外的 1.5 TB 儲存空間。此範例是根據配置有 32 GB RAM、4 個 vCPU 及 300 GB 儲存空間的 DEA。
 
@@ -467,13 +470,13 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 <dt>**服務的標準維護**</dt>
 <dd>這些服務使用預先定義的標準維護時間範圍，這樣可能導致服務無法使用。IBM 不需要客戶核准即可執行服務維護，但是會嘗試將對服務的影響降到最低。<br />
 <br />
-IBM 會傳送廣播訊息，詳述針對「狀態」頁面上每一個維護時間範圍所規劃的變更。<br />
+IBM 會傳送廣播訊息，詳述針對「狀態」頁面上每一個維護時間範圍所計劃的變更。<br />
 <br />
 **重要事項**：在維護期間，部分服務可能無法使用。</dd>
 
 <dt>**{{site.data.keyword.Bluemix_notm}} 平台的標準維護**</dt>
 <dd>維護更新是根據 21 天的時間範圍內，您與 IBM 之間的協調來套用。您將您不適用但 IBM 適用的預先核准維護時間範圍及特定日期或時間提供給 IBM，來排定在所選取日期期間或大約時間進行更新。<br />
-<p>移至**管理 > 系統資訊**，以檢視已排定及擱置維護更新。如需設定預先核准時間範圍、設定無法使用日期以及檢視或核准維護更新的相關資訊，請參閱<a href="../admin/index.html#oc_schedulemaintenance">維護更新</a>。</p></dd>
+<p>移至**管理 > 系統資訊**，以檢視已排定及擱置維護更新。如需設定預先核准時間範圍、設定無法使用日期以及檢視或核准維護更新的相關資訊，請參閱<a href="../admin/index.html#oc_schedulemaintenance">維護更新</a>。</p>.</dd>
 </dl>
 
 **重要事項**：IBM 保留視需要岔斷服務以套用緊急維護的權利。IBM 可能會變更排定的維護時間，但是一旦有這樣的變更以及任何緊急維護資訊時，就會通知您。

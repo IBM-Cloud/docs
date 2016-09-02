@@ -65,7 +65,7 @@ copyright:
  
   <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
   
-  7. 將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}}。如需 cf push 指令的相關資訊，請參閱[上傳應用程式](./upload_app.html)。
+  7. 將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}}。如需 cf push 指令的相關資訊，請參閱[上傳應用程式](/docs/starters/upload_app.html)。
   
   <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></pre>
   

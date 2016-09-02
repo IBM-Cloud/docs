@@ -18,7 +18,7 @@ copyright:
 
 # Usando e criando pacotes do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
-*Última atualização: 28 de março de 2016*
+Última atualização: 2 de agosto de 2016
 {: .last-updated}
 
 No {{site.data.keyword.openwhisk}}, é possível usar pacotes para empacotar um conjunto de ações relacionadas juntas e compartilhá-las com outras pessoas.
@@ -29,7 +29,9 @@ Um pacote pode incluir *ações* e *feeds*.
 
 Cada entidade do {{site.data.keyword.openwhisk_short}}, incluindo pacotes, pertence a um *namespace* e o nome completo de uma entidade é `/namespaceName[/packageName]/entityName`. Consulte as [diretrizes de nomenclatura](./openwhisk_reference.html#openwhisk_entities) para obter mais informações.
 
-As seções a seguir descrevem como procurar pacotes e usar acionadores e feeds nos mesmos. Além disso, para aqueles interessados em contribuir com seus próprios pacotes para o catálogo, leia as seções sobre a criação e o compartilhamento de pacotes.
+As seções a seguir descrevem como procurar pacotes e usar acionadores e feeds nos mesmos. Além
+disso, se você estiver interessado em contribuir com seus próprios pacotes para o
+catálogo, leia as seções sobre criação e compartilhamento de pacotes.
 
 ## Procurando pacotes
 {: #openwhisk_packagedisplay}
@@ -210,7 +212,8 @@ No exemplo simples a seguir, você faz a ligação com o pacote `/whisk.system/s
 ## Criando e usando feeds acionadores
 {: #openwhisk_package_trigger}
 
-Feeds oferecem uma maneira conveniente para configurar uma origem de eventos externos para disparar esses eventos para um acionador do {{site.data.keyword.openwhisk_short}}. Este exemplo mostra como usar um feed no pacote Alarmes para disparar um acionador a cada segundo e usar uma regra para chamar uma ação a cada segundo.
+Feeds oferecem uma maneira conveniente para configurar uma origem de eventos externos para disparar esses eventos para um acionador do {{site.data.keyword.openwhisk_short}}. 
+Este exemplo mostra como usar um feed no pacote Alarmes para disparar um acionador a cada segundo e como usar uma regra para chamar uma ação a cada segundo.
 
 1. Obtenha uma descrição do feed no pacote `/whisk.system/alarms`.
 
@@ -492,4 +495,3 @@ o pacote for privado, então, todo o seu conteúdo também será privado.
   {: screen}
 
   No exemplo anterior, você está trabalhando com o namespace `myNamespace` e esse namespace aparece no nome completo.
-

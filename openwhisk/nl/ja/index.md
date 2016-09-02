@@ -17,7 +17,7 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} 概説
-*最終更新日: 2016 年 6 月 28 日*
+最終更新日: 2016 年 8 月 4 日
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} は、イベント・ドリブンの分散計算サービスです。{{site.data.keyword.openwhisk_short}} は、イベントに応えて、または、Web アプリやモバイル・アプリからの HTTP を介した直接起動に応えて、アプリケーション・ロジックを実行します。イベントは、Bluemix サービス (Cloudant など) および外部ソースから提供できます。開発者は、アプリケーション・ロジックの開発と、オンデマンドで実行されるアクションの作成に専念できます。アクションの実行率は常にイベント率に一致するため、本来の拡張性と回復力に応じたものになり、最適な使用効率をもたらします。使用した分のみ支払えばよく、サーバーを管理する必要はありません。[ソース・コード](https://github.com/openwhisk/openwhisk)を入手し、システムを自身で実行することもできます。
@@ -28,9 +28,12 @@ copyright:
 ## {{site.data.keyword.openwhisk_short}} CLI のセットアップ
 {: #openwhisk_start_configure_cli}
 
-{{site.data.keyword.openwhisk_short}} コマンド・ライン・インターフェース (CLI) を使用して、名前空間および許可鍵をセットアップできます。[「CLI の構成」](https://new-console.{DomainName}/openwhisk/cli){: new_window}に移動し、手順に従ってインストールしてください。CLI を使用するには、ご使用のシステムに Python 2.7 がインストールされている必要があることに注意してください。
+{{site.data.keyword.openwhisk_short}} コマンド・ライン・インターフェース (CLI) を使用して、名前空間および許可鍵をセットアップできます。[「CLI の構成」](https://new-console.{DomainName}/openwhisk/cli){: new_window}に移動し、手順に従ってインストールしてください。 
 
-{{site.data.keyword.openwhisk_short}} を CLI と共にセットアップした後、コマンド・ラインから、または REST API を介して使用を開始できます。
+**非推奨に関する注意** Python のインストールが不要な新しい CLI が利用可能です。
+以前の CLI (Python ベース) は現在非推奨で、バックアップのダウンロード・オプションとしてのみ利用可能です。非推奨の CLI を使用する場合は、システムに Python 2.7 がインストールされていなければなりません。 
+
+{{site.data.keyword.openwhisk_short}} を CLI と共にセットアップした後、コマンド・ラインから使用を開始できます。
 
 ## {{site.data.keyword.openwhisk_short}} CLI の使用 
 {: #openwhisk_start_using_cli}
@@ -57,7 +60,7 @@ copyright:
 {: #openwhisk_start_hello_world}
 {{site.data.keyword.openwhisk_short}} の入門として、まず次の JavaScript コード例を試してみてください。
 
-
+```
 /**
  * Hello world as an OpenWhisk action.
  */
@@ -65,7 +68,7 @@ function main(params) {
     var name = params.name || 'World';
     return {payload:  'Hello, ' + name + '!'};
 }
-
+```
 {: codeblock}
 
 この例を使用するには、以下の手順を実行してください。
@@ -74,45 +77,46 @@ function main(params) {
 
 2. {{site.data.keyword.openwhisk_short}} CLI コマンド・ラインから、次のコマンドを入力してアクションを作成します。
 
-    
+    ```
 wsk action create hello hello.js
-    
+    ```
     {: pre}
 
 3. 次に、以下のコマンドを入力することによって、アクションを起動します。
 
-    
+    ```
 wsk action invoke hello --blocking --result
-    
+    ```
     {: pre}  
 
     このコマンドの出力は以下のとおりです。
 
-    
+    ```
     {
         "payload": "Hello, World!"
     }
-    
+    ```
     {: screen}
 
-    
+    ```
 wsk action invoke hello --blocking --result --param name Fred
-    
+    ```
     {: pre}  
 
     このコマンドの出力は以下のとおりです。
 
-    
+    ```
     {
         "payload": "Hello, Fred!"
     }
-    
+    ```
     {: screen}
 
 {{site.data.keyword.openwhisk_short}} のイベント・ドリブン機能を使用して、イベントに応えてこのアクションを起動することもできます。[アラーム・サービス例](./openwhisk_packages.html#openwhisk_packages_trigger)に従って、周期的イベントが生成されるたびに `hello` アクションを起動するイベント・ソースを構成します。
 
 
 ## システムの詳細
+{: #openwhisk_system_details}
 
 {{site.data.keyword.openwhisk_short}} に関する追加情報が以下のトピックに記載されています。
 
@@ -122,9 +126,14 @@ wsk action invoke hello --blocking --result --param name Fred
 * [REST API](https://new-console.{DomainName}/apidocs/98)
 
 # 関連リンク
-## api
-* [REST API の資料](./openwhisk_reference.html#openwhisk_ref_restapi)
+{: #rellinks}
 
-## 一般
+## API リファレンス
+{: #api}
+* [REST API の資料](./openwhisk_reference.html#openwhisk_ref_restapi)
+* [REST API](https://new-console.{DomainName}/apidocs/98){:new_window}
+
+## 関連リンク
+{: #general}
 * [ディスカバー: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
 * [IBM developerWorks の {{site.data.keyword.openwhisk_short}}](https://developer.ibm.com/openwhisk/){:new_window}

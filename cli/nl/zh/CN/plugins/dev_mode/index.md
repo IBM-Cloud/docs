@@ -28,7 +28,7 @@ copyright:
 
 可以使用 dev_mode CLI 执行以下任务：
 - 将应用程序在开发方式和正常方式之间切换。
-- 逐步更新应用程序文件，而无需新的推送。
+- 以递增方式更新应用程序文件，而无需新的推送。
 - 在现有容器中启动、停止或重新启动应用程序。
 
 ## 安装 dev_mode 插件
@@ -150,7 +150,7 @@ cf update-file <remotePath> <localPath> [command_options]
 
    <dl>
    <dt>expand</dt>
-   <dd>指示上传的文件是否必须从 zip 文件中截取。</dd>
+   <dd>指示上传的文件是否必须从 zip 文件中解压缩。</dd>
    <dt>restart</dt>
    <dd>文件更新后，重新启动应用程序运行时。</dd>
    </dl>

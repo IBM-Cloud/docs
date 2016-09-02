@@ -18,12 +18,14 @@ copyright:
 
 # トリガーとルールの作成
 {: #openwhisk_triggers}
-*最終更新日: 2016 年 2 月 22 日*{: .last-updated}
+最終更新日: 2016 年 2 月 22 日
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} のトリガーとルールにより、プラットフォームにイベント・ドリブン機能がもたらされます。外部および内部のイベント・ソースからのイベントは、トリガーを通じてチャネル設定され、ルールによって許可されたアクションがこれらのイベントに対応します。
 {: shortdesc}
 
-## トリガー
+## トリガーの作成
+{: #openwhisk_triggers_create}
 
 トリガーは、ある種のイベントに対して指定されたチャネルです。以下は、トリガーの例です。
 
@@ -38,7 +40,8 @@ copyright:
 - データベースの文書に追加または変更があるたびにトリガー・イベントを発生させる Cloudant データ変更フィード。
 - Git リポジトリーへのコミットごとにトリガー・イベントを発生させる Git フィード。
 
-## ルール
+## ルールの使用
+{: #openwhisk_rules_use}
 
 ルールは 1 つのトリガーを 1 つのアクションに関連付けます。トリガーが発生するたびに、該当のアクションが、トリガー・イベントを入力として起動されます。
 
@@ -61,7 +64,7 @@ copyright:
 この 3 つのルールでは、ツイートとアップロードされたイメージの両方のイメージを分類する、アップロードされたイメージを分類する、サムネール・バージョンを生成する、という動作を設定します。 
 
 ## トリガーの作成と発生
-{: #openwhisk_triggers}
+{: #openwhisk_triggers_fire}
 
 トリガーは、特定のイベントの発生時に発生させることも、手動で発生させることもできます。
 
@@ -69,48 +72,48 @@ copyright:
 
 1. 以下のコマンドを入力してトリガーを作成します。
  
-  
+  ```
 wsk trigger create locationUpdate
-  
+  ```
   {: pre}
  
-  
+  ```
 ok: created trigger locationUpdate
-  
+  ```
   {: screen}
 
 2. トリガーのセットをリストして、トリガーが作成されたことを確認します。
 
-  
+  ```
 wsk trigger list
-  
+  ```
   {: pre}
  
-  
+  ```
 triggers
   /someNamespace/locationUpdate                            private
-  
+  ```
   {: screen}
 
   これで、名前を指定した「チャネル」が作成され、このチャネルに対してイベントを発生させることができます。
 
 3. 次に、トリガー名とパラメーターを指定して、トリガー・イベントを発生させます。
 
-  
+  ```
 wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
-  
+  ```
   {: pre}
 
-  
+  ```
 ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
-  
+  ```
   {: screen}
 
 発生したトリガーは、それに突き合わせる付随のルールがない場合は、目に見える効果はありません。
-トリガーはパッケージ内に作成してはならず、名前空間の直下に作成する必要があります。
+トリガーはパッケージ内に作成できません。名前空間の直下に作成する必要があります。
 
 ## ルールを使用したトリガーとアクションの関連付け
-{: #openwhisk_rules}
+{: #openwhisk_rules_assoc}
 
 トリガーをアクションに関連付けるために、ルールが使用されます。トリガー・イベントが発生するたびに、イベントのパラメーターを使用してアクションが起動されます。
 
@@ -118,70 +121,68 @@ ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
 
 1. 使用するアクション・コードを含む 'hello.js' ファイルを作成します。
 
-  
+  ```
 function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
-  
+  ```
   {: codeblock}
 
 2. トリガーとアクションが存在することを確認します。
 
-  
+  ```
 wsk trigger update locationUpdate
-  
+  ```
   {: pre}
   
-  
+  ```
 wsk action update hello hello.js
-  
+  ```
   {: pre}
 
 3. ルールを作成して有効にします。3 つのパラメーターは、ルールの名前、トリガー、およびアクションです。
 
-  
+  ```
 wsk rule create --enable myRule locationUpdate hello
-  
+  ```
   {: pre}
 
 4. locationUpdate トリガーを発生させます。イベントを発生させるたびに、イベントのパラメーターを使用して hello アクションが呼び出されます。
-
-  
+  ```
 wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
-  
+  ```
   {: pre}
   
-  
+  ```
 ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
-  
+  ```
   {: screen}
 
 5. 最新のアクティベーションをチェックして、アクションが呼び出されたことを確認します。
 
-  
+  ```
 wsk activation list --limit 1 hello
-  
+  ```
   {: pre}
   
-  
+  ```
 activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
-  
+  ```
   {: screen}
   
-  
+  ```
 wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
-  
+  ```
   {: pre}
-  
+  ```
   {
      "payload": "Hello, Donald from Washington, D.C."
   }
-  
+  ```
   {: screen}
 
   hello アクションがイベント・ペイロードを受け取り、予期されるストリングを戻したことが分かります。
 
 複数のルールを作成して、同じトリガーを異なるアクションに関連付けることができます。ルールを構成するトリガーとアクションは、同じ名前空間内に存在する必要があり、パッケージに属していてはなりません。
-パッケージに属しているアクションを使用する場合は、そのアクションを名前空間にコピーします。例えば、`wsk action create echo --copy /whisk.system/samples/echo` のように指定します。
-
+パッケージに属しているアクションを使用する場合は、そのアクションを名前空間にコピーします。例えば、`wsk action create echo --copy /whisk.system/samples/echo` などです。

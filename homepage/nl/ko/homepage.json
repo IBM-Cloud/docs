@@ -161,7 +161,7 @@
 			"img": "homepage/images/integration.svg",
 			"href": "services/integrate.html",
 			"links": [{
-				"name": "Cloud Integration",
+				"name": "클라우드 통합",
 				"href": "services/CloudIntegration/index.html"
 			}, {
 				"name": "Secure Gateway",

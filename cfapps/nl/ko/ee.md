@@ -18,7 +18,7 @@ copyright:
 # 시나리오: 엔드-투-엔드 개발
 {: #ee}
 
-*마지막 업데이트 날짜: 2016년 6월 15일*
+*마지막 업데이트 날짜: 2016년 8월 16일*
 {: .last-updated}
 
 앱을 빌드, 실행 및 배치할 때는 {{site.data.keyword.Bluemix}} 사용자 인터페이스, 플랫폼 및 도구 선택을 사용할 수 있습니다. 이 엔드 투 엔드 개발 시나리오에 따라 시작하십시오.
@@ -27,7 +27,7 @@ copyright:
 ## 등록
 {: #ee_start}
 
-시작하기 전에 우선 [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/)에서 IBM ID를 등록해야 합니다. 그 다음에 {{site.data.keyword.Bluemix_notm}}에 로그인하고 30일 무료 평가판 사용을 시작하십시오. {{site.data.keyword.Bluemix_notm}}에서는 무료 평가판에 대해 2GB의 런타임 메모리와 10개의 서비스 인스턴스 사용을 허용합니다. 
+시작하기 전에 [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/)에서 IBM ID를 등록해야 합니다. 그 다음에 {{site.data.keyword.Bluemix_notm}}에 로그인하고 30일 무료 평가판 사용을 시작하십시오. {{site.data.keyword.Bluemix_notm}}에서는 무료 평가판에 대해 2GB의 런타임 메모리와 10개의 서비스 인스턴스 사용을 허용합니다. 
 
 ## {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용한 웹 앱 작성
 {: #ee_appui}
@@ -36,7 +36,7 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}}에서 앱은 조직 및 영역과 연관됩니다. 조직은 다중 협업자에 의해 소유되고 사용됩니다. 처음에는 사용자 이름에 따라 이름 지정된 기본 조직을 갖게 되며 사용자가 유일한 협업자입니다. 이 조직 내에서 영역도 확보합니다. 영역은 앱을 실행하기 위한 환경입니다. 예를 들어, 개발 환경으로 개발 영역을, 테스트 환경으로 테스트 영역을, 프로덕션 환경으로 프로덕션 영역을 확보합니다. 또한 각 환경은 지역에 속합니다. {{site.data.keyword.Bluemix_notm}}에서는 네트워크 대기 시간의 감소, 데이터 개인정보 보호정책 및 가용성 증진을 위해 애플리케이션을 특정 지리적 지역에 배치할 수 있습니다. 세부사항은 지역을 참조하십시오.
 
-이 시나리오에서는 Node.js를 사용하여 웹 앱을 개발하고자 합니다. 현재 미국에 거주하고 있으며 대부분의 앱 사용자도 미국에 있다고 가정합니다. 네트워크 대기 시간 감소의 장점을 이용할 수 있도록, 사용자 기반에 근접한 앱을 빌드하고 실행하기로 결정합니다. {{site.data.keyword.Bluemix_notm}}에 로그인한 후에 **계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg)을 클릭하고 **미국 남부** 지역을 선택하십시오. 그리고 다음 단계에 따라 앱을 작성하십시오.
+이 시나리오에서는 Node.js를 사용하여 웹 앱을 개발하고자 합니다. 현재 미국에 거주하고 있으며 대부분의 앱 사용자도 미국에 있다고 가정합니다. 네트워크 대기 시간 감소의 장점을 이용할 수 있도록, 사용자 기반에 근접한 앱을 빌드하고 실행하기로 결정합니다. {{site.data.keyword.Bluemix_notm}}에 로그인하고 **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg)을 클릭한 후 **미국 남부** 지역을 선택하십시오. 그리고 다음 단계에 따라 앱을 작성하십시오.
 
   1. **컴퓨팅**을 선택하십시오.
   2. 더하기 아이콘을 클릭하십시오. 
@@ -190,7 +190,7 @@ cf bind-service TestNode cloudant100```
   ```
 if (process.env.VCAP_SERVICES) {
 var env = JSON.parse(process.env.VCAP_SERVICES);
-        var cloudant = env['"cloudantNoSQLDB'][0].credentials;
+        var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
                 "username" : "user1",

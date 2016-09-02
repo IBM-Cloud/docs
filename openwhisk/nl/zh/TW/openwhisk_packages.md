@@ -18,7 +18,7 @@ copyright:
 
 # 使用及建立 {{site.data.keyword.openwhisk_short}} 套件
 {: #openwhisk_packages}
-*前次更新：2016 年 3 月 28 日*
+前次更新：2016 年 8 月 2 日
 {: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，您可以使用套件以將一組相關動作組合在一起，並與其他人共用。
@@ -29,7 +29,7 @@ copyright:
 
 每個 {{site.data.keyword.openwhisk_short}} 實體（包括套件）都屬於*名稱空間*，而實體的完整名稱是 `/namespaceName[/packageName]/entityName`。如需相關資訊，請參閱[命名準則](./openwhisk_reference.html#openwhisk_entities)。
 
-下列各節說明如何瀏覽套件，以及如何使用其中的觸發程式及資訊來源。此外，如果是對將自己的套件提出至型錄感興趣的使用者，請閱讀有關建立及共用套件的各小節。
+下列各節說明如何瀏覽套件，以及如何使用其中的觸發程式及資訊來源。此外，如果您對將自己的套件提出至型錄感興趣，請閱讀有關建立及共用套件的各小節。
 
 ## 瀏覽套件
 {: #openwhisk_packagedisplay}
@@ -210,7 +210,7 @@ wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
 ## 建立及使用觸發程式資訊來源
 {: #openwhisk_package_trigger}
 
-資訊來源提供一種簡便的方法，將外部事件來源配置成向 {{site.data.keyword.openwhisk_short}} 觸發程式發動這些事件。此範例顯示如何使用「警示」套件中的資訊來源來每秒發動觸發程式，以及使用規則來每秒呼叫動作。
+資訊來源提供一種簡便的方法，將外部事件來源配置成向 {{site.data.keyword.openwhisk_short}} 觸發程式發動這些事件。此範例顯示如何使用「警示」套件中的資訊來源來每秒發動觸發程式，以及如何使用規則來每秒呼叫動作。
 
 1. 取得 `/whisk.system/alarms` 套件中資訊來源的說明。
 
@@ -490,4 +490,3 @@ package /myNamespace/custom
   {: screen}
 
   在前一個範例中，您是使用 `myNamespace` 名稱空間，而此名稱空間是以完整名稱顯示。
-

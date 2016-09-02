@@ -19,7 +19,7 @@ copyright:
 # Création et appel d'actions {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_actions}
 
-*Dernière mise à jour : 22 mars 2016*
+Dernière mise à jour : 4 août 2016
 {: .last-updated}
 
 Les actions sont des fragments de code sans état qui s'exécutent sur la plateforme {{site.data.keyword.openwhisk}}. Il peut s'agir d'une
@@ -36,9 +36,8 @@ Les actions peuvent être composées d'appels à d'autres actions ou à une séq
 ## Création et appel d'actions JavaScript
 {: #openwhisk_create_action_js}
 
-Les sections ci-après expliquent comment utiliser des actions dans JavaScript. Vous allez commencer par créer et appeler une action simple,
-puis vous apprendrez à ajouter des paramètres à une action et à appeler cette action avec des paramètres, à définir des paramètres par défaut et à les
-appeler, à créer des actions asynchrones et enfin, à utiliser des séquences d'actions.
+Les sections ci-après expliquent comment utiliser des actions dans JavaScript. Vous commencez par créer et appeler une action simple. Ensuite, vous ajoutez des paramètres à une action et vous appelez cette action avec des paramètres.
+Vient ensuite les phases de définition et d'appel des paramètres par défaut. Ensuite, vous créez des actions asynchrones et, enfin, vous gérez des séquences d'actions.
 
 
 ### Création et appel d'une action JavaScript simple
@@ -234,26 +233,30 @@ l'action.
 ### Création d'actions asynchrones
 {: #openwhisk_asynchrony_js}
 
-Il se peut que les fonctions JavaScript dont l'exécution continue dans une fonction de rappel doivent renvoyer le résultat d'activation après le
-retour de la fonction `main`. Pour ce faire, utilisez les fonctions `whisk.async()` et `whisk.done()` dans votre action.
+Il se peut que les fonctions JavaScript qui s'exécutent de manière asynchrone doivent renvoyer le résultat d'activation après le
+retour de la fonction `main`. Pour cela, vous pouvez renvoyer une promesse (objet Promise) dans votre action.
 
 1. Sauvegardez le contenu ci-dessous dans un fichier appelé `asyncAction.js`.
 
   ```
-  function main() {
-      setTimeout(function() {
-          return whisk.done({done: true});
-      }, 20000);
-      return whisk.async();
-  }
+  function main(args) {
+       return new Promise(function(resolve, reject) {
+         setTimeout(function() {
+           resolve({ done: true });
+         }, 2000);
+      })
+   }
   ```
   {: codeblock}
 
-  Remarquez que la fonction `main` renvoie des informations immédiatement et que la valeur de retour `whisk.async()`
-indique que cette activation doit continuer de s'exécuter.
+  Notez que la fonction `main` renvoie une promesse (objet Promise), indiquant que l'activation n'est pas encore terminée, mais que cela est prévu. 
 
-  Dans ce cas, la fonction JavaScript `setTimeout()` attend vingt secondes avant d'appeler la fonction de rappel, où
-l'appel à `whisk.done()` indique que l'activation est terminée.
+  Dans ce cas, la fonction JavaScript `setTimeout()` attend vingt secondes avant d'appeler la fonction de rappel.
+Cela représente le code asynchrone et s'insère dans la fonction de rappel de la promesse (objet Promise). 
+
+  La fonction de rappel de la promesse (objet Promise) prend deux arguments, resolve et reject, qui sont tous les deux des fonctions. L'appel vers `resolve()` satisfait la promesse (objet Promise) et indique que l'activation a abouti. 
+
+  Un appel vers `reject()` peut être utilisé pour rejeter la promesse (objet Promise) et signaler que l'activation ne s'est pas terminée normalement. 
 
 2. Exécutez les commandes suivantes pour créer l'action et l'appeler :
 
@@ -301,7 +304,7 @@ l'appel à `whisk.done()` indique que l'activation est terminée.
   {: screen}
 
   En comparant les horodatages de début (`start`) et de fin (`end`) dans l'enregistrement d'activation, vous
-pouvez déterminer que l'activation a duré un peu plus de vingt secondes.
+pouvez déterminer que cette activation a duré un peu plus de vingt secondes.
 
 
 ### Utilisation d'actions pour appeler une API externe
@@ -314,31 +317,37 @@ Cet exemple appelle un service météorologique Yahoo afin de prendre connaissan
 1. Sauvegardez le contenu ci-dessous dans un fichier appelé `weather.js`.
   ```
     var request = require('request');
-    
+
     function main(params) {
         var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
-    
-        request.get(url, function(error, response, body) {
-            var condition = JSON.parse(body).query.results.channel.item.condition;
-            var text = condition.text;
-            var temperature = condition.temp;
-            var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-            whisk.done({msg: output});
+
+        return new Promise(function(resolve, reject) {
+            request.get(url, function(error, response, body) {
+            if(error) {
+                    reject(error);    
+                }
+                else {
+                    var condition = JSON.parse(body).query.results.channel.item.condition;
+                    var text = condition.text;
+                    var temperature = condition.temp;
+                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                    resolve({msg: output});
+                }
+            });
         });
-    
-        return whisk.async();
     }
   ```
   {: codeblock}
 
   Notez que l'action dans l'exemple utilise la bibliothèque JavaScript `request` pour envoyer une demande HTTP à l'API Yahoo
-Weather, et extrait des zones du résultat JSON. La section [Références](./openwhisk_reference.html#runtime_ref_runtime_environment)
+Weather, et extrait des zones du résultat JSON. La section [Références](./reference.md#runtime-environment)
 présente en détail les packages Node.js que vous pouvez utiliser dans vos actions.
-  
-  Cet exemple illustre également la nécessité d'actions asynchrones. L'action renvoie `whisk.async()` pour indiquer que le résultat
+
+  Cet exemple illustre également la nécessité d'actions asynchrones. L'action renvoie une promesse (objet Promise) pour indiquer que le résultat
 de cette action n'est pas encore disponible au retour de la fonction. A la place, le résultat est disponible dans le rappel `request` une
-fois l'appel HTTP terminé, et est transmis sous forme d'argument à la fonction `whisk.done()`.
+fois l'appel HTTP terminé, et est transmis sous forme d'argument à la fonction `resolve()`.
+
 
 2. Exécutez les commandes suivantes pour créer l'action et l'appeler :
   ```
@@ -424,6 +433,39 @@ première séquence. Pour en savoir plus sur les packages, voir la section [Pack
 [Définition de paramètres par défaut](./actions.md#setting-default-parameters).
 
 
+## Création d'actions Python
+{: #openwhisk_actions_python}
+
+Le processus de création d'actions Python est similaire au processus de création d'actions JavaScript. Les sections ci-après vous expliquent comment créer
+et appeler une action Python unique, et comment ajouter des paramètres à cette action.
+
+### Création et appel d'une action
+{: #openwhisk_actions_python_invoke}
+
+Une action est ni plus ni moins qu'une fonction Python de niveau supérieur, ce qui signifie qu'il est nécessaire d'avoir une méthode nommée `main`. Par exemple, créez un fichier appelé `hello.py` avec le contenu suivant :
+
+```
+    def main(dict):
+        name = dict.get("name", "stranger")
+        greeting = "Hello " + name + "!"
+        print(greeting)
+        return {"greeting": greeting}
+```
+{: codeblock}
+
+Les actions Python consomment et produisent toujours un dictionnaire.
+
+Vous pouvez créer une action OpenWhisk appelée `helloPython` depuis cette fonction comme suit :
+
+```
+wsk action create helloPython hello.py
+```
+{: pre}
+
+Lorsque vous utilisez la ligne de commande et un fichier source `.py`, il n'est pas nécessaire de spécifier que vous créez une action
+Python (et non une action JavaScript) ; l'outil le détermine à partir de l'extension de fichier.
+
+
 
 ## Création d'actions Swift
 {: #openwhisk_actions_swift}
@@ -460,7 +502,7 @@ wsk action create helloSwift hello.swift
 ```
 {: pre}
 
-Si vous utilisez la ligne de commande et un fichier source `.swift`, il n'est pas nécessaire de spécifier que vous créez une action
+Lorsque vous utilisez la ligne de commande et un fichier source `.swift`, il n'est pas nécessaire de spécifier que vous créez une action
 Swift (et non une action JavaScript) ; l'outil le détermine à partir de l'extension de fichier.
 
 L'appel d'action est identique pour les actions Swift et les actions JavaScript :
@@ -480,8 +522,6 @@ wsk action invoke --blocking --result helloSwift --param name World
 **Attention :** les actions Swift s'exécutent dans un environnement Linux. Swift on Linux est en cours de développement et
 {{site.data.keyword.openwhisk_short}} utilise généralement l'édition disponible la plus récente, qui n'est pas nécessairement stable. De plus, il se peut que la version de Swift qui est utilisée avec {{site.data.keyword.openwhisk_short}} ne corresponde pas aux versions de Swift
 provenant d'éditions stables de Xcode sous MacOS.
-
-
 
 ## Création d'actions Docker
 {: #openwhisk_actions_docker}
@@ -577,7 +617,7 @@ nom de fichier JavaScript par le nom d'image Docker.
   ```
   {: screen}
 
-5. Pour mettre à jour une action Docker, exécutez `buildAndPush.sh` pour actualiser l'image sur le concentrateur Docker, puis exécutez `wsk action update` pour que le système puisse extraire la nouvelle image. Les nouveaux appels commenceront à utiliser la nouvelle image et non une image de démarrage à chaud avec l'ancien code. 
+5. Pour mettre à jour une action Docker, exécutez `buildAndPush.sh` pour actualiser l'image sur le concentrateur Docker, puis exécutez `wsk action update` pour que le système puisse extraire la nouvelle image. Les nouveaux appels commenceront à utiliser la nouvelle image et non une image de démarrage à chaud avec l'ancien code.
 
   ```
   ./buildAndPush.sh janesmith/blackboxdemo

@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 패키지 사용 및 작성
 {: #openwhisk_packages}
-*마지막 업데이트 날짜: 2016년 3월 28일*
+마지막 업데이트 날짜: 2016년 8월 2일
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}}에서 패키지를 사용하여 일련의 연관된 조치를 번들화하고 이를 다른 사용자와 공유할 수 있습니다.
@@ -29,7 +29,7 @@ copyright:
 
 패키지를 포함하여 모든 {{site.data.keyword.openwhisk_short}} 엔티티는 *네임스페이스*에 속하며 엔티티의 완전한 이름은 `/namespaceName[/packageName]/entityName`입니다. 자세한 정보는 [이름 지정 가이드라인](./openwhisk_reference.html#openwhisk_entities)을 참조하십시오.
 
-다음 절에서는 패키지를 찾고 그 안에서 트리거 및 피드를 사용하는 방법에 대해 설명합니다. 또한 자신의 패키지를 카탈로그에 컨트리뷰션하는 데 관심이 있으면 패키지 작성 및 공유에 대한 절을 참조하십시오.
+다음 절에서는 패키지를 찾고 그 안에서 트리거 및 피드를 사용하는 방법에 대해 설명합니다. 또한 사용자 고유 패키지를 카탈로그에 컨트리뷰션하는 데 관심이 있으면 패키지 작성과 공유에 대한 절을 읽으십시오. 
 
 ## 패키지 찾아보기
 {: #openwhisk_packagedisplay}
@@ -142,7 +142,7 @@ wsk action invoke --blocking --result /whisk.system/samples/greeting --param nam
 ## 패키지 바인딩 작성 및 사용
 {: #openwhisk_package_bind}
 
-패키지에서 직접 엔티티를 사용할 수도 있으나 동일한 매개변수를 매번 조치에 전달해야 합니다. 패키지에 바인딩하고 기본 매개변수를 지정하여 이를 방지할 수 있습니다. 이러한 매개변수는 패키지 내의 조치에 의해 상속됩니다.
+패키지에서 직접 엔티티를 사용할 수 있지만 매번 조치에 동일한 매개변수를 전달해야 합니다. 패키지에 바인딩하고 기본 매개변수를 지정하여 이를 방지할 수 있습니다. 이러한 매개변수는 패키지 내의 조치에 의해 상속됩니다.
 
 예를 들어, `/whisk.system/cloudant` 패키지에서 기본 `username`, `password` 및 `dbname` 값을 패키지 바인딩에서 설정하면 해당 값이 자동으로 패키지 내의 모든 조치에 전달됩니다.
 
@@ -211,7 +211,7 @@ wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
 ## 트리거 피드 작성 및 사용
 {: #openwhisk_package_trigger}
 
-피드는 {{site.data.keyword.openwhisk_short}} 트리거에 대해 해당 이벤트를 실행하도록 외부 이벤트 소스를 구성하는 편리한 방법을 제공합니다. 이 예는 Alarm 패키지에서 피드를 사용하여 매초 트리거를 실행하고 규칙을 사용하여 매초 조치를 호출하는 방법을 보여줍니다.
+피드는 {{site.data.keyword.openwhisk_short}} 트리거에 대해 해당 이벤트를 실행하도록 외부 이벤트 소스를 구성하는 편리한 방법을 제공합니다. 다음 예는 알람 패키지에서 피드를 사용하여 매초 트리거를 실행하는 방법과 규칙을 사용하여 매초 조치를 호출하는 방법을 표시합니다. 
 
 1. `/whisk.system/alarms` 패키지에서 피드의 설명을 가져오십시오.
 
@@ -366,7 +366,7 @@ wsk action invoke --blocking --result custom/identity
   {: screen}
 
 
-패키지 내의 모든 엔티티에 대해 기본 매개변수를 설정할 수 있습니다. 패키지 내의 모든 조치에 의해 상속된 패키지 레벨 매개변수를 설정하여 이를 수행할 수 있습니다. 작동 방법을 보려면 다음 예를 시도해 보십시오.
+패키지 내의 모든 엔티티에 대해 기본 매개변수를 설정할 수 있습니다. 패키지의 모든 조치에서 상속하는 패키지 레벨 매개변수를 설정하여 이를 수행합니다. 작동 방법을 보려면 다음 예를 시도해 보십시오.
 
 1. 두 매개변수(`city` 및 `country`)를 사용하여 `custom` 패키지를 업데이트하십시오.
 
@@ -491,4 +491,3 @@ package /myNamespace/custom
   {: screen}
 
   이전 예에서, 사용자는 `myNamespace` 네임스페이스 관련 작업 중이며 이 네임스페이스는 완전한 이름으로 표시됩니다. 
-

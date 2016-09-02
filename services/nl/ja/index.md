@@ -12,8 +12,7 @@ copyright:
 
 #サービス
 {: #services}
-*最終更新日: 2016 年 5 月 10 日*
-
+*最終更新日: 2016 年 8 月 10 日*
 
 {{site.data.keyword.Bluemix_notm}} によって、サービスとアプリの実装、ホスト、および拡大を簡単に行うことができます。それにより、
 アプリケーション・ロジックとアプリケーション設計に集中することができます。
@@ -62,6 +61,7 @@ copyright:
 |{{site.data.keyword.APIM}}			|はい		|はい		|はい|
 |{{site.data.keyword.autoscaling}}		|はい		|はい		|はい|
 |{{site.data.keyword.bigicloudst}}		|はい		|いいえ		|いいえ|
+|{{site.data.keyword.blockstorageshort}}  |いいえ  |はい  |いいえ|
 |{{site.data.keyword.rules_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.cloudint}}			|はい		|はい		|いいえ|
 |{{site.data.keyword.cloudant}}			|はい		|はい		|はい|
@@ -94,7 +94,7 @@ copyright:
 |{{site.data.keyword.mqa}}			|はい		|はい		|はい|
 |{{site.data.keyword.mql}}			|はい		|はい		|はい|
 |{{site.data.keyword.nlclassifierlshort}} 	|はい 		|はい 		|はい|
-|{{site.data.keyword.objectstorageshort}}	|はい		|いいえ		|いいえ|
+|{{site.data.keyword.objectstorageshort}}	|はい		|はい		|いいえ|
 |{{site.data.keyword.personalityinsightsshort}}	|はい		|はい		|はい|
 |{{site.data.keyword.mobilepush}}		|はい		|はい		|はい|
 |{{site.data.keyword.mobilepushshort}}				|はい		|はい		|はい|

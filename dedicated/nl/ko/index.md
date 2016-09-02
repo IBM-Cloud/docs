@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} 데디케이티드
 {: #dedicated}
 
-*마지막 업데이트 날짜: 2016년 7월 11일*
+*마지막 업데이트 날짜: 2016년 8월 9일*
 {: .last-updated}
 
 
@@ -40,11 +40,13 @@ copyright:
 |선택사항 | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}}는 {{site.data.keyword.APIM}}와 IBM StrongLoop를 API 및 마이크로서비스를 작성, 실행, 관리 및 적용하기 위한 포괄적 솔루션을 제공하는 단일 오퍼링으로 통합합니다. |
 |선택사항 | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | {{site.data.keyword.APIMfull}} 서비스는 API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL을 사용하거나 HTTP 데이터 소스의 데이터를 어셈블하여 리소스들로 API를 가져올 수 있습니다. {{site.data.keyword.APIM}} 서비스를 사용하면 API가 어떻게 이용되는지를 관리할 수 있게 된다는 이점이 있습니다. |
 |선택사항 | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. |
+|선택사항(베타) | {{site.data.keyword.containershort}} | {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 Docker 컨테이너를 실행합니다. 컨테이너는 앱에서 실행해야 하는 모든 요소를 포함하는 가상 소프트웨어 오브젝트입니다. 컨테이너는 리소스 격리와 할당의 이점이 있으며 가상 머신 등보다 휴대가 간편하고 효율적입니다. |
 |선택사항 | [{{site.data.keyword.dashdbshort}}](../services/dashDB/dashDB.html) | dashDB는 지리공간 데이터와 같은 특수 유형을 포함한 관계형 데이터를 저장하는 데 사용합니다. 그런 다음 SQL이나 예측 분석 및 데이터 마이닝 같은 고급 기본 제공 분석, R을 이용한 분석, 지리공간 분석을 사용하여 이 데이터를 분석합니다. |
 |선택사항 | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
 | 선택사항(베타) | 로깅 | Kibana의 검색 가능한 로그 및 대시보드와 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 Cloud Foundry 앱에 대한 로그를 제공합니다. |
 |선택사항 | [{{site.data.keyword.messagehub}}](../services/MessageHub/index.html#messagehub) | {{site.data.keyword.messagehub}}는 사내 구축 환경 기술과 사외 구축 환경 기술을 통합하는 확장 가능하고 처리량이 많은 분산 메시지 버스입니다. {{site.data.keyword.messagehub}}는 빠르고 확장 가능하고 내구성 강한 실시간 메시징 엔진인 Apache Kafka를 기반으로 합니다. |
 |선택사항 | [{{site.data.keyword.mobilepushshort}}](../services/mobilepush/index.html) | {{site.data.keyword.mobilepushshort}}는 iOS 및 Android 디바이스에 알림을 보내는 데 사용할 수 있는 서비스입니다. 알림은 모든 애플리케이션 사용자와 태그를 사용하는 특정 디바이스 및 사용자 세트를 대상으로 할 수 있습니다. 디바이스, 태그 및 구독을 관리할 수 있습니다. SDK(software development kit) 및 REST(Representational State Transfer) API(application program interface)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다. |
+|선택사항 | [{{site.data.keyword.objectstorageshort}}](../services/ObjectStorage/index.html) | {{site.data.keyword.objectstorageshort}}에서는 데이터를 관리할 수 있는 안전하고 비용 효율적이며 확장 가능한 방법을 제공합니다. |
 |선택사항 | [{{site.data.keyword.SecureGateway}}](../services/SecureGateway/secure_gateway.html) | {{site.data.keyword.SecureGateway}} 서비스는 사내 구축형 또는 클라우드를 통해 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 원격 위치에 연결하는 안전한 방법을 제공합니다.  |
 |선택사항 | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 증가된 중복성을 위해 {{site.data.keyword.sescashort}}에서는 캐시에 저장된 세션의 복제본을 제공합니다. 따라서 등화 관제 또는 가동 중단의 상황에서도 클라이언트 애플리케이션은 캐시의 세션에 계속 액세스할 수 있습니다. 이 서비스는 웹 및 모바일 애플리케이션에 대한 세션 캐싱 시나리오를 지원합니다. |
 |선택사항 | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | 이 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. 기본 오퍼링은 1.6TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 데디케이티드 환경 내에서 {{site.data.keyword.iot_full}}의 개인용 버전 실행을 허용합니다. |
@@ -120,6 +122,7 @@ copyright:
 |{{site.data.keyword.mqa}}			|예		|예		|예 |
 |{{site.data.keyword.mql}}			|예		|예		|예 |
 |{{site.data.keyword.nlclassifierlshort}} 	|예 		|예 		|예|
+|{{site.data.keyword.objectstorageshort}}	|예		|예		|아니오|
 |{{site.data.keyword.personalityinsightsshort}}	|예		|예		|예|
 |{{site.data.keyword.pm_short}}			|예		|예		|아니오 |
 |{{site.data.keyword.presenceinsightsshort}}	|예		|예		|예|
@@ -195,7 +198,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 <li>{{site.data.keyword.Bluemix_notm}} 퍼블릭에서 사용자 회사를 나타내는 데 사용되는 공용 계정의 소유자를 식별합니다. 이 계정은 신디케이트된 서비스의 사용량을 추적하는 데 사용됩니다.</li>
 <li>데이터 센터에 대한 보안 연결의 유형을 선택합니다. SoftLayer VPN, SoftLayer Direct Link 및 AT&T Net Bond에서 선택할 수 있습니다.</li>
 <li>공용 인터넷에서 데디케이티드 환경에 제한 없이 액세스할 수 있는지 결정합니다.</li>
-<li>사용할 인증의 유형을 선택합니다. IBM ID 또는 Active Directory에서 선택할 수 있습니다. IBM ID의 사용과 등록에 대한 자세한 정보는 <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">도움말 및 FAQ</a> 페이지를 참조하십시오.
+<li>사용할 인증의 유형을 선택합니다. IBM ID 또는 Active Directory 중에서 선택할 수 있습니다. IBM ID의 사용과 등록에 대한 정보는 <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Help and FAQ</a> 페이지를 참조하십시오.
 </li>
 <li>환경에서 관리 팀의 역할을 식별하고 지정합니다. 사용자가 지정하는 역할에 대한 자세한 정보는 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} 데디케이티드 역할 및 책임</a>을 참조하십시오.</li>
 <li>IBM이 탄력적 런타임, 콘솔, 관리 기능 및 모니터링을 포함하는 코어 플랫폼을 배치합니다.</li>
@@ -280,7 +283,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 |모니터링 소프트웨어 검사 | 단계적 확대 및 문제점 판별 플랜에 정의된 대로 모니터링 및 관리 컴포넌트를 검사합니다. | 고객 |
 |OS 검사 | 운영 체제 이미지가 규제 준수 표준에 부합하는지 검사합니다. IBM이 OS 이미지에 대한 액세스 권한을 제공합니다. | IBM 및 고객 책임 공유 |
 
-다음은 진행 단계입니다. 진행 단계에서 사용자와 IBM Cloud 사이의 지속적 협력 관계를 기술합니다. 이 단계의 1차 목표에는 다음이 포함됩니다.
+다음은 진행 단계입니다. 진행 단계에서 사용자와 IBM 클라우드 사이의 지속적 협력 관계를 기술합니다. 이 단계의 1차 목표에는 다음이 포함됩니다.
 
 - 용량을 검토하여 필요한 조정을 합니다.
 - 유지보수 및 플랫폼 개선 방안을 검토합니다.

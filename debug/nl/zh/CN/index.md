@@ -24,12 +24,12 @@ copyright:
 
 日志提供了相关信息，例如，作业运行成功还是失败。另外，还提供了可用于调试和确定问题原因的相关信息。
 
-日志为固定格式。如需详细日志，可过滤这些日志或使用外部日志记录主机来存储和处理这些日志。有关日志格式、查看和过滤日志以及配置外部日志记录的更多信息，请参阅[在 Cloud Foundry 上运行的应用程序的日志记录](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}。
+日志为固定格式。对于详细日志，可过滤这些日志或使用外部日志记录主机来存储和处理这些日志。有关日志格式、查看和过滤日志以及配置外部日志记录的更多信息，请参阅[为 Cloud Foundry 上运行的应用程序进行日志记录](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}。
 
 
 ## 调试编译打包错误
 {: #debugging-staging-errors}
-当您在 {{site.data.keyword.Bluemix_notm}} 上编译打包应用程序时，可能会遇到问题。如果应用程序未能编译打包，那么可以搜索及复查编译打包日志，以确定在应用程序部署期间发生的事项，并从问题进行恢复。有关查看 Bluemix 应用程序日志方法的更多信息，请参阅[查看日志](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}。  
+当您在 {{site.data.keyword.Bluemix_notm}} 上编译打包应用程序时，可能会遇到问题。如果应用程序未能编译打包，那么可以搜索及复查编译打包 (STG) 日志，以确定在应用程序部署期间发生的事项，并从问题进行恢复。有关查看 Bluemix 应用程序日志方法的更多信息，请参阅[查看日志](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}。  
 
 要了解您的应用程序可能在 {{site.data.keyword.Bluemix_notm}} 上失败的原因，需要知道应用程序如何在 {{site.data.keyword.Bluemix_notm}} 上部署和运行。有关详细信息，请参阅[应用程序部署](../manageapps/depapps.html#appdeploy){: new_window}。
 

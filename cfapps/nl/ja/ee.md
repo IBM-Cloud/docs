@@ -18,7 +18,7 @@ copyright:
 # シナリオ: エンドツーエンド開発
 {: #ee}
 
-*最終更新日: 2016 年 6 月 15 日*
+*最終更新日: 2016 年 8 月 16 日*
 {: .last-updated}
 
 アプリを作成、実行、およびデプロイするときに、{{site.data.keyword.Bluemix}} ユーザー・インターフェース、プラットフォーム、および各種ツールを使用できます。このエンドツーエンド開発シナリオに従って作業を開始してください。
@@ -27,7 +27,7 @@ copyright:
 ## サインアップ
 {: #ee_start}
 
-開始するには、その前に [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/) からサインアップして IBM ID を取得する必要があります。その後、{{site.data.keyword.Bluemix_notm}} にログインし、30 日間の無料トライアルを開始します。{{site.data.keyword.Bluemix_notm}} の無料トライアルでは、2 GB のランタイム・メモリーと 10 個のサービス・インスタンスを使用できます。
+開始するには、その前に [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/) からサインアップして IBMid を取得する必要があります。その後、{{site.data.keyword.Bluemix_notm}} にログインし、30 日間の無料トライアルを開始します。{{site.data.keyword.Bluemix_notm}} の無料トライアルでは、2 GB のランタイム・メモリーと 10 個のサービス・インスタンスを使用できます。
 
 ## {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用した Web アプリの作成
 {: #ee_appui}
@@ -36,7 +36,7 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}} では、アプリは組織およびスペースに関連付けられます。1 つの組織を複数のコラボレーターが所有し、使用します。最初は、ユーザー名を元に名付けられたデフォルトの組織が 1 つ用意され、自身が唯一のコラボレーターになります。この組織内にスペースも 1 つ用意されます。スペースはアプリを実行するための環境です。例えば、開発環境として dev というスペース、テスト環境として test というスペース、実稼働環境として production というスペースを作成できます。さらに、各環境は地域に属します。{{site.data.keyword.Bluemix_notm}} では、少ないネットワーク待ち時間、データ・プライバシー、高い可用性のために、アプリケーションを特定の地域にデプロイできます。詳細については、『地域』を参照してください。
 
-このシナリオでは、Node.js を使用して Web アプリを開発します。開発者は米国にいて、このアプリのユーザーの大部分も米国にいるものとします。ネットワーク待ち時間を少なくできるように、ユーザー・ベースの近くでアプリの作成と実行を行うことに決めます。{{site.data.keyword.Bluemix_notm}} にログインした後に、**「アカウントとサポート」**アイコン ![「アカウントとサポート」アイコン](../admin/images/account_support.svg) をクリックし、次に**「米国南部」**地域を選択します。次に、以下の手順を実行してアプリを作成します。
+このシナリオでは、Node.js を使用して Web アプリを開発します。開発者は米国にいて、このアプリのユーザーの大部分も米国にいるものとします。ネットワーク待ち時間を少なくできるように、ユーザー・ベースの近くでアプリの作成と実行を行うことに決めます。{{site.data.keyword.Bluemix_notm}} にログインした後に、**「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](../icons/i-avatar-icon.svg) をクリックし、次に**「米国南部」**地域を選択します。次に、以下の手順を実行してアプリを作成します。
 
   1. **「計算」**を選択します。
   2. プラス・アイコンをクリックします。
@@ -62,7 +62,7 @@ copyright:
 
 詳細については、アプリの「概要」ページで**「環境変数」**をクリックして、VCAP_SERVICES の完全なリストを表示してください。
 
-
+```
 {
    "cloudantNoSQLDB": [
       {
@@ -79,7 +79,7 @@ copyright:
       }
    ]
 }
-
+```
 
 **注:** この環境変数は 1 つの JSON オブジェクトの直列化であり、アプリがバインドされているサービス・インスタンスごとに 1 つの項目があります。各サービス・インスタンスが提供するデータの量とタイプはサービス固有です。アプリがサービスを何も使用しない場合、VCAP_SERVICES は空の JSON オブジェクトです。この環境変数は、サービスをアプリに追加する場合にのみ使用されます。
 
@@ -100,36 +100,36 @@ copyright:
     2. ツールのウィザードに従ってインストールを実行します。
     3. **cf -v** コマンドを使用して、cf コマンド・ライン・インターフェースのバージョンを確認します。例えば次のようにします。
 	
-	
+	```
 	cf -v
-	
+	```
 	
     **要件:** 常に最新バージョンの cf コマンド・ライン・ツールを使用するようにしてください。  3. **cf** コマンド・ライン・インターフェースをインストールした後、**cf api** コマンドを使用して、作業する {{site.data.keyword.Bluemix_notm}} 地域を指定する必要があります。**cf** コマンド・ライン・インターフェースは *https://api.Bluemix_URL* を使用します (*Bluemix_URL* は地域の URL です)。米国南部地域の URL は {{Domain}} です。次のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
   
-  
+  ```
 cf api https://api.ng.bluemix.net
-	 
+	 ```
   
   他の {{site.data.keyword.Bluemix_notm}} 地域への接続について詳しくは、『{{site.data.keyword.Bluemix_notm}} 地域』を参照してください。{{site.data.keyword.Bluemix_notm}} 地域を指定すると、指定したロケーション情報が保存されます。
   
   4. 次に、cf login コマンドを使用して {{site.data.keyword.Bluemix_notm}} にログインできます。
   
-  
+  ```
 cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
-  
+  ```
   
   5. {{site.data.keyword.Bluemix_notm}} にログインすると、アプリを {{site.data.keyword.Bluemix_notm}} にデプロイする準備ができている状態になります。アプリのディレクトリー `C:&#xa5;test` から、次のコマンドを入力します。
   
-  
+  ```
 cf push TestNode
-  
+  ```
   
   **cf push** コマンドについて詳しくは、『アプリのアップロード』を参照してください。
   
   6. これで、ブラウザーに以下のアプリ URL を入力して、アプリにアクセスすることができます。
-  
+  ```
   http://TestNode.mybluemix.net
-  
+  ```
 
 アプリをビルドするために他のツール (Eclipse ツールなど) を選択することもできます。詳細については、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースのアプリの「コーディングの開始」ページを参照してください。
 
@@ -144,14 +144,14 @@ cf push TestNode
   
   cf create-service コマンドを使用して、サービスの新規インスタンスを作成します。例えば次のようにします。
   
-  
+  ```
 cf create-service cloudantNoSQLDB Shared cloudant100
-  
+  ```
   
   cf services コマンドを使用して、作成したサービス・インスタンスのリストを表示することもできます。
   
-  
-cf services
+  ```
+cf services```
   
   サービス・インスタンスが作成されると、そのサービス・インスタンスは任意のアプリケーションでバインドおよび使用することができます。
   
@@ -159,9 +159,9 @@ cf services
   
   サービス・インスタンスを使用するには、それをアプリケーションにバインドする必要があります。アプリケーション名および作成したサービス・インスタンスを指定することによって、cf bind-service コマンドを使用してサービス・インスタンスをアプリケーションにバインドします。
   
-  
+  ```
 cf bind-service TestNode cloudant100
-  
+  ```
   
   サービス・インスタンスをアプリケーションにバインドすると、{{site.data.keyword.Bluemix_notm}} はサービスと通信できるようになり、新規アプリケーションがそのサービス・インスタンスと通信することを指定できます。異なるサービスに対して、{{site.data.keyword.Bluemix_notm}} はバインド中のアプリケーションおよびサービス・インスタンスの処理方法を変えることがあります。例えば、サービスによっては、サービス・インスタンスと通信する各アプリケーションごとに新規テナントを作成する場合があります。サービスは {{site.data.keyword.Bluemix_notm}} に応答を返すときに、アプリケーションとサービスの間での通信のためにアプリケーションに渡される必要のある情報 (例えば資格情報) を渡します。
 
@@ -179,10 +179,10 @@ cf bind-service TestNode cloudant100
   <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
   
   例えば、Node.js アプリはこの情報に次のようにアクセスします。
-  
+  ```
 if (process.env.VCAP_SERVICES) {
 var env = JSON.parse(process.env.VCAP_SERVICES);
-        var cloudant = env['"cloudantNoSQLDB'][0].credentials;
+        var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
                 "username" : "user1",
@@ -190,7 +190,7 @@ var env = JSON.parse(process.env.VCAP_SERVICES);
                 "url" : "https://user1:secret@localhost:25002"
                 }
         };
-  
+  ```
   
   **注:** サンプル・コードで示されているように、{{site.data.keyword.cloudant}} サービス・インスタンスに接続するために、まず最初に VCAP_SERVICES 環境変数が存在するかどうかを確認できます。存在する場合、アプリケーションはこの cloudant 変数のプロパティーを使用してデータベースにアクセスできます。しかし、VCAP_SERVICES 環境変数が存在しない場合、提供されたデフォルト値を持つローカル {{site.data.keyword.cloudant}} サービス・インスタンスが使用されます。
   
@@ -198,7 +198,7 @@ var env = JSON.parse(process.env.VCAP_SERVICES);
   
   資格情報を使用してサービス・インスタンスと対話することができます。実行できるアクションには、読み取り、書き込み、更新などがあります。次の例は、{{site.data.keyword.cloudant}} サービス・インスタンスに JSON オブジェクトを挿入する方法を示しています。
   
-  
+  ```
 // create a new message
 var create_message = function(req, res) {
   require('cloudantdb').connect(cloudant.url, function(err, conn) {
@@ -217,7 +217,7 @@ var collection = conn.collection('messages');
     });
   });
 }
-  
+  ```
   
   5. **オプション:** サービス・インスタンスをアンバインドまたは削除します。
   

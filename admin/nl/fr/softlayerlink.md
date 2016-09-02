@@ -19,7 +19,7 @@ copyright:
 
 #Liaison des comptes de facturation SoftLayer et {{site.data.keyword.Bluemix_notm}}
 {: #softlayerlink}
-*Dernière mise à jour : 7 juillet 2016*
+*Dernière mise à jour : 15 août 2016*
 {: .last-updated}
 
 Vous pouvez à présent lier les comptes de facturation SoftLayer et {{site.data.keyword.Bluemix_notm}}. Lorsque vous liez vos comptes, vous êtes
@@ -35,8 +35,8 @@ Une fois vos comptes liés, vous pouvez facilement passer de l'un à l'autre. Vo
 ressources apparaîtra dorénavant sur la facture SoftLayer.
 
 Même si la facturation de votre compte est liée, votre ID de connexion varie selon la manière dont votre compte SoftLayer est authentifié :
-* Pour les utilisateurs des comptes SoftLayer qui n'utilisent pas un ID IBM pour l'authentification, continuez à utiliser votre ID SoftLayer pour les produits et services SoftLayer et utilisez votre ID IBM pour les produits et services {{site.data.keyword.Bluemix_notm}}. 
-* Pour les utilisateurs des comptes SoftLayer qui utilisent un ID IBM pour l'authentification, utilisez votre ID IBM pour accéder à vos comptes SoftLayer et {{site.data.keyword.Bluemix_notm}}. 
+* Pour les utilisateurs des comptes SoftLayer qui n'utilisent pas IBMid pour l'authentification, continuez à utiliser votre ID SoftLayer pour les produits et services SoftLayer et utilisez votre IBMid pour les produits et services {{site.data.keyword.Bluemix_notm}}. 
+* Pour les utilisateurs des comptes SoftLayer qui utilisent IBMid pour l'authentification, utilisez votre IBMid pour accéder à vos comptes SoftLayer et {{site.data.keyword.Bluemix_notm}}. 
 
 **Attention :** la liaison des comptes est irréversible.  
 
@@ -81,16 +81,14 @@ compte {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur les diff
 Vous devez être défini comme Master User dans le compte SoftLayer pour inviter des membres d'équipe dans le compte {{site.data.keyword.Bluemix_notm}}.
 
 Pour inviter des membres d'équipe dans {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
- 1. Accédez à l'icône **Compte et support** ![Compte et support](images/account_support.svg) >
-**Comptes** > **Inviter des membres d'équipe**.
+ 1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) > **Comptes** > **Inviter des membres d'équipe**.
  2. Cliquez sur **Ajouter** pour vous authentifier dans votre compte SoftLayer et afficher la liste des membres d'équipe de votre
 compte SoftLayer.
  3. Sélectionnez les membres de l'équipe à ajouter et cliquez sur **Envoyer**.
 
 Vous pouvez répéter cette opération au fur et à mesure que d'autres membres d'équipe sont ajoutés à votre compte Softlayer.
  
-Le membre de l'équipe reçoit un courrier électronique incluant un lien **Join the organization**. Si le membre ne dispose pas d'un ID
-IBM, il est redirigé vers une page d'enregistrement. Il peut alors soumettre des informations de base et créer son compte {{site.data.keyword.Bluemix_notm}}.
+Le membre de l'équipe reçoit un courrier électronique incluant un lien **Join the organization**. Si le membre ne dispose pas d'un IBMid, il est redirigé vers une page d'enregistrement. Il peut alors soumettre des informations de base et créer son compte {{site.data.keyword.Bluemix_notm}}.
 
 Pour plus d'informations sur l'invitation de membres d'équipe via l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}, voir
 [Invitation de membres d'équipe](https://console.ng.bluemix.net/docs/admin/users_roles.html#inviteteammembers).
@@ -177,8 +175,7 @@ Une fois que vous avez lié vos comptes {{site.data.keyword.Bluemix_notm}} et So
 facture SoftLayer.
 {:shortdesc}
 
-Votre cycle d'utilisation de {{site.data.keyword.Bluemix_notm}} est basé sur le mois calendaire et votre compte sera facturé chaque mois le jour de facturation établi pour votre contrat de crédit.
-Avec SoftLayer, votre cycle d'utilisation débute au moment où vous avez commencé à utiliser SoftLayer, et vous êtes donc facturé chaque mois le
+Votre cycle d'utilisation de {{site.data.keyword.Bluemix_notm}} est basé sur le mois calendaire et votre compte sera facturé chaque mois le jour de facturation établi pour votre contrat de crédit. Avec SoftLayer, votre cycle d'utilisation débute au moment où vous avez commencé à utiliser SoftLayer, et vous êtes donc facturé chaque mois le
 même jour où vous avez ouvert votre compte SoftLayer. 
 
 Lorsque vos comptes sont liés, votre utilisation de {{site.data.keyword.Bluemix_notm}} continue à être mesurée d'après le cycle du mois en cours et vous

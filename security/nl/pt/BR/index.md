@@ -15,15 +15,15 @@ copyright:
 
 # Segurança do {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Última atualização: 22 de junho de 2016*
+Última atualização: 22 de julho de 2016
 {: .last-updated}
 
-Projetada com práticas seguras de engenharia, a plataforma do {{site.data.keyword.Bluemix}} possui controles de segurança em camadas na rede e na infraestrutura. O {{site.data.keyword.Bluemix_notm}} fornece um grupo de serviços de segurança que podem ser usados por desenvolvedores de aplicativos para proteger seus apps móveis e da web. Esses elementos são combinados para fazer do {{site.data.keyword.Bluemix_notm}} uma plataforma com opções claras para desenvolvimento seguro do aplicativo.
+Projetada com práticas seguras de engenharia, a plataforma do {{site.data.keyword.Bluemix}} possui controles de segurança em camadas na rede e na infraestrutura. O {{site.data.keyword.Bluemix_notm}} fornece um grupo de serviços de segurança que os desenvolvedores de aplicativos podem usar para proteger seus apps móveis e da web. Esses elementos são combinados para fazer do {{site.data.keyword.Bluemix_notm}} uma plataforma com opções claras para desenvolvimento seguro do aplicativo.
 {:shortdesc}
 
 O {{site.data.keyword.Bluemix_notm}} garante disponibilidade de segurança ao seguir as políticas de segurança que são orientadas por melhores práticas na IBM para sistemas, rede e engenharia segura. Essas políticas incluem práticas, como varredura do código-fonte, varredura dinâmica, modelagem de ameaça e teste de penetração. O {{site.data.keyword.Bluemix_notm}} segue o processo IBM Product Security Incident Response Team (PSIRT) para gerenciamento de incidentes de segurança. Consulte o site [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} para obter detalhes.
 
-Os {{site.data.keyword.Bluemix_notm}} Public e Dedicated usam o serviço de nuvem IBM SoftLayer Infrastructure-as-a-Service (IaaS) e aproveita ao máximo sua arquitetura de segurança. O SoftLayer IaaS fornece várias camadas de sobreposição de proteção para aplicativos e dados. Para {{site.data.keyword.Bluemix_notm}} Local, você possui a segurança física e fornece a infraestrutura hospedando o {{site.data.keyword.Bluemix_notm}} Local em seu próprio datacenter sob um firewall da empresa. Além disso, o {{site.data.keyword.Bluemix_notm}} inclui recursos de segurança na camada Plataforma como serviço em diferentes categorias: plataforma, dados e aplicativo.
+{{site.data.keyword.Bluemix_notm}} Public e Dedicated usam s serviços de nuvem de Infraestrutura como Serviço (IaaS) do IBM SoftLayer e aproveitam ao máximo sua arquitetura de segurança. O SoftLayer IaaS fornece várias camadas de sobreposição de proteção para aplicativos e dados. Para {{site.data.keyword.Bluemix_notm}} Local, você possui a segurança física e fornece a infraestrutura hospedando o {{site.data.keyword.Bluemix_notm}} Local em seu próprio datacenter sob um firewall da empresa. Além disso, o {{site.data.keyword.Bluemix_notm}} inclui recursos de segurança na camada Plataforma como serviço em diferentes categorias: plataforma, dados e aplicativo.
 
 ## Segurança da plataforma do {{site.data.keyword.Bluemix_notm}}
 {: #platform-security}
@@ -71,16 +71,17 @@ Para {{site.data.keyword.Bluemix_notm}} Dedicated e Local, a autenticação por 
 <dt>Proteção de dados</dt>
 <dd> Todo o tráfego do {{site.data.keyword.Bluemix_notm}} passa pelo IBM WebSphere® DataPower® SOA Appliances, que fornece funções de proxy reverso, rescisão de SSL e balanceamento de carga.
 Os métodos de HTTP a seguir são permitidos:
- * DELETE
- * GET
- * HEAD
- * OPTIONS
- * POST
- * PUT
- * TRACE
-
-A inatividade de HTTP atinge o tempo limite em 2 minutos.
-
+<ul>
+<li>DELETE</li>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+<li>POST</li>
+<li>PUT</li>
+<li>TRACE</li>
+</ul>
+A inatividade de HTTP atinge o tempo limite em 2 minutos.</dd>
+<dd>
 Os cabeçalhos a seguir são preenchidos pelo DataPower:
 <dl>
 <dt>$wsis</dt>
@@ -108,10 +109,10 @@ O {{site.data.keyword.Bluemix_notm}} baseia-se no Cloud Foundry para fornecer um
 
 <dl>
 <dt>Segregação do ambiente</dt>
-<dd> Para {{site.data.keyword.Bluemix_notm}} Public, os ambientes de desenvolvimento e de produção são segregados entre si para melhorar a estabilidade e a segurança do aplicativo.</dd>
+<dd>Para {{site.data.keyword.Bluemix_notm}} Public, os ambientes de desenvolvimento e de produção são segregados entre si para melhorar a estabilidade e a segurança do aplicativo.</dd>
 
 <dt>Firewalls</dt>
-<dd> Firewalls são adequados para restringir o acesso à rede do {{site.data.keyword.Bluemix_notm}}. Para {{site.data.keyword.Bluemix_notm}} Local, o firewall da sua empresa segrega o resto de sua rede de sua instância do {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd>Firewalls são adequados para restringir o acesso à rede do {{site.data.keyword.Bluemix_notm}}. Para {{site.data.keyword.Bluemix_notm}} Local, o firewall da sua empresa segrega o resto de sua rede de sua instância do {{site.data.keyword.Bluemix_notm}}.</dd>
 
 <dt>Proteção contra intrusão</dt>
 <dd>Os {{site.data.keyword.Bluemix_notm}} Public e Dedicated permitem proteção contra intrusão para descobrir ameaças, para que elas possam ser tratadas. As políticas de proteção contra intrusão são ativadas nos firewalls.</dd>
@@ -141,13 +142,17 @@ de segurança e gerenciamento de eventos (SIEM) do IBM QRadar para monitorar ten
 <dt>Gerenciamento de acesso do usuário</dt>
 <dd>No {{site.data.keyword.Bluemix_notm}}, as diretrizes de separação de obrigações são seguidas para designar privilégios de acesso granular aos usuários e para assegurar que os usuários tenham somente o acesso que é necessário para executar suas tarefas de acordo com o princípio do menor privilégio.
 
-Em ambientes dos {{site.data.keyword.Bluemix_notm}} Dedicated e Local, administradores designados podem gerenciar funções e permissões para o usuário do {{site.data.keyword.Bluemix_notm}} em suas organizações usando o Console administrativo. Consulte [Gerenciando {{site.data.keyword.Bluemix_notm}} Local e Dedicated](../admin/index.html#mng) para obter detalhes.
+Nos ambientes do {{site.data.keyword.Bluemix_notm}} Dedicated e Local,
+administradores designados podem gerenciar funções e permissões para os usuários do
+{{site.data.keyword.Bluemix_notm}} em suas organizações usando o Console
+administrativo. Consulte [Gerenciando {{site.data.keyword.Bluemix_notm}} Local e Dedicated](../admin/index.html#mng) para obter detalhes.
 </dd>
 </dl>
 
 ### Segurança física
 
-Os {{site.data.keyword.Bluemix_notm}} Public e Dedicated dependem da topologia de rede dentro de uma rede do SoftLayer para segurança de rede física. Essa arquitetura de rede dentro de uma rede assegura que os sistemas sejam totalmente acessíveis somente à equipe autorizada. Para {{site.data.keyword.Bluemix_notm}} Local, você possui a segurança física para a instância local. Seu datacenter está assegurado sob o firewall da sua empresa.
+O {{site.data.keyword.Bluemix_notm}} Public e Dedicated dependem da
+topologia de rede dentro de uma rede do SoftLayer para segurança de rede física. Essa arquitetura de rede dentro de uma rede assegura que os sistemas sejam totalmente acessíveis somente à equipe autorizada. Para {{site.data.keyword.Bluemix_notm}} Local, você possui a segurança física para a instância local. Seu datacenter está assegurado sob o firewall da sua empresa.
 
 Na rede dentro de uma rede do SoftLayer, a camada de rede pública manipula o tráfego público para websites hospedados ou recursos online. A camada de rede privada permite o gerenciamento fora da banda verdadeiro por meio de uma terceira operadora distinta sobre gateways SSL, PPTP ou IPSec VPN. A camada de rede datacenter para datacenter fornece conectividade livre e segura entre servidores que estão hospedados em instalações separadas do SoftLayer.
 
@@ -173,7 +178,11 @@ Os dados associados a um aplicativo em execução podem estar em um de três est
 
 Cada tipo de dados precisa ser considerado quando você planeja segurança de dados.
 
-A plataforma {{site.data.keyword.Bluemix_notm}} protege dados em trânsito assegurando o acesso do usuário final ao aplicativo usando SSL, por meio da rede, até que os dados atinjam o IBM DataPower Gateway no limite da rede interna do {{site.data.keyword.Bluemix_notm}}. O IBM DataPower Gateway age como um proxy reverso e fornece rescisão de SSL.
+A plataforma {{site.data.keyword.Bluemix_notm}} protege dados em trânsito
+assegurando o acesso do usuário final ao aplicativo usando SSL, por meio da rede, até que
+os dados atinjam o IBM DataPower Gateway no limite da rede interna do {{site.data.keyword.Bluemix_notm}}. O IBM DataPower Gateway age como um proxy reverso e fornece rescisão de SSL. 
+De lá para o aplicativo, é usado IPSEC para proteger os dados conforme eles viajam do
+IBM DataPower Gateway para o aplicativo.
 
 A segurança para dados em uso e dados em repouso é sua responsabilidade ao desenvolver o aplicativo. É possível usufruir das vantagens de vários serviços relacionados aos dados, disponíveis no catálogo do {{site.data.keyword.Bluemix_notm}} para auxiliar nessas questões.
 
@@ -184,7 +193,8 @@ Como desenvolvedor de aplicativos, deve-se ativar as configurações de seguran�
 
 É possível usar recursos de segurança que são fornecidos por vários serviços do {{site.data.keyword.Bluemix_notm}} para assegurar seus aplicativos. Todos os serviços {{site.data.keyword.Bluemix_notm}} que são produzidos pela IBM seguem as práticas de desenvolvimento de engenharia segura da IBM.
 
-**Nota:** Alguns dos serviços descritos aqui podem não se aplicar às instâncias do Bluemix Dedicated ou Local.
+**Nota:** alguns serviços descritos aqui podem não se aplicar às
+instâncias do {{site.data.keyword.Bluemix_notm}} Dedicated ou Local.
 
 ### Serviço de SSO
 
@@ -246,7 +256,8 @@ Para *usuários do app* do {{site.data.keyword.Bluemix_notm}}, o **fluxo de usu�
  3. Por meio do roteador de rede.
  4. Atinge o tempo de execução do aplicativo no droplet execution agent (DEA).
 
-O desenvolvedor do {{site.data.keyword.Bluemix_notm}} ** segue dois fluxos principais, para login e para desenvolvimento e implementação.
+O *desenvolvedor* do {{site.data.keyword.Bluemix_notm}} segue
+dois fluxos principais: para login e para desenvolvimento e implementação.
  * O **fluxo de login do desenvolvedor** inclui os itens a seguir:
     * Para desenvolvedores que estejam efetuando login no {{site.data.keyword.Bluemix_notm}} Public, o fluxo é como a seguir:
       1. Por meio do serviço IBM Single Sign On.

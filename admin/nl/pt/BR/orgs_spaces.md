@@ -17,12 +17,13 @@ copyright:
 
 # Gerenciando organizações e espaços
 {: #orgsspacesusers}
-Última atualização: 16 de maio de 2016
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
-Como um proprietário da conta, é possível gerenciar as suas
-organizações acessando o ícone **Conta e suporte** ![ícone Conta e
-suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizações. Gerenciadores de organização também podem usar a página Gerenciar Organizações,
+Como proprietário da conta, é possível gerenciar suas organizações acessando o ícone
+**{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+página **Gerenciar organizações**. Gerenciadores de organização também podem usar a página Gerenciar Organizações,
 para gerenciar quaisquer organizações na qual eles estão configurados como o gerente.
 {:shortdesc}
 
@@ -111,9 +112,9 @@ Após incluir membros da equipe em uma organização, é possível conceder a el
 
 Somente proprietários da conta com contas de Pagamento por uso podem criar uma organização. É possível criar uma organização concluindo as etapas a seguir:
 
-1. Acesse o ícone **Conta e suporte**
-![ícone Conta e
-suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizações.
+1. Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt; página
+**Gerenciar organizações**.
 2. Clique em **Incluir uma nova organização**.
 3. Insira o nome da organização.
 4. Clique em ** Adicionar**.
@@ -124,9 +125,9 @@ um ambiente de desenvolvimento, um espaço *test* como um ambiente
 de teste e um espaço *production* como um ambiente de
 produção. Em seguida, é possível associar os apps aos espaços. Conclua as etapas a seguir para criar um espaço:
 
-1. Acesse o ícone **Conta e suporte**
-![ícone Conta e
-suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizações.
+1. Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt; página
+**Gerenciar organizações**.
 2. Identifique a organização na qual você deseja incluir um
 espaço e selecione **Visualizar detalhes**.
 3. Clique em **Edit**.
@@ -141,9 +142,9 @@ espaço e selecione **Visualizar detalhes**.
 Execute as etapas
 a seguir para renomear sua organização:
 
-1. Acesse o ícone **Conta e suporte**
-![ícone Conta e
-suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizações.
+1. Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt; página
+**Gerenciar organizações**.
 2. Identifique a organização que deseja editar e selecione **Visualizar detalhes**.
 3. Selecione **Editar**.
 4. Selecione **Editar** para o título da organização.
@@ -161,9 +162,9 @@ serviços que estiverem associados à organização.
 
 É possível excluir um espaço da página **Gerenciar organizações**:
 
-1. Acesse o ícone **Conta e suporte**
-![ícone Conta e
-suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizações.
+1. Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt; página
+**Gerenciar organizações**.
 2. Identifique a organização que deseja editar e selecione **Visualizar detalhes**.
 3. Identifique o espaço que deseja excluir e selecione **Editar**.
 4. Clique em **Excluir o seu espaço**.
@@ -173,9 +174,9 @@ suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizaç�
 
 Conclua as etapas a seguir, para listar os membros para uma organização específica:
 
-1. Acesse o ícone **Conta e suporte**
-![ícone Conta e
-suporte](../admin/images/account_support.svg) &gt; Gerenciar organizações.
+1. Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt; **Gerenciar
+organizações**.
 2. Identifique a organização para a qual deseja visualizar os membros e clique em **Visualizar detalhes**.
 3. Clique em **Edit**.
 4. É
@@ -183,9 +184,9 @@ possível ver os membros de sua organização e suas funções na guia **Usuári
 
 Conclua as etapas a seguir, para listar os membros para um espaço específico:
 
-1. Acesse o ícone **Conta e suporte**
-![ícone Conta e
-suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizações.
+1. Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt; página
+**Gerenciar organizações**.
 2. Identifique a organização para a qual deseja visualizar os membros e clique em **Visualizar detalhes**.
 3. Identifique o espaço para o qual deseja visualizar os membros e clique em **Editar**.
 4. É possível ver os membros de seu espaço e as suas funções na guia **Usuários**.
@@ -199,16 +200,19 @@ aplicativo ou serviço em um espaço da organização contribui para o uso da co
 
 Para visualizar a cota para a sua organização, conclua as etapas a seguir:
 
-1. Acesse o ícone **Conta e suporte**
-![ícone Conta e
-suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizações.
+1. Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt; página
+**Gerenciar organizações**.
 2. Identifique a organização para a qual deseja visualizar a cota e clique em **Visualizar detalhes**.
 3. Clique em **Edit**.
 4. Selecione a guia **Cota**.
 
-Para atualizar a cota para sua organização, deve-se abrir um chamado de suporte. Para obter mais informações sobre a abertura de um chamado de suporte, consulte
-[Obtendo suporte ao cliente](../support/index.html#contacting-support). Para obter mais informações sobre a cota para contêineres, consulte
-[Cota](../containers/container_creating_ov.html#container_quota) na documentação Contêineres.
+Para atualizar a cota para sua organização, deve-se abrir um chamado de suporte. 
+Para obter mais informações sobre a abertura de um chamado de suporte, consulte
+[Obtendo suporte ao cliente](../support/index.html#contacting-support).
+Para obter mais informações sobre a cota para contêineres, consulte
+[Cota](../containers/container_planning_org_ov.html##container_planning_quota)
+na documentação Contêineres.
 
 ## Gerenciando Domínios
 {: #managedomains}
@@ -216,9 +220,9 @@ Para atualizar a cota para sua organização, deve-se abrir um chamado de suport
 Como um proprietário da conta ou gerenciador de organização, é possível visualizar o domínio do sistema e incluir domínios customizados para aplicativos que são construídos dentro de uma organização e
 de seus espaços. Como um gerenciador de espaço, a guia **Domínios** para um espaço é uma lista somente leitura dos domínios designados ao espaço. 
 
-1. Acesse o ícone **Conta e suporte**
-![ícone Conta e
-suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizações.
+1. Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt; página
+**Gerenciar organizações**.
 2. Identifique a organização que você deseja visualizar ou para a qual deseja editar domínios.
 3. Selecione **Visualizar detalhes** para essa organização.
 4. Clique em **Edit**.

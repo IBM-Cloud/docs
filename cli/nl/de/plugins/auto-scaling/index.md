@@ -117,6 +117,8 @@ bx as policy-enable|policy-disable <APP_NAME>
 
 Sie können das Protokoll der Autoskalierungsaktivität einer bestimmten App anzeigen. In der Befehlszeilenschnittstelle wird eine Tabelle der Autoskalierungsprotokolleinträge angezeigt.
 
+
+
 ```
 bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```

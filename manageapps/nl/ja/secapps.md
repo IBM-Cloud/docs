@@ -55,10 +55,10 @@ CSR を有効にするには、CSR の生成時に以下の情報を入力する
   
 CSR の作成方法は、ご使用のオペレーティング・システムによって様々です。以下は、[OpenSSL コマンド・ライン・ツール](http://www.openssl.org/){:new_window}を使用して CSR を作成する方法を示した例です。
 
-
+```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
     privatekey.key
-
+```
 
 **注:** OpenSSL SHA-512 が実装されるかどうかは、コンパイラーが 64 ビットの整数型をサポートしているかどうかで決まります。SHA-256 の証明書に関して互換性の問題があるアプリケーションでは、SHA-1 オプションを使用してかまいません。
 

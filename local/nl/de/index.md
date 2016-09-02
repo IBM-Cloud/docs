@@ -15,10 +15,10 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Letzte Aktualisierung: 7. Juli 2016*
+*Letzte Aktualisierung: 16. August 2016*
 {: .last-updated}
 
-{{site.data.keyword.Bluemix}} Local bringt das Leistungsstärke und Beweglichkeit (der Geschäftsabläufe) der cloudbasierten {{site.data.keyword.Bluemix_notm}}-Plattform in Ihr Rechenzentrum. Mit {{site.data.keyword.Bluemix_notm}} Local können Sie die hochsensiblen Verarbeitungsprozesse hinter der Firewall des Unternehmens schützen und gleichzeitig eine sichere Verbindung und Synchronisation mit {{site.data.keyword.Bluemix_notm}} Public gewährleisten.
+{{site.data.keyword.Bluemix}} Local bringt die Leistungsstärke und Beweglichkeit (der Geschäftsabläufe) der cloudbasierten {{site.data.keyword.Bluemix_notm}}-Plattform in Ihr Rechenzentrum. Mit {{site.data.keyword.Bluemix_notm}} Local können Sie die hochsensiblen Verarbeitungsprozesse hinter der Firewall des Unternehmens schützen und gleichzeitig eine sichere Verbindung und Synchronisation mit {{site.data.keyword.Bluemix_notm}} Public gewährleisten.
 {:shortdesc}
 
 IBM® verwendet Cloudoperationen als Service zum Überwachen und Verwalten Ihrer Umgebung, damit Sie sich auf das Erstellen von Apps und Services konzentrieren können, die in dieser Umgebung ausgeführt werden. IBM führt zudem Plattformaktualisierungen aus, während Sie sich um Ihre Geschäftsabläufe kümmern.
@@ -37,7 +37,8 @@ Darüber hinaus ist eine Reihe von Services als {{site.data.keyword.Bluemix_notm
 |Inbegriffen | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | Dynamisches Erhöhen oder Verringern der Rechenleistung Ihrer Anwendung basierend auf Richtlinien. Mit diesem Service können Sie Ihre {{site.data.keyword.Bluemix}} Local-Umgebung unbegrenzt nutzen.|
 |Optional | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} integriert {{site.data.keyword.APIM}} und IBM StrongLoop in ein einzelnes Angebot, das eine Komplettlösung bietet, um APIs und Microservices zu erstellen, auszuführen, zu verwalten und durchzusetzen. |
 |Optional | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | Verwenden Sie den {{site.data.keyword.APIMfull}}-Service zum Erstellen, Verwalten und Mitteilen von APIs. Sie können mit einer Proxy-URL oder durch Zusammenstellen von Daten aus HTTP-Datenquellen neue APIs mit Ressourcen importieren. Die Verwendung des {{site.data.keyword.APIM}}-Service bietet den Vorteil, dass Sie steuern können, wie Ihre APIs genutzt werden. |
-|Optional | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} bietet Zugriff auf eine vollständig verwaltete NoSQL-JSON-Datenebene, die permanent aktiv ist. Dieser Service ist mit CouchDB kompatibel und über eine einfache HTTP-Schnittstelle für mobile Anwendungsmodelle und Webanwendungsmodelle zugänglich. |
+|Optional | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} bietet Zugriff auf eine vollständig verwaltete NoSQL-JSON-Datenebene, die permanent aktiv ist. Dieser Service ist mit CouchDB kompatibel und über eine einfache HTTP-Schnittstelle für mobile Anwendungsmodelle und Webanwendungsmodellezugänglich. Weitere Informationen finden Sie in der vollständigen [Dokumentation](http://docs.cloudant.com/BluemixLocal.html){: new_window} und in den [Hardwarevoraussetzung](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} für eine lokale Umgebung. |
+|Optional (Beta) | {{site.data.keyword.containershort}} | Docker-Container in {{site.data.keyword.Bluemix_notm}} Local ausführen. Container sind virtuelle Softwareobjekte, die alle für die Ausführung von Apps erforderlichen Elemente enthalten. Container bieten den Vorteil der Ressourcenisolation und -zuordnung, wobei sie besser portierbar und effizienter als beispielsweise virtuelle Maschinen sind. |
 |Optional | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | Dieser Service bietet ein speicherinternes Datengitter, durch das Szenarios mit verteiltem Caching für Ihre Apps unterstützt werden. Umfasst 50 GB speicherinternen Cache. |
 |Optional | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | Um die Redundanz zu erhöhen, stellt {{site.data.keyword.sescashort}} eine Replik für eine Sitzung bereit, die im Cache gespeichert ist. Daher kann Ihre Clientanwendung auch im Falle eines Spannungsabfalls oder einer Betriebsunterbrechung weiterhin auf die im Cache gespeicherte Sitzung zugreifen. Der Service unterstützt das Sitzungs-Caching für Webanwendungen und mobile Anwendungen. |
 |Optional | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | Dieser Service ermöglicht Ihren Apps die Kommunikation mit und die Nutzung der von Ihren verbundenen Geräten, Sensoren und Gateways erfassten Daten. Das lokale Basisangebot beinhaltet eine Startumgebung, die die Ausführung einer privaten Version von IBM {{site.data.keyword.iot_full}} in der lokalen Umgebung mit einer Kapazität für 100.000 gleichzeitig verbundene Geräte oder Anwendungen und 1,6 TB für den Datenaustausch ermöglicht. |
@@ -208,7 +209,7 @@ Für die Erstbereitstellung und Erstkonfiguration Ihrer Umgebung können Sie ein
 <li>Sie stellen sieben IP-Adressen in Ihrem Netz bereit. Wenn Sie einen gesicherten Web-Proxy haben, um ausgehenden Zugriff auf das Internet für interne {{site.data.keyword.Bluemix_notm}}-Komponenten zuzulassen, müssen Sie die Berechtigungsnachweise für die entsprechende Verbindung bereitstellen.
 <p>**Hinweis:** Wenn Ihr Web-Proxy nicht geschützt wird, brauchen Sie die Berechtigungsnachweise nicht bereitzustellen. Beachten Sie außerdem, dass nicht alle {{site.data.keyword.Bluemix_notm}} Local-Kunden einen Web-Proxy verwenden.</p></li>
 <li>IBM stellt eine Whitelist von URLs bereit, die über Ihren Web-Proxy zugelassen werden müssen, bevor die Bereitstellung beginnt.<br />
-<p>**Hinweis**: Die URL-Whitelist enthält Websites wie twitter.com, facebook.com und youtube.com. Wenn diese URLs nicht zugelassen werden, stehen bestimmte Services und Bereiche von {{site.data.keyword.Bluemix_notm}} möglicherweise nicht für die Verwendung zur Verfügung.</p>
+<p>**Hinweis**: Damit die vorhandenen bzw. neuen Anwendungen auf die erforderlichen Ressourcen zugreifen können, müssen Sie möglicherweise zusätzliche Schritte ausführen, um die Ressourcen mit dem Buildpack zu bündeln oder die zur Ausführung der Anwendungen erforderlichen URLs in Zusammenarbeit mit dem Sicherheitsteam in die Whitelist einzutragen. Weitere Informationen zum Arbeiten mit Node.js- und Liberty for Java-Buildpacks finden Sie in <a href="../runtimes/nodejs/offlineMode.html">Offlinemodus für Node.js</a> und <a href="../runtimes/liberty/offlineMode.html">Offlinemodus für Liberty for Java</a>.</p>
 </li>
 <li>Sie geben die Domänennamen für die Bereitstellung und die gewünschten IDs an. Sie erhalten zwei teilweise definierte Domänen, wenn Sie Ihre lokale Instanz einrichten, und wählen das Präfix für die beiden Domänen aus. Beispiel: Sie wählen das Präfix für <code>*mycompany*.bluemix.net</code> und <code>*mycompany*.mybluemix.net</code> aus. Anschließend können Sie auch einen vollständigen Domänennamen auswählen, um eine angepasste Domäne zu erstellen.
 <p>Sie können so viele angepasste Domänen wählen, wie Sie möchten. Sie sind jedoch für die Zertifikate für die angepassten Domänen verantwortlich. Informationen zur Erstellung einer angepassten Domäne finden Sie unter <a href="../manageapps/updapps.html#domain">Angepasste Domäne erstellen und verwenden</a>.</p></li>
@@ -349,7 +350,9 @@ Die finale Phase der Fertigstellung stellt das Ende der Beziehung zwischen Ihnen
 ## Infrastrukturanforderungen für {{site.data.keyword.Bluemix_notm}} Local
 {: #localinfra}
 
-Bei {{site.data.keyword.Bluemix_notm}} Local entscheiden Sie über die physische Sicherheit und die Hosting-Infrastruktur für die lokale Instanz. Die Mindestanforderungen für das Einrichten von {{site.data.keyword.Bluemix_notm}} Local sind von IBM wie im Folgenden angegeben festgelegt.
+Bei {{site.data.keyword.Bluemix_notm}} Local entscheiden Sie über die physische Sicherheit und die Hosting-Infrastruktur für die lokale Instanz. 
+
+Die Mindestanforderungen für das Einrichten von {{site.data.keyword.Bluemix_notm}} Local sind von IBM wie im Folgenden angegeben festgelegt.
 
 ### Hardware
 
@@ -365,8 +368,8 @@ Ressourcen entspricht. Berücksichtigen Sie dabei, dass die Mindestanzahl an phy
 ESXi-Server
 bei 8 liegt. Die folgenden Spezifikationen beziehen sich nur auf die {{site.data.keyword.Bluemix_notm}}-Kernlaufzeit.
 <ul>
-<li>48 physische Kerne mit jeweils mindestens 2,0 GHz</li>
-<li>756 GB physischer Arbeitsspeicher</li>
+<li>32 physische Kerne mit jeweils mindestens 2,0 GHz</li>
+<li>512 GB physischer Arbeitsspeicher</li>
 <li>Gesamtdatenspeichergröße von 7,5 TB
 <ul>
 <li>7 TB Datenspeicher für {{site.data.keyword.Bluemix_notm}}</li>
@@ -379,8 +382,8 @@ Datenspeicher verwenden, muss das Präfix bei diesen Datenspeichern übereinstim
 </dd>
 <dt>**Hochverfügbarkeit**</dt>
 <dd>
-Um den Ausfall eines einzelnen Knotens auffangen zu können, müssen Sie über n+1 ESXi-Server verfügen. Werden beispielsweise drei ESXi-Server mit jeweils 16 Kernen verwendet, wird ein vierter ESXi-Server benötigt.
-<p><strong>Hinweis:</strong> Der VMware-Administrator beim Kunden kann über ein striktes Durchsetzen der automatischen Funktionsübernahme für hohe Verfügbarkeit im Cluster entscheiden, die die Verfügbarkeit von Ressourcen garantiert.</p>
+Um den Ausfall eines einzelnen Knotens auffangen zu können, müssen Sie über n+1 ESXi-Server verfügen. Wenn der Bedarf an 32 Kernen und 512 GB Speicher durch ESXi-Server mit 2 x 16 Kernen und 256 GB Speicher gedeckt wird, benötigen Sie drei dieser Server, um den vollständigen Ausfall eines einzelnen Knotens auffangen zu können.
+<p><strong>Hinweis:</strong> Der VMware-Administrator beim Kunden kann über ein striktes Durchsetzen der automatischen Funktionsübernahme für hohe Verfügbarkeit im Cluster entscheiden, die die Verfügbarkeit der Ressourcen garantiert. Wenn Sie ohne die automatische Funktionsübernahme für hohe Verfügbarkeit fortfahren, wird der Ressourcenbedarf von mindestens 32 Kernen und 512 GB Speicher erfüllt.</p>
 </dd>
 <dt>**Netz**</dt>
 <dd>
@@ -471,9 +474,9 @@ Kraft.
 
 ### Droplet Execution Agent-Pool (DEA-Pool) vergrößern
 Jeder DEA (Droplet Execution Agent) ist wie folgt konfiguriert:
-- 16 bis 32 GB RAM
-- 2 - 4 vCPU
-- 150 - 300 GB Speicher
+- 16 oder 32 GB RAM
+- 2 oder 4 vCPU
+- 150 oder 300 GB Speicher
 
 Ist z. B. der ESXi-Host mit 256 GB Hauptspeicher und 16 Kernen ausgestattet, werden
 acht DEA hinzugefügt. Sind für den ESXi-Host 64 GB Hauptspeicher und 8 Kerne vorgesehen, werden zwei

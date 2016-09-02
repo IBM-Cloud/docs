@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Última atualização: 11 de julho de 2016*
+*Última atualização: 9 de agosto de 2016*
 {: .last-updated}
 
 
@@ -52,6 +52,9 @@ possível importar APIs com recursos usando uma URL de proxy ou montando dados a
 benefício do uso do serviço {{site.data.keyword.APIM}}
 é que é possível gerenciar como suas APIs são usadas. |
 |Opcional | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | O {{site.data.keyword.cloudant}} fornece acesso a uma camada de dados do JSON NoSQL totalmente gerenciada que sempre está ativa. Esse serviço é compatível com o CouchDB e acessível por meio de uma interface HTTP simples de usar para modelos de aplicativos móveis e da web. |
+|Opcional (Beta) | {{site.data.keyword.containershort}} | Execute os contêineres do Docker no {{site.data.keyword.Bluemix_notm}} Dedicated. Contêineres são objetos de software virtuais que incluem todos os elementos que um aplicativo precisa
+executar. Um contêiner tem os benefícios do isolamento e da alocação de recursos,
+mas é mais móvel e eficiente do que, por exemplo, uma máquina virtual. |
 |Opcional | [{{site.data.keyword.dashdbshort}}](../services/dashDB/dashDB.html) | Use dashDB para armazenar dados relacionais, incluindo tipos especiais como dados geoespaciais. Depois, analise esses dados com SQL ou análise integrada avançada como análise preditiva e mineração de dados, análise com R e análise geo-espacial. |
 |Opcional | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | Esse serviço fornece uma grade de dados da memória
 que suporta cenários de armazenamento em cache distribuído para seus apps. Inclui
@@ -64,6 +67,7 @@ do aplicativo ou para um conjunto específico de usuários e dispositivos usando
 possível também usar um SDK (kit de desenvolvimento de software) e interfaces de
 programação de aplicativo (APIs) Representational State Transfer (REST) para
 desenvolver ainda mais seus aplicativos cliente. |
+|Opcional | [{{site.data.keyword.objectstorageshort}}](../services/ObjectStorage/index.html) | {{site.data.keyword.objectstorageshort}} fornece uma maneira segura, com custo reduzido e escalável para gerenciar seus dados. |
 |Opcional | [{{site.data.keyword.SecureGateway}}](../services/SecureGateway/secure_gateway.html) | O serviço {{site.data.keyword.SecureGateway}} fornece uma maneira segura de conectar aplicativos {{site.data.keyword.Bluemix_notm}} a locais remotos no local ou na nuvem.  |
 |Opcional | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | Para maior redundância, o {{site.data.keyword.sescashort}} fornece uma réplica de uma sessão armazenada no cache. Portanto, no caso de uma indisponibilidade de energia, seu aplicativo cliente manterá acesso à sessão no cache. O serviço suporta cenários de armazenamento em cache de sessão para aplicativos móveis e da web. |
 |Opcional | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | Esse serviço permite que os apps se comuniquem e consumam dados coletados por seus dispositivos conectados, sensores e gateways. A oferta de base permite executar uma versão privada do {{site.data.keyword.iot_full}} no ambiente dedicado com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 1,6 TB de troca de dados. |
@@ -146,6 +150,7 @@ verá "Customizado" listado com o ladrilho do serviço.
 |{{site.data.keyword.mqa}}			|Sim		|Sim		|Sim |
 |{{site.data.keyword.mql}}			|Sim		|Sim		|Sim |
 |{{site.data.keyword.nlclassifierlshort}} 	|Sim 		|Sim 		|Sim|
+|{{site.data.keyword.objectstorageshort}}	|Sim		|Sim		|Não|
 |{{site.data.keyword.personalityinsightsshort}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.pm_short}}			|Sim		|Sim		|Não |
 |{{site.data.keyword.presenceinsightsshort}}	|Sim		|Sim		|Sim|
@@ -263,7 +268,7 @@ do terminal LDAP, e acessa.</li>
 <li>Identifique um proprietário para a conta pública que é usada para representar sua empresa no {{site.data.keyword.Bluemix_notm}} Public. A IBM usa essa conta para rastrear o uso de serviços organizados.</li>
 <li>Selecione o tipo de conexão segura para seu datacenter. É possível selecionar dentre SoftLayer VPN, SoftLayer Direct Link e AT&T Net Bond.</li>
 <li>Decida se haverá qualquer acesso ao seu ambiente dedicado a partir da Internet pública.</li>
-<li>Selecione o tipo de autenticação que será usada. É possível selecionar a partir do ID IBM ou Active Directory. Para obter informações sobre como usar e registrar um ID IBM, veja a página <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Ajuda e perguntas mais frequentes</a>.
+<li>Selecione o tipo de autenticação que será usada. É possível selecionar entre ID IBM ou Active Directory. Para obter informações sobre como usar e registrar um ID IBM, consulte a página <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Ajuda e perguntas mais frequentes</a>.
 </li>
 <li>Identifique e designe funções à sua equipe administrativa para o ambiente. Para obter informações sobre as funções que você deve designar, veja <a href="index.html#rolesresponsibilities" target="_blank">Funções e responsabilidades do {{site.data.keyword.Bluemix_notm}} Dedicated</a>.</li>
 <li>A IBM implementa a plataforma principal que inclui os tempos de execução elásticos, o console, o recurso de administração e o monitoramento.</li>

@@ -1,0 +1,248 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+{:tsSymptoms: .tsSymptoms} 
+{:tsCauses: .tsCauses} 
+{:tsResolve: .tsResolve} 
+{:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock} 
+
+
+
+# {{site.data.keyword.Bluemix_notm}} へのアクセスに関するトラブルシューティング 
+{: #accessing}
+
+最終更新日: 2016 年 8 月 18 日
+{: .last-updated} 
+
+{{site.data.keyword.Bluemix}} へのアクセスに関する一般的な問題には、{{site.data.keyword.Bluemix_notm}} へのログインができないユーザー、保留状態で使用できないアカウントなどが含まれます。しかし多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
+{:shortdesc}
+
+## {{site.data.keyword.Bluemix_notm}} にログインできない
+{: #ts_logintobm}
+
+{{site.data.keyword.Bluemix_notm}} にログインするには、有効な IBMid とパスワードが必要です。
+
+
+{{site.data.keyword.Bluemix_notm}} にサインインしようとすると、以下のエラー・メッセージが表示されます。
+{: tsSymptoms} 
+
+`入力したパスワードは正しくありません。`
+
+
+{{site.data.keyword.Bluemix_notm}} へのサインインに使用した IBMid およびパスワードが無効です。
+{: tsCauses} 
+ 
+
+有効な IBMid とパスワードを取得するには、「マイ IBM プロファイル (My IBM profile)」ページに移動し、以下のいずれかのステップを実行します。
+{: tsResolve}
+  * IBM ID を登録済みであり、自分の ID とパスワードが有効であるかどうかを確認したい場合は、**「サインイン」**をクリックし、「サインイン」ページで IBM ID とパスワードを入力します。パスワードを忘れた場合は、「サインイン」ページにある**「パスワードを忘れた場合 (Forgot your password)」**をクリックして、パスワードをリセットします。IBMid を忘れた場合、あるいはパスワードに関する問題が続く場合は、Worldwide IBM Registration Help Desk にご相談ください。 
+  * IBM ID をお持ちでない場合は、**「登録」**をクリックして IBM ID とパスワードを登録してください。 
+  
+**注:** IBM の従業員の場合、IBM ID はイントラネット・ログイン ID とは異なる可能性があります。 
+
+
+
+<!-- begin STAGING ONLY --> 
+
+## 外部 Web サイトへのアクセスでの問題
+{: #ts_bmlinkid}
+
+イントラネット ID と IBM ID をリンクしていない場合、IBM イントラネット ID を使用して {{site.data.keyword.Bluemix_notm}} にログインすることはできません。
+
+
+{{site.data.keyword.Bluemix_notm}} のサインイン・ページで**「イントラネット ID でサインインする (Sign in with your intranet ID)」**を選択した後、以下のエラー・メッセージが表示されることがあります。
+{: tsSymptoms} 
+
+`外部 Web サイトへのアクセスでの問題 (Problem Accessing External Website)`
+
+
+
+この問題は、IBM ID にリンクされていない IBM イントラネット ID を使用して {{site.data.keyword.Bluemix_notm}} にログインしたときに発生します。IBM ID は、www.ibm.com へのログインに使用する ID です。
+{: tsCauses}
+
+
+IBM 従業員が IBM イントラネット ID を使用して {{site.data.keyword.Bluemix_notm}} にログインするには、事前にイントラネット ID を外部 IBM ID にリンクする必要があります。この 2 つの ID をリンクするには、以下の手順を実行します。
+{: tsResolve} 
+
+  1. [「Central Sign-on」](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window}ページで**「My Sign-ons」**をクリックします。
+  2. 「My Sign-ons」ページで、**「Link IDs」**をクリックし、{{site.data.keyword.Bluemix_notm}} のサインイン・ページで IBM ID とパスワードを入力します。その後、イントラネット ID と IBM ID が自動的にリンクされます。
+  
+
+<!-- end STAGING ONLY -->
+
+
+
+
+## 保存されていない変更があります
+{: #ts_unsaved_changes}
+
+
+アプリの詳細ページでナビゲートしている時に、アクションを実行できなくなり、続行する前に変更を保存するよう求めるプロンプトが出される場合があります。 
+
+
+アプリの詳細ページでアプリまたはサービスを確認しようとすると、次のエラー・メッセージを受信し続けます。
+{: tsSymptoms} 
+
+`保存されていない変更がページ app_name にあります。変更を保存するか取り消してください。`
+
+
+マウスをスクロールして、「ランタイム」ペインの**「インスタンス」**フィールドまたは**「メモリー割り当て量」**フィールドの上に移動すると、それらの値が変わります。この動作は設計によるものですが、エラー・メッセージにより、そのペインの外にナビゲートする前にメモリー設定またはインスタンス設定を保存するよう求めるプロンプトが表示されます。
+{: tsCauses}
+
+
+メッセージ・ウィンドウを閉じ、「ランタイム」ペイン内の**「リセット」**ボタンをクリックします。
+{: tsResolve} 
+
+
+
+
+    
+    
+## {{site.data.keyword.Bluemix_notm}} 領域間の自動フェイルオーバーを使用できない
+{: #ts_failover}
+
+{{site.data.keyword.Bluemix_notm}} 領域間の自動フェイルオーバーは使用できません。ただし、回避策として、複数の IP アドレス間のフェイルオーバーをサポートする DNS プロバイダーを使用できます。
+ 
+
+ある {{site.data.keyword.Bluemix_notm}} 領域が使用不可になると、その領域で実行されているアプリは、たとえそれと同じアプリが別の {{site.data.keyword.Bluemix_notm}} 領域で実行されていても、使用不可になります。
+{: tsSymptoms}
+
+ 
+{{site.data.keyword.Bluemix_notm}} では、ある領域から別の領域への自動フェイルオーバーはまだ提供されていません。
+{: tsCauses}
+
+ 
+複数の ID アドレス間のインテリジェント・フェイルオーバーをサポートする DNS プロバイダーを使用し、{{site.data.keyword.Bluemix_notm}} 領域間の自動フェイルオーバーを使用可能にするように、DNS 設定を手動で構成することができます。この機能を備えた DNS プロバイダーとしては、NSONE、Akamai、Dyn があります。
+{: tsResolve}
+
+DNS 設定を構成する場合、アプリが実行されている {{site.data.keyword.Bluemix_notm}} 領域のパブリック IP アドレスを指定する必要があります。{{site.data.keyword.Bluemix_notm}} 領域のパブリック IP アドレスを取得するには、`nslookup` コマンドを使用します。例えば、次のコマンドをコマンド・ライン・ウィンドウに入力できます。
+```
+nslookup stage1.mybluemix.net
+```
+
+
+
+## アカウントが保留になっている
+{: #ts_accntpding}
+
+アカウントが保留になっている場合は、{{site.data.keyword.Bluemix_notm}} にログインできません。
+
+ 
+{{site.data.keyword.Bluemix_notm}} トライアル・アカウントに登録した後、{{site.data.keyword.Bluemix_notm}} にログインできない場合があります。代わりに次のメッセージが表示されます。
+{: tsSymptoms}
+
+<code>アカウントが保留になっています。E メールの確認を最大 24 時間待って、スパム・フォルダーも確認してください。それでも E メールの確認が届かない場合は、<a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix サポート</a>までお問い合わせください。</code>
+
+
+{{site.data.keyword.Bluemix_notm}} トライアル・アカウントに登録した後、確認の E メールが届きます。その確認 E メールに記載されたリンクをクリックして、登録プロセスを完了する必要があります。
+{: tsCauses} 
+
+確認の E メールは、ユーザーが入力した E メール・アドレス宛に送信されます。受信ボックスとジャンク・メール・フォルダーを確認してください。確認の E メールが届かない場合は、[{{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport.com){: new_window}にお問い合わせください。  
+{: tsResolve}
+
+
+
+## ユーザーを組織に追加できない
+{: #ts_adduser}
+
+同じ組織の下で作業するユーザーを複数招待することができます。ユーザーを自分の組織に招待できるのは、自分がアカウント所有者の場合か、またはその組織の管理者とメンバーを兼ねている場合のみです。
+ 
+
+**「組織の管理」**セクションに**「新規ユーザーの招待」**リンクが表示されません。
+{: tsSymptoms}
+
+ 
+
+以下の {{site.data.keyword.Bluemix_notm}} ユーザーのみが、組織にユーザーを招待できます。
+{: tsCauses}
+  * 組織のアカウント所有者
+  * 組織のコラボレーターではなく、組織のメンバーでもある組織管理者
+  
+{{site.data.keyword.Bluemix_notm}} で、ユーザーは組織のメンバーまたはコラボレーターになることができます。
+
+<dl><dt>コラボレーター</dt>
+<dd>既に {{site.data.keyword.Bluemix_notm}}アカウントを持っており、別のユーザーから組織に招待された場合は、組織のコラボレーターです。</dd>
+<dt>メンバー</dt>
+<dd>{{site.data.keyword.Bluemix_notm}} アカウントを持っていないが、別のユーザーから組織に招待され、その招待から  {{site.data.keyword.Bluemix_notm}} への申し込みを行った場合は、組織のメンバーです。</dd>
+</dl>
+
+
+組織のコラボレーターである場合は、組織管理者に任命されていても、組織にユーザーを招待することはできません。
+
+**注:** すべての組織管理者 (組織のコラボレーターである管理者を含む) は、ユーザーを追加したり、既に組織内にいるユーザーを変更および削除したりすることができます。
+
+ 
+
+組織にユーザーを招待することができず、招待するために別の役割を必要とする場合は、組織管理者に連絡して、役割の変更を依頼してください。組織の管理者を特定するには、以下のステップを実行します。
+{: tsResolve}
+
+  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードに移動し、メニュー・バーの「{{site.data.keyword.avatar}}」アイコン ![「アバター」アイコン](images/account_support.svg) をクリックし、**「組織の管理」**を選択します。
+  2. 所属する組織にアクセスすると、組織の管理者の情報が**「ユーザー」**タブに表示されます。  
+  
+自分がコラボレーターでありメンバーではないためにユーザーを招待できない場合、古い {{site.data.keyword.Bluemix_notm}} アカウントを削除してから、招待を受けて組織のメンバーとしてアカウントに参加する必要があります。古いアカウントを削除してメンバーとしてアカウントに参加するには、以下のステップを実行してください。 
+
+  1. [{{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport){: new_window}に連絡してサポート・チケットをオープンし、アカウントの削除を依頼します。古いアカウントに関連付けられているデータで、保存して新規アカウントに移行したいものがあれば、その情報を E メールに記載してください。 
+  2. 自分のアカウントが削除された後、組織の管理者の役割を持つユーザーに、自分を組織の管理者として組織に招待してもらいます。その後、招待から {{site.data.keyword.Bluemix_notm}} に登録します。 
+
+
+
+
+## ユーザーのバッチ登録がサポートされない
+{: #ts_batchregistration}
+
+{{site.data.keyword.Bluemix_notm}} 用にユーザーを登録する時は、各ユーザーを個別に登録しなければなりません。
+ 
+
+{{site.data.keyword.Bluemix_notm}} には、複数のユーザーを同時に登録する機能は用意されていません。
+{: tsSymptoms}
+ 
+
+{{site.data.keyword.Bluemix_notm}} では、ユーザーのバッチ登録はサポートしていません。{{site.data.keyword.Bluemix_notm}} 用にユーザーを登録するには、各ユーザーを個別に登録しなければなりません。
+{: tsCauses}
+ 
+
+ {{site.data.keyword.Bluemix_notm}} 用に複数のユーザーを登録するには、ユーザーごとに以下の手順を実行しなければなりません。
+{: tsResolve}
+
+  1. {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにある**「登録 (SIGN UP)」**をクリックします。
+  2. ウィザードに従って手順を実行します。
+
+    
+
+## {{site.data.keyword.Bluemix_notm}} ページをロードできない
+{: #ts_err}
+
+{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用する際、{{site.data.keyword.Bluemix_notm}} ページをロードできない場合があります。代わりに、エラー・メッセージ BXNUI0001E または BXNUI0016E が表示されることがあります。
+ 
+
+{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用する際、次のいずれかのエラー・メッセージが表示される可能性があります。
+{: tsSymptoms}
+
+`BXNUI0001E: セッションが存在しているかどうかを Bluemix が検出しなかったため、ページはロードされませんでした。`
+
+
+`BXNUI0016E: Bluemix ページがロードされなかったため、アプリおよびサービスは取得されませんでした。`
+
+ 
+
+必要に応じて次のアクションを 1 つ以上実行することができます。
+{: tsResolve}
+
+  * ブラウザーを最新表示または再始動します。
+  * {{site.data.keyword.Bluemix_notm}} をいったんログアウトしてから、再度ログインします。
+  * ブラウザーのプライベート表示モードを使用します。 
+  * ブラウザーの Cookie およびキャッシュをクリアします。
+  * 異なるブラウザーを使用します。{{site.data.keyword.Bluemix_notm}} によりサポートされているブラウザーのバージョンについて詳しくは、[{{site.data.keyword.Bluemix_notm}}の前提条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}を参照してください。
+  * cf コマンド・ライン・インターフェースがインストール済みであれば、`cf apps` コマンドを入力してアプリケーションが実行中であるかどうか確認します。
+  
+  
+  
+  
+  
+

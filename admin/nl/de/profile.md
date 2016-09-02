@@ -17,33 +17,33 @@ copyright:
 
 # Profileinstellungen
 {: #usersettings}
-Letzte Aktualisierung: 23. Juni 2016
+Letzte Aktualisierung: 16. August 2016
 {: .last-updated}
 
-Klicken Sie auf das Symbol **Konto und Verwaltung** ![Symbol 'Konto und Verwaltung'](../admin/images/account_support.svg) &gt; **Konto** &gt; **Profil**, um Ihre Profileinstellungen zu aktualisieren.
+Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; **Profil**, um Ihre Profileinstellungen zu aktualisieren.
 {:shortdesc}
 
  Auf der Seite **Profil** können Sie die folgenden Informationen festlegen oder aktualisieren:
 
  * Ein Profilfoto, das für andere {{site.data.keyword.Bluemix_notm}}-Benutzer sichtbar ist
- * Informationen zur IBM ID einschließlich Ihres Namens, Ihrer E-Mail-Adresse, Ihrer Telefonnummer, Ihres Kennworts, Ihres Unternehmens und Ihrer Rolle
+ * Informationen zur IBMid einschließlich Ihres Namens, Ihrer E-Mail-Adresse, Ihrer Telefonnummer, Ihres Kennworts, Ihres Unternehmens und Ihrer Rolle
  * Einstellung zur Analyseaufzeichnung
 
 ## Profilfoto ändern
 {: #photo}
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; **Profil**.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; **Profil**.
 
 * Klicken Sie auf **Foto ändern**, um ein neues Foto hochzuladen. 
 * Klicken Sie auf **Foto entfernen**, um das Foto zu entfernen. 
 
-## Informationen zu Ihrer IBM ID bearbeiten
+## Informationen zu Ihrer IBMid bearbeiten
 {: #ibmid}
 
-Wenn Sie Informationen zu Ihrer IBM ID wie beispielsweise Ihren Namen, Ihre E-Mail-Adresse, Ihre Telefonnummer, Ihr Kennwort oder Ihren Firmennamen ändern müssen, führen Sie die folgenden Schritte aus:
+Wenn Sie Informationen zu Ihrer IBMid wie beispielsweise Ihren Namen, Ihre E-Mail-Adresse, Ihre Telefonnummer, Ihr Kennwort oder Ihren Firmennamen ändern müssen, führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; **Profil**.
-2. Klicken Sie auf **Eigene IBM ID bearbeiten**.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; **Profil**.
+2. Klicken Sie auf **Eigene IBMid bearbeiten**.
 3. Bearbeiten Sie Ihre Benutzerdaten.
 4. Klicken Sie auf **Abschicken**.
 
@@ -56,5 +56,5 @@ Wenn Sie die Aufzeichnung inaktivieren, können Sie möglicherweise einige Funkt
 
 Um die Analyseaufzeichnung zu inaktivieren, führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; **Profil**.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; **Profil**.
 2. Legen Sie für die Analyseaufzeichnung **Aus** fest.

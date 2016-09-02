@@ -15,7 +15,7 @@ copyright:
 
 # Sicherheit in {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Letzte Aktualisierung: 22. Juni 2016*
+Letzte Aktualisierung: 22. Juli 2016
 {: .last-updated}
 
 Die Plattform {{site.data.keyword.Bluemix}} wurde mit Verfahren für sichere Entwicklung entwickelt und besitzt geschichtete netz- und infrastrukturweite Sicherheitsmaßnahmen. {{site.data.keyword.Bluemix_notm}} bietet eine Gruppe von Sicherheitsservices zur Verwendung durch Anwendungsentwickler zum Sichern ihrer mobilen Apps und Web-Apps. Kombiniert machen diese Elemente {{site.data.keyword.Bluemix_notm}} zu einer Plattform mit klaren Auswahlmöglichkeiten für eine sichere Anwendungsentwicklung.
@@ -72,18 +72,18 @@ Bei {{site.data.keyword.Bluemix_notm}} Dedicated und Local wird die Authentifizi
 <dt>Datenschutz</dt>
 <dd> Der gesamte {{site.data.keyword.Bluemix_notm}}-Datenverkehr läuft über SOA-Einheiten von IBM WebSphere® DataPower®, die Funktionen für Reverse Proxy, SSL-Abschluss und Lastausgleich bereitstellen.
 Folgende HTTP-Methoden sind zulässig:
- * DELETE
- * GET
- * HEAD
- * OPTIONS
- * POST
- * PUT
- * TRACE
-
-Bei HTTP-Inaktivität wird das Zeitlimit nach zwei Minuten überschritten.
-
-Folgende Header werden von DataPower belegt:
-<dl>
+<ul>
+<li>DELETE</li>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+<li>POST</li>
+<li>PUT</li>
+<li>TRACE</li>
+</ul>
+Bei HTTP-Inaktivität wird das Zeitlimit nach zwei Minuten überschritten.</dd>
+<dd>
+Folgende Header werden von DataPower belegt:<dl>
 <dt>$wsis</dt>
 <dd>Auf 'true' gesetzt, wenn die clientseitige Verbindung sicher ist (HTTPS), andernfalls auf 'false' gesetzt.</dd>
 <dt>$wssc</dt>
@@ -109,10 +109,10 @@ Folgende Header werden von DataPower belegt:
 
 <dl>
 <dt>Umgebungstrennung</dt>
-<dd> Bei {{site.data.keyword.Bluemix_notm}} Public sind die Entwicklungs- und Produktionsumgebungen voneinander getrennt, um die Stabilität und Sicherheit der Anwendung zu verbessern.</dd>
+<dd>Bei {{site.data.keyword.Bluemix_notm}} Public sind die Entwicklungs- und Produktionsumgebungen voneinander getrennt, um die Stabilität und Sicherheit der Anwendung zu verbessern.</dd>
 
 <dt>Firewalls</dt>
-<dd> Firewalls wurden eingerichtet, um den Zugriff auf das {{site.data.keyword.Bluemix_notm}}-Netz einzuschränken. Bei {{site.data.keyword.Bluemix_notm}} Local trennt die Firewall Ihres Unternehmens die übrigen Teile Ihres Netzes von der {{site.data.keyword.Bluemix_notm}}-Instanz.</dd>
+<dd>Firewalls wurden eingerichtet, um den Zugriff auf das {{site.data.keyword.Bluemix_notm}}-Netz einzuschränken. Bei {{site.data.keyword.Bluemix_notm}} Local trennt die Firewall Ihres Unternehmens die übrigen Teile Ihres Netzes von der {{site.data.keyword.Bluemix_notm}}-Instanz.</dd>
 
 <dt>Schutz vor Angriffen von außen</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} Public und Dedicated bieten einen Schutz vor Angriffen von außen, um Bedrohungen zu erkennen, damit diese abgewehrt werden können. Auf den Firewalls sind Richtlinien zum Schutz vor Angriffen von außen aktiviert.</dd>
@@ -173,7 +173,7 @@ Daten, die einer aktiven Anwendung zugeordnet sind, können einen von drei Statu
 
 Bei der Planung der Datensicherheit muss jeder Datentyp berücksichtigt werden.
 
-Bei der {{site.data.keyword.Bluemix_notm}}-Plattform werden die Daten gesichert, die sich in der Übertragung befinden, indem der Endbenutzerzugriff auf die Anwendung mithilfe von SSL über das Netz gesichert wird, bis die Daten IBM DataPower Gateway an der Grenze zum {{site.data.keyword.Bluemix_notm}}-internen Netz erreichen. IBM DataPower Gateway fungiert als Reverse Proxy und stellt die SSL-Terminierung bereit.
+Bei der {{site.data.keyword.Bluemix_notm}}-Plattform werden die Daten gesichert, die sich in der Übertragung befinden, indem der Endbenutzerzugriff auf die Anwendung mithilfe von SSL über das Netz gesichert wird, bis die Daten IBM DataPower Gateway an der Grenze zum {{site.data.keyword.Bluemix_notm}}-internen Netz erreichen. IBM DataPower Gateway fungiert als Reverse Proxy und stellt die SSL-Terminierung bereit. Bei der Übertragung von IBM DataPower Gateway zur Anwendung werden die Daten mit IPSEC geschützt.
 
 Die Sicherheit für verwendete und ruhende Daten liegt beim Entwickeln Ihrer Anwendung in Ihrer Verantwortung. Sie können verschiedene datenbezogene Services nutzen, die im {{site.data.keyword.Bluemix_notm}}-Katalog verfügbar sind, um diese Problemstellungen zu lösen.
 
@@ -184,7 +184,7 @@ Als Anwendungsentwickler müssen Sie für Ihre unter {{site.data.keyword.Bluemix
 
 Zum Absichern Ihrer Anwendungen können Sie die Sicherheitsfunktionalitäten verwenden, die von mehreren {{site.data.keyword.Bluemix_notm}}-Services bereitgestellt werden. Alle von IBM erstellten {{site.data.keyword.Bluemix_notm}}-Services folgen der Entwicklungspraxis von IBM für sichere Entwicklung.
 
-**Anmerkung:** Einige der hier beschriebenen Services gelten möglicherweise nicht für Bluemix Dedicated- oder Bluemix Local-Instanzen.
+**Anmerkung:** Einige der hier beschriebenen Services gelten möglicherweise nicht für {{site.data.keyword.Bluemix_notm}} Dedicated- oder Bluemix Local-Instanzen.
 
 ### SSO-Service
 
@@ -246,7 +246,7 @@ Für Benutzer der {{site.data.keyword.Bluemix_notm}}-*App* ist der **Ablauf des 
  3. Über den Netzrouter.
  4. Erreichen der Anwendungslaufzeit im Droplet Execution Agent (DEA).
 
-Der {{site.data.keyword.Bluemix_notm}}-*Entwickler* folgt zwei Hauptabläufen, einem für die Anmeldung und einem für die Entwicklung und Bereitstellung.
+Der {{site.data.keyword.Bluemix_notm}}-*Entwickler* folgt zwei Hauptabläufen: einem für die Anmeldung und einem für die Entwicklung und Bereitstellung.
  * Der **Ablauf der Entwickleranmeldung** umfasst Folgendes:
     * Für Entwickler, die sich bei {{site.data.keyword.Bluemix_notm}} Public anmelden, sieht der Ablauf wie folgt aus:
       1. Über den Service IBM Single Sign On.

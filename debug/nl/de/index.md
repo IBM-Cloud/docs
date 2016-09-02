@@ -40,6 +40,7 @@ Um zu verstehen, warum in einer App unter {{site.data.keyword.Bluemix_notm}} ein
 Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf logs` Staging-Fehler beheben können. Stellen Sie vor der Ausführung der folgenden Schritte sicher, dass Sie die cf-Befehlszeilenschnittstelle installiert haben. Weitere Informationen zum Installieren der cf-Befehlszeilenschnittstelle finden Sie unter [cf-Befehlszeilenschnittstelle installieren](../starters/install_cli.html){: new_window}.
 
   1. Stellen Sie durch Eingeben des folgenden Codes in der cf-Befehlszeilenschnittstelle eine Verbindung zu {{site.data.keyword.Bluemix_notm}} her:
+     
      ```
 	 cf api https://api.ng.bluemix.net
 	 ```
@@ -47,6 +48,7 @@ Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf l
   2. Melden Sie sich durch Eingeben von `cf login` an {{site.data.keyword.Bluemix_notm}} an.
   
   3. Rufen Sie die neusten Protokolle durch Eingeben von `cf logs anwendungsname --recent` ab. Wenn Sie ein ausführliches Protokoll filtern möchten, verwenden Sie die Option `grep`. Sie können zum Beispiel den folgenden Code eingeben, um nur Protokolle des Typs [STG] anzuzeigen:
+    
     ```
 	cf logs anwendungsname --recent | grep '\[STG\]'
 	```
@@ -146,7 +148,7 @@ Je nachdem, wie der neue Code bereitgestellt wurde, können Sie für das Debuggi
 
   * Wenn der neue Code über die Befehlszeilenschnittstelle 'cf' bereitgestellt wurde, überprüfen Sie die Ausgabe des Befehls *cf push*. Darüber hinaus können Sie mit dem Befehl *cf logs* weitere Hinweise zur Lösung des Problems erhalten. Weitere Informationen zur Verwendung des Befehls *cf logs* finden Sie unter [Protokolle über die Befehlszeilenschnittstelle anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
 
-  * Wenn der neue Code über eine GUI (z. B. {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle, DevOps Delivery Pipeline oder Travis-CI) bereitgestellt wurde, können Sie die Protokolle über die Schnittstelle prüfen. Wenn der neue Code beispielsweise über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle bereitgestellt wurde, können Sie 'Dashboard' aufrufen, die App suchen und dann die Protokolle auf Hinweise durchsuchen.   Weitere Informationen zum Anzeigen von Protokollen über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle finden Sie unter [Protokolle im Bluemix-Dashboard anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
+  * Wenn der neue Code über eine GUI (z. B. {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle, DevOps Delivery Pipeline oder Travis-CI) bereitgestellt wurde, können Sie die Protokolle über die Schnittstelle prüfen. Wenn der neue Code beispielsweise über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle bereitgestellt wurde, können Sie 'Dashboard' aufrufen, die App suchen und dann die Protokolle auf Hinweise durchsuchen. Weitere Informationen zum Anzeigen von Protokollen über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle finden Sie unter [Protokolle im Bluemix-Dashboard anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
  
 
 # Zugehörige Links

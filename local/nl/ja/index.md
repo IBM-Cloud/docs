@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*最終更新日: 2016 年 7 月 7 日*
+*最終更新日: 2016 年 8 月 16 日*
 {: .last-updated}
 
 ユーザーのデータ・センターは、{{site.data.keyword.Bluemix}} Local を使用することにより、{{site.data.keyword.Bluemix_notm}} クラウド・ベースのプラットフォームが持つ能力と俊敏性を得ることができます。{{site.data.keyword.Bluemix_notm}} Local を使用すれば、{{site.data.keyword.Bluemix_notm}} Public にセキュアに接続して同期をとり続けながら、同時に、自社のファイアウォールの内側にある最高機密のワークロードを保護することができます。
@@ -37,7 +37,8 @@ IBM® はクラウド操作をサービスとして使用してお客様の環�
 |組み込み | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | ポリシーに基づいて、アプリケーションのリソース容量を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix}} Local 環境で使用量が無制限になります。|
 |オプション | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} は、{{site.data.keyword.APIM}} と IBM StrongLoop を単一のオファリングに統合し、API とマイクロサービスを作成、実行、管理、および強化する包括的な解決策を提供します。 |
 |オプション | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | {{site.data.keyword.APIMfull}} サービスを使用して、API を構成、管理、およびソーシャル化します。API は、プロキシー URL を使用するか、HTTP データ・ソースからデータをアセンブルすることにより、リソースと一緒にインポートできます。{{site.data.keyword.APIM}} サービスを使用する利点は、API の使用方法を管理できることです。 |
-|オプション | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。 |
+|オプション | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。詳しくは、ローカル環境に関する詳細な[資料](http://docs.cloudant.com/BluemixLocal.html){: new_window}と[ハードウェア要件](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window}を参照してください。 |
+|オプション (ベータ版) | {{site.data.keyword.containershort}} | {{site.data.keyword.Bluemix_notm}} Local で Docker コンテナーを実行します。コンテナーは、アプリが実行のために必要とするすべてのエレメントを含む仮想ソフトウェア・オブジェクトです。コンテナーには、リソースの分離と割り振りの利点がありますが、例えば仮想マシンなどよりも、移植可能性と効率性が高まっています。 |
 |オプション | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
 |オプション | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 冗長性を高めるために、{{site.data.keyword.sescashort}} は、キャッシュに保管されたセッションのレプリカを提供します。これにより、ブラウンアウトまたは障害が発生した場合、クライアント・アプリケーションはキャッシュ内のセッションへのアクセスを維持できます。サービスでは、Web アプリケーションとモバイル・アプリケーションのセッション・キャッシュ・シナリオがサポートされます。 |
 |オプション | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。Local の基本オファリングには、初期環境が含まれます。初期環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えたローカル環境内で {{site.data.keyword.iot_full}} の専用バージョンを実行できます。 |
@@ -211,7 +212,7 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 <li>ユーザーは、ネットワーク上の 7 つの IP アドレスを提供します。内部の {{site.data.keyword.Bluemix_notm}} コンポーネント用にインターネットへのアウトバウンド・アクセスを可能にするための、保護された Web プロキシーがある場合は、それに接続するための資格情報を提供する必要があります。
 <p>**注**: Web プロキシーがセキュアでない場合は、資格情報を提供する必要はありません。また、すべての {{site.data.keyword.Bluemix_notm}} Local のお客様が Web プロキシーを使用するわけではないことに注意してください。</p></li>
 <li>IBM は、デプロイメントを開始する前に、ユーザーの Web プロキシーの通過が許可される必要のある URL のホワイトリストを提供しています。<br />
-<p>**注**: URL ホワイトリストには、twitter.com、facebook.com、および youtube.com などの Web サイトが含まれています。これらの URL が許可されない場合、{{site.data.keyword.Bluemix_notm}} の特定のサービスやエリアを利用できないことがあります。</p>
+<p>**注**: 必要なリソースに既存または新規のアプリケーションがアクセスできるようにするために、ビルドパックでリソースをバンドルしたり、セキュリティー・チームと連携してアプリケーション実行に必要な URL をホワイトリスト登録したりする追加の手順が必要な場合があります。node.js および Liberty for Java ビルドパックの作業について詳しくは、<a href="../runtimes/nodejs/offlineMode.html">node.js のオフライン・モード</a>および <a href="../runtimes/liberty/offlineMode.html">Liberty for Java のオフライン・モード</a>を参照してください。</p>
 </li>
 <li>ユーザーは、デプロイメント用のドメイン・ネームと、使用する ID を指定します。ローカル・インスタンスをセットアップする時に、部分的に定義された 2 つのドメインが提供されます。ユーザーは、それら 2 つのドメインの接頭部を選択します。例えば、<code>*mycompany*.bluemix.net</code> と <code>*mycompany*.mybluemix.net</code> の接頭部を選択します。また、フル・ドメインを選択してカスタム・ドメインを作成することもできます。
 <p>カスタム・ドメインは必要な数だけ選択できます。ただし、それらのカスタム・ドメインの証明書はユーザーの責任になります。カスタム・ドメインの作成について詳しくは、『<a href="../manageapps/updapps.html#domain">カスタム・ドメインの作成と使用</a>』を参照してください。</p></li>
@@ -355,7 +356,9 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 ## {{site.data.keyword.Bluemix_notm}} Local のインフラストラクチャー要件
 {: #localinfra}
 
-{{site.data.keyword.Bluemix_notm}} Local では、物理的セキュリティー、およびローカル・インスタンスをホストするためのインフラストラクチャーをお客様が所有します。IBM では、{{site.data.keyword.Bluemix_notm}} Local をセットアップするための最小要件を以下のように設定しています。
+{{site.data.keyword.Bluemix_notm}} Local では、物理的セキュリティー、およびローカル・インスタンスをホストするためのインフラストラクチャーをお客様が所有します。
+
+IBM では、{{site.data.keyword.Bluemix_notm}} Local をセットアップするための最小要件を以下のように設定しています。
 
 ### ハードウェア
 
@@ -366,8 +369,8 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 <dd>
 ESXi は、物理サーバーで実行され、プロセッサー、メモリー、ストレージ、およびリソースを複数の仮想マシンに抽出する仮想化層です。ESXi ごとの最小物理コア数が 8 という条件の下で、以下のリソース合計を満たす任意の組み合わせを選択できます。以下の仕様は、{{site.data.keyword.Bluemix_notm}} コア・ランタイム専用です。
 <ul>
-<li>48 個の物理コア (各 2.0 GHz 以上)</li>
-<li>756 GB の物理 RAM</li>
+<li>32 個の物理コア (各 2.0 GHz 以上)</li>
+<li>512 GB の物理 RAM</li>
 <li>合計データ・ストア・サイズ 7.5 TB
 <ul>
 <li>{{site.data.keyword.Bluemix_notm}} を保持するための 7 TB のデータ・ストア</li>
@@ -379,8 +382,8 @@ ESXi は、物理サーバーで実行され、プロセッサー、メモリー
 </dd>
 <dt>**高可用性**</dt>
 <dd>
-単一ノードの障害に対応するためには、n+1 個の ESXi が必要です。例えば、3 個の ESXi (それぞれ 16 個のコア) を使用する場合、4 個目の ESXi が必要になります。
-<p><strong>注:</strong> お客様の VMware 管理者が、リソースを保証するためにクラスター内に厳格な高可用性フェイルオーバーを適用するかどうかを決定できます。</p>
+単一ノードの障害に対応するためには、n+1 個の ESXi が必要です。例えば、32 個のコアと 512 GB のメモリーが、16 個のコアと 256 GB のメモリーによる ESXi サーバー 2 つを使用して満たされる場合、単一ノードの完全障害に対応するには、これらのサーバーが 3 つ必要です。
+<p><strong>注:</strong> お客様の VMware 管理者が、リソースを保証するためにクラスター内に厳格な高可用性フェイルオーバーを適用するかどうかを決定できます。高可用性フェイルオーバーを構築しないことにした場合は、32 コア、512 GB の最小リソース要件を満たすことで構いません。</p>
 </dd>
 <dt>**ネットワーク**</dt>
 <dd>
@@ -460,9 +463,9 @@ ESXi は、物理サーバーで実行され、プロセッサー、メモリー
 
 ### Droplet Execution Agent (DEA) プールの増強
 以下を備えた各 DEA を構成します。
-- 16 から 32 GB の RAM
-- 2 から 4 個の vCPU
-- 150 から 300 GB のストレージ
+- 16 または 32 GB の RAM
+- 2 または 4 個の vCPU
+- 150 または 300 GB のストレージ
 
 例えば、ESXi ホスト・サイズが 256 GB のメモリーと 16 個のコアの場合、8 個の DEA を追加します。ESXi ホスト・サイズが 64 GB のメモリーと 8 個のコアの場合、2 個の ESXi と 4 個の DEA を追加する必要があります。4 個の DEA ごとに追加の 1.5 TB のストレージが必要です。この例は、32 GB の RAM、4 個の vCPU、および 300 GB のストレージで構成された DEA に基づいています。
 

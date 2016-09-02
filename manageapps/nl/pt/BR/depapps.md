@@ -14,7 +14,7 @@ copyright:
 #Implementando apps
 {: #deployingapps}
 
-*Última atualização: 9 de maio de 2016*
+*Última atualização: 28 de julho de 2016*
 {: .last-updated}
 
 É possível implementar aplicativos no
@@ -495,7 +495,7 @@ As variáveis de ambiente definidas pelo usuário são específicas de um aplica
   * Use a interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Conclua
 as etapas a seguir:
     1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no ladrilho do app. A página de detalhes do app é exibida.
-	2. Na área de janela de navegação à esquerda, clique em **Variáveis de ambiente**.
+	2. Clique em **Variáveis de ambiente**.  
 	3. Clique em **DEFINIDA PELO USUÁRIO** e, em seguida, clique em **INCLUIR**.
 	4. Preencha os campos necessários e, em seguida, clique em **SALVAR**.
   * Use a interface de linha de comandos cf. Inclua uma variável definida pelo usuário usando o comando `cf set-env`. Por

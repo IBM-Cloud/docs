@@ -18,7 +18,7 @@ copyright:
 # 场景：端到端开发
 {: #ee}
 
-*上次更新时间：2016 年 6 月 15 日*
+*上次更新时间：2016 年 8 月 16 日*
 {: .last-updated}
 
 构建、运行和部署应用程序时，可以使用 {{site.data.keyword.Bluemix}} 用户界面、平台和一组工具。请按照以下步骤开始此端到端开发场景。
@@ -36,7 +36,7 @@ copyright:
 
 在 {{site.data.keyword.Bluemix_notm}} 中，应用程序与组织和空间相关联。一个组织可由多个合作者拥有并使用。最初，您将获得根据您的用户名命名的缺省组织，并且您是唯一的合作者。您还将获得该组织内的一个空间。空间是运行应用程序的环境；例如，您可以拥有 dev 空间、test 空间和 production 空间，分别用作开发环境、测试环境和生产环境。此外，每个环境都属于一个区域。通过 {{site.data.keyword.Bluemix_notm}}，您可以将应用程序部署到特定地理区域，以减少网络等待时间，增强数据隐私性，提高可用性。有关详细信息，请参阅“区域”。
 
-对于此场景，应使用 Node.js 来开发 Web 应用程序。假定您在美国，并且您的大部分应用程序用户也在美国。您决定在靠近您用户群的位置构建并运行应用程序，以便能够减少网络等待时间。登录到 {{site.data.keyword.Bluemix_notm}} 之后，单击**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg)，并选择**美国南部**区域。然后，可以执行以下步骤来创建应用程序：
+对于此场景，应使用 Node.js 来开发 Web 应用程序。假定您在美国，并且您的大部分应用程序用户也在美国。您决定在靠近您用户群的位置构建并运行应用程序，以便能够减少网络等待时间。登录到 {{site.data.keyword.Bluemix_notm}} 之后，单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg)，然后选择**美国南部**区域。然后，可以执行以下步骤来创建应用程序：
 
   1. 选择**计算**。
   2. 单击加号图标。
@@ -186,7 +186,7 @@ cf bind-service TestNode cloudant100
   ```
 if (process.env.VCAP_SERVICES) {
 var env = JSON.parse(process.env.VCAP_SERVICES);
-        var cloudant = env['"cloudantNoSQLDB'][0].credentials;
+        var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
 "username" : "user1",

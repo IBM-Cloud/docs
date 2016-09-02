@@ -13,7 +13,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}}-Mobil-SDK verwenden
 {: #openwhisk_mobile_sdk}
-*Letzte Aktualisierung: 28. März 2016*
+Letzte Aktualisierung: 4. August 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} stellt ein Mobil-SDK für iOS- und watchOS 2-Geräte bereit, mit dem mobile Apps dazu eingerichtet werden können, ohne großen Aufwand ferne Auslöser zu aktivieren und ferne Aktionen aufzurufen. Gegenwärtig ist keine Version für Android verfügbar. Android-Entwickler können die {{site.data.keyword.openwhisk}}-REST-API direkt verwenden.
@@ -23,9 +23,11 @@ Das Mobil-SDK wurde in Swift 2.2 geschrieben und unterstützt iOS 9 und höhere 
 
 ## SDK der App hinzufügen
 {: #openwhisk_add_sdk}
+
 Sie können das Mobil-SDK mithilfe von CocoaPods, Carthage oder aus dem Quellenverzeichnis installieren.
 
 ### Mithilfe von CocoaPods installieren 
+{: #openwhisk_add_sdk_cocoapods}
 
 Das {{site.data.keyword.openwhisk_short}}-SDK für den mobilen Einsatz ist nur über CocoaPods für die öffentliche Verteilung verfügbar. Wenn CocoaPods installiert ist, fügen Sie die folgenden Zeilen in eine Datei mit dem Namen 'Podfile' im Projektverzeichnis der Starter-App ein. 
 
@@ -46,11 +48,12 @@ end
 ```
 {: codeblock}
 
-Geben Sie über die Befehlszeile den Befehl `pod install` ein. Dadurch wird das SDK für eine iOS-App mit einer watchOS 2-Erweiterung installiert.  Verwenden Sie die Arbeitsbereichsdatei, die CocoaPods für Ihre App erstellt, um das Projekt in Xcode zu öffnen.
+Geben Sie über die Befehlszeile den Befehl `pod install` ein. Dieser Befehl installiert das SDK für eine iOS-App mit einer watchOS 2-Erweiterung. Verwenden Sie die Arbeitsbereichsdatei, die CocoaPods für Ihre App erstellt, um das Projekt in Xcode zu öffnen.
 
 ### Mithilfe von Carthage installieren
+{: #openwhisk_add_sdk_carthage}
 
-Erstellen Sie eine Datei im Projektverzeichnis Ihrer App mit dem Namen 'Cartfile'. Fügen Sie die folgende Zeile in die Cartfile ein:
+Erstellen Sie eine Datei im Projektverzeichnis Ihrer App mit dem Namen 'Cartfile'. Fügen Sie die folgende Zeile in die Datei ein:
 ```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
@@ -61,8 +64,11 @@ Geben Sie über die Befehlszeile den Befehl `carthage update --platform ios` ein
 Dann müssen Sie OpenWhisk.framework den eingebetteten Frameworks in Ihrem Xcode-Projekt hinzufügen.
 
 ### Aus Quellcode installieren
+{: #openwhisk_add_sdk_source}
 
-Der Quellcode wird unter https://github.com/openwhisk/openwhisk-client-swift.git zur Verfügung gestellt. Öffnen Sie mit Xcode ein Projekt unter Verwendung von `OpenWhisk.xcodeproj`. Das Projekt enthält die beiden Schemas "OpenWhisk" und "OpenWhiskWatch", die für iOS bzw. watchOS 2 vorgesehen sind. Erstellen Sie das Projekt (Build) für die Ziele, die Sie benötigen, und fügen Sie die resultierenden Frameworks Ihrer App (in der Regel in ~/Library/Developer/Xcode/DerivedData/Ihr App-Name) hinzu. 
+Der Quellcode wird unter https://github.com/openwhisk/openwhisk-client-swift.git zur Verfügung gestellt. Öffnen Sie mit Xcode ein Projekt unter Verwendung von `OpenWhisk.xcodeproj`.
+Das Projekt enthält die beiden Schemas 'OpenWhisk' (für iOS) und 'OpenWhiskWatch' (für watchOS 2).
+Erstellen Sie das Projekt (Build) für die Ziele, die Sie benötigen, und fügen Sie die resultierenden Frameworks Ihrer App (in der Regel in ~/Library/Developer/Xcode/DerivedData/Ihr App-Name) hinzu.
 
 ## Starter-App-Beispiel installieren
 {: #openwhisk_install_sdkstart}
@@ -75,7 +81,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-Durch diesen Befehl wird eine ZIP-Datei heruntergeladen, die die Starter-App enthält. Im Projektverzeichnis befindet sich eine Podfile.  
+Mit diesem Befehl wird eine komprimierte Datei mit der Starter-App heruntergeladen. Im Projektverzeichnis befindet sich eine Podfile. 
 
 Geben Sie den folgenden Befehl ein, um das SDK zu installieren: 
 ```
@@ -86,7 +92,7 @@ pod install
 ## Erste Schritte mit dem SDK
 {: #openwhisk_sdk_getstart}
 
-Um die Arbeit rasch aufnehmen zu können, erstellen Sie ein Objekt WhiskCredentials mit Ihren {{site.data.keyword.openwhisk_short}}-API-Berechtigungsnachweisen und eine {{site.data.keyword.openwhisk_short}}-Instanz aus diesem Objekt.
+Um die Arbeit rasch aufnehmen zu können, erstellen Sie ein Objekt 'WhiskCredentials' mit Ihren {{site.data.keyword.openwhisk_short}}-API-Berechtigungsnachweisen und eine {{site.data.keyword.openwhisk_short}}-Instanz aus diesem Objekt.
 
 In Swift 2.1 verwenden Sie zum Beispiel den folgenden Beispielcode zum Erstellen des Berechtigungsnachweisobjekts:
 
@@ -108,13 +114,13 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 ```
 {: screen}
 
-Die Zeichenfolgen vor und nach dem Doppelpunkt sind Ihr Schlüssel bzw. Ihr Token.
+Die Zeichenfolgen vor dem Doppelpunkt sind der Schlüssel und die Zeichenfolge nach dem Doppelpunkt ist das Token.
 
 ## {{site.data.keyword.openwhisk_short}}-Aktion aufrufen
 {: #openwhisk_sdk_invoke}
 
 
-Zum Aufrufen einer fernen Aktion können Sie `invokeAction` mit dem Aktionsnamen aufrufen. Sie können den Namensbereich angeben, zu dem die Aktion gehört, oder Sie können den Namensbereich leer lassen, um den Standardnamensbereich zu übernehmen.  Verwenden Sie ein Wörterverzeichnis (Dictionary), um die erforderlichen Parameter an die Aktion zu übergeben.
+Zum Aufrufen einer fernen Aktion können Sie `invokeAction` mit dem Aktionsnamen aufrufen. Sie können den Namensbereich angeben, zu dem die Aktion gehört, oder Sie können den Namensbereich leer lassen, um den Standardnamensbereich zu übernehmen. Verwenden Sie ein Wörterverzeichnis (Dictionary), um die erforderlichen Parameter an die Aktion zu übergeben.
 
 Beispiel:
 
@@ -212,7 +218,7 @@ whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
 
-In diesem Beispiel wird eine Installation verwendet, die unter 'localhost:8080' ausgeführt wird.  Wenn Sie den Parameter 'baseUrl' nicht angeben, verwendet das Mobil-SDK die Instanz, die unter https://openwhisk.ng.bluemix.net ausgeführt wird.
+In diesem Beispiel wird eine Installation verwendet, die unter 'localhost:8080' ausgeführt wird. Wenn Sie den Parameter 'baseUrl' nicht angeben, verwendet das Mobil-SDK die Instanz, die unter https://openwhisk.ng.bluemix.net ausgeführt wird.
 
 Sie können einen angepassten Parameter NSURLSession übergeben, wenn Sie eine besondere Netzverwaltung benötigen. Sie könnten zum Beispiel eine eigene {{site.data.keyword.openwhisk_short}}-Installation haben, die mit selbst signierten Zertifikaten arbeitet:
 
@@ -233,8 +239,9 @@ whisk.urlSession = session
 {: codeblock}
 
 ### Unterstützung für qualifizierte Namen
+{: #openwhisk_sdk_configure_qual}
 
-Alle Aktionen und Auslöser haben einen vollständig qualifizierten Namen, der aus einem Namensbereich, einem Paketnamen und einem Aktions- bzw. Auslösernamen besteht. Das SDK kann diese als Parameter beim Aufruf einer Aktion bzw. Aktivieren eines Auslösers akzeptieren. Das SDK stellt zudem eine Funktion bereit, die einen vollständig qualifizierten Namen akzeptiert, der wie folgt aussieht: `/mynamespace/mypackage/nameOfActionOrTrigger`. Die Zeichenfolge für den qualifizierten Namen unterstützt unbenannte Standardwerte für Namensbereiche und Pakete, die alle {{site.data.keyword.openwhisk_short}}-Benutzer haben, sodass die folgenden Syntaxanalyseregeln gelten:
+Alle Aktionen und Auslöser haben einen vollständig qualifizierten Namen, der aus einem Namensbereich, einem Paketnamen und einem Aktions- bzw. Auslösernamen besteht. Das SDK kann diese Elemente als Parameter beim Aufruf einer Aktion bzw. Aktivieren eines Auslösers akzeptieren. Das SDK stellt zudem eine Funktion bereit, die einen vollständig qualifizierten Namen akzeptiert, der wie folgt aussieht: `/mynamespace/mypackage/nameOfActionOrTrigger`. Die Zeichenfolge für den qualifizierten Namen unterstützt unbenannte Standardwerte für Namensbereiche und Pakete, die alle {{site.data.keyword.openwhisk_short}}-Benutzer haben, sodass die folgenden Syntaxanalyseregeln gelten:
 
 - qName = "foo" ergibt: Namensbereich = Standard, Paket = Standard, Aktion/Auslöser = "foo"
 - qName = "mypackage/foo" ergibt: Namensbereich = Standard, Paket = mypackage, Aktion/Auslöser = "foo"
@@ -244,6 +251,7 @@ Alle Aktionen und Auslöser haben einen vollständig qualifizierten Namen, der a
 Alle anderen Kombinationen haben einen Fehler WhiskError.QualifiedName zur Folge. Daher müssen Sie bei Verwendung von qualifizierten Namen den Aufruf in ein Konstrukt "`do/try/catch`" einschließen.
 
 ### SDK-Schaltfläche
+{: #openwhisk_sdk_configure_button}
 
 Aus Gründen der Verwendungsfreundlichkeit enthält das SDK eine Schaltfläche `WhiskButton`, die die Schaltfläche `UIButton` erweitert, sodass sie Aktionen aufrufen kann.  Gehen Sie zur Verwendung von `WhiskButton` wie im folgenden Beispiel vor:
 

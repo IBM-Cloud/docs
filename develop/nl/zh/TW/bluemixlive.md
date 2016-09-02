@@ -110,7 +110,7 @@ bl start --restart
 
 當您變更 Web IDE 中的檔案時，會自動將其重新部署至在 {{site.data.keyword.Bluemix_notm}} 上執行的應用程式。如果您需要重新啟動 Node 應用程式，可以使用執行列中的**重新啟動**按鈕。
 
-**附註：**為達到使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性時的更一致體驗，則需要且將會新增 256MB 的額外記憶體。
+**附註：**為達到使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性時更一致的體驗，需要且將會新增 256MB 的額外記憶體。
 
 ##{{site.data.keyword.Bluemix_notm}} 即時除錯 {: #live-debug}
 
@@ -137,7 +137,7 @@ bl start --restart
 
 「除錯」包含下列功能：
 
-**限制：**需要有 Google Chrome。
+**限制：**需要使用 Google Chrome。
 
 * 在應用程式碼中設定岔斷點，以在特定行暫停執行。
 * 編輯岔斷點條件，只在符合特定準則時暫停執行。
@@ -171,7 +171,7 @@ bl start --restart
 
 3. 增加記憶體。  
 
-    a. 在應用程式 `manifest.yml` 檔案中，在為記憶體屬性指定的值加上 128M 以上。
+    a. 在應用程式 `manifest.yml` 檔案中，在為記憶體屬性指定的值再增加 128M 以上。
 
 安裝「{{site.data.keyword.Bluemix_notm}} 即時除錯」之後，您可以使用除錯工具。
 

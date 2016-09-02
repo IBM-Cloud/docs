@@ -13,7 +13,7 @@ copyright:
 
 # 使用 {{site.data.keyword.openwhisk_short}} 移动 SDK
 {: #openwhisk_mobile_sdk}
-*上次更新时间：2016 年 3 月 28 日*
+上次更新时间：2016 年 8 月 4 日
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} 提供了用于 iOS 和 watchOS 2 设备的移动 SDK，支持移动应用程序轻松触发远程触发器以及调用远程操作。Android 版本当前不可用；Android 开发者可直接使用 {{site.data.keyword.openwhisk}} REST API。
@@ -23,9 +23,11 @@ copyright:
 
 ## 向应用程序添加 SDK
 {: #openwhisk_add_sdk}
+
 可以使用 CocoaPods、Carthage 或从源代码目录安装移动 SDK。
 
 ### 使用 CocoaPods 安装 
+{: #openwhisk_add_sdk_cocoapods}
 
 {{site.data.keyword.openwhisk_short}} 移动 SDK 可通过 CocoaPods 进行公共分发。假定 CocoaPods 已安装，请将以下行放到入门模板应用程序项目目录中名为“Podfile”的文件中。 
 
@@ -44,11 +46,12 @@ end
 ```
 {: codeblock}
 
-在命令行中，输入 `pod install`。这将安装用于具有 watchOS 2 扩展的 iOS 应用程序的 SDK。使用 CocoaPods 为应用程序创建的工作空间文件在 Xcode 中打开项目。
+在命令行中，输入 `pod install`。此命令会安装用于具有 watchOS 2 扩展的 iOS 应用程序的 SDK。使用 CocoaPods 为应用程序创建的工作空间文件在 Xcode 中打开项目。
 
 ### 使用 Carthage 安装
+{: #openwhisk_add_sdk_carthage}
 
-在应用程序的项目目录中创建文件并命名为“Cartfile”。在 Cartfile 中放入以下行：
+在应用程序的项目目录中创建文件并命名为“Cartfile”。在文件中添加以下行：
 
 ```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
@@ -60,9 +63,11 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 然后，您必须将 OpenWhisk.framework 添加到 Xcode 项目中的嵌入框架。
 
 ### 通过源代码安装
+{: #openwhisk_add_sdk_source}
 
 源代码在 https://github.com/openwhisk/openwhisk-client-swift.git 中提供。使用 Xcode 中的 `OpenWhisk.xcodeproj` 打开项目。
-该项目包含“OpenWhisk”和“OpenWhiskWatch”这两个方案，分别用于 iOS 和 watchOS 2。针对需要的目标构建项目，然后将生成的框架添加到应用程序（通常位于 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
+该项目包含两个方案：“OpenWhisk”（用于 iOS）和“OpenWhiskWatch”（用于 watchOS 2）。
+针对需要的目标构建项目，然后将生成的框架添加到应用程序（通常位于 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
 
 ## 安装入门模板应用程序示例
 {: #openwhisk_install_sdkstart}
@@ -76,7 +81,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-这将下载包含入门模板应用程序的 zip 文件。在项目目录中有一个 Podfile。 
+此命令会下载包含入门模板应用程序的压缩文件。在项目目录中有一个 podfile。 
 
 要安装 SDK，请输入以下命令：
 
@@ -108,13 +113,13 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 ```
 {: screen}
 
-冒号前后的字符串分别为密钥和令牌。
+冒号前面的字符串是密钥，冒号后面的字符串是令牌。
 
 ## 调用 {{site.data.keyword.openwhisk_short}} 操作
 {: #openwhisk_sdk_invoke}
 
 
-要调用远程操作，可以使用操作名称来调用 `invokeAction`。可以指定该操作所属的名称空间，或者使其保留为空以接受缺省名称空间。使用字典来根据需要将参数传递到该操作。
+要调用远程操作，可以使用操作名称来调用 `invokeAction`。可以指定该操作所属的名称空间，或者将其保留为空白以接受缺省名称空间。使用字典来根据需要将参数传递到该操作。
 
 例如：
 
@@ -218,8 +223,9 @@ whisk.urlSession = session
 {: codeblock}
 
 ### 支持限定名
+{: #openwhisk_sdk_configure_qual}
 
-所有操作和触发器都具有由名称空间、包以及操作名称或触发器名称组成的标准名称。SDK 调用操作或触发触发器时，可以接受这些标准名称作为参数。SDK 还提供了接受类似 `/mynamespace/mypackage/nameOfActionOrTrigger` 的标准名称的函数。限定名字符串支持所有 {{site.data.keyword.openwhisk_short}} 用户具有的名称空间和包的未指定缺省值，因此以下解析规则适用：
+所有操作和触发器都具有由名称空间、包以及操作名称或触发器名称组成的标准名称。在您调用操作或触发触发器时，SDK 可以接受这些元素作为参数。SDK 还提供了接受类似 `/mynamespace/mypackage/nameOfActionOrTrigger` 的标准名称的函数。限定名字符串支持所有 {{site.data.keyword.openwhisk_short}} 用户具有的名称空间和包的未指定缺省值，因此以下解析规则适用：
 
 - qName = "foo" results in namespace = default, package = default, action/trrigger = "foo"
 - qName = "mypackage/foo" results in namespace = default, package = mypackage, action/trigger = "foo"
@@ -229,6 +235,7 @@ whisk.urlSession = session
 其他所有组合都会发出 WhiskError.QualifiedName 错误。因此，使用限定名时，必须将调用包装在“`do/try/catch`”构造中。
 
 ### SDK 按钮
+{: #openwhisk_sdk_configure_button}
 
 为了方便起见，SDK 包含 `WhiskButton`，用于扩展 `UIButton` 以允许其调用操作。要使用 `WhiskButton`，请遵循以下示例：
 

@@ -13,7 +13,7 @@ copyright:
 
 # 使用 {{site.data.keyword.openwhisk_short}} 行動 SDK
 {: #openwhisk_mobile_sdk}
-*前次更新：2016 年 3 月 28 日*
+前次更新：2016 年 8 月 4 日
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} 提供適用於 iOS 及 watchOS 2 裝置的行動 SDK，讓行動應用程式輕鬆地發動遠端觸發程式以及呼叫遠端動作。目前沒有適用於 Android 的版本；Android 開發人員可以直接使用 {{site.data.keyword.openwhisk}} REST API。
@@ -23,9 +23,11 @@ copyright:
 
 ## 將 SDK 新增至應用程式
 {: #openwhisk_add_sdk}
+
 您可以使用 CocoaPods 或 Carthage 或者從來源目錄中安裝行動 SDK。
 
 ### 使用 CocoaPods 安裝 
+{: #openwhisk_add_sdk_cocoapods}
 
 適用於行動的 {{site.data.keyword.openwhisk_short}} SDK 可用於透過 CocoaPods 進行的公用配送。假設已安裝 CocoaPods，請將下列幾行放入入門範本應用程式專案目錄內名為 'Podfile' 的檔案中。 
 
@@ -46,11 +48,12 @@ end
 ```
 {: codeblock}
 
-從指令行鍵入 `pod install`。這會安裝適用於具有 watchOS 2 延伸的 iOS 應用程式的 SDK。使用 CocoaPods 為您的應用程式所建立的工作區檔案，在 Xcode 中開啟專案。
+從指令行鍵入 `pod install`。此指令會安裝適用於具有 watchOS 2 延伸的 iOS 應用程式的 SDK。使用 CocoaPods 為您的應用程式所建立的工作區檔案，在 Xcode 中開啟專案。
 
 ### 使用 Carthage 安裝
+{: #openwhisk_add_sdk_carthage}
 
-在應用程式的專案目錄中建立稱為 'Cartfile' 的檔案。將下一行放入 Cartfile 中：
+在應用程式的專案目錄中建立檔案，並將它命名為 'Cartfile'。請在檔案中放入下一行：
 ```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
@@ -61,9 +64,11 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 然後，您必須將 OpenWhisk.framework 新增至 Xcode 專案中的內嵌架構
 
 ### 從原始碼安裝
+{: #openwhisk_add_sdk_source}
 
-原始碼位於 https://github.com/openwhisk/openwhisk-client-swift.git。請使用 Xcode 來開啟使用 `OpenWhisk.xcodeproj` 的專案。
-專案包含目標分別為 iOS 及 watchOS 2 的兩個方法："OpenWhisk" 及 "OpenWhiskWatch"。建置所需目標的專案，以及將產生的架構新增至應用程式（通常是在 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
+原始碼位於 https://github.com/openwhisk/openwhisk-client-swift.git。使用 Xcode，以透過使用 `OpenWhisk.xcodeproj` 來開啟專案。
+專案包含兩個方法："OpenWhisk"（目標設為 iOS）及 "OpenWhiskWatch"（目標設為 watchOS 2）。
+建置所需目標的專案，以及將產生的架構新增至應用程式（通常是在 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
 
 ## 安裝入門範本應用程式範例
 {: #openwhisk_install_sdkstart}
@@ -77,7 +82,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-這會下載包含入門範本應用程式的 zip 檔。專案目錄中有 Podfile。 
+此指令會下載包含入門範本應用程式的壓縮檔。專案目錄中會有 podfile。 
 
 若要安裝 SDK，請輸入下列指令：
 
@@ -109,7 +114,7 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 ```
 {: screen}
 
-冒號前後的字串分別是您的金鑰及記號。
+冒號之前的字串是您的金鑰，冒號之後的字串則是您的記號。
 
 ## 呼叫 {{site.data.keyword.openwhisk_short}} 動作
 {: #openwhisk_sdk_invoke}
@@ -219,17 +224,19 @@ whisk.urlSession = session
 {: codeblock}
 
 ### 完整名稱支援
+{: #openwhisk_sdk_configure_qual}
 
-所有動作及觸發程式的完整名稱都是由名稱空間、套件及動作或觸發程式名稱所構成。呼叫動作或發動觸發程式時，SDK 可以接受這些完整名稱作為參數。SDK 也提供接受類似 `/mynamespace/mypackage/nameOfActionOrTrigger` 之完整名稱的函數。完整名稱字串支援所有 {{site.data.keyword.openwhisk_short}} 使用者都有的名稱空間及套件的未命名預設值，因此適用下列剖析規則：
+所有動作及觸發程式的完整名稱都是由名稱空間、套件及動作或觸發程式名稱所構成。呼叫動作或發動觸發程式時，SDK 可以接受這些元素作為參數。SDK 也提供接受類似 `/mynamespace/mypackage/nameOfActionOrTrigger` 之完整名稱的函數。完整名稱字串支援所有 {{site.data.keyword.openwhisk_short}} 使用者都有的名稱空間及套件的未命名預設值，因此適用下列剖析規則：
 
 - qName = "foo" 導致名稱空間 = 預設值、套件 = 預設值、動作/觸發程式 = "foo"
 - qName = "mypackage/foo" 導致名稱空間 = 預設值、套件 = mypackage、動作/觸發程式 = "foo"
 - qName = "/mynamespace/foo" 導致名稱空間 = mynamespace、套件 = 預設值、動作/觸發程式 = "foo"
 - qName = "/mynamespace/mypackage/foo 導致名稱空間 = mynamespace、套件 = mypackage、動作/觸發程式 = "foo"
 
-所有其他組合都會發出 WhiskError.QualifiedName 錯誤。因此，使用完整名稱時，您必須使用 "`do/try/catch`" 建構括住呼叫。
+所有其他組合都會發出 WhiskError.QualifiedName 錯誤。因此，當您使用完整名稱時，必須使用 "`do/try/catch`" 建構括住呼叫。
 
 ### SDK 按鈕
+{: #openwhisk_sdk_configure_button}
 
 為方便起見，SDK 包括 `WhiskButton`，以擴充 `UIButton` 容許它呼叫動作。若要使用 `WhiskButton`，請遵循此範例：
 

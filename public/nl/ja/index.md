@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-*最終更新日: 2016 年 5 月 19 日*
+最終更新日: 2016 年 8 月 8 日
 {: .last-updated}
 
 
@@ -119,19 +119,16 @@ Web アプリの場合、クラウドで実行されるコードは、開発者�
 
 {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用すると、
 別の地域に切り替えて、その地域のスペースで作業することができます。
-**「アカウントとサポート」**アイコン
-![「アカウントとサ
-ポート」アイコン](../admin/images/account_support.svg)に移動して、「地域」
-**セレクターを展開します。次に、リストから別の地域を選択することができます。
+**「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](../icons/i-avatar-icon.svg) をクリックし、**「地域」**セレクターを展開します。その後、リストから別の地域を選択することが可能です。
 
 cf コマンド・ライン・インターフェースを使用する場合は、cf api コマンドを使用して地域の API エンドポイントを指定し、作業する {{site.data.keyword.Bluemix_notm}} 地域に接続する必要があります。
 例えば、
 {{site.data.keyword.Bluemix_notm}} ヨーロッパ・英国地域に接続するには、次のコマンドを入力します。
 
 
-
+```
 cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
-
+```
 
 Eclipse ツールを使用する場合は、{{site.data.keyword.Bluemix_notm}} サーバーを作成して地域の API エンドポイントを指定し、作業する {{site.data.keyword.Bluemix_notm}} 地域に接続する必要があります。
 Eclipse ツールの使用について詳しくは、「[Deploying apps with IBM {{site.data.keyword.IBM_notm}} Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#toolsinstall)」を参照してください。

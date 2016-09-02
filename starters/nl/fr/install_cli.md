@@ -37,7 +37,8 @@ Vous pouvez utiliser l'interface de ligne de commande pour déployer et modifier
 Avant de commencer, installez les interfaces de ligne de commande de Cloud Foundry et de {{site.data.keyword.Bluemix}}.
 
 <p>
-<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)"> <img class="image" src="images/btn_cf_commandline.svg" alt="Télécharger l'interface de ligne de commande Cloud Foundry" /> </a> <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)"> <img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix}}" /> </a> </p>
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)"> <img class="image" src="images/btn_cf_commandline.svg" alt="Télécharger l'interface de ligne de commande Cloud Foundry" /> </a> <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)"> <img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix}}" /> </a>
+</p>
 
 **Restriction :** les outils de ligne de commande ne sont pas pris en charge par Cygwin. Utilisez-les dans une fenêtre de ligne
 de commande autre que Cygwin.
@@ -70,7 +71,7 @@ documentation Cloud Foundry.
 <var class="keyword varname" data-hd-keyref="org_name">nom_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nom_espace</var></pre>
   
   7. Déployez votre application dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur la commande cf push, voir
-[Téléchargement de votre application](./upload_app.html).
+[Téléchargement de votre application](/docs/starters/upload_app.html).
   
   <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">nom_app</var></pre>
   
