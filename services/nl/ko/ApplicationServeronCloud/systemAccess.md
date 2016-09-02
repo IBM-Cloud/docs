@@ -11,11 +11,13 @@ copyright:
 
 #시스템 액세스
 {: #system_access}
+마지막 업데이트 날짜: 2016년 8월 17일
+{: .last-updated}
+
+
 이 주제에는 시스템에 액세스하고 액세스를 설정하는 다양한 방법과 함께 서비스 인스턴스 작성 및 관리 방법이 포함되어 있습니다.
 {: shortdesc}
 
-*마지막 업데이트 날짜: 2016년 6월 08일*
-{: .last-updated}
 
 ## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}에서 REST API 사용
 {: #restapi_usage}
@@ -25,19 +27,19 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}의 인스턴
 * {{site.data.keyword.Bluemix_notm}} UI의 {{site.data.keyword.Bluemix_notm}} 카탈로그 및 서비스 대시보드에서.
 * RESTful API를 사용하는 애플리케이션 또는 스크립트의 작성에서.
 
-Swagger 2.0 호환 REST API를 사용하여 클라이언트는 포털과 대시보드를 통해 제공된 것과 동일한 기능에 액세스합니다.지원되는 REST API 및 리소스에 대한 추가 정보는 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 문서](https://new-console.{DomainName}/apidocs/231){: new_window}를 참조하십시오. 
+Swagger 2.0 호환 REST API를 사용하여 클라이언트는 포털과 대시보드를 통해 제공된 것과 동일한 기능에 액세스합니다.지원되는 REST API 및 리소스에 대한 추가 정보는 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 문서](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}를 참조하십시오. REST API를 통해 지원하는 샘플 코드의 경우 {{site.data.keyword.Bluemix_notm}} [REST API 샘플](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}용으로 git 호스팅된 WebSphere Application Server를 다운로드하십시오.
 
 **참고:** 서비스 인스턴스를 작성한 후 작성된 Tee-Shirt 크기에 따라 서비스를 즉각 사용하지 못할 수도 있습니다.서비스 인스턴스의 현재 상태를 판별하도록 리턴된 JSON의 **상태** 필드를 조회할 것을 권장합니다.
 
-**참고:** [REST API 문서](https://new-console.{DomainName}/apidocs/231){: new_window}의 샘플 코드에서 참조되는 API 기반 URL은 미국 지역을 가리킵니다. 다른 지역을 사용 중인 경우 애플리케이션에서 적합한 API 기반 URL을 참조하는지 확인하십시오. 
+**참고:** [REST API 샘플](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}에서 참조되는 **apiEndpoint** URL은 미국 남부 지역을 가리킵니다. 다른 지역을 사용 중인 경우 애플리케이션에서 적합한 **apiEndpoint**를 참조하는지 확인하십시오.
 
-*표 1. REST API 구현을 위한 API 기반 URL*
+*표 1. Rest API 구현을 위한 API 엔드포인트 URL*
 
-| **지역 이름** | **지리적 위치** | **지역 접두부** | **API 기반 URL** |       
+| **지역 이름** | **지리적 위치** | **지역 접두부** | **API 엔드포인트 URL** |       
 |:-------------:|:----------:|:--------------:|:-------------:|
-| 미국 지역 | 달라스, 텍사스, 미국 | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
-| 영국 지역 | 런던, 잉글랜드 | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
-| 시드니 지역 | 시드니, 오스트레일리아 | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+| 미국 남부 지역 | 댈러스, 텍사스, 미국 | ng | https://wasaas-broker.ng.bluemix.net/wasaas-broker/api  |
+| 영국 지역 | 런던, 영국 | eu-gb | https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api  |
+| 시드니 지역 | 시드니, 호주 | au-syd | https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api  |
 
 
 

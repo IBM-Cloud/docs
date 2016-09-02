@@ -11,11 +11,13 @@ copyright:
 
 #系统访问
 {: #system_access}
+上次更新时间：2016 年 8 月 17 日
+{: .last-updated}
+
+
 以下主题包含如何创建和管理服务实例的方法以及如何访问系统并设置访问权的多种方法。
 {: shortdesc}
 
-*上次更新时间：2016 年 6 月 8 日*
-{: .last-updated}
 
 ## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的 REST API 用法
 {: #restapi_usage}
@@ -25,19 +27,19 @@ copyright:
 * 通过 {{site.data.keyword.Bluemix_notm}} UI 中的 {{site.data.keyword.Bluemix_notm}} 目录和服务仪表板。
 * 通过创建使用了我们提供的 RESTful API 的应用程序或脚本。
 
-使用我们提供的符合 Swagger 2.0 的 REST API，客户可访问通过门户网站和仪表板提供的相同功能。有关支持的 REST API 和资源的更多信息，请参阅 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文档](https://new-console.{DomainName}/apidocs/231){: new_window}。
+使用我们提供的符合 Swagger 2.0 的 REST API，客户可访问通过门户网站和仪表板提供的相同功能。有关支持的 REST API 和资源的更多信息，请参阅 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文档](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}。有关如何使用我们的 REST API 的样本代码，请下载 Git 托管的 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 样本](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}。
 
 **注：**创建服务实例之后，根据创建的 T 恤型号，可能无法立即使用您的服务。建议您查询 JSON 返回的**状态**字段，以确定服务实例的当前状态。
 
-**注**：[REST API 文档](https://new-console.{DomainName}/apidocs/231){: new_window}的样本代码中引用的 API 基本 URL 指向美国南部区域。如果要使用其他区域，请确保应用程序引用相应的 API 基本 URL。
+**注：**[REST API 样本](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}中引用的 **apiEndpoint** URL 指向美国南部区域。如果您使用的是其他区域，请确保您的应用程序引用相应的 **apiEndpoint**。
 
-*表1. REST API 实现的 API 基本 URL*
+*表 1. Rest API 实现的 API 端点 URL*
 
-| **区域名称** | **地理位置** | **区域前缀** | **API 基本 URL** |       
+| **区域名称** | **地理位置** | **区域前缀** | **API 端点 URL** |       
 |:-------------:|:----------:|:--------------:|:-------------:|
-| 美国南部区域 | 美国得克萨斯州达拉斯 | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
-| 英国区域 | 英国伦敦 | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
-| 悉尼区域 | 澳大利亚悉尼 | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+| 美国南部区域 | 美国得克萨斯州达拉斯 | ng | https://wasaas-broker.ng.bluemix.net/wasaas-broker/api  |
+| 英国区域 | 英国伦敦 | eu-gb | https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api  |
+| 悉尼区域 | 澳大利亚悉尼 | au-syd | https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api  |
 
 
 

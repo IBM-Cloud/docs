@@ -11,11 +11,22 @@ copyright:
 
 # 最新更新情報
 {: #latest_updates}
-
-*最終更新日: 2016 年 6 月 24 日*
+最終更新日: 2016 年 8 月 17 日
 {: .last-updated}
 
 サービスの最新更新情報のリスト。
+
+## 2016 年 8 月 17 日: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} の更新
+
+* WebSphere Application Server for Bluemix のバイナリーが 8.5.5.9 から 8.5.5.10 にアップグレードされました。
+* WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} に影響を与える、以下を含む[いくつかのセキュリティー脆弱性](http://www-01.ibm.com/support/docview.wss?uid=swg21988710){: new_window}についての対処を行いました。
+  * WebSphere Application Server および WebSphere Application Server Hypervisor Edition 管理コンソールに影響を与える Apache Struts の脆弱性。
+  * SIP サービス使用時の IBM WebSphere Application Server の潜在的なサービス妨害の脆弱性。
+  * WebSphere Application Server に使用される IBM HTTP Server に影響を与える可能性のあるいくつかの脆弱性。
+  * IBM HTTP Server (IHS) に影響を与える可能性のある CGI アプリケーションを使用した HTTP トラフィックのリダイレクトを許可する脆弱性。この脆弱性は「HTTPOXY」と呼ばれます。
+  * IBM WebSphere Application Server 内の情報開示に対する脆弱性。
+  * IBM WebSphere Application Server 内でセキュリティー制限を潜在的に迂回する脆弱性 (これは Webcontainer カスタム・プロパティー HttpSessionIdReuse を使用可能にする環境でのみ発生します)。
+
 
 ## 2016 年 6 月 24 日: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} の更新
 

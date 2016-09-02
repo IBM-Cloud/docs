@@ -12,7 +12,8 @@ copyright:
 # Temas sobre Application Server on Cloud
 {: #topics}
 
-*Última actualización: 15 de abril 2016*
+*Última actualización: 15 de abril de 2016*
+{: .last-updated}
 
 1. [Visión general](indexWAS4Bluemix.html)
 2. [Mantenimiento y actualizaciones](maintenanceAndUpdates.html)

@@ -11,11 +11,22 @@ copyright:
 
 # Letzte Aktualisierungen
 {: #latest_updates}
-
-*Letzte Aktualisierung: 24. Juni 2016*
+Letzte Aktualisierung: 17. August 2016
 {: .last-updated}
 
 Eine Liste der neuesten Aktualisierungen für den Service.
+
+## 17. August 2016: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} aktualisiert
+
+* Die Binärdateien von WebSphere Application Server for Bluemix wurden von Version 8.5.5.9 auf Version 8.5.5.10 aktualisiert
+* Es wurden [verschiedene Sicherheitslücken](http://www-01.ibm.com/support/docview.wss?uid=swg21988710){: new_window} adressiert, die sich auf WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} auswirken; dazu gehören die folgenden:
+  * Apache Struts-Sicherheitslücken, die sich auf WebSphere Application Server und auf die WebSphere Application Server Hypervisor Edition-Administrationskonsole auswirken.
+  * Eine potenzielle DoS-Sicherheitslücke mit IBM WebSphere Application Server bei der Verwendung von SIP-Services.
+  * Verschiedene Sicherheitslücken, die sich auf den von WebSphere Application Server verwendeten IBM HTTP Server auswirken können.
+  * Eine Sicherheitslücke, die das Weiterleiten von HTTP-Datenverkehr mit CGI-Anwendungen ermöglicht und sich auf IBM HTTP Server (IHS) auswirken kann. Diese Sicherheitslücke wird auch "HTTPOXY" genannt.
+  * Eine Sicherheitslücke bei der Informationsweitergabe in IBM WebSphere Application Server.
+  * Eine potenzielle Sicherheitslücke zur Umgehung von Sicherheitsbeschränkungen in IBM WebSphere Application Server, die nur in Umgebungen mit aktivierter angepasster Web-Container-Eigenschaft 'HttpSessionIdReuse' auftritt.
+
 
 ## 24. Juni 2016: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} aktualisiert
 

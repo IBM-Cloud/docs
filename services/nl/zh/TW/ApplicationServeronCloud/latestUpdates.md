@@ -11,11 +11,22 @@ copyright:
 
 # 最新更新項目
 {: #latest_updates}
-
-*前次更新：2016 年 6 月 24 日*
+前次更新：2016 年 8 月 17 日
 {: .last-updated}
 
 服務最新更新項目的清單。
+
+## 2016 年 8 月 17 日：已更新 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* 已將 WebSphere Application Server for Bluemix 二進位檔從 8.5.5.9 升級為 8.5.5.10
+* 已解決會影響 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 的[數個安全漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21988710){: new_window}，包括：
+  * 影響 WebSphere Application Server 及「WebSphere Application Server Hypervisor Edition 管理主控台」的 Apache Struts 漏洞。
+  * 使用 SIP 服務時的 IBM WebSphere Application Server 的潛在拒絕服務漏洞。
+  * 可能會影響 WebSphere Application Server 所使用 IBM HTTP Server 的數個漏洞。
+  * 容許重新導向 CGI 應用程式的 HTTP 資料傳輸流量的漏洞，而 CGI 應用程式可能會影響 IBM HTTP Server (IHS)。此漏洞稱為 "HTTPOXY"。
+  * IBM WebSphere Application Server 中的「資訊揭露漏洞」。
+  * IBM WebSphere Application Server 中僅發生在已啟用 Web 儲存器自訂內容 HttpSessionIdReuse 的環境中的潛在略過安全限制漏洞。
+
 
 ## 2016 年 6 月 24 日：已更新 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 

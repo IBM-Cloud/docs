@@ -11,11 +11,13 @@ copyright:
 
 #Accès au système
 {: #system_access}
+Dernière mise à jour : 17 août 2016
+{: .last-updated}
+
+
 Ces rubriques présentent les méthodes de création et de gestion d'une instance de service en même temps que les différentes méthodes d'accès et de configuration de l'accès à vos systèmes.
 {: shortdesc}
 
-*Dernière mise à jour : 08 juin 2016*
-{: .last-updated}
 
 ## Utilisation de l'API REST dans WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #restapi_usage}
@@ -25,19 +27,19 @@ Des instances dans WebSphere Application Server for {{site.data.keyword.Bluemix_
 * Depuis {{site.data.keyword.Bluemix_notm}} Catalog et Service Dashboard dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
 * A partir de la création d'une application ou d'un script utilisant les API RESTful.
 
-En utilisant les API REST compatibles Swagger 2.0, les clients ont accès à la même fonction que celle fournie via le portail et le tableau de bord. Pour plus d'informations sur les ressources et API REST prises en charge, voir la [documentation d'API REST](https://new-console.{DomainName}/apidocs/231){: new_window} de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} .
+En utilisant les API REST compatibles Swagger 2.0, les clients ont accès à la même fonction que celle fournie via le portail et le tableau de bord. Pour plus d'informations sur les ressources et API REST prises en charge, voir la [documentation des API REST](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window} de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}.  Pour obtenir le code exemple facilitant l'utilisation de nos API REST, téléchargez les [exemples d'API REST](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} hébergés par git.
 
 **Remarque :** après création d'une instance de service, selon la taille Tee-Shirt créée, votre service risque de ne pas être immédiatement prêt à être utilisé. Il est recommandé de faire une requête sur la zone **Statut** de l'élément JSON retourné pour déterminer l'état actuel de l'instance de service.
 
-**Remarque :** l'URL BASE API référencée dans le code exemple de la [documentation d'API REST](https://new-console.{DomainName}/apidocs/231){: new_window} pointe sur la région "Sud des Etats-Unis". Si vous utilisez d'autres régions, assurez-vous que votre application se réfère à la bonne URL BASE API.
+**Remarque :** l'URL **apiEndpoint** référencée dans les [exemples d'API REST](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} pointe sur la région "Sud des Etats-Unis". Si vous utilisez d'autres régions, assurez-vous que votre application se réfère à la bonne URL **apiEndpoint**.
 
-*Tableau 1. URL base API pour l'implémentation d'une API Rest*
+*Tableau 1. URL de point d'extension d'API pour la mise en oeuvre des API REST*
 
-| **Nom de région** | **Situation géographique** | **Préfixe de région** | **URL base API** |       
-|:--------------------------:|:-------------------:|:--:|:--------------------------------------------------:|
-| Sud des Etats-Unis         | Dallas, TX, US      | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
-| Royaume-Uni                | Londres, Angleterre | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
-| Sydney                     | Sydney, Australie   | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+| **Nom de région** | **Situation géographique** | **Préfixe de région** | **URL de point d'extension d'API** |       
+|:-------------:|:----------:|:--------------:|:-------------:|
+| Sud des Etats-Unis | Dallas, Texas, Etats-Unis | ng | https://wasaas-broker.ng.bluemix.net/wasaas-broker/api  |
+| Royaume-Uni | Londres, Angleterre | eu-gb | https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api  |
+| Sydney | Sydney, Australie | au-syd | https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api  |
 
 
 
@@ -130,7 +132,7 @@ Votre réponse devrait être similaire à ceci :
   {: codeblock}
 
 Procédez comme suit pour configurer l'accès SSH aux machines virtuelles de votre serveur WebSphere
-Application Server for Bluemix : 
+Application Server for Bluemix :
 
 1. Examinez le message d'avertissement qui s'affiche la première fois que vous vous connectez :
 "L'authenticité de l'hôte x.x.x.x n'a pas pu être établie". Ce comportement est
@@ -153,7 +155,7 @@ normal. A l'invite, sélectionnez Oui. La clé publique est à présent install�
   {: codeblock}
 
 6. Si vous rencontrez des problèmes lors de l'accès au système avec la clé SSH privée, utilisez le mot de passe root fourni. Connectez-vous en tant que
-root en exécutant la commande suivante et soumettez le mot de passe : 
+root en exécutant la commande suivante et soumettez le mot de passe :
 
  <pre>
     $ ssh root@169.53.246.x
