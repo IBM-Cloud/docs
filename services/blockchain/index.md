@@ -23,18 +23,19 @@ You can use a blockchain network to digitally represent assets which can then be
 
 There are currently two versions available for the blockchain service - **Starter Developer** and **High Security Business Network**.  Use the comparisons in the table below to choose the right environment for your needs.
 
-![](images/red_alert.png) **This is a limited Beta offering, therefore you must receive IBM approval in order to access the High Security plan.**  Visit [IBM Blockchain on IBM Bluemix](http://www-stage.watson.ibm.com/files/blockchain/bluemix.html) and follow the steps to request a provisioning of the High Security Business Network.
+![](images/red_alert.png) **This is a limited Beta offering, therefore you must receive IBM approval in order to access the High Security Business Network plan.**  Visit [IBM Blockchain on IBM Bluemix](http://www-stage.watson.ibm.com/files/blockchain/bluemix.html) and follow the steps to request a provisioning of the High Security Business Network.
 
-| Service Type              | Starter Developer               | High Security Business Network  |
+| Service (Plan) Type:      | Starter Developer               | High Security Business Network  |
 | ------------------------- |:--------------------------:|:-----:|
-| Purpose   |  development and test levels of security performance and availability |  simulate enterprise network and test levels of security, performance and availability |
-| Nodes     | 4 nodes + Certificate Authority     | 4 nodes + Certificate Authority |
-| [Dashboard Monitor](ibmblockchainmonitor.html) | Yes | Yes |
-| Confidential Transactions  | Yes | Yes |
-| [Consensus](etn_pbft.html)  | PBFT | PBFT |
-| Environment     | shared multi-tenant | isolated single tenant |
-| [IBM Secure Service Container](etn_ssc.html) | No | Yes |
- 
+| Requires IBM approval: | No | Yes |
+| Purpose:  |  development and test levels of security performance and availability |  simulate enterprise network and test levels of security, performance and availability |
+| Nodes:    | 4 nodes + Certificate Authority     | 4 nodes + Certificate Authority |
+| [Dashboard Monitor:](ibmblockchainmonitor.html) | Yes | Yes |
+| Confidential Transactions: | Yes | Yes |
+| [Consensus:](etn_pbft.html) | PBFT | PBFT |
+| Environment:     | shared multi-tenant | isolated single tenant |
+| [IBM Secure Service Container:](etn_ssc.html) | No | Yes |
+
 
 
 To get started, follow these steps to create and deploy an unbound service instance of a {{site.data.keyword.blockchain}} network.  Once complete, you will have your own development environment with validating nodes and a security service. From there, you can deploy chaincode, see results, and build your applications:
