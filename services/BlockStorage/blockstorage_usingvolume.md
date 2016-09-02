@@ -2,7 +2,7 @@
 
 # Using {{site.data.keyword.blockstorageshort}} volume 
 {: #using-block-storage-volume} 
-Last updated: 26 August 2016
+Last updated: 02 September 2016
 {: .last-updated}
 
 To use volumes, follow these steps:
