@@ -2,7 +2,7 @@
 
 
 # Using {{site.data.keyword.blockstorageshort}} snapshot {: #using-block-storage-snapshot} 
-Last updated: 26 August 2016
+Last updated: 02 September 2016
 {: .last-updated}
 
 To use snapshots, follow these steps:
