@@ -29,7 +29,7 @@ To get started with {{site.data.keyword.objectstorageshort}}:
 
 ## API Reference
 {: #api}
-* [OpenStack Object Storage (Swift) API v1](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}
+* [OpenStack {{site.data.keyword.objectstorageshort}} (Swift) API v1](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}
 * [OpenStack Identity (Keystone) API v3.0](http://developer.openstack.org/api-ref-identity-v3.html){: new_window}
 
 ## SDK
@@ -38,9 +38,10 @@ To get started with {{site.data.keyword.objectstorageshort}}:
 
 ## Tutorials and Samples
 {: #samples}
-* [Connecting to IBM Object Storage for Bluemix with Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
-* [Use Python to access your Bluemix Object Storage](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
-* [Use PHP to leverage Object Storage](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
+* [Connecting to {{site.data.keyword.objectstoragefull}} with Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
+* [Use Python to access your {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
+* [Use PHP to leverage {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
+* [Use pkgcloud to access {{site.data.keyword.objectstoragefull}} with Node.js](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new_window}
 
 ## Compatible Runtimes
 {: #buildpacks}
@@ -52,7 +53,8 @@ To get started with {{site.data.keyword.objectstorageshort}}:
 * [Ruby](https://www.ng.bluemix.net/docs/runtimes/ruby/index.html){: new_window}
 * [Community buildpacks](https://www.ng.bluemix.net/docs/starters/byob.html){: new_window}
 
+
 ## Related Links
 {: #general}
-* [IBM Bluemix Pricing Sheet](https://www.ng.bluemix.net/#/pricing){: new_window}
-* [IBM Bluemix Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} Pricing Sheet](https://www.ng.bluemix.net/#/pricing){: new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}
