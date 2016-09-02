@@ -14,7 +14,7 @@ copyright:
 #アプリのデプロイ
 {: #deployingapps}
 
-*最終更新日: 2016 年 5 月 9 日*
+*最終更新日: 2016 年 7 月 28 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} へのアプリケーションのデプロイは、コマンド・ライン・インターフェースや統合開発環境 (IDE) など、さまざまな方法で行うことができます。また、アプリケーション・マニフェストを使用してアプリケーションをデプロイすることも可能です。アプリケーション・マニフェストを使用することで、アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイする度に指定しなければならないデプロイメント詳細の数を減らします。
@@ -52,37 +52,37 @@ copyright:
 
   * Liberty サーバー・パッケージを {{site.data.keyword.Bluemix_notm}} にデプロイするには、ソース・ディレクトリーから以下のコマンドを使用します。
   
-  
+  ```
 cf push
-  
+  ```
   
   Liberty ビルドパックの詳細については、[「Liberty for Java」](../runtimes/liberty/index.html)を参照してください。
   
   * Java Tomcat アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
   
-  
+  ```
 cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
-  
+  ```
   
   * WAR パッケージを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
   
-  
+  ```
 cf push appname -p app.war
-  
+  ```
 もしくは、以下のコマンドを使用してアプリケーション・ファイルを含むディレクトリーを指定することも可能です。  
-  
+  ```
 cf push appname -p "./app"
-  
+  ```
   
   * Node.js アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
   
-  
+  ```
 cf push appname -p app_path
-  
+  ```
   
 アプリケーションが Node.js ビルドパックによって認識されるようにするには、`package.json` ファイルがご使用の Node.js アプリケーション内にある必要があります。`app.js` ファイルはアプリケーションのエントリー・スクリプトで、`package.json` ファイル内に指定できます。以下は単純な `package.json` ファイルの例です。
 
-  
+  ```
   {
         "name": "MyUniqueNodejs01",
         "version": "0.0.1",
@@ -99,15 +99,15 @@ cf push appname -p app_path
         },
         "repository": {}
   }
-  
+  ```
     
   `package.json` ファイルの詳細については、[package.json](https://www.npmjs.org/doc/files/package.json.html){:new_window} を参照してください。
   
   * PHP アプリケーション、Ruby アプリケーション、あるいは Python アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイするには、そのアプリケーションのソースが含まれているディレクトリーから、以下のコマンドを使用してください。
   
-  
+  ```
 cf push appname 
-
+```
 
 ###複数スペースへのアプリのデプロイ
 
@@ -115,15 +115,15 @@ cf push appname
 
   1. **-s** オプションを指定した **cf target** コマンドを使用して、アプリをデプロイするスペースに切り替えます。
   
-  
+  ```
 cf target -s <space_name>
-  
+  ```
   
   2. アプリケーション・ディレクトリーに移動し、**cf push** コマンドを使用してアプリをデプロイします。ここで、appname はドメイン内で固有でなければなりません。
   
-  
+  ```
 cf push appname 
-
+```
   
 ##アプリケーション・マニフェスト
 {: #appmanifest}
@@ -136,9 +136,9 @@ cf push appname
 
 以下の表では、アプリケーション・マニフェスト・ファイルで使用可能な、サポートされているオプションを示しています。`manifest.yml` 以外の異なるファイル名を使用することを選択する場合は、**-f** オプションを **cf push** コマンドと共に使用する必要があります。以下の例では、`appManifest.yml` がファイル名です。
 
-
+```
 cf push -f appManifest.yml
-
+```
 
 <p>  </p>
 
@@ -165,7 +165,7 @@ cf push -f appManifest.yml
 
 以下の例は、{{site.data.keyword.Bluemix_notm}} 内の組み込みコミュニティー Node.js ビルドパックを使用する Node.js アプリケーションのマニフェスト・ファイルを示しています。
 
-
+```
 ---
 - name: myNodejsapp
   memory: 256M
@@ -180,7 +180,7 @@ cf push -f appManifest.yml
   - mongo_8917
   env:
     env_type: production
-
+```
 {:codeblock}
 
 ##環境変数
@@ -194,7 +194,7 @@ cf push -f appManifest.yml
 	 
   * サービス・インスタンスにアクセスするための接続情報を含む VCAP_SERVICES 変数。ご使用のアプリケーションが複数のサービスにバインドされている場合、VCAP_SERVICES 変数には各サービス・インスタンスの接続情報が含まれます。例えば次のようにします。
   
-  
+  ```
   {
    "VCAP_SERVICES": {
 "AppScan Dynamic Analyzer": [
@@ -238,7 +238,7 @@ cf push -f appManifest.yml
     ]
    }
   }
-  
+  ```
         
 DEA およびビルドパックによって設定された環境変数にもアクセスできます。
 
@@ -359,12 +359,12 @@ DEA によって定義された変数を以下に示します。
 
 以下のサンプル Node.js コードを使用して、VCAP_SERVICES 環境変数の値を取得できます。
 
-
+```
 if (process.env.VCAP_SERVICES) {
 var env = JSON.parse (process.env.VCAP_SERVICES);
     myvar = env.foo[bar].foo;
 }
-
+```
 
 各環境変数に関する詳細については、[「Cloud Foundry 環境変数 (Cloud Foundry Environment Variables)」](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}を参照してください。
 
@@ -382,15 +382,15 @@ var env = JSON.parse (process.env.VCAP_SERVICES);
 
   * **cf push** コマンドを使用して -c パラメーターを指定します。例えば、Node.js アプリケーションをデプロイする場合、**node app.js** 開始コマンドを -c パラメーターに指定することができます。
   
-  
+  ```
 cf push appname -p app_path -c "node app.js"
-  
+  ```
   
   * `manifest.yml` ファイルで command パラメーターを使用します。例えば、Node.js アプリケーションをデプロイする場合、**node app.js** 開始コマンドをマニフェスト・ファイルで指定することができます。
   
-  
+  ```
 command: node app.js
-
+```
   
 
 ### ユーザー定義環境変数の追加
@@ -400,35 +400,35 @@ command: node app.js
 
   * {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用します。以下のステップを実行します。
     1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、アプリのタイルをクリックします。アプリの詳細ページが表示されます。
-	2. 左方のナビゲーション・ペインで、**「環境変数」**をクリックします。
+	2. **「環境変数」**をクリックします。
 	3. **「ユーザー定義」**をクリックし、次に**「追加」**をクリックします。
 	4. 必須フィールドに入力し、次に**「保存」**をクリックします。
   * cf コマンド・ライン・インターフェースを使用します。`cf set-env` コマンドを使用してユーザー定義変数を追加します。例えば次のようにします。 
-    
+    ```
 cf set-env appname env_var_name env_var_value
-    
+    ```
 	
   * `manifest.yml` ファイルを使用します。このファイル内に値の組を追加します。例えば次のようにします。 
-    
+    ```
 	env:
       VAR1:value1
       VAR2:value2
-    
+    ```
 	
 ユーザー定義の環境変数を追加した後、以下のサンプル Node.js コードを使用して、定義した変数の値を取得できます。
 
-
+```
 var myEnv = process.env.env_var_name;
 console.log("My user defined = " + myEnv);
-
+```
 	
 ### 開始環境の構成
 
 アプリケーションの開始環境を構成するには、`/.profile.d` ディレクトリーにシェル・スクリプトを追加することができます。`/.profile.d` ディレクトリーは、アプリケーションのビルド・ディレクトリーの下にあります。`/.profile.d` ディレクトリー内のスクリプトは、アプリケーションの実行前に {{site.data.keyword.Bluemix_notm}} によって実行されます。例えば、以下のコンテンツを含む `node_env.sh` ファイルを `/.profile.d` ディレクトリーの下に置くことで、NODE_ENV 環境変数を **production** に設定することができます。
 
-
+```
 export NODE_ENV=production;
-
+```
 
 ###ファイルおよびディレクトリーのアップロードの防止
 
@@ -438,10 +438,10 @@ cf コマンド・ライン・インターフェースを使用してアプリ�
 
 `.cfignore` ファイルには、無視するファイルおよびディレクトリーの名前を 1 行に 1 個ずつ記載します。ワイルドカード文字としてアスタリスク (*) を使用できます。ディレクトリーを指定すると、そのディレクトリーに含まれているすべてのファイルおよびサブディレクトリーも無視されます。例えば、次の `.cfignore` ファイル内の内容は、すべての `.swp` ファイルと、`tmp/` ディレクトリーに含まれているすべてのファイルおよびサブディレクトリーを {{site.data.keyword.Bluemix_notm}} にアップロードしないことを示しています。
 
-
+```
 *.swp
 tmp/
-
+```
 
 # 関連リンク
 {: #rellinks}

@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2015
 
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -17,13 +17,13 @@ copyright:
 # Allgemeine Serviceprobleme
 {: #general}
 
-*Letzte Aktualisierung: 9. Dezember 2015*
+*Letzte Aktualisierung: 12. August 2016*
 {: .last-updated}
 
 Ein {{site.data.keyword.Bluemix}}-Serviceproblem liegt zum Beispiel vor, wenn für ein Gateway ein Zeitlimitfehler auftritt, sobald Sie eine Serviceinstanz löschen. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben.
 {:shortdesc}
 
-## Fehlernachricht wegen Gatewayzeitlimitüberschreitung beim Löschen einer Serviceinstanz
+## Service-Broker-Fehler beim Löschen einer Serviceinstanz
 {: #ts_service_broker}
 
 Es kann vorkommen, dass eine Fehlernachricht angezeigt wird, wenn Sie versuchen, eine Serviceinstanz zu löschen, die bereits vom Cloud-Controller gelöscht wurde.
@@ -39,5 +39,3 @@ Dieses Problem tritt auf, wenn die Serviceinstanz bereits vom Cloud-Controller g
 
 Erstellen Sie zum Beheben des Problems eine Serviceinstanz mit demselben Namen und binden Sie sie an Ihre Anwendungen. Danach können Sie die Serviceinstanz und die Anwendungen löschen, von denen der Service verwendet wird.   
 {: tsResolve}
-
-

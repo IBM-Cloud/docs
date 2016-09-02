@@ -60,7 +60,7 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 
 ## 外部建置套件
 
-您可以在 {{site.data.keyword.Bluemix_notm}} 中使用外部或自訂建置套件。您必須在 **cf push** 指令上，使用 -b 選項指定建置套件的 URL，並使用 `-s` 選項指定堆疊。例如，若要針對靜態檔案使用外部社群建置套件，請執行下列指令：
+您可以在 {{site.data.keyword.Bluemix_notm}} 中使用外部或自訂建置套件。您必須在 **cf push** 指令上，使用 -b 選項指定建置套件的 URL，以及使用 `-s` 選項指定堆疊。例如，若要針對靜態檔案使用外部社群建置套件，請執行下列指令：
 
 
 ```

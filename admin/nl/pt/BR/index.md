@@ -17,10 +17,14 @@ copyright:
 
 # Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Última atualização: 5 de julho de 2016
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
-Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix_notm}} Local ou o {{site.data.keyword.Bluemix_notm}} Dedicated, acesse a página **Administração** para gerenciar recursos, monitorar o uso de cotas, administrar permissões de usuário, planejar notificações de upgrade, visualizar relatórios e logs de segurança e mais. É possível gerenciar suas organizações criando espaços e configurando [funções de usuário e permissões](index.html#oc_useradmin); veja [Gerenciando suas organizações](../admin/orgs_spaces.html).
+Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix}}
+Local ou o {{site.data.keyword.Bluemix_notm}} Dedicated, acesse a página
+**Administração** para gerenciar recursos, monitorar o uso de cotas,
+administrar permissões de usuário, planejar notificações de upgrade, visualizar
+relatórios e logs de segurança e mais. É possível gerenciar suas organizações criando espaços e configurando [funções de usuário e permissões](index.html#oc_useradmin); veja [Gerenciando suas organizações](../admin/orgs_spaces.html).
 {:shortdesc}
 
 *Tabela 1. Tarefas administrativas para gerenciar a instância local ou dedicada do {{site.data.keyword.Bluemix_notm}}*
@@ -30,12 +34,13 @@ Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix_notm}}
 |Monitorar o uso do sistema | Clique em **ADMINISTRAÇÃO &gt; USO**. Visualize as informações do sistema, monitore o uso da CPU e o uso do plano para tomar as melhores decisões para seus negócios. Consulte [Visualizando informações de uso](index.html#oc_resource).|
 |Gerenciar seu catálogo | Clique em **ADMINISTRAÇÃO &gt; GERENCIAMENTO DO CATÁLOGO** para gerenciar quais serviços estão visíveis para seus usuários e organizações. Consulte [Gerenciando seu catálogo](index.html#oc_catalog).|
 |Administrar organizações | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DA ORGANIZAÇÃO** para criar organizações, monitorar cotas para organizações e tomar decisões baseadas em necessidades rapidamente. Consulte [Administrando organizações](index.html#oc_organizations).|
-|Criar espaços e designar funções de usuário | Clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg), em seguida, selecione **Gerenciar organizações** para criar espaços dentro de suas organizações. Inclua usuários e designe funções de organização e espaço para os usuários. Consulte
+|Criar espaços e designar funções de usuário | Clique no ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../support/images/account_support.svg) e, em seguida, selecione **Gerenciar organizações** para criar espaços em suas organizações. Inclua usuários e designe funções de organização e espaço para os usuários. Consulte
 [Gerenciando as suas organizações](../admin/orgs_spaces.html). |
 |Gerenciar permissões de usuário administrativo | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DE USUÁRIO** para incluir usuários, remover usuários e ajustar permissões de usuários. Veja [Gerenciando usuários e permissões](index.html#oc_useradmin). |
 |Revisar relatórios e logs | Clique em **ADMINISTRAÇÃO &gt; RELATÓRIOS E LOGS** para visualizar relatórios de segurança e logs de auditoria para sua instância. Consulte [Visualizando relatórios](index.html#oc_report). |
-|Visualizar Informações do Sistema | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** para visualizar informações do sistema, como atualizações pendentes, nome e versão de sua instância, região, URL da API, URL da CLI, detalhes da configuração de LDAP, mapeamentos de grupos e de usuários, estatísticas e domínios compartilhados. Também é possível acessar o feed de calendário e as inscrições de eventos para a extensão de suas notificações na seção Atualizações pendentes. Consulte [Visualizando informações do sistema](index.html#oc_system). |
-|Estender notificações e configurar inscrições de eventos | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* atualizações pendentes**. É possível usar ganchos da web para integração com um serviço da web de sua opção para configurar uma assinatura de notificação de eventos para uma atualização ou incidente. Consulte [Notificações e inscrições de eventos](index.html#oc_eventsubscription). |
+|Visualizar Informações do Sistema | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** para visualizar informações do sistema, como atualizações de manutenção pendentes, nome e versão de sua instância, região, URL da API, URL da CLI, detalhes da configuração de LDAP, mapeamentos de grupos e de usuários, estatísticas e domínios compartilhados. Consulte [Visualizando informações do sistema](index.html#oc_system). |
+|Estender notificações e configurar inscrições de eventos | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* pendente**. É possível usar webhooks para integração com um serviço da web de sua opção para configurar uma assinatura de notificação de eventos para uma atualização ou um incidente. Consulte [Notificações e inscrições de eventos](index.html#oc_eventsubscription). |
+
 
 
 ## Notificações e inscrições de eventos
@@ -57,24 +62,34 @@ notificações e onde cada tipo de notificação é postado.
 ver uma lista completa e o histórico de suas notificações pendentes e completas, clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** &gt; *Número*
 **pendente**. É possível ampliar o recurso de notificação configurando uma assinatura que envia um e-mail a destinatários de sua opção. Ou é possível configurar uma assinatura que use
 webhooks para integrar as notificações a partir da página Administração com um serviço da web de sua opção. |
-| Incidentes críticos | Você é alertado sobre incidentes críticos na página Status. Clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg) e, em seguida, selecione **Status**. É
+| Incidentes críticos | Você é alertado sobre incidentes críticos na página Status. Clique
+no ícone **{{site.data.keyword.avatar}}**
+![Avatar](../support/images/account_support.svg) e selecione
+**Status**. É
 possível ampliar o recurso de notificação configurando uma inscrição de evento que envia um e-mail a um destinatário de sua opção. Ou é possível configurar uma assinatura que use
 webhooks para integrar as notificações a partir da página Administração com um serviço da web de sua opção.  |  
 | {{site.data.keyword.Bluemix_notm}} Status | É sempre possível visualizar o status mais recente para a plataforma, os serviços e a sua instância do {{site.data.keyword.Bluemix_notm}} na
-página Status. Clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg) e, em seguida, selecione **Status**.  |
+página Status. Clique no ícone
+**{{site.data.keyword.avatar}}**
+![Avatar](../support/images/account_support.svg) e selecione
+**Status**.   |
 
 ### Configurando assinaturas de eventos
 
 É possível ampliar a funcionalidade das notificações que são enviadas para a página Administração e a página Status usando inscrições de evento para configurar um e-mail customizado ou usar webhooks
 para integrar com uma ferramenta de sua opção. Se você selecionar a opção webhooks, as suas notificações serão roteadas diretamente para um destino de sua opção, como um número de telefone (por mensagem SMS). É possível customizar o tipo de notificação, especificamente atualizações de manutenção ou alertas de incidente crítico e as informações incluídas no corpo de cada notificação.
 
-**Nota**: somente usuários com a permissão de Administrador (`ops.admin`) podem configurar inscrições de evento.
+**Nota**: somente usuários com a permissão de super usuário (`ops.admin`) podem configurar inscrições de evento.
 
 Para acessar a página de **Inscrições de Evento**, conclua as etapas a seguir:
 
 * Para notificações de atualização de manutenção, acesse **INFORMAÇÕES DO SISTEMA &gt; *Número* pendente &gt; Assinaturas**.
-* Para notificações de incidente, clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg) &gt;
-**Status** e, em seguida, clique no ícone **Assinar** ![Assinar](images/icon_subscribe.svg).
+* Para notificações de incidentes, clique no ícone
+**{{site.data.keyword.avatar}}**
+![Avatar](../support/images/account_support.svg) &gt;
+**Status** e, em seguida, clique no ícone
+**Assinar**
+![Assinar](images/icon_subscribe.svg).
 
 **Nota**: é possível acessar a página de inscrição de evento para ambos os tipos de notificações usando um dos dois métodos descritos.
 
@@ -85,8 +100,8 @@ Para criar uma assinatura de e-mail ou webhook a partir da página de **Inscriç
 revise as tabelas a seguir.
 3. Após concluir o formulário, é possível escolher a partir das opções a seguir:
 
-  * Clique em **Salvar** para salvar a assinatura em sua lista de inscrições de evento. 
-  * Clique em **Salvar e Testar** para salvar e testar a notificação. 
+  * Clique em **Salvar** para salvar a assinatura em sua lista de inscrições de evento.
+  * Clique em **Salvar e Testar** para salvar e testar a notificação.
   * Clique em **Salvar e Fechar** para salvar a assinatura em sua lista de inscrições de evento e retorne para a página anterior.
 
 *Tabela 3. Campos de formulário de inscrição de evento para uma assinatura de e-mail*
@@ -96,6 +111,8 @@ revise as tabelas a seguir.
 | Tipo | Selecione **E-mail**. |
 | Evento | Selecione para ser inscrito para notificações para uma Atualização ou um Incidente. |
 | Ativar | Selecione a opção para ativar as notificações por e-mail. Limpe a seleção para desativar a notificação por e-mail. As assinaturas são ativadas por padrão. |
+| Combinar notificações | Selecione a opção para combinar as notificações de incidentes
+para todas as regiões em uma única notificação. Essa opção está disponível somente para incidentes. |
 | Assunto | Insira a linha de assunto para o e-mail. Este campo é requerido.  |
 | Corpo | Insira o texto do corpo da mensagem a ser enviada no e-mail. É possível usar os valores de carga útil da IBM para preencher a notificação por e-mail com informações pertinentes. Consulte a tabela
 de [Valores da seção de carga útil](index.html#payload) para identificar quais valores é possível utilizar. Use marcas HTML básicas para estruturar o seu e-mail. Se você não inserir informações nesta seção, receberá uma notificação sem quaisquer informações adicionais. Este campo é requerido. |
@@ -110,6 +127,11 @@ de [Valores da seção de carga útil](index.html#payload) para identificar quai
 | Tipo | Selecione **Webhook** |
 | Método | Selecione **GET** ou **POST**. |
 | Evento | Selecione para ser inscrito para notificações para uma Atualização ou um Incidente. |
+| Ativar | Selecione a opção para ativar a notificação. Limpe a seleção para desativar a
+notificação. As assinaturas são ativadas por padrão. |
+| Combinar notificações | Selecione a opção para combinar as notificações de incidentes
+para todas as regiões em uma única notificação. Essa opção está disponível somente para
+incidentes. |
 | URL | Insira a URL para se conectar ao seu serviço da web. |
 | Descrição | Inclua uma descrição exclusiva para a assinatura que você está criando. |
 | Nome de Usuário | Insira seu nome de usuário para o seu serviço da web. Se não desejar usar suas credenciais pessoais, será possível configurar um ID funcional para usar especificamente com o {{site.data.keyword.Bluemix_notm}}. |
@@ -124,7 +146,7 @@ de [Valores da seção de carga útil](index.html#payload) para identificar quai
 | **Valor IBM** | **Descrição** | **Tipo do evento** |
 |----------------|----------------|------------------------|
 | {{content.title}} | título Message |  Atualização e incidente  |
-| {{type}} | Atualização ou incidente | Atualização e incidente | 
+| {{type}} | Atualização ou incidente | Atualização e incidente |
 | {{region}} | Região afetada | Atualização e incidente |
 | {{content.message}} | Descrição da mensagem |   Atualização e incidente  |
 | {{content.severity}} | Classificação de gravidade | Incidente |
@@ -144,7 +166,7 @@ detalhes de histórico.
 {: #oc_schedulemaintenance}
 
 É possível visualizar atualizações de manutenção planejadas e pendentes, acessando **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* pendente** para acessar
-a página **Atualizações do sistema**. 
+a página **Atualizações do sistema**.
 
 **Nota**: consulte a seção a seguir para [Configurar janelas de manutenção pré-aprovadas](index.html#preapprovedmaintenance) para iniciar. Essas janelas devem ser configuradas em ordem para a IBM planejar a manutenção
 para o seu ambiente.
@@ -163,21 +185,27 @@ para selecionar três datas e horas específicas para a IBM escolher ao planejar
 ### Configurando janelas de manutenção pré-aprovadas
 {: #preapprovedmaintenance}
 
-Antes de iniciar o planejamento e aprovar atualizações, deve-se configurar as janelas de manutenção pré-aprovadas. Atualizações sem interrupção são planejadas durante os horários de janela pré-aprovados. 
+Antes de iniciar o planejamento e aprovar atualizações, deve-se configurar as janelas de manutenção pré-aprovadas. Atualizações sem interrupção são planejadas durante os horários de janela pré-aprovados.
 
-É necessário configurar um mínimo de 24 horas disponíveis por uma semana para um mínimo de três dias durante cada semana. Por exemplo, é possível configurar três janelas de 8 horas ao longo de três
-dias separados ou é possível configurar janelas de 6 horas ao longo de quatro dias separados. Para assegurar que as janelas forneçam tempo suficiente para uma atualização ser aplicada, cada janela deve ter
+É necessário configurar no mínimo 12 horas disponíveis por semana para no mínimo
+dois dias durante cada semana. Por exemplo, é possível configurar períodos de 6 horas ao
+longo de dois dias separados ou períodos de 4 horas ao longo de três dias separados. Para assegurar que as janelas forneçam tempo suficiente para uma atualização ser aplicada, cada janela deve ter
 um mínimo de quatro horas de duração.
 
-**Nota**: somente usuários com a permissão de Administrador (`ops.admin`) podem planejar e aprovar atualizações de manutenção.
+**Nota**: somente usuários com a permissão de super usuário
+(`ops.admin`) podem planejar e aprovar atualizações de manutenção.
 
 1. Acesse **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* pendente &gt; Gerenciar Disponibilidade**.
 2. Expanda a seção **Gerenciar janelas de atualização disponíveis**.
 3. Clique em **Incluir novo** ![Incluir novo](images/add-new.png).
 4. Configure a sua primeira janela de disponibilidade, selecionando a frequência, a duração e o horário de início para a janela.
-5. Clique em
+5. Opcional: Selecione **Marcar como preferencial**, se você
+gostaria de definir seu período de disponibilidade recorrente como um tempo preferencial
+para implementações a serem planejadas. Os períodos preferenciais têm prioridade,
+quando possível.
+6. Clique em
 **Enviar**.
-6. Repita esse processo até ter atendido aos requisitos mínimos para as janelas semanais.
+7. Repita esse processo até ter atendido aos requisitos mínimos para as janelas semanais.
 
 ### Configurando janelas de manutenção indisponíveis
 
@@ -196,7 +224,7 @@ escolher um final de semana ou feriado de alto tráfego quando você não deseja
 
 Após você configurar as suas janelas de manutenção pré-aprovadas, atualizações sem interrupção serão planejadas automaticamente durante esses horários. A sua aprovação explícita para esses tipos de
 atualizações não é necessária. No entanto, é possível visualizar os detalhes de cada atualização de manutenção incluindo o que está sendo atualizado, quanto tempo a atualização levará e para quando a
-atualização está planejada. 
+atualização está planejada.
 
 Para visualizar os detalhes para uma atualização sem interrupção, conclua as etapas a seguir:
 
@@ -215,14 +243,23 @@ Para atualizações disruptivas que requerem a sua aprovação, conclua as etapa
 3. Selecione a linha para essa atualização para revisar os detalhes para a atualização, incluindo a descrição da atualização, a data e hora sugeridas para a atualização, os componentes afetados e a
 duração para a atualização.
 4. Selecione **Planejar e aprovar**.
-5. Escolha entre as opções a seguir: **Data sugerida**, **Datas específicas** ou **Qualquer janela pré-aprovada**. Se você selecionar
-**Datas específicas**, será possível abrir o
+5. Escolha entre as opções a seguir:
+**Data sugerida**,
+**Datas alternativas** ou **Qualquer janela pré-aprovada**. Se
+você selecionar **Datas alternativas**, será possível abrir o
 calendário para selecionar três opções para a IBM escolher.
-6. Selecione **Enviar** quando tiver concluído. 
+6. Opcional: Na lista de datas alternativas selecionadas no calendário, selecione
+aquelas que você deseja configurar como datas preferenciais para implementação. Cada data
+selecionada é mencionada como preferencial para o implementador que está planejando a
+implementação. A IBM tenta planejar a manutenção durante as janelas de atualização preferenciais.
+7. Selecione **Enviar** quando tiver concluído.
 
 Com base em sua seleção, a atualização será planejada para implementação durante a data sugerida que você aceitou, durante uma de suas janelas pré-aprovadas ou uma das datas e horas específicas que
 você selecionou. Quando a atualização estiver planejada para implementação pela IBM, você verá a data planejada refletida nos detalhes para a atualização na página
-**Atualizações do Sistema**.
+**Atualizações do Sistema**. É possível replanejar uma implementação já
+planejadas somente se um dia (24 horas) antes a data e hora de início planejada
+permanecer. Uma vez replanejada uma implementação, não será possível replanejá-la
+novamente.
 
 
 ## Visualizando as informações do sistema
@@ -246,8 +283,9 @@ manutenção dentro da janela de manutenção atribuída de 21 dias, para assegu
 implementação, que são baseadas em suas janelas de manutenção pré-aprovadas ou é possível selecionar dois horários e datas adicionais para a IBM escolher ao aplicar a atualização.</dd>
 </dl>
 
-Para obter mais informações sobre a configuração de janelas de manutenção pré-aprovadas, de datas indisponíveis específicas e de um feed de calendário, consulte
-[Atualizações de manutenção](index.html#oc_schedulemaintenance).
+Para obter mais informações sobre a configuração de janelas de manutenção
+pré-aprovadas e datas indisponíveis específicas para manutenção, consulte
+[Atualizações de manutenção](admin/index.html#oc_schedulemaintenance).
 
 ### Informações gerais do sistema
 
@@ -300,7 +338,9 @@ Os dados exibidos são baseados na soma do tráfego de entrada e de saída para 
 É possível visualizar o uso mensal de sua conta para seu ambiente dedicado ou local. É possível usar esses dados para identificar quanto cobrar de organizações específicas com base no uso das mesmas.
 
 <ol>
-<li>Clique no ícone <strong>Conta e suporte</strong> ![Conta e suporte](../support/images/account_support.svg) &gt; <strong>Conta</strong> &gt; <strong>Detalhes de uso</strong>.</li>
+<li>Clique no ícone <strong>{{site.data.keyword.avatar}}</strong>
+![Avatar](../support/images/account_support.svg) &gt;
+<strong>Conta</strong> &gt; <strong>Detalhes do uso</strong>.</li>
 <li>Selecione a organização para a qual deseja ver os dados.</li>
 <li>É possível ver detalhes de uso para as categorias a seguir:
 <ul>
@@ -316,7 +356,9 @@ Os dados exibidos são baseados na soma do tráfego de entrada e de saída para 
 Também é possível visualizar o uso mensal e os encargos associados no nível de conta para seus tempos de execução, apps e serviços organizados a partir do {{site.data.keyword.Bluemix_notm}} Public. É possível usar esses dados para identificar quanto cobrar de organizações específicas com base no uso das mesmas.
 
 <ol>
-<li>Clique no ícone <strong>Conta e suporte</strong> ![Conta e suporte](../support/images/account_support.svg) &gt; <strong>Conta</strong> &gt; <strong>Detalhes de uso</strong>.</li>
+<li>Clique no ícone <strong>{{site.data.keyword.avatar}}</strong>
+![Avatar](../support/images/account_support.svg) &gt;
+<strong>Conta</strong> &gt; <strong>Detalhes do uso</strong>.</li>
 <li>Clique em <strong>Public</strong>.</li>
 <li>Selecione a organização para a qual deseja ver dados ou selecione <strong>Todas as organizações</strong> para visualizar os dados para todas as organizações de uma vez.</li>
 <li>É possível ver detalhes de uso para as categorias a seguir:
@@ -396,7 +438,10 @@ A tabela a seguir mostra a lista de relatórios de segurança gerados para o {{s
 
 ### Status do ambiente do {{site.data.keyword.Bluemix_notm}}
 
-É possível monitorar o status para a sua instância do {{site.data.keyword.Bluemix_notm}}, usando a página Status do {{site.data.keyword.Bluemix_notm}}. Clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg) e, em seguida, selecione **Status**.
+É possível monitorar o status para a sua instância do {{site.data.keyword.Bluemix_notm}}, usando a página Status do {{site.data.keyword.Bluemix_notm}}. 
+Clique no ícone **{{site.data.keyword.avatar}}**
+![Avatar](../support/images/account_support.svg) e selecione
+**Status**. 
 
 A página Status é o local central para localizar notificações e anúncios sobre os eventos principais que estão afetando a plataforma do {{site.data.keyword.Bluemix_notm}} e os serviços principais no {{site.data.keyword.Bluemix_notm}}. É possível assinar um feed RSS para notificações de modo que não seja necessário verificá-las. Para obter mais informações sobre a página Status e a configuração do feed RSS, veja [Visualizando o {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
@@ -427,13 +472,17 @@ catálogo do {{site.data.keyword.Bluemix_notm}}, selecione
 **DESATIVAR TODOS OS PLANOS**.
 - Para controlar a visibilidade de um plano individual, selecione o nome do plano e, em seguida, use o menu suspenso para selecionar **Ativar para todas as organizações**, **Desativar para todas as organizações** ou **Ativar plano para organizações específicas**.
 
+<!-- staging only start -->
+
 Também é possível gerenciar a ordem de prioridade dos buildpacks disponíveis para serem escolhidos com base na compatibilidade para os seus desenvolvedores quando eles estiverem criando aplicativos.
 
-1. Acesse **ADMINISTRAÇÃO &gt; GERENCIAMENTO DO CATÁLOGO**.
+1. Acesse **ADMINISTRAÇÃO &gt; GERENCIAMENTO DE CATÁLOGO**
 2. Acesse a seção **Calcular**.
 3. Selecione **Prioridade do buildpack**.
-4. Selecione a opção de buildpack que você deseja priorizar na lista.
-5. Com a opção selecionada, use as setas para mover a opção na lista. A prioridade é configurada listando o item de prioridade mais alta na lista.
+4. Selecione a opção de buildpack que você deseja priorizar como mais alta ou mais baixa na lista.
+5. Com a opção selecionada, use as setas para mover a opção na lista.
+
+<!-- staging only end -->
 
 ### Registrando um broker de serviço
 {: #servicebrokerui}
@@ -594,11 +643,12 @@ um ambiente de desenvolvimento, um espaço *test* como um ambiente
 de teste e um espaço *production* como um ambiente de
 produção. Em seguida, é possível associar os apps aos espaços. Conclua as etapas a seguir para criar um espaço:
 
-1. Acesse o ícone **Conta e suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) &gt; página **Gerenciar organizações**.
+1. Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../admin/images/account_support.svg) &gt; página **Gerenciar organizações**.
 2. Selecione a organização na qual deseja incluir um espaço.
 3. Clique em **Criar um espaço**.
 4. Insira um nome de espaço.
 5. Clique **Criar**.
+
 
 ### Monitoramento de cota
 
@@ -676,30 +726,35 @@ Na seção Lista de organizações, é possível visualizar todas as organizaç�
 
 É possível incluir usuários individualmente
 ou em grupos e visualizar permissões do usuário. Geralmente, os usuários são incluídos em sua instância do {{site.data.keyword.Bluemix_notm}} a partir do registro de usuário de sua empresa por meio do
-Lightweight Directory Access Protocol (LDAP). Se você tiver a permissão de **Administrador** designada, também poderá configurar e gerenciar permissões para outros usuários. Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DE USUÁRIO**.
+Lightweight Directory Access Protocol (LDAP). Se você tiver recebido permissão de
+**Super usuário**, será possível também configurar e gerenciar
+permissões de outros usuários. Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DE USUÁRIO**.
 
 A página Administração de usuário exibe todos os usuários da
-instância local ou dedicada. As permissões para cada usuário são exibidas usando ícones na tabela. As permissões podem ser as seguintes: Nenhuma, **Administrador**,
-**Login**, **Catálogo**, **Relatórios** e **Usuários**. 
-As permissões de **Administrador** e
-**Login** podem ser configuradas para
-**Ligado** ou **Desligado**,
-enquanto as permissões restantes são
-ativadas ou desativadas com tipos de acesso específicos, incluindo acesso de **Leitura** ou **Gravação** para essa permissão, conforme representado por ícones. Consulte
+instância local ou dedicada. As permissões para cada usuário são exibidas usando ícones na tabela. Estas
+podem ser as permissões: Nenhuma, **Super usuário**,
+**Acesso básico**, **Catálogo**,
+**Relatórios** e **Usuários**.
+As permissões **Super usuário** e **Acesso
+básico** podem ser configuradas como **Ativado** ou
+**Desativado**, enquanto as permissões restantes são ativadas ou
+desativadas com tipos de acesso específicos, incluindo **Leitura** ou
+**Gravação** para essa permissão, conforme representado por ícones. Consulte
 [Permissões](#permissions) para obter descrições de cada tipo e explicação dos ícones.
 
 ### Trabalhando com Usuários
 
 Dependendo de seu acesso de **Leitura** ou **Gravação** para as permissões de acesso dos usuários, é possível procurar usuários existentes, remover usuários e
-incluir usuários individualmente ou por um grupo. Observe que se você tiver a permissão de **Administrador**, terá acesso total para concluir quaisquer tarefas para gerenciamento de usuários
-no ambiente. As tarefas a seguir podem ser concluídas para gerenciar usuários. Revise a lista a seguir para ver se o seu nível de acesso permite que você conclua tarefas específicas de gerenciamento de
-usuários:
+incluir usuários individualmente ou por um grupo. Observe que se você tiver a permissão
+de **Super usuário**, terá acesso total para concluir quaisquer
+tarefas para gerenciamento de usuários no ambiente. Revise as tarefas de gerenciamento de
+usuários a seguir e o nível de acesso necessário para concluir cada tarefa:
 
-* Localizar usuários. É possível localizar usuários na tabela usando o campo **Procurar**
-com acesso de **Leitura** ou **Gravação** para a permissão de usuários.
+* Localizar usuários. Se tiver acesso de **Leitura** ou
+**Gravação** e você souber todo ou parte do nome do usuário, poderá
+localizar os usuários na tabela usando o campo **Procurar**.
 
-* Incluir um único usuário. Se você tiver a permissão de **Administrador** ou a permissão de
-**Usuários** com acesso de **Gravação**, será possível incluir usuários.
+* Incluir um único usuário. Se você tiver a permissão de **Super usuário** ou a permissão de **Usuários** com acesso de **Gravação**, será possível incluir usuários.
 
   1. Para incluir um único usuário a partir de seu diretório LDAP, clique em **Incluir usuário**.
   2. No campo de **Procura**, digite o endereço de e-mail para o usuário e, em seguida, selecione o usuário a partir da lista preenchida.
@@ -709,62 +764,69 @@ com acesso de **Leitura** ou **Gravação** para a permissão de usuários.
   **Nota**: quando a operação de inclusão é bem-sucedida, o usuário é incluído na tabela para você visualizar e procurar. Quando os usuários são
 incluídos, eles não possuem permissões designadas.
 
-* Incluir um grupo de usuário a partir do seu diretório LDAP. Se você tiver a permissão de **Administrador** ou a permissão de **Usuários** com acesso de
-**Gravação**, será possível incluir usuários.
+* Incluir um grupo de usuário a partir do seu diretório LDAP. Se você tiver a
+permissão de **Super usuário** ou a permissão de
+**Usuários** com acesso de **Gravação**, será
+possível incluir usuários.
 
   1. Clique em **Incluir grupo de usuários**.
   2. No campo de **Procura**digite um nome do grupo para procurar e selecione o nome do grupo na lista preenchida.
   3. Em seguida, a partir do campo **Org**, escolha a organização na qual você deseja incluir o grupo de usuários inserindo o nome da organização e selecionando-o a partir da lista
 preenchida.
   4. Para incluir o grupo de usuários na organização selecionada, clique em **Incluir usuários**.
-  
+
   **Nota**:
 grupos de mais de 50 usuários são incluídos por meio de
 uma tarefa em lote de segundo plano. Quando a operação de inclusão
 é bem-sucedida, o usuário ou o grupo é incluído na tabela para você visualizar e procurar. Quando os usuários são
 incluídos, eles não possuem permissões designadas.
 
-* Inclua um grupo de usuários, importando uma planilha que inclua IDs de usuário, endereços de e-mail do usuário e a organização à qual você planeja incluir o usuário. Se você tiver a permissão de
-**Administrador** ou a permissão de **Usuários** com acesso de **Gravação**, será possível incluir usuários.
+* Inclua um grupo de usuários, importando uma planilha que inclua IDs de usuário, endereços de e-mail do usuário e a organização à qual você planeja incluir o usuário. 
+Se você tiver a permissão de **Super usuário** ou a permissão de
+**Usuários** com acesso de **Gravação**, será
+possível incluir usuários.
 
-**Nota**: insira IDs de usuário que correspondem aos valores usados em seu registro do usuário. 
+**Nota**: insira IDs de usuário que correspondem aos valores usados em seu registro do usuário.
 
-   1. Clique em **Importar usuários**.
-   2. Clique em **Fazer download do modelo (.CSV)** para fazer o download de uma planilha com as colunas necessárias que é possível preencher ou é possível criar a sua própria usando
+  1. Clique em **Importar usuários**.
+  2. Clique em **Fazer download do modelo (.CSV)** para fazer o download de uma planilha com as colunas necessárias que é possível preencher ou é possível criar a sua própria usando
 uma planilha que inclui os cabeçalhos da coluna requeridos: **ID do usuário**, **E-mail** e **Organização**.  Duas colunas opcionais também estão
 incluídas no modelo: **Nome** e **Sobrenome**.
-   3. Preencha os valores de usuário para as colunas necessárias. Se você não estiver usando um diretório LDAP, use os cabeçalhos da coluna necessários e opcionais para os usuários que você estiver
+  3. Preencha os valores de usuário para as colunas necessárias. Se você não estiver usando um diretório LDAP, use os cabeçalhos da coluna necessários e opcionais para os usuários que você estiver
 importando.
-   4. Salve o arquivo e clique em **Fazer upload de arquivo**.
+  4. Salve o arquivo e clique em **Fazer upload de arquivo**.
 
   **Nota**: as colunas em sua planilha podem estar em qualquer ordem desde que você tenha todas as colunas necessárias. Se a importação foi bem-sucedida, você receberá uma mensagem de
 confirmação que indica que todos os usuários foram incluídos. Se a importação foi bem-sucedida para alguns usuários, mas
 não para outros, revise a mensagem de erro para tomar ação sobre os usuários que não puderam ser incluídos.
 
-* Remover usuários. Se você tiver a permissão de **Administrador** ou a permissão de **Usuários** com acesso de **Gravação**, será possível
-remover usuários do ambiente permanentemente.
+* Remover usuários. Se você tiver a permissão de
+**Super usuário** ou a permissão de **Usuários**
+com acesso de **Gravação**, será possível remover usuários do ambiente
+permanentemente.
 
     1. Localize o usuário e clique no ícone ![Excluir](images/icon_trash.svg).
     2. Clique em **Remove**.
 
-* Editar permissões e organizações às quais os usuários pertencem requer que você tenha permissão de **Administrador**. Para editar permissões para usuários, localize o usuário e
+* A edição de permissões e organizações às quais os usuários pertencem requer que você
+tenha permissão de **Super usuário**. Para editar permissões para usuários, localize o usuário e
 clique no nome do usuário. A
 partir da página **Editar usuário**, é possível ativar ou desativar permissões:
 
-    * Selecione **Ligar** a partir da lista
-para ativar a permissão de **Administrador** ou de **Login**.
+    * Selecione **Ligar** na lista para ativar a permissão
+de **Super usuário** ou **Acesso básico**.
     * Selecione **Leitura** a partir da lista para permitir que o usuário tenha acesso de **Leitura** (somente leitura) para essa permissão ou selecione
 **Gravação** para permitir acesso de **Gravação** (editar ou incluir e remover) para essa permissão.
     * Selecione **Desligar** para desativar
 qualquer uma das permissões.
-    
-    **Nota**: configurar a permissão de
-**Administrador** como **Ligado**
-configura todas as outras permissões com acesso de
-**Gravação**.
 
-* Para incluir ou remover um usuário de uma organização específica, deve-se ter permissão de **Administrador** ou permissão de **Usuários** com acesso de
-**Gravação**.
+    **Nota**: configurar a permissão de
+**Super usuário** como **Ligado** configura todas
+as outras permissões com acesso de **Gravação**.
+
+* Para incluir ou remover um usuário de uma organização específica, deve-se ter
+permissão de **Super usuário** ou permissão de
+**Usuários** com acesso de **Gravação**.
 
     1. Para incluir um usuário em uma organização, selecione o nome do usuário a partir da tabela para acessar a página **Editar usuário**. Em seguida, use o campo de procura para
 localizar uma organização, selecione a organização a partir da lista e clique em **Salvar**.
@@ -780,22 +842,23 @@ Os usuários podem ser designados com as permissões a seguir com níveis de ace
 
 | **Permissão do usuário** | **Descrição** |       
 |-----------------|-------------------|
-| Administrador | Os usuários com permissão de
-**Administrador** configurada como
-**Ligado** podem editar permissões para outros usuários. Se você tiver a permissão ativa,
-ela ativa automaticamente o acesso total a todas as outras permissões. Além das tarefas esboçadas para cada permissão nesta tabela, o administrador também pode configurar inscrições de eventos para ser
-alertado diretamente sobre manutenção ou incidentes, planejar manutenção, executar verificações em componentes do console e criar organizações e espaços para o ambiente. |
-| Login | Os usuários com permissão de **Login**
-configurada como **Ligado** têm permissão para ver
-a opção de página de Administração na interface com o usuário do
-{{site.data.keyword.Bluemix_notm}}. Usuários com a permissão ativada podem acessar os quadros de [Informações do sistema](#oc_system) e de [Uso de
+| Superusuário | Os usuários com permissão de **Super usuário** configurada como **Ligado** podem editar permissões para outros usuários. Se você tiver a permissão ativa,
+ela ativa automaticamente o acesso total a todas as outras permissões. Além das tarefas
+esboçadas para cada permissão nesta tabela, também pode configurar
+inscrições de eventos para ser alertado diretamente sobre manutenção ou incidentes,
+planejar manutenção, executar verificações em componentes do console e criar organizações
+e espaços para o ambiente. |
+| Acesso básico | Os usuários com permissão de **Acesso básico** configurada
+como **Ligado** têm permissão para ver a opção da página de
+Administração na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Usuários com a permissão ativada podem acessar os quadros de [Informações do sistema](#oc_system) e de [Uso de
 recursos](#oc_resource). Sem essa permissão, os usuários não podem ver ou acessar a opção de menu de Administração. |
 | Catálogo | Usuários com permissão de **Catálogo** podem ter o acesso designado para **Leitura** ou **Gravação** (modificar) cujos serviços
 estão disponíveis na instância local ou dedicada. O acesso de leitura permite que o usuário acesse o quadro de Gerenciamento de catálogo para visualizar serviços disponíveis. O acesso de gravação permite que o
 usuário acesse o quadro de [Gerenciamento de catálogo](#oc_catalog) para visualizar serviços, editar a visibilidade de serviços, registrar serviços customizados e controlar a lista de
 prioridades do buildpack. |  
-| Relatórios | Usuários com permissão de **Relatórios** podem ter o acesso designado para **Leitura** ou **Gravação** (modificar) relatórios de segurança. Visualizar
-acesso permite que o usuário acesse o quadro de Relatórios e logs para fazer download de relatórios. O acesso de gravação permite que o usuário visualize o quadro [Relatórios e
+| Relatórios | Usuários com permissão de **Relatórios** podem ter o acesso designado para **Leitura** ou **Gravação** (modificar) relatórios de segurança. O
+acesso de leitura permite que o usuário acesse o quadro Relatórios e Logs para fazer
+download de relatórios. O acesso de gravação permite que o usuário visualize o quadro [Relatórios e
 logs](#oc_report), bem como use a CLI para fazer upload de novos relatórios e criar novas categorias para os usuários acessarem. |
 | Usuários | Os usuários com permissão de **Usuários** podem ter designado o acesso para **Leitura** (visualizar) a lista de usuários ou **Gravação**
 (incluir ou remover) usuários. Essa permissão não permite configurar permissões para outros usuários. O acesso de gravação permite que o usuário inclua novos usuários no ambiente, exclua usuários do ambiente
@@ -809,6 +872,7 @@ As permissões podem ser ativadas para o usuário com o acesso de **Leitura** ou
 * O ícone ![Leitura, representado por um olho](images/icon_read.svg) significa que o usuário tem acesso de **Leitura** (somente leitura) para essa permissão.
 * O ícone ![Gravação, representado por um lápis](images/icon_write.svg) significa que o usuário tem acesso de **Gravação** (editar, incluir ou remover) para essa
 permissão.
+
 
 ## Gerenciando usuários com a API REST Admin
 {: #usingadminapi}
@@ -831,7 +895,11 @@ Python](https://www.python.org/downloads){: new_window}.
 
 ### Efetuando login no Console administrativo
 
-Antes que quaisquer solicitações de API `Admin` possam ser executadas, deve-se efetuar login no Console administrativo. Se você tiver a permissão `admin` ou `users` com acesso de `write`, será possível incluir ou remover usuários. Deve-se ter permissão `admin` para editar permissões de outros usuários.
+Antes que quaisquer solicitações de API `Admin` possam ser executadas, deve-se efetuar login no Console administrativo. Se
+você tiver a permissão de **Super usuário** ou a permissão de
+**Usuários** com acesso de **Gravação**, será
+possível incluir ou remover usuários. Deve-se ter permissão de
+**Super usuário** para editar permissões de outros usuários.
 
 Para efetuar login no Console administrativo, é possível usar a
 autenticação de acesso básico no terminal `https://<your_host>.ibm.com/login`. O servidor retorna um cookie com a sua sessão. Use esse cookie para todas as operações com o Console administrativo.
@@ -874,8 +942,10 @@ O exemplo a seguir mostra a saída a partir deste
 ### Listando organizações
 {: #listingorg}
 
-Ao incluir um usuário, você deve especificar uma organização. É possível usar a API REST `Admin` para listar todas as organizações. Deve-se ter a permissão `users` com o acesso de `read` para listar organizações. Para
-listar todas as organizações, execute o comando a seguir:
+Ao incluir um usuário, você deve especificar uma organização. É possível usar a API REST `Admin` para listar todas as organizações. Deve-se
+ter a permissão de **Usuários** com o acesso de
+**Leitura** para listar organizações. Para listar todas as
+organizações, execute o comando a seguir: 
 
 `curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
 {: codeblock}
@@ -918,7 +988,9 @@ O exemplo a seguir mostra a saída a partir deste
 
 É possível determinar se um usuário já foi incluído no
 ambiente do {{site.data.keyword.Bluemix_notm}} usando
-a API REST `Admin` para listar usuários registrados. Deve-se ter permissão `users` com o acesso de `read` para listar usuários registrados. Para listar todos os usuários, execute o comando a seguir:
+a API REST `Admin` para listar usuários registrados. Deve-se ter
+permissão de **Usuários** com o acesso de **Leitura** para
+listar usuários registrados. Para listar todos os usuários, execute o comando a seguir:
 
 `curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
 {: codeblock}
@@ -992,7 +1064,20 @@ O exemplo a seguir mostra a saída a partir deste
 ### Incluindo um usuário
 
 É possível usar a API REST `Admin` para
-incluir usuários na instância do {{site.data.keyword.Bluemix_notm}}. Deve-se ter permissão `users` com acesso de `write` para incluir usuários.
+incluir usuários na instância do {{site.data.keyword.Bluemix_notm}}. Deve-se ter
+permissão de **Usuários** com acesso de
+**Gravação** para incluir usuários ou a permissão de **Super
+usuário** (ops.admin) para o console administrativo. Além disso, como
+Administrador, você pode permitir que os membros da organização que não têm a
+permissão de `usuário` ou `super usuário` do console
+administrativo geral tenham a capacidade de incluir novos usuários somente na organização
+deles. Use o comando de API a seguir para essa capacidade específica para gerenciadores
+de organização:
+
+```
+PUT console.<subdomain>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE or FALSE>
+```
+{: screen}
 
 Você pode incluir um usuário ou uma lista de usuários. É possível incluir usuários em uma única organização ou em diversas organizações. Para incluir um usuário, deve-se fornecer as informações a seguir:
 
@@ -1096,7 +1181,10 @@ O exemplo a seguir mostra a saída a partir deste
 ### Removendo um usuário
 
 É possível usar a API REST `Admin` para
-remover usuários da instância do {{site.data.keyword.Bluemix_notm}}. Deve-se ter permissão `users` com acesso de `write` para remover usuários.
+remover usuários da instância do {{site.data.keyword.Bluemix_notm}}. Deve-se ter
+permissão de **Usuários** com acesso de
+**Gravação** para remover usuários.
+
 
 Para remover um usuário, deve-se fornecer o ID de usuário do usuário. Execute o comando a seguir:
 
@@ -1132,7 +1220,6 @@ O exemplo a seguir mostra a saída a partir deste
  ```
 {: screen}
 
-
 ## API de serviço customizado
 {: #servicebrokerapi}
 
@@ -1162,8 +1249,6 @@ POST /codi/v1/serviceBrokers
 ### Pedido
 {: #registerrequest}
 
-*Tabela 8. Campos*
-
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
 | Nome | Nome do broker de serviço. |
@@ -1172,6 +1257,7 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL usada para conectar ao broker de serviço. |
 | owningOrganization | Organização inicial para incluir o serviço na lista de desbloqueio. |
 
+*Tabela 8. Campos*
 
 #### Corpo
 {: #registerbody}
@@ -1243,8 +1329,6 @@ Use a API a seguir e os exemplos de código para atualizar um serviço.
 ### Pedido
 {: #updaterequest}
 
-*Tabela 9. Campos*
-
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
 | Nome | Nome do broker de serviço. O nome com que esse serviço foi criado não pode ser mudado. |
@@ -1253,6 +1337,7 @@ Use a API a seguir e os exemplos de código para atualizar um serviço.
 | broker_url | URL usada para conectar ao broker de serviço. |
 | owningOrganization | Organização inicial para incluir o serviço na lista de desbloqueio. |
 
+*Tabela 9. Campos*
 
 #### Corpo
 {: #updatebody}
@@ -1315,12 +1400,11 @@ Content-Type: application/json
 
 Use a API a seguir e os exemplos de código para excluir um serviço.
 
-*Tabela 10. Parâmetro*
-
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
 | Nome | Nome do broker de serviço. O nome com que esse serviço foi criado não pode ser mudado. |
 
+*Tabela 10. Parâmetro*
 
 ### Rotear
 

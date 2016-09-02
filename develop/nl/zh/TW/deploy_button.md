@@ -32,7 +32,7 @@ copyright:
 
 2. 那個人可以選取地區、組織、空間及應用程式名稱。建議的應用程式名稱是依據前一個應用程式名稱、那個人的使用者名稱以及時間來建構。 
 
-3. 原始的公用 Git 儲存庫的主要分支會複製到新的專用 {{site.data.keyword.jazzhub_title}} 專案，並具有新的 Git 儲存庫。 
+3. 原始的公用 Git 儲存庫的主要分支會複製到新的專用 {{site.data.keyword.jazzhub_title}} 專案（含新的 Git 儲存庫）。 
 
 4. 如果應用程式需要建置檔，則會自動偵測建置檔，並建置應用程式。 
 
@@ -110,7 +110,7 @@ copyright:
 
 * 這兩個範本都會使用 PNG 格式且為英文的外部按鈕影像預設路徑。 
 
-    * 如果您偏好使用 SVG 影像來作為按鈕，而不使用 PNG，則有 SVG 版本可供使用。您可以將 Snippet 中使用的外部按鈕影像的路徑，變更為 `https://bluemix.net/deploy/button.svg`。
+    * 如果您偏好針對按鈕使用 SVG 影像，而不使用 PNG，則有 SVG 版本可供使用。您可以將 Snippet 中使用的外部按鈕影像的路徑，變更為 `https://bluemix.net/deploy/button.svg`。
 	
 	* 如果您偏好針對按鈕使用較大的影像，有一個是原始大小兩倍大的 PNG 影像可以使用。您可以將 Snippet 中使用的外部按鈕影像的路徑，變更為 `https://bluemix.net/deploy/button_x2.png`。 
 	

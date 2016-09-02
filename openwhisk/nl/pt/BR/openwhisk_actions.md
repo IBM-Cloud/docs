@@ -19,7 +19,7 @@ copyright:
 # Criando e chamando ações do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_actions}
 
-*Última atualização: 22 de março de 2016*
+Última atualização: 4 de agosto de 2016
 {: .last-updated}
 
 Ações são fragmentos de código stateless executados na plataforma {{site.data.keyword.openwhisk}}. Uma ação pode ser uma função JavaScript, uma função Swift ou um programa executável customizado empacotado em um contêiner do Docker. Por exemplo, uma ação pode ser usada para detectar as faces em uma imagem, agregar um conjunto de chamadas de API ou postar um Tweet.
@@ -32,7 +32,11 @@ As ações podem ser compostas por chamadas a outras ações ou uma sequência d
 ## Criando e chamando ações JavaScript
 {: #openwhisk_create_action_js}
 
-As seções a seguir o orientam pelo trabalho com ações em JavaScript. Começando com a criação e a chamada de uma ação simples, você prosseguirá para a inclusão de parâmetros em uma ação e chamada dessa ação com parâmetros, configuração de parâmetros padrão e chamada dos mesmo, criação de ações assíncronas e, por fim, trabalho com sequências de ações.
+As seções a seguir o orientam pelo trabalho com ações em JavaScript. Você começa
+com a criação e a chamada de uma ação simples. Em seguida, move para a inclusão de
+parâmetros em uma ação e a chamada dessa ação com os parâmetros. Em seguida, está
+configurando parâmetros padrão e chamando-os. Em seguida, você cria ações assíncronas e,
+por fim, trabalha com sequências de ações. 
 
 
 ### Criando e chamando uma ação simples JavaScript
@@ -62,7 +66,7 @@ Revise as etapas e os exemplos a seguir para criar sua primeira ação JavaScrip
   ```
   {: screen}
 
-3. Liste as ações criadas:
+3. Liste as ações que você criou: 
   
   ```
   wsk action list
@@ -177,7 +181,7 @@ Ações podem ser chamadas com vários parâmetros denominados. Lembre-se de que
 
 Em vez de passar todos os parâmetros para uma ação toda vez, é possível fazer a ligação de determinados parâmetros. O exemplo a seguir liga o parâmetro *place* para que a ação use como padrão o local "Vermont":
  
-1. Atualize a ação usando a opção `--param` para ligar os valores dos parâmetros.
+1. Atualize a ação usando a opção `--param` para ligar os valores de parâmetro.
 
   ```
   wsk action update hello --param place 'Vermont'
@@ -197,9 +201,11 @@ Em vez de passar todos os parâmetros para uma ação toda vez, é possível faz
   ```
   {: screen}
 
-  Observe que você não precisou especificar o parâmetro place ao chamar a ação. Os parâmetros ligados ainda podem ser substituídos especificando o valor de parâmetro no momento da chamada.
+  Observe que você não precisou especificar o parâmetro place quando chamou a
+ação. Os parâmetros ligados ainda podem ser substituídos especificando o valor de parâmetro no momento da chamada.
 
-3. Chame a ação, passando os valores `name` e `place`. O segundo sobrescreverá o valor ligado à ação.
+3. Chame a ação, passando os valores `name` e `place`. O
+último sobrescreve o valor que está ligado à ação.
 
   ```
   wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
@@ -215,23 +221,34 @@ Em vez de passar todos os parâmetros para uma ação toda vez, é possível faz
 ### Criando ações assíncronas
 {: #openwhisk_asynchrony_js}
 
-As funções JavaScript que continuam a execução em uma função de retorno de chamada podem precisar retornar o resultado da ativação após a função `main` ter retornado. É possível realizar isso usando as funções `whisk.async()` e `whisk.done()` em sua ação.
+As funções JavaScript que são executadas de forma assíncrona podem precisar
+retornar o resultado da ativação após a função `main` ter retornado. É
+possível fazer isso retornando uma Promessa em sua ação.
 
 1. Salve o conteúdo a seguir em um arquivo chamado `asyncAction.js`.
 
   ```
-  function main() {
-      setTimeout(function() {
-          return whisk.done({done: true});
-      }, 20000);
-      return whisk.async();
-  }
+  function main(args) {
+       return new Promise(function(resolve, reject) {
+         setTimeout(function() {
+           resolve({ done: true });
+         }, 2000);
+      })
+   }
   ```
   {: codeblock}
 
-  Observe que a função `main` retorna imediatamente e o valor de retorno `whisk.async()` indica que essa ativação deve continuar em execução.
+  Observe que a função `main` retorna uma Promessa, que indica que a ativação não foi concluída ainda, mas espera-se que seja no futuro.
 
-  A função JavaScript `setTimeout()` neste caso espera 20 segundos antes de chamar a função de retorno de chamada, quando a chamada a `whisk.done()` indica que a ativação está concluída.
+  A função JavaScript `setTimeout()` nesse caso aguarda vinte
+segundos antes de chamar a função de retorno de chamada. Isso representa o código
+assíncrono e vai dentro da função de retorno de chamada da Promessa.
+
+  O retorno de chamada da Promessa aceita dois argumentos, resolver e rejeitar, que
+são ambos funções. A chamada para `resolve ()` cumpre a Promessa e
+indica que a ativação foi concluída normalmente.
+
+  Uma chamada para `reject()` pode ser usada para rejeitar a Promessa e sinalizar que a ativação foi concluída de forma anormal.
 
 2. Execute os comandos a seguir para criar a ação e chamá-la:
 
@@ -278,7 +295,9 @@ As funções JavaScript que continuam a execução em uma função de retorno de
   ```
   {: screen}
 
-  Comparando os registros de data e hora `start` e `end` no registro de ativação, será possível ver que essa ativação levou um pouco mais de 20 segundos para ser concluída.
+  Comparando os registros de data e hora `start` e
+`end` no registro de ativação, será possível ver que essa ativação levou
+um pouco mais de 20 segundos para ser concluída.
 
 
 ### Usando ações para chamar uma API externa
@@ -291,27 +310,39 @@ Este exemplo chama um serviço Yahoo Weather para obter as condições atuais em
 1. Salvar o conteúdo a seguir em um arquivo chamado `weather.js`.
   ```
     var request = require('request');
-    
+
     function main(params) {
         var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
-    
-        request.get(url, function(error, response, body) {
-            var condition = JSON.parse(body).query.results.channel.item.condition;
-            var text = condition.text;
-            var temperature = condition.temp;
-            var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-            whisk.done({msg: output});
+
+        return new Promise(function(resolve, reject) {
+            request.get(url, function(error, response, body) {
+                if (error) {
+                    reject(error);    
+                }
+                else {
+                    var condition = JSON.parse(body).query.results.channel.item.condition;
+                    var text = condition.text;
+                    var temperature = condition.temp;
+                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                    resolve({msg: output});
+                }
+            });
         });
-    
-        return whisk.async();
     }
   ```
   {: codeblock}
 
-  Observe que a ação no exemplo usa a biblioteca JavaScript `request` para fazer uma solicitação de HTTP à API do Yahoo Weather e extrai campos do resultado JSON. As [Referências](./openwhisk_reference.html#runtime_ref_runtime_environment) detalham os pacotes do Node.js que podem ser usados em suas ações.
-  
-  Este exemplo também mostra a necessidade de ações assíncronas. A ação retorna `whisk.async()` para indicar que o resultado dessa ação ainda não está disponível quando a função retorna. Em vez disso, o resultado está disponível no retorno de chamada `request` após a chamada HTTP ser concluída e é passado como um argumento para a função `whisk.done()`.
+  Observe que a ação no exemplo usa a biblioteca JavaScript `request` para fazer uma solicitação de HTTP à API do Yahoo Weather e extrai campos do resultado JSON. 
+As [Referências](./reference.md#runtime-environment) detalham os pacotes
+do Node.js que podem ser usados em suas ações.
+
+  Este exemplo também mostra a necessidade de ações assíncronas. A ação retorna uma
+Promessa para indicar que o resultado dessa ação não está disponível ainda quando a
+função é retornada. Em vez disso, o resultado está disponível no retorno de chamada
+`request` após a chamada HTTP ser concluída e é passado como um
+argumento para a função `resolve()`. 
+
 
 2. Execute os comandos a seguir para criar a ação e chamá-la:
   ```
@@ -392,7 +423,47 @@ Diversas ações do utilitário são fornecidas em um pacote chamado `/whisk.sys
 
   No resultado, você vê que as linhas estão classificadas.
 
-**Nota**: para obter mais informações sobre chamada de sequências de ações com vários parâmetros denominados, consulte [Configurando parâmetros padrão](./actions.md#setting-default-parameters)
+**Nota**: para obter mais informações sobre chamada de
+sequências de ações com vários parâmetros denominados, consulte
+[Configurando parâmetros padrão](./actions.md#setting-default-parameters)
+
+
+## Criando ações Python
+{: #openwhisk_actions_python}
+
+O processo de criação de ações Python é semelhante ao de ações JavaScript. As
+seções a seguir orientam você na criação e chamada de uma única ação Python e na inclusão
+de parâmetros nessa ação.
+
+### Criando e chamando uma ação
+{: #openwhisk_actions_python_invoke}
+
+Uma ação é simplesmente uma função Python de nível superior, o que significa que é
+necessário ter um método chamado `principal`. Por exemplo, crie um
+arquivo chamado `hello.py` com o conteúdo a seguir:
+
+```
+    def main(dict):
+        name = dict.get("name", "stranger")
+        greeting = "Hello " + name + "!"
+        print(greeting)
+        return {"greeting": greeting}
+```
+{: codeblock}
+
+As ações Python sempre consomem e produzem um dicionário.
+
+É possível criar uma ação OpenWhisk chamada `helloPython` a partir
+dessa função da seguinte forma:
+
+```
+wsk action create helloPython hello.py
+```
+{: pre}
+
+Ao usar a linha de comandos e um arquivo de origem `.py`, não será
+necessário especificar que você está criando uma ação Python (como ocorre em uma ação
+JavaScript); a ferramenta determina isso a partir da extensão do arquivo.
 
 
 
@@ -428,7 +499,9 @@ wsk action create helloSwift hello.swift
 ```
 {: pre}
 
-Ao usar a linha de comandos e um arquivo de origem `.swift`, não será necessário especificar que você está criando uma ação Swift (como ocorre em uma ação JavaScript); a ferramenta determina isso a partir da extensão do arquivo.
+Ao usar a linha de comandos e um arquivo de origem `.swift`, não
+será necessário especificar que você está criando uma ação Swift (como ocorre em uma ação
+JavaScript); a ferramenta determina isso a partir da extensão do arquivo.
 
 A chamada da ação é a mesma para as ações Swift que das ações JavaScript:
 
@@ -445,8 +518,6 @@ wsk action invoke --blocking --result helloSwift --param name World
 {: screen}
 
 **Atenção:** as ações Swift são executadas em um ambiente Linux. Swift no Linux ainda está em desenvolvimento e o {{site.data.keyword.openwhisk_short}} geralmente usa a liberação mais recente disponível, que não está necessariamente estável. Além disso, a versão do Swift usada com o {{site.data.keyword.openwhisk_short}} pode estar inconsistente com versões do Swift de liberações estáveis do XCode no MacOS.
-
-
 
 ## Criando ações Docker
 {: #openwhisk_actions_docker}
@@ -515,7 +586,9 @@ Para as instruções a seguir, suponha que o ID do usuário seja "janesmith" e a
   ```
   {: pre}
 
-  Observe que parte do arquivo example.c é compilada como parte do processo de construção da imagem do Docker, portanto, você não precisa de C compilado em sua máquina.
+  Observe que parte do arquivo example.c é compilada como parte do processo de
+construção da imagem do Docker, de modo que você não precisa de C compilado em sua
+máquina.
 
 4. Para criar uma ação a partir de uma imagem do Docker em vez de um arquivo JavaScript fornecido, inclua `--docker` e substitua o nome do arquivo JavaScript pelo nome da imagem do Docker.
 

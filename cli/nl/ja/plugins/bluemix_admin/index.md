@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+
 
 ---
 
@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-*最終更新日: 2016 年 6 月 22 日*
+最終更新日: 2016 年 8 月 17 日
 {: .last-updated}
 
 
@@ -43,7 +43,7 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">ご使用の {{site.data.keyword.Bluemix_notm}} インスタンス用 URL のサブドメインです。</dd>
+<dd class="pd">ご使用の {{site.data.keyword.Bluemix_notm}} インスタンス用 URL のサブドメインです。例えば、<code>https://console.mycompany.bluemix.net/cli</code> などです。</dd>
 </dl>
 </li>
 <li>{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインをインストールするには、以下のコマンドを実行します:<br/><br/> <code>
@@ -52,15 +52,21 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
+プラグインをアンインストールする必要がある場合は、以下のコマンドを使用できます。その後、更新されたリポジトリーを追加して、最新のプラグインをインストールできます。
+
+* プラグインのアンインストール: `cf uninstall-plugin-repo BluemixAdminCLI`
+* プラグイン・リポジトリーの削除: `cf remove-plugin-repo BluemixAdmin`
+
+
 ## {{site.data.keyword.Bluemix_notm}} 管理
 CLI プラグインの使用
 
 {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用すると、ユーザーの追加と削除、組織へのユーザーの割り当てと割り当て解除、といった管理タスクを実行できます。コマンドのリストを表示するには、次のコマンドを実行します。
 
 
-
+```
 cf plugins
-
+```
 {: codeblock}
 
 追加でコマンドのヘルプを表示するには、`-help` オプションを使用します。
@@ -89,13 +95,15 @@ cf login
 
 ### ユーザーの追加
 
-LDAP レジストリーから {{site.data.keyword.Bluemix_notm}} 環境にユーザーを追加できます。次のコマンドを入力します。
+ご使用環境のユーザー・レジストリーから {{site.data.keyword.Bluemix_notm}} 環境にユーザーを追加できます。次のコマンドを入力します。
 
 
-
+```
 cf ba add-user <user_name> <organization>
-
+```
 {: codeblock}
+
+**注**: 特定の組織にユーザーを追加するには、組織の管理者であるか、**管理**許可 (代替として**スーパーユーザー**許可が使用可能)、または**書き込み**アクセス権限がある**ユーザー**許可を持っている必要があります。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -113,9 +121,9 @@ cf ba add-user <user_name> <organization>
 ユーザーを検索できます。次のコマンドを入力します。
 
 
-
+```
 cf ba search-users <user_name>
-
+```
 {: codeblock}
 
 <dl class="parml">
@@ -132,9 +140,9 @@ cf ba search-users <user_name>
 指定されたユーザーに対する許可を設定できます。次のコマンドを入力します。
 
 
-
+```
 cf ba set-permissions <user_name> <permission> <access>
-
+```
 {: codeblock}
 
 **注**: 一度に 1 つの許可を設定できます。
@@ -143,7 +151,7 @@ cf ba set-permissions <user_name> <permission> <access>
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 内のユーザーの名前。</dd>
 <dt class="pt dlterm">&lt;permission&gt;</dt>
-<dd class="pd">ユーザーに対する許可 (管理、ログイン、カタログ (読み取りまたは書き込みアクセス)、レポート (読み取りまたは書き込みアクセス)、またはユーザー (読み取りまたは書き込みアクセス)) を設定します。</dd>
+<dd class="pd">管理 (代替として「スーパーユーザー」が使用可能)、ログイン (代替として「基本」が使用可能)、カタログ (read または write のアクセス権限)、レポート(read または write のアクセス権限)、またはユーザー (read または write のアクセス権限) のユーザー許可を設定します。</dd>
 <dt class="pt dlterm">&lt;access&gt;</dt>
 <dd class="pd">許可が「カタログ」、「レポート」、または「ユーザー」の場合、アクセス・レベルも <code>read</code> または <code>write</code> として設定する必要があります。</dd>
 </dl>
@@ -156,9 +164,9 @@ cf ba set-permissions <user_name> <permission> <access>
 
 次のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} 環境からユーザーを削除できます。
 
-
+```
 cf ba remove-user <user_name>
-
+```
 {: codeblock}
 
 <dl class="parml">
@@ -176,9 +184,9 @@ cf ba remove-user <user_name>
 
 * 組織を追加するには、以下のコマンドを入力します。
 
-
+```
 cf ba create-organization <organization> <manager>
-
+```
 {: codeblock}
 
 <dl class="parml">
@@ -192,9 +200,9 @@ cf ba create-organization <organization> <manager>
 
 * 組織を削除するには、以下のコマンドを入力します。
 
-
+```
 cf ba delete-organization <organization>
-
+```
 {: codeblock}
 
 <dl class="parml">
@@ -209,9 +217,9 @@ cf ba delete-organization <organization>
 {{site.data.keyword.Bluemix_notm}} 環境内のユーザーを特定の組織に割り当てることができます。次のコマンドを入力します。
 
 
-
+```
 cf ba set-org <user_name> <organization> [<role>]
-
+```
 {: codeblock}
 
 <dl class="parml">
@@ -231,9 +239,9 @@ cf ba set-org <user_name> <organization> [<role>]
 {{site.data.keyword.Bluemix_notm}} 環境内のユーザーについて、特定の組織への割り当てを解除することができます。次のコマンドを入力します。
 
 
-
+```
 cf ba unset-org <user_name> <organization> [<role>]
-
+```
 {: codeblock}
 
 <dl class="parml">
@@ -270,9 +278,9 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 特定の組織の使用量の割り当て量を設定できます。
 
-
+```
 cf ba set-quota <organization> <plan>
-
+```
 {: codeblock}
 
 <dl class="parml">
@@ -289,9 +297,9 @@ cf ba set-quota <organization> <plan>
 セキュリティー・レポートを追加、削除、および取得できます。
 * レポートを追加するには、以下のコマンドを入力します。
 
-
+```
 cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
-
+```
 {: codeblock}
 
 **注**: レポートの書き込みアクセス許可がある場合は、新規カテゴリーを作成し、ユーザー用に受け入れられるフォーマットのいずれかでレポートを追加できます。`category` パラメーターに新規カテゴリー名を入力するか、既存のカテゴリーに新規レポートを追加します。
@@ -311,9 +319,9 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 
 * レポートを削除するには、以下のコマンドを入力します。
 
-
+```
 cf ba delete-report <category> <date> <name>
-
+```
 {: codeblock}
 
 <dl class="parml">
@@ -329,9 +337,9 @@ cf ba delete-report <category> <date> <name>
 
 * レポートを取得するには、以下のコマンドを入力します。
 
-
+```
 cf ba retrieve-report <category> <date> <name>
-
+```
 {: codeblock}
 
 <dl class="parml">
@@ -351,28 +359,28 @@ cf ba retrieve-report <category> <date> <name>
 
 * すべての組織に対して {{site.data.keyword.Bluemix_notm}} カタログでのサービスの表示を有効化するには、以下のコマンドを入力します。
 
-
+```
 cf ba enable-service-plan <plan_identifier>
-
+```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 </dl>
 
 **ヒント:** **ba enable-service-plan** という長いコマンド名の別名として **ba esp** を使用することもできます。
 
 * すべての組織に対して {{site.data.keyword.Bluemix_notm}} カタログでのサービスの表示を無効化するには、以下のコマンドを入力します。
 
-
+```
 cf ba disable-service-plan <plan_identifier>
-
+```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 </dl>
 
 **ヒント:** **ba disable-service-plan<retrieve-report** という長いコマンド名の別名として **ba dsp**を使用することもできます。
@@ -383,14 +391,14 @@ cf ba disable-service-plan <plan_identifier>
 
 * 組織が {{site.data.keyword.Bluemix_notm}} カタログで特定のサービスを表示できるようにするには、以下のコマンドを入力します。
 
-
+```
 cf ba add-service-plan-visibility <plan_identifier> <organization>
-
+```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">サービスの表示可能性リストに追加する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 </dl>
@@ -399,14 +407,14 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 * 組織に対して {{site.data.keyword.Bluemix_notm}} カタログでのサービスの表示可能性を削除するには、以下のコマンドを入力します。
 
-
+```
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
-
+```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効にするサービス・プランの名前または GUID。非固有のサービス名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効にするサービス・プランの名前または GUID。非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">サービスの表示可能性リストから削除する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 </dl>
@@ -415,16 +423,16 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 * 単一または複数の組織に対して既存のすべての表示されるサービスを置換するには、以下のコマンドを使用します。
 
-
+```
 cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>
-
+```
 {: codeblock}
 
 **注:** このコマンドにより、指定した組織で表示される既存のサービスが、コマンドで指定したサービスに置換されます。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス・プラン名 (例えば、「Standard」または「Basic」) を入力すると、サービス・プランを選択するように求めるプロンプトが出されます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開くと、そのサービスで使用可能なサービス・プランの名前を表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">表示可能性を追加する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。コマンドに追加の組織名または GUID を入力することで、複数の組織に対してサービスの表示可能性を有効化できます。</dd>
 </dl>
@@ -437,9 +445,9 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 * サービス・ブローカーをリストするには、次のコマンドを入力します。
 
-
+```
 cf ba service-brokers <broker_name>
-
+```
 {: codeblock}
 
 **注**: すべてのサービス・ブローカーをリストするには、`broker_name` パラメーターを指定せずにコマンドを入力します。
@@ -453,9 +461,9 @@ cf ba service-brokers <broker_name>
 
 * サービス・ブローカーを追加して、{{site.data.keyword.Bluemix_notm}} カタログにカスタム・サービスを追加できるようにするには、次のコマンドを入力します。
 
-
+```
 cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
-
+```
 {: codeblock}
 
 <dl class="parml">
@@ -473,9 +481,9 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 
 * サービス・ブローカーを削除して、{{site.data.keyword.Bluemix_notm}} カタログからカスタム・サービスを除去するには、次のコマンドを入力します。
 
-
+```
 cf ba delete-service-broker <service_broker>
-
+```
 {: codeblock}
 
 <dl class="parml">
@@ -502,3 +510,186 @@ cf ba delete-service-broker <service_broker>
 </dl>
 
 **ヒント:** **ba update-service-broker** という長いコマンド名の別名として **ba usb**を使用することもできます。
+
+
+### アプリケーション・セキュリティー・グループに関する作業
+
+アプリケーション・セキュリティー・グループ (ASG) に関して作業するには、ローカル環境または専用環境の全アクセス権限を持つ管理者でなければなりません。コマンドでターゲットとする組織に有効な ASG のリスト表示は、環境のすべてのユーザーが行えます。それに対し、ASG の作成、更新、バインドを行うには、{{site.data.keyword.Bluemix_notm}} 環境の管理者である必要があります。
+
+ASG は、{{site.data.keyword.Bluemix_notm}} 環境内のアプリケーションからのアウトバウンド・トラフィックを制御する仮想ファイアウォールとして機能します。各 ASG は、外部ネットワークに対する特定のトラフィックおよび通信を許可するルールのリストから構成されます。1 つ以上の ASG を特定のセキュリティー・グループ・セット (例えば、グローバル・アクセスの適用に使用されるグループ・セットなど) にバインドすることや、{{site.data.keyword.Bluemix_notm}} 環境の組織内のスペースにバインドすることができます。
+
+{{site.data.keyword.Bluemix_notm}} は最初、制限された外部ネットワークへのすべてのアクセス権限でセットアップされます。IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` をデフォルトの Cloud Foundry セキュリティー・グループ・セットにバインドした場合、これらのグループにより、外部ネットワークへのグローバル・アクセスが可能になります。グローバル・アクセスの適用に使用される Cloud Foundry 内の 2 つのセキュリティー・グループ・セットは、**デフォルト・ステージング**と**デフォルト実行**のグループ・セットです。これらのグループ・セットは、すべての実行アプリ、またはすべてのステージング・アプリに対するトラフィックを許可するためのルールを適用します。これらの 2 つのセキュリティー・グループ・セットにバインドしたくない場合は、Cloud Foundry グループ・セットからアンバインドし、セキュリティー・グループを特定スペースにバインドしてください。詳しくは、[『Binding Application Security Groups』](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}を参照してください。
+
+**注**: セキュリティー・グループに関する作業を可能にする以下のコマンドは、Cloud Foundry 1.6 バージョンをベースとしています。
+
+#### セキュリティー・グループのリスト、作成、更新、および削除
+
+セキュリティー・グループの作成と、発信トラフィックを定義するルールについて詳しくは、[『Creating Application Security Groups』](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}を参照してください。
+
+* すべてのセキュリティー・グループをリストするには、次のコマンドを入力します。
+
+```
+cf ba security-groups
+```
+{: codeblock}
+
+**ヒント:** **ba security-groups** という長いコマンド名の別名として **ba sgs** を使用することもできます。
+
+* 特定セキュリティー・グループの詳細を表示するには、次のコマンドを入力します。
+
+```
+cf ba security-groups <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">セキュリティー・グループの名前</dd>
+</dl>
+
+**ヒント:** `security-group` パラメーターを指定した **ba security-groups** という長いコマンド名の別名として **ba sg** を使用することもできます。
+
+
+* セキュリティー・グループを作成するには、次のコマンドを入力します。IBM が作成したセキュリティー・グループと区別するため、ユーザーが作成した各セキュリティー・グループの名前には、接頭部 `adminconsole_` が追加されます。
+
+```
+cf ba create-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">セキュリティー・グループの名前</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">ルール・ファイルの絶対パスまたは相対パス</dd>
+</dl>
+
+**ヒント:** **ba create-security-group** という長いコマンド名の別名として **ba csg**を使用することもできます。
+
+* セキュリティー・グループを更新するには、次のコマンドを入力します。
+
+```
+cf ba update-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">セキュリティー・グループの名前</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">ルール・ファイルの絶対パスまたは相対パス</dd>
+</dl>
+
+**ヒント:** **ba update-security-group** という長いコマンド名の別名として **ba usg** を使用することもできます。
+
+* セキュリティー・グループを削除するには、次のコマンドを入力します。
+
+```
+cf ba delete-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">セキュリティー・グループの名前</dd>
+</dl>
+
+**ヒント:** **ba delete-security-group** という長いコマンド名の別名として **ba dsg**を使用することもできます。
+
+
+#### セキュリティー・グループのバインドおよびアンバインドと、バインドされたセキュリティー・グループのリスト
+
+セキュリティー・グループのバインドとアンバインドについて詳しくは、[『Binding Application Security Groups』](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}と[『Unbinding Application Security Groups』](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}を参照してください。
+
+* デフォルト・ステージングのセキュリティー・グループ・セットにバインドするには、次のコマンドを入力します。
+
+```
+cf ba bind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">セキュリティー・グループの名前</dd>
+</dl>
+
+**ヒント:** **ba bind-staging-security-group** という長いコマンド名の別名として **ba bssg** を使用することもできます。
+
+* デフォルト実行のセキュリティー・グループ・セットにバインドするには、次のコマンドを入力します。
+
+```
+cf ba bind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">セキュリティー・グループの名前</dd>
+</dl>
+
+**ヒント:** **ba bind-running-security-group** という長いコマンド名の別名として **ba brsg**を使用することもできます。
+
+* デフォルト・ステージングのセキュリティー・グループ・セットに対してアンバインドするには、次のコマンドを入力します。
+
+```
+cf ba cf ba unbind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">セキュリティー・グループの名前</dd>
+</dl>
+
+**ヒント:** **ba unbind-staging-security-group** という長いコマンド名の別名として **ba ussg** を使用することもできます。
+
+* デフォルト実行のセキュリティー・グループ・セットに対してアンバインドするには、次のコマンドを入力します。
+
+```
+cf ba unbind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">セキュリティー・グループの名前</dd>
+</dl>
+
+**ヒント:** **ba bind-running-security-group** という長いコマンド名の別名として **ba brsg**を使用することもできます。
+
+* セキュリティー・グループをスペースにバインドするには、次のコマンドを入力します。
+
+```
+cf ba bind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">セキュリティー・グループの名前</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">セキュリティー・グループをバインドする組織の名前</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">セキュリティー・グループをバインドする組織内のスペースの名前</dd>
+</dl>
+
+**ヒント:** **ba bind-security-group** という長いコマンド名の別名として **ba bsg**を使用することもできます。
+
+* セキュリティー・グループをスペースからアンバインドするには、次のコマンドを入力します。
+
+```
+cf ba unbind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">セキュリティー・グループの名前</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">セキュリティー・グループをバインドする組織の名前</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">セキュリティー・グループをバインドする組織内のスペースの名前</dd>
+</dl>
+
+**ヒント:** **ba unbind-staging-security-group** という長いコマンド名の別名として **ba usg** を使用することもできます。
+

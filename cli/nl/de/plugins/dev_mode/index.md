@@ -41,26 +41,26 @@ Installieren Sie das Befehlszeilentool 'dev_mode' über eine der folgenden Metho
   2. Wechseln Sie zu dem Ordner mit dem dev_mode-Plug-in und installieren Sie das Plug-in mithilfe des Befehls 'cf install-plugin'. Beispiel: 
   
         ```
-        cf install-plugin dev_mode-linux64
+cf install-plugin dev_mode-linux64
         ```
 
 - Installation aus dem Bluemix-CLI-Repository
   1. Fügen Sie das Repository 'bluemix-repo' zu den Cloud Foundry-CLI-Repositorys hinzu, indem Sie den folgenden Befehl verwenden:
   
         ```
-        cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
   2. Geben Sie 'cf repo-plugins' ein. Daraufhin wird das dev_mode-Plug-in im Repository 'bluemix-repo' angezeigt.
 		
 		```
-        cf repo-plugins
+cf repo-plugins
         ```
   
   3. Installieren Sie das dev_mode-Plug-in in die Cloud Foundry-CLI-Plug-ins, indem Sie den folgenden Befehl verwenden:
   
         ```
-        cf install-plugin dev_mode -r bluemix-repo
+cf install-plugin dev_mode -r bluemix-repo
         ```
 
 ## Befehle der CLI 'dev_mode' anzeigen

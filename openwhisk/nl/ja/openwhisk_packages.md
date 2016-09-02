@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} パッケージの使用と作成
 {: #openwhisk_packages}
-*最終更新日: 2016 年 3 月 28 日*
+最終更新日: 2016 年 8 月 2 日
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} では、パッケージを使用して関連するアクションのセットを 1 つにまとめ、それらのパッケージを他のユーザーと共有することができます。
@@ -44,11 +44,11 @@ copyright:
 
 1. `/whisk.system` 名前空間でパッケージのリストを取得します。
 
-  
+  ```
   wsk package list /whisk.system
-  
+  ```
   {: pre}
-  
+  ```
   packages
   /whisk.system/alarms                                              shared
   /whisk.system/cloudant                                            shared
@@ -58,22 +58,22 @@ copyright:
   /whisk.system/util                                                shared
   /whisk.system/watson                                              shared
   /whisk.system/weather                                             shared
-  
+  ```
   {: screen}
 
 2. `/whisk.system/cloudant` パッケージ内のエンティティーのリストを取得します。
 
-  
+  ```
   wsk package get --summary /whisk.system/cloudant
-  
+  ```
   {: pre}
-  
+  ```
   package /whisk.system/cloudant: Cloudant database service
      (params: {{site.data.keyword.Bluemix_notm}}ServiceName host username password dbname includeDoc overwrite)
    action /whisk.system/cloudant/read: Read document from database
    action /whisk.system/cloudant/write: Write document to database
    feed   /whisk.system/cloudant/changes: Database change feed
-  
+  ```
   {: screen}
 
   この出力は、Cloudant パッケージが 2 つのアクション `read` および `write` と、`changes` という 1 つのトリガー・フィードを提供していることを示しています。`changes` フィードは、指定された Cloudant データベースに文書が追加されると、トリガーを発生させます。
@@ -83,14 +83,14 @@ copyright:
 
 3. `/whisk.system/cloudant/read` アクションの説明を取得します。
 
-  
+  ```
   wsk action get --summary /whisk.system/cloudant/read
-  
+  ```
   {: pre}
-  
+  ```
   action /whisk.system/cloudant/read: Read document from database
      (params: dbname includeDoc id)
-  
+  ```
   {: screen}
 
   この出力は、Cloudant の `read` アクションに、取得するデータベースと文書 ID などの 3 つのパラメーターが必要であることを示しています。
@@ -104,14 +104,14 @@ copyright:
 
 1. `/whisk.system/samples/greeting` アクションの説明を取得します。
 
-  
+  ```
   wsk action get --summary /whisk.system/samples/greeting
-  
+  ```
   {: pre}
-  
+  ```
   action /whisk.system/samples/greeting: Print a friendly greeting
      (params: name place)
-  
+  ```
   {: screen}
 
   `greeting` アクションは 2 つのパラメーター `name` と `place` を取ることに注意してください。
@@ -119,15 +119,15 @@ copyright:
 2. パラメーターを指定せずにアクションを起動します。
 
 
-  
+  ```
   wsk action invoke --blocking --result /whisk.system/samples/greeting
-  
+  ```
   {: pre}
-  
+  ```
   {
       "payload": "Hello, stranger from somewhere!"
   }
-  
+  ```
   {: screen}
 
   パラメーターが指定されなかったため、出力は汎用メッセージです。
@@ -135,15 +135,15 @@ copyright:
 3. パラメーターを指定してアクションを起動します。
 
 
-  
+  ```
   wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
-  
+  ```
   {: pre}
-  
+  ```
   {
       "payload": "Hello, Mork from Ork!"
   }
-  
+  ```
   {: screen}
 
   出力は、アクションに渡された `name` パラメーターと `place` パラメーターを使用することに注意してください。
@@ -164,43 +164,43 @@ copyright:
 
 1. `/whisk.system/samples` パッケージにバインドし、デフォルトの `place` パラメーター値を設定します。
 
-  
+  ```
   wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla
-  
+  ```
   {: pre}
-  
+  ```
   ok: created binding valhallaSamples
-  
+  ```
   {: screen}
 
 2. パッケージ・バインディングの説明を取得します。
 
-  
+  ```
   wsk package get --summary valhallaSamples
-  
+  ```
   {: pre}
-  
+  ```
   package /myNamespace/valhallaSamples
    action /myNamespace/valhallaSamples/greeting: Print a friendly greeting
    action /myNamespace/valhallaSamples/wordCount: Count words in a string
    action /myNamespace/valhallaSamples/helloWorld: Print to the console
    action /myNamespace/valhallaSamples/echo: Returns the input arguments, unchanged
-  
+  ```
   {: screen}
 
   `/whisk.system/samples` パッケージ内のすべてのアクションが `valhallaSamples` パッケージ・バインディングで使用可能であることに注意してください。
 
 3. パッケージ・バインディングでアクションを起動します。
 
-  
+  ```
   wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
-  
+  ```
   {: pre}
-  
+  ```
   {
       "payload": "Hello, Odin from Valhalla!"
   }
-  
+  ```
   {: screen}
 
   `valhallaSamples` パッケージ・バインディングを作成したときに設定した `place`
@@ -208,15 +208,15 @@ copyright:
 
 4. アクションを起動して、デフォルトのパラメーター値を上書きします。
 
-  
+  ```
   wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin --param place Asgard
-  
+  ```
   {: pre}
-  
+  ```
   {
       "payload": "Hello, Odin from Asgard!"
   }
-  
+  ```
   {: screen}
 
   アクションの起動で指定された `place` パラメーター値によって、
@@ -226,29 +226,28 @@ copyright:
 ## トリガー・フィードの作成と使用
 {: #openwhisk_package_trigger}
 
-フィードは、外部イベント・ソースのイベントによって {{site.data.keyword.openwhisk_short}} トリガーが発生するように構成するための便利な方法を提供します。この例は、
-Alarm パッケージ内のフィードを使用して毎秒トリガーを発生させ、ルールを使用して毎秒アクションを起動する方法を示しています。
+フィードは、外部イベント・ソースのイベントによって {{site.data.keyword.openwhisk_short}} トリガーが発生するように構成するための便利な方法を提供します。この例は、Alarm パッケージ内のフィードを使用して毎秒トリガーを発生させる方法と、ルールを使用して毎秒アクションを起動する方法を示しています。
 
 1. `/whisk.system/alarms` パッケージ内のフィードの説明を取得します。
 
-  
+  ```
   wsk package get --summary /whisk.system/alarms
-  
+  ```
   {: pre}
-  
+  ```
   package /whisk.system/alarms
    feed   /whisk.system/alarms/alarm
-  
+  ```
   {: screen}
 
-  
+  ```
   wsk action get --summary /whisk.system/alarms/alarm
-  
+  ```
   {: pre}
-  
+  ```
   action /whisk.system/alarms/alarm: Fire trigger when alarm occurs
      (params: cron trigger_payload)
-  
+  ```
   {: screen}
 
   `/whisk.system/alarms/alarm` フィードは、次の 2 つのパラメーターを使用します。
@@ -258,48 +257,48 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
 2. 8 秒ごとに発生するトリガーを作成します。
 
 
-  
+  ```
   wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron '*/8 * * * * *' -p trigger_payload '{"name":"Mork", "place":"Ork"}'
-  
+  ```
   {: pre}
-  
+  ```
   ok: created trigger feed everyEightSeconds
-  
+  ```
   {: screen}
 
 3. 以下のアクション・コードを含む「hello.js」ファイルを作成します。
 
-  
+  ```
   function main(params) {
       return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
-  
+  ```
   {: codeblock}
 
 4. アクションが存在することを確認してください。
 
-  
+  ```
   wsk action update hello hello.js
-  
+  ```
   {: pre}
 
 5. `everyEightSeconds` トリガーが発生するたびに `hello` アクションを起動するルールを作成します。
 
-  
+  ```
   wsk rule create --enable myRule everyEightSeconds hello
-  
+  ```
   {: pre}
-  
+  ```
   ok: created rule myRule
   ok: rule myRule is activating
-  
+  ```
   {: screen}
 
 6. アクティベーション・ログをポーリングして、アクションが起動中であることを確認します。
 
-  
+  ```
   wsk activation poll
-  
+  ```
   {: pre}
 
   トリガー、ルール、アクションのアクティベーションが 8 秒ごとに表示されます。アクションは、起動されるたびにパラメーター
@@ -316,24 +315,24 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
 
 1. 「custom」というパッケージを作成します。
 
-  
+  ```
   wsk package create custom
-  
+  ```
   {: pre}
-  
+  ```
   ok: created package custom
-  
+  ```
   {: screen}
 
 2. パッケージの要約を取得します。
 
-  
+  ```
   wsk package get --summary custom
-  
+  ```
   {: pre}
-  
+  ```
   package /myNamespace/custom
-  
+  ```
   {: screen}
 
   パッケージが空であることに注意してください。
@@ -341,47 +340,47 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
 3. 以下のアクション・コードを含む「`identity.js`」というファイルを作成します。このアクションは、
 すべての入力パラメーターを返します。
 
-  
+  ```
   function main(args) { return args; }
-  
+  ```
   {: codeblock}
 
 4. `custom` パッケージ内に `identity` アクションを作成します。
 
-  
+  ```
   wsk action create custom/identity identity.js
-  
+  ```
   {: pre}
-  
+  ```
   ok: created action custom/identity
-  
+  ```
   {: screen}
 
   パッケージ内にアクションを作成する場合、アクション名の前にパッケージ名を付ける必要があります。パッケージのネスティングは許可されません。パッケージは、アクションのみを含むことができ、別のパッケージを含むことはできません。
 
 5. パッケージの要約を再度取得します。
 
-  
+  ```
   wsk package get --summary custom
-  
+  ```
   {: pre}
-  
+  ```
   package /myNamespace/custom
    action /myNamespace/custom/identity
-  
+  ```
   {: screen}
 
   名前空間に `custom/identity` アクションが表示されるようになりました。
 
 6. パッケージ内のアクションを起動します。
 
-  
+  ```
   wsk action invoke --blocking --result custom/identity
-  
+  ```
   {: pre}
-  
+  ```
   {}
-  
+  ```
   {: screen}
 
 
@@ -389,23 +388,23 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
 
 1. 2 つのパラメーター `city` と `country` を指定して `custom` パッケージを更新します。
 
-  
+  ```
   wsk package update custom --param city Austin --param country USA
-  
+  ```
   {: pre}
-  
+  ```
   ok: updated package custom
-  
+  ```
   {: screen}
 
 2. パッケージのパラメーターとアクションのパラメーターを表示し、
 パッケージ内の `identity` アクションが、パッケージからパラメーターを継承していることを確認します。
 
-  
+  ```
   wsk package get custom parameters
-  
+  ```
   {: pre}
-  
+  ```
   ok: got package custom, projecting parameters
   [
       {
@@ -417,14 +416,14 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
           "value": "USA"
       }
   ]
-  
+  ```
   {: screen}
 
-  
+  ```
   wsk action get custom/identity parameters
-  
+  ```
   {: pre}
-  
+  ```
   ok: got action custom/identity, projecting parameters
   [
       {
@@ -436,37 +435,37 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
           "value": "USA"
       }
   ]
-  
+  ```
   {: screen}
 
 3. identity アクションをパラメーターを指定せずに起動して、アクションが本当にパラメーターを継承しているかどうか確認します。
 
-  
+  ```
   wsk action invoke --blocking --result custom/identity
-  
+  ```
   {: pre}
-  
+  ```
   {
       "city": "Austin",
       "country": "USA"
   }
-  
+  ```
   {: screen}
 
 4. いくつかのパラメーターを指定して identity アクションを起動します。
 起動パラメーターは、パッケージ・パラメーターとマージされ、パッケージ・パラメーターをオーバーライドします。
 
-  
+  ```
   wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
-  
+  ```
   {: pre}
-  
+  ```
   {
       "city": "Dallas",
       "country": "USA",
       "state": "Texas"
   }
-  
+  ```
   {: screen}
 
 
@@ -479,25 +478,25 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
 
 1. すべてのユーザーでパッケージを共有します。
 
-  
+  ```
   wsk package update custom --shared
-  
+  ```
   {: pre}
-  
+  ```
   ok: updated package custom
-  
+  ```
   {: screen}
 
 2. パッケージの `publish` プロパティーを表示して、このプロパティーが現在 true かどうかを確認します。
 
-  
+  ```
   wsk package get custom publish
-  
+  ```
   {: pre}
-  
+  ```
   ok: got package custom, projecting publish
   true
-  
+  ```
   {: screen}
 
 
@@ -507,16 +506,15 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
 
 1. パッケージの記述を取得し、パッケージとアクションの完全修飾名を表示します。
 
-  
+  ```
   wsk package get --summary custom
-  
+  ```
   {: pre}
-  
+  ```
   package /myNamespace/custom
    action /myNamespace/custom/identity
-  
+  ```
   {: screen}
 
   前述の例では、`myNamespace` 名前空間で作業
 しています。この名前空間が、完全修飾名に含まれています。
-

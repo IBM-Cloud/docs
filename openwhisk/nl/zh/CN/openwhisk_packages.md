@@ -18,7 +18,7 @@ copyright:
 
 # 使用和创建 {{site.data.keyword.openwhisk_short}} 包
 {: #openwhisk_packages}
-*上次更新时间：2016 年 3 月 28 日*
+上次更新时间：2016 年 8 月 2 日
 {: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，可以使用包将一组相关操作捆绑在一起，然后与其他人共享。
@@ -29,7 +29,7 @@ copyright:
 
 每个 {{site.data.keyword.openwhisk_short}} 实体（包括包）都属于*名称空间*，并且实体的标准名称为 `/namespaceName[/packageName]/entityName`。请参阅[命名准则](./openwhisk_reference.html#openwhisk_entities)以获取更多信息。
 
-以下部分描述了如何浏览包以及使用包中的触发器和订阅源。此外，对于希望将自己的包提供给目录的用户，请阅读有关创建和共享包的部分。
+以下部分描述了如何浏览包以及使用包中的触发器和订阅源。此外，如果您想要将自己的包提供给目录，请阅读有关创建和共享包的部分。
 
 ## 浏览包
 {: #openwhisk_packagedisplay}
@@ -490,4 +490,3 @@ package /myNamespace/custom
   {: screen}
 
   在上面的示例中，您使用的是 `myNamespace` 名称空间，并且此名称空间显示为标准名称。
-

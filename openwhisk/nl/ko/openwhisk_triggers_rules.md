@@ -18,13 +18,14 @@ copyright:
 
 # 트리거 및 규칙 작성
 {: #openwhisk_triggers}
-*마지막 업데이트 날짜: 2016년 2월 22일*
+마지막 업데이트 날짜: 2016년 2월 22일
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} 트리거 및 규칙은 플랫폼에 이벤트 주도적인 기능을 제공합니다. 외부 및 내부 이벤트 소스의 이벤트는 트리거를 채널로 사용하며 규칙은 조치가 이러한 이벤트에 대해 반응하도록 허용합니다.
 {: shortdesc}
 
-## 트리거
+## 트리거 작성
+{: #openwhisk_triggers_create}
 
 트리거는 이벤트 클래스에 대해 이름 지정된 채널입니다. 다음은 트리거의 예입니다.
 - 위치 업데이트 이벤트의 트리거
@@ -40,7 +41,8 @@ copyright:
 - 데이터베이스 내의 문서가 추가되거나 수정될 때마다 트리거 이벤트를 실행하는 Cloudant 데이터 변경 피드
 - Git 저장소에 대한 커미트마다 트리거 이벤트를 실행하는 Git 피드
 
-## 규칙
+## 규칙 사용
+{: #openwhisk_rules_use}
 
 규칙은 하나의 트리거를 하나의 조치와 연관시키며 트리거를 실행할 때마다 입력으로 트리거 이벤트를 사용하여 해당 조치가 호출됩니다.
 
@@ -63,7 +65,7 @@ copyright:
 세 규칙은 다음 동작을 설정합니다. 트윗 및 업로드된 이미지 둘 다의 이미지가 분류되고 업로드된 이미지가 분류되고 작은 그림 버전이 작성됩니다. 
 
 ## 트리거 작성 및 실행
-{: #openwhisk_triggers}
+{: #openwhisk_triggers_fire}
 
 특정 이벤트가 발생할 때 트리거가 실행되거나 수동으로 트리거가 실행될 수 있습니다.
 
@@ -109,10 +111,10 @@ ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   {: screen}
 
 대조할 수반되는 규칙 없이 실행되는 트리거는 영향을 미치지 않습니다.
-트리거는 패키지 내에서 작성되지 않을 수 있으며, 네임스페이스 아래에서 직접 작성되어야 합니다.
+트리거를 패키지 내부에 작성할 수 없으며 네임스페이스에 직접 작성해야 합니다. 
 
-## 트리거 및 조치를 연관시키기 위해 규칙 사용
-{: #openwhisk_rules}
+## 규칙을 사용하여 트리거와 조치 연관
+{: #openwhisk_rules_assoc}
 
 규칙은 트리거를 조치와 연관시키는 데 사용됩니다. 트리거 이벤트가 실행될 때마다 이벤트 매개변수를 사용하여 조치가 호출됩니다.
 
@@ -146,8 +148,7 @@ wsk rule create --enable myRule locationUpdate hello
   ```
   {: pre}
 
-4. locationUpdate 트리거를 실행하십시오. 이벤트를 실행할 때마다 이벤트 매개변수와 함께 hello 조치가 호출됩니다.
-  
+4. locationUpdate 트리거를 실행하십시오. 이벤트를 실행할 때마다 이벤트 매개변수와 함께 hello 조치가 호출됩니다. 
   ```
 wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
@@ -185,5 +186,4 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   hello 조치가 이벤트 페이로드를 수신하고 예상 문자열을 리턴한 것을 볼 수 있습니다.
 
 동일한 트리거를 다른 조치와 연관시키는 다중 규칙을 작성할 수 있습니다. 규칙을 작성하는 조치 및 트리거는 동일한 네임스페이스 안에 있어야 하며 패키지에 속할 수 없습니다.
-패키지에 속한 조치를 사용하려는 경우, 조치를 네임스페이스에 복사할 수 있습니다(예: `wsk action create echo --copy /whisk.system/samples/echo`).
-
+패키지에 속한 조치를 사용하려는 경우 네임스페이스에 조치를 복사할 수 있습니다. 예: `wsk action create echo --copy /whisk.system/samples/echo`.

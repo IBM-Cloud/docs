@@ -138,10 +138,10 @@ DataPower 應用裝置提供對 {{site.data.keyword.Bluemix_notm}} 應用程式�
 
 每一個應用程式都可以有一個以上的相關聯 URL，但是這些 URL 必須全部指向 {{site.data.keyword.Bluemix_notm}} 端點。要求到達時，{{site.data.keyword.Bluemix_notm}} 會檢查該要求、判斷其適用的應用程式，然後選取應用程式的其中一個實例來接收該要求。 
 
-### {{site.data.keyword.Bluemix_notm}} 復原力
+### {{site.data.keyword.Bluemix_notm}} 備援
 {: #resiliency}
 
-{{site.data.keyword.Bluemix_notm}} 的設計旨在於管理可擴充、具復原力的應用程式及應用程式構件，這些應用程式與應用程式構件不僅可擴充以符合您的需要，還能維持高度可用性且可快速從問題中回復。{{site.data.keyword.Bluemix_notm}} 會隔開追蹤互動狀態的元件（有狀態）與不追蹤互動狀態的元件（無狀態）。這項分隔容許 {{site.data.keyword.Bluemix_notm}} 視需要彈性地移動應用程式，以達到可擴充性與復原力。
+{{site.data.keyword.Bluemix_notm}} 的設計旨在於管理可擴充、具復原力的應用程式及應用程式構件，這些應用程式與應用程式構件不僅可擴充以符合您的需要，還能維持高度可用性且可快速從問題中回復。{{site.data.keyword.Bluemix_notm}} 會隔開追蹤互動狀態的元件（有狀態）與不追蹤互動狀態的元件（無狀態）。這項分隔容許 {{site.data.keyword.Bluemix_notm}} 視需要彈性地移動應用程式，以達到可擴充性與備援。
 
 您的應用程式可以有一個以上的實例處於執行中狀態。一個應用程式有多個實例時，該應用程式只會上傳一次。不過，{{site.data.keyword.Bluemix_notm}} 會部署所要求的應用程式實例數，並將它們盡可能地分散在眾多 VM。
 
@@ -201,7 +201,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 <dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}（測試版）</dt>
     <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} 是受管理的雲端環境（{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 的一部分），可用來建置、執行、管理及監視應用程式，同時維護應用程式及其執行所在的中介軟體的最大控制權。{{site.data.keyword.virtualmachinesshort}} 可用來找出您的商業解決方案，特別是在公用雲端中部署應用程式時。</p>
 <p>    
-您可以在使用 OpenStack 軟體的公開和私密（內部部署）雲端中執行及管理虛擬伺服器。您可以使用 {{site.data.keyword.Bluemix_notm}} UI 或 OpenStackClient (OSC) 用戶端來建立、啟動及管理虛擬伺服器。您可以使用 {{site.data.keyword.IBM_notm}} 所提供的虛擬伺服器映像檔，或從您自己的自訂映像檔建立虛擬伺服器。您可以使用 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 功能，來移除與管理雲端型應用程式相關聯的大部分複雜事宜（例如記載、自動擴充及監視）。您可以一起使用 OpenStack 服務與 {{site.data.keyword.Bluemix_notm}} 服務，以建置及執行混合式應用程式。您可以視需要根據作業原則及工作負載需求來佈建基礎架構資源。</p>
+您可以在使用 OpenStack 軟體的公開和私密（內部部署）雲端中執行及管理虛擬伺服器。您可以使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 OpenStackClient (OSC) 用戶端來建立、啟動及管理虛擬伺服器。您可以使用 {{site.data.keyword.IBM_notm}} 所提供的虛擬伺服器映像檔，或從您自己的自訂映像檔建立虛擬伺服器。您可以使用 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 功能，來移除與管理雲端型應用程式相關聯的大部分複雜事宜（例如記載、自動擴充及監視）。您可以一起使用 OpenStack 服務與 {{site.data.keyword.Bluemix_notm}} 服務，以建置及執行混合式應用程式。您可以視需要根據作業原則及工作負載需求來佈建基礎架構資源。</p>
 <p>
 若要進一步瞭解 {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}，請參閱 [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html)。</p> </dd>
 </dl>

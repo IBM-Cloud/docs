@@ -15,7 +15,7 @@ copyright:
 {:download: .download}
 
 # 開始使用 Git 撰寫程式碼
-*前次更新：2016 年 3 月 2 日*
+前次更新：2016 年 3 月 2 日
 {: .last-updated}  
 
 您可以建立自動部署至 {{site.data.keyword.Bluemix}} 的受管理 Git 儲存庫。然後，您可以將變更推送至 Git 儲存庫，以修改在應用程式中執行的程式碼。
@@ -43,36 +43,36 @@ copyright:
 
 若要進一步瞭解 {{site.data.keyword.Bluemix_notm}} Live Sync，請參閱 [{{site.data.keyword.Bluemix_notm}} Live Sync](../develop/bluemixlive.html)。如需指令的詳細資料，請參閱 [{{site.data.keyword.Bluemix_notm}} Live Sync CLI 文件](../cli/reference/bl/index.html)。若要使用 {{site.data.keyword.Bluemix_notm}} Live Sync 來搭配 Web IDE，請參閱[即時編輯](../develop/bluemixlive.html)。  
 
-1. 下載並安裝 {{site.data.keyword.Bluemix_notm}} Live Sync bl 指令行。 
+開始之前，請下載並安裝 {{site.data.keyword.Bluemix_notm}} Live Sync bl 指令行。 
+
+**重要事項：**bl 指令行工具僅適用於 Windows 7 和 8，以及 Mac OS X 10.9 版或更新版本。
 
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="下載 Windows bl 指令行按鈕" /> </a>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="下載 Mac bl 指令行按鈕" /> </a>
 </p>
 
-**重要事項：**bl 指令行工具僅適用於 Windows 7 和 8，以及 Mac OS X 10.9 版或更新版本。 
-
-2. 在指令行上，使用下列指令登入。系統會提示您輸入 IBM® ID 及密碼。
- 
+1. 在指令行上，輸入下列指令進行登入：
 ```
 bl login
 ```
+系統提示時，請輸入您的 {{site.data.keyword.ibmid}} 及密碼。
 
-3. 輸入下列指令，以查看可用於 {{site.data.keyword.Bluemix_notm}} Live Sync 同步化的專案清單：
+2. 輸入下列指令，以查看可用於 {{site.data.keyword.Bluemix_notm}} Live Sync 同步化的專案清單：
  
 ```
 bl projects
 ```
 在清單中尋找符合您應用程式的專案名稱。專案名稱的格式為 *your alias* | *your application name*。
 
-4. 輸入下列指令，將您的本端環境與您在 {{site.data.keyword.Bluemix_notm}} 上的專案同步化。如果您是專案的擁有者，只需要指定 your-application-name 作為 projectName。 
+3. 輸入下列指令，將您的本端環境與您在 {{site.data.keyword.Bluemix_notm}} 上的專案同步化。如果您是專案的擁有者，只需要指定 your-application-name 作為 projectName。 
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
 ```
 bl sync projectName -d localDirectory --verbose
 ```
 此指令會繼續執行（而且同步化也會繼續進行），直到您輸入 "q" 為止。--verbose 選項會顯示記載及狀態資訊。如果有任何引數包含空格，則必須將名稱含括在引號中。
 
-5. 使用另一個指令行視窗，在本端目錄中輸入下列指令，以在「即時編輯」模式下，將應用程式部署至 {{site.data.keyword.Bluemix_notm}}：
+4. 使用另一個指令行視窗，在本端目錄中輸入下列指令，以在「即時編輯」模式下，將應用程式部署至 {{site.data.keyword.Bluemix_notm}}：
 
 ```
 bl start

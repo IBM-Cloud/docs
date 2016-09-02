@@ -17,23 +17,37 @@ copyright:
 
 # Gestion de votre compte {{site.data.keyword.Bluemix_notm}}
 {: #mngacct}
-*Dernière mise à jour : 12 juillet 2016*
+*Dernière mise à jour : 16 août 2016*
 {: .last-updated}
 
-Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg) &gt;
-**Compte** afin de définir des notifications pour votre compte, d'afficher l'utilisation de votre compte ou d'afficher votre facture.
+Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** afin de définir des notifications pour votre compte, d'afficher l'utilisation de votre compte ou de consulter votre facture.
 {:shortdesc}
+
+## Inscription à {{site.data.keyword.Bluemix_notm}}
+{: #signup}
+
+Vous pouvez vous inscrire à un compte {{site.data.keyword.Bluemix_notm}} en utilisant un IBMid existant, en créant un nouvel IBMid ou en utilisant un ID fédéré. Un ID fédéré est un ID présent dans le domaine d'une société qui a été enregistré auprès d'IBM de sorte que le domaine et les données d'identification de l'utilisateur puissent être utilisés pour accéder aux applications Web IBM.   
+
+Un ID fédéré peut être utilisé pour s'inscrire à {{site.data.keyword.Bluemix_notm}} uniquement si votre société a déjà travaillé avec IBM. L'enregistrement du domaine d'une société auprès d'IBM permet aux utilisateurs de se connecter pour recevoir des produits et des services IBM en utilisant leurs données d'identification d'utilisateur de société existantes. L'authentification est alors gérée par le fournisseur d'identité de votre société. Lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}} avec un ID fédéré, vous êtes invité à le faire via la page de connexion de votre société. Pour savoir comment demander à enregistrer le domaine de votre société ou de votre organisation auprès d'IBM ou pour obtenir plus d'informations sur cette opération, voir [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Un sponsor IBM, tel qu'un représentant du client ou un service de conseil, est requis lorsque vous demandez à enregistrer des ID fédérés. 
+
+*Tableau 1. Méthodes d'inscription*
+
+| Méthodes d'inscription | Détails |    
+|-----------------|---------|
+|IBMid existant | Si vous possédez déjà un IBMid, inscrivez-vous à {{site.data.keyword.Bluemix_notm}} avec les données d'identification existantes que vous utilisez pour recevoir les autres produits et services IBM. Vous devez entrer un numéro de téléphone lorsque vous vous inscrivez.  |
+|Nouvel IBMid | Si vous ne possédez pas encore d'IBMid, vous pouvez choisir d'en créer un. L'IBMid vous permet d'utiliser un seul et même nom d'utilisateur de connexion pour tous les produits et services IBM que vous utilisez, y compris {{site.data.keyword.Bluemix_notm}}. Vous devez entrer vos informations personnelles, y compris vos nom et prénom, votre numéro de téléphone et votre mot de passe pour les nouvelles données d'identification. Vous pouvez utiliser cet IBMid pour vous connecter lorsque vous utilisez d'autres produits et services IBM.   |
+|ID fédéré | Si votre société a demandé à enregistrer auprès d'IBM les données d'identification de l'utilisateur du domaine de votre société, vous pouvez vous inscrire à {{site.data.keyword.Bluemix_notm}} à l'aide des données d'identification dont vous vous servez déjà pour la connexion de votre société. Vous devez entrer un numéro de téléphone lorsque vous vous inscrivez.  |
 
 ## Définition de notifications
 {: #notifications}
 
-Accédez à **Compte et support** &gt; **Compte** &gt; **Notifications** pour configurer les notifications relatives au compte général et aux dépenses. Les notifications relatives aux dépenses ne sont disponibles que pour les propriétaires de compte {{site.data.keyword.Bluemix_notm}} Abonnement et Paiement à la carte. 
+Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Notifications** pour configurer des notifications relatives au compte général et aux dépenses. Les notifications relatives aux dépenses ne sont disponibles que pour les propriétaires de compte {{site.data.keyword.Bluemix_notm}} Abonnement et Paiement à la carte.
 
 Vous pouvez définir des notifications par courrier électronique de plateforme pour les incidents et la maintenance planifiée de {{site.data.keyword.Bluemix_notm}} et vous pouvez définir des notifications relatives aux dépenses qui vous envoient des alertes lorsque vous vous approchez du plafond des dépenses que vous avez spécifié pour compte. Effectuez les tâches ci-après pour définir différents types de notification pour votre compte.
 
 ### Définition de notifications de plateforme
 
-Cliquez sur l'icône **Compte et support** ![icône Compte et support](../admin/images/account_support.svg) &gt; **Compte** &gt; **Plateforme** dans le but de définir des notifications par courrier électronique pour les incidents et la maintenance planifiée de {{site.data.keyword.Bluemix_notm}}. Vous pouvez sélectionner ou désélectionner chaque option pour activer ou désactiver la notification par courrier électronique. 
+Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Notifications** &gt; **Plateforme** dans le but de définir des notifications par courrier électronique pour les incidents et la maintenance planifiée de {{site.data.keyword.Bluemix_notm}}. Vous pouvez sélectionner ou désélectionner chaque option pour activer ou désactiver la notification par courrier électronique.
 
 ### Définition des notifications relatives aux dépenses
 {: #spendingnotifications}
@@ -74,9 +88,7 @@ frais en temps réel pour les contextes d'exécution, les conteneurs, les servic
 organisations. Vous pouvez afficher le nombre de Go/heure utilisés pour le contexte d'exécution, ainsi que la consommation des services dans toutes les
 régions, ou sélectionner une région particulière.
 
-Pour ouvrir la vue Tableau de bord de l'utilisation, cliquez sur l'icône **Compte et support**
-![Icône Compte et support](../admin/images/account_support.svg) &gt;
-**Compte** &gt; *nom_de_votre_compte* &gt; **Tableau de bord de l'utilisation**. Les responsables de la facturation ne peuvent afficher les détails que pour les organisations pour lesquelles ils sont responsables de la
+Pour ouvrir la vue Tableau de bord de l'utilisation, cliquez sur l'icône **{{site.data.keyword.avatar}}**![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; *nom_votre_compte* &gt; **Tableau de bord de l'utilisation**. Les responsables de la facturation ne peuvent afficher les détails que pour les organisations pour lesquelles ils sont responsables de la
 facturation.
 
 Le propriétaire de compte est facturé pour l'utilisation totale occasionnée dans toutes les organisations à la fin de chaque cycle de
@@ -90,9 +102,7 @@ particulier afin d'afficher l'utilisation pour ce mois. Sélectionnez **Toutes l
 {: #account_billing}
 
 En tant que propriétaire de compte, vous pouvez éditer, ajouter ou supprimer des informations de carte de crédit sauvegardées qui sont associées à
-votre compte {{site.data.keyword.Bluemix_notm}}. Cliquez sur l'icône **Compte et support**
-![Icône Compte et support](../admin/images/account_support.svg) &gt; **Compte** &gt;
-*nom_de_votre_compte* &gt; **Facturation**.
+votre compte {{site.data.keyword.Bluemix_notm}}. Cliquez sur l'icône **{{site.data.keyword.avatar}}**![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; *nom_votre_compte* &gt; **Facturation**.
 
 Si vous avez un compte SoftLayer lié à votre compte {{site.data.keyword.Bluemix_notm}}, voir
 [Facturation de l'utilisation de {{site.data.keyword.Bluemix_notm}} lorsque des comptes sont liés](../admin/softlayerlink.html#bill_usage)

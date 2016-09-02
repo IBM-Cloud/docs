@@ -17,7 +17,7 @@ copyright:
 {:pre: .pre}
 
 # Einführung in {{site.data.keyword.openwhisk_short}}
-*Letzte Aktualisierung: 28. Juni 2016*
+Letzte Aktualisierung: 4. August 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} ist ein verteilter, ereignisgesteuerter Berechnungsservice. {{site.data.keyword.openwhisk_short}} führt Anwendungslogik in Reaktion auf Ereignisse oder direkte Aufrufe durch Web-Apps oder mobile Apps über HTTP aus. Ereignisse können von Bluemix-Services wie Cloudant und von externen Quellen bereitgestellt werden. Entwickler können sich auf das Schreiben von Anwendungslogik sowie auf das Erstellen von Aktionen, die auf Anforderung ausgeführt werden, konzentrieren. Die Rate der Ausführung von Aktionen entspricht immer der Ereignisrate, sodass sich eine inhärente Skalierung und Ausfallsicherheit sowie eine optimale Auslastung ergeben. Sie bezahlen nur für das, was Sie nutzen, und Sie brauchen keinen Server zu verwalten. Sie können darüber hinaus den [Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
@@ -28,9 +28,12 @@ Weitere Einzelheiten zur Funktionsweise von {{site.data.keyword.openwhisk_short}
 ## {{site.data.keyword.openwhisk_short}}-CLI einrichten
 {: #openwhisk_start_configure_cli}
 
-Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten. Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor. Beachten Sie, dass Python 2.7 auf Ihrem System installiert sein muss, damit Sie die Befehlszeilenschnittstelle verwenden können. 
+Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten. Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor.  
 
-Nach der Einrichtung von {{site.data.keyword.openwhisk_short}} mithilfe der Befehlszeilenschnittstelle können Sie mit der Verwendung über die Befehlszeile oder durch REST-APIs beginnen. 
+**Hinweis zu veralteten Versionen:** Es ist eine neue Befehlszeilenschnittstelle (CLI) verfügbar, für die Python nicht installiert sein muss.
+Die vorherige Befehlszeilenschnittstelle (Python-basiert) ist nun veraltet und steht nur noch als Backup-Downloadoption zur Verfügung. Zur Verwendung der veralteten Befehlszeilenschnittstelle muss Python 2.7 auf Ihrem System installiert sein. 
+
+Nach der Einrichtung von {{site.data.keyword.openwhisk_short}} mithilfe der Befehlszeilenschnittstelle können Sie mit der Verwendung über die Befehlszeile beginnen.
 
 ## {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) verwenden
 {: #openwhisk_start_using_cli}
@@ -75,14 +78,14 @@ Führen Sie die folgenden Schritte aus, um dieses Beispiel zu verwenden:
 2. Erstellen Sie die Aktion, indem Sie über die Befehlszeile der {{site.data.keyword.openwhisk_short}}-CLI den folgenden Befehl eingeben:
 
     ```
-    wsk action create hello hello.js
+wsk action create hello hello.js
     ```
     {: pre}
 
 3. Rufen Sie anschließend die Aktion auf, indem Sie die folgenden Befehle eingeben.
 
     ```
-    wsk action invoke hello --blocking --result
+wsk action invoke hello --blocking --result
     ```
     {: pre}  
 
@@ -96,7 +99,7 @@ Führen Sie die folgenden Schritte aus, um dieses Beispiel zu verwenden:
     {: screen}
 
     ```
-    wsk action invoke hello --blocking --result --param name Fred
+wsk action invoke hello --blocking --result --param name Fred
     ```
     {: pre}  
 
@@ -113,6 +116,7 @@ Sie können darüber hinaus die ereignisgesteuerten Funktionen in {{site.data.ke
 
 
 ## Systemdetails
+{: #openwhisk_system_details}
 
 Weitere Informationen zu {{site.data.keyword.openwhisk_short}} finden Sie in den folgenden Abschnitten:
 
@@ -122,9 +126,14 @@ Weitere Informationen zu {{site.data.keyword.openwhisk_short}} finden Sie in den
 * [REST-API](https://new-console.{DomainName}/apidocs/98)
 
 # Zugehörige Links
-## API
-* [REST-API-Dokumentation](./openwhisk_reference.html#openwhisk_ref_restapi)
+{: #rellinks}
 
-## Allgemein
+## API-Referenz
+{: #api}
+* [REST-API-Dokumentation](./openwhisk_reference.html#openwhisk_ref_restapi)
+* [REST-API](https://new-console.{DomainName}/apidocs/98){:new_window}
+
+## Zugehörige Links
+{: #general}
 * [Entdecken Sie: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
 * [{{site.data.keyword.openwhisk_short}} auf IBM developerWorks](https://developer.ibm.com/openwhisk/){:new_window}

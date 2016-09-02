@@ -17,13 +17,13 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}}-Aktivität mit dem {{site.data.keyword.openwhisk_short}}-Dashboard überwachen
-*Letzte Aktualisierung: 9. Februar 2016*
+Letzte Aktualisierung: 2. August 2016
 {: .last-updated}
 
 Das [{{site.data.keyword.openwhisk}}-Dashboard](https://{DomainName}/whisk/dashboard/) stellt eine grafische Zusammenfassung Ihrer Aktivität bereit. Verwenden Sie das Dashboard, um die Leistung und den Status Ihrer {{site.data.keyword.openwhisk_short}}-Aktionen zu ermitteln. 
 {:shortdesc}
 
-Sie können jeder Zeit auf die Option zum erneuten Laden ('Reload') klicken, um das Dashboard mit den neuesten Aktivierungsprotokolldaten zu aktualisieren.
+Sie können jederzeit auf die Option zum erneuten Laden (**Reload**) klicken, um das Dashboard mit den neuesten Aktivierungsprotokolldaten zu aktualisieren.
 
 ## Aktivitätenzusammenfassung
 {: #summary}
@@ -52,7 +52,7 @@ Diese Ansicht zeigt eine formatierte Version des Aktivierungsprotokolls an. Sie 
 **Hinweis:** Wenn Sie Ausgabe, die im Aktivitätenprotokoll angezeigt wird, über die CLI abrufen wollen, verwenden Sie den folgenden Befehl: 
 
   ```
-  wsk activation poll
+wsk activation poll
   ```
   {: pre} 
 

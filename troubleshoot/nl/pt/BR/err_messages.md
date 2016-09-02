@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2015
+
 
 ---
 
@@ -14,5 +15,4 @@ copyright:
 
 Se você receber uma mensagem de erro do {{site.data.keyword.IBM}},
 poderá usar o ID da mensagem para localizar mais informações sobre como resolver
-o problema. 
-
+o problema.

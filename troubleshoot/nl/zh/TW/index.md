@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+  
 
 ---
 
@@ -15,8 +16,9 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 存取疑難排解 
 {: #accessing}
 
-*前次更新：2016 年 7 月 14 日*
+前次更新：2016 年 8 月 11 日
 {: .last-updated}
+
 
 一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
@@ -30,7 +32,7 @@ copyright:
 嘗試登入 {{site.data.keyword.Bluemix_notm}} 時，您看到下列錯誤訊息：
 {: tsSymptoms} 
 
-`底下所輸入的 IBM ID 及/或密碼不正確。請重試。`
+`The password that you entered is not correct.`
 
 
 您用來登入 {{site.data.keyword.Bluemix_notm}} 的 IBM ID 及密碼無效。
@@ -39,7 +41,7 @@ copyright:
 
 若要取得有效的 IBM ID 及密碼，請移至「我的 IBM 設定檔」頁面，然後完成下列其中一個步驟：
 {: tsResolve}
-  * 如果您已登錄一個 IBM ID，而想要檢查您的 ID 及密碼是否有效，請按一下**登入**，並在「登入」頁面上輸入您的 IBM ID 及密碼。如果您忘記密碼，請按一下「登入」頁面右邊的**忘記密碼**來重設密碼。如果您忘記 IBM ID 或是持續有密碼的問題，請與 Worldwide IBM Registration Help Desk 聯絡以取得協助。 
+  * 如果您已登錄一個 IBM ID，而想要檢查您的 ID 及密碼是否有效，請按一下**登入**，並在「登入」頁面上輸入您的 IBM ID 及密碼。如果您忘記密碼，請按一下「登入」頁面上的**忘記密碼**來重設密碼。如果您忘記 IBM ID 或是持續發生密碼問題，請聯絡 Worldwide IBM Registration Help Desk 以取得協助。 
   * 如果您沒有 IBM ID，請按一下**登錄**來登錄一個 IBM ID 及密碼。 
   
 **附註：**對於 IBM 員工而言，IBM ID 可能與內部網路登入 ID 不同。 
@@ -152,7 +154,7 @@ nslookup mybluemix.net
 如果您無法邀請使用者加入您的組織，而需要不同的角色來完成這項動作，請與組織管理員聯絡，以變更角色。若要識別您的組織管理員，請完成下列步驟：
 {: tsResolve}
 
-  1. 移至「{{site.data.keyword.Bluemix_notm}} 儀表板」，按一下功能表列中的**帳戶和支援**圖示 ![帳戶和支援](images/account_support.svg)，然後選取**管理組織**。
+  1. 移至「{{site.data.keyword.Bluemix_notm}} 儀表板」，按一下功能表列中的{{site.data.keyword.avatar}}圖示 ![「虛擬人像」圖示](images/account_support.svg)，然後選取**管理組織**。
   2. 移至您的組織，然後檢視**使用者**標籤上的組織管理員資訊。  
   
 如果您因自己是合作人員（而非成員）而無法邀請使用者，則您必須刪除先前的 {{site.data.keyword.Bluemix_notm}} 帳戶，然後受邀以組織成員的身分加入帳戶。若要刪除先前的帳戶並以成員的身分加入帳戶，請完成下列步驟： 
@@ -180,7 +182,7 @@ nslookup mybluemix.net
 若要向 {{site.data.keyword.Bluemix_notm}} 登錄多個使用者，您必須為每個使用者完成下列步驟：
 {: tsResolve}
 
-  1. 按一下 {{site.data.keyword.Bluemix_notm}} 使用者介面右上角的**註冊**。
+  1. 按一下 {{site.data.keyword.Bluemix_notm}} 使用者介面中的**註冊**。
   2. 遵循精靈指示來完成步驟。
 
     
@@ -213,28 +215,6 @@ nslookup mybluemix.net
   
   
   
-  
-  
-## {{site.data.keyword.Bluemix_notm}} 頂端功能表列消失
-{: #ts_topmenubar}
-
-調整瀏覽器視窗大小或使用行動裝置時，您可能無法看到 {{site.data.keyword.Bluemix_notm}} 頂端功能表列。
-
-
-縮小瀏覽器視窗大小或使用行動裝置時，{{site.data.keyword.Bluemix_notm}} 頂端功能表列會消失。當頂端功能表列消失時，顯示為堆疊行圖示的側邊欄功能表會出現在左上角。
-{: tsSymptoms}
-
- 
-
-{{site.data.keyword.Bluemix_notm}} 使用者介面有具回應力的設計。檢視環境變更時，{{site.data.keyword.Bluemix_notm}} 使用者介面的佈置可能也會變更。
-{: tsCauses}
- 
-
-請改用左上角的側邊欄功能表。
-{: tsResolve}
-
-
-
 
 
 
@@ -326,6 +306,47 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
   3. 檢查 `eclipse.vm` 內容是否指向新的 Oracle JVM 8 安裝。
 
 
+  
+## 無法重複使用已刪除應用程式的名稱
+{: #ts_reuse_appname}
+  
+在您刪除應用程式之後，只有在刪除應用程式路徑之後才能重複使用應用程式名稱。 
+
+當您嘗試重複使用應用程式名稱時，會收到下列訊息：
+{: tsSymptoms}
+
+`The name is already used by another app.`
+
+刪除應用程式時，不會自動刪除其路徑（即應用程式的 URL）。因此，無法重複使用。您必須移至建立應用程式的空間來刪除路徑，才能重複使用。
+{: tsCauses}
+
+請採取下列步驟來刪除未用的路徑：
+{: tsResolve}
+
+  1. 輸入下列指令，檢查路徑是否屬於現行空間： 
+     ```
+	 cf routes
+	 ```
+  2. 如果路徑不屬於現行空間，請輸入下列指令來切換至它所屬的空間或組織： 
+     ```
+	 cf target -o org_name -s space_name
+	 ```
+  3. 輸入下列指令，來刪除應用程式路徑：
+     ```
+	 cf delete-route domain_name -n host_name
+	 ```
+	 例如：
+```
+	 cf delete-route mybluemix.net -n app001
+	 ```
+
+  
+  
+  
+  
+  
+  
+  
 ## 無法擷取組織中的空間
 {: #ts_retrieve_space}
 
@@ -342,10 +363,10 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 確定已在現行組織中建立空間。若要建立空間，請使用下列其中一種方法：
 {: tsResolve}
 
-  * 從「帳戶和支援」![帳戶和支援](images/account_support.svg) 選取要在其中建立空間的組織，然後按一下**建立空間**。
+  * 按一下{{site.data.keyword.avatar}}圖示 ![「虛擬人像」圖示](images/account_support.svg) 來開啟「帳戶和支援」小組件，選取您要在其中建立空間的組織，然後按一下**建立空間**。
   * 在 cf 指令行介面中，鍵入 `cf create-space <space_name> -o <organization_name>`。
 
-請重試。如果再次看到此訊息，請移至 [Bluemix 狀態](https://status.eu-gb.bluemix.net/){: new_window}頁面，以檢查服務或元件是否有問題。
+請重試。如果再次看到此訊息，請移至 [Bluemix 狀態](http://ibm.biz/bluemixstatus){: new_window}頁面，以檢查服務或元件是否有問題。
 
 
 
@@ -450,7 +471,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 
  
 
-如果您懷疑 {{site.data.keyword.Bluemix_notm}} 服務已關閉，請先檢查 [{{site.data.keyword.Bluemix_notm}} 狀態](https://developer.ibm.com/bluemix/support/#status){: new_window}頁面。您可能想要使用另一個 {{site.data.keyword.Bluemix_notm}} 地區的服務作為暫行解決方法。詳細資訊位於[使用另一個地區的服務](../services/reqnsi.html#cross_region_service){: new_window}。如果服務狀態正常，請嘗試下列步驟來解決問題：
+如果您懷疑 {{site.data.keyword.Bluemix_notm}} 服務已關閉，請先檢查 [{{site.data.keyword.Bluemix_notm}} 狀態](http://ibm.biz/bluemixstatus){: new_window}頁面。您可能想要使用另一個 {{site.data.keyword.Bluemix_notm}} 地區的服務作為暫行解決方法。詳細資訊位於[使用另一個地區的服務](../services/reqnsi.html#cross_region_service){: new_window}。如果服務狀態正常，請嘗試下列步驟來解決問題：
 {: tsResolve}
 
   * 重試動作：
@@ -569,8 +590,8 @@ IBM Push 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 
 {: tsResolve}
  
   * 若要刪除服務實例，您可以使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或指令行介面。若要使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來刪除服務實例，請完成下列步驟：
-	  1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」上，按一下左窗格中的**服務**。隨即顯示服務磚。 
-	  2. 在您想要刪除的服務磚上，按一下**功能表**圖示。
+	  1. 在「{{site.data.keyword.Bluemix_notm}} 儀表板」上，按一下您要刪除的服務。即會顯示服務磚。 
+	  2. 在服務磚上，按一下**功能表**圖示。
 	  3. 按一下**刪除服務**。刪除服務實例之後，系統會提示您重新編譯打包服務實例所連結的應用程式。若要使用指令行介面來刪除服務實例，請完成下列步驟：
 	  1. 鍵入 `cf unbind-service <appname> <service_instance_name>`，將服務實例與應用程式取消連結。
 	  2. 鍵入 `cf delete-service <service_instance_name>`，以刪除服務實例。
@@ -635,12 +656,12 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 	  1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」上，選取您的應用程式。即會開啟應用程式詳細資料頁面。
 	  2. 在「運行環境」窗格中，您可以針對您的應用程式減少記憶體上限及（或）應用程式實例的數目。如果您使用 cf 指令行介面，請完成下列步驟：
 	  1. 檢查有多少記憶體用於應用程式：
-```
+	  ```
 	  cf apps
 ```
 	     cf apps 指令會列出您在現行空間中部署的所有應用程式。也會顯示每個一應用程式的狀態。
       2. 若要減少應用程式所使用的記憶體數量，請減少應用程式實例的數目及（或）記憶體上限：
-```
+	  ```
 	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
 ```
 	  3. 重新啟動應用程式，讓變更生效。
@@ -860,14 +881,14 @@ cf push MyUniqueAppName02 -p "./app.war"
 您可以在 Servlet 或 JSP 檔內使用下列程式碼：
 {: tsResolve} 
 
-  * 在 Servlet 原始檔中
-```
+  * 在 Servlet 原始檔中 
+    ```
 	response.setContentType("text/html; charset=UTF-8");
 ```
-  * 在 JSP 中
-```
+  * 在 JSP 中 
+    ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-```
+	```
 	
 	
 	
@@ -906,30 +927,30 @@ cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve} 
 
   * 以下列其中一種方法指定啟動指令： 
-      * 使用 cf 指令行介面。例如：
-```
+      * 使用 cf 指令行介面。例如： 
+        ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 ```
 	  * 使用 [package.json](https://docs.npmjs.com/json){: new_window} 檔案。例如：
-```
+	    ```
 		{
       ...
   	   "scripts": {
 	 		 "start": "node app.js"
  	   }
 	}
-```
+	    ```
 	  * 使用 `manifest.yml` 檔案。例如： 
-```
+	    ```
 		applications:
   name: MyUniqueNodejs01
   ...
   command: node app.js
   ...
-```
+        ```
 
   * 確定 `package.json` 檔案存在於您的 Node.js 應用程式中，以讓 Node.js 建置套件能辨識應用程式。此外，您必須將這個檔案放在應用程式的根目錄。下列範例顯示簡式 `package.json` 檔案：  
-```
+	```
 	{
         "name": "MyUniqueNodejs01",
         "version": "0.0.1",
@@ -945,7 +966,7 @@ cf push MyUniqueAppName02 -p "./app.war"
                   "start": "node app.js"
         }
  }
-```
+    ```
 	
 如需 Node.js 應用程式的相關提示，請參閱 [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}。	
 
@@ -1039,11 +1060,11 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: tsResolve}
 
   * 如果您使用 `manifest.yml` 檔案來部署應用程式，請使用 buildpack 選項指定自訂建置套件的 URL 或名稱。例如：
-```
+  ```
 buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 ```
   * 如果您從命令提示字元部署應用程式，請使用 `cf push` 指令，並使用 **-b** 選項指定自訂建置套件。例如：
-```
+    ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 ```
 	
@@ -1138,35 +1159,79 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   * 如果錯誤訊息指出建置有問題，請修正導致無法建置應用程式的任何程式碼問題。若要驗證程式碼沒有任何問題，請使用 Git 指令來建置程式碼：
     1. 複製 Git 儲存庫：
     
-```
+    ```
 git clone <git_repository_URL>
 ```
 	2. 開啟應用程式目錄：
 	
-```
+	```
 	cd <appname>
 ```
 	3. 建立應用程式：
-```
+	```
 	<appname> create
 ```
 	4. 必要的話，請佈建附加程式。
 	5. 新增任何必要的配置變數。
 	6. 推送程式碼：
-```
+	```
 	git push <appname> master
 ```
 	7. 驗證已正確建置應用程式。
 	8. 必要的話，請執行後置部署指令：
-```
+	```
 	<appname> run
 ```
 	9. 開啟應用程式，並驗證其運作正常：
-```
+	```
 	<appname> open
 ```
-	
 
+## 從執行列中部署應用程式失敗
+{: #deployinganappfromtherunbarfails}
+
+在此情況下，部署失敗，狀態為黃色「未同步」。 
+
+您正在部署的應用程式的路徑與另一個執行中應用程式的路徑相同。若要修正此問題，請將路徑變更為唯一的路徑。
+
+## 找不到執行列
+{: #runbarcannotbefound}
+
+如果您在 Eclipse Orion {{site.data.keyword.webide}} 中看不到執行列，則是發生下列其中一個問題：
+
+1. {{site.data.keyword.jazzhub}} 未將您的專案識別為專案。
+   * 修正：在您專案的根目錄中，建立 `project.json` 檔案。
+2. {{site.data.keyword.jazzhub_short}} 無法判斷您應用程式所在的資料夾。
+   * 修正：如果您應用程式所在的目錄不是專案根目錄，請執行下列其中一個步驟：
+      * 在您專案的根目錄中，建立 `manifest.yml` 檔案。然後，編輯檔案，使其指向您應用程式的位置；例如，`path: path_to_your_app`
+      * 移動應用程式，使其位於您專案的根目錄中。
+3. {{site.data.keyword.jazzhub_short}} 未偵測到您的應用程式為 Node.js 應用程式。
+   * 修正：在您專案的應用程式資料夾中，建立 `package.json` 檔案。
+   
+
+## GitHub 連結鉤未運作
+{: #githubhookisntworking}
+
+如果您已在推送確定時配置 GitHub 專案來建立工作項目鏈結，而且鏈結未如預期運作，請遵循下列步驟來尋找問題：
+
+1. 在 GitHub 儲存庫中，按一下**設定**。
+   ![GitHub 設定鏈結](images/githubSettings1_small.png)
+
+2. 按一下 **Webhook 及服務**。
+   ![GitHub Webhook 及服務鏈結](images/githubHooks1_small.png)
+
+3. 若要檢視訊息，請將游標移至 {{site.data.keyword.jazzhub}} 狀態圖示上方。
+   ![服務連結鉤上的錯誤訊息](images/troubleshoothook1_small.png)
+
+4. 根據 GitHub 訊息來解決錯誤。
+
+5. 若要驗證修正可作用，請確定並推送另一個變更，或移至 {{site.data.keyword.jazzhub_short}} 的服務頁面，然後按一下**測試服務**。
+   ![「GitHub 測試服務」按鈕](images/githubTestService_small.png)
+
+6. 再次檢查狀態圖示，驗證未發生錯誤。
+   ![狀態圖示，未發生錯誤](images/githubResolved_small.png)
+
+如需相關資訊，請參閱[設定 Bluemix DevOps Services 專案的 GitHub](https://hub.jazz.net/docs/githubhooks/){: new_window}。
 
 
 # 管理帳戶疑難排解
@@ -1313,21 +1378,21 @@ git clone <git_repository_URL>
 
   * [Cloud Foundry Java 建置套件](https://github.com/cloudfoundry/java-buildpack){: new_window}。這個建置套件具有內建的機制，可以確保使用最新版本的建置套件。如需此機制運作方式的相關資訊，請參閱 [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。 
   * [Cloud Foundry Node.js 建置套件](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。這個建置套件功能與使用環境變數類似。為了讓 Node.js 建置套件能每次從網際網路下載 node 模組，請在 cf 指令行介面中，鍵入下列指令： 	
-```
+  ```
 set NODE_MODULES_CACHE=false
 ```
 如果您使用的建置套件未提供自動載入最新元件的機制，可以手動刪除快取目錄中的內容，然後採取下列步驟來重新推送應用程式：
   1. 移出空值建置套件的分支，例如 https://github.com/ryandotsmith/null-buildpack。如需如何移出分支的相關資訊，請參閱 [Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}。  
   2. 將下行新增到 `null-buildpack/bin/compile` 檔案並確定變更。如需如何確定變更的相關資訊，請參閱 [Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}。
-```
+  ```
 rm -rfv $2/*
 ```
   3. 使用下列指令，用已修改的空值建置套件推送應用程式，以刪除快取。完成此步驟之後，應用程式快取目錄中的所有內容都會刪除。
-```
+  ```
 cf push appname -p app_path -b <modified_null_buildpack>
 ```
-  4. 使用下列指令，用您想要使用的最新建置套件來推送應用程式：
-```
+  4. 使用下列指令，用您想要使用的最新建置套件來推送應用程式： 
+  ```
 cf push appname -p app_path -b <latest_buildpack>
 ```
   
@@ -1397,13 +1462,13 @@ pid @{HOME}/nginx/logs/nginx.pid;
 {: tsResolve}
 
   1. 在 Python 應用程式的根目錄中，新增 `requirements.txt` 檔案。`requirements.txt` 檔案可指定 Python 應用程式所需的檔案庫套件，以及套件的版本。下列範例顯示 `requirements.txt` 檔案的內容，其中 `web.py==0.37` 表示將要下載的 `web.py` 檔案庫版本為 0.37，而 `wsgiref==0.1.2` 表示 web.py 檔案庫所需的 Web 伺服器閘道介面版本為 0.1.2。
-```
+	 ```
 	 web.py==0.37
      wsgiref==0.1.2
 ```
 	如需如何配置 `requirements.txt` 檔案的相關資訊，請參閱[需求檔案](https://pip.readthedocs.org/en/1.1/requirements.html)。
   2. 在 Python 應用程式的根目錄中，新增 `Procfile` 檔案。`Procfile` 檔案必須包含 Python 應用程式的啟動指令。在下列指令中，*yourappname* 是 Python 應用程式的名稱，而 *PORT* 是 Python 應用程式必須用來接收應用程式使用者要求的埠號。*$PORT* 是選用項目。如果您未於啟動指令中指定 PORT，則會改用應用程式內部的 `VCAP_APP_PORT` 環境變數下的埠號。 
-```
+	```
 	web: python <yourappname>.py $PORT
 ```
 您現在可以將協力廠商的 Python 檔案庫匯入 {{site.data.keyword.Bluemix_notm}} 了。
@@ -1549,7 +1614,7 @@ Instance	State	CPU	Memory Usage	Disk Usage
 
   * 在下載傾出檔案之後刪除它們。
   * 在部署資訊清單中包括下列項目，以較大的磁碟限額來重新部署應用程式：
-```
+    ```
 	disk_quota: 2048
 ```
 	

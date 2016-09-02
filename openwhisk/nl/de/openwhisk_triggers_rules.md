@@ -18,13 +18,14 @@ copyright:
 
 # Auslöser und Regeln erstellen
 {: #openwhisk_triggers}
-*Letzte Aktualisierung: 22. Februar 2016*
+Letzte Aktualisierung: 22. Februar 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}}-Auslöser und -Regeln statten die Plattform mit ereignisgesteuerten Funktionen aus. Ereignisse aus externen und internen Ereignisquellen werden durch einen Auslöser kanalisiert. Regeln ermöglichen es Ihren Aktionen, auf diese Ereignisse zu reagieren.
 {: shortdesc}
 
-## Auslöser
+## Auslöser erstellen
+{: #openwhisk_triggers_create}
 
 Ein Auslöser ist ein benannter Kanal für eine Klasse von Ereignissen. Es gibt zum Beispiel die folgenden Auslöser:
 - Auslöser von Ereignissen zur Positionsaktualisierung.
@@ -37,7 +38,8 @@ Auslöser können explizit durch einen Benutzer oder für einen Benutzer durch e
 - Der Feed für Cloudant-Datenbankänderungen, der jedes Mal ein Auslöserereignis aktiviert, wenn ein Dokument in einer Datenbank hinzugefügt oder geändert wird.
 - Ein Git-Feed, der ein Auslöserereignis für jede Festschreibung (Commit) in einem Git-Repository aktiviert.
 
-## Regeln
+## Regeln verwenden
+{: #openwhisk_rules_use}
 
 Eine Regel ordnet genau einen Auslöser genau einer Aktion zu, wobei jede Aktivierung des Auslösers zur Folge hat, dass die entsprechende Aktion mit dem Auslöserereignis als Eingabe aufgerufen wird.
 
@@ -59,7 +61,7 @@ Sie können Regeln so einrichten, dass ein einzelnes Auslöserereignis mehrere A
 Diese drei Regeln definieren das folgende Verhalten: Bilder in Tweets und hochgeladene Bilder werden klassifiziert. Hochgeladene Bilder werden klassifiziert und es wird eine Piktogrammversion von ihnen generiert. 
 
 ## Auslöser erstellen und aktivieren
-{: #openwhisk_triggers}
+{: #openwhisk_triggers_fire}
 
 Auslöser können aktiviert werden, wenn bestimmte Ereignisse stattfinden, oder sie können manuell aktiviert werden.
 
@@ -68,24 +70,24 @@ Erstellen Sie zum Beispiel einen Auslöser, um Aktualisierungen an Benutzerstand
 1. Geben Sie den folgenden Befehl ein, um den Auslöser zu erstellen:
  
   ```
-  wsk trigger create locationUpdate
+wsk trigger create locationUpdate
   ```
   {: pre}
  
   ```
-  ok: created trigger locationUpdate
+ok: created trigger locationUpdate
   ```
   {: screen}
 
 2. Prüfen Sie, ob der Auslöser erstellt wurde, indem Sie die Gruppe von Auslösern auflisten.
 
   ```
-  wsk trigger list
+wsk trigger list
   ```
   {: pre}
  
   ```
-  triggers
+triggers
   /someNamespace/locationUpdate                            private
   ```
   {: screen}
@@ -95,84 +97,87 @@ Erstellen Sie zum Beispiel einen Auslöser, um Aktualisierungen an Benutzerstand
 3. Als Nächstes aktivieren Sie ein Auslöserereignis, indem Sie den Auslösernamen und die Parameter des Auslösers angeben:
 
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
   {: pre}
 
   ```
-  ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
+ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
   {: screen}
 
-Ein Auslöser, der ohne zugehörige Regel aktiviert wird, die mit ihm abgeglichen werden soll, hat keine sichtbaren Auswirkungen. Auslöser können nicht innerhalb eines Pakets erstellt werden, sie müssen direkt in einem Namensbereich erstellt werden. 
+Ein Auslöser, der ohne zugehörige Regel aktiviert wird, die mit ihm abgeglichen werden soll, hat keine sichtbaren Auswirkungen. Auslöser können nicht innerhalb eines Pakets erstellt werden; sie müssen direkt in einem Namensbereich erstellt werden. 
 
-## Auslöser und Aktionen durch Regeln zuordnen
-{: #openwhisk_rules}
+## Auslöser und Aktionen mithilfe von Regeln zuordnen
+{: #openwhisk_rules_assoc}
 
 Regeln werden dazu verwendet, einen Auslöser einer Aktion zuzuordnen. Jedes Mal, wenn ein Auslöserereignis aktiviert wird, wird die Aktion mit den Ereignisparametern aufgerufen.
 
 Erstellen Sie zum Beispiel eine Regel, die die Aktion "hello" aufruft, wenn eine Standortaktualisierung gesendet wird. 
 
 1. Erstellen Sie eine Datei 'hello.js' mit dem folgenden Aktionscode:
+  
   ```
-  function main(params) {
+function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
 
 2. Stellen Sie sicher, dass der Auslöser und die Aktion vorhanden sind.
+  
   ```
-  wsk trigger update locationUpdate
+wsk trigger update locationUpdate
   ```
   {: pre}
   
   ```
-  wsk action update hello hello.js
+wsk action update hello hello.js
   ```
   {: pre}
 
 3. Erstellen und aktivieren Sie die Regel. Die drei Parameter sind der Name der Regel, der Auslöser und die Aktion.
+  
   ```
-  wsk rule create --enable myRule locationUpdate hello
+wsk rule create --enable myRule locationUpdate hello
   ```
   {: pre}
 
-4. Aktivieren Sie den Auslöser 'locationUpdate'. Jedes Mal, wenn Sie ein Ereignis auslösen, wird die Aktion 'hello' mit den Ereignisparametern aufgerufen.
+4. Aktivieren Sie den Auslöser 'locationUpdate'. Jedes Mal, wenn Sie ein Ereignis auslösen, wird die Aktion 'hello' mit den Ereignisparametern aufgerufen. 
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
   {: pre}
   
   ```
-  ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
+ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
   {: screen}
 
 5. Stellen Sie fest, ob die Aktion aufgerufen wurde, indem Sie die letzte Aktivierung prüfen.
+  
   ```
-  wsk activation list --limit 1 hello
+wsk activation list --limit 1 hello
   ```
   {: pre}
   
   ```
-  activations
+activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
   
   ```
-  wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
+wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
   ```
   {
-     "payload": "Hello, Donald from Washington, D.C."
+          "payload": "Hello, Donald from Washington, D.C."
   }
   ```
   {: screen}
 
   Wie Sie sehen, hat die Aktion 'hello' die Ereignisnutzdaten (payload) empfangen und die erwartete Zeichenfolge zurückgegeben.
 
-Sie können mehrere Regeln erstellen, die denselben Auslöser verschiedenen Aktionen zuordnen. Der Auslöser und die Aktion, aus denen eine Regel besteht, müssen sich in demselben Namensbereich befinden und dürfen nicht zu einem Paket gehören. Wenn Sie eine Aktion verwenden möchten, die zu einem Paket gehört, können Sie die Aktion in den Namensbereich kopieren; Beispiel: `wsk action create echo --copy /whisk.system/samples/echo`. 
-
+Sie können mehrere Regeln erstellen, die denselben Auslöser verschiedenen Aktionen zuordnen. Der Auslöser und die Aktion, aus denen eine Regel besteht, müssen sich in demselben Namensbereich befinden und dürfen nicht zu einem Paket gehören. Wenn Sie eine Aktion verwenden möchten, die zu einem Paket gehört, können Sie die Aktion in den Namensbereich kopieren. Beispiel: `wsk action create echo --copy /whisk.system/samples/echo`.

@@ -162,6 +162,7 @@ Die App muss das IBM SDK for Node.js-Buildpack verwenden. Angepasste Buildpacks 
 2. Legen Sie die Umgebungsvariable fest.  
 
     a. Fügen Sie in der Datei `manifest.yml` diese Variable hinzu:
+	
 	```
 	env:
       ENABLE_BLUEMIX_DEV_MODE: "true"

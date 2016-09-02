@@ -18,7 +18,7 @@ copyright:
 # Cenário: Desenvolvimento de ponta a ponta
 {: #ee}
 
-*Última atualização: 15 de junho de 2016*
+*Última atualização: 16 de agosto de 2016*
 {: .last-updated}
 
 É possível usar a interface com o usuário, a plataforma e uma
@@ -30,7 +30,7 @@ para iniciar.
 ## Inscrevendo-se
 {: #ee_start}
 
-Antes de iniciar, inscreva-se para um ID IBM a partir de [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/). Depois disso, efetue login no {{site.data.keyword.Bluemix_notm}} e
+Antes de iniciar, inscreva-se para um ID IBM em [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/). Depois disso, efetue login no {{site.data.keyword.Bluemix_notm}} e
 inicie sua avaliação grátis de 30 dias. O {{site.data.keyword.Bluemix_notm}} fornece
 um abono de 2 GB de memória de tempo de execução e 10 instâncias de serviço para sua
 avaliação grátis.
@@ -52,8 +52,11 @@ para menor latência de rede, privacidade de dados e melhor disponibilidade. Con
 
 Para este cenário, você deseja desenvolver um app da web usando Node.js. Suponha que você esteja nos EUA e a maioria dos usuários do app também esteja
 nos EUA. Você decide construir e executar o app próximo da base do
-usuário, para se beneficiar da latência de rede inferior. Após a criação de log no {{site.data.keyword.Bluemix_notm}}, clique no ícone **Conta e suporte**
-![ícone Conta e suporte](../admin/images/account_support.svg) e, em seguida, selecione a região **Sul dos EUA**. É possível, então, executar as
+usuário, para se beneficiar da latência de rede inferior. Depois de efetuar login no
+{{site.data.keyword.Bluemix_notm}}, clique no ícone
+**{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) e, em seguida,
+selecione a região **Sul dos EUA**. É possível, então, executar as
 etapas a seguir para criar um app:
 
   1. Selecione **Calcular**.
@@ -250,7 +253,7 @@ informações, conforme a seguir:
   ```
   if (process.env.VCAP_SERVICES) {
         var env = JSON.parse(process.env.VCAP_SERVICES);
-        var cloudant = env['"cloudantNoSQLDB'][0].credentials;
+        var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
                 "username" : "user1",

@@ -16,9 +16,9 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Für {{site.data.keyword.openwhisk_short}} eingerichtete Services verwenden 
+# {{site.data.keyword.Bluemix_notm}}-Services für {{site.data.keyword.openwhisk_short}} verwenden
 {: #openwhisk_ecosystem}
-*Letzte Aktualisierung: 28. März 2016*
+Letzte Aktualisierung: 4. August 2016
 {: .last-updated}
 
 In {{site.data.keyword.openwhisk}} stellt ein Katalog von Paketen eine einfache Methode bereit, um Ihre App mit nützlichen Funktionen zu erweitern und um auf externe Services im direkten Geschäftsumfeld ('Ökosystem') zuzugreifen. Zu den externen Services, die für {{site.data.keyword.openwhisk_short}} eingerichtet sind, gehören zum Beispiel Cloudant, The Weather Company, Slack und GitHub.
@@ -42,6 +42,7 @@ Das Paket `/whisk.system/cloudant` ermöglicht Ihnen die Arbeit mit einer Clouda
 In den folgenden Abschnitten werden die Einrichtung einer Cloudant-Datenbank, die Konfiguration eines zugeordneten Pakets sowie die Verwendung der Aktionen und Feeds im Paket `/whisk.system/cloudant` schrittweise erläutert.
 
 ### Cloudant-Datenbank in {{site.data.keyword.Bluemix_notm}} einrichten
+{: #openwhisk_catalog_cloudant_in}
 
 Wenn Sie {{site.data.keyword.openwhisk_short}} aus {{site.data.keyword.Bluemix}} verwenden, erstellt {{site.data.keyword.openwhisk_short}} automatisch Paketbindungen für Ihre {{site.data.keyword.Bluemix_notm}}-Cloudant-Serviceinstanzen. Verwenden Sie {{site.data.keyword.openwhisk_short}} und Cloudant aus {{site.data.keyword.Bluemix_notm}} nicht, fahren Sie mit dem nächsten Schritt fort.
 
@@ -61,7 +62,7 @@ Wenn Sie {{site.data.keyword.openwhisk_short}} aus {{site.data.keyword.Bluemix}}
 3. Aktualisieren Sie die Pakete in Ihrem Namensbereich. Die Aktualisierung erstellt automatisch eine Paketbindung für die Cloudant-Serviceinstanz, die Sie erstellt haben.
 
   ```
-  wsk package refresh
+wsk package refresh
   ```
   {: pre}
   ```
@@ -71,7 +72,7 @@ Wenn Sie {{site.data.keyword.openwhisk_short}} aus {{site.data.keyword.Bluemix}}
   {: screen}
 
   ```
-  wsk package list
+wsk package list
   ```
   {: pre}
   ```
@@ -80,7 +81,7 @@ Wenn Sie {{site.data.keyword.openwhisk_short}} aus {{site.data.keyword.Bluemix}}
   ```
   {: screen}
 
-  Es sollte der vollständig qualifizierte Name der Paketbindung angezeigt werden, die Ihrer {{site.data.keyword.Bluemix_notm}}-Cloudant-Serviceinstanz entspricht.
+  Es wird der vollständig qualifizierte Name der Paketbindung angezeigt, die Ihrer {{site.data.keyword.Bluemix_notm}}-Cloudant-Serviceinstanz entspricht.
 
 4. Prüfen Sie, ob die zuvor erstellte Paketbindung mit dem Host und den Berechtigungsnachweisen für Ihre {{site.data.keyword.Bluemix_notm}}-Cloudant-Serviceinstanz konfiguriert ist.
 
@@ -110,45 +111,47 @@ Wenn Sie {{site.data.keyword.openwhisk_short}} aus {{site.data.keyword.Bluemix}}
   {: screen}
 
 ### Cloudant-Datenbank außerhalb von {{site.data.keyword.Bluemix_notm}} einrichten
+{: #openwhisk_catalog_cloudant_outside}
 
 Wenn Sie {{site.data.keyword.openwhisk_short}} in {{site.data.keyword.Bluemix_notm}} nicht verwenden oder wenn Sie Ihre Cloudant-Datenbank außerhalb von {{site.data.keyword.Bluemix_notm}} einrichten möchten, müssen Sie manuell eine Paketbindung für Ihr Cloudant-Konto erstellen. Sie benötigen den Hostnamen, den Benutzernamen und das Kennwort des Cloudant-Kontos.
 
 1. Erstellen Sie eine Paketbindung, die für Ihr Cloudant-Konto konfiguriert ist.
 
   ```
-  wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
   ```
   {: pre}
 
 2. Prüfen Sie, ob die Paketbindung vorhanden ist.
 
   ```
-  wsk package list
+wsk package list
   ```
   {: pre}
   ```
-  packages
+packages
   /myNamespace/myCloudant private binding
   ```
   {: screen}
 
 
 ### Änderungen an einer Cloudant-Datenbank empfangen
+{: #openwhisk_catalog_cloudant_listen}
 
-Mit dem Feed `changes` können Sie einen Service konfigurieren, der bei jeder Änderung an Ihrer Cloudant-Datenbank einen Auslöser aktiviert. Die folgenden Parameter sind verfügbar:
+Mit dem Feed `changes` können Sie einen Service konfigurieren, der bei jeder Änderung an Ihrer Cloudant-Datenbank einen Auslöser aktiviert.Die folgenden Parameter sind verfügbar:
 
 - `dbname`: Name der Cloudant-Datenbank. 
 - `includeDoc`: Wenn der Parameter den Wert 'true' hat, enthält jedes Auslöserereignis, das aktiviert wird, das geänderte Cloudant-Dokument.  
-- `maxTriggers`: Stoppt die Aktivierung von Auslösern, wenn dieser Grenzwert erreicht wird. Standardwert: 1000. Als Maximalwert kann 10.000 eingestellt werden. Wenn Sie versuchen, einen höheren Wert einzustellen, wird die Anforderung abgelehnt. 
+- `maxTriggers`: Stoppt die Aktivierung von Auslösern, wenn dieser Grenzwert erreicht wird. Standardwert: 1000.Als Maximalwert kann 10.000 eingestellt werden. Wenn Sie versuchen, einen höheren Wert einzustellen, wird die Anforderung abgelehnt. 
 
 1. Erstellen Sie einen Auslöser mit dem Feed `changes` in der Paketbindung, die Sie zuvor erstellt haben. Stellen Sie sicher, dass Sie `/myNamespace/myCloudant` durch Ihren Paketnamen ersetzen.
 
   ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
+wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
   ```
   {: pre}
   ```
-  ok: created trigger feed myCloudantTrigger
+ok: created trigger feed myCloudantTrigger
   ```
   {: screen}
 
@@ -163,7 +166,7 @@ Mit dem Feed `changes` können Sie einen Service konfigurieren, der bei jeder Ä
 
 4. Beobachten Sie die neuen Aktivierungen für den Auslöser `myCloudantTrigger` für jede Dokumentänderung.
 
-**Hinweis:** Wenn Sie keine neuen Aktivierungen beobachten können, lesen Sie die nachfolgenden Abschnitte über das Lesen und Schreiben in einer Cloudant-Datenbank. Durch Testen der nachfolgenden Schritte zum Lesen und Schreiben können Sie prüfen, ob Ihre Cloudant-Berechtigungsnachweise korrekt sind. 
+**Hinweis:** Wenn Sie keine neuen Aktivierungen beobachten können, lesen Sie die nachfolgenden Abschnitte über das Lesen und Schreiben in einer Cloudant-Datenbank. Durch Testen der nachfolgenden Schritte zum Lesen und Schreiben können Sie prüfen, ob Ihre Cloudant-Berechtigungsnachweise korrekt sind.
 
 Sie können jetzt Regeln erstellen und diese Aktionen zuordnen, um auf die Dokumentaktualisierungen zu reagieren.
 
@@ -171,7 +174,7 @@ Der Inhalt der generierten Ereignisse hängt vom Wert des Parameters `includeDoc
 
   ```
   {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
+        "_id": "6ca436c44074c4c2aa6a40c9a188b348",
     "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
     "name": "Heisenberg"
   }
@@ -190,7 +193,7 @@ Die JSON-Darstellung des Auslöserereignisses sieht wie folgt aus:
 
   ```
   {
-      "id": "6ca436c44074c4c2aa6a40c9a188b348",
+            "id": "6ca436c44074c4c2aa6a40c9a188b348",
       "seq": "2-g1AAAAL9aJyV-GJCaEuqx4-BktQkYp_dmIfC",
       "changes": [
           {
@@ -202,19 +205,20 @@ Die JSON-Darstellung des Auslöserereignisses sieht wie folgt aus:
 
 
 ### In eine Cloudant-Datenbank schreiben
+{: #openwhisk_catalog_cloudant_write}
 
 Sie können eine Aktion verwenden, um ein Dokument in einer Cloudant-Datenbank mit dem Namen `testdb` speichern. Stellen Sie sicher, dass diese Datenbank in Ihrem Cloudant-Konto vorhanden ist.
 
 1. Speichern Sie ein Dokument mit der Aktion `write` in der Paketbindung, die Sie zuvor erstellt haben. Stellen Sie sicher, dass Sie `/myNamespace/myCloudant` durch Ihren Paketnamen ersetzen.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
   ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
-    "id": "heisenberg",
+        "id": "heisenberg",
     "ok": true,
     "rev": "1-9a94fb93abc88d8863781a248f63c8c3"
   }
@@ -227,18 +231,19 @@ Sie können eine Aktion verwenden, um ein Dokument in einer Cloudant-Datenbank m
 
 
 ### Aus einer Cloudant-Datenbank lesen
+{: #openwhisk_catalog_cloudant_read}
 
 Sie können eine Aktion verwenden, um ein Dokument aus einer Cloudant-Datenbank mit dem Namen `testdb` abzurufen. Stellen Sie sicher, dass diese Datenbank in Ihrem Cloudant-Konto vorhanden ist.
 
 1. Rufen Sie ein Dokument mit der Aktion `read` in der Paketbindung ab, die Sie zuvor erstellt haben. Stellen Sie sicher, dass Sie `/myNamespace/myCloudant` durch Ihren Paketnamen ersetzen.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
   ```
   {: pre}
   ```
   {
-    "_id": "heisenberg",
+        "_id": "heisenberg",
     "_rev": "1-9a94fb93abc88d8863781a248f63c8c3"
     "name": "Walter White"
   }
@@ -249,7 +254,7 @@ Sie können eine Aktion verwenden, um ein Dokument aus einer Cloudant-Datenbank 
 ## Paket für Alarme verwenden
 {: #openwhisk_catalog_alarm}
 
-Das Paket `/whisk.system/alarms` kann verwendet werden, um Auslöser in einer angegebenen Häufigkeit zu aktivieren. Dies ist nützlich, um sich wiederholende Jobs oder Tasks einzurichten, wie zum Beispiel das stündliche Aufrufen einer Systemsicherungsaktion.
+Das Paket `/whisk.system/alarms` kann verwendet werden, um einen Auslöser in einer angegebenen Häufigkeit zu aktivieren. Dies ist nützlich, um sich wiederholende Jobs oder Tasks einzurichten, wie zum Beispiel das stündliche Aufrufen einer Systemsicherungsaktion.
 
 Das Paket enthält den folgenden Feed.
 
@@ -260,10 +265,11 @@ Das Paket enthält den folgenden Feed.
 
 
 ### Auslöserereignis regelmäßig aktivieren
+{: #openwhisk_catalog_alarm_fire}
 
 Der Feed `/whisk.system/alarms/alarm` konfiguriert den Alarm-Service so, dass er ein Auslöserereignis mit einer angegebenen Häufigkeit aktiviert. Die folgenden Parameter sind verfügbar:
 
-- `cron`: Eine Zeichenfolge auf der Basis der Unix-Syntax 'crontab', die angibt, wann der Auslöser zu aktivieren ist (angegebenen in koordinierter Weltzeit, UTC). Die Zeichenfolge besteht aus einer Reihe von sechs durch Leerzeichen getrennten Feldern: `X X X X X X `. Weitere Informationen zur Verwendung der cron-Syntax finden Sie in https://github.com/ncb000gt/node-cron. Beispiele für die von der Zeichenfolge angegebenen Häufigkeit:
+- `cron`: Eine Zeichenfolge auf der Basis der UNIX-Syntax 'crontab', die angibt, wann der Auslöser zu aktivieren ist (angegeben in koordinierter Weltzeit, UTC). Die Zeichenfolge besteht aus einer Reihe von sechs durch Leerzeichen getrennten Feldern: `X X X X X X `. Weitere Informationen zur Verwendung der cron-Syntax finden Sie in https://github.com/ncb000gt/node-cron. Beispiele für die von der Zeichenfolge angegebenen Häufigkeit:
 
   - `* * * * * *`: jede Sekunde
   - `0 * * * * *`: zu Beginn jeder Minute
@@ -272,7 +278,7 @@ Der Feed `/whisk.system/alarms/alarm` konfiguriert den Alarm-Service so, dass er
 
 - `trigger_payload`: Der Wert dieses Parameters wird jedes Mal zum Inhalt des Auslösers, wenn der Auslöser aktiviert wird.
 
-- `maxTriggers`: Stoppt die Aktivierung von Auslösern, wenn dieser Grenzwert erreicht wird. Standardwert: 1000. Als Maximalwert kann 10.000 eingestellt werden. Wenn Sie versuchen, einen höheren Wert einzustellen, wird die Anforderung abgelehnt. 
+- `maxTriggers`: Stoppt die Aktivierung von Auslösern, wenn dieser Grenzwert erreicht wird. Standardwert: 1000.Als Maximalwert kann 10.000 eingestellt werden. Wenn Sie versuchen, einen höheren Wert einzustellen, wird die Anforderung abgelehnt. 
 
 Das folgende Beispiel zeigt, wie ein Auslöser erstellt wird, der einmal alle 20 Sekunden aktiviert wird, wobei das Auslöserereignis die Werte für `name` und `place` enthält.
 
@@ -287,22 +293,24 @@ Jedes generierte Ereignis enthält die im Wert von `trigger_payload` angegebenen
 ## Weather-Paket verwenden
 {: #openwhisk_catalog_weather}
 
-Das Paket `/whisk.system/weather` bietet eine komfortable Methode zum Aufrufen der IBM Weather Insights-API.
+Das Paket `/whisk.system/weather` bietet eine komfortable Methode zum Aufrufen der Weather Company Data for IBM Bluemix-API.
 
 Das Paket enthält die folgende Aktion.
 
 | Entität | Typ | Parameter | Beschreibung |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | Paket | apiKey | Services der IBM Weather Insights-API  |
-| `/whisk.system/weather/forecast` | Aktion | apiKey, latitude, longitude, timePeriod | Vorhersage für angegebenen Zeitraum|
+| `/whisk.system/weather` | Paket | username, password | Services der Weather Company Data for IBM Bluemix-API  |
+| `/whisk.system/weather/forecast` | Aktion | latitude, longitude, timePeriod | Vorhersage für angegebenen Zeitraum|
 
-Obgleich dies nicht erforderlich ist, wird empfohlen, eine Paketbindung mit dem Wert `apiKey` zu erstellen. Auf diese Weise brauchen Sie den Schlüssel nicht jedes Mal anzugeben, wenn Sie die Aktionen im Paket aufrufen.
+Es wird empfohlen, eine Paketbindung mit den Werten `username` und `password` zu erstellen. Auf diese Weise brauchen Sie die Berechtigungsnachweise nicht jedes Mal anzugeben, wenn Sie die Aktionen im Paket aufrufen.
 
 ### Wettervorhersage für einen Standort abrufen
+{: #openwhisk_catalog_weather_forecast}
 
 Die Aktion `/whisk.system/weather/forecast` gibt eine Wettervorhersage für einen Standort durch einen Aufruf der API für The Weather Company zurück. Die folgenden Parameter sind verfügbar:
 
-- `apiKey`: Ein API-Schlüssel für The Weather Company, der berechtigt ist, die API für die Vorhersage aufzurufen.
+- `username`: Der Benutzername für Weather Company Data for IBM Bluemix, der berechtigt ist, die API für die Vorhersage aufzurufen.
+- `password`: Das Kennwort für Weather Company Data for IBM Bluemix, das berechtigt ist, die API für die Vorhersage aufzurufen.
 - `latitude`: Die Breitengradkoordinate des Standorts.
 - `longitude`: Die Längengradkoordinate des Standorts.
 - `timeperiod`: Der Zeitraum für die Vorhersage. Gültige Optionen: '10day' (Standardwert) - Gibt eine tägliche 10-Tage-Vorhersage zurück. '24hour' - Gibt eine stündliche 2-Tage-Vorhersage zurück. 'current' - Gibt die aktuellen Wetterbedingungenzurück. 'timeseries' - Gibt die aktuellen Wetterbeobachtungen und bis zu 24 Stunden zurückliegende Beobachtungen ab dem aktuellen Zeitpunkt (Datum und Uhrzeit) zurück. 
@@ -313,20 +321,20 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und den anschließ
 1. Erstellen Sie eine Paketbindung mit Ihrem API-Schlüssel.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
   ```
   {: pre}
 
 2. Rufen Sie die Aktion `forecast` in Ihrer Paketbindung auf, um die Wettervorhersage abzurufen.
 
   ```
-  wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
   ```
   {: pre}
 
   ```
   {
-      "forecasts": [
+            "forecasts": [
           {
               "dow": "Wednesday",
               "max_temp": -1,
@@ -364,15 +372,16 @@ Das Paket enthält die folgenden Aktionen.
 | `/whisk.system/watson/speechToText` | Aktion | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Umsetzung von Sprache in Text |
 | `/whisk.system/watson/textToSpeech` | Aktion | payload, voice, accept, encoding, username, password | Umsetzung von Text in Sprache |
 
-Obgleich dies nicht erforderlich ist, wird empfohlen, eine Paketbindung mit den Werten `username` und `password` zu erstellen. Auf diese Weise brauchen Sie diese Berechtigungsnachweise nicht jedes Mal anzugeben, wenn Sie die Aktionen im Paket aufrufen.
+Es wird empfohlen, eine Paketbindung mit den Werten `username` und `password` zu erstellen. Auf diese Weise brauchen Sie diese Berechtigungsnachweise nicht jedes Mal anzugeben, wenn Sie die Aktionen im Paket aufrufen.
 
 ### Text übersetzen
+{: #openwhisk_catalog_watson_translate}
 
 Die Aktion `/whisk.system/watson/translate` übersetzt Text aus einer Sprache in eine andere. Die folgenden Parameter sind verfügbar:
 
 - `username`: Der Benutzername für die Watson-API.
 - `password`: Das Kennwort für die Watson-API.
-- `translateParam`: Der zu übersetzende Eingabeparameter. Beispiel: Wenn `translateParam=payload` angegeben wird, wird der Wert des Parameters `payload`, der an die Aktion übergeben wird, übersetzt.
+- `translateParam`: Der Eingabeparameter, der den zu übersetzenden Text angibt. Beispiel: Wenn `translateParam=payload` angegeben wird, wird der Wert des Parameters `payload`, der an die Aktion übergeben wird, übersetzt.
 - `translateFrom`: Ein zweistelliger Code für die Ausgangssprache.
 - `translateTo`: Ein zweistelliger Code für die Zielsprache.
 
@@ -381,26 +390,27 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Übersetzu
 1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
 
   ```
-  wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
   ```
   {: pre}
 
 2. Rufen Sie die Aktion `translate` in Ihrer Paketbindung auf, um einen Text aus dem Englischen ins Französische zu übersetzen.
 
   ```
-  wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
   ```
   {: pre}
 
   ```
   {
-      "payload": "Ciel bleu a venir"
+            "payload": "Ciel bleu a venir"
   }
   ```
   {: screen}
 
 
 ### Sprache eines Texts ermitteln
+{: #openwhisk_catalog_watson_identifylang}
 
 Die Aktion `/whisk.system/watson/languageId` ermittelt die Sprache eines Texts. Die folgenden Parameter sind verfügbar:
 
@@ -413,19 +423,19 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Ermittlung
 1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
   ```
   {: pre}
 
 2. Rufen Sie die Aktion `languageId` in Ihrer Paketbindung auf, um die Sprache zu ermitteln.
 
   ```
-  wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
   ```
   {: pre}
   ```
   {
-    "payload": "Ciel bleu a venir",
+        "payload": "Ciel bleu a venir",
     "language": "fr",
     "confidence": 0.710906
   }
@@ -434,6 +444,7 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Ermittlung
 
 
 ### Umsetzung von Text in Sprache
+{: #openwhisk_catalog_watson_texttospeech}
 
 Mit der Aktion `/whisk.system/watson/textToSpeech` kann Text in Sprache umgesetzt werden. Die folgenden Parameter sind verfügbar:
 
@@ -449,25 +460,26 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Umsetzung 
 1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
   ```
   {: pre}
 
 2. Rufen Sie die Aktion `textToSpeech` in Ihrer Paketbindung auf, um den Text umzusetzen.
 
   ```
-  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
   {
-    "payload": "<base64 encoding of a .wav file>"
+        "payload": "<base64 encoding of a .wav file>"
   }
   ```
   {: screen}
 
 
 ### Umsetzung von Sprache in Text
+{: #openwhisk_catalog_watson_speechtotext}
 
 Mit der Aktion `/whisk.system/watson/speechToText` kann Sprache in Text umgesetzt werden. Die folgenden Parameter sind verfügbar:
 
@@ -494,7 +506,7 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Umsetzung 
 1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
   ```
   {: pre}
 
@@ -506,7 +518,7 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Umsetzung 
   {: pre}
   ```
   {
-    "data": "Hello Watson"
+        "data": "Hello Watson"
   }
   ```
   {: screen}
@@ -524,9 +536,10 @@ Das Paket enthält die folgenden Aktionen:
 | `/whisk.system/slack` | Paket | url, channel, username | Interaktion mit der Slack-API |
 | `/whisk.system/slack/post` | Aktion | text, url, channel, username | Senden einer Nachricht an einen Slack-Kanal |
 
-Obgleich dies nicht erforderlich ist, wird empfohlen, eine Paketbindung mit den Werten `username`, `url` und 'channel' zu erstellen. Mit der Bindung brauchen Sie die Werte nicht jedes Mal anzugeben, wenn Sie die Aktion im Paket aufrufen.
+Es wird empfohlen, eine Paketbindung mit den Werten `username`, `url` und `channel` zu erstellen. Mit der Bindung brauchen Sie die Werte nicht jedes Mal anzugeben, wenn Sie die Aktion im Paket aufrufen.
 
 ### Nachricht an einen Slack-Kanal senden
+{: #openwhisk_catalog_slack_post}
 
 Die Aktion `/whisk.system/slack/post` sendet eine Nachricht an einen angegebenen Slack-Kanal. Die folgenden Parameter sind verfügbar:
 
@@ -539,19 +552,19 @@ Das folgende Beispiel zeigt die Konfiguration von Slack, die Erstellung einer Pa
 
 1. Konfigurieren Sie für Ihr Team einen [eingehenden Web-Hook](https://api.slack.com/incoming-webhooks) für Slack.
 
-  Nach der Konfiguration von Slack sollten Sie eine Web-Hook-URL erhalten, die ungefähr wie folgt aussieht: `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`. Sie benötigen diese im nächsten Schritt.
+  Nach der Konfiguration von Slack erhalten Sie eine Web-Hook-URL, die ungefähr wie folgt aussieht: `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`. Sie benötigen diese im nächsten Schritt.
 
 2. Erstellen Sie eine Paketbindung mit Ihren Slack-Berechtigungsnachweisen, mit dem Kanal, an den gesendet werden soll, sowie mit dem Benutzernamen, unter dem gesendet werden soll.
 
   ```
-  wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
   ```
   {: pre}
 
 3. Rufen Sie die Aktion `post` in Ihrer Paketbindung auf, um eine Nachricht an Ihren Slack-Kanal zu senden.
 
   ```
-  wsk action invoke mySlack/post --blocking --result --param text 'Hallo von OpenWhisk!'
+wsk action invoke mySlack/post --blocking --result --param text 'Hallo von OpenWhisk!'
   ```
   {: pre}
 
@@ -568,9 +581,10 @@ Das Paket enthält den folgenden Feed:
 | `/whisk.system/github` | Paket | username, repository, accessToken | Interaktion mit der GitHub-API |
 | `/whisk.system/github/webhook` | Feed | events, username, repository, accessToken | Aktivieren von Auslöserereignissen für GitHub-Aktivitäten |
 
-Obgleich dies nicht erforderlich ist, wird empfohlen, eine Paketbindung mit den Werten `username`, `repository` und `accessToken` zu erstellen.  Mit der Bindung brauchen Sie die Werte nicht jedes Mal anzugeben, wenn Sie den Feed im Paket verwenden.
+Es wird empfohlen, eine Paketbindung mit den Werten `username`, `repository` und `accessToken` zu erstellen. Mit der Bindung brauchen Sie die Werte nicht jedes Mal anzugeben, wenn Sie den Feed im Paket verwenden.
 
 ### Auslöserereignis für GitHub-Aktivität aktivieren
+{: #openwhisk_catalog_github_fire}
 
 Der Feed `/whisk.system/github/webhook` konfiguriert einen Service so, dass ein Auslöser aktiviert wird, wenn eine Aktivität in einem angegebenen GitHub-Repository stattfindet. Die folgenden Parameter sind verfügbar:
 
@@ -588,18 +602,18 @@ Das folgende Beispiel zeigt, wie ein Auslöser erstellt wird, der jedes Mal akti
 2. Erstellen Sie eine Paketbindung, die für Ihr GitHub-Repository und mit Ihrem Zugriffstoken konfiguriert ist.
 
   ```
-  wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
+wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
   ```
   {: pre}
 
 3. Erstellen Sie einen Auslöser für den GitHub-Ereignistyp `push` unter Verwendung Ihres Feeds `myGit/webhook`.
 
   ```
-  wsk trigger create myGitTrigger --feed myGit/webhook --param events push
+wsk trigger create myGitTrigger --feed myGit/webhook --param events push
   ```
   {: pre}
 
-Ein Commit für ein Github-Repository über `git push` führt dazu, dass der Auslöser durch den Web-Hook ausgelöst wird. Falls eine Regel zutrifft, die mit dem Auslöser übereinstimmt, wird die zugeordnete Aktion aufgerufen. Von der Aktion werden die Nutzdaten für den Github-Web-Hook als Eingabeparameter empfangen. Jedes Github-Web-Hook-Ereignis weist ein ähnliches JSON-Schema und ein eindeutiges Nutzdatenobjekt auf, das vom jeweiligen Ereignistyp abhängt. Weitere Informationen zum Nutzdateninhalt finden Sie in der API-Dokumentation unter [Github-Ereignisse und -Nutzdaten](https://developer.github.com/v3/activity/events/types/). 
+Ein Commit für ein Github-Repository mithilfe von `git push` führt dazu, dass der Auslöser durch den Web-Hook ausgelöst wird. Falls eine Regel zutrifft, die mit dem Auslöser übereinstimmt, wird die zugeordnete Aktion aufgerufen. Von der Aktion werden die Nutzdaten für den GitHub-Web-Hook als Eingabeparameter empfangen. Jedes GitHub-Web-Hook-Ereignis weist ein ähnliches JSON-Schema und ein eindeutiges Nutzdatenobjekt auf, das vom jeweiligen Ereignistyp abhängt. Weitere Informationen zum Nutzdateninhalt finden Sie in der API-Dokumentation unter [GitHub-Ereignisse und -Nutzdaten](https://developer.github.com/v3/activity/events/types/). 
 
 
 ## Push-Paket verwenden
@@ -607,18 +621,19 @@ Ein Commit für ein Github-Repository über `git push` führt dazu, dass der Aus
 
 Das Paket `/whisk.system/pushnotifications` ermöglicht Ihnen die Arbeit mit einem Push-Service.  
 
-Das Paket enthält den folgenden Feed:
+Das Paket enthält die folgende Aktion und den folgenden Feed:
 
 | Entität | Typ | Parameter | Beschreibung |
 | --- | --- | --- | --- |
 | `/whisk.system/pushnotifications` | Paket | appId, appSecret  | Arbeit mit Push-Service |
-| `/whisk.system/pushnotifications/sendMessage` | Aktion | text, url, deviceIds, platforms, tagNames, apnsBadge, apnsCategory, apnsActionKeyTitle, apnsSound, apnsPayload, apnsType, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive | Push-Benachrichtigung an angegebene(s) Gerät(e) senden |
-| `/whisk.system/pushnotifications/webhook` | Feed | events | Löst Auslöserereignisse für Geräteaktivitäten ((Aufheben von) Registrierung / Abonnement für Gerät) für den Push-Service aus  |
-Obgleich dies nicht erforderlich ist, wird empfohlen, eine Paketbindung mit Werten für `appId` und `appSecret` zu erstellen. Auf diese Weise brauchen Sie diese Berechtigungsnachweise nicht jedes Mal anzugeben, wenn Sie die Aktionen im Paket aufrufen.
+| `/whisk.system/pushnotifications/sendMessage` | Aktion | text, url, deviceIds, platforms, tagNames, apnsBadge, apnsCategory, apnsActionKeyTitle, apnsSound, apnsPayload, apnsType, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive | Push-Benachrichtigung an mindestens ein angegebenes Gerät senden |
+| `/whisk.system/pushnotifications/webhook` | Feed | events | Löst Auslöserereignisse für Geräteaktivitäten (Registrierung des Geräts, Rücknahme der Registrierung, Abonnement für Gerät, Beendigung des Abonnements) für den Push-Service aus  |
+Es wird empfohlen, eine Paketbindung mit den Werten `appId` und `appSecret` zu erstellen. Auf diese Weise brauchen Sie diese Berechtigungsnachweise nicht jedes Mal anzugeben, wenn Sie die Aktionen im Paket aufrufen.
 
-### IBM Push Notifications-Paket konfigurieren
+### Push-Paketbindung erstellen
+{: #openwhisk_catalog_pushnotifications_create}
 
-Beim Erstellen eines IBM Push Notifications-Pakets müssen Sie Werte für die beiden folgenden Parameter angeben: 
+Bei der Erstellung einer Paketbindung für Push-Benachrichtigungen müssen Sie die folgenden Parameter angeben.
 
 -  `appId`: Die GUID für die Bluemix-App. 
 -  `appSecret`: Der geheime Schlüssel des Bluemix Push-Benachrichtigungsservice. 
@@ -629,7 +644,7 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung.
 
 2. Initialisieren Sie den Push-Benachrichtigungsservice und binden Sie den Service an die Bluemix-Anwendung. 
 
-3. Konfigurieren Sie die [IBM Push Notifications-Anwendung](https://console.ng.bluemix.net/docs/services/mobilepush/index.html). 
+3. Konfigurieren Sie die [Push Notifications-Anwendung](https://console.ng.bluemix.net/docs/services/mobilepush/index.html). 
 
   Notieren Sie sich die Werte für `App GUID` und `App Secret` der von Ihnen erstellten Bluemix-App. 
 
@@ -644,7 +659,7 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung.
 5. Prüfen Sie, ob die Paketbindung vorhanden ist.
 
   ```
-  wsk package list
+wsk package list
   ```
   {: pre}
 
@@ -655,22 +670,23 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung.
   {: screen}
 
 ### Push-Benachrichtigungen senden
+{: #openwhisk_catalog_pushnotifications_send}
 
 Von der Aktion `/whisk.system/pushnotifications/sendMessage` werden Push-Benachrichtigungen an registrierte Geräte gesendet. Die folgenden Parameter sind verfügbar:
-- `text` - Die Benachrichtigung, die dem Benutzer angezeigt wird. Beispiel: -p text "Hallo ,{{site.data.keyword.openwhisk}} sendet eine Benachrichtigung". 
-- `url`: Eine optionale URL, die zusammen mit einem Alert gesendet werden kann. Beispiel: -p url "https:\\www.w3.ibm.com". 
-- `gcmPayload` - Angepasste JSON-Nutzdaten, die als Bestandteil einer Benachrichtigung gesendet werden. Beispiel: -p gcmPayload "{"hi":"hallo"}"
-- `gcmSound` - Die Audiodatei (auf einem Gerät), die abgespielt werden soll, wenn die Benachrichtigung vom Gerät empfangen wird. 
-- `gcmCollapseKey` - Dieser Parameter gibt eine Gruppe aus Nachrichten an. 
-- `gcmDelayWhileIdle` - Wenn für diesen Parameter der Wert 'true' festgelegt wird, gibt dies an, dass die Nachricht erst gesendet werden darf, wenn das Gerät aktiv wird. 
-- `gcmPriority` - Legt die Priorität der Nachricht fest. 
-- `gcmTimeToLive` - Dieser Parameter gibt an, wie lange (in Sekunden) die nachricht im GCM-Speicher aufbewahrt werden soll, wenn das Gerät offline ist. 
-- `apnsBadge` - Die Nummer, die als Markierung des Anwendungssymbols angezeigt werden soll. 
-- `apnsCategory` - Die Kategoriekennung, die für interaktive Push-Benachrichtigungen verwendet werden soll. 
-- `apnsIosActionKey` - Der Titel für den Aktionsschlüssel. 
-- `apnsPayload` - Angepasste JSON-Nutzdaten, die als Bestandteil einer Benachrichtigung gesendet werden. 
-- `apnsType` - ['DEFAULT', 'MIXED', 'SILENT']. 
-- `apnsSound` - Der Name der Audiodatei im Anwendungsbundle. Die Tonsignale dieser Datei werden als Alert abgespielt. 
+- `text`: Die Benachrichtigung, die dem Benutzer angezeigt wird. Beispiel: `-p text "Hallo, OpenWhisk sendet eine Benachrichtigung"`.
+- `url`: Eine optionale URL, die zusammen mit einem Alert gesendet werden kann. Beispiel: `-p url "https:\\www.w3.ibm.com"`.
+- `gcmPayload`: Angepasste JSON-Nutzdaten, die als Bestandteil einer Benachrichtigung gesendet werden. Beispiel: `-p gcmPayload "{"hi":"hallo"}"`
+- `gcmSound`: Die Audiodatei (auf einem Gerät), die abgespielt werden soll, wenn die Benachrichtigung vom Gerät empfangen wird. 
+- `gcmCollapseKey`: Dieser Parameter gibt eine Gruppe aus Nachrichten an. 
+- `gcmDelayWhileIdle`: Wenn für diesen Parameter der Wert 'true' festgelegt wird, gibt dies an, dass die Nachricht erst gesendet werden darf, wenn das Gerät aktiv wird. 
+- `gcmPriority`: Legt die Priorität der Nachricht fest. 
+- `gcmTimeToLive`: Dieser Parameter gibt an, wie lange (in Sekunden) die Nachricht im GCM-Speicher aufbewahrt wird, wenn das Gerät offline ist. 
+- `apnsBadge`: Die Nummer, die als Markierung des Anwendungssymbols angezeigt werden soll. 
+- `apnsCategory`: Die Kategoriekennung, die für interaktive Push-Benachrichtigungen verwendet werden soll. 
+- `apnsIosActionKey`: Der Titel für den Aktionsschlüssel. 
+- `apnsPayload`: Angepasste JSON-Nutzdaten, die als Bestandteil einer Benachrichtigung gesendet werden. 
+- `apnsType`: ['DEFAULT', 'MIXED', 'SILENT']. 
+- `apnsSound`: Der Name der Audiodatei im Anwendungsbundle. Die Tonsignale dieser Datei werden als Alert abgespielt. 
 
 Nachfolgend ein Beispiel für das Senden einer Push-Benachrichtigung von einem Push Notifications-Paket. 
 
@@ -683,8 +699,8 @@ Nachfolgend ein Beispiel für das Senden einer Push-Benachrichtigung von einem P
 
   ```
   {
-  "result": {
-  "pushResponse": "{"messageId":"11111H","message":{"message":{"alert":"this is my message","url":"http.google.com"},"settings":{"apns":{"sound":"default"},"gcm":{"sound":"default"},"target":{"deviceIds":["T1","T2"]}}}"
+        "result": {
+          "pushResponse": "{"messageId":"11111H","message":{"message":{"alert":"this is my message","url":"http.google.com"},"settings":{"apns":{"sound":"default"},"gcm":{"sound":"default"},"target":{"deviceIds":["T1","T2"]}}}"
   },
       "status": "success",
       "success": true
@@ -692,26 +708,27 @@ Nachfolgend ein Beispiel für das Senden einer Push-Benachrichtigung von einem P
   ```
   {: screen}
 
-### Auslöserereignis für Aktivität des IBM Push Notifications-Service aktivieren
+### Auslöserereignis für Push-Aktivität aktivieren
+{: #openwhisk_catalog_pushnotifications_fire}
 
-Von `/whisk.system/pushnotifications/webhook` wird der IBM Push Notifications-Service so konfiguriert, dass ein Auslöser aktiviert wird, wenn eine Gerätaktivität wie eine Geräteregistrierung bzw. die Rücknahme einer Gerätregistrierung oder ein Abonnement bzw. das Beenden eines Abonnements für eine angegebene Anwendung auftritt. 
+Von `/whisk.system/pushnotifications/webhook` wird der Push-Service so konfiguriert, dass ein Auslöser aktiviert wird, wenn eine Gerätaktivität wie eine Geräteregistrierung bzw. die Rücknahme einer Gerätregistrierung oder ein Abonnement bzw. das Beenden eines Abonnements für eine angegebene Anwendung auftritt. 
 
 Die folgenden Parameter sind verfügbar:
 
-- `appId:` Der geheime Schlüssel des Bluemix Push-Benachrichtigungsservice. 
-- `appSecret:` Die GUID für die Bluemix-App. 
+- `appId:` Die GUID für die Bluemix-App. 
+- `appSecret:` Der geheime Schlüssel des Push Notifications-Service von Bluemix.
 - `events:` Unterstützte Ereignisse sind `onDeviceRegister`, `onDeviceUnregister`, `onDeviceUpdate`, `onSubscribe` und `onUnsubscribe`. Wenn Sie bei allen Ereignissen benachrichtigt werden möchten, verwenden Sie das Platzhalterzeichen `*`. 
 
-Das folgende Beispiel zeigt, wie ein Auslöser erstellt wird, der jedes Mal aktiviert wird, wenn ein neues Gerät mit der IBM Push Notifications-Serviceanwendung registriert wird. 
+Das folgende Beispiel die Erstellung eines Auslösers, der jedes Mal aktiviert wird, wenn ein neues Gerät mit der Push Notifications-Serviceanwendung registriert wird. 
 
-1. Erstellen Sie eine Paketbindung, die für den IBM Push Notifications-Service (mit Werten für 'appId' und 'appSecret'). 
+1. Erstellen Sie eine Paketbindung, die für den Push Notifications-Service (mit Werten für 'appId' und 'appSecret') konfiguriert ist. 
 
   ```
   wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
   ```
   {: pre}
 
-2. Erstellen Sie mithilfe des Feeds `myPush/webhook` einen Auslöser für den Ereignistyp `onDeviceRegister` des IBM Push Notifications-Service. 
+2. Erstellen Sie mithilfe des Feeds `myPush/webhook` einen Auslöser für den Ereignistyp `onDeviceRegister` des Push Notifications-Service. 
 
   ```
   wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister

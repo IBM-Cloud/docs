@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-*Letzte Aktualisierung: 19. Mai 2016*
+Letzte Aktualisierung: 8. August 2016
 {: .last-updated}
 
 
@@ -163,7 +163,10 @@ Instanzen der App für den Empfang der Anforderung aus.
 ## Regionen
 {: #ov_intro_reg}
 
-Eine {{site.data.keyword.Bluemix_notm}}-Region ist ein definiertes geografisches Gebiet, in dem Sie Ihre Apps bereitstellen können. Sie können Apps und Serviceinstanzen in unterschiedlichen Regionen mit derselben {{site.data.keyword.Bluemix_notm}}-Infrastruktur für das Anwendungsmanagement und dieselbe Ansicht mit den Nutzungsdetails zur Gebührenabrechnung erstellen. Sie können die Region auswählen, die Ihren Kunden am nächsten ist, und Ihre
+Eine {{site.data.keyword.Bluemix_notm}}-Region ist ein definiertes geografisches Gebiet, in dem Sie Ihre Apps bereitstellen können. Sie können Apps und
+Serviceinstanzen in unterschiedlichen Regionen mit
+derselben {{site.data.keyword.Bluemix_notm}}-Infrastruktur
+für das Anwendungsmanagement und dieselbe Ansicht mit den Nutzungsdetails zur Gebührenabrechnung erstellen. Sie können die Region auswählen, die Ihren Kunden am nächsten ist, und Ihre
 Anwendungen in dieser Region bereitstellen, um so eine geringe Anwendungslatenz zu erreichen. Es ist auch möglich,
 die Region, in der Sie die Anwendungsdaten aufbewahren möchten, auszuwählen, um Sicherheitsproblemen
 Rechnung zu tragen. Wenn Sie Apps in mehreren Regionen erstellen, werden
@@ -172,7 +175,7 @@ sind für jede verwendete Region gleich.
 
 Wenn Sie mit der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle
 arbeiten, können Sie in eine andere Region wechseln, um mit den Bereichen
-in dieser Region zu arbeiten. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und erweitern Sie den Selektor **Region**. Anschließend können Sie in der Liste eine andere Region auswählen.
+in dieser Region zu arbeiten. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) und erweitern Sie den Selektor **Region**. Anschließend können Sie in der Liste eine andere Region auswählen.
 
 Wenn Sie mit der Befehlszeilenschnittstelle cf
 arbeiten, müssen Sie eine Verbindung zu der {{site.data.keyword.Bluemix_notm}}-Region
@@ -247,8 +250,7 @@ Durch die Integration eines System of Record in die App, die Sie in
 {{site.data.keyword.Bluemix_notm}} erstellen,
 können Sie die folgenden Aktionen durchführen:
 
- * Einrichten einer sicheren Kommunikation zwischen der App und der Back-End-Datenbank durch
-Herunterladen und Installation eines lokalen sicheren Connectors
+ * Einrichten einer sicheren Kommunikation zwischen der App und der Back-End-Datenbank durch Herunterladen und Installation eines lokalen sicheren Connectors
  * Aufrufen einer Datenbank mit einer sicheren Methode
  * Erstellen von APIs aus Integrationsflüssen mit Datenbanken und Back-End-Systemen wie z. B. einem System für Customer-Relationship-Management
  * Zugänglichmachen nur derjenigen Schemas und Tabellen, die Sie der App zugänglich machen wollen

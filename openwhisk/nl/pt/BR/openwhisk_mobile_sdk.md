@@ -13,7 +13,7 @@ copyright:
 
 # Usando o SDK móvel do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
-*Última atualização: 28 de março de 2016*
+Última atualização: 4 de agosto de 2016
 {: .last-updated}
 
 O {{site.data.keyword.openwhisk}} fornece um SDK móvel para dispositivos com iOS e watchOS 2 que permite que apps móveis disparem acionadores remotos e chamem ações remotas facilmente. Uma versão para Android não está atualmente disponível; os desenvolvedores para Android podem usar a API REST do {{site.data.keyword.openwhisk}} diretamente.
@@ -23,9 +23,11 @@ O SDK móvel é escrito em Swift 2.2 e suporta o iOS 9 e liberações posteriore
 
 ## Incluindo o SDK em seu app
 {: #openwhisk_add_sdk}
+
 É possível instalar o SDK móvel usando o CocoaPods, o Carthage ou a partir do diretório de origem.
 
 ### Instalando usando o CocoaPods 
+{: #openwhisk_add_sdk_cocoapods}
 
 O SDK do {{site.data.keyword.openwhisk_short}} para dispositivo móvel está disponível para distribuição pública por meio do CocoaPods. Supondo que o CocoaPods esteja instalado, coloque as linhas
 a seguir em um arquivo chamado 'Podfile' dentro do diretório de projeto do aplicativo iniciador. 
@@ -47,12 +49,15 @@ end
 ```
 {: codeblock}
 
-A partir da linha de comandos, digite `pod install`. Isso instalará o SDK para um app iOS com uma extensão watchOS 2.  Use o arquivo de área de trabalho que o CocoaPods cria para o seu
+A partir da linha de comandos, digite `pod install`. Esse comando
+instala o SDK para um app iOS com uma extensão watchOS 2. Use o arquivo de área de trabalho que o CocoaPods cria para o seu
 aplicativo para abrir o projeto no Xcode.
 
 ### Instalando usando o Carthage
+{: #openwhisk_add_sdk_carthage}
 
-Crie um arquivo no diretório de projeto de seu app e chame-o de 'Cartfile'. Coloque as linhas a seguir no Cartfile:
+Crie um arquivo no diretório de projeto do app e chame-o de 'Cartfile'. Coloque a
+linha a seguir no arquivo:
 ```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
@@ -63,12 +68,13 @@ A partir da linha de comandos, digite `carthage update --platform ios`. O Cartha
 Deve-se, então, incluir OpenWhisk.framework nas estruturas integradas em seu projeto Xcode
 
 ### Instalando a partir do código-fonte
+{: #openwhisk_add_sdk_source}
 
 O código-fonte está disponível em https://github.com/openwhisk/openwhisk-client-swift.git.
-Abra o projeto usando o `OpenWhisk.xcodeproj` usando Xcode.
-O projeto contém dois esquemas "OpenWhisk" e
-"OpenWhiskWatch", destinados para iOS e watchOS 2, respectivamente.
-Construa o projeto para os destinos que precisa e inclua as estruturas resultantes em seu app (geralmente, em ~/Library/Developer/Xcode/DerivedData/nome de seu app).
+Abra o projeto usando o `OpenWhisk.xcodeproj` que usa Xcode.
+O projeto contém dois esquemas: "OpenWhisk" (destinado ao iOS) e "OpenWhiskWatch" (destinado ao watchOS 2).
+Construa o projeto para os destinos que você precisa e inclua as estruturas resultantes em
+seu app (geralmente, em ~/Library/Developer/Xcode/DerivedData/nome de seu app).
 
 ## Instalando o exemplo do app iniciador
 {: #openwhisk_install_sdkstart}
@@ -81,7 +87,8 @@ wsk sdk install iOS
 ```
 {: pre}
 
-Isso fará download de um arquivo zip que contém o app iniciador. Dentro do diretório de projeto há um Podfile. 
+Esse comando faz download de um arquivo compactado que contém o app iniciador. Dentro
+do diretório de projeto está um podfile.   
 
 Para instalar o SDK, insira o comando a seguir:
 ```
@@ -92,7 +99,9 @@ pod install
 ## Introdução ao SDK
 {: #openwhisk_sdk_getstart}
 
-Para estar funcionando rapidamente, crie um objeto WhiskCredentials com suas credenciais da API do {{site.data.keyword.openwhisk_short}} e crie uma instância do {{site.data.keyword.openwhisk_short}} a partir disso.
+Para estar funcionando rapidamente, crie um objeto WhiskCredentials com suas
+credenciais de API do {{site.data.keyword.openwhisk_short}} e crie uma instância
+do {{site.data.keyword.openwhisk_short}} a partir do objeto.
 
 Por exemplo, no Swift 2.1, use o código de exemplo a seguir para criar um objeto de credenciais:
 
@@ -114,13 +123,16 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 ```
 {: screen}
 
-As sequências antes e depois dos dois pontos são sua chave e token, respectivamente.
+As sequências antes de dois-pontos é sua chave e a sequência após os dois-pontos é
+seu token.
 
 ## Chamando uma ação do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_sdk_invoke}
 
 
-Para chamar uma ação remota, é possível chamar `invokeAction` com o nome da ação. É possível especificar o namespace ao qual a ação pertence ou apenas deixá-lo em branco para aceitar o namespace padrão.  Use um dicionário para passar parâmetros para a ação conforme necessário.
+Para chamar uma ação remota, é possível chamar `invokeAction` com o nome da ação. É
+possível especificar o namespace ao qual a ação pertence ou apenas deixá-lo em branco
+para aceitar o namespace padrão. Use um dicionário para passar parâmetros para a ação conforme necessário.
 
 Por
 exemplo:
@@ -176,7 +188,8 @@ do {
 ```
 {: codeblock}
 
-No exemplo anterior, você está disparando um acionador chamado `locationChanged`.
+No exemplo anterior, você está disparando um acionador que é chamado
+`locationChanged`.
 
 ## Usando ações que retornam um resultado
 {: #openwhisk_sdk_actionresult}
@@ -222,8 +235,9 @@ whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
 
-Neste exemplo, use uma instalação em execução no localhost:8080.  Se
-você não especificar o baseUrl, o SDK móvel usará a instância em execução em https://openwhisk.ng.bluemix.net.
+Neste exemplo, use uma instalação em execução no localhost:8080. Se você não
+especificar a URL base, o SDK móvel usará a instância em execução em
+https://openwhisk.ng.bluemix.net.
 
 É possível passar um NSURLSession customizado caso requeira manipulação de rede especial. Por exemplo, você pode ter sua própria instalação do {{site.data.keyword.openwhisk_short}} que usa certificados autoassinados:
 
@@ -246,17 +260,22 @@ shared one whisk.urlSession = session
 {: codeblock}
 
 ### Suporte para nomes qualificados
+{: #openwhisk_sdk_configure_qual}
 
-Todas as ações e acionadores têm um nome completo composto por um namespace, um pacote e um nome de ação ou de acionador. O SDK pode aceitá-los como parâmetros ao chamar uma ação ou disparar um acionador. O SDK também fornece uma função que aceita um nome completo semelhante a `/mynamespace/mypackage/nameOfActionOrTrigger`. A sequência de nome qualificado suporta valores padrão não denominados para namespaces e pacotes que usuários do {{site.data.keyword.openwhisk_short}} têm, portanto, as regras de análise a seguir se aplicam:
+Todas as ações e acionadores têm um nome completo composto por um namespace, um pacote e um nome de ação ou de acionador. O
+SDK pode aceitar esses elementos como parâmetros quando você está chamando uma ação ou
+disparando um acionador. O SDK também fornece uma função que aceita um nome completo semelhante a `/mynamespace/mypackage/nameOfActionOrTrigger`. A sequência de nome qualificado suporta valores padrão não denominados para namespaces e pacotes que usuários do {{site.data.keyword.openwhisk_short}} têm, portanto, as regras de análise a seguir se aplicam:
 
 - qName = "foo" resulta em namespace = default, package = default, action/trrigger = "foo"
 - qName = "mypackage/foo" resulta em namespace = default, package = mypackage, action/trigger = "foo"
 - qName = "/mynamespace/foo" resulta em namespace = mynamespace, package = default, action/trigger = "foo"
 - qName = "/mynamespace/mypackage/foo resulta em namespace = mynamespace, package = mypackage, action/trigger = "foo"
 
-Todas as outras combinações emitem um erro WhiskError.QualifiedName. Portanto, ao usar nomes qualificados, deve-se agrupar a chamada em uma construção "`do/try/catch`".
+Todas as outras combinações emitem um erro WhiskError.QualifiedName. Portanto, ao
+usar nomes qualificados, deve-se agrupar a chamada em uma construção "`do/try/catch`".
 
 ### Botão do SDK
+{: #openwhisk_sdk_configure_button}
 
 Por conveniência, o SDK inclui um `WhiskButton`, que estende o `UIButton` para permitir que ele chame ações.  Para usar o `WhiskButton`, siga este exemplo:
 

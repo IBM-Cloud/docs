@@ -18,7 +18,7 @@ copyright:
 # Scénario : Développement de bout en bout
 {: #ee}
 
-*Dernière mise à jour : 15 juin 2016*
+*Dernière mise à jour : 16 août 2016*
 {: .last-updated}
 
 La plateforme et l'interface utilisateur {{site.data.keyword.Bluemix}}, ainsi qu'une sélection d'outils associés,
@@ -29,8 +29,7 @@ commencer.
 ## Inscription
 {: #ee_start}
 
-Avant de commencer, vous vous inscrivez pour obtenir un ID IBM sur
-[https://console.ng.bluemix.net/](https://console.ng.bluemix.net/). Ensuite, vous vous connectez à {{site.data.keyword.Bluemix_notm}} et commencez votre essai gratuit de 30 jours. {{site.data.keyword.Bluemix_notm}} fournit une franchise de 2 Go de mémoire d'exécution et 10 instances de
+Avant de commencer, vous vous inscrivez pour obtenir un IBMid sur [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/). Ensuite, vous vous connectez à {{site.data.keyword.Bluemix_notm}} et commencez votre essai gratuit de 30 jours. {{site.data.keyword.Bluemix_notm}} fournit une franchise de 2 Go de mémoire d'exécution et 10 instances de
 service dans le cadre de votre essai gratuit.
 
 ## Création de votre application Web via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}
@@ -49,9 +48,7 @@ disponibilité. Voir Régions pour des détails.
 
 Dans ce scénario, vous allez développer une application Web avec Node.js. Supposez que vous vous trouvez aux Etats-Unis et que la majorité des
 utilisateurs de votre application se situent également aux Etats-Unis. Vous décidez de construire et d'exécuter votre application près de votre base
-utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus court. Après vous être connecté à
-{{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Compte et support**
-![Icône Compte et support](../admin/images/account_support.svg), puis sélectionnez la région **US South**. Ensuite, procédez comme suit pour créer une application :
+utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus court. Après vous êtres connecté à {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg), puis sélectionnez la région **Sud des Etats-Unis**. Ensuite, procédez comme suit pour créer une application :
 
   1. Sélectionnez **Traitement**.
   2. Cliquez sur l'icône en forme de signe plus.
@@ -236,7 +233,7 @@ utiliser pour se connecter à cette instance de {{site.data.keyword.cloudant}} :
   ```
   if (process.env.VCAP_SERVICES) {
         var env = JSON.parse(process.env.VCAP_SERVICES);
-        var cloudant = env['"cloudantNoSQLDB'][0].credentials;
+        var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
                 "username" : "user1",

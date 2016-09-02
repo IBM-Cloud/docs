@@ -16,9 +16,10 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Usando serviços ativados pelo {{site.data.keyword.openwhisk_short}} 
+# Usando serviços do {{site.data.keyword.Bluemix_notm}} que estão ativados
+para {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
-*Última atualização: 28 de março de 2016*
+Última atualização: 4 de agosto de 2016
 {: .last-updated}
 
 No {{site.data.keyword.openwhisk}}, um catálogo de pacotes fornece uma maneira fácil de aprimorar seu app com recursos úteis e de acessar serviços externos no ecossistema. Exemplos de serviços externos que são ativados pelo {{site.data.keyword.openwhisk_short}} incluem Cloudant, The Weather Company, Slack e GitHub.
@@ -42,6 +43,7 @@ O pacote `/whisk.system/cloudant` permite trabalhar com um banco de dados do Clo
 Os tópicos a seguir percorrem a configuração de um banco de dados do Cloudant, a configuração de um pacote associado e o uso de ações e feeds no pacote `/whisk.system/cloudant`.
 
 ### Configurando um banco de dados do Cloudant no {{site.data.keyword.Bluemix_notm}}
+{: #openwhisk_catalog_cloudant_in}
 
 Se você está usando o {{site.data.keyword.openwhisk_short}} a partir do {{site.data.keyword.Bluemix}}, o {{site.data.keyword.openwhisk_short}} cria automaticamente ligações de pacote para suas instâncias de serviço do {{site.data.keyword.Bluemix_notm}} Cloudant. Se não estiver usando o {{site.data.keyword.openwhisk_short}} e o Cloudant a partir do {{site.data.keyword.Bluemix_notm}}, vá para a próxima etapa.
 
@@ -80,9 +82,12 @@ Se você está usando o {{site.data.keyword.openwhisk_short}} a partir do {{site
   ```
   {: screen}
 
-  É necessário ver o nome completo da ligação do pacote que corresponde à sua instância de serviço do {{site.data.keyword.Bluemix_notm}} Cloudant.
+  Você vê o nome completo da ligação do pacote que corresponde à instância de
+serviço do {{site.data.keyword.Bluemix_notm}} Cloudant.
 
-4. Verifique se a ligação do pacote criada anteriormente está configurado com seu host e credenciais da instância de serviço do {{site.data.keyword.Bluemix_notm}} Cloudant.
+4. Verifique se a ligação do pacote que foi criada anteriormente está configurada
+com seu host e credenciais da instância de serviço do {{site.data.keyword.Bluemix_notm}}
+Cloudant.
 
   ```
   wsk package get /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1
@@ -110,10 +115,12 @@ Se você está usando o {{site.data.keyword.openwhisk_short}} a partir do {{site
   {: screen}
 
 ### Configurando um banco de dados do Cloudant fora do {{site.data.keyword.Bluemix_notm}}
+{: #openwhisk_catalog_cloudant_outside}
 
-Se não estiver usando o {{site.data.keyword.openwhisk_short}} no {{site.data.keyword.Bluemix_notm}} ou se desejar configurar seu banco de dados do Cloudant fora do {{site.data.keyword.Bluemix_notm}}, deverá criar manualmente uma ligação de pacote para sua conta do Cloudant. Você precisa do nome do host, do nome do usuário e da senha da conta do Cloudant.
+Se não estiver usando o {{site.data.keyword.openwhisk_short}} no {{site.data.keyword.Bluemix_notm}} ou se desejar configurar seu banco de dados do Cloudant fora do {{site.data.keyword.Bluemix_notm}}, deverá criar manualmente uma ligação de pacote para sua conta do Cloudant. Você
+precisa do nome do host, do nome do usuário e da senha da conta do Cloudant.
 
-1. Crie uma ligação do pacote configurada para sua conta do Cloudant.
+1. Crie uma ligação de pacote que esteja configurada para sua conta do Cloudant.
 
   ```
   wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
@@ -134,6 +141,7 @@ Se não estiver usando o {{site.data.keyword.openwhisk_short}} no {{site.data.ke
 
 
 ### Recebendo mudanças em um banco de dados do Cloudant
+{: #openwhisk_catalog_cloudant_listen}
 
 É possível usar o feed `changes` para configurar um serviço para disparar um acionador em cada mudança em seu banco de dados do Cloudant. Os parâmetros são como segue:
 
@@ -164,11 +172,15 @@ Se não estiver usando o {{site.data.keyword.openwhisk_short}} no {{site.data.ke
 
 4. Observe novas ativações para o acionador `myCloudantTrigger` para cada mudança no documento.
 
-**Nota**: se você não for capaz de observar novas ativações, consulte as seções subsequentes sobre leitura e gravação em um banco de dados do Cloudant. O teste das etapas de leitura e gravação abaixo ajudará a verificar se suas credenciais do Cloudant estão corretas.
+**Nota**: se você não for capaz de observar novas ativações, consulte as seções subsequentes sobre leitura e gravação em um banco de dados do Cloudant. O teste das etapas de leitura e
+gravação a seguir ajudará a verificar se as suas credenciais do Cloudant estão corretas.
 
 Agora, é possível criar regras e associá-las a ações para reagir às atualizações do documento.
 
-O conteúdo dos eventos gerados depende do valor do parâmetro `includeDoc` ao criar o acionador. Se configurado para true, cada evento acionador disparado incluirá o documento do Cloudant modificado. Por exemplo, considere o documento modificado a seguir:
+O conteúdo dos eventos gerados depende do valor do parâmetro
+`includeDoc` quando o acionador é criado. Se o parâmetro for
+configurado como verdadeiro, cada evento acionador que for disparado incluirá o
+documento do Cloudant modificado. Por exemplo, considere o documento modificado a seguir:
 
   ```
   {
@@ -184,7 +196,7 @@ O código neste exemplo gera um evento de acionador com os parâmetros `_id`, `_
 Caso contrário, se `includeDoc` for falso, os eventos incluirão os parâmetros a seguir:
 
 - `id`: o ID do documento.
-- `seq`: o identificador de sequência gerado pelo Cloudant.
+- `seq`: o identificador de sequência que é gerado pelo Cloudant.
 - `changes`: uma matriz de objetos, cada um dos quais tendo um campo `rev` que contém o ID da revisão do documento.
 
 A representação JSON do evento acionador é a seguinte:
@@ -203,6 +215,7 @@ A representação JSON do evento acionador é a seguinte:
 
 
 ### Gravando em um banco de dados do Cloudant
+{: #openwhisk_catalog_cloudant_write}
 
 É possível usar uma ação para armazenar um documento em um banco de dados do Cloudant denominado `testdb`. Certifique-se de que esse banco de dados exista em sua conta do Cloudant.
 
@@ -228,6 +241,7 @@ A representação JSON do evento acionador é a seguinte:
 
 
 ### Lendo de um banco de dados do Cloudant
+{: #openwhisk_catalog_cloudant_read}
 
 É possível usar uma ação para buscar um documento a partir de um banco de dados do Cloudant chamado `testdb`. Certifique-se de que esse banco de dados exista em sua conta do Cloudant.
 
@@ -250,7 +264,9 @@ A representação JSON do evento acionador é a seguinte:
 ## Usando o pacote Alarme
 {: #openwhisk_catalog_alarm}
 
-O pacote `/whisk.system/alarms` pode ser usado para disparar um acionador a uma frequência especificada. Isso é útil para configurar tarefas ou trabalhos recorrentes, como chamar uma ação de backup do sistema a cada hora.
+O pacote `/whisk.system/alarms` pode ser usado para disparar um
+acionador em uma frequência especificada. Isso é útil para configurar tarefas ou
+trabalhos recorrentes, como chamar uma ação de backup do sistema a cada hora.
 
 O pacote inclui o feed a seguir.
 
@@ -261,10 +277,16 @@ O pacote inclui o feed a seguir.
 
 
 ### Disparando um evento acionador periodicamente
+{: #openwhisk_catalog_alarm_fire}
 
 O feed `/whisk.system/alarms/alarm` configura o serviço de Alarme para disparar um evento acionador a uma frequência especificada. Os parâmetros são como segue:
 
-- `cron`: Uma sequência, baseada na sintaxe Unix crontab, que indica quando disparar o acionador na Hora Universal Coordenada (UTC). A sequência é composta por seus campos separados por espaços: `X X X X X X`. Para obter mais detalhes sobre como usar a sintaxe cron, veja: https://github.com/ncb000gt/node-cron. Aqui estão alguns exemplos de frequência indicada pela sequência:
+- `cron`: Uma sequência, baseada na sintaxe crontab do UNIX, que
+indica quando disparar o acionador na Hora Universal Coordenada (UTC). A sequência é
+composta por seis campos separados por espaços: `X X X X X X`. Para
+obter mais detalhes sobre como usar a sintaxe cron, veja:
+https://github.com/ncb000gt/node-cron. Seguem alguns exemplos da frequência indicada
+pela sequência:
 
   - `* * * * * *`: a cada segundo.
   - `0 * * * * *`: início de cada minuto.
@@ -276,7 +298,9 @@ O feed `/whisk.system/alarms/alarm` configura o serviço de Alarme para disparar
 - `maxTriggers`: parar de disparar acionadores quando esse limite for atingido. O padrão é 1000. É possível configurá-lo para o máximo de 10.000. Se você tentar configurar mais de
 10.000, a solicitação será rejeitada.
 
-Aqui está um exemplo de criação de um acionador que será disparado uma vez a cada 20 segundos com os valores de `name` e `place` no evento acionador.
+Segue um exemplo de criação de um acionador que será disparado uma vez a cada
+20 segundos com os valores `name` e `place` no
+evento acionador.
 
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
@@ -289,28 +313,34 @@ Cada evento gerado incluirá como parâmetros as propriedades especificadas no v
 ## Usando o pacote Clima
 {: #openwhisk_catalog_weather}
 
-O pacote `/whisk.system/weather` oferece uma maneira conveniente de chamar a API do IBM Weather Insights.
+O pacote `/whisk.system/weather` oferece uma maneira conveniente
+de chamar a API do Weather Company Data for IBM Bluemix.
 
 O pacote inclui a ação a seguir.
 
 | Entidade | Tipo | Parâmetros | Descrição |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | pacote | apiKey | Serviços a partir da API do IBM Weather Insights  |
-| `/whisk.system/weather/forecast` | ação | apiKey, latitude, longitude, timePeriod | previsão para o período especificado|
+| `/whisk.system/weather` | pacote | username, password | Serviços da API do Weather Company Data for IBM Bluemix  |
+| `/whisk.system/weather/forecast` | ação | latitude, longitude, timePeriod | previsão para o período especificado|
 
-Embora não seja obrigatório, é recomendável criar uma ligação de pacote com o valor de `apiKey`. Dessa forma, não será necessário especificar a chave toda vez que você chamar as ações no pacote.
+É sugerido criar uma ligação de pacote com os valores `username`
+e `password`. Dessa forma, não será necessário especificar as
+credenciais toda vez que chamar as ações no pacote.
+
 
 ### Obtendo uma previsão de tempo para um local
+{: #openwhisk_catalog_weather_forecast}
 
 A ação `/whisk.system/weather/forecast` retorna uma previsão do tempo para um local, chamando uma API a partir da The Weather Company. Os parâmetros são como segue:
 
-- `apiKey`: uma chave de API para a The Weather Company que é autorizada a chamar a API de previsão.
+- `username`: nome do usuário do The Weather Company Data for IBM Bluemix que está autorizado a chamar a API de previsão.
+- `password`: senha do The Weather Company Data for IBM Bluemix que está autorizado a chamar a API de previsão.
 - `latitude`: a coordenada de latitude do local.
 - `longitude`: a coordenadas de longitude do local.
 - `timeperiod`: período para a previsão. As opções válidas são '10day' - (padrão) Retorna uma previsão diária de 10 dias, '24hour' - Retorna uma previsão de 2 dias a cada hora, 'atual' - Retorna as condições meteorológicas atuais, 'timeseries' - Retorna as observações atuais e até 24 horas de observações passadas, a partir da data e hora atuais. 
 
 
-Aqui está um exemplo de criação de uma ligação de pacote e, em seguida, a obtenção de uma previsão do tempo de 10 dias.
+Segue um exemplo de criação de uma ligação de pacote e, em seguida, a obtenção de uma previsão de 10 dias.
 
 1. Crie uma ligação de pacote com sua chave da API.
 
@@ -367,15 +397,21 @@ O pacote inclui as ações a seguir.
 áudio em texto |
 | `/whisk.system/watson/textToSpeech` | ação | payload, voice, accept, encoding, username, password | Converter texto em áudio |
 
-Embora não seja obrigatório, é recomendável criar uma ligação de pacote com os valores de `username` e `password`. Dessa forma, não será necessário especificar essas credenciais toda vez que chamar as ações no pacote.
+É sugerido criar uma ligação de pacote com os valores `username` e
+`password`. Dessa forma, não será necessário especificar essas
+credenciais toda vez que chamar as ações no pacote.
+
 
 ### Traduzindo texto
+{: #openwhisk_catalog_watson_translate}
 
-A ação `/whisk.system/watson/translate` traduz texto de um idioma para outro. Os parâmetros são como segue:
+A ação `/whisk.system/watson/translate` traduz o texto de um idioma para outro. Os parâmetros são como segue:
 
 - `username`: o nome do usuário da API do Watson.
 - `password`: a senha da API do Watson.
-- `translateParam`: o parâmetro de entrada a ser traduzido. Por exemplo, se `translateParam=payload`, então, o valor do parâmetro `payload` passado à ação será traduzido.
+- `translateParam`: o parâmetro de entrada indicando o texto a
+ser traduzido. Por exemplo, se `translateParam=payload`, o valor do
+parâmetro `payload` que é passado à ação será traduzido.
 - `translateFrom`: um código de dois dígitos do idioma de origem.
 - `translateTo`: um código de dois dígitos do idioma de destino.
 
@@ -404,6 +440,7 @@ A seguir está um exemplo de criação de uma ligação de pacote e tradução d
 
 
 ### Identificando o idioma de algum texto
+{: #openwhisk_catalog_watson_identifylang}
 
 A ação `/whisk.system/watson/languageId` identifica o idioma de algum texto. Os parâmetros são como segue:
 
@@ -411,7 +448,7 @@ A ação `/whisk.system/watson/languageId` identifica o idioma de algum texto. O
 - `password`: a senha da API do Watson.
 - `payload`: o texto para identificar.
 
-Aqui está um exemplo de criação de uma ligação de pacote e identificação do idioma de algum texto.
+Segue um exemplo de criação de uma ligação de pacote e identificação do idioma de algum texto.
 
 1. Crie uma ligação de pacote com suas credenciais do Watson.
 
@@ -437,6 +474,7 @@ Aqui está um exemplo de criação de uma ligação de pacote e identificação 
 
 
 ### Converter algum texto para fala
+{: #openwhisk_catalog_watson_texttospeech}
 
 A ação `/whisk.system/watson/textToSpeech` converte algum texto para uma fala de áudio. Os parâmetros são como segue:
 
@@ -447,7 +485,7 @@ A ação `/whisk.system/watson/textToSpeech` converte algum texto para uma fala 
 - `accept`: o formato do arquivo de fala.
 - `encoding`: a codificação dos dados binários de fala.
 
-Aqui está um exemplo de criação de uma ligação de pacote e de conversão de algum texto para fala.
+Segue um exemplo de criação de uma ligação de pacote e conversão de texto para fala.
 
 1. Crie uma ligação de pacote com suas credenciais do Watson.
 
@@ -471,6 +509,7 @@ Aqui está um exemplo de criação de uma ligação de pacote e de conversão de
 
 
 ### Convertendo fala para texto
+{: #openwhisk_catalog_watson_speechtotext}
 
 A ação `/whisk.system/watson/speechToText` converte fala de áudio para texto. Os parâmetros são como segue:
 
@@ -492,7 +531,8 @@ A ação `/whisk.system/watson/speechToText` converte fala de áudio para texto.
 - `word_confidence`: indica se uma medida de confiança no intervalo de 0 a 1 deve ser retornada para cada palavra.
 - `X-Watson-Learning-Opt-Out`: indica se deve-se fazer opt-out de coleta de dados para a chamada.
  
-Aqui está um exemplo de criação de uma ligação de pacote e de conversão de fala para texto.
+Segue um exemplo de criação de uma ligação de pacote e
+conversão de fala para texto.
 
 1. Crie uma ligação de pacote com suas credenciais do Watson.
 
@@ -527,9 +567,11 @@ O pacote inclui as ações a seguir:
 | `/whisk.system/slack` | pacote | url, channel, username | Interagir com a API do Slack |
 | `/whisk.system/slack/post` | ação | text, url, channel, username | Posta uma mensagem para um canal do Slack |
 
-Embora não seja obrigatório, é recomendável criar uma ligação de pacote com os valores de `username`, `url` e 'channel'. Com a ligação, não será necessário especificar os valores toda vez que você chamar a ação no pacote.
+É sugerido criar uma ligação de pacote com os valores `username`, `url` e
+`channel`. Com a ligação, não será necessário especificar os valores toda vez que você chamar a ação no pacote.
 
 ### Postando uma mensagem para um canal do Slack
+{: #openwhisk_catalog_slack_post}
 
 A ação `/whisk.system/slack/post` posta uma mensagem para um canal do Slack especificado. Os parâmetros são como segue:
 
@@ -542,7 +584,8 @@ A seguir há um exemplo de configuração do Slack, criação de uma ligação d
 
 1. Configure um [webhook recebido](https://api.slack.com/incoming-webhooks) do Slack para sua equipe.
 
-  Após configurar o Slack, será necessário obter uma URL de webhook semelhante a `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`. Precisará dela na próxima etapa.
+  Após a configuração do Slack, você obtém uma URL de webhook semelhante a
+`https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`. Precisará dela na próxima etapa.
 
 2. Crie uma ligação de pacote com suas credenciais do Slack, o canal no qual deseja postar e o nome de usuário com o qual postar.
 
@@ -571,15 +614,18 @@ O pacote inclui o feed a seguir:
 | `/whisk.system/github` | pacote | username, repository, accessToken | Interagir com a API do GitHub |
 | `/whisk.system/github/webhook` | alimentação | events, username, repository, accessToken | Disparar eventos acionadores na atividade do GitHub |
 
-Embora não seja obrigatório, é recomendável criar uma ligação de pacote com os valores de `username`, `repository` e `accessToken`.  Com a ligação, não será necessário especificar os valores toda vez que usar o feed no pacote.
+É sugerido criar uma ligação de pacote com os valores `username`,
+`repository` e `accessToken`. Com a ligação, não será necessário especificar os valores toda vez que usar o feed no pacote.
 
 ### Disparando um evento acionador com atividade do GitHub
+{: #openwhisk_catalog_github_fire}
 
 O feed `/whisk.system/github/webhook` configura um serviço para disparar um acionador quando houver atividade em um repositório do GitHub especificado. Os parâmetros são como segue:
 
-- `username`: o nome do usuário do repositório do GitHub.
+- `username`: o nome do usuário do repositório GitHub.
 - `repository`: o repositório do GitHub.
-- `accessToken`: seu token de acesso pessoal do GitHub. Ao [criar seu token](https://github.com/settings/tokens), certifique-se de que sejam selecionados os escopos repo:status epublic_repo. Além disso, certifique-se de que não tenha nenhum webhook já definido para seu repositório.
+- `accessToken`: seu token de acesso pessoal do GitHub. Ao [criar seu token](https://github.com/settings/tokens), certifique-se de que sejam selecionados os escopos repo:status epublic_repo. Além
+disso, certifique-se de que não tenha nenhum webhook já definido para seu repositório.
 - `events`: o [tipo de evento do GitHub](https://developer.github.com/v3/activity/events/types/) de interesse.
 
 A seguir está um exemplo de criação de um acionador que será disparado toda vez que houver uma nova confirmação em um repositório do GitHub.
@@ -588,7 +634,7 @@ A seguir está um exemplo de criação de um acionador que será disparado toda 
 
   O token de acesso será usado na próxima etapa.
 
-2. Crie uma ligação de pacote configurada para seu repositório do GitHub e com o token de acesso.
+2. Crie uma ligação de pacote configurada para seu repositório GitHub e com o token de acesso.
 
   ```
   wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
@@ -602,11 +648,15 @@ A seguir está um exemplo de criação de um acionador que será disparado toda 
   ```
   {: pre}
 
-Uma confirmação para o repositório do Github através de um `git push` fará com que o acionador seja disparado pelo webhook. Se houver uma regra que corresponda ao acionador, então, a
+Uma confirmação para o repositório GitHub usando um `git push` faz
+com que o acionador seja disparado pelo webhook. Se houver uma regra que corresponda ao acionador, então, a
 ação associada será chamada.
-A ação recebe a carga útil de webhook do Github como um parâmetro de entrada. Cada evento de webhook do Github tem um esquema de JSON semelhante, mas um objeto de carga útil exclusivo que é determinado por
-seu tipo de evento. Para obter mais informações sobre o conteúdo da carga útil, consulte a documentação da API de [Eventos e carga útil
-do Github](https://developer.github.com/v3/activity/events/types/).
+A ação recebe a carga útil de webhook do GitHub como um parâmetro de entrada. Cada evento
+de webhook do GitHub tem um esquema JSON semelhante, mas é um objeto de carga útil
+exclusivo que é determinado por seu tipo de evento. Para obter mais informações sobre o
+conteúdo da carga útil, consulte a documentação da API de
+[Eventos e carga útil
+do GitHub](https://developer.github.com/v3/activity/events/types/).
 
 
 ## Usando o pacote Push
@@ -614,21 +664,20 @@ do Github](https://developer.github.com/v3/activity/events/types/).
 
 O pacote `/whisk.system/pushnotifications` permite trabalhar com um serviço de push. 
 
-O pacote inclui o feed a seguir:
+O pacote inclui a ação e o feed a seguir:
 
 | Entidade | Tipo | Parâmetros | Descrição |
 | --- | --- | --- | --- |
 | `/whisk.system/pushnotifications` | pacote | appId, appSecret  | Trabalhar com o serviço de push |
-| `/whisk.system/pushnotifications/sendMessage` | ação | texto, url, deviceIds, plataformas, tagNames, apnsBadge, apnsCategory, apnsActionKeyTitle, apnsSound, apnsPayload, apnsType, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive | 
-Enviar notificação push para o(s) dispositivo(s) especificado(s) |
-| `/whisk.system/pushnotifications/webhook` | alimentação | eventos | Disparar
-eventos acionadores nas atividades de dispositivo (registro/remoção
-de registro e assinatura/cancelamento de assinatura do dispositivo) no Serviço de Push |
-Embora não seja obrigatório, é recomendável criar uma ligação de pacote com os valores de `appId` e `appSecret`. Dessa forma, não será necessário especificar essas credenciais toda vez que chamar as ações no pacote.
+| `/whisk.system/pushnotifications/sendMessage` | ação | texto, url, deviceIds, plataformas, tagNames, apnsBadge, apnsCategory, apnsActionKeyTitle, apnsSound, apnsPayload, apnsType, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive | Enviar notificação push para um ou mais dispositivos especificados |
+| `/whisk.system/pushnotifications/webhook` | alimentação | eventos | Disparar eventos acionadores nas atividades de dispositivo (registro, remoção de registro, assinatura, cancelamento de assinatura do dispositivo) no serviço de Push |
+É sugerido criar uma ligação de pacote com os valores `appId` e
+`appSecret`. Dessa forma, não será necessário especificar essas
+credenciais toda vez que chamar as ações no pacote.
+### Criando uma ligação de pacote de Push
+{: #openwhisk_catalog_pushnotifications_create}
 
-### Configurando o pacote do IBM Push Notifications
-
-Ao criar um pacote do IBM Push Notifications você precisa fornecer os parâmetros a seguir,
+Ao criar uma ligação de pacote de Notificações push, deve-se especificar os parâmetros a seguir,
 
 -  `appId`: o GUID do aplicativo Bluemix.
 -  `appSecret`: o appSecret de serviço de notificação push do Bluemix.
@@ -639,7 +688,8 @@ A seguir está um exemplo de criação de uma ligação de pacote.
 
 2. Inicialize o Serviço de Notificação Push e ligue o serviço ao aplicativo Bluemix
 
-3. Configure o [aplicativo IBM Push Notification](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
+3. Configure o [aplicativo
+de Notificação push](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
 
   Certifique-se de lembrar do `App GUID` e do `App Secret` do aplicativo Bluemix que você criou.
 
@@ -665,22 +715,23 @@ A seguir está um exemplo de criação de uma ligação de pacote.
   {: screen}
 
 ### Enviando notificações push
+{: #openwhisk_catalog_pushnotifications_send}
 
 A ação `/whisk.system/pushnotifications/sendMessage` envia notificações push para dispositivos registrados. Os parâmetros são como segue:
-- `text` - A mensagem de notificação a ser mostrada ao usuário. Por exemplo: -p text "Oi, {{site.data.keyword.openwhisk}} envie uma notificação".
-- `url`: uma URL opcional que pode ser enviada junto com o alerta. Por exemplo: -p url "https:\\www.w3.ibm.com".
-- `gcmPayload` - Carga útil de JSON customizada que será enviada como parte da mensagem de notificação. Por exemplo: -p gcmPayload "{"hi":"hello"}"
-- `gcmSound` - O arquivo de som (no dispositivo) que tentará ser reproduzido quando a notificação chegar no dispositivo.
-- `gcmCollapseKey` - Esse parâmetro identifica um grupo de mensagens
-- `gcmDelayWhileIdle` - Quando esse parâmetro é configurado como verdadeiro, ele indica que a mensagem não deve ser enviada até o dispositivo ficar ativo.
-- `gcmPriority` - Configura a prioridade da mensagem.
-- `gcmTimeToLive` - Esse parâmetro especifica quanto tempo (em segundos) a mensagem deve ser mantida no armazenamento de GCM se o dispositivo estiver off-line.
-- `apnsBadge` - O número para exibir como o badge do ícone do aplicativo.
-- `apnsCategory` -  O identificador de categoria a ser usado para as notificações push interativas.
-- `apnsIosActionKey` - O título para a chave Ação.
-- `apnsPayload` - Carga útil de JSON customizada que será enviada como parte da mensagem de notificação.
-- `apnsType` - ['DEFAULT', 'MIXED', 'SILENT'].
-- `apnsSound` - O nome do arquivo de som no pacote configurável do aplicativo. O som desse arquivo é reproduzido como um alerta.
+- `text`: a mensagem de notificação a ser mostrada ao usuário. Por exemplo: `-p text "Hi ,OpenWhisk send a notification"`.
+- `url`: uma URL opcional que pode ser enviada junto com o alerta. Por exemplo: `-p url "https:\\www.w3.ibm.com"`.
+- `gcmPayload`: carga útil de JSON customizada que será enviada como parte da mensagem de notificação. Por exemplo: `-p gcmPayload "{"hi":"hello"}"`
+- `gcmSound`: o arquivo de som (no dispositivo) que tentará ser reproduzido quando a notificação chegar no dispositivo.
+- `gcmCollapseKey`: esse parâmetro identifica um grupo de mensagens
+- `gcmDelayWhileIdle`: quando esse parâmetro é configurado como verdadeiro, ele indica que a mensagem não será enviada até que o dispositivo fique ativo.
+- `gcmPriority`: configura a prioridade da mensagem.
+- `gcmTimeToLive`: esse parâmetro especifica por quanto tempo (em segundos) a mensagem será mantida no armazenamento de GCM se o dispositivo estiver off-line.
+- `apnsBadge`: o número a ser exibido como o badge do ícone do aplicativo.
+- `apnsCategory`: o identificador de categoria a ser usado para as notificações push interativas.
+- `apnsIosActionKey`: o título da chave Ação.
+- `apnsPayload`: carga útil de JSON customizada que será enviada como parte da mensagem de notificação. 
+- `apnsType`: ['DEFAULT', 'MIXED', 'SILENT'].
+- `apnsSound`: o nome do arquivo de som no pacote configurável do aplicativo. O som desse arquivo é reproduzido como um alerta.
 
 Aqui está um exemplo de envio de notificação push a partir do pacote pushnotification.
 
@@ -706,28 +757,31 @@ message","url":"http.google.com"},"settings":{"apns":{"sound":"default"},"gcm":{
   ```
   {: screen}
 
-### Disparando um evento acionador na atividade do IBM Push Notifications Service
+### Disparando um evento acionador na atividade de Push
+{: #openwhisk_catalog_pushnotifications_fire}
 
-O `/whisk.system/pushnotifications/webhook` configura o serviço do IBM Push Notifications para disparar um acionador quando houver uma atividade de dispositivo como registro de
-dispositivo/remoção de registro ou assinatura/cancelamento de assinatura em um aplicativo especificado
+O `/whisk.system/pushnotifications/webhook` configura o serviço de
+push para disparar um acionador quando houver uma atividade de
+dispositivo, como registro/remoção de registro ou assinatura/cancelamento
+de assinatura de registro em um aplicativo especificado
 
 Os parâmetros são como segue:
 
-- `appId:` o appSecret de serviço de notificação push do Bluemix.
-- `appSecret:` o GUID do aplicativo Bluemix.
+- `appId:` o GUID do app Bluemix.
+- `appSecret`: o appSecret do serviço de notificação push do Bluemix.
 - `events:` os eventos suportados são `onDeviceRegister`, `onDeviceUnregister`, `onDeviceUpdate`, `onSubscribe`,
 `onUnsubscribe`. Para ser notificado de todos os eventos use o caractere curinga `*`.
 
-A seguir está um exemplo de criação de um acionador que será disparado toda vez que houver um novo dispositivo registrado com o aplicativo IBM Push Notifications Service.
+Segue um exemplo de criação de um acionador que será disparado toda vez que houver um novo dispositivo registrado no aplicativo de serviço de Notificações push.
 
-1. Crie uma ligação de pacote configurada para o seu serviço do IBM Push Notifications com o seu appId e appSecret.
+1. Crie uma ligação de pacote configurada para seu serviço de Notificações push com appId e appSecret.
 
   ```
   wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
   ```
   {: pre}
 
-2. Crie um acionador para o tipo de evento `onDeviceRegister` do IBM Push Notifications Service usando o seu feed `myPush/webhook`.
+2. Crie um acionador para o tipo de evento `onDeviceRegister` do serviço de Notificações push usando o feed `myPush/webhook`.
 
   ```
   wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister

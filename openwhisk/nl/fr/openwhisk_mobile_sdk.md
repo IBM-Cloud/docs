@@ -13,7 +13,7 @@ copyright:
 
 # Utilisation du logiciel SDK pour applications mobiles {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
-*Dernière mise à jour : 28 mars 2016*
+Dernière mise à jour : 4 août 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} met à disposition un logiciel SDK pour périphériques iOS et watchOS 2 qui permet aux applications mobiles
@@ -25,9 +25,11 @@ Le logiciel SDK pour applications mobiles est écrit en langage Swift 2.2 et pre
 
 ## Ajout du logiciel SDK à votre application
 {: #openwhisk_add_sdk}
+
 Vous pouvez installer le logiciel SDK pour applications mobiles à l'aide de CocoaPods, Carthage, ou depuis le répertoire source.
 
 ### Installation à l'aide de CocoaPods 
+{: #openwhisk_add_sdk_cocoapods}
 
 Le logiciel SDK {{site.data.keyword.openwhisk_short}} pour les applications mobiles est disponible pour sa distribution publique via
 CocoaPods. En supposant qu'CocoaPods est installé, placez les lignes suivantes dans un fichier nommé 'Podfile'
@@ -50,13 +52,14 @@ end
 ```
 {: codeblock}
 
-Depuis la ligne de commande, entrez `pod install`. afin d'installer le logiciel SDK pour une application iOS avec une extension watchOS 2.  Utilisez
+Depuis la ligne de commande, entrez `pod install`. Cette commande installe le logiciel SDK pour une application iOS avec une extension watchOS 2. Utilisez
 le fichier d'espace de travail que CocoaPods a créé pour votre application afin d'ouvrir le projet dans Xcode.
 
 ### Installation à l'aide de Carthage
+{: #openwhisk_add_sdk_carthage}
 
-Créez un fichier dans le répertoire de projet de votre application et appelez-le 'Cartfile'. Insérez la ligne suivante dans le fichier
-Cartfile :
+Créez un fichier dans le répertoire de projet de votre application et appelez-le 'Cartfile'. Insérez la ligne suivante dans le fichier :
+
 ```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # (Ou version ultérieure)
 ```
@@ -68,6 +71,7 @@ dans le répertoire de projet de votre application, et place un fichier OpenWhis
 Vous devez ensuite ajouter l'élément OpenWhisk.framework aux structures intégrées dans votre projet Xcode.
 
 ### Installation depuis le code source
+{: #openwhisk_add_sdk_source}
 
 Le code source est disponible sur le site https://github.com/openwhisk/openwhisk-client-swift.git.
 Ouvrez le projet à l'aide de `OpenWhisk.xcodeproj` et de Xcode.
@@ -88,7 +92,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-Elle télécharge un fichier zip contenant l'application de démarrage. Le répertoire de projet contient un fichier Pod.  
+Cette commande télécharge un fichier compressé contenant l'application de démarrage. Le répertoire de projet contient un fichier Pod.  
 
 Pour installer le logiciel SDK, entrez la commande suivante :
 ```
@@ -100,7 +104,7 @@ pod install
 {: #openwhisk_sdk_getstart}
 
 Pour être opérationnel rapidement, créez un objet WhiskCredentials avec vos données d'identification pour l'API
-{{site.data.keyword.openwhisk_short}}, puis créez une instance {{site.data.keyword.openwhisk_short}}.
+{{site.data.keyword.openwhisk_short}}, puis créez une instance {{site.data.keyword.openwhisk_short}} à partir de l'objet.
 
 Par exemple, en langage Swift 2.1, utilisez l'exemple de code suivant pour créer un objet de données d'identification :
 
@@ -123,14 +127,14 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 ```
 {: screen}
 
-Les chaînes qui figurent avant et après le signe deux-points sont votre clé et votre jeton, respectivement.
+Les chaînes qui précèdent le signe deux-points correspondent à votre clé et la chaîne figurant après le signe deux-points correspond à votre jeton.
 
 ## Appel d'une action {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_sdk_invoke}
 
 
-Pour appeler une action distante, vous pouvez appeler `invokeAction` avec le nom d'action. Vous pouvez spécifier l'espace de nom
-auquel l'action appartient ou ne rien indiquer pour accepter l'espace de nom par défaut.  Utilisez un dictionnaire pour transmettre des paramètres à
+Pour appeler une action distante, vous pouvez appeler `invokeAction` avec le nom d'action. Vous pouvez spécifier l'espace de noms
+auquel l'action appartient ou ne rien indiquer pour accepter l'espace de noms par défaut.  Utilisez un dictionnaire pour transmettre des paramètres à
 l'action, en fonction des besoins.
 
 Par exemple :
@@ -233,7 +237,7 @@ whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
 
-Dans cet exemple, vous utilisez une installation qui s'exécute sur localhost:8080.  Si vous ne spécifiez pas le paramètre baseUrl, le logiciel SDK
+Dans cet exemple, vous utilisez une installation qui s'exécute sur localhost:8080. Si vous ne spécifiez pas le paramètre baseUrl, le logiciel SDK
 pour applications mobiles utilise l'instance qui s'exécute sur https://openwhisk.ng.bluemix.net.
 
 Vous pouvez transmettre un paramètre NSURLSession personnalisé si vous nécessitez un traitement réseau spécial. Par exemple, il se peut que vous
@@ -256,9 +260,10 @@ whisk.urlSession = session
 {: codeblock}
 
 ### Prise en charge des noms qualifiés
+{: #openwhisk_sdk_configure_qual}
 
 Toutes les actions et tous les déclencheurs possèdent un nom qualifié complet qui est composé d'un espace de nom, d'un package et d'un
-nom d'action ou de déclencheur. Le logiciel SDK peut accepter ces noms qualifiés complets en tant que paramètres lorsque vous appelez une action ou
+nom d'action ou de déclencheur. Le logiciel SDK peut accepter ces éléments en tant que paramètres lorsque vous appelez une action ou
 exécutez un
 déclencheur. Le
 logiciel SDK fournit également une fonction qui accepte les noms qualifiés complets similaires à
@@ -275,6 +280,7 @@ Toutes les autres combinaisons génèrent une erreur WhiskError.QualifiedName. P
 devez encapsuler l'appel dans une construction "`do/try/catch`".
 
 ### Bouton du logiciel SDK
+{: #openwhisk_sdk_configure_button}
 
 Pour des raisons pratiques, le logiciel SDK inclut un élément `WhiskButton` qui étend l'élément `UIButton` afin
 qu'il puisse appeler des actions.  Pour utiliser l'élément `WhiskButton`, suivez l'exemple ci-dessous.

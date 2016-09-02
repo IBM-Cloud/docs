@@ -34,10 +34,10 @@ copyright:
 명령행 인터페이스를 사용하여 애플리케이션 및 서비스 인스턴스를 배치하고 수정할 수 있습니다.
 {:shortdesc}
 
-시작하기 전에 Cloud Foundry 및 {{site.data.keyword.Bluemix}} 명령 인터페이스를 설치하십시오. 
+시작하기 전에 Cloud Foundry 및 {{site.data.keyword.Bluemix}} 명령행 인터페이스를 설치하십시오. 
 
 <p>
-<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(새 탭이나 창에서 열림)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry 명령 인터페이스 다운로드" /> </a>  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(새 탭이나 창에서 열림)"><img class="image" src="images/btn_bx_commandline.svg" alt=" {{site.data.keyword.Bluemix}} 명령 인터페이스 다운로드" /> </a>
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(새 탭이나 창에서 열림)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry 명령행 인터페이스 다운로드" /> </a>  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(새 탭이나 창에서 열림)"><img class="image" src="images/btn_bx_commandline.svg" alt=" {{site.data.keyword.Bluemix}} 명령행 인터페이스 다운로드" /> </a>
 </p>
 
 **제한사항:** Cygwin에서는 명령행 도구가 지원되지 않습니다. Cygwin 명령행 창 외의 명령행 창에서 도구를 사용하십시오.
@@ -66,7 +66,7 @@ copyright:
   <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
   
   7. 앱을 {{site.data.keyword.Bluemix_notm}}에 배치하십시오. cf push 명령에 대한 자세한 정보는
-[애플리케이션 업로드](./upload_app.html)를 참조하십시오.
+[애플리케이션 업로드](/docs/starters/upload_app.html)를 참조하십시오.
   
   <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></pre>
   

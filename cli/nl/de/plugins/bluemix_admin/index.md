@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+
 
 ---
 
@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}}-Administrator-CLI
 {: #bluemixadmincli}
 
-*Letzte Aktualisierung: 22. Juni 2016*
+Letzte Aktualisierung: 17. August 2016
 {: .last-updated}
 
 
@@ -54,7 +54,7 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Die Unterdomäne der URL für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz.</dd>
+<dd class="pd">Die Unterdomäne der URL für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz. Beispiel: <code>https://console.mycompany.bluemix.net/cli</code>.</dd>
 </dl>
 </li>
 <li>Führen Sie zum Installieren des {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-ins den folgenden Befehl aus:<br/><br/> <code>
@@ -62,6 +62,12 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>
 </li>
 </ol>
+
+Wenn Sie das Plug-in deinstallieren müssen, können Sie die folgenden Befehle verwenden. Anschließend können Sie das aktualisierte Repository hinzufügen und das neueste Plug-in installieren.
+
+* Plug-in deinstallieren: `cf uninstall-plugin-repo BluemixAdminCLI`
+* Plug-in-Repository entfernen: `cf remove-plugin-repo BluemixAdmin`
+
 
 ## {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwenden
 
@@ -101,12 +107,14 @@ cf login
 
 ### Benutzer hinzufügen
 
-Sie können Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung einen Benutzer aus einem LDAP-Registry hinzufügen. Geben Sie den folgenden Befehl ein:
+Sie können Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung einen Benutzer aus der Benutzerregistry in Ihrer Umgebung hinzufügen. Geben Sie den folgenden Befehl ein:
 
 ```
 cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
+
+**Hinweis**: Zum Hinzufügen einer bestimmten Organisation müssen Sie der Manager der Organisation sein oder die Berechtigung **Admin** (alternativ **Superuser**) oder **User** mit dem Zugriff **Write** besitzen.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -115,8 +123,7 @@ cf ba add-user <user_name> <organization>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, der der Benutzer hinzugefügt werden soll.</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba au** als Alias für den längeren
-Befehlsnamen **ba add-user** verwenden.
+**Tipp:** Sie können auch **ba au** als Alias für den längeren Befehlsnamen **ba add-user** verwenden.
 
 <!-- staging-only commands start. Live for interconnect -->
 
@@ -136,8 +143,7 @@ cf ba search-users <user_name>
 
 </dl>
 
-**Tipp:** Sie können auch **ba su** als Alias für den längeren
-Befehlsnamen **ba search-users** verwenden.
+**Tipp:** Sie können auch **ba su** als Alias für den längeren Befehlsnamen **ba search-users** verwenden.
 
 ### Berechtigungen für einen Benutzer festlegen
 
@@ -154,14 +160,12 @@ cf ba set-permissions <user_name> <permission> <access>
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Der Name des Benutzers in {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt class="pt dlterm">&lt;permission&gt;</dt>
-<dd class="pd">Legen Sie die Berechtigungen für den Benutzer fest: Admin (Administrator), Login (Anmelden), Catalog (Katalog: Zugriff 'read' oder 'write'), Reports
-(Berichte: Zugriff 'read' oder 'write') oder Users (Benutzer: Zugriff 'read' oder 'write').</dd>
+<dd class="pd">Legen Sie die Berechtigungen für den Benutzer fest: Admin (alternativ 'Superuser'), Login (alternativ 'Basic'), Catalog (Zugriff 'read' oder 'write'), Reports (Zugriff 'read' oder 'write') oder Users (Zugriff 'read' oder 'write').</dd>
 <dt class="pt dlterm">&lt;access&gt;</dt>
 <dd class="pd">Für die Berechtigungen Catalog, Reports oder Users müssen Sie außerdem die Zugriffsebene mit <code>read</code> oder <code>write</code> angeben.</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba sp** als Alias für den längeren
-Befehlsnamen **ba set-permissions** verwenden.
+**Tipp:** Sie können auch **ba sp** als Alias für den längeren Befehlsnamen **ba set-permissions** verwenden.
 
 <!-- staging-only commands end -->
 
@@ -183,8 +187,7 @@ cf ba remove-user <user_name>
 
 </dl>
 
-**Tipp:** Sie können auch **ba ru** als Alias für den längeren
-Befehlsnamen **ba remove-user** verwenden.
+**Tipp:** Sie können auch **ba ru** als Alias für den längeren Befehlsnamen **ba remove-user** verwenden.
 
 ### Organisation hinzufügen und löschen
 
@@ -219,8 +222,7 @@ cf ba delete-organization <organization>
 <dd class="pd">Der Name oder die GUID der zu löschenden {{site.data.keyword.Bluemix_notm}}-Organisation.</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba do** als Alias für den längeren
-Befehlsnamen **ba delete-organization** verwenden.
+**Tipp:** Sie können auch **ba do** als Alias für den längeren Befehlsnamen **ba delete-organization** verwenden.
 
 ### Benutzer einer Organisation zuweisen
 
@@ -243,8 +245,7 @@ cf ba set-org <user_name> <organization> [<role>]
 finden Sie unter [Rollen](../../../admin/users_roles.html).</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba so** als Alias für den längeren
-Befehlsnamen **ba set-org** verwenden.
+**Tipp:** Sie können auch **ba so** als Alias für den längeren Befehlsnamen **ba set-org** verwenden.
 
 ### Zuweisung eines Benutzers zu einer Organisation aufheben
 
@@ -267,8 +268,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 finden Sie unter [Rollen](../../../admin/users_roles.html).</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba uo** als Alias für den längeren
-Befehlsnamen **ba unset-org** verwenden.
+**Tipp:** Sie können auch **ba uo** als Alias für den längeren Befehlsnamen **ba unset-org** verwenden.
 
 ### Rollen
 
@@ -304,8 +304,7 @@ cf ba set-quota <organization> <plan>
 <dd class="pd">Der Kontingentplan für eine Organisation.</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba sq** als Alias für den längeren
-Befehlsnamen **ba set-quota** verwenden.
+**Tipp:** Sie können auch **ba sq** als Alias für den längeren Befehlsnamen **ba set-quota** verwenden.
 
 ### Berichte hinzufügen, löschen und abrufen
 
@@ -331,8 +330,7 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 wenn Sie einen Pfad zur PDF-Datei für den Bericht eingegeben haben. Die RTF-Version wird zum Indexieren und Suchen verwendet.</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba ar** als Alias für den längeren
-Befehlsnamen **ba add-report** verwenden.
+**Tipp:** Sie können auch **ba ar** als Alias für den längeren Befehlsnamen **ba add-report** verwenden.
 
 * Geben Sie den folgenden Befehl ein, um einen Bericht zu löschen:
 
@@ -350,8 +348,7 @@ cf ba delete-report <category> <date> <name>
 <dd class="pd">Der Name des Berichts.</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba dr** als Alias für den längeren
-Befehlsnamen **ba delete-report** verwenden.
+**Tipp:** Sie können auch **ba dr** als Alias für den längeren Befehlsnamen **ba delete-report** verwenden.
 
 * Geben Sie den folgenden Befehl ein, um einen Bericht abzurufen:
 
@@ -369,8 +366,7 @@ cf ba retrieve-report <category> <date> <name>
 <dd class="pd">Der Name des Berichts.</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba rr** als Alias für den längeren
-Befehlsnamen **ba retrieve-report** verwenden.
+**Tipp:** Sie können auch **ba rr** als Alias für den längeren Befehlsnamen **ba retrieve-report** verwenden.
 
 ### Services für alle Organisationen aktivieren und inaktivieren
 
@@ -387,7 +383,7 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen Servicenamen eingeben, der nicht eindeutig ist, wie zum Beispiel "Standard" oder "Basic", werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
 </dl>
 
 **Tipp:** Sie können auch **ba esp** als Alias für den längeren Befehlsnamen **ba enable-service-plan** verwenden.
@@ -402,7 +398,7 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen Servicenamen eingeben, der nicht eindeutig ist, wie zum Beispiel "Standard" oder "Basic", werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
 </dl>
 
 **Tipp:** Sie können auch **ba dsp** als Alias für den längeren
@@ -425,7 +421,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen Servicenamen eingeben, der nicht eindeutig ist, wie zum Beispiel "Standard" oder "Basic", werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, die der Sichtbarkeitsliste des Service hinzugefügt werden soll.</dd>
 </dl>
@@ -443,7 +439,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen Servicenamen eingeben, der nicht eindeutig ist, wie zum Beispiel "Standard" oder "Basic", werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, die aus der Sichtbarkeitsliste des Service entfernt werden soll.</dd>
 </dl>
@@ -463,7 +459,7 @@ durch den Service, den Sie im Befehl angeben.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen Servicenamen eingeben, der nicht eindeutig ist, wie zum Beispiel "Standard" oder "Basic", werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, für die die Sichtbarkeit hinzugefügt werden soll. Sie können
 die Sichtbarkeit des Service für mehrere Organisationen aktivieren, indem Sie weitere Organisationsnamen oder GUIDs im Befehl angeben.</dd>
@@ -549,3 +545,187 @@ Befehlsnamen **ba delete-service-broker** verwenden.
 
 **Tipp:** Sie können auch **ba usb** als Alias für den längeren
 Befehlsnamen **ba update-service-broker** verwenden.
+
+
+### Mit Anwendungssicherheitsgruppen arbeiten
+
+Zum Arbeiten mit Anwendungssicherheitsgruppen (Application Security Groups, ASGs) müssen Sie ein Administrator mit voller Berechtigung für die lokale oder dedizierte Umgebung sein. Alle Benutzer in der Umgebung können die verfügbaren ASGs für die Organisation auflisten, die Ziel des Befehls ist. Zum Erstellen, Aktualisieren oder Binden von ASGs müssen Sie jedoch Administrator für die {{site.data.keyword.Bluemix_notm}}-Umgebung sein.
+
+ASGs fungieren als virtuelle Firewalls, die den abgehenden Datenverkehr aus der Anwendung in die {{site.data.keyword.Bluemix_notm}}-Umgebung steuern. Jede ASG besteht aus einer Liste mit Regeln, die den Datenverkehr und die Kommunikation in das externe Netz oder aus diesem Netz definieren. Sie können eine oder mehrere ASGs an einen bestimmten Sicherheitsgruppensatz (z. B. an einen Gruppensatz, der für die Anwendung des globalen Zugriffs verwendet wird) oder an Bereiche innerhalb einer Organisation in der {{site.data.keyword.Bluemix_notm}}-Umgebung binden.
+
+Bei der Erstinstallation von {{site.data.keyword.Bluemix_notm}} wird der gesamte Zugriff auf das externe Netz eingeschränkt. Zwei von IBM erstellte Sicherheitsgruppen (`public_networks` und `dns`) ermöglichen den globalen Zugriff auf das externe Netz, wenn Sie diese Gruppen an die Cloud Foundry-Standardsicherheitsgruppensätze binden. Die beiden Sicherheitsgruppensätze in Cloud Foundry zur Anwendung des globalen Zugriffs sind die Gruppensätze **Default Staging** und **Default Running**. Von diesen Gruppensätzen werden die Regeln für den Datenverkehr auf alle aktiven Apps bzw. alle Staging-Apps angewendet. Wenn Sie keine Bindung an diese beiden Sicherheitsgruppensätze herstellen möchten, können Sie die Bindung an die Cloud Foundry-Gruppensätze aufheben und die Sicherheitsgruppe anschließend an einen bestimmten Bereich binden. Weitere Informationen finden Sie in [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+
+**Hinweis**: Die folgenden Befehle, die Ihnen die Arbeit mit Sicherheitsgruppen ermöglichen, basieren auf Cloud Foundry Version 1.6.
+
+#### Sicherheitsgruppen auflisten, erstellen, aktualisieren und löschen
+
+Weitere Informationen zur Erstellung von Sicherheitsgruppen und Regeln, die den abgehenden Datenverkehr definieren, finden Sie in [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+
+* Geben Sie den folgenden Befehl ein, um alle Sicherheitsgruppen aufzulisten:
+
+```
+cf ba security-groups
+```
+{: codeblock}
+
+**Tipp:** Sie können auch **ba sgs** als Alias für den längeren Befehlsnamen **ba security-groups** verwenden.
+
+* Geben Sie den folgenden Befehl ein, um die Details einer bestimmten Sicherheitsgruppe anzuzeigen:
+
+```
+cf ba security-groups <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;security-group&gt;</dt>
+<dd class="pd">Der Name der Sicherheitsgruppe.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba sg** als Alias für den längeren Befehlsnamen **ba security-groups** mit dem Parameter `security-group` verwenden.
+
+
+* Geben Sie den folgenden Befehl ein, um eine Sicherheitsgruppe zu erstellen. Den Namen erstellter Sicherheitsgruppen wird das Präfix `adminconsole_` vorangestellt, um sie von den Sicherheitsgruppen zu unterscheiden, die von IBM erstellt werden.
+
+```
+cf ba create-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;security-group&gt;</dt>
+<dd class="pd">Der Name der Sicherheitsgruppe.</dd>
+<dt class="pt dlterm">&lt;path-to-rules-file&gt;</dt>
+<dd class="pd">Der absolute oder relative Pfad zu einer Regeldatei.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba csg** als Alias für den längeren Befehlsnamen **ba create-security-group** verwenden.
+
+* Geben Sie den folgenden Befehl ein, um eine Sicherheitsgruppe zu aktualisieren: 
+
+```
+cf ba update-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;security-group&gt;</dt>
+<dd class="pd">Der Name der Sicherheitsgruppe.</dd>
+<dt class="pt dlterm">&lt;path-to-rules-file&gt;</dt>
+<dd class="pd">Der absolute oder relative Pfad zu einer Regeldatei.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba usg** als Alias für den längeren Befehlsnamen **ba update-security-group** verwenden.
+
+* Geben Sie den folgenden Befehl ein, um eine Sicherheitsgruppe zu löschen: 
+
+```
+cf ba delete-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;security-group&gt;</dt>
+<dd class="pd">Der Name der Sicherheitsgruppe.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba dsg** als Alias für den längeren Befehlsnamen **ba delete-security-group** verwenden.
+
+
+#### Sicherheitsgruppen binden, Bindung aufheben und gebundene Sicherheitsgruppen auflisten
+
+Weitere Informationen zum Binden von Sicherheitsgruppen und zum Aufheben dieser Bindungen finden Sie in [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} und [Unbinding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}
+
+* Geben Sie den folgenden Befehl ein, um eine Bindung zum Staging-Standardsicherheitsgruppensatz herzustellen:
+
+```
+cf ba bind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;security-group&gt;</dt>
+<dd class="pd">Der Name der Sicherheitsgruppe.</dd>
+</dl>
+
+**Tip:** You can also use **ba bssg** as an alias for the longer
+**ba bind-staging-security-group** command name.
+
+* Geben Sie den folgenden Befehl ein, um eine Bindung zum aktiven Standardsicherheitsgruppensatz herzustellen:
+
+```
+cf ba bind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;security-group&gt;</dt>
+<dd class="pd">Der Name der Sicherheitsgruppe.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba brsg** als Alias für den längeren Befehlsnamen **ba bind-running-security-group** verwenden.
+
+* Geben Sie den folgenden Befehl ein, um die Bindung zum Staging-Standardsicherheitsgruppensatz aufzuheben:
+
+```
+cf ba cf ba unbind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;security-group&gt;</dt>
+<dd class="pd">Der Name der Sicherheitsgruppe.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba ussg** als Alias für den längeren Befehlsnamen **ba unbind-staging-security-group** verwenden.
+
+* Geben Sie den folgenden Befehl ein, um die Bindung zum aktiven Standardsicherheitsgruppensatz aufzuheben:
+
+```
+cf ba unbind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;security-group&gt;</dt>
+<dd class="pd">Der Name der Sicherheitsgruppe.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba brsg** als Alias für den längeren Befehlsnamen **ba bind-running-security-group** verwenden.
+
+* Geben Sie den folgenden Befehl ein, um eine Sicherheitsgruppe an einen Bereich zu binden:
+
+```
+cf ba bind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;security-group&gt;</dt>
+<dd class="pd">Der Name der Sicherheitsgruppe.</dd>
+<dt class="pt dlterm">&lt;org&gt;</dt>
+<dd class="pd">Der Name der Organisation, an die die Sicherheitsgruppe gebunden wird.</dd>
+<dt class="pt dlterm">&lt;space&gt;</dt>
+<dd class="pd">Der Name des Bereichs innerhalb der Organisation, an den die Sicherheitsgruppe gebunden wird.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba bsg** als Alias für den längeren Befehlsnamen **ba bind-security-group** verwenden.
+
+* Geben Sie den folgenden Befehl ein, um die Bindung einer Sicherheitsgruppe an einen Bereich aufzuheben:
+
+```
+cf ba unbind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;security-group&gt;</dt>
+<dd class="pd">Der Name der Sicherheitsgruppe.</dd>
+<dt class="pt dlterm">&lt;org&gt;</dt>
+<dd class="pd">Der Name der Organisation, an die die Sicherheitsgruppe gebunden wird.</dd>
+<dt class="pt dlterm">&lt;space&gt;</dt>
+<dd class="pd">Der Name des Bereichs innerhalb der Organisation, an den die Sicherheitsgruppe gebunden wird.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba usg** als Alias für den längeren Befehlsnamen **ba unbind-staging-security-group** verwenden.
+

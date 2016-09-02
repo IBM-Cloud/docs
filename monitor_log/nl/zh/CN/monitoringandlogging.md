@@ -25,7 +25,7 @@ copyright:
 ##监视和记录 Cloud Foundry 应用程序
 {: #monitoring_logging_bluemix_apps}
 
-{{site.data.keyword.Bluemix_notm}} 具有内置日志记录机制，可在应用程序运行时为应用程序生成日志文件。在日志中，可以查看为应用程序生成的错误、警告和参考消息。此外，还可以配置应用程序，以便将日志消息写入日志文件中。有关日志格式和如何查看日志的更多信息，请参阅[对 Cloud Foundry 上运行的应用程序进行日志记录](#logging_for_bluemix_apps)。
+{{site.data.keyword.Bluemix_notm}} 具有内置日志记录机制，可在应用程序运行时为应用程序生成日志文件。在日志中，可以查看为应用程序生成的错误、警告和参考消息。此外，还可以配置应用程序，以便将日志消息写入日志文件中。有关日志格式和如何查看日志的更多信息，请参阅[为 Cloud Foundry 上运行的应用程序进行日志记录](#logging_for_bluemix_apps)。
 
 通过监视应用程序，您可以查看和控制应用程序部署。通过监视，您可以完成以下任务：
 
@@ -35,7 +35,7 @@ copyright:
 
 为了使您的部署在 {{site.data.keyword.Bluemix_notm}} 平台上稳定运行，您希望及时检测到问题，并有效地确定原因。为了实现此目标，请在设计应用程序时将故障诊断考虑在内，并在应用程序部署到 {{site.data.keyword.Bluemix_notm}} 后使用服务或工具进行监视和日志记录。
 
-###监视在 Cloud Foundry 上运行的应用程序
+###监视 Cloud Foundry 上运行的应用程序
 {: #monitoring_bluemix_apps}
 
 使用 Cloud Foundry 基础架构在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，您会希望实时了解性能信息，例如运行状态、资源使用情况和流量度量值。通过这些性能信息，您可以相应地进行决策或执行操作。
@@ -45,7 +45,7 @@ copyright:
 * {{site.data.keyword.Bluemix_notm}} 服务。Monitoring and Analytics 提供了可用于监视应用程序性能的服务。此外，此服务还提供了分析功能，例如日志分析。有关更多信息，请参阅 [Monitoring and Analytics](../services/monana/index.html)。
 * 第三方选项。例如，[New Relic](http://newrelic.com/){:new_window}。
 
-###在 Cloud Foundry 上运行的应用程序的日志记录
+###为 Cloud Foundry 上运行的应用程序进行日志记录
 {: #logging_for_bluemix_apps}
 
 使用 Cloud Foundry 基础架构在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，会自动创建日志文件。在从部署到运行时的任何阶段遇到错误时，都可以检查日志，以获取可能有助于解决问题的线索。

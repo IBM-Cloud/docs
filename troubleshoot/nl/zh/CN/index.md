@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+  
 
 ---
 
@@ -15,8 +16,9 @@ copyright:
 # 有关访问 {{site.data.keyword.Bluemix_notm}} 的故障诊断 
 {: #accessing}
 
-*上次更新时间：2016 年 7 月 14 日*
+上次更新时间：2016 年 8 月 11 日
 {: .last-updated}
+
 
 访问 {{site.data.keyword.Bluemix}} 的一般性问题可能包括用户无法登录到 {{site.data.keyword.Bluemix_notm}} 和帐户困于暂挂状态等。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
@@ -30,7 +32,7 @@ copyright:
 在尝试登录到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下错误消息： 
 {: tsSymptoms} 
 
-`下面输入的 IBM 标识和/或密码不正确。请重试。`
+`输入的密码不正确。`
 
 
 用于登录 {{site.data.keyword.Bluemix_notm}} 的 IBM 标识和密码无效。
@@ -39,7 +41,7 @@ copyright:
 
 要获取有效的 IBM 标识和密码，请转至我的 IBM 个人档案页面，然后完成以下其中一个步骤：
 {: tsResolve}
-  * 如果已注册 IBM 标识并且想要检查标识和密码是否有效，请单击**登录**，并在“登录”页面中输入 IBM 标识和密码。如果忘记密码，请单击“登录”页面右侧的**忘记密码**以重置密码。如果忘记 IBM 标识或密码问题仍未解决，请联系全球 IBM 注册帮助台来获取帮助。 
+  * 如果已注册 IBM 标识并且想要检查标识和密码是否有效，请单击**登录**，并在“登录”页面中输入 IBM 标识和密码。如果忘记密码，请单击“登录”页面的**忘记密码**以重置密码。如果忘记 IBM 标识或密码问题仍未解决，请联系全球 IBM 注册帮助台来获取帮助。 
   * 如果没有 IBM 标识，请单击**注册**以注册 IBM 标识和密码。 
   
 **注：**对于 IBM 员工，IBM 标识可能不同于内部网登录标识。 
@@ -151,7 +153,7 @@ nslookup mybluemix.net
 如果您无法邀请用户加入组织，并需要其他角色来完成此操作，请联系组织管理员来更改您的角色。要识别组织管理员，请完成以下步骤：
 {: tsResolve}
 
-  1. 转至 {{site.data.keyword.Bluemix_notm}}“仪表板”，单击菜单栏中的**帐户和支持**图标 ![帐户和支持](images/account_support.svg)，然后选择**管理组织**。
+  1. 转至 {{site.data.keyword.Bluemix_notm}}“仪表板”，单击菜单栏中的 {{site.data.keyword.avatar}} 图标 ![Avatar 图标](images/account_support.svg) ，然后选择**管理组织**。
   2. 转至您的组织，并查看**用户**选项卡上的组织管理员信息。  
   
 如果由于您是合作者（并非成员）而无法邀请用户，那么您必须删除您先前的 {{site.data.keyword.Bluemix_notm}} 帐户，然后被邀请以组织成员身份加入帐户。要删除您先前的帐户并以成员身份加入帐户，请完成以下步骤： 
@@ -179,7 +181,7 @@ nslookup mybluemix.net
 要对 {{site.data.keyword.Bluemix_notm}} 注册多个用户，必须为每个用户完成以下步骤：
 {: tsResolve}
 
-  1. 在 {{site.data.keyword.Bluemix_notm}} 用户界面的右上角单击**注册**。
+  1. 在 {{site.data.keyword.Bluemix_notm}} 用户界面中单击**注册**。
   2. 按照向导的提示完成每个步骤。
 
     
@@ -212,28 +214,6 @@ nslookup mybluemix.net
   
   
   
-  
-  
-## {{site.data.keyword.Bluemix_notm}} 顶部菜单栏消失
-{: #ts_topmenubar}
-
-调整浏览器窗口大小或使用移动设备时，可能看不到 {{site.data.keyword.Bluemix_notm}} 顶部菜单栏。
-
-
-当您缩小浏览器窗口的大小或使用移动设备时，{{site.data.keyword.Bluemix_notm}} 顶部菜单栏会消失。顶部菜单栏消失时，以堆叠线图标形式显示的侧边抽屉菜单会显示在左上角。 
-{: tsSymptoms}
-
- 
-
-{{site.data.keyword.Bluemix_notm}} 用户界面具有响应设计。当查看环境发生变化时，{{site.data.keyword.Bluemix_notm}} 用户界面的布局可能也会发生变化。 
-{: tsCauses}
- 
-
-请改用左上角的侧边抽屉菜单。
-{: tsResolve}
-
-
-
 
 
 
@@ -325,6 +305,47 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
   3. 检查 `eclipse.vm` 属性是否指向 Oracle JVM 8 的新安装。
 
 
+  
+## 无法复用已删除应用程序的名称
+{: #ts_reuse_appname}
+  
+删除应用程序之后，您仅可以在删除应用程序路径之后复用应用程序名称。 
+
+尝试复用应用程序名称时，您会收到以下消息：
+{: tsSymptoms}
+
+`名称已经由其他应用程序使用。`
+
+删除应用程序时，不会自动删除其作为应用程序 URL 的路径。因此无法对其进行复用。您必须转至创建应用程序的空间，来删除路径，以便可以对其进行复用。
+{: tsCauses}
+
+执行以下步骤以删除未用的路径：
+{: tsResolve}
+
+  1. 通过输入以下命令，检查路径是否属于当前空间： 
+     ```
+	 cf routes
+	 ```
+  2. 如果路径不属于当前空间，请通过输入以下命令，切换到其所属的空间或组织： 
+     ```
+	 cf target -o org_name -s space_name
+	 ```
+  3. 通过输入以下命令，删除应用程序路径：
+     ```
+	 cf delete-route domain_name -n host_name
+	 ```
+	 例如： 	
+```
+	 cf delete-route mybluemix.net -n app001
+	 ```
+
+  
+  
+  
+  
+  
+  
+  
 ## 无法在组织中检索空间
 {: #ts_retrieve_space}
 
@@ -341,10 +362,10 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 请确保在当前组织中已创建空间。要创建空间，请使用以下某种方法： 
 {: tsResolve}
 
-  * 从“帐户和支持”![帐户和支持](images/account_support.svg)，选择要在其中创建空间的组织，然后单击**创建空间**。
+  * 单击 {{site.data.keyword.avatar}} 图标 ![Avatar 图标](images/account_support.svg)，以打开“帐户和支持”窗口小部件，选择要在其中创建空间的组织，然后单击**创建空间**。
   * 在 cf 命令行界面中，键入 `cf create-space <space_name> -o <organization_name>`。
 
-请重试。如果再次看到此消息，请转至 [Bluemix 状态](https://status.eu-gb.bluemix.net/){: new_window}页面，查看服务或组件是否存在问题。
+请重试。如果再次看到此消息，请转至 [Bluemix 状态](http://ibm.biz/bluemixstatus){: new_window}页面，查看服务或组件是否存在问题。
 
 
 
@@ -447,7 +468,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 
  
 
-如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态](https://developer.ibm.com/bluemix/support/#status){: new_window}页面。您可能想要在其他 {{site.data.keyword.Bluemix_notm}} 区域使用该服务来作为一种变通方法。有关详细信息，请参阅[在另一个区域使用服务](../services/reqnsi.html#cross_region_service){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
+如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态](http://ibm.biz/bluemixstatus){: new_window}页面。您可能想要在其他 {{site.data.keyword.Bluemix_notm}} 区域使用该服务来作为一种变通方法。有关详细信息，请参阅[在另一个区域使用服务](../services/reqnsi.html#cross_region_service){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
 {: tsResolve}
 
   * 重试操作：
@@ -566,8 +587,8 @@ IBM Push 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 A
  
   * 要删除服务实例，可以使用 {{site.data.keyword.Bluemix_notm}} 用户界面或者命令行界面。
     要使用 {{site.data.keyword.Bluemix_notm}} 用户界面删除服务实例，请完成以下步骤：
-	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击左侧窗格中的**服务**。将显示服务磁贴。 
-	  2. 在要删除的服务磁贴上，单击**菜单**图标。
+	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击要删除的服务。这将显示服务磁贴。 
+	  2. 在服务磁贴上，单击**菜单**图标。
 	  3. 单击**删除服务**。在删除服务实例之后，会提示您重新编译打包绑定该服务实例的应用程序。 
     要使用命令行界面删除服务实例，请完成以下步骤：
 	  1. 取消服务实例与应用程序的绑定，方法是输入 `cf unbind-service <appname> <service_instance_name>`。
@@ -1164,8 +1185,52 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 	```
 	<appname> open
 	```
-	
 
+## 从运行栏部署应用程序失败
+{: #deployinganappfromtherunbarfails}
+
+在此场景中，部署会失败，且会显示黄色的“未同步”状态。 
+
+您要部署的应用程序与正在运行的其他应用程序具有相同的路径。要解决此问题，请将路径更改为唯一路径。
+
+## 找不到运行栏
+{: #runbarcannotbefound}
+
+如果在 Eclipse Orion {{site.data.keyword.webide}} 中看不到运行栏，那么可能是发生了以下其中一个问题：
+
+1. {{site.data.keyword.jazzhub}} 未将项目识别为项目。
+   * 修订：在项目根目录中，创建 `project.json` 文件。
+2. {{site.data.keyword.jazzhub_short}} 无法确定应用程序所在的文件夹。
+   * 修订：如果应用程序位于项目根目录以外的目录，请执行以下其中一个步骤：
+      * 在项目的根目录中，创建 `manifest.yml` 文件。然后，编辑该文件，以便其指向应用程序的位置；例如 `path: path_to_your_app`
+      * 移动应用程序，以便其位于项目的根目录中。
+3. {{site.data.keyword.jazzhub_short}} 检测不到应用程序为 Node.js 应用程序。
+   * 修订：在项目的应用程序文件夹中，创建 `package.json` 文件。
+   
+
+## GitHub Hook 不运作
+{: #githubhookisntworking}
+
+如果您已配置 GitHub 项目在您推送落实时创建工作项链接，而这些链接未如预期运作，请遵循以下步骤来查找问题：
+
+1. 在 GitHub 存储库中，单击**设置**。
+![GitHub 设置链接](images/githubSettings1_small.png)
+
+2. 单击 **Webhook 和服务**。
+![GitHub Webhook 和服务链接](images/githubHooks1_small.png)
+
+3. 要查看消息，请将鼠标悬停在 {{site.data.keyword.jazzhub}} 状态图标上。
+![服务 Hook 上的错误消息](images/troubleshoothook1_small.png)
+
+4. 根据 GitHub 消息解决错误。
+
+5. 要验证修订是否可行，请落实并推送其他更改，或者转至 {{site.data.keyword.jazzhub_short}} 的服务页面，并单击**测试服务**。
+![GitHub 测试服务按钮](images/githubTestService_small.png)
+
+6. 通过再次检查状态图标，验证没有错误。
+![没有错误的状态图标](images/githubResolved_small.png)
+
+有关更多信息，请参阅[设置 Bluemix DevOps Services 项目的 GitHub](https://hub.jazz.net/docs/githubhooks/){: new_window}。
 
 
 # 有关管理帐户的故障诊断

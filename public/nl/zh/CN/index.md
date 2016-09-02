@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-*上次更新时间：2016 年 5 月 19 日*
+上次更新时间：2016 年 8 月 8 日
 {: .last-updated}
 
 
@@ -109,7 +109,7 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}} 区域是可将您应用程序部署到的已定义地理地域。您可以在不同的区域中创建应用程序和服务实例，但前提是这些区域使用相同的 {{site.data.keyword.Bluemix_notm}} 基础架构来进行应用程序管理，并使用相同的使用情况详细信息视图来进行记帐。您可以选择离客户最近的区域，并将应用程序部署到此区域以缩短应用程序等待时间。还可选择希望在其中保留应用程序数据以解决安全问题的区域。在多个区域中构建应用程序后，如果一个区域发生故障，其他区域中的应用程序会继续运行。您的资源限额对于您使用的每个区域都是相同的。
 
-如果您使用的是 {{site.data.keyword.Bluemix_notm}} 用户界面，那么可以切换到其他区域来使用该区域中的空间。转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg)，并展开**区域**选择器。然后，您可以从列表中选择不同的区域。
+如果您使用的是 {{site.data.keyword.Bluemix_notm}} 用户界面，那么可以切换到其他区域来使用该区域中的空间。单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg)，并展开**区域**选择器。然后，您可以从列表中选择不同的区域。
 
 如果您使用的是 cf 命令行界面，那么必须通过使用 cf api 命令并指定区域的 API 端点来连接到要使用的 {{site.data.keyword.Bluemix_notm}} 区域。例如，输入以下命令来连接到 {{site.data.keyword.Bluemix_notm}} 欧洲英国区域：
 

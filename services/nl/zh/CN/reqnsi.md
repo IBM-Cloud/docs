@@ -12,7 +12,7 @@ copyright:
 
 #服务
 {: #services}
-*上次更新时间：2016 年 1 月 20 日*
+*上次更新时间：2016 年 8 月 10 日*
 
 在 {{site.data.keyword.Bluemix}} 用户界面中，可以在**目录**的**服务**下找到可用的服务。
 {:shortdesc}
@@ -77,6 +77,7 @@ copyright:
 |{{site.data.keyword.APIM}}			|是		|是		|否|
 |{{site.data.keyword.autoscaling}}		|是		|是		|是|
 |{{site.data.keyword.bigicloudst}}		|是		|否		|否|
+|{{site.data.keyword.blockstorageshort}}        |否             |是            |否 |
 |{{site.data.keyword.rules_short}}		|是		|是		|否|
 |{{site.data.keyword.cloudint}}			|是		|是		|否|
 |{{site.data.keyword.cloudant}}			|是		|是		|否|
@@ -219,11 +220,11 @@ cf create-service service_name service_plan service_instance
     2. 在“目录”中，通过单击服务磁贴来选择所需的服务。这将打开服务详细信息页面。
     3. 在“添加服务”窗口中，将**应用程序**列表选择保留为**保持未绑定**。此选择意味着该服务不会连接到 {{site.data.keyword.Bluemix_notm}} 应用程序。
     4. 根据需要进行任何其他选择。然后，单击**创建**。这将创建服务实例，并显示服务“仪表板”。
-2. 在服务“仪表板”的左侧导航窗格中，可以选择**服务凭证**来查看或添加 JSON 格式的凭证。使用显示的 API 密钥作为凭证来连接到服务实例。
+2. 在服务“仪表板”的导航窗格中，可以选择**服务凭证**来查看或添加 JSON 格式的凭证。使用显示的 API 密钥作为凭证来连接到服务实例。
 
 在 {{site.data.keyword.Bluemix_notm}} 外部运行的应用程序现在可以访问 {{site.data.keyword.Bluemix_notm}} 服务。
 
-**注：**如果想要删除服务实例或检查帐单信息，必须返回到用户界面中用于管理服务实例的“仪表板”。
+**注：**如果想要删除服务实例或检查记帐信息，必须返回到用户界面中用于管理服务实例的“仪表板”。
 
 ## 创建用户提供的服务实例
 {: #user_provide_services}
@@ -291,14 +292,14 @@ cf uups testups2 -l syslog://example2.com
     
 	假定您是在要使用服务实例的区域开始操作。要使用另一个区域中存在的服务实例，请完成以下步骤：
 
-      1. 切换到服务实例所在的区域。在 {{site.data.keyword.Bluemix_notm}} 顶部菜单栏中，展开**区域**或单击**区域**图标，然后选择服务实例所在的区域。
+      1. 切换到服务实例所在的区域。在 {{site.data.keyword.Bluemix_notm}} 菜单栏中，展开**区域**或单击**区域**图标，然后选择服务实例所在的区域。
 
       2. 在服务所在的区域中从服务实例的 VCAP_SERVICES 环境变量检索凭证和连接参数。请完成以下步骤：
 
 	       1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击应用程序磁贴。这将显示“概述”页面。
-	       2. 在左侧导航窗格中，单击**环境变量**。*VCAP_SERVICES* 环境变量详细信息会显示在右侧窗格中。记录服务实例的 JSON 内容。
+	       2. 在导航窗格中，单击**环境变量**。*VCAP_SERVICES* 环境变量详细信息会显示在右侧窗格中。记录服务实例的 JSON 内容。
 
-      3. 切换到您要在其中使用服务实例的区域。在 {{site.data.keyword.Bluemix_notm}} 顶部菜单栏中，展开**区域**或单击**区域**图标，然后选择要在其中使用服务实例的区域。
+      3. 切换到您要在其中使用服务实例的区域。在 {{site.data.keyword.Bluemix_notm}} 菜单栏中，展开**区域**或单击**区域**图标，然后选择要在其中使用服务实例的区域。
 
       4. 通过使用从 *VCAP_SERVICES* 环境变量记录的凭证和连接参数，以创建用户提供的服务实例。有关如何创建用户提供的服务实例的信息，请参阅[创建用户提供的服务实例](#user_provide_services){: new_window}。
 
@@ -321,8 +322,8 @@ cf uups testups2 -l syslog://example2.com
 要从另一个服务使用某个服务实例，请完成以下步骤：
 
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击要访问的服务的磁贴。这将显示该服务的仪表板。
-2. 在左侧导航窗格中，单击*管理*，通过使用该服务实例的控制台来授权其他服务实例绑定该服务实例。
-3. 如果想要拒绝其他服务访问该服务实例，请单击左侧导航窗格中的*服务访问授权*，然后使用*撤销*来除去服务绑定。 
+2. 在导航窗格中，单击**管理**，通过使用该服务实例的控制台来授权其他服务实例绑定该服务实例。
+3. 如果想要拒绝其他服务访问该服务实例，请单击导航窗格中的**服务访问授权**，然后使用**撤销**来除去服务绑定。 
 
 # 相关链接
 {: #rellinks}

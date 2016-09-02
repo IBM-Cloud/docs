@@ -1,14 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2015
+
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -41,4 +42,3 @@ SendGrid 서비스를 사용하여 이메일을 보낼 경우 매달 서비스 �
 
 매달 서비스 인스턴스당 제공되는 이메일 한계인 25,000개에 도달한 후 이메일을 추가로 보내려는 경우 다른 서비스 인스턴스를 추가할 수 있습니다. SendGrid에 대한 자세한 정보는 [SendGrid 시작하기](https://sendgrid.com/docs/index.html){: new_window}를 참조하십시오.    
 {: tsResolve}
-

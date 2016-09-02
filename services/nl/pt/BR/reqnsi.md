@@ -12,7 +12,7 @@ copyright:
 
 #Serviços
 {: #services}
-*Última atualização: 20 de janeiro de 2016*
+*Última atualização: 10 de agosto de 2016*
 
 É possível localizar serviços disponíveis no **Catálogo** em **Serviços** na interface com o usuário do {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -65,9 +65,10 @@ o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Pa
 
 
 
-O {{site.data.keyword.Bluemix_notm}} também tem serviços experimentais que você pode tentar. Para
-visualizar todos os serviços experimentais, modelos e tempos de
-execução disponíveis, efetue login no {{site.data.keyword.Bluemix_notm}}, role para a parte inferior do Catálogo e, em seguida, clique em **{{site.data.keyword.Bluemix_notm}} Lab Catalog**.
+O {{site.data.keyword.Bluemix_notm}} também tem serviços experimentais que você pode tentar. 
+Para visualizar todos os serviços experimentais, modelos e tempos de execução
+disponíveis, efetue login no {{site.data.keyword.Bluemix_notm}}, role para o
+final do Catálogo e, em seguida, clique em **{{site.data.keyword.Bluemix_notm}} Lab Catalog**.
 
 Serviços experimentais podem não ser estáveis e podem mudar de maneiras que não sejam compatíveis com versões anteriores. Esses serviços não são recomendados para uso em ambientes de produção. O suporte para serviços experimentais é fornecido por meio da Comunidade de desenvolvedores do {{site.data.keyword.Bluemix_notm}}. Se um problema for investigado pela IBM
 e for determinado que é um defeito em um serviço experimental,
@@ -103,6 +104,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.APIM}}			|Sim		|Sim		|Não|
 |{{site.data.keyword.autoscaling}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.bigicloudst}}		|Sim		|Não		|Não|
+|{{site.data.keyword.blockstorageshort}}        |Não             |Sim            |Não |
 |{{site.data.keyword.rules_short}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.cloudint}}			|Sim		|Sim		|Não|
 |{{site.data.keyword.cloudant}}			|Sim		|Sim		|Não|
@@ -289,7 +291,9 @@ Para ativar um app externo ou ferramenta de terceiro para usar um serviço do {{
     2. No Catálogo, selecione o serviço desejado clicando no ladrilho do serviço. A página de detalhes do serviço é aberta.
     3. Na janela Incluir serviço, mantenha a seleção da lista **App**: como **Deixar desvinculado**. Essa seleção significa que o serviço não será conectado a um app do {{site.data.keyword.Bluemix_notm}}.
     4. Faça qualquer outra seleção conforme necessário. Em seguida, clique em **CRIAR**. Uma instância de serviço é criada e o Painel de serviço é exibido.
-2. Na área de janela de navegação à esquerda do Painel de serviço, é possível selecionar **Credenciais do serviço ** para visualizar ou incluir credenciais no formato JSON. Use a chave de API que é exibida como as credenciais para se conectar à instância de serviço.
+2. Na área de janela de navegação do Painel de serviço, é possível
+selecionar **Credenciais de serviço** para visualizar ou incluir
+credenciais no formato JSON. Use a chave de API que é exibida como as credenciais para se conectar à instância de serviço.
 
 Seu aplicativo que é executado fora do
 {{site.data.keyword.Bluemix_notm}} agora poderá
@@ -372,20 +376,24 @@ Se você tiver uma instância de serviço criada e ligada a apps em uma região,
 deseja usar a instância de serviço. Para usar uma instância de serviço existente
 em uma outra região, conclua as etapas a seguir:
 
-      1. Alterne para a região em que a instância de serviço existe. Na barra de menus superior do {{site.data.keyword.Bluemix_notm}},
-expanda **Região** ou clique no ícone **Região** e,
-em seguida, selecione a região em que a instância de serviço existe.
+      1. Alterne para a região em que a instância de serviço existe. Na barra de
+menus do {{site.data.keyword.Bluemix_notm}}, expanda
+**Região** ou clique no ícone **Região** e, em
+seguida, selecione a região na qual a instância de serviço existe.
 
       2. Recupere as credenciais e os parâmetros de conexão da variável de ambiente VCAP_SERVICES da instância de serviço na região na qual o serviço existe. Conclua
 as etapas a seguir:
 
 	       1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no tile do aplicativo. A página Visão geral é exibida.
-	       2. Na área de janela de navegação à esquerda, clique em **Variáveis de ambiente**. Os detalhes da variável de ambiente *VCAP_SERVICES*
+	       2. Na área de janela de navegação, clique em **Variáveis de
+ambiente**. Os detalhes da variável de ambiente *VCAP_SERVICES*
 são exibidos na área de janela direita. Registre o conteúdo JSON para a
 instância de serviço.
 
       3. Alterne para a região em que você deseja usar a instância de
-serviço. Na barra de menus superior do {{site.data.keyword.Bluemix_notm}}, expanda **Região** ou clique no ícone **Região** e, em seguida, selecione a região em que você deseja usar a instância de serviço.
+serviço. Na barra de menus do {{site.data.keyword.Bluemix_notm}}, expanda
+**Região** ou clique no ícone **Região** e, em
+seguida, selecione a região na qual você deseja usar a instância de serviço.
 
       4. Crie uma instância de serviço fornecida pelo usuário usando as credenciais
 e os parâmetros de conexão que você registrou a partir da variável de ambiente
@@ -415,8 +423,13 @@ Para usar uma instância de serviço a partir de outro serviço, conclua as etap
 
 1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique
 no ladrilho para o serviço que você deseja acessar. O painel para o serviço é exibido.
-2. Na área de janela de navegação à esquerda, clique em *Gerenciar* para autorizar a ligação a partir de outras instâncias de serviço usando o console da instância de serviço.
-3. Se você desejar negar o acesso de outros serviços à instância de serviço, clique em *Autorização de Acesso de serviço* na área de janela de navegação à esquerda e, em seguida, use *Revogar* para remover a ligação de serviço. 
+2. Na área de janela de navegação, clique em
+**Gerenciar** para autorizar a ligação de outras instâncias
+de serviço usando o console da instância de serviço.
+3. Se você desejar negar o acesso de outros serviços à instância de serviço,
+clique em **Autorização de acesso de serviço** na área de janela de
+navegação e, em seguida, use **Revogar** para remover a
+ligação de serviço. 
 
 # rellinks
 {: #rellinks}

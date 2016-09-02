@@ -18,7 +18,7 @@ copyright:
 # 情境：端對端開發
 {: #ee}
 
-*前次更新：2016 年 6 月 15 日*
+*前次更新：2016 年 8 月 16 日*
 {: .last-updated}
 
 您可以使用 {{site.data.keyword.Bluemix}} 使用者介面、平台及工具選擇來建置、執行及部署應用程式。請遵循這份端對端開發情境以便開始使用。
@@ -36,7 +36,7 @@ copyright:
 
 在 {{site.data.keyword.Bluemix_notm}} 中，應用程式與組織及空間相關聯。組織是由多個合作人員所擁有及使用。一開始，您會得到預設組織，它是以您的使用者名稱來命名，且您是唯一的合作人員。您也會在這個組織內得到一個空間。該空間是用來執行您應用程式的環境；例如，您可以有 dev 空間作為開發環境、test 空間作為測試環境，以及 production 空間作為正式作業環境。此外，每一個環境都屬於一個地區。使用 {{site.data.keyword.Bluemix_notm}}，您可以將應用程式部署至特定的地理區域，以獲得較低的網路延遲、資料隱私及更好的可用性。如需詳細資料，請參閱「地區」。
 
-針對此情境，您想要使用 Node.js 開發 Web 應用程式。假設您位在美國，而您大部分的應用程式使用者也在美國。您決定在接近使用者族群的地方建置及執行應用程式，以便得到較低網路延遲的好處。登入 {{site.data.keyword.Bluemix_notm}} 之後，請按一下**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg)，然後選取**美國南部**地區。然後，您可以採取下列步驟來建立應用程式：
+針對此情境，您想要使用 Node.js 開發 Web 應用程式。假設您位在美國，而您大部分的應用程式使用者也在美國。您決定在接近使用者族群的地方建置及執行應用程式，以便得到較低網路延遲的好處。登入 {{site.data.keyword.Bluemix_notm}} 之後，請按一下**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg)，然後選取**美國南部**地區。然後，您可以採取下列步驟來建立應用程式：
 
   1. 選取**運算**。
   2. 按一下加號圖示。
@@ -58,7 +58,7 @@ copyright:
   3. 鍵入服務實例的唯一名稱，或使用 {{site.data.keyword.Bluemix_notm}} 產生的預設名稱，然後按一下**建立**。
   4. 即會顯示「重新編譯打包應用程式」視窗。按一下**重新編譯打包**，以重新編譯打包您的應用程式。
   
-現在您的應用程式已連結至 {{site.data.keyword.cloudant}} 服務。您可以在 VCAP_SERVICES 環境變數中，找到應用程式與服務實例通訊所需的全部資料。例如，因為 {{site.data.keyword.Bluemix_notm}} 在相同虛擬機器上管理數個應用程式，因此應用程式不能使用相同的 HTTP 埠號來接收送入的要求。為了避免衝突，會針對每個應用程式提供一個唯一的埠號。此埠號可在 VCAP_APP_PORT 變數下取得。
+現在您的應用程式已連結至 {{site.data.keyword.cloudant}} 服務。您可以在 VCAP_SERVICES 環境變數中，找到應用程式與服務實例通訊所需的全部資料。例如，因為 {{site.data.keyword.Bluemix_notm}} 在相同虛擬機器上管理數個應用程式，因此應用程式不能使用相同的 HTTP 埠號來接收送入的要求。為了避免衝突，會針對每個應用程式提供一個唯一的埠號。此埠號可從 VCAP_APP_PORT 變數取得。
 
 按一下應用程式「概觀」頁面上的**環境變數**，查看 VCAP_SERVICES 的整份清單以取得相關資訊：
 
@@ -87,7 +87,7 @@ copyright:
 ## 使用 cf CLI 建置應用程式
 {: #ee_cf}
 
-{{site.data.keyword.Bluemix_notm}} 提供數個工具讓您開始撰寫應用程式的程式碼，這些工具包括例如 cf 指令行介面及 Eclipse 工具。您可以選擇 cf 指令行介面開始撰寫應用程式 TestNode 的程式碼。
+{{site.data.keyword.Bluemix_notm}} 提供數個工具（例如 cf 指令行介面及 Eclipse 工具），讓您開始撰寫應用程式的程式碼。您可以選擇 cf 指令行介面開始撰寫應用程式 TestNode 的程式碼。
 
   1. 首先，下載並開發您應用程式的程式碼。
   
@@ -187,7 +187,7 @@ cf bind-service TestNode cloudant100
   ```
 if (process.env.VCAP_SERVICES) {
     var env = JSON.parse(process.env.VCAP_SERVICES);
-        var cloudant = env['"cloudantNoSQLDB'][0].credentials;
+        var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
                 "username" : "user1",

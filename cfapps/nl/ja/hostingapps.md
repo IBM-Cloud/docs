@@ -167,7 +167,7 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}} でコードを実行するには、VCAP_SERVICES 変数を解析してサービス接続についての情報を取得するためのコード・ロジックを追加する必要があります。サービス・インスタンスの動的に割り当てられたホストおよびポートを環境変数を通して取得するように、アプリケーションを変更してください。次の例は、Ruby アプリケーションで Postgre SQL サービス・インスタンスの資格情報を取得する方法を示します。
 
-
+```
 services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
         url = services.values.map do |srvs|
           srvs.map do |srv|
@@ -178,7 +178,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
             end
           end
         end.flatten!.first
-		
+```		
 {:codeblock}
 
 {{site.data.keyword.Bluemix_notm}} 用にアプリケーションを変更した後、アプリケーションをローカル環境で確実に実行できるようにするため、すべての {{site.data.keyword.Bluemix_notm}} Cloud Foundry アプリケーションに対して設定される VCAP_SERVICES 環境変数があるかどうかをチェックしてください。
@@ -190,7 +190,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 ## 関連リンク
 {: #general}
 
-* [IBM Containers](../containers/container_cli_ov.html)
+* [IBM Containers](../containers/container_index.html)
 * [Virtual Machines](../virtualmachines/vm_index.html)
 * [Delivery Pipeline 概説](../services/DeliveryPipeline/index.html)
 * [IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ](../manageapps/eclipsetools/eclipsetools.html)

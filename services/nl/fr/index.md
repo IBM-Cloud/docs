@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Dernière mise à jour : 10 mai 2016*
+*Dernière mise à jour : 10 août 2016*
 
 {{site.data.keyword.Bluemix_notm}} simplifie l'implémentation, l'hébergement et la mise à l'échelle des services et des applications. Ainsi,
 vous pouvez vous consacrer à la logique et à la conception de l'application.
@@ -74,6 +74,7 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.APIM}}			|Oui		|Oui		|Oui|
 |{{site.data.keyword.autoscaling}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.bigicloudst}}		|Oui		|Non		|Non|
+|{{site.data.keyword.blockstorageshort}}  |Non  |Oui  |Non|
 |{{site.data.keyword.rules_short}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.cloudint}}			|Oui		|Oui		|Non|
 |{{site.data.keyword.cloudant}}			|Oui		|Oui		|Oui|
@@ -106,7 +107,7 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.mqa}}			|Oui		|Oui		|Oui|
 |{{site.data.keyword.mql}}			|Oui		|Oui		|Oui|
 |{{site.data.keyword.nlclassifierlshort}} 	|Oui 		|Oui 		|Oui|
-|{{site.data.keyword.objectstorageshort}}	|Oui		|Non		|Non|
+|{{site.data.keyword.objectstorageshort}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.personalityinsightsshort}}	|Oui		|Oui		|Oui|
 |{{site.data.keyword.mobilepush}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.mobilepushshort}}				|Oui		|Oui		|Oui|

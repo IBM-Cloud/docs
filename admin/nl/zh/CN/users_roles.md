@@ -17,10 +17,10 @@ copyright:
 
 # 管理团队成员和角色
 {: #userroles}
-上次更新时间：2016 年 7 月 12 日
+上次更新时间：2016 年 8 月 16 日
 {: .last-updated}
 
-在您帐户的**团队目录**页面中，可以管理现有团队成员及其在您组织和空间中的角色，还可以邀请新的团队成员。要访问您帐户的团队目录，请转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; *your_account_name* &gt; **团队目录**。
+在您帐户的**团队目录**页面中，可以管理现有团队成员及其在您组织和空间中的角色，还可以邀请新的团队成员。要访问您帐户的团队目录，请转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; *your_account_name* &gt; **团队目录**。
 {:shortdesc}
 
 帐户所有者对组织和空间执行所有操作，包括管理团队成员及其分配的角色。组织管理员有权邀请团队成员并管理角色。空间管理员可以使用**管理组织**页面将现有帐户成员添加到空间，并调整这些成员的角色。请参阅以下信息以了解有关角色的更多信息。
@@ -68,7 +68,8 @@ copyright:
 
 要更改团队目录页面的可视性，请完成以下步骤：
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; *your_account_name* &gt; **团队目录**。 
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; *your_account_name* &gt; **团队目录**。
+ 
 2. 对于**可视范围**选项，请单击当前选择以查看选项。
 3. 然后，基于您帐户的当前需要，选择**所有人**或**仅限我**。
 
@@ -78,7 +79,8 @@ copyright:
 帐户所有者和组织管理员可以在“邀请团队成员”页面中邀请团队成员加入组织。添加新的团队成员时，会自动向其分配审计员角色。您可以日后在“团队目录”页面上更改这些角色。要邀请团队成员，请完成以下步骤：
 
 <ol>
-<li>转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; *your_account_name* &gt; **邀请团队成员**。</li>
+<li>转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; *your_account_name* &gt; **邀请团队成员**。
+</li>
 <li>选择要邀请团队成员加入的组织。</li>
 <li>单击**下一步**。</li>
 <li>选择要允许团队成员访问的空间。</li>
@@ -94,14 +96,16 @@ copyright:
 
 单击**查看暂挂**以检查邀请是处于暂挂状态还是已被接受。可以随时选择重新发送邀请电子邮件或对暂挂邀请取消邀请。
 
-如果您具有与 {{site.data.keyword.Bluemix_notm}} 帐户相链接的 SoftLayer 帐户，那么您可以添加 SoftLayer 团队成员。转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; *your_account_name* &gt; **邀请团队成员**页面。然后，在**添加 SoftLayer 团队成员**部分中单击**添加**，以在 SoftLayer 帐户中进行认证，并查看 SoftLayer 帐户的团队成员列表。有关从 SoftLayer 帐户添加团队成员的更多信息，请参阅[邀请 SoftLayer 团队成员加入 {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users)。
+如果您具有与 {{site.data.keyword.Bluemix_notm}} 帐户相链接的 SoftLayer 帐户，那么您可以添加 SoftLayer 团队成员。转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; *your_account_name* &gt; **邀请团队成员**页面。
+然后，在**添加 SoftLayer 团队成员**部分中单击**添加**，以在 SoftLayer 帐户中进行认证，并查看 SoftLayer 帐户的团队成员列表。有关从 SoftLayer 帐户添加团队成员的更多信息，请参阅[邀请 SoftLayer 团队成员加入 {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users)。
 
 ## 编辑角色
 {: #editinguserroles}
 
 帐户所有者和组织管理员可以在**团队目录**页面上编辑现有团队成员的组织和空间角色。 
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; *your_account_name* &gt; **团队目录**。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; *your_account_name* &gt; **团队目录**。
+
 2. 找到要编辑其角色的团队成员。
 3. 单击**查看角色**。
 4. 选择或清除组织角色选项，以修改团队成员的组织访问权。
@@ -112,7 +116,8 @@ copyright:
 
 空间管理员可以在**管理组织**页面上编辑其空间中团队成员的角色。
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; *your_account_name* &gt; **管理组织**。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; *your_account_name* &gt; **管理组织**。
+
 2. 找到您的空间所在的组织。
 3. 单击**查看详细信息**。
 4. 找到您的空间，然后单击**编辑空间**。

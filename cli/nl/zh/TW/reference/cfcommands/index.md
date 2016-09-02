@@ -47,7 +47,7 @@ cf api BluemixServerURL
 
 列出您已部署在現行空間的所有應用程式。也會顯示每個應用程式的狀態。
 
-假設您有一個應用程式的實例，則如果您的應用程式啟動，則會在 cf apps 指令回應的實例直欄中看到 1/1，如果您的應用程式關閉，則會看到 0/1。如果您看到指出應用程式實例狀態不明的 ?/1，則可以將應用程式 URL 複製到瀏覽器，以檢查應用程式是否有回應，或者您可以透過 `cf logs appname` 指令來讀取日誌尾端的內容，查看應用程式是否正在產生日誌內容。
+假設您對某個應用程式有一個實例，則如果您的應用程式已啟動，則會在 cf apps 指令回應的實例直欄中看到 1/1，如果您的應用程式已關閉，則會看到 0/1。如果您看到指出應用程式實例狀態不明的 ?/1，則可以將應用程式 URL 複製到瀏覽器，以檢查應用程式是否有回應，或者您可以透過 `cf logs appname` 指令來讀取日誌尾端的內容，查看應用程式是否正在產生日誌內容。
 
 ## cf bind-service
 
@@ -225,7 +225,7 @@ cf push appname
 <dt>*-b* buildpack_name</dt>
 <dd>建置套件的名稱。buildpack_name 可以是依名稱或 Git URL 的自訂建置套件，例如，`my-buildpack` 或 `https://github.com/heroku/heroku-buildpack-play.git`。</dd>
 <dt>*-c* start_command</dt>
-<dd>應用程式的啟動指令。若要使用預設的啟動指令，請針對這個選項指定 null 值。例如：</dd>
+<dd>應用程式的啟動指令。若要使用預設的啟動指令，請針對這個選項指定空值。例如：</dd>
 <dd>
 ```
 cf push appname -c null

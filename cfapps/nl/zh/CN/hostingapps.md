@@ -181,7 +181,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 ## 相关链接
 {: #general}
 
-* [IBM Containers](../containers/container_cli_ov.html)
+* [IBM Containers](../containers/container_index.html)
 * [虚拟机](../virtualmachines/vm_index.html)
 * [Delivery Pipeline 入门](../services/DeliveryPipeline/index.html)
 * [使用 IBM Eclipse Tools for Bluemix 部署应用程序](../manageapps/eclipsetools/eclipsetools.html)

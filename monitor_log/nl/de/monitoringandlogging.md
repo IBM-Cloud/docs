@@ -60,7 +60,7 @@ Protokolldateien werden automatisch erstellt, wenn Sie die Cloud Foundry-Infrast
 Protokolle für {{site.data.keyword.Bluemix_notm}}-Anwendungen werden in einem festen Format angezeigt, ähnlich dem folgenden Muster:
 
 ```
-         1         2         3         4         5
+1         2         3         4         5
 12345678901234567890123456789012345678901234567890
 --------------------------------------------------
 yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
@@ -277,7 +277,7 @@ Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem Syst
 	 Der Name der vom Benutzer bereitgestellten Serviceinstanz.
 	 
   4. Führen Sie ein erneutes Staging für die App durch. 
-     Geben Sie den Befehl ```cf restage appname``` ein, damit die Änderungen wirksam werden. 
+     Geben Sie ```cf restage appname``` ein, damit die Änderungen wirksam werden. 
 
 #### Protokolle in externen Hosts anzeigen
 {: #viewing_logs_external}
@@ -290,7 +290,7 @@ Wenn Protokolle generiert werden, können Sie nach einer kurzen Verzögerung Nac
 ### Beispiel: Streaming von Cloud Foundry-Anwendungsprotokollen in Splunk 
 {: #splunk}
 
-In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter Verwendung von IBM Virtual Servers Beta und des Ubuntu-Image.  Die Cloud Foundry-Anwendungsprotokolle sollen per Streaming von {{site.data.keyword.Bluemix_notm}} in Splunk übertragen werden. 
+In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter Verwendung von IBM Virtual Servers Beta und des Ubuntu-Image. Die Cloud Foundry-Anwendungsprotokolle sollen per Streaming von {{site.data.keyword.Bluemix_notm}} in Splunk übertragen werden. 
 
   1. Zunächst muss Splunk von Jane installiert werden.
 
@@ -312,12 +312,10 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
         Anschließend korrigiert Jane das Add-on, indem sie */opt/splunk/etc/apps/rfc5424/default/transforms.conf* durch eine neue Datei *transforms.conf* ersetzt, die den folgenden Text enthält:
 	   
 	    ```
-        [rfc5424_host]
+[rfc5424_host]
         DEST_KEY = MetaData:Host
         REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
-        FORMAT = host::$1
-
-        [rfc5424_header]
+        FORMAT = host::$1[rfc5424_header]
         REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
         FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
         MV_ADD = true

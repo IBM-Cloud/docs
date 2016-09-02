@@ -17,12 +17,15 @@ copyright:
 
 # Gerenciando membros da equipe e funções
 {: #userroles}
-Última atualização: 12 de julho de 2016
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
 A partir da página de **Diretório da equipe** para a sua conta, é possível gerenciar membros da equipe existentes e suas funções em sua organização e espaços, bem como convidar novos
-membros da equipe. Para acessar o diretório da equipe para a sua conta, acesse o ícone **Conta e suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt; *nome_de_sua_conta* &gt; **Diretório da equipe**. 
-{:shortdesc}
+membros da equipe. Para acessar o diretório da equipe de sua conta, acesse o ícone
+**{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+**Conta** &gt; *your_account_name* &gt;
+**Diretório da equipe**.{:shortdesc}
 
 Proprietários da conta executam todas as operações nas organizações e espaços, incluindo o gerenciamento de membros da equipe e de suas funções designadas. Gerenciadores de organização têm acesso para
 convidar membros da equipe e gerenciar funções. Gerenciadores de
@@ -88,7 +91,10 @@ membros da equipe ou só você como o proprietário da conta.
 
 Para mudar a visibilidade da página de diretório da equipe conclua as etapas a seguir:
 
-1. Acesse o ícone **Conta e suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt; *nome_de_sua_conta* &gt; **Diretório da equipe**. 
+1. Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+**Conta** &gt; *your_account_name* &gt;
+**Diretório da equipe**. 
 2. Para a opção **Visibilidade para**, clique na seleção atual para visualizar as opções.
 3. Em seguida, selecione **Todos** ou **Somente eu** com base nas necessidades atuais para a sua conta.
 
@@ -99,9 +105,10 @@ Proprietários da conta e gerenciadores de organização podem convidar membros 
 eles são designados com a função de auditor automaticamente. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para convidar um membro da equipe, conclua estas etapas:
 
 <ol>
-<li>Acesse o ícone **Conta e suporte**
-![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt;
-*nome_de_sua_conta* &gt; **Convidar membro da equipe**.</li>
+<li>Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+**Conta** &gt; *your_account_name* &gt;
+**Convidar membro da equipe**.</li>
 <li>Selecione a organização para a qual deseja convidar membros da equipe.</li>
 <li>Clique em **Avançar**.</li>
 <li>Selecione os espaços para os quais deseja permitir acesso aos seus membros da equipe.</li>
@@ -118,9 +125,11 @@ eles são designados com a função de auditor automaticamente. É possível mud
 Clique em **Visualizar pendente**, para verificar se os convites estão pendentes ou aceitos. É possível optar por reenviar o e-mail de convite ou cancelar o convite para um convite
 pendente a qualquer momento.
 
-Se você tiver uma conta do SoftLayer vinculada à sua conta do {{site.data.keyword.Bluemix_notm}}, poderá incluir os membros de sua equipe do SoftLayer. Acesse o ícone **Conta e
-suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt; *nome_de_sua_conta* &gt; página **Convidar
-membros da equipe**. Em seguida, clique em
+Se você tiver uma conta do SoftLayer vinculada à sua conta do {{site.data.keyword.Bluemix_notm}}, poderá incluir os membros de sua equipe do SoftLayer. 
+Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+**Conta** &gt; *your_account_name* &gt; página
+**Convidar membros da equipe**. Em seguida, clique em
 **Incluir** na seção **Incluir membros da
 equipe do SoftLayer** para autenticar em sua conta do SoftLayer e
 visualizar uma lista de membros da equipe a partir de sua conta do SoftLayer. Para obter mais informações sobre a inclusão de membros da equipe a partir da sua conta do SoftLayer, consulte
@@ -131,7 +140,10 @@ visualizar uma lista de membros da equipe a partir de sua conta do SoftLayer. Pa
 
 Proprietários da conta e gerenciadores de organização podem editar funções de organização e espaço para membros da equipe existentes na página **Diretório da equipe**. 
 
-1. Acesse o ícone **Conta e suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt; *nome_de_sua_conta* &gt; **Diretório da equipe**.
+1. Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+**Conta** &gt; *your_account_name* &gt;
+**Diretório da equipe**.
 2. Localize o membro da equipe cujas funções você deseja editar.
 3. Clique em **Visualizar funções**.
 4. Selecione ou limpe as seleções de função de organização, para modificar o acesso à organização para o membro da equipe.
@@ -142,9 +154,7 @@ Proprietários da conta e gerenciadores de organização podem editar funções 
 
 Gerenciadores de espaço podem editar funções para os membros da equipe em seu espaço na página **Gerenciar organizações**.
 
-1. Acesse o ícone **Conta e suporte**
-![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt;
-*nome_de_sua_conta* &gt; **Gerenciar organizações**.
+1. Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-avatar-icon.svg) &gt; **Conta** &gt; *your_account_name* &gt; **Gerenciar organizações**.
 2. Localize a organização na qual o seu espaço está.
 3. Clique em **Visualizar Detalhes**.
 4. Localize o seu espaço e clique em **Editar espaço**.

@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
  
 
@@ -15,7 +15,7 @@ copyright:
 {:download: .download}
 
 # Iniciar a codificação com Git
-*Última atualização: 2 de março de 2016*
+Última atualização: 2 de março de 2016
 {: .last-updated}  
 
 É possível criar um repositório Git hospedado que é implementado no {{site.data.keyword.Bluemix}} automaticamente. Em seguida, é possível modificar o código que é executado em seu app enviando por push as mudanças
@@ -45,28 +45,29 @@ Se você estiver construindo um app Node.js, será possível usar o {{site.data.
 
 Para saber mais sobre o {{site.data.keyword.Bluemix_notm}} Live Sync, consulte [{{site.data.keyword.Bluemix_notm}} Live Sync](../develop/bluemixlive.html). Para obter mais detalhes sobre os comandos, consulte a [doc da CLI do {{site.data.keyword.Bluemix_notm}} Live Sync](../cli/reference/bl/index.html). Para usar o {{site.data.keyword.Bluemix_notm}} Live Sync com o Web IDE, consulte [Live Edit.](../develop/bluemixlive.html).  
 
-1. Faça download e instale a linha de comandos bl do {{site.data.keyword.Bluemix_notm}} Live Sync. 
+Antes de iniciar, faça download e instale a linha de comandos bl do
+{{site.data.keyword.Bluemix_notm}} Live Sync. 
+
+**Importante:** a ferramenta de linha de comandos bl está disponível somente para Windows 7 e 8 e Mac OS X versão 10.9 ou posterior.
 
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Fazer download do botão da linha de comandos bl do Windows" /> </a>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Fazer download do botão da linha de comandos bl do Mac" /> </a>
 </p>
 
-**Importante:** a ferramenta de linha de comandos bl está disponível somente para Windows 7 e 8 e Mac OS X versão 10.9 ou posterior. 
-
-2. Em uma linha de comandos, efetue login usando o comando a seguir. Você será solicitado a fornecer o ID e a senha da IBM®. 
+1. Em uma linha de comandos, efetue login inserindo o comando a seguir: 
 ```
 bl login
 ```
-
-3. Consulte a lista de projetos que estão disponíveis para sincronização do {{site.data.keyword.Bluemix_notm}} Live Sync, inserindo o comando a seguir: 
+Quando solicitado, insira o {{site.data.keyword.ibmid}} e a senha.
+2. Consulte a lista de projetos que estão disponíveis para sincronização do {{site.data.keyword.Bluemix_notm}} Live Sync, inserindo o comando a seguir: 
 ```
 bl projects
 ```
 Localize o nome do projeto
 na lista que corresponde ao seu aplicativo. O nome do projeto tem o formato de seu *alias* | *nome do seu aplicativo*. 
 
-4. Sincronize seu ambiente local com o projeto no {{site.data.keyword.Bluemix_notm}}, inserindo o comando a seguir. Se você for o proprietário do projeto, só precisará especificar o nome do seu aplicativo para projectName. 
+3. Sincronize seu ambiente local com o projeto no {{site.data.keyword.Bluemix_notm}}, inserindo o comando a seguir. Se você for o proprietário do projeto, só precisará especificar o nome do seu aplicativo para projectName. 
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
 ```
 bl sync projectName -d localDirectory --verbose
@@ -75,7 +76,7 @@ Esse comando continua em execução (e a sincronização continua) até que voc�
 "q". A opção --verbose exibe as informações de criação de log e de status. Se algum de seus argumentos
 contiver um espaço, precisará colocar o nome entre aspas. 
 
-5. Em outra janela da linha de comandos, em seu diretório local, implemente o aplicativo para
+4. Em outra janela da linha de comandos, em seu diretório local, implemente o aplicativo para
 {{site.data.keyword.Bluemix_notm}} no modo Live Edit, inserindo o comando a seguir:
 ```
 bl start

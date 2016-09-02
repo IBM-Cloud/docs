@@ -23,7 +23,7 @@ copyright:
 
 {: shortdesc} 
 
-希望保留公司标记时，iFrame 流会非常有用。用户单击嵌入的 iFrame 时，会停留在您的内容中，而不会重定向到 bluemix.net Web 站点。如果不涉及公司标记，那么可以将标准的[“部署到 {{site.data.keyword.Bluemix_notm}}”按钮](../develop/deploy_button.html)插入到您的内容中，而不使用 iFrame。 
+希望保留公司品牌时，iFrame 流会非常有用。用户单击嵌入的 iFrame 时，会停留在您的内容中，而不会重定向到 bluemix.net Web 站点。如果不涉及公司品牌，那么可以将标准的[“部署到 {{site.data.keyword.Bluemix_notm}}”按钮](../develop/deploy_button.html)插入到您的内容中，而不使用 iFrame。 
 
 ##iFrame 流中的步骤 {: #iframe-steps} 
 

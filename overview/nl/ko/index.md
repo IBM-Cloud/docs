@@ -210,19 +210,11 @@ Stateless 특성 때문에 앱에 대한 요청이 중단될 수 있습니다.
 ### 지역
 {: #ov_intro__reg}
 
-{{site.data.keyword.Bluemix_notm}} 지역은 앱을 배치할 수 있는 정의된 지리적 영역입니다. 애플리케이션 관리를 위한 동일한 {{site.data.keyword.Bluemix_notm}} 인프라 및 대금 청구를 위한 동일한 사용량 세부사항을 사용하여 다른 지역에 앱 및 서비스 인스턴스를 작성할 수 있습니다. 고객과 가장 가까이에 있는 지역을 선택하고
-이 지역에 앱을 배치하여 애플리케이션 대기 시간을 단축할 수 있습니다. 또한 보안 문제를 해결하기 위해
-애플리케이션 데이터를 보관할 지역을
-선택할 수도 있습니다. 앱을 여러 지역에서 빌드할 경우
-이 중 한 지역의 작동이 중지되면 다른 지역에 있는 앱은 계속 실행됩니다.
-허용되는 리소스 양은 사용하는 각 지역마다 동일합니다.
+{{site.data.keyword.Bluemix_notm}} 지역은 앱을 배치할 수 있는 정의된 지리적 영역입니다. 애플리케이션 관리를 위한 동일한 {{site.data.keyword.Bluemix_notm}} 인프라 및 요금 청구를 위한 동일한 사용량 세부사항을 사용하여 다른 지역에 앱 및 서비스 인스턴스를 작성할 수 있습니다. 고객과 가장 가까이에 있는 지역을 선택하고 이 지역에 앱을 배치하여 애플리케이션 대기 시간을 단축할 수 있습니다. 또한 보안 문제를 해결하기 위해 애플리케이션 데이터를 보관할 지역을 선택할 수도 있습니다. 앱을 여러 지역에서 빌드할 경우 이 중 한 지역의 작동이 중지되면 다른 지역에 있는 앱은 계속 실행됩니다. 허용되는 리소스 양은 사용하는 각 지역마다 동일합니다.
 
-{{site.data.keyword.Bluemix_notm}}
-사용자 인터페이스를 사용하고 있는 경우 다른 지역으로 전환하여
-해당 지역의 영역에 대해 작업할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하고 있는 경우 다른 지역으로 전환하여 해당 지역의 영역에 대해 작업할 수 있습니다.
 
-cf 명령행 인터페이스를 사용하고 있는 경우 cf api 명령을 사용하고 지역의 API 엔드포인트를 지정하여 작업하려는 {{site.data.keyword.Bluemix_notm}} 지역에 연결해야 합니다. 예를 들어,
-{{site.data.keyword.Bluemix_notm}} 유럽 영국 지역에 연결하려면 다음 명령을 입력하십시오.
+cf 명령행 인터페이스를 사용하고 있는 경우 cf api 명령을 사용하고 지역의 API 엔드포인트를 지정하여 작업하려는 {{site.data.keyword.Bluemix_notm}} 지역에 연결해야 합니다. 예를 들어, {{site.data.keyword.Bluemix_notm}} 유럽 영국 지역에 연결하려면 다음 명령을 입력하십시오.
 
 ```
 cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
@@ -242,7 +234,7 @@ Eclipse 도구를 사용하는 방법에 대한 자세한 정보는 [{{site.data
 
 | **지역 이름** | **지리적 위치** | **지역 접두부** | **cf API 엔드포인트** | **UI 콘솔** |       
 |-----------------|-------------------------|-------------------|---------------------|----------------|
-| 미국 남부 지역 | 달라스, 미국 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| 미국 남부 지역 | 댈러스, 미국 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 영국 지역 | 런던, 영국 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 시드니 지역 | 시드니, 호주 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 

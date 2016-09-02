@@ -17,10 +17,10 @@ copyright:
 
 # 个人档案设置
 {: #usersettings}
-上次更新时间：2016 年 6 月 23 日
+上次更新时间：2016 年 8 月 16 日
 {: .last-updated}
 
-转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; **个人档案**，以更新个人档案设置。
+转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; **个人档案**，以更新个人档案设置。
 {:shortdesc}
 
  在**个人档案**页面上，可以设置或更新以下信息：
@@ -32,7 +32,7 @@ copyright:
 ## 更改个人档案照片
 {: #photo}
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; **个人档案**。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; **个人档案**。
 
 * 单击**更改照片**以上传新照片。
 * 单击**除去照片**以除去照片。
@@ -42,7 +42,7 @@ copyright:
 
 如果需要更改 IBM 标识帐户信息（例如您的姓名、电子邮件、电话号码、密码或公司名称），请完成以下步骤：
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; **个人档案**。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; **个人档案**。
 2. 单击**编辑 IBM 标识**。
 3. 编辑您的用户信息。
 4. 单击**提交**。
@@ -56,5 +56,5 @@ copyright:
 
 要禁用分析跟踪，请完成以下步骤：
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; **个人档案**。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; **个人档案**。
 2. 将分析跟踪设置为**关闭**。

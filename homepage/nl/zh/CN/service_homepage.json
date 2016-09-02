@@ -7,30 +7,30 @@
     "id": "cfApp",
     "title": "Cloud Foundry 应用程序",
     "href": "cfapps/index.html",
-    "category_id": "计算 (compute)"
+    "category_id": "计算"
   }, {
     "title": "运行时",
     "href": "cfapps/runtimes.html",
-    "category_id": "计算 (compute)"
+    "category_id": "计算"
   }, {
     "title": "样板",
     "href": "cfapps/boilerplates.html",
-    "category_id": "计算 (compute)"
+    "category_id": "计算"
   }, {
     "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "计算 (compute)"
+    "category_id": "计算"
   }, {
-    "id": "容器 (container)",
+    "id": "容器",
     "title": "IBM Containers",
     "href": "containers/container_index.html",
-    "category_id": "计算 (compute)"
+    "category_id": "计算"
   }, {
     "id": "vm",
     "title": "IBM Virtual Servers",
     "href": "virtualmachines/vm_index.html",
-    "category_id": "计算 (compute)"
+    "category_id": "计算"
   }, {
     "type": "额外",
     "title": "尝试使用数据",

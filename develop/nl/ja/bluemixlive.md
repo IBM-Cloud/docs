@@ -91,9 +91,9 @@ Desktop Sync では以下の点を考慮してください。
 ローカル・ディレクトリーにあるファイルを変更すると、その変更内容は、{{site.data.keyword.Bluemix_notm}} で稼動しているアプリケーションとプロジェクト・クラウド・ワークスペースの両方に自動的に伝搬します。
 Node アプリケーションの再始動が必要な場合は、以下のコマンドを使用できます。
 
-
+```
 bl start --restart 
-
+```
 
 ##Live Edit {: #live-edit}
 
@@ -165,10 +165,10 @@ Debug には、以下の機能が含まれています。
 
     a. `manifest.yml` ファイルに次の変数を追加します。
 	
-	
+	```
 	env:
       ENABLE_BLUEMIX_DEV_MODE: "true" 
-	
+	```
 
 3. メモリーを増やします。  
 
@@ -211,9 +211,9 @@ bl コマンドのダウンロードと使用について詳しくは、[Bluemix
 
 {{site.data.keyword.Bluemix_live}} コマンド・ライン **bl** の構文は次のとおりです。
 
-
+```
 bl command [arguments] [options] [--help]
-
+```
 {: pre}
 
 **command**
@@ -256,9 +256,9 @@ ss *status*: {{site.data.keyword.Bluemix_notm}} 内の実行中のアプリケ�
 ## ヘルプ
 {: bl_help}
 
-
+```
 bl [ command ] --help | --h
-
+```
 {: pre}
 
 **使用量**
@@ -269,24 +269,24 @@ bl [ command ] --help | --h
 
 コマンドのリストを表示します。
 
-
+```
 bl --help
-
+```
 {: pre}
 
 sync コマンドに関する詳細情報を表示します。
 
-
+```
 bl sync --help
-
+```
 {: pre}
 
 ## login
 {: bl_login}
 
-
+```
 bl login | l [ -u username ] [-p password ][ -s server ]
-
+```
 {: pre}
 
 **目的**
@@ -313,28 +313,28 @@ bl login | l [ -u username ] [-p password ][ -s server ]
 次のコマンドを実行すると、*username* と *password* の両方の入力を求めるプロンプトが出されます。
 
 
-
-bl login
+```
+bl login```
 {: pre}
 
 ユーザー `name@company.com:` でログインします。
 
-
-bl login –u name@company.com –p pa55w0rd
+```
+bl login –u name@company.com –p pa55w0rd```
 {: pre}
 
 ユーザー `name@company.com` をパスワード *pa55 w0rd* でログインします。パスワードにスペースが含まれているため、引用符で囲む必要があります。
 
-
-bl login –u name@company.com –p “pa55 w0rd”
+```
+bl login –u name@company.com –p “pa55 w0rd”```
 {: pre}
 
 ## ログアウト
 {: bl_logout}
 
-
+```
 bl logout | lo
-
+```
 {: pre}
 
 **目的**
@@ -344,9 +344,9 @@ bl logout | lo
 ## プロジェクト
 {: bl_projects}
 
-
+```
 bl projects | p
-
+```
 {: pre}
 
 **目的**
@@ -357,9 +357,9 @@ bl projects | p
 ## Sync
 {: bl_sync}
 
-
+```
 bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
-
+```
 {: pre}
 
 **目的**
@@ -394,8 +394,8 @@ bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremo
 現行ディレクトリーが空ではなく、既存の同期ターゲットでない場合は、上書きオプションが必要です。
 
 
-
-bl sync
+```
+bl sync```
 {: pre}
 
 該当プロジェクトをログイン・ユーザーが所有する場合、
@@ -403,32 +403,32 @@ bl sync
 myproject”` と同等の処理を行います。
 
 
-
-bl sync  myproject
+```
+bl sync  myproject```
 {: pre}
 
 次のコマンドは、
 プロジェクト `my pro ject` との同期を開始します。この名前はスペースを含むため、引用符で囲みます。
 
 
-
+```
 bl sync “my pro ject”
-
+```
 {: pre}
 
 次のコマンドは、
 プロジェクト `myproject` とディレクトリー `myfolder` の同期を開始します。
 
-
-bl sync myproject –d  myfolder
+```
+bl sync myproject –d  myfolder```
 {: pre}
 
 ## 作成
 {: bl_create}
 
-
+```
 bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
-
+```
 {: pre}
 
 **目的**
@@ -463,22 +463,22 @@ bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT
 
 以下のコマンドは、プライベート・プロジェクトの作成プロセスを開始し、使用するプロジェクト名を求めるプロンプトを出します。
 
-
-bl create
+```
+bl create```
 {: pre}
 
 以下のコマンドは、`myNewProject` という名前のパブリック・プロジェクトを作成します。
 
-
-bl create -n myNewProject --public
+```
+bl create -n myNewProject --public```
 {: pre}
 
 ## 状況
 {: bl_status}
 
-
+```
 bl status | ss [ projectName ]
-
+```
 {: pre}
 
 **目的**
@@ -498,8 +498,8 @@ bl status | ss [ projectName ]
 現行ディレクトリーが既存の同期ターゲットではない場合にこのコマンドを実行すると、`projectName` の入力を求めるプロンプトが出されます。
 
 
-
-bl status 
+```
+bl status ```
 {: pre}
 
 該当プロジェクトをログイン・ユーザーが所有する場合、
@@ -507,23 +507,23 @@ bl status
 myproject”` と同等です。
 
 
-
-bl status myproject
+```
+bl status myproject```
 {: pre}
 
 次の例では、プロジェクト `my pro ject` に関連付けられた実行中のアプリケーションの状況を表示します。このプロジェクト名はスペースを含むため、引用符で囲みます。
 
 
-
-bl status “my pro ject”
+```
+bl status “my pro ject”```
 {: pre}
 
 ## 開始
 {: bl_start}
 
-
+```
 bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
-
+```
 {: pre}
 
 **目的**
@@ -560,8 +560,8 @@ bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit
 `myproject` のアプリケーション・インスタンスを開始します。
 
 
-
-bl start myproject –l “launchConfigurations/my.launch”
+```
+bl start myproject –l “launchConfigurations/my.launch”```
 {: pre}
 
 次のコマンドは、起動ファイル `launchConfigurations/my.launch`
@@ -569,8 +569,8 @@ bl start myproject –l “launchConfigurations/my.launch”
 現行ディレクトリーが同期ターゲットではない場合、エラーが表示されます。
 
 
-
-bl start –l “launchConfigurations/my.launch” 
+```
+bl start –l “launchConfigurations/my.launch” ```
 {: pre}
 
 次のコマンドは、マニフェスト・ファイル `manifest.yml`
@@ -579,22 +579,22 @@ bl start –l “launchConfigurations/my.launch”
 このコマンドは、必要な残りの情報の入力を求めるプロンプトを出してから、起動構成で記述されたアプリケーションを開始します。
 
 
-
-bl start –m “mymanifest.yml” 
+```
+bl start –m “mymanifest.yml” ```
 {: pre}
 
 このコマンドは、マニフェスト・ファイル ``manifest.yml`` で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始し、```bl start –m manifest.yml`` と同等です。
 
-
-bl start
+```
+bl start```
 {: pre}
 
 ## 停止
 {: bl_stop}
 
-
+```
 bl stop | sp projectName [ -l launchConfiguration ]
-
+```
 {: pre}
 
 **目的**
@@ -620,16 +620,16 @@ bl stop | sp projectName [ -l launchConfiguration ]
 複数の起動構成がある場合には、停止する構成を指定するように求めるプロンプトがコマンドによって出されます。
 
 
-
-bl stop
+```
+bl stop```
 {: pre}
 
 次のコマンドは、起動ファイル `mylaunchConfig`
 を使用して実行中のプロジェクトのアプリケーション・インスタンスを停止します。
 
 
-
-bl stop myproject –l “mylaunchConfig” 
+```
+bl stop myproject –l “mylaunchConfig” ```
 {: pre}
 
 次のコマンドは、現行ディレクトリーが、
@@ -638,8 +638,8 @@ bl stop myproject –l “mylaunchConfig”
 そうでない場合は、エラーで終了します。
 
 
-
-bl stop –l “launchConfigurations/mylaunchconfig.launch” 
+```
+bl stop –l “launchConfigurations/mylaunchconfig.launch” ```
 {: pre}
 
 ># 関連リンク {:class="linklist"}

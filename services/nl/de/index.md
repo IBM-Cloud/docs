@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Letzte Aktualisierung: 10. Mai 2016*
+*Letzte Aktualisierung: 10. August 2016*
 
 {{site.data.keyword.Bluemix_notm}} macht es Ihnen leicht, Services und Apps zu implementieren, zu hosten und zu skalieren. Sie können sich voll auf Ihre Anwendungslogik und den Anwendungsentwurf konzentrieren.
 {:shortdesc}
@@ -57,6 +57,7 @@ Nicht alle Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region ver
 |{{site.data.keyword.APIM}}			|Ja		|Ja		|Ja|
 |{{site.data.keyword.autoscaling}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.bigicloudst}}		|Ja		|Nein		|Nein|
+|{{site.data.keyword.blockstorageshort}}  |Nein  |Ja  |Nein|
 |{{site.data.keyword.rules_short}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.cloudint}}			|Ja		|Ja		|Nein|
 |{{site.data.keyword.cloudant}}			|Ja		|Ja		|Ja|
@@ -89,7 +90,7 @@ Nicht alle Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region ver
 |{{site.data.keyword.mqa}}			|Ja		|Ja		|Ja|
 |{{site.data.keyword.mql}}			|Ja		|Ja		|Ja|
 |{{site.data.keyword.nlclassifierlshort}} 	|Ja 		|Ja 		|Ja|
-|{{site.data.keyword.objectstorageshort}}	|Ja		|Nein		|Nein|
+|{{site.data.keyword.objectstorageshort}}	|Ja		|Ja		|Nein|
 |{{site.data.keyword.personalityinsightsshort}}	|Ja		|Ja		|Ja|
 |{{site.data.keyword.mobilepush}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.mobilepushshort}}				|Ja		|Ja		|Ja|

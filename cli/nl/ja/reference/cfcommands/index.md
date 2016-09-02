@@ -29,9 +29,9 @@ Cloud Foundry (cf) コマンドを使用してアプリを管理できます。
 ## cf api
 
 {{site.data.keyword.Bluemix_notm}} の API エンドポイントの URL を表示または指定します。
-
+```
 cf api BluemixServerURL
-
+```
 <dl>
 <dt>BluemixServerURL</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある Bluemix API エンドポイントの URL。
@@ -53,9 +53,9 @@ cf api BluemixServerURL
 ## cf bind-service
 
 既存のサービス・インスタンスをアプリケーションにバインドします。
-
+```
 cf bind-service appname service_instance
-
+```
 
 例えば、現在の組織とスペースに `my_dataworks` という名前のサービス・インスタンスがある場合、
 `cf bind-service my_app
@@ -71,9 +71,9 @@ my_dataworks` を使用してこのサービス・インスタンスをアプリ
 ## cf create-service
 
 サービス・インスタンスを作成します。
-
+```
 cf create-service service_name service_plan service_instance
-
+```
 例えば、`cf create-service DataWorks free my_dataworks` を使用して、{{site.data.keyword.dataworks_short}} サービスのインスタンスを無料プランで作成できます。<dl>
 <dt>service_name</dt>
 <dd>サービスの名前。</dd>
@@ -87,9 +87,9 @@ cf create-service service_name service_plan service_instance
 
 スペースを作成します。
 
-
+```
 cf create-space space_name
-
+```
 <dl>
 <dt>space_name</dt>
 <dd>スペースの名前。</dd>
@@ -102,9 +102,9 @@ cf create-space space_name
 ## cf delete
 
 既存のアプリケーションを削除します。
-
+```
 cf delete appname
-
+```
 <dl>
 <dt>appname</dt>
 <dd>アプリケーションの名前。<dd>
@@ -119,9 +119,9 @@ cf delete appname
 
 スペースを削除します。
 
-
+```
 cf delete-space space_name
-
+```
 <dl>
 <dt>space_name</dt>
 <dd>スペースの名前。</dd>
@@ -133,9 +133,9 @@ cf delete-space space_name
 ## cf events
 
 アプリケーションに関連するランタイム・イベントを表示します。
-
+```
 cf events appname
-
+```
 <dl>
 <dt>appname</dt>
 <dd>アプリケーションの名前。</dd>
@@ -145,9 +145,9 @@ cf events appname
 
 すべての cf コマンドのヘルプ情報を表示するか、または、command_name パラメーターが使用されている場合は特定の cf コマンドのヘルプ情報を表示します。
 
-
+```
 cf help command_name
-
+```
 <dl>
 <dt>command_name</dt>
 <dd>コマンドの名前。コマンドに固有のヘルプ情報が必要な場合は、このパラメーターを使用できます。</dd>
@@ -164,8 +164,8 @@ cf help command_name
 
 **注**: フェデレーテッド ID でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。 
 
-
-cf login
+```
+cf login```
 cf login コマンドを実行するときには、以下のパラメーターの 1 つ以上を使用できます。<dl>
 <dt>*-a* https://api.{DomainName}
 	 </dt>
@@ -176,7 +176,7 @@ cf login コマンドを実行するときには、以下のパラメーター�
 <dd>自分のパスワード。</dd>
 <dd>*重要:* コマンド・ライン・インターフェースで *-p* パラメーターを使用してパスワードを指定すると、パスワードがコマンド・ライン履歴に記録される可能性があります。セキュリティー上の理由から、パスワードの指定には -p パラメーターを使用しないようにしてください。代わりに、コマンド・ライン・インターフェースでプロンプトが出された場合にパスワードを入力します。</dd>
 <dt>*-sso*</dt>
-<dd>フェデレーテッド ID でログインする場合は、シングル・サインオン・オプション (SSO) を使用する必要があります。IBM ID でログインする場合は、その必要はありません。フェデレーテッド ID でサインインしようとしたときに SSO パラメーターを指定していない場合、SSO パラメーターを含めるように求めるプロンプトが出されます。SSO パラメーターを使用すると、ログイン時にワンタイム・パスコードの入力を求められます。</dd>
+<dd>フェデレーテッド ID でログインする場合は、シングル・サインオン・オプション (SSO) を使用する必要があります。IBMid でログインする場合は、その必要はありません。フェデレーテッド ID でサインインしようとしたときに SSO パラメーターを指定していない場合、SSO パラメーターを含めるように求めるプロンプトが出されます。SSO パラメーターを使用すると、ログイン時にワンタイム・パスコードの入力を求められます。</dd>
 <dt>*-o*organization_name</dt>
 <dd>ログイン先の組織の名前。</dd>
 <dt>*-s*space_name</dt>
@@ -194,9 +194,9 @@ cf login コマンドを実行するときには、以下のパラメーター�
 
 アプリケーションの
 STDOUT および STDERR ログ・ストリームを表示します。
-
+```
 cf logs appname
-
+```
 <dl>
 <dt>appname</dt>
 <dd>アプリケーションの名前。</dd>
@@ -208,16 +208,16 @@ cf logs appname
 
 マーケットプレイスで提供されているすべてのサービスをリストします。このコマンドによってリストされるサービスは、{{site.data.keyword.Bluemix_notm}} カタログにも表示されます。
 
-
-cf marketplace
+```
+cf marketplace```
 
 ## cf push
 
 新規アプリケーションを Bluemix にデプロイするか、または、Bluemix にある既存のアプリケーションを更新します。
 
-
+```
 cf push appname 
-
+```
 <dl>
 <dt>appname</dt>
 <dd>アプリケーションの名前。</dd>
@@ -229,10 +229,10 @@ cf push appname
 <dt>*-c*start_command</dt> <dd>アプリケーションの開始コマンド。デフォルトの開始コマンドを使用するには、このオプションに値 null を指定します。例えば次のようにします。</dd>
 <dd>```
 cf push appname -c null
-</dd>
-<dd>このオプションを使用してスクリプト・ファイルを実行することもできます。以下に例を示します。
+```</dd>
+<dd>このオプションを使用してスクリプト・ファイルを実行することもできます。以下に例を示します。```
 cf push appname -c “bash ./<run.sh>"
-</dd>
+```</dd>
 <dt>*-f* manifest_path</dt>
 <dd>マニフェスト・ファイルへのパス。デフォルトのマニフェスト・ファイルは、アプリケーションのルート・ディレクトリーの下にある manifest.yml です。</dd>
 <dt>*-i* instance_number</dt>
@@ -264,9 +264,9 @@ cf push appname -c “bash ./<run.sh>"
 ## cf scale
 
 アプリケーションのインスタンス番号、ディスク・スペース制限、およびメモリー制限を表示または変更します。
-
+```
 cf scale appname -i instance_number -k disk_limit -m memory_limit
-
+```
 <dl>
 <dt>appname</dt>
 <dd>アプリケーションの名前。</dd>
@@ -283,15 +283,15 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 ## cf services
 
 現在のスペースで使用可能なすべてのサービスをリストします。
-
-cf services
+```
+cf services```
 
 ## cf set-env
 
 アプリケーションの環境変数を設定します。
-
+```
 cf set-env appname var_name var_value
-
+```
 <dl>
 <dt>appname</dt>
 <dd>アプリケーションの名前。</dd>
@@ -304,15 +304,15 @@ cf set-env appname var_name var_value
 ## cf stacks
 
 すべてのスタックがリストされます。スタックは、アプリを実行可能なオペレーティング・システムを含むビルド前のファイル・システムです。
-
-cf stacks
+```
+cf stacks```
 
 ## cf stop
 
 アプリケーションを停止します。
-
+```
 cf stop appname
-
+```
 <dl>
 <dt>appname</dt>
 <dd>アプリケーションの名前。</dd>
@@ -321,9 +321,9 @@ cf stop appname
 ## cf -v
 
 cf コマンド・ライン・インターフェースのバージョンを表示します。
-
+```
 cf -v
-
+```
 
 # 関連リンク
 {: #rellinks}

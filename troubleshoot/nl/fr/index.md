@@ -2,6 +2,7 @@
 
 copyright:
   2015, 2016
+  
 
 ---
 
@@ -15,8 +16,9 @@ copyright:
 # Traitement des incidents liés à l'accès à {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Dernière mise à jour : 14 juilelt 2016*
+Dernière mise à jour : 11 août 2016
 {: .last-updated}
+
 
 Des problèmes d'ordre général liés à {{site.data.keyword.Bluemix}} peuvent survenir
 : par exemple, un utilisateur ne parvient pas à établir une connexion dans
@@ -27,28 +29,26 @@ un compte est bloqué à l'état en attente, etc. Toutefois, dans de nombreux ca
 ## Connexion à {{site.data.keyword.Bluemix_notm}} impossible
 {: #ts_logintobm}
 
-Vous devez disposer d'un ID et d'un mot de passe IBM valides pour vous connecter à {{site.data.keyword.Bluemix_notm}}.
+Vous devez disposer d'un IBMid et d'un mot de passe valides pour vous connecter à {{site.data.keyword.Bluemix_notm}}.
 
 
 Lorsque vous tentez de vous connecter à {{site.data.keyword.Bluemix_notm}}, le message d'erreur suivant s'affiche : 
 {: tsSymptoms} 
 
-`The IBM id and/or password
-entered below is incorrect. Please try again.`
+`Le mot de passe que vous avez entré est incorrect.`
 
 
-L'ID
-et le mot de passe IBM que vous utilisez pour vous connecter à {{site.data.keyword.Bluemix_notm}} ne sont pas valides.
+L'IBMid et le mot de passe que vous utilisez pour vous connecter à {{site.data.keyword.Bluemix_notm}} ne sont pas valides.
 {: tsCauses} 
  
 
-Pour obtenir un ID et un mot de passe IBM valides, accédez à la page My IBM profile et procédez comme suit :
+Pour obtenir un IBMid et un mot de passe valides, accédez à la page My IBM profile et procédez comme suit :
 {: tsResolve}
-  * Si vous disposez déjà d'un ID IBM et que vous voulez vérifier si l'ID et le mot de passe sont valides, cliquez sur **Sign in** et entrez vos ID et mot de passe dans la page qui s'affiche. Si vous avez oublié votre mot de passe, cliquez sur **Forgot your password** dans la partie droite de la page Sign in pour le réinitialiser. Si vous avez oublié votre ID IBM ou que vous continuez à avoir des problèmes avec le mot de passe, prenez contact avec le service Worldwide IBM
-Registration Helpdesk pour de l'aide. 
-  * Si vous ne disposez pas d'un ID IBM, cliquez sur **Register** pour enregistrer un ID et un mot de passe. 
+  * Si vous disposez déjà d'un IBMid et que vous voulez vérifier si l'ID et le mot de passe sont valides, cliquez sur **Sign in** et entrez votre IBMid et votre mot de passe sur la page Sign in. Si vous avez oublié votre mot de passe, cliquez sur **Forgot your password** sur la page Sign in pour le réinitialiser. Si vous avez oublié votre IBMid ou que les problèmes avec votre mot de passe persistent, prenez contact avec le service Worldwide IBM
+Registration Helpdesk pour obtenir de l'aide. 
+  * Si vous ne disposez pas d'un IBMid, cliquez sur **Register** pour enregistrer un IBMid et un mot de passe. 
   
-**Remarque :** pour les employés IBM, l'ID IBM peut être différent de l'ID de connexion à l'intranet. 
+**Remarque :** pour les employés IBM, l'IBMid peut être différent de l'ID de connexion à l'intranet. 
 
 
 
@@ -179,7 +179,7 @@ Si vous ne pouvez pas inviter d'utilisateurs dans votre organisation et que vous
 avec le responsable de l'organisation afin qu'il change votre rôle. Pour identifier le responsable de votre organisation, procédez comme suit :
 {: tsResolve}
 
-  1. Accédez au tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Compte et support** ![Compte et support](images/account_support.svg) dans la barre de menu, puis sélectionnez **Gérer les organisations**.
+  1. Accédez au tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône {{site.data.keyword.avatar}} ![icône Avatar](images/account_support.svg) dans la barre de menu, puis sélectionnez **Gérer les organisations**.
   2. Sélectionnez votre organisation et affichez les informations relatives au responsable dans l'onglet **Utilisateurs**.  
   
 Si
@@ -221,13 +221,12 @@ Pour enregistrer plusieurs utilisateurs pour
 utilisateur :
 {: tsResolve}
 
-  1. Cliquez sur **S'INSCRIRE** dans le coin supérieur droit de l'interface utilisateur
-{{site.data.keyword.Bluemix_notm}}.
+  1. Cliquez sur **S'INSCRIRE** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. 
   2. Suivez les étapes de l'assistant.
 
     
 
-## La page {{site.data.keyword.Bluemix_notm}} ne peut pas être chargée 
+## La page {{site.data.keyword.Bluemix_notm}} ne peut pas être chargée
 {: #ts_err}
 
 Lorsque vous utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, il est possible que vous ne puissiez pas charger une page
@@ -258,35 +257,6 @@ application est en cours d'exécution.
   
   
   
-  
-  
-## La barre de menu supérieure de {{site.data.keyword.Bluemix_notm}} disparaît
-{: #ts_topmenubar}
-
-Il se peut que la barre de menu supérieure de {{site.data.keyword.Bluemix_notm}}
-disparaisse lorsque vous redimensionnez votre fenêtre de navigateur, ou qu'elle n'apparaisse pas lorsque vous utilisez un périphérique mobile.
-
-
-Lorsque vous diminuez la taille de votre fenêtre de navigateur ou lorsque
-vous utilisez un périphérique mobile, la barre de menu supérieure de
-{{site.data.keyword.Bluemix_notm}} disparaît. Dans ce cas, le menu tiroir latéral, affiché
-sous la forme d'une icône représentant des lignes empilées, apparaît dans le coin supérieur gauche. 
-{: tsSymptoms}
-
- 
-
-L'interface utilisateur
-{{site.data.keyword.Bluemix_notm}} possède une conception réactive. Lorsque l'environnement
-d'affichage change, la présentation de l'interface utilisateur
-{{site.data.keyword.Bluemix_notm}} peut également changer. 
-{: tsCauses}
- 
-
-Utilisez à la place le menu tiroir latéral dans le coin supérieur gauche.
-{: tsResolve}
-
-
-
 
 
 
@@ -392,6 +362,47 @@ passer à la JVM 8 d'Oracle :
   3. Vérifiez que la propriété `eclipse.vm` pointe sur votre nouvelle installation de la JVM 8 d'Oracle.
 
 
+  
+## Impossible de réutiliser le nom des applications supprimées
+{: #ts_reuse_appname}
+  
+Après avoir supprimé une application, vous ne pouvez réutiliser le nom de cette dernière qu'après en avoir supprimé la route.  
+
+Lorsque vous essayez de réutiliser le nom de l'application, vous recevez le message suivant :
+{: tsSymptoms}
+
+`Le nom est déjà utilisé par une autre application.`
+
+Lorsqu'une application est supprimée, sa route, autrement dit, son URL, n'est pas automatiquement supprimée. Par conséquent, elle n'est pas disponible pour être réutilisée. Vous devez accéder à l'espace où l'application a été créée afin de supprimer la route et pouvoir réutiliser l'application.
+{: tsCauses}
+
+Procédez comme suit pour supprimer la route inutilisée :
+{: tsResolve}
+
+  1. Vérifiez si la route appartient à l'espace en cours en entrant la commande suivante : 
+     ```
+	 cf routes
+	 ```
+  2. Si la route n'appartient pas à l'espace en cours, accédez à l'espace ou à l'organisation auxquels elle appartient en entrant la commande suivante : 
+     ```
+	 cf target -o nom_org -s nom_espace
+```
+  3. Supprimez la route de l'application en entrant la commande suivante :
+     ```
+	 cf delete-route nom_domaine -n nom_hôte
+	 ```
+	 Exemple :
+	 ```
+	 cf delete-route mybluemix.net -n app001
+	 ```
+
+  
+  
+  
+  
+  
+  
+  
 ## Impossible d'extraire les espaces dans l'organisation
 {: #ts_retrieve_space}
 
@@ -402,16 +413,16 @@ Lorsque vous tentez de créer une application dans Bluemix, le message d'erreur 
 
 `BXNUI0515E: La tentative d'extraction des espaces dans l'organisation a échoué en raison d'un problème de connexion réseau. `
 
-Cette erreur se produit souvent la première fois que vous tentez de créer une application ou un service à partir du catalogue lorsqu'un espace n'a pas encore été créé.
+Cette erreur se produit souvent la première fois que vous tentez de créer une application ou un service à partir du catalogue lorsqu'un espace n'a pas encore été créé. 
 {: tsCauses}
 
-Vérifiez que vous avez créé un espace dans votre organisation. Pour créer un espace, appliquez l'une des méthodes suivantes :
+Vérifiez que vous avez créé un espace dans votre organisation.  Pour créer un espace, appliquez l'une des méthodes suivantes :
 {: tsResolve}
 
-  * A partir de Compte et support ![Compte et support](images/account_support.svg), sélectionnez l'organisation dans laquelle vous souhaitez créer l'espace, puis cliquez sur **Créer un espace**.
+  * Cliquez sur l'icône {{site.data.keyword.avatar}} ![icône Avatar](images/account_support.svg) pour ouvrir le widget Compte et support, sélectionnez l'organisation dans laquelle vous souhaitez créer l'espace, puis cliquez sur **Créer un espace**.
   * Dans l'interface de ligne de commande cf, tapez `cf create-space <nom_espace> -o <nom_organisation>`.
 
-Essayez à nouveau. Si ce message réapparaît, ouvrez la page de [statut Bluemix](https://status.eu-gb.bluemix.net/){: new_window} pour déterminer si un service ou un composant présente un problème. 
+Essayez à nouveau. Si ce message réapparaît, ouvrez la page de [statut Bluemix](http://ibm.biz/bluemixstatus){: new_window} pour déterminer si un service ou un composant présente un problème.
 
 
 
@@ -443,7 +454,7 @@ Pour obtenir le niveau de droits approprié, appliquez l'une des méthodes suiva
 {: tsResolve}
  * Sélectionnez une autre organisation et un autre espace pour laquelle ou lequel vous disposez du rôle Développeur. 
  * Demandez au responsable de l'organisation de vous attribuer le rôle Développeur ou de créer un espace, puis de vous attribuer le rôle
-Développeur. Pour plus d'informations, voir [Gestion des organisations et des espaces](../admin/orgs_spaces.html){: new_window}. 
+Développeur. Pour plus d'informations, voir [Gestion des organisations et des espaces](../admin/orgs_spaces.html){: new_window}.
  
 
  
@@ -552,8 +563,7 @@ cache du navigateur.
 
  
 
-Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, consultez d'abord la page
-de [statut de {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#status){: new_window}. Vous pouvez souhaiter utiliser le service en tant que solution palliative dans une autre région {{site.data.keyword.Bluemix_notm}}. Des informations détaillées sont disponibles à la section [Utilisation des services dans une autre région](../services/reqnsi.html#cross_region_service){: new_window}. Si le statut du service est normal, essayez la procédure suivante pour résoudre le problème : 
+Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, consultez d'abord la page de [statut de {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Vous pouvez souhaiter utiliser le service en tant que solution palliative dans une autre région {{site.data.keyword.Bluemix_notm}}. Des informations détaillées sont disponibles à la section [Utilisation des services dans une autre région](../services/reqnsi.html#cross_region_service){: new_window}. Si le statut du service est normal, essayez la procédure suivante pour résoudre le problème : 
 {: tsResolve}
 
   * Exécutez à nouveau l'action :
@@ -699,8 +709,8 @@ supprimez la limite relative au nombre d'instances de service dont vous pouvez d
   * Pour supprimer une instance de service, vous pouvez utiliser l'interface utilisateur
 {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande.
     Pour utiliser l'interface utilisateur {{site.data.keyword.Bluemix_notm}} afin de supprimer une instance de service, procédez comme suit :
-	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur **Services** dans le panneau de gauche. Les vignettes des services s'affichent. 
-	  2. Sur la vignette du service à supprimer, cliquez sur l'icône **Menu**.
+	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le service que vous souhaitez supprimer. La vignette du service s'affiche.  
+	  2. Sur la vignette du service, cliquez sur l'icône **Menu**.
 	  3. Cliquez sur **Supprimer le service**. Une fois l'instance de service supprimée, vous êtes invité à reconstituer l'application à
 laquelle l'instance de service était liée. 
     Pour utiliser l'interface de ligne de commande afin de supprimer une instance de service, procédez comme suit :
@@ -1390,8 +1400,52 @@ l'application. Pour vérifier que le code ne présente pas d'erreur, générez-l
 	```
 	<nom_app> open
 	```
-	
 
+## Echec du déploiement d'une application à partir de la barre d'exécution
+{: #deployinganappfromtherunbarfails}
+
+Dans ce scénario, le déploiement échoue et génère l'état "non synchronisé" affiché en jaune.  
+
+L'application que vous déployez a la même route que l'autre application qui est en cours d'exécution. Pour remédier à ce problème, modifiez la route afin qu'elle soit unique.
+
+## La barre d'exécution est introuvable
+{: #runbarcannotbefound}
+
+Si vous ne voyez pas la barre d'exécution dans Eclipse Orion {{site.data.keyword.webide}}, cela signifie que l'une des erreurs suivantes s'est produite :
+
+1. {{site.data.keyword.jazzhub}} n'identifie pas votre projet en tant que projet. 
+   * Correctif : dans le répertoire racine de votre projet, créez un fichier `project.json`. 
+2. {{site.data.keyword.jazzhub_short}} n'a pas réussi à déterminer le dossier dans lequel réside votre application. 
+   * Correctif : si votre application réside dans un autre répertoire que le répertoire racine du projet, procédez comme suit :
+      * Dans le répertoire racine du projet, créez un fichier `manifest.yml`. Editez ensuite le fichier de sorte qu'il pointe vers l'emplacement de votre application. Par exemple, `path: chemin_de_votre_applicaiton`
+      * Déplacez votre application de sorte qu'elle réside dans le répertoire racine de votre projet.
+3. {{site.data.keyword.jazzhub_short}} ne détecte pas que votre application est une application Node.js. 
+   * Correctif : dans le dossier d'application de votre projet, créez un fichier `package.json`. 
+   
+
+## Le point d'ancrage GitHub ne fonctionne pas
+{: #githubhookisntworking}
+
+Si vous avez configuré votre projet GitHub pour qu'il crée des liens d'élément de travail lorsque vous insérez des validations et que ces liens ne fonctionnent pas comme prévu, procédez comme suit pour identifier le problème : 
+
+1. Dans le référentiel GitHub, cliquez sur **Paramètres**.
+   ![Lien des paramètres GitHub](images/githubSettings1_small.png)
+
+2. Cliquez sur **Webhooks & services**.
+   ![Lien des webhooks et services GitHub](images/githubHooks1_small.png)
+
+3. Pour afficher le message, survolez l'icône d'état {{site.data.keyword.jazzhub}}.
+   ![Message d'erreur sur le point d'ancrage de service](images/troubleshoothook1_small.png)
+
+4. Corrigez l'erreur en fonction du message GitHub. 
+
+5. Pour vérifier que le correctif a fonctionné, validez et insérez une autre modification ou accédez à la page de service pour {{site.data.keyword.jazzhub_short}} et cliquez sur **Tester le service**.
+   ![Bouton de test de service GitHub](images/githubTestService_small.png)
+
+6. Vérifiez l'absence d'erreurs en consultant à nouveau l'icône d'état.
+   ![Icône d'état sans erreur](images/githubResolved_small.png)
+
+Pour plus d'informations, voir [Setting up GitHub for Bluemix DevOps Services projects](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Traitement des incidents liés à la gestion des comptes
@@ -1425,7 +1479,7 @@ Pour réactiver votre compte, prenez contact avec le [support {{site.data.keywor
 suivantes :
 {: tsResolve}
 
-  * L'ID IBM que vous utilisez pour vous connecter à {{site.data.keyword.Bluemix_notm}}.
+  * L'IBMid que vous utilisez pour vous connecter à {{site.data.keyword.Bluemix_notm}}.
   * Le nom de l'organisation dans laquelle votre application est créée. Ces informations peuvent être utiles à l'équipe de support pour déterminer si l'appartenance ou les rôles appropriés vous ont été affectés dans votre organisation.
 
 

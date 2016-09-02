@@ -17,10 +17,10 @@ copyright:
 
 # 管理組織和空間
 {: #orgsspacesusers}
-前次更新：2016 年 5 月 16 日
+前次更新：2016 年 8 月 16 日
 {: .last-updated}
 
-身為帳戶擁有者，您可以管理組織，方法是移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **管理組織**頁面。組織管理員也可以使用「管理組織」頁面來管理將他們設為管理員的任何組織。
+身為帳戶擁有者，您可以管理組織，方法是移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **管理組織**頁面。組織管理員也可以使用「管理組織」頁面來管理將他們設為管理員的任何組織。
 {:shortdesc}
 
 管理作業包括下列各項：
@@ -89,7 +89,7 @@ copyright:
 
 只有具有「隨收隨付制」帳戶的帳戶擁有者才能建立組織。您可以完成下列步驟來建立組織：
 
-1. 移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **管理組織**頁面。
+1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **管理組織**頁面。
 2. 按一下**新增組織**。
 3. 輸入組織名稱。
 4. 按一下**新增**。
@@ -98,7 +98,7 @@ copyright:
 空間作為測試環境，以及 *production* 空間作為正式作業環境。
 然後，您可以建立應用程式與空間的關聯。請完成下列步驟，以建立空間：
 
-1. 移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **管理組織**頁面。
+1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **管理組織**頁面。
 2. 識別您要新增空間的組織，然後選取**檢視詳細資料**。
 3. 按一下**編輯**。
 4. 按一下**新增空間**。
@@ -111,7 +111,7 @@ copyright:
 
 採取下列步驟以將您的組織重新命名：
 
-1. 移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **管理組織**頁面。
+1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **管理組織**頁面。
 2. 識別您要編輯的組織，然後選取**檢視詳細資料**。
 3. 選取**編輯**。
 4. 選取組織標題的**編輯**。
@@ -128,7 +128,7 @@ copyright:
 
 您可以從**管理組織**頁面刪除空間：
 
-1. 移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **管理組織**頁面。
+1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **管理組織**頁面。
 2. 識別您要編輯的組織，然後選取**檢視詳細資料**。
 3. 識別您要刪除的空間，然後選取**編輯**。
 4. 按一下**刪除空間**。
@@ -138,14 +138,14 @@ copyright:
 
 完成下列步驟，以列出特定組織的成員：
 
-1. 移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **管理組織**。
+1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **管理組織**。
 2. 識別您要檢視其成員的組織，然後按一下**檢視詳細資料**。
 3. 按一下**編輯**。
 4. 您可以在**使用者**標籤中看到組織的成員及其角色。
 
 完成下列步驟，以列出特定空間的成員：
 
-1. 移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **管理組織**頁面。
+1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **管理組織**頁面。
 2. 識別您要檢視其成員的組織，然後按一下**檢視詳細資料**。
 3. 識別您要檢視其成員的空間，然後按一下**編輯**。
 4. 您可以在**使用者**標籤中看到空間的成員及其角色。
@@ -157,19 +157,19 @@ copyright:
 
 若要檢視您組織的配額，請完成下列步驟：
 
-1. 移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **管理組織**頁面。
+1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **管理組織**頁面。
 2. 識別您要檢視其配額的組織，然後按一下**檢視詳細資料**。
 3. 按一下**編輯**。
 4. 選取**配額**標籤。
 
-若要更新您組織的配額，您必須開啟支援問題單。如需開啟支援問題單的相關資訊，請參閱[取得客戶支援](../support/index.html#contacting-support)。如需容器配額的相關資訊，請參閱「容器」文件中的[配額](../containers/container_creating_ov.html#container_quota)。
+若要更新您組織的配額，您必須開啟支援問題單。如需開啟支援問題單的相關資訊，請參閱[取得客戶支援](../support/index.html#contacting-support)。如需容器配額的相關資訊，請參閱「容器」文件中的[配額](../containers/container_planning_org_ov.html##container_planning_quota)。
 
 ## 管理網域
 {: #managedomains}
 
 身為帳戶擁有者或組織管理員，您可以檢視系統網域，以及新增在組織及其空間內建置之應用程式的自訂網域。身為空間管理員，空間的**網域**標籤是指派給空間之網域的唯讀清單。 
 
-1. 移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **管理組織**頁面。
+1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **管理組織**頁面。
 2. 識別您要檢視或編輯其網域的組織。
 3. 選取該組織的**檢視詳細資料**。
 4. 按一下**編輯**。

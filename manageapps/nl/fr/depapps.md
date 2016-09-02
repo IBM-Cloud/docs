@@ -14,7 +14,7 @@ copyright:
 #Déploiement d'applications
 {: #deployingapps}
 
-*Dernière mise à jour : 9 mai 2016*
+*Dernière mise à jour : 28 juillet 2016*
 {: .last-updated}
 
 Vous pouvez déployer des applications dans {{site.data.keyword.Bluemix}} via diverses méthodes, notamment en utilisant l'interface de ligne de commande et des environnements de développement intégré (IDE). Vous pouvez également utiliser des manifestes d'application afin de déployer des applications. L'utilisation d'un manifeste d'application vous permet de réduire le nombre d'informations de déploiement que vous devez spécifier à chaque fois que vous déployez une application dans {{site.data.keyword.Bluemix_notm}}.
@@ -404,7 +404,7 @@ Variables d'environnement définies par l'utilisateur spécifiques à une applic
 
   * Utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Procédez comme suit :
     1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette de votre application. La page des détails de l'application s'affiche.
-	2. Dans le panneau de navigation de gauche, cliquez sur **Variables d'environnement**.
+	2. Cliquez sur **Variables d'environnement**.
 	3. Cliquez sur **DEFINI PAR L'UTILISATEUR**, puis cliquez sur **AJOUTER**.
 	4. Remplissez les zones obligatoires, puis cliquez sur **SAUVEGARDER**.
   * Utilisez l'interface de ligne de commande cf. Ajoutez une variable définie par l'utilisateur en utilisant la commande `cf set-env`. Exemple : 

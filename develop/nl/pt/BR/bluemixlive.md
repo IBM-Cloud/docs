@@ -211,8 +211,8 @@ Debug, é possível usar as ferramentas de depuração.
 Envie por push o aplicativo e, em seguida, navegue para `https://app-host.mybluemix.net/bluemix-debug/manage` para acessar a interface com o usuário de depuração do
 {{site.data.keyword.Bluemix_notm}}. Quando for solicitado para autenticar, insira o seu ID do usuário e token de acesso pessoal ou a senha de ID IBM.    
 
-   **Nota**: o seu ID do usuário para DevOps Services pode ser um ID IBM ou um ID federado (ID corporativo). Se você usar autenticação federada, para efetuar login em seu cliente da
-linha de comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e senha funcionarão com todos os clientes. Para obter mais
+   **Nota**: o seu ID do usuário para DevOps Services pode ser um ID IBM ou um ID federado (ID corporativo). Se você usar autenticação federada, para efetuar login em seu cliente da linha de
+comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e senha funcionarão com todos os clientes. Para obter mais
 informações sobre a criação de um token de acesso pessoal, consulte [O que é autenticação
 federada e como ela me afeta?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
@@ -341,10 +341,10 @@ Use esse comando para efetuar login no {{site.data.keyword.Bluemix_notm}}. O log
 
 -s *server*: o nome do servidor ou endereço IP do servidor {{site.data.keyword.jazzhub_short}}.    
 
-   **Nota**: o seu ID do usuário para DevOps Services pode ser um ID IBM ou um ID federado (ID corporativo). Se você usar autenticação federada, para efetuar login em seu cliente da
-linha de comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e senha funcionarão com todos os clientes. Para obter
-mais informações sobre a criação de um token de acesso pessoal, consulte [O que é
-autenticação federada e como ela me afeta?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **Nota**: o seu ID do usuário para DevOps Services pode ser um ID IBM ou um ID federado (ID corporativo). Se você usar autenticação federada, para efetuar login em seu cliente da linha de
+comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e senha funcionarão com todos os clientes. Para obter mais
+informações sobre a criação de um token de acesso pessoal, consulte [O que é autenticação
+federada e como ela me afeta?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 **Exemplos**
 

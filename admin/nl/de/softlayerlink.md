@@ -19,7 +19,7 @@ copyright:
 
 #SoftLayer- und {{site.data.keyword.Bluemix_notm}}-Abrechnungskonten verknüpfen
 {: #softlayerlink}
-*Letzte Aktualisierung: 7. Juli 2016*
+*Letzte Aktualisierung: 15. August 2016*
 {: .last-updated}
 
 Sie können nun die SoftLayer- und {{site.data.keyword.Bluemix_notm}}-Abrechnungskonten verknüpfen. Wenn Sie die Konten verknüpfen, erfolgt die Rechnungsstellung sowohl für SoftLayer- als auch für {{site.data.keyword.Bluemix_notm}}-Ressourcen über SoftLayer. Wenn Sie über ein bestehendes Konto verfügen, erfolgt die Rechnungsstellung für {{site.data.keyword.Bluemix_notm}} über SoftLayer ab dem neuen Abrechnungszyklus, der nach dem Verknüpfen der Konten beginnt.
@@ -63,7 +63,7 @@ In der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle können Sie entw
 Sie müssen ein Masterbenutzer des SoftLayer-Kontos sein, um Teammitglieder zum {{site.data.keyword.Bluemix_notm}}-Konto einzuladen.
 
 Gehen Sie wie folgt vor, um Teammitglieder über {{site.data.keyword.Bluemix_notm}} einzuladen:
- 1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](images/account_support.svg) > **Konten** > **Teammitglieder einladen**.
+ 1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) > **Konten** > **Teammitglieder einladen**.
  2. Klicken Sie auf **Hinzufügen**, um sich für das SoftLayer-Konto zu authentifizieren und eine Liste der Teammitglieder aus dem SoftLayer-Konto anzuzeigen.
  3. Wählen Sie die gewünschten Teammitglieder aus und klicken Sie auf **Senden**.
 

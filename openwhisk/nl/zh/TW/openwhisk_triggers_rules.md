@@ -18,13 +18,14 @@ copyright:
 
 # 建立觸發程式及規則
 {: #openwhisk_triggers}
-*前次更新：2016 年 2 月 22 日*
+前次更新：2016 年 2 月 22 日
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} 觸發程式及規則將事件驅動功能帶給平台。來自外部及內部事件來源的事件是透過觸發程式進行傳送，而規則容許您的動作反應這些事件。
 {: shortdesc}
 
-## 觸發程式
+## 建立觸發程式
+{: #openwhisk_triggers_create}
 
 觸發程式是某類別事件的具名通道。以下是觸發程式範例：
 - 位置更新事件的觸發程式。
@@ -38,7 +39,8 @@ copyright:
 - Cloudant 資料變更資訊來源，以在每次新增或修改資料庫中的文件時發動觸發程式事件。
 - Git 資訊來源，其對 Git 儲存庫的每次確定發動觸發程式事件。
 
-## 規則
+## 使用規則
+{: #openwhisk_rules_use}
 
 規則會建立一個觸發程式與一個動作的關聯，而每次發動觸發程式都會呼叫將觸發程式事件作為輸入的對應動作。
 
@@ -60,7 +62,7 @@ copyright:
 這三個規則會建立下列行為：分類推文及已上傳映像檔中的映像檔、分類已上傳映像檔，以及產生縮圖版本。 
 
 ## 建立及發動觸發程式
-{: #openwhisk_triggers}
+{: #openwhisk_triggers_fire}
 
 觸發程式可以在發生特定事件時發動，也可以手動發動。
 
@@ -106,10 +108,10 @@ ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   {: screen}
 
 發動觸發程式時，如果沒有隨附可供比對的規則，則不會有可見的效果。
-觸發程式不能建立在套件中，必須直接建立在名稱空間之下。
+觸發程式無法在套件內建立，必須直接在名稱空間下建立。
 
-## 使用規則建立觸發程式與動作的關聯
-{: #openwhisk_rules}
+## 使用規則來關聯觸發程式與動作
+{: #openwhisk_rules_assoc}
 
 規則是用來建立觸發程式與動作的關聯。每次發動觸發程式事件時，都會使用事件參數來呼叫動作。
 
@@ -144,7 +146,6 @@ wsk rule create --enable myRule locationUpdate hello
   {: pre}
 
 4. 發動 locationUpdate 觸發程式。每次發動事件時，都會使用事件參數來呼叫 hello 動作。
-  
   ```
 wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
@@ -182,5 +183,4 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   您看到 hello 動作接收到事件有效負載並傳回預期字串。
 
 您可以建立多個規則，來建立相同觸發程式與不同動作的關聯。觸發程式與建立規則的動作必須在相同的名稱空間中，而不能屬於套件。
-如果您想要使用屬於套件的動作，可以將動作複製到名稱空間中，例如 `wsk action create echo --copy /whisk.system/samples/echo`。
-
+如果您要使用屬於套件的動作，可以將動作複製到名稱空間中。例如：`wsk action create echo --copy /whisk.system/samples/echo`。

@@ -30,8 +30,9 @@ Diese Dienstprogramme unterstützen Liberty und Node.js.
     Falls es aktiviert ist, startet das Buildpack einen Proxy-Agenten, der zwischen die Laufzeit und den Container Ihrer Anwendung geschaltet ist. Der Dienstprogramm *proxy* verarbeitet alle Anforderungen, die von der Anwendung empfangen werden. Abhängig von dem Typ von Anforderung wird entweder eine App-Management-Aktion ausgeführt oder die Anforderung wird an Ihre Anwendung weitergeleitet. *proxy* ermöglicht die Aktivierung der meisten anderen App-Management-Dienstprogramme. Indem Sie *proxy* aktivieren, bleibt der Anwendungscontainer auch dann verfügbar, wenn die Anwendung ausfällt. Der Proxy-Agent ermöglicht auch inkrementelle Aktualisierungen, d. h. der Live Edit-Modus für Node.js-Anwendungen ist aktiviert.
 	
   2. *devconsole*: Aktiviert das Entwicklungskonsolendienstprogramm, auf das unter der folgenden URL zugegriffen werden kann:
+    
     ```
-    http://<App-Name>.mybluemix.net/bluemix-debug/manage
+http://<App-Name>.mybluemix.net/bluemix-debug/manage
     ```
 	
     Über die Entwicklungskonsole können Benutzer ihre Anwendungen erneut starten, stoppen oder aussetzen. Außerdem können Benutzer die Shell- und Inspector-Dienstprogramme aktivieren oder darauf zugreifen.
@@ -43,8 +44,9 @@ Diese Dienstprogramme unterstützen Liberty und Node.js.
     Das Health Center unterstützt die Analyse der Leistung Ihrer Liberty- und Node.js-Anwendungen mithilfe von IBM Monitoring and Diagnostic Tools. Weitere Informationen finden Sie im Abschnitt zum [Analysieren der Leistung von Liberty-Java- oder Node.js-Apps in {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}.</p></li>
 	
   4. *shell*: Aktiviert eine webbasierte Shell, die über das 'devconsole'-Dienstprogramm oder unter der folgenden URL zugänglich ist:
+    
     ```
-    http://<App-Name>.mybluemix.net/bluemix-debug/shell
+http://<App-Name>.mybluemix.net/bluemix-debug/shell
     ```
 	
     Ein Terminalfenster mit Shell-Zugriff auf Ihre Anwendung wird angezeigt, nachdem Sie das Shell-Dienstprogramm aufgerufen haben. Sie können alle Aktionen ausführen, die in einer regulären Shell unterstützt werden, z. B. das Bearbeiten von Dateien, das Überprüfen der Speicherbelegung oder das Ausführen von Diagnosebefehlen.
@@ -82,27 +84,27 @@ Diese Dienstprogramme unterstützen nur Node.js.
     1. Konfigurieren Sie die *strongpm*-Umgebungsvariable BlUEMIX_APP_MGMT_ENABLE und führen Sie ein erneutes Staging für Ihre Anwendung aus.
     
 	```
-    cf set-env <App-Name> BLUEMIX_APP_MGMT_ENABLE strongpm
+cf set-env <App-Name> BLUEMIX_APP_MGMT_ENABLE strongpm
     cf restage <App-Name>
     ```
 	
     2. Fügen Sie in der Cloud Foundry-Befehlszeile eine Route zu Ihrer Anwendung hinzu, wobei an den Anwendungsnamen in der Route '-pm' angehängt wird, z. B. '<App-Name>-pm.mybluemix.net'.
     
 	```
-    cf map-route <App-Name> ng.bluemix.net -n <App-Name>-pm
+cf map-route <App-Name> ng.bluemix.net -n <App-Name>-pm
     ```
 	
     3. Installieren Sie das [StrongLoop-NPM-Modul](https://www.npmjs.com/package/strongloop){:new_window} auf Ihrer lokalen Workstation.
     
 	```
-    npm install -g strongloop
+npm install -g strongloop
     ```
 	
     4. Erstellen Sie ein Konto auf der [StrongLoop-Website](https://strongloop.com/register/){:new_window}.
     5. Starten Sie Arc auf Ihrer lokalen Workstation und melden Sie sich mit dem erstellten Konto an.
     
 	```
-    slc arc
+slc arc
     ```
 	
     6. Navigieren Sie zur Process Manager-Ansicht innerhalb von Arc. Geben Sie die neu erstellte Route mit Port 80 in Process Manager ein. Drücken Sie die Schaltfläche zum Aktivieren. Weitere Details finden Sie in der [vollständigen Dokumentation zur Verwendung von Arc](https://docs.strongloop.com/display){:new_window}.

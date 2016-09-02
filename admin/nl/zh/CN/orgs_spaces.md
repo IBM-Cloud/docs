@@ -17,10 +17,10 @@ copyright:
 
 # 管理组织和空间
 {: #orgsspacesusers}
-上次更新时间：2016 年 5 月 16 日
+上次更新时间：2016 年 8 月 16 日
 {: .last-updated}
 
-作为帐户所有者，您可以通过转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; ** 管理组织**页面来管理组织。组织管理员还可以使用“管理组织”页面来管理自己被设置为其管理员的任何组织。
+作为帐户所有者，您可以通过转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织**页面来管理组织。组织管理员还可以使用“管理组织”页面来管理自己被设置为其管理员的任何组织。
 {:shortdesc}
 
 管理任务包括以下内容：
@@ -87,14 +87,14 @@ copyright:
 
 只有拥有现买现付帐户的帐户所有者才能创建组织。您可以通过完成以下步骤来创建组织：
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **管理组织**页面。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织**页面。
 2. 单击**添加新组织**。
 3. 输入组织名称。
 4. 单击**添加**。
 
 您可以在组织中创建空间；例如，*dev* 空间（作为开发环境）、*test* 空间（作为测试环境）和 *production* 空间（作为生产环境）。然后，可以将应用程序与空间相关联。要创建空间，请完成以下步骤：
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **管理组织**页面。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织**页面。
 2. 确定要向其添加空间的组织，然后选择**查看详细信息**。
 3. 单击**编辑**。
 4. 单击**添加空间**。
@@ -107,7 +107,7 @@ copyright:
 
 要重命名组织，请执行以下步骤：
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **管理组织**页面。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织**页面。
 2. 确定要编辑的组织，然后选择**查看详细信息**。
 3. 选择**编辑**。
 4. 选择**编辑**以编辑组织的标题。
@@ -123,7 +123,7 @@ copyright:
 
 您可以在**管理组织**页面中删除空间：
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **管理组织**页面。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织**页面。
 2. 确定要编辑的组织，然后选择**查看详细信息**。
 3. 确定要删除的组织，然后选择**编辑**。
 4. 单击**删除空间**。
@@ -133,14 +133,14 @@ copyright:
 
 要列出特定组织的成员，请完成以下步骤：
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **管理组织**。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织**。
 2. 确定要查看其成员的组织，然后单击**查看详细信息**。
 3. 单击**编辑**。
 4. 在**用户**选项卡中可以看到组织成员及其角色。
 
 要列出特定空间的成员，请完成以下步骤：
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **管理组织**页面。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织**页面。
 2. 确定要查看其成员的组织，然后单击**查看详细信息**。
 3. 确定要查看其成员的空间，然后单击**编辑**。
 4. 在**用户**选项卡中可以查看空间成员及其角色。
@@ -152,19 +152,19 @@ copyright:
 
 要查看组织的配额，请完成以下步骤：
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **管理组织**页面。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织**页面。
 2. 确定要查看其配额的组织，然后单击**查看详细信息**。
 3. 单击**编辑**。
 4. 选择**配额**选项卡。
 
-要更新组织的配额，必须开具支持凭单。有关开具支持凭单的更多信息，请参阅[获取客户支持](../support/index.html#contacting-support)。有关容器配额的更多信息，请参阅“容器”文档中的[配额](../containers/container_creating_ov.html#container_quota)。
+要更新组织的配额，必须开具支持凭单。有关开具支持凭单的更多信息，请参阅[获取客户支持](../support/index.html#contacting-support)。有关容器配额的更多信息，请参阅“容器”文档中的[配额](../containers/container_planning_org_ov.html##container_planning_quota)。
 
 ## 管理域
 {: #managedomains}
 
 作为帐户所有者或组织管理员，您可以针对组织及其空间内构建的应用程序查看其系统域并为其添加定制域。作为空间管理员，空间的**域**选项卡是分配给该空间的域的只读列表。 
 
-1. 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **管理组织**页面。
+1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织**页面。
 2. 确定要查看或编辑其域的组织。
 3. 对该组织选择**查看详细信息**。
 4. 单击**编辑**。

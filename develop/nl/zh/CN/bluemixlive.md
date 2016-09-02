@@ -115,7 +115,7 @@ bl start --restart
 
 只要为您的 Node.js 应用程序启用了 {{site.data.keyword.Bluemix_notm}} Live Sync，就可以访问 {{site.data.keyword.Bluemix_notm}} Live Sync 的“调试”功能。
 
-使用“调试”，可以执行动态编辑代码、插入断点、单步调试代码、重新启动运行时等操作，而且所有这些操作都可在 {{site.data.keyword.Bluemix_notm}} 为应用程序提供服务期间来执行。通过从大型 {{site.data.keyword.Bluemix_notm}} 服务列表中进行选择，可以敏捷地逐步开发应用程序。
+使用“调试”，可以执行动态编辑代码、插入断点、单步调试代码、重新启动运行时等操作，而且所有这些操作都可在 {{site.data.keyword.Bluemix_notm}} 为应用程序提供服务期间来执行。通过从大型 {{site.data.keyword.Bluemix_notm}} 服务列表中进行选择，可以敏捷地以递增方式开发应用程序。
 
 {{site.data.keyword.Bluemix_notm}} 实时调试包括以下功能：
 

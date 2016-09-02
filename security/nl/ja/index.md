@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} セキュリティー
 {: #security}
-*最終更新日: 2016 年 6 月 22 日*
+最終更新日: 2016 年 7 月 22 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} プラットフォームはセキュア・エンジニアリング・プラクティスを使用して設計されており、ネットワークおよびインフラストラクチャー全体における階層化セキュリティー管理機能を備えています。{{site.data.keyword.Bluemix_notm}} は、アプリケーション開発者がモバイル・アプリおよび Web アプリを保護するために使用できる一連のセキュリティー・サービスを備えています。これらのエレメントを組み合わせることで、{{site.data.keyword.Bluemix_notm}} は、セキュアなアプリケーション開発に対して明確な選択を提供するプラットフォームになっています。
@@ -72,18 +72,18 @@ IBM は、リレー ({{site.data.keyword.Bluemix_notm}} Local に付属のデリ
 <dt>データの保護</dt>
 <dd> すべての  {{site.data.keyword.Bluemix_notm}} トラフィックは、リバース・プロキシー、SSL 終了、およびロード・バランシング機能を提供する IBM WebSphere® DataPower® SOA アプライアンスを経由します。
 以下の HTTP メソッドを使用できます。
- * DELETE
- * GET
- * HEAD
- * OPTIONS
- * POST
- * PUT
- * TRACE
-
-HTTP の非活動タイムアウトは 2 分です。
-
-以下のヘッダーには DataPower によりデータが取り込まれます。
-<dl>
+<ul>
+<li>DELETE</li>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+<li>POST</li>
+<li>PUT</li>
+<li>TRACE</li>
+</ul>
+HTTP の非活動タイムアウトは 2 分です。</dd>
+<dd>
+以下のヘッダーには DataPower によりデータが取り込まれます。<dl>
 <dt>$wsis</dt>
 <dd>クライアント・サイドの接続がセキュア (HTTPS) である場合は true に、その他の場合は false に設定されます。</dd>
 <dt>$wssc</dt>
@@ -109,10 +109,10 @@ HTTP の非活動タイムアウトは 2 分です。
 
 <dl>
 <dt>環境の分離</dt>
-<dd> {{site.data.keyword.Bluemix_notm}} Public では、開発環境と実稼働環境を互いから分離して、アプリケーションの安定性とセキュリティーを向上させています。</dd>
+<dd>{{site.data.keyword.Bluemix_notm}} Public では、開発環境と実稼働環境を互いから分離して、アプリケーションの安定性とセキュリティーを向上させています。</dd>
 
 <dt>ファイアウォール</dt>
-<dd> ファイアウォールを配備して、{{site.data.keyword.Bluemix_notm}} ネットワークへのアクセスを制限します。{{site.data.keyword.Bluemix_notm}} Local では、企業ファイアウォールにより、{{site.data.keyword.Bluemix_notm}} インスタンスからネットワークの残りの部分を分離します。</dd>
+<dd>ファイアウォールを配備して、{{site.data.keyword.Bluemix_notm}} ネットワークへのアクセスを制限します。{{site.data.keyword.Bluemix_notm}} Local では、企業ファイアウォールにより、{{site.data.keyword.Bluemix_notm}} インスタンスからネットワークの残りの部分を分離します。</dd>
 
 <dt>侵入防止</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} Public および Dedicated では、脅威への対処を可能にするため、不正侵入に対する防御によって脅威が検出できるようになっています。侵入防止ポリシーは、ファイアウォールで有効になります。</dd>
@@ -173,7 +173,7 @@ SoftLayer のネットワーク内ネットワークでは、パブリック・�
 
 データ・セキュリティーについて計画する際には、それぞれのタイプのデータを考慮する必要があります。
 
-{{site.data.keyword.Bluemix_notm}} プラットフォームは、ネットワーク全体で、データが {{site.data.keyword.Bluemix_notm}} 内部ネットワークの境界にある IBM DataPower Gateway に到達するまで、SSL を使用してアプリケーションへのエンド・ユーザー・アクセスを保護することで、転送中のデータを保護します。IBM DataPower Gateway はリバース・プロキシーとして機能し、SSL 終端を提供します。
+{{site.data.keyword.Bluemix_notm}} プラットフォームは、ネットワーク全体で、データが {{site.data.keyword.Bluemix_notm}} 内部ネットワークの境界にある IBM DataPower Gateway に到達するまで、SSL を使用してアプリケーションへのエンド・ユーザー・アクセスを保護することで、転送中のデータを保護します。IBM DataPower Gateway はリバース・プロキシーとして機能し、SSL 終端を提供します。そこからアプリケーションまで、IPSEC を使用して、IBM DataPower Gateway からアプリケーションまで移動していくデータを保護します。
 
 使用中のデータと保存状態のデータのセキュリティーはともに、アプリケーションを開発するのがお客様であるため、お客様の責任になります。{{site.data.keyword.Bluemix_notm}} カタログで使用可能ないくつかのデータ関連サービスを利用して、この問題の解決に役立てることができます。
 
@@ -184,7 +184,7 @@ SoftLayer のネットワーク内ネットワークでは、パブリック・�
 
 いくつかの {{site.data.keyword.Bluemix_notm}} サービスによって提供されるセキュリティー機能を使用して、アプリケーションを保護することができます。IBM によって作成されたすべての {{site.data.keyword.Bluemix_notm}} サービスは、IBM セキュア・エンジニアリング開発プラクティスに従っています。
 
-**注:** ここで説明されているサービスの一部は、Bluemix Dedicated と Local のいずれのインスタンスにも適用されない場合があります。
+**注:** ここで説明されている一部のサービスは、{{site.data.keyword.Bluemix_notm}} Dedicated と Local のいずれのインスタンスにも適用されない場合があります。
 
 ### SSO サービス
 
@@ -248,7 +248,7 @@ SIEM (Security Information and Event Management) ツールを使用して、ア�
  3. ネットワーク・ルーターを介します。
  4. Droplet Execution Agent (DEA) のアプリケーション・ランタイムに到達します。
 
-{{site.data.keyword.Bluemix_notm}} *開発者*は、ログイン用と開発およびデプロイ用の 2 つのメイン・フローに従います。
+{{site.data.keyword.Bluemix_notm}} *開発者* は、ログイン用と開発およびデプロイ用の 2 つのメイン・フローに従います。
  * **開発者のログイン・フロー**には、以下が含まれます。
     * {{site.data.keyword.Bluemix_notm}} Public にログインする開発者の場合、フローは以下のとおりです。
       1. IBM シングル・サインオン・サービスを介します。

@@ -12,7 +12,7 @@ copyright:
 
 #服務
 {: #services}
-*前次更新：2016 年 1 月 20 日*
+*前次更新：2016 年 8 月 10 日*
 
 您可以在 {{site.data.keyword.Bluemix}} 使用者介面的**型錄**中，在**服務**下找到可用的服務。
 {:shortdesc}
@@ -47,7 +47,7 @@ copyright:
 
 
 
-{{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及運行環境，請登入 {{site.data.keyword.Bluemix_notm}}，捲動至「型錄」底端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗型錄**。
+{{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及運行環境，請登入 {{site.data.keyword.Bluemix_notm}}，並捲動至「型錄」尾端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗型錄**。
 
 實驗性服務可能不穩定，而且可能會變更，而與較舊版不相容。這些服務不建議用於正式作業環境。實驗性服務支援是透過「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
 
@@ -80,6 +80,7 @@ copyright:
 |{{site.data.keyword.APIM}}			|是		|是		|否|
 |{{site.data.keyword.autoscaling}}		|是		|是		|是|
 |{{site.data.keyword.bigicloudst}}		|是		|否		|否|
+|{{site.data.keyword.blockstorageshort}}        |否             |是            |否 |
 |{{site.data.keyword.rules_short}}		|是		|是		|否|
 |{{site.data.keyword.cloudint}}			|是		|是		|否|
 |{{site.data.keyword.cloudant}}			|是		|是		|否|
@@ -237,7 +238,7 @@ cf bind-service appname service_instance
     2. 從「型錄」中，按一下服務磚以選取您想要的服務。即會開啟「服務詳細資料」頁面。
     3. 在「新增服務」視窗中，將**應用程式：**清單選項保持為**維持不連結**。這個選項表示服務將不會連接至 {{site.data.keyword.Bluemix_notm}} 應用程式。
     4. 視需要進行任何其他選擇。然後按一下**建立**。即會建立服務實例，且會顯示服務「儀表板」。
-2. 在服務「儀表板」的左導覽窗格中，您可以選取**服務認證**，以使用 JSON 格式檢視或新增認證。使用顯示為認證的 API 金鑰來連接至服務實例。
+2. 在服務「儀表板」的導覽窗格中，您可以選取**服務認證**，以使用 JSON 格式檢視或新增認證。使用顯示為認證的 API 金鑰來連接至服務實例。
 
 在 {{site.data.keyword.Bluemix_notm}} 外執行的應用程式現在可以存取 {{site.data.keyword.Bluemix_notm}} 服務。
 
@@ -310,15 +311,15 @@ cf uups testups2 -l syslog://example2.com
     
 	假設您從想要使用服務實例的地區中開始。若要使用存在於另一個地區的服務實例，請完成下列步驟：
 
-      1. 切換至服務實例所在的地區。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**地區**或按一下**地區**圖示，然後選取服務實例存在的地區。
+      1. 切換至服務實例所在的地區。在 {{site.data.keyword.Bluemix_notm}} 功能表列中，展開**地區**，或按一下**地區**圖示，然後選取服務實例所在的地區。
 
       2. 在服務存在的地區中，從服務實例的 VCAP_SERVICES 環境變數擷取認證及連線參數。請完成下列步驟：
 
 
 	       1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」中，按一下您的應用程式磚。即會顯示「概觀」頁面。
-	       2. 在左導覽窗格中，按一下**環境變數**。右窗格會顯示 *VCAP_SERVICES* 環境變數詳細資料。請記錄服務實例的 JSON 內容。
+	       2. 在導覽窗格中，按一下**環境變數**。右窗格會顯示 *VCAP_SERVICES* 環境變數詳細資料。請記錄服務實例的 JSON 內容。
 
-      3. 切換至您從想要使用服務實例的地區。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**地區**或按一下**地區**圖示，然後選取您想要使用服務實例的地區。
+      3. 切換至您從想要使用服務實例的地區。在 {{site.data.keyword.Bluemix_notm}} 功能表列中，展開**地區**，或按一下**地區**圖示，然後選取您要使用服務實例的地區。
 
       4. 使用您從 *VCAP_SERVICES* 環境變數記錄的認證及連線參數，建立使用者提供的服務實例。如需如何建立使用者提供的服務實例的相關資訊，請參閱[建立使用者提供的服務實例](#user_provide_services){: new_window}。
 
@@ -341,8 +342,8 @@ cf uups testups2 -l syslog://example2.com
 若要使用另一個服務中的服務實例，請完成下列步驟：
 
 1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」上，按一下您要存取的服務磚。即會顯示服務的儀表板。
-2. 在左導覽窗格中，使用服務實例的主控台，按一下*管理* 以授權來自其他服務實例的連結。
-3. 如果您要拒絕其他服務對服務實例的存取權，請按一下左導覽窗格中的*服務存取授權*，然後使用*撤銷* 以移除服務連結。 
+2. 在導覽窗格中，使用服務實例的主控台，按一下**管理**以授權來自其他服務實例的連結。
+3. 如果您要拒絕其他服務對服務實例的存取權，請按一下導覽窗格中的**服務存取授權**，然後使用**撤銷**以移除服務連結。 
 
 # 相關鏈結
 {: #rellinks}

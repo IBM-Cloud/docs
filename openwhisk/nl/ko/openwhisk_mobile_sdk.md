@@ -13,7 +13,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 모바일 SDK 사용
 {: #openwhisk_mobile_sdk}
-*마지막 업데이트 날짜: 2016년 3월 28일*
+마지막 업데이트 날짜: 2016년 8월 4일
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}}에서는 쉽게 원격 트리거를 실행하고 원격 조치를 호출할 수 있도록 모바일 앱을 사용하는 iOS 및 watchOS 2 디바이스에 대한 모바일 SDK를 제공합니다. 현재 Android용 버전은 사용할 수 없습니다. Android 개발자는 직접 {{site.data.keyword.openwhisk}} REST API를 사용할 수 있습니다.
@@ -23,9 +23,11 @@ copyright:
 
 ## 앱에 SDK 추가
 {: #openwhisk_add_sdk}
+
 CocoaPods, Carthage를 사용하거나 소스 디렉토리에서 모바일 SDK를 설치할 수 있습니다.
 
 ### CocoaPods를 사용하여 설치 
+{: #openwhisk_add_sdk_cocoapods}
 
 모바일용 {{site.data.keyword.openwhisk_short}} SDK는 CocoaPods를 통해 공용 배포에 대해 사용 가능합니다. CocoaPods가 설치되었다고 가정하고, 스타터 앱 프로젝트 디렉토리 내의 'Podfile'이라고 하는 파일에 다음 행을 두십시오.  
 
@@ -42,11 +44,12 @@ end
 ```
 {: codeblock}
 
-명령행에서 `pod install`을 입력하십시오. 그러면 watchOS 2 확장자가 있는 iOS 앱에 대해 SDK를 설치합니다. CocoaPods에서 앱용으로 작성하는 작업공간 파일을 사용하여 Xcode에서 프로젝트를 여십시오. 
+명령행에서 `pod install`을 입력하십시오. 이 명령은 watchOS 2 확장이 있는 iOS 앱용 SDK를 설치합니다. CocoaPods에서 앱용으로 작성하는 작업공간 파일을 사용하여 Xcode에서 프로젝트를 여십시오. 
 
 ### Carthage를 사용하여 설치
+{: #openwhisk_add_sdk_carthage}
 
-앱의 프로젝트 디렉토리에 'Cartfile'이라는 파일을 작성하십시오. Cartfile에서 다음 행을 두십시오. 
+앱의 프로젝트 디렉토리에서 파일을 작성하고 이름을 'Cartfile'로 지정하십시오. 파일에 다음 행을 넣으십시오. 
 ```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
@@ -57,9 +60,11 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 그리고 OpenWhisk.framework를 Xcode 프로젝트의 임베디드 프레임워크에 추가해야 합니다. 
 
 ### 소스 코드에서 설치
+{: #openwhisk_add_sdk_source}
 
 소스 코드는 다음에서 사용 가능합니다. https://github.com/openwhisk/openwhisk-client-swift.git Xcode를 통해 `OpenWhisk.xcodeproj`를 사용하여 프로젝트를 여십시오.
-프로젝트에는 각각 iOS 및 watchOS 2를 대상으로 하는 두 개의 "OpenWhisk" 및 "OpenWhiskWatch" 스킴이 포함됩니다. 필요한 대상에 대한 프로젝트를 빌드하고 결과 프레임워크를 사용자의 앱에 추가하십시오(일반적으로 ~/Library/Developer/Xcode/DerivedData/사용자의 앱 이름).
+프로젝트는 "OpenWhisk"(iOS 대상)와 "OpenWhiskWatch"(watchOS 2 대상)라는 두 개의 스킴을 포함합니다.
+필요한 대상의 프로젝트를 빌드하고 결과 프레임워크를 앱(일반적으로 ~/Library/Developer/Xcode/DerivedData/사용자 앱 이름에 있음)에 추가하십시오. 
 
 ## 스타터 앱 설치 예
 {: #openwhisk_install_sdkstart}
@@ -73,7 +78,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-그러면 스타터 앱을 포함하는 Zip 파일이 다운로드됩니다. 프로젝트 디렉토리 내에 Podfile이 있습니다. 
+이 명령은 스타터 앱이 포함된 압축 파일을 다운로드합니다. 프로젝트 디렉토리에 podfile이 있습니다.  
 
 SDK를 설치하려면 다음 명령을 입력하십시오.
 ```
@@ -84,7 +89,7 @@ pod install
 ## SDK 시작하기
 {: #openwhisk_sdk_getstart}
 
-빠르게 가져와서 실행하려면 {{site.data.keyword.openwhisk_short}} API 신임 정보를 사용하여 WhiskCredentials 오브젝트를 작성하고 해당 오브젝트에서 {{site.data.keyword.openwhisk_short}} 인스턴스를 작성하십시오.
+빨리 시작하고 실행하려면 {{site.data.keyword.openwhisk_short}} API 신임 정보를 사용하여 WhiskCredentials 오브젝트를 작성하고 오브젝트에서 {{site.data.keyword.openwhisk_short}} 인스턴스를 작성하십시오. 
 
 예를 들어, Swift 2.1에서는 다음 예제 코드를 사용하여 신임 정보 오브젝트를 작성하십시오.
 
@@ -93,7 +98,7 @@ let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken:
 ```
 {: codeblock}
 
-앞의 예제에서 {{site.data.keyword.openwhisk_short}}에서 얻은 `myKey` 및 `myToken`을 전달합니다. 다음 CLI 명령을 사용하여 키 및 토큰을 검색할 수 있습니다.
+앞의 예제에서 {{site.data.keyword.openwhisk_short}}에서 가져온 `myKey`와 `myToken`을 전달합니다. 다음 CLI 명령을 사용하여 키 및 토큰을 검색할 수 있습니다.
 
 ```
 wsk property get --auth
@@ -104,13 +109,13 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 ```
 {: screen}
 
-콜론 앞과 뒤의 문자열은 각각 사용자의 키와 토큰입니다.
+콜론 앞의 문자열이 키이고 콜론 뒤의 문자열은 토큰입니다. 
 
 ## {{site.data.keyword.openwhisk_short}} 조치 호출
 {: #openwhisk_sdk_invoke}
 
 
-원격 조치를 호출하려면 조치 이름을 사용하여 `invokeAction`을 호출하십시오. 조치가 속한 네임스페이스를 지정하거나 이를 공백으로 두어 기본 네임스페이스를 허용할 수 있습니다. 필요한 경우, 사전을 사용하여 조치에 매개변수를 전달하십시오.
+원격 조치를 호출하려면 조치 이름을 사용하여 `invokeAction`을 호출하십시오. 조치가 속한 네임스페이스를 지정하거나 기본 네임스페이스를 승인하도록 공백으로 둘 수 있습니다. 필요한 경우, 사전을 사용하여 조치에 매개변수를 전달하십시오.
 
 예를 들어, 다음과 같습니다. 
 
@@ -156,7 +161,7 @@ locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"do {try whisk
 ```
 {: codeblock}
 
-앞의 예에서 `locationChanged`라는 트리거를 실행합니다.
+앞의 예에서 `locationChanged`라는 트리거를 실행합니다. 
 
 ## 결과를 리턴하는 조치 사용
 {: #openwhisk_sdk_actionresult}
@@ -179,7 +184,7 @@ var result = reply["result"]
 ```
 {: codeblock}
 
-기본적으로 SDK는 활성화 ID 및 호출된 조치에 의해 생성되는 결과만 리턴합니다. HTTP 응답 상태 코드를 포함하여 전체 응답 오브젝트의 메타데이터를 가져오려면 다음 설정을 사용하십시오.
+기본적으로 SDK는 호출된 조치에서 생성되는 결과와 활성화 ID만 리턴합니다. HTTP 응답 상태 코드를 포함하여 전체 응답 오브젝트의 메타데이터를 가져오려면 다음 설정을 사용하십시오.
 
 ```
 whisk.verboseReplies = true
@@ -196,7 +201,7 @@ whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
 
-이 예에서는 localhost:8080에서 실행되는 설치를 사용합니다. baseUrl을 지정하지 않으면 모바일 SDK가 다음에서 실행되는 인스턴스를 사용합니다. https://openwhisk.ng.bluemix.net
+이 예에서는 localhost:8080에서 실행 중인 설치를 사용합니다. baseUrl을 지정하지 않으면 모바일 SDK가 https://openwhisk.ng.bluemix.net에서 실행되는 인스턴스를 사용합니다. 
 
 특수 네트워크 처리가 필요한 경우 사용자 정의 NSURLSession을 패스할 수 있습니다. 예를 들어, 자체 서명된 인증서를 사용하는 {{site.data.keyword.openwhisk_short}} 설치가 있을 수 있습니다.
 
@@ -214,17 +219,19 @@ whisk.urlSession = session
 {: codeblock}
 
 ### 규정된 이름 지원
+{: #openwhisk_sdk_configure_qual}
 
-모든 조치 및 트리거는 네임스페이스, 패키지 및 조치 또는 트리거 이름으로 구성된 완전한 이름을 가지고 있습니다. SDK는 조치를 호출하거나 트리거를 실행할 때 이를 매개변수로 허용할 수 있습니다. 또한 SDK는 `/mynamespace/mypackage/nameOfActionOrTrigger`와 같은 완전한 이름을 허용하는 기능을 제공합니다. 규정된 이름 문자열은 모든 {{site.data.keyword.openwhisk_short}} 사용자가 가진 네임스페이스 및 패키지에 대한 이름이 지정되지 않은 기본값을 지원하므로 다음 구문 분석 규칙이 적용됩니다.
+모든 조치 및 트리거는 네임스페이스, 패키지 및 조치 또는 트리거 이름으로 구성된 완전한 이름을 가지고 있습니다. SDK는 조치를 호출하거나 트리거를 실행할 때 이러한 요소를 매개변수로 허용할 수 있습니다. 또한 SDK는 `/mynamespace/mypackage/nameOfActionOrTrigger`와 같은 완전한 이름을 허용하는 기능을 제공합니다. 규정된 이름 문자열은 모든 {{site.data.keyword.openwhisk_short}} 사용자가 가진 네임스페이스 및 패키지에 대한 이름이 지정되지 않은 기본값을 지원하므로 다음 구문 분석 규칙이 적용됩니다.
 
 - qName = "foo"는 결과적으로 네임스페이스 = 기본값, 패키지 = 기본값, 조치/트리거 = "foo"가 됨
 - qName = "mypackage/foo"는 결과적으로 네임스페이스 = 기본값, 패키지는 = mypackage, 조치/트리거 = "foo"가 됨
 - qName = "/mynamespace/foo"는 결과적으로 네임스페이스 = mynamespace, 패키지 = 기본값, 조치/트리거 = "foo"가 됨
 - qName = "/mynamespace/mypackage/foo"는 결과적으로 네임스페이스 = mynamespace, 패키지 = mypackage, 조치/트리거 = "foo"가 됨
 
-모든 기타 조합은 WhiskError.QualifiedName 오류를 발생시킵니다. 따라서 규정된 이름을 사용할 때 "`do/try/catch`" 구성에서 호출을 랩핑해야 합니다.
+모든 기타 조합은 WhiskError.QualifiedName 오류를 발생시킵니다. 따라서 규정된 이름을 사용할 경우 "`do/try/catch`" 구성에서 호출을 랩핑해야 합니다. 
 
 ### SDK 단추
+{: #openwhisk_sdk_configure_button}
 
 편의상 SDK에는 조치를 호출할 수 있도록 해주는 `UIButton`을 확장하는 `WhiskButton`이 포함됩니다. `WhiskButton`을 사용하려면 다음 예를 따르십시오.
 

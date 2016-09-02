@@ -187,7 +187,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 ## 관련 링크
 {: #general}
 
-* [IBM Containers](../containers/container_cli_ov.html)
+* [IBM Containers](../containers/container_index.html)
 * [가상 머신](../virtualmachines/vm_index.html)
 * [Delivery Pipeline 시작하기](../services/DeliveryPipeline/index.html)
 * [IBM Eclipse Tools for Bluemix를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.html)

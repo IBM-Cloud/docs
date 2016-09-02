@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Letzte Aktualisierung: 20. Januar 2016*
+*Letzte Aktualisierung: 10. August 2016*
 
 Verfügbare Services finden Sie im **Katalog** unter **Services** in der
 {{site.data.keyword.Bluemix}}-Benutzerschnittstelle.
@@ -94,6 +94,7 @@ Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In
 |{{site.data.keyword.APIM}}			|Ja		|Ja		|Nein|
 |{{site.data.keyword.autoscaling}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.bigicloudst}}		|Ja		|Nein		|Nein|
+|{{site.data.keyword.blockstorageshort}}        |Nein             |Ja            |Nein |
 |{{site.data.keyword.rules_short}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.cloudint}}			|Ja		|Ja		|Nein|
 |{{site.data.keyword.cloudant}}			|Ja		|Ja		|Nein|
@@ -210,14 +211,14 @@ führen Sie die folgenden Schritte durch:
 des Service und 'service_instance' der Name, den Sie für diese Serviceinstanz verwenden möchten.
 
     ```
-    cf create-service service_name service_plan service_instance
+cf create-service service_name service_plan service_instance
     ```
 
 3. Verwenden Sie den folgenden Befehl, um die Serviceinstanz an eine Anwendung zu binden. Dabei ist 'appname' der Name der Anwendung und 'service_instance' der Name
 der Serviceinstanz.
 
     ```
-    cf bind-service appname service_instance
+cf bind-service appname service_instance
     ```
 
 Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich im selben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external){: new_window}.
@@ -248,7 +249,7 @@ Um einer externen App oder einem Tool eines anderen Herstellers die Verwendung e
     2. Wählen Sie im Katalog den gewünschten Service aus, indem Sie auf die Kachel für den Service klicken. Die Seite mit den Servicedetails wird geöffnet.
     3. Lassen Sie im Fenster 'Service hinzufügen' für die Liste **App**: die Option **Nicht binden** ausgewählt. Diese Auswahl bedeutet, dass keine Verbindung zwischen dem Service und einer {{site.data.keyword.Bluemix_notm}}-App hergestellt wird.
     4. Wählen Sie die anderen Optionen je nach Bedarf entsprechend aus. Klicken Sie anschließend auf **Erstellen**. Es wird eine Serviceinstanz erstellt und das Service-Dashboard wird angezeigt.
-2. Im linken Navigationsbereich des Service-Dashboards können Sie die Option **Serviceberechtigungsnachweise** auswählen, um Berechtigungsnachweise im JSON-Format anzuzeigen oder hinzuzufügen. Verwenden Sie den angezeigten API-Schlüssel als Berechtigungsnachweise zur Herstellung einer Verbindung zu der Serviceinstanz.
+2. Im Navigationsbereich des Service-Dashboards können Sie die Option **Serviceberechtigungsnachweise** auswählen, um Berechtigungsnachweise im JSON-Format anzuzeigen oder hinzuzufügen. Verwenden Sie den angezeigten API-Schlüssel als Berechtigungsnachweise zur Herstellung einer Verbindung zu der Serviceinstanz.
 
 Ihre Anwendung, die außerhalb von {{site.data.keyword.Bluemix_notm}} ausgeführt wird, kann nun auf den {{site.data.keyword.Bluemix_notm}}-Service zugreifen.
 
@@ -264,7 +265,7 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
 1. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz entweder mit dem Befehl **cf create-user-provided-service** oder mit dem Befehl **cf cups**:
     * Verwenden Sie zum Erstellen einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und trennen Sie die Parameternamen durch Kommas. Die cf-Befehlszeilenschnittstelle fordert Sie dann nacheinander zum Angeben der einzelnen Parameter auf. Beispiel:
         ```
-        cf cups testups1 -p "host, port, dbname, username, password"
+cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -277,7 +278,7 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
     * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokollmanagementsoftware eines Drittanbieters weitergibt, verwenden Sie die Option **-l** und geben Sie das von der Protokollmanagementsoftware des Drittanbieters bereitgestellte Ziel an. Beispiel:
 
         ```
-        cf cups testups2 -l syslog://example.com
+cf cups testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -287,7 +288,7 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
     * Verwenden Sie zum Aktualisieren einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und geben Sie die Parameterschlüssel und -werte in einem JSON-Objekt an. Beispiel:
 
         ```
-        cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -295,7 +296,7 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
     * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokoll-Management-Software eines Drittanbieters weitergibt, verwenden Sie die Option -l. Beispiel:
 
         ```
-        cf uups testups2 -l syslog://example2.com
+cf uups testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -320,14 +321,14 @@ Wenn Sie über eine Serviceinstanz verfügen, die erstellt und an Apps in einer 
     
 	Angenommen, Sie beginnen in der Region, in der Sie die Serviceinstanz verwenden möchten. Führen Sie die folgenden Schritte aus, um eine Serviceinstanz zu verwenden, die in einer anderen Region existiert:
 
-      1. Wechseln Sie in die Region, in der die Serviceinstanz existiert. Erweitern Sie in der oberen Menüleiste von {{site.data.keyword.Bluemix_notm}} die Option **Region** oder klicken Sie auf das Symbol für **Region** und wählen Sie anschließend die Region aus, in der sich die Serviceinstanz befindet.
+      1. Wechseln Sie in die Region, in der die Serviceinstanz existiert. Erweitern Sie in der Menüleiste von {{site.data.keyword.Bluemix_notm}} die Option **Region** oder klicken Sie auf das Symbol für **Region** und wählen Sie anschließend die Region aus, in der sich die Serviceinstanz befindet.
 
       2. Rufen Sie die Berechtigungsnachweise und Verbindungsparameter aus der Umgebungsvariablen VCAP_SERVICES der Serviceinstanz in der Region ab, in der sich der Service befindet. Führen Sie die folgenden Schritte aus:
 
 	       1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die Anwendungskachel. Die Übersichtsseite wird angezeigt.
-	       2. Klicken Sie im linken Navigationsbereich auf **Umgebungsvariablen**. Die Details zur Umgebungsvariablen *VCAP_SERVICES* werden im rechten Fensterbereich angezeigt. Dokumentieren Sie den JSON-Inhalt für die Serviceinstanz.
+	       2. Klicken Sie im Navigationsbereich auf **Umgebungsvariablen**. Die Details zur Umgebungsvariablen *VCAP_SERVICES* werden im rechten Fensterbereich angezeigt. Dokumentieren Sie den JSON-Inhalt für die Serviceinstanz.
 
-      3. Wechseln Sie zu der Region, in der Sie die Serviceinstanz verwenden möchten. Erweitern Sie in der oberen Menüleiste von {{site.data.keyword.Bluemix_notm}} die Option **Region** oder klicken Sie auf das Symbol für **Region** und wählen Sie anschließend die Region aus, in der Sie die Serviceinstanz verwenden möchten.
+      3. Wechseln Sie zu der Region, in der Sie die Serviceinstanz verwenden möchten. Erweitern Sie in der Menüleiste von {{site.data.keyword.Bluemix_notm}} die Option **Region** oder klicken Sie auf das Symbol für **Region** und wählen Sie anschließend die Region aus, in der Sie die Serviceinstanz verwenden möchten.
 
       4. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz, indem Sie die Berechtigungsnachweise und Verbindungsparameter verwenden, die Sie aus der Umgebungsvariablen *VCAP_SERVICES* aufgezeichnet haben. Informationen zur Erstellung einer vom Benutzer bereitgestellten Serviceinstanz finden Sie im Abschnitt zur [Erstellung einer vom Benutzer bereitgestellten Serviceinstanz](#user_provide_services){: new_window}.
 
@@ -350,8 +351,8 @@ Mit der Berechtigung für den Servicezugriff kann ein Service direkt auf einen a
 Führen Sie die folgenden Schritte aus, um eine Serviceinstanz von einem anderen Service zu verwenden:
 
 1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die Kachel für den Service, auf den Sie zugreifen möchten. Das Dashboard für den Service wird angezeigt.
-2. Klicken Sie im linken Navigationsbereich auf *Verwalten von*, um das Binden von anderen Serviceinstanzen unter Verwendung der Konsole der Serviceinstanz zu autorisieren.
-3. Wenn Sie den Zugriff weiterer Services auf die Serviceinstanz verhindern möchten, klicken Sie im linken Navigationsfenster auf *Berechtigung für Servicezugriff* und entfernen Sie die Servicebindung anschließend mithilfe von *Widerrufen*. 
+2. Klicken Sie im Navigationsbereich auf **Verwalten von**, um das Binden von anderen Serviceinstanzen unter Verwendung der Konsole der Serviceinstanz zu autorisieren.
+3. Wenn Sie den Zugriff weiterer Services auf die Serviceinstanz verhindern möchten, klicken Sie im Navigationsbereich auf **Berechtigung für Servicezugriff** und entfernen Sie die Servicebindung anschließend mithilfe von **Widerrufen**. 
 
 # Zugehörige Links
 {: #rellinks}

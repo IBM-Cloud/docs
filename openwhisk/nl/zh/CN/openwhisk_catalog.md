@@ -16,9 +16,9 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 使用启用了 {{site.data.keyword.openwhisk_short}} 的服务 
+# 使用针对 {{site.data.keyword.openwhisk_short}} 启用的 {{site.data.keyword.Bluemix_notm}} 服务
 {: #openwhisk_ecosystem}
-*上次更新时间：2016 年 3 月 28 日*
+上次更新时间：2016 年 8 月 4 日
 {: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，通过包的目录，您能够轻松地借助多个有用的功能增强应用程序，以及访问生态系统中的外部服务。启用了 {{site.data.keyword.openwhisk_short}} 的外部服务的示例包括 Cloudant、The Weather Company、Slack 和 GitHub。
@@ -42,6 +42,7 @@ copyright:
 以下主题将指导您设置 Cloudant 数据库，配置关联的包以及使用 `/whisk.system/cloudant` 包中的操作和订阅源。
 
 ### 在 {{site.data.keyword.Bluemix_notm}} 中设置 Cloudant 数据库
+{: #openwhisk_catalog_cloudant_in}
 
 如果是在 {{site.data.keyword.Bluemix}} 中使用 {{site.data.keyword.openwhisk_short}}，{{site.data.keyword.openwhisk_short}} 将为 {{site.data.keyword.Bluemix_notm}} Cloudant 服务实例自动创建包绑定。如果不是在 {{site.data.keyword.Bluemix_notm}} 中使用 {{site.data.keyword.openwhisk_short}} 和 Cloudant，请跳至下一步。
 
@@ -71,7 +72,7 @@ wsk package refresh
   {: screen}
 
   ```
-wsk package list
+  wsk package list
   ```
   {: pre}
   ```
@@ -80,7 +81,7 @@ wsk package list
   ```
   {: screen}
 
-  您应该会看到与 {{site.data.keyword.Bluemix_notm}} Cloudant 服务实例对应的包绑定的标准名称。
+  您会看到与 {{site.data.keyword.Bluemix_notm}} Cloudant 服务实例对应的包绑定的标准名称。
 
 4. 检查以确认先前创建的包绑定是否已使用 Cloudant {{site.data.keyword.Bluemix_notm}} 服务实例主机和凭证进行配置。
 
@@ -110,6 +111,7 @@ wsk package list
   {: screen}
 
 ### 在 {{site.data.keyword.Bluemix_notm}} 外部设置 Cloudant 数据库
+{: #openwhisk_catalog_cloudant_outside}
 
 如果不是在 {{site.data.keyword.Bluemix_notm}} 中使用 {{site.data.keyword.openwhisk_short}}，或者如果要在 {{site.data.keyword.Bluemix_notm}} 外部设置 Cloudant 数据库，那么必须为您的 Cloudant 帐户手动创建包绑定。您需要 Cloudant 帐户主机名、用户名和密码。
 
@@ -123,7 +125,7 @@ wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p p
 2. 验证包绑定是否存在。
 
   ```
-wsk package list
+  wsk package list
   ```
   {: pre}
   ```
@@ -134,6 +136,7 @@ packages
 
 
 ### 侦听对 Cloudant 数据库的更改
+{: #openwhisk_catalog_cloudant_listen}
 
 可以使用 `changes` 订阅源来配置服务，以在每次对 Cloudant 数据库进行更改时都触发触发器。参数如下所示：
 
@@ -163,11 +166,11 @@ wsk activation poll
 
 4. 观察针对每次文档更改的 `myCloudantTrigger` 触发器的新激活。
 
-**注**：如果无法观察到新激活，请查看有关对 Cloudant 数据库执行读写操作的后续各部分。测试下面的读写步骤将帮助验证 Cloudant 凭证是否正确。
+**注**：如果无法观察到新激活，请查看有关对 Cloudant 数据库执行读写操作的后续各部分。测试以下读写步骤将帮助验证 Cloudant 凭证是否正确。
 
 现在，可以创建规则并将其关联到操作，以对文档更新做出反应。
 
-生成的事件的内容取决于创建触发器时 `includeDoc` 参数的值。如果设置为 true，那么触发的每个触发器事件都会包含修改后的 Cloudant 文档。例如，假设修改后的文档如下：
+生成的事件的内容取决于创建触发器时 `includeDoc` 参数的值。如果参数设置为 true，那么触发的每个触发器事件都会包含修改后的 Cloudant 文档。例如，假设修改后的文档如下：
 
   ```
   {
@@ -202,6 +205,7 @@ wsk activation poll
 
 
 ### 写入 Cloudant 数据库
+{: #openwhisk_catalog_cloudant_write}
 
 可以使用操作将文档存储在名为 `testdb` 的 Cloudant 数据库中。确保此数据库在 Cloudant 帐户中存在。
 
@@ -227,6 +231,7 @@ wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbnam
 
 
 ### 从 Cloudant 数据库进行读取
+{: #openwhisk_catalog_cloudant_read}
 
 可以使用操作从名为 `testdb` 的 Cloudant 数据库中访存文档。确保此数据库在 Cloudant 帐户中存在。
 
@@ -260,6 +265,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 
 
 ### 定期触发触发器事件
+{: #openwhisk_catalog_alarm_fire}
 
 `/whisk.system/alarms/alarm` 订阅源将警报服务配置为按指定的频率触发触发器事件。参数如下所示：
 
@@ -274,7 +280,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 
 - `maxTriggers`：达到此限制时，停止触发触发器。缺省值为 1000。您可以将其设置为最大值 10,000。如果您尝试设置超过 10,000，那么会拒绝该请求。
 
-下面是通过触发器事件中的 `name` 和 `place` 值创建每 20 秒将触发一次的触发器的示例。
+以下是通过触发器事件中的 `name` 和 `place` 值创建每 20 秒将触发一次的触发器的示例。
 
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
@@ -287,28 +293,30 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 ## 使用 Weather 包
 {: #openwhisk_catalog_weather}
 
-通过 `/whisk.system/weather` 包，可以方便地调用 IBM Weather Insights API。
+通过 `/whisk.system/weather` 包，可以方便地调用 Weather Company Data for IBM Bluemix API。
 
 此包中包含以下操作。
 
 | 实体 | 类型 | 参数 | 描述 |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | 包 | apiKey | 来自 IBM Weather Insights API 的服务  |
-| `/whisk.system/weather/forecast` | 操作 | apiKey、latitude、longitude、timePeriod | 指定时间段的预报|
+| `/whisk.system/weather` | 包 | username 和 password | 来自 Weather Company Data for IBM Bluemix API 的服务  |
+| `/whisk.system/weather/forecast` | 操作 | latitude、longitude、timePeriod | 指定时间段的预报|
 
-建议使用 `apiKey` 值创建包绑定，但这并不是必需的。这样就无需在每次调用包中的操作时指定密钥。
+建议使用 `username` 和 `password` 值创建包绑定。这样就无需在每次调用包中的操作时指定这些凭证。
 
 ### 获取某个位置的天气预报
+{: #openwhisk_catalog_weather_forecast}
 
 `/whisk.system/weather/forecast` 操作通过从 The Weather Company 调用 API，返回某个位置的天气预报。参数如下所示：
 
-- `apiKey`：The Weather Company 的 API 密钥，此密钥有权调用天气预报 API。
+- `username`：Weather Company Data for IBM Bluemix 的用户名，此用户名有权调用预测 API。
+- `password`：Weather Company Data for IBM Bluemix 的密码，此密码有权调用预测 API。
 - `latitude`：位置的纬度坐标。
 - `longitude`：位置的经度坐标。
 - `timeperiod`：预报的时间段。有效选项为 '10day' -（缺省值）返回每日 10 天预报，'24hour' - 返回每小时 2 天预报，'current' - 返回当前天气条件，'timeseries' - 返回当前观察和长达过去 24 小时（从当前日期和时间）的观察。 
 
 
-下面是创建包绑定并获取 10 天天气预报的示例。
+以下是创建包绑定并获取 10 天天气预报的示例。
 
 1. 使用 API 密钥创建包绑定。
 
@@ -364,15 +372,18 @@ wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7'
 | `/whisk.system/watson/speechToText` | 操作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 将音频转换为文本 |
 | `/whisk.system/watson/textToSpeech` | 操作 | payload、voice、accept、encoding、username、password | 将文本转换为音频 |
 
-建议使用 `username` 和 `password` 值创建包绑定，但这并不是必需的。这样就无需在每次调用包中的操作时指定这些凭证。
+建议使用 `username` 和 `password` 值创建包绑定。这样就无需在每次调用包中的操作时指定这些凭证。
+
+
 
 ### 翻译文本
+{: #openwhisk_catalog_watson_translate}
 
 `/whisk.system/watson/translate` 操作将文本从一种语言翻译为另一种语言。参数如下所示：
 
 - `username`：Watson API 用户名。
 - `password`：Watson API 密码。
-- `translateParam`：要翻译的输入参数。例如，如果 `translateParam=payload`，那么将翻译传递给该操作的 `payload` 参数的值。
+- `translateParam`：指示要翻译文本的输入参数。例如，如果 `translateParam=payload`，那么将翻译传递给该操作的 `payload` 参数的值。
 - `translateFrom`：源语言的两位数代码。
 - `translateTo`：目标语言的两位数代码。
 
@@ -401,6 +412,7 @@ wsk action invoke myWatson/translate --blocking --result --param payload 'Blue s
 
 
 ### 识别某些文本的语言
+{: #openwhisk_catalog_watson_identifylang}
 
 `/whisk.system/watson/languageId` 操作可识别某些文本的语言。参数如下所示：
 
@@ -408,7 +420,7 @@ wsk action invoke myWatson/translate --blocking --result --param payload 'Blue s
 - `password`：Watson API 密码。
 - `payload`：要识别的文本。
 
-下面是创建包绑定并识别某些文本的语言的示例。
+以下是创建包绑定并识别某些文本的语言的示例。
 
 1. 使用 Watson 凭证创建包绑定。
 
@@ -434,6 +446,7 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
 
 
 ### 将某些文本转换为语音
+{: #openwhisk_catalog_watson_texttospeech}
 
 `/whisk.system/watson/textToSpeech` 操作可将某些文本转换为音频语音。参数如下所示：
 
@@ -444,7 +457,7 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
 - `accept`：语音文件的格式。
 - `encoding`：语音二进制数据的编码。
 
-下面是创建包绑定并将某些文本转换为语音的示例。
+以下是创建包绑定并将某些文本转换为语音的示例。
 
 1. 使用 Watson 凭证创建包绑定。
 
@@ -468,6 +481,7 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
 
 
 ### 将语音转换为文本
+{: #openwhisk_catalog_watson_speechtotext}
 
 `/whisk.system/watson/speechToText` 操作可将音频语音转换为文本。参数如下所示：
 
@@ -489,7 +503,7 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
 - `word_confidence`：指示是否针对每一个字返回 0 到 1 范围内的置信度测量。
 - `X-Watson-Learning-Opt-Out`：指示是否针对调用选择退出数据收集。
  
-下面是创建包绑定并将语音转换为文本的示例。
+以下是创建包绑定并将语音转换为文本的示例。
 
 1. 使用 Watson 凭证创建包绑定。
 
@@ -524,9 +538,10 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 | `/whisk.system/slack` | 包 | url、channel 和 username | 与 Slack API 进行交互 |
 | `/whisk.system/slack/post` | 操作 | text、url、channel 和 username | 将消息发布到 Slack 通道 |
 
-建议使用 `username`、`url` 和“channel”值创建包绑定，但这并不是必需的。通过绑定，就无需在每次调用包中的操作时指定这些值。
+建议使用 `username`、`url` 和 `channel` 值创建包绑定。通过绑定，就无需在每次调用包中的操作时指定这些值。
 
 ### 将消息发布到 Slack 通道
+{: #openwhisk_catalog_slack_post}
 
 `/whisk.system/slack/post` 操作可将消息发布到指定的 Slack 通道。参数如下所示：
 
@@ -539,7 +554,7 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 
 1. 为您的团队配置 Slack [入局 Webhook](https://api.slack.com/incoming-webhooks)。
 
-  配置 Slack 后，您应该会获得类似于以下内容的 Webhook URL：`https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`。下一步中将需要此 URL。
+  配置 Slack 后，您会获得类似于以下内容的 Webhook URL：`https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`。下一步中将需要此 URL。
 
 2. 使用 Slack 凭证、要发布到的通道和执行发布的用户名来创建包绑定。
 
@@ -568,9 +583,10 @@ wsk action invoke mySlack/post --blocking --result --param text 'Hello from Open
 | `/whisk.system/github` | 包 | username、repository 和 accessToken | 与 GitHub API 进行交互 |
 | `/whisk.system/github/webhook` | 订阅源 | events、username、repository 和 accessToken | 对 GitHub 活动触发触发器事件 |
 
-建议使用 `username`、`repository` 和 `accessToken` 值创建包绑定，但这并不是必需的。通过绑定，就无需在每次使用包中的订阅源时指定这些值。
+建议使用 `username`、`repository` 和 `accessToken` 值创建包绑定。通过绑定，就无需在每次使用包中的订阅源时指定这些值。
 
 ### 使用 GitHub 活动触发触发器事件
+{: #openwhisk_catalog_github_fire}
 
 `/whisk.system/github/webhook` 订阅源将服务配置为当指定的 GitHub 存储库中发生活动时触发触发器。参数如下所示：
 
@@ -599,9 +615,9 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
   ```
   {: pre}
 
-通过 `git push` 对 Github 存储库作出的承诺将导致触发器由 Webhook 触发。如果存在与触发器匹配的规则，那么将会调用相关联的操作。
-该操作会接收 Github Webhook 有效内容作为输入参数。每一个 Github Webhook 事件都具有相似的 JSON 模式，但是其事件类型所确定的有效内容对象却是唯一的。
-有关更多有效内容的内容信息，请参阅 [Github 事件和有效内容](https://developer.github.com/v3/activity/events/types/) API 文档。
+使用 `git push` 对 Github 存储库作出的承诺将导致触发器由 Webhook 触发。如果存在与触发器匹配的规则，那么将会调用相关联的操作。
+该操作会接收 GitHub Webhook 有效内容作为输入参数。每一个 GitHub Webhook 事件都具有相似的 JSON 模式，但是却是事件类型所确定的唯一有效内容对象。
+有关更多有效内容的内容信息，请参阅 [GitHub 事件和有效内容](https://developer.github.com/v3/activity/events/types/) API 文档。
 
 
 ## 使用 Push 包
@@ -609,18 +625,19 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 
 `/whisk.system/pushnotifications` 包允许您使用推送服务。 
 
-此包中包含以下订阅源：
+此包中包含以下操作和订阅源：
 
 | 实体 | 类型 | 参数 | 描述 |
 | --- | --- | --- | --- |
 | `/whisk.system/pushnotifications` | 包 | appId、appSecret  | 使用推送服务 |
-| `/whisk.system/pushnotifications/sendMessage` | 操作 | text、url、deviceIds、platforms、tagNames、apnsBadge、apnsCategory、apnsActionKeyTitle、apnsSound、apnsPayload、apnsType、gcmCollapseKey、gcmDelayWhileIdle、gcmPayload、gcmPriority、gcmSound、gcmTimeToLive | 将推送通知发送到指定设备 |
-| `/whisk.system/pushnotifications/webhook` | 订阅源 | 事件 | 在推送服务的设备活动（设备（取消）注册/（取消）预订）上触发触发器事件 |
-即使此操作并非必要，也建议使用 `appId` 和 `appSecret` 值创建包绑定。这样就无需在每次调用包中的操作时指定这些凭证。
+| `/whisk.system/pushnotifications/sendMessage` | 操作 | text、url、deviceIds、platforms、tagNames、apnsBadge、apnsCategory、apnsActionKeyTitle、apnsSound、apnsPayload、apnsType、gcmCollapseKey、gcmDelayWhileIdle、gcmPayload、gcmPriority、gcmSound、gcmTimeToLive | 将推送通知发送到一个或多个指定设备 |
+| `/whisk.system/pushnotifications/webhook` | 订阅源 | 事件 | 在推送服务的设备活动（设备注册、取消注册、预订或取消预订）上触发触发器事件 |
+建议使用 `appId` 和 `appSecret` 值创建包绑定。这样就无需在每次调用包中的操作时指定这些凭证。
 
-### 设置 IBM Push Notifications 包
+### 创建 Push 包绑定
+{: #openwhisk_catalog_pushnotifications_create}
 
-创建 IBM Push Notifications 包时，您必须提供以下参数：
+创建 Push Notification 包绑定时，必须指定以下参数：
 
 -  `appId`：Bluemix 应用程序 GUID。
 -  `appSecret`：Bluemix 推送通知服务 appSecret。
@@ -631,7 +648,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 
 2. 初始化推送通知服务，并将该服务绑定到 Bluemix 应用程序
 
-3. 配置 [IBM Push Notification 应用程序](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)。
+3. 配置 [Push Notification 应用程序](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)。
 
   确保记住您所创建的 Bluemix 应用程序的 `App GUID` 和 `App Secret`。
 
@@ -657,22 +674,23 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
   {: screen}
 
 ### 发送推送通知
+{: #openwhisk_catalog_pushnotifications_send}
 
 `/whisk.system/pushnotifications/sendMessage` 操作会将推送通知发送到已注册的设备。参数如下所示：
-- `text` - 要向用户显示的通知消息。例如：-p text "Hi ,{{site.data.keyword.openwhisk}} send a notification"。
-- `url`：可与警报一起发送的可选 URL。例如：-p url "https:\\www.w3.ibm.com"。
-- `gcmPayload` - 作为通知消息一部分发送的定制 JSON 有效内容。例如：-p gcmPayload "{"hi":"hello"}"
-- `gcmSound` - 通知到达设备时，要尝试播放的声音文件（在设备上）。
-- `gcmCollapseKey` - 此参数可识别一组消息
-- `gcmDelayWhileIdle` - 当此参数设置为 true 时，表示在设备变为活动之前，不应该发送消息。
-- `gcmPriority` - 设置消息的优先级。
-- `gcmTimeToLive` - 此参数指定当设备脱机时，应该在 GCM 存储器中保留消息的时间长度（秒）。
-- `apnsBadge` - 显示为应用程序图标的角标的数字。
-- `apnsCategory` -  要用于交互式推送通知的类别标识。
-- `apnsIosActionKey` - Action 键的标题。
-- `apnsPayload` - 作为通知消息一部分发送的定制 JSON 有效内容。
-- `apnsType` - [“DEFAULT”、“MIXED”、“SILENT”]。
-- `apnsSound` - 应用程序捆绑软件中声音文件的名称。此文件的声音播放为警报。
+- `text`：要向用户显示的通知消息。例如：`-p text "Hi ,OpenWhisk send a notification"`。
+- `url`：可与警报一起发送的可选 URL。例如：`-p url "https:\\www.w3.ibm.com"`。
+- `gcmPayload`：作为通知消息一部分发送的定制 JSON 有效内容。例如：`-p gcmPayload "{"hi":"hello"}"`
+- `gcmSound`：通知到达设备时，要尝试播放的声音文件（在设备上）。
+- `gcmCollapseKey`：此参数可识别一组消息
+- `gcmDelayWhileIdle`：当此参数设置为 true 时，表示在设备变为活动之前，不会发送消息。
+- `gcmPriority`：设置消息的优先级。
+- `gcmTimeToLive`：此参数指定当设备脱机时，会在 GCM 存储器中保留消息的时间长度（秒）。
+- `apnsBadge`：显示为应用程序图标的角标的数字。
+- `apnsCategory`：要用于交互式推送通知的类别标识。
+- `apnsIosActionKey`：Action 键的标题。
+- `apnsPayload`：作为通知消息一部分发送的定制 JSON 有效内容。
+- `apnsType`：[“DEFAULT”、“MIXED”、“SILENT”]。
+- `apnsSound`：应用程序捆绑软件中声音文件的名称。此文件的声音播放为警报。
 
 以下是 pushnotification 包中发送推送通知的示例。
 
@@ -694,26 +712,27 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
   ```
   {: screen}
 
-### 在 IBM Push Notifications 服务活动上触发触发器事件
+### 在 Push 活动上触发触发器事件
+{: #openwhisk_catalog_pushnotifications_fire}
 
-`/whisk.system/pushnotifications/webhook` 可配置 IBM Push Notifications 服务，当在指定的应用程序中存在设备活动（如设备注册/取消注册或预订/取消预订）时，触发触发器。
+`/whisk.system/pushnotifications/webhook` 可配置 Push 服务，当在指定的应用程序中存在设备活动（如设备注册/取消注册或预订/取消预订）时，触发触发器。
 
 参数如下所示：
 
-- `appId：`Bluemix 推送通知服务 appSecret。
-- `appSecret：`Bluemix 应用程序 GUID。
+- `appId：`Bluemix 应用程序 GUID。
+- `appSecret：`Bluemix 推送通知服务 appSecret。
 - `events：`受支持的事件为 `onDeviceRegister`、`onDeviceUnregister`、`onDeviceUpdate`、`onSubscribe`、`onUnsubscribe`。要在发生所有事件时都获得通知，请使用通配符 `*`。
 
-下面是创建触发器的示例，此触发器将在每次向 IBM Push Notifications 服务应用程序注册新设备时触发。
+以下是创建触发器的示例，此触发器将在每次向 Push Notifications 服务应用程序注册新设备时触发。
 
-1. 使用 appId 和 appSecret，创建针对 IBM Push Notifications 服务配置的包绑定。
+1. 使用 appId 和 appSecret，创建针对 Push Notifications 服务配置的包绑定。
 
   ```
   wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
   ```
   {: pre}
 
-2. 使用 `myPush/webhook` 订阅源为 IBM Push Notifications 服务 `onDeviceRegister` 事件类型创建触发器。
+2. 使用 `myPush/webhook` 订阅源为 Push Notifications 服务 `onDeviceRegister` 事件类型创建触发器。
 
   ```
   wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister
