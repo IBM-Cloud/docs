@@ -4,7 +4,7 @@
 # Creating {{site.data.keyword.blockstorageshort}} volumes
 {: #creating-block-storage-volume}
 
-Last updated: 26 August 2016
+Last updated: 02 September 2016
 {: .last-updated}
 
 To create a volume, follow these steps:
