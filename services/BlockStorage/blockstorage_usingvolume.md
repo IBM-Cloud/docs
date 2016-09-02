@@ -9,7 +9,7 @@ To use volumes, follow these steps:
 
 ## Deleting a volume {: #deleting-volume}
 
-1.	Open the {{site.data.keyword.blockstorageshort}} service.
+1.	In the Bluemix UI, select **Console > Storage > Block Storage**.
 2.	Select the volume that you want to delete.
 3.	Click **Delete**.
 4.	Confirm the deletion of this volume.
@@ -19,7 +19,7 @@ You cannot delete a volume that is attached to a virtual server. You must detach
 ## Extending a volume {: #extending-volume}
 You can increase the volume in size to up to ten times the original size through the **Extend** action. You cannot reduce the size of a volume.
 
-1.	Open the {{site.data.keyword.blockstorageshort}} service.
+1.	In the Bluemix UI, select **Console > Storage > Block Storage**.
 2.	Select the volume to be extended.
 3.	Click **Extend**.
 4.	Select the new size of the volume. Provide the new total size of the volume.
@@ -32,7 +32,7 @@ Volumes are attached and detached from virtual servers as devices with a specifi
 
 To attach a volume, follow these steps: 
 
-1.	Open the {{site.data.keyword.blockstorageshort}} service.
+1.	In the Bluemix UI, select **Console > Storage > Block Storage**.
 2.	Select a volume from the list of available volumes.
 3.	Click **Attach**.
 4.	In the Attach dialog, select an instance of a virtual server from the drop-down list. 
@@ -44,7 +44,7 @@ The virtual server can now use the device to persist data.
 
 To detach a volume, follow these steps: 
 
-1.	Open the {{site.data.keyword.blockstorageshort}} service.
+1.	In the Bluemix UI, select **Console > Storage > Block Storage**.
 2.	Select a volume from the list of attached volumes. 
 3.	Click **Detach**.
 4.	Confirm the detachment in the dialog. 

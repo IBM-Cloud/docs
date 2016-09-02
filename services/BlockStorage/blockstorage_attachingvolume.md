@@ -12,7 +12,7 @@ Volumes are attached and detached from virtual servers as devices with a specifi
 
 To attach a volume, follow these steps:
 
-1.	Open the {{site.data.keyword.blockstorageshort}} service.
+1.	In the Bluemix UI, select **Console > Storage > Block Storage**.
 2.	Select a volume from the list of available volumes.
 3.	Click **Attach**.
 4.	In the Attach dialog, select an instance of a virtual server from the drop-down list.
