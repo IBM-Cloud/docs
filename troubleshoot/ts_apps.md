@@ -1002,18 +1002,18 @@ If you don't see the run bar in the Eclipse Orion {{site.data.keyword.webide}}, 
 If you configured your GitHub project to create work-item links when you push commits and the links aren't working as expected, follow these steps to find the problem:
 
 1. In your GitHub repo, click **Settings**.
-   ![GitHub settings link](images/githubSettings1_small.png)
+   ![GitHub settings link](images/github_settings.png)
 
 2. Click **Webhooks & services**.
-   ![GitHub web hooks and services link](images/githubHooks1_small.png)
+   ![GitHub web hooks and services link](images/github_webhook.png)
 
 3. To view the message, hover over the {{site.data.keyword.jazzhub}} status icon.
-   ![Error message on service hook](images/troubleshoothook1_small.png)
+   ![Error message on service hook](images/github_error.png)
 
 4. Resolve the error according to the GitHub message.
 
 5. To verify that the fix worked, commit and push another change, or go to the service page for {{site.data.keyword.jazzhub_short}} and click **Test service**.
-   ![GitHub Test service button](images/githubTestService_small.png)
+   ![GitHub Test service button](images/github_test.png)
 
 6. Verify that there are no errors by checking the status icon again.
    ![Status icon without errors](images/githubResolved_small.png)
