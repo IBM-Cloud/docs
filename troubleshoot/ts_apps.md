@@ -302,41 +302,6 @@ Use one of the following methods to specify your disk quota. The maximum disk qu
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-	
-	
-## Cannot add Git repository
-{: #ts_cannot_addgit}
-
-After you create an app on the Dashboard, you click ADD GIT to create a Git repository, but you cannot proceed.
-
-
-
-When you click **ADD GIT**, a window opens and one of these issues occur:
-{: tsSymptoms} 
-
-  * The window hangs with a blank screen.
-  * A message states that a problem exists with 3rd party cookies.
-
-
-
-Your browser might be configured to prevent a cookie from being set. That cookie must be set from the IBM® Bluemix DevOps Services site in the hub.jazz.net internet domain from within the context of the {{site.data.keyword.Bluemix_notm}} console.
-{: tsCauses}  
-
- 
-
-You can fix this problem in one of the following ways:
-{: tsResolve}
-
-  * Follow the instructions that are in the window that opens from the {{site.data.keyword.Bluemix_notm}} console. Click the button. Another browser window opens temporarily. In that window, DevOps Services sets the authentication cookie.
-  * In another browser tab, go to https://hub.jazz.net and log in. Return to the {{site.data.keyword.Bluemix_notm}} console and refresh the page. Click **ADD GIT** again.
-  * Change your browser settings to enable 3rd party cookies and click ADD GIT again. For details about configuring the settings, see the documentation for your browser:
-    * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-If those workarounds do not fix the problem, send an email to idslogin@jazz.net.
-
-
 
 ## Android apps can't receive {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
