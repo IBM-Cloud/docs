@@ -1,4 +1,4 @@
----
+﻿---
 
 copyright:
   years: 2015, 2016
@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 入門
+# IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 概説
 {: #getting_started}
 
 *最終更新日: 2016 年 6 月 24 日*

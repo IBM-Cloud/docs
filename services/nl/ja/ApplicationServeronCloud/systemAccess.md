@@ -11,11 +11,13 @@ copyright:
 
 #システム・アクセス
 {: #system_access}
+最終更新日: 2016 年 8 月 17 日
+{: .last-updated}
+
+
 以下のトピックには、システムにアクセスしたり、システムへのアクセスをセットアップするためのさまざまな方法とともに、サービス・インスタンスの作成および管理の方法が含まれています。
 {: shortdesc}
 
-*最終更新日: 2016 年 6 月 8 日*
-{: .last-updated}
 
 ## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} における REST API の使用法
 {: #restapi_usage}
@@ -25,19 +27,19 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} のインス
 * {{site.data.keyword.Bluemix_notm}} UI の {{site.data.keyword.Bluemix_notm}} カタログおよびサービス・ダッシュボードから。
 * RESTful API を使用したアプリケーションまたはスクリプトの作成から。
 
-Swagger 2.0 準拠 REST API を使用して、ポータルおよびダッシュボードで提供されるものと同じ機能にアクセスできます。サポートされる REST API とリソースについて詳しくは、WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API の資料](https://new-console.{DomainName}/apidocs/231){: new_window}を参照してください。
+Swagger 2.0 準拠 REST API を使用して、ポータルおよびダッシュボードで提供されるものと同じ機能にアクセスできます。サポートされる REST API とリソースについて詳しくは、WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API の資料](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}を参照してください。REST API の使用に役立つサンプル・コードについては、{{site.data.keyword.Bluemix_notm}} [REST API のサンプル](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}の Git でホストされた WebSphere Application Server をダウンロードしてください。
 
 **注:** サービス・インスタンスを作成した後、作成された T シャツ・サイズによっては、サービスがすぐに使用可能状態にならないことがあります。戻された JSON の **Status** フィールドを照会してサービス・インスタンスの現在の状態を判別することをお勧めします。
 
-**注:** [REST API の資料](https://new-console.{DomainName}/apidocs/231){: new_window}のサンプル・コードで参照されている API 基本 URL は米国南部地域を指しています。他の地域を使用する場合は、アプリケーションで適切な API 基本 URL を参照するようにしてください。
+**注: [REST API のサンプル](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}で参照されている ****apiEndpoint** URL は、米国南部地域を指しています。他の地域を使用する場合は、アプリケーションで適切な **apiEndpoint** を参照するようにしてください。
 
-*表 1. REST API 実装の API 基本 URL*
+*表 1. Rest API 実装の API エンドポイント URL*
 
-| **地域名** | **地理的位置** | **地域接頭部** | **API 基本 URL** |       
+| **地域名** | **地理的位置** | **地域接頭部** | **API エンドポイント URL** |       
 |:-------------:|:----------:|:--------------:|:-------------:|
-| 米国南部地域 | ダラス、テキサス、米国 | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
-| 英国地域 | ロンドン、イングランド | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
-| シドニー地域 | シドニー、オーストラリア | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+| 米国南部地域 | ダラス、テキサス、米国 | ng | https://wasaas-broker.ng.bluemix.net/wasaas-broker/api  |
+| 英国地域 | ロンドン、イングランド | eu-gb | https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api  |
+| シドニー地域 | シドニー、オーストラリア | au-syd | https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api  |
 
 
 

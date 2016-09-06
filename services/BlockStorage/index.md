@@ -2,13 +2,14 @@
 
 # Getting started with {{site.data.keyword.blockstorageshort}} (Beta)
 
-Last updated: 29 July 2016
+Last updated: 02 September 2016
 {: .last-updated}
 
 {{site.data.keyword.blockstoragefull}} provides access to block level storage for transaction-intensive workloads and runtimes that need persistent storage. You can use the {{site.data.keyword.blockstorageshort}} service to manage volume lifecycles, attach volumes to your IBM Virtual Servers, and create snapshots of your block storage volumes.
 
 Before you begin, review the following information.
 
+* Ensure that you created an instance of the {{site.data.keyword.blockstorageshort}} service in your space. For more information on how to add a new service instance, see [Requesting a new service instance](../../services/reqnsi.html#req_instance).
 * The {{site.data.keyword.blockstorageshort}} service is supported only in an unbound context. 
 * You must have IBM {{site.data.keyword.virtualmachinesshort}} created to attach block storage volumes. To learn more about using block storage volumes with IBM {{site.data.keyword.virtualmachinesshort}}, see [Block storage volumes and IBM Virtual Servers](../../virtualmachines/vm_create.html#storage_BS). 
 
@@ -16,9 +17,9 @@ Complete these steps to get started with {{site.data.keyword.blockstorageshort}}
 
 1. Create a volume.
    
-   a. Open the {{site.data.keyword.blockstorageshort}} service.
+   a. In the Bluemix UI, select **Console > Storage > Block Storage**.
 
-   b. Click **Create** to start the Create Volume dialog.
+   b. On the Manage page, click **Create volume** to start the Create Volume dialog.
 
    c.	Provide a name. 
    
@@ -36,8 +37,8 @@ Complete these steps to get started with {{site.data.keyword.blockstorageshort}}
 
 2. Attach a volume to a virtual server.
 
-   a.	Open the {{site.data.keyword.blockstorageshort}} service.
-   
+   a. In the Bluemix UI, select **Console > Storage > Block Storage**.
+
    b. Select a volume from the list of available volumes.
    
    c.	Click **Attach**.

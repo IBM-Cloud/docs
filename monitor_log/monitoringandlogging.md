@@ -14,7 +14,7 @@ copyright:
 #Monitoring and logging
 {: #monitoringandlogging}
 
-*Last updated: 1 July 2016*
+Last updated: 2 September 2016
 {: .last-updated}
 
 By monitoring your apps and reviewing logs, you can follow application execution and data flow to get a better understanding of your deployment. In addition, you can reduce the time and effort that is required to locate any issues and repair them.
@@ -49,6 +49,11 @@ To monitor {{site.data.keyword.Bluemix_notm}} apps, use one of the following met
 {: #logging_for_bluemix_apps}
 
 Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. When you encounter errors in any stage from deployment to runtime, you can check the logs for clues that might help solve your issue.
+
+###Log Retention
+{: #log_retention}
+
+* In Bluemix Cloud Foundry apps, log data is stored for 30 days by default.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -134,7 +139,7 @@ You can view the logs for your Cloud Foundry apps in three places:
 
 To see the deployment or runtime logs, complete the following steps:
 1. Log in to {{site.data.keyword.Bluemix_notm}}, and then click the tile for your app on the Dashboard. The app details page is displayed.
-2. In the left navigation bar, click **Logs**.
+2. In the navigation bar, click **Logs**.
 
 In the **Logs** console, you can view the recent logs for your app or tail logs in real time. In addition, you can filter logs by log type and channel.
 
@@ -233,11 +238,11 @@ To stream logs from your app and the system to an external log host, complete th
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```
-	 **service_name**
+	 &lt;service_name&gt;
 	 
 	 The name for the user-provided service instance.
 	 
-	 **logging_endpoint**
+	 &lt;logging_endpoint&gt;
 	 
 	 The logging endpoint that {{site.data.keyword.Bluemix_notm}} sends logs to. Refer to the following table to replace *logging_endpoint* with your value:
 	 
@@ -272,13 +277,13 @@ To stream logs from your app and the system to an external log host, complete th
 	 Use the following command to bind the service instance to your app: 
 	
 	 ```
-	 cf bind-service appname <service_name>
+	 cf bind-service <appname> <service_name>
 	 ```
-	 **appname**
+	 &lt;appname&gt;
 	 
 	 The name of your app.
 	 
-	 **service_name**
+	 &lt;service_name&gt;
 	 
 	 The name for the user-provided service instance.
 	 
@@ -350,7 +355,7 @@ In this example, a developer named Jane creates a virtual server by using IBM Vi
 		
   2. Jane configures the Splunk settings to accept the syslog drain from {{site.data.keyword.Bluemix_notm}}. She must create a data input for the syslog drain.
 
-     a. From the left side of the Splunk web interface, Jane clicks **Data > Data inputs**. A list of input types that Splunk supports is displayed. 
+     a. From the Splunk web interface, Jane clicks **Data > Data inputs**. A list of input types that Splunk supports is displayed. 
 	 
      b. She selects **TCP**, because the syslog drain uses the TCP protocol.
 	 
@@ -362,7 +367,7 @@ In this example, a developer named Jane creates a virtual server by using IBM Vi
 	 
      f. In the **Index** field, Jane clicks **Create a new index**. She names the new index "bluemix", and then clicks **Save**.
 	 
-     g. Finally, in the **Review** window, Jane confirms that the setting is right and then clicks **Submit** to enable this data input.
+     g. Finally, in the **Review** window, Jane confirms that the setting is correct and then clicks **Submit** to enable this data input.
 
   3. In {{site.data.keyword.Bluemix_notm}}, Jane creates a syslog drain service and binds the service to an app.
 

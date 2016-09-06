@@ -11,11 +11,13 @@ copyright:
 
 #Systemzugriff
 {: #system_access}
+Letzte Aktualisierung: 17. August 2016
+{: .last-updated}
+
+
 In diesen Abschnitten werden verschiedene Methoden der Erstellung und Verwaltung einer Serviceinstanz sowie verschiedene Möglichkeiten des Zugriffs und der Einrichtung des Zugriffs auf Ihre Systeme beschrieben.
 {: shortdesc}
 
-*Letzte Aktualisierung: 08. Juni 2016*
-{: .last-updated}
 
 ## REST-API-Nutzung in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #restapi_usage}
@@ -25,19 +27,19 @@ In WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} werden In
 * Über das {{site.data.keyword.Bluemix_notm}}-Katalog- und -Service-Dashboard in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle.
 * Durch die Erstellung einer Anwendung oder eines Scripts, die bzw. das die REST-konformen APIs nutzt.
 
-Durch die Verwendung der mit Swagger 2.0 kompatiblen REST-APIs können Clients auf dieselben Funktionen zugreifen, die auch über das Portal und das Dashboard verfügbar sind. Weitere Informationen zu den unterstützten REST-APIs und Ressourcen finden Sie in der [REST-API-Dokumentation](https://new-console.{DomainName}/apidocs/231){: new_window} von WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}.
+Durch die Verwendung der mit Swagger 2.0 kompatiblen REST-APIs können Clients auf dieselben Funktionen zugreifen, die auch über das Portal und das Dashboard verfügbar sind. Weitere Informationen zu den unterstützten REST-APIs und Ressourcen finden Sie in der [REST-API-Dokumentation](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window} von WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}.  Für Beispielcode, der die Verwendung unserer REST-APIs unterstützt, laden Sie die mittels Git gehosteten [REST-API-Beispiele](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} für WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} herunter.
 
 **Hinweis:** Abhängig von der erstellten T-Shirt-Größe ist der Service nach der Erstellung einer Serviceinstanz möglicherweise nicht sofort einsatzbereit. Es wird empfohlen, das Feld **Status** der zurückgegebenen JSON-Daten abzufragen, um den aktuellen Status der Serviceinstanz festzustellen.
 
-**Anmerkung:** Die im Beispielcode der [REST-API-Dokumentation](https://new-console.{DomainName}/apidocs/231){: new_window} referenzierte API-Basis-URL zeigt auf die Region 'USA - Süden'.  Bei der Arbeit mit anderen Regionen müssen Sie sicherstellen, dass Ihre Anwendung die enstprechende API-Basis-URL referenziert.
+**Anmerkung:** Die in den [REST-API-Beispielen](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} referenzierte **apiEndpoint**-URL zeigt auf die Region 'USA - Süden'.  Bei der Arbeit mit anderen Regionen müssen Sie sicherstellen, dass Ihre Anwendung die enstprechende **apiEndpoint**-URL referenziert.
 
-*Tabelle 1. API-Basis-URLs für Implementierung der REST-API*
+*Tabelle 1. API-Endpunkt-URLs für Implementierung der REST-API*
 
-| **Regionsname** | **Geografischer Standort** | **Regionspräfix** | **API-Basis-URL** |       
+| **Regionsname** | **Geografischer Standort** | **Regionspräfix** | **API-Endpunkt-URL** |       
 |:-------------:|:----------:|:--------------:|:-------------:|
-| Regeion 'USA - Süden' | Dallas, TX, US | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
-| Region 'Vereinigtes Königreich' | London, England | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
-| Region 'Sydney' | Sydney, Australia | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
+| Region 'USA - Süden' | Dallas, TX, US | ng | https://wasaas-broker.ng.bluemix.net/wasaas-broker/api  |
+| Region 'Vereinigtes Königreich' | London, England | eu-gb | https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api  |
+| Region 'Sydney' | Sydney, Australia | au-syd | https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api  |
 
 
 

@@ -302,41 +302,6 @@ Use one of the following methods to specify your disk quota. The maximum disk qu
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-	
-	
-## Cannot add Git repository
-{: #ts_cannot_addgit}
-
-After you create an app on the Dashboard, you click ADD GIT to create a Git repository, but you cannot proceed.
-
-
-
-When you click **ADD GIT**, a window opens and one of these issues occur:
-{: tsSymptoms} 
-
-  * The window hangs with a blank screen.
-  * A message states that a problem exists with 3rd party cookies.
-
-
-
-Your browser might be configured to prevent a cookie from being set. That cookie must be set from the IBM® Bluemix DevOps Services site in the hub.jazz.net internet domain from within the context of the {{site.data.keyword.Bluemix_notm}} console.
-{: tsCauses}  
-
- 
-
-You can fix this problem in one of the following ways:
-{: tsResolve}
-
-  * Follow the instructions that are in the window that opens from the {{site.data.keyword.Bluemix_notm}} console. Click the button. Another browser window opens temporarily. In that window, DevOps Services sets the authentication cookie.
-  * In another browser tab, go to https://hub.jazz.net and log in. Return to the {{site.data.keyword.Bluemix_notm}} console and refresh the page. Click **ADD GIT** again.
-  * Change your browser settings to enable 3rd party cookies and click ADD GIT again. For details about configuring the settings, see the documentation for your browser:
-    * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-If those workarounds do not fix the problem, send an email to idslogin@jazz.net.
-
-
 
 ## Android apps can't receive {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
@@ -1037,18 +1002,18 @@ If you don't see the run bar in the Eclipse Orion {{site.data.keyword.webide}}, 
 If you configured your GitHub project to create work-item links when you push commits and the links aren't working as expected, follow these steps to find the problem:
 
 1. In your GitHub repo, click **Settings**.
-   ![GitHub settings link](images/githubSettings1_small.png)
+   ![GitHub settings link](images/github_settings.png)
 
 2. Click **Webhooks & services**.
-   ![GitHub web hooks and services link](images/githubHooks1_small.png)
+   ![GitHub web hooks and services link](images/github_webhook.png)
 
 3. To view the message, hover over the {{site.data.keyword.jazzhub}} status icon.
-   ![Error message on service hook](images/troubleshoothook1_small.png)
+   ![Error message on service hook](images/github_error.png)
 
 4. Resolve the error according to the GitHub message.
 
 5. To verify that the fix worked, commit and push another change, or go to the service page for {{site.data.keyword.jazzhub_short}} and click **Test service**.
-   ![GitHub Test service button](images/githubTestService_small.png)
+   ![GitHub Test service button](images/github_test.png)
 
 6. Verify that there are no errors by checking the status icon again.
    ![Status icon without errors](images/githubResolved_small.png)
