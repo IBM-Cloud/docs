@@ -37,7 +37,7 @@ Complete these steps to get started with {{site.data.keyword.blockstorageshort}}
 
 2. Attach a volume to a virtual server.
 
-   a. In the Bluemix UI, select Console > Storage > Block Storage.
+   a. In the Bluemix UI, select **Console > Storage > Block Storage**.
 
    b. Select a volume from the list of available volumes.
    
