@@ -2,14 +2,12 @@
 
 
 # Using {{site.data.keyword.blockstorageshort}} snapshot {: #using-block-storage-snapshot} 
-Last updated: 02 September 2016
+Last updated: 07 September 2016
 {: .last-updated}
 
 To use snapshots, follow these steps:
 
 ## Creating a snapshot {: #creating-snapshot} 
-
-Before creating a snapshot, ensure you have enough space to save it. If there is not enough space, the snapshot might become corrupted.
 
 1.	In the Bluemix UI, select **Console > Storage > Block Storage**.
 2.	Click the Manage tab.

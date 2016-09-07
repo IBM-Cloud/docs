@@ -2,7 +2,7 @@
 
 # Using {{site.data.keyword.blockstorageshort}} volume 
 {: #using-block-storage-volume} 
-Last updated: 02 September 2016
+Last updated: 07 September 2016
 {: .last-updated}
 
 To use volumes, follow these steps:
@@ -14,7 +14,7 @@ To use volumes, follow these steps:
 3.	Click **Delete**.
 4.	Confirm the deletion of this volume.
 
-You cannot delete a volume that is attached to a virtual server. You must detach the volume first.
+You cannot delete a volume that is attached to a virtual server. You must detach the volume first. Deleting the volume makes the volume inaccessible for future use and the data in it is lost. Also, you cannot delete volumes that have associated snapshots.
 
 ## Extending a volume {: #extending-volume}
 You can increase the volume in size to up to ten times the original size through the **Extend** action. You cannot reduce the size of a volume.
@@ -25,7 +25,7 @@ You can increase the volume in size to up to ten times the original size through
 4.	Select the new size of the volume. Provide the new total size of the volume.
 5.	Click **Extend** to submit the information and close the dialog. 
 
-To be extended, a volume must be in **Available** state. 
+To be extended, a volume must be in **Available** state. After you extend the volume, you must notify the filesystem (such as ext4) that the disk has been extended by resizing the filesystem to the new size. 
 
 ## Attaching and detaching a volume to a virtual server {: #attaching-detaching-volume}
 Volumes are attached and detached from virtual servers as devices with a specific device name. For a virtual server to be able to persist data on a volume, you must attach the volume to the virtual server.
@@ -41,6 +41,8 @@ To attach a volume, follow these steps:
 
 The volume is listed in the table of attached volumes with the information about the virtual server instance. 
 The virtual server can now use the device to persist data. 
+
+When you are ready to detach a volume, you must prepare the virtual server for detachment. For example, stop any applications that are using the filesystem. Also, unmount the device from within the virtual server instance.
 
 To detach a volume, follow these steps: 
 
