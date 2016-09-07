@@ -266,6 +266,7 @@ Here is a full example of the use of versioning:
 		$ swift list container_two
 		$
 ```
+
 ### Scheduling object deletion {: #schedule-object-deletion}
 
 You can set your objects to expire in a given amount of time. In other words, you can schedule the deletion of your objects. You can do this by making use of either of the `X-Delete-At` or `X-Delete-After` headers. The `X-Delete-At` header takes an integer number representing the epoch time at which to delete the object. The `X-Delete_After` header takes an integer number representing the number of seconds after which the object will be deleted.
