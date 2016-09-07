@@ -76,7 +76,7 @@ The process of provisioning your server starts. This process takes about 10 minu
 
 
 <!--This console runs inside the container.--> With the console you can manage your mobile apps, adapters and mobile devices, use your server as a mobile backend, send push notifications, and do more.
-
+<!-- Commented out until release of the service next week
 ##  Adding Mobile Analytics server
 {: #adding_analytics_server_prof}
 
@@ -97,7 +97,7 @@ The process of provisioning starts. This process takes about 10 minutes, and a m
 * Single sign-on is enabled between the {{site.data.keyword.mfserver_short_notm}} and the Mobile Analytics server. Mobile Analytics server is configured with the same LTPA keys and user credentials as the {{site.data.keyword.mfserver_short_notm}} server. You can use the same `username` and `password` to log in to the Mobile Analytics console as used to log in to the {{site.data.keyword.mfp_oc_short_notm}}.
 
 **Note:** The Mobile Analytics server is removed when you delete the {{site.data.keyword.mobilefoundation_short}} service instance or when you attempt to re-create the {{site.data.keyword.mfserver_short_notm}}.
-
+-->
 ## Re-creating the {{site.data.keyword.mobilefirst}} server
 {: #recreate_mobilefoundation_p2}
 

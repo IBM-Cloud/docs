@@ -33,7 +33,7 @@ The process of provisioning starts. This process takes about 10 minutes, and a m
 
 
 <!--This console runs inside the container.--> With the console you can manage your mobile apps and mobile devices, use your server as a mobile backend, send push notifications, and do more.
-
+<!-- Commented out until release of the service next week
 ##  Adding Mobile Analytics server
 {: #adding_analytics_server_dev}
 
@@ -49,7 +49,7 @@ The process of provisioning starts. This process takes about 10 minutes, and a m
 
 **Note:** The Mobile Analytics server is removed when you delete the {{site.data.keyword.mobilefoundation_short}} service instance or when you attempt to re-create the {{site.data.keyword.mfserver_short_notm}}.
 
-
+-->
 ## Re-creating the {{site.data.keyword.mobilefirst}} server
 {: #recreate_mobilefoundation_p1}
 
