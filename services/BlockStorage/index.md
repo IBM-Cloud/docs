@@ -2,7 +2,7 @@
 
 # Getting started with {{site.data.keyword.blockstorageshort}} (Beta)
 
-Last updated: 02 September 2016
+Last updated: 07 September 2016
 {: .last-updated}
 
 {{site.data.keyword.blockstoragefull}} provides access to block level storage for transaction-intensive workloads and runtimes that need persistent storage. You can use the {{site.data.keyword.blockstorageshort}} service to manage volume lifecycles, attach volumes to your IBM Virtual Servers, and create snapshots of your block storage volumes.
@@ -55,7 +55,7 @@ Complete these steps to get started with {{site.data.keyword.blockstorageshort}}
  
 What's next?
 
-Prepare the volume for use. For more information, see [Preparing volumes](../BlockStorage/blockstorage_preparingvolume.html).
+After your volume is attached, you must configure your virtual server to make use of the volume. For more information, see [Preparing volumes](../BlockStorage/blockstorage_preparingvolume.html).
 
 # Related Links
 {: #rellinks}

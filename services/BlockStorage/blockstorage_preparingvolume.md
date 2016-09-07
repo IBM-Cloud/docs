@@ -4,7 +4,7 @@
 # Preparing {{site.data.keyword.blockstorageshort}} volumes 
 {: #preparing-block-storage-volume}
 
-Last updated: 29 July 2016
+Last updated: 07 September 2016
 {: .last-updated}
 
   After you create your volume and attach it to a virtual server, you must mount and prepare the volume to be used.
@@ -27,7 +27,7 @@ Last updated: 29 July 2016
    
    <pre><code>fdisk -l</pre></code>
 
-   The volume information is listed towards the bottom of the informational text. For example, *Disk /dev/vdb: 10.7 GB, 10737418240 bytes*.
+   The volume information is listed towards the bottom of the informational text. For example, *Disk /dev/vdb: 10.7 GB, 10737418240 bytes*. The disk device relates to the device that was requested or automatically selected at the time of attachment.
 
 3. Partition the disk.
 
