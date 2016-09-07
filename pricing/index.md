@@ -331,7 +331,6 @@ Assume that you have a Node.js web application with scalability capabilities, an
 * Two {{site.data.keyword.autoscaling}} policies, processor and memory
 * 2 GB per month {{site.data.keyword.datacshort}}
 * 150 GB per month NoSQL database, 100,000 heavy API calls, and 500,000 light API calls
-* 8 GB per month {{site.data.keyword.sqldb}} Database
 * 20 GB inbound or outbound network traffic
 
 ###Prices for {{site.data.keyword.Bluemix_notm}} resources
@@ -347,7 +346,6 @@ To keep the example simple, assume that the prices in the following table do not
 |Data Cache - Standard |	5 GB of cache space and a replica |	$155.00 USD/instance |
 |Data Cache - Premium |	25 GB of cache space and a replica |	$505.00 USD/instance|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB of free data storage<br/>50,000 light API calls free per month<br/>10,000 heavy API calls free per month | $1.00 USD/GB<br/>$0.03 USD/1000 light API calls<br/>$0.15 USD/1000 heavy API calls |
-|SQL Database 	| 2 GB free per instance<br/>10 GB maximum per instance |	$30.00 USD/instance |
 *Table 7. Pricing sheet*
 
 ###Calculating the application price
@@ -380,15 +378,12 @@ Add up the number of GB and deduct a 2 GB free allowance. 148 GB is charged per 
 <p>
 The total price is 148 + 13.5 + 13.5 = $175.</p></dd>
 
-<dt>8 GB per month SQL Database</dt>
-<dd>The total price is $30 per instance.</dd>
-
 <dt>20 GB inbound or outbound network traffic</dt>
 <dd>Inbound and outbound network traffic is free of charge.</dd>
 
 </dl>
 
-When all the items are added, the total price of the application is $384.15.
+When all the items are added, the total price of the application is $354.15.
 
 ##Usage dashboard
 {: #usage}
