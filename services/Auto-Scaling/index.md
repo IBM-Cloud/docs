@@ -16,7 +16,7 @@ copyright:
 
 # Getting started with the {{site.data.keyword.autoscaling}} service
 {: #autoscaling}
-Last updated: 25 August 2016
+Last updated: 7 September 2016
 {: .last-updated}
 
 In {{site.data.keyword.Bluemix_notm}}, you can automatically manage your application capacity. Use the {{site.data.keyword.autoscalingfull}} service to automatically increase or decrease the compute capacity of your application. The number of application instances are adjusted dynamically based on the {{site.data.keyword.autoscaling}} policy that you define.
@@ -193,7 +193,7 @@ The `AccessToken` in the `config.json` only valid for a period of time. If you g
 
 With all the above prerequisites, you can now make REST API request by using the RestClient add-on in browser or just through some tool like `curl`. 
 
-With REST Client Add-on, like those for Firefox or Chrome, you can trigger REST request to {{site.data.keyword.autoscaling}} API server to execute your command. You just supply these add-on with the URL of the REST API, method and headers that are required by this REST API, and the parameters in the body part. For more details about each API, see [Rest API of IBM {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}](https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html){:new_window}.
+With REST Client Add-on, like those for Firefox or Chrome, you can trigger REST request to {{site.data.keyword.autoscaling}} API server to execute your command. You just supply these add-on with the URL of the REST API, method and headers that are required by this REST API, and the parameters in the body part. For more details about each API, see [Rest API of IBM {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}](https://new-console.ng.bluemix.net/apidocs/48){:new_window}.
 
 With tools like `curl`, you can manage the {{site.data.keyword.autoscaling}} service within a script as following:    
 ```
