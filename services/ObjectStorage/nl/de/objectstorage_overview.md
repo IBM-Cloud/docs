@@ -2,7 +2,7 @@
 
 # Informationen zu {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Letzte Aktualisierung: 15. Juli 2016*
+*Letzte Aktualisierung: 10. August 2016*
 {: .last-updated}
 
 
@@ -12,7 +12,7 @@ Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf d
 
 Das {{site.data.keyword.objectstorageshort}}-Architekturdiagramm sieht wie folgt aus:
 
-[![{{site.data.keyword.objectstorageshort}}-Architekturdiagramm](https://console.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}(images/object_storage_solution_archectiture_small.png)]
+[![{{site.data.keyword.objectstorageshort}}-Architekturdiagramm](images/ObjectStorageArchitectureDiagram.png)(images/ObjectStorageArchitectureDiagram.png)] {: new_window}
 
 *Abbildung 1. {{site.data.keyword.objectstorageshort}}-Architekturdiagramm*
 
