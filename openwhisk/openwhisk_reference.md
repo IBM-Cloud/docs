@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} system details
 {: #openwhisk_reference}
-Last updated: 4 August 2016
+Last updated: 9 September 2016
 {: .last-updated}
 
 The following sections provide more details about the {{site.data.keyword.openwhisk}} system.
@@ -100,7 +100,7 @@ When an invocation request is received, the system records the request and dispa
 
 The system returns an activation ID (in the case of a nonblocking invocation) to confirm that the invocation was received. 
 Notice that if there's a network failure or other failure which intervenes before you receive an HTTP response, it is possible 
-that {{site.data.keyword.openwhisk_short}}  received and processed the request.
+that {{site.data.keyword.openwhisk_short}} received and processed the request.
 
 The system attempts to invoke the action once, resulting in one of the following four outcomes:
 - *success*: the action invocation completed successfully.
@@ -115,7 +115,6 @@ Note that in the case of *action developer error*, the action may have partially
 side effects.   It is the user's responsibility to check whether such side effects actually happened, and issue retry
 logic if desired.   Also note that certain *whisk internal errors* will indicate that an action started running but the
 system failed before the action registered completion.
-
 
 ## Activation record
 {: #openwhisk_ref_activation}
@@ -284,7 +283,6 @@ The signature for `next` is `function(error, activation)`, where:
   ```
   {: codeblock}
 
-
 The `whisk.trigger()` function fires a trigger. It takes as an argument a JSON object with the following parameters:
 
 - *name*: The fully qualified name of trigger to invoke.
@@ -399,7 +397,7 @@ The following packages are available to be used in the Node.js 0.12.14 environme
 ## Docker actions
 {: #openwhisk_ref_docker}
 
-Docker actions run a user-supplied binary in a Docker container. The binary runs in a Docker image based on Ubuntu 14.04 LTD, so the binary must be compatible with this distribution.
+Docker actions run a user-supplied binary in a Docker container. The binary runs in a Docker image based on [python:2.7.12-alpine](https://hub.docker.com/r/library/python), so the binary must be compatible with this distribution.
 
 The Docker skeleton is a convenient way to build OpenWhisk-compatible Docker images. You can install the skeleton with the `wsk sdk install docker` CLI command.
 
@@ -474,7 +472,8 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 ## System limits
 {: #openwhisk_syslimits}
 
-{{site.data.keyword.openwhisk_short}} has a few system limits, including how much memory an action uses and how many action invocations are allowed per hour. The following table lists the default limits.
+### Actions
+{{site.data.keyword.openwhisk_short}} has a few system limits, including how much memory an action uses and how many action invocations are allowed per hour. The following table lists the default limits for actions.
 
 | limit | description | configurable | unit | default |
 | ----- | ----------- | ------------ | -----| ------- |
