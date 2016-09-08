@@ -3,8 +3,10 @@
 # {{site.data.keyword.objectstorageshort}} 故障诊断
 {: #troubleshooting}
 
-*上次更新时间：2016 年 6 月 24 日*
+*上次更新时间：2016 年 8 月 17 日*
 {: .last-updated}
+
+下面是有关使用 {{site.data.keyword.objectstoragefull}} 的常见故障诊断问题的答案。
 
 ## 使用 openstack4J 与 Liberty 概要文件时返回无法识别的令牌内容套件
 {: #unrecognized_token}
@@ -35,3 +37,18 @@
 
 1. 使用反向类装入 (parentLast)。
 2. 从启用的功能中排除 jaxrs。
+
+## 获取 {{site.data.keyword.objectstorageshort}} 的帮助和支持
+{: #gettinghelp}
+
+如果您在使用 {{site.data.keyword.objectstoragefull}} 时有任何疑问或遇到任何问题，您可以在论坛中搜索相关信息或进行提问来获取帮助。还可以提交支持凭单。
+
+使用论坛进行提问时，请使用适当的标记来标注您的问题，以方便 {{site.data.keyword.Bluemix_notm}} 开发团队识别。
+
+* 有关 {{site.data.keyword.objectstorageshort}} 的技术问题，请将您的问题发布到 [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} 上，并使用“ibm-bluemix”和“object-storage”标记您的问题。
+<!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
+* 有关服务的问题和入门指示信息，请使用 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window} 论坛。另请加上“object-storage”和“bluemix”标记。
+
+有关使用论坛的更多详细信息，请参阅[获取帮助](https://console.ng.bluemix.net/docs/support/index.html#getting-help)。
+
+有关提交 IBM 支持凭单或支持级别和凭单严重性的信息，请参阅[联系支持人员](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)。
