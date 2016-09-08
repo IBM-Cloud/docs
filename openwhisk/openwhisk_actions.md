@@ -319,7 +319,7 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   ```
   {: codeblock}
 
-  Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./reference.md#runtime-environment) detail the Node.js packages that you can use in your actions.
+  Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./openwhisk_reference.html#openwhisk_ref_javascript_environments) detail the Node.js packages that you can use in your actions.
 
   This example also shows the need for asynchronous actions. The action returns a Promise to indicate that the result of this action is not available yet when the function returns. Instead, the result is available in the `request` callback after the HTTP call completes, and is passed as an argument to the `resolve()` function.
 
