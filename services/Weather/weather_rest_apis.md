@@ -13,7 +13,7 @@ copyright:
 # Using the {{site.data.keyword.weather_short}} REST APIs
 {: #rest_apis}
 
-*Last updated: 01 July 2016*
+Last updated: 22 August 2016
 {: .last-updated}
 
 You can use the [REST APIs](https://twcservice.{APPDomain}/rest-api/){:new_window}
@@ -28,7 +28,7 @@ You can find this information by opening your application and clicking **Environ
 
 **Note:** Each region is independent. You cannot use service credentials
 that are provisioned to you in one region to authenticate to a service in another region.
-Failure to enter proper credentials results in an "Unauthorized" message in the response body.
+Failure to enter proper credentials results in an *Unauthorized* message in the response body.
 
 With the REST APIs, you can retrieve weather data by supplying a geolocation as latitude and longitude coordinates.
 You can use the following APIs.
@@ -36,12 +36,12 @@ You can use the following APIs.
 |**API**                                  |**Description**              |
 |-----------------------------------------|-----------------------------|
 |`GET /v1/{geocode or location ID}/forecast/hourly/48hour.json`  |Returns the hourly weather forecast for the next 48 hours for a geolocation depending on the format that you supply. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`. The hourly forecast data can contain up to 48 hourly forecasts for each location. You must discard all previous hourly forecasts for a location when new data is received.|
-|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |Returns daily weather forecasts for 3, 5, 7, or 10 days for a geolocation depending on the format that you supply. The number of days returned is specified in the format as `3day`, `5day`, `7day`, or `10day`. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`. Each daily forecast can contain a daytime forecast, a nighttime forecast, and a 24-hour forecast. These segments are separate objects in the JSON responses. Daytime forecast data of the daily forecast are no longer available after 3:00 PM local time. At 3:00 pm local time, your application must no longer display the day forecast.|
-|`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|Returns daily weather forecasts in 6-hour periods for 3, 5, 7, or 10 days for a geolocation depending on the format that you supply. The number of days returned is specified in the format as `3day`, `5day`, `7day`, or `10day`. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`. Each daily forecast can contain a morning, afternoon, evening, and overnight forecast. These segments are separate objects in the JSON responses.|
+|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |Returns daily weather forecasts for 3, 5, 7, or 10 days for a geolocation depending on the format that you supply. The number of days to be retrieved is specified in the format as `3day`, `5day`, `7day`, or `10day`. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`. Each daily forecast can contain a daytime forecast, a nighttime forecast, and a 24-hour forecast. These segments are separate objects in the JSON responses. Daytime forecast data of the daily forecast is no longer available after 3:00 PM local time. At 3:00 PM local time, your application must no longer display the day forecast.|
+|`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|Returns daily weather forecasts in six-hour periods for 3, 5, 7, or 10 days for a geolocation depending on the format that you supply. The number of days to be retrieved is specified in the format as `3day`, `5day`, `7day`, or `10day`. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`. Each daily forecast can contain a morning, afternoon, evening, and overnight forecast. These segments are separate objects in the JSON responses.|
 |`GET /v1/{geocode or location ID}/observations.json`              |Returns the current weather conditions for a geolocation. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`.  These recent observations are retained in the database up to 10 minutes on specific reporting stations and 24 hours of observations per station. The recent observations data is continuously updated and replaced with a first-in / first-out methodology (rotating data with newest observation and moving the oldest observations to the archive storage) based on date/time stamping of the observations.|
 |`GET /v1/{geocode or location ID}/observations/timeseries.json`   |Returns both the current observations and up to 24 hours of past observations, from the current date and time, for a geolocation. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`. Weather observations are gathered from physical devices deployed worldwide, and the current weather observations.|
 |`GET /v1/{geocode, country code, state, or area}/alerts.json`      |Returns weather watches, warnings, statements, and advisories that are issued by the National Weather Service (NWS), Environment Canada, and MeteoAlarm (Europe) and include the translation of the event description, country name, and alert headlines in 49 languages. You can supply a `geocode/{latitude}/{longitude}`, `country/{countrycode}`, `country/{countrycode}/state/{statecode}`/, or `country/{countrycode}/area/{areaid}`.|
-|`GET /v1/alert/{detail_key}/details.json`                         |Returns weather watches, warnings, statements, and advisories that are issued by the National Weather Service (NWS), Environment Canada, and MeteoAlarm (Europe). The details include in-depth information about the alert issued by the government weather authority for the specified area and include the translation of the event description, country name, and alert headlines in 49 languages.|
+|`GET /v1/alert/{detail_key}/details.json`                         |Returns weather watches, warnings, statements, and advisories that are issued by the National Weather Service (NWS), Environment Canada, and MeteoAlarm (Europe). The details include in-depth information about the alert that is issued by the government weather authority for the specified area and include the translation of the event description, country name, and alert headlines in 49 languages.|
 |`GET /v1/{geocode or postal code}/almanac/daily.json`             |Returns daily almanac information (US only) that is sourced from National Weather Service observations stations from a time period spanning 10 to 30 years or more. The information is gathered and provided by the National Climatic Data Center (NCDC). You can supply a `geocode/{latitude}/{longitude}`, or `location/{PostalLocationId}`.|
 |`GET /v1/{geocode or postal code}/almanac/monthly.json`           |Returns monthly almanac information (US only) that is sourced from National Weather Service observations stations from a time period spanning 10 to 30 years or more. The information is gathered and provided by the National Climatic Data Center (NCDC). You can supply a `geocode/{latitude}/{longitude}`, or `location/{PostalLocationId}`.|
 |`GET /v3/location/{search or point}`                                  |Provides the ability to look up a location name or geocode (latitude and longitude) to retrieve a set of locations that match the request. The Location Service supports search by city name or postal code.|
@@ -50,11 +50,11 @@ You can use the following APIs.
 ## Daily and intraday forecasts
 {: #daily_intraday}
 The daily forecast API can contain multiple days of daily forecasts for each location.
-Each day of a forecast can contain up to three separate forecasts. For any given
-forecast day the API can return day, night, and 24-hour forecasts.
+Each day of a forecast can contain up to three separate forecasts. For any
+forecast day, the API can return day, night, and 24-hour forecasts.
 
 The intraday forecast API can contain multiple days of daily forecasts for each location.
-Each day of a forecast contains four separate 6-hour forecasts for morning (7 AM to 1 PM),
+Each day of a forecast contains four separate six-hour forecasts for morning (7 AM to 1 PM),
 afternoon (1 PM to 7 PM), evening (7 PM to 1 AM), and overnight (1 AM to 7 AM). The
 intraday forecast is similar in structure to the daily forecast.
 
@@ -74,7 +74,7 @@ by the APIs on a Thursday morning:
 ## Current and time-series observations
 {: #time_series}
 
-The current oonditions and time-series weather observations data provides information about temperature,
+The current conditions and time-series weather observations data provides information about temperature,
 precipitation, wind, barometric pressure, visibility, ultraviolet (UV) radiation,
 and other related observation elements, including observation station,
 observation date/time, weather icon codes and phrases. The difference between
@@ -138,10 +138,10 @@ range of data instead of a specific month or day of data.
 
 The date format for retrieving Daily Almanac results is a four-digit numeric value that represents
 the month and day for the data required, that is, MMDD. Any single digit
-day **must** have a preceding zero (0), for example, 01.
+day **must** have a preceding zero, for example, 01.
 
 The date format for retrieving Monthly Almanac results is month, that is, MM. Any single digit
-month **must** have a preceding zero (0), for example, 01.  Any other format results in
+month **must** have a preceding zero, for example, 01. Any other format results in
 an API error and no data will be returned.
 
 **Note**: If you don't provide the date value in the request, the system returns a
@@ -166,11 +166,11 @@ https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/dai
 |**Attribute**     |**Description**                                    |
 |------------------|---------------------------------------------------|
 |`hostname`        |The hosted URL path. For example, `https://twcservice.mybluemix.net:443/api/weather`.|
-|`version`         |The current iteration. For example, "v1".|
-|`location`        |The geocode or location ID. The location group can be "geocode" or "location". For example, "geocode/45.4214/75.6919" represents Ottawa, Canada. If you supply a geocode coordinate, the API returns data for the closest location available. Periods are used as decimal separators and commas are used to separate latitude and longitude values. If you supply a geocode, the actual latitude and longitude values that are used are returned in the metadata of the response.|
-|`product group`   |The product. For example, "observations" or "forecast". A product subgroup, for example, "historical", is optional.|
-|`date`            |The date type. For example, "daily" or "monthly".|
-|`format`          |The format. For example, "3day", "5day", "7day", or "10day".|
+|`version`         |The current iteration. For example, `v1`.|
+|`location`        |The geocode or location ID. The location group can be `geocode` or `location`. For example, `geocode/45.4214/75.6919` represents Ottawa, Canada. If you supply a geocode coordinate, the API returns data for the closest location available. Periods are used as decimal separators and commas are used to separate latitude and longitude values. If you supply a geocode, the actual latitude and longitude values that are used are returned in the metadata of the response.|
+|`product group`   |The product. For example, `observations` or `forecast`. A product subgroup, for example, `historical`, is optional.|
+|`date`            |The date type. For example, `daily` or `monthly`.|
+|`format`          |The format. For example, `3day`, `5day`, `7day`, or `10day`.|
 |`units`           |The optional units to return the response in. The API supports English (e), Metric (m), and UK-Hybrid (h) units of measure. If you supply the units of measure but don't supply a value, the API returns the data in the unit of measure that corresponds to the language code. The default or requested unit of measure is returned in the units parameter in the metadata of the response.|
 |`language`        |The language to return the response in. The default is en-US. The default or requested translation language is returned in the language parameter in the metadata of the response.|
 *Table 2. URL details*
@@ -180,14 +180,95 @@ https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/dai
 The APIs use the WGS84 geocode coordinate reference system. For more information, see
 [Basic Geo Vocabulary](https://www.w3.org/2003/01/geo/){:new_window}.
 
+## Icon codes and images
+{: #icon_code_images}
+
+When the {{site.data.keyword.weather_short}} REST APIs return an icon code in the response,
+you can use the icon code to determine which icon image to display in your app.
+There is a one to one relationship between the icon code in the API response and the file name of the icon image.
+For example, if the API response contains an `icon_code` of 1, you can use the file name `01.png`
+to display the matching icon image.
+
+In your code, you can create a function that uses the `icon_code` to determine
+the URL of the icon image. For example:
+
+```
+function getIconURL(code) {
+    return "images/weathericons/icon" + code + ".png";
+}
+```
+
+The following table contains icon codes, descriptions, and images that can be used
+with the {{site.data.keyword.weather_short}} REST APIs. The table indicates whether an icon
+is used in the Forecast or Observation APIs and whether the icon is available in Night or Daytime
+forecast parts.
+
+|**Code**|**Description**|**Image**|**API usage** |**Night or Daytime**|
+|----|--------------------------|------------|------------|--------------------|
+| 0  | Tornado                  | <img src="images/00.png " width="100" height="100" alt="Icon image."/>| Forecast                | Night and Day |
+| 1  | Tropical Storm           | <img src="images/01.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 2  | Hurricane                | <img src="images/02.png " width="100" height="100" alt="Icon image."/>| Forecast                | Night and Day |
+| 3  | Strong Storms            | <img src="images/03.png " width="100" height="100" alt="Icon image."/>| Forecast                | Night and Day |
+| 4  | Thunder and Hail         | <img src="images/04.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 5  | Rain to Snow Showers     | <img src="images/05.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 6  | Rain / Sleet             | <img src="images/06.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 7  | Wintry Mix Snow / Sleet  | <img src="images/07.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 8  | Freezing Drizzle         | <img src="images/08.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 9  | Drizzle                  | <img src="images/09.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 10 | Freezing Rain            | <img src="images/10.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 11 | Light Rain               | <img src="images/11.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 12 | Rain                     | <img src="images/12.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 13 | Scattered Flurries       | <img src="images/13.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 14 | Light Snow               | <img src="images/14.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 15 | Blowing / Drifting Snow  | <img src="images/15.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 16 | Snow                     | <img src="images/16.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 17 | Hail                     | <img src="images/17.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 18 | Sleet                    | <img src="images/18.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 19 | Blowing Dust / Sandstorm | <img src="images/19.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 20 | Foggy                    | <img src="images/20.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 21 | Haze / Windy             | <img src="images/21.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 22 | Smoke / Windy            | <img src="images/22.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 23 | Breezy                   | <img src="images/23.png " width="100" height="100" alt="Icon image."/>| Forecast                | Night and Day |
+| 24 | Blowing Spray / Windy    | <img src="images/24.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 25 | Frigid / Ice Crystals    | <img src="images/25.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 26 | Cloudy                   | <img src="images/26.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 27 | Mostly Cloudy            | <img src="images/27.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 28 | Mostly Cloudy            | <img src="images/28.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Day         |
+| 29 | Partly Cloudy            | <img src="images/29.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night       |
+| 30 | Partly Cloudy            | <img src="images/30.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Day         |
+| 31 | Clear                    | <img src="images/31.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night       |
+| 32 | Sunny                    | <img src="images/32.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Day         |
+| 33 | Fair / Mostly Clear      | <img src="images/33.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night       |
+| 34 | Fair / Mostly Sunny      | <img src="images/34.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Day         |
+| 35 | Mixed Rain & Hail        | <img src="images/35.png " width="100" height="100" alt="Icon image."/>| Forecast                | Day         |
+| 36 | Hot                      | <img src="images/36.png " width="100" height="100" alt="Icon image."/>| Forecast                | Day         |
+| 37 | Isolated Thunderstorms   | <img src="images/37.png " width="100" height="100" alt="Icon image."/>| Forecast                | Day         |
+| 38 | Thunderstorms            | <img src="images/38.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 39 | Scattered Showers        | <img src="images/39.png " width="100" height="100" alt="Icon image."/>| Forecast                | Day         |
+| 40 | Heavy Rain               | <img src="images/40.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 41 | Scattered Snow Showers   | <img src="images/41.png " width="100" height="100" alt="Icon image."/>| Forecast                | Day         |
+| 42 | Heavy Snow               | <img src="images/42.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+| 43 | Blizzard                 | <img src="images/43.png " width="100" height="100" alt="Icon image."/>| Forecast                | Night and Day |
+| 44 | Not Available (N/A)      | <img src="images/44.png " width="100" height="100" alt="Icon image."/>| Forecast                | Night and Day |
+| 45 | Scattered Showers        | <img src="images/45.png " width="100" height="100" alt="Icon image."/>| Forecast                | Night       |
+| 46 | Scattered Snow Showers   | <img src="images/46.png " width="100" height="100" alt="Icon image."/>| Forecast                | Night       |
+| 47 | Scattered Thunderstorms  | <img src="images/47.png " width="100" height="100" alt="Icon image."/>| Forecast and Observations | Night and Day |
+*Table 3. Icon codes and images*
+
+You can download this set of weather icons as [PNGs](https://twcdocs.mybluemix.net/download/weather_icons_200x200_png.zip){:new_window} 
+or [SVGs](https://twcdocs.mybluemix.net/download/weather_icons_200x200_svg.zip){:new_window} and use them your app. 
+
+You can also download the [set of icons](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} that the
+[{{site.data.keyword.weather_short}} demo app](http://weather-company-data-demo.{APPDomain}){: new_window} uses.
+
 ## Units of measure
 {: #units_measure}
 
 When you use the REST APIs, you don't need to explicitly pass a unit of measure. The APIs default to the unit of measure that is associated with the language code in the URL. However, if you want to provide a unit of measure that is different from the default, you can pass in a unit of measure that overrides the default.
 
-* For en-US or en, the default unit of measure code is English/Imperial. The unit code is "e".
-* For en-GB, the default unit of measure is Hybrid-UK. The unit code is "h".
-* For everything else, the default unit of measure is Metric. The unit code is "m".
+* For en-US or en, the default unit of measure code is English/Imperial. The unit code is `e`.
+* For en-GB, the default unit of measure is Hybrid-UK. The unit code is `h`.
+* For everything else, the default unit of measure is Metric. The unit code is `m`.
 
 ## Language translation
 {: #language_translation}
@@ -214,12 +295,12 @@ The following fields are translated:
 |`headline_text`     |The text of the headline of an event for the location.|
 |`event_desc`        |A description of an event.|
 |`cntry_name`        |The country name where an event occurred, given in mixed case letters.|
-*Table 3. Translated response fields*
+*Table 4. Translated response fields*
 
 ## Handling null or missing data fields in the API response
 {: #handling_null_or_missing}
 
-If a data field is null because the data is not available, the REST APIs either return the appropriate field tags with the word "null" or don't return the field at all.
+If a data field is null because the data is not available, the REST APIs either return the appropriate field tags with the word `null` or don't return the field at all.
 
 ## Handling errors
 {: #handling_errors}
@@ -233,7 +314,7 @@ The following error codes are common to all APIs:
 |403       |Forbidden. The server understood the request but is refusing to fulfill it.|
 |404       |Not found. If a required parameter is not present in the API request, a MissingParameterException error with a 404 error code is returned.|
 |500       |Internal server error. The server encountered an unexpected condition that prevented it from fulfilling the request.|
-*Table 4. Error response code*
+*Table 5. Error response code*
 
 The response on error is always the same. Multiple error codes can be returned in one response.
 For example, a JSON error response might be returned as follows:

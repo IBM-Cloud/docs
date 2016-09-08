@@ -13,7 +13,7 @@ copyright:
 # About {{site.data.keyword.weather_short}}
 {: #about_weather}
 
-*Last updated: 01 July 2016*
+Last updated: 22 August 2016
 {: .last-updated}
 
 Use {{site.data.keyword.weatherfull}} to incorporate weather data from
@@ -35,10 +35,8 @@ You can use the REST APIs to retrieve the following information:
 * The current observed weather data for a specified geolocation. This weather data includes temperature, precipitation, wind direction and speed, humidity, barometric pressure, dew point, visibility, and ultraviolet (UV) radiation.
 * The observed weather data for a specified geolocation up to and including the previous 24 hours. This data is sourced from physical observation stations.
 * Government-issued weather alerts, including weather watches, warnings, statements, and advisories issued by the National Weather Service (US), Environment Canada, and MeteoAlarm (Europe).
-* Almanac services that provide historical daily or monthly weather data sourced from National Weather Service observations stations from a time period spanning 10 to 30 years or more.
+* Almanac services that provide historical daily or monthly weather data that is sourced from National Weather Service observations stations from a time period spanning 10 to 30 years or more.
 * Location mapping services that provide the ability to look up a location name or geocode (latitude and longitude) to retrieve a set of locations that match your request.
-
-You can [download a set of icons](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} to use in your app.
 
 ## Pricing model
 {: #pricing_models}
@@ -80,15 +78,14 @@ rate of $1.70 per 10,000 API calls.
 ## Feedback and support
 {: #feedback_support}
 
-If you have technical questions about creating an app with {{site.data.keyword.weather_short}},
-post your question on [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window}
-and tag your question with **ibm-bluemix** and **weather**.
+You can get help by searching for information or by asking a question in a forum. You can also open a support ticket.
 
-If you experience any issues with this service, use the [IBM developerWorks Answers forum](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}.
-Include the **bluemix** and **weather** tags to allow IBM to support you better.
+When you use the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 
-If you have questions about migrating your app from Insights for Weather to {{site.data.keyword.weather_short}}, 
-contact us at [IBM developerWorks](http://www.ibm.com/developerworks){:new_window}.
+* If you have technical questions about developing or deploying an app with {{site.data.keyword.weather_short}}, post your question on [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window} and tag your question with **ibm-bluemix** and **weather**.
+* If you experience issues with the service or getting started instructions, use the [IBM developerWorks Answers forum](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}. Include the **bluemix** and **weather** tags.
+* If you have questions about migrating your app from Insights for Weather to {{site.data.keyword.weather_short}}, contact us at [IBM developerWorks](http://www.ibm.com/developerworks){:new_window}.
 
-For information about troubleshooting problems with Bluemix, see [Troubleshooting](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
-For details about searching for information and asking questions through forums, and about contacting support, see [Getting customer support](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}.
+See [Getting help](https://console.{DomainName}/docs/support/index.html#getting-help){: new_window} for more details about using the forums.
+
+See [Contacting support](https://console.{DomainName}/docs/support/index.html#contacting-support){: new_window} for information about opening an IBM support ticket, or about support levels and ticket severities.
