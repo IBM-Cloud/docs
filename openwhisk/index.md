@@ -17,7 +17,7 @@ copyright:
 {:pre: .pre}
 
 # Getting started with {{site.data.keyword.openwhisk_short}}
-Last updated: 4 August 2016
+Last updated: 9 September 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} is a distributed, event-driven compute service also referred to as Serverless computing or as Function as a Service (FaaS), {{site.data.keyword.openwhisk_short}} runs application logic in response to events or direct invocations from web or mobile apps over HTTP. Events can be provided from Bluemix services like Cloudant and from external sources. Developers can focus on writing application logic, and creating actions that are executed on demand. The rate of executing actions always matches the event rate, resulting in inherent scaling and resiliency and optimal utilization. You pay for only what you use and you don't have to manage a server. You can also get the [source code](https://github.com/openwhisk/openwhisk) and run the system yourself.
@@ -31,8 +31,12 @@ For more details about how {{site.data.keyword.openwhisk_short}} works, see [Abo
 You can use the {{site.data.keyword.openwhisk_short}} command line interface (CLI) to set up your namespace and authorization key. 
 Go to [Configure CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} and follow the instructions to install it. 
 
-**Deprecation Notice** There is a new CLI available that doesn't require Python to be installed. 
-The previous CLI (Python based) is currently deprecated, and only available as a backup download option. If you choose to use the deprecated CLI, you must have Python 2.7 installed on your system 
+### Configure the CLI to use an HTTPS proxy
+
+The CLI can be setup to use an HTTPS proxy. To setup an HTTPS proxy, an environment variable called `HTTPS_PROXY` must
+ be created. The variable must be set to the address of the HTTPS proxy, and its port using the following format:
+`{PROXY IP}:{PROXY PORT}`.
+
 
 After {{site.data.keyword.openwhisk_short}} is set up with the CLI, you can begin using it from the command line.
 
@@ -55,7 +59,8 @@ You can use {{site.data.keyword.openwhisk_short}} from your iOS mobile app or Ap
 ## Using REST APIs with {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_restapi}
 
-After your {{site.data.keyword.openwhisk_short}} environment is enabled, you can use {{site.data.keyword.openwhisk_short}} with your web apps or mobile apps with REST API calls. For more details about the APIs for actions, activations, packages, rules, and triggers, see the [{{site.data.keyword.openwhisk_short}} API documentation](https://new-console.{DomainName}/apidocs/98).
+After your {{site.data.keyword.openwhisk_short}} environment is enabled, you can use {{site.data.keyword.openwhisk_short}} with your web apps or mobile apps with REST API calls.
+For more details about the APIs for actions, activations, packages, rules, and triggers, see the [{{site.data.keyword.openwhisk_short}} API documentation](https://new-console.{DomainName}/apidocs/98).
 
 ## {{site.data.keyword.openwhisk_short}} Hello World example
 {: #openwhisk_start_hello_world}
