@@ -12,10 +12,9 @@ La tarification est fonction du plan choisi. Pour plus d'informations sur la tar
 
 ## Quels comptes et plans de paiement puis-je utiliser pour {{site.data.keyword.objectstorageshort}} ? {: #account-payment}
 Le service {{site.data.keyword.objectstorageshort}} est fourni avec plusieurs options de plan différentes. Dans le cadre de notre édition en disponibilité générale, deux plans sont actuellement proposés, Standard et Gratuit. Le plan Standard est disponible uniquement pour les comptes payants {{site.data.keyword.Bluemix_notm}} (sous la forme Paiement à la carte ou Abonnement) ou pour les utilisateurs internes IBM. Le
-plan Standard inclut une franchise de stockage de 5 Go par compte. 
+plan Standard inclut une franchise de stockage de 5 Go par compte.
 
-Les comptes d'essai qui sont toujours actifs sont en mesure d'utiliser le plan gratuit qui autorise l'existence d'une instance unique dans une organisation {{site.data.keyword.Bluemix_notm}}. Une fois expiré la période d'essai {{site.data.keyword.Bluemix_notm}}, l'instance de service {{site.data.keyword.objectstorageshort}} associée est désactivée, ce qui signifie qu'il n'est plus possible d'accéder au compte de stockage par la ligne de commande ou l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Après une période de grâce de 30 jours, votre compte {{site.data.keyword.Bluemix_notm}} est purgé et toutes les données supprimées. Pour éviter de perdre des données, il est donc conseillé de procéder à une mise à niveau vers un compte payant {{site.data.keyword.Bluemix_notm}} aussi vite que possible. 
-Pour mettre à niveau votre compte, cliquez sur le menu de gestion des utilisateurs, puis sélectionnez l'option
+Les comptes d'essai qui sont toujours actifs sont en mesure d'utiliser le plan gratuit qui autorise l'existence d'une instance unique dans une organisation {{site.data.keyword.Bluemix_notm}}. Une fois expiré la période d'essai {{site.data.keyword.Bluemix_notm}}, l'instance de service {{site.data.keyword.objectstorageshort}} associée est désactivée, ce qui signifie qu'il n'est plus possible d'accéder au compte de stockage par la ligne de commande ou l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Après une période de grâce de 30 jours, votre compte {{site.data.keyword.Bluemix_notm}} est purgé et toutes les données supprimées. Pour éviter de perdre des données, il est donc conseillé de procéder à une mise à niveau vers un compte payant {{site.data.keyword.Bluemix_notm}} aussi vite que possible. Pour mettre à niveau votre compte, cliquez sur le menu de gestion des utilisateurs, puis sélectionnez l'option
 **Compte**, qui fournit des instructions sur le processus de mise à niveau.
 
 ## Comment changer de plan ? {: #changeplan}  
@@ -24,8 +23,7 @@ compte payant {{site.data.keyword.Bluemix_notm}}. Les comptes d'essai avec insta
 être mis à niveau vers le plan Standard, et les instances du plan Standard ne peuvent pas être rétrogradées vers d'autres plans. Lorsque vous procédez à la
 mise à niveau, votre instance de service et vos données client sont transférées vers le nouveau plan.
 
-
-Pour mettre à niveau votre plan : 
+Pour mettre à niveau votre plan :
 1.	Dans l'interface utilisateur {{site.data.keyword.objectstorageshort}}, cliquez sur **Plan**.
 2.	Sélectionnez **Standard** en tant que nouveau plan puis cliquez sur **Sauvegarder**.
 
@@ -42,7 +40,6 @@ cours du cycle de facturation. Toutes les données objet se trouvant dans des co
 
 Les frais pour le transfert de données sortantes s'appliquent dès lors que des données sont lues depuis n'importe quel conteneur d'objets sur le réseau public. La
 bande passante sortante publique est facturée dans le cadre de la bande passante consommée au cours du cycle de facturation.
-
 
 Les composants de mesure pour la tarification d'{{site.data.keyword.objectstorageshort}} sont les suivants :
 * Utilisation d'espace de stockage - 0,04 $ par Go/mois
