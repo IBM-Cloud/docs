@@ -303,6 +303,7 @@ The signature for `next` is `function(error, activation)`, where:
 The `whisk.getAuthKey()` function returns the authorization key under which the action is running. Usually, you do not need to invoke this function directly because it is used implicitly by the `whisk.invoke()` and `whisk.trigger()` functions.
 
 ### JavaScript runtime environments
+{: #openwhisk_ref_javascript_environments}
 
 JavaScript actions are executed by default in a Node.js version 6.2.0 environment.  The 6.2.0 environment will also be used for an action if the `--kind` flag is explicitly specified with a value of 'nodejs:6' when creating/updating the action.
 The following packages are available to be used in the Node.js 6.2.0 environment:
