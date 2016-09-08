@@ -35,7 +35,7 @@ The following built-in Community Buildpacks are provided by the Cloud Foundry Co
 * [Node.js](https://github.com/cloudfoundry/nodejs-buildpack)
 * [PHP](../runtimes/php/index.html)
 * [Ruby](../runtimes/ruby/index.html)
-* [Python](../runtimes/python.html)
+* [Python](../runtimes/python/index.html)
 * [Go](../runtimes/go/index.html)
 
 Updates to these buildpack will be made when Bluemix is upgraded to a new version of Cloud Foundry. Problems/issues with these runtimes on Bluemix can be reported to IBM and we will assist in determining if Bluemix is the source of the problem. For Bluemix related issues, IBM will provide a fix, however, for defects in the buildpack or runtime itself, IBM will assist in reporting them to the appropriate community. IBM will not be providing fixes for these buildpacks and runtimes.
