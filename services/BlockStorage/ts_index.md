@@ -30,7 +30,7 @@ copyright:
 Last updated: 26 August 2016
 {: .last-updated}
 
-If you have problems or questions when using {{site.data.keyword.blockstoragefull}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket. 
+If you have problems or questions when using {{site.data.keyword.blockstoragefull}}, you can get help by searching for information or by asking questions through one of the forums listed below. You can also open a support ticket. 
 
 When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 <!--Insert the appropriate Stack Overflow tag for your service for <block-storage> in URL and text below:  -->
