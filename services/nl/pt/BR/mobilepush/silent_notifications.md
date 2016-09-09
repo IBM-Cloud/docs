@@ -7,7 +7,7 @@ copyright:
 
 # Manipulando notificações silenciosas para iOS
 {: #silent-notifications}
-*Última atualização: 14 de junho de 2016*
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
 As notificações silenciosas não aparecem na tela do dispositivo. Essas notificações são recebidas pelo aplicativo no segundo plano, que acorda o aplicativo por até 30 segundos para executar a tarefa em segundo plano especificada. É possível que um usuário não perceba a chegada da notificação. Para enviar notificações silenciosas para iOS, use a [API REST](https://mobile.{DomainName}/imfpushrestapidocs/).   
@@ -19,7 +19,8 @@ As notificações silenciosas não aparecem na tela do dispositivo. Essas notifi
 //For Objective C
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult
 result))handler
-{ NSNumber *contentAvailable = userInfo[@"aps"][@"content-available"];
+{
+   NSNumber *contentAvailable = userInfo[@"aps"][@"content-available"];
    if([contentAvailable intValue]== 1){
        [[IMFPushClient sharedInstance] application:application didReceiveRemoteNotification:userInfo];
        

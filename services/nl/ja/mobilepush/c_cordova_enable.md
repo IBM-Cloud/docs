@@ -7,14 +7,13 @@ copyright:
 
 # Cordova アプリケーションによるプッシュ通知受け取りの可能化
 {: #cordova_enable}
-*最終更新日: 2016 年 6 月 14 日*
+最終更新日: 2016 年 8 月 16 日
 {: .last-updated}
 
 Cordova は、JavaScript、CSS、および HTML を使用したハイブリッド・アプリケーションの構築用プラットフォームです。
 {{site.data.keyword.mobilepushshort}} は、Cordova ベースの iOS アプリケーションおよび Android アプリケーションの開発をサポートします。
 
-Cordova アプリケーションによるプッシュ通知の受け取りとデバイスへのプッシュ通知の送信を可能にします。
-
+Cordova アプリケーションでプッシュ通知を受け取り、デバイスにプッシュ通知を送信できるようにすることができます。
 
 
 
@@ -22,21 +21,17 @@ Cordova アプリケーションによるプッシュ通知の受け取りとデ
 ## Cordova の Push プラグインのインストール
 {: #cordova_install}
 
-Cordova アプリケーションをさらに開発するために、クライアントの Push プラグインをインストールして使用します。これにより、Cordova Core のプラグインもインストールされます。これは、Bluemix への接続を初期化するものです。
-
+Cordova アプリケーションをさらに開発するために、クライアントの Push プラグインをインストールして使用します。これにより、Bluemix への接続を初期化する Cordova の Core プラグインもインストールされます。
 
 ### 始めに
 
 1. 最新バージョンの Android Studio SDK と Xcode をダウンロードします。
 1. エミュレーターをセットアップします。Android Studio では、Google Play API をサポートするエミュレーターを使用します。
 1. Git のコマンド・ライン・ツールをインストールします。Windows では、必ず **「Windows コマンド・プロンプトから Git を実行する (Run Git from the Window Command Prompt)」**オプションを選択してください。このツールのダウンロードとインストールの方法については、[Git](https://git-scm.com/downloads) を参照してください。
-
 1. Node.js と Node Package Manager (NPM) ツールをインストールします。NPM コマンド・ライン・ツールは Node.js とバンドルされています。Node.js のダウンロードとインストールの方法については、[Node.js](https://nodejs.org/en/download/) を参照してください。
 1. コマンド・ラインから、**npm install -g cordova** コマンドを使用して、Cordova コマンド・ライン・ツールをインストールします。これは、Cordova の Push プラグインを使用するために必要です。Cordova のインストールと Cordova アプリのセットアップの方法については、[Cordova Apache](https://cordova.apache.org/#getstarted) を参照してください。
 
 	**注**: Cordova の Push プラグインの readme ファイルを確認するには、[https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push) にアクセスしてください。
-
-
 1. Cordova アプリを作成するフォルダーに移動し、次のコマンドを実行して Cordova アプリケーションを作成します。
 既存の Cordova アプリがある場合は、ステップ 3 に進みます。
 
@@ -45,6 +40,7 @@ Cordova アプリケーションをさらに開発するために、クライア
 cordova create your_app_name
 cd your_app_name
 ```
+
 1. オプション: (オプション) **config.xml** ファイルを編集し、<name> エレメント内のアプリケーション名を、デフォルトの HelloCordova という名前ではなく、自分で選択した名前に変更します。
 
 	**注**: 正しいバンドル ID を指定してください。正しいバンドル ID を指定しないと、Xcode に次のエラー・メッセージが表示されます。
@@ -88,7 +84,7 @@ cd your_app_name
 	```
 1. *your-app-root-folder* から、コマンド **cordova plugin list** を使用して、Cordova の Core および Push のプラグインが正常にインストールされたことを確認します。
 
-	追加したプラットフォームに応じて、以下のような内容が表示されます。
+追加したプラットフォームに応じて、以下のような内容が表示されます。
 
 	```
 	ibm-mfp-core 1.0.0 "MFPCore"
@@ -112,20 +108,20 @@ cd your_app_name
 	e. Xcode で、アプリケーションをビルドして実行します。
 1. (Android のみ)- コマンド **cordova build android** を使用して、Android プロジェクトをビルドします。
 
-	**注**: Android Studio でプロジェクトを開く前に、最初に Cordova CLI を使用して Cordova アプリケーションをビルドする必要があります。そうしないと、ビルド・エラーが発生します。
+	**注**: Android Studio でプロジェクトを開く前に、Cordova CLI を使用して Cordova アプリケーションをビルドしてください。これは、ビルド・エラーの回避に有効です。
 
 
 ## Cordova プラグインの初期化
 {: #cordova_initialize}
 
-Push Notification Service の Cordova プラグインを使用するには、事前に、アプリケーション経路とアプリケーション GUID を受け渡すことでプラグインを初期化しておく必要があります。プラグインを初期化したら、Bluemix ダッシュボードで作成したサーバー・アプリに接続することができます。Cordova プラグインは、Cordova アプリが Bluemix サービスと通信できるようにするための Android および iOS のクライアント SDK のラッパーです。
+{{site.data.keyword.mobilepushshort}}サービスの Cordova プラグインを使用するには、事前に、アプリケーション経路とアプリケーション GUID を受け渡すことでプラグインを初期化しておく必要があります。プラグインを初期化したら、Bluemix ダッシュボードで作成したサーバー・アプリに接続することができます。Cordova プラグインは、Cordova アプリが Bluemix サービスと通信できるようにするための Android および iOS のクライアント SDK のラッパーです。
 
 1. 以下のコード・スニペットをメイン JavaScript ファイル (通常、**www/js** ディレクトリーの下にある) にコピー・アンド・ペーストして、BMSClient を初期化します。
 
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. Bluemix の Route パラメーターと appGUID パラメーターを使用するように、コード・スニペットを変更します。Bluemix アプリケーション・ダッシュボード内の**「モバイル・オプション」**リンクをクリックして、アプリケーション経路とアプリ GUID を取得します。この経路とアプリ GUID の値を、`BMSClient.initialize` コード・スニペットのパラメーターとして使用します。
+1. Bluemix の Route パラメーターと appGUID パラメーターを使用するように、コード・スニペットを変更します。Push ダッシュボード内の**「モバイル・オプション」**リンクをクリックして、アプリの経路、アプリ GUID、およびクライアント秘密鍵を取得します。この経路とアプリ GUID の値を、`BMSClient.initialize` コード・スニペットのパラメーターとして使用します。
 
 	**注**: Cordova CLI (例えば、Cordova の create app-name コマンド) を使用して Cordova アプリを作成した場合、この Javascript コードを **index.js** ファイルの `onDeviceReady: function()` 関数内の `app.receivedEvent` 関数の後に置いて、BMS クライアントを初期化します。
 
@@ -139,12 +135,14 @@ onDeviceReady: function() {
 ## デバイスの登録
 {: #cordova_register}
 
-登録する前に、プッシュ通知サービスを初期化します。
+登録する前に、{{site.data.keyword.mobilepushshort}}サービスを初期化します。
 ```
-    MFPPush.initializeBluemixPush();
+var appGUID = "your push service appGUID";
+MFPPush.initialize(appGUID);
+
 ```
 
-デバイスをプッシュ通知サービスに登録するには、登録メソッドを呼び出します。デバイスを登録するために、次のコード・スニペットを Cordova アプリケーションにコピーします。
+デバイスを{{site.data.keyword.mobilepushshort}}サービスに登録するには、register メソッドを呼び出します。デバイスを登録するために、次のコード・スニペットを Cordova アプリケーションにコピーします。
 
 ```
 	var success = function(message) { console.log("Success: " + message); };
@@ -189,7 +187,7 @@ MFPPush.registerDevice({}, success, failure);```
 
 使用可能なキーは、`token`、`userId`、および `deviceId` です。
 
-以下の JavaScript コード・スニペットは、Bluemix Mobile Services クライアント SDK を初期化し、デバイスをプッシュ通知サービスに登録し、プッシュ通知を listen する方法を示しています。このコードを Javascript ファイルに置きます。
+以下の JavaScript コード・スニペットは、Bluemix Mobile Services クライアント SDK を初期化し、デバイスを{{site.data.keyword.mobilepushshort}}サービスに登録し、プッシュ通知を listen する方法を示しています。このコードを Javascript ファイルに組み込んでください。
 
 
 
@@ -266,16 +264,32 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 
 プロジェクトをビルドし、以下のコマンドを使用してプロジェクトを実行します。
 
-	* Android - **cordova build android** および **cordova run android**
+####Android
+{: android-next-steps}
 
-	* iOS - **cordova build ios** および **cordova run ios**
+```
+cordova build android
+```
 
+```
+cordova run android
+```
 
+####iOS
+{: ios-next-steps}
+
+```
+cordova build ios
+```
+
+```
+cordova run ios
+```
 
 ## デバイスでのプッシュ通知の受け取り
 {: #cordova_receive}
 
-デバイスでプッシュ通知を受け取るには、以下のコード・スニペットをコピーして貼り付けます。
+デバイスでプッシュ通知を受け取るには、以下のコード・スニペットをコピーします。
 
 ###JavaScript
 
@@ -305,7 +319,7 @@ MFPPush.registerNotificationsCallback(notification);
 
 * message - プッシュ通知メッセージ
 * payload - 通知ペイロードを含む JSON オブジェクト。
-action-loc-key - このストリングは、現行ローカリゼーションにおいて、「View」の代わりに右ボタンのタイトルに使用されるローカライズされたストリングを取得するためのキーとして使用されます。
+action-loc-key - このストリングは、現行ローカリゼーションにおいて、`「View」`の代わりに該当ボタンのタイトルに使用されるローカライズされたストリングを取得するためのキーとして使用されます。
 * badge - アプリ・アイコンのバッジとして表示する数。このプロパティーがないと、バッジは変更されません。バッジを削除するには、このプロパティーの値を 0 に設定します。
 * sound - アプリ・バンドル内、またはアプリ・データ・コンテナーの Library/Sounds フォルダー内にある音声ファイルの名前。
 
@@ -347,10 +361,8 @@ CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 
 ```
 
-
-{: #push-send-notifications}
 ## 基本プッシュ通知の送信
-
+{: #push-send-notifications}
 
 アプリケーションを開発したら、(タグ、バッジ、追加のペイロード、音声ファイルを使用することなく) 基本プッシュ通知を送信できます。
 
@@ -359,21 +371,21 @@ CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 
 1. **「対象者の選択 (Choose the Audience)」**で、**「すべてのデバイス (All Devices)」**、またはプラットフォームに従って**「iOS デバイスのみ (Only iOS devices)」**または**「Android デバイスのみ (Only Anroid devices)」**のいずれかの対象者を選択します。 
 
-	**注**: **「すべてのデバイス (All Devices)」**オプションを選択すると、プッシュ通知をサブスクライブしているすべてのデバイスが通知を受け取ることになります。
+	**注**: **「すべてのデバイス」**オプションを選択すると、{{site.data.keyword.mobilepushshort}}をサブスクライブしているすべてのデバイスが通知を受け取ることになります。
 
-	![「通知」画面](images/tag_notification.jpg)
+![「通知」画面](images/tag_notification.jpg)
 
-2. **「通知の作成 (Create your Notification)」**で、メッセージを入力して、**「送信」**をクリックします。
+2. **「通知の作成」**で、メッセージを入力して、**「送信」**をクリックします。
 3. デバイスが通知を受信していることを確認します。
 
-	次のスクリーン・ショットは、Android デバイスおよび iOS デバイス上のフォアグラウンドでプッシュ通知を処理しているアラート・ボックスを示しています。
+次のスクリーン・ショットは、Android デバイスおよび iOS デバイス上のフォアグラウンドで{{site.data.keyword.mobilepushshort}}を処理しているアラート・ボックスを示しています。
 
-	![Android 上のフォアグラウンドのプッシュ通知](images/Android_Screenshot.jpg)
+![Android 上のフォアグラウンドのプッシュ通知](images/Android_Screenshot.jpg)
 
-	![iOS 上のフォアグラウンドのプッシュ通知](images/iOS_Screenshot.jpg)
+![iOS 上のフォアグラウンドのプッシュ通知](images/iOS_Screenshot.jpg)
 
-	次のスクリーン・ショットは、Android のバックグラウンドでのプッシュ通知を示しています。
-	![Android 上のバックグラウンドのプッシュ通知](images/background.jpg)
+   以下のイメージは、Android のバックグラウンドでの{{site.data.keyword.mobilepushshort}}を示しています。
+![Android 上のバックグラウンドのプッシュ通知](images/background.jpg)
 
 
 
@@ -382,6 +394,6 @@ CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 
 基本通知を正常にセットアップしたら、タグ・ベースの通知および詳細オプションの構成を行うことができます。
 
-以下の Push Notifications Service の機能を、ご使用のアプリに追加します。
+{{site.data.keyword.mobilepushshort}}サービスの機能をアプリに追加します。
 タグ・ベースの通知を使用する場合は、[タグ・ベースの通知](c_tag_basednotifications.html)を参照してください。
 拡張通知オプションを使用する場合は、[拡張プッシュ通知](t_advance_notifications.html)を参照してください。

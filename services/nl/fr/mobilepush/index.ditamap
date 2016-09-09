@@ -89,7 +89,7 @@ navtitle="Abonnement à des balises et désabonnement" scope="peer"/>
 navtitle="Utilisation de notifications basées sur les balises" scope="peer"/>
 </topicref>
 <topicref href="c_user_basednotifications.html" format="html"
-navtitle="Activation des notifications utilisateur" scope="peer" chunk="to-content" linking="normal"
+navtitle="Activation des notifications utilisateur " scope="peer" chunk="to-content" linking="normal"
 outputclass="subsection">
 <topicref href="t_manage_user.html" format="html" navtitle="Enregistrement du périphérique avec l'ID utilisateur "
 scope="peer" linking="normal" outputclass="subsection"/>

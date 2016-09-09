@@ -7,7 +7,7 @@ copyright:
 
 # Hintergrundbenachrichtigungen für iOS verarbeiten
 {: #silent-notifications}
-*Letzte Aktualisierung: 14. Juni 2016*
+Letzte Aktualisierung: 16. August 2016
 {: .last-updated}
 
 Hintergrundbenachrichtigungen werden nicht auf dem Gerät angezeigt. Diese Benachrichtigungen werden von der Anwendung im Hintergrund empfangen; dadurch wird die Anwendung für maximal 30 Sekunden aktiviert, um die angegebene Hintergrundtask auszuführen. Der Eingang der Benachrichtigung wird vom Benutzer möglicherweise nicht bemerkt. Verwenden Sie zum Senden von Hintergrundbenachrichtigungen für iOS die [REST-API](https://mobile.{DomainName}/imfpushrestapidocs/).   

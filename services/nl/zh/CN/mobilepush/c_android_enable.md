@@ -6,12 +6,12 @@ copyright:
 ---
 
 
-# 使 Android 应用程序能够接收推送通知
+# 使 Android 应用程序能够接收 {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-*上次更新时间：2016 年 7 月 20 日*
+上次更新时间：2016 年 8 月 16 日
 {: .last-updated}
 
-使 Android 应用程序能够接收推送通知，并向您的设备发送推送通知。
+使 Android 应用程序能够接收 {{site.data.keyword.mobilepushshort}}，并向您的设备发送 {{site.data.keyword.mobilepushshort}}。
 
 ## 使用 Gradle 安装客户机推送 SDK
 {: #android_install}
@@ -20,7 +20,8 @@ copyright:
 
 可以使用 Gradle 来添加 Bluemix® Mobile Services 推送 SDK。Gradle 会从存储库自动下载工件，并使这些工件可用于您的 Android 应用程序。确保正确设置了 Android Studio 和 Android Studio SDK。有关如何设置系统的更多信息，请参阅 [Android Studio 概述](https://developer.android.com/tools/studio/index.html)。有关 Gradle 的信息，请参阅[配置 Gradle 构建](http://developer.android.com/tools/building/configuring-gradle.html)。
 
-1. 在 Android Studio 中，创建并打开移动应用程序后，打开应用程序 **build.gradle** 文件。然后，将以下依赖关系添加到移动应用程序中。代码片段需要这些导入语句：
+1. 在 Android Studio 中，创建并打开移动应用程序后，打开应用程序 **build.gradle** 文件。 
+2. 将以下依赖关系添加到移动应用程序中。代码片段需要以下导入语句：
 
 	```
 	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
@@ -36,7 +37,11 @@ copyright:
 
 	```
 	dependencies {
-	  compile 'com.google.android.gms:play-services:9.0.2' // Automatically pulls in version 2.0 core SDK3 compile group: 'com.ibm.mobilefirstplatform.clientsdk.android', name: 'push', version: '2.+', ext: 'aar', transitive: true
+	  compile group: 'com.ibm.mobilefirstplatform.clientsdk.android', 
+		name: 'push', 
+		version: '2.+',
+		ext: 'aar', 
+		transitive: true
 	}  
 	```
 3. 在 **AndroidManifest.xml** 文件中，添加以下许可权，要查看样本清单，请参阅 [Android helloPush 样本应用程序](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)。要查看样本 Gradle 文件，请参阅[样本构建 Gradle 文件](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle)。
@@ -51,9 +56,7 @@ copyright:
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
-
-	您可以在此阅读有关 [Android 许可权](http://developer.android.com/guide/topics/security/permissions.html)的更多信息。
-
+在此阅读有关 [Android 许可权](http://developer.android.com/guide/topics/security/permissions.html)的更多信息。
 4. 添加活动的通知意向设置。此设置会在用户单击通知区域中收到的通知时启动应用程序。
 
 	```
@@ -91,7 +94,8 @@ copyright:
 
 在 Android 应用程序中，通常会将初始化代码放置在主活动的 onCreate 方法中。
 
-单击 Bluemix 应用程序仪表板中的**移动选项**链接，以获取应用程序路径和应用程序 GUID。将这些值用于您的路径和应用程序 GUID。修改代码片段以使用 Bluemix 应用程序的 appRoute 和 appGUID 参数。
+要获取应用程序路径和应用程序 GUID，请在导航窗格中针对已初始化的推送服务选择“配置”选项，然后单击**移动选项**。
+将这些值用于您的路径和应用程序 GUID。修改代码片段以使用 Bluemix 应用程序的 appRoute 和 appGUID 参数。
 
 
 ###初始化核心 SDK
@@ -103,15 +107,18 @@ BMSClient.getInstance().initialize(getApplicationContext(), appRoute , appGuid, 
 ```
 
 
-**appRoute**
+####appRoute
+{: approute}
 
 指定分配给在 Bluemix 上创建的服务器应用程序的路径。
 
-**AppGUID**
+####AppGUID
+{: appguid}
 
-指定分配给在 Bluemix 上创建的应用程序的唯一键。此值区分大小写。
+指定分配给在 Bluemix 上 {{site.data.keyword.mobilepushshort}} 服务实例的唯一键。此值区分大小写。您可以从“推送”仪表板的“移动选项”中获取此值。
 
-**bluemixRegionSuffix**
+####bluemixRegionSuffix
+{: bluemixRegionSuffix}
 
 指定托管应用程序的位置。可以使用以下三个值中的一个值：
 
@@ -124,22 +131,23 @@ BMSClient.getInstance().initialize(getApplicationContext(), appRoute , appGuid, 
 ```
 //Initialize client Push SDK for Java
 MFPPush push = MFPPush.getInstance();
-push.initialize(getApplicationContext());
+push.initialize(getApplicationContext(), "AppGUID");
 ```
-**pushTenantId**
+####AppGUID
+{: AppGUID}
 
-此为 Push Notifications 服务的唯一键。
+此为 {{site.data.keyword.mobilepushshort}} 服务的 AppGUID 键。
 
 ## 注册 Android 设备
 {: #android_register}
 
-使用 `IMFPush.register()` API 可向 Push Notifications 服务注册设备。对于注册 Android 设备，您首先要在 Bluemix 推送服务配置仪表板中添加 Google 云消息传递 (GCM) 信息。有关更多信息，请参阅[为 Google 云消息传递配置凭证](t_push_provider_android.html)。
+使用 `MFPPush.register()` API 可向 {{site.data.keyword.mobilepushshort}} 服务注册设备。对于注册 Android 设备，请在 Bluemix {{site.data.keyword.mobilepushshort}} 服务配置仪表板中添加 Google 云消息传递 (GCM) 信息。有关更多信息，请参阅[为 Google 云消息传递配置凭证](t_push_provider_android.html)。
 
 将以下代码片段复制并粘贴到 Android 移动应用程序中。
 
 ```
 	//Register Android devices
-	push.register(new MFPPushResponseListener<String>() {
+	push.registerDevice(new MFPPushResponseListener<String>() {
 	    @Override
 	    public void onSuccess(String deviceId) {
 	           //handle success here
@@ -177,33 +185,32 @@ push.initialize(getApplicationContext());
 	       push.listen(notificationListener);
 	   }
 	}
-```
-2. 构建项目，然后在设备或仿真器上运行该项目。在 register() 方法中针对响应侦听器调用 onSuccess() 方法时，这证实设备已成功注册 Push Notifications 服务。此时，可以如“发送基本推送通知”中所述发送消息。
+  ```
+2. 构建项目，然后在设备或仿真器上运行该项目。在 register() 方法中针对响应侦听器调用 onSuccess() 方法时，这证实设备已成功注册 {{site.data.keyword.mobilepushshort}} 服务。此时，可以如“发送基本推送通知”中所述发送消息。
 3. 验证设备是否收到通知。如果应用程序在前台运行，那么通知将由 **MFPPushNotificationListener** 进行处理。如果应用程序在后台运行，那么通知栏中会显示一条消息。
 
 
-## 发送基本推送通知
+## 发送基本 {{site.data.keyword.mobilepushshort}}
 {: #send}
 
 开发应用程序后，可以发送基本推送通知（不使用标记、角标、其他有效内容或声音文件）。
 
-
-发送基本推送通知。
-
 1. 在**选择受众**中，选择以下某个受众：**所有设备**，或者按平台选择：**仅限 iOS 设备**或**仅限 Android 设备**。
 
-	**注**：选择**所有设备**选项时，预订了推送通知的所有设备都会收到您的通知。
+	**注**：选择**所有设备**选项时，预订了推送通知的所有设备都会收到通知。
 
-	![“通知”屏幕](images/tag_notification.jpg)
+![“通知”屏幕](images/tag_notification.jpg)
 
 2. 在**创建通知**中，输入消息，然后单击**发送**。
-3. 验证设备是否收到通知。
+3. 验证设备是否收到通知。以下屏幕快照显示了在 Android 设备上前台处理推送通知的警报框。
 
-	以下屏幕快照显示了在 Android 设备上前台处理推送通知的警报框。
 
-	![Android 上的前台推送通知](images/Android_Screenshot.jpg)
 
-	以下屏幕快照显示了 Android 后台的推送通知。
+![Android 上的前台推送通知](images/Android_Screenshot.jpg)
+
+以下屏幕快照显示了 Android 后台的推送通知。
+
+
  ![Android 上的后台推送通知](images/background.jpg)
 
 

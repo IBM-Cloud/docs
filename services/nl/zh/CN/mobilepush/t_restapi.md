@@ -7,12 +7,12 @@ copyright:
 
 # 使用 REST API
 {: #push-api-rest}
-*上次更新时间：2016 年 7 月 12 日*
+上次更新时间：2016 年 8 月 16 日
 {: .last-updated}
 
-您可以将 REST（具象状态传输）API（应用程序编程接口）用于推送通知。还可以使用 SDK 和 [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) 来进一步开发您的客户机应用程序。
+您可以将 REST（具象状态传输）API（应用程序编程接口）用于 {{site.data.keyword.mobilepushshort}}。还可以使用 SDK 和 [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) 来进一步开发您的客户机应用程序。
 
-通过 Push REST API，后端服务器应用程序和客户机可以访问 Push 功能。
+通过 Push REST API，后端服务器应用程序和客户机可以访问 {{site.data.keyword.mobilepushshort}} 功能。
 
 - 设备注册
 - 注册
@@ -20,14 +20,19 @@ copyright:
 - 预订
 - 标记
 
-要获取 REST API 的基本 URL，请执行以下操作：
+要获取 REST API 的基本 URL，请完成以下步骤：
 
-1. 在 Bluemix®“目录”的“样板”部分中创建后端应用程序，这会自动将该 Push 服务绑定到此应用程序。如果已创建后端应用程序，请务必将该应用程序绑定到 Push Notifications 服务。 
+1. 通过选择 MobileFirst Services Starter，在 Bluemix®“目录”的“样板”部分中创建后端应用程序。这可将 {{site.data.keyword.mobilepushshort}} 服务绑定到应用程序。您还可以创建 Push 的服务实例，并保留其为未绑定状态。 
+1. 在 Bluemix“仪表板”的主页中，转至**应用程序**区域，然后选择您的应用程序。
+3. 单击**移动选项**。路径和应用程序 GUID 值会显示在应用程序的详细信息页面顶部。“显示凭证”屏幕将显示有关 appSecret 的信息。您可以从“移动选项”获取应用程序私钥，也可以获取一些 API 的客户机私钥。
 
-1. 在 Bluemix“仪表板”的主页中，转至**应用程序**区域，然后单击您的应用程序。
+您还可以使用命令行来获取服务凭证：
 
-3. 单击“移动选项”。路径和应用程序 GUID 值会显示在应用程序的详细信息页面顶部。
+```
+ cf create-service-key {push_instance_name} {key_name}
 
+ cf service-key {push_instance_name} {key_name}
+```
 
 
 ## 接受语言头
@@ -38,9 +43,9 @@ copyright:
 ## appSecret
 {: #push-api-rest-secret}
 
-应用程序绑定到 Push Notifications 后，该服务会生成一个 appSecret（唯一密钥），并会在响应头中传递该密钥。如果是使用 IBM® Push Notifications for Bluemix Rest API，请使用 REST API 参考来获取有关需要保护哪些 API 的信息。有关 REST API 的信息，请参阅 REST API 参考。
+应用程序绑定到 {{site.data.keyword.mobilepushshort}} 后，该服务会生成一个 appSecret（唯一键），并会在响应头中传递该键。如果是使用 IBM® {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，请使用 REST API 参考来获取有关需要保护哪些 API 的信息。有关 REST API 的信息，请参阅 REST API 参考。
 
-请求头必须包含 appSecret。如果不包含，服务器会返回“401 未授权”错误代码。将推送通知添加到应用程序时，会创建特定的 AppID。在响应中，您会得到一个名为 appSecret 的头，该头用于创建标记或发送消息。该操作通过目录或样板中的服务来执行。
+请求头必须包含 appSecret。如果不包含，服务器会返回“401 未授权”错误代码。将 {{site.data.keyword.mobilepushshort}} 添加到应用程序时，会创建特定的 AppID。在响应中，您会得到一个名为 appSecret 的头，该头用于创建标记或发送消息。该操作通过目录或样板中的服务来执行。
 
 要获取 appSecret 值，请执行以下操作：
 
@@ -69,7 +74,9 @@ copyright:
 ##Push REST API 过滤器
 {: #push-api-rest-filters}
 
-过滤器定义搜索条件，该条件用于限制从 Push 的 GET API 返回的数据。针对要过滤的 GET 操作结果应用过滤器。过滤器会限制结果中包含的条目数。例如，可以使用过滤器来搜索以“test”开头的标记。要生成过滤器，可以使用以下语法。
+过滤器定义搜索条件，该条件用于限制从 {{site.data.keyword.mobilepushshort}} 的 GET API 返回的数据。针对要过滤的 GET 操作结果应用过滤器。过滤器会限制结果中包含的条目数。例如，可以使用过滤器来搜索以“test”开头的标记。 
+
+使用以下语法，可生成过滤器：
 
 **名称**
 要应用过滤器的字段名称。
@@ -106,7 +113,7 @@ copyright:
 - 如果使用 ==，那么值必须为完全匹配的字符串。
 
 
-##推送通知响应代码
+##{{site.data.keyword.mobilepushshort}} 响应代码
 {: #push-api-response-codes}
 
 状态：405 不允许的方法 - 应使用适当的方法。

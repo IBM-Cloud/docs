@@ -7,7 +7,7 @@ copyright:
 
 # 管理标记
 {: #manage_tags}
-*上次更新时间：2016 年 6 月 14 日*
+上次更新时间：2016 年 8 月 16 日
 {: .last-updated}
 
 使用“推送”仪表板，可以创建和删除应用程序的标记，然后初始化基于标记的通知。预订了标记的设备会收到基于该标记的通知。
@@ -16,7 +16,7 @@ copyright:
 ## 创建标记
 {: #create_tags}
 
-基于标记的通知是针对预订了特定标记的所有设备的通知消息。每个设备都可以预订任意数量的标记。删除标记时，与该标记关联的所有信息（包括其订户和设备）都会一并删除。无需对此标记自动取消预订，因为此标记不再存在，因此也不需要从客户机端执行进一步的操作。
+基于标记的通知是针对预订了特定标记的所有设备的消息。每个设备都可以预订任意数量的标记。删除标记时，与该标记关联的信息（包括其订户和设备）都会一并删除。无需对此标记自动取消预订，因为此标记不再存在，因此也不需要从客户机端执行进一步的操作。
 
 1. 在“推送”仪表板上，选择**标记**选项卡。
 1. 单击 + **创建标记**按钮。   
@@ -47,11 +47,12 @@ copyright:
 # 获取标记
 {: #get_tags}
 
-标记不同于发送给所有应用程序的一般性广播，通过标记，可以根据用户的兴趣发送有针对性的通知。您可以使用“推送”仪表板上的“标记”选项卡或使用 REST API 来创建和管理标记。您可以使用以下部分中的代码片段来管理和查询移动应用程序的标记预订。还可以使用这些代码片段来获取预订、预订标记、取消预订标记，以及获取可用标记的列表。您可将这些代码片段复制并粘贴到移动应用程序中。
+标记不同于发送给所有应用程序的一般性广播，通过标记，可以根据用户的兴趣发送有针对性的通知。您可以使用“推送”仪表板上的“标记”选项卡或使用 REST API 来创建和管理标记。您可以使用代码片段来管理和查询移动应用程序的标记预订。还可以使用这些代码片段来获取预订、预订标记、取消预订标记，以及获取可用标记的列表。将这些代码片段复制并粘贴到移动应用程序中。
 
 ## Android
+{: android-get-tags}
 
-**getTags** API 会返回设备可预订的可用标记的列表。在预订特定标记后，设备可以接收针对该标记发送的任何推送通知。
+**getTags** API 会返回设备可预订的可用标记的列表。在设备预订特定标记后，该设备可以接收针对该标记发送的 {{site.data.keyword.mobilepushshort}}。
 
 将以下代码片段复制到 Android 移动应用程序中，以获取设备所预订的标记的列表以及获取可用标记的列表。
 
@@ -94,6 +95,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 ```
 
 ## Cordova
+{: cordova-get-tags}
 
 将以下代码片段复制到移动应用程序中，以获取设备所预订的标记的列表以及获取设备可预订的可用标记的列表。
 
@@ -113,6 +115,7 @@ alert(tags);
 ```
 
 ## Objective-C
+{: objc-get-tags}
 
 将以下代码片段复制到使用 Objective-C 开发的 iOS 应用程序中，以获取设备所预订的标记的列表以及获取设备可预订的可用标记的列表。
 
@@ -152,10 +155,11 @@ subscribedTags = [response subscriptions];
 ```
 
 ## Swift
+{: swift-get-tags}
 
-**retrieveAvailableTagsWithCompletionHandler** API 会返回设备可预订的可用标记的列表。在预订特定标记后，设备可以接收针对该标记发送的任何推送通知。
+**retrieveAvailableTagsWithCompletionHandler** API 会返回设备可预订的可用标记的列表。在设备预订特定标记后，该设备可以接收针对该标记发送的 {{site.data.keyword.mobilepushshort}}。
 
-调用推送服务来预订标记。
+调用 {{site.data.keyword.mobilepushshort}} 来预订标记。
 
 将以下代码片段复制到 Swift 移动应用程序中，以获取设备所预订的标记的列表以及获取设备可预订的可用标记的列表。
 
@@ -194,6 +198,7 @@ print( "Error during retrieving subscribed tags \(error) ")
 使用以下代码片段可允许设备获取预订、预订某个标记以及取消预订某个标记。
 
 ## Android
+{: android-subscribe-tags}
 
 将以下代码片段复制并粘贴到 Android 移动应用程序中。
 
@@ -228,6 +233,7 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 
 ## Cordova
+{: cordova-subscribe-tags}
 
 将以下代码片段复制并粘贴到 Cordova 移动应用程序中。
 
@@ -238,6 +244,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 
 ## Objective-C
+{: objc-subscribe-tags}
 
 将以下代码片段复制并粘贴到 Objective-C 移动应用程序中。
 
@@ -273,6 +280,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 
 ## Swift
+{: swift-subscribe-tags}
 
 将以下代码片段复制并粘贴到 Swift 移动应用程序中。
 
@@ -311,9 +319,10 @@ print( "Error during  unsubscribed tags \(error) ")
 {: #using_tags}
 
 
-基于标记的通知是针对预订了特定标记的所有设备的通知消息。每个设备都可以预订任意数量的标记。本部分描述了如何发送基于标记的通知。预订通过 Push Notifications 服务 Bluemix 实例进行维护。删除标记时，与该标记关联的所有信息（包括其订户和设备）都会一并删除。无需对此标记自动取消预订，因为此标记不再存在，因此也不需要从客户机端执行进一步的操作。
+基于标记的通知是针对预订了特定标记的所有设备的消息。每个设备都可以预订任意数量的标记。本部分描述了如何发送基于标记的通知。预订通过 {{site.data.keyword.mobilepushshort}} 服务 Bluemix 实例进行维护。删除标记时，与该标记关联的所有信息（包括其订户和设备）都会一并删除。无需对此标记自动取消预订，因为此标记不再存在，因此也不需要从客户机端执行进一步的操作。
 
-**开始之前**
+###开始之前
+{: before-you-begin}
 
 在**标记**屏幕上创建标记。有关如何创建标记的信息，请参阅[创建标记](t_manage_tags.html)。
 

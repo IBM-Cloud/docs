@@ -7,7 +7,7 @@ copyright:
 
 # 处理针对 iOS 的静默通知
 {: #silent-notifications}
-*上次更新时间：2016 年 6 月 14 日*
+上次更新时间：2016 年 8 月 16 日
 {: .last-updated}
 
 静默通知不会显示在设备屏幕上。这些通知由应用程序在后台进行接收，这会将应用程序唤醒最多 30 秒来执行指定的后台任务。用户可能并不知道有通知到达。要发送针对 iOS 的静默通知，请使用 [REST API](https://mobile.{DomainName}/imfpushrestapidocs/)。   
@@ -44,9 +44,8 @@ copyright:
 
 ```
 //For Swift
-
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-       let contentAPS = userInfo["aps"] as [NSObject : AnyObject]
+let contentAPS = userInfo["aps"] as [NSObject : AnyObject]
        if let contentAvailable = contentAPS["content-available"] as? Int {
            //silent or mixed push
            if contentAvailable == 1 {
