@@ -9,7 +9,7 @@ copyright:
 
 # Cómo empezar con el ejemplo de Hello Bluemix for Cordova
 {: #gettingstarted-cordova}
-*Última actualización: 27 de mayo de 2016*
+Última actualización: 27 de mayo de 2016
 {: .last-updated}
 
 Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utilizar la app HelloWorld. Esta app muestra cómo conectar con el backend móvil en {{site.data.keyword.Bluemix}} desde una app móvil sin autenticación. La app la tiene instalado el SDK. Cuando esté listo, puede obtener las bibliotecas específicas que desee utilizar en la app.
@@ -69,7 +69,7 @@ Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utiliz
 
 	1. Utilice la versión más reciente de Xcode para abrir el archivo `xcode.proj` en el directorio *&lt;nombre_app&gt;*/platforms/ios.
 
-		**Importante:** Si recibe un mensaje solicitando si desea convertir a la última sintaxis Swift, pulse **Cancelar**.
+		**Importante:** Si recibe un mensaje para convertir a la última sintaxis Swift, pulse **Cancelar**.
 
 	2. Vaya a **Valores de compilación > Compilador de Swift - Generación de códigos > Cabecera puente de Objective-C** y añada la siguiente vía de acceso:
 
@@ -121,7 +121,7 @@ Se mostrará una aplicación de vista única con un botón **PING BLUEMIX**. Cua
 Si la conexión falla, verá:
   `Algo salió mal`
   {: screen}
-
+   
 En el mensaje se incluye más información sobre el error. Puede comprobar los siguientes elementos para resolver el error:
 
 - Compruebe que ha pegado correctamente los valores de ruta y de GUID:

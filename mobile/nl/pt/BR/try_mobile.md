@@ -1,10 +1,10 @@
 # Criando aplicativos móveis a partir do modelo {{site.data.keyword.mobilefirstbp}} Starter
 {: #try_mobile}
-*Última atualização: 18 de julho de 2016*
-{: .last-updated}
+Última atualização: 18 de julho de 2016
+{: .last-updated} 
 
 É possível usar cada um dos Serviços móveis do {{site.data.keyword.Bluemix}} de forma independente. Também é possível usá-los
-juntos, com o modelo do {{site.data.keyword.mobilefirstbp}} Starter, para se beneficiar ao máximo.
+juntos, com o modelo do {{site.data.keyword.mobilefirstbp}} Starter, para se beneficiar ao máximo. 
 
 Para começar, use o {{site.data.keyword.mobilefirstbp}} Starter para criar seu aplicativo. O modelo permite concluir as ações a
 seguir:
@@ -13,7 +13,7 @@ seguir:
 * Provisione uma instância de cada um dos Serviços móveis do {{site.data.keyword.Bluemix_notm}} e ligue o serviço ao aplicativo Node.js.
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
 -->
 
 Após usar o modelo do {{site.data.keyword.mobilefirstbp}} Starter para criar seu aplicativo, é possível obter amostras Hello Bluemix para cada um dos serviços ou iniciar a instrumentação do seu aplicativo existente para usar serviços {{site.data.keyword.Bluemix_notm}}.

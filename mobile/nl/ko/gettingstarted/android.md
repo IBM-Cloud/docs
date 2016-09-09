@@ -10,7 +10,7 @@ copyright:
 
 # Android용 Hello Bluemix 샘플 시작하기
 {: #gettingstarted-android}
-*마지막 업데이트 날짜: 2016년 5월 27일*
+마지막 업데이트 날짜: 2016년 5월 27일
 {: .last-updated}  
 
 새 Android 애플리케이션을 시작하고자 하는 경우 HelloWorld 앱을 사용할 수 있습니다. 이 앱에서는 인증 없이 모바일 앱에서 {{site.data.keyword.Bluemix}} 백엔드에 연결하는 방법을 예시합니다. 앱에는 이미 SDK가 설치되어 있습니다. 준비가 완료되면 사용자는 앱에서 사용할 특정 라이브러리를 가져올 수 있습니다.

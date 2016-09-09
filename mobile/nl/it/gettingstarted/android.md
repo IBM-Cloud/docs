@@ -10,7 +10,7 @@ copyright:
 
 # Introduzione all'esempio Hello Bluemix per Android
 {: #gettingstarted-android}
-*Ultimo aggiornamento: 27 maggio 2016*
+Ultimo aggiornamento: 27 maggio 2016
 {: .last-updated}  
 
 Se desideri iniziare a lavorare con una nuova applicazione Android, puoi utilizzare l'applicazione HelloWorld. Questa applicazione illustra come stabilire una connessione al tuo backend {{site.data.keyword.Bluemix}} da un'applicazione mobile senza autenticazione. Nell'applicazione è già installato l'SDK. Quando sei pronto, puoi ottenere le specifiche librerie

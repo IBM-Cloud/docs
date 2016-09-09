@@ -10,7 +10,7 @@ copyright:
 
 # 開始使用 Hello Bluemix for Android 範例
 {: #gettingstarted-android}
-*前次更新：2016 年 5 月 27 日*
+前次更新：2016 年 5 月 27 日
 {: .last-updated}  
 
 如果您要開始使用新的 Android 應用程式，可以使用 HelloWorld 應用程式。這個應用程式會示範如何從行動應用程式連接到

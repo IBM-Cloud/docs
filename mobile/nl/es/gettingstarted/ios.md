@@ -10,7 +10,7 @@ copyright:
 
 # Cómo empezar con el ejemplo de Hello Bluemix for iOS
 {: #gettingstarted-android}
-*Última actualización: 1 de junio de 2016*
+Última actualización: 1 de junio de 2016
 {: .last-updated}  
 
 Si desea empezar a trabajar con una aplicación para iOS nueva, puede utilizar la app Hello Bluemix. Esta app muestra cómo conectar con el programa de fondo de {{site.data.keyword.Bluemix}} desde una app para móvil sin autenticación. Cuando esté listo, puede obtener las bibliotecas específicas que desee utilizar en la app.
@@ -31,7 +31,7 @@ Si desea empezar a trabajar con una aplicación para iOS nueva, puede utilizar l
 3. Ejecute el ejemplo en el entorno de desarrollo. En Xcode, pulse **Producto&gt;Ejecutar**. Se inicia un simulador de iOS.
 
 	**Importante:** La appRoute debe utilizar un protocolo `https` y no `http`, o podría obtener un error de conexión, debido a los valores de seguridad del transporte de la app. Puede obtener más información sobre estos valores en la publicación del blog [Conecte la app de iOS 9 a Bluemix ahora mismo](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/).
-
+	
 4. En el simulador, pulse **Ping
                 {{site.data.keyword.Bluemix_notm}}**. La app de ejemplo obtiene la cabecera de autorización del servicio de Mobile Client Access. Si ping se ejecuta correctamente, el texto del simulador se actualiza.
 
@@ -44,7 +44,7 @@ Si desea empezar a trabajar con una aplicación para iOS nueva, puede utilizar l
 -->
 
   Si la conexión falla, verá:
-  `Algo salió mal`
+  `Bummer. Something went wrong`
   {: screen}
 
  <!--

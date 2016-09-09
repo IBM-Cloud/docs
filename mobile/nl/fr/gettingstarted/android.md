@@ -10,7 +10,7 @@ copyright:
 
 # Mise en route - Exemple Hello Bluemix pour Android
 {: #gettingstarted-android}
-*Dernière mise à jour : 27 mai 2016*
+Dernière mise à jour : 27 mai 2016
 {: .last-updated}  
 
 Si vous voulez débuter avec une nouvelle application Android, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application

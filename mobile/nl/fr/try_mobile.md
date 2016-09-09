@@ -1,19 +1,19 @@
 # Création d'applications mobiles depuis le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} Starter
 {: #try_mobile}
-*Dernière mise à jour : 18 juillet 2016*
-{: .last-updated}
+Dernière mise à jour : 18 juillet 2016
+{: .last-updated} 
 
 Vous pouvez utiliser chacun des services {{site.data.keyword.Bluemix}} Mobile indépendamment. Il vous est aussi possible de les utiliser ensemble, avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} Starter, pour en tirer le meilleur
-profit.
+profit. 
 
 Pour commencer, utilisez {{site.data.keyword.mobilefirstbp}} Starter afin de créer votre application. Le conteneur boilerplate vous permet d'effectuer les actions suivantes :
 
 * Création d'un contexte d'exécution Node.js avec un modèle d'application. Vous pouvez utiliser cette application pour fournir des fonctions côté serveur,
-comme des API RESTful et des fichiers statiques. <!-- You can read more about operating this application in the Developing Mobile Backend section.-->
+comme des API RESTful et des fichiers statiques.<!-- You can read more about operating this application in the Developing Mobile Backend section.--> 
 * Mise à disposition d'une instance de chaque service {{site.data.keyword.Bluemix_notm}} Mobile et liaison du service à l'application Node.js.
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
 -->
 
 Après avoir utilisé le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} Starter pour créer votre application, vous pouvez vous
@@ -38,7 +38,8 @@ pour un traitement logique personnalisé ou pour la connexion à des API REST da
 créez dans {{site.data.keyword.Bluemix_notm}} possède un ID d'application unique. Votre application mobile utilise cet ID avec le logiciel SDK afin d'accéder aux services qui
 lui sont associés. L'ID d'application est utilisé par la plateforme comme contexte pour les fonctions communes, telles que la mesure et la
 journalisation.
-<!--You can read more about operating this application in the "Developing Mobile Backend" section.--></td>
+<!--You can read more about operating this application in the "Developing Mobile Backend" section.-->
+</td>
 <td valign="top"><b>Fournisseur d'informations</b> <br/>Vous pouvez utiliser un contexte d'exécution Node.js hébergé dans {{site.data.keyword.Bluemix_notm}} pour vous connecter
 à tout type de fournisseur d'informations :
 <ul>

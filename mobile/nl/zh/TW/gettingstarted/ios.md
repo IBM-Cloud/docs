@@ -10,7 +10,7 @@ copyright:
 
 # 開始使用 Hello Bluemix for iOS 範例
 {: #gettingstarted-android}
-*前次更新：2016 年 6 月 1 日*
+前次更新：2016 年 6 月 1 日
 {: .last-updated}  
 
 如果您要開始使用新的 iOS 應用程式，可以使用 Hello Bluemix 應用程式。這個應用程式會示範如何從行動應用程式連接到 {{site.data.keyword.Bluemix}} 後端而不需鑑別。當您準備好時，便可以取得想要在應用程式中使用的特定程式庫。
@@ -31,7 +31,7 @@ copyright:
 3. 在開發環境中執行範例。在 Xcode 中，按一下**產品&gt;執行**。隨即啟動 iOS 模擬器。
 
 	**重要事項：**您的 appRoute 必須使用 `https` 通訊協定，而不是 `http`，否則可能由於應用程式傳輸安全設定而發生連線失敗。您可以在 [Connect your iOS 9 app to Bluemix today ](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/) 部落格文章中深入閱讀那些設定。
-
+	
 4. 在模擬器中，按一下 **Ping {{site.data.keyword.Bluemix_notm}}**。範例應用程式會從 Mobile Client Access 服務取得授權標頭。如果連線測試成功，模擬器中的文字會更新。
 
   順利從 Xcode 中的行動應用程式連接至 {{site.data.keyword.Bluemix_notm}} 時，您會看到：

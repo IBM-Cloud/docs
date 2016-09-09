@@ -10,7 +10,7 @@ copyright:
 
 # Android 用 Hello Bluemix サンプル入門
 {: #gettingstarted-android}
-*最終更新日: 2016 年 5 月 27 日*
+最終更新日: 2016 年 5 月 27 日
 {: .last-updated}  
 
 新規 Android アプリケーションを始める場合は、HelloWorld というアプリが使用できます。このアプリは、モバイル・アプリから {{site.data.keyword.Bluemix}} バックエンドへ認証を行わずに接続する方法を示す実例となっています。

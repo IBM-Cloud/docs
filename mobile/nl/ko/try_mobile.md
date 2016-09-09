@@ -1,9 +1,9 @@
 # {{site.data.keyword.mobilefirstbp}} 스타터 표준 유형에서 모바일 앱 작성
 {: #try_mobile}
-*마지막 업데이트 날짜: 2016년 7월 18일*
-{: .last-updated}
+마지막 업데이트 날짜: 2016년 7월 18일
+{: .last-updated} 
 
-각각의 {{site.data.keyword.Bluemix}} 모바일 서비스를 개별적으로 사용할 수 있습니다. 또한 이점을 극대화하기 위해 {{site.data.keyword.mobilefirstbp}} 스타터 표준 유형을 사용하여 모두 함께 사용할 수도 있습니다.
+각각의 {{site.data.keyword.Bluemix}} 모바일 서비스를 개별적으로 사용할 수 있습니다. 또한 이점을 극대화하기 위해 {{site.data.keyword.mobilefirstbp}} 스타터 표준 유형을 사용하여 모두 함께 사용할 수도 있습니다. 
 
 시작하려면 {{site.data.keyword.mobilefirstbp}} 스타터를 사용하여 앱을 작성하십시오. 표준 유형을 통해 다음 조치를 완료할 수 있습니다.
 
@@ -11,7 +11,7 @@
 * 각 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 인스턴스를 프로비저닝하고 Node.js 애플리케이션에 서비스를 바인드합니다.
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
 -->
 
 {{site.data.keyword.mobilefirstbp}} 스타터 표준 유형을 사용하여 앱을 작성한 후, 각 서비스의 Hello Bluemix 샘플을 가져오거나 기존 앱의 인스트루먼트를 시작하여 {{site.data.keyword.Bluemix_notm}} 서비스를 사용할 수 있습니다.

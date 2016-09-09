@@ -10,7 +10,7 @@ copyright:
 
 # Mise en route - Exemple Hello Bluemix pour iOS
 {: #gettingstarted-android}
-*Dernière mise à jour : 1er juin 2016*
+Dernière mise à jour : 1er juin 2016
 {: .last-updated}  
 
 Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application Hello Bluemix. Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
@@ -33,8 +33,8 @@ terminal, puis entrez la commande suivante :
 
 3. Exécutez l'exemple dans votre environnement de développement. Dans Xcode, cliquez sur **Product&gt;Run**. Un simulateur iOS démarre.
 
-	**Important :** votre valeur appRoute doit utiliser un protocole `https` et non`http`, ou vous risquez d'avoir un échec de connexion, dû aux paramètres de sécurité du transport d'appplications.Vous pouvez en savoir plus sur ces paramètres en consultant l'article de blogue [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/) blog post.
-
+	**Important :** votre valeur appRoute doit utiliser un protocole `https` et non`http`, ou vous risquez d'avoir un échec de connexion, dû aux paramètres de sécurité du transport d'appplications. Vous pouvez en savoir plus sur ces paramètres en consultant l'article de blogue [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/) blog post.
+	
 4. Dans le simulateur, cliquez sur **Ping {{site.data.keyword.Bluemix_notm}}**. Le modèle d'application obtient l'en-tête
 d'autorisation depuis le service Mobile Client Access. Si la commande ping aboutit, le texte
 dans le simulateur est mis à jour.

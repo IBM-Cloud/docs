@@ -9,7 +9,7 @@ copyright:
 
 # Introdução à amostra Hello Bluemix for Cordova
 {: #gettingstarted-cordova}
-*Última atualização: 27 de maio de 2016*
+Última atualização: 27 de maio de 2016
 {: .last-updated}
 
 Se desejar iniciar com um novo aplicativo Cordova, é possível usar o app HelloWorld. Este aplicativo demonstra como conectar seu backend móvel ao {{site.data.keyword.Bluemix}} usando um aplicativo móvel sem autenticação. O app já possui o SDK instalado. Quando você estiver pronto, poderá obter as bibliotecas específicas que deseja usar em seu app.
@@ -70,7 +70,8 @@ computador, abra o terminal e, em seguida, insira o comando a seguir:
 
 	1. Use a versão mais recente do Xcode para abrir o arquivo `xcode.proj` no diretório *&lt;app_name&gt;*/platforms/ios.
 
-		**Importante:** se você receber uma mensagem para "Converter para a sintaxe Swift mais recente", clique em **Cancelar**.
+		**Importante:** se você receber uma mensagem para converter para a versão mais recente da sintaxe do
+Swift, clique em **Cancelar**.
 
 	2. Acesse **Configurações de Compilação > Compilador Swift - Geração de Códigos > Cabeçalho de Ponte do Objective-C** e inclua o seguinte caminho:
 
@@ -113,8 +114,8 @@ Um aplicativo de visualização única com um botão **PING BLUEMIX** é exibido
 ![Hello World application successfully connected to Bluemix](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
 -->
 
-  Quando você se conectar com sucesso ao {{site.data.keyword.Bluemix_notm}} a partir do aplicativo móvel no Android Studio, verá:
-`Oba! você está conectado`
+  Quando você se conectar com sucesso ao {{site.data.keyword.Bluemix_notm}} a partir do aplicativo móvel no Android Studio,
+verá: `Oba! você está conectado`
   {: screen}
 
 
@@ -123,7 +124,7 @@ Um aplicativo de visualização única com um botão **PING BLUEMIX** é exibido
 Se a conexão falhar, você verá:
   `Que pena. Algo saiu errado`
   {: screen}
-
+   
 Mais informações sobre o erro estão incluídas na mensagem. É possível verificar os seguintes itens para solucionar seu erro:
 
 - Verifique se você colou corretamente os valores de

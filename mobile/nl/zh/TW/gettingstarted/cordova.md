@@ -9,7 +9,7 @@ copyright:
 
 # 開始使用 Hello Bluemix for Cordova 範例
 {: #gettingstarted-cordova}
-*前次更新：2016 年 5 月 27 日*
+前次更新：2016 年 5 月 27 日
 {: .last-updated}
 
 如果您要開始使用新的 Cordova 應用程式，可以使用 HelloWorld 應用程式。這個應用程式會示範如何從行動應用程式連接到 {{site.data.keyword.Bluemix}} 的行動後端而不需鑑別。應用程式已安裝 SDK。當您準備好時，便可以取得想要在應用程式中使用的特定程式庫。
@@ -69,7 +69,7 @@ copyright:
 
 	1. 使用最新版的 Xcode 來開啟 *&lt;app_name&gt;*/platforms/ios 目錄中的 `xcode.proj` 檔案。
 
-		**重要事項：**如果收到「轉換為最新 Swift 語法」的訊息，請按一下**取消**。
+		**重要事項：**如果收到轉換為最新 Swift 語法的訊息，請按一下**取消**。
 
 	2. 移至**建置設定 > Swift 編譯器 - 產生程式碼 > Objective-C 橋接器標頭**，並新增下列路徑：
 
@@ -121,7 +121,7 @@ copyright:
 如果連線失敗，您會看到：
   `Bummer. Something went wrong`
   {: screen}
-
+   
 訊息中包含了錯誤的相關資訊。您可以檢查下列項目來進行錯誤疑難排解：
 
 - 驗證您已正確地貼上路徑及 GUID 值。

@@ -9,7 +9,7 @@ copyright:
 
 # Mise en route - Exemple Hello Bluemix pour Cordova
 {: #gettingstarted-cordova}
-*Dernière mise à jour : 27 mai 2016*
+Dernière mise à jour : 27 mai 2016
 {: .last-updated}
 
 Si vous voulez débuter avec une nouvelle application Cordova, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à
@@ -73,7 +73,7 @@ terminal, puis entrez la commande suivante :
 
 	1. Utilisez la version la plus récente de Xcode pour ouvrir votre fichier `xcode.proj` dans le répertoire *&lt;nom_app&gt;*/platforms/ios.
 
-		**Important :** si vous recevez le message "Convert to Latest Swift Syntax", cliquez sur **Cancel**.
+		**Important :** si vous recevez le message vous invitant à effectuer une conversion vers la syntaxe Swift la plus récente, cliquez sur **Cancel**.
 
 	2. Accédez à **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** et ajoutez le chemin suivant :
 
@@ -126,7 +126,7 @@ vous avez spécifiée dans le fichier `index.js`.
 
 Si la connexion échoue, le message suivant s'affiche : `Bummer. Something went wrong`
   {: screen}
-
+   
 Ce dernier inclut des informations supplémentaires sur l'erreur. Vous pouvez vérifier les éléments suivants afin de traiter votre erreur :
 
 - Assurez-vous d'avoir collé correctement les valeurs de route et d'identificateur global unique.
