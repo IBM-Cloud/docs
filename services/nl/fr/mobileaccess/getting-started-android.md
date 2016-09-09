@@ -11,7 +11,7 @@ copyright:
 # Configuration du logiciel SDK Android
 {: #getting-started-android}
 
-*Dernière mise à jour : 18 juillet 2016*
+Dernière mise à jour : 2 août 2016
 {: .last-updated}
 
 Instrumentez votre application Android avec le SDK client de {{site.data.keyword.amashort}}, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
@@ -35,17 +35,17 @@ télécharge automatiquement des artefacts depuis les référentiels et les rend
 
 1. Ouvrez le fichier `build.gradle` de votre application (**et non pas** le fichier de projet `build.gradle`).
 
-1. Localisez la section **dependencies** dans le fichier `build.gradle`. Ajoutez une dépendance de compilation pour le SDK client de {{site.data.keyword.amashort}} :
+1. Localisez la section **dependencies** dans le fichier `build.gradle`.  Ajoutez une dépendance de compilation pour le SDK client de {{site.data.keyword.amashort}} :
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
-    	// autres dépendances
-}
+    	// other dependencies  
+	}
 ```
 
 1. Synchronisez votre projet avec Gradle. Cliquez sur **Tools (Outils) &gt; Android &gt; Sync Project with Gradle Files (Synchroniser le projet avec les fichiers Gradle)**.
@@ -75,13 +75,13 @@ principale dans votre application Android, bien que cet emplacement ne soit pas 
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Remplacez `BMSClient.REGION_UK` par la région appropriée.
+Remplacez `BMSClient.REGION_UK` par la région appropriée.  Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**.
 
-## Envoi d'une requête à votre application back end mobile
+## Envoi d'une demande à votre application back end mobile
 {: #request}
 
 Une fois que le SDK client {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des requêtes à votre application back end
-mobile. 
+mobile.
 
 1. Essayez d'envoyer une requête à un noeud final protégé de votre nouvelle application back end mobile. Dans votre navigateur, ouvrez l'URL suivante :
 `{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
@@ -89,6 +89,7 @@ mobile.
 MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message `Non autorisé` est renvoyé dans votre
 navigateur vu que ce noeud final n'est accessible que par les applications mobiles instrumentées avec le SDK client
 {{site.data.keyword.amashort}}.
+
 1. Utilisez votre application Android pour envoyer une requête au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
 
 	```Java

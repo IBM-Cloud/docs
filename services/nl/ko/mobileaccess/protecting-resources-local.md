@@ -8,10 +8,10 @@ copyright:
 # 로컬 개발 환경에서 {{site.data.keyword.amashort}} 사용
 {: #protecting-local}
 
-*마지막 업데이트 날짜: 2016년 7월 17일*
+마지막 업데이트 날짜: 2016년 8월 16일
 {: .last-updated}
 
-{{site.data.keyword.Bluemix}}에서 실행 중인 {{site.data.keyword.amashort}} 서비스를 사용하도록 로컬 개발을 구성할 수 있습니다. 특히, {{site.data.keyword.amashort}} 서버 SDK를 사용하여 로컬로 코드를 개발하고 {{site.data.keyword.amashort}} 요청을 개발 서버에 전송할 수 있습니다. 이러한 요청은 {{site.data.keyword.Bluemix}}에서 실행 중인 {{site.data.keyword.amashort}} 서비스에서 보호합니다. 
+{{site.data.keyword.Bluemix}}에서 실행 중인 {{site.data.keyword.amafull}} 서비스를 사용하도록 로컬 개발을 구성할 수 있습니다. 특히, {{site.data.keyword.amashort}} 서버 SDK를 사용하여 로컬로 코드를 개발하고 {{site.data.keyword.amashort}} 요청을 개발 서버에 전송할 수 있습니다. 이러한 요청은 {{site.data.keyword.Bluemix}}에서 실행 중인 {{site.data.keyword.amashort}} 서비스에서 보호합니다. 
 
 ## 서버 SDK 설정
 {: #serversetup}

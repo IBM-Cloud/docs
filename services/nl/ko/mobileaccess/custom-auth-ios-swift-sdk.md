@@ -9,7 +9,7 @@ copyright:
 
 {: #custom-ios}
 
-*마지막 업데이트 날짜: 2016년 7월 18일*
+마지막 업데이트 날짜: 2016년 8월 1일
 {: .last-updated}
 
 
@@ -66,7 +66,8 @@ copyright:
 1. {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하고 권한 관리자를 MCAAuthorizationManager로 변경하고 인증 위임을 정의한 후 등록하십시오. `<applicationRoute>` 및 `<applicationGUID>`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID**의 값으로 바꾸십시오.
  
 
-   {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 대시보드의 왼쪽 상단 모서리에 있는 페이스 아이콘(![페이스](/face.png "페이스"))을 클릭하십시오.  
+   {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 아바타 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 계정 및 지원 위젯을 여십시오.
+  <!--upper-left corner of the -->
 
   `<yourProtectedRealm>`의 경우 {{site.data.keyword.amashort}} 대시보드의 **사용자 정의** 타일에 정의한 **영역 이름**을 사용하십시오.
 

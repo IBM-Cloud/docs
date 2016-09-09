@@ -17,7 +17,7 @@ copyright:
 
 1. 在 Bluemix 中设置移动后端，并在移动应用程序中配置 SDK。有关更多信息，请参阅[入门](getting-started.html)。
 1. 保护服务器端资源。通过支持移动的 OAuth 安全性，保护正在 Node.js 或 Liberty for Java&trade; 运行时上运行的移动后端资源。有关更多信息，请参阅[保护资源](protecting-resources.html)。
-1. 可选：为应用程序配置身份提供者。可以每个应用程序配置一个身份提供者。配置身份提供者使移动应用程序的用户能够使用其现有 Facebook 或 Google+ 帐户登录。或者，您可以定义用户如何通过创建定制认证来登录。
+1. 可选：为应用程序配置身份提供者。可以为每个应用程序配置一个身份提供者。配置身份提供者使移动应用程序的用户能够使用其现有 Facebook 或 Google+ 帐户登录。或者，您可以定义用户如何通过创建定制认证来登录。
    * [Facebook](facebook-auth-overview.html)
    * [Google](google-auth-overview.html)
    * [定制](custom-auth.html)

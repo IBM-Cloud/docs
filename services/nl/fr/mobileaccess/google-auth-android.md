@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-android}
 
 
-*Dernière mise à jour : 16 juin 2016*
+Dernière mise à jour : 4 août 2016
 {: .last-updated}
 
 ## Avant de commencer
@@ -108,7 +108,7 @@ et **Identificateur global unique de l'application** (`applicationGUID`). Vous a
 	}
 	```
 
-	**Remarque :** vous pouvez retirer la dépendance sur le module `core` du groupe `com.ibm.mobilefirstplatform.clientsdk.android`, si elle figure dans votre fichier. Le module `googleauthentication` le télécharge automatiquement. Le module `googleauthentication` télécharge et installe le logiciel SDK de Google dans votre projet Android.
+	**Remarque :** vous pouvez retirer la dépendance sur le module `core` du groupe `com.ibm.mobilefirstplatform.clientsdk.android`, si elle figure dans votre fichier. Le module `googleauthentication` le télécharge automatiquement. Le module `googleauthentication` télécharge et installe le SDK Google+ dans votre projet Android.
 
 1. Synchronisez votre projet avec Gradle en cliquant sur **Tools (Outils) > Android > Sync Project with Gradle Files (Synchroniser le projet avec les fichiers Gradle)**.
 
@@ -125,8 +125,7 @@ et **Identificateur global unique de l'application** (`applicationGUID`). Vous a
 1. Pour pouvoir utiliser le logiciel SDK client de {{site.data.keyword.amashort}}, vous devez l'initialiser en
 passant les paramètres suivants : le contexte (context), l'identificateur unique global de l'application (applicationGUID) et la route de l'application (applicationRoute).
 
-	En général, vous pouvez placer le code d'initialisation dans la méthode `onCreate` de l'activité
-principale dans votre application Android, bien que cet emplacement ne soit pas obligatoire.
+	En général, vous pouvez placer le code d'initialisation dans la méthode onCreate de l'activité principale de votre application Android.
 
 1. Initialisez le SDK client et enregistrez le gestionnaire d'authentification Google. Remplacez *applicationRoute* et
 *applicationGUID* par les valeurs de **Route** et **Identificateur global unique de l'application** dans la
@@ -137,14 +136,16 @@ section **Options pour application mobile** dans le tableau de bord.
 					"applicationRoute",
 					"applicationGUID",
 					BMSClient.REGION_UK);
+
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
 						
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
 
-  Remplacez `BMSClient.REGION_UK` par la région appropriée
+  Remplacez `BMSClient.REGION_UK` par la région appropriée  Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**.
 
-
-	
+   **Remarque :** si votre application Android a pour cible Android version 6.0 (API niveau 23) ou supérieure, vous devez vous assurer que l'application dispose d'un appel `android.permission.GET_ACCOUNTS` avant d'appeler `register`. Pour plus d'informations, voir [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
 1. Ajoutez le code suivant à votre activité :
 
@@ -162,9 +163,7 @@ section **Options pour application mobile** dans le tableau de bord.
 Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Google est enregistré, vous pouvez commencer à envoyer des demandes à votre application de back end mobile.
 
 
-Avant de commencer à tester, vous devez disposer d'une application back end mobile créée depuis le conteneur boilerplate
-**MobileFirst Services Starter**, ainsi que d'une ressource protégée par
-{{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Avant de commencer à tester, vous devez disposer d'une application back end mobile créée depuis le conteneur boilerplate **MobileFirst Services Starter**, ainsi que d'une ressource protégée par le noeud final {{site.data.keyword.amashort}} `/protected`. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Essayez d'envoyer une demande à un noeud final protégé de votre application back end mobile dans votre navigateur de bureau en ouvrant `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
  Le noeud final `/protected` d'une application de back end mobile créée avec le conteneur boilerplate MobileFirst Services est protégé par {{site.data.keyword.amashort}}. Il n'est donc accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. Pour cette raison, le message `Unauthorized` s'affiche dans votre navigateur de bureau.
@@ -197,7 +196,6 @@ Avant de commencer à tester, vous devez disposer d'une application back end mob
 	![image](images/android-google-login.png)
 
 	L'interface utilisateur peut varier en fonction de votre périphérique Android et selon que vous êtes, ou non, connecté actuellement à Google.
-  
 
   Cliquez sur **OK** pour autoriser {{site.data.keyword.amashort}} à utiliser votre ID utilisateur Google pour l'authentification.
 

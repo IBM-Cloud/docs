@@ -7,7 +7,7 @@ copyright:
 
 # Ativando, configurando e usando o Criador de logs
 {: #enable-logger}
-*Última atualização: 6 de maio de 2016*
+Última atualização: 6 de maio de 2016
 {: .last-updated}
 
 O {{site.data.keyword.amashort}} client SDK fornece uma estrutura de criação de log que é semelhante a outras estruturas de log com as quais você pode estar familiarizado, tais como, `java.util.logging` ou `log4j`. A estrutura de criação de log suporta várias instâncias do criador de logs por pacote, diferentes níveis de log, captura ou rastreios de pilha para um travamento de aplicativo e mais.

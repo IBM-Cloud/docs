@@ -8,7 +8,7 @@ copyright:
 # Activation de l'authentification Google pour les applications Web
 {: #google-auth-web}
 
-*Dernière mise à jour : 1er juin 2016*
+Dernière mise à jour : 1er juin 2016
 {: .last-updated}
 
 Utilisez Google Sign-In pour authentifier les utilisateurs sur votre application Web.
@@ -59,7 +59,8 @@ Pour démarrer le processus d'autorisation :
 
   Le paramètre `state`, qui n'est pas utilisé pour l'instant, n'a pas besoin d'être renseigné.
 
-  Le paramètre `redirect_uri` est l'URI de redirection après l'aboutissement ou l'échec de l'authentification avec Google. La réponse retournée après une redirection contient le code d'autorisation dans les paramètres de requête de la demande.
+  L'URI de paramètre `redirect_uri` permet une redirection après une authentification aboutie ou échouée avec Google.
+  La réponse retournée après une redirection contient le code d'autorisation dans les paramètres de requête de la demande.
 1. Effectuez une demande `POST` vers le noeud final de jeton du serveur d'autorisation :
 
  https://imf-newauthserver.bluemix.net/oauth/v2/token

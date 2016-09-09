@@ -11,7 +11,7 @@ copyright:
 # iOS アプリ用の Facebook 認証の使用可能化 (Swift SDK)
 {: #facebook-auth-ios}
 
-*最終更新日: 2016 年 7 月 17 日*
+最終更新日: 2016 年 8 月 1 日
 {: .last-updated}
 
 iOS アプリケーションで Facebook を ID プロバイダーとして使用するには、iOS プラットフォームを追加して Facebook アプリケーション用に構成する必要があります。
@@ -31,7 +31,7 @@ iOS アプリケーションで Facebook を ID プロバイダーとして使�
 * Facebook for Developers サイト上の Facebook アプリケーション。 
 
 
-**重要:** Facebook 自体の SDK を別個にインストールする必要はありません。Facebook SDK は、下記の `BMSFacebookAuthentication` pod によって自動的にインストールされます。Facebook for Developers サイトでアプリを追加または構成する場合は、**Xcode プロジェクトへの Facebook SDK の追加**のステップをスキップできます。
+**重要:** Facebook SDK (`com.facebook.FacebookSdk`) を別個にインストールする必要はありません。Facebook SDK は {{site.data.keyword.amashort}} `BMSFacebookAuthentication` ポッドで自動的にインストールされます。Facebook for Developers の Web サイトでアプリを追加または構成する場合は、**Xcode プロジェクトへの Facebook SDK の追加**のステップをスキップできます。
 
 **注:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、この新しい Swift SDK が後継になる予定です。
 ## iOS プラットフォーム用の Facebook アプリケーションの構成
@@ -89,7 +89,7 @@ pod 'BMSFacebookAuthentication'
 
 	```
 
-   **注:** Pod file 内に行 `pod 'BMSSecurity'` がある場合、その行を削除する必要があります。`BMSFacebookAuthentication` pod は、必要なすべてのフレームワークをインストールします。
+   **注:** Podfile 内に行 `pod 'BMSSecurity'` がある場合、その行を削除する必要があります。`BMSFacebookAuthentication` pod は、必要なすべてのフレームワークをインストールします。
 
    **ヒント:** `use_frameworks!` を、Podfile に含めるのではなく、Xcode ターゲットに追加できます。
 
@@ -179,7 +179,7 @@ Facebook Application ID を使用して URL スキームおよび FacebookappID 
  import BMSCore
  import BMSSecurity
  ```
-2. Client SDK を初期化します。`<applicationRoute>` および `<applicationGUID>` を、{{site.data.keyword.Bluemix_notm}} ダッシュボードの**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。`<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、ダッシュボードの左上隅にある顔アイコン (![face](images/face.jpg "顔アイコン")) をクリックします。
+2. Client SDK を初期化します。`<applicationRoute>` および `<applicationGUID>` を、{{site.data.keyword.Bluemix_notm}} ダッシュボードの**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。`<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -193,7 +193,7 @@ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUI
  FacebookAuthenticationManager.sharedInstance.register()
  ```
 
-1. アプリ代行の `application:didFinishLaunchingWithOptions` メソッドに以下のコードを追加することによって、Facebook SDK にアプリのアクティベーションについて通知し、Facebook Authentication Handler を登録します。BMSClient インスタンスを初期化した直後にこのコードを追加し、Facebook を認証マネージャーとして登録します。
+1. アプリ代行の `application:didFinishLaunchingWithOptions` メソッドに以下のコードを追加することによって、Facebook SDK にアプリのアクティベーションについて通知し、Facebook Authentication Handler を登録します。BMSClient インスタンスの初期化の後にこのコードを追加し、Facebook を認証マネージャーとして登録します。
 
  ```Swift
   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)

@@ -8,10 +8,10 @@ copyright:
 #配置適用於 {{site.data.keyword.amashort}} Web 應用程式的自訂鑑別
 {: #custom-web}
 
-*前次更新：2016 年 7 月 18 日*
+前次更新：2016 年 7 月 21 日
 {: .last-updated}
 
-將自訂鑑別新增至 {{site.data.keyword.amashort}} Web 應用程式。
+將自訂鑑別及 {{site.data.keyword.amashort}} 安全功能新增至 Web 應用程式。
 
 ## 開始之前
 {: #before-you-begin}
@@ -110,13 +110,13 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 ##使用自訂身分提供者實作 {{site.data.keyword.amashort}} 授權流程 
 
-`VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成。若要檢視它，請按一下應用程式的左側導覽器中的**環境變數**。
+`VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成，而且可以按一下應用程式左側導覽列中的**環境變數**來進行檢視。
 
 若要要求使用者授權，請將瀏覽器重新導向至授權伺服器端點。為了能夠這樣做，請執行下列動作： 
 
 1. 從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取授權端點 (`authorizationEndpoint`) 及用戶端 ID (`clientId`)。 
 
-  **附註：**如果您已在新增 Web 支援之前先將 Mobile Client Access 服務新增至應用程式，則在服務認證中您可能沒有記號端點。請改用下列 URL，視您的 {{site.data.keyword.Bluemix_notm}} 地區而定： 
+  **附註：**如果您已在新增 Web 支援之前將 {{site.data.keyword.amashort}} 服務新增至應用程式，則在服務認證中可能沒有記號端點。請改用下列 URL（視 {{site.data.keyword.Bluemix_notm}} 地區而定）： 
  
   美國南部： 
   ```
@@ -177,7 +177,7 @@ function checkAuthentication(req, res, next){
 
 1. 從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取 `authorizationEndpoint`、`clientId` 及 `secret`。 
 
-   **附註：**如果您已在新增 Web 支援之前先將 Mobile Client Access 服務新增至應用程式，則在服務認證中您可能沒有記號端點。在此情況下，請改用下列 URL，視您的 Bluemix 地區而定： 
+   **附註：**如果您已在新增 Web 支援之前將 {{site.data.keyword.amashort}} 服務新增至應用程式，則在服務認證中可能沒有記號端點。請改用下列 URL（視 {{site.data.keyword.Bluemix_notm}} 地區而定）： 
 
  美國南部： 
  ```
@@ -238,15 +238,16 @@ app.get("/oauth/callback", function(req, res, next){
 
 身分記號包含使用者身分的相關資訊。若為自訂鑑別，記號將包含自訂身分提供者在鑑別時所傳回的所有資訊。在 `imf.user` 欄位下，欄位 `displayName` 將包含自訂身分提供者所傳回的 `displayName`，而欄位 `id` 將包含 `userName`。`imf.user` 下的欄位 `attributes` 內會傳回自訂身分提供者所傳回的所有其他值。  
 
-存取記號容許與受 Mobile Client Access 授權過濾器保護的資源進行通訊（請參閱[保護資源](protecting-resources.html)）。若要對受保護的資源提出要求，請將結構如下的授權標頭新增至要求： 
+存取記號容許與 {{site.data.keyword.amashort}} 授權過濾器所保護的資源進行通訊（請參閱[保護資源](protecting-resources.html)）。若要對受保護的資源提出要求，請將結構如下的授權標頭新增至要求： 
 
 `Authorization=Bearer <accessToken> <idToken>` 
 
-**附註：** 
+####提示： 
+{: #tips_token}
 
 * `<accessToken>` 及 `<idToken>` 必須以空格區隔。
 
-* 身分記號是選用項目。如果您未提供身分記號，則受保護的資源可被他人存取，但不會收到已獲授權之使用者的任何相關資訊。 
+* 身分記號是選用項目。如果您未提供身分記號，則可以存取受保護的資源，但不會收到已授權使用者的任何相關資訊。 
 
 
 

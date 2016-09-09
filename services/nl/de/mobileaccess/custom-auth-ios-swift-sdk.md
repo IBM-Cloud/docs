@@ -9,7 +9,7 @@ copyright:
 
 {: #custom-ios}
 
-*Letzte Aktualisierung: 18. Juli 2016*
+Letzte Aktualisierung: 01. August 2016
 {: .last-updated}
 
 
@@ -65,9 +65,14 @@ Initialisieren Sie das SDK, indem Sie die Parameter `applicationRoute` und `appl
 
 1. Initialisieren Sie das {{site.data.keyword.amashort}}-Client-SDK, geben Sie 'MCAAuthorizationManager' als Berechtigungsmanager an und definieren und registrieren Sie ein Authentifizierungsdelegat. Ersetzen Sie `<applicationRoute>` und `<applicationGUID>` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** des {{site.data.keyword.Bluemix_notm}}-Dashboards ermittelt haben. 
 
-  Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol mit dem Gesicht (![Gesicht](/face.png "Gesicht")) in der linken oberen Ecke des Dashboards. 
+  Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol 'Avatar' ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget 'Konto und Unterstützung' zu öffnen.
+				 	
+
+  <!--upper-left corner of the -->
 
   Verwenden Sie als `<yourProtectedRealm>` den **Realmnamen**, den Sie in der Kachel **Angepasst** des {{site.data.keyword.amashort}}-Dashboards definiert haben.
+
+ 
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -107,9 +112,10 @@ Initialisieren Sie das SDK, indem Sie die Parameter `applicationRoute` und `appl
   } catch {
       print("error with register: \(error)")
   }
- return true
- }   
- ```
+       return true
+ }
+
+```
 
 ## Authentifizierung testen
 {: #custom-ios-testing}
@@ -128,6 +134,8 @@ Nachdem Sie das Client-SDK initialisiert und ein angepasstes Authentifizierungsd
 
 1. Verwenden Sie Ihre iOS-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert und Ihr angepasstes Authentifizierungsdelegat registriert haben:
 
+ 
+
  ```Swift
  let customResourceURL = "<your protected resource's path>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
@@ -145,7 +153,7 @@ Nachdem Sie das Client-SDK initialisiert und ein angepasstes Authentifizierungsd
 1. 	Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe in der Xcode-Konsole angezeigt:
 
  ```
- onAuthenticationSuccess info = Optional({
+onAuthenticationSuccess info = Optional({
      attributes =     {
      };
      deviceId = don;
@@ -159,7 +167,7 @@ Nachdem Sie das Client-SDK initialisiert und ein angepasstes Authentifizierungsd
 1. Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
 
  ```
- MCAAuthorizationManager.sharedInstance.logout(callBack)
+MCAAuthorizationManager.sharedInstance.logout(callBack)
  ```  
 
  Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer angemeldet hat, wird der Benutzer abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er auf die vom Server empfangene Anforderung erneut reagieren.

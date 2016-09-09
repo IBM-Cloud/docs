@@ -7,7 +7,7 @@ copyright:
 
 # Activation de l'authentification Facebook pour les applications Web
 
-*Dernière mise à jour : 15 juin 2016*
+Dernière mise à jour : 15 juin 2016
 {: .last-updated}
 
 Utilisez Facebook pour authentifier les utilisateurs sur votre application Web.
@@ -51,7 +51,6 @@ Pour démarrer le processus d'autorisation :
 1. Effectuez une redirection depuis votre application Web vers le noeud final suivant du serveur d'autorisation : https://imf-newauthserver.bluemix.net/oauth/v2/authorization.
 
 1. Ajoutez les paramètres de requête suivants :
-   
    ```
     response_type='authorization_code'
     client_id= <bluemix_app_guid>
@@ -62,7 +61,7 @@ Pour démarrer le processus d'autorisation :
 
 
   Le paramètre `state`, qui n'est pas utilisé pour l'instant, n'a pas besoin d'être renseigné.
-  Le paramètre `redirect_uri` est l'URI de redirection après l'aboutissement ou l'échec de l'authentification avec Facebook.
+  Le paramètre `redirect_uri` est l'identificateur URI qui permet une redirection après une authentification aboutie ou échouée avec Facebook.
 
 1. Après redirection vers le noeud final d'autorisation, un formulaire de connexion vous est envoyé par Facebook. Entrez le nom d'utilisateur et le mot de passe pour effectuer la redirection vers l'URI `redirect_uri`.
    La réponse retournée après une redirection contient le code d'autorisation dans les paramètres de requête de la demande.

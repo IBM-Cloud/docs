@@ -7,7 +7,7 @@ copyright:
 
 # Collecte des données d'analyse d'utilisation
 {: #usage-analytics}
-*Dernière mise à jour : 6 mai 2016*
+Dernière mise à jour : 6 mai 2016
 {: .last-updated}
 
 Vous pouvez configurer l'enregistrement des données d'analyse d'utilisation et leur envoi au service {{site.data.keyword.amashort}} par le SDK client de {{site.data.keyword.amashort}}.
@@ -22,23 +22,23 @@ Utilisez les API suivantes pour démarrer l'enregistrement et l'envoi des donné
 {: #usage-analytics-android}
 
 ```Java
-// Activation de l'enregistrement de statistiques d'utilisation
+// Enable recording of usage analytics
 MFPAnalytics.enable();
 
-// Lancement de l'enregistrement de l'heure de démarrage de l'application
-// Ajout de ce code dans la méthode onCreate de votre activité principale
+// Start recording application startup time
+// Add this code in the onCreate method of your main Activity
 MFPAnalytics.startLoggingApplicationStartup();
 
-// Enregistrement de la durée de démarrage de l'application
-// Ajout de ce code dans la méthode onStart de votre activité principale
+// Record the duration of application startup
+// Add this code in the onStart method of your main Activity
 MFPAnalytics.logApplicationStartup();
 
-// Enregistrement des événements d'avant-plan et d'arrière-plan
-// Ajout de ce code dans les méthodes onPause et onResume de votre activité principale
+// Record application foreground and background events
+// Add this code in the onPause and onResume methods of your main Activity
 MFPAnalytics.logSessionStart();
 MFPAnalytics.logSessionEnd();
 
-// Envoi des analyses d'utilisation enregistrées au service {{site.data.keyword.amashort}}
+// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 MFPAnalytics.send();
 ```
 
@@ -51,14 +51,14 @@ MFPAnalytics.send();
 Le SDK Objective-C rapporte les données de surveillance à la console de surveillance du service {{site.data.keyword.amashort}}. Si vous dépendez des fonctions de surveillance du service {{site.data.keyword.amashort}}, continuez à utiliser le SDK Objective-C.
 
 ```Objective-C
-// Activation de l'enregistrement d'analyse d'utilisation
+// Enable usage analytics recording
 [[IMFAnalytics sharedInstance] setEnabled:YES];
 
 // Start recording application lifecycle events
 [[IMFAnalytics sharedInstance] startRecordingApplicationLifecycleEvents];
 
 
-// Envoi des analyses d'utilisation enregistrées au service {{site.data.keyword.amashort}}
+// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 [[IMFAnalytics sharedInstance] sendPersistedLogs];
 ```
 
@@ -66,14 +66,14 @@ Le SDK Objective-C rapporte les données de surveillance à la console de survei
 {: #usage-analytics-swift}
 
 ```Swift
-// Activation de l'enregistrement d'analyse d'utilisation
+// Enable usage analytics recording
 IMFAnalytics.sharedInstance().setEnabled(true)
 
 // Start recording application lifecycle events
 IMFAnalytics.sharedInstance().startRecordingApplicationLifecycleEvents()
 
 
-// Envoi des analyses d'utilisation enregistrées au service {{site.data.keyword.amashort}}
+// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 IMFAnalytics.sharedInstance().sendPersistedLogs()
 ```
 
@@ -81,10 +81,10 @@ IMFAnalytics.sharedInstance().sendPersistedLogs()
 {: #usage-analytics-cordova}
 
 ```JavaScript
-// Activation de l'enregistrement d'analyse d'utilisation
+// Enable usage analytics recording
 MFPAnalytics.enable();
 
-// Envoi des analyses d'utilisation enregistrées au service {{site.data.keyword.amashort}}
+// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 MFPAnalytics.send();
 ```
 **Remarque :** Lorsque vous développez des applications Cordova, utilisez l'API native pour activer l'enregistrement des événements de leur cycle de vie.

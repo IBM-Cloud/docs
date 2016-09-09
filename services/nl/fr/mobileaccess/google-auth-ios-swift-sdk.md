@@ -11,7 +11,7 @@ copyright:
 # Activation de l'authentification Google pour les applications iOS (SDK Swift)
 {: #google-auth-ios}
 
-*Dernière mise à jour : 17 juillet 2016*
+Dernière mise à jour : 1er août 2016
 {: .last-updated}
 
 Utilisez Google Sign-In pour authentifier les utilisateurs sur votre application iOS Swift {{site.data.keyword.amashort}}. Le nouveau SDK Swift {{site.data.keyword.amashort}} qui vient de sortir améliore les fonctionnalités fournies par le SDK Mobile Client Access Objective-C existant et en ajoute de nouvelles.
@@ -43,7 +43,7 @@ Ce processus :
 
 Les étapes suivantes offrent un bref aperçu des tâches nécessaires à la préparation de votre application. 
 
-**Remarque :** il n'est pas nécessaire d'ajouter `Google/SignIn` CocoaPod. Le SDK requis est ajouté par `BMSGoogleAuthentication` CocoaPod.
+**Remarque :** il n'est pas nécessaire d'ajouter Google Sign-In CocoaPod. Le SDK requis est ajouté par `BMSGoogleAuthentication` CocoaPod.
 
 1. Notez l'identificateur de bundle de votre projet Xcode depuis la section relative à l'identité de l'onglet traitant des dispositions générales de la cible principale. Vous en aurez besoin pour créer votre projet Google Sign-In.
 
@@ -145,7 +145,7 @@ valeurs `applicationRoute` et `applicationGUID` sont affichées dans les zones
  import BMSSecurity
  ```
 
-1. Utilisez le code suivant pour initialiser le SDK client. Remplacez `<applicationRoute>` et `<applicationGUID>` par les valeurs de **Route** et **Identificateur global unique de l'application** que vous avez obtenues depuis la section **Options pour application mobile** du tableau de bord {{site.data.keyword.Bluemix_notm}}. Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône face (![Face](/face.png "Face")) dans l'angle supérieur gauche du tableau de bord. 
+1. Utilisez le code suivant pour initialiser le SDK client. Remplacez `<applicationRoute>` et `<applicationGUID>` par les valeurs de **Route** et **Identificateur global unique de l'application** que vous avez obtenues depuis la section **Options pour application mobile** du tableau de bord {{site.data.keyword.Bluemix_notm}}. Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -153,8 +153,8 @@ valeurs `applicationRoute` et `applicationGUID` sont affichées dans les zones
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- // Initialisez le SDK client.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+ // Initialize the client SDK.  
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -236,8 +236,7 @@ protégé par {{site.data.keyword.amashort}}, il n'est accessible que par les ap
  ```
 
   Si vous appelez ce code alors que l'utilisateur était connecté via Google et qu'il tente à nouveau de se connecter, il est invité à autoriser
-{{site.data.keyword.amashort}} à utiliser Google aux fins d'authentification. A ce stade, l'utilisateur peut cliquer sur un nom d'utilisateur à l'angle
-supérieur droit de l'écran pour sélectionner et se connecter sous un autre nom d'utilisateur.
+{{site.data.keyword.amashort}} à utiliser Google aux fins d'authentification. A ce stade, l'utilisateur peut cliquer sur un nom d'utilisateur <!--in the upper-right corner of the screen--> pour sélectionner et se connecter sous un autre nom d'utilisateur.
 
    La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre la valeur
 `nil`.

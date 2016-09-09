@@ -4,15 +4,15 @@ copyright:
   years: 2015, 2016
 
 ---
-{:screen:  .screen}
+
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
+
 
 # iOS 앱에서 Facebook 인증 사용(Objective-C SDK)
 {: #facebook-auth-ios}
 
 
-*마지막 업데이트 날짜: 2016년 7월 17일*
+마지막 업데이트 날짜: 2016년 7월 17일
 {: .last-updated}
 
 
@@ -160,15 +160,17 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
 1. 다음 헤더를 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 필수 프레임워크를 가져오십시오. 
 
-	**Objective-C**
+	####Objective-C
+	{: #framework-objc}
 
-		```Objective-C
+	```Objective-C
 	#import <IMFCore/IMFCore.h>
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
 
-	**Swift**
+	####Swift
+	{: #bridgingheader-swift}
 
 	{{site.data.keyword.amashort}} 클라이언트 SDK는 Objective-C를 사용하여 구현되므로 Swift 프로젝트에 브리징 헤더를 추가해야 할 수 있습니다.
 
@@ -193,33 +195,35 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
  
 
-	**Objective-C**
+	####Objective-C
+	{: #approute-objc}
 
-		```Objective-C
+	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
 
-	**Swift**
+	####Swift
+	{: #approute-swift}
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
 
-1. 앱 활성화에 대한 알림을 Facebook SDK에 전송하고, 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 다음 코드를 추가하여 Facebook 인증 핸들러를 등록하십시오. IMFClient 인스턴스를 초기화한 후에 바로 이 코드를 추가하십시오.
+1. 앱 활성화에 대한 알림을 Facebook SDK에 전송하고, 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 다음 코드를 추가하여 Facebook 인증 핸들러를 등록하십시오. IMFClient 인스턴스를 초기화한 후 이 코드를 추가하십시오.
 
- 
+	####Objective-C
+	{: #activate-objc}
 
-	**Objective-C**
-
-		```Objective-C
+	```Objective-C
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 ```
 
-	**Swift**
+	####Swift
+	{: #activate-swift}
 
 	```Swift
 		FBAppEvents.activateApp()
@@ -228,9 +232,10 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
 1. 다음 코드를 앱 위임자에 추가하십시오. 
 
-	**Objective-C**
+	####Objective-C
+	{: #appdelegate-objc}
 
-		```Objective-C
+	```Objective-C
 	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
 			sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 
@@ -239,7 +244,8 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 	}
 ```
 
-	**Swift**
+	####Swift
+	{: #appdelegate-swift}
 
 	```Swift
 	func application(application: UIApplication, openURL url: NSURL,
@@ -264,9 +270,10 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. 
 
-	**Objective-C**
+	####Objective-C
+	{: #requestpath-objc}
 
-		```Objective-C
+	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
 								[[IMFClient sharedInstance] backendRoute]];
 
@@ -283,7 +290,8 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 	}];
 	```
 
-	**Swift**
+	####Swift
+	{: #requestpath-swift}
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"
@@ -314,13 +322,15 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
  	다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 
-	**Objective-C**
+	####Objective-C
+	{: #logout-objc}
 
-		```Objective-C
+	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
 	```
 
-	**Swift**
+	####Swift
+	{: #logout-swift}
 
 	```Swift
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)

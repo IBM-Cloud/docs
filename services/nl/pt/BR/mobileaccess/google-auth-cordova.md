@@ -8,7 +8,8 @@ copyright:
 # Ativando a autenticação do Google para apps Cordova
 {: #google-auth-cordova}
 
-*Última atualização: 28 de junho de 2016*
+
+Última atualização: 21 de julho de 2016
 {: .last-updated}
 
 Para configurar aplicativos Cordova para integração de autenticação do Google, mudanças no código nativo do aplicativo Cordova deverão ser
@@ -55,11 +56,11 @@ a autenticação do Google em apps iOS](https://console.{DomainName}/docs/servic
 
 1. Acesse o diretório `Sources/Authenticators/IMFGoogleAuthentication` e copie (arraste e solte) todos os arquivos para seu projeto do iOS em Xcode. Os arquivos que você precisa copiar são:
 
-	> * IMFDefaultGoogleAuthenticationDelegate.h
-	> * IMFDefaultGoogleAuthenticationDelegate.m
-	> * IMFGoogleAuthenticationDelegate.h
-	> * IMFGoogleAuthenticationHandler.h
-	> * IMFGoogleAuthenticationHandler.m
+	* IMFDefaultGoogleAuthenticationDelegate.h
+	* IMFDefaultGoogleAuthenticationDelegate.m
+	* IMFGoogleAuthenticationDelegate.h
+	* IMFGoogleAuthenticationHandler.h
+	* IMFGoogleAuthenticationHandler.m
 
 Selecione o **Copiar arquivos...** ?
 
@@ -101,14 +102,11 @@ Após o SDK do cliente ser inicializado, será possível começar a fazer solici
 Deve-se ter um aplicativo backend protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Tente enviar uma solicitação para o terminal protegido do seu aplicativo backend móvel em seu navegador da área de trabalho, abrindo
-`{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`
+1. Tente enviar uma solicitação para um terminal protegido de seu aplicativo backend móvel no navegador da área de trabalho, abrindo `{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`.
 
-1. O terminal `/protected` de um aplicativo backend móvel criado com o MobileFirst Services Boilerplate é protegido com o
-{{site.data.keyword.amashort}}, portanto, só pode ser acessado pelos aplicativos móveis instrumentados com o SDK do cliente
-{{site.data.keyword.amashort}}. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
+1. O terminal `/protected` de um aplicativo backend móvel criado com o Modelo MobileFirst Services é protegido com o {{site.data.keyword.amashort}}, portanto, só é possível acessá-lo por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
 
-1. Use seu aplicativo Cordova para fazer solicitação para o mesmo terminal. Inclua o código a seguir após inicializar `BMSClient`.
+1. Use seu aplicativo Cordova para fazer uma solicitação para o mesmo terminal. Inclua o código a seguir após inicializar `BMSClient`.
 
 	```JavaScript
 	var success = function(data){
@@ -124,12 +122,12 @@ Deve-se ter um aplicativo backend protegido pelo {{site.data.keyword.amashort}} 
 
 1. Execute o aplicativo. A tela de login do Google é exibida.
 
-	![image](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-google-login.png)
-Essa tela poderá parecer um pouco diferente se o app Facebook não estiver instalado em seu dispositivo, ou se você não estiver atualmente conectado ao Facebook.
+	![Tela de login do Google](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Tela de login do Google](images/ios-google-login.png)
+	Essa tela poderá parecer um pouco diferente se o app Facebook não estiver instalado em seu dispositivo ou se você não estiver conectado ao Facebook no momento.
 1. Ao clicar em **OK**, você estará autorizando o {{site.data.keyword.amashort}} a usar sua identidade do usuário do Google para fins de autenticação.
 
-1. 	Sua solicitação deve ser bem-sucedida. Dependendo da plataforma que você estiver usando, você deverá ver a saída a seguir no console LogCat/Xcode
+1. 	Sua solicitação deve ser bem-sucedida. Dependendo da plataforma usada, você verá a saída a seguir no console LogCat/Xcode:
 
-	![image](images/android-google-login-success.png)
+	![Fragmento de código no Android](images/android-google-login-success.png)
 
-	![image](images/ios-google-login-success.png)
+	![Fragmento de código no iOS](images/ios-google-login-success.png)

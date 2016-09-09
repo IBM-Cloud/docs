@@ -8,7 +8,7 @@ copyright:
 # Angepassten Identitätsprovider erstellen
 {: #custom-create}
 
-*Letzte Aktualisierung: 16. Juni 2016*
+Letzte Aktualisierung: 16. Juni 2016
 {: .last-updated}
 
 

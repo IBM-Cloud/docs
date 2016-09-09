@@ -11,7 +11,7 @@ copyright:
 # 启用 iOS 应用程序 (Swift SDK) 的 Facebook 认证
 {: #facebook-auth-ios}
 
-*上次更新时间：2016 年 7 月 17 日*
+上次更新时间：2016 年 8 月 01 日
 {: .last-updated}
 
 要在 iOS 应用程序中将 Facebook 用作身份提供者，请为 Facebook 应用程序添加并配置 iOS 平台。
@@ -26,7 +26,11 @@ copyright:
 * Facebook for Developers 站点上的 Facebook 应用程序。 
 
 
-**重要信息**：您无需单独安装 Facebook 自己的 SDK。下面的 `BMSFacebookAuthentication` Pod 会自动安装 Facebook SDK。在 Facebook for Developers 站点上添加或配置应用程序时，可以跳过 **添加 Facebook SDK 到 Xcode 项目**步骤。
+**重要信息**：您无需单独安装 Facebook SDK (`com.facebook.FacebookSdk`)。
+{{site.data.keyword.amashort}} `BMSFacebookAuthentication` Pod 会自动安装 Facebook SDK。
+在 Facebook for Developers Web 站点上添加或配置应用程序时，可以跳过**添加
+Facebook SDK
+到 Xcode 项目**步骤。
 
 **注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用 Objective-C SDK，以支持此新的 Swift SDK。
 ## 针对 iOS 平台配置 Facebook 应用程序
@@ -175,7 +179,9 @@ pod 'BMSFacebookAuthentication'
  import BMSCore
  import BMSSecurity
  ```
-2. 初始化客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击仪表板左上角的人脸图标 (![人脸](images/face.jpg "人脸图标"))。
+2. 初始化客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。
+要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
+
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -190,7 +196,8 @@ pod 'BMSFacebookAuthentication'
  FacebookAuthenticationManager.sharedInstance.register()
  ```
 
-1. 通过将以下代码添加到应用程序代表中的 `application:didFinishLaunchingWithOptions` 方法，通知 Facebook SDK 有关应用程序激活的信息，并注册 Facebook 认证处理程序。初始化 BMSClient 实例并将 Facebook 注册为认证管理器后，立即添加以下代码。
+1. 通过将以下代码添加到应用程序代表中的 `application:didFinishLaunchingWithOptions` 方法，通知 Facebook SDK 有关应用程序激活的信息，并注册 Facebook 认证处理程序。
+初始化 BMSClient 实例并将 Facebook 注册为认证管理器后，请添加以下代码。
 
  ```Swift
   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)

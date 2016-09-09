@@ -11,7 +11,7 @@ copyright:
 # Cordova 앱에서 Facebook 인증 사용
 {: #facebook-auth-cordova}
 
-*마지막 업데이트 날짜: 2016년 6월 15일*
+마지막 업데이트 날짜: 2016년 6월 15일
 {: .last-updated}
 
 
@@ -25,7 +25,7 @@ Facebook 인증 통합을 위해 Cordova 애플리케이션을 구성하려면 J
 {: #facebook-auth-before}
 다음이 있어야 합니다.
 * {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 Cordova 프로젝트는 [Cordova 플러그인 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)을 참조하십시오.
-* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm} 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
+* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오. 
 * Facebook 애플리케이션 ID. 자세한 정보는 [Facebook 개발자 포털에서 Facebook 애플리케이션 ID 얻기](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)를 참조하십시오. 
 
 
@@ -66,7 +66,7 @@ Facebook 인증을 통합하도록 Cordova 애플리케이션의 iOS 플랫폼�
 
 1. Facebook SDK가 `~/Documents/FacebookSDK` 디렉토리에 설치됩니다. 해당 디렉토리로 이동하여 `FacebookSDK.framework` 파일을 Xcode의 사용자 iOS 프로젝트로 복사(끌어서 놓기)하십시오. 
 
-1. 	Xcode의 왼쪽 분할창에서 프로젝트 루트를 클릭하고 **빌드 단계**를 선택하십시오. 
+1. 	Xcode에서 프로젝트 루트를 클릭하고 **단계 빌드**를 선택하십시오.
 
 1. **라이브러리와 2진 링크**에서 링크된 라이브러리 목록에 `FacebookSDK.framework` 파일을 추가하십시오.
 
@@ -100,7 +100,7 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 1. 브라우저에서 새로 작성한 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송해 보십시오. URL `{applicationRoute}/protected`를 여십시오. 예를 들면 `http://my-mobile-backend.mybluemix.net/protected`와 같습니다. 
 <br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. `Unauthorized` 메시지가 브라우저에 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 이 메시지가 리턴됩니다.
 
-1. Cordova 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화한 후 아래 코드를 추가하십시오. 
+1. Cordova 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화한 후에 다음 코드를 추가하십시오. 
 
 	```JavaScript
 	var success = function(data){
@@ -117,7 +117,7 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 
 	![image](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-facebook-login.png)
 
-	> 디바이스에 Facebook 앱이 설치되어 있지 않거나 현재 Facebook에 로그인하지 않은 경우 이 화면이 약간 다를 수 있습니다.
+	디바이스에 Facebook 앱이 설치되어 있지 않거나 현재 Facebook에 로그인하지 않은 경우 이 화면이 약간 다를 수 있습니다. 
 
 1. **확인**을 클릭하여 {{site.data.keyword.amashort}}가 인증을 위해 Facebook 사용자 ID를 사용하도록 권한을 부여하십시오. 
 

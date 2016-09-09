@@ -7,7 +7,7 @@ copyright:
 
 # Protokollfunktion aktivieren, konfigurieren und verwenden
 {: #enable-logger}
-*Letzte Aktualisierung: 6. Mai 2016*
+Letzte Aktualisierung: 6. Mai 2016
 {: .last-updated}
 
 Das {{site.data.keyword.amashort}}-Client-SDK stellt ein Protokollierungsframework bereit, das anderen Protokollierungsframeworks, mit denen Sie vielleicht vertraut sind, wie `java.util.logging` oder `log4j`, ähnlich ist. Das Protokollierungsframework unterstützt mehrere Protokollierungsinstanzen auf Paketbasis, verschiedene Protokollierungsstufen, die Erfassung von Stack-Traces für einen Anwendungsabsturz und weitere Funktionen.
@@ -127,9 +127,7 @@ Logger logger2 = Logger.getInstance("logger2");
 
 // Nachrichten mit unterschiedlichen Stufen protokollieren
 logger1.debug("debug message");
-logger2.info("info message");
-
-// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
+logger2.info("info message");// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
 Logger.send();
 ```
 
@@ -196,13 +194,9 @@ MFPLogger.setLevel(MFPLogger.INFO);
 
 // Zwei Logger-Instanzen erstellen
 var logger1 = MFPLogger.getInstance("logger1");
-var logger2 = MFPLogger.getInstance("logger2");    
-
-// Nachrichten mit unterschiedlichen Stufen protokollieren
+var logger2 = MFPLogger.getInstance("logger2");// Nachrichten mit unterschiedlichen Stufen protokollieren
 logger1.debug("debug message");
-logger2.info("info message");
-
-// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
+logger2.info("info message");// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
 MFPLogger.send(success, failure);
 ```
 

@@ -8,7 +8,8 @@ copyright:
 # Google-Authentifizierung für Cordova-Apps aktivieren
 {: #google-auth-cordova}
 
-*Letzte Aktualisierung: 28. Juni 2016*
+
+Letzte Aktualisierung: 21. Juli 2016
 {: .last-updated}
 
 Zur Konfiguration von Cordova-Anwendungen für die Integration der Google-Authentifizierung müssen Sie Änderungen am nativen Code der Cordova-Anwendung (Java, Objective-C oder Swift) durchführen. Jede Plattform muss separat konfiguriert werden. Verwenden Sie die native Entwicklungsumgebung, um Änderungen an nativem Code vorzunehmen, wie zum Beispiel Android Studio oder Xcode.
@@ -16,7 +17,7 @@ Zur Konfiguration von Cordova-Anwendungen für die Integration der Google-Authen
 ## Vorbereitungen
 {: #before-you-begin}
 Voraussetzungen:
-* Cordova-Projekt, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist.  Weitere Informationen finden Sie in [Cordova-Plug-in einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
+* Cordova-Projekt, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist. Weitere Informationen finden Sie in [Cordova-Plug-in einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
 * Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
 * (Optional) Machen Sie sich mit den folgenden Abschnitten vertraut:
    * [Google-Authentifizierung in Android-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
@@ -48,11 +49,11 @@ Die Schritte, die zur Konfiguration der iOS-Plattform einer Cordova-Anwendung f�
 
 1. Wechseln Sie zum Verzeichnis `Sources/Authenticators/IMFGoogleAuthentication` und kopieren Sie alle Dateien (durch Ziehen und Übergeben) in Ihr iOS-Projekt in Xcode. Sie müssen die folgenden Dateien kopieren:
 
-	> * IMFDefaultGoogleAuthenticationDelegate.h
-	> * IMFDefaultGoogleAuthenticationDelegate.m
-	> * IMFGoogleAuthenticationDelegate.h
-	> * IMFGoogleAuthenticationHandler.h
-	> * IMFGoogleAuthenticationHandler.m
+	* IMFDefaultGoogleAuthenticationDelegate.h
+	* IMFDefaultGoogleAuthenticationDelegate.m
+	* IMFGoogleAuthenticationDelegate.h
+	* IMFGoogleAuthenticationHandler.h
+	* IMFGoogleAuthenticationHandler.m
 
 Wählen Sie das Kontrollkästchen **Copy files....** aus.
 
@@ -89,11 +90,11 @@ Nach der Initialisierung des Client-SDK können Sie mit dem Senden von Anforderu
 Sie müssen über eine Back-End-Anwendung verfügen, die durch {{site.data.keyword.amashort}} am Endpunkt `/protected` geschützt wird. Wenn Sie einen Endpunkt `/protected` einrichten müssen, finden Sie weitere Informationen in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anforderung zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
+1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
 
 1. Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der MobileFirst Services-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Deshalb kann auf ihn nur mit mobilen Anwendungen zugegriffen werden, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert wurden. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
 
-1. Senden Sie eine Anforderung über Ihre Cordova-Anwendung an denselben Endpunkt. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert haben.
+1. Verwenden Sie Ihre Cordova-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert haben.
 
 	```JavaScript
 	var success = function(data){
@@ -109,12 +110,12 @@ Sie müssen über eine Back-End-Anwendung verfügen, die durch {{site.data.keywo
 
 1. Führen Sie Ihre Anwendung aus. Die Google-Anmeldeanzeige wird geöffnet.
 
-	![Bild](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Bild](images/ios-google-login.png)
+	![Google-Anmeldeanzeige](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Google-Anmeldeanzeige](images/ios-google-login.png)
 	Diese Anzeige sieht möglicherweise geringfügig anders aus, wenn Sie die Facebook-App nicht auf Ihrem Gerät installiert haben oder wenn Sie zurzeit nicht bei Facebook angemeldet sind.
 1. Indem Sie auf **OK** klicken, berechtigen Sie {{site.data.keyword.amashort}}, Ihre Google-Benutzeridentität zu Authentifizierungszwecken zu nutzen. 
 
-1. 	Ihre Anforderung sollte erfolgreich ausgeführt werden. Abhängig von der verwendeten Plattform sollte die folgende Ausgabe in der LogCat/Xcode-Konsole angezeigt werden.
+1. 	Ihre Anforderung sollte erfolgreich ausgeführt werden. Abhängig von der verwendeten Plattform sollte die folgende Ausgabe in der LogCat/Xcode-Konsole angezeigt werden: 
 
-	![Bild](images/android-google-login-success.png)
+	![Code-Snippet von Android](images/android-google-login-success.png)
 
-	![Bild](images/ios-google-login-success.png)
+	![Code-Snippet von iOS](images/ios-google-login-success.png)

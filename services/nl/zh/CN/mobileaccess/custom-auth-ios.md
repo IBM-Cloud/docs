@@ -8,7 +8,7 @@ copyright:
 # 针对 iOS (Objective-C) 配置 {{site.data.keyword.amashort}} 客户端 SDK
 {: #custom-ios}
 
-*上次更新时间：2016 年 7 月 18 日*
+上次更新时间：2016 年 7 月 21 日
 {: .last-updated}
 
 
@@ -48,7 +48,7 @@ CocoaPods 会安装添加的依赖关系。这将显示进度和添加的组件�
 
 
 
-### 初始化客户端 SDK
+## 初始化客户端 SDK
 {: #custom-ios-sdk-initialize}
 
 传递应用程序路径 (`applicationRoute`) 和 GUID (`applicationGUID`) 参数，以初始化 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
@@ -77,7 +77,7 @@ CocoaPods 会安装添加的依赖关系。这将显示进度和添加的组件�
 
 1. 初始化客户端 SDK。将 applicationRoute 和 applicationGUID 替换为从**移动选项**获取的**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`) 值。
 
-	Objective-C：
+	###Objective-C：
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -85,12 +85,28 @@ CocoaPods 会安装添加的依赖关系。这将显示进度和添加的组件�
 			backendGUID:@"applicationGUID"];
 	```
 
-	Swift：
+	###Swift：
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+
+## 初始化 AuthorizationManager
+初始化 AuthorizationManager 的方法是将在单击 {{site.data.keyword.amashort}} 服
+务磁贴上的**显示凭证**按钮时获取的 `tenantId` 参数传递给
+{{site.data.keyword.amashort}} 服务。
+
+### Objective-C
+  ```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+
+### Swift：
+ ```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ ```
+
 
 
 ## IMFAuthenticationHandler 代表
@@ -109,28 +125,35 @@ CocoaPods 会安装添加的依赖关系。这将显示进度和添加的组件�
 * `IMFAuthenticationContext` 协议由 {{site.data.keyword.amashort}} 客户端 SDK 提供，以便开发者可以在凭证收集期间向客户端 SDK 报告认证质询回复或失败（例如，用户已取消）
 * `NSDictionary` 包含定制身份提供者返回的定制认证质询
 
-通过调用 `authenticationContext:didReceiveAuthenticationChallenge` 方法，{{site.data.keyword.amashort}} 客户端 SDK 会将控制权委派给开发者，并将其自身置于“正在等待凭证”方式。开发者负责使用其中一种 `IMFAuthenticationContext` 协议方法来收集凭证并向 {{site.data.keyword.amashort}} 客户端 SDK 报告这些凭证；下面将描述这些协议方法。
+通过调用 `authenticationContext:didReceiveAuthenticationChallenge` 方
+法，{{site.data.keyword.amashort}} 客户端 SDK 会将控制权委派给开发者，并将其自身置于“正在等待凭证”方式。开发者负责使用以下某种 `IMFAuthenticationContext` 协议方法来收
+集凭证并向 {{site.data.keyword.amashort}} 客户端 SDK 报告这些凭证：
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
 						didReceiveAuthenticationSuccess:(NSDictionary *)userInfo;
 ```
 
-认证成功后会调用此方法。自变量包括 IMFAuthenticationContext 和可选的 NSDictionary（用于包含有关认证成功的扩展信息）。
+认证成功后会调用此方法。自变量包括 `IMFAuthenticationContext` 以及可选的
+`NSDictionary`（其中包含有关认证成功的扩展信息）。
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
 						didReceiveAuthenticationFailure:(NSDictionary*)userInfo;
 ```
 
-认证失败后会调用此方法。自变量包括 IMFAuthenticationContext 和可选的 NSDictionary（用于包含有关认证失败的扩展信息）。
+认证失败后会调用此方法。自变量包括 `IMFAuthenticationContext` 以及可选的
+`NSDictionary`（其中包含有关认证失败的扩展信息）。
 
 ## IMFAuthenticationContext 协议
 {: #custom-ios-sdk-authcontext}
 
 
-`IMFAuthenticationContext` 作为自变量提供给定制 `IMFAuthenticationHandler` 的 `authenticationContext:didReceiveAuthenticationChallenge` 方法。开发者负责收集凭证并使用 `IMFAuthenticationContext` 方法向 {{site.data.keyword.amashort}} 客户端 SDK 返回凭证或报告失败。请使用下列其中一种方法：
-
+`IMFAuthenticationContext` 协议作为自变量提供给定制
+`IMFAuthenticationHandler` 的
+`authenticationContext:didReceiveAuthenticationChallenge` 方法。开发者负责收集
+凭证并使用 `IMFAuthenticationContext` 方法向
+{{site.data.keyword.amashort}} 客户端 SDK 返回凭证或报告失败。 
 ```
 -(void) submitAuthenticationChallengeAnswer:(NSDictionary*) answer;-(void) submitAuthenticationFailure:(NSDictionary*) userInfo;
 ```
@@ -139,7 +162,9 @@ CocoaPods 会安装添加的依赖关系。这将显示进度和添加的组件�
 {: #custom-ios-sdk-sample}
 
 
-IMFAuthenticationDelegate 样本设计用于处理定制身份提供者样本。您可以从 [Github 存储库](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下载此样本。
+IMFAuthenticationDelegate 样本设计用于处理定制身份提供者样本。您可以从
+[GitHub
+存储库](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下载此样本。
 
 Objective-C：
 
@@ -159,16 +184,20 @@ CustomAuthenticationDelegate.h
 -(void)authenticationContext:(id<IMFAuthenticationContext>)context
 					didReceiveAuthenticationChallenge:(NSDictionary *)challenge{
 
-	NSLog(@"didReceiveAuthenticationChallenge :: %@", challenge);// In this sample the IMFAuthenticationDelegate immediately returns a hardcoded
-	// set of credentials. In a real life scenario this is where developer would
-	// show a login screen, collect credentials and invoke
-	// [context submitAuthenticationChallengeAnswer:] APINSDictionary *challengeAnswer = [NSDictionary dictionaryWithObjectsAndKeys:
+	NSLog(@"didReceiveAuthenticationChallenge :: %@", challenge);// In this sample, the IMFAuthenticationDelegate immediately returns a hardcoded
+	// set of credentials. In a real life scenario, a developer would
+	// show a login screen, collect credentials and invoke the
+	// [context submitAuthenticationChallengeAnswer:] API
+
+	NSDictionary *challengeAnswer = [NSDictionary dictionaryWithObjectsAndKeys:
 									 @"john.lennon", @"username",
-									 @"12345", @"password", nil];[context submitAuthenticationChallengeAnswer:challengeAnswer];// In case there was a failure collecting credentials you need to report
-	// it back to the IMFAuthenticationContext. Otherwise Mobile Client
-		// Access client SDK will remain in a waiting-for-credentials state
-		// forever
-	}-(void)authenticationContext:(id<IMFAuthenticationContext>)context
+									 @"12345", @"password", nil];[context submitAuthenticationChallengeAnswer:challengeAnswer];// In case there is a failure collecting credentials, report
+	// the failure to IMFAuthenticationContext. Otherwise, the Mobile Client
+	// Access client SDK remains in a waiting-for-credentials state
+	// forever
+}
+
+-(void)authenticationContext:(id<IMFAuthenticationContext>)context
 					didReceiveAuthenticationSuccess:(NSDictionary *)userInfo{
 	NSLog(@"didReceiveAuthenticationSuccess");
 
@@ -192,17 +221,19 @@ import Foundation
 class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{func authenticationContext(context: IMFAuthenticationContext!,
 					didReceiveAuthenticationChallenge challenge: [NSObject : AnyObject]!) {
 
-		NSLog("didReceiveAuthenticationChallenge :: %@", challenge)// In this sample the IMFAuthenticationDelegate immediately returns a hardcoded
-		// set of credentials. In a real life scenario this is where developer would
-		// show a login screen, collect credentials and invoke
-		// context.submitAuthenticationChallengeAnswer() APIlet challengeAnswer: [String:String] = [
+		NSLog("didReceiveAuthenticationChallenge :: %@", challenge)// In this sample, the IMFAuthenticationDelegate immediately returns a hardcoded
+		// set of credentials. In a real life scenario a developer would
+		// show a login screen, collect credentials and invoke the
+		// context.submitAuthenticationChallengeAnswer() API
+
+		let challengeAnswer: [String:String] = [
 			"username":"john.lennon",
 			"password":"12345"
 		]
 
-		context.submitAuthenticationChallengeAnswer(challengeAnswer)// In case there was a failure collecting credentials you need to report
-		// it back to the IMFAuthenticationContext. Otherwise Mobile Client
-		// Access client SDK will remain in a waiting-for-credentials state
+		context.submitAuthenticationChallengeAnswer(challengeAnswer)// In case there is a failure collecting credentials, report
+		// it back to IMFAuthenticationContext. Otherwise, the Mobile Client
+		// Access client SDK remains in a waiting-for-credentials state
 		// forever
 	}
 
@@ -221,7 +252,8 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{func au
 
 ## 注册定制 IMFAuthenticationDelegate
 
-创建定制 IMFAuthenticationDelegate 后，向 `IMFClient` 注册。对受保护资源发送任何请求之前，请先在应用程序中调用以下代码。使用在 {{site.data.keyword.amashort}}“仪表板”中指定的 realmName。
+创建定制 `IMFAuthenticationDelegate` 之后，请向
+`IMFClient` 注册。对受保护资源发送任何请求之前，请先在应用程序中调用以下代码。使用在 {{site.data.keyword.amashort}}“仪表板”中指定的 `realmName`。
 
 Objective-C 应用程序：
 

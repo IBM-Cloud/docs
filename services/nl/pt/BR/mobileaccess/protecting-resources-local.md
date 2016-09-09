@@ -8,10 +8,10 @@ copyright:
 # Usando o {{site.data.keyword.amashort}} com um ambiente de desenvolvimento local
 {: #protecting-local}
 
-*Última atualização: 17 de julho de 2016*
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
-É possível configurar seu desenvolvimento local para usar o serviço {{site.data.keyword.amashort}} que está em execução no {{site.data.keyword.Bluemix}}. Especificamente, é possível desenvolver o código localmente usando o SDK do servidor {{site.data.keyword.amashort}} e enviar solicitações
+É possível configurar seu desenvolvimento local para usar o serviço {{site.data.keyword.amafull}} que está em execução no {{site.data.keyword.Bluemix}}. Especificamente, é possível desenvolver o código localmente usando o SDK do servidor {{site.data.keyword.amashort}} e enviar solicitações
 {{site.data.keyword.amashort}} ao servidor de desenvolvimento. Essas solicitações serão protegidas pelo serviço
 {{site.data.keyword.amashort}} que está em execução no {{site.data.keyword.Bluemix}}.
 
@@ -38,6 +38,7 @@ Para usar o {{site.data.keyword.amashort}} com um servidor de desenvolvimento lo
 ```
 Substitua a variável *appGUID* pelo valor do campo **Opções móveis**
 **AppGUID**.
+
 1. Clique em **Mostrar credenciais** no tile do serviço {{site.data.keyword.amashort}} em seu
 aplicativo backend móvel no painel {{site.data.keyword.Bluemix_notm}}. Um objeto JSON é exibido com credenciais de acesso que o {{site.data.keyword.amashort}} fornece para seu aplicativo backend móvel.
 
@@ -77,6 +78,7 @@ var MCABackendStrategy =
 // Restante de seu código
 ```
 Substitua as ocorrências do valor *appGUID* no código pelo valor backend móvel *appGUID*.
+
 
 ## Configurando aplicativos {{site.data.keyword.amashort}} para trabalhar com um servidor de desenvolvimento local
 {: #configuring-local}

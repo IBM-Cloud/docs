@@ -9,7 +9,7 @@ copyright:
 
 {: #custom-ios}
 
-*Última atualização: 18 de julho de 2016*
+Última atualização: 01 de agosto de 2016
 {: .last-updated}
 
 
@@ -78,7 +78,8 @@ exibidos nos campos **Rota** e **GUID do app**.
 **GUID do app** que você obteve das **Opções
 móveis** no painel {{site.data.keyword.Bluemix_notm}}. 
 
-  Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de face (![Face](/face.png "Face")) no canto superior esquerdo do painel. 
+  Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de Avatar ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget Conta e suporte.
+  <!--upper-left corner of the -->
 
   Para `<yourProtectedRealm>`, use o **Nome da região** definido no quadro **Customizado** do painel do {{site.data.keyword.amashort}}.
 

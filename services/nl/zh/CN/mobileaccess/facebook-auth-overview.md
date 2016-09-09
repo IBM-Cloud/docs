@@ -12,22 +12,28 @@ copyright:
 # 使用 Facebook 凭证认证用户
 {: #facebook-auth-overview}
 
-*上次更新时间：2016 年 6 月 15 日*
+上次更新时间：2016 年 7 月 22 日
 {: .last-updated}
 
 您可以将 {{site.data.keyword.amashort}} 服务配置为通过将 Facebook 用作身份提供者来保护资源。您的移动或 Web 应用程序用户可以使用自己的 Facebook 凭证进行认证。
 {:shortdesc}
 
-**重要信息**：您无需单独安装 Facebook 提供的 SDK。配置 {{site.data.keyword.amashort}} 客户端 SDK 时，依赖关系管理器会自动安装 Facebook SDK。
+**重要信息**：您无需单独安装 Facebook 提供的客户端 SDK。配置
+{{site.data.keyword.amashort}} Facebook 客户端 SDK 时，依赖关系管理器会自动安装
+Facebook SDK。
 
 ## {{site.data.keyword.amashort}} 请求流程
 {: #mca-facebook-sequence}
 
-请参阅以下简化图，以了解 {{site.data.keyword.amashort}} 如何与 Facebook 集成进行认证。
+### 移动客户端请求流
 
-![图像](images/mca-sequence-facebook.jpg)
+请参阅下图，以了解 {{site.data.keyword.amashort}} 如何从移动客户端应用程序与
+Facebook 集成进
+行认证。
 
-1. 使用 {{site.data.keyword.amashort}} 客户端 SDK 对受 {{site.data.keyword.amashort}} 服务器 SDK 保护的后端资源发起请求。
+![移动客户端请求流程图](images/mca-sequence-facebook.jpg)
+
+* 使用 {{site.data.keyword.amashort}} 客户端 SDK 对受 {{site.data.keyword.amashort}} 服务器 SDK 保护的后端资源发起请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 检测到未授权的请求，然后返回 HTTP 401 代码和授权作用域。
 * {{site.data.keyword.amashort}} 客户端 SDK 自动检测到上述 HTTP 401 代码，然后启动认证过程。
 * {{site.data.keyword.amashort}} 客户端 SDK 访问 {{site.data.keyword.amashort}} 服务，并请求 Authorization 头。
@@ -40,13 +46,13 @@ copyright:
 * {{site.data.keyword.amashort}} 客户端 SDK 自动重新发送触发了授权流程的原始请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 从请求中抽取 Authorization 头，通过 {{site.data.keyword.amashort}} 服务对其进行验证，然后授予对后端资源的访问权。
 
-## {{site.data.keyword.amashort}} Web 应用程序请求流
-{: #mca-facebook-sequence}
+### {{site.data.keyword.amashort}} Web 应用程序请求流
+{: #mca-facebook-web-sequence}
+
 {{site.data.keyword.amashort}} Web 应用程序请求流类似于移动客户端流。但是，{{site.data.keyword.amashort}} 保护 Web 应用程序而非 {{site.data.keyword.Bluemix_notm}} 后端资源。
 
   * Web 应用程序会发送初始请求（例如，通过登录表单）。
-  * 最终重定向会指向 Web 应用程序本身而非后端受保护资源。 
-
+  * 最终重定向会指向 Web 应用程序本身的受保护区域，而非后端受保护资源。 
 
 
 ## 从 Facebook 开发者门户网站获取 Facebook 应用程序标识
@@ -56,7 +62,8 @@ copyright:
 
 1. 打开 [Facebook 开发者门户网站](https://developers.facebook.com)。
 
-1. 单击顶部菜单中的**我的应用程序**，然后选择**新建应用程序**。
+1. 单击菜单中的**我的应用程序**，然后选择**新建应用程
+序**。
 选取 iOS 或 Android 应用程序，然后在下一个屏幕上单击**跳过并创建应用程序标识**。
 
 1. 设置所选的应用程序显示名称，并选取类别。单击**创建应用程序标识**以继续。

@@ -11,7 +11,7 @@ copyright:
 # iOS アプリ用の Google 認証の使用可能化 (Swift SDK)
 {: #google-auth-ios}
 
-*最終更新日: 2016 年 7 月 17 日*
+最終更新日: 2016 年 8 月 1 日
 {: .last-updated}
 
 Google Sign-In を使用して、{{site.data.keyword.amashort}} iOS Swift アプリのユーザーを認証します。新しくリリースされた {{site.data.keyword.amashort}} Swift SDK は、既存の Mobile Client Access Objective-C SDK によって提供される機能を増強します。
@@ -39,12 +39,12 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
 
 このプロセスは以下を行います。
 * Google Developers サイトで新規プロジェクトを準備します。 
-* `GoogleService-Info.plist` ファイルを作成し、`REVERSE_CLIENT_ID` 値を Xcode プロジェクトに追加します。
+* `GoogleService-Info.plist` ファイルと `REVERSE_CLIENT_ID` 値を作成して、Xcode プロジェクトに追加します。
 * **Google Client ID** を作成して {{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションに追加します。
 
 以下のステップでは、アプリを準備するために必要な作業について、簡単な概要を示します。 
 
-**注:** `Google/SignIn` CocoaPod を追加する必要はありません。必要な SDK は下記の `BMSGoogleAuthentication` CocoaPod によって追加されます。
+**注:** Google Sign-In CocoaPod を追加する必要はありません。必要な SDK は `BMSGoogleAuthentication` CocoaPod によって追加されます。
 
 1. メイン・ターゲットの**「General」**タブの**「Identity」**セクションから、Xcode プロジェクト内の**「Bundle Identifier」**をメモします。これは Google Sign-In プロジェクトの作成に必要です。
 
@@ -136,14 +136,16 @@ sudo gem install cocoapods
  import BMSSecurity
 ```
 
-1. 以下のコードを使用して、Client SDK を初期化します。`<applicationRoute>` および `<applicationGUID>` を、{{site.data.keyword.Bluemix_notm}} ダッシュボードの**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。`<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、ダッシュボードの左上隅にある顔アイコン (![Face](/face.png "Face")) をクリックします。 
+1. 以下のコードを使用して、Client SDK を初期化します。`<applicationRoute>` および `<applicationGUID>` を、{{site.data.keyword.Bluemix_notm}} ダッシュボードの**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。`<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
 
  ```Swift
  let backendURL = "<applicationRoute>"
  let backendGUID = "<applicationGUID>"
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-// Initialize the client SDK. BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
+// Initialize the client SDK.BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+
+ BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
  GoogleAuthenticationManager.sharedInstance.register()
       return true
@@ -217,6 +219,6 @@ Client SDK が初期化され、Google 認証マネージャーの登録が完�
 GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  ユーザーが Google にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Google を使用することについての許可を求めるプロンプトが出されます。その時点で、画面の右上隅にあるユーザー名をクリックすると、別のユーザーを選択してログインすることができます。
+  ユーザーが Google にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Google を使用することについての許可を求めるプロンプトが出されます。その時点で、ユーザー名をクリックすると、別のユーザーを選択してログインすることができます。<!--in the upper-right corner of the screen-->
 
    ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。

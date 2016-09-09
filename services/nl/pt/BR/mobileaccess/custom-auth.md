@@ -8,7 +8,7 @@ copyright:
 # Autenticando usuários com um provedor de identidade customizado
 {: #custom-id}
 
-*Última atualização: 07 de julho de 2016*
+Última atualização: 22 de julho de 2016
 {: .last-updated}
 
 
@@ -16,15 +16,18 @@ Crie um provedor de identidade customizado e implemente sua própria lógica par
 possível hospedar o provedor de identidade customizado no local ou no {{site.data.keyword.Bluemix}}. O único requisito é que o provedor
 de identidade customizado deve ser acessível a partir da Internet pública para que seja possível se comunicar com o serviço {{site.data.keyword.amashort}}.
 
-## Visão geral do provedor de identidade customizado {{site.data.keyword.amashort}}
+## Fluxo de solicitação de identidade customizada do {{site.data.keyword.amashort}}
 {: #custom-id-ovr}
-O diagrama a seguir demonstra como o {{site.data.keyword.amashort}} integra um provedor de identidade customizado.
 
-![image](images/mca-sequence-custom.jpg)
 
-1. Use o {{site.data.keyword.amashort}} SDK para fazer uma solicitação para seus recursos de backend que são protegidos com o {{site.data.keyword.amashort}} server SDK.
+### Fluxo de solicitação do cliente do {{site.data.keyword.amashort}}
+ O diagrama a seguir demonstra como o {{site.data.keyword.amashort}} integra um provedor de identidade customizado.
+
+![Fluxograma da solicitação](images/mca-sequence-custom.jpg)
+
+* Use o {{site.data.keyword.amashort}} SDK para fazer uma solicitação para seus recursos de backend que são protegidos com o {{site.data.keyword.amashort}} server SDK.
 * O {{site.data.keyword.amashort}} server SDK detecta uma solicitação não autorizada e retorna HTTP 401 e o escopo de autorização.
-* O {{site.data.keyword.amashort}} client SDK detecta automaticamente o HTTP 401 acima e inicia o processo de autenticação.
+* O {{site.data.keyword.amashort}} client SDK detecta automaticamente o HTTP 401 e inicia o processo de autenticação.
 * O SDK do cliente {{site.data.keyword.amashort}} entra em contato com o serviço {{site.data.keyword.amashort}} e solicita
 um cabeçalho de autorização.
 * O serviço {{site.data.keyword.amashort}} se comunica com o provedor de identidade customizado para iniciar o processo de autenticação.
@@ -37,6 +40,17 @@ um cabeçalho de autorização.
 * Desse ponto em diante, todas as solicitações feitas com o {{site.data.keyword.amashort}} client SDK terão um cabeçalho de autorização recém-obtido.
 * O {{site.data.keyword.amashort}} client SDK reenvia automaticamente a solicitação original que acionou o fluxo de autorização.
 * O {{site.data.keyword.amashort}} server SDK extrai o cabeçalho de autorização da solicitação, valida-o com o serviço {{site.data.keyword.amashort}} e concede acesso a um recurso de backend.
+
+### Fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}}
+{: #mca-custom-web-sequence}
+
+O fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}} é semelhante ao fluxo do cliente móvel. Entretanto, o {{site.data.keyword.amashort}} protege o aplicativo da web, em vez de um recurso de backend do {{site.data.keyword.Bluemix_notm}}.
+
+  * A solicitação inicial é enviada pelo aplicativo da web (a partir de um formulário de login, por exemplo).
+  * O redirecionamento final é para a área protegida do próprio aplicativo da web, em vez do recurso protegido de backend. 
+
+
+
 
 ## Entendendo os provedores de identidade customizados
 {: #custom-id-about}
@@ -91,6 +105,7 @@ objeto de identidade do usuário customizado que é obtido pelo cliente após a 
 
 ### Implementação de amostra do provedor de identidade customizado
 {: #custom-sample}
+
 Use qualquer uma das implementações de amostra Node.js a seguir de um provedor de identidade customizado como uma referência ao desenvolver seu provedor de identidade customizado. Faça download do código do aplicativo completo dos repositórios GitHub.
 
  * [Amostra simples](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
@@ -110,6 +125,7 @@ processo de autenticação de várias etapas.
 
 ## Stateful versus stateless
 {: #custom-id-state}
+
 Por padrão, o provedor de identidade customizado é considerado um aplicativo stateless. Em alguns casos, o provedor de identidade customizado pode precisar armazenar o estado que está relacionado ao processo de autenticação. Um caso de uso de exemplo é uma autenticação de várias etapas, em que o provedor de identidade customizado precisa armazenar o resultado da primeira etapa de autenticação, antes de continuar na próxima etapa. Para suportar a funcionalidade stateful, um provedor de identidade customizado deve gerar um stateID e fornecê-lo na resposta para o serviço {{site.data.keyword.amashort}}. O serviço {{site.data.keyword.amashort}} deve passar o stateID em solicitações subsequentes pertencentes ao processo de autenticação do cliente.
 
 ## Domínio customizado

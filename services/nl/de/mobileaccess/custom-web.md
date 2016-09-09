@@ -8,7 +8,7 @@ copyright:
 # Angepasste Authentifizierung für Web-App
 {: #custom-web}
 
-*Letzte Aktualisierung: 16. Juni 2016*
+Letzte Aktualisierung: 16. Juni 2016
 {: .last-updated}
 
 Sie können Ihrer Web-App eine angepasste Authentifizierung hinzufügen.
@@ -45,10 +45,11 @@ Gehen Sie wie folgt vor, um den Autorisierungsprozess zu starten:
 1. Leiten Sie von Ihrer Web-App zum folgenden Endpunkt des Autorisierungsservers weiter:
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
+
   
   Verwenden Sie dabei die folgenden Abfrageparameter:
    ```
-   response_type=’authorization_code’
+response_type=’authorization_code’
    client_id= <bluemix\_app\_guid>
    redirect_uri= <uri für die Weiterleitung nach Abrufen eines Autorisierungscodes>
    scope= ‘openid’
@@ -56,13 +57,18 @@ Gehen Sie wie folgt vor, um den Autorisierungsprozess zu starten:
    ```
 
     Der Parameter `state` ist momentan nicht im Gebrauch und kann leer gelassen werden.
+  
 
     Der Parameter `redirect_uri` legt die Weiterleitung nach erfolgreicher oder fehlgeschlagener Authentifizierung Ihres angepassten Identitätsproviders fest.
+
+
 
 1. Nach der Weiterleitung zum Autorisierungsendpunkt wird ein Anmeldeformular angezeigt.
 Geben Sie den Benutzernamen und das Kennwort ein, um die Authentifizierung bei Ihrem Identitätsprovider einzuleiten
 und eine Weiterleitung an den `redirect_uri`.
 Die nach erfolgreicher Authentifizierung zurückgegebene Antwort enthält den Autorisierungscode in den Anforderungsabfrageparametern.
+
+
 
 4. Senden Sie eine `POST`-Anforderung an den Token-Endpunkt des Autorisierungsservers:
 
@@ -70,17 +76,21 @@ Die nach erfolgreicher Authentifizierung zurückgegebene Antwort enthält den Au
 
  Verwenden Sie dabei die folgenden Abfrageparameter:
  ```
- grant_type = 'authorization_code'
+grant_type = 'authorization_code'
  client_id = <bluemix_app_guid>
  redirect_uri = <redirect_uri>
  code = <authorization code>
  ```
-  Der Parameter `redirect_uri` muss mit dem `redirect_uri` aus Schritt 1 übereinstimmen. Der Autorisierungscode wurde von der Anforderung in Schritt 2 zurückgegeben. 
+Der Parameter `redirect_uri` muss mit dem `redirect_uri` aus Schritt 1 übereinstimmen. Der Autorisierungscode wurde von der Anforderung in Schritt 2 zurückgegeben.
   
-  Sie müssen diese `POST`-Anforderung innerhalb von 10 Minuten senden, da der Autorisierungscode maximal 10 Minuten gültig ist.
+    Sie müssen diese `POST`-Anforderung innerhalb von 10 Minuten senden, da der Autorisierungscode maximal 10 Minuten gültig ist.
+
+
 
 Der Antwortteil von `POST` enthält das *access_token* und das
 *id_token* in Base64-Codierung.
+
+
 
 ## Authentifizierung testen
 

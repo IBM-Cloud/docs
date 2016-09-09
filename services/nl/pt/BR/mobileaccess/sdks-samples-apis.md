@@ -8,11 +8,12 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} SDKs, amostras e referência de API
-*Última atualização: 17 de julho de 2016*
+Última atualização: 17 de julho de 2016
 {: .last-updated}
 
 Para incluir {{site.data.keyword.amashort}} SDKs em seu aplicativo, escolha os SDKs que desejar usar. Em seguida, configure seu
-gerenciador de dependência para puxar os SDKs em seu aplicativo. {:shortdesc}
+gerenciador de dependência para puxar os SDKs em seu aplicativo.
+{:shortdesc}
 
 **Nota:** seções subsequentes fornecem informações adicionais sobre instalar os SDKs.
 
@@ -35,7 +36,7 @@ Inclua uma dependência de compilação no arquivo `build.gradle` do aplicativo:
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
     	name:'core',
-    	version: '1.+',
+    	version: '2.+',
     	ext: 'aar',
     	transitive: true
 ```
@@ -237,7 +238,8 @@ npm install -save bms-mca-token-validation-strategy
 
 #### Instale o Liberty SDK
 {: #libertysdk}
-1. Copie o arquivo `com.ibm.worklight.oauth.tai_1.0.0.jar` no diretório `$<wlp.user.dir>/extensions/lib`.
+1. Copie o arquivo `com.ibm.worklight.oauth.tai_1.0.0.jar` no diretório
+`$<wlp.user.dir>/extensions/lib`.
 
 **Dica:** `$<wlp.user.dir>` é o diretório do usuário do tempo de execução do Liberty for Java. O nome do diretório padrão é `usr`.
 
@@ -261,6 +263,7 @@ npm install -save bms-mca-oauth-sdk
 {: #customidprovider}
 
 [Repositório GitHub de amostra simples](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+
 [Repositório GitHub de amostra avançado](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## IMFURLProtocol

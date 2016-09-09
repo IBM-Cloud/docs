@@ -9,7 +9,7 @@ copyright:
 
 {: #custom-ios}
 
-*Dernière mise à jour : 18 juillet 2016*
+Dernière mise à jour : 1er août 2016
 {: .last-updated}
 
 
@@ -74,7 +74,8 @@ MCAAuthorizationManager, définissez un délégué d'authentification et enregis
 `<applicationGUID>` par les valeurs de **Route** et **Identificateur global unique de l'application**
 de la section **Options pour application mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. 
 
-  Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône face (![Face](/face.png "Face")) dans l'angle supérieur gauche du tableau de bord. 
+  Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône Avatar ![icône Avatar](images/face.jpg "icône Avatar") dans la barre de menu pour ouvrir le widget Compte et support.
+  <!--upper-left corner of the -->
 
   Pour `<yourProtectedRealm>`,utilisez le nom de domaine que vous avez défini dans la vignette **Personnalisé** du tableau de bord {{site.data.keyword.amashort}}.
 
@@ -89,11 +90,11 @@ de la section **Options pour application mobile** dans le tableau de bord {{site
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
-  //Délégué d'authentification pour traitement de demande d'authentification personnalisée
+  //Auth delegate for handling custom challenge
  class MyAuthDelegate : AuthenticationDelegate {
       func onAuthenticationChallengeReceived(authContext: AuthenticationContext, challenge: AnyObject){
           print("onAuthenticationChallengeReceived")
-              let answer = <Réponse à la demande d'authentification envoyée par le back-end (Doit être du type [String:AnyObject])>
+              let answer = <An answer to the challenge sent by the backend (Should be of type [String:AnyObject])>
               authContext.submitAuthenticationChallengeAnswer(answer)
       }
 
@@ -114,7 +115,7 @@ de la section **Options pour application mobile** dans le tableau de bord {{site
  do {
       try mcaAuthManager.registerAuthenticationDelegate(delegate, realm: customRealm)
   } catch {
-      print("erreur à l'enregistrement : \(error)")
+      print("error with register: \(error)")
   }
  return true
       }   
@@ -126,13 +127,11 @@ de la section **Options pour application mobile** dans le tableau de bord {{site
 Après avoir initialisé le SDK client et enregistré un délégué d'authentification personnalisé, vous pouvez commencer à envoyer des requêtes à votre
 application de back end mobile.
 
-
 ### Avant de commencer
 {: #custom-ios-testing-before}
 
  Vous devez disposer d'une application créée avec un conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et d'une ressource protégée par
 {{site.data.keyword.amashort}} sur le noeud final `/protected`.
-
 
 1. Envoyez une demande à un noeud final protégé de votre application de back end mobile dans votre navigateur en ouvrant `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
   Le noeud final `/protected` d'une application de back end mobile qui a été créée avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} est protégé par {{site.data.keyword.amashort}}. Ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. En conséquence, un message `Unauthorized` s'affiche dans le navigateur.

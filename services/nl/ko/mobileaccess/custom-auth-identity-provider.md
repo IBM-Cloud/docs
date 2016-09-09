@@ -8,7 +8,7 @@ copyright:
 # 사용자 정의 ID 제공자 작성
 {: #custom-create}
 
-*마지막 업데이트 날짜: 2016년 6월 16일*
+마지막 업데이트 날짜: 2016년 6월 16일
 {: .last-updated}
 
 

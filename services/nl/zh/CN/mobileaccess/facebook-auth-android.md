@@ -11,7 +11,7 @@ copyright:
 # 启用 Android 应用程序的 Facebook 认证
 {: #facebook-auth-android}
 
-*上次更新时间：2016 年 7 月 5 日*
+上次更新时间：2016 年 8 月 04 日
 {: .last-updated}
 
 
@@ -165,11 +165,20 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 					"applicationGUID",
 					BMSClient.REGION_UK);
 
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
+
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
-,
+将 `BMSClient.REGION_UK` 替换为相应的区域。要查看
+{{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
+   
+  **注：**如果您的 Android 应用程序是针对 Android V6.0（API 级别 23
+）或更高版本的，那么必须确保该应用程序具有 `android.permission.GET_ACCOUNTS`
+调用，然后才能调用 `register`。有关更多信息，请参阅
+[https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
 					
-将 `BMSClient.REGION_UK` 替换为相应的区域。
+
 
 1. 将以下代码添加到您的 Activity：
 

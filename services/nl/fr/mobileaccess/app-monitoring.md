@@ -7,7 +7,7 @@ copyright:
 
 # Surveillance des applications
 {: #app-monitoring}
-*Dernière mise à jour : 28 juin 2016*
+Dernière mise à jour : 28 juin 2016
 {: .last-updated}
 
 Outre les fonctions de sécurité, {{site.data.keyword.amafull}} fournit également des fonctions de surveillance et d'analyse à vos applications mobiles. Le SDK client de {{site.data.keyword.amashort}} vous permet d'enregistrer les journaux client et de surveiller les données. Les développeurs peuvent contrôler le moment auquel ces données doivent être envoyées au service {{site.data.keyword.amashort}}. Tous les événements de sécurité, tels que les réussites et les échecs d'authentification, qui se produisent dans le service {{site.data.keyword.amashort}} sont automatiquement journalisés.
@@ -52,7 +52,8 @@ récemment. Il revient au développeur de décider à quel moment les données c
 2. Une fois ouvert le tableau de bord de votre application {{site.data.keyword.Bluemix_notm}}, cliquez sur une vignette
 {{site.data.keyword.amashort}}.
 
-3. Dans le tableau de bord {{site.data.keyword.amashort}}, cliquez sur le lien **Surveillance** dans le menu de gauche.
+3. Cliquez sur le lien **Surveillance** dans la barre de navigation du tableau de bord {{site.data.keyword.amashort}}.
+
 
 ## Activation, configuration et utilisation de Logger
 {: #enable-logger}
@@ -186,7 +187,7 @@ Logger logger2 = Logger.getInstance("logger2");
 logger1.debug("debug message");
 logger2.info("info message");
 
-// Envoi des journaux conservés au service {{site.data.keyword.amashort}}
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 Logger.send();
 ```
 
@@ -211,7 +212,7 @@ IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
 [logger1 logDebugWithMessages:@"debug message"];
 [logger2 logInfoWithMessages:@"info message"];
 
-// Envoi des journaux conservés au service {{site.data.keyword.amashort}}
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 [IMFLogger send];
 ```
 
@@ -219,7 +220,7 @@ IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
 {: #enable-logger-sample-swift}
 
 ```Swift
-// Activation de journaux persistants
+// Enable persisting logs
 IMFLogger.setCapture(true)
 
 // Start capturing uncaught exceptions
@@ -236,7 +237,7 @@ let logger2 = IMFLogger(forName: "logger2");
 logger1.logDebugWithMessages("debug message")
 logger2.logInfoWithMessages("info message")
 
-// Envoi des journaux conservés au service {{site.data.keyword.amashort}}
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 IMFLogger.send()
 
 ```
@@ -245,7 +246,7 @@ IMFLogger.send()
 {: #enable-logger-sample-cordova}
 
 ```JavaScript
-// Activation de journaux persistants
+// Enable persisting logs
 MFPLogger.setCapture(true);
 
 // Set the minimum log level to be printed and persisted
@@ -259,7 +260,7 @@ var logger2 = MFPLogger.getInstance("logger2");
 logger1.debug ("debug message");
 logger2.info ("info message");
 
-// Envoi des journaux conservés au service {{site.data.keyword.amashort}}
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 MFPLogger.send(success, failure);
 ```
 
@@ -289,23 +290,23 @@ Utilisez les API suivantes pour démarrer l'enregistrement et l'envoi des donné
 {: #usage-analytics-android}
 
 ```Java
-// Activation de l'enregistrement de statistiques d'utilisation
+// Enable recording of usage analytics
 MFPAnalytics.enable();
 
-// Lancement de l'enregistrement de l'heure de démarrage de l'application
-// Ajout de ce code dans la méthode onCreate de votre activité principale
+// Start recording application startup time
+// Add this code in the onCreate method of your main Activity
 MFPAnalytics.startLoggingApplicationStartup();
 
-// Enregistrement de la durée de démarrage de l'application
-// Ajout de ce code dans la méthode onStart de votre activité principale
+// Record the duration of application startup
+// Add this code in the onStart method of your main Activity
 MFPAnalytics.logApplicationStartup();
 
-// Enregistrement des événements d'avant-plan et d'arrière-plan
-// Ajout de ce code dans les méthodes onPause et onResume de votre activité principale
+// Record application foreground and background events
+// Add this code in the onPause and onResume methods of your main Activity
 MFPAnalytics.logSessionStart();
 MFPAnalytics.logSessionEnd();
 
-// Envoi des analyses d'utilisation enregistrées au service {{site.data.keyword.amashort}}
+// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 MFPAnalytics.send();
 ```
 
@@ -319,14 +320,14 @@ Swift.
 Le SDK Objective-C rapporte les données de surveillance à la console de surveillance du service {{site.data.keyword.amashort}}. Si vous dépendez des fonctions de surveillance du service {{site.data.keyword.amashort}}, continuez à utiliser le SDK Objective-C.
 
 ```Objective-C
-// Activation de l'enregistrement d'analyse d'utilisation
+// Enable usage analytics recording
 [[IMFAnalytics sharedInstance] setEnabled:YES];
 
 // Start recording application lifecycle events
 [[IMFAnalytics sharedInstance] startRecordingApplicationLifecycleEvents];
 
 
-// Envoi des analyses d'utilisation enregistrées au service {{site.data.keyword.amashort}}
+// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 [[IMFAnalytics sharedInstance] sendPersistedLogs];
 ```
 
@@ -334,14 +335,14 @@ Le SDK Objective-C rapporte les données de surveillance à la console de survei
 {: #usage-analytics-swift}
 
 ```Swift
-// Activation de l'enregistrement d'analyse d'utilisation
+// Enable usage analytics recording
 IMFAnalytics.sharedInstance().setEnabled(true)
 
 // Start recording application lifecycle events
 IMFAnalytics.sharedInstance().startRecordingApplicationLifecycleEvents()
 
 
-// Envoi des analyses d'utilisation enregistrées au service {{site.data.keyword.amashort}}
+// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 IMFAnalytics.sharedInstance().sendPersistedLogs()
 ```
 
@@ -349,10 +350,10 @@ IMFAnalytics.sharedInstance().sendPersistedLogs()
 {: #usage-analytics-cordova}
 
 ```JavaScript
-// Activation de l'enregistrement d'analyse d'utilisation
+// Enable usage analytics recording
 MFPAnalytics.enable();
 
-// Envoi des analyses d'utilisation enregistrées au service {{site.data.keyword.amashort}}
+// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
 MFPAnalytics.send();
 ```
 **Remarque :** Lorsque vous développez des applications Cordova, utilisez l'API native pour activer l'enregistrement des événements de leur cycle de vie.

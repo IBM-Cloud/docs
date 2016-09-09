@@ -8,7 +8,7 @@ copyright:
 # {{site.data.keyword.amashort}}로 Liberty for Java 리소스 보호
 {: #protecting-liberty}
 
-*마지막 업데이트 날짜: 2016년 6월 30일*
+마지막 업데이트 날짜: 2016년 6월 30일
 {: .last-updated}
 
 

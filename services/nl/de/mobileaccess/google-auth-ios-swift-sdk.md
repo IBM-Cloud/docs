@@ -11,7 +11,7 @@ copyright:
 # Google-Authentifizierung für iOS-Apps aktivieren (Swift-SDK)
 {: #google-auth-ios}
 
-*Letzte Aktualisierung: 17. Juli 2016*
+Letzte Aktualisierung: 01. August 2016
 {: .last-updated}
 
 Verwenden Sie die Google-Anmeldung, um Benutzer für Ihre {{site.data.keyword.amashort}}-iOS-Swift-App zu authentifizieren. Das neu freigegebene {{site.data.keyword.amashort}}-Swift-SDK ergänzt und verbessert die vom vorhandenen Objective-C-SDK Mobile Client Access bereitgestellte Funktionalität.
@@ -40,7 +40,7 @@ Dieser Prozess beinhaltet Folgendes:
 
 Die folgenden Schritte stellen eine Kurzfassung der Aufgaben dar, die zum Vorbereiten Ihrer App notwendig sind. 
 
-**Hinweis:** Der `Google/SignIn`-CocoaPod muss nicht hinzugefügt werden. Das notwendige SDK wird vom unten beschriebenen CocoaPod `BMSGoogleAuthentication` hinzugefügt.
+**Hinweis:** Der Sign-In-CocoaPod von Google muss nicht hinzugefügt werden. Das notwendige SDK wird vom CocoaPod `BMSGoogleAuthentication` hinzugefügt.
 
 1. Notieren Sie die Bundle-ID **Bundle Identifier** in Ihrem Xcode-Projekt aus dem Abschnitt **Identity** der Registerkarte **General** des Hauptziels. Sie benötigen Sie zum Erstellen Ihres Projekts zur Google-Anmeldung.
 
@@ -101,7 +101,7 @@ Weitere Informationen finden Sie auf der [CocoaPods-Website](https://cocoapods.o
 1. Bearbeiten Sie die `Podfile` und fügen Sie die folgenden Zeilen zum relevanten Ziel hinzu:
 
  ```
- use_frameworks!
+use_frameworks!
  pod 'BMSGoogleAuthentication'
  ```
  
@@ -134,7 +134,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
  import BMSSecurity
  ```
 
-1. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren. Ersetzen Sie `<applicationRoute>` und `<applicationGUID>` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** des {{site.data.keyword.Bluemix_notm}}-Dashboards ermittelt haben. Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol mit dem Gesicht (![Gesicht](/face.png "Gesicht")) in der linken oberen Ecke des Dashboards. 
+1. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren. Ersetzen Sie `<applicationRoute>` und `<applicationGUID>` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** des {{site.data.keyword.Bluemix_notm}}-Dashboards ermittelt haben. Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen. 
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -142,8 +142,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- // Client-SDK initialisieren.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+ // Client-SDK initialisieren.BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -185,14 +184,14 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
   if error == nil {
-    print ("response:\(response?.responseText), no error")
+        print ("response:\(response?.responseText), no error")
  } else {
     print ("error: \(error)")
  }
  }
 
-  request.sendWithCompletionHandler(callBack)
-	```
+ request.sendWithCompletionHandler(callBack)
+ ```
 
 1. Führen Sie Ihre Anwendung aus. Ein Popup-Fenster für die Google-Anmeldung wird angezeigt.
 
@@ -216,9 +215,9 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 1. Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
 
  ```
- GoogleAuthenticationManager.sharedInstance.logout(callBack)
+GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Google angemeldet hat, und der Benutzer versucht, sich wieder anzumelden, muss er sich bei {{site.data.keyword.amashort}} für die Verwendung von Google zu Authentifizierungszwecken berechtigen. An dieser Stelle kann der Benutzer in der rechten oberen Ecke der Anzeige auf den Benutzernamen klicken, um einen anderen Benutzer auszuwählen und sich mit diesem anzumelden.
+  Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Google angemeldet hat, und der Benutzer versucht, sich wieder anzumelden, muss er sich bei {{site.data.keyword.amashort}} für die Verwendung von Google zu Authentifizierungszwecken berechtigen. An dieser Stelle kann der Benutzer auf den Benutzernamen klicken,<!--in the upper-right corner of the screen--> um einen anderen Benutzer auszuwählen und sich mit diesem anzumelden. 
 
    Die Übergabe von `callBack` an die Abmeldefunktion ist optional. Sie können auch `nil` übergeben.

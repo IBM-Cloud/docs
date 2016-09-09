@@ -8,7 +8,7 @@ copyright:
 # {{site.data.keyword.amashort}} für eine angepasste Authentifizierung konfigurieren
 {: #custom-dash}
 
-*Letzte Aktualisierung: 17. Juli 2016*
+Letzte Aktualisierung: 17. Juli 2016
 {: .last-updated}
 
 
@@ -17,7 +17,7 @@ Zur Verwendung einer angepassten Authentifizierung mit Ihrer mobilen App müssen
 ## Vorbereitungen
 {: #custom-dash-begin}
 * Lesen Sie die Informationen in [Einführung](index.html).
-* Schützen Sie Ihre Back-End-Anwendung mit dem {{site.data.keyword.amashort}}-Server-SDK.  Weitere Informationen finden Sie in [Ressourcen schützen](protecting-resources.html).
+* Schützen Sie Ihre Back-End-Anwendung mit dem {{site.data.keyword.amashort}}-Server-SDK. Weitere Informationen finden Sie in [Ressourcen schützen](protecting-resources.html).
 * Führen Sie eine aktive Anwendung eines Identitätsproviders aus.
 
 ## Angepasste Authentifizierung im {{site.data.keyword.Bluemix}}-Dashboard konfigurieren

@@ -11,7 +11,7 @@ copyright:
 # Android SDK 설정
 {: #getting-started-android}
 
-*마지막 업데이트 날짜: 2016년 7월 18일*
+마지막 업데이트 날짜: 2016년 8월 2일
 {: .last-updated}
 
 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 Android 애플리케이션을 계측하고 SDK를 초기화하고 보호 및 비보호 리소스를 요청하십시오.
@@ -39,7 +39,7 @@ copyright:
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
@@ -72,6 +72,8 @@ copyright:
 					BMSClient.REGION_UK);
 ```
 `BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오.
+
+{{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
 
 ## 모바일 백엔드 애플리케이션에 대한 요청 작성
 {: #request}

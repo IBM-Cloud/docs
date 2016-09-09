@@ -7,7 +7,7 @@ copyright:
 
 # 关于 {{site.data.keyword.amashort}}
 {: #mca-overview}
-*上次更新时间：2016 年 7 月 17 日*
+上次更新时间：2016 年 7 月 22 日
 {: .last-updated}
 
 {{site.data.keyword.amafull}} 服务为访问 {{site.data.keyword.Bluemix_notm}} 上所托管云资源的移动和 Web 应用程序提供认证和监视服务。
@@ -33,7 +33,8 @@ copyright:
 ## 体系结构概述
 {: #architecture}
 
-![图像](images/mca-overview.jpg)
+![体系结构概览图](images/mca-overview.jpg)
+
 
 * 使用 {{site.data.keyword.amashort}} 服务器 SDK 保护云资源（Node.js 应用程序）。
 * 使用 {{site.data.keyword.amashort}} 客户端 SDK 提供的 `Request` 类与受保护的云资源进行通信。
@@ -49,16 +50,16 @@ copyright:
 {: #flow}
 下图描述了请求是如何从客户端 SDK 流向移动后端应用程序和身份提供者的。
 
-![图像](images/mca-sequence-overview.jpg)
+![请求流程图](images/mca-sequence-overview.jpg)
 
-1. 使用 {{site.data.keyword.amashort}} SDK 对受 {{site.data.keyword.amashort}} 服务器 SDK 保护的后端资源发起请求。
+* 使用 {{site.data.keyword.amashort}} SDK 对受 {{site.data.keyword.amashort}} 服务器 SDK 保护的后端资源发起请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 检测到未授权的请求，然后返回 HTTP 401 和授权作用域。
 * {{site.data.keyword.amashort}} 客户端 SDK 自动检测到上述 HTTP 401，然后启动认证过程。
 * {{site.data.keyword.amashort}} 客户端 SDK 访问 {{site.data.keyword.amashort}} 服务，并要求发出 Authorization 头。
 * {{site.data.keyword.amashort}} 服务要求客户端应用程序根据当前配置的认证类型，通过提供认证质询首先进行认证。
 * 根据认证类型，{{site.data.keyword.amashort}} 客户端 SDK：
-   * **Facebook 或 Google 认证**：自动处理认证质询
-   * **定制认证**：基于开发者提供的逻辑获取凭证。
+   * Facebook 或 Google 认证：自动处理认证质询
+   * 定制认证：基于开发者提供的逻辑获取凭证。
 * 如果配置了 Facebook 或 Google 认证，那么 {{site.data.keyword.amashort}} 客户端 SDK 会使用关联的 SDK 来获取 Facebook 或 Google 访问令牌。这些令牌将用作认证质询响应。
 * 如果配置了定制认证，那么开发者必须获取认证质询回复，并将其提供给 {{site.data.keyword.amashort}} 客户端 SDK。
 * 获取认证质询回复后，会将其发送给 {{site.data.keyword.amashort}} 服务。
@@ -67,3 +68,26 @@ copyright:
 * 从此刻开始，通过 {{site.data.keyword.amashort}} 客户端 SDK 发起的所有请求都具有新获取的 Authorization 头。
 * {{site.data.keyword.amashort}} 客户端 SDK 自动重新发送触发了授权流程的原始请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 从请求中抽取 Authorization 头，通过 {{site.data.keyword.amashort}} 服务对该头进行验证，然后授予对后端资源的访问权。
+
+
+## 获取有关 {{site.data.keyword.amashort}} 的帮助和支持
+{: #gettinghelp}
+
+如果在使用 {{site.data.keyword.amashort}} 时遇到任何问题或者有任何疑问，都可以
+通过搜索信息或者通过论坛提问来获得帮助。您还可以打开支持凭单。 
+
+在使用论坛提问时，请给问题做标记，以便 {{site.data.keyword.Bluemix_notm}} 开发
+团队能看到您的问题。
+
+* 如果是关于使用 {{site.data.keyword.amashort}} 开发或者部署应用程序方面的问题，请在
+[Stack
+Overflow](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window} 上发帖，并将问题标记为“ibm-bluemix”和“{{site.data.keyword.amashort}}”。
+* 有关服务和入门指示信息的问题，请使用
+[IBM
+developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window} 论坛。 
+
+请参阅[获取
+帮助](https://www.{DomainName}/docs/support/index.html#getting-help)了解有关如何使用论坛的更多详细信息。
+
+有关打开 IBM 支持凭单的信息，或者有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://www.{DomainName}/docs/support/index.html#contacting-support)。
+

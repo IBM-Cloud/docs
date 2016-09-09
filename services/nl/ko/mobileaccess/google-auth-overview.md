@@ -11,21 +11,23 @@ copyright:
 # Google 신임 정보로 사용자 인증
 {: #google-auth}
 
-*마지막 업데이트 날짜: 2016년 7월 3일*
+마지막 업데이트 날짜: 2016년 7월 22일
 
 ID 제공자로 Google을 사용하여 리소스를 보호하도록 {{site.data.keyword.amashort}} 서비스를 구성할 수 있습니다. 그러면 모바일 또는 웹 애플리케이션 사용자가 인증을 위해 Google 신임 정보를 사용할 수 있습니다.
 {:shortdesc}
 
-**중요:** Google SDK를 별도로 설치할 필요가 없습니다. {{site.data.keyword.amashort}} 클라이언트 SDK를 구성할 때 종속성 관리자가 Google SDK를 자동으로 설치합니다.
+**중요:** Google에서 제공하는 클라이언트 SDK를 별도로 설치할 필요가 없습니다. {{site.data.keyword.amashort}} 클라이언트 SDK를 구성할 때 종속성 관리자가 Google SDK를 자동으로 설치합니다.
 
 ## {{site.data.keyword.amashort}} 요청 플로우
 {: #google-auth-overview}
 
-인증을 위해 {{site.data.keyword.amashort}}에서 Google을 사용하여 통합하는 방법을 이해하려면 간소화된 다음 다이어그램을 참조하십시오. 
+### 클라이언트 요청 플로우
 
-![이미지](images/mca-sequence-google.jpg)
+인증을 위해 Google과 {{site.data.keyword.amashort}}의 통합 방식을 이해하려면 다음 다이어그램을 참조하십시오.
 
-1. {{site.data.keyword.amashort}} SDK를 사용하여 {{site.data.keyword.amashort}} 서버 SDK로 보호되는 백엔드 리소스를 요청합니다.
+![클라이언트 요청 플로우 다이어그램](images/mca-sequence-google.jpg)
+
+* {{site.data.keyword.amashort}} SDK를 사용하여 {{site.data.keyword.amashort}} 서버 SDK로 보호되는 백엔드 리소스를 요청합니다.
 * {{site.data.keyword.amashort}} 서버 SDK가 권한이 없는 요청을 발견하고 HTTP 401 코드 및 권한 범위를 리턴합니다.
 * {{site.data.keyword.amashort}} 클라이언트 SDK가 자동으로 HTTP 401 코드를 자동으로 발견하고 인증 프로세스를 시작합니다.
 * {{site.data.keyword.amashort}} 클라이언트 SDK가 {{site.data.keyword.amashort}} 서비스에 연결하여 권한 헤더를 요청합니다.
@@ -37,6 +39,14 @@ ID 제공자로 Google을 사용하여 리소스를 보호하도록 {{site.data.
 * 이 시점부터 {{site.data.keyword.amashort}} 클라이언트 SDK를 통해 작성된 모든 요청에는 새로 얻은 권한 헤더가 포함됩니다.
 * {{site.data.keyword.amashort}} 클라이언트 SDK가 권한 플로우를 트리거한 원래 요청을 자동으로 재전송합니다.
 * {{site.data.keyword.amashort}} 서버 SDK가 요청에서 권한 헤더를 추출하고 {{site.data.keyword.amashort}} 서비스를 사용하여 해당 권한 헤더의 유효성을 검증하고 백엔드 리소스에 대한 액세스를 부여합니다.
+
+
+### {{site.data.keyword.amashort}} 웹 애플리케이션 요청 플로우
+{: #mca-google-web-sequence}
+{{site.data.keyword.amashort}} 웹 애플리케이션 요청 플로우는 모바일 클라이언트 플로우와 유사합니다. 그러나 {{site.data.keyword.amashort}}는 {{site.data.keyword.Bluemix_notm}} 백엔드 리소스 대신 웹 애플리케이션을 보호합니다. 
+
+  * 초기 요청은 웹 애플리케이션에서 전송합니다(예: 로그인 양식에서).
+  * 최종 경로는 백엔드 보호 리소스보다 웹 애플리케이션 자체의 보호 영역으로 재지정됩니다. 
 
 
 

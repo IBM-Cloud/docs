@@ -8,10 +8,10 @@ copyright:
 # 搭配使用 {{site.data.keyword.amashort}} 與本端開發環境
 {: #protecting-local}
 
-*前次更新：2016 年 7 月 17 日*
+前次更新：2016 年 8 月 16 日
 {: .last-updated}
 
-您可以配置本端開發來使用 {{site.data.keyword.Bluemix}} 上執行的 {{site.data.keyword.amashort}} 服務。尤其，您可以在本端使用 {{site.data.keyword.amashort}} 伺服器 SDK 開發程式碼，並將 {{site.data.keyword.amashort}} 要求傳送至開發伺服器。{{site.data.keyword.Bluemix}} 上執行的 {{site.data.keyword.amashort}} 服務將保護這些要求。
+您可以配置本端開發來使用 {{site.data.keyword.Bluemix}} 上執行的 {{site.data.keyword.amafull}} 服務。尤其，您可以在本端使用 {{site.data.keyword.amashort}} 伺服器 SDK 開發程式碼，並將 {{site.data.keyword.amashort}} 要求傳送至開發伺服器。{{site.data.keyword.Bluemix}} 上執行的 {{site.data.keyword.amashort}} 服務將保護這些要求。
 
 ## 設定伺服器 SDK
 {: #serversetup}
@@ -82,7 +82,7 @@ var MCABackendStrategy =
 
 將 `BMSClient.REGION_UK` 取代為適當的地區。
 
-您可能需要將 `localhost` 變更為下列範例中開發伺服器的實際 IP 位址。
+在下列範例中，您可能需要將 `localhost` 變更為開發伺服器的實際 IP 位址。
 
 ### Android
 {: #android}

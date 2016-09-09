@@ -8,13 +8,13 @@ copyright:
 # Ativando a autenticação do Google para aplicativos da web
 {: #google-auth-web}
 
-*Última atualização: 18 de julho de 2016*
+Última atualização: 18 de julho de 2016
 {: .last-updated}
 
-Use o Google Sign-In para autenticar usuários em seu aplicativo da web.
+Use o Google Sign-In para autenticar usuários em seu aplicativo da web. Inclua a funcionalidade de segurança do {{site.data.keyword.amashort}}. 
 
 
-## Antes de iniciar
+## Antes de começar
 {: #before-you-begin}
 
 Você deve ter:
@@ -37,7 +37,7 @@ configurar o painel {{site.data.keyword.amashort}}.
 {{site.data.keyword.amashort}} na caixa de URIs de redirecionamento autorizado. O URI de autorização de redirecionamento
 {{site.data.keyword.amashort}} pode ser obtido a partir da tela de configuração do Google do painel {{site.data.keyword.amashort}}
 (consulte as etapas abaixo). 
-6. Salve as mudanças. Anote o Identificador de cliente do Google e o Segredo do aplicativo.
+6. Salve as mudanças. Anote o identificador de cliente do Google e o Segredo do aplicativo.
 
 
 ## Configurando o {{site.data.keyword.amashort}} para autenticação do Google
@@ -47,12 +47,10 @@ Depois de ter um ID de aplicativo e um segredo do Google, é possível ativar a 
 1. Clique no ladrilho {{site.data.keyword.amashort}}. O painel do {{site.data.keyword.amashort}} é carregado.
 1. Clique no botão no painel do Google.
 1. Na seção **Configurar para web**:   
-    * Observe o valor na caixa de texto **URI de redirecionamento do Mobile Client Access para o Google Developer Console**. Esse
-é o valor necessário para incluir na caixa **URIs de redirecionamento autorizado** em **Restrições no identificador de
-cliente para aplicativo da web** do **Google Developers Portal** na etapa 3 acima.
+    * Observe o valor na caixa de texto **URI de redirecionamento do Mobile Client Access para o Google Developer Console**. Esse é o valor necessário para incluir na caixa **URIs de redirecionamento autorizado** em **Restrições no Identificador de cliente para aplicativo da web** do **Portal de desenvolvedores do Google** na etapa 3.
     * Insira o **Identificador de cliente do Google** e o **Segredo do cliente**.
-    * Insira o URI de redirecionamento nos **URIs de redirecionamento de aplicativo da web**. Esse valor é para que o URI
-de redirecionamento seja acessado após o processo de autorização ser concluído e é determinado pelo desenvolvedor.
+    * Insira o URI de redirecionamento nos **URIs de redirecionamento de aplicativo da web**. Esse valor é para que o URI de
+redirecionamento seja acessado após o processo de autorização ser concluído e é determinado pelo desenvolvedor.
 1. Clique em **Salvar**.
 
 
@@ -67,16 +65,14 @@ Para iniciar o processo de autorização:
 1. Recupere o terminal de autorização (`authorizationEndpoint`) e o clientId (`clientId`) das credenciais
 de serviço armazenadas na variável de ambiente `VCAP_SERVICES`. 
 
-    **Nota:** caso tenha criado o serviço {{site.data.keyword.amashort}} antes de o suporte da web ser incluído,
-não será possível ter terminais de autorização nas credenciais de serviço. Neste caso, use os terminais de autorização a seguir dependendo da
-região do Bluemix:
+    **Nota:** se você criou o serviço {{site.data.keyword.amashort}} antes de o suporte da web ter sido incluído, talvez você não tenha terminais de autorização nas credenciais de serviço. Nesse caso, use os terminais de autorização a seguir, dependendo da região do Bluemix:
 
 
  	Sul dos EUA: 
  	```
  	https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
  	```
- 	Londres:
+ 	Londres: 
  	```
  	https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
   	```
@@ -84,10 +80,10 @@ região do Bluemix:
   	```
   	https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
   	```
-1. Construa o URI do servidor de autorizações usando `response_type("code")`, `client_id` e `redirect_uri` como parâmetros de consulta.
-1. Redirecione a partir do seu aplicativo da web para o URI gerado.
+2. Construa o URI do servidor de autorizações usando `response_type("code")`, `client_id` e `redirect_uri` como parâmetros de consulta.
+3. Redirecione a partir do seu aplicativo da web para o URI gerado.
   
-O exemplo abaixo recupera os parâmetros da variável `VCAP_SERVICES`, construindo a URL e enviando a solicitação de redirecionamento.
+O exemplo a seguir recupera os parâmetros da variável `VCAP_SERVICES`, construindo a URL e enviando a solicitação de redirecionamento.
   
 ```Java
  var cfEnv = require("cfenv"); 
@@ -114,29 +110,25 @@ O exemplo abaixo recupera os parâmetros da variável `VCAP_SERVICES`, construin
 		res.redirect(redirectUrl); 
 	} 
 } 
-
-  ```
+```
 
 Observe que o parâmetro `redirect_uri` representa seu URI de aplicativo da web e deve ser igual àquele definido no painel
-{{site.data.keyword.amashort}}. Após redirecionar para o terminal de autorização, o usuário obterá um formulário de login do Google. Após
-o usuário conceder permissões para ter o login efetuado usando sua identidade do Google, o serviço {{site.data.keyword.amashort}}
-chamará seu URI de redirecionamento de aplicativo da web fornecendo o código de concessão como um parâmetro de consulta.
+{{site.data.keyword.amashort}}.
+Após redirecionar para o terminal de autorização, o usuário obterá um formulário de login do Google. Depois que o usuário concede permissões para efetuar login usando a identidade do Google, o serviço {{site.data.keyword.amashort}} chama o URI de redirecionamento de aplicativo da web, fornecendo o código de concessão como um parâmetro de consulta.
 
 ## Obtendo os tokens
-A próxima etapa é obter token de acesso e tokens de identidade usando o código de concessão recebido anteriormente. Para fazer isso: 
+A próxima etapa é obter token de acesso e tokens de identidade usando o código de concessão recebido anteriormente. 
 
-1. Recupere o token `tokenEndpoint`, `clientId` e `secret` das credenciais de serviço na variável de ambiente `VCAP_SERVICES`. 
+1. Recupere os tokens `tokenEndpoint`, `clientId` e `secret` das credenciais de serviço armazenadas na variável de ambiente `VCAP_SERVICES`. 
   
-    **Nota:** caso tenha criado o serviço {{site.data.keyword.amashort}} antes de o suporte da web ser incluído,
-não será possível ter terminais de autorização nas credenciais de serviço. Neste caso, use os terminais de autorização a seguir dependendo da
-região do Bluemix:
+    **Nota:** se você criou o serviço {{site.data.keyword.amashort}} antes de o suporte da web ter sido incluído, talvez você não tenha terminais de autorização nas credenciais de serviço. Nesse caso, use os terminais de autorização a seguir, dependendo da região do Bluemix:
  
  	Sul dos EUA: 
  	```
  	https:// mobileclientaccess.ng.bluemix.net/oauth/v2/token 
   	```
- 	Londres:
- 	```
+ 	Londres: 
+  	```
   	https:// mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
    	```
    	Sydney: 
@@ -149,7 +141,7 @@ região do Bluemix:
  
 O código a seguir recupera os valores necessários e os envia com uma solicitação de post.
     
-   ```Java    
+```Java    
   var cfEnv = require("cfenv");
   var base64url = require("base64url ");
   var request = require('request');
@@ -179,37 +171,34 @@ O código a seguir recupera os valores necessários e os envia com uma solicita�
 	).auth(mcaCredentials.clientId, mcaCredentials.secret); 
   }
 ); 
-  ```
+```
 
-  O parâmetro `redirect_uri` é o URI para redirecionar, após a autenticação bem-sucedida ou com falha com o Google+ e deve
+O parâmetro `redirect_uri` é o URI para redirecionar, após a autenticação bem-sucedida ou com falha com o Google+ e deve
 corresponder ao `redirect_uri` a partir da etapa 1.  
    
-Assegure-se de enviar essa solicitação POST dentro de 10 minutos após os quais o código de concessão expira. Após 10 minutos, um novo código é necessário.
+Certifique-se de enviar esta solicitação POST no período de 10 minutos, após o qual, o código de concessão expirará. Depois de 10 minutos, será necessário um novo código.
 
-O corpo de resposta POST conterá o `access_token` e o `id_token` codificados em base64.
+O corpo de resposta POST contém o `access_token` e o `id_token` codificados em base64.
 
-Assim que tiver recebido acesso e os tokens de identidade, será possível sinalizar a sessão da web como autenticada e, opcionalmente,
-persistir esses tokens.  
+Depois de receber o acesso e os tokens de identidade, será possível sinalizar a sessão da web como autenticada e, opcionalmente, persistir esses tokens.  
 
 
 ##Usando o acesso e o token de identidade obtidos 
 
-O token de identidade contém informações sobre a identidade do usuário. No caso da autenticação do Google, o token conterá todas as informações que o usuário concordou em compartilhar, como nome completo, URL da foto do perfil, etc.  
+O token de identidade contém informações sobre a identidade do usuário. Para autenticação do Google, o token contém todas as informações que o usuário concordou em compartilhar, como nome completo, URL da foto de perfil, etc.  
 
-O token de acesso permite a comunicação com os recursos protegidos pelos filtros de autorização {{site.data.keyword.amashort}},
-consulte [Protegendo recursos](protecting-resources.html).
+O token de acesso permite a comunicação com os recursos protegidos pelos filtros de autorização do {{site.data.keyword.amashort}}. Leia sobre [Protegendo recursos](protecting-resources.html).
 
-
-Para fazer solicitações aos recursos protegidos, inclua um Cabeçalho de autorização nas solicitações com a estrutura a seguir: 
+Para fazer solicitações para recursos protegidos, inclua um cabeçalho de autorização nas solicitações com a estrutura a seguir: 
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-**Nota:** 
+####Dicas:
+{: tips} 
 
 * O `accessToken` e o `idToken` devem ser separados por um espaço em branco.
 
-* O `idToken` é opcional. Caso não forneça o token de identidade, o recurso protegido poderá ser acessado, mas não receberá
-nenhuma informação sobre o usuário autorizado. 
+* O `idToken` é opcional. Se você não fornecer o token de identidade, o recurso protegido poderá ser acessado, mas não receberá nenhuma informação sobre o usuário autorizado. 
 
 
 

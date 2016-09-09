@@ -7,7 +7,7 @@ copyright:
 
 # {{site.data.keyword.amashort}} の概要
 {: #mca-overview}
-*最終更新日: 2016 年 7 月 17 日*
+最終更新日: 2016 年 7 月 22 日
 {: .last-updated}
 
 {{site.data.keyword.amafull}} サービスは、{{site.data.keyword.Bluemix_notm}} 上でホストされているクラウド・リソースにアクセスするモバイル・アプリケーションおよび Web アプリケーションの認証サービスおよびモニタリング・サービスを提供します。
@@ -33,7 +33,7 @@ copyright:
 ## アーキテクチャーの概要
 {: #architecture}
 
-![image](images/mca-overview.jpg)
+![アーキテクチャー概要ダイアグラム](images/mca-overview.jpg)
 
 * {{site.data.keyword.amashort}} Server SDK を使用してクラウド・リソース (Node.js アプリケーション) を保護します。
 * {{site.data.keyword.amashort}} Client SDK によって提供される `Request` クラスを使用して、保護されたクラウド・リソースと通信します。
@@ -49,16 +49,16 @@ copyright:
 {: #flow}
 以下の図は、要求が Client SDK からモバイル・バックエンド・アプリケーションおよび ID プロバイダーへどのように流れていくのかを説明したものです。
 
-![image](images/mca-sequence-overview.jpg)
+![要求フロー・ダイアグラム](images/mca-sequence-overview.jpg)
 
-1. {{site.data.keyword.amashort}} SDK を使用して、{{site.data.keyword.amashort}} Server SDK によって保護されているバックエンド・リソースへ要求を出します。
+* {{site.data.keyword.amashort}} SDK を使用して、{{site.data.keyword.amashort}} Server SDK によって保護されているバックエンド・リソースへ要求を出します。
 * {{site.data.keyword.amashort}} Server SDK は無許可の要求を検出し、HTTP 401 と許可範囲を返します。
 * {{site.data.keyword.amashort}} Client SDK は自動的に HTTP 401 を検出し、認証プロセスを開始します。
 * {{site.data.keyword.amashort}} Client SDK は {{site.data.keyword.amashort}} サービスに連絡し、認証ヘッダーを送信するよう要求します。
 * {{site.data.keyword.amashort}} サービスは、現在構成されている認証タイプに従って認証チャレンジを提供して、最初に認証するようクライアント・アプリに要求します。
 * 認証タイプに基づいて {{site.data.keyword.amashort}} Client SDK は以下を行います。
-   * **Facebook 認証または Google 認証:** 認証チャレンジを自動的に処理します。
-   * **カスタム認証**: 開発者によって提供されたロジックに基づいて資格情報を取得します。
+   * Facebook 認証または Google 認証: 認証チャレンジを自動的に処理します。
+   * カスタム認証: 開発者によって提供されたロジックに基づいて資格情報を取得します。
 * Facebook 認証または Google 認証が構成されている場合、{{site.data.keyword.amashort}} Client SDK は、関連付けられた SDK を使用して Facebook または Google のアクセス・トークンを取得します。これらのトークンは、認証チャレンジ応答として機能します。
 * カスタム認証が構成されている場合は、開発者が認証チャレンジ応答を取得し、それを {{site.data.keyword.amashort}} Client SDK に提供する必要があります。
 * 認証チャレンジ応答が取得されると、{{site.data.keyword.amashort}} サービスに送信されます。
@@ -67,3 +67,20 @@ copyright:
 * この時点以降、{{site.data.keyword.amashort}} Client SDK で行われたすべての要求は、新しく入手した許可ヘッダーを含むようになります。
 * {{site.data.keyword.amashort}} Client SDK は、認証フローをトリガーしたオリジナルの要求を自動的に再送します。
 * {{site.data.keyword.amashort}} Server SDK は、要求から許可ヘッダーを抽出し、{{site.data.keyword.amashort}} サービスを使用してそのヘッダーを検証し、バックエンド・リソースへのアクセスを認可します。
+
+
+## {{site.data.keyword.amashort}} のヘルプおよびサポートの利用
+{: #gettinghelp}
+
+{{site.data.keyword.amashort}} を使用しているときに問題や質問がある場合は、情報を検索したり、フォーラムで質問したりして、支援を得ることができます。
+また、サポート・チケットを開くことができます。 
+
+フォーラムを使用して質問する場合は、{{site.data.keyword.Bluemix_notm}} の開発チームの目に触れるように、質問にタグを付けます。
+
+* {{site.data.keyword.amashort}} を使用したアプリの開発やデプロイについて技術的な質問がある場合は、質問を[スタック・オーバーフロー](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window}に投稿し、質問に「ibm-bluemix」と「{{site.data.keyword.amashort}}」のタグを付けます。
+* サービスおよび最初の手順に関する質問については、[IBM developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window} フォーラムを使用します。 
+
+フォーラムの使用について詳しくは、[ヘルプの利用](https://www.{DomainName}/docs/support/index.html#getting-help)を参照してください。
+
+IBM サポート・チケットのオープン、またはサポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://www.{DomainName}/docs/support/index.html#contacting-support)を参照してください。
+

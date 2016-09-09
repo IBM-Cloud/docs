@@ -8,7 +8,7 @@ copyright:
 # Authentification personnalisée d'application Web
 {: #custom-web}
 
-*Dernière mise à jour : 16 juin 2016*
+Dernière mise à jour : 16 juin 2016
 {: .last-updated}
 
 Ajoutez une authentification personnalisée à votre application Web

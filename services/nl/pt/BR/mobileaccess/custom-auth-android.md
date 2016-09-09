@@ -8,7 +8,7 @@ copyright:
 # Configurando a autenticação customizada para seu aplicativo {{site.data.keyword.amashort}} Android
 {: #custom-android}
 
-*Última atualização: 17 de julho de 2016*
+Última atualização: 01 de agosto de 2016
 {: .last-updated}
 
 
@@ -37,7 +37,7 @@ seguir existe:
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
@@ -66,7 +66,7 @@ clica em **Opções móveis** em seu app no painel
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Substitua o `BMSClient.REGION_UK` pela região apropriada.
+Substitua o `BMSClient.REGION_UK` pela região apropriada.	 Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de **Avatar** ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget **Conta e suporte**.				
 	
 
 ## Interface AuthenticationListener
@@ -182,8 +182,10 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 Depois de criar um AuthenticationListener customizado, registre-o com `BMSClient` antes de começar a usar o listener. Inclua o código a seguir em seu aplicativo. Esse código deve ser chamado antes de enviar quaisquer solicitações aos seus recursos protegidos.
 
 ```Java
-BMSClient.getInstance().registerAuthenticationListener(realmName,
-									new CustomAuthenticationListener());
+MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+
 ```
 
 Use o *realmName* especificado no painel do {{site.data.keyword.amashort}}.
@@ -233,7 +235,7 @@ navegador, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`.
  Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
 
  ```Java
- AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  Se você chamar esse código depois que um usuário estiver conectado, ele será desconectado. Quando o usuário tentar efetuar login novamente, ele deverá responder ao desafio recebido do servidor novamente.

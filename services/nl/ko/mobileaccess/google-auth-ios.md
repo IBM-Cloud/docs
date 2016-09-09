@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-ios}
 
 
-*마지막 업데이트 날짜: 2016년 6월 16일*
+마지막 업데이트 날짜: 2016년 6월 27일
 {: .last-updated}
 
 모바일 클라이언트 액세스 iOS 앱에서 사용자를 인증하려면 Google 로그인을 사용하십시오.
@@ -77,7 +77,7 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 
 1. **iOS용 애플리케이션 ID**에서 iOS용 Google 클라이언트 ID를 지정하고 **저장**을 클릭하십시오.
 
-	참고: Google 클라이언트 id와 함께, 클라이언트 구성에 대해 반대 값도 필요합니다(아래 참조). 두 값에 모두 액세스하려면 연필 아이콘을 사용하여 예제 plist를 다운로드하십시오.
+	참고: Google 클라이언트 ID와 함께, 클라이언트 구성에 대해 반대 값도 필요합니다. 두 값에 모두 액세스하려면 연필 아이콘을 사용하여 예제 plist를 다운로드하십시오.
 		![info.plist 파일 다운로드](images/download_plist.png)
 
 ## iOS용 {{site.data.keyword.amashort}} Google 클라이언트 SDK 구성
@@ -320,6 +320,6 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	Google에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우, 사용자에게는 인증 용도로 Google을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 이 시점에, 사용자는 화면 상단 오른쪽 모서리에서 사용자 이름을 클릭하여 다른 사용자를 선택하고 이를 사용하여 로그인할 수 있습니다. 
+	Google에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우, 사용자에게는 인증 용도로 Google을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 이 시점에, 사용자는 사용자 이름을 클릭하여 <!--in the upper-right corner of the screen--> 선택하고 다른 사용자로 로그인할 수 있습니다.
 
 	로그아웃 기능에 `callBack` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 

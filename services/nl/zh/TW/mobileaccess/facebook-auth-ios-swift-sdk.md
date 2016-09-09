@@ -11,7 +11,7 @@ copyright:
 # 啟用 iOS 應用程式的 Facebook 鑑別 (Swift SDK)
 {: #facebook-auth-ios}
 
-*前次更新：2016 年 7 月 17 日*
+前次更新：2016 年 8 月 1 日
 {: .last-updated}
 
 若要使用 Facebook 作為 iOS 應用程式中的身分提供者，請針對 Facebook 應用程式新增及配置 iOS 平台。
@@ -25,10 +25,10 @@ copyright:
 * Facebook for Developers 網站上的 Facebook 應用程式。 
 
 
-**重要事項：**您不需要個別安裝 Facebook 自己的 SDK。下面的 `BMSFacebookAuthentication` Pod 會自動安裝 Facebook SDK。在 Facebook for Developers 網站上新增或配置應用程式時，可跳過**將 Facebook SDK 新增至 Xcode 專案**步驟。
+**重要事項：**您不需要個別安裝 Facebook SDK (`com.facebook.FacebookSdk`)。{{site.data.keyword.amashort}} `BMSFacebookAuthentication` Pod 會自動安裝 Facebook SDK。在 Facebook for Developers 網站上新增或配置應用程式時，可跳過**將 Facebook SDK 新增至 Xcode 專案**步驟。
 
 **附註：**雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用 Objective-C SDK，改用這個新的 Swift SDK。
-## 配置 iOS 平台的 Facebook 應用程式
+## 針對 iOS 平台配置 Facebook 應用程式
 {: #facebook-auth-ios-config}
 在 Facebook for Developers 網站上，執行下列動作：
 
@@ -156,7 +156,7 @@ pod 'BMSFacebookAuthentication'
 ```
    使用「Facebook 應用程式 ID」更新 URL 架構及 FacebookappID 內容。將 FacebookDisplayName 更新為 Facebook 應用程式的名稱。
 
-  **重要事項**：請確定您未置換 `info.plist` 檔案中的任何現有內容。如果您具有重疊的內容，則必須手動進行合併。如需相關資訊，請參閱[配置 Xcode 專案](https://developers.facebook.com/docs/ios/getting-started/)及[準備 iOS9 的應用程式](https://developers.facebook.com/docs/ios/ios9)。
+    **重要事項**：請確定您未置換 `info.plist` 檔案中的任何現有內容。如果您具有重疊的內容，則必須手動進行合併。如需相關資訊，請參閱[配置 Xcode 專案](https://developers.facebook.com/docs/ios/getting-started/)及[準備 iOS9 的應用程式](https://developers.facebook.com/docs/ios/ios9)。
 
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 Swift SDK
 {: #facebook-auth-ios-initalize-swift}
@@ -175,7 +175,7 @@ pod 'BMSFacebookAuthentication'
  import BMSSecurity
  ```
 2. 起始設定用戶端 SDK。將 `<applicationRoute>` 及 `<applicationGUID>` 取代為您取自 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的**路徑**及**應用程式 GUID** 值。
-將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下儀表板左上角的樣式圖示 (![樣式](images/face.jpg "「樣式」圖示"))。
+將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -190,7 +190,7 @@ pod 'BMSFacebookAuthentication'
  FacebookAuthenticationManager.sharedInstance.register()
  ```
 
-1. 將下列程式碼新增至應用程式委派中的 `application:didFinishLaunchingWithOptions` 方法，以通知 Facebook SDK 有關應用程式啟動的資訊，並登錄「Facebook 鑑別處理程式」。在起始設定 BMSClient 實例之後立即新增此程式碼，並將 Facebook 登錄為鑑別管理程式。
+1. 將下列程式碼新增至應用程式委派中的 `application:didFinishLaunchingWithOptions` 方法，以通知 Facebook SDK 有關應用程式啟動的資訊，並登錄「Facebook 鑑別處理程式」。在起始設定 BMSClient 實例之後新增此程式碼，並將 Facebook 登錄為鑑別管理程式。
 
  ```Swift
   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)

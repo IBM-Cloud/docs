@@ -7,7 +7,7 @@ copyright:
 
 # Monitorando aplicativos
 {: #app-monitoring}
-*Última atualização: 28 de junho de 2016*
+Última atualização: 28 de junho de 2016
 {: .last-updated}
 
 Além de recursos de segurança, o {{site.data.keyword.amafull}} também fornece monitoramento e análise para seus aplicativos móveis. É possível registrar logs de clientes e monitorar dados com o {{site.data.keyword.amashort}} client SDK. Os desenvolvedores podem controlar quando enviar esses dados para o serviço {{site.data.keyword.amashort}}. Todos os eventos de segurança, tais como sucesso ou falha de autenticação, que ocorrem no serviço {{site.data.keyword.amashort}} são registrados automaticamente.
@@ -53,7 +53,8 @@ recentemente. Cabe ao desenvolvedor decidir quando enviar dados capturados ao se
 
 2. Quando seu painel do aplicativo {{site.data.keyword.Bluemix_notm}} for aberto, clique em um tile do {{site.data.keyword.amashort}}.
 
-3. No painel do {{site.data.keyword.amashort}}, clique no link **Monitoramento** no menu do lado esquerdo.
+3. Clique no link **Monitoramento** na barra de navegação Painel do {{site.data.keyword.amashort}} à esquerda.
+
 
 ## Ativando, configurando e usando o Criador de logs
 {: #enable-logger}

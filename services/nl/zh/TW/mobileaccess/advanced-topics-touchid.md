@@ -5,10 +5,10 @@ copyright:
   
 ---
 
-# 使用 Touch ID 保護授權安全
+# 使用 Touch ID 授權存取
 {: #before-you-begin}
 
-*前次更新：2016 年 6 月 22 日*
+前次更新：2016 年 7 月 20 日
 {: .last-updated}
 
 Touch ID 是 iOS 裝置的指紋辨識特性。您可以使用 Touch ID 自動保護授權資訊的安全，以供未來使用。 

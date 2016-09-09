@@ -11,7 +11,7 @@ copyright:
 # Ativando a autenticação do Google para apps iOS (Swift SDK)
 {: #google-auth-ios}
 
-*Última atualização: 17 de julho de 2016*
+Última atualização: 01 de agosto de 2016
 {: .last-updated}
 
 Use o Google Sign-In para autenticar usuários em seu app {{site.data.keyword.amashort}} iOS Swift. O {{site.data.keyword.amashort}} Swift SDK recém-liberado inclui e melhora a funcionalidade fornecida pelo Mobile Client Access Objective-C SDK existente.
@@ -40,7 +40,7 @@ Este processo:
 
 As etapas a seguir fornecem um esboço resumido das tarefas necessárias para preparar seu app. 
 
-**Nota:** não é necessário incluir o `Google/SignIn` CocoaPod. O SDK necessário é incluído pelo CocoaPod `BMSGoogleAuthentication` abaixo.
+**Nota:** não é necessário incluir o Google Sign-In CocoaPod. O SDK necessário é incluído pelo `BMSGoogleAuthentication` CocoaPod.
 
 1. Observe o **Identificador de pacote configurável** em seu projeto do Xcode a partir da seção **Identidade** da guia **Geral** do destino principal. Ele é necessário para criar seu projeto do Google Sign-In.
 
@@ -153,7 +153,7 @@ exibidos nos campos **Rota** e **GUID do app**.
  import BMSSecurity
  ```
 
-1. Use o código a seguir para inicializar o client SDK. Substitua `<applicationRoute>` e `<applicationGUID>` por valores para **Rota** e **GUID do app** obtidos de **Opções móveis** no painel do {{site.data.keyword.Bluemix_notm}}. Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de face (![Face](/face.png "Face")) no canto superior esquerdo do painel. 
+1. Use o código a seguir para inicializar o client SDK. Substitua `<applicationRoute>` e `<applicationGUID>` por valores para **Rota** e **GUID do app** obtidos de **Opções móveis** no painel do {{site.data.keyword.Bluemix_notm}}. Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de **Avatar** ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget **Conta e suporte**.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -162,7 +162,7 @@ exibidos nos campos **Rota** e **GUID do app**.
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
  // Inicialize o client SDK.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -196,7 +196,9 @@ Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurs
 1. Tente enviar uma solicitação para o terminal protegido do seu aplicativo backend móvel em seu navegador da área de trabalho, abrindo
 `{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`
 
-1. O terminal `/protected` de um aplicativo backend móvel criado com o MobileFirst Services Boilerplate é protegido com o {{site.data.keyword.amashort}}, portanto, só pode ser acessado pelos aplicativos móveis instrumentados com o SDK do cliente {{site.data.keyword.amashort}}. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
+1. O terminal `/protected` de um aplicativo backend móvel criado com o MobileFirst Services Boilerplate é protegido com o
+{{site.data.keyword.amashort}}, portanto, só pode ser acessado pelos aplicativos móveis instrumentados com o SDK do cliente
+{{site.data.keyword.amashort}}. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
 
 1. Use seu aplicativo iOS para fazer solicitação para o mesmo terminal.
 
@@ -241,7 +243,6 @@ propósitos de autenticação.
  GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  Se você chamar esse código depois que um usuário estiver conectado ao Google e ele tentar efetuar login novamente, ele será solicitado a autorizar o {{site.data.keyword.amashort}} a usar o Google para propósitos de autenticação. Nesse
-ponto, o usuário pode clicar no nome do usuário no canto direito superior da tela para selecionar e efetuar login com outro usuário.
+  Se você chamar esse código depois que um usuário estiver conectado ao Google e ele tentar efetuar login novamente, ele será solicitado a autorizar o {{site.data.keyword.amashort}} a usar o Google para propósitos de autenticação. Nesse ponto, o usuário pode clicar no nome do usuário <!--in the upper-right corner of the screen--> para selecionar e efetuar login com outro usuário.
 
    Passar `callBack` para a função de logout é opcional. Também é possível passar `nil`.

@@ -8,7 +8,7 @@ copyright:
 # iOS 用の {{site.data.keyword.amashort}} Client SDK の構成 (Objective-C)
 {: #custom-ios}
 
-*最終更新日: 2016 年 7 月 18 日*
+最終更新日: 2016 年 7 月 21 日
 {: .last-updated}
 
 
@@ -49,7 +49,7 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 
 
 
-### Client SDK の初期化
+## Client SDK の初期化
 {: #custom-ios-sdk-initialize}
 
 アプリケーションの経路 (`applicationRoute`) および GUID (`applicationGUID`) のパラメーターを渡すことによって、SDK を初期化します。初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。
@@ -79,7 +79,7 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 
 1. Client SDK を初期化します。applicationRoute および applicationGUID を、**「モバイル・オプション」**で取得した**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) の値に置き換えます。
 
-	Objective-C:
+	###Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -87,12 +87,26 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 			backendGUID:@"applicationGUID"];
 	```
 
-	Swift:
+	###Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+
+## AuthorizationManager の初期化
+{{site.data.keyword.amashort}} サービス・タイルにある**「資格情報の表示」**ボタンをクリックすると表示される、{{site.data.keyword.amashort}} サービス `tenantId` パラメーターを渡すことで、AuthorizationManager を初期化します。
+
+### Objective-C
+  ```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+
+### Swift:
+ ```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ ```
+
 
 
 ## IMFAuthenticationHandler 代行
@@ -111,29 +125,27 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 * `IMFAuthenticationContext` プロトコルは、開発者が認証チャレンジ応答、または資格情報収集中の失敗 (例: ユーザーによる取り消し) を返すことができるように、{{site.data.keyword.amashort}} Client SDK によって提供されます。
 * `NSDictionary` は、カスタム ID プロバイダーによって返されるカスタム認証チャレンジを含みます。
 
-`authenticationContext:didReceiveAuthenticationChallenge` メソッドを呼び出すことによって、{{site.data.keyword.amashort}} Client SDK は制御を開発者に委任し、資格情報待ちモードに入ります。`IMFAuthenticationContext` プロトコル・メソッド (下記参照) のいずれかを使用して、資格情報を収集して {{site.data.keyword.amashort}} Client SDK に返すのは、開発者の責任です。
+`authenticationContext:didReceiveAuthenticationChallenge` メソッドを呼び出すことによって、{{site.data.keyword.amashort}} Client SDK は制御を開発者に委任し、資格情報待ちモードに入ります。資格情報を収集し、以下の `IMFAuthenticationContext` プロトコル・メソッドのいずれかを使用して {{site.data.keyword.amashort}} Client SDK に報告を返すのは、開発者の責任です。
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
 						didReceiveAuthenticationSuccess:(NSDictionary *)userInfo;
 ```
 
-このメソッドは認証が成功した後で呼び出されます。引数は、IMFAuthenticationContext と、認証の成功についての詳しい情報を含む NSDictionary (オプション) です。
+このメソッドは認証が成功した後で呼び出されます。引数には、`IMFAuthenticationContext` と、認証の成功に関する詳しい情報を含む `NSDictionary` (オプション) があります。
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
 						didReceiveAuthenticationFailure:(NSDictionary*)userInfo;
 ```
 
-このメソッドは認証が失敗した後で呼び出されます。引数は、IMFAuthenticationContext と、認証の失敗についての詳しい情報を含む NSDictionary (オプション) です。
+このメソッドは認証が失敗した後で呼び出されます。引数には、`IMFAuthenticationContext` と、認証の失敗に関する詳しい情報を含む `NSDictionary` (オプション) があります。
 
 ## IMFAuthenticationContext プロトコル
 {: #custom-ios-sdk-authcontext}
 
 
-`IMFAuthenticationContext` は、カスタム `IMFAuthenticationHandler` の `authenticationContext:didReceiveAuthenticationChallenge` メソッドへの引数として提供されます。資格情報を収集すること、および、`IMFAuthenticationContext` メソッドを使用して資格情報を {{site.data.keyword.amashort}} Client SDK に返すか、または、失敗を報告することは、開発者の責任です。以下の方法の 1 つを使用します。
-
-
+`IMFAuthenticationContext` プロトコルは、カスタム `IMFAuthenticationHandler` の `authenticationContext:didReceiveAuthenticationChallenge` メソッドへの引数として提供されます。資格情報を収集し、`IMFAuthenticationContext` メソッドを使用して資格情報を {{site.data.keyword.amashort}} Client SDK に返すか、失敗を報告することは、開発者の責任です。 
 ```
 -(void) submitAuthenticationChallengeAnswer:(NSDictionary*) answer;
 
@@ -144,7 +156,7 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 {: #custom-ios-sdk-sample}
 
 
-IMFAuthenticationDelegate サンプルは、カスタム ID プロバイダーのサンプルと連携するよう設計されています。このサンプルは [Github リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)からダウンロードできます。
+IMFAuthenticationDelegate サンプルは、カスタム ID プロバイダーのサンプルと連携するよう設計されています。このサンプルは、[GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)からダウンロードできます。
 
 Objective-C:
 
@@ -169,9 +181,9 @@ CustomAuthenticationDelegate.m
 
 	NSLog(@"didReceiveAuthenticationChallenge :: %@", challenge);
 
-	// In this sample the IMFAuthenticationDelegate immediately returns a hardcoded
-	// set of credentials. In a real life scenario this is where developer would
-	// show a login screen, collect credentials and invoke
+	// In this sample, the IMFAuthenticationDelegate immediately returns a hardcoded
+	// set of credentials. In a real life scenario, a developer would
+	// show a login screen, collect credentials and invoke the
 	// [context submitAuthenticationChallengeAnswer:] API
 
 	NSDictionary *challengeAnswer = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -180,9 +192,9 @@ CustomAuthenticationDelegate.m
 
 	[context submitAuthenticationChallengeAnswer:challengeAnswer];
 
-	// In case there was a failure collecting credentials you need to report
-	// it back to the IMFAuthenticationContext. Otherwise Mobile Client
-	// Access client SDK will remain in a waiting-for-credentials state
+	// In case there is a failure collecting credentials, report
+	// the failure to IMFAuthenticationContext. Otherwise, the Mobile Client
+	// Access client SDK remains in a waiting-for-credentials state
 	// forever
 }
 
@@ -214,9 +226,9 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 		NSLog("didReceiveAuthenticationChallenge :: %@", challenge)
 
-		// In this sample the IMFAuthenticationDelegate immediately returns a hardcoded
-		// set of credentials. In a real life scenario this is where developer would
-		// show a login screen, collect credentials and invoke
+		// In this sample, the IMFAuthenticationDelegate immediately returns a hardcoded
+		// set of credentials. In a real life scenario a developer would
+		// show a login screen, collect credentials and invoke the
 		// context.submitAuthenticationChallengeAnswer() API
 
 		let challengeAnswer: [String:String] = [
@@ -226,9 +238,9 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 		context.submitAuthenticationChallengeAnswer(challengeAnswer)
 
-		// In case there was a failure collecting credentials you need to report
-		// it back to the IMFAuthenticationContext. Otherwise Mobile Client
-		// Access client SDK will remain in a waiting-for-credentials state
+		// In case there is a failure collecting credentials, report
+		// it back to IMFAuthenticationContext. Otherwise, the Mobile Client
+		// Access client SDK remains in a waiting-for-credentials state
 		// forever
 	}
 
@@ -247,7 +259,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 ## カスタム IMFAuthenticationDelegate の登録
 
-カスタム IMFAuthenticationDelegate を作成した後に、`IMFClient` に登録します。アプリケーション内で、保護リソースに要求を送信する前に、以下のコードを呼び出します。realmName には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。
+カスタム `IMFAuthenticationDelegate` を作成した後に、`IMFClient` に登録します。アプリケーション内で、保護リソースに要求を送信する前に、以下のコードを呼び出します。`realmName` には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。
 
 Objective-C アプリケーション:
 

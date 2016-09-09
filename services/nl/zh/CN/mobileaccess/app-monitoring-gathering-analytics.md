@@ -7,7 +7,7 @@ copyright:
 
 # 收集使用情况分析信息
 {: #usage-analytics}
-*上次更新时间：2016 年 5 月 6 日*
+上次更新时间：2016 年 5 月 6 日
 {: .last-updated}
 
 您可以将 {{site.data.keyword.amashort}} 客户端 SDK 配置为记录使用情况分析信息，并将记录的数据发送到 {{site.data.keyword.amashort}} 服务。

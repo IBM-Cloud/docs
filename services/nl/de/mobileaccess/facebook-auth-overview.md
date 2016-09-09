@@ -12,22 +12,24 @@ copyright:
 # Benutzer mit Facebook-Berechtigungsnachweisen authentifizieren
 {: #facebook-auth-overview}
 
-*Letzte Aktualisierung: 15. Juni 2016*
+Letzte Aktualisierung: 22. Juli 2016
 {: .last-updated}
 
 Sie können den {{site.data.keyword.amashort}}-Service zum Schützen von Ressourcen durch die Verwendung von Facebook als Identitätsprovider konfigurieren. Die Benutzer Ihrer mobilen Anwendung oder Ihrer Webanwendung können ihre Facebook-Berechtigungsnachweise für die Authentifizierung nutzen.
 {:shortdesc}
 
-**Wichtig**: Sie müssen das von Facebook bereitgestellte SDK nicht separat installieren. Das Facebook-SDK wird automatisch durch Abhängigkeitenmanager installiert, wenn Sie das {{site.data.keyword.amashort}}-Client-SDK konfigurieren.
+**Wichtig:** Sie müssen das von Facebook bereitgestellte Client-SDK nicht separat installieren. Das Facebook-SDK wird automatisch durch Abhängigkeitenmanager installiert, wenn Sie das {{site.data.keyword.amashort}}-Facebook-Client-SDK konfigurieren.
 
 ## {{site.data.keyword.amashort}}-Anforderungsablauf
 {: #mca-facebook-sequence}
 
-Im folgenden vereinfachten Diagramm wird die Integration von {{site.data.keyword.amashort}} in Facebook für die Authentifizierung veranschaulicht.
+### Anforderungsablauf für mobilen Client
 
-![Bild](images/mca-sequence-facebook.jpg)
+Im folgenden Diagramm wird die Integration von {{site.data.keyword.amashort}} in Facebook für die Authentifizierung über eine App eines mobilen Clients veranschaulicht.
 
-1. Verwenden Sie das {{site.data.keyword.amashort}}-Client-SDK zum Senden einer Anforderung an Ihre Back-End-Ressourcen, die mit dem {{site.data.keyword.amashort}}-Server-SDK geschützt werden. 
+![Anforderungsablaufdiagramm für mobilen Client](images/mca-sequence-facebook.jpg)
+
+* Verwenden Sie das {{site.data.keyword.amashort}}-Client-SDK zum Senden einer Anforderung an Ihre Back-End-Ressourcen, die mit dem {{site.data.keyword.amashort}}-Server-SDK geschützt werden. 
 * Das {{site.data.keyword.amashort}}-Server-SDK erkennt eine nicht autorisierte Anforderung und gibt den Code HTTP 401 sowie den Berechtigungsbereich zurück.
 * Das {{site.data.keyword.amashort}}-Client-SDK erkennt den Code HTTP 401 automatisch und startet den Authentifizierungsprozess.
 * Das {{site.data.keyword.amashort}}-Client-SDK kontaktiert den {{site.data.keyword.amashort}}-Service und fordert einen Berechtigungsheader an. 
@@ -40,13 +42,13 @@ Im folgenden vereinfachten Diagramm wird die Integration von {{site.data.keyword
 * Das {{site.data.keyword.amashort}}-Client-SDK wiederholt automatisch das Senden der ursprünglichen Anforderung, die den Berechtigungsablauf ausgelöst hat.
 * Das {{site.data.keyword.amashort}}-Server-SDK extrahiert den Berechtigungsheader aus der Anforderung, validiert ihn mit dem {{site.data.keyword.amashort}}-Service und erteilt den Zugriff auf eine Back-End-Ressource. 
 
-## {{site.data.keyword.amashort}}-Anforderungsablauf für Webanwendung
-{: #mca-facebook-sequence}
+### {{site.data.keyword.amashort}}-Anforderungsablauf für Webanwendung
+{: #mca-facebook-web-sequence}
+
 Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist vergleichbar mit dem Ablauf für einen mobilen Client. {{site.data.keyword.amashort}} schützt jedoch die Webanwendung anstatt einer {{site.data.keyword.Bluemix_notm}}-Back-End-Ressource. 
 
   * Die ursprüngliche Anforderung wird von der Webanwendung (zum Beispiel von einem Anmeldeformular) gesendet. 
-  * Die letzte Weiterleitung erfolgt an die Webanwendung selbst anstatt an die geschützte Back-End-Ressource.  
-
+  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource.  
 
 
 ## Facebook-Anwendungs-ID vom Facebook-Entwicklerportal anfordern
@@ -56,7 +58,7 @@ Zur Verwendung von Facebook als Identitätsprovider müssen Sie eine Anwendung i
 
 1. Öffnen Sie das [Facebook-Entwicklerportal](https://developers.facebook.com).
 
-1. Klicken Sie auf **My Apps** im obersten Menü und wählen Sie die Option **Create a new app** aus.
+1. Klicken Sie auf **My Apps** im Menü und wählen Sie die Option **Create a new app** aus.
 Wählen Sie entweder iOS- oder Android-Anwendung aus und klicken Sie auf **Skip and Create App ID** auf der nächsten Anzeige. 
 
 1. Legen Sie den Anzeigenamen der Anwendung nach Ihrer Wahl fest und wählen Sie eine Kategorie aus. Klicken Sie auf **Create App ID**, um fortzufahren.

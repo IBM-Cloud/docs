@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-ios}
 
 
-*前次更新：2016 年 6 月 16 日*
+前次更新：2016 年 6 月 27 日
 {: .last-updated}
 
 在 Mobile Client Access iOS 應用程式上，使用「Google 登入」來鑑別使用者。
@@ -77,7 +77,7 @@ copyright:
 
 1. 在**適用於 iOS 的應用程式 ID** 中，指定適用於 iOS 的 Google 用戶端 ID，然後按一下**儲存**。
 
-	附註：除了 Google 用戶端 ID 之外，還需要反向值以進行用戶端配置（請參閱下面）。若要存取這兩個值，請使用鉛筆圖示來下載範例 plist：![info.plist file download](images/download_plist.png)
+	附註：除了 Google 用戶端 ID 之外，還需要反向值以進行用戶端配置。若要存取這兩個值，請使用鉛筆圖示來下載範例 plist：![info.plist 檔案下載](images/download_plist.png)
 
 ## 配置適用於 iOS 的 {{site.data.keyword.amashort}} Google 用戶端 SDK
 {: #google-auth-ios-sdk}
@@ -104,13 +104,13 @@ copyright:
 更新 `info.plist` 檔案來配置 Google 整合。`info.plist` 檔案通常位於 Xcode 專案的 `Supporting files` 資料夾中。您可以在內容清單編輯器中或使用文字編輯器編輯檔案。
 
 * 將下列 URL 綱目新增至 `info.plist` 檔案，以配置 Google 整合。
-	![info.plist file](images/ios-google-infoplist-settings.png)
+	![info.plist 檔案](images/ios-google-infoplist-settings.png)
 
-	第一個「URL 綱目」為來自「Google 開發人員主控台」的用戶端 ID 的反向版本。例如，如果用戶端 ID 為 `123123-abcabc.apps.googleusercontent.com`，則「URL 綱目」為 `com.googleusercontent.apps.123123-abcabc`。
+	第一個「URL 綱目」為來自 Google Developer Console 的用戶端 ID 的反向版本。例如，如果用戶端 ID 為 `123123-abcabc.apps.googleusercontent.com`，則「URL 綱目」為 `com.googleusercontent.apps.123123-abcabc`。
 
 	第二個「URL 綱目」為應用程式的軟體組 ID。
 
-* 使用文字編輯器。在 `info.plist` 上按一下滑鼠右鍵，然後選取**開啟方式 > 原始碼**。將下列 XML 新增至檔案：
+* 使用文字編輯器。在 `info.plist` 上按一下滑鼠右鍵，然後選取**開啟為 > 原始碼**。將下列 XML 新增至檔案：
 
 	```XML
 	<key>CFBundleURLTypes</key>
@@ -307,7 +307,7 @@ copyright:
 		
 	您也可以新增下列程式碼，來新增登出功能：
 
-	Objective C:
+	Objective C：
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
@@ -319,6 +319,6 @@ copyright:
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	如果您在使用者使用 Google 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Google 進行鑑別。此時，使用者可以按一下畫面右上角的使用者名稱來進行選取，並使用另一位使用者來登入。
+	如果您在使用者使用 Google 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Google 進行鑑別。此時，使用者可以按一下使用者名稱<!--in the upper-right corner of the screen-->來進行選取，並利用另一個使用者來登入。
 
 	將 `callBack` 傳遞給 logout 函數是選用性的作業。您也可以傳遞 `nil`。

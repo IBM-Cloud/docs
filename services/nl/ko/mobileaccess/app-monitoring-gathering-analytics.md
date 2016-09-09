@@ -7,7 +7,7 @@ copyright:
 
 # 사용량 분석 수집
 {: #usage-analytics}
-*마지막 업데이트 날짜: 2016년 5월 6일*
+마지막 업데이트 날짜: 2016년 5월 6일
 {: .last-updated}
 
 사용량 분석을 기록하고 기록된 데이터를 {{site.data.keyword.amashort}} 서비스로 전송하도록 {{site.data.keyword.amashort}} 클라이언트 SDK를 구성할 수 있습니다.

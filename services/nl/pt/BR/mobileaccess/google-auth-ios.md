@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-ios}
 
 
-*Última atualização: 16 de junho de 2016*
+Última atualização: 27 de junho de 2016
 {: .last-updated}
 
 Use o Google Sign-In para autenticar usuários em seu app Mobile Client Access iOS.
@@ -83,7 +83,7 @@ app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 
 1. Em **ID do aplicativo para iOS**, especifique o identificador de cliente do Google para iOS e clique em **Salvar**.
 
-	Nota: além do identificador de cliente do Google, o valor reverso também é necessário para sua configuração do cliente (veja abaixo). Para acessar ambos os valores, faça download da plist de exemplo usando o ícone de lápis:
+	Nota: além do identificador de cliente do Google, o valor reverso também é necessário para a configuração do cliente. Para acessar ambos os valores, faça download da plist de exemplo usando o ícone de lápis:
 		![download do arquivo info.plist](images/download_plist.png)
 
 ## Configurando o {{site.data.keyword.amashort}} Google client SDK for iOS
@@ -123,8 +123,7 @@ arquivo `info.plist`
 
 	O segundo Esquema de URL é o ID do pacote configurável de seu aplicativo
 
-* Utilize um editor de texto. Clique com o botão direito em
-`info.plist` e selecione **Abrir como > Código fonte**. Inclua
+* Utilize um editor de texto. Clique com o botão direito em `info.plist` e selecione **Abrir como > Código-fonte**. Inclua
 o XML a seguir no arquivo:
 
 	```XML
@@ -343,6 +342,6 @@ exemplo, `http://my-mobile-backend.mybluemix.net/protected`
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	Se você chamar esse código depois que um usuário estiver conectado ao Google e ele tentar efetuar login novamente, ele será solicitado a autorizar o {{site.data.keyword.amashort}} a usar o Google para propósitos de autenticação. Neste ponto, o usuário pode clicar no nome do usuário no canto superior direito da tela para selecionar e efetuar login com outro usuário.
+	Se você chamar esse código depois que um usuário estiver conectado ao Google e ele tentar efetuar login novamente, ele será solicitado a autorizar o {{site.data.keyword.amashort}} a usar o Google para propósitos de autenticação. Nesse ponto, o usuário pode clicar no nome do usuário <!--in the upper-right corner of the screen--> para selecionar e efetuar login com outro usuário.
 
 	Passar `callBack` para a função de logout é opcional. Também é possível passar `nil`.

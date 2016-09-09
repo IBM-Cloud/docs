@@ -9,7 +9,7 @@ copyright:
 # Configurando o plug-in do Cordova
 {: #getting-started-cordova}
 
-*Última atualização: 17 de julho de 2016*
+Última atualização: 17 de julho de 2016
 {: .last-updated}
 
 Instrumente seu aplicativo Cordova com o SDK do cliente {{site.data.keyword.amashort}}, inicialize o SDK e faça solicitações aos
@@ -39,7 +39,7 @@ O SDK do cliente {{site.data.keyword.amashort}} para Cordova é um plug-in Cordo
 	cordova platform add ios
 	```
 
-1. Se você incluiu a plataforma Android, deve-se incluir o nível mínimo de API suportado no arquivo `config.xml` do aplicativo Cordova. Abra
+2. Se você incluiu a plataforma Android, deve-se incluir o nível mínimo de API suportado no arquivo `config.xml` do aplicativo Cordova. Abra
 o arquivo `config.xml` e inclua a linha a seguir no elemento `<platform
 name="android">`:
 
@@ -53,7 +53,7 @@ name="android">`:
 
 	O valor *minSdkVersion* deve ser maior que `15`. O valor *targetSdkVersion* deve ser o Android SDK mais recente disponível no Google.
 
-1. Se você incluiu o sistema operacional iOS, atualize o elemento `<platform name="ios">` com uma declaração de destino:
+3. Se você incluiu o sistema operacional iOS, atualize o elemento `<platform name="ios">` com uma declaração de destino:
 
 	```XML
 	<platform name="ios">
@@ -62,47 +62,49 @@ name="android">`:
 	</platform>
 	```
 
-1. Instale o plug-in do Cordova do {{site.data.keyword.amashort}}:
+4. Instale o plug-in do Cordova do {{site.data.keyword.amashort}}:
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Configure sua plataforma para Android, iOS ou ambos.
+5. Configure sua plataforma para Android, iOS ou ambos.
 
-	* **Android**
+	####Android
+	{: #cordova-android}
 
-		Antes de abrir seu projeto no Android Studio, compile seu aplicativo Cordova
+	Antes de abrir seu projeto no Android Studio, compile seu aplicativo Cordova
 por meio da interface da linha de comandos (CLI) para evitar erros de compilação.
 
 		```
 		cordova build android
 		```
 
-	* **iOS**
+	####iOS
+	{: #cordova-ios}
 
-		Configure seu projeto Xcode conforme a seguir, para evitar erros de compilação.
+	Configure seu projeto Xcode conforme a seguir, para evitar erros de compilação.
 
-		1. Use a versão mais recente do Xcode para abrir seu arquivo `xcode.proj` no diretório `<app_name>/platforms/ios`.
+	1. Use a versão mais recente do Xcode para abrir seu arquivo `xcode.proj` no diretório `<app_name>/platforms/ios`.
 
-		**Importante:** se você receber uma mensagem para "Converter na sintaxe mais recente do Swift", clique em Cancelar.
+		**Importante:** se você receber uma mensagem para converter na sintaxe mais recente do Swift, clique em Cancelar.
 
-		2. Acesse **Configurações de compilação > Compilador Swift - Geração de código > Cabeçalho de ponte do Objective-C** e
+	2. Acesse **Configurações de compilação > Compilador Swift - Geração de código > Cabeçalho de ponte do Objective-C** e
 inclua o caminho a seguir:
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. Acesse **Configurações de compilação > Vinculação > Caminhos de procura Runpath** e inclua o parâmetro Frameworks a seguir:
+	3. Acesse **Configurações de compilação > Vinculação > Caminhos de procura Runpath** e inclua o parâmetro Frameworks a seguir:
 
 			```
 			@executable_path/Frameworks
 			```
 
-		4. Compile e execute seu aplicativo com Xcode.
+	4. Compile e execute seu aplicativo com Xcode.
 
-1. Verifique se o plug-in foi instalado com sucesso, executando o comando a seguir:
+6. Verifique se o plug-in foi instalado com sucesso, executando o comando a seguir:
 
 	```Bash
 	cordova plugin list
@@ -127,7 +129,8 @@ Para usar o {{site.data.keyword.amashort}} client SDK, deve-se inicializar o SDK
 ## Fazendo uma solicitação ao aplicativo backend móvel
 {: #getting-started-request}
 
-Após o SDK do cliente {{site.data.keyword.amashort}} ser inicializado, será possível começar a fazer solicitações ao seu aplicativo backend móvel.
+Após o SDK do cliente {{site.data.keyword.amashort}} ser inicializado, será possível começar a fazer solicitações ao seu aplicativo
+backend móvel.
 
 1. Tente enviar uma solicitação a um terminal protegido do seu novo aplicativo backend móvel. Em seu navegador, abra esta URL: `{applicationRoute}/protected`. Por exemplo:
 

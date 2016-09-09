@@ -9,7 +9,7 @@ copyright:
 # 設定 Cordova 外掛程式
 {: #getting-started-cordova}
 
-*前次更新：2016 年 7 月 17 日*
+前次更新：2016 年 7 月 17 日
 {: .last-updated}
 
 使用 {{site.data.keyword.amashort}} 用戶端 SDK 檢測 Cordova 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
@@ -41,7 +41,7 @@ copyright:
 	cordova platform add ios
 	```
 
-1. 如果您已新增 Android 平台，則必須將最低支援的 API 層次新增至 Cordova 應用程式的 `config.xml` 檔案。開啟 `config.xml` 檔案，並將下行新增至 `<platform name="android">` 元素：
+2. 如果您已新增 Android 平台，則必須將最低支援的 API 層次新增至 Cordova 應用程式的 `config.xml` 檔案。開啟 `config.xml` 檔案，並將下行新增至 `<platform name="android">` 元素：
 
 	```XML
 	<platform name="android">  
@@ -55,7 +55,7 @@ copyright:
 
 
 
-1. 如果您已新增 iOS 作業系統，請使用目標宣告來更新 `<platform name="ios">` 元素：
+3. 如果您已新增 iOS 作業系統，請使用目標宣告來更新 `<platform name="ios">` 元素：
 
 	```XML
 	<platform name="ios">
@@ -64,45 +64,47 @@ copyright:
 	</platform>
 	```
 
-1. 安裝 {{site.data.keyword.amashort}} Cordova 外掛程式：
+4. 安裝 {{site.data.keyword.amashort}} Cordova 外掛程式：
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
 
-1. 為 Andro為 Android 或 iOS 配置您的平台，或兩者都配置。
+5. 為 Andro為 Android 或 iOS 配置您的平台，或兩者都配置。
 
-	* **Android**
+	####Android
+	{: #cordova-android}
 
-		在 Android Studio 開啟您的專案之前，請透過指令行介面 (CLI) 建置您的 Cordova 應用程式，以避免發生建置錯誤。
+	在 Android Studio 開啟您的專案之前，請透過指令行介面 (CLI) 建置您的 Cordova 應用程式，以避免發生建置錯誤。
 
 		```
 		cordova build android
 		```
 
-	* **iOS**
+	####iOS
+	{: #cordova-ios}
 
-		如下所示配置 Xcode 專案，以避免發生建置錯誤。
+	如下所示配置 Xcode 專案，以避免發生建置錯誤。
 
-		1. 使用最新版的 Xcode，開啟 `<app_name>/platforms/ios` 目錄中的 `xcode.proj` 檔案。
+	1. 使用最新版的 Xcode，開啟 `<app_name>/platforms/ios` 目錄中的 `xcode.proj` 檔案。
 
 		**重要事項：**如果您收到一則訊息指出「轉換為最新 Swift 語法」，請按一下「取消」。
 
-		2. 移至**建置設定 > Swift 編譯器 - 產生程式碼 > Objective-C 橋接標頭**，並新增下列路徑：
+	2. 移至**建置設定 > Swift 編譯器 - 產生程式碼 > Objective-C 橋接標頭**，並新增下列路徑：
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. 移至**建置設定 > 鏈結 > Runpath 搜尋路徑**，並新增下列 Frameworks 參數：
+	3. 移至**建置設定 > 鏈結 > Runpath 搜尋路徑**，並新增下列 Frameworks 參數：
 
 			```
 			@executable_path/Frameworks
 			```
 
-		4. 使用 Xcode 建置並執行您的應用程式。
+	4. 使用 Xcode 建置並執行您的應用程式。
 
-1. 執行下列指令，驗證已順利安裝外掛程式：
+6. 執行下列指令，驗證已順利安裝外掛程式：
 
 	```Bash
 	cordova plugin list

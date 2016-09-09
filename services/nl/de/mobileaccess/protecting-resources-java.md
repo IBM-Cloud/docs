@@ -8,7 +8,7 @@ copyright:
 # Liberty for Java-Ressourcen mit {{site.data.keyword.amashort}} schützen
 {: #protecting-liberty}
 
-*Letzte Aktualisierung: 30. Juni 2016*
+Letzte Aktualisierung: 30. Juni 2016
 {: .last-updated}
 
 

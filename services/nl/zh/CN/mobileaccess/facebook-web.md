@@ -7,7 +7,7 @@ copyright:
 
 # 启用 Web 应用程序的 Facebook 认证
 
-*上次更新时间：2016 年 6 月 15 日*
+上次更新时间：2016 年 6 月 15 日
 {: .last-updated}
 
 使用 Facebook 在 Web 应用程序上认证用户。

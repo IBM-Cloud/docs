@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-android}
 
 
-*前次更新：2016 年 6 月 16 日*
+前次更新：2016 年 8 月 4 日
 {: .last-updated}
 
 ## 開始之前
@@ -17,7 +17,7 @@ copyright:
 您必須具有：
 
 * Android Studio 中配置成使用 Gradle 的 Android 專案。它不需要使用 {{site.data.keyword.amashort}} 用戶端 SDK 進行檢測。  
-* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端的相關資訊，請參閱[開始使用](index.html)。
+* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
 
 設定 {{site.data.keyword.amashort}} Android 應用程式的 Google 鑑別將需要進一步配置：
 * {{site.data.keyword.Bluemix_notm}} 應用程式
@@ -106,7 +106,7 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 	}
 	```
 
-	**附註：**您可以移除對 `com.ibm.mobilefirstplatform.clientsdk.android` 群組的 `core` 模組的相依關係（如果已有的話）。`googleauthentication` 模組會為您自動下載它。`googleauthentication` 模組會下載 Google SDK，並在 Android 專案中進行安裝。
+	**附註：**您可以移除對 `com.ibm.mobilefirstplatform.clientsdk.android` 群組的 `core` 模組的相依關係（如果已有的話）。`googleauthentication` 模組會為您自動下載它。`googleauthentication` 模組會下載 Google+ SDK，並將它安裝在 Android 專案中。
 
 1. 按一下**工具 > Android > 將專案與 Gradle 檔案同步化**，以將專案與 Gradle 同步化。
 
@@ -132,13 +132,15 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 					"applicationGUID",
 					BMSClient.REGION_UK);
 
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
+						
 	GoogleAuthenticationManager.getInstance().register(this);
 	```
 
-  將 `BMSClient.REGION_UK` 取代為適當的地區。
+  將 `BMSClient.REGION_UK` 取代為適當的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
 
-
-	
+   **附註：**如果您的 Android 應用程式是以 Android 6.0 版（API 層次 23）或以上版本為目標，則必須確定應用程式先進行 `android.permission.GET_ACCOUNTS` 呼叫，再呼叫 `register`。如需相關資訊，請參閱 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
 
 1. 將下列程式碼新增至您的活動中：
 
@@ -156,7 +158,7 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 起始設定用戶端 SDK 並登錄「Google 鑑別管理程式」之後，即可開始對行動後端應用程式提出要求。
 
 
-開始測試之前，您必須具有使用 **MobileFirst Services Starter** 樣板所建立的行動後端應用程式，並在 `/protected` 端點已具有 {{site.data.keyword.amashort}} 所保護的資源。如需相關資訊，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+開始測試之前，您必須具有使用 **MobileFirst Services Starter** 樣板所建立的行動後端應用程式，並且已具有 {{site.data.keyword.amashort}} `/protected` 端點所保護的資源。如需相關資訊，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 1. 開啟 `{applicationRoute}/protected`（例如：`http://my-mobile-backend.mybluemix.net/protected`），嘗試在桌面瀏覽器中將要求傳送給行動後端應用程式的受保護端點。
  使用「MobileFirst Services 樣板」所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。因此，只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取它。因此，您會在桌面瀏覽器中看到 `Unauthorized`。

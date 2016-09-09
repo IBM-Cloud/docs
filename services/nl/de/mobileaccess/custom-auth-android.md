@@ -8,7 +8,7 @@ copyright:
 # Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Android-App konfigurieren
 {: #custom-android}
 
-*Letzte Aktualisierung: 17. Juli 2016*
+Letzte Aktualisierung: 01. August 2016
 {: .last-updated}
 
 
@@ -34,7 +34,7 @@ Sie müssen über eine Ressource verfügen, die durch eine Instanz des {{site.da
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// andere Abhängigkeiten
@@ -63,6 +63,8 @@ Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Rou
 Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region.
 
 
+Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol")  in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen.
+				 	
 ## Schnittstelle 'AuthenticationListener'
 {: #custom-android-authlistener}
 
@@ -175,8 +177,10 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 Nach dem Erstellen einer angepassten Schnittstelle 'AuthenticationListener' registrieren Sie sie in `BMSClient`, bevor Sie mit der Verwendung des Listeners beginnen. Fügen Sie Ihrer Anwendung den folgenden Code hinzu. Dieser Code muss aufgerufen werden, bevor Sie Anforderungen an Ihre geschützten Ressourcen senden.
 
 ```Java
-BMSClient.getInstance().registerAuthenticationListener(realmName,
-									new CustomAuthenticationListener());
+MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+
 ```
 
 Verwenden Sie den Wert für *realmName*, den Sie im {{site.data.keyword.amashort}}-Dashboard angegeben haben.
@@ -220,12 +224,14 @@ Sie müssen eine Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boil
 
 1. 	Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe im LogCat-Tool angezeigt:
 
+	
+
 	![Bild](images/android-custom-login-success.png)
 
  Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
 
  ```Java
- AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer angemeldet hat, wird der Benutzer abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er auf die vom Server empfangene Anforderung erneut reagieren.

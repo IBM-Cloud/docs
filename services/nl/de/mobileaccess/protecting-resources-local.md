@@ -8,10 +8,10 @@ copyright:
 # {{site.data.keyword.amashort}} mit einer lokalen Entwicklungsumgebung verwenden
 {: #protecting-local}
 
-*Letzte Aktualisierung: 17. Juli 2016*
+Letzte Aktualisierung: 16. August 2016
 {: .last-updated}
 
-Sie können Ihre lokale Entwicklungsumgebung so konfigurieren, dass sie den {{site.data.keyword.amashort}}-Service verwendet, der in {{site.data.keyword.Bluemix}} ausgeführt wird. Insbesondere können Sie Code mit dem {{site.data.keyword.amashort}}-Server-SDK lokal entwickeln und {{site.data.keyword.amashort}}-Anforderungen an den Entwicklungsserver senden. Diese Anforderungen werden vom {{site.data.keyword.amashort}}-Service geschützt, der in {{site.data.keyword.Bluemix}} ausgeführt wird.
+Sie können Ihre lokale Entwicklungsumgebung so konfigurieren, dass sie den {{site.data.keyword.amafull}}-Service verwendet, der in {{site.data.keyword.Bluemix}} ausgeführt wird. Insbesondere können Sie Code mit dem {{site.data.keyword.amashort}}-Server-SDK lokal entwickeln und {{site.data.keyword.amashort}}-Anforderungen an den Entwicklungsserver senden. Diese Anforderungen werden vom {{site.data.keyword.amashort}}-Service geschützt, der in {{site.data.keyword.Bluemix}} ausgeführt wird.
 
 ## Server-SDK einrichten
 {: #serversetup}

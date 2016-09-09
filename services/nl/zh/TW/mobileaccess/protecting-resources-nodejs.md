@@ -8,7 +8,7 @@ copyright:
 # 使用 {{site.data.keyword.amashort}} 保護 Node.js 資源
 {: #protecting-resources-nodejs}
 
-*前次更新：2016 年 4 月 15 日*
+前次更新：2016 年 4 月 15 日
 {: .last-updated}
 
 您可以使用 {{site.data.keyword.amashort}} 伺服器 SDK 來保護 Node.js 應用程式中的資源。
