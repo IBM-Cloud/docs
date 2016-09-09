@@ -16,7 +16,7 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.openwhisk_short}}
+# Getting started with {{site.data.keyword.openwhisk_short}} (Beta)
 Last updated: 9 September 2016
 {: .last-updated}
 
