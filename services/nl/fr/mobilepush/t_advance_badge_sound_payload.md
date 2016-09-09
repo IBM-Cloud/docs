@@ -9,7 +9,7 @@ copyright:
 
 
 #Activation des notifications push avancées
-*Dernière mise ç jour : 14 juin 2016*
+Dernière mise à jour : 16 août 2016
 {: .last-updated}
 
 Configurez un badge iOS, un son, un contenu JSON supplémentaire, des notifications interactives et la conservation des notifications.
@@ -19,8 +19,8 @@ Configurez un badge iOS, un son, un contenu JSON supplémentaire, des notificati
 
 Configurez un badge, un son et un contenu JSON supplémentaire iOS.
 
-1. Dans le tableau de bord Push Notifications, accédez à l'onglet **Notifications**.
-2. Accédez à la section des **zones facultatives** pour configurer les fonctions de notification push ci-après. 
+1. Dans le tableau de bord {{site.data.keyword.mobilepushshort}}, accédez à l'onglet **Notifications**.
+2. Accédez à la section des zones facultatives pour configurer les fonctions {{site.data.keyword.mobilepushshort}}. 
 	- **Fichier son** - Entrez une chaîne pour pointer vers le fichier son dans votre application mobile. Dans le contenu, spécifiez le nom de
 chaîne du fichier son à utiliser.
 	- **Badge iOS** - Pour les périphériques iOS, numéro à afficher comme badge de l'icône d'application. Si cette propriété manque, le badge n'est pas changé. Pour supprimer le badge, associez cette propriété à la valeur 0.
@@ -30,7 +30,7 @@ chaîne du fichier son à utiliser.
 
 ###Android
 
-Ajoutez votre fichier son dans le répertoire `res/raw` de votre application Android. Lors de l'envoi de la notification, ajoutez le nom du fichier son dans la zone son de la notification push.
+Ajoutez votre fichier son dans le répertoire `res/raw` de votre application Android. Lors de l'envoi de la notification, ajoutez le nom du fichier son dans la zone son de {{site.data.keyword.mobilepushshort}}.
 
 ```
 "settings":{
@@ -51,9 +51,7 @@ Ajoutez votre fichier son dans le répertoire `res/raw` de votre application And
 	  }
 }
 ``` 		
-**Contenu supplémentaire** - Ce contenu peut être représenté par n'importe quelle paire clé-valeur et doit être un objet JSON que
-vous voulez envoyer avec la notification push.
-
+**Contenu supplémentaire** - Ce contenu peut être représenté par toute paire clé-valeur et doit être un objet JSON que vous voulez envoyer avec la notification de type {{site.data.keyword.mobilepushshort}}.
 ```
 {"clé":"valeur", "clé2":"valeur2"}
 ```
@@ -62,7 +60,8 @@ vous voulez envoyer avec la notification push.
 ## Conservation des notifications Android 
 {: #hold-notifications-android}
 
-Lorsque votre application passe en arrière-plan, il peut être judicieux que la notification push conserve les notifications qui sont envoyées à votre application. Pour conserver des notifications, appelez la méthode hold() dans la méthode onPause() de l'activité qui traite les notifications push.
+Quand votre application passe en arrière-plan, vous pouvez vouloir que le service {{site.data.keyword.mobilepushshort}} conserve les notifications qui sont envoyées à cette application. Pour conserver des notifications, appelez la méthode hold() dans la méthode onPause() de l'activité qui traite les
+notifications de type {{site.data.keyword.mobilepushshort}}.
 
 ```
 @Override
@@ -78,11 +77,9 @@ protected void onPause() {
 ## Activations des notifications iOS interactives  
 {: #enable-actionable-notifications-ios}
 
-A la différence des notifications push traditionnelles, les notifications
-interactives invitent les utilisateurs à effectuer une sélection lorsqu'ils
-reçoivent l'alerte de notification sans ouvrir l'application. Utilisez les
-instructions ci-après pour activer les notifications push interactives dans
-votre application.
+A la différence des notifications de type {{site.data.keyword.mobilepushshort}} traditionnelles, les notifications interactives invitent les utilisateurs à effectuer une sélection quand ils reçoivent l'alerte de notification sans ouvrir l'application.  
+
+Procédez comme suit pour activer les notifications de type {{site.data.keyword.mobilepushshort}} dans votre application.
 
 1. Créez une réponse utilisateur.
 
@@ -124,7 +121,7 @@ votre application.
 **UIUserNotificationActionContextMinimal** sont des contextes
 valides.
 
-	Objective-C
+Objective-C
 
 	```
 	// For Objective-C
@@ -133,7 +130,7 @@ valides.
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
 	```    
 
-	Swift
+Swift
 
 	```
 	// For Swift
@@ -142,17 +139,16 @@ valides.
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
 	```
 
-1. Créez le paramètre de notification et affectez les catégories de l'étape
-précédente.
+1. Créez le paramètre de notification et affectez les catégories de l'étape antérieure.
 
-	Objective-C
+Objective-C
 
 	```
 	// For Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
 	```
 
-	Swift
+Swift
 
 	```
 	// For Swift
@@ -162,7 +158,7 @@ précédente.
 1. Créez la notification locale ou éloignée et affectez-lui l'identité de la
 catégorie.
 
-	Objective-C
+Objective-C
 
 	```
 	//For Objective-C
@@ -172,7 +168,7 @@ catégorie.
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
 
-	Swift
+Swift
 
 	```
 	//For Swift

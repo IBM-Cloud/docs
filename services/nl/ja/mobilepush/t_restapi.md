@@ -7,14 +7,12 @@ copyright:
 
 # REST API の使用
 {: #push-api-rest}
-*最終更新日: 2016 年 7 月 12 日*
+最終更新日: 2016 年 8 月 16 日
 {: .last-updated}
 
-プッシュ通知には REST (Representational State Transfer) API (アプリケーション・プログラム・インターフェース) を使用できます。
-また、クライアント・アプリケーションをさらに開発するために、SDK および [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) を使用することもできます。
+{{site.data.keyword.mobilepushshort}}には REST (Representational State Transfer) API (アプリケーション・プログラム・インターフェース) を使用できます。また、クライアント・アプリケーションをさらに開発するために、SDK および [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) を使用することもできます。
 
-バックエンド・サーバー・アプリケーションとクライアントは、プッシュ REST API を使用して、プッシュ機能にアクセスできます。
-
+バックエンド・サーバー・アプリケーションとクライアントは、Push REST API を使用して、{{site.data.keyword.mobilepushshort}}機能にアクセスできます。
 
 - デバイス登録
 - 登録
@@ -22,14 +20,19 @@ copyright:
 - サブスクリプション
 - タグ (Tags)
 
-REST API のベース URL を取得するには、以下のようにします。
+REST API のベース URL を取得するには、以下の手順を実行します。
 
-1. Bluemix® カタログの Boilerplates セクションでバックエンド・アプリケーションを作成します。これにより、プッシュ・サービスはこのアプリケーションに自動的にバインドされます。バックエンド・アプリを既に作成済みの場合は、必ずアプリを Push Notification Service にバインドしてください。 
+1. MobileFirst Services Starter を選択することで、Bluemix® カタログの Boilerplates セクションでバックエンド・アプリケーションを作成します。これにより、{{site.data.keyword.mobilepushshort}}サービスがアプリケーションにバインドされます。Push のサービス・インスタンスを作成してアンバインドのままにすることもできます。 
+1. Bluemix ダッシュボードのメインページで、**「アプリケーション」**エリアに移動し、アプリを選択します。
+3. **「モバイル・オプション」**をクリックします。アプリの詳細ページの最初に、経路およびアプリ GUID の値が表示されます。「資格情報の表示」画面に、AppSecret に関する情報が表示されます。「モバイル・オプション」のアプリケーション秘密鍵や、いくつかの API のクライアント秘密鍵も取得できます。
 
-1. Bluemix ダッシュボードのメインページで、**「アプリケーション」**エリアに移動し、アプリをクリックします。
+また、以下のようにコマンド・ラインを使用してサービス資格情報を取得することも可能です。
 
-3. 「モバイル・オプション」をクリックします。アプリの詳細ページの上部に、経路およびアプリ GUID の値が表示されます。
+```
+ cf create-service-key {push_instance_name} {key_name}
 
+ cf service-key {push_instance_name} {key_name}
+```
 
 
 ## Accept-Language ヘッダー
@@ -40,11 +43,10 @@ REST API のベース URL を取得するには、以下のようにします。
 ## appSecret
 {: #push-api-rest-secret}
 
-アプリケーションがプッシュ通知にバインドされると、そのサービスによって appSecret (固有キー) が生成されて応答ヘッダーで渡されます。
-IBM® Push Notifications for Bluemix Rest API を使用している場合、REST API リファレンスを使用して、保護する必要のある API に関する情報を取得してください。REST API については、REST API リファレンスを参照してください。
+アプリケーションが{{site.data.keyword.mobilepushshort}}にバインドされると、そのサービスによって appSecret (固有キー) が生成されて応答ヘッダーで渡されます。Bluemix の IBM® {{site.data.keyword.mobilepushshort}} の Rest API を使用する場合、REST API リファレンスを使用して、保護する必要のある API に関する情報を取得してください。REST API については、REST API リファレンスを参照してください。
 
 要求ヘッダーには appSecret が含まれている必要があります。含まれていない場合、サーバーは 401 無許可エラー・コードを返します。
-プッシュ通知がアプリケーションに追加されると、特定の AppID が作成されます。応答の一部として、タグの作成やメッセージの送信に使用される appSecret というヘッダーを取得することになります。操作は、カタログまたはボイラープレートのサービスを介して行われます。
+{{site.data.keyword.mobilepushshort}}がアプリケーションに追加されると、特定の AppID が作成されます。応答の一部として、タグの作成やメッセージの送信に使用される appSecret というヘッダーを取得することになります。操作は、カタログまたはボイラープレートのサービスを介して行われます。
 
 appSecret の値を取得するには、以下のようにします。
 
@@ -73,7 +75,9 @@ appSecret の値を取得するには、以下のようにします。
 ##Push REST API のフィルター
 {: #push-api-rest-filters}
 
-フィルターは、プッシュの GET API から返されるデータを制限する検索条件を定義します。フィルタリングする GET 操作の結果に対してフィルターを適用します。フィルターは、結果に含まれる項目の数を制限します。例えば、フィルターを使用して、名前が「test」で始まるタグを検索できます。以下の構文を使用して、フィルターを生成できます。
+フィルターは、{{site.data.keyword.mobilepushshort}}の GET API から返されるデータを制限する検索条件を定義します。フィルタリングする GET 操作の結果に対してフィルターを適用します。フィルターは、結果に含まれる項目の数を制限します。例えば、フィルターを使用して、名前が「test」で始まるタグを検索できます。 
+
+フィルターは、以下の構文で生成できます。
 
 **name**
 フィルターが適用されるフィールドの名前。
@@ -86,7 +90,7 @@ appSecret の値を取得するには、以下のようにします。
 
 コンマおよび円記号 () は、式で表示する場合、円記号 () でエスケープする必要があります。
 
-複数のフィルターを使用する場合、AND ロジックと OR ロジックを使用して結合することができます。
+複数のフィルターを使用する場合、AND ロジックと OR ロジックを使用してそれらを結合することができます。
 
 - AND ロジックの場合、照会で複数のフィルターを使用します。
 - OR ロジックの場合、フィルター式内でコンマ (,) を使用します。
@@ -110,7 +114,7 @@ appSecret の値を取得するには、以下のようにします。
 - == が使用された場合、値は完全一致ストリングでなければなりません。
 
 
-##プッシュ通知の応答コード
+##{{site.data.keyword.mobilepushshort}}の応答コード
 {: #push-api-response-codes}
 
 状況: 405 Method Not Allowed - 適切なメソッドを使用する必要があります。

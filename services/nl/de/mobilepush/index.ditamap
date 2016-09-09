@@ -84,7 +84,7 @@ format="html" navtitle="Tagbasierte Benachrichtigungen aktivieren" scope="peer">
 <topicref href="t_manage_tags.html#manage_tags" format="html" navtitle="Tags verwalten" scope="peer"/>
 <topicref href="t_manage_tags.html#get_tags" format="html" navtitle="Tags abrufen" scope="peer"/>
 <topicref href="t_manage_tags.html#Subscribe_tags" format="html"
-navtitle="Tags subskribieren und die Subskribierung aufheben" scope="peer"/>
+navtitle="Tags subskribieren und die Subskription aufheben" scope="peer"/>
 <topicref href="t_manage_tags.html#using_tags" format="html"
 navtitle="Tagbasierte Benachrichtigungen verwenden" scope="peer"/>
 </topicref>

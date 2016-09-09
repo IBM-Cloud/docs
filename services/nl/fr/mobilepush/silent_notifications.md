@@ -7,7 +7,7 @@ copyright:
 
 # Traitement des notifications silencieuses pour iOS
 {: #silent-notifications}
-*Dernière mise à jour : 14 juin 2016*
+Dernière mise à jour : 16 août 2016
 {: .last-updated}
 
 Les notifications silencieuses n'apparaissent pas sur l'écran du

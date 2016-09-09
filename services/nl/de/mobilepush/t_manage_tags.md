@@ -7,16 +7,17 @@ copyright:
 
 # Tags verwalten
 {: #manage_tags}
-*Letzte Aktualisierung: 14. Juni 2016*
+Letzte Aktualisierung: 16. August 2016
 {: .last-updated}
 
-Mit dem Push-Dashboard können Sie Tags für Ihre Anwendungen erstellen oder löschen und anschließend tagbasierte Benachrichtigungen initialisieren. Die tagbasierte Benachrichtigung wird auf dem Gerät empfangen, von dem das Tag subskribiert wurde.
+Mit dem Push-Dashboard können Sie Tags für Ihre Anwendungen erstellen oder löschen und anschließend tagbasierte Benachrichtigungen initialisieren. Die tagbasierte Benachrichtigung wird auf Geräten empfangen, von denen der Tag subskribiert wurde. 
 
 
 ## Tags erstellen
 {: #create_tags}
 
-Tagbasierte Benachrichtigungen sind Benachrichtigungen, die als Ziel alle Geräte haben, die einen bestimmten Tag subskribiert haben. Jedes Gerät kann beliebig viele Tags subskribieren. Wenn ein Tag gelöscht wird, werden alle Informationen, die dem Tag zugeordnet sind (einschließlich Subskribente und Geräte) gelöscht. Für diesen Tag ist keine automatische Aufhebung der Subskription erforderlich, da er nicht mehr vorhanden ist und daher clientseitig keine weiteren Aktionen nötig sind.
+Tagbasierte Benachrichtigungen sind Benachrichtigungen, die all diejenigen Geräte als Ziel haben, die einen
+bestimmten Tag subskribiert haben. Jedes Gerät kann beliebig viele Tags subskribieren. Wenn ein Tag gelöscht wird, werden die Informationen diesem Tag zugeordneten Informationen (einschließlich Subskribenten und Geräte) gelöscht. Für diesen Tag ist keine automatische Aufhebung der Subskription erforderlich, da er nicht mehr vorhanden ist und daher clientseitig keine weiteren Aktionen nötig sind.
 
 1. Wählen Sie im Push-Dashboard die Registerkarte **Tags** aus.
 1. Klicken Sie auf die Schaltfläche **Tag erstellen**.   
@@ -46,11 +47,12 @@ Tagbasierte Benachrichtigungen sind Benachrichtigungen, die als Ziel alle Gerät
 # Tags abrufen
 {: #get_tags}
 
-Mit Tags können im Gegensatz zu allgemeinen Rundsendungen, die an alle Anwendungen gesendet werden, Benachrichtigungen auf der Grundlage eines Interessenbereichs zielgruppenspezifisch an Benutzer gesendet werden. Sie können Tags erstellen und verwalten, indem Sie die Registerkarte 'Tag' im Push-Dashboard oder REST-APIs verwenden. Sie können die Code-Snippets in den folgenden Abschnitten verwenden, um Ihre Tag-Subskriptionen für Ihre mobile Anwendung zu verwalten und abzufragen. Sie können diese Code-Snippets verwenden, um Subskriptionen abzurufen, eine Subskription für einen Tag einzurichten, eine Subskription für einen Tag aufzuheben und eine Liste der verfügbaren Tags abzurufen. Sie kopieren diese Code-Snippets und fügen Sie in Ihre mobile Anwendung ein.
+Mit Tags können im Gegensatz zu allgemeinen Rundsendungen, die an alle Anwendungen gesendet werden, Benachrichtigungen auf der Grundlage eines Interessenbereichs zielgruppenspezifisch an Benutzer gesendet werden. Sie können Tags erstellen und verwalten, indem Sie die Registerkarte 'Tag' im Push-Dashboard oder REST-APIs verwenden. Sie können Code-Snippets verwenden, um Ihre Tag-Subskriptionen für Ihre mobile Anwendung zu verwalten und abzufragen. Sie können diese Code-Snippets verwenden, um Subskriptionen abzurufen, eine Subskription für einen Tag einzurichten, eine Subskription für einen Tag aufzuheben und eine Liste der verfügbaren Tags abzurufen. Kopieren Sie diese Code-Snippets in Ihre mobile Anwendung. 
 
 ## Android
+{: android-get-tags}
 
-Die API **getTags** gibt die Liste mit den verfügbaren Tags zurück, die das Gerät subskribieren kann. Nachdem das Gerät einen bestimmten Tag subskribiert hat, kann es alle Push-Benachrichtigungen empfangen, die für diesen Tag gesendet werden.
+Die API **getTags** gibt die Liste mit den verfügbaren Tags zurück, die das Gerät subskribieren kann. Nachdem das Gerät einen bestimmten Tag subskribiert hat, kann es die Push-Benachrichtigungen empfangen, die für diesen Tag gesendet werden. 
 
 Kopieren Sie die folgenden Code-Snippets in Ihre mobile Android-Anwendung, um eine Liste der Tags abzurufen, die das Gerät subskribiert hat, und eine Liste der verfügbaren Tags.
 
@@ -88,11 +90,12 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onFailure(MFPPushException ex) {
          updateTextView("Error getting subscriptions.. " + ex.getMessage());
-  }
+    }
 })
 ```
 
 ## Cordova
+{: cordova-get-tags}
 
 Kopieren Sie die folgenden Code-Snippets in Ihre mobile Anwendung, um eine Liste der Tags abzurufen, die das Gerät subskribiert hat, und eine Liste der verfügbaren Tags, die das Gerät subskribieren kann.
 
@@ -114,6 +117,7 @@ MFPPush.getSubscriptionStatus(function(tags) {
 ```
 
 ## Objective-C
+{: objc-get-tags}
 
 Kopieren Sie die folgenden Code-Snippets in Ihre mit Objective-C entwickelte iOS-Anwendung, um eine Liste der Tags abzurufen, die das Gerät subskribiert hat, und eine Liste der verfügbaren Tags, die das Gerät subskribieren kann.
 
@@ -153,10 +157,11 @@ subscribedTags = [response subscriptions];
 ```
 
 ## Swift
+{: swift-get-tags}
 
-Die API **retrieveAvailableTagsWithCompletionHandler** gibt die Liste mit den verfügbaren Tags zurück, die das Gerät subskribieren kann. Nachdem das Gerät einen bestimmten Tag subskribiert hat, kann es alle Push-Benachrichtigungen empfangen, die für diesen Tag gesendet werden.
+Die API **retrieveAvailableTagsWithCompletionHandler** gibt die Liste mit den verfügbaren Tags zurück, die das Gerät subskribieren kann. Nachdem das Gerät einen bestimmten Tag subskribiert hat, kann es Push-Benachrichtigungen empfangen, die für diesen Tag gesendet werden. 
 
-Push-Service zum Abrufen von Subskriptionen für einen Tag aufrufen
+Rufen Sie die Push-Benachrichtigungen auf, um die Subskriptionen für einen Tag abzurufen. 
 
 Kopieren Sie die folgenden Code-Snippets in Ihre mobile Swift-Anwendung, um eine Liste der Tags abzurufen, die das Gerät subskribiert hat, und eine Liste der verfügbaren Tags, die das Gerät subskribieren kann.
 
@@ -192,12 +197,13 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 }
 ```
 
-# Tags subskribieren und die Subskribierung aufheben
+# Tags subskribieren und die Subskription aufheben
 {: #Subscribe_tags}
 
-Verwenden Sie die folgenden Code-Snippets, um Ihren Geräten das Abrufen von Subskriptionen und das Subskribieren und das Aufheben der Subskribierung von Tags zu ermöglichen.
+Verwenden Sie die folgenden Code-Snippets, um Ihren Geräten das Abrufen von Subskriptionen und das Subskribieren und das Aufheben der Subskription von Tags zu ermöglichen.
 
 ## Android
+{: android-subscribe-tags}
 
 Kopieren Sie das folgende Code-Snippet und fügen Sie es in Ihre mobile Android-Anwendung ein.
 
@@ -232,6 +238,7 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 
 ## Cordova
+{: cordova-subscribe-tags}
 
 Kopieren Sie das folgende Code-Snippet und fügen Sie es in Ihre mobile Cordova-Anwendung ein.
 
@@ -242,6 +249,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 
 ## Objective-C
+{: objc-subscribe-tags}
 
 Kopieren Sie das folgende Code-Snippet und fügen Sie es in Ihre mobile Objective-C-Anwendung ein.
 
@@ -261,7 +269,7 @@ Verwenden Sie die API **subscribeToTags** zum Subskribieren eines Tags.
 }];
 ```
 
-Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskribierung eines Tags.
+Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskription eines Tags.
 
 ```
 [push unsubscribeFromTags:tags completionHandler:
@@ -277,6 +285,7 @@ Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskribierung ei
 ```
 
 ## Swift
+{: swift-subscribe-tags}
 
 Kopieren Sie das folgende Code-Snippet und fügen Sie es in Ihre mobile Swift-Anwendung ein.
 
@@ -294,9 +303,9 @@ push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!
 }
 ```
 
-**Subskribierung von Tags aufheben**
+**Subskription von Tags aufheben**
 
-Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskribierung eines Tags.
+Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskription eines Tags.
 
 ```
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
@@ -317,9 +326,10 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
 {: #using_tags}
 
 
-Tagbasierte Benachrichtigungen sind Benachrichtigungen, die als Ziel alle Geräte haben, die einen bestimmten Tag subskribiert haben. Jedes Gerät kann beliebig viele Tags subskribieren. In diesem Abschnitt wird beschrieben, wie tagbasierte Benachrichtigungen gesendet werden. Subskriptionen werden von der Bluemix-Instanz von Push Notifications Service verwaltet. Wenn ein Tag gelöscht wird, werden alle Informationen, die dem Tag zugeordnet sind (einschließlich Subskribente und Geräte) gelöscht. Für diesen Tag ist keine automatische Aufhebung der Subskription erforderlich, da er nicht mehr vorhanden ist und daher clientseitig keine weiteren Aktionen nötig sind.
+Tagbasierte Benachrichtigungen sind Benachrichtigungen, die alle diejenigen Geräte zum Ziel haben, die einen bestimmten Tag subskribiert haben. Jedes Gerät kann beliebig viele Tags subskribieren. In diesem Abschnitt wird beschrieben, wie tagbasierte Benachrichtigungen gesendet werden. Subskriptionen werden von der Bluemix-Instanz des {{site.data.keyword.mobilepushshort}}-Service verwaltet. Wenn ein Tag gelöscht wird, werden alle diesem Tag zugeordneten Informationen (einschließlich Subskribenten und Geräte) gelöscht. Für diesen Tag ist keine automatische Aufhebung der Subskription erforderlich, da er nicht mehr vorhanden ist und daher clientseitig keine weiteren Aktionen nötig sind.
 
-**Vorbemerkungen**
+###Vorbemerkungen
+{: before-you-begin}
 
 Erstellen Sie Tags in der Anzeige **Tag**. Informationen zum Erstellen von Tags finden Sie in [Tags erstellen](t_manage_tags.html).
 

@@ -9,7 +9,7 @@ copyright:
 
 
 #拡張プッシュ通知の使用可能化
-*最終更新日: 2016 年 6 月 14 日*
+最終更新日: 2016 年 8 月 16 日
 {: .last-updated}
 
 iOS バッジ、音声、追加の JSON ペイロード、アクション可能通知、および保留通知を構成します。
@@ -19,8 +19,8 @@ iOS バッジ、音声、追加の JSON ペイロード、アクション可能�
 
 iOS のバッジ、音声、および追加の JSON ペイロードを構成します。
 
-1. プッシュ通知ダッシュボードで、**「通知」**タブに移動します。
-2. **「オプション・フィールド (Optional Fields)」**セクションに移動して、以下のプッシュ通知機能を構成します。 
+1. {{site.data.keyword.mobilepushshort}}ダッシュボードで、**「通知」**タブに移動します。
+2. **「オプション・フィールド」**セクションに移動して、{{site.data.keyword.mobilepushshort}}機能を構成します。 
 	- **音声ファイル (Sound File)** - モバイル・アプリの音声ファイルを指定するストリングを入力します。ペイロードで、使用する音声ファイルのストリング名を指定します。
 	- **iOS バッジ (iOS Badge)** - iOS デバイスにアプリ・アイコンのバッジとして表示する数。このプロパティーがないと、バッジは変更されません。バッジを削除するには、このプロパティーの値を 0 に設定します。
 	
@@ -29,7 +29,7 @@ iOS のバッジ、音声、および追加の JSON ペイロードを構成し�
 
 ###Android
 
-Android アプリケーションの `res/raw` ディレクトリーに音声ファイルを追加します。通知の送信中に、プッシュ通知の音声フィールドに音声ファイル名を追加します。
+Android アプリケーションの `res/raw` ディレクトリーに音声ファイルを追加します。通知の送信中に、{{site.data.keyword.mobilepushshort}}の音声フィールドに音声ファイル名を追加します。
 
 ```
 "settings":{
@@ -50,7 +50,7 @@ Android アプリケーションの `res/raw` ディレクトリーに音声フ�
   }
 }
 ``` 		
-**追加ペイロード** - このペイロードは、任意のキーと値のペアにすることができますが、プッシュ通知で送信する JSON オブジェクトでなければなりません。
+**追加のペイロード** - このペイロードは、任意のキーと値のペアにすることができますが、{{site.data.keyword.mobilepushshort}}で送信する JSON オブジェクトでなければなりません。
 
 ```
 {"key":"value", "key2":"value2"}
@@ -60,7 +60,7 @@ Android アプリケーションの `res/raw` ディレクトリーに音声フ�
 ## Android 通知の保留 
 {: #hold-notifications-android}
 
-アプリケーションがバックグラウンドになる場合、恐らく、アプリケーションに送信された通知をプッシュ通知が保留するようにする必要があります。通知を保留するには、プッシュ通知を処理しているアクティビティーの onPause() メソッドで hold() メソッドを呼び出します。
+アプリケーションがバックグラウンドになる場合に、アプリケーションに送信された通知を{{site.data.keyword.mobilepushshort}}に保留させたいことがあります。通知を保留するには、{{site.data.keyword.mobilepushshort}}を処理しているアクティビティーの onPause() メソッドで hold() メソッドを呼び出します。
 
 ```
 @Override
@@ -76,7 +76,9 @@ protected void onPause() {
 ## iOS アクション可能通知の使用可能化  
 {: #enable-actionable-notifications-ios}
 
-従来のプッシュ通知とは異なり、アクション可能通知は、通知アラートを受け取る際にアプリを開くことなく選択を行うようにユーザーにプロンプトを出します。アクション可能プッシュ通知をアプリケーションで使用可能にするには、以下の指示に従います。
+従来の{{site.data.keyword.mobilepushshort}}とは異なり、アクション可能通知は、通知アラートを受け取る際にアプリを開くことなく選択を行うようにユーザーにプロンプトを出します。 
+
+アプリケーションでアクション可能{{site.data.keyword.mobilepushshort}}を使用可能にするには、以下の手順を行います。
 
 1. ユーザー応答アクションを作成します。
 
@@ -116,7 +118,7 @@ protected void onPause() {
 
 2. 通知カテゴリーを作成し、アクションを設定します。**UIUserNotificationActionContextDefault** または **UIUserNotificationActionContextMinimal** が有効なコンテキストです。
 
-	Objective-C
+Objective-C
 
 	```
 	// For Objective-C
@@ -125,7 +127,7 @@ protected void onPause() {
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
 	```    
 
-	Swift
+Swift
 
 	```
 	// For Swift
@@ -134,16 +136,16 @@ protected void onPause() {
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
 	```
 
-1. 通知設定を作成し、前のステップで作成したカテゴリーを割り当てます。
+1. 通知設定を作成し、前のステップのカテゴリーを割り当てます。
 
-	Objective-C
+Objective-C
 
 	```
 	// For Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
 	```
 
-	Swift
+Swift
 
 	```
 	// For Swift
@@ -152,7 +154,7 @@ protected void onPause() {
 
 1. ローカル通知またはリモート通知を作成し、その通知にカテゴリーの ID を割り当てます。
 
-	Objective-C
+Objective-C
 
 	```
 	//For Objective-C
@@ -162,7 +164,7 @@ protected void onPause() {
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
 
-	Swift
+Swift
 
 	```
 	//For Swift

@@ -7,7 +7,7 @@ copyright:
 
 # Notifications interactives
 {: #interactive-notifications}
-*Dernière mise à jour : 14 juin 2016*
+Dernière mise à jour : 16 août 2016
 {: .last-updated}
 
 Les notifications interactives permettent aux utilisateurs de réagir sans avoir à ouvrir l'application lorsqu'ils reçoivent une notification. Lorsqu'une notification interactive est reçue, le périphérique affiche
@@ -15,21 +15,25 @@ les boutons d'action avec le message de notification. Les notifications interact
 en charge sur les périphériques iOS versions 8 et ultérieures. Si une notification interactive est envoyée à des périphériques iOS qui s'exécutent sur une version antérieure à la
 version 8, les actions de notification ne sont pas affichées.
 
-##Envoi de notifications push interactives
+##Envoi de notifications interactives de type {{site.data.keyword.mobilepushshort}}
 
 
 Une notification interactive peut être envoyée à l'aide du tableau de bord Push ou de l'API REST (voir la documentation API REST).
 
 A partir de la console push : 
 
-Sous l'onglet Notification du tableau de bord Push, cliquez sur Send Notification. Choisissez vos destinataires de notification et cliquez sur Next. Sur la page Compose notification, une notification push interactive peut être envoyée en définissant Default ou Mixed comme type et en spécifiant la valeur Category sous l'onglet Advanced Options. Pour configurer la valeur Category sur le client, cochez Handling interactive push notification dans la section de l'application iOS native.
 
-## Traitement des notifications push interactives dans une application iOS
 
-Vous devez procéder comme indiqué ci-dessous pour recevoir des notifications interactives :
+1. Sous l'onglet de notification du tableau de bord Push, cliquez sur la commande relative à l'envoi de la notification. 
+2. Choisissez les destinataires de votre notification et cliquez sur **Suivant**. 
+3. Dans la page de rédaction de la notification, une notification push interactive peut être envoyée en définissant Défaut ou Mixte comme type et en spécifiant la valeur Catégorie sous l'onglet Options avancées. Pour configurer la valeur de catégorie du client, lisez la section Traitement des notifications interactives de type {{site.data.keyword.mobilepushshort}} dans une application iOS native.
+
+## Traitement des notifications interactives de type {{site.data.keyword.mobilepushshort}} dans une application iOS native
+
+Procédez comme suit pour recevoir des notifications interactives :
 
 1. Activez la fonction d'application pour effectuer des tâches en arrière-plan lors de la réception des notifications distantes. Cette étape est requise si certaines des actions sont activées en arrière-plan.
-1. Dans la section `AppDelegate (application: didRegisterForRemoteNotificationsWithDeviceTokenapplication:)`, définissez les catégories avant de pouvoir définir `deviceToken` sur `WLPush Object`.
+1. Dans la section AppDelegate (application: didRegisterForRemoteNotificationsWithDeviceTokenapplication:), définissez les catégories avant de définir `deviceToken` sur `WLPush Object`.
 
 ```
 	if([application respondsToSelector:@selector(registerUserNotificationSettings:)]){

@@ -9,7 +9,7 @@ copyright:
 
 
 #Erweiterte Push-Benachrichtigungen aktivieren
-*Letzte Aktualisierung: 14. Juni 2016*
+Letzte Aktualisierung: 16. August 2016
 {: .last-updated}
 
 Konfigurieren Sie ein iOS Badge, zusätzliche JSON-Nutzdaten, umsetzbare Benachrichtigungen und Blockierungsnachrichten.
@@ -19,8 +19,8 @@ Konfigurieren Sie ein iOS Badge, zusätzliche JSON-Nutzdaten, umsetzbare Benachr
 
 Konfigurieren Sie ein iOS Badge, eine Audiodatei und zusätzliche JSON-Nutzdaten.
 
-1. Navigieren Sie im Dashboard für Push-Benachrichtigungen zur Registerkarte **Benachrichtigungen**.
-2. Konfigurieren Sie im Abschnitt **Optionale Felder** die folgenden Komponenten für Push-Benachrichtigungen: 
+1. Navigieren Sie im Dashboard für Push-Benachrichtigungen zur Registerkarte **Benachrichtigungen**. 
+2. Konfigurieren Sie im Abschnitt **Optionale Felder** die folgenden Komponenten für Push-Benachrichtigungen.  
 	- **Sound File**: Geben Sie eine Zeichenfolge ein, die auf die Audiodatei in Ihrer mobilen App verweist. Geben Sie den Zeichenfolgenamen der zu verwendenden Audiodatei in den Nutzdaten an.
 	- **iOS Badge**: Für iOS-Geräte die Nummer, die als Badge für das App-Symbol angezeigt werden soll. Wenn diese Eigenschaft fehlt, wird das Badge nicht geändert. Um das Badge zu entfernen, legen Sie für diese Eigenschaft den Wert 0 fest.
 	
@@ -29,7 +29,7 @@ Konfigurieren Sie ein iOS Badge, eine Audiodatei und zusätzliche JSON-Nutzdaten
 
 ###Android
 
-Fügen Sie die Audiodatei zum Verzeichnis `res/raw` der Android-Anwendung hinzu. Fügen Sie beim Senden einer Benachrichtigung den Namen der Audiodatei zum entsprechenden Feld der Push-Benachrichtigung hinzu.
+Fügen Sie die Audiodatei zum Verzeichnis `res/raw` der Android-Anwendung hinzu. Fügen Sie beim Senden einer Benachrichtigung den Namen der Audiodatei zum entsprechenden Feld für {{site.data.keyword.mobilepushshort}} hinzu.
 
 ```
 "settings": {
@@ -60,7 +60,7 @@ Fügen Sie die Audiodatei zum Verzeichnis `res/raw` der Android-Anwendung hinzu.
 ## Android-Benachrichtigungen blockieren 
 {: #hold-notifications-android}
 
-Wenn Ihre Anwendung in den Hintergrund wechselt, möchten Sie möglicherweise, dass die Push-Benachrichtigungsfunktion Benachrichtigungen blockiert, die an Ihre Anwendung gesendet werden. Zum Blockieren von Benachrichtigungen rufen Sie die Methode 'hold()' in der Methode 'onPause()' der Aktivität auf, die Push-Benachrichtigungen verarbeitet.
+Wenn Ihre Anwendung in den Hintergrund wechselt, ist es möglicherweise wünschenswert, dass {{site.data.keyword.mobilepushshort}} solche Benachrichtigungen vorübergehend blockiert, die an Ihre Anwendung gesendet wurden. Rufen Sie zum Blockieren von Benachrichtigungen die Methode 'hold()' in der Methode 'onPause()' der Aktivität auf, die Push-Benachrichtigungen verarbeitet. 
 
 ```
 @Override
@@ -76,7 +76,10 @@ protected void onPause() {
 ## Umsetzbare iOS-Benachrichtigungen aktivieren  
 {: #enable-actionable-notifications-ios}
 
-Im Gegensatz zu konventionellen Push-Benachrichtigungen werden Benutzer bei umsetzbaren Benachrichtigungen dazu aufgefordert, bei Erhalt des Benachrichtigungsalerts eine Auswahl zu treffen, ohne die App zu öffnen. Gehen Sie nach den folgenden Anweisungen vor, um umsetzbare Benachrichtigungen in Ihrer Anwendung zu aktivieren.
+Im Gegensatz zu konventionellen Push-Benachrichtigungen werden Benutzer bei umsetzbaren Benachrichtigungen dazu aufgefordert, bei Erhalt des Benachrichtigungsalerts
+eine Auswahl zu treffen, ohne die App zu öffnen.  
+
+Führen Sie die entsprechenden Schritte aus, um umsetzbare Push-Benachrichtigungen in Ihrer Anwendung zu aktivieren. 
 
 1. Erstellen Sie eine Benutzeraktion.
 
@@ -114,9 +117,9 @@ Im Gegensatz zu konventionellen Push-Benachrichtigungen werden Benutzer bei umse
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
 	```
 
-2. Erstellen Sie die Benachrichtigungskategorie und legen Sie eine Aktion fest. **UIUserNotificationActionContextDefault** oder **UIUserNotificationActionContextMinimal** sind gültige Kontexte.
+2. Erstellen Sie die Benachrichtigungskategorie und legen Sie eine Aktion fest. Gültige Kontexte sind **UIUserNotificationActionContextDefault** oder **UIUserNotificationActionContextMinimal**.
 
-	Objective-C
+Objective-C
 
 	```
 	// For Objective-C
@@ -125,7 +128,7 @@ Im Gegensatz zu konventionellen Push-Benachrichtigungen werden Benutzer bei umse
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
 	```    
 
-	Swift
+Swift
 
 	```
 	// For Swift
@@ -134,16 +137,16 @@ Im Gegensatz zu konventionellen Push-Benachrichtigungen werden Benutzer bei umse
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
 	```
 
-1. Erstellen Sie die Benachrichtigungseinstellung und weisen Sie die Kategorien aus dem vorherigen Schritt zu.
+1. Erstellen Sie die Benachrichtigungseinstellung und weisen Sie die Kategorien aus dem vorherigen Schritt zu. 
 
-	Objective-C
+Objective-C
 
 	```
 	// For Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
 	```
 
-	Swift
+Swift
 
 	```
 	// For Swift
@@ -152,7 +155,7 @@ Im Gegensatz zu konventionellen Push-Benachrichtigungen werden Benutzer bei umse
 
 1. Erstellen Sie die lokale oder ferne Benachrichtigung und weisen Sie ihr die Identität der Kategorie zu.
 
-	Objective-C
+Objective-C
 
 	```
 	//For Objective-C
@@ -162,7 +165,7 @@ Im Gegensatz zu konventionellen Push-Benachrichtigungen werden Benutzer bei umse
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
 
-	Swift
+Swift
 
 	```
 	//For Swift

@@ -46,7 +46,7 @@ vor, um umsetzbare Benachrichtigungen in Ihrer Anwendung zu aktivieren.
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
 	```
 
-2. Erstellen Sie die Benachrichtigungskategorie und legen Sie eine Aktion fest. **UIUserNotificationActionContextDefault** oder **UIUserNotificationActionContextMinimal** sind gültige Kontexte.
+2. Erstellen Sie die Benachrichtigungskategorie und legen Sie eine Aktion fest. Gültige Kontexte sind **UIUserNotificationActionContextDefault** oder **UIUserNotificationActionContextMinimal**.
 
 	Objective-C
 

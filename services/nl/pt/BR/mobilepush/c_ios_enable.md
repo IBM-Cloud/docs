@@ -7,11 +7,10 @@ copyright:
 
 # Ativando aplicativos iOS para receber notificações push
 {: #enable-push-ios-notifications}
-*Última atualização: 14 de junho de 2016*
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
-Ative aplicativos iOS para receber notificações push e
-enviar notificações push para seus dispositivos.
+É possível ativar aplicativos iOS para receber e enviar notificações push para seus dispositivos.
 
 
 ##Instalando o CocoaPods
@@ -19,7 +18,7 @@ enviar notificações push para seus dispositivos.
 
 Para um projeto Xcode existente, é possível configurar o SDK do cliente Bluemix Mobile Services usando a ferramenta de gerenciamento de dependência CocoaPods. Uma alternativa é instalar o SDK manualmente.
 
-**Nota**: para visualizar o arquivo leia-me de Push do Swift, acesse https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master
+**Nota**: para visualizar o arquivo leia-me de Push do Swift, acesse https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master.
 
 
 
@@ -27,26 +26,28 @@ Para um projeto Xcode existente, é possível configurar o SDK do cliente Bluemi
 ```
 $ sudo gem install cocoapods
 ```
-2. Insira o comando a seguir no terminal para inicializar o CocoaPods. Ao emitir esse comando, certifique-se de executá-lo no diretório em que está o projeto Xcode. O comando `pod init` cria um título de arquivo.  
+2. Insira o comando a seguir no terminal para inicializar o CocoaPods. Assegure-se de executar o comando a partir do diretório no qual seu projeto Xcode está. O comando `pod init` cria um título de arquivo.  
 ```
 $ pod init
 ```
-3. No Podfile gerado, inclua as dependências necessárias de SDK. Copie o Podfile a seguir.
+3. No Podfile gerado, inclua as dependências necessárias de SDK. Copie um dos Podfiles a seguir, com base em sua preferência.
 
-   Objective-C
+###Objective-C
+   {: objc-sdkdependencies}
 
     ```
     source 'https://github.com/CocoaPods/Specs.git'
-	Copy the following list as is and remove the dependencies you do not need
+	# Copy the following list as is and remove the dependencies you do not need
 	pod 'IMFCore'
 	pod 'IMFPush'
 	```
 
-   Swift
+####Swift
+   {: swift-sdkdependencies}
 
 	```
 	source 'https://github.com/CocoaPods/Specs.git'
-	// Copy the following list as is and remove the dependencies you do not need.
+	# Copy the following list as is and remove the dependencies you do not need.
 	use_frameworks!
 
 	target 'MyApp' do
@@ -56,7 +57,7 @@ $ pod init
       pod 'BMSAnalyticsAPI'
 	end
 	```
-3. No Terminal, acesse a pasta do projeto e instale as dependências com o comando a seguir:
+3. A partir do terminal, acesse a pasta do projeto e instale as dependências com o comando a seguir:
 ```
 $ pod update
 ```
@@ -80,25 +81,29 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 3. Siga as instruções no site [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) para concluir a integração.
 
 ##Usando estruturas importadas e pastas de origem
+{: using-imported-frameworks}
 
 Referencie o SDK no código.
 
 
-### Objective-C
+####Objective-C
+{: objc-import-directives}
 
 Escreva diretivas #import para os cabeçalhos relevantes, por exemplo:
 
 ```
-//Objective-C
+ //Objective-C
 #import <IMFCore/IMFCore.h>
 #import <IMFPush/IMFPush.h>
 ```
 
 **Nota**: a atualização de seu projeto Pods usando os comandos CocoaPods `pod install` ou `pod update` poderá substituir as pastas de origem do Bluemix Mobile Services. Para reter as versões customizadas dos arquivos originais, assegure-se de que sejam submetidas a backup antes de emitir um destes comandos.
 
-###Swift
+####Swift
+{: swift-import-directives}
 
-**Pré-requisitos**
+####Pré-requisitos
+{: prerequisites}
 
 - iOS 8.0 ou superior
 - Xcode 7
@@ -114,6 +119,7 @@ import BMSPush
 **Atenção**: para visualizar o arquivo leia-me de Swift Push, acesse [Leia-me](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master)
 
 ##Configurações de Compilação
+{: build-settings}
 
 Acesse **Xcode > Configurações de criação > Opções de criação e configure Ativar Bitcode** como **Não**.
 
@@ -125,12 +131,13 @@ Acesse **Xcode > Configurações de criação > Opções de criação e configur
 ## Inicializando apps Push SDK para iOS
 {: #enable-push-ios-notifications-initialize}
 
-Um local comum para colocar o código de inicialização é no aplicativo delegado do aplicativo iOS. Clique no link **Opções móveis** no Bluemix
-Application Dashboard para obter a rota e o GUID do aplicativo.
+Um local comum para colocar o código de inicialização é no aplicativo delegado do aplicativo iOS. Clique no link **Opções móveis** no Painel Push para obter a rota e o GUID do aplicativo.
 
 ###Inicializando o SDK principal
+{: Initializing-the-core-sdk}
 
 ####Objective-C
+{: objc-initialize-core-sdk}
 
 ```
 // Initialize the SDK for Object-C with IBM Bluemix GUID and route
@@ -139,45 +146,32 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 ```
 
 ####Swift
+{: swift-initialize-core-sdk}
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
 let myBMSClient = BMSClient.sharedInstance
-
 myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
 myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
-
-###Inicializando o SDK de Push do cliente
-
-####Objective-C
-
-```
-//Initialize client Push SDK for Objective-C IMFPushClient *push =
-[IMFPushClient sharedInstance]; [push initializeBluemixPush]
-```
-
-####Swift
-
-```
-//Initialize client Push SDK for Swift let push =
-BMSPushClient.sharedInstance push.initializeBluemixPush()
-```
-
 ### Rota, GUID e região do Bluemix
+{: route-guid-bluemix-region}
 
-**appRoute**
+####appRoute
+{: ios-approute}
 
 Especifica a rota que é designada ao aplicativo do servidor que você criou no
 Bluemix.
 
-**GUID**
+####GUID
+{: ios-guid}
 
 Especifica a chave exclusiva que é designada ao aplicativo que você criou no
 Bluemix. Esse valor faz distinção entre maiúsculas e minúsculas.
 
-**bluemixRegionSuffix**
+####bluemixRegionSuffix
+{: ios-bluemixRegionSuffix}
 
 Especifica o local em que o app está hospedado. O parâmetro `bluemixRegion` especifica qual implementação do Bluemix você está usando. É possível configurar esse valor com uma propriedade estática `BMSClient.REGION` e use um dos três valores:
 
@@ -185,6 +179,33 @@ Especifica o local em que o app está hospedado. O parâmetro `bluemixRegion` es
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
+####AppGUID
+{: ios-AppGUID}
+
+Especifica a chave AppGUID exclusiva designada ao serviço Push Notification criado no Bluemix.
+
+###Inicializando o SDK de Push do cliente
+{: initializing-the-client-Push-SDK}
+
+####Objective-C
+{: objc-initialize-push-sdk}
+
+```
+//Initialize client Push SDK for Objective-C
+IMFPushClient *push = [IMFPushClient sharedInstance];
+[push initializeWithAppGUID:@"appGUID"];
+
+```
+
+####Swift
+{: swift-initialize-push-sdk}
+
+```
+//Initialize client Push SDK for Swift
+let push = BMSPushClient.sharedInstance
+push.initializeWithAppGUID("appGUID")
+
+```
 
 
 
@@ -192,20 +213,21 @@ Especifica o local em que o app está hospedado. O parâmetro `bluemixRegion` es
 {: #enable-push-ios-notifications-register}
 
 
-Um aplicativo (app) deve se registrar com APNS para receber notificações remotas, o que geralmente ocorre após o aplicativo ser instalado em um dispositivo. Após o
-token de dispositivo gerado pelo APNS ser recebido pelo aplicativo, ele deverá ser transmitido novamente para o Serviço de Notificações Push.
+Um aplicativo (app) deve se registrar com o APNs para receber notificações remotas, após a instalação em um dispositivo. Depois que o token de dispositivo gerado pelo APNs é recebido pelo app, ele deve ser passado de volta ao serviço {{site.data.keyword.mobilepushshort}}.
 
 Para registrar aplicativos e dispositivos iOS:
 
 1. Crie um aplicativo backend
-2. Passe o token para as Notificações push
+2. Passe o token para {{site.data.keyword.mobilepushshort}}
 
 
 ###Crie um aplicativo backend
+{: create-a-backend-app}
 
-Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos que ligará automaticamente o serviço de Push a esse aplicativo. Se também já tiver criado um app backend, certifique-se de ligar o app ao Push Notification Service.
+Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos, que ligará automaticamente o serviço {{site.data.keyword.mobilepushshort}} a esse aplicativo. Se você já criou um app de backend, assegure-se de ligar o app ao serviço {{site.data.keyword.mobilepushshort}}.
 
 ####Objective-C
+{: objc-backendapp-code}
 
 ```
 	//For Objective-C 	
@@ -223,26 +245,27 @@ Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos que liga
 ```
 
 ####Swift
+{: swift-backendapp-code}
 
 ```
 	//For Swift
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-		let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-		application.registerUserNotificationSettings(notificationSettings)
-		application.registerForRemoteNotifications()
+		let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil) UIApplication.sharedApplication().registerUserNotificationSettings(settings) UIApplication.sharedApplication().registerForRemoteNotifications()
 	}
 ```
 
-###Passe o token para as Notificações push
+###Passando tokens para {{site.data.keyword.mobilepushshort}}
+{: pass-token-push-notifications}
 
-Após o token ser recebido do APNS, transmita o token para Notificações push como parte do método `registerDevice:withDeviceToken`.
+Depois que o token for recebido do APNs, passe-o para {{site.data.keyword.mobilepushshort}} como parte do método `registerWithDeviceToken`.
 
 ####Objective-C
+{: objc-token}
 
 ```
 //For Objective-C
 -( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
+
    IMFClient *client = [IMFClient sharedInstance];
 
  [client initializeWithBackendRoute:@"your-backend-route-here" backendGUID:@"Your-backend-GUID-here"];
@@ -250,25 +273,28 @@ Após o token ser recebido do APNS, transmita o token para Notificações push c
 
  // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
-[push initializeBluemixPush]
-[push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
+[push initializeWithAppGUID:@"appGUID"];
+[push registerWithDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
-     [ self  updateMessage:error .description];
+     NSLog(@"%@",error.description);
   }  else {
-    [ self updateMessage:response .responseJson .description];
+    NSLog(@"%@",response.responseJson.description);
 }
 }];
 ```
 
 ####Swift
+{: swift-token}
 
 Após o token ser recebido do APNS, transmita o token para Notificações push como parte do método `didRegisterForRemoteNotificationsWithDeviceToken`.
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
-   push.initializeBluemixPush()
-   push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
+  push.initializeWithAppGUID("appGUID")
+  push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
+  push.initializeWithPushAppGUID("pushAppGUID")
+   push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
             print( "Response during device registration : \(response)")
             print( "status code during device registration : \(statusCode)")
@@ -289,7 +315,9 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
 
 Receba notificações push em dispositivos iOS
 
-###Objective-C
+####Objective-C
+{: objc-receive-push-notifications}
+
 Para receber notificações push em dispositivos iOS, inclua o método Objective-C a seguir na delegação de seu aplicativo.
 
 ```
@@ -299,7 +327,8 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 }
 ```
 
-###Swift
+####Swift
+{: swift-receive-push-notifications}
 Para receber notificações push em dispositivos iOS, inclua o método Swift a seguir na delegação de seu aplicativo.
 
 ```
@@ -319,29 +348,25 @@ server
 Depois de desenvolver seus aplicativos, é possível enviar notificações push básicas (sem usar tags, badges, cargas úteis adicionais ou arquivos de som).
 
 
-Envie notificações push básicas.
-
 1. Em **Escolher o público**, selecione um dos seguintes públicos: **Todos os dispositivos** ou por plataforma: **Apenas dispositivos iOS** ou **Apenas
 dispositivos Android**. 
 
 	**Nota**: ao selecionar a opção **Todos os dispositivos**, todos os dispositivos inscritos para notificações push recebem sua notificação.
 
-	![Tela de notificações](images/tag_notification.jpg)
+![Tela de notificações](images/tag_notification.jpg)
 
 2. Em **Criar sua notificação**, insira sua mensagem e clique
 em **Enviar**.
-3. Verifique se seus dispositivos receberam sua notificação.
-
-	A captura de tela a seguir mostra uma caixa de alerta que manipula uma notificação push no primeiro plano e no segundo plano em um dispositivo iOS.
+3. Verifique se seus dispositivos receberam a notificação. A imagem a seguir mostra uma caixa de alerta manipulando um {{site.data.keyword.mobilepushshort}} no primeiro plano em um dispositivo iOS.
 
 	![Notificação push de primeiro plano no Android](images/iOS_Foreground.jpg)
 
-	![Notificação push de primeiro plano no iOS](images/iOS_Screenshot.jpg)
+![Notificação push de primeiro plano no iOS](images/iOS_Screenshot.jpg)
 
 
 
 
-## Etapas Seguintes
+## Próximas Etapas
 {: #next_steps_tags}
 
 Depois de configurar com êxito notificações básicas, é possível configurar notificações baseadas em tag e opções avançadas.

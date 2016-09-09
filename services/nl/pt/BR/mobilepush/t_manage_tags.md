@@ -7,22 +7,19 @@ copyright:
 
 # Gerenciando Identificações
 {: #manage_tags}
-*Última atualização: 14 de junho de 2016*
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
 Use o painel Push para criar e excluir tags para
 seu aplicativo e depois inicializar notificações baseadas em
-tag. A notificação baseada em tag é recebida no dispositivo que está inscrito na tag.
+tag. A notificação baseada em tag é recebida nos dispositivos inscritos na tag.
 
 
 ## Criando marcações
 {: #create_tags}
 
-Notificações baseadas em tag são mensagens de
-notificação que se destinam a todos os dispositivos inscritos
-em uma tag específica. Cada dispositivo pode se inscrever em
-qualquer número de tags. Quando uma tag é excluída, todas as informações associadas a
-ela, incluindo seus assinantes e dispositivos são excluídos. Nenhum cancelamento de
+Notificações baseadas em tag são mensagens que se destinam a todos os dispositivos inscritos em uma tag específica. Cada dispositivo pode se inscrever em
+qualquer número de tags. Quando uma tag é excluída, informações associadas a essa tag, incluindo seus assinantes e dispositivos, são excluídos. Nenhum cancelamento de
 assinatura automático é necessário para essa tag, uma vez que ela não existe mais e
 nenhuma ação adicional é necessária no lado do cliente.
 
@@ -62,18 +59,16 @@ editar.
 
 As identificações fornecem uma maneira de enviar notificações desejadas aos usuários com base em seus interesses,
 ao contrário de transmissões gerais que são enviadas a todos os aplicativos. É possível
-criar e gerenciar tags usando a guia Tag no painel Push ou usar APIs REST. É possível
-usar fragmentos de código nas seções a seguir para gerenciar e consultar assinaturas de
-tag de seu aplicativo móvel. É possível usar esses fragmentos de código para obter
+criar e gerenciar tags usando a guia Tag no painel Push ou usar APIs REST. É possível usar fragmentos de código para gerenciar e consultar as assinaturas de identificação de seu aplicativo
+móvel. É possível usar esses fragmentos de código para obter
 assinaturas, inscrever-se em uma tag, cancelar a assinatura de
-uma tag, obter uma lista de tags disponíveis. Copie e cole esses fragmentos de código em seu aplicativo móvel.
+uma tag, obter uma lista de tags disponíveis. Copie esses fragmentos de código no aplicativo móvel.
 
 ## Android
+{: android-get-tags}
 
 A API **getTags**
-retorna a lista de identificações disponíveis as quais o dispositivo pode assinar. Depois que o dispositivo está inscrito em uma
-identificação específica, ele pode receber qualquer notificação push enviada para essa
-identificação.
+retorna a lista de identificações disponíveis as quais o dispositivo pode assinar. Depois que o dispositivo é inscrito em uma tag específica, ele pode receber {{site.data.keyword.mobilepushshort}} enviada para essa tag.
 
 Copie os seguintes fragmentos de códigos em seu aplicativo
 móvel Android para obter uma lista de tags nas quais o dispositivo
@@ -120,6 +115,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 ```
 
 ## Cordova
+{: cordova-get-tags}
 
 Copie os fragmentos de códigos a seguir em seu aplicativo móvel para obter uma
 lista de tags nas quais o dispositivo está inscrito e para obter uma lista de tags
@@ -143,6 +139,7 @@ MFPPush.getSubscriptionStatus(function(tags) {
 ```
 
 ## Objective-C
+{: objc-get-tags}
 
 Copie os fragmentos de códigos a seguir em seu aplicativo iOS desenvolvido usando
 Objective-C para obter uma lista de tags nas quais o dispositivo está inscrito e para
@@ -186,14 +183,12 @@ subscribedTags = [response subscriptions];
 ```
 
 ## Swift
+{: swift-get-tags}
 
 A API **retrieveAvailableTagsWithCompletionHandler** retorna a lista de
-identificações disponíveis as quais o dispositivo pode assinar. Depois que o dispositivo está inscrito em uma
-identificação específica, ele pode receber qualquer notificação push enviada para essa
-identificação.
+identificações disponíveis as quais o dispositivo pode assinar. Depois que o dispositivo é inscrito em uma tag específica, ele pode receber {{site.data.keyword.mobilepushshort}} enviada para essa tag.
 
-Chame o serviço push para obter assinaturas para
-uma tag.
+Chame o {{site.data.keyword.mobilepushshort}} para obter assinaturas para uma tag.
 
 Copie os fragmentos de códigos a seguir em seu aplicativo móvel Swift para obter uma
 lista de tags disponíveis nas quais o dispositivo está inscrito e para obter uma lista de
@@ -238,6 +233,7 @@ Use os fragmentos de código a seguir para permitir que seus dispositivos obtenh
 assinaturas, bem como assinem e cancelem a assinatura de uma tag.
 
 ## Android
+{: android-subscribe-tags}
 
 Copie e cole este fragmento de código em seu
 aplicativo móvel Android.
@@ -273,6 +269,7 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 
 ## Cordova
+{: cordova-subscribe-tags}
 
 Copie e cole este fragmento de código em seu aplicativo móvel
 Cordova.
@@ -284,6 +281,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 
 ## Objective-C
+{: objc-subscribe-tags}
 
 Copie e cole este fragmento de código em seu aplicativo móvel
 Objective-C.
@@ -322,6 +320,7 @@ identificação.
 ```
 
 ## Swift
+{: swift-subscribe-tags}
 
 Copie e cole este fragmento de código em seu aplicativo móvel
 Swift.
@@ -365,16 +364,13 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
 {: #using_tags}
 
 
-Notificações baseadas em tag são mensagens de
-notificação que se destinam a todos os dispositivos inscritos
-em uma tag específica. Cada dispositivo pode ser inscrito em qualquer número de tags. Esta seção
-descreve como enviar notificações baseadas em tag. As assinaturas são mantidas pela
-instância do Bluemix do serviço de notificação push. Quando uma tag é excluída, todas as informações associadas a
-ela, incluindo seus assinantes e dispositivos são excluídos. Nenhum cancelamento de
+Notificações baseadas em tag são mensagens que se destinam a todos os dispositivos inscritos em uma tag específica. Cada dispositivo pode ser inscrito em qualquer número de tags. Esta seção
+descreve como enviar notificações baseadas em tag. As assinaturas são mantidas pela instância do Bluemix do serviço {{site.data.keyword.mobilepushshort}}. Quando uma tag é excluída, todas as informações associadas a essa tag, incluindo seus assinantes e dispositivos, são excluídas. Nenhum cancelamento de
 assinatura automático é necessário para essa tag, uma vez que ela não existe mais e
 nenhuma ação adicional é necessária no lado do cliente.
 
-**Antes de começar**
+###Antes de começar
+{: before-you-begin}
 
 Crie tags na tela **Tag**. Para obter informações sobre como
 criar tags, consulte

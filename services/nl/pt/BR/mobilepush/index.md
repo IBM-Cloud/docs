@@ -1,4 +1,4 @@
----
+	---
 
 copyright:
  years: 2015, 2016
@@ -12,16 +12,12 @@ copyright:
 
 # Introdução ao {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-*Última atualização: 14 de junho de 2016*
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
 {:shortdesc}
 
-O serviço de notificações push fornece uma plataforma unificada para enviar e
-gerenciar notificações push móveis que são destinadas a plataformas iOS e Android. Esse serviço gerencia o mapeamento dos usuários de aplicativos para seus dispositivos, plataforma do
-dispositivo e manipula o despacho de notificações push para eles. Com esse serviço, é
-possível enviar transmissões, unicasts, (com base no deviceID) e também notificações push
-de tags (ou tópicos) para seus usuários de aplicativo móvel. É possível também usar um
+O serviço {{site.data.keyword.mobilepushshort}} fornece uma plataforma unificada para enviar e gerenciar {{site.data.keyword.mobilepushshort}} móveis destinados a plataformas iOS e Android. O serviço {{site.data.keyword.mobilepushshort}} gerencia o mapeamento dos usuários de seu aplicativo para seus dispositivos, plataforma do dispositivo e manipula o despacho de notificações push para eles. Com esse serviço, é possível enviar transmissões, unicasts (com base no deviceID) e também tags (ou tópicos) como notificações push para usuários de seu aplicativo móvel. É possível também usar um
 SDK e [APIs REST](https://mobile.{DomainName}/imfpushrestapidocs/) para
 desenvolver melhor seus aplicativos cliente.
 

@@ -7,12 +7,12 @@ copyright:
 
 # Usando APIs REST
 {: #push-api-rest}
-*Última atualização: 12 de julho de 2016*
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
-É possível usar uma API (interface de programação de aplicativo) REST (Representational State Transfer) para notificações push. É possível também usar o SDK e a [API Push](https://mobile.{DomainName}/imfpushrestapidocs/) para desenvolver melhor seus aplicativos cliente.
+É possível usar uma API (interface de programação de aplicativos) REST (Representational State Transfer) para {{site.data.keyword.mobilepushshort}}. É possível também usar o SDK e a [API Push](https://mobile.{DomainName}/imfpushrestapidocs/) para desenvolver melhor seus aplicativos cliente.
 
-Com a API REST Push, aplicativos do servidor backend e clientes podem acessar funções Push.
+Com a API REST de Push, aplicativos do servidor de backend e clientes podem acessar funções {{site.data.keyword.mobilepushshort}}.
 
 - Registros de dispositivo
 - Registros
@@ -20,14 +20,19 @@ Com a API REST Push, aplicativos do servidor backend e clientes podem acessar fu
 - Subscriptions
 - Marcações
 
-Para obter a URL base para a API REST:
+Para obter a URL base para a API REST, conclua as etapas:
 
-1. Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos que ligará automaticamente o serviço de Push a esse aplicativo. Se também já tiver criado um app backend, certifique-se de ligar o app ao Push Notification Service. 
+1. Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos escolhendo o MobileFirst Services Starter. Isso liga o serviço {{site.data.keyword.mobilepushshort}} ao aplicativo. Também é possível criar uma instância de serviço de Push e deixá-la sem limites. 
+1. Na página principal do painel Bluemix, acesse a área **Aplicativos** e, em seguida, selecione seu app.
+3. Clique em **OPÇÕES MÓVEIS**. Os valores de rota e GUID do app são exibidos no início da página de detalhes do app. A tela Mostrar credenciais mostra informações sobre o AppSecret. É possível obter o segredo do aplicativo em Opções móveis e também o segredo do cliente para algumas das APIs.
 
-1. Na página principal do painel Bluemix, acesse a área **Aplicativos** e depois clique em seu app.
+Também é possível usar a linha de comandos para obter as credenciais de serviço:
 
-3. Clique em OPÇÕES MÓVEIS. Os valores rota e GUID do app são exibidos na parte superior da página de detalhes do app.
+```
+ cf create-service-key {push_instance_name} {key_name}
 
+ cf service-key {push_instance_name} {key_name}
+```
 
 
 ## Aceitar cabeçalho do idioma
@@ -39,9 +44,9 @@ REST de Push](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}. Os
 ## appSecret
 {: #push-api-rest-secret}
 
-Quando um aplicativo é ligado ao Push Notifications, o serviço gera um appSecret (uma chave exclusiva) e o transmite no cabeçalho de resposta. Se você estiver usando a API REST do IBM® Push Notifications for Bluemix, use a referência da API REST para obter informações sobre quais APIs precisa proteger. Para obter informações sobre a API REST, consulte a Referência de API REST.
+Quando um aplicativo é ligado ao {{site.data.keyword.mobilepushshort}}, o serviço gera um appSecret (uma chave exclusiva) e passa-o no cabeçalho de resposta. Se você estiver usando a API Rest do IBM® {{site.data.keyword.mobilepushshort}} for Bluemix, use a referência da API REST para obter informações sobre quais APIs você precisa assegurar. Para obter informações sobre a API REST, consulte a Referência de API REST.
 
-O cabeçalho da solicitação deve conter o appSecret. Caso contrário, o servidor retornará um código de erro 401 Desautorizado. Quando o Push Notification é incluído em um aplicativo, um AppID específico é criado. Como parte da resposta, você obtém um cabeçalho chamado appSecret que é usado para criar tags ou enviar mensagens. A operação acontece por meio de serviços no catálogo ou do modelo.
+O cabeçalho da solicitação deve conter o appSecret. Caso contrário, o servidor retornará um código de erro 401 Desautorizado. Quando o {{site.data.keyword.mobilepushshort}} é incluído em um aplicativo, um AppID específico é criado. Como parte da resposta, você obtém um cabeçalho chamado appSecret que é usado para criar tags ou enviar mensagens. A operação acontece por meio de serviços no catálogo ou do modelo.
 
 Para obter o valor appSecret:
 
@@ -70,7 +75,9 @@ A tela **Mostrar credenciais** mostra informações sobre o AppSecret:
 ##Filtros de API REST de Push
 {: #push-api-rest-filters}
 
-Filtros definem um critério de procura que restringe os dados retornados de uma API GET de Push. Aplique os filtros no resultado da operação Get que deseja filtrar. O filtro restringe o número de entradas incluídas no resultado. Por exemplo, é possível usar um filtro para procurar uma tag cujo nome seja iniciado com "test". É possível gerar um filtro usando a sintaxe a seguir.
+Filtros definem um critério de procura que restringe os dados retornados de uma API GET de {{site.data.keyword.mobilepushshort}}. Aplique os filtros no resultado da operação Get que deseja filtrar. O filtro restringe o número de entradas incluídas no resultado. Por exemplo, é possível usar um filtro para procurar tags iniciadas com "test". 
+
+É possível gerar filtros usando a sintaxe a seguir:
 
 **nome** O nome do campo ao qual o filtro está sendo aplicado.
 
@@ -80,7 +87,7 @@ Filtros definem um critério de procura que restringe os dados retornados de uma
 
 Quando uma vírgula e uma barra invertida são exibidas em uma expressão, elas devem ser escapadas com barra invertida.
 
-Ao usar vários filtros, eles podem ser combinados usando a lógica AND e OR.\
+Ao usar múltiplos filtros, eles podem ser combinados usando as lógicas AND e OR.
 
 - Para a lógica AND, use vários filtros na consulta.
 - Para a lógica OR, use uma vírgula (,) dentro da expressão de filtro.
@@ -103,7 +110,7 @@ Para a API GET da assinatura, as combinações a seguir são suportadas:
 - Se == for usado, o valor deverá ser uma sequência correspondente exata.
 
 
-##Códigos de resposta de notificações push
+##Códigos de resposta do {{site.data.keyword.mobilepushshort}}
 {: #push-api-response-codes}
 
 Status: 405 Método não permitido - Método apropriado esperado.

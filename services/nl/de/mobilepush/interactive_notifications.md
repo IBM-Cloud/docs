@@ -7,7 +7,7 @@ copyright:
 
 # Interaktive Benachrichtigungen
 {: #interactive-notifications}
-*Letzte Aktualisierung: 14. Juni 2016*
+Letzte Aktualisierung: 16. August 2016
 {: .last-updated}
 
 Interaktive Benachrichtigungen ermöglichen es Benutzern, beim Eingang einer Benachrichtigung zu reagieren, ohne dass die Anwendung geöffnet werden muss. Wenn eine interaktive Benachrichtigung eingeht, zeigt das Gerät die Aktionsschaltflächen zusammen mit der Benachrichtigung an. Interaktive Benachrichtigungen werden für iOS-Geräte mit Version 8 oder einer neueren Version unterstützt. Wenn eine interaktive Benachrichtigung an iOS-Geräte gesendet wird, die mit einer älteren Version als Version 8 ausgeführt werden, werden die Benachrichtigungsaktionen nicht angezeigt.
@@ -19,14 +19,18 @@ Interaktive Benachrichtigungen können über das Push-Dashboard oder mithilfe de
 
 Über die Push-Konsole: 
 
-Klicken Sie auf der Registerkarte 'Benachrichtigungen' im Push-Dashboard auf 'Benachrichtigung senden'. Wählen Sie die Benachrichtigungsempfänger aus und klicken Sie auf 'Weiter'. Auf der Seite für die Benachrichtigungserstellung können Sie beim Senden von interaktiven Push-Benachrichtigungen der Typ 'Standard' oder 'Gemischt' festlegen und den Kategoriewert auf der Registerkarte mit den erweiterten Optionen angeben. Informationen zum Konfigurieren des Kategoriewerts auf dem Client finden Sie im Abschnitt zur Verarbeitung interaktiver Push-Benachrichtigungen in nativen iOS-Anwendungen.
 
-## Interaktive Push-Benachrichtigungen in einer iOS-Anwendung verarbeiten
 
-Sie müssen die folgenden Schritte ausführen, um interaktive Benachrichtigungen zu erhalten:
+1. Klicken Sie auf der Registerkarte 'Benachrichtigungen' im Push-Dashboard auf **Benachrichtigung senden**.  
+2. Wählen Sie die Benachrichtigungsempfänger aus und klicken Sie auf **Weiter**.  
+3. Auf der Seite für die Benachrichtigungserstellung können Sie beim Senden von interaktiven Push-Benachrichtigungen den Typ 'Standard' oder 'Gemischt' festlegen und auf der Registerkarte mit den erweiterten Optionen den Kategoriewert angeben. Informationen zum Konfigurieren des Kategoriewerts auf dem Client finden Sie im Abschnitt zur Verarbeitung interaktiver Push-Benachrichtigungen in nativen iOS-Anwendungen. 
+
+## Interaktive Push-Benachrichtigungen in einer iOS-Anwendung verarbeiten 
+
+Führen Sie die folgenden Schritte aus, um interaktive Benachrichtigungen zu erhalten: 
 
 1. Aktivieren Sie die Anwendungsfunktion zum Durchführen von Hintergrundtasks beim Empfang der fernen Benachrichtigungen. Dieser Schritt ist erforderlich, wenn einige der Aktionen für die Hintergrundverarbeitung aktiviert sind.
-1. Legen Sie in `AppDelegate (application: didRegisterForRemoteNotificationsWithDeviceTokenapplication:)` die Kategorien fest, bevor Sie `deviceToken` für `WLPush Object` festlegen.
+1. Legen Sie in 'AppDelegate' (application: didRegisterForRemoteNotificationsWithDeviceTokenapplication:) die Kategorien fest, bevor Sie `deviceToken` für `WLPush Object` festlegen. 
 
 ```
 	if([application respondsToSelector:@selector(registerUserNotificationSettings:)]){

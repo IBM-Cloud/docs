@@ -8,7 +8,7 @@ copyright:
 {:new_window: target="_blank"}
 # Notificações baseadas em tag 
 {: #push-ios-main-tags}
-*Última atualização: 14 de junho de 2016*
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
 Mensagens de notificação baseadas em tag se destinam a todos os dispositivos inscritos em uma tag específica. É possível

@@ -1,4 +1,4 @@
----
+	---
 
 copyright:
  years: 2015, 2016
@@ -12,12 +12,12 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} 入門
 {: #gettingstartedtemplate}
-*最終更新日: 2016 年 6 月 14 日*
+最終更新日: 2016 年 8 月 16 日
 {: .last-updated}
 
 {:shortdesc}
 
-プッシュ通知サービスは、iOS プラットフォームおよび Android プラットフォームをターゲットとするモバイル・プッシュ通知を送信および管理するための統一プラットフォームを提供します。このサービスは、デバイスおよびデバイス・プラットフォームへのアプリケーション・ユーザーのマッピングを管理し、それらへのプッシュ通知のディスパッチを処理します。このサービスを使用して、モバイル・アプリケーション・ユーザーにブロードキャスト、ユニキャスト (deviceID に基づく) に加え、タグ (またはトピック) ベースのプッシュ通知も送信できます。また、クライアント・アプリケーションをさらに開発するために SDK および [REST API](https://mobile.{DomainName}/imfpushrestapidocs/) を使用することもできます。
+{{site.data.keyword.mobilepushshort}}サービスは、iOS プラットフォームおよび Android プラットフォームをターゲットとするモバイル・{{site.data.keyword.mobilepushshort}}を送信および管理するための統一プラットフォームを提供します。{{site.data.keyword.mobilepushshort}}サービスは、デバイスおよびデバイス・プラットフォームへのアプリケーション・ユーザーのマッピングを管理し、それらへのプッシュ通知のディスパッチを処理します。このサービスを使用して、モバイル・アプリケーション・ユーザーにブロードキャスト、ユニキャスト (deviceID に基づく) に加え、タグ (またはトピック) をプッシュ通知として送信できます。また、クライアント・アプリケーションをさらに開発するために SDK および [REST API](https://mobile.{DomainName}/imfpushrestapidocs/) を使用することもできます。
 
 このセクションでは、基本のプッシュ通知のセットアップ方法を説明します。基本通知を使用すると、通知は、タグを使用して特定のユーザー集合に届くのではなく、ブロードキャストされます。
 
@@ -31,7 +31,8 @@ copyright:
 
 * [概要](c_overview_push.md){: new_window}
 
-## チュートリアルおよびサンプル{:id="samples"}
+## チュートリアルおよびサンプル
+{:id="samples"}
 {: #samples}
 * [Android helloPush サンプル・アプリケーション](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/){: new_window}
 - [Cordova サンプル・アプリケーション](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush){: new_window}
