@@ -89,9 +89,9 @@ navtitle="Suscripción y cancelación de la suscripción a las etiquetas" scope=
 navtitle="Utilización de notificaciones basadas en etiquetas" scope="peer"/>
 </topicref>
 <topicref href="c_user_basednotifications.html" format="html"
-navtitle="Habilitación de notificaciones basadas en usuarios" scope="peer" chunk="to-content" linking="normal"
+navtitle="Habilitación de notificaciones basadas en usuarios " scope="peer" chunk="to-content" linking="normal"
 outputclass="subsection">
-<topicref href="t_manage_user.html" format="html" navtitle="Dispositivo de registro con ID de usuario"
+<topicref href="t_manage_user.html" format="html" navtitle="Dispositivo de registro con ID de usuario "
 scope="peer" linking="normal" outputclass="subsection"/>
 </topicref>
 <topicref href="t_advance_badge_sound_payload.html" outputclass="subsection" chunk="to-content"

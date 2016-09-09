@@ -1,4 +1,4 @@
----
+	---
 
 copyright:
  years: 2015, 2016
@@ -12,13 +12,13 @@ copyright:
 
 # Iniciación a {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-*Última actualización: 14 de junio de 2016*
+Última actualización: 16 de agosto de 2016
 {: .last-updated}
 
 {:shortdesc}
 
-El servicio de Notificaciones push proporciona una plataforma unificada para enviar y gestionar notificaciones push móviles que están pensadas para plataformas iOS y Android. Este servicio gestiona la correlación de los usuarios de la aplicación a sus dispositivos, plataforma de dispositivo,
-        y maneja el envío de notificaciones push a los mismos. Con este servicio, puede enviar difusiones, unicasts (en función del ID de dispositivo) y también notificaciones push (o temas) de etiquetas a los usuarios de la aplicación móvil. También puede utilizar las [API REST](https://mobile.{DomainName}/imfpushrestapidocs/) y SDK para desarrollar más las aplicaciones de cliente.
+El servicio {{site.data.keyword.mobilepushshort}} proporciona una plataforma unificada para enviar y gestionar {{site.data.keyword.mobilepushshort}} móviles que están pensadas para plataformas iOS y Android.
+       El servicio {{site.data.keyword.mobilepushshort}} gestiona la correlación de los usuarios de la aplicación a sus dispositivos y a la plataforma de dispositivo y maneja el envío de notificaciones push a estos. Con este servicio puede enviar difusiones, unicasts (en función del ID de dispositivo) y también etiquetas (o temas) como notificaciones push a los usuarios de la aplicación móvil. También puede utilizar las [API REST](https://mobile.{DomainName}/imfpushrestapidocs/) y SDK para desarrollar más las aplicaciones de cliente.
 
 En esta sección se describe cómo configurar notificaciones push básicas. Al utilizar
       una notificación básica, las notificaciones se difunden en lugar de llegar a un conjunto específico

@@ -9,7 +9,7 @@ copyright:
 
 
 #Abilitazione delle notifiche di push avanzate
-*Ultimo aggiornamento: 14 giugno 2016*
+Ultimo aggiornamento: 16 agosto 2016
 {: .last-updated}
 
 Configura un badge iOS, audio, payload JSON aggiuntivo, notifiche operative e notifiche messe in pausa.
@@ -19,9 +19,8 @@ Configura un badge iOS, audio, payload JSON aggiuntivo, notifiche operative e no
 
 Configura un badge, l'audio e del payload JSON aggiuntivo iOS.
 
-1. Nel dashboard Push Notifications, vai alla scheda **Notifications**.
-2. Vai alla sezione **Optional Fields** per configurare le seguenti funzioni di notifica di
-                    push. 
+1. Nel dashboard {{site.data.keyword.mobilepushshort}}, vai alla scheda **Notifications**.
+2. Vai alla sezione **Optional Fields** per configurare le funzioni di {{site.data.keyword.mobilepushshort}}. 
 	- **Sound File** - immetti una stringa per puntare al file audio nella tua applicazione mobile. Nel payload, specifica
                             il nome stringa del file audio da utilizzare.
 	- **iOS Badge** - per i dispositivi iOS, il numero da visualizzare come badge dell'icona
@@ -34,7 +33,7 @@ Configura un badge, l'audio e del payload JSON aggiuntivo iOS.
 
 ###Android
 
-Aggiungi il file audio nella directory `res/raw` della tua applicazione android. Mentre invii le notifiche aggiungi il nome del file audio nel campo audio della notifica push.
+Aggiungi il file audio nella directory `res/raw` della tua applicazione android. Mentre invii le notifiche aggiungi il nome del file audio nel campo audio di {{site.data.keyword.mobilepushshort}}.
 
 ```
 "settings": {
@@ -55,8 +54,7 @@ Aggiungi il file audio nella directory `res/raw` della tua applicazione android.
 	  }
 }
 ``` 		
-**Payload aggiuntivo** - questo payload può essere qualsiasi coppia chiave-valore e deve essere un
-                            oggetto JSON che vuoi inviare con la notifica di push.
+**Additional Payload** - This payload can be any key-value pair and must be a JSON object that you want to send with th**Additional Payload** - questo payload può essere qualsiasi coppia chiave-valore e deve essere un oggetto JSON che vuoi inviare con {{site.data.keyword.mobilepushshort}}.
 
 ```
 {"chiave":"valore", "chiave2":"valore2"}
@@ -66,7 +64,7 @@ Aggiungi il file audio nella directory `res/raw` della tua applicazione android.
 ## Messa in pausa delle notifiche Android 
 {: #hold-notifications-android}
 
-Quando la tua applicazione va in background, probabilmente vuoi che push metta in pausa le notifiche inviate alla tua applicazione. Per mettere in pausa le notifiche, richiama il metodo hold() nel metodo onPause() dell'attività che sta gestendo le notifiche di push.
+Quando la tua applicazione va in background, probabilmente vuoi che {{site.data.keyword.mobilepushshort}} metta in pausa le notifiche inviate alla tua applicazione. Per mettere in pausa le notifiche, richiama il metodo hold() nel metodo onPause() dell'attività che sta gestendo {{site.data.keyword.mobilepushshort}}.
 
 ```
 @Override
@@ -82,10 +80,9 @@ protected void onPause() {
 ## Abilitazione di notifiche operative iOS  
 {: #enable-actionable-notifications-ios}
 
-A differenza delle notifiche di push tradizionali, le notifiche operative
-richiedono agli utenti di effettuare una selezione al momento della ricezione dell'avviso di notifica
-senza aprire l'applicazione. Utilizza le seguenti istruzioni
-per abilitare le notifiche di push operative nella tua applicazione.
+A differenza di {{site.data.keyword.mobilepushshort}} tradizionale,  le notifiche operative richiedono agli utenti di effettuare una selezione al momento della ricezione dell'avviso di notifica senza aprire l'applicazione. 
+
+Completa la seguente procedura per abilitare {{site.data.keyword.mobilepushshort}} operativo nella tua applicazione.
 
 1. Crea un'azione di risposta utente.
 
@@ -127,7 +124,7 @@ per abilitare le notifiche di push operative nella tua applicazione.
                 **UIUserNotificationActionContextMinimal** sono
 contesti validi.
 
-	Objective-C
+Objective-C
 
 	```
 	// Per Objective-C
@@ -136,7 +133,7 @@ contesti validi.
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
 	```    
 
-	Swift
+Swift
 
 	```
 	// Per Swift
@@ -145,17 +142,16 @@ contesti validi.
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
 	```
 
-1. Crea l'impostazione di notifica e assegna le categorie
-dal passo precedente.
+1. Crea l'impostazione di notifica e assegna le categorie dal passo precedente. 
 
-	Objective-C
+Objective-C
 
 	```
 	// Per Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
 	```
 
-	Swift
+Swift
 
 	```
 	// Per Swift
@@ -165,7 +161,7 @@ dal passo precedente.
 1. Crea la notifica locale o remota e assegnale
 l'identità della categoria.
 
-	Objective-C
+Objective-C
 
 	```
 	//Per Objective-C
@@ -175,7 +171,7 @@ l'identità della categoria.
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
 
-	Swift
+Swift
 
 	```
 	//Per Swift

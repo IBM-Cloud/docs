@@ -6,101 +6,117 @@ copyright:
 ---
 
 
-# Dispositivo de registro con UserId
+# Dispositivo de registro con ID de usuario
 {: #register_device_with_userId}
-*Última actualización: 20 de julio de 2016*
+Última actualización: 16 de agosto de 2016
 {: .last-updated}
 
 Para registrarse para la notificación basada en el ID de usuario, complete los pasos siguientes:
 
 ## Android
+{: android-register}
  
-Inicialice la clase IMFPush con la clave `pushTenantId` y `clientSecret` del servicio Notificación push.
+Inicialice la clase MFPPush con las claves `AppGUID` y `clientSecret` del servicio {{site.data.keyword.mobilepushshort}}.
 
 ```
-// Inicialice el MFPPush
+// Initialize the MFPPush
 push = MFPPush.getInstance();
-push.initializeBluemixPushWithClientSecret(getApplicationContext(),"clientSecret");
+push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 ```
 
-**clientSecret** 
+####AppGUID
+{: push-app-guid}
 
-Esta es la clave clientSecret del servicio de Notificaciones push.
+Esta es la clave AppGUID del servicio {{site.data.keyword.mobilepushshort}}.
 
+####clientSecret
+{: android-client-secret}
 
-Utilice la API de **registerWithUserId** para registrar el dispositivo para notificaciones push.
+Esta es la clave clientSecret del servicio {{site.data.keyword.mobilepushshort}}.
+
+Utilice la API **registerDeviceWithUserId** para registrar el dispositivo para {{site.data.keyword.mobilepushshort}}.
 
 ```
-// Registre el dispositivo para enviar por push el servicio de notificaciones.
-push.registerWithUserId("userId",new MFPPushResponseListener<String>() {
+// Register the device to {{site.data.keyword.mobilepushshort}}.
+push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
     @Override
 	    public void onSuccess(String deviceId) {
-        updateTextView("Device is registered with Push Service.");
-        displayTags();
+        Log.d("Device is registered with Push Service.");
     }
 
     @Override
     public void onFailure(MFPPushException ex) {
-        updateTextView("Error registering with Push Service...\n"
+        Log.d("Error registering with Push Service...\n"
         + "Push notifications will not be received.");
     }
 });
 ```
 
-**userId** 
+####userId
+{: android-user-id}
 
-Pase el valor ID de usuario exclusivo para registrarse para notificaciones push.
+Pase el valor ID de usuario exclusivo para registrarse para {{site.data.keyword.mobilepushshort}}.
 
->**Nota:** Para habilitar las notificaciones push objetivo de UserId, asegúrese de que registra el dispositivo con un UserId y que también pasa el 'clientSecret' que está asignado cuando se suministran los servicios Notificaciones push. Si no pasa un clientSecret válido, fallará el registro del dispositivo.
+**Nota:** Para habilitar las {{site.data.keyword.mobilepushshort}} objetivo de UserId, asegúrese de que registra el dispositivo con un UserId y que también pasa el 'clientSecret' que está asignado cuando se suministran los servicios {{site.data.keyword.mobilepushshort}}. Si no pasa un clientSecret válido, fallará el registro del dispositivo.
 
 
 ## Cordova
+{: cordova-register}
 
-Copie el siguiente fragmento de código a la aplicación móvil para registrarse para notificaciones basadas en el ID de usuario.
+Copie el siguiente fragmento de código en la aplicación móvil para registrarse para notificaciones basadas en userId.
 
 Inicialice `MFPPush` con `clientsecret`. 
 
 ```
-MFPPush.initializeBluemixPushWithClientSecret("clientSecret");
+MFPPush.initialize("appGUID", "clientSecret");
 ```
 
-**clientSecret** 
+###appGUID 
+{: cordova-pushappguid}
 
-Esta es la clave clientSecret del servicio de Notificaciones push.
+Esta es la clave AppGUID del servicio {{site.data.keyword.mobilepushshort}}. 
+
+####clientSecret 
+{: cordova-client-secret}
+
+Esta es la clave clientSecret del servicio {{site.data.keyword.mobilepushshort}}.
 
 ```
-//Regístrese para la Notificación push con userId
+//Register for {{site.data.keyword.mobilepushshort}} with userId
 var userId = "userId";
-MFPPush.registerWithUserId(userId,success,failure);
+MFPPush.registerDevice({},success,failure,userId); 
 ```
-**userId** 
+####userId
+{: cordova-user-id}
 
-Pase el valor ID de usuario exclusivo para registrarse para el servicio de Notificación push.
+Pase el valor ID de usuario exclusivo para registrarse para el servicio {{site.data.keyword.mobilepushshort}}.
 
 
 ## Objective-C
+{: objc-register}
 
-
-Utilice las siguientes API para registrarse para las notificaciones push basadas en el ID de usuario.
-
+Utilice las siguientes API para registrarse para las {{site.data.keyword.mobilepushshort}} basadas en UserId.
 
 ```
-// Inicialice el MFPPush
+// Initialize the MFPPush
 IMFPushClient* push = [IMFPushClient sharedInstance];
-[push initializeBluemixPushWithClientSecret:@"clientSecret"];
+[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"]; 
 ```
+###AppGUID 
+{: objc-pushappguid}
 
-**clientSecret** 
+Esta es la clave AppGUID del servicio {{site.data.keyword.mobilepushshort}}.
 
-Esta es la clave clientSecret del servicio de Notificaciones push.
+####clientSecret
+{: objc-client-secret}
 
+Esta es la clave clientSecret del servicio {{site.data.keyword.mobilepushshort}}.
 
-Utilice la API de **registerWithUserId** para registrar el dispositivo para notificaciones push.
-
+Utilice la API **registerWithUserId** para registrar el dispositivo para {{site.data.keyword.mobilepushshort}}.
 
 ```
 // Registre el dispositivo para enviar por push el servicio de notificaciones.
-[push registerDeviceToken:deviceToken WithUserId:@"userId" completionHandler:^(IMFResponse *response, NSError *error) {
+[push registerWithDeviceToken:deviceToken WithUserId:@"userId" completionHandler:^(IMFResponse *response, NSError *error) {
     NSString *message=@"";
     
 	if (error){
@@ -114,27 +130,34 @@ Utilice la API de **registerWithUserId** para registrar el dispositivo para noti
 ```
 
 
-**userId** 
+####userId 
+{: objc-user-id}
 
-Pase el valor ID de usuario exclusivo para registrarse para notificaciones push.
+Pase el valor ID de usuario exclusivo para registrarse para {{site.data.keyword.mobilepushshort}}.
 
 ## Swift
+{: swift-register}
 
 ```
-// Inicialice el BMSPushCliet
+// Initialize the BMSPushClient
 let push =  BMSPushClient.sharedInstance
-push.initializeBluemixPushWithClientSecret("clientSecret")
+push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 ```
 
-**clientSecret** 
+####AppGUID 
+{: swift-pushappguid}
+Esta es la clave AppGUID del servicio {{site.data.keyword.mobilepushshort}}.
 
-Esta es la clave clientSecret del servicio de Notificaciones push.
+####clientSecret
+{: swift-client-secret} 
 
-Utilice la API de **registerWithUserId** para registrar el dispositivo para notificaciones push.
+Esta es la clave clientSecret del servicio {{site.data.keyword.mobilepushshort}}.
+
+Utilice la API **registerWithUserId** para registrar el dispositivo para {{site.data.keyword.mobilepushshort}}.
 
 ```
 // Registre el dispositivo al servicio de Notificaciones push.
-push.registerDeviceToken("deviceToken", WithUserId: "userId")  { (response, statusCode, error) -> Void in
+push.registerWithDeviceToken("deviceToken", WithUserId: "userId")  { (response, statusCode, error) -> Void in
 if error.isEmpty {
 
     print( "Response during device registration : \(response)")
@@ -148,9 +171,10 @@ if error.isEmpty {
 }
 ```
 
-**userId** 
+####userId 
+{: swift-user-id}
 
-Pase el valor ID de usuario exclusivo para registrarse para notificaciones push.
+Pase el valor ID de usuario exclusivo para registrarse para {{site.data.keyword.mobilepushshort}}.
 
 
 # Uso de notificaciones basadas en el ID de usuario
@@ -162,6 +186,6 @@ Las notificaciones basadas en el ID de usuario son mensajes de notificación que
 1. Desde el panel de control de **Notificación Push**, pulse el separador
       **Notificaciones**.
 1. Seleccione la opción **UserId** para enviar notificaciones basadas en userId.
-1. En el campo **Búsqueda** de UserId, busque el userid que desee utilizar y, a continuación, pulse el botón **+Añadir**.![Pantalla de notificaciones](images/tag_notification.jpg)
+1. En el campo **Búsqueda** de UserId, busque el userid que desee utilizar y, a continuación, pulse el botón **+Añadir**.![Pantalla de notificaciones](images/user_notification.jpg)
 1. En el campo **Texto del mensaje**, especifique texto que desee enviar en la notificación.
 1. Pulse el botón **Enviar**.
