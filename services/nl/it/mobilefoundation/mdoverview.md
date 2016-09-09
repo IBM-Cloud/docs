@@ -8,12 +8,12 @@ copyright:
 #	Informazioni su {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
 
-*Ultimo aggiornamento: 20 luglio 2016*
+Ultimo aggiornamento: 03 agosto 2016
 {: .last-updated}
 
-Il servizio {{site.data.keyword.mobilefoundation_short}} fornisce un modo per impostare rapidamente un ambiente {{site.data.keyword.mobilefirst}} Server su{{site.data.keyword.Bluemix}}. Puoi quindi sviluppare, testare e gestire applicazioni mobili da questo solido ambiente cloud.
+Il servizio {{site.data.keyword.mobilefoundation_short}} fornisce un modo per impostare rapidamente un ambiente {{site.data.keyword.mobilefirst}} Server su{{site.data.keyword.Bluemix}}. Puoi quindi sviluppare, testare e gestire applicazioni mobili da questo ambiente cloud. 
 
-{{site.data.keyword.mobilefoundation_short}} fornisce agli utenti un modo facile e guidato per impostare {{site.data.keyword.mfserver_short_notm}} nell'ambiente {{site.data.keyword.containerlong}} su {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.mobilefoundation_short}} fornisce agli utenti un modo facile e guidato per impostare l'ambiente {{site.data.keyword.mfserver_short_notm}} <!--in the {{site.data.keyword.containerlong}} --> su {{site.data.keyword.Bluemix_notm}}.
 
 {{site.data.keyword.mobilefoundation_short}} è costituito dai seguenti componenti:
 
@@ -39,7 +39,7 @@ Con {{site.data.keyword.mobilefoundation_short}}, puoi eseguire le seguenti funz
 
 Puoi utilizzare la CLI ({{site.data.keyword.mfp_cli_long_notm}}) con {{site.data.keyword.mobilefoundation_short}} per creare e gestire facilmente le applicazioni.
 
-Il servizio {{site.data.keyword.mobilefoundation_short}} fornisce un contenitore nel tuo spazio in {{site.data.keyword.Bluemix_notm}}. Puoi visualizzare i dettagli del contenitore creato, visualizzarne le prestazioni e accedere ai log del server dal tuo dashboard {{site.data.keyword.Bluemix_notm}}.
+<!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
 ## Come ottenere aiuto e supporto per {{site.data.keyword.mobilefoundation_short}}
 {: #getting_help_mobilefoundation}
