@@ -8,8 +8,8 @@ copyright:
 
 # Criando projetos móveis a partir do Painel móvel
 {: #mobile}
-*Última atualização: 18 de julho de 2016*
-{: .last-updated}
+Última atualização: 21 de julho de 2016
+{: .last-updated} 
 
 Com os Serviços móveis do {{site.data.keyword.Bluemix}}, é possível incorporar serviços de nuvem pré-construídos, gerenciados e escaláveis em seus aplicativos móveis sem depender do envolvimento da TI. Você pode focar na construção dos seus apps móveis em vez de nas complexidades de gerenciamento da infraestrutura de backend.
 
@@ -30,28 +30,28 @@ A tabela a seguir representa os Serviços móveis do {{site.data.keyword.Bluemix
 <th>Serviço móvel do {{site.data.keyword.Bluemix_notm}}</th>
 <th>Descrição</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icon"><br/><b>{{site.data.keyword.mobileanalytics_short}} (Experimental)</b></td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icon"><br/>{{site.data.keyword.mobileanalytics_short}} (Experimental)</td>
 <td valign="top">Use o serviço {{site.data.keyword.mobileanalytics_full}} para medir o estado, comportamento e contexto dos seus aplicativos móveis, usuários móveis e dispositivos móveis.<br/><br/>
 Leia mais sobre operar esse serviço na documentação do <a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} documentation link">{{site.data.keyword.mobileanalytics_short}}</a>.
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}}ícone de serviço"><br/><b>{{site.data.keyword.amashort}}</b></td>
+<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}}ícone de serviço"><br/>{{site.data.keyword.amashort}}</td>
 <td valign="top">Use o serviço {{site.data.keyword.amafull}} para incluir a funcionalidade de segurança em seu aplicativo móvel. É possível configurar a autenticação de cliente e os provedores de identidade para que os usuários possam efetuar login no aplicativo com suas contas Google ou Facebook existentes.<br/><br/>
 Leia mais sobre operar esse serviço na documentação <a href="../services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} documentation link">{{site.data.keyword.amashort}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}}ícone de serviço"><br/> <b>{{site.data.keyword.mobilefoundation_short}}</b></td>
+<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}}ícone de serviço"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">Use o serviço {{site.data.keyword.mobilefoundation_long}} para expedir a configuração de um ambiente {{site.data.keyword.mfp_full}} a partir do qual é possível desenvolver, testar e operar aplicativos móveis corporativos.<br/><br/> Leia mais sobre operar esse serviço na documentação
 <a href="../services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} documentation link">{{site.data.keyword.mobilefoundation_short}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}}ícone de serviço"><br/><b>{{site.data.keyword.mqa}}</b></td>
+<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}}ícone de serviço"><br/>{{site.data.keyword.mqa}}</td>
 <td valign="top">Use o serviço {{site.data.keyword.mqafull}} para descobrir e configurar serviços de qualidade móveis para seus aplicativos. É possível visualizar métricas de qualidade de alto nível para seus apps móveis para obter uma compreensão rápida dos problemas dos apps com os quais você está trabalhando. Essas métricas incluem informações sobre travamentos, erros, feedback do usuário e impressão do usuário. Ao visualizar essas informações para seus aplicativos, é possível determinar se deve investigar problemas específicos adicionalmente.<br/><br/>
 Leia mais sobre operar esse serviço na documentação <a href="../services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} documentation link">{{site.data.keyword.mqa}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="ícone de serviço das Notificações Push"><br/><b>{{site.data.keyword.mobilepushshort}}</b></td>
+<td><img src="images/catalog_icons-09.png" alt="ícone de serviço das Notificações Push"><br/>{{site.data.keyword.mobilepushshort}}</td>
 <td valign="top">Use o serviço {{site.data.keyword.mobilepushfull}} para enviar e gerenciar notificações push móveis destinadas a plataformas iOS e Android. Esse serviço gerencia o mapeamento dos usuários do aplicativo para seus dispositivos, plataforma de dispositivo e manipula o despacho de notificações push para os dispositivos. com esse serviço, é possível enviar transmissões, unicasts (com base no userID, deviceID) e tags (ou tópicos) baseados nas notificações push para seus usuários de aplicativo móvel.<br/><br/>
 Leia mais sobre operar esse serviço na documentação <a href="../services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} documentation link">{{site.data.keyword.mobilepushshort}}</a>.</td>
 </table>
@@ -88,7 +88,7 @@ Para integrar o serviço existente do {{site.data.keyword.cloudant}}, siga estas
 4. Clique em **API** e copie o valor de **Chave API** por meio do nome do banco de dados.
 
    **Nota**: não copie o conteúdo depois do nome do banco de dados.
-
+   
 5. Clique em **Permissões** >
 **Gerar chave API** e copie os valores de
 **Chave** e **Senha**.
@@ -127,7 +127,8 @@ dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashb
 Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Postagem do blog: Bluemix
 Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
+ 
 ## Tutoriais e amostras
 {: #samples}
 * [Backend móvel para Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+

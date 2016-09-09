@@ -9,7 +9,7 @@ copyright:
 
 # Einführung in das Beispiel 'Hello Bluemix for Cordova'
 {: #gettingstarted-cordova}
-*Letzte Aktualisierung: 27. Mai 2016*
+Letzte Aktualisierung: 27. Mai 2016
 {: .last-updated}
 
 Wenn Sie mit einer neuen Cordova-Anwendung arbeiten möchten, können Sie die App 'HelloWorld' verwenden. Mit dieser App wird demonstriert, wie Sie ohne Authentifizierung eine Verbindung von einer mobilen App zu Ihrem mobilen Back-End unter {{site.data.keyword.Bluemix}} herstellen können. Für die App ist das SDK bereits installiert. Wenn Sie bereit sind, können Sie die spezifischen Bibliotheken abrufen, die Sie in Ihrer App verwenden möchten.
@@ -69,7 +69,7 @@ Wenn Sie mit einer neuen Cordova-Anwendung arbeiten möchten, können Sie die Ap
 
 	1. Verwenden Sie die neueste Version von Xcode, um Ihre Datei `xcode.proj` im Verzeichnis *&lt;App-Name&gt;*/platforms/ios zu öffnen.
 
-		**Wichtig:** Wenn Sie die Nachricht "Convert to Latest Swift Syntax" erhalten, klicken Sie auf **Abbrechen**.
+		**Wichtig:** Wenn Sie eine Nachricht erhalten, in der Sie dazu aufgefordert werden, eine Konvertierung in die neueste Swift-Syntax durchzuführen, klicken Sie auf **Abbrechen**.
 
 	2. Navigieren Sie zu **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** und fügen Sie den folgenden Pfad hinzu:
 
@@ -121,7 +121,7 @@ Es wird eine eine Anwendung mit einer einzelnen Ansicht mit der Schaltfläche **
 Falls die Verbindung fehlschlägt, wird folgende Nachricht angezeigt:
   `Bummer. Something went wrong`
   {: screen}
-
+   
 Sie finden dort auch weitere Informationen zu dem Fehler. Sie können die folgenden Punkte prüfen, um Ihren Fehler zu beheben:
 
 - Überprüfen Sie, dass Sie die Werte für die Route und die GUID ordnungsgemäß eingefügt haben.

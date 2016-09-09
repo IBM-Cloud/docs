@@ -8,14 +8,14 @@ copyright:
 
 # Creación de proyectos móviles desde el panel de control de Mobile
 {: #mobile}
-*Última actualización: 18 de julio de 2016*
-{: .last-updated}
+Última actualización: 21 de julio de 2016
+{: .last-updated} 
 
 Con los servicios de {{site.data.keyword.Bluemix}} Mobile, puede incorporar servicios de nube integrados, gestionados y escalables a las aplicaciones móviles sin intervención de TI. Céntrese en crear sus apps para móvil en lugar de en solucionar la complejidad de gestionar la infraestructura de fondo.
 
 El panel de control de Mobile proporciona una experiencia integrada en {{site.data.keyword.Bluemix_notm}}. Puede crear nuevos proyectos móviles de forma sencilla desde dentro del panel de control. Con la vista **Proyectos**, puede gestionar todos los proyectos en un lugar. La vista **Servicios** muestra las instancias del servicio móvil existentes.
 
-Para ver el panel de control de Mobile, pulse la categoría **Mobile** desde el inicio de {{site.data.keyword.Bluemix_notm}}.
+Para ver el panel de control Mobile, pulse la categoría **Mobile** desde el inicio de {{site.data.keyword.Bluemix_notm}}.
 <img src="images/mobile_dashboard.jpg" alt="Inicio de {{site.data.keyword.Bluemix_notm}}">
 
 Para comenzar, pulse **Proyecto nuevo** desde la vista **Proyectos** del panel de control de Mobile.
@@ -30,28 +30,28 @@ En la tabla siguiente se describen los servicios de {{site.data.keyword.Bluemix_
 <th>Servicio de {{site.data.keyword.Bluemix_notm}} Mobile</th>
 <th>Descripción</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="Icono de {{site.data.keyword.mobileanalytics_short}}"><br/><b>{{site.data.keyword.mobileanalytics_short}} (Experimental)</b></td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icono"><br/>{{site.data.keyword.mobileanalytics_short}} (Experimental)</td>
 <td valign="top">Utilice el servicio de {{site.data.keyword.mobileanalytics_full}} para medir el estado, el comportamiento y el contexto de las aplicaciones móviles, de los usuarios móviles y de los dispositivos móviles.<br/><br/>
 Consulte más información sobre el funcionamiento de este servicio en la documentación de <a href="../services/mobileanalytics/index.html" alt="Enlace de documentación de {{site.data.keyword.mobileanalytics_short}}">{{site.data.keyword.mobileanalytics_short}}</a>.
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="Icono de servicio de {{site.data.keyword.amashort}}"><br/><b>{{site.data.keyword.amashort}}</b></td>
+<td><img src="images/catalog_icons-05.png" alt="icono del servicio {{site.data.keyword.amashort}}"><br/>{{site.data.keyword.amashort}}</td>
 <td valign="top">Utilice el servicio de {{site.data.keyword.amafull}} para añadir funcionalidad de seguridad a la aplicación móvil. Puede configurar la autenticación del cliente y los proveedores de identidad para que los usuarios puedan iniciar sesión en la app con sus cuentas existentes de Google o Facebook.<br/><br/>
 Obtenga más información sobre el funcionamiento de este servicio en la documentación de <a href="../services/mobileaccess/index.html" alt="Enlace de documentación de {{site.data.keyword.amashort}}">{{site.data.keyword.amashort}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/MFPFoundation_icon.png" alt="Icono de servicio de {{site.data.keyword.mobilefoundation_short}}"><br/> <b>{{site.data.keyword.mobilefoundation_short}}</b></td>
+<td><img src="images/MFPFoundation_icon.png" alt="icono del servicio {{site.data.keyword.mobilefoundation_short}}"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">Utilice el servicio de {{site.data.keyword.mobilefoundation_long}} para configurar de forma rápida un entorno de {{site.data.keyword.mfp_full}} desde el que puede desarrollar, probar y hacer funcionar las aplicaciones móviles empresariales.<br/><br/>
 Consulte más información sobre el funcionamiento de este servicio en la documentación de <a href="../services/mobilefoundation/index.html" alt="Enlace de documentación de {{site.data.keyword.mobilefoundation_short}}">{{site.data.keyword.mobilefoundation_short}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/mqa_icon.png" alt="Icono de servicio de {{site.data.keyword.mqa}}"><br/><b>{{site.data.keyword.mqa}}</b></td>
+<td><img src="images/mqa_icon.png" alt="icono de servicio {{site.data.keyword.mqa}}"><br/>{{site.data.keyword.mqa}}</td>
 <td valign="top">Utilice el servicio de {{site.data.keyword.mqafull}} para descubrir y configurar servicios móviles de calidad para las apps. Puede ver medidas de calidad de alto nivel para sus apps para móvil a fin de obtener una visión general de los problemas de las apps con las que trabaja. Estas medidas incluyen información sobre bloqueos, errores, comentarios de usuarios y opinión general de los usuarios. Al visualizar esta información para las apps, puede determinar si desea investigar en mayor profundidad problemas específicos.<br/><br/>
 Consulte más información sobre el funcionamiento de este servicio en la documentación de <a href="../services/MobileQualityAssurance/index.html" alt="Enlace de documentación de {{site.data.keyword.mqa}}">{{site.data.keyword.mqa}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Icono de servicio de Notificaciones push"><br/><b>{{site.data.keyword.mobilepushshort}}</b></td>
+<td><img src="images/catalog_icons-09.png" alt="Icono de servicio de Notificaciones push"><br/>{{site.data.keyword.mobilepushshort}}</td>
 <td valign="top">Utilice el servicio de {{site.data.keyword.mobilepushfull}} para enviar y gestione notificaciones push móviles que estén pensadas para las plataformas iOS y Android. Este servicio gestiona la correlación de los usuarios de aplicaciones en sus dispositivos, plataforma de dispositivos, y maneja la asignación de notificaciones push en los dispositivos. Con este servicio, puede enviar difusiones, unicasts (en función del userID, deviceID), y etiquetas (o temas) basados en notificaciones push a sus usuarios de aplicación móvil.<br/><br/>
 Consulte más información sobre el funcionamiento de este servicio en la documentación de <a href="../services/mobilepush/index.html" alt="Enlace de documentación de {{site.data.keyword.mobilepushshort}}">{{site.data.keyword.mobilepushshort}}</a>.</td>
 </table>
@@ -87,7 +87,7 @@ Para integrar el servicio existente de {{site.data.keyword.cloudant}}, siga esto
 4. Pulse **API** y copie el valor **Clave de API** en el nombre de la base de datos.
 
    **Nota**: No copie el contenido en el nombre de la base de datos.
-
+   
 5. Pulse **Permisos** > **Generar clave de API** y copie los valores **Clave** y **Contraseña**.
 6. Vuelva a la vista **Proyectos** del panel de control de Mobile.
 7. Pulse en el proyecto para editarlo.
@@ -117,7 +117,8 @@ Para integrar el servicio existente de {{site.data.keyword.cloudant}}, siga esto
 * [Publicación del blog: Introducción del panel de control de Bluemix Mobile](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
 * [Publicación del blog: Bluemix Mobile, Parte 1: Creación de una aplicación Store Catalog](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Publicación del blog: Bluemix Mobile, Parte 2: Integración de programa de fondo de Bluemix personalizado en la app Store Catalog](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
+ 
 ## Guías de aprendizaje y ejemplos
 {: #samples}
 * [Backend móvil para Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+

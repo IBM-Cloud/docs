@@ -8,8 +8,8 @@ copyright:
 
 # 「モバイル」ダッシュボードからのモバイル・プロジェクトの作成
 {: #mobile}
-*最終更新日: 2016 年 7 月 18 日*
-{: .last-updated}
+最終更新日: 2016 年 7 月 21 日
+{: .last-updated} 
 
 {{site.data.keyword.Bluemix}} モバイル・サービスを使用すると、事前構築されて管理されているスケーラブルなクラウド・サービスを、IT 関与に依存することなくモバイル・アプリケーションに組み込むことができます。バックエンド・インフラストラクチャーの管理の複雑さを意識することなく、モバイル・アプリの作成に集中することができます。
 
@@ -31,28 +31,28 @@ copyright:
 <th>{{site.data.keyword.Bluemix_notm}} モバイル・サービス</th>
 <th>説明</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}アイコン"><br/><b>{{site.data.keyword.mobileanalytics_short}} (試験的)</b></td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}アイコン"><br/>{{site.data.keyword.mobileanalytics_short}} (試験的)</td>
 <td valign="top">{{site.data.keyword.mobileanalytics_full}} サービスを使用して、モバイル・アプリ、モバイル・ユーザー、およびモバイル・デバイスの状態、動作、およびコンテキストを測定します。<br/><br/>
 このサービスの操作について詳しくは、<a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 文書リンク">{{site.data.keyword.mobileanalytics_short}} 文書</a>を参照してください。
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} サービスのアイコン"><br/><b>{{site.data.keyword.amashort}}</b></td>
+<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} サービスのアイコン"><br/>{{site.data.keyword.amashort}}</td>
 <td valign="top">{{site.data.keyword.amafull}} サービスを使用して、モバイル・アプリにセキュリティー機能を追加します。クライアント認証プロバイダーおよび ID プロバイダーを構成して、ユーザーが既存の Google アカウントまたは Facebook アカウントを使用してアプリにログインできるようにすることができます。<br/><br/>
 このサービスの操作について詳しくは、<a href="../services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} 文書リンク">{{site.data.keyword.amashort}} 文書</a>を参照してください。</td>
 </tr>
 <tr>
-<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} サービスのアイコン"><br/> <b>{{site.data.keyword.mobilefoundation_short}}</b></td>
+<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} サービスのアイコン"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">{{site.data.keyword.mobilefoundation_long}} サービスを使用して、エンタープライズ・モバイル・アプリの開発、テスト、操作を行うことのできる {{site.data.keyword.mfp_full}} 環境のセットアップを迅速に行います。<br/><br/>
 このサービスの操作について詳しくは、<a href="../services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} 文書リンク">{{site.data.keyword.mobilefoundation_short}} 文書</a>を参照してください。</td>
 </tr>
 <tr>
-<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} サービスのアイコン"><br/><b>{{site.data.keyword.mqa}}</b></td>
+<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} サービスのアイコン"><br/>{{site.data.keyword.mqa}}</td>
 <td valign="top">{{site.data.keyword.mqafull}} サービスを使用して、アプリのモバイル品質サービスをディスカバーしてセットアップします。モバイル・アプリの品質メトリックの概要を表示して、開発しているアプリの問題を素早く理解することができます。これらのメトリックには、異常終了、バグ、ユーザー・フィードバック、およびユーザー評価の情報が含まれます。アプリに関するこの情報を確認することによって、特定の問題を詳しく調査するかどうかを判別できます。<br/><br/>
 このサービスの操作について詳しくは、<a href="../services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 文書リンク">{{site.data.keyword.mqa}} 文書</a>を参照してください。</td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="プッシュ通知サービスのアイコン"><br/><b>{{site.data.keyword.mobilepushshort}}</b></td>
+<td><img src="images/catalog_icons-09.png" alt="プッシュ通知サービスのアイコン"><br/>{{site.data.keyword.mobilepushshort}}</td>
 <td valign="top">{{site.data.keyword.mobilepushfull}} サービスを使用して、iOS プラットフォームおよび Android プラットフォームをターゲットとするモバイル・プッシュ通知を送信および管理します。このサービスは、アプリケーション・ユーザーと各ユーザーのデバイスとのマッピング、およびデバイス・プラットフォームを管理し、デバイスへのプッシュ通知のディスパッチを処理します。このサービスを使用して、ブロードキャスト、ユニキャスト (ユーザー ID、デバイス ID に基づく)、およびタグ (またはトピック) をプッシュ通知に基づいてモバイル・アプリケーション・ユーザーに送信することができます。<br/><br/>
 このサービスの操作について詳しくは、<a href="../services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 文書リンク">{{site.data.keyword.mobilepushshort}} 文書</a>を参照してください。</td>
 </table>
@@ -88,7 +88,7 @@ copyright:
 4. **「API」**をクリックし、**「API キー」**の値からデータベース名までをコピーします。
 
    **注:** データベース名を超える内容をコピーしないでください。
-
+   
 5. **「許可」** > **「API キーの生成」**をクリックし、**「キー」**の値と**「パスワード」**の値をコピーします。
 6. 「モバイル」ダッシュボードの**「プロジェクト」**ビューに戻ります。
 7. 編集するためにプロジェクトをクリックします。
@@ -118,7 +118,8 @@ copyright:
 * [ブログ投稿: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
 * [ブログ投稿: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [ブログ投稿: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
+ 
 ## チュートリアルおよびサンプル
 {: #samples}
 * [Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+

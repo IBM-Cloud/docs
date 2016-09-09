@@ -10,7 +10,7 @@ copyright:
 
 # Einführung in das Beispiel 'Hello Bluemix for iOS'
 {: #gettingstarted-android}
-*Letzte Aktualisierung: 1. Juni 2016*
+Letzte Aktualisierung: 1. Juni 2016
 {: .last-updated}  
 
 Wenn Sie mit einer neuen iOS-App arbeiten möchten, können Sie die App 'Hello Bluemix' verwenden. Diese App zeigt, wie Sie ohne Authentifizierung eine Verbindung von einer mobilen App zu Ihrem {{site.data.keyword.Bluemix}}-Back-End herstellen können. Wenn Sie bereit sind, können Sie die spezifischen Bibliotheken abrufen, die Sie in Ihrer App verwenden möchten.
@@ -32,7 +32,7 @@ Wenn Sie mit einer neuen iOS-App arbeiten möchten, können Sie die App 'Hello B
 gestartet.
 
 	**Wichtig:** Ihre 'appRoute' muss das Protokoll `https` und nicht das Protokoll `http` verwenden; ansonsten kommt es möglicherweise aufgrund der Transportsicherheitseinstellungen der App zu einem Verbindungsfehler. Weitere Informationen zu diesen Einstellungen finden Sie im Blogbeitrag [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/).
-
+	
 4. Klicken Sie im Simulator auf **Ping {{site.data.keyword.Bluemix_notm}}**. Die Beispiel-App
 ruft den Berechtigungsheader vom Service 'Mobile Client Access' ab. Wenn
 der Pingbefehl erfolgreich ausgeführt wurde, wird der Text im Simulator aktualisiert.
