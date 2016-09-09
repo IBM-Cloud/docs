@@ -11,7 +11,7 @@ copyright:
 # Configurando o SDK do Android
 {: #getting-started-android}
 
-*Última atualização: 18 de julho de 2016*
+Última atualização: 02 de agosto de 2016
 {: .last-updated}
 
 Instrumente seu aplicativo Android com o {{site.data.keyword.amashort}} client SDK, inicialize o SDK e faça as solicitações para recursos protegidos e desprotegidos.
@@ -35,13 +35,13 @@ faz download automaticamente de artefatos a partir de repositórios e os disponi
 1. Abra o arquivo `build.gradle` para seu aplicativo (**não** o arquivo `build.gradle`
 do projeto).
 
-1. Localize a seção **dependências** do arquivo `build.gradle`. Inclua uma dependência de compilação para o {{site.data.keyword.amashort}} client SDK:
+1. Localize a seção **dependências** do arquivo `build.gradle`.  Inclua uma dependência de compilação para o {{site.data.keyword.amashort}} client SDK:
 
 	```Gradle
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
@@ -73,7 +73,8 @@ Inicialize o SDK transmitindo os parâmetros `context`, `applicationGUID`, `appl
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Substitua o `BMSClient.REGION_UK` pela região apropriada.
+Substitua o `BMSClient.REGION_UK` pela região apropriada.  Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de **Avatar** ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget **Conta e suporte**.
+
 ## Fazendo uma solicitação para seu aplicativo backend móvel
 {: #request}
 
@@ -84,6 +85,7 @@ backend móvel.
 seu navegador, abra esta URL: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
 <br/>O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter é
 protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada em seu navegador, porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o SDK do cliente {{site.data.keyword.amashort}}.
+
 1. Use seu aplicativo Android para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar o `BMSClient`:
 
 	```Java

@@ -8,7 +8,7 @@ copyright:
 # Protegendo recursos Node.js com o {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}
 
-*Última atualização: 15 de abril de 2016*
+Última atualização: 15 de abril de 2016
 {: .last-updated}
 
 É possível usar o {{site.data.keyword.amashort}} server SDK para proteger recursos em seu app Node.js.
@@ -18,7 +18,7 @@ copyright:
 
 * Deve-se estar familiarizado com o desenvolvimento de aplicativos Node.js no {{site.data.keyword.Bluemix_notm}}. Para obter
 informações adicionais, consulte [Criando apps com SDK para
-Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime). 
+Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime).
 * O {{site.data.keyword.amashort}} server SDK requer que seu servidor Node.js seja implementado com a estrutura `Express`. Observe
 que há outras estruturas que usam estruturas `Express`, como LoopBack. É possível usar o SDK do servidor
 {{site.data.keyword.amashort}} com qualquer uma dessas estruturas. Para obter mais informações sobre a estrutura do Express, consulte [Expressjs.com](http://expressjs.com/).

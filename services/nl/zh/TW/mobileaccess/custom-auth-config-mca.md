@@ -8,7 +8,7 @@ copyright:
 # 配置 {{site.data.keyword.amashort}} 進行自訂鑑別
 {: #custom-dash}
 
-*前次更新：2016 年 7 月 17 日*
+前次更新：2016 年 7 月 17 日
 {: .last-updated}
 
 

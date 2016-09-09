@@ -9,7 +9,7 @@ copyright:
 
 {: #custom-ios}
 
-*最終更新日: 2016 年 7 月 18 日*
+最終更新日: 2016 年 8 月 1 日
 {: .last-updated}
 
 
@@ -66,7 +66,8 @@ copyright:
 
 1. {{site.data.keyword.amashort}} Client SDK を初期化し、許可マネージャーを MCAAuthorizationManager に変更し、認証代行を定義して登録します。`<applicationRoute>` および `<applicationGUID>` を、{{site.data.keyword.Bluemix_notm}} ダッシュボードの**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。 
 
-  `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、ダッシュボードの左上隅にある顔アイコン (![Face](/face.png "Face")) をクリックします。 
+  `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある「アバター」アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、「アカウントとサポート」ウィジェットを開きます。
+  <!--upper-left corner of the -->
 
   `<yourProtectedRealm>` には、{{site.data.keyword.amashort}} ダッシュボードの**「カスタム」**タイルで定義した**「レルム名」**を使用します。
 

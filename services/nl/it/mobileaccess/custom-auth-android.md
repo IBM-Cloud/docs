@@ -8,7 +8,7 @@ copyright:
 # Configurazione dell'autenticazione personalizzata per l'applicazione Android {{site.data.keyword.amashort}}
 {: #custom-android}
 
-*Ultimo aggiornamento: 17 luglio 2016*
+Ultimo aggiornamento: 01 agosto 2016
 {: .last-updated}
 
 
@@ -32,12 +32,12 @@ Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
-    	// altre dipendenze
+    	// other dependencies  
 	}
 	```
 
@@ -60,7 +60,7 @@ Sostituisci *applicationRoute* e *applicationGUID* con i valori di **Rotta** e *
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Sostituisci `BMSClient.REGION_UK` con la regione appropriata.					
+Sostituisci `BMSClient.REGION_UK` con la regione appropriata.	 Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Avatar** ![icona Avatar](images/face.jpg "icona Avatar")  nella barra del menu per aprire il widget **Account e supporto**.				
 	
 
 ## Interfaccia AuthenticationListener
@@ -178,8 +178,10 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 Dopo che hai creato un AuthenticationListener personalizzato, registralo presso `BMSClient` prima di iniziare a utilizzare il listener. Aggiungi il seguente codice alla tua applicazione. Questo codice deve essere richiamato prima di inviare qualsiasi richiesta alle tue risorse protette.
 
 ```Java
-BMSClient.getInstance().registerAuthenticationListener(realmName,
-									new CustomAuthenticationListener());
+MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+
 ```
 
 Utilizza il nome di area di autenticazione (*realmName*) che hai specificato nel dashboard {{site.data.keyword.amashort}}.
@@ -228,7 +230,7 @@ Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyw
  Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
 
  ```Java
- AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  Se richiami questo codice dopo che un utente ha eseguito l'accesso, l'utente viene disconnesso. Quando l'utente prova ad eseguire nuovamente l'accesso, deve rispondere nuovamente alla richiesta di verifica proveniente dal server.

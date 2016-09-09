@@ -7,7 +7,7 @@ copyright:
 
 # Habilitación, configuración y uso del registrador
 {: #enable-logger}
-*Última actualización: 6 de mayo de 2016*
+Última actualización: 6 de mayo de 2016
 {: .last-updated}
 
 El SDK del cliente de {{site.data.keyword.amashort}} proporciona una infraestructura de registro que es similar a otras infraestructuras que es posible que conozca, como `java.util.logging` o `log4j`. La infraestructura de registro admite varias instancias de registrador por paquete, diferentes niveles de registro, captura de los seguimientos de pila en caso de bloqueo de la aplicación y más.
@@ -24,7 +24,7 @@ La infraestructura de registro del SDK del cliente de {{site.data.keyword.amasho
 
 Asegúrese de haber inicializado el SDK del cliente de {{site.data.keyword.amashort}} antes de utilizar la infraestructura de registro. Los ejemplos siguientes demuestran el uso básico de una infraestructura de registro del SDK del cliente de {{site.data.keyword.amashort}}.
 
-**Importante**: está previsto migrar las funciones de supervisión del servicio {{site.data.keyword.amashort}} al nuevo servicio [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics). El nuevo SDK de Swift utiliza el nuevo servicio de {{site.data.keyword.mobileanalytics_short}}, que proporciona más prestaciones de análisis. El servicio {{site.data.keyword.mobileanalytics_short}} actualmente se encuentra en fase experimental y está previsto que esté disponible de forma general en unos meses. Se recomienda investigar la migración de sus aplicaciones para utilizar el nuevo servicio {{site.data.keyword.mobileanalytics_short}} y el SDK de Swift ya que está previsto que las funciones de supervisión del servicio {{site.data.keyword.amashort}} dejen de utilizarse cuando {{site.data.keyword.mobileanalytics_short}} pase a estar disponible de forma general. 
+**Importante**: está previsto migrar las funciones de supervisión del servicio {{site.data.keyword.amashort}} al nuevo servicio [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics). El nuevo SDK de Swift utiliza el nuevo servicio de {{site.data.keyword.mobileanalytics_short}}, que proporciona más prestaciones de análisis. El servicio {{site.data.keyword.mobileanalytics_short}} actualmente se encuentra en fase experimental y está previsto que esté disponible de forma general en unos meses. Se recomienda investigar la migración de sus aplicaciones para utilizar el nuevo servicio {{site.data.keyword.mobileanalytics_short}} y el SDK de Swift ya que está previsto que las funciones de supervisión del servicio {{site.data.keyword.amashort}} dejen de utilizarse cuando {{site.data.keyword.mobileanalytics_short}} pase a estar disponible de forma general.
 
 ### Android
 {: #enable-logger-android}
@@ -44,7 +44,7 @@ logger.fatal("fatal message");
 ### iOS - Objective-C
 {: #enable-logger-objectc}
 
-**Importante**: si bien el SDK de Objective-C sigue recibiendo soporte y sigue considerándose el SDK principal para {{site.data.keyword.Bluemix}} Mobile Services, está previsto dejar de mantenerlo en unos meses en favor del nuevo SDK de Swift. 
+**Importante**: si bien el SDK de Objective-C sigue recibiendo soporte y sigue considerándose el SDK principal para {{site.data.keyword.Bluemix}} Mobile Services, está previsto dejar de mantenerlo en unos meses en favor del nuevo SDK de Swift.
 
 El SDK de Objective-C notifica datos de supervisión a la Consola de supervisión del servicio {{site.data.keyword.amashort}}. Si confía en las funciones de supervisión del servicio {{site.data.keyword.amashort}}, siga utilizando el SDK de Objective-C.
 
@@ -188,8 +188,8 @@ IMFLogger.send()
 {: #enable-logger-sample-cordova}
 
 ```JavaScript
-// Habilite los registros persistentes
-MFPLogger.setCapture(true)
+// Habilite registros persistentes
+MFPLogger.setCapture(true);
 
 // Defina el nivel de registro mínimo que imprimir y persistir
 MFPLogger.setLevel(MFPLogger.INFO);

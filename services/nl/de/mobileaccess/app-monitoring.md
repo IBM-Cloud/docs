@@ -7,7 +7,7 @@ copyright:
 
 # Anwendungen überwachen
 {: #app-monitoring}
-*Letzte Aktualisierung: 28. Juni 2016*
+Letzte Aktualisierung: 28. Juni 2016
 {: .last-updated}
 
 Neben Sicherheitseinrichtungen stellt {{site.data.keyword.amafull}} auch Überwachungs- und Analysefunktionen für Ihre mobilen Anwendungen bereit. Mit dem {{site.data.keyword.amashort}}-Client-SDK können Sie Clientprotokolle und Überwachungsdaten aufzeichnen. Entwickler können steuern, wann diese Daten an den {{site.data.keyword.amashort}}-Service gesendet werden sollen. Alle Sicherheitsereignisse, wie zum Beispiel erfolgreiche oder fehlgeschlagene Authentifizierungen, die im {{site.data.keyword.amashort}}-Service auftreten, werden automatisch protokolliert.
@@ -40,7 +40,8 @@ Es gibt keine Möglichkeit sicherzustellen, dass alle erfassten Daten auf der Cl
 
 2. Wenn Ihr {{site.data.keyword.Bluemix_notm}}-Anwendungsdashboard geöffnet ist, klicken Sie auf eine {{site.data.keyword.amashort}}-Kachel.
 
-3. Klicken Sie im {{site.data.keyword.amashort}}-Dashboard auf den Link **Überwachung** im Menü auf der linken Seite.
+3. Klicken Sie in der Navigationsleiste auf der linken Seite des {{site.data.keyword.amashort}}-Dashboards auf den Link **Überwachung**. 
+
 
 ## Protokollfunktion aktivieren, konfigurieren und verwenden
 {: #enable-logger}
@@ -162,9 +163,7 @@ Logger logger2 = Logger.getInstance("logger2");
 
 // Nachrichten mit unterschiedlichen Stufen protokollieren
 logger1.debug("debug message");
-logger2.info("info message");
-
-// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
+logger2.info("info message");// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
 Logger.send();
 ```
 
@@ -231,13 +230,9 @@ MFPLogger.setLevel(MFPLogger.INFO);
 
 // Zwei Logger-Instanzen erstellen
 var logger1 = MFPLogger.getInstance("logger1");
-var logger2 = MFPLogger.getInstance("logger2");    
-
-// Nachrichten mit unterschiedlichen Stufen protokollieren
+var logger2 = MFPLogger.getInstance("logger2");// Nachrichten mit unterschiedlichen Stufen protokollieren
 logger1.debug("debug message");
-logger2.info("info message");
-
-// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
+logger2.info("info message");// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
 MFPLogger.send(success, failure);
 ```
 

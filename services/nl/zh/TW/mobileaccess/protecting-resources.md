@@ -10,7 +10,7 @@ copyright:
 # 使用 {{site.data.keyword.amashort}} 服務保護後端資源
 {: #protecting-resources}
 
-*前次更新：2016 年 7 月 17 日*
+前次更新：2016 年 7 月 17 日
 {: .last-updated}
 
 

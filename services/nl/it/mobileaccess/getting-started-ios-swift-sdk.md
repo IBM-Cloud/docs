@@ -11,7 +11,7 @@ copyright:
 # Configurazione dell'SDK Swift iOS
 {: #getting-started-ios}
 
-*Ultimo aggiornamento: 17 luglio 2016*
+Ultimo aggiornamento: 01 agosto 2016
 {: .last-updated}
 
 {{site.data.keyword.amashort}} ha rilasciato una nuova SDK Swift che aggiunge e migliora le funzionalità fornite dall'SDK Objective-C {{site.data.keyword.amashort}} esistente, rendendo più semplice l'autenticazione alla tua applicazione e fornendo una migliore protezione per le tue risorse di back-end. Strumenta la tua applicazione Swift iOS con l'SDK {{site.data.keyword.amashort}}, inizializza l'SDK ed effettua richieste a risorse protette e non protette.
@@ -86,7 +86,7 @@ Per ulteriori informazioni, visita il [sito web di CocoaPods](https://cocoapods.
  ```  
 
 1. Inizializza l'SDK client {{site.data.keyword.amashort}}. Sostituisci `<applicationRoute>` e `<applicationGUID>` con
-i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}. Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona viso (![Viso](images/face.png "Viso")) nell'angolo in alto a sinistra del dashboard. 
+i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}. Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Avatar** ![icona Avatar](images/face.jpg "icona Avatar")  nella barra del menu per aprire il widget **Account e supporto**.
 
 
  ```Swift

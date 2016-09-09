@@ -11,7 +11,7 @@ copyright:
 # 啟用 Android 應用程式的 Facebook 鑑別
 {: #facebook-auth-android}
 
-*前次更新：2016 年 7 月 5 日*
+前次更新：2016 年 8 月 4 日
 {: .last-updated}
 
 
@@ -23,15 +23,11 @@ copyright:
 您必須具有：
 * 配置成使用 Gradle 的 Android 專案。專案不需要使用 {{site.data.keyword.amashort}} 用戶端 SDK 進行檢測。  
 * {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
-
-
-
-
 * Facebook for Developers 網站 (https://developers.facebook.com) 上搭配 Android 平台的 Facebook 應用程式。
 
 **重要事項：**您不需要個別安裝 Facebook SDK (`com.facebook.FacebookSdk`)。當您新增 {{site.data.keyword.amashort}} Facebook 用戶端 SDK 時，Gradle 會自動安裝 Facebook SDK。在 Facebook for Developers 網站中新增 Android 平台時，可以跳過此步驟。
 
-## 配置 Android 平台的 Facebook 應用程式
+## 針對 Android 平台配置 Facebook 應用程式
 {: #facebook-auth-android-config}
 從 Facebook for Developers 網站 (https://developers.facebook.com) 中，執行下列動作：
 
@@ -172,11 +168,16 @@ copyright:
 					"applicationGUID",
 					BMSClient.REGION_UK);
 
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
+
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
-,
+將 `BMSClient.REGION_UK` 取代為適當的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
+   
+  **附註：**如果您的 Android 應用程式是以 Android 6.0 版（API 層次 23）或以上版本為目標，則必須確定應用程式先進行 `android.permission.GET_ACCOUNTS` 呼叫，再呼叫 `register`。如需相關資訊，請參閱 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
 					
-將 `BMSClient.REGION_UK` 取代為適當的地區。
+
 
 1. 將下列程式碼新增至您的活動中：
 

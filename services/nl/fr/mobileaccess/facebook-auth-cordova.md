@@ -11,7 +11,7 @@ copyright:
 # Activation de l'authentification Facebook pour les applications Cordova
 {: #facebook-auth-cordova}
 
-*Dernière mise à jour : 15 juin 2016*
+Dernière mise à jour : 15 juin 2016
 {: .last-updated}
 
 
@@ -25,7 +25,7 @@ Utilisez l'environnement de développement natif pour modifier le code natif, pa
 {: #facebook-auth-before}
 Vous devez disposer des éléments suivants :
 * Un projet Cordova qui est instrumenté avec le SDK client de {{site.data.keyword.amashort}}, voir [Configuration du plug-in Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
-* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}, voir [Initiation](index.html).
+* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
 * Un ID d'application Facebook. Pour plus d'informations, voir
 [Acquisition d'un ID d'application Facebook sur le
 portail Facebook Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
@@ -69,10 +69,9 @@ Les étapes requises pour configurer l'intégration de l'authentification Facebo
 1. Le SDK Facebook sera installé dans le répertoire `~/Documents/FacebookSDK`. Accédez à ce répertoire et copiez (faites glisser) le fichier
 `FacebookSDK.framework` dans votre projet iOS dans Xcode.
 
-1. 	Cliquez sur la racine de votre projet dans le panneau gauche de Xcode et sélectionnez **Build Phases (Phases de génération)**.
+1. 	Cliquez sur la racine de votre projet dans Xcode et sélectionnez **Build Phases**.
 
-1. Ajoutez le fichier `FacebookSDK.framework` à la liste des bibliothèques liées dans **Link binary with libraries (Lier le binaire
-aux bibliothèques)**.
+1. Ajoutez le fichier `FacebookSDK.framework` à la liste des bibliothèques liées dans **Link binary with libraries**.
 
  Voir [Configuration de la plateforme iOS pour
 authentification Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html). Enregistrez l'API IMFFacebookAuthenticationHandler dans le code natif comme indiqué dans la section Initialisation du SDK client de {{site.data.keyword.amashort}}. N'initialisez pas IMFClient dans votre code
@@ -127,7 +126,7 @@ protégée par {{site.data.keyword.amashort}}. Un message signalant l'interdicti
 
 	![image](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-facebook-login.png)
 
-	> Cet écran peut être légèrement différent si l'appli Facebook n'est pas installée sur votre périphérique, ou si vous n'y êtes pas connecté.
+	Cet écran peut être légèrement différent si l'appli Facebook n'est pas installée sur votre périphérique, ou si vous n'y êtes pas connecté.
 
 1. Cliquez sur **OK** pour autoriser {{site.data.keyword.amashort}} à utiliser votre ID utilisateur Facebook pour l'authentification.
 

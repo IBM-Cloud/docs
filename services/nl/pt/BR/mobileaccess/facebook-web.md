@@ -7,12 +7,12 @@ copyright:
 
 # Ativando a autenticação do Facebook para apps da web
 
-*Última atualização: 15 de junho de 2016*
+Última atualização: 15 de junho de 2016
 {: .last-updated}
 
 Use o Facebook para autenticar usuários em seu app da web.
 
-## Antes de iniciar
+## Antes de começar
 {: #facebook-auth-android-before}
 Você deve ter:
 * Um app da web.  

@@ -9,7 +9,7 @@ copyright:
 Android
 {: #custom-android}
 
-*Dernière mise à jour : 17 juillet 2016*
+Dernière mise à jour : 1er août 2016
 {: .last-updated}
 
 
@@ -35,12 +35,12 @@ Vous devez disposer d'une ressource protégée par une instance du service {{sit
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
-    	// autres dépendances
+    	// other dependencies  
 	}
 	```
 
@@ -66,12 +66,13 @@ de bord {{site.data.keyword.Bluemix_notm}}.
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Remplacez `BMSClient.REGION_UK` par la région appropriée.
+Remplacez `BMSClient.REGION_UK` par la région appropriée.	 Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**.				
+	
+
 ## Interface du programme d'écoute d'authentification
 {: #custom-android-authlistener}
 
-Le SDK client de {{site.data.keyword.amashort}} fournit l'interface `AuthenticationListener` qui vous permet d'implémenter un flux d'authentification personnalisé. 
-L'interface `AuthenticationListener` expose trois méthodes qui sont appelées dans des phases différentes du processus d'authentification.
+Le SDK client de {{site.data.keyword.amashort}} fournit l'interface `AuthenticationListener` qui vous permet d'implémenter un flux d'authentification personnalisé. L'interface `AuthenticationListener` expose trois méthodes qui sont appelées dans des phases différentes du processus d'authentification.
 
 ### Méthode onAuthenticationChallengeReceived
 {: #custom-onAuth}
@@ -136,10 +137,10 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 
 		log("onAuthenticationChallengeResceived :: " + challenge.toString());
 
-		// Dans cet exemple, AuthenticationListener renvoie immédiatement un
-		// jeu de données d'identification codé en dur. Dans un scénario réel, c'est ici que le développeur
-		// afficherait un écran de connexion, collecterait les données d'identification et appellerait
-		// l'API authContext.submitAuthenticationChallengeAnswer()
+		// In this sample the AuthenticationListener immediatelly returns a hardcoded
+		// set of credentials. In a real life scenario this is where developer would
+		// show a login screen, collect credentials and invoke
+		// authContext.submitAuthenticationChallengeAnswer() API
 
 		JSONObject challengeResponse = new JSONObject();
 		try {
@@ -148,10 +149,10 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 			authContext.submitAuthenticationChallengeAnswer(challengeResponse);
 		} catch (JSONException e){
 
-			// En cas d'échec de la collecte des données d'identification, vous devez le signaler
-			// à AuthenticationContext. Sinon le SDK client d'accès de client mobile
-			// demeure indéfiniment à l'état d'attente de données
-			// d'identification
+			// In case there was a failure collecting credentials you need to report
+			// it back to the AuthenticationContext. Otherwise Mobile Client
+			// Access client SDK will remain in a waiting-for-credentials state
+			// forever
 
 			log("Cette situation ne devrait jamais se produire...");
 			authContext.submitAuthenticationFailure(null);
@@ -180,8 +181,10 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 Après avoir créé un programme d'écoute d'authentification personnalisé, enregistrez-le auprès de `BMSClient` avant de commencer à l'utiliser. Ajoutez le code suivant à votre application. Ce code doit être appelé avant l'envoi de demandes à vos ressources protégées.
 
 ```Java
-BMSClient.getInstance().registerAuthenticationListener(realmName,
-									new CustomAuthenticationListener());
+MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+
 ```
 
 Utilisez le nom de domaine que vous avez défini dans le tableau de bord {{site.data.keyword.amashort}}.
@@ -231,7 +234,7 @@ depuis votre navigateur. Par exemple : `http://my-mobile-backend.mybluemix.net/p
  Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
 
  ```Java
- AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Si l'utilisateur tente à nouveau de se connecter, il doit à

@@ -8,10 +8,10 @@ copyright:
 #Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Webanwendungen konfigurieren
 {: #custom-web}
 
-*Letzte Aktualisierung: 18. Juli 2016*
+Letzte Aktualisierung: 21. Juli 2016
 {: .last-updated}
 
-Sie können Ihrer {{site.data.keyword.amashort}}-Web-App eine angepasste Authentifizierung hinzufügen. 
+Sie können Ihrer Web-App eine angepasste Authentifizierung und die Sicherheitsfunktionalität von {{site.data.keyword.amashort}} hinzufügen. 
 
 ## Vorbereitungen
 {: #before-you-begin}
@@ -110,13 +110,13 @@ Nach der Konfiguration des angepassten Identitätsproviders können Sie die ange
 
 ##{{site.data.keyword.amashort}}-Berechtigungsablauf mit einem angepassten Identitätsprovider implementieren 
 
-Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann durch Klicken auf **Umgebungsvariablen** im Navigator auf der linken Seite Ihrer Anwendung angezeigt werden. 
+Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann durch Klicken auf **Umgebungsvariablen** in der Navigationsleiste auf der linken Seite Ihrer Anwendung angezeigt werden. 
 
 Wenn Sie eine Benutzerberechtigung anfordern wollen, leiten Sie den Browser an den Endpunkt des Berechtigungsservers weiter. Gehen Sie dazu wie folgt vor:  
 
 1. Rufen Sie den Berechtigungsendpunkt (`authorizationEndpoint`) und die Client-ID (`clientId`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind.  
 
-  **Hinweis:** Wenn Sie den Mobile Client Access-Service vor der Webunterstützung zur Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie stattdessen die nachfolgenden URLs abhängig von Ihrer {{site.data.keyword.Bluemix_notm}}-Region:  
+  **Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service vor der Webunterstützung zur Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer {{site.data.keyword.Bluemix_notm}}-Region:  
  
   USA (Süden): 
   ```
@@ -178,7 +178,7 @@ Im nächsten Schritt werden das Zugriffstoken und das Identitätstoken mithilfe 
 
 1. Rufen Sie `authorizationEndpoint`, `clientId` und `secret` von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind.  
 
-   **Hinweis:** Wenn Sie den Mobile Client Access-Service vor der Webunterstützung zu Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie in diesem Fall die nachfolgenden URLs abhängig von Ihrer Bluemix-Region:  
+   **Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service vor der Webunterstützung zur Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer {{site.data.keyword.Bluemix_notm}}-Region:  
 
  USA (Süden): 
  ```
@@ -225,7 +225,7 @@ app.get("/oauth/callback", function(req, res, next){
       req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"];
       res.redirect("/");
     }
-    ).auth(mcaCredentials.clientId, mcaCredentials.secret);
+    ).auth(mcaCredentials.clientId, mcaCredentials.secret); 
   }
 ); 
 
@@ -240,11 +240,12 @@ Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können 
 
 Das Identitätstoken enthält Informationen zu der Benutzeridentität. Bei einer angepassten Authentifizierung enthält das Token alle Informationen, die vom angepassten Identitätsprovider bei der Authentifizierung zurückgegeben werden. Das Feld `displayName` unter `imf.user` enthält den `Anzeigenamen`, der vom angepassten Identitätsprovider zurückgegeben wurde, und das Feld `id` enthält den `Benutzernamen`. Alle anderen vom angepassten Identitätsprovider zurückgegebenen Werte werden im Feld `attributes` unter `imf.user` zurückgegeben.  
 
-Das Zugriffstoken ermöglicht die Kommunikation mit Ressourcen, die von den Mobile Client Access-Berechtigungsfiltern geschützt werden (siehe [Ressourcen schützen](protecting-resources.html)). Um Anforderungen an geschützte Ressourcen zu stellen, fügen Sie einen Berechtigungsheader mit folgender Struktur zu den Anforderungen hinzu:  
+Das Zugriffstoken ermöglicht die Kommunikation mit Ressourcen, die von den {{site.data.keyword.amashort}}-Berechtigungsfiltern geschützt werden (siehe [Ressourcen schützen](protecting-resources.html)). Um Anforderungen an geschützte Ressourcen zu stellen, fügen Sie einen Berechtigungsheader mit folgender Struktur zu den Anforderungen hinzu:  
 
 `Authorization=Bearer <accessToken> <idToken>` 
 
-**Hinweis:** 
+####Tipps: 
+{: #tips_token}
 
 * `<accessToken>` und `<idToken>` müssen durch ein Leerzeichen getrennt werden. 
 

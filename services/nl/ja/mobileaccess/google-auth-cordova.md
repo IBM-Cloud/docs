@@ -8,7 +8,8 @@ copyright:
 # Cordova アプリ用の Google 認証の使用可能化
 {: #google-auth-cordova}
 
-*最終更新日: 2016 年 6 月 28 日*
+
+最終更新日: 2016 年 7 月 21 日
 {: .last-updated}
 
 Cordova アプリケーションを Google 認証統合用に構成するには、Cordova アプリケーションのネイティブ・コード (Java、Objective-C、または Swift) で変更を行う必要があります。各プラットフォームは別々に構成する必要があります。ネイティブ・コードの変更は、Android Studio や Xcode などのネイティブ開発環境で行ってください。
@@ -48,11 +49,11 @@ Cordova アプリケーションの iOS プラットフォームを Google 認�
 
 1. `Sources/Authenticators/IMFGoogleAuthentication` ディレクトリーに移動し、すべてのファイルを Xcode で iOS プロジェクトにコピー (ドラッグ・アンド・ドロップ) します。コピーする必要があるファイルは以下のとおりです。
 
-	> * IMFDefaultGoogleAuthenticationDelegate.h
-	> * IMFDefaultGoogleAuthenticationDelegate.m
-	> * IMFGoogleAuthenticationDelegate.h
-	> * IMFGoogleAuthenticationHandler.h
-	> * IMFGoogleAuthenticationHandler.m
+	* IMFDefaultGoogleAuthenticationDelegate.h
+	* IMFDefaultGoogleAuthenticationDelegate.m
+	* IMFGoogleAuthenticationDelegate.h
+	* IMFGoogleAuthenticationHandler.h
+	* IMFGoogleAuthenticationHandler.m
 
 **「Copy files....(ファイルのコピー)」**チェック・ボックスを選択します。
 
@@ -89,11 +90,11 @@ Client SDK が初期化されたら、モバイル・バックエンド・アプ
 `/protected` エンドポイントに {{site.data.keyword.amashort}} によって保護されたバックエンド・アプリケーションがなければなりません。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
 
-1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。
+1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば、`http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。
 
 1. MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} によって保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみです。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
 
-1. Cordova アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後に、以下のコードを追加してください。
+1. Cordova アプリケーションを使用して、同じエンドポイントに要求を実行します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 
 	```JavaScript
 	var success = function(data){
@@ -109,12 +110,12 @@ Client SDK が初期化されたら、モバイル・バックエンド・アプ
 
 1. アプリケーションを実行します。Google のログイン画面が表示されます。
 
-	![image](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-google-login.png)
+	![Google のログイン画面](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Google のログイン画面](images/ios-google-login.png)
 	この画面は、ご使用のデバイスに Facebook アプリがインストールされていない場合や現在 Facebook にログインしていない場合、若干異なって見える可能性があります。
 1. **「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。
 
-1. 	ユーザーの要求は正常に処理されます。ご使用のプラットフォームに応じて、LogCat コンソールまたは Xcode コンソールに以下の出力が表示されます。
+1. 	ユーザーの要求は正常に処理されます。使用しているプラットフォームに応じて、LogCat/Xcode コンソールに以下の出力が表示されます。
 
-	![image](images/android-google-login-success.png)
+	![Android のコード・スニペット](images/android-google-login-success.png)
 
-	![image](images/ios-google-login-success.png)
+	![iOS のコード・スニペット](images/ios-google-login-success.png)

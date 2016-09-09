@@ -8,7 +8,7 @@ copyright:
 # Authentification d'utilisateurs à l'aide d'un fournisseur d'identité personnalisé
 {: #custom-id}
 
-*Dernière mise à jour : 7 juillet 2016*
+Dernière mise à jour : 22 juillet 2016
 {: .last-updated}
 
 
@@ -16,15 +16,18 @@ Vous pouvez créer un fournisseur d'identité personnalisé et implémenter votr
 pouvez héberger le fournisseur d'identité personnalisé sur site ou dans {{site.data.keyword.Bluemix}}. La seule exigence est qu'il soit
 accessible depuis l'Internet public afin de pouvoir communiquer avec le service {{site.data.keyword.amashort}}.
 
-## Présentation du fournisseur d'identité personnalisé {{site.data.keyword.amashort}}
+## Flux de demande d'identité personnalisée {{site.data.keyword.amashort}}
 {: #custom-id-ovr}
-Le diagramme suivant illustre comment {{site.data.keyword.amashort}} intègre un fournisseur d'identité personnalisé.
 
-![image](images/mca-sequence-custom.jpg)
 
-1. Utilisez le SDK {{site.data.keyword.amashort}} pour envoyer une demande à vos ressources de back end qui sont protégées par le SDK serveur de {{site.data.keyword.amashort}}.
+### Flux de demande client {{site.data.keyword.amashort}}
+ Le diagramme suivant illustre comment {{site.data.keyword.amashort}} intègre un fournisseur d'identité personnalisé.
+
+![Diagramme de flux de demande](images/mca-sequence-custom.jpg)
+
+* Utilisez le SDK {{site.data.keyword.amashort}} pour envoyer une demande à vos ressources de back end qui sont protégées par le SDK serveur de {{site.data.keyword.amashort}}.
 * Le SDK serveur de {{site.data.keyword.amashort}} détecte une demande non autorisée et renvoie une demande d'autorisation HTTP 401 et la portée de l'autorisation.
-* Le SDK client de {{site.data.keyword.amashort}} détecte automatiquement l'erreur HTTP 401 ci-dessus et lance le processus d'authentification.
+* Le SDK client de {{site.data.keyword.amashort}} détecte automatiquement l'erreur HTTP 401 et lance le processus d'authentification.
 * Le SDK client {{site.data.keyword.amashort}} contacte le service {{site.data.keyword.amashort}} et réclame un en-tête d'autorisation.
 * Le service {{site.data.keyword.amashort}} communique avec le fournisseur d'identité personnalisé afin de démarrer le processus d'authentification.
 * Le fournisseur d'identité renvoie une demande d'authentification au service {{site.data.keyword.amashort}}.
@@ -36,6 +39,18 @@ Le diagramme suivant illustre comment {{site.data.keyword.amashort}} intègre un
 * A partir de ce moment, toutes les demandes faites avec le SDK client de {{site.data.keyword.amashort}} contiennent un nouvel en-tête d'autorisation.
 * Le SDK client de {{site.data.keyword.amashort}} renvoie automatiquement la demande d'origine qui avait déclenché le flux d'autorisation.
 * Le SDK serveur de {{site.data.keyword.amashort}} extrait l'en-tête d'autorisation de la demande, la valide auprès du service {{site.data.keyword.amashort}}, et donne l'accès à la ressource de back end.
+
+### Flux de demande d'une application Web {{site.data.keyword.amashort}}
+{: #mca-custom-web-sequence}
+
+Le flux de demande d'une application Web {{site.data.keyword.amashort}} est similaire à celui d'un client d'une application mobile. Toutefois,
+{{site.data.keyword.amashort}} protège l'application et non pas une ressource de back end {{site.data.keyword.Bluemix_notm}}.
+
+  * La requête initiale est envoyée par l'application Web (depuis un formulaire de connexion, par exemple).
+  * La redirection finale vise la zone protégée de l'application Web elle-même et non pas une ressource de back end protégée. 
+
+
+
 
 ## Présentation des fournisseurs d'identité personnalisés
 {: #custom-id-about}
@@ -92,6 +107,7 @@ utilisateur personnalisé obtenu par le client après aboutissement de l'authent
 
 ### Exemple d'implémentation d'un fournisseur d'identité personnalisé
 {: #custom-sample}
+
 Vous pouvez utiliser comme référence l'un des exemples d'implémentation Node.js suivants de fournisseur d'identité personnalisé lorsque vous développez votre
 fournisseur d'identité personnalisé. Téléchargez le code d'application complet depuis les référentiels
 GitHub.
@@ -115,6 +131,7 @@ de l'utilisateur.
 
 ## Avec ou sans état
 {: #custom-id-state}
+
 Par défaut, le fournisseur d'identité personnalisé est considéré comme une application sans état. Dans certains cas, il peut être amené à stocker l'état associé au
 processus d'authentification. L'authentification en plusieurs étapes constitue un exemple de cas d'utilisation dans lequel le fournisseur d'identité personnalisé
 a besoin de stocker le résultat de la première étape d'authentification avant de passer à l'étape suivante. Pour prendre en charge les états, un fournisseur d'identité personnalisé doit générer un ID d'état (stateID) et le fournir au service {{site.data.keyword.amashort}} dans sa réponse. Le service {{site.data.keyword.amashort}}

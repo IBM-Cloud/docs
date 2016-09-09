@@ -7,7 +7,7 @@ copyright:
 
 # Monitoraggio delle applicazioni
 {: #app-monitoring}
-*Ultimo aggiornamento: 28 giugno 2016*
+Ultimo aggiornamento: 28 giugno 2016
 {: .last-updated}
 
 Oltre alle funzioni di sicurezza, {{site.data.keyword.amafull}} fornisce anche il monitoraggio e l'analisi per le tue applicazioni mobili. Puoi registrare i log client e i dati di monitoraggio con l'SDK client {{site.data.keyword.amashort}}. Gli sviluppatori possono controllare quando inviare questi dati al servizio {{site.data.keyword.amashort}}. Tutti gli eventi di sicurezza, quali la riuscita o meno dell'autenticazione, che si verificano nel servizio {{site.data.keyword.amashort}} vengono registrati automaticamente.
@@ -52,7 +52,8 @@ al servizio {{site.data.keyword.amashort}} utilizzando le API fornite.
 
 2. Quando il tuo dashboard dell'applicazione {{site.data.keyword.Bluemix_notm}} si è aperto, fai clic su un tile {{site.data.keyword.amashort}}.
 
-3. Nel dashboard {{site.data.keyword.amashort}}, fai clic sul link **Monitoraggio** nel menu di sinistra.
+3. Fai clic sul link **Monitoraggio** nella barra di navigazione del dashboard {{site.data.keyword.amashort}} sulla sinistra.
+
 
 ## Abilitazione, configurazione e utilizzo del Logger
 {: #enable-logger}

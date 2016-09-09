@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-android}
 
 
-*Última actualización: 16 de junio de 2016*
+Última actualización: 4 de agosto de 2016
 {: .last-updated}
 
 ## Antes de empezar
@@ -17,7 +17,7 @@ copyright:
 Debe tener lo siguiente:
 
 * Un proyecto Android en Android Studio configurado para funcionar con Gradle. No es necesario que esté instrumentado con el SDK del cliente {{site.data.keyword.amashort}}.  
-* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de un programa de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
+* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de una aplicación de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
 
 Para configurar la autenticación de Google para su app Android {{site.data.keyword.amashort}} necesitará realizar otros pasos de configuración:
 * De la aplicación {{site.data.keyword.Bluemix_notm}}
@@ -27,7 +27,7 @@ Para configurar la autenticación de Google para su app Android {{site.data.keyw
 {: #create-google-project}
 
 Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en [Google Developer Console](https://console.developers.google.com). 
-Parte de la creación de un proyecto consiste en obtener un ID de cliente de Google. El ID de cliente de Google es un identificador exclusivo para su aplicación que se utiliza en la autenticación de Google y se necesita para configurar la aplicación {{site.data.keyword.Bluemix_notm}}.
+Parte de la creación de un proyecto consiste en obtener un ID de cliente de Google.  El ID de cliente de Google es un identificador exclusivo para su aplicación que se utiliza en la autenticación de Google y se necesita para configurar la aplicación {{site.data.keyword.Bluemix_notm}}.
 
 Desde la consola:
 
@@ -106,7 +106,7 @@ Ahora que ya tiene un ID de cliente de Google para Android, puede habilitar la a
 	}
 	```
 
-	**Nota:** puede eliminar la dependencia del módulo `core` del grupo `com.ibm.mobilefirstplatform.clientsdk.android` si lo tiene. El módulo `googleauthentication` se descarga automáticamente. El módulo `googleauthentication` descarga e instala el SDK de Google en el proyecto de Android.
+	**Nota:** puede eliminar la dependencia del módulo `core` del grupo `com.ibm.mobilefirstplatform.clientsdk.android` si lo tiene. El módulo `googleauthentication` se descarga automáticamente. El módulo `googleauthentication` descarga e instala Google+ SDK en su proyecto Android.
 
 1. Sincronice el proyecto con Gradle pulsando **Tools > Android > Sync Project with Gradle Files**.
 
@@ -122,7 +122,7 @@ Ahora que ya tiene un ID de cliente de Google para Android, puede habilitar la a
 
 1. Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, debe inicializarlo pasando los parámetros de contexto, applicationGUID y applicationRoute.
 
-	Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método onCreate de la actividad principal de la aplicación de Android.
+	Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método onCreate de la actividad principal de la aplicación Android. 
 
 1. Inicialice el SDK del cliente y registre el gestor de autenticación de Google. Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** de la sección **Opciones móviles** del panel de control.
 
@@ -131,14 +131,16 @@ Ahora que ya tiene un ID de cliente de Google para Android, puede habilitar la a
 					"applicationRoute",
 					"applicationGUID",
 					BMSClient.REGION_UK);
+
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
 						
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
 
-  Sustituya `BMSClient.REGION_UK` con la región adecuada.
+  Sustituya `BMSClient.REGION_UK` con la región adecuada.  Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono del **Avatar**  ![icono de Avatar](images/face.jpg "icono de Avatar") en la barra de menú para abrir el widget **Cuenta y soporte**
 
-
-	
+   **Nota:** Si su aplicación Android está dirigida a Android versión 6.0 (nivel de API 23) o superior, deberá asegurarse de que la aplicación tenga una llamada `android.permission.GET_ACCOUNTS` antes de llamar al `registro`. Para obtener más información, consulte [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
 1. Añada el código siguiente a la actividad:
 
@@ -156,7 +158,7 @@ Ahora que ya tiene un ID de cliente de Google para Android, puede habilitar la a
 Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Google, puede empezar a realizar solicitudes al programa de fondo móvil.
 
 
-Antes de comenzar la prueba, debe disponer de una aplicación de programa de fondo móvil que se haya creado con el contenedor modelo de **MobileFirst Services Starter** y que tenga un recurso protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Antes de empezar a realizar pruebas, debe disponer de una aplicación de fondo móvil que se haya creado con el contenedor modelo **MobileFirst Services Starter**, y que tenga un recurso protegido por el punto final {{site.data.keyword.amashort}} `/protected`. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil en su navegador de escritorio; para ello, abra `{applicationRoute}/protected`. Por ejemplo, `http://my-mobile-backend.mybluemix.net/protected`.
  El punto final `/protected` de un programa de fondo móvil creado con un contenedor modelo de MobileFirst Services está protegido con {{site.data.keyword.amashort}}. Por eso, solo las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}} pueden acceder a él. Como resultado, verá `Unauthorized` en el navegador de escritorio.

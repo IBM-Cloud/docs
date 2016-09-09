@@ -9,7 +9,7 @@ copyright:
 # 設定 iOS Objective-C SDK
 {: #getting-started-ios}
 
-*前次更新：2016 年 7 月 17 日*
+前次更新：2016 年 7 月 17 日
 {: .last-updated}
 
 使用 {{site.data.keyword.amashort}} SDK 檢測 iOS 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
@@ -72,14 +72,17 @@ sudo gem install cocoapods
 
 1. 新增下列標頭，在您要使用 {{site.data.keyword.amashort}} 用戶端 SDK 的類別中匯入 `IMFCore` 架構：
 
-	**Objective-C：**
+	####Objective-C
+	{: #imfcore-objc}
 	
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
 	
 	```
 	
-	**Swift：**
+	####Swift
+	{: #sdk-swift}
+	
 	{{site.data.keyword.amashort}} 用戶端 SDK 是使用 Objective-C 進行實作。您可能需要將橋接標頭新增至 Swift 專案：
 	1. 在 Xcode 中的專案上按一下滑鼠右鍵，然後選取**新建檔案...**。
 	1. 在 **iOS 來源**種類中，按一下**標頭檔**。將檔案命名為 `BridgingHeader.h`。
@@ -91,14 +94,16 @@ sudo gem install cocoapods
 	
 1. 使用下列程式碼來起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。<br/>請將 *applicationRoute* 及 *applicationGUID* 取代為 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的值。
 
-	**Objective-C：**
+	####Objective-C
+	{: #sharedinstance-objc}
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-	**Swift：**
+	####Swift
+	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
@@ -113,7 +118,8 @@ sudo gem install cocoapods
 
 1. 使用 iOS 應用程式以對相同的端點提出要求。起始設定 `IMFClient` 之後，請新增下列程式碼：
 
-	**Objective-C：**
+	####Objective-C
+	{: #nsstring-objc}
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -131,7 +137,8 @@ sudo gem install cocoapods
 	}];
 	```
 
-	**Swift：**
+	####Swift
+	{: #imfclientrequestpath-swift}
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

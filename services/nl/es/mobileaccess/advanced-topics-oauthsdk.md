@@ -5,10 +5,10 @@ copyright:
   
 ---
 
-# Configuración de las comunicaciones de programa de fondo
+# Comunicación entre servicios y aplicaciones de fondo
 {: #backend-comm}
 
-*Última actualización: 16 de junio de 2016*
+Última actualización: 21 de julio de 2016
 {: .last-updated}
 
 En algunas situaciones, es posible que tenga que enviar solicitudes desde la aplicación de fondo que se esté ejecutando en {{site.data.keyword.Bluemix}} a otro servicio de fondo que esté protegido por el servicio de {{site.data.keyword.amashort}} (por ejemplo, el servicio de {{site.data.keyword.cloudant}}). En estos casos, debe añadir una señal OAuth a la solicitud.
@@ -39,10 +39,10 @@ var options = {
 
 	cacheSize: 100,
 
-	// Todas las propiedades siguientes se recuperan automáticamente cuando Node.js
+	// Las propiedades siguientes se recuperan automáticamente cuando el archivo Node.js
 	// se ejecuta en {{site.data.keyword.Bluemix_notm}} y se enlaza a una instancia del servicio de {{site.data.keyword.amashort}}.
-	// Como alternativa, puede obtener los valores de estas propiedades si hace clic en Mostrar credenciales
-	// en el mosaico del servicio de {{site.data.keyword.amashort}} del panel de control de la aplicación de {{site.data.keyword.Bluemix_notm}}
+	// Como alternativa, puede obtener los valores de estas propiedades pulsando Mostrar credenciales
+	// en el título del servicio {{site.data.keyword.amashort}} del panel de control de la aplicación de {{site.data.keyword.Bluemix_notm}}
 
 	appId: "appId",				// Bleumix applicationGUID, a.k.a tenantId
 	clientId: "clientId",			

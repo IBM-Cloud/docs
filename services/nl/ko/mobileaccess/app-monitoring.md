@@ -7,7 +7,7 @@ copyright:
 
 # 애플리케이션 모니터링
 {: #app-monitoring}
-*마지막 업데이트 날짜: 2016년 6월 28일*
+마지막 업데이트 날짜: 2016년 6월 28일
 {: .last-updated}
 
 {{site.data.keyword.amafull}}는 보안 기능 이외에도 모바일 애플리케이션에 대한 모니터링 및 분석을 제공합니다. {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 클라이언트 로그 및 모니터 데이터를 기록할 수 있습니다. 개발자는 이 데이터를 {{site.data.keyword.amashort}} 서비스로 전송할 시기를 제어할 수 있습니다. {{site.data.keyword.amashort}} 서비스에서 발생하는 모든 보안 이벤트(예: 인증 성공 또는 실패)는 자동으로 로깅됩니다. 
@@ -40,7 +40,8 @@ copyright:
 
 2. {{site.data.keyword.Bluemix_notm}} 애플리케이션 대시보드가 열리면 {{site.data.keyword.amashort}} 타일을 클릭하십시오. 
 
-3. {{site.data.keyword.amashort}} 대시보드의 왼쪽 메뉴에서 **모니터링** 링크를 클릭하십시오. 
+3. 왼쪽에서 {{site.data.keyword.amashort}} 대시보드 탐색줄의 **모니터링** 링크를 클릭하십시오.
+
 
 ## 로거 활성화, 구성 및 사용
 {: #enable-logger}

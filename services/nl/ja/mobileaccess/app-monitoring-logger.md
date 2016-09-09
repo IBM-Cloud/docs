@@ -7,7 +7,7 @@ copyright:
 
 # Logger の有効化、構成、および使用
 {: #enable-logger}
-*最終更新日: 2016 年 5 月 6 日*
+最終更新日: 2016 年 5 月 6 日
 {: .last-updated}
 
 {{site.data.keyword.amashort}} Client SDK は、なじみのあるユーザーも多い `java.util.logging` や `log4j` といった他のロギング・フレームワークに似たロギング・フレームワークを提供します。このロギング・フレームワークは、パッケージあたり複数のロガー・インスタンス、さまざまなログ・レベル、アプリケーション・クラッシュに関するスタック・トレースのキャプチャーなどをサポートします。
@@ -198,9 +198,7 @@ MFPLogger.setLevel(MFPLogger.INFO);
 
 // Create two logger instances
 var logger1 = MFPLogger.getInstance("logger1");
-var logger2 = MFPLogger.getInstance("logger2");    
-
-// Log messages with different levels
+var logger2 = MFPLogger.getInstance("logger2");// Log messages with different levels
 logger1.debug ("debug message");
 logger2.info ("info message");
 

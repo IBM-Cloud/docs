@@ -8,10 +8,10 @@ copyright:
 # Google-Authentifizierung für Webanwendungen aktivieren
 {: #google-auth-web}
 
-*Letzte Aktualisierung: 18. Juli 2016*
+Letzte Aktualisierung: 18. Juli 2016
 {: .last-updated}
 
-Sie können Benutzer über die Google-Anmeldung für Ihre Webanwendung authentifizieren.
+Sie können Benutzer über die Google-Anmeldung für Ihre Webanwendung authentifizieren. Fügen Sie die Sicherheitsfunktionalität von {{site.data.keyword.amashort}} hinzu.  
 
 
 ## Vorbereitungen
@@ -41,7 +41,7 @@ Wenn Sie eine Google-Anwendungs-ID und einen geheimen Schlüssel besitzen, könn
 1. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
 1. Klicken Sie auf die Schaltfläche in der Google-Anzeige. 
 1. Gehen Sie im Abschnitt **Für Web konfigurieren** wie folgt vor:   
-    * Notieren Sie den Wert im Textfeld **Mobile Client Access-Weiterleitungs-URI für Google Developer Console**. Dies ist der Wert, den Sie in das Feld **Authorized redirect URIs** unter **Restrictions in the Client ID for Web application** des **Google Developers-Portals** in Schritt 3 oben eingeben müssen.
+    * Notieren Sie den Wert im Textfeld **Mobile Client Access-Weiterleitungs-URI für Google Developer Console**. Dies ist der Wert, den Sie in das Feld **Authorized redirect URIs** unter **Restrictions in the Client ID for Web application** des **Google-Entwicklerportals** in Schritt 3 eingeben müssen.
     * Geben Sie die **Google-Client-ID** und den **geheimen Schlüssel des Clients** ein.
     * Geben Sie den Weiterleitungs-URI in das Feld **Weiterleitungs-URIs Ihrer Webanwendung** ein. Dies ist der Wert für den Weiterleitungs-URI, auf den nach Beendigung des Berechtigungsprozesses zugegriffen wird. Er wird vom Entwickler festgelegt. 
 1. Klicken Sie auf **Speichern**.
@@ -55,7 +55,7 @@ Gehen Sie wie folgt vor, um den Berechtigungsprozess zu starten:
 
 1. Rufen Sie den Berechtigungsendpunkt (`authorizationEndpoint`) und die Client-ID (`clientId`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind.  
 
-    **Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service erstellt haben, bevor die Webunterstützung hinzugefügt wurde, sind möglicherweise keine Berechtigungsendpunkte in den Serviceberechtigungsnachweisen vorhanden. Verwenden Sie in diesem Fall die folgenden Berechtigungsendpunkte abhängig von Ihrer Bluemix-Region:
+    **Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service erstellt haben, bevor die Webunterstützung hinzugefügt wurde, sind möglicherweise keine Berechtigungsendpunkte in den Serviceberechtigungsnachweisen vorhanden. Verwenden Sie in diesem Fall die folgenden Berechtigungsendpunkte, abhängig von Ihrer Bluemix-Region:
 
 
  	USA (Süden): 
@@ -70,8 +70,8 @@ Gehen Sie wie folgt vor, um den Berechtigungsprozess zu starten:
   	```
   	https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
   	```
-1. Erstellen Sie den Berechtigungsserver-URI mit `response_type("code")`, `client_id` und `redirect_uri` als Abfrageparameter. 
-1. Leiten Sie von Ihrer Web-App zum generierten URI weiter.
+2. Erstellen Sie den Berechtigungsserver-URI mit `response_type("code")`, `client_id` und `redirect_uri` als Abfrageparameter. 
+3. Leiten Sie von Ihrer Web-App zum generierten URI weiter.
   
 Im nachfolgenden Beispiel werden die Parameter von der Variablen `VCAP_SERVICES` abgerufen, außerdem wird die URL erstellt und die Weiterleitungsanforderung wird gesendet. 
   
@@ -100,18 +100,17 @@ Im nachfolgenden Beispiel werden die Parameter von der Variablen `VCAP_SERVICES`
 		res.redirect(redirectUrl);
 	}
 } 
-
-  ```
+```
 
 Der Parameter `redirect_uri` gibt den Weiterleitungs-URI Ihrer Webanwendung an und muss mit dem im {{site.data.keyword.amashort}}-Dashboard definierten URI übereinstimmen.
-Nach der Weiterleitung zum Berechtigungsendpunkt wird ein Anmeldeformular von Google angezeigt. Nachdem der Benutzer die Berechtigungen für die Anmeldung über seine Google-Identität erteilt hat, ruft der {{site.data.keyword.amashort}}-Service den Weiterleitungs-URI Ihrer Webanwendung auf und gibt den Autorisierungscode als Abfrageparameter an. 
+Nach der Weiterleitung zum Berechtigungsendpunkt wird ein Anmeldeformular von Google angezeigt. Nachdem der Benutzer die Berechtigungen für die Anmeldung über seine Google-Identität erteilt hat, ruft der {{site.data.keyword.amashort}}-Service den Weiterleitungs-URI Ihrer Webanwendung auf, indem er den Autorisierungscode als Abfrageparameter angibt. 
 
 ## Tokens abrufen
-Im nächsten Schritt werden Zugriffstoken und Identitätstokens mithilfe des zuvor empfangenen Autorisierungscodes abgerufen. Gehen Sie dazu wie folgt vor:  
+Im nächsten Schritt werden Zugriffstoken und Identitätstokens mithilfe des zuvor empfangenen Autorisierungscodes abgerufen.  
 
 1. Rufen Sie das Token (`tokenEndpoint`), die Client-ID (`clientId`) und den geheimen Schlüssel (`secret`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind.  
   
-    **Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service erstellt haben, bevor die Webunterstützung hinzugefügt wurde, sind möglicherweise keine Berechtigungsendpunkte in den Serviceberechtigungsnachweisen vorhanden. Verwenden Sie in diesem Fall die folgenden Berechtigungsendpunkte abhängig von Ihrer Bluemix-Region:
+    **Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service erstellt haben, bevor die Webunterstützung hinzugefügt wurde, sind möglicherweise keine Berechtigungsendpunkte in den Serviceberechtigungsnachweisen vorhanden. Verwenden Sie in diesem Fall die folgenden Berechtigungsendpunkte, abhängig von Ihrer Bluemix-Region:
  
  	USA (Süden): 
  	```
@@ -130,7 +129,7 @@ Im nächsten Schritt werden Zugriffstoken und Identitätstokens mithilfe des zuv
  
 Der folgende Code ruft die erforderlichen Werte ab und sendet sie mit einer Post-Anforderung. 
     
-   ```Java    
+```Java    
   var cfEnv = require("cfenv");
   var base64url = require("base64url ");
   var request = require('request');
@@ -160,13 +159,13 @@ Der folgende Code ruft die erforderlichen Werte ab und sendet sie mit einer Post
 	).auth(mcaCredentials.clientId, mcaCredentials.secret); 
   }
 ); 
-  ```
+```
 
-  Der Parameter `redirect_uri` entspricht dem URI für die Weiterleitung nach erfolgreicher oder fehlgeschlagener Authentifizierung bei Google+ und muss mit `redirect_uri` aus Schritt 1 übereinstimmen.  
+Der Parameter `redirect_uri` entspricht dem URI für die Weiterleitung nach erfolgreicher oder fehlgeschlagener Authentifizierung bei Google+ und muss mit `redirect_uri` aus Schritt 1 übereinstimmen.  
    
 Sie müssen diese POST-Anforderung innerhalb von 10 Minuten senden, da der Autorisierungscode danach abgelaufen ist. Nach 10 Minuten ist ein neuer Code erforderlich. 
 
-Der POST-Antwortteil enthält das `Zugriffstoken` und das `ID-Token` in Base64-Codierung. 
+Der POST-Antwortteil enthält das `access_token` und das `id_token` in Base64-Codierung. 
 
 Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können Sie die Websitzung als authentifiziert markieren und optional diese Tokens speichern.   
 
@@ -175,18 +174,18 @@ Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können 
 
 Das Identitätstoken enthält Informationen zu der Benutzeridentität. Bei der Google-Authentifizierung enthält das Token alle Informationen, bei denen der Benutzer eingewilligt hat, dass sie geteilt werden, wie zum Beispiel den vollständigen Namen, die URL des Profilfotos usw.   
 
-Das Zugriffstoken ermöglicht die Kommunikation mit Ressourcen, die von den {{site.data.keyword.amashort}}-Berechtigungsfiltern geschützt werden; weitere Informationen hierzu finden Sie unter [Ressourcen schützen](protecting-resources.html).
-
+Das Zugriffstoken ermöglicht die Kommunikation mit Ressourcen, die von den {{site.data.keyword.amashort}}-Berechtigungsfiltern geschützt werden. Weitere Informationen hierzu finden Sie unter [Ressourcen schützen](protecting-resources.html).
 
 Um Anforderungen an geschützte Ressourcen zu stellen, fügen Sie einen Berechtigungsheader mit folgender Struktur zu den Anforderungen hinzu:  
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-**Hinweis:** 
+####Tipps:
+{: tips} 
 
 * `accessToken` und `idToken` müssen durch ein Leerzeichen getrennt werden. 
 
-* `idToken` ist optional. Wenn kein Identitätstoken angegeben wird, besteht zwar Zugriff auf die geschützte Ressource, es können jedoch keine Informationen zu dem berechtigten Benutzer abgerufen werden.  
+* `idToken` ist optional. Wenn kein Identitätstoken angegeben wird, besteht zwar Zugriff auf die geschützte Ressource, sie empfängt jedoch keine Informationen zu dem berechtigten Benutzer.  
 
 
 

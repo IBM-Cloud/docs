@@ -7,7 +7,7 @@ copyright:
 
 # Supervisión de aplicaciones
 {: #app-monitoring}
-*Última actualización: 28 de junio de 2016*
+Última actualización: 28 de junio de 2016
 {: .last-updated}
 
 Además de las características de seguridad, {{site.data.keyword.amafull}} también ofrece capacidades de supervisión y análisis para aplicaciones móviles. Puede grabar registros de clientes y supervisar datos con el SDK del cliente de {{site.data.keyword.amashort}}. Los desarrolladores pueden controlar cuándo se envían estos datos al servicio de {{site.data.keyword.amashort}}. Todos los sucesos de seguridad, como un error de autenticación o una autenticación correcta, que se produce en el servicio de {{site.data.keyword.amashort}} se registran automáticamente.
@@ -40,7 +40,8 @@ No es posible garantizar la conservación de todos los datos capturados en el la
 
 2. Cuando se abra el panel de control de la aplicación de {{site.data.keyword.Bluemix_notm}}, pulse en un mosaico de {{site.data.keyword.amashort}}.
 
-3. En el panel de control de {{site.data.keyword.amashort}}, pulse en el enlace **Supervisión** del menú de la izquierda.
+3. Pulse el enlace **Supervisión** en la {{site.data.keyword.amashort}} barra de navegación del panel de control de la izquierda. 
+
 
 ## Habilitación, configuración y uso del registrador
 {: #enable-logger}

@@ -7,7 +7,7 @@ copyright:
 
 # 收集用量分析
 {: #usage-analytics}
-*前次更新：2016 年 5 月 6 日*
+前次更新：2016 年 5 月 6 日
 {: .last-updated}
 
 您可以配置 {{site.data.keyword.amashort}} 用戶端 SDK 來記錄用量分析，以及將記錄的資料傳送給 {{site.data.keyword.amashort}} 服務。

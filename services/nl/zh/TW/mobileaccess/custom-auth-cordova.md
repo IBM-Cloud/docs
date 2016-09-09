@@ -8,7 +8,7 @@ copyright:
 # 配置適用於 {{site.data.keyword.amashort}} Cordova 應用程式的自訂鑑別
 {: #custom-cordova}
 
-*前次更新：2016 年 7 月 17 日*
+前次更新：2016 年 7 月 17 日
 {: .last-updated}
 
 
@@ -36,6 +36,13 @@ copyright:
 
 	```
 將 *applicationRoute* 及 *applicationGUID* 取代為來自 {{site.data.keyword.Bluemix_notm}} 儀表板上您的應用程式的**行動選項**畫面的**路徑**及**應用程式 GUID** 值。
+
+##起始設定 {{site.data.keyword.amashort}} AuthorizationManager
+傳遞在按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**按鈕時所取得的 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，以起始設定 AuthorizationManager。
+
+  ```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
 
 ## 鑑別接聽器介面
 {: #custom-cordva-auth}

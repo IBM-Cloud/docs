@@ -7,7 +7,7 @@ copyright:
 
 # 啟用、配置及使用日誌程式
 {: #enable-logger}
-*前次更新：2016 年 5 月 6 日*
+前次更新：2016 年 5 月 6 日
 {: .last-updated}
 
 {{site.data.keyword.amashort}} 用戶端 SDK 所提供的記載架構與您可能熟悉的其他日誌架構（例如 `java.util.logging` 或 `log4j`）類似。記載架構支援多個個別套件日誌程式實例、不同的記載層次、擷取應用程式當機的堆疊追蹤資料等。

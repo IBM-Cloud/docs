@@ -5,10 +5,10 @@ copyright:
   
 ---
 
-# Configurando comunicações de backend para backend
+# Comunicando-se entre aplicativos backend e serviços
 {: #backend-comm}
 
-*Última atualização: 16 de junho de 2016*
+Última atualização: 21 de julho de 2016
 {: .last-updated}
 
 Em alguns cenários, pode ser necessário enviar solicitações de seu aplicativo backend que está em execução no {{site.data.keyword.Bluemix}} para outro serviço de backend que está protegido pelo serviço {{site.data.keyword.amashort}} (por exemplo, o serviço {{site.data.keyword.cloudant}}). Nesses casos, deve-se incluir um token OAuth na solicitação.
@@ -40,9 +40,9 @@ var options = {
 
 	cacheSize: 100,
 
-	// All of the below properties are retrieved automatically when your Node.js
+	// The following properties are retrieved automatically when your Node.js
 	// runs on {{site.data.keyword.Bluemix_notm}} and bound to an instance of {{site.data.keyword.amashort}} Service.
-	// Alternatively you can get these properties values by clicking Show Credentials
+	// Alternatively, you can get these property values by clicking Show Credentials
 	// on the {{site.data.keyword.amashort}} Service tile in your {{site.data.keyword.Bluemix_notm}} application dashboard
 
 	appId: "appId",				// applicationGUID do Bleumix, conhecido como tenantId

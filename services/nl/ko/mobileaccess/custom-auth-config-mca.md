@@ -8,7 +8,7 @@ copyright:
 # 사용자 정의 인증용 {{site.data.keyword.amashort}} 구성
 {: #custom-dash}
 
-*마지막 업데이트 날짜: 2016년 7월 17일*
+마지막 업데이트 날짜: 2016년 7월 17일
 {: .last-updated}
 
 

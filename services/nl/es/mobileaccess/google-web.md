@@ -8,7 +8,7 @@ copyright:
 # Habilitación de la autenticación de Google para apps de web
 {: #google-auth-web}
 
-*Última actualización: 1 de junio de 2016*
+Última actualización: 1 de junio de 2016
 {: .last-updated}
 
 Utilice el inicio de sesión de Google para autenticar usuarios para la app web.
@@ -59,7 +59,7 @@ Para iniciar el proceso de autorización:
 
   El parámetro `state` no se utiliza por ahora y se puede dejar en blanco.
 
-  El URI del parámetro `redirect_uri` es la redirección después de una autenticación correcta o con error de Google.
+  El uri del parámetro `redirect_uri` es la redirección después de una autenticación correcta o con error de Google.
   La respuesta que se obtiene después de la redirección contiene el código de autorización en los parámetros de consulta de la solicitud.
 1. Realice una solicitud `POST` para el punto final del elemento de servidor de autorización:
 

@@ -48,7 +48,6 @@ Pour démarrer le processus d'autorisation :
 1. Effectuez une redirection depuis votre application Web vers le noeud final suivant du serveur d'autorisation : https://imf-newauthserver.bluemix.net/oauth/v2/authorization.
 
 1. Ajoutez les paramètres de requête suivants :
-   
    ```
     response_type='authorization_code'
     client_id= <bluemix_app_guid>

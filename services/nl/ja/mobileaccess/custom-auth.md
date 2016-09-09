@@ -8,21 +8,24 @@ copyright:
 # カスタム ID プロバイダーを使用したユーザーの認証
 {: #custom-id}
 
-*最終更新日: 2016 年 7 月 7 日*
+最終更新日: 2016 年 7 月 22 日
 {: .last-updated}
 
 
 カスタム ID プロバイダーを作成し、資格情報の収集と検証のためのユーザー独自のロジックを実装します。カスタム ID プロバイダーは、RESTful インターフェースを公開する Web アプリケーションです。オンプレミスまたは {{site.data.keyword.Bluemix}} 上でカスタム ID プロバイダーをホストできます。唯一の要件は、カスタム ID プロバイダーは {{site.data.keyword.amashort}} サービスと対話できるように公開インターネットからアクセス可能でなければならないということです。
 
-## {{site.data.keyword.amashort}} カスタム ID プロバイダーの概要
+## {{site.data.keyword.amashort}} カスタム ID 要求フロー
 {: #custom-id-ovr}
-以下の図は、{{site.data.keyword.amashort}} がどのようにカスタム ID プロバイダーを統合するのかを示しています。
 
-![image](images/mca-sequence-custom.jpg)
 
-1. {{site.data.keyword.amashort}} SDK を使用して、{{site.data.keyword.amashort}} Server SDK によって保護されているバックエンド・リソースへ要求を出します。
+### {{site.data.keyword.amashort}} クライアント要求フロー
+ 以下の図は、{{site.data.keyword.amashort}} がどのようにカスタム ID プロバイダーを統合するのかを示しています。
+
+![要求フロー・ダイアグラム](images/mca-sequence-custom.jpg)
+
+* {{site.data.keyword.amashort}} SDK を使用して、{{site.data.keyword.amashort}} Server SDK によって保護されているバックエンド・リソースへ要求を出します。
 * {{site.data.keyword.amashort}} Server SDK は、無許可の要求を検出し、HTTP 401 と許可スコープを返します。
-* {{site.data.keyword.amashort}} Client SDK は自動的に上記の HTTP 401 を検出し、認証プロセスを開始します。
+* {{site.data.keyword.amashort}} Client SDK は自動的に HTTP 401 を検出し、認証プロセスを開始します。
 * {{site.data.keyword.amashort}} Client SDK は {{site.data.keyword.amashort}} サービスに連絡し、許可ヘッダーを要求します。
 * {{site.data.keyword.amashort}} サービスは、認証プロセスを開始するためにカスタム ID プロバイダーと通信します。
 * カスタム ID プロバイダーは、{{site.data.keyword.amashort}} サービスに認証チャレンジを返します。
@@ -34,6 +37,17 @@ copyright:
 * この時点以降、{{site.data.keyword.amashort}} Client SDK で行われたすべての要求は、新しく入手した許可ヘッダーを含むようになります。
 * {{site.data.keyword.amashort}} Client SDK は、認証フローをトリガーしたオリジナルの要求を自動的に再送します。
 * {{site.data.keyword.amashort}} Server SDK は、要求から許可ヘッダーを抽出し、{{site.data.keyword.amashort}} サービスを使用してそれを検証し、バックエンド・リソースへのアクセスを認可します。
+
+### {{site.data.keyword.amashort}} Web アプリケーション要求フロー
+{: #mca-custom-web-sequence}
+
+{{site.data.keyword.amashort}} Web アプリケーション要求フローは、モバイル・クライアントのフローに似ています。ただし、{{site.data.keyword.amashort}} は、{{site.data.keyword.Bluemix_notm}} バックエンド・リソースではなくて Web アプリケーションを保護します。
+
+  * 最初の要求は Web アプリケーションによって (例えばログイン・フォームから) 送信されます。
+  * 最終のリダイレクトは、バックエンド保護リソースではなく Web アプリケーション自体の保護領域へのリダイレクトです。 
+
+
+
 
 ## カスタム ID プロバイダーについての理解
 {: #custom-id-about}
@@ -86,6 +100,7 @@ copyright:
 
 ### カスタム ID プロバイダーのサンプル実装
 {: #custom-sample}
+
 カスタム ID プロバイダーを開発する際に参考として使用できる、カスタム ID プロバイダーの Node.js 実装のサンプルを以下に示します。GitHub リポジトリーから、完全なアプリケーション・コードをダウンロードしてください。
 
  * [簡単なサンプル](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
@@ -103,6 +118,7 @@ copyright:
 
 ## ステートフル vs. ステートレス
 {: #custom-id-state}
+
 デフォルトでは、カスタム ID プロバイダーはステートレス・アプリケーションであると見なされます。場合によっては、カスタム ID プロバイダーは認証プロセスに関連した状態を保管する必要があります。ユース・ケース例として、カスタム ID プロバイダーが最初の認証ステップの結果を保管した後でないと次のステップに進むことができない、マルチステップ認証があります。ステートフル機能をサポートするには、カスタム ID プロバイダーが stateID を生成して {{site.data.keyword.amashort}} サービスへの応答に提供する必要があります。{{site.data.keyword.amashort}} サービスは、クライアント認証プロセスに属している後続の要求でその stateID を渡す必要があります。
 
 ## カスタム・レルム

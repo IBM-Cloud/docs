@@ -8,7 +8,7 @@ copyright:
 # Autenticación personalizada de la app web
 {: #custom-web}
 
-*Última actualización: 16 de junio de 2016*
+Última actualización: 16 de junio de 2016
 {: .last-updated}
 
 Añadir autenticación personalizada a la app web
@@ -54,7 +54,7 @@ Para iniciar el proceso de autorización:
    state= <estado>
    ```
 
-    El parámetro `state` no se utiliza por ahora y se puede dejar en blanco.
+    El parámetro `state` no se utiliza por ahora y puede dejarlo en blanco.
 
     El parámetro `redirect_uri` determina la redirección después de una autenticación satisfactoria o errónea del proveedor de identidades personalizadas.
 

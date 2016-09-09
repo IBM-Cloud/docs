@@ -8,12 +8,12 @@ copyright:
 #Configurando a autenticação customizada para aplicativos da web {{site.data.keyword.amashort}}
 {: #custom-web}
 
-*Última atualização: 18 de julho de 2016*
+Última atualização: 21 de julho de 2016
 {: .last-updated}
 
-Inclua a autenticação customizada em seu aplicativo da web {{site.data.keyword.amashort}}.
+Inclua a autenticação customizada e a funcionalidade de segurança do {{site.data.keyword.amashort}} em seu app da web.
 
-## Antes de iniciar
+## Antes de começar
 {: #before-you-begin}
 Antes de iniciar, deve-se ter:
 
@@ -112,24 +112,23 @@ autenticação bem-sucedida.
 
 ##Implementando o fluxo de autorização {{site.data.keyword.amashort}} usando um provedor de identidade customizado 
 
-A variável de ambiente `VCAP_SERVICES` é criada automaticamente para cada instância de serviço do
-{{site.data.keyword.amashort}} e contém propriedades necessárias para o processo de autorização. Ela consiste em um objeto JSON e pode ser
-visualizada clicando em **Variáveis de ambiente** no navegador esquerdo do seu aplicativo.
+A variável de ambiente `VCAP_SERVICES` é criada automaticamente para cada instância de serviço do {{site.data.keyword.amashort}} e contém propriedades necessárias para o processo de autorização. Ela consiste em um objeto JSON e pode ser visualizada clicando em **Variáveis de ambiente** na barra de navegação à esquerda de seu aplicativo.
 
 Para solicitar autorização do usuário, redirecione o navegador para o terminal do servidor de autorizações. Para fazer isso: 
 
 1. Recupere o terminal de autorização (`authorizationEndpoint`) e clientId (`clientId`) das
 credenciais de serviço armazenadas na variável de ambiente `VCAP_SERVICES`. 
 
-  **Nota:** caso tenha incluído o serviço Mobile Client Access em seu aplicativo antes de o suporte da web ser incluído, é
-possível que não possua o terminal de token nas credenciais do serviço. Use as urls abaixo dependendo da região {{site.data.keyword.Bluemix_notm}}: 
+  **Nota:** se você tiver incluído o serviço {{site.data.keyword.amashort}} em seu aplicativo antes de incluir o suporte da web, talvez você
+não tenha o
+terminal do token nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo de sua região do {{site.data.keyword.Bluemix_notm}}: 
  
   Sul dos EUA: 
   ```
   https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
   ```
-  Londres:
-   ```
+  Londres: 
+  ```
   https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization 
   ```
   Sydney: 
@@ -189,15 +188,16 @@ A próxima etapa é obter o token de acesso e o token de identidade usando o có
 1. Recupere `authorizationEndpoint`, `clientId` e `secret` das credenciais de serviço
 armazenadas na variável de ambiente `VCAP_SERVICES`. 
 
-   **Nota:** caso tenha incluído o serviço Mobile Client Access em seu aplicativo antes de o suporte da web ser incluído,
-é possível que não possua o terminal de token nas credenciais do serviço. Nesse caso, use as urls abaixo dependendo da região do Bluemix: 
+   **Nota:** se você tiver incluído o serviço {{site.data.keyword.amashort}} em seu aplicativo antes de incluir o suporte da web, talvez você
+não tenha o
+terminal do token nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo de sua região do {{site.data.keyword.Bluemix_notm}}: 
 
  Sul dos EUA: 
  ```
      https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
  ```
-  Londres:
-   ```
+ Londres: 
+ ```
      https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
  ``` 
  Sydney: 
@@ -248,6 +248,7 @@ app.get("/oauth/callback", function(req, res, next){
 Observe que o parâmetro `redirect_uri` deve corresponder ao `redirect_uri` usado na solicitação de
 autorização anteriormente. O valor do parâmetro de código deve ser o código de concessão recebido na resposta no fim da solicitação de autorização. O
 código de concessão é válido por 10 minutos somente, após os quais será necessário obter um novo código.
+
 O corpo de resposta conterá `access_token` e `id_token` no formato JWT (https://jwt.io/).
 
 Assim que tiver recebido o acesso e os tokens de identidade, será possível sinalizar a sessão da web como autenticada e opcionalmente
@@ -257,19 +258,19 @@ persistir esses tokens
 
 O token de identidade contém informações sobre a identidade do usuário. No caso de uma autenticação customizada, o token conterá todas as informações retornadas pelo provedor de identidade customizado mediante a autenticação. No
 campo `imf.user`, o campo `displayName` conterá o `displayName` retornado pelo provedor de
-identidade customizado e o campo `id` conterá `userName`. Todos os outros valores retornados pelo provedor de
+identidade customizado e o campo `id` conterá `userName`.  Todos os outros valores retornados pelo provedor de
 identidade customizado serão retornados no campo `attributes` em `imf.user`.  
 
-O token de acesso permite a comunicação com os recursos protegidos pelos filtros de autorização do Mobile Client Access (consulte [Protegendo recursos](protecting-resources.html)). Para fazer solicitações aos recursos protegidos, inclua um Cabeçalho de autorização nas solicitações com a estrutura a seguir: 
+O token de acesso permite comunicação com recursos protegidos pelos filtros de autorização do {{site.data.keyword.amashort}} (consulte [Protegendo recursos](protecting-resources.html)). Para fazer solicitações para recursos protegidos, inclua um cabeçalho de autorização nas solicitações com a estrutura a seguir: 
 
 `Authorization=Bearer <accessToken> <idToken>` 
 
-**Nota:** 
+####Dicas: 
+{: #tips_token}
 
 * O `<accessToken>` e o `<idToken>` devem ser separados por um espaço em branco.
 
-* O token de identidade é opcional. Caso não forneça o token de identidade, o recurso protegido poderá ser acessado, mas não receberá
-nenhuma informação sobre o usuário autorizado. 
+* O token de identidade é opcional. Se você não fornecer o token de identidade, o recurso protegido poderá ser acessado, mas não receberá nenhuma informação sobre o usuário autorizado. 
 
 
 

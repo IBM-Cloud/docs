@@ -8,7 +8,7 @@ copyright:
 # {{site.data.keyword.amashort}} Cordova 앱용 사용자 정의 인증 구성
 {: #custom-cordova}
 
-*마지막 업데이트 날짜: 2016년 7월 17일*
+마지막 업데이트 날짜: 2016년 7월 17일
 {: .last-updated}
 
 
@@ -36,6 +36,13 @@ SDK를 초기화하려면 applicationGUID 및 applicationRoute 매개변수를 �
 
 	```
 *applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션의 **모바일 옵션** 패널에 있는 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
+
+##{{site.data.keyword.amashort}} AuthorizationManager 초기화
+{{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭할 때 가져오는 {{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 눌러서 AuthorizationManager를 초기화하십시오.
+
+  ```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
 
 ## 인증 리스너 인터페이스
 {: #custom-cordva-auth}

@@ -8,7 +8,7 @@ copyright:
 # 配置適用於 {{site.data.keyword.amashort}} Android 應用程式的自訂鑑別
 {: #custom-android}
 
-*前次更新：2016 年 7 月 17 日*
+前次更新：2016 年 8 月 1 日
 {: .last-updated}
 
 
@@ -34,7 +34,7 @@ copyright:
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
@@ -59,6 +59,9 @@ copyright:
 					BMSClient.REGION_UK);
 ```
 將 `BMSClient.REGION_UK` 取代為適當的地區。
+	
+
+若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
 	
 
 ## AuthenticationListener 介面
@@ -175,8 +178,10 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 建立自訂 AuthenticationListener 之後，請先向 `BMSClient` 登錄它，再開始使用接聽器。將下列程式碼新增至應用程式。必須在將任何要求傳送至受保護資源之前先呼叫此程式碼。
 
 ```Java
-BMSClient.getInstance().registerAuthenticationListener(realmName,
-									new CustomAuthenticationListener());
+MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+
 ```
 
 使用 {{site.data.keyword.amashort}} 儀表板中所指定的 *realmName*。
@@ -225,7 +230,7 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
  您也可以新增下列程式碼，來新增登出功能：
 
  ```Java
- AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  如果您在使用者登入之後呼叫此程式碼，則會將使用者登出。使用者嘗試再次登入時，必須再次回答從伺服器收到的盤查。

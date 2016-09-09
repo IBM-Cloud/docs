@@ -11,7 +11,7 @@ copyright:
 # iOS Swift SDK のセットアップ
 {: #getting-started-ios}
 
-*最終更新日: 2016 年 7 月 17 日*
+最終更新日: 2016 年 8 月 1 日
 {: .last-updated}
 
 {{site.data.keyword.amashort}} は、既存の {{site.data.keyword.amashort}} Objective-C SDK によって提供される機能を増強する新しい Swift SDK をリリースしました。これによって、アプリの認証がより簡単になり、バックエンド・リソースの保護が強化されます。iOS Swift アプリケーションに {{site.data.keyword.amashort}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
@@ -84,7 +84,7 @@ use_frameworks!
  import BMSSecurity
  ```  
 
-1. {{site.data.keyword.amashort}} Client SDK を初期化します。`<applicationRoute>` および `<applicationGUID>` を、{{site.data.keyword.Bluemix_notm}} ダッシュボードの**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。`<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、ダッシュボードの左上隅にある顔アイコン (![Face](images/face.png "Face")) をクリックします。 
+1. {{site.data.keyword.amashort}} Client SDK を初期化します。`<applicationRoute>` および `<applicationGUID>` を、{{site.data.keyword.Bluemix_notm}} ダッシュボードの**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。`<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
 
 
  ```Swift

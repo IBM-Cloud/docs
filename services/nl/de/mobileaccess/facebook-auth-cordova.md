@@ -11,7 +11,7 @@ copyright:
 # Facebook-Authentifizierung für Cordova-Apps aktivieren
 {: #facebook-auth-cordova}
 
-*Letzte Aktualisierung: 15. Juni 2016*
+Letzte Aktualisierung: 15. Juni 2016
 {: .last-updated}
 
 
@@ -25,7 +25,7 @@ Verwenden Sie die native Entwicklungsumgebung, um Änderungen an nativem Code vo
 {: #facebook-auth-before}
 Voraussetzungen:
 * Cordova-Projekt, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist. Informationen dazu siehe [Cordova-Plug-in einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-ends finden Sie in der [Einführung](index.html).
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
 * Facebook-Anwendungs-ID. Weitere Informationen finden Sie in [Facebook-Anwendungs-ID vom Facebook-Entwicklerportal anfordern](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
@@ -66,7 +66,7 @@ Die Schritte, die zur Konfiguration der iOS-Plattform einer Cordova-Anwendung f�
 
 1. Das Facebook-SDK wird im Verzeichnis `~/Documents/FacebookSDK` installiert. Navigieren Sie zu diesem Verzeichnis und kopieren Sie (Ziehen und Übergeben) die Datei `FacebookSDK.framework` in Ihr iOS-Projekt in Xcode.
 
-1. 	Klicken Sie im linken Fenster von Xcode auf das Projektstammverzeichnis und wählen Sie **Build Phases** aus.
+1. 	Klicken Sie auf Ihr Projektstammverzeichnis in Xcode und wählen Sie **Build Phases** aus.
 
 1. Fügen Sie die Datei `FacebookSDK.framework` zur Liste der verlinkten Bibliotheken in **Link binary with libraries** (Binärdatei mit Bibliotheken verbinden) hinzu.
 
@@ -117,7 +117,7 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 
 	![Bild](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Bild](images/ios-facebook-login.png)
 
-	> Diese Anzeige sieht möglicherweise geringfügig anders aus, wenn Sie die Facebook-App nicht auf Ihrem Gerät installiert haben oder wenn Sie zurzeit nicht bei Facebook angemeldet sind.
+	Diese Anzeige sieht möglicherweise geringfügig anders aus, wenn Sie die Facebook-App nicht auf Ihrem Gerät installiert haben oder wenn Sie zurzeit nicht bei Facebook angemeldet sind.
 
 1. Klicken Sie auf **OK**, um {{site.data.keyword.amashort}} zu berechtigen, Ihre Facebook-Benutzeridentität zu Authentifizierungszwecken zu nutzen.
 

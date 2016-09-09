@@ -7,7 +7,7 @@ copyright:
 # 使用 IMFURLProtocol 发送请求
 {: #imfurl}
 
-*上次更新时间：2016 年 6 月 22 日*
+上次更新时间：2016 年 6 月 22 日
 {: .last-updated}
 
 在某些用例中，您可能无法使用 `IMFResourceRequest` 类向受保护资源发送请求；例如，对受保护资源的请求是通过一些第三方代码发送时。可能的解决方案是使用 `IMFURLProtocol` API 以及标准 `NSURLRequest (NSMutableURLRequest)` 调用。

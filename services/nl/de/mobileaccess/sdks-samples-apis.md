@@ -8,7 +8,7 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} SDKs, Beispiele und API-Referenz
-*Letzte Aktualisierung: 17. Juli 2016*
+Letzte Aktualisierung: 17. Juli 2016
 {: .last-updated}
 
 Wenn Sie Ihrer App {{site.data.keyword.amashort}}-SDKs hinzufügen wollen, wählen Sie die SDKs aus, die Sie verwenden wollen. Konfigurieren Sie anschließend Ihren Abhängigkeitenmanager, sodass er die SDKs in Ihre App aufnimmt.
@@ -33,9 +33,9 @@ Das Kern-SDK (Core SDK) enthält die APIs zur Aktivierung einer angepassten Auth
 Fügen Sie eine Abhängigkeit 'compile' zur Datei `build.gradle` Ihrer App hinzu:
 
 ```Gradle
-    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
+    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
     	name:'core',
-    	version: '1.+',
+    	version: '2.+',
     	ext: 'aar',
     	transitive: true
 ```
@@ -260,6 +260,7 @@ npm install -save bms-mca-oauth-sdk
 {: #customidprovider}
 
 [Einfaches Beispiel - GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+
 [Erweitertes Beispiel - GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management) 
 
 ## IMFURLProtocol

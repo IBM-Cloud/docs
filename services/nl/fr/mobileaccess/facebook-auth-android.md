@@ -11,7 +11,7 @@ copyright:
 # Activation de l'authentification Facebook pour les applications Android
 {: #facebook-auth-android}
 
-*Dernière mise à jour : 5 juillet 2016*
+Dernière mise à jour : 4 août 2016
 {: .last-updated}
 
 
@@ -51,7 +51,8 @@ la propriété `android:name` dans la section activity. Si plusieurs activités 
 			<action android:name="android.intent.action.MAIN"/>
 			<category android:name="android.intent.category.LAUNCHER"/>
 		</intent-filter>
-	</activity> 	```
+	</activity>
+	```
 
 1. Pour que Facebook puisse vérifier l'authenticité de votre applications, vous devez spécifier le hachage SHA1 de votre certificat de développeur.
 
@@ -64,7 +65,8 @@ les applications générées en mode Release avec un certificat à cet effet. Po
 
 1. Extrayez le hachage de clé du certificat du mode Debug :
 
-	```XML 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1 -binary | openssl base64 	```
+	```XML 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1 -binary | openssl base64
+	```
 
 	**Astuce** : Vous pouvez utiliser la même syntaxe pour extraire le hachage de clé du certificat du mode Release. Remplacez l'alias et le chemin du magasin de clés dans la commande.
 
@@ -171,15 +173,23 @@ Facebook :
 unique de l'application** dans le menu **Options pour application mobile** sur la page principale de votre application
 dans le tableau de bord Bluemix.
 
-	```Java 	BMSClient.getInstance().initialize(getApplicationContext(), 					"applicationRoute", 					"applicationGUID", 					BMSClient.REGION_UK); 	FacebookAuthenticationManager.getInstance().register(this);
+	```Java 	BMSClient.getInstance().initialize(getApplicationContext(), 					"applicationRoute", 					"applicationGUID", 					BMSClient.REGION_UK);
+
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
+
+	FacebookAuthenticationManager.getInstance().register(this);
 ```
-,
+   Remplacez `BMSClient.REGION_UK` par la région appropriée  Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**.
+   
+  **Remarque :** si votre application Android a pour cible Android version 6.0 (API niveau 23) ou supérieure, vous devez vous assurer que l'application dispose d'un appel `android.permission.GET_ACCOUNTS` avant d'appeler `register`. Pour plus d'informations, voir [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 					
-Remplacez `BMSClient.REGION_UK` par la région appropriée
+
 
 1. Ajoutez le code suivant à votre activité :
 
-	```Java 	@Override 	protected void onActivityResult(int requestCode, int resultCode, Intent data) { 		super.onActivityResult(requestCode, resultCode, data);
+	```Java 	@Override 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
 		FacebookAuthenticationManager.getInstance()
 			.onActivityResultCalled(requestCode, resultCode, data);
 	}

@@ -8,21 +8,24 @@ copyright:
 # Autenticación de usuarios con un proveedor de identidades personalizadas
 {: #custom-id}
 
-*Última actualización: 07 de julio de 2016*
+Última actualización: 22 de julio de 2016
 {: .last-updated}
 
 
 Cree un proveedor de identidad personalizado e implementar su propia lógica para recopilar y validar credenciales. Un proveedor de identidad personalizado es una aplicación web que expone una interfaz RESTful. Puede alojar el proveedor de identidad personalizado de forma local o en {{site.data.keyword.Bluemix}}. El único requisito es que este debe ser accesible desde Internet público para que se pueda comunicar con el servicio de {{site.data.keyword.amashort}}.
 
-## Visión general del proveedor de identidad personalizado de {{site.data.keyword.amashort}}
+## Flujo de solicitudes de identidades personalizadas de {{site.data.keyword.amashort}}
 {: #custom-id-ovr}
+
+
+### Flujo de solicitudes de cliente de {{site.data.keyword.amashort}}
  En el diagrama siguiente se muestra cómo {{site.data.keyword.amashort}} integra un proveedor de identidad personalizado.
 
-![imagen](images/mca-sequence-custom.jpg)
+![Diagrama del flujo de solicitudes](images/mca-sequence-custom.jpg)
 
-1. Utilice el SDK de {{site.data.keyword.amashort}} para realizar una solicitud a los recursos de fondo que están protegidos por el SDK del servidor de {{site.data.keyword.amashort}}.
+* Utilice el SDK de {{site.data.keyword.amashort}} para realizar una solicitud a los recursos de fondo que están protegidos por el SDK del servidor de {{site.data.keyword.amashort}}.
 * El SDK del servidor de {{site.data.keyword.amashort}} detecta una solicitud no autorizada y devuelve HTTP 401 y el ámbito de autorización.
-* El SDK del cliente de {{site.data.keyword.amashort}} detecta automáticamente el código HTTP 401 anterior e inicia el proceso de autenticación.
+* El SDK del cliente de {{site.data.keyword.amashort}} detecta automáticamente el código HTTP 401 e inicia el proceso de autenticación.
 * El SDK del cliente de {{site.data.keyword.amashort}} contacta con el servicio de {{site.data.keyword.amashort}} y solicita una cabecera de autorización.
 * El servicio de {{site.data.keyword.amashort}} se comunica con el proveedor de identidad personalizado para iniciar el proceso de autenticación.
 * El proveedor de identidad personalizado devuelve un cambio de autenticación al servicio de {{site.data.keyword.amashort}}.
@@ -34,6 +37,17 @@ Cree un proveedor de identidad personalizado e implementar su propia lógica par
 * A partir de este momento, todas las solicitudes realizadas con el SDK del cliente de {{site.data.keyword.amashort}} tendrán una cabecera de autorización nueva.
 * El SDK del cliente de {{site.data.keyword.amashort}} vuelve a enviar automáticamente la solicitud original que activó el flujo de autorización.
 * El SDK del servidor de {{site.data.keyword.amashort}} extrae la cabecera de autorización de la solicitud, la valida con el servicio de {{site.data.keyword.amashort}} y otorga acceso a un recurso de fondo.
+
+### Flujo de solicitud de aplicación web de {{site.data.keyword.amashort}}
+{: #mca-custom-web-sequence}
+
+El flujo de solicitud de aplicación web de {{site.data.keyword.amashort}} es similar al flujo del cliente móvil. Sin embargo, {{site.data.keyword.amashort}} protege la aplicación web, en lugar de un recurso de fondo de {{site.data.keyword.Bluemix_notm}}.
+
+  * La solicitud inicial la envía la aplicación web (desde un formulario de inicio de sesión, por ejemplo).
+  * El redireccionamiento final es en el área protegida de la propia aplicación web, en lugar de en el recurso protegido de fondo.  
+
+
+
 
 ## Proveedores de identidad personalizados
 {: #custom-id-about}
@@ -86,6 +100,7 @@ Al crear un proveedor de identidad personalizado, puede:
 
 ### Implementación de ejemplo de un proveedor de identidad personalizado
 {: #custom-sample}
+
 Utilice cualquiera de las siguientes implementaciones del ejemplo Node.js de un proveedor de identidad personalizado cuando desarrolle el proveedor de identidad personalizado. Descargue el código completo de la aplicación desde los repositorios de GitHub.
 
  * [Ejemplo simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
@@ -103,6 +118,7 @@ Utilice cualquiera de las siguientes implementaciones del ejemplo Node.js de un 
 
 ## Con estado frente a sin estado
 {: #custom-id-state}
+
 De forma predeterminada, el proveedor de identidad personalizado se considera un aplicación sin estado. En algunos casos, es posible que el proveedor de identidad personalizado necesite almacenar el estado en relación con el proceso de autenticación. Un caso de uso de ejemplo es una autenticación con múltiples pasos, en la que el proveedor de identidad personalizado necesita almacenar el resultado del primer paso de autenticación antes de proceder con el segundo. Para dar soporte a la funcionalidad con estado, un proveedor debe generar un stateID y proporcionarlo en la respuesta al servicio de {{site.data.keyword.amashort}}. El servicio de {{site.data.keyword.amashort}} debe pasar el stateID en las siguientes solicitudes que pertenezcan al proceso de autenticación del cliente.
 
 ## Reino personalizado

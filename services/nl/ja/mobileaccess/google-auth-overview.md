@@ -11,21 +11,23 @@ copyright:
 # Google 資格情報を使用したユーザーの認証
 {: #google-auth}
 
-*最終更新日: 2016 年 7 月 3 日*
+最終更新日: 2016 年 7 月 22 日
 
 Google を ID プロバイダーとして使用してリソースを保護するように {{site.data.keyword.amashort}} サービスを構成できます。それにより、モバイル・アプリケーション・ユーザーまたは Web アプリケーション・ユーザーは、Google の資格情報を認証に使用できるようになります。
 {:shortdesc}
 
-**重要:** Google SDK を別個にインストールする必要はありません。Google SDK は、{{site.data.keyword.amashort}} Client SDK を構成した時に依存関係マネージャーによって自動的にインストールされます。
+**重要:** Google が提供する Client SDK を別個にインストールする必要はありません。Google SDK は、{{site.data.keyword.amashort}} Client SDK を構成するときに、依存関係マネージャーによって自動的にインストールされます。
 
 ## {{site.data.keyword.amashort}} の要求フロー
 {: #google-auth-overview}
 
-{{site.data.keyword.amashort}} が認証のための Google との統合をどのように行うかを理解するには、以下の簡素化された図を参照してください。
+### クライアント要求フロー
 
-![image](images/mca-sequence-google.jpg)
+{{site.data.keyword.amashort}} が認証のためにどのように Google と統合するかを理解するために、次のダイアグラムを参照してください。
 
-1. {{site.data.keyword.amashort}} SDK を使用して、{{site.data.keyword.amashort}} Server SDK によって保護されているバックエンド・リソースへ要求を出します。
+![クライアント要求フロー・ダイアグラム](images/mca-sequence-google.jpg)
+
+* {{site.data.keyword.amashort}} SDK を使用して、{{site.data.keyword.amashort}} Server SDK によって保護されているバックエンド・リソースへ要求を出します。
 * {{site.data.keyword.amashort}} Server SDK は無許可の要求を検出し、HTTP 401 コードと許可範囲を返します。
 * {{site.data.keyword.amashort}} Client SDK は自動的に HTTP 401 コードを検出し、認証プロセスを開始します。
 * {{site.data.keyword.amashort}} Client SDK は {{site.data.keyword.amashort}} サービスに連絡し、許可ヘッダーを要求します。
@@ -37,6 +39,14 @@ Google を ID プロバイダーとして使用してリソースを保護する
 * この時点から、{{site.data.keyword.amashort}} Client SDK を介して実行されるすべての要求には、新しく取得した許可ヘッダーが含まれます。
 * {{site.data.keyword.amashort}} Client SDK は、認証フローをトリガーしたオリジナルの要求を自動的に再送します。
 * {{site.data.keyword.amashort}} Server SDK は、要求から許可ヘッダーを抽出し、{{site.data.keyword.amashort}} サービスを使用してそれを検証し、バックエンド・リソースへのアクセスを認可します。
+
+
+### {{site.data.keyword.amashort}} Web アプリケーション要求フロー
+{: #mca-google-web-sequence}
+{{site.data.keyword.amashort}} Web アプリケーション要求フローは、モバイル・クライアントのフローに似ています。ただし、{{site.data.keyword.amashort}} は、{{site.data.keyword.Bluemix_notm}} バックエンド・リソースではなくて Web アプリケーションを保護します。
+
+  * 最初の要求は Web アプリケーションによって (例えばログイン・フォームから) 送信されます。
+  * 最終のリダイレクトは、バックエンド保護リソースではなく Web アプリケーション自体の保護領域へのリダイレクトです。 
 
 
 

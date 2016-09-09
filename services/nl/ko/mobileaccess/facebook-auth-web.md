@@ -7,14 +7,15 @@ copyright:
 
 # 웹 애플리케이션에서 Facebook 인증 사용
 
-*마지막 업데이트 날짜: 2016년 7월 18일*
+마지막 업데이트 날짜: 2016년 7월 27일
 {: .last-updated}
 
-Facebook을 사용하여 웹 앱에서 사용자를 인증하십시오.
+Facebook을 사용하여 웹 앱에서 사용자를 인증하십시오. {{site.data.keyword.amashort}} 보안 기능을 추가하십시오. 
 
 ## 시작하기 전에
 {: #facebook-auth-android-before}
 다음이 있어야 합니다.
+
 * 웹 앱. 
 * {{site.data.keyword.amashort}} 서비스에서 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
 * 최종 경로 재지정을 위한 URI(권한 부여 프로세스가 완료된 이후).
@@ -23,35 +24,35 @@ Facebook을 사용하여 웹 앱에서 사용자를 인증하십시오.
 ## 웹 사이트에 맞게 Facebook 애플리케이션 구성
 웹 사이트에서 ID 제공자로 Facebook을 사용하려면, Facebook 애플리케이션에서 웹 사이트 플랫폼을 추가하고 구성해야 합니다. 
 
-1. Facebook 개발자 포털(https://developers.facebook.com)에 로그인하십시오. 
+1. [Facebook 개발자 포털](https://developers.facebook.com)에 로그인하십시오.
 2. 앱을 열거나 작성하십시오. 
-1. **애플리케이션 ID** 및 **앱 본인확인정보**를 기록해 두십시오. {{site.data.keyword.amashort}} 대시보드에서 Facebook 인증용 웹 프로젝트를 구성할 때 해당 값이 필요합니다. 
-1. 웹 사이트 플랫폼이 없는 경우 추가하십시오. 
-1. 제품 목록에서 **Facebook 로그인**을 추가하거나 여십시오. 
-1. **올바른 OAuth 경로 재지정 URI** 상자에 권한 서버 콜백 엔드포인트 URI를 입력하십시오. 아래 {{site.data.keyword.amashort}} 대시보드 구성 단계에서 이 권한 경로 재지정 URI를 찾으십시오. 
-2. 변경사항을 저장하십시오.
+3. **애플리케이션 ID** 및 **앱 본인확인정보**를 기록해 두십시오. {{site.data.keyword.amashort}} 대시보드에서 Facebook 인증용 웹 프로젝트를 구성할 때 해당 값이 필요합니다. 
+4. **웹 사이트** 플랫폼을 추가하십시오(없는 경우).
+5. 제품 목록에서 **Facebook 로그인**을 추가하거나 여십시오. 
+6. **올바른 OAuth 경로 재지정 URI** 상자에 권한 서버 콜백 엔드포인트 URI를 입력하십시오. 뒤따르는 {{site.data.keyword.amashort}} 대시보드 구성 단계에서 이 권한 경로 재지정 URI를 찾으십시오.
+7. 변경사항을 저장하십시오.
 
 
 
 
-# Facebook 인증용 {{site.data.keyword.amashort}} 구성
+## Facebook 인증용 {{site.data.keyword.amashort}} 구성
 Facebook 애플리케이션 ID 및 앱 본인확인정보가 있으며 Facebook 애플리케이션에서 웹 클라이언트에 서비스를 제공하도록 구성된 경우 {{site.data.keyword.Bluemix_notm}} 대시보드에서 Facebook 인증을 사용할 수 있습니다.
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드를 여십시오. 
-1. 관련 앱 타일을 클릭하십시오. 앱이 로드됩니다. 
-2. {{site.data.keyword.amashort}} 서비스에 대한 타일을 클릭하십시오. 
-1. **Facebook** 패널에서 **구성** 단추를 클릭하십시오. 
-2. **Facebook 개발자 콘솔에 대한 Mobile Client Access 경로 재지정 URI** 텍스트 상자의 값을 기록해 두십시오. 위 6단계에서 Facebook 개발자 포털의 **Facebook 로그인**에서 **올바른 OAuth 경로 재지정 URI** 상자에 추가해야 하는 값입니다. 
-1. Facebook **애플리케이션 ID** 및 **앱 본인확인정보**를 입력하십시오. 
-2. 경로 재지정 URI를 **웹 애플리케이션 경로 재지정 URI**에 입력하십시오. 이 값은 권한 부여 프로세스가 완료된 후에 액세스할 경로 재지정 URI용 값이며 개발자가 판별합니다. 
-3. **저장**을 클릭하십시오.
+2. 관련 앱 타일을 클릭하여 앱을 로드하십시오.
+3. {{site.data.keyword.amashort}} 서비스에 대한 타일을 클릭하십시오. 
+4. **Facebook** 패널에서 **구성** 단추를 클릭하십시오. 
+5. **Facebook 개발자 콘솔에 대한 Mobile Client Access 경로 재지정 URI** 텍스트 상자의 값을 기록해 두십시오. 웹 사이트에 대해 Facebook 애플리케이션을 구성하는 6단계에서 Facebook 개발자 포털의 **Facebook 로그인**에서 **올바른 OAuth 경로 재지정 URI** 상자에 추가하는 데 이 값이 필요합니다.
+6. Facebook **애플리케이션 ID** 및 **앱 본인확인정보**를 입력하십시오. 
+7. 경로 재지정 URI를 **웹 애플리케이션 경로 재지정 URI**에 입력하십시오. 이 값은 권한 부여 프로세스가 완료된 후에 액세스할 경로 재지정 URI용 값이며 개발자가 판별합니다. 
+8. **저장**을 클릭하십시오.
 
 
 
 
 ## ID 제공자로 Facebook을 사용하여 {{site.data.keyword.amashort}} 권한 부여 플로우 구현
 
-`VCAP_SERVICES` 환경 변수는 각 {{site.data.keyword.amashort}} 서비스 인스턴스에 대해 자동으로 작성되며 권한 부여 프로세스에 필요한 특성을 포함합니다. JSON 오브젝트로 구성되며 애플리케이션의 왼쪽 네비게이터에서 **환경 변수**를 클릭하여 확인할 수 있습니다. 
+`VCAP_SERVICES` 환경 변수는 각 {{site.data.keyword.amashort}} 서비스 인스턴스에 대해 자동으로 작성되며 권한 부여 프로세스에 필요한 특성을 포함합니다. 이는 JSON 오브젝트로 구성되며 애플리케이션의 **환경 변수**를 클릭하여 <!--the left-side navigator of--> 볼 수 있습니다.
 
 권한 부여 프로세스를 시작하려면 다음을 수행하십시오. 
 
@@ -76,7 +77,7 @@ Facebook 애플리케이션 ID 및 앱 본인확인정보가 있으며 Facebook 
 
 
 
-아래 예에서는 `VCAP_SERVICES` 변수에서 매개변수를 검색하고, URL을 빌드하고, 경로 재지정 요청을 전송합니다. 
+다음 예에서는 `VCAP_SERVICES` 변수에서 매개변수를 검색하여 URL을 빌드하고 경로 재지정 요청을 전송합니다.
 
   ```Java
   var cfEnv = require("cfenv"); 
@@ -97,7 +98,7 @@ Facebook 애플리케이션 ID 및 앱 본인확인정보가 있으며 Facebook 
         var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
         var clientId = mcaCredentials.clientId;   
         var redirectUri = "http://some-server/oauth/callback"; 
-         // Your web application redirect uri   
+         // Your web application redirect URI   
 
         var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   
@@ -115,13 +116,14 @@ Facebook 애플리케이션 ID 및 앱 본인확인정보가 있으며 Facebook 
 
  권한 엔드포인트로 경로 재지정 후 사용자는 Facebook으로부터 로그인 양식을
 받게 됩니다. Facebook에서 사용자 ID에 권한을 부여하면 {{site.data.keyword.amashort}} 서비스는 웹 애플리케이션 경로 재지정 URI를 호출하고 조회 매개변수로 권한 부여 코드를 제공합니다.   
+
 ## 토큰 확보
 
 다음 단계는 이전에 받은 권한 부여 코드를 사용하여 액세스 토큰 및 ID 토큰을 확보하는 것입니다. 
 
  1.  토큰 `tokenEndpoint`, `clientId` 및 `secret`을 `VCAP_SERVICES` 환경 변수에 저장된 서비스 신임 정보에서 검색하십시오.  
  
-    **참고:** 웹 지원이 추가되기 전에 Mobile Client Access를 사용한 경우 서비스 신임 정보에 토큰 엔드포인트가 없을 수 있습니다. 이러한 경우 Bluemix 지역에 따라 대신 아래 URL을 사용하십시오.  
+    **참고:** 웹 지원이 추가되기 전에 {{site.data.keyword.amashort}}를 사용한 경우 서비스 신임 정보에 토큰 엔드포인트가 없을 수 있습니다. 대신, Bluemix 지역에 따라 다음 URL을 사용하십시오. 
 
     미국 남부:  
     ```
@@ -190,15 +192,16 @@ ID 토큰에는 사용자 ID에 대한 정보가 포함되어 있습니다. Face
 액세스 토큰을 통해 {{site.data.keyword.amashort}} 권한 필터에서 보호하는 리소스와 통신할 수 있습니다. [리소스 보호](protecting-resources.html)를 참조하십시오. 
 
 
-보호 리소스에 대한 요청을 작성하기 위해 다음 구조를 사용하여 권한 헤더를 요청에 추가하십시오.  
+보호 리소스에 대한 요청을 작성하려면 다음 구조를 사용하여 권한 헤더를 요청에 추가하십시오. 
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-**참고:** 
+#### 팁
+{: tips} 
 
-* `accessToken` 및 `idToken`은 공백으로 구분해야 합니다. 
+* `accessToken` 및 `idToken`은 공백으로 구분해야 합니다.
 
-* `idToken`은 선택사항입니다. ID 토큰을 제공하지 않는 경우 보호 리소스에 액세스할 수 있지만, 권한 부여된 사용자에 대한 정보는 수신하지 않습니다.  
+* `idToken`은 선택사항입니다. ID 토큰을 제공하지 않는 경우 보호 리소스에 액세스할 수 있지만 권한 부여된 사용자에 대한 정보는 수신하지 않습니다. 
  
 
 

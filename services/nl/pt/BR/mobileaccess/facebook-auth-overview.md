@@ -12,23 +12,25 @@ copyright:
 # Autenticando usuários com as credenciais do Facebook
 {: #facebook-auth-overview}
 
-*Última atualização: 15 de junho de 2016*
+Última atualização: 22 de julho de 2016
 {: .last-updated}
 
 É possível configurar o serviço {{site.data.keyword.amashort}} para proteger recursos usando o Facebook como um provedor de
 identidade. Seus usuários de aplicativo móvel ou da web podem usar suas credenciais do Facebook para autenticação.
 {:shortdesc}
 
-**Importante**: não é necessário instalar separadamente o SDK fornecido pelo Facebook. O Facebook SDK é instalado automaticamente por gerenciadores de dependência quando você configura o {{site.data.keyword.amashort}} client SDK.
+**Importante**: não é necessário instalar separadamente o client SDK fornecido pelo Facebook. O Facebook SDK é instalado automaticamente por gerenciadores de dependência quando você configura o {{site.data.keyword.amashort}} Facebook client SDK.
 
 ## Fluxo de solicitação do {{site.data.keyword.amashort}}
 {: #mca-facebook-sequence}
 
-Consulte o diagrama simplificado a seguir para entender como o {{site.data.keyword.amashort}} integra-se ao Facebook para autenticação.
+### Fluxo de solicitação do cliente móvel
 
-![image](images/mca-sequence-facebook.jpg)
+Consulte o diagrama a seguir para entender como o {{site.data.keyword.amashort}} integra-se ao Facebook para autenticação a partir de um app cliente móvel.
 
-1. Use o SDK do cliente {{site.data.keyword.amashort}} para fazer uma solicitação aos seus recursos de backend que são protegidos
+![Diagrama do fluxo de solicitação do cliente móvel](images/mca-sequence-facebook.jpg)
+
+* Use o SDK do cliente {{site.data.keyword.amashort}} para fazer uma solicitação aos seus recursos de backend que são protegidos
 com o SDK do servidor {{site.data.keyword.amashort}}.
 * O {{site.data.keyword.amashort}} server SDK detecta uma solicitação não autorizada e retorna o código HTTP 401 e o escopo de autorização.
 * O {{site.data.keyword.amashort}} client SDK detecta automaticamente o código HTTP 401 e inicia o processo de autenticação.
@@ -43,13 +45,13 @@ um cabeçalho de autorização.
 * O {{site.data.keyword.amashort}} client SDK reenvia automaticamente a solicitação original que acionou o fluxo de autorização.
 * O SDK do servidor {{site.data.keyword.amashort}} extrai um cabeçalho de autorização da solicitação, valida-o com o serviço {{site.data.keyword.amashort}} e concede acesso a um recurso de backend.
 
-## Fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}}
-{: #mca-facebook-sequence}
+### Fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}}
+{: #mca-facebook-web-sequence}
+
 O fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}} é semelhante ao fluxo do cliente móvel. Entretanto, o {{site.data.keyword.amashort}} protege o aplicativo da web, em vez de um recurso de backend do {{site.data.keyword.Bluemix_notm}}.
 
   * A solicitação inicial é enviada pelo aplicativo da web (a partir de um formulário de login, por exemplo).
-  * O redirecionamento final é para o próprio aplicativo da web, em vez do recurso de backend protegido. 
-
+  * O redirecionamento final é para a área protegida do próprio aplicativo da web, em vez do recurso protegido de backend. 
 
 
 ## Obtendo um ID de aplicativo do Facebook a partir do Portal do Desenvolvedor do Facebook
@@ -59,7 +61,7 @@ Para começar a usar o Facebook como um provedor de identidade, deve-se criar um
 
 1. Abra o [Portal do Desenvolvedor do Facebook](https://developers.facebook.com).
 
-1. Clique em **Meus apps** no menu superior e selecione **Criar um novo app**.
+1. Clique em **Meus apps** no menu e selecione **Criar um novo app**.
 Selecione o aplicativo iOS ou Android e clique em **Ignorar e criar ID do aplicativo** na próxima tela.
 
 1. Configure o nome de exibição do aplicativo de sua escolha e selecione uma categoria. Clique em **Criar ID do app** para continuar.

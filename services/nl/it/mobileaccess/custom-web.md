@@ -8,7 +8,7 @@ copyright:
 # Autenticazione personalizzata dell'applicazione web
 {: #custom-web}
 
-*Ultimo aggiornamento: 16 giugno 2016*
+Ultimo aggiornamento: 16 giugno 2016
 {: .last-updated}
 
 Aggiungi l'autenticazione personalizzata alla tua applicazione web
@@ -55,7 +55,7 @@ Per avviare il processo di autorizzazione:
    state= <state>
    ```
 
-    Il parametro `state` non è utilizzato per ora e può essere lasciato vuoto.
+    Il parametro `state` non è utilizzato per ora e può essere lasciato vuoto. 
 
     Il parametro `redirect_uri` determina il reindirizzamento dopo l'esito positivo o negativo dell'autenticazione del tuo provider di identità personalizzato.
 

@@ -8,7 +8,7 @@ copyright:
 # Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}} Cordova
 {: #custom-cordova}
 
-*Dernière mise à jour : 17 juillet 2016*
+Dernière mise à jour : 17 juillet 2016
 {: .last-updated}
 
 
@@ -40,6 +40,14 @@ valeurs **Route** (`applicationRoute`) et **Identificateur global unique de l'ap
  Remplacez *applicationRoute* et *applicationGUID* par les valeurs de **Route** et **Identificateur global
 unique de l'application** du panneau **Options pour application mobile** de votre application dans le tableau de bord
 {{site.data.keyword.Bluemix_notm}}.
+
+
+##Initialisation du gestionnaire AuthorizationManager {{site.data.keyword.amashort}} 
+Initialisez AuthorizationManager en passant le paramètre `tenantId` de service {{site.data.keyword.amashort}} que vous obtenez quand vous cliquez sur le bouton **Afficher les données d'identification** sur la vignette du service {{site.data.keyword.amashort}}.
+
+  ```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
 
 ## Interface du programme d'écoute d'authentification
 {: #custom-cordva-auth}
@@ -103,10 +111,10 @@ var customAuthenticationListener = {
 	onAuthenticationChallengeReceived: function(authenticationContext, challenge) {
 		console.log("onAuthenticationChallengeReceived :: ", challenge);
 
-		// Dans cet exemple, le programme d'écoute d'authentification renvoie immédiatement
-		// un jeu de données d'identification codé en dur. Dans un scénario réel, c'est ici que le développeur
-		// afficherait un écran de connexion, collecterait les données d'identification et appellerait
-		// l'API authenticationContext.submitAuthenticationChallengeAnswer()
+		// In this sample the authentication listener immediatelly returns a hardcoded
+		// set of credentials. In a real life scenario this is where developer would
+		// show a login screen, collect credentials and invoke
+		// authenticationContext.submitAuthenticationChallengeAnswer() API
 
 		var challengeResponse = {
 			username: "john.lennon",
@@ -115,10 +123,10 @@ var customAuthenticationListener = {
 
 		authenticationContext.submitAuthenticationChallengeAnswer(challengeResponse);
 
-		// En cas d'échec de la collecte des données d'identification, vous devez le signaler au
-		// authenticationContext. Sinon le SDK client d'accès de client mobile
-			// demeure indéfiniment à l'état d'attente de données
-			// d'identification
+		// In case there was a failure collecting credentials you need to report
+		// it back to the authenticationContext. Otherwise Mobile Client
+		// Access client SDK will remain in a waiting-for-credentials state
+		// forever
 
 	},
 

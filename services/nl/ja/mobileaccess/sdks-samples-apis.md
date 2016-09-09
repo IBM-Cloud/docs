@@ -7,8 +7,8 @@ copyright:
 
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.amashort}} SDK、サンプル、および API 参照
-*最終更新日: 2016 年 7 月 17 日*
+# {{site.data.keyword.amashort}} SDK、サンプル、および API リファレンス
+最終更新日: 2016 年 7 月 17 日
 {: .last-updated}
 
 {{site.data.keyword.amashort}} SDK をアプリに追加するには、使用する SDK を選択します。次に、それらの SDK をアプリにプルするように依存関係マネージャーを構成します。
@@ -35,7 +35,7 @@ Core SDK には、モバイル・アプリのカスタム認証、ロギング�
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
     	name:'core',
-    	version: '1.+',
+    	version: '2.+',
     	ext: 'aar',
     	transitive: true
 ```
@@ -260,12 +260,13 @@ npm install -save bms-mca-oauth-sdk
 {: #customidprovider}
 
 [簡単なサンプル GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+
 [高度なサンプル GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## IMFURLProtocol
 {: #IMFURLProtocol}
 
-[API 参照 ](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
+[API リファレンス ](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
 
 #### CocoaPods を使用した IMFURLProtocol のインストール
 {: #IMFURLProtocol-cocoapods}

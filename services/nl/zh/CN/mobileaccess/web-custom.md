@@ -14,7 +14,7 @@ copyright:
 {: #before-you-begin}
 
 您必须具有：
-* 具有 `/apps/:Guid/<RealmName>/handleChallengeAnswer` 端点的 Web 应用程序，其在认证成功时返回用户身份。
+* 采用 `/apps/:Guid/<RealmName>/handleChallengeAnswer` 端点的 Web 应用程序，其在认证成功时返回用户身份。
 用户身份 JSON 结构应该如下所示：
 
    ```json
@@ -89,7 +89,7 @@ grant_type = 'authorization_code'
 
 
 现在，您可以开始向受保护资源发出请求。
-对受保护资源的所有请求都应该包含 `access_token`。在 `the-Authorization-request` 标头字段中发送访问令牌。
+对受保护资源的所有请求都应该包含 `access_token`。在 `the-Authorization-request` 头字段中发送访问令牌。
 
 
 

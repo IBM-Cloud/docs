@@ -11,7 +11,7 @@ copyright:
 # 設定 iOS Swift SDK
 {: #getting-started-ios}
 
-*前次更新：2016 年 7 月 17 日*
+前次更新：2016 年 8 月 1 日
 {: .last-updated}
 
 {{site.data.keyword.amashort}} 已發行新的 Swift SDK，可新增至現有 {{site.data.keyword.amashort}} Objective-C SDK 所提供的功能並加以改善，更輕鬆地鑑別應用程式並為後端資源提供更好的保護。使用 {{site.data.keyword.amashort}} SDK 檢測 iOS Swift 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
@@ -89,7 +89,7 @@ use_frameworks!
  import BMSSecurity
  ```  
 
-1. 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。將 `<applicationRoute>` 及 `<applicationGUID>` 取代為您取自 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的**路徑**及**應用程式 GUID** 值。將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下儀表板左上角的樣式圖示 (![樣式](images/face.png "樣式"))。 
+1. 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。將 `<applicationRoute>` 及 `<applicationGUID>` 取代為您取自 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的**路徑**及**應用程式 GUID** 值。將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
 
 
  ```Swift

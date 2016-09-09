@@ -7,7 +7,7 @@ copyright:
 
 # Raccolta dell'analisi dell'utilizzo
 {: #usage-analytics}
-*Ultimo aggiornamento: 6 maggio 2016*
+Ultimo aggiornamento: 6 maggio 2016
 {: .last-updated}
 
 Puoi configurare l'SDK client {{site.data.keyword.amashort}} per registrare l'analisi dell'utilizzo e inviare i dati registrati al servizio {{site.data.keyword.amashort}}.

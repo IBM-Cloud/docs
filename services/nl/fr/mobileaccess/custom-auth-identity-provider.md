@@ -8,7 +8,7 @@ copyright:
 # Création d'un fournisseur d'identité personnalisé
 {: #custom-create}
 
-*Dernière mise à jour : 16 juin 2016*
+Dernière mise à jour : 16 juin 2016
 {: .last-updated}
 
 
@@ -83,7 +83,7 @@ Comme pour la demande `startAuthorization`, le fournisseur d'identité personnal
     "headers" : {
     	"header1": "valeur1",
     	"header2" : "valeur2"
-    },
+	},
     "stateId" : "123123123",
     "challengeAnswer" : {
     	"pinCode":12345

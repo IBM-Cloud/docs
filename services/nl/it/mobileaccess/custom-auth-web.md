@@ -8,10 +8,10 @@ copyright:
 #Configurazione dell'autenticazione personalizzata per le applicazioni web {{site.data.keyword.amashort}}
 {: #custom-web}
 
-*Ultimo aggiornamento: 18 luglio 2016*
+Ultimo aggiornamento: 21 luglio 2016
 {: .last-updated}
 
-Aggiungi l'autenticazione personalizzata alla tua applicazione web {{site.data.keyword.amashort}}.
+Aggiungi l'autenticazione personalizzata e la funzionalità di sicurezza {{site.data.keyword.amashort}} alla tua applicazione web.
 
 ## Prima di cominciare
 {: #before-you-begin}
@@ -110,13 +110,13 @@ Dopo che hai configurato il tuo provider di identità personalizzato, puoi abili
 
 ##Implementazione del flusso dell'autorizzazione {{site.data.keyword.amashort}} utilizzando un provider dell'identità personalizzato 
 
-La variabile di ambiente `VCAP_SERVICES` viene creata automaticamente per ogni istanza del servizio {{site.data.keyword.amashort}} e contiene le proprietà necessarie per il processo di autorizzazione. È formata da un oggetto JSON e può essere visualizzata facendo clic su  **Enviroment Variables**  nel navigator nel lato sinistro della tua applicazione.
+La variabile di ambiente `VCAP_SERVICES` viene creata automaticamente per ogni istanza del servizio {{site.data.keyword.amashort}} e contiene le proprietà necessarie per il processo di autorizzazione. È formata da un oggetto JSON e può essere visualizzata facendo clic su  **Enviroment Variables**  dalla barra di navigazione alla sinistra della tua applicazione.
 
 Per richiedere l'autenticazione utente, reindirizzare il browser all'endpoint del server di autorizzazione. A tal fine: 
 
 1. Richiama l'endpoint di autorizzazione (`authorizationEndpoint`) e l'ID client (`clientId`) dalle credenziali del servizio archiviate nella variabile di ambiente `VCAP_SERVICES`. 
 
-  **Nota:** nel caso tu abbia aggiunto il servizio Mobile Client Access alla tua applicazione prima dell'aggiunta del supporto web potresti non avere l'endpoint token nelle credenziali del servizio. Utilizza invece i seguenti url in base alla tua regione {{site.data.keyword.Bluemix_notm}}: 
+  **Nota:** se hai aggiunto il servizio {{site.data.keyword.amashort}} prima dell'aggiunta del supporto web potresti non avere l'endpoint token nelle credenziali del servizio. Invece, utilizza i seguenti URL, a seconda della tua regione {{site.data.keyword.Bluemix_notm}}: 
  
   Stati Uniti Sud: 
   ```
@@ -177,7 +177,7 @@ Il passo successivo è quello di ottenere il token di accesso e il token di iden
 
 1. Richiama `authorizationEndpoint`, `clientId` e `secret` dalle credenziali del servizio archiviate nella variabile di ambiente `VCAP_SERVICES`. 
 
-   **Nota:** nel caso tu abbia aggiunto il servizio Mobile Client Access alla tua applicazione prima dell'aggiunta del supporto web potresti non avere l'endpoint token nelle credenziali del servizio. In questo caso utilizza invece i seguenti url in base alla tua regione Bluemix: 
+   **Nota:** se hai aggiunto il servizio {{site.data.keyword.amashort}} prima dell'aggiunta del supporto web potresti non avere l'endpoint token nelle credenziali del servizio. Invece, utilizza i seguenti URL, a seconda della tua regione {{site.data.keyword.Bluemix_notm}}: 
 
  Stati Uniti Sud: 
  ```
@@ -239,15 +239,16 @@ Come hai ricevuto l'accesso e i token di identità, puoi indicare la sessione we
 
 Il token di identità contiene informazioni sull'identità dell'utente. Nel caso di un'autenticazione personalizzata, il token conterrà tutte le informazioni restituite dal provider di identità personalizzato al momento dell'autenticazione. Nel campo `imf.user`, il campo `displayName` conterrà il `displayName` restituito dal provider di identità personalizzato e il campo `id` conterrà il `userName`.  Tutti gli altri valori restituiti dal provider di identità personalizzato vengono restituiti nel campo `attributes` in `imf.user`.  
 
-Il token di accesso consente la comunicazione con le risorse protette dai filtri di autorizzazione Mobile Client Access (consulta [Protezione delle risorse](protecting-resources.html)). In modo che le richieste proteggano le risorse aggiungi un'intestazione dell'autorizzazione alle richieste con la seguente struttura: 
+Il token di accesso consente la comunicazione con le risorse protette dai filtri di autorizzazione {{site.data.keyword.amashort}} (consulta [Protezione delle risorse](protecting-resources.html)). Per effettuare richieste che proteggano le risorse aggiungi un'intestazione dell'autorizzazione alle richieste con la seguente struttura:  
 
 `Authorization=Bearer <accessToken> <idToken>` 
 
-**Nota:** 
+####Suggerimenti:  
+{: #tips_token}
 
-* Il `<accessToken>` e il `<idToken>` devono essere separati da uno spazio vuoto.
+* Il `<accessToken>` e il `<idToken>` devono essere separati da uno spazio vuoto. 
 
-* Il token di identità è facoltativo. Nel caso in cui non hai fornito il token di identità, è possibile accedere alla risorsa protetta ma non si riceveranno le informazioni sull'utente autorizzato. 
+* Il token di identità è facoltativo. Se hai fornito il token di identità, è possibile accedere alla risorsa protetta ma non si riceveranno le informazioni sull'utente autorizzato.  
 
 
 

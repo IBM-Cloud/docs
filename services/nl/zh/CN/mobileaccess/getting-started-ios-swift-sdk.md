@@ -11,7 +11,7 @@ copyright:
 # 设置 iOS Swift SDK
 {: #getting-started-ios}
 
-*上次更新时间：2016 年 7 月 17 日*
+上次更新时间：2016 年 8 月 01 日
 {: .last-updated}
 
 {{site.data.keyword.amashort}} 已发行新的 Swift SDK，为现有 {{site.data.keyword.amashort}} Objective-C SDK 提供的功能增添了新功能，同时也改进了现有功能，使得认证应用程序变得更加轻松，并为您的后端资源提供更好地保护。在 iOS Swift 应用程序中安装 {{site.data.keyword.amashort}} SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
@@ -86,7 +86,9 @@ use_frameworks!
  import BMSSecurity
  ```  
 
-1. 初始化 {{site.data.keyword.amashort}} 客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击仪表板左上角的人脸图标 (![人脸](images/face.png "人脸"))。 
+1. 初始化 {{site.data.keyword.amashort}} 客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。
+要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
+
 
 
  ```Swift

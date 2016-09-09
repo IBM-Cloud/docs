@@ -7,7 +7,7 @@ copyright:
 # 使用 IMFURLProtocol 傳送要求
 {: #imfurl}
 
-*前次更新：2016 年 6 月 22 日*
+前次更新：2016 年 6 月 22 日
 {: .last-updated}
 
 在部分情況下，您可能無法使用 `IMFResourceRequest` 類別將要求傳送給受保護資源；例如，透過某個協力廠商程式碼傳送對受保護資源的要求時。可能的解決方案是使用 `IMFURLProtocol` API，以及標準 `NSURLRequest (NSMutableURLRequest)` 呼叫。

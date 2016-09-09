@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-android}
 
 
-*Última atualização: 16 de junho de 2016*
+Última atualização: 04 de agosto de 2016
 {: .last-updated}
 
 ## Antes de Começar
@@ -17,7 +17,7 @@ copyright:
 Você deve ter:
 
 * Um projeto do Android no Android Studio que esteja configurado para trabalhar com Gradle. Ele não precisa ser instrumentado com o {{site.data.keyword.amashort}} client SDK.  
-* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
+* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
 
 Configurar a autenticação do Google para seu app Android do {{site.data.keyword.amashort}} irá requerer configuração adicional de:
 * O aplicativo {{site.data.keyword.Bluemix_notm}}
@@ -108,7 +108,7 @@ app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 	}
 	```
 
-	**Nota:** será possível remover a dependência do módulo `core` do grupo `com.ibm.mobilefirstplatform.clientsdk.android`, se você o tiver. O módulo `googleauthentication` faz download dele automaticamente para você. O módulo `googleauthentication` faz download e instala o Google SDK no projeto do Android.
+	**Nota:** será possível remover a dependência do módulo `core` do grupo `com.ibm.mobilefirstplatform.clientsdk.android`, se você o tiver. O módulo `googleauthentication` faz download dele automaticamente para você. O módulo `googleauthentication` faz download e instala o Google+ SDK no projeto do Android.
 
 1. Sincronize seu projeto com o Gradle clicando em **Ferramentas > Android > Sincronizar projeto com arquivos Gradle**.
 
@@ -124,7 +124,7 @@ app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 
 1. Para usar o {{site.data.keyword.amashort}} client SDK, deve-se inicializá-lo passando os parâmetros de contexto, applicationGUID e applicationRoute.
 
-	Um local comum, mas não obrigatório, para colocar o código de inicialização é no método onCreate da atividade principal em seu aplicativo Android
+	Um local comum, mas não obrigatório, para colocar o código de inicialização está no método onCreate da atividade principal em seu aplicativo Android.
 
 1. Inicialize o client SDK e registre o gerenciador de autenticação do Google. Substitua
 *applicationRoute* e *applicationGUID* pelos valores de
@@ -136,14 +136,16 @@ app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 					"applicationRoute",
 					"applicationGUID",
 					BMSClient.REGION_UK);
+
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
 						
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
 
-  Substitua `BMSClient.REGION_UK` pela região apropriada.
+  Substitua `BMSClient.REGION_UK` pela região apropriada.  Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de **Avatar** ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget **Conta e suporte**.
 
-
-	
+   **Nota:** se seu aplicativo Android está definindo como destino o Android versão 6.0 (API nível 23) ou superior, deve-se assegurar que o aplicativo tenha uma chamada `android.permission.GET_ACCOUNTS` antes de chamar `register`. Para obter mais informações, consulte [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
 1. Inclua o código a seguir em sua Atividade:
 
@@ -161,7 +163,7 @@ app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 Depois que o client SDK é inicializado e o Gerenciador de autenticação do Google é registrado, é possível começar a fazer solicitações para seu aplicativo backend móvel.
 
 
-Antes de iniciar o teste, deve-se ter um aplicativo backend móvel que foi criado com o modelo **MobileFirst Services Starter** e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Para obter mais informações, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Antes de iniciar o teste, deve-se ter um aplicativo backend móvel que tenha sido criado com o modelo **MobileFirst Services Starter** e já ter um recurso protegido pelo terminal `/protected` do {{site.data.keyword.amashort}}. Para obter mais informações, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Tente enviar uma solicitação para o terminal protegido de seu aplicativo backend móvel no navegador de sua área de trabalho abrindo `{applicationRoute}/protected`, por exemplo: `http://my-mobile-backend.mybluemix.net/protected`.
  O terminal `/protected` de um aplicativo backend móvel criado com o Modelo MobileFirst Services está protegido com o {{site.data.keyword.amashort}}. Portanto, só é possível acessá-lo por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.

@@ -7,7 +7,7 @@ copyright:
 
 # Activation, configuration et utilisation de Logger
 {: #enable-logger}
-*Dernière mise à jour : 6 mai 2016*
+Dernière mise à jour : 6 mai 2016
 {: .last-updated}
 
 Le SDK client de {{site.data.keyword.amashort}} fournit une infrastructure de journalisation similaire à d'autres infrastructures que vous pouvez connaître, telles que `java.util.logging` ou `log4j`. L'infrastructure de journalisation prend notamment en charge plusieurs instances de consignateur par package, différents niveaux de journalisation et la capture des traces de pile.
@@ -125,7 +125,7 @@ Le fragment de code suivant est un exemple d'utilisation de Logger :
 {: #enable-logger-sample-android}
 
 ```Java
-// Activation de journaux persistants
+// Enable persisting logs
 Logger.setCapture(true);
 
 // Set the minimum log level to be printed and persisted
@@ -139,7 +139,7 @@ Logger logger2 = Logger.getInstance("logger2");
 logger1.debug("debug message");
 logger2.info("info message");
 
-// Envoi des journaux conservés au service {{site.data.keyword.amashort}}
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 Logger.send();
 ```
 
@@ -147,7 +147,7 @@ Logger.send();
 {: #enable-logger-sample-objectc}
 
 ```Objective-C
-// Activation de journaux persistants
+// Enable persisting logs
 [IMFLogger setCapture:YES];
 
 // Start capturing uncaught exceptions
@@ -164,7 +164,7 @@ IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
 [logger1 logDebugWithMessages:@"debug message"];
 [logger2 logInfoWithMessages:@"info message"];
 
-// Envoi des journaux conservés au service {{site.data.keyword.amashort}}
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 [IMFLogger send];
 ```
 
@@ -172,7 +172,7 @@ IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
 {: #enable-logger-sample-swift}
 
 ```Swift
-// Activation de journaux persistants
+// Enable persisting logs
 IMFLogger.setCapture(true)
 
 // Start capturing uncaught exceptions
@@ -189,7 +189,7 @@ let logger2 = IMFLogger(forName: "logger2");
 logger1.logDebugWithMessages("debug message")
 logger2.logInfoWithMessages("info message")
 
-// Envoi des journaux conservés au service {{site.data.keyword.amashort}}
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 IMFLogger.send()
 
 ```
@@ -198,7 +198,7 @@ IMFLogger.send()
 {: #enable-logger-sample-cordova}
 
 ```JavaScript
-// Activation de journaux persistants
+// Enable persisting logs
 MFPLogger.setCapture(true);
 
 // Set the minimum log level to be printed and persisted
@@ -212,7 +212,7 @@ var logger2 = MFPLogger.getInstance("logger2");
 logger1.debug ("debug message");
 logger2.info ("info message");
 
-// Envoi des journaux conservés au service {{site.data.keyword.amashort}}
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 MFPLogger.send(success, failure);
 ```
 

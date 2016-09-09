@@ -11,7 +11,7 @@ copyright:
 # Habilitación de la autenticación de Facebook para apps de Android
 {: #facebook-auth-android}
 
-*Última actualización: 05 de julio de 2016*
+Última actualización: 4 de agosto de 2016
 {: .last-updated}
 
 
@@ -166,11 +166,16 @@ Es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el
 					"applicationGUID",
 					BMSClient.REGION_UK);
 
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
+
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
-,
+   Sustituya `BMSClient.REGION_UK` con la región adecuada.  Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono del **Avatar**  ![Icono de Avatar](images/face.jpg "Icono de Avatar") de la barra de menú para abrir el widget **Cuenta y soporte**.
+   
+  **Nota:** Si su aplicación Android está dirigida a Android versión 6.0 (nivel de API 23) o superior, deberá asegurarse de que la aplicación tenga una llamada `android.permission.GET_ACCOUNTS` antes de llamar al `registro`. Para obtener más información, consulte [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 					
-Sustituya `BMSClient.REGION_UK` con la región adecuada.
+
 
 1. Añada el código siguiente a la actividad:
 

@@ -4,15 +4,15 @@ copyright:
   years: 2015, 2016
 
 ---
-{:screen:  .screen}
+
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
+
 
 # Ativando a autenticação do Facebook para seus aplicativos iOS (Objective-C SDK)
 {: #facebook-auth-ios}
 
 
-*Última atualização: 17 de julho de 2016*
+Última atualização: 17 de julho de 2016
 {: .last-updated}
 
 
@@ -161,7 +161,8 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 
 1. Importe a estrutura necessária na classe em que deseja usar o {{site.data.keyword.amashort}} client SDK incluindo os cabeçalhos a seguir:
 
-	**Objective-C**
+	####Objective-C
+	{: #framework-objc}
 
 	```Objective-C
 	#import <IMFCore/IMFCore.h>
@@ -169,7 +170,8 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 	#import <FacebookSDK/FacebookSDK.h>
 ```
 
-	**Swift**
+	####Swift
+	{: #bridgingheader-swift}
 
 	O {{site.data.keyword.amashort}} client SDK é implementado usando Objective-C; portanto, pode ser necessário incluir um cabeçalho ponte em seu projeto swift.
 
@@ -193,7 +195,8 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 **GUID do app** que você obteve das **Opções móveis**
 no painel {{site.data.keyword.Bluemix_notm}}.
 
-	**Objective-C**
+	####Objective-C
+	{: #approute-objc}
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -201,7 +204,8 @@ no painel {{site.data.keyword.Bluemix_notm}}.
 			backendGUID:@"applicationGUID"];
 	```
 
-	**Swift**
+	####Swift
+	{: #approute-swift}
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
@@ -210,16 +214,18 @@ no painel {{site.data.keyword.Bluemix_notm}}.
 
 1. Notifique o Facebook SDK sobre a ativação do app e registre o Manipulador de
 autenticação do Facebook incluindo o código a seguir no método
-`application:didFinishLaunchingWithOptions` na delegação do app. Inclua esse código imediatamente após a inicialização da instância IMFClient.
+`application:didFinishLaunchingWithOptions` na delegação do app. Inclua esse código após a inicialização da instância IMFClient.
 
-	**Objective-C**
+	####Objective-C
+	{: #activate-objc}
 
 	```Objective-C
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 ```
 
-	**Swift**
+	####Swift
+	{: #activate-swift}
 
 	```Swift
 		FBAppEvents.activateApp()
@@ -228,7 +234,8 @@ autenticação do Facebook incluindo o código a seguir no método
 
 1. Inclua o código a seguir no delegado do app.
 
-	**Objective-C**
+	####Objective-C
+	{: #appdelegate-objc}
 
 	```Objective-C
 	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
@@ -239,7 +246,8 @@ autenticação do Facebook incluindo o código a seguir no método
 	}
 ```
 
-	**Swift**
+	####Swift
+	{: #appdelegate-swift}
 
 	```Swift
 	func application(application: UIApplication, openURL url: NSURL,
@@ -264,7 +272,8 @@ Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
 
 1. Use seu aplicativo iOS para fazer uma solicitação ao mesmo terminal.
 
-	**Objective-C**
+	####Objective-C
+	{: #requestpath-objc}
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -283,7 +292,8 @@ Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
 	}];
 	```
 
-	**Swift**
+	####Swift
+	{: #requestpath-swift}
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"
@@ -312,13 +322,15 @@ console do Xcode:	![image](images/ios-facebook-login-success.png)
 
 	Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
 
-	**Objective-C**
+	####Objective-C
+	{: #logout-objc}
 
 	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
 	```
 
-	**Swift**
+	####Swift
+	{: #logout-swift}
 
 	```Swift
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)

@@ -9,7 +9,7 @@ copyright:
 # Configurando o iOS Objective-C SDK
 {: #getting-started-ios}
 
-*Última atualização: 17 de julho de 2016*
+Última atualização: 17 de julho de 2016
 {: .last-updated}
 
 Instrumente seu aplicativo iOS com o SDK {{site.data.keyword.amashort}}, inicialize o SDK e faça solicitações aos recursos protegidos
@@ -21,7 +21,7 @@ e não protegidos.
 ## Antes de Começar
 {: #before-you-begin}
 Você deve ter:
-* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
+* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que é protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
 * Um projeto do Xcode.  
 
 
@@ -74,17 +74,18 @@ inicializar o SDK.
 
 1. Importe a estrutura `IMFCore` na classe em que você deseja usar o {{site.data.keyword.amashort}} client SDK incluindo o cabeçalho a seguir:
 
-	**Objective-C:
-                    
-**
+	####Objective-C
+	{: #imfcore-objc}
 	
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
 	
 	```
 	
-	**Swift:**
-	O SDK do cliente {{site.data.keyword.amashort}} é implementado com o Objective-C. Pode ser necessário incluir um cabeçalho de ponte em seu projeto do Swift:
+	####Swift
+	{: #sdk-swift}
+	
+	O {{site.data.keyword.amashort}} client SDK é implementado com Objective-C. Pode ser necessário incluir um cabeçalho de ponte em seu projeto do Swift:
 	1. Clique com o botão direito em seu projeto no Xcode e selecione **Novo arquivo...**.
 	1. Na categoria **Origem iOS**, clique em **Arquivo de cabeçalho**. Atribua um nome ao arquivo `BridgingHeader.h`.
 	1. Inclua a linha a seguir em seu cabeçalho de ponte: `#import <IMFCore/IMFCore.h>`
@@ -95,16 +96,16 @@ inicializar o SDK.
 	
 1. Use o código a seguir para inicializar o {{site.data.keyword.amashort}} client SDK.  Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo. <br/>Substitua os valores *applicationRoute* e *applicationGUID* pelos valores em **Opções de dispositivo móvel** no painel do {{site.data.keyword.Bluemix_notm}}.
 
-	**Objective-C:
-                    
-**
+	####Objective-C
+	{: #sharedinstance-objc}
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-	**Swift:**
+	####Swift
+	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
@@ -119,9 +120,8 @@ Depois que o {{site.data.keyword.amashort}} client SDK for inicializado, será p
 
 1. Use seu aplicativo iOS para fazer uma solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar o `IMFClient`:
 
-	**Objective-C:
-                    
-**
+	####Objective-C
+	{: #nsstring-objc}
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -139,7 +139,8 @@ Depois que o {{site.data.keyword.amashort}} client SDK for inicializado, será p
 	}];
 	```
 
-	**Swift:**
+	####Swift
+	{: #imfclientrequestpath-swift}
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

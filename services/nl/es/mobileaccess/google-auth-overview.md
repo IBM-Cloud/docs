@@ -11,21 +11,24 @@ copyright:
 # Autenticación de usuarios con las credenciales de Google
 {: #google-auth}
 
-*Última actualización: 03 de julio de 2016*
+Última actualización: 22 de julio de 2016
+
 
 Puede configurar el servicio de {{site.data.keyword.amashort}} para proteger los recursos utilizando Google como proveedor de identidad. Los usuarios de la aplicación móvil o de aplicación web podrán autenticarse con las credenciales de Google.
 {:shortdesc}
 
-**Importante:** no es necesario instalar el SDK de Google por separado. El SDK de Google se instala automáticamente con los gestores de dependencias cuando configura el SDK del cliente de {{site.data.keyword.amashort}}.
+**Importante:** no es necesario instalar por separado el SDK del cliente proporcionado por Google. El SDK de Google se instala automáticamente por los gestores de dependencias cuando configura el SDK del cliente {{site.data.keyword.amashort}}.
 
 ## Flujo de solicitudes de {{site.data.keyword.amashort}}
 {: #google-auth-overview}
 
-En el siguiente diagrama simplificado se explica cómo {{site.data.keyword.amashort}} se integra con Google para la autenticación.
+### Flujo de solicitudes de cliente
 
-![imagen](images/mca-sequence-google.jpg)
+En el siguiente diagrama se explica cómo {{site.data.keyword.amashort}} se integra con Google para la autenticación. 
 
-1. Utilice el SDK de {{site.data.keyword.amashort}} para realizar una solicitud a los recursos de fondo que están protegidos por el SDK del servidor de {{site.data.keyword.amashort}}.
+![Diagrama del flujo de solicitudes de cliente](images/mca-sequence-google.jpg)
+
+* Utilice el SDK de {{site.data.keyword.amashort}} para realizar una solicitud a los recursos de fondo que están protegidos por el SDK del servidor de {{site.data.keyword.amashort}}.
 * El SDK del servidor de {{site.data.keyword.amashort}} detecta la solicitud no autorizada y devuelve un código HTTP 401 y un ámbito de autorización.
 * El SDK del cliente de {{site.data.keyword.amashort}} detecta automáticamente el código error HTTP 401 e inicia el proceso de autenticación.
 * El SDK del cliente de {{site.data.keyword.amashort}} contacta con el servicio de {{site.data.keyword.amashort}} y solicita una cabecera de autorización.
@@ -37,6 +40,14 @@ En el siguiente diagrama simplificado se explica cómo {{site.data.keyword.amash
 * A partir de este momento, todas las solicitudes que se realicen con el SDK del cliente de {{site.data.keyword.amashort}} tendrán una cabecera de autorización nueva.
 * El SDK del cliente de {{site.data.keyword.amashort}} vuelve a enviar automáticamente la solicitud original que activó el flujo de autorización.
 * El SDK del servidor de {{site.data.keyword.amashort}} extrae la cabecera de autorización de la solicitud, la valida con el servicio de {{site.data.keyword.amashort}} y otorga acceso a un recurso de fondo.
+
+
+### Flujo de solicitud de aplicación web de {{site.data.keyword.amashort}}
+{: #mca-google-web-sequence}
+El flujo de solicitud de aplicación web de {{site.data.keyword.amashort}} es similar al flujo del cliente móvil. Sin embargo, {{site.data.keyword.amashort}} protege la aplicación web, en lugar de un recurso de fondo de {{site.data.keyword.Bluemix_notm}}.
+
+  * La solicitud inicial la envía la aplicación web (desde un formulario de inicio de sesión, por ejemplo).
+  * El redireccionamiento final es en el área protegida de la propia aplicación web, en lugar de en el recurso protegido de fondo.  
 
 
 

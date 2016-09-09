@@ -11,7 +11,7 @@ copyright:
 # Configuration du SDK Swift iOS
 {: #getting-started-ios}
 
-*Dernière mise à jour : 17 juillet 2016*
+Dernière mise à jour : 1er août 2016
 {: .last-updated}
 
 {{site.data.keyword.amashort}} a rendu disponible un nouveau SDK Swift qui enrichit et améliore les fonctionnalités du SDK
@@ -50,7 +50,7 @@ des artefacts depuis les référentiels et les rend disponibles depuis votre app
 {: #install-cocoapods}
 
 1. Depuis une fenêtre de terminal, lancez la commande **pod --version**. Si CocoaPods est déjà installé, le numéro de version est affiché
-et vous pouvez passer à la section suivante pour installer le SDK. 
+et vous pouvez passer à la section suivante pour installer le SDK.
 
 1. Si CocoaPods n'est pas installé, exécutez la commande :
 ```
@@ -77,7 +77,7 @@ CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définire
 1. Enregistrez le fichier `Podfile` et lancez `pod install` depuis la ligne de commande. CocoaPods installe les dépendances
 pertinentes et affiche les dépendances et nacelles ajoutées.<br/>
 
-   **Important** : CocoaPods génère un fichier `xcworkspace`. A partir de ce moment, vous devrez toujours ouvrir ce fichier pour travailler sur votre projet.
+   **Important** : CocoaPods génère un fichier `xcworkspace`.  A partir de ce moment, vous devrez toujours ouvrir ce fichier pour travailler sur votre projet.
 
 1. Ouvrez l'espace de travail de votre projet iOS. Ouvrez le fichier `xcworkspace` qui a été généré par CocoaPods. Par exemple : `{your-project-name}.xcworkspace`. Exécutez `open {your-project-name}.xcworkspace`.
 
@@ -98,9 +98,7 @@ pertinentes et affiche les dépendances et nacelles ajoutées.<br/>
 
 1. Initialisez le SDK client {{site.data.keyword.amashort}}. Remplacez `<applicationRoute>` et
 `<applicationGUID>` par les valeurs de **Route** et **Identificateur global unique de l'application**
-de la section **Options pour application mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour
-afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône face (![Face](images/face.png "Face")) à l'angle
-supérieur gauche du tableau de bord. 
+de la section **Options pour application mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**.
 
 
  ```Swift
@@ -109,7 +107,7 @@ supérieur gauche du tableau de bord.
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- // Initialisez le SDK client.  
+ // Initialize the client SDK.  
  BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
@@ -118,17 +116,18 @@ supérieur gauche du tableau de bord.
       }
  ```
 
-## Envoi d'une requête à votre application back end mobile
+## Envoi d'une demande à votre application back end mobile
 {: #request}
 
 Une fois que le SDK client {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des requêtes à votre application back end
-mobile. 
+mobile.
 
 1. Essayez d'envoyer depuis votre navigateur une requête à un noeud final protégé de votre application back end mobile. Ouvrez l'URL suivante :
 `http://{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 <br/>Le noeud final `/protected` d'une application back end mobile créée avec le conteneur boilerplate MobileFirst Services Starter est
 protégé par {{site.data.keyword.amashort}}. Un message `Non autorisé` est renvoyé à votre navigateur car ce noeud final n'est
 accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
+
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
 
  ```Swift
@@ -148,7 +147,7 @@ accessible qu'aux applications mobiles instrumentées avec le SDK client de {{si
 1.  Lorsque votre demande aboutit, la sortie suivante figure dans la console Xcode :
 
  ```
-response:Optional("Bonjour, ceci est une ressource protégée de l'application back end mobile !"), no error
+ response:Optional("Bonjour, ceci est une ressource protégée de l'application back end mobile !"), no error
  ```
 {: screen}
  

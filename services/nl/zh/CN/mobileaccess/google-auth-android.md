@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-android}
 
 
-*上次更新时间：2016 年 6 月 16 日*
+上次更新时间：2016 年 8 月 04 日
 {: .last-updated}
 
 ## 开始之前
@@ -17,7 +17,9 @@ copyright:
 您必须具有：
 
 * 在 Android Studio 中配置为使用 Gradle 的 Android 项目。它不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。  
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。
+有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
+
 
 设置 {{site.data.keyword.amashort}} Android 应用程序的 Google 认证需要对以下各项进行进一步配置：
 * {{site.data.keyword.Bluemix_notm}} 应用程序
@@ -105,7 +107,8 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 	}
 	```
 
-	**注：**您可以除去对 `com.ibm.mobilefirstplatform.clientsdk.android` 组的 `core` 模块的依赖关系（如果有的话）。`googleauthentication` 模块会自动下载此依赖关系。`googleauthentication` 模块会下载 Google SDK 并将其安装在 Android 项目中。
+	**注：**您可以除去对 `com.ibm.mobilefirstplatform.clientsdk.android` 组的 `core` 模块的依赖关系（如果有的话）。`googleauthentication` 模块会自动下载此依赖关系。
+`googleauthentication` 模块会下载 Google+ SDK 并将其安装在 Android 项目中。
 
 1. 通过单击**工具 > Android > 使用 Gradle 文件同步项目**来使用 Gradle 同步项目。
 
@@ -121,7 +124,8 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 
 1. 要使用 {{site.data.keyword.amashort}} 客户端 SDK，您必须通过传递 context、applicationGUID 和 applicationRoute 参数来对其进行初始化。
 
-	在 Android 应用程序中，通常会将初始化代码放置在主 Activity 的 onCreate 方法中，但这不是强制性的。
+	在 Android 应用程序中，通常会将初始化代码放置在主 Activity 的 onCreate 方法中，但这
+不是强制性的。
 
 1. 初始化客户端 SDK，然后注册 Google 认证管理器。将 *applicationRoute* 和 *applicationGUID* 替换为仪表板中**移动选项**部分中的**路径**和**应用程序 GUID** 值。
 
@@ -131,13 +135,20 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 					"applicationGUID",
 					BMSClient.REGION_UK);
 						
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
+						
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
 
-  将 `BMSClient.REGION_UK` 替换为相应的区域。
+  将 `BMSClient.REGION_UK` 替换为相应的区域。要查看
+{{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
 
 
-	
+   **注：**如果您的 Android 应用程序是针对 Android V6.0（API 级别 23
+）或更高版本的，那么必须确保该应用程序具有 `android.permission.GET_ACCOUNTS`
+调用，然后才能调用 `register`。有关更多信息，请参阅
+[https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
 
 1. 将以下代码添加到您的 Activity：
 
@@ -155,7 +166,9 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 初始化客户端 SDK 并注册 Google 认证管理器后，可以开始对移动后端应用程序发起请求。
 
 
-开始测试之前，您必须具有使用 **MobileFirst Services Starter** 样板创建的移动后端应用程序，并且在 `/protected` 端点必须已经具有受 {{site.data.keyword.amashort}} 保护的资源。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+开始测试之前，您必须具有使用 **MobileFirst Services Starter** 样板创
+建的移动后端应用程序，并且必须已经具有受
+{{site.data.keyword.amashort}} `/protected` 端点保护的资源。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。使用 MobileFirst Services 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。所以此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
 

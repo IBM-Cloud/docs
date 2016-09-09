@@ -16,7 +16,7 @@ copyright:
 {: shortdesc}
 
 1. Bluemix에서 모바일 백엔드를 설정하고 모바일 앱에 SDK를 구성하십시오. 자세한 정보는 [시작하기](getting-started.html)를 참조하십시오. 
-1. 서버측 자원을 보호하십시오. 모바일 사용 가능 OAuth 보안을 사용하여 Node.js 또는 Liberty for Java&trade; 런타임에서 실행 중인 모바일 백엔드 자원을 보호하십시오. 자세한 정보는 [자원 보호](protecting-resources.html)를 참조하십시오. 
+1. 서버측 리소스를 보호하십시오. 모바일 사용 가능 OAuth 보안을 사용하여 Node.js 또는 Liberty for Java&trade; 런타임에서 실행 중인 모바일 백엔드 리소스를 보호하십시오. 자세한 정보는 [리소스 보호](protecting-resources.html)를 참조하십시오. 
 1. 선택사항: 애플리케이션에 대해 ID 제공자를 구성하십시오. 애플리케이션당 하나의 ID 제공자를 구성할 수 있습니다. ID 제공자를 구성하면 모바일 앱 사용자가 기존 Facebook 또는 Google+ 계정으로 로그인할 수 있습니다. 또는 사용자 정의 인증을 작성하여 사용자의 로그인 방법을 정의할 수 있습니다.
    * [Facebook](facebook-auth-overview.html)
    * [Google](google-auth-overview.html)
@@ -25,7 +25,7 @@ copyright:
 
 
 ># 관련 링크 {:class="linklist"}
->## 학습서 및 샘플 {:id="samples"}
+>## 튜토리얼 및 샘플 {:id="samples"}
 >* [android-helloauthentication](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication)
 >* [ios-helloauthentication](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication)
 >

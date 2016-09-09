@@ -5,10 +5,10 @@ copyright:
   
 ---
 
-# Sécurisation de l'autorisation avec Touch ID
+# Authorisation d'accès avec Touch ID
 {: #before-you-begin}
 
-*Dernière mise à jour : 22 juin 2016*
+Dernière mise à jour : 20 juillet 2016
 {: .last-updated}
 
 Touch ID est une fonctionnalité de reconnaissance d'empreinte digitale pour les périphériques iOS. Vous pouvez l'utiliser pour sécuriser automatiquement les informations d'autorisation pour les accès à venir. 

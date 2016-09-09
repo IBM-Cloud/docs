@@ -8,7 +8,7 @@ copyright:
 # Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée
 {: #custom-dash}
 
-*Dernière mise à jour : 17 juillet 2016*
+Dernière mise à jour : 17 juillet 2016
 {: .last-updated}
 
 
@@ -28,7 +28,7 @@ Utilisez le tableau de bord {{site.data.keyword.Bluemix}} pour configurer l'auth
 
 1. Cliquez sur **Options pour application mobile** et notez la valeur de **Route** (`applicationRoute`)
 et **Identificateur global unique de l'application** (`applicationGUID`). Vous aurez besoin de ces valeurs lors de
-l'initialisation du SDK. 
+l'initialisation du SDK.
 
 1. Cliquez sur la vignette {{site.data.keyword.amashort}}. Le tableau de bord {{site.data.keyword.amashort}} se charge.
 

@@ -10,7 +10,7 @@ copyright:
 # {{site.data.keyword.amashort}} 서비스로 백엔드 리소스 보호
 {: #protecting-resources}
 
-*마지막 업데이트 날짜: 2016년 7월 17일*
+마지막 업데이트 날짜: 2016년 7월 17일
 {: .last-updated}
 
 

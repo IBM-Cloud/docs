@@ -7,7 +7,7 @@ copyright:
 
 # 启用、配置和使用记录器
 {: #enable-logger}
-*上次更新时间：2016 年 5 月 6 日*
+上次更新时间：2016 年 5 月 6 日
 {: .last-updated}
 
 {{site.data.keyword.amashort}} 客户端 SDK 提供了一种日志记录框架，与您可能熟悉的其他日志框架（如 `java.util.logging` 或 `log4j`）类似。此日志记录框架支持每个数据包多个记录器实例，支持不同的日志级别，支持捕获对应用程序崩溃的堆栈跟踪，等等。

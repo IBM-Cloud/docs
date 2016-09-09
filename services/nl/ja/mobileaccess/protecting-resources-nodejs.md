@@ -8,7 +8,7 @@ copyright:
 # {{site.data.keyword.amashort}} を使用した Node.js リソースの保護
 {: #protecting-resources-nodejs}
 
-*最終更新日: 2016 年 4 月 15 日*
+最終更新日: 2016 年 4 月 15 日
 {: .last-updated}
 
 {{site.data.keyword.amashort}} Server SDK を使用して、Node.js アプリ内のリソースを保護することができます。

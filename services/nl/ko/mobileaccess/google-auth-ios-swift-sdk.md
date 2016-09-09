@@ -11,7 +11,7 @@ copyright:
 # iOS 앱에서 Google 인증 사용(Swift SDK)
 {: #google-auth-ios}
 
-*마지막 업데이트 날짜: 2016년 7월 17일*
+마지막 업데이트 날짜: 2016년 8월 1일
 {: .last-updated}
 
 {{site.data.keyword.amashort}} iOS Swift 앱에서 사용자를 인증하려면 Google 로그인을 사용하십시오. 새로 릴리스된 {{site.data.keyword.amashort}} Swift SDK가 기존 모바일 클라이언트 액세스 Objective-C SDK에서 제공하는 기능에 추가되어 해당 기능을 향상시킵니다. 
@@ -44,7 +44,7 @@ copyright:
 
 다음 단계에서는 앱을 준비하는 데 필요한 단계를 간략하게 설명합니다. 
 
-**참고:** `Google/SignIn` CocoaPod를 추가할 필요가 없습니다. 필수 SDK는 아래 `BMSGoogleAuthentication` CocoaPod에서 추가합니다.
+**참고:** Google Sign-In CocoaPod를 추가할 필요가 없습니다. 필수 SDK는 `BMSGoogleAuthentication` CocoaPod에서 추가합니다.
 
 1. 기본 대상의 **일반** 탭에 있는 **ID** 섹션에서 Xcode 프로젝트의 **번들 ID**를 기록하십시오. Google 로그인 프로젝트를 작성하는 데 필요합니다. 
 
@@ -138,7 +138,7 @@ use_frameworks!
  import BMSSecurity
  ```
 
-1. 다음 코드를 사용하여 클라이언트 SDK를 초기화하십시오. `<applicationRoute>` 및 `<applicationGUID>`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID**의 값으로 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 대시보드의 왼쪽 상단 모서리에 있는 페이스 아이콘(![페이스](/face.png "페이스"))을 클릭하십시오.  
+1. 다음 코드를 사용하여 클라이언트 SDK를 초기화하십시오. `<applicationRoute>` 및 `<applicationGUID>`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID**의 값으로 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -146,7 +146,9 @@ use_frameworks!
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- // Initialize the client SDK. BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
+ // Initialize the client SDK.BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+
+ BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
  GoogleAuthenticationManager.sharedInstance.register()
       return true
@@ -220,6 +222,6 @@ use_frameworks!
 GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  Google에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우, 사용자에게는 인증 용도로 Google을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 이 시점에, 사용자는 화면 상단 오른쪽 모서리에서 사용자 이름을 클릭하여 다른 사용자를 선택하고 이를 사용하여 로그인할 수 있습니다. 
+  Google에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우, 사용자에게는 인증 용도로 Google을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 이 시점에, 사용자는 사용자 이름을 클릭하여 <!--in the upper-right corner of the screen--> 선택하고 다른 사용자로 로그인할 수 있습니다.
 
    로그아웃 기능에 `callBack` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 

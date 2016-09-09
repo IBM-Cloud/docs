@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-ios}
 
 
-*Letzte Aktualisierung: 16. Juni 2016*
+Letzte Aktualisierung: 27. Juni 2016
 {: .last-updated}
 
 Verwenden Sie die Google-Anmeldung, um Benutzer für Ihre Mobile Client Access-iOS-App zu authentifizieren.
@@ -77,7 +77,7 @@ Jetzt, da Sie eine Google-Client-ID für iOS besitzen, können Sie die Google-Au
 
 1. Geben Sie bei **Application ID for iOS** Ihre Google-Client-ID für iOS an und klicken Sie auf **Save**.
 
-	Anmerkung: Zusätzlich zur Google-Client-ID ist auch der Umkehrwert für Ihre Clientkonfiguration erforderlich (siehe unten). Um auf beide Werte zuzugreifen, müssen Sie mithilfe des Stiftsymbols die Beispiel-PList herunterladen:
+	Anmerkung: Zusätzlich zur Google-Client-ID ist auch der Umkehrwert für Ihre Clientkonfiguration erforderlich. Um auf beide Werte zuzugreifen, müssen Sie mithilfe des Stiftsymbols die Beispiel-PList herunterladen:
 		![Download der Datei info.plist](images/download_plist.png)
 
 ## {{site.data.keyword.amashort}}-Google-Client-SDK für iOS konfigurieren
@@ -176,7 +176,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 	8. Stellen Sie sicher, dass Ihr Überbrückungsheader von Xcode aufgenommen wird, indem Sie Ihr Projekt erstellen (Build).
 
 
-3. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren.  Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** ermittelt haben.
+3. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren. Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** ermittelt haben.
 
 	Objective-C:
 
@@ -237,15 +237,15 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 				sourceApplication: sourceApplication, annotation: annotation)
 
 		IMFGoogleAuthenticationHandler.sharedInstance()
-							.handleOpenURL(shouldHandleGoogleURL)
-
-		return shouldHandleGoogleURL;
+							.handleOpenURL(shouldHandleGoogleURL)return shouldHandleGoogleURL;
 	}
 ```
 
 ## Authentifizierung testen
 {: #google-auth-ios-testing}
 Nach der Initialisierung des Client-SDK können Sie mit dem Senden von Anforderungen an Ihr mobiles Back-End beginnen.
+
+
 
 ### Vorbereitungen
 {: #google-auth-ios-testing-before}
@@ -302,7 +302,7 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 
 1. Indem Sie auf **OK** klicken, berechtigen Sie {{site.data.keyword.amashort}}, Ihre Google-Benutzeridentität zu Authentifizierungszwecken zu nutzen.
 
-1. 	Ihre Anforderung sollte erfolgreich ausgeführt werden. Die folgende Ausgabe sollte in LogCat angezeigt werden.
+1. 	Ihre Anforderung sollte erfolgreich ausgeführt werden. Die folgende Ausgabe sollte in LogCat angezeigt werden. 
 
 	![Bild](images/ios-google-login-success.png)
 		
@@ -320,6 +320,6 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Google angemeldet hat, und der Benutzer versucht, sich wieder anzumelden, muss er sich bei {{site.data.keyword.amashort}} für die Verwendung von Google zu Authentifizierungszwecken berechtigen. An dieser Stelle kann der Benutzer in der rechten oberen Ecke der Anzeige auf den Benutzernamen klicken, um einen anderen Benutzer auszuwählen und sich mit diesem anzumelden.
+	Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Google angemeldet hat, und der Benutzer versucht, sich wieder anzumelden, muss er sich bei {{site.data.keyword.amashort}} für die Verwendung von Google zu Authentifizierungszwecken berechtigen. An dieser Stelle kann der Benutzer auf den Benutzernamen klicken,<!--in the upper-right corner of the screen--> um einen anderen Benutzer auszuwählen und sich mit diesem anzumelden.
 
 	Die Übergabe von `callBack` an die Abmeldefunktion ist optional. Sie können auch `nil` übergeben.

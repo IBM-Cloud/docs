@@ -8,7 +8,8 @@ copyright:
 # Activation de l'authentification Google pour les applications Cordova
 {: #google-auth-cordova}
 
-*Dernière mise à jour : 28 juin 2016*
+
+Dernière mise à jour : 21 juillet 2016
 {: .last-updated}
 
 Pour configurer l'intégration de l'authentification Google dans les applications Cordova, vous devez apporter des modifications dans le code natif de
@@ -50,11 +51,11 @@ Les étapes requises pour configurer l'intégration de l'authentification Google
 
 1. Accédez au répertoire `Sources/Authenticators/IMFGoogleAuthentication` et copiez (faites glisser) tous les fichiers dans votre projet iOS dans Xcode. Les fichiers que vous devez copier sont les suivants :
 
-	> * IMFDefaultGoogleAuthenticationDelegate.h
-	> * IMFDefaultGoogleAuthenticationDelegate.m
-	> * IMFGoogleAuthenticationDelegate.h
-	> * IMFGoogleAuthenticationHandler.h
-	> * IMFGoogleAuthenticationHandler.m
+	* IMFDefaultGoogleAuthenticationDelegate.h
+	* IMFDefaultGoogleAuthenticationDelegate.m
+	* IMFGoogleAuthenticationDelegate.h
+	* IMFGoogleAuthenticationHandler.h
+	* IMFGoogleAuthenticationHandler.m
 
 Cochez la case **Copy files.... (Copier les fichiers)**.
 
@@ -95,13 +96,9 @@ Vous devez disposer d'une application de back end protégée par {{site.data.key
 `/protected`. Pour configurer un noeud final `/protected`, voir la rubrique [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Essayez d'envoyer une requête à un noeud final protégé de votre application back end mobile depuis le navigateur de votre ordinateur en ouvrant
-`{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
+1. Essayez d'envoyer une demande à un noeud final protégé de votre application back end mobile dans votre navigateur de bureau en ouvrant `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
 
-1. Le noeud final `/protected` d'une application back end mobile créée par le conteneur boilerplate
-MobileFirst Services Boilerplate étant protégé par
-{{site.data.keyword.amashort}}, il n'est accessible que par les applications mobiles instrumentées avec le SDK client
-{{site.data.keyword.amashort}}. Pour cette raison, le message `Unauthorized` s'affiche dans votre navigateur de bureau.
+1. Le noeud final `/protected` d'une application back end mobile créée avec le conteneur boilerplate MobileFirst Services est protégé par {{site.data.keyword.amashort}}, seules les applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}} peuvent y accéder. Pour cette raison, le message `Unauthorized` s'affiche dans votre navigateur de bureau.
 
 1. A l'aide de votre application Cordova, envoyez une demande au même noeud final. Ajoutez le code suivant après avoir initialisé
 `BMSClient`.
@@ -110,18 +107,19 @@ MobileFirst Services Boilerplate étant protégé par
     	console.log("success", data);
     } 	var failure = function(error)
     	{console.log("failure", error);
-    } 	var request = new MFPRequest("/protected", MFPRequest.GET); 	request.send(success, failure); 	```
+    } 	var request = new MFPRequest("/protected", MFPRequest.GET); 	request.send(success, failure);
+	```
 
 
-1. Lancez votre application. L'écran de connexion Google s'affiche.
+1. Lancez votre application. L'écran de connexion à Google s'affiche.
 
-	![image](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-google-login.png)
-	Cet écran peut être légèrement différent si l'appli Facebook n'est pas installée sur votre périphérique, ou si vous n'y êtes pas connecté.
+	![Ecran de connexion à Google](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Ecran de connexion à Google](images/ios-google-login.png)
+	Cet écran peut être légèrement différent si l'application Google n'est pas installée sur votre périphérique, ou si vous n'y êtes pas actuellement connecté.
 1. En cliquant sur **OK**, vous autorisez {{site.data.keyword.amashort}} à utiliser votre identité utilisateur Google à des fins
 d'authentification.
 
-1. 	Votre demande doit aboutir. Selon la plateforme que vous utilisez, vous devez voir le résultat suivant dans la console LogCat ou Xcode.
+1. 	Votre demande doit aboutir. Selon la plateforme que vous utilisez, vous devez voir un résultat similaire à l'un de ceux ci-dessous dans la console LogCat ou Xcode.
 
-	![image](images/android-google-login-success.png)
+	![Fragments de code sous android](images/android-google-login-success.png)
 
-	![image](images/ios-google-login-success.png)
+	![Fragments de code sous iOS](images/ios-google-login-success.png)

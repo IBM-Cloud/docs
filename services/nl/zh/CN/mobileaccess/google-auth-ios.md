@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-ios}
 
 
-*上次更新时间：2016 年 6 月 16 日*
+上次更新时间：2016 年 6 月 27 日
 {: .last-updated}
 
 使用 Google 登录，在 Mobile Client Access iOS 应用程序上认证用户。
@@ -76,7 +76,8 @@ copyright:
 
 1. 在 **iOS 的应用程序标识**中，指定 iOS 的 Google 客户端标识，然后单击**保存**。
 
-	注：除了 Google 客户端标识，您还需要逆向值进行客户端配置（请参见下文）。要访问这两个值，请使用画笔图标下载示例 plist：![下载 info.plist 文件](images/download_plist.png)
+	注：除了 Google 客户端标识之外，进行客户端配置时还需要逆向值。要访问这两个值，请使用画笔图标下载示例 plist：
+![下载 info.plist 文件](images/download_plist.png)
 
 ## 针对 iOS 配置 {{site.data.keyword.amashort}} Google 客户端 SDK
 {: #google-auth-ios-sdk}
@@ -109,7 +110,8 @@ copyright:
 
 	第二个 URL 方案是应用程序的捆绑软件标识。
 
-* 使用文本编辑器。右键单击 `info.plist`，然后选择**打开方式 > 源代码**。将以下 XML 添加到文件中：
+* 使用文本编辑器。右键单击 `info.plist`，然后选择**打开方式 > 源代码
+**。将以下 XML 添加到文件中：
 
 	```XML
 	<key>CFBundleURLTypes</key>
@@ -317,6 +319,7 @@ return shouldHandleGoogleURL;
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Google 进行认证。此时，用户可以单击屏幕右上角的用户名，以选择其他用户并登录。
+	如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Google 进行认证。
+此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
 
 	您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

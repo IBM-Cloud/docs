@@ -8,7 +8,8 @@ copyright:
 # Habilitación de la autenticación de Google para apps de Cordova
 {: #google-auth-cordova}
 
-*Última actualización: 28 de junio de 2016*
+
+Última actualización: 21 de julio de 2016
 {: .last-updated}
 
 Para configurar aplicaciones de Cordova para la integración de la autenticación de Google, debe realizar cambios en el código nativo de la aplicación de Cordova (Java, Objective-C o Swift). Debe configurar cada plataforma por separado. Utilice el entorno de desarrollo nativo para realizar cambios en el código nativo; por ejemplo, en Android Studio o Xcode.
@@ -48,11 +49,11 @@ Los pasos necesarios para configurar la plataforma iOS de una aplicación de Cor
 
 1. Vaya al directorio `Sources/Authenticators/IMFGoogleAuthentication` y copie (arrastre y suelte) todos los archivos al proyecto de iOS en Xcode. Los archivos que debe copiar son:
 
-	> * IMFDefaultGoogleAuthenticationDelegate.h
-	> * IMFDefaultGoogleAuthenticationDelegate.m
-	> * IMFGoogleAuthenticationDelegate.h
-	> * IMFGoogleAuthenticationHandler.h
-	> * IMFGoogleAuthenticationHandler.m
+	* IMFDefaultGoogleAuthenticationDelegate.h
+	* IMFDefaultGoogleAuthenticationDelegate.m
+	* IMFGoogleAuthenticationDelegate.h
+	* IMFGoogleAuthenticationHandler.h
+	* IMFGoogleAuthenticationHandler.m
 
 Seleccione el recuadro **Copiar archivos...**.
 
@@ -88,11 +89,11 @@ Después de inicializar el SDK del cliente, puede empezar a realizar solicitudes
 Debe disponer de una aplicación de programa de fondo protegida por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Intente enviar una solicitud al punto final protegido de la aplicación de programa de fondo móvil en su navegador de escritorio abriendo `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`
+1. Intente enviar una solicitud al punto final protegido de su aplicación de fondo móvil en su navegador de escritorio abriendo `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`.
 
-1. El punto final `/protected` de una aplicación de programa de fondo móvil creado con MobileFirst Services Boilerplate está protegido con {{site.data.keyword.amashort}}; por tanto, solo se puede acceder al mismo mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Como resultado, verá `Unauthorized` en el navegador de escritorio.
+1. El punto final `/protected` de una aplicación móvil de fondo creada con MobileFirst Services Boilerplate está protegido con {{site.data.keyword.amashort}}; por tanto, solo se puede acceder al mismo mediante aplicaciones móviles instrumentadas con el SDK del cliente {{site.data.keyword.amashort}}. Como resultado, verá `Unauthorized` en el navegador de escritorio.
 
-1. Utilice la aplicación de Cordova para realizar solicitudes al mismo punto final. Añada el siguiente código después de inicializar `BMSClient`.
+1. Utilice la aplicación de Cordova para realizar una solicitud al mismo punto final. Añada el siguiente código después de inicializar `BMSClient`.
 
 	```JavaScript
 	var success = function(data){
@@ -106,14 +107,14 @@ Debe disponer de una aplicación de programa de fondo protegida por {{site.data.
 	```
 
 
-1. Ejecute la aplicación. Aparece una pantalla de inicio de sesión de Google.
+1. Ejecute la aplicación. Se visualiza una pantalla de inicio de sesión de Google.
 
-	![imagen](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-google-login.png)
+	![Pantalla de inicio de sesión de Google](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Pantalla de inicio de sesión de Google](images/ios-google-login.png)
 	Esta pantalla puede ser ligeramente diferente si no tiene instalada la app de Facebook en su dispositivo, o bien si no ha iniciado sesión en Facebook.
 1. Si pulsa **Aceptar** está autorizando que {{site.data.keyword.amashort}} utilice su identidad de usuario de Google para fines de autenticación.
 
-1. 	Su solicitud debería realizarse correctamente. Según la plataforma que esté utilizando, debería ver la salida siguiente en la consola de LogCat/Xcode.
+1. 	Su solicitud debería realizarse correctamente. Según la plataforma que utilice, verá la salida siguiente en la consola LogCat/Xcode: 
 
-	![imagen](images/android-google-login-success.png)
+	![Fragmento de código en android](images/android-google-login-success.png)
 
-	![imagen](images/ios-google-login-success.png)
+	![Fragmento de código en iOS](images/ios-google-login-success.png)
