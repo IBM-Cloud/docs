@@ -8,7 +8,7 @@ copyright:
 # Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} Android
 {: #custom-android}
 
-*Última actualización: 17 de julio de 2016*
+Última actualización: 1 de agosto de 2016
 {: .last-updated}
 
 
@@ -34,7 +34,7 @@ Debe tener un recurso que esté protegido por una instancia del servicio de {{si
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
@@ -60,9 +60,7 @@ Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e *
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Sustituya el `BMSClient.REGION_UK` con la región adecuada.					
-	
-
+Sustituya el `BMSClient.REGION_UK` con la región adecuada.	 Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono **Avatar**  ![Icono de Avatar](images/face.jpg "Icono de Avatar") en la barra de menú para abrir el widget **Cuenta y soporte**.
 ## Interfaz AuthenticationListener
 {: #custom-android-authlistener}
 
@@ -174,8 +172,10 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 Después de crear una clase AuthenticationListener personalizada, regístrela con `BMSClient` antes de empezar a utilizar la escucha. Añada el código siguiente a la aplicación. Debe llamarse a este código antes de enviar solicitudes a los recursos protegidos.
 
 ```Java
-BMSClient.getInstance().registerAuthenticationListener(realmName,
-									new CustomAuthenticationListener());
+MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+
 ```
 
 Utilice el valor de *realmName* que indicó en el panel de control de {{site.data.keyword.amashort}}.
@@ -224,7 +224,7 @@ Debe tener una aplicación que se haya creado con el contenedor modelo de {{site
  También puede añadir la funcionalidad de finalización de sesión añadiendo este código:
 
  ```Java
- AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  Si invoca este código después de que el usuario haya iniciado sesión, la sesión del usuario se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá volver a responder a la pregunta que reciba del servidor.

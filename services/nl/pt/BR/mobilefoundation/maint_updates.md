@@ -10,13 +10,14 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Manutenção e atualização
+# Manutenção
+e atualização
 {: #maintupdates_mf}
 
-*Última atualização: 5 de julho de 2016*
+Última atualização: 3 de agosto de 2016
 {: .last-updated}
 
-O {{site.data.keyword.mobilefoundation_short}} provisiona um {{site.data.keyword.mfserver_short_notm}} no {{site.data.keyword.containerlong}} como um grupo de contêiner. As
+O {{site.data.keyword.mobilefoundation_short}} provisiona um {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group-->. As
 atualizações no servidor do
 {{site.data.keyword.mobilefoundation_short}} são
 notificadas aos usuários. É possível escolher atualizar o servidor
@@ -29,7 +30,7 @@ for conveniente.
 
 Quando houver uma atualização para o
 {{site.data.keyword.mobilefoundation_short}}, o usuário será
-notificado sobre a disponibilidade da atualização. Uma notificação
+notificado sobre a disponibilidade da atualização.  Uma notificação
 será mostrada no painel da instância de serviço. O usuário pode
 escolher aplicar a atualização no
 {{site.data.keyword.mobilefoundation_short}} durante uma
@@ -63,6 +64,6 @@ atualizações à sua instância de serviço do {{site.data.keyword.mobilefounda
 [Recriando
 servidor no plano do Developer](c_using_mfs_p1.html#recreate_mobilefoundation_p1) e
 [Recriando
-servidor no plano do Professional 1 Application](c_using_mfs_p2.html#recreate_mobilefoundation_p2) para entender
+servidor no plano Professional 1 Application](c_using_mfs_p2.html#recreate_mobilefoundation_p2) para entender
 a diferença no comportamento nos planos ao clicar em
 **Recriar**.

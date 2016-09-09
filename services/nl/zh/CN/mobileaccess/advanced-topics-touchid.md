@@ -5,10 +5,10 @@ copyright:
   
 ---
 
-# 通过 Touch 标识保护授权
+# 通过 Touch 标识授予访问权
 {: #before-you-begin}
 
-*上次更新时间：2016 年 6 月 22 日*
+上次更新时间：2016 年 7 月 20 日
 {: .last-updated}
 
 Touch 标识是 iOS 设备的一种指纹识别功能。可以使用 Touch 标识来自动保护授权信息以供未来使用。 

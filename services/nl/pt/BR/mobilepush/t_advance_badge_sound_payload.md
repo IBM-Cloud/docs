@@ -9,7 +9,7 @@ copyright:
 
 
 #Ativando notificações push avançadas
-*Última atualização: 14 de junho de 2016*
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
 Configure um badge iOS, som, carga útil JSON adicional, notificações acionáveis e notificações de participação.
@@ -19,10 +19,8 @@ Configure um badge iOS, som, carga útil JSON adicional, notificações acionáv
 
 Configure um badge iOS, som e carga útil JSON adicional.
 
-1. No painel Notificações push, vá para a guia
-                        **Notificações**.
-2. Vá para a seção **Campos opcionais**
-para configurar os seguintes recursos de notificação push. 
+1. No painel {{site.data.keyword.mobilepushshort}}, acesse a guia **Notificações**.
+2. Acesse a seção **Campos opcionais** para configurar os recursos do {{site.data.keyword.mobilepushshort}}. 
 	- **Arquivo de som** - insira uma sequência para apontar para o arquivo
 de som em seu app móvel. Na carga útil, especifique o nome da sequência do
 arquivo de som a ser usado.
@@ -36,8 +34,7 @@ configure o valor dessa propriedade para 0.
 
 ###Android
 
-Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao enviar a notificação, inclua o nome do arquivo
-de som no campo de som da notificação push.
+Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao enviar a notificação, inclua o nome do arquivo de som no campo de som do {{site.data.keyword.mobilepushshort}}.
 
 ```
 "settings": {
@@ -58,9 +55,7 @@ de som no campo de som da notificação push.
 	  }
 }
 ``` 		
-**Carga útil adicional** - essa carga útil pode ser qualquer
-par de valores de chave e deve ser um objeto JSON que você queira enviar com a
-notificação push.
+**Carga útil adicional** - Essa carga útil pode ser qualquer par de valores de chave e deve ser um objeto JSON que você deseja enviar com o {{site.data.keyword.mobilepushshort}}.
 
 ```
 {"key":"value", "key2":"value2"}
@@ -70,9 +65,7 @@ notificação push.
 ## Participação de notificações do Android 
 {: #hold-notifications-android}
 
-Quando seu aplicativo entra em segundo plano, você provavelmente deseja que a notificação push retenha as notificações enviadas ao seu
-aplicativo. Para reter notificações, chame o método
-hold() no método onPause() da atividade que está manipulando as notificações push.
+Quando seu aplicativo entra em segundo plano, é possível que você queira que o {{site.data.keyword.mobilepushshort}} retenha as notificações enviadas para seu aplicativo. Para reter notificações, chame o método hold() no método onPause() da atividade que está manipulando o {{site.data.keyword.mobilepushshort}}.
 
 ```
 @Override
@@ -88,9 +81,9 @@ protected void onPause() {
 ## Ativando notificações acionáveis de iOS  
 {: #enable-actionable-notifications-ios}
 
-Ao contrário das notificações push tradicionais, as notificações que permitem ações solicita que os usuários façam uma
-seleção no recebimento do alerta de notificação sem abrir o app. Use as instruções
-a seguir para ativar notificações push que permitem ações no aplicativo.
+Ao contrário do {{site.data.keyword.mobilepushshort}} tradicional, as notificações acionáveis solicitam que os usuários façam uma seleção no recebimento do alerta de notificação sem abrir o app. 
+
+Conclua as etapas para ativar o {{site.data.keyword.mobilepushshort}} acionável em seu aplicativo.
 
 1. Crie uma ação de resposta do usuário.
 
@@ -131,7 +124,7 @@ a seguir para ativar notificações push que permitem ações no aplicativo.
 2. Crie a categoria de notificação e configure uma ação. **UIUserNotificationActionContextDefault** ou
                 **UIUserNotificationActionContextMinimal** são contextos válidos.
 
-	Objective-C
+Objective-C
 
 	```
 	// For Objective-C
@@ -140,7 +133,7 @@ a seguir para ativar notificações push que permitem ações no aplicativo.
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
 	```    
 
-	Swift
+Swift
 
 	```
 	// For Swift
@@ -149,17 +142,16 @@ a seguir para ativar notificações push que permitem ações no aplicativo.
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
 	```
 
-1. Crie a configuração de notificação e designe as categorias da etapa
-anterior.
+1. Crie a configuração de notificação e designe as categorias da etapa anterior.
 
-	Objective-C
+Objective-C
 
 	```
 	// For Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
 	```
 
-	Swift
+Swift
 
 	```
 	// For Swift
@@ -169,15 +161,17 @@ anterior.
 1. Crie a notificação local ou remota e designe a ela a identidade da
 categoria.
 
-	Objective-C
+Objective-C
 
 	```
-	//For Objective-C 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
+	//For Objective-C
+
+	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
 
-	Swift
+Swift
 
 	```
 	//For Swift

@@ -1,4 +1,4 @@
----
+	---
 
 copyright:
  years: 2015, 2016
@@ -12,17 +12,17 @@ copyright:
 
 # Einführung in {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-*Letzte Aktualisierung: 14. Juni 2016*
+Letzte Aktualisierung: 16. August 2016
 {: .last-updated}
 
 {:shortdesc}
 
-Der Push Notifications-Service bietet eine gemeinsame Plattform zum Senden und Verwalten von mobilen Push-Benachrichtigungen, die als Ziel iOS- und Android-Plattformen haben. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten und zur Geräteplattform und führt das Senden von Push-Benachrichtigungen an die Benutzer aus. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID') sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und  [REST-APIs](https://mobile.{DomainName}/imfpushrestapidocs/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
+Der {{site.data.keyword.mobilepushshort}}-Service bietet eine gemeinsame Plattform zum Senden und Verwalten von mobilen Push-Benachrichtigungen, die iOS- und Android-Plattformen zum Ziel haben. Der {{site.data.keyword.mobilepushshort}}-Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten sowie zur Geräteplattform und verarbeitet die Zuteilung von Push-Benachrichtigungen an die Benutzer. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID') sowie Tags (Themen) als Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und [REST-APIs](https://mobile.{DomainName}/imfpushrestapidocs/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
 
 In diesem Abschnitt wird beschrieben, wie einfache Push-Benachrichtigungen eingerichtet werden. Wenn Sie eine einfache Benachrichtigung verwenden, wird die Benachrichtigung als Rundsendung versendet und nicht mithilfe von Tags an einen bestimmten Benutzerkreis.
 
 1. [Berechtigungsnachweise für einen Benachrichtigungsprovider konfigurieren](t__main_push_config_provider.html)
-2. [Mobile App für den Empfang von Benachrichtungen aktivieren](c_enable_push.html)
+2. [Mobile App für den Empfang von Benachrichtigungen aktivieren](c_enable_push.html)
 3. [Einfache Push-Benachrichtigungen senden](t_send_push_notifications.html)
 
 # Zugehörige Links

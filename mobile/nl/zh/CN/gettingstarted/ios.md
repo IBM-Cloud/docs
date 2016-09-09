@@ -10,7 +10,7 @@ copyright:
 
 # Hello Bluemix for iOS 样本入门
 {: #gettingstarted-android}
-*上次更新时间：2016 年 6 月 1 日*
+上次更新时间：2016 年 6 月 1 日
 {: .last-updated}  
 
 如果想要从新的 iOS 应用程序开始操作，可以使用 Hello Bluemix 应用程序。此应用程序演示了如何在不认证的情况下，从移动应用程序连接到 {{site.data.keyword.Bluemix}} 后端。准备就绪后，可以获取要在应用程序中使用的特定库。
@@ -32,7 +32,7 @@ copyright:
 
 
 	**重要信息**：appRoute 必须使用 `https` 协议，而不能使用 `http`，否则可能会因为应用程序传输安全性设置而发生连接失败。您可以在 [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/) 博客帖子中阅读有关这些设置的更多信息。
-
+	
 4. 在模拟器中，单击**对 {{site.data.keyword.Bluemix_notm}} 执行 Ping 操作**。样本应用程序会从 Mobile Client Access 服务获取 Authorization 头。如果 ping 操作成功，模拟器中的文本将更新。
 
   在 Xcode 中从移动应用程序成功连接到 {{site.data.keyword.Bluemix_notm}} 后，您会看到：`哇！您已建立连接`

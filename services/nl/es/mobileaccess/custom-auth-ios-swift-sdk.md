@@ -9,11 +9,11 @@ copyright:
 
 {: #custom-ios}
 
-*Última actualización: 18 de julio de 2016*
+Última actualización: 1 de agosto de 2016
 {: .last-updated}
 
 
-Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amashort}} y conecte la aplicación a {{site.data.keyword.Bluemix}}. El nuevo SDK de {{site.data.keyword.amashort}} Swift amplía y mejora la funcionalidad proporcionada por el SDK Objetive-C de Mobile Client Access existente.
+Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amashort}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.  El nuevo SDK de {{site.data.keyword.amashort}} Swift amplía y mejora la funcionalidad proporcionada por el SDK Objetive-C de Mobile Client Access existente.
 
 **Nota:** Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK a finales del año en favor del nuevo SDK de Swift.
 
@@ -65,7 +65,8 @@ Para inicializar el SDK, especifique los parámetros `applicationRoute` y `appli
 
 1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}, cambie el gestor de autorización por MCAAuthorizationManager y defina un delegado de autenticación y regístrelo. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. 
 
-  Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}m pulse en el icono de c ara (![Cara](/face.png "Cara")) que se encuentra en la esquina superior derecha del panel de control. 
+  Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono de Avatar ![Icono de Avatar](images/face.jpg "Icono de Avatar") en la barra de menú para abrir el widget Cuenta y soporte. 
+  <!--upper-left corner of the -->
 
   Para `<yourProtectedRealm>`, utilice el **nombre de reino** que ha definido en el título **Custom** del panel de control de {{site.data.keyword.amashort}}.
 

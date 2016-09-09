@@ -11,7 +11,7 @@ copyright:
 # iOS 앱에서 Facebook 인증 사용(Swift SDK)
 {: #facebook-auth-ios}
 
-*마지막 업데이트 날짜: 2016년 7월 17일*
+마지막 업데이트 날짜: 2016년 8월 1일
 {: .last-updated}
 
 iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Facebook 애플리케이션에 대한 iOS 플랫폼을 추가하고 구성하십시오.
@@ -20,7 +20,7 @@ iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Faceboo
 ## 시작하기 전에
 {: #facebook-auth-ios-before}
  다음이 있어야 합니다.
-* CocoaPods와 작동하도록 설정된 iOS 프로젝트. 자세한 정보는 [iOS Swift SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)의 **CocoaPods 설치**를 참조하십시오.
+* CocoaPods와 작동하도록 설정된 iOS 프로젝트가 있어야 합니다. 자세한 정보는 [iOS Swift SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)의 **CocoaPods 설치**를 참조하십시오.
    **참고:** 계속하기 전에 코어 {{site.data.keyword.amashort}} 클라이언트 SDK를 설치하지 않아도 됩니다.
 * {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
 
@@ -30,7 +30,7 @@ iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Faceboo
 * 개발자용 Facebook 사이트의 Facebook 애플리케이션.  
 
 
-**중요:** Facebook의 고유 SDK를 별도로 설치할 필요가 없습니다. Facebook SDK는 아래 `BMSFacebookAuthentication` Pod에서 자동으로 설치합니다. 개발자용 Facebook 사이트에서 앱을 추가하거나 구성하는 경우 **Xcode 프로젝트에 Facebook SDK 추가** 단계를 건너뛸 수 있습니다. 
+**중요:** Facebook SDK(`com.facebook.FacebookSdk`)를 별도로 설치하지 않아도 됩니다. Facebook SDK는 {{site.data.keyword.amashort}} `BMSFacebookAuthentication` Pod와 함께 자동으로 설치합니다. 개발자용 Facebook 웹 사이트에서 앱을 추가하거나 구성하는 경우 **Xcode 프로젝트에 Facebook SDK 추가** 설정을 건너뛸 수 있습니다.
 
 **참고:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만 새로운 Swift SDK를 위해 올해 말해 중단될 계획입니다. 
 ## iOS 플랫폼에 대한 Facebook 애플리케이션 구성
@@ -185,7 +185,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
  import BMSSecurity
  ```
 2. 클라이언트 SDK를 초기화하십시오.`<applicationRoute>` 및 `<applicationGUID>`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID**의 값으로 바꾸십시오.
- {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 대시보드의 왼쪽 상단 모서리에 있는 페이스 아이콘(![페이스](images/face.jpg "페이스 아이콘"))을 클릭하십시오. 
+ {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -200,9 +200,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
  FacebookAuthenticationManager.sharedInstance.register()
  ```
 
-1. 앱 활성화에 대한 알림을 Facebook SDK에 전송하고, 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 다음 코드를 추가하여 Facebook 인증 핸들러를 등록하십시오. BMSClient 인스턴스를 초기화한 후에 바로 이 코드를 추가하고 Facebook을 인증 관리자로 등록하십시오.
-
- 
+1. 앱 활성화에 대한 알림을 Facebook SDK에 전송하고, 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 다음 코드를 추가하여 Facebook 인증 핸들러를 등록하십시오. BMSClient 인스턴스를 초기화한 후 이 코드를 추가하고 Facebook을 인증 관리자로 등록하십시오.
 
  ```Swift
   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)

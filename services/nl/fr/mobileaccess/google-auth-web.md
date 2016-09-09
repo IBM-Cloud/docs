@@ -8,10 +8,10 @@ copyright:
 # Activation de l'authentification Google pour les applications Web
 {: #google-auth-web}
 
-*Dernière mise à jour : 18 juillet 2016*
+Dernière mise à jour : 18 juillet 2016
 {: .last-updated}
 
-Utilisation de Google Sign-In pour authentification d'utilisateurs sur votre application Web.
+Utilisation de Google Sign-In pour authentification d'utilisateurs sur votre application Web. Ajoutez une fonctionnalité de sécurité {{site.data.keyword.amashort}}. 
 
 
 ## Avant de commencer
@@ -37,7 +37,7 @@ et sont requis pour la configuration du tableau de bord {{site.data.keyword.amas
 {{site.data.keyword.amashort}} dans la zone URI de redirection autorisées. Vous pouvez obtenir l'URI d'autorisation de redirection
 {{site.data.keyword.amashort}} depuis l'écran de configuration du tableau de bord
 {{site.data.keyword.amashort}} (voir étapes ci-dessous). 
-6. Enregistrez les changements. Notez l'ID client Google et la Valeur confidentielle de l'application.
+6. Enregistrez les changements. Notez l'ID client et la valeur confidentielle Google.
 
 
 ## Configuration de {{site.data.keyword.amashort}} pour l'authentification Google
@@ -47,9 +47,7 @@ Maintenant que vous disposez d'un ID d'application et d'une valeur confidentiell
 1. Cliquez sur la vignette {{site.data.keyword.amashort}}. Le tableau de bord {{site.data.keyword.amashort}} se charge.
 1. Cliquez sur le bouton sur le panneau Google.
 1. Dans la section **Configure for Web** :   
-    * Notez la valeur dans la zone de texte **Mobile Client Access Redirect URI for Google Developer Console**. Il s'agit de la valeur
-que vous devrez ajouter à la zone **URI de redirection autorisés** sous **Restrictions dans l'ID client pour application Web**
-dans **Portail développeurs Google** à l'étape 3 ci-dessus.
+    * Notez la valeur dans la zone de texte **Mobile Client Access Redirect URI for Google Developer Console**. Il s'agit de la valeur que vous devez ajouter à la zone relative aux identificateurs URI de redirection valides de l'option portant sur les restrictions dans l'ID client pour l'application Web du portail des développeurs, à l'étape 3.
     * Entrez l'**ID client Google** et la **Valeur confidentielle du client**.
     * Entrez l'URI de redirection dans **URI de redirection de votre application Web**. Cette valeur est celle de l'URI de redirection à
 laquelle accéder à l'aboutissement du processus d'autorisation et est déterminée par le développeur.
@@ -68,16 +66,14 @@ Pour démarrer le processus d'autorisation :
 (`clientId`) dans les données d'identification du service stockées dans la variable d'environnement
 `VCAP_SERVICES`. 
 
-    **Remarque :** Si vous avez créé le service {{site.data.keyword.amashort}} avant l'ajout de la prise en charge Web, il se peut
-que vous ne disposiez pas de noeuds finaux d'autorisation dans les données d'identification pour le service. 
-Dans ce cas, utilisez le noeud final d'autorisation ci-dessous correspondant à votre région Bluemix :
+    **Remarque :** si vous avez créé le service {{site.data.keyword.amashort}} avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final d'autorisation dans les données d'identification. A la place, utilisez les noeuds finaux d'autorisation suivants, selon votre région Bluemix :
 
 
  	Sud des Etats-Unis : 
  	```
  	https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
  	```
- 	Londres :
+ 	Londres : 
  	```
  	https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
   	```
@@ -85,66 +81,61 @@ Dans ce cas, utilisez le noeud final d'autorisation ci-dessous correspondant à 
   	```
   	https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
   	```
-1. Construisez l'URI du serveur d'autorisation en utilisant `response_type("code")`, `client_id` et
+2. Construisez l'URI du serveur d'autorisation en utilisant `response_type("code")`, `client_id` et
 `redirect_uri` en tant que paramètres de requête.
-1. Redirigez l'utilisateur depuis votre application Web vers l'URI généré.
+3. Redirigez l'utilisateur depuis votre application Web vers l'URI généré.
   
-L'exemple ci-dessous extrait les paramètres depuis la variable `VCAP_SERVICES`, construit l'URL et envoie la demande de redirection.
+L'exemple suivant extrait les paramètres depuis la variable `VCAP_SERVICES`, construit l'URL et envoie la demande de redirection.
   
 ```Java
  var cfEnv = require("cfenv"); 
  app.get("/protected", checkAuthentication, function(req, res, next){ 
  	res.send("Bonjour, ceci est un noeud final protégé");
- });
+ }); 
 
  app.get("/protected", checkAuthentication, function(req, res, next){ 
  	res.send("Bonjour, ceci est un noeud final protégé");
- 	function checkAuthentication(req, res, next){
+ 	function checkAuthentication(req, res, next){ 
 
 	// Vérifie si l'utilisateur est authentifié
-  if (req.session.userIdentity){
-    next()
-  } else { 
-		// Sinon, redirection au serveur d'autorisation
-		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-		var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-		var clientId = mcaCredentials.clientId;
-		var redirectUri = "http://some-server/oauth/callback"; // URI de redirection d'application Web
+  if (req.session.userIdentity){ 
+		next() 
+	} else { 
+		// If not - redirect to authorization server 
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
+		var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
+		var clientId = mcaCredentials.clientId; 
+		var redirectUri = "http://some-server/oauth/callback"; // Your web application redirect URI 
 		var redirectUrl = authorizationEndpoint + "?response_type=code";
-		redirectUrl += "&client_id=" + clientId;
-		redirectUrl += "&redirect_uri=" + redirectUri;
-		res.redirect(redirectUrl);
-	}
+		redirectUrl += "&client_id=" + clientId; 
+		redirectUrl += "&redirect_uri=" + redirectUri; 
+		res.redirect(redirectUrl); 
+	} 
 } 
-
-  ```
+```
 
 Notez que le paramètre `redirect_uri` représente l'URI de redirection de votre application Web et qu'il doit être égal à celui défini dans le
-tableau de bord {{site.data.keyword.amashort}}.Après redirection au noeud final d'autorisation, l'utilisateur reçoit un formulaire de connexion par Google. Une fois que la connexion de l'utilisateur vis son
-identité Google est autorisée, le service {{site.data.keyword.amashort}} appelle l'URI de redirection de votre
-application Web en soumettant le code d'accord en tant que paramètre de requête. 
+tableau de bord {{site.data.keyword.amashort}}.
+Après redirection au noeud final d'autorisation, l'utilisateur reçoit un formulaire de connexion par Google. Une fois que l'utilisateur reçoit les autorisations de connexion après avoir fourni son identité Google, le service {{site.data.keyword.amashort}} appelle l'URI de redirection de votre application Web en soumettant le code d'accord en tant que paramètre de demande.
 
 ## Obtention des jetons
-L'étape suivante consiste à obtenir le jeton d'accès et le jeton d'identité à l'aide du code d'accord reçu auparavant . Pour ce faire, procédez comme suit : 
+L'étape suivante consiste à obtenir le jeton d'accès et le jeton d'identité à l'aide du code d'accord reçu auparavant . 
 
-1. Extrayez le jeton `tokenEndpoint`, `clientId` et `secret` depuis les données d'identification du service
-stockées dans la variable d'environnement `VCAP_SERVICES`. 
+1. Extrayez le jeton `tokenEndpoint`, `clientId` et `secret` depuis les données d'identification du service, stockées dans la variable d'environnement `VCAP_SERVICES`. 
   
-    **Remarque :** Si vous avez créé le service {{site.data.keyword.amashort}} avant l'ajout de la prise en charge Web, il se peut
-que vous ne disposiez pas de noeuds finaux d'autorisation dans les données d'identification pour le service. 
-Dans ce cas, utilisez le noeud final d'autorisation ci-dessous correspondant à votre région Bluemix :
+    **Remarque :** si vous avez créé le service {{site.data.keyword.amashort}} avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final d'autorisation dans les données d'identification. A la place, utilisez les noeuds finaux d'autorisation suivants, selon votre région Bluemix :
  
  	Sud des Etats-Unis : 
  	```
- 	    https://mobileclientaccess.ng.bluemix.net/oauth/v2/token
-     ```
- 	Londres :
+ 	https://mobileclientaccess.ng.bluemix.net/oauth/v2/token 
   	```
-  	https:// mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
+ 	Londres : 
+  	```
+  	https:// mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
    	```
-   	Sydney:
+   	Sydney: 
   	```
-   	https:// mobileclientaccess.au-syd.bluemix.net/oauth/v2/token
+   	https:// mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
   	```
 
 2. Envoyez une requête POST à l'URI du serveur de jeton avec les valeurs grant_type
@@ -154,19 +145,23 @@ de données d'authentification HTTP de base.
  
 Le code suivant extrait les valeurs requises et les envoie avec une requête Post.
     
-   ```Java
+```Java
   var cfEnv = require("cfenv");
   var base64url = require("base64url ");
   var request = require('request');
-   app.get("/oauth/callback", function(req, res, next){ 	var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 	var tokenEndpoint =
-mcaCredentials.tokenEndpoint; 	var formData = { 		grant_type: "authorization_code",
+
+   app.get("/oauth/callback", function(req, res, next){ 
+	var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 	var tokenEndpoint =
+mcaCredentials.tokenEndpoint; 	var formData = { 
+		grant_type: "authorization_code",
 		client_id: mcaCredentials.clientId,
 		redirect_uri: "http://some-server/oauth/callback",// URI de redirection d'application Web
 		code: req.query.code
 	}
 
-	request.post({
-		url: tokenEndpoint, 		formData: formData 		}, function (err, response, body){ 			var parsedBody = JSON.parse(body); 			req.session.accessToken =
+	request.post({ 
+		url: tokenEndpoint, 		formData: formData 		}, function (err, response, body){ 
+			var parsedBody = JSON.parse(body); 			req.session.accessToken =
 parsedBody.access_token; 			req.session.idToken = parsedBody.id_token; 			var idTokenComponents = parsedBody.id_token.split("."); // [en-tête, contenu, signature]
 			var decodedIdentity= base64url(idTokenComponents[1]);
 			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"];
@@ -175,39 +170,37 @@ parsedBody.access_token; 			req.session.idToken = parsedBody.id_token; 			var id
 	).auth(mcaCredentials.clientId, mcaCredentials.secret);
   }
 ); 
-  ```
+```
 
-  Le paramètre `redirect_uri` est l'URI de redirection après l'aboutissement ou l'échec de l'authentification avec
+Le paramètre `redirect_uri` est l'URI de redirection après l'aboutissement ou l'échec de l'authentification avec
 Google+ et doit correspondre à l'élément `redirect_uri` de l'étape 1.  
    
-Prenez soin d'envoyer cette requête POST dans les 10 minutes avant l'expiration du code d'accord. Au bout de 10 minutes, un nouveau code est requis.
+Prenez soin d'envoyer cette demande POST dans les 10 minutes, qui correspond au délai d'expiration du code d'accord. Au bout de 10 minutes, un nouveau code est requis.
 
-Le corps de la réponse POST contiendra les éléments `access_token` et `id_token` codés en base 64.
+Le corps de la réponse POST contient les éléments `access_token` et `id_token` codés en base 64.
 
-Une fois que vous avez obtenu l'accès et reçu les jetons d'identité, vous pouvez marquer la session Web comme authentifiée et, si vous le désirez,
+Une fois que vous avez obtenu l'accès et reçu les jetons d'identité, vous pouvez marquer la session Web comme authentifiée et, si vous le souhaitez,
 rendre
 persistants ces jetons.  
 
 
 ##Utilisation du jeton d'accès et du jeton d'identité obtenus 
 
-Le jeton d'identité contient des informations sur l'identité de l'utilisateur. Dans le cas d'une authentification Google, le jeton contiendra toutes les informations que
+Le jeton d'identité contient des informations sur l'identité de l'utilisateur. Dans le cas d'une authentification Google, le jeton contient toutes les informations que
 l'utilisateur a accepté de partager, comme son nom complet, l'URL de sa photo de profil, etc.  
 
-Le jeton d'accès active les communications avec les ressources protégées par les filtres d'autorisation de {{site.data.keyword.amashort}}. Voir
-[Protection des ressources](protecting-resources.html).
-
+Le jeton d'accès active les communications avec les ressources qui sont protégées par des filtres d'autorisation {{site.data.keyword.amashort}}. Voir [Protection des ressources](protecting-resources.html).
 
 Pour soumettre des demandes à des ressources protégées, ajoutez aux demandes un en-tête Authorization doté de la structure suivante : 
 
 `Authorization=Bearer <jeton_accès> <jeton_ID>`
 
-**Remarque :** 
+####Conseils :
+{: tips} 
 
-* Les éléments `jeton_accès` et `jeton_ID`  doivent être séparés par un espace. 
+* Les éléments `jeton_accès` et `jeton_ID`  doivent être séparés par un espace.
 
-* Le paramètre `jeton_accès` est facultatif. Si vous l'omettez, il est possible d'accéder à la ressource protégée, mais sans recevoir
-d'informations sur l'utilisateur autorisé. 
+* Le paramètre `jeton_accès` est facultatif. Si vous l'omettez, il est possible d'accéder à la ressource protégée, mais aucune information sur l'utilisateur autorisé ne sera transmise. 
 
 
 

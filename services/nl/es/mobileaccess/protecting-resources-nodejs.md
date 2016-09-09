@@ -8,7 +8,7 @@ copyright:
 # Protección de recursos Node.js con {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}
 
-*Última actualización: 15 de abril de 2016*
+Última actualización: 15 de junio de 2016
 {: .last-updated}
 
 Puede utilizar el SDK del servidor de {{site.data.keyword.amashort}} para proteger recursos en la app Node.js.
@@ -16,7 +16,7 @@ Puede utilizar el SDK del servidor de {{site.data.keyword.amashort}} para proteg
 ## Antes de empezar
 {: #before-you-begin}
 
-* Debe estar familiarizado con el desarrollo de aplicaciones Node.js en {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Creación de apps con SDK for Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime). 
+* Debe estar familiarizado con el desarrollo de aplicaciones Node.js en {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Creación de apps con SDK for Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime).
 * El SDK del servidor de {{site.data.keyword.amashort}} necesita que se implemente el servidor de Node.js con la infraestructura `Express`. Tenga en cuenta que hay otras infraestructuras que utilizan infraestructuras `Express`, como LoopBack. Puede utilizar el SDK del servidor de {{site.data.keyword.amashort}} con cualquiera de estas infraestructuras. Para obtener más información sobre la infraestructura Express, consulte [Expressjs.com](http://expressjs.com/).
 
 ## Acerca del SDK del servidor

@@ -11,7 +11,7 @@ copyright:
 # 启用 iOS 应用程序 (Swift SDK) 的 Google 认证
 {: #google-auth-ios}
 
-*上次更新时间：2016 年 7 月 17 日*
+上次更新时间：2016 年 8 月 01 日
 {: .last-updated}
 
 使用 Google 登录，在 {{site.data.keyword.amashort}} iOS Swift 应用程序上认证用户。新发行的 {{site.data.keyword.amashort}} Swift SDK 为现有 Mobile Client Access Objective-C SDK 提供的功能增添了新功能，同时也改进了现有功能。
@@ -42,9 +42,9 @@ copyright:
 * 创建 `GoogleService-Info.plist` 文件和 `REVERSE_CLIENT_ID` 值，以添加到 Xcode 项目，以及
 * 创建 **Google 客户端标识**，以添加到 {{site.data.keyword.Bluemix_notm}} 后端应用程序。
 
-以下步骤为您提供了为准备应用程序而必须执行的任务的简要概述。 
+以下步骤提供了准备应用程序而必须执行的任务的简要概述。 
 
-**注：**并非一定要添加 `Google/SignIn` CocoaPod。下面的 `BMSGoogleAuthentication` CocoaPod 会添加必要的 SDK。
+**注：**并非一定要添加 Google Sign-In CocoaPod。`BMSGoogleAuthentication` CocoaPod 会添加必要的 SDK。
 
 1. 记录 Xcode 项目中来自主要目标**常规**选项卡**身份**部分的**捆绑软件标识**。您需要它创建 Google 登录项目。
 
@@ -138,14 +138,18 @@ use_frameworks!
  import BMSSecurity
  ```
 
-1. 使用以下代码来初始化客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击仪表板左上角的人脸图标 (![人脸](/face.png "人脸"))。 
+1. 使用以下代码来初始化客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。
+要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
+
 
  ```Swift
  let backendURL = "<applicationRoute>"
  let backendGUID = "<applicationGUID>"
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-// Initialize the client SDK. BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstanceGoogleAuthenticationManager.sharedInstance.register()
+// Initialize the client SDK.BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+
+ BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstanceGoogleAuthenticationManager.sharedInstance.register()
       return true
       }
 
@@ -217,6 +221,7 @@ use_frameworks!
 GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Google 进行认证。此时，用户可以单击屏幕右上角的用户名，以选择其他用户并登录。
+  如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Google 进行认证。
+此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
 
    您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

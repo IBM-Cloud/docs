@@ -8,7 +8,7 @@ copyright:
 # カスタム ID プロバイダーの作成
 {: #custom-create}
 
-*最終更新日: 2016 年 6 月 16 日*
+最終更新日: 2016 年 6 月 16 日
 {: .last-updated}
 
 

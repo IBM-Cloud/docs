@@ -10,7 +10,7 @@ copyright:
 # Back-End-Ressourcen mit dem {{site.data.keyword.amashort}}-Service schützen
 {: #protecting-resources}
 
-*Letzte Aktualisierung: 17. Juli 2016*
+Letzte Aktualisierung: 17. Juli 2016
 {: .last-updated}
 
 
@@ -24,7 +24,7 @@ Bevor Sie beginnen, müssen Sie zuerst sicherstellen, dass der Node.js-Service i
 
 ## Berechtigungsfilter
 {: #auth-filter}
-Das {{site.data.keyword.amashort}}-Server-SDK verfügt über Berechtigungsfilter, mit deren Hilfe Sie Ihre Back-End-Anwendungen schützen können.  Der Berechtigungsfilter fängt eingehende Anforderungen ab und prüft, ob ein Berechtigungsheader vorhanden ist. Wenn der Berechtigungsheader nicht vorhanden oder ungültig ist, gibt der Filter eine Antwort mit dem Code HTTP 401 zurück. Das {{site.data.keyword.amashort}}-Client-SDK weiß, wie eine Antwort mit dem Code HTTP 401 abzufangen ist, die vom {{site.data.keyword.amashort}}-Server-SDK zurückgegeben wird, und löst den Authentifizierungsablauf aus.
+Das {{site.data.keyword.amashort}}-Server-SDK verfügt über Berechtigungsfilter, mit deren Hilfe Sie Ihre Back-End-Anwendungen schützen können. Der Berechtigungsfilter fängt eingehende Anforderungen ab und prüft, ob ein Berechtigungsheader vorhanden ist. Wenn der Berechtigungsheader nicht vorhanden oder ungültig ist, gibt der Filter eine Antwort mit dem Code HTTP 401 zurück. Das {{site.data.keyword.amashort}}-Client-SDK weiß, wie eine Antwort mit dem Code HTTP 401 abzufangen ist, die vom {{site.data.keyword.amashort}}-Server-SDK zurückgegeben wird, und löst den Authentifizierungsablauf aus.
 ## Berechtigungsheader
 {: #auth-header}
 Der Berechtigungsheader in der eingehenden Anforderung besteht aus drei Teilen: Träger (Bearer), Zugriffstoken und ID-Token, die durch Leerzeichen voneinander getrennt sind. Das `Zugriffstoken` ist eine verbindliche Komponente, während das `ID-Token` optional ist.

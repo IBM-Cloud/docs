@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-android}
 
 
-*最終更新日: 2016 年 6 月 16 日*
+最終更新日: 2016 年 8 月 4 日
 {: .last-updated}
 
 ## 開始する前に
@@ -17,7 +17,7 @@ copyright:
 以下が必要です。
 
 * Gradle と連動して機能するように構成された、Android Studio 内の Android プロジェクト。{{site.data.keyword.amashort}} Client SDK が装備されている必要はありません。  
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
 
 {{site.data.keyword.amashort}} Android アプリ用に Google 認証をセットアップするには、以下をさらに構成する必要があります。
 * {{site.data.keyword.Bluemix_notm}} アプリケーション
@@ -106,7 +106,7 @@ Android OS では、Android デバイスにインストールされたすべて�
 	}
 	```
 
-	**注:** `com.ibm.mobilefirstplatform.clientsdk.android` グループの `core` モジュールへの依存関係がある場合は削除することができます。`googleauthentication` モジュールは、ユーザーの代わりに自動的にそれをダウンロードします。`googleauthentication` モジュールは、Google SDK をダウンロードし、Android プロジェクトにインストールします。
+	**注:** `com.ibm.mobilefirstplatform.clientsdk.android` グループの `core` モジュールへの依存関係がある場合は削除することができます。`googleauthentication` モジュールは、ユーザーの代わりに自動的にそれをダウンロードします。`googleauthentication` モジュールは、Google+ SDK をダウンロードし、Android プロジェクトにインストールします。
 
 1. **「ツール」>「Android」>「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**をクリックして Gradle とプロジェクトを同期します。
 
@@ -132,13 +132,15 @@ Android OS では、Android デバイスにインストールされたすべて�
 					"applicationGUID",
 					BMSClient.REGION_UK);
 						
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
+						
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
 
-  `BMSClient.REGION_UK` は適切な地域に置き換えてください。
+  `BMSClient.REGION_UK` は適切な地域に置き換えてください。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
 
-
-	
+   **注:** Android アプリケーションの対象が Android バージョン 6.0 (API レベル 23) 以降の場合、そのアプリケーションに、`register` の呼び出しの前に `android.permission.GET_ACCOUNTS` 呼び出しがあるようにする必要があります。詳しくは、[https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window} を参照してください。
 
 1. 以下のコードをアクティビティーに追加します。
 
@@ -156,7 +158,7 @@ Android OS では、Android デバイスにインストールされたすべて�
 Client SDK が初期化され、Google 認証マネージャーの登録が完了すると、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
 
-テストを開始する前に、**MobileFirst Services Starter** ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションがなければならず、また、`/protected` エンドポイントに {{site.data.keyword.amashort}} によって保護されているリソースが既に存在している必要があります。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+テストを開始する前に、**MobileFirst Services Starter** ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションがなければならず、また、{{site.data.keyword.amashort}} `/protected` エンドポイントによって保護されているリソースが既に存在している必要があります。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
 1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。
  MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみになります。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。

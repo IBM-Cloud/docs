@@ -4,15 +4,15 @@ copyright:
   years: 2015, 2016
 
 ---
-{:screen:  .screen}
+
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
+
 
 # Abilitazione dell'autenticazione Facebook per le tue applicazioni iOS (SDK Objective-C)
 {: #facebook-auth-ios}
 
 
-*Ultimo aggiornamento: 17 luglio 2016*
+Ultimo aggiornamento: 17 luglio 2016
 {: .last-updated}
 
 
@@ -158,7 +158,8 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 
 1. Importa il framework richiesto nella classe che desideri utilizzi l'SDK client {{site.data.keyword.amashort}} aggiungendo le seguenti intestazioni:
 
-	**Objective-C**
+	####Objective-C
+	{: #framework-objc}
 
 	```Objective-C
 	#import <IMFCore/IMFCore.h>
@@ -166,7 +167,8 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	#import <FacebookSDK/FacebookSDK.h>
 ```
 
-	**Swift**
+	####Swift
+	{: #bridgingheader-swift}
 
 	L'SDK client {{site.data.keyword.amashort}} è implementato utilizzando Objective-C, pertanto potresti dover aggiungere un'intestazione di collegamento al tuo progetto swift.
 
@@ -187,7 +189,8 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 
 3. Inizializza l'SDK client.	Sostituisci *applicationRoute* e *applicationGUID* con i valori **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
-	**Objective-C**
+	####Objective-C
+	{: #approute-objc}
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -195,7 +198,8 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 			backendGUID:@"applicationGUID"];
 	```
 
-	**Swift**
+	####Swift
+	{: #approute-swift}
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
@@ -203,16 +207,18 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	```
 
 1. Segnala all'SDK Facebook l'attivazione dell'applicazione e registra il gestore autenticazione Facebook aggiungendo il seguente codice al
-metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applicazione. Aggiungi questo codice subito dopo che hai inizializzato l'istanza IMFClient.
+metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applicazione. Aggiungi questo codice dopo che hai inizializzato l'istanza IMFClient. 
 
-	**Objective-C**
+	####Objective-C
+	{: #activate-objc}
 
 	```Objective-C
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 ```
 
-	**Swift**
+	####Swift
+	{: #activate-swift}
 
 	```Swift
 		FBAppEvents.activateApp()
@@ -221,7 +227,8 @@ metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applica
 
 1. Aggiungi il seguente codice al tuo delegato dell'applicazione.
 
-	**Objective-C**
+	####Objective-C
+	{: #appdelegate-objc}
 
 	```Objective-C
 	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
@@ -232,7 +239,8 @@ metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applica
 	}
 ```
 
-	**Swift**
+	####Swift
+	{: #appdelegate-swift}
 
 	```Swift
 	func application(application: UIApplication, openURL url: NSURL,
@@ -257,7 +265,8 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint.
 
-	**Objective-C**
+	####Objective-C
+	{: #requestpath-objc}
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -276,7 +285,8 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 	}];
 	```
 
-	**Swift**
+	####Swift
+	{: #requestpath-swift}
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"
@@ -305,13 +315,15 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 
 	Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
 
-	**Objective-C**
+	####Objective-C
+	{: #logout-objc}
 
 	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
 	```
 
-	**Swift**
+	####Swift
+	{: #logout-swift}
 
 	```Swift
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)

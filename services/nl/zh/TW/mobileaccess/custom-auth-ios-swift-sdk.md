@@ -9,7 +9,7 @@ copyright:
 
 {: #custom-ios}
 
-*前次更新：2016 年 7 月 18 日*
+前次更新：2016 年 8 月 1 日
 {: .last-updated}
 
 
@@ -65,7 +65,8 @@ copyright:
 
 1. 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK，將授權管理程式變更為 MCAAuthorizationManager，以及定義鑑別委派並予以登錄。將 `<applicationRoute>` 及 `<applicationGUID>` 取代為您取自 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的**路徑**及**應用程式 GUID** 值。 
 
-  將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下儀表板左上角的樣式圖示 (![樣式](/face.png "樣式"))。 
+  將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的「虛擬人像」圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟「帳戶及支援」小組件。
+  <!--upper-left corner of the -->
 
   對於 `<yourProtectedRealm>`，使用您在 {{site.data.keyword.amashort}} 儀表板的**自訂**磚中定義的**領域名稱**。
 

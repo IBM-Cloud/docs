@@ -8,10 +8,10 @@ copyright:
 #针对 {{site.data.keyword.amashort}} Web 应用程序配置定制认证
 {: #custom-web}
 
-*上次更新时间：2016 年 7 月 18 日*
+上次更新时间：2016 年 7 月 21 日
 {: .last-updated}
 
-将定制认证添加到 {{site.data.keyword.amashort}} Web 应用程序。
+将定制认证和 {{site.data.keyword.amashort}} 安全功能添加到 Web 应用程序。
 
 ## 开始之前
 {: #before-you-begin}
@@ -110,13 +110,16 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 ##使用定制身份提供者实施 {{site.data.keyword.amashort}} 授权流程 
 
-针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建 `VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击应用程序左侧导航器的**环境变量**，可以查看该环境变量。
+针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建
+`VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击应用程序左侧
+导航栏上的**环境变量**，可以查看该对象。
 
 要请求用户授权，请将浏览器重定向到授权服务器端点。要这样做： 
 
 1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中，检索授权端点 (`authorizationEndpoint`) 和客户端标识 (`clientId`)。 
 
-  **注：**如果在添加 Web 支持之前，您已向应用程序添加了 Mobile Client Access 服务，那么您可能在服务凭证中没有令牌端点。根据您的 {{site.data.keyword.Bluemix_notm}} 区域，改用以下 URL： 
+  **注：**如果在添加 Web 支持之前，您已向应用程序添加了
+{{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
  
   美国南部： 
   ```
@@ -177,7 +180,8 @@ function checkAuthentication(req, res, next){
 
 1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中检索 `authorizationEndpoint`、`clientId` 和 `secret`。 
 
-   **注：**如果在添加 Web 支持之前，您已向应用程序添加了 Mobile Client Access 服务，那么您可能在服务凭证中没有令牌端点。在此情况下，请根据您的 Bluemix 区域，改用以下 URL： 
+   **注：**如果在添加 Web 支持之前，您已向应用程序添加了
+{{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
 
  美国南部： 
  ```
@@ -239,13 +243,15 @@ code 数值应该是在授权请求结束时响应中收到的授权代码。授
 
 身份令牌包含有关用户身份的信息。如果是定制认证，那么该令牌将包含认证时定制身份提供者所返回的所有信息。在 `imf.user` 字段下，`displayName` 字段将包含定制身份提供者返回的 `displayName`，而 `id` 字段将包含 `userName`。定制身份提供者返回的所有其他值都会在 `imf.user` 下的 `attributes` 字段中返回。  
 
-访问令牌允许与 Mobile Client Access 授权过滤器保护的资源进行通信（请参阅[保护资源](protecting-resources.html)）。要对受保护资源发出请求，请使用以下结构，向请求添加 Authorization 头： 
+有了访问令牌，就可以与 {{site.data.keyword.amashort}} 授权过滤器保护的资源进行通信（请参阅[保护资源](protecting-resources.html)）。要对受保护资源发出请求，请使用以下结构向请求添加 Authorization 头： 
 
 `Authorization=Bearer <accessToken> <idToken>` 
 
-**注：** 
+####提示： 
+{: #tips_token}
 
-* `<accessToken>` 和 `<idToken>` 必须以空格分隔。
+* `<accessToken>` 和 `<idToken>` 必须以
+空格分隔。
 
 * 身份令牌是可选的。如果您未提供身份令牌，那么虽然可以访问受保护资源，但是不会收到有关已授权用户的任何信息。 
 

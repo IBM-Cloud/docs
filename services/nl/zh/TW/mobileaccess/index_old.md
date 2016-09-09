@@ -10,7 +10,7 @@ copyright:
 # 開始使用 {{site.data.keyword.amashort}}
 {: #getting-started}
 
-{{site.data.keyword.amafull}} 服務為您的行動應用程式提供了安全和監視功能。您可以配置用戶端鑑別和身分提供者。此外，還可以將監視功能新增至應用程式，以同時啟用用戶端記載和用量統計資料。
+{{site.data.keyword.amafull}} 服務為您的行動應用程式提供了安全和監視功能。您可以配置用戶端鑑別和身分提供者。此外，還可以將監視功能新增至應用程式，以同時啟用用戶端記載和使用情形統計資料。
 
 附註：{{site.data.keyword.amashort}} 服務先前稱為 Advanced Mobile Access。
 {: shortdesc}
@@ -42,7 +42,7 @@ copyright:
 {:class="linklist"}
 >## SDK
 {:id="sdk"}
->* [核心 SDK (iOS)](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)  
+>* [Core SDK (iOS)](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)  
 >* [bms-clientsdk-android-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 >* [bms-clientsdk-cordova-plugin-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 >

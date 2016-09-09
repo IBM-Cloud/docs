@@ -8,7 +8,7 @@ copyright:
 # Configuración del SDK del cliente de {{site.data.keyword.amashort}} para iOS (Objective-C)
 {: #custom-ios}
 
-*Última actualización: 18 de julio de 2016*
+Última actualización: 21 de julio de 2016
 {: .last-updated}
 
 
@@ -48,7 +48,7 @@ CocoaPods instala las dependencias añadidas. Se mostrarán el progreso y los co
 
 
 
-### Inicialización del SDK del cliente
+## Inicialización del SDK del cliente
 {: #custom-ios-sdk-initialize}
 
 Para inicializar el SDK, especifique los parámetros de ruta de la aplicación (`applicationRoute`) y GUID (`applicationGUID`). Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación.
@@ -77,7 +77,7 @@ Para inicializar el SDK, especifique los parámetros de ruta de la aplicación (
 
 1. Inicialice el SDK del cliente. Sustituya applicationRoute y applicationGUID por los valores correspondientes a **Ruta** (`applicationRoute`) e **Identificador exclusivo global de la app** (`applicationGUID`) que ha obtenido de **Opciones móviles**.
 
-	Objective-C:
+	###Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -85,12 +85,26 @@ Para inicializar el SDK, especifique los parámetros de ruta de la aplicación (
 			backendGUID:@"applicationGUID"];
 	```
 
-	Swift:
+	###Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+
+## Inicialización de AuthorizationManager
+Inicialice AuthorizationManager especificando en el servicio de {{site.data.keyword.amashort}} el parámetro `tenantId` que obtiene al pulsar en el botón **Mostrar credenciales** en el mosaico del servicio de {{site.data.keyword.amashort}}.
+
+### Objective-C
+  ```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+
+### Swift:
+ ```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ ```
+
 
 
 ## Delegado IMFAuthenticationHandler
@@ -109,28 +123,27 @@ Se llama a este método cuando se recibe un cambio de autenticación personaliza
 * El protocolo `IMFAuthenticationContext` se proporciona desde el SDK del cliente de {{site.data.keyword.amashort}} para que el desarrollador pueda volver a notificar las respuestas del cambio de autenticación o el error durante la recopilación de credenciales (por ejemplo, cancelación del usuario).
 * `NSDictionary` que contiene un cambio de autenticación personalizada tal como lo devuelve un proveedor de identidad personalizado
 
-Al llamar al método `authenticationContext:didReceiveAuthenticationChallenge`, el SDK del cliente de {{site.data.keyword.amashort}} delega el control al desarrollador y pasa a modo de espera de las credenciales. Es responsabilidad del desarrollador recopilar las credenciales y volverlas a notificar al SDK del cliente de {{site.data.keyword.amashort}} utilizando uno de los métodos `IMFAuthenticationContext`, tal como se describe a continuación.
+Al llamar al método `authenticationContext:didReceiveAuthenticationChallenge`, el SDK del cliente de {{site.data.keyword.amashort}} está delegando el control al desarrollador y pasa a modo de espera de las credenciales. Es responsabilidad del desarrollador recopilar las credenciales y volverlas a notificar al SDK de cliente de {{site.data.keyword.amashort}} utilizando uno de los siguientes métodos de protocolo `IMFAuthenticationContext`: 
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
 						didReceiveAuthenticationSuccess:(NSDictionary *)userInfo;
 ```
 
-Se llama a este método después de realizarse una autenticación correcta. Los argumentos incluyen IMFAuthenticationContext y NSDictionary opcional con información ampliada sobre la autenticación correcta.
+Se llama a este método después de realizarse una autenticación correcta. Los argumentos incluyen `IMFAuthenticationContext` y un `NSDictionary` opcional que contiene información ampliada sobre el éxito de la autenticación. 
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
 						didReceiveAuthenticationFailure:(NSDictionary*)userInfo;
 ```
 
-Se llama a este método después de un error de autenticación. Los argumentos incluyen IMFAuthenticationContext y NSDictionary opcional con información ampliada sobre el error de autenticación.
+Se llama a este método después de un error de autenticación. Los argumentos incluyen `IMFAuthenticationContext` y un `NSDictionary` opcional que contiene información ampliada sobre el éxito de la autenticación. 
 
 ## Protocolo IMFAuthenticationContext
 {: #custom-ios-sdk-authcontext}
 
 
-`IMFAuthenticationContext` se proporciona como argumento para el método `authenticationContext:didReceiveAuthenticationChallenge` de un `IMFAuthenticationHandler` personalizado. El desarrollador se encargará de recopilar las credenciales y utilizar los métodos `IMFAuthenticationContext` para devolver las credenciales al SDK del cliente de {{site.data.keyword.amashort}} o informar de un error. Utilice uno de los métodos siguientes
-
+El protocolo `IMFAuthenticationContext` se proporciona como un argumento para el método `authenticationContext:didReceiveAuthenticationChallenge` de un `IMFAuthenticationHandler` personalizado. El desarrollador se encargará de recopilar las credenciales y utilizar los métodos `IMFAuthenticationContext` para devolver las credenciales al SDK de cliente de {{site.data.keyword.amashort}} o informar de un error.  
 ```
 -(void) submitAuthenticationChallengeAnswer:(NSDictionary*) answer;
 
@@ -141,7 +154,7 @@ Se llama a este método después de un error de autenticación. Los argumentos i
 {: #custom-ios-sdk-sample}
 
 
-El ejemplo de IMFAuthenticationDelegate se ha diseñado como ejemplo del proveedor de identidad personalizado. Puede descargar el ejemplo del [repositorio Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+El ejemplo de IMFAuthenticationDelegate se ha diseñado como ejemplo del proveedor de identidad personalizado. Puede descargar el ejemplo del [repositorio GitHub](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
 
 Objective-C:
 
@@ -166,10 +179,10 @@ CustomAuthenticationDelegate.m
 
 	NSLog(@"didReceiveAuthenticationChallenge :: %@", challenge);
 
-	// En este ejemplo, IMFAuthenticationDelegate devuelve inmediatamente un conjunto de
-	// credenciales codificadas. En una situación real es donde el desarrollador vería una
-	// pantalla de inicio de sesión, recopilaría las credenciales e invocaría la API
-	// [context submitAuthenticationChallengeAnswer:]
+	// En este ejemplo, IMFAuthenticationDelegate inmediatamente devuelve un conjunto
+	// de credenciales codificadas. En una situación real, el desarrollador
+	// mostraría una pantalla de inicio de sesión, recopilaría las credenciales e invocaría
+	// la API [context submitAuthenticationChallengeAnswer:]
 
 	NSDictionary *challengeAnswer = [NSDictionary dictionaryWithObjectsAndKeys:
 									 @"john.lennon", @"username",
@@ -177,11 +190,11 @@ CustomAuthenticationDelegate.m
 
 	[context submitAuthenticationChallengeAnswer:challengeAnswer];
 
-	// En caso de que se produzca un error al recopilar las credenciales, tendrá
-	// que notificarlo a IMFAuthenticationContext. De lo contrario, el SDK del cliente Mobile
-	// Client Access permanecerá siempre en estado de espera
+	// En caso de que se produzca un error al recopilar las credenciales, notifíquelo
+	// a IMFAuthenticationContext. De lo contrario, el SDK del cliente Mobile Client
+	// Access permanecerá siempre en un estado de espera
 	// de las credenciales
-	}
+}
 
 -(void)authenticationContext:(id<IMFAuthenticationContext>)context
 					didReceiveAuthenticationSuccess:(NSDictionary *)userInfo{
@@ -206,15 +219,14 @@ import Foundation
 
 class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
-	func authenticationContext(context: IMFAuthenticationContext!,
-					didReceiveAuthenticationChallenge challenge: [NSObject : AnyObject]!) {
+	func authenticationContext(context: IMFAuthenticationContext!, didReceiveAuthenticationChallenge challenge: [NSObject : AnyObject]!) {
 
 		NSLog("didReceiveAuthenticationChallenge :: %@", challenge)
 
-		// En este ejemplo, IMFAuthenticationDelegate devuelve inmediatamente un conjunto de
-	// credenciales codificadas. En una situación real es donde el desarrollador vería una
-	// pantalla de inicio de sesión, recopilaría las credenciales e invocaría la API
-	// context.submitAuthenticationChallengeAnswer()
+		// En este ejemplo, IMFAuthenticationDelegate inmediatamente devuelve un conjunto
+	// de credenciales codificadas. En una situación real, un desarrollador mostraría
+		// una pantalla de inicio de sesión, recopilaría las credenciales e invocaría la API
+		// context.submitAuthenticationChallengeAnswer()
 
 		let challengeAnswer: [String:String] = [
 			"username":"john.lennon",
@@ -223,10 +235,10 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 		context.submitAuthenticationChallengeAnswer(challengeAnswer)
 
-		// En caso de que se produzca un error al recopilar las credenciales, tendrá
-	// que notificarlo a IMFAuthenticationContext. En caso contrario, el SDK del
-		// cliente Mobile Client Access permanecerá para siempre en un estado de
-		// espera de credenciales
+		// En caso de que se produzca un error al recopilar las credenciales, notifíquelo
+		// a IMFAuthenticationContext. De lo contrario, el SDK del cliente de
+		// Mobile Client Access permanece en un estado permanente de espera
+		// de credenciales
 	}
 
 
@@ -235,8 +247,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 		NSLog("didReceiveAuthenticationSuccess")
 	}
 
-	func authenticationContext(context: IMFAuthenticationContext!,
-					didReceiveAuthenticationFailure userInfo: [NSObject : AnyObject]!) {
+	func authenticationContext(context: IMFAuthenticationContext!, didReceiveAuthenticationFailure userInfo: [NSObject : AnyObject]!) {
 		NSLog("didReceiveAuthenticationFailure")
 	}
 }
@@ -244,7 +255,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 ## Registro de IMFAuthenticationDelegate personalizado
 
-Después de crear un IMFAuthenticationDelegate personalizado, regístrelo con `IMFClient`. Llame al código siguiente en su aplicación antes de enviar solicitudes a los recursos protegidos. Utilice el valor de realmName que indicó en el panel de control de {{site.data.keyword.amashort}}.
+Después de crear un `IMFAuthenticationDelegate` personalizado, regístrelo con `IMFClient`. Llame al código siguiente en su aplicación antes de enviar solicitudes a los recursos protegidos. Utilice el valor de `realmName` que indicó en el panel de control de {{site.data.keyword.amashort}}.
 
 Aplicaciones Objective-C:
 

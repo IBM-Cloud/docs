@@ -7,7 +7,7 @@ copyright:
 
 # 监视应用程序
 {: #app-monitoring}
-*上次更新时间：2016 年 6 月 28 日*
+上次更新时间：2016 年 6 月 28 日
 {: .last-updated}
 
 除了安全功能外，{{site.data.keyword.amafull}} 还为移动应用程序提供了监视和分析功能。可以通过 {{site.data.keyword.amashort}} 客户端 SDK 来记录客户端日志并监视数据。开发者可以控制何时将这些数据发送到 {{site.data.keyword.amashort}} 服务。在 {{site.data.keyword.amashort}} 服务中发生的所有安全事件（例如，认证成功或失败）都会自动记录。
@@ -40,7 +40,8 @@ copyright:
 
 2. {{site.data.keyword.Bluemix_notm}} 应用程序仪表板打开时，单击 {{site.data.keyword.amashort}} 磁贴。
 
-3. 在 {{site.data.keyword.amashort}}“仪表板”上，单击左侧菜单中的**监视**链接。
+3. 在左侧的 {{site.data.keyword.amashort}}“仪表板”导航栏中，单击**监视**。
+
 
 ## 启用、配置和使用记录器
 {: #enable-logger}

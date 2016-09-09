@@ -11,7 +11,7 @@ copyright:
 # iOS-Swift-SDK einrichten
 {: #getting-started-ios}
 
-*Letzte Aktualisierung: 17. Juli 2016*
+Letzte Aktualisierung: 01. August 2016
 {: .last-updated}
 
 Von {{site.data.keyword.amashort}} wurde ein neues Swift-SDK freigegeben, das die vom vorhandenen {{site.data.keyword.amashort}}-Objective-C-SDK bereitgestellte Funktionalität ergänzt und verbessert. Das Authentifizieren Ihrer App wird erleichtert, und es wird ein besserer Schutz der Back-End-Ressourcen bereitgestellt. Instrumentieren Sie Ihre iOS-Swift-Anwendung mit dem {{site.data.keyword.amashort}}-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und ungeschützte Ressourcen.
@@ -60,7 +60,7 @@ Weitere Informationen finden Sie auf der [CocoaPods-Website](https://cocoapods.o
 1. Bearbeiten Sie die `Podfile`-Datei und fügen Sie den erforderlichen Zielen die folgende Zeile hinzu:
 
 	```
-  use_frameworks!
+use_frameworks!
   pod 'BMSSecurity'
 	```
   **Tipp:** Sie können `use_frameworks!` in Ihrem Xcode-Ziel hinzufügen anstatt in der Podfile-Datei.
@@ -85,7 +85,7 @@ Weitere Informationen finden Sie auf der [CocoaPods-Website](https://cocoapods.o
  import BMSSecurity
  ```  
 
-1. Initialisieren Sie das {{site.data.keyword.amashort}}-Client-SDK. Ersetzen Sie `<applicationRoute>` und `<applicationGUID>` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** des {{site.data.keyword.Bluemix_notm}}-Dashboards ermittelt haben. Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol mit dem Gesicht (![Gesicht](images/face.png "Gesicht")) in der linken oberen Ecke des Dashboards.  
+1. Initialisieren Sie das {{site.data.keyword.amashort}}-Client-SDK. Ersetzen Sie `<applicationRoute>` und `<applicationGUID>` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** des {{site.data.keyword.Bluemix_notm}}-Dashboards ermittelt haben. Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen. 
 
 
  ```Swift
@@ -94,8 +94,7 @@ Weitere Informationen finden Sie auf der [CocoaPods-Website](https://cocoapods.o
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- // Client-SDK initialisieren.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+ // Client-SDK initialisieren.BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 

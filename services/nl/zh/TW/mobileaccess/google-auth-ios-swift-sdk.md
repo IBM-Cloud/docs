@@ -11,7 +11,7 @@ copyright:
 # 啟用 iOS 應用程式的 Google 鑑別 (Swift SDK)
 {: #google-auth-ios}
 
-*前次更新：2016 年 7 月 17 日*
+前次更新：2016 年 8 月 1 日
 {: .last-updated}
 
 在 {{site.data.keyword.amashort}} iOS Swift 應用程式上，使用「Google 登入」來鑑別使用者。新發行的 {{site.data.keyword.amashort}} Swift SDK 會新增至現有 Mobile Client Access Objective-C SDK 所提供的功能並加以改善。
@@ -44,7 +44,7 @@ copyright:
 
 下列步驟概述準備應用程式所需的作業。 
 
-**附註：**不需要新增 `Google/SignIn` CocoaPod。必要的 SDK 是透過下面的 `BMSGoogleAuthentication` CocoaPod 所新增。
+**附註：**不需要新增 Google Sign-In CocoaPod。必要的 SDK 是透過 `BMSGoogleAuthentication` CocoaPod 所新增。
 
 1. 從主要目標之**一般**標籤的**身分**區段中，記下 Xcode 專案中的**軟體組 ID**。您需要它才能建立「Google 登入」專案。
 
@@ -139,7 +139,7 @@ use_frameworks!
  import BMSSecurity
  ```
 
-1. 使用下列程式碼來起始設定用戶端 SDK。將 `<applicationRoute>` 及 `<applicationGUID>` 取代為您取自 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的**路徑**及**應用程式 GUID** 值。將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下儀表板左上角的樣式圖示 (![樣式](/face.png "樣式"))。 
+1. 使用下列程式碼來起始設定用戶端 SDK。將 `<applicationRoute>` 及 `<applicationGUID>` 取代為您取自 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的**路徑**及**應用程式 GUID** 值。將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -147,7 +147,9 @@ use_frameworks!
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- // Initialize the client SDK. BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
+ // Initialize the client SDK.BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+
+ BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
  GoogleAuthenticationManager.sharedInstance.register()
       return true
@@ -221,6 +223,6 @@ use_frameworks!
 GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  如果您在使用者使用 Google 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Google 進行鑑別。此時，使用者可以按一下畫面右上角的使用者名稱來進行選取，並使用另一個使用者來登入。
+  如果您在使用者使用 Google 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Google 進行鑑別。此時，使用者可以按一下使用者名稱<!--in the upper-right corner of the screen-->來進行選取，並利用另一個使用者來登入。
 
    將 `callBack` 傳遞給 logout 函數是選用性的作業。您也可以傳遞 `nil`。

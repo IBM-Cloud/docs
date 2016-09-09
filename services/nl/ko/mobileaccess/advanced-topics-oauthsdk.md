@@ -5,10 +5,10 @@ copyright:
   
 ---
 
-# 백엔드 간 통신 설정
+# 백엔드 애플리케이션 및 서비스 간의 통신
 {: #backend-comm}
 
-*마지막 업데이트 날짜: 2016년 6월 16일*
+마지막 업데이트 날짜: 2016년 7월 21일
 {: .last-updated}
 
 일부 시나리오에서는 {{site.data.keyword.Bluemix}}에서 실행 중인 사용자의 백엔드 애플리케이션에서 {{site.data.keyword.amashort}} 서비스가 보호하는 다른 백엔드 서비스(예: {{site.data.keyword.cloudant}} 서비스)로 요청을 전송해야 할 수 있습니다. 이러한 경우 OAuth 토큰을 요청에 추가해야 합니다. 
@@ -40,9 +40,9 @@ var options = {
 
 	cacheSize: 100,
 
-	// All of the below properties are retrieved automatically when your Node.js
+	// The following properties are retrieved automatically when your Node.js
 	// runs on {{site.data.keyword.Bluemix_notm}} and bound to an instance of {{site.data.keyword.amashort}} Service.
-	// Alternatively you can get these properties values by clicking Show Credentials
+	// Alternatively, you can get these property values by clicking Show Credentials
 	// on the {{site.data.keyword.amashort}} Service tile in your {{site.data.keyword.Bluemix_notm}} application dashboard
 
 	appId: "appId",				// Bleumix applicationGUID, a.k.a tenantId

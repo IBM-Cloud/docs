@@ -8,7 +8,7 @@ copyright:
 # {{site.data.keyword.amashort}}-Client-SDK für iOS konfigurieren (Objective-C)
 {: #custom-ios}
 
-*Letzte Aktualisierung: 18. Juli 2016*
+Letzte Aktualisierung: 21. Juli 2016
 {: .last-updated}
 
 
@@ -48,7 +48,7 @@ CocoaPods installiert die hinzugefügten Abhängigkeiten. Der Fortschritt und di
 
 
 
-### Client-SDK initialisieren
+## Client-SDK initialisieren
 {: #custom-ios-sdk-initialize}
 
 Initialisieren Sie das SDK, indem Sie die Parameter für Route (`applicationRoute`) und GUID (`applicationGUID`) der Anwendung übergeben. Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `application:didFinishLaunchingWithOptions` Ihres Anwendungsdelegats.
@@ -77,7 +77,7 @@ Initialisieren Sie das SDK, indem Sie die Parameter für Route (`applicationRout
 
 1. Initialisieren Sie das Client-SDK. Ersetzen Sie 'applicationRoute' und 'applicationGUID' durch die Werte für **Route** (`applicationRoute`) und **App-GUID** (`applicationGUID`), die Sie im Abschnitt **Mobile Systemerweiterungen** ermittelt haben.
 
-	Objective-C:
+	###Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -85,12 +85,26 @@ Initialisieren Sie das SDK, indem Sie die Parameter für Route (`applicationRout
 			backendGUID:@"applicationGUID"];
 	```
 
-	Swift:
+	###Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+
+## AuthorizationManager initialisieren
+Initialisieren Sie den AuthorizationManager durch Übergeben des Parameters `tenantId` des {{site.data.keyword.amashort}}-Service, den Sie erhalten, wenn Sie auf die Schaltfläche **Berechtigungsnachweise anzeigen** der Kachel für den {{site.data.keyword.amashort}}-Service klicken. 
+
+### Objective-C
+  ```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+
+### Swift:
+ ```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ ```
+
 
 
 ## IMFAuthenticationHandler-Delegat
@@ -109,28 +123,27 @@ Diese Methode wird aufgerufen, wenn eine angepasste Authentifizierungsanforderun
 * Das `IMFAuthenticationContext`-Protokoll wird vom {{site.data.keyword.amashort}}-Client-SDK bereitgestellt, sodass Entwickler Antworten auf Authentifizierungsanforderungen oder Fehler bei der Erfassung von Berechtigungsnachweisen (z. B. Abbruch durch den Benutzer) zurückmelden können.
 * Das `NSDictionary`-Objekt, das eine angepasste Authentifizierungsanforderung enthält, wie sie durch einen angepassten Identitätsprovider zurückgegeben wird.
 
-Durch Aufrufen der Methode `authenticationContext:didReceiveAuthenticationChallenge` delegiert das {{site.data.keyword.amashort}}-Client-SDK die Steuerung an den Entwickler und versetzt sich selbst in den Wartemodus für Berechtigungsnachweise. Es liegt in der Verantwortung des Entwicklers, Berechtigungsnachweise zu erfassen und diese durch eine der Methoden des `IMFAuthenticationContext`-Protokolls an das {{site.data.keyword.amashort}}-Client-SDK zurückzumelden, wie nachfolgend beschrieben.
+Durch Aufrufen der Methode `authenticationContext:didReceiveAuthenticationChallenge` delegiert das {{site.data.keyword.amashort}}-Client-SDK die Steuerung an den Entwickler und versetzt sich selbst in den Wartemodus für Berechtigungsnachweise. Der Entwickler muss Berechtigungsnachweise erfassen und durch eine der folgenden Methoden des Protokolls `IMFAuthenticationContext` an das {{site.data.keyword.amashort}}-Client-SDK zurückmelden:
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
 						didReceiveAuthenticationSuccess:(NSDictionary *)userInfo;
 ```
 
-Diese Methode wird nach einer erfolgreichen Authentifizierung aufgerufen. Die Argumente sind IMFAuthenticationContext und ein optionales NSDictionary-Objekt, das Informationen zum Authentifizierungserfolg enthält.
+Diese Methode wird nach einer erfolgreichen Authentifizierung aufgerufen. Die Argumente sind `IMFAuthenticationContext` und ein optionales `NSDictionary`-Objekt, das erweiterte Informationen zum Authentifizierungserfolg enthält. 
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
 						didReceiveAuthenticationFailure:(NSDictionary*)userInfo;
 ```
 
-Diese Methode wird nach einem Authentifizierungsfehler aufgerufen. Die Argumente sind IMFAuthenticationContext und ein optionales NSDictionary-Objekt, das Informationen zum Authentifizierungsfehler enthält.
+Diese Methode wird nach einem Authentifizierungsfehler aufgerufen. Die Argumente sind `IMFAuthenticationContext` und ein optionales `NSDictionary`-Objekt, das erweiterte Informationen zum Authentifizierungsfehler enthält. 
 
 ## IMFAuthenticationContext-Protokoll
 {: #custom-ios-sdk-authcontext}
 
 
-`IMFAuthenticationContext` wird als Argument für die Methode `authenticationContext:didReceiveAuthenticationChallenge` eines angepassten `IMFAuthenticationHandler` angegeben. Es liegt in der Verantwortung des Entwicklers, Berechtigungsnachweise zu erfassen und diese durch die Methoden von `IMFAuthenticationContext` an das {{site.data.keyword.amashort}}-Client-SDK zurückgeben oder einen Fehler melden. Verwenden Sie eine der folgenden Methoden:
-
+Das Protokoll `IMFAuthenticationContext` wird als Argument für die Methode `authenticationContext:didReceiveAuthenticationChallenge` eines angepassten `IMFAuthenticationHandler` angegeben. Es liegt in der Verantwortung des Entwicklers, Berechtigungsnachweise zu erfassen und diese durch die Methoden von `IMFAuthenticationContext` an das {{site.data.keyword.amashort}}-Client-SDK zurückzugeben oder einen Fehler zu melden.  
 ```
 -(void) submitAuthenticationChallengeAnswer:(NSDictionary*) answer;
 
@@ -141,7 +154,7 @@ Diese Methode wird nach einem Authentifizierungsfehler aufgerufen. Die Argumente
 {: #custom-ios-sdk-sample}
 
 
-Das Beispiel für 'IMFAuthenticationDelegate' ist für die Ausführung mit dem Beispiel für einen angepassten Identitätsprovider gedacht. Sie können dieses Beispiel aus dem [Github-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample) herunterladen.
+Das Beispiel für 'IMFAuthenticationDelegate' ist für die Ausführung mit dem Beispiel für einen angepassten Identitätsprovider gedacht. Sie können dieses Beispiel aus dem [GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample) herunterladen.
 
 Objective-C:
 
@@ -168,7 +181,7 @@ CustomAuthenticationDelegate.m
 
 	// In diesem Beispiel gibt IMFAuthenticationDelegate sofort einen fest codierten
 	// Satz von Berechtigungsnachweisen zurück. In einem realen Szenario würde der
-	// Entwickler hier ein Anmeldefenster anzeigen, Berechtigungsnachweise erfassen
+	// Entwickler ein Anmeldefenster anzeigen, Berechtigungsnachweise erfassen
 	// und die API [context submitAuthenticationChallengeAnswer:] aufrufen.
 
 	NSDictionary *challengeAnswer = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -177,8 +190,8 @@ CustomAuthenticationDelegate.m
 
 	[context submitAuthenticationChallengeAnswer:challengeAnswer];
 
-	// Im Fall eines Fehlers beim Erfassen von Berechtigungsnachweisen müssen
-	// Sie dies an IMFAuthenticationContext zurückmelden. Andernfalls verbleibt
+	// Im Fall eines Fehlers beim Erfassen von Berechtigungsnachweisen melden
+ 	// Sie den Fehler an IMFAuthenticationContext. Andernfalls verbleibt
  	// das Mobile Client Access-Client-SDK unbegrenzte Zeit in einem
 	 // Wartestatus für Berechtigungsnachweise.
 	 }
@@ -213,7 +226,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 		// In diesem Beispiel gibt IMFAuthenticationDelegate sofort einen fest codierten
 	// Satz von Berechtigungsnachweisen zurück. In einem realen Szenario würde der
-		// Entwickler hier ein Anmeldefenster anzeigen, Berechtigungsnachweise erfassen
+		// Entwickler ein Anmeldefenster anzeigen, Berechtigungsnachweise erfassen
 		// und die API context.submitAuthenticationChallengeAnswer() aufrufen.
 
 		let challengeAnswer: [String:String] = [
@@ -223,10 +236,10 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 		context.submitAuthenticationChallengeAnswer(challengeAnswer)
 
-		// Im Fall eines Fehlers beim Erfassen von Berechtigungsnachweisen müssen
- 	// Sie dies an IMFAuthenticationContext zurückmelden. Andernfalls verbleibt das
+		// Im Fall eines Fehlers beim Erfassen von Berechtigungsnachweisen melden
+ 	// Sie diesen zurück an IMFAuthenticationContext. Andernfalls verbleibt das
 		// Mobile Client Access-Client-SDK unbegrenzte Zeit in einem
-		// Wartestatus für Berechtigungsnachweise
+		// Wartestatus für Berechtigungsnachweise.
 	}
 
 
@@ -244,7 +257,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 ## Angepasstes 'IMFAuthenticationDelegate' registrieren
 
-Nachdem Sie ein angepasstes Delegat 'IMFAuthenticationDelegate' erstellt haben, registrieren Sie es im `IMFClient`. Rufen Sie den folgenden Code in Ihrer Anwendung auf, bevor Sie Anforderungen an Ihre geschützten Ressourcen senden. Verwenden Sie den Wert für 'realmName', den Sie im {{site.data.keyword.amashort}}-Dashboard angegeben haben.
+Nachdem Sie ein angepasstes Delegat `IMFAuthenticationDelegate` erstellt haben, registrieren Sie es im `IMFClient`. Rufen Sie den folgenden Code in Ihrer Anwendung auf, bevor Sie Anforderungen an Ihre geschützten Ressourcen senden. Verwenden Sie den Wert für `realmName`, den Sie im {{site.data.keyword.amashort}}-Dashboard angegeben haben.
 
 Objective-C-Anwendungen:
 
@@ -271,8 +284,7 @@ Nach der Initialisierung des Client-SDK und der Registrierung des angepassten De
 {: #custom-ios-testing-before}
  Sie müssen eine Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, sowie eine Ressource, die durch {{site.data.keyword.amashort}} geschützt wird, am Endpunkt `/protected` haben.
 
-1. Senden Sie eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung in Ihrem Browser, indem Sie die Adresse `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
-  Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
+1. Senden Sie eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung in Ihrem Browser, indem Sie die Adresse `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`). Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
 1. Verwenden Sie Ihre iOS-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert und Ihr angepasstes `IMFAuthenticationDelegate` registriert haben:
 
 	Objective-C:

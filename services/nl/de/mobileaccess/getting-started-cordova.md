@@ -9,7 +9,7 @@ copyright:
 # Cordova-Plug-in einrichten
 {: #getting-started-cordova}
 
-*Letzte Aktualisierung: 17. Juli 2016*
+Letzte Aktualisierung: 17. Juli 2016
 {: .last-updated}
 
 Instrumentieren Sie Ihre Cordova-Anwendung mit dem {{site.data.keyword.amashort}}-Client-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und nicht geschützte Ressourcen.
@@ -37,7 +37,7 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 	cordova platform add ios
 	```
 
-1. Wenn Sie die Android-Plattform hinzugefügt haben, müssen Sie die minimal unterstützte API-Stufe in der Datei `config.xml` Ihrer Cordova-Anwendung hinzufügen. Öffnen Sie die Datei `config.xml` und fügen Sie die folgende Zeile dem Element `<platform name="android">` hinzu:
+2. Wenn Sie die Android-Plattform hinzugefügt haben, müssen Sie die minimal unterstützte API-Stufe in der Datei `config.xml` Ihrer Cordova-Anwendung hinzufügen. Öffnen Sie die Datei `config.xml` und fügen Sie die folgende Zeile dem Element `<platform name="android">` hinzu:
 
 	```XML
 	<platform name="android">  
@@ -49,7 +49,7 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 
 	Der Wert für *minSdkVersion* muss höher als `15` sein. Der Wert für *targetSdkVersion* muss das neueste Android-SDK angeben, das über Google verfügbar ist.
 
-1. Wenn Sie das iOS-Betriebssystem hinzugefügt haben, aktualisieren Sie das Element `<platform name="ios">` mit einer Zieldeklaration ('target'):
+3. Wenn Sie das iOS-Betriebssystem hinzugefügt haben, aktualisieren Sie das Element `<platform name="ios">` mit einer Zieldeklaration ('target'):
 
 	```XML
 	<platform name="ios">
@@ -58,45 +58,47 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 	</platform>
 	```
 
-1. Installieren Sie das Cordova-Plug-in für {{site.data.keyword.amashort}}:
+4. Installieren Sie das Cordova-Plug-in für {{site.data.keyword.amashort}}:
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Konfigurieren Sie Ihre Plattform für Android und/oder iOS.
+5. Konfigurieren Sie Ihre Plattform für Android und/oder iOS.
 
-	* **Android**
+	####Android
+	{: #cordova-android}
 
-		Erstellen Sie vor dem Öffnen Ihres Projekts in Android Studio den Build Ihrer Cordova-Anwendung über Ihre Befehlszeilenschnittstelle (Command-Line Interface, CLI), um Buildfehler zu vermeiden.
+	Erstellen Sie vor dem Öffnen Ihres Projekts in Android Studio den Build Ihrer Cordova-Anwendung über Ihre Befehlszeilenschnittstelle (Command-Line Interface, CLI), um Buildfehler zu vermeiden.
 
 		```
 		cordova build android
 		```
 
-	* **iOS**
+	####iOS
+	{: #cordova-ios}
 
-		Konfigurieren Sie Ihr Xcode-Projekt wie nachfolgend angegeben, um Buildfehler zu vermeiden.
+	Konfigurieren Sie Ihr Xcode-Projekt wie nachfolgend angegeben, um Buildfehler zu vermeiden.
 
-		1. Öffnen Sie Ihre Datei `xcode.proj` mit der neuesten Version von Xcode im Verzeichnis `<app_name>/platforms/ios`.
+	1. Öffnen Sie Ihre Datei `xcode.proj` mit der neuesten Version von Xcode im Verzeichnis `<app_name>/platforms/ios`.
 
-		**Wichtig:** Wenn die Nachricht "Convert to Latest Swift Syntax" ausgegeben wird, klicken Sie auf 'Cancel' (Abbrechen).
+		**Wichtig:** Wenn Sie eine Nachricht erhalten, dass Sie eine Konvertierung zur neuesten Swift-Syntax durchführen sollen, klicken Sie auf die Schaltfläche für Abbrechen. 
 
-		2. Navigieren Sie zu **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** und fügen Sie den folgenden Pfad hinzu:
+	2. Navigieren Sie zu **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** und fügen Sie den folgenden Pfad hinzu:
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. Navigieren Sie zu **Build Settings > Linking > Runpath Search Paths** und fügen Sie den folgenden Frameworks-Parameter hinzu:
+	3. Navigieren Sie zu **Build Settings > Linking > Runpath Search Paths** und fügen Sie den folgenden Frameworks-Parameter hinzu:
 
 			```
 			@executable_path/Frameworks
 			```
 
-		4. Erstellen Sie den Build mit Xcode und führen Sie Ihre Anwendung mit Xcode aus.
+	4. Erstellen Sie den Build mit Xcode und führen Sie Ihre Anwendung mit Xcode aus.
 
-1. Überprüfen Sie, ob das Plug-in erfolgreich installiert wurde, indem Sie den folgenden Befehl ausführen:
+6. Überprüfen Sie, ob das Plug-in erfolgreich installiert wurde, indem Sie den folgenden Befehl ausführen:
 
 	```Bash
 	cordova plugin list

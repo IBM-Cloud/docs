@@ -7,10 +7,10 @@ copyright:
 
 # Benachrichtigungen für Android blockieren
 {: #hold-notifications-android}
-*Letzte Aktualisierung: 14. Juni 2016*
+Letzte Aktualisierung: 16. August 2016
 {: .last-updated}
 
-Wenn Ihre Anwendung in den Hintergrund wechselt, möchten Sie möglicherweise, dass der Push Notification-Service die Benachrichtigungen aufbewahrt, die an Ihre Anwendung gesendet werden. Zum Blockieren von Benachrichtigungen rufen Sie die Methode 'hold()' in der Methode 'onPause()' der Aktivität auf, die Push-Benachrichtigungen verarbeitet.
+Wenn Ihre Anwendung in den Hintergrund wechselt, ist es gegebenenfalls wünschenswert, dass der {{site.data.keyword.mobilepushshort}}-Service die Benachrichtigungen aufbewahrt, die an Ihre Anwendung gesendet werden. Rufen Sie zum Blockieren von Benachrichtigungen die Methode 'hold()' in der Methode 'onPause()' der Aktivität auf, die Push-Benachrichtigungen verarbeitet. 
 
 ```
 @Override

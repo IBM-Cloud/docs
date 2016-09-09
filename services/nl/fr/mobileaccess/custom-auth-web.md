@@ -8,10 +8,10 @@ copyright:
 #Configuration d'une authentification personnalisée pour les applications Web {{site.data.keyword.amashort}}
 {: #custom-web}
 
-*Dernière mise à jour : 18 juillet 2016*
+Dernière mise à jour : 21 juillet 2016
 {: .last-updated}
 
-Ajoutez une authentification personnalisée à votre application Web {{site.data.keyword.amashort}}.
+Ajoutez une authentification personnalisée et une fonctionnalité de sécurité {{site.data.keyword.amashort}} à votre application Web.
 
 ## Avant de commencer
 {: #before-you-begin}
@@ -39,7 +39,7 @@ Lors de la création d'un fournisseur d'identité personnalisé, vous devez déf
 
 Le corps de la demande contiendra un objet `challengeAnswer` hébergeant les éléments `username`
 et `password`.
-Après la validation de l'utilisateur, cette route doit renvoyer un objet JSON avec la structure suivante.  
+Après la validation de l'utilisateur, cette route doit renvoyer un objet JSON avec la structure suivante. 
 
 
 ```json
@@ -49,14 +49,14 @@ Après la validation de l'utilisateur, cette route doit renvoyer un objet JSON a
                 userName: <nom_utilisateur>,
                 displayName: <nom_d'affichage>
                 attributes: <autres_attributs_json>
-            }
+            } 
         } 
 
  ```
 
 **Remarque :** La zone `attributes` est facultative. 
 
-Le code suivant illustre une requête Post de ce type.
+Le code suivant illustre une demande Post de ce type.
 
 ```Java
 var app = express();
@@ -114,10 +114,7 @@ l'authentification.
 
 ##Implémentation du flux d'autorisation {{site.data.keyword.amashort}} à l'aide d'un fournisseur d'identité personnalisé 
 
-La variable d'environnement `VCAP_SERVICES` est créée automatiquement pour chaque instance de service {{site.data.keyword.amashort}}
-et contient les propriétés requises pour le processus d'autorisation. 
-Elle est constituée d'un objet JSON et peut être affichée en cliquant sur **Variables d'environnement** dans le navigateur sur le côté gauche de
-votre application.
+La variable d'environnement `VCAP_SERVICES` est créée automatiquement pour chaque instance de service {{site.data.keyword.amashort}} et contient les propriétés requises pour le processus d'autorisation. Elle est constituée d'un objet JSON et peut être affichée en cliquant sur **Variables d'environnement** dans la barre de navigation sur le côté gauche de votre application.
 
 Pour demander l'autorisation de l'utilisateur, redirigez le navigateur vers le noeud final du serveur d'autorisation. Pour ce faire, procédez comme suit : 
 
@@ -125,15 +122,13 @@ Pour demander l'autorisation de l'utilisateur, redirigez le navigateur vers le n
 (`clientId`) depuis les données d'identification du service stockées dans la variable d'environnement
 `VCAP_SERVICES`. 
 
-  **Remarque :** Si vous avez ajouté le service Mobile Client Access dans votre application avant l'ajout de la prise en charge Web,
-il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. Utilisez à la place l'URL ci-dessous correspondant à votre
-région {{site.data.keyword.Bluemix_notm}} : 
+  **Remarque :** si vous avez ajouté le service {{site.data.keyword.amashort}} dans votre application avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. A la place, utilisez les URL suivantes, selon votre région {{site.data.keyword.Bluemix_notm}} : 
  
   Sud des Etats-Unis : 
   ```
   https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
   ```
-  Londres :
+  Londres : 
   ```
   https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization 
   ```
@@ -158,19 +153,19 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 function checkAuthentication(req, res, next){ 
   // Vérifie si l'utilisateur est authentifié
-  if (req.session.userIdentity){
-    next()
+  if (req.session.userIdentity){ 
+    next() 
   } else { 
-    // Sinon, le redirige au serveur d'autorisation
-    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-    var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-    var clientId = mcaCredentials.clientId;
-    var redirectUri = "http://some-server/oauth/callback"; // URI de redirection d'application Web
+    // If not - redirect to authorization server 
+    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
+    var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
+    var clientId = mcaCredentials.clientId; 
+    var redirectUri = "http://some-server/oauth/callback"; // Your web application redirect uri 
     var redirectUrl = authorizationEndpoint + "?response_type=code";
-    redirectUrl += "&client_id=" + clientId;
-    redirectUrl += "&redirect_uri=" + redirectUri;
-    res.redirect(redirectUrl);
-  }
+    redirectUrl += "&client_id=" + clientId; 
+    redirectUrl += "&redirect_uri=" + redirectUri; 
+    res.redirect(redirectUrl); 
+  } 
 
 } 
 
@@ -197,15 +192,13 @@ L'étape suivante consiste à obtenir le jeton d'accès et le jeton d'identité 
 1. Extrayez les éléments `authorizationEndpoint`, `clientId` et `secret` depuis les données
 d'identification du service stockées dans la variable d'environnement `VCAP_SERVICES`. 
 
-   **Remarque :** Si vous avez ajouté le service Mobile Client Access dans votre application avant l'ajout de la prise en charge Web, il se
-peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. Dans
-ce cas, utilisez à la place l'URL ci-dessous correspondant à votre région Bluemix : 
+   **Remarque :** si vous avez ajouté le service {{site.data.keyword.amashort}} dans votre application avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. A la place, utilisez les URL suivantes, selon votre région {{site.data.keyword.Bluemix_notm}} : 
 
  Sud des Etats-Unis : 
  ```
      https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
  ```
- Londres :
+ Londres : 
  ```
      https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
  ``` 
@@ -222,21 +215,23 @@ d'authentification HTTP de base.
 Dans l'exemple suivant, le code extrait les valeurs requises et les envoie dans une requête POST.
 
 
- ```Java var cfEnv = require("cfenv"); var base64url = require("base64url "); app.get("/oauth/callback", function(req, res, next){
+ ```Java var cfEnv = require("cfenv"); var base64url = require("base64url "); app.get("/oauth/callback", function(req, res, next){ 
     var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-    var tokenEndpoint = mcaCredentials.tokenEndpoint;
-    var formData = {
+    var tokenEndpoint = mcaCredentials.tokenEndpoint; 
+
+    var formData = { 
       grant_type: "authorization_code",
       client_id: mcaCredentials.clientId,
       redirect_uri: "http://some-server/oauth/callback",   // URI de redirection d'application Web
       code: req.query.code
     }
 
-  request.post({
+  request.post({ 
     url: tokenEndpoint,
     formData: formData
-    }, function (err, response, body){
-      var parsedBody = JSON.parse(body);
+    }, function (err, response, body){ 
+      var parsedBody = JSON.parse(body); 
+
       req.session.accessToken = parsedBody.access_token;
       req.session.idToken = parsedBody.id_token;
       var idTokenComponents = parsedBody.id_token.split("."); // [en-tête, contenu, signature]
@@ -252,10 +247,11 @@ Dans l'exemple suivant, le code extrait les valeurs requises et les envoie dans 
 Notez que le paramètre `redirect_uri` doit correspondre au paramètre `redirect_uri` utilisé auparavant dans la demande
 d'autorisation. La valeur du paramètre code doit être le code d'accord reçu dans la réponse à l'issue de la demande d'autorisation. Ce code n'est valide que
 pendant 10 minutes, après quoi vous devrez en obtenir un nouveau.
+
 Le corps de la réponse contiendra les éléments `access_token` et `id_token` au format JWT (https://jwt.io/).
 
 Une fois que vous avez reçu les jetons d'accès et d'identité, vous pouvez marquer la session Web comme authentifiée
-et, si vous le désirez, rendre persistants ces jetons. 
+et, si vous le désirez, rendre persistants ces jetons.
 
 ##Utilisation du jeton d'accès et du jeton d'identité obtenus 
 
@@ -265,18 +261,17 @@ renvoyées par le fournisseur d'identité personnalisé lors de l'authentificati
 et la zone `id` contiendra le nom d'utilisateur (`userName`).  Toutes les autres valeurs renvoyées par le fournisseur d'identité
 personnalisé sont renvoyées dans la zone `attributes` sous `imf.user`.  
 
-Le jeton d'accès permet une communication avec les ressources protégées par les filtres d'autorisation de Mobile Client Access
-(voir [Protection des ressources](protecting-resources.html)). Pour
-soumettre des demandes à des ressources protégées, ajoutez aux demandes un en-tête Authorization doté de la structure suivante : 
+Le jeton d'accès permet une communication avec les ressources protégées par les filtres d'autorisation de {{site.data.keyword.amashort}} (voir [Protection des ressources](protecting-resources.html)). Pour soumettre des demandes à des ressources protégées, ajoutez aux demandes un en-tête Authorization doté de la structure suivante : 
 
 `Authorization=Bearer <jeton_accès> <jeton_ID>` 
 
-**Remarque :** 
+####Conseils : 
+{: #tips_token}
 
-* Les éléments `<jeton_accès>` et `<jeton_ID>` doivent être séparés par un espace.
+* Les éléments `<accessToken>` et `<idToken>` doivent être séparés par un espace.
 
-* Le jeton d'identité est facultatif. Si vous l'omettez, il est possible d'accéder à la ressource protégée, mais sans recevoir d'informations sur
-l'utilisateur autorisé. 
+* Le jeton d'identité est facultatif. Si vous l'omettez, il est possible d'accéder à la ressource protégée, mais sans recevoir
+d'informations sur l'utilisateur autorisé. 
 
 
 

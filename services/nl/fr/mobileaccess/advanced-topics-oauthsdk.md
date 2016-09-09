@@ -5,10 +5,10 @@ copyright:
   
 ---
 
-# Configuration des communications de système back end à système back end
+# Communication entre applications de back end et services
 {: #backend-comm}
 
-*Dernière mise à jour : 16 juin 2016*
+Dernière mise à jour : 21 juillet 2016
 {: .last-updated}
 
 Dans certains scénarios, vous pouvez être amené à envoyer des demandes à partir d'une application de back end qui s'exécute sur {{site.data.keyword.Bluemix}} à un autre système de back end qui est protégé par le service {{site.data.keyword.amashort}} (le service {{site.data.keyword.cloudant}}, par exemple). Dans ce cas, vous devez ajouter un jeton OAuth à la demande.
@@ -40,10 +40,10 @@ var options = {
 
 	cacheSize: 100,
 
-	// Toutes les propriétés ci-dessous sont extraites automatiquement lorsque votre Node.js
-	// s'exécute sur {{site.data.keyword.Bluemix_notm}} et est lié à une instance du service {{site.data.keyword.amashort}}.
-	// Vous pouvez également obtenir ces valeurs de propriétés en cliquant sur Afficher les données d'identification
-	// sur la vignette du service {{site.data.keyword.amashort}} dans le tableau de bord de votre application {{site.data.keyword.Bluemix_notm}}
+	// The following properties are retrieved automatically when your Node.js
+	// runs on {{site.data.keyword.Bluemix_notm}} and bound to an instance of {{site.data.keyword.amashort}} Service.
+	// Alternatively, you can get these property values by clicking Show Credentials
+	// on the {{site.data.keyword.amashort}} Service tile in your {{site.data.keyword.Bluemix_notm}} application dashboard
 
 	appId: "appId",				// Bleumix applicationGUID, a.k.a tenantId
 	clientId: "clientId",			
@@ -53,12 +53,12 @@ var options = {
 
 oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 
-	// Dans la demande que vous désirez envoyer à la ressource protégée,
-	// ajoutez la valeur authHeader.
+	// In the request that you want to send to the protected resource, 
+	// add the authHeader value.
 
 	request.headers.Authorization = authHeader;
 
-	// Envoi de la demande
+	// Send request
 
 });
 

@@ -8,8 +8,8 @@ copyright:
 
 # Mobile Projekte mithilfe des Mobile-Dashboards erstellen
 {: #mobile}
-*Letzte Aktualisierung: 18. Juli 2016*
-{: .last-updated}
+Letzte Aktualisierung: 21. July 2016
+{: .last-updated} 
 
 Mit {{site.data.keyword.Bluemix}} Mobile-Services können Sie vordefinierte, verwaltete und skalierbare Cloud-Services in Ihre mobilen Anwendungen integrieren, ohne dass die IT-Abteilung involviert werden muss. Sie können sich auf das Erstellen mobiler Apps statt auf die Komplexitäten beim Verwalten der Back-End-Infrastruktur konzentrieren.
 
@@ -30,28 +30,28 @@ In der folgenden Tabelle werden die verfügbaren {{site.data.keyword.Bluemix_not
 <th>{{site.data.keyword.Bluemix_notm}} Mobile-Service</th>
 <th>Beschreibung</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}-Symbol"><br/><b>{{site.data.keyword.mobileanalytics_short}} (Experimentell)</b></td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}-Symbol"><br/>{{site.data.keyword.mobileanalytics_short}} (Experimentell)</td>
 <td valign="top">Mithilfe des Service {{site.data.keyword.mobileanalytics_full}} können Sie Status, Verhalten und Kontext mobiler Apps, mobiler Benutzer und mobiler Geräte messen.<br/><br/>
 Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} - Link zur Dokumentation">Dokumentation zu {{site.data.keyword.mobileanalytics_short}}</a>.
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}}-Servicesymbol"><br/><b>{{site.data.keyword.amashort}}</b></td>
+<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}}-Servicesymbol"><br/>{{site.data.keyword.amashort}}</td>
 <td valign="top">Mithilfe des Service {{site.data.keyword.amafull}} können Sie Sicherheitsfunktionen zu Ihrer mobilen App hinzufügen. Sie können Clientauthentifizierung und Identitätsprovider konfigurieren, damit sich Benutzer bei der Apppp mit ihren bereits vorhandenen Google- oder Facebook-Konten anmelden können.<br/><br/>
 Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="../services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} - Link zur Dokumentation">Dokumentation zu {{site.data.keyword.amashort}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}}-Servicesymbol"><br/> <b>{{site.data.keyword.mobilefoundation_short}}</b></td>
+<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}}-Servicesymbol"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">Mithilfe des Service {{site.data.keyword.mobilefoundation_long}} können Sie die Einrichtung einer {{site.data.keyword.mfp_full}}-Umgebung für Entwicklung, Test und Betrieb mobiler Unternehmens-Apps beschleunigen.<br/><br/>
 Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="../services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} - Link zur Dokumentation">Dokumentation zu {{site.data.keyword.mobilefoundation_short}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}}-Servicesymbol"><br/><b>{{site.data.keyword.mqa}}</b></td>
-<td valign="top">Mithilfe des Service {{site.data.keyword.mqafull}} können Sie mobile Qualitätsservices für Ihre Apps erkunden und einrichten. Für einen raschen Einblick in die Problekmatik in Bezug auf die Apps, mit denen Sie arbeiten, können Sie die allgemeinen Qualitätsmetriken für Ihre mobilen Apps anzeigen. Diese Metriken umfassen Informationenen zu Abstürzen, Programmfehlern, Benutzerfeedback und Benutzerstimmung. Wenn Sie diese Informationen für Ihre Apps anzeigen, können Sie feststellen, ob bestimmte Themen einer weiteren Untersuchung bedürfen.<br/><br/>
+<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}}-Servicesymbol"><br/>{{site.data.keyword.mqa}}</td>
+<td valign="top">Mithilfe des Service {{site.data.keyword.mqafull}} können Sie mobile Qualitätsservices für Ihre Apps erkunden und einrichten. Für einen raschen Einblick in die Problematik in Bezug auf die Apps, mit denen Sie arbeiten, können Sie die allgemeinen Qualitätsmetriken für Ihre mobilen Apps anzeigen. Diese Metriken umfassen Informationenen zu Abstürzen, Programmfehlern, Benutzerfeedback und Benutzerstimmung. Wenn Sie diese Informationen für Ihre Apps anzeigen, können Sie feststellen, ob bestimmte Themen einer weiteren Untersuchung bedürfen.<br/><br/>
 Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="../services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} - Link zur Dokumentation">Dokumentation zu {{site.data.keyword.mqa}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Symbol für Push Notifications-Service"><br/><b>{{site.data.keyword.mobilepushshort}}</b></td>
+<td><img src="images/catalog_icons-09.png" alt="Symbol für Push Notifications-Service"><br/>{{site.data.keyword.mobilepushshort}}</td>
 <td valign="top">Mithilfe des Service {{site.data.keyword.mobilepushfull}} können Sie mobile Push-Benachrichtigungen für iOS- und Android-Plattformen senden und verwalten. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten und zur Geräteplattform und führt das Senden von Push-Benachrichtigungen an die Geräte aus. Mit diesem Service können Sie Rundsendungen, Unicasts (auf der Basis von Benutzer-ID und Geräte-ID) sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an die Benutzer Ihrer mobilen Anwendungen senden.<br/><br/>
 Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="../services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} - Link zur Dokumentation">Dokumentation zu {{site.data.keyword.mobilepushshort}}</a>.</td>
 </table>
@@ -87,7 +87,7 @@ Führen Sie die folgenden Schritte aus, um Ihren bereits vorhandenen {{site.data
 4. Klicken Sie auf **API** und kopieren Sie den Wert für den **API-Schlüssel** bis hin zu Ihrem Datenbanknamen.
 
    **Anmerkung**: Kopieren Sie keinen Inhalt, der hinter Ihrem Datenbanknamen steht.
-
+   
 5. Klicken Sie auf **Berechtigungen** > **API-Schlüssel generieren** und kopieren Sie die Werte für **Schlüssel** und **Kennwort**.
 6. Navigieren Sie wieder zur Ansicht **Projekte** des Mobile-Dashboards.
 7. Klicken Sie auf Ihre Projekt, um es zu bearbeiten.
@@ -117,7 +117,8 @@ Führen Sie die folgenden Schritte aus, um Ihren bereits vorhandenen {{site.data
 * [Blogbeitrag: Einführung in das Bluemix Mobile-Dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
 * [Blogbeitrag: Bluemix Mobile, Teil 1: App 'Store Catalog' erstellen](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blogbeitrag: Bluemix Mobile, Teil 2: Angepasstes Bluemix-Back-End in die App 'Store Catalog' integrieren](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
+ 
 ## Lernprogramme und Beispiele
 {: #samples}
 * [Mobiles Back-End für Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+

@@ -11,7 +11,7 @@ copyright:
 # Android 앱에서 Facebook 인증 사용
 {: #facebook-auth-android}
 
-*마지막 업데이트 날짜: 2016년 7월 5일*
+마지막 업데이트 날짜: 2016년 8월 4일
 {: .last-updated}
 
 
@@ -178,11 +178,16 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 					"applicationGUID",
 					BMSClient.REGION_UK);
 
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
+
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
-,
+`BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
+   
+  **참고:** Android 애플리케이션이 Android 버전 6.0(API 레벨 23) 이상을 대상으로 하는 경우, `register`를 호출하기 전에 애플리케이션에 `android.permission.GET_ACCOUNTS` 호출이 있는지 확인해야 합니다. 자세한 정보는 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}을 참조하십시오.
 					
-`BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오. 
+
 
 1. 활동에 다음 코드를 추가하십시오. 
 

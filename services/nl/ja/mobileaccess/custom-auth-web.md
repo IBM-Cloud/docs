@@ -8,10 +8,10 @@ copyright:
 #{{site.data.keyword.amashort}} Web アプリケーション用のカスタム認証の構成
 {: #custom-web}
 
-*最終更新日: 2016 年 7 月 18 日*
+最終更新日: 2016 年 7 月 21 日
 {: .last-updated}
 
-{{site.data.keyword.amashort}} Web アプリにカスタム認証を追加します。
+カスタム認証と {{site.data.keyword.amashort}} セキュリティー機能を Web アプリに追加します。
 
 ## 開始する前に
 {: #before-you-begin}
@@ -110,13 +110,13 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 ##カスタム ID プロバイダーを使用した {{site.data.keyword.amashort}} 許可フローの実装 
 
-`VCAP_SERVICES` 環境変数が {{site.data.keyword.amashort}} サービス・インスタンスごとに自動的に作成され、許可プロセスに必要なプロパティーが含まれます。これは 1 つの JSON オブジェクトからなり、アプリケーションの左側のナビゲーターで**「環境変数」**をクリックすることによって表示できます。
+`VCAP_SERVICES` 環境変数が {{site.data.keyword.amashort}} サービス・インスタンスごとに自動的に作成され、許可プロセスに必要なプロパティーが含まれます。この環境変数は 1 つの JSON オブジェクトから成り、アプリケーションの左側のナビゲーション・バーで**「環境変数」**をクリックすることによって表示できます。
 
 ユーザー許可を要求するには、ブラウザーを許可サーバー・エンドポイントにリダイレクトします。これには、次のようにします。 
 
 1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) およびクライアント ID (`clientId`) を取り出します。 
 
-  **注:** Web サポートが追加される前に Mobile Client Access サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に基づいて以下の URL を使用してください。 
+  **注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
  
   米国南部: 
   ```
@@ -177,7 +177,7 @@ function checkAuthentication(req, res, next){
 
 1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、`authorizationEndpoint`、`clientId`、および `secret` を取り出します。 
 
-   **注:** Web サポートが追加される前に Mobile Client Access サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。この場合、Bluemix 地域に基づいて、代わりに以下の URL を使用してください。 
+   **注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
 
  米国南部: 
  ```
@@ -239,11 +239,12 @@ app.get("/oauth/callback", function(req, res, next){
 
 識別トークンには、ユーザー ID に関する情報が含まれます。カスタム認証の場合、このトークンには、カスタム ID プロバイダーによって認証時に返されるすべての情報が含まれます。`imf.user` フィールドの下で、`displayName` フィールドには、カスタム ID プロバイダーによって返される `displayName` が含まれ、`id` フィールドには `userName` が含まれます。カスタム ID プロバイダーによって返される他のすべての値は、`imf.user` の下の `attributes` フィールド内に返されます。  
 
-アクセス・トークンは、Mobile Client Access 許可フィルターによって保護されたリソースとの通信を許可します ([リソースの保護](protecting-resources.html) を参照してください)。保護リソースへの要求を行うには、以下の構造の許可ヘッダーを要求に追加します。 
+アクセス・トークンは、{{site.data.keyword.amashort}} 許可フィルターによって保護されたリソースとの通信を許可します ([リソースの保護](protecting-resources.html) を参照してください)。保護リソースへの要求を行うには、以下の構造の許可ヘッダーを要求に追加します。 
 
 `Authorization=Bearer <accessToken> <idToken>` 
 
-**注:** 
+####ヒント: 
+{: #tips_token}
 
 * `<accessToken>` と `<idToken>` は空白で分離する必要があります。
 

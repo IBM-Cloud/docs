@@ -4,15 +4,15 @@ copyright:
   years: 2015, 2016
 
 ---
-{:screen:  .screen}
+
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
+
 
 # 启用 iOS 应用程序 (Objective-C SDK) 的 Facebook 认证
 {: #facebook-auth-ios}
 
 
-*上次更新时间：2016 年 7 月 17 日*
+上次更新时间：2016 年 7 月 17 日
 {: .last-updated}
 
 
@@ -158,15 +158,17 @@ copyright:
 
 1. 通过添加以下头，将所需框架导入要使用 {{site.data.keyword.amashort}} 客户端 SDK 的类中：
 
-	**Objective-C**
+	####Objective-C
+	{: #framework-objc}
 
-		```Objective-C
+	```Objective-C
 	#import <IMFCore/IMFCore.h>
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
 
-	**Swift**
+	####Swift
+	{: #bridgingheader-swift}
 
 	{{site.data.keyword.amashort}} 客户端 SDK 是使用 Objective-C 实现的，因此可能需要向 Swift 项目添加桥接头。
 
@@ -192,33 +194,36 @@ copyright:
 
 
 
-	**Objective-C**
+	####Objective-C
+	{: #approute-objc}
 
-		```Objective-C
+	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
 
-	**Swift**
+	####Swift
+	{: #approute-swift}
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
 
-1. 通过将以下代码添加到应用程序代表中的 `application:didFinishLaunchingWithOptions` 方法，通知 Facebook SDK 有关应用程序激活的信息，并注册 Facebook 认证处理程序。初始化 IMFClient 实例后，立即添加以下代码。
+1. 通过将以下代码添加到应用程序代表中的 `application:didFinishLaunchingWithOptions` 方法，通知 Facebook SDK 有关应用程序激活的信息，并注册 Facebook 认证处理程序。
+初始化 IMFClient 实例后，请添加以下代码。 	
 
-	
+	####Objective-C
+	{: #activate-objc}
 
-	**Objective-C**
-
-		```Objective-C
+	```Objective-C
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 ```
 
-	**Swift**
+	####Swift
+	{: #activate-swift}
 
 	```Swift
 		FBAppEvents.activateApp()
@@ -227,9 +232,10 @@ copyright:
 
 1. 将以下代码添加到应用程序代表中。
 
-	**Objective-C**
+	####Objective-C
+	{: #appdelegate-objc}
 
-		```Objective-C
+	```Objective-C
 	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
 			sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 
@@ -238,7 +244,8 @@ copyright:
 	}
 ```
 
-	**Swift**
+	####Swift
+	{: #appdelegate-swift}
 
 	```Swift
 	func application(application: UIApplication, openURL url: NSURL,
@@ -255,15 +262,15 @@ copyright:
 {: #facebook-auth-ios-testing-before}
 您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
-1. 尝试在浏览器中对新创建的移动后端的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。
-例如：`http://my-mobile-backend.mybluemix.net/protected`
+1. 尝试在浏览器中对新创建的移动后端的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
 <br/>使用 MobileFirst Services Starter 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
 
 1. 使用 iOS 应用程序对同一端点发起请求。
 
-	**Objective-C**
+	####Objective-C
+	{: #requestpath-objc}
 
-		```Objective-C
+	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
 								[[IMFClient sharedInstance] backendRoute]];
 
@@ -280,7 +287,8 @@ copyright:
 	}];
 	```
 
-	**Swift**
+	####Swift
+	{: #requestpath-swift}
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"
@@ -309,13 +317,15 @@ copyright:
 
 		通过添加以下代码，您还可以添加注销功能：
 
-	**Objective-C**
+	####Objective-C
+	{: #logout-objc}
 
-		```Objective-C
+	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
 	```
 
-	**Swift**
+	####Swift
+	{: #logout-swift}
 
 	```Swift
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)

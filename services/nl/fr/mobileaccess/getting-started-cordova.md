@@ -9,7 +9,7 @@ copyright:
 # Configuration du plug-in Cordova
 {: #getting-started-cordova}
 
-*Dernière mise à jour : 17 juillet 2016*
+Dernière mise à jour : 17 juillet 2016
 {: .last-updated}
 
 Instrumentez votre application Cordova avec le SDK client {{site.data.keyword.amashort}}, initialisez le SDK et envoyez des requêtes à des ressources protégées et
@@ -23,7 +23,7 @@ Vous devez disposer des éléments suivants :
 
 * Une application Cordova ou un projet existant. Pour plus d'informations sur la configuration de votre application Cordova, consultez le [site Web Cordova](https://cordova.apache.org/).
 
-## Installation du plug-in {{site.data.keyword.amashort}} Cordova 
+## Installation du plug-in {{site.data.keyword.amashort}} Cordova
 {: #getting-started-cordova-plugin}
 
 Le SDK client de {{site.data.keyword.amashort}} pour Cordova est un plug-in Cordova qui encapsule les SDK client natifs de
@@ -40,7 +40,7 @@ CLI de Cordova télécharge automatiquement des plug-ins depuis les référentie
 	cordova platform add ios
 	```
 
-1. Si vous avez ajouté la plateforme Android, vous devez ajouter le niveau d'API minimal pris en charge au fichier `config.xml` de votre application Cordova. Ouvrez
+2. Si vous avez ajouté la plateforme Android, vous devez ajouter le niveau d'API minimal pris en charge au fichier `config.xml` de votre application Cordova. Ouvrez
 le fichier `config.xml` et ajoutez la ligne suivante à l'élément `<platform
 name="android">` :
 
@@ -54,7 +54,7 @@ name="android">` :
 
 	La valeur de *minSdkVersion* doit être supérieure à `15`. La valeur de *targetSdkVersion* doit être le dernier logiciel SDK Android mis à disposition par Google.
 
-1. Si vous avez ajouté le système d'exploitation iOS, déclarez une cible dans l'élément `<platform name="ios">` :
+3. Si vous avez ajouté le système d'exploitation iOS, déclarez une cible dans l'élément `<platform name="ios">` :
 
 	```XML
 	<platform name="ios">
@@ -63,48 +63,49 @@ name="android">` :
 	</platform>
 	```
 
-1. Installez le plug-in Cordova de {{site.data.keyword.amashort}} :
+4. Installez le plug-in Cordova de {{site.data.keyword.amashort}} :
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Configurez votre plateforme pour Android, iOS, ou les deux.
+5. Configurez votre plateforme pour Android, iOS, ou les deux.
 
-	* **Android**
+	####Android
+	{: #cordova-android}
 
-		Avant d'ouvrir votre projet dans Android Studio, générez votre application Cordova via votre interface de ligne de commande (CLI) pour éviter des erreurs
+	Avant d'ouvrir votre projet dans Android Studio, générez votre application Cordova via votre interface de ligne de commande (CLI) pour éviter des erreurs
 de génération.
 
 		```
 		cordova build android
 		```
 
-	* **iOS**
+	####iOS
+	{: #cordova-ios}
 
-		Configurez comme suit votre projet Xcode pour éviter des erreurs de génération.
+	Configurez comme suit votre projet Xcode pour éviter des erreurs de génération.
 
-		1. Utilisez la version Xcode la plus récente pour ouvrir votre fichier `xcode.proj` depuis le répertoire
+	1. Utilisez la version Xcode la plus récente pour ouvrir votre fichier `xcode.proj` depuis le répertoire
 `<app_name>/platforms/ios`.
 
-		**Important :** Si vous recevez un message "Convert to Latest Swift Syntax" (Convertir dans la dernière syntaxe Swift), cliquez sur
-Cancel (Annuler).
+		**Important : ** si vous recevez un message vous invitant à procéder à une conversion vers la dernière syntaxe Swift, cliquez sur Annuler.
 
-		2. Accédez à **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** et ajoutez le chemin d'accès suivant :
+	2. Accédez à **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** et ajoutez le chemin d'accès suivant :
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. Accédez à **Build settings > Linking > Runpath Search Paths** et ajoutez le paramètre Frameworks suivant :
+	3. Accédez à **Build settings > Linking > Runpath Search Paths** et ajoutez le paramètre Frameworks suivant :
 
 			```
 			@executable_path/Frameworks
 			```
 
-		4. Générez et exécutez votre application avec Xcode.
+	4. Générez et exécutez votre application avec Xcode.
 
-1. Vérifiez que l'installation du plug-in a abouti en exécutant la commande suivante :
+6. Vérifiez que l'installation du plug-in a abouti en exécutant la commande suivante :
 
 	```Bash
 	cordova plugin list
@@ -127,11 +128,11 @@ tableau de bord {{site.data.keyword.Bluemix_notm}}.
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
 
-## Envoi d'une requête à l'application back end mobile
+## Envoi d'une demande à l'application back end mobile
 {: #getting-started-request}
 
 Une fois que le SDK client {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des requêtes à votre application back end
-mobile. 
+mobile.
 
 1. Essayez d'envoyer une requête à un noeud final protégé de votre nouvelle application back end
 mobile. Dans votre navigateur, ouvrez l'URL suivante :

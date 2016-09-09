@@ -8,7 +8,7 @@ copyright:
 # {{site.data.keyword.amashort}} Android 앱용 사용자 정의 인증 구성 
 {: #custom-android}
 
-*마지막 업데이트 날짜: 2016년 7월 17일*
+마지막 업데이트 날짜: 2016년 8월 1일
 {: .last-updated}
 
 
@@ -34,7 +34,7 @@ copyright:
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
@@ -62,6 +62,9 @@ copyright:
 ```
 `BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오.
 
+
+{{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.				
+	
 
 ## AuthenticationListener 인터페이스
 {: #custom-android-authlistener}
@@ -175,8 +178,10 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 사용자 정의 AuthenticationListener를 작성한 후 리스너를 사용하기 전에 `BMSClient`에 등록하십시오. 애플리케이션에 다음 코드를 추가하십시오. 이 코드는 보호된 리소스에 대한 요청을 전송하기 전에 호출해야 합니다. 
 
 ```Java
-BMSClient.getInstance().registerAuthenticationListener(realmName,
-									new CustomAuthenticationListener());
+MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+
 ```
 
 {{site.data.keyword.amashort}} 대시보드에서 지정한 *realmName*을 사용하십시오. 
@@ -225,7 +230,7 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
  다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 
  ```Java
- AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 사용자가 다시 로그인하려고 시도하는 경우 서버에서 수신된 확인에 다시 응답해야 합니다. 

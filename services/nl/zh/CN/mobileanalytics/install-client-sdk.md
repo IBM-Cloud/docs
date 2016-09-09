@@ -5,7 +5,8 @@ copyright:
 
 ---
 
-# 安装 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK
+# 安装 {{site.data.keyword.mobileanalytics_short}}
+客户端 SDK
 {: #mobileanalytics_sdk}
 *上次更新时间：2016 年 4 月 21 日*
 {: .last-updated}
@@ -80,7 +81,7 @@ sudo gem install cocoapods
     ```
     {: codeblock}
 
-2. 如果尚未针对 CocoaPods 初始化您的工作空间，请在 Xcode 项目的根目录中运行 `pod init` 命令。CocoaPods 会为您创建 `Podfile` 文件，您可以在该文件中定义 Xcode 项目的依赖关系。
+2. 如果您未针对 CocoaPods 初始化您的工作空间，请在项目的根目录中，运行 `pod init` 命令。CocoaPods 会为您创建 `Podfile` 文件，您可以在该文件中定义 Xcode 项目的依赖关系。
 
 3. 将 `BMSAnalytics` pod 添加到 Podfile 中的 target 部分，例如：
 
@@ -116,7 +117,3 @@ sudo gem install cocoapods
 ## SDK
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
-
-## API 参考
-{: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

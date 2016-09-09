@@ -11,7 +11,7 @@ copyright:
 # 啟用 Cordova 應用程式的 Facebook 鑑別
 {: #facebook-auth-cordova}
 
-*前次更新：2016 年 6 月 15 日*
+前次更新：2016 年 6 月 15 日
 {: .last-updated}
 
 
@@ -35,7 +35,7 @@ copyright:
 
 配置 Cordova 應用程式的 Android 平台進行 Facebook 鑑別整合所需的步驟，與原生 Android 應用程式所需的步驟極為類似。如需相關資訊，請參閱[在 Android 應用程式中啟用 Facebook 鑑別](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html)。請完成下列步驟：
 
-* 配置 Android 平台的 Facebook 應用程式
+* 針對 Android 平台配置 Facebook 應用程式
 * 配置 {{site.data.keyword.amashort}} 進行 Facebook 鑑別
 * 配置適用於 Android 的 {{site.data.keyword.amashort}} 用戶端 SDK
 
@@ -46,7 +46,7 @@ copyright:
 
 配置 Cordova 應用程式的 iOS 平台進行 Facebook 鑑別整合所需的步驟，與原生 iOS 應用程式所需的步驟類似。主要差異是 Cordova CLI 目前不支援 CocoaPods 相依關係管理程式。您必須手動新增與 Facebook 鑑別整合所需的檔案。如需相關資訊，請參閱[在 iOS 應用程式中啟用 Facebook 鑑別](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html)。請完成下列步驟：
 
-* 配置 iOS 平台的 Facebook 應用程式
+* 針對 iOS 平台配置 Facebook 應用程式
 * 配置 {{site.data.keyword.amashort}} 進行 Facebook 鑑別
 
 ### 手動安裝用於 Facebook 鑑別的 {{site.data.keyword.amashort}} SDK 及 Facebook SDK
@@ -66,7 +66,7 @@ copyright:
 
 1. Facebook SDK 將安裝至 `~/Documents/FacebookSDK` 目錄。導覽至該目錄，並將 `FacebookSDK.framework` 檔案複製（拖放）到 Xcode 中的 iOS 專案。
 
-1. 	在 Xcode 左窗格中按一下專案根目錄，然後選取**建置階段**。
+1. 	在 Xcode 中按一下您的專案根目錄，然後選取**建置階段**。
 
 1. 將 `FacebookSDK.framework` 檔案新增至**鏈結二進位檔與檔案庫**中的已鏈結檔案庫清單。
 
@@ -117,7 +117,7 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 
 	![影像](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![影像](images/ios-facebook-login.png)
 
-	> 如果您未在裝置上安裝 Facebook 應用程式，或目前未登入 Facebook，則此畫面可能會稍微不同。
+	如果您未在裝置上安裝 Facebook 應用程式，或目前未登入 Facebook，則此畫面可能會稍微不同。
 
 1. 按一下**確定**，以授權 {{site.data.keyword.amashort}} 使用您的 Facebook 使用者身分來進行鑑別。
 

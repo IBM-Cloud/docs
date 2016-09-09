@@ -7,7 +7,7 @@ copyright:
 
 # Abilitazione dell'autenticazione Facebook per le applicazioni Web
 
-*Ultimo aggiornamento: 15 giugno 2016*
+Ultimo aggiornamento: 15 giugno 2016
 {: .last-updated}
 
 Utilizza  Facebook per autenticare gli utenti alla tua applicazione web.
@@ -61,7 +61,7 @@ Per avviare il processo di autorizzazione:
 
 
   Il parametro `state` non è utilizzato per ora e può essere lasciato vuoto.
-  Il parametro `redirect_uri` è l'URI per il reindirizzamento dopo l'esito positivo o negativo dell'autenticazione con Facebook.
+  Il parametro `redirect_uri` è l'uri per il reindirizzamento dopo l'esito positivo o negativo dell'autenticazione con Facebook.
 
 1. Dopo il reindirizzamento dell'endpoint di autorizzazione visualizzerai un modulo
 di accesso da Facebook. Immetti il nome utente e la password per il reindirizzamento a `redirect_uri`.

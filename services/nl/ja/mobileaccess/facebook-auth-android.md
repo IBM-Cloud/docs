@@ -11,7 +11,7 @@ copyright:
 # Android アプリ用の Facebook 認証の使用可能化
 {: #facebook-auth-android}
 
-*最終更新日: 2016 年 7 月 5 日*
+最終更新日: 2016 年 8 月 4 日
 {: .last-updated}
 
 
@@ -168,11 +168,16 @@ Client SDK を Android 用に構成するには、Android Studio 内の Gradle �
 					"applicationRoute",
 					"applicationGUID",
 					BMSClient.REGION_UK);
-FacebookAuthenticationManager.getInstance().register(this);
+BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
+
+	FacebookAuthenticationManager.getInstance().register(this);
 ```
-,
+`BMSClient.REGION_UK` は適切な地域に置き換えてください。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
+   
+  **注:** Android アプリケーションの対象が Android バージョン 6.0 (API レベル 23) 以降の場合、そのアプリケーションに、`register` の呼び出しの前に `android.permission.GET_ACCOUNTS` 呼び出しがあるようにする必要があります。詳しくは、[https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window} を参照してください。
 					
-`BMSClient.REGION_UK` は適切な地域に置き換えてください。
+
 
 1. 以下のコードをアクティビティーに追加します。
 

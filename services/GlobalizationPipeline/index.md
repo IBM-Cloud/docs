@@ -32,21 +32,51 @@ With the {{site.data.keyword.GlobalizationPipeline_short}} service, you can crea
 
 To create a bundle, complete the following steps:
 
-1\. From the **Overview** tab, click **New Bundle**.
+<ol>
+<li>From the <strong>Overview</strong> tab, click <strong>New Bundle</strong>.</li>
 
-2\. Provide information about your bundle:
+<li>Provide information about your bundle:</li>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bundle ID</strong></td>
+<td>Yes</td>
+<td>A unique name to identify the bundle.</td>
+</tr>
+<tr>
+<td><strong>Source language</strong></td>
+<td>Yes</td>
+<td>The native language of the source file.</td>
+</tr>
+<tr>
+<td><strong>Resource File</strong></td>
+<td>No</td>
+<td>A <a href=https://new-console.ng.bluemix.net/docs/services/GlobalizationPipeline/bundles.html>resource file</a> to translate. The maximum file size is limited to 2MB. Specified resource files will be uploaded.</td>
+</tr>
+<tr>
+<td><strong>File format</strong></td>
+<td>No</td>
+<td>The file type that is being uploaded.</td>
+</tr>
+<tr>
+<td><strong>Target language</strong></td>
+<td>No</td>
+<td>The languages that you want translations for.</td>
+</tr>
+</tbody>
+</table>
 
-| Field | Required| Description|
-|-------|---------|------------|
-| **Bundle ID** | Yes | A unique name to identify the bundle. |
-| **Source language** | Yes | The native language of the source file. |
-| **Resource File** | No | A [resource file](bundles.html#globalizationpipeline_workingwithbundles) to translate. The maximum file size is limited to 2MB. Specified resource files will be uploaded.  |
-| **File format** | No | The file type that is being uploaded. |
-| **Target language** | No | The languages that you want translations for. |
+<p><strong>Note:</strong> To change the language service that provides machine translation for your bundles, click the <a href=https://new-console.ng.bluemix.net/docs/services/GlobalizationPipeline/managing_translations.html#globalizationpipeline_service_to_service>MT Configuration</a> tab to view other supported machine translation engines.</p>
 
-**Note:** To change the language service that provides machine translation for your bundles, click the [**MT Configuration**](./managing_translations.html#globalizationpipeline_service_to_service) tab to view other supported machine translation engines.
+<li>Click <strong>save</strong></li></ol>
 
-3\. Click **Save**
 
 After the bundle is created, the uploaded resource file is translated into all of the target languages that you specified. The new bundle is added to the Bundles tab where you can:
 

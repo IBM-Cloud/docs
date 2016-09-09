@@ -9,7 +9,7 @@ copyright:
 # 设置 Cordova 插件
 {: #getting-started-cordova}
 
-*上次更新时间：2016 年 7 月 17 日*
+上次更新时间：2016 年 7 月 17 日
 {: .last-updated}
 
 在 Cordova 应用程序中安装 {{site.data.keyword.amashort}} 客户端 SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
@@ -41,7 +41,7 @@ copyright:
 	cordova platform add ios
 	```
 
-1. 如果添加的是 Android 平台，那么必须将支持的最低 API 级别添加到 Cordova 应用程序的 `config.xml` 文件。打开 `config.xml` 文件，并将以下行添加到 `<platform name="android">` 元素：
+2. 如果添加的是 Android 平台，那么必须将支持的最低 API 级别添加到 Cordova 应用程序的 `config.xml` 文件。打开 `config.xml` 文件，并将以下行添加到 `<platform name="android">` 元素：
 
 	```XML
 	<platform name="android">  
@@ -55,7 +55,7 @@ copyright:
 
 
 
-1. 如果添加的是 iOS 操作系统，请针对目标声明更新 `<platform name="ios">` 元素：
+3. 如果添加的是 iOS 操作系统，请针对目标声明更新 `<platform name="ios">` 元素：
 
 	```XML
 	<platform name="ios">
@@ -64,45 +64,48 @@ copyright:
 	</platform>
 	```
 
-1. 安装 {{site.data.keyword.amashort}} Cordova 插件：
+4. 安装 {{site.data.keyword.amashort}} Cordova 插件：
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
 
-1. 针对 Android 和/或 iOS 配置平台。
+5. 针对 Android 和/或 iOS 配置平台。
 
-	* **Android**
+	####Android
+	{: #cordova-android}
 
-		在 Android Studio 中打开项目之前，为避免发生构建错误，请使用命令行界面 (CLI) 构建 Cordova 应用程序。
+	在 Android Studio 中打开项目之前，为避免发生构建错误，请使用命令行界面 (CLI) 构建 Cordova 应用程序。
 
 		```
 		cordova build android
 		```
 
-	* **iOS**
+	####iOS
+	{: #cordova-ios}
 
-		为避免发生构建错误，请按如下所示配置 Xcode 项目。
+	为避免发生构建错误，请按如下所示配置 Xcode 项目。
 
-		1. 使用最新版本 Xcode 打开 `<app_name>/platforms/ios` 目录中的 `xcode.proj` 文件。
+	1. 使用最新版本 Xcode 打开 `<app_name>/platforms/ios` 目录中的 `xcode.proj` 文件。
 
-		**重要信息：**如果收到消息，提示您“转换为最新 Swift 语法”，请单击“取消”。
+		**重要信息：**如果收到消息，提示您“转换为最新 Swift 语法”，请
+单击“取消”。
 
-		2. 转至**构建设置 > Swift 编译器 - 代码生成 > Objective-C 桥接头**，然后添加以下路径：
+	2. 转至**构建设置 > Swift 编译器 - 代码生成 > Objective-C 桥接头**，然后添加以下路径：
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. 转至**构建设置 > 链接 > Runpath 搜索路径**，然后添加以下 Frameworks 参数：
+	3. 转至**构建设置 > 链接 > Runpath 搜索路径**，然后添加以下 Frameworks 参数：
 
 			```
 			@executable_path/Frameworks
 			```
 
-		4. 使用 Xcode 构建并运行应用程序。
+	4. 使用 Xcode 构建并运行应用程序。
 
-1. 通过运行以下命令，验证该插件是否已成功安装：
+6. 通过运行以下命令，验证该插件是否已成功安装：
 
 
 	```Bash

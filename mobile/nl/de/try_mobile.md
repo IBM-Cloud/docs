@@ -1,9 +1,9 @@
 # Mobile Apps aus der {{site.data.keyword.mobilefirstbp}} Starter-Boilerplate erstellen
 {: #try_mobile}
-*Letzte Aktualisierung: 18. Juli 2016*
-{: .last-updated}
+Letzte Aktualisierung: 18. Juli 2016
+{: .last-updated} 
 
-Jeder {{site.data.keyword.Bluemix}} Mobile-Service kann unabhängig verwendet werden. Durch die kombinierte Verwendung mit der {{site.data.keyword.mobilefirstbp}} Starter-Boilerplate können Sie den größten Nutzen erzielen.
+Jeder {{site.data.keyword.Bluemix}} Mobile-Service kann unabhängig verwendet werden. Durch die kombinierte Verwendung mit der {{site.data.keyword.mobilefirstbp}} Starter-Boilerplate können Sie den größten Nutzen erzielen. 
 
 Erstellen Sie zu Beginn mit dem {{site.data.keyword.mobilefirstbp}} Starter eine eigene App. Mit der Boilerplate können Sie die folgenden Aktionen durchführen:
 
@@ -11,7 +11,7 @@ Erstellen Sie zu Beginn mit dem {{site.data.keyword.mobilefirstbp}} Starter eine
 * Stellen Sie eine Instanz für jeden der {{site.data.keyword.Bluemix_notm}} Mobile-Services bereit und binden Sie den Service an die Node.js-Anwendung.
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
 -->
 
 Nachdem Sie mit der {{site.data.keyword.mobilefirstbp}} Starter-Boilerplate eine eigene App erstellt haben, können Sie entweder Hello Bluemix-Beispiele für jeden der Services abrufen oder mit dem Instrumentieren Ihrer bestehenden App für die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services beginnen.

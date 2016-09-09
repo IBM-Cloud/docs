@@ -9,7 +9,7 @@ copyright:
 # Configuration du SDK iOS Objective-C
 {: #getting-started-ios}
 
-*Dernière mise à jour : 17 juillet 2016*
+Dernière mise à jour : 17 juillet 2016
 {: .last-updated}
 
 Instrumentez votre application iOS avec le SDK {{site.data.keyword.amashort}}, initialisez le SDK et envoyez des requêtes à des ressources protégées et
@@ -17,12 +17,13 @@ non protégées.
 {:shortdesc}
 
 **Important :** Bien que le SDK Objective-C reste complètement pris en charge et soit toujours considéré comme le SDK principal pour
-{{site.data.keyword.Bluemix_notm}} Mobile Services, il est envisagé de le retirer plus tard dans l'année et de le remplacer par le nouveau SDK Swift.Pour les nouvelles applications, il est vivement recommandé d'utiliser le SDK Swift (voir [Configuration du SDK Swift iOS](getting-started-ios-swift-sdk.html)).
+{{site.data.keyword.Bluemix_notm}} Mobile Services, il est envisagé de le retirer plus tard dans l'année et de le remplacer par le nouveau SDK Swift. Pour les nouvelles applications, il est vivement recommandé d'utiliser le SDK Swift (voir [Configuration du SDK Swift iOS](getting-started-ios-swift-sdk.html)).
 
 ## Avant de commencer
 {: #before-you-begin}
 Vous devez disposer des éléments suivants :
-* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* Une instance d'une application {{site.data.keyword.Bluemix_notm}} protégée par le service
+{{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
 * Un projet Xcode.  
 
 
@@ -74,15 +75,18 @@ aurez besoin des valeurs de **Route** et de **Identificateur global unique de l'
 
 1. Importez l'infrastructure `IMFCore` dans la classe qui doit utiliser le SDK client de {{site.data.keyword.amashort}} en ajoutant l'en-tête suivant :
 
-	**Objective-C :**
+	####Objective-C
+	{: #imfcore-objc}
 	
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
 	
 	```
 	
-	**Swift :**
-	Le SDK client {{site.data.keyword.amashort}} est implémenté avec Objective-C. Il peut être nécessaire d'ajouter un en-tête de pontage à votre projet Swift :
+	####Swift
+	{: #sdk-swift}
+	
+	Le SDK client de {{site.data.keyword.amashort}} est implémenté avec Objective-C. Il peut être nécessaire d'ajouter un en-tête de pontage à votre projet Swift :
 	1. Cliquez avec le bouton droit sur votre projet dans Xcode et sélectionnez **New File** (Nouveau fichier).
 	1. Dans la catégorie **iOS Source (Source iOS)**, cliquez sur **Header file (Fichier d'en-tête)**. Nommez le fichier `BridgingHeader.h`.
 	1. Ajoutez la ligne suivante à votre en-tête de pontage : `#import <IMFCore/IMFCore.h>`
@@ -93,16 +97,16 @@ aurez besoin des valeurs de **Route** et de **Identificateur global unique de l'
 	
 1. Utilisez le code suivant pour initialiser le SDK client de {{site.data.keyword.amashort}}.  En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire. <br/>Remplacez *applicationRoute* et *applicationGUID* par les valeurs de la section **Options pour application mobile** du tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
-	**Objective-C :**
+	####Objective-C
+	{: #sharedinstance-objc}
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-	**Swift :
-
-	**
+	####Swift
+	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
@@ -117,9 +121,11 @@ Lorsque le SDK client de {{site.data.keyword.amashort}} est initialisé, vous po
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un
 message `Non autorisé` est renvoyé à votre navigateur car ce noeud final n'est accessible qu'aux applications mobiles instrumentées
 avec le SDK client de {{site.data.keyword.amashort}}.
+
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `IMFClient` :
 
-	**Objective-C :**
+	####Objective-C
+	{: #nsstring-objc}
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -137,7 +143,8 @@ avec le SDK client de {{site.data.keyword.amashort}}.
 	}];
 	```
 
-	**Swift :**
+	####Swift
+	{: #imfclientrequestpath-swift}
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

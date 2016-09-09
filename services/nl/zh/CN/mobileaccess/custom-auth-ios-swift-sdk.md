@@ -9,7 +9,7 @@ copyright:
 
 {: #custom-ios}
 
-*上次更新时间：2016 年 7 月 18 日*
+上次更新时间：2016 年 8 月 01 日
 {: .last-updated}
 
 
@@ -65,7 +65,11 @@ copyright:
 
 1. 初始化 {{site.data.keyword.amashort}} 客户端 SDK，将授权管理器更改为 MCAAuthorizationManager，然后定义认证代表并将其注册。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。 
 
-  将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击仪表板左上角的人脸图标 (![人脸](/face.png "人脸"))。 
+  将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。
+要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的“头像”图标
+![“头像”图标](images/face.jpg "“头像”图标")，以打开“帐户和支持”
+窗口小部件。
+  <!--upper-left corner of the -->
 
   对于 `<yourProtectedRealm>`，使用 {{site.data.keyword.amashort}} 仪表板**定制**磁贴中定义的**域名**。
 

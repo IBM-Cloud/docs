@@ -11,7 +11,7 @@ copyright:
 # Android-SDK einrichten
 {: #getting-started-android}
 
-*Letzte Aktualisierung: 18. Juli 2016*
+Letzte Aktualisierung: 02. August 2016
 {: .last-updated}
 
 Instrumentieren Sie Ihre Android-Anwendung mit dem {{site.data.keyword.amashort}}-Client-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und nicht geschützte Ressourcen.
@@ -39,7 +39,7 @@ Das {{site.data.keyword.amashort}}-Client-SDK wird mit Gradle, einem Abhängigke
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// andere Abhängigkeiten
@@ -62,7 +62,7 @@ Initialisieren Sie das SDK, indem Sie die Parameter `context`, `applicationGUID`
 
 1. Klicken Sie auf der Hauptseite des {{site.data.keyword.Bluemix_notm}}-Dashboards auf Ihre App. Klicken Sie auf **Mobile Systemerweiterungen**. Sie benötigen die Werte für die **Anwendungsroute** und die **Anwendungs-GUID** für die Initialisierung des SDK.
 
-2. Initialisieren Sie das {{site.data.keyword.amashort}}-Client-SDK in Ihrer Android-Anwendung.  Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung.
+2. Initialisieren Sie das {{site.data.keyword.amashort}}-Client-SDK in Ihrer Android-Anwendung. Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung.
 <br/>Ersetzen Sie die Werte *applicationRoute* und *applicationGUID* durch die Werte unter **Mobile Systemerweiterungen** im {{site.data.keyword.Bluemix_notm}}-Dashboard.
 
 	```Java
@@ -73,6 +73,8 @@ Initialisieren Sie das SDK, indem Sie die Parameter `context`, `applicationGUID`
 ```
 Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region.
 
+Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen.
+				 	
 ## Anforderung an mobile Back-End-Anwendung senden
 {: #request}
 

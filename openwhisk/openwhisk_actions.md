@@ -19,7 +19,7 @@ copyright:
 # Creating and invoking {{site.data.keyword.openwhisk_short}} actions
 {: #openwhisk_actions}
 
-Last updated: 26 August 2016
+Last updated: 9 September 2016
 {: .last-updated}
 
 Actions are stateless code snippets that run on the {{site.data.keyword.openwhisk}} platform. An action can be a JavaScript function, a Swift function, or a custom executable program packaged in a Docker container. For example, an action can be used to detect the faces in an image, aggregate a set of API calls, or post a Tweet.
@@ -319,7 +319,7 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   ```
   {: codeblock}
 
-  Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./reference.md#runtime-environment) detail the Node.js packages that you can use in your actions.
+  Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./openwhisk_reference.html#openwhisk_ref_javascript_environments) detail the Node.js packages that you can use in your actions.
 
   This example also shows the need for asynchronous actions. The action returns a Promise to indicate that the result of this action is not available yet when the function returns. Instead, the result is available in the `request` callback after the HTTP call completes, and is passed as an argument to the `resolve()` function.
 
@@ -403,8 +403,12 @@ Several utility actions are provided in a package called `/whisk.system/util` th
 
   In the result, you see that the lines are sorted.
 
-**Note**: For more information about invoking action sequences with multiple named parameters, see [Setting default parameters](./actions.md#setting-default-parameters)
-
+**Note**: Parameters passed between actions in the sequence are explicit, except for default parameters.
+Therefore parameters that are passed to the action sequence are only available to the first action in the sequence.
+The result of the first action in the sequence becomes the input JSON object to the second action in the sequence (and so on).
+This object does not include any of the parameters originally passed to the sequence unless the first action explicitly includes them in its result.
+Input parameters to an action are merged with the action's default parameters, with the former taking precedence and overriding any matching default parameters.
+For more information about invoking action sequences with multiple named parameters, see [Setting default parameters](./actions.md#setting-default-parameters).
 
 ## Creating Python actions
 {: #openwhisk_actions_python}
@@ -507,7 +511,7 @@ Your code is compiled into an executable binary and embedded into a Docker image
 
 As a prerequisite, you must have a Docker Hub account.  To set up a free Docker ID and account, go to [Docker Hub](https://hub.docker.com){: new_window}.
 
-For the instructions that follow, assume that the Docker user ID is `janesmith` and the password is `janes_password`.  Assuming that the CLI is already set up, three steps are required to set up a custom binary for use by {{site.data.keyword.openwhisk_short}}  After that, the uploaded Docker image can be used as an action.
+For the instructions that follow, assume that the Docker user ID is `janesmith` and the password is `janes_password`.  Assuming that the CLI is already set up, three steps are required to set up a custom binary for use by {{site.data.keyword.openwhisk_short}}. After that, the uploaded Docker image can be used as an action.
 
 1. Download the Docker skeleton. You can download it by using the CLI as follows:
 
@@ -525,7 +529,7 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   ```
   {: pre}
   ```
-    Dockerfile      README.md       buildAndPush.sh example.c         server
+  Dockerfile      README.md       buildAndPush.sh example.c
   ```
   {: screen}
 
@@ -574,7 +578,9 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   Notice that part of the example.c file is compiled as part of the Docker image build process, so you do not need C compiled on your machine.
   In fact, unless you are compiling the binary on a compatible host machine, it may not run inside the container since formats will not match.
 
-4. Use your Docker container as an {{site.data.keyword.openwhisk_short}} action.
+  Your Docker container may now be used as an {{site.data.keyword.openwhisk_short}} action.
+
+
   ```
   wsk action create --docker example janesmith/blackboxdemo
   ```
@@ -597,8 +603,10 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   ```
   {: screen}
 
-5. To update the Docker image, run `buildAndPush.sh` to refresh the image on Docker Hub, then run `wsk action update` to make the system to fetch the new image. New invocations will start using the new image and not a warm image with the old code.
-
+  To update the Docker action, run buildAndPush.sh to refresh the image on Docker Hub, this will allow the next time the system pulls your Docker image to run the new code for your action. 
+  If there are no warm containers any new invocations will use the new Docker image. 
+  Take into account that if there is a warm container using a previous version of your Docker image, any new invocations will continue to use this image unless you run wsk action update, this will indicate to the system that for any new invocations force a docekr pull resulting on pulling your new Docker image.
+  
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```

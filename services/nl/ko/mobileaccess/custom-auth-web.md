@@ -8,10 +8,10 @@ copyright:
 #{{site.data.keyword.amashort}} 웹 애플리케이션용 사용자 정의 인증 구성
 {: #custom-web}
 
-*마지막 업데이트 날짜: 2016년 7월 18일*
+마지막 업데이트 날짜: 2016년 7월 21일
 {: .last-updated}
 
-사용자 정의 인증을 {{site.data.keyword.amashort}} 웹 앱에 추가하십시오. 
+사용자 정의 인증 및 {{site.data.keyword.amashort}} 보안 기능을 웹 앱에 추가하십시오.
 
 ## 시작하기 전에
 {: #before-you-begin}
@@ -110,13 +110,13 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 ##사용자 정의 ID 제공자를 사용하여 {{site.data.keyword.amashort}} 권한 부여 플로우 구현 
 
-`VCAP_SERVICES` 환경 변수는 각 {{site.data.keyword.amashort}} 서비스 인스턴스에 대해 자동으로 작성되며 권한 부여 프로세스에 필요한 특성을 포함합니다. JSON 오브젝트로 구성되며 애플리케이션의 왼쪽 네비게이터에서 **환경 변수**를 클릭하여 확인할 수 있습니다. 
+`VCAP_SERVICES` 환경 변수는 각 {{site.data.keyword.amashort}} 서비스 인스턴스에 대해 자동으로 작성되며 권한 부여 프로세스에 필요한 특성을 포함합니다. JSON 오브젝트로 구성되며 애플리케이션의 왼쪽 탐색줄에서 **환경 변수**를 클릭하여 이를 볼 수 있습니다.
 
 사용자 권한 부여를 요청하려면, 브라우저를 권한 서버 엔드포인트로 경로를 재지정하십시오. 이를 위해 다음을 수행하십시오.  
 
 1. 권한 엔드포인트(`authorizationEndpoint`) 및 클라이언트 ID(`clientId`)를 `VCAP_SERVICES` 환경 변수에 저장된 서비스 신임 정보에서 검색하십시오.  
 
-  **참고:** 웹 지원이 추가되기 전에 Mobile Client Access 서비스를 추가한 경우 서비스 신임 정보에 토큰 엔드포인트가 없을 수 있습니다. {{site.data.keyword.Bluemix_notm}} 지역에 따라 대신 아래 URL을 사용하십시오.  
+  **참고:** 웹 지원을 추가하기 전에 애플리케이션에 {{site.data.keyword.amashort}} 서비스를 추가한 경우 서비스 신임 정보에 토큰 엔드포인트가 없을 수 있습니다. 대신, {{site.data.keyword.Bluemix_notm}} 지역에 따라 다음 URL을 사용하십시오. 
  
   미국 남부:  
   ```
@@ -179,7 +179,7 @@ function checkAuthentication(req, res, next){
 
 1. `authorizationEndpoint`, `clientId` 및 `secret`을 `VCAP_SERVICES` 환경 변수에 저장된 서비스 신임 정보에서 검색하십시오.  
 
-   **참고:** 웹 지원이 추가되기 전에 Mobile Client Access 서비스를 추가한 경우 서비스 신임 정보에 토큰 엔드포인트가 없을 수 있습니다. 이러한 경우 Bluemix 지역에 따라 대신 아래 URL을 사용하십시오.  
+   **참고:** 웹 지원을 추가하기 전에 웹 애플리케이션에 {{site.data.keyword.amashort}} 서비스를 추가한 경우 서비스 신임 정보에 토큰 엔드포인트가 없을 수 있습니다. 대신, {{site.data.keyword.Bluemix_notm}} 지역에 따라 다음 URL을 사용하십시오. 
 
  미국 남부:  
  ```
@@ -241,15 +241,16 @@ app.get("/oauth/callback", function(req, res, next){
 
 ID 토큰에는 사용자 ID에 대한 정보가 포함되어 있습니다. 사용자 정의 인증의 경우 토큰에는 인증 시 사용자 정의 ID 제공자가 리턴하는 모든 정보가 포함됩니다. `imf.user` 필드 아래 `displayName` 필드에는 사용자 정의 ID 제공자가 리턴하는 `displayName`이 포함되고, `id` 필드에는 `userName`이 포함됩니다. 사용자 정의 ID 제공자가 리턴하는 다른 모든 값은 `imf.user` 아래의 `attributes` 필드 내에 리턴됩니다.   
 
-액세스 토큰을 통해 Mobile Client Access 권한 필터에서 보호하는 리소스와 통신할 수 있습니다([리소스 보호](protecting-resources.html) 참조). 보호 리소스에 대한 요청을 작성하려면, 다음 구조를 사용하여 권한 헤더를 요청에 추가하십시오.  
+액세스 토큰을 통해 {{site.data.keyword.amashort}} 권한 필터에서 보호하는 리소스와 통신할 수 있습니다([리소스 보호](protecting-resources.html) 참조). 보호 리소스에 대한 요청을 작성하려면 다음 구조를 사용하여 권한 헤더를 요청에 추가하십시오. 
 
 `Authorization=Bearer <accessToken> <idToken>` 
 
-**참고:** 
+####팁: 
+{: #tips_token}
 
-* `<accessToken>` 및 `<idToken>`은 공백으로 구분해야 합니다. 
+* `<accessToken>` 및 `<idToken>`은 공백으로 구분해야 합니다.
 
-* ID 토큰은 선택사항입니다. ID 토큰을 제공하지 않는 경우 보호 리소스에 액세스할 수 있지만, 권한 부여된 사용자에 대한 정보는 수신하지 않습니다.  
+* ID 토큰은 선택사항입니다. ID 토큰을 제공하지 않는 경우 보호 리소스에 액세스할 수 있지만, 권한 부여된 사용자에 대한 정보는 수신하지 않습니다. 
 
 
 

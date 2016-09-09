@@ -5,10 +5,10 @@ copyright:
   
 ---
 
-# Touch ID로 권한 보안 설정
+# Touch ID로 액세스 권한 부여
 {: #before-you-begin}
 
-*마지막 업데이트 날짜: 2016년 6월 22일*
+마지막 업데이트 날짜: 2016년 7월 20일
 {: .last-updated}
 
 Touch ID는 iOS 디바이스의 지문 인식 기능입니다. Touch ID를 사용하여 이후 사용을 위해 권한 정보를 자동으로 보안 설정할 수 있습니다.  

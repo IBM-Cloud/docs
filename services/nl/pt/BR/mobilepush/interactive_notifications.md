@@ -7,30 +7,32 @@ copyright:
 
 # Notificações interativas
 {: #interactive-notifications}
-*Última atualização: 14 de junho de 2016*
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
 As notificações interativas permitem que os usuários executem uma ação quando uma notificação chega, sem abrir o aplicativo. Quando uma notificação interativa chega, o dispositivo mostra os botões de ação junto com a mensagem de notificação. As notificações interativas são suportadas em dispositivos iOS com a versão 8 e
 posterior. Se uma notificação interativa for enviada a dispositivos iOS com a versão menor que 8, as ações de notificação não serão exibidas.
 
-##Enviando notificações push interativas
+##Enviando {{site.data.keyword.mobilepushshort}} interativo
 
 
 A notificação interativa pode ser enviada usando o painel Push ou usando a API REST (consulte a documentação da API REST).
 
 No Console de Push: 
 
-Na guia de notificação no painel Push, clique em Enviar notificação. Escolha seus destinatários de notificação e clique em avançar. Na página
-de composição de notificação, o push interativo pode ser enviado, configurando o Tipo para Padrão ou Combinado e especificando o valor da
-Categoria na guia Opções avançadas. Para configurar o valor de categoria no cliente, marque Manipulando a notificação push interativa na seção de aplicativo iOS nativo.
 
-## Manipulando notificações push interativas em um aplicativo iOS
 
-Deve-se seguir essas etapas para receber notificações interativas:
+1. Na guia de notificação no painel Push, clique em **Enviar notificação**. 
+2. Escolha seus destinatários de notificação e clique em **Avançar**. 
+3. Na página de composição de notificação, o push interativo pode ser enviado configurando o Tipo como Padrão ou Combinado e especificando o valor de Categoria na guia Opções avançadas. Para configurar o valor de categoria no cliente, marque **Manipulando o {{site.data.keyword.mobilepushshort}}** interativo na seção de aplicativo iOS nativo.
+
+## Manipulando o {{site.data.keyword.mobilepushshort}} interativo em um aplicativo iOS
+
+Conclua as etapas para receber notificações interativas:
 
 1. Ative o recurso do aplicativo para executar tarefas em segundo plano no recebimento de notificações remotas. Esta etapa será necessária se
 algumas das ações forem ativadas para segundo plano.
-1. No `AppDelegate (aplicativo: didRegisterForRemoteNotificationsWithDeviceTokenapplication:)`, configure as categorias antes de configurar o `deviceToken` no `WLPush Object`.
+1. No AppDelegate (aplicativo: didRegisterForRemoteNotificationsWithDeviceTokenapplication:), configure as categorias antes de configurar o `deviceToken` no `WLPush Object`.
 
 ```
 	if([application respondsToSelector:@selector(registerUserNotificationSettings:)]){

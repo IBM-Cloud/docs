@@ -7,7 +7,7 @@ copyright:
 
 # アプリケーションのモニター
 {: #app-monitoring}
-*最終更新日: 2016 年 6 月 28 日*
+最終更新日: 2016 年 6 月 28 日
 {: .last-updated}
 
 {{site.data.keyword.amafull}} は、セキュリティー機能に加えて、モバイル・アプリケーション向けのモニターおよび分析も提供します。{{site.data.keyword.amashort}} Client SDK を使用して、クライアント・ログおよびモニター・データを記録することができます。開発者は、このデータをいつ {{site.data.keyword.amashort}} サービスに送信するのかを制御できます。{{site.data.keyword.amashort}} サービスで発生するすべてのセキュリティー・イベント (認証の成功または失敗など) が自動的にログに記録されます。
@@ -45,7 +45,8 @@ copyright:
 
 2. {{site.data.keyword.Bluemix_notm}} アプリケーション・ダッシュボードが開いたら、{{site.data.keyword.amashort}} タイルをクリックします。
 
-3. {{site.data.keyword.amashort}} ダッシュボードで、左側のメニュー内の**「モニタリング」**リンクをクリックします。
+3. 左の {{site.data.keyword.amashort}} ダッシュボード・ナビゲーション・バーにある**「モニタリング」**リンクをクリックします。
+
 
 ## Logger の有効化、構成、および使用
 {: #enable-logger}

@@ -5,10 +5,10 @@ copyright:
 
 ---
 
-# Incluindo o Core SDK em seu app cliente
+# Configurando o {{site.data.keyword.amashort}} client SDK
 {: #getting-started}
 
-*Última atualização: 26 de junho de 2016*
+Última atualização: 26 de junho de 2016
 {: .last-updated}
 
 É possível configurar seu app móvel para usar o {{site.data.keyword.amashort}} SDK.  Após incluir o SDK, será possível iniciar a

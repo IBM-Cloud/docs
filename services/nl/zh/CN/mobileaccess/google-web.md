@@ -8,7 +8,7 @@ copyright:
 # 启用 Web 应用程序的 Google 认证
 {: #google-auth-web}
 
-*上次更新时间：2016 年 6 月 1 日*
+上次更新时间：2016 年 6 月 1 日
 {: .last-updated}
 
 使用 Google 登录在 Web 应用程序上认证用户。

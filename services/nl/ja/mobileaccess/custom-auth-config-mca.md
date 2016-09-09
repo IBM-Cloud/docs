@@ -8,7 +8,7 @@ copyright:
 # カスタム認証用の {{site.data.keyword.amashort}} の構成
 {: #custom-dash}
 
-*最終更新日: 2016 年 7 月 17 日*
+最終更新日: 2016 年 7 月 17 日
 {: .last-updated}
 
 

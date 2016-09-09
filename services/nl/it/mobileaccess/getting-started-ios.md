@@ -9,7 +9,7 @@ copyright:
 # Configurazione dell'SDK Objective-C iOS
 {: #getting-started-ios}
 
-*Ultimo aggiornamento: 17 luglio 2016*
+Ultimo aggiornamento: 17 luglio 2016
 {: .last-updated}
 
 Strumenta la tua applicazione iOS con l'SDK {{site.data.keyword.amashort}}, inizializza l'SDK ed effettua richieste a risorse protette e non protette.
@@ -69,14 +69,17 @@ Per utilizzare l'SDK client {{site.data.keyword.amashort}}, devi inizializzare l
 
 1. Importa il framework `IMFCore` nella classe che desideri utilizzi l'SDK client {{site.data.keyword.amashort}} aggiungendo la seguente intestazione:
 
-	**Objective-C:**
+	####Objective-C
+	{: #imfcore-objc}
 	
 	```Objective-C
 	#import <IMFCore/IMFCore.h>
 	
 	```
 	
-	**Swift:**
+	####Swift
+	{: #sdk-swift}
+	
 	L'SDK client {{site.data.keyword.amashort}} viene implementato con Objective-C. Potresti dover aggiungere un'intestazione di collegamento al tuo progetto Swift:
 	1. Fai clic con il pulsante destro del mouse sul tuo progetto in Xcode e seleziona **New File..**.
 	1. Nella categoria **iOS Source**, fai clic su **Header file**. Denomina il file `BridgingHeader.h`.
@@ -88,16 +91,16 @@ Per utilizzare l'SDK client {{site.data.keyword.amashort}}, devi inizializzare l
 	
 1. Utilizza il seguente codice per inizializzare l'SDK client {{site.data.keyword.amashort}}.  Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione. <br/>Sostituisci *applicationRoute* e *applicationGUID* con i valori da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
-	**Objective-C:**
+	####Objective-C
+	{: #sharedinstance-objc}
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-	**Swift:
-
-	**
+	####Swift
+	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
@@ -112,7 +115,8 @@ Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puo
 
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato `IMFClient`:
 
-	**Objective-C:**
+	####Objective-C
+	{: #nsstring-objc}
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -130,7 +134,8 @@ Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puo
 	}];
 	```
 
-	**Swift:**
+	####Swift
+	{: #imfclientrequestpath-swift}
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

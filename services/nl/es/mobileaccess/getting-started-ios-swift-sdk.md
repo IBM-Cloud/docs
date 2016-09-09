@@ -11,7 +11,7 @@ copyright:
 # Configuración del SDK de Swift de iOS
 {: #getting-started-ios}
 
-*Última actualización: 17 de julio de 2016*
+Última actualización: 1 de agosto de 2016
 {: .last-updated}
 
 {{site.data.keyword.amashort}} ha lanzado un nuevo SDK de Swift que añade y mejora la funcionalidad proporcionada por el SDK de Objective-C de {{site.data.keyword.amashort}} existente, lo que facilita la autenticación de la app y proporciona más protección para los recursos de fondo. Instrumente su aplicación Swift de iOS con el SDK de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
@@ -67,7 +67,7 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
 
 1. Guarde el archivo `Podfile` y ejecute `pod install` desde la línea de mandatos. CocoaPods instala las dependencias relevantes, y muestra las dependencias y los pods añadidos.<br/>
 
-   **Importante**: CocoaPods genera un archivo `xcworkspace`. A partir de ahora, debe abrirlo para trabajar en el proyecto.
+   **Importante**: CocoaPods genera un archivo `xcworkspace`.  A partir de ahora, debe abrirlo para trabajar en el proyecto.
 
 1. Abra el espacio de trabajo del proyecto de iOS. Abra el archivo `xcworkspace` que ha generado CocoaPods. Por ejemplo: `{nombre-proyecto}.xcworkspace`. Ejecute `open {nombre-proyecto}.xcworkspace`.
 
@@ -85,7 +85,7 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
  import BMSSecurity
  ```  
 
-1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse en el icono de cara (![Cara](images/face.png "Cara")) que se encuentra en la esquina superior izquierda del panel de control. 
+1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono del **Avatar**  ![icono de Avatar](images/face.jpg "icono de Avatar") en la barra de menú para abrir el widget **Cuenta y soporte**
 
 
  ```Swift

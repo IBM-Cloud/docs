@@ -11,7 +11,7 @@ copyright:
 # Abilitazione dell'autenticazione Google per le applicazioni iOS (SDK Swift)
 {: #google-auth-ios}
 
-*Ultimo aggiornamento: 17 luglio 2016*
+Ultimo aggiornamento: 01 agosto 2016
 {: .last-updated}
 
 Utilizza l'accesso Google per autenticare gli utenti nella tua applicazione Swift iOS {{site.data.keyword.amashort}}. La nuova SDK Swift rilasciata {{site.data.keyword.amashort}} aggiunge e migliora le funzionalità fornite dalla SDK Objective-C Mobile Client Access esistente.
@@ -40,7 +40,7 @@ Questo processo:
 
 La seguente procedura ti fornisce una breve sintesi delle attività che devi eseguire per preparare la tua applicazione. 
 
-**Nota:** non è necessario aggiungere il CocoaPod `Google/SignIn`. L'SDK necessario viene aggiunta dal seguente CocoaPod `BMSGoogleAuthentication`.
+**Nota:** non è necessario aggiungere il CocoaPod Google Sign-In. L'SDK necessario viene aggiunta dal CocoaPod `BMSGoogleAuthentication`. 
 
 1. Prendi nota del **Bundle Identifier** nel tuo progetto Xcode dalla sezione **Identity** della scheda **General** della destinazione principale. Ne hai bisogno per creare il tuo progetto di accesso Google.
 
@@ -136,7 +136,7 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
  import BMSSecurity
  ```
 
-1. Utilizza il seguente codice per inizializzare l'SDK client. Sostituisci `<applicationRoute>` e `<applicationGUID>` con i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}. Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona viso (![Viso](/face.png "Viso")) nell'angolo in alto a sinistra del dashboard. 
+1. Utilizza il seguente codice per inizializzare l'SDK client. Sostituisci `<applicationRoute>` e `<applicationGUID>` con i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}. Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Avatar** ![icona Avatar](images/face.jpg "icona Avatar")  nella barra del menu per aprire il widget **Account e supporto**.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -145,7 +145,7 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
  // Inizializza l'SDK client.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -221,6 +221,6 @@ Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e dispor
  GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  Se richiami questo codice dopo che un utente ha eseguito l'accesso con Google e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Google per scopi di autenticazione. A tal punto, l'utente può fare clic sul nome utente nell'angolo superiore destro dello schermo per selezionare, ed eseguire l'accesso con, un altro utente.
+  Se richiami questo codice dopo che un utente ha eseguito l'accesso con Google e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Google per scopi di autenticazione. A questo punto, l'utente può fare clic sul nome utente. <!--in the upper-right corner of the screen--> per selezionare, ed eseguire l'accesso con, un altro utente.
 
    Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.

@@ -11,7 +11,7 @@ copyright:
 # Abilitazione dell'autenticazione Facebook per le applicazioni Cordova
 {: #facebook-auth-cordova}
 
-*Ultimo aggiornamento: 15 giugno 2016*
+Ultimo aggiornamento: 15 giugno 2016
 {: .last-updated}
 
 
@@ -25,7 +25,7 @@ Utilizza l'ambiente di sviluppo nativo per apportare modifiche nel codice nativo
 {: #facebook-auth-before}
 È necessario disporre di:
 * Un progetto Cordova instrumentato con l'SDK client {{site.data.keyword.amashort}}, consulta [Configurazione del plugin Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
-* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}, consulta [Introduzione](index.html).
+* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html).
 * Un ID dell'applicazione Facebook. Per ulteriori informazioni, vedi [Ottenimento di un ID applicazione Facebook dal portale sviluppatori Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
@@ -66,7 +66,7 @@ I passi richiesti per configurare la piattaforma iOS di un'applicazione Cordova 
 
 1. L'SDK Facebook sarà installato nella directory `~/Documents/FacebookSDK`. Passa a tale directory e copia (trascina e rilascia) il file `FacebookSDK.framework` nel tuo progetto iOS in Xcode.
 
-1. 	Fai clic sulla tua root del progetto nel riquadro sinistro di Xcode e seleziona **Build Phases**.
+1. 	Fai clic sulla root del tuo progetto in Xcode e seleziona la scheda **Build Phases**. 
 
 1. Aggiungi il file `FacebookSDK.framework` all'elenco di librerie collegate in **Link Binary With Libraries**.
 
@@ -116,7 +116,7 @@ Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e dispor
 
 	![immagine](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![immagine](images/ios-facebook-login.png)
 
-	> Questa schermata può avere un aspetto lievemente differente se sul tuo dispositivo non è installata l'applicazione Facebook o se non sei attualmente collegato a Facebook.
+	Questa schermata può avere un aspetto lievemente differente se sul tuo dispositivo non è installata l'applicazione Facebook o se non sei attualmente collegato a Facebook.
 
 1. Fai clic su **OK** per autorizzare {{site.data.keyword.amashort}} a usare la tua identità utente Facebook per scopi di autenticazione.
 

@@ -8,7 +8,7 @@ copyright:
 # 通过 {{site.data.keyword.amashort}} 保护 Liberty for Java 资源
 {: #protecting-liberty}
 
-*上次更新时间：2016 年 6 月 30 日*
+上次更新时间：2016 年 6 月 30 日
 {: .last-updated}
 
 

@@ -11,7 +11,7 @@ copyright:
 # 启用 Cordova 应用程序的 Facebook 认证
 {: #facebook-auth-cordova}
 
-*上次更新时间：2016 年 6 月 15 日*
+上次更新时间：2016 年 6 月 15 日
 {: .last-updated}
 
 
@@ -25,7 +25,7 @@ copyright:
 {: #facebook-auth-before}
 您必须具有：
 * 已安装 {{site.data.keyword.amashort}} 客户端 SDK 的 Cordova 项目，请参阅[设置 Cordova 插件](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)。
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm} 后端的更多信息，请参阅[入门](index.html)。
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
 * Facebook 应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
 
 
@@ -66,7 +66,7 @@ copyright:
 
 1. Facebook SDK 会安装到 `~/Documents/FacebookSDK` 目录中。浏览到该目录并将 `FacebookSDK.framework` 文件复制（拖放）到 Xcode 中的 iOS 项目中。
 
-1. 	单击 Xcode 左侧窗格中的项目根目录，然后选择**构建阶段**。
+1. 	在 Xcode 中单击项目根目录，然后选择**构建阶段**。
 
 1. 将 `FacebookSDK.framework` 文件添加到**将二进制文件与库链接**中已链接库的列表。
 
@@ -75,7 +75,8 @@ copyright:
 将以下行添加到应用程序代表的 `application:openURL:sourceApplication:annotation` 方法。此代码将确保向所有 Cordova 插件通知相应事件。
 
 ```
-[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
+[[ NSNotificationCenter defaultCenter] postNotification:
+		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
 ```
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
@@ -116,7 +117,7 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 
 	![图像](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![图像](images/ios-facebook-login.png)
 
-	> 如果设备上未安装 Facebook 应用程序，或者如果您当前未登录到 Facebook，那么此屏幕的外观可能略有不同。
+	如果设备上未安装 Facebook 应用程序，或者如果您当前未登录到 Facebook，那么此屏幕的外观可能略有不同。
 
 1. 单击**确定**以授权 {{site.data.keyword.amashort}} 使用您的 Facebook 用户身份进行认证。
 

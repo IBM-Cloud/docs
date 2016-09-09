@@ -8,21 +8,24 @@ copyright:
 # 사용자 정의 ID 제공자로 사용자 인증
 {: #custom-id}
 
-*마지막 업데이트 날짜: 2016년 7월 7일*
+마지막 업데이트 날짜: 2016년 7월 22일
 {: .last-updated}
 
 
 사용자 정의 ID 제공자를 작성하고 신임 정보 수집 및 유효성 검증을 위한 자체 로직을 구현하십시오. 사용자 정의 ID 제공자는 RESTful 인터페이스를 표시하는 웹 애플리케이션입니다. 사내 구축형 또는 {{site.data.keyword.Bluemix}}에서 사용자 정의 ID 제공자를 호스팅할 수 있습니다. 유일한 요구사항은 {{site.data.keyword.amashort}} 서비스와 통신할 수 있도록 사용자 정의 ID 제공자를 공용 인터넷에서 액세스할 수 있어야 합니다. 
 
-## {{site.data.keyword.amashort}} 사용자 정의 ID 제공자 개요
+## {{site.data.keyword.amashort}} 사용자 정의 ID 요청 플로우
 {: #custom-id-ovr}
-다음 다이어그램은 {{site.data.keyword.amashort}}가 사용자 정의 ID 제공자를 통합하는 방법을 보여줍니다. 
 
-![이미지](images/mca-sequence-custom.jpg)
 
-1. {{site.data.keyword.amashort}} SDK를 사용하여 {{site.data.keyword.amashort}} 서버 SDK로 보호되는 백엔드 리소스를 요청합니다.
+### {{site.data.keyword.amashort}} 클라이언트 요청 플로우
+ 다음 다이어그램은 {{site.data.keyword.amashort}}가 사용자 정의 ID 제공자를 통합하는 방법을 보여줍니다. 
+
+![요청 플로우 다이어그램](images/mca-sequence-custom.jpg)
+
+* {{site.data.keyword.amashort}} SDK를 사용하여 {{site.data.keyword.amashort}} 서버 SDK로 보호되는 백엔드 리소스를 요청합니다.
 * {{site.data.keyword.amashort}} 서버 SDK가 권한이 없는 요청을 발견하고 HTTP 401 및 권한 범위를 리턴합니다.
-* {{site.data.keyword.amashort}} 클라이언트 SDK가 자동으로 위의 HTTP 401을 발견하고 인증 프로세스를 시작합니다.
+* {{site.data.keyword.amashort}} 클라이언트 SDK가 자동으로 HTTP 401을 발견하고 인증 프로세스를 시작합니다.
 * {{site.data.keyword.amashort}} 클라이언트 SDK가 {{site.data.keyword.amashort}} 서비스에 연결하여 권한 헤더를 요청합니다. 
 * {{site.data.keyword.amashort}} 서비스가 인증 프로세스를 시작하기 위해 사용자 정의 ID 제공자와 통신합니다. 
 * 사용자 정의 ID 제공자가 인증 확인을 {{site.data.keyword.amashort}} 서비스로 리턴합니다. 
@@ -34,6 +37,17 @@ copyright:
 * 이 시점부터 {{site.data.keyword.amashort}} 클라이언트 SDK로 작성된 모든 요청에는 새로 얻은 권한 헤더가 포함됩니다.
 * {{site.data.keyword.amashort}} 클라이언트 SDK가 권한 플로우를 트리거한 원래 요청을 자동으로 재전송합니다.
 * {{site.data.keyword.amashort}} 서버 SDK가 요청에서 권한 헤더를 추출하고 {{site.data.keyword.amashort}} 서비스를 사용하여 해당 권한 헤더의 유효성을 검증하고 백엔드 리소스에 대한 액세스를 부여합니다.
+
+### {{site.data.keyword.amashort}} 웹 애플리케이션 요청 플로우
+{: #mca-custom-web-sequence}
+
+{{site.data.keyword.amashort}} 웹 애플리케이션 요청 플로우는 모바일 클라이언트 플로우와 유사합니다. 그러나 {{site.data.keyword.amashort}}는 {{site.data.keyword.Bluemix_notm}} 백엔드 리소스 대신 웹 애플리케이션을 보호합니다. 
+
+  * 초기 요청은 웹 애플리케이션에서 전송합니다(예: 로그인 양식에서).
+  * 최종 경로는 백엔드 보호 리소스보다 웹 애플리케이션 자체의 보호 영역으로 재지정됩니다. 
+
+
+
 
 ## 사용자 정의 ID 제공자 이해
 {: #custom-id-about}
@@ -86,6 +100,7 @@ copyright:
 
 ### 사용자 정의 ID 제공자의 샘플 구현
 {: #custom-sample}
+
 사용자 정의 ID 제공자를 개발하는 경우 사용자 정의 ID 제공자의 다음 Node.js 샘플 구현을 참조로 사용하십시오. GitHub 저장소에서 전체 애플리케이션 코드를 다운로드하십시오. 
 
  * [단순 샘플](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
@@ -103,6 +118,7 @@ copyright:
 
 ## Stateful 대 Stateless
 {: #custom-id-state}
+
 기본적으로 사용자 정의 ID 제공자는 Stateless 애플리케이션으로 간주됩니다. 경우에 따라, 사용자 정의 ID 제공자는 인증 프로세스와 관련된 상태를 저장해야 할 수 있습니다. 예제 유스 케이스는 사용자 정의 ID 제공자가 다음 단계를 진행하기 전에 첫 번째 인증 단계의 결과를 저장해야 하는 여러 단계 인증입니다. Stateful 기능을 지원하려면 사용자 정의 ID 제공자가 stateID를 생성하고 {{site.data.keyword.amashort}} 서비스에 대한 응답으로 이를 제공해야 합니다. {{site.data.keyword.amashort}} 서비스는 클라이언트 인증 프로세스에 속한 후속 요청에 stateID를 전달해야 합니다. 
 
 ## 사용자 정의 영역

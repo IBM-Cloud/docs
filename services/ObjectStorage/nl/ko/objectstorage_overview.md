@@ -2,7 +2,7 @@
 
 # {{site.data.keyword.objectstorageshort}} 정보  {: #about-object-storage} 
 
-*마지막 업데이트 날짜: 2016년 7월 15일*
+*마지막 업데이트 날짜: 2016년 8월 10일*
 {: .last-updated}
 
 
@@ -12,7 +12,7 @@ OpenStack Swift 및 Keystone 사용에 대한 자세한 정보는 [OpenStack 문
 
 {{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램은 다음과 같습니다.
 
-[![{{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램](https://console.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}(images/object_storage_solution_archectiture_small.png)]
+[![{{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램](images/ObjectStorageArchitectureDiagram.png)](images/ObjectStorageArchitectureDiagram.png) {: new_window}
 
 *그림 1. {{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램*
 

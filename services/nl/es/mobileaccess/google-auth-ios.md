@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-ios}
 
 
-*Última actualización: 16 de junio de 2016*
+Última actualización: 27 de junio de 2016
 {: .last-updated}
 
 Utilice el inicio de sesión de Google para autenticar usuarios en su app Mobile Client Access de iOS.
@@ -77,8 +77,8 @@ Ahora que ya dispone de un ID de cliente de iOS de Google, puede activar la aute
 
 1. En **ID de aplicación para iOS**, especifique su ID de cliente Google para iOS y pulse **Guardar**.
 
-	Nota: además del ID de cliente de Google, también se necesita el valor inverso para la configuración del cliente (véase a continuación). Para acceder a ambos valores, descargue la lista plist de ejemplo mediante el icono de lápiz:
-![Descarga del archivo info.plist](images/download_plist.png)
+	Nota: además del ID de cliente de Google, también se necesita el valor inverso para la configuración del cliente. Para acceder a ambos valores, descargue la lista plist de ejemplo mediante el icono de lápiz:
+		![Descarga del archivo info.plist](images/download_plist.png)
 
 ## Configuración del SDK del cliente de {{site.data.keyword.amashort}} para iOS de Google
 {: #google-auth-ios-sdk}
@@ -320,6 +320,6 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	Si invoca este código después de que el usuario haya iniciado sesión en Google y el usuario intenta iniciar sesión de nuevo, se le solicitará que autorice a {{site.data.keyword.amashort}} para utilizar Google para llevar a cabo la autenticación. En este punto, el usuario puede pulsar el nombre de usuario que aparece en la esquina superior derecha de la pantalla para seleccionar otro usuario para iniciar sesión.
+	Si invoca este código después de que el usuario haya iniciado sesión en Google y el usuario intenta iniciar sesión de nuevo, se le solicitará que autorice a {{site.data.keyword.amashort}} para utilizar Google para llevar a cabo la autenticación. En este punto, el usuario puede pulsar el nombre de usuario <!--in the upper-right corner of the screen--> para seleccionar e iniciar sesión con otro usuario.
 
 	Es opcional pasar `callBack` a la función de cierre de sesión. También puede pasar `nil`.

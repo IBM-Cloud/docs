@@ -5,10 +5,10 @@ copyright:
   
 ---
 
-# バックエンドからバックエンドへの通信のセットアップ
+# バックエンドのアプリケーションおよびサービス間の通信
 {: #backend-comm}
 
-*最終更新日: 2016 年 6 月 16 日*
+最終更新日: 2016 年 7 月 21 日
 {: .last-updated}
 
 場合によっては、{{site.data.keyword.Bluemix}} 上で実行しているバックエンド・アプリケーションから、{{site.data.keyword.amashort}} サービスで保護されている別のバックエンド・サービス (例えば {{site.data.keyword.cloudant}} サービス) に要求を送信する必要があります。そういったケースでは、要求に OAuth トークンを追加する必要があります。
@@ -40,9 +40,9 @@ var options = {
 
 	cacheSize: 100,
 
-	// All of the below properties are retrieved automatically when your Node.js
+	// The following properties are retrieved automatically when your Node.js
 	// runs on {{site.data.keyword.Bluemix_notm}} and bound to an instance of {{site.data.keyword.amashort}} Service.
-	// Alternatively you can get these properties values by clicking Show Credentials
+	// Alternatively, you can get these property values by clicking Show Credentials
 	// on the {{site.data.keyword.amashort}} Service tile in your {{site.data.keyword.Bluemix_notm}} application dashboard
 
 	appId: "appId",				// Bleumix applicationGUID, a.k.a tenantId

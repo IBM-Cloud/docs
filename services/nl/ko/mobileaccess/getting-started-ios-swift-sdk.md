@@ -11,7 +11,7 @@ copyright:
 # iOS Swift SDK 설정
 {: #getting-started-ios}
 
-*마지막 업데이트 날짜: 2016년 7월 17일*
+마지막 업데이트 날짜: 2016년 8월 1일
 {: .last-updated}
 
 {{site.data.keyword.amashort}}에서 기존 {{site.data.keyword.amashort}} Objective-C SDK에서 제공하는 기능에 추가되어 해당 기능을 향상시키는 새로운 Swift SDK를 릴리스했으며 앱을 더 쉽게 인증할 수 있고 백엔드 리소스에 대한 안전한 보호를 제공합니다. {{site.data.keyword.amashort}} SDK를 사용하여 iOS Swift 애플리케이션을 인스트루먼트하고, SDK를 초기화하며 보호 및 비보호 리소스에 대한 요청을 작성하십시오. {:shortdesc}
@@ -88,7 +88,7 @@ use_frameworks!
  import BMSSecurity
  ```  
 
-1. {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. `<applicationRoute>` 및 `<applicationGUID>`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID**의 값으로 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 대시보드의 왼쪽 상단 모서리에 있는 페이스 아이콘(![페이스](images/face.png "페이스"))을 클릭하십시오.  
+1. {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. `<applicationRoute>` 및 `<applicationGUID>`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID**의 값으로 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
 
 
  ```Swift

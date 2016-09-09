@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-ios}
 
 
-*Ultimo aggiornamento: 16 giugno 2016*
+Ultimo aggiornamento: 27 giugno 2016
 {: .last-updated}
 
 Utilizza l'accesso Google per autenticare gli utenti nella tua applicazione iOS Mobile Client Access.
@@ -77,8 +77,8 @@ Ora che hai un ID client iOS, puoi abilitare l'autenticazione Google nel dashboa
 
 1. In **Application ID for iOS**, specifica il tuo ID client Google per iOS e fai clic su **Save**.
 
-	Nota: oltre all'ID client Google, è necessario anche il valore invertito per la tua configurazione client (vedi di seguito). Per accedere a entrambi i valori, scarica il plist di esempio utilizzando l'icona di matita:
-		![scarica file info.plist](images/download_plist.png)
+	Nota: oltre all'ID client Google, è necessario anche il valore invertito per la tua configurazione client. Per accedere a entrambi i valori, scarica il plist di esempio utilizzando l'icona di matita:
+		![scarica file info.plist](images/download_plist.png) 
 
 ## Configurazione dell'SDK client Google {{site.data.keyword.amashort}} per iOS
 {: #google-auth-ios-sdk}
@@ -112,7 +112,7 @@ Configura l'integrazione Google aggiornando il file `info.plist`. Il file `info.
 
 	Il secondo schema URL è l'ID bundle della tua applicazione.
 
-* Utilizza un editor di testo. Fai clic con il pulsante destro del mouse su `info.plist` e seleziona **Open as > Source code**. Aggiungi il seguente XML al file:
+* Utilizza un editor di testo. Fai clic con il tasto destro del mouse su `info.plist` e seleziona **Open as > Source code**. Aggiungi il seguente XML al file:
 
 	```XML
 	<key>CFBundleURLTypes</key>
@@ -320,6 +320,6 @@ Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e dispor
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	Se richiami questo codice dopo che un utente ha eseguito l'accesso con Google e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Google per scopi di autenticazione. A tal punto, l'utente può fare clic sul nome utente nell'angolo superiore destro dello schermo per selezionare, ed eseguire l'accesso con, un altro utente.
+	Se richiami questo codice dopo che un utente ha eseguito l'accesso con Google e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Google per scopi di autenticazione. A questo punto, l'utente può fare clic sul nome utente. <!--in the upper-right corner of the screen--> per selezionare, ed eseguire l'accesso con, un altro utente.
 
 	Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.

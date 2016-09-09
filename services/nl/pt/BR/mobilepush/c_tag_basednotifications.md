@@ -10,11 +10,12 @@ copyright:
 
 # Ativando notificações baseadas em tag
 {: #tag_based_notifications}
-*Última atualização: 13 de julho de 2016*
+Última atualização: 16 de agosto de 2016
 {: .last-updated}
 
-Mensagens de notificação baseadas em tag se destinam a todos os
-dispositivos inscritos em uma tag específica. É possível
+Mensagens de notificação baseadas em tag se destinam a todos os dispositivos inscritos em uma tag específica. 
+
+É possível
 definir tags e depois enviar e receber mensagens usando
   tags. Deve-se
 primeiramente criar as identificações para o aplicativo, configurar as assinaturas da identificação

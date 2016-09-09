@@ -11,7 +11,7 @@ copyright:
 # Facebook-Authentifizierung für Android-Apps aktivieren
 {: #facebook-auth-android}
 
-*Letzte Aktualisierung: 05. Juli 2016*
+Letzte Aktualisierung: 04. August 2016
 {: .last-updated}
 
 
@@ -105,10 +105,17 @@ Ihr Android-Projekt enthält möglicherweise zwei Dateien `build.gradle`: eine f
 
 	**Hinweis:** Sie können die Abhängigkeit vom Modul `core` der Gruppe `com.ibm.mobilefirstplatform.clientsdk.android` entfernen, wenn diese sich in Ihrer Datei befindet. Das Modul `facebookauthentication` lädt das Modul `core` sowie das Facebook-eigene SDK automatisch herunter.
 
+  
+
   Nach dem Speichern Ihrer Aktualisierungen lädt das Modul `facebookauthentication` alle notwendigen SDKs herunter und installiert sie in Ihrem Android Projekt.
 
 
+
+
+
 1. Synchronisieren Sie Ihr Projekt mit Gradle. Klicken Sie auf **Tools > Android > Sync project with Gradle Files**.
+
+
 
 1. Öffnen Sie die Datei `res/values/strings.xml` und fügen Sie eine Zeichenfolge `facebook_app_id` hinzu, die Ihre Facebook-Anwendungs-ID enthält: 
 
@@ -166,11 +173,17 @@ Ihr Android-Projekt enthält möglicherweise zwei Dateien `build.gradle`: eine f
 					"applicationGUID",
 					BMSClient.REGION_UK);
 
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
+
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
-,
+Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol")  in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen.
+				 	
+   
+  **Hinweis:** Wenn Ihre Android-Anwendung als Ziel Android Version 6.0 (API-Stufe 23) oder höher ausgewählt hat, müssen Sie sicherstellen, dass die Anwendung über einen `android.permission.GET_ACCOUNTS`-Aufruf verfügt, bevor `register` aufgerufen wird. Weitere Informationen finden Sie unter [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 					
-Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region. 
+
 
 1. Fügen Sie Ihrer Aktivität den folgenden Code hinzu:
 
@@ -186,6 +199,8 @@ Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region.
 ## Authentifizierung testen
 Nach der Initialisierung des Client-SDK und der Registrierung des Facebook-Authentifizierungsmanagers können Sie mit dem Senden von Anforderungen an Ihr mobiles Back-End beginnen.
 
+
+
 ### Vorbereitungen
 {: #facebook-auth-android-testing-before}
 Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und bereits eine durch {{site.data.keyword.amashort}} geschützte Ressource am Endpunkt `/protected` haben. Wenn Sie einen Endpunkt `/protected` einrichten müssen, finden Sie weitere Informationen in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
@@ -194,6 +209,8 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 <br/>Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der MobileFirst Services Starter-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Eine Nachricht `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben. Diese Nachricht wird deshalb zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen können, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
 
 1. Senden Sie eine Anforderung über Ihre Android-Anwendung an denselben Endpunkt. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert und `FacebookAuthenticationManager` registriert haben.
+
+	
 
 	```Java
 	Request request = new Request("/protected", Request.GET);

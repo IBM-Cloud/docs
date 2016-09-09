@@ -5,7 +5,8 @@ copyright:
 
 ---
 
-# {{site.data.keyword.mobileanalytics_short}} クライアント SDK のインストール
+# {{site.data.keyword.mobileanalytics_short}}
+ クライアント SDK のインストール
 {: #mobileanalytics_sdk}
 *最終更新日時: 2016 年 4 月 21 日*
 {: .last-updated}
@@ -81,14 +82,16 @@ sudo gem install cocoapods
     ```
     {: codeblock}
 
-2. まだ CocoaPods 用のワークスペースを初期設定していない場合は、Xcode プロジェクトのルート・ディレクトリーで `pod init` コマンドを実行します。CocoaPods によって `Podfile` ファイルが作成されます。このファイルに Xcode プロジェクトの依存関係を定義します。
+2. まだ CocoaPods 用のワークスペースを初期設定していない場合は、プロジェクトのルート・ディレクトリーで `pod init` コマンドを実行します。CocoaPods によって `Podfile` ファイルが作成されます。このファイルに Xcode プロジェクトの依存関係を定義します。
 
 3. `BMSAnalytics` ポッドを Podfile の target に、次の例のように追加します:
 
 	### iOS
 
   ```
-use_frameworks!target 'MyApp' do
+  use_frameworks!
+
+  target 'MyApp' do
      platform :ios, '8.0'
      pod 'BMSAnalytics'
   end
@@ -104,7 +107,6 @@ use_frameworks!target 'MyApp' do
 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) を使用してプロジェクトにフレームワークを追加します。
 
 1. `BMSAnalytics` フレームワークを Cartfile に追加します:
-  
   ```
 github "ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"
   ```
@@ -116,7 +118,3 @@ github "ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"
 ## SDK
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
-
-## API リファレンス
-{: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

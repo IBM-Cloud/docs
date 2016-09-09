@@ -9,7 +9,7 @@ copyright:
 # Cordova プラグインのセットアップ
 {: #getting-started-cordova}
 
-*最終更新日: 2016 年 7 月 17 日*
+最終更新日: 2016 年 7 月 17 日
 {: .last-updated}
 
 Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
@@ -41,7 +41,7 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 	cordova platform add ios
 	```
 
-1. Android プラットフォームを追加した場合は、Cordova アプリケーションの `config.xml` ファイルに、サポートされる最小 API レベルを追加する必要があります。`config.xml` ファイルを開き、以下の行を `<platform name="android">` エレメントに追加します。
+2. Android プラットフォームを追加した場合は、Cordova アプリケーションの `config.xml` ファイルに、サポートされる最小 API レベルを追加する必要があります。`config.xml` ファイルを開き、以下の行を `<platform name="android">` エレメントに追加します。
 
 	```XML
 	<platform name="android">  
@@ -53,7 +53,7 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 
 	*minSdkVersion* の値は、`15` より大でなければなりません。*targetSdkVersion* の値は、Google から入手可能な最新の Android SDK でなければなりません。
 
-1. iOS オペレーティング・システムを追加した場合は、以下のように、ターゲット宣言で `<platform name="ios">` エレメントを更新してください。
+3. iOS オペレーティング・システムを追加した場合は、以下のように、ターゲット宣言で `<platform name="ios">` エレメントを更新してください。
 
 	```XML
 	<platform name="ios">
@@ -62,45 +62,47 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 	</platform>
 	```
 
-1. 以下のようにして、{{site.data.keyword.amashort}} Cordova プラグインをインストールします。
+4. 以下のようにして、{{site.data.keyword.amashort}} Cordova プラグインをインストールします。
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Android、iOS、またはその両方に対応するようにプラットフォームを構成します。
+5. Android、iOS、またはその両方に対応するようにプラットフォームを構成します。
 
-	* **Android**
+	####Android
+	{: #cordova-android}
 
-		Android Studio でプロジェクトを開く前に、コマンド・ライン・インターフェース (CLI) を通じて Cordova アプリケーションをビルドして、ビルド・エラーを回避します。
+	Android Studio でプロジェクトを開く前に、コマンド・ライン・インターフェース (CLI) を通じて Cordova アプリケーションをビルドして、ビルド・エラーを回避します。
 
 		```
 		cordova build android
 		```
 
-	* **iOS**
+	####iOS
+	{: #cordova-ios}
 
-		Xcode プロジェクトを以下のように構成して、ビルド・エラーを回避します。
+	Xcode プロジェクトを以下のように構成して、ビルド・エラーを回避します。
 
-		1. 最新バージョンの Xcode を使用して、`<app_name>/platforms/ios` ディレクトリー内の `xcode.proj` ファイルを開きます。
+	1. 最新バージョンの Xcode を使用して、`<app_name>/platforms/ios` ディレクトリー内の `xcode.proj` ファイルを開きます。
 
-		**重要:** 「最新の Swift 構文に変換 (Convert to Latest Swift Syntax)」するようにというメッセージが表示されたら、「キャンセル」をクリックします。
+		**重要:** 「最新の Swift 構文に変換 (Convert to latest Swift syntax)」するようにというメッセージが表示されたら、「キャンセル」をクリックします。
 
-		2. **「ビルド設定 (Build Settings)」>「Swift コンパイラー - コード生成 (Swift Compiler - Code Generation)」>「Objective-C ブリッジング・ヘッダー (Objective-C Bridging Header)」**に移動し、以下のパスを追加します。
+	2. **「ビルド設定 (Build Settings)」>「Swift コンパイラー - コード生成 (Swift Compiler - Code Generation)」>「Objective-C ブリッジング・ヘッダー (Objective-C Bridging Header)」**に移動し、以下のパスを追加します。
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. **「ビルド設定 (Build Settings)」>「リンク (Linking)」>「実行パスの検索パス (Runpath Search Paths)」**に移動し、以下の Frameworks パラメーターを追加します。
+	3. **「ビルド設定 (Build Settings)」>「リンク (Linking)」>「実行パスの検索パス (Runpath Search Paths)」**に移動し、以下の Frameworks パラメーターを追加します。
 
 			```
 			@executable_path/Frameworks
 			```
 
-		4. Xcode で、アプリケーションをビルドして実行します。
+	4. Xcode で、アプリケーションをビルドして実行します。
 
-1. 次のコマンドを実行して、プラグインが正常にインストールされたことを確認します。
+6. 次のコマンドを実行して、プラグインが正常にインストールされたことを確認します。
 
 	```Bash
 	cordova plugin list

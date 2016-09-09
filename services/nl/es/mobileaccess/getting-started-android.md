@@ -11,7 +11,7 @@ copyright:
 # Configuración del SDK de Android
 {: #getting-started-android}
 
-*Última actualización: 18 de julio de 2016*
+Última actualización: 2 de agosto de 2016
 {: .last-updated}
 
 Instrumente su aplicación de Android con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
@@ -33,16 +33,16 @@ El SDK del cliente de {{site.data.keyword.amashort}} se distribuye con Gradle, u
 
 1. Abra el archivo `build.gradle` para la aplicación (**no** el archivo `build.gradle` del proyecto).
 
-1. Busque la sección de **dependencias** del archivo `build.gradle`. Añada una dependencia de compilación para el SDK del cliente de {{site.data.keyword.amashort}}:
+1. Busque la sección de **dependencias** del archivo `build.gradle`.  Añada una dependencia de compilación para el SDK del cliente de {{site.data.keyword.amashort}}:
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
-    	// otras dependencias
+    	// other dependencies  
 }
 ```
 
@@ -72,9 +72,7 @@ Sustituya *applicationRoute* y *applicationGUID* por los valores de **Opciones m
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Sustituya el `BMSClient.REGION_UK` con la región adecuada.					
-	
-
+Sustituya el `BMSClient.REGION_UK` con la región adecuada.  Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono **Avatar**  ![Icono de Avatar](images/face.jpg "Icono de Avatar") en la barra de menú para abrir el widget **Cuenta y soporte**.
 ## Cómo realizar una solicitud a la aplicación de programa de fondo móvil
 {: #request}
 

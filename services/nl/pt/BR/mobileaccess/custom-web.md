@@ -8,12 +8,12 @@ copyright:
 # Autenticação customizada do app da web
 {: #custom-web}
 
-*Última atualização: 16 de junho de 2016*
+Última atualização: 16 de junho de 2016
 {: .last-updated}
 
 Inclua a autenticação customizada em seu app da web
 
-## Antes de iniciar
+## Antes de começar
 {: #before-you-begin}
 
 Você deve ter:

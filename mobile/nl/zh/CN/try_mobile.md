@@ -1,9 +1,9 @@
 # 从 {{site.data.keyword.mobilefirstbp}} Starter 样板创建移动应用程序
 {: #try_mobile}
-*上次更新时间：2016 年 7 月 18 日*
-{: .last-updated}
+上次更新时间：2016 年 7 月 18 日
+{: .last-updated} 
 
-您可以单独使用每个 {{site.data.keyword.Bluemix}} Mobile Services。也可以通过 {{site.data.keyword.mobilefirstbp}} Starter 样板一起使用这些服务，从而获取最大好处。
+您可以单独使用每个 {{site.data.keyword.Bluemix}} Mobile Services。也可以通过 {{site.data.keyword.mobilefirstbp}} Starter 样板一起使用这些服务，从而获取最大好处。 
 
 要开始操作，请使用 {{site.data.keyword.mobilefirstbp}} Starter 来创建您的应用程序。该样板支持完成以下操作：
 
@@ -11,7 +11,7 @@
 * 供应每个 {{site.data.keyword.Bluemix_notm}} Mobile Services 的实例，并将该服务绑定到 Node.js 应用程序。
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
 -->
 
 在使用 {{site.data.keyword.mobilefirstbp}} Starter 样板创建您的应用程序之后，可以获取每个服务的 Hello Bluemix 样本，也可以着手配置您的现有应用程序以使用 {{site.data.keyword.Bluemix_notm}} 服务。

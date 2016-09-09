@@ -1,9 +1,9 @@
 # Creazione delle applicazioni mobili dal contenitore tipo starter {{site.data.keyword.mobilefirstbp}}
 {: #try_mobile}
-*Ultimo aggiornamento: 18 luglio 2016*
-{: .last-updated}
+Ultimo aggiornamento: 18 luglio 2016
+{: .last-updated} 
 
-Puoi utilizzare ognuno dei servizi mobili {{site.data.keyword.Bluemix}} indipendentemente. Puoi anche utilizzarli insieme, con il contenitore tipo starter {{site.data.keyword.mobilefirstbp}}, per trarne il massimo vantaggio.
+Puoi utilizzare ognuno dei servizi mobili {{site.data.keyword.Bluemix}} indipendentemente. Puoi anche utilizzarli insieme, con il contenitore tipo starter {{site.data.keyword.mobilefirstbp}}, per trarne il massimo vantaggio. 
 
 Per iniziare, usa {{site.data.keyword.mobilefirstbp}} Starter per creare la tua applicazione. Il contenitore tipo ti abilita a completare le seguenti azioni:
 
@@ -11,7 +11,7 @@ Per iniziare, usa {{site.data.keyword.mobilefirstbp}} Starter per creare la tua 
 * Fornisce un'istanza di ciascuno dei servizi mobili {{site.data.keyword.Bluemix_notm}} ed esegue il bind del servizio all'applicazione Node.js.
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
 -->
 
 Dopo che hai utilizzato il contenitore tipo {{site.data.keyword.mobilefirstbp}} Starter per creare la tua applicazione, puoi ottenere degli esempi Hello Bluemix per ciascuno dei servizi oppure iniziare a strumentare la tua applicazione esistente per utilizzare i servizi {{site.data.keyword.Bluemix_notm}}.

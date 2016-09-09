@@ -9,7 +9,7 @@ copyright:
 
 # Cordova용 Hello Bluemix 샘플 시작하기
 {: #gettingstarted-cordova}
-*마지막 업데이트 날짜: 2016년 5월 27일*
+마지막 업데이트 날짜: 2016년 5월 27일
 {: .last-updated}
 
 새 Cordova 애플리케이션을 시작하고자 하는 경우 HelloWorld 앱을 사용할 수 있습니다. 이 앱에서는 인증 없이 모바일 앱에서 {{site.data.keyword.Bluemix}}의 모바일 백엔드에 연결하는 방법을 예시합니다. 앱에는 이미 SDK가 설치되어 있습니다. 준비가 완료되면 사용자는 앱에서 사용할 특정 라이브러리를 가져올 수 있습니다.
@@ -69,7 +69,7 @@ copyright:
 
 	1. 최신 Xcode 버전을 사용하여 *&lt;app_name&gt;*/platforms/ios 디렉토리에서 `xcode.proj` 파일을 여십시오.
 
-		**중요:** "Convert to Latest Swift Syntax" 메시지를 수신하는 경우 **Cancel**을 클릭하십시오.
+		**중요:** 최신 Swift 구문으로 변환하라는 메시지를 수신하는 경우 **Cancel**을 클릭하십시오. 
 
 	2. **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header**로 이동하여 다음 경로를 추가하십시오.
 
@@ -121,7 +121,7 @@ copyright:
 연결이 실패하면 다음이 표시됩니다.
   `Bummer. Something went wrong`
   {: screen}
-
+   
 오류에 대한 자세한 정보가 메시지에 포함되어 있습니다. 다음 항목을 확인하여 오류의 문제점을 해결할 수 있습니다.
 
 - 라우트 및 GUID 값을 올바로 붙여넣었는지 확인하십시오.

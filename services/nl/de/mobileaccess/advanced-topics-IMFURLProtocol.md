@@ -7,7 +7,7 @@ copyright:
 # Anforderungen mit IMFURLProtocol senden
 {: #imfurl}
 
-*Letzte Aktualisierung: 22. Juni 2016*
+Letzte Aktualisierung: 22. Juni 2016
 {: .last-updated}
 
 In einigen Fällen ist es vielleicht nicht möglich, die Klasse `IMFResourceRequest` zum Senden von Anforderungen an geschützte Ressourcen zu verwenden. Dies ist beispielsweise der Fall, wenn eine Anforderung an eine geschützte Ressource durch einen Code eines Drittanbieters gesendet wird. Eine mögliche Lösung besteht in der Verwendung der API `IMFURLProtocol` in Kombination mit dem Standardaufruf `NSURLRequest (NSMutableURLRequest)`.

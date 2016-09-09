@@ -11,7 +11,7 @@ copyright:
 # Configurando o iOS Swift SDK
 {: #getting-started-ios}
 
-*Última atualização: 17 de julho de 2016*
+Última atualização: 01 de agosto de 2016
 {: .last-updated}
 
 O {{site.data.keyword.amashort}} liberou um novo Swift SDK, que inclui e melhora a funcionalidade fornecida pelo
@@ -40,8 +40,7 @@ Você deve ter:
 
 ## Instalando o {{site.data.keyword.amashort}} client SDK
 {: #install-mca-sdk-ios}
-O {{site.data.keyword.amashort}} SDK é distribuído com CocoaPods, um gerenciador de dependências para projetos iOS. O CocoaPods faz
-download automaticamente dos artefatos de repositórios e os disponibiliza para seu aplicativo iOS.
+O {{site.data.keyword.amashort}} SDK é distribuído com CocoaPods, um gerenciador de dependências para projetos iOS. O CocoaPods faz download automaticamente dos artefatos de repositórios e os disponibiliza para seu aplicativo iOS.
 
 
 ### Instalar o CocoaPods
@@ -76,7 +75,7 @@ O CocoaPods cria um arquivo `Podfile` para você, que fica onde você define as 
 1. Salve o arquivo `Podfile` e execute `pod install` a partir da linha de comandos. O CocoaPods instala as
 dependências relevantes e exibe as dependências e pods incluídos.<br/>
 
-   **Importante**: o CocoaPods gera um arquivo `xcworkspace`. Deve-se abrir esse arquivo para trabalhar em seu projeto futuro.
+   **Importante**: o CocoaPods gera um arquivo `xcworkspace`.  Deve-se abrir esse arquivo para trabalhar em seu projeto futuro.
 
 1. Abra sua área de trabalho do projeto iOS. Abra o arquivo `xcworkspace` que foi gerado por CocoaPods. Por exemplo: `{your-project-name}.xcworkspace`. Execute `open {your-project-name}.xcworkspace`.
 
@@ -100,8 +99,7 @@ exibidos nos campos **Rota** e **GUID do app**.
 valores `<applicationRoute>` e
 `<applicationGUID>` pelos valores de **Rota** e
 **GUID do app** que você obteve das **Opções
-móveis** no painel {{site.data.keyword.Bluemix_notm}}. Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para
-visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de face (![Face](images/face.png "Face")) no canto superior esquerdo do painel. 
+móveis** no painel {{site.data.keyword.Bluemix_notm}}. Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de **Avatar** ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget **Conta e suporte**.
 
 
  ```Swift

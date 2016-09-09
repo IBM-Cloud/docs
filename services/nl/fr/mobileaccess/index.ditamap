@@ -19,7 +19,7 @@ scope="peer">
 <topicref format="html" href="overview.html#components" navtitle="Composants" 	scope="peer"/>
 <topicref format="html" href="overview.html#authtypes" navtitle="Types d'authentification" 	scope="peer"/>
 <topicref format="html" href="overview.html#architecture" navtitle="Architecture" 	scope="peer"/>
-<topicref format="html" href="overview.html#flow" navtitle="Flux de requête" 	scope="peer"/>
+<topicref format="html" href="overview.html#flow" navtitle="Flux de demande" 	scope="peer"/>
 <topicref format="html" href="overview.html#gettinghelp" navtitle="Comment obtenir de l'aide" 	scope="peer"/>
 </topicref>
 
@@ -106,7 +106,7 @@ outputclass="subsection" scope="peer">
 </topicref>
 
 <topicref format="html" href="facebook-auth-overview.html" navtitle="Authentification à Facebook" outputclass="subsection" scope="peer">
-<topicref format="html" href="facebook-auth-overview.html#mca-facebook-sequence" navtitle="Flux de requête" outputclass="subsection" scope="peer"/>
+<topicref format="html" href="facebook-auth-overview.html#mca-facebook-sequence" navtitle="Flux de demande" outputclass="subsection" scope="peer"/>
 <topicref format="html" href="facebook-auth-overview.html#facebook-appID" navtitle="ID d'application Facebook" outputclass="subsection" scope="peer"/>
 
 
@@ -122,7 +122,7 @@ outputclass="subsection" scope="peer">
 
 
 <topicref format="html" href="google-auth-overview.html" navtitle="Authentification à Google" outputclass="subsection" scope="peer">
-<topicref format="html" href="google-auth-overview.html#google-auth-overview" navtitle="Flux de requête" outputclass="subsection" scope="peer"/>
+<topicref format="html" href="google-auth-overview.html#google-auth-overview" navtitle="Flux de demande" outputclass="subsection" scope="peer"/>
 <topicref format="html" href="google-auth-android.html" navtitle="Android" scope="peer"/>
 
 <topicref format="html" href="google-auth-ios-swift-sdk.html" navtitle="iOS (SDK Swift)" scope="peer"/>
@@ -134,7 +134,7 @@ outputclass="subsection" scope="peer">
 <topicref format="html" href="custom-auth.html" navtitle="Authentification à l'aide d'ID personnalisés"	outputclass="subsection" scope="peer">
 <topicref format="html" href="custom-auth.html#custom-id-ovr" navtitle="Présentation" scope="peer"/>
 <topicref format="html" href="custom-auth.html#custom-id-about" navtitle="Fournisseurs d'ID personnalisé" scope="peer"/>
-<topicref format="html" href="custom-auth.html#custom-id-comm" navtitle="Flux de requête" scope="peer"/>
+<topicref format="html" href="custom-auth.html#custom-id-comm" navtitle="Flux de demande" scope="peer"/>
 <topicref format="html" href="custom-auth.html#custom-id-state" navtitle="Comparaison de Avec état et de Sans état" scope="peer"/>
 <topicref format="html" href="custom-auth.html#custom-id-state#custom-id-custom" navtitle="Domaine personnalisé" scope="peer"/>
 <topicref format="html" href="custom-auth-identity-provider.html" navtitle="Création d'un fournisseur d'identité personnalisé" scope="peer"/>

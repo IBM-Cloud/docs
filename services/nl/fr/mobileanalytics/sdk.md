@@ -1,13 +1,13 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
 # Instrumentation de votre application pour utiliser les logiciels SDK du client {{site.data.keyword.mobileanalytics_short}}
 {: #mobileanalytics_sdk}
-*Dernière mise à jour : 27 avril 2016*
+*Dernière mise à jour : 1 août 2016*
 {: .last-updated}
 
 Les logiciels SDK de {{site.data.keyword.mobileanalytics_full}} vous permettent d'instrumenter votre application mobile.
@@ -21,14 +21,14 @@ Les logiciels SDK de {{site.data.keyword.mobileanalytics_full}} vous permettent 
 
 Actuellement, les logiciels SDK sont disponibles pour Android, iOS et WatchOS.
 
-## Identification de votre clé d'accès de données d'identification pour le service
+## Identification de la valeur de clé d'accès
 {: #analytics-clientkey}
 
 Identifiez la valeur de votre **clé d'accès** avant de configurer le logiciel SDK du client. La clé d'accès est requise pour initialiser le logiciel SDK du client.
 
 1. Ouvrez votre tableau de bord de service {{site.data.keyword.mobileanalytics_short}}.
-2. Cliquez sur l'onglet **Données d'identification pour le service**. 
-3. Copiez la valeur de votre clé d'accès. 
+2. Cliquez sur l'onglet **Données d'identification pour le service**.
+3. Copiez la valeur de votre clé d'accès.
 
 
 ## Initialisation de votre application Android pour la collecte d'analyses
@@ -51,7 +51,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Prenez soin de pointer vers votre région
         } catch (MalformedURLException e) {
-            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
+            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -66,7 +66,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
 	// Dans cet exemple de code, Analytics est configuré pour enregistrer les événements de cycle de vie.
-```
+	```
   {: codeblock}
 
 	**Astuce :** Le nom d'application est utilisé pour filtrer la recherche de journaux client dans le tableau de bord. Lorsque vous utilisez le même nom d'application sur plusieurs plateformes (par exemple, Android et iOS), tous les journaux issus de cette application s'affichent sous le même nom, quelle que soit la plateforme à partir de laquelle ils ont été envoyés.
@@ -109,7 +109,7 @@ Initialisez votre application pour qu'elle envoie des journaux au service {{site
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
+      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -117,7 +117,7 @@ Initialisez votre application pour qu'elle envoie des journaux au service {{site
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
+	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
 	```
 
   Vous pouvez enregistrer des événements de périphérique sur WatchOS à l'aide des méthodes `Analytics.recordApplicationDidBecomeActive()` et `Analytics.recordApplicationWillResignActive()`.
@@ -398,7 +398,7 @@ Analytics.userIdentity = nil
 
   1. Visit the dashboard for the {{site.data.keyword.mobileanalytics_short}} service where you want to send analytics data and note the browser URL for the dashboard.
   2. Determine the value for reporting analytics, as follows:
-  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before `/analytics/console/dashboard`.  
+  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before ``/analytics/console/dashboard``.  
 
   		For example, if the dashboard URL is: `http://mobile-analytics-dashboard.ng.bluemix.net/analytics/console/dashboard?instanceId=12345abcde`
       {: screen}
@@ -501,9 +501,3 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
-
-# rellinks
-
-## Référence pour l'API
-{: #api}
-* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

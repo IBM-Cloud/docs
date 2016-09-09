@@ -7,14 +7,15 @@ copyright:
 
 # Ativando a autenticação do Facebook para aplicativos da web
 
-*Última atualização: 18 de julho de 2016*
+Última atualização: 27 de julho de 2016
 {: .last-updated}
 
-Use o Facebook para autenticar usuários em seu app da web.
+Use o Facebook para autenticar usuários em seu app da web. Inclua a funcionalidade de segurança do {{site.data.keyword.amashort}}. 
 
-## Antes de iniciar
+## Antes de começar
 {: #facebook-auth-android-before}
 Você deve ter:
+
 * Um app da web. 
 * Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que é protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
 * O URI para o redirecionamento final (após o processo de autorização ser concluído).
@@ -23,33 +24,30 @@ Você deve ter:
 ## Configurando um aplicativo Facebook para seu website
 Para usar o Facebook como um provedor de identidade em seu website, deve-se incluir e configurar a plataforma do website em seu aplicativo Facebook.
 
-1. Efetue login no Facebook Developers Portal (https://developers.facebook.com).
+1. Efetue login no [Portal de desenvolvedores do Facebook](https://developers.facebook.com).
 2. Abra ou crie seu aplicativo.
-1. Observe o **ID do aplicativo** e o **Segredo do aplicativo**. Esses valores são necessários ao
+3. Observe o **ID do aplicativo** e o **Segredo do aplicativo**. Esses valores são necessários ao
 configurar seu projeto da web para autenticação do Facebook no painel {{site.data.keyword.amashort}}.
-1. Inclua a plataforma do Website se ela não existir.
-1. Inclua ou abra o **Login do Facebook** na lista Produtos.
-1. Insira o URI do terminal de retorno de chamada do servidor de autorizações na caixa **URIs de redirecionamento de OAuth válidos**. Localize
-esse URI de redirecionamento de autorização nas etapas de configuração do painel {{site.data.keyword.amashort}} abaixo.
-2. Salve as mudanças.
+4. Inclua a plataforma **Website**, se não existir.
+5. Inclua ou abra o **Login do Facebook** na lista Produtos.
+6. Insira o URI do terminal de retorno de chamada do servidor de autorizações na caixa **URIs de redirecionamento de OAuth válidos**. Localize esse URI de redirecionamento de autorização nas etapas de configuração do painel {{site.data.keyword.amashort}} a seguir.
+7. Salve as mudanças.
 
 
 
 
-# Configurando o {{site.data.keyword.amashort}} para autenticação do Facebook
+## Configurando o {{site.data.keyword.amashort}} para autenticação do Facebook
 Depois que você tiver o ID de aplicativo e o segredo de app do Facebook e o aplicativo Facebook tiver sido configurado para atender Web clients, será possível ativar a autenticação do Facebook no painel do {{site.data.keyword.Bluemix_notm}}.
 
 1. Abra o painel {{site.data.keyword.Bluemix_notm}}.
-1. Clique no tile do aplicativo relevante. O aplicativo é carregado.
-2. Clique no tile para o serviço {{site.data.keyword.amashort}}.
-1. Clique no botão **Configurar** no painel **Facebook**.
-2. Observe o valor na caixa de texto **URI de redirecionamento do Mobile Client Access para o Facebook Developer Console**. Esse
-é o valor de que você precisa para incluir na caixa **URIs de redirecionamento de OAuth válidos** no
-**Login do Facebook** do Facebook Developers Portal na etapa 6 acima.
-1. Insira o **ID do aplicativo** e **Segredo do aplicativo** do Facebook.
-2. Insira o URI de redirecionamento nos **URIs de redirecionamento de aplicativo da web**. Esse valor é para que o URI de
+2. Clique no quadro do app relevante para carregar o app.
+3. Clique no tile para o serviço {{site.data.keyword.amashort}}.
+4. Clique no botão **Configurar** no painel **Facebook**.
+5. Observe o valor na caixa de texto **URI de redirecionamento do Mobile Client Access para o Facebook Developer Console**. Você precisará desse valor para incluir na caixa **URIs de redirecionamento de OAuth válidos** no **Login do Facebook** do Portal de desenvolvedores do Facebook na etapa seis de Configurando um aplicativo Facebook para seu website.
+6. Insira o **ID do aplicativo** e **Segredo do aplicativo** do Facebook.
+7. Insira o URI de redirecionamento nos **URIs de redirecionamento de aplicativo da web**. Esse valor é para que o URI de
 redirecionamento seja acessado após o processo de autorização ser concluído e é determinado pelo desenvolvedor.
-3. Clique em **Salvar**.
+8. Clique em **Salvar**.
 
 
 
@@ -57,8 +55,7 @@ redirecionamento seja acessado após o processo de autorização ser concluído 
 ## Implementar o fluxo de autorização do {{site.data.keyword.amashort}} usando o Facebook como provedor de identidade
 
 A variável de ambiente `VCAP_SERVICES` é criada automaticamente para cada instância de serviço do
-{{site.data.keyword.amashort}} e contém propriedades necessárias para o processo de autorização. Ela consiste em um objeto JSON e pode ser
-visualizada clicando em **Variáveis de ambiente** no navegador esquerdo do seu aplicativo.
+{{site.data.keyword.amashort}} e contém propriedades necessárias para o processo de autorização. Ela consiste em um objeto JSON e pode ser visualizada clicando em **Variáveis de ambiente** em <!--the left-side navigator of--> seu aplicativo.
 
 Para iniciar o processo de autorização:
 
@@ -72,7 +69,7 @@ dependendo da região do Bluemix:
   ```
   https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
    ```
-  Londres:
+  Londres: 
    ``` 
  https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
    ```
@@ -80,13 +77,13 @@ dependendo da região do Bluemix:
     ```
  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
   ```
-2. Construa o URI do servidor de autorizações usando `response_type("code")`, `client_id` e `redirect_uri` como parâmetros de consulta. 
+2. Construa o URI do servidor de autorizações usando `response_type("code")`, `client_id` e
+`redirect_uri` como parâmetros de consulta. 
 3. Redirecione a partir do seu aplicativo da web para o URI gerado.
 
 
 
-O exemplo abaixo recupera os parâmetros da variável `VCAP_SERVICES`, construindo a URL e enviando a solicitação de
-redirecionamento.
+O exemplo a seguir recupera os parâmetros da variável `VCAP_SERVICES`, construindo a URL e enviando a solicitação de redirecionamento.
 
   ```Java
   var cfEnv = require("cfenv"); 
@@ -107,7 +104,7 @@ redirecionamento.
         var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
         var clientId = mcaCredentials.clientId;   
         var redirectUri = "http://some-server/oauth/callback"; 
-         // Your web application redirect uri   
+         // Your web application redirect URI   
 
         var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   
@@ -126,6 +123,7 @@ redirecionamento.
  Após redirecionar para o terminal de autorização, o usuário obterá um formulário de login do Facebook. Após o Facebook autorizar a
 identidade do usuário, o serviço {{site.data.keyword.amashort}} chamará seu URI de redirecionamento de aplicativo da web, fornecendo o
 código de concessão como um parâmetro de consulta.  
+
 ## Obtendo os tokens
 
 A próxima pintura é obter o acesso e os tokens de identidade usando o código de concessão recebido anteriormente:
@@ -133,15 +131,14 @@ A próxima pintura é obter o acesso e os tokens de identidade usando o código 
  1.  Recupere o token `tokenEndpoint`, `clientId` e `secret` das credenciais de serviço
 na variável de ambiente `VCAP_SERVICES`. 
  
-    **Nota:** caso tenha usado o Mobile Client Access antes do suporte da web ser incluído, é possível que não tenha o terminal de token nas credenciais de serviço. 
-Nesse caso, use as urls abaixo dependendo da região do Bluemix: 
+    **Nota:** se você usou o {{site.data.keyword.amashort}} antes de o suporte da web ter sido incluído, talvez você não tenha um terminal de token nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo de sua região do Bluemix: 
 
     Sul dos EUA: 
     ```
     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token 
      ```
-  Londres:
-   ```
+    Londres: 
+      ```
     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
      ```
     Sydney: 
@@ -208,16 +205,16 @@ O token de acesso permite a comunicação com os recursos protegidos pelos filtr
 consulte [Protegendo recursos](protecting-resources.html).
 
 
-Para fazer solicitações aos recursos protegidos, inclua um cabeçalho de autorização nas solicitações com a estrutura a seguir: 
+Para fazer solicitações para recursos protegidos, inclua um cabeçalho de autorização nas solicitações com a estrutura a seguir: 
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-**Nota:** 
+#### Dicas
+{: tips} 
 
-* O `accessToken` e o `idToken` devem ser separados por um espaço em branco.
+* Deve-se separar o `accessToken` e o `idToken` com um espaço em branco.
 
-* O `idToken` é opcional. Caso não forneça o token de identidade, o recurso protegido poderá ser acessado, mas não receberá
-nenhuma informação sobre o usuário autorizado. 
+* O `idToken` é opcional. Se você não fornecer o token de identidade, o recurso protegido poderá ser acessado, mas não receberá nenhuma informação sobre o usuário autorizado. 
  
 
 

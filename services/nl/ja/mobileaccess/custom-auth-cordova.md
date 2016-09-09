@@ -8,7 +8,7 @@ copyright:
 # {{site.data.keyword.amashort}} Cordova アプリ用のカスタム認証の構成
 {: #custom-cordova}
 
-*最終更新日: 2016 年 7 月 17 日*
+最終更新日: 2016 年 7 月 17 日
 {: .last-updated}
 
 
@@ -37,6 +37,13 @@ applicationGUID および applicationRoute パラメーターを渡すことに�
 
 	```
 *applicationRoute* および *applicationGUID* を、{{site.data.keyword.Bluemix_notm}} ダッシュボード上のアプリケーションの**「モバイル・オプション」**パネルから取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。
+
+##{{site.data.keyword.amashort}} AuthorizationManager の初期化
+{{site.data.keyword.amashort}} サービス・タイルにある**「資格情報の表示」**ボタンをクリックすると表示される、{{site.data.keyword.amashort}} サービス `tenantId` パラメーターを渡すことで、AuthorizationManager を初期化します。
+
+  ```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
 
 ## 認証リスナー・インターフェース
 {: #custom-cordva-auth}

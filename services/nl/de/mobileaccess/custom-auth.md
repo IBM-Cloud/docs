@@ -8,21 +8,24 @@ copyright:
 # Benutzer mit angepasstem Identitätsprovider authentifizieren
 {: #custom-id}
 
-*Letzte Aktualisierung: 07. Juli 2016*
+Letzte Aktualisierung: 22. Juli 2016
 {: .last-updated}
 
 
 Erstellen Sie einen angepassten Identitätsprovider und implementieren Sie eigene Logik zur Erfassung und Validierung von Berechtigungsnachweisen. Ein angepasster Identitätsprovider ist eine Webanwendung, die eine REST-konforme Schnittstelle bereitstellt. Sie können den angepassten Identitätsprovider lokal oder auf {{site.data.keyword.Bluemix}} betreiben. Die einzige Voraussetzung besteht darin, dass der angepasste Identitätsprovider über das öffentliche Internet erreichbar sein muss, sodass er mit dem {{site.data.keyword.amashort}}-Service kommunizieren kann.
 
-## Angepasster {{site.data.keyword.amashort}}-Identitätsprovider - Übersicht
+## {{site.data.keyword.amashort}}-Anforderungsablauf für angepasste Identität
 {: #custom-id-ovr}
- Das folgende Diagramm zeigt, wie {{site.data.keyword.amashort}} einen angepassten Identitätsprovider integriert. 
 
-![Bild](images/mca-sequence-custom.jpg)
 
-1. Verwenden Sie das {{site.data.keyword.amashort}}-SDK, um eine Anforderung an Ihre Back-End-Ressourcen zu senden, die mit dem {{site.data.keyword.amashort}}-Server-SDK geschützt werden.
+### {{site.data.keyword.amashort}}-Anforderungsablauf für Client
+  Das folgende Diagramm zeigt, wie {{site.data.keyword.amashort}} einen angepassten Identitätsprovider integriert. 
+
+![Anforderungsablaufdiagramm](images/mca-sequence-custom.jpg)
+
+* Verwenden Sie das {{site.data.keyword.amashort}}-SDK, um eine Anforderung an Ihre Back-End-Ressourcen zu senden, die mit dem {{site.data.keyword.amashort}}-Server-SDK geschützt werden.
 * Das {{site.data.keyword.amashort}}-Server-SDK erkennt eine nicht autorisierte Anforderung und gibt den Status HTTP 401 sowie den Berechtigungsbereich zurück.
-* Das {{site.data.keyword.amashort}}-Client-SDK erkennt den oben genannten Status HTTP 401 automatisch und startet den Authentifizierungsprozess.
+* Das {{site.data.keyword.amashort}}-Client-SDK erkennt den Status HTTP 401 automatisch und startet den Authentifizierungsprozess.
 * Das {{site.data.keyword.amashort}}-Client-SDK kontaktiert den {{site.data.keyword.amashort}}-Service und fordert einen Berechtigungsheader an.
 * Der {{site.data.keyword.amashort}}-Service kommuniziert mit dem angepassten Identitätsprovider, um den Authentifizierungsprozess zu starten.
 * Der angepasste Identitätsprovider gibt eine Authentifizierungsanforderung (Challenge) an den {{site.data.keyword.amashort}}-Service zurück.
@@ -34,6 +37,17 @@ Erstellen Sie einen angepassten Identitätsprovider und implementieren Sie eigen
 * Von diesem Punkt an haben alle Anforderungen, die mit dem {{site.data.keyword.amashort}}-Client-SDK gesendet werden, einen neu abgerufenen Berechtigungsheader.
 * Das {{site.data.keyword.amashort}}-Client-SDK wiederholt automatisch das Senden der ursprünglichen Anforderung, die den Berechtigungsablauf ausgelöst hat.
 * Das {{site.data.keyword.amashort}}-Server-SDK extrahiert den Berechtigungsheader aus der Anforderung, validiert ihn mit dem {{site.data.keyword.amashort}}-Service und erteilt den Zugriff auf eine Back-End-Ressource.
+
+### {{site.data.keyword.amashort}}-Anforderungsablauf für Webanwendung
+{: #mca-custom-web-sequence}
+
+Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist vergleichbar mit dem Ablauf für einen mobilen Client. {{site.data.keyword.amashort}} schützt jedoch die Webanwendung anstatt einer {{site.data.keyword.Bluemix_notm}}-Back-End-Ressource. 
+
+  * Die ursprüngliche Anforderung wird von der Webanwendung (zum Beispiel von einem Anmeldeformular) gesendet. 
+  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource.  
+
+
+
 
 ## Informationen zu angepassten Identitätsprovidern
 {: #custom-id-about}
@@ -86,6 +100,7 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 
 ### Beispielimplementierung eines angepassten Identitätsproviders
 {: #custom-sample}
+
 Verwenden Sie beliebige der folgenden Beispiele für Node.js-Implementierungen eines angepassten Identitätsproviders als Referenz, wenn Sie Ihren angepassten Identitätsprovider entwickeln. Laden Sie den vollständigen Anwendungscode aus den GitHub-Repositorys herunter.
 
  * [Einfaches Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
@@ -103,6 +118,7 @@ Verwenden Sie beliebige der folgenden Beispiele für Node.js-Implementierungen e
 
 ## Statusabhängigkeit und Statusunabhängigkeit
 {: #custom-id-state}
+
 Der angepasste Identitätsprovider wird standardmäßig als statusunabhängige Anwendung betrachtet. In einigen Fällen muss der angepasste Identitätsprovider möglicherweise auf den Authentifizierungsprozess bezogene Statusdaten speichern. Ein Beispiel für einen Anwendungsfall ist eine Authentifizierung mit mehreren Schritten, bei der der angepasste Identitätsprovider das Ergebnis des ersten Authentifizierungsschrittes speichern muss, bevor er mit dem nächsten Schritt fortfährt. Zur Unterstützung einer statusabhängigen Funktionalität muss ein angepasster Identitätsprovider eine Status-ID (stateID) generieren und in der Antwort an den {{site.data.keyword.amashort}}-Service bereitstellen. Der {{site.data.keyword.amashort}}-Service muss die Status-ID in nachfolgenden Anforderungen übergeben, die zum Clientauthentifizierungsprozess gehören.
 
 ## Angepasster Realm

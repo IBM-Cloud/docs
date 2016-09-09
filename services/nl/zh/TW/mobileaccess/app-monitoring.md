@@ -7,7 +7,7 @@ copyright:
 
 # 監視應用程式
 {: #app-monitoring}
-*前次更新：2016 年 6 月 28 日*
+前次更新：2016 年 6 月 28 日
 {: .last-updated}
 
 除了安全特性之外，{{site.data.keyword.amafull}} 還會提供行動應用程式的監視及分析。您可以使用 {{site.data.keyword.amashort}} 用戶端 SDK 來記錄用戶端日誌以及監視資料。開發人員可以控制何時將此資料傳送給「{{site.data.keyword.amashort}} 服務」。將自動記載「{{site.data.keyword.amashort}} 服務」中所發生的所有安全事件（例如鑑別成功或失敗）。
@@ -40,7 +40,8 @@ copyright:
 
 2. 開啟 {{site.data.keyword.Bluemix_notm}} 應用程式儀表板時，按一下 {{site.data.keyword.amashort}} 磚。
 
-3. 在 {{site.data.keyword.amashort}} 儀表板中，按一下左側功能表中的**監視**鏈結。
+3. 按一下「{{site.data.keyword.amashort}} 儀表板」左側導覽列中的**監視**鏈結。
+
 
 ## 啟用、配置及使用日誌程式
 {: #enable-logger}

@@ -9,7 +9,7 @@ copyright:
 # Cordova 플러그인 설정
 {: #getting-started-cordova}
 
-*마지막 업데이트 날짜: 2016년 7월 17일*
+마지막 업데이트 날짜: 2016년 7월 17일
 {: .last-updated}
 
 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 Cordova 애플리케이션을 인스트루먼트하고, SDK를 초기화하며 보호 및 비보호 리소스에 대한 요청을 작성하십시오.
@@ -41,7 +41,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	cordova platform add ios
 	```
 
-1. Android 플랫폼을 추가한 경우 지원되는 최소 API를 Cordova 애플리케이션의 `config.xml` 파일에 추가해야 합니다. `config.xml` 파일을 열고 `<platform name="android">` 요소에 다음 행을 추가하십시오. 
+2. Android 플랫폼을 추가한 경우 지원되는 최소 API를 Cordova 애플리케이션의 `config.xml` 파일에 추가해야 합니다. `config.xml` 파일을 열고 `<platform name="android">` 요소에 다음 행을 추가하십시오. 
 
 	```XML
 	<platform name="android">  
@@ -53,7 +53,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 
 	*minSdkVersion* 값은 `15`보다 커야 합니다. *targetSdkVersion* 값은 Google에서 사용 가능한 최신 Android SDK여야 합니다.  
 
-1. iOS 운영 체제를 추가한 경우 `<platform name="ios">` 요소를 대상 선언으로 업데이트하십시오. 
+3. iOS 운영 체제를 추가한 경우 `<platform name="ios">` 요소를 대상 선언으로 업데이트하십시오. 
 
 	```XML
 	<platform name="ios">
@@ -62,45 +62,47 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	</platform>
 	```
 
-1. {{site.data.keyword.amashort}} Cordova 플러그인을 설치하십시오. 
+4. {{site.data.keyword.amashort}} Cordova 플러그인을 설치하십시오. 
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Android, iOS 또는 둘 다에 대해 플랫폼을 구성하십시오. 
+5. Android, iOS 또는 둘 다에 대해 플랫폼을 구성하십시오. 
 
-	* **Android**
+	####Android
+	{: #cordova-android}
 
-		Android Studio에서 프로젝트를 열기 전에 빌드 오류를 방지하기 위해 명령행 인터페이스(CLI)를 통해 Cordova 애플리케이션을 빌드하십시오.
+	Android Studio에서 프로젝트를 열기 전에 빌드 오류를 방지하기 위해 명령행 인터페이스(CLI)를 통해 Cordova 애플리케이션을 빌드하십시오.
 
 		```
 		cordova build android
 		```
 
-	* **iOS**
+	####iOS
+	{: #cordova-ios}
 
-		다음과 같이 Xcode 프로젝트를 구성하여 빌드 오류를 방지하십시오.
+	다음과 같이 Xcode 프로젝트를 구성하여 빌드 오류를 방지하십시오.
 
-		1. 최신 Xcode 버전을 사용하여 `<app_name>/platforms/ios` 디렉토리에서 `xcode.proj` 파일을 여십시오. 
+	1. 최신 Xcode 버전을 사용하여 `<app_name>/platforms/ios` 디렉토리에서 `xcode.proj` 파일을 여십시오. 
 
-		**중요:** "최신 Swift 구문으로 변환"에 대한 메시지를 수신하는 경우 취소를 클릭하십시오.
+		**중요:** 메시지를 수신하여 최신 Swift 구문으로 변환하려면 취소를 클릭하십시오.
 
-		2. **빌드 설정 > Swift 컴파일러 - 코드 생성 > Objective-C 브리징 헤더**로 이동하여 다음 경로를 추가하십시오. 
+	2. **빌드 설정 > Swift 컴파일러 - 코드 생성 > Objective-C 브리징 헤더**로 이동하여 다음 경로를 추가하십시오. 
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. **빌드 설정 > 링크 > Runpath 검색 경로**로 이동하여 다음 프레임워크 매개변수를 추가하십시오. 
+	3. **빌드 설정 > 링크 > Runpath 검색 경로**로 이동하여 다음 프레임워크 매개변수를 추가하십시오. 
 
 			```
 			@executable_path/Frameworks
 			```
 
-		4. Xcode로 애플리케이션을 빌드하고 실행하십시오.
+	4. Xcode로 애플리케이션을 빌드하고 실행하십시오.
 
-1. 다음 명령을 실행하여 플러그인이 설치되었는지 확인하십시오. 
+6. 다음 명령을 실행하여 플러그인이 설치되었는지 확인하십시오. 
 
 	```Bash
 	cordova plugin list

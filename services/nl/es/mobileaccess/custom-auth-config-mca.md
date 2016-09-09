@@ -8,7 +8,7 @@ copyright:
 # Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada
 {: #custom-dash}
 
-*Última actualización: 17 de julio de 2016*
+Última actualización: 17 de julio de 2016
 {: .last-updated}
 
 

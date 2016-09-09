@@ -7,7 +7,7 @@ copyright:
 
 # Abilitazione, configurazione e utilizzo del Logger
 {: #enable-logger}
-*Ultimo aggiornamento: 6 maggio 2016*
+Ultimo aggiornamento: 6 maggio 2016
 {: .last-updated}
 
 L'SDK client {{site.data.keyword.amashort}} fornisce un framework di registrazione in log simile ad altri framework di log con cui potresti avere dimestichezza, come `java.util.logging` o `log4j`. Il framework di registrazione in log supporta, tra l'altro, più istanze logger per pacchetto, diversi livelli di log e l'acquisizione di tracce di stack per un arresto anomalo di applicazioni.

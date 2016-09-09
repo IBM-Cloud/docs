@@ -7,7 +7,7 @@ copyright:
 
 # {{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用するためのアプリケーションの装備
 {: #mobileanalytics_sdk}
-*最終更新日時: 2016 年 4 月 27 日*
+*最終更新日時: 2016 年 8 月 1 日*
 {: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} SDK によって、モバイル・アプリケーションを装備できるようになります。
@@ -21,7 +21,7 @@ copyright:
 
 SDK は、現在 Android、iOS、および WatchOS で使用できます。
 
-## サービス資格情報アクセス・キーの識別
+## アクセス・キー値の識別
 {: #analytics-clientkey}
 
 クライアント SDK をセットアップする前に、**アクセス・キー**値を識別します。アクセス・キーは、クライアント SDK の初期設定に必要です。
@@ -51,7 +51,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
-            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
+            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -109,7 +109,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     {: #ios-initialize-analytics}
 
       ```
-Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
+      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -117,7 +117,7 @@ Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
+	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
 	```
 
   `Analytics.recordApplicationDidBecomeActive()` メソッドと `Analytics.recordApplicationWillResignActive()` メソッドを使用すると、WatchOS に関するデバイス・イベントを記録できます。
@@ -500,9 +500,3 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
-
-# 関連リンク
-
-## API リファレンス
-{: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

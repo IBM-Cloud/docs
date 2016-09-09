@@ -1,4 +1,4 @@
----
+	---
 
 copyright:
  years: 2015, 2016
@@ -12,12 +12,12 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} 入门
 {: #gettingstartedtemplate}
-*上次更新时间：2016 年 6 月 14 日*
+上次更新时间：2016 年 8 月 16 日
 {: .last-updated}
 
 {:shortdesc}
 
-Push Notifications 服务提供一个统一平台来发送和管理针对 iOS 和 Android 平台的移动推送通知。此服务可管理应用程序用户到设备的映射、管理设备平台以及处理向用户分派推送通知。使用此服务，您可以向移动应用程序用户发送广播、单点广播（基于 deviceID），以及基于标记（或基于主题）的推送通知。还可以使用 SDK 和 [REST API](https://mobile.{DomainName}/imfpushrestapidocs/) 来进一步开发您的客户机应用程序。
+{{site.data.keyword.mobilepushshort}} 服务提供一个统一平台来发送和管理针对 iOS 和 Android 平台的移动 {{site.data.keyword.mobilepushshort}}。{{site.data.keyword.mobilepushshort}} 服务可管理应用程序用户到设备的映射、管理设备平台以及处理向用户分派推送通知。使用此服务，您可以作为推送通知，向移动应用程序用户发送广播、单点广播（基于 deviceID）和标记（或主题）。还可以使用 SDK 和 [REST API](https://mobile.{DomainName}/imfpushrestapidocs/) 来进一步开发您的客户机应用程序。
 
 本部分描述了如何设置基本推送通知。使用基本通知时，通知为广播，而不是使用标记发送给一组特定用户。
 

@@ -8,10 +8,10 @@ copyright:
 #Configuración de la autenticación personalizada para las aplicaciones web de {{site.data.keyword.amashort}}
 {: #custom-web}
 
-*Última actualización: 18 de julio de 2016*
+Última actualización: 21 de julio de 2016
 {: .last-updated}
 
-Añadir autenticación personalizada a la aplicación web de {{site.data.keyword.amashort}}.
+Añadir autenticación personalizada y funcionalidad de seguridad de {{site.data.keyword.amashort}} a su app web. 
 
 ## Antes de empezar
 {: #before-you-begin}
@@ -110,23 +110,23 @@ Una vez que haya configurado el proveedor de identidad personalizado, puede habi
 
 ##Implementación del flujo de autorización de {{site.data.keyword.amashort}} utilizando un proveedor de identidad personalizado 
 
-La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver si se pulsa **Variables de entorno** en el navegador de la izquierda de la aplicación.
+La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades que son necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver si se pulsa **Variables de entorno** en la barra de navegación de la izquierda de su aplicación. 
 
 Para solicitar la autorización de usuario, redirija el navegador al punto final del servidor de autorización. Para ello: 
 
 1. Recupere el punto final de autorización (`authorizationEndpoint`) y el clientId (`clientId`) de las credenciales de servicio almacenadas en la variable de entorno `VCAP_SERVICES`. 
 
-  **Nota:** En caso de que haya añadido el servicio Mobile Client Access a la aplicación antes de que se añadiera el soporte web, es posible que no tenga el punto final de la señal en las credenciales de servicio. Utilice las siguientes URL en función de la región {{site.data.keyword.Bluemix_notm}} en su lugar: 
+  **Nota:** En el caso de que haya añadido el servicio de {{site.data.keyword.amashort}} a la aplicación antes de que se añadiera el soporte web, es posible que no tenga el punto final de la señal en las credenciales del servicio. En este caso, utilice las URL siguientes, en función de la región de {{site.data.keyword.Bluemix_notm}}: 
  
   EE.UU. sur: 
   ```
   https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
   ```
-  Londres:
+  Londres: 
   ```
   https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization 
   ```
-  Sídney:
+  Sídney: 
   ```
   https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
   ```
@@ -145,7 +145,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 function checkAuthentication(req, res, next){ 
   // Compruebe si el usuario está autenticado
-  if (req.session.userIdentity){
+  if (req.session.userIdentity){ 
     next() 
   } else { 
     // Si no - redireccione al servidor de autorizaciones
@@ -157,7 +157,7 @@ function checkAuthentication(req, res, next){
     redirectUrl += "&client_id=" + clientId;
     redirectUrl += "&redirect_uri=" + redirectUri;
     res.redirect(redirectUrl);
-  }
+  } 
 
 } 
 
@@ -177,18 +177,18 @@ El siguiente paso consiste en obtener la señal de acceso y la señal de identid
 
 1. Recupere `authorizationEndpoint`, `clientId` y `secret` de las credenciales de servicio almacenadas en la variable de entorno `VCAP_SERVICES`. 
 
-   **Nota:** En caso de que haya añadido el servicio Mobile Client Access a la aplicación antes de que se añadiera el soporte web, es posible que no tenga el punto final de la señal en las credenciales de servicio. En este caso, utilice los URL en función de la región de Bluemix: 
+   **Nota:** En el caso de que haya añadido el servicio de {{site.data.keyword.amashort}} a la aplicación antes de que se añadiera el soporte web, es posible que no tenga el punto final de la señal en las credenciales del servicio. En este caso, utilice las URL siguientes, en función de la región de {{site.data.keyword.Bluemix_notm}}: 
 
  EE.UU. sur: 
  ```
      https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
  ```
-  Londres:
-  ```
+ Londres: 
+ ```
      https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
  ``` 
-  Sídney:
-  ``` 
+ Sídney: 
+ ``` 
      https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
  ```
 1. Envíe una solicitud POST al URI de servidor de señal con `grant_type`, `client_id`, `redirect_uri` y `code` como parámetros de formulario y `clientId` y `secret` como credenciales de autenticación HTTP básicas.
@@ -211,7 +211,7 @@ app.get("/oauth/callback", function(req, res, next){
       code: req.query.code
     }
 
-  request.post({
+  request.post({ 
     url: tokenEndpoint, 
     formData: formData 
     }, function (err, response, body){ 
@@ -237,17 +237,18 @@ Una vez que haya recibido acceso, y la identidad de las señales, puede señalar
 
 ##Utilización de la señal de identidad y del acceso obtenido 
 
-La señal de identidad contiene información sobre la identidad del usuario. En caso de una autenticación personalizada, la señal contendrá toda la información devuelta por el proveedor de identidad personalizado al autenticar. En el campo `imf.user`, el campo `displayName` contendrá el `displayName` devuelto por el proveedor de identidad personalizado, y el campo `id` contendrá el `userName`. Todos los demás valores devueltos por el proveedor de identidad personalizado se devuelven en el campo `attributes` en `imf.user`.  
+La señal de identidad contiene información sobre la identidad del usuario. En caso de una autenticación personalizada, la señal contendrá toda la información devuelta por el proveedor de identidad personalizado al autenticar. En el campo `imf.user`, el campo `displayName` contendrá el `displayName` devuelto por el proveedor de identidad personalizado, y el campo `id` contendrá el `userName`.  Todos los demás valores devueltos por el proveedor de identidad personalizado se devuelven en el campo `attributes` en `imf.user`.  
 
-La señal de acceso permite la comunicación con los recursos protegidos por los filtros de autorización de Mobile Client Access (consulte [Protección de recursos](protecting-resources.html)). Para realizar solicitudes a los recursos protegidos, añada una Cabecera de autorización a las solicitudes con la estructura siguiente: 
+La señal de acceso permite la comunicación con los recursos protegidos por los filtros de autorización de {{site.data.keyword.amashort}} (consulte [Protección de recursos](protecting-resources.html)). Para realizar solicitudes a los recursos protegidos, añada una cabecera de autorización a las solicitudes con la estructura siguiente:  
 
 `Authorization=Bearer <accessToken> <idToken>` 
 
-**Nota:** 
+####Sugerencias: 
+{: #tips_token}
 
 * El `<accessToken>` y el `<idToken>` deben estar separados por un espacio en blanco.
 
-* La señal de identidad es opcional. En el caso de que no proporcione la señal de identidad, se puede acceder al recurso protegido, pero no recibirá ninguna información sobre el usuario autorizado. 
+* La señal de identidad es opcional. En el caso de que no proporcione la señal de identidad, podrá acceder al recurso protegido, pero no recibirá ninguna información sobre el usuario autorizado.  
 
 
 

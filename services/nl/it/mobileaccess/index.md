@@ -5,17 +5,13 @@ copyright:
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
 
 # Introduzione a {{site.data.keyword.amashort}}
 {: #gettingstarted}
-*Ultimo aggiornamento: 18 luglio 2016*
+Ultimo aggiornamento: 21 luglio 2016
 {: .last-updated}
 
-Aggiungi funzionalità di sicurezza alla tua applicazione mobile con il servizio {{site.data.keyword.amafull}}. Puoi configurare l'autenticazione client e i provider di identità in modo che gli utenti possano accedere all'applicazione con i loro account Google o Facebook esistenti.
+Aggiungi sicurezza alla tua applicazione mobile con il servizio {{site.data.keyword.amafull}}. Puoi configurare l'autenticazione client e i provider di identità in modo che gli utenti possano accedere all'applicazione con i loro account Google o Facebook esistenti.
 {:shortdesc}
 
 **Nota:** il servizio {{site.data.keyword.amashort}} era precedentemente noto come Advanced Mobile Access.
@@ -23,37 +19,39 @@ Aggiungi funzionalità di sicurezza alla tua applicazione mobile con il servizio
 
 Per essere operativo in tempi brevi con il servizio {{site.data.keyword.amashort}}:
 
-1.  Utilizza il dashboard {{site.data.keyword.Bluemix_notm}} per creare un'applicazione di back-end mobile o per configurarne una esistente.
+1. Utilizza il dashboard {{site.data.keyword.Bluemix_notm}} per creare un'applicazione di back-end mobile o per configurarne una esistente.
   - Puoi selezionare il contenitore tipo **MobileFirst Services Starter** dal catalogo {{site.data.keyword.Bluemix_notm}}.
-  - Oppure puoi eseguire il bind del servizio a un'applicazione esistente e configurarla.
+  - Inoltre puoi eseguire il bind del servizio a un'applicazione esistente e configurarla. 
 
    Quando utilizzi MobileFirst Services Starter, ottieni un'istanza di un runtime Node.js che viene eseguito su IBM {{site.data.keyword.Bluemix_notm}} per implementare la tua logica di back-end personalizzata. A tale applicazione Node.js viene associata mediante bind una serie di servizi mobili di base che forniscono funzioni di sicurezza, dati, push e monitoraggio. Dopo che l'applicazione {{site.data.keyword.Bluemix_notm}} Node.js è stata creata, puoi configurare il tuo ambiente di sviluppo e iniziare a utilizzare
 gli SDK {{site.data.keyword.Bluemix_notm}} Mobile Services. Puoi utilizzare gli SDK per accedere ai servizi associati mediante bind alla tua applicazione cloud con delle semplici chiamate API.
   
-1. Risorse lato server sicure.
+2. Risorse lato server sicure.
 
    Proteggi le tue risorse di backend mobile in esecuzione su runtime Node.js o Liberty for Java&trade; con la sicurezza OAuth abilitata ai dispositivi mobili. Per ulteriori informazioni, vedi [Protezione delle risorse](protecting-resources.html).
    Per ulteriori informazioni sull'applicazione di back-end mobile predefinita, vedi l'applicazione di esempio [bms-hellotodo-strongloop](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop).
 
-1. Configura il tuo ambiente di sviluppo web o lato client {{site.data.keyword.amashort}} core.
-
-  **Sviluppo client:**
+3. Configura il tuo ambiente di sviluppo {{site.data.keyword.amashort}} core. 
+   
+	####Sviluppo dei client
+   {: #client-development}
+   
+	Puoi aggiungere l'SDK {{site.data.keyword.amashort}} alla tua applicazione Android, iOS o Cordova esistente, nel seguente modo:
+   * Android: ([Configurazione dell'SDK Android](getting-started-android.html)) ([Esempio](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
   
-   Puoi aggiungere l'SDK {{site.data.keyword.amashort}} alla tua applicazione Android, Cordova o iOS esistente. 
-   * **Android**: ([Configurazione dell'SDK Android](getting-started-android.html)) ([Esempio](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
-  
-   * **Cordova**: ([Configurazione del plug-in Cordova](getting-started-cordova.html)) ([Esempio](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
-  
-   * **iOS (Swift SDK)**: ([Configurazione dell'SDK Swift iOS](getting-started-ios-swift-sdk.html))
+   * iOS (Swift SDK): ([Configurazione dell'SDK Swift iOS](getting-started-ios-swift-sdk.html))
       ([Esempio](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
   
-   * **iOS (Objective-C SDK)**: ([Configurazione dell'SDK Object-C iOS](getting-started-ios.html)) ([Esempio](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
+   * iOS (Objective-C SDK): ([Configurazione dell'SDK Object-C iOS](getting-started-ios.html)) ([Esempio](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
+
+   * Cordova: ([Configurazione del plug-in Cordova](getting-started-cordova.html)) ([Esempio](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
    
    **Nota:** mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.amashort}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift. Se stai creando un'applicazione, ti consigliamo caldamente di utilizzare l'SDK Swift (consulta [Configurazione dell'SDK Swift iOS](getting-started-ios-swift-sdk.html)).
-   
-   **Sviluppo web:**
 
-   Il servizio {{site.data.keyword.amashort}} può proteggere la tua applicazione web, senza richiedere un SDK speciale. Puoi sfruttare diversi provider di identità, in aggiunta alla protezione fornita dal servizio {{site.data.keyword.amashort}}. Ti abilita tutte le applicazioni web, a prescindere dalla tecnologia che le implementa, per usufruire dei vantaggi del protocollo OAuth2. Per informazioni sulla configurazione della tua applicazione web per l'accesso al servizio {{site.data.keyword.amashort}} utilizzando altri provider di identità, consulta:
+	####Sviluppo Web
+   {: #web-development}
+
+   Il servizio {{site.data.keyword.amashort}} può proteggere la tua applicazione web, senza richiedere un SDK speciale. Puoi sfruttare diversi provider di identità, in aggiunta alla protezione fornita dal servizio {{site.data.keyword.amashort}}. L'integrazione {{site.data.keyword.amashort}} abilita tutte le applicazioni web, a prescindere dalla tecnologia che le implementa, per usufruire dei vantaggi del protocollo OAuth2. Per informazioni sulla configurazione della tua applicazione web per l'accesso al servizio {{site.data.keyword.amashort}} utilizzando altri provider di identità, consulta:
 
     * [Abilitazione dell'autenticazione Facebook per le applicazioni web ](facebook-auth-web.html)
               
@@ -61,13 +59,13 @@ gli SDK {{site.data.keyword.Bluemix_notm}} Mobile Services. Puoi utilizzare gli 
               
     * [Abilitazione dell'autenticazione personalizzata per le applicazioni web ](custom-auth-web.html)
               
-1. **Facoltativo:** configura un provider di identità per la tua applicazione. Puoi configurare un singolo provider di identità per applicazione. La configurazione di un provider di identità abilita gli utenti della tua applicazione mobile ad accedere con il loro             account Facebook o Google+ esistente. In alternativa, puoi definire il modo in cui gli utenti eseguono l'accesso creando
+4. **Facoltativo:** configura un provider di identità per la tua applicazione. Puoi configurare un singolo provider di identità per applicazione. La configurazione di un provider di identità abilita gli utenti della tua applicazione mobile ad accedere con il loro             account Facebook o Google+ esistente. In alternativa, puoi definire il modo in cui gli utenti eseguono l'accesso creando
              un'autenticazione personalizzata.
    * [Autenticazione degli utenti con le credenziali Facebook](facebook-auth-overview.html)
    * [Autenticazione degli utenti con le credenziali Google](google-auth-overview.html)
    * [Autenticazione utenti con un provider di identità personalizzato](custom-auth.html)
 
-1. Configura il monitoraggio e la registrazione in log della tua applicazione.
+5. Configura il monitoraggio e la registrazione in log della tua applicazione.
 
     Per ulteriori informazioni, vedi [Monitoraggio applicazioni](app-monitoring.html).
 

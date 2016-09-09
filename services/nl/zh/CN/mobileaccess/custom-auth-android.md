@@ -8,7 +8,7 @@ copyright:
 # 针对 {{site.data.keyword.amashort}} Android 应用程序配置定制认证
 {: #custom-android}
 
-*上次更新时间：2016 年 7 月 17 日*
+上次更新时间：2016 年 8 月 01 日
 {: .last-updated}
 
 
@@ -34,7 +34,7 @@ copyright:
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
@@ -63,6 +63,7 @@ copyright:
 将 `BMSClient.REGION_UK` 替换为相应的区域。
 	
 
+要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
 ## AuthenticationListener 接口
 {: #custom-android-authlistener}
 
@@ -166,8 +167,10 @@ public class CustomAuthenticationListener implements AuthenticationListener {@Ov
 创建定制 AuthenticationListener 后，在开始使用前，请先向 `BMSClient` 注册该侦听器。将以下代码添加到应用程序中。对受保护资源发送任何请求之前，必须先调用此代码。
 
 ```Java
-BMSClient.getInstance().registerAuthenticationListener(realmName,
-									new CustomAuthenticationListener());
+MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+
 ```
 
 使用在 {{site.data.keyword.amashort}}“仪表板”中指定的 *realmName*。
@@ -216,7 +219,7 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
  通过添加以下代码，您还可以添加注销功能：
 
  ```Java
- AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  如果您在用户登录之后调用此代码，那么用户将注销。用户在尝试重新登录时，必须重新回答服务器发出的质询。

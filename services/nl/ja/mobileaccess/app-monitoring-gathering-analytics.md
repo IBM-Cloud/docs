@@ -7,7 +7,7 @@ copyright:
 
 # 使用分析の収集
 {: #usage-analytics}
-*最終更新日: 2016 年 5 月 6 日*
+最終更新日: 2016 年 5 月 6 日
 {: .last-updated}
 
 使用分析を記録し、記録されたデータを {{site.data.keyword.amashort}} サービスに送信するように、{{site.data.keyword.amashort}} Client SDK を構成できます。

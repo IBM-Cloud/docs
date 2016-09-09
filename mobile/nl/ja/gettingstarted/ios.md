@@ -10,7 +10,7 @@ copyright:
 
 # iOS 用 Hello Bluemix サンプル入門
 {: #gettingstarted-android}
-*最終更新日: 2016 年 6 月 1 日*
+最終更新日: 2016 年 6 月 1 日
 {: .last-updated}  
 
 新規 iOS アプリを始める場合は、Hello Bluemix というアプリが使用できます。このアプリは、モバイル・アプリから {{site.data.keyword.Bluemix}} バックエンドへ認証を行わずに接続する方法を示す実例となっています。
@@ -33,7 +33,7 @@ copyright:
 3. 開発環境でサンプルを実行します。Xcode で、**「Product」&gt;「Run」**をクリックします。iOS シミュレーターが開始します。
 
 	**重要:** appRoute では `http` ではなく `https` プロトコルを使用する必要があります。そうでない場合、アプリのトランスポート・セキュリティー設定が原因で接続障害が起こる可能性があります。それらの設定について詳しくは、[Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/) ブログ投稿を参照してください。
-
+	
 4. シミュレーターで、**「{{site.data.keyword.Bluemix_notm}} を ping する」**をクリックします。サンプル・アプリが、Mobile Client Access サービスから許可ヘッダーを取得します。ping が成功した場合は、シミュレーター内のテキストが更新されます。
 
   Xcode のモバイル・アプリから {{site.data.keyword.Bluemix_notm}} への接続に成功すると、以下が表示されます。

@@ -8,10 +8,10 @@ copyright:
 # ローカル開発環境での {{site.data.keyword.amashort}} の使用
 {: #protecting-local}
 
-*最終更新日: 2016 年 7 月 17 日*
+最終更新日: 2016 年 8 月 16 日
 {: .last-updated}
 
-ローカル開発を、{{site.data.keyword.Bluemix}} 上で実行されている {{site.data.keyword.amashort}} サービスを使用するように構成することができます。具体的には、{{site.data.keyword.amashort}} サーバー SDK を使用してコードをローカルに開発し、{{site.data.keyword.amashort}} 要求を開発サーバーに送信することができます。これらの要求は、{{site.data.keyword.Bluemix}} 上で実行している {{site.data.keyword.amashort}} サービスによって保護されます。
+ローカル開発を、{{site.data.keyword.Bluemix}} 上で実行されている {{site.data.keyword.amafull}} サービスを使用するように構成することができます。具体的には、{{site.data.keyword.amashort}} サーバー SDK を使用してコードをローカルに開発し、{{site.data.keyword.amashort}} 要求を開発サーバーに送信することができます。これらの要求は、{{site.data.keyword.Bluemix}} 上で実行している {{site.data.keyword.amashort}} サービスによって保護されます。
 
 ## Server SDK のセットアップ
 {: #serversetup}

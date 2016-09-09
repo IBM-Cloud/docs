@@ -8,7 +8,7 @@ copyright:
 # 针对 {{site.data.keyword.amashort}} Cordova 应用程序配置定制认证
 {: #custom-cordova}
 
-*上次更新时间：2016 年 7 月 17 日*
+上次更新时间：2016 年 7 月 17 日
 {: .last-updated}
 
 
@@ -36,6 +36,15 @@ copyright:
 
 	```
 将 *applicationRoute* 和 *applicationGUID* 替换为 {{site.data.keyword.Bluemix_notm}} 仪表板上应用程序的**移动选项**面板中的**路径**和**应用程序 GUID** 值。
+
+##初始化 {{site.data.keyword.amashort}} AuthorizationManager
+初始化 AuthorizationManager 的方法是将在单击 {{site.data.keyword.amashort}} 服
+务磁贴上的**显示凭证**按钮时获取的 `tenantId` 参数传递给
+{{site.data.keyword.amashort}} 服务。
+
+  ```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
 
 ## 认证侦听器接口
 {: #custom-cordva-auth}

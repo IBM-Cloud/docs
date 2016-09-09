@@ -11,7 +11,7 @@ copyright:
 # Ativando a autenticação do Facebook para apps Cordova
 {: #facebook-auth-cordova}
 
-*Última atualização: 15 de junho de 2016*
+Última atualização: 15 de junho de 2016
 {: .last-updated}
 
 
@@ -25,7 +25,7 @@ Use o ambiente de desenvolvimento nativo para fazer mudanças no código nativo,
 {: #facebook-auth-before}
 Você deve ter:
 * Um projeto do Cordova que seja instrumentado com o {{site.data.keyword.amashort}} client SDK. Consulte [Configurando o plug-in do Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
-* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend {{site.data.keyword.Bluemix_notm}, consulte [Introdução](index.html).
+* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
 * Um ID de aplicativo do Facebook. Para obter mais informações, consulte [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
@@ -66,7 +66,7 @@ As etapas necessárias para configurar a plataforma iOS do aplicativo Cordova pa
 
 1. O Facebook SDK será instalado no diretório `~/Documents/FacebookSDK`. Navegue até esse diretório e copie (arraste e solte) o arquivo `FacebookSDK.framework` para o projeto do iOS no Xcode.
 
-1. 	Clique na raiz do projeto na área de janela esquerda de Xcode e selecione **Fases da compilação**.
+1. 	Clique na raiz do projeto em Xcode e selecione **Fases da construção**.
 
 1. Inclua o arquivo `FacebookSDK.framework` na lista de
 bibliotecas vinculadas em **Vincular binário com bibliotecas**.
@@ -104,10 +104,10 @@ Após o SDK do cliente ser inicializado e o gerenciador de autenticação do Fac
 Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Para obter mais informações, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Tente enviar uma solicitação para o terminal protegido do seu aplicativo backend móvel recém-criado a partir do seu navegador. Abra a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter
-é protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
+<br/>O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter é
+protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
 
-1. Use seu aplicativo Cordova para fazer solicitação para o mesmo terminal. Inclua o código abaixo depois de inicializar `BMSClient`:
+1. Use seu aplicativo Cordova para fazer solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient`:
 
 	```JavaScript
 	var success = function(data){
@@ -124,7 +124,7 @@ Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter u
 
 	![image](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-facebook-login.png)
 
-	> Essa tela poderá parecer um pouco diferente se o app Facebook não estiver instalado em seu dispositivo, ou se você não estiver atualmente conectado ao Facebook.
+	Essa tela pode parecer ligeiramente diferente se você não tiver o app Facebook instalado em seu dispositivo ou se não estiver com login efetuado atualmente no Facebook.
 
 1. Clique em **OK** para autorizar o {{site.data.keyword.amashort}} a usar sua identidade de usuário do Facebook para propósitos de autenticação.
 

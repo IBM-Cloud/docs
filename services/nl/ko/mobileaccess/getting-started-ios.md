@@ -9,7 +9,7 @@ copyright:
 # iOS Objective-C SDK 설정 
 {: #getting-started-ios}
 
-*마지막 업데이트 날짜: 2016년 7월 17일*
+마지막 업데이트 날짜: 2016년 7월 17일
 {: .last-updated}
 
 {{site.data.keyword.amashort}} SDK를 사용하여 iOS 애플리케이션을 인스트루먼트하고, SDK를 초기화하며 보호 및 비보호 리소스에 대한 요청을 작성하십시오. {:shortdesc}
@@ -19,7 +19,7 @@ copyright:
 ## 시작하기 전에
 {: #before-you-begin}
 다음이 있어야 합니다.
-* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
+* {{site.data.keyword.amashort}} 서비스에서 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
 
 
 
@@ -72,15 +72,18 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 
 1. 다음 헤더를 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 `IMFCore` 프레임워크를 가져오십시오.
 
-	**Objective-C:**
+	####Objective-C
+	{: #imfcore-objc}
 	
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
 	
 	```
 	
-	**Swift:**
-	{{site.data.keyword.amashort}} 클라이언트 SDK는 Objective-C를 사용하여 구현됩니다. 브리징 헤더를 Swift 프로젝트에 추가해야 할 수 있습니다. 
+	####Swift
+	{: #sdk-swift}
+	
+	{{site.data.keyword.amashort}} 클라이언트 SDK는 Objective-C로 구현됩니다. 브리징 헤더를 Swift 프로젝트에 추가해야 할 수 있습니다. 
 	1. Xcode에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **새 파일..**을 선택하십시오. 
 	1. **iOS 소스** 카테고리에서 **헤더 파일**을 클릭하십시오. 파일 이름을 `BridgingHeader.h`로 지정하십시오. 
 	1. 브리징 헤더에 다음 행을 추가하십시오. `#import <IMFCore/IMFCore.h>`
@@ -92,16 +95,16 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 1. 다음 코드를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드입니다. <br/>
 *applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션** 값으로 대체하십시오. 
 
-	**Objective-C:**
+	####Objective-C
+	{: #sharedinstance-objc}
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-	**Swift:
-
-	**
+	####Swift
+	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
@@ -116,7 +119,8 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. `IMFClient`를 초기화한 후에 다음 코드를 추가하십시오. 
 
-	**Objective-C:**
+	####Objective-C
+	{: #nsstring-objc}
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -134,7 +138,8 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 	}];
 	```
 
-	**Swift:**
+	####Swift
+	{: #imfclientrequestpath-swift}
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

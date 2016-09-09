@@ -9,7 +9,7 @@ copyright:
 
 
 #Habilitación de notificaciones push avanzadas
-*Última actualización: 14 de junio de 2016*
+Última actualización: 16 de agosto de 2016
 {: .last-updated}
 
 Configure un identificador de iOS, un sonido, una carga útil de JSON adicional, notificaciones accionables y notificaciones retenidas.
@@ -19,10 +19,8 @@ Configure un identificador de iOS, un sonido, una carga útil de JSON adicional,
 
 Configure un identificador y un sonido de iOS, y carga útil adicional de JSON.
 
-1. En el panel de control Notificaciones Push, vaya al
-                        separador **Notificaciones**.
-2. Vaya a la sección **Campos opcionales** para configurar las
-                    siguientes características de notificaciones push. 
+1. En el panel de control {{site.data.keyword.mobilepushshort}}, vaya al separador **Notificaciones**.
+2. Vaya a la sección **Campos opcionales** para configurar las características de {{site.data.keyword.mobilepushshort}}. 
 	- **Archivo de sonido**: Escriba una serie que apunte al archivo de sonido
                             de la app móvil. En la carga útil, especifique el nombre de serie del
                             archivo de sonido a utilizar.
@@ -36,7 +34,7 @@ Configure un identificador y un sonido de iOS, y carga útil adicional de JSON.
 
 ###Android
 
-Añada el archivo de sonido en el directorio `res/raw` de la aplicación android. Al enviar la notificación, añada el nombre del archivo de sonido en el campo de sonido de la notificación push.
+Añada el archivo de sonido en el directorio `res/raw` de la aplicación android. Al enviar la notificación, añada el nombre del archivo de sonido en el campo de sonido de {{site.data.keyword.mobilepushshort}}.
 
 ```
 "settings": {
@@ -57,9 +55,7 @@ Añada el archivo de sonido en el directorio `res/raw` de la aplicación android
 	  }
 }
 ``` 		
-**Carga útil adicional**: Esta carga útil puede ser cualquier
-                            par de valores de claves y debe ser un objeto JSON que desee enviar con la
-                            notificación push.
+**Carga útil adicional**: Esta carga útil puede ser cualquier par de clave-valor y debe ser un objeto JSON que desee enviar con la {{site.data.keyword.mobilepushshort}}.
 
 ```
 {"key":"value", "key2":"value2"}
@@ -69,7 +65,7 @@ Añada el archivo de sonido en el directorio `res/raw` de la aplicación android
 ## Retención de notificaciones de Android 
 {: #hold-notifications-android}
 
-Cuando su aplicación entre en segundo plano, probablemente querrá que la notificación push retenga las notificaciones enviadas a la aplicación. Para retener notificaciones, invoque el método hold() en el método onPause() de la actividad que maneja las notificaciones push.
+Cuando su aplicación entre en segundo plano, probablemente querrá que la {{site.data.keyword.mobilepushshort}} retenga las notificaciones enviadas a la aplicación. Para retener las notificaciones, llame el método hold() en el método onPause() de la actividad que maneja las {{site.data.keyword.mobilepushshort}}.
 
 ```
 @Override
@@ -85,7 +81,9 @@ protected void onPause() {
 ## Habilitación de notificaciones de iOS accionables  
 {: #enable-actionable-notifications-ios}
 
-A diferencia de las notificaciones push tradicionales, estas solicitan a los usuarios que realicen una selección al recibir la alerta de notificación sin abrir la app. Utilice las instrucciones siguientes para habilitar notificaciones push en la aplicación.
+A diferencia de las {{site.data.keyword.mobilepushshort}} convencionales, estas solicitan a los usuarios que realicen una selección al recibir la alerta de notificación sin abrir la app.  
+
+Siga estos pasos para habilitar las {{site.data.keyword.mobilepushshort}} accionables en la aplicación.
 
 1. Cree una acción de respuesta del usuario.
 
@@ -126,7 +124,7 @@ A diferencia de las notificaciones push tradicionales, estas solicitan a los usu
 2. Cree la categoría de notificaciones y configure una acción. **UIUserNotificationActionContextDefault** o
                 **UIUserNotificationActionContextMinimal** son contextos válidos.
 
-	Objective-C
+Objective-C
 
 	```
 	// For Objective-C
@@ -135,7 +133,7 @@ A diferencia de las notificaciones push tradicionales, estas solicitan a los usu
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
 	```    
 
-	Swift
+Swift
 
 	```
 	// For Swift
@@ -144,16 +142,16 @@ A diferencia de las notificaciones push tradicionales, estas solicitan a los usu
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
 	```
 
-1. Cree el valor de notificación y asigne las categorías desde el paso anterior.
+1. Cree el valor de notificación y asigne las categorías del paso anterior.
 
-	Objective-C
+Objective-C
 
 	```
 	// For Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
 	```
 
-	Swift
+Swift
 
 	```
 	// For Swift
@@ -162,7 +160,7 @@ A diferencia de las notificaciones push tradicionales, estas solicitan a los usu
 
 1. Cree una notificación remota o local y asígnele la identidad de la categoría.
 
-	Objective-C
+Objective-C
 
 	```
 	//For Objective-C
@@ -172,7 +170,7 @@ A diferencia de las notificaciones push tradicionales, estas solicitan a los usu
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
 
-	Swift
+Swift
 
 	```
 	//For Swift

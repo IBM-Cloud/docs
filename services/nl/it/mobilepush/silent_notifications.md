@@ -7,7 +7,7 @@ copyright:
 
 # Gestione di notifiche automatiche per iOS
 {: #silent-notifications}
-*Ultimo aggiornamento: 14 giugno 2016*
+Ultimo aggiornamento: 16 agosto 2016
 {: .last-updated}
 
 Le notifiche automatiche non vengono visualizzate sulla schermata del dispositivo. Queste notifiche vengono ricevute dall'applicazione in background, che la attivano per 30 secondi in modo che esegua l'attività in background specificata. Un utente non viene avvisato dell'arrivo della notifica. Per inviare notifiche automatiche per iOS, utilizza l'[API REST](https://mobile.{DomainName}/imfpushrestapidocs/).   

@@ -8,8 +8,8 @@ copyright:
 
 # 모바일 대시보드에서 모바일 프로젝트 작성
 {: #mobile}
-*마지막 업데이트 날짜: 2016년 7월 18일*
-{: .last-updated}
+마지막 업데이트 날짜: 2016년 7월 21일
+{: .last-updated} 
 
 {{site.data.keyword.Bluemix}} 모바일 서비스를 사용하여, 사전 빌드되고 관리되며 확장 가능한 클라우드 서비스를 IT의 관여 없이 사용자의 모바일 애플리케이션에 통합할 수 있습니다. 복잡한 백엔드 인프라를 관리하는 대신 모바일 앱을 빌드하는 데 집중할 수 있습니다.
 
@@ -30,28 +30,28 @@ copyright:
 <th>{{site.data.keyword.Bluemix_notm}} 모바일 서비스</th>
 <th>설명</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} 아이콘"><br/><b>{{site.data.keyword.mobileanalytics_short}}(시범)</b></td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} 아이콘"><br/>{{site.data.keyword.mobileanalytics_short}}(시범)</td>
 <td valign="top">{{site.data.keyword.mobileanalytics_full}} 서비스를 사용하여 모바일 앱, 모바일 사용자 및 모바일 디바이스의 상태, 작동 및 컨텍스트를 측정할 수 있습니다.<br/><br/>
 이 서비스 운영에 대한 자세한 정보는 <a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 문서 링크">{{site.data.keyword.mobileanalytics_short}} 문서</a>를 살펴보십시오.
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} 서비스 아이콘"><br/><b>{{site.data.keyword.amashort}}</b></td>
+<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} 서비스 아이콘"><br/>{{site.data.keyword.amashort}}</td>
 <td valign="top">{{site.data.keyword.amafull}} 서비스를 사용하여 모바일 앱에 보안 기능을 추가할 수 있습니다. 기존의 Google 또는 Facebook 계정을 사용하여 앱에 로그인할 수 있도록 클라이언트 인증 및 ID 제공자를 구성할 수 있습니다.<br/><br/>
 이 서비스 운영에 대한 자세한 정보는 <a href="../services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} 문서 링크">{{site.data.keyword.amashort}} 문서</a>를 살펴보십시오.</td>
 </tr>
 <tr>
-<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} 서비스 아이콘"><br/> <b>{{site.data.keyword.mobilefoundation_short}}</b></td>
+<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} 서비스 아이콘"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">{{site.data.keyword.mobilefoundation_long}} 서비스를 사용하여 엔터프라이즈 모바일 앱을 개발하고, 테스트하고, 운영할 수 있는 {{site.data.keyword.mfp_full}} 환경을 신속하게 설정할 수 있습니다.<br/><br/>
 이 서비스 운영에 대한 자세한 정보는 <a href="../services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} 문서 링크">{{site.data.keyword.mobilefoundation_short}} 문서</a>를 살펴보십시오.</td>
 </tr>
 <tr>
-<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} 서비스 아이콘"><br/><b>{{site.data.keyword.mqa}}</b></td>
+<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} 서비스 아이콘"><br/>{{site.data.keyword.mqa}}</td>
 <td valign="top">{{site.data.keyword.mqafull}} 서비스를 사용하여 앱에 대한 모바일 품질 서비스를 검색 및 설정할 수 있습니다. 모바일 앱에 대한 상위 레벨의 품질 메트릭을 보고 작업 중인 앱의 문제를 신속하게 파악할 수 있습니다. 이러한 메트릭에는 충돌, 버그, 사용자 피드백 및 사용자 감성에 대한 정보가 포함됩니다. 앱에 대한 이 정보를 보고 특정 문제를 더 자세히 조사할지 여부를 결정할 수 있습니다.<br/><br/>
 이 서비스 운영에 대한 자세한 정보는 <a href="../services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 문서 링크">{{site.data.keyword.mqa}} 문서</a>를 살펴보십시오. </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Push Notifications 서비스 아이콘"><br/><b>{{site.data.keyword.mobilepushshort}}</b></td>
+<td><img src="images/catalog_icons-09.png" alt="Push Notifications 서비스 아이콘"><br/>{{site.data.keyword.mobilepushshort}}</td>
 <td valign="top">{{site.data.keyword.mobilepushfull}} 서비스를 사용하여 iOS 및 Android 플랫폼을 대상으로 하는 모바일 푸시 알림을 전송 및 관리할 수 있습니다. 이 서비스에서는 디바이스 및 디바이스 플랫폼에 대한 애플리케이션 사용자의 맵핑을 관리하고 디바이스에 푸시 알림을 디스패치하는 작업을 처리합니다. 이 서비스를 사용하면 푸시 알림을 기반으로 모바일 애플리케이션 사용자에게 브로드캐스트, 유니캐스트(사용자 ID, 디바이스 ID 기반) 및 태그(또는 주제)를 보낼 수 있습니다.<br/><br/>
 이 서비스 운영에 대한 자세한 정보는 <a href="../services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 문서 링크">{{site.data.keyword.mobilepushshort}} 문서</a>를 살펴보십시오.</td>
 </table>
@@ -87,7 +87,7 @@ copyright:
 4. **API**를 클릭하고 데이터베이스 이름을 통해 **API 키** 값을 복사하십시오.
 
    **참고**: 데이터베이스 이름 뒤에 있는 컨텐츠를 복사하지 마십시오.
-
+   
 5. **권한** > **API 키 생성**을 클릭하고 **키** 및 **비밀번호** 값을 복사하십시오.
 6. 모바일 대시보드 **프로젝트** 보기로 다시 이동하십시오.
 7. 편집할 프로젝트를 클릭하십시오.
@@ -117,7 +117,8 @@ copyright:
 * [블로그 게시물: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
 * [블로그 게시물: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [블로그 게시물: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
+ 
 ## 튜토리얼 및 샘플
 {: #samples}
 * [Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+

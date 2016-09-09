@@ -8,10 +8,11 @@ copyright:
 # 将 {{site.data.keyword.amashort}} 用于本地开发环境
 {: #protecting-local}
 
-*上次更新时间：2016 年 7 月 17 日*
+上次更新时间：2016 年 8 月 16 日
 {: .last-updated}
 
-您可以配置本地开发来使用在 {{site.data.keyword.Bluemix}} 上运行的 {{site.data.keyword.amashort}} 服务。具体来说，您可以使用 {{site.data.keyword.amashort}} 服务器 SDK 在本地开发代码，然后向开发服务器发送 {{site.data.keyword.amashort}} 请求。这些请求将由 {{site.data.keyword.Bluemix}} 上运行的 {{site.data.keyword.amashort}} 服务保护。
+您可以配置本地开发来使用在 {{site.data.keyword.Bluemix}} 上运行的
+{{site.data.keyword.amafull}} 服务。具体来说，您可以使用 {{site.data.keyword.amashort}} 服务器 SDK 在本地开发代码，然后向开发服务器发送 {{site.data.keyword.amashort}} 请求。这些请求将由 {{site.data.keyword.Bluemix}} 上运行的 {{site.data.keyword.amashort}} 服务保护。
 
 ## 设置服务器 SDK
 {: #serversetup}

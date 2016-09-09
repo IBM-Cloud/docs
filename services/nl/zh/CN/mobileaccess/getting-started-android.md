@@ -11,7 +11,7 @@ copyright:
 # 设置 Android SDK
 {: #getting-started-android}
 
-*上次更新时间：2016 年 7 月 18 日*
+上次更新时间：2016 年 8 月 02 日
 {: .last-updated}
 
 在 Android 应用程序中安装 {{site.data.keyword.amashort}} 客户端 SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
@@ -43,7 +43,7 @@ copyright:
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
@@ -78,6 +78,7 @@ copyright:
 ```
 将 `BMSClient.REGION_UK` 替换为相应的区域。
 
+要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
 ## 对移动后端应用程序发起请求
 {: #request}
 

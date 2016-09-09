@@ -7,10 +7,11 @@ copyright:
 
 # 次のステップ
 {: #next_steps_tags}
-*最終更新日: 2016 年 6 月 14 日*
+最終更新日: 2016 年 8 月 16 日
 {: .last-updated}
 
 基本通知を正常にセットアップした後、タグ・ベースの通知および詳細オプションの構成を行うことができます。
 
-以下の Push Notifications Service の機能をご使用のアプリに追加します。タグ・ベースの通知を使用する場合は、[タグ・ベースの通知](c_tag_basednotifications.html)を参照してください。
+{{site.data.keyword.mobilepushshort}}サービスの以下の機能をご使用のアプリに追加します。
+タグ・ベースの通知を使用する場合は、[タグ・ベースの通知](c_tag_basednotifications.html)を参照してください。
 拡張通知オプションを使用する場合は、[拡張プッシュ通知](t_advance_notifications.html)を参照してください。

@@ -8,7 +8,7 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} SDK、样本和 API 参考
-*上次更新时间：2016 年 7 月 17 日*
+上次更新时间：2016 年 7 月 17 日
 {: .last-updated}
 
 要将 {{site.data.keyword.amashort}} SDK 添加到应用程序，请选择要使用的 SDK。然后，配置依赖关系管理器，以将 SDK 拉入到应用程序中。
@@ -34,7 +34,7 @@ copyright:
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
     	name:'core',
-    	version: '1.+',
+    	version: '2.+',
     	ext: 'aar',
     	transitive: true
 ```
@@ -256,6 +256,7 @@ npm install -save bms-mca-oauth-sdk
 {: #customidprovider}
 
 [简单样本 GitHub 存储库](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+
 [高级样本 GitHub 存储库](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 

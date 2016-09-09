@@ -8,10 +8,10 @@ copyright:
 # Web アプリケーション用の Google 認証の使用可能化
 {: #google-auth-web}
 
-*最終更新日: 2016 年 7 月 18 日*
+最終更新日: 2016 年 7 月 18 日
 {: .last-updated}
 
-Google Sign-In を使用して、Web アプリケーションのユーザーを認証します。
+Google Sign-In を使用して、Web アプリケーションのユーザーを認証します。{{site.data.keyword.amashort}} セキュリティー機能を追加します。 
 
 
 ## 開始する前に
@@ -45,7 +45,7 @@ Google Application ID および Secret を作成した後、{{site.data.keyword.
 1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
 1. Google パネルでボタンをクリックします。
 1. **「Web 用の構成 (Configure for Web)」**セクションで以下を行います。   
-    * **「Google Developer Console の Mobile Client Access リダイレクト URI (Mobile Client Access Redirect URI for Google Developer Console)」**テキスト・ボックス内の値をメモします。これは、上のステップ 3 で **Google Developers ポータル**の**「Web アプリケーションのクライアント ID の制限 (Restrictions in the Client ID for Web application)」**の下の**「承認済みのリダイレクト URI (Authorized redirect URIs)」**ボックスに追加する必要のある値です。
+    * **「Google Developer Console の Mobile Client Access リダイレクト URI (Mobile Client Access Redirect URI for Google Developer Console)」**テキスト・ボックス内の値をメモします。これは、ステップ 3 で **Google Developers ポータル**の**「Web アプリケーションのクライアント ID の制限 (Restrictions in the Client ID for Web application)」**の下の**「承認済みのリダイレクト URI (Authorized redirect URIs)」**ボックスに追加する必要のある値です。
     * **Google Client ID** および **Client Secret** を入力します。
     * リダイレクト URI を**「Web アプリケーションのリダイレクト URI (Your Web Application Redirect URIs)」**に入力します。この値は、許可プロセス完了後にアクセスされるリダイレクト URI であり、開発者によって決定されます。
 1. **「保存」**をクリックします。
@@ -74,8 +74,8 @@ Google Application ID および Secret を作成した後、{{site.data.keyword.
   	```
   	https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
   	```
-1. 照会パラメーターとして `response_type("code")`、`client_id`、および `redirect_uri` を使用して、許可サーバー URI を構築します。
-1. Web アプリから、生成された URI へリダイレクトします。
+2. 照会パラメーターとして `response_type("code")`、`client_id`、および `redirect_uri` を使用して、許可サーバー URI を構築します。
+3. Web アプリから、生成された URI へリダイレクトします。
   
 次の例は、`VCAP_SERVICES` 変数からパラメーターを取り出し、URL を構築し、リダイレクト要求を送信します。
   
@@ -104,14 +104,13 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 		res.redirect(redirectUrl); 
 	} 
 } 
-
-  ```
+```
 
 `redirect_uri` パラメーターは Web アプリケーション・リダイレクト URI を表していて、{{site.data.keyword.amashort}} ダッシュボードで定義されたものと等しくなければならないことに注意してください。
 許可エンドポイントへのリダイレクトの後、ユーザーに Google からログイン・フォームが示されます。ユーザーが自分の Google ID を使用してログインすることが認可された後、{{site.data.keyword.amashort}} サービスは、照会パラメーターとして認可コードを提供して Web アプリケーション・リダイレクト URI を呼び出します。
 
 ## トークンの取得
-次のステップは、前に受け取った認可コードを使用してアクセス・トークンおよび識別トークンを取得することです。これには、次のようにします。 
+次のステップは、前に受け取った認可コードを使用してアクセス・トークンおよび識別トークンを取得することです。 
 
 1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、トークンの `tokenEndpoint`、`clientId`、および `secret` を取り出します。 
   
@@ -134,7 +133,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
  
 以下のコードは、必要な値を取り出し、それらを POST 要求で送信します。
     
-   ```Java
+```Java
   var cfEnv = require("cfenv");
   var base64url = require("base64url ");
   var request = require('request');
@@ -164,9 +163,9 @@ app.get("/protected", checkAuthentication, function(req, res, next){
     ).auth(mcaCredentials.clientId, mcaCredentials.secret); 
   }
 ); 
-  ```
+```
 
-  `redirect_uri` パラメーターは、Google+ での認証が成功または失敗した後のリダイレクト用の URI であり、ステップ 1 の `redirect_uri` と一致する必要があります。  
+`redirect_uri` パラメーターは、Google+ での認証が成功または失敗した後のリダイレクト用の URI であり、ステップ 1 の `redirect_uri` と一致する必要があります。  
    
 この POST 要求は、必ず 10 分以内に送信してください。10 分後に認可コードの有効期限が切れます。10 分を過ぎると新しいコードが必要です。
 
@@ -181,12 +180,12 @@ POST 応答本体には、base64 でエンコードされた `access_token` お�
 
 アクセス・トークンは、{{site.data.keyword.amashort}} 許可フィルターによって保護されたリソースとの通信を可能にします。[リソースの保護](protecting-resources.html)を参照してください。
 
-
 保護リソースへの要求を行うには、以下の構造の許可ヘッダーを要求に追加します。 
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-**注:** 
+####ヒント:
+{: tips} 
 
 * `accessToken` と `idToken` は空白で分離する必要があります。
 

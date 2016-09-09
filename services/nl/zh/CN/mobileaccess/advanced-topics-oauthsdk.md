@@ -5,10 +5,10 @@ copyright:
   
 ---
 
-# 设置后端到后端通信
+# 在后端应用程序与服务之间进行通信
 {: #backend-comm}
 
-*上次更新时间：2016 年 6 月 16 日*
+上次更新时间：2016 年 7 月 21 日
 {: .last-updated}
 
 在某些场景中，可能需要将来自正在 {{site.data.keyword.Bluemix}} 上运行的后端应用程序的请求，发送到受 {{site.data.keyword.amashort}} 服务保护的其他后端服务（例如 {{site.data.keyword.cloudant}} 服务）。在这些情况下，必须将 OAuth 令牌添加到请求。
@@ -35,9 +35,9 @@ var oauthSDK = require('bms-mca-oauth-sdk');
 
 var options = {
 // You can cache tokens to avoid extra roundtrips on every request
-	// This property defines the number of tokens to be cachedcacheSize: 100,// All of the below properties are retrieved automatically when your Node.js
+	// This property defines the number of tokens to be cachedcacheSize: 100,// The following properties are retrieved automatically when your Node.js
 	// runs on {{site.data.keyword.Bluemix_notm}} and bound to an instance of {{site.data.keyword.amashort}} Service.
-	// Alternatively you can get these properties values by clicking Show Credentials
+	// Alternatively, you can get these property values by clicking Show Credentials
 	// on the {{site.data.keyword.amashort}} Service tile in your {{site.data.keyword.Bluemix_notm}} application dashboard
 
 	appId: "appId",				// Bleumix applicationGUID，即 tenantId

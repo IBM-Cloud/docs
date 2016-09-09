@@ -8,7 +8,8 @@ copyright:
 # 启用 Cordova 应用程序的 Google 认证
 {: #google-auth-cordova}
 
-*上次更新时间：2016 年 6 月 28 日*
+
+上次更新时间：2016 年 7 月 21 日
 {: .last-updated}
 
 要配置 Cordova 应用程序进行 Google 认证集成，必须在 Cordova 应用程序的本机代码（即 Java、Objective-C 或 Swift）中进行更改。每个平台必须分别进行配置。在本机开发环境中使用本机代码进行更改，例如在 Android Studio 或 Xcode 中更改。
@@ -52,11 +53,11 @@ copyright:
 
 1. 转至 `Sources/Authenticators/IMFGoogleAuthentication` 目录，并将所有文件复制（拖放）到 Xcode 中的 iOS 项目。需要复制的文件为：
 
-	> * IMFDefaultGoogleAuthenticationDelegate.h
-	> * IMFDefaultGoogleAuthenticationDelegate.m
-	> * IMFGoogleAuthenticationDelegate.h
-	> * IMFGoogleAuthenticationHandler.h
-	> * IMFGoogleAuthenticationHandler.m
+	* IMFDefaultGoogleAuthenticationDelegate.h
+	* IMFDefaultGoogleAuthenticationDelegate.m
+	* IMFGoogleAuthenticationDelegate.h
+	* IMFGoogleAuthenticationHandler.h
+	* IMFGoogleAuthenticationHandler.m
 
 选中**复制文件...** 复选框。
 
@@ -69,8 +70,8 @@ copyright:
 将以下行添加到应用程序代表的 `application:openURL:sourceApplication:annotation` 方法。这将确保向所有 Cordova 插件通知相应事件。
 
 ```
-[[NSNotificationCenter defaultCenter] postNotification:
-[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
+[[ NSNotificationCenter defaultCenter] postNotification:
+		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
 ```
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
@@ -93,9 +94,13 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 必须在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的后端应用程序。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 
-1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求
+1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，
+`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受
+保护端点发送请求。
 
-1. 使用 MobileFirst Services 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护，所以它只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
+1. 使用 MobileFirst Services 样板创建的移动后端应用程序的
+`/protected` 端点受 {{site.data.keyword.amashort}} 的保护，所以
+它只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
 
 1. 使用 Cordova 应用程序对同一端点发起请求。初始化 `BMSClient` 后，添加以下代码。
 
@@ -111,14 +116,16 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
 
 
-1. 运行应用程序。这将弹出 Google 登录屏幕。
+1. 运行应用程序。此时将显示 Google 登录屏幕。
 
-	![图像](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![图像](images/ios-google-login.png)
-	如果设备上未安装 Google 应用程序，或者如果您当前未登录到 Google，那么此屏幕的外观可能略有不同。
+	![Google 登录屏幕](images/android-google-login.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Google
+登录屏幕](images/ios-google-login.png)	如果设备上未安装 Facebook 应用程序，或者如果您当前未登录到 Facebook，那么此屏幕
+的外观可能略有不同。
 1. 通过单击**确定**，您将授权 {{site.data.keyword.amashort}} 使用您的 Google 用户身份进行认证。
 
-1. 	您的请求应该会成功。根据使用的平台，应该会在 LogCat/Xcode 控制台中看到以下输出
+1. 	您的请求应该会成功。根据使用的平台，应该会在 LogCat/Xcode 控制台中看到以下输出：
 
-	![图像](images/android-google-login-success.png)
+	![Android 上的代码片段](images/android-google-login-success.png)
 
-	![图像](images/ios-google-login-success.png)
+	![iOS 上的代码片段](images/ios-google-login-success.png)

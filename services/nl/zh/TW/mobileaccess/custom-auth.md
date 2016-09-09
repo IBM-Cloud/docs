@@ -8,21 +8,24 @@ copyright:
 # 使用自訂身分提供者鑑別使用者
 {: #custom-id}
 
-*前次更新：2016 年 7 月 7 日*
+前次更新：2016 年 7 月 22 日
 {: .last-updated}
 
 
 建立自訂身分提供者並實作您自己的邏輯，來收集及驗證認證。自訂身分提供者是可公開 RESTful 介面的 Web 應用程式。您可以在內部部署或在 {{site.data.keyword.Bluemix}} 上管理自訂身分提供者。唯一的需求是必須可從公用網際網路存取自訂身分提供者，讓它與 {{site.data.keyword.amashort}} 服務通訊。
 
-## {{site.data.keyword.amashort}} 自訂身分提供者概觀
+## {{site.data.keyword.amashort}} 自訂身分要求流程
 {: #custom-id-ovr}
- 下圖示範 {{site.data.keyword.amashort}} 如何整合自訂身分提供者。
 
-![影像](images/mca-sequence-custom.jpg)
 
-1. 使用 {{site.data.keyword.amashort}} SDK，對使用 {{site.data.keyword.amashort}} 伺服器 SDK 保護的後端資源提出要求。
+### {{site.data.keyword.amashort}} 用戶端要求流程
+  下圖示範 {{site.data.keyword.amashort}} 如何整合自訂身分提供者。
+
+![要求流程圖](images/mca-sequence-custom.jpg)
+
+* 使用 {{site.data.keyword.amashort}} SDK，對使用 {{site.data.keyword.amashort}} 伺服器 SDK 保護的後端資源提出要求。
 * {{site.data.keyword.amashort}} 伺服器 SDK 偵測到未獲授權的要求，並傳回 HTTP 401 及授權範圍。
-* {{site.data.keyword.amashort}} 用戶端 SDK 自動偵測到上述 HTTP 401，並啟動鑑別處理程序。
+* {{site.data.keyword.amashort}} 用戶端 SDK 自動偵測到 HTTP 401，並啟動鑑別處理程序。
 * {{site.data.keyword.amashort}} 用戶端 SDK 聯絡 {{site.data.keyword.amashort}} 服務，並要求授權標頭。
 * {{site.data.keyword.amashort}} 服務與自訂身分提供者通訊，以啟動鑑別處理程序。
 * 自訂身分提供者將鑑別盤查傳回給 {{site.data.keyword.amashort}} 服務。
@@ -34,6 +37,17 @@ copyright:
 * 從此時起，使用 {{site.data.keyword.amashort}} 用戶端 SDK 所提出的所有要求都會有新取得的授權標頭。
 * {{site.data.keyword.amashort}} 用戶端 SDK 自動重新傳送已觸發授權流程的原始要求。
 * {{site.data.keyword.amashort}} 伺服器 SDK 從要求擷取授權標頭、向 {{site.data.keyword.amashort}} 服務驗證授權標頭，然後授與對後端資源的存取權。
+
+### {{site.data.keyword.amashort}} Web 應用程式要求流程
+{: #mca-custom-web-sequence}
+
+{{site.data.keyword.amashort}} Web 應用程式要求流程類似於行動用戶端流程。不過，{{site.data.keyword.amashort}} 會保護 Web 應用程式，而不是 {{site.data.keyword.Bluemix_notm}} 後端資源。
+
+  * 起始要求是由 Web 應用程式傳送（例如，從登入表單中）。
+  * 最終重新導向是重新導向至 Web 應用程式本身的受保護區域，而不是後端的受保護資源。 
+
+
+
 
 ## 瞭解自訂身分提供者
 {: #custom-id-about}
@@ -86,6 +100,7 @@ copyright:
 
 ### 自訂身分提供者範例實作
 {: #custom-sample}
+
 在您開發自訂身分提供者時，使用自訂身分提供者的下列任何 Node.js 範例實作作為參照。請從 GitHub 儲存庫下載完整應用程式碼。
 
  * [簡單範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
@@ -103,6 +118,7 @@ copyright:
 
 ## 有狀態與無狀態
 {: #custom-id-state}
+
 自訂身分提供者預設會視為無狀態應用程式。在部分情況下，自訂身分提供者可能需要儲存與鑑別處理程序相關的狀態。多步驟鑑別便是一個範例使用案例。在多步驟鑑別中，自訂身分提供者需要先儲存第一個鑑別步驟的結果，再繼續執行下一步。為了支援有狀態功能，自訂身分提供者必須產生 stateID，並在對 {{site.data.keyword.amashort}} 服務的回應中提供它。{{site.data.keyword.amashort}} 服務必須在屬於用戶端鑑別處理程序的後續要求中傳遞 stateID。
 
 ## 自訂領域

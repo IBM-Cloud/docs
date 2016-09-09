@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-ios}
 
 
-*Dernière mise à jour : 16 juin 2016*
+Dernière mise à jour : 27 juin 2016
 {: .last-updated}
 
 Utilisez Google Sign-In pour authentifier les utilisateurs sur vos applications iOS Mobile Client Access.
@@ -81,9 +81,7 @@ et **Identificateur global unique de l'application** (`applicationGUID`). Vous a
 
 1. Dans la zone relative à l'ID application pour iOS, spécifiez votre ID client pour iOS et cliquez sur **Sauvegarder**.
 
-	Remarque : en plus de l'ID client Google, la valeur inverse est également requise pour votre configuration client (voir ci-dessous). Pour accéder aux deux
-valeurs, téléchargez le fichier d'exemple plist en cliquant sur l'icône en forme de crayon :
-		![téléchargement du fichier info.plist](images/download_plist.png)
+	Remarque : en plus de l'ID client Google, la valeur inverse est également requise pour votre configuration client. Pour accéder aux deux valeurs, téléchargez le fichier exemple plist en utilisant l'icône en forme de crayon : ![info.plist file download](images/download_plist.png)
 
 ## Configuration du SDK client Google de {{site.data.keyword.amashort}} pour iOS
 {: #google-auth-ios-sdk}
@@ -119,8 +117,7 @@ texte.
 
 	Le second schéma d'URL est l'ID de bundle de votre application.
 
-* Utilisez un éditeur de texte. Cliquez avec le bouton droit sur le fichier `info.plist` et sélectionnez **Ouvrir en tant que >
-Code source**. Ajoutez le code XML suivant au fichier :
+* Utilisez un éditeur de texte. Cliquez avec le bouton droit de la souris sur `info.plist` et sélectionnez **Ouvrir en tant que > Code source**. Ajoutez le code XML suivant au fichier :
 
 	```XML
 	<key>CFBundleURLTypes</key>
@@ -335,8 +332,7 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 	```
 
 	Si vous appelez ce code alors que l'utilisateur était connecté via Google et qu'il tente à nouveau de se connecter, il est invité à autoriser
-{{site.data.keyword.amashort}} à utiliser Google aux fins d'authentification. A ce stade, l'utilisateur peut cliquer sur un nom d'utilisateur à l'angle
-supérieur droit de l'écran pour sélectionner et se connecter sous un autre nom d'utilisateur.
+{{site.data.keyword.amashort}} à utiliser Google aux fins d'authentification. A ce stade, l'utilisateur peut cliquer sur un nom d'utilisateur <!--in the upper-right corner of the screen--> pour sélectionner et se connecter sous un autre nom d'utilisateur.
 
 	La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre
 la valeur `nil`.

@@ -11,7 +11,7 @@ copyright:
 # 設定 Android SDK
 {: #getting-started-android}
 
-*前次更新：2016 年 7 月 18 日*
+前次更新：2016 年 8 月 2 日
 {: .last-updated}
 
 使用 {{site.data.keyword.amashort}} 用戶端 SDK 檢測 Android 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
@@ -43,7 +43,7 @@ copyright:
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
@@ -76,6 +76,8 @@ copyright:
 					BMSClient.REGION_UK);
 ```
 將 `BMSClient.REGION_UK` 取代為適當的地區。	
+
+若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
 
 ## 對行動後端應用程式提出要求
 {: #request}

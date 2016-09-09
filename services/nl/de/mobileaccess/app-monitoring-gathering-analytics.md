@@ -7,7 +7,7 @@ copyright:
 
 # Nutzungsanalysedaten erfassen
 {: #usage-analytics}
-*Letzte Aktualisierung: 6. Mai 2016*
+Letzte Aktualisierung: 6. Mai 2016
 {: .last-updated}
 
 Sie können das {{site.data.keyword.amashort}}-Client-SDK so konfigurieren, dass Nutzungsanalysedaten aufgezeichnet und die aufgezeichneten Daten an den {{site.data.keyword.amashort}}-Service gesendet werden.

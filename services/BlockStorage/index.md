@@ -2,7 +2,7 @@
 
 # Getting started with {{site.data.keyword.blockstorageshort}} (Beta)
 
-Last updated: 02 September 2016
+Last updated: 07 September 2016
 {: .last-updated}
 
 {{site.data.keyword.blockstoragefull}} provides access to block level storage for transaction-intensive workloads and runtimes that need persistent storage. You can use the {{site.data.keyword.blockstorageshort}} service to manage volume lifecycles, attach volumes to your IBM Virtual Servers, and create snapshots of your block storage volumes.
@@ -17,45 +17,49 @@ Complete these steps to get started with {{site.data.keyword.blockstorageshort}}
 
 1. Create a volume.
    
-   a. In the Bluemix UI, select **Console > Storage > Block Storage**.
+   a. In the Bluemix UI, select **Console > Storage**.
 
-   b. On the Manage page, click **Create volume** to start the Create Volume dialog.
+   b. Select the Block Storage instance you previously provisioned.
 
-   c.	Provide a name. 
+   c. On the Manage page, click **Create volume** to start the Create Volume dialog.
+
+   d.	Provide a name. 
    
       **Note:** The name is for display purposes only.
    
-   d. Provide the size of the volume that you want. 
+   e. Provide the size of the volume that you want. 
    
       **Note:** Decimal numbers are not accepted. The size is limited by the quota that is assigned to your organization.
    
-   e.	Optionally, provide a more detailed description of the volume.
+   f.	Optionally, provide a more detailed description of the volume.
    
-   f.	Click **Create** to submit the information and close the dialog.
+   g.	Click **Create** to submit the information and close the dialog.
 
   Creating a volume can take a few moments.
 
 2. Attach a volume to a virtual server.
 
-   a. In the Bluemix UI, select **Console > Storage > Block Storage**.
+   a. In the Bluemix UI, select **Console > Storage**.
 
-   b. Select a volume from the list of available volumes.
+   b. Select the Block Storage instance you previously provisioned.
+
+   c. Select a volume from the list of available volumes.
    
-   c.	Click **Attach**.
+   d.	From the Actions drop-down menu, click **Attach**.
    
-   d.	In the Attach dialog, select an instance of a virtual server from the drop-down list. 
+   e.	In the Attach dialog, select an instance of a virtual server from the drop-down list. 
    
-   e.	Optionally, specify the device to be used to attach this volume. 
+   f.	Optionally, specify the device to be used to attach this volume. 
    
       **Note:** If you do not specify the device, the system automatically selects the first available device on the virtual server.
    
-   f.	Click **Attach** to submit the information and close the dialog.
+   g.	Click **Attach** to submit the information and close the dialog.
    
    The volume is listed in the table of attached volumes with the information about the virtual server instance. The virtual server can now use the device to persist data. 
  
 What's next?
 
-Prepare the volume for use. For more information, see [Preparing volumes](../BlockStorage/blockstorage_preparingvolume.html).
+After your volume is attached, you must configure your virtual server to make use of the volume. For more information, see [Preparing volumes](../BlockStorage/blockstorage_preparingvolume.html).
 
 # Related Links
 {: #rellinks}

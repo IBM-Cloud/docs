@@ -8,7 +8,7 @@ copyright:
 # 建立自訂身分提供者
 {: #custom-create}
 
-*前次更新：2016 年 6 月 16 日*
+前次更新：2016 年 6 月 16 日
 {: .last-updated}
 
 

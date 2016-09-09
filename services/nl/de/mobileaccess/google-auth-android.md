@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-android}
 
 
-*Letzte Aktualisierung: 16. Juni 2016*
+Letzte Aktualisierung: 04. August 2016
 {: .last-updated}
 
 ## Vorbereitungen
@@ -17,7 +17,7 @@ copyright:
 Voraussetzungen:
 
 * Android-Projekt in Android Studio, das für das Arbeiten mit Gradle konfiguriert ist. Das Projekt muss nicht mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
 
 Das Einrichten der Google-Authentifizierung für Ihre {{site.data.keyword.amashort}}-Android-App erfordert außerdem die Konfiguration der folgenden Komponenten:
 * {{site.data.keyword.Bluemix_notm}}-Anwendung
@@ -26,15 +26,15 @@ Das Einrichten der Google-Authentifizierung für Ihre {{site.data.keyword.amasho
 ## Projekt in Google Developer Console erstellen
 {: #create-google-project}
 
-Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der Entwicklerkonsole von Google '[Google Developer Console](https://console.developers.google.com)'. 
-Zur Erstellung eines Projekts gehört das Anfordern einer Google-Client-ID.  Die Google-Client-ID ist eine eindeutige Kennung für Ihre Anwendung, die von der Google-Authentifizierung verwendet wird und zum Einrichten der {{site.data.keyword.Bluemix_notm}}-Anwendung erforderlich ist.
+Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der Entwicklerkonsole von Google '[Google Developer Console](https://console.developers.google.com)'.
+Zur Erstellung eines Projekts gehört das Anfordern einer Google-Client-ID. Die Google-Client-ID ist eine eindeutige Kennung für Ihre Anwendung, die von der Google-Authentifizierung verwendet wird und zum Einrichten der {{site.data.keyword.Bluemix_notm}}-Anwendung erforderlich ist.
 
 Führen Sie die folgenden Schritte von der Konsole aus:
 
 1. Erstellen Sie ein Projekt mithilfe der **Google+**-API.
 2. Fügen Sie den Benutzerzugriff **OAuth** hinzu.
 3. Vor dem Hinzufügen der Berechtigungsnachweise müssen Sie die Plattform auswählen (Android).
-4. Fügen Sie die Berechtigungsnachweise hinzu. 
+4. Fügen Sie die Berechtigungsnachweise hinzu.  
 
 Zum Abschließen der Erstellung der Berechtigungsnachweise müssen Sie den **Fingerabdruck für das Signaturzertifikat** hinzufügen.
 
@@ -52,9 +52,7 @@ Ein Keystore (Schlüsselspeicher), der ein Zertifikat für Entwicklungsumgebunge
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 	```
-	Mit derselben Syntax können Sie auch den Schlüsselhashwert Ihres Freigabemoduszertifikats abrufen. Ersetzen Sie in dem Befehl den Alias- und den Keystorepfad entsprechend.
-
-1. Suchen Sie im Dialog 'Google Console Credential' die Zeile, die unter **Certificate Fingerprints** mit `SHA1` beginnt. Kopieren Sie den Fingerabdruck, der durch Ausführen des Befehls **keytool** abgerufen wurde, in das Textfeld.
+	Mit derselben Syntax können Sie auch den Schlüsselhashwert Ihres Freigabemoduszertifikats abrufen. Ersetzen Sie in dem Befehl den Alias- und den Keystorepfad entsprechend.1. Suchen Sie im Dialog 'Google Console Credential' die Zeile, die unter **Certificate Fingerprints** mit `SHA1` beginnt. Kopieren Sie den Fingerabdruck, der durch Ausführen des Befehls **keytool** abgerufen wurde, in das Textfeld.
 
 ###Paketname
 
@@ -106,7 +104,7 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 	}
 	```
 
-	**Hinweis:** Sie können die Abhängigkeit vom Modul `core` der Gruppe `com.ibm.mobilefirstplatform.clientsdk.android` entfernen, wenn diese vorhanden ist. Das Modul `googleauthentication` lädt sie automatisch für Sie herunter. Das Modul `googleauthentication` lädt das Google-SDK herunter und installiert es in Ihrem Android-Projekt.
+	**Hinweis:** Sie können die Abhängigkeit vom Modul `core` der Gruppe `com.ibm.mobilefirstplatform.clientsdk.android` entfernen, wenn diese vorhanden ist. Das Modul `googleauthentication` lädt sie automatisch für Sie herunter. Das Modul `googleauthentication` lädt das Google+-SDK herunter und installiert es in Ihrem Android-Projekt.
 
 1. Synchronisieren Sie Ihr Projekt mit Gradle, indem Sie auf **Tools > Android > Sync Project with Gradle Files** klicken.
 
@@ -132,13 +130,15 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 					"applicationGUID",
 					BMSClient.REGION_UK);
 						
+	BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this));
+						
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
 
-  Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region. 
+  Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen. 
 
-
-	
+   **Hinweis:** Wenn Ihre Android-Anwendung als Ziel Android Version 6.0 (API-Stufe 23) oder höher ausgewählt hat, müssen Sie sicherstellen, dass die Anwendung über einen `android.permission.GET_ACCOUNTS`-Aufruf verfügt, bevor `register` aufgerufen wird. Weitere Informationen finden Sie unter [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
 1. Fügen Sie Ihrer Aktivität den folgenden Code hinzu:
 
@@ -156,7 +156,7 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 Nach der Initialisierung des Client-SDK und der Registrierung des Google-Authentifizierungsmanagers können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen.
 
 
-Bevor Sie mit dem Test beginnen, müssen Sie über eine mobile Back-End-Anwendung verfügen, die mit der **MobileFirst Services Starter**-Boilerplate erstellt wurde. Außerdem müssen Sie bereits eine Ressource haben, die durch {{site.data.keyword.amashort}} am Endpunkt `/protected` geschützt wird. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Bevor Sie mit dem Test beginnen, müssen Sie über eine mobile Back-End-Anwendung verfügen, die mit der **MobileFirst Services Starter**-Boilerplate erstellt wurde. Außerdem müssen Sie bereits eine Ressource haben, die durch den Endpunkt `/protected` von {{site.data.keyword.amashort}} geschützt wird. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
  Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der Boilerplate 'MobileFirst Services' erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Daher können nur mobile Anwendungen auf den Endpunkt zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
@@ -186,6 +186,8 @@ Bevor Sie mit dem Test beginnen, müssen Sie über eine mobile Back-End-Anwendun
 
 1. Führen Sie Ihre Anwendung aus. Eine Google-Anmeldeanzeige wird geöffnet. Nach der Anmeldung fordert die App eine Berechtigung für den Zugriff auf Ressourcen an:
 
+	
+
 	![Bild](images/android-google-login.png)
 
 	Abhängig von Ihrem Android-Gerät sowie davon, ob Sie gerade bei Google angemeldet sind, wird möglicherweise eine andere Benutzerschnittstelle angezeigt. 
@@ -193,6 +195,8 @@ Bevor Sie mit dem Test beginnen, müssen Sie über eine mobile Back-End-Anwendun
   Indem Sie auf **OK** klicken, berechtigen Sie {{site.data.keyword.amashort}} Ihre Google-Benutzeridentität zu Authentifizierungszwecken zu nutzen.
 
 1. 	Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe im LogCat-Tool angezeigt:
+
+	
 
 	![Bild](images/android-google-login-success.png)
 
@@ -203,5 +207,7 @@ Bevor Sie mit dem Test beginnen, müssen Sie über eine mobile Back-End-Anwendun
  ```
 
  Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Google angemeldet hat, wird der Benutzer bei Google abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er ein Google-Konto für die erneute Anmeldung auswählen. Wird die Anmeldung mit einer zuvor angemeldeten Google-ID versucht, wird der Benutzer nicht noch einmal zur Eingabe der Berechtigungsnachweise aufgefordert. Um erneut zur Eingabe der Anmeldeberechtigungsnachweise aufgefordert zu werden, muss der Benutzer sein Google-Konto von dem Android-Gerät entfernen.
+
+ 
 
  Der Wert für `listener`, der an die Abmeldefunktion übergeben wird, kann `null` sein.

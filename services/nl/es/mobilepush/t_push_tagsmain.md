@@ -8,7 +8,7 @@ copyright:
 {:new_window: target="_blank"}
 # Notificaciones basadas en código 
 {: #push-ios-main-tags}
-*Última actualización: 14 de junio de 2016*
+Última actualización: 16 de agosto de 2016
 {: .last-updated}
 
 Mensajes de notificaciones basadas en etiquetas que están pensados para todos los dispositivos suscritos a una etiqueta determinada. Puede definir etiquetas y, a continuación, enviar y recibir mensajes mediante

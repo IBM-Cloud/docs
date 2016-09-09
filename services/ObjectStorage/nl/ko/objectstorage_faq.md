@@ -25,9 +25,9 @@
 명령행 인터페이스를 사용하여 유료 플랜도 변경할 수 있습니다. 자세한 정보는 [플랜 변경 방법](../../pricing/index.html#changing)을 참조하십시오. 
 
 
-## {{site.data.keyword.objectstorageshort}} 사용 대금 산정 및 청구 방법 {: #charge-bill}
+## {{site.data.keyword.objectstorageshort}} 사용 요금 산정 및 청구 방법 {: #charge-bill}
 
-{{site.data.keyword.objectstorageshort}} 서비스는 사용량에 대해서만 대금을 청구합니다. 서비스 사용을 시작하는 최소 요금, 설정 요금 또는 약정이 없습니다. API 요청 또는 인바운드 데이터 네트워크 트래픽에 대한 요금은 청구되지 않습니다.
+{{site.data.keyword.objectstorageshort}} 서비스는 사용량에 대해서만 요금을 청구합니다. 서비스 사용을 시작하는 최소 요금, 설정 요금 또는 약정이 없습니다. API 요청 또는 인바운드 데이터 네트워크 트래픽에 대한 요금은 청구되지 않습니다.
 
 {{site.data.keyword.objectstorageshort}} 사용량은 비용 청구 주기 동안 스토리지 사용량을 기반으로 요금이 청구됩니다. 여기에는 {{site.data.keyword.Bluemix_notm}} 조직 계정으로 작성한 컨테이너의 모든 오브젝트 데이터가 포함됩니다. 
 
@@ -37,9 +37,9 @@
 * 스토리지 사용량  - 월별 GB당 $0.04
 * 공용 아웃바운드 데이터 전송  - 월별 GB당 $0.09 
 
-대금 청구 주기 종료 시, {{site.data.keyword.Bluemix_notm}}에서 현재 대금 청구 주기 동안 사용한 양에 대한 비용을 자동으로 청구합니다. {{site.data.keyword.Bluemix_notm}} 보고를 통해 현재 비용 청구 주기에 대해 청구된 대금을 볼 수 있습니다.
+요금 청구 주기 종료 시, {{site.data.keyword.Bluemix_notm}}에서 현재 요금 청구 주기 동안 사용한 양에 대한 비용을 자동으로 청구합니다. {{site.data.keyword.Bluemix_notm}} 보고를 통해 현재 비용 청구 주기에 대해 청구된 요금을 볼 수 있습니다.
 
-런던과 달라스용으로 릴리스된 표준 서비스 플랜의 가격 책정은 동일합니다.
+런던과 댈러스용으로 릴리스된 표준 서비스 플랜의 가격 책정은 동일합니다.
 
 ## {{site.data.keyword.objectstorageshort}}에서 데이터 복제 수행 방법 {: #replication}
 {{site.data.keyword.objectstorageshort}} 서비스는 여러 스토리지 노드에 복제되는 데이터에 대해 3개의 사본을 유지보수합니다. 자세한 정보는 [OpenStack Swift Replication](http://docs.openstack.org/developer/swift/overview_replication.html){: new_window} 문서를 참조하십시오. 

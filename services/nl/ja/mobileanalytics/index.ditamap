@@ -24,7 +24,7 @@ navtitle="Swift クライアント SDK のインストール" scope="peer"> </to
 <topicref format="html" href="sdk.html" navtitle="アプリケーションの装備" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="アクセス・キーの識別" scope="peer"> </topicref>
+navtitle="API キーの識別" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
 navtitle="Android アプリの初期化" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"

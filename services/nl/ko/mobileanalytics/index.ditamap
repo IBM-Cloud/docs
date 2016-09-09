@@ -24,7 +24,7 @@ navtitle="Swift 클라이언트 SDK 설치" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html" navtitle="애플리케이션 인스트루먼트" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="액세스 키 식별" scope="peer"> </topicref>
+navtitle="API 키 식별" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
 navtitle="Android 앱 초기화" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"

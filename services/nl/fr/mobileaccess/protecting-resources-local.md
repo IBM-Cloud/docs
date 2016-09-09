@@ -1,4 +1,4 @@
----
+﻿---
 
 copyright:
   years: 2015, 2016
@@ -8,10 +8,10 @@ copyright:
 # Utilisation de {{site.data.keyword.amashort}} avec un environnement de développement local
 {: #protecting-local}
 
-*Dernière mise à jour : 17 juillet 2016*
+Dernière mise à jour : 16 août 2016
 {: .last-updated}
 
-Vous pouvez configurer votre environnement de développement local pour utiliser le service {{site.data.keyword.amashort}} qui s'exécute sur {{site.data.keyword.Bluemix}}. Plus précisément, vous pouvez développer le code localement à l'aide du SDK serveur {{site.data.keyword.amashort}} et envoyer des requêtes {{site.data.keyword.amashort}} au serveur de développement. Ces requêtes seront protégées par le service {{site.data.keyword.amashort}} qui s'exécute sur {{site.data.keyword.Bluemix}}.
+Vous pouvez configurer votre environnement de développement local pour utiliser le service {{site.data.keyword.amafull}} qui s'exécute sur {{site.data.keyword.Bluemix}}. Plus précisément, vous pouvez développer le code localement à l'aide du SDK serveur {{site.data.keyword.amashort}} et envoyer des requêtes {{site.data.keyword.amashort}} au serveur de développement. Ces requêtes seront protégées par le service {{site.data.keyword.amashort}} qui s'exécute sur {{site.data.keyword.Bluemix}}.
 
 ## Configuration du SDK serveur
 {: #serversetup}
@@ -34,6 +34,7 @@ Pour utiliser {{site.data.keyword.amashort}} avec un serveur de développement l
 }
 ```
 Remplacez la variable *appGUID* par la valeur de la zone **Options pour application mobile** **Identificateur global unique de l'application**.
+
 1. Cliquez sur **Afficher les données d'identification** sur la vignette du service {{site.data.keyword.amashort}} dans votre application back end mobile sur le tableau de bord {{site.data.keyword.Bluemix_notm}}. Un objet JSON s'affiche avec les identifiants d'accès fournis par {{site.data.keyword.amashort}} à votre application de back end mobile.
 
 1. Dans votre environnement de développement local, définissez la variable d'environnement `VCAP_SERVICES`. La valeur de cette variable doit être une représentation d'objet JSON sous la forme d'une chaîne de caractères contenant les données d'identification de {{site.data.keyword.amashort}}.  Voir l'exemple suivant pour plus d'informations.
@@ -65,7 +66,7 @@ var vcapServices = {
 process.env["VCAP_APPLICATION"] = JSON.stringify(vcapApplication);
 process.env["VCAP_SERVICES"] = JSON.stringify(vcapServices);
 
-// Vous pouvez à présent réclamer le module bms-mca-token-validation-strategy :
+// Now you can require the bms-mca-token-validation-strategy module:
 var MCABackendStrategy =
 	require('bms-mca-token-validation-strategy').MCABackendStrategy;
 
@@ -73,13 +74,13 @@ var MCABackendStrategy =
 ```
 Remplacez les occurrences de la valeur de *Identificateur global unique de l'application* dans le code par celle de votre *Identificateur global unique d'application* de back end mobile.
 
+
 ## Configuration d'applications {{site.data.keyword.amashort}} pour leur utilisation avec un serveur de développement local
 {: #configuring-local}
 
 Initialisez les SDK client {{site.data.keyword.amashort}} avec l'URL réelle de votre application {{site.data.keyword.Bluemix_notm}} en spécifiant l'hôte local (ou l'adresse IP) dans chacune de vos requêtes. Voir l'exemple suivant.
 
 Remplacez `BMSClient.REGION_UK` par la région appropriée.
-
 
 Dans les exemples suivants, il peut être nécessaire de remplacer `localhost` par l'adresse IP réelle de votre serveur de développement.
 
@@ -92,8 +93,7 @@ String bluemixAppGUID = "your-bluemix-app-guid";
 
 BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.REGION_UK);
 
-Request request =
-			new Request(baseRequestUrl + "/resource/path", Request.GET);
+Request request = new Request(baseRequestUrl + "/resource/path", Request.GET);
 
 request.send(this, new ResponseListener() {
 	@Override
@@ -129,8 +129,9 @@ NSString *bluemixAppGUID = @"your-bluemix-app-guid";
 NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
 								baseRequestUrl];
 
-IMFResourceRequest *request =  [IMFResourceRequest requestWithPath:requestPath
-																method:@"GET"];
+IMFResourceRequest *request =  [IMFResourceRequest
+				requestWithPath:requestPath
+				method:@"GET"];
 
 [request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
 	if (error){

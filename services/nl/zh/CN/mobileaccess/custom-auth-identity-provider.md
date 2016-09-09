@@ -8,7 +8,7 @@ copyright:
 # 创建定制身份提供者
 {: #custom-create}
 
-*上次更新时间：2016 年 6 月 16 日*
+上次更新时间：2016 年 6 月 16 日
 {: .last-updated}
 
 

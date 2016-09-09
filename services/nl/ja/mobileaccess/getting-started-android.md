@@ -11,7 +11,7 @@ copyright:
 # Android SDK のセットアップ
 {: #getting-started-android}
 
-*最終更新日: 2016 年 7 月 18 日*
+最終更新日: 2016 年 8 月 2 日
 {: .last-updated}
 
 Android アプリケーションに {{site.data.keyword.amashort}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
@@ -39,12 +39,12 @@ Android アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
     	// other dependencies  
-	}
-	```
+}
+```
 
 1. プロジェクトを Gradle と同期化します。**「ツール」&gt;「Android」&gt;「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**とクリックします。
 
@@ -65,7 +65,7 @@ Android アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 2. Android アプリケーションで {{site.data.keyword.amashort}} Client SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。
 <br/>*applicationRoute* および *applicationGUID* は、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**の値に置換します。
 
- ```Java
+```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
 					"applicationGUID",
@@ -73,6 +73,8 @@ Android アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 ```
 `
 BMSClient.REGION_UK` は適切な地域に置き換えてください。 	
+
+{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
 
 ## モバイル・バックエンド・アプリケーションへの要求の実行
 {: #request}

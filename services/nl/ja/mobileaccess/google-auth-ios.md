@@ -9,7 +9,7 @@ copyright:
 {: #google-auth-ios}
 
 
-*最終更新日: 2016 年 6 月 16 日*
+最終更新日: 2016 年 6 月 27 日
 {: .last-updated}
 
 Google Sign-In を使用して、Mobile Client Access iOS アプリのユーザーを認証します。
@@ -76,7 +76,7 @@ Google を ID プロバイダーとして使用することを開始するには
 
 1. **「iOS のアプリケーション ID (Application ID for iOS)」**で、iOS の Google クライアント ID を指定し、**「保存」**をクリックします。
 
-	注: Google クライアント ID に加えて、クライアント構成にはリバース値も必要です (下記を参照)。両方の値にアクセスするには、鉛筆のアイコンを使用してサンプルの plist をダウンロードします。![info.plist file download](images/download_plist.png)
+	注: Google クライアント ID に加えて、クライアント構成にはリバース値も必要です。両方の値にアクセスするには、鉛筆のアイコンを使用してサンプルの plist をダウンロードします。![info.plist file download](images/download_plist.png)
 
 ## iOS 用の {{site.data.keyword.amashort}} Google Client SDK の構成
 {: #google-auth-ios-sdk}
@@ -312,6 +312,6 @@ Client SDK が初期化されたら、モバイル・バックエンドへの要
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	ユーザーが Google にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Google を使用することについての許可を求めるプロンプトが出されます。その時点で、画面の右上隅にあるユーザー名をクリックすると、別のユーザーを選択してログインすることができます。
+	ユーザーが Google にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Google を使用することについての許可を求めるプロンプトが出されます。その時点で、ユーザー名をクリックすると、別のユーザーを選択してログインすることができます。<!--in the upper-right corner of the screen-->
 
 	ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。

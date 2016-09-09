@@ -8,7 +8,7 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} Logiciels SDK, exemples et référence d'API
-*Dernière mise à jour : 17 juillet 2016*
+Dernière mise à jour : 17 juillet 2016
 {: .last-updated}
 
 Pour ajouter des SDK {{site.data.keyword.amashort}} à votre application, sélectionnez ceux que vous désirez utiliser. Configurez ensuite votre
@@ -35,9 +35,9 @@ Les SDK Core incluent des API pour activer une authentification personnalisée, 
 Ajoutez une dépendance de compilation au fichier `build.gradle` de votre application :
 
 ```Gradle
-    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
+    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
     	name:'core',
-    	version: '1.+',
+    	version: '2.+',
     	ext: 'aar',
     	transitive: true
 ```
@@ -130,8 +130,7 @@ pod 'BMSFacebookAuthentication'
 [Référence d'API](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
 *Remarque :* Bien que le SDK Objective-C reste totalement pris en charge et soit toujours considéré comme SDK principal pour
-{{site.data.keyword.Bluemix_notm}} Mobile Services, il est envisagé de le retirer plus tard cette année et de le remplacer par le nouveau SDK Swift. 
-Dans le cas de nouvelles applications, il est fortement recommandé d'utiliser le SDK Swift (voir Configuration du SDK iOS
+{{site.data.keyword.Bluemix_notm}} Mobile Services, il est envisagé de le retirer plus tard cette année et de le remplacer par le nouveau SDK Swift. Dans le cas de nouvelles applications, il est fortement recommandé d'utiliser le SDK Swift (voir Configuration du SDK iOS
 Swift).
 #### Installation du logiciel SDK Facebook avec CocoaPods
 {: #facebooksdk-ios-cocoapods}
@@ -269,6 +268,7 @@ npm install -save bms-mca-oauth-sdk
 {: #customidprovider}
 
 [Exemple simple du référentiel GitHub](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+
 [Exemple avancé du référentiel GitHub](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## IMFURLProtocol

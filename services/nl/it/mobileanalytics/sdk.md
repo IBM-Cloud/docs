@@ -7,7 +7,7 @@ copyright:
 
 # Strumentazione della tua applicazione per utilizzare gli SDK client {{site.data.keyword.mobileanalytics_short}}
 {: #mobileanalytics_sdk}
-*Ultimo aggiornamento: 27 aprile 2016*
+*Ultimo aggiornamento: 1 agosto 2016*
 {: .last-updated}
 
 Gli SDK {{site.data.keyword.mobileanalytics_full}} consentono di strumentare la tua applicazione mobile.
@@ -23,14 +23,14 @@ l'SDK {{site.data.keyword.mobileanalytics_short}} nella tua applicazione.
 
 Attualmente, gli SDK sono disponibili per Android, iOS e WatchOS.
 
-## Identificazione della tua chiave di accesso alle credenziali del servizio
+## Identificazione del tuo valore Chiave di accesso 
 {: #analytics-clientkey}
 
-Identifica il tuo valore **chiave di accesso** prima di impostare l'SDK client. La chiave di accesso è necessaria per inizializzare l'SDK client. 
+Identifica il tuo valore **Chiave di accesso** prima di impostare l'SDK client. La chiave di accesso è necessaria per inizializzare l'SDK client. 
 
 1. Apri il tuo dashboard del servizio {{site.data.keyword.mobileanalytics_short}}.
 2. Fai clic sulla scheda **Credenziali del servizio**.
-3. Copia il tuo valore della chiave di accesso.
+3. Copia il tuo valore della chiave di accesso. 
 
 
 ## Inizializzazione della tua applicazione Android per raccogliere l'analisi
@@ -53,7 +53,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Accertati di puntare alla tua regione
         } catch (MalformedURLException e) {
-            Log.e(il_nome_della_tua_applicazione,"L'URL non deve avere un formato non corretto:  " + e.getLocalizedMessage());
+            Log.e("il_nome_della_tua_applicazione","L'URL non deve avere un formato non corretto:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -65,7 +65,7 @@ distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `B
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Avvia Analytics utilizzando il tuo oggetto applicazione Android e fornendo ad esso il nome della tua applicazione. Ti serve anche il valore [**chiave di accesso**](#analytics-clientkey). 
+3. Avvia Analytics utilizzando il tuo oggetto applicazione Android e fornendo ad esso il nome della tua applicazione. Ti serve anche il valore [**Chiave di accesso**](#analytics-clientkey). 
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -105,7 +105,7 @@ distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `B
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Inizializza Analytics fornendo ad esso il nome della tua applicazione mobile. Ti serve anche il valore [**chiave di accesso**](#analytics-clientkey). 
+3. Inizializza Analytics fornendo ad esso il nome della tua applicazione mobile. Ti serve anche il valore [**Chiave di accesso**](#analytics-clientkey). 
 
   Il nome applicazione viene utilizzato come un filtro per cercare i log client nel tuo dashboard {{site.data.keyword.mobileanalytics_short}}. Utilizzando lo stesso nome applicazione su diverse piattaforme (ad esempio Android e iOS), puoi visualizzare tutti i log da tale applicazione sotto lo stesso nome, indipendentemente da quale sia la piattaforma dalla quale i log erano stati inviati.
 
@@ -115,7 +115,7 @@ distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `B
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: la_tua_chiave_client,
+      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -123,7 +123,7 @@ distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `B
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: la_tua_chiave_api)
+	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
 	```
 
   Puoi registrare gli eventi dispositivo su WatchOS utilizzando i metodi `Analytics.recordApplicationDidBecomeActive()` e `Analytics.recordApplicationWillResignActive()`.
@@ -509,9 +509,3 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
-
-# rellinks
-
-## Riferimento API
-{: #api}
-* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

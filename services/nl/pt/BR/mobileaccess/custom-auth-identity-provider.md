@@ -8,7 +8,7 @@ copyright:
 # Criando um provedor de identidade customizado
 {: #custom-create}
 
-*Última atualização: 16 de junho de 2016*
+Última atualização: 16 de junho de 2016
 {: .last-updated}
 
 

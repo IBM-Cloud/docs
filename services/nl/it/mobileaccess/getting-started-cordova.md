@@ -9,7 +9,7 @@ copyright:
 # Configurazione del plugin Cordova
 {: #getting-started-cordova}
 
-*Ultimo aggiornamento: 17 luglio 2016*
+Ultimo aggiornamento: 17 luglio 2016
 {: .last-updated}
 
 Strumenta la tua applicazione Cordova con l'SDK client {{site.data.keyword.amashort}}, inizializza l'SDK ed effettua richieste alle risorse protette e non protette.
@@ -38,7 +38,7 @@ l'interfaccia riga di comando (CLI) Cordova e `npmjs`, un repository di plug-in 
 	cordova platform add ios
 	```
 
-1. Se hai aggiunto la piattaforma Android, devi aggiungere il livello API minimo supportato al file `config.xml` della
+2. Se hai aggiunto la piattaforma Android, devi aggiungere il livello API minimo supportato al file `config.xml` della
 tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga all'elemento `<platform name="android">`:
 
 	```XML
@@ -51,7 +51,7 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 
 	Il valore *minSdkVersion* deve essere maggiore di `15`. Il valore *targetSdkVersion* deve essere l'SDK Android più recente disponibile da Google.
 
-1. Se hai aggiunto il sistema operativo iOS, aggiorna l'elemento `<platform name="ios">` con una dichiarazione di destinazione:
+3. Se hai aggiunto il sistema operativo iOS, aggiorna l'elemento `<platform name="ios">` con una dichiarazione di destinazione:
 
 	```XML
 	<platform name="ios">
@@ -60,45 +60,47 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 	</platform>
 	```
 
-1. Installa il plugin Cordova {{site.data.keyword.amashort}}:
+4. Installa il plugin Cordova {{site.data.keyword.amashort}}:
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Configura la tua piattaforma per Android, iOS o per entrambi.
+5. Configura la tua piattaforma per Android, iOS o per entrambi.
 
-	* **Android**
+	####Android
+	{: #cordova-android}
 
-		Prima di aprire il tuo progetto in Android Studio, genera la tua applicazione Cordova tramite l'interfaccia riga di comando (CLI) per evitare errori di generazione.
+	Prima di aprire il tuo progetto in Android Studio, genera la tua applicazione Cordova tramite l'interfaccia riga di comando (CLI) per evitare errori di generazione.
 
 		```
 		cordova build android
 		```
 
-	* **iOS**
+	####iOS
+	{: #cordova-ios}
 
-		Per evitare errori durante la generazione, configura il tuo progetto Xcode nel seguente modo.
+	Per evitare errori durante la generazione, configura il tuo progetto Xcode nel seguente modo.
 
-		1. Utilizza la versione più recente di Xcode per aprire il tuo file `xcode.proj` nella directory `<app_name>/platforms/ios`.
+	1. Utilizza la versione più recente di Xcode per aprire il tuo file `xcode.proj` nella directory `<app_name>/platforms/ios`.
 
-		**Importante:** se ricevi un messaggio che indica di eseguire la conversione alla sintassi Swift più recente ("Convert to Latest Swift Syntax"), fai clic su Cancel.
+		**Importante:** se ricevi un messaggio che indica di eseguire la conversione alla sintassi Swift più recente, fai clic su Cancel.
 
-		2. Vai a **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** e aggiungi il seguente percorso:
+	2. Vai a **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** e aggiungi il seguente percorso:
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. Vai a **Build settings > Linking > Runpath Search Paths** e aggiungi il seguente parametro Frameworks:
+	3. Vai a **Build settings > Linking > Runpath Search Paths** e aggiungi il seguente parametro Frameworks:
 
 			```
 			@executable_path/Frameworks
 			```
 
-		4. Genera ed esegui la tua applicazione con Xcode.
+	4. Genera ed esegui la tua applicazione con Xcode.
 
-1. Verifica che il plug-in sia stato installato correttamente eseguendo questo comando:
+6. Verifica che il plug-in sia stato installato correttamente eseguendo questo comando:
 
 	```Bash
 	cordova plugin list

@@ -1,9 +1,9 @@
 # {{site.data.keyword.mobilefirstbp}} Starter ボイラープレートからのモバイル・アプリの作成
 {: #try_mobile}
-*最終更新日: 2016 年 7 月 18 日*
-{: .last-updated}
+最終更新日: 2016 年 7 月 18 日
+{: .last-updated} 
 
-{{site.data.keyword.Bluemix}} Mobile サービスはそれぞれ独立して使用できます。{{site.data.keyword.mobilefirstbp}} Starter ボイラープレートと一緒に使用することもでき、そうすることで最大の利点を得ることができます。
+{{site.data.keyword.Bluemix}} Mobile サービスはそれぞれ独立して使用できます。{{site.data.keyword.mobilefirstbp}} Starter ボイラープレートと一緒に使用することもでき、そうすることで最大の利点を得ることができます。 
 
 始めに、{{site.data.keyword.mobilefirstbp}} Starter を使用してアプリを作成します。このボイラープレートによって、以下のアクションを実行することが可能になります。
 
@@ -11,7 +11,7 @@
 * 各 {{site.data.keyword.Bluemix_notm}} モバイル・サービスのインスタンスをプロビジョンし、そのサービスを Node.js アプリケーションにバインドする。
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
 -->
 
 {{site.data.keyword.mobilefirstbp}} Starter ボイラープレートを使用してアプリを作成したら、各サービス用の Hello Bluemix サンプルを入手したり、既存アプリを装備して {{site.data.keyword.Bluemix_notm}} サービスの使用を開始したりすることができます。
