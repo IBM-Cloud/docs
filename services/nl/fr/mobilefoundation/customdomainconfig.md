@@ -13,19 +13,14 @@ copyright:
 # Configuration d'un domaine personnalisé pour le serveur {{site.data.keyword.mobilefoundation_short}}
 {: #configcustomdomain}
 
-*Dernière mise à jour : 20 juin 2016*
+Dernière mise à jour : 8 août 2016
 {: .last-updated}
 
-{{site.data.keyword.mobilefoundation_short}} fournit un
-serveur {{site.data.keyword.mfserver_short_notm}} sur
-{{site.data.keyword.containerlong}} comme groupe de conteneurs. Ce
-groupe de conteneurs sera mappé à une URL dont les noms de domaine sont basés
-sur la **Région** {{site.data.keyword.Bluemix_notm}}. Vous
+{{site.data.keyword.mobilefoundation_short}} fournit un serveur {{site.data.keyword.mfserver_short_notm}}, <!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to--> accessible à l'aide d'une URL dont les noms de domaine sur la **région** {{site.data.keyword.Bluemix_notm}}. Vous
 pouvez également configurer votre propre domaine personnalisé.
 {:shortdesc}
 
-Un groupe de conteneurs est créé avec une URL ou une route dont les
-noms de domaine par défaut sont basés sur la `Région` {{site.data.keyword.Bluemix_notm}}.
+L'<!--container group is created with a--> URL ou la route est créée avec les noms de domaine par défaut basés sur la `région` {{site.data.keyword.Bluemix_notm}}. 
 
 *Tableau 1. Noms de domaine de l'application basés sur la `Région`
 dans {{site.data.keyword.Bluemix_notm}}*
@@ -33,7 +28,8 @@ dans {{site.data.keyword.Bluemix_notm}}*
   |Domaine |  Région  |    
   |:----- | :----- |    
   |`mybluemix.net` | Sud des Etats-Unis |    
-  |`eu-gb.mybluemix.net` | Royaume-Uni  |    
+  |`eu-gb.mybluemix.net` | Royaume-Uni  |
+  |`au-syd.mybluemix.net` | Sydney  |      
 
 Pour pouvoir utiliser votre propre domaine, vous devez configurer un
 domaine personnalisé en procédant comme suit :
@@ -48,13 +44,13 @@ l'un des plans pris en charge.
 souhaitez utiliser. Accédez à **Gérer les organisations > Domaines >
 Ajouter un domaine** pour ajouter votre propre domaine.
 
-+ Configurez une route permettant à votre groupe de conteneurs
-d'utiliser votre domaine personnalisé.
++ Configurez une route permettant au
+<!--container group--> serveur d'utiliser votre domaine personnalisé. 
 
 + Accédez au fournisseur DNS de votre domaine et ajoutez une entrée
 CNAME, qui acheminera le trafic de votre domaine vers la route
 {{site.data.keyword.Bluemix_notm}} par défaut, dans laquelle le
-groupe de conteneurs est exécuté.
+<!--container group--> serveur est en cours d'exécution. 
 
 + Si vous voulez configurer `https` pour votre domaine
 personnalisé, transférez le certificat SSL de votre domaine dans {{site.data.keyword.Bluemix_notm}}. Pour

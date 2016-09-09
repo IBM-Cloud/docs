@@ -13,7 +13,7 @@ copyright:
 # Initiation à {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
 
-*Dernière mise à jour : 20 juillet 2016*
+Dernière mise à jour : 3 août 2016
 {: .last-updated}
 
 {{site.data.keyword.mobilefoundation_long}} accélère la
@@ -24,15 +24,9 @@ disponible dans deux plans de service différents : Developer et
 Professional 1 Application.
 {:shortdesc}
 
-Le plan Professional 1 Application permet de déployer le serveur
-{{site.data.keyword.mobilefoundation_short}} sur un groupe de
-conteneurs évolutif. Grâce au plan Professional 1 Application, vous pouvez
-gérer une application unique créée sur l'une des plateformes d'exploitation prises
-en charge, comme Android, iOS, Windows ou Web mobile. Le plan Developer ne
-prend pas en charge le déploiement de
-{{site.data.keyword.mobilefoundation_short}} sur un groupe de
-conteneurs comportant plusieurs noeuds. Ce plan convient davantage au
-développement et au test.
+<!-- The Professional 1 Application plan allows the {{site.data.keyword.mobilefoundation_short}} server to be deployed on a scalable container group.--> Grâce au plan Professional 1 Application, vous pouvez
+gérer une application unique créée sur l'une quelconque ou l'ensemble des plateformes d'exploitation prises
+en charge, comme Android, iOS, Windows ou Web mobile. Le plan Developer <!-- does not support {{site.data.keyword.mobilefoundation_short}} deployment on a container group with more than 1 node. This plan --> convient particulièrement au développement et au test.
 
 ## Initiation au plan {{site.data.keyword.mobilefoundation_short}}: Developer
 
@@ -44,8 +38,7 @@ commencer à générer votre canal d'accès mobile en quelques clics.
 {{site.data.keyword.mobilefirst_notm}} avec la configuration par
 défaut, cliquez sur **Start Basic Server**.
 
-  `Cette instance est dotée d'un seul noeud, d'1 Go de mémoire et d'une capacité de stockage de
-64 Go.`
+  `L'instance de serveur de base est dotée d'un seul noeud, d'1 Go de mémoire.`
 
 * Pour créer une instance de serveur
 {{site.data.keyword.mobilefirst_notm}} avec la configuration
@@ -66,22 +59,26 @@ procédant comme suit :
 {{site.data.keyword.dashdbshort}}: Enterprise Transactional
 existant sur {{site.data.keyword.Bluemix_notm}}.
 
-    1.  Depuis la liste des espaces disponibles dans `Organisation`, sélectionnez l'élément `Espace` {{site.data.keyword.Bluemix_notm}} dans lequel se trouve l'instance de service {{site.data.keyword.dashdbshort_notm}},
+    1.  Sélectionnez l'{{site.data.keyword.Bluemix_notm}} `organisation` dans laquelle l'instance de service {{site.data.keyword.dashdbshort_notm}} existe. 
 
-    2.  Sélectionnez également le nom du service (`Service
+    + Depuis la liste des espaces disponibles dans `Organisation`, sélectionnez l'élément `Espace` {{site.data.keyword.Bluemix_notm}} dans lequel se trouve l'instance de service {{site.data.keyword.dashdbshort_notm}},
+
+    + Sélectionnez également le nom du service (`Service
 Name`) et les données d'identification
 (`Credentials`) {{site.data.keyword.dashdbshort_notm}}
 pour la connexion à l'instance de service
 {{site.data.keyword.dashdbshort_notm}}.
 
-    3.  Testez la connexion à l'instance de service
+    + Testez la connexion à l'instance de service
 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional
 sélectionnée en cliquant sur **Test Connection**.
 
-    4.  Cliquez sur **Add**, puis sur
+    + Cliquez sur **Add**, puis sur
 **Continue** dans la fenêtre en incrustation vous demandant
 de confirmer la sélection du service {{site.data.keyword.dashdbshort_notm}}. Cela permet de créer les tables requises dans l'instance de service de base de
 données {{site.data.keyword.dashdbshort_notm}} configurée.
+
+    **Remarque :** Une fois que vous avez ajouté une connexion {{site.data.keyword.dashdbshort_notm}} à l'instance {{site.data.keyword.mobilefoundation_short}}, vous ne pouvez plus la modifier. 
 
 2.  Créez et démarrez le serveur.
 
@@ -89,8 +86,7 @@ données {{site.data.keyword.dashdbshort_notm}} configurée.
 {{site.data.keyword.mobilefirst_notm}} avec la configuration par
 défaut, cliquez sur **Start Basic Server**.
 
-      `Cette instance est dotée d'un seul noeud, d'1 Go de mémoire et d'une capacité de stockage de
-64 Go.`
+      `L'instance de serveur de base est dotée d'un seul noeud, d'1 Go de mémoire.`
 
     * Pour créer une instance de serveur
 {{site.data.keyword.mobilefirst_notm}} avec la configuration avancée de
@@ -100,7 +96,8 @@ Configuration**. Pour plus d'informations, voir
 [Paramétrage d'une
 configuration avancée](c_using_mfs_p2.html#using_mfs_advanced_p2).
 
-Accédez à la page [Using the Mobile Foundation service to set up MobileFirst Server on IBM Containers](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/ibm-containers/using-mobile-foundation/) pour vous initier à {{site.data.keyword.mobilefoundation_short}}.
+Accédez à [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/ibm-containers/using-mobile-foundation/) pour vous initier à {{site.data.keyword.mobilefoundation_short}}.
+
 
 # Liens connexes
 {: #rellinks}

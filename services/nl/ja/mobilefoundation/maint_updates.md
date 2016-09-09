@@ -13,10 +13,10 @@ copyright:
 # 保守および更新
 {: #maintupdates_mf}
 
-*最終更新日: 2016 年 7 月 5 日*
+最終更新日: 2016 年 8 月 3 日
 {: .last-updated}
 
-{{site.data.keyword.mobilefoundation_short}} は、コンテナー・グループとして {{site.data.keyword.containerlong}} で {{site.data.keyword.mfserver_short_notm}} をプロビジョンします。{{site.data.keyword.mobilefoundation_short}} サーバーに対する更新は、ユーザーに通知されます。都合のよいときに {{site.data.keyword.mobilefoundation_short}} サーバーを更新することができます。
+{{site.data.keyword.mobilefoundation_short}} は {{site.data.keyword.mfserver_short_notm}} をプロビジョンします。<!--on {{site.data.keyword.containerlong}} as a container group-->{{site.data.keyword.mobilefoundation_short}} サーバーに対する更新は、ユーザーに通知されます。都合のよいときに {{site.data.keyword.mobilefoundation_short}} サーバーを更新することができます。
 {:shortdesc}
 
 ## 保守方針
@@ -26,7 +26,7 @@ copyright:
 
 以下のいずれかのコンポーネントが更新されたときに、{{site.data.keyword.mobilefoundation_short}} サービス更新が利用可能になります。
 
-* {{site.data.keyword.mfserver_short_notm}}。
+* {{site.data.keyword.mfserver_short_notm}}.
 * 基盤となる Liberty のバージョン。
 * 基盤となる Java Developer Kit のバージョン。
 

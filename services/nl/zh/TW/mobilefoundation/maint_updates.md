@@ -13,10 +13,10 @@ copyright:
 # 維護及更新
 {: #maintupdates_mf}
 
-*前次更新：2016 年 7 月 5 日*
+前次更新：2016 年 8 月 3 日
 {: .last-updated}
 
-{{site.data.keyword.mobilefoundation_short}} 在 {{site.data.keyword.containerlong}} 佈建一個 {{site.data.keyword.mfserver_short_notm}} 作為容器群組。{{site.data.keyword.mobilefoundation_short}} 伺服器的更新會通知使用者。您可以選擇在您方便的時候更新 {{site.data.keyword.mobilefoundation_short}} 伺服器。
+{{site.data.keyword.mobilefoundation_short}} 佈建一個 {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group-->。{{site.data.keyword.mobilefoundation_short}} 伺服器的更新會通知使用者。您可以選擇在您方便的時候更新 {{site.data.keyword.mobilefoundation_short}} 伺服器。
 {:shortdesc}
 
 ## 維護策略
