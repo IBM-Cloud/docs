@@ -7,18 +7,17 @@ copyright:
 
 # Gestión de etiquetas
 {: #manage_tags}
-*Última actualización: 14 de junio de 2016*
+Última actualización: 16 de agosto de 2016
 {: .last-updated}
 
 Utilice el panel de control de Push para crear y suprimir etiquetas para la aplicación y, a continuación, iniciar
-  las notificaciones basadas en etiquetas. La notificación basada en etiquetas se recibe en el dispositivo suscrito a la etiqueta.
+  las notificaciones basadas en etiquetas. La notificación basada en etiquetas se recibe en los dispositivos suscritos a la etiqueta.
 
 
 ## Creación de etiquetas
 {: #create_tags}
 
-Las notificaciones basadas en etiquetas son mensajes de notificación que están pensados para todos los dispositivos
-   suscritos a una etiqueta determinada. Cada dispositivo se puede suscribir a cualquier número de etiquetas. Cuando una etiqueta se ha suprimido, toda la información asociada con dicha etiqueta, incluidos los suscriptores y los dispositivos, se suprimirán. No es necesaria ninguna anulación de la suscripción automática para esta etiqueta porque ya no existe y no es necesaria ninguna acción desde el lado del cliente.
+Las notificaciones basadas en etiquetas son mensajes que están pensados para todos los dispositivos suscritos a una etiqueta determinada. Cada dispositivo se puede suscribir a cualquier número de etiquetas. Cuando se suprime una etiqueta, también se suprime toda la información asociada a dicha etiqueta, incluidos los suscriptores y los dispositivos. No es necesaria ninguna anulación de la suscripción automática para esta etiqueta porque ya no existe y no es necesaria ninguna acción desde el lado del cliente.
 
 1. En el panel de control Push, seleccione el separador **Etiquetas**.
 1. Pulse el botón **Crear etiqueta** +.   
@@ -52,14 +51,16 @@ Las notificaciones basadas en etiquetas son mensajes de notificación que están
 {: #get_tags}
 
 Las etiquetas proporcionan una forma para enviar notificaciones de destino a usuarios en función de sus intereses,
-        a diferencia de las difusiones generales que se envían a todas las aplicaciones. Puede crear y gestionar etiquetas utilizando el separador Etiqueta en el panel de control Push o utilizando las API REST. Puede utilizar fragmentos de código en la secciones siguientes para gestionar y consultar las suscripciones de etiquetas para la aplicación móvil. Puede utilizar estos
+        a diferencia de las difusiones generales que se envían a todas las aplicaciones. Puede crear y gestionar etiquetas utilizando el separador Etiqueta en el panel de control Push o utilizando las API REST. Puede utilizar fragmentos de código para gestionar y consultar las suscripciones de etiquetas para la aplicación
+            móvil. Puede utilizar estos
   fragmentos de código para obtener suscripciones, suscritas a una etiqueta, no suscritas desde una etiqueta, obtener una lista de
-  etiquetas disponibles. Copie y pegue estos fragmentos de código en su aplicación móvil.
+  etiquetas disponibles. Copie estos fragmentos de código en su aplicación móvil.
 
 ## Android
+{: android-get-tags}
 
 La API **getTags**
-            devuelve la lista de etiquetas disponibles a la que el dispositivo se puede suscribir. Después de suscribir el dispositivo a una determinada etiqueta, el dispositivo podrá recibir cualquier notificación push que se haya enviado para dicha etiqueta.
+            devuelve la lista de etiquetas disponibles a la que el dispositivo se puede suscribir. Después de suscribir el dispositivo a una determinada etiqueta, el dispositivo podrá recibir {{site.data.keyword.mobilepushshort}} que se hayan enviado para dicha etiqueta. 
 
 Copie los fragmentos de código siguientes en la aplicación para móviles de Android para obtener una lista de
       etiquetas a las que el dispositivo está suscrito y para obtener una lista de etiquetas disponibles.
@@ -99,11 +100,12 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onFailure(MFPPushException ex) {
          updateTextView("Error getting subscriptions.. " + ex.getMessage());
-  }
+    }
 })
 ```
 
 ## Cordova
+{: cordova-get-tags}
 
 Copie los siguientes fragmentos de código en la aplicación para móviles para obtener una lista de etiquetas a las que el dispositivo está suscrito y para obtener una lista de etiquetas disponibles a las que se puede suscribir el dispositivo.
 
@@ -125,6 +127,7 @@ MFPPush.getSubscriptionStatus(function(tags) {
 ```
 
 ## Objective-C
+{: objc-get-tags}
 
 Copie los siguientes fragmentos de código en la aplicación iOS desarrollada utilizando Objective-C para obtener una lista de etiquetas a las que el dispositivo está suscrito y para obtener una lista de etiquetas disponibles a las que se puede suscribir el dispositivo.
 
@@ -165,10 +168,11 @@ subscribedTags = [response subscriptions];
 ```
 
 ## Swift
+{: swift-get-tags}
 
-La API **retrieveAvailableTagsWithCompletionHandler** devuelve la lista de etiquetas disponibles a la que el dispositivo se puede suscribir. Después de suscribir el dispositivo a una determinada etiqueta, el dispositivo podrá recibir cualquier notificación push que se haya enviado para dicha etiqueta.
+La API **retrieveAvailableTagsWithCompletionHandler** devuelve la lista de etiquetas disponibles a la que el dispositivo se puede suscribir. Después de suscribir el dispositivo a una determinada etiqueta, el dispositivo podrá recibir {{site.data.keyword.mobilepushshort}} que se hayan enviado para dicha etiqueta.
 
-Invocar al servicio push para obtener suscripciones para una etiqueta.
+Llame el servicio {{site.data.keyword.mobilepushshort}} para obtener suscripciones para una etiqueta.
 
 Copie los siguientes fragmentos de código en la aplicación para móviles Swift para obtener una lista de etiquetas disponibles a las que el dispositivo está suscrito y para obtener una lista de etiquetas disponibles a las que se puede suscribir el dispositivo.
 
@@ -210,6 +214,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 Utilice los siguientes fragmentos de código para permitir que los dispositivos obtengan suscripciones, se suscriban a una etiqueta y cancelen la suscripción de una etiqueta.
 
 ## Android
+{: android-subscribe-tags}
 
 Copie y pegue este fragmento de código en la aplicación para móviles de Android.
 
@@ -244,6 +249,7 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 
 ## Cordova
+{: cordova-subscribe-tags}
 
 Copie y pegue este fragmento de código en la aplicación para móviles de Cordova.
 
@@ -254,6 +260,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 
 ## Objective-C
+{: objc-subscribe-tags}
 
 Copie y pegue este fragmento de código en la aplicación para móviles de Objective-C.
 
@@ -289,6 +296,7 @@ Utilice la API **unsubscribeFromTags** para anular la suscripción a una etiquet
 ```
 
 ## Swift
+{: swift-subscribe-tags}
 
 Copie y pegue este fragmento de código en la aplicación para móviles de Swift.
 
@@ -329,10 +337,10 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
 {: #using_tags}
 
 
-Las notificaciones basadas en etiquetas son mensajes de notificación que están pensados para todos los dispositivos
-   suscritos a una etiqueta determinada. Cada dispositivo se puede suscribir a cualquier número de etiquetas. Esta sección describe cómo enviar notificaciones basadas en código. Las suscripciones las mantiene la instancia de Bluemix del servicio de notificaciones Push. Cuando una etiqueta se ha suprimido, toda la información asociada con dicha etiqueta, incluidos los suscriptores y los dispositivos, se suprimirán. No es necesaria ninguna anulación de la suscripción automática para esta etiqueta porque ya no existe y no es necesaria ninguna acción desde el lado del cliente.
+Las notificaciones basadas en etiquetas son mensajes que están pensados para todos los dispositivos suscritos a una etiqueta determinada. Cada dispositivo se puede suscribir a cualquier número de etiquetas. Esta sección describe cómo enviar notificaciones basadas en código. Las suscripciones las mantiene la instancia de Bluemix del servicio {{site.data.keyword.mobilepushshort}}. Cuando se suprime una etiqueta, también se suprime toda la información asociada a dicha etiqueta, incluidos los suscriptores y los dispositivos. No es necesaria ninguna anulación de la suscripción automática para esta etiqueta porque ya no existe y no es necesaria ninguna acción desde el lado del cliente.
 
-**Antes de empezar**
+###Antes de empezar
+{: before-you-begin}
 
 Cree etiquetas en la pantalla **Etiquetas**. Para obtener más información sobre cómo crear etiquetas, consulte [Creación de etiquetas](t_manage_tags.html).
 

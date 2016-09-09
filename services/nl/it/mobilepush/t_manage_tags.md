@@ -7,16 +7,16 @@ copyright:
 
 # Gestione delle tag
 {: #manage_tags}
-*Ultimo aggiornamento: 14 giugno 2016*
+Ultimo aggiornamento: 16 agosto 2016
 {: .last-updated}
 
-Utilizza il dashboard Push per creare ed eliminare tag per la tua applicazione e avviare quindi le notifiche basate sulle tag. La notifica basata sulle tag viene ricevuta dal dispositivo che ha sottoscritto la tag.
+Utilizza il dashboard Push per creare ed eliminare tag per la tua applicazione e avviare quindi le notifiche basate sulle tag. La notifica basata sulle tag viene ricevuta dai dispositivi che hanno sottoscritto la tag. 
 
 
 ## Creazione di tag
 {: #create_tags}
 
-Le notifiche basate sulle tag sono messaggi di notifica destinati a tutti i dispositivi che hanno sottoscritto una specifica tag. Ciascun dispositivo può sottoscrivere qualsiasi numero di tag. Quando viene eliminata una tag, vengono eliminate anche tutte le informazioni associate con tale tag, inclusi i relativi sottoscrittori e dispositivi. Non è necessario un annullamento della sottoscrizione automatico per questa tag poiché non esiste più e non sono richieste ulteriori azioni dal lato client.
+Le notifiche basate sulle tag sono messaggi destinati a tutti i dispositivi sottoscritti a una particolare tag. Ciascun dispositivo può sottoscrivere qualsiasi numero di tag. Quando viene eliminata una tag, vengono eliminate anche le informazioni associate con tale tag, inclusi i relativi sottoscrittori e dispositivi. Non è necessario un annullamento della sottoscrizione automatico per questa tag poiché non esiste più e non sono richieste ulteriori azioni dal lato client.
 
 1. Nel dashboard Push, seleziona la scheda **Tag**.
 1. Fai clic sul pulsante + **Crea tag**.   
@@ -47,15 +47,15 @@ Le notifiche basate sulle tag sono messaggi di notifica destinati a tutti i disp
 {: #get_tags}
 
 Le tag forniscono un modo per inviare notifiche mirate agli utenti sulla base dei loro interessi,
-        a differenza dai broadcast generali che vengono inviati a tutte le applicazioni. Puoi creare e gestire le tag utilizzando la scheda Tag nel dashboard Push oppure utilizzare le API REST. Puoi utilizzare i frammenti di codice nelle seguenti sezioni per gestire e sottoporre a query le tue sottoscrizioni di tag per la tua applicazione mobile. Puoi utilizzare questi frammenti di codice per ottenere sottoscrizioni, sottoscrivere
-            una tag e ottenere un elenco delle tag disponibili. Copi e incolli questi frammenti di codice nella tua applicazione mobile.
+        a differenza dai broadcast generali che vengono inviati a tutte le applicazioni. Puoi creare e gestire le tag utilizzando la scheda Tag nel dashboard Push oppure utilizzare le API REST. Puoi utilizzare i frammenti di codice per gestire e sottoporre a query le tue sottoscrizioni di tag per la tua
+            applicazione mobile. Puoi utilizzare questi frammenti di codice per ottenere sottoscrizioni, sottoscrivere
+            una tag e ottenere un elenco delle tag disponibili. Copia e incolla questi frammenti di codice nella tua applicazione mobile. 
 
 ## Android
+{: android-get-tags}
 
 La API **getTags** restituisce l'elenco di
-            tag disponibili che il dispositivo può sottoscrivere. Una volta sottoscritto a una
-            determinata tag, il dispositivo può ricevere una qualsiasi notifica di push inviata per tale
-            tag.
+            tag disponibili che il dispositivo può sottoscrivere. Una volta sottoscritto a una determinata tag, il dispositivo può ricevere {{site.data.keyword.mobilepushshort}} inviata per tale tag.
 
 Copia i seguenti frammenti di codice nella tua applicazione mobile Android per ottenere un elenco di
       tag sottoscritte dal dispositivo e per ottenere un elenco delle tag disponibili.
@@ -99,6 +99,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 ```
 
 ## Cordova
+{: cordova-get-tags}
 
 Copia i seguenti frammenti di codice nella tua applicazione mobile per ottenere un elenco di tag sottoscritte dal dispositivo e per ottenere un elenco delle tag disponibili a cui può sottoscriversi il dispositivo.
 
@@ -120,6 +121,7 @@ MFPPush.getSubscriptionStatus(function(tags) {
 ```
 
 ## Objective-C
+{: objc-get-tags}
 
 Copia i seguenti frammenti di codice nella tua applicazione iOS sviluppata con Objective-C per ottenere un elenco di tag sottoscritte dal dispositivo e per ottenere un elenco delle tag disponibili a cui può sottoscriversi il dispositivo.
 
@@ -159,13 +161,12 @@ subscribedTags = [response subscriptions];
 ```
 
 ## Swift
+{: swift-get-tags}
 
 La API **retrieveAvailableTagsWithCompletionHandler** restituisce l'elenco di
-            tag disponibili che il dispositivo può sottoscrivere. Una volta sottoscritto a una
-            determinata tag, il dispositivo può ricevere una qualsiasi notifica di push inviata per tale
-            tag.
+            tag disponibili che il dispositivo può sottoscrivere. Una volta sottoscritto a una determinata tag, il dispositivo può ricevere {{site.data.keyword.mobilepushshort}} inviata per tale tag. 
 
-Richiama il servizio push per ottenere le sottoscrizioni per una tag.
+Richiama {{site.data.keyword.mobilepushshort}} per ottenere le sottoscrizioni per una tag.
 
 Copia i seguenti frammenti di codice nella tua applicazione mobile Swift per ottenere un elenco delle tag disponibili sottoscritte dal dispositivo e per ottenere un elenco delle tag disponibili a cui può sottoscriversi il dispositivo.
 
@@ -207,6 +208,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 Utilizza i seguenti frammenti di codice per consentire ai tuoi dispositivi di ottenere sottoscrizioni, sottoscriversi a una tag e annullare la sottoscrizione a una tag.
 
 ## Android
+{: android-subscribe-tags}
 
 Copia e incolla questo frammento di codice nella tua applicazione mobile Android.
 
@@ -241,6 +243,7 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 
 ## Cordova
+{: cordova-subscribe-tags}
 
 Copia e incolla questo frammento di codice nella tua applicazione mobile Cordova.
 
@@ -251,6 +254,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 
 ## Objective-C
+{: objc-subscribe-tags}
 
 Copia e incolla questo frammento di codice nella tua applicazione mobile Objective-C.
 
@@ -288,6 +292,7 @@ Utilizza la API **unsubscribeFromTags** per annullare la sottoscrizione a una
 ```
 
 ## Swift
+{: swift-subscribe-tags}
 
 Copia e incolla questo frammento di codice nella tua applicazione mobile Swift.
 
@@ -330,9 +335,10 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
 {: #using_tags}
 
 
-Le notifiche basate sulle tag sono messaggi di notifica destinati a tutti i dispositivi che hanno sottoscritto una specifica tag. Ciascun dispositivo può essere sottoscritto a un qualsiasi numero di tag. Questa sezione descrive come inviare notifiche basate sulle tag. Le sottoscrizioni vengono gestite dall'istanza Bluemix Push Notifications service. Quando viene eliminata una tag, vengono eliminate anche tutte le informazioni associate con tale tag, inclusi i relativi sottoscrittori e dispositivi. Non è necessario un annullamento della sottoscrizione automatico per questa tag poiché non esiste più e non sono richieste ulteriori azioni dal lato client.
+Le notifiche basate sulle tag sono messaggi destinati a tutti i dispositivi sottoscritti a una particolare tag. Ciascun dispositivo può essere sottoscritto a un qualsiasi numero di tag. Questa sezione descrive come inviare notifiche basate sulle tag. Le sottoscrizioni vengono gestite dall'istanza Bluemix del servizio {{site.data.keyword.mobilepushshort}}. Quando viene eliminata una tag, vengono eliminate anche tutte le informazioni associate con tale tag, inclusi i relativi sottoscrittori e dispositivi. Non è necessario un annullamento della sottoscrizione automatico per questa tag poiché non esiste più e non sono richieste ulteriori azioni dal lato client.
 
-**Prima di iniziare**
+###Prima di cominciare
+{: before-you-begin}
 
 Crea le tag sulla schermata **Tag**. Per informazioni su come creare le tag, vedi [Creazione di tag](t_manage_tags.html).
 

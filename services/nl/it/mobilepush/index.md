@@ -1,4 +1,4 @@
----
+	---
 
 copyright:
  years: 2015, 2016
@@ -12,13 +12,12 @@ copyright:
 
 # Introduzione a {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-*Ultimo aggiornamento: 14 giugno 2016*
+Ultimo aggiornamento: 16 agosto 2016
 {: .last-updated}
 
 {:shortdesc}
 
-Il servizio Push Notifications fornisce una piattaforma unificata per inviare e gestire notifiche di push mobili mirate a piattaforme iOS e Android. Questo servizio gestisce l'associazione dei tuoi utenti dell'applicazione ai loro dispositivi e
-        alla loro piattaforma del dispositivo e gestisce l'invio a essi di notifiche di push. Con questo servizio, puoi inviare broadcast, unicast (basati su ID dispositivo) e anche notifiche push di tag (o argomenti) ai tuoi utenti delle applicazioni mobili. Puoi anche utilizzare un SDK e le [API REST](https://mobile.{DomainName}/imfpushrestapidocs/) per sviluppare ulteriormente le tue applicazioni client.
+Il servizio {{site.data.keyword.mobilepushshort}} fornisce una piattaforma unificata per inviare e gestire {{site.data.keyword.mobilepushshort}} mobili mirate a piattaforme iOS e Android. Il servizio {{site.data.keyword.mobilepushshort}} gestisce l'associazione dei tuoi utenti dell'applicazione ai loro dispositivi e alla loro piattaforma del dispositivo e gestisce l'invio a essi di notifiche di push. Con questo servizio, puoi inviare broadcast, unicast (basati su ID dispositivo) e anche tag (o argomenti) come notifiche push ai tuoi utenti delle applicazioni mobili. Puoi anche utilizzare un SDK e le [API REST](https://mobile.{DomainName}/imfpushrestapidocs/) per sviluppare ulteriormente le tue applicazioni client.
 
 Questa sezione descrive come configurare notifiche di push di base. Quando utilizzi una notifica di base, viene eseguita la trasmissione in broadcast
       delle notifiche invece di raggiungere una specifica serie di utenti utilizzando le tag.

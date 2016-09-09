@@ -7,10 +7,10 @@ copyright:
 
 # Risoluzione dei problemi
 {: #errors}
-*Ultimo aggiornamento: 14 giugno 2016*
+Ultimo aggiornamento: 16 agosto 2016
 {: .last-updated}
 
-Utilizza questa sezione come una guida per risolvere i problemi comuni della notifica di push.
+Utilizza questa sezione come una guida per risolvere i problemi comuni di {{site.data.keyword.mobilepushshort}}.
 
 
 ### Si è verificato un errore server interno. Per favore contatta l'amministratore. (Codice errore interno: PUSHD102E)

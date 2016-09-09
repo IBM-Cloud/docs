@@ -7,13 +7,12 @@ copyright:
 
 # Utilizzo delle API REST
 {: #push-api-rest}
-*Ultimo aggiornamento: 12 luglio 2016*
+Ultimo aggiornamento: 16 agosto 2016
 {: .last-updated}
 
-Puoi utilizzare una API (application program interface) REST (Representational State Transfer) per le notifiche di push. Puoi anche utilizzare l'SDK e le [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) per sviluppare ulteriormente le tue applicazioni client.
+Puoi utilizzare una API (application program interface) REST (Representational State Transfer) per {{site.data.keyword.mobilepushshort}}. Puoi anche utilizzare l'SDK e le [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) per sviluppare ulteriormente le tue applicazioni client.
 
-Con la API REST
-                Push, i client e le applicazioni server di backend possono accedere alle funzioni Push.
+Con la API REST Push, i client e le applicazioni server di backend possono accedere alle funzioni {{site.data.keyword.mobilepushshort}}.
 
 - Registrazioni di dispositivi
 - Registrazioni
@@ -21,17 +20,19 @@ Con la API REST
 - Sottoscrizioni
 - Tag
 
-Per ottenere l'URL di base per la API REST:
+Per ottenere l'URL di base per la API REST, completa seguente procedura:
 
-1. Crea un'applicazione di backend nella sezione Contenitori tipo del catalogo Bluemix®, che esegue automaticamente il bind del servizio Push a questa applicazione. Se già hai
-                        creato un'applicazione di backend, assicurati di eseguirne il bind al Push
-                        Notification Service. 
+1. Crea un'applicazione di backend nella sezione Contenitori tipo del catalogo Bluemix® scegliendo MobileFirst Services Starter. In questo modo viene eseguito il bind del servizio {{site.data.keyword.mobilepushshort}} all'applicazione. Puoi anche creare un'istanza del servizio di push e lasciarla senza binding. 
+1. Nella pagina principale del dashboard Bluemix, vai nell'area **Applicazioni** e quindi seleziona la tua applicazione. 
+3. Fai clic su **OPZIONI MOBILI**. I valori GUID di applicazione e instradamento sono visualizzati nella parte superiore della pagina dei dettagli per la tua applicazione. La schermata Visualizza credenziali mostra le informazioni sull'AppSecret. Puoi ottenere il segreto applicazione dalle opzioni mobili e anche il segreto client per alcune API.
 
-1. Nella pagina principale del dashboard Bluemix, vai nell'area **Applicazioni** e quindi fai clic sulla tua applicazione.
+Puoi inoltre utilizzare la riga di comando per ottenere le credenziali del servizio:
 
-3. Fai clic su OPZIONI MOBILI. I valori GUID di applicazione e instradamento sono
-                            visualizzati nella parte superiore della pagina dei dettagli per la tua                             applicazione.
+```
+ cf create-service-key {push_instance_name} {key_name}
 
+ cf service-key {push_instance_name} {key_name}
+```
 
 
 ## Intestazione Accept-Language
@@ -44,12 +45,10 @@ L'intestazione "Accept-Language" specifica quale lingua utilizzare per i messagg
 ## appSecret
 {: #push-api-rest-secret}
 
-Quando un'applicazione esegue il bind alle notifiche di push, il servizio genera
-                 una appSecret (una chiave univoca) e la passa nell'intestazione di risposta. Se stai utilizzando IBM® Push Notifications per la API Rest Bluemix, utilizza la guida di riferimento alle API REST per ottenere informazioni su quali API devi proteggere. Per informazioni sull'API REST, consulta la Guida di riferimento per la API REST.
+Quando un'applicazione esegue il bind a {{site.data.keyword.mobilepushshort}}, il servizio genera una appSecret (una chiave univoca) e la passa nell'intestazione di risposta. Se stai utilizzando IBM® {{site.data.keyword.mobilepushshort}} per la API Rest Bluemix, utilizza la guida di riferimento alle API REST per ottenere informazioni su quali API devi proteggere. Per informazioni sull'API REST, consulta la Guida di riferimento per la API REST.
 
 L'intestazione di richiesta deve contenere l'appSecret. In caso contrario, il server restituisce un codice di errore
-                401 Non autorizzato. Quando la notifica di push viene aggiunta a un'applicazione,
-                viene creato uno specifico AppID. Come parte della risposta, ottieni un'intestazione denominata appSecret che viene utilizzata per la creazione di tag o l'invio di messaggi. L'operazione viene eseguita tramite i servizi nel catalogo o
+                401 Non autorizzato. Quando {{site.data.keyword.mobilepushshort}} viene aggiunto a un'applicazione, viene creato uno specifico AppID. Come parte della risposta, ottieni un'intestazione denominata appSecret che viene utilizzata per la creazione di tag o l'invio di messaggi. L'operazione viene eseguita tramite i servizi nel catalogo o
                 nel contenitore tipo.
 
 Per ottenere il valore appSecret:
@@ -80,8 +79,9 @@ La schermata **Visualizza credenziali** mostra le informazioni sull'AppSecret:
 ##Filtri API REST di Push
 {: #push-api-rest-filters}
 
-I filtri definiscono un criterio di ricerca che limita i dati restituiti da una API GET di Push. Applica i filtri sul risultato dell'operazione Get che desideri filtrare. Il filtro limita il numero di voci incluse nel risultato. Ad esempio, puoi utilizzare un filtro per cercare una tag il cui nome inizia con "test". Puoi generare
-                un filtro utilizzando la seguente sintassi.
+I filtri definiscono un criterio di ricerca che limita i dati restituiti da una API GET di {{site.data.keyword.mobilepushshort}}. Applica i filtri sul risultato dell'operazione Get che desideri filtrare. Il filtro limita il numero di voci incluse nel risultato. d esempio, puoi utilizzare un filtro per cercare tag il cui nome inizia con "test".  
+
+I filtri possono essere generati utilizzando la seguente sintassi:
 
 **name**
 Il nome campo su cui viene applicato il filtro.
@@ -95,7 +95,7 @@ I valori da includere nel risultato.
 Quando in un'espressione vengono visualizzati una virgola o una barra rovesciata, è necessario eseguirne l'escape
                 con una barra rovesciata.
 
-Quando utilizzi più filtri, puoi combinarli utilizzando la logica AND e OR.\
+Quando utilizzi più filtri, puoi combinarli utilizzando la logica AND e OR.
 
 - Per la logica AND, utilizza più filtri nella query.
 - Per la logica OR, utilizza una virgola nell'espressione di filtro.
@@ -120,7 +120,7 @@ Per la API GET di sottoscrizione, sono supportate le seguenti combinazioni:
 - Se viene utilizzato ==, il valore deve essere una stringa di corrispondenza esatta.
 
 
-##Codici di risposta di Push Notifications
+##Codici di risposta {{site.data.keyword.mobilepushshort}}
 {: #push-api-response-codes}
 
 Stato: 405 Metodo non consentito - È previsto un metodo appropriato
