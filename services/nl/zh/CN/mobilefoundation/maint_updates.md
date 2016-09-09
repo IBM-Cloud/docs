@@ -13,10 +13,10 @@ copyright:
 # 维护和更新
 {: #maintupdates_mf}
 
-*上次更新时间：2016 年 7 月 5 日*
+上次更新时间：2016 年 8 月 3 日
 {: .last-updated}
 
-{{site.data.keyword.mobilefoundation_short}} 在 {{site.data.keyword.containerlong}} 上将 {{site.data.keyword.mfserver_short_notm}} 作为容器组供应。当 {{site.data.keyword.mobilefoundation_short}} 服务器有更新时，用户会收到相应的通知。您可以选择在您方便的时间来更新 {{site.data.keyword.mobilefoundation_short}} 服务器。
+{{site.data.keyword.mobilefoundation_short}} 会供应 {{site.data.keyword.mfserver_short_notm}}<!--on {{site.data.keyword.containerlong}} as a container group-->。当 {{site.data.keyword.mobilefoundation_short}} 服务器有更新时，用户会收到相应的通知。您可以选择在您方便的时间来更新 {{site.data.keyword.mobilefoundation_short}} 服务器。
 {:shortdesc}
 
 ## 维护策略

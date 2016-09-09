@@ -8,12 +8,12 @@ copyright:
 #	關於 {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
 
-*前次更新：2016 年 7 月 20 日*
+前次更新：2016 年 8 月 3 日
 {: .last-updated}
 
-{{site.data.keyword.mobilefoundation_short}} 服務提供一種方式，可在 {{site.data.keyword.Bluemix}} 上快速設定 {{site.data.keyword.mobilefirst}} 伺服器環境。接著，您可以從這個健全的雲端環境中開發、測試及管理行動應用程式。
+{{site.data.keyword.mobilefoundation_short}} 服務提供一種方式，可在 {{site.data.keyword.Bluemix}} 上快速設定 {{site.data.keyword.mobilefirst}} 伺服器環境。然後，您可以從這個雲端環境中開發、測試及管理行動應用程式。
 
-{{site.data.keyword.mobilefoundation_short}} 提供一種簡單的引導方式，讓使用者在 {{site.data.keyword.Bluemix_notm}} 的 {{site.data.keyword.containerlong}} 環境中設定 {{site.data.keyword.mfserver_short_notm}}。
+{{site.data.keyword.mobilefoundation_short}} 提供一種簡單的引導方式，讓使用者在 {{site.data.keyword.Bluemix_notm}} 上設定 {{site.data.keyword.mfserver_short_notm}} <!--in the {{site.data.keyword.containerlong}} -->環境。
 
 {{site.data.keyword.mobilefoundation_short}} 是由下列元件組成：
 
@@ -39,7 +39,7 @@ copyright:
 
 您可以搭配使用 {{site.data.keyword.mfp_cli_long_notm}} (CLI) 與 {{site.data.keyword.mobilefoundation_short}}，輕鬆地建立及管理應用程式。
 
-{{site.data.keyword.mobilefoundation_short}} 服務會在 {{site.data.keyword.Bluemix_notm}} 的空間中佈建一個容器。您可以從 {{site.data.keyword.Bluemix_notm}} 儀表板查看所建立容器的詳細資料、檢視其容器效能，以及存取伺服器日誌。
+<!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
 ## 取得 {{site.data.keyword.mobilefoundation_short}} 的協助和支援
 {: #getting_help_mobilefoundation}

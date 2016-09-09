@@ -46,7 +46,7 @@ scope="peer" format="html" linking="sourceonly"/>
 navtitle="Impostazione della configurazione avanzata" scope="peer" format="html" linking="sourceonly"/>
 </topicref>
 <topicref href="customdomainconfig.html" outputclass="subsection"
-navtitle="Configurazione del dominio personalizzato " format="html" scope="peer"/>
+navtitle="Configurazione del dominio personalizzato" format="html" scope="peer"/>
 <topicref href="maint_updates.html" outputclass="subsection" navtitle="Manutenzione e aggiornamenti"
 format="html" scope="peer"/>
 </topicref>

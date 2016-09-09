@@ -8,17 +8,15 @@ copyright:
 #	A propos de {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
 
-*Dernière mise à jour : 20 juillet 2016*
+Dernière mise à jour : 3 août 2016
 {: .last-updated}
 
 Le service {{site.data.keyword.mobilefoundation_short}} permet de
 configurer rapidement un environnement de serveur
-{{site.data.keyword.mobilefirst}} sur {{site.data.keyword.Bluemix}}. Vous pouvez développer, tester et gérer des applications mobiles depuis cet environnement de cloud robuste.
+{{site.data.keyword.mobilefirst}} sur {{site.data.keyword.Bluemix}}. Vous pouvez développer, tester et gérer des applications mobiles depuis cet environnement de cloud. 
 
 {{site.data.keyword.mobilefoundation_short}} offre aux
-utilisateurs une méthode facile et guidée pour configurer
-{{site.data.keyword.mfserver_short_notm}} dans l'environnement
-{{site.data.keyword.containerlong}} sur {{site.data.keyword.Bluemix_notm}}.
+utilisateurs une méthode facile et guidée pour configurer un environnement {{site.data.keyword.mfserver_short_notm}} <!--in the {{site.data.keyword.containerlong}} -->sur {{site.data.keyword.Bluemix_notm}}.
 
 {{site.data.keyword.mobilefoundation_short}} comprend les
 composants suivants :
@@ -57,15 +55,12 @@ votre choix.
 Vous pouvez utiliser l'interface de ligne de commande (CLI)
 d'{{site.data.keyword.mfp_cli_long_notm}} avec {{site.data.keyword.mobilefoundation_short}} pour créer et gérer sans difficulté des applications.
 
-Le service {{site.data.keyword.mobilefoundation_short}} fournit
-un conteneur dans votre espace dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez examiner les
-détails du conteneur créé, afficher ses performances, et accéder aux journaux du
-serveur depuis votre tableau de bord {{site.data.keyword.Bluemix_notm}}.
+<!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
 ## Aide et support pour {{site.data.keyword.mobilefoundation_short}}
 {: #getting_help_mobilefoundation}
 
-Si vous avez des problèmes ou de questions quand vous utilisez {{site.data.keyword.mobilefoundation_short}}, vous pouvez obtenir de l'aide en recherchant des informations précises ou en posant des questions via un forum. Vous pouvez aussi ouvrir un ticket de demande de service.
+Si vous avez des problèmes ou des questions quand vous utilisez {{site.data.keyword.mobilefoundation_short}}, vous pouvez obtenir de l'aide en recherchant des informations précises ou en posant des questions via un forum. Vous pouvez aussi ouvrir un ticket de demande de service.
 
 Quand vous utilisez les forums pour poser une question, prenez soin d'étiqueter cette dernière de façon à ce qu'elle soit vue par les équipes de développement {{site.data.keyword.Bluemix_notm}}.
 

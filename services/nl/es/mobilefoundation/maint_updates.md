@@ -13,16 +13,16 @@ copyright:
 # Mantenimiento y actualizaciones
 {: #maintupdates_mf}
 
-*Última actualización: 5 de julio de 2016*
+Última actualización: 03 de agosto de 2016
 {: .last-updated}
 
-{{site.data.keyword.mobilefoundation_short}} suministra un {{site.data.keyword.mfserver_short_notm}} en {{site.data.keyword.containerlong}} como un grupo de contenedores. Las actualizaciones del servidor de {{site.data.keyword.mobilefoundation_short}} se notifican a los usuarios. Puede actualizar el servidor de {{site.data.keyword.mobilefoundation_short}} cuando le convenga.
+{{site.data.keyword.mobilefoundation_short}} suministra un {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group-->. Las actualizaciones del servidor de {{site.data.keyword.mobilefoundation_short}} se notifican a los usuarios. Puede actualizar el servidor de {{site.data.keyword.mobilefoundation_short}} cuando le convenga.
 {:shortdesc}
 
 ## Estrategia de mantenimiento
 {: #maintupdate_strategy_mf}
 
-Cuando haya una actualización de {{site.data.keyword.mobilefoundation_short}}, se notificará su disponibilidad al usuario. Se mostrará una notificación en el panel de control de la instancia del servicio. El usuario puede decidir aplicar la actualización a {{site.data.keyword.mobilefoundation_short}} durante la ventana de mantenimiento que considere.
+Cuando haya una actualización de {{site.data.keyword.mobilefoundation_short}}, se notificará su disponibilidad al usuario.  Se mostrará una notificación en el panel de control de la instancia del servicio. El usuario puede decidir aplicar la actualización a {{site.data.keyword.mobilefoundation_short}} durante la ventana de mantenimiento que considere.
 
 La actualización de servicio de {{site.data.keyword.mobilefoundation_short}} estará disponible cuando se actualice uno de los componentes siguientes.
 

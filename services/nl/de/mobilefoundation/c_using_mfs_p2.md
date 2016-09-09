@@ -8,9 +8,10 @@ copyright:
 #	Professional 1 Application-Plan verwenden
 {: #using_mobilefoundation_p2}
 
-*Letzte Aktualisierung: 20. Juli 2016*
+Letzte Aktualisierung: 04. August 2016
 {: .last-updated}
 
+Mit dem Professional 1 Application-Plan können Benutzer 1 mobile Anwendung mit mehreren Betriebssystemen für mobile Geräte erstellen.
 Nach der Erstellung der Serviceinstanz von {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application lesen Sie die folgende Prozedur, um die Arbeit mit dem Service zu beginnen.
 
 ## Voraussetzungen
@@ -19,9 +20,9 @@ Nach der Erstellung der Serviceinstanz von {{site.data.keyword.mobilefoundation_
 Beachten Sie Folgendes, bevor Sie die Serviceinstanz von {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application konfigurieren.
 * {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application wird  nur von {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional (Unterstützung für OLTP) {{site.data.keyword.Bluemix_notm}}-Plänen unterstützt.
 
-* Die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz und die zugehörigen Berechtigungsnachweise sollten verfügbar sein, bevor Sie die Einstellungen Ihrer {{site.data.keyword.mobilefoundation_short}}-Serviceinstanz konfigurieren können.
+* Sie benötigen Zugriff auf die Berechtigungsnachweise der {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz, bevor Sie die Einstellungen für die {{site.data.keyword.mobilefoundation_short}}-Serviceinstanz konfigurieren.
 
-**Hinweis**: Die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz kann in jedem `Bereich` innerhalb Ihrer {{site.data.keyword.Bluemix_notm}} `Organisation` vorhanden sein. Wenn Sie den {{site.data.keyword.mobilefoundation_short}}-Service in einem {{site.data.keyword.Bluemix_notm}}-`Bereich` bereitstellen, bei dem es sich nicht um den Bereich handelt, in dem sich der {{site.data.keyword.dashdbshort_notm}}-Service befindet, müssen Sie sicherstellen, dass Sie über die Berechtigungen für den Zugriff auf den {{site.data.keyword.dashdbshort_notm}}-Service verfügen.
+**Hinweis**: Die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz kann sich in jedem `Bereich` in Ihrer {{site.data.keyword.Bluemix_notm}}-`Organisation` bzw. in jeder anderen `Organisation`, auf die Sie zugreifen können, befinden. Stellen Sie sicher, dass Sie über die Berechtigungen für den Zugriff auf den `Bereich` verfügen, in dem sich die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz befindet.
 
 
 ## Datenbankverbindung hinzufügen
@@ -30,14 +31,18 @@ Beachten Sie Folgendes, bevor Sie die Serviceinstanz von {{site.data.keyword.mob
 ###  Erste Schritte
 {: #firststeps_p2}
 
-Stimmen Sie nach der Erstellung der {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application-Serviceinstanz den Lizenzbedingungen für {{site.data.keyword.mfp_full_notm}} Version 8.0 zu, um mit der Verwendung des Service zu beginnen.
+Führen Sie nach der Erstellung der Serviceinstanz von {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application die nachfolgend beschriebene Prozedur aus, um mit der Verwendung des Service zu beginnen.
 
 ### Stellen Sie eine Verbindung zur {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz her.
 {: #connect_dashdb_p2}
 
 Nachdem die Serviceinstanz {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application erstellt wurde, sehen Sie die Seite *Übersicht*, auf der Sie die Verbindungsinformationen für die Serviceinstanz {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional angeben müssen.
 
-1.  Wählen Sie den {{site.data.keyword.Bluemix_notm}}-`Bereich`, in dem sich die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz befindet, in der Liste der Bereiche aus, die in der ausgewählten `Organisation` verfügbar sind.
+1. Wählen Sie die {{site.data.keyword.Bluemix_notm}} `Organisation` aus, in der sich die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz befindet.
+
++ Wählen Sie den {{site.data.keyword.Bluemix_notm}}-`Bereich`, in dem sich die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz befindet, in der Liste der Bereiche aus, die in der ausgewählten `Organisation` verfügbar sind.
+
+**Hinweis:** Wenn die `Organisation` und der `Bereich`, in denen sich Ihre {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz befindet, nicht aufgeführt sind, prüfen Sie, ob Sie ein Mitglied der betreffenden `Organisation` bzw. des betreffenden `Bereichs` sind.
 
 + Wählen Sie den `Servicenamen` und die `Berechtigungsnachweise` für {{site.data.keyword.dashdbshort_notm}} aus, um eine Verbindung zur vorhandenen {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz herzustellen.
 
@@ -55,7 +60,7 @@ Nachdem die Serviceinstanz {{site.data.keyword.mobilefoundation_short}}: Profess
 * Um den {{site.data.keyword.mfserver_short_notm}} mit den Standardeinstellungen zu starten, klicken Sie auf **Basisserver starten**.
 
 * Diese Auswahl stellt einen {{site.data.keyword.mfserver_long_notm}} mit den folgenden Einstellungen bereit:
-    -  1 GB Hauptspeicher und 64 GB Speicher. Diese Größe ist für Entwicklungs- und kleinere Testaktivitäten ausreichend.
+    -  1 GB Hauptspeicher. Diese Größe ist für Entwicklungs- und kleinere Testaktivitäten sowie für kleinere Produktionsworkloads ausreichend.
 
     -	`Benutzername` und `Kennwort` werden automatisch
 für Sie generiert. Sie können darauf zugreifen, wenn der Server betriebsbereit ist.
@@ -64,27 +69,25 @@ Der Prozess der Bereitstellung Ihres Servers wird gestartet. Dieser Prozess daue
 in einem Nachrichtenfenster wird der Fortschritt dieser Operation angezeigt. Ist der Vorgang abgeschlossen, wird ein Dashboard mit folgenden
 Informationen angezeigt:
 
-  -	Status Ihres Servers, der ausgeführt wird (Zustand, Größe, Speicher).
+  -	Status Ihres Servers, der ausgeführt wird (Zustand, Größe).
 
-  -	Für Sie erstellte Serverroute. Mit dieser Route können Sie Ihren mobilen Server aus dem öffentlichen Internet
-erreichen. Ihre mobilen Anwendungen nutzen diese Route, um auf den Server zuzugreifen.
+  -	Für Sie erstellte Serverroute. Verwenden Sie diese Route in Ihrer mobilen Anwendung, um eine Verbindung zum {{site.data.keyword.mfserver_short_notm}} herzustellen.
 
-  -	Ihr persönlicher `Benutzername` und das `Kennwort` für den Zugriff auf die {{site.data.keyword.mfp_oc_short_notm}}. Das `Kennwort` wird ausgeblendet. Klicken Sie auf **Kennwort anzeigen**, um es einzublenden.
+  -	Ihr persönlicher `Benutzername` und das `Kennwort` für den Zugriff auf die {{site.data.keyword.mfp_oc_short_notm}}. Das `Kennwort` wird ausgeblendet. Klicken Sie auf das Symbol **Kennwort anzeigen**, um es einzublenden.
 
 *	Klicken Sie auf **Konsole starten**, um die {{site.data.keyword.mfp_oc_short_notm}} zu öffnen.
 
 
-Diese Konsole wird innerhalb des Containers ausgeführt. Mit der Konsole können Sie Ihre mobilen Apps und Einheiten verwalten, Ihren Server als mobiles Back-End verwenden, Push-Benachrichtigungen senden usw.
+<!--This console runs inside the container.--> Mit der Konsole können Sie Ihre mobilen Apps, Adapter und Geräte verwalten, Ihren Server als mobiles Back-End verwenden, Push-Benachrichtigungen senden usw.
 
 ## {{site.data.keyword.mobilefirst}} Server erneut erstellen
 {: #recreate_mobilefoundation_p2}
 
 *	Klicken Sie auf die Schaltfläche **Neu erstellen**, um den Server erneut zu erstellen.
 
-* Diese Aktion stoppt Ihre vorhandenen Server und löscht diese. Eine neue Serverinstanz wird erstellt. Diese Aktion
-dauert einige Minuten.
+* Diese Aktion stoppt Ihre vorhandenen Server und löscht die Daten. Eine neue Serverinstanz wird mit einer aktualisierten Version erstellt, falls verfügbar. Diese Aktion nimmt einige Minuten in Anspruch.
 
-**Hinweis**: Alle Daten der vorherigen Serverinstanz einschließlich der Informationen zu den Apps und Adaptern sind in der konfigurierten {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz dauerhaft festgelegt.
+**Hinweis**: Alle Daten der vorherigen Serverinstanz, einschließlich Informationen zu den Apps und Adaptern, werden in der konfigurierten {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz beibehalten; diese Daten werden zur erneuten Erstellung des Servers verwendet.
 
 ##	Erweiterte Konfiguration einrichten
 {: #using_mfs_advanced_p2}
@@ -93,11 +96,10 @@ Mit der Option **Server mit erweiterter Konfiguration starten** auf der Seite `�
 Servereinstellungen auch aktualisieren, um Ihre Serverkonfiguration anzupassen; klicken Sie hierfür auf die
 Registerkarte **Konfiguration**. {{site.data.keyword.mobilefoundation_short}} bietet Ihnen Zugriff auf einige erweiterte Einstellungen.
 
-*	Auf der Registerkarte **Topologie** können Sie die Größe des Containers auswählen. Die Standardgröße von 1 GB für den Server ist für die Entwicklung und kleinere Tests ausreichend.
+*	Auf der Registerkarte **Topologie** können Sie die Servergröße und die Anzahl der Serverinstanzen auswählen, die den jeweiligen Anforderungen entsprechen. Die Standardgröße von 1 GB für den Server ist für die Entwicklung und kleinere Tests ausreichend.
   - Wählen Sie in Abhängigkeit von Ihrem Bedarf die richtige Größe für Ihren Server aus.
 
   - **Knoten** zeigt die Anzahl der erstellten Knoten an.
-      - Sie können die Mindest- und Höchstanzahl der in Ihrer {{site.data.keyword.IBM_notm}} Containergruppe erforderlichen Knoten konfigurieren. Containergruppen bieten eine hohe Verfügbarkeit und Skalierbarkeit.
 
       - Die {{site.data.keyword.mobilefirst}}-Server-Farm kann durch die Konfiguration der Anzahl der Knoten hier unterstützt werden.
 

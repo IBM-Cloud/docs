@@ -8,13 +8,12 @@ copyright:
 #	{{site.data.keyword.mobilefoundation_short}} 정보
 {: #overview_mobilefoundation}
 
-*마지막 업데이트 날짜: 2016년 7월 20일*
+마지막 업데이트 날짜: 2016년 8월 03일
 {: .last-updated}
 
-{{site.data.keyword.mobilefoundation_short}} 서비스는 {{site.data.keyword.Bluemix}}에서 {{site.data.keyword.mobilefirst}} 서버 환경을 빠르게 설정하는 방법을 제공합니다. 그런 다음, 이 강력한 클라우드 환경에서 모바일 앱을
-개발, 테스트 및 관리할 수 있습니다.
+{{site.data.keyword.mobilefoundation_short}} 서비스는 {{site.data.keyword.Bluemix}}에서 {{site.data.keyword.mobilefirst}} 서버 환경을 빠르게 설정하는 방법을 제공합니다. 그런 다음 이 클라우드 환경에서 모바일 앱을 개발하고 테스트하며 관리할 수 있습니다. 
 
-{{site.data.keyword.mobilefoundation_short}}은 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.containerlong}} 환경에서 {{site.data.keyword.mfserver_short_notm}}를 설정하는 손쉬운 안내 방식의 수단을 사용자에게 제공합니다. 
+{{site.data.keyword.mobilefoundation_short}}에서는 {{site.data.keyword.mfserver_short_notm}} <!--in the {{site.data.keyword.containerlong}} -->환경을 {{site.data.keyword.Bluemix_notm}}에서 설정하는 방식을 간단하게 안내합니다. 
 
 {{site.data.keyword.mobilefoundation_short}}은 다음과 같은 구성요소로 이루어져 있습니다.
 
@@ -40,12 +39,12 @@ copyright:
 
 {{site.data.keyword.mobilefoundation_short}}에서 {{site.data.keyword.mfp_cli_long_notm}}(CLI)를 사용하여 손쉽게 앱을 작성하고 관리할 수 있습니다.
 
-{{site.data.keyword.mobilefoundation_short}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 사용자의 영역 내에서 컨테이너를 프로비저닝할 수 있습니다. 작성된 컨테이너의 세부사항을 보고 컨테이너 성능을 확인하며 {{site.data.keyword.Bluemix_notm}} 대시보드에서 서버 로그에 액세스할 수 있습니다.
+<!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
 ## {{site.data.keyword.mobilefoundation_short}}에 대한 도움말 및 지원 받기
 {: #getting_help_mobilefoundation}
 
-{{site.data.keyword.mobilefoundation_short}} 사용 중에 문제점이 발생하거나 질문이 있는 경우 정보를 검색하거나 포럼에서 질문을 작성하여 도움말 지원을 받을 수 있습니다. 또한 지원 티켓을 개설할 수도 있습니다. 
+{{site.data.keyword.mobilefoundation_short}} 사용 중에 문제점이 발생하거나 질문이 있는 경우 정보를 검색하거나 포럼에서 질문을 작성하여 도움말 지원을 받을 수 있습니다. 또한 지원 티켓을 열 수도 있습니다. 
 
 질문을 작성하는 데 포럼을 사용하는 경우 IBM {{site.data.keyword.Bluemix_notm}} 개발 팀에서 확인할 수 있도록 질문에 태그를 지정하십시오. 
 

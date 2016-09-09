@@ -13,10 +13,10 @@ copyright:
 # Wartung und Aktualisierungen
 {: #maintupdates_mf}
 
-*Letzte Aktualisierung: 05. Juli 2016*
+Letzte Aktualisierung: 03. August 2016
 {: .last-updated}
 
-{{site.data.keyword.mobilefoundation_short}} stellt einen {{site.data.keyword.mfserver_short_notm}} in {{site.data.keyword.containerlong}} als Containergruppe bereit. Die Benutzer werden über Aktualisierungen des {{site.data.keyword.mobilefoundation_short}}-Servers benachrichtigt. Wenn es für Sie hilfreich ist, können Sie den {{site.data.keyword.mobilefoundation_short}}-Server aktualisieren.
+{{site.data.keyword.mobilefoundation_short}} stellt einen {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group--> bereit. Die Benutzer werden über Aktualisierungen des {{site.data.keyword.mobilefoundation_short}}-Servers benachrichtigt. Wenn es für Sie hilfreich ist, können Sie den {{site.data.keyword.mobilefoundation_short}}-Server aktualisieren.
 {:shortdesc}
 
 ## Strategie für die Wartung

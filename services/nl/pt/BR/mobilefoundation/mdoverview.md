@@ -8,12 +8,14 @@ copyright:
 #	Sobre o {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
 
-*Última atualização: 20 de julho de 2016*
+Última atualização: 3 de agosto de 2016
 {: .last-updated}
 
-O serviço {{site.data.keyword.mobilefoundation_short}} fornece uma maneira de configurar rapidamente um ambiente do servidor {{site.data.keyword.mobilefirst}} no {{site.data.keyword.Bluemix}}. Então é possível desenvolver, testar e gerenciar aplicativos móveis usando esse ambiente em nuvem robusto.
+O serviço {{site.data.keyword.mobilefoundation_short}} fornece uma maneira de configurar rapidamente um ambiente do servidor {{site.data.keyword.mobilefirst}} no {{site.data.keyword.Bluemix}}. É possível, então, desenvolver, testar e gerenciar
+aplicativos móveis a partir deste ambiente de nuvem.
 
-O {{site.data.keyword.mobilefoundation_short}} fornece aos usuários uma maneira fácil e orientada de configurar o {{site.data.keyword.mfserver_short_notm}} no ambiente do {{site.data.keyword.containerlong}} no {{site.data.keyword.Bluemix_notm}}.
+O {{site.data.keyword.mobilefoundation_short}} fornece aos usuários uma maneira
+fácil e orientada para configurar o ambiente do {{site.data.keyword.mfserver_short_notm}} <!--in the {{site.data.keyword.containerlong}} -->no {{site.data.keyword.Bluemix_notm}}.
 
 O {{site.data.keyword.mobilefoundation_short}} consiste nos seguintes componentes:
 
@@ -39,7 +41,7 @@ Com o {{site.data.keyword.mobilefoundation_short}}, é possível executar as fun
 
 É possível usar a {{site.data.keyword.mfp_cli_long_notm}} (CLI) com o {{site.data.keyword.mobilefoundation_short}} para criar e gerenciar aplicativos facilmente.
 
-O serviço {{site.data.keyword.mobilefoundation_short}} provisiona um contêiner em seu espaço no {{site.data.keyword.Bluemix_notm}}. É possível ver os detalhes do contêiner criado, visualizar o desempenho do contêiner e acessar os logs do servidor a partir de seu painel do {{site.data.keyword.Bluemix_notm}}.
+<!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
 ## Obtendo ajuda e suporte para {{site.data.keyword.mobilefoundation_short}}
 {: #getting_help_mobilefoundation}
