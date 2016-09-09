@@ -6,91 +6,92 @@ copyright:
 ---
 # Supervisión de apps con {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
-*Última actualización: 6 de mayo de 2016*
+*Última actualización: 25 de abril de 2016*
 {: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} proporciona funciones de supervisión y analíticas para sus aplicaciones móviles. Puede efectuar registros de cliente y supervisar datos con el SDK de cliente de {{site.data.keyword.mobileanalytics_short}}. Los desarrolladores pueden elegir cuándo desean enviar estos datos al servicio de {{site.data.keyword.mobileanalytics_short}}. Al entregar los datos a {{site.data.keyword.mobileanalytics_short}}, puede utilizar el panel de control de {{site.data.keyword.mobileanalytics_short}} para obtener información analítica sobre las aplicaciones móviles, los dispositivos y los registros de cliente.
 {: shortdesc}
 
-<!--
-
-## Visualizing data with custom charts
+## Visualización de datos con gráficos personalizados
 {: #custom-charts}
 
-You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
+Puede visualizar los datos analíticos recopilados en el repositorio de analíticas. Esta visualización constituye una forma eficaz de inspeccionar datos para casos de uso específicos. Puede crear gráficos con datos que ya haya recopilado Operational Analytics, además de los datos personalizados que notifique.
+{: #shortdesc}
 
+Obtenga más información sobre la supervisión y la resolución de problemas de bloqueos de apps.
 
-### Creating custom charts for client logs
+### Creación de gráficos personalizados para registros de cliente
 {: #custom-charts-client-logs}
 
-You can create a custom chart for client logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
+Puede crear un gráfico personalizado para los registros de cliente que contienen información que se envía con la plataforma de la API del registrador. La información de registro también incluye información contextual sobre el dispositivo, el entorno incluido, el nombre y la versión de la app.
 
-In this example, you use client log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
+En este ejemplo se utilizan los datos de registro del cliente para crear un diagrama de flujo. En el gráfico final se muestra la distribución de los niveles de registro en una app específica. También dispone de los siguientes datos para visualizarlos en un gráfico:
 
-* Specific data
-  * Log level
-* Message data
-  * Timestamp
-* Device OS contextual data
-  * Application name
-  * Application version
-  * Device OS
-* Device contextual data
-  * Device ID
-  * Device model
-  * Device OS version
+* Datos específicos
+  * Nivel de registro
+* Datos de mensaje
+  * Indicación de fecha y hora
+* Datos contextuales del sistema operativo del dispositivo
+  * Nombre de la aplicación
+  * Versión de la aplicación
+  * Sistema operativo del dispositivo
+* Datos contextuales del dispositivo
+  * ID del dispositivo
+  * Modelo del dispositivo
+  * Versión de sistema operativo del dispositivo
 
 
-1. Make sure that you have an application that is collecting device logs or gathering analytics.
-2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
-3. Click **Create Chart** to create a new custom chart and provide the following values:
-  * Chart Title: Application and Log Levels
-  * Event Type: Client Logs
-  * Chart Type: Flow Chart
-5. Click the **Chart Definition** tab and provide the following values:
-  * Source: Application Name
-  * Destination: Log Level
-  * Property: your app name
-7. Click **Save**
+1. Asegúrese de que tiene una aplicación que recopila registros de dispositivo o analíticas.
+2. En la consola de {{site.data.keyword.mobileanalytics_short}}, pulse el separador **Gráficos personalizados** de la página **Panel de control**. Puede crear un gráfico a partir de los mensajes de analíticas enviados al servidor.
+3. Pulse **Crear gráfico** para crear un nuevo gráfico personalizado.
+4. Indique los siguientes valores:
+  * Título del gráfico: aplicación y niveles de registro
+  * Tipo de evento: registros de cliente
+  * Tipo de gráfico: diagrama de flujo
+5. Pulse el separador **Definición de gráfico**.
+6. Indique los siguientes valores:
+  * Origen: nombre de la aplicación
+  * Destino: nivel de registro
+  * Propiedad: nombre de la app
+7. Pulse **Guardar**
 
-### Exporting custom data
+### Exportación de datos personalizados
 {: #export-custom-data}
 
-You can export the data from each custom chart into JSON, XML, or CSV format.
+Los datos de cada gráfico personalizado se pueden exportar en formato JSON, XML o CSV.
 
-The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
+La estructura de los datos exportados depende del gráfico exportado. Para exportar los datos, pulse el icono de exportación que está en la zona superior derecha del gráfico personalizado.
 
 
 
-### Exporting and importing custom chart definitions
+### Exportación e importación de definiciones de gráficos personalizados
 {: #export-import-custom}
 
-You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
+Puede importar y exportar las definiciones del gráfico personalizado mediante programación o manualmente en el panel de control de {{site.data.keyword.mobileanalytics_short}}.
 
-Ensure that you have at least one custom chart in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
-In this example, you manually export and import custom chart definitions.
+Asegúrese de que tiene al menos un gráfico personalizado en el panel de control de {{site.data.keyword.mobileanalytics_short}}.
+En este ejemplo se exportan e importan las definiciones del gráfico personalizado de forma manual.
 
-1. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab in the **Dashboard** page.
-2. To export the custom chart definitions, click **Export Charts**. This action displays a dialog to save a `customChartsDefinition.json` file.
-3. Choose a location to save the file.
-4. Click the **Delete Chart** icon next to each custom chart to delete all custom charts.
-5. To import a custom chart definition, click **Import Charts**. This action displays a dialog to choose a file.
-6. Choose the `customChartsDefinition.json` file that you previously exported to open.
+1. En la consola de {{site.data.keyword.mobileanalytics_short}}, pulse el separador **Gráficos personalizados** de la página **Panel de control**.
+2. Para exportar las definiciones del gráfico personalizado, pulse **Exportar gráficos**. Con esta acción se muestra un cuadro de diálogo para guardar un archivo `customChartsDefinition.json`.
+3. Elija una ubicación para guardar el archivo.
+4. Pulse el icono **Suprimir gráfico**, situado junto a cada gráfico personalizado, para suprimir todos los gráficos personalizados.
+5. Para importar una definición del gráfico personalizado, pulse **Importar gráficos**. Con esta acción se muestra un cuadro de diálogo para elegir un archivo.
+6. Elija el archivo `customChartsDefinition.json` que ha exportado antes para abrirlo.
 
-You can also export and import custom chart definitions programmatically by using your HTTP client of choice (for example, CURL or postman):
-* The GET endpoint for export is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
-* The POST endpoint for import is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
+También puede exportar e importar definiciones de un gráfico personalizado mediante programación utilizando el cliente HTTP que desee (por ejemplo, CURL o postman):
+* El punto final GET de la exportación es `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
+* El punto final POST de la importación es `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
 
-**Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
-
--->
+**Nota**: Si importa una definición de un gráfico personalizado que existe, acabará duplicando definiciones, lo que implica que en el panel de control de {{site.data.keyword.mobileanalytics_short}} se mostrarán gráficos personalizados duplicados.
 
 ## Configuración de alertas
 {: #alerts}
 
-Puede establecer umbrales en las definiciones de alerta en la consola de {{site.data.keyword.mobileanalytics_short}} para supervisar mejor las actividades.
+Puede establecer umbrales en las definiciones de alerta en la consola de MobileFirst Analytics para supervisar mejor las actividades.
+{: #shortdesc}
 
-Puede configurar umbrales que, si se superan, activan alertas para notificar al monitor de la consola de {{site.data.keyword.mobileanalytics_short}}. Las alertas activadas se pueden visualizar en la consola o bien se pueden gestionar con un webhook personalizado. Gracias a esta función, se pueden detectar de forma proactiva errores en los registros de cliente, errores en los registros de servidor, períodos de latencia de red ampliados y errores de autenticación. Gracias a los umbrales y las alertas reactivos, no hace falta que examine a conciencia los datos y puede establecer umbrales con un espectro de granularidad amplio.
+Puede configurar umbrales que, si se superan, activan alertas para notificar al monitor de la consola de MobileFirst Analytics. Las alertas activadas se pueden visualizar en la consola o bien se pueden gestionar con un webhook personalizado. Gracias a esta función, se pueden detectar de forma proactiva errores en los registros de cliente, errores en los registros de servidor, períodos de latencia de red ampliados y errores de autenticación. Gracias a los umbrales y las alertas reactivos, no hace falta que examine a conciencia los datos y puede establecer umbrales con un espectro de granularidad amplio.
 
 ### Creación de una definición de alerta para los registros de cliente
 {: #alert-def-client-logs}
@@ -99,8 +100,8 @@ Puede crear una definición de alerta basada en registros de cliente.
 
 En este ejemplo se utilizan los datos de registro del cliente para crear una definición de alerta. La alerta supervisa todos los registros de cliente recibidos en los últimos 5 minutos y sigue efectuando comprobaciones cada 5 minutos hasta que se inhabilita o se suprime la definición de alerta. Se activa una alerta para cada dispositivo que ha enviado 3 o más registros de error de cliente con el mismo nombre y la misma versión de la app.
 
-1. En la consola de {{site.data.keyword.mobileanalytics_short}}, pulse el icono de la campana para ir a la página **Registro de alertas**.
-2. Vaya a la página **Gestión de alertas** y pulse **Crear alerta**.
+1. En la consola de MobileFirst Analytics, pulse el icono de la campana para ir a la página **Registro de alertas**.
+2. Vaya a la página **Gestión de alertas** y pulse Crear **Alerta**.
 3. Indique los siguientes valores:
 	* Nombre de la alerta: alerta para registros de cliente
 	* Mensaje: alerta de mensaje de error
@@ -111,7 +112,7 @@ En este ejemplo se utilizan los datos de registro del cliente para crear una def
 			* Umbral
 				* Tipo de umbral: total para instancia de aplicación
 
-					**Nota**: Si elige la opción Promedio para aplicación, se calcula el promedio de los registros de cliente por el número de dispositivos. Por ejemplo, si tiene dos dispositivos y uno envía seis registros de cliente, mientras que el otro envía tres, la media será de 4,5 registros de cliente.
+					Nota: Si elige la opción Promedio para aplicación, se calcula el promedio de los registros de cliente por el número de dispositivos. Por ejemplo, si tiene dos dispositivos y uno envía seis registros de cliente, mientras que el otro envía tres, la media será de 4,5 registros de cliente.
 				* Operador: es igual o mayor que 3
 	<!-- insert alert definition tab image? -->
 
@@ -133,7 +134,7 @@ Puede crear una definición de alerta basada en bloqueos de app.
 
 En este ejemplo se utilizan los datos de bloqueo de app para crear una definición de alerta. La alerta supervisa todos los bloqueos de app de los últimos 2 minutos y sigue efectuando comprobaciones cada 2 minutos hasta que se inhabilita o se suprime la definición de alerta. Se activa una alerta para cada app bloqueada 5 o más veces. Para obtener más información sobre los bloqueos de apps, consulte [Bloqueos de app](app_crash/c_op_analytics_crashes.html).
 
-1. En la consola de {{site.data.keyword.mobileanalytics_short}}, pulse el icono **Alertas**. Esta acción le dirige a la página Registro de alertas.
+1. En la consola de MobileFirst Analytics, pulse el cicono **Alertas**. Esta acción le dirige a la página Registro de alertas.
 2. Pulse el separador **Gestión de alertas** y pulse **Crear alerta**.
 3. Indique los siguientes valores:
 	* Nombre de la alerta: alerta para bloqueos de app
@@ -158,7 +159,7 @@ En este ejemplo se utilizan los datos de bloqueo de app para crear una definici�
 
 En este ejemplo se gestionan las definiciones de alerta desde la página Gestión de alertas.
 
-1. En la consola de {{site.data.keyword.mobileanalytics_short}}, pulse el icono **Alertas**. Esta acción abre la página Registro de alertas.
+1. En la consola de MobileFirst Analytics, pulse el cicono **Alertas**. Esta acción abre la página Registro de alertas.
 2. Pulse el separador **Gestión de alertas**.
 3. Opcional: Marque o desmarque el recuadro de selección de la columna **Habilitado** para habilitar o inhabilitar una definición de alerta en concreto.
 4. Opcional: Pulse el icono **Duplicar** si desea crear una copia de una definición de alerta y cambiar algunos valores.
@@ -170,7 +171,7 @@ En este ejemplo se gestionan las definiciones de alerta desde la página Gestió
 
 En este ejemplo se muestran los detalles de las alertas activadas desde la página Registro de alertas.
 
-1. En la consola de {{site.data.keyword.mobileanalytics_short}}, pulse el icono **Alertas**. Esta acción le dirige a la página Registro de alertas.
+1. En la consola de MobileFirst Analytics, pulse el cicono **Alertas**. Esta acción le dirige a la página Registro de alertas.
 2. Pulse el icono **+** de cualquiera de las alertas. Con esta acción se muestran las secciones **Definición de alerta** e **Instancias de alerta**.
 
     **Nota**: Si la definición de alerta correspondiente no se ha suprimido o modificado, puede editarla pulsando **Editar alerta**. De lo contrario, no podrá pulsar el botón **Editar alerta** y se mostrará el siguiente mensaje:
@@ -182,12 +183,15 @@ En este ejemplo se muestran los detalles de las alertas activadas desde la pági
 ## Bloqueos de apps
 {: #monitor-app-crash}
 
-Puede consultar la información de los bloqueos de app en la consola de {{site.data.keyword.mobileanalytics_short}} a fin de supervisar las apps y resolver los posibles problemas de forma más eficaz.
+Puede consultar la información de los bloqueos de app en la consola de MobileFirst Analytics a fin de supervisar las apps y resolver los posibles problemas de forma eficaz.
+{: #shortdesc}
+
+Obtenga más información sobre la supervisión y la resolución de problemas de bloqueos de apps.
 
 ### Supervisión de bloqueos de apps
 {: #app-crash}
 
-Puede consultar rápidamente la información relacionada con los bloqueos de apps en la sección **Panel de control** de la consola de {{site.data.keyword.mobileanalytics_short}}.
+Puede consultar rápidamente la información relacionada con los bloqueos de apps en la sección **Panel de control** de la consola de IBM MobileFirst™ Analytics.
 
 En la página **Visión general** de la sección **Panel de control**, en el gráfico de barras **Bloqueos** se muestra un histograma de los bloqueos producidos con el tiempo.
 
@@ -200,7 +204,7 @@ Puede visualizar los datos de dos formas:
 ### Resolución de problemas de bloqueos de apps
 {: #app-crash-troubleshooting}
 
-Puede ver la página **Bloqueos** en la sección **Aplicaciones** de la consola de {{site.data.keyword.mobileanalytics_short}} para administrar sus apps de forma más eficaz.
+Puede ver la página **Bloqueos** en la sección **Aplicaciones** de la consola de IBM MobileFirst Analytics para administrar sus apps de forma más eficaz.
 
 En la tabla **Visión general de bloqueos** se muestran las siguientes columnas de datos:
 

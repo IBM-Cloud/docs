@@ -7,7 +7,6 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.mobileanalytics_short}} 정보  
-{: aboutmobileanalytics}
 *마지막 업데이트 날짜: 2016년 4월 21일*
 {: .last-updated}
 
@@ -66,7 +65,7 @@ copyright:
 *가장 많이, 가장 최근에 사용된 기능은 무엇입니까?*  
 *사용자가 어디에서 내 앱을 시작하고 중지합니까?*  
 *사용자가 가장 많이 보는 활동은 무엇입니까?*  
-*앱에서 워크플로우가 경쟁하고 있습니까?(예: 단계별 변환)*  
+*사용자가 앱에서 워크플로우를 완료하고 있습니까?(예: 단계별 변환)*  
 
 <!--Client-side logs and usage data are gathered automatically and sent to the Mobile Analytics -->
 <!-- service on demand. Developers and -->

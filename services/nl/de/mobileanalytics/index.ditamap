@@ -24,7 +24,7 @@ navtitle="Swift-Client-SDK installieren" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html" navtitle="Anwendung instrumentieren" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="Zugriffsschlüssel ermitteln" scope="peer"> </topicref>
+navtitle="API-Schlüssel ermitteln" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
 navtitle="Android-App initialisieren" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"

@@ -5,7 +5,8 @@ copyright:
 
 ---
 
-# Installation des logiciels SDK du client {{site.data.keyword.mobileanalytics_short}}
+# Installation du système {{site.data.keyword.mobileanalytics_short}}
+SDK client
 {: #mobileanalytics_sdk}
 *Dernière mise à jour : 21 avril 2016*
 {: .last-updated}
@@ -81,7 +82,7 @@ Le logiciel SDK de {{site.data.keyword.mobileanalytics_short}} est distribué av
     ```
     {: codeblock}
 
-2. Si vous n'avez pas encore initialisé votre espace de travail pour CocoaPods, exécutez la commande `pod init` dans le répertoire racine de votre projet Xcode. CocoaPods crée pour vous un `fichier Pod` dans lequel vous définissez les dépendances de votre projet Xcode.
+2. Si vous n'avez pas encore initialisé votre espace de travail pour CocoaPods, exécutez la commande `pod init` dans le répertoire racine de votre projet. CocoaPods crée pour vous un `fichier Pod` dans lequel vous définissez les dépendances de votre projet Xcode.
 
 3. Ajoutez `BMSAnalytics` à la cible dans votre fichier Pod, par exemple :
 
@@ -117,7 +118,3 @@ Ajoutez des infrastructures à votre projet à l'aide de [Carthage](https://gith
 ## SDK
 * [Logiciel SDK Android](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [Logiciel SDK iOS](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
-
-## Référence pour l'API
-{: #api}
-* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

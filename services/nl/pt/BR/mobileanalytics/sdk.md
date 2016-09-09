@@ -7,7 +7,7 @@ copyright:
 
 # Instrumentando seu aplicativo para usar os SDKs do cliente do {{site.data.keyword.mobileanalytics_short}}
 {: #mobileanalytics_sdk}
-*Última atualização: 27 de abril de 2016*
+*Última atualização: 1 de agosto de 2016*
 {: .last-updated}
 
 Os SDKs do {{site.data.keyword.mobileanalytics_full}} permitem instrumentar o aplicativo móvel.
@@ -17,20 +17,19 @@ O {{site.data.keyword.mobileanalytics_short}} permite coletar três categorias d
 
 1.  Dados predefinidos - esta categoria inclui informações sobre uso genérico e dispositivo que se aplicam a todos os aplicativos. Nessa categoria estão os metadados do dispositivo (sistema operacional e modelo de dispositivo) e dados de uso (usuários ativos e sessões de aplicativo) que indicam o volume, frequência ou duração de uso do aplicativo. Os dados predefinidos são coletados automaticamente após a inicialização do SDK do {{site.data.keyword.mobileanalytics_short}} em seu aplicativo.
 2. Eventos customizados - esta categoria inclui dados que você mesmo define e que são específicos para seu aplicativo. Esses dados representam eventos que ocorrem no aplicativo, como visualizações da página, toques do botão ou compras do aplicativo. Além de inicializar o SDK do {{site.data.keyword.mobileanalytics_short}} no aplicativo, deve-se incluir uma linha de código para cada evento customizado que você desejar rastrear.
-3. Mensagens de log do cliente - esta categoria permite que o desenvolvedor inclua linhas de código em todo o aplicativo que registram mensagens customizadas para ajudar no desenvolvimento e na depuração. 
-O desenvolvedor designa um nível de severidade/detalhamento a cada mensagem de log e pode, subsequentemente, filtrar mensagens de filtro por nível designado ou preservar espaço de armazenamento configurando o aplicativo para ignorar mensagens que estão abaixo de um determinado nível de log. Para coletar dados do log do cliente, deve-se inicializar o SDK do {{site.data.keyword.mobileanalytics_short}} dentro do aplicativo, bem como incluir uma linha de código para cada mensagem de log.
+3. Mensagens de log do cliente - esta categoria permite que o desenvolvedor inclua linhas de código em todo o aplicativo que registram mensagens customizadas para ajudar no desenvolvimento e na depuração. O desenvolvedor designa um nível de severidade/detalhamento a cada mensagem de log e pode, subsequentemente, filtrar mensagens de filtro por nível designado ou preservar espaço de armazenamento configurando o aplicativo para ignorar mensagens que estão abaixo de um determinado nível de log. Para coletar dados do log do cliente, deve-se inicializar o SDK do {{site.data.keyword.mobileanalytics_short}} dentro do aplicativo, bem como incluir uma linha de código para cada mensagem de log.
 
-Atualmente os SDKs estão disponíveis para Android, iOS e WatchOS.
+Atualmente, os SDKs estão disponíveis para Android, iOS e WatchOS.
 
-## Identificando a sua chave de acesso Credencias de serviço
+## Identificando seu valor de Chave de Acesso
 {: #analytics-clientkey}
 
-Identifique o valor da **chave de acesso** antes de configurar o SDK do cliente. A
-chave de acesso é necessária para inicializar o SDK do cliente.
+Identifique seu valor de **Chave de acesso** antes de configurar
+o SDK do cliente. A Chave de Acesso é necessária para inicializar o SDK do cliente.
 
 1. Abra o painel de serviço do {{site.data.keyword.mobileanalytics_short}}.
 2. Clique na guia **Credenciais de serviço**.
-3. Copie o seu valor da chave de acesso.
+3. Copie seu valor de Chave de Acesso.
 
 
 ## Inicializando o aplicativo Android para coletar análise
@@ -38,9 +37,7 @@ chave de acesso é necessária para inicializar o SDK do cliente.
 
 Inicialize seu aplicativo para permitir o envio de logs para o serviço {{site.data.keyword.mobileanalytics_short}}.
 
-1. Importe o SDK do cliente incluindo a instrução
-`import` a seguir, na parte superior do seu arquivo
-de projeto:
+1. Importe o SDK do Cliente ao incluir a instrução de `importação` a seguir no início do seu arquivo de projeto:
 
   ```
   import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
@@ -55,7 +52,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
-            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
+            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -65,9 +62,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Inicialize o Analytics usando seu objeto de aplicativo Android e fornecendo a ele o nome de seu aplicativo. 
-Também é necessário o valor da
-[**chave de acesso**](#analytics-clientkey).
+3. Inicialize o Analytics usando seu objeto de aplicativo Android e fornecendo a ele o nome de seu aplicativo. O valor da [**Chave de acesso**](#analytics-clientkey) também será necessário.
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -82,9 +77,8 @@ Também é necessário o valor da
 
 Inicialize seu aplicativo para permitir o envio de logs para o serviço {{site.data.keyword.mobileanalytics_short}}. O SDK do Swift está disponível para iOS e watchOS.
 
-1. Importe as estruturas `BMSCore` e
-`BMSAnalytics` incluindo as instruções
-`import` a seguir, na parte superior do arquivo de projeto `AppDelegate.swift`:
+1. Importe as estruturas `BMSCore` e `BMSAnalytics` ao incluir as instruções de `importação` a seguir no início do seu arquivo de
+projeto `AppDelegate.swift`:
 
   ```Swift
   import BMSCore
@@ -107,9 +101,7 @@ Inicialize seu aplicativo para permitir o envio de logs para o serviço {{site.d
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Inicialize o Analytics fornecendo a ele o nome de aplicativo móvel. Também é necessário o valor da
-[**chave de
-acesso](#analytics-clientkey).
+3. Inicialize o Analytics fornecendo a ele o nome de aplicativo móvel. O valor da [**Chave de acesso**](#analytics-clientkey) também será necessário.
 
   O nome do aplicativo é usado como um filtro para procurar logs do cliente em seu Painel do {{site.data.keyword.mobileanalytics_short}}. Usando o mesmo nome de aplicativo entre as plataformas (por exemplo, Android e iOS), é possível ver todos os logs desse aplicativo com o mesmo nome, independentemente de qual plataforma os logs foram enviados.
 
@@ -119,7 +111,7 @@ acesso](#analytics-clientkey).
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
+      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -127,7 +119,7 @@ acesso](#analytics-clientkey).
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
+	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
 	```
 
   É possível registrar eventos do dispositivo no WatchOS usando os métodos `Analytics.recordApplicationDidBecomeActive()` e `Analytics.recordApplicationWillResignActive()`.
@@ -384,7 +376,7 @@ Analytics.userIdentity = nil
 
   1. Visit the dashboard for the {{site.data.keyword.mobileanalytics_short}} service where you want to send analytics data and note the browser URL for the dashboard.
   2. Determine the value for reporting analytics, as follows:
-  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before `/analytics/console/dashboard`.  
+  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before ``/analytics/console/dashboard``.  
 
   		For example, if the dashboard URL is: `http://mobile-analytics-dashboard.ng.bluemix.net/analytics/console/dashboard?instanceId=12345abcde`
       {: screen}
@@ -487,9 +479,3 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
-
-# rellinks
-
-## Referência da API
-{: #api}
-* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

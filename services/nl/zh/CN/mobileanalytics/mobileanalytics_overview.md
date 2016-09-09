@@ -7,7 +7,6 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # 关于 {{site.data.keyword.mobileanalytics_short}}  
-{: aboutmobileanalytics}
 *上次更新时间：2016 年 4 月 21 日*
 {: .last-updated}
 

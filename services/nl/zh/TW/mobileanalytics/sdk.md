@@ -7,7 +7,7 @@ copyright:
 
 # 檢測應用程式以使用 {{site.data.keyword.mobileanalytics_short}} Client SDK
 {: #mobileanalytics_sdk}
-*前次更新：2016 年 4 月 27 日*
+*前次更新：：2016 年 8 月 1 日*
 {: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} SDK 可讓您檢測行動應用程式。
@@ -21,10 +21,10 @@ copyright:
 
 SDK 目前適用於 Android、iOS 及 WatchOS。
 
-## 識別服務認證存取金鑰
+## 識別存取金鑰值
 {: #analytics-clientkey}
 
-設定用戶端 SDK 之前請識別您的**存取金鑰**值。需要有「存取金鑰」，才能起始設定用戶端 SDK。
+請先識別**存取金鑰**值，才能設定 Client SDK。需要有「存取金鑰」，才能起始設定 Client SDK。
 
 1. 開啟 {{site.data.keyword.mobileanalytics_short}} 服務儀表板。
 2. 按一下**服務認證**標籤。
@@ -51,8 +51,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
-            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
-        }
+            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
+        } 
   ```
   {: codeblock}
 
@@ -61,7 +61,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. 起始設定 Analytics，方法是使用 Android 應用程式物件，並將您的應用程式名稱提供給它。您也需要[**存取金鑰**](#analytics-clientkey)值。
+3. 起始設定 Analytics，方法是使用 Android 應用程式物件，並將您的應用程式名稱提供給它。您還需要[**存取金鑰**](#analytics-clientkey)值。
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -76,7 +76,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
 起始設定應用程式，以啟用將日誌傳送至 {{site.data.keyword.mobileanalytics_short}} 服務。Swift SDK 適用於 iOS 及 watchOS。
 
-1. 將下列 `import` 陳述式新增至 `AppDelegate.swift` 專案檔開頭處，以匯入 `BMSCore` 及 `BMSAnalytics` 架構：
+1. 將下列 `import` 陳述式新增至 `AppDelegate.swift` 專案檔開頭處，以匯入 `BMSCore` 和 `BMSAnalytics` 架構：
 
   ```Swift
   import BMSCore
@@ -99,7 +99,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. 起始設定 Analytics，方法是將行動應用程式的名稱提供給它。您也需要[**存取金鑰**](#analytics-clientkey)值。
+3. 起始設定 Analytics，方法是將行動應用程式的名稱提供給它。您還需要[**存取金鑰**](#analytics-clientkey)值。
 
   應用程式名稱是用來作為過濾器，以在「{{site.data.keyword.mobileanalytics_short}} 儀表板」中搜尋用戶端日誌。跨平台（例如，Android 及 iOS）使用相同的應用程式名稱，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
 
@@ -109,7 +109,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
+      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -117,7 +117,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
+	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
 	```
 
   您可以使用 `Analytics.recordApplicationDidBecomeActive()` 及 `Analytics.recordApplicationWillResignActive()` 方法，來記錄 WatchOS 上的裝置事件。
@@ -148,14 +148,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 ```
 // Disable recording of usage analytics (for example, to save disk space)
 // Recording is enabled by default
-Analytics.disable();
-	
-// Enable recording of usage analytics
-Analytics.enable();
-	
-Analytics.log(eventJSONObject);
-	
-// Send recorded usage analytics to the Mobile Analytics Service
+Analytics.disable();// Enable recording of usage analytics
+Analytics.enable();Analytics.log(eventJSONObject);// Send recorded usage analytics to the Mobile Analytics Service
 Analytics.send();
 ```
 	
@@ -261,9 +255,7 @@ Logger.storeLogs(true);
 
 // Change the minimum log level (optional)
 // The default setting is Logger.LEVEL.DEBUG
-Logger.setLogLevel(Logger.LEVEL.INFO);
-
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
+Logger.setLogLevel(Logger.LEVEL.INFO);// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
 Logger.send();
 ```
 
@@ -397,7 +389,7 @@ Analytics.userIdentity = nil
 
   1. Visit the dashboard for the {{site.data.keyword.mobileanalytics_short}} service where you want to send analytics data and note the browser URL for the dashboard.
   2. Determine the value for reporting analytics, as follows:
-  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before `/analytics/console/dashboard`.  
+  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before ``/analytics/console/dashboard``.  
 
   		For example, if the dashboard URL is: `http://mobile-analytics-dashboard.ng.bluemix.net/analytics/console/dashboard?instanceId=12345abcde`
       {: screen}
@@ -500,9 +492,3 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
-
-# 相關鏈結
-
-## API 參考資料
-{: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

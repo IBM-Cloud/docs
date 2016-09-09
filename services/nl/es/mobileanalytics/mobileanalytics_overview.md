@@ -7,7 +7,6 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # Acerca de {{site.data.keyword.mobileanalytics_short}}  
-{: aboutmobileanalytics}
 *Última actualización: 21 de abril de 2016*
 {: .last-updated}
 

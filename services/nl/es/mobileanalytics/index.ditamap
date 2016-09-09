@@ -24,7 +24,7 @@ navtitle="Instalación del SDK de cliente de Swift" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html" navtitle="Preparación de la aplicación" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="Identificación de la clave de acceso" scope="peer"> </topicref>
+navtitle="Identificación de la clave de API" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
 navtitle="Inicialización de la app de Android" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"
