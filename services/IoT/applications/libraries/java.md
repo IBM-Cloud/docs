@@ -14,7 +14,7 @@ copyright:
 # Java for application developers
 {: #java}
 
-Last updated: 29 July 2016
+Last updated: 07 September 2016
 {: .last-updated}
 
 You can use Java to build and customize applications that interact with your organization on {{site.data.keyword.iot_full}}. Use the information and examples that are provided to start developing your applications by using Java.
@@ -39,7 +39,7 @@ The constructor builds the client instance and accepts a `Properties` object tha
 |`auth-key`   |An optional API key, which is required when auth-method is set to `apikey`.  |
 |`auth-token`   |An API key token, which is required when auth-method is set to `apikey`. |
 |`clean-session`|A true or false value that is required only if you want to connect the application in durable subscription mode. By default, `clean-session` is set to `true`.|
-|`shared-subscription`|A boolean value. Set to `true` if you would like to build scalable applications that balance the load of messages across multiple instances of the application. For more information, see [Scalable applications](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html#/scalable-applications#scalable-applications).
+|`shared-subscription`|A boolean value. Set to `true` if you would like to build scalable applications that balance the load of messages across multiple instances of the application. For more information, see [Scalable applications](mqtt.html#/scalable-applications#scalable-applications).
 
 The `Properties` object creates definitions that are used to interact with the {{site.data.keyword.iot_short_notm}} module. If you do not specify the properties for this object, or if you specify `quickstart`, the client connects to the {{site.data.keyword.iot_short_notm}} Quickstart service as an unregistered device.
 

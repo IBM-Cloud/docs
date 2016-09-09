@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,99 +13,42 @@ copyright:
 
 
 # MQTT connectivity for gateways
-Last updated: 10 June 2016
+{: #mqtt}
+Last updated: 6 September 2016
 {: .last-updated}
 
-Use MQTT clients as gateways to connect your devices to your {{site.data.keyword.iot_full}} instance.
-
+MQTT is the primary protocol that devices and applications use to communicate with the {{site.data.keyword.iot_full}}. Client libraries, information, and samples are provided to help you to use MQTT clients as gateways to connect your devices to {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
-## MQTT client connection
-{: #MQTT_client_connection}
+## Client connections
+{: #client_connections}
 
-To connect MQTT clients for gateways that are in your {{site.data.keyword.iot_short}} instance, use the following URL:
-
-<pre class="pre"><var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com</pre>
-{: codeblock}
-
-Where *orgId* is the unique organization ID that was generated when you registered the service instance.
-
-**Note:** In the {{site.data.keyword.iot_short_notm}} dashboard, devices and gateways that are connected directly to the {{site.data.keyword.iot_short_notm}} display a status icon to indicate that they are  connected. The dashboard displays devices that are connected indirectly through a gateway as disconnected as it does not have any knowledge of a devices connectivity to the gateway.
-
-
-### Unencrypted client connection
-{: #unencrypted_connection}
-
-For unencrypted client connections, connect on port **1883**.
-
-**Important:** Applications in the {{site.data.keyword.iot_short_notm}} submit information as plain text, including the API key and authentication token. To secure the transmission, always use an encrypted connection.
-
-
-### Encrypted client connection
-{: #encrypted_connection}
-
-For encrypted client connections, connect on port **8883**, or for WebSockets, connect on port **443**.
-
-Many client libraries require that you provide the server's public certificate in PEM format. To view the entire certificate chain for
-\*.messaging.internetofthings.ibmcloud.com, go to [messaging.pem](https://github.com/ibm-messaging/iot-python/blob/master/src/ibmiotf/messaging.pem).
-
-**Tip:** Some SSL client libraries do not support domains that include a wildcard. If you cannot successfully change libraries, disable certificate checking.
-
-**Prerequisites:** {{site.data.keyword.iot_short_notm}} requires Transport Layer Security (TLS) V1.2 and the following cipher suites:
-- ECDHE-RSA-AES256-GCM-SHA384
-- AES256-GCM-SHA384
-- ECDHE-RSA-AES128-GCM-SHA256
-- AES128-GCM-SHA256 *(as of 1 June 2015)*
-
-
-
-
-## MQTT client identifier
-{: #client_identifier}
-
-For a gateway to successfully authenticate, you must define each MQTT client ID by using the following format:
-
-```
-   g:*orgId*:*typeId*:*deviceId*
-```
-Where:
--   Lowercase **g** identifies that the client is a gateway
--   **org\_id** is the unique six character organization ID that was generated when you registered the service alphanumeric string that was assigned when you first registered the service.
--   **typeId** is intended to be used as an identifier of the type of gateway connecting, it may be useful to think of this as analogous
-    to a model number.
--   **deviceId** must uniquely identify a gateway device across all gateways of a specific type, it may be useful to think of this as analogous to a serial number.
-
-**Note:** You can use any scheme of your choice when assigning values for `typeId` and `deviceId`, however the following restrictions apply to both values:
--   Maximum length of 36 characters
--   Must comprise only alpha-numeric characters (`a-z`, `A-Z`, `0-9`) and the following special characters:
- -   dash(-)
- -   underscore(_)
- -   dot(.)
-
+For information about client security and how to connect MQTT clients as gateways, see [Connecting applications, devices, and gateways to {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
 ## MQTT authentication
 {: #authentication}
+For gateways and devices, {{site.data.keyword.iot_short_notm}} uses MQTT token-based authentication.
 
-### Username
+To enable MQTT authentication, submit a user name and password when you make an MQTT connection.
+
+### User name
 {: #username}
 
-The service currently only supports token-based authentication for devices, as such there is only one valid user name for gateways today.
-
-A value of `use-token-auth` indicates to the service that the authentication token for the gateway will be passed as the password for the MQTT connection.
+The user name is the same value for all gateways: ``use-token-auth``. This value causes {{site.data.keyword.iot_short_notm}} to use the gateway's authentication token, which is specified as the password.
 
 ### Password
 {: #password}
 
-When using token based authentication submit the device authentication token as the password when making your MQTT connection.
+The password for each gateway is the unique authentication token that was generated when the gateway was registered with {{site.data.keyword.iot_short_notm}}.
 
 ## Publishing events
 {: #pub_events}
 
-A gateway can publish events from itself and on behalf of any device connected via the gateway by using the following topic and substituting in the appropriate `typeId` and `deviceId` based on the intended origin of the event:
+A gateway can publish events from itself and on behalf of any device that is connected through the gateway. To publish events, use the following topic and substitute the appropriate `typeId` and `deviceId` based on the intended origin of the event:
 
-```
-iot-2/type/**typeId**/id/**deviceId**/evt/**eventId**/fmt/**formatString**
-```
+<pre class="pre">iot-2/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/evt/<var class="keyword varname">eventId</var>/fmt/<var class="keyword varname">formatString</var></pre>
+{: codeblock}
+
 
 **Example**
 
@@ -116,28 +59,25 @@ iot-2/type/**typeId**/id/**deviceId**/evt/**eventId**/fmt/**formatString**
 |Device 1 |mydevice |device1 |
 
 -   Gateway 1 can publish its own status events:  
-    `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
+    ``iot-2/type/mygateway/id/gateway1/evt/status/fmt/json``
 -   Gateway 1 can publish status events on behalf of Device 1:  
-    `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
+    ``iot-2/type/mydevice/id/device1/evt/status/fmt/json``
 
-**Important:** The message payload is limited to a maximum of 131072 bytes. Messages larger than this will be rejected.
+**Important:** The message payload is limited to a maximum of 131072 bytes. Messages larger than this limit are rejected.
 
 ## Subscribing to commands
 {: #subscribing_cmds}
 
-A gateway can subscribe to commands directed at the gateway itself and
-to any device connected via the gateway by using the following topic and
-substituting in the appropriate `typeId` and `deviceId`:
+A gateway can subscribe to commands that are directed at the gateway itself and to any device in the organization, including other gateways. To subscribe to commands, use the following topic and substitute the appropriate `typeId` and `deviceId`:
 
-```
-iot-2/type/**typeId**/id/**deviceId**/cmd/**commandId**/fmt/**formatString**
-```
+<pre class="pre">iot-2/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/cmd/<var class="keyword varname">commandId</var>/fmt/<var class="keyword varname">formatString</var></pre>
+{: codeblock}
 
-The MQTT `+` wildcard can be used for `typeId`, `deviceId`, `commandId` and `formatString` to subscribe to multiple command sources.
+The MQTT `+` wildcard can be used for `typeId`, `deviceId`, `commandId`, and `formatString` to subscribe to multiple command sources.
 
-**Example**
+**Example:**
 
-|Device |`typeID`|`deviceID`|
+|Device |`typeId`|`deviceId`|
 |:---|:---|
 |Gateway 1| mygateway   | gateway1   |
 |Device 1 | mydevice    | device1    |
@@ -147,36 +87,34 @@ The MQTT `+` wildcard can be used for `typeId`, `deviceId`, `commandId` and `for
     `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
 -   Gateway 1 can subscribe to commands sent to Device 1:  
     `iot-2/type/mydevice/id/device1/cmd/+/fmt/+`
--   Gateway 1 can subscribe any command sent to devices of type
-    "mydevice":  
+-   Gateway 1 can subscribe to any command that is sent to devices of type `mydevice`:  
      `iot-2/type/mydevice/id/+/cmd/+/fmt/+`
 
-**Warning**
-
-MQTT persistent sessions (cleansession=false) do not roam for devices that connect to gateways. What this means is that if a device connects to gateway A, then later connects to gateway B, it does not receive any messages that had been published to gateway A for that device while it was disconnected. A gateway owns the MQTT client and subscription, not the devices which are connected to the gateway.
+**Important:** MQTT persistent sessions that are specified as `cleansession=false`, do not search for devices that connect to gateways. If a device connects to gateway A, and then later connects to gateway B, it does not receive any messages that were published to gateway A for that device while it was disconnected. A gateway owns the MQTT client and subscription, but not the devices that are connected to the gateway.
 
 ## Gateway auto-registration
 {: #auto-reg}
 
-Gateway devices have the ability to automatically register devices which are connected to them. When a gateway publishes a message or subscribes to a topic on behalf of another device, that device will automatically be registered if it does not already exist.
+Gateway devices can automatically register devices that are connected to them. When a gateway publishes a message or subscribes to a topic on behalf of an unregistered device, that device is automatically registered.
 
-Registration requests from gateway devices are throttled to 10 pending requests at a time. If trying to connect many new devices to a gateway which have not previously been registered, then there may be some delay in the registration of the devices through the gateway.
-
-Gateway devices are limited to 500 active devices at a time. If exceeded, publish and subscribe requests for new devices will be dropped. The count is reset on gateway disconnect.
+Registration requests from gateway devices are throttled to 128 pending requests at a time. Attempting to connect many new devices might cause a delay in the registration of the devices through the gateway.
 
 **Warning**
 
-If the gateway fails to automatically register a device, then it will not attempt to register that device again for a short period of time. Any messages or subscriptions from the failed device will be dropped during that time.
+If the gateway fails to register a device automatically, it does not attempt to register that device again for a short time. Any messages or subscriptions from the failed device are dropped during that time.
 
 ## Gateway notifications
 {: #notification}
 
-When errors occur during the validation of the publish or subscribe topic, or during automatic registration, a notification will be sent to the gateway device. A gateway can receive these notifications by subscribing to the following topic, substituting the `typeId` and `deviceId` values:
+When errors occur during the validation of the publish or subscribe topic or during automatic registration, a notification is sent to the gateway device. A gateway can receive these notifications by subscribing to the following topic, substituting the `typeId` and `deviceId` values:
 
 ```
- ot-2/type/**typeId**/id/**deviceId**/notify
+iot-2/type/**typeId**/id/**deviceId**/notify
 ```
-Messages that are received on the notify topic contain the following format:
+<pre class="pre">iot-2/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/notify</pre>
+{: codeblock}
+
+Messages that are received on the notify topic use the following format:
 
 ```   
 {
@@ -185,99 +123,103 @@ Messages that are received on the notify topic contain the following format:
    "Topic": "<Topic>",
    "Type": "<Device_Type>",
    "Id": "<Device_Id>",
-   "Client": "<Client_ID",
-   "RC": <Return_Code>,
+   "Client": "<Client_ID>",
+   "RC": "<Return_Code>",
    "Message": "<Message>"
 }
 ```
-
--   Request\_Type: Either publish or subscribe
--   Timestamp: Time in ISO 8601 Format
--   Topic: The request topic from the gateway
--   Device\_Type: The device type from the topic
--   Device\_Id: The device id from the topic
--   ClientID: The client id of the request
--   RC: The return code
--   Message: The error message
+Where
+-   `Request_Type` values are either `publish` or `subscribe`
+-   `Timestamp` is the time in the ISO 8601 format
+-   `Topic` is the request topic from the gateway
+-   `Device_Type` is the device type from the topic
+-   `Device_Id` is the device ID from the topic
+-   `Client_ID` is the client ID of the request
+-   `Return_Code` is the return code
+-   `Message` is the error message
 
 A gateway can receive the following notifications:
 
--   Topic does not match with any allowed topic rules.
+-   Topic does not match any allowed topic rules.
 -   Device type is not valid.
--   Device id is not valid.
--   Maximum number of devices per gateway has been reached.
--   Maximum number of devices per organization has been reached.
--   Failed to create device due to internal errors.
+-   Device ID is not valid.
+-   Maximum number of devices per gateway is reached.
+-   Maximum number of devices per organization is reached.
+-   Failed to create device because of internal errors.
 
 ## Managed gateways
 {: #managed_gateways}
 
-Support for device lifecycle management is optional, the device management protocol used by {{site.data.keyword.iot_short_notm}} utilises the same MQTT connection that your gateway already uses for events and command control.
+Support for device lifecycle management is optional. The device management protocol that is used by {{site.data.keyword.iot_short_notm}} uses the same MQTT connection that the gateway uses for events and command control.
 
 ### Quality of service levels and clean session
 {: #quality_service}
 
-Managed gateways can publish messages with Quality of Service (QoS) level of 0 or 1. If QoS 1 is used, messages from the gateway will be queued if necessary. Messages from the gateway must not be retained messages.
+Managed gateways can publish messages that have a quality of service (QoS) level of 0 or 1. Messages from the gateway must not be retained messages.
 
-The {{site.data.keyword.iot_short_notm}} publishes requests with a QoS level of 1 to support queuing of messages. In order to queue messages sent while a managed gateway is not connected, the device should use `cleansession=false`.
+Messages with QoS=0 can be discarded and do not persist after the messaging server is restarted. Messages with QoS=1 can be queued and do persist after the messaging server is restarted. The durability of the subscription determines whether a request is queued. The ``cleansession`` parameter of the connection that made the subscription determines the durability of the subscription.  
+
+{{site.data.keyword.iot_short_notm}} publishes requests that have a QoS level of 1 to support queuing of messages. To queue messages that are sent while a managed gateway is not connected, configure the device not to use clean sessions by setting the ``cleansession`` parameter to false.
 
 **Warning**
 
-If your managed gateway uses a durable subscription (cleansession=false) you need to be aware that device management commands sent to your gateway while it is offline will be reported as failed operations, however, when the gateway later connects those requests will be actioned by the gateway.
+When a managed gateway uses a durable subscription, device management commands that are sent to the gateway while it is offline are reported as failed operations if the gateway does not reconnect to the service before the request times out. When the gateway reconnects, those requests are processed by the gateway. Durable subscriptions are specified by the ``cleansession=false`` parameter.
 
-When handling failures it is important to take this into account if you are using durable subscriptions for your managed gateways.
+The gateway owns the MQTT session, regardless of the devices that are behind it. When a device submits a subscription request through a gateway, the request does not roam to other gateways, regardless of whether the ``cleansession=false`` options is set.
 
 ### Topics
 {: #topics}
 
-A managed gateway must subscribe to two topics to handle requests and responses from {{site.data.keyword.iot_short_notm}}:
+A managed gateway must subscribe to the following topics to handle requests and responses from {{site.data.keyword.iot_short_notm}}:
 
 -   The managed gateway subscribes to device management responses on:  
 <pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/+</pre>
+{: codeblock}
 -   The managed gateway subscribes to device management requests on:  
 <pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/+</pre>
-    
-A managed gateway publishes:
-
-- Device management responses on:  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
-- Device management requests on:  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
-
 {: codeblock}
-    
-The gateway can process Device Management Protocol messages for both itself and on behalf other connected devices by using the relevant
-**typeId** and **deviceId**
+
+A managed gateway publishes the following responses and requests:
+
+- Device management responses are published on:  
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
+{: codeblock}
+- Device management requests are published on:  
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
+{: codeblock}
+
+The gateway can process Device Management Protocol messages for both itself and on behalf other connected devices by using the relevant **typeId** and **deviceId**.
 
 ### Message format
 {: #msg_format}
 
-All messages are sent in JSON format. There are two types of message.
+All messages are sent in JSON format.
 
-1.  Requests
+**Requests**
 
-    Requests are formatted as follows:
+Requests are formatted as shown in the following code sample:
 
-    ```   
+```   
     {  "d": {...}, "reqId": "b53eb43e-401c-453c-b8f5-94b73290c056" }
-    ```
+```
 
-    -   `d` carries any data relevant to the request
-    -   `reqId` is an identifier of the request, and must be copied into a response. If a response is not required, the field should be omitted.
+-   `d` carries any data that is relevant to the request
+-   `reqId` is an identifier of the request and must be copied into a response. If a response is not required, the field is not used.
 
-2.  Responses
+**Responses**
 
-    Responses are formatted as follows:
+Responses are formatted as shown in the following code sample:
 
-    ```   
+````   
     {
         "rc": 0,
         "message": "success",
         "d": {...},
         "reqId": "b53eb43e-401c-453c-b8f5-94b73290c056"
     }
-    ```
-    -   "rc" is a result code of the original request.
-    -   `message` is an optional element with a text description of the response code.
-    -   `d` is an optional data element accompanying the response.
-    -   `reqId` is the request ID of the original request. This is used to correlate responses with requests, and the device needs to ensure that all request IDs are unique. When responding to {{site.data.keyword.iot_short_notm}} requests, the correct `reqId` value must be sent in the response.
+```
+Where:
+-   `rc` is a result code of the original request.
+-   `message` is an optional element with a text description of the response code.
+-   `d` is an optional data element that accompanies the response.
+-   `reqId` is the request ID of the original request. The request ID is used to correlate responses with requests, and the device needs to ensure that all request IDs are unique. Responses to {{site.data.keyword.iot_short_notm}} requests must contain the correct `reqId` value.
