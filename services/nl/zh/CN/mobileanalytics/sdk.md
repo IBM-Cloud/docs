@@ -7,7 +7,7 @@ copyright:
 
 # 检测应用程序以使用 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK
 {: #mobileanalytics_sdk}
-*上次更新时间：2016 年 4 月 27 日*
+*上次更新时间：2016 年 8 月 1 日*
 {: .last-updated}
 
 使用 {{site.data.keyword.mobileanalytics_full}} SDK，您可以检测移动应用程序。
@@ -21,7 +21,7 @@ copyright:
 
 目前，Android、iOS 和 WatchOS 可以使用 SDK。
 
-## 识别服务凭证访问密钥
+## 识别访问密钥值
 {: #analytics-clientkey}
 
 在设置客户端 SDK 之前，先识别您的**访问密钥**值。初始化客户端 SDK 时，需要访问密钥。
@@ -51,7 +51,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // 确保指向您的区域
         } catch (MalformedURLException e) {
-            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
+            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -109,7 +109,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
+      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -117,7 +117,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
+	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
 	```
 
   您可以使用 `Analytics.recordApplicationDidBecomeActive()` 和 `Analytics.recordApplicationWillResignActive()` 方法，来记录 WatchOS 上的设备事件。
@@ -500,9 +500,3 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
-
-# 相关链接
-
-## API 参考
-{: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

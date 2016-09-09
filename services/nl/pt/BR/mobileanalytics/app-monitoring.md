@@ -4,94 +4,97 @@ copyright:
   years: 2015, 2016
 
 ---
-# Monitorando aplicativos com o {{site.data.keyword.mobileanalytics_short}}
+# Monitorando apps com o {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
-*Última atualização: 6 de maio de 2016*
+*Última atualização: 25 de abril de 2016*
 {: .last-updated}
 
 O {{site.data.keyword.mobileanalytics_full}} fornece monitoramento e análise para seus aplicativos móveis. É
 possível registrar logs de clientes e monitorar dados com o SDK do cliente do {{site.data.keyword.mobileanalytics_short}}. Os desenvolvedores podem controlar quando enviar esses dados para o serviço {{site.data.keyword.mobileanalytics_short}}. Quando os dados são entregues no {{site.data.keyword.mobileanalytics_short}}, é possível usar o painel do {{site.data.keyword.mobileanalytics_short}} para obter insights de análise sobre os aplicativos móveis, dispositivos e logs do cliente.
 {: shortdesc}
 
-<!--
-
-## Visualizing data with custom charts
+## Visualizando dados com gráficos customizados
 {: #custom-charts}
 
-You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
+É possível visualizar os dados de análise coletados em seu repositório de análise. Essa visualização é uma maneira poderosa de inspecionar dados para casos de uso específicos. É possível criar gráficos
+com dados que já foram coletados pelo Operational Analytics, além de dados customizados que você relata.
+{: #shortdesc}
 
+Saiba mais sobre o monitoramento e a resolução de problemas de travamentos do seu aplicativo.
 
-### Creating custom charts for client logs
+### Criando gráficos customizados para logs do cliente
 {: #custom-charts-client-logs}
 
-You can create a custom chart for client logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
+É possível criar um gráfico customizado para os logs do cliente que contêm informações de log que são enviadas com a API do Criador de Logs da plataforma. As informações de log também incluem informações contextuais sobre o dispositivo, incluindo ambiente, nome do aplicativo e versão do aplicativo.
 
-In this example, you use client log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
+Neste exemplo, você usa dados do log do cliente para criar um fluxograma. O gráfico final mostra a distribuição de níveis de log em um aplicativo específico. Você também tem os dados a seguir disponíveis para mostrar em um gráfico:
 
-* Specific data
-  * Log level
-* Message data
-  * Timestamp
-* Device OS contextual data
-  * Application name
-  * Application version
-  * Device OS
-* Device contextual data
-  * Device ID
-  * Device model
-  * Device OS version
+* Dados específicos
+  * Nível de Registro
+* Dados da Mensagem
+  * Registro de Data e Hora
+* Dados contextuais do S.O. do dispositivo
+  * Nome do Aplicativo
+  * Versão do aplicativo
+  * Sistema Operacional do Dispositivo
+* Dados contextuais do dispositivo
+  * ID do dispositivo
+  * Modelo do dispositivo
+  * Versão do S.O. do dispositivo
 
 
-1. Make sure that you have an application that is collecting device logs or gathering analytics.
-2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
-3. Click **Create Chart** to create a new custom chart and provide the following values:
-  * Chart Title: Application and Log Levels
-  * Event Type: Client Logs
-  * Chart Type: Flow Chart
-5. Click the **Chart Definition** tab and provide the following values:
-  * Source: Application Name
-  * Destination: Log Level
-  * Property: your app name
-7. Click **Save**
+1. Certifique-se de que você tenha um aplicativo que está coletando logs do dispositivo ou reunindo análise.
+2. No console do {{site.data.keyword.mobileanalytics_short}}, clique na guia **Gráficos customizados** na página **Painel**. É possível criar um gráfico com base nas mensagens de análise que foram enviadas para o servidor.
+3. Clique em **Criar gráfico** para criar um novo gráfico customizado.
+4. Forneça os seguintes valores:
+  * Título do gráfico: níveis de aplicativo e de log
+  * Tipo de evento: logs do cliente
+  * Tipo de gráfico: fluxograma
+5. Clique na guia **Definição do gráfico**.
+6. Forneça os seguintes valores:
+  * Origem: nome do aplicativo
+  * Destino: nível de log
+  * Propriedade: seu nome do aplicativo
+7. Clique em**Salvar**
 
-### Exporting custom data
+### Exportando dados customizados
 {: #export-custom-data}
 
-You can export the data from each custom chart into JSON, XML, or CSV format.
+Os dados de cada gráfico customizado podem ser exportados no formato JSON, XML ou CSV.
 
-The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
+A estrutura dos dados exportados depende do gráfico que está sendo exportado. Para exportar dados, clique no ícone de exportação na parte superior direita do gráfico customizado.
 
 
 
-### Exporting and importing custom chart definitions
+### Exportando e importando definições de gráfico customizadas
 {: #export-import-custom}
 
-You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
+É possível importar e exportar definições de gráfico customizadas programaticamente ou manualmente no Painel do {{site.data.keyword.mobileanalytics_short}}.
 
-Ensure that you have at least one custom chart in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
-In this example, you manually export and import custom chart definitions.
+Assegure-se de que você tenha pelo menos um gráfico customizado no Painel do {{site.data.keyword.mobileanalytics_short}}.
+Neste exemplo, você exporta e importa manualmente as definições de gráfico customizadas.
 
-1. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab in the **Dashboard** page.
-2. To export the custom chart definitions, click **Export Charts**. This action displays a dialog to save a `customChartsDefinition.json` file.
-3. Choose a location to save the file.
-4. Click the **Delete Chart** icon next to each custom chart to delete all custom charts.
-5. To import a custom chart definition, click **Import Charts**. This action displays a dialog to choose a file.
-6. Choose the `customChartsDefinition.json` file that you previously exported to open.
+1. No console do {{site.data.keyword.mobileanalytics_short}}, clique na guia **Gráficos customizados** na página **Painel**.
+2. Para exportar as definições de gráfico customizadas, clique em **Exportar gráficos**. Essa ação exibe um diálogo para salvar um arquivo `customChartsDefinition.json`.
+3. Escolha um local para salvar o arquivo.
+4. Clique no ícone **Excluir gráfico** próximo a cada gráfico customizado para excluir todos os gráficos customizados.
+5. Para importar uma definição de gráfico customizada, clique em **Importar gráficos**. Essa ação exibe um diálogo para escolher um arquivo.
+6. Escolha o arquivo `customChartsDefinition.json` que você exportou anteriormente para abrir.
 
-You can also export and import custom chart definitions programmatically by using your HTTP client of choice (for example, CURL or postman):
-* The GET endpoint for export is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
-* The POST endpoint for import is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
+Também é possível exportar e importar definições de gráfico customizadas programaticamente usando sua opção de cliente HTTP (por exemplo, CURL ou postman):
+* O terminal GET para exportação é `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
+* O terminal POST para importação é `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
 
-**Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
-
--->
+**Nota**: se você importar uma definição de gráfico customizada existente, acabará com definições duplicadas, o que também significa que o Painel do {{site.data.keyword.mobileanalytics_short}} mostra gráficos customizados duplicados.
 
 ## Configurando alertas
 {: #alerts}
 
-Você pode configurar limites em definições de alerta no {{site.data.keyword.mobileanalytics_short}} Console para monitorar melhor suas atividades.
+É possível configurar limites nas definições de alerta no MobileFirst Analytics Console para monitorar melhor as suas atividades.
+{: #shortdesc}
 
-É possível configurar limites que, se excedidos, acionarão alertas para notificar o monitor do Console do {{site.data.keyword.mobileanalytics_short}}. Os alertas acionados podem ser visualizados no console ou os alertas podem ser manipulados por um webhook customizado. Esse recurso fornece um meio proativo de detectar erros de log do cliente, erros de log do servidor, longos períodos de latência de rede e falhas de autenticação. Limites e alertas reativos evitam que você filtre seus dados e configure limites em um amplo espectro de granularidade.
+É possível configurar limites que, se excedidos, acionam alertas para notificar o monitor
+do MobileFirst Analytics Console. Os alertas acionados podem ser visualizados no console ou os alertas podem ser manipulados por um webhook customizado. Esse recurso fornece um meio proativo de detectar erros de log do cliente, erros de log do servidor, longos períodos de latência de rede e falhas de autenticação. Limites e alertas reativos evitam que você filtre seus dados e configure limites em um amplo espectro de granularidade.
 
 ### Criando uma definição de alerta para logs do cliente
 {: #alert-def-client-logs}
@@ -100,8 +103,8 @@ Você pode configurar limites em definições de alerta no {{site.data.keyword.m
 
 Neste exemplo, você usa os dados do log do cliente para criar uma definição de alerta. O alerta monitora todos os logs do cliente que foram recebidos nos últimos 5 minutos e continua a verificação a cada 5 minutos, até que a definição de alerta seja desativada ou excluída. Um alerta é acionado para cada dispositivo que enviou 3 ou mais logs de erro do cliente com o mesmo nome e versão de aplicativo.
 
-1. No Console do {{site.data.keyword.mobileanalytics_short}}, clique no ícone de sino para acessar a página **Log de alerta**.
-2. Acesse a página **Gerenciamento de alerta** e clique em **Criar alerta**.
+1. No MobileFirst Analytics Console, clique no ícone de sino para acessar a página**Log de alerta**.
+2. Acesse a página **Gerenciamento de alertas** e clique em Criar **alerta**.
 3. Forneça os seguintes valores:
 	* Nome do alerta: alerta para logs do cliente
 	* Mensagem: alerta de mensagem de erro
@@ -112,7 +115,8 @@ Neste exemplo, você usa os dados do log do cliente para criar uma definição d
 			* Tipo de Limite
 				* Tipo de limite: total para instância do aplicativo
 
-					**Nota**: se você escolher a opção Média para o aplicativo, os logs do cliente serão calculados pelo número de dispositivos. Por exemplo, se você tiver dois dispositivos, e um dispositivo enviar seis logs do cliente enquanto o outro dispositivo enviar três logs do cliente, a média será 4,5 logs do cliente.
+					Nota: se você escolher a opção Média para o aplicativo, será feita uma média dos logs
+do cliente pelo número de dispositivos. Por exemplo, se você tiver dois dispositivos, e um dispositivo enviar seis logs do cliente enquanto o outro dispositivo enviar três logs do cliente, a média será 4,5 logs do cliente.
 				* Operador: é maior que ou igual a 3
 	<!-- insert alert definition tab image? -->
 
@@ -134,7 +138,7 @@ Você criou uma definição de alerta para acionar um alerta no término de cada
 
 Neste exemplo, você usa os dados de travamento de aplicativo para criar uma definição de alerta. O alerta monitora todos os travamentos de aplicativo nos últimos 2 minutos e continua a verificação a cada 2 minutos, até que a definição de alerta seja desativada ou excluída. Um alerta é acionado para cada aplicativo que travou 5 ou mais vezes. Para obter mais informações sobre travamentos de aplicativo, veja [Travamentos de aplicativo](app_crash/c_op_analytics_crashes.html).
 
-1. No Console do {{site.data.keyword.mobileanalytics_short}}, clique no ícone **Alertas**. Essa ação abre a página Log de alerta.
+1. No MobileFirst Analytics Console, clique no ícone **Alertas**. Essa ação abre a página Log de alerta.
 2. Clique na guia **Gerenciamento de alerta** e clique em **Criar alerta**.
 3. Forneça os seguintes valores:
 	* Nome do alerta: alerta para travamentos de aplicativo
@@ -159,7 +163,7 @@ Neste exemplo, você usa os dados de travamento de aplicativo para criar uma def
 
 Neste exemplo, você gerencia suas definições de alerta a partir da página Gerenciamento de alerta.
 
-1. No Console do {{site.data.keyword.mobileanalytics_short}}, clique no ícone **Alertas**. Essa ação abre a página Log de alerta.
+1. No MobileFirst Analytics Console, clique no ícone **Alertas**. Essa ação abre a página Log de alerta.
 2. Clique na guia **Gerenciamento de alertas**.
 3. Opcional: alterne a caixa de seleção sob a coluna **Ativado** para ativar ou desativar uma definição de alerta específica.
 4. Opcional: clique no ícone **Duplicar** se desejar criar uma cópia de uma definição de alerta e mudar alguns valores.
@@ -171,7 +175,7 @@ Neste exemplo, você gerencia suas definições de alerta a partir da página Ge
 
 Neste exemplo, você visualiza os detalhes de seus alertas acionados a partir da página Log de alerta.
 
-1. No Console do {{site.data.keyword.mobileanalytics_short}}, clique no ícone **Alertas**. Essa ação abre a página Log de alerta.
+1. No MobileFirst Analytics Console, clique no ícone **Alertas**. Essa ação abre a página Log de alerta.
 2. Clique no ícone **+** para qualquer um dos alertas. Essa ação exibe as seções **Definição de alerta** e **Instâncias de alerta**.
 
     **Nota**: se a definição de alerta correspondente não foi excluída nem modificada, será possível editar a definição de alerta clicando em **Editar alerta**. Caso contrário, o botão **Editar alerta** estará indisponível e a mensagem a seguir será exibida:
@@ -183,12 +187,16 @@ Neste exemplo, você visualiza os detalhes de seus alertas acionados a partir da
 ## Travamentos de aplicativo
 {: #monitor-app-crash}
 
-É possível visualizar informações sobre travamento de aplicativo no Console do {{site.data.keyword.mobileanalytics_short}} para monitorar melhor e solucionar problemas de seus aplicativos.
+É possível visualizar informações sobre os travamentos do seu aplicativo no MobileFirst
+Analytics Console para monitorar melhor e solucionar problemas de seus apps.
+{: #shortdesc}
+
+Saiba mais sobre o monitoramento e a resolução de problemas de travamentos do seu aplicativo.
 
 ### Monitoramento de travamento de aplicativo
 {: #app-crash}
 
-É possível ver rapidamente as informações sobre travamentos de aplicativo na seção **Painel** do Console do {{site.data.keyword.mobileanalytics_short}}.
+É possível ver rapidamente as informações sobre os travamentos do seu aplicativo na seção **Painel** do IBM MobileFirst™ Analytics Console.
 
 Na página **Visão Geral** da seção **Painel**, o gráfico de barras **Travamentos** mostra um histograma de travamentos ao longo do tempo.
 
@@ -201,7 +209,7 @@ Na página **Visão Geral** da seção **Painel**, o gráfico de barras **Travam
 ### Resolução de problemas de travamento de aplicativo
 {: #app-crash-troubleshooting}
 
-É possível visualizar a página **Travamentos** na seção **Aplicativos** do Console do {{site.data.keyword.mobileanalytics_short}} administrar melhor seus aplicativos.
+É possível visualizar a página **Travamentos** na seção **Aplicativos** do IBM MobileFirst Analytics Console para administrar melhor os seus apps.
 
 A tabela **Visão geral de travamento** mostra as colunas de dados a seguir:
 

@@ -7,7 +7,7 @@ copyright:
 
 # {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 사용하도록 애플리케이션 인스트루먼트
 {: #mobileanalytics_sdk}
-*마지막 업데이트 날짜: 2016년 4월 27일*
+*마지막 업데이트 날짜: 2016년 8월 1일*
 {: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} SDK를 사용하면 모바일 애플리케이션을 인스트루먼트할 수 있습니다.
@@ -19,9 +19,9 @@ copyright:
 2. 사용자 정의 이벤트 - 이 카테고리에는 사용자를 정의하는 데이터 및 특정 앱에 대한 데이터가 포함됩니다. 이 데이터는 페이지 보기, 단추 탭 또는 앱 내 구매와 같은 앱에서 발생하는 이벤트를 표시합니다. 앱 내에서의 {{site.data.keyword.mobileanalytics_short}} SDK 초기화 외에도 추적할 각 사용자 정의 이벤트에 대해 한 행을 추가해야 합니다.
 3. 클라이언트 로그 메시지 - 이 카테고리를 사용하면 개발자가 개발 및 디버깅을 지원하기 위해 사용자 정의 메시지를 로그하는 앱을 통해 코드의 행을 추가할 수 있습니다. 개발자는 각 로그 메시지에 심각도/상세도 레벨을 지정하고, 레벨을 지정하여 후속적으로 메시지를 필터링하거나 지정된 로그 레벨보다 낮은 레벨의 메시지를 무시하도록 앱을 구성하여 스토리지 공간을 유지할 수 있습니다. 클라이언트 로그 데이터를 수집하려면 각 로그 메시지에 대해 코드의 한 행을 추가하고 앱 내에서 {{site.data.keyword.mobileanalytics_short}} SDK를 초기화해야 합니다.
 
-현재 SDK는 Android, iOS 및 WatchOS에 대해 사용 가능합니다.
+현재 SDK는 Android, iOS, WatchOS에서 사용 가능합니다. 
 
-## 서비스 신임 정보 액세스 키 식별
+## 액세스 키 값 식별
 {: #analytics-clientkey}
 
 클라이언트 SDK를 설정하기 전에 **액세스 키** 값을 식별하십시오. 액세스 키는 클라이언트 SDK를 초기화하는 데 필요합니다. 
@@ -36,7 +36,7 @@ copyright:
 
 {{site.data.keyword.mobileanalytics_short}} 서비스로 로그를 전송할 수 있도록 애플리케이션을 초기화하십시오.
 
-1. 다음 `import` 문을 프로젝트 파일의 시작 부분에 추가하여 클라이언트 SDK를 가져오십시오.
+1. 다음 `import` 문을 프로젝트 파일의 시작 부분에 추가하여 클라이언트 SDL를 가져오십시오. 
 
   ```
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
@@ -51,8 +51,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
-            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
-        }
+            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
+        } 
   ```
   {: codeblock}
 
@@ -61,7 +61,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Android 애플리케이션 오브젝트를 사용하고 사용자의 애플리케이션 이름을 제공하여 Analytics를 초기화하십시오. 또한 [**액세스 키**](#analytics-clientkey) 값이 필요합니다. 
+3. Android 애플리케이션 오브젝트를 사용하고 사용자의 애플리케이션 이름을 제공하여 Analytics를 초기화하십시오. [**액세스 키**](#analytics-clientkey) 값도 필요합니다. 
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -76,7 +76,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
 {{site.data.keyword.mobileanalytics_short}} 서비스로 로그를 전송할 수 있도록 애플리케이션을 초기화하십시오. Swift SDK는 iOS 및 watchOS에 대해 사용 가능합니다.
 
-1. 다음 `import` 문을 `AppDelegate.swift` 프로젝트 파일의 시작 부분에 추가하여 `BMSCore` 및 `BMSAnalytics` 프레임워크를 가져오십시오.
+1. 다음 `import` 문을 `AppDelegate.swift` 프로젝트 파일의 시작 부분에 추가하여 `BMSCore` 프레임워크와 `BMSAnalytics` 프레임워크를 가져오십시오. 
 
   ```Swift
   import BMSCore
@@ -99,7 +99,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. 사용자의 모바일 애플리케이션 이름을 제공하여 Analytics를 초기화하십시오. 또한 [**액세스 키**](#analytics-clientkey) 값이 필요합니다. 
+3. 사용자의 모바일 애플리케이션 이름을 제공하여 Analytics를 초기화하십시오. [**액세스 키**](#analytics-clientkey) 값도 필요합니다. 
 
   애플리케이션 이름은 {{site.data.keyword.mobileanalytics_short}} 대시보드에서 클라이언트 로그를 검색하기 위한 필터로 사용됩니다. 플랫폼(예: Android 및 iOS)에 걸쳐 동일한 애플리케이션 이름을 사용함으로써 로그가 전송된 플랫폼에 상관없이 동일한 이름 아래에서 애플리케이션의 모든 로그를 볼 수 있습니다.
 
@@ -109,7 +109,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     {: #ios-initialize-analytics}
 
       ```
-Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
+      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -117,7 +117,7 @@ Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
+	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
 	```
 
   `Analytics.recordApplicationDidBecomeActive()` 및 `Analytics.recordApplicationWillResignActive()` 메소드를 사용하여 WatchOS에 대한 디바이스 이벤트를 기록할 수 있습니다.
@@ -377,7 +377,7 @@ Analytics.userIdentity = nil
 
   1. Visit the dashboard for the {{site.data.keyword.mobileanalytics_short}} service where you want to send analytics data and note the browser URL for the dashboard.
   2. Determine the value for reporting analytics, as follows:
-  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before `/analytics/console/dashboard`.  
+  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before ``/analytics/console/dashboard``.  
 
   		For example, if the dashboard URL is: `http://mobile-analytics-dashboard.ng.bluemix.net/analytics/console/dashboard?instanceId=12345abcde`
       {: screen}
@@ -480,9 +480,3 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
-
-# 관련 링크
-
-## API 참조
-{: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

@@ -24,7 +24,7 @@ navtitle="安裝 Swift Client SDK" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html" navtitle="檢測應用程式" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="識別存取金鑰" scope="peer"> </topicref>
+navtitle="識別 API 金鑰" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
 navtitle="起始設定 Android 應用程式" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"

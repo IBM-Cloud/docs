@@ -6,91 +6,92 @@ copyright:
 ---
 # Anwendungen mit {{site.data.keyword.mobileanalytics_short}} überwachen
 {: #monitoringapps}
-*Letzte Aktualisierung: 6. Mai 2016*
+*Letzte Aktualisierung: 25. April 2016*
 {: .last-updated}
 
 Von {{site.data.keyword.mobileanalytics_full}} werden Überwachungs- und Analysefunktionen für mobile Anwendungen bereitgestellt. Mit dem {{site.data.keyword.mobileanalytics_short}}-Client-SDK können Sie Clientprotokolle aufzeichnen und Daten überwachen. Entwickler können steuern, wann diese Daten an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden sollen. Wenn die Daten an {{site.data.keyword.mobileanalytics_short}} übergeben werden, können Sie mit {{site.data.keyword.mobileanalytics_short}} Erkenntnisse aus Analysen zu mobilen Anwendungen, Geräten und Clientprotokollen verwenden.
 {: shortdesc}
 
-<!--
-
-## Visualizing data with custom charts
+## Daten mit angepassten Diagrammen darstellen
 {: #custom-charts}
 
-You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
+Sie können die erfassten Analysedaten im Analyse-Repository darstellen. Diese Darstellung ist eine hervorragende Möglichkeit, um Daten auf bestimmte Anwendungsfälle hin zu untersuchen. Zusätzlich zu den angepassten Daten in einem Bericht können Sie Diagramme mit Daten erstellen, die bereits mit Operational Analytics erfasst wurden.
+{: #shortdesc}
 
+Hier finden Sie weitere Informationen zur Überwachung und Fehlerbehebung von App-Abstürzen.
 
-### Creating custom charts for client logs
+### Benutzerdefinierte Diagramme für Clientprotokolle erstellen
 {: #custom-charts-client-logs}
 
-You can create a custom chart for client logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
+Sie können ein benutzerdefiniertes Diagramm für Clientprotokolle erstellen, die Protokollinformationen enthalten, die mit der Protokollfunktions-API der Plattform gesendet wurden. Die Protokollinformationen umfassen auch Kontextinformationen zum Gerät, einschließlich Umgebung, App-Name und App-Version.
 
-In this example, you use client log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
+Im folgenden Beispiel wird aus den Daten eines Clientprotokolls ein Ablaufdiagramm erstellt. Im endgültigen Diagramm wird die Verteilung der Protokollebenen in einer bestimmten App dargestellt. Außerdem können folgende Daten in einem Diagramm angezeigt werden:
 
-* Specific data
-  * Log level
-* Message data
-  * Timestamp
-* Device OS contextual data
-  * Application name
-  * Application version
-  * Device OS
-* Device contextual data
-  * Device ID
-  * Device model
-  * Device OS version
+* Specific data (Spezifische Daten)
+  * Log level (Protokollebene)
+* Message data (Nachrichtendaten)
+  * Timestamp (Zeitmarke)
+* Device OS contextual data (Kontextdaten des Betriebssystems des Geräts)
+  * Application name (Anwendungsname)
+  * Application version (Anwendungsversion)
+  * Device OS (Betriebssystem des Geräts)
+* Device contextual data (Kontextdaten des Geräts)
+  * Device ID (Geräte-ID)
+  * Device model (Gerätemodell)
+  * Device OS version (Version des Betriebssystems des Geräts)
 
 
-1. Make sure that you have an application that is collecting device logs or gathering analytics.
-2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
-3. Click **Create Chart** to create a new custom chart and provide the following values:
-  * Chart Title: Application and Log Levels
-  * Event Type: Client Logs
-  * Chart Type: Flow Chart
-5. Click the **Chart Definition** tab and provide the following values:
-  * Source: Application Name
-  * Destination: Log Level
-  * Property: your app name
-7. Click **Save**
+1. Stellen Sie sicher, dass Sie über eine Anwendung verfügen, von der Geräteprotokolle oder Analysedaten erfasst werden.
+2. Klicken Sie in der {{site.data.keyword.mobileanalytics_short}}-Konsole auf der Seite **Dashboard** auf die Registerkarte **Benutzerdefinierte Diagramme**. Sie können ein Diagramm auf der Basis der Analysenachrichten erstellen, die an den Server gesendet wurden.
+3. Klicken Sie auf **Diagramm erstellen**, um ein neues benutzerdefiniertes Diagramm zu erstellen.
+4. Geben Sie die folgenden Werte an:
+  * Chart Title: Application and Log Levels (Diagrammtitel: Anwendung und Protokollebenen)
+  * Event Type: Client Logs (Ereignistyp: Clientprotokolle)
+  * Chart Type: Flow Chart (Diagrammtyp: Ablaufdiagramm)
+5. Klicken Sie auf die Registerkarte **Diagrammdefinition**.
+6. Geben Sie die folgenden Werte an:
+  * Source: Application Name (Quelle: Anwendungsname)
+  * Destination: Log Level (Ziel: Protokollebene)
+  * Property: your app name (Eigenschaft: App-Name)
+7. Klicken Sie auf **Speichern**.
 
-### Exporting custom data
+### Angepasste Daten exportieren
 {: #export-custom-data}
 
-You can export the data from each custom chart into JSON, XML, or CSV format.
+Die Daten jedes benutzerdefinierten Diagramms können in das JSON-, XML- oder CSV-Format exportiert werden.
 
-The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
+Die Struktur der exportierten Daten hängt vom jeweils exportierten Diagramm ab. Klicken Sie zum Exportieren der Daten auf das Exportsymbol in der rechten oberen Ecke des angepassten Diagramms.
 
 
 
-### Exporting and importing custom chart definitions
+### Benutzerdefinierte Diagrammdefinitionen exportieren und importieren
 {: #export-import-custom}
 
-You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
+Sie können benutzerdefinierte Diagrammdefinitionen programmgestützt oder manuell im {{site.data.keyword.mobileanalytics_short}}-Dashboard importieren oder exportieren.
 
-Ensure that you have at least one custom chart in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
-In this example, you manually export and import custom chart definitions.
+Stellen Sie sicher, dass Sie im {{site.data.keyword.mobileanalytics_short}}-Dashboard über mindestens ein benutzerdefiniertes Diagramm verfügen.
+Im folgenden Beispiel exportieren und importieren Sie die Definitionen benutzerdefinierter Diagramme manuell.
 
-1. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab in the **Dashboard** page.
-2. To export the custom chart definitions, click **Export Charts**. This action displays a dialog to save a `customChartsDefinition.json` file.
-3. Choose a location to save the file.
-4. Click the **Delete Chart** icon next to each custom chart to delete all custom charts.
-5. To import a custom chart definition, click **Import Charts**. This action displays a dialog to choose a file.
-6. Choose the `customChartsDefinition.json` file that you previously exported to open.
+1. Klicken Sie in der {{site.data.keyword.mobileanalytics_short}}-Konsole auf der Seite **Dashboard** auf die Registerkarte **Benutzerdefinierte Diagramme**.
+2. Klicken Sie zum Exportieren der angepassten Diagrammdefinitionen auf **Diagramme exportieren**. Daraufhin wird ein Dialogfenster zum Speichern der Datei `customChartsDefinition.json` angezeigt.
+3. Wählen Sie eine Position zum Speichern der Datei aus.
+4. Klicken Sie auf das Symbol **Diagramm löschen** neben jedem angepassten Diagramm, um alle angepassten Diagramme zu löschen.
+5. Klicken Sie zum Importieren einer angepassten Diagrammdefinition auf **Diagramme importieren**. Daraufhin wird ein Dialogfenster zum Auswählen einer Datei angezeigt.
+6. Wählen Sie die Datei `customChartsDefinition.json` zum Öffnen aus, die Sie vorher exportiert haben.
 
-You can also export and import custom chart definitions programmatically by using your HTTP client of choice (for example, CURL or postman):
-* The GET endpoint for export is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
-* The POST endpoint for import is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
+Sie können benutzerdefinierte Diagrammdefinitionen mit einem HTTP-Client Ihrer Wahl (zum Beispiel CURL oder postman) auch programmgesteuert exportieren und importieren:
+* Der GET-Endpunkt für den Export lautet `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
+* Der POST-Endpunkt für den Import lautet `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
 
-**Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
-
--->
+**Hinweis:** Wenn Sie eine benutzerdefinierte Diagrammdefinition importieren, die bereits vorhanden ist, ist diese Definition doppelt vorhanden; dies bedeutet auch, dass das benutzerdefinierte Diagramm im {{site.data.keyword.mobileanalytics_short}}-Dashboard doppelt angezeigt wird.
 
 ## Alerts einstellen
 {: #alerts}
 
-Sie können Schwellenwerte in Alertdefinitionen in der {{site.data.keyword.mobileanalytics_short}}-Konsole einstellen, um die Aktivitäten besser zu überwachen.
+Sie können Schwellenwerte in Alertdefinitionen in der MobileFirst Analytics-Konsole einstellen, um die Aktivitäten besser zu überwachen.
+{: #shortdesc}
 
-Sie können Schwellenwerte so konfigurieren, dass bei ihrem Überschreiten Alerts ausgelöst werden, über die die {{site.data.keyword.mobileanalytics_short}}-Konsolenüberwachung benachrichtigt wird. Die ausgelösten Alerts können in der Konsole dargestellt oder von einem angepassten Web-Hook verarbeitet werden. Diese Funktion ist eine proaktive Möglichkeit, Clientprotokollfehler, Serverprotokollfehler, längere Zeiträume an Netzlatenz und Authentifizierungsfehler zu erkennen. Bei Verwendung von reaktiven Schwellenwerten und Alerts ist es nicht erforderlich, Daten zu untersuchen und für ein breites Spektrum an Granularität Schwellenwerte festzulegen.
+Sie können Schwellenwerte so konfigurieren, dass bei ihrem Überschreiten Alerts ausgelöst werden, über die die MobileFirst Analytics-Konsolenüberwachung benachrichtigt wird. Die ausgelösten Alerts können in der Konsole dargestellt oder von einem angepassten Web-Hook verarbeitet werden. Diese Funktion ist eine proaktive Möglichkeit, Clientprotokollfehler, Serverprotokollfehler, längere Zeiträume an Netzlatenz und Authentifizierungsfehler zu erkennen. Bei Verwendung von reaktiven Schwellenwerten und Alerts ist es nicht erforderlich, Daten zu untersuchen und für ein breites Spektrum an Granularität Schwellenwerte festzulegen.
 
 ### Alertdefinition für Clientprotokolle erstellen
 {: #alert-def-client-logs}
@@ -99,7 +100,7 @@ Sie können eine Alertdefinition erstellen, die auf Clientprotokollen basiert.
 
 Im folgenden Beispiel wird aus den Daten eines Clientprotokolls eine Alertdefinition erstellt. Vom Alert werden alle Clientprotokolle überwacht, die in den letzten fünf Minuten empfangen wurden; in Abständen von fünf Minuten werden sie vom Alert weiter überprüft, bis die Alertdefinition inaktiviert oder gelöscht wird. Ein Alert wird für jedes Geräte ausgelöst, von dem mindestens drei Clientfehlerprotokolle mit demselben App-Namen und derselben Version gesendet wurden.
 
-1. Klicken Sie in der {{site.data.keyword.mobileanalytics_short}}-Konsole auf das Glockensymbol, um auf die Seite für **Alert-Protokolle** zu wechseln.
+1. Klicken Sie in der MobileFirst Analytics-Konsole auf das Glockensymbol, um auf die Seite für **Alert-Protokolle** zu wechseln.
 2. Rufen Sie die Seite **Alert-Management** auf und klicken Sie auf **Alert erstellen**.
 3. Geben Sie die folgenden Werte an:
 	* Alert Name: Alert for client logs (Alert-Name: Alert für die Clientprotokolle)
@@ -111,7 +112,7 @@ Im folgenden Beispiel wird aus den Daten eines Clientprotokolls eine Alertdefini
 			* Threshold (Schwellenwert)
 				* Threshold Type: Total for Application Instance (Schwellenwerttyp: Gesamtwert für Anwendungsinstanz)
 
-					**Hinweis:** Wenn Sie die Option für den Anwendungsdurchschnitt auswählen, wird aus den Clientprotokollen und der Anzahl der Geräte ein Durchschnittswert berechnet. Beispiel: Wenn Sie über zwei Geräte verfügen und von einem Gerät sechs Clientprotokolle gesendet werden, vom anderen Gerät dagegen nur drei Protokolle, beträgt der Durchschnitt 4,5 Protokolle.
+					Hinweis: Wenn Sie die Option für den Anwendungsdurchschnitt auswählen, wird aus den Clientprotokollen und der Anzahl der Geräte ein Durchschnittswert berechnet. Beispiel: Wenn Sie über zwei Geräte verfügen und von einem Gerät sechs Clientprotokolle gesendet werden, vom anderen Gerät dagegen nur drei Protokolle, beträgt der Durchschnitt 4,5 Protokolle.
 				* Operator: is greater than or equals 3 (Operator: Größer gleich 3)(
 	<!-- insert alert definition tab image? -->
 
@@ -133,7 +134,7 @@ Sie können eine Alertdefinition erstellen, die auf App-Abstürzen basiert.
 
 Im folgenden Beispiel wird aus den Daten eines App-Absturzes eine Alertdefinition erstellt. Vom Alert werden alle App-Abstürze überwacht, die in den letzten zwei Minuten empfangen wurden; in Abständen von zwei Minuten werden sie vom Alert weiter überprüft, bis die Alertdefinition inaktiviert oder gelöscht wird. Ein Alert wird für jede App ausgelöst, die mindestens fünf Mal abgestürzt ist. Weitere Informationen zu App-Abstürzen finden Sie unter [App-Abstürze](app_crash/c_op_analytics_crashes.html).
 
-1. Klicken Sie in der {{site.data.keyword.mobileanalytics_short}}-Konsole auf das Symbol **Alerts**. Daraufhin wird die Seite für Alert-Protokolle angezeigt.
+1. Klicken Sie in der MobileFirst Analytics-Konsole auf das Symbol **Alerts**. Daraufhin wird die Seite für Alert-Protokolle angezeigt.
 2. Klicken Sie auf die Registerkarte **Alert-Management** und klicken Sie auf **Alert erstellen**.
 3. Geben Sie die folgenden Werte an:
 	* Alert Name: Alert for App Crashes (Alert-Name: Alert für App-Abstürze)
@@ -158,7 +159,7 @@ Im folgenden Beispiel wird aus den Daten eines App-Absturzes eine Alertdefinitio
 
 Im folgenden Beispiel verwalten Sie Alertdefinitionen auf der Seite 'Alert-Management'.
 
-1. Klicken Sie in der {{site.data.keyword.mobileanalytics_short}}-Konsole auf das Symbol **Alerts**. Daraufhin wird die Seite für Alert-Protokolle geöffnet.
+1. Klicken Sie in der MobileFirst Analytics-Konsole auf das Symbol **Alerts**. Daraufhin wird die Seite für Alert-Protokolle geöffnet.
 2. Klicken Sie auf die Registerkarte **Alert-Management**.
 3. Optional: Schalten Sie das Kontrollkästchen unter der Spalte **Enabled** (Aktiviert) ein bzw. aus, um eine bestimmte Alertdefinition zu aktivieren bzw. zu inaktivieren.
 4. Optional: Klicken Sie auf das Symbol zum Duplizieren, wenn Sie eine Kopie einer Alertdefinition erstellen und einige Werte verändern möchten.
@@ -170,7 +171,7 @@ Im folgenden Beispiel verwalten Sie Alertdefinitionen auf der Seite 'Alert-Manag
 
 Im folgenden Beispiel zeigen Sie die Details ausgelöster Alerts auf der Seite für Alert-Protokolle an.
 
-1. Klicken Sie in der {{site.data.keyword.mobileanalytics_short}}-Konsole auf das Symbol **Alerts**. Daraufhin wird die Seite für Alert-Protokolle angezeigt.
+1. Klicken Sie in der MobileFirst Analytics-Konsole auf das Symbol **Alerts**. Daraufhin wird die Seite für Alert-Protokolle angezeigt.
 2. Klicken Sie auf das Symbol **+** für einen beliebigen Alert. Daraufhin werden die Abschnitte mit den Alertdefinitionen und den Alert-Instanzen angezeigt.
 
     **Hinweis:** Wenn die entsprechende Alertdefinition nicht gelöscht oder geändert wurde, können Sie die Alertdefinition durch Klicken auf die Schaltfläche zum Bearbeiten von Alerts bearbeiten. Andernfalls ist die Schaltfläche zum Bearbeiten von Alerts nicht verfügbar und die folgende Nachricht wird angezeigt:
@@ -182,12 +183,15 @@ Im folgenden Beispiel zeigen Sie die Details ausgelöster Alerts auf der Seite f
 ## App-Abstürze
 {: #monitor-app-crash}
 
-Sie können Informationen zu App-Abstürzen in der {{site.data.keyword.mobileanalytics_short}}-Konsole anzeigen, um Ihre Apps besser überwachen und entsprechende Fehler beheben zu können.
+Sie können Informationen zu App-Abstürzen in der MobileFirst Analytics-Konsole anzeigen, um Ihre Apps besser überwachen und entsprechende Fehler beheben zu können.
+{: #shortdesc}
+
+Hier finden Sie weitere Informationen zur Überwachung und Fehlerbehebung von App-Abstürzen.
 
 ### Überwachung von App-Abstürzen
 {: #app-crash}
 
-Informationen zu App-Abstürzen können Sie im Abschnitt **Dashboard** der {{site.data.keyword.mobileanalytics_short}}-Konsole schnell anzeigen.
+Informationen zu App-Abstürzen können Sie im Abschnitt **Dashboard** der IBM MobileFirst™ Analytics-Konsole schnell anzeigen.
 
 Auf der Seite **Übersicht** des Abschnitts **Dashboard** wird im Balkendiagramm mit den Abstürzen ein Histogramm der Abstürze im zeitlichen Verlauf angezeigt.
 
@@ -200,7 +204,7 @@ Sie können die Daten auf zwei Arten anzeigen:
 ### Fehlerbehebung für App-Abstürze
 {: #app-crash-troubleshooting}
 
-Sie können die Seite für Abstürze im Abschnitt **Anwendungen** der {{site.data.keyword.mobileanalytics_short}}-Konsole anzeigen, um die Apps besser verwalten zu können.
+Sie können die Seite für Abstürze im Abschnitt **Anwendungen** der IBM MobileFirst Analytics-Konsole anzeigen, um die Apps besser verwalten zu können.
 
 In der Tabelle mit der Absturzübersicht werden die folgenden Datenspalten angezeigt:
 

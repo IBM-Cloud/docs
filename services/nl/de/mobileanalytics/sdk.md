@@ -7,7 +7,7 @@ copyright:
 
 # Anwendung zur Verwendung der Client-SDKs von {{site.data.keyword.mobileanalytics_short}} instrumentieren
 {: #mobileanalytics_sdk}
-*Letzte Aktualisierung: 27. April 2016*
+*Letzte Aktualisierung: 01. August 2016*
 {: .last-updated}
 
 Mit den {{site.data.keyword.mobileanalytics_full}}-SDKs können Sie die mobile Anwendung instrumentieren.
@@ -21,10 +21,10 @@ Mit den {{site.data.keyword.mobileanalytics_full}}-SDKs können Sie die mobile A
 
 Derzeit sind SDKs für Android, iOS und WatchOS verfügbar.
 
-## Eigenen Zugriffsschlüssel für Serviceberechtigungsnachweise ermitteln
+## Wert für Zugriffsschlüssel angeben
 {: #analytics-clientkey}
 
-Geben Sie einen Wert für den **Zugriffsschlüssel** an, bevor Sie das Client-SDK einrichten. Der Zugriffsschlüssel ist für die Initialisierung des Client-SDKs erforderlich.
+Geben Sie einen Wert für den **Zugriffsschlüssel** an, bevor Sie das Client-SDK konfigurieren. Der Zugriffsschlüssel ist für die Initialisierung des Client-SDKs erforderlich.
 
 1. Öffnen Sie das Dashboard für den {{site.data.keyword.mobileanalytics_short}}-Service.
 2. Klicken Sie auf die Registerkarte **Serviceberechtigungsnachweise**.
@@ -36,7 +36,7 @@ Geben Sie einen Wert für den **Zugriffsschlüssel** an, bevor Sie das Client-SD
 
 Initialisieren Sie die Anwendung, damit Protokolle an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden können.
 
-1. Importieren Sie das Client-SDK durch Hinzufügen der folgenden `import`-Anweisung oben in der Projektdatei:
+1. Importieren Sie das Client-SDK durch Hinzufügen der folgenden `import`-Anweisung am Anfang der Projektdatei:
 
   ```
   import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
@@ -52,7 +52,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH);
 // Sicherstellen, dass auf eigene Region verwiesen wird
         } catch (MalformedURLException e) {
-            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
+            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -77,7 +77,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
 Initialisieren Sie die Anwendung, damit Protokolle an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden können. Das Swift-SDK ist für iOS und WatchOS verfügbar.
 
-1. Importieren Sie die Frameworks `BMSCore` und `BMSAnalytics` durch Hinzufügen der folgenden `import`-Anweisungen oben in der Projektdatei `AppDelegate.swift`:
+1. Importieren Sie die Frameworks `BMSCore` und `BMSAnalytics` durch Hinzufügen der folgenden `import`-Anweisungen am Anfang der Projektdatei `AppDelegate.swift`:
 
   ```Swift
   import BMSCore
@@ -110,7 +110,7 @@ Initialisieren Sie die Anwendung, damit Protokolle an den {{site.data.keyword.mo
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
+      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -118,7 +118,7 @@ Initialisieren Sie die Anwendung, damit Protokolle an den {{site.data.keyword.mo
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
+	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
 	```
 
   Unter WatchOS können Sie Geräteereignisse mit den Methoden `Analytics.recordApplicationDidBecomeActive()` und `Analytics.recordApplicationWillResignActive()` aufzeichnen.
@@ -398,7 +398,7 @@ Analytics.userIdentity = nil
 
   1. Visit the dashboard for the {{site.data.keyword.mobileanalytics_short}} service where you want to send analytics data and note the browser URL for the dashboard.
   2. Determine the value for reporting analytics, as follows:
-  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before `/analytics/console/dashboard`.  
+  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before ``/analytics/console/dashboard``.  
 
   		For example, if the dashboard URL is: `http://mobile-analytics-dashboard.ng.bluemix.net/analytics/console/dashboard?instanceId=12345abcde`
       {: screen}
@@ -501,9 +501,3 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
-
-# Zugehörige Links
-
-## API-Referenz
-{: #api}
-* [REST-API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
