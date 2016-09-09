@@ -10,7 +10,7 @@ copyright:
 # Protezione delle risorse di back-end con il servizio {{site.data.keyword.amashort}}
 {: #protecting-resources}
 
-*Ultimo aggiornamento: 17 luglio 2016*
+Ultimo aggiornamento: 17 luglio 2016
 {: .last-updated}
 
 

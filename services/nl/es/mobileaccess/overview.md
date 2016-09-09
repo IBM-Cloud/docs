@@ -7,7 +7,7 @@ copyright:
 
 # Acerca de {{site.data.keyword.amashort}}
 {: #mca-overview}
-*Última actualización: 17 de julio de 2016*
+Última actualización: 22 de julio de 2016
 {: .last-updated}
 
 El servicio de {{site.data.keyword.amafull}} proporciona servicios de autenticación y supervisión para aplicaciones móviles y web que acceden a recursos alojados en {{site.data.keyword.Bluemix_notm}}.
@@ -33,7 +33,7 @@ Puede utilizar los siguientes tipos de autenticación en la app móvil:
 ## Visión general de la arquitectura
 {: #architecture}
 
-![imagen](images/mca-overview.jpg)
+![Diagrama de la visión general de la arquitectura](images/mca-overview.jpg)
 
 * Proteja los recursos de nube (aplicaciones Node.js) con el SDK del servidor de {{site.data.keyword.amashort}}.
 * Utilice la clase `Request` que proporciona el SDK del cliente de {{site.data.keyword.amashort}} para la comunicación con los recursos de nube protegidos.
@@ -43,22 +43,22 @@ Puede utilizar los siguientes tipos de autenticación en la app móvil:
 * Después de una autenticación satisfactoria, {{site.data.keyword.amashort}} devuelve una señal de autorización.
 * El SDK del cliente de {{site.data.keyword.amashort}} añade automáticamente la señal de autorización a la solicitud original y vuelve a enviar la solicitud al recurso de nube.
 * El SDK del servidor de {{site.data.keyword.amashort}} extrae la señal de acceso de la solicitud y la valida con el servicio de {{site.data.keyword.amashort}}.
-* Se otorga el acceso. La respuesta se devuelve a la aplicación móvil.
+* Se otorga el acceso.  La respuesta se devuelve a la aplicación móvil.
 
 ## Flujo de solicitudes
 {: #flow}
 n el diagrama siguiente se describe el flujo de una solicitud, desde el SDK del cliente a los proveedores de identidad y programa de fondo móvil.
 
-![imagen](images/mca-sequence-overview.jpg)
+![Diagrama del flujo de solicitudes](images/mca-sequence-overview.jpg)
 
-1. Utilice el SDK de {{site.data.keyword.amashort}} para realizar una solicitud a los recursos de fondo que están protegidos por el SDK del servidor de {{site.data.keyword.amashort}}.
+* Utilice el SDK de {{site.data.keyword.amashort}} para realizar una solicitud a los recursos de fondo que están protegidos por el SDK del servidor de {{site.data.keyword.amashort}}.
 * El SDK del servidor de {{site.data.keyword.amashort}} detecta una solicitud no autorizada y devuelve HTTP 401 y un ámbito de autorización.
 * El SDK del cliente de {{site.data.keyword.amashort}} detecta automáticamente el código HTTP 401 e inicia el proceso de autenticación.
 * El SDK del cliente de {{site.data.keyword.amashort}} contacta con el servicio de {{site.data.keyword.amashort}} y solicita que emita una cabecera de autorización.
 * El servicio de {{site.data.keyword.amashort}} solicita a la app del cliente que realice la autenticación primero proporcionando el cambio de autenticación según el tipo de autenticación configurado actualmente.
 * Según el tipo de autenticación, el SDK del cliente de {{site.data.keyword.amashort}}:
-   * **Autenticación de Facebook o Google:** procesa automáticamente el cambio de autenticación
-   * **Autenticación Personalizada**: obtiene las credenciales según la lógica que proporcione el desarrollador.
+   * Autenticación de Facebook o Google: procesa automáticamente el cambio de autenticación
+   * Autenticación personalizada: obtiene las credenciales basadas en la lógica que proporcione el desarrollador. 
 * Si se configura la autenticación de Facebook o Google, el SDK del cliente de {{site.data.keyword.amashort}} utiliza el SDK asociado para obtener las señales de acceso de Facebook o Google. Estas señales sirven de respuesta al cambio de autenticación.
 * Si se configura la autenticación Personalizada, el desarrollador debe obtener la respuesta al cambio de autenticación y suministrarla al SDK del cliente de {{site.data.keyword.amashort}}.
 * Después de obtenerse la respuesta al cambio de autenticación, se envía al servicio de {{site.data.keyword.amashort}}.
@@ -67,3 +67,19 @@ n el diagrama siguiente se describe el flujo de una solicitud, desde el SDK del 
 * A partir de este momento, todas las solicitudes realizadas con el SDK del cliente de {{site.data.keyword.amashort}} tendrán una cabecera de autorización nueva.
 * El SDK del cliente de {{site.data.keyword.amashort}} vuelve a enviar automáticamente la solicitud original que activó el flujo de autorización.
 * El SDK del servidor de {{site.data.keyword.amashort}} extrae la cabecera de autorización de la solicitud, valida la cabecera con el servicio de {{site.data.keyword.amashort}} y otorga acceso a un recurso de fondo.
+
+
+## Obtener ayuda y soporte para {{site.data.keyword.amashort}}
+{: #gettinghelp}
+
+Si tiene problemas o preguntas a la hora de utilizar {{site.data.keyword.amashort}}, obtendrá ayuda en la información que encuentre o planteando preguntas en el foro. También puede abrir una incidencia de soporte. 
+
+Si utiliza el foro para hacer preguntas, etiquete su pregunta para que los equipos de desarrolladores de {{site.data.keyword.Bluemix_notm}} la puedan ver. 
+
+* Si tiene preguntas técnicas sobre el desarrollo o despliegue de una app con {{site.data.keyword.amashort}}, publique la pregunta en [Stack Overflow](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window} y etiquete la pregunta con "ibm-bluemix" y "{{site.data.keyword.amashort}}".
+* Para preguntas referidas al servicio e instrucciones de cómo empezar, utilice el foro [IBM developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window}. 
+
+Consulte [Obtención de ayuda](https://www.{DomainName}/docs/support/index.html#getting-help) para obtener más detalles sobre el uso de los foros. 
+
+Para obtener información sobre cómo abrir una incidencia de soporte de IBM o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Cómo obtener soporte](https://www.{DomainName}/docs/support/index.html#contacting-support).
+

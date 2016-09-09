@@ -11,7 +11,7 @@ copyright:
 # Configurazione dell'SDK Android
 {: #getting-started-android}
 
-*Ultimo aggiornamento: 18 luglio 2016*
+Ultimo aggiornamento: 02 agosto 2016
 {: .last-updated}
 
 Strumenta la tua applicazione Android con l'SDK client {{site.data.keyword.amashort}}, inizializza l'SDK e effettua richieste a risorse protette e non protette.
@@ -37,12 +37,12 @@ L'SDK client {{site.data.keyword.amashort}} viene distribuito con Gradle, un ges
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
         name:'core',
-        version: '1.+',
+        version: '2.+',
         ext: 'aar',
         transitive: true
-    	// altre dipendenze
+    	// other dependencies  
 	}
 ```
 
@@ -71,7 +71,7 @@ Inizializza l'SDK passando i parametri `context`, `applicationGUID`, `applicatio
 					"applicationGUID",
 					BMSClient.REGION_UK);
 ```
-Sostituisci `BMSClient.REGION_UK` con la regione appropriata.
+Sostituisci `BMSClient.REGION_UK` con la regione appropriata.  Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Avatar** ![icona Avatar](images/face.jpg "icona Avatar")  nella barra del menu per aprire il widget **Account e supporto**.
 
 ## Effettuare una richiesta alla tua applicazione di back-end mobile
 {: #request}

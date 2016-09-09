@@ -10,7 +10,7 @@ copyright:
 # Protección de recursos de fondo con el servicio {{site.data.keyword.amashort}}
 {: #protecting-resources}
 
-*Última actualización: 17 de julio de 2016*
+Última actualización: 17 de julio de 2016
 {: .last-updated}
 
 

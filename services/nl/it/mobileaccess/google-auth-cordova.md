@@ -8,7 +8,8 @@ copyright:
 # Abilitazione dell'autenticazione Google per le applicazioni Cordova
 {: #google-auth-cordova}
 
-*Ultimo aggiornamento: 28 giugno 2016*
+
+Ultimo aggiornamento: 21 luglio 2016
 {: .last-updated}
 
 Per configurare le applicazioni Cordova per l'integrazione dell'autenticazione Google, devi apportare le modifiche in codice nativo dell'applicazione Cordova (Java, Objective-C o Swift). Ciascuna piattaforma deve essere configurata separatamente. Utilizza l'ambiente di sviluppo nativo per apportare modifiche nel codice nativo, ad esempio in Android Studio o Xcode.
@@ -48,11 +49,11 @@ I passi richiesti per configurare la piattaforma iOS di un'applicazione Cordova 
 
 1. Vai alla directory `Sources/Authenticators/IMFGoogleAuthentication` e copia (trascina e rilascia) tutti i file nel tuo progetto iOS in Xcode. I file che devi copiare sono:
 
-	> * IMFDefaultGoogleAuthenticationDelegate.h
-	> * IMFDefaultGoogleAuthenticationDelegate.m
-	> * IMFGoogleAuthenticationDelegate.h
-	> * IMFGoogleAuthenticationHandler.h
-	> * IMFGoogleAuthenticationHandler.m
+	* IMFDefaultGoogleAuthenticationDelegate.h
+	* IMFDefaultGoogleAuthenticationDelegate.m
+	* IMFGoogleAuthenticationDelegate.h
+	* IMFGoogleAuthenticationHandler.h
+	* IMFGoogleAuthenticationHandler.m
 
 Seleziona la casella di spunta **Copia file....**.
 
@@ -88,7 +89,7 @@ Dopo che l'SDK client è stato inizializzato, puoi iniziare a effettuare richies
 Devi disporre di una applicazione di backend protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`. Se devi configurare un endpoint `/protected`, consulta [Protezione delle risorse](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Prova a inviare una richiesta all'endpoint protetto della tua applicazione di back-end mobile nel tuo browser desktop aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`
+1. Prova a inviare una richiesta a un endpoint protetto della tua applicazione di back-end mobile nel tuo browser desktop aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`. 
 
 1. L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo MobileFirst Services è protetto con {{site.data.keyword.amashort}}; pertanto, possono accedere ad esso solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, vedrai `Unauthorized` nel tuo browser del desktop.
 
@@ -106,14 +107,14 @@ Devi disporre di una applicazione di backend protetta da {{site.data.keyword.ama
 	```
 
 
-1. Esegui la tua applicazione. Viene visualizzata la schermata di accesso a Google.
+1. Esegui la tua applicazione. Viene visualizzata la schermata di accesso a Google. 
 
-	![immagine](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![immagine](images/ios-google-login.png)
+	![Schermata di accesso a Gooogle](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Schermata di accesso a Gooogle](images/ios-google-login.png)
 	Questa schermata può avere un aspetto lievemente differente se sul tuo dispositivo non è installata l'applicazione Facebook o se non sei attualmente collegato a Facebook.
 1. Facendo clic su **OK**, stai autorizzando {{site.data.keyword.amashort}} a utilizzare la tua identità utente Google per scopi di autenticazione.
 
-1. 	La tua richiesta dovrebbe avere esito positivo. A seconda della piattaforma che stai utilizzando, dovresti vedere il seguente output nella console LogCat/Xcode
+1. 	La tua richiesta dovrebbe avere esito positivo. A seconda della piattaforma che stai utilizzando, visualizzerai il seguente output nella console LogCat/Xcode:
 
-	![immagine](images/android-google-login-success.png)
+	![Frammento di codice su android](images/android-google-login-success.png)
 
-	![immagine](images/ios-google-login-success.png)
+	![Frammento di codice su iOS](images/ios-google-login-success.png)

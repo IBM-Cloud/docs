@@ -7,7 +7,7 @@ copyright:
 # Envío de solicitudes con IMFURLProtocol
 {: #imfurl}
 
-*Última actualización: 22 de junio de 2016*
+Última actualización: 22 de junio de 2016
 {: .last-updated}
 
 En algunas situaciones, es posible que no pueda utilizar la clase `IMFResourceRequest` para el envío de solicitudes a recursos protegidos; por ejemplo, cuando algún código de terceros envía una solicitud a un recurso protegido. Una posible solución es utilizar la API `IMFURLProtocol`, junto con la llamada estándar `NSURLRequest (NSMutableURLRequest)`.

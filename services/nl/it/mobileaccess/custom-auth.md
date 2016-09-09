@@ -8,19 +8,22 @@ copyright:
 # Autenticazione utenti con un provider di identità personalizzato
 {: #custom-id}
 
-*Ultimo aggiornamento: 07 luglio 2016*
+Ultimo aggiornamento: 22 luglio 2016
 {: .last-updated}
 
 
 Crea un provider di identità personalizzato e implementare la tua logica per la raccolta e la convalida di credenziali. Un provider di identità personalizzato è un'applicazione web che espone un'interfaccia RESTful. Puoi ospitare il provider di identità personalizzato in loco oppure su {{site.data.keyword.Bluemix}}. Il solo requisito è che il provider di identità personalizzato deve essere accessibile da internet pubblica in modo che possa comunicare con il servizio {{site.data.keyword.amashort}}.
 
-## Panoramica del provider di identità personalizzato {{site.data.keyword.amashort}}
+## Flusso della richiesta di identità personalizzato {{site.data.keyword.amashort}} 
 {: #custom-id-ovr}
+
+
+### Flusso della richiesta client {{site.data.keyword.amashort}}
  Il seguente diagramma illustra come {{site.data.keyword.amashort}} si integra con un provider di identità personalizzato.
 
-![immagine](images/mca-sequence-custom.jpg)
+![Richiedi diagramma di flusso](images/mca-sequence-custom.jpg)
 
-1. Utilizza l'SDK {{site.data.keyword.amashort}} per effettuare una richiesta alle tue risorse di back-end che sono protette con l'SDK server {{site.data.keyword.amashort}}.
+* Utilizza l'SDK {{site.data.keyword.amashort}} per effettuare una richiesta alle tue risorse di back-end che sono protette con l'SDK server {{site.data.keyword.amashort}}.
 * L'SDK server {{site.data.keyword.amashort}} rileva una richiesta non autorizzata e restituisce il codice HTTP 401 e l'ambito di autorizzazione.
 * L'SDK client {{site.data.keyword.amashort}} rileva automaticamente l'HTTP 401 e avvia il processo di autenticazione.
 * L'SDK client {{site.data.keyword.amashort}} contatta il servizio {{site.data.keyword.amashort}} e richiede un'intestazione di autorizzazione.
@@ -34,6 +37,17 @@ Crea un provider di identità personalizzato e implementare la tua logica per la
 * Da questo punto in avanti, tutte le richieste effettuate con l'SDK client {{site.data.keyword.amashort}} hanno un'intestazione di autorizzazione di nuova acquisizione.
 * L'SDK client {{site.data.keyword.amashort}} reinvia automaticamente la richiesta originale che ha attivato il flusso di autorizzazione.
 * L'SDK server {{site.data.keyword.amashort}} estrae l'intestazione di autorizzazione dalla richiesta, la convalida presso il servizio {{site.data.keyword.amashort}} e concede l'accesso a una risorsa di back-end.
+
+### Flusso della richiesta dell'applicazione web {{site.data.keyword.amashort}}
+{: #mca-custom-web-sequence}
+
+Il flusso della richiesta dell'applicazione web {{site.data.keyword.amashort}} è simile al flusso del client mobile. Tuttavia, {{site.data.keyword.amashort}} protegge l'applicazione web, invece della risorsa di back-end {{site.data.keyword.Bluemix_notm}}.
+
+  * La richiesta iniziale viene inviata dall'applicazione web (da un modulo di accesso, ad esempio). 
+  * Il reindirizzamento finale è all'area protetta dell'applicazione stessa, invece che alla risorsa protetta di backend.  
+
+
+
 
 ## Descrizione dei provider di identità personalizzati
 {: #custom-id-about}
@@ -86,6 +100,7 @@ Quando crei un provider di identità personalizzato, puoi:
 
 ### Implementazione di esempio del provider di identità personalizzato
 {: #custom-sample}
+
 Utilizza una qualsiasi delle seguenti implementazioni di esempio Node.js di un provider di identità personalizzato come un riferimento quando sviluppi il tuo provider di identità personalizzato. Scarica il codice dell'applicazione integrale dai repository GitHub.
 
  * [Esempio semplice](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
@@ -104,6 +119,7 @@ di più richieste di verifica consente un processo di autenticazione articolato 
 
 ## Confronto tra la condizione con stato e quella senza stato
 {: #custom-id-state}
+
 Per impostazione predefinita, il provider di identità personalizzato è considerato un'applicazione senza stato. In alcuni casi, il provider di identità personalizzato potrebbe dover memorizzare lo stato correlato al processo di autenticazione. Un caso d'uso di esempio è un'autenticazione in più passi, dove il provider di identità personalizzato deve memorizzare il risultato del primo passo di autenticazione prima di procedere al passo successivo. Per supportare la funzionalità con stato, un provider di identità personalizzato deve generare uno stateID e fornirlo nella risposta al servizio {{site.data.keyword.amashort}}. Il servizio {{site.data.keyword.amashort}} deve passare lo stateID nelle richieste successive che appartengono al processo di autenticazione client.
 
 ## Area di autenticazione personalizzata

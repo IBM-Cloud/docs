@@ -8,10 +8,10 @@ copyright:
 # Abilitazione dell'autenticazione Google per le applicazioni web
 {: #google-auth-web}
 
-*Ultimo aggiornamento: 18 luglio 2016*
+Ultimo aggiornamento: 18 luglio 2016
 {: .last-updated}
 
-Utilizza Google Sign-In per autenticare gli utenti alla tua applicazione web.
+Utilizza Google Sign-In per autenticare gli utenti alla tua applicazione web. Aggiungi la funzionalità di sicurezza {{site.data.keyword.amashort}}. 
 
 
 ## Prima di cominciare
@@ -32,7 +32,7 @@ Per iniziare a usare Google come un provider di identità, creare un progetto ne
 3. Aggiungi l'API Google+. 
 3. Crea le credenziali utilizzando OAuth. Seleziona applicazione Web nel tipo di applicazione. Immetti l'URI di reindirizzamento {{site.data.keyword.amashort}} nella casella Authorized redirect
 URIs. L'URI di autorizzazione di reindirizzamento {{site.data.keyword.amashort}} può essere ottenuto dalla schermata di configurazione Google del dashboard {{site.data.keyword.amashort}} (vedi i seguenti passi). 
-6. Salva le modifiche. Prendi nota del segreto applicazione e dell'ID client Google.
+6. Salva le modifiche. Prendi nota del segreto applicazione e dell'ID client Google. 
 
 
 ## Configurazione di {{site.data.keyword.amashort}} per l'autenticazione Google
@@ -42,7 +42,7 @@ Dopo aver ottenuto il segreto e l'ID client Google, puoi abilitare l'autenticazi
 1. Fai clic sul tile {{site.data.keyword.amashort}}. Il dashboard {{site.data.keyword.amashort}} viene caricato.
 1. Fai clic sul pulsante nel pannello Google.
 1. Nella sezione **Configure for Web**:   
-    * Prendi nota del valore nella casella di testo **Mobile Client Access Redirect URI for Google Developer Console**. Questo è il valore che dovrai aggiungere alla casella **Authorized redirect URIs** in **Restrictions in the Client ID for Web application** di **Google Developers Portal** nel seguente passo 3.
+    * Prendi nota del valore nella casella di testo **Mobile Client Access Redirect URI for Google Developer Console**. Questo è il valore che dovrai aggiungere alla casella **Authorized redirect URIs** in **Restrictions in the Client ID for Web application** di **Google Developers Portal** nel passo 3. 
     * Immetti l'**ID client Google** e il **Segreto client**.
     * Immetti l'URI di reindirizzamento in **Your Web Application Redirect URIs**. Questo valore è per l'URI di reindirizzamento a cui accedere dopo che viene completato il processo di autorizzazione e viene determinato dallo sviluppatore.
 1. Fai clic su **Save**.
@@ -56,7 +56,7 @@ Per avviare il processo di autorizzazione:
 
 1. Richiama l'endpoint di autorizzazione (`authorizationEndpoint`) e l'ID client (`clientId`) dalle credenziali del servizio archiviate nella variabile di ambiente `VCAP_SERVICES`. 
 
-    **Nota:** nel caso tu abbia creato il servizio {{site.data.keyword.amashort}} prima dell'aggiunta del supporto web, potresti non avere endpoint di autorizzazione nelle credenziali del servizio. In questo caso utilizza i seguenti endpoint di autorizzazione nella tua regione Bluemix:
+    **Nota:** se hai creato il servizio {{site.data.keyword.amashort}} prima dell'aggiunta del supporto web, potresti non avere endpoint di autorizzazione nelle credenziali del servizio. In questo caso utilizza i seguenti endpoint di autorizzazione nella tua regione Bluemix: 
 
 
  	Stati Uniti Sud: 
@@ -71,10 +71,10 @@ Per avviare il processo di autorizzazione:
   	```
   	https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
   	```
-1. Crea l'URI del server dell'autorizzazione utilizzando `response_type("code")`, `client_id` e `redirect_uri` come parametri di query.
-1. Vai dalla tua applicazione web all'URI generato.
+2. Crea l'URI del server dell'autorizzazione utilizzando `response_type("code")`, `client_id` e `redirect_uri` come parametri di query.
+3. Vai dalla tua applicazione web all'URI generato.
   
-Il seguente esempio richiama i parametri dalla variabile `VCAP_SERVICES`, crea l'URL e invia la richiesta di reindirizzamento.
+Il seguente esempio richiama i parametri dalla variabile `VCAP_SERVICES`, creando l'URL e inviando la richiesta di reindirizzamento.
   
 ```Java
 var cfEnv = require("cfenv"); 
@@ -101,18 +101,17 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 		res.redirect(redirectUrl);
 	} 
 } 
-
-  ```
+```
 
 Tieni presente che il parametro `redirect_uri` rappresenta l'URI di reindirizzamento della tua applicazione web e deve essere uguale al valore definito nel dashboard {{site.data.keyword.amashort}}.
-Dopo il reindirizzamento dell'endpoint di autorizzazione l'utente visualizzerà un modulo di accesso da Google. Dopo che l'utente ha consesso le autorizzazioni ad accedere utilizzando l'identità Google, il servizio {{site.data.keyword.amashort}} richiamerà il tuo URI di reindirizzamento dell'applicazione web fornendo il codice concesso come un parametro di query.
+Dopo il reindirizzamento dell'endpoint di autorizzazione l'utente visualizzerà un modulo di accesso da Google. Dopo che l'utente ha consesso le autorizzazioni ad accedere utilizzando l'identità Google, il servizio {{site.data.keyword.amashort}} richiama il tuo URI di reindirizzamento dell'applicazione web fornendo il codice concesso come un parametro di query. 
 
 ## Ottenimento dei token
-Il passo successivo è quello di ottenere il token di accesso e i token di identità utilizzando il codice concesso ricevuto precedentemente. A tal fine: 
+Il passo successivo è quello di ottenere il token di accesso e i token di identità utilizzando il codice concesso ricevuto precedentemente. 
 
 1. Richiama token `tokenEndpoint`, `clientId` e `secret` dalle credenziali del servizio archiviate nella variabile di ambiente `VCAP_SERVICES`. 
   
-    **Nota:** nel caso tu abbia creato il servizio {{site.data.keyword.amashort}} prima dell'aggiunta del supporto web, potresti non avere endpoint di autorizzazione nelle credenziali del servizio. In questo caso utilizza i seguenti endpoint di autorizzazione nella tua regione Bluemix:
+    **Nota:** se hai creato il servizio {{site.data.keyword.amashort}} prima dell'aggiunta del supporto web, potresti non avere endpoint di autorizzazione nelle credenziali del servizio. In questo caso utilizza i seguenti endpoint di autorizzazione nella tua regione Bluemix: 
  
  	Stati Uniti Sud: 
  	```
@@ -131,7 +130,7 @@ Il passo successivo è quello di ottenere il token di accesso e i token di ident
  
 Il seguente codice richiama i valori necessari e li invia con una richiesta post:
     
-   ```Java
+```Java
   var cfEnv = require("cfenv");
   var base64url = require("base64url ");
   var request = require('request');
@@ -161,33 +160,33 @@ Il seguente codice richiama i valori necessari e li invia con una richiesta post
 	).auth(mcaCredentials.clientId, mcaCredentials.secret); 
   }
 ); 
-  ```
+```
 
-  Il parametro `redirect_uri` è l'URI per il reindirizzamento dopo l'esito positivo o negativo dell'autenticazione con Google+ e deve corrispondere a `redirect_uri` dal passo 1.  
+Il parametro `redirect_uri` è l'URI per il reindirizzamento dopo l'esito positivo o negativo dell'autenticazione con Google+ e deve corrispondere a `redirect_uri` dal passo 1.  
    
-Assicurati di inviare questa richiesta POST entro 10 minuti, dopo i quali il codice concesso scade. Dopo 10 minuti è necessario un nuovo codice.
+Assicurati di inviare questa richiesta POST entro 10 minuti, dopo i quali il codice concesso scade. Dopo 10 minuti è necessario un nuovo codice. 
 
-Il corpo della risposta POST conterrà il `access_token` e il `id_token` codificati in base64.
+Il corpo della risposta POST contiene il `access_token` e il `id_token` codificati in base64. 
 
-Come hai ricevuto l'accesso e i token di identità, puoi indicare la sessione web come autenticata e facoltativamente conservare questi token.  
+Quando hai ricevuto l'accesso e i token di identità, puoi indicare la sessione web come autenticata e facoltativamente conservare questi token.   
 
 
 ##Utilizzo dell'accesso ottenuto e del token di identità 
 
-Il token di identità contiene informazioni sull'identità dell'utente. Nel caso dell'autenticazione Google, il token conterrà tutte le informazioni che l'utente ha deciso di condividere, come il nome completo, l'url della foto del profilo, ecc.  
+Il token di identità contiene informazioni sull'identità dell'utente. Per l'autenticazione Google, il token conterrà tutte le informazioni che l'utente ha deciso di condividere, come il nome completo, l'URL della foto del profilo, e così via.   
 
-Il token di accesso abilita le comunicazioni con le risorse protette dai filtri di autorizzazione {{site.data.keyword.amashort}}, consulta [Protezione delle risorse](protecting-resources.html).
+Il token di accesso abilita le comunicazioni con le risorse protette dai filtri di autorizzazione {{site.data.keyword.amashort}}. Per ulteriori informazioni, vedi [Protezione delle risorse](protecting-resources.html).
 
-
-In modo che le richieste proteggano le risorse aggiungi un'intestazione dell'autorizzazione alle richieste con la seguente struttura: 
+Per effettuare richieste che proteggano le risorse aggiungi un'intestazione dell'autorizzazione alle richieste con la seguente struttura: 
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-**Nota:** 
+####Suggerimenti:
+{: tips} 
 
 * Il `accessToken` e il `idToken` devono essere separati da uno spazio vuoto.
 
-* Il `idToken` è facoltativo. Nel caso in cui non hai fornito il token di identità, è possibile accedere alla risorsa protetta ma non si riceveranno le informazioni sull'utente autorizzato. 
+* Il `idToken` è facoltativo. Se hai fornito il token di identità, è possibile accedere alla risorsa protetta ma non si riceveranno le informazioni sull'utente autorizzato.  
 
 
 

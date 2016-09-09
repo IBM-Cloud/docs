@@ -8,7 +8,7 @@ copyright:
 # Creación de un proveedor de identidad personalizado
 {: #custom-create}
 
-*Última actualización: 16 de junio de 2016*
+Última actualización: 16 de junio de 2016
 {: .last-updated}
 
 

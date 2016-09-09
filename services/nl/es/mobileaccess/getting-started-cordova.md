@@ -9,7 +9,7 @@ copyright:
 # Configuración del plug-in de Cordova
 {: #getting-started-cordova}
 
-*Última actualización: 17 de julio de 2016*
+Última actualización: 17 de julio de 2016
 {: .last-updated}
 
 Instrumente su aplicación de Cordova con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos y no protegidos.
@@ -37,7 +37,7 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 	cordova platform add ios
 	```
 
-1. Si ha añadido la plataforma Android, debe añadir el nivel de API mínimo admitido al archivo `config.xml` de la aplicación de Cordova. Abra el archivo `config.xml` y añada la línea siguiente al elemento `<platform name="android">`:
+2. Si ha añadido la plataforma Android, debe añadir el nivel de API mínimo admitido al archivo `config.xml` de la aplicación de Cordova. Abra el archivo `config.xml` y añada la línea siguiente al elemento `<platform name="android">`:
 
 	```XML
 	<platform name="android">  
@@ -49,7 +49,7 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 
 	El valor *minSdkVersion* debe ser superior a `15`. El valor *targetSdkVersion* debe ser al menos el último SDK de Android disponible desde Google.
 
-1. Si ha añadido el sistema operativo iOS, actualice el elemento `<platform name="ios">` con una declaración de destino:
+3. Si ha añadido el sistema operativo iOS, actualice el elemento `<platform name="ios">` con una declaración de destino:
 
 	```XML
 	<platform name="ios">
@@ -58,45 +58,47 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 	</platform>
 	```
 
-1. Instalación del plug-in de Cordova para {{site.data.keyword.amashort}}:
+4. Instalación del plug-in de Cordova para {{site.data.keyword.amashort}}:
 
  	```Bash
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Configure la plataforma para Android, iOS, o ambos.
+5. Configure la plataforma para Android, iOS, o ambos.
 
-	* **Android**
+	####Android
+	{: #cordova-android}
 
-		Antes de abrir el proyecto en Android Studio, cree la aplicación de Cordova mediante la interfaz de línea de mandatos (CLI) para evitar errores de compilación.
+	Antes de abrir el proyecto en Android Studio, cree la aplicación de Cordova mediante la interfaz de línea de mandatos (CLI) para evitar errores de compilación.
 
 		```
 		cordova build android
 		```
 
-	* **iOS**
+	####iOS
+	{: #cordova-ios}
 
-		Configure el proyecto Xcode del siguiente modo para evitar errores de compilación.
+	Configure el proyecto Xcode del siguiente modo para evitar errores de compilación.
 
-		1. Utilice la versión más reciente de Xcode para abrir el archivo `xcode.proj` en el directorio `<nombre_app>/platforms/ios`.
+	1. Utilice la versión más reciente de Xcode para abrir el archivo `xcode.proj` en el directorio `<nombre_app>/platforms/ios`.
 
-		**Importante:** si recibe el mensaje "Convertir a última sintaxis de Swift", pulse Cancelar.
+		**Importante:** Si recibe un mensaje para convertir a la última sintaxis de Swift, pulse Cancelar.
 
-		2. Vaya a **Valores de compilación > Compilador de Swift - Generación de código > Cabecera puente de Objective-C**, y añada la siguiente vía de acceso:
+	2. Vaya a **Valores de compilación > Compilador de Swift - Generación de código > Cabecera puente de Objective-C**, y añada la siguiente vía de acceso:
 
 			```
 			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. Vaya a **Valores de compilación > Enlazar > Vías de acceso de búsqueda de Runpath**, y añada el siguiente parámetro de Frameworks:
+	3. Vaya a **Valores de compilación > Enlazar > Vías de acceso de búsqueda de Runpath**, y añada el siguiente parámetro de Frameworks:
 
 			```
 			@executable_path/Frameworks
 			```
 
-		4. Cree y ejecute la aplicación con Xcode.
+	4. Cree y ejecute la aplicación con Xcode.
 
-1. Verifique que el plug-in se ha instalado correctamente ejecutando el siguiente mandato:
+6. Verifique que el plug-in se ha instalado correctamente ejecutando el siguiente mandato:
 
 	```Bash
 	cordova plugin list

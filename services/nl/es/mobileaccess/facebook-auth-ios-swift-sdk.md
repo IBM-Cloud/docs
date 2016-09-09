@@ -11,7 +11,7 @@ copyright:
 # Habilitación de la autenticación de Facebook para apps de iOS (SDK de Swift)
 {: #facebook-auth-ios}
 
-*Última actualización: 17 de julio de 2016*
+Última actualización: 1 de agosto de 2016
 {: .last-updated}
 
 Para utilizar Facebook como proveedor de identidad en las aplicaciones de iOS, añada y configure la plataforma iOS para la aplicación de Facebook.
@@ -26,7 +26,7 @@ Para utilizar Facebook como proveedor de identidad en las aplicaciones de iOS, a
 * Una aplicación de Facebook en el sitio Facebook for Developers. 
 
 
-**Importante:** no es necesario que instale el SDK propio de Facebook. El SDK de Facebook se instala automáticamente mediante el pod `BMSFacebookAuthentication` siguiente. Puede omitir el paso **Añadir el SDK de Facebook a su proyecto Xcode** al añadir o configurar la aplicación en el sitio Facebook for Developers.
+**Importante:** no es necesario instalar de forma independiente el SDK de SDK (`com.facebook.FacebookSdk`). El SDK de Facebook instala automáticamente mediante el pod {{site.data.keyword.amashort}} `BMSFacebookAuthentication`. Puede omitir el paso **Añadir el SDK de Facebook a su proyecto Xcode** cuando añada o configure su aplicación en el sitio web de Facebook para desarrolladores.
 
 **Nota:** Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK a finales del año en favor del nuevo SDK de Swift.
 ## Configuración de la aplicación de Facebook para la plataforma iOS
@@ -176,7 +176,7 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
  import BMSSecurity
  ```
 2. Inicialice el SDK del cliente.	Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
-Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono de cara (![cara](images/face.jpg "Icono de cara")) que se encuentra en la esquina superior izquierda del panel de control.
+Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono del **Avatar**  ![icono de Avatar](images/face.jpg "icono de Avatar") en la barra de menú para abrir el widget **Cuenta y soporte**
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -191,7 +191,7 @@ Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su apli
  FacebookAuthenticationManager.sharedInstance.register()
  ```
 
-1. Notifique la activación de la app al SDK de Facebook y registre el manejador de autenticación de Facebook añadiendo el código siguiente al método `application:didFinishLaunchingWithOptions` en el delegado de la app. Añada este código justo después de inicializar la instancia de BMSClient y registrar Facebook como gestor de autenticación.
+1. Notifique la activación de la app al SDK de Facebook y registre el manejador de autenticación de Facebook añadiendo el código siguiente al método `application:didFinishLaunchingWithOptions` en el delegado de la app. Añada este código justo después de inicializar la instancia de BMSClient y registrar Facebook como el gestor de autenticación. 
 
  ```Swift
   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)
@@ -274,4 +274,4 @@ FacebookAuthenticationManager.sharedInstance.logout(callBack)
 
  Para cambiar de usuario, debe invocar este código y el usuario debe finalizar su sesión en Facebook desde su navegador.
 
- Es opcional pasar `callBack` a la función de cierre de sesión.  También puede pasar `nil`.
+ Es opcional pasar `callBack` a la función de cierre de sesión. También puede pasar `nil`.

@@ -11,7 +11,7 @@ copyright:
 # Habilitación de la autenticación de Facebook para apps de Cordova
 {: #facebook-auth-cordova}
 
-*Última actualización: 15 de junio de 2016*
+Última actualización: 15 de junio de 2016
 {: .last-updated}
 
 
@@ -25,7 +25,7 @@ Utilice el entorno de desarrollo nativo para realizar cambios en el código nati
 {: #facebook-auth-before}
 Debe tener lo siguiente:
 * Un proyecto Cordova instrumentado con el SDK de cliente {{site.data.keyword.amashort}}; consulte [Configuración del plugin Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
-* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre cómo crear un programa de fondo {{site.data.keyword.Bluemix_notm}, consulte [Cómo empezar](index.html).
+* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de un programa de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
 * Un ID de aplicación de Facebook. Para obtener más información, consulte [Cómo obtener un ID de aplicación de Facebook desde el portal de desarrolladores de Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
@@ -66,7 +66,7 @@ Los pasos necesarios para configurar la plataforma iOS de una aplicación de Cor
 
 1. El SDK de Facebook se instalará en el directorio `~/Documents/FacebookSDK`. Navegue a ese directorio y copie (arrastre y suelte) el archivo `FacebookSDK.framework` al proyecto de iOS en Xcode.
 
-1. 	Pulse la raíz de proyecto en el panel izquierdo de Xcode y seleccione **Crear fases**.
+1. 	Pulse la raíz de proyecto en Xcode y seleccione **Crear fases**.
 
 1. Añada el archivo `FacebookSDK.framework` a la lista de bibliotecas enlazadas en **Enlace binario con bibliotecas**.
 
@@ -99,7 +99,7 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 1. Intente enviar una solicitud al punto final protegido de la aplicación de programa de fondo móvil recién creada desde su navegador. Abra el siguiente URL: `{rutaAplicación}/protected`. Por ejemplo: `http://my-mobile-backend.mybluemix.net/protected`
 <br/>El punto final `/protected` de una aplicación de programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se puede acceder a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
 
-1. Utilice la aplicación de Cordova para realizar solicitudes al mismo punto final. Añada el siguiente código después de inicializar `BMSClient`.
+1. Utilice la aplicación de Cordova para realizar solicitudes al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
 
 	```JavaScript
 	var success = function(data){
@@ -116,7 +116,7 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 
 	![imagen](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![imagen](images/ios-facebook-login.png)
 
-	> Esta pantalla puede ser ligeramente diferente si no tiene instalada la app de Facebook en su dispositivo, o bien si no ha iniciado sesión en Facebook.
+	Esta pantalla puede ser ligeramente diferente si no tiene instalada la app de Facebook en su dispositivo, o bien si no ha iniciado sesión en Facebook.
 
 1. Pulse **Aceptar** para autorizar que {{site.data.keyword.amashort}} utilice su identidad de usuario de Facebook para fines de autenticación.
 

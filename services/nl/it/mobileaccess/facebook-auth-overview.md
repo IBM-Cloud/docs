@@ -12,22 +12,24 @@ copyright:
 # Autenticazione degli utenti con le credenziali Facebook
 {: #facebook-auth-overview}
 
-*Ultimo aggiornamento: 15 giugno 2016*
+Ultimo aggiornamento: 22 luglio 2016
 {: .last-updated}
 
 Puoi configurare il servizio {{site.data.keyword.amashort}} per proteggere le risorse utilizzando Facebook come provider di identità. I tuoi utenti dell'applicazione mobile o web possono utilizzare le loro credenziali Facebook per l'autenticazione.
 {:shortdesc}
 
-**Importante**: non devi necessariamente installare separatamente l'SDK fornita da Facebook. L'SDK Facebook viene installato automaticamente dai gestori dipendenze quando configuri l'SDK client {{site.data.keyword.amashort}}.
+**Importante**: non devi necessariamente installare separatamente l'SDK client fornito da Facebook. L'SDK Facebook viene installato automaticamente dai gestori dipendenze quando configuri l'SDK client Facebook {{site.data.keyword.amashort}}. 
 
 ## Flusso della richiesta {{site.data.keyword.amashort}}
 {: #mca-facebook-sequence}
 
-Consulta il seguente diagramma semplificato per comprendere in che modo {{site.data.keyword.amashort}} si integra con Facebook per l'autenticazione.
+### Flusso della richiesta client mobile 
 
-![immagine](images/mca-sequence-facebook.jpg)
+Consulta il seguente diagramma per comprendere in che modo {{site.data.keyword.amashort}} si integra con Facebook per l'autenticazione, da un'applicazione client mobile. 
 
-1. Usa l'SDK client {{site.data.keyword.amashort}} per effettuare una richiesta alle tue risorse di back-end protette con l'SDK server {{site.data.keyword.amashort}}.
+![Diagramma del flusso della richiesta client mobile](images/mca-sequence-facebook.jpg)
+
+* Usa l'SDK client {{site.data.keyword.amashort}} per effettuare una richiesta alle tue risorse di back-end protette con l'SDK server {{site.data.keyword.amashort}}.
 * L'SDK server {{site.data.keyword.amashort}} rileva una richiesta non autorizzata e restituisce il codice HTTP 401 e l'ambito di autorizzazione.
 * L'SDK client {{site.data.keyword.amashort}} rileva automaticamente il codice HTTP 401 e avvia il processo di autenticazione.
 * L'SDK client {{site.data.keyword.amashort}} contatta il servizio {{site.data.keyword.amashort}} e richiede un'intestazione di autorizzazione.
@@ -40,13 +42,13 @@ Consulta il seguente diagramma semplificato per comprendere in che modo {{site.d
 * L'SDK client {{site.data.keyword.amashort}} reinvia automaticamente la richiesta originale che ha attivato il flusso di autorizzazione.
 * L'SDK server {{site.data.keyword.amashort}} estrae l'intestazione di autorizzazione dalla richiesta, la convalida presso il servizio {{site.data.keyword.amashort}} e concede l'accesso a una risorsa di back-end.
 
-## Flusso della richiesta dell'applicazione web {{site.data.keyword.amashort}}
-{: #mca-facebook-sequence}
+### Flusso della richiesta dell'applicazione web {{site.data.keyword.amashort}}
+{: #mca-facebook-web-sequence}
+
 Il flusso della richiesta dell'applicazione web {{site.data.keyword.amashort}} è simile al flusso del client mobile. Tuttavia, {{site.data.keyword.amashort}} protegge l'applicazione web, invece della risorsa di back-end {{site.data.keyword.Bluemix_notm}}.
 
-  * La richiesta iniziale viene inviata dall'applicazione web (da un modulo di accesso, ad esempio).
-  * Il reindirizzamento finale è all'applicazione stessa, invece che alla risorsa protetta di backend. 
-
+  * La richiesta iniziale viene inviata dall'applicazione web (da un modulo di accesso, ad esempio). 
+  * Il reindirizzamento finale è all'area protetta dell'applicazione stessa, invece che alla risorsa protetta di backend.  
 
 
 ## Ottenimento di un ID applicazione Facebook dal portale sviluppatori Facebook
@@ -56,7 +58,7 @@ Per iniziare a utilizzare Facebook come provider di identità, devi creare un'ap
 
 1. Apri il [portale sviluppatori Facebook](https://developers.facebook.com).
 
-1. Fai clic su **My Apps** nel menu in alto e seleziona **Create a new app**.
+1. Fai clic su **My Apps** nel menu e seleziona **Create a new app**.
 Seleziona l'applicazione iOS o Android e fai clic su **Skip and Create App ID** nella successiva schermata.
 
 1. Imposta il nome di visualizzazione dell'applicazione di tua scelta e seleziona una categoria. Fai clic su **Create App ID** per continuare.

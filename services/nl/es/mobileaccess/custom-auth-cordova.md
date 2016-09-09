@@ -8,7 +8,7 @@ copyright:
 # Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} Cordova
 {: #custom-cordova}
 
-*Última actualización: 17 de julio de 2016*
+Última actualización: 17 de julio de 2016
 {: .last-updated}
 
 
@@ -37,6 +37,14 @@ Inicialice el SDK pasando los parámetros applicationGUID y applicationRoute.
 
 	```
  Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** del panel **Opciones móviles** de la aplicación en el panel de control de {{site.data.keyword.Bluemix_notm}}.
+
+
+##Inicialización de {{site.data.keyword.amashort}} AuthorizationManager
+Inicialice AuthorizationManager especificando en el servicio de {{site.data.keyword.amashort}} el parámetro `tenantId` que obtiene al pulsar en el botón **Mostrar credenciales** en el mosaico del servicio de {{site.data.keyword.amashort}}.
+
+  ```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
 
 ## Interfaz de escucha de autenticación
 {: #custom-cordva-auth}

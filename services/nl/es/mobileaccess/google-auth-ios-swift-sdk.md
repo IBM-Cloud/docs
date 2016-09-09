@@ -11,7 +11,7 @@ copyright:
 # Habilitación de la autenticación de Google en apps para iOS (SDK de Swift)
 {: #google-auth-ios}
 
-*Última actualización: 17 de julio de 2016*
+Última actualización: 1 de agosto de 2016
 {: .last-updated}
 
 Utilice el inicio de sesión de Google para autenticar usuarios en su app Swift de {{site.data.keyword.amashort}} iOS. El nuevo SDK de {{site.data.keyword.amashort}} Swift amplia y mejora la funcionalidad proporcionada por el SDK Objetive-C de Mobile Client Access existente.
@@ -40,7 +40,7 @@ Este proceso:
 
 En los pasos siguientes se ofrece una breve descripción de las tareas necesarias para preparar su app. 
 
-**Nota:** no es necesario añadir `Google/SignIn` CocoaPod. El SDK necesario se añade mediante `BMSGoogleAuthentication` CocoaPod a continuación.
+**Nota:** No es necesario añadir Google Sign-In CocoaPod. El SDK necesario se añade mediante `BMSGoogleAuthentication` CocoaPod.
 
 1. Anote el **identificador del paquete** en su proyecto Xcode de la sección **Identity** de la pestaña **General** del destino principal. Lo necesita para crear el proyecto de inicio de sesión de Google.
 
@@ -134,7 +134,7 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
  import BMSSecurity
  ```
 
-1. Utilice el código siguiente para inicializar el SDK del cliente. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}m pulse en el icono de c ara (![Cara](/face.png "Cara")) que se encuentra en la esquina superior derecha del panel de control. 
+1. Utilice el código siguiente para inicializar el SDK del cliente. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono del **Avatar**  ![icono de Avatar](images/face.jpg "icono de Avatar") en la barra de menú para abrir el widget **Cuenta y soporte**
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -143,7 +143,7 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
  // Inicialice el SDK del cliente.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -219,6 +219,6 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
  GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  Si invoca este código después de que el usuario haya iniciado sesión en Google y el usuario intenta iniciar sesión de nuevo, se le solicitará que autorice a {{site.data.keyword.amashort}} para utilizar Google para llevar a cabo la autenticación. En este punto, el usuario puede pulsar el nombre de usuario que aparece en la esquina superior derecha de la pantalla para seleccionar e iniciar sesión con otro usuario.
+  Si invoca este código después de que el usuario haya iniciado sesión en Google y el usuario intenta iniciar sesión de nuevo, se le solicitará que autorice a {{site.data.keyword.amashort}} para utilizar Google para llevar a cabo la autenticación. En este punto, el usuario puede pulsar el nombre de usuario <!--in the upper-right corner of the screen--> para seleccionar e iniciar sesión con otro usuario.
 
    Es opcional pasar `callBack` a la función de cierre de sesión. También puede pasar `nil`.

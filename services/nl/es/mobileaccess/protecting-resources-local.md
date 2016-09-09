@@ -8,10 +8,10 @@ copyright:
 # Uso de {{site.data.keyword.amashort}} con un entorno de desarrollo local
 {: #protecting-local}
 
-*Última actualización: 17 de julio de 2016*
+Última actualización: 16 de agosto de 2016
 {: .last-updated}
 
-Puede configurar su desarrollo local para que utilice el servicio de {{site.data.keyword.amashort}} que se ejecuta en {{site.data.keyword.Bluemix}}. Específicamente, puede desarrollar código de forma local utilizando el SDK del servidor de {{site.data.keyword.amashort}} y enviar solicitudes de {{site.data.keyword.amashort}} al servidor de desarrollo. Estas solicitudes las protegerá el servicio de {{site.data.keyword.amashort}} que se ejecuta en {{site.data.keyword.Bluemix}}.
+Puede configurar su desarrollo local para que utilice el servicio de {{site.data.keyword.amafull}} que se ejecuta en {{site.data.keyword.Bluemix}}. Específicamente, puede desarrollar código de forma local utilizando el SDK del servidor de {{site.data.keyword.amashort}} y enviar solicitudes de {{site.data.keyword.amashort}} al servidor de desarrollo. Estas solicitudes las protegerá el servicio de {{site.data.keyword.amashort}} que se ejecuta en {{site.data.keyword.Bluemix}}.
 
 ## Configuración del SDK del servidor
 {: #serversetup}
