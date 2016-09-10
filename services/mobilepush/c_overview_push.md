@@ -57,6 +57,10 @@ Platform specific Push Notifications cloud services such as Google Cloud Messagi
 
 NOTE : Earlier applications were required to pass the clientSecret only when registering or updating devices with userId field.  All other APIs invoked by mobile / browser clients did not require the clientSecret.  These old applications can continue with this behaviour of optionally using the clientSecret for the device registration / update calls.  However it is strongly recommended that clientSecret check is enforced for all client API calls.  To enforce this in old applications there is a new 'verifyClientSecret' API that is published.  For all new applications clientSecret check will be enforced on all client API calls and this behaviour cannot be changed even with the 'verfiyClientSecret' API.
 
+Keep the 'clientSecret' confidential and never hard-coded into the mobile app. There are various application initialization patterns that can be used to pull in the 'clientSecret' dynamically during the application's runtime. The sequence diagram outlines on such possible pattern.
+
+![Enable_Push](images/init_client_secret.jpg) 
+
 ## {{site.data.keyword.mobilepushshort}} types
 {: #overview-push-types}
 
