@@ -8,7 +8,7 @@ copyright:
 #	Using the Professional 1 Application plan
 {: #using_mobilefoundation_p2}
 
-Last updated: 01 September 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
 With the Professional 1 Application plan users can create 1 mobile application with multiple mobile operating systems.
@@ -76,6 +76,29 @@ The process of provisioning your server starts. This process takes about 10 minu
 
 
 <!--This console runs inside the container.--> With the console you can manage your mobile apps, adapters and mobile devices, use your server as a mobile backend, send push notifications, and do more.
+
+##  Adding Mobile Analytics server
+{: #adding_analytics_server_prof}
+
+ You can now monitor your mobile application on {{site.data.keyword.mobilefirst}} server by adding a Mobile Analytics server to the {{site.data.keyword.mobilefoundation_short}} service instance.
+
+ Professional plan creates the Mobile Analytics server in a container group, user can customize the configuration by selecting the number of container nodes in the container group.
+
+ Users can also attach volumes to the containers to persist data. The volume once selected cannot be changed. 20 GB is the default file share space available to the user. If the user needs additional storage space to persist analytics data, he is required to buy additional file share and create a volume using this file share. He can then select this new volume while deploying the analytics server.
+
+ For more information on adding volumes to {{site.data.keyword.containerlong}}, refer to [Storing persistent data in a volume by using the {{site.data.keyword.Bluemix_notm}} Dashboard  ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+
+* Click **Add Analytics** to add the Mobile Analytics server to the {{site.data.keyword.mobilefoundation_short}} service instance.
+
+The process of provisioning starts. This process takes about 10 minutes, and a message window indicates the progress of this operation.  
+
+* Launch the MobileFirst Analytics Console from the {{site.data.keyword.mfp_oc_short_notm}}.
+
+* Single sign-on is enabled between the {{site.data.keyword.mfserver_short_notm}} and the Mobile Analytics server. Mobile Analytics server is configured with the same LTPA keys and user credentials as the {{site.data.keyword.mfserver_short_notm}} server. You can use the same `username` and `password` to log in to the Mobile Analytics console as used to log in to the {{site.data.keyword.mfp_oc_short_notm}}.
+
+For more information on MobileFirst Analytics you can refer to [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/).
+
+**Note:** The Mobile Analytics server is removed when you delete the {{site.data.keyword.mobilefoundation_short}} service instance or when you attempt to re-create the {{site.data.keyword.mfserver_short_notm}}.
 
 ## Re-creating the {{site.data.keyword.mobilefirst}} server
 {: #recreate_mobilefoundation_p2}
