@@ -14,7 +14,7 @@ copyright:
 
 # Device Management Protocol
 {: #index}
-Last updated: 07 September 2016
+Last updated: 13 September 2016
 {: .last-updated}
 
 ## Introduction
@@ -55,7 +55,7 @@ The following table shows the return codes that are generated at various stages 
 |501   |Operation not implemented|
 
 
-## Manage device
+## Manage Device requests
 {: #manage_device_request}
 
 A device uses the Manage Device request to become a managed device. The Manage Device request must be the first device management request that is sent by the device after connecting to the {{site.data.keyword.iot_short_notm}}. A device management agent typically sends this type of request whenever it starts or restarts.
@@ -63,15 +63,15 @@ A device uses the Manage Device request to become a managed device. The Manage D
 **Important:** Support for this operation is mandatory for any managed devices.
 
 
-### Topic
+### Topic for a Manage Device request
 
-A device publishes this request to the following topic:
+A device publishes a Manage Device request to the following topic:
 
 ```
 iotdevice-1/mgmt/manage
 ```
 
-The server responds to this request on the following topic:
+The server responds to a Manage Device request on the following topic:
 
 ```
 iotdm-1/response
@@ -80,12 +80,12 @@ iotdm-1/response
 
 
 
-### Message format
+### Message format for a Manage Device request
 
 
-For the request, the ``d`` field and all of its subfields are optional. The ``metadata`` and ``deviceInfo`` field values replace the corresponding attributes for the sending device if they are sent.
+In a Manage Device request, the ``d`` field and all of its subfields are optional. The ``metadata`` and ``deviceInfo`` field values replace the corresponding attributes for the sending device if they are sent.
 
-The optional ``lifetime`` field specifies the length of time in seconds in which the device must send another Manage Device request to avoid being classified as dormant and becoming an unmanaged device. If the ``lifetime`` is omitted or set to ``0``, the managed device does not become dormant. The minimum supported setting for the ``lifetime`` field is ``3600`` seconds, which is 1 hour.
+The optional ``lifetime`` field specifies the length of time in seconds in which the device must send another Manage Device request to avoid being classified as dormant and becoming an unmanaged device. If the ``lifetime`` field is omitted or set to ``0``, the managed device does not become dormant. The minimum supported setting for the ``lifetime`` field is ``3600`` seconds, which is 1 hour.
 
 The optional fields ``supports.deviceActions`` and ``supports.firmwareActions`` indicate the capabilities of the device management agent. If ``supports.deviceActions`` is set, then the agent supports both restart and factory reset actions. For a device that does not distinguish between a restart and a factory reset, it is acceptable to use the same behavior for both actions. If ``supports.firmwareActions`` is set, the agent supports both firmware download and firmware update actions.
 
@@ -131,7 +131,7 @@ Topic: iotdm-1/response
 ```
 
 
-### Response codes
+### Response codes for a Manage Device request
 
 |Response code |Message |
 |:---|:---|
@@ -141,29 +141,29 @@ Topic: iotdm-1/response
 |409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
 
 
-## Unmanage device
+## Unmanage Device requests
 {: #manage-unmanage}
 
 
 A device uses an Unmanage Device request when it no longer needs to be managed. When a device becomes unmanaged, {{site.data.keyword.iot_short_notm}} no longer sends new device management requests to the device. Unmanaged devices continue to publish error codes, log messages, and location messages.
 **Important:** Support for this operation is mandatory for any managed devices.
 
-### Topic
+### Topic for an Unmanage Device request
 
 
-A device publishes this request to the following topic:
+A device publishes an Unmanage Device request to the following topic:
 
 ```
 iotdevice-1/mgmt/unmanage
 ```
 
-The server responds to this request on the following topic:
+The server responds to an Unmanage Device request on the following topic:
 
 ```
 iotdm-1/response
 ```
 
-### Message format
+### Message format for an Unmanage Device request
 
 Request format:
 
@@ -188,7 +188,7 @@ Topic: iotdm-1/response
 }
 ```
 
-### Response codes
+### Response codes for an Unmanage Device request
 
 |Response code |Message |
 |:---|:---|
@@ -198,10 +198,10 @@ Topic: iotdm-1/response
 |409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
 
 
-## Update location
+## Update Location requests
 {: #update-location}
 
-The location metadata for a device can be updated in {{site.data.keyword.iot_short_notm}} in the following ways:
+A device uses an Update Location request to manage the location data for a device. The location metadata for a device can be updated in {{site.data.keyword.iot_short_notm}} in the following ways:
 
 #### Automatic device location updates
 - The device notifies {{site.data.keyword.iot_short_notm}} about the location update. The device retrieves its location from a GPS receiver and sends a device management message to the {{site.data.keyword.iot_short_notm}} instance to update its location. The time stamp captures the time at which the location was retrieved from the GPS receiver. The time stamp is valid even if there is a delay in sending the location update message. If time stamp is omitted from the device management message, the date and time of the message receipt is used to update the location metadata.
@@ -213,16 +213,16 @@ The location metadata for a device can be updated in {{site.data.keyword.iot_sho
 
 Devices that can determine their location can choose to notify the {{site.data.keyword.iot_short_notm}} device management server about location changes.
 
-### Topic
+### Topic for an Update Location request that is triggered by a device:
 
 
-A device publishes this request to the following topic:
+A device publishes an Update Location request to the following topic:
 
 ```
 iotdevice-1/device/update/location
 ```
 
-The server responds to this request on the following topic:
+The server responds to an Update Location request on the following topic:
 
 ```
 iotdm-1/response
@@ -236,16 +236,16 @@ When a user or application updates the location of an active managed device, the
 
 
 
-### Topic
+### Topic for an Update Location request that is triggered by users or apps
 
 
-The server publishes this request to the following topic:
+The server publishes an Update Location request to the following topic:
 
 ```
 iotdm-1/device/update
 ```
 
-### Message format
+### Message format for an Update location request
 
 
 The ``measuredDateTime`` field is the date of location measurement. The ``updatedDateTime`` field is the date of the update to the device information. For efficiency reasons, the {{site.data.keyword.iot_short_notm}} sometimes batches updates to location information so that the updates are slightly delayed. The latitude and longitude must be specified in decimal degrees by using World Geodetic System 1984 (WGS84).
@@ -289,7 +289,7 @@ Topic: iotdm-1/response
 }
 ```
 
-### Response codes
+### Response codes for an Update Location request
 
 |Response code |Message |
 |:---|:---|
@@ -302,7 +302,7 @@ Topic: iotdm-1/response
 ### Location updates that are triggered by users or apps
 
 
-Payload format:
+The following sample outlines the payload format:
 
 ```
 Incoming message from the server:
@@ -328,7 +328,7 @@ Topic: iotdm-1/device/update
 
 **Note:** The ``reqID`` parameter is not used, because the device is not required to respond.
 
-## Update device attributes
+## Update Device Attribute requests
 {: #update-attributes}
 
 By using the REST API, {{site.data.keyword.iot_short_notm}} can send a request to a device to update the value of one or more of the following device attributes:
@@ -341,7 +341,7 @@ By using the REST API, {{site.data.keyword.iot_short_notm}} can send a request t
 |deviceInfo | Optional|
 |mgmt.firmware | See [Firmware update process](requests.html#firmware-actions-update)|
 
-### Topic
+### Topic for an Update Device Attributes request
 
 
 The server publishes the device update request to the following topic:
@@ -351,10 +351,10 @@ iotdm-1/device/update
 ```
 
 
-### Message format
+### Message format for an Update Device Attributes request
 
 
-Payload format:
+The following sample outlines the payload format for the request:
 
 ```
 Incoming message from the server:
@@ -373,24 +373,24 @@ Topic: iotdm-1/device/update
 ```
 
 
-## Add error code
+## Add Error Codes requests
 {: #diag-add-error-code}
 
-Devices can choose to notify the {{site.data.keyword.iot_short_notm}} device management server about changes to their error status.
+Devices can choose to notify the {{site.data.keyword.iot_short_notm}} device management server about changes to their error status by using the Add Error Codes request type.
 
-### Topic
+### Topic for an Add Error Codes request
 
 
-A device publishes this request to the following topic:
+A device publishes an Add Error Codes request to the following topic:
 
 ```
 iotdevice-1/add/diag/errorCodes
 ```
 
-### Message format
+### Message format for an Add Error Codes request
 
 
-The value that is associated with `errorCode` is the current device error code. This error code  needs to be added to the {{site.data.keyword.iot_short_notm}}.
+The value that is associated with `errorCode` is the current device error code and must be added to the {{site.data.keyword.iot_short_notm}}.
 
 Request format:
 
@@ -418,7 +418,7 @@ Topic: iotdm-1/response
 }
 ```
 
-### Response codes
+### Response codes for an Add Error Codes request
 
 |Response code |Message |
 |:---|:---|
@@ -428,12 +428,12 @@ Topic: iotdm-1/response
 |409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
 
 
-## Clear error codes
+## Clear Error Codes requests
 {: #diag-clear-error-codes}
 
-Devices can request that {{site.data.keyword.iot_short_notm}} clears all error codes for the device.
+Devices can request that {{site.data.keyword.iot_short_notm}} clears all error codes for the device by using the Clear Error Codes request type.
 
-### Topic
+### Topic for a Clear Error Codes request
 
 
 A device publishes this request to the following topic:
@@ -442,7 +442,7 @@ A device publishes this request to the following topic:
 iotdevice-1/clear/diag/errorCodes
 ```
 
-### Message format
+### Message format for a Clear Error Codes request
 
 
 Request format:
@@ -468,7 +468,7 @@ Topic: iotdm-1/response
 }
 ```
 
-### Response codes
+### Response codes for a Clear Error Codes request
 
 |Response code |Message |
 |:---|:---|
@@ -478,12 +478,12 @@ Topic: iotdm-1/response
 |409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
 
 
-## Add log
+## Add Log requests
 {: #diag-add-log}
 
 Devices can choose whether to notify {{site.data.keyword.iot_short_notm}} device management support about changes by adding a new log entry. Log entries include a log message, time stamp, severity, and optional base64-encoded binary diagnostic data.
 
-### Topic
+### Topic for an Add Log request
 A device publishes this request to the following topic:
 
 ```
@@ -491,7 +491,7 @@ iotdevice-1/add/diag/log
 ```
 
 
-### Message format
+### Message format for an Add Log request
 
 The following table describes the format of the outgoing message attributes:
 
@@ -533,7 +533,7 @@ Topic: iotdm-1/response
 ```
 
 
-### Response codes
+### Response codes for an Add Log request
 
 |Response code |Message |
 |:---|:---|
@@ -542,21 +542,21 @@ Topic: iotdm-1/response
 |404   |The topic name is incorrect, or the device is not in the database.|
 |409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
 
-## Clear logs
+## Clear Logs requests
 {: #diag-clear-logs}
 
-Devices can request that {{site.data.keyword.iot_short_notm}} clear all of the log entries for the device.
+Devices can request that {{site.data.keyword.iot_short_notm}} clear all of the log entries for the device by using the Clear Logs request type.
 
-### Topic
+### Topic for a Clear Logs request
 
 
-A device publishes this request to the following topic:
+A device publishes a Clear Logs request to the following topic:
 
 ```
 iotdevice-1/clear/diag/log
 ```
 
-### Message format
+### Message format for a Clear Logs request
 
 
 Request format:
@@ -582,7 +582,7 @@ Topic: iotdm-1/response
 }
 ```
 
-### Response codes
+### Response codes for a Clear Logs request
 
 |Response code |Message |
 |:---|:---|
@@ -591,23 +591,23 @@ Topic: iotdm-1/response
 |404   |The topic name is incorrect, or the device is not in the database.|
 |409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
 
-## Observe attribute changes
+## Observe Attribute Changes requests
 {: #observations-observe}
 
-{{site.data.keyword.iot_short_notm}} can send this request to a device to observe changes of one or more device attributes. When the device receives this request, it must send a notification request to {{site.data.keyword.iot_short_notm}} whenever the observed attribute's value changes.
+{{site.data.keyword.iot_short_notm}} can send an Observe Attribute Change request to a device to observe changes of one or more device attributes by using the Observe Attribute Changes request type. When the device receives the request, it must send a notification request to {{site.data.keyword.iot_short_notm}} whenever the values of the observed attributes change.
 
-**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update).
+**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update)  request types.
 
-### Topic
+### Topic for an Observe Attribute Changes request
 
 
-The server publishes this request to the following topic:
+The server publishes an Observe Attribute Changes request to the following topic:
 
 ```
 iotdm-1/observe
 ```
 
-### Message format
+### Message format for an Observe Attribute Changes request
 
 
 The `fields` array is an array of the device attribute from the device model. If a complex field, such as `mgmt.firmware` is specified, it is expected that its underlying fields are updated at the same time so that only a single notification message is generated.
@@ -652,26 +652,26 @@ Topic: iotdevice-1/response
 ```
 
 
-## Cancel attribute observation
+## Cancel Attribute Observation requests
 {: #observations-cancel}
 
-{{site.data.keyword.iot_short_notm}} can send a request to a device to cancel the current observation of one or more device attributes. The `fields` part of the request is an array of the device attribute names from the device model, for example, `location`, `mgmt.firmware`, or `mgmt.firmware.state` parameters.
+{{site.data.keyword.iot_short_notm}} can send a request to a device to cancel the current observation of one or more device attributes by using the Cancel Attribute Observation request type. The `fields` part of the request is an array of the device attribute names from the device model, for example, `location`, `mgmt.firmware`, or `mgmt.firmware.state` parameters.
 
 The `message` parameter must be specified if the value of the `rc` parameter is not `200`.
 
-**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update).
+**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update) request types.
 
-### Topic
+### Topic for a Cancel Attribute Observation request
 
 
-The server publishes this request to the following topic:
+The server publishes a Cancel Attribute Observation request to the following topic:
 
 ```
 iotdm-1/cancel
 ```
 
 
-### Message format
+### Message format for a Cancel Attribute Observation request
 
 
 Request format:
@@ -705,29 +705,29 @@ Topic: iotdevice-1/response
 
 
 
-## Notify attribute changes
+## Notify Attribute Changes requests
 {: #observations-notify}
 
-{{site.data.keyword.iot_short_notm}} can make an observation request for a specific attribute or a set of values. When the value of the attribute or attributes changes, the device must send a notification that contains the latest value.
+{{site.data.keyword.iot_short_notm}} can make an observation request for a specific attribute or a set of values by using the Notify Attribute Changes request type. When the value of the attribute or attributes changes, the device must send a notification that contains the latest value.
 
 The value of the `field_name` parameter is the name of the attribute that changed, and the `field_value` is the current value of the attribute. The attribute can be a complex field. If multiple values in a complex field are updated as a result of a single operation, only a single notification message is sent.
 
 When the notify request is processed successfully, the value of the `rc` parameter is set to `200`. If the request is not correct, the value of the `rc` parameter is set to `400`. If the parameter that is specified in the notify request is not observed, the value of the `rc` parameter is set to `404`.
 
-**Important:** Devices must implement observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update).
+**Important:** Devices must implement observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update) request types.
 
 
-### Topic
+### Topic for a Notify Attribute Change request
 
 
-A device publishes this request to the following topic:
+A device publishes a Notify Attribute Change request to the following topic:
 
 ```
 iotdevice-1/notify
 ```
 
 
-### Message format
+### Message format for a Notify Attribute Change request
 
 
 Request format:
@@ -757,7 +757,7 @@ Topic: iotdm-1/response
 }
 ```
 
-### Response codes
+### Response codes for a Notify Attribute Change request
 
 |Response code |Message |
 |:---|:---|
