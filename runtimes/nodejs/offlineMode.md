@@ -12,7 +12,7 @@ copyright:
 
 # Offline mode for node.js
 {: #offline_mode}
-*Last Updated: 20 July 2016*
+Last Updated: 20 July 2016
 {: .last-updated}
 
 When a node.js application is pushed to {{site.data.keyword.Bluemix}} the SDK for Node.js buildpack

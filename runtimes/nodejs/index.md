@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*Last Updated: 07 July 2016*
+Last Updated: 29 August 2016
 {: .last-updated}
 
 The Node.js runtime on {{site.data.keyword.Bluemix}} is powered by the sdk-for-nodejs buildpack.
@@ -117,7 +117,7 @@ NPM provides a scripting facility allowing you to run scripts, including **prein
 
 ### Cache behavior
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} maintains a cache directory per node application, that is persisted between builds. The cache stores resolved dependencies so they are not downloaded and installed every time the app is deployed.  For example, suppose myapp depends on **express**.  Then the first time myapp is deployed the **expess** module is downloaded.  On subsequent deployments of myapp,  the cached instance of **express** is used. The default behavior is to cache all node_modules installed by NPM and bower_components installed by bower.
+{{site.data.keyword.Bluemix}} maintains a cache directory per node application, that is persisted between builds. The cache stores resolved dependencies so they are not downloaded and installed every time the app is deployed.  For example, suppose myapp depends on **express**.  Then the first time myapp is deployed the **express** module is downloaded.  On subsequent deployments of myapp,  the cached instance of **express** is used. The default behavior is to cache all node_modules installed by NPM and bower_components installed by bower.
 
 Use the NODE_MODULES_CACHE variable to determine whether or not the Node buildpack uses or ignores the cache from previous builds. The default value is true.  To disable caching set NODE_MODULES_CACHE to false, for example via the cf command line:
 ```
@@ -258,7 +258,7 @@ The following table explains the behavior of node.js v6 with FIPS.
 
 Bluemix provides multiple versions of the Node.js buildpack.
 * The IBM created **sdk-for-nodejs** buildpack is the default buildpack used for Node.js applications in Bluemix.
-* The **nodejs_buildpack** is the external buildpack that is provided by the Cloud Foundry community.
+* The **nodejs_buildpack** is a community buildpack provided by the Cloud Foundry community.
 
 The **sdk-for-nodejs** buildpack takes precedence over the **nodejs_buildpack** in Bluemix. If you want to use the **nodejs_buildpack** with your application instead of the **sdk-for-nodejs** buildpack, you must specify your buildpack, for example, by using the -b option with the **cf push** command.
 
@@ -282,4 +282,4 @@ Typically the current **sdk-for-nodejs** buildpack and a back-level version are 
 * [Latest Updates to the Node.js Buildpack](../../runtimes/nodejs/updates.html)
 * [App Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
-* [StrongLoop](https://strongloop.com)
+* [IBM API Connect](https://strongloop.com/)
