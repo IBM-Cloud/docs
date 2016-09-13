@@ -14,6 +14,7 @@ copyright:
 
 # Device model
 {: #device_model}
+Last updated: 13 September 2016 {: .last-updated}
 
 The device model describes the metadata and management characteristics of a device. The device database in the {{site.data.keyword.iot_full}} is the master
 source of device information. Applications and managed devices can send updates including location changes, or the progress of a firmware update, to the database. As soon as these updates are received by the {{site.data.keyword.iot_short_notm}}, the device database is updated and the information is available to applications.
@@ -91,7 +92,7 @@ Attribute                        | Type       | Description                     
 ## Extended attributes
 {: #extended_attributes}
 
-In addition to core attributes listed above, there are additional attributes that
+In addition to core attributes listed above in the Attributes section, there are additional attributes that
 are treated as extensions to the core device model. Simple queries about the device
 return information from the core device model, but not the extensions. Information
 from the extensions must be specifically requested.
