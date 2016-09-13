@@ -68,7 +68,7 @@ Ensure that you have developer privileges in the Bluemix organization and that y
 Complete the following steps to connect a {{site.data.keyword.cloudant}}:
 
 1. On your {{site.data.keyword.iot_short}} dashboard click **Settings** in the navigation bar on the left.
-2. In the Settings, enable **Experimental Features**. Once this is enabled there should be a section titled **{{site.data.keyword.cloudant}}**. The **{{site.data.keyword.cloudant}}** section shows all available {{site.data.keyword.cloudant}} services that are running in the same Bluemix space as your {{site.data.keyword.iot_short}} service.
+2. In the **{{site.data.keyword.cloudant}}** section, all available {{site.data.keyword.cloudant}} services within the same Bluemix space as your {{site.data.keyword.iot_short}} service.
 3. Click on the {{site.data.keyword.cloudant}} service you wish to connect.
 4. Select your {{site.data.keyword.cloudant}} configuration options:
 
@@ -91,7 +91,7 @@ Your device data is now being stored in your {{site.data.keyword.cloudant}}.
 {: #design_docs}
 
 New design documents are contained in the configuration database, and are copied to every database created. The configuration database name is `Iotp_<orgid>_<choice>_configuration
-` using the same parameters are the database names above.
+` using the same parameters as the database names described in step 3b in the Before you begin section.
 
 The default design documents contained withing the {{site.data.keyword.iot_short_notm}} implement queries available in the current historian, apart from the summarize function.
 
