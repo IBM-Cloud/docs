@@ -16,15 +16,9 @@ Last updated: 29 August 2016
 User ID-based {{site.data.keyword.mobilepushshort}} are targeted at mobile app users with customized messages. With user-based notifications, you can choose to notify specific individuals based on their preferences.
 
 ## Register device with User ID
-To enable push notifications targeted by User ID, ensure that you register the device with a User ID and also pass the 'clientSecret' that is allocated when the {{site.data.keyword.mobilepushshort}} services is provisioned. The device registration will fail without a valid 'clientSecret'.  
+To enable push notifications targeted by User ID, ensure that you register the device with a User ID field set.   
 
-The User ID can be any string that the application provides to the device registration API. Typically, a mobile application will first run an authentication cycle where the mobile app user is authenticated against an authentication service such as [{{site.data.keyword.amafull}}](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). On successful authentication, the authenticated user ID is then passed into the Push Device Registration API, along with a 'clientSecret'.  The presence of a 'clientSecret' enforces only authorized association of User IDs with mobile device registrations.
-
-Keep the 'clientSecret' confidential and never hard-coded into the mobile app. There are various application initialization patterns that can be used to pull in the 'clientSecret' dynamically during the application's runtime. The sequence diagram outlines this pattern.
-
-![Enable_Push](images/init_client_secret.jpg) 
-
-You can also register a device to be associated with an 'anonymous' user. This requires that you use a variant of the device registration API that does not require the user ID and 'clientSecret' arguments.   
+The User ID can be any string that the application provides to the device registration API. Typically, a mobile application will first run an authentication cycle where the mobile app user is authenticated against an authentication service such as [{{site.data.keyword.amafull}}](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). On successful authentication, the authenticated user ID is then passed into the Push Device Registration API.  
 
 ## Synchronizing user login and logout 
 
