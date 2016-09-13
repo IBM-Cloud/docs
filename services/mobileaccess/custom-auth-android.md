@@ -12,7 +12,7 @@ copyright:
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Android app
 {: #custom-android}
 
-Last updated: 23 August 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
 
@@ -65,7 +65,7 @@ Add the internet access permission under the `<manifest>` element:
 					BMSClient.REGION_UK);
 ```
 
-Replace the `BMSClient.REGION_UK` with the appropriate region.	 To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.				
+Replace the `BMSClient.REGION_UK` with the appropriate region.	 To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.				
 	
 
 ## AuthenticationListener interface
@@ -128,8 +128,8 @@ This AuthenticationListener sample is designed to work with a custom identity pr
 package com.ibm.helloworld;
 import android.content.Context;
 import android.util.Log;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationContext;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationListener;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationContext;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 

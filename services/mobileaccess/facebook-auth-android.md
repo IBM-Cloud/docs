@@ -11,7 +11,7 @@ copyright:
 # Enabling Facebook authentication for Android apps
 {: #facebook-auth-android}
 
-Last updated: 29 August 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
 
@@ -169,7 +169,7 @@ Your Android project might have two `build.gradle` files:  for the project and a
 	FacebookAuthenticationManager.getInstance().register(this);
 	```
 
-   * Replace `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+   * Replace `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, `BMSClient.REGION_UK`.
    
    * Replace `<MCAServiceTenantId>` with the `tenantId` value that you see when you click  the **Show Credentials** button on the {{site.data.keyword.Bluemix_notm}} service tile.
    

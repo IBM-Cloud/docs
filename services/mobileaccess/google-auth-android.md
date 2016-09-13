@@ -11,10 +11,10 @@ copyright:
 {: #google-auth-android}
 
 
-Last updated: 23 August 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
-Use Google to authenticate users on your {{site.data.keyword.amafull}} Android application. Add {{site.data.keyword.amashort}} security functionality.  {:shortdesc}
+Use Google to authenticate users on your {{site.data.keyword.amafull}} Android application. Add {{site.data.keyword.amashort}} security functionality. 
 
 ## Before you begin
 {: #before-you-begin}
@@ -144,8 +144,8 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 	GoogleAuthenticationManager.getInstance().register(this);
 	```
 
-  * Replace  `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
-  * Replace `<MCAServiceTenantId>` with the `tenantId` value you can find by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+  * Replace  `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
+  * Replace `<MCAServiceTenantId>` with the `tenantId` value you can find by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile. 
 
    **Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
