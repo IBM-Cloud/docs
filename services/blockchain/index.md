@@ -13,7 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.blockchain}} (Beta)
 {: #gettingstartedtemplate}
-Last updated: 22 July 2016
+Last updated: 7 September 2016
 {: .last-updated}
 
 With the {{site.data.keyword.blockchainfull}} service on Bluemix&reg;, you can spin up a multi-node blockchain network at the click of a button. Rather than creating and managing a network, developers can get into code faster and spend their time writing applications and working with chaincode. The service is a peer-to-peer permissioned network built on the [hyperledger/fabric](https://github.com/hyperledger/fabric) code from the Linux Foundation's Hyperledger Project.
@@ -42,8 +42,8 @@ To get started, follow these steps to create and deploy an unbound service insta
 
 1. From the landing page for the [{{site.data.keyword.blockchain}} DevOps Service](https://console.ng.bluemix.net/catalog/services/blockchain/), complete the following fields in the **Add Service** dialog on the far right of your screen:
   - Choose **dev** from the **Space** drop-down window.
-  - Leave the **App** field as **Leave unbound**.
-  - Change the **Service name** to a name or value unique to you.  For example, **MyBlockchainABC123**.
+  - Leave the **App** field as **Leave unbound** or bind your service to any application in your Bluemix org.
+  - Change the **Service name** to a name or value unique to you.  For example, **Blockchain Test Net123**.
   - Leave the **Credential name** field as its default value.
   - Choose **Starter Developer Plan** or **High Security** ( ![](images/green_dot.png) if approved) under the **Selected Plan** field.
   - Click **CREATE**.
@@ -71,7 +71,7 @@ To get started, follow these steps to create and deploy an unbound service insta
 {: #api}
 * [Swagger UI](https://obc-service-broker-staging.stage1.mybluemix.net/swagger)
 * [Hyperledger fabric API (GitHub)](https://github.com/hyperledger/fabric/tree/master/docs/API)
-* [Enhanced Node.js SDK](https://github.com/hyperledger/fabric/tree/master/sdk/node)
+* [HFC SDK for Node.js](https://github.com/hyperledger/fabric/tree/master/sdk/node)
 
 ## Related Links
 {: #general}
