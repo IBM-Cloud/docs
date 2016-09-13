@@ -72,7 +72,7 @@ After a request is initiated, an MQTT message is published to all devices that a
 
 The reboot action is complete when the device sends a Manage Device request after its reboot.
 
-### Topic
+### Topic for device reboot request
 
 The server publishes a reboot request to a device on the following topic:
 
@@ -80,7 +80,7 @@ The server publishes a reboot request to a device on the following topic:
 iotdm-1/mgmt/initiate/device/reboot
 ```
 
-### Message format
+### Message format for device reboot request
 
 
 Request Format:
@@ -139,7 +139,7 @@ When a device reset request is initiated, an MQTT message is published to all de
 
 The factory reset action is complete when the device sends a Manage Device request after the factory reset.
 
-### Topic
+### Topic for factory reset request
 
 The server publishes the following request to a device:
 
@@ -148,7 +148,7 @@ iotdm-1/mgmt/initiate/device/factory_reset
 ```
 
 
-### Message format
+### Message format for factory reset request
 
 
 Request format:
