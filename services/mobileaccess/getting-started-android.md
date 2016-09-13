@@ -11,7 +11,7 @@ copyright:
 # Setting up the Android SDK
 {: #getting-started-android}
 
-Last updated: 26 August 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
 
@@ -76,8 +76,8 @@ Initialize the SDK by passing the `context`, `applicationGUID`, `applicationRout
 ```
 
   * Replace the "applicationRoute* and "applicationGUID" with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
-  * Replace the `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
-  * Replace "MCAServiceTenantId" with the **tenantId** value you can find by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+  * Replace the `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: `BMSClient.REGION_US_SOUTH`,  `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
+  * Replace "MCAServiceTenantId" with the **tenantId** value you can find by clicking the **Show Credentials** button on the  {{site.data.keyword.amashort}} service tile.
 
 ## Making a request to your mobile back-end application
 {: #request}
