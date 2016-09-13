@@ -14,8 +14,7 @@ copyright:
 
 # Java for gateway developers
 {: #IoT_JavaGateway}
-*Last updated: 13 May 2016*
-{: .last-updated}
+Last updated: 13 September 2016 {: .last-updated}
 
 This topic explains how you can use Java to develop gateways in {{site.data.keyword.iot_full}}. For more information, see [iot-java](https://github.com/ibm-messaging/iot-java) in GitHub
 {:shortdesc}
@@ -23,14 +22,15 @@ This topic explains how you can use Java to develop gateways in {{site.data.keyw
 ## Constructor
 {: #IoT_constructor}
 
-The constructor builds the Gateway client instance, and accepts a Properties object containing the following definitions:
+The constructor builds the gateway client instance, and accepts a properties object that contains the following definitions:
 
--   ``org`` - Your organization ID.
--   ``type`` - The type of your Gateway device.
--   ``id`` - The ID of your Gateway.
--   ``auth-method`` - Method of authentication (The only value currently
-    supported is "token").
--   ``auth-token`` - API key token.
+|Definition |Description |
+|:---|:---|
+|``org`` |Your organization ID|
+|``type``|The type of your gateway device|
+|``id`` |The  ID of your gateway device|
+|``auth-method`` |Method of authentication, whereby the only value that is currently supported is “token”)|
+|``auth-token`` |API key token|
 
 The Properties object creates definitions which are used to interact with the {{site.data.keyword.iot_short}} module.
 
@@ -214,7 +214,7 @@ To process specific commands you need to register a command callback method. The
 -   command - The name of the command.
 -   timestamp - The org.joda.time.DateTime when the command is sent.
 
-A sample implementation of the Command callback is shown below,
+The following is a sample implementation of the Command callback:
 
 ```   
 import com.ibm.iotf.client.gateway.Command;
