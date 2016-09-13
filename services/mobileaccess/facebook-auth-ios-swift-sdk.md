@@ -10,7 +10,7 @@ copyright:
 # Enabling Facebook authentication for iOS apps (Swift SDK)
 {: #facebook-auth-ios}
 
-Last updated: 23 August 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
 
@@ -196,7 +196,7 @@ A common, though not mandatory, place to put the initialization code is in the `
  ```
  In the code:
  * Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
- * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+ * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or  `BMSClient.REGION_UK`.
  * Replace `tenantId` with the **tenantId** value. You find this value when you click the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
 
 1. Notify the Facebook SDK about the app activation and register the Facebook Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code after you initialize the BMSClient instance and register Facebook as the authentication manager.
