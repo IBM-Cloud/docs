@@ -14,7 +14,7 @@ copyright:
 
 # MQTT messaging
 {: #ref-mqtt}
-Last updated: 6 September 2016
+Last updated: 13 September 2016
 {: .last-updated}
 
 MQTT is the primary protocol that devices and applications use to communicate with the {{site.data.keyword.iot_full}}. MQTT is a publish and subscribe messaging transport protocol that is designed for the efficient exchange of real-time data between sensor and mobile devices.
@@ -38,8 +38,6 @@ MQTT version | Deviations | Notes
 {{site.data.keyword.iot_short_notm}} supports any content that is permitted by the MQTT standard. MQTT is data-agnostic so it's possible to send images, texts in any encoding, encrypted data, and virtually every type of data in binary format. For more information about the MQTT standard, see the following resources:
 - [MQTT.org](http://mqtt.org/)
 - [HiveMQ: Introducing MQTT](http://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt)
-
-For information about message payload size limits and format restrictions for specific use cases for {{site.data.keyword.iot_short_notm}}, see [MQTT messaging](mqtt/index.html).
 
 ## Application, device, and gateway clients
 {: #device-app-clients}
