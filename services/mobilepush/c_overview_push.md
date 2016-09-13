@@ -53,7 +53,13 @@ Platform specific Push Notifications cloud services such as Google Cloud Messagi
 ###Push Security
 {: push-security}
 
-{{site.data.keyword.mobilepushshort}} APIs are secured by two types of secrets - i) appSecret ii) clientSecret.  The 'appSecret' protects APIs that are typically invoked by back end applications- such as the API to send {{site.data.keyword.mobilepushshort}} and the API to configure settings.   The'clientSecret' protects APIs that are typically invoked by mobile client applications.  At present, there is only one API related to registration of a device with an associated UserId that requires this 'clientSecret'. None of the other APIs invoked from mobile clients require the clientSecret. The 'appSecret' and 'clientSecret' are allocated to every service instance at the time of binding an application with {{site.data.keyword.mobilepushshort}} service. Refer the ReST API documentation for more information on how the secrets are to be passed and for what APIs.
+{{site.data.keyword.mobilepushshort}} APIs are secured by two types of secrets - i) appSecret ii) clientSecret.  The 'appSecret' protects APIs that are typically invoked by back end applications- such as the API to send {{site.data.keyword.mobilepushshort}} and the API to configure settings.   The'clientSecret' protects APIs that are typically invoked by mobile client applications.  The 'appSecret' and 'clientSecret' are allocated to every service instance at the time of binding an application with {{site.data.keyword.mobilepushshort}} service. Refer the ReST API documentation for more information on how the secrets are to be passed and for what APIs.
+
+NOTE : Earlier applications were required to pass the clientSecret only when registering or updating devices with userId field.  All other APIs invoked by mobile / browser clients did not require the clientSecret.  These old applications can continue with this behaviour of optionally using the clientSecret for the device registration / update calls.  However it is strongly recommended that clientSecret check is enforced for all client API calls.  To enforce this in old applications there is a new 'verifyClientSecret' API that is published.  For all new applications clientSecret check will be enforced on all client API calls and this behaviour cannot be changed even with the 'verfiyClientSecret' API.
+
+Keep the 'clientSecret' confidential and never hard-coded into the mobile app. There are various application initialization patterns that can be used to pull in the 'clientSecret' dynamically during the application's runtime. The sequence diagram outlines on such possible pattern.
+
+![Enable_Push](images/init_client_secret.jpg) 
 
 ## {{site.data.keyword.mobilepushshort}} types
 {: #overview-push-types}
@@ -73,13 +79,9 @@ Tag notifications are messages targeted to all devices that are subscribed to a 
 
 Unicast notifications are messages targeted to a particular device or user. Unicast notifications targeted to devices do not require any additional setup and are enabled by default when the application is enabled for {{site.data.keyword.mobilepushshort}}.
 
-However, Unicast notifications targeted at users require:
+However, Unicast notifications targeted at users requirea associating a user ID with a device at the time of registering the mobile device for {{site.data.keyword.mobilepushshort}}.  
 
-- Associating a user ID with a device at the time of registering the mobile device for {{site.data.keyword.mobilepushshort}}.  
-
-- Authorizing such a user ID registration by passing a 'clientSecret' which is allocated when binding a back-end application to the {{site.data.keyword.mobilepushshort}} service. 
-
-Typically, a mobile application will first run an authentication cycle where the mobile app user is authenticated against a authentication service [like Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). On successful authentication, the authenticated user ID is then passed into the Push Device Registration API along with a clientSecret. The presence of a clientSecret enforces only authorized association of User IDs with mobile device registrations.
+Typically, a mobile application will first run an authentication cycle where the mobile app user is authenticated against a authentication service [like Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). On successful authentication, the authenticated user ID is then passed into the Push Device Registration API. 
 To send a Unicast notifications through REST API, ensure that the deviceIds or userIds are provided when posting to a message resource.
 
 ###Platform-based notifications
