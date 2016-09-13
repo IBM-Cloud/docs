@@ -13,7 +13,7 @@ copyright:
 
 # Connecting devices
 {: #iotplatform_task}
-Last updated: 08 September 2016
+Last updated: 13 September 2016
 {: .last-updated}
 
 Before you can begin receiving data from your your IoT devices, you must connect them to  {{site.data.keyword.iot_full}}. Connecting a device to {{site.data.keyword.iot_short_notm}} involves registering the device with {{site.data.keyword.iot_short_notm}} and then using the registration information to configure the device to connect to {{site.data.keyword.iot_short_notm}}.
@@ -25,7 +25,7 @@ Before you can begin receiving data from your your IoT devices, you must connect
 Before you start the connection process, you must ensure that your devices meet the following requirements for communicating with {{site.data.keyword.iot_short_notm}}:
 
 - Your device must be able to communicate by sending device messages in [MQTT format](reference/mqtt/index.html).
-- The device messages must conform to the {{site.data.keyword.iot_short_notm}} [message payload](reference/mqtt/index.html#/message-payload) requirements.
+- The device messages must conform to the {{site.data.keyword.iot_short_notm}} [message payload](reference/mqtt/index.html#message-payload) requirements.
 
 Complete the following steps to connect your device to {{site.data.keyword.iot_short_notm}}.
 
