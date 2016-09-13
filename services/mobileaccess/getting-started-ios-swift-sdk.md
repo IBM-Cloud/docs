@@ -11,7 +11,7 @@ copyright:
 # Setting up the iOS Swift SDK
 {: #getting-started-ios}
 
-Last updated: 26 August 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
 
@@ -22,10 +22,6 @@ Last updated: 26 August 2016
 **Note:** The Objective-C SDK reports monitoring data to the Monitoring Console of {{site.data.keyword.amashort}} service. In case you’re relying on the monitoring functionality of {{site.data.keyword.amashort}} service you need to continue using the Objective-C SDK.
 
 While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK. 
-
-
-
-
 
 
 ## Before you begin
@@ -113,7 +109,7 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
  ```
 
 * Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. 
-* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
 * Replace `tenantId` with the **tenantId** value . You can find this value by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
 
 

@@ -51,7 +51,7 @@ copyright:
 # Pricing
 {: #pricing}
 
-*Last updated: 16 August 2016*
+*Last updated: 13 September 2016*
 {: .last-updated}
 
 You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage Dashboard view for you to check the actual cost after you build your apps.
@@ -385,6 +385,29 @@ The total price is 148 + 13.5 + 13.5 = $175.</p></dd>
 
 When all the items are added, the total price of the application is $354.15.
 
+###Supported currencies
+
+Although the United States dollar (USD) is used in the pricing examples, other currencies are also supported in {{site.data.keyword.Bluemix_notm}}. The following table lists the different currencies that are supported.
+
+|ISO 4217 code| Currency|
+|-------------|---------|
+|AUD |	  Australian dollar|
+|BRL |	  Brazilian real|
+|CAD |	  Canadian dollar|
+|CHF |	  Swiss franc|
+|DKK |	  Danish krone|
+|EUR |	  Euro|
+|GBP |	  Pound sterling|
+|INR |	  Indian rupee|
+|JPY |	  Japanese yen|
+|KRW |	  South Korean won|
+|NOK |	  Norwegian krone|
+|NZD |	  New Zealand dollar|
+|SEK |	  Swedish krona|
+|USD |    United States dollar|
+|ZAR |	  South African rand|
+*Table 8. Supported currencies* 
+
 ##Usage dashboard
 {: #usage}
 
@@ -425,7 +448,7 @@ Only certain services provide the ability for you to change the service plan. If
 |Service |	Information|
 |--------|-------------|
 |Presence Insights 	|If you have a Lite plan and exceed the free allowances, a 403 message displays or is logged to indicate that you are no longer authorized, and your service instance is disabled. In addition, POST REST API calls are rejected with a 403 response.<br/><br/>If your service is disabled because you exceed the free allowance, you can upgrade from a Lite plan to a Paid plan. Your service is re-enabled within 2 hours.<br/><br/>If you have a Paid plan, you can reduce your plan to the Lite plan, as long as your usage stays within the Lite plan allowance for events and total storage.<br/><br/>When you upgrade or reduce your plan, you do not need to restage or restart your apps.|
-*Table 8. Next steps for changing your plan*
+*Table 9. Next steps for changing your plan*
 
 ###How to change your plan through the command line interface
 

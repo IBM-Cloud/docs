@@ -9,7 +9,7 @@ copyright:
 
 {: #custom-ios}
 
-Last updated: 23 August 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
 
@@ -111,7 +111,7 @@ Initialize the SDK by passing the `applicationRoute`and `applicationGUID` parame
 In the code:
  * Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **AppGuid** that you obtained from **Mobile   Options** in the {{site.data.keyword.Bluemix_notm}} dashboard. 
 
-* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the Account and Support widget.
+* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
 
 * Replace `<yourProtectedRealm>` with the **Realm name** value you defined in the **Custom** tile of {{site.data.keyword.amashort}} dashboard.
   

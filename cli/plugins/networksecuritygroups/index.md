@@ -27,18 +27,22 @@ bluemix plugin uninstall "Network Security Group"
 2. Install the IBM Network Security Groups plug-in by using the following command:  
 **Note:** Either switch to the location of the Network Security Groups plug-in or specify the path to the plug-in location.  
 
-	####For Microsoft Windows:  
+	* For Microsoft Windows: ####  
+
 	```
 	bluemix plugin install nsg-windows-amd64.exe  
 	```  
-	####For Apple Mac OS:  
+	* For Apple Mac OS:  
+
 	```  
 	bluemix plugin install nsg-darwin-amd64
 	```  
-	####For Linux OS:  
+	* For Linux OS:  
+
 	```
 	bluemix plugin install nsg-linux-amd64
 	```  
+
 	**Note:** If you see a ***permission denied*** error message while installing the plug-in for Linux OS, run the following command and change the permissions:  
 	```
 	chmod a+x ./nsg-linux-amd64
@@ -105,14 +109,17 @@ bluemix network security-group-create [-d "<description>"] <name>
 ```
 
 #####Parameters:
+{: #p1}
 
 **name**: Name of the new security group. Data type: string
 
 #####Optional Parameters:
+{: #op1}
 
 **-d**: Description of the security group. Data type: string
 
 #####Command Example:
+{: #ex1}
 
 Create a security group and validate it:
 
@@ -139,15 +146,18 @@ bluemix network security-group-update [-n <name>] [-d "<description>"] <name or 
 ```
 
 #####Parameters:
+{: #p2}
 
 **name or ID**: Name or ID of an existing security group. Data type: string
 
 #####Optional Parameters:
+{: #op2}
 
 **-n**: New name of the security group. Data type: string  
 **-d**: New description of the security group. Data type: string
 
 #####Command Example:
+{: #ex2}
 
 Update an existing security group and validate it:
 
@@ -174,10 +184,12 @@ bluemix network security-group-delete <name or ID>
 ```
 
 #####Parameters:
+{: #p3}
 
 **name or ID**: Name or ID of an existing security group. Data type: string
 
 #####Command Example:
+{: #ex3}
 
 Delete an existing security group and validate it:
 
@@ -203,10 +215,12 @@ bluemix network security-group-list [-v] [-i <name or ID>] [-ig <name or ID>]
 ```
 
 #####Parameters:
+{: #p4}
 
 None. If no option is specified, the command lists all the security groups.
 
 #####Optional Parameters:
+{: #op3}
 
 **-v**: Prints list of rules with details for each security group
 
@@ -215,6 +229,7 @@ None. If no option is specified, the command lists all the security groups.
 **-ig**: Lists security groups assigned to the specified virtual server group. Data type: string
 
 #####Command Examples:
+{: #ex4}
 
 * List all security groups:
 
@@ -254,10 +269,12 @@ bluemix network security-group-show <security group name or ID>
 ```
 
 #####Parameters:
+{: #p5}
 
 **security group name or ID**: Name or ID of an existing security group. Data type: string
 
 #####Command Example:
+{: #ex5}
 
 View information about the security group named **default**:
 
@@ -281,6 +298,7 @@ bluemix network security-group-rule-create -d <direction> -p <protocol> -t <type
 ```
 
 #####Parameters:
+{: #p6}
 
 **-d**: Direction of traffic: ingress or egress. Data type: string
 
@@ -295,12 +313,14 @@ bluemix network security-group-rule-create -d <direction> -p <protocol> -t <type
 **security group name or ID**: Name or ID of an existing security group. Data type: string
 
 #####Optional Parameters:
+{: #op4}
 
 **-min**: Starting port range. Data type: integer
 
 **-max**: Ending port range. Data type: integer
 
 #####Command Example:
+{: #ex6}
 
 	$ bluemix network security-group-rule-create -d ingress -p tcp -ip 10.10.10.1 default
 
@@ -316,10 +336,12 @@ bluemix network security-group-rule-delete <ID>
 ```
 
 #####Parameters:
+{: #p7}
 
 **ID**: ID of an existing security group rule. Data type: string
 
 #####Command Example:
+{: #ex7}
 
 	$ bluemix network security-group-rule-delete f191473c-9dd4-4465-8c5e-697a3a5e2385
 	
@@ -335,6 +357,7 @@ bluemix network security-group-rule-list
 ```
 
 #####Command Example:
+{: #ex8}
 
 	$ bluemix network security-group-rule-list
 	+----------------------------------------------------------------------------------------------------------------------------------+
@@ -356,10 +379,12 @@ bluemix network security-group-rule-show <ID>
 ```
 
 #####Parameters:
+{: #p8}
 
 **ID**: ID of an existing security group rule. Data type: string
 
 #####Command Example:
+{: #ex9}
 
 	$ bluemix network security-group-rule-show 9a988876-36e0-47dd-9a7e-76c5a6be7379
 	+------------------------------------------------+
@@ -385,16 +410,19 @@ bluemix network instance-list [-sg <security group name or ID> | -ig <virtual se
 ```
 
 #####Parameters:
+{: #p9}
 
 None. If no option is specified, the command lists all instances.
 
 #####Optional Parameters:
+{: #op5}
 
 **-sg**: Name or ID of a security group. Data type: string
 
 **-ig**: Name or ID of a virtual server group. Data type: string
 
 #####Command Examples:
+{: #ex10}
 
 * List all instances:
 
@@ -425,14 +453,17 @@ Lists all virtual server groups, or virtual server groups that are assigned to a
 bluemix network instance-group-list [-sg <security group name or ID>]
 ```
 #####Parameters:
+{: #p10}
 
 None. If no option is specified, the command lists all virtual server groups.
 
 #####Optional Parameters:
+{: #op6}
 
 **-sg**: Name or ID of a security group. Data type: string
 
 #####Command Examples:
+{: #ex11}
 
 * List all virtual server groups:
 
@@ -463,12 +494,14 @@ bluemix network security-group-assign [-i <virtual server name or ID> |-ig <virt
 ```
 
 #####Parameters:
+{: #p11}
 
 **-i**: Name or ID of the virtual server that you want to assign to. Data type: string or strings separated by comma/space 
 
 **-ig**: Name or ID of the virtual server group that you want to assign to. Data type: string or strings separated by comma/space
 
 #####Command Examples:
+{: #ex12}
 
 * Assign security group **default** to virtual server **test-inst-1**:
 
@@ -498,6 +531,7 @@ bluemix network security-group-unassign [-i <virtual server name or ID> | -ig <v
 ```
 
 #####Parameters:
+{: #p12}
 
 **security group name or ID**: Name or ID of the security group from which you want to delete the virtual server or virtual server group. Data type: string
 
@@ -506,6 +540,7 @@ bluemix network security-group-unassign [-i <virtual server name or ID> | -ig <v
 **-ig**: Name or ID of the virtual server group that you want to delete. Data type: string or strings separated by comma/space
 
 #####Command Examples:
+{: #ex13}
 
 * Remove virtual server **test-inst-1** from the security group **default** and validate it:
 
