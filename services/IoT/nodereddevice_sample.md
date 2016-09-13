@@ -132,7 +132,7 @@ Follow these steps to connect the the Node-RED sample device:
 
 ## Node-RED node flow data
 {: #flow_data}  
-Copy the text below to your clipboard and then paste it into the import clipboard when importing nodes in the Node-RED flow editor.   
+Copy the following text to your clipboard and then paste it into the import clipboard when importing nodes in the Node-RED flow editor.   
 **Important:** Make sure that you copy all the text including the leading and trailing square brackets.  
 
 ```
