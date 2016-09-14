@@ -14,7 +14,7 @@ copyright:
 # Defining policies
 {: #DRA_criteria}
 
-Last updated: 25 August 2016
+Last updated: 13 September 2016
 {: .last-updated}
 
 With {{site.data.keyword.DRA_short}}, defining the policies for your application is easy. To get started, follow these steps:
@@ -48,6 +48,8 @@ Policies are created in the {{site.data.keyword.Bluemix_notm}} organization that
 For items that have test cases, you can specify critical test cases, which are tests that must pass regardless of the acceptable percentage. Critical test case names must match the `full title` attribute of the test case, which is as follows:    
 * For Karma/Mocha tests: The `describe()` and `it()` description strings linked together with spaces
 * For JUnit tests: The package name, class name, and function name linked together with spaces    
+
+You can use Sauce Labs with {{site.data.keyword.DRA_short}} by adding the Sauce Labs integration to your pipeline. Then, incorporate the `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` environment variables into Selenium tests as credentials.
 
 You can see the full titles of all the tests in the logs after a run.  
 
