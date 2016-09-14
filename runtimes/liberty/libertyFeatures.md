@@ -19,7 +19,7 @@ The Liberty for Java instant runtime includes a subset of the Liberty Profile fe
 The following features are included which are specific to Bluemix:
 * appState-1.0
 * cloudAutowiring-1.0
-* logAnalysis-1.0</code>
+* logAnalysis-1.0
 
 The following table shows Liberty features supported in Bluemix
 
