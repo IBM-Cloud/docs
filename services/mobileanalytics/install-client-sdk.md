@@ -7,7 +7,7 @@ copyright:
 
 # Installing the {{site.data.keyword.mobileanalytics_short}} Client SDKs
 {: #mobileanalytics_sdk}
-Last updated: 25 August 2016
+Last updated: 7 September 2016
 {: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_short}}
@@ -16,6 +16,8 @@ Client SDKs are currently available for Android, iOS and WatchOS.
 
 ## Installing the Android Client SDK
 {: #install-sdk-android}
+
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ibm.mobilefirstplatform.clientsdk.android/analytics/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.ibm.mobilefirstplatform.clientsdk.android/analytics)
 
 The {{site.data.keyword.mobileanalytics_short}} Client SDK is distributed with Gradle, a dependency manager for Android projects. Gradle automatically downloads artifacts from repositories and makes them available to your Android application.
 
@@ -59,9 +61,10 @@ The {{site.data.keyword.mobileanalytics_short}} Client SDK is distributed with G
    ```
    {: codeblock}
 
-
 ## Installing the Swift SDK
 {: #installing-sdk-ios}
+
+![CocoaPods Compatible](https://img.shields.io/cocoapods/v/BMSAnalytics.svg)
 
 The {{site.data.keyword.mobileanalytics_full}} SDK enables you to instrument your mobile application. The Swift SDK is available for iOS and watchOS.
 

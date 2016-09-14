@@ -7,7 +7,7 @@ copyright:
 
 # Instrumenting your application to use the {{site.data.keyword.mobileanalytics_short}} client SDKs
 {: #mobileanalytics_sdk}
-Last updated: 20 August 2016
+Last updated: 13 September 2016
 {: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_full}} SDKs enable you to instrument your mobile application.
@@ -17,7 +17,7 @@ The {{site.data.keyword.mobileanalytics_full}} SDKs enable you to instrument you
 
 1. Pre-defined data - This category includes generic usage and device information that applies to all apps. Within this category is device metadata (operating system and device model) and usage data (active users and app sessions) that indicates the volume, frequency, or duration of app use. Pre-defined data is collected automatically after you initialize the {{site.data.keyword.mobileanalytics_short}} SDK in your app.
 
-2. Client log messages - This category enables the developer to add lines of code throughout the app that log custom messages to assist in development and debugging. The developer assigns a severity/verbosity level to each log message and can subsequently filter messages by assigned level or preserve storage space by configuring the app to ignore messages that are at a lower level of a given log level. To collect client log data, you must initialize the {{site.data.keyword.mobileanalytics_short}} SDK within your app, as well as add a line of code for each log message.
+2. App log messages - This category enables the developer to add lines of code throughout the app that log custom messages to assist in development and debugging. The developer assigns a severity/verbosity level to each log message and can subsequently filter messages by assigned level or preserve storage space by configuring the app to ignore messages that are at a lower level of a given log level. To collect app log data, you must initialize the {{site.data.keyword.mobileanalytics_short}} SDK within your app, as well as add a line of code for each log message.
 
 <!--2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track. -->
 
@@ -50,18 +50,16 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 2. Initialize the {{site.data.keyword.mobileanalytics_short}} Client SDK in your Android application by adding the initialization code in the `onCreate` method of the main activity in your Android application, or in a location that works best for your project.
 
 	```Java
-	try {
-            BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
-        } catch (MalformedURLException e) {
-            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
-        } 
-  ```
+	BMSClient.getInstance().initialize(this.getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
+	```
   {: codeblock}
 
-  To use the {{site.data.keyword.mobileanalytics_short}} Client SDK, you must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
+  To use the {{site.data.keyword.mobileanalytics_short}} Client SDK, you must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` or `BMSClient.REGION_SYDNEY`.
   <!-- Set this value with a `BMSClient.REGION` static property. -->
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
+  
+	**Note:** Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user. The [`Analytics.setUserIdentity("username")`](sdk.html#android-tracking-users) method will not work when `hasUserContext` is false. If true, each use of [`Analytics.setUserIdentity("username")`](sdk.html#android-tracking-users) counts as an active user. There is no default user identity when`hasUserContext` is true, and therefore must be set to populate the active user charts.
 
 3. Initialize Analytics by using your Android application object and giving it your application’s name. You also need the [**API Key**](#analytics-clientkey) value.
 	
@@ -71,7 +69,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	```
   {: codeblock}
 
-	**Tip:** The application name is used as a filter to search for client logs in the dashboard. When you use the same application name across platforms (for example, Android and iOS), you can see all logs from that application under the same name, regardless of which platform the logs were sent from.
+	**Tip:** The application name is used as a filter to search for app logs in the dashboard. When you use the same application name across platforms (for example, Android and iOS), you can see all logs from that application under the same name, regardless of which platform the logs were sent from.
 
 ## Initializing your iOS app to collect analytics
 {: #init-ma-sdk-ios}
@@ -90,23 +88,13 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 
   Place the initialization code in the `application(_:didFinishLaunchingWithOptions:)` method of your application delegate, or in a location that works best for your project.
 	
-	#### Swift 2
-	{: initialize-swift-2}
-	
     ```Swift 
-    BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH)`
-    ```
-    {: codeblock}
-    
-    #### Swift 3
-    {: initialize-swift-3}
-    
-    ```Swift 
-    BMSClient.sharedInstance.initializeWithBluemixAppRoute(bluemixAppRoute: nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH)`
+    BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.REGION_US_SOUTH) // Make sure that you point to your region
     ```
     {: codeblock}
 
-    To use the {{site.data.keyword.mobileanalytics_short}} Client SDK, you must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
+    To use the {{site.data.keyword.mobileanalytics_short}} Client SDK, you must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH` or `BMSClient.REGION_UK`.
+    <!-- , or `BMSClient.REGION_SYDNEY`. -->
    
    <!-- Set this value with a `BMSClient.REGION` static property. -->
 
@@ -114,31 +102,18 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 
 3. Initialize Analytics by giving it your mobile application’s name. You also need the [**API Key**](#analytics-clientkey) value.
 
-  The application name is used as a filter to search for client logs in your {{site.data.keyword.mobileanalytics_short}} Dashboard. By using the same application name across platforms (for example, Android and iOS), you can see all logs from that application under the same name, regardless of which platform the logs were sent from.
+  The application name is used as a filter to search for app logs in your {{site.data.keyword.mobileanalytics_short}} Dashboard. By using the same application name across platforms (for example, Android and iOS), you can see all logs from that application under the same name, regardless of which platform the logs were sent from.
 
   An optional `deviceEvents` parameter automatically gathers analytics for device-level events.
 
 	### iOS
 	{: #ios-initialize-analytics}
 	
-	#### Swift 2
-	{: deviceevents-analytics-swift-2}
-
       ```Swift
-      Analytics.initializeWithAppName("AppName", apiKey: your_api_key,
-      deviceEvents: DeviceEvent.LIFECYCLE)
+      Analytics.initializeWithAppName("AppName", apiKey: your_api_key, hasUserContext: false, deviceEvents: DeviceEvent.LIFECYCLE)
       ```
       {: codeblock}
-      
-	#### Swift 3
-	{: deviceevents-analytics-swift-3}   
-	   
-      ```Swift
-      Analytics.initializeWithAppName(appName: "AppName", apiKey: your_api_key,
-      deviceEvents: DeviceEvent.LIFECYCLE)
-      ```
-      {: codeblock}
-
+  
 	### watchOS
   {: #watchos-initialize-analytics}
   
@@ -146,7 +121,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 	{: initializeanalyticsswift2watchos}
 
 	```Swift
-	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
+	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key, hasUserContext: false)
 	```
 	{: codeblock}
 
@@ -154,11 +129,13 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 	{: initializeanalyticsswift3watch}
 	
 	```Swift
-	  Analytics.initializeWithAppName(appName: "AppName", apiKey: your_api_key)
+	  Analytics.initializeWithAppName(appName: "AppName", apiKey: your_api_key, hasUserContext: false)
 	```
 	{: codeblock}
+	
+	**Note:** Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user. The [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) method will not work when `hasUserContext` is false. If `hasUserContext` is true, each use of [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) counts as an active user. There is no default user identity when`hasUserContext` is true, and therefore must be set to populate the active user charts.
 
-  You can record device events on WatchOS by using the `Analytics.recordApplicationDidBecomeActive()` and `Analytics.recordApplicationWillResignActive()` methods.
+	You can record device events on WatchOS by using the `Analytics.recordApplicationDidBecomeActive()` and `Analytics.recordApplicationWillResignActive()` methods.
   
   Add the following line to the `applicationDidBecomeActive()` method of the ExtensionDelegate class.
 
@@ -445,7 +422,7 @@ Logger.sdkDebugLoggingEnabled = true
 
 ## Tracking active users
 {: #trackingusers}
-You can optionally track how many users are actively using your application by passing the user name of the active user to {{site.data.keyword.mobileanalytics_short}}.
+You can optionally track how many users are actively using your application by passing the user name of the active user to {{site.data.keyword.mobileanalytics_short}}. You must initialize {{site.data.keyword.mobileanalytics_short}} with `hasUserContext=true` to enable user tracking. Otherwise, {{site.data.keyword.mobileanalytics_short}}  captures only one user per device.
 
 #### Android
 {: #android-tracking-users}
@@ -457,12 +434,13 @@ Analytics.setUserIdentity("username");
 ```
 {: codeblock}
 
-Add the following code for when the user logs out:
+<!--Add the following code for when the user logs out:
 
 ```
 Analytics.clearUserIdentity();
 ```
 {: codeblock}
+-->
 
 #### iOS - Swift
 {: #ios-tracking-users}
@@ -474,12 +452,14 @@ Analytics.userIdentity = "username"
 ```
 {: codeblock}
 
+<!--
 Add the following code for when the user logs out:
 
 ```
 Analytics.userIdentity = nil
 ```
 {: codeblock}
+-->
 
 <!--## Configuring MobileFirst Platform Foundation servers to use the {{site.data.keyword.mobileanalytics_short}} service (optional)
 {: #configmfp}

@@ -44,7 +44,7 @@ With the {{site.data.keyword.mobileanalytics_short}} service you can:
 <dt>Rapidly discover issues</dt>
 	<dd>Monitor crash status. Set alert triggers on critical metrics and route alerts to any REST endpoint. </dd>
 <dt>Troubleshoot to root cause</dt>
-	<dd>Use custom client logging in your app and automatically upload the logs and search them from the console. Drill down on crash events to see stack traces. </dd>
+	<dd>Use custom logging in your app and automatically upload the logs and search them from the console. Drill down on crash events to see stack traces. </dd>
 </dl>
  
 
