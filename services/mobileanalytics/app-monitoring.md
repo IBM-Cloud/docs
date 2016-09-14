@@ -9,7 +9,7 @@ copyright:
 Last updated: 24 August 2016
 {: .last-updated}
 
-The {{site.data.keyword.mobileanalytics_full}} provides monitoring and analytics for your mobile applications. You can record client logs and monitor data with the {{site.data.keyword.mobileanalytics_short}} Client SDK. Developers can control when to send this data to the {{site.data.keyword.mobileanalytics_short}} Service. When data is delivered to {{site.data.keyword.mobileanalytics_short}}, you can use the {{site.data.keyword.mobileanalytics_short}} dashboard to get analytics insights about your mobile applications, devices, and client logs.
+The {{site.data.keyword.mobileanalytics_full}} provides monitoring and analytics for your mobile applications. You can record app logs and monitor data with the {{site.data.keyword.mobileanalytics_short}} Client SDK. Developers can control when to send this data to the {{site.data.keyword.mobileanalytics_short}} Service. When data is delivered to {{site.data.keyword.mobileanalytics_short}}, you can use the {{site.data.keyword.mobileanalytics_short}} dashboard to get analytics insights about your mobile applications, devices, and app logs.
 {: shortdesc}
 
 <!--
@@ -20,12 +20,12 @@ The {{site.data.keyword.mobileanalytics_full}} provides monitoring and analytics
 You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
 
-### Creating custom charts for client logs
+### Creating custom charts for app logs
 {: #custom-charts-client-logs}
 
-You can create a custom chart for client logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
+You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
-In this example, you use client log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
+In this example, you use app log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
 
 * Specific data
   * Log level
@@ -45,7 +45,7 @@ In this example, you use client log data to create a flow chart. The final graph
 2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
 3. Click **Create Chart** to create a new custom chart and provide the following values:
   * Chart Title: Application and Log Levels
-  * Event Type: Client Logs
+  * Event Type: App Logs
   * Chart Type: Flow Chart
 5. Click the **Chart Definition** tab and provide the following values:
   * Source: Application Name
@@ -90,28 +90,28 @@ You can also export and import custom chart definitions programmatically by usin
 
 You can set thresholds in alert definitions in the {{site.data.keyword.mobileanalytics_short}} Console to better monitor your activities.
 
-You can configure thresholds, which if exceeded, trigger alerts to notify the {{site.data.keyword.mobileanalytics_short}} Console monitor. The triggered alerts can be visualized on the console, or the alerts can be handled by a custom webhook. <!-- This feature provides a proactive means of detecting client log errors, server log errors, extended periods of network latency, and authentication failures.--> This feature provides a proactive means of detecting client log errors and application crashes server log errors. Reactive thresholds and alerts keep you from having to sift through your data and set thresholds at a wide spectrum of granularity.
+You can configure thresholds, which if exceeded, trigger alerts to notify the {{site.data.keyword.mobileanalytics_short}} Console monitor. The triggered alerts can be visualized on the console, or the alerts can be handled by a custom webhook. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> This feature provides a proactive means of detecting app log errors and application crashes server log errors. Reactive thresholds and alerts keep you from having to sift through your data and set thresholds at a wide spectrum of granularity.
 
-### Creating an alert definition for client logs
+### Creating an alert definition for app logs
 {: #alert-def-client-logs}
 
-You can create an alert definition that is based on client logs.
+You can create an alert definition that is based on app logs.
 
-In this example, you use client log data to create an alert definition. The alert monitors all client logs that were received in the last 5 minutes, and continues to check every 5 minutes, until the alert definition is disabled or deleted. An alert is triggered for each device that sent 3 or more client error logs with the same app name and version.
+In this example, you use app log data to create an alert definition. The alert monitors all app logs that were received in the last 5 minutes, and continues to check every 5 minutes, until the alert definition is disabled or deleted. An alert is triggered for each device that sent 3 or more app error logs with the same app name and version.
 
 1. In the {{site.data.keyword.mobileanalytics_short}} Console, click **Definitions** to go to the Alert Definitions page.
 2. Click **Create Alert** to create an alert.
 3. Provide the following values:
-	* Alert Name: Alert for client logs
+	* Alert Name: Alert for app logs
 	* Message: Error Message Alert
 	* Query Frequency: 5 minutes
-	* Event Type: Client Logs
+	* Event Type: App Logs
 		* Property: Log Level
 			* Value: Error
 			* Threshold
 				* Threshold Type: Total for Application Instance
 
-					**Note**: If you choose the Average for Application option, the client logs are averaged by the number of devices. For example, if you have two devices, and one device sends six client logs while the other device sends three client logs, the average is 4.5 client logs.
+					**Note**: If you choose the Average for Application option, the app logs are averaged by the number of devices. For example, if you have two devices, and one device sends six app logs while the other device sends three app logs, the average is 4.5 app logs.
 				* Operator: is greater than or equals 3
 	<!-- insert alert definition tab image? -->
 
@@ -124,7 +124,7 @@ In this example, you use client log data to create an alert definition. The aler
         * Authentication Type
 5. Click **Save**.
 
-You created an alert definition to trigger an alert at the end of each 5 minute interval if the number of client logs reached your threshold of 3 or more error logs.
+You created an alert definition to trigger an alert at the end of each 5 minute interval if the number of app logs reached your threshold of 3 or more error logs.
 
 ### Creating an alert definition for app crashes
 {: #alert-def-app-crash}
@@ -226,6 +226,6 @@ You can click on the + icon next to any entry to display the **Crash Details** t
 
 You can expand any entry in the **Crash Details** table to get more details, including a stacktrace.
 
-**Note**: The data for the **Crash Summary** table is populated by querying the fatal level client logs. If your app does not collect fatal client logs, no data is available.
+**Note**: The data for the **Crash Summary** table is populated by querying the fatal level app logs. If your app does not collect fatal app logs, no data is available.
 
 
