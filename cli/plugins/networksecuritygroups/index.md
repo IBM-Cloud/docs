@@ -27,7 +27,7 @@ bluemix plugin uninstall "Network Security Group"
 2. Install the IBM Network Security Groups plug-in by using the following command:  
 **Note:** Either switch to the location of the Network Security Groups plug-in or specify the path to the plug-in location.  
 
-	* For Microsoft Windows: ####  
+	* For Microsoft Windows:  
 
 	```
 	bluemix plugin install nsg-windows-amd64.exe  
