@@ -14,7 +14,7 @@ copyright:
 
 # MQTT connectivity for gateways
 {: #mqtt}
-Last updated: 6 September 2016
+Last updated: 14 September 2016
 {: .last-updated}
 
 MQTT is the primary protocol that devices and applications use to communicate with the {{site.data.keyword.iot_full}}. Client libraries, information, and samples are provided to help you to use MQTT clients as gateways to connect your devices to {{site.data.keyword.iot_short_notm}}.
@@ -210,7 +210,7 @@ Requests are formatted as shown in the following code sample:
 
 Responses are formatted as shown in the following code sample:
 
-````   
+```
     {
         "rc": 0,
         "message": "success",
