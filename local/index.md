@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 8 September 2016*
+*Last updated: 15 September 2016*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
@@ -495,7 +495,7 @@ To ensure that your local instance is compatible with the latest supported versi
 
 {{site.data.keyword.Bluemix_notm}} makes every effort to keep the local environments compatible with the latest ESXi and vCenter versions. However, there might be short periods of time where the most recent ESXi and vCenter versions are not supported. Refer to the [Local infrastructure requirements](../local/index.html#localinfra) documentation for the latest compatible versions prior to applying any updates.
 
-## Incident response and support
+## Incident response and support for {{site.data.keyword.Bluemix_notm}} Local
 {: #incidentresponse}
 
 ### Customer-detected issues
@@ -516,7 +516,7 @@ Depending on the issue, you, IBM, or both of you work together to fix the issue.
 
 **Note**: Severity 1 support tickets are monitored 24 hours a day, 7 days a week. Other tickets are processed from Sunday 10:00 pm GMT through Saturday 12:00 am GMT. For more information about severity of support tickets and working with support, see <a href="../support/index.html#contacting-bluemix-support-local">Contacting support</a>.
 
-## Disaster recovery
+## Disaster recovery for {{site.data.keyword.Bluemix_notm}} Local
 {: #dr}
 
 Disaster recovery for {{site.data.keyword.Bluemix_short}} Local can be set up similarly to the way that it works when you use {{site.data.keyword.Bluemix_short}} Public. {{site.data.keyword.Bluemix_short}} Public provides a continuously available platform for innovation with multiple fail-safe measures to ensure that your orgs, spaces, and apps are always available. Deploying apps to multiple geographic regions enables continuous availability that protects against unplanned, simultaneous loss of multiple hardware or software components, or the loss of an entire data center, so that even in the event of a natural disaster in one geographic location, your distributed {{site.data.keyword.Bluemix_notm}} Public app instances in alternate geographic locations will be available.
