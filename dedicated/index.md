@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 8 September 2016*
+*Last updated: 15 September 2016*
 {: .last-updated}
 
 
@@ -350,7 +350,7 @@ IBM sends broadcast messages of the changes that are planned for each maintenanc
 If there is a reported issue following a maintenance update, you agree with {{site.data.keyword.Bluemix_notm}} Support if it is in your best interest to allow IBM to roll back the update. Upon agreement, IBM rolls back the update to restore the environment to the previous state.
 
 
-## Incident response and support
+## Incident response and support for {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #incidentresponse}
 
 ### Customer-detected issues
@@ -372,7 +372,7 @@ Depending on the issue, you, IBM, or both of you work together to fix the issue.
 **Note**: Severity 1 support tickets are monitored 24 hours a day, 7 days a week. Other tickets are processed from Sunday 10:00 pm GMT through Saturday 12:00 am GMT. For more information about severity of support tickets and working with support, see <a href="../support/index.html#contacting-bluemix-support-local">Contacting support</a>.
 
 
-## Disaster recovery
+## Disaster recovery for {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dr}
 
 Disaster recovery for {{site.data.keyword.Bluemix_short}} Dedicated can be set up similarly to the way that it works when you use {{site.data.keyword.Bluemix_short}} Public. {{site.data.keyword.Bluemix_short}} Public provides a continuously available platform for innovation with multiple fail-safe measures to ensure that your orgs, spaces, and apps are always available. Deploying apps to multiple geographic regions enables continuous availability that protects against unplanned, simultaneous loss of multiple hardware or software components, or the loss of an entire data center, so that even in the event of a natural disaster in one geographic location, your distributed {{site.data.keyword.Bluemix_notm}} Public app instances in alternate geographic locations will be available.
