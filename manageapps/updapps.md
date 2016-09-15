@@ -24,7 +24,7 @@ You can use the cf push command or {{site.data.keyword.Bluemix}} DevOps Services
 ##Creating and using a custom domain
 {: #domain}
 
-You can use a custom domain in the URL of your application instead of the default {{site.data.keyword.Bluemix_notm}} system domain that is mybluemix.net.
+For CF apps and container groups, you can use a custom domain in the URL of your application instead of the default {{site.data.keyword.Bluemix_notm}} system domain that is mybluemix.net.
 
 Domains provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}. To use a custom domain, you must register the custom domain on a public DNS server, configure the custom domain in {{site.data.keyword.Bluemix_notm}}, and then map the custom domain to the {{site.data.keyword.Bluemix_notm}} system domain on the public DNS server. After your custom domain is mapped to the {{site.data.keyword.Bluemix_notm}} system domain, requests for your custom domain are routed to your application in {{site.data.keyword.Bluemix_notm}}.
 
@@ -65,15 +65,18 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
 
         The custom domain name that you want to use.
 
-  2. Add the route with the custom domain to an application by typing the following command:
+  2. Add the route with the custom domain to an application. For CF apps, type the following command:
 
     ```
     cf map-route myapp mydomain -n host_name
     ```
-
+    For container groups, type the following command:	
+     ```
+     cf ic route map -n host_name -d mydomain mycontainergroup
+     ```
     *myapp*
 
-    	The name of your application.
+    	For CF apps, the name of your application.
 
     *mydomain*
 
@@ -82,6 +85,11 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
     *host_name*
 
         The host name in the route that you want to use for your application.
+        
+    *mycontainergroup*
+    
+        For container groups, the name of the container group.  
+
 
 After you configure the custom domain in {{site.data.keyword.Bluemix_notm}}, you must map the custom domain to the {{site.data.keyword.Bluemix_notm}} system domain on your registered DNS server:
 
