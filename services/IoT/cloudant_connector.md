@@ -67,9 +67,10 @@ Ensure that you have developer privileges in the Bluemix organization and that y
 
 Complete the following steps to connect a {{site.data.keyword.cloudant}}:
 
-1. On your {{site.data.keyword.iot_short}} dashboard click **Settings** in the navigation bar on the left.
-2. In the **{{site.data.keyword.cloudant}}** section, all available {{site.data.keyword.cloudant}} services within the same Bluemix space as your {{site.data.keyword.iot_short}} service.
-3. Click on the {{site.data.keyword.cloudant}} service you wish to connect.
+1. On your {{site.data.keyword.iot_short}} dashboard click **Extensions** in the navigation bar.
+2. In the Historical Data Storage tile, click **Setup**.
+2. All available {{site.data.keyword.cloudant}} services within the same Bluemix space as your {{site.data.keyword.iot_short}} service are listed in the Configure historical data storage section.
+3. Select the {{site.data.keyword.cloudant}} service that you wish to connect.
 4. Select your {{site.data.keyword.cloudant}} configuration options:
 
   a. Select a bucket interval. The bucket interval controls how frequently new databases are created to store device data. New buckets are created at midnight in the selected timezone using your selected bucket interval.
