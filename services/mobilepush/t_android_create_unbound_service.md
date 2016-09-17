@@ -8,7 +8,7 @@ copyright:
 {:new_window: target="_blank"}
 # Creating an unbound {{site.data.keyword.mobilepushshort}} service for Android
 {: #create_android_unbound}
-Last updated: 29 August 2016
+Last updated: 17 September 2016
 {: .last-updated}
 
 Create a {{site.data.keyword.mobilepushshort}} service instance. You can use the {{site.data.keyword.mobilepushshort}} service instance without binding to any back-end application.
@@ -18,9 +18,8 @@ Create a {{site.data.keyword.mobilepushshort}} service instance. You can use the
 ![Binding a Push Notification service](images/unbound_1.jpg)
  
 2. Click **Bind** and choose the {{site.data.keyword.mobilepushshort}} service instance to bind. When your application is bound to {{site.data.keyword.mobilepushshort}} service, information on the service are stored in JSON format in the VCAP_SERVICES environment variable for your app. For example: 
-
-	```
-	{
+```
+ 	{
     "imfpush_Dev": [
       {
          "name": "neekrish_20JulUnbound",
@@ -30,5 +29,5 @@ Create a {{site.data.keyword.mobilepushshort}} service instance. You can use the
       }
     ]
     }
-	```
+```
 	{: codeblock}

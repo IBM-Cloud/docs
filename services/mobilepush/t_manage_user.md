@@ -8,7 +8,7 @@ copyright:
 
 # Registering a device with userId
 {: #register_device_with_userId}
-Last updated: 29 August 2016
+Last updated: 17 September 2016
 {: .last-updated}
 
 To register for userId-based notification, complete the following steps:
@@ -17,12 +17,11 @@ To register for userId-based notification, complete the following steps:
 {: android-register}
 
 Initialize the MFPPush class with the `AppGUID` and `clientSecret` key of {{site.data.keyword.mobilepushshort}} service.
-
-	```
+```
 	// Initialize the MFPPush
 	push = MFPPush.getInstance();
 	push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
-	```
+```
 	{: codeblock}
 
 ####AppGUID
@@ -36,22 +35,20 @@ This is the AppGUID key of the {{site.data.keyword.mobilepushshort}} service.
 This is the clientSecret key of the {{site.data.keyword.mobilepushshort}} service.
 
 Use the **registerDeviceWithUserId** API to register the device for {{site.data.keyword.mobilepushshort}}.
-
-	```
+```
 	// Register the device to {{site.data.keyword.mobilepushshort}}.
 	push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
     @Override
     public void onSuccess(String deviceId) {
         Log.d("Device is registered with Push Service.");
     }
-
     @Override
     public void onFailure(MFPPushException ex) {
         Log.d("Error registering with Push Service...\n"
         + "Push notifications will not be received.");
     }
 	});
-	```
+```
 	{: codeblock}
 
 ####userId
@@ -68,10 +65,9 @@ Pass the unique userId value for registering for {{site.data.keyword.mobilepushs
 Copy the following code snippet to your mobile application to register for userId -based notifications.
 
 Initialize `MFPPush` with `clientsecret`.
-
-	```
+```
 	MFPPush.initialize("appGUID", "clientSecret");
-	```
+```
 	{: codeblock}
 
 ###appGUID
@@ -83,12 +79,11 @@ This is the AppGUID key of the {{site.data.keyword.mobilepushshort}} service.
 {: cordova-client-secret}
 
 This is the clientSecret key of the {{site.data.keyword.mobilepushshort}} service.
-
-	```
+```
 	//Register for {{site.data.keyword.mobilepushshort}} with userId
 	var userId = "userId";
 	MFPPush.registerDevice({},success,failure,userId);
-	```
+```
 	{: codeblock}
 
 ####userId
@@ -101,12 +96,11 @@ Pass the unique userId value for registering for {{site.data.keyword.mobilepushs
 {: objc-register}
 
 Use the following APIs to register for UserId based {{site.data.keyword.mobilepushshort}}.
-
-	```
+```
 	// Initialize the MFPPush
 	IMFPushClient* push = [IMFPushClient sharedInstance];
 	[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"];
-	```
+```
 	{: codeblock}
 
 ###AppGUID
@@ -120,12 +114,10 @@ This is the AppGUID key of the {{site.data.keyword.mobilepushshort}} service.
 This is the clientSecret key of the {{site.data.keyword.mobilepushshort}} service.
 
 Use the **registerWithUserId** API to register the device for {{site.data.keyword.mobilepushshort}}.
-
-	```
+```
 	// Register the device to push notifications service.
 	[push registerWithDeviceToken:deviceToken WithUserId:@"userId" completionHandler:^(IMFResponse *response, NSError *error) {
     NSString *message=@"";
-
 	if (error){
         message = [NSString stringWithFormat:@"Error registering for push notifications: %@", error.description];
         NSLog(@"%@",message);
@@ -134,7 +126,7 @@ Use the **registerWithUserId** API to register the device for {{site.data.keywor
         NSLog(@"%@",message);
     }
 	}];
-	```
+```
 	{: codeblock}
 
 ####userId
@@ -145,11 +137,11 @@ Pass the unique userId value for registering for {{site.data.keyword.mobilepushs
 ## Swift
 {: swift-register}
 
-	```
+```
 	// Initialize the BMSPushClient
 	let push =  BMSPushClient.sharedInstance
 	push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
-	```
+```
 	{: codeblock}
 
 ####AppGUID
@@ -163,21 +155,17 @@ This is the clientSecret key of the {{site.data.keyword.mobilepushshort}} servic
 
 Use the **registerWithUserId** API to register the device for {{site.data.keyword.mobilepushshort}}.
 
-	```
+```
 	// Register the device to Push Notifications service.
 	push.registerWithDeviceToken("deviceToken", WithUserId: "userId")  { (response, statusCode, error) -> Void in
 	if error.isEmpty {
-
     print( "Response during device registration : \(response)")
-
         print( "status code during device registration : \(statusCode)")
-
     } else {
-
         print( "Error during device registration \(error) ")
     }
     }
-   ```
+ ```
 	{: codeblock}
 
 ####userId
@@ -185,14 +173,41 @@ Use the **registerWithUserId** API to register the device for {{site.data.keywor
 
 Pass the unique userId value for registering for {{site.data.keyword.mobilepushshort}}.
 
+## Google Chrome and Mozilla Firefox
+{: web-register}
+
+Use the following APIs to register for userId based notifications. Initialize the SDK with `app GUID`, `app Region` and `Client Secret`.
+
+ ```
+    var bmsPush = new bmsPush();
+    var params = {
+        "appGUID":"push app GUID",
+        "appRegion":"App Region"
+        "clientSecret":"Push Client Secret" (optional)
+      }
+      bmsPush.initialize(params, function(response){
+          alert(response.response)
+      })
+ ```
+	{: codeblock}
+  
+After successfully initialized register the web application with userId.
+
+ ```
+    bmsPush.registerWithUserId("UserId", function(response) {
+      alert(response.response)
+    })
+ ```
+	{: codeblock}
+
 # Using userId-based notifications
 {: #using_userid}
 
 
 The userId-based notifications are notification messages that are targeted to a specific user. Many devices can be registered with one user. The following steps  describes how to send user ID-based notifications.
 
-1. From the **Push Notification** dashboard, click the **Notifications** tab.
-1. Select the **UserId** option to send userId-based notifications.
-1. In the **Search** User Id field, search for the user Id that you want to use and then click the **+Add** button.![Notifications Screen](images/user_notification.jpg)
-1. In the **Message Text** field, enter text that want to send in your notification.
+1. From the **Push Notification** dashboard, select **Send Notifications** option.
+1. Select **UserId** in the **Send to** list of options.
+1. In the **User Id** field, search for the user Id that you want to use and then click the **+Add** button.![Notifications Screen](images/user_notification.jpg)
+1. In the **Message** field, enter text that want to send in your notification.
 1. Click the **Send** button.

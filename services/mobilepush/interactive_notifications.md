@@ -7,7 +7,7 @@ copyright:
 
 # Interactive notifications
 {: #interactive-notifications}
-Last updated: 29 August 2016
+Last updated: 17 September 2016
 {: .last-updated}
 
 Interactive notifications allow users to act when a notification arrives without opening the application. When an interactive notification arrives, the device shows the action buttons along with the notification message. Interactive notifications are supported on iOS devices with version 8 and later. If an interactive notification is sent to iOS devices with version lesser than 8, the notification actions are not displayed.
@@ -30,34 +30,28 @@ Complete the steps to receive interactive notifications:
 1. Enable the application capability to perform background tasks on receiving the remote notifications. This step is required if some of the actions are background-enabled.
 1. In the AppDelegate (application: didRegisterForRemoteNotificationsWithDeviceTokenapplication:), set the categories before you set the `deviceToken` on `WLPush Object`.
 
-	```
-	if([application respondsToSelector:@selector(registerUserNotificationSettings:)]){
-	 UIUserNotificationType userNotificationTypes = UIUserNotificationTypeNone | UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge;
-	      
-	 UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
-	 acceptAction.identifier = @"OK";
-	 acceptAction.title = @"OK";
-	      
-	 UIMutableUserNotificationAction *rejetAction = [[UIMutableUserNotificationAction alloc] init];
-	 rejetAction.identifier = @"NOK";
-	 rejetAction.title = @"NOK";
-	      
-	 UIMutableUserNotificationCategory *cateogory = [[UIMutableUserNotificationCategory alloc] init];
-	 cateogory.identifier = @"poll";
-	 [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextDefault];
-	 [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextMinimal];
-	      
-	 NSSet *catgories = [NSSet setWithObject:cateogory];
-	 [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:catgories]];
-	}
-	```
+```
+if([application respondsToSelector:@selector(registerUserNotificationSettings:)]){
+ UIUserNotificationType userNotificationTypes = UIUserNotificationTypeNone | UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge;
+ UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
+ acceptAction.identifier = @"OK";
+ acceptAction.title = @"OK";
+ UIMutableUserNotificationAction *rejetAction = [[UIMutableUserNotificationAction alloc] init];
+ rejetAction.identifier = @"NOK";
+ rejetAction.title = @"NOK";
+ UIMutableUserNotificationCategory *cateogory = [[UIMutableUserNotificationCategory alloc] init];
+ cateogory.identifier = @"poll";
+ [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextDefault];
+ [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextMinimal];
+ NSSet *catgories = [NSSet setWithObject:cateogory];
+ [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:catgories]];
+}
+```
 	{: codeblock}
 
 1. Implement new callback method on AppDelegate:
-
 	```
 	 -(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (ˆ)())completionHandler
 	```
 	{: codeblock} 
-
 5. This new callback method is invoked when user clicks the action button. The implementation of this method must perform tasks associated with the specified identifier and execute the block in the `completionHandler` parameter.
