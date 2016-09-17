@@ -7,7 +7,7 @@ copyright:
 
 # Managing tags
 {: #manage_tags}
-Last updated: 29 August 2016
+Last updated: 17 September 2016
 {: .last-updated}
 
 Use the {{site.data.keyword.mobilepushshort}} dashboard to create and delete tags for your application and then initiate tag-based notifications. The tag-based notification is received on devices that are subscribed to tags.
@@ -54,7 +54,7 @@ Copy the following code snippets to your Android mobile application to get a lis
 
 Use the following **getTags** API to get a list of available tags to which the device can subscribe.
 
-        	```
+```
 	// Get a list of available tags to which the device can subscribe
 	push.getTags(new MFPPushResponseListener<List<String>>(){  
     @Override
@@ -69,12 +69,12 @@ Use the following **getTags** API to get a list of available tags to which the d
      updateTextView("Error getting available tags.. " + ex.getMessage());
     }
      })  
-    ```
+```
 	{: codeblock}
 
 Use the **getSubscriptions** API to get a list of tags that to which the device is subscribed.
 
-	```
+```
 	// Get a list of tags that to which the device is subscribed.
 	push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
@@ -99,21 +99,20 @@ Copy the following code snippets to your mobile application to get a list of tag
 
 Retrieve an array of tags that are available to subscribe to.
 
-	```
+```
 	//Get a list of available tags to which the device can subscribe
 	MFPPush.retrieveAvailableTags(function(tags) {
     alert(tags);
 	}, null);
-
-	```
+```
 	{: codeblock}
 
-	```
+```
 	//Get a list of available tags to which the device is subscribed.
 	MFPPush.getSubscriptionStatus(function(tags) {
     alert(tags);
 	}, null);
-	```
+```
 	{: codeblock}
 
 ## Objective-C
@@ -123,7 +122,7 @@ Copy the following code snippets to your iOS application, developed using Object
 
 Use the following **retrieveAvailableTags** API to get a list of available tags to which the device can subscribe.
 
-	```
+```
 	//Get a list of available tags to which the device can subscribe
 	[push retrieveAvailableTagsWithCompletionHandler:
 	^(IMFResponse *response, NSError *error){
@@ -136,13 +135,13 @@ Use the following **retrieveAvailableTags** API to get a list of available tags 
     [self.appDelegateVC updateMessage:availableTags.description];
     }
     }];
-   ```
+ ```
 	{: codeblock}
 
 Use the **retrieveSubscriptions** API to get a list of tags that to which the device is subscribed.
 
 
-	```
+```
 	// Get a list of tags that to which the device is subscribed.
 	[push retrieveSubscriptionsWithCompletionHandler:
 	^(IMFResponse *response, NSError *error) {
@@ -155,7 +154,7 @@ Use the **retrieveSubscriptions** API to get a list of tags that to which the de
     [self.appDelegateVC updateMessage:subscribedTags.description];
     }
     }];
-   ```
+  ```
 	{: codeblock}
 
 ## Swift
@@ -166,41 +165,73 @@ The **retrieveAvailableTagsWithCompletionHandler** API returns the list of avail
 Call the {{site.data.keyword.mobilepushshort}} to get subscriptions for a tag.
 
 Copy the following code snippets into your Swift mobile application to get a list of available tags to which the device is subscribed and get a list of available tags to which the device can subscribe.
-
-
-	```
+```
 	//Get a list of available tags to which the device can subscribe
 	push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -> Void in
-
-    if error.isEmpty {
-
+    if error.isEmpty 
+		{
         print( "Response during retrieve tags : \(response)")
         print( "status code during retrieve tags : \(statusCode)")
-    }
-    else{
+         }
+    else
+		{
         print( "Error during retrieve tags \(error) ")
         Print( "Error during retrieve tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }
-	}
-	```
-	{: codeblock}
+    	}
+		}
+```
+		{: codeblock}
 
-	```
+```
 	//Get a list of available tags to which the device is subscribed
 	push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
-    if error.isEmpty {
-
+    if error.isEmpty
+		{
         print( "Response during retrieving subscribed tags : \(response?.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
-    }
-    else {
+        }
+    else 
+		{
         print( "Error during retrieving subscribed tags \(error) ")
         Print( "Error during retrieving subscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }
-	}
-	```
+        }
+	   }
+```
 	{: codeblock}
 
+## Google Chrome and Mozilla Firefox
+{: web-get-tags}
+
+Copy the following code snippets into your web application to get a list of tags to which the web application is subscribed and to get a list of available tags to which the web application can subscribe.
+
+Retrieve an array of tags that are available to subscribe to.
+
+```
+  var bmsPush = new BMSPush();
+  bmsPush.retrieveAvailableTags(function(response) 
+	{
+    alert(response.response)
+    var json = JSON.parse(response.response);
+    var tagsA = []
+    for (i in json.tags)
+	{
+      tagsA.push(json.tags[i].name)
+    }
+    alert(tagsA)
+  })
+```
+	{: codeblock}
+
+Use the `retrieveSubscriptions` API to get a list of tags that to which the web application is subscribed.
+
+```
+  var bmsPush = new BMSPush();
+  bmsPush.retrieveSubscriptions(function(response) 
+	{
+    alert(response.response)
+  })
+```
+	{: codeblock}
 
 # Subscribing and unsubscribing tags
 {: #Subscribe_tags}
@@ -212,7 +243,7 @@ Use the following code snippets to allow your devices to get subscriptions, subs
 
 Copy and paste this code snippet to your Android mobile application.
 
-	```
+```
 	push.subscribe(allTags.get(0),
 	new MFPPushResponseListener<String>() {
     @Override
@@ -226,10 +257,10 @@ Copy and paste this code snippet to your Android mobile application.
     unsubscribeFromTags(arg0);
     }
     });
-   ```
+```
 	{: codeblock}
 
-	```
+```
 	push.unsubscribe(tag, new MFPPushResponseListener<String>() {
     @Override
     public void onSuccess(String s) {
@@ -241,7 +272,7 @@ Copy and paste this code snippet to your Android mobile application.
     updateTextView("Error while unsubscribing from tags. "+ e.getMessage());
     }
     });
-   ```
+```
 	{: codeblock}
 
 ## Cordova
@@ -249,11 +280,11 @@ Copy and paste this code snippet to your Android mobile application.
 
 Copy and paste this code snippet to your Cordova mobile application.
 
-	```
+```
 	var tag = "YourTag";
 	MFPPush.subscribe(tag, success, failure);
 	MFPPush.unsubscribe(tag, success, failure);
-	```
+```
 	{: codeblock}
 
 ## Objective-C
@@ -263,7 +294,7 @@ Copy and paste this code snippet to your Objective-C mobile application.
 
 Use the **subscribeToTags** API to subscribe to a tag.
 
-	```
+```
 	[push subscribeToTags:tags completionHandler:
 	^(IMFResponse *response, NSError *error) {
     if(error){
@@ -275,12 +306,12 @@ Use the **subscribeToTags** API to subscribe to a tag.
       [self updateMessage:subStatus.description];
     }
     }];
-   ```
+```
 	{: codeblock}
 
 Use the **unsubscribeFromTags** API to unsubscribe from a tag.
 
-	```
+```
 	[push unsubscribeFromTags:tags completionHandler:
 	^(IMFResponse *response, NSError *error) {
     if (error){
@@ -291,7 +322,7 @@ Use the **unsubscribeFromTags** API to unsubscribe from a tag.
        [self updateMessage:subStatus.description];
     }
     }];
-	```
+```
 	{: codeblock}
 
 ## Swift
@@ -303,7 +334,7 @@ Copy and paste this code snippet to your Swift mobile application.
 
 Use the **subscribeToTags** API to subscribe to a tag.
 
-	```
+```
 	push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
 	if (error != nil) {
 		//error while subscribing to tags
@@ -311,16 +342,15 @@ Use the **subscribeToTags** API to subscribe to a tag.
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
 	}
-	```
+```
 	{: codeblock}
 
 **Unsubscribe Tags**
 
 Use the **unsubscribeFromTags** API to unsubscribe from a tag.
 
-	```
+```
 	push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
-
     if error.isEmpty {
         print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
@@ -330,7 +360,30 @@ Use the **unsubscribeFromTags** API to unsubscribe from a tag.
         print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
     }
 	}
-	```
+```
+	{: codeblock}
+
+## Google Chrome and Mozilla Firefox
+{: web-subscribe-tags}
+
+To subscribe to tags from web applications, use the following code snippet:
+
+```
+var tagsArray = ["tag1", "Tag2"]
+bmsPush.subscribe(tagsArray,function(response) {
+  alert(response.response)
+})
+```
+	{: codeblock}
+
+Unsubscribing from the tags uses `unSubscribe` method.
+
+```
+var tagsArray = ["tag1", "Tag2"]
+  bmsPush.unSubscribe(tagsArray,function(response) {
+  alert(response.response)
+})
+```
 	{: codeblock}
 
 # Using tag-based notifications

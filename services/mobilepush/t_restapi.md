@@ -7,7 +7,7 @@ copyright:
 
 # Using REST APIs
 {: #push-api-rest}
-Last updated: 23 August 2016
+Last updated: 17 September 2016
 {: .last-updated}
 
 You can use a REST (Representational State Transfer) API (application program interface) for {{site.data.keyword.mobilepushshort}}. You can also use the SDK and [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) to further develop your client applications.
@@ -28,11 +28,10 @@ To obtain the base URL for the REST API, complete the steps:
 
 You can also use the command line to get the service credentials:
 
-	```
+```
     cf create-service-key {push_instance_name} {key_name}
-
     cf service-key {push_instance_name} {key_name}
-    ```
+```
 	{: codeblock}
 
 ## Accept language header
@@ -53,8 +52,7 @@ To get the appSecret value:
 2. Click the **Show Credentials** link to display the appSecret (AppID).
 
 The **Show Credentials** screen shows information about the AppSecret:
-
-	```
+```
 	{
     "imfpush_Dev": [
     {
@@ -69,8 +67,9 @@ The **Show Credentials** screen shows information about the AppSecret:
      }
     ]
     }
-   ```
+```
 	{: codeblock} 
+
 
 ##Push REST API filters
 {: #push-api-rest-filters}
