@@ -17,7 +17,8 @@ Last Updated: 13 September 2016
 {: .last-updated}
 
 ### September 16, 2016: Updated Liberty buildpack v3.3-20160912-1729
-* The default Liberty runtime version was updated to the [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) release. The monthly Liberty runtime version was updated to the [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) release. With these updates, the `cloudant-1.0` and `passwordUtilities-1.0` Liberty features, previously available as beta features, are now available as production-ready features.
+* The default Liberty runtime version was updated to the [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) release. The monthly Liberty runtime version was updated to the [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) release. With these updates, the `cloudant-1.0` and `passwordUtilities-1.0` Liberty features, previously available as beta features, are now available as production-ready features.   
+* [Security fixes](http://www-01.ibm.com/support/docview.wss?uid=swg21990527) for the Liberty runtime are included.
 * The buildpack also contains an updated version of IBM JRE 8.0: SR3 FP11.
 * The buildpack was adjusted to download the latest 1.4.x [MariaDB Connector/J JDBC driver](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) when performing [auto-configuration for MySQL type of services](autoConfig.html) due to a problem with the latest 1.5.x driver.
 
