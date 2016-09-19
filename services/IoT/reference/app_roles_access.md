@@ -67,16 +67,6 @@ Cache Operations ||| Application Roles||||
 View live data (event cache)|X|X|X|X|X|X
 Manage live data (event cache)|X|X|X|X|X|X
 
-
-<!--
-Historian Operations ||| Application Roles||||
-:--------: | -------------|-------------|---------------|-----|---
-           | **Standard Application** | **Operations Application** | **Backend Trusted Application** | **Data Processor Application** | **Visualization Application** | **Device Application**
-View Historical Data|X|X|X|X|X|X
-Manage Historical Data|X|X|X|X|X|X
--->
-
-
 ### Organization Operations {: #app-org-ops}
 
 Organization Operations ||| Application Roles||||
@@ -140,17 +130,3 @@ Set a callback URL for the external platform|X|X|-|-|X|-
 Set the subscription level of the external platform|X|X|-|-|X|-
 Get status health status from connector|X|X|X|-|X|-
 Verify if an external system is up and validate credentials|X|X|X|-|X|-
-
-<!--
-### Risk Management Operations {: #app-risk-mgt}
-
-Risk Management Operations ||| Application Roles||||
-:--------: | -------------|-------------|---------------|-----|---
-           | **Standard Application** | **Operations Application** | **Backend Trusted Application** | **Data Processor Application** | **Visualization Application** | **Device Application**
-View all certificates|-|-|-|-|-|-
-Add a new certificate|-|-|-|-|-|-
-View complete IP list, including the whitelist, blacklist, and quarantine|-|-|-|-|-|-
-Add new IP address space item to a specific list|-|-|-|-|-|-
-View all policies|-|-|-|-|-|-
-Add new policy|-|-|-|-|-|-
--->

@@ -68,15 +68,6 @@ View live data (event cache)|-|-
 Manage live data (event cache)|-|-
 
 
-<!--
-Device Operations || Gateway Roles||
-:--------: | ---------------------|------------------------|---------------
-           | **Standard Gateway** | **Privileged Gateway** | **Non-gateway Device**
-View Historical Data|||
-Manage Historical Data|||
--->
-
-
 ### Organization Operations {: #gateway-org-ops}
 
 Organization Operations || Gateway Roles|
@@ -140,18 +131,3 @@ set a callback URL for the external platform|-|-
 Set subscription level of the external platform|-|-
 Get status health status from connector|-|-
 Verify if an external system is up and validate credentials|-|-
-
-<!--
-### Risk Management Operations {: #gateway-risk-mgt}
-
-Risk Management Operations || Gateway Roles|
-:--------: | ---------------------|------------------------
-           | **Standard Gateway** | **Privileged Gateway**
-View all certificates|-|-
-Add a new certificate|-|-
-View complete IP list, including whitelist, blacklist, and quarantine|-|-
-Add new IP address space item to a specific list|-|-
-View all policies|-|-
-Add new policy|-|-
-
--->

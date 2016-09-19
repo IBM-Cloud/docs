@@ -64,15 +64,6 @@ Cache Operations ||| User Roles|||
 View live data (event cache) | X | X | X | X | X
 Manage live data (event cache) | X	| X | X |	X	| -
 
-<!-- {: #user-historian}
-
-Historian Operations ||| User Roles|||
-:--------: | -------------|-------------|---------------|-----|---
-           | **Administrator** | **Operator** | **Developer** | **Analyst** | **Reader**
-View Historical Data	| X |	X |	X |	X |	X
-Manage Historical Data | X | X | X | X | -
--->
-
 ### Organization Operations {: #user-org-ops}
 
 Organization Operations ||| User Roles|||
@@ -136,17 +127,3 @@ Set a callback URL for the external platform	|X	|X	|X|	-| -
 Set the subscription level of the external platform|	X|	X|	X |- |-		
 Get status health status from connector	|X|	X	|X	|- |-
 Verify if an external system is up and validate credentials	|X	|X|	X	|- |-
-
-<!--
-### Risk Management Operations {: #user-risk-mgt}
-
-Risk Management Operations ||| User Roles|||
-:--------: | -------------|-------------|---------------|-----|---
-           | **Administrator** | **Operator** | **Developer** | **Analyst** | **Reader**
-View all certificates	|X	|X|-|-|-		
-Add a new certificate	|X	|X	|-|-|-		
-View complete IP list, including whitelist, blacklist, quarantine	|X|	X|-|-|-			
-Add new IP address space item to a specific list 	|X|	X| -|-|-			
-View all policies	|X	|X|-|-|-			
-Add new policy	|X	|X	|-|-|-
--->
