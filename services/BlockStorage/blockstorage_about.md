@@ -25,7 +25,7 @@ The storage is accessed on a block device that you can partition, format, and mo
 * Specify a particular device that you provide. 
 * Specify that the system automatically selects an available device name. 
 
-The virtual server performs its I/O operations directly with the specified device and its associated backend.  No volume read/write data passes through the {{site.data.keyword.blockstorageshort}} service.
+The virtual server performs its I/O operations directly with the specified device and its associated backend.  Volume read/write data does not pass through the {{site.data.keyword.blockstorageshort}} service.
 
 ## Snapshots 
 {: #using-snapshots-concept}
