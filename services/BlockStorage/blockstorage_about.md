@@ -7,9 +7,14 @@
 Last updated: 07 September 2016
 {: .last-updated}
 
-The IBM {{site.data.keyword.blockstorageshort}} service allows you to attach persistent storage to a virtual server.  To use the storage, you attach the block volumes to your virtual servers. The data in block storage volumes persists beyond the lifecycle of your virtual server. This means that you can detach the volumes from a server instance and reattach to another server instance, without any changes to your data. {{site.data.keyword.blockstorageshort}} uses OpenStack Cinder to manage the volume lifecycle. 
+The IBM {{site.data.keyword.blockstorageshort}} service allows you to attach persistent storage to a virtual server.  To use the storage, you attach the block volumes to your virtual servers, as depicted in the following image. The data in block storage volumes persists beyond the lifecycle of your virtual server. This means that you can detach the volumes from a server instance and reattach to another server instance, without any changes to your data. {{site.data.keyword.blockstorageshort}} uses OpenStack Cinder to manage the volume lifecycle. 
 
-The storage is accessed on a block device that you can partition, format, and mount to, such as /dev/vdb. The data persists until you delete it. 
+The storage is accessed on a block device that you can partition, format, and mount to, such as /dev/vdb. The data persists until you delete it. The ephemeral storage used by virtual servers persists across restarts, but is not retained after you delete the virtual server.
+
+![{{site.data.keyword.blockstorageshort}}](images/block_storage_storagetypes.png)
+
+
+*Figure 1. {{site.data.keyword.blockstorageshort}} Diagram*
 
 ## Volumes 
 {: #using-volumes-concept}
@@ -20,7 +25,7 @@ The storage is accessed on a block device that you can partition, format, and mo
 * Specify a particular device that you provide. 
 * Specify that the system automatically selects an available device name. 
 
-The virtual server performs its I/O operations directly with the specified device, independent of the {{site.data.keyword.blockstorageshort}} service.
+The virtual server performs its I/O operations directly with the specified device and its associated backend.  No volume read/write data passes through the {{site.data.keyword.blockstorageshort}} service.
 
 ## Snapshots 
 {: #using-snapshots-concept}
@@ -33,7 +38,7 @@ When you create a volume from a snapshot, a new volume is created that exists in
 
 Creating a volume from a snapshot has the following impact:
 
-* Existing volumes are not removed.
+* The existing volume that is used for the snapshot is not removed.
 * Data that is created, modified, or deleted after the relevant snapshot is taken is not included in the new volume.
 
 What's next?
