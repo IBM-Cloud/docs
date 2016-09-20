@@ -12,7 +12,7 @@ copyright:
 # Logging and tracing
 {: #logging_tracing}
 
-Last Updated: 21 June 2016
+Last Updated: 15 September 2016
 {: .last-updated}
 
 ## Log files
@@ -35,6 +35,8 @@ In the IBM Bluemix user interface, there are trace and dump capabilities.
 * Use Dump to create and manipulate thread and heap dumps on running application instances.
 
 To do this action, select a Liberty application in the user interface. In the category Runtime in the navigation, you can open the instance details. Select an instance or multiple instances. In the Actions menu, you can choose TRACE or DUMP.
+
+Note that the logging and tracing facility is not available when the application was started using the "-b buildpack" option.
 
 # rellinks
 {: #rellinks}
