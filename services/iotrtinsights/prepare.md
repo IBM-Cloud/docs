@@ -25,5 +25,5 @@ Now that you have deployed {{site.data.keyword.iotrtinsights_short}} and depende
 The following steps will get you started with the product:  
 1. [Work with device analytics](rules.html "Work with device analytics") - Define rules and actions for the data coming from your IoT devices.
 2. [Adding dashboards and customizing templates](dashboards.html "Work with device analytics") - Add and customize dashboards for your IoT devices.
-3. [Add users](users.html "Add users") - Authorize members of your team by to use {{site.data.keyword.iotrtinsights_short}} by adding their IBM IDs as operators or administrators.
+3. [Add users](users.html "Add users") - Authorize members of your team by to use {{site.data.keyword.iotrtinsights_short}} by adding their IBMids as operators or administrators.
 4. [Manage your assets](assets.html "Manage your assets") - Map your devices to your managed assets.
