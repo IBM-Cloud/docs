@@ -83,8 +83,6 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 
 1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
-1. Click **Mobile Options** and take note of your **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`). You need these values when you initialize the SDK.
-
 1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}} dashboard loads.
 
 1. Click the **Configure** button on the  **Google** panel.
@@ -126,17 +124,14 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	```
 
-1. To use the {{site.data.keyword.amashort}} client SDK, you must initialize it by passing the context, applicationGUID, and applicationRoute parameters.
+1. To use the {{site.data.keyword.amashort}} client SDK, you must initialize it by passing the **context** and the **region** parameters.
 
-	A common, though not mandatory, place to put the initialization code is in the onCreate method of the main activity in your Android application.
+	A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
 
-1. Initialize the client SDK and register the Google authentication manager. Replace *applicationRoute* and *applicationGUID* with the values from **Route** and **App GUID** from the **Mobile Options** section in the dashboard.
+1. Initialize the client SDK and register the Google authentication manager.
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
 	BMSClient.getInstance().setAuthorizationManager(
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
@@ -173,12 +168,12 @@ Before you begin testing, you must have a mobile back-end application that was c
 1. Use your Android application to make request to the same endpoint. Add the following code after you initialize the `BMSClient` instance and register `GoogleAuthenticationManager`.
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp", MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -192,6 +187,7 @@ Before you begin testing, you must have a mobile back-end application that was c
 		}
 	});
 ```
+	Replace `{applicationRoute}` with the *route* value you get when you click Mobile Options in your app on the {{site.data.keyword.Bluemix}} dashboard.
 
 1. Run your application. A Google Login screen pops up. After login, the app requests permission to access resources:
 

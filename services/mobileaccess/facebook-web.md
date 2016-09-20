@@ -60,7 +60,7 @@ To start the process of authorization:
     ```
 
 
-  The `state` parameter is not in use for now, it can be left empty.
+  The `state` parameter is not in use for now and can remain empty.
   The `redirect_uri` parameter is the uri for redirecting after successful or failed authentication with Facebook.
 
 1. After redirecting to the authorization end-point you will get a login form from      
