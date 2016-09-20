@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Last updated: 1 September 2016
+Last updated: 20 September 2016
 {: .last-updated}
 
 If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
@@ -425,33 +425,31 @@ You can also manage the priority order of available buildpacks to be chosen base
 ### Registering a service broker
 {: #servicebrokerui}
 
-If you have a service that you want to display in your {{site.data.keyword.Bluemix_notm}} catalog, you must implement and register a service broker. After registering your broker, you can choose which orgs can access the service in your local or dedicated instance.
+If you have a service that you want to display in your {{site.data.keyword.Bluemix_notm}} catalog, you must implement and register a [service broker](http://docs.cloudfoundry.org/services/api.html){: new_window}. After registering your broker, you can choose which orgs can access the service in your local or dedicated instance.
 
-The methods for working with you service broker vary depending on how many services it manages, or whether it has already been registered with {{site.data.keyword.Bluemix_notm}}.
+The methods for working with your service broker vary depending on how many services it manages, or whether it has already been registered with {{site.data.keyword.Bluemix_notm}}.
 
 - If your service broker manages one service, you can use the user interface to register it after you have implemented the [Service Broker API](http://docs.cloudfoundry.org/services/api.html){: new_window}. See [Registering a service broker that manages one service](index.html#registerbrokerui).
-- If your service broker manages multiple services, at this time, you can't register it after you have implemented the Service Broker API. Instead, use the cf CLI with the [{{site.data.keyword.Bluemix_notm}} admin CLI](../cli/plugins/bluemix_admin/index.html) plug-in (`ba` subcommand), or use the [Custom service API](index.html#servicebrokerapi).
+- If your service broker manages multiple services, use the cf CLI with the [{{site.data.keyword.Bluemix_notm}} admin CLI](../cli/plugins/bluemix_admin/index.html) plug-in (`ba` subcommand), or use the [Custom service API](index.html#servicebrokerapi).
 - If your service broker is already registered, and you want to update or delete it, use the cf CLI with the [{{site.data.keyword.Bluemix_notm}} admin CLI](../cli/plugins/bluemix_admin/index.html) plug-in (`ba` subcommand), or use the [Custom service API](index.html#servicebrokerapi).
 
 #### Registering a service broker that manages one service
 {: #registerbrokerui}
 
-Complete the following steps to register your service broker:
+Review the following information and complete the steps to register your service broker:
 
-<ol>
-<li><a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implement the Cloud Foundry Service Broker API</a> to enable communication between your service and {{site.data.keyword.Bluemix_notm}}. The Service Broker API is a set of REST endpoints that are consumed by {{site.data.keyword.Bluemix_notm}}.<br />
-<br />
-<p>When you are implementing the service broker, in the JSON response of <code>GET /v2/catalog</code>, you must provide the definitions for your service and service plans, including the service information that you want to display. For example, review the following sample JSON of the Catalog (GET) response</p>
-<p><pre>
+**Before you begin**: <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implement the Cloud Foundry Service Broker API</a> to enable communication between your service and {{site.data.keyword.Bluemix_notm}}. The Service Broker API is a set of REST endpoints that are consumed by {{site.data.keyword.Bluemix_notm}}.
+
+When you are implementing the service broker, in the JSON response of <code>GET /v2/catalog</code>, you must provide the definitions for your service and service plans, including the service information that you want to display. For example, review the following sample JSON of the Catalog (GET) response:
+
+```
+{
 "services":[
    {
       "bindable":true,
-      "description":"Cool Service is a data warehousing and analytics solution.",
+      "description":"Cool Service is an analytics and data warehousing solution.",
       "id":"cool-service-id",
       "name":"coolservice",
-      "tags":[
-         "customer_dedicated"
-      ],
       "metadata":{
          "displayName":"Cool Service",
          "serviceMonitorApi":"https://myservicesstatus.mybluemix.net/healthcheck/",
@@ -528,10 +526,107 @@ Complete the following steps to register your service broker:
    }
 ]
 }
-</pre></p>
-<p><strong>Note</strong>: When you create a service broker for a local or dedicated environment, you must specify `customer_dedicated` in the "tags" field of your service definition JSON file.</p>
-</li>
-<li>After you have implement the Service Broker API, go to <strong>ADMINISTRATION</strong> &gt; <strong>CATALOG MANAGEMENT</strong>.</li>
+```
+{: codeblock}
+
+The following tables can help you fill in the JSON file.
+
+*Table. JSON fields*
+
+| **JSON fields** | **Description** |
+|-----------------|-----------------|
+|bindable   | A Boolean value that indicates whether service instances can be bound to applications.  |
+|description | The description of the service that is displayed when you use the cf marketplace command, or hover over the service icon in the catalog of the {{site.data.keyword.Bluemix_notm}} user interface. You can add a single sentence or phrase for the description. |
+|name | The name of the service that is displayed in the cf command line interface. This name must be unique in {{site.data.keyword.Bluemix_notm}}, and it must use lowercase letters and must not contain spaces. You cannot change the name of the service after you register the service with {{site.data.keyword.Bluemix_notm}}. |
+|id  | The ID of the service. This ID must be unique in {{site.data.keyword.Bluemix_notm}} and must be a GUID (Globally Unique Identifier). You cannot change the ID of the service after you register the service with {{site.data.keyword.Bluemix_notm}}. |
+|metadata | The service plan metadata that is displayed in the {{site.data.keyword.Bluemix_notm}} catalog and in the pricing sheet. The metadata field is an optional field. You can specify additional fields for the metadata. See the following table for [Metadata fields](index.html#metadatafields) for more information. |
+|plans | An array of service plan definitions. See the following table for [Plan fields](index.html#planfields) for more information. |
+
+*Table. Metadata fields*
+{: #metadatafields}
+
+| **Metadata values** | **Description** |
+|---------------------|-----------------|
+|displayName          | The name of the plan that is displayed in the {{site.data.keyword.Bluemix_notm}} user interface. This name is displayed both on the service details page in the catalog and on the pricing sheet. Capitalize only the first letter of the plan name. Do not use "Default" as the default plan name; use "Standard" instead. |
+|providerDisplayName | The name of the service provider |
+|longDescription | The detailed description for the service. Consider using at least two sentences for a long description. |
+|plans                | An array of service plan definitions. Each array entry of the plans field consists of the following fields: name, description, free, id, and metadata. See the following table for [Plan fields](index.html#planfields) for more information. |
+|bullets | An array of strings that are displayed for a service. You can use bullets to provide information in addition to the long description. The bullets field must contain at least two bullet elements. Each bullet includes the title and description field. |
+|imageUrl | The URL of a large PNG image (50 x 50 pixel). |
+|smallImageUrl | The URL of a small PNG image (24 x 24 pixel). |
+|mediumImageUrl | The URL of a PNG medium image (32 x 32 pixel). |
+|featuredImageUrl | The URL of a featured image (64 x 64 pixel). |
+|documentationUrl | the URL of documentation about the service. |
+|termsUrl | The URL to PDF files that contain terms of agreement. |
+|media (optional) | An array of elements to display the videos and the screen captures that introduce the service in the {{site.data.keyword.Bluemix_notm}} user interface. A media element can contain the following fields: type (image, youtube, video), thumbnailUrl (The URL of the preview image for the media element.), url (The URL of the screen capture or the YouTube video.), source (The sources of videos that are not hosted on YouTube. The "type" of the source of the video must be supported by HTML5. Include "type" and "url" for the video.), and caption (The caption for the media element. Captions help in accessibility for people with disabilities to understand your media elements.). |
+|serviceKeysSupported | A boolean value that indicates whether the service keys API is supported. The service keys API is used for enabling a service to be used outside of {{site.data.keyword.Bluemix_notm}}. The default value is false. |
+|plan_updateable | A boolean value that indicates whether the service supports plan changes. The default value is false. |
+|embeddableDashboard (optional) | A field that indicates how the service dashboard is displayed in the {{site.data.keyword.Bluemix_notm}} user interface. If you do not specify this field, the dashboard is embedded but is restricted to a minimum width of 960px, and the dashboard has additional horizontal padding around the iframe. You can use true, false, drilldown, or launch. You can use the following fields for this value: true, false, drilldown, and launch.  |
+|notCreatable (optional) | A Boolean value that indicates whether instances for the service can be created from the {{site.data.keyword.Bluemix_notm}} user interface and from the cf command line interface. A value of true means that service instances cannot be created either from the {{site.data.keyword.Bluemix_notm}} user interface or from the cf command line interface. The default value is false. |
+|notCreatableMessage (optional) | A message that is displayed in the {{site.data.keyword.Bluemix_notm}} user interface if service instances cannot be created. If you do not specify this field, the following default message will be displayed: To be notified when it is available, confirm your e-mail address, or enter a different email address. |
+|notCreatableRobotMessage (optional) | A message that is displayed in the speech bubble of the service details page in the {{site.data.keyword.Bluemix_notm}} user interface. The message is used to indicate that a service might have a problem or other reason that is causing it to be unavailable. You can specify a message to explain the reason. If you do not specify this field, the following default message will be displayed: This service is currently unavailable. |
+|apiReferenceUrl (optional) | The URL of the iframe in the API Reference area on the service details page in Catalog. If not used for the service details page in the Catalog, you can enter the numeric value assigned to your REST API Doc for your service when registering it in the {{site.data.keyword.Bluemix_notm}} REST API Doc microservice. This will display your REST API Doc in the service dashboard. |
+|sdkDownloadUrl (optional) | The URL of the web page that is opened when you click the Download SDK button. The Download SDK button is on the service tile of the application overview page in the Dashboard. The web page is opened in a new browser tab. |
+|serviceMonitorApi    | The URL to an API that returns the JSON data, as shown in the following example, that reports the service health. You must have serviceMonitorApi or serviceMonitorApp in your service metadata. See the following code sample for an example. |
+|serviceMonitorApp    | The URL to an application that can be deployed to {{site.data.keyword.Bluemix_notm}} and bound to a service to provide the service status specific output. The application must return the same JSON data format as the serviceMonitorApi. You must have serviceMonitorApi or serviceMonitorApp in your service metadata. See the following code sample for an example. |
+
+```
+{
+    "service": "servicename",
+    "version": 1,
+    "health": [
+        {
+            "plan": "starter",
+            "status": 0,
+            "serviceinput": "count(*) from healthcheck",
+            "serviceoutput": "10…or error 1234 database not running",
+            "responsetime": 4
+        },
+        {
+            "plan": "enterprise",
+            "status": 1,
+            "serviceinput": "count(*)fromhealthcheck",
+            "serviceoutput": "10…orerror1234databasenotrunning",
+            "responsetime": 4
+        }
+    ]
+}
+```
+{: pre}
+
+The following example shows how the JSON response of GET /v2/catalog is mapped to the service details page in the {{site.data.keyword.Bluemix_notm}} catalog:
+
+![Service details in the catalog.](images/metadata.png "Bluemix Catalog service details view")
+
+*Table. Plan fields*
+{: #planfields}
+
+| **Plan values** | **Description** |
+|---------------------|-----------------|
+|name       | The name of the service plan that is used in the cf command line interface. For example, the plan name is displayed in the output of the cf marketplace command. The plan name must be in lowercase letters and must not contain spaces, and it must be unique within the service.  |
+|description       | The description of the service plan. The description is displayed after you select a plan on the service details page in the {{site.data.keyword.Bluemix_notm}} catalog. |
+|free      | A Boolean value that indicates whether the service plan is free. The default value is true. |
+|id       | The ID of the service plan. The ID must be unique within {: new_window}, and it must be a GUID.  |
+|metadata (optional)    | The service plan metadata that is displayed in the {{site.data.keyword.Bluemix_notm}} catalog and in the pricing sheet. The metadata field is an optional field. You can specify the following fields within the metadata field: displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber), and paidOnly. See the following table for [Plan metadata fields](index.html#planmetadata) for more information. |
+
+*Table. Plan metadata fields*
+{: #planmetadata}
+
+| **Plan metadata values** | **Description** |
+|------------------------|-----------------|
+|displayName             | The name of the plan that is displayed in the {{site.data.keyword.Bluemix_notm}} user interface. This name is displayed both on the service details page in the catalog and on the pricing sheet.   |
+|type                    | The type of the plan. You can use the following values for this field: subscription (A subscription plan. The default value is false.), reservable (A reservable plan. This value is used only when the plan is a subscription plan, that is, the value of plan.metadata.subscription is true. The default value is false.), planDetails (A detailed quantity and description of the resources that can be used with the plan. This value is used only when the plan is reservable, that is, the value of plan.metadata.reserveable is true.) |
+|bullets                 | A description of the resources that can be used with the plan. The description is displayed in the **Features** column on the service details page of the catalog and on the pricing sheet. |
+|costs                   | The cost information about the service that is displayed in the Price column on the service details page of the catalog and on the pricing.  sheet. Each array entry contains the following fields: unitId (The ID of the unit. Use the plural form and capitalize all letters. For free plans, this field is optional.), unit (The metric that is used for calculating the charges of the service. The value of this field is used in the {{site.data.keyword.Bluemix_notm}} user interface to represent the charge metric.), and partNumber (The `part_number` identifier that is used by the billing system. For free plans, this field is optional.).   |
+|paidOnly (optional)     | A Boolean value that indicates whether this service plan is available for {{site.data.keyword.Bluemix_notm}} pay accounts only. A value of **true** means that the service plan is for pay accounts only and cannot be added to trial accounts. A value of **false** means that the service plan can be added to both pay accounts and trial accounts. The default value is **false**.	  |
+
+The following example shows how the JSON response of GET /v2/catalog is mapped to the service details page in the {{site.data.keyword.Bluemix_notm}} catalog. Specifically, the how the plan metadata fields described in the previous table map to the user interface:
+
+![Plan metadata details in the catalog.](images/plan_metadata.png "Bluemix Catalog plan metadata values view")
+
+
+<ol>
+<li>After you have implemented the Service Broker API, go to <strong>ADMINISTRATION</strong> &gt; <strong>CATALOG MANAGEMENT</strong>.</li>
 <li>Click <strong>REGISTER A SERVICE BROKER</strong>.</li>
 <li>Complete the form by entering values in the following fields:
 <ul>
@@ -551,6 +646,7 @@ Complete the following steps to register your service broker:
 </ol>
 
 You can now see your service in the Custom Services category in your {{site.data.keyword.Bluemix_notm}} Catalog. Go to **ADMINISTRATION &gt; CATALOG MANAGEMENT**, and select the tile in the catalog. You can enable different plans, and edit the plan visibility for your orgs at any time.
+
 
 ## Administering organizations
 {: #oc_organizations}
