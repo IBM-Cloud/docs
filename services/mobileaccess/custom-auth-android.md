@@ -12,7 +12,7 @@ copyright:
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Android app
 {: #custom-android}
 
-Last updated: 12 September 2016
+Last updated: 19 September 2016
 {: .last-updated}
 
 
@@ -56,13 +56,9 @@ Add the internet access permission under the `<manifest>` element:
 
 1. Initialize the SDK.  
 	A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
-	Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values you get when you click **Mobile Options** in your app on the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 ```
 
 Replace the `BMSClient.REGION_UK` with the appropriate region.	 To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.				
@@ -214,12 +210,12 @@ You must have an application that was created with the {{site.data.keyword.mobil
 1. Use your Android application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom AuthenticationListener.
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp",  MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -233,6 +229,8 @@ You must have an application that was created with the {{site.data.keyword.mobil
 		}
 	});
 ```
+
+	Replace `{applicationRoute}` with the *route* value you get when you click **Mobile Options** in your app on the {{site.data.keyword.Bluemix}} dashboard.
 
 1. 	When your request succeeds, the following output is in the LogCat tool:
 

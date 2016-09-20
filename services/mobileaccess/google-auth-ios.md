@@ -28,39 +28,21 @@ You must have:
 
 ## Configuring a Google Project for the iOS Platform
 {: #google-auth-ios-project}
-To start using Google as identity provider, create a project in the Google Developer Console to obtain a Google client ID.  This client ID is a unique identifier to let Google know which application is attempting to connect.   If you already have Google project, you can skip the steps that describe project creation and start with adding credentials.
+To start using Google as identity provider, create a project in the Google Developer Console to obtain a Google client ID.  This client ID is a unique identifier to let Google know which application is attempting to connect.   
 
+1. If you have not created a Google iOS project, follow the steps on the [Google Developer Console](https://console.developers.google.com) site.
 
+1. From the **Social APIs** list, choose **Google+ API** and click **Enable**.
 
-1. Create a project in [Google Developer Console](https://console.developers.google.com).
-If you already have a project, you can skip the steps that describe project creation and start with adding credentials.
-   1.    Open the new project menu.
-
-         ![image](images/FindProject.jpg)
-
-   2.    Click **Create a project**.
-
-         ![image](images/CreateAProject.jpg)
-
-1. From the **Social APIs** list, choose **Google+ API**.
-
-     ![image](images/chooseGooglePlus.jpg)
-
-1. Click **Enable** from the next screen.
-
-1. Select the **Consent Screen** tab and provide  the Product name shown to users. Other values are optional. Click **Save**.
-
-    ![image](images/consentScreen.png)
-
-1. From the **Credentials** list, choose OAuth client ID.
-
-     ![image](images/chooseCredentials.png)
+1. From the **Credentials** list, click the **Create credentials** button and choose *OAuth client ID*.
 
 1. At this point you will be presented with an application type choice. Select **iOS**.
 
 1. Provide a meaningful name for your iOS client. Specify the bundle ID of your iOS application. To find the bundle ID of your iOS application look for **Bundle Identifier** in either the `info.plist` file or the Xcode project **General** tab.
 
-1. Take a note of your new Google iOS client ID. You need the value when you set up the application in  {{site.data.keyword.Bluemix}}.
+1. Take note of your new Google iOS client ID. You need the value when you set up the application in  {{site.data.keyword.Bluemix}}.
+
+
 
 
 ## Configuring {{site.data.keyword.amashort}} for Google authentication

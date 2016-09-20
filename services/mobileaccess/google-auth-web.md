@@ -33,7 +33,7 @@ To start using Google as an identity provider, create a project in the [Google D
 1. Open your Google application in the Google Developer Console. 
 3. Add the Google+ API. 
 3. Create credentials using OAuth. Select Web application in application type. Enter the {{site.data.keyword.amashort}} redirect URI in the Authorized redirect URIs
-box. The {{site.data.keyword.amashort}} redirect authorization URI can be obtained from the Google configuration screen of the {{site.data.keyword.amashort}} dashboard (see steps below). 
+box. Obtain the {{site.data.keyword.amashort}} redirect authorization URI from the Google configuration screen of the {{site.data.keyword.amashort}} dashboard (see steps that follow). 
 6. Save changes. Note the Google Client ID and Application Secret.
 
 
