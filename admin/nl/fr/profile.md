@@ -17,38 +17,34 @@ copyright:
 
 # Paramètres de profil
 {: #usersettings}
-Dernière mise à jour : 23 juin 2016
+Dernière mise à jour : 16 août 2016
 {: .last-updated}
 
-Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg) &gt;
-**Compte** &gt; **Profil** pour mettre à jour les paramètres de votre profil.
+Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Profil** pour mettre à jour vos paramètres de profil.
 {:shortdesc}
 
  Dans la page **Profil**, vous pouvez définir ou mettre à jour les informations suivantes :
 
  * Photo de profil visible pour les autres utilisateurs {{site.data.keyword.Bluemix_notm}}
- * Les informations d'ID IBM telles que votre nom, votre adresse électronique, votre numéro de téléphone, votre mot de passe, votre société et votre
-rôle
+ * Informations IBMid, telles que votre nom, votre adresse électronique, votre numéro de téléphone, votre mot de passe, votre société et votre rôle
  * Paramètre Suivi pour analyse
 
 ## Modification de la photo de votre profil
 {: #photo}
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; **Compte** &gt; **Profil**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Profil**.
 
 * Cliquez sur **Changer de photo** pour télécharger une nouvelle photo.
 * Cliquez sur **Supprimer la photo** pour retirer votre photo.
 
-## Edition de vos informations d'ID IBM
+## Edition de vos informations IBMid
 {: #ibmid}
 
-Si vous devez changer les informations de compte de votre ID IBM, comme votre nom, votre adresse électronique, votre numéro de téléphone, votre mot
+Si vous devez changer les informations de votre compte IBMid, comme votre nom, votre adresse électronique, votre numéro de téléphone, votre mot
 de passe ou le nom de votre société, procédez comme suit :
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; **Compte** &gt; **Profil**.
-2. Cliquez sur l'option d'**édition de votre ID IBM**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Profil**.
+2. Cliquez sur le bouton d'**édition de l'IBMid**.
 3. Editez vos informations utilisateur.
 4. Cliquez sur **Soumettre**.
 
@@ -63,6 +59,5 @@ dans {{site.data.keyword.Bluemix_notm}}, telles que la communication par message
 
 Afin de désactiver le suivi pour analyse, procédez comme suit :
 
-1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; **Compte** &gt; **Profil**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Profil**.
 2. Définissez la valeur **Off** pour le suivi pour analyse.

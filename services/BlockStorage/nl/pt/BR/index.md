@@ -2,82 +2,65 @@
 
 # Introdução ao {{site.data.keyword.blockstorageshort}} (Beta)
 
-*Última atualização: 15 julho de 2016*
+Última atualização: 29 de julho de 2016
 {: .last-updated}
 
-O {{site.data.keyword.blockstoragefull}} fornece acesso ao armazenamento de nível de bloco para cargas de trabalho e tempos de execução intensivos de transação na necessidade de armazenamento persistente.
+O {{site.data.keyword.blockstoragefull}} fornece acesso ao armazenamento de nível de bloco para cargas de trabalho e tempos de execução com transação intensa que precisam de armazenamento persistente. É possível usar o serviço {{site.data.keyword.blockstorageshort}} para gerenciar ciclos de vida do volume, anexar volumes ao IBM Virtual Servers e criar capturas instantâneas dos volumes de armazenamento de bloco.
 
-É possível usar o IBM
-{{site.data.keyword.blockstorageshort}} for
-{{site.data.keyword.Bluemix_notm}} para criar volumes do
-{{site.data.keyword.blockstorageshort}}, que podem ser
-anexados aos servidores virtuais. Os dados nos volumes de
-armazenamento de bloco persistem além do ciclo de vida de seus
-servidores virtuais. O IBM {{site.data.keyword.blockstorageshort}} usa o OpenStack Cinder para gerenciar o ciclo de vida de volume.
+Antes de iniciar, revise as informações a seguir.
 
-Os volumes {{site.data.keyword.blockstorageshort}} são criados por meio de uma instância de serviço do IBM {{site.data.keyword.blockstorageshort}}. 
-É possível anexar os volumes a uma máquina virtual sob um dispositivo específico fornecido por você ou o sistema pode selecionar automaticamente um nome de dispositivo disponível. 
-O servidor virtual executa suas operações de E/S diretamente com o
-dispositivo especificado, independentemente do serviço
-{{site.data.keyword.blockstorageshort}}.
+* O serviço {{site.data.keyword.blockstorageshort}} é suportado somente em um contexto desvinculado. 
+* O IBM {{site.data.keyword.virtualmachinesshort}} deve ter sido criado para anexar volumes de armazenamento de bloco. Para saber mais sobre como usar volumes de armazenamento de bloco com o IBM {{site.data.keyword.virtualmachinesshort}}, consulte [Volumes de armazenamento de bloco e IBM Virtual Servers](../../virtualmachines/vm_create.html#storage_BS). 
 
-Também é possível criar capturas instantâneas de nível de bloco dos volumes. O serviço {{site.data.keyword.blockstorageshort}} não permite a criação de capturas instantâneas enquanto o volume estiver anexado, portanto, as capturas instantâneas resultantes serão consistentes por travamento. 
+Conclua estas etapas para obter uma introdução ao
+{{site.data.keyword.blockstorageshort}}:
 
+1. Criar um volume.
+   
+   Abra o serviço {{site.data.keyword.blockstorageshort}}.
 
-## Como criar uma instância de serviço {{site.data.keyword.blockstorageshort}}
-Para criar uma instância do serviço {{site.data.keyword.blockstorageshort}} em seu espaço, siga estas etapas:
+   b. Clique em **Criar** para iniciar o diálogo **Criar volume**.
+
+   c. Forneça o tamanho do volume desejado. Números decimais não são aceitos. O tamanho é limitado pela cota que foi designada para sua organização.
+   
+   d. Forneça um nome. O nome é somente para propósitos de exibição.
+   
+   e. Opcionalmente, forneça uma descrição mais detalhada do volume.
+   
+   f. Clique em **Criar** para enviar as informações e fechar o diálogo.
+
+  A criação de um volume pode consumir algum tempo.
+
+2. Anexar um volume a um servidor virtual.
+
+   Abra o serviço {{site.data.keyword.blockstorageshort}}.
+   
+   b. Selecione um volume na lista de volumes disponíveis.
+   
+   c. Clique em **Anexar**.
+   
+   d. No diálogo Anexar, selecione uma instância de um servidor virtual na lista suspensa. 
+   
+   e. Opcionalmente, especifique o dispositivo a ser usado para anexar esse volume. Se você não especificar o dispositivo, o sistema selecionará automaticamente o primeiro dispositivo disponível no servidor virtual.
+   
+   f. Clique em **Anexar** para enviar as informações e fechar o diálogo.
+   
+   O volume está listado na tabela de volumes anexados com as
+informações sobre a instância do servidor virtual. O servidor virtual agora pode usar o dispositivo para persistir dados. 
  
-1.	Acesse a guia **Catálogo** do {{site.data.keyword.Bluemix_notm}} e insira **{{site.data.keyword.blockstorageshort}}** na caixa de procura ou acesse **Serviços** e selecione **Armazenamento**. Clique no serviço **{{site.data.keyword.blockstorageshort}}**. 
-2.	Insira um espaço e o nome do serviço. Selecione o plano e clique em **Criar**.
- 	
-O serviço {{site.data.keyword.blockstorageshort}} é suportado somente em um contexto desvinculado. 
+O que Vem em Seguida?
 
-Uma instância de serviço {{site.data.keyword.blockstorageshort}} é criada em seu espaço. É possível abrir a UI do {{site.data.keyword.blockstorageshort}} para gerenciar volumes a qualquer momento clicando no ícone de instância de serviço.
+Prepare o volume para uso. Para obter mais informações, consulte [Preparando volumes](../BlockStorage/blockstorage_preparingvolume.html).
 
-
-
-## Usando a interface com o usuário (UI) do {{site.data.keyword.blockstorageshort}}{: #using-block-storage-ui}
-A interface gráfica com o usuário do {{site.data.keyword.blockstorageshort}} fornece uma visão geral resumida de seus volumes de armazenamento, capturas instantâneas e consumo total de armazenamento para ambos os volumes e capturas instantâneas na parte superior da janela. 
-
-O cabeçalho inclui a data e hora da última atualização da UI. É possível usar o ícone de atualização (um ícone de seta circular) para atualizar a UI manualmente, se necessário. 
-
-Use a barra de procura para localizar volumes com base na sequência inserida. As tabelas são filtradas conforme você digita para mostrar somente os volumes que correspondem à sequência de procura inserida.
-
-Abaixo da visão geral estão duas guias para volumes e capturas instantâneas. A guia de volume está selecionada por padrão. As tabelas nessa guia listam informações detalhadas sobre volumes disponíveis e anexados. Cada linha em uma tabela mostra as propriedades mais importantes de um volume. Propriedades adicionais ficam visíveis ao expandir uma linha. 
-Os volumes anexados também mostram a instância do servidor virtual e o dispositivo ao qual o volume está anexado. 
-
-A guia de captura instantânea mostra uma tabela de capturas instantâneas com propriedades e comportamento semelhantes. 
-
-Use o ícone Criar acima das tabelas para criar um novo volume ou para manipular os existentes. Se estiver criando um volume a partir de uma captura instantânea, também
-será possível usar a lista suspensa Ações.
-
-
-
-
-## Anexando um volume a um servidor virtual {: #attaching-detaching-volume}
-Os volumes são anexados e removidos de servidores virtuais como
-dispositivos com um nome de dispositivo específico. Para que um
-servidor virtual seja capaz de persistir dados em um volume, deve-se
-anexar o volume ao servidor virtual.
-
-Para anexar um volume, siga estas etapas: 
-
-1.	Selecione um volume na lista de volumes disponíveis.
-2.	Clique em **Anexar**.
-3.	No diálogo Anexar, selecione uma instância de um servidor
-virtual na lista suspensa. 
-4.	Opcionalmente, especifique o dispositivo a ser usado para anexar esse volume. 
-Se você não especificar o dispositivo, o sistema selecionará
-automaticamente o primeiro dispositivo disponível no servidor virtual.
-5.	Clique em **Anexar** para enviar as informações e feche o diálogo.
-
-O volume está listado na tabela de volumes anexados com as
-informações sobre a instância do servidor virtual.
-O servidor virtual agora pode usar o dispositivo para persistir dados. 
-
-
-# Links Relacionados
+# Links relacionados
 {: #rellinks}
+
+## Tutoriais e Amostras
+{:id="samples"}
+
+* [Como usar o IBM Block Storage for Bluemix com o IBM Virtual Servers](https://developer.ibm.com/bluemix/2016/02/24/use-block-storage-for-bluemix-with-virtual-servers/){: new_window}
+* [Introdução ao IBM Block Storage for Bluemix](https://developer.ibm.com/bluemix/2016/02/15/getting-started-with-block-storage/){: new_window}
+* [Demo do IBM Block Storage for Bluemix](https://www.youtube.com/watch?v=3gCIHYKU1rE&list=PLzpeuWUENMK2d3L5qCITo2GQEt-7r0oqm&index=45){: new_window}
 
 ## Referência da API
 {: #api}

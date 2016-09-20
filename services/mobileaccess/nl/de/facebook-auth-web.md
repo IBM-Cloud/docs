@@ -1,0 +1,207 @@
+---
+
+copyright:
+  year: 2016
+
+---
+
+# Facebook-Authentifizierung für Webanwendungen aktivieren
+
+Letzte Aktualisierung: 27. Juli 2016
+{: .last-updated}
+
+Sie können Benutzer über Facebook für Ihre Web-App authentifizieren. Fügen Sie die Sicherheitsfunktionalität von {{site.data.keyword.amashort}} hinzu.  
+
+## Vorbereitungen
+{: #facebook-auth-android-before}
+Voraussetzungen:
+
+* Web-App. 
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
+* URI für die letzte Weiterleitung (nach Beendigung des Berechtigungsprozesses).
+
+
+## Facebook-Anwendung für die Website konfigurieren
+Zur Verwendung von Facebook als Identitätsprovider auf Ihrer Website müssen Sie die Website-Plattform Ihrer Facebook-Anwendung hinzufügen und sie konfigurieren.
+
+1. Melden Sie sich beim [Facebook-Entwicklerportal](https://developers.facebook.com) an.
+2. Öffnen Sie Ihre App oder erstellen Sie diese. 
+3. Notieren Sie die **Anwendungs-ID** und den **geheimen Schlüssel der App**. Sie benötigen diese Werte beim Konfigurieren Ihres Webprojekts für die Facebook-Authentifizierung im {{site.data.keyword.amashort}}-Dashboard.
+4. Fügen Sie die **Website**-Plattform hinzu, falls sie nicht vorhanden ist. 
+5. Fügen Sie die **Facebook-Anmeldung** aus der Produktliste hinzu oder öffnen Sie diese. 
+6. Geben Sie den Callback-Endpunkt-URI des Berechtigungsservers im Feld **Valid OAuth redirect URIs** ein. Suchen Sie diesen Weiterleitungs-URI für die Berechtigung in den nachfolgend beschriebenen Schritten zur Konfiguration des {{site.data.keyword.amashort}}-Dashboards. 
+7. Speichern Sie die Änderungen.
+
+
+
+
+## {{site.data.keyword.amashort}} für die Facebook-Authentifizierung konfigurieren
+Nachdem Sie über eine Facebook-Anwendungs-ID und den geheimen Schlüssel der App verfügen und Ihre Facebook-Anwendung zur Bedienung von Web-Clients konfiguriert haben, können Sie die Facebook-Authentifizierung im {{site.data.keyword.Bluemix_notm}}-Dashboard aktivieren.
+
+1. Öffnen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard.
+2. Klicken Sie auf die entsprechende App-Kachel, um die App zu laden. 
+3. Klicken Sie auf die Kachel für den {{site.data.keyword.amashort}}-Service.
+4. Klicken Sie auf die Schaltfläche **Konfigurieren** in der Anzeige **Facebook**. 
+5. Notieren Sie den Wert im Textfeld **Mobile Client Access-Weiterleitungs-URI für Facebook Developer Console**. Sie müssen diesen Wert in das Feld **Valid OAuth redirect URIs** bei der **Facebook-Anmeldung** des Facebook-Entwicklerportals in Schritt 6 bei der Konfiguration einer Facebook-Anwendung für Ihre Website eingeben. 
+6. Geben Sie die **Anwendungs-ID** und den **geheimen Schlüssel der App** für Facebook ein.
+7. Geben Sie den Weiterleitungs-URI in das Feld **Weiterleitungs-URIs Ihrer Webanwendung** ein. Dies ist der Wert für den Weiterleitungs-URI, auf den nach Beendigung des Berechtigungsprozesses zugegriffen wird. Er wird vom Entwickler festgelegt. 
+8. Klicken Sie auf **Speichern**.
+
+
+
+
+## {{site.data.keyword.amashort}}-Berechtigungsablauf mit Facebook als Identitätsprovider implementieren
+
+Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann durch Klicken auf **Umgebungsvariablen** in <!--the left-side navigator of--> Ihrer Anwendung angezeigt werden. 
+
+Gehen Sie wie folgt vor, um den Berechtigungsprozess zu starten: 
+
+1. Rufen Sie den Berechtigungsendpunkt (`authorizationEndpoint`) und die Client-ID (`clientId`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind.  
+
+    **Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service erstellt haben, bevor die Webunterstützung hinzugefügt wurde, sind möglicherweise keine Berechtigungsendpunkte in den Serviceberechtigungsnachweisen vorhanden. Verwenden Sie in diesem Fall die folgenden Berechtigungsendpunkte, abhängig von Ihrer Bluemix-Region:
+  
+  USA (Süden): 
+  ```
+  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
+   ```
+  London: 
+   ``` 
+ https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
+   ```
+  Sydney: 
+    ```
+ https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
+  ```
+2. Erstellen Sie den Berechtigungsserver-URI mit `response_type("code")`, `client_id` und `redirect_uri` als Abfrageparameter.  
+3. Leiten Sie von Ihrer Web-App zum generierten URI weiter.
+
+
+
+Im nachfolgenden Beispiel werden die Parameter von der Variablen `VCAP_SERVICES` abgerufen, außerdem wird die URL erstellt und die Weiterleitungsanforderung wird gesendet. 
+
+  ```Java
+  var cfEnv = require("cfenv"); 
+
+  app.get("/protected", checkAuthentication, function(req, res, next){  
+      res.send("Hello from protected endpoint"); 
+    }
+  ); 
+  
+  function checkAuthentication(req, res, next){
+  // Prüfen, ob Benutzer authentifiziert ist
+
+    if (req.session.userIdentity){   
+       next()  
+     } else {
+  // Falls nicht - Weiterleitung an Berechtigungsserver
+        var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+        var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+        var clientId = mcaCredentials.clientId;
+        var redirectUri = "http://some-server/oauth/callback";
+         // Weiterleitungs-URI Ihrer Webanwendung
+
+        var redirectUrl = authorizationEndpoint + "?response_type=code";
+        redirectUrl += "&client_id=" + clientId;   
+        redirectUrl += "&redirect_uri=" + redirectUri;   
+  
+        res.redirect(redirectUrl);  
+  
+      } 
+  }
+  
+ ```
+
+   Der Parameter `redirect_uri` entspricht dem URI für die Weiterleitung nach erfolgreicher oder nicht erfolgreicher Authentifizierung bei Facebook.
+   
+
+ Nach der Weiterleitung zum Berechtigungsendpunkt wird ein Anmeldeformular von Facebook angezeigt. Nachdem Facebook die Benutzeridentität berechtigt hat, ruft der {{site.data.keyword.amashort}}-Service den Weiterleitungs-URI der Webanwendung auf und gibt den Autorisierungscode als Abfrageparameter an.   
+
+## Tokens abrufen
+
+Im nächsten Schritt werden das Zugriffs- und das Identitätstoken mithilfe des zuvor empfangenen Autorisierungscodes abgerufen: 
+
+ 1.  Rufen Sie das Token (`tokenEndpoint`), die Client-ID (`clientId`) und den geheimen Schlüssel (`secret`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind.  
+ 
+    **Hinweis:** Wenn Sie {{site.data.keyword.amashort}} verwendet haben, bevor die Webunterstützung hinzugefügt wurde, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer Bluemix-Region: 
+
+    USA (Süden): 
+    ```
+    https://mobileclientaccess.ng.bluemix.net/oauth/v2/token 
+     ```
+    London: 
+      ```
+    https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
+     ```
+    Sydney: 
+      ```
+    https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
+    ```
+
+ 1. Senden Sie eine Post-Anforderung an den Token-Server-URI mit Bewilligungstyp ("authorization_code"), `clientId` und Ihrem Weiterleitungs-URI als Formularparameter. Senden Sie `clientId` und `secret` als HTTP-Basisauthentifizierungsnachweise. 
+ 
+Der folgende Code ruft die erforderlichen Werte ab und sendet sie mit einer Post-Anforderung. 
+
+  ```Java
+  var cfEnv = require("cfenv");
+  var base64url = require("base64url ");
+  var request = require('request');
+  
+  app.get("/oauth/callback", function(req, res, next){ 
+    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
+    var tokenEndpoint = mcaCredentials.tokenEndpoint; 
+    var formData = { 
+      grant_type: "authorization_code",
+      client_id: mcaCredentials.clientId,
+      redirect_uri: "http://some-server/oauth/callback",
+     // Weiterleitungs-URI Ihrer Webanwendung
+      code: req.query.code
+   }
+
+
+    request.post({ 
+        url: tokenEndpoint, 
+        formData: formData 
+      }, function (err, response, body){ 
+        var parsedBody = JSON.parse(body); 
+        req.session.accessToken = parsedBody.access_token; 
+        req.session.idToken = parsedBody.id_token; 
+        var idTokenComponents = parsedBody.id_token.split(".");
+        // [Header, Nutzdaten, Signatur]
+        var decodedIdentity= base64url(idTokenComponents[1]);
+        req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"];
+        res.redirect("/");
+        }
+   ).auth(mcaCredentials.clientId, mcaCredentials.secret); 
+
+   }
+  ); 
+   
+  ```
+ 
+ Beachten Sie, dass der Parameter `redirect_uri` mit dem Parameter `redirect_uri` aus der vorhergehenden Berechtigungsanforderung übereinstimmen muss. Als Wert für den Parameter `code` muss der Autorisierungscode angegeben werden, der in der Antwort von der Berechtigungsanforderung empfangen wurde. Der Autorisierungscode ist 10 Minuten gültig, danach muss ein neuer Code abgerufen werden. 
+
+Der Antworthauptteil enthält den Zugriffscode und die Token-ID in JWT-Format (https://jwt.io/).
+
+Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können Sie die Websitzung als authentifiziert markieren und optional diese Tokens speichern.   
+
+##Abgerufenes Zugriffs- und Identitätstoken verwenden 
+
+Das Identitätstoken enthält Informationen zu der Benutzeridentität. Bei der Facebook-Authentifizierung enthält das Token alle Informationen, bei denen der Benutzer eingewilligt hat, dass sie geteilt werden, wie zum Beispiel den vollständigen Namen, die Altersgruppe, die URL des Profilfotos usw.  
+
+Das Zugriffstoken ermöglicht die Kommunikation mit Ressourcen, die von den {{site.data.keyword.amashort}}-Berechtigungsfiltern geschützt werden; weitere Informationen hierzu finden Sie unter [Ressourcen schützen](protecting-resources.html).
+
+
+Um Anforderungen an geschützte Ressourcen zu stellen, fügen Sie einen Berechtigungsheader mit folgender Struktur zu den Anforderungen hinzu:  
+
+`Authorization=Bearer <accessToken> <idToken>`
+
+#### Tipps:
+{: tips} 
+
+* `accessToken` und `idToken` müssen durch ein Leerzeichen getrennt werden. 
+
+* `idToken` ist optional. Wenn kein Identitätstoken angegeben wird, besteht zwar Zugriff auf die geschützte Ressource, es können jedoch keine Informationen zu dem berechtigten Benutzer abgerufen werden.  
+ 
+
+
+

@@ -12,7 +12,7 @@ copyright:
 
 #サービス
 {: #services}
-*最終更新日: 2016 年 1 月 20 日*
+*最終更新日: 2016 年 8 月 10 日*
 
 {{site.data.keyword.Bluemix}} ユーザー・インターフェースの**「サービス」**の下の**「カタログ」**で、使用可能なサービスを見つけることができます。
 {:shortdesc}
@@ -46,7 +46,7 @@ copyright:
 
 
 
-{{site.data.keyword.Bluemix_notm}} には、試すことができる試験的サービスもあります。使用可能な試験的サービス、ボイラープレート、およびランタイムをすべて表示するには、{{site.data.keyword.Bluemix_notm}} にログインした後、「カタログ」の下部にスクロールし、**「{{site.data.keyword.Bluemix_notm}} ラボ・カタログ ({{site.data.keyword.Bluemix_notm}} Lab Catalog)」**をクリックします。
+{{site.data.keyword.Bluemix_notm}} には、試すことができる試験的サービスもあります。使用可能な試験的サービス、ボイラープレート、およびランタイムをすべて表示するには、{{site.data.keyword.Bluemix_notm}} にログインした後、「カタログ」の終わりまでスクロールし、**「{{site.data.keyword.Bluemix_notm}} ラボ・カタログ ({{site.data.keyword.Bluemix_notm}} Lab Catalog)」**をクリックします。
 
 試験的サービスは安定していない可能性があり、前のバージョンとは互換性のない方向で変更される場合があります。これらのサービスを実稼働環境で使用することは推奨されません。試験的サービスに対するサポートは、{{site.data.keyword.Bluemix_notm}} Developers Community を通じて提供されます。IBM が問題を調査し、その問題が試験的サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。
 
@@ -78,6 +78,7 @@ copyright:
 |{{site.data.keyword.APIM}}			|はい		|はい		|いいえ|
 |{{site.data.keyword.autoscaling}}		|はい		|はい		|はい|
 |{{site.data.keyword.bigicloudst}}		|はい		|いいえ		|いいえ|
+|{{site.data.keyword.blockstorageshort}}        |いいえ             |はい            |いいえ |
 |{{site.data.keyword.rules_short}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.cloudint}}			|はい		|はい		|いいえ|
 |{{site.data.keyword.cloudant}}			|はい		|はい		|いいえ|
@@ -183,15 +184,15 @@ cf コマンド・ライン・インターフェースを使用してサービ�
 
 2. 以下のコマンドを使用してサービス・インスタンスを作成します。ここで、service_name はサービスの名前、service_plan はサービスのプラン、service_instance はこのサービス・インスタンス用に使用する名前です。
 
-    
+    ```
 cf create-service service_name service_plan service_instance
-    
+    ```
 
 3. 以下のコマンドを使用してサービス・インスタンスをアプリケーションにバインドします。ここで、appname はアプリケーションの名前、service_instance はサービス・インスタンスの名前です。
 
-    
+    ```
 cf bind-service appname service_instance
-    
+    ```
 
 サービス・インスタンスは、同じスペースまたは組織内のアプリ・インスタンスにのみバインド可能です。ただし、外部アプリと同じように他のスペースまたは組織からサービス・インスタンスを使用できます。バインディングを作成する代わりに、資格情報を使用してアプリ・インスタンスを直接構成します。外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用する方法について詳しくは、[『外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする』](#accser_external){: new_window}を参照してください。
 
@@ -221,7 +222,7 @@ cf bind-service appname service_instance
     2. 「カタログ」で、サービス・タイルをクリックして必要なサービスを選択します。サービス詳細ページが開きます。
     3. 「サービスの追加」ウィンドウで、**「アプリ:」**リスト選択を**「アンバインドのまま」**にしておきます。この選択は、サービスが {{site.data.keyword.Bluemix_notm}} アプリに接続されないことを意味します。
     4. 必要に応じてその他の選択を行います。その後、**「作成」**をクリックします。サービス・インスタンスが作成され、サービスの「ダッシュボード」が表示されます。
-2. サービスの「ダッシュボード」の左方ナビゲーション・ペインで、**「サービス資格情報 (Service Credentials)」**を選択すると JSON 形式で資格情報を表示および追加することができます。資格情報として表示されている API キーを使用して、サービス・インスタンスに接続します。
+2. サービスの「ダッシュボード」のナビゲーション・ペインで、**「サービス資格情報 (Service Credentials)」**を選択すると JSON 形式で資格情報を表示および追加することができます。資格情報として表示されている API キーを使用して、サービス・インスタンスに接続します。
 
 これで、{{site.data.keyword.Bluemix_notm}} の外部で実行されるアプリケーションが、{{site.data.keyword.Bluemix_notm}} サービスにアクセスできるようになりました。
 
@@ -236,7 +237,7 @@ cf bind-service appname service_instance
 
 1. **cf create-user-provided-service** コマンドまたは **cf cups** コマンドを使用して、ユーザー提供のサービス・インスタンスを作成します。
     * 一般的なユーザー提供のサービス・インスタンスを作成するには、**-p** オプションを使用し、パラメーター名をコンマで区切ります。cf コマンド・ライン・インターフェースはその後、各パラメーターについて順にプロンプトを出します。例えば次のようにします。
-        
+        ```
 cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
@@ -245,41 +246,41 @@ cf cups testups1 -p "host, port, dbname, username, password"
         password> p@$$w0rd
         Creating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
-        
+        ```
 
     * サード・パーティーのログ管理ソフトウェアに情報をドレーンするサービス・インスタンスを作成するには、**-l** オプションを使用し、そのサード・パーティーのログ管理ソフトウェアが提供する宛先を指定します。例えば次のようにします。
 
-        
+        ```
 cf cups testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
-        
+        ```
 
     ユーザー提供のサービス・インスタンスの 1 つ以上のパラメーターを更新する場合は、**cf update-user-provided-service** コマンドまたは **cf uups** コマンドを使用します。
 
     * 一般的なユーザー提供のサービス・インスタンスを更新するには、**-p** オプションを使用して、パラメーターのキーと値を JSON オブジェクトで指定します。例えば次のようにします。
 
-        
+        ```
 cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
-        
+        ```
 
     * サード・パーティーのログ管理ソフトウェアに情報をドレーンするサービス・インスタンスを作成するには、-l オプションを使用します。例えば次のようにします。
 
-        
+        ```
 cf uups testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
-        
+        ```
 
 2. cf bind-service コマンドを使用して、サービス・インスタンスをアプリケーションにバインドします。例えば次のようにします。
 
-	
+	```
 	cf bind-service myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
-	
+	```
 
 外部リソースを使用するようアプリケーションを構成できるようになりました。サービスと対話するようアプリケーションを構成する方法については、[「サービスと対話するようアプリケーションを構成する」](#config){: new_window}を参照してください。
 
@@ -293,22 +294,22 @@ cf uups testups2 -l syslog://example2.com
     
 	サービス・インスタンスを利用する地域で開始すると想定します。他の地域にあるサービス・インスタンスを利用するには、以下のステップを実行します。
 
-      1. サービス・インスタンスが存在する地域に切り替えます。{{site.data.keyword.Bluemix_notm}} の上部メニュー・バーで、**「地域」**を展開するか、または**「地域」**アイコンをクリックしてから、 サービス・インスタンスの存在する地域を選択します。
+      1. サービス・インスタンスが存在する地域に切り替えます。{{site.data.keyword.Bluemix_notm}} のメニュー・バーで、**「地域」**を展開するか、または**「地域」**アイコンをクリックしてから、サービス・インスタンスの存在する地域を選択します。
 
       2. サービスの存在する地域にあるサービス・インスタンスの VCAP_SERVICES 環境変数から、資格情報と接続パラメーターを取り出します。以下のステップを実行します。
 
 	       1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、アプリケーション・タイルをクリックします。「概要」ページが表示されます。
-	       2. 左方のナビゲーション・ペインで、**「環境変数」**をクリックします。*VCAP_SERVICES* 環境変数の詳細が、右方のペインに表示されます。サービス・インスタンスの JSON コンテンツを記録します。
+	       2. ナビゲーション・ペインで、**「環境変数」**をクリックします。*VCAP_SERVICES* 環境変数の詳細が、右方のペインに表示されます。サービス・インスタンスの JSON コンテンツを記録します。
 
-      3. サービス・インスタンスを利用する地域に切り替えます。{{site.data.keyword.Bluemix_notm}} の上部メニュー・バーで、**「地域」**を展開するか、または**「地域」**アイコンをクリックして、サービス・インスタンスを利用する地域を選択します。
+      3. サービス・インスタンスを利用する地域に切り替えます。{{site.data.keyword.Bluemix_notm}} のメニュー・バーで、**「地域」**を展開するか、または**「地域」**アイコンをクリックして、サービス・インスタンスを利用する地域を選択します。
 
       4. *VCAP_SERVICES* 環境変数から記録した資格情報と接続パラメーターを使用して、ユーザー提供のサービス・インスタンスを作成します。ユーザー提供のサービス・インスタンスを作成する方法について詳しくは、[ユーザー提供のサービス・インスタンスの作成](#user_provide_services){: new_window} を参照してください。
 
       5. 以下のコマンドを使用して、ユーザー提供のサービス・インスタンスをアプリにバインドします。
 
-	     
+	     ```
 	     cf bind-service myapp user-provided_service_instance
-	
+	```
 
 
 
@@ -324,8 +325,8 @@ cf uups testups2 -l syslog://example2.com
 
 1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、
 アクセスするサービスのタイルをクリックします。そのサービスのダッシュボードが表示されます。
-2. 左側のナビゲーション・ペインで、*Manage* をクリックし、サービス・インスタンスのコンソールを使用した他のサービス・インスタンスからのバインディングを許可します。
-3. 他のサービスによるサービス・インスタンスへのアクセスを拒否する場合は、左側のナビゲーション・ペインの*「サービス・アクセス許可 (Service Access Authorization)」*をクリックしてから、*「取り消し (Revoke)」*を使用してサービス・バインディングを削除します。 
+2. ナビゲーション・ペインで、**Manage** をクリックし、サービス・インスタンスのコンソールを使用した他のサービス・インスタンスからのバインディングを許可します。
+3. 他のサービスによるサービス・インスタンスへのアクセスを拒否する場合は、ナビゲーション・ペインの**「サービス・アクセス許可 (Service Access Authorization)」**をクリックしてから、**「取り消し (Revoke)」**を使用してサービス・バインディングを削除します。 
 
 # 関連リンク
 {: #rellinks}

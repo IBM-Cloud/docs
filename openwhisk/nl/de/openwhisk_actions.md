@@ -19,7 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}}-Aktionen erstellen und aufrufen
 {: #openwhisk_actions}
 
-*Letzte Aktualisierung: 22. März 2016*
+Letzte Aktualisierung: 4. August 2016
 {: .last-updated}
 
 Aktionen sind statusunabhängige Code-Snippets, die auf der {{site.data.keyword.openwhisk}}-Plattform ausgeführt werden. Bei einer Aktion kann es sich um eine JavaScript-Funktion, eine Swift-Funktion oder ein angepasstes ausführbares Programm, das in einem Docker-Container enthalten ist, handeln. Eine Aktion kann zum Beispiel zum Erkennen der Gesichter auf einem Bild, zum Aggregieren einer Gruppe von API-Aufrufen oder zum Senden eines Tweets verwendet werden.
@@ -32,7 +32,7 @@ Aktionen können aus Aufrufen weiterer Aktionen oder aus einer definierten Folge
 ## JavaScript-Aktionen erstellen und aufrufen
 {: #openwhisk_create_action_js}
 
-In den folgenden Abschnitten werden Sie in die Arbeit mit Aktionen in JavaScript eingeführt. Zu Beginn wird das Erstellen und Aufrufen einer einfachen Aktion erläutert. Anschließend werden die Vorgehensweisen behandelt, mit denen Sie einer Aktion Parameter hinzufügen und diese Aktion mit Parametern aufrufen, Standardparameter festlegen und diese aufrufen sowie asynchrone Aktionen erstellen. Zum Abschluss wird die Arbeit mit Aktionsfolgen beschrieben.
+In den folgenden Abschnitten werden Sie in die Arbeit mit Aktionen in JavaScript eingeführt. Sie beginnen mit dem Erstellen und Aufrufen einer einfachen Aktion. Anschließend werden Sie einer Aktion Parameter hinzufügen und diese Aktion mit Parametern aufrufen. Als Nächstes folgt das Festlegen von Standardparametern und das Aufrufen dieser Parameter. Danach erstellen Sie asynchrone Aktionen und zum Schluss arbeiten Sie mit Aktionsfolgen.
 
 
 ### Einfache JavaScript-Aktion erstellen und aufrufen
@@ -43,8 +43,8 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
 1. Erstellen Sie eine JavaScript-Datei mit dem folgenden Inhalt. Für dieses Beispiel wird der Dateiname 'hello.js' verwendet.
   
   ```
-  function main() {
-      return {payload: 'Hello world'};
+function main() {
+          return {payload: 'Hello world'};
   }
   ```
   {: codeblock}
@@ -54,22 +54,22 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
 2. Erstellen Sie eine Aktion aus der folgenden JavaScript-Funktion. Für dieses Beispiel heißt die Aktion 'hello'.
 
   ```
-  wsk action create hello hello.js
+wsk action create hello hello.js
   ```
   {: pre}
   ```
-  ok: created action hello
+ok: created action hello
   ```
   {: screen}
 
 3. Listen Sie die Aktionen auf, die Sie erstellt haben:
   
   ```
-  wsk action list
+wsk action list
   ```
   {: pre}
   ```
-  actions
+actions
   hello       private
   ```
   {: screen}
@@ -79,13 +79,12 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
 4. Nach dem Erstellen der Aktion können Sie sie in der Cloud in {{site.data.keyword.openwhisk_short}} mit dem Befehl 'invoke' ausführen. Sie können Aktionen mit einem blockierenden (Flag *blocking*) oder mit einem nicht blockierenden (Flag *non-blocking*) Aufruf ausführen. Ein blockierender Aufruf wartet solange, bis die Aktion abgeschlossen ist, und gibt ein Ergebnis zurück. Im folgenden Beispiel wird der Blockierungsparameter `--blocking` verwendet:
 
   ```
-  wsk action invoke --blocking hello
+wsk action invoke --blocking hello
   ```
   {: pre}
   ```
-  ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  {
-      "result": {
+ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
+  {      "result": {
           "payload": "Hello world"
       },
       "status": "success",
@@ -103,21 +102,21 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
 5. Wenn Sie das Aktionsergebnis nicht sofort benötigen, können Sie das Flag `--blocking` nicht angeben und einen nicht blockierenden Aufruf ausführen. Später können Sie das Ergebnis über die Aktivierungs-ID abrufen. Beispiel:
 
   ```
-  wsk action invoke hello
+wsk action invoke hello
   ```
   {: pre}
   ```
-  ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
+ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: screen}
 
   ```
-  wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
+wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: pre}
   ```
   {
-      "payload": "Hello world"
+            "payload": "Hello world"
   }
   ```
   {: screen}
@@ -125,11 +124,11 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
 6. Wenn Sie vergessen, die Aktivierungs-ID zu notieren, können Sie eine Liste der Aktivierungen in der Reihenfolge von der jüngsten bis zur ältesten abrufen. Führen Sie den folgenden Befehl aus, um eine Liste Ihrer Aktivierungen abzurufen:
 
   ```
-  wsk activation list
+wsk activation list
   ```
   {: pre}
   ```
-  activations
+activations
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
@@ -143,8 +142,8 @@ Beim Aufruf können Parameter an die Aktion übergeben werden.
 1. Verwenden Sie Parameter in der Aktion. Aktualisieren Sie die Datei 'hello.js' zum Beispiel mit dem folgenden Inhalt:
   
   ```
-  function main(params) {
-      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+function main(params) {
+     return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -154,16 +153,16 @@ Beim Aufruf können Parameter an die Aktion übergeben werden.
 2. Aktualisieren Sie die Aktion `hello` und rufen Sie die Aktion auf, indem Sie Werte für die Parameter `name` und `place` übergeben. Beispiel:
   
   ```
-  wsk action update hello hello.js
+wsk action update hello hello.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
   ```
   {: pre}
   ```
   {
-      "payload": "Hello, Bernie from Vermont"
+            "payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -180,19 +179,19 @@ Anstatt nun jedes Mal alle Parameter an eine Aktion zu übergeben, können Sie b
 1. Aktualisieren Sie die Aktion mit der Option `--param`, um Parameterwerte zu binden.
 
   ```
-  wsk action update hello --param place 'Vermont'
+wsk action update hello --param place 'Vermont'
   ```
   {: pre}
 
 2. Rufen Sie die Aktion auf, indem Sie diesmal nur den Parameter `name` übergeben.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie'
+wsk action invoke --blocking --result hello --param name 'Bernie'
   ```
   {: pre}
   ```
   {
-      "payload": "Hello, Bernie from Vermont"
+            "payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -202,7 +201,7 @@ Anstatt nun jedes Mal alle Parameter an eine Aktion zu übergeben, können Sie b
 3. Rufen Sie die Aktion auf, indem Sie Werte für `name` und `place` übergeben. Der letztere Wert überschreibt den Wert, der an die Aktion gebunden ist.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
   ```
   {: pre}
   ```
@@ -215,37 +214,42 @@ Anstatt nun jedes Mal alle Parameter an eine Aktion zu übergeben, können Sie b
 ### Asynchrone Aktionen erstellen
 {: #openwhisk_asynchrony_js}
 
-JavaScript-Funktionen, deren Ausführung in einer Callback-Funktion fortgesetzt wird, müssen möglicherweise das Aktivierungsergebnis zurückgeben, wenn die Rückgabe der Funktion `main` erfolgt ist. Sie können dies durch die Verwendung der Funktionen `whisk.async()` und `whisk.done()` in Ihrer Aktion erreichen.
+JavaScript-Funktionen, die asynchron ausgeführt werden, müssen möglicherweise das Aktivierungsergebnis zurückgeben, wenn die Rückgabe der Funktion `main` erfolgt ist. Sie können dies erreichen, indem die Aktion ein Promise zurückgibt.
 
 1. Speichern Sie den folgenden Inhalt in einer Datei mit dem Namen `asyncAction.js`.
 
   ```
-  function main() {
-      setTimeout(function() {
-          return whisk.done({done: true});
-      }, 20000);
-      return whisk.async();
-  }
+  function main(args) {
+       return new Promise(function(resolve, reject) {
+               setTimeout(function() {
+          resolve({ done: true });
+         }, 2000);
+      })
+   }
   ```
   {: codeblock}
 
-  Beachten Sie, dass die Funktion `main` sofort zurückkehrt und das der Rückgabewert `whisk.async()` angibt, dass diese Aktivierung weiterhin ausgeführt werden soll.
+  Beachten Sie, dass die Funktion `main` ein Promise zurückgibt. Dies weist darauf hin, dass die Aktivierung noch nicht abgeschlossen wurde, der Abschluss aber erwartet wird.
 
-  Die JavaScript-Funktion `setTimeout()` wartet in diesem Beispiel 20 Sekunden ab, bevor sie die Callback-Funktion aufruft, wobei der Aufruf der Funktion `whisk.done()` angibt, dass die Aktivierung abgeschlossen ist.
+  Die JavaScript-Funktion `setTimeout()` wartet in diesem Beispiel 20 Sekunden ab, bevor die Callback-Funktion aufgerufen wird. Dies stellt den asynchronen Code dar, der in die Callback-Funktion des Promise eingeht.
+
+  Der Callback des Promise verwendet zwei Argumente ('resolve' und 'reject'), die beide Funktionen sind. Der Aufruf von `resolve()` erfüllt das Promise und weist darauf hin, dass die Aktivierung normal abgeschlossen wurde.
+
+  Mit einem Aufruf von `reject()` kann das Promise zurückgewiesen und signalisiert werden, dass die Aktivierung abnormal beendet wurde.
 
 2. Führen Sie die folgenden Befehle aus, um die Aktion zu erstellen und aufzurufen:
 
   ```
-  wsk action create asyncAction asyncAction.js
+wsk action create asyncAction asyncAction.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result asyncAction
+wsk action invoke --blocking --result asyncAction
   ```
   {: pre}
   ```
   {
-      "done": true
+            "done": true
   }
   ```
   {: screen}
@@ -255,23 +259,23 @@ JavaScript-Funktionen, deren Ausführung in einer Callback-Funktion fortgesetzt 
 3. Rufen Sie das Aktivierungsprotokoll ab, um zu prüfen, wie lange die Ausführung der Aktivierung gedauert hat:
 
   ```
-  wsk activation list --limit 1 asyncAction
+wsk activation list --limit 1 asyncAction
   ```
   {: pre}
   ```
-  activations
+activations
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
   {: screen}
 
 
   ```
-  wsk activation get b066ca51e68c4d3382df2d8033265db0
+wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
  ```
   {
-      "start": 1455881628103,
+            "start": 1455881628103,
       "end":   1455881648126,
       ...
   }
@@ -289,37 +293,42 @@ Die bisherigen Beispiele enthielten eigenständige JavaScript-Funktionen. Sie k�
 Im folgenden Beispiel wird ein Yahoo Weather-Services aufgerufen, um die aktuellen Wetterbedingungen an einem bestimmten Standort abzurufen. 
 
 1. Speichern Sie den folgenden Inhalt in einer Datei mit dem Namen `weather.js`.
+  
   ```
-    var request = require('request');
-    
-    function main(params) {
-        var location = params.location || 'Vermont';
+var request = require('request');function main(params) {
+     var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
 
-        request.get(url, function(error, response, body) {
-            var condition = JSON.parse(body).query.results.channel.item.condition;
-            var text = condition.text;
-            var temperature = condition.temp;
-            var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-            whisk.done({msg: output});
+        return new Promise(function(resolve, reject) {
+            request.get(url, function(error, response, body) {
+            if (error) {
+                    reject(error);    
+                }
+                else {
+                    var condition = JSON.parse(body).query.results.channel.item.condition;
+                    var text = condition.text;
+                    var temperature = condition.temp;
+                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                    resolve({msg: output});
+                }
+            });
         });
-    
-        return whisk.async();
     }
   ```
   {: codeblock}
 
-  Beachten Sie, dass die Aktion in diesem Beispiel die JavaScript-Bibliothek `request` verwendet, um eine HTTP-Anforderung an die Yahoo Weather-API durchzuführen, und Felder aus dem JSON-Ergebnis extrahiert. In den [Referenzinformationen](./openwhisk_reference.html#runtime_ref_runtime_environment) finden Sie detaillierte Informationen zu den Node.js-Paketen, die Sie in Ihren Aktionen verwenden können.
-  
-  Dieses Beispiel demonstriert außerdem den Bedarf an asynchronen Aktionen. Die Aktion gibt `whisk.async()` zurück, um anzugeben, dass das Ergebnis dieser Aktion noch nicht verfügbar ist, wenn die Funktion die Ausführung beendet. Das Ergebnis ist erst im Callback `request` verfügbar, wenn der HTTP-Aufruf abgeschlossen ist, und wird als Argument an die Funktion `whisk.done()` übergeben.
+  Beachten Sie, dass die Aktion in diesem Beispiel die JavaScript-Bibliothek `request` verwendet, um eine HTTP-Anforderung an die Yahoo Weather-API durchzuführen, und Felder aus dem JSON-Ergebnis extrahiert. In den [Referenzinformationen](./reference.md#runtime-environment) finden Sie detaillierte Informationen zu den Node.js-Paketen, die Sie in Ihren Aktionen verwenden können.
+
+  Dieses Beispiel demonstriert außerdem den Bedarf an asynchronen Aktionen. Die Aktion gibt ein Promise zurück, um anzugeben, dass das Ergebnis dieser Aktion noch nicht verfügbar ist, wenn die Funktion die Ausführung beendet. Das Ergebnis ist erst im Callback `request` verfügbar, wenn der HTTP-Aufruf abgeschlossen ist, und wird als Argument an die Funktion `resolve()` übergeben.
+
 
 2. Führen Sie die folgenden Befehle aus, um die Aktion zu erstellen und aufzurufen:
   ```
-  wsk action create weather weather.js
+wsk action create weather weather.js
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   ```
   {: pre}
   ```
@@ -339,11 +348,11 @@ Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.
 1. Zeigen Sie die Aktionen im Paket `/whisk.system/util` an.
   
   ```
-  wsk package get --summary /whisk.system/util
+wsk package get --summary /whisk.system/util
   ```
   {: pre}
   ```
-  package /whisk.system/util
+package /whisk.system/util
    action /whisk.system/util/cat: Array von Zeichenfolgen verknüpfen
    action /whisk.system/util/head: Erstes K Array-Elemente filtern und Rest verwerfen
    action /whisk.system/util/date: Aktuelles Datum und aktuelle Uhrzeit abrufen
@@ -357,7 +366,7 @@ Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.
 2. Erstellen Sie eine Aktionsfolge, sodass das Ergebnis der einen Aktion als Argument an die nächste Aktion übergeben wird.
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
+wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -366,7 +375,7 @@ Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.
 3. Erstellen Sie vor dem Aufruf der Aktionsfolge eine Textdatei mit dem Namen 'haiku.txt', die einige wenige Textzeilen enthält:
 
   ```
-  Over-ripe sushi,
+Over-ripe sushi,
   The Master
   Is full of regret.
   ```
@@ -375,12 +384,12 @@ Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.
 4. Rufen Sie die Aktion auf:
   
   ```
-  wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
+wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
   ```
   {: pre}
   ```
   {
-      "length": 3,
+            "length": 3,
       "lines": [
           "Is full of regret.",
           "Over-ripe sushi,",
@@ -393,6 +402,37 @@ Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.
   Wie leicht zu erkennen ist, sind die Zeilen im Ergebnis sortiert.
 
 **Hinweis:** Weitere Informationen zum Aufrufen von Aktionsfolgen mit mehreren benannten Parametern finden Sie unter [Standardparameter festlegen](./actions.md#setting-default-parameters)
+
+
+## Python-Aktionen erstellen
+{: #openwhisk_actions_python}
+
+Das Verfahren zur Erstellung von Python-Aktionen ist dem von JavaScript-Aktionen ähnlich. In den folgenden Abschnitten werden die Schritte zum Erstellen und Aufrufen einer einzelnen Python-Aktion sowie zum Übergeben von Parametern an diese Aktion beschrieben.
+
+### Aktion erstellen und aufrufen
+{: #openwhisk_actions_python_invoke}
+
+Eine Aktion ist einfach eine Python-Funktion der höchsten Ebene. Das heißt, dass eine Methode mit dem Namen `main` erforderlich ist. Erstellen Sie beispielsweise eine Datei mit dem Namen `hello.py` und dem folgenden Inhalt:
+
+```
+    def main(dict):
+        name = dict.get("name", "stranger")
+        greeting = "Hello " + name + "!"
+        print(greeting)
+        return {"greeting": greeting}
+```
+{: codeblock}
+
+Python-Aktionen lesen stets ein Wörterverzeichnis (Dictionary) und generieren ein Wörterverzeichns.
+
+Sie können eine OpenWhisk-Aktion mit dem Namen `helloPython` wie folgt aus dieser Funktion erstellen:
+
+```
+wsk action create helloPython hello.py
+```
+{: pre}
+
+Bei Verwendung der Befehlszeile und einer `.py`-Quellendatei brauchen Sie nicht anzugeben, dass Sie eine Python-Aktion (im Unterschied zu einer JavaScript-Aktion) erstellen; das Tool bestimmt dies anhand der Dateierweiterung.
 
 
 
@@ -409,7 +449,7 @@ Sie können Ihren Swift-Code auch online mithilfe der [Swift-Sandbox](https://sw
 Eine Aktion ist eine einfache Swift-Funktion der höchsten Ebene. Erstellen Sie zum Beispiel eine Datei mit dem Namen `hello.swift` und dem folgenden Inhalt:
 
 ```
-  func main(args: [String:Any]) -> [String:Any] {
+func main(args: [String:Any]) -> [String:Any] {
       if let name = args["name"] as? String {
           return [ "greeting" : "Hello \(name)!" ]
       } else {
@@ -428,9 +468,7 @@ wsk action create helloSwift hello.swift
 ```
 {: pre}
 
-Bei Verwendung der Befehlszeile und einer Swift-Quellendatei (`.swift`) brauchen
-Sie nicht anzugeben, dass Sie eine Swift-Aktion (im Unterschied zu einer JavaScript-Aktion) erstellen;
-das Tool bestimmt dies anhand der Dateierweiterung.
+Bei Verwendung der Befehlszeile und einer Swift-Quellendatei (`.swift`) brauchen Sie nicht anzugeben, dass Sie eine Swift-Aktion (im Unterschied zu einer JavaScript-Aktion) erstellen; das Tool bestimmt dies anhand der Dateierweiterung.
 
 Der Aktionsaufruf für Swift-Aktionen stimmt mit dem für JavaScript-Aktionen überein:
 
@@ -448,8 +486,6 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **Achtung:** Swift-Aktionen werden in einer Linux-Umgebung ausgeführt. Swift unter Linux befindet sich noch in Entwicklung und {{site.data.keyword.openwhisk_short}} arbeitet in der Regel mit dem neuesten verfügbaren Release, das jedoch nicht unbedingt stabil ist. Darüber hinaus ist es möglich, dass die mit {{site.data.keyword.openwhisk_short}} verwendete Version von Swift nicht mit den Versionen von Swift aus stabilen Releases von XCode on MacOS konsistent ist.
 
-
-
 ## Docker-Aktionen erstellen
 {: #openwhisk_actions_docker}
 
@@ -464,20 +500,20 @@ In den nachfolgenden Anweisungen wird die Benutzer-ID "janesmith" und das Kennwo
 1. Laden Sie das Docker-Gerüst (Skeleton) herunter. Sie können es über die CLI wie folgt herunterladen:
 
   ```
-  wsk sdk install docker
+wsk sdk install docker
   ```
   {: pre}
   ```
-  The Docker skeleton is now installed at the current directory.
+The Docker skeleton is now installed at the current directory.
   ```
   {: screen}
 
   ```
-  ls dockerSkeleton/
+ls dockerSkeleton/
   ```
   {: pre}
   ```
-  Dockerfile      README.md       buildAndPush.sh client          server
+Dockerfile      README.md       buildAndPush.sh client          server
   ```
   {: screen}
 
@@ -486,15 +522,14 @@ In den nachfolgenden Anweisungen wird die Benutzer-ID "janesmith" und das Kennwo
 2. Richten Sie Ihre angepasste Binärdatei im Docker-Gerüst ('docherSkeleton') ein. Das Gerüst schließt bereits ein C-Programm ein, das Sie verwenden können.
 
   ```
-  cat ./dockerSkeleton/client/example.c
+cat ./dockerSkeleton/client/example.c
   ```
   {: pre}
   {: pre}
   ```
   #include <stdio.h>
 
-  int main(int argc, char *argv[]) {
-      printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
+  int main(int argc, char *argv[]) {printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
              (argc == 1) ? "undefined" : argv[1]);
   }
   ```
@@ -505,15 +540,15 @@ In den nachfolgenden Anweisungen wird die Benutzer-ID "janesmith" und das Kennwo
 3. Erstellen Sie das Docker-Image und laden Sie es mithilfe eines bereitgestellten Scripts hoch. Sie müssen zunächst den Befehl `docker login` zur Authentifizierung und anschließend das Script mit einem ausgewählten Imagenamen ausführen.
 
   ```
-  docker login -u janesmith -p janes_password
+docker login -u janesmith -p janes_password
   ```
   {: pre}
   ```
-  cd dockerSkeleton
+cd dockerSkeleton
   ```
   {: pre}
   ```
-  ./buildAndPush.sh janesmith/blackboxdemo
+./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
 
@@ -522,11 +557,11 @@ In den nachfolgenden Anweisungen wird die Benutzer-ID "janesmith" und das Kennwo
 4. Zum Erstellen einer Aktion aus einem Docker-Image anstelle einer bereitgestellten JavaScript-Datei fügen Sie `--docker` hinzu und ersetzen den Namen der JavaScript-Datei durch den Namen des Docker-Image.
 
   ```
-  wsk action create --docker example janesmith/blackboxdemo
+wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result example --param payload Rey
+wsk action invoke --blocking --result example --param payload Rey
   ```
   {: pre}
   ```
@@ -542,7 +577,7 @@ In den nachfolgenden Anweisungen wird die Benutzer-ID "janesmith" und das Kennwo
 5. Führen Sie zum Aktualisieren einer Docker-Aktion `buildAndPush.sh` aus, um das Docker Hub-Image zu aktualisieren; anschließend müssen Sie `wsk action update` ausführen, damit das neue Image vom System abgerufen wird. Bei neuen Aufrufen wird das neue Image verwendet und nicht ein aktives Image mit altem Code. 
 
   ```
-  ./buildAndPush.sh janesmith/blackboxdemo
+./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
   ```
@@ -595,21 +630,23 @@ Sie können die Ausgabe von Aktionen, wenn sie aufgerufen werden, über die {{si
 Sie können eine Bereinigung durchführen, indem Sie Aktionen löschen, die nicht mehr verwendet werden sollen.
 
 1. Führen Sie den folgenden Befehl zum Löschen einer Aktion aus:
+  
   ```
-  wsk action delete hello
+wsk action delete hello
   ```
   {: pre}
   ```
-  ok: deleted hello
+ok: deleted hello
   ```
   {: screen}
 
 2. Überprüfen Sie, ob die Aktion nicht mehr in der Liste der Aktionen angezeigt wird.
+  
   ```
-  wsk action list
+wsk action list
   ```
   {: pre}
   ```
-  actions
+actions
   ```
   {: screen}

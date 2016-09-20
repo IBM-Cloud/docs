@@ -12,7 +12,7 @@ copyright:
 
 #서비스
 {: #services}
-*마지막 업데이트 날짜: 2016년 5월 10일*
+*마지막 업데이트 날짜: 2016년 8월 10일*
 
 {{site.data.keyword.Bluemix_notm}}에서는 서비스 및 앱을 손쉽게 구현, 호스팅 및 스케일링할 수 있습니다. 애플리케이션 로직 및 애플리케이션 디자인에 집중할 수 있습니다.
 {:shortdesc}
@@ -56,6 +56,7 @@ copyright:
 |{{site.data.keyword.APIM}}			|예		|예		|예|
 |{{site.data.keyword.autoscaling}}		|예		|예		|예|
 |{{site.data.keyword.bigicloudst}}		|예		|아니오		|아니오|
+|{{site.data.keyword.blockstorageshort}}  |아니오  |예  |아니오|
 |{{site.data.keyword.rules_short}}		|예		|예		|예|
 |{{site.data.keyword.cloudint}}			|예		|예		|아니오|
 |{{site.data.keyword.cloudant}}			|예		|예		|예|
@@ -88,7 +89,7 @@ copyright:
 |{{site.data.keyword.mqa}}			|예		|예		|예|
 |{{site.data.keyword.mql}}			|예		|예		|예|
 |{{site.data.keyword.nlclassifierlshort}} 	|예 		|예 		|예|
-|{{site.data.keyword.objectstorageshort}}	|예		|아니오		|아니오|
+|{{site.data.keyword.objectstorageshort}}	|예		|예		|아니오|
 |{{site.data.keyword.personalityinsightsshort}}	|예		|예		|예|
 |{{site.data.keyword.mobilepush}}		|예		|예		|예|
 |{{site.data.keyword.mobilepushshort}}				|예		|예		|예|

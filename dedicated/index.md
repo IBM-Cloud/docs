@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 9 August 2016*
+*Last updated: 15 September 2016*
 {: .last-updated}
 
 
@@ -27,9 +27,11 @@ copyright:
 
 All dedicated deployments of {{site.data.keyword.Bluemix_notm}} include the following benefits and features at no additional cost: VPN, private virtual local area network (VLAN), firewall, connectivity with your LDAP, ability to leverage existing on-premises databases and apps, 24/7 on-site security, dedicated hardware, and standard support.
 
+By default, access to your private {{site.data.keyword.Bluemix_notm}} instance is only accessible from your corporate network. If you need the {{site.data.keyword.Bluemix_notm}} environment to be accessible directly from the internet or a mobile device, for example, then an additional network security component is required at additional cost.
+
 {{site.data.keyword.Bluemix_notm}} Dedicated comes with all included {{site.data.keyword.Bluemix_notm}} runtimes and 64 GB of compute resources memory.
 
-In addition, there is a set of services that are available as {{site.data.keyword.Bluemix_notm}} Dedicated services. Review the following table to see what is included and what is available for you to purchase.
+In addition, there is a set of services and components that are included or optional for purchase. Review the following tables to see what is included and what you can purchase optionally.
 
 *Table 1. Dedicated Services*
 
@@ -38,15 +40,14 @@ In addition, there is a set of services that are available as {{site.data.keywor
 |Included | [{{site.data.keyword.Bluemix_notm}} runtimes](../cfapps/runtimes.html) | Use runtimes to get your app up and running quickly, with no need to set up and manage machines and operating systems. All {{site.data.keyword.Bluemix_notm}} runtimes are available for you to use in your {{site.data.keyword.Bluemix_notm}} Dedicated instance.|
 |Included | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | Dynamically increase or decrease the compute capacity of your application based on policies. With this service, you have unlimited use in your {{site.data.keyword.Bluemix_notm}} Dedicated environment. |
 |Optional | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} integrates {{site.data.keyword.APIM}} and IBM StrongLoop into a single offering that provides a comprehensive solution to create, run, manage, and enforce APIs and microservices. |
-|Optional | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | Use the {{site.data.keyword.APIMfull}} service to compose, manage, and socialize APIs. You can import APIs with resources by using a proxy URL or by assembling data from HTTP data sources. The benefit of using the {{site.data.keyword.APIM}} service is that you can manage how your APIs are used. |
 |Optional | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models. |
-|Optional (Beta) | {{site.data.keyword.containershort}} | Run Docker containers on {{site.data.keyword.Bluemix_notm}} Dedicated. Containers are virtual software objects that include all of the elements that an app needs to run. A container has the benefits of resource isolation and allocation, but is more portable and efficient than, for example, a virtual machine. |
+|Optional | [{{site.data.keyword.containershort}}](../containers/container_index.html) | Run Docker containers on {{site.data.keyword.Bluemix_notm}} Dedicated. Containers are virtual software objects that include all of the elements that an app needs to run. A container has the benefits of resource isolation and allocation, but is more portable and efficient than, for example, a virtual machine. For information about the hardware requirements, see [IBM {{site.data.keyword.containershort}} in {{site.data.keyword.Bluemix_notm}} Dedicated and Bluemix Local](../containers/container_dl.html).|
 |Optional | [{{site.data.keyword.dashdbshort}}](../services/dashDB/dashDB.html) | Use dashDB to store relational data, including special types such as geospatial data. Then analyze that data with SQL or advanced built-in analytics like predictive analytics and data mining, analytics with R, and geospatial analytics. |
 |Optional | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | This service provides an in-memory data grid that supports distributed caching scenarios for your apps. Includes 50 GB of in-memory Cache. |
+| Optional | [Dedicated GitHub Enterprise](../services/ghededicated/index.html) | {{site.data.keyword.ghe_long}} is the IBM Cloud-hosted and fully managed version of GitHub Enterprise that provides the social experience that developers love. This service is currently available exclusively to {{site.data.keyword.Bluemix_notm}} Dedicated environments. |
 | Optional (Beta) | Logging | Provides logs for your Cloud Foundry apps in your {{site.data.keyword.Bluemix_notm}} user interface and searchable logs and dashboards in Kibana. |
 |Optional | [{{site.data.keyword.messagehub}}](../services/MessageHub/index.html#messagehub) | {{site.data.keyword.messagehub}} is a scalable, distributed, high throughput message bus to unite your on-premises and off-premises technologies. {{site.data.keyword.messagehub}} is based on Apache Kafka, which is a fast, scalable, and durable real-time messaging engine. |
 |Optional | [{{site.data.keyword.mobilepushshort}}](../services/mobilepush/index.html) | {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android device. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. |
-|Optional | [{{site.data.keyword.objectstorageshort}}](../services/ObjectStorage/index.html) | {{site.data.keyword.objectstorageshort}} provides a secure, cost-effective, and scalable way to manage your data. |
 |Optional | [{{site.data.keyword.SecureGateway}}](../services/SecureGateway/secure_gateway.html) | The {{site.data.keyword.SecureGateway}} service provides a secure way to connect {{site.data.keyword.Bluemix_notm}} applications to remote locations on-premises or in the cloud.  |
 |Optional | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | For increased redundancy, {{site.data.keyword.sescashort}} provides a replica of a session stored in the cache. Therefore, in the event of a brownout or outage, your client application maintains access to the session in the cache. The service supports session caching scenarios for web and mobile applications. |
 |Optional | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | This service lets your apps communicate with and consume data collected by your connected devices, sensors and gateways. The base offering permits running a private version of the {{site.data.keyword.iot_full}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 1.6 TB of data exchange. |
@@ -62,13 +63,15 @@ There are optional components that are available for you to purchase to scale an
 |Dedicated {{site.data.keyword.apiconnect_short}} Professional 100 thousand API Calls increase | An extension of the {{site.data.keyword.apiconnect_short}} Professional environment to provide additional capacity of 100 thousand API Calls a month. |
 |Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 25 Million API Calls | An environment that permits running a private version of {{site.data.keyword.apiconnect_short}} within the dedicated environment with a capacity of 25 million API Calls a month targeted towards enterprise wide API projects. |
 |Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 100 thousand API Calls increase | An extension of the {{site.data.keyword.apiconnect_short}} Enterprise environment to provide additional capacity of 100 thousand API Calls a month. |
-|Dedicated {{site.data.keyword.APIM}} 1000 API calls capacity  | An environment that permits running a private version of {{site.data.keyword.APIM}} within the dedicated environment with a capacity of 1,000 API calls per second. |
-|Dedicated {{site.data.keyword.APIM}} 500 API calls capacity increase  | An environment that permits execution of a private version of IBM API Management for Bluemix within the dedicated environment with a capacity of 500 API calls per second.  |
 |Dedicated {{site.data.keyword.cloudant}}  1.6 TB capacity increase | Includes running a private version of the {{site.data.keyword.cloudantfull}} within the dedicated environment with a design capacity of 1.6 terabytes.  |
 |Dedicated {{site.data.keyword.datacshort}} and {{site.data.keyword.sescashort}} 50 GB capacity increase | An environment that permits deploying and running {{site.data.keyword.datacshort}} and {{site.data.keyword.sescashort}} instances up to a cumulative capacity of 50 GB. |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | One database per service instance on a dedicated server with 64 GB RAM, 16 vCPUs. Recommended for up to 1 TB of pre-load data, based on typical compression.  |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | One database per service instance on a dedicated bare metal server with 256 GB RAM, 32 cores. Recommended for up to 4 TB of pre-load data, based on typical compression. |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.12  | One database per service instance on a dedicated bare metal server with 256 GB RAM, 32 Cores. Recommended for up to 12 TB of pre-load data, based on typical compression. This is a storage dense plan suitable for environments where data volumes are higher and queries do not need to run at in-memory speeds. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions 2.8.500 | Dedicated instance supporting Online Transaction Processing (OLTP) workloads with 8GB RAM and 500 GB of space for data and logs. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions 12.128.1400 | Dedicated instance supporting Online Transaction Processing (OLTP) workloads with 128GB RAM and 1.4 TB SSD storage for data and logs. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 2.8.500 | Dedicated instance supporting Online Transaction Processing (OLTP) workloads with 8GB RAM and 500 GB of space for data and logs, and it includes an additional Standby server for high availability. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | Dedicated instance supporting Online Transaction Processing (OLTP) workloads with 128GB RAM and 1.4 TB SSD storage for data and logs, and it includes an additional Standby server for high availability. |
 |Dedicated Direct Link 1 Gbps capacity | A dedicated network link that connects directly to the appropriate SoftLayer network point of presence designed for data transfers of up to 1 Gbps. |
 |Dedicated Direct Link 10 Gbps capacity | A dedicated network link that connects directly to the appropriate SoftLayer network point of presence designed for data transfers of up to 10 Gbps. |
 |{{site.data.keyword.Bluemix_notm}} Dedicated community services  | An environment that permits deploying and running  community services up to a total of 50 instances for each community service.  |
@@ -85,9 +88,9 @@ There are optional components that are available for you to purchase to scale an
 ### Syndicated catalog
 {: #catalogdedicated}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated includes a private catalog that displays the local services that are available exclusively to you. It also includes services that are made available to you to use from {{site.data.keyword.Bluemix_notm}} Public.
+{{site.data.keyword.Bluemix_notm}} Dedicated includes a private catalog that brings together approved services across your public, dedicated, and local deployments. You can even publish and manage access to your own services through the {{site.data.keyword.Bluemix_notm}} catalog. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria. 
 
-The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria. If it is private instance of the service for your dedicated environment, you see a "Dedicated" tag with the service tiles in your catalog. Similarly, if it is a custom service, you see "Custom" listed with the service tile.
+If you have a private instance of the service for your dedicated environment, you see a "Dedicated" tag associated with the service names in your catalog. Similarly, if it is a custom service, meaning you used a service broker to create it, you see "Custom" listed with the service name. All other services listed that do not have a "dedicated" or "custom" tag are available by using syndication from {{site.data.keyword.Bluemix_notm}} Public. Syndicated services provide the function to create hybrid applications that consist of public and private services. 
 
 *Table 3. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region*
 
@@ -97,7 +100,6 @@ The syndicated catalog provides the function to create hybrid applications that 
 |{{site.data.keyword.alertnotificationshort}}		|Yes		|Yes			|Yes		|
 |{{site.data.keyword.appseccloudshort}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.hadoopst}}			|Yes		|No		|No |
-|{{site.data.keyword.APIM}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.rules_short}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.cloudant}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.conceptexpansionshort}}	|Yes		|Yes		|Yes|
@@ -149,7 +151,7 @@ The syndicated catalog provides the function to create hybrid applications that 
 
 {{site.data.keyword.Bluemix_notm}} Dedicated is built on SoftLayer so that you have the highest performing cloud infrastructure available to you. Each data center has 24 hour, 7 days a week security, and rigorous controls. You and IBM access your {{site.data.keyword.Bluemix_notm}} dedicated instance through a VPN tunnel and a private VLAN.
 
-{{site.data.keyword.Bluemix_notm}} Dedicated sits on your network through a VPN or a direct network connection. Your single-tenant hardware can be set up in any SoftLayer data center around the world. {{site.data.keyword.IBM_notm}} manages the dedicated platform and dedicated services, so you can focus on building custom apps. In addition, {{site.data.keyword.IBM_notm}} performs all maintenance to dedicated instances during a maintenance window selected by you.
+{{site.data.keyword.Bluemix_notm}} Dedicated sits on your network through a VPN or a direct network connection. Your single-tenant hardware can be set up in any [SoftLayer data centers](http://www.softlayer.com/data-centers){: new_window} around the world. {{site.data.keyword.IBM_notm}} manages the dedicated platform and dedicated services, so you can focus on building custom apps. In addition, {{site.data.keyword.IBM_notm}} performs all maintenance to dedicated instances during a maintenance window selected by you.
 
 ![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
 
@@ -173,7 +175,7 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 <li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Dedicated instance. For information about each phase and the tasks involved, see <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated roles and responsibilities</a>.</li>
 <li>You select the <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer data center location</a> for your dedicated instance. Then, your dedicated platform and account are created. For your account, you identify the people in your organization for the roles that are needed to get your dedicated instance up and running. For information about the roles that you assign, see <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated roles and responsibilities</a>.
 </li>
-<li>Define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Dedicated instance.
+<li>Define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Dedicated instance. There is a mandatory network security appliance that includes firewall and intrusion prevention capabilities with an associated cost for this option.
 	<ol type="a">
 	<li>IBM installs monitoring and security infrastructure for the dedicated instance.</li>
 	<li>IBM installs the single-tenant dedicated services that you selected.</li>
@@ -268,7 +270,7 @@ The inception phase is used to establish the {{site.data.keyword.Bluemix_notm}} 
 |Create backup and recovery plan | Create a backup and recovery plan that defines the frequency and the requirements for on-and-off site distribution of the backup. IBM backs up platform components, IBM services, service metadata including user roles, and more. You back up any application-specific data that you are responsible for. | IBM and customer share responsibility |
 |Identify tools for event detection and problem determination | Identify IBM and third-party tools used for event detection and problem determination at the {{site.data.keyword.Bluemix_notm}} platform level. | IBM |
 |Define escalation plan | Define the escalation plan to triage and resolve events detected from the monitoring components. | IBM |
-|Sign infrastructure, platform, and support agreements | Sign the subscription agreement including the financial terms and conditions for the environment. Sign the support subscription. | Customer |
+|Sign infrastructure, platform, and support agreements | Sign the subscription agreement including the financial terms and conditions for the environment. Sign support subscription. | Customer |
 |Procure environment | Procure compute resources, network, and storage including core and Services VLAN to host {{site.data.keyword.Bluemix_notm}}, bare metal services to host Data Power, and SoftLayer Firewall. Provide infrastructure to allow for VPN tunnel. | IBM |
 |Install platform, application, and monitoring and management components | Install, configure, and verify platform components, such as BOSH Director, Cloud Controller, Health Manager, messaging, routers, DEAs and Service providers, and the monitoring components that are defined in the escalation and problem detection plan. | IBM |
 |Install and configure security components | Install and configure security components that are tied into the monitoring and escalation plan including IBM QRadar, credential vault, intrusion prevention system, IBM BigFix, and IBM Security Privileged Identity Management. | IBM |
@@ -348,7 +350,7 @@ IBM sends broadcast messages of the changes that are planned for each maintenanc
 If there is a reported issue following a maintenance update, you agree with {{site.data.keyword.Bluemix_notm}} Support if it is in your best interest to allow IBM to roll back the update. Upon agreement, IBM rolls back the update to restore the environment to the previous state.
 
 
-## Incident response and support
+## Incident response and support for {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #incidentresponse}
 
 ### Customer-detected issues
@@ -370,7 +372,7 @@ Depending on the issue, you, IBM, or both of you work together to fix the issue.
 **Note**: Severity 1 support tickets are monitored 24 hours a day, 7 days a week. Other tickets are processed from Sunday 10:00 pm GMT through Saturday 12:00 am GMT. For more information about severity of support tickets and working with support, see <a href="../support/index.html#contacting-bluemix-support-local">Contacting support</a>.
 
 
-## Disaster recovery
+## Disaster recovery for {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dr}
 
 Disaster recovery for {{site.data.keyword.Bluemix_short}} Dedicated can be set up similarly to the way that it works when you use {{site.data.keyword.Bluemix_short}} Public. {{site.data.keyword.Bluemix_short}} Public provides a continuously available platform for innovation with multiple fail-safe measures to ensure that your orgs, spaces, and apps are always available. Deploying apps to multiple geographic regions enables continuous availability that protects against unplanned, simultaneous loss of multiple hardware or software components, or the loss of an entire data center, so that even in the event of a natural disaster in one geographic location, your distributed {{site.data.keyword.Bluemix_notm}} Public app instances in alternate geographic locations will be available.

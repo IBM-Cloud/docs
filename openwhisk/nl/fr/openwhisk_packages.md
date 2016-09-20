@@ -18,7 +18,7 @@ copyright:
 
 # Utilisation et création de packages {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
-*Dernière mise à jour : 28 mars 2016*
+Dernière mise à jour : 2 août 2016
 {: .last-updated}
 
 Dans {{site.data.keyword.openwhisk}}, vous pouvez utiliser des packages afin de regrouper des actions connexes et de les partager.
@@ -522,4 +522,3 @@ trouvent dans un package partagé sont *publics*. Si le package est privé, son 
   {: screen}
 
   Dans l'exemple précédent, vous utilisiez l'espace de nom `monEspaceNom` et cet espace de nom figure dans le nom qualifié complet.
-

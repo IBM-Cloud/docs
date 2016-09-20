@@ -15,12 +15,12 @@ copyright:
 
 # Sécurité {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Dernière mise à jour : 22 juin 2016*
+Dernière mise à jour : 22 juillet 2016
 {: .last-updated}
 
 Conçue selon les pratiques d'ingénierie sécurisée, la plateforme {{site.data.keyword.Bluemix}}
 possède des contrôles de sécurité répartis dans des couches sur le réseau et dans l'infrastructure. {{site.data.keyword.Bluemix_notm}}
-fournit un groupe de services de sécurité qui peuvent être utilisés par les développeurs d'applications afin de sécuriser leurs applications
+fournit un groupe de services de sécurité que les développeurs d'applications peuvent utiliser afin de sécuriser leurs applications
 mobiles et Web. La combinaison de ces éléments permet de faire d'{{site.data.keyword.Bluemix_notm}} une plateforme
 proposant des choix clairs pour le développement d'applications sécurisé.
 {:shortdesc}
@@ -31,8 +31,7 @@ sécurisée. Ces règles incluent des pratiques telles que l'analyse du code sou
 
 Les environnements {{site.data.keyword.Bluemix_notm}} public et dédié utilisent les services cloud d'infrastructure sous forme de service
 (IaaS) IBM SoftLayer et profitent pleinement de son architecture sécurisée. SoftLayer IaaS fournit des
-niveaux de protection multiples qui se chevauchent pour vos applications et vos
-données. Pour l'environnement {{site.data.keyword.Bluemix_notm}} local, vous êtes en charge de la sécurité physique et
+niveaux de protection multiples qui se chevauchent pour vos applications et vos données. Pour l'environnement {{site.data.keyword.Bluemix_notm}} local, vous êtes en charge de la sécurité physique et
 fournissez l'infrastructure en hébergeant l'environnement {{site.data.keyword.Bluemix_notm}} local dans votre
 propre centre de données situé derrière le pare-feu de la société. De plus,
 {{site.data.keyword.Bluemix_notm}} ajoute des fonctions de sécurité au niveau de la couche plateforme sous forme
@@ -98,16 +97,17 @@ sont également créés pour les accès privilégiés aux systèmes Linux qui h�
 <dd> L'ensemble du trafic {{site.data.keyword.Bluemix_notm}} passe par les produits IBM WebSphere® DataPower® SOA Appliances, qui offrent des fonctions de proxy inverse, de terminaison SSL et
 d'équilibrage de charge.
 Les méthodes HTTP suivantes sont autorisées :
- * DELETE
- * GET
- * HEAD
- * OPTIONS
- * POST
- * PUT
- * TRACE
-
-Le délai d'attente d'inactivité HTTP est de 2 minutes.
-
+<ul>
+<li>DELETE</li>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+<li>POST</li>
+<li>PUT</li>
+<li>TRACE</li>
+</ul>
+Le délai d'attente d'inactivité HTTP est de 2 minutes.</dd>
+<dd>
 Les en-têtes suivants sont remplis par DataPower :
 <dl>
 <dt>$wsis</dt>
@@ -141,10 +141,10 @@ plus, la gestion des modifications ainsi que des procédures de sauvegarde et de
 
 <dl>
 <dt>Séparation des environnements</dt>
-<dd> Pour l'environnement {{site.data.keyword.Bluemix_notm}} public, les environnements de développement et de production sont séparés afin d'améliorer la stabilité et la sécurité des applications.</dd>
+<dd>Pour l'environnement {{site.data.keyword.Bluemix_notm}} public, les environnements de développement et de production sont séparés afin d'améliorer la stabilité et la sécurité des applications.</dd>
 
 <dt>Pare-feux</dt>
-<dd> Des pare-feux sont en place pour restreindre l'accès au réseau {{site.data.keyword.Bluemix_notm}}. Pour l'environnement
+<dd>Des pare-feux sont en place pour restreindre l'accès au réseau {{site.data.keyword.Bluemix_notm}}. Pour l'environnement
 {{site.data.keyword.Bluemix_notm}} local, le pare-feu de votre société sépare le reste de votre réseau de votre
 instance {{site.data.keyword.Bluemix_notm}}.</dd>
 
@@ -187,14 +187,14 @@ principe du moindre privilège.
 
 Dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local, les administrateurs désignés
 peuvent
-gérer les rôles et les droits pour les utilisateurs {{site.data.keyword.Bluemix_notm}} dans leur organisation dans la console d'administration. Voir
-[Gestion des environnements {{site.data.keyword.Bluemix_notm}} local et dédié](../admin/index.html#mng) pour des détails.
+gérer les rôles et les droits pour les utilisateurs {{site.data.keyword.Bluemix_notm}} dans leur organisation dans la console d'administration. Pour plus d'informations, voir
+[Gestion des environnements {{site.data.keyword.Bluemix_notm}} local et dédié](../admin/index.html#mng). 
 </dd>
 </dl>
 
 ### Sécurité physique
 
-Les environnements {{site.data.keyword.Bluemix_notm}} public et dédié s'appuie sur la topologie "un réseau dans le réseau" de SoftLayer en
+Les environnements {{site.data.keyword.Bluemix_notm}} public et dédié s'appuient sur la topologie "un réseau dans le réseau" de SoftLayer en
 matière de sécurité de réseau
 physique. Cette architecture permet de s'assurer que les systèmes sont accessibles uniquement au personnel autorisé. Pour l'environnement {{site.data.keyword.Bluemix_notm}} local, vous êtes en charge de la sécurité physique de
 l'instance locale. Votre centre de données est sécurisé derrière le pare-feu de votre société.
@@ -231,7 +231,7 @@ Vous devez prendre en compte chaque type de données lorsque vous planifiez la s
 
 La plateforme {{site.data.keyword.Bluemix_notm}} sécurise les données transférées en sécurisant l'accès de l'utilisateur final à l'application via SSL sur le réseau, jusqu'à ce que
 les données atteignent IBM DataPower Gateway à la frontière du réseau interne de {{site.data.keyword.Bluemix_notm}}. IBM DataPower Gateway sert de
-proxy inverse et fournit la terminaison SSL.
+proxy inverse et fournit la terminaison SSL. IPSEC est utilisé pour sécuriser les données qui transitent entre IBM DataPower Gateway et l'application. 
 
 La sécurité des données utilisées et des données au repos vous incombe lorsque vous développez votre application. Vous pouvez tirer profit de
 plusieurs services liés aux données qui sont disponibles dans le catalogue {{site.data.keyword.Bluemix_notm}} pour traiter ces questions.
@@ -243,8 +243,7 @@ En tant que développeur, vous devez activer la configuration des paramètres de
 
 Vous pouvez utiliser les fonctions de sécurité fournies par plusieurs services {{site.data.keyword.Bluemix_notm}} pour sécuriser vos applications. Tous les services {{site.data.keyword.Bluemix_notm}} qui sont produits par IBM suivent les pratiques de développement d'ingénierie sécurisée d'IBM.
 
-**Remarque :** il se peut que certains services décrits ici ne soient pas applicables dans les instances Bluemix
-dédiées ou locales.
+**Remarque :** il se peut que certains services décrits ici ne soient pas applicables dans les instances {{site.data.keyword.Bluemix_notm}} dédiées ou locales.
 
 ### Service SSO
 
@@ -319,7 +318,7 @@ d'application** est le suivant :
  3. Via le routeur réseau.
  4. Atteint le contexte d'exécution d'application dans l'agent DEA (Droplet Execution Agent).
 
-Le *développeur* {{site.data.keyword.Bluemix_notm}} suit les deux flux principaux, pour la connexion et pour le développement et le déploiement.
+Le *développeur* {{site.data.keyword.Bluemix_notm}} suit les deux flux principaux : pour la connexion et pour le développement et le déploiement.
  * Le **flux de connexion d'un développeur** est le suivant :
     * Pour les développeurs qui se connectent à l'environnement {{site.data.keyword.Bluemix_notm}} public, le flux
 est le suivant :
@@ -328,7 +327,7 @@ est le suivant :
     * Pour les développeurs qui se connectent à l'environnement {{site.data.keyword.Bluemix_notm}} dédié ou local, le flux utilise le
 protocole LDAP
 de l'entreprise.
- * Le **flux de développement et de déploiement** est le suivant : 
+ * Le **flux de développement et de déploiement** est le suivant :
     1. Via un pare-feu, avec prévention contre les intrusions et sécurité du réseau. Applicable à l'environnement
 {{site.data.keyword.Bluemix_notm}} dédié seulement.
     2. Via IBM DataPower Gateway avec proxy inverse et proxy de terminaison SSL.

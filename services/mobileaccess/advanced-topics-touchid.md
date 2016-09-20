@@ -8,10 +8,10 @@ copyright:
 # Authorizating access with Touch ID
 {: #before-you-begin}
 
-Last updated: 20 July 2016
+Last updated: 16 August 2016
 {: .last-updated}
 
-Touch ID is a fingerprint recognition feature for iOS devices. You can use Touch ID to automatically secure authorization information for future use. 
+Touch ID is a fingerprint recognition feature for iOS devices. You can use Touch ID wth the {{site.data.keyword.amafull}} service to automatically secure authorization information for future use. 
 
 **Note:** Touch ID is available only from the  {{site.data.keyword.amashort}} Objective-C SDK.
 

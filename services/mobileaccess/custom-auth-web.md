@@ -8,10 +8,10 @@ copyright:
 #Configuring custom authentication for {{site.data.keyword.amashort}} web applications
 {: #custom-web}
 
-Last updated: 21 July 2016
+Last updated: 31 August 2016
 {: .last-updated}
 
-Add custom authentication and {{site.data.keyword.amashort}} security functionality to your  web app.
+Add custom authentication and {{site.data.keyword.amafull}} security functionality to your  web app.
 
 ## Before you begin
 {: #before-you-begin}
@@ -35,9 +35,9 @@ When creating a custom identity provider you must define a POST method  with a r
 
 `/apps/:tenantID/<your-realm-name>/handleChallengeAnswer`
 
-`tenantID` is a url parameter and `<your-realm-name>` is any realm name you choose. 
+`tenantID` is a URL parameter and `<your-realm-name>` is any realm name you choose. 
 
-The request body will contain a `challengeAnswer` object that contains  `username` and `password`
+The request body will contain a `challengeAnswer` object that contains  `username` and `password`.
 After validating the user, this route must return a JSON object of the following structure.. 
 
 
@@ -55,7 +55,7 @@ After validating the user, this route must return a JSON object of the following
 
 **Note:** The `attributes` field is optional. 
 
-The following code demonstrates such a post request.
+The following code demonstrates such a POST request.
 
 ```Java
 var app = express();
@@ -102,8 +102,8 @@ After you have your custom identity provider configured, you can enable custom a
 1. Open the {{site.data.keyword.Bluemix_notm}} dashboard. 
 2. Click the relevant {{site.data.keyword.amashort}} application tile. The app dashboard loads. 
 3. Click the **Configure** button on the Custom tile. 
-4. In the **Realm Name** text box, enter the realm name configured in your custom identity provider handler endpoint. t
-5. Enter the custom identity provider url. 
+4. In the **Realm Name** text box, enter the realm name configured in your custom identity provider handler endpoint.
+5. Enter the custom identity provider URL. 
 6. Enter the Web application redirect URI to be used by {{site.data.keyword.amashort}} dashboard after successful authentication. 
 7. Save. 
 
@@ -116,20 +116,19 @@ To request user authorization, redirect the browser to the authorization server 
 
 1. Retrieve the authorization endpoint (`authorizationEndpoint`) and clientId (`clientId`) from the service credentials stored in `VCAP_SERVICES` environment variable. 
 
-  **Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
- 
-  US South: 
-  ```
-  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
-  ```
-  London: 
-  ```
-  https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization 
-  ```
-  Sydney: 
-  ```
-  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
-  ```
+	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
+  
+	US South: 
+
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
+
+	London: 
+
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+
+	Sydney: 
+
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
 2. Build the authorization server URI using `response_type("code")`, `client_id`, and `redirect_uri` as query parameters.  
 1. Redirect from your web app to the generated URI. 
 
@@ -177,24 +176,24 @@ The next step is to obtain the access token and identity token using the previou
 
 1. Retrieve `authorizationEndpoint`, `clientId`, and `secret` from service credentials stored in `VCAP_SERVICES` environment variable. 
 
-   **Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
+	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
 
- US South: 
- ```
-     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
- ```
- London: 
- ```
-     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
- ``` 
- Sydney: 
- ``` 
-     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
- ```
-1. Send a post request to the token server URI with `grant_type`, `client_id`, `redirect_uri`, and `code` as form parameters and `clientId` and `secret` as Basic HTTP authentication credentials.
+	US South: 
+  
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
+ 
+	London: 
+ 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
+ 
+	Sydney: 
+ 
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
+ 
+1. Send a POST request to the token server URI with `grant_type`, `client_id`, `redirect_uri`, and `code` as form parameters and `clientId` and `secret` as Basic HTTP authentication credentials.
 
 
-The following example, the following code retrieves the necessary values, and sends them with a post request.
+The following example, the following code retrieves the necessary values, and sends them with a POST request.
 
 
  ```Java

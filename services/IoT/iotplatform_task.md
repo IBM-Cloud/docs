@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,7 +13,7 @@ copyright:
 
 # Connecting devices
 {: #iotplatform_task}
-Last updated: 29 June 2016
+Last updated: 13 September 2016
 {: .last-updated}
 
 Before you can begin receiving data from your your IoT devices, you must connect them to  {{site.data.keyword.iot_full}}. Connecting a device to {{site.data.keyword.iot_short_notm}} involves registering the device with {{site.data.keyword.iot_short_notm}} and then using the registration information to configure the device to connect to {{site.data.keyword.iot_short_notm}}.
@@ -21,11 +21,11 @@ Before you can begin receiving data from your your IoT devices, you must connect
 
 ## Before you begin
 {: #byb}
-
+ 
 Before you start the connection process, you must ensure that your devices meet the following requirements for communicating with {{site.data.keyword.iot_short_notm}}:
 
-- Your device must be able to communicate by sending device messages in the [MQTT format](https://docs.internetofthings.ibmcloud.com/reference/mqtt/index.html).
-- The device messages must conform to the {{site.data.keyword.iot_short_notm}} [message payload](https://docs.internetofthings.ibmcloud.com/reference/mqtt/index.html#/message-payload#message-payload) requirements.
+- Your device must be able to communicate by sending device messages in [MQTT format](reference/mqtt/index.html).
+- The device messages must conform to the {{site.data.keyword.iot_short_notm}} [message payload](reference/mqtt/index.html#message-payload) requirements.
 
 Complete the following steps to connect your device to {{site.data.keyword.iot_short_notm}}.
 
@@ -39,8 +39,10 @@ You can add devices one at a time from the {{site.data.keyword.iot_short_notm}} 
 To add a device from the {{site.data.keyword.iot_short_notm}} dashboard:
 
 1. Click the {{site.data.keyword.iot_short_notm}} service tile in your {{site.data.keyword.Bluemix}} dashboard to open the service dashboard or go directly to the dashboard by using the following URL:
-`https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview`  
-Where *org_id* is the ID of your {{site.data.keyword.Bluemix}} organization.
+
+ ``https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview ``
+
+    Where *org_id* is the ID of your {{site.data.keyword.Bluemix}} organization.
 
 2. On the service page, click **Launch Dashboard** to start administering your {{site.data.keyword.iot_short_notm}} organization.
 
@@ -103,5 +105,5 @@ This value is the unique token that you defined or that was assigned to your dev
 - Message format: JSON  
  {{site.data.keyword.iot_short_notm}} supports several formats, such as JSON and text.
 
-For more information about connecting your device, see [MQTT Connectivity for Devices](https://docs.internetofthings.ibmcloud.com/devices/mqtt.html) in the technical documentation.
+For more information about connecting your device, see [MQTT Connectivity for Devices](devices/mqtt.html) in the technical documentation.
 The [Connectivity](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName) section of the API documentation also contains the required information.

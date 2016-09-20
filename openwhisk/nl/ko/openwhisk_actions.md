@@ -19,7 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} 조치 작성 및 호출
 {: #openwhisk_actions}
 
-*마지막 업데이트 날짜: 2016년 3월 22일*
+마지막 업데이트 날짜: 2016년 8월 4일
 {: .last-updated}
 
 조치는 {{site.data.keyword.openwhisk}} 플랫폼에서 실행되는 Stateless 코드 스니펫입니다. 조치는 JavaScript 함수, Swift 함수 또는 Docker 컨테이너에 패키지화된 사용자 정의 실행 가능 프로그램일 수 있습니다. 예를 들어, 이미지에서 얼굴을 발견하거나 일련의 API 호출을 집계하거나 트윗을 게시하기 위해 조치를 사용할 수 있습니다.
@@ -32,7 +32,7 @@ copyright:
 ## JavaScript 조치 작성
 {: #openwhisk_create_action_js}
 
-다음 절에서는 JavaScript에서 조치에 대해 작업하는 방법을 안내합니다. 단순 조치의 작성 및 호출부터 시작하여 조치에 매개변수 추가, 매개변수를 사용하는 해당 조치 호출, 기본 매개변수 설정 및 해당 호출, 비동기 조치 작성에 대해 설명하며 최종적으로 조치 시퀀스로 작업하는 방법에 대해 설명합니다.
+다음 절에서는 JavaScript에서 조치에 대해 작업하는 방법을 안내합니다. 단순 조치의 작성과 호출로 시작합니다. 그런 다음 조치에 매개변수를 추가하고 매개변수가 있는 해당 조치를 호출합니다. 다음으로 기본 매개변수를 설정하고 이를 호출한 후 비동기 조치를 작성하고 마지막으로 조치 시퀀스에 대한 작업을 수행합니다. 
 
 
 ### 단순 JavaScript 조치 작성 및 호출
@@ -175,14 +175,14 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
 
 모든 매개변수를 매번 조치에 전달하기보다 특정 매개변수를 바인딩할 수 있습니다. 다음은 조치가 "Vermont"라는 위치를 기본값으로 사용하도록 *place* 매개변수를 바인딩하는 예입니다.
  
-1. `--param` 옵션을 사용하여 매개변수값을 바인딩하도록 조치를 업데이트하십시오.
+1. `--param` 옵션을 사용하여 매개변수값을 바인딩하도록 조치를 업데이트하십시오. 
 
   ```
 wsk action update hello --param place 'Vermont'
   ```
   {: pre}
 
-2. 이번에는 `name` 매개변수만 전달하여 조치를 호출하십시오.
+2. 이번에는 `name` 매개변수만 전달하여 조치를 호출하십시오. 
 
   ```
 wsk action invoke --blocking --result hello --param name 'Bernie'
@@ -197,7 +197,7 @@ wsk action invoke --blocking --result hello --param name 'Bernie'
 
   조치를 호출할 때 장소 매개변수를 지정할 필요가 없습니다. 호출 시에 매개변수값을 지정하여 바인딩된 매개변수를 겹쳐쓸 수 있습니다.
 
-3. `name` 및 `place` 값을 둘 다 전달하여 조치를 호출하십시오. 나중에 조치에 바인딩된 값을 겹쳐씁니다.
+3. `name` 및 `place` 값을 둘 다 전달하여 조치를 호출하십시오. 나중에 조치에 바인딩된 값을 겹쳐씁니다. 
 
   ```
 wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
@@ -213,22 +213,28 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
 ### 비동기 조치 작성
 {: #openwhisk_asynchrony_js}
 
-콜백 함수에서 계속 실행되는 JavaScript 함수는 `main` 함수가 리턴한 후에 활성화 결과를 리턴해야 하는 경우가 있습니다. 조치에서 `whisk.async()` 및 `whisk.done()` 함수를 사용하여 이를 달성할 수 있습니다.
+비동기로 실행되는 JavaScript 함수는 `main` 함수가 리턴한 후 활성화 결과를 리턴해야 하는 경우가 있습니다. 조치에서 Promise를 리턴하여 이를 수행할 수 있습니다. 
 
 1. `asyncAction.js`라는 파일에 다음 컨텐츠를 저장하십시오.
 
   ```
-function main() {      setTimeout(function() {
-          return whisk.done({done: true});
-      }, 20000);
-      return whisk.async();
-  }
+  function main(args) {
+       return new Promise(function(resolve, reject) {
+               setTimeout(function() {
+          resolve({ done: true });
+         }, 2000);
+      })
+   }
   ```
   {: codeblock}
 
-  `main` 함수가 즉시 리턴하고 `whisk.async()`가 이 활성화가 계속 실행되어야 함을 표시하는 값을 리턴합니다.
+  `main` 함수가 Promise를 리턴하며 이는 활성화가 아직 완료되지 않았지만 나중에 완료될 것으로 예상됨을 표시합니다. 
 
-  이 경우에 `setTimeout()` JavaScript 함수는 콜백 함수를 호출하기 전에 20초 동안 대기하며 `whisk.done()`에 대한 호출이 활성화가 완료되었음을 표시합니다.
+  이 경우에 `setTimeout()` JavaScript 함수는 콜백 함수를 호출하기 전에 20초 동안 대기합니다. 이는 비동기 코드를 나타내며 Promise의 콜백 함수 내부에 들어갑니다. 
+
+  Promise의 콜백에는 resolve와 reject라는 두 개의 인수가 사용되며 이는 둘 다 함수입니다. `resolve()`를 호출하면 Promise를 이행하고 활성화가 정상적으로 완료되었음을 표시합니다. 
+
+  `reject()`를 호출하여 Promise를 거부하고 활성화가 비정상적으로 완료되었음을 표시할 수 있습니다. 
 
 2. 다음 명령을 실행하여 조치를 작성하고 호출하십시오.
 
@@ -275,7 +281,7 @@ wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: screen}
 
-  활성화 레코드에서 `start` 및 `end` 시간소인을 비교하여 이 활성화 완료에 20초 약간 넘게 소요되었음을 알 수 있습니다.
+  활성화 레코드에서 `start` 시간소인과 `end` 시간소인을 비교하면 이 활성화를 완료하는 데 20초가 약간 넘는 시간이 걸렸음을 알 수 있습니다. 
 
 
 ### 외부 API를 호출하기 위해 조치 사용
@@ -292,20 +298,28 @@ var request = require('request');function main(params) {
      var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
     
-        request.get(url, function(error, response, body) {
-            var condition = JSON.parse(body).query.results.channel.item.condition;
-            var text = condition.text;
-            var temperature = condition.temp;
-            var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-            whisk.done({msg: output});
-        });        return whisk.async();
+        return new Promise(function(resolve, reject) {
+            request.get(url, function(error, response, body) {
+            if (error) {
+                    reject(error);    
+                }
+                else {
+                    var condition = JSON.parse(body).query.results.channel.item.condition;
+                    var text = condition.text;
+                    var temperature = condition.temp;
+                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                    resolve({msg: output});
+                }
+            });
+        });
     }
   ```
   {: codeblock}
 
-  예에서 조치가 JavaScript `request` 라이브러리를 사용하여 Yahoo Weather API에 대한 HTTP 요청을 작성하고 JSON 결과에서 필드를 추출합니다. [참조](./openwhisk_reference.html#runtime_ref_runtime_environment)에서는 사용자의 조치에서 사용할 수 있는 Node.js 패키지에 대해 자세히 설명합니다.
-  
-  또한 이 예에서는 비동기 조치에 대한 필요성을 표시합니다. 함수가 리턴할 때 이 조치의 결과를 아직 사용할 수 없음을 표시하기 위해 조치에서 `whisk.async()`를 리턴합니다. 대신 HTTP 호출이 완료되어 인수로 `whisk.done()` 함수에 전달된 후에 `request` 콜백에서 결과를 사용할 수 있습니다.
+  예에서 조치가 JavaScript `request` 라이브러리를 사용하여 Yahoo Weather API에 대한 HTTP 요청을 작성하고 JSON 결과에서 필드를 추출합니다. [참조](./reference.md#runtime-environment)에서는 사용자의 조치에서 사용할 수 있는 Node.js 패키지에 대해 자세히 설명합니다.
+
+  또한 이 예에서는 비동기 조치에 대한 필요성을 표시합니다. 이 조치는 Promise를 리턴하여 함수가 리턴할 때 이 조치의 결과를 아직 사용할 수 없음을 표시합니다. 대신 HTTP 호출이 완료된 후 `request` 콜백에서 결과를 사용할 수 있으며 결과는 `resolve()` 함수에 인수로 전달됩니다. 
+
 
 2. 다음 명령을 실행하여 조치를 작성하고 호출하십시오.
   ```
@@ -386,7 +400,42 @@ wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)
 
   결과에서 행이 정렬된 것을 볼 수 있습니다.
 
-**참고**: 다중으로 이름 지정된 매개변수를 사용하여 조치 시퀀스를 호출하는 방법에 대한 정보는 [기본 매개변수 설정](./actions.md#setting-default-parameters)을 참조하십시오.
+**참고**: 여러 이름 지정된 매개변수를 사용하여 조치 시퀀스를 호출하는 방법에 대한 자세한 정보는 [기본 매개변수 설정](./actions.md#setting-default-parameters)을 참조하십시오. 
+
+
+## Python 조치 작성
+{: #openwhisk_actions_python}
+
+Python 조치 작성 프로세스는 JavaScript 조치 작성 프로세스와 유사합니다. 다음 절에서는 단일 Python 조치를 작성하고 호출하며 해당 조치에 매개변수를 추가하는 방법에 대해 안내합니다. 
+
+### 조치 작성 및 호출
+{: #openwhisk_actions_python_invoke}
+
+조치는 단순히 최상위 레벨 Python 함수이며 이는 `main`이라는 메소드가 있어야 함을 의미합니다. 예를 들어, 다음과 같은 컨텐츠가 있는
+`hello.py` 파일을 작성합니다. 
+
+```
+    def main(dict):
+        name = dict.get("name", "stranger")
+        greeting = "Hello " + name + "!"
+        print(greeting)
+        return {"greeting": greeting}
+```
+{: codeblock}
+
+Python 조치에서는 항상 사전을 이용하고 사전을 생성합니다. 
+
+다음과 같이 이 함수에서 `helloPython`이라는 OpenWhisk 조치를 작성할 수
+있습니다. 
+
+```
+wsk action create helloPython hello.py
+```
+{: pre}
+
+명령행과 `.py` 소스 파일을 사용하는 경우 (JavaScript
+조치와 반대로) Python 조치를 작성 중임을 지정할 필요가 없습니다.
+도구가 파일 확장자에서 이를 판별합니다. 
 
 
 
@@ -421,7 +470,9 @@ wsk action create helloSwift hello.swift
 ```
 {: pre}
 
-명령행 및 `.swift` 소스 파일을 사용할 때 (JavaScript 조치와 반대로) Swift 조치를 작성함을 지정할 필요가 없습니다. 도구가 파일 확장자에서 이를 판별합니다.
+명령행과 `.swift` 소스 파일을 사용하는 경우 (JavaScript
+조치와 반대로) Swift 조치를 작성 중임을 지정할 필요가 없습니다.
+도구가 파일 확장자에서 이를 판별합니다. 
 
 조치 호출은 JavaScript 호출과 마찬가지로 Swift 호출에 대해서도 동일합니다.
 
@@ -441,8 +492,6 @@ wsk action invoke --blocking --result helloSwift --param name World
 개발 중이며 {{site.data.keyword.openwhisk_short}}에서는 일반적으로 사용 가능한 가장 최신 릴리스를
 사용합니다. 이러한 최신 릴리스가 항상 안정적인 것은 아닙니다. 또한 {{site.data.keyword.openwhisk_short}}와
 함께 사용되는 Swift의 버전이 XCode on MacOS의 안정적인 릴리스의 Swift 버전과 일치하지 않을 수 있습니다.
-
-
 
 ## Docker 조치 작성
 {: #openwhisk_actions_docker}
@@ -510,7 +559,7 @@ cd dockerSkeleton
   ```
   {: pre}
 
-  example.c 파일의 일부가 Docker 이미지 빌드 프로세스의 일부로 컴파일되므로 시스템에서 C 컴파일이 필요하지 않습니다.
+  example.c 파일의 일부는 Docker 이미지 빌드 프로세스의 일부로 컴파일되므로 사용자 시스템에서 C 컴파일이 필요하지 않습니다. 
 
 4. 제공된 JavaScript 파일이 아니라 Docker 이미지에서 조치를 작성하려면 `--docker`를 추가하고 JavaScript 파일 이름을 Docker 이미지 이름으로 대체하십시오.
 

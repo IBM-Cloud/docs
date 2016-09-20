@@ -19,7 +19,7 @@ copyright:
 
 #SoftLayer と {{site.data.keyword.Bluemix_notm}} の請求アカウントのリンク
 {: #softlayerlink}
-*最終更新日: 2016 年 7 月 7 日*
+*最終更新日: 2016 年 8 月 15 日*
 {: .last-updated}
 
 SoftLayer と {{site.data.keyword.Bluemix_notm}} の請求アカウントをリンクできるようになりました。アカウントをリンクすると、SoftLayer と {{site.data.keyword.Bluemix_notm}} の両方のリソースについて SoftLayer から請求されるようになります。既存のアカウントがある場合、SoftLayer からの {{site.data.keyword.Bluemix_notm}} についての請求は、アカウントのリンク後に開始する次の請求処理サイクルから有効になります。
@@ -30,8 +30,8 @@ SoftLayer と {{site.data.keyword.Bluemix_notm}} の請求アカウントをリ�
 アカウントがリンクされた後、アカウント間で簡単に切り替えることができます。{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースで {{site.data.keyword.Bluemix_notm}} リソースの使用量を引き続きモニターできます。ただし、それらのリソースについての請求は、SoftLayer の請求書に表示されるようになっています。
 
 アカウントの請求はリンクされますが、ログイン ID は、SoftLayer アカウントの認証方法に応じて以下のように異なるものになります。
-* 認証に IBM ID を使用しない SoftLayer アカウントのユーザーの場合、SoftLayer の製品とサービスには引き続き SoftLayer ID を使用し、{{site.data.keyword.Bluemix_notm}} の製品とサービスには IBM ID を使用します。
-* 認証に IBM ID を使用する SoftLayer アカウントのユーザーの場合、SoftLayer アカウントと {{site.data.keyword.Bluemix_notm}} アカウントの両方へのアクセスに IBM ID を使用します。
+* 認証に IBMid を使用しない SoftLayer アカウントのユーザーの場合、SoftLayer の製品とサービスには引き続き SoftLayer ID を使用し、{{site.data.keyword.Bluemix_notm}} の製品とサービスには IBMid を使用します。
+* 認証に IBMid を使用する SoftLayer アカウントのユーザーの場合、SoftLayer アカウントと {{site.data.keyword.Bluemix_notm}} アカウントの両方へのアクセスに IBMid を使用します。
 
 **注意:** リンクされたアカウントをリンク解除することはできません。  
 
@@ -63,13 +63,13 @@ SoftLayer アカウントがあり、SoftLayer アカウントと {{site.data.ke
 チーム・メンバーを {{site.data.keyword.Bluemix_notm}} アカウントに招待するには、SoftLayer アカウントのマスター・ユーザーでなければなりません。
 
 {{site.data.keyword.Bluemix_notm}} を使用してチーム・メンバーを招待するには、以下のようにします。
- 1. **「アカウントとサポート」**アイコン ![「アカウントとサポート」](images/account_support.svg)>**「アカウント」**>**「チーム・メンバーの招待」**に移動します。
+ 1. **「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](../icons/i-avatar-icon.svg) >**「アカウント」**>**「チーム・メンバーの招待」**に移動します。
  2. **「追加」**をクリックし、SoftLayer アカウントへの認証操作を行い、SoftLayer アカウントからチーム・メンバーのリストを表示します。
  3. 招待するチーム・メンバーを選択し、**「送信」**をクリックします。
 
 チーム・メンバーが SoftLayer アカウントに追加されるごとに、何度もこの操作を実行できます。
  
-チーム・メンバーは、**「組織に参加してください (Join the organization)」**リンクが含まれた E メールを受け取ります。メンバーは、IBM ID を所有していない場合、登録ページにリダイレクトされます。次に、メンバーは、いくつかの基本情報を入力し、{{site.data.keyword.Bluemix_notm}} アカウントを作成できます。
+チーム・メンバーは、**「組織に参加してください (Join the organization)」**リンクが含まれた E メールを受け取ります。メンバーは、IBMid を所有していない場合、登録ページにリダイレクトされます。次に、メンバーは、いくつかの基本情報を入力し、{{site.data.keyword.Bluemix_notm}} アカウントを作成できます。
 
 {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用したチーム・メンバーの招待について詳しくは、『[チーム・メンバーの招待](https://console.ng.bluemix.net/docs/admin/users_roles.html#inviteteammembers)』を参照してください。
 

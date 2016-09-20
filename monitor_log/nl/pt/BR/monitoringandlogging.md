@@ -236,7 +236,7 @@ Para mover logs de seu app e do sistema para um host de log externo, conclua as 
 
   2. Crie uma instância de serviço fornecida pelo usuário.
      
-	 Utilize o comando ```cf create-user-provided-service```  (ou ```cups```, uma versão curta do comando) para criar um instância de serviço fornecida pelo usuário: 
+	 Utilize o comando ```cf create-user-provided-service``` (ou ```cups```, uma versão curta do comando) para criar um instância de serviço fornecida pelo usuário: 
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```

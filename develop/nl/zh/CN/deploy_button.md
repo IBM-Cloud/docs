@@ -24,9 +24,9 @@ copyright:
 使用“部署到 {{site.data.keyword.Bluemix}}”按钮，可以高效地将自己的公共 Git 源应用程序共享给其他人员，以便其他人员可以试验代码并将其部署到 IBM {{site.data.keyword.Bluemix_notm}}。此按钮不但需要的配置最少，而且可插入到支持标记的任何位置。无论是谁，只要单击该按钮，即可在新的 Git 存储库中创建代码的克隆副本，而您的原始应用程序将不受影响。
 {: shortdesc} 
 
-**提示：**如果公司标记很重要，那么可以在您的内容中[嵌入“部署到 {{site.data.keyword.Bluemix_notm}}”iFrame 流](../develop/deploy_button_embed.html)，而不是插入按钮。当其他人员对您的公共 Git 源应用程序创建克隆副本时，他们会停留在您的内容中，而不会被重定向到 bluemix.net Web 站点。 
+**提示：**如果公司品牌很重要，那么可以在您的内容中[嵌入“部署到 {{site.data.keyword.Bluemix_notm}}”iFrame 流](../develop/deploy_button_embed.html)，而不是插入按钮。当其他人员对您的公共 Git 源应用程序创建克隆副本时，他们会停留在您的内容中，而不会被重定向到 bluemix.net Web 站点。 
 
-当有人单击您的按钮时，会发生这些操作： 
+当有人单击您的按钮时，会发生以下操作： 
 
 1. 如果该人员没有活动 {{site.data.keyword.Bluemix}} 帐户，那么必须创建一个试用帐户。 
 
@@ -104,7 +104,7 @@ copyright:
 
     * 如果您倾向于使用按钮的 SVG 图像而不是 PNG 图像，那么也有可用的 SVG 版本。您可以将片段中使用的外部按钮图像的路径更改为 `https://bluemix.net/deploy/button.svg`。
 	
-	* 如果您希望使用较大的按钮图像，我们还提供了比原始大小大两倍的图像。您可以将片段中使用的外部按钮图像的路径更改为 `https://bluemix.net/deploy/button_x2.png`。 
+	* 如果您希望使用较大的按钮图像，我们还提供了原始图像两倍大小的图像。您可以将片段中使用的外部按钮图像的路径更改为 `https://bluemix.net/deploy/button_x2.png`。 
 	
 	* 如果您偏向于将图像存储在本地，那么可下载图像并将其存储在 Git 存储库中。调整路径以使用图像的相对位置。 
 	

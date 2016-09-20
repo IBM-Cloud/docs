@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} 로컬
 {: #local}
-*마지막 업데이트 날짜: 2016년 7월 7일*
+*마지막 업데이트 날짜: 2016년 8월 16일*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 로컬은 {{site.data.keyword.Bluemix_notm}} 클라우드 기반 플랫폼의 강력함 및 민첩성을 데이터 센터로 가져옵니다. {{site.data.keyword.Bluemix_notm}} 로컬을 사용하여 안전하게 연결되고 {{site.data.keyword.Bluemix_notm}} 퍼블릭 동기화를 유지하는 동안 회사 방화벽 뒤에 가장 민감한 워크로드를 보호할 수 있습니다.
@@ -37,7 +37,8 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |포함 | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | 정책에 따라 애플리케이션의 컴퓨팅 리소스 용량을 동적으로 늘리거나 줄입니다. 이 서비스를 사용하면 {{site.data.keyword.Bluemix}} 로컬 환경에서 무제한 사용이 가능합니다.|
 |선택사항 | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}}는 {{site.data.keyword.APIM}}와 IBM StrongLoop를 API 및 마이크로서비스를 작성, 실행, 관리 및 적용하기 위한 포괄적 솔루션을 제공하는 단일 오퍼링으로 통합합니다. |
 |선택사항 | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | {{site.data.keyword.APIMfull}} 서비스는 API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL을 사용하거나 HTTP 데이터 소스의 데이터를 어셈블하여 리소스들로 API를 가져올 수 있습니다. {{site.data.keyword.APIM}} 서비스를 사용하면 API가 어떻게 이용되는지를 관리할 수 있게 된다는 이점이 있습니다. |
-|선택사항 | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. |
+|선택사항 | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. 자세한 정보는 로컬 환경에 대한 전체 [문서](http://docs.cloudant.com/BluemixLocal.html){: new_window}와 [하드웨어 요구사항](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window}을 참조하십시오.  |
+|선택사항(베타) | {{site.data.keyword.containershort}} | {{site.data.keyword.Bluemix_notm}} 로컬에서 Docker 컨테이너를 실행합니다. 컨테이너는 앱에서 실행해야 하는 모든 요소를 포함하는 가상 소프트웨어 오브젝트입니다. 컨테이너는 리소스 격리와 할당의 이점이 있으며 가상 머신 등보다 휴대가 간편하고 효율적입니다. |
 |선택사항 | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
 |선택사항 | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 증가된 중복성을 위해 {{site.data.keyword.sescashort}}에서는 캐시에 저장된 세션의 복제본을 제공합니다. 따라서 등화 관제 또는 가동 중단의 상황에서도 클라이언트 애플리케이션은 캐시의 세션에 계속 액세스할 수 있습니다. 이 서비스는 웹 및 모바일 애플리케이션에 대한 세션 캐싱 시나리오를 지원합니다. |
 |선택사항 | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | 이 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. 로컬 기본 오퍼링에는 1.6TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 전용 환경 내에서 IBM {{site.data.keyword.iot_full}}의 개인용 버전 실행을 허용하는 초기 환경이 포함됩니다. |
@@ -209,7 +210,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 <li>사용자 네트워크의 7개 IP 주소를 제공합니다. 내부 {{site.data.keyword.Bluemix_notm}} 구성요소에 아웃바운드 인터넷 액세스를 허용하기 위해 보안 웹 프록시를 사용하는 경우, 연결에 필요한 신임 정보를 제공해야 합니다.
 <p>**참고**: 웹 프록시에 보안이 설정되어 있지 않으면 신임 정보를 제공할 필요가 없습니다. 또한, 일부 {{site.data.keyword.Bluemix_notm}} 로컬 고객은 웹 프록시를 사용하지 않는다는 점에 유의하십시오.</p></li>
 <li>IBM은 배치를 시작하기 전에 웹 프록시를 통해 허용되어야 하는 URL 화이트리스트를 제공합니다.<br />
-<p>**참고**: URL 화이트리스트에는 twitter.com, facebook.com 및 youtube.com 등의 웹 사이트가 포합됩니다. 이 URL이 허용되지 않으면 {{site.data.keyword.Bluemix_notm}}의 특정 서비스 및 영역을 사용할 수 없습니다.</p>
+<p>**참고**: 기존 또는 새 애플리케이션에서 필요한 리소스에 액세스할 수 있는지 확인하려면 리소스를 빌드팩과 번들화하는 추가 단계를 수행하거나 보안 팀과 함께 작업하여 애플리케이션을 실행하는 데 필요한 URL을 화이트리스트로 작성해야 합니다. node.js 빌드팩과 Liberty for Java 빌드팩 관련 작업에 대한 자세한 정보는 <a href="../runtimes/nodejs/offlineMode.html">node.js의 오프라인 모드</a>와 <a href="../runtimes/liberty/offlineMode.html">Liberty for Java의 오프라인 모드</a>의 내용을 참조하십시오. </p>
 </li>
 <li>배치에 필요한 도메인 이름 및 사용할 ID를 지정합니다. 로컬 인스턴스를 설정할 때 특별히 정의된 두 개의 도메인이 나타나고, 이 두 개 도메인의 접두부를 선택합니다. 예를 들어, <code>*mycompany*.bluemix.net</code> 및 <code>*mycompany*.mybluemix.net</code>에 대한 접두부를 선택합니다. 그런 다음, 전체 도메인을 선택하여 사용자 정의 도메인을 작성할 수도 있습니다.
 <p>사용자 정의 도메인은 필요한 만큼 선택할 수 있습니다. 그러나, 사용자 정의 도메인의 인증은 사용자 자신이 책임져야 합니다. 사용자 정의 도메인 작성에 대한 자세한 정보는 <a href="../manageapps/updapps.html#domain">사용자 정의 도메인 작성 및 사용</a>을 참조하십시오.</p></li>
@@ -347,7 +348,9 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 {: #localinfra}
 
 {{site.data.keyword.Bluemix_notm}} 로컬에 대해 사용자는
-로컬 인스턴스를 호스팅하기 위한 물리적 보안 및 인프라를 소유합니다. IBM은 {{site.data.keyword.Bluemix_notm}} 로컬을 설정하기 위한 다음과 같은 최소 요구사항을 설정합니다.
+로컬 인스턴스를 호스팅하기 위한 물리적 보안 및 인프라를 소유합니다. 
+
+IBM은 {{site.data.keyword.Bluemix_notm}} 로컬을 설정하기 위한 다음과 같은 최소 요구사항을 설정합니다.
 
 ### 하드웨어
 
@@ -360,8 +363,8 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 및 리소스를 다중 가상 머신으로
 추상화하는 가상화 계층입니다. ESXi당 최소 실제 코어 수가 8인 조건에 대해 다음 리소스 총계를 충족하는 임의 조합을 선택하십시오. 다음 사양은 {{site.data.keyword.Bluemix_notm}} 코어 런타임 전용입니다.
 <ul>
-<li>각각 2.0GHz 이상의 48개 실제 코어</li>
-<li>756GB의 실제 RAM</li>
+<li>각각 2.0GHz 이상인 32개의 실제 코어</li>
+<li>512GB의 실제 RAM</li>
 <li>7.5TB의 총 데이터 저장소 크기
 <ul>
 <li>{{site.data.keyword.Bluemix_notm}}를 보유할 7TB의 데이터 저장소</li>
@@ -373,8 +376,8 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 </dd>
 <dt>**고가용성**</dt>
 <dd>
-단일 노드 장애를 지원하려면 n+1 ESXi가 있어야 합니다. 예를 들어, 각각 16x 코어를 의미하는 세 개의 ESXi가 사용되는 경우, 네 번째가 필요합니다.
-<p><strong>참고:</strong> 고객 VMware 관리자는 클러스터에서 고가용성 장애 복구를 엄격하게 적용하여 리소스를 보장하기로 결정할 수 있습니다.</p>
+단일 노드 장애를 지원하려면 n+1 ESXi가 있어야 합니다. 예를 들어, 두 개의 16x 코어와 256GB ESXi 서버를 사용하여 32개 코어와 512GB의 메모리가 충족된 경우 단일 노드의 전체 장애를 지원하려면 이와 같은 서버가 세 개 필요합니다.
+<p><strong>참고:</strong> 고객의 VMware 관리자는 클러스터에서 고가용성 장애 복구를 엄격하게 적용하여 리소스를 보장하기로 결정할 수 있습니다. 고가용성 장애 복구 없이 진행하도록 선택하는 경우 최소 32개 코어와 512GB의 리소스 요구사항을 충족할 수 있습니다. </p>
 </dd>
 <dt>**네트워크**</dt>
 <dd>
@@ -463,9 +466,9 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 
 ### DEA(Droplet Execution Agent) 풀 늘리기
 각 DEA는 다음으로 구성됩니다.
-- 16 - 32GB의 RAM
-- 2x - 4x vCPU
-- 150 - 300GB의 스토리지
+- 16GB 또는 32GB의 RAM
+- 2x 또는 4x vCPU
+- 150GB 또는 300GB의 스토리지
 
 예를 들어, ESXi 호스트 크기가 256GB의 메모리와 16x 코어인 경우,
 8개의 DEA가 추가됩니다. ESXi 호스트 크기가 64GB의 메모리와 8x 코어인 경우, 두 개의 ESXi와 네 개의 DEA를

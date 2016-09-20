@@ -14,7 +14,7 @@ copyright:
 
 # Node.js for device developers
 {: #nodejs}
-Last updated: 02 Aug 2016
+Last updated: 14 September 2016
 {: .last-updated}
 
 You can adapt the client libraries and samples in Node.js to build and develop device code that interacts with your organization on {{site.data.keyword.iot_full}}.
@@ -119,13 +119,12 @@ The device client automatically tries to reconnect when it loses connection. Whe
 ## Logging
 {: #logging}
 
-By default, only log events of type ```warn``` are recorded. If you want to increase or decrease the  logging level, use the `log.setLevel` function. The following log levels are supported:
+By default, only log events of type *warn* are recorded. If you want to increase or decrease the logging level, use the log.setLevel function. The following log levels are supported:
 - trace
 - debug
 - info
 - warn
 - error
-
 
 ```
 	var iotf = require("ibmiotf");

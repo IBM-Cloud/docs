@@ -57,7 +57,6 @@ text between these comment tags.-->
 [U](#glossu)
 [V](#glossv)
 [W](#glossw)
-[X](#glossx)
 
 <!--end letter link tags-->
 
@@ -89,20 +88,22 @@ ressource. Voir aussi [domaine personnalisé](#x5728384), [domaine](#x2021210),
 [hôte](#x2002243), [route](#x2037338),
 [sous-domaine](#x2040080).
 
-### Advanced Encryption Standard (AES)
-{: #x2897510}
-
-Technique de chiffrement des données fondée sur la norme DES (Data Encryption Standard), qui l'améliore et la remplace officiellement.
-
 ### AES
 {: #x2897512}
 
-Voir [norme de chiffrement avancée (AES)](#x2897510).
+Voir [norme de chiffrement avancée](#x2897510).
 
 ### agence interactive
 {: #x2214674}
 
 Sous-traitant privilégié par IBM pour aider l'organisation dans la conception de site Web, le développement de contenu et la génération d'une bannière.
+
+### agent de liaison avec les agences
+{: #x2214318}
+
+Personne facilitant les relations d'IBM avec ses agences interactives dans le monde et chargée de gérer le portefeuille de projets interactifs
+au niveau mondial, notamment la prévision des dépenses et le suivi des bons de commande IBM concernés par rapport aux prévisions, l'optimisation
+des affectations des agences, des charges de travail et des performances à travers l'entreprise.
 
 ### alias
 {: #x2000123}
@@ -115,7 +116,7 @@ fonctions de suivi et de planification. Dans le cas des utilisateurs possédant 
 
 IBM entretient des relations au niveau développement et marketing (alliances) avec les développeurs de logiciels de pointe du secteur, ce qui lui permet
 de proposer aux clients des solutions complètes en harmonisant les technologies IBM avec les applications des éditeurs de logiciels indépendants et
-de leurs logiciels.
+leurs logiciels fonctionnels.
 
 ### alliance stratégique
 {: #x2214931}
@@ -138,21 +139,21 @@ ou toutes à la fois, si nécessaire.
 
 Voir [Interface de programme d'application](#x2000186).
 
-### app
-{: #x4281528}
-
-Application Web ou pour périphérique mobile. Voir aussi [application mobile](#x4258535),
-[application Web](#x2116500).
-
-### appels API légers
+### appel API léger
 {: #x7690463}
 
 Opération client qui lit des données. Les appels API légers utilisent moins de ressources que les appels API lourds, car ils exécutent une seule fonction. Voir aussi [appel API lourd](#x7690468).
 
-### appels API lourds
+### appel API lourd
 {: #x7690468}
 
 Opération client qui écrit, supprime ou insère des données. Les appels API lourds consomment davantage de ressources que les appels API légers, car ils affectent les données. Voir aussi [appel API léger](#x7690463).
+
+### appli
+{: #x4281528}
+
+Application Web ou pour périphérique mobile. Voir aussi [application mobile](#x4258535),
+[application Web](#x2116500).
 
 ### application mobile
 {: #x7636517}
@@ -254,24 +255,12 @@ Sous-ensemble de la bibliothèque de pré-production des fonctionnalités de tes
 
 Voir [gestionnaire des informations métier](#x2214378).
 
-### bifurcation
-{: #x2023301}
-
-- Dans Git, copie divergente d'un référentiel qui peut être modifié sans affecter ni devoir être synchronisé avec l'original.
-- Créer un projet et un référentiel Git qui contiennent l'intégralité du contenu du référentiel et de l'historique d'un autre projet.
-
 ### Bluemix
 {: #x7301758}
 
 Plateforme à norme ouverte reposant sur le cloud qui permet de construire, de gérer et d'exécuter des applications de tout type, comme des
 périphériques Web, mobiles, de mégadonnées et intelligents. Ses capacités incluent Java, développement de back-end mobile, surveillance d'applications, ainsi que des
 fonctions de partenaires écosystème et open source &mdash; tous fournis en tant que service dans le cloud.
-
-### bout en bout
-{: #x2214553}
-
-Principe de conception de transformation métier basée sur une approche en boucle fermée pour la définition des processus,
-des stratégies/règles, des structures de données, des systèmes informatiques et des systèmes de gestion.
 
 ### BPE
 {: #x2149376}
@@ -281,8 +270,7 @@ Voir [gestionnaire de processus métier](#x2214384).
 ### branche
 {: #x2050278}
 
-- Créer un flux pour un développement parallèle ou isolé.
-- Flux pour un développement parallèle ou isolé.
+Flux pour un développement parallèle ou isolé.
 
 ### BT
 {: #x2214400}
@@ -314,11 +302,6 @@ Voir [business transformation operations process](#x2214425).
 
 Version BTOP (Business transformation operations process) allégée destinée à certains projets ne nécessitant pas le processus BTOP
 complet.
-
-### buildpack
-{: #x7233925}
-
-Collection de scripts permettant de préparer le code à exécuter sur Bluemix. Les packs de construction examinent les applications déployées, puis téléchargent et configurent les applications dépendantes.
 
 ### business design assurance (BDA)
 {: #x2214441}
@@ -536,6 +519,13 @@ et représentation graphique des processus.
 
 Processus d'authentification par lequel un utilisateur peut accéder à plusieurs systèmes ou applications en saisissant un seul ID utilisateur et mot de passe.
 
+### constituer
+{: #x2067189a}
+
+- Action de déployer une application, un service ou une instance à un emplacement prédéfini en vue de l'exécution ou du test avant le déploiement
+dans un environnement de production. Voir aussi [déploiement](#x2104544).
+- Action de marquer un ensemble de modifications de fichier comme étant prêt pour la validation Git.
+
 ### conteneur
 {: #x2010901}
 
@@ -583,6 +573,12 @@ Voir [point de contrôle de décision](#x2214510).
 
 Voir [agent DEA (Droplet Execution Agent)](#x7470348).
 
+### de bout en bout
+{: #x2214553}
+
+Principe de conception de transformation métier basée sur une approche en boucle fermée pour la définition des processus,
+des stratégies/règles, des structures de données, des systèmes informatiques et des systèmes de gestion.
+
 ### demande de signature de certificat (CSR)
 {: #x3530521}
 
@@ -609,7 +605,7 @@ maintenance et les coûts d'exécution pendant la durée de vie prévue du progr
 {: #x2104544}
 
 - Processus qui extrait la sortie d'une génération, prépare la sortie avec des propriétés de configuration, et installe le package à un emplacement
-prédéfini pour qu'il puisse être testé ou exécuté. Voir aussi [constituer](#x2067189).
+prédéfini pour qu'il puisse être testé ou exécuté. Voir aussi [constituer](#x2067189a).
 - Processus consistant à déplacer une application (telle qu'un rapport ou un modèle) vers une instance différente. Par exemple, les rapports sont souvent créés dans un environnement de test, puis déployés dans un environnement de production. Lorsqu'une application est déployée, elle est exportée, transférée, puis importée.
 
 ### déploiement automatique
@@ -621,7 +617,7 @@ emplacement pour que des utilisateurs puissent l'exécuter ou la tester.
 emplacement pour que des utilisateurs puissent l'exécuter ou la tester.
 
 
-### déploiement bleu-vert
+### déploiement Blue-Green
 {: #x7807335}
 
 Technique de déploiement qui permet la distribution continue et réduit le temps d'indisponibilité en exécutant deux environnements de production
@@ -629,7 +625,7 @@ identiques appelés Blue et Green. Alors que l'un des environnements (par exempl
 peut être utilisé pour le test final et le déploiement. Une fois l'application déployée dans Green, Green devient l'environnement de production et Blue
 devient inactif. Voir aussi [déploiement red-black](#x8439181).
 
-### déploiement rouge-noir
+### déploiement red-black
 {: #x8439181}
 
 Technique de déploiement qui permet une distribution continue en activant le test, le développement et le déploiement synchronisés. Au
@@ -655,6 +651,11 @@ développées et distribuées.
 
 Méthodologie de développement logiciel qui met l'accent sur la collaboration
 et la qualité pour produire des incréments de produit complets à des intervalles réguliers, appelés itérations ou sprints.
+
+### dévier
+{: #x2023301a}
+
+Créer un projet et un référentiel Git qui contiennent l'intégralité du contenu du référentiel et de l'historique d'un autre projet.
 
 ### DevOps
 {: #x5784896}
@@ -690,7 +691,7 @@ une partie de la route. Il peut s'agir d'un domaine partagé, d'un sous-domaine 
 [adresse URL](#x2042491).
 
 
-### donnée d'identification
+### données d'identification
 {: #x2018813}
 
 Informations acquises pendant l'authentification et qui décrivent un utilisateur, des associations de groupe ou d'autres attributs d'identité en rapport avec la sécurité. Elles permettent d'exécuter des services tels que l'autorisation, l'audit ou la délégation. Par exemple, un ID utilisateur et un mot de passe sont des données d'identification qui permettent l'accès aux ressources réseau et système.
@@ -756,7 +757,7 @@ d'une tâche de développement (par exemple une tâche, un rapport d'anomalie ou
 Méthode de réduction des patterns répétitifs en texte chiffré par le biais d'une opération OU exclusif sur chaque bloc de données de 8
 octets avec le bloc de 8 octets chiffré précédemment, avant son chiffrement.
 
-### ensemble de changements
+### ensemble d'artefacts modifiés
 {: #x2255031}
 
 Groupe de modifications liées apportées à des artefacts dans un espace de travail ou dans un flux.
@@ -780,15 +781,15 @@ Jeu d'outils de développement, tels qu'éditeurs de code source, compilateur,
 et débogueurs qui sont accessibles à partir d'une même interface utilisateur.
 
 ### environnement d'exécution
-{: #x2391929}
-
-Ensemble des ressources utilisées pour exécuter l'application. Voir aussi [module de démarrage](#x7470511).
-
-### environnement d'exécution
 {: #x2037566}
 
 Ensemble de ressources utilisées pour exécuter un programme ou un processus.
 
+
+### environnement d'exécution
+{: #x2391929}
+
+Ensemble des ressources utilisées pour exécuter l'application. Voir aussi [module de démarrage](#x7470511).
 
 ### EOL
 {: #x2214575}
@@ -800,7 +801,7 @@ Voir [fin de vie](#x2214573).
 
 Dans le contexte du développement agile, élément de travail qui définit un cas d'utilisation de grande taille avec un volume de travail important ou
 inconnu,
-souvent exécuté en plusieurs sprints. Les épiques peuvent être scindés en cas d'utilisation.
+souvent exécuté en plusieurs sprints. Les épopées peuvent être scindées en cas d'utilisation.
 
 ### équipe de développement de projet (PDT)
 {: #x2422165}
@@ -856,22 +857,8 @@ Objet de référentiel qui inclut un ou plusieurs composants. Les espaces de tra
 ### étape
 {: #x2067189}
 
-- Groupe de travaux dans un contexte d'exécution partagé comportant une entrée source, des variables d'environnement et un ordre défini
+Groupe de travaux dans un contexte d'exécution partagé comportant une entrée source, des variables d'environnement et un ordre défini
 d'exécution.
-- Action de déployer une application, un service ou une instance à un emplacement prédéfini en vue de l'exécution ou du test avant le déploiement
-dans un environnement de production. Voir aussi [déploiement](#x2104544).
-- Action de marquer un ensemble de modifications de fichier comme étant prêt pour la validation Git.
-
-### exécution automatique
-{: #x7344035}
-
-Voir [saisie semi-automatique de code](#x7344030).
-
-
-### exécution de code
-{: #x7344030}
-
-Fonction de nombreux environnements de développement et éditeurs de texte qui complètent un contenu de manière prédicative (mots, expressions, balises, etc.) pendant la saisie par l'utilisateur.
 
 ## F
 {: #glossf}
@@ -904,6 +891,11 @@ Voir [fichier d'archive Web](#x2116506).
 {: #x2214573}
 
 Désigne la fin de la vie d'une application. L'équipe de gestion des opérations coordonne les activités visant à retirer une application en fin de vie.
+
+### fourche
+{: #x2023301}
+
+Dans Git, copie divergente d'un référentiel qui peut être modifié sans affecter ni devoir être synchronisé avec l'original.
 
 ### FPP
 {: #x2214587}
@@ -1056,7 +1048,7 @@ Voir [infrastructure sous forme de service (IaaS)](#x4585332).
 
 Voir [contrôles d'audit interne et métier](#x4971252).
 
-### ID d'application
+### ID d'appli
 {: #x7909906}
 
 Identificateur global unique qui est affecté à une application mobile Bluemix. Voir aussi [identificateur global unique](#x2390455).
@@ -1270,6 +1262,13 @@ Valeur utilisée par le consommateur pour obtenir l'accès aux ressources proté
 
 Programme de prise de décision qui peut être traité par un moteur de règles pour fournir une décision, sur la base de paramètres d'entrée et de sortie. La logique de prise de décision est mise en oeuvre sous forme de règles, de tables de décision et de flux d'exécution de règles.
 
+### journal des éléments en attente
+{: #x2315215}
+
+Dans le contexte du développement agile, liste de fonctions ou de tâches techniques nécessaires pour un projet ou une édition, que l'équipe de
+développement
+évalue et pour lesquelles il définit les priorités.
+
 ### JSON
 {: #x4267096}
 
@@ -1285,12 +1284,10 @@ Voir [JavaScript Object Notation (JSON)](#x3292165).
 Voir [LDAP (Lightweight Directory Access
 Protocol)](#x2028538).
 
-### liaison agences
-{: #x2214318}
+### lecture majoritaire
+{: #x7470468}
 
-Personne facilitant les relations d'IBM avec ses agences interactives dans le monde et chargée de gérer le portefeuille de projets interactifs
-au niveau mondial, notamment la prévision des dépenses et le suivi des bons de commande IBM concernés par rapport aux prévisions, l'optimisation
-des affectations des agences, des charges de travail et des performances à travers l'entreprise.
+S'applique aux données modifiées de manière dynamique.
 
 ### lier
 {: #x2000361}
@@ -1376,14 +1373,14 @@ Mode d'exécution de requête Java qui fournit l'accès natif aux sources de don
 
 
 ### modèle
-{: #x2245601}
-
-Représentation physique ou métier de la structure de données provenant d'une ou de plusieurs sources de données. Un modèle décrit des objets de données, la structure, le regroupement ainsi que les relations et la sécurité. Dans Cognos BI, un modèle est créé et mis à jour dans Framework Manager. Le modèle ou un sous-ensemble de celui-ci doit être publié sur le serveur Cognos sous forme de package que les utilisateurs pourront utiliser pour créer et exécuter des rapports.
-
-### modèle
 {: #x2041200}
 
 Structure prédéfinie associée à un artefact.
+
+### modèle
+{: #x2245601}
+
+Représentation physique ou métier de la structure de données provenant d'une ou de plusieurs sources de données. Un modèle décrit des objets de données, la structure, le regroupement ainsi que les relations et la sécurité. Dans Cognos BI, un modèle est créé et mis à jour dans Framework Manager. Le modèle ou un sous-ensemble de celui-ci doit être publié sur le serveur Cognos sous forme de package que les utilisateurs pourront utiliser pour créer et exécuter des rapports.
 
 ### mode production
 {: #x6070975}
@@ -1404,6 +1401,11 @@ Modèle incluant des services prédéfinis et du code d'application configuré a
 Adresse d'une interface de programme d'application ou d'un service dans un environnement. Une interface de programme d'application expose
 un noeud final et appelle en même temps les noeuds finaux pour d'autres services.
 
+### norme de chiffrement avancée
+{: #x2897510}
+
+Technique de chiffrement des données fondée sur la norme DES (Data Encryption Standard), qui l'améliore et la remplace officiellement.
+
 ### notification push
 {: #x5599582}
 
@@ -1412,12 +1414,6 @@ Alerte signalant une modification ou une mise à jour au niveau d'une icône d'a
 
 ## O
 {: #glosso}
-
-### OAuth
-{: #x6013335}
-
-Protocole d'autorisation basé sur HTTP qui permet à des applications d'accéder à une ressource protégée pour le compte du propriétaire de la
-ressource, en créant une interaction d'approbation entre le propriétaire de la ressource, le client et le serveur de la ressource.
 
 ### OMT
 {: #x2214712}
@@ -1436,16 +1432,16 @@ Score dérivé des évaluations d'application par les utilisateurs à partir des
 
 
 ### organisation
-{: #x7470494}
-
-Voir [organisation](#x2032585).
-
-### organisation
 {: #x2032585}
 
 Méthodologie de regroupement pour les utilisateurs dans Bluemix. Les organisations permettent de gérer les quotas. Les utilisateurs d'une
 organisation partagent les quotas d'instances de service et de mémoire. Voir aussi [domaine](#x2021210), [espace](#x2039442).
 
+
+### organisation
+{: #x7470494}
+
+Voir [organisation](#x2032585).
 
 ### outil de gestion de la transformation métier (BTMT)
 {: #x2214418}
@@ -1463,6 +1459,11 @@ gestion d'un actif une fois déployé, ou demande de financement informatique (I
 {: #x2029790}
 
 Voir [plateforme sous forme de service](#x2029786).
+
+### pack de construction
+{: #x7233925}
+
+Collection de scripts permettant de préparer le code à exécuter sur Bluemix. Les packs de construction examinent les applications déployées, puis téléchargent et configurent les applications dépendantes.
 
 ### partage de fichiers
 {: #x2022902}
@@ -1563,7 +1564,7 @@ Contrôle mesurable et auditable des processus, données, applications et infras
 pour promouvoir les objectifs de l'entreprise ;
 par exemple, normes de données client et financières.
 
-### portabilité cloud
+### portabilité du cloud
 {: #x4585297}
 
 Possibilité de déplacer des applications et des services entre des environnements de Cloud Computing publics ou privés ou depuis des
@@ -1643,6 +1644,12 @@ initial (ce plan est généralement élaboré par le responsable du projet de so
 le responsable technique du projet). Cette proposition peut contenir une documentation supplémentaire issue d'autres sources, comme le juge utile le
 PDTL.
 
+### protocole d'autorisation OAuth
+{: #x6013335}
+
+Protocole d'autorisation basé sur HTTP qui permet à des applications d'accéder à une ressource protégée pour le compte du propriétaire de la
+ressource, en créant une interaction d'approbation entre le propriétaire de la ressource, le client et le serveur de la ressource.
+
 ### protocole d'entente (DOU)
 {: #x2214542}
 
@@ -1670,6 +1677,11 @@ client qui la demande.
 ## R
 {: #glossr}
 
+### ramifier
+{: #x2050278a}
+
+Créer un flux pour un développement parallèle ou isolé.
+
 ### rapport
 {: #x2036830}
 
@@ -1681,14 +1693,14 @@ Ensemble de données préparé pour communiquer des informations métier.
 Type de sortie de rapport géré hautement interactif et facile à utiliser, utilisable hors ligne par les utilisateurs. Les rapports actifs sont créés pour des utilisateurs professionnels, afin de leur permettre d'explorer leurs données et de dériver des données approfondies supplémentaires.
 
 ### référentiel
-{: #x7639721}
-
-Voir [référentiel](#x2036865).
-
-### référentiel
 {: #x2036865}
 
 Emplacement de stockage de persistance pour des données et d'autres ressources d'application.
+
+### référentiel
+{: #x7639721}
+
+Voir [référentiel](#x2036865).
 
 ### référentiel d'images privé
 {: #x8439215}
@@ -1717,13 +1729,6 @@ Ensemble d'instructions conditionnelles permettant à des systèmes informatique
 {: #x2266457}
 
 Représentation de la manière dont les pratiques et les stratégies métier s'appliquent à une activité métier.
-
-### reliquat
-{: #x2315215}
-
-Dans le contexte du développement agile, liste de fonctions ou de tâches techniques nécessaires pour un projet ou une édition, que l'équipe de
-développement
-évalue et pour lesquelles il définit les priorités.
 
 ### représentant de l'équipe de gestion de capacité IGA
 {: #x2214640}
@@ -1879,7 +1884,18 @@ jeux de règles contenus dans RuleApps.
 
 Voir [logiciel sous forme de service (SaaS)](#x4585386).
 
-### sans bornes
+### saisie semi-automatique
+{: #x7344035}
+
+Voir [saisie semi-automatique de code](#x7344030).
+
+
+### saisie semi-automatique du code
+{: #x7344030}
+
+Fonction de nombreux environnements de développement et éditeurs de texte qui complètent un contenu de manière prédicative (mots, expressions, balises, etc.) pendant la saisie par l'utilisateur.
+
+### sans frontières
 {: #x8439189}
 
 Qui appartient à une plateforme de développement ouverte, non propriétaire, incluant des modèles de déploiement de cloud public,
@@ -1900,19 +1916,19 @@ pour définir les interactions des utilisateurs avec les systèmes.
 Voir [gestion de contrôle de source](#x3579285).
 
 ### scrum
-{: #x3266541}
-
-Réunion informelle quotidienne des parties prenantes dans un projet de développement agile. Les participants doivent comprendre un scrum maître, le propriétaire du produit et l'équipe, et peuvent inclure le directeur de produit et d'autres parties prenantes.
-
-### scrum
 {: #x7474016}
 
 Méthode de programmation logicielle agile qui utilise des équipes inter fonctionnelles de petites tailles qui s'auto-organisent, ainsi que des pratiques incrémentielles itératives.
 
-### secousse
+### scrum
+{: #x3266541}
+
+Réunion informelle quotidienne des parties prenantes dans un projet de développement agile. Les participants doivent comprendre un scrum maître, le propriétaire du produit et l'équipe, et peuvent inclure le directeur de produit et d'autres parties prenantes.
+
+### secouage
 {: #x5905152}
 
-Pour provoquer un mouvement, de sorte que l'accéléromètre d'un périphérique détecte ce mouvement et démarre un événement. Par exemple, les testeurs et les clients peuvent initier un rapport d'incident concernant une application en secouant leur périphérique.
+Provoquer un mouvement afin que l'accéléromètre d'un périphérique détecte ce mouvement et démarre un événement. Par exemple, les testeurs et les clients peuvent initier un rapport d'incident concernant une application en secouant leur périphérique.
 
 ### section
 {: #x2094743}
@@ -1924,11 +1940,6 @@ Section d'un progiciel qui définit une action spécifique à entreprendre sur l
 
 Protocole de sécurité garantissant la confidentialité de la communication. SSL permet aux application client/serveur de communiquer
 de manière à éviter l'écoute électronique, la contrefaçon et la falsification de messages. Voir aussi [autorité de certification](#x2016383).
-
-### semi-fixe
-{: #x7470468}
-
-S'applique aux données modifiées de manière dynamique.
 
 ### serveur virtuel
 {: #x2455638}
@@ -2244,5 +2255,3 @@ Voir [Worldwide Project Management Method](#x2215004).
 Voir [assurance qualité mondiale](#x2215010).
 
 
-## X
-{: #glossx}

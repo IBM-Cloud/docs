@@ -2,63 +2,63 @@
 
 # Iniciación a {{site.data.keyword.blockstorageshort}} (Beta)
 
-*Última actualización: 15 de julio de 2016*
+Última actualización: 29 de julio de 2016
 {: .last-updated}
 
-{{site.data.keyword.blockstoragefull}} proporciona almacenamiento a nivel de bloque para cargas de trabajo con gran intensidad de transacciones y tiempos de ejecución que necesitan almacenamiento persistente.
+{{site.data.keyword.blockstoragefull}} proporciona almacenamiento a nivel de bloque para las cargas de trabajo con gran intensidad de transacciones y tiempos de ejecución que necesitan almacenamiento persistente. Puede utilizar el servicio {{site.data.keyword.blockstorageshort}} para gestionar los ciclos de vida del volumen, adjuntar los volúmenes a sus servidores virtuales de IBM y crear instantáneas de volúmenes de nivel de bloque. 
 
-Puede utilizar IBM {{site.data.keyword.blockstorageshort}} for {{site.data.keyword.Bluemix_notm}} para crear volúmenes de {{site.data.keyword.blockstorageshort}} que se pueden adjuntar a servidores virtuales. Los datos en los volúmenes de almacenamiento en bloque persiste más allá del ciclo de vida de los servidores virtuales. IBM {{site.data.keyword.blockstorageshort}} utiliza OpenStack Cinder para gestionar el ciclo de vida del volumen.
+Antes de empezar, revise la información siguiente.
 
-Los volúmenes de {{site.data.keyword.blockstorageshort}} se crean mediante una instancia del servicio IBM {{site.data.keyword.blockstorageshort}}. Puede adjuntar los volúmenes a un servidor virtual bajo un dispositivo específico que proporcione o el sistema puede seleccionar automáticamente un nombre de dispositivo disponible. El servidor virtual realiza sus operaciones de E/S directamente con el dispositivo especificado independientemente del servicio {{site.data.keyword.blockstorageshort}}.
+* Solo se da soporte al servicio {{site.data.keyword.blockstorageshort}} en un contexto no enlazado.  
+* Deberá tener una {{site.data.keyword.virtualmachinesshort}} de IBM creada para ajuntar los volúmenes de almacenamiento en bloque. Para obtener más información sobre el uso de volúmenes de almacenamiento en bloque con {{site.data.keyword.virtualmachinesshort}} de IBM, consulte [Volúmenes de almacenamiento en bloque y servidores virtuales de IBM](../../virtualmachines/vm_create.html#storage_BS). 
 
-También puede crear instantáneas de volúmenes a nivel de bloque. El servicio {{site.data.keyword.blockstorageshort}} no permite la creación de instantáneas mientas el volumen esté adjunto, por lo que las instantáneas resultantes serán coherentes a bloqueo. 
+Complete estos pasos para empezar a utilizar {{site.data.keyword.blockstorageshort}}:
 
+1. Crear un volumen. 
+   
+   a. Abra el servicio {{site.data.keyword.blockstorageshort}}.
 
-## Cómo crear una instancia del servicio {{site.data.keyword.blockstorageshort}}
-Para crear una instancia del servicio {{site.data.keyword.blockstorageshort}} en su espacio, siga estos pasos:
+   b. Pulse en **Crear** para iniciar el diálogo **Crear volumen**.
+
+   c.	Proporcione el tamaño de volumen que necesita. No se aceptan números decimales. El tamaño está limitado por la cuota asignada a su organización.
+   
+   d.	Especifique un nombre. El nombre es solo para fines de visualización.
+   
+   e.	Opcionalmente, proporcione una descripción más detallada del volumen. 
+   
+   f.	Pulse en **Crear** para enviar información y cerrar el diálogo. 
+
+  La creación de un volumen puede tardar unos minutos.
+
+2. Adjunte un volumen a un servidor virtual. 
+
+   a. Abra el servicio {{site.data.keyword.blockstorageshort}}.
+   
+   b. Seleccione un volumen de la lista de volúmenes disponibles.
+   
+   c.	Pulse **Adjuntar**.
+   
+   d.	En el diálogo Adjuntar, seleccione una instancia de un servidor virtual de la lista desplegable.  
+   
+   e.	Opcionalmente, especifique el dispositivo que va a utilizar para adjuntar este volumen. Si no especifica ningún dispositivo, el sistema automáticamente selecciona el primer dispositivo disponible en el servidor virtual.
+   
+   f.	Pulse **Adjuntar** para enviar la información y cerrar el diálogo. 
+   
+   El volumen se lista en la tabla de volúmenes adjuntos con la información sobre la instancia de servidor virtual. Ahora el servidor virtual puede utilizar el dispositivo para persistir datos. 
  
-1.	Vaya al separador **Catálogo** de {{site.data.keyword.Bluemix_notm}} y escriba **{{site.data.keyword.blockstorageshort}}** en el recuadro de búsqueda, o vaya a **Servicios** y seleccione **Almacenamiento**. Pulse el servicio **{{site.data.keyword.blockstorageshort}}**. 
-2.	Especifique un espacio y un nombre de servicio. Seleccione el plan y pulse **Crear**.
- 	
-Sólo se da soporte al servicio {{site.data.keyword.blockstorageshort}} en un contexto no enlazado. 
+Qué hacer a continuación
 
-Se crea una instancia del servicio {{site.data.keyword.blockstorageshort}} en su espacio. Puede abrir la IU de {{site.data.keyword.blockstorageshort}} para gestionar volúmenes en cualquier momento pulsando el icono de la instancia de servicio.
-
-
-
-## Uso de la interfaz de usuario (IU) de {{site.data.keyword.blockstorageshort}} {: #using-block-storage-ui}
-La interfaz gráfica de usuario de {{site.data.keyword.blockstorageshort}} proporciona una visión general de nivel superior de sus volúmenes de almacenamiento, instantáneas y el consumo de almacenamiento total de los volúmenes e instancias en la parte superior de la ventana. 
-
-La cabecera incluye la fecha y hora de la última renovación de la IU. Puede utilizar el icono de renovar (un icono con una flecha circular) para renovar la IU manualmente, si es necesario. 
-
-Utilice la barra de búsqueda para buscar volúmenes basados en la serie que especifique. Las tablas se filtran a medida que escribe para mostrar sólo les volúmenes que coinciden con la serie de búsqueda especificada.
-
-Debajo de la visión general hay dos separadores para volúmenes e instantáneas. El separador de volúmenes está seleccionado de forma predeterminada. Las tablas de este separador listan información detallada sobre los volúmenes disponibles y adjuntos. Cada fila de una tabla muestra las propiedades más importantes de un volumen. Al expandir una fila, se muestran más propiedades. Los volúmenes adjuntos también muestran la instancia de servidor virtual y el dispositivo al que se ha adjuntado el volumen. 
-
-El separador de instancias muestra una tabla de instantáneas con propiedades y comportamiento similares. 
-
-Utilice el icono Crear de encima de las tablas para crear un nuevo volumen o manipular los existentes. Si va a crear un volumen a partir de una instantánea, también puede utilizar la lista desplegable Acciones.
-
-
-
-
-## Cómo adjuntar a un volumen de un servidor virtual {: #attaching-detaching-volume}
-Los volúmenes se adjuntan y desconectan de servidores virtuales como dispositivos con un nombre de dispositivo específico. Para que un servidor virtual pueda hacer que los datos de un volumen sean persistentes, debe adjuntar el volumen al servidor virtual.
-
-Para adjuntar un volumen, siga estos pasos: 
-
-1.	Seleccione un volumen de la lista de volúmenes disponibles.
-2.	Pulse **Adjuntar**.
-3.	En el diálogo Adjuntar, seleccione una instancia de un servidor virtual de la lista desplegable. 
-4.	Opcionalmente, especifique el dispositivo que se debe utilizar para adjuntar este volumen. Si no especifica ningún dispositivo, el sistema automáticamente selecciona el primer dispositivo disponible en el servidor virtual.
-5.	Pulse **Adjuntar** para enviar la información y cerrar el diálogo.
-
-El volumen se lista en la tabla de volúmenes adjuntos con la información sobre la instancia de servidor virtual.
-Ahora el servidor virtual puede utilizar el dispositivo para persistir datos. 
-
+Prepare el volumen para utilizarlo. Para más información, consulte [Cómo preparar volúmenes](../BlockStorage/blockstorage_preparingvolume.html).
 
 # Enlaces relacionados
 {: #rellinks}
+
+## Tutoriales y ejemplos
+{:id="samples"}
+
+* [Cómo utilizar IBM Block Storage for Bluemix con IBM Virtual Servers](https://developer.ibm.com/bluemix/2016/02/24/use-block-storage-for-bluemix-with-virtual-servers/){: new_window}
+* [Cómo empezar con IBM Block Storage for Bluemix](https://developer.ibm.com/bluemix/2016/02/15/getting-started-with-block-storage/){: new_window}
+* [Demo de IBM Block Storage for Bluemix](https://www.youtube.com/watch?v=3gCIHYKU1rE&list=PLzpeuWUENMK2d3L5qCITo2GQEt-7r0oqm&index=45){: new_window}
 
 ## Referencia de API
 {: #api}

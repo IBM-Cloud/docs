@@ -1,0 +1,27 @@
+---
+
+copyright:
+ years: 2015, 2016
+
+---
+
+# Resolución de problemas
+{: #errors}
+Última actualización: 16 de agosto de 2016
+{: .last-updated}
+
+Utilice esta sección como guía para la resolución de problemas comunes de {{site.data.keyword.mobilepushshort}}.
+
+
+### Se ha producido un error de servidor interno. Póngase en contacto con el administrador. (Código de error interno: PUSHD102E)
+
+####Explicación
+
+**Explicación**: Este error puede producirse si ha creado una instancia de push antes de noviembre de 2015.  
+
+####RESPUESTA DEL USUARIO
+
+**Acción**: Para resolver este problema, suprima la instancia push y cree una nueva.
+
+**Nota**: Cuando suprima la instancia de push, sus etiquetas no se conservarán.
+

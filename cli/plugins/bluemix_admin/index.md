@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
-Last updated: 17 August 2016
+Last updated: 1 September 2016
 {: .last-updated}
 
 
@@ -53,12 +53,12 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomain of the URL for your {{site.data.keyword.Bluemix_notm}} instance. For example, <code>https://console.mycompany.bluemix.net/cli</code>.</dd>
+<dd class="pd">Subdomain of the URL for your {{site.data.keyword.Bluemix_notm}} instance. For example, <code>https://console.mycompany.bluemix.net/cli</code></dd>
 </dl>
 </li>
 <li>To install the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in, run the following command:<br/><br/>
 <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
@@ -71,7 +71,9 @@ If you need to uninstall the plug-in, you can use the following commands, then y
 
 ## Using the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
 
-You can use the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks. To see a list of commands, run the following
+You can use the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks. Special characters such as spaces, plus signs (+), and ampersands (&) are not supported when you create org names, space names, and application security groups. Try using mixed capitalization or underscores to create unique names.
+
+To see a list of commands, run the following
 command:
 
 ```
@@ -134,17 +136,23 @@ cf ba add-user <user_name> <organization>
 
 ### Search for a user
 
-You can search for a user. Enter the following command:
+You can search for a user. Enter the following command in conjunction with the optional search filter parameters as needed (name, permission, organization, and role):
 
 ```
-cf ba search-users <user_name>
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">The name of the user in {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
+<dd class="pd">The name of the user in {{site.data.keyword.Bluemix_notm}}. </dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">The permission assigned to the user. For example, superuser, basic, catalog, user, and reports. For more information about assigned user permissions, see [Permissions](../../../admin/index.html#permissions). You cannot use this parameter with the organization parameter in the same query. </dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">The organization name that the user belongs to. You cannot use this parameter with the organization parameter in the same query.</dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">The organization role assigned to the user. For example, manager, billing manager, or auditor for the organization. You must specify the organization with this parameter. For more information about roles, see [User roles](../../../admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 

@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*前次更新：2016 年 6 月 22 日*
+前次更新：2016 年 7 月 22 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。
@@ -23,7 +23,7 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}} 堅守由 IBM 在系統、網路及安全工程方面的最佳作法所驅動的安全原則，進而確保安全無虞。這些原則包括原始碼掃描、動態掃描、威脅建模以及滲透測試等作法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM Product Security Incident Response Team (PSIRT) 處理程序，來進行資安事件管理。如需詳細資料，請參閱 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 網站。
 
-「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」使用 IBM SoftLayer 的「基礎架構即服務 (IaaS)」雲端服務，並充分運用其安全架構。SoftLayer IaaS 為您的應用程式及資料提供層層重疊的多個保護層級。若為「{{site.data.keyword.Bluemix_notm}} 本端」，您藉由在公司防火牆後、自己的資料中心內管理「{{site.data.keyword.Bluemix_notm}} 本端」，而掌控實體安全並提供基礎架構。此外，{{site.data.keyword.Bluemix_notm}} 也在「平台即服務」層新增不同種類（平台、資料及應用程式）的安全功能。
+「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」使用「IBM SoftLayer 基礎架構即服務 (IaaS)」雲端服務，並充分運用其安全架構。SoftLayer IaaS 為您的應用程式及資料提供層層重疊的多個保護層級。若為「{{site.data.keyword.Bluemix_notm}} 本端」，您藉由在公司防火牆後、自己的資料中心內管理「{{site.data.keyword.Bluemix_notm}} 本端」，而掌控實體安全並提供基礎架構。此外，{{site.data.keyword.Bluemix_notm}} 也在「平台即服務」層新增不同種類（平台、資料及應用程式）的安全功能。
 
 ## {{site.data.keyword.Bluemix_notm}} 平台的安全
 {: #platform-security}
@@ -68,18 +68,18 @@ IBM 透過「轉遞」來安裝、遠端監視及管理資料中心中的「{{si
 
 <dt>資料保護</dt>
 <dd> 所有 {{site.data.keyword.Bluemix_notm}} 資料流量都會通過 IBM WebSphere® DataPower® SOA Appliance，它們提供反向 Proxy、SSL 終止及負載平衡功能。以下是允許使用的 HTTP 方法：
- * DELETE
- * GET
- * HEAD
- * OPTIONS
- * POST
- * PUT
- * TRACE
-
-HTTP 閒置逾時為 2 分鐘。
-
-下列標頭由 DataPower 移入：
-<dl>
+<ul>
+<li>DELETE</li>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+<li>POST</li>
+<li>PUT</li>
+<li>TRACE</li>
+</ul>
+HTTP 閒置逾時為 2 分鐘。</dd>
+<dd>
+下列標頭由 DataPower 移入：<dl>
 <dt>$wsis</dt>
 <dd>如果用戶端連線為安全的連線 (HTTPS)，請設為 true；否則請設為 false。</dd>
 <dt>$wssc</dt>
@@ -105,10 +105,10 @@ HTTP 閒置逾時為 2 分鐘。
 
 <dl>
 <dt>環境隔離</dt>
-<dd> 對於「{{site.data.keyword.Bluemix_notm}} 公用」，開發及正式作業環境會彼此隔離，以提高應用程式的穩定性及安全。</dd>
+<dd>對於「{{site.data.keyword.Bluemix_notm}} 公用」，開發及正式作業環境會彼此隔離，以提高應用程式的穩定性及安全。</dd>
 
 <dt>防火牆</dt>
-<dd> 實施了防火牆，以限制對 {{site.data.keyword.Bluemix_notm}} 網路的存取。對於「{{site.data.keyword.Bluemix_notm}} 本端」，貴公司的防火牆會隔離您的 {{site.data.keyword.Bluemix_notm}} 實例與您網路的其餘部分。</dd>
+<dd>實施了防火牆，以限制對 {{site.data.keyword.Bluemix_notm}} 網路的存取。對於「{{site.data.keyword.Bluemix_notm}} 本端」，貴公司的防火牆會隔離您的 {{site.data.keyword.Bluemix_notm}} 實例與您網路的其餘部分。</dd>
 
 <dt>侵入防禦</dt>
 <dd>「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」能促成侵入防禦，以便發現威脅，進而解決這些威脅。防火牆上已啟用侵入防禦原則。</dd>
@@ -167,7 +167,7 @@ HTTP 閒置逾時為 2 分鐘。
 
 當您在規劃資料安全時，需要考量每一種類型的資料。
 
-{{site.data.keyword.Bluemix_notm}} 平台會透過網路，利用 SSL 來保護一般使用者的應用程式存取安全，藉以保護 data-in-transit 的安全，直到資料在 {{site.data.keyword.Bluemix_notm}} 內部網路的界限達到 IBM DataPower Gateway 為止。IBM DataPower Gateway 作為反向 Proxy，並提供 SSL 終止。
+{{site.data.keyword.Bluemix_notm}} 平台會透過網路，利用 SSL 來保護一般使用者的應用程式存取安全，藉以保護 data-in-transit 的安全，直到資料在 {{site.data.keyword.Bluemix_notm}} 內部網路的界限達到 IBM DataPower Gateway 為止。IBM DataPower Gateway 作為反向 Proxy，並提供 SSL 終止。從這裡到應用程式，IPSEC 是用來保護從 IBM DataPower Gateway 前進到應用程式的資料安全。
 
 當您在開發應用程式時，必須負責保護 data-in-use 與 data-at-rest 的安全。您可以充分運用 {{site.data.keyword.Bluemix_notm}}「型錄」中可用的數個資料相關服務，來協助這些重要事項。
 
@@ -178,7 +178,7 @@ HTTP 閒置逾時為 2 分鐘。
 
 您可以使用數個 {{site.data.keyword.Bluemix_notm}} 服務所提供的安全功能來保護應用程式。IBM 生產的所有 {{site.data.keyword.Bluemix_notm}} 服務都遵循 IBM 安全工程開發作法。
 
-**附註：**這裡所述的一些服務可能不適用於「Bluemix 專用」或「Bluemix 本端」實例。
+**附註：**這裡所述的一些服務可能不適用於「{{site.data.keyword.Bluemix_notm}} 專用」或「Bluemix 本端」實例。
 
 ### SSO 服務
 
@@ -285,7 +285,7 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
 ![SSAE16 SOC1/2/3](images/icon_aicpa.png) **服務組織控制 (SOC)** 報告定義了如何對服務組織評估與安全性、可用性、處理完整性、機密性和隱私性相關的主要內部控制做法。這些報告是使用「美國註冊會計師協會 (AICPA) 手冊」產生的，包含下列各項目： 
   * 組織監督
   * 供應商管理方案
-  * 內部公司治理和風險管理程序
+  * 內部組織治理和風險管理程序
   * 法規監督
 
 {{site.data.keyword.Bluemix_notm}} 使用「IBM SoftLayer 基礎架構即服務 (IaaS)」雲端服務，並充分利用其安全架構。如需相關資訊，請聯絡 [{{site.data.keyword.Bluemix_notm}} 銷售](mailto:bmxcert1@us.ibm.com){:new_window}團隊。

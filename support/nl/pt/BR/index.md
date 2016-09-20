@@ -12,7 +12,7 @@ copyright:
 # Obtendo suporte ao cliente
 {: #getting-customer-support}
 
-*Última atualização: 7 de julho de 2016*
+Última atualização: 4 de agosto de 2016
 {: .last-updated}
 
 
@@ -21,14 +21,17 @@ Se você tiver problemas com o {{site.data.keyword.Bluemix}}, há várias opçõ
 
 ## Obtendo Ajuda
 {: #getting-help}
-Para abrir um chamado de suporte ou encontrar outras opções de ajuda, é possível acessar Conta e Suporte. Também é possível acessar diretamente os fóruns de Stack Overflow ou developerWorks (dW) Answers,
+Para abrir um chamado de suporte ou encontrar outras opções de ajuda, é possível usar o widget Conta e Suporte. Também é possível acessar diretamente os fóruns de Stack Overflow ou developerWorks (dW) Answers,
 para procurar informações ou postar perguntas.
 {:shortdesc}
 
-### Usando Conta e suporte
-Conta e suporte é um recurso que permite verificar dados da conta, visualizar status, ficar atualizado com as notificações, selecionar sua região, selecionar e gerenciar organizações e efetuar logout. Além disso, é possível obter ajuda e fornecer feedback.
+### Usando o widget Conta e Suporte
+{: #using-avatar}
+O widget Conta e Suporte permite verificar dados da conta, visualizar status,
+ficar atualizado com as notificações, selecionar sua região, selecionar e gerenciar
+organizações e efetuar logout. Além disso, é possível obter ajuda e fornecer feedback.
 
-Para abrir a Conta e suporte, efetue login na interface com o usuário do {{site.data.keyword.Bluemix_notm}} e clique no ícone **Conta e suporte** ![Conta e suporte](images/account_support.svg) na barra de menus superior.
+Para abrir o widget Conta e Suporte, efetue login na interface com o usuário do {{site.data.keyword.Bluemix_notm}} e clique no ícone {{site.data.keyword.avatar}} ![ícone Avatar](images/account_support.svg) na barra de menus.
 
 Clique em **Obter ajuda** para localizar respostas para as suas
 perguntas. Na página exibida, digite sua pergunta no
@@ -48,8 +51,9 @@ serviços do Bluemix.
 {{site.data.keyword.Bluemix_notm}} e sobre como obter instruções de introdução.
   * Na China, acesse [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} para fazer perguntas.
 
-Também é possível fazer uma pergunta no Stack Overflow diretamente a partir de Conta e Suporte, concluindo as etapas a seguir:
-  1. Na Conta e suporte, clique em **Obter ajuda**. 
+Também é possível fazer uma pergunta no Stack Overflow diretamente do widget Conta
+e Suporte, concluindo as etapas a seguir:
+  1. No widget Conta e Suporte, clique em **Obter ajuda**. 
   2. Na página exibida,
 digite sua pergunta no campo de procura para localizar respostas. 
   3. Se a resposta esperada não for retornada, clique em **POSTAR NO STACK OVERFLOW** para postar a sua pergunta.
@@ -80,11 +84,15 @@ sejam resolvidas.
 
 É possível localizar a página Status, escolhendo uma das opções a seguir:
 
-  * Efetue login na interface com o usuário do {{site.data.keyword.Bluemix_notm}}, clique no ícone **Conta e suporte** ![Conta e suporte](./images/account_support.svg) na barra de menus superior e, em seguida, clique em **Status**. Verifique os recursos listados para o ícone ![alguns problemas](images/some_issues.svg). Esse ícone pode indicar uma indisponibilidade.
-  * Acesse-o diretamente em [IBM {{site.data.keyword.Bluemix_notm}} -Status do sistema](https://status.eu-gb.bluemix.net/){: new_window}.
+  * Efetue login na interface com o usuário do
+{{site.data.keyword.Bluemix_notm}}, clique no ícone {{site.data.keyword.avatar}}
+![ícone Avatar](./images/account_support.svg) na barra de menus e
+depois clique em **Status**. Verifique os recursos listados para o ícone ![alguns problemas](images/some_issues.svg). Esse ícone pode indicar uma indisponibilidade.
+  * Acesse-o diretamente em [IBM {{site.data.keyword.Bluemix_notm}} -Status do sistema](http://ibm.biz/bluemixstatus){: new_window}.
 
 
 ### Assinando um feed RSS
+{: #subscribing-rss-feed}
 
 Também é possível ser alertado sobre quaisquer notificações, assinando o feed RSS para a página Status do {{site.data.keyword.Bluemix_notm}}. Essa abordagem fornece uma maneira para obter atualizações sem precisar consultar regularmente a página de status.
 
@@ -93,14 +101,23 @@ assinar, siga estas etapas:
 
   1. Faça download e instale um leitor RSS.
   2. Use seu leitor para assinar o feed por um dos métodos a seguir:
-       * Arraste o ícone ![RSS](images/rss.svg) para seu leitor RSS.
+       * Arraste o ícone RSS ![RSS](images/rss.svg) para seu leitor RSS.
        * Clique com o botão direito no ícone RSS, selecione **Copiar endereço de link** e cole a URL
 em seu leitor RSS.
 
 	Consulte a seção **Ajuda** do seu leitor para obter
 informações adicionais. 	   
 
-Outros métodos para leitura de feeds RSS também estão disponíveis por meio de plug-ins do navegador da web, como Leitor de [Feed RSS](http://feeder.co/){: new_window} para Chrome ou complemento de [Síntese](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} para Firefox ou com outras fontes de notícias como [Feedly](http://www.feedly.com/){: new_window} ou [G2reader](http://www.g2reader.com/en/){: new_window}.
+Outros métodos de leitura de feeds RSS estão disponíveis através de plug-ins do
+navegador da web, como estes:
+  * Leitor de [feed RSS](http://feeder.co/){: new_window} para Chrome 
+  * Complemento [Brief](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} para Firefox
+
+
+Fontes de notícias como as seguintes também fornecem métodos para leitura de feeds RSS:
+
+  * [Feedly](http://www.feedly.com/){: new_window} 
+  * [G2reader](http://www.g2reader.com/en/){: new_window} 
 
 Também
 é possível usar um serviço de terceiro para enviar automaticamente um e-mail para cada atualização de
@@ -115,20 +132,38 @@ RSS. A lista a seguir fornece alguns serviços de terceiros de exemplo:
 
 O {{site.data.keyword.Bluemix_notm}} geralmente tem cerca de 50 atualizações por mês.
 
+### Configurando notificações de incidentes e manutenção por e-mail
+{: #setting-up-notifications}
+
+Para {{site.data.keyword.Bluemix_notm}} Public, é possível se inscrever
+para notificações de plataforma. As notificações de plataforma são alertas de e-mail
+opcionais para eventos de incidente e manutenção da plataforma
+{{site.data.keyword.Bluemix_notm}}. Você pode optar por receber essas
+notificações por e-mail clicando no ícone {{site.data.keyword.avatar}}
+![ícone Avatar](../admin/images/account_support.svg) &gt;
+**Notificações** &gt; **Plataforma**. Para obter
+mais informações sobre como configurar notificações de conta, acesse
+[Configurando notificações](../admin/account.html#notifications).
 ### Melhores práticas para monitorar o status
+{: #best-practices}
 
   * Verifique as próximas janelas de manutenção
 
 	Verifique as próximas janelas de manutenção postadas na página de status, pelo menos uma vez a cada 24 horas,
 usando uma das opções a seguir:
-	  * Navegando diretamente para a página [Status](https://status.eu-gb.bluemix.net/){: new_window}
+	  * Navegando diretamente para a página
+[Status](http://ibm.biz/bluemixstatus){: new_window}
 	  * Usando o feed RSS ou um encaminhador de RSS para e-mail
 
   * Verifique as janelas atualmente em manutenção ou um incidente em andamento
 
 	Se você suspeitar que o {{site.data.keyword.Bluemix_notm}} não está
 funcionando conforme o esperado, verifique a página de status para janelas atualmente em manutenção ou para um incidente em
-andamento. Para relatar um incidente que ainda não está listado na página de status, abra um chamado de Suporte por meio do ícone **Conta e suporte** ![Conta e suporte](images/account_support.svg) na barra de menus superior ou da página da ajuda [Suporte do IBM Bluemix](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
+andamento. Para relatar um incidente que ainda não está listado na página de status, abra
+um chamado de Suporte por meio do ícone {{site.data.keyword.avatar}}
+![ícone Avatar](images/account_support.svg) na barra de menus ou na
+página da ajuda [Suporte ao IBM
+Bluemix](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
 
   * Aproveite as diversas regiões do {{site.data.keyword.Bluemix_notm}}
 
@@ -163,7 +198,7 @@ partir do portal Cliente do SoftLayer ou a partir da interface com o usuário do
 
 Todos os clientes do {{site.data.keyword.Bluemix_notm}} são fornecidos com suporte técnico grátis por meio da comunidade do Bluemix ou do Stack Overflow.  Além disso, diferentes níveis de suporte são fornecidos para atender às diferentes necessidades do cliente. Consulte a tabela a seguir para escolher entre os níveis de suporte grátis, básico, padrão e premium. 
 
-Níveis | Livre |  Básica | Padrão | Premium
+Níveis | Grátis |  Básica | Padrão | Premium
 --- | --- | --- | --- | --- |
 Descrição | Suporte para todos os clientes de avaliação do Bluemix.  |  Suporte para ambientes que não sejam de produção ou cargas de trabalho em que severidades e tempos de resposta tradicionais não são necessários. | Suporte para ambientes com um número limitado de aplicativos críticos aos negócios. Clientes do {{site.data.keyword.Bluemix_notm}} Dedicated e do {{site.data.keyword.Bluemix_notm}} Local recebem suporte padrão. | Suporte para ambientes essenciais que têm uma dependência estratégica no {{site.data.keyword.Bluemix_notm}}. 
 Suporte de alta severidade |  N/A | N/A | Incluído | Incluído
@@ -178,10 +213,14 @@ Se você não conseguir resolver seu problema técnico com a resolução de prob
 
 Se o problema não for devido a uma indisponibilidade e você for um cliente em um país ou região, excluindo a China, abra um chamado de suporte usando uma das opções a seguir:
 
-  * Na Conta e suporte, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**. Preencha o formulário para indicar o motivo pelo qual você precisa
+  * No widget Conta e Suporte, clique em **Obter ajuda**.Na página exibida, clique em **ENTRAR EM CONTATO**. Preencha o formulário para indicar o motivo pelo qual você precisa
 do suporte técnico.
-  * Use a página da ajuda [Suporte IBM do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window}. É possível enviar chamados para problemas de
-vendas, faturamento, ID IBM e login, bem como de suporte técnico. Para problemas de suporte técnico, é possível selecionar ainda um grupo técnico após você clicar no título **Suporte técnico**. Por exemplo, se você precisar de ajuda com apps Cloud Foundry, OpenWhisk, contêineres, servidores virtuais ou servidores bare metal, será possível escolher **Application Services**. Se precisar de ajuda com um serviço específico, selecione a categoria de serviço correspondente. Para determinar a categoria à qual seu serviço pertence, consulte as categorias sob [Serviços](../services/index.html){: new_window} na área de janela de navegação à esquerda.  
+  * Use a página da ajuda [Suporte IBM do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window}. É
+possível enviar chamados para problemas de vendas, faturamento, ID IBM, login e suporte
+técnico. Para problemas de suporte técnico, é possível selecionar ainda um grupo técnico após você clicar no título **Suporte técnico**. Por exemplo, se você precisar de ajuda com apps Cloud Foundry, OpenWhisk, contêineres, servidores virtuais ou servidores bare metal, será possível escolher **Application Services**. Se precisar de ajuda com um serviço específico, selecione a categoria de serviço correspondente. Para
+determinar a categoria à qual seu serviço pertence, consulte as categorias sob
+[Serviços](../services/index.html){: new_window} na área de janela
+de navegação.  
   * A partir do [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Depois de conectar-se ao portal, clique em **Abrir chamado** e, em seguida, preencha o formulário de suporte. 
   
 
@@ -204,22 +243,22 @@ Dedicated
 
 <!-- Michelle links to this anchor  -->
 
-Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como talvez você não tenha um ID IBM, há algumas opções diferentes para obter suporte.
+Se você for cliente do {{site.data.keyword.Bluemix_notm}} Dedicated de um país ou
+região diferente da China, o suporte será fornecido pela equipe de suporte do IBM
+{{site.data.keyword.Bluemix_notm}}. Você pode escolher entre algumas opções
+diferentes para obter suporte, dependendo se você tem um ID IBM.
 
 <ul>
 <li>Entre em contato com o suporte abrindo um novo chamado usando a página da ajuda <a href="http://ibm.biz/bluemixsupport" target="_blank">Suporte IBM do {{site.data.keyword.Bluemix_notm}}</a>. É
 possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Dedicated** para o campo Região.
 <p>Os envios de formulário são monitorados a partir de domingo às 22h UTC até sexta-feira às 23h59 UTC.</p>
 </li>
-<li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone **Conta e suporte**
-<img src="images/account_support.svg" alt="Conta e suporte" /> na barra de menus superior e, em seguida, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
-<li>Se você não tiver um ID IBM, poderá entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
+<li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone {{site.data.keyword.avatar}} <img src="images/account_support.svg" alt="ícone Avatar" /> na barra de menus e depois clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
+<li>Se você não tiver um ID IBM, será possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com seu representante IBM.
 <p>**Nota**: em sua solicitação, uma lista de usuários em sua organização que podem servir como contatos para chamados de suporte pode ser exibida na página **Suporte** na interface com o usuário do {{site.data.keyword.Bluemix_notm}} em seu ambiente Dedicated.</p></li>
 </ul>
 
-Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated na China, poderá solicitar suporte a partir da página de [UNISYS Service
-Management IBM Bluemix](https://chinabluemix.itsm.unisysedge.cn){: new_window}. Além disso, os clientes na China podem obter suporte grátis em [IBM developerWorks China Developer
-Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
+Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated na China, poderá solicitar suporte a partir da página de [UNISYS Service Management IBM Bluemix](https://chinabluemix.itsm.unisysedge.cn){: new_window}. Além disso, os clientes na China podem obter suporte grátis em [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
 
 
 ### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}} Local
@@ -227,16 +266,14 @@ Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
 
 <!-- Michelle links to this anchor  -->
 
-Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Local, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como talvez você não tenha um ID IBM, há algumas opções diferentes para obter suporte.
+Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Local, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como é possível que você não tenha um ID IBM, existem algumas opções diferentes para obter suporte.
 
 <ul>
-<li>Entre em contato com o suporte abrindo um novo chamado usando a página da ajuda <a href="http://ibm.biz/bluemixsupport" target="_blank">Suporte IBM do {{site.data.keyword.Bluemix_notm}}</a>. É
-possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Local** para o campo Região.
+<li>Entre em contato com o suporte abrindo um novo chamado usando a página da ajuda <a href="http://ibm.biz/bluemixsupport" target="_blank">Suporte IBM do {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Local** para o campo Região.
 <p>Os envios de formulário são monitorados a partir de domingo às 22h UTC até sexta-feira às 23h59 UTC.</p>
 </li>
-<li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone **Conta e suporte**
-<img src="images/account_support.svg" alt="Conta e suporte" /> na barra de menus superior e, em seguida, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
-<li>Se você não tiver um ID IBM, poderá entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
+<li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone {{site.data.keyword.avatar}} <img src="images/account_support.svg" alt="ícone Avatar" /> na barra de menus e depois clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
+<li>Se você não tiver um ID IBM, será possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com seu representante IBM.
 <p>**Nota**: Em sua solicitação, uma lista de usuários em sua org que podem servir como contatos para chamados de suporte pode ser exibida na página **Suporte** na interface com o usuário do {{site.data.keyword.Bluemix_notm}} em seu ambiente Local.</p></li>
 </ul>
 

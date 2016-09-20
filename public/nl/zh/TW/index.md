@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 公用
 {: #public}
-*前次更新：2016 年 5 月 19 日*
+前次更新：2016 年 8 月 8 日
 {: .last-updated}
 
 
@@ -108,9 +108,10 @@ copyright:
 ## 地區
 {: #ov_intro_reg}
 
-{{site.data.keyword.Bluemix_notm}} 地區是您可以在其中部署應用程式的已定義地理區。您可以使用進行應用程式管理的相同 {{site.data.keyword.Bluemix_notm}} 基礎架構，以及使用進行計費的相同使用詳細資料視圖，在不同地區中建立應用程式及服務實例。您可以選取最接近客戶的地區，並將應用程式部署至此地區，以縮短應用程式的延遲時間。您也可以選取要保留應用程式資料的地區來處理安全問題。在多個地區中建置應用程式時，如果關閉某個地區，則位於其他地區中的應用程式會繼續執行。您使用的每個地區的資源額度都相同。
+{{site.data.keyword.Bluemix_notm}} 地區是您可以在其中部署應用程式的已定義地理區。您可以在不同地區建立應用程式及服務實例，使用相同
+{{site.data.keyword.Bluemix_notm}} 基礎架構以進行應用程式管理，以及使用相同的用量詳細資料視圖來處理計費。您可以選取最接近客戶的地區，並將應用程式部署至此地區，以縮短應用程式的延遲時間。您也可以選取要保留應用程式資料的地區來處理安全問題。在多個地區中建置應用程式時，如果關閉某個地區，則位於其他地區中的應用程式會繼續執行。您使用的每個地區的資源額度都相同。
 
-如果您使用的是 {{site.data.keyword.Bluemix_notm}} 使用者介面，則可以切換至不同地區，以使用該地區中的空間。移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg)，並展開**地區**選取器。然後，您可以從清單中選取不同的地區。
+如果您使用的是 {{site.data.keyword.Bluemix_notm}} 使用者介面，則可以切換至不同地區，以使用該地區中的空間。按一下**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg)，然後展開**地區**選取器。然後，您可以從清單中選取不同的地區。
 
 如果您使用的是 cf 指令行介面，則必須利用 cf api 指令以及指定地區的 API 端點，來連接至要使用的 {{site.data.keyword.Bluemix_notm}} 地區。例如，輸入下列指令以連接至 {{site.data.keyword.Bluemix_notm}} 歐洲英國地區：
 
@@ -133,10 +134,10 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 *表 1. {{site.data.keyword.Bluemix_notm}} 地區清單*
 
 
-## {{site.data.keyword.Bluemix_notm}} 復原力
+## {{site.data.keyword.Bluemix_notm}} 備援
 {: #resiliency}
 
-{{site.data.keyword.Bluemix_notm}} 的設計旨在於管理可擴充、具復原力的應用程式及應用程式構件，這些應用程式與應用程式構件不僅可擴充以符合您的需要，還能維持高度可用性且可快速從問題中回復。{{site.data.keyword.Bluemix_notm}} 會隔開追蹤互動狀態的元件（有狀態）與不追蹤互動狀態的元件（無狀態）。這項分隔容許 {{site.data.keyword.Bluemix_notm}} 視需要彈性地移動應用程式，以達到可擴充性與復原力。
+{{site.data.keyword.Bluemix_notm}} 的設計旨在於管理可擴充、具復原力的應用程式及應用程式構件，這些應用程式與應用程式構件不僅可擴充以符合您的需要，還能維持高度可用性且可快速從問題中回復。{{site.data.keyword.Bluemix_notm}} 會隔開追蹤互動狀態的元件（有狀態）與不追蹤互動狀態的元件（無狀態）。這項分隔容許 {{site.data.keyword.Bluemix_notm}} 視需要彈性地移動應用程式，以達到可擴充性與備援。
 
 您的應用程式可以有一個以上的實例處於執行中狀態。一個應用程式有多個實例時，該應用程式只會上傳一次。不過，{{site.data.keyword.Bluemix_notm}} 會部署所要求的應用程式實例數，並將它們盡可能地分散在眾多虛擬伺服器。
 

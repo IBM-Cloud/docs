@@ -177,7 +177,8 @@ cf login
 <dd>*Importante:* Se você fornecer sua senha usando o parâmetro *-p* na interface de linha de comandos, a senha poderá ser registrada no histórico da linha de comandos. Por motivos de segurança, evite fornecer a senha usando o parâmetro -p. Em vez disso,
 insira a senha quando a interface da linha de comandos solicitar.</dd>
 <dt>*-sso*</dt>
-<dd>Deve-se usar a opção de conexão única (SSO) ao efetuar login com um ID federado. Isso não será necessário ao efetuar login com um ID IBM. Se você tentar efetuar sign in com um ID federado e não
+<dd>Deve-se usar a opção de conexão única (SSO) ao efetuar login com um ID federado. Isso
+não será necessário ao efetuar login com um ID IBM. Se você tentar efetuar sign in com um ID federado e não
 especificar o parâmetro SSO, será solicitado que o inclua. Usar o
 parâmetro SSO solicita que você insira a senha descartável após o
 login.</dd>

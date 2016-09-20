@@ -4,13 +4,16 @@ copyright:
   year: 2016
 
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
+
 
 # Enabling Facebook authentication for web applications
 
-Last updated: 27 July 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
-Use Facebook to authenticate users on your web app. Add {{site.data.keyword.amashort}} security functionality. 
+Use Facebook to authenticate users on your {{site.data.keyword.amafull}}  web application. Add {{site.data.keyword.amashort}} security functionality. 
 
 ## Before you begin
 {: #facebook-auth-android-before}
@@ -52,26 +55,26 @@ After you have your Facebook Application ID and App Secret, and your Facebook Ap
 
 ## Implementing the {{site.data.keyword.amashort}} authorization flow using Facebook as identity provider
 
-The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties necessary for the authorization process. It consists of a JSON object and can be viewed by clicking  **Environment Variables**  in <!--the left-side navigator of--> your application.
+The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties necessary for the authorization process. It consists of a JSON object and can be viewed by clicking  **Environment Variables**  in your application.
 
 To start the process of authorization:
 
 1. Retrieve the authorization endpoint (`authorizationEndpoint`) and client id (`clientId`) from the service credentials stored in the `VCAP_SERVICES` environment variable. 
 
-    **Note:** In case you created the {{site.data.keyword.amashort}} service before web support was added, you may not have authorization endpoints in the service credentials. In this case use the following authorization endpoints depending on your Bluemix region:
-  
-  US South: 
-  ```
-  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
-   ```
-  London: 
-   ``` 
- https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
-   ```
-  Sydney: 
-    ```
- https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
-  ```
+	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
+ 
+	US South: 
+
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
+
+	London: 
+
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+
+	Sydney: 
+
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
+
 2. Build the authorization server URI using `response_type("code")`, `client_id`, and `redirect_uri` as query parameters. 
 3. Redirect from your web app to the generated URI.
 
@@ -111,6 +114,7 @@ The following example retrieves the parameters from the `VCAP_SERVICES` variable
   
  ```
 
+
    The `redirect_uri` parameter is the URI for redirecting, after the successful or unsuccessful authentication with Facebook.
    
 
@@ -121,26 +125,25 @@ Facebook. After Facebook authorizes the user's identity the {{site.data.keyword.
 
 The next step is to obtain the access and identity tokens using the previously received grant code:
 
- 1.  Retrieve token `tokenEndpoint`, `clientId`, and `secret`  from service credentials stored in `VCAP_SERVICES` environment variable. 
+1.  Retrieve token `tokenEndpoint`, `clientId`, and `secret`  from service credentials stored in `VCAP_SERVICES` environment variable. 
  
-    **Note:** If you used {{site.data.keyword.amashort}} before web support was added, you might not have a token endpoint in service credentials. Instead, use the following URLs, depending on your Bluemix region: 
+		**Note:** If you used {{site.data.keyword.amashort}} before web support was added, you might not have a token endpoint in service credentials. Instead, use the following URLs, depending on your Bluemix region: 
 
-    US South: 
-    ```
-    https://mobileclientaccess.ng.bluemix.net/oauth/v2/token 
-     ```
-    London: 
-      ```
-    https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
-     ```
-    Sydney: 
-      ```
-    https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
-    ```
-
- 1. Send a post request to the token server URI with grant type ("authorization_code"), `clientId`, and your redirect URI  as form parameters. Send the `clientId` and `secret` as basic HTTP authentication credentials.
+		US South: 
+  
+		`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
  
-The following code retrieves the necessary values, and sends them with a post request.
+		London: 
+ 
+		`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
+ 
+		Sydney: 
+ 
+		`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
+ 
+1. Send a POST request to the token server URI with grant type ("authorization_code"), `clientId`, and your redirect URI  as form parameters. Send the `clientId` and `secret` as basic HTTP authentication credentials.
+ 
+The following code retrieves the necessary values, and sends them with a POST request.
 
   ```Java
   var cfEnv = require("cfenv");
@@ -178,6 +181,7 @@ The following code retrieves the necessary values, and sends them with a post re
   ); 
    
   ```
+
  
  Note that the `redirect_uri` parameter must match the `redirect_uri` used for the previous authorization request. The `code` parameter value should be the grant code received in the response from  the authorization request. The grant code is valid for 10 minutes, after which a new code must be be retrieved.
 

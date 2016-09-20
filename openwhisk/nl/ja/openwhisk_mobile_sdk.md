@@ -13,7 +13,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} モバイル SDK の使用
 {: #openwhisk_mobile_sdk}
-*最終更新日: 2016 年 3 月 28 日*
+最終更新日: 2016 年 8 月 4 日
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} は、モバイル・アプリが簡単にリモート・トリガーを発生させてリモート・アクションを起動できるようにする、iOS デバイスおよび watchOS 2 デバイス用のモバイル SDK を提供します。
@@ -24,16 +24,18 @@ Android 用のバージョンは、現時点では使用できません。Androi
 
 ## アプリへの SDK の追加
 {: #openwhisk_add_sdk}
+
 モバイル SDK は、CocoaPods または Carthage を使用するか、あるいはソース・ディレクトリーから、インストールすることができます。
 
 ### CocoaPods を使用したインストール 
+{: #openwhisk_add_sdk_cocoapods}
 
 モバイル用 {{site.data.keyword.openwhisk_short}} SDK は、
 CocoaPods を通して公開配布で入手できます。CocoaPods がインストールされていることを前
 提として、スターター・アプリのプロジェクト・ディレクトリー内部の
 「Podfile」というファイルに以下の行を追加します。 
 
-
+```
 source 'https://github.com/openwhisk/openwhisk-podspecs.git'use_frameworks!target 'MyApp' do
      platform :ios, '9.0'
      pod 'OpenWhisk'
@@ -41,22 +43,21 @@ endtarget 'MyApp WatchKit Extension' do
      platform :watchos, '2.0'
      pod 'OpenWhisk-Watch'
 end
-
+```
 {: codeblock}
 
 コマンド・ラインから、`「pod
-install」`と入力します。これにより、watchOS 2 拡張機能が付いた iOS アプリ用の SDK がインストールされます。
+install」`と入力します。このコマンドにより、watchOS 2 拡張機能が付いた iOS アプリ用の SDK がインストールされます。
 プロジェクトを Xcode で開くために CocoaPods によってアプリ用に作成さ
 れたワークスペース・ファイルを使用します。
 
 ### Carthage を使用したインストール
+{: #openwhisk_add_sdk_carthage}
 
-アプリのプロジェクト・ディレクトリーに「Cartfile」というファイルを作成します。Cartfile に次の行を
-追加します。
-
-
+アプリのプロジェクト・ディレクトリーにファイルを作成して「Cartfile」という名前を付けます。ファイルに次の行を追加します。
+```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
-
+```
 {: codeblock}
 
 コマンド・ラインから、`「carthage update
@@ -66,11 +67,10 @@ Carthage/build/iOS 内部に OpenWhisk.framework ファイルを置きます。
 次に、Xcode プロジェクトの組み込みフレームワークに OpenWhisk.framework を追加する必要があります。
 
 ### ソース・コードからのインストール
+{: #openwhisk_add_sdk_source}
 
 ソース・コードは
-https://github.com/openwhisk/openwhisk-client-swift.git で入手可能です。Xcode を使用して `OpenWhisk.xcodeproj` でプロジェクトを開きます。
-プロジェクトには、
-それぞれ iOS と watchOS 2 用の「OpenWhisk」と「OpenWhiskWatch」という 2 つのスキーマが含まれます。
+https://github.com/openwhisk/openwhisk-client-swift.git で入手可能です。Xcode を使用して `OpenWhisk.xcodeproj` でプロジェクトを開きます。プロジェクトには、「OpenWhisk」 (iOS を対象とする) と「OpenWhiskWatch」 (watchOS 2 を対象とする) の 2 つのスキームが含まれます。
 必要なターゲットのプロジェクトをビルドし、結果のフレームワークをご使用のアプリに追加します (通常は ~/Library/Developer/Xcode/DerivedData/ご使用のアプリ名)。
 
 ## スターター・アプリ・サンプルのインストール
@@ -81,45 +81,43 @@ https://github.com/openwhisk/openwhisk-client-swift.git で入手可能です。
 
 スターター・アプリ・サンプルをインストールするには、次のコマンドを入力します。
 
-
+```
 wsk sdk install iOS
-
+```
 {: pre}
 
-これにより、スターター・アプリを含む zip ファイルがダウンロードされます。プロジェクト・ディレクトリー内に Podfile があります。 
+このコマンドにより、スターター・アプリが入った圧縮ファイルがダウンロードされます。プロジェクト・ディレクトリー内に podfile があります。 
 
 SDK をインストールするには、次のコマンドを入力します。
-
+```
 pod install
-
+```
 {: pre} 
 
 ## SDK 概説
 {: #openwhisk_sdk_getstart}
 
-迅速に立ち上げて稼動させるためには、
-{{site.data.keyword.openwhisk_short}} API 資格情報を使用して WhiskCredentials オブジェクトを作成し、そこから {{site.data.keyword.openwhisk_short}} インスタンスを作成します。
-
+迅速に立ち上げて稼動させるためには、{{site.data.keyword.openwhisk_short}} API 資格情報を使用して WhiskCredentials オブジェクトを作成し、オブジェクトから {{site.data.keyword.openwhisk_short}} インスタンスを作成します。
 
 例えば Swift 2.1 では、次のサンプル・コードを使用して資格情報オブジェクトを作成します。
 
-
+```
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")let whisk = Whisk(credentials: credentialsConfiguration!)
-
+```
 {: codeblock}
 
 前述の例で、{{site.data.keyword.openwhisk_short}} から取得した `myKey` と `myToken` を受け渡します。次の CLI コマンドでキーとトークンを検索します。
 
-
+```
 wsk property get --auth
-
+```
 {: pre}
-
+```
 whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-
+```
 {: screen}
 
-コロンの前後の文字列は、それぞれご使用のキーとトークンです。
+コロンの前のストリングがキーで、コロンの後のストリングがトークンです。
 
 ## {{site.data.keyword.openwhisk_short}} アクションの起動
 {: #openwhisk_sdk_invoke}
@@ -129,7 +127,7 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 
 例えば次のようにします。
 
-
+```
 // In this example, we are invoking an action to print a message to the OpenWhisk Console
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
@@ -147,7 +145,7 @@ do {
 } catch {
     print("Error \(error)")
 }
-
+```
 {: codeblock}
 
 前述の例では、デフォルトの名前空間を使用して `helloConsole` アクションを起動します。
@@ -158,7 +156,7 @@ do {
 リモート・トリガーを発生させるために、
 `fireTrigger` メソッドを呼び出すことができます。ディクショナリーを使用して、必要に応じてパラメーターを受け渡します。
 
-
+```
 // In this example we are firing a trigger when our location has changed by a certain amountvar locationParams = Dictionary<String, String>()
 locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"do {try whisk.fireTrigger(name: "locationChanged", package: "mypackage", namespace: "mynamespace", parameters: locationParams, callback: {(reply, error) -> Void inif let error = error {
             print("Error firing trigger \(error.localizedDescription)")
@@ -169,7 +167,7 @@ locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"do {try whisk
 } catch {
     print("Error \(error)")
 }
-
+```
 {: codeblock}
 
 前述の例では、`locationChanged` というトリガーを発生させています。
@@ -180,7 +178,7 @@ locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"do {try whisk
 アクションが結果を返す場合、invokeAction 呼び出しで hasResult を true に設定します。アクションの結果は、次のように応答ディクショナリーに返され
 ます。
 
-
+```
 do {try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void inif let error = error {
             //do something
             print("Error invoking action \(error.localizedDescription)")} else {
@@ -193,14 +191,14 @@ var result = reply["result"]
 } catch {
     print("Error \(error)")
 }
-
+```
 {: codeblock}
 
 デフォルトでは、SDK は、アクティベーション ID と起動されたアクションによって生成された結果のみを返します。HTTP 応答状況コードを含む完全な応答オブジェクトのメタデータを取得するには、次のような設定を使用します。
 
-
+```
 whisk.verboseReplies = true
-
+```
 {: codeblock}
 
 ## SDK の構成
@@ -210,18 +208,17 @@ baseURL パラメーターを使用して、SDK を構成し、
 {{site.data.keyword.openwhisk_short}} の異なるインストール済み環境で作業することができます。
 以下に例を示します。
 
-
+```
 whisk.baseURL = "http://localhost:8080"
-
+```
 {: codeblock}
 
-この例では、localhost:8080 で実行されているインストール済み環境を使用します。
-baseUrl を指定しない場合は、モバイル SDK は https://openwhisk.ng.bluemix.net で実行されるインスタンスを使用します。
+この例では、localhost:8080 で実行されているインストール済み環境を使用します。baseUrl を指定しない場合は、モバイル SDK は https://openwhisk.ng.bluemix.net で実行されるインスタンスを使用します。
 
 特殊なネットワーク・ハンドリングが必要な場合、
 カスタム NSURLSession を受け渡すことができます。例えば、自己署名証明書を使用する独自の {{site.data.keyword.openwhisk_short}} インストール済み環境がある場合などです。
 
-
+```
 // create a network delegate that trusts everything
 class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
         completionHandler(NSURLSessionAuthChallengeDisposition.UseCredential, NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!))
@@ -231,12 +228,13 @@ class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {func URLSession(sess
 // create an NSURLSession that uses the trusting delegate
 let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: NetworkUtilsDelegate(), delegateQueue:NSOperationQueue.mainQueue())// set the SDK to use this urlSession instead of the default shared one
 whisk.urlSession = session
-
+```
 {: codeblock}
 
 ### 修飾名のサポート
+{: #openwhisk_sdk_configure_qual}
 
-すべてのアクションとトリガーには、名前空間、パッケージ、およびアクション名またはトリガー名から構成される完全修飾名があります。SDK は、アクションを起動する時またはトリガーを発生させる時に、これらをパラメーターとして受け入れることができます。SDK は、
+すべてのアクションとトリガーには、名前空間、パッケージ、およびアクション名またはトリガー名から構成される完全修飾名があります。SDK は、アクションを起動する時またはトリガーを発生させる時に、これらのエレメントをパラメーターとして受け入れることができます。SDK は、
 `/mynamespace/mypackage/nameOfActionOrTrigger` のような完全修飾名を受け入れる関数も提供します。修飾名のストリングは、すべての {{site.data.keyword.openwhisk_short}} ユーザーが所有する名前空間とパッケージに対して名前なしのデフォルト値をサポートするため、以下の構文解析規則が適用されます。
 
 - qName = "foo" の場合は、名前空間 = デフォルト、パッケージ = デフォルト、アクション/トリガー = "foo" となります。
@@ -245,14 +243,14 @@ whisk.urlSession = session
 - qName = "/mynamespace/mypackage/foo" の場合は、名前空間 = mynamespace、パッケージ = mypackage、アクション/トリガー = "foo" となります。
 
 他のすべての組み合わせでは WhiskError.QualifiedName エラーが発行されます。
-そのため、修飾名を使用する際は、
-「`do/try/catch`」構成で呼び出しをラップする必要があります。
+そのため、修飾名を使用する際は、「`do/try/catch`」構成で呼び出しをラップする必要があります。
 
 ### SDK ボタン
+{: #openwhisk_sdk_configure_button}
 
 利便性を図るため、SDK には `WhiskButton` が含まれています。これにより `UIButton` が拡張され、アクションを起動することが可能になります。`WhiskButton` を使用するには、次の例に従います。
 
-
+```
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))whiskButton.setupWhiskAction("helloConsole", package: "mypackage", namespace: "_", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)let myParams = ["name":"value"]// Call this when you detect a press event, e.g. in an IBAction, to invoke the action
 whiskButton.invokeAction(parameters: myParams, callback: { reply, error in
     if let error = error {
@@ -275,5 +273,5 @@ do {// use qualified name API which requires do/try/catch
 } catch {
    print("Error setting up button \(error)")
 }
-
+```
 {: codeblock}

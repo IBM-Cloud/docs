@@ -3,8 +3,10 @@
 # Resolução de problemas do {{site.data.keyword.objectstorageshort}}
 {: #troubleshooting}
 
-*Última atualização: 24 de junho de 2016*
+*Última atualização: 17 de agosto de 2016*
 {: .last-updated}
+
+Aqui estão as respostas para perguntas comuns de resolução de problemas sobre como usar o {{site.data.keyword.objectstoragefull}}.
 
 ## Pacote de conteúdo de token não reconhecido retornado ao usar a openstack4J com o perfil Liberty
 {: #unrecognized_token}
@@ -29,9 +31,29 @@ O rastreio de pilha a seguir pode ocorrer ao usar a openstack4j com o perfil Lib
 
 ### Solução
 
-Esse é um problema resultante de um carregamento de classe, em que a biblioteca openstack4j contém alguns dos mesmos pacotes fornecidos no perfil Liberty. Por exemplo, a OpenStack4j usa JERSEY, que pode colidir com as bibliotecas Wink.
+Esse é um problema resultante de um carregamento de classe, em que a biblioteca openstack4j contém alguns dos mesmos pacotes fornecidos no perfil Liberty.  Por exemplo, a OpenStack4j usa JERSEY, que pode colidir com as bibliotecas Wink.
 
 Para resolver o problema, siga estas etapas:
 
 1. Use o carregamento de classe reverso (parentLast).
 2. Exclua jaxrs dos recursos ativados.
+
+## Obtendo ajuda e suporte para o {{site.data.keyword.objectstorageshort}}
+{: #gettinghelp}
+
+Se você tiver problemas ou perguntas ao usar o {{site.data.keyword.objectstoragefull}}, poderá obter ajuda procurando por informações ou fazendo perguntas através de um fórum. Também é possível abrir um chamado de suporte.
+
+Ao usar os fóruns para fazer uma pergunta, marque a sua pergunta para que ela possa ser vista pelas equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}}. 
+
+* Se você tiver questões técnicas sobre o {{site.data.keyword.objectstorageshort}}, poste a sua pergunta em
+[Estouro
+da capacidade](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} e marque a sua pergunta com "ibm-bluemix" e "object-storage".
+<!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
+* Para perguntas sobre o serviço e obter informações de introdução, use o fórum do [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}. Inclua
+as identificações "object-storage" e "bluemix".
+
+Consulte [Obtendo ajuda](https://console.ng.bluemix.net/docs/support/index.html#getting-help) para obter mais detalhes sobre o uso dos fóruns. 
+
+Para obter informações sobre como abrir um chamado de suporte IBM ou sobre níveis de suporte e severidades de chamado, consulte
+[Entrando
+em contato com o suporte](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).

@@ -5,7 +5,6 @@ copyright:
 
 ---
 
-
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -14,7 +13,7 @@ copyright:
 #Managing Liberty and Node.js apps
 {: #app_management}
 
-*Last updated: 17 March 2016*
+Last updated: 15 September 2016
 {: .last-updated}
 
 App Management is a set of development and debugging utilities that can be enabled for your Liberty and Node.js applications on {{site.data.keyword.Bluemix}}.
@@ -72,42 +71,8 @@ These utilities support Node.js only.
   The inspector process runs in your application container. Use this utility to create CPU usage profiles, add breakpoints, and debug code, all while your application is running on {{site.data.keyword.Bluemix_notm}}. For more information about the node inspector module, see [node-inspector on GitHub](https://github.com/node-inspector/node-inspector){:new_window}.
   
   The *inspector* utility also starts *proxy*.
-  
-  2. *strongpm*: Enables use of [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} to analyze your Node.js application with utilities such as [StrongLoop Metrics, Profiling and Tracing](https://strongloop.com/node-js/devops-tools/){:new_window}.
-    
-  The *strongpm* utility also starts *proxy*.
-  
-  Take the following steps to configure your Node.js application with [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window}.
-
-    1. Configure the *strongpm* BlUEMIX_APP_MGMT_ENABLE environment variable and restage your application.
-    
-	```
-    cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
-    cf restage <appname>
-    ```
 	
-    2. From the Cloud Foundry command line, add a route to your application where the route has "-pm" appended to the application name, such as, <appname>-pm.mybluemix.net.
-    
-	```
-    cf map-route <appname> ng.bluemix.net -n <appname>-pm
-    ```
-	
-    3. Install the [StrongLoop npm module](https://www.npmjs.com/package/strongloop){:new_window} on your local workstation.
-    
-	```
-    npm install -g strongloop
-    ```
-	
-    4. Create an account on [StrongLoop’s website](https://strongloop.com/register/){:new_window}.
-    5. Launch Arc on your local workstation and login with the account you created.
-    
-	```
-    slc arc
-    ```
-	
-    6. Navigate to the Process Manager view within Arc. Input the newly created route with port 80 into the Process Manager. Press the Activate button. See [full documentation on using Arc](https://docs.strongloop.com/display){:new_window} for more details.
-	
-  3. *trace*: Dynamically sets trace levels if your application is using *log4js*, *ibmbluemix*, or *bunyan* logging modules.
+  2. *trace*: Dynamically sets trace levels if your application is using *log4js*, *ibmbluemix*, or *bunyan* logging modules.
   
   **Note:** Supported dependency versions:
 

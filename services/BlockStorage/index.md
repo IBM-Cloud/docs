@@ -2,13 +2,14 @@
 
 # Getting started with {{site.data.keyword.blockstorageshort}} (Beta)
 
-Last updated: 29 July 2016
+Last updated: 07 September 2016
 {: .last-updated}
 
 {{site.data.keyword.blockstoragefull}} provides access to block level storage for transaction-intensive workloads and runtimes that need persistent storage. You can use the {{site.data.keyword.blockstorageshort}} service to manage volume lifecycles, attach volumes to your IBM Virtual Servers, and create snapshots of your block storage volumes.
 
 Before you begin, review the following information.
 
+* Ensure that you created an instance of the {{site.data.keyword.blockstorageshort}} service in your space. For more information on how to add a new service instance, see [Requesting a new service instance](../../services/reqnsi.html#req_instance).
 * The {{site.data.keyword.blockstorageshort}} service is supported only in an unbound context. 
 * You must have IBM {{site.data.keyword.virtualmachinesshort}} created to attach block storage volumes. To learn more about using block storage volumes with IBM {{site.data.keyword.virtualmachinesshort}}, see [Block storage volumes and IBM Virtual Servers](../../virtualmachines/vm_create.html#storage_BS). 
 
@@ -16,39 +17,49 @@ Complete these steps to get started with {{site.data.keyword.blockstorageshort}}
 
 1. Create a volume.
    
-   a. Open the {{site.data.keyword.blockstorageshort}} service.
+   a. In the Bluemix UI, select **Console > Storage**.
 
-   b. Click **Create** to start the **Create Volume** dialog.
+   b. Select the Block Storage instance you previously provisioned.
 
-   c.	Provide the size of the volume that you want. Decimal numbers are not accepted. The size is limited by the quota that is assigned to    your organization.
+   c. On the Manage page, click **Create volume** to start the Create Volume dialog.
+
+   d.	Provide a name. 
    
-   d.	Provide a name. The name is for display purposes only.
+      **Note:** The name is for display purposes only.
    
-   e.	Optionally, provide a more detailed description of the volume.
+   e. Provide the size of the volume that you want. 
    
-   f.	Click **Create** to submit the information and close the dialog.
+      **Note:** Decimal numbers are not accepted. The size is limited by the quota that is assigned to your organization.
+   
+   f.	Optionally, provide a more detailed description of the volume.
+   
+   g.	Click **Create** to submit the information and close the dialog.
 
   Creating a volume can take a few moments.
 
 2. Attach a volume to a virtual server.
 
-   a.	Open the {{site.data.keyword.blockstorageshort}} service.
+   a. In the Bluemix UI, select **Console > Storage**.
+
+   b. Select the Block Storage instance you previously provisioned.
+
+   c. Select a volume from the list of available volumes.
    
-   b. Select a volume from the list of available volumes.
+   d.	From the Actions drop-down menu, click **Attach**.
    
-   c.	Click **Attach**.
+   e.	In the Attach dialog, select an instance of a virtual server from the drop-down list. 
    
-   d.	In the Attach dialog, select an instance of a virtual server from the drop-down list. 
+   f.	Optionally, specify the device to be used to attach this volume. 
    
-   e.	Optionally, specify the device to be used to attach this volume. If you do not specify the device, the system automatically selects the first available device on the virtual server.
+      **Note:** If you do not specify the device, the system automatically selects the first available device on the virtual server.
    
-   f.	Click **Attach** to submit the information and close the dialog.
+   g.	Click **Attach** to submit the information and close the dialog.
    
    The volume is listed in the table of attached volumes with the information about the virtual server instance. The virtual server can now use the device to persist data. 
  
 What's next?
 
-Prepare the volume for use. For more information, see [Preparing volumes](../BlockStorage/blockstorage_preparingvolume.html).
+After your volume is attached, you must configure your virtual server to make use of the volume. For more information, see [Preparing volumes](../BlockStorage/blockstorage_preparingvolume.html).
 
 # Related Links
 {: #rellinks}

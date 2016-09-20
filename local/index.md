@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 16 August 2016*
+*Last updated: 15 September 2016*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
@@ -36,10 +36,10 @@ In addition, there is a set of services that are available as {{site.data.keywor
 |Included | [{{site.data.keyword.Bluemix_notm}} runtimes](../cfapps/runtimes.html) | Use runtimes to get your app up and running quickly, with no need to set up and manage machines and operating systems. All {{site.data.keyword.Bluemix_notm}} runtimes are available for you to use in your {{site.data.keyword.Bluemix_notm}} Local instance.|
 |Included | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | Dynamically increase or decrease the compute resources capacity of your application based on policies. With this service, you have unlimited use in your {{site.data.keyword.Bluemix}} Local environment.|
 |Optional | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} integrates {{site.data.keyword.APIM}} and IBM StrongLoop into a single offering that provides a comprehensive solution to create, run, manage, and enforce APIs and microservices. |
-|Optional | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | Use the {{site.data.keyword.APIMfull}} service to compose, manage, and socialize APIs. You can import APIs with resources by using a proxy URL or by assembling data from HTTP data sources. The benefit of using the {{site.data.keyword.APIM}} service is that you can manage how your APIs are used. |
 |Optional | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models. For more information, see the full [documentation](http://docs.cloudant.com/BluemixLocal.html){: new_window} and the [hardware requirements](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} for a local environment. |
-|Optional (Beta) | {{site.data.keyword.containershort}} | Run Docker containers on {{site.data.keyword.Bluemix_notm}} Local. Containers are virtual software objects that include all of the elements that an app needs to run. A container has the benefits of resource isolation and allocation, but is more portable and efficient than, for example, a virtual machine. |
+|Optional | [{{site.data.keyword.containershort}}](../containers/container_index.html)  | Run Docker containers on {{site.data.keyword.Bluemix_notm}} Local. Containers are virtual software objects that include all of the elements that an app needs to run. A container has the benefits of resource isolation and allocation, but is more portable and efficient than, for example, a virtual machine. For information about the hardware requirements, see [IBM {{site.data.keyword.containershort}} in {{site.data.keyword.Bluemix_notm}} Dedicated and Bluemix Local](../containers/container_dl.html). |
 |Optional | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | This service provides an in-memory data grid that supports distributed caching scenarios for your apps. Includes 50 GB of in-memory cache. |
+|Optional | [{{site.data.keyword.mobilepush}}](../services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} is a service that you can use to send notifications to iOS and Android device. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. |
 |Optional | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | For increased redundancy, {{site.data.keyword.sescashort}} provides a replica of a session stored in the cache. Therefore, in the event of a brownout or outage, your client application maintains access to the session in the cache. The service supports session caching scenarios for web and mobile applications. |
 |Optional | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | This service lets your apps communicate with and consume data that is collected by your connected devices, sensors, and gateways. The local base offering includes an initial environment that permits running a private version of the IBM {{site.data.keyword.iot_full}} within the local environment with a capacity of 100,000 concurrently connected devices or applications and 1.6 TB of data exchange. |
 
@@ -57,9 +57,10 @@ There are optional components that are available for you to purchase to scale an
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 100 thousand API Calls increase| An extension of the {{site.data.keyword.apiconnect_short}} Professional environment to provide additional capacity of 100 thousand API Calls a month. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 25 Million API Calls | An environment that permits running a private version of {{site.data.keyword.apiconnect_short}} with a capacity of 25 million API Calls a month targeted towards enterprise wide API projects. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 100 thousand API Calls increase | An extension of the {{site.data.keyword.apiconnect_short}} Enterprise environment to provide additional capacity of 100 thousand API Calls a month. |
-|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} 500 API calls capacity increase | An environment that permits running a private version of {{site.data.keyword.APIM}} for {{site.data.keyword.Bluemix_notm}} with a capacity of 500 API calls per second. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} Cluster | An environment that permits deploying a 3-node cluster of the {{site.data.keyword.cloudant}} service. The data capacity of the nodes are determined by the infrastructure provided by you for the local environment. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local incremental increase | An environment additional to the {{site.data.keyword.iot_full}} Local base service offering that permits running a private version of the {{site.data.keyword.iot_full}} within the local environment with a capacity of 100,000 concurrently connected devices or applications and 0.5 TB of data exchange. |
+|IBM {{site.data.keyword.mobilepush}} Local | An environment that permits the deployment and running of {{site.data.keyword.mobilepush}} instance with the ability to accept 300 requests per second. |
+|IBM {{site.data.keyword.mobilepush}} Local add-on instance | An environment that permits the deployment and running of {{site.data.keyword.mobilepush}} instance with the ability to accept 300 additional requests per second. |
 
 
 **Note**: {{site.data.keyword.Bluemix_notm}} Local components might indicate a specific configured capacity, such as gigabytes or transactions per second. Because actual capacity in practice for any configuration of the cloud service varies depending on many factors, the actual capacity in practice might be more or less than the configured capacity.
@@ -78,7 +79,6 @@ The syndicated catalog provides the function to create hybrid applications that 
 |{{site.data.keyword.alertnotificationshort}}		|Yes		|Yes			|Yes		|
 |{{site.data.keyword.appseccloudshort}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.hadoopst}}			|Yes		|No		|No |
-|{{site.data.keyword.APIM}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.rules_short}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.cloudant}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.conceptexpansionshort}}	|Yes		|Yes		|Yes|
@@ -495,7 +495,7 @@ To ensure that your local instance is compatible with the latest supported versi
 
 {{site.data.keyword.Bluemix_notm}} makes every effort to keep the local environments compatible with the latest ESXi and vCenter versions. However, there might be short periods of time where the most recent ESXi and vCenter versions are not supported. Refer to the [Local infrastructure requirements](../local/index.html#localinfra) documentation for the latest compatible versions prior to applying any updates.
 
-## Incident response and support
+## Incident response and support for {{site.data.keyword.Bluemix_notm}} Local
 {: #incidentresponse}
 
 ### Customer-detected issues
@@ -516,7 +516,7 @@ Depending on the issue, you, IBM, or both of you work together to fix the issue.
 
 **Note**: Severity 1 support tickets are monitored 24 hours a day, 7 days a week. Other tickets are processed from Sunday 10:00 pm GMT through Saturday 12:00 am GMT. For more information about severity of support tickets and working with support, see <a href="../support/index.html#contacting-bluemix-support-local">Contacting support</a>.
 
-## Disaster recovery
+## Disaster recovery for {{site.data.keyword.Bluemix_notm}} Local
 {: #dr}
 
 Disaster recovery for {{site.data.keyword.Bluemix_short}} Local can be set up similarly to the way that it works when you use {{site.data.keyword.Bluemix_short}} Public. {{site.data.keyword.Bluemix_short}} Public provides a continuously available platform for innovation with multiple fail-safe measures to ensure that your orgs, spaces, and apps are always available. Deploying apps to multiple geographic regions enables continuous availability that protects against unplanned, simultaneous loss of multiple hardware or software components, or the loss of an entire data center, so that even in the event of a natural disaster in one geographic location, your distributed {{site.data.keyword.Bluemix_notm}} Public app instances in alternate geographic locations will be available.

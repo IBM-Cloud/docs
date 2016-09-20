@@ -68,7 +68,7 @@ Cloud Foundry コマンド・ライン・インターフェースのダウンロ
  
   <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
   
-  7. アプリを {{site.data.keyword.Bluemix_notm}} にデプロイします。cf push コマンドについて詳しくは、『[アプリケーションのアップロード](./upload_app.html)』を参照してください。
+  7. アプリを {{site.data.keyword.Bluemix_notm}} にデプロイします。cf push コマンドについて詳しくは、『[アプリケーションのアップロード](/docs/starters/upload_app.html)』を参照してください。
   
   <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></pre>
   

@@ -17,10 +17,10 @@ copyright:
 
 # Organisationen und Bereiche verwalten
 {: #orgsspacesusers}
-Letzte Aktualisierung: 16. Mai 2016
+Letzte Aktualisierung: 16. August 2016
 {: .last-updated}
 
-Als Kontoeigner können Sie Ihre Organisationen verwalten, indem Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) klicken und die Seite **Organisationen verwalten** aufrufen. Organisationsmanager können ferner die Seite 'Organisationen verwalten' verwenden, um beliebige Organisationen, für die Sie als Manager festgelegt sind, zu verwalten.
+Als Kontoeigner können Sie Ihre Organisationen verwalten, indem Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) klicken und die Seite **Organisationen verwalten** aufrufen. Organisationsmanager können ferner die Seite 'Organisationen verwalten' verwenden, um beliebige Organisationen, für die Sie als Manager festgelegt sind, zu verwalten.
 {:shortdesc}
 
 Die Management-Tasks umfassen folgende Tasks:
@@ -88,14 +88,14 @@ Nachdem Sie Teammitglieder zu einer Organisation hinzugefügt haben, können Sie
 
 Nur Kontoeigner mit nutzungsabhängigen Konten können eine Organisation erstellen. Sie können eine Organisation erstellen, indem Sie die folgenden Schritte ausführen:
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und rufen Sie die Seite **Organisationen verwalten** auf.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Organisationen verwalten**.
 2. Klicken Sie auf **Neue Organisation hinzufügen**.
 3. Geben Sie den Namen der Organisation ein.
 4. Klicken Sie auf **Hinzufügen**.
 
 Sie können in Ihrer Organisation Bereiche erstellen, z. B. einen Bereich *dev* als Entwicklungsumgebung, einen Bereich *test* als Testumgebung und einen Bereich *production* als Produktionsumgebung. Anschließend können Sie Ihre Apps den Bereichen zuordnen. Führen Sie die folgenden Schritte aus, um einen Bereich zu erstellen:
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und rufen Sie die Seite **Organisationen verwalten** auf.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Organisationen verwalten**.
 2. Ermitteln Sie die Organisation, die Sie einem Bereich hinzufügen möchten, und wählen Sie **Details anzeigen** aus.
 3. Klicken Sie auf **Bearbeiten**.
 4. Klicken Sie auf **Bereich hinzufügen**.
@@ -108,7 +108,7 @@ Sie können in Ihrer Organisation Bereiche erstellen, z. B. einen Bereich *dev* 
 
 Führen Sie die folgenden Schritte aus, um Ihre Organisation umzubenennen:
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und rufen Sie die Seite **Organisationen verwalten** auf.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Organisationen verwalten**.
 2. Ermitteln Sie die Organisation, die Sie bearbeiten möchten, und wählen Sie **Details anzeigen** aus.
 3. Wählen Sie **Bearbeiten** aus.
 4. Wählen Sie **Bearbeiten** für den Titel der Organisation aus.
@@ -124,7 +124,7 @@ Als Kontoeigner können Sie sich an die [Unterstützung für {{site.data.keyword
 
 Sie können einen Bereich von der Seite **Organisationen verwalten** löschen:
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und rufen Sie die Seite **Organisationen verwalten** auf.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Organisationen verwalten**.
 2. Ermitteln Sie die Organisation, die Sie bearbeiten möchten, und wählen Sie **Details anzeigen** aus.
 3. Ermitteln Sie den Bereich, den Sie löschen möchten, und wählen Sie **Bearbeiten** aus.
 4. Klicken Sie auf **Ihren Bereich löschen**.
@@ -134,14 +134,14 @@ Sie können einen Bereich von der Seite **Organisationen verwalten** löschen:
 
 Führen Sie die folgenden Schritte aus, um die Mitglieder für eine bestimmte Organisation aufzulisten:
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und rufen Sie die Seite **Organisationen verwalten** auf.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Organisationen verwalten**.
 2. Ermitteln Sie die Organisation, deren Mitglieder Sie anzeigen möchten, und klicken Sie auf **Details anzeigen**.
 3. Klicken Sie auf **Bearbeiten**.
 4. Auf der Registerkarte **Benutzer** werden die Mitglieder Ihrer Organisation und ihre Rollen angezeigt.
 
 Führen Sie die folgenden Schritte aus, um die Mitglieder für einen bestimmten Bereich aufzulisten:
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und rufen Sie die Seite **Organisationen verwalten** auf.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Organisationen verwalten**.
 2. Ermitteln Sie die Organisation, deren Mitglieder Sie anzeigen möchten, und klicken Sie auf **Details anzeigen**.
 3. Ermitteln Sie den Bereich, dessen Mitglieder Sie anzeigen möchten und klicken Sie auf **Bearbeiten**.
 4. Sie können die Mitglieder Ihres Bereichs und deren Rollen auf der Registerkarte **Benutzer** anzeigen.
@@ -153,19 +153,19 @@ Als Kontoeigner oder Organisationsmanager können Sie das zugeordnete und das ve
 
 Führen Sie folgende Schritte aus, um das Kontingent für Ihre Organisation anzuzeigen:
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und rufen Sie die Seite **Organisationen verwalten** auf.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Organisationen verwalten**.
 2. Ermitteln Sie die Organisation, deren Kontingent Sie anzeigen möchten, und klicken Sie auf **Details anzeigen**.
 3. Klicken Sie auf **Bearbeiten**.
 4. Wählen Sie die Registerkarte **Kontingent** aus.
 
-Um das Kontingent für Ihre Organisation zu aktualisieren, müssen Sie ein Support-Ticket öffnen. Weitere Informationen zum Öffnen eines Support-Tickets finden Sie unter dem Thema [Kundenunterstützung abrufen](../support/index.html#contacting-support). Weitere Informationen zum Kontingent für Container finden Sie unter dem Thema[Kontingent](../containers/container_creating_ov.html#container_quota) in der Dokumentation zu Containern.
+Um das Kontingent für Ihre Organisation zu aktualisieren, müssen Sie ein Support-Ticket öffnen. Weitere Informationen zum Öffnen eines Support-Tickets finden Sie unter dem Thema [Kundenunterstützung abrufen](../support/index.html#contacting-support). Weitere Informationen zum Kontingent für Container finden Sie unter dem Thema[Kontingent](../containers/container_planning_org_ov.html##container_planning_quota) in der Dokumentation zu Containern.
 
 ## Domänen verwalten
 {: #managedomains}
 
 Als Kontoeigner oder Organisationsmanager können Sie die Systemdomäne anzeigen und angepasste Domänen für Anwendungen hinzufügen, die innerhalb der Organisation und ihren Bereichen erstellt wurden. Als Bereichsmanager enthält Ihre Registerkarte **Domänen** für einen Bereich eine schreibgeschützte Liste der Domänen, die dem Bereich zugeordnet sind. 
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und rufen Sie die Seite **Organisationen verwalten** auf.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Organisationen verwalten**.
 2. Ermitteln Sie die Organisation, für die Sie Domänen anzeigen oder bearbeiten möchten.
 3. Wählen Sie **Details anzeigen** für diese Organisation aus.
 4. Klicken Sie auf **Bearbeiten**.

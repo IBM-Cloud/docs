@@ -4,7 +4,7 @@
 
 copyright:
 
-  années : 2015, 2016
+  years: 2015, 2016
 
  
 
@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} dédié
 {: #dedicated}
 
-*Dernière mise à jour : 11 juillet 2016*
+*Dernière mise à jour : 9 août 2016*
 {: .last-updated}
 
 
@@ -53,6 +53,7 @@ microservices. |
 |Facultatif | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} fournit l'accès à une couche de données JSON NoSQL
 entièrement gérée toujours active. Ce service est compatible avec CouchDB et accessible via une interface HTTP facile à utiliser pour les modèles
 d'application mobile et Web. |
+|Facultatif (bêta) | {{site.data.keyword.containershort}} | Conteneurs Run Docker dans l'environnement {{site.data.keyword.Bluemix_notm}} dédié. Les conteneurs sont des objets logiciels virtuels qui incluent tous les éléments qu'une application a besoin d'exécuter. Un conteneur tire parti de l'isolation et de l'allocation des ressources, mais est plus portable et efficace que, par exemple, une machine virtuelle. |
 |Facultatif | [{{site.data.keyword.dashdbshort}}](../services/dashDB/dashDB.html) | Utilisez dashDB pour stocker les données relationnelles, notamment les types spéciaux tels que les données géospatiales. Ensuite, analysez ces données avec l'analyse intégrée avancée ou SQL, comme l'analyse prédictive et l'exploration de données, l'analyse avec R et l'analyse géospatiale. |
 |Facultatif | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
 | Facultatif (bêta) | Logging | Fournit des journaux pour vos applications Cloud Foundry dans votre interface utilisateur
@@ -65,6 +66,7 @@ ensemble spécifique d'utilisateurs et de périphériques à l'aide d'étiquette
 pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API (interfaces de programme d'application) REST (Representational
 State
 Transfer) pour développer plus en détail vos applications client. |
+|Facultatif | [{{site.data.keyword.objectstorageshort}}](../services/ObjectStorage/index.html) | {{site.data.keyword.objectstorageshort}} vous permet de gérer vos données de manière sécurisée, économique et évolutive.  |
 |Facultatif | [{{site.data.keyword.SecureGateway}}](../services/SecureGateway/secure_gateway.html) | Le service {{site.data.keyword.SecureGateway}} fournit un moyen sécurisé pour connecter des applications {{site.data.keyword.Bluemix_notm}} à des emplacements distants sur site ou dans le cloud.  |
 |Facultatif | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | Pour augmenter la redondance, {{site.data.keyword.sescashort}} fournit une réplique d'une session
 qu'il stocke en cache. Par conséquent, en cas de microcoupure ou d'indisponibilité, votre application client
@@ -124,7 +126,7 @@ comprendre chacun jusqu'à 50 instances.  |
 ou de tous les serveurs sur le même réseau local virtuel dans l'environnement Bluemix Dedicated. |
 |Réseau privé virtuel Vyatta dédié d'1 Gbit/s configuré pour haute disponibilité  | Réseau privé virtuel Vyatta dédié d'1 Gbit/s configuré pour haute disponibilité
 et son utilisation par l'environnement dédié. |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.messagehub}} | Environnement qui fournit une messagerie de publication et d'abonnement pouvant aller jusqu'à 10 Go par partition. Les messages sont conservés et disponibles pour être consommés pendant 24 heures maximum.  |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.messagehub}} | Environnement qui fournit une messagerie de publication et d'abonnement pouvant aller jusqu'à 10 Go par partition. Les messages sont conservés et disponibles pour être consommés pendant 24 heures maximum. |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.mobilepushshort}} | Environnement permettant le
 déploiement et l'exécution d'instances {{site.data.keyword.mobilepushshort}} pouvant accepter 300 demandes par seconde. |
 |{{site.data.keyword.iot_short}} Dedicated incremental increase | Elargissement de l'environnement permettant l'exécution d'une
@@ -183,6 +185,7 @@ service.
 |{{site.data.keyword.mqa}}			|Oui		|Oui		|Oui |
 |{{site.data.keyword.mql}}			|Oui		|Oui		|Oui |
 |{{site.data.keyword.nlclassifierlshort}} 	|Oui 		|Oui 		|Oui|
+|{{site.data.keyword.objectstorageshort}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.personalityinsightsshort}}	|Oui		|Oui		|Oui|
 |{{site.data.keyword.pm_short}}			|Oui		|Oui		|Non |
 |{{site.data.keyword.presenceinsightsshort}}	|Oui		|Oui		|Oui|
@@ -264,7 +267,7 @@ Vous pouvez vous attendre à obtenir un processus similaire à la liste suivante
 <li>Vous identifiez un propriétaire du compte public utilisé pour représenter votre société dans l'environnement {{site.data.keyword.Bluemix_notm}} public. IBM utilise ce compte pour le suivi de l'utilisation des services mixtes.</li>
 <li>Vous sélectionnez le type de connexion sécurisée à votre centre de données. Vous pouvez effectuer votre sélection entre SoftLayer VPN, SoftLayer Direct Link et AT&T Net Bond.</li>
 <li>Vous décidez s'il y aura un accès à votre environnement dédié à partir de l'Internet public.</li>
-<li>Vous sélectionnez le type d'authentification qui sera utilisé. Vous pouvez sélectionner ID IBM ou Active Directory. Pour plus d'informations sur l'utilisation et l'enregistrement d'un ID IBM, voir la page <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Help and FAQ</a>.
+<li>Vous sélectionnez le type d'authentification qui sera utilisé. Vous pouvez effectuer une sélection dans IBMid ou Active Directory. Pour plus d'informations sur l'utilisation et l'enregistrement d'un IBMid, voir la page <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Help and FAQ</a>.
 </li>
 <li>Vous identifiez et affectez des rôles pour votre équipe d'administration pour l'environnement. Pour obtenir des informations sur les rôles que vous devez attribuer, voir <a href="index.html#rolesresponsibilities" target="_blank">Rôles et responsabilités de l'environnement {{site.data.keyword.Bluemix_notm}} dédié</a>.</li>
 <li>IBM déploie la plateforme de base qui comprend les environnements d'exécution élastiques, la console, les fonctions d'administration et de surveillance.</li>
@@ -307,7 +310,7 @@ d'informations sur les différents niveaux de support, voir [Contacter le servic
 responsable Client Success (CSM) effectue les types de tâche suivants :
 
 <ul>
-<li>Il permet l'adoption rapide de votre environnement {{site.data.keyword.Bluemix_notm}} Dedicated. </li>
+<li>Il permet l'adoption rapide de votre environnement {{site.data.keyword.Bluemix_notm}} Dedicated.</li>
 <li>Il distribue des ressources d'activation et de formation utiles permettant d'améliorer votre autonomie.</li>
 <li>Il entretient une relation à long terme entre vous et le développement {{site.data.keyword.Bluemix_notm}}, le support et les services que
 vous utilisez.</li>
@@ -345,16 +348,19 @@ ressources qui sont nécessaires pour assurer la conformité et la sécurité. |
 |Créer la taille de l'environnement |  	Créer la taille de l'environnement en fonction de choix prédéfinis qui prennent en compte les objectifs de haute
 disponibilité et de reprise après incident, ainsi que la mise à disposition initiale des services et de l'agent DEA nécessaires pour la prise en charge des
 applications créées avec la plateforme. Vous collaborez avec IBM pour définir par exemple les bases de données qui sont nécessaires, les services qui sont proposés dans le catalogue mixte du
-client, etc. | IBM et le client partagent la responsabilité |
+client, etc. | IBM et le client partagent la
+responsabilité |
 |Sélectionner une architecture | Sélectionner une architecture en fonction de choix prédéfinis qui prennent en compte les exigences de haute disponibilité
 et de reprise après incident. | IBM |
 |Définir les objectifs de reprise après incident | Définir les exigences de reprise après incident pour l'environnement. | Client |
 |Créer un plan de reprise après incident | Définir le plan de reprise après incident et vous consulter. IBM crée un modèle de reprise après incident et
-vous consulte pour que vous puissiez donner votre feedback et approuver le plan. | IBM et le client partagent la responsabilité |
+vous consulte pour que vous puissiez donner votre feedback et approuver le plan. | IBM et le client partagent la
+responsabilité |
 |Créer un plan de sauvegarde et de reprise | Créer un plan de sauvegarde et de reprise qui définit la fréquence et les exigences pour une distribution sur
 site et hors site de la sauvegarde. IBM sauvegarde des composants de plateforme, des services IBM, des métadonnées de service incluant des rôles
 utilisateur,
-etc. Vous sauvegardez les données propres à l'application desquelles vous êtes en charge. | IBM et le client partagent la responsabilité |
+etc. Vous sauvegardez les données propres à l'application desquelles vous êtes en charge. | IBM et le client partagent la
+responsabilité |
 |Identifier les outils pour la détection d'événements et l'identification des problèmes. | Identifier les outils IBM et tiers utilisés pour la détection
 d'événements et l'identification des problèmes au niveau de la plateforme {{site.data.keyword.Bluemix_notm}}. | IBM |
 |Définir un plan d'escalade | Définir le plan d'escalade pour analyser les besoins et résoudre les événements détectés depuis les composants de
@@ -386,7 +392,8 @@ réviser les contrôles de sécurité pour la protection du centre de données. 
 |Inspecter le logiciel de surveillance | Inspecter les composants de surveillance et de gestion tels que définis dans le plan d'escalade et
 d'identification des problèmes. | Client |
 |Inspecter le système d'exploitation | Vérifier que l'image de système d'exploitation satisfait les normes de conformité. IBM fournit l'accès à l'image de
-système d'exploitation. | IBM et le client partagent la responsabilité |
+système d'exploitation. | IBM et le client partagent la
+responsabilité |
 
 Ensuite vient la phase de progression. Elle décrit la relation de collaboration qui existe entre vous et le cloud IBM. Les objectifs principaux de cette phase
 sont les suivants :
@@ -404,18 +411,22 @@ sont les suivants :
 consommation. | IBM et le client partagent la
 responsabilité |
 |Réviser les projections de capacité | Réviser les projections de capacité car elle sont liées à des événements externes pouvant avoir un impact sur la
-capacité ainsi que sur de nouveaux déploiements anticipés des applications. Collaborer avec IBM pour réviser les projections et le plan en conséquence. | IBM et le client partagent la responsabilité |
+capacité ainsi que sur de nouveaux déploiements anticipés des applications. Collaborer avec IBM pour réviser les projections et le plan en conséquence. | IBM et le client partagent la
+responsabilité |
 |Réviser les projections | Réviser les projections de capacité car elles sont liées à des événements externes pouvant avoir un impact sur la capacité. | Client |
 |Ajuster la capacité |  Ajouter ou retirer de la capacité au fur et à mesure que vos besoins changent. | IBM |
 |Publier la maintenance et les mises à jour entrantes | Créer une documentation pour la maintenance requise des composants IBM. | IBM |
 |Assurer la maintenance | Communiquer avec IBM pour planifier une maintenance requise au cours d'une fenêtre de 21 jours. Vous pouvez fournir les dates qui ne vous
-conviennent pas dans la fenêtre de 30 jours ; IBM s'arrangera pour planifier la maintenance en conséquence. | IBM et le client partagent la responsabilité |
+conviennent pas dans la fenêtre de 30 jours ; IBM s'arrangera pour planifier la maintenance en conséquence. | IBM et le client partagent la
+responsabilité |
 |Echecs de mise à disposition d'adresse | Corriger les échecs de mise à disposition, le cas échéant, pour les services créés par le client qui sont
 déployés dans le catalogue. | IBM |
 |Effectuer une analyse réseau et IP | Effectuer des analyses réseau et IP quotidiennement et mensuellement. | IBM et le client partagent la
 responsabilité |
-|Fournir l'accès aux journaux d'audit | Fournit l'accès à tous les journaux d'audit de sécurité et d'administration   | IBM et le client partagent la responsabilité |
-|Mener le test | Tester régulièrement les contrôles clés des opérations et effectuer un test de pénétration tiers. | IBM et le client partagent la responsabilité |
+|Fournir l'accès aux journaux d'audit | Fournit l'accès à tous les journaux d'audit de sécurité et d'administration   | IBM et le client partagent la
+responsabilité |
+|Mener le test | Tester régulièrement les contrôles clés des opérations et effectuer un test de pénétration tiers. | IBM et le client partagent la
+responsabilité |
 |Génération de rapports sur le statut, coordination de l'audit et réunions sur la conformité  | Assurer la génération de rapports sur le statut, la
 coordination d'audit externe et la représentation dans des réunions sur le statut des examens de conformité. | IBM |
 |Attestation d'emploi et vérification des besoins d'affaires | Effectuer l'attestation d'emploi trimestrielle et la vérification des besoins d'affaires
@@ -435,8 +446,10 @@ cette phase sont les suivantes :
 |----------|------------------|-----------------------|
 |Mettre fin à l'accord financier | Discuter et convenir de la fin de l'accord financier. | IBM et le client partagent la
 responsabilité |
-|Mettre l'environnement hors service | Désactiver l'accès à l'environnement et les données d'identification. | IBM et le client partagent la responsabilité |
-|Supprimer les connexions réseau du client | Supprimer les connexions réseau entre IBM et l'environnement client. | IBM et le client partagent la responsabilité |
+|Mettre l'environnement hors service | Désactiver l'accès à l'environnement et les données d'identification. | IBM et le client partagent la
+responsabilité |
+|Supprimer les connexions réseau du client | Supprimer les connexions réseau entre IBM et l'environnement client. | IBM et le client partagent la
+responsabilité |
 |Recycler l'infrastructure | Votre environnement est recyclé selon les processus définis par SoftLayer. | IBM |
 
 ##Gestion de votre instance dédiée

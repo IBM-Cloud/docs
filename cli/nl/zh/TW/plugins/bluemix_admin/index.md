@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+
 
 ---
 
@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-*前次更新：2016 年 6 月 22 日*
+前次更新：2016 年 8 月 17 日
 {: .last-updated}
 
 
@@ -32,7 +32,7 @@ copyright:
 
 安裝 cf 指令行介面之後，您可以新增 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式。
 
-**附註**：如果您先前已安裝「{{site.data.keyword.Bluemix_notm}} 管理」外掛程式，則可能需要解除安裝外掛程式，刪除儲存庫，然後重新安裝以取得最新更新。
+**附註**：如果您先前已安裝 {{site.data.keyword.Bluemix_notm}} 管理外掛程式，則可能需要解除安裝外掛程式、刪除儲存庫，然後重新安裝以取得最新更新。
 
 完成下列步驟以新增儲存庫並安裝外掛程式：
 
@@ -43,7 +43,7 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">您的 {{site.data.keyword.Bluemix_notm}} 實例 URL 的子網域。</dd>
+<dd class="pd">您的 {{site.data.keyword.Bluemix_notm}} 實例 URL 的子網域。例如，<code>https://console.mycompany.bluemix.net/cli</code>。</dd>
 </dl>
 </li>
 <li>若要安裝 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式，請執行下列指令：<br/><br/>
@@ -52,6 +52,12 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>
 </li>
 </ol>
+
+如果您需要解除安裝外掛程式，則可以使用下列指令，然後新增已更新的儲存庫以及安裝最新外掛程式：
+
+* 解除安裝外掛程式：`cf uninstall-plugin-repo BluemixAdminCLI`
+* 移除外掛程式儲存庫：`cf remove-plugin-repo BluemixAdmin`
+
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式
 
@@ -65,9 +71,9 @@ cf plugins
 
 如需指令的其他說明，請使用 `-help` 選項。
 
-### 連接及登入 {{site.data.keyword.Bluemix_notm}}
+### 連接並登入 {{site.data.keyword.Bluemix_notm}}
 
-您必須先連接並登入（如果尚未完成的話），才能使用管理 CLI 外掛程式來管理使用者。
+如果尚未連接並登入，您必須先完成此作業，才能使用管理 CLI 外掛程式來管理使用者。
 
 <ol>
 <li>若要連接至 {{site.data.keyword.Bluemix_notm}} API 端點，請執行下列指令：<br/><br/>
@@ -90,12 +96,14 @@ cf login
 
 ### 新增使用者
 
-您可以從 LDAP 登錄，將使用者新增至您的 {{site.data.keyword.Bluemix_notm}} 環境。輸入下列指令： 
+您可以從環境的使用者登錄中，將使用者新增至您的 {{site.data.keyword.Bluemix_notm}} 環境。輸入下列指令： 
 
 ```
 cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
+
+**附註**：若要將使用者新增至特定組織，您必須是組織的管理員，或者必須具有 **Admin**（可用的替代項目是 **Superuser**）或具有 **Write** 存取權的 **User** 許可權。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -141,9 +149,9 @@ cf ba set-permissions <user_name> <permission> <access>
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
 <dt class="pt dlterm">&lt;permission&gt;</dt>
-<dd class="pd">設定使用者的許可權：Admin、Login、Catalog（讀取或寫入權）、Reports（讀取或寫入權）或 Users（讀取或寫入權）。</dd>
+<dd class="pd">設定使用者的許可權：Admin（可用的替代項目是 Superuser）、Login（可用的替代項目是 Basic）、Catalog（Read 或 Write 存取權）、Reports（Read 或 Write 存取權）或 Users（Read 或 Write 存取權）。</dd>
 <dt class="pt dlterm">&lt;access&gt;</dt>
-<dd class="pd">對於 Catalog、Reports 或 Users 許可權，您還必須將存取層次設定為 <code>read</code> 或 <code>write</code>。</dd>
+<dd class="pd">對於 Catalog、Reports 或 Users 許可權，您還必須將存取層次設定為<code>讀取</code>或<code>寫入</code>。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba sp** 作為較長的 **ba set-permissions** 指令名稱的別名。
@@ -260,7 +268,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 ### 設定組織的配額
 
-您可以設定特定組織的使用配額。
+您可以設定特定組織的用量配額。
 
 ```
 cf ba set-quota <organization> <plan>
@@ -286,7 +294,7 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
 
-**附註**：如果您有報告許可權的寫入權，則可以建立新的種類，並以使用者可以接受的任何格式來新增報告。請在 `category` 參數中輸入新的種類名稱參數，或是將您的新報告新增至現有種類。
+**附註**：如果您有報告許可權的寫入權，則可以建立新的種類，並以使用者可以接受的任何格式來新增報告。請在 `category` 參數中輸入新的種類名稱，或是將您的新報告新增至現有種類。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
@@ -371,8 +379,7 @@ cf ba disable-service-plan <plan_identifier>
 
 ### 新增、移除及編輯組織的服務可見性
 
-您可以從組織清單中新增或移除可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見特定服務的組織。您也可以編輯及取代特定組織可在 {{site.data.keyword.Bluemix_notm}}
-的「型錄」中看到的服務清單。
+您可以從組織清單中新增或移除可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見特定服務的組織。您也可以編輯及取代特定組織可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看到的服務清單。
 
 * 若要容許組織檢視 {{site.data.keyword.Bluemix_notm}}「型錄」中的特定服務，請輸入下列指令：
 
@@ -424,9 +431,9 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 **提示：**您也可以使用 **ba espv** 作為較長的 **ba edit-service-plan-visibility** 指令名稱的別名。
 
-### 使用服務分配管理系統
+### 處理服務分配管理系統
 
-下列指令可用來列出所有服務分配管理系統、新增或刪除服務分配管理系統，或更新服務分配管理系統。
+下列指令可用來列出所有服務分配管理系統、新增或刪除服務分配管理系統，或用來更新服務分配管理系統。
 
 * 您可以輸入下列指令來列出服務分配管理系統：
 
@@ -495,3 +502,186 @@ cf ba delete-service-broker <service_broker>
 </dl>
 
 **提示：**您也可以使用 **ba usb** 作為較長的 **ba update-service-broker** 指令名稱的別名。
+
+
+### 使用應用程式安全群組
+
+若要使用應用程式安全群組 (ASG)，您必須是本端或專用環境中具有完整存取權的管理者。環境的所有使用者都可以使用指令來列出組織中要設為目標的可用 ASG。不過，若要建立、更新或連結 ASG，您必須是 {{site.data.keyword.Bluemix_notm}} 環境的管理者。
+
+ASG 是當作虛擬防火牆使用，可控制 {{site.data.keyword.Bluemix_notm}} 環境中應用程式的出埠資料流量。每一個 ASG 都包含一份規則清單，可容許與外部網路之間的特定資料流量和通訊。您可以將一個以上的 ASG 連結至特定安全群組集（例如，用於套用廣域存取權的群組集），也可以連結至 {{site.data.keyword.Bluemix_notm}} 環境中組織內的空間。
+
+{{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許所有執行中應用程式或所有暫置應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
+
+**附註**：下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。
+
+#### 列出、建立、更新及刪除安全群組
+
+如需建立安全群組以及定義送出資料流量的規則的相關資訊，請參閱[建立應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}。
+
+* 您可以輸入下列指令來列出所有安全群組：
+
+```
+cf ba security-groups
+```
+{: codeblock}
+
+**提示：**您也可以使用 **ba sgs** 作為較長的 **ba security-groups** 指令名稱的別名。
+
+* 您可以輸入下列指令來顯示特定安全群組的詳細資料：
+
+```
+cf ba security-groups <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">安全群組的名稱</dd>
+</dl>
+
+**提示：**您也可以使用 **ba sg** 作為較長的 **ba security-groups** 指令名稱的別名，以與 `security-group` 參數搭配。
+
+
+* 您可以輸入下列指令來建立安全群組。您建立的每一個安全群組的名稱前面都會加上 `adminconsole_` 字首，以與 IBM 所建立的安全群組進行區別。
+
+```
+cf ba create-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">您的安全群組名稱</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">規則檔的絕對或相對路徑</dd>
+</dl>
+
+**提示：**您也可以使用 **ba csg** 作為較長的 **ba create-security-group** 指令名稱的別名。
+
+* 您可以輸入下列指令來更新安全群組：
+
+```
+cf ba update-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">您的安全群組名稱</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">規則檔的絕對或相對路徑</dd>
+</dl>
+
+**提示：**您也可以使用 **ba usg** 作為較長的 **ba update-security-group** 指令名稱的別名。
+
+* 您可以輸入下列指令來刪除安全群組：
+
+```
+cf ba delete-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">您的安全群組名稱</dd>
+</dl>
+
+**提示：**您也可以使用 **ba dsg** 作為較長的 **ba delete-security-group** 指令名稱的別名。
+
+
+#### 連結、取消連結及列出已連結的安全群組
+
+如需連結及取消連結安全群組的相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}及[取消連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}。
+
+* 您可以輸入下列指令來連結至 Default Staging 安全群組集：
+
+```
+cf ba bind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">您的安全群組名稱</dd>
+</dl>
+
+**提示：**您也可以使用 **ba bssg** 作為較長的 **ba bind-staging-security-group** 指令名稱的別名。
+
+* 您可以輸入下列指令來連結至 Default Running 安全群組集：
+
+```
+cf ba bind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">您的安全群組名稱</dd>
+</dl>
+
+**提示：**您也可以使用 **ba brsg** 作為較長的 **ba bind-running-security-group** 指令名稱的別名。
+
+* 您可以輸入下列指令來取消 Default Staging 安全群組集的連結：
+
+```
+cf ba cf ba unbind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">您的安全群組名稱</dd>
+</dl>
+
+**提示：**您也可以使用 **ba ussg** 作為較長的 **ba unbind-staging-security-group** 指令名稱的別名。
+
+* 您可以輸入下列指令來取消 Default Running 安全群組集的連結：
+
+```
+cf ba unbind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">您的安全群組名稱</dd>
+</dl>
+
+**提示：**您也可以使用 **ba brsg** 作為較長的 **ba bind-running-security-group** 指令名稱的別名。
+
+* 您可以輸入下列指令，將安全群組連結至一個空間：
+
+```
+cf ba bind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">您的安全群組名稱</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">要連結安全群組的組織名稱</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">組織內要連結安全群組的空間名稱</dd>
+</dl>
+
+**提示：**您也可以使用 **ba bsg** 作為較長的 **ba bind-security-group** 指令名稱的別名。
+
+* 您可以輸入下列指令來取消安全群組與空間的連結：
+
+```
+cf ba unbind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">您的安全群組名稱</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">要連結安全群組的組織名稱</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">組織內要連結安全群組的空間名稱</dd>
+</dl>
+
+**提示：**您也可以使用 **ba usg** 作為較長的 **ba unbind-staging-security-group** 指令名稱的別名。
+

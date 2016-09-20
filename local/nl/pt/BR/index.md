@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Última atualização: 7 de julho de 2016*
+*Última atualização: 16 de agosto de 2016*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} Local traz a eficiência e agilidade da plataforma baseada em nuvem do {{site.data.keyword.Bluemix_notm}} para seu datacenter. Com o
@@ -61,7 +61,11 @@ solução abrangente para criar, executar, gerenciar e impingir APIs e microsser
 possível importar APIs com recursos usando uma URL de proxy ou montando dados a partir de origens de dados HTTP. O
 benefício do uso do serviço {{site.data.keyword.APIM}}
 é que é possível gerenciar como suas APIs são usadas. |
-|Opcional | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | O {{site.data.keyword.cloudant}} fornece acesso a uma camada de dados do JSON NoSQL totalmente gerenciada que sempre está ativa. Esse serviço é compatível com o CouchDB e acessível por meio de uma interface HTTP simples de usar para modelos de aplicativos móveis e da web. |
+|Opcional | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | O {{site.data.keyword.cloudant}} fornece acesso a uma camada de dados do JSON NoSQL totalmente gerenciada que sempre está ativa. Esse serviço é compatível com o CouchDB e acessível por meio de uma interface HTTP simples de usar para modelos de aplicativos móveis e da web. Para
+obter mais informações, consulte a [documentação](http://docs.cloudant.com/BluemixLocal.html){: new_window} completa e os [requisitos de hardware](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} para um ambiente local. |
+|Opcional (Beta) | {{site.data.keyword.containershort}} | Execute os contêineres do Docker no {{site.data.keyword.Bluemix_notm}} Local. Contêineres são objetos de software virtuais que incluem todos os elementos que um aplicativo precisa
+executar. Um contêiner tem os benefícios do isolamento e da alocação de recursos,
+mas é mais móvel e eficiente do que, por exemplo, uma máquina virtual. |
 |Opcional | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | Esse serviço fornece uma grade de dados da memória
 que suporta cenários de armazenamento em cache distribuído para seus apps. Inclui
  50 GB de cache na memória. |
@@ -87,8 +91,7 @@ capacidade adicional de 100 mil chamadas API por mês. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise aumento de 100 mil Chamadas API | Uma extensão do ambiente do {{site.data.keyword.apiconnect_short}} Enterprise, para fornecer
 capacidade adicional de 100 mil Chamadas API por mês. |
 |Aumento de capacidade de 500 chamadas API do {{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} | Um ambiente que permite executar uma versão privada do {{site.data.keyword.APIM}} for {{site.data.keyword.Bluemix_notm}} com uma capacidade de 500 chamadas API por segundo. |
-|{{site.data.keyword.Bluemix_notm}} Cluster local do {{site.data.keyword.cloudant}} | Um ambiente que permite implementar um cluster de 3 nós do serviço do {{site.data.keyword.cloudant}}. 
-A capacidade de dados dos nós é determinada pela infraestrutura fornecida por você para o ambiente local. |
+|{{site.data.keyword.Bluemix_notm}} Cluster local do {{site.data.keyword.cloudant}} | Um ambiente que permite implementar um cluster de 3 nós do serviço do {{site.data.keyword.cloudant}}. A capacidade de dados dos nós é determinada pela infraestrutura fornecida por você para o ambiente local. |
 |Aumento incremental do {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local | Um ambiente adicional para a oferta de serviços de base do {{site.data.keyword.iot_full}} Local que permite executar uma versão privada do {{site.data.keyword.iot_full}} no ambiente local com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 0,5 TB de troca de dados. |
 
 
@@ -275,7 +278,13 @@ informações:
 <li>Forneça 7 endereços IP em sua rede. Se houver um proxy da web seguro que permita acesso de saída para a Internet para componentes internos do {{site.data.keyword.Bluemix_notm}}, então deve-se fornecer as credenciais para conectar a ele.
 <p>**Nota**: se o seu proxy da web não for seguro, então não será necessário fornecer as credenciais. Além disso, observe que nem todos os clientes do {{site.data.keyword.Bluemix_notm}} Local usam um proxy da web.</p></li>
 <li>A IBM fornece uma lista de desbloqueio de URLs à qual você deve ser permitido por meio do proxy da web antes de iniciar a implementação.<br />
-<p>**Nota**: A lista de desbloqueio de URLs contém websites como twitter.com, facebook.com e youtube.com. Se essas URLs não forem permitidas, determinados serviços e áreas do {{site.data.keyword.Bluemix_notm}} poderão não estar disponíveis para uso.</p>
+<p>**Nota**: Para assegurar que seus aplicativos existentes ou novos
+possam acessar os recursos necessários, você poderá ter de executar etapas adicionais para
+empacotar os recursos com o buildpack ou trabalhar com sua equipe de segurança para
+criar listas de desbloqueio das URLs necessárias para executar seus aplicativos. Para
+obter mais informações sobre como trabalhar com os buildpacks node.js e Liberty for Java,
+consulte <a href="../runtimes/nodejs/offlineMode.html">Modo off-line para node.js</a> e
+<a href="../runtimes/liberty/offlineMode.html">Modo off-line para Liberty for Java</a>.</p>
 </li>
 <li>Especifique os nomes de domínio para a implementação e os IDs que deseja usar. Você obtém dois domínios definidos parcialmente ao configurar sua instância local e selecione o prefixo para os dois domínios. Por exemplo, selecione o prefixo para <code>*mycompany*.bluemix.net</code> e <code>*mycompany*.mybluemix.net</code>. E, em seguida, também é possível escolher o domínio completo para criar um domínio customizado.
 <p>É possível escolher quantos domínios customizados desejar. No entanto, você é responsável pelos certificados dos domínios customizados. Para obter informações sobre como criar seu domínio customizado, veja <a href="../manageapps/updapps.html#domain">Criando e usando um domínio customizado</a>.</p></li>
@@ -424,7 +433,9 @@ O estágio final da conclusão representa o término do relacionamento entre voc
 ## Requisitos da infraestrutura local do {{site.data.keyword.Bluemix_notm}}
 {: #localinfra}
 
-Para {{site.data.keyword.Bluemix_notm}} Local, você possui a segurança física e a infraestrutura para hospedar a instância local. A IBM configura os requisitos mínimos a seguir para configurar o {{site.data.keyword.Bluemix_notm}} Local.
+Para {{site.data.keyword.Bluemix_notm}} Local, você possui a segurança física e a infraestrutura para hospedar a instância local.
+
+A IBM configura os requisitos mínimos a seguir para configurar o {{site.data.keyword.Bluemix_notm}} Local.
 
 ### Hardware
 
@@ -440,8 +451,8 @@ totais de recurso a seguir, sob a condição de que a contagem núcleo física m
 seguintes especificações são apenas para o tempo de execução
 principal do {{site.data.keyword.Bluemix_notm}}.
 <ul>
-<li>48 núcleos físicos a 2.0 GHz ou mais cada</li>
-<li>756 GB de RAM física</li>
+<li>32 núcleos físicos a 2.0 GHz ou mais cada</li>
+<li>512 GB de RAM física</li>
 <li>Tamanho total de armazenamento de dados de 7.5 TB
 <ul>
 <li>Armazenamento de dados de 7 TB para manter
@@ -455,8 +466,13 @@ dados, use o mesmo prefixo para cada um.</p>
 </dd>
 <dt>**Alta disponibilidade**</dt>
 <dd>
-Para suportar uma única falha de nó, deve-se ter n+1 ESXi. Por exemplo, se três ESXis forem usados, significando 16x núcleos cada, então, um quarto será necessário.
-<p><strong>Nota:</strong> O administrador VMware do cliente pode decidir impingir o failover de alta disponibilidade rigorosa no cluster para garantir os recursos.</p>
+Para suportar uma única falha de nó, deve-se ter n+1 ESXi. Por exemplo, se o núcleo 32 e
+512 GB de memória for encontrado usando dois núcleos de 16x com servidores ESXi de 256
+GB, você precisará de três desses servidores para suportar uma falha completa de um único
+nó. <p><strong>Nota:</strong> O administrador do VMware do cliente pode decidir forçar o
+failover de alta disponibilidade rigorosa no cluster para garantir os recursos. Se você
+optar por continuar sem failover de alta disponibilidade, poderá atender ao requisito
+mínimo de recurso de 32 núcleos e 512 GB.</p>
 </dd>
 <dt>**Rede**</dt>
 <dd>
@@ -552,9 +568,9 @@ posts de arquivos para os armazenamentos de dados.</dd>
 
 ### Aumentando o conjunto de Droplet Execution Agent (DEA)
 Cada DEA é configurado com:
-- 16 - 32 GB de RAM
-- 2x - 4x vCPU
-- 150 - 300 GB de armazenamento
+- 16 ou 32 GB de RAM
+- vCPU de 2x ou 4x
+- 150 ou 300 GB de armazenamento
 
 Por exemplo, se o tamanho do host ESXi for 256 GB
 de memória com 16x núcleos, então serão incluídos oito DEAs. Se o tamanho do host ESXi for 64 GB de memória com

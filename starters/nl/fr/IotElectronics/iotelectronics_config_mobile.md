@@ -24,7 +24,7 @@ appareils connectés.
 {:shortdesc}
 
 Procédez comme suit :
-1. [Téléchargez l'application mobile](#iot4e_downloadmobile). 
+1. [Téléchargez l'application mobile](#iot4e_downloadmobile).
 2. [Configurez {{site.data.keyword.amafull}}](#iot4e_configureMCA).
 3. [Connectez votre périphérique mobile à l'environnement {{site.data.keyword.iotelectronics}}](#iot4e_connecting_mobile).
 4. [Enregistrez et contrôlez un dispositif sur votre périphérique mobile](#iot4e_adding_appliance).

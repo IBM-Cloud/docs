@@ -9,7 +9,7 @@ copyright:
 
 # Cómo empezar con el ejemplo de Hello Bluemix for Cordova
 {: #gettingstarted-cordova}
-*Última actualización: 27 de mayo de 2016*
+Última actualización: 27 de mayo de 2016
 {: .last-updated}
 
 Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utilizar la app HelloWorld. Esta app muestra cómo conectar con el backend móvil en {{site.data.keyword.Bluemix}} desde una app móvil sin autenticación. La app la tiene instalado el SDK. Cuando esté listo, puede obtener las bibliotecas específicas que desee utilizar en la app.
@@ -29,12 +29,14 @@ Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utiliz
 3. Ejecute los siguientes mandatos desde su directorio de proyecto para añadir los entornos de plataforma Android e iOS:
 
 	### Android
+	{: #cordova-android-run}
 
 	```Bash
 	cordova platform add android
 	```
 
 	### iOS
+	{: #cordova-ios-run}
 
 	```Bash
 	cordova platform add ios
@@ -54,19 +56,20 @@ Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utiliz
 		**Nota:** Compruebe que su ruta es segura utilizando el protocolo https.
 
 		```Javascript
-		// Bluemix credentials
-		route: "<RUTA_APLICACIÓN>",
-		GUID: "<GUID_APLICACIÓN>",
+		// Credenciales de Bluemix
+		route: "<APPLICATION_ROUTE>",
+		GUID: "<APPLICATION_GUID>",
 		```
 
 6. Configure su app Cordova para iOS. La plataforma Android no requiere configuración adicional.
 
 	### iOS
+	{: #cordova-ios-configure}
   Configure su proyecto de Xcode como se indica a continuación, para evitar errores de compilación.
 
 	1. Utilice la versión más reciente de Xcode para abrir el archivo `xcode.proj` en el directorio *&lt;nombre_app&gt;*/platforms/ios.
 
-		**Importante:** Si recibe un mensaje solicitando si desea convertir a la última sintaxis Swift, pulse **Cancelar**.
+		**Importante:** Si recibe un mensaje para convertir a la última sintaxis Swift, pulse **Cancelar**.
 
 	2. Vaya a **Valores de compilación > Compilador de Swift - Generación de códigos > Cabecera puente de Objective-C** y añada la siguiente vía de acceso:
 
@@ -83,6 +86,7 @@ Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utiliz
 7. Compile y ejecute el ejemplo en su dispositivo o emulador de dispositivo móvil.
 
   ### Android
+  {: #cordova-android-build}
 	1. Compile la app de Cordova utilizando el mandato siguiente:
 
     **Importante:** Antes de abrir su proyecto en Android Studio, primero debe compilar su aplicación de Cordova mediante la interfaz de línea de mandatos (CLI) de Cordova. De lo contrario, se encontrará con errores de compilación.
@@ -94,6 +98,7 @@ Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utiliz
 	2. Ejecute la app de ejemplo en Android Studio.
 
   ### iOS
+  {: #cordova-ios-build}
   1. Compile la app de Cordova en Xcode.
 
     **Consejo:** Compilar en Xcode ofrece más opciones, como la depuración y la configuración del proyecto.
@@ -102,16 +107,22 @@ Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utiliz
 
 Se mostrará una aplicación de vista única con un botón **PING BLUEMIX**. Cuando pulse el botón, la aplicación probará la conexión del cliente a la aplicación {{site.data.keyword.Bluemix_notm}} de fondo. La conexión se prueba utilizando la ruta de la aplicación que haya especificado en el archivo `index.js`.
 
+<!--
+![Hello World application successfully connected to Bluemix](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+-->
 
-![Aplicación Hello World conectada correctamente a Bluemix](images/yayconnected.jpg "Figura 1. Aplicación Hello World conectada correctamente a Bluemix")
-
-
-Cuando se conecte correctamente a {{site.data.keyword.Bluemix_notm}} desde la app móvil, se mostrará un mensaje parecido a "¡Se ha conectado!".
+  Cuando se conecte correctamente a {{site.data.keyword.Bluemix_notm}} desde la app móvil en Android Studio, verá:
+  `¡Se ha conectado!`
+  {: screen}
 
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
-Si la conexión falla, se muestra un mensaje de error. En el mensaje se incluye más información sobre el error. Puede comprobar los siguientes elementos para resolver el error:
+Si la conexión falla, verá:
+  `Algo salió mal`
+  {: screen}
+   
+En el mensaje se incluye más información sobre el error. Puede comprobar los siguientes elementos para resolver el error:
 
 - Compruebe que ha pegado correctamente los valores de ruta y de GUID:
 - Visualice el registro de depuración de Xcode o Android.

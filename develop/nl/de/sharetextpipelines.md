@@ -189,8 +189,7 @@ Bevor die Pipeline aus einer Datei des Typs `pipeline.yml` erstellt wird, werden
         target:
           url: http://api.ng.bluemix.net
           organization: ${CF_ORGANIZATION}
-        script: \"echo ${CF_ORGANIZATION}\"                
-      ...
+        script: \"echo ${CF_ORGANIZATION}\"...
     "
   }
 }

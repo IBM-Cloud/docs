@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Last updated: 16 August 2016
+Last updated: 1 September 2016
 {: .last-updated}
 
 If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
@@ -41,7 +41,7 @@ If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{si
 ## Notifications and event subscriptions
 {: #oc_eventsubscription}
 
-You can always know the status of your environment by checking the Status page. As they occur, incidents are reported on the Status page. {{site.data.keyword.Bluemix_notm}} also sends notifications to the Notifications area on the Administration page for events such as scheduled or pending maintenance updates.
+You can always know the status of your environment by checking the Status page. As they occur, incidents and scheduled disruptive maintenance update events are reported on the Status page. {{site.data.keyword.Bluemix_notm}} also sends notifications to the Notifications area on the Administration page for events such as scheduled or pending maintenance updates.
 
 ### Notifications
 
@@ -51,17 +51,21 @@ You can view notifications for your local or dedicated environment to monitor th
 
 | **Event Type** | **Notification method** |       
 |-----------------|-------------------|
-| Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications area on the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**. You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice. |
+| Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications area on the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**.|
+|  | You are also alerted about scheduled disruptive maintenance update events on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**.|
+|  | You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.|
 | Critical incidents | You are alerted about critical incidents on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that sends an email to a recipient of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  |  
 | {{site.data.keyword.Bluemix_notm}} Status | You can always view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**.  |
 
 ### Setting up event subscriptions
 
-You can extend the functionality of the notifications that are sent to the Administration page and the Status page by using event subscriptions to set up a custom email or use webhooks to integrate with a tool of your choice. If you select the webhooks option, your notifications are routed directly to a destination of your choice, such as a phone number (by SMS message). You can customize the type of notification, specifically maintenance updates or critical incident alerts, and the information that is included in the body of each notification.
+You can extend the functionality of the notifications that are sent to the Administration page and the Status page by using event subscriptions. Use event subscriptions to set up a custom email or use webhooks to integrate with a tool of your choice. 
+ * If you select the email option, your notifications are sent to the email addresses you specify. You can select notifications of incidents or maintenance updates. An initial email notification is sent. Then, if the incident or maintenance update has a change made to it, another notification with the change is sent each time a change is made.  
+ * If you select the webhooks option, your notifications are routed directly to a destination of your choice, such as a phone number (by SMS message). You can customize the type of notification, specifically maintenance updates or critical incident alerts, and the information that is included in the body of each notification.
 
 **Note**: Only users with the Superuser permission (`ops.admin`) can set up event subscriptions.
 
-To access the **Event Subscriptions** page, complete the following steps:
+You can access the **Event Subscriptions** page, in one of the following ways:
 
 * For maintenance update notifications, go to **SYSTEM INFORMATION &gt; *Number* pending &gt; Subscriptions**.
 * For incident notifications, click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg) &gt; **Status**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
@@ -82,12 +86,12 @@ To create an email or webhook subscription from the **Event Subscriptions** page
 
 | **Field** | **Description** |
 |-----------------|-------------------|
-| Type | Select **Email**. |
-| Event | Select to be subscribed to notifications for an Update or Incident. |
 | Enabled | Select the option to enable the email notifications. Clear the selection to disable the email notification. Subscriptions are enabled by default. |
+| Type | Select **Email**. |
+| Event | Select to be subscribed to notifications for a **Maintenance** or **Incident** event. |
 | Combine notifications | Select the option to combine the incident notifications for all regions into a single notification. This option is available for incidents only. |
 | Subject | Enter the subject line for the email. This is a required field.  |
-| Body | Enter the message body text to be sent in the email. You can use the IBM payload values to populate the email notification with pertinent information. See the [Payload section values](index.html#payload) table to identify which values you can use. Use basic HTML tags to structure your email. If you do not enter information in this section, you receive a notification that does not have any additional information. This is a required field. |
+| Body | Enter the message body text to be sent in the email. You can use the IBM payload values to populate the email notification with pertinent information. See the [Payload section values](index.html#payload) table to identify which values you can use. Use basic HTML tags to structure your email. This is a required field. |
 | To | Enter the email address or addresses using a comma-separated list for the recipients of the email notification. Expand the "cc" or "bcc" options to copy others on the email. This is a required field. |
 | Description | Add a unique description for the subscription that you are creating. |
 
@@ -96,10 +100,10 @@ To create an email or webhook subscription from the **Event Subscriptions** page
 
 | **Field** | **Description** |
 |-----------------|-------------------|
+| Enabled | Select the option to enable the notification. Clear the selection to disable the notification. Subscriptions are enabled by default. |
 | Type | Select **Webhook** |
 | Method | Select **GET** or **POST**. |
-| Event | Select to be subscribed to notifications for an Update or Incident. |
-| Enabled | Select the option to enable the notification. Clear the selection to disable the notification. Subscriptions are enabled by default. |
+| Event | Select to be subscribed to notifications for a **Maintenance** or **Incident** event. |
 | Combine notifications | Select the option to combine the incident notifications for all regions into a single notification. This option is available for incidents only. |
 | URL | Enter the URL to connect to your web service. |
 | Description | Add a unique description for the subscription that you are creating. |
@@ -112,26 +116,29 @@ To create an email or webhook subscription from the **Event Subscriptions** page
 
 | **IBM value** | **Description** | **Event type** |
 |----------------|----------------|------------------------|
-| {{content.title}} | Message title |  Update and incident  |
-| {{type}} | Update or incident | Update and incident |
-| {{region}} | Affected region | Update and incident |
-| {{content.message}} | Message description |   Update and incident  |
+| {{content.title}} | Message title |  Maintenance update and incident |
+| {{content.message}} | Message description |   Maintenance update  and incident |
+| {{region}} | Affected region | Maintenance update  and incident |
 | {{content.severity}} | Severity rating | Incident |
 | {{content.category}} | Affected services | Incident |
 | {{content.subCategoryName}} | Affected components | Incident |
-| {{status}} | Status of the update | Update |
-| {{content.scheduleWindow.start}} | The scheduled start date for the update | Update |
-| {{content.scheduleWindow.end}} | The scheduled end time for the update | Update |
-| {{content.disruption}} | Affected components | Update |
+| {{status}} | Status of the update | Maintenance update |
+| {{content.scheduleWindow.start}} | The scheduled start date for the update | Maintenance update |
+| {{content.disruption}} | Affected components | Maintenance update |
+| {{type}} | Update or incident | Maintenance update and incident |
+| {{content.scheduleWindow.end}} | The scheduled end time for the update | Maintenance Update |
 
-When your event subscription is saved, you receive notifications through the method that you set up. Notifications still post on the Status page for incidents and in the Notifications area of the Administration page for maintenance updates.
+When your event subscription is saved, you receive notifications through the method that you set up. Notifications still post in the following locations:  
+ * On the Status page for incidents 
+ * On the Status page for the scheduled disruptive maintenance update events
+ * In the Notifications area of the Administration page for maintenance updates
 
 You can select any saved event subscription, view the recent activity, or edit as you need. Click to expand any recent activity entry to view the history details.
 
 ## Maintenance updates
 {: #oc_schedulemaintenance}
 
-You can view scheduled and pending maintenance updates by going to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending** to access the **System Updates** page.
+You can view scheduled and pending maintenance updates, if you have the superuser permission (`ops.admin`), by clicking **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending** to access the **System Updates** page.  All users of your environment can view the scheduled disruptive maintenance update events by clicking the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg) and then selecting **Status**.
 
 **Note**: See the following section for [Setting preapproved maintenance windows](index.html#preapprovedmaintenance) to get you started. These windows must be set in order for IBM to schedule maintenance for your environment.
 
@@ -239,27 +246,41 @@ You can view different types of usage information for your local or dedicated in
 
 - Resource information including disk space, CPU usage, network usage, and average response times. See [Resource usage](index.html#resourceusage).
 - Account usage per org including number of runtime apps with usage, total number of runtime GB-hours, and the number of service instances with usage. See [Account usage](index.html#accountusage).
-- Org memory quota usage, allocated app memory based on the total used memory quota, and a view of GB-hour usage per app for a specific org. You can also view quota usage for all orgs on the  Organization Administration page in the Quota monitoring section. See [Organization administration](../admin/index.html#orgusage).
+- Org memory quota usage, allocated app memory based on the total used memory quota, and a view of GB-hour usage per app for a specific org. You can also view quota usage for all orgs on the  Organization Administration page in the **Quota Monitoring** section. See [Organization administration](../admin/index.html#orgusage).
 
 
 ### Resource usage
 {: #resourceusage}
 
-To view resource usage information, click **ADMINISTRATION &gt; USAGE**.
+To view resource usage information, click **ADMINISTRATION &gt; Resource Usage**.
 
-In the Resource Monitoring section, you can view the following
-information:
+In the **Resource Usage** section, you can view the following information:
 
-- Resource usage information, such as how many GB of memory and how many GB of disk space are
-used. You can view the CPU usage averaged across all droplet execution agents (DEAs). Click the
-**CPU** tile, and you can see the CPU usage for each DEA. The DEA with the
-highest usage is listed first, and each is identified by their job and IP address. The CPU usage is
-separated into three categories that include amount of CPU spent in system processes, amount of CPU
-spent in user processes, and amount of CPU spent in waiting processes.
-- Network usage information for bandwidth in and bandwidth out, over the past day, week, or month.
-The data that is displayed is based on the sum of in and out traffic for both public and private
-networks.
-- Average response time for {{site.data.keyword.Bluemix_notm}} over the past 10 minutes, hour, and day.
+- Resource usage information, such as how much memory and disk space can be reserved and how much is physically available, and how much memory and disk space is actually reserved and how much is physically used.  You can also see information about the CPU usage averaged across all droplet execution agents (DEAs). To see the usage of your memory, disk, or CPU by DEA, click **Breakdown**.  
+You can see a summary of the **Reserved** and **Physical** amounts for your memory and disk.    
+	<dl>
+	<dt><strong>Physical</strong></dt>
+	<dd>The amount of memory or disk space that was purchased for your environment.  </dd>
+	<dt><strong>Reserved</strong></dt>
+	<dd>The total amount of memory or disk space that is available to be reserved by all deployed and running applications in your environment. Because applications rarely use all of the memory that is reserved by them, the physical value is usually less than the reserved value.</dd>
+	</dl>
+
+	In addition to the graphical representation, you can see the percentage of memory and disk space that your environment is using.  You can also see both the reserved and the physical amounts, in GB, of the actual usage compared to the amount that is available. 
+To see more detailed information about your physical and reserved memory usage, click **History.** You can specify the time frame to view as either weekly or monthly. The **Historical Memory Usage** view shows a graph of memory usage over the time you choose.  
+
+	<dl>
+	<dt><strong>Reserved Limit</strong></dt>
+	<dd>Shown as a horizontal dotted line, the Reserved Limit is the total amount of memory that can be collectively reserved by all of the applications running in your environment.</dd>
+	<dt><strong>Reserved</strong></dt>
+	<dd>The Reserved area shows the memory that is currently collectively reserved by all of the applications running in your environment. 
+	<p>To see which organizations have reserved the most memory at a particular point in time, hover over the dot along the  Reserved area that is associated with that point in time. You can then click an organization in the pie chart that is displayed to see more information about that organization.</p></dd>
+	<dt><strong>Physical Limit</strong></dt>
+	<dd>Shown as a horizontal dotted line, the Physical Limit shows the amount of physical memory that was purchased for your environment.</dd>
+	<dt><strong>Physical</strong></dt>
+	<dd>The Physical area shows the amount of memory that is actually being used.</dd>
+	</dl>
+- Network usage information for bandwidth in and bandwidth out, over the past 6 hours or day. The data that is displayed is based on the sum of in and out traffic for both public and private networks.
+- Average response time for {{site.data.keyword.Bluemix_notm}} over the past 10 minutes, 1 hour, and 1 day.
 - Average transactions per second for
 {{site.data.keyword.Bluemix_notm}} over the past 10
 minutes, hour, and day.
@@ -267,7 +288,9 @@ minutes, hour, and day.
 ### Account usage
 {: #accountusage}
 
-You can view the monthly usage for your account for your dedicated or local environment. You can use this data to identify how much to charge specific orgs based on their usage.
+You can view the monthly usage for your account for your dedicated or local environment. You can use this data to identify how much to charge specific orgs based on their usage. All admin console users that are assigned the **Users** permission with **Read** access can view the account usage data. In addition, organization billing managers can view the account usage data for their organizations, even if the billing manager does not have the admin console **Users** permission assigned. As an admin console administrator (superuser permission), you can assign the billing manager role for organizations by clicking the  **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg) &gt; **Manage organizations**.
+
+To view account usage data, complete these steps:
 
 <ol>
 <li>Click the <strong>{{site.data.keyword.avatar}}</strong> icon ![Avatar](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Usage details</strong>.</li>
@@ -331,7 +354,7 @@ filter your search by **Administration Events**, **DataPower Reports**, **Firewa
 - When displaying a report or log, you can click the ![Download](images/icon_download.png)
 icon to download the report.
 
-The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated.
+The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated. Most reports are generated on a daily basis. However, the encryption and key management events reports are generated monthly. All reports are retained for 90 days in the administration console for your retrieval. After that 90 days, the reports are available offline per request from {{site.data.keyword.Bluemix_notm}} for 9 months. In total, reports are available for retrieval for up to 1 year.
 
 *Table 6. Security report list*
 
@@ -563,47 +586,38 @@ You can create spaces in your organization; for example, a *dev* space as a deve
 
 ### Quota monitoring
 
-In the Quota Monitoring section, you can expand the section and view the following information:
+You can expand the **Quota Monitoring** section to view the following information:
 
-**Note**: The data is automatically refreshed every 4 hours. Click **Recalculate**, if you want to refresh the data on the page before it is automatically updated.
-
-- Environment memory usage. This section details the memory usage for the full system environment.
-	The chart provides information that includes used system memory, total system memory, quota that is
-	used, and the total quota allocated. The following list of terms defines the types of memory usage
-	that are displayed in the chart.
+- Environment memory usage details the memory usage for the full system environment. The chart shows the following information: 
+<ul>
+<li>The physical memory that is in use and the limit of physical memory</li>
+<li>the quota of memory reserved and the limit of reserved memory</li>
+<li>the total quota of memory for your organizations</li>
+</ul>
+The following types of memory usage are displayed in the chart.
 
 	<dl>
-	<dt><strong>Used system memory</strong></dt>
+	<dt><strong>Physical Used</strong></dt>
 	<dd>The physical memory that is used by your environment.</dd>
-	<dt><strong>Total system memory</strong></dt>
+	<dt><strong>Physical Limit</strong></dt>
 	<dd>The total physical memory that is available to your environment.</dd>
-	<dt><strong>Quota deployed</strong></dt>
-	<dd>The sum of memory that is allocated for all deployed apps, across all organizations. The sum of
-	the quota deployed can exceed the physical total system memory for your environment. For example, if
-	you have a total system memory of 16 GB, and you allocate 4 GB of memory each for a total of five
-	different organizations, the total quota exceeds the total system memory that has been allocated to
-	you for all organizations. However, in many cases, the organizations might not use the total quota
-	that is allocated individually to each organization. In addition, all organizations might not use
-	their total quota allocation of memory all at the same time. </dd>
+	<dt><strong>Quota Reserved</strong></dt>
+	<dd>The sum of memory that is reserved for all deployed applications, across all organizations. The sum of the quota that is reserved can exceed the physical limit of memory for your environment. For example, if you have a physical memory limit of 16 GB, you could reserve 4 GB of memory each for a total of five different applications. The quota that is reserved exceeds the physical limit of memory. However, in many cases, the applications might not use the total quota that is reserved individually to each application. In addition, all applications might not use
+	their total quota of reserved memory all at the same time.</dd>
+	<dt><strong>Reserved Limit</strong></dt>
+	<dd>The total memory that can be reserved across all applications for your environment.</dd>
 	<dt><strong>Total quota</strong></dt>
-	<dd>The total memory that is allocated across all organizations.</dd>
+	<dd>The total memory quota across all organizations.</dd>
 	</dl>
+	**Note**: The data is automatically refreshed every 4 hours. Click **Recalculate** if you want to refresh the data on the page before it is automatically updated.
 
-- Organization memory usage. This section details the memory usage at an organization level. You
-	can view the total quota allowance and the quota that is deployed for each organization. The chart
-	provides information that is listed by highest memory usage per organization, and the organization
-	that uses the largest amount of memory, by default, is listed first. You can sort by
-	** Highest Memory Usage** and **Excess Memory Allocation**.
+- Organization memory usage. This section details the memory usage at an organization level. You can view the total memory quota, the quota that is reserved, and the physical memory used by each organization. The chart provides information that is listed by highest memory reserved per organization, and the organization that reserves the largest amount of memory, by default, is listed first. You can sort by **Highest Memory Usage** and **Excess Memory Allocation**.
 
 	<dl>
 	<dt><strong>Highest Memory Usage</strong></dt>
-	<dd>Use this option to identify the org using the greatest amount of memory. Sort by highest memory
-	usage to identify the organizations that are using the most amount of memory. The list is sorted by
-	quota deployed. </dd>
+	<dd>Use this option to identify the organization that has reserved the greatest amount of memory. Sort by highest memory usage to identify the organizations that have reserved the most amount of memory. The list is sorted by quota reserved. </dd>
 	<dt><strong>Excess Memory Allocation</strong></dt>
-	<dd>Use this option to identify organizations that have a quota plan that is larger than needed.
-	Sort by excess memory usage to identify organizations that are using the lowest amount of memory for
-	the quota that has been allocated for the org. </dd>
+	<dd>Use this option to identify organizations that have a total memory quota which is larger than needed. Sort by excess memory usage to identify organizations that are using the lowest amount of memory for the quota that has been allocated for the org. </dd>
 	</dl>
 
 ### Adjusting quota plans
@@ -643,16 +657,29 @@ In the Organization List section, you can view all organizations in the
 ## Managing users and permissions
 {: #oc_useradmin}
 
-You can add users singly or in groups, and view user permissions. Commonly, users are added to your {{site.data.keyword.Bluemix_notm}} instance from your company's user registry through Lightweight Directory Access Protocol (LDAP). If you are assigned **Superuser** permission, you can also set and manage permissions for other users. Click **ADMINISTRATION &gt; USER ADMINISTRATION**.
+You can add users singly or in groups. Commonly, users are added to your {{site.data.keyword.Bluemix_notm}} instance from your company's user registry through Lightweight Directory Access Protocol (LDAP). You can also view user permissions. If you are assigned **Superuser** permission, you can also set and manage permissions for other users. Click **ADMINISTRATION &gt; USER ADMINISTRATION**.
 
 The User Administration page displays all users for the local or dedicated instance. Permissions for each user are displayed using icons in the table. Permissions can be the following: None, **Superuser**, **Basic Access**, **Catalog**, **Reports**, and **Users**.
-The **Superuser** and **Basic Access**` permissions can be set to **On** or **Off**, while the remaining permissions are enabled or disabled with specific access types, including **Read** or **Write** access for that permission, as represented by icons. See [Permissions](#permissions) for descriptions of each type and explanation of the icons.
+The **Superuser** and **Basic Access** permissions can be set to **On** or **Off**, while the remaining permissions are enabled or disabled with specific access types, including **Read** or **Write** access for that permission, as represented by icons. See [Permissions](#permissions) for descriptions of each type and explanation of the icons.
 
 ### Working with users
 
-Depending on your **Read** or **Write** access for the users' permissions, you can search for existing users, remove users, and add users individually or by a group. Note that if you have the **Superuser** permission, you have full access to complete any tasks for user management in the environment. Review the following user management tasks and the level of access needed to complete each task:
+Depending on your **Read** or **Write** access for the users' permissions, you can search for existing users, remove users, and add users individually or by a group. If you have the **Superuser** permission, you have full access to complete any tasks for user management in the environment. Review the following user management tasks and the level of access needed to complete each task:
 
-* Locate users. If have **Read** or **Write** access and you know all or part of the user name, you can locate users in the table by using the **Search** field.
+* Locate users. If have **Read** or **Write** access and you know all or part of the user name, you can locate users in the table by using the **Search** field. You can also filter the list of users by their organization and permissions. To filter a list of users, complete these steps:
+  <ol>
+  <li>Click <strong>Filter</strong>.</li>
+  <li> Click <strong>Organizations</strong> or <strong>Permissions</strong>, depending on which you want to filter by.
+  <dl>
+	<dt><strong>Organization</strong></dt>
+	<dd>To filter users by their organization, begin typing the organization name in the <strong>Organization</strong> field and select the organization from the list. Then select the role, or roles, assigned to the users within the organization.</dd>
+	<dt><strong>Permissions</strong></dt>
+	<dd>To filter users by their permissions, first select the type of user, or users. For example, you might want to see all of the Superusers. For permissions other than <strong>Superuser</strong> or <strong>Basic Access</strong>, you can also select the type of access, for example <strong>Read</strong> or <strong>Write</strong>.</dd>
+	</dl></li>
+  <li>Click <strong>Apply</strong>.</li>
+   </ol>
+
+   The User Administration window shows the filters that you set and the users that resulted from the specified filters. You can then search for a user in the filtered table. You can also modify the list of specified filters by removing a filter option from the list.
 
 * Add a single user. If you have **Superuser** permission or
 **Users** permission with **Write** access, you can add users.
@@ -706,25 +733,17 @@ Depending on your **Read** or **Write** access for the users' permissions, you c
 ### Permissions
 {: #permissions}
 
-Users can be assigned the following permissions with specific access levels that enable the user to complete specific tasks:
+Users can be assigned the following permissions with specific access levels (read or write) that enable the user to complete specific tasks within the admin console.
 
 *Table 7. Permissions*
 
 | **User permission** | **Description** |       
 |-----------------|-------------------|
-| Superuser | Users with **Superuser** permission set to **On** are allowed to edit permissions for other users. If you have the permission on, it automatically enables full access to all other permissions. In addition to the tasks outlined for each permission in this table, the  can also set up event subscriptions to get alerted directly about maintenance or incidents, schedule maintenance, run verification checks on console components, and create orgs and spaces for the environment. |
-| Basic Access | Users with **Basic Access** permission set to **On** are allowed to see the Administration page option in the {{site.data.keyword.Bluemix_notm}} user interface. Users with the permission enabled can access the [System Information](#oc_system) and [Resource Usage](#oc_resource) tiles. Without this permission, users cannot see or access the Administration menu option. |
+| Superuser | Users with **Superuser** permission set to **On** are allowed to edit permissions for other users. If you have the permission on, it automatically enables full access to all other permissions. In addition to the tasks outlined for each permission in this table, they can also set up event subscriptions to get alerted directly about maintenance or incidents, schedule maintenance, run verification checks on console components, and create orgs and spaces for the environment. This permission is equivalent to the administrator (admin) role for the admin console.  |
+| Basic Access | Users with **Basic Access** permission set to **On** are allowed to see the Administration page option in the {{site.data.keyword.Bluemix_notm}} user interface. Users with the permission enabled can access the [System Information](#oc_system) and [Resource Usage](#oc_resource) tiles. Without this permission, users cannot see or access the Administration menu option. This permission is equivalent to the administrator (admin) role for the admin console. This permission is equivalent to the previously used login permission for the admin console. |
 | Catalog | Users with **Catalog** permission can be assigned the access to **Read** or **Write** (modify) which services are available in the local or dedicated instance. Read access allows the user to access the Catalog Management tile to view available services. Write access allows the user to access the [Catalog Management](#oc_catalog) tile to view services, edit the visibility of services, register custom services, and control the buildpack priority list. |  
 | Reports | Users with **Reports** permission can be assigned the access to **Read** or **Write** (modify) security reports. Read access allows the user to access the Reports and Logs tile to download reports. Write access allows the user to view the [Reports and Logs](#oc_report) tile as well as use the CLI to upload new reports and create new categories for users to access. |
 | Users | Users with **Users** permission can be assigned the access to **Read** (view) the list of users or **Write** (add or remove) users. This permission doesn't allow you to set permissions for other users. Write access allows the user to add new users to the environment, delete users from the environment, and add existing users to organizations that already exist within the environment. In addition, **Write** access allows the user to add new organizations, delete organizations, and edit the users within the organizations. |
-
-
-Permissions can be enabled for the user with either **Read** or
-**Write** access for that permission, as represented by the following icons:
-
-* The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon associated with a permission means that it is enabled.
-* The ![Read, represented by an eye](images/icon_read.svg) icon means that the user has **Read** (read-only) access for that permission.
-* The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has **Write** (edit, add, or remove) access for that permission.
 
 
 ## Managing users with the Admin REST API

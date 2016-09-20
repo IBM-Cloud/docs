@@ -195,7 +195,7 @@ Wenn Sie sicherstellen möchten, dass die Anwendung nach ihrer Änderung für {{
 ## Zugehörige Links
 {: #general}
 
-* [IBM Containers](../containers/container_cli_ov.html)
+* [IBM Containers](../containers/container_index.html)
 * [Virtual Machines](../virtualmachines/vm_index.html)
 * [Einführung in Delivery Pipeline](../services/DeliveryPipeline/index.html)
 * [Apps mit IBM Eclipse Tools for Bluemix bereitstellen](../manageapps/eclipsetools/eclipsetools.html)

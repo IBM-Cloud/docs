@@ -17,18 +17,48 @@ copyright:
 
 # Gerenciando a sua conta do {{site.data.keyword.Bluemix_notm}}
 {: #mngacct}
-*Última atualização: 12 de julho de 2016*
+*Última atualização: 16 de agosto de 2016*
 {: .last-updated}
 
-Acesse o ícone **Conta e suporte**
-![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** para configurar notificações para
-a sua conta, visualizar o uso de sua conta ou visualizar a sua conta.
+Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-avatar-icon.svg) &gt; **Conta** para configurar notificações para sua conta, visualizar o uso da conta ou a fatura.
 {:shortdesc}
+
+## Inscrevendo-se para o {{site.data.keyword.Bluemix_notm}}
+{: #signup}
+
+É possível se inscrever para uma conta {{site.data.keyword.Bluemix_notm}} usando um ID IBM existente, criando um novo ou usando um ID federado. Um ID federado é um ID dentro do domínio de uma empresa que foi registrado na IBM para que as credenciais do domínio e do usuário possam ser usadas para acessar aplicativos da web IBM.  
+
+Um ID federado poderá ser usado para se inscrever para o
+{{site.data.keyword.Bluemix_notm}} somente se sua empresa já tiver trabalhado
+com a IBM para se registrar. O registro do domínio de uma empresa na IBM permite que
+os usuários efetuem log-in nos produtos e serviços IBM usando suas credenciais de usuário
+da empresa existentes. A autenticação então é manipulada pelo provedor de identidade da
+sua empresa. Quando você efetuar log-in no {{site.data.keyword.Bluemix_notm}} com
+um ID federado, será solicitado a efetuar log-in por meio da página de log-in de sua
+empresa. Para obter informações sobre como solicitar o registro do domínio da sua empresa ou
+organização na IBM, ou para obter mais informações sobre o processo, consulte o
+[IBMid Enterprise Federation
+Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Um patrocinador IBM, como um defensor da oferta
+ou do cliente, é necessário quando você solicita o registro de IDs federados.
+
+*Tabela 1. Métodos de inscrição*
+
+| Métodos de inscrição | Detalhes |    
+|-----------------|---------|
+|ID IBM existente | Se você já tiver um ID IBM, inscreva-se para o {{site.data.keyword.Bluemix_notm}} com suas credenciais existentes que você usa para outros produtos e serviços IBM. É necessário inserir um número de telefone ao se inscrever. |
+|Novo ID IBM | Se você ainda não tiver um ID IBM, poderá selecionar para criar um. O ID IBM permite que você use um nome de usuário de login para todos os produtos e serviços IBM utilizados, incluindo o {{site.data.keyword.Bluemix_notm}}. É necessário inserir suas informações pessoais, incluindo nome e sobrenome, número de telefone e a senha para as novas credenciais. É possível usar esse ID IBM para efetuar login ao usar outros produtos e serviços IBM.  |
+|ID federado | Se sua empresa solicitou o registro das credenciais do usuário a partir
+do domínio de sua empresa na IBM, será possível se inscrever para o
+{{site.data.keyword.Bluemix_notm}} usando as credenciais que você já usa para
+login de sua empresa. É necessário inserir um número de telefone ao se inscrever. |
 
 ## Configurando Notificações
 {: #notifications}
 
-Acesse **Conta e suporte** &gt; **Conta** &gt; **Notificações** para configurar a conta geral e notificações de gastos. As notificações de
+Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+**Conta** &gt; **Notificações** para configurar
+notificações gerais de conta e gastos. As notificações de
 gastos estão disponíveis apenas para proprietários da conta do {{site.data.keyword.Bluemix_notm}} de Assinatura e Pagamento por uso.
 
 É possível configurar notificações por e-mail para incidentes e manutenção planejada do {{site.data.keyword.Bluemix_notm}} e é possível configurar notificações de gastos que o alertam quando a
@@ -36,8 +66,11 @@ sua conta estiver próxima do limite de gastos que você especificou. Conclua as
 
 ### Configurando notificações de plataforma
 
-Acesse o ícone **Conta e suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt;
-**Plataforma** para configurar notificações por e-mail para incidentes e manutenção planejada do {{site.data.keyword.Bluemix_notm}}. É possível selecionar ou limpar cada opção para
+Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+**Conta** &gt; **Notificações** &gt;
+**Plataforma** para configurar notificações por e-mail para incidentes
+e manutenção planejada do {{site.data.keyword.Bluemix_notm}}. É possível selecionar ou limpar cada opção para
 ativar ou desativar a notificação por e-mail.
 
 ### Configurando notificações de gastos
@@ -77,10 +110,10 @@ serviços e suporte que são usados por mês em suas organizações. É possíve
 específica.
 
 Para abrir a visualização Painel de uso, clique no ícone
-**Conta e suporte**
-![ícone Conta e suporte](../admin/images/account_support.svg) &gt;
-**Conta** &gt; *nome_de_sua_conta*
-&gt; **Painel de uso**. Os gerentes de faturamento podem ver os detalhes somente das organizações nas quais eles são gerentes de faturamento.
+**{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+**Conta** &gt; *your_account_name* &gt;
+**Painel de uso**. Os gerentes de faturamento podem ver os detalhes somente das organizações nas quais eles são gerentes de faturamento.
 
 O proprietário da conta é cobrado pelo uso total que é incorrido entre todas as organizações no término de cada ciclo de faturamento. Como um proprietário da conta, é possível filtrar o resumo de uso
 por região e organização. Também é possível clicar em um determinado mês, para ver o uso para aquele mês. Selecione
@@ -91,9 +124,10 @@ por região e organização. Também é possível clicar em um determinado mês,
 ## Atualizando informações de faturamento
 {: #account_billing}
 
-Como o proprietário da conta, você pode editar, incluir ou remover informações de cartão de crédito salvas que estão associadas com a sua conta do {{site.data.keyword.Bluemix_notm}}. Acesse o
-ícone **Conta e suporte**
-![ícone Conta e suporte](../admin/images/account_support.svg) &gt; **Conta** &gt; *nome_de_sua_conta*
-&gt; **Faturamento**.
+Como o proprietário da conta, você pode editar, incluir ou remover informações de cartão de crédito salvas que estão associadas com a sua conta do {{site.data.keyword.Bluemix_notm}}. Acesse
+o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+**Conta** &gt; *your_account_name* &gt;
+**Faturamento**.
 
 Se você tiver uma conta do SoftLayer vinculada à sua conta do {{site.data.keyword.Bluemix_notm}}, consulte [Faturamento para uso do {{site.data.keyword.Bluemix_notm}} quando as contas estão vinculadas](../admin/softlayerlink.html#bill_usage) para obter mais informações sobre como você é faturado.

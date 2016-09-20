@@ -12,7 +12,7 @@ copyright:
 
 #Serviços
 {: #services}
-*Última atualização: 10 de maio de 2016*
+*Última atualização: 10 de agosto de 2016*
 
 O {{site.data.keyword.Bluemix_notm}} facilita a implementação, a hospedagem e os serviços de escala e apps. O foco pode ser a lógica e o
 design do aplicativo.
@@ -68,6 +68,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.APIM}}			|Sim		|Sim		|Sim|
 |{{site.data.keyword.autoscaling}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.bigicloudst}}		|Sim		|Não		|Não|
+|{{site.data.keyword.blockstorageshort}}  |Não  |Sim  |Não|
 |{{site.data.keyword.rules_short}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.cloudint}}			|Sim		|Sim		|Não|
 |{{site.data.keyword.cloudant}}			|Sim		|Sim		|Sim|
@@ -100,7 +101,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.mqa}}			|Sim		|Sim		|Sim|
 |{{site.data.keyword.mql}}			|Sim		|Sim		|Sim|
 |{{site.data.keyword.nlclassifierlshort}} 	|Sim 		|Sim 		|Sim|
-|{{site.data.keyword.objectstorageshort}}	|Sim		|Não		|Não|
+|{{site.data.keyword.objectstorageshort}}	|Sim		|Sim		|Não|
 |{{site.data.keyword.personalityinsightsshort}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.mobilepush}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.mobilepushshort}}				|Sim		|Sim		|Sim|

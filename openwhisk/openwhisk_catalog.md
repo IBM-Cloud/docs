@@ -18,7 +18,7 @@ copyright:
 
 # Using {{site.data.keyword.Bluemix_notm}} services that are enabled for {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
-Last updated: 4 August 2016
+Last updated: 9 September 2016
 {: .last-updated}
 
 In {{site.data.keyword.openwhisk}}, a catalog of packages gives you an easy way to enhance your app with useful capabilities, and to access external services in the ecosystem. Examples of external services that are {{site.data.keyword.openwhisk_short}}-enabled include Cloudant, The Weather Company, Slack, and GitHub.
@@ -212,7 +212,7 @@ You can use an action to store a document in a Cloudant database called `testdb`
 1. Store a document by using the `write` action in the package binding you created previously. Be sure to replace `/myNamespace/myCloudant` with your package name.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
@@ -238,7 +238,7 @@ You can use an action to fetch a document from a Cloudant database called `testd
 1. Fetch a document by using the `read` action in the package binding that you created previously. Be sure to replace `/myNamespace/myCloudant` with your package name.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+  wsk action invoke /myNamespace/myCloudant/read --blocking --result --param dbname testdb --param id heisenberg
   ```
   {: pre}
   ```
@@ -310,10 +310,10 @@ Creating a package binding with the `username` and `password` values is suggeste
 The `/whisk.system/weather/forecast` action returns a weather forecast for a location by calling an API from The Weather Company. The parameters are as follows:
 
 - `username`: Username for The Weather Company Data for IBM Bluemix that is entitled to invoke the forecast API.
-- `password`: Password for The Weather Company Data for IBM Bluemix that is entitled to invoke the forecast API..
+- `password`: Password for The Weather Company Data for IBM Bluemix that is entitled to invoke the forecast API.
 - `latitude`: The latitude coordinate of the location.
 - `longitude`: The longitude coordinate of the location.
-- `timeperiod`: Time period for the forecast. Valid options are '10day' - (default) Returns a daily 10-day forecast , '24hour' - Returns an hourly 2-day forecast, , 'current' - Returns the current weather conditions, 'timeseries' - Returns both the current observations and up to 24 hours of past observations, from the current date and time. 
+- `timeperiod`: Time period for the forecast. Valid options are '10day' - (default) Returns a daily 10-day forecast , '48hour' - Returns an hourly 2-day forecast, , 'current' - Returns the current weather conditions, 'timeseries' - Returns both the current observations and up to 24 hours of past observations, from the current date and time.
 
 
 The following is an example of creating a package binding and then getting a 10-day forecast.
@@ -321,7 +321,7 @@ The following is an example of creating a package binding and then getting a 10-
 1. Create a package binding with your API key.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
   ```
   {: pre}
 
@@ -547,6 +547,8 @@ The `/whisk.system/slack/post` action posts a message to a specified Slack chann
 - `channel`: The Slack channel to post the message to.
 - `username`: The name to post the message as.
 - `text`: A message to post.
+- `token`: (optional) A Slack [access token](https://api.slack.com/tokens). See [below](./openwhisk_catalog.html#openwhisk_catalog_slack_token) for more detail on the use of the Slack access tokens.
+
 
 The following is an example of configuring Slack, creating a package binding, and posting a message to a channel.
 
@@ -568,6 +570,8 @@ The following is an example of configuring Slack, creating a package binding, an
   ```
   {: pre}
 
+### Using the Slack token-based API
+{: #openwhisk_catalog_slack_token}
 
 ## Using the GitHub package
 {: #openwhisk_catalog_github}

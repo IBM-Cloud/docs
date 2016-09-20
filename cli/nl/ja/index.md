@@ -46,13 +46,13 @@ copyright:
 ### {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースの拡張: bx
 
 1. {{site.data.keyword.Bluemix_notm}} レジストリーから {{site.data.keyword.Bluemix_notm}} CLI プラグインをインストールするには、プラグイン・レジストリーのエンドポイントを次のようにして設定します。
-
+```
 bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
-
+```
 2. プラグインをインストールするには、次のコマンドを実行します。
-
+```
 bluemix plugin install plugin_name -r bluemix-bx-staging
-
+```
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *ネットワーク・セキュリティー・グループ* |
 |-----|-----|-----|
@@ -62,13 +62,13 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 ### Cloud Foundry コマンド・ライン・インターフェースの拡張: cf
 
 1. {{site.data.keyword.Bluemix_notm}} レジストリーから cf CLI プラグインをインストールするには、プラグイン・レジストリーのエンドポイントを次のようにして設定します。
-
+```
 cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
-
+```
 2. プラグインをインストールするには、次のコマンドを実行します。
-
+```
 cf install-plugin plugin_name -r bluemix-cf-staging
-
+```
 
 | *Active Deploy* | *管理コンソール* | 
 |-----------------|-----------------|

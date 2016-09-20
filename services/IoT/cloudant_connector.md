@@ -13,7 +13,7 @@ copyright:
 
 # Connecting and configuring a historian service by using a {{site.data.keyword.cloudant}}  
 {: #cloudant_main}
-Last updated: 20 July 2016
+Last updated: 16 September 2016
 {: .last-updated}
 
 Connecting a {{site.data.keyword.cloudantfull}} service to your {{site.data.keyword.iot_full}} allows you to store and access your device data. Device data is stored in daily, weekly, or monthly databases depending on your selected bucket interval.
@@ -67,9 +67,10 @@ Ensure that you have developer privileges in the Bluemix organization and that y
 
 Complete the following steps to connect a {{site.data.keyword.cloudant}}:
 
-1. On your {{site.data.keyword.iot_short}} dashboard click **Settings** in the navigation bar on the left.
-2. In the Settings, enable **Experimental Features**. Once this is enabled there should be a section titled **{{site.data.keyword.cloudant}}**. The **{{site.data.keyword.cloudant}}** section shows all available {{site.data.keyword.cloudant}} services that are running in the same Bluemix space as your {{site.data.keyword.iot_short}} service.
-3. Click on the {{site.data.keyword.cloudant}} service you wish to connect.
+1. On your {{site.data.keyword.iot_short}} dashboard click **Extensions** in the navigation bar.
+2. In the Historical Data Storage tile, click **Setup**.
+2. All available {{site.data.keyword.cloudant}} services within the same Bluemix space as your {{site.data.keyword.iot_short}} service are listed in the Configure historical data storage section.
+3. Select the {{site.data.keyword.cloudant}} service that you wish to connect.
 4. Select your {{site.data.keyword.cloudant}} configuration options:
 
   a. Select a bucket interval. The bucket interval controls how frequently new databases are created to store device data. New buckets are created at midnight in the selected timezone using your selected bucket interval.
@@ -91,7 +92,7 @@ Your device data is now being stored in your {{site.data.keyword.cloudant}}.
 {: #design_docs}
 
 New design documents are contained in the configuration database, and are copied to every database created. The configuration database name is `Iotp_<orgid>_<choice>_configuration
-` using the same parameters are the database names above.
+` using the same parameters as the database names described in step 3b in the Before you begin section.
 
 The default design documents contained withing the {{site.data.keyword.iot_short_notm}} implement queries available in the current historian, apart from the summarize function.
 

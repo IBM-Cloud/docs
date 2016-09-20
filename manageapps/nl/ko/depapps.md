@@ -14,7 +14,7 @@ copyright:
 #앱 배치
 {: #deployingapps}
 
-*마지막 업데이트 날짜: 2016년 5월 9일*
+*마지막 업데이트 날짜: 2016년 7월 28일*
 {: .last-updated}
 
 명령행 인터페이스 및 IDE(Integrated Development Environment) 등의 다양한 방법을
@@ -58,7 +58,7 @@ Warden 컨테이너의 파일 시스템에 저장된 파일(예: 로그)을 볼 
 [Logging in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}를
 참조하십시오.
 
-**참고:** 버퍼 크기는 제한됩니다. 애플리케이션이 장시간 실행된 후 다시 시작되지 않을 경우, 로그 버퍼가 지워졌기 때문에 `cf logs appname --recent`를 입력할 때 로그가 표시되지 않을 수 있습니다. 따라서 대형 애플리케이션의 스테이징 오류를 디버그하려면 cf 명령 인터페이스와 다른 별개의 명령행에 `cf logs appname`을 입력하십시오.
+**참고:** 버퍼 크기는 제한됩니다. 애플리케이션이 장시간 실행된 후 다시 시작되지 않을 경우, 로그 버퍼가 지워졌기 때문에 `cf logs appname --recent`를 입력할 때 로그가 표시되지 않을 수 있습니다. 따라서 대형 애플리케이션의 스테이징 오류를 디버그하려면 cf 명령행 인터페이스와 다른 별개의 명령행에 `cf logs appname`을 입력하십시오.
 
 {{site.data.keyword.Bluemix_notm}}에서
 애플리케이션을 스테이징할 때 문제점이 발견될 경우 [스테이징 오류
@@ -475,7 +475,7 @@ command: node app.js
   * {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하십시오. 다음 단계를 수행하십시오.
 
     1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱 타일을 클릭하십시오. 앱 세부사항 페이지가 표시됩니다.
-	2. 왼쪽 탐색 분할창에서 **환경 변수**를 클릭하십시오.
+	2. **환경 변수**를 클릭하십시오. 
 	3. **사용자 정의**를 클릭하고 **추가**를 클릭하십시오.
 	4. 필수 필드에 값을 입력하고 **저장**을 클릭하십시오.
   * cf 명령행 인터페이스를 사용하십시오. `cf set-env` 명령을 사용하여 사용자 정의 변수를 추가하십시오. 예: 

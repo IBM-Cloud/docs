@@ -4,11 +4,15 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+
+
 
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Android app
 {: #custom-android}
 
-Last updated: 01 August 2016
+Last updated: 19 September 2016
 {: .last-updated}
 
 
@@ -51,16 +55,13 @@ Add the internet access permission under the `<manifest>` element:
 	```
 
 1. Initialize the SDK.  
-A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
-Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values you get when you click **Mobile Options** in your app on the {{site.data.keyword.Bluemix_notm}} dashboard.
+	A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 ```
-Replace the `BMSClient.REGION_UK` with the appropriate region.	 To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.				
+
+Replace the `BMSClient.REGION_UK` with the appropriate region.	 To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.				
 	
 
 ## AuthenticationListener interface
@@ -75,6 +76,8 @@ Call this method when a custom authentication challenge is received from the {{s
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+
+
 #### Arguments
 {: #custom-android-onAuth-arg}
 
@@ -106,9 +109,11 @@ The `AuthenticationContext` is supplied as an argument to the `onAuthenticationC
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+
 
 ## Sample implementation of a custom AuthenticationListener
 {: #custom-android-samplecustom}
@@ -119,8 +124,8 @@ This AuthenticationListener sample is designed to work with a custom identity pr
 package com.ibm.helloworld;
 import android.content.Context;
 import android.util.Log;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationContext;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationListener;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationContext;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -175,13 +180,18 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 After you create a custom AuthenticationListener, register it with `BMSClient` before you start using the listener. Add the following code to your application. This code must be called before you send any requests to your protected resources.
 
 ```Java
-MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+MCAAuthorizationManager mcaAuthorizationManager = 
+      MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<MCAServiceTenantId>");
 mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
 
-Use the *realmName* that you specified in the {{site.data.keyword.amashort}} dashboard.
+
+In the code:
+* Replace `MCAServiceTenantId` with the `tenantId` value that you get when you click on the **Show 
+Credentials** button on the {{site.data.keyword.amashort}} service tile.
+* Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard.
 
 
 ## Testing the authentication
@@ -200,12 +210,12 @@ You must have an application that was created with the {{site.data.keyword.mobil
 1. Use your Android application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom AuthenticationListener.
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp",  MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -220,6 +230,8 @@ You must have an application that was created with the {{site.data.keyword.mobil
 	});
 ```
 
+	Replace `{applicationRoute}` with the *route* value you get when you click **Mobile Options** in your app on the {{site.data.keyword.Bluemix}} dashboard.
+
 1. 	When your request succeeds, the following output is in the LogCat tool:
 
 	![image](images/android-custom-login-success.png)
@@ -229,6 +241,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+
 
  If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge that is received from the server again.
 

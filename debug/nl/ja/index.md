@@ -48,17 +48,17 @@ deployment)」](../manageapps/depapps.html#appdeploy){: new_window}を参照し�
 logs` コマンドを使用してステージング・エラーをデバッグする方法を示しています。以下のステップを実行する前に、cf コマンド・ライン・インターフェースがインストール済みであることを確認してください。cf コマンド・ライン・インターフェースのインストールについて詳しくは、[「cf コマンド・ライン・インターフェースのインストール」](../starters/install_cli.html){: new_window}を参照してください。
 
   1. cf コマンド・ライン・インターフェースに次のコードを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
-     
+     ```
 	 cf api https://api.ng.bluemix.net
-	 
+	 ```
 	 
   2. `cf login` を入力して {{site.data.keyword.Bluemix_notm}} にログインします。
   
   3. `cf logs appname --recent` を入力して、最近のログを取得します。詳細ログをフィルターに掛けたい場合は、`grep` オプションを使用してください。例えば、以下のコードを入力すれば、[STG] のログのみ表示することができます:
 
-    
+    ```
 	cf logs appname --recent | grep '\[STG\]'
-	
+	```
   4. ログ内に表示された最初のエラーを確認します。
   
 IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}}
@@ -73,7 +73,7 @@ Liberty ランタイム・アプリケーションのログ分析も提供され
 
 以下の例は、`cf logs appname --recent` を入力した後に表示されるログを示しています。この例では、Node.js
  アプリケーションに対するステージング・エラーが発生したと想定しています。
-
+```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
 2014-08-11T14:20:44.19+0100 [App/0]   ERR
@@ -86,35 +86,35 @@ Liberty ランタイム・アプリケーションのログ分析も提供され
 2014-08-11T14:20:52.78+0100 [STG]     OUT -----> Buildpack Version: v1.1-20140717-1447
 2014-08-11T14:20:52.78+0100 [STG]     ERR parse error: Expected another key-value pair at line 18, column 3
 2014-08-11T14:20:52.79+0100 [STG]     OUT 0 info it worked if it ends with ok
-
+```
 {: screen}
 
 
 ログの最初のエラーが、ステージングが失敗した理由を示しています。この例では、最初のエラーはステージングの段階での DEA コンポーネントからの出力です。
-
-2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3
+```
+2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3```
 {: screen}
 
 
 Node.js アプリケーションに対し、DEA は `package.json` ファイル内の情報を使用してモジュールをダウンロードします。このエラーから、モジュールに対してエラーが発生することが分かります。このため、`package.json` ファイルの 18 行目を確認する必要があるかもしれません。 
 
-
+```
 15   "jade": "~1.3.0",
 16   "mongodb": "*",
 17   "monk":"*",
 18   }
-
+```
 {: screen}
 
 
 17 行目の末尾にコンマが置かれていることが分かります。これにより、18 行目では鍵と値のペアが予測されます。問題を修正するには、このコンマを削除してください。
 
-
+```
 15   "jade": "~1.3.0",
 16   "mongodb": "*",
 17   "monk":"*"
 18   }
-
+```
 {: screen}
 
 

@@ -45,6 +45,6 @@
 ># 관련 링크 {:class="linklist"}
 >## 관련 링크 {:id="general"}
 >* [IBM Bluemix 가격 책정 시트](https://www.ng.bluemix.net/#/pricing){: new_window}
->* [IBM Bluemix Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}
+>* [IBM Bluemix 전제조건](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}
 >
 >{:elementKind="article" id="rellinks"}

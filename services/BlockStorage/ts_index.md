@@ -27,16 +27,16 @@ copyright:
 # Getting help and support for {{site.data.keyword.blockstorageshort}} 
 {: #gettinghelp}
 
-Last updated: 11 August 2016
+Last updated: 26 August 2016
 {: .last-updated}
 
-If you have problems or questions when using {{site.data.keyword.blockstoragefull}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket. 
+If you have problems or questions when using {{site.data.keyword.blockstoragefull}}, you can get help by searching for information or by asking questions through one of the forums listed below. You can also open a support ticket. 
 
 When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 <!--Insert the appropriate Stack Overflow tag for your service for <block-storage> in URL and text below:  -->
 * If you have technical questions about {{site.data.keyword.blockstorageshort}}, post your question on [Stack Overflow](http://stackoverflow.com/search?q=block-storage+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "block-storage".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/block storage/?smartspace=bluemix){:new_window} forum. Include the  "block storage" and "bluemix" tags.
+* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/block storage/?smartspace=bluemix){:new_window} forum. Include the  "block-storage" and "bluemix" tags.
 
 See [Getting help](https://new-console.eu-gb.bluemix.net/docs/support/index.html#getting-help) for more details about using the forums.
 

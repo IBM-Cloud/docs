@@ -19,7 +19,7 @@ copyright:
 
 #Vinculando contas de cobrança do SoftLayer e do {{site.data.keyword.Bluemix_notm}}
 {: #softlayerlink}
-*Última atualização: 7 de julho de 2016*
+*Última atualização: 15 de agosto de 2016*
 {: .last-updated}
 
 Agora é possível vincular contas de cobrança do SoftLayer e do {{site.data.keyword.Bluemix_notm}}. Ao vincular as suas contas, você é faturado por meio do SoftLayer para ambos os recursos, do
@@ -36,9 +36,11 @@ Após as suas contas serem vinculadas, é possível alternar entre contas facilm
 usuário do {{site.data.keyword.Bluemix_notm}}. No entanto, o faturamento para esses recursos agora aparecerá na fatura do SoftLayer.
 
 Embora a sua conta de faturamento vá ser vinculada, o seu ID de login irá variar dependendo de como a sua conta do SoftLayer for autenticado:
-* Para usuários em contas do SoftLayer que não usam ID IBM para autenticação, continue a usar o seu ID do SoftLayer para produtos e serviços do SoftLayer e use o seu ID IBM para produtos e serviços
-do {{site.data.keyword.Bluemix_notm}}.
-* Para usuários em contas do SoftLayer que usam ID IBM para autenticação, use o seu ID IBM para acessar ambas as suas contas do SoftLayer e do {{site.data.keyword.Bluemix_notm}}.
+* Para usuários em contas do SoftLayer que não usam ID IBM para autenticação,
+continue a usar o seu ID do SoftLayer para produtos e serviços do SoftLayer e use seu
+ID IBM para produtos e serviços do {{site.data.keyword.Bluemix_notm}}.
+* Para usuários em contas do SoftLayer que usam ID IBM para autenticação, use o
+ID IBM para acessar as contas do SoftLayer e do {{site.data.keyword.Bluemix_notm}}.
 
 **Atenção:** Após as contas serem vinculadas, elas não poderão ser desvinculadas.  
 
@@ -78,14 +80,17 @@ individuais. Ao convidar membros da equipe, deve-se configurar a função de con
 Deve-se ser um Usuário Principal na conta do SoftLayer para convidar membros da equipe para a conta do {{site.data.keyword.Bluemix_notm}}.
 
 Para convidar membros da equipe por meio do {{site.data.keyword.Bluemix_notm}}:
- 1. Acesse o ícone **Conta e suporte** ![Conta e suporte](images/account_support.svg) > **Contas** > **Convidar Membros da
-Equipe**.
+ 1. Acesse o ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) >
+**Contas** > **Convidar membros da equipe**.
+
  2. Clique em **Incluir** para autenticar em sua conta do SoftLayer e visualizar uma lista de membros da equipe a partir de sua conta do SoftLayer.
  3. Selecione os membros da equipe para convidar e clique em **Enviar**.
 
 É possível executar essa operação repetidamente conforme mais membros da equipe são incluídos em sua conta do Softlayer.
  
-O membro da equipe recebe um e-mail que inclui um link **Associar-se à organização**. Se o membro não tiver um ID IBM, ele será redirecionado para uma página de registro. Em seguida,
+O membro da equipe recebe um e-mail que inclui um link **Associar-se à organização**. Se
+o membro não tiver um ID IBM, ele será redirecionado para uma página de registro. Em seguida,
 o membro poderá inserir algumas informações básicas e criar a sua conta do {{site.data.keyword.Bluemix_notm}}.
 
 Para obter mais informações sobre convidar membros da equipe por meio da interface com o usuário do {{site.data.keyword.Bluemix_notm}}, consulte

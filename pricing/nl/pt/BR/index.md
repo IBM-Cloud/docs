@@ -51,7 +51,7 @@ copyright:
 # Venda
 {: #pricing}
 
-*Última atualização: 1 de junho de 2016*
+*Última atualização: 16 de agosto de 2016*
 {: .last-updated}
 
 É possível executar aplicativos no {{site.data.keyword.Bluemix}} e
@@ -130,7 +130,9 @@ Com uma conta de Pagamento por uso, você é cobrado com base no uso de cálculo
 
 É possível converter a sua avaliação grátis em uma conta faturável a qualquer momento. Todos os seus dados da conta não faturável de avaliação grátis e as soluções do {{site.data.keyword.Bluemix_notm}} serão facilmente mescladas na nova conta faturável.
 
-Depois de criar uma conta faturável, é possível editar as informações fornecidas. Clique no **ícone de Configurações de perfil** no canto superior direito da interface com o usuário do {{site.data.keyword.Bluemix_notm}}, em seguida, clique em **Conta e tipo de conta** para editar suas informações.
+Depois de criar uma conta faturável, é possível editar as informações fornecidas. Clique
+no ícone **Configurações de perfil** e depois clique em
+**Conta &gt; Tipo de conta** para editar suas informações.
 
 Se você encontrar algum problema com o {{site.data.keyword.Bluemix_notm}} quando estiver usando uma conta de Pagamento por uso ou de Assinatura, veja [Obtendo ajuda on-line](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) para obter mais informações.
 
@@ -501,7 +503,9 @@ Como um proprietário da conta ou um gerente de faturamento, é possível usar a
 em suas organizações. É possível ver o consumo de serviço e de GB/horas do tempo de execução em todas as regiões ou é possível selecionar para ver uma região e um espaço específicos, nos últimos 12 meses.
 
 Para abrir a visualização Painel de uso, clique no ícone
-**Conta e suporte** &gt; **Conta** &gt; *o_nome_de_sua_conta* &gt; **Painel
+**{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+**Conta** &gt; *your_account_name* &gt; **Painel
 de uso**. Na visualização, é possível ver um resumo do tempo de execução e do uso do serviço para a conta. Os gerentes de faturamento podem ver os detalhes somente das organizações nas quais eles são gerentes de faturamento.
 
 O proprietário da conta é cobrado pelo uso total que é incorrido entre todas as organizações no término de cada ciclo de faturamento. Cada ciclo de faturamento dura um mês.
@@ -516,7 +520,9 @@ Se você selecionar uma organização específica para a **Organização**, é p
 Como um proprietário da conta ou um gerente de faturamento, é possível usar a visualização Painel de Uso para ver qualquer crédito para a sua conta. Você pode ter créditos se, por exemplo, você
 vinculou uma conta do SoftLayer com uma conta do {{site.data.keyword.Bluemix_notm}}.
 
-Para abrir a visualização Painel de Uso, clique no ícone **Conta e suporte** ![ícone Conta e suporte](../admin/images/account_support.svg) e, em seguida, selecione
+Para abrir a visualização Painel de Uso, clique no ícone
+**{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) e selecione
 **Conta**. Na página exibida, clique em **Painel de Uso**. Na visualização, é possível ver quaisquer créditos, se existirem, e quando eles expiram.
 
 ##Notificações
@@ -526,8 +532,10 @@ Como gerente de contas de uma conta Pagamento por uso, é possível configurar a
 notificações ao atingir 80%, 90% e 100 dos limites de gastos
 especificados.
 
-Para abrir a visualização **Notificações**,
-clique no ícone **Conta e suporte** &gt; **Conta** &gt; *o_nome_de_sua_conta* &gt;
+Para abrir a visualização **Notificações**, clique no ícone
+**{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
+**Conta** &gt; *your_account_name* &gt;
 **Notificações de gastos**. Insira um valor numérico para configurar o limite de gastos para acionar uma notificação para cada tipo de notificação de gastos, conforme necessário. Também é possível incluir e
 excluir notificações para serviços individuais.
 
@@ -537,7 +545,8 @@ excluir notificações para serviços individuais.
 É possível mudar seu plano de serviço no {{site.data.keyword.Bluemix_notm}} no Painel de serviço, se mudanças de plano estiverem ativadas para esse serviço.
 
 Apenas determinados serviços oferecem a possibilidade de mudança de plano de
-serviço. Se mudanças de plano estiverem ativadas para o serviço, o Painel de serviço exibirá uma opção **Plano** na navegação à esquerda. Cada serviço terá um conjunto diferente de etapas subsequentes se
+serviço. Se mudanças de plano estiverem ativadas para o serviço, o Painel de serviço
+exibirá uma opção **Plano** na navegação. Cada serviço terá um conjunto diferente de etapas subsequentes se
 você mudar o seu plano.
 
 1. Para mudar seu plano, no Painel de serviço, clique em **Plano**. Normalmente, é possível fazer upgrade do plano ou reduzi-lo.

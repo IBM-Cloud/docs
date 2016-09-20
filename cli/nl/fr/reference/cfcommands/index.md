@@ -4,7 +4,7 @@
 
 copyright:
 
-  années : 2015, 2016
+  years: 2015, 2016
 
  
 
@@ -186,7 +186,7 @@ de passe peut être enregistré dans l'historique de la ligne de commande. Pour 
 avec le paramètre -p. A la place,
 entrez le mot de passe lorsque l'interface de ligne de commande vous y invite.</dd>
 <dt>*-sso*</dt>
-<dd>Vous devez utiliser l'option de connexion unique (SSO) pour vous connecter à l'aide d'un ID fédéré. Cela n'est pas obligatoire lorsque vous vous connectez avec un ID IBM. Si vous essayez de vous connecter avec un ID fédéré sans spécifier le paramètre de connexion unique, vous serez invité à l'inclure. Lorsque vous utilisez le paramètre de connexion unique, vous êtes invité à entrer un code d'accès unique lors de la connexion. </dd>
+<dd>Vous devez utiliser l'option de connexion unique (SSO) pour vous connecter à l'aide d'un ID fédéré. Cela n'est pas obligatoire lorsque vous vous connectez avec un ID IBM. Si vous essayez de vous connecter avec un ID fédéré sans spécifier le paramètre de connexion unique, vous serez invité à l'inclure. Lorsque vous utilisez le paramètre de connexion unique, vous êtes invité à entrer un code d'accès unique lors de la connexion.</dd>
 <dt>*-o*nom_organisation</dt>
 <dd>Nom de l'organisation à laquelle vous voulez vous connecter.</dd>
 <dt>*-s*nom_espace</dt>

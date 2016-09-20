@@ -40,9 +40,8 @@ dispositivos de gateway. O {{site.data.keyword.iot_short_notm}} fornece comunica
 
 ## Sobre o Node-RED
 {: #about_nodered}
-O Node-RED é uma ferramenta para conexão de dispositivos de hardware, APIs e serviços on-line em conjunto, de maneiras novas e interessantes. É possível usar o Node-RED para criar um termostato simulado que
-envia dados simulados para o seu serviço do {{site.data.keyword.iot_short_notm}}. É possível criar cartões para exibir dados em tempo real no painel do {{site.data.keyword.iot_short_notm}}. 
-Para obter mais informações, consulte a [documentação do Node-RED](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).
+O Node-RED é uma ferramenta para conexão de dispositivos de hardware, APIs e serviços on-line em conjunto, de maneiras novas e interessantes.  É possível usar o Node-RED para criar um termostato simulado que
+envia dados simulados para o seu serviço do {{site.data.keyword.iot_short_notm}}. É possível criar cartões para exibir dados em tempo real no painel do {{site.data.keyword.iot_short_notm}}. Para obter mais informações, consulte a [documentação do Node-RED](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).
 
 ## Familiarização
 {: #gettingaround}
@@ -105,7 +104,7 @@ envia informações de temperatura e umidade para o {{site.data.keyword.iot_shor
 6.	No canto superior direito do editor de fluxo do Node-RED, clique em **Implementar**.
 7.	Valide a conexão de dispositivo
   1.	Em sua outra guia ou janela do navegador, retorne para o painel do {{site.data.keyword.iot_short_notm}}.
-  2.	Selecione Dispositivos e clique em LivingRoomThermo1 ou no nome do dispositivo que você incluiu, se diferente.
+  2.	Selecione Dispositivos e clique em LivingRoomThermo1 ou no nome do dispositivo que você incluiu, se diferente.  
   A página de informações sobre o dispositivo é aberta. Esta visualização permite ver o status da conexão para o seu dispositivo. O status do dispositivo está desconectado.
   3.	De volta em seu editor de fluxo do Node-RED, clique no botão no nó cinza Enviar Dados para gerar uma carga útil de ativos.
   A carga útil contém os pontos de dados a seguir:
@@ -206,7 +205,8 @@ Para criar cartões, execute as tarefas a seguir.
   7.	Informações de cartão.
        -	Título: Local
   8.	Submeter.
-9.	Veja a atualização de novos cartões em tempo real com os dados do simulador gerados pelo fluxo do Node-RED.**Nota**: o Node-RED continua a enviar dados até que você pare.
+9.	Veja a atualização de novos cartões em tempo real com os dados do simulador gerados pelo fluxo do Node-RED.
+**Nota**: o Node-RED continua a enviar dados até que você pare.
 10.	No editor de fluxo do Node-RED, atualize o nó Enviar Dados para Repetir: nenhum.
 11.	Implementação.
 

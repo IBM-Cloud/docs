@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*上次更新时间：2016 年 6 月 22 日*
+上次更新时间：2016 年 7 月 22 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 平台是使用安全工程实践进行设计的，通过不同的层对整个网络和基础架构中的安全进行控制。{{site.data.keyword.Bluemix_notm}} 提供了一组安全性服务，应用程序开发者可以使用这些服务来保护自己的移动和 Web 应用程序。这些优势组合在一起，使 {{site.data.keyword.Bluemix_notm}} 平台成为安全应用程序开发的不二选择。
@@ -68,18 +68,18 @@ IBM 通过中继（{{site.data.keyword.Bluemix_notm}} Local 随附的一种交�
 
 <dt>数据保护</dt>
 <dd> 所有 {{site.data.keyword.Bluemix_notm}} 流量均通过 IBM WebSphere® DataPower® SOA Appliances 传输，该产品提供逆向代理、SSL 终止和负载均衡功能。下面是允许使用的 HTTP 方法：
- * DELETE
- * GET
- * HEAD
- * OPTIONS
- * POST
- * PUT
- * TRACE
-
-HTTP 不活动超时为 2 分钟。
-
-以下头由 DataPower 来填充：
-<dl>
+<ul>
+<li>DELETE</li>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+<li>POST</li>
+<li>PUT</li>
+<li>TRACE</li>
+</ul>
+HTTP 不活动超时为 2 分钟。</dd>
+<dd>
+以下头由 DataPower 来填充：<dl>
 <dt>$wsis</dt>
 <dd>如果客户端连接为安全连接 (HTTPS)，将设置为 true；否则设置为 false。</dd>
 <dt>$wssc</dt>
@@ -105,10 +105,10 @@ HTTP 不活动超时为 2 分钟。
 
 <dl>
 <dt>环境隔离</dt>
-<dd> 对于 {{site.data.keyword.Bluemix_notm}} Public，开发环境和生产环境彼此隔离，可提高应用程序稳定性和安全。</dd>
+<dd>对于 {{site.data.keyword.Bluemix_notm}} Public，开发环境和生产环境彼此隔离，可提高应用程序稳定性和安全。</dd>
 
 <dt>防火墙</dt>
-<dd> 防火墙已落实到位，可限制对 {{site.data.keyword.Bluemix_notm}} 网络的访问。对于 {{site.data.keyword.Bluemix_notm}} Local，公司防火墙会将您的 {{site.data.keyword.Bluemix_notm}} 实例与网络中的其余部分隔离开。</dd>
+<dd>防火墙已落实到位，可限制对 {{site.data.keyword.Bluemix_notm}} 网络的访问。对于 {{site.data.keyword.Bluemix_notm}} Local，公司防火墙会将您的 {{site.data.keyword.Bluemix_notm}} 实例与网络中的其余部分隔离开。</dd>
 
 <dt>入侵防御</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} Public 和 Dedicated 支持通过入侵防御来发现威胁，以便解决这些威胁。入侵防御策略在防火墙上已启用。</dd>
@@ -167,7 +167,7 @@ HTTP 不活动超时为 2 分钟。
 
 在规划数据安全时，每种类型的数据都需要考虑到。
 
-{{site.data.keyword.Bluemix_notm}} 平台使用 SSL 来确保最终用户能够以安全方式访问应用程序，从而确保传输中的数据能够经由网络安全地到达位于 {{site.data.keyword.Bluemix_notm}} 内部网络边界上的 IBM DataPower Gateway。IBM DataPower Gateway 起到逆向代理的作用，可提供 SSL 终止功能。
+{{site.data.keyword.Bluemix_notm}} 平台使用 SSL 来确保最终用户能够以安全方式访问应用程序，从而确保传输中的数据能够经由网络安全地到达位于 {{site.data.keyword.Bluemix_notm}} 内部网络边界上的 IBM DataPower Gateway。IBM DataPower Gateway 起到逆向代理的作用，可提供 SSL 终止功能。从那里到应用程序，IPSEC 用于在数据从 IBM DataPower Gateway 传输到应用程序时保护数据的安全。
 
 对于使用中的数据和静态数据，其安全由您负责，因为应用程序由您开发。您可以利用 {{site.data.keyword.Bluemix_notm}}“目录”中提供的几个数据相关服务来帮助您解决这些问题。
 
@@ -178,7 +178,7 @@ HTTP 不活动超时为 2 分钟。
 
 可以使用多个 {{site.data.keyword.Bluemix_notm}} 服务提供的安全功能来保护应用程序。IBM 提供的所有 {{site.data.keyword.Bluemix_notm}} 服务均遵循 IBM 安全工程开发实践。
 
-**注：**此处描述的其中一些服务可能不适用于 Bluemix Dedicated 或 Local 实例。
+**注：**此处描述的一些服务可能不适用于 {{site.data.keyword.Bluemix_notm}} Dedicated 或 Local 实例。
 
 ### SSO 服务
 
@@ -240,7 +240,7 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
  3. 经过网络路由器。
  4. 到达 Droplet Execution Agent (DEA) 中的应用程序运行时。
 
-适用于 {{site.data.keyword.Bluemix_notm}} *开发者*的信息流主要有两个，一个用于登录，一个用于开发和部署。
+{{site.data.keyword.Bluemix_notm}} *开发者*遵循两个主要流：一个用于登录，一个用于开发和部署。
  * **开发者登录流**包含以下内容：
     * 对于要登录到 {{site.data.keyword.Bluemix_notm}} Public 的开发者，信息流如下所示：
       1. 经过 IBM Single Sign On 服务。

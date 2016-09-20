@@ -10,7 +10,7 @@ copyright:
 
 # Android용 Hello Bluemix 샘플 시작하기
 {: #gettingstarted-android}
-*마지막 업데이트 날짜: 2016년 5월 27일*
+마지막 업데이트 날짜: 2016년 5월 27일
 {: .last-updated}  
 
 새 Android 애플리케이션을 시작하고자 하는 경우 HelloWorld 앱을 사용할 수 있습니다. 이 앱에서는 인증 없이 모바일 앱에서 {{site.data.keyword.Bluemix}} 백엔드에 연결하는 방법을 예시합니다. 앱에는 이미 SDK가 설치되어 있습니다. 준비가 완료되면 사용자는 앱에서 사용할 특정 라이브러리를 가져올 수 있습니다.
@@ -21,7 +21,7 @@ copyright:
     3. **완료**를 클릭하십시오.
 2. GitHub에서 프로젝트를 가져오십시오. 선택에 따라 git clone 명령을 사용하여 프로젝트를 가져올 수도 있습니다. 컴퓨터에서 터미널을 열고, 다음 명령을 입력하십시오.
     ```
-    git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
+git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
     ```
 
 3. &lt;APPLICATION_ROUTE&gt; 및 &lt;APPLICATION_ID&gt;를 `BMSClient.getInstance().initialize()` 함수의 `try` 블록에 있는 애플리케이션 라우트 및 GUID로 대체하여 프로젝트를 초기화하십시오.
@@ -35,18 +35,21 @@ Android Studio 도구 모음에서 **Play** 단추를 클릭하고 시뮬레이�
 
   **참고:** MobileFirst Services 스타터 표준 유형에서 `Node.js` 런타임 코드가 제공됩니다. MobileFirst Services 스타터 표준 유형을 사용하여 백엔드 애플리케이션이 작성되지 않은 경우 애플리케이션이 연결되지 않습니다.
 
-  Android Studio의 모바일 앱에서 {{site.data.keyword.Bluemix_notm}}에 연결하면 다음 메시지가 표시됩니다. 
-
+  Android Studio의 모바일 앱에서 {{site.data.keyword.Bluemix_notm}}에 연결하면 다음이 표시됩니다.
   `Yay! You are connected`
   {: screen}
 
-  ![Hello World 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에 성공적으로 연결됨](images/yayconnected.jpg "그림 1. Hello World 애플리케이션이 Bluemix에 성공적으로 연결됨")
+<!--
+  ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+  -->
 
-  연결이 실패하면 다음 메시지가 표시됩니다.
+  연결이 실패하면 다음이 표시됩니다.
   `Bummer. Something went wrong`
   {: screen}
 
-  ![Hello World 애플리케이션이 Bluemix에 연결되지 않음](images/bummer_android.jpg "그림 2. Hello World 애플리케이션이 Bluemix에 연결되지 않음")
+<!--
+  ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
+  -->
 
   다음과 같이 실패한 연결의 문제점을 해결할 수 있습니다. 
    * 라우트 및 GUID 값을 올바로 붙여넣었는지 확인하십시오.
@@ -62,7 +65,7 @@ SDK를 가져와 모바일 앱에 통합하는 방법에 대한 정보는 Bluemi
 # 관련 링크
 
 ## 샘플
-   * [Hello Bluemix 샘플](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Hello Bluemix 샘플(Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## SDK
    * [코어 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)

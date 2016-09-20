@@ -12,12 +12,12 @@ copyright:
 
 # Getting started with {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Last updated: 14 June 2016
+Last updated: 17 September 2016
 {: .last-updated}
 
 {:shortdesc}
 
-The Push Notifications service provides a unified platform to send and manage mobile push notifications that are targeted to iOS and Android platforms. This service manages the mapping of your application users to their devices, device platform, and handles dispatching push notifications to them. With this service, you can send broadcasts, unicasts, (based on deviceID), and also tags (or topics) push notifications to your mobile application users. You can also use an SDK and [REST APIs](https://mobile.{DomainName}/imfpushrestapidocs/) to further develop your client applications.
+The {{site.data.keyword.mobilepushshort}} service provides a unified platform to send and manage mobile and web {{site.data.keyword.mobilepushshort}} that are targeted to iOS, Android mobile platforms, Google Chrome and Mozilla Firefox web browsers. The {{site.data.keyword.mobilepushshort}} service manages the mapping of your application users to their devices, device platform, web browsers and handles dispatching push notifications to them. With this service, you can send broadcasts, unicasts, (based on deviceID), and also tags (or topics) as push notifications to your mobile and web browser application users. You can also use an SDK and [REST APIs](https://mobile.{DomainName}/imfpushrestapidocs/) to further develop your client applications.
 
 This section describes how to set up basic push notifications. When you use a basic notification, the notifications are broadcast instead of reaching a specific set of users using tags.
 

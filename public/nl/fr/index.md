@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} public
 {: #public}
-*Dernière mise à jour : 19 mai 2016*
+Dernière mise à jour : 8 août 2016
 {: .last-updated}
 
 
@@ -177,9 +177,7 @@ fonctionner. La franchise de ressources est la même dans toutes les régions qu
 Si
 vous employez l'interface utilisateur
 {{site.data.keyword.Bluemix_notm}}, vous pouvez basculer vers une région différente et travailler avec les
-espaces de cette région. Accédez à l'icône **Compte et support**
-![Icône compte et support](../admin/images/account_support.svg) et développez le sélecteur **Région**. Vous pouvez ici
-sélectionner une région différente dans la liste.
+espaces de cette région. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) et développez le sélecteur **Région**. Vous pouvez sélectionner une autre région dans la liste.
 
 Si vous utilisez l'interface de ligne de commande cf, vous devez vous connecter à la région {{site.data.keyword.Bluemix_notm}} avec laquelle vous voulez travailler en entrant la
 commande cf api et en spécifiant le noeud final d'API de la région. Par exemple, entrez la commande suivante pour vous connecter à la région {{site.data.keyword.Bluemix_notm}}
@@ -245,10 +243,10 @@ processus standardisés. Des *systèmes d'engagement* permettent de développer 
 plus attractifs pour les utilisateurs.
 En intégrant un système d'enregistrement à l'application que vous créez dans {{site.data.keyword.Bluemix_notm}}, vous pouvez :
 
- * Activer une communication sécurisée entre l'application et la base de données dorsale, via le téléchargement et l'installation d'un connecteur
+ * Activer une communication sécurisée entre l'application et la base de données de back end, via le téléchargement et l'installation d'un connecteur
 sécurisé sur site.
  * Appeler une base de données de manière sécurisée.
- * Créer des interfaces de programme d'application à partir des flux d'intégration avec les bases de données et les systèmes expéditeurs, par exemple, un système de gestion de la relation client.
+ * Créer des API à partir des flux d'intégration avec les bases de données et les systèmes de back end, par exemple, un système de gestion de la relation client.
  * Exposer uniquement les schémas et les tables de votre choix à l'application.
  * En tant que responsable d'organisation {{site.data.keyword.Bluemix_notm}}, publier une interface de programme d'application sous forme de service privé, visible uniquement des membres de votre organisation.
 

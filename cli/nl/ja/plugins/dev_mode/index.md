@@ -40,36 +40,36 @@ dev_mode コマンド・ライン・ツールのインストールには、以�
   1. [IBM Bluemix CLI Plugin Repository](http://plugins.{DomainName})から、ご使用のプラットフォームに合った dev_mode プラグインをダウンロードします。
   2. dev_mode プラグインが保存されているフォルダーに移動し、cf install-plugin コマンドを使用して dev_mode プラグインをインストールします。例えば次のようにします。 
   
-        
+        ```
 cf install-plugin dev_mode-linux64
-        
+        ```
 
 - Bluemix CLI リポジトリーからインストールする。
   1. 以下のコマンドを使用して、Cloud Foundry CLI リポジトリー群に bluemix-repo リポジトリーを追加します。
   
-        
+        ```
 cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
-        
+        ```
 
   2. cf repo-plugins を入力します。bluemix-repo リポジトリーに dev_mode プラグインが表示されます。
 		
-		
+		```
 cf repo-plugins
-        
+        ```
   
   3. 以下のコマンドを使用して、Cloud Foundry CLI プラグイン群に dev_mode プラグインをインストールします。
   
-        
+        ```
 cf install-plugin dev_mode -r bluemix-repo
-        
+        ```
 
 ## dev_mode コマンドの表示
 
 dev_mode CLI に含まれているコマンドをすべて表示するには、以下のコマンドを使用します。
 
-
+```
 cf plugins
-
+```
 
 ## dev_mode CLI コマンドの索引
 {: #dev_mode_cmds_index}
@@ -104,9 +104,9 @@ cf plugins
 
 コマンドに関するヘルプを表示します。
 
-
+```
 cf help <commandName>
-
+```
 
 
 ## mode
@@ -114,9 +114,9 @@ cf help <commandName>
 
 アプリのモードを変更します。
 
-
+```
 cf mode <appName> <dev|normal>
-
+```
 <strong>コマンド・オプション</strong>:<dl>
    <dt>dev</dt>
    <dd>開発モード。</dd>
@@ -129,9 +129,9 @@ cf mode <appName> <dev|normal>
 {: #status}
 
 アプリのモードとランタイム状況を表示します。
-
+```
 cf status <appName>
-
+```
 
 
 
@@ -140,9 +140,9 @@ cf status <appName>
 
 クラウドのアプリケーション・ファイルを更新します。
 
-
+```
 cf update-file <remotePath> <localPath> [command_options]
-
+```
 
 
 <strong>コマンド・オプション</strong>:
@@ -161,9 +161,9 @@ cf update-file <remotePath> <localPath> [command_options]
 
 クラウドのアプリケーション・ファイルを削除します。
 
-
+```
 cf delete-file <remotePath> [command_options]
-
+```
 
 
 <strong>コマンド・オプション</strong>:
@@ -177,9 +177,9 @@ cf delete-file <remotePath> [command_options]
 {: #start_inplace}
 既存コンテナーのアプリを開始します。
 
-
+```
 cf start-inplace <appName>
-
+```
 
 
 
@@ -187,9 +187,9 @@ cf start-inplace <appName>
 {: #stop_inplace}
 既存コンテナーのアプリを停止します。
 
-
+```
 cf stop-inplace <appName>
-
+```
 
 
 
@@ -198,9 +198,9 @@ cf stop-inplace <appName>
 
 既存コンテナーのアプリを再始動します。
 
-
+```
 cf restart-inplace <appName>
-
+```
 
 
 

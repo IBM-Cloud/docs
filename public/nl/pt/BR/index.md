@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Público
 {: #public}
-*Última atualização: 19 maio de 2016*
+Última atualização: 8 de agosto de 2016
 {: .last-updated}
 
 
@@ -173,13 +173,18 @@ determina para qual app ela se destina e, em seguida, seleciona uma das instânc
 
 Uma região do {{site.data.keyword.Bluemix_notm}} é um
 território geográfico definido no qual você pode  implementar
-seus apps. É possível criar apps e instâncias de serviço em diferentes regiões com a mesma infraestrutura do {{site.data.keyword.Bluemix_notm}} para gerenciamento de aplicativos e a mesma visualização de detalhes de uso para faturamento. É possível selecionar a região mais próxima aos seus clientes e implementar seus
+seus apps. Você pode criar apps e instâncias de serviço em diferentes
+regiões com a mesma infraestrutura do
+{{site.data.keyword.Bluemix_notm}} para gerenciamento de
+aplicativos e a mesma visualização de detalhes de uso para faturamento. É possível selecionar a região mais próxima aos seus clientes e implementar seus
 apps nessa região para obter baixa latência do aplicativo. Também é possível selecionar a
 região em que você deseja manter os dados do aplicativo por questões de segurança de endereço. Ao construir apps em diversas regiões, se uma região ficar inativa, os apps que estão nas outras regiões continuarão a executar. A concessão de seu recurso é a mesma para cada região que você usa.
 
 Se estiver usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}},
-poderá alternar para uma região diferente para trabalhar com os espaços dessa região. Acesse o ícone **Conta e suporte** ![ícone Conta e
-suporte](../admin/images/account_support.svg) e expanda o seletor Região. Em seguida, é possível selecionar uma região diferente a partir da lista.
+poderá alternar para uma região diferente para trabalhar com os espaços dessa região. Clique
+no ícone **{{site.data.keyword.avatar}}**
+![ícone Avatar](../icons/i-avatar-icon.svg) e expanda o seletor
+**Região**. É possível então selecionar uma região diferente na lista.
 
 Se você estiver utilizando a interface de linha de comandos do
 cf, deverá se conectar à região do
@@ -256,10 +261,10 @@ Ao integrar um sistema de registro ao app que você cria no
 {{site.data.keyword.Bluemix_notm}}, pode executar as
 seguintes ações:
 
- * Ativar a comunicação segura entre o app e o banco de dados
-backend, fazendo o download e instalando um conector seguro no local.
+ * Ativar a comunicação segura entre o app e o banco de dados de backend, fazendo
+o download e instalando um conector seguro no local.
  * Chamar um banco de dados de uma maneira segura.
- * Criar APIs a partir de fluxos de integração com bancos de dados e sistemas
+ * Criar APIs a partir de fluxos de integração com bancos de dados e sistemas de
 backend, como o sistema de gerenciamento de relacionamento com o cliente.
  * Expor somente os esquemas e as tabelas que você deseja que
 sejam expostos ao app.

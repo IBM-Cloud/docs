@@ -4,7 +4,7 @@
 
 copyright:
 
-  années : 2015, 2016
+  years: 2015, 2016
 
  
 
@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} local
 {: #local}
-*Dernière mise à jour : 7 juillet 2016*
+*Dernière mise à jour : 16 août 2016*
 {: .last-updated}
 
 L'environnement {{site.data.keyword.Bluemix}} local apporte la puissance et l'agilité de la plateforme reposant sur le cloud
@@ -52,7 +52,8 @@ microservices. |
 |Facultatif | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | Utilisez le service {{site.data.keyword.APIMfull}} pour composer des API, les gérer et les diffuser sur les réseaux sociaux. Vous pouvez importer des API avec des ressources en utilisant une adresse URL de proxy ou en assemblant des données à partir de sources de données HTTP. L'avantage avec le service {{site.data.keyword.APIM}} est que vous pouvez gérer la façon dont vos API sont utilisées. |
 |Facultatif | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} fournit l'accès à une couche de données JSON NoSQL
 entièrement gérée toujours active. Ce service est compatible avec CouchDB et accessible via une interface HTTP facile à utiliser pour les modèles
-d'application mobile et Web. |
+d'application mobile et Web. Pour plus d'informations, voir la [documentation](http://docs.cloudant.com/BluemixLocal.html){: new_window} complète et la [configuration matérielle](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} requise pour un environnement local.  |
+|Facultatif (bêta) | {{site.data.keyword.containershort}} | Conteneurs Run Docker dans l'environnement {{site.data.keyword.Bluemix_notm}} local. Les conteneurs sont des objets logiciels virtuels qui incluent tous les éléments qu'une application a besoin d'exécuter. Un conteneur tire parti de l'isolation et de l'allocation des ressources, mais est plus portable et efficace que, par exemple, une machine virtuelle. |
 |Facultatif | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
 |Facultatif | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | Pour augmenter la redondance, {{site.data.keyword.sescashort}} fournit une réplique d'une session
 qu'il stocke en cache. Par conséquent, en cas de microcoupure ou d'indisponibilité, votre application client peut continuer à accéder à la session en cache. Le service
@@ -89,7 +90,7 @@ mois ciblant des projets d'API au niveau de l'entreprise. |
 l'environnement {{site.data.keyword.apiconnect_short}} Enterprise offrant une capacité supplémentaire de 100000 appels d'API par mois. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} 500 API calls capacity increase | Environnement permettant l'exécution
 d'une version privée de {{site.data.keyword.APIM}} {{site.data.keyword.Bluemix_notm}}, avec une capacité de 500 appels d'API par seconde. |
-|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} Cluster | Environnement permettant le déploiement d'un cluster de 3 noeuds du service {{site.data.keyword.cloudant}}. La capacité de données des noeuds est déterminée par l'infrastructure fournie par vous pour l'environnement local.  |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} Cluster | Environnement permettant le déploiement d'un cluster de 3 noeuds du service {{site.data.keyword.cloudant}}. La capacité de données des noeuds est déterminée par l'infrastructure fournie par vous pour l'environnement local. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local incremental increase | Environnement s'ajoutant à l'offre
 de service de base {{site.data.keyword.iot_full}} Local et permettant l'exécution d'une version privée d'{{site.data.keyword.iot_full}} dans
 l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 0,5 To d'échange de données. |
@@ -309,9 +310,7 @@ Vous pouvez vous attendre à obtenir un processus similaire à la liste suivante
 <li>Vous fournissez 7 adresses IP sur votre réseau. Si vous disposez d'un proxy Web sécurisé pour autoriser l'accès Internet sortant pour les composants {{site.data.keyword.Bluemix_notm}} internes, vous devez fournir les données d'identification pour vous y connecter.
 <p>**Remarque** : si votre proxy Web n'est pas sécurisé, vous n'avez pas besoin de fournir de données d'identification. Notez également que les clients d'un environnement {{site.data.keyword.Bluemix_notm}} local n'utilisent pas tous un proxy Web.</p></li>
 <li>IBM fournit une liste blanche d'URL depuis lequel l'accès via votre proxy Web doit être approuvé avant de lancer le déploiement.<br />
-<p>**Remarque **: la liste blanche d'URL contient des sites Web tels que twitter.com, facebook.com et
-youtube.com. Si ces URL ne sont pas approuvées, l'utilisation de certains services et zones de {{site.data.keyword.Bluemix_notm}} peut ne pas être
-possible.</p>
+<p>**Remarque** : pour faire en sorte que vos applications existantes ou nouvelles puissent accéder aux ressources nécessaires, vous devrez peut-être exécuter des étapes supplémentaires afin de regrouper les ressources avec le pack de construction ou collaborer avec votre équipe de sécurité afin de placer dans une liste blanche les URL nécessaires à l'exécution de vos applications. Pour plus d'informations sur l'utilisation des packs de construction node.js et Liberty for Java, voir <a href="../runtimes/nodejs/offlineMode.html">Mode déconnecté pour node.js</a> et <a href="../runtimes/liberty/offlineMode.html">Mode déconnecté pour Liberty for Java</a>.</p>
 </li>
 <li>Vous spécifiez les noms de domaine pour le déploiement et les ID que vous souhaitez utiliser. Vous obtenez deux domaines partiellement définis lorsque vous configurez votre instance locale et vous sélectionnez le préfixe de ces deux domaines. Par exemple, vous sélectionnez le préfixe pour <code>*masociété*.bluemix.net</code> et <code>*masociété*.mybluemix.net</code>. Et vous pouvez également choisir le domaine complet pour créer un domaine personnalisé.
 <p>Vous pouvez choisir autant de domaines personnalisés que vous le souhaitez. Cependant, vous êtes chargé des certificats de ces domaines personnalisés. Pour plus d'informations sur la création d'un domaine personnalisé, voir <a href="../manageapps/updapps.html#domain">Création et utilisation d'un domaine personnalisé</a>.</p></li>
@@ -503,7 +502,9 @@ cette phase sont les suivantes :
 {: #localinfra}
 
 Pour l'environnement {{site.data.keyword.Bluemix_notm}} local, vous êtes en charge de la sécurité
-physique et de l'infrastructure de l'hébergement de l'instance locale. IBM définit les exigences minimales ci-après pour la configuration de l'environnement
+physique et de l'infrastructure de l'hébergement de l'instance locale.
+
+IBM définit les exigences minimales ci-après pour la configuration de l'environnement
 {{site.data.keyword.Bluemix_notm}} local.
 
 ### Configuration matérielle
@@ -519,8 +520,8 @@ stockage et des ressources en plusieurs machines virtuelles. Choisissez la combi
 condition que le nombre minimal de coeurs physiques par couche ESXi
 soit huit. Les spécifications suivantes s'appliquent au contexte d'exécution {{site.data.keyword.Bluemix_notm}} de base seulement :
 <ul>
-<li>48 coeurs physiques à 2 Ghz ou plus chacun</li>
-<li>756 Go de mémoire RAM physique</li>
+<li>32 coeurs physiques à 2 Ghz ou plus chacun </li>
+<li>512 Go de mémoire RAM physique</li>
 <li>Taille totale de magasin de données de 7,5 To
 <ul>
 <li>Magasin de données de 7 To pour le stockage de {{site.data.keyword.Bluemix_notm}}</li>
@@ -532,10 +533,9 @@ soit huit. Les spécifications suivantes s'appliquent au contexte d'exécution {
 </dd>
 <dt>**Haute disponibilité**</dt>
 <dd>
-Pour pouvoir prendre en charge une défaillance de noeud unique, vous devez disposer de n+1 couches ESXi. Par exemple, si trois couches ESXi sont
-utilisées, comptant 16x coeurs chacune, une quatrième est nécessaire.
-<p><strong>Remarque :</strong> l'administrateur VMware client peut décider d'appliquer une reprise en ligne à haute disponibilité stricte dans le cluster
-afin de garantir les ressources.</p>
+Pour pouvoir prendre en charge une défaillance de noeud unique, vous devez disposer de n+1 couches ESXi. Par exemple, si les 32 coeurs et les 512 Go de mémoire sont obtenus à l'aide de deux coeurs 16x et serveurs ESXi 256 Go, vous avez besoin de ces trois de ces serveurs pour prendre en charge la panne totale d'un seul noeud.
+<p><strong>Remarque :</strong> l'administrateur VMware du client peut décider d'appliquer une reprise en ligne à haute disponibilité stricte dans le cluster
+afin de garantir les ressources. Si vous choisissez de poursuivre sans la reprise à haute disponibilité, vous pouvez répondre aux exigences de ressource minimum de 32 coeurs et 512 Go. </p>
 </dd>
 <dt>**Réseau**</dt>
 <dd>
@@ -633,9 +633,9 @@ vSphere seulement.</li>
 
 ### Augmentation du pool d'agents DEA (Droplet Execution Agent)
 Chaque agent DEA est configuré avec :
-- 16 à 32 Go de mémoire RAM
-- 2x à 4x UC virtuelles
-- 150 à 300 Go d'espace de stockage
+- 16 ou 32 Go de mémoire RAM
+- 2x ou 4x UC virtuelles
+- 150 ou 300 Gi d'espace de stockage
 
 Par exemple, si la taille de l'hôte ESXi est de 256 Go de mémoire avec 16x coeurs, huit agents DEA sont
 ajoutés. Si la taille de l'hôte ESXi est de 64 Go de mémoire avec 8x coeurs, deux couches ESXi et quatre agents DEA doivent être ajoutés. Un espace de stockage supplémentaire de 1,5 To est requis pour chacun des quatre agents DEA. Cet exemple s'appuie sur un agent DEA configuré avec 32 Go de

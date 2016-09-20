@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
  
 
@@ -15,7 +15,7 @@ copyright:
 {:download: .download}
 
 # 使用 Git 开始编码
-*上次更新时间：2016 年 3 月 2 日*
+上次更新时间：2016 年 3 月 2 日
 {: .last-updated}  
 
 您可以创建托管的 Git 存储库，该存储库将自动部署到 {{site.data.keyword.Bluemix}}。然后，可以通过将更改推送到 Git 存储库来修改应用程序中运行的代码。
@@ -43,34 +43,35 @@ copyright:
 
 要了解有关 {{site.data.keyword.Bluemix_notm}} Live Sync 的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} Live Sync](../develop/bluemixlive.html)。有关命令的更多详细信息，请参阅 [{{site.data.keyword.Bluemix_notm}} Live Sync CLI 文档](../cli/reference/bl/index.html)。要将 {{site.data.keyword.Bluemix_notm}} Live Sync 与 Web IDE 配合使用，请参阅[实时编辑](../develop/bluemixlive.html)。  
 
-1. 下载并安装 {{site.data.keyword.Bluemix_notm}} Live Sync bl 命令行。 
+开始之前，请下载并安装 {{site.data.keyword.Bluemix_notm}} Live Sync bl 命令行。 
+
+**重要信息：**bl 命令行工具仅适用于 Windows 7 和 8 以及 Mac OS X V10.9 或更高版本。
 
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="下载 Windows bl 命令行按钮" /></a>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="下载 Mac bl 命令行按钮" /></a>
 </p>
 
-**重要信息：**bl 命令行工具仅适用于 Windows 7 和 8 以及 Mac OS X V10.9 或更高版本。 
-
-2. 在命令行上，使用以下命令登录。系统将提示您输入 IBM® 标识和密码。 
+1. 在命令行上，输入以下命令以登录：
 ```
 bl login
 ```
+系统提示时，输入 {{site.data.keyword.ibmid}} 和密码。
 
-3. 通过输入以下命令，查看可用于 {{site.data.keyword.Bluemix_notm}} Live Sync 同步的项目的列表： 
+2. 通过输入以下命令，查看可用于 {{site.data.keyword.Bluemix_notm}} Live Sync 同步的项目的列表： 
 ```
 bl projects
 ```
 在列表中找到匹配您应用程序的项目名称。项目名称的格式为 *alias* | *your application name*。
 
-4. 通过输入以下命令，将本地环境与 {{site.data.keyword.Bluemix_notm}} 上的项目同步。如果您是项目所有者，那么只需为 projectName 指定 your-application-name 即可。 
+3. 通过输入以下命令，将本地环境与 {{site.data.keyword.Bluemix_notm}} 上的项目同步。如果您是项目所有者，那么只需为 projectName 指定 your-application-name 即可。 
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
 ```
 bl sync projectName -d localDirectory --verbose
 ```
 此命令继续运行（同步也将继续），直到您输入“q”。--verbose 选项用于显示日志记录和状态信息。如果任何自变量中包含空格，那么需要为该名称加引号。
 
-5. 在另一个命令行窗口中，在本地目录下，通过输入以下命令，以“实时编辑”方式将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。
+4. 在另一个命令行窗口中，在本地目录下，通过输入以下命令，以“实时编辑”方式将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。
 ```
 bl start
 ```  

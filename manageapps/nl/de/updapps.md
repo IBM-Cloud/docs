@@ -58,7 +58,7 @@ App-Zugriff bearbeiten**.
   1. Erstellen Sie eine angepasste Domäne für Ihre Organisation, indem Sie den folgenden Befehl eingeben:
     
     ```
-    cf create-domain <Organisationsname> mydomain
+cf create-domain <Organisationsname> mydomain
     ```
     
     *Organisationsname*
@@ -72,7 +72,7 @@ App-Zugriff bearbeiten**.
   2. Fügen Sie die Route mit der angepassten Domäne zu einer Anwendung hinzu, indem Sie den folgenden Befehl eingeben:
     
     ```
-    cf map-route myapp mydomain -n host_name
+cf map-route myapp mydomain -n host_name
     ```
     
     *myapp*
@@ -139,7 +139,7 @@ In diesem Beispiel lautet der Name der Anwendung 'Blue'. Das Beispiel veranschau
 1. Stellen Sie die App *Blue* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit.
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   **Ergebnis:** Die App *Blue* wird ausgeführt und antwortet an die URL `Blue.mybluemix.net`.
@@ -147,7 +147,7 @@ In diesem Beispiel lautet der Name der Anwendung 'Blue'. Das Beispiel veranschau
 2. Verwenden Sie den Befehl **cf rename**, um die App *Blue* in *Green* zu ändern:
   
   ```
-  cf rename Blue Green
+cf rename Blue Green
   ```
   
   Listen Sie die Anwendungen im aktuellen Bereich mit dem Befehl **cf apps** auf:
@@ -165,7 +165,7 @@ In diesem Beispiel lautet der Name der Anwendung 'Blue'. Das Beispiel veranschau
 *Blue* vor. Stellen Sie die aktualisierte App *Blue* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit:
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   Listen Sie die Anwendungen im aktuellen Bereich mit dem Befehl **cf apps** auf:
@@ -187,7 +187,7 @@ In diesem Beispiel lautet der Name der Anwendung 'Blue'. Das Beispiel veranschau
 delete**.
   
   ```
-  cf delete Green -f
+cf delete Green -f
   ```
   
   Listen Sie die Routen in Ihrem Bereich mit dem Befehl
@@ -212,7 +212,7 @@ In diesem Beispiel ist *Blue* die zuvor bereitgestellte Anwendung, und
 1. Stellen Sie die App *Blue* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit.
   
   ```
-  cf push Blue
+cf push Blue
   ```
   
   **Ergebnis:** Die App *Blue* wird ausgeführt und antwortet an die URL `Blue.mybluemix.net`.
@@ -220,7 +220,7 @@ In diesem Beispiel ist *Blue* die zuvor bereitgestellte Anwendung, und
 2. Nehmen Sie die erforderlichen Änderungen vor und bereiten Sie die Version *Green* vor. Stellen Sie die App *Green* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit:
   
   ```
-  cf push Green
+cf push Green
   ```
   
   Listen Sie die Anwendungen im aktuellen Bereich mit dem Befehl **cf route** auf:
@@ -242,7 +242,7 @@ In diesem Beispiel ist *Blue* die zuvor bereitgestellte Anwendung, und
 3. Ordnen Sie die App *Blue* der App *Green* zu, sodass der gesamte Datenverkehr an `Blue.mybluemix.net` sowohl an die App *Blue* als auch an die App *Green* weitergeleitet wird.
   
   ```
-  cf map-route Green mybluemix.net -n Blue
+cf map-route Green mybluemix.net -n Blue
   ```
   
   Listen Sie die Routen in Ihrem Bereich mit dem Befehl 'cf routes' auf:
@@ -265,7 +265,7 @@ In diesem Beispiel ist *Blue* die zuvor bereitgestellte Anwendung, und
 der App *Blue* :
   
   ```
-  cf unmap-route Blue mybluemix.net -n Blue
+cf unmap-route Blue mybluemix.net -n Blue
   ```
   
   Listen Sie die Routen in Ihrem Bereich mit dem Befehl 'cf routes' auf:
@@ -284,7 +284,7 @@ der App *Blue* :
 5. Entfernen Sie die Route `Green.mybluemix.net` zur App *Green*.
   
   ```
-  cf unmap-route Green mybluemix.net -n Green
+cf unmap-route Green mybluemix.net -n Green
   ```
   
   **Ergebnis:** Der CF-Router sendet keinen Datenverkehr mehr an die App
@@ -294,7 +294,7 @@ der App *Blue* :
 delete`.
   
   ```
-  cf delete Blue -f
+cf delete Blue -f
   ```
   
   Listen Sie die Routen in Ihrem Bereich mit dem Befehl

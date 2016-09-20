@@ -9,7 +9,7 @@ copyright:
 
 # Cordova 用 Hello Bluemix サンプル入門
 {: #gettingstarted-cordova}
-*最終更新日: 2016 年 5 月 27 日*
+最終更新日: 2016 年 5 月 27 日
 {: .last-updated}
 
 新規 Cordova アプリケーションを始める場合は、HelloWorld というアプリが使用できます。このアプリは、モバイル・アプリから {{site.data.keyword.Bluemix}} 上のモバイル・バックエンドへ認証を行わずに接続する方法を示す実例となっています。
@@ -32,12 +32,14 @@ copyright:
 3. プロジェクト・ディレクトリーから以下のコマンドを実行して、Android および iOS のプラットフォーム環境を追加します。
 
 	### Android
+	{: #cordova-android-run}
 
 	```Bash
 	cordova platform add android
 	```
 
 	### iOS
+	{: #cordova-ios-run}
 
 	```Bash
 	cordova platform add ios
@@ -65,11 +67,10 @@ copyright:
 6. Cordova アプリを iOS 用に構成します。Android プラットフォームでは、追加の構成は必要ありません。
 
 	### iOS
-  ビルド・エラーを回避するために Xcode プロジェクトを次のように構成します。
+	{: #cordova-ios-configure}
+ビルド・エラーを回避するために Xcode プロジェクトを次のように構成します。	1. 最新バージョンの Xcode を使用して、*&lt;app_name&gt;*/platforms/ios ディレクトリー内の `xcode.proj` ファイルを開きます。
 
-	1. 最新バージョンの Xcode を使用して、*&lt;app_name&gt;*/platforms/ios ディレクトリー内の `xcode.proj` ファイルを開きます。
-
-		**重要:** 「最新の Swift 構文に変換する」メッセージを受け取った場合は、**「キャンセル」**をクリックします。
+		**重要:** 最新の Swift 構文に変換するよう指示するメッセージを受け取った場合は、**「キャンセル」**をクリックします。
 
 	2. **「ビルド設定」>「Swift コンパイラー - コード生成」>「Objective-C ブリッジング・ヘッダー」**へ移動し、次のパスを追加します。
 
@@ -86,6 +87,7 @@ copyright:
 7. モバイル・エミュレーターまたはモバイル・デバイスでサンプルをビルドして実行します。
 
   ### Android
+  {: #cordova-android-build}
 	1. 次のコマンドを使用して Cordova アプリをビルドします。
 
     **重要:** Android Studio でプロジェクトを開く前に、まず、Cordova コマンド・ライン・インターフェース (CLI) を使用して Cordova アプリケーションをビルドする必要があります。そうしなければ、ビルド・エラーが発生します。
@@ -97,6 +99,7 @@ copyright:
 	2. Android Studio でサンプル・アプリを実行します。
 
   ### iOS
+  {: #cordova-ios-build}
   1. Xcode で Cordova アプリをビルドします。
 
     **ヒント:** Xcode でのビルドによって、デバッグやプロジェクト構成でより多くのオプションが提供されます。
@@ -107,16 +110,21 @@ copyright:
 このボタンをタップすると、このアプリケーションがクライアントからバックエンド {{site.data.keyword.Bluemix_notm}} アプリケーションへの接続をテストします。
 接続テストは、`index.js` ファイルで指定したアプリケーション経路を使用して行われます。
 
+<!--
+![Hello World application successfully connected to Bluemix](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+-->
 
-![Hello World アプリケーションから Bluemix への接続に成功](images/yayconnected.jpg "図 1. Hello World アプリケーションから Bluemix への接続に成功")
-
-
-モバイル・アプリから {{site.data.keyword.Bluemix_notm}} への接続に成功すると、「成功! つながりました (Yay! You are connected)」というメッセージが表示されます。
+  Android Studio のモバイル・アプリから {{site.data.keyword.Bluemix_notm}} への接続に成功すると、以下が表示されます。
+  `成功! つながりました (Yay! You are connected)`
+  {: screen}
 
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
-接続に失敗すると、エラー・メッセージが表示されます。
+接続に失敗すると、以下が表示されます。
+  `失敗。問題が発生しました (Bummer. Something went wrong)`
+  {: screen}
+   
 エラーの詳細がメッセージに含まれています。
 以下の項目をチェックしてエラーをトラブルシューティングすることができます。
 

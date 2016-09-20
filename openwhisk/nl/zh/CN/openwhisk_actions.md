@@ -19,7 +19,7 @@ copyright:
 # 创建并调用 {{site.data.keyword.openwhisk_short}} 操作
 {: #openwhisk_actions}
 
-*上次更新时间：2016 年 3 月 22 日*
+上次更新时间：2016 年 8 月 4 日
 {: .last-updated}
 
 操作是在 {{site.data.keyword.openwhisk}} 平台上运行的无状态代码片段。操作可以是 JavaScript 函数、Swift 函数或封装在 Docker 容器中的定制可执行程序。例如，操作可用于检测映像中的构面、聚集一组 API 调用或发布推文。
@@ -32,7 +32,7 @@ copyright:
 ## 创建并调用 JavaScript 操作
 {: #openwhisk_create_action_js}
 
-以下各部分指导您使用 JavaScript 中的操作。首先创建并调用简单操作，然后向操作添加参数，并使用这些参数来调用该操作，设置并调用缺省参数，创建异步操作，最后使用操作序列。
+以下各部分指导您使用 JavaScript 中的操作。您从创建和调用简单的操作开始。然后，继续向操作添加参数，并使用这些参数来调用该操作。接下来，设置缺省参数并对它们进行调用。然后，创建异步操作并最终使用操作序列。
 
 
 ### 创建并调用简单 JavaScript 操作
@@ -141,8 +141,8 @@ activations
 1. 在操作中使用参数。例如，使用以下内容来更新“hello.js”文件：
   
   ```
-function main(params) {
-     return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+  function main(params) {
+      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -213,22 +213,28 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
 ### 创建异步操作
 {: #openwhisk_asynchrony_js}
 
-`main` 函数返回后，继续在回调函数中执行的 JavaScript 函数可能需要返回激活结果。可以在您的操作中使用 `whisk.async()` 和 `whisk.done()` 函数来完成此步骤。
+`main` 函数返回后，异步运行的 JavaScript 函数可能需要返回激活结果。通过在操作中返回 Promise，可实现此目的。
 
 1. 将以下内容保存在名为 `asyncAction.js` 的文件中。
 
   ```
-function main() {setTimeout(function() {
-          return whisk.done({done: true});
-      }, 20000);
-      return whisk.async();
-  }
+  function main(args) {
+       return new Promise(function(resolve, reject) {
+         setTimeout(function() {
+          resolve({ done: true });
+         }, 2000);
+      })
+   }
   ```
   {: codeblock}
 
-  请注意，`main` 函数会立即返回，并且 `whisk.async()` 返回值指示此激活应该继续运行。
+  请注意，`main` 函数会返回 Promise，其指示激活尚未完成，但是预期在未来完成。
 
-  在本例中，`setTimeout()` JavaScript 函数会等待 20 秒再调用回调函数，其中对 `whisk.done()` 的调用指示激活已完成。
+  在本例中，`setTimeout()` JavaScript 函数会等待 20 秒再调用回调函数。这代表异步代码，并进入 Promise 的回调函数。
+
+  Promise 的回调函数采用两个自变量 resolve 和 reject，这两个自变量都是函数。`resolve()` 的调用会履行 Promise 并指示激活已正常完成。
+
+  `reject()` 的调用可用于拒绝 Promise 并指示激活异常完成。
 
 2. 运行以下命令来创建并调用操作：
 
@@ -292,20 +298,28 @@ var request = require('request');function main(params) {
      var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
     
-        request.get(url, function(error, response, body) {
-            var condition = JSON.parse(body).query.results.channel.item.condition;
-            var text = condition.text;
-            var temperature = condition.temp;
-            var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-            whisk.done({msg: output});
-        });return whisk.async();
+        return new Promise(function(resolve, reject) {
+            request.get(url, function(error, response, body) {
+            if (error) {
+                    reject(error);    
+                }
+                else {
+                    var condition = JSON.parse(body).query.results.channel.item.condition;
+                    var text = condition.text;
+                    var temperature = condition.temp;
+                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                    resolve({msg: output});
+                }
+            });
+        });
     }
   ```
   {: codeblock}
 
-  请注意，示例中的操作使用 JavaScript `request` 库向 Yahoo Weather API 发起 HTTP 请求，然后从 JSON 结果中抽取字段。[参考](./openwhisk_reference.html#runtime_ref_runtime_environment)详细描述了可以在操作中使用的 Node.js 包。
-  
-  此示例还显示了需要异步操作。此操作返回 `whisk.async()`，指示函数返回时此操作的结果尚不可用。相反，结果会在 HTTP 调用完成后在 `request` 回调中提供，并且会作为自变量传递给 `whisk.done()` 函数。
+  请注意，示例中的操作使用 JavaScript `request` 库向 Yahoo Weather API 发起 HTTP 请求，然后从 JSON 结果中抽取字段。[参考](./reference.md#runtime-environment)详细描述了可以在操作中使用的 Node.js 包。
+
+  此示例还显示了需要异步操作。此操作返回 Promise，指示函数返回时此操作的结果尚不可用。相反，结果会在 HTTP 调用完成后在 `request` 回调中提供，并且会作为自变量传递给 `resolve()` 函数。
+
 
 2. 运行以下命令来创建并调用操作：
   ```
@@ -389,6 +403,37 @@ wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)
 **注**：有关使用多个指定参数来调用操作序列的更多信息，请参阅[设置缺省参数](./actions.md#setting-default-parameters)
 
 
+## 创建 Python 操作
+{: #openwhisk_actions_python}
+
+创建 Python 操作的过程与创建 JavaScript 操作的过程类似。以下各部分将指导您创建并调用单个 Python 操作，然后向该操作添加参数。
+
+### 创建并调用操作
+{: #openwhisk_actions_python_invoke}
+
+操作其实就是顶级 Python 函数，这表示必须要有名称为 `main` 的方法。例如，创建名为 `hello.py` 的文件并包含以下内容：
+
+```
+    def main(dict):
+        name = dict.get("name", "stranger")
+        greeting = "Hello " + name + "!"
+        print(greeting)
+        return {"greeting": greeting}
+```
+{: codeblock}
+
+Python 操作始终会使用一个字典并生成一个字典。
+
+可以通过此函数创建名为 `helloPython` 的 OpenWhisk 操作，如下所示：
+
+```
+wsk action create helloPython hello.py
+```
+{: pre}
+
+使用命令行和 `.py` 源文件时，无需指定您要创建 Python 操作（与 JavaScript 操作相反）；该工具会根据文件扩展名来进行确定。
+
+
 
 ## 创建 Swift 操作
 {: #openwhisk_actions_swift}
@@ -438,8 +483,6 @@ wsk action invoke --blocking --result helloSwift --param name World
 {: screen}
 
 **注意：**Swift 操作在 Linux 环境中运行。Swift on Linux 仍在开发中；{{site.data.keyword.openwhisk_short}} 通常会使用最新可用发行版，但此版本不一定稳定。此外，用于 {{site.data.keyword.openwhisk_short}} 的 Swift 版本可能与 Mac OS 上 Xcode 的稳定发行版中的 Swift 版本不一致。
-
-
 
 ## 创建 Docker 操作
 {: #openwhisk_actions_docker}

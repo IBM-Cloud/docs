@@ -51,10 +51,9 @@ copyright:
 	```
   4. 檢視日誌中顯示的第一個錯誤。
   
-如果您使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 外掛程式來部署應用程式，則會在 Eclipse 工具的**主控台**標籤中，看到類似 cf logs 輸出的日誌。當您部署應用程式時，也可以開啟不同的 Eclipse 視窗來追蹤日誌。``
+如果您使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 外掛程式來部署應用程式，則會在 Eclipse 工具的**主控台**標籤中，看到類似 cf logs 輸出的日誌。當您部署應用程式時，也可以開啟不同的 Eclipse 視窗來追蹤日誌。
 
-除了 `cf logs` 指令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您也可以使用 Monitoring and
-Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 服務還會監視應用程式的效能、性能及可用性。它也提供 Node.js 及 Liberty 運行環境應用程式的日誌分析。  
+除了 `cf logs` 指令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您也可以使用 Monitoring and Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 服務還會監視應用程式的效能、性能及可用性。它也提供 Node.js 及 Liberty 運行環境應用程式的日誌分析。  
 
 ### 針對 Node.js 應用程式的編譯打包錯誤進行除錯
 
@@ -130,19 +129,19 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
 <dd>若要使用 Script 來自動收集並匯出日誌到外部檔案，您必須從您的電腦連接至 {{site.data.keyword.Bluemix_notm}} 伺服器，而且您的電腦上必須具有足夠的空間可下載日誌。如需相關資訊，請參閱<a href="../support/index.html#collecting-diagnostic-information" target="_blank">收集診斷資訊</a>。</dd>
 </dl>
 
-依預設，之前可透過 {{site.data.keyword.Bluemix_notm}}「儀表板」中的應用程式視圖，在**檔案** > **日誌**下存取 `stdout.log` 及 `stderr.log` 檔案。然而，{{site.data.keyword.Bluemix_notm}} 管理所在的 Cloud Foundry 現行版本無法再使用該應用程式記載。若要持續可以透過 {{site.data.keyword.Bluemix_notm}}「儀表板」在**檔案** > **日誌**下存取 stdout 及 stderr 應用程式記載，您可以將記載重新導向至 {{site.data.keyword.Bluemix_notm}} 檔案系統中的其他檔案（視您使用的運行環境而定）。 
+依預設，之前可透過 {{site.data.keyword.Bluemix_notm}}「儀表板」中的應用程式視圖，在**檔案** > **日誌**下存取 `stdout.log` 及 `stderr.log` 檔案。然而，{{site.data.keyword.Bluemix_notm}} 所在的現行 Cloud Foundry 版本已不再提供該項應用程式記載功能。若要保持可以透過 {{site.data.keyword.Bluemix_notm}}「儀表板」在**檔案** > **日誌**下存取 stdout 及 stderr 應用程式記載，您可以將記載重新導向至 {{site.data.keyword.Bluemix_notm}} 檔案系統中的其他檔案（視您使用的運行環境而定）。 
 
   * 若為 Liberty for Java 應用程式，導向到 stdout 及 stderr 的輸出已包含在 logs 目錄中的 `messages.log` 檔案中。請分別尋找字首為 SystemOut 及 SystemErr 的項目。
   * 若為 Node.js 應用程式，您可以置換 console.log 函數，以明確地寫入 logs 目錄中的檔案。
   * 若為 PHP 應用程式，您可以使用 error_log 函數來寫入 logs 目錄中的檔案。
-  * 若為 Python 應用程式，您可以讓日誌程式寫入 logs 目錄中的檔案：logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * 若為 Python 應用程式，您可以讓日誌程式寫入 logs 目錄中的檔案，如下所示：logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * 若為 Ruby 應用程式，您可以讓日誌程式寫入 logs 目錄中的檔案。
  
  
 ### 對程式碼變更進行除錯
 {: #debug_code_changes}
 
-如果您正在對已部署且在運作中的應用程式進行程式碼變更，但您的程式碼變更並未反映在 {{site.data.keyword.Bluemix_notm}} 中，則可以使用日誌來進行除錯。無論您的應用程式是否在執行中，您都可以檢查在應用程式部署或運行期間產生的日誌，以針對新程式碼無效的原因進行除錯。
+如果您正在對已部署且在運作中的應用程式進行程式碼變更，但您的程式碼變更並未反映在 {{site.data.keyword.Bluemix_notm}} 中，則可以使用日誌來進行除錯。無論您的應用程式是否在執行中，您都可以檢查在應用程式部署或運行期間產生的日誌，以針對新程式碼無法正常運作的原因進行除錯。
 
 根據新程式碼部署的方式，選擇下列其中一個方法來對程式碼變更進行除錯： 
 

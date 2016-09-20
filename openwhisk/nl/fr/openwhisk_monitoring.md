@@ -17,14 +17,14 @@ copyright:
 {:pre: .pre}
 
 # Surveillance de votre activité {{site.data.keyword.openwhisk_short}} dans le tableau de bord {{site.data.keyword.openwhisk_short}}
-*Dernière mise à jour : 9 février 2016*
+Dernière mise à jour : 2 août 2016
 {: .last-updated}
 
 Le [tableau de bord {{site.data.keyword.openwhisk}}](https://{DomainName}/whisk/dashboard/) propose un récapitulatif
 graphique de votre activité. Utilisez-le pour déterminer les performances et la santé de vos actions {{site.data.keyword.openwhisk_short}}. 
 {:shortdesc}
 
-Cliquez sur l'option de rechargement à tout moment pour mettre à jour le tableau de bord avec les données de journal d'activation les plus
+Cliquez sur **Rechargement**  tout moment pour mettre à jour le tableau de bord avec les données de journal d'activation les plus
 récentes.
 
 ## Récapitulatif de l'activité

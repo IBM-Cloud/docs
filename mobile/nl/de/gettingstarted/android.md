@@ -10,7 +10,7 @@ copyright:
 
 # Einführung in das Beispiel 'Hello Bluemix for Android'
 {: #gettingstarted-android}
-*Letzte Aktualisierung: 27. Mai 2016*
+Letzte Aktualisierung: 27. Mai 2016
 {: .last-updated}  
 
 Wenn Sie mit einer neuen Android-Anwendung arbeiten möchten, können Sie die App 'HelloWorld' verwenden. Diese App zeigt, wie Sie ohne Authentifizierung eine Verbindung von einer mobilen App zu Ihrem {{site.data.keyword.Bluemix}}-Back-End herstellen können. Für die App
@@ -20,7 +20,7 @@ ist das SDK bereits installiert. Wenn Sie bereit sind, können Sie die spezifisc
     1. Klicken Sie im Abschnitt mit den Boilerplates im {{site.data.keyword.Bluemix_notm}}-Katalog auf 'MobileFirst Services Starter'.
     2. Geben Sie einen Namen und einen Host für Ihre App ein und klicken Sie auf **Erstellen**.
     3. Klicken Sie auf **Fertigstellen**.
-2. Rufen Sie das Projekt aus GitHub ab. Sie können zum Abrufen des Projekts optional den Befehl 'git clone' verwenden. Öffnen Sie auf Ihrem Computer das Terminal und geben Sie anschließend den folgenden Befehl ein:
+2. Rufen Sie das Projekt aus GitHub ab. Sie können zum Abrufen des Projekts optional den Befehl 'git clone' verwenden. Öffnen Sie auf Ihrem Computer das Terminal und geben Sie den folgenden Befehl ein:
     ```
     git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
     ```
@@ -37,17 +37,20 @@ Klicken Sie in der Symbolleiste von Android Studio auf die Schaltfläche zur Wie
   **Anmerkung:** Der Code der `Node.js`-Laufzeit wird in der Boilerplate 'MobileFirst Services Starter' bereitgestellt. Wenn die Back-End-Anwendung nicht mit der Boilerplate 'MobileFirst Services Starter' erstellt wurde, ist das Herstellen einer Verbindung durch die Anwendung nicht erfolgreich.
 
   Wenn Sie in Android Studio erfolgreich eine Verbindung zwischen der mobilen App und {{site.data.keyword.Bluemix_notm}} hergestellt haben, wird die folgende Nachricht angezeigt:
-
   `Yay! You are connected`
   {: screen}
 
-  ![Verbindung zwischen Anwendung 'Hello World' und {{site.data.keyword.Bluemix_notm}} erfolgreich hergestellt](images/yayconnected.jpg "Abbildung 1. Verbindung zwischen Anwendung 'Hello World' und und Bluemix erfolgreich hergestellt")
+<!--
+  ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+  -->
 
   Falls die Verbindung fehlschlägt, wird folgende Nachricht angezeigt:
   `Bummer. Something went wrong`
   {: screen}
 
-  ![Verbindung zwischen Anwendung 'Hello World' und Bluemix nicht hergestellt](images/bummer_android.jpg "Abbildung 2. Verbindung zwischen Anwendung 'Hello World' und Bluemix nicht hergestellt")
+<!--
+  ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
+  -->
 
   Sie können für die fehlgeschlagene Verbindung folgende Fehlerbehebungsmaßnahme durchführen:
    * Überprüfen Sie, dass Sie die Werte für die Route und die GUID ordnungsgemäß eingefügt haben.
@@ -63,7 +66,7 @@ Informationen zum Abrufen des SDK und zum Integrieren in Ihre mobile Anwendung f
 # Zugehörige Links
 
 ## Beispiele
-   * [Hello Bluemix - Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Hello Bluemix - Beispiel (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## SDK
    * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)

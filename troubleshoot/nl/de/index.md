@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+  
 
 ---
 
@@ -15,8 +16,9 @@ copyright:
 # Fehlerbehebung für den Zugriff auf {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Letzte Aktualisierung: 14. Juli 2016*
+Letzte Aktualisierung: 11. August 2016
 {: .last-updated}
+
 
 Ein allgemeines Problem in Bezug auf den Zugriff auf {{site.data.keyword.Bluemix}} kann sein, dass sich ein Benutzer nicht an {{site.data.keyword.Bluemix_notm}} anmelden kann oder dass sich ein Konto dauerhaft im Wartestatus befindet. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben. 
 {:shortdesc}
@@ -24,25 +26,25 @@ Ein allgemeines Problem in Bezug auf den Zugriff auf {{site.data.keyword.Bluemix
 ## Anmelden an {{site.data.keyword.Bluemix_notm}} nicht möglich
 {: #ts_logintobm}
 
-Sie müssen über eine gültige IBM ID und ein Kennwort verfügen, um sich an {{site.data.keyword.Bluemix_notm}} anmelden zu können.
+Sie müssen über eine gültige IBMid und ein Kennwort verfügen, um sich an {{site.data.keyword.Bluemix_notm}} anmelden zu können.
 
 
 Wenn Sie versuchen, sich an {{site.data.keyword.Bluemix_notm}} anzumelden, wird die folgende Fehlernachricht angezeigt: 
 {: tsSymptoms} 
 
-`The IBM id and/or password entered below is incorrect. Please try again.` (Die unten eingegebene IBM ID und/oder das Kennwort ist falsch.)
+`The password that you entered is not correct.` (Das eingegebene Kennwort ist nicht korrekt.)
 
 
-Die IBM ID und das Kennwort für die Anmeldung an {{site.data.keyword.Bluemix_notm}} sind nicht gültig.
+Die IBMid und das Kennwort für die Anmeldung an {{site.data.keyword.Bluemix_notm}} sind nicht gültig.
 {: tsCauses} 
  
 
-Wenn Sie eine gültige IBM ID und ein gültiges Kennwort erhalten möchten, rufen Sie die Seite 'My IBM Profile' auf und führen anschließend einen der folgenden Schritte aus:
+Wenn Sie eine gültige IBMid und ein gültiges Kennwort erhalten möchten, rufen Sie die Seite 'My IBM Profile' auf und führen anschließend einen der folgenden Schritte aus:
 {: tsResolve}
-  * Wenn Sie bereits eine IBM ID registriert haben und überprüfen möchten, ob die ID und das Kennwort gültig sind, klicken Sie auf **Anmelden** und geben die IBM ID und das Kennwort auf der Anmeldeseite an. Wenn Sie das Kennwort vergessen haben, klicken Sie auf der rechten Seite der Anmeldeseite auf **Kennwort vergessen**, um das Kennwort zurückzusetzen. Wenn Sie Ihre IBM ID vergessen haben oder weiterhin Probleme mit dem Kennwort haben, suchen Sie auf der Site 'Worldwide IBM Registration Helpdesk' nach Hilfe. 
-  * Wenn Sie nicht über eine IBM ID verfügen, klicken Sie auf **Registrieren**, um eine IBM ID und ein Kennwort zu erhalten. 
+  * Wenn Sie bereits eine IBMid registriert haben und überprüfen möchten, ob die ID und das Kennwort gültig sind, klicken Sie auf **Anmelden** und geben die IBMid und das Kennwort auf der Anmeldeseite an. Wenn Sie das Kennwort vergessen haben, klicken Sie auf der Anmeldeseite auf **Kennwort vergessen**, um das Kennwort zurückzusetzen. Wenn Sie Ihre IBMid vergessen haben oder weiterhin Probleme mit dem Kennwort haben, suchen Sie auf der Site 'Worldwide IBM Registration Helpdesk' nach Hilfe. 
+  * Wenn Sie über keine IBMid verfügen, klicken Sie auf **Registrieren**, um eine IBMid und ein Kennwort zu erhalten. 
   
-**Hinweis:** Die IBM ID kann für IBM Mitarbeiter von der Anmelde-ID für das Intranet abweichen. 
+**Hinweis:** Die IBMid kann für IBM Mitarbeiter von der Anmelde-ID für das Intranet abweichen. 
 
 
 
@@ -160,7 +162,8 @@ Sie können nicht Benutzer zu Ihrer Organisation einladen, wenn Sie ein Collabor
 Wenn Sie nicht Benutzer zu Ihrer Organisation einladen können und zum Einladen eine andere Rolle benötigen, kontaktieren Sie Ihren Organisationsmanager, damit er Ihre Rolle ändert. Führen Sie die folgenden Schritte aus, um festzustellen, wer Ihr Organisationsmanager ist:
 {: tsResolve}
 
-  1. Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](images/account_support.svg) in der Menüleiste und wählen Sie **Organisationen verwalten** aus. 
+  1. Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg) in der Menüleiste und wählen Sie **Organisationen verwalten** aus. n ausgeführt werden.
+
   2. Wechseln Sie zu Ihrer Organisation und zeigen Sie die Informationen zum Organisationsmanager in der Registerkarte **Benutzer** an.  
   
 Wenn Sie nicht die Möglichkeit haben, Benutzer einzuladen, weil Sie ein Mitarbeiter und kein Mitglied sind, müssen Sie Ihr vorheriges {{site.data.keyword.Bluemix_notm}}-Konto löschen und anschließend eingeladen werden, als Mitglied der Organisation am Konto teilzunehmen. Um Ihr vorheriges Konto zu löschen und dem Konto als Mitglied beizutreten, führen Sie die folgenden Schritte durch: 
@@ -188,7 +191,7 @@ Wenn Sie Benutzer für {{site.data.keyword.Bluemix_notm}} registrieren, müssen 
 Zum Registrieren mehrerer Benutzer für {{site.data.keyword.Bluemix_notm}} sind für jeden einzelnen Benutzer folgende Schritte auszuführen:
 {: tsResolve}
 
-  1. Klicken Sie in der rechten oberen Ecke der Benutzerschnittstelle von {{site.data.keyword.Bluemix_notm}} auf **REGISTRIEREN**.
+  1. Klicken Sie in der Benutzerschnittstelle von {{site.data.keyword.Bluemix_notm}} auf **REGISTRIEREN**.
   2. Führen Sie die Schritte aus, indem Sie dem Assistenten folgen.
 
     
@@ -221,37 +224,6 @@ Sie können nach Bedarf mindestens eine der folgenden Aktionen ausführen:
   
   
   
-  
-  
-## Obere {{site.data.keyword.Bluemix_notm}}-Menüleiste wird
-nicht mehr angezeigt
-{: #ts_topmenubar}
-
-Möglicherweise wird die obere {{site.data.keyword.Bluemix_notm}}-Menüleiste
-beim Ändern der Größe des Browserfensters oder bei der Verwendung eines Mobilgeräts nicht angezeigt.
-
-
-Wenn Sie Ihr Browserfenster verkleinern oder ein
-Mobilgerät verwenden, ist die obere {{site.data.keyword.Bluemix_notm}}-Menüleiste
-nicht mehr zu sehen. Wenn die obere Menüleiste nicht mehr zu sehen ist, wird in der linken oberen Ecke
-das Seitenleistenmenü als gestapelte Linie dargestellt. 
-{: tsSymptoms}
-
- 
-
-Die Benutzerschnittstelle von {{site.data.keyword.Bluemix_notm}}
-weist ein responsives Design auf. Wenn sich die angezeigte Umgebung verändert,
-kann sich auch das Layout der Benutzerschnittstelle von {{site.data.keyword.Bluemix_notm}}
-ändern. 
-{: tsCauses}
- 
-
-Verwenden Sie stattdessen
-das Seitenleistenmenü in der linken oberen Ecke.
-{: tsResolve}
-
-
-
 
 
 
@@ -344,6 +316,47 @@ Wenn Ihre Workbench IBM JVM 7 oder 8 verwendet bzw. eine frühere Version als Or
   3. Überprüfen Sie, ob die Eigenschaft `eclipse.vm` auf Ihre neue Oracle JVM 8-Installation verweist.
 
 
+  
+## Wiederverwendung von Namen gelöschter Apps nicht möglich
+{: #ts_reuse_appname}
+  
+Nach dem Löschen einer App kann der App-Name erst nach dem Löschen der App-Route wiederverwendet werden. 
+
+Bei der Wiederverwendung des App-Namens wird die folgende Nachricht angezeigt:
+{: tsSymptoms}
+
+`The name is already used by another app.` (Der Name wird bereits von einer anderen App verwendet.)
+
+Beim Löschen einer App wird die zugehörige Route (URL für die App) nicht automatisch gelöscht. Deshalb kann sie nicht wiederverwendet werden. Sie müssen den Bereich aufrufen, in dem die App erstellt wurde, um die Route zu löschen.
+{: tsCauses}
+
+Führen Sie die folgenden Schritte aus, um die nicht verwendete Route zu löschen:
+{: tsResolve}
+
+  1. Stellen Sie fest, ob die Route zum aktuellen Bereich gehört. Geben Sie dazu den folgenden Befehl ein: 
+     ```
+	 cf routes
+	 ```
+  2. Wenn die Route nicht zum aktuellen Bereich gehört, wechseln Sie in den betreffenden Bereich oder in die betreffende Organisation. Geben Sie dazu den folgenden Befehl ein: 
+     ```
+	 cf target -o org_name -s space_name
+	 ```
+  3. Löschen Sie die App-Route, indem Sie den folgenden Befehl eingeben:
+     ```
+	 cf delete-route domain_name -n host_name
+	 ```
+	 Beispiel: 	
+```
+	 cf delete-route mybluemix.net -n app001
+	 ```
+
+  
+  
+  
+  
+  
+  
+  
 ## Abrufen von Bereichen in Organisation nicht möglich
 {: #ts_retrieve_space}
 
@@ -358,13 +371,13 @@ Dieser Fehler tritt oft auf, wenn Sie zum ersten Mal versuchen, im Katalog eine 
 {: tsCauses}
 
 Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erstellt haben. Wenden Sie eine der folgenden Methoden an,
-um einen Bereich zu erstellen:
+um einen Bereich zu erstellen: 
 {: tsResolve}
 
-  * Wählen Sie unter 'Konto und Unterstützung' ![Konto und Unterstützung](images/account_support.svg) die Organisation aus, in der Sie den Bereich erstellen möchten, und klicken Sie anschließend auf **Bereich erstellen**. 
+  * Klicken Sie auf das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg), um das Widget 'Konto und Unterstützung' zu öffnen. Wählen Sie die Organisation aus, in der Sie den Bereich erstellen möchten, und klicken Sie anschließend auf **Bereich erstellen**.
   * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`. 
 
-Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite](https://status.eu-gb.bluemix.net/){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt. 
+Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt. 
 
 
 
@@ -497,7 +510,7 @@ Fehler des Browser-Cache.
 Wenn Sie vermuten, dass
 ein {{site.data.keyword.Bluemix_notm}}-Service
 inaktiv ist, überprüfen Sie zunächst die
-[{{site.data.keyword.Bluemix_notm}}-Seite 'Status'](https://developer.ibm.com/bluemix/support/#status){: new_window}. Sie können, wenn Sie möchten, den Service in einer anderen {{site.data.keyword.Bluemix_notm}}-Region
+[{{site.data.keyword.Bluemix_notm}}-Seite 'Status'](http://ibm.biz/bluemixstatus){: new_window}. Sie können, wenn Sie möchten, den Service in einer anderen {{site.data.keyword.Bluemix_notm}}-Region
 als Ausweichlösung verwenden. Ausführliche Informationen finden Sie in [Services
 in einer anderen Region verwenden](../services/reqnsi.html#cross_region_service){: new_window}. Wenn der Status des Service normal ist,
 führen Sie die folgenden Schritte aus, um das Problem zu lösen: 
@@ -543,11 +556,13 @@ Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. S
 {: tsResolve}
 
   * Fügen Sie in der Datei 'manifest.yml' den folgenden Teil hinzu:
+    
     ```
 	disk_quota: <disk_quota>
 	```
   * Verwenden Sie die Option **-k** in Kombination mit dem Befehl `cf push`,
 wenn Sie Ihre App mit Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen:
+    
     ```
 	cf push appname -p app_path -k <disk_quota>
 	```
@@ -644,8 +659,8 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
  
   * Zum Löschen einer Serviceinstanz können Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die Befehlszeilenschnittstelle verwenden.
     Führen Sie folgende Schritte aus, wenn Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle zum Löschen einer Serviceinstanz verwenden:
-	  1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard im linken Teilfenster auf die Option **SERVICES**. Die Kacheln für die Services werden angezeigt. 
-	  2. Klicken Sie auf der Servicekachel, die Sie löschen wollen, auf das Symbol **Menü**.
+	  1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf den Service, den Sie löschen möchten. Daraufhin wird die Kachel für den Service angezeigt. 
+	  2. Klicken Sie auf der Servicekachel auf das Symbol **Menü**.
 	  3. Klicken Sie auf **Service löschen**. Nach dem Löschen der Serviceinstanz werden Sie aufgefordert, die Anwendung erneut bereitzustellen, an die die Serviceinstanz gebunden war. 
     Führen Sie folgende Schritte aus, wenn Sie die Befehlszeilenschnittstelle zum Löschen einer Serviceinstanz verwenden:
 	  1. Heben Sie die Bindung zwischen der Serviceinstanz und der Anwendung auf, indem Sie Folgendes eingeben: `cf unbind-service <appname> <service_instance_name>`.
@@ -713,11 +728,12 @@ Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von
 	  2. Im Teilfenster für die Laufzeit können Sie die maximale Hauptspeicherkapazität für Ihre Anwendung, die Anzahl der Anwendungsinstanzen oder beides reduzieren. 
 	Führen Sie bei Verwendung der cf-Befehlszeilenschnittstelle folgende Schritte aus:
 	  1. Überprüfen Sie, wie viel Speicherplatz für Ihre Anwendungen verwendet wird:
+	  
 	  ```
 	  cf apps
 	  ```
-	     Mit dem Befehl 'cf apps' werden alle Anwendungen aufgelistet, die Sie in Ihrem aktuellen Bereich bereitgestellt haben. Der Status der einzelnen Anwendungen wird auch angezeigt.
-      2. Zum Verringern der von Ihrer Anwendung verwendeten Speichermenge verringern Sie die Anzahl der Anwendungsinstanzen, die maximale Hauptspeicherkapazität oder beides:
+	     Mit dem Befehl 'cf apps' werden alle Anwendungen aufgelistet, die Sie in Ihrem aktuellen Bereich bereitgestellt haben. Der Status der einzelnen Anwendungen wird auch angezeigt.      2. Zum Verringern der von Ihrer Anwendung verwendeten Speichermenge verringern Sie die Anzahl der Anwendungsinstanzen, die maximale Hauptspeicherkapazität oder beides:
+	  
 	  ```
 	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
@@ -800,8 +816,9 @@ Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen:
 
   * Ist die Datei `manifest.yml` nicht auf der höchsten Ebene Ihres Projekts gespeichert, speichern Sie sie dort.
   * Ist Ihre App in einem Unterverzeichnis gespeichert, geben Sie den Pfad zum Unterverzeichnis in der Datei `manifest.yml` an.
+  
   ```
-   path: path_to_application
+path: path_to_application
    ```
   * Erstellen Sie die Datei `package.json` im selben Verzeichnis wie Ihre App.
 
@@ -879,12 +896,14 @@ Der angegebene Hostname muss innerhalb der verwendeten Domäne eindeutig sein. V
 {: tsResolve} 
 
   * Wenn Sie zum Implementieren der Anwendung die Datei `manifest.yml` verwenden, geben Sie den Hostnamen in der Option host an.	 
+    	 
     ```
-    host: <hostname>	
+host: <hostname>	
 	```
   * Wenn Sie die Anwendung über die Eingabeaufforderung bereitstellen, verwenden Sie den Befehl `cf push` mit der Option **-n**. 
+     
     ```
-    cf push <appname> -p <app_path> -n <hostname>
+cf push <appname> -p <app_path> -n <hostname>
     ```
 
 
@@ -941,10 +960,12 @@ Sie können den folgenden Code im Servlet oder der JSP-Datei verwenden:
 {: tsResolve} 
 
   * In der Servletquellendatei: 
+     
     ```
 	response.setContentType("text/html; charset=UTF-8");
 	```
   * In der JSP-Datei: 
+     
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
@@ -1128,7 +1149,7 @@ Verwenden Sie eine der folgenden Methoden, um ein angepasstes Buildpack für Met
 
   * Wenn Sie zum Implementieren der App die Datei `manifest.yml` verwenden, geben Sie die URL oder den Namen des angepassten Buildpacks mithilfe der Option 'buildpack' an. Beispiel:
   ```
-  buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
+buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
   * Wenn Sie die Anwendung in einer Eingabeaufforderung bereitstellen, verwenden Sie den Befehl `cf push` und geben Sie das angepasste Buildpack mit der Option **-b** an. Beispiel:
     ```
@@ -1225,34 +1246,84 @@ Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen:
   * Wenn in der Fehlernachricht angegeben wird, dass ein erforderlicher Service im Zielbereich bereits vorhanden ist, wählen Sie aus, dass ein anderer Bereich verwendet werden soll.
   * Wenn in der Fehlernachricht angegeben wird, dass mit dem Build ein Problem besteht, beheben Sie alle Fehler im Code, die verhindern, dass für die App ein Build erfolgen kann. Zum Überprüfen, dass der Code keine Probleme enthält, erstellen Sie den Code mithilfe von Git-Befehlen:
     1. Klonen Sie das Git-Repository:
+    
     ```
-    git clone <URL des Git-Repositorys>
+git clone <URL des Git-Repositorys>
     ```
 	2. Öffnen Sie das Verzeichnis der App:
+	
 	```
 	cd <appname>
 	```
 	3. Erstellen Sie die App:
+	
 	```
 	<appname> create
 	```
 	4. Stellen Sie Add-ons bereit, falls erforderlich.
 	5. Fügen Sie erforderliche Konfigurationsvariablen hinzu.
 	6. Führen Sie die Push-Operation für den Code durch:
+	
 	```
 	git push <appname> master
 	```
 	7. Überprüfen Sie, dass der Build für die App ordnungsgemäß ausgeführt wird.
 	8. Führen Sie, falls erforderlich, den nach der Bereitstellung auszuführenden Befehl (post deployment) aus:
+	
 	```
 	<appname> run
 	```
 	9. Öffnen Sie die App und prüfen Sie, ob sie ordnungsgemäß ausgeführt wird:
+	
 	```
 	<appname> open
 	```
-	
 
+## Bereitstellung einer App über die Ausführungsleiste schlägt fehl
+{: #deployinganappfromtherunbarfails}
+
+In diesem Szenario schlägt die Bereitstellung mit dem Status 'Nicht synchronisiert' (gelb) fehl. 
+
+Die betreffende App verfügt über dieselbe Route wie eine andere App, die aktiv ist. Geben Sie eine eindeutige Route an, um den Fehler zu beheben.
+
+## Ausführungsleiste nicht gefunden
+{: #runbarcannotbefound}
+
+Wenn die Ausführungsleiste in der Eclipse Orion-{{site.data.keyword.webide}} nicht angezeigt wird, ist eines der folgenden Probleme aufgetreten:
+
+1. {{site.data.keyword.jazzhub}} identifiziert das Projekt nicht als Projekt.
+   * Korrektur: Erstellen Sie im Stammverzeichnis des Projekts die Datei `project.json`.
+2. {{site.data.keyword.jazzhub_short}} konnte nicht feststellen, in welchem Ordner sich die App befindet.
+   * Korrektur: Wenn Sich die App nicht im Stammverzeichnis des Projekts befindet, führen Sie einen der folgenden Schritte aus:
+      * Erstellen Sie im Stammverzeichnis des Projekts die Datei `manifest.yml`. Bearbeiten Sie die Datei so, dass Sie auf die Position der App verweist. Beispiel: `path: path_to_your_app`
+      * Verschieben Sie die App in das Stammverzeichnis des Projekts.
+3. {{site.data.keyword.jazzhub_short}} erkennt nicht, dass die App eine Node.js-App ist.
+   * Korrektur: Erstellen Sie die Datei `package.json` im App-Ordner des Projekts.
+   
+
+## GitHub-Hook funktioniert nicht
+{: #githubhookisntworking}
+
+Wenn Sie das GitHub-Projekt so konfiguriert haben, dass bei der Übertragung von Commits per Push-Operation Links für Arbeitselemente erstellt werden und diese Links nicht wie erwartet funktionieren, führen Sie zur Problembestimmung die folgenden Schritte aus:
+
+1. Klicken Sie im GitHub-Repository auf **Settings**.
+   ![Link für GitHub-Einstellungen](images/githubSettings1_small.png)
+
+2. Klicken Sie auf **Webhooks & Services**.
+   ![Link für GitHub-Web-Hooks und -Services](images/githubHooks1_small.png)
+
+3. Setzen Sie den Mauszeiger auf das {{site.data.keyword.jazzhub}}-Statussymbol, um die Nachricht anzuzeigen.
+   ![Fehlernachricht für Service-Hook](images/troubleshoothook1_small.png)
+
+4. Beheben Sie den Fehler gemäß der GitHub-Nachricht.
+
+5. Wenn Sie überprüfen möchten, ob die Korrektur erfolgreich war, können Sie eine weitere Änderung festschreiben (Commit) und per Push-Operation übertragen, oder Sie rufen die Serviceseite für {{site.data.keyword.jazzhub_short}} auf und klicken auf **Test service**.
+   ![Schaltfläche für Test von GitHub-Service](images/githubTestService_small.png)
+
+6. Stellen Sie sicher, dass keine Fehler vorliegen, indem Sie das Statussymbol erneut überprüfen.
+   ![Statussymbol ohne Fehler](images/githubResolved_small.png)
+
+Weitere Informationen finden Sie in [Setting up GitHub for Bluemix DevOps Services projects](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Fehlerbehebung für die Verwaltung von Konten
@@ -1283,7 +1354,7 @@ Der Status Ihres {{site.data.keyword.Bluemix_notm}}-Kontos verändert sich in 'I
 Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support](http://ibm.biz/bluemixsupport.com){: new_window}, um Ihr Konto zu reaktivieren. In der E-Mail müssen die folgenden Angaben enthalten sein:
 {: tsResolve}
 
-  * Die IBM ID, mit der Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden.
+  * Die IBMid, mit der Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden.
   * Der Name der Organisation für Ihre Anwendung. Mithilfe dieser Informationen kann das Support-Team feststellen, ob Ihnen die richtigen Rollen bzw. die richtige Zugehörigkeit innerhalb Ihrer Organisation zugewiesen wurden.
 
 
@@ -1408,8 +1479,9 @@ Sie können Buildpacks verwenden, die über integrierte Mechanismen verfügen, m
 Wenn das verwendete Buildpack keinen Mechanismus zum automatischen Laden der neuesten Komponenten bereitstellt, können Sie den Inhalt des Cacheverzeichnisses manuell löschen und eine Push-Operation für Ihre App durchführen, indem Sie die folgenden Schritte ausführen:
   1. Checken Sie eine Verzweigung eines Null-Buildpacks aus, z. B. https://github.com/ryandotsmith/null-buildpack. Informationen zum Auschecken einer Verzweigung finden Sie in [Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
   2. Fügen Sie die folgende Zeile zur Datei `null-buildpack/bin/compile` hinzu und schreiben Sie die Änderungen fest. Informationen zum Festschreiben von Änderungen finden Sie in [Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+  
   ```
-  rm -rfv $2/*
+rm -rfv $2/*
   ```
   3. Führen Sie für Ihre App eine Push-Operation mit dem modifizierten Null-Buildpack durch, um den Inhalt des Cache zu löschen. Verwenden Sie hierzu den folgenden Befehl: Nach der Ausführung dieses Schritts ist der gesamte Inhalt des Cacheverzeichnisses Ihrer App gelöscht.
   ```
@@ -1493,14 +1565,11 @@ Fügen Sie zum Lösen des Problems die Datei `requirements.txt` und die Datei `P
 	Weitere Informationen zur Konfiguration der Datei `requirements.txt` finden Sie unter [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html). 
 	 
   2. Fügen Sie im Stammverzeichnis Ihrer Python-Anwendung die Datei `Procfile` hinzu. Die Datei `Procfile` muss den Startbefehl für Ihre Python-Anwendung enthalten. Im folgenden Befehl ist *NameIhrerAnwendung* der Name Ihrer Python-Anwendung und *PORT* ist die Portnummer, die Ihre Python-Anwendung zum Empfangen von Anforderungen von Benutzern der Anwendung verwenden muss. *$PORT* ist optional. Wenn Sie im Startbefehl PORT nicht angeben, wird stattdessen die Portnummer unter der Umgebungsvariablen `VCAP_APP_PORT` verwendet, die sich innerhalb der Anwendung befindet. 
+	 
 	```
 	web: python <NameIhrerAnwendung>.py $PORT
 	```
-Sie können nun die Python-Bibliothek eines Drittanbieters in {{site.data.keyword.Bluemix_notm}} importieren.	
-
-
-
-## Schaltfläche 'Aktionen' auf Seite 'Instanzdetails' ist inaktiviert
+Sie können nun die Python-Bibliothek eines Drittanbieters in {{site.data.keyword.Bluemix_notm}} importieren.## Schaltfläche 'Aktionen' auf Seite 'Instanzdetails' ist inaktiviert
 {: #ts_actionsbutton}
 
 
@@ -1623,10 +1692,9 @@ Dieses Problem wird durch einen der folgenden Gründe verursacht:
 {: tsCauses} 
 
   * Die Speicherauszugsdateien werden mit aktiven Anwendungsinstanzen generiert und die Dateien belegen das zugeordnete Datenträgerkontingent. Das Datenträgerkontingent für eine Anwendungsinstanz beträgt standardmäßig 1 GB. Wenn Sie die Plattenbelegung überprüfen möchten, klicken Sie auf **Dashboard>Anwendung>Anwendungslaufzeit**. Im folgenden Beispiel werden die Laufzeitinformationen inklusive der Plattenbelegung für zwei Instanzen einer Anwendung aufgeführt:
+    
     ```
-    Instance	State	CPU	Memory Usage	Disk Usage
-
-	0		Running	1.0%	344.8MB/512MB	236.8MB/1GB
+Instance	State	CPU	Memory Usage	Disk Usage0		Running	1.0%	344.8MB/512MB	236.8MB/1GB
 	2		Running	2.3%	361.2MB/512MB	235.7MB/1GB
     ```
   * Das Datenträgerkontingent wird durch das aktuelle Organisationskontingent eingeschränkt.
@@ -1639,6 +1707,7 @@ Sie können dieses Problem auch auf eine der folgenden Methoden beheben:
 
   * Löschen der Speicherauszugsdateien, nachdem sie heruntergeladen wurden.
   * Erneute Bereitstellung der Anwendung mit einem größeren Datenträgerkontingent und dem folgenden Eintrag im Bereitstellungsmanifest:
+    
     ```
 	disk_quota: 2048
 	```

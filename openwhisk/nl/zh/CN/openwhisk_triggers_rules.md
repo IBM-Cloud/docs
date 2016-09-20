@@ -18,13 +18,14 @@ copyright:
 
 # 创建触发器和规则
 {: #openwhisk_triggers}
-*上次更新时间：2016 年 2 月 22 日*
+上次更新时间：2016 年 2 月 22 日
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} 触发器和规则为平台带来了事件驱动型功能。来自外部和内部事件源的事件将通过触发器进行传递，并且规则允许操作对这些事件做出反应。
 {: shortdesc}
 
-## 触发器
+## 创建触发器
+{: #openwhisk_triggers_create}
 
 触发器是为某类事件指定的通道。下面是触发器示例：
 - 位置更新事件的触发器。
@@ -38,7 +39,8 @@ copyright:
 - Cloudant 数据更改订阅源，每次在数据库中添加或修改文档时，触发触发器事件。
 - Git 订阅源，针对 Git 存储库中的每次落实，触发触发器事件。
 
-## 规则
+## 使用规则
+{: #openwhisk_rules_use}
 
 规则用于将一个触发器与一个操作关联在一起，每次触发触发器时，都会将触发器事件作为输入来调用相应的操作。
 
@@ -60,7 +62,7 @@ copyright:
 这三个规则确定了以下行为：对推文中的图像和上传的图像分类，对上传的图像分类，以及生成缩略图版本。 
 
 ## 创建并触发触发器
-{: #openwhisk_triggers}
+{: #openwhisk_triggers_fire}
 
 触发器可以在发生特定事件时触发，也可以手动触发。
 
@@ -109,7 +111,7 @@ ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
 触发器不可以在包内创建，它们必须直接在名称空间下创建。
 
 ## 使用规则关联触发器和操作
-{: #openwhisk_rules}
+{: #openwhisk_rules_assoc}
 
 规则用于将触发器与操作关联在一起。每次触发触发器事件时，都会通过事件参数来调用操作。
 
@@ -177,5 +179,4 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   您将看到 hello 操作收到了事件有效内容，并返回了期望的字符串。
 
 可以创建多个规则，用于将同一触发器与不同操作相关联。制定规则的触发器和操作必须位于相同的名称空间，且不能属于包。
-如果您想要使用属于包的操作，那么您可以将该操作复制到名称空间，例如 `wsk action create echo --copy /whisk.system/samples/echo`。
-
+如果您想要使用属于包的操作，那么您可以将该操作复制到名称空间。例如：`wsk action create echo --copy /whisk.system/samples/echo`。

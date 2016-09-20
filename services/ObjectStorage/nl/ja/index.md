@@ -1,6 +1,6 @@
-{:new_window: target="_blank"}
+﻿{:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} 入門 {: #getting-started-with-object-storage} 
+# {{site.data.keyword.objectstorageshort}} 概説 {: #getting-started-with-object-storage} 
 
 *最終更新日: 2016 年 6 月 24 日*
 {: .last-updated}

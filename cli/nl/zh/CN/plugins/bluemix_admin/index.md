@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+
 
 ---
 
@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-*上次更新时间：2016 年 6 月 22 日*
+上次更新时间：2016 年 8 月 17 日
 {: .last-updated}
 
 
@@ -43,7 +43,7 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 实例的 URL 的子域。</dd>
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} 实例的 URL 的子域。例如，<code>https://console.mycompany.bluemix.net/cli</code>。</dd>
 </dl>
 </li>
 <li>要安装 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件，请运行以下命令：<br/><br/>
@@ -52,6 +52,12 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>
 </li>
 </ol>
+
+如果需要卸载插件，那么可以使用以下命令，然后可以添加更新的存储库并安装最新的插件：
+
+* 卸载插件：`cf uninstall-plugin-repo BluemixAdminCLI`
+* 除去插件存储库：`cf remove-plugin-repo BluemixAdmin`
+
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
 
@@ -89,12 +95,14 @@ cf login
 
 ### 添加用户
 
-您可以从 LDAP 注册表向 {{site.data.keyword.Bluemix_notm}} 环境添加用户。输入以下命令：
+您可以从您环境的用户注册表向 {{site.data.keyword.Bluemix_notm}} 环境添加用户。输入以下命令：
 
 ```
 cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
+
+**注**：要向特定组织添加用户，您必须是该组织的管理员或者您必须拥有 **Admin** 许可权（可用替代项为 **Superuser**）或拥有具有 **Write** 访问权的 **User** 许可权。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -140,7 +148,7 @@ cf ba set-permissions <user_name> <permission> <access>
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中用户的名称。</dd>
 <dt class="pt dlterm">&lt;permission&gt;</dt>
-<dd class="pd">为用户设置许可权：Admin、Login、Catalog（read 或 write 访问权）、Reports（read 或 write 访问权）或 Users（read 或 write 访问权）。</dd>
+<dd class="pd">为用户设置许可权：Admin（可用的替代项为 Superuser）、Login（可用替代项为 Basic）、Catalog（read 或 write 访问权）、Reports（read 或 write 访问权）或 Users（read 或 write 访问权）。</dd>
 <dt class="pt dlterm">&lt;access&gt;</dt>
 <dd class="pd">对于 Catalog、Reports 或 Users 许可权，还必须将访问级别设置为 <code>read</code> 或 <code>write</code>。</dd>
 </dl>
@@ -388,7 +396,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 **提示：****ba add-service-plan-visibility** 命令名较长，您还可以使用 **ba aspv** 作为其别名。
 
-* 要在 {{site.data.keyword.Bluemix_notm}}“目录”中除去某个服务对组织的可视性，请输入以下命令：
+* 要在 {{site.data.keyword.Bluemix_notm}}“目录”中对组织除去某个服务的可视性，请输入以下命令：
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
@@ -417,7 +425,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">要启用的服务套餐的名称或 GUID。如果输入非唯一的服务套餐名称（例如“Standard”或“Basic”），那么系统将提示您选择服务套餐。要识别服务套餐名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的服务套餐名称。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要为其添加可视性的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。可以通过在命令中输入其他组织名称或 GUID，对多个组织启用服务可视性。</dd>
+<dd class="pd">要为其添加可视性的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。可以通过在命令中输入更多组织名称或 GUID，对多个组织启用服务可视性。</dd>
 </dl>
 
 **提示：****ba edit-service-plan-visibility** 命令名较长，您还可以使用 **ba espv** 作为其别名。
@@ -493,3 +501,192 @@ cf ba delete-service-broker <service_broker>
 </dl>
 
 **提示：****ba update-service-broker** 命令名较长，您还可以使用 **ba usb** 作为其别名。
+
+
+### 使用应用程序安全组
+
+要使用应用程序安全组 (ASG)，您必须是具有本地或专用环境完全访问权的管理员。对于命令的目标组织，环境的所有用户都可以列出可用的 ASG。但是，要创建、更新或绑定 AGS，您必须是 {{site.data.keyword.Bluemix_notm}} 环境的管理员。
+
+ASG 的功能类似虚拟防火墙，可控制 {{site.data.keyword.Bluemix_notm}} 环境中应用程序的出站流量。每一个 ASG 都包含一个规则列表，允许与外部网络相互进行特定流量传输和通信。您可以将一个或多个 ASG 绑定到特定安全组集（例如，用于应用全局访问的组集），或者绑定到 {{site.data.keyword.Bluemix_notm}} 环境中某个组织内的空间。
+
+{{site.data.keyword.Bluemix_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
+
+**注**：以下可使您使用安全组的命令基于 Cloud Foundry V1.6。
+
+#### 列出、创建、更新和删除安全组
+
+有关创建安全组和用于定义出局流量的规则的更多信息，请参阅[创建应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}。
+
+* 可以通过输入以下命令来列出所有安全组：
+
+```
+cf ba security-groups
+```
+{: codeblock}
+
+**提示：****ba security-groups** 命令名较长，您还可以使用 **ba sgs** 作为其别名。
+
+* 可以通过输入以下命令来显示特定安全组详细信息：
+
+
+```
+cf ba security-groups <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">安全组的名称</dd>
+</dl>
+
+**提示：**具有 `security-group` 参数的 **ba security-groups** 命令名较长，您还可以使用 **ba sg** 作为其别名。
+
+
+* 可以通过输入以下命令来创建安全组。
+您创建的每一个安全组其名称前都添加了 `adminconsole_` 前缀，用于与 IBM 创建的安全组加以区分。
+
+```
+cf ba create-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">安全组的名称</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">规则文件的绝对或相对路径</dd>
+</dl>
+
+**提示：****ba create-security-group** 命令名较长，您还可以使用 **ba csg** 作为其别名。
+
+* 可以通过输入以下命令来更新安全组：
+
+```
+cf ba update-security-group <security-group> <path-to-rules-file>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">安全组的名称</dd>
+<dt class="pt dlterm">&lt;Path to rules file&gt;</dt>
+<dd class="pd">规则文件的绝对或相对路径</dd>
+</dl>
+
+**提示：****ba update-security-group** 命令名较长，您还可以使用 **ba usg** 作为其别名。
+
+* 可以通过输入以下命令来删除安全组：
+
+```
+cf ba delete-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">安全组的名称</dd>
+</dl>
+
+**提示：****ba delete-security-group** 命令名较长，您还可以使用 **ba dsg** 作为其别名。
+
+
+#### 绑定、取消绑定和列出已绑定的安全组
+
+有关绑定和取消绑定安全组的更多信息，请参阅[绑定应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}和[取消绑定应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}。
+
+* 可以通过输入以下命令来绑定 Default Staging 安全组集：
+
+
+```
+cf ba bind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">安全组的名称</dd>
+</dl>
+
+**提示：****ba bind-staging-security-group** 命令名较长，您还可以使用 **ba bssg** 作为其别名。
+
+* 可以通过输入以下命令来绑定 Default Running 安全组集：
+
+
+```
+cf ba bind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">安全组的名称</dd>
+</dl>
+
+**提示：****ba bind-running-security-group** 命令名较长，您还可以使用 **ba brsg** 作为其别名。
+
+* 可以通过输入以下命令来取消绑定 Default Staging 安全组集：
+
+
+```
+cf ba cf ba unbind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">安全组的名称</dd>
+</dl>
+
+**提示：****ba unbind-staging-security-group** 命令名较长，您还可以使用 **ba ussg** 作为其别名。
+
+* 可以通过输入以下命令来取消绑定 Default Running 安全组集：
+
+
+```
+cf ba unbind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">安全组的名称</dd>
+</dl>
+
+**提示：****ba bind-running-security-group** 命令名较长，您还可以使用 **ba brsg** 作为其别名。
+
+* 可以通过输入以下命令将安全组绑定到空间：
+
+```
+cf ba bind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">安全组的名称</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">安全组绑定到的组织的名称</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">安全组绑定到的组织内空间的名称</dd>
+</dl>
+
+**提示：****ba bind-security-group** 命令名较长，您还可以使用 **ba bsg** 作为其别名。
+
+* 可以通过输入以下命令来取消安全组与空间的绑定：
+
+```
+cf ba unbind-security-group <security-group> <org> <space>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">安全组的名称</dd>
+<dt class="pt dlterm">&lt;Org&gt;</dt>
+<dd class="pd">安全组绑定到的组织的名称</dd>
+<dt class="pt dlterm">&lt;Space&gt;</dt>
+<dd class="pd">安全组绑定到的组织内空间的名称</dd>
+</dl>
+
+**提示：****ba unbind-staging-security-group** 命令名较长，您还可以使用 **ba usg** 作为其别名。
+

@@ -19,7 +19,7 @@ copyright:
 
 #鏈結 SoftLayer 與 {{site.data.keyword.Bluemix_notm}} 計費帳戶
 {: #softlayerlink}
-*前次更新：2016 年 7 月 7 日*
+*前次更新：2016 年 8 月 15 日*
 {: .last-updated}
 
 您現在可以鏈結 SoftLayer 與 {{site.data.keyword.Bluemix_notm}} 計費帳戶。在您將帳戶鏈結後，就會透過 SoftLayer 同時針對 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 資源向您收費。如果您有現存的帳戶，將在帳戶鏈結之後開始的新計費週期，透過 SoftLayer 來收取 {{site.data.keyword.Bluemix_notm}} 的費用。
@@ -30,8 +30,8 @@ copyright:
 帳戶鏈結之後，即可在帳戶之間輕鬆地切換。您還是可以在 {{site.data.keyword.Bluemix_notm}} 使用者介面中監視 {{site.data.keyword.Bluemix_notm}} 資源的用量。不過，這些資源的計費現在會出現在 SoftLayer 發票上。
 
 雖然您的帳戶計費將會鏈結，但您的登入 ID 會依據 SoftLayer 帳戶的鑑別方式而不同：
-* 若為 SoftLayer 帳戶中未使用 IBM ID 來鑑別的使用者，請繼續將 SoftLayer ID 用於 SoftLayer 產品與服務，並將 IBM ID 用於 {{site.data.keyword.Bluemix_notm}} 產品與服務。
-* 若為 SoftLayer 帳戶中使用 IBM ID 來鑑別的使用者，請使用您的 IBM ID 來存取 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 帳戶。
+* 若為 SoftLayer 帳戶中未使用 IBM ID 進行鑑別的使用者，請繼續將 SoftLayer ID 用於 SoftLayer 產品及服務，並將 IBM ID 用於 {{site.data.keyword.Bluemix_notm}} 產品及服務。
+* 若為 SoftLayer 帳戶中使用 IBM ID 進行鑑別的使用者，請使用 IBM ID 來存取 SoftLayer 及 {{site.data.keyword.Bluemix_notm}} 帳戶。
 
 **注意：**帳戶鏈結之後，便無法解除鏈結。  
 
@@ -63,7 +63,7 @@ copyright:
 您必須是 SoftLayer 帳戶的「主要使用者」，才能邀請團隊成員加入 {{site.data.keyword.Bluemix_notm}} 帳戶。
 
 若要透過 {{site.data.keyword.Bluemix_notm}} 邀請團隊成員，請執行下列動作：
- 1. 移至**帳戶和支援**圖示 ![帳戶和支援](images/account_support.svg) > **帳戶** > **邀請團隊成員**。
+ 1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) > **帳戶** > **邀請團隊成員**。
  2. 按一下**新增**，以鑑別至 SoftLayer 帳戶中，並從 SoftLayer 帳戶檢視團隊成員清單。
  3. 選取要邀請的團隊成員，然後按一下**傳送**。
 
@@ -140,7 +140,7 @@ copyright:
 將 {{site.data.keyword.Bluemix_notm}} 計費帳戶與 SoftLayer 計費帳戶鏈結之後，將以一張 SoftLayer 帳單收取下一個計費週期的費用。
 {:shortdesc}
 
-您的 {{site.data.keyword.Bluemix_notm}} 使用週期是以公曆月為基準，所以會在收費合約成立的帳單日，每個月向您的帳戶收費。使用 SoftLayer 時，您的使用週期是從 SoftLayer 起始使用日開始，所以會以 SoftLayer 帳戶註冊當月的相同日期，每月向您收費。 
+您的 {{site.data.keyword.Bluemix_notm}} 使用週期是以行事曆月份為基準，所以會在收費合約成立的帳單日，每個月向您的帳戶收費。使用 SoftLayer 時，您的使用週期是從 SoftLayer 起始使用日開始，所以會以 SoftLayer 帳戶註冊當月的相同日期，每月向您收費。 
 
 帳戶鏈結之後，會繼續計算當月週期的 {{site.data.keyword.Bluemix_notm}} 用量，並且會在 {{site.data.keyword.Bluemix_notm}} 發票上向您收取該用量的費用。從下個月 1 日開始，{{site.data.keyword.Bluemix_notm}} 的費用將會列在 SoftLayer 發票上。
 

@@ -18,13 +18,14 @@ copyright:
 
 # Criando acionadores e regras
 {: #openwhisk_triggers}
-*Última atualização: 22 de fevereiro de 2016*
+Última atualização: 22 de fevereiro de 2016
 {: .last-updated}
 
 Acionadores e regras do {{site.data.keyword.openwhisk}} trazem recursos acionados por eventos para a plataforma. Eventos de origens de eventos externos e internos são canalizados por meio de um acionador e as regras permitem que suas ações reajam a esses eventos.
 {: shortdesc}
 
-## Acionador
+## Criando Acionadores
+{: #openwhisk_triggers_create}
 
 Os acionadores são um canal denominado para uma classe de eventos. A seguir estão exemplos de acionadores:
 - Um acionador de eventos de atualização de local.
@@ -38,7 +39,8 @@ Um *feed* é uma maneira conveniente de configurar uma origem de eventos externo
 - Feed de mudança de dados do Cloudant que dispara um evento acionador toda vez que um documento de um banco de dados é incluído ou modificado.
 - Um feed Git que dispara um evento acionador para cada confirmação em um repositório Git.
 
-## Rules
+## Utilizando Regras
+{: #openwhisk_rules_use}
 
 Uma regra associa um acionador a uma ação, com cada disparo do acionador fazendo com que a ação correspondente seja chamada com o evento acionador como entrada.
 
@@ -60,7 +62,7 @@ Além disso, suponhamos que haja duas origens de eventos que estejam disparando 
 As três regras estabelecem o comportamento a seguir: as imagens em ambos os tweets e as imagens transferidas por upload são classificadas, as imagens transferidas por upload são classificadas e uma versão miniatura é gerada. 
 
 ## Criando e disparando acionadores
-{: #openwhisk_triggers}
+{: #openwhisk_triggers_fire}
 
 Os acionadores podem ser disparados quando determinados eventos ocorrem ou podem ser disparados manualmente.
 
@@ -106,10 +108,10 @@ Como um exemplo, crie um acionador para enviar atualizações de local do usuár
   {: screen}
 
 Um acionador que é disparado sem uma regra que acompanha para fazer a correspondência não tem efeito visível.
-Acionadores não podem ser criados dentro de um pacote, eles devem ser criados diretamente sob um namespace.
+Acionadores não podem ser criados dentro de um pacote; eles devem ser criados diretamente sob um namespace.
 
-## Usando regras para associar acionadores e ações
-{: #openwhisk_rules}
+## Associando acionadores e ações usando regras
+{: #openwhisk_rules_assoc}
 
 As regras são usadas para associar um acionador a uma ação. Toda vez que um evento acionador é disparado, a ação é chamada com os parâmetros de evento.
 
@@ -140,7 +142,9 @@ Como um exemplo, crie uma regra que chame a ação hello sempre que uma atualiza
   ```
   {: pre}
 
-4. Dispare o acionador locationUpdate. Toda vez que disparar um evento, a ação hello será chamada com os parâmetros de evento.
+4. Dispare o acionador locationUpdate. Toda vez que você disparar um evento, a
+ação hello será chamada com os parâmetros do evento.
+  
   ```
   wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
@@ -178,5 +182,6 @@ Como um exemplo, crie uma regra que chame a ação hello sempre que uma atualiza
 
 É possível criar várias regras que associem o mesmo acionador a diferentes ações.
 O acionador e a ação que fazem uma regra devem estar no mesmo namespace e não podem pertencer a um pacote.
-Se você deseja usar uma ação que pertence a um pacote, é possível copiar a ação em seu namespace, por exemplo `wsk action create echo --copy /whisk.system/samples/echo`.
-
+Se você desejar usar uma ação que pertença a um pacote, será possível copiar a ação em seu
+namespace. Por exemplo: `wsk action create echo --copy
+/whisk.system/samples/echo`.

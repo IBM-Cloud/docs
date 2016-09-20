@@ -12,14 +12,80 @@ copyright:
 {:pre: .pre}
 
 # Managing user access
-You can control access to {{site.data.keyword.iot_full}} by users by using the access dashboard.
+Last updated: 16 September 2016
+{: .last-updated}
+
+From the access dashboard, you can control and manage access to your {{site.data.keyword.iot_full}} organization. You can add users by adding, inviting, registering, or importing them. You can also give different levels of access to your users by assiging roles.
 {:shortdesc}
 
 ## User access
-User access comes in two forms: guests and members.  Guest users have temporary access to the dashboard from the {{site.data.keyword.Bluemix_notm}} organization, are added from the {{site.data.keyword.iot_short_notm}} organization in which the instance of {{site.data.keyword.iot_short_notm}} is deployed, and must have both an IBM ID and a {{site.data.keyword.Bluemix_notm}} account. Member users have non-expiring access to the dashboard and can access it by using the `https://{organization_ID}.internetofthings.ibmcloud.com/` URL. Members require only an IBM ID.  
 
-To add a member to your IoT Platform organization:
-1.	In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Access > Members**.
-2.	Click **Add Members** and enter the email address that is associated with the IBM ID for the user that you are adding, then click **Add**.
-3.	Add more IBM IDs as needed.
-4.	Click **Finish** to add the members.
+From the **Access** tab of the dashboard, you can add individual members by using the Add, Invite, or Register functions. You can also add, invite, or register multiple members simultaneously by using the Import function.
+
+By default, members accounts do not expire. When you add users to your {{site.data.keyword.iot_short_notm}} organization, you can optionally set an expiry date for their account.
+
+### Adding members to your {{site.data.keyword.iot_short_notm}} organization
+
+To add a member to your organization, you will need the IBMid of the member. To add a member, you do not need confirmation from the member.
+
+To add a single member to your {{site.data.keyword.iot_short_notm}} organization:
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Access**.
+2. Click **Add Member** and select **Add**.
+3. Enter the IBMid of the member.
+4. Select a role for the member.
+5. Optional: Set an expiry date for the member.
+6. Click **Add Member**.
+
+To add multiple members simultaneously, you must upload a `.csv` file that contains the IBMid, the role, and the optional expiry date of each member.
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Access**.
+2. Click **Add Member** and select **Import**.
+3. Click **Bulk Add**.
+4. Select a default role and ensure that the column numbers on your `.csv file` match the column numbers in the CSV settings.
+5. Ensure that the column separator in your `.csv` file matches the column separator in the CSV settings.
+6. Click **Browse your files** or drag the `.csv` file into the **Upload CSV** window.
+
+### Inviting members to your {{site.data.keyword.iot_short_notm}} organization
+
+When you invite a user to become a member of your {{site.data.keyword.iot_short_notm}} organization, the user receives an email that contains an invitation link. Invitation links expire 48 hours after they are sent. If an invitation link is not used within 48 hours, the user must be invited again to receive a new invitation link.
+
+To invite a member to your {{site.data.keyword.iot_short_notm}} organization:
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Access**.
+2. Click **Add Member** and select **Invite**.
+3. Enter the email address of the member.
+4. Select a role for this member.
+5. Optional: Set an expiry date for the member.
+6. Click **Invite Member**.
+
+To invite multiple members simultaneously, you must upload a `.csv` file that contains the email address, role and the optional expiry date of each member.
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Access**.
+2. Click **Add Member** and select **Import**.
+3. Click **Bulk Invite**.
+4. Select a default role and ensure that the column numbers on your `.csv` file match the column numbers in the CSV settings.
+5. Ensure the column separator in your `.csv` file matches the column separator in the CSV settings.
+6. Click **Browse your files** or drag the `.csv` file into the **Upload CSV** window.
+
+### Registering a member with your {{site.data.keyword.iot_short_notm}} organization
+
+If your organization isn't using {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}, you can add individual members to your organization by registering them, which does not require an IBMid.
+
+To register a member with your {{site.data.keyword.iot_short_notm}} organization:
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Access**.
+2. Click **Add Member** and select **Invite**.
+3. Enter the email address of the member.
+4. Select a role for this member.
+5. Enter the subject, realm name, and issuer. 
+   **Important:** Ensure that the `Subject`, `Realm Name`, and `Issuer` fields comply with the OpenID Connect recommendations and standards. For more information, see the [OpenID Connect](http://openid.net/connect/) website.
+6. Optional: Set an expiry date for the member.
+7. Click **Register Member**.
+
+To register multiple members simultaneously, you must upload a CSV (`.csv`) file that contains the email address, role, subject, realm name, issuer, and the optional expiry date of each member.
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Access**.
+2. Click **Add Member** and select **Import**.
+3. Click **Bulk Register**.
+4. Select a default role and ensure that the column numbers on your CSV file match the column numbers in the CSV settings.
+5. Ensure the column separator in your CSV file matches the column separator in the CSV settings.
+6. Click **Browse your files** or drag the CSV file into the **Upload CSV** window.
+
+### Constructing your CSV file
+
+When you construct a CSV file to import members into your organization, ensure that you include the required information for the method that you are using. Use either commas or semi-colons to separate columns. When you upload the CSV file, under **CSV settings**, ensure that you select the correct column separator.

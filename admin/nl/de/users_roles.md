@@ -17,10 +17,10 @@ copyright:
 
 # Teammitglieder und Rollen verwalten
 {: #userroles}
-Letzte Aktualisierung: 12. Juli 2016
+Letzte Aktualisierung: 16. August 2016
 {: .last-updated}
 
-Auf der Seite **Teamverzeichnis** für Ihr Konto können Sie vorhanden Teammitglieder und deren Rollen in Ihrer Organisation und in Bereichen verwalten sowie neue Teammitglieder einladen. Um auf das Teamverzeichnis für Ihr Konto zuzugreifen, klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../admin/images/account_support.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teamverzeichnis**. 
+Auf der Seite **Teamverzeichnis** für Ihr Konto können Sie vorhanden Teammitglieder und deren Rollen in Ihrer Organisation und in Bereichen verwalten sowie neue Teammitglieder einladen. Um auf das Teamverzeichnis für Ihr Konto zuzugreifen, klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teamverzeichnis**.
 {:shortdesc}
 
 Kontoeigner führen alle Operationen für Organisationen und Bereiche einschließlich der Verwaltung der Teammitglieder und der ihnen zugeordneten Rollen aus. Organisationsmanager können Teammitglieder einladen und Rollen verwalten. Bereichsmanager können die Seite **Organisationen verwalten** verwenden, um vorhandene Kontomitglieder zum Bereich hinzuzufügen und deren Rollen anzupassen. Lesen Sie die folgenden Informationen, um mehr über Rollen zu erfahren.
@@ -68,7 +68,7 @@ Abhängig von der Konfiguration der {{site.data.keyword.Bluemix_notm}}-Konten un
 
 Führen Sie die folgenden Schritte aus, um die Sichtbarkeit der Teamverzeichnisseite zu ändern: 
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teamverzeichnis**. 
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teamverzeichnis**. 
 2. Klicken Sie zur Verwendung der Option **Sichtbarkeit für** auf die aktuelle Auswahl zum Anzeigen der Optionen. 
 3. Wählen Sie anschließend abhängig von den aktuellen Anforderungen an das Konto **Alle** oder **Nur für mich** aus. 
 
@@ -78,7 +78,7 @@ Führen Sie die folgenden Schritte aus, um die Sichtbarkeit der Teamverzeichniss
 Kontoeigner und Organisationsmanager können Teammitglieder von der Seite 'Teammitglieder einladen' zu Organisationen einladen. Wenn Sie neue Teammitglieder hinzufügen, werden diesen automatisch Auditorrollen zugewiesen. Sie können die Rollen später auf der Seite 'Teamverzeichnis' ändern. Führen Sie die folgenden Schritte aus, um ein Teammitglied einzuladen:
 
 <ol>
-<li>Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teammitglied einladen**.</li>
+<li>Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teammitglied einladen**.</li>
 <li>Wählen Sie die Organisation aus, zu der Sie Teammitglieder einladen möchten.</li>
 <li>Klicken Sie auf **Weiter**.</li>
 <li>Wählen Sie die Bereiche aus, für die Sie Ihren Teammitgliedern Zugriff ermöglichen möchten.</li>
@@ -94,14 +94,14 @@ Kontoeigner und Organisationsmanager können Teammitglieder von der Seite 'Teamm
 
 Klicken Sie auf **Anstehende anzeigen**, um zu prüfen, ob die Einladungen anstehend sind oder akzeptiert wurden. Sie können auswählen, die Einladungs-E-Mail erneut zu senden oder die Einladung für eine anstehende Einladung jederzeit stornieren.
 
-Wenn ein SoftLayer-Konto mit Ihrem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft ist, können Sie die SoftLayer-Teammitglieder hinzufügen. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teammitglieder einladen**. Klicken Sie dann im Abschnitt **SoftLayer-Teammitglieder hinzufügen** auf **Hinzufügen**, um sich für Ihr SoftLayer-Konto zu authentifizieren und eine Liste der Teammitglieder aus dem SoftLayer-Konto anzuzeigen. Weitere Informationen zum Hinzufügen von Teammitgliedern aus dem SoftLayer-Konto finden Sie unter [SoftLayer-Teammitglieder zu {{site.data.keyword.Bluemix_notm}} einladen](../admin/softlayerlink.html#invite_users).
+Wenn ein SoftLayer-Konto mit Ihrem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft ist, können Sie die SoftLayer-Teammitglieder hinzufügen. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teammitglieder einladen**. Klicken Sie dann im Abschnitt **SoftLayer-Teammitglieder hinzufügen** auf **Hinzufügen**, um sich für Ihr SoftLayer-Konto zu authentifizieren und eine Liste der Teammitglieder aus dem SoftLayer-Konto anzuzeigen. Weitere Informationen zum Hinzufügen von Teammitgliedern aus dem SoftLayer-Konto finden Sie unter [SoftLayer-Teammitglieder zu {{site.data.keyword.Bluemix_notm}} einladen](../admin/softlayerlink.html#invite_users).
 
 ## Rollen bearbeiten
 {: #editinguserroles}
 
 Kontoeigner und Organisationsmanager können Organisationen und Bereichsrollen für vorhandene Teammitglieder auf der Seite **Teamverzeichnis** bearbeiten. 
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teamverzeichnis**.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Team Directory**.
 2. Suchen Sie die Teammitglieder, deren Rollen Sie bearbeiten möchten.
 3. Klicken Sie auf **Rollen anzeigen**.
 4. Wählen Sie die Organisationsrolle aus oder löschen Sie die Auswahl der Organisationsrolle, um den Organisationszugriff für das Teammitglied zu ändern.
@@ -112,7 +112,7 @@ Kontoeigner und Organisationsmanager können Organisationen und Bereichsrollen f
 
 Bereichsmanager können Rollen für die Teammitglieder in ihren Bereichen auf der Seite **Organisation verwalten** bearbeiten.
 
-1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Organisationen verwalten**.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Organisationen verwalten**.
 2. Suchen Sie die Organisation, in der sich Ihr Bereich befindet.
 3. Klicken Sie auf **Details anzeigen**.
 4. Suchen Sie Ihren Bereich und klicken Sie auf **Bereich bearbeiten**.

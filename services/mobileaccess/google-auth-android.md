@@ -4,13 +4,17 @@ copyright:
   years: 2015, 2016
 
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
 
 # Enabling Google authentication for Android apps
 {: #google-auth-android}
 
 
-Last updated: 04 August 2016
+Last updated: 19 September 2016
 {: .last-updated}
+
+Use Google to authenticate users on your {{site.data.keyword.amafull}} Android application. Add {{site.data.keyword.amashort}} security functionality. 
 
 ## Before you begin
 {: #before-you-begin}
@@ -52,6 +56,7 @@ A keystore that contains a certificate for development environments is stored in
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 	```
+
 	You can use same syntax for retrieving the key hash of your release mode certificate as well. Replace the alias and keystore path in the command.
 
 1. In the Google Console Credential dialog, find the line that starts with `SHA1` under **Certificate Fingerprints**. Copy the fingerprint value that was obtained by running the **keytool** command to the text box.
@@ -60,7 +65,9 @@ A keystore that contains a certificate for development environments is stored in
 
 1. On the Credentials dialog, enter the package name of your Android application. 
 
-  To find the package name of your Android application, open the `AndroidManifest.xml` file in Android Studio and look for: `<manifest package="{your-package-name}">`. 
+  To find the package name of your Android application, open the `AndroidManifest.xml` file in Android Studio and look for: 
+  	
+  	`<manifest package="{your-package-name}">`
 
 1. When you are done, click **Create**. This completes the credentials creation.
 
@@ -75,8 +82,6 @@ Once the credentials are successfully created, the credential page displays your
 Now that you have a Google Client ID for Android, you can enable Google authentication in the {{site.data.keyword.amashort}} Dashboard.
 
 1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
-
-1. Click **Mobile Options** and take note of your **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`). You need these values when you initialize the SDK.
 
 1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}} dashboard loads.
 
@@ -105,7 +110,6 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
     	// other dependencies  
 	}
 	```
-
 	**Note:** You can remove the dependency on the `core` module of the `com.ibm.mobilefirstplatform.clientsdk.android` group if you have it. The `googleauthentication` module downloads it automatically for you. The `googleauthentication` module downloads and installs the Google+ SDK in your Android project.
 
 1. Synchronize your project with Gradle by clicking **Tools > Android > Sync Project with Gradle Files**.
@@ -120,25 +124,23 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	```
 
-1. To use the {{site.data.keyword.amashort}} client SDK, you must initialize it by passing the context, applicationGUID, and applicationRoute parameters.
+1. To use the {{site.data.keyword.amashort}} client SDK, you must initialize it by passing the **context** and the **region** parameters.
 
-	A common, though not mandatory, place to put the initialization code is in the onCreate method of the main activity in your Android application.
+	A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
 
-1. Initialize the client SDK and register the Google authentication manager. Replace *applicationRoute* and *applicationGUID* with the values from **Route** and **App GUID** from the **Mobile Options** section in the dashboard.
+1. Initialize the client SDK and register the Google authentication manager.
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
 	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this));
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 						
 	GoogleAuthenticationManager.getInstance().register(this);
-```
+	```
 
-  Replace  `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.
+  * Replace  `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
+  * Replace `<MCAServiceTenantId>` with the `tenantId` value you can find by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile. 
 
    **Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
@@ -166,12 +168,12 @@ Before you begin testing, you must have a mobile back-end application that was c
 1. Use your Android application to make request to the same endpoint. Add the following code after you initialize the `BMSClient` instance and register `GoogleAuthenticationManager`.
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp", MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -185,6 +187,7 @@ Before you begin testing, you must have a mobile back-end application that was c
 		}
 	});
 ```
+	Replace `{applicationRoute}` with the *route* value you get when you click Mobile Options in your app on the {{site.data.keyword.Bluemix}} dashboard.
 
 1. Run your application. A Google Login screen pops up. After login, the app requests permission to access resources:
 

@@ -62,7 +62,7 @@ voir [Configuration de {{site.data.keyword.amashort}}](iotelectronics_config_mob
 
 ##Création d'appareils simulés
 Pour créer un appareil simulé, procédez comme suit :
-1. Dans votre tableau de bord {{site.data.keyword.Bluemix_notm}}, démarrez votre application {{site.data.keyword.iotelectronics}}. 
+1. Dans votre tableau de bord {{site.data.keyword.Bluemix_notm}}, démarrez votre application {{site.data.keyword.iotelectronics}}.
 2. Patientez jusqu'à ce que le message de statut *Votre
 application est en cours d'exécution* s'affiche, puis cliquez sur
 **Afficher l'appli** pour afficher l'application de

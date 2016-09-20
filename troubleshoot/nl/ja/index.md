@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+  
 
 ---
 
@@ -15,8 +16,9 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} へのアクセスに関するトラブルシューティング 
 {: #accessing}
 
-*最終更新日: 2016 年 7 月 14 日*
+最終更新日: 2016 年 8 月 11 日
 {: .last-updated}
+
 
 {{site.data.keyword.Bluemix}} へのアクセスに関する一般的な問題には、{{site.data.keyword.Bluemix_notm}} へのログインができないユーザー、保留状態で使用できないアカウントなどが含まれます。しかし多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {:shortdesc}
@@ -24,22 +26,22 @@ copyright:
 ## {{site.data.keyword.Bluemix_notm}} にログインできない
 {: #ts_logintobm}
 
-{{site.data.keyword.Bluemix_notm}} にログインするには、有効な IBM ID とパスワードが必要です。
+{{site.data.keyword.Bluemix_notm}} にログインするには、有効な IBMid とパスワードが必要です。
 
 
 {{site.data.keyword.Bluemix_notm}} にサインインしようとすると、以下のエラー・メッセージが表示されます。
 {: tsSymptoms} 
 
-`以下に入力された IBM ID またはパスワード (あるいはその両方) に誤りがあります。再試行してください。`
+`入力したパスワードは正しくありません。`
 
 
-{{site.data.keyword.Bluemix_notm}} へのサインインに使用した IBM ID およびパスワードが無効です。
+{{site.data.keyword.Bluemix_notm}} へのサインインに使用した IBMid およびパスワードが無効です。
 {: tsCauses} 
  
 
-有効な IBM ID とパスワードを取得するには、「マイ IBM プロファイル (My IBM profile)」ページに移動し、以下のいずれかのステップを実行します。
+有効な IBMid とパスワードを取得するには、「マイ IBM プロファイル (My IBM profile)」ページに移動し、以下のいずれかのステップを実行します。
 {: tsResolve}
-  * IBM ID を登録済みであり、自分の ID とパスワードが有効であるかどうかを確認したい場合は、**「サインイン」**をクリックし、「サインイン」ページで IBM ID とパスワードを入力します。パスワードを忘れた場合は、「サインイン」ページの右側にある**「パスワードを忘れた場合 (Forgot your password)」**をクリックして、パスワードをリセットします。IBM ID を忘れた場合、あるいはパスワードに関する問題が続く場合は、Worldwide IBM Registration Help Desk にご相談ください。 
+  * IBM ID を登録済みであり、自分の ID とパスワードが有効であるかどうかを確認したい場合は、**「サインイン」**をクリックし、「サインイン」ページで IBM ID とパスワードを入力します。パスワードを忘れた場合は、「サインイン」ページにある**「パスワードを忘れた場合 (Forgot your password)」**をクリックして、パスワードをリセットします。IBMid を忘れた場合、あるいはパスワードに関する問題が続く場合は、Worldwide IBM Registration Help Desk にご相談ください。 
   * IBM ID をお持ちでない場合は、**「登録」**をクリックして IBM ID とパスワードを登録してください。 
   
 **注:** IBM の従業員の場合、IBM ID はイントラネット・ログイン ID とは異なる可能性があります。 
@@ -91,9 +93,9 @@ copyright:
 {: tsResolve}
 
 DNS 設定を構成する場合、アプリが実行されている {{site.data.keyword.Bluemix_notm}} 領域のパブリック IP アドレスを指定する必要があります。{{site.data.keyword.Bluemix_notm}} 領域のパブリック IP アドレスを取得するには、`nslookup` コマンドを使用します。例えば、次のコマンドをコマンド・ライン・ウィンドウに入力できます。
-
+```
 nslookup mybluemix.net
-
+```
 
 
 
@@ -151,7 +153,7 @@ nslookup mybluemix.net
 組織にユーザーを招待することができず、招待するために別の役割を必要とする場合は、組織管理者に連絡して、役割の変更を依頼してください。組織の管理者を特定するには、以下のステップを実行します。
 {: tsResolve}
 
-  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードに移動し、メニュー・バーにある**「アカウントとサポート」**アイコン ![アカウントとサポート](images/account_support.svg) をクリックし、**「組織の管理」**を選択します。
+  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードに移動し、メニュー・バーの「{{site.data.keyword.avatar}}」アイコン ![「アバター」アイコン](images/account_support.svg) をクリックし、**「組織の管理」**を選択します。
   2. 所属する組織にアクセスすると、組織の管理者の情報が**「ユーザー」**タブに表示されます。  
   
 自分がコラボレーターでありメンバーではないためにユーザーを招待できない場合、古い {{site.data.keyword.Bluemix_notm}} アカウントを削除してから、招待を受けて組織のメンバーとしてアカウントに参加する必要があります。古いアカウントを削除してメンバーとしてアカウントに参加するには、以下のステップを実行してください。 
@@ -179,7 +181,7 @@ nslookup mybluemix.net
  {{site.data.keyword.Bluemix_notm}} 用に複数のユーザーを登録するには、ユーザーごとに以下の手順を実行しなければなりません。
 {: tsResolve}
 
-  1. {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースの右上角にある**「登録 (SIGN UP)」**をクリックします。
+  1. {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにある**「登録 (SIGN UP)」**をクリックします。
   2. ウィザードに従って手順を実行します。
 
     
@@ -212,28 +214,6 @@ nslookup mybluemix.net
   
   
   
-  
-  
-## {{site.data.keyword.Bluemix_notm}} 上部のメニュー・バーが表示されない
-{: #ts_topmenubar}
-
-ブラウザー・ウィンドウをサイズ変更したとき、またはモバイル・デバイスを使用したときに、 {{site.data.keyword.Bluemix_notm}} 上部のメニュー・バーが表示されないことがあります。
-
-
-ブラウザー・ウィンドウのサイズを小さくした場合、またはモバイル・デバイスを使用した場合に、{{site.data.keyword.Bluemix_notm}} 上部のメニュー・バーが表示されません。上部のメニュー・バーが表示されない場合は、積み重ねられた線のアイコンとして表示されるサイド・ドロワー・メニューが左上隅に表示されます。
-{: tsSymptoms}
-
- 
-
-{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースは、即応性の高い設計を備えています。表示環境が変わると、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースのレイアウトも変わることがあります。
-{: tsCauses}
- 
-
-代わりに、左上隅のサイド・ドロワー・メニューを使用してください。
-{: tsResolve}
-
-
-
 
 
 
@@ -260,7 +240,7 @@ Java 仮想マシン (JVM) バージョンが 8 以下の場合、デバッグ�
 
 しかし、ツールがデバッグ・モードを有効にするのに失敗した場合は、Web アプリケーションの状況には、`Updating mode` と `Developing` のみが表示され、`Debugging` は表示されません。ツールは、「コンソール」ビューに以下のエラー・メッセージを表示することもあります。
 
-
+```
 bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
 com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
@@ -297,7 +277,7 @@ at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(Async
 at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
 at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
 ... 7 more
-
+```
  
 
 Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、または Oracle JVM 8 より前のバージョンである場合、デバッグ・セッションを確立できません。
@@ -312,9 +292,9 @@ IBM Eclipse Tools for Bluemix が稼働している Java のバージョンを�
   1. IBM Eclipse Tools for Bluemix で、**「ヘルプ」** > **「Eclipse について」** > **「インストールの詳細」** > **「構成」**を選択します。
   2. リストから `eclipse.vm` プロパティーを検索します。次の行は、`eclipse.vm` プロパティーの例を示しています。
 	
-	
+	```
 	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
-	
+	```
 
   3. コマンド・ラインで、Java のインストール先の `bin` ディレクトリーから `java -version` を入力します。IBM JVM バージョン情報が表示されます。
 
@@ -325,6 +305,47 @@ IBM Eclipse Tools for Bluemix が稼働している Java のバージョンを�
   3. `eclipse.vm` プロパティーが、Oracle JVM 8 の新しいインストール先を指しているかどうかを確認します。
 
 
+  
+## 削除したアプリの名前を再使用できない
+{: #ts_reuse_appname}
+  
+アプリを削除したら、アプリ経路を削除した場合に限り、アプリ名を再使用できます。 
+
+アプリ名を再使用しようとしたときに、以下のメッセージを受け取ります。
+{: tsSymptoms}
+
+`名前は別のアプリによって既に使用されています。`
+
+アプリが削除されるとき、アプリの URL である経路は自動的に削除されません。そのため、それは再使用できません。アプリを再使用するため経路を削除するには、アプリが作成されたスペースに移動する必要があります。
+{: tsCauses}
+
+使用されていない経路を削除するには、以下の手順を実行します。
+{: tsResolve}
+
+  1. 以下のコマンドを入力して、該当経路が現行スペースに属しているかどうかを確認します。 
+     ```
+	 cf routes
+	 ```
+  2. 該当経路が現行スペースに属していない場合は、以下のコマンドを入力して、それが属しているスペースまたは組織に切り替えます。 
+     ```
+	 cf target -o org_name -s space_name
+	 ```
+  3. 以下のコマンドを入力して、アプリ経路を削除します。
+     ```
+	 cf delete-route domain_name -n host_name
+	 ```
+	 例:
+```
+	 cf delete-route mybluemix.net -n app001
+	 ```
+
+  
+  
+  
+  
+  
+  
+  
 ## 組織のスペースを取得できない
 {: #ts_retrieve_space}
 
@@ -340,12 +361,12 @@ Bluemix でアプリを作成しようとすると、以下のエラー・メッ
 現行組織にスペースを作成したことを確認してください。スペースを作成するには、次のいずれかの方法を使用します。
 {: tsResolve}
 
-  * 「アカウントとサポート」![アカウントとサポート](images/account_support.svg) から、スペースを作成する組織を選択して、**「スペースの作成」**をクリックします。
+  * 「{{site.data.keyword.avatar}}」アイコン ![「アバター」アイコン](images/account_support.svg) をクリックして「アカウントとサポート」ウィジェットを開き、スペースを作成する組織を選択して、**「スペースの作成」**をクリックします。
   * cf コマンド・ライン・インターフェースに `cf create-space <space_name>
 -o <organization_name>` と入力します。
 
 やり直してください。
-このメッセージが再び表示される場合は、[Bluemix ステータス](https://status.eu-gb.bluemix.net/){: new_window}・ページにアクセスして、サービスまたはコンポーネントに問題があるかを確認してください。
+このメッセージが再び表示される場合は、[Bluemix ステータス](http://ibm.biz/bluemixstatus){: new_window}・ページにアクセスして、サービスまたはコンポーネントに問題があるかを確認してください。
 
 
 
@@ -396,9 +417,9 @@ Bluemix でアプリを作成しようとすると、以下のエラー・メッ
 アプリ内に資格情報をハードコーディングするのではなく、VCAP_SERVICES 環境変数からの接続パラメーターを使用してください。VCAP_SERVICES 環境変数からの接続パラメーターを使用する方法は、プログラミング言語によって異なります。例えば、Node.js アプリの場合、以下のコマンドを使用できます。
 {: tsResolve}
 
-
+```
 process.env.VCAP_SERVICES
-
+```
 他のプログラミング言語で使用できるコマンドについて詳しくは、[Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} および [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} を参照してください。## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリをデプロイできない
 {: #ts_bm_tools_facet}
 
@@ -441,7 +462,7 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 
  
 
-{{site.data.keyword.Bluemix_notm}} サービスがダウンしていると疑われる場合は、まず、[{{site.data.keyword.Bluemix_notm}} 状況](https://developer.ibm.com/bluemix/support/#status){: new_window}ページを確認してください。回避策として、別の {{site.data.keyword.Bluemix_notm}} 地域でそのサービスを使用することもできます。[サービスを別の地域で使用](../services/reqnsi.html#cross_region_service){: new_window}に詳細情報があります。サービスの状況が正常の場合には、以下のステップで問題を解決してください。
+{{site.data.keyword.Bluemix_notm}} サービスがダウンしていると疑われる場合は、まず、[{{site.data.keyword.Bluemix_notm}} 状況](http://ibm.biz/bluemixstatus){: new_window}ページを確認してください。回避策として、別の {{site.data.keyword.Bluemix_notm}} 地域でそのサービスを使用することもできます。[サービスを別の地域で使用](../services/reqnsi.html#cross_region_service){: new_window}に詳細情報があります。サービスの状況が正常の場合には、以下のステップで問題を解決してください。
 {: tsResolve}
 
   * アクションを再試行します。
@@ -474,14 +495,14 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 
   * manifest.yml ファイルに以下の項目を追加します。
 
-    
+    ```
 	disk_quota: <disk_quota>
-	
+	```
   * アプリを {{site.data.keyword.Bluemix_notm}} にプッシュするときに、`cf push` コマンドで **-k** オプションを使用します。
 
-    
+    ```
 	cf push appname -p app_path -k <disk_quota>
-	
+	```
 
 	
 	
@@ -562,8 +583,8 @@ IBM Push サービスは、 Google Cloud Messaging (GCM) サービスを使用�
  
   * サービス・インスタンスを削除するには、 {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースか、またはコマンド・ライン・インターフェースが使用できます。
 {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用してサービス・インスタンスを削除するには、以下の手順を実行します。
-	  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、左ペインの**「サービス」**をクリックします。サービス・タイルが表示されます。 
-	  2. 削除したいサービス・タイル上で**「メニュー (Menu)」**アイコンをクリックします。
+	  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、削除するサービスをクリックします。サービス・タイルが表示されます。 
+	  2. サービス・タイル上で**「メニュー (Menu)」**アイコンをクリックします。
 	  3. **「サービスの削除 (Delete Service)」**をクリックします。サービス・インスタンスを削除すると、その後、そのサービス・インスタンスがバインドされていたアプリケーションを再ステージングするようプロンプトが出ます。
 コマンド・ライン・インターフェースを使用してサービス・インスタンスを削除するには、以下の手順を実行します。
 	  1. 次を入力して、アプリケーションからサービス・インスタンスをアンバインドします: `cf unbind-service <appname> <service_instance_name>`。
@@ -593,12 +614,13 @@ IBM Push サービスは、 Google Cloud Messaging (GCM) サービスを使用�
 その実行可能ファイルを {{site.data.keyword.Bluemix_notm}} にプッシュする際に、ヌルのビルドパックを指定する必要があります。ヌルのビルドパックによって、ビルドパックが不要であることを示します。ヌルのビルドパックは、**-b** オプションを指定した `cf push` コマンドを使用することで指定します。
 {: tsResolve}
 
-
+```
 cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
-
+```
 以下に例を示します。
+```
 cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
-
+```
 
 
 ## 組織のメモリー上限を超過
@@ -631,14 +653,14 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 cf コマンド・ライン・インターフェースを使用する場合は、以下の手順を実行します。
 	  1. アプリで使用しているメモリー量を調べます。
 
-	  
+	  ```
 	  cf apps
-	  
+	  ```
 	     cf apps コマンドで、自分が現行スペースにデプロイしたアプリがすべてリストされます。各アプリの状況も表示されます。      2. アプリが使用するメモリー量を削減するには、アプリ・インスタンス数または最大メモリー上限のいずれか、あるいはその両方を減らします。
 
-	  
+	  ```
 	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
-      
+      ```
 	  3. アプリを再始動して、変更を有効にします。
 
 
@@ -665,9 +687,9 @@ cf コマンド・ライン・インターフェースを使用する場合は�
 コマンド・ライン・インターフェースで以下のコマンドを入力すれば、アプリを手動で再始動できます。
 {: tsResolve}
 
-
+```
 cf push <appname> -p <app_path>
-
+```
 さらに、停止、例外、接続障害といった問題を見つけて、そのような問題から復旧するようにアプリをコーディングすることもできます。  
 
 ## アプリケーションがプッシュされたときにユーザー定義変数が失われる
@@ -717,9 +739,9 @@ DevOps Services Web IDE で Node.js アプリを編集するときは、{{site.d
   * `manifest.yml` ファイルがプロジェクトの最上位に格納されていなければ、最上位に格納します。
   * アプリがサブディレクトリーに格納されている場合は、そのサブディレクトリーのパスを `manifest.yml` ファイルに指定します。
 
-  
+  ```
 path: path_to_application
-   
+   ```
   * アプリと同じディレクトリーに `package.json` ファイルを作成します。
 
   
@@ -762,9 +784,9 @@ Cloud Foundry Eclipse プラグインを使用してアプリケーションを 
 cf コマンド・ライン・インターフェースを使用して {{site.data.keyword.Bluemix_notm}} にアプリケーションをプッシュする場合は、cf api コマンドを入力し、地域の API エンドポイントを指定します。例えば、以下のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} の欧州英国地域に接続します。
 {: tsResolve}
 
-
+```
 cf api https://api.eu-gb.bluemix.net
-
+```
 Eclipse ツールを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュする場合は、まず {{site.data.keyword.Bluemix_notm}} サーバーを作成し、自分の組織が作成された {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントを指定します。Eclipse ツールの使用について詳しくは、『[IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ (Deploying apps with IBM Eclipse Tools for Bluemix)](../manageapps/eclipsetools/eclipsetools.html){: new_window}』を参照してください。  
   
   
@@ -794,14 +816,14 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
 
   * `manifest.yml` ファイルを使用してアプリケーションをデプロイする場合は、host オプションでホスト名を指定します。
 	 
-    
+    ```
 host: <hostname>	
-	
+	```
   * コマンド・プロンプトからアプリケーションをデプロイする場合は、`cf
 push` コマンドを **-n** オプションで使用します。 
-    
+    ```
 cf push <appname> -p <app_path> -n <hostname>
-    
+    ```
 
 
 ## cf push コマンドを使用して WAR アプリをプッシュできない
@@ -823,13 +845,13 @@ cf push <appname> -p <app_path> -n <hostname>
 	
 **-p** オプションを使用して、WAR ファイルを指定するか、WAR ファイルへのパスを追加してください。以下に例を示します。{: tsResolve}
 
-
+```
 cf push MyUniqueAppName01 -p app.war
+```
 
-
-
+```
 cf push MyUniqueAppName02 -p "./app.war"
-
+```
 `cf push` コマンドの詳細な情報を確認するには、`cf push -h` を入力してください。## Liberty アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
 {: #ts_doublebytes}
 
@@ -851,14 +873,14 @@ Liberty アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッ
 
   * サーブレット・ソース・ファイル内
      
-    
+    ```
 	response.setContentType("text/html; charset=UTF-8");
-	
+	```
   * JSP 内
      
-    
+    ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	
+	```
 	
 	
 	
@@ -898,29 +920,29 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
 
   * 以下のいずれかの方法で開始コマンドを指定します。 
       * cf コマンド・ライン・インターフェースを使用します。例えば次のようにします。 
-        
+        ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
-		
+		```
 	  * [package.json](https://docs.npmjs.com/json){: new_window} ファイルを使用します。例えば次のようにします。
-	    
+	    ```
 		{
       ...
   	   "scripts": {
 "start": "node app.js"
  	   }
 	}
-	    
+	    ```
 	  * `manifest.yml` ファイルを使用します。例えば次のようにします。 
-	    
+	    ```
 		applications:
   name: MyUniqueNodejs01
   ...
   command: node app.js
   ...
-        
+        ```
 
   * Node.js ビルドパックがアプリを認識できるようにするために、`package.json` ファイルがご使用の Node.js アプリ内に必ず存在するようにしてください。また、このファイルはご使用のアプリのルート・ディレクトリーに置く必要があります。以下は単純な `package.json` ファイルの例です。  
-	
+	```
 	{
         "name": "MyUniqueNodejs01",
         "version": "0.0.1",
@@ -936,7 +958,7 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
                   "start": "node app.js"
         }
  }
-    
+    ```
 	
 Node.js アプリについてさらにヒントを見るには、[Node.js アプリケーションに関するヒント (Tips for Node.js Applications)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}を参照してください。	
 
@@ -1032,13 +1054,13 @@ Meteor アプリにカスタム・ビルドパックを使用するには、以�
 {: tsResolve}
 
   * `manifest.yml` ファイルを使用してアプリをデプロイする場合は、buildpack オプションを使用して、カスタム・ビルドパックの URL または名前を指定します。例えば次のようにします。
-  
+  ```
 buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
-  
+  ```
   * コマンド・プロンプトからアプリケーションをデプロイする場合は、`cf push` コマンドを使用し、**-b** オプションによってカスタム・ビルドパックを指定します。例えば次のようにします。
-    
+    ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
-	
+	```
 	
   
 
@@ -1131,34 +1153,78 @@ Git リポジトリーが複製されない場合は、リポジトリーまた�
   * エラー・メッセージに、必要なサービスは既にターゲット・スペースに存在すると示されている場合は、別のスペースを選択して使用します。
   * エラー・メッセージに、ビルドに問題が存在すると示されている場合は、アプリのビルドを妨げている、コードに関わる問題をすべて修正します。そのコードに問題が含まれていないことを検証するには、Git コマンドを使用してコードをビルドします。
     1. Git リポジトリーを複製します。
-    
+    ```
 git clone <git_repository_URL>
-    
+    ```
 	2. アプリのディレクトリーを開きます。
-	
+	```
 	cd <appname>
-	
+	```
 	3. アプリを作成します。
-	
+	```
 	<appname> create
-	
+	```
 	4. 必要な場合はアドオンをプロビジョンします。
 	5. 必要な構成変数をすべて追加します。
 	6. コードをプッシュします。
-	
+	```
 	git push <appname> master
-	
+	```
 	7. アプリが正しくビルドされていることを検証します。
 	8. 必要な場合は、ポスト・デプロイメント・コマンドを実行します。
-	
+	```
 	<appname> run
-	
+	```
 	9. アプリを開き、そのアプリが正常に機能していることを検証します。
-	
+	```
 	<appname> open
-	
-	
+	```
 
+## 実行バーからアプリをデプロイできない
+{: #deployinganappfromtherunbarfails}
+
+このシナリオで、デプロイメントは黄色の「非同期」状態で失敗します。 
+
+デプロイしているアプリの経路が、実行中の別のアプリと同じです。この問題を修正するには、固有な経路に変更してください。
+
+## 実行バーが見つからない
+{: #runbarcannotbefound}
+
+Eclipse Orion {{site.data.keyword.webide}} に実行バーが見つからない場合は、以下のいずれかの問題が発生しています。
+
+1. {{site.data.keyword.jazzhub}} がご使用のプロジェクトをプロジェクトとして識別していない。
+   * 修正: プロジェクトのルート・ディレクトリーに `project.json` ファイルを作成します。
+2. アプリが含まれているフォルダーを {{site.data.keyword.jazzhub_short}} が判別できなかった。
+   * 修正: プロジェクト・ルート以外のディレクトリーにアプリが含まれる場合は、以下のいずれかの手順を行ってください。
+      * プロジェクトのルート・ディレクトリーに `manifest.yml` ファイルを作成します。アプリの場所を指すようにファイルを編集します。例えば、`path: path_to_your_app` などです。
+      * プロジェクトのルート・ディレクトリーに含まれるようにアプリを移動します。
+3. アプリが Node.js アプリであることが {{site.data.keyword.jazzhub_short}} によって検出されない。
+   * 修正: プロジェクトのアプリ・フォルダーに `package.json` ファイルを作成します。
+   
+
+## GitHub フックが動作しない
+{: #githubhookisntworking}
+
+コミットのプッシュ時にワークアイテムのリンクを作成するように GitHub プロジェクトを構成したが、リンクが期待どおり動作していない場合は、以下の手順で問題点を見つけてください。
+
+1. GitHub リポジトリーで**「Settings」**をクリックします。
+   ![GitHub の「Settings」リンク](images/githubSettings1_small.png)
+
+2. **「Webhooks & services」**をクリックします。
+   ![GitHub の「Web hooks and services」リンク](images/githubHooks1_small.png)
+
+3. メッセージを表示するには、{{site.data.keyword.jazzhub}} 状況アイコンの上にマウスを移動します。
+   ![サービス・フックに関するエラー・メッセージ](images/troubleshoothook1_small.png)
+
+4. GitHub のメッセージに従って、エラーを解決します。
+
+5. 修正により問題が解決したことを確認するには、別の変更をコミットしてプッシュするか、{{site.data.keyword.jazzhub_short}} のサービス・ページに移動して**「Test service」**をクリックします。
+   ![GitHub の「Test Service」ボタン](images/githubTestService_small.png)
+
+6. 状況アイコンを再びチェックして、エラーがないことを確認します。
+   ![エラーのない状況アイコン](images/githubResolved_small.png)
+
+詳しくは、[『Bluemix DevOps Services プロジェクトのための GitHub のセットアップ (Setting up GitHub for Bluemix DevOps Services projects)』](https://hub.jazz.net/docs/githubhooks/){: new_window}を参照してください。
 
 
 # アカウントの管理に関するトラブルシューティング
@@ -1189,7 +1255,7 @@ git clone <git_repository_URL>
 アカウントを再アクティブ化する場合は、[{{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport.com){: new_window}に連絡してください。E メールには、以下の情報を含めてください。
 {: tsResolve}
 
-  * {{site.data.keyword.Bluemix_notm}} へのログインに使用している IBM ID。
+  * {{site.data.keyword.Bluemix_notm}} へのログインに使用している IBMid。
   * アプリを作成している組織の名前。この情報は、サポート・チームが、組織内の正しい役割またはメンバーシップがユーザーに割り当てられているかどうかを判別するのに役立ちます。
 
 
@@ -1218,8 +1284,8 @@ git clone <git_repository_URL>
 {: tsResolve}
  
   * {{site.data.keyword.Bluemix_notm}} ダッシュボードで、スペースを作成する組織を選択し、次に**「スペースの作成」**をクリックします。
-  * cf コマンド・ライン・インターフェースに cf create-space <space_name>
--o <organization_name> と入力します。
+  * cf コマンド・ライン・インターフェースに ```cf create-space <space_name>
+-o <organization_name>``` と入力します。
   
   
   
@@ -1309,23 +1375,23 @@ IBM® Bluemix™ ランタイムを使用すると問題が発生することが
 
   * [Cloud Foundry Java ビルドパック](https://github.com/cloudfoundry/java-buildpack){: new_window}。このビルドパックには、最新バージョンのビルドパックが使用されるように組み込みメカニズムが装備されています。このメカニズムによる処理方法について詳しくは、[extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window} を参照してください。 
   * [Cloud Foundry Node.js ビルドパック](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。このビルドパックは、環境変数を使用して同様の機能を提供します。この Node.js ビルドパックを有効にして、毎回インターネットからノード・モジュールをダウンロードするには、cf コマンド・ライン・インターフェースに次のコマンドを入力します。 	
-  
+  ```
 set NODE_MODULES_CACHE=false
-
+```
 使用中のビルドパックが最新のコンポーネントを自動的にロードするメカニズムを提供していない場合は、以下のステップに従って手動でキャッシュ・ディレクトリー内のコンテンツを削除し、アプリを再度プッシュします。  1. ヌル・ビルドパックのブランチ (例えば https://github.com/ryandotsmith/null-buildpack) をチェックアウトします。ブランチをチェックアウトする方法については、[Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window} を参照してください。  
   2. `null-buildpack/bin/compile` ファイルに以下の行を追加して変更をコミットします。変更をコミットする方法については、[Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window} を参照してください。
 
-  
+  ```
 rm -rfv $2/*
-  
+  ```
   3. 以下のコマンドを使用して、キャッシュを削除するように変更されたヌル・ビルドパックでアプリをプッシュします。このステップを完了すると、アプリのキャッシュ・ディレクトリー内にあるすべてのコンテンツが削除されます。
-  
+  ```
 cf push appname -p app_path -b <modified_null_buildpack>
-  
+  ```
   4. 以下のコマンドを使用して、希望する最新のビルドパックでアプリをプッシュします。 
-  
+  ```
 cf push appname -p app_path -b <latest_buildpack>
-  
+  ```
   
 	
 
@@ -1340,34 +1406,34 @@ cf push appname -p app_path -b <latest_buildpack>
 PHP ビルドパックを使用してアプリケーションを Bluemix にプッシュすると、以下のような `NOTICE` を含むメッセージが表示されることがあります。
 {: tsSymptoms}
 
-
+```
 • 2015-01-26T15:00:59.70+0100 [App/0] ERR [26-Jan-2015 14:00:59] NOTICE: [pool www] 'user' directive is ignored when FPM is not running as root
 • 2015-01-26T15:01:00.63+0100 [App/0] ERR [26-Jan-2015 14:00:59] NOTICE: [pool www] 'user' directive is ignored when FPM is not running as root
 • 2015-01-26T15:01:00.63+0100 [App/0] ERR [26-Jan-2015 14:00:59] NOTICE: fpm is running, pid 93
 • 2015-01-26T15:01:00.63+0100 [App/0] ERR [26-Jan-2015 14:00:59] NOTICE: ready to handle connections
-
+```
 
 
 
 PHP ビルドパックでは、ロギング・レベルを定義するために error_log パラメーターを使用しています。デフォルトでは、`error_log` パラメーターの値は **stderr notice** です。以下の例には、Cloud Foundry で提供されている PHP ビルドパックの `nginx-defaults.conf` ファイルに含まれる、デフォルトのロギング・レベル構成が示されています。詳しくは、 「[cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}」を参照してください。
 {: tsCauses} 
 
-
+```
 daemon off;
 error_log stderr notice;
 pid @{HOME}/nginx/logs/nginx.pid;
-
+```
 
  	
 	
 `NOTICE` メッセージは情報を提供するメッセージであり、必ずしも問題の発生を示すものではありません。これらのメッセージのロギングは、ビルドパックの nginx-defaults.conf ファイルに含まれるロギング・レベルを stderr notice から stderr error に変更することで停止できます。例:
 {: tsResolve}
 
-
+```
 daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
-
+```
 デフォルトのロギング構成を変更する方法について詳しくは、 『[error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}』を参照してください。## サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない
 {: #ts_importpylib}
 
@@ -1392,16 +1458,16 @@ pid @{HOME}/nginx/logs/nginx.pid;
   1. `requirements.txt` ファイルを Python アプリのルート・ディレクトリーに追加します。
 `requirements.txt` ファイルには、Python アプリケーションに必要なライブラリー・パッケージとそのパッケージのバージョンが指定されています。以下の例には、`requirements.txt` ファイルの内容が示されています。ここで、`web.py==0.37` は、ダウンロードされる `web.py` ライブラリーのバージョンが 0.37 であることを示しています。`wsgiref==0.1.2` は、web.py ライブラリーに必要な Web サーバー・ゲートウェイ・インターフェースのバージョンが 0.1.2 であることを示しています。
 
-	 
+	 ```
 	 web.py==0.37
      wsgiref==0.1.2
-	 
+	 ```
 	`requirements.txt` ファイルの構成方法について詳しくは、 「[Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html)」を参照してください。  2. `Procfile` ファイルを Python アプリケーションのルート・ディレクトリーに追加します。
 `Procfile` ファイルには、Python アプリケーションの開始コマンドを含めてください。以下のコマンドでは、*yourappname* が Python アプリケーションの名前で、*PORT* は、アプリのユーザーから要求を受信するために Python アプリケーションが使用しなければならないポート番号です。*$PORT* はオプションです。開始コマンドに PORT を指定しない場合は、代わりに、アプリ内部にある `VCAP_APP_PORT` 環境変数下のポート番号が使用されます。
  
-	
+	```
 	web: python <yourappname>.py $PORT
-	
+	```
 これでサード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできます。## 「インスタンスの詳細」ページの「アクション」ボタンが使用不可になっている
 {: #ts_actionsbutton}
 
@@ -1461,13 +1527,13 @@ pid @{HOME}/nginx/logs/nginx.pid;
 トレース操作またはダンプ操作の実行中にエラー・メッセージが表示されます。そのメッセージは、アプリのターゲット・インスタンスが実行状態にないことを示しています。
 {: tsSymptoms}
 
-
+```
 インスタンス 0: トレース仕様が正常に設定されました (Instance 0: Trace specification is set successfully)
 インスタンス 2: トレース仕様が正常に設定されました (Instance 2: Trace specification is set successfully)
 インスタンス 1: アプリ abcd のターゲット・インスタンス 1 は実行状態にありません (Instance 1: Target instance 1 for app abcd is not in the running state.)。
 インスタンス 3: トレース仕様が正常に設定されました (Instance 3: Trace specification is set successfully)
 インスタンス 4: トレース仕様が正常に設定されました (Instance 4: Trace specification is set successfully)
-
+```
 
 
 
@@ -1525,12 +1591,12 @@ pid @{HOME}/nginx/logs/nginx.pid;
 {: tsCauses} 
 
   * ダンプ・ファイルは実行中のアプリケーション・インスタンスと共に生成され、割り振られたディスク割り当て量を使い尽くします。デフォルトでは、1 つのアプリケーション・インスタンスあたりのディスク割り当て量は 1 GB です。ディスク使用量を確認するには、**「ダッシュボード」>「アプリケーション」>「アプリ・ランタイム」**とクリックします。以下の例では、アプリケーションの 2 つのインスタンスについての、ディスク使用量を含むランタイム情報を示しています。
-    
+    ```
     Instance	State	CPU	Memory Usage	Disk Usage
 
 	0		Running	1.0%	344.8MB/512MB	236.8MB/1GB
 	2		Running	2.3%	361.2MB/512MB	235.7MB/1GB
-    
+    ```
   * ディスク割り当て量は、現在の組織の割り当て量によって制限されます。
   
   
@@ -1541,9 +1607,9 @@ pid @{HOME}/nginx/logs/nginx.pid;
 
   * ダンプ・ファイルをダウンロード後に削除します。
   * デプロイメント・マニフェストに以下の入力内容を含めて、ディスク割り当て量をもっと大きくしてアプリケーションを再デプロイします。
-    
+    ```
 	ディスク割り当て量: 2048
-
+```
 	
 	
 

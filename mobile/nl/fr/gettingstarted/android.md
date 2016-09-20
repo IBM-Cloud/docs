@@ -10,7 +10,7 @@ copyright:
 
 # Mise en route - Exemple Hello Bluemix pour Android
 {: #gettingstarted-android}
-*Dernière mise à jour : 27 mai 2016*
+Dernière mise à jour : 27 mai 2016
 {: .last-updated}  
 
 Si vous voulez débuter avec une nouvelle application Android, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
@@ -39,19 +39,20 @@ aboutit, la connexion est vérifiée et le texte dans le simulateur est mis à j
 
   **Remarque :** le code d'exécution `Node.js` est fourni dans le conteneur boilerplate MobileFirst Services Starter. Si l'application de back end n'a pas été créée avec le conteneur boilerplate MobileFirst Services Starter, elle ne peut pas se connecter.
 
-  Si vous parvenez à vous connecter à {{site.data.keyword.Bluemix_notm}} depuis votre application mobile, le message suivant s'affiche :
-
+  Quand vous vous connectez à {{site.data.keyword.Bluemix_notm}} depuis l'application mobile dans Android Studio, le message suivant s'affiche :
   `Yay! You are connected`
   {: screen}
 
-  ![Application Hello World
-connectée{{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Application Hello World connectée à  Bluemix")
+<!--
+  ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+  -->
 
   Si la connexion échoue, le message suivant s'affiche : `Bummer. Something went wrong`
   {: screen}
 
-  ![Application Hello World non connectée à
-Bluemix](images/bummer_android.jpg "Figure 2. Application Hello World non connectée à Bluemix")
+<!--
+  ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
+  -->
 
   Vous pouvez résoudre le problème de connexion en procédant comme suit :
    * Assurez-vous d'avoir collé correctement les valeurs de route et d'identificateur global unique.
@@ -68,7 +69,7 @@ services Bluemix.
 # rellinks
 
 ## samples
-   * [Exemple Hello Bluemix](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Exemple Hello Bluemix (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## sdk
    * [Logiciel SDK de base](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)

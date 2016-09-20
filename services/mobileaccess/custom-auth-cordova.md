@@ -8,11 +8,11 @@ copyright:
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Cordova app
 {: #custom-cordova}
 
-Last updated: 17 July 2016
+Last updated: 23 August 2016
 {: .last-updated}
 
 
-Configure your Cordova application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
+Configure your Cordova application that is using custom authentication to use the {{site.data.keyword.amafull}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
 
 
 ## Before you begin
@@ -32,18 +32,21 @@ Initialize the SDK by passing applicationGUID and applicationRoute parameters.
 1. Initialize the client SDK.
 
 	```JavaScript
-	BMSClient.initialize(applicationRoute, applicationGUID);
+	 BMSClient.initialize("applicationRoute", "applicationGUID");
 
 	```
- Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values from the **Mobile Options** panel of your application on the {{site.data.keyword.Bluemix_notm}} dashboard.
+ * Replace `applicationRoute` and `applicationGUID` with the **Route** and **AppGuid** values. These values can be find by clicking the **Mobile Options** button within your {{site.data.keyword.Bluemix_notm}} application on the {{site.data.keyword.Bluemix_notm}} dashboard.
+	
+ 
+ 
+## Initializing the {{site.data.keyword.amashort}} AuthorizationManager
+ {: #custom-cordova-MCAAM}
+Initialize the `MCAAuthorizationManager` by passing the  {{site.data.keyword.amashort}} service `tenantId` parameter. You can find this value by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
 
-
-##Initializing the {{site.data.keyword.amashort}} AuthorizationManager
-Initialize the AuthorizationManager by passing the {{site.data.keyword.amashort}} service `tenantId` parameter that you get when you click  the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
-
-  ```JavaScript
-  MFPAuthorizationManager.initialize("tenantId");
-  ```
+```JavaScript
+MFPAuthorizationManager.initialize("tenantId");
+        
+```
 
 ## Authentication listener interface
 {: #custom-cordva-auth}
@@ -78,13 +81,13 @@ Calling the `onAuthenticationChallengeReceived` method the {{site.data.keyword.a
 onAuthenticationSuccess: function(info){...}
 ```
 
-This method is called after a successful authentication. The arguments include an optional JSONObject that contains extended information about the authentication success.
+This method is called after a successful authentication. The arguments include an optional JSON object that contains extended information about the authentication success.
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
 
-This method is called after an authentication failure. The arguments include an optional JSONObject that contains extended information about the authentication failure.
+This method is called after an authentication failure. The arguments include an optional JSON object that contains extended information about the authentication failure.
 
 ## authenticationContext
 {: #custom-cordova-authcontext}

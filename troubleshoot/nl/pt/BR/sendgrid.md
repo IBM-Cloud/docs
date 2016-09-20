@@ -1,14 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2015
+
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -44,4 +45,3 @@ Se desejar enviar mais e-mails depois de atingir o limite de
 25.000 e-mails por instância de serviço por mês, será possível incluir uma outra
 instância de serviço. Para obter mais informações sobre SendGrid, veja [Introdução ao SendGrid](https://sendgrid.com/docs/index.html){: new_window}.    
 {: tsResolve}
-

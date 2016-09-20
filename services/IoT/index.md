@@ -13,7 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-Last updated: 11 August 2016
+Last updated: 26 August 2016
 {: .last-updated}
 
 {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} gives you a versatile toolkit that includes gateway devices, device management, and powerful application access. By using {{site.data.keyword.iot_short_notm}}, you can collect connected device data and perform analytics on real-time data from your organization.
@@ -47,6 +47,8 @@ Start exploring the real-time data that the devices are sending to {{site.data.k
 {{site.data.keyword.iot_short_notm}} includes the following analytics tools:  
 - [Boards and cards](data_visualization.html) to visualize your real-time device data.
 - [Rules and actions](analytics.html) that are triggered by real-time device data.
+
+For a quick getting started example, see the [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} developerWorks recipe.
 
 ## Step 3: Create applications to consume your device data
 {: #develop_applications}

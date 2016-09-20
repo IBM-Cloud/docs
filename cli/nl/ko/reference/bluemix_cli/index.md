@@ -16,10 +16,10 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}}(bx) 명령
 {: #bluemix_cli}
 
-마지막 업데이트 날짜: 2016년 7월 20일
+마지막 업데이트 날짜: 2016년 8월 4일
 {: .last-updated}
 
-*버전:* 0.4.0
+버전: 0.4.1
 
 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다. 일부 {{site.data.keyword.Bluemix_notm}} 명령은 기존 cf 명령의 랩퍼이며, 나머지는 {{site.data.keyword.Bluemix_notm}} 사용자에 대해 확장 기능을 제공합니다. 다음 정보에서는 {{site.data.keyword.Bluemix_notm}} CLI에서 지원하는 명령을 나열하며, 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제가 포함됩니다.
 {:shortdesc}
@@ -254,45 +254,52 @@ copyright:
  <td>[bluemix ic init](index.html#bluemix_ic_init)</td> 
  <td>[bluemix ic attach](index.html#bluemix_ic_attach)</td>
  <td>[bluemix ic build](index.html#bluemix_ic_build)</td>
- <td>[bluemix ic create](index.html#bluemix_ic_create)</td>
+ <td>[bluemix ic cp](index.html#bluemix_ic_cp)</td> 
  <td>[bluemix ic cpi](index.html#bluemix_ic_cpi)</td> 
  </tr> 
  <tr> 
+ <td>[bluemix ic create](index.html#bluemix_ic_create)</td>
  <td>[bluemix ic exec](index.html#bluemix_ic_exec)</td> 
  <td>[bluemix ic groups](index.html#bluemix_ic_groups)</td>
  <td>[bluemix ic group-inspect](index.html#bluemix_ic_group_inspect)</td>
  <td>[bluemix ic group-instances](index.html#bluemix_ic_group_instances)</td>
- <td>[bluemix ic group-create](index.html#bluemix_ic_group_create)</td> 
  </tr>
  <tr> 
+ <td>[bluemix ic group-create](index.html#bluemix_ic_group_create)</td> 
  <td>[bluemix ic group-update](index.html#bluemix_ic_group_update)</td> 
  <td>[bluemix ic group-remove](index.html#bluemix_ic_group_remove)</td>
  <td>[bluemix ic images](index.html#bluemix_ic_images)</td>
  <td>[bluemix ic inspect](index.html#bluemix_ic_inspect)</td>
- <td>[bluemix ic info](index.html#bluemix_ic_info)</td> 
  </tr>
- <tr> 
+ <tr>
+ <td>[bluemix ic info](index.html#bluemix_ic_info)</td> 
  <td>[bluemix ic ips](index.html#bluemix_ic_ips)</td> 
  <td>[bluemix ic ip-request](index.html#ip_request)</td>
  <td>[bluemix ic ip-release](index.html#bluemix_ic_ip_release)</td>
  <td>[bluemix ic ip-bind](index.html#bluemix_ic_ip_bind)</td>
- <td>[bluemix ic ip-unbind](index.html#bluemix_ic_ip_unbind)</td> 
  </tr>
  <tr> 
+ <td>[bluemix ic ip-unbind](index.html#bluemix_ic_ip_unbind)</td> 
  <td>[bluemix ic kill](index.html#bluemix_ic_kill)</td> 
+ <td>[bluemix ic logs](index.html#bluemix_ic_logs)</td>
  <td>[bluemix ic namespace-get](index.html#bluemix_ic_namespace_get)</td>
  <td>[bluemix ic namespace-set](index.html#bluemix_ic_namespace_set)</td>
- <td>[bluemix ic pause](index.html#pause)</td>
- <td>[bluemix ic unpause](index.html#unpause)</td>
  </tr>
- <tr> 
+ <tr>
+ <td>[bluemix ic pause](index.html#pause)</td>
+ <td>[bluemix ic unpause](index.html#unpause)</td> 
  <td>[bluemix ic port](index.html#bluemix_ic_port)</td> 
  <td>[bluemix ic ps](index.html#bluemix_ic_ps)</td>
+ <td>[bluemix ic rename](index.html#bluemix_ic_rename)</td>
+ </tr>
+ <tr>
+ <td>[bluemix ic reprovision](index.html#bluemix_ic_reprovision)</td>
+ <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic restart](index.html#bluemix_ic_restart)</td>
  <td>[bluemix ic rm](index.html#bluemix_ic_rm)</td>
  <td>[bluemix ic rmi](index.html#bluemix_ic_rmi)</td> 
  </tr>
- <tr> 
+ <tr>
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td> 
  <td>[bluemix ic route-map](index.html#bluemix_ic_route_map)</td>
  <td>[bluemix ic route-unmap](index.html#bluemix_ic_route_unmap)</td>
@@ -300,22 +307,29 @@ copyright:
  <td>[bluemix ic stop](index.html#ic_stop)</td> 
  </tr>
  <tr> 
- <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td> 
+ <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic top](index.html#bluemix_ic_top)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
  <td>[bluemix ic volumes](index.html#bluemix_ic_volumes)</td>
- <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
  </tr>
- <tr> 
- <td>[bluemix ic volume-remove](index.html#bluemix_ic_volume_remove)</td> 
+ <tr>
+ <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>  
+ <td>[bluemix ic volume-remove](index.html#bluemix_ic_volume_remove)</td>
+ <td>[bluemix ic volume-space-add](index.html#bluemix_ic_volume_space_add)</td>
+ <td>[bluemix ic volume-space-remove](index.html#bluemix_ic_volume_space_remove)</td>  
+ </tr>
+ <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td> 
  <td>[bluemix ic volume-fs-create](index.html#bluemix_ic_volume_fs_create)</td> 
  <td>[bluemix ic volume-fs-remove](index.html#bluemix_ic_volume_fs_remove)</td> 
  <td>[bluemix ic volume-fs-inspect](index.html#bluemix_ic_volume_fs_inspect)</td>
+ <td>[bluemix ic volume-fs-flavors](index.html#bluemix_ic_volume_fs_flavors)</td> 
  </tr>
  <tr>
- <td>[bluemix ic volume-fs-flavors](index.html#bluemix_ic_volume_fs_flavors)</td> 
  <td>[bluemix ic wait](index.html#bluemix_ic_wait)</td>
+ <td>[bluemix ic wait-status](index.html#bluemix_ic_wait_status)</td>
  <td>[bluemix ic version](index.html#bluemix_ic_version)</td>
  <td></td>
  <td></td>
@@ -423,7 +437,7 @@ bluemix api --unset
 bluemix login [OPTIONS...]
 ```
 
-<strong>전제조건</strong>: 엔드포인트
+<strong>전제조건</strong>:  엔드포인트
 
 <!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
 
@@ -452,7 +466,7 @@ bluemix logout
 대상 조직 또는 영역을 설정하거나 확인합니다. 이 명령은 `cf target` 명령을 랩핑 처리합니다. 
 
 ```
-bluemix target [-o ORG_NAME] [-s SPACE_NAME]
+bluemix target [-o ORG_NAME] [-s SPACE_NAME]
 ```
 
 <strong>전제조건</strong>: 엔드포인트, 로그인
@@ -464,7 +478,10 @@ bluemix target [-o ORG_NAME] [-s SPACE_NAME]
    <dt>-s <i>SPACE_NAME</i>(선택사항)</dt>
    <dd>대상으로 지정된 영역의 이름입니다. </dd>
    </dl>
--o *ORG_NAME*과 -s *SPACE_NAME*을 둘 다 지정하지 않으면 현재 조직 및 영역이 표시됩니다.<strong>예제</strong>:현재 조직을 `MyOrg`로, 영역을 `MySpace`로 설정합니다.
+-o *ORG_NAME*과 -s *SPACE_NAME*을 둘 다 지정하지 않으면 현재 조직 및 영역이 표시됩니다.
+<strong>예제</strong>:
+
+현재 조직을 `MyOrg`로, 영역을 `MySpace`로 설정합니다.
 
 ```
 bluemix target -o MyOrg -s MySpace
@@ -503,15 +520,15 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
 
 <strong>명령 옵션</strong>:
    <dl>
-   <dt>--http-timeout <i>TIMEOUT_IN_SECONDS</i></dt>
+   <dt>--http-timeout <i>TIMEOUT_IN_SECONDS</i></dt>
    <dd>HTTP 요청의 제한시간 값입니다. 기본값은 60초입니다.</dd>
    <dt>--trace true|false|<i>path-to-file</i></dt>
    <dd>터미널 또는 지정된 파일에 대한 HTTP 요청을 추적합니다. </dd>
-   <dt>--color true|false</dt>
+   <dt>--color true|false</dt>
    <dd>색상 출력을 사용하거나 사용하지 않습니다. 색상 출력은 기본적으로 사용됩니다. </dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
    <dd>기본 로케일을 설정합니다. LOCALE이 <i>CLEAR</i>이면 이전 로케일이 삭제됩니다. </dd>
-   <dt>--check-version true|false</dt>
+   <dt>--check-version true|false</dt>
    <dd>CLI 버전 확인을 사용하거나 사용하지 않습니다. </dd>
    </dl>
 
@@ -1365,7 +1382,7 @@ bluemix catalog template mobileBackendStarter
 특정 URL 및 설명이 있는 지정된 템플리트를 기반으로 하는 cf 애플리케이션을 작성합니다. 기본적으로 새 앱이 자동으로 시작됩니다. 
 
 ```
-bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
+bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
@@ -2025,11 +2042,9 @@ bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFI
 bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 ```
 
-
-## bluemix ic create
-{: #bluemix_ic_create}
-
-{{site.data.keyword.Bluemix_notm}} 저장소에 새 컨테이너를 작성합니다. 이 명령은 `docker create` 명령을 랩핑합니다. 자세한 정보는 Docker 도움말에서 [create](https://docs.docker.com/reference/commandline/create/){: new_window} 명령을 참조하십시오.
+## bluemix ic cp
+{: #bluemix_ic_cp}
+컨테이너와 로컬 파일 시스템 간에 파일 또는 폴더를 복사합니다. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [build](https://docs.docker.com/reference/commandline/cp/){: new_window} 명령을 참조하십시오.
 
 
 ## bluemix ic cpi
@@ -2065,6 +2080,10 @@ bluemix ic cpi source_repository/source_image_name private_registry_URL/destinat
 bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ```
 
+## bluemix ic create
+{: #bluemix_ic_create}
+
+{{site.data.keyword.Bluemix_notm}} 저장소에 새 컨테이너를 작성합니다. 이 명령은 `docker create` 명령을 랩핑합니다. 자세한 정보는 Docker 도움말에서 [create](https://docs.docker.com/reference/commandline/create/){: new_window} 명령을 참조하십시오.
 
 ## bluemix ic exec
 {: #bluemix_ic_exec}
@@ -2114,11 +2133,16 @@ bluemix ic exec my_container date
 조직의 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에 있는 컨테이너 그룹을 나열합니다.
 
 ```
-bluemix ic groups
+bluemix ic groups [-q]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
 
+<strong>명령 옵션</strong>:
+	<dl>
+	<dt>-q(선택사항)</dt>
+   	<dd>그룹 ID만 표시합니다. </dd>
+	</dl>
 
 ## bluemix ic group-inspect
 {: #bluemix_ic_group_inspect}
@@ -2180,19 +2204,32 @@ bluemix ic group-instances my_group
 확장 가능한 컨테이너 그룹을 작성합니다.
 
 ```
-bluemix ic group-create [-p PORT|--publish port] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] [--min MIN] [--max MAX] [--desired DESIRED] [--auto] [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] [--name NAME] IMAGE [CMD]
+bluemix ic group-create --name GROUP_NAME [--memory,-m MEMORY_SIZE] [-n,--hostname HOSTNAME] [-d,--domain DOMAIN] [--env,-e ENV_KEY=ENV_VAL] [--env-file ENVIRONMENT_VARIABLE_FILE] [--publish,-p PORT] [-P false|true] [--volume,-v VOLUME] [--min MIN_INSTANCE_COUNT] [--max MAX_INSTANCE_COUNT] [--desired DESIRED_INSTANCE_COUNT] [--anti false|true] [--bind SERVICE_INSTANCE_NAME] IMAGE_NAME [CMD [CMD ...]]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
 
 <strong>명령 옵션</strong>:
    <dl>
-   <dt>-m <i>MEMORY</i>|--memory <i>MEMORY</i>(선택사항)</dt>
+    <dt>IMAGE_NAME(필수)</dt>
+   <dd>컨테이너 그룹의 각 컨테이너 인스턴스에 포함되는 이미지입니다. 이미지 뒤에 명령을 나열할 수 있지만 이미지 뒤에 옵션을 두지 마십시오. 이미지를 지정하기 전에 모든 옵션을 포함시키십시오.<br><br>조직의 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에 있는 이미지를 사용하는 경우, <i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i> 형식으로 이미지를 지정하십시오.<br><br>IBM Containers에서 제공하는 이미지를 사용하는 경우 조직의 네임스페이스를 포함시키지 마십시오. <i>registry.ng.bluemix.net/IMAGE</i> 형식으로 이미지를 지정하십시오.</dd>
+   
+   <dt>--name <i>GROUP_NAME</i>(필수)</dt>
+   <dd>그룹에 이름을 지정합니다. <i>-n</i>은 더 이상 사용되지 않습니다.<br>
+   <strong>팁:</strong> 컨테이너 이름은 문자로 시작해야 합니다. 이름에는 대문자, 소문자, 숫자, 마침표 ".", 밑줄 "_" 또는 하이픈 "-"이 포함될 수 있습니다. </dd>
+  
+   <dt>-m <i>MEMORY_SIZE</i>|--memory <i>MEMORY_SIZE</i>(선택사항)</dt>
    <dd>그룹에 MB 단위의 메모리 한계를 지정합니다. CLI에서 컨테이너 그룹을 작성하는 경우, 각 컨테이너 인스턴스에 대한 기본값은 <i>64</i>MB입니다. {{site.data.keyword.Bluemix_notm}} 대시보드에서 컨테이너 그룹을 작성하는 경우, 각 컨테이너 인스턴스에 대한 기본값은 <i>256</i>MB입니다. 허용 값은 <i>64</i>, <i>256</i>, <i>512</i>, <i>1024</i> 및 <i>2048</i>입니다. 메모리 한계가 지정된 후에는 값을 변경할 수 없습니다.</dd>
-   <dt>-e <i>ENV</i>|--env <i>ENV</i>(선택사항)</dt>
-   <dd>환경 변수를 설정합니다. 여기서 **ENV**는 `key=value` 쌍입니다. 여러 키를 개별적으로 나열하십시오. 따옴표를 사용하는 경우 환경 변수와 값을 함께 따옴표로 묶으십시오. 예: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  다음 표에서는 지정 가능한 공통으로 사용되는 일부 환경 변수를 보여줍니다.</dd>
+   
+   <dt>-n <i>HOSTNAME</i>|--hostname <i>HOSTNAME</i>(선택사항)</dt>
+   <dd>호스트 이름입니다(예: <i>mycontainerhost</i>). 호스트 및 도메인은 결합되어 전체 공용 라우트 URL(예: <i>http://mycontainerhost.mybluemix.net</i>)을 구성합니다. <i>bluemix ic group-inspect</i> 명령으로 컨테이너 그룹의 세부사항을 검토하면 호스트 및 도메인이 라우트로 함께 나열됩니다.</dd>
+   <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i>(선택사항)</dt>
+   <dd>일반적으로, 도메인은 <i>.mybluemix.net</i>입니다. 호스트와 도메인은 결합되어 전체 공용 라우트 URL(예: <i>http://mycontainerhost.mybluemix.net</i>)을 형성합니다. <i>bluemix ic group-inspect</i> 명령으로 컨테이너 그룹의 세부사항을 검토하면 호스트 및 도메인이 라우트로 함께 나열됩니다.</dd>
+   
+   <dt>-e <i>ENV_KEY=ENV_VAL</i>|--env <i>ENV_KEY=ENV_VAL</i>(선택사항)</dt>
+   <dd>환경 변수를 설정하십시오.여러 키를 개별적으로 나열하십시오. 따옴표를 사용하는 경우 환경 변수와 값을 함께 따옴표로 묶으십시오. 예: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  다음 표에서는 지정 가능한 공통으로 사용되는 일부 환경 변수를 보여줍니다.</dd>
     </dl>
-
+ 
 
 |  환경 변수                              |     설명                            |
 | :----------------------------- | :------------------------------ |
@@ -2201,6 +2238,9 @@ bluemix ic group-create [-p PORT|--publish port] [-m MEMORY|--memory MEMORY] [-e
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 컨테이너에서 모니터링할 로그 파일을 추가합니다. `LOG_LOCATIONS` 환경 변수를 로그 파일의 경로와 함께 포함시키십시오. |
 *표 8. 공통으로 사용되는 환경 변수*
 
+   <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i>(선택사항)</dt>
+   <dd> 파일에서 환경 변수를 가져오며 여기서 ENVFILE은 로컬 디렉토리에 있는 파일의 경로입니다. 파일의 모든 행은 하나의 키=값 쌍을 나타냅니다. </dd>
+    </dl>
    <dl>
    <dt>-v VOLUME:CONTAINER_PATH[:ro]|--volume VOLUME:CONTAINER_PATH[:ro] (선택사항)</dt>
    <dd><i>VolumeId:ContainerPath[:ro]</i> 형식의 세부사항을 지정하여 컨테이너에 볼륨을 첨부합니다.
@@ -2216,24 +2256,27 @@ bluemix ic group-create [-p PORT|--publish port] [-m MEMORY|--memory MEMORY] [-e
    <li>IBM 인증 Node.js 이미지 또는 이 이미지의 수정된 버전의 경우 포트 8000을 입력하십시오.</li>
    </ul>
    </dd>
-   <dt>--min <i>MIN</i>(선택사항)</dt>
+   <dt>-P(선택사항)</dt>
+   <dd>모든 포트를 공개합니다. </dd>
+   
+   <dt>--min <i>MIN_INSTANCE_COUNT</i>(선택사항)</dt>
    <dd>최소 인스턴스 수입니다. 기본값은 1입니다. 최소 인스턴스 수를 설정하는 경우, 컨테이너 그룹이 작성된 후에는 해당 값을 변경할 수 없습니다.</dd>
-   <dt>--max <i>MAX</i>(선택사항)</dt>
+   
+   <dt>--max <i>MAX_INSTANCE_COUNT</i>(선택사항)</dt>
    <dd>최대 인스턴스 수입니다. 기본값은 2입니다. 최대 인스턴스 수를 설정하는 경우, 컨테이너 그룹이 작성된 후에는 해당 값을 변경할 수 없습니다.</dd>
-   <dt>--desired <i>DESIRED</i>(선택사항)</dt>
+   
+   <dt>--desired <i>DESIRED_INSTANCE_COUNT</i>(선택사항)</dt>
    <dd>필요한 인스턴스 수입니다. 기본값은 2입니다.</dd>
+   
    <dt>--auto(선택사항)</dt>
    <dd>컨테이너 그룹이 작성되고 자동 복구가 사용되는 경우, IBM Containers는 지정된 포트에 대한 HTTP 요청으로 각 인스턴스의 상태를 확인합니다. <br>
 두 개의 후속 90초 간격에서 컨테이너 인스턴스로부터 응답이 수신되지 않으면 해당 인스턴스가 제거되고 새 인스턴스로 바뀝니다. 컨테이너가 응답하면 아무 조치도 수행되지 않습니다. 이 프로세스는 계속해서 반복됩니다. 30분 창 동안 그룹의 멤버인 서로 다른 컨테이너의 총 수가 해당 그룹의 관찰된 최대 크기의 3배보다 크거나 같으면 해당 컨테이너 그룹에 대해 자동 복구가 영구적으로 사용되지 않습니다. 자동 복구를 다시 사용하려면 컨테이너 그룹을 다시 작성해야 합니다.</dd>
-   <dt>-n <i>HOST</i>|--hostname <i>HOST</i>(선택사항)</dt>
-   <dd>호스트 이름입니다(예: <i>mycontainerhost</i>). 호스트 및 도메인은 결합되어 전체 공용 라우트 URL(예: <i>http://mycontainerhost.mybluemix.net</i>)을 구성합니다. <i>bluemix ic group-inspect</i> 명령으로 컨테이너 그룹의 세부사항을 검토하면 호스트 및 도메인이 라우트로 함께 나열됩니다.</dd>
-   <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i>(선택사항)</dt>
-   <dd>일반적으로, 도메인은 <i>.mybluemix.net</i>입니다. 호스트와 도메인은 결합되어 전체 공용 라우트 URL(예: <i>http://mycontainerhost.mybluemix.net</i>)을 형성합니다. <i>bluemix ic group-inspect</i> 명령으로 컨테이너 그룹의 세부사항을 검토하면 호스트 및 도메인이 라우트로 함께 나열됩니다.</dd>
-   <dt>--name <i>NAME</i>(필수)</dt>
-   <dd>그룹에 이름을 지정합니다. <i>-n</i>은 더 이상 사용되지 않습니다.<br>
-   <strong>팁:</strong> 컨테이너 이름은 문자로 시작해야 합니다. 이름에는 대문자, 소문자, 숫자, 마침표 ".", 밑줄 "_" 또는 하이픈 "-"이 포함될 수 있습니다. </dd>
-   <dt>IMAGE(필수)</dt>
-   <dd>컨테이너 그룹의 각 컨테이너 인스턴스에 포함되는 이미지입니다. 이미지 뒤에 명령을 나열할 수 있지만 이미지 뒤에 옵션을 두지 마십시오. 이미지를 지정하기 전에 모든 옵션을 포함시키십시오.<br><br>조직의 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에 있는 이미지를 사용하는 경우, <i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i> 형식으로 이미지를 지정하십시오.<br><br>IBM Containers에서 제공하는 이미지를 사용하는 경우 조직의 네임스페이스를 포함시키지 마십시오. <i>registry.ng.bluemix.net/IMAGE</i> 형식으로 이미지를 지정하십시오.</dd>
+  <dt>--anti(선택사항)</dt>
+  <dd> 컨테이너 그룹의 가용성을 높이려면 anti-affinity를 사용하십시오. --anti 옵션은 사용자 그룹의 모든 컨테이너 인스턴스를 별도의 실제 컴퓨팅 노드에 배치하여 하드웨어 장애로 인해 그룹의 모든 컨테이너가 충돌하는 경우가 줄어들도록 강제 실행합니다. 각 Bluemix 지역과 조직에서 배치에 사용할 수 있는 컴퓨팅 노드의 세트는 제한되어 있으므로 그룹 크기가 큰 경우 이 옵션을 사용하지 못할 수 있습니다. 배치에 성공하지 못한 경우에는 그룹의 컨테이너 인스턴스 수를 줄이거나 --anti 옵션을 제거하십시오. </dd>
+    
+   <dt>--bind SERVICE_INSTANCE_NAME(선택사항)</dt>
+   <dd> 실행 중인 컨테이너 그룹에 서비스를 추가합니다. </dd>
+   
    <dt>CMD(선택사항)</dt>
    <dd>실행할 컨테이너 그룹에 전달되는 명령 및 인수입니다. 이 명령은 장시간 실행되는 명령이어야 합니다. 단시간 실행되는 명령(예: <i>/bin/date</i>)은 컨테이너 충돌을 유발할 수 있으므로 사용하지 마십시오.<br> <strong>참고:</strong> <ul>
    <li>명령 및 해당 인수는 <i>bluemix ic run</i> 명령행의 끝에 와야 합니다.</li>
@@ -2270,7 +2313,7 @@ bluemix ic group-create -p 9080 --auto -n mycontainerhost -d .mybluemix.net --na
 
 
 ```
-bluemix ic group-update [--min MIN] [--max MAX] [--desired DESIRED] [--auto] CONTAINER_GROUP
+bluemix ic group-update [--min MIN_INSTANCE_COUNT] [--max MAX_INSTANCE_COUNT] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=ENV_VAL] GROUP_NAME
 ```
 
 **팁:** 컨테이너 그룹의 호스트 이름 또는 도메인을 업데이트하려면 `bluemix ic route-map [-n HOST][-d DOMAIN] CONTAINER_GROUP`을 사용하십시오.
@@ -2279,20 +2322,22 @@ bluemix ic group-update [--min MIN] [--max MAX] [--desired DESIRED] [--auto] CON
 
 <strong>명령 옵션</strong>:
  <dl>
-   <dt>--min <i>MIN</i>(선택사항)</dt>
+   <dt>--min <i>MIN_INSTANCE_COUNT</i>(선택사항)</dt>
    <dd>최소 인스턴스 수입니다. 기본값은 <i>1</i>입니다. 인스턴스의 최소 수가 설정된 후에는 값을 변경할 수 없습니다.</dd>
-   <dt>--max <i>MAX</i>(선택사항)</dt>
+   <dt>--max <i>MAX_INSTANCE_COUNT</i>(선택사항)</dt>
    <dd>최대 인스턴스 수입니다. 기본값은 <i>2</i>입니다. 인스턴스의 최대 수가 설정된 후에는 값을 변경할 수 없습니다.</dd>
-   <dt>--desired <i>DESIRED</i>(선택사항)</dt>
+   <dt>--desired <i>DESIRED_INSTANCE_COUNT</i>(선택사항)</dt>
    <dd>필요한 인스턴스 수입니다. 기본값은 <i>2</i>입니다. </dd>
-    </dl>
+   </dl>
 
-**팁:** 한 번에 `--min MIN`, `--max MAX` 및 `--desired DESIRED` 옵션 중 하나만 지정할 수 있습니다.
+**팁:** 한 번에 `--min MIN_INSTANCE_COUNT`, `--max MAX_INSTANCE_COUNT` 또는 `--desired DESIRED_INSTANCE_COUNT` 옵션 중 하나만 지정할 수 있습니다. 
 
    <dl>
-   <dt>--auto(선택사항)</dt>
-   <dd>자동 복구를 사용하여 실패한 인스턴스를 자동으로 다시 시작합니다. </dd>
-   <dt>CONTAINER_GROUP(필수)</dt>
+   <dt>-e <i>ENV_KEY=ENV_VAL</i>(선택사항)</dt>
+   <dd>환경 변수를 설정하십시오.여러 키를 개별적으로 나열하십시오. 따옴표를 사용하는 경우 환경 변수와 값을 함께 따옴표로 묶으십시오. 예: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  </dd>
+    </dl>
+   <dl>
+   <dt>GROUP_NAME(필수)</dt>
    <dd>컨테이너 그룹 ID 또는 이름입니다. </dd>
    </dl>
 
@@ -2311,7 +2356,7 @@ bluemix ic group-update --max 5 my_group
 조직의 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에서 컨테이너 그룹을 제거합니다.
 
 ```
-bluemix ic group-remove [-f|--force] CONTAINER_GROUP
+bluemix ic group-remove [-f|--force] GROUP_NAME [GROUP_NAME2 [...]]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
@@ -2321,7 +2366,7 @@ bluemix ic group-remove [-f|--force] CONTAINER_GROUP
    <dl>
    <dt>-f|--force(선택사항)</dt>
    <dd>실행 중이거나 실패한 컨테이너를 강제 제거합니다. </dd>
-   <dt>CONTAINER_GROUP(필수)</dt>
+   <dt>GROUP_NAME(필수)</dt>
    <dd>컨테이너 그룹 ID 또는 이름입니다. </dd>
    </dl>
 
@@ -2417,7 +2462,7 @@ bluemix ic info
 로그인한 사용자의 사용 가능한 유동 IP 주소를 나열합니다. 목록에는 IP 주소와 해당 IP 주소가 링크된 컨테이너 ID가 포함됩니다. IP 주소가 사용되지 않는 경우에는 컨테이너 ID가 표시되지 않습니다.
 
 ```
-bluemix ic ips [-a|--all]
+bluemix ic ips [-q]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
@@ -2425,17 +2470,16 @@ bluemix ic ips [-a|--all]
 <strong>명령 옵션</strong>:
 
    <dl>
-   <dt>-a|--all(선택사항)</dt>
-   <dd>모든 IP 주소를 나열합니다. 기본적으로 사용 가능한 IP 주소만 리턴됩니다. </dd>
+   <dt>-q(선택사항)</dt>
+   <dd>해당 IP 주소에 바인딩된 컨테이너의 ID 없이 IP 주소만 나열합니다. </dd>
    </dl>
 
 
 <strong>예제</strong>:
 
-다음 예제는 조직의 IP 주소 목록을 사용 가능 여부와 관계없이 모두 수신하기 위한 요청을 보여줍니다.
-
+다음 예제는 조직의 모든 IP 주소 목록을 수신하기 위한 요청을 보여줍니다. 
 ```
-bluemix ic ips -a
+bluemix ic ips -q
 ```
 
 
@@ -2444,10 +2488,17 @@ bluemix ic ips -a
 새 유동 IP 주소를 요청합니다.
 
 ```
-bluemix ic ip-request
+bluemix ic ip-request [-q]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
+
+<strong>명령 옵션</strong>:
+
+   <dl>
+   <dt>-q(선택사항)</dt>
+   <dd>해당 IP 주소에 바인딩된 컨테이너의 ID 없이 IP 주소만 나열합니다. </dd>
+   </dl>
 
 
 ## bluemix ic ip-release
@@ -2456,7 +2507,7 @@ bluemix ic ip-request
 컨테이너 클라우드 서비스 인스턴스에서 유동 IP 주소를 릴리스합니다. 
 
 ```
-bluemix ic ip-release IP_ADDRESS
+bluemix ic ip-release IP_ADDRESS [IP_ADDRESS2 [...]]
 ```
 
 <strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
@@ -2558,6 +2609,14 @@ bluemix ic kill [-s CMD|--signal CMD] CONTAINER
 
 ```
 bluemix ic kill proxy
+```
+
+## bluemix ic logs
+{: #bluemix_ic_logs}
+
+실행 중인 컨테이너의 출력 또는 오류 로그를 표시합니다. 자세한 정보는 Docker 도움말에서 [kill](https://docs.docker.com/reference/commandline/logs/){: new_window} 명령을 참조하십시오.
+```
+bluemix ic logs [OPTIONS] CONTAINER
 ```
 
 
@@ -2711,7 +2770,54 @@ bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
 bluemix ic ps -a
 ```
 
+## bluemix ic rename
+{: #bluemix_ic_rename}
+컨테이너의 이름을 바꿉니다. 자세한 정보는 Docker 도움말에서 [ps](https://docs.docker.com/reference/commandline/rename/){: new_window} 명령을 참조하십시오.
 
+```
+bluemix ic rename OLD_NAME NEW_NAME
+```
+<strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker<strong>명령 옵션</strong>:
+
+<dl>
+   <dt>OLD_NAME(필수)</dt>
+   <dd>컨테이너의 이전 이름입니다. </dd>
+   <dt>NEW_NAME(필수)</dt>
+   <dd>컨테이너의 새 이름입니다. </dd>
+   </dl>
+
+## bluemix ic reprovision
+{: #bluemix_ic_reprovision}
+
+로그인한 Bluemix 영역에서 IBM Containers 서비스를 다시 작성합니다. 영역의 원래 할당량은 유지보수됩니다. 
+
+<strong>중요</strong>: 이 명령을 실행할 때 이 영역에 있는 모든 단일 컨테이너와 그룹은 다시 프로비저닝된 영역으로 마이그레이션되지 않고 마이그레이션 프로세스 중에 제거됩니다. 이미지와 볼륨은 영향을 받지 않습니다. 
+
+```
+bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
+```
+<strong>명령 옵션</strong>:<dl>
+   <dt>--force|-f(선택사항)</dt>
+   <dd>Bluemix 영역에서 IBM Containers 서비스를 다시 작성하도록 강제 실행합니다. </dd>
+   <dt>ENVIRONMENT_NAME(선택사항)</dt>
+   <dd>컨테이너가 배치된 IBM Containers 환경의 이름입니다. 환경 이름이 지정되지 않으면 지역에 설정된 기본 환경이 사용됩니다. </dd>
+   </dl>
+
+## bluemix ic unprovision
+{: #bluemix_ic_unprovision}
+
+사용자가 로그인한 Bluemix 영역에서 IBM Containers 서비스를 삭제합니다. 
+
+<strong>주의</strong>: 이 명령을 실행하면 모든 단일 컨테이너와 컨테이너 그룹이 유실됩니다. 사용자의 영역은 여전히 Bluemix에서 사용할 수 있습니다. IBM Containers를 다시 사용하려면 bluemix ic provision을 실행하여 IBM Containers 서비스를 다시 프로비저닝해야 합니다. 
+
+```
+bluemix ic reprovision [--force|-f] 
+```
+<strong>명령 옵션</strong>:<dl>
+   <dt>--force|-f(선택사항)</dt>
+   <dd>Bluemix 영역에서 Bluemix의 삭제를 강제 실행합니다. </dd>
+ </dl>
+ 
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
@@ -3121,6 +3227,40 @@ bluemix ic top CONTAINER [CONTAINER]
 bluemix ic top my_container
 ```
 
+## bluemix ic service-bind
+{: #bluemix_ic_service-bind}
+
+실행 중인 컨테이너 그룹에 서비스를 추가합니다. 이 명령은 컨테이너 그룹에만 사용할 수 있습니다. 단일 컨테이너는 bluemix ic run 명령의 일부로 서비스를 바인드해야 합니다.  
+
+```
+bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE 
+```
+<strong>명령 옵션</strong>:<dl>
+   <dt>GROUP_NAME(필수)</dt>
+   <dd>그룹 ID 또는 이름입니다. </dd>
+   
+   <dt>SERVICE_INSTANCE(필수)</dt>
+   <dd>컨테이너 그룹에 추가할 서비스 인스턴스의 이름입니다. </dd>
+   </dl>
+   
+
+## bluemix ic service-unbind
+{: #bluemix_ic_service-unbind}
+
+실행 중인 컨테이너 그룹에서 서비스를 제거합니다. 이 명령은 컨테이너 그룹에만 사용할 수 있습니다. 단일 컨테이너는 컨테이너를 제거하고 서비스가 없는 새 컨테이너를 작성해야 합니다. 
+
+```
+bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE 
+```
+<strong>명령 옵션</strong>:<dl>
+   <dt>GROUP_NAME(필수)</dt>
+   <dd>그룹 ID 또는 이름입니다. </dd>
+   
+   <dt>SERVICE_INSTANCE(필수)</dt>
+   <dd>컨테이너 그룹에 추가할 서비스 인스턴스의 이름입니다. </dd>
+   </dl>
+   
+
 
 ## bluemix ic volumes
 {: #bluemix_ic_volumes}
@@ -3214,6 +3354,49 @@ bluemix ic volume-remove VOLUME_NAME
 ```
 bluemix ic volume-remove volume_name
 ```
+
+## bluemix ic volume-space-add
+{: #bluemix_ic_volume_space_add}
+
+볼륨에 영역 추가
+
+```
+bluemix ic volume-space-add VOLUME_NAME SPACE_NAME [SPACE2_NAME [...]]
+```
+
+<strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
+
+<strong>명령 옵션</strong>:
+
+   <dl>
+   <dt>VOLUME_NAME(필수)</dt>
+   <dd>볼륨 이름입니다.</dd>
+   
+   <dt>SPACE_NAME(필수)</dt>
+   <dd>영역 이름입니다. </dd>
+   </dl>
+   
+## bluemix ic volume-space-remove
+{: #bluemix_ic_volume_space_remove}
+
+볼륨에서 영역 제거
+
+```
+bluemix ic volume-space-remove VOLUME_NAME SPACE_NAME [SPACE2_NAME [...]]
+```
+
+<strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
+
+<strong>명령 옵션</strong>:
+
+   <dl>
+   <dt>VOLUME_NAME(필수)</dt>
+   <dd>볼륨 이름입니다.</dd>
+   
+   <dt>SPACE_NAME(필수)</dt>
+   <dd>영역 이름입니다. </dd>
+   </dl>
+
 
 ## bluemix ic volume-fs
 {: #bluemix_ic_volume_fs}
@@ -3342,6 +3525,31 @@ bluemix ic wait CONTAINER [CONTAINER]
 bluemix ic wait my_container
 ```
 
+## bluemix ic wait-status
+{: #bluemix_ic_wait_status}
+
+단일 컨테이너 또는 컨테이너 그룹이 일시적이지 않은 상태에 도달하도록 대기합니다. 이 대기 시간 동안 명령행은 리턴하지 않으며 사용자는 명령을 입력할 수 없습니다. 컨테이너가 일시적이지 않은 상태에 도달하는 즉시 확인 메시지가 표시됩니다. 단일 컨테이너에서 일시적이지 않은 상태는 실행 중, 시스템 종료, 충돌, 일시정지 또는 일시중단입니다. 컨테이너 그룹의 경우 일시적이지 않은 상태는 CREATE_COMPLETE, UPDATE_COMPLETE 또는 FAILED입니다. 
+
+```
+bluemix ic wait-status CONTAINER
+```
+
+<strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker
+
+<strong>명령 옵션</strong>:
+
+   <dl>
+   <dt>CONTAINER(필수)</dt>
+   <dd>컨테이너 이름 또는 ID입니다.</dd>
+   </dl>
+
+<strong>예제</strong>:
+
+다음 예제는 `my_container`라는 컨테이너를 종료하기 위한 요청을 보여줍니다.
+
+```
+bluemix ic wait my_container
+```
 
 ## bluemix ic version
 {: #bluemix_ic_version}

@@ -31,19 +31,19 @@ copyright:
 
 以下のステップを実行して、リポジトリーを追加し、プラグインをインストールします。
 1. {{site.data.keyword.Bluemix_notm}} CLI プラグインのリポジトリーを追加するため、以下のコマンドを実行します。
-
+```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
-
+```
 2. {{site.data.keyword.autoscaling}} CLI プラグインをインストールするため、以下のコマンドを実行します。
-
+```
 bluemix plugin install auto-scaling -r bluemix-plugin-repo
-
+```
 
 ## Auto-Scaling ポリシーの添付
 
 Auto-Scaling ポリシーを特定のアプリに添付することができます。次のコマンドを実行します。
 
-bx as policy-attach <APP_NAME> -p <policy_file>
+```bx as policy-attach <APP_NAME> -p <policy_file>```
 {: codeblock}
 
 <dl class="parml">
@@ -58,7 +58,7 @@ bx as policy-attach <APP_NAME> -p <policy_file>
 
 Auto-Scaling ポリシーは、コマンド・ライン・インターフェースで質問に答えていけば生成できます。入力内容によっては、Auto-Scaling ポリシーの定義が含まれた JSON ファイルは、ユーザーが入力する名前を付けて保存されます。ファイル名を入力しなければ、ポリシーのコンテンツは直接コマンド・ラインに表示され、ファイルには保存されません。次のコマンドを実行します。
 
-bx as policy-create
+```bx as policy-create```
 {: codeblock}
 
 
@@ -66,7 +66,7 @@ bx as policy-create
 
 アプリの Auto-Scaling ポリシーを表示することができます。ポリシーのコンテンツは直接コマンド・ラインに表示されます。次のコマンドを実行します。
 
-bx as policy-show <APP_NAME> [--json]
+```bx as policy-show <APP_NAME> [--json]```
 {: codeblock}
 
 <dl class="parml">
@@ -81,7 +81,7 @@ bx as policy-show <APP_NAME> [--json]
 
 Auto-Scaling ポリシーをアプリから削除することができます。次のコマンドを実行します。
 
-bx as policy-detach <APP_NAME>
+```bx as policy-detach <APP_NAME>```
 {: codeblock}
 
 <dl class="parml">
@@ -94,7 +94,7 @@ bx as policy-detach <APP_NAME>
 
 特定のアプリの Auto-Scaling ポリシーを有効にしたり無効にしたりできます。次のコマンドを実行します。
 
-bx as policy-enable|policy-disable <APP_NAME>
+```bx as policy-enable|policy-disable <APP_NAME>```
 {: codeblock}
 
 <dl class="parml">
@@ -107,7 +107,7 @@ bx as policy-enable|policy-disable <APP_NAME>
 
 特定のアプリの Auto-Scaling アクティビティー履歴を表示することができます。Auto-Scaling 履歴レコードの表がコマンド・ライン・インターフェースに表示されます。
 
-bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]```
 {: codeblock}
 
 <dl class="parml">

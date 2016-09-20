@@ -9,10 +9,10 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Getting started with {{site.data.keyword.mobileanalytics_short}} (Experimental)  
+# Getting started with {{site.data.keyword.mobileanalytics_short}} (Beta)  
 
 {: #gettingstartedtemplate}
-Last updated: 16 August 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} provides developers, IT administrators, and business stakeholders insight into how their mobile apps are performing and how they are being used. Monitor performance and usage of all your applications from your desktop or tablet. Quickly identify trends and anomalies, drill down to resolve issues, and trigger alerts when key metrics cross critical thresholds. 
@@ -20,7 +20,7 @@ Last updated: 16 August 2016
 
 To get up and running quickly with the {{site.data.keyword.mobileanalytics_short}} service, follow these steps:
 
-1. After you creat an instance <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->of the {{site.data.keyword.mobileanalytics_short}} service, you can access the {{site.data.keyword.mobileanalytics_short}} Console by clicking your tile in the **Services** section of the {{site.data.keyword.Bluemix}} Dashboard.
+1. After you create an instance <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->of the {{site.data.keyword.mobileanalytics_short}} service, you can access the {{site.data.keyword.mobileanalytics_short}} Console by clicking your tile in the **Services** section of the {{site.data.keyword.Bluemix}} Dashboard.
 
 2. Install the {{site.data.keyword.mobileanalytics_short}} [Client SDKs](install-client-sdk.html). You can optionally use the {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}.
 
@@ -36,20 +36,19 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 		```
 		{: codeblock}
 		
-	2. Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [Access Key](sdk.html#analytics-clientkey) value.
+	2. Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [API Key](sdk.html#analytics-clientkey) value.
 
 		```Java
-			try {
-			     BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH);
-			}
-			catch (MalformedURLException e) {
-	            //The Bluemix region provided is invalid
-	        }
-				Analytics.init(getApplication(), your_app_name, your_access_key, Analytics.DeviceEvent.LIFECYCLE);
+			BMSClient.getInstance().initialize(this.getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
+			
+			Analytics.init(getApplication(), your_app_name_here, your_api_key_here, hasUserContext, Analytics.DeviceEvent.LIFECYCLE);
 		```
 		{: codeblock}
 		
-    The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
+    The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example, `BMSClient.REGION_US_SOUTH` and `BMSClient.REGION_UK`. 
+    <!-- , or `BMSClient.REGION_SYDNEY`.-->
+    
+    **Note:** Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user. The [`Analytics.setUserIdentity("username");`](sdk.html#android-tracking-users) method will not work when `hasUserContext` is false. If true, each use of [`Analytics.setUserIdentity("username");`](sdk.html#android-tracking-users) counts as an active user. There is no default user identity when`hasUserContext` is true, and therefore must be set to populate the active user charts.
 
   #### iOS
   {: #ios-initialize}
@@ -61,25 +60,28 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 	```
 	{: codeblock}
     
-  2. Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [Access key](sdk.html#analytics-clientkey) value.
+  2. Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [API Key](sdk.html#analytics-clientkey) value.
  
 	Swift 2:
 	
 	```Swift
-	BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-	Analytics.initializeWithAppName(your_app_name, accessKey: your_access_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.REGION_US_SOUTH) // You can change the region
+	Analytics.initializeWithAppName(your_app_name_here, apiKey: your_api_key_here, hasUserContext: false, deviceEvents: DeviceEvent.LIFECYCLE)
 	```
 	{: codeblock}
 	
 	Swift 3:
 	
 	```Swift
-	BMSClient.sharedInstance.initializeWithBluemixAppRoute(bluemixAppRoute: nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-	Analytics.initializeWithAppName(appName: your_app_name, accessKey: your_access_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.REGION_US_SOUTH) // You can change the region
+	Analytics.initializeWithAppName(appName: your_app_name_here, apiKey: your_api_key_here, hasUserContext: false, deviceEvents: DeviceEvent.LIFECYCLE)
 	```
 	{: codeblock}
 	
-  The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
+	The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example, `BMSClient.REGION_US_SOUTH` and `BMSClient.REGION_UK`.
+	<!-- , or `BMSClient.REGION_SYDNEY`. -->
+	
+	**Note:** Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user. The [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) method will not work when `hasUserContext` is false. If true, each use of [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) counts as an active user. There is no default user identity when`hasUserContext` is true, and therefore must be set to populate the active user charts.
 
 4. Send recorded usage analytics to the Mobile Analytics Service. A simple way to test your analytics is to run the following code when your application starts:
 

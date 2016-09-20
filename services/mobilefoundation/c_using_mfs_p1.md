@@ -8,7 +8,7 @@ copyright:
 #	Using the Developer plan
 {: #using_mobilefoundation_p1}
 
-Last updated: 04 August 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
 After you create the {{site.data.keyword.mobilefoundation_short}}: Developer service instance, in a few seconds, you can access the `Overview` page on {{site.data.keyword.Bluemix_notm}}, which provides you tutorials and videos to help you get started with the  {{site.data.keyword.mobilefoundation_short}} service.
@@ -33,6 +33,23 @@ The process of provisioning starts. This process takes about 10 minutes, and a m
 
 
 <!--This console runs inside the container.--> With the console you can manage your mobile apps and mobile devices, use your server as a mobile backend, send push notifications, and do more.
+
+##  Adding Mobile Analytics server
+{: #adding_analytics_server_dev}
+
+ You can now monitor your mobile application on {{site.data.keyword.mobilefirst}} server by adding a Mobile Analytics server to the {{site.data.keyword.mobilefoundation_short}} service instance. Developer plan creates the Mobile Analytics server in a container group with a single node having 1 GB memory.
+
+* Click **Add Analytics** to add the Mobile Analytics server to the {{site.data.keyword.mobilefoundation_short}} service instance.
+
+The process of provisioning starts. This process takes about 10 minutes, and a message window indicates the progress of this operation.  
+
+* Launch the MobileFirst Analytics Console from the {{site.data.keyword.mfp_oc_short_notm}}.
+
+* Single sign-on is enabled between the {{site.data.keyword.mfserver_short_notm}} and the Mobile Analytics server. Mobile Analytics server is configured with the same LTPA keys and user credentials as the {{site.data.keyword.mfserver_short_notm}}. You can use the same `username` and `password` to log in to the Mobile Analytics console as used to log in to the {{site.data.keyword.mfp_oc_short_notm}}.
+
+For more information on MobileFirst Analytics you can refer to [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/).
+
+**Note:** The Mobile Analytics server is removed when you delete the {{site.data.keyword.mobilefoundation_short}} service instance or when you attempt to re-create the {{site.data.keyword.mfserver_short_notm}}.
 
 ## Re-creating the {{site.data.keyword.mobilefirst}} server
 {: #recreate_mobilefoundation_p1}

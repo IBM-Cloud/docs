@@ -13,8 +13,11 @@
    viewBox="0 0 1613 831"
    version="1.1"
    id="svg2"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="bluemixsoftlayerbill.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="bluemixsoftlayerbill.svg"
+   inkscape:export-filename="G:\PUB\ABD042\ART\WORK\ship7\admin\images\bluemixsoftlayerbill.png"
+   inkscape:export-xdpi="71.479454"
+   inkscape:export-ydpi="71.479454">
   <metadata
      id="metadata139">
     <rdf:RDF>
@@ -36,11 +39,11 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1012"
+     inkscape:window-height="1021"
      id="namedview137"
      showgrid="false"
-     inkscape:zoom="0.99277978"
-     inkscape:cx="806.5"
+     inkscape:zoom="0.80099194"
+     inkscape:cx="536.83436"
      inkscape:cy="415.5"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -79,25 +82,34 @@
          points="182 297 434.6837 298 446.5038 338" />
       <text
          id="Bluemix-bill"
-         font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM"
          font-size="32"
          font-weight="bold"
-         fill="#3C3232">
+         sodipodi:linespacing="125%"
+         style="font-weight:bold;font-size:32px;line-height:125%;font-family:HelvNeueBoldforIBM, 'HelvNeue Bold for IBM';fill:#3c3232">
         <tspan
            x="49.424"
            y="351"
-           id="tspan16">Bluemix 청구</tspan>
+           id="tspan16">
+          <tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+             id="tspan4234">Bluemix 청구</tspan>
+        </tspan>
       </text>
       <text
          id="SoftLayer-bill"
          font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM"
          font-size="32"
          font-weight="bold"
-         fill="#3C3232">
+         fill="#3C3232"
+         sodipodi:linespacing="125%">
         <tspan
            x="35.952"
            y="641"
-           id="tspan19">SoftLayer 청구</tspan>
+           id="tspan19">
+          <tspan
+             style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:32.00000048px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+             id="tspan4236">SoftLayer 청구</tspan>
+        </tspan>
       </text>
       <g
          id="g21"
@@ -121,11 +133,16 @@
          font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM"
          font-size="32"
          font-weight="bold"
-         fill="#3C3232">
+         fill="#3C3232"
+         sodipodi:linespacing="125%">
         <tspan
            x="883.952"
            y="638"
-           id="tspan29">SoftLayer 청구</tspan>
+           id="tspan29">
+          <tspan
+             style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:32.00000048px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+             id="tspan4248">SoftLayer 청구</tspan>
+        </tspan>
       </text>
       <g
          id="g31"
@@ -166,11 +183,16 @@
          font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM"
          font-size="32"
          font-weight="bold"
-         fill="#3C3232">
+         fill="#3C3232"
+         sodipodi:linespacing="125%">
         <tspan
            x="644.924"
            y="205"
-           id="tspan53">Bluemix 청구</tspan>
+           id="tspan53">
+          <tspan
+             style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:32.00000048px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+             id="tspan4242">Bluemix 청구</tspan>
+        </tspan>
       </text>
       <g
          id="g55"
@@ -212,30 +234,29 @@
          font-size="32"
          font-weight="bold"
          style="font-size:32px;font-weight:bold;fill:#3c3232;font-family:'HelvNeueBoldforIBM, HelvNeue Bold for IBM'"
-         x="50">
+         x="50"
+         sodipodi:linespacing="125%">
         <tspan
            x="369.95599"
            y="485"
-           id="tspan74">Bluemix 및</tspan>
-        <tspan
-           x="350.91599"
-           y="524"
-           id="tspan76" />
+           id="tspan74">
+          <tspan
+             style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:32.00000048px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+             id="tspan4238">Bluemix 및</tspan>
+        </tspan>
       </text>
       <text
          id="Bluemix-and--SoftLay"
          font-size="32"
          font-weight="bold"
          style="font-size:32px;font-weight:bold;fill:#3c3232;font-family:'HelvNeueBoldforIBM, HelvNeue Bold for IBM'"
-         x="16">
+         x="16"
+         sodipodi:linespacing="125%">
         <tspan
            x="1273.864"
            y="391"
-           id="tspan88">Bluemix 및</tspan>
-        <tspan
-           x="1266.952"
-           y="430"
-           id="tspan90" />
+           id="tspan88"
+           style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:32.00000048px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">Bluemix 및</tspan>
       </text>
       <g
          id="g92"
@@ -313,7 +334,7 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:110.00000238%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Gulim;-inkscape-font-specification:Gulim"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:110.00000238%;font-family:Gulim;-inkscape-font-specification:Gulim;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="739.22144"
      y="250.75273"
      id="text3116"
@@ -322,39 +343,44 @@
        id="tspan3118"
        x="739.22144"
        y="250.75273"
-       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:110.00000238%;writing-mode:lr-tb;text-anchor:middle;font-family:Gulim;-inkscape-font-specification:Gulim">계정이 링크되면,</tspan><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:110.00000238%;font-family:Gulim;-inkscape-font-specification:Gulim;text-align:center;writing-mode:lr-tb;text-anchor:middle">계정이 연결되면,</tspan><tspan
        sodipodi:role="line"
        x="739.22144"
        y="283.75275"
-       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:110.00000238%;writing-mode:lr-tb;text-anchor:middle;font-family:Gulim;-inkscape-font-specification:Gulim"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:110.00000238%;font-family:Gulim;-inkscape-font-specification:Gulim;text-align:center;writing-mode:lr-tb;text-anchor:middle"
        id="tspan3120">당월 청구 주기의</tspan><tspan
        sodipodi:role="line"
        x="739.22144"
-       y="316.75275"
-       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:110.00000238%;writing-mode:lr-tb;text-anchor:middle;font-family:Gulim;-inkscape-font-specification:Gulim"
+       y="318.71112"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:110.00000238%;font-family:Gulim;-inkscape-font-specification:Gulim;text-align:center;writing-mode:lr-tb;text-anchor:middle"
        id="tspan3122"><tspan
-   style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:110.00000238%;writing-mode:lr-tb;text-anchor:middle;font-family:Helvetica;-inkscape-font-specification:Helvetica"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:110.00000238%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;writing-mode:lr-tb;text-anchor:middle"
    id="tspan3126">Bluemix</tspan> 사용에 대해</tspan><tspan
        sodipodi:role="line"
        x="739.22144"
-       y="352.34555"
-       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:110.00000238%;writing-mode:lr-tb;text-anchor:middle;font-family:Gulim;-inkscape-font-specification:Gulim"
+       y="353.90594"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:110.00000238%;font-family:Gulim;-inkscape-font-specification:Gulim;text-align:center;writing-mode:lr-tb;text-anchor:middle"
        id="tspan3124">별도의 청구를 받습니다.</tspan></text>
   <text
      y="-116.3623"
      x="267.702"
-     style="font-size:32px;font-weight:bold;fill:#3c3232;font-family:'HelvNeueBoldforIBM, HelvNeue Bold for IBM'"
+     style="font-weight:bold;font-size:32px;fill:#3c3232"
      id="SoftLayer-bill-1"
      font-size="32"
-     font-weight="bold">
+     font-weight="bold"
+     sodipodi:linespacing="125%">
     <tspan
        x="303.65399"
        y="524.6377"
-       id="tspan19-7">SoftLayer 계정 링크</tspan>
+       id="tspan19-7">
+      <tspan
+         style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:32.00000048px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+         id="tspan4240">SoftLayer 계정 연결</tspan>
+    </tspan>
   </text>
   <text
      xml:space="preserve"
-     style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:110.00000238%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Gulim;-inkscape-font-specification:Gulim"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:110.00000238%;font-family:Gulim;-inkscape-font-specification:Gulim;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="993.42542"
      y="682.93091"
      id="text3179"
@@ -362,20 +388,20 @@
        sodipodi:role="line"
        id="tspan3181"
        x="993.42542"
-       y="682.93091">계정이 링크된 시점에 따라,</tspan><tspan
+       y="682.93091">계정이 연결된 시점에 따라,</tspan><tspan
        sodipodi:role="line"
        x="993.42542"
        y="715.93091"
        id="tspan3183">현재 청구 주기의</tspan><tspan
        sodipodi:role="line"
        x="993.42542"
-       y="748.93091"
+       y="750.24469"
        id="tspan3185"><tspan
-   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
    id="tspan3189">SoftLayer</tspan> 사용에 대해 별도의</tspan><tspan
        sodipodi:role="line"
        x="993.42542"
-       y="781.93091"
+       y="785.25739"
        id="tspan3187">청구를 받을 수 있습니다.</tspan></text>
   <text
      xml:space="preserve"
@@ -412,10 +438,15 @@
      style="font-size:32px;font-weight:bold;fill:#3c3232;font-family:'HelvNeueBoldforIBM, HelvNeue Bold for IBM'"
      id="Bluemix-and--SoftLay-4"
      font-size="32"
-     font-weight="bold">
+     font-weight="bold"
+     sodipodi:linespacing="125%">
     <tspan
        x="1247.5121"
        y="424.27225"
-       id="tspan90-9">SoftLayer 청구</tspan>
+       id="tspan90-9">
+      <tspan
+         style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:32.00000048px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+         id="tspan4246">SoftLayer 청구</tspan>
+    </tspan>
   </text>
 </svg>

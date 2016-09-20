@@ -57,7 +57,7 @@ To start the process of authorization:
    state= <state>
 	```
 
-  The `state` parameter is not in use for now, and it can be left empty.
+  The `state` parameter is not in use for now and can remain empty.
 
   The `redirect_uri` parameter uri is the redirect after successful or failed authentication with Google.
   The response you get after redirect  contains the authorization code in the request query parameters.

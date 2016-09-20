@@ -62,7 +62,7 @@ iFrame 流程適用於您維持公司品牌之時。當有人按一下您的內�
 <dd class="pd">domNode 的 ID，您要在該處將 iFrame 插入內容中。</dd>
 
 <dt class="pt dlterm">callback</dt>
-<dd class="pd">iFrame 流程已完成或發生錯誤時，即會呼叫這個引數。引數會回應結果。下列程式碼 Snippet 顯示成功的結果回呼：</dd>
+<dd class="pd">iFrame 流程已完成或發生錯誤時，即會呼叫這個引數。引數會回應並傳回結果。下列程式碼 Snippet 顯示成功的結果回呼：</dd>
 
 <dt class="pt dlterm">args</dt>
 <dd class="pd">此物件包含小組件的輸入參數。以下是可用參數：

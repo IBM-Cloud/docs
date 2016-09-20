@@ -13,7 +13,7 @@ copyright:
 # Getting started with {{site.data.keyword.weather_short}}
 {: #insights_weather_overview}
 
-*Last updated: 01 July 2016*
+Last updated: 28 July 2016
 {: .last-updated}
 
 Use {{site.data.keyword.weatherfull}} to incorporate weather data from
@@ -22,10 +22,10 @@ The Weather Company (TWC) into your {{site.data.keyword.Bluemix}} applications.
 
 **Attention:** Currently, the {{site.data.keyword.weather_short}} service **may not** be purchased
 or used in the following countries or regions: Afghanistan, Armenia, Azerbaijan,
-Bahrain, Bangladesh, Bhutan, Brunei, Cambodia, China, Cyprus, Georgia, India,
+Bahrain, Bangladesh, Bhutan, Brunei, Cambodia, China, Cyprus, Georgia,
 Indonesia, Iran, Iraq, Japan, Jordan, Kazakhstan, Kuwait, Kyrgyzstan, Laos,
 Lebanon, Malaysia, Maldives, Mongolia, Myanmar, Nepal, Oman, Pakistan, Philippines,
-Qatar, Russia, Saudi Arabia, Singapore, South Korea, Sri Lanka, Syria, Taiwan,
+Qatar, Russia, Saudi Arabia, Singapore, South Korea, Sri Lanka, Syria,
 Tajikistan, Timor-Leste, Turkey, Turkmenistan, United Arab Emirates,
 Uzbekistan, Vietnam, Yemen. This list is updated when additional information is available.
 
@@ -33,7 +33,7 @@ If you have an existing application that uses the
 [Insights for Weather service](https://console.{DomainName}/docs/services/InsightsWeather/index.html){: new_window},
 your app will continue to work without any modifications for 90 days after the introduction of
 {{site.data.keyword.weather_short}}. To take advantage of the newly added APIs
-and the improved pricing model, you should migrate your application to the new service.
+and the improved pricing model, you can migrate your application to the new service.
 
 Before you begin, create a {{site.data.keyword.Bluemix_notm}} web app in the dashboard
 with a runtime such as Liberty for Java. Wait for your app to provision,
@@ -75,7 +75,7 @@ Your `VCAP_SERVICES` looks similar to the following example:
 
 **Note:** Each region is independent. You cannot use service credentials
 that are provisioned to you in one region to authenticate to a service in another region.
-Failure to enter proper credentials results in an "Unauthorized" message in the response body.
+Failure to enter proper credentials results in an *Unauthorized* message in the response body.
 
 # rellinks
 {: #rellinks}

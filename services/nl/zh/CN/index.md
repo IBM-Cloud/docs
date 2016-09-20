@@ -12,7 +12,7 @@ copyright:
 
 #服务
 {: #services}
-*上次更新时间：2016 年 5 月 10 日*
+*上次更新时间：2016 年 8 月 10 日*
 
 通过 {{site.data.keyword.Bluemix_notm}}，您可以轻松地实施、托管和扩展服务和应用程序。您可以关注应用程序逻辑和应用程序设计。
 {:shortdesc}
@@ -59,6 +59,7 @@ copyright:
 |{{site.data.keyword.APIM}}			|是		|是		|是|
 |{{site.data.keyword.autoscaling}}		|是		|是		|是|
 |{{site.data.keyword.bigicloudst}}		|是		|否		|否|
+|{{site.data.keyword.blockstorageshort}}  |否  |是  |否|
 |{{site.data.keyword.rules_short}}		|是		|是		|是|
 |{{site.data.keyword.cloudint}}			|是		|是		|否|
 |{{site.data.keyword.cloudant}}			|是		|是		|是|
@@ -91,7 +92,7 @@ copyright:
 |{{site.data.keyword.mqa}}			|是		|是		|是|
 |{{site.data.keyword.mql}}			|是		|是		|是|
 |{{site.data.keyword.nlclassifierlshort}} 	|是 		|是 		|是|
-|{{site.data.keyword.objectstorageshort}}	|是		|否		|否|
+|{{site.data.keyword.objectstorageshort}}	|是		|是		|否|
 |{{site.data.keyword.personalityinsightsshort}}	|是		|是		|是|
 |{{site.data.keyword.mobilepush}}		|是		|是		|是|
 |{{site.data.keyword.mobilepushshort}}				|是		|是		|是|

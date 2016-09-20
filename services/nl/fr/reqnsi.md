@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Dernière mise à jour : 20 janvier 2016*
+*Dernière mise à jour : 10 août 2016*
 
 Vous trouverez les services disponibles dans le **catalogue** sous **Services**, dans l'interface utilisateur
 {{site.data.keyword.Bluemix}}.
@@ -100,6 +100,7 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.APIM}}			|Oui		|Oui		|Non|
 |{{site.data.keyword.autoscaling}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.bigicloudst}}		|Oui		|Non		|Non|
+|{{site.data.keyword.blockstorageshort}}        |Non             |Oui            |Non |
 |{{site.data.keyword.rules_short}}		|Oui		|Oui		|Non|
 |{{site.data.keyword.cloudint}}			|Oui		|Oui		|Non|
 |{{site.data.keyword.cloudant}}			|Oui		|Oui		|Non|
@@ -279,7 +280,7 @@ service s'ouvre.
     3. Dans la fenêtre Ajout de service, conservez la sélection **Laisser non lié** pour la liste **Appli**. Cette sélection signifie que le service n'est pas connecté à une application {{site.data.keyword.Bluemix_notm}}.
     4. Faites toutes les sélections requises. Cliquez ensuite sur **Créer**. Une instance de service est créée et le tableau de
 bord du service s'affiche.
-2. Dans le panneau de navigation de gauche du tableau de bord du service, vous pouvez sélectionner **Données d'identification pour le service** pour
+2. Dans le panneau de navigation du tableau de bord du service, vous pouvez sélectionner **Données d'identification pour le service** pour
 afficher ou ajouter des données d'identification au format JSON. Utilisez la clé d'API affichée comme données d'identification pour vous connecter à l'instance de service.
 
 Votre application qui s'exécute en dehors de {{site.data.keyword.Bluemix_notm}} peut désormais accéder au
@@ -369,7 +370,7 @@ pour des détails.
 	Supposez que vous vous trouviez dans la région dans laquelle vous voulez utiliser l'instance de service. Pour utiliser une instance de service qui
 existe dans une autre région, procédez comme suit :
 
-      1. Passez dans la région dans laquelle l'instance de service existe. Dans la barre de menu {{site.data.keyword.Bluemix_notm}} supérieure, développez
+      1. Passez dans la région dans laquelle l'instance de service existe. Dans la barre de menu {{site.data.keyword.Bluemix_notm}}, développez
 **Région** ou cliquez sur l'icône **Région**, puis sélectionnez la région dans laquelle l'instance de service existe.
 
       2. Récupérez les données d'identification et les paramètres de connexion depuis la variable d'environnement VCAP_SERVICES de l'instance de service
@@ -377,11 +378,10 @@ dans la région dans laquelle le service existe. Procédez comme suit :
 
 	       1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette de votre application. La page Présentation
 s'affiche.
-	       2. Dans le panneau de navigation de gauche, cliquez sur **Variables d'environnement**. Les détails de la variable d'environnement *VCAP_SERVICES* sont affichés dans le panneau de droite. Enregistrez le contenu JSON pour
+	       2. Dans le panneau de navigation, cliquez sur **Variables d'environnement**. Les détails de la variable d'environnement *VCAP_SERVICES* sont affichés dans le panneau de droite. Enregistrez le contenu JSON pour
 l'instance de service.
 
-      3. Passez dans la région dans laquelle vous voulez utiliser l'instance de service. Dans la barre de menu {{site.data.keyword.Bluemix_notm}}
-supérieure, développez **Région** ou cliquez sur l'icône **Région**, puis sélectionnez la région dans laquelle
+      3. Passez dans la région dans laquelle vous voulez utiliser l'instance de service. Dans la barre de menu {{site.data.keyword.Bluemix_notm}}, développez **Région** ou cliquez sur l'icône **Région**, puis sélectionnez la région dans laquelle
 utiliser l'instance de service.
 
       4. Créez une instance de service fournie par l'utilisateur en utilisant les données d'identification et les paramètres de connexion que vous avez
@@ -408,10 +408,11 @@ Pour utiliser une instance de service depuis un autre service, procédez comme s
 
 1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette du service auquel accéder. Le tableau de bord du
 service s'ouvre.
-2. Dans le panneau de navigation de gauche, cliquez sur *Gérer* pour autoriser la liaison depuis d'autres instances de service à
+2. Dans le panneau de navigation, cliquez sur **Gérer** pour autoriser la liaison depuis d'autres instances de service à
 l'aide de la console de l'instance de service.
-3. Si vous voulez refuser à d'autres services l'accès à l'instance de service, cliquez sur *Autorisation d'accès au service* dans le
-panneau de navigation de gauche, puis utilisez *Révoquer* pour supprimer la liaison de service. 
+
+3. Si vous voulez refuser à d'autres services l'accès à l'instance de service, cliquez sur **Autorisation d'accès au service** dans le
+panneau de navigation, puis utilisez **Révoquer** pour supprimer la liaison de service. 
 
 # rellinks
 {: #rellinks}

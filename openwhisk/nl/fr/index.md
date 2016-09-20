@@ -17,11 +17,11 @@ copyright:
 {:pre: .pre}
 
 # Initiation à {{site.data.keyword.openwhisk_short}}
-*Dernière mise à jour : 28 juin 2016*
+Dernière mise à jour : 4 août 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} est un service de calcul géré par des événements. {{site.data.keyword.openwhisk_short}} exécute une
-logique d'application en réponse à des événements ou à des appels directs provenant d'applications Web ou mobiles sur HTTP. Les événements peuvent être fournis par des services Bluemix tels que Cloudant et par des sources externes. Les développeurs peuvent se consacrer à
+logique d'application en réponse à des événements ou à des appels directs provenant d'applications Web ou mobiles via HTTP. Les événements peuvent être fournis par des services Bluemix tels que Cloudant et par des sources externes. Les développeurs peuvent se consacrer à
 l'écriture de la logique d'application et à la création d'actions qui sont exécutées à la demande. La fréquence d'exécution des actions correspond toujours
 à la fréquence des événements, ce qui assure une mise à l'échelle et une résilience inhérentes ainsi qu'une utilisation optimale. Vous ne payez que pour ce que vous utilisez et il n'est pas nécessaire de gérer un serveur. Vous pouvez aussi obtenir le
 [code source](https://github.com/openwhisk/openwhisk) et exécuter le système vous-même.
@@ -29,16 +29,18 @@ l'écriture de la logique d'application et à la création d'actions qui sont ex
 
 Pour plus de détails sur le fonctionnement d'{{site.data.keyword.openwhisk_short}}, voir [A propos d'{{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
-## Configuration de l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}} 
+## Configuration de l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_configure_cli}
 
 Vous pouvez utiliser l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}} pour configurer votre espace de nom et votre
 clé d'autorisation. 
-Accédez à la page de [configuration de l'interface de ligne de commande](https://new-console.{DomainName}/openwhisk/cli){: new_window} et suivez les instructions d'installation.
-Python 2.7 doit être installé sur votre système pour que vous puissiez utiliser l'interface de ligne de commande.
+Accédez à la page de [configuration de l'interface de ligne de commande](https://new-console.{DomainName}/openwhisk/cli){: new_window} et suivez les instructions d'installation. 
+
+**Avis sur l'obsolescence** Il existe une nouvelle interface de ligne de commande qui ne requiert pas l'installation de Python.
+L'interface de ligne de commande précédente (basée sur Python) est actuellement obsolète et uniquement disponible comme option de téléchargement alternative. Si vous choisissez d'utiliser l'interface de ligne de commande obsolète, Python 2.7 doit être installé sur votre système.  
 
 Une fois {{site.data.keyword.openwhisk_short}} configuré avec l'interface de ligne de commande, vous pouvez commencer à l'utiliser à partir
-de la ligne de commande ou via des API REST.
+de la ligne de commande. 
 
 ## Utilisation de l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_cli}
@@ -134,6 +136,7 @@ source d'événements pour appeler l'action `hello` à chaque fois qu'un événe
 
 
 ## Détails du système
+{: #openwhisk_system_details}
 
 Vous trouverez des informations supplémentaires sur {{site.data.keyword.openwhisk_short}} dans les rubriques suivantes :
 
@@ -142,10 +145,15 @@ Vous trouverez des informations supplémentaires sur {{site.data.keyword.openwhi
 * [Limites](./openwhisk_reference.html#openwhisk_syslimits)
 * [API REST](https://new-console.{DomainName}/apidocs/98)
 
-# rellinks
-## api
-* [Documentation de l'API REST](./openwhisk_reference.html#openwhisk_ref_restapi)
+# Liens connexes
+{: #rellinks}
 
-## general
+## Référence d'API
+{: #api}
+* [Documentation de l'API REST](./openwhisk_reference.html#openwhisk_ref_restapi)
+* [API REST](https://new-console.{DomainName}/apidocs/98){:new_window}
+
+## Liens connexes
+{: #general}
 * [Découvrez {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
 * [{{site.data.keyword.openwhisk_short}} sur IBM developerWorks](https://developer.ibm.com/openwhisk/){:new_window}

@@ -1,57 +1,124 @@
-# Creación de apps para móvil
+---
+
+copyright:
+  years: 2016
+
+---
+{:new_window: target="_blank"}
+
+# Creación de proyectos móviles desde el panel de control de Mobile
 {: #mobile}
-*Última actualización: 28 de enero de 2016*
+Última actualización: 21 de julio de 2016
 {: .last-updated} 
 
-Con {{site.data.keyword.Bluemix}} Mobile Services, puede incorporar servicios de nube integrados, gestionados y escalables a las aplicaciones móviles sin intervención de TI. Céntrese en crear sus apps para móvil en lugar de en solucionar la complejidad de gestionar la infraestructura de fondo.
+Con los servicios de {{site.data.keyword.Bluemix}} Mobile, puede incorporar servicios de nube integrados, gestionados y escalables a las aplicaciones móviles sin intervención de TI. Céntrese en crear sus apps para móvil en lugar de en solucionar la complejidad de gestionar la infraestructura de fondo.
 
-<table><caption>Tabla 1. Contenedor modelo de MobileFirst&trade; Services Starter</caption>
+El panel de control de Mobile proporciona una experiencia integrada en {{site.data.keyword.Bluemix_notm}}. Puede crear nuevos proyectos móviles de forma sencilla desde dentro del panel de control. Con la vista **Proyectos**, puede gestionar todos los proyectos en un lugar. La vista **Servicios** muestra las instancias del servicio móvil existentes.
+
+Para ver el panel de control Mobile, pulse la categoría **Mobile** desde el inicio de {{site.data.keyword.Bluemix_notm}}.
+<img src="images/mobile_dashboard.jpg" alt="Inicio de {{site.data.keyword.Bluemix_notm}}">
+
+Para comenzar, pulse **Proyecto nuevo** desde la vista **Proyectos** del panel de control de Mobile.
+
+## Visión general de los servicios de {{site.data.keyword.Bluemix_notm}} Mobile
+{: #mobile_services_overview}
+
+En la tabla siguiente se describen los servicios de {{site.data.keyword.Bluemix_notm}} Mobile disponibles. Puede utilizar los servicios individuales desde el catálogo de {{site.data.keyword.Bluemix_notm}}, o puede integrarlos en el proyecto móvil.
+
+<table summary="Esta tabla describe los servicios de {{site.data.keyword.Bluemix_notm}} Mobile y proporciona enlaces a la documentación del servicio">
+<caption>Tabla 1. Servicios de {{site.data.keyword.Bluemix_notm}} Mobile</caption>
+<th>Servicio de {{site.data.keyword.Bluemix_notm}} Mobile</th>
+<th>Descripción</th>
 <tr>
-	<td>Cada uno de los servicios móviles se puede utilizar de forma independiente. También puede utilizarlos juntos para obtener el mayor beneficio. Para comenzar, utilice {{site.data.keyword.mobilefirstbp}} Starter para crear su app. Este contenedor modelo:
-		<ul>
-			<li>Crea un tiempo de ejecución Node.js con una aplicación de plantilla. Puede utilizar esta aplicación para proporcionar funciones de lado de servidor, como por ejemplo las API RESTful y los archivos estáticos. <!-- You can read more about operating this application in the Developing Mobile Backend section.--> </li>
-			<li>
-Proporciona una instancia de cada uno de los {{site.data.keyword.Bluemix_notm}} Mobile Services y enlaza el servicio con la aplicación Node.js. </li>
-		</ul>
-	</td>
-	<td> <img src="images/mf_boiler_icon.png" alt="Bluemix Mobile Services" width="500"> Contenedor modelo de {{site.data.keyword.mobilefirstbp}} Starter </td>
-</tr>
-</table>
-
-Después de utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} Starter para crear su app, puede obtener ejemplos de HelloWorld para cada uno de los servicios o iniciar la instrumentación de la app existente para utilizar los servicios de {{site.data.keyword.Bluemix_notm}}.
-
-
-## Visión general de los servicios
-{: #services-overview}
-Puede utilizar todos los {{site.data.keyword.Bluemix_notm}} Mobile Services juntos utilizando el contenedor modelo de {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobilefirstbp}} Starter o bien puede utilizar servicios individuales del catálogo de {{site.data.keyword.Bluemix_notm}}. El diagrama siguiente resalta todos los componentes de {{site.data.keyword.Bluemix_notm}} Mobile Services.
-
-Arquitectura de ![{{site.data.keyword.Bluemix_notm}} Mobile Services](images/bms_architecture.jpg)
-
-<table>
-<caption>Tabla 2. {{site.data.keyword.Bluemix_notm}} y sistemas empresariales</caption>
-<th>{{site.data.keyword.Bluemix_notm}}</th>
-<th>Sistemas empresariales</th>
-<tr>
-<td> <img src="images/i_js_64.png" alt="Icono de tiempo de ejecución de Node.js"><b>Node.js</b> <br/> Se proporciona un tiempo de ejecución de Node.js que aloja una aplicación plantilla como parte del contenedor modelo de {{site.data.keyword.mobilefirstbp}} Starter. Puede utilizar la aplicación de plantilla para proporcionar funciones de lado de servidor, como por ejemplo las API RESTful y los archivos estáticos. <br/>Por ejemplo, puede extender la aplicación Node.js para el proceso lógico personalizado o conectar con las API REST en la infraestructura existente de la empresa. Cada app que cree en {{site.data.keyword.Bluemix_notm}} tiene un ID de aplicación exclusivo. La app para móvil utiliza este ID con SDK para acceder a los servicios asociados con dicha aplicación. La plataforma utiliza el ID de la app como contexto para funciones comunes, como por ejemplo la calibración y el registro.
-Puede obtener más información sobre el funcionamiento de esta aplicación en la sección "Desarrollo del programa de fondo móvil".</td>
-<td valign="top"><b>Proveedores de información</b> <br/>Puede utilizar un tiempo de ejecución de Node.js que esté alojado en {{site.data.keyword.Bluemix_notm}} para conectar con cualquier tipo de proveedor de información:
-<ul>
-	<li>Programa de fondo de empresa</li>
-	<li>Base de datos </li>
-	<li>Otro servicio de terceros alojado</li>
-</ul>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icono"><br/>{{site.data.keyword.mobileanalytics_short}} (Experimental)</td>
+<td valign="top">Utilice el servicio de {{site.data.keyword.mobileanalytics_full}} para medir el estado, el comportamiento y el contexto de las aplicaciones móviles, de los usuarios móviles y de los dispositivos móviles.<br/><br/>
+Consulte más información sobre el funcionamiento de este servicio en la documentación de <a href="../services/mobileanalytics/index.html" alt="Enlace de documentación de {{site.data.keyword.mobileanalytics_short}}">{{site.data.keyword.mobileanalytics_short}}</a>.
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="icono de servicio {{site.data.keyword.amashort}}"> <b>{{site.data.keyword.amashort}}</b><br/>Utilice el servicio {{site.data.keyword.amafull}} para proteger las aplicaciones Node.js y Java for Liberty alojadas en {{site.data.keyword.Bluemix_notm}}. Al instrumentar la app para móvil con el SDK de {{site.data.keyword.amashort}}, puede necesitar que los usuarios inicien sesión para acceder a Node.js o {{site.data.keyword.Bluemix_notm}} Mobile Services. Además de las prestaciones de seguridad, {{site.data.keyword.amashort}} también recopila datos analíticos, por lo que puede supervisar el rendimiento de la aplicación móvil y recopilar los registros del cliente y las estadísticas de uso. </td>
-<td valign="top"><b>Proveedores de identidad de usuarios</b> <br/>Puede utilizar los siguientes proveedores de identidad: <ul><li>Facebook</li><li>Google</li></ul></td>
+<td><img src="images/catalog_icons-05.png" alt="icono del servicio {{site.data.keyword.amashort}}"><br/>{{site.data.keyword.amashort}}</td>
+<td valign="top">Utilice el servicio de {{site.data.keyword.amafull}} para añadir funcionalidad de seguridad a la aplicación móvil. Puede configurar la autenticación del cliente y los proveedores de identidad para que los usuarios puedan iniciar sesión en la app con sus cuentas existentes de Google o Facebook.<br/><br/>
+Obtenga más información sobre el funcionamiento de este servicio en la documentación de <a href="../services/mobileaccess/index.html" alt="Enlace de documentación de {{site.data.keyword.amashort}}">{{site.data.keyword.amashort}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="icono del servicio Push Notifications"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>El servicio {{site.data.keyword.mobilepushfull}} ofrece una plataforma unificada para enviar y gestionar notificaciones push móviles destinadas a plataformas iOS y Android. Este servicio gestiona la correlación de los usuarios de aplicaciones en sus dispositivos, plataforma de dispositivos, y maneja la asignación de notificaciones push en los dispositivos. Con este servicio, puede enviar difusiones, unicasts (en función del userID, deviceID), y etiquetas (o temas) basadas en notificaciones push a sus usuarios de aplicación móvil.</td>
-<td valign="top"><b>Proveedores de servicio Push</b><ul><li>Apple Push Notifications Service</li><li>Google Cloud Messaging</li></ul></td>
+<td><img src="images/MFPFoundation_icon.png" alt="icono del servicio {{site.data.keyword.mobilefoundation_short}}"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
+<td valign="top">Utilice el servicio de {{site.data.keyword.mobilefoundation_long}} para configurar de forma rápida un entorno de {{site.data.keyword.mfp_full}} desde el que puede desarrollar, probar y hacer funcionar las aplicaciones móviles empresariales.<br/><br/>
+Consulte más información sobre el funcionamiento de este servicio en la documentación de <a href="../services/mobilefoundation/index.html" alt="Enlace de documentación de {{site.data.keyword.mobilefoundation_short}}">{{site.data.keyword.mobilefoundation_short}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/cloudant64.png" alt="Icono de servicio de Cloudant"><b>Cloudant NoSQLDB</b><br/> Cloudant es una base de datos de NoSQL como servicio (DBaaS). Está creada desde la base para escalar globalmente, ejecutarse sin parar y manejar una gran variedad de tipos de datos como JSON, texto completo y geoespacial. </td>
-<td>Cloudant.com</td>
+<td><img src="images/mqa_icon.png" alt="icono de servicio {{site.data.keyword.mqa}}"><br/>{{site.data.keyword.mqa}}</td>
+<td valign="top">Utilice el servicio de {{site.data.keyword.mqafull}} para descubrir y configurar servicios móviles de calidad para las apps. Puede ver medidas de calidad de alto nivel para sus apps para móvil a fin de obtener una visión general de los problemas de las apps con las que trabaja. Estas medidas incluyen información sobre bloqueos, errores, comentarios de usuarios y opinión general de los usuarios. Al visualizar esta información para las apps, puede determinar si desea investigar en mayor profundidad problemas específicos.<br/><br/>
+Consulte más información sobre el funcionamiento de este servicio en la documentación de <a href="../services/MobileQualityAssurance/index.html" alt="Enlace de documentación de {{site.data.keyword.mqa}}">{{site.data.keyword.mqa}}</a>.</td>
 </tr>
+<tr>
+<td><img src="images/catalog_icons-09.png" alt="Icono de servicio de Notificaciones push"><br/>{{site.data.keyword.mobilepushshort}}</td>
+<td valign="top">Utilice el servicio de {{site.data.keyword.mobilepushfull}} para enviar y gestione notificaciones push móviles que estén pensadas para las plataformas iOS y Android. Este servicio gestiona la correlación de los usuarios de aplicaciones en sus dispositivos, plataforma de dispositivos, y maneja la asignación de notificaciones push en los dispositivos. Con este servicio, puede enviar difusiones, unicasts (en función del userID, deviceID), y etiquetas (o temas) basados en notificaciones push a sus usuarios de aplicación móvil.<br/><br/>
+Consulte más información sobre el funcionamiento de este servicio en la documentación de <a href="../services/mobilepush/index.html" alt="Enlace de documentación de {{site.data.keyword.mobilepushshort}}">{{site.data.keyword.mobilepushshort}}</a>.</td>
 </table>
+
+## Integración de servicios móviles
+{: #services_integration}
+Puede integrar los servicios existentes de {{site.data.keyword.Bluemix_notm}} Mobile, como por ejemplo {{site.data.keyword.mobilepushshort}} y {{site.data.keyword.cloudant}}, en el proyecto.
+
+#### Integración de {{site.data.keyword.mobilepushshort}}
+{: #push_integration}
+
+Para integrar el servicio existente de {{site.data.keyword.mobilepushshort}}, siga estos pasos:
+
+1. Pulse la instancia de servicio de {{site.data.keyword.mobilepushshort}}.
+2. Pulse **Opciones móviles** y copie los valores **Ruta** y **AppGuid**.
+
+   **Nota**: El servicio de {{site.data.keyword.mobilepushshort}} debe estar enlazado a una app para ver **Opciones móviles**.
+
+3. Vuelva a la vista **Proyectos** del panel de control de Mobile.
+4. Pulse en el proyecto para editarlo.
+5. Pulse **Enviar por push** y habilite las notificaciones.
+6. Proporcione el valor **AppGuid** que ha copiado anteriormente en el **ID de app**.
+7. Proporcione el valor **Ruta** que ha copiado anteriormente en el **URL de ruta de app**.
+
+#### Integración de {{site.data.keyword.cloudant}}
+{: #cloudant_integration}
+
+Para integrar el servicio existente de {{site.data.keyword.cloudant}}, siga estos pasos:
+
+1. Pulse la instancia de servicio de {{site.data.keyword.cloudant}}.
+2. Pulse **INICIAR**.
+3. En la vista **Bases de datos**, pulse el nombre de la Base de datos.
+4. Pulse **API** y copie el valor **Clave de API** en el nombre de la base de datos.
+
+   **Nota**: No copie el contenido en el nombre de la base de datos.
+   
+5. Pulse **Permisos** > **Generar clave de API** y copie los valores **Clave** y **Contraseña**.
+6. Vuelva a la vista **Proyectos** del panel de control de Mobile.
+7. Pulse en el proyecto para editarlo.
+8. Pulse **Datos** > **+ Origen de datos** > **Cloudant** y proporcione el nombre de origen de los datos y pulse **Añadir**.
+9. Pulse **Configuración de Cloudant**.
+10. Proporcione el valor **Clave de API** que ha copiado anteriormente en el **URL de API**.
+11. Proporcione el valor **Clave** que ha copiado anteriormente en **Usuario**.
+12. Proporcione el valor **Contraseña** que ha copiado anteriormente en **Contraseña**.
+13. Pulse **Aceptar**.
+
+
+# Enlaces relacionados
+{: #rellinks}
+
+<!-- links to internal services don't work
+## {{site.data.keyword.Bluemix_notm}} Mobile services
+{: #general}
+* [Mobile Analytics (Experimental)](../services/mobileanalytics/index.html){: new_window}
+* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
+* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
+* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
+* [Push Notifications](../services/mobilepush/index.html){: new_window}
+-->
+
+## Publicaciones del blog
+{: #general}
+* [Publicación del blog: Introducción del panel de control de Bluemix Mobile](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
+* [Publicación del blog: Bluemix Mobile, Parte 1: Creación de una aplicación Store Catalog](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
+* [Publicación del blog: Bluemix Mobile, Parte 2: Integración de programa de fondo de Bluemix personalizado en la app Store Catalog](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+ 
+## Guías de aprendizaje y ejemplos
+{: #samples}
+* [Backend móvil para Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+

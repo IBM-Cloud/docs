@@ -10,7 +10,7 @@ copyright:
 
 # Introduzione all'esempio Hello Bluemix per Android
 {: #gettingstarted-android}
-*Ultimo aggiornamento: 27 maggio 2016*
+Ultimo aggiornamento: 27 maggio 2016
 {: .last-updated}  
 
 Se desideri iniziare a lavorare con una nuova applicazione Android, puoi utilizzare l'applicazione HelloWorld. Questa applicazione illustra come stabilire una connessione al tuo backend {{site.data.keyword.Bluemix}} da un'applicazione mobile senza autenticazione. Nell'applicazione è già installato l'SDK. Quando sei pronto, puoi ottenere le specifiche librerie
@@ -38,18 +38,21 @@ Dalla barra degli strumenti di Android Studio, fai clic sul pulsante di riproduz
 
   **Nota:** il codice di runtime `Node.js` viene fornito nel contenitore tipo MobileFirst Services Starter. Se l'applicazione di backend non è stata creata con il contenitore tipo MobileFirst Services Starter, l'applicazione non stabilirà correttamente una connessione.
 
-  Dopo che hai stabilito correttamente una connessione a {{site.data.keyword.Bluemix_notm}} dall'applicazione mobile in Android Studio, viene visualizzato il seguente messaggio:
-
+  Dopo che hai stabilito correttamente una connessione a {{site.data.keyword.Bluemix_notm}} dall'applicazione mobile in Android Studio, viene visualizzato:
   `Yay! You are connected`
   {: screen}
 
-  ![Applicazione Hello World connessa correttamente a {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figura 1. Applicazione Hello World connessa correttamente a Bluemix")
+<!--
+  ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
+  -->
 
   Se la connessione non riesce, visualizzerai:
   `Bummer. Something went wrong`
   {: screen}
 
-  ![Applicazione Hello World non connessa a Bluemix](images/bummer_android.jpg "Figura 2. Applicazione Hello World non connessa a Bluemix")
+<!--
+  ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
+  -->
 
   Puoi risolvere il problema riguardo la connessione non riuscita nel seguente modo:
    * Verifica di aver incollato correttamente i valori di instradamento e GUID.
@@ -65,7 +68,7 @@ Per informazioni su come ottenere l'SDK e integrarlo nella tua applicazione mobi
 # rellinks
 
 ## samples
-   * [Esempio Hello Bluemix](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Hello Bluemix sample (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## sdk
    * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)

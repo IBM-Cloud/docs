@@ -12,7 +12,7 @@ copyright:
 
 # Offline mode for Liberty
 {: #offline_mode}
-*Last Updated: 20 July 2016*
+Last Updated: 20 July 2016
 {: .last-updated}
 
 When a Liberty application is pushed to {{site.data.keyword.Bluemix}} the Liberty buildpack can access sites external to Bluemix

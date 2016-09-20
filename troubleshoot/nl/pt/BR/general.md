@@ -1,14 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2015
+
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -16,7 +17,7 @@ copyright:
 # Problemas gerais de serviços
 {: #general}
 
-*Última atualização: 9 de dezembro de 2015*
+*Última atualização: 12 de agosto de 2016*
 {: .last-updated}
 
 Problemas de serviços do {{site.data.keyword.Bluemix}}
@@ -25,8 +26,7 @@ exclui uma instância de serviço. No entanto, em vários casos, é possível re
 problemas seguindo algumas etapas simples.
 {:shortdesc}
 
-## Uma mensagem de erro de tempo limite do gateway é exibida quando você exclui
-uma instância de serviço
+## Ocorre um erro de broker de serviço ao excluir uma instância de serviço
 {: #ts_service_broker}
 
 Você poderá receber uma mensagem de erro quando tentar excluir
@@ -50,5 +50,3 @@ nome de serviço e depois ligue-o aos seus aplicativos. Depois disso,
 será possível excluir a instância de serviço e os aplicativos que usam
     o serviço.   
 {: tsResolve}
-
-

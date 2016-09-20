@@ -258,12 +258,12 @@ HTTPS POST. Les méthodes d'obtention de noeuds finaux de journalisation varient
 
   2. Créez une instance de service fournie par l'utilisateur.
      
-	 Utilisez la commande ```cf create-user-provided-service``` (ou ```cups```, une version courte de la commande) pour créer une instance de service fournie par l'utilisateur :  
+	 Utilisez la commande ```cf create-user-provided-service``` (ou ```cups```, une version courte de la commande) pour créer une instance de service fournie par l'utilisateur : 
 	 ```
 	 cf create-user-provided-service <nom_service> -l <noeud_final_journalisation>
 	 ```
 	 **nom_service**
-	
+	 
 	 Nom de l'instance de service fournie par l'utilisateur.
 	 
 	 **noeud_final_journalisation**
@@ -307,7 +307,7 @@ pour Papertrail.</td>
 	 cf bind-service nom_app <nom_service>
 	 ```
 	 **nom_app**
-	
+	 
 	 Nom de votre application.
 	 
 	 **nom_service**
@@ -315,7 +315,7 @@ pour Papertrail.</td>
 	 Nom de l'instance de service fournie par l'utilisateur.
 	 
   4. Reconstituez l'application. 
-     Entrez ```cf restage nom_app``` pour que les modifications soient prises en compte.  
+     Entrez ```cf restage nom_app``` pour que les modifications soient prises en compte. 
 
 #### Affichage des journaux à partir d'hôtes externes
 {: #viewing_logs_external}
