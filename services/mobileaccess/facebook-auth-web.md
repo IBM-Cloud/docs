@@ -10,7 +10,7 @@ copyright:
 
 # Enabling Facebook authentication for web applications
 
-Last updated: 23 August 2016
+Last updated: 12 September 2016
 {: .last-updated}
 
 Use Facebook to authenticate users on your {{site.data.keyword.amafull}}  web application. Add {{site.data.keyword.amashort}} security functionality. 
@@ -73,7 +73,7 @@ To start the process of authorization:
 
 	Sydney: 
 
-    	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
 
 2. Build the authorization server URI using `response_type("code")`, `client_id`, and `redirect_uri` as query parameters. 
 3. Redirect from your web app to the generated URI.

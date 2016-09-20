@@ -11,7 +11,7 @@ copyright:
 # Enabling Facebook authentication for Android apps
 {: #facebook-auth-android}
 
-Last updated: 12 September 2016
+Last updated: 19 September 2016
 {: .last-updated}
 
 
@@ -73,8 +73,6 @@ From the Facebook for Developers site (https://developers.facebook.com):
 After you have the Facebook Application ID and you have configured your Facebook Application to serve Android clients, you can enable Facebook authentication with the {{site.data.keyword.amashort}} dashboard.
 
 1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
-
-1. Click **Mobile Options** and take note of your **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`). You need these values when you initialize the SDK.
 
 1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}} dashboard loads.
 
@@ -153,15 +151,11 @@ Your Android project might have two `build.gradle` files:  for the project and a
 	</application>
 ```
 
-1. Initialize the client SDK and register Facebook authentication manager. Initialize the {{site.data.keyword.amashort}} client SDK by passing the context, app GUID (`applicationGUID`), and route (`applicationRoute`) parameters.<br/>
+1. Initialize the client SDK and register Facebook authentication manager. Initialize the {{site.data.keyword.amashort}} client SDK by passing the **context** and **region**.<br/>
  A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.<br/>
- Replace *applicationRoute* and *applicationGUID* with values for **Route** and **App GUID** from the **Mobile Options** menu on the main page of your app in the Bluemix dashboard.
-
+ 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
 	BMSClient.getInstance().setAuthorizationManager(
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
@@ -200,12 +194,12 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 1. Use your Android application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register `FacebookAuthenticationManager`.
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp", MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -219,6 +213,9 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 		}
 	});
 ```
+
+	Replace `{applicationRoute}` with the *route* value you get when you click Mobile Options in your app on the {{site.data.keyword.Bluemix}} dashboard.
+	
 1. Run your application. A Facebook login screen displays.
 
 	![image](images/android-facebook-login.png)

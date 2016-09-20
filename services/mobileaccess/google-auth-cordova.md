@@ -11,7 +11,7 @@ copyright:
 {: #google-auth-cordova}
 
 
-Last updated: 29 August 2016
+Last updated: 31 August 2016
 {: .last-updated}
 
 To configure your {{site.data.keyword.amafull}} Cordova applications for Google authentication integration,  you must make changes in the native code of the Cordova application (Java, Objective-C, or Swift). Each platform must be configured separately. Use the native development environment to make changes in the native code, for example, in Android Studio or Xcode.
@@ -162,7 +162,6 @@ You must have a back-end application protected by {{site.data.keyword.amashort}}
 	```
 {: codeblock}
 
-
 1. Run your application. The Google login screen displays.
 
 	![Google login screen](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Google login screen](images/ios-google-login.png)
@@ -170,7 +169,7 @@ You must have a back-end application protected by {{site.data.keyword.amashort}}
 	This screen might look slightly different if you do not have the Facebook app installed on your device, or if you are not currently logged in to Facebook.
 1. By clicking **OK** you are authorizing {{site.data.keyword.amashort}} to use your Google user identity for authentication purposes.
 
-1. 	Your request should succeed. Depending on the platform that you use, you will see the following output in LogCat/Xcode console:
+1. Your request should succeed. Depending on the platform that you use, you will see the following output in LogCat/Xcode console:
 
 	![Code snippet on android](images/android-google-login-success.png)
 

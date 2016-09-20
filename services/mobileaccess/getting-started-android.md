@@ -11,7 +11,7 @@ copyright:
 # Setting up the Android SDK
 {: #getting-started-android}
 
-Last updated: 12 September 2016
+Last updated: 19 September 2016
 {: .last-updated}
 
 
@@ -58,26 +58,18 @@ The {{site.data.keyword.amashort}} client SDK is distributed with Gradle, a depe
 ## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #initalize-mca-sdk}
 
-Initialize the SDK by passing the `context`, `applicationGUID`, `applicationRoute`, and `BMSClient.REGION_UK` parameters to the `initialize` method.
-
-1. From the main page of the {{site.data.keyword.Bluemix_notm}} dashboard, click your app. Click **Mobile Options**. You need the **Application route** and **Application GUID** values to initialize the SDK.
-
-2. Initialize the {{site.data.keyword.amashort}} client SDK in your Android application.  A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
+Initialize the client SDK  by passing the **context** and **region** parameters to the `initialize` method. A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
 
 ```Java
-  BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 					
   BMSClient.getInstance().setAuthorizationManager(
                  MCAAuthorizationManager.createInstance(this, "MCAServiceTenantId"));
 
 ```
 
-  * Replace the "applicationRoute* and "applicationGUID" with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
-  * Replace the `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: `BMSClient.REGION_US_SOUTH`,  `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
-  * Replace "MCAServiceTenantId" with the **tenantId** value you can find by clicking the **Show Credentials** button on the  {{site.data.keyword.amashort}} service tile.
+   * Replace the `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: `BMSClient.REGION_US_SOUTH`,  `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
+   * Replace "MCAServiceTenantId" with the **tenantId** value you can find by clicking the **Show Credentials** button on the  {{site.data.keyword.amashort}} service tile.
 
 ## Making a request to your mobile back-end application
 {: #request}
