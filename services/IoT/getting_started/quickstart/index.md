@@ -42,17 +42,17 @@ When you connect to the simulated device URL on a mobile device, a browser-based
 - Object temperature
 
 
-![image](iotsensor.svg)
+![image](iotsensor.png)
 
 ## Data visualization
 
 To see the data that is generated from your mobile device, ensure that the simulated device runs on your mobile device, and then start the Quickstart application. Enter the 12 character device ID for the device, which is displayed in the upper right corner of the UI.
 
-![image](quickstart.svg)
+![image](quickstart.png)
 
 As you adjust the sensor values in your simulated device, you can see the data from your device visualized in real time within the Quickstart application, as outlined in the following screen capture:
 
-![image](iotsensor_data.svg)
+![image](iotsensor_data.png)
 
 
 ## Mosquitto demonstration
