@@ -11,7 +11,7 @@ copyright:
 {: #google-auth-android}
 
 
-Last updated: 12 September 2016
+Last updated: 19 September 2016
 {: .last-updated}
 
 Use Google to authenticate users on your {{site.data.keyword.amafull}} Android application. Add {{site.data.keyword.amashort}} security functionality. 
