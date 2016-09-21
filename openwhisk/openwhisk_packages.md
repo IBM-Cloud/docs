@@ -44,14 +44,17 @@ Several packages are registered with {{site.data.keyword.openwhisk_short}}. You 
   {: pre}
   ```
   packages
-  /whisk.system/alarms                                              shared
-  /whisk.system/cloudant                                            shared
-  /whisk.system/github                                              shared
-  /whisk.system/samples                                             shared
-  /whisk.system/slack                                               shared
-  /whisk.system/util                                                shared
-  /whisk.system/watson                                              shared
-  /whisk.system/weather                                             shared
+  /whisk.system/cloudant                                                 shared
+  /whisk.system/alarms                                                   shared
+  /whisk.system/watson                                                   shared
+  /whisk.system/websocket                                                shared
+  /whisk.system/weather                                                  shared
+  /whisk.system/system                                                   shared
+  /whisk.system/utils                                                    shared
+  /whisk.system/slack                                                    shared
+  /whisk.system/samples                                                  shared
+  /whisk.system/github                                                   shared
+  /whisk.system/pushnotifications                                        shared
   ```
   {: screen}
 
@@ -167,10 +170,10 @@ In the following simple example, you bind to the `/whisk.system/samples` package
   {: pre}
   ```
   package /myNamespace/valhallaSamples
-   action /myNamespace/valhallaSamples/greeting: Print a friendly greeting
+   action /myNamespace/valhallaSamples/greeting: Returns a friendly greeting
    action /myNamespace/valhallaSamples/wordCount: Count words in a string
-   action /myNamespace/valhallaSamples/helloWorld: Print to the console
-   action /myNamespace/valhallaSamples/echo: Returns the input arguments, unchanged
+   action /myNamespace/valhallaSamples/helloWorld: Demonstrates logging facilities
+   action /myNamespace/valhallaSamples/curl: Curl a host url
   ```
   {: screen}
 

@@ -98,8 +98,8 @@ Additionally, there is no guarantee that actions will execute atomically. Two ac
 
 When an invocation request is received, the system records the request and dispatches an activation.
 
-The system returns an activation ID (in the case of a nonblocking invocation) to confirm that the invocation was received. 
-Notice that if there's a network failure or other failure which intervenes before you receive an HTTP response, it is possible 
+The system returns an activation ID (in the case of a nonblocking invocation) to confirm that the invocation was received.
+Notice that if there's a network failure or other failure which intervenes before you receive an HTTP response, it is possible
 that {{site.data.keyword.openwhisk_short}} received and processed the request.
 
 The system attempts to invoke the action once, resulting in one of the following four outcomes:
@@ -235,70 +235,53 @@ It is possible for an action to be synchronous on some inputs and asynchronous o
 Notice that regardless of whether an activation is synchronous or asynchronous, the invocation of the action can be blocking or non-blocking.
 
 ### Additional SDK methods
-{: #openwhisk_ref_javascript_additsdk}
 
-The `whisk.invoke()` function invokes another action. It takes as an argument a dictionary that defines the following parameters:
+The `whisk.invoke()` function invokes another action and returns a Promise for the resulting activation. It takes as an argument a dictionary that defines the following parameters:
 
 - *name*: The fully qualified name of the action to invoke,
 - *parameters*: A JSON object that represents the input to the invoked action. If omitted, defaults to an empty object.
-- *apiKey*: The authorization key with which to invoke the action. Defaults to `whisk.getAuthKey()`. 
-- *blocking*: Whether the action should be invoked in blocking or non-blocking mode. Defaults to `false`, indicating a non-blocking invocation.
-- *next*: An optional callback function to be executed when the invocation completes. If next is not supplied, `whisk.invoke()` returns a promise.
+- *apiKey*: The authorization key with which to invoke the action. Defaults to `whisk.getAuthKey()`.
+- *blocking*: Whether the action should be invoked in blocking or non-blocking mode. When `blocking` is true, invoke will wait for the result of the invoked action before resolving the returned Promise. Defaults to `false`, indicating a non-blocking invocation.
 
-The signature for `next` is `function(error, activation)`, where:
-
-  - `error` is `false` if the invocation succeeded, and a *truthy* value (a value that translates to true when evaluated in a Boolean context) if it failed, usually a string that describes the error.
-  - On errors, `activation` might be undefined, depending on the failure mode.
-  - When defined, `activation` is a dictionary with the following fields:
+`whisk.invoke()` returns a Promise. In order to make the OpenWhisk system wait for the invoke to finish, you must return this Promise from your action's `main` function.
+- If the invocation fails, the promise will reject with an object describing the failed invocation. It will potentially have two fields:
+  - *error*: An object describing the error - usually a string.
+  - *activation*: An optional dictionary that may or may not be present depending on the nature of the invocation failure. If present, it will have the following fields:
     - *activationId*: The activation ID:
     - *result*: If the action was invoked in blocking mode: The action result as a JSON object, else `undefined`.
+- If the invocation succeeds, the promise will resolve with a dictionary describing the activation with fields *activationId* and *result* as described above.
 
-  If `next` is not provided, then `whisk.invoke()` returns a promise.
-  - If the invocation fails, the promise will reject with an object describing the failed invocation. It will potentially have two fields:
-    - *error*: An object describing the error - usually a string.
-    - *activation*: An optional dictionary that may or may not be present depending on the nature of the invocation failure. If present, it will have the following fields:
-      - *activationId*: The activation ID:
-      - *result*: If the action was invoked in blocking mode: The action result as a JSON object, else `undefined`.
-  - If the invocation succeeds, the promise will resolve with a dictionary describing the activation with fields *activationId* and *result* as described above.
+Below is an example of a blocking invocation that utilizes the returned promise:
+```javascript
+return whisk.invoke({
+  name: 'myAction',
+  blocking: true
+})
+.then(function (activation) {
+    // activation completed successfully, activation contains the result
+    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
+})
+.catch(function (reason) {
+    console.log('An error has occured ' + reason.error);
 
-  Below is an example of a blocking invocation that utilizes the returned promise:
-  ```
-  whisk.invoke({
-    name: 'myAction',
-    blocking: true
-  })
-  .then(function (activation) {
-      // activation completed successfully, activation contains the result
-      console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
-  })
-  .catch(function (reason) {
-      console.log('An error has occured ' + reason.error);
+    if(reason.activation) {
+      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
+    } else {
+      console.log('Failed to create activation.');
+    }
+});
+```
+{: codeblock}
 
-      if(reason.activation) {
-        console.log('Please check activation ' + reason.activation.activationId + ' for details.');
-      } else {
-        console.log('Failed to create activation.');
-      }
-  });
-  ```
-  {: codeblock}
-
-The `whisk.trigger()` function fires a trigger. It takes as an argument a JSON object with the following parameters:
+The `whisk.trigger()` function fires a trigger and returns a Promise for the resulting activation. It takes as an argument a JSON object with the following parameters:
 
 - *name*: The fully qualified name of trigger to invoke.
 - *parameters*: A JSON object that represents the input to the trigger. If omitted, defaults to an empty object.
 - *apiKey*: The authorization key with which to fire the trigger. Defaults to `whisk.getAuthKey()`.
-- *next*: An optional callback to be executed when the firing completes.
 
-The signature for `next` is `function(error, activation)`, where:
-
-- `error` is `false` if the firing succeeded, and a *truthy* value  if it failed, usually a string that describes the error.
-- On errors, `activation` might be undefined, depending on the failure mode.
-- When defined, `activation` is a dictionary with an `activationId` field that contains the activation ID.
-
-  If `next` is not provided, then `whisk.trigger()` returns a promise.
-  - If the trigger fails, the promise will reject with an object describing the error.
-  - If the trigger succeeds, the promise will resolve with a dictionary with an `activationId` field containing the activation ID.
+`whisk.trigger()` returns a Promise. If you require the OpenWhisk system to wait for the trigger to complete, you should return this Promise from your action's `main` function.
+- If the trigger fails, the promise will reject with an object describing the error.
+- If the trigger succeeds, the promise will resolve with a dictionary with an `activationId` field containing the activation ID.
 
 The `whisk.getAuthKey()` function returns the authorization key under which the action is running. Usually, you do not need to invoke this function directly because it is used implicitly by the `whisk.invoke()` and `whisk.trigger()` functions.
 
@@ -394,6 +377,45 @@ The following packages are available to be used in the Node.js 0.12.14 environme
 - xmlhttprequest v1.7.0
 - yauzl v2.3.1
 
+## Python actions
+
+Python actions are executed by default using Python 2.7.12.
+In addition to the standard Python library, the following packages are also available for use by Python actions.
+
+- attrs v16.1.0
+- beautifulsoup4 v4.5.1
+- cffi v1.7.0
+- click v6.6
+- cryptography v1.5
+- cssselect v0.9.2
+- enum34 v1.1.6
+- flask v0.11.1
+- gevent v1.1.2
+- greenlet v0.4.10
+- httplib2 v0.9.2
+- idna v2.1
+- ipaddress v1.0.16
+- itsdangerous v0.24
+- jinja2 v2.8
+- lxml v3.6.4
+- markupsafe v0.23
+- parsel v1.0.3
+- pyasn1 v0.1.9
+- pyasn1-modules v0.0.8
+- pycparser v2.14
+- pydispatcher v2.0.5
+- pyopenssl v16.1.0
+- python-dateutil v2.5.3
+- queuelib v1.4.2
+- requests v2.11.1
+- scrapy v1.1.2
+- service-identity v16.0.0
+- simplejson v3.8.2
+- six v1.10.0
+- twisted v16.4.0
+- w3lib v1.15.0
+- werkzeug v0.11.10
+- zope.interface v4.3.1
 
 ## Docker actions
 {: #openwhisk_ref_docker}
