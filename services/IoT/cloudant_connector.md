@@ -77,11 +77,14 @@ Complete the following steps to connect a {{site.data.keyword.cloudant}}:
 
   b. Select a time zone. The time in the selected timezone will be used to determine which bucket device data should be placed in, not the time local to the device. Timestamps on device data being sent to the {{site.data.keyword.cloudant}} will be converted into the selected timezone when deciding into which database the data will be entered.
 
-  c. Choose a database name. The database name will be `Iotp_<orgID>_<choice>_<bucket_name>` where `<orgID>` is your organization ID, `<choice>` is your choice of database name, and `<bucket_name>` is a string which defines whether the database uses a daily, weekly, or monthly bucket interval. The `<bucket_name>` uses the following format.
-
-  For daily bucket intervals, `<bucket_name>` will be `yyyy-mm-dd`.
-  For weekly buckets intervals  `<bucket_name>` will be `yyyy-www` where `www` indicates a week number, for example `2016-w03`
-  For monthly buckte intervals `<bucket_name>` will be `yyyy-mm`.
+  c. Choose options that determine the database name. The database name will be `iotp_<orgID>_<dbname>_<bucket_name>` where:
+  
+  * `<orgID>` is your organization ID.
+  * `<dbname>` is your choice for this part of database name controlled by the `Database Name` field.
+  * `<bucket_name>` is a string determined by your choice for the `Bucket Interval` field:
+    * For `day` bucket intervals, `<bucket_name>` will be `yyyy-mm-dd`.  For example, `2016-07-06` for events on July 6th 2016.
+    * For `week` bucket intervals  `<bucket_name>` will be `yyyy-'w'ww` where `'w'ww` indicates a week number.  For example, `2016-w03` for events in the 3rd week of 2016.
+    * For `month` bucket intervals `<bucket_name>` will be `yyyy-mm`.  For example, `2016-07` for events in July 2016.
 
 5. Click **Authorize**.
 6. Click **Confirm** in the authorization dialog box.
