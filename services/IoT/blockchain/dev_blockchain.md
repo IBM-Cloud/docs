@@ -13,6 +13,7 @@ copyright:
 
 
 # Developing smart contracts for {{site.data.keyword.iot_short_notm}} blockchain integration
+
 {: #iotblockchain_link}
 Last updated: 30 August 2016
 {: .last-updated}
@@ -23,22 +24,26 @@ Use {{site.data.keyword.blockchainfull}} and the Hyperledger development environ
 Develop and deploy smart contracts in the form of Golang chaincode executables. Use the {{site.data.keyword.iot_short_notm}} blockchain integration to trigger contract updates and business logic execution with device event data and write a new ledger state to the blockchain for each transaction.
 
 A {{site.data.keyword.iot_short_notm}} blockchain integration development environment consists of the following components:
+
 - {{site.data.keyword.Bluemix_notm}} organization:
- - {{site.data.keyword.iot_short_notm}} service with IoT blockchain integration enabled
- - {{site.data.keyword.blockchainfull_notm}} fabric
- - Node-RED application running IoT device simulator  
- **Note:** You can also use a locally deployed Node-RED environment to run the simulator.
+  - {{site.data.keyword.iot_short_notm}} service with IoT blockchain integration enabled
+  - {{site.data.keyword.blockchainfull_notm}} fabric
+  - Node-RED application running IoT device simulator  
+
+**Note:** You can also use a locally deployed Node-RED environment to run the simulator.
+
 - Local environment:
- - Hyperledger development environment to develop and test smart contract chaincode. The environment includes GoLang.
- - Blockchain Monitoring UI
+  - Hyperledger development environment to develop and test smart contract chaincode. The environment includes GoLang.
+  - Blockchain Monitoring UI
 - GitHub environment:
- - IBM-provided GitHub repository for sample smart contracts
- - GitHub repository for deploying smart contracts to the {{site.data.keyword.blockchainfull_notm}} fabric
+  - IBM-provided GitHub repository for sample smart contracts
+  - GitHub repository for deploying smart contracts to the {{site.data.keyword.blockchainfull_notm}} fabric
 
 The following diagram illustrates {{site.data.keyword.iot_short_notm}} blockchain integration development environment:
 ![The IoT blockchain {{site.data.keyword.iot_short_notm}} integration architecture.](images/architecture_contracts.svg "IoT blockchain {{site.data.keyword.iot_short_notm}} integrationarchitecture")
 
 ## Before you begin
+
 {: #byb}
 
 Get an overview of {{site.data.keyword.blockchainfull_notm}}, how it relates to the general blockchain concept, and what it can do for you:
@@ -48,29 +53,32 @@ Get an overview of {{site.data.keyword.blockchainfull_notm}}, how it relates to 
 - [{{site.data.keyword.blockchainfull_notm}} for Developers](http://www.ibm.com/blockchain/for_developers.html)  - An overview of how blockchain fits into your development environment that includes walk-throughs with live demos and code that is deployable to run on {{site.data.keyword.Bluemix_notm}}.
 
 ## Sample smart contracts
+
 {: #samples}
 
 A number of sample contracts are available for download from [https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples). You can use the sample contracts as a foundation to develop your own use cases into deployable chaincode:
 
 |Sample contract |Description |
 |:---|:---|
-|[Basic blockchain contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/simple_contract_hyperledger) |A contract that allows you to track and store device asset data on the blockchain
-|[Trade Lane blockchain contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/trade_lane_contract_hyperledger) |An advanced version of the Basic blockchain contract|
+|[Basic: Simple Contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract) | A simplified version of the advanced contract that allows you to track and store device asset data on the blockchain
+|[Advanced: IoT Generic Sample Contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | An advanced sample contract with many features and a **trade lane** flavour to its data model and behavior|
 
 
 ## Configure your {{site.data.keyword.blockchainfull_notm}} environment
+
 {: #configure_environment}
 Before you can begin deploying and testing smart contracts, you must set up your own blockchain environment.
 
 **Note:** {{site.data.keyword.iot_short_notm}} blockchain integration supports connecting to both {{site.data.keyword.blockchainfull_notm}} fabrics and Hyperledger fabrics. The following examples are based on the usage of {{site.data.keyword.blockchainfull_notm}}.
 
-1. Create and configure your {{site.data.keyword.blockchainfull_notm}} fabric.  
+1. Create and configure your {{site.data.keyword.blockchainfull_notm}} fabric.
+
 {{site.data.keyword.iot_short_notm}} blockchain integration requires the {{site.data.keyword.blockchainfull_notm}} fabric to manage the blockchain ledger, smart contracts, and the general blockchain infrastructure. {{site.data.keyword.Bluemix_notm}} blockchain integration uses {{site.data.keyword.blockchainfull_notm}} to manage the chains. If you have access to an existing {{site.data.keyword.blockchainfull_notm}} environment, you can use it. If not, you must create an instance of {{site.data.keyword.blockchainfull_notm}} from the {{site.data.keyword.Bluemix_notm}} [catalog](https://console.ng.bluemix.net/catalog/services/blockchain/).
 
- 1. From your {{site.data.keyword.Bluemix_notm}} account Dashboard, click **Use services or APIs**.
- 2. Locate the experimental section of the service catalog and select **Blockchain**.  
+  1. From your {{site.data.keyword.Bluemix_notm}} account Dashboard, click **Use services or APIs**.
+  2. Locate the experimental section of the service catalog and select **Blockchain**.  
    **Tip:** Click [here](https://console.ng.bluemix.net/catalog/services/blockchain/) to go directly to the {{site.data.keyword.blockchainfull_notm}} experimental service page.
- 3. On the {{site.data.keyword.blockchainfull_notm}} service page, verify the Add Service selections:  
+  3. On the {{site.data.keyword.blockchainfull_notm}} service page, verify the Add Service selections:  
     - Space - If you have more than the default `dev` space, verify that you are deploying the service in the intended space.
     - App - Leave unbound.
     - Service name - Optionally, change the service name to something that is easy to remember. This name is displayed in the {{site.data.keyword.blockchainfull_notm}} tile in the {{site.data.keyword.Bluemix_notm}} dashboard.
@@ -266,7 +274,7 @@ To download the sample contracts:
 In order to test your smart contract, perform an end-to-end test by creating a device in {{site.data.keyword.iot_short_notm}}, connecting your device to {{site.data.keyword.iot_short_notm}}, configuring IoT Blockchain to connect to your blockchain fabric, and configuring {{site.data.keyword.iot_short_notm}} to map and store your device messages in the blockchain. By using the {{site.data.keyword.blockchainfull_notm}} console, you can view the blockchain to see the device data in the ledger. If your contract supports the readAsset() function, you can use the monitoring UI to view your blockchain and see the device data from your own scenario being stored indelibly in a blockchain.
 
 5. Configure the Monitoring UI to connect to {{site.data.keyword.blockchainfull_notm}}.  
- **Tip:** If you haven't installed the Monitoring UI in your local environment, you can do it now. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/monitoring_ui) GitHub directory.  
+ **Tip:** If you haven't installed the Monitoring UI in your local environment, you can do it now. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub directory.  
  Access the configuration settings by clicking the **CONFIGURATION** button.   
  Use the following information to connect to a contract:
 <table>
