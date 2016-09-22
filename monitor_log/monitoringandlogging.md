@@ -213,7 +213,8 @@ cf logs appname --recent | cut -c 29-40,46-
 ```
 
 For more information about the **grep** option, type cut --help.
-* To display log entries that contain certain keywords, use the **grep** option. For example, to display log entries that contain the keyword [APP, you can use the follow command:
+* To display log entries that contain certain keywords, use the **grep** option. For example, to display log entries that contain the keyword `[APP`, you can use the follow command:
+
 ```
 cf logs appname --recent | grep '\[App'
 ```
@@ -234,7 +235,7 @@ To stream logs from your app and the system to an external log host, complete th
 
   2. Create a user-provided service instance.
      
-	 Use the ```cf create-user-provided-service``` command (or ```cups```, a short version of the command) to create a user-provided service instance: 
+	 Use the `cf create-user-provided-service` command (or `cups`, a short version of the command) to create a user-provided service instance: 
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```
@@ -288,7 +289,7 @@ To stream logs from your app and the system to an external log host, complete th
 	 The name for the user-provided service instance.
 	 
   4. Restage the app. 
-     Type ```cf restage appname``` for the changes to take effect. 
+     Type `cf restage appname` for the changes to take effect. 
 
 #### Viewing logs from external hosts
 {: #viewing_logs_external}
