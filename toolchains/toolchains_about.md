@@ -40,4 +40,3 @@ When using the forums to ask a question, tag your question so that it is seen by
 See [Getting help (Link opens in a new window)](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
 
 For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support (Link opens in a new window)](https://www.{DomainName}/docs/support/index.html#contacting-support).
-h
