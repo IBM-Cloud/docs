@@ -126,7 +126,7 @@ An activation record contains the following fields:
 - *activationId*: The activation ID.
 - *start* and *end*: Timestamps recording the start and end of the activation. The values are in [UNIX time format](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15).
 - *namespace* and `name`: The namespace and name of the entity.
-- *logs*: An array of strings with the logs that are produced by the action during its activation. Each array element corresponds to a line output to `stdout` or `stderr` by the action, and includes the time and stream of the log output. The structure is as follows: ```TIMESTAMP STREAM: LOG_OUTPUT```.
+- *logs*: An array of strings with the logs that are produced by the action during its activation. Each array element corresponds to a line output to `stdout` or `stderr` by the action, and includes the time and stream of the log output. The structure is as follows: `TIMESTAMP STREAM: LOG_OUTPUT`.
 - *response*: A dictionary that defines the keys `success`, `status`, and `result`:
   - *status*: The activation result, which might be one of the following values: "success", "application error", "action developer error", "whisk internal error".
   - *success*: Is `true` if and only if the status is `"success"`
@@ -164,8 +164,8 @@ It is common for JavaScript functions to continue execution in a callback functi
 
 A JavaScript action's activation is **synchronous** if the main function exits under one of the following conditions:
 
-- The main function exits without executing a ```return``` statement.
-- The main function exits by executing a ```return``` statement that returns any value *except* a Promise.
+- The main function exits without executing a `return` statement.
+- The main function exits by executing a `return` statement that returns any value *except* a Promise.
 
 Here is an example of a synchronous action.
 

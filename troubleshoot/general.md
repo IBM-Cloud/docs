@@ -30,7 +30,7 @@ You might receive an error message when you try to delete a service instance tha
 {:shortdesc}
 
 
-When you try to delete a service instance, you see the service broker error message, ```Gateway timeout```.
+When you try to delete a service instance, you see the service broker error message, `Gateway timeout`.
 {: tsSymptoms}
 
 

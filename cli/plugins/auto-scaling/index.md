@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2015，2016
 
  
 
@@ -17,8 +17,9 @@ copyright:
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-*Last updated: 25 February 2016*
+Last updated: 25 February 2016
 {: .last-updated}
+
 
 You can configure the {{site.data.keyword.autoscaling}} service by using the {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}}. The {{site.data.keyword.autoscaling}} CLI supports Linux64, Win64, and OSX, and provides functionality that is similar to the auto-scaling RESTful API provides.
 {: shortdesc}
@@ -43,7 +44,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 You can attach an auto-scaling policy to a specific app. Run the following command:
 
-```bx as policy-attach <APP_NAME> -p <policy_file>```
+```
+bx as policy-attach <APP_NAME> -p <policy_file>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -58,7 +61,9 @@ You can attach an auto-scaling policy to a specific app. Run the following comma
 
 You can generate an auto-scaling policy by answering the questions on the command line interface. Depending on your input, a JSON file that contains the definition of the auto-scaling policy is saved with the name that you enter. If you do not enter  the file name, the policy content is printed to the command line directly without saving it to a file. Run the following command:
 
-```bx as policy-create```
+```
+bx as policy-create
+```
 {: codeblock}
 
 
@@ -66,7 +71,9 @@ You can generate an auto-scaling policy by answering the questions on the comman
 
 You can show the auto-scaling policy of an app. The content of the policy is printed to the command line directly. Run the following command:
 
-```bx as policy-show <APP_NAME> [--json]```
+```
+bx as policy-show <APP_NAME> [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -81,7 +88,9 @@ You can show the auto-scaling policy of an app. The content of the policy is pri
 
 You can remove an auto-scaling policy from an  app. Run the following command:
 
-```bx as policy-detach <APP_NAME>```
+```
+bx as policy-detach <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -94,7 +103,9 @@ You can remove an auto-scaling policy from an  app. Run the following command:
 
 You can enable or disable the auto-scaling policy of a specific  app. Run the following command:
 
-```bx as policy-enable|policy-disable <APP_NAME>```
+```
+bx as policy-enable|policy-disable <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -107,7 +118,9 @@ You can enable or disable the auto-scaling policy of a specific  app. Run the fo
 
 You can show the history of the auto-scaling activity of a specific app. A table of auto-scaling history records is displayed in the command line interface.
 
-```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]```
+```
+bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -119,12 +132,14 @@ You can show the history of the auto-scaling activity of a specific app. A table
 <dd class="pd">The time stamp of the ending of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to the current time. See the <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a> for details about the time stamp format. 
 </dl>
 
+
+
 **Tip:** You can also use the **--json** option to pretty print the original JSON response.
 
 # rellinks
-{: #rellinks}
+{: rellinks}
 ## general
-{: #general}
+{: general}
 * [{{site.data.keyword.autoscaling}} service](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}
