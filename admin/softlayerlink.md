@@ -42,7 +42,7 @@ If you have a SoftLayer account, and you want to link SoftLayer and {{site.data.
 
 You must be a Master User in the SoftLayer account to link accounts.
 
-After you have linked your accounts, **Go to {{site.data.keyword.Bluemix_notm}}** is available in the SoftLayer global header. Clicking this link takes you to the {{site.data.keyword.Bluemix_notm}} login page. In addition, **SoftLayer** is now available in the {{site.data.keyword.Bluemix_notm}} header. Clicking the link takes you to the home page of the {{site.data.keyword.slportal}} in a new window.
+After you have linked your accounts, the **Go to {{site.data.keyword.Bluemix_notm}}** link is available in the SoftLayer global header. Clicking this link takes you to the {{site.data.keyword.Bluemix_notm}} login page. In addition, the **SoftLayer** link is now available in the {{site.data.keyword.Bluemix_notm}} header. Clicking the link takes you to the home page of the {{site.data.keyword.slportal}} in a new window.
 
 
 ## Credits for {{site.data.keyword.Bluemix_notm}} usage when accounts are linked
@@ -67,7 +67,7 @@ To invite team members through {{site.data.keyword.Bluemix_notm}}:
  2. Click **Add** to authenticate into your SoftLayer account and view a list of team members from your SoftLayer account.
  3. Select the team members to invite and click **Send**.
 
-You can do this operation over and over as more team members are added to your Softlayer account.
+You can repeat these steps over and over as more team members are added to your Softlayer account.
  
 The team member receives an email that includes a **Join the organization** link. If the member does not have an IBMid, the member is redirected to a registration page. Next, the member can enter some basic information and create their {{site.data.keyword.Bluemix_notm}} account.
 

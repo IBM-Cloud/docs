@@ -40,7 +40,7 @@ Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar
 ## Editing your IBMid information
 {: #ibmid}
 
-If you need to change your IBMid account information, such as your name, email, phone number, password, or company name, complete the following steps:
+Your IBMid gives you access to {{site.data.keyword.Bluemix_notm}}, as well as to other IBM applications. If you need to change your IBMid account information, such as your name, email address, phone number, password, or company name, complete the following steps:
 
 1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profile**.
 2. Click **Edit your IBMid**.
