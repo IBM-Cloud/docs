@@ -39,6 +39,8 @@ The built-in Jasper integration that is provided by our platform provides suppor
 
 You can access the supported operations in the device drilldown of a Jasper connected device after the following configuration steps are completed.
 
+## Accessing the Jasper HTTP REST API
+Swagger documentation for Jasper HTTP REST API provided by {{site.data.keyword.iot_short_notm}} can be found at  https://docs.internetofthings.ibmcloud.com/swagger/ext-jasper.html.
 
 ### Configuration for Jasper
 
@@ -88,6 +90,9 @@ The AT&T extension enables the following AT&T operations:
   - The cycle start date can be set using a YYYY-MM-DD format.
 - Send SMS to SIM
 - Change rate plan
+
+## Accessing the AT&T HTTP REST API
+Swagger documentation for AT&T HTTP REST API provided by {{site.data.keyword.iot_short_notm}} can be found at  https://docs.internetofthings.ibmcloud.com/swagger/ext-atnt.html.
 
 ### Configuration for AT&T
 
@@ -216,6 +221,9 @@ If you have a device which is connected to your {{site.data.keyword.iot_short_no
 - Last status change
 - Last status refresh
 - Location status
+
+## Accessing the Orange HTTP REST API
+Swagger documentation for Orange HTTP REST API provided by {{site.data.keyword.iot_short_notm}} can be found at  https://docs.internetofthings.ibmcloud.com/swagger/ext-orange.html.
 
 ### Configuration for Orange
 
