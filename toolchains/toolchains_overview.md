@@ -11,7 +11,7 @@ copyright:
 # Getting started with toolchains (Beta)
 {: #toolchains_getting_started}
 
-Last updated: 13 September 2016
+Last updated: 22 September 2016
 {: .last-updated}  
 
 Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
@@ -57,7 +57,7 @@ You can create a toolchain from your app. The toolchain can support continuous d
    1. Open the DevOps dashboard and click the **Toolchains** tab.
    2. If the **Enable Toolchains** button is shown, click it, and follow the prompts to create your toolchain.
    3. If the **Enable Toolchains** button isn't shown, toolchains are already enabled. Continue to step 2.
-1. On your app's Overview page, on the Continuous Delivery tile, click **Add Toolchain**. Alternatively, in the {{site.data.keyword.Bluemix_notm}} Classic Experience, in the upper-right corner of your app's Overview page, click **Add Toolchain**. Your app is configured for continuous delivery from a new GitHub repo that is populated with the app starter code.
+1. On your app's Overview page, on the Continuous Delivery tile, click **Enable**. Alternatively, in the {{site.data.keyword.Bluemix_notm}} Classic Experience, in the upper-right corner of your app's Overview page, click **Add Toolchain**. Your app is configured for continuous delivery from a new GitHub repo that is populated with the app starter code.
 1. On the toolchain creation page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you already have a toolchain with that name, or if you want to use a different name, change the toolchain's name.
 1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. Some tool integrations do not require any configuration. For information about configuring the tool integrations, see [Configuring tool integrations (Link opens in a new window)](../toolchains/toolchains_integrations.html){: new_window}.
