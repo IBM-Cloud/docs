@@ -7,7 +7,7 @@ copyright:
 
 # Enabling Cordova applications to receive push notifications
 {: #cordova_enable}
-Last updated: 17 September 2016
+Last updated: 22 September 2016
 {: .last-updated}
 
 Cordova is a platform for building hybrid applications with JavaScript, CSS, and HTML. The {{site.data.keyword.mobilepushshort}} supports development of Cordova-based iOS and Android applications.
@@ -26,71 +26,60 @@ Install and use the client push plug-in to further develop your Cordova applicat
 1. Set up your emulator. For Android Studio, use an emulator that supports Google Play API.
 1. Install the Git command-line tool. For Windows, make sure you select the **Run Git from the Window Command Prompt** option. For information about how to download and install this tool, see [Git](https://git-scm.com/downloads).
 1. Install the Node.js and Node Package Manager (NPM) tool. The NPM command-line tool is bundled with Node.js. For information about how to download and install Node.js, see [Node.js](https://nodejs.org/en/download/).
-1. From the command line, install the Cordova command-line tools by using the **npm install -g cordova** command. This is required to use the Cordova push plug-in. For information about how to install Cordova and set up your Cordova app, see [Cordova Apache](https://cordova.apache.org/#getstarted).
-
-	**Note**: To view the Cordova push plug-in readme file, go to [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+1. From the command line, install the Cordova command-line tools by using the **npm install -g cordova** command. This is required to use the Cordova push plug-in. For information about how to install Cordova and set up your Cordova app, see [Cordova Apache](https://cordova.apache.org/#getstarted). For more information, see the Cordova push plug-in [Readme file](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push).
 1. Change to the folder that you want to create your Cordova app in and run the following command to create a Cordova application. If you have an existing Cordova app, go to step 3.
-
 ```
-	cordova create your_app_name
-	cd your_app_name
+cordova create your_app_name
+cd your_app_name
 ```
 	{: codeblock}
+- Optional: You can edit the **config.xml** file and change the application name in the <name> element to a name that you choose, rather than the default HelloCordova name.
 
-1. Optional: (Optional) Edit the **config.xml** file and change the application name in the <name> element to one that you choose, rather than the default HelloCordova name.
+Ensure that you specify the correct Bundle ID. The following error messages might result in Xcode, if an incorrect Bundle ID is specified.
 
-	**Note**: Make sure you specify the correct Bundle ID. If you do not, the following error messages are displayed in Xcode.
-	* The executable was signed with invalid entitlements.
-	* The entitlements specified in your application’s Code Signing Entitlements file do not match those specified in your provisioning profile.
-   To fix this issue, specify the correct Bundle ID in Xcode or in your Cordova app **config.xml**  file.
+* The executable was signed with invalid entitlements.
+* The entitlements specified in your application’s Code Signing Entitlements file do not match those specified in your provisioning profile. To fix this issue, specify the correct Bundle ID in Xcode or in your Cordova app **config.xml**  file.
 
 1. Add the minimum supported API or the deployment target declaration to the config.xml file for your Cordova application. The minSdkVersion value must be higher than 15. The targetSdkVersion value must always reflect the latest Android SDK that is available from Google.
-	* **Android** - With your editor, open the config.xml file and update the
+	
+	* Android - With your editor, open the config.xml file and update the
 `<platform name="android">` element with minimum and target SDK versions:
 
 ```
-   <!-- add deployment target declaration -->
-     <platform name="android">  
-			  <preference name="android-minSdkVersion" value="15" />
-			  <preference name="android-targetSdkVersion" value="23" />
-			</platform>
+< !-- add deployment target declaration --> 
+add deployment target declaration <preference name="android-minSdkVersion" value="15" />
+  <preference name="android-targetSdkVersion" value="23" />
+</platform>
 ```
-	{: codeblock}
+    {: codeblock}
 
-   * **iOS** - Update the <platform name="ios"> element with a deployment target declaration:
+   * iOS - Update the <platform name="ios"> element with a deployment target declaration:
 
 ```
-	<platform name="ios">
-	    <preference name="deployment-target" value="8.0" />
-	    <!-- other properties -->
-	</ platform>
+<platform name ="ios">
+<preference name=deployment-target" value="8.0" /> <!-- other properties -->
+</ platform>
 ```
 	{: codeblock}
 
 1. From the Cordova command-line interface (CLI), add your platforms: iOS, Android, or both by using the command:
 ```
-	cordova platform add ios@3.9.0
-	cordova platform add android
+cordova platform add ios
+cordova platform add android
 ```
 	{: codeblock}
 
-1. From your Cordova application root directory, enter the following command to install the Cordova push plug-in: **cordova plugin add ibm-mfp-push**.
-
-Depending on the platforms that you added, you see something similar to the following:
-
+1. From your Cordova application root directory, enter the following command to install the Cordova push plug-in: **cordova plugin add ibm-mfp-push**. Depending on the platforms that you added, you might see:
 ```
-	Installing "ibm-mfp-push" for android
-	Installing "ibm-mfp-push" for ios
+Installing "ibm-mfp-push" for android
+Installing "ibm-mfp-push" for ios
 ```
 	{: codeblock}
 
-1. From *your-app-root-folder*, verify that the Cordova core and push plug-in were installed successfully by using the following command: **cordova plugin list**.
-
-Depending on the platforms that you added, you see something similar to the following:
-
+1. From *your-app-root-folder*, verify that the Cordova core and push plug-in were installed successfully by using the following command: **cordova plugin list**. Depending on the platforms that you added, you might see:
 ```
-	ibm-mfp-core 1.0.0 "MFPCore"
-	ibm-mfp-push 1.0.0 “MFPPush"
+ibm-mfp-core 1.0.0 "MFPCore"
+ibm-mfp-push 1.0.0 “MFPPush"
 ```
 	{: codeblock}
 
@@ -101,18 +90,14 @@ Depending on the platforms that you added, you see something similar to the foll
 
  b. Add the Bridging Header. Go to **Build settings > Swift Compiler - Code Generation > Objective-C Bridging Header** and add the following path: *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
 
- c. Add the Frameworks parameter. Go to **Build Settings > Linking > Runpath Search Paths** and add the following parameter:
-```
-	@executable_path/Frameworks
-```
-	{: codeblock}
+ c. Add the Frameworks parameter. Go to **Build Settings > Linking > Runpath Search Paths** and add the `@executable_path/Frameworks` parameter.
 
  d. Uncomment the following Push import statements in your bridging header. Go to *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
 
 ```
-	//#import <IMFPush/IMFPush.h>
-	//#import <IMFPush/IMFPushClient.h>
-	//#import <IMFPush/IMFResponse+IMFPushCategory.h>
+//#import <IMFPush/IMFPush.h>
+//#import <IMFPush/IMFPushClient.h>
+//#import <IMFPush/IMFResponse+IMFPushCategory.h>
 ```
 	{: codeblock}
 
@@ -132,18 +117,18 @@ Before you can use the {{site.data.keyword.mobilepushshort}} service Cordova plu
 1. Initialize the BMSClient by copying and pasting the following code snippet into your main JavaScript file (typically located under the **www/js** directory).
 
 ```
-	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
+BMSClient.initialize("https://myapp.mybluemix.net","App GUID");
 ```
 	{: codeblock}
-	
+
 1. Modify the code snippet to use your Bluemix Route and appGUID parameters. Click the **Mobile Options** link in your Push Dashboard to get the the app Route, App GUID and client Secret. Use the Route and App GUID values as your parameters in your `BMSClient.initialize` code snippet.
 
 	**Note**: If you have created a Cordova app using the Cordova CLI, for example, Cordova create app-name command, put this Javascript code in the **index.js** file, after the `app.receivedEvent` function within the `onDeviceReady: function()` function to initialize the BMS client.
 
 ```
-	onDeviceReady: function() {
-    app.receivedEvent('deviceready');
-    BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
+onDeviceReady: function() {
+app.receivedEvent('deviceready');
+BMSClient.initialize("https://myapp.mybluemix.net","App GUID");
     },
 ```
 	{: codeblock}
@@ -151,19 +136,13 @@ Before you can use the {{site.data.keyword.mobilepushshort}} service Cordova plu
 ## Registering devices
 {: #cordova_register}
 
-Before registering, initialize the {{site.data.keyword.mobilepushshort}} service.
-```
-  var appGUID = "your push service appGUID";
-  MFPPush.initialize(appGUID);
-```
-	{: codeblock}
 
 To register a device with the {{site.data.keyword.mobilepushshort}} service, call the register method. Copy the following code snippet into your Cordova application to register a device.
 
 ```
-	var success = function(message) { console.log("Success: " + message); };
-	var failure = function(message) { console.log("Error: " + message); };
-	MFPPush.registerDevice({}, success, failure);
+var success = function(message) { console.log("Success: " + message); };
+var failure = function(message) { console.log("Error: " + message); };
+MFPPush.registerDevice({}, success, failure);
 ```
 	{: codeblock}
 
@@ -172,8 +151,8 @@ To register a device with the {{site.data.keyword.mobilepushshort}} service, cal
 Android does not use of the settings parameter. If you are only building an Android app, pass an empty object. For example:
 
 ```
-	MFPPush.registerDevice({}, success, failure);
-	MFPPush.unregisterDevice(success, failure);
+MFPPush.registerDevice({}, success, failure);
+MFPPush.unregisterDevice(success, failure);
 ```
 	{: codeblock}
 
@@ -182,14 +161,14 @@ Android does not use of the settings parameter. If you are only building an Andr
 To customize the alert, badge, and sound properties, add the following JavaScript code snippet to the web part of your Cordova application.
 
 ```
-	var settings = {
-	   ios: {
-	       alert: true,
-	       badge: true,
-	       sound: true
-	   }
-	}
-	MFPPush.registerDevice(settings, success, failure);
+var settings = {
+   ios: {
+      alert: true,
+      badge: true,
+      sound: true
+   }
+}
+MFPPush.registerDevice(settings, success, failure);
 ```
 	{: codeblock}
 
@@ -198,7 +177,7 @@ To customize the alert, badge, and sound properties, add the following JavaScrip
 {: #cordova_register_js}
 
 ```
-	MFPPush.registerDevice({}, success, failure);
+MFPPush.registerDevice({}, success, failure);
 ```
 	{: codeblock}
 
@@ -206,46 +185,46 @@ You can access the contents of the success response parameter in Javascript usin
 **var token = JSON.parse(response).token**
 
 
-The available keys are: `token`, `userId`, and `deviceId`.
+The available keys are: `token` and `deviceId`.
 
 The following JavaScript code snippet shows how to initialize your Bluemix Mobile Services client SDK, register a device with {{site.data.keyword.mobilepushshort}} service, and listen to push notifications. Include this code in your Javascript file.
 
 ```
-	//Register device token with Bluemix Push Notification Service
-	funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
-	  CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
-	}
+//Register device token with Bluemix Push Notification Service
+funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
+  CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
+}
 ```
 	{: codeblock}
 
 ```
-	//Handle error when failed to register device token with APNs
-	funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
-	CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
-	}
+//Handle error when failed to register device token with APNs
+funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
+CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
+}
 ```
 	{: codeblock}
 within the **onDeviceReady: function()**.
 
 ```
-  onDeviceReady: function() {
-  app.receivedEvent('deviceready');
-  BMSClient.initialize("https://http://myroute_mybluemix.net","my_appGuid");
-  var success = function(message) { console.log("Success: " + message); };
-  var failure = function(message) { console.log("Error: " + message); };
-  var settings = {
-       ios: {
-           alert: true,
-           badge: true,
-           sound: true
-       }   
-    };
-   MFPPush.registerDevice(settings, success, failure);
-   var notification = function(notif){
-       alert (notif.message);
-    };
-    MFPPush.registerNotificationsCallback(notification);
-	 }
+onDeviceReady: function() {
+app.receivedEvent('deviceready');
+BMSClient.initialize("https://http://myroute_mybluemix.net","my_appGuid");
+var success = function(message) { console.log("Success: " + message); };
+var failure = function(message) { console.log("Error: " + message); };
+var settings = {
+     ios: {
+         alert: true,
+         badge: true,
+         sound: true
+     }
+  };
+MFPPush.registerDevice(settings, success, failure);
+ var notification = function(notif){
+    alert (notif.message);
+   };
+  MFPPush.registerNotificationsCallback(notification);
+ }
 ```
 	{: codeblock}
 
@@ -254,14 +233,14 @@ within the **onDeviceReady: function()**.
 Add the following Objective-C code snippet to your application delegate class
 
 ```
-	// Register the device token with Bluemix Push Notification Service
-		- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
-	}
-	// Handle error when failed to register device token with APNs
-		- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-	   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
-	}
+// Register the device token with Bluemix Push Notification Service
+	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
+}
+// Handle error when failed to register device token with APNs
+	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
+   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
+}
 ```
 	{: codeblock}
 
@@ -269,14 +248,14 @@ Add the following Objective-C code snippet to your application delegate class
 {: #cordova_register_swift}
 Add the following Swift code snippet to your application delegate class.
 
-```     
-	funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
-	CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
-	}
-	// Handle error when failed to register device token with APNs
-	funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
-    CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
-	}
+```
+funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
+CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
+}
+// Handle error when failed to register device token with APNs
+funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
+CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
+}
 ```
 	{: codeblock}
 
@@ -290,12 +269,12 @@ Build your project and then run your project by using the following commands:
 {: android-next-steps}
 
 ```
-	cordova build android
+cordova build android
 ```
 	{: codeblock}
 
 ```
-	cordova run android
+cordova run android
 ```
 	{: codeblock}
 
@@ -303,12 +282,12 @@ Build your project and then run your project by using the following commands:
 {: ios-next-steps}
 
 ```
-	cordova build ios
+cordova build ios
 ```
 	{: codeblock}
 
 ```
-	cordova run ios
+cordova run ios
 ```
 	{: codeblock}
 
@@ -321,11 +300,11 @@ Copy the following code snippet to receive push notifications on devices.
 
 Add the following JavaScript code snippet to the web part of your Cordova application.
 ```
-	var notification = function(notification){
-    // notification is a JSON object.
-    alert(notification.message);
-	};
-	MFPPush.registerNotificationsCallback(notification);
+var notification = function(notification){
+// notification is a JSON object.
+alert(notification.message);
+};
+MFPPush.registerNotificationsCallback(notification);
 ```
 	{: codeblock}
 
@@ -352,19 +331,19 @@ action-loc-key - The string is used as a key to get a localized string in the cu
 Add the following Objective-C code snippets to your application delegate class.
 
 ```
-	// Handle receiving a remote notification
- 	 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
-    {
-    [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
-	}
+// Handle receiving a remote notification
+ -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+  {
+ [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
+}
 ```
 	{: codeblock}
 
 
 ```
-	// Handle receiving a remote notification on launch
-		- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
-    [[CDVMFPPush sharedInstance] didReceiveRemoteNotificationOnLaunch:launchOptions];
+// Handle receiving a remote notification on launch
+- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
+ [[CDVMFPPush sharedInstance] didReceiveRemoteNotificationOnLaunch:launchOptions];
 	}
 ```
 	{: codeblock}
@@ -373,18 +352,18 @@ Add the following Objective-C code snippets to your application delegate class.
 
 Add the following Swift code snippets to your application delegate class.
 ```
-	// Handle receiving a remote notification
-	funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){
-    CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
+// Handle receiving a remote notification
+funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){
+  CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
 	}
 ```
 	{: codeblock}
 
 ```
-	// Handle receiving a remote notification on launch
-	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
-    {
-    CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
+// Handle receiving a remote notification on launch
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+  {
+  CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 	}
 ```
 	{: codeblock}
@@ -396,7 +375,7 @@ After you have developed your applications, you can send basic push notification
 
 To send basic push notifications, complete the steps:
 
-1. Select **Send Notifications**, and compose a message by choosing a **Send to** option. The supported options are **Device by Tag**, **Device Id**, **User Id**, **Android devices**, **iOS devices**, **Web Notifications**, and **All Devices**.  
+1. Select **Send Notifications**, and compose a message by choosing a **Send to** option. The supported options are **Device by Tag**, **Device Id**, **User Id**, **Android devices**, **iOS devices**, **Web Notifications**, and **All Devices**.
 **Note**: When you select the **All Devices** option, all devices subscribed to {{site.data.keyword.mobilepushshort}} will receive notifications.
 ![Notifications screen](images/tag_notification.jpg)
 

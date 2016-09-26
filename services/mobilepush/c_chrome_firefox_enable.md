@@ -8,7 +8,7 @@ years: 2015 2016
 
 # Enabling web applications to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 17 September 2016
+Last updated: 21 September 2016
 {: .last-updated}
 
 You can now enable Google Chrome and Mozilla Firefox web applications to receive and send {{site.data.keyword.mobilepushshort}}.
@@ -22,41 +22,38 @@ This topic describes how to install and use the client JavaScript Push SDK to fu
 
 For installing the Javascript SDK in Chrome Web application complete the steps:
 
-Download the `BMSPushSDK.js`,`BMSPushServiceWorker.js` and `manifest.json` from the [Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master)
-
+Download the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` from the [Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
 
 1. Edit the `manifest.json` file.
 
-For Google Chrome browser, do the following:
-     Change `name` to your site's name
-     Change `gcm_sender_id` to your Google Cloud Messaging (GCM) sender_ID ([How to get it ? Click here](t_push_provider_android.html)). The gcm_sender_id value contains only numbers.
+For Google Chrome browser, change `name` to your site's name. Change `gcm_sender_id` to your Google Cloud Messaging (GCM) sender_ID ([How to get it ?](t_push_provider_android.html)). The gcm_sender_id value contains only numbers.
+
 ```
-    {
-      "name": "YOUR_WEBSITE_NAME",
-      "gcm_sender_id": "GCM_Sender_Id"
-    }
+ {
+  "name": "YOUR_WEBSITE_NAME",
+  "gcm_sender_id": "GCM_Sender_Id"
+ }
 ```
     {: codeblock}
  
-For Mozilla Firefox browser, add the following values in `manifest.json` file.
-     Change `name` to your site's name
+For Mozilla Firefox browser, add the following values in `manifest.json` file.     Change `name` to your site's name.
 
 ```
-    {
-      "name": "YOUR_WEBSITE_NAME"
-    }
+{
+  "name": "YOUR_WEBSITE_NAME"
+ }
 ```
     {: codeblock}
 
 2. Add the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` to your root directory.
 3. Include the `manifest.json` in ``<head>`` tag of your html file .
 ```
-    <link rel="manifest" href="manifest.json">
+ <link rel="manifest" href="manifest.json">
 ```
     {: codeblock}
 4. Include Bluemix Web push SDK to the web application from GitHub.
 ```
-   <script src="BMSPushSDK.js" async></script>
+ <script src="BMSPushSDK.js" async></script>
 ```
     {: codeblock}
 
@@ -74,15 +71,15 @@ The `App Region` specifies the location where the {{site.data.keyword.mobilepush
  - For Sydney:		 `.au-syd.bluemix.net`
 
 ```
-    var bmsPush = new BMSPush();
-    function callback(response) {
-        alert(response.response)
-    }
-    var initParams = {
-      "appGUID":"push app GUID",
-      "appRegion":"Region where service hosted"
-    }
-    bmsPush.initialize(params, callback)
+ var bmsPush = new BMSPush();
+ function callback(response) {
+ alert(response.response)
+ }
+  var initParams = {
+  "appGUID":"push app GUID",
+  "appRegion":"Region where service hosted"
+  }
+  bmsPush.initialize(params, callback)
 ```
 	{: codeblock}
 
@@ -95,18 +92,18 @@ For registering from Mozilla Firefox, add website URL in the Bluemix {{site.data
 
 Use the following code snippet to register in Bluemix {{site.data.keyword.mobilepushshort}} service.
 ```
-    var bmsPush = new BMSPush();
-    function callback(response) {
-        alert(response.response)
-    }
-    var initParams = {
-      "appGUID":"push app GUID",
-      "appRegion":"Region where service hosted"
-    }
-    bmsPush.initialize(params, callback)
-    bmsPush.register(function(response) {
-      alert(response.response)
-    })
+var bmsPush = new BMSPush();
+function callback(response) {
+     alert(response.response)
+  }
+  var initParams = {
+  "appGUID":"push app GUID",
+  "appRegion":"Region where service hosted"
+  }
+  bmsPush.initialize(params, callback)
+  bmsPush.register(function(response) {
+    alert(response.response)
+  })
 ```
     {: codeblock}
 
@@ -115,12 +112,12 @@ Use the following code snippet to register in Bluemix {{site.data.keyword.mobile
 
 After you have developed your applications, you can send a push notification. 
 
-  1. Select **Send Notifications**, and compose a message by choosing **Web Notifications** as the **Send To** option. 
-  2. Type the message that needs to be delivered in the **Message** field.
-  3. You can choose to provide optional settings:
-   - **Notification Title**: This is the text that would be displayed as message alert heading.
-   - **Notification Icon URL**: If your message needs to be delivered with an app notification icon, provide the link to your icon in the field.
-   - **Additional payload**: Specifies the custom payload values for your notifications.
+1. Select **Send Notifications**, and compose a message by choosing **Web Notifications** as the **Send To** option. 
+2. Type the message that needs to be delivered in the **Message** field.
+3. You can choose to provide optional settings:
+  - **Notification Title**: This is the text that would be displayed as message alert heading.
+  - **Notification Icon URL**: If your message needs to be delivered with an app notification icon, provide the link to your icon in the field.
+  - **Additional payload**: Specifies the custom payload values for your notifications.
 
 The following image shows the web notifications option in the dashboard.
 
