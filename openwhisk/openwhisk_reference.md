@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} system details
 {: #openwhisk_reference}
-Last updated: 9 September 2016
+Last updated: 27 September 2016
 {: .last-updated}
 
 The following sections provide more details about the {{site.data.keyword.openwhisk}} system.
@@ -460,7 +460,7 @@ There are entity endpoints for each type of entity:
 
 The namespace and activation endpoints support only GET requests. The actions, triggers, rules, and packages endpoints support GET, PUT, and DELETE requests. The endpoints of actions, triggers, and rules also support POST requests, which are used to invoke actions and triggers and enable or disable rules. Refer to the [API reference](https://new-console.{DomainName}/apidocs/98) for details.
 
-All APIs are protected with HTTP Basic authentication. The Basic authentication credentials are in the `AUTH` property in your `~/.wskprops` file, delimited by a colon. You can also retrieve these credentials in the [CLI configuration steps](../README.md#setup-cli).
+All APIs are protected with HTTP Basic authentication. The Basic authentication credentials are in the `AUTH` property in your `~/.wskprops` file, delimited by a colon. You can also retrieve these credentials in the [CLI configuration steps](./index.html#openwhisk_start_configure_cli).
 
 The following is an example that uses the cURL command to get the list of all packages in the `whisk.system` namespace:
 
