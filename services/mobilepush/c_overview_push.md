@@ -7,7 +7,7 @@ copyright:
 
 # About {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Last updated: 17 September 2016
+Last updated: 27 September 2016
 {: .last-updated}
 
 IBM {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android mobile devices, and to Google Chrome and Mozilla Firefox web browsers. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
@@ -53,13 +53,7 @@ Platform specific Push Notifications cloud services such as Google Cloud Messagi
 ###Push Security
 {: push-security}
 
-{{site.data.keyword.mobilepushshort}} APIs are secured by two types of secrets - i) appSecret ii) clientSecret. The 'appSecret' protects APIs that are typically invoked by back end applications- such as the API to send {{site.data.keyword.mobilepushshort}} and the API to configure settings.   The'clientSecret' protects APIs that are typically invoked by mobile client applications. The 'appSecret' and 'clientSecret' are allocated to every service instance at the time of binding an application with {{site.data.keyword.mobilepushshort}} service. Refer the ReST API documentation for more information on how secrets are to be passed and for the associated APIs.
-
-**NOTE**: Earlier applications were required to pass the clientSecret only when registering or updating devices with userId field. All other APIs invoked by mobile/browser clients did not require the clientSecret. The earlier applications can continue with this behavior of optionally using the clientSecret for the device registration/update calls. However, it is strongly recommended that clientSecret check is enforced for all client API calls. To enforce this in old applications, there is a new 'verifyClientSecret' API that is published. For all new applications, the clientSecret check will be enforced on all client API calls and this behavior cannot be changed even with the 'verfiyClientSecret' API.
-
-Keep the 'clientSecret' confidential and never hard-coded into the mobile app. There are various application initialization patterns that can be used to pull in the 'clientSecret' dynamically during the application's runtime. The sequence diagram outlines the possible pattern.
-
-![Enable_Push](images/init_client_secret.jpg) 
+{{site.data.keyword.mobilepushshort}} APIs are secured by two types of secrets - i) appSecret ii) clientSecret. The 'appSecret' protects APIs that are typically invoked by back end applications- such as the API to send {{site.data.keyword.mobilepushshort}} and the API to configure settings.   The'clientSecret' protects APIs that are typically invoked by mobile client applications. There is only one API related to registration of a device with an associated UserId that requires this 'clientSecret'. None of the other APIs invoked from mobile clients require the clientSecret. The 'appSecret' and 'clientSecret' are allocated to every service instance at the time of binding an application with {{site.data.keyword.mobilepushshort}} service. Refer the ReST API documentation for more information on how the secrets are to be passed and for what APIs.
 
 ## {{site.data.keyword.mobilepushshort}} types
 {: #overview-push-types}

@@ -29,16 +29,12 @@ The API key is stored securely and used by the {{site.data.keyword.mobilepushsho
 
 **Note:** You will need your GCM API Key and Sender ID (project number).
 
-1. Open your Bluemix dashboard and then click the {{site.data.keyword.mobilepushfull}} service instance you have created, to open the dashboard. The Push dashboard is displayed.
-![Push dashboard](images/setup_push_main.jpg)
-
-To set up an unbound {{site.data.keyword.mobilepushshort}} service for Android, select the Unbound {{site.data.keyword.mobilepushshort}} service icon to open the {{site.data.keyword.mobilepushshort}} service dashboard.
-
-![Push dashboard](images/push_unbound.jpg)
+1. Open your Bluemix dashboard and then click the {{site.data.keyword.mobilepushfull}} service instance you have created, to open the dashboard. The Push dashboard is displayed. To set up an unbound {{site.data.keyword.mobilepushshort}} service for Android, select the Unbound {{site.data.keyword.mobilepushshort}} service icon to open the {{site.data.keyword.mobilepushshort}} service dashboard. 
+ ![Push dashboard](images/push_unbound.jpg)
 
 2. Click the **Setup Push** button, to configure the GCM credentials.
-1. On the **Configuration** tab, go to the **Google Cloud Messaging** section and configure the Sender ID (GCM project number) and API Key.
-4. Click the **Save** button.
+3. On the **Configuration** tab, go to the **Google Cloud Messaging** section and configure the Sender ID (GCM project number) and API Key.
+4. Click **Save**.
 5. Next steps. [Enabling notifications for Android](c_enable_push.html).
 
 ###Configuring for Google Chrome and Mozilla Firefox web push (using GCM)

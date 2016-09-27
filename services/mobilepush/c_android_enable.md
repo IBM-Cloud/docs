@@ -8,7 +8,7 @@ copyright:
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 22 September 2016
+Last updated: 27 September 2016
 {: .last-updated}
 
 You can enable Android applications to receive and send {{site.data.keyword.mobilepushshort}} to your devices.
