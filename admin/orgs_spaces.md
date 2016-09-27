@@ -23,6 +23,8 @@ Last updated: 16 August 2016
 As an account owner, you can manage your organizations by going to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations** page. Organization managers can also use the Manage Organizations page to manage any organizations where they are set as the manager.
 {:shortdesc}
 
+Note: Only account owners with Pay-As-You-Go accounts can create an organization.
+
 Management tasks include the following:
 
 * Creating an organization or space
