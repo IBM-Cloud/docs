@@ -19,7 +19,7 @@ copyright:
 # Creating and invoking {{site.data.keyword.openwhisk_short}} actions
 {: #openwhisk_actions}
 
-Last updated: 9 September 2016
+Last updated: 27 September 2016
 {: .last-updated}
 
 Actions are stateless code snippets that run on the {{site.data.keyword.openwhisk}} platform. An action can be a JavaScript function, a Swift function, or a custom executable program packaged in a Docker container. For example, an action can be used to detect the faces in an image, aggregate a set of API calls, or post a Tweet.
@@ -76,7 +76,7 @@ Review the following steps and examples to create your first JavaScript action.
 
   You can see the `hello` action you just created.
 
-4. After you create your action, you can run it in the cloud in OpenWhisk with the 'invoke' command. You can invoke actions with a *blocking* invocation (i.e., request/response style) or a *non-blocking* invocation by specifying a flag in the command. A blocking invocation request will _wait_ for the activation result to be available. The wait period is the lesser of 60 seconds or the action's configured [time limit](./reference.md#per-action-timeout-ms-default-60s). The result of the activation is returned if it is available within the wait period. Otherwise, the activation continues processing in the system and an activation ID is returned so that one may check for the result later, as with non-blocking requests (see [here](#watching-action-output) for tips on monitoring activations).
+4. After you create your action, you can run it in the cloud in OpenWhisk with the 'invoke' command. You can invoke actions with a *blocking* invocation (i.e., request/response style) or a *non-blocking* invocation by specifying a flag in the command. A blocking invocation request will _wait_ for the activation result to be available. The wait period is the lesser of 60 seconds or the action's configured [time limit](./openwhisk_reference.html#openwhisk_syslimits_timeout). The result of the activation is returned if it is available within the wait period. Otherwise, the activation continues processing in the system and an activation ID is returned so that one may check for the result later, as with non-blocking requests (see [here](#watching-action-output) for tips on monitoring activations).
 
   This example uses the blocking parameter, `--blocking`:
 
@@ -322,7 +322,7 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   ```
   {: codeblock}
   
-  Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./reference.md#javascript-runtime-environments) detail the Node.js packages that you can use in your actions.
+  Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./openwhisk_reference.html#openwhisk_ref_javascript_environments) detail the Node.js packages that you can use in your actions.
   
   This example also shows the need for asynchronous actions. The action returns a Promise to indicate that the result of this action is not available yet when the function returns. Instead, the result is available in the `request` callback after the HTTP call completes, and is passed as an argument to the `resolve()` function.
   
@@ -348,7 +348,7 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
 
 You can create an action that chains together a sequence of actions.
 
-Several utility actions are provided in a package called `/whisk.system/utils` that you can use to create your first sequence. You can learn more about packages in the [Packages](./packages.md) section.
+Several utility actions are provided in a package called `/whisk.system/utils` that you can use to create your first sequence. You can learn more about packages in the [Packages](./openwhisk_packages.html) section.
 
 1. Display the actions in the `/whisk.system/utils` package.
   
@@ -403,7 +403,7 @@ Therefore parameters that are passed to the action sequence are only available t
 The result of the first action in the sequence becomes the input JSON object to the second action in the sequence (and so on).
 This object does not include any of the parameters originally passed to the sequence unless the first action explicitly includes them in its result.
 Input parameters to an action are merged with the action's default parameters, with the former taking precedence and overriding any matching default parameters.
-For more information about invoking action sequences with multiple named parameters, see [Setting default parameters](./actions.md#setting-default-parameters).
+For more information about invoking action sequences with multiple named parameters, see [Setting default parameters](./openwhisk_actions.html#openwhisk_binding_actions).
 
 ## Creating Python actions
 {: #openwhisk_actions_python}
