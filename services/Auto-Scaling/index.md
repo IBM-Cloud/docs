@@ -37,7 +37,7 @@ To use the {{site.data.keyword.autoscaling}} service, complete the following ste
 
 1. On {{site.data.keyword.Bluemix_notm}}  Dashboard, click *Add a service or API*, and then select the {{site.data.keyword.autoscaling}} service from the DevOps section in the service catalog. A new window is displayed to present an overview of the {{site.data.keyword.autoscaling}} service.
 2. Select the application that you want to bind the {{site.data.keyword.autoscaling}} service to, and click *Create*. <br/>
-*Remember:* You can bind only one {{site.data.keyword.autoscaling}} service to an application. If the application is already bound with another {{site.data.keyword.autoscaling}} service, do not select the application in this step. Otherwise, you will get the CWSCV2004E error.<br/>The Restage Application window is displayed.
+*Remember:* You can bind only ONE {{site.data.keyword.autoscaling}} service to an application. If the application is already bound with another {{site.data.keyword.autoscaling}} service, do not select the application in this step. Otherwise, you will get the CWSCV2004E error.<br/>The Restage Application window is displayed.
 3. In the Restage Application window, click *Restage* to restage your application before you use the new {{site.data.keyword.autoscaling}} service that you just added. <br/><ul><li>For Liberty application, the {{site.data.keyword.autoscaling}} is auto-configured and ready for use after the application restage.</li> <li>For Node.js applications, you must update your application code to enable the {{site.data.keyword.autoscaling}} service before pushing the application to {{site.data.keyword.Bluemix_notm}}. See [Configuring Node.js apps with the {{site.data.keyword.autoscaling}} service](index.html#node_asagent) for more details.</ul><br/> 
 After restaging application is completed, you can start to configure the {{site.data.keyword.autoscaling}} service for your application.
 4. To configure the {{site.data.keyword.autoscaling}} for an application, in the {{site.data.keyword.Bluemix_notm}} user interface, click your application that the {{site.data.keyword.autoscaling}} service is bound to.
@@ -67,7 +67,7 @@ If the workload of your application changes dramatically during the peak time an
 ## Configuring Node.js apps with the {{site.data.keyword.autoscaling}} service
 {: #node-asagent}
 
-To enable the {{site.data.keyword.autoscaling}} service in your Node.js apps, complete the following steps before pushing the app to {{site.data.keyword.Bluemix_notm}}.
+To enable the {{site.data.keyword.autoscaling}} service with your Node.js apps, besides service provision and bind steps, you need to complete the following steps as well before pushing the app to {{site.data.keyword.Bluemix_notm}}.
 
 1. Update the package.json file with the following steps: <ol><li>Create a dependency entry for `blumix-autoscaling-agent`, for example `"bluemix-autoscaling-agent": "*"`.<br/><li>(Optional) Set heap limit within the `scripts` section based on the memory that you allocate for your app, for example `"start": "node --max-old-space-size=600 app.js"`. .<br/>*Note:* Set a value for `max-old-space-size` if you want to trigger scaling based on heap usage. If the value is not set when you start your application, the default Node.js heap limit 1.4GB is used regardless how much memory your app is allocated, which might lead to improper auto-scaling decisions.<br/>
 ```
