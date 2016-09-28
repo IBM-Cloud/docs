@@ -104,6 +104,6 @@ copyright:
 
 ## 相關鏈結
 {: #general}
-* [{{site.data.keyword.iot_full}} 文件](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [開發人員支援討論區](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
 * [Stack Overflow 支援討論區](http://stackoverflow.com/questions/tagged/ibm-bluemix)
