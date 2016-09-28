@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015，2016
-
+lastupdated:2006-09-28
  
 
 ---
@@ -16,7 +16,7 @@ copyright:
 
 # Getting started with the {{site.data.keyword.autoscaling}} service
 {: #autoscaling}
-Last updated: 7 September 2016
+Last updated: 28 September 2016
 {: .last-updated}
 
 In {{site.data.keyword.Bluemix_notm}}, you can automatically manage your application capacity. Use the {{site.data.keyword.autoscalingfull}} service to automatically increase or decrease the compute capacity of your application. The number of application instances are adjusted dynamically based on the {{site.data.keyword.autoscaling}} policy that you define.
@@ -67,7 +67,7 @@ If the workload of your application changes dramatically during the peak time an
 ## Configuring Node.js apps with the {{site.data.keyword.autoscaling}} service
 {: #node-asagent}
 
-To enable the {{site.data.keyword.autoscaling}} service with your Node.js apps, besides service provision and bind steps, you need to complete the following steps as well before pushing the app to {{site.data.keyword.Bluemix_notm}}.
+To enable the {{site.data.keyword.autoscaling}} service with your Node.js apps, besides service provision and binding steps, you need to complete the following steps as well before pushing the app to {{site.data.keyword.Bluemix_notm}}.
 
 1. Update the package.json file with the following steps: <ol><li>Create a dependency entry for `blumix-autoscaling-agent`, for example `"bluemix-autoscaling-agent": "*"`.<br/><li>(Optional) Set heap limit within the `scripts` section based on the memory that you allocate for your app, for example `"start": "node --max-old-space-size=600 app.js"`. .<br/>*Note:* Set a value for `max-old-space-size` if you want to trigger scaling based on heap usage. If the value is not set when you start your application, the default Node.js heap limit 1.4GB is used regardless how much memory your app is allocated, which might lead to improper auto-scaling decisions.<br/>
 ```
