@@ -27,7 +27,7 @@ copyright:
 このサービスを稼働させるには、必要なサービスとアプリをデプロイし、サービスを構成する必要があります。
 
 **前提条件:** 始めに、以下の前提条件が満たされていることを確認します。
-- [{{site.data.keyword.iotinsurance_short}} サービス](https://new-console.ng.bluemix.net/catalog/services/iot-for-insurance/)のインスタンスは、{{site.data.keyword.Bluemix_notm}} スペースにある必要があります。
+- [{{site.data.keyword.iotinsurance_short}} サービス](https://console.ng.bluemix.net/catalog/services/iot-for-insurance/)のインスタンスは、{{site.data.keyword.Bluemix_notm}} スペースにある必要があります。
 - 少なくとも 10 GB のストレージがコンピューターで使用可能である必要があります。
 
 ## 必須のサービスとアプリケーションのデプロイ
@@ -70,7 +70,7 @@ copyright:
 
 ### {{site.data.keyword.mobilepushshort}} の構成
 {: #config_push}
-既存のモバイル・アプリのプッシュ通知を有効にするには、{{site.data.keyword.mobilepushshort}} サービスを構成し、Public Key Cryptography Standards (PKCS) 12 ファイルを追加する必要があります。モバイル・アプリについて詳しくは、[サンプル・モバイル・アプリのインストールと接続](iotinsurance_mobile_app.html)を参照してください。{{site.data.keyword.mobilepushshort}} について詳しくは、[プッシュ通知の概説](https://new-console.stage1.ng.bluemix.net/docs/services/mobilepush/index.html)を参照してください。
+既存のモバイル・アプリのプッシュ通知を有効にするには、{{site.data.keyword.mobilepushshort}} サービスを構成し、Public Key Cryptography Standards (PKCS) 12 ファイルを追加する必要があります。モバイル・アプリについて詳しくは、[サンプル・モバイル・アプリのインストールと接続](iotinsurance_mobile_app.html)を参照してください。{{site.data.keyword.mobilepushshort}} について詳しくは、[プッシュ通知の概説](https://console.stage1.ng.bluemix.net/docs/services/mobilepush/index.html)を参照してください。
 
   1. {{site.data.keyword.mobilepushshort}} サービスを開きます。
   2. **「プッシュのセットアップ (Setup Push)」**をクリックします。
@@ -98,6 +98,6 @@ copyright:
 
 ## 関連リンク
 {: #general}
-* [{{site.data.keyword.iot_full}} 資料](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+* [{{site.data.keyword.iot_full}} 資料](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [開発者サポート・フォーラム](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
 * [Stack overflow サポート・フォーラム](http://stackoverflow.com/questions/tagged/ibm-bluemix)
