@@ -1,96 +1,103 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
-# Start using {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
+# Einführung in {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
 
-*Last updated: 13 August 2016*
+*Letzte Aktualisierung: 13. August 2016*
 {: .last-updated}
 
 
-## Using the {{site.data.keyword.objectstorageshort}} user interface {: #using-object-storage-ui}
+## {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle verwenden {: #using-object-storage-ui}
 
-### UI elements and navigation
-When your {{site.data.keyword.objectstorageshort}} is provisioned, you can see your instance information in the {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} service instance dashboard. From the dashboard, select your {{site.data.keyword.objectstorageshort}} instance to view the panel with more detailed information.  
-#### Usage data
-On your application's home page, you’ll see the storage usage information for your instance. It also shows the current number of **Storage Containers** and the total number of **Objects** in all of your containers. It lists your memory usage in megabytes. **Storage Consumed** refers to the current amount of space that is used.
-#### Actions
-To retrieve the latest usage data, click the **Refresh** button.   
-####Object browser
-Use the object browser to manage object storage containers and objects. You can create containers, upload files, delete containers, and delete files among other actions.
+### Benutzerschnittstelle - Elemente und Navigation
+Wenn Ihr {{site.data.keyword.objectstorageshort}} bereitgestellt wurde, können Sie die Informationen zu Ihrer Instanz im {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Dashboard für Serviceinstanzen anzeigen. Wählen Sie im Dashboard Ihre {{site.data.keyword.objectstorageshort}}-Instanz aus, um den Fensterbereich mit ausführlicheren Informationen anzuzeigen.  
+#### Nutzungsdaten
+Auf der Startseite Ihrer Anwendung sehen Sie die Informationen zur Speicherbelegung für Ihre Instanz. Außerdem wird die aktuelle Anzahl der **Speichercontainer** und die Gesamtzahl der **Objekte** in allen Containern angezeigt, über die Sie verfügen. Ihre Speicherbelegung wird in Megabyte angegeben. **Belegter Speicher** bezieht sich auf die aktuelle Größe des Speicherplatzes, der belegt ist.
+#### Aktionen
+Klicken Sie auf die Schaltfläche **Aktualisieren**, um die aktuellsten Nutzungsdaten abzurufen.   
+####Objektbrowser
+Verwenden Sie den Objektbrowser, um Object Storage-Container und -Objekte zu verwalten. Sie können Container erstellen, Dateien hochladen, Container löschen, Dateien löschen und andere Aktionen ausführen.
 
 
-## Using {{site.data.keyword.objectstorageshort}} from a {{site.data.keyword.Bluemix_notm}} app {: #using-object-storage-from-bluemix-app}
+## {{site.data.keyword.objectstorageshort}} über eine {{site.data.keyword.Bluemix_notm}}-App verwenden {: #using-object-storage-from-bluemix-app}
 
-### How to bind your {{site.data.keyword.objectstorageshort}} service to an application after creation {: #bind-object-storage-to-application}
-1.	In the {{site.data.keyword.Bluemix_notm}} dashboard, select the app that you want to bind.
-2.	In the app overview, click **Bind a Service or API**.
-3.	Select your {{site.data.keyword.objectstorageshort}} instance from the list of services and click **Add**.
-4.	Click **Restage** when prompted. Your app must be restaged to use the new service.
+### Vorgehensweise zum Binden eines {{site.data.keyword.objectstorageshort}}-Service an eine Anwendung nach der Erstellung {: #bind-object-storage-to-application}
+1.	Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard die App aus, die Sie binden möchten.
+2.	Klicken Sie in der App-Übersicht auf **Service oder API binden**.
+3.	Wählen Sie in der Liste der Services Ihre {{site.data.keyword.objectstorageshort}}-Instanz aus und klicken Sie auf **Hinzufügen**.
+4.	Klicken Sie auf **Erneutes Staging**, wenn Sie dazu aufgefordert werden. Für die Verwendung des neuen Service ist für Ihre App ein erneutes Staging erforderlich.
 
-### Bound context
+### Gebundener Kontext
 
-If you want to use {{site.data.keyword.objectstorageshort}} in a bound context, the cloud credentials are provided indirectly through the application binding process. After you successfully bind a service instance to your application, a configuration similar to the following example is added to your `VCAP_SERVICES` environment variable.
+Wenn Sie {{site.data.keyword.objectstorageshort}} in einem gebundenen Kontext verwenden möchten, werden die Berechtigungsnachweise für die Cloud indirekt über den Anwendungsbindungsprozess bereitgestellt. Nach der erfolgreichen Bindung einer Serviceinstanz an Ihre Anwendung wird eine Konfiguration ähnlich der folgenden Beispielkonfiguration der Umgebungsvariablen `VCAP_SERVICES` hinzugefügt.
 
 ```
 {
 "Object-Storage": [
-{
+    {
   "name": "Object-Storage - YP",
-  "label": "Object-Storage",
-  "plan": "Free",
-  "credentials": {
+      "label": "Object-Storage",
+      "plan": "Free",
+      "credentials": {
      "auth_url": "https://identity.open.softlayer.com",
-     "project": "object_storage_d049255b",
-     "projectId": "0f47b41b06d047f9aae3b33f1db061ed",
-     "region": "dallas",
-     "userId": "ad78b2a3f843466988afd077731c61fc",
-     "username": "user_202db1f8a7aa3f3ac51ec68f10dbe7dc29070bc7",
-     "password": "K/jyIi2jR=1?D.TP",
-     "domainId": "2df6373c549e49f8973fb6d22ab18c1a",
-     "domainName": "639347"
-    }
+         "project": "object_storage_d049255b",
+         "projectId": "0f47b41b06d047f9aae3b33f1db061ed",
+         "region": "dallas",
+         "userId": "ad78b2a3f843466988afd077731c61fc",
+         "username": "user_202db1f8a7aa3f3ac51ec68f10dbe7dc29070bc7",
+         "password": "K/jyIi2jR=1?D.TP",
+         "domainId": "2df6373c549e49f8973fb6d22ab18c1a",
+         "domainName": "639347"
+        }
    }
   ]
 }
 ```
 
-## Using the Swift CLI to access {{site.data.keyword.objectstorageshort}} {: #using-swift-cli}
+## Swift-Befehlszeilenschnittstelle (CLI) für den Zugriff auf {{site.data.keyword.objectstorageshort}} verwenden {: #using-swift-cli}
 
-You can access the {{site.data.keyword.objectstorageshort}} service over the Internet and from applications and virtual servers within IBM {{site.data.keyword.Bluemix_notm}}. Common use cases for the {{site.data.keyword.objectstorageshort}} service are as follows:
+Sie können auf den {{site.data.keyword.objectstorageshort}}-Service über das Internet und durch Anwendungen und virtuelle Server in IBM {{site.data.keyword.Bluemix_notm}} zugreifen. Häufige Anwendungsfälle für den {{site.data.keyword.objectstorageshort}}-Service sind zum Beispiel:
 
-* Backing up volume data from your instances
-* Using as an intermediary location when you transfer large amounts of data
-* Transferring data between environments that are not directly connected
-* Acting as a central repository
+* Sicherung durch Backups von Datenträgerdaten aus Ihren Instanzen
+* Verwendung als Zwischenspeicherposition bei der Übertragung umfangreicher Datenvolumen
+* Übertragung von Daten zwischen Umgebungen, die nicht direkt verbunden sind
+* Einsatz als zentrales Repository
 
-The {{site.data.keyword.objectstorageshort}} service is based on OpenStack Swift and can be accessed by using any compatible client application. This section describes how to use the Python Swift client, which is the command-line interface (CLI) for the {{site.data.keyword.objectstorageshort}} API and its extensions, to work with containers and files.
+Der {{site.data.keyword.objectstorageshort}}-Service basiert auf OpenStack Swift und ist für jede beliebige kompatible Clientanwendung zugänglich. In diesem Abschnitt wird die Verwendung des Python Swift-Clients beschrieben. Dies ist die Befehlszeilenschnittstelle (CLI, Command-Line Interface) für die {{site.data.keyword.objectstorageshort}}-API und die zugehörigen Erweiterungen für die Arbeit mit Containern und Dateien.
 
-### Installing the Swift client {: #install-swift-client}
+### Swift-Client installieren {: #install-swift-client}
 
-Install the following prerequisite software if not already installed. For more information, see the [OpenStack Documentation](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software){: new_window}.
-* Python 2.7 or later
-* setuptools package
-* pip package
+Installieren Sie die folgenden Softwarevoraussetzungen, falls diese noch nicht installiert sind. Weitere Informationen finden Sie in der [OpenStack-Dokumentation](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software){: new_window}.
+* Python 2.7 oder höher
+* Setuptools-Paket
+* Pip-Paket
 
-Install the Python Swift client by using Python pip:
+Installieren Sie den Python Swift-Client mithilfe von Python-pip:
 
 ```
 	sudo pip install python-swiftclient
 ```
 
-Install the Python Keystone client by running the following command:
+Installieren Sie den Python Keystone-Client, indem Sie den folgenden Befehl ausführen:
 
 ```
 	sudo pip install python-keystoneclient
 ```
 
-### Setting up the client {: #setup-swift-client}
+### Client einrichten {: #setup-swift-client}
 
-The Swift client takes the authentication information from the following environment variables:
-* `OS_AUTH_URL` is the endpoint URL
-* `OS_USER_ID` is the user name
-* `OS_PASSWORD` is the password
+Der Swift-Client entnimmt die Authentifizierungsinformationen den folgenden Umgebungsvariablen:
+* `OS_AUTH_URL` ist die Endpunkt-URL.
+* `OS_USER_ID` ist der Benutzername.
+* `OS_PASSWORD` ist das Kennwort.
 
-Set the authentication information as follows.
+Legen Sie die Authentifizierungsinformationen wie folgt fest.
 
 ```
 export OS_USER_ID=24a20b8e4e724f5fa9e7bfdc79ca7e85
@@ -102,290 +109,291 @@ export OS_IDENTITY_API_VERSION=3
 export OS_AUTH_VERSION=3
 ```
 
-You can find the credential values for your {{site.data.keyword.objectstorageshort}} service from the **Service Credentials** page in the {{site.data.keyword.objectstorageshort}} user interface.
+Sie finden die Werte für die Berechtigungsnachweise für Ihren {{site.data.keyword.objectstorageshort}}-Service auf der Seite **Serviceberechtigungsnachweise** in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle.
 
-**Note:** Make sure that you add a `/v3` to the `auth_url` from the credentials in the {{site.data.keyword.objectstorageshort}} user interface when you configure the environment variables `OS_AUTH_URL` for the Swift client.
+**Anmerkung:** Stellen Sie sicher, dass Sie dem Wert von `auth_url` aus den Berechtigungsnachweisen in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle den Wert `/v3` hinzufügen, wenn Sie die Umgebungsvariablen `OS_AUTH_URL` für den Swift-Client konfigurieren.
 
 
-### Working with containers {: #work-with-containers}
+### Mit Containern arbeiten {: #work-with-containers}
 
-Listing containers:
+Container auflisten:
 ```
 	swift list
 ```
-Creating a container:
+Container erstellen:
 ```
-	swift post <container_name>
+	swift post <Containername>
 ```
-Listing the content of a container:
+Inhalt eines Containers auflisten:
 ```
-	swift list <container_name>
+	swift list <Containername>
 ```
-### Working with objects {: #work-with-objects}
+### Mit Objekten arbeiten {: #work-with-objects}
 
-#### Adding a file to a container
+#### Datei einem Container hinzufügen
 ```
-	swift upload <container_name> <file_name>
+	swift upload <Containername> <Dateiname>
 ```
-#### Adding files larger than 5 GB to a container
+#### Dateien mit einer Größe über 5 GB einem Container hinzufügen
 
-If you are uploading a file that is larger than 5 GB, you must split it into smaller chunks. You can instruct the Swift client to handle such upload by supplying the `-segment-size` parameter:
+Wenn Sie eine Datei hochladen, die größer als 5 GB ist, müssen Sie sie in kleinere Segmente aufteilen. Sie können den Swift-Client durch Angabe des Parameters `-segment-size` anweisen, eine solche Hochladeoperation durchzuführen:
 ```
-	swift upload <container_name> <file_name> --segment-size <size_in_bytes>
+	swift upload <Containername> <Dateiname> --segment-size <Größe_in_Byte>
 ```
-Each segment is uploaded in parallel into a separate container named `<container_name>_segments`. After all the segments are uploaded, Swift creates a manifest file so that the segments can be downloaded in a single file from the original container `<container_name>` with the original file name `<file_name>`.
+Jedes Segment wird parallel in einen separaten Container mit dem Namen `<Containername>_segments` hochgeladen. Nach dem Hochladen aller Segmente erstellt Swift eine Manifestdatei, sodass die Segmente in eine einzige Datei aus dem ursprünglichen Container `<Containername>` mit dem ursprünglichen Dateinamen `<Dateiname>` heruntergeladen werden können.
 
-For example, the following command uploads a file named `large_file` from a container named `test_container` with the segment size `1073741824`.
+Beispiel: Mit dem folgenden Befehl wird eine Datei mit dem Namen `large_file` aus einem Container mit dem Namen `test_container` mit der Segmentgröße `1073741824` hochgeladen.
 ```
 	swift upload test_container -S 1073741824 large_file
 ```
-You can run the following command to download the file:
+Sie können den folgenden Befehl ausführen, um die Datei herunterzuladen:
 ```
 	swift download test_container large_file
 ```
-#### Downloading a file
+#### Datei herunterladen
 ```
-	swift download <container_name> <file_name>
+	swift download <Containername> <Dateiname>
 ```
-#### Adding a directory to a container
+#### Verzeichnis einem Container hinzufügen
 
-Swift does not have a true directory structure, but uses the naming to represent a directory layout. To add a directory to a container, run the following command:
+Swift hat keine eigentliche Verzeichnisstruktur, verwendet jedoch eine entsprechende Benennung, um eine Verzeichnisstruktur darzustellen. Führen Sie den folgenden Befehl aus, um einem Container ein Verzeichnis hinzuzufügen:
 ```
-	swift upload <container_name> <directory_name>
+	swift upload <Containername> <Verzeichnisname>
 ```
-This command will upload the full directory structure as a relative path. For example, if you specify `/mnt/volume1`, the directory structure mnt/volume1 will be attached to all the file names to indicate the directory structure.
+Durch diesen Befehl wird eine vollständige Verzeichnisstruktur als relativer Pfad hochgeladen. Beispiel: Wenn Sie `/mnt/volume1` angeben, wird die Verzeichnisstruktur 'mnt/volume1' an alle Dateinamen angefügt, um die Verzeichnisstruktur anzugeben.
 
 
-#### Downloading a directory
+#### Verzeichnis herunterladen
 
-To download a directory structure, use the `-prefix` parameter to indicate the directory or directory structure that you want to download.
+Zum Herunterladen einer Verzeichnisstruktur verwenden Sie den Parameter `-prefix`, um das Verzeichnis bzw. die Verzeichnisstruktur anzugeben, das/die heruntergeladen werden soll.
 ```
-	swift download <container_name> --prefix <directory>
+	swift download <Containername> --prefix <Verzeichnis>
 ```
-#### Deleting a file
+#### Datei löschen
 ```
-	swift delete <container_name> <file_name>
+	swift delete <Containername> <Dateiname>
 ```
-### Working with object versioning {: #work-with-object-versioning}
+### Mit Objektversionierung arbeiten {: #work-with-object-versioning}
 
-You can set up versions of each object in your container by using the `X-Versions-Location` flag. To do this, create an additional container to keep older versions of your objects as follows.
+Sie können unter Verwendung des Flags `X-Versions-Location` Versionen jedes Objekts in Ihrem Container einrichten. Erstellen Sie hierfür wie folgt einen weiteren Container, um ältere Versionen Ihrer Objekte aufzubewahren.
 
-If you are using the swift client, you can set it up like this:
+Bei der Verwendung des Swift-Clients können Sie die Einrichtung wie folgt vornehmen:
 ```
 	swift post container_one -H "X-Versions-Location:container_two"
 ```
-If you are using curl, you can set it up like this:
+Bei der Verwendung von curl können Sie die Einrichtung wie folgt vornehmen:
 ```
-	curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:container_two" https://<object-storage_url>/container_one
+	curl -i -X PUT -H "X-Auth-Token: <Token>" -H "X-Versions-Location:container_two" https://<Objektspeicher-URL>/container_one
 ```
-In the example, `container_two` has been set up to contain the older versions of your objects stored in `container_one`. Therefore, `container_one` will have the most current version of your objects, and `container_two` will have the older versions of your objects. Make sure `container_two` exists in order for versioning to work.
+In diesem Beispiel wurde `container_two` so eingerichtet, dass er die älteren Versionen Ihrer Objekte enthält, die in `container_one` gespeichert sind. Daher enthält `container_one` die aktuelle Version Ihrer Objekte, `container_two` enthält die älteren Versionen Ihrer Objekte. Stellen Sie sicher, dass `container_two` existiert, damit die Versionierung funktioniert.
 
-With versioning set up, when you upload an object to `container_one`, if there is an existing version of the object, the existing version is moved to `container_two` as the new version is created in `container_one`. If you delete an object from `container_one`, the previous version of the object is moved from `container_two` back to `container_one`.
+Bei eingerichteter Versionierung wird die bereits vorhandene Version beim Hochladen eines Objekts in `container_one`, sofern es eine bereits vorhandene Version gibt, nach `container_two` verschoben, da die neue Version in `container_one` erstellt wird. Wenn Sie ein Objekt aus `container_one` löschen, wird die vorherige Version des Objekts von `container_two` wieder nach `container_one` verschoben.
 
-Objects in `container_two` will be automatically named with the following format: `<Length><Object_name>/<Timestamp>`.
+Objekte in `container_two` werden automatisch im folgenden Format benannt: `<Länge><Objektname>/<Zeitmarke>`.
 
-`Length` refers to the length of the name of your object; this is a 3-characters, zero-padded hexadecimal number. `Object_name` is the name of your object. `Timestamp` is the timestamp of when this particular version of the object was originally uploaded.
+`Länge` bezieht sich dabei auf die Länge des Namens Ihres Objekts; dies ist eine aus drei Zeichen bestehende Hexadezimalzahl ohne Innenabstand. `Objektname` ist der Name Ihres Objekts. `Zeitmarke` ist die Zeitmarke des ursprünglichen Uploads dieser jeweiligen Version.
 
-To disable versioning, use the `X-Remove-Versions-Location` flag:
+Verwenden Sie für die Inaktivierung der Versionierung das Flag `X-Remove-Versions-Location`:
 ```
 	swift post container_one -H "X-Remove-Versions-Location:"
 ```
-or
+oder
 ```
-	cURL -i -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Versions-Location: anyvalue" https://<object-storage_url>/container_one
+	cURL -i -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Versions-Location: anyvalue" https://<Objektspeicher-URL>/container_one
 ```
-Here is a full example of the use of versioning:
+Im Folgenden sehen Sie ein vollständiges Beispiel für die Nutzung der Versionierung:
 
-1. Create a container:
+1. Container erstellen:
 ```
 		$ swift post container_one
 		$
 ```
-2. Set up versioning for container_one:
+2. Versionierung für container_one einrichten:
 ```
 		$ swift post container_one -H "X-Versions-Location:container_two"
 		$
 ```
-3. Create container_two:
+3. container_two erstellen:
 ```
 		$ swift post container_two
 		$
 ```
-4. Upload an object for the first time to container_one:
+4. Objekt zum ersten Mal nach container_one hochladen:
 ```
 		$ swift upload container_one object
 		object
 		$
 ```
-5. List objects in container_one:
+5. Objekte in container_one auflisten:
 ```
 		$ swift list container_one
 		object
 		$
 ```
-6. List objects in container_two:
+6. Objekte in container_two auflisten:
 ```
 		$ swift list container_two
 		$
 ```
-7. Upload a new version of the object to container_one:
+7. Neue Version des Objekts nach container_one hochladen:
 ```
 		$ swift upload container_one object
 		object
 		$
 ```
-8. List objects in container_one:
+8. Objekte in container_one auflisten:
 ```
 		$ swift list container_one
 		object
 		$
 ```
-9. List objects in container_two:
+9. Objekte in container_two auflisten:
 ```
 		$ swift list container_two
 		006object/1457456909.27383
 		$
 ```
-10. Delete object in container_one:
+10. Objekt in container_one löschen:
 ```
 		$ swift delete container_one object
 		object
 		$
 ```
-11. List both containers:
+11. Beide Container auflisten:
 ```
 		$ swift list container_one
 		object
 		$ swift list container_two
 		$
 ```
-### Scheduling object deletion {: #schedule-object-deletion}
 
-You can set your objects to expire in a given amount of time. In other words, you can schedule the deletion of your objects. You can do this by making use of either of the `X-Delete-At` or `X-Delete-After` headers. The `X-Delete-At` header takes an integer number representing the epoch time at which to delete the object. The `X-Delete_After` header takes an integer number representing the number of seconds after which the object will be deleted.
+### Objektlöschung planen {: #schedule-object-deletion}
 
-If you are using the swift client do a post to the object in your container, see the following examples.
+Sie können für Ihre Objekte festlegen, dass diese in einer angegebenen Zeitdauer ablaufen sollen. Das heißt, Sie können die Löschung Ihrer Objekte planen. Hierfür können Sie den Header `X-Delete-At` oder `X-Delete-After` verwenden. Der Wert für den Header `X-Delete-At` ist eine ganze Zahl, die die Referenzzeit darstellt, zu der das Objekt gelöscht werden soll. Der Wert für den Header `X-Delete_After` ist eine ganze Zahl, die die Anzahl an Sekunden darstellt, nach deren Ablauf das Objekt gelöscht wird.
 
-* To set the object to be deleted on "2016/04/01 08:00:00", use the following command:
+Die folgenden Beispiele zeigen die Vorgehensweise, wenn Sie den Swift-Client für einen Post an das Objekt in Ihrem Container verwenden.
+
+* Verwenden Sie den folgenden Befehl, um für das Objekt den Löschzeitpunkt auf "2016/04/01 08:00:00" festzulegen:
 ```
 		swift post -H "X-Delete-At:1459515600" container object
 ```
-* To set the object to be deleted an hour from now, use the following command:
+* Verwenden Sie den folgenden Befehl, um für das Objekt festzulegen, dass es eine Stunde nach dem aktuellen Zeitpunkt gelöscht werden soll:
 ```
 		swift post -H "X-Delete-After:3600" container object
 ```
-  After doing this, the `swift stat container object` command will show the `X-Delete-At` header with the appropriate expiration in epoch time.
+  Anschließend wird durch den Befehl `swift stat container object` der Header `X-Delete-At` mit dem entsprechenden Ablaufdatum in der Referenzzeit angezeigt.
 
-* To remove the expiration time from your object, use the following command:
+* Verwenden Sie den folgenden Befehl, um die Ablaufzeit aus Ihrem Objekt zu entfernen:
 ```
 		swift post -H "X-Remove-Delete-After:" container object
 ```
-If you are using cURL, the commands are as follows.
+Bei der Verwendung von cURL sehen die Befehle wie folgt aus:
 
-* To set the object to be deleted on "2016/04/01 08:00:00", use the following command:
+* Verwenden Sie den folgenden Befehl, um für das Objekt den Löschzeitpunkt auf "2016/04/01 08:00:00" festzulegen:
 ```
-		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-At:1459515600" https://<object-storage_url>/container/object
+		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-At:1459515600" https://<Objektspeicher-URL>/container/object
 ```
-* To set the object to be deleted an hour from now, use the following command:
+* Verwenden Sie den folgenden Befehl, um für das Objekt festzulegen, dass es eine Stunde nach dem aktuellen Zeitpunkt gelöscht werden soll:
 ```
-		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-After:3600" https://<object-storage_url>/container/object
+		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-After:3600" https://<Objektspeicher-URL>/container/object
 ```
-* To check if the object has the header, use the following command:
+* Verwenden Sie den folgenden Befehl, um zu prüfen, ob das Objekt den Header aufweist:
 ```
-		cURL -I -H "X-Auth-Token: <token>" https://<object-storage_url>/container/object
+		cURL -I -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/container/object
 ```
-* To remove the expiration time, use the following command:
+* Verwenden Sie den folgenden Befehl, um die Ablaufzeit zu entfernen:
 ```
-		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Delete-At:" https://<object-storage_url>/container/object
+		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Delete-At:" https://<Objektspeicher-URL>/container/object
 ```
-**Note:** The actual deletion of an object might not happen at the exact time indicated. However, the object will in fact expire at the specified time, meaning it will not be reachable any more. The actual deletion will take place the next time the swift-object-expirer daemon configured in your swift cluster runs.
-
-
+**Anmerkung:** Die tatsächliche Löschung eines Objekts erfolgt möglicherweise nicht genau zur angegebenen Uhrzeit. Das Objekt läuft jedoch de facto zur angegebenen Zeit ab, d. h., es ist nicht mehr erreichbar. Die tatsächliche Löschung findet bei der nächsten Ausführung des in Ihrem Swift-Cluster konfigurierten Dämons 'swift-object-expirer' statt.
 
 
 
-### Creating a temporary URL {: #create-temporary-url}
 
-A temporary URL is a long, difficult-to-guess URL that can be used for a specified period to download objects without requiring further authentication. Generate a temporary URL with the following steps:
 
-1. Identify your authentication account.
-2. Set a secret key.
-3. Create the temporary URL.
+### Temporäre URL erstellen {: #create-temporary-url}
 
-#### Identifying your authentication account
+Eine temporäre URL ist eine lange, schwer zu erratende URL, die für einen angegebenen Zeitraum zum Herunterladen von Objekten verwendet werden kann, ohne dass eine weitere Authentifizierung erforderlich ist. Sie generieren eine temporäre URL mit den folgenden Schritten:
 
-The Swift `stat` command prints information about your account:
-```
-	swift stat
-```
-Locate the Account field and note the full string behind *Account*: including `AUTH_`.
+1. Geben Sie Ihr Authentifizierungskonto an.
+2. Legen Sie einen geheimen Schlüssel fest.
+3. Erstellen Sie eine temporäre URL.
 
-#### Setting a secret key
+#### Authentifizierungskonto angeben
 
-This key can be anything that you select, but best practice is that you select a long, random, and hard to guess string.
-```
-	swift post -m "Temp-URL-Key:<key>"
-```
-Run the Swift `stat` command to verify that the `Temp-URL-Key` is set successfully.
+Der Swift-Befehl `stat` gibt Informationen zu Ihrem Konto aus:
 ```
 	swift stat
 ```
+Suchen Sie das Kontofeld (Account) und notieren Sie die vollständige Zeichenfolge hinter *Account*: einschließlich `AUTH_`.
 
-#### Creating the temporary URL
+#### Geheimen Schlüssel festlegen
 
-The Swift `tempurl` command takes these positional arguments:
-
-* [method] GET to allow download. PUT to allow upload.
-* [seconds] Time in seconds that the temporary URL will be available.
-* [path] The full path of the object expressed as `/v1/<auth_account>/<container_name>/<object_name>`. For more information, see the [{{site.data.keyword.objectstorageshort}} URL](#access-points).
-* [key] The key that you set in step 2.
-
+Dieser Schlüssel kann eine Zeichenfolge Ihrer Wahl sein. Ein bewährtes Verfahren ist, eine lange, zufällig zusammengesetzte und schwer zu erratende Zeichenfolge zu wählen.
 ```
-swift tempurl GET <seconds> <path> <key>
+	swift post -m "Temp-URL-Key:<Schlüssel>"
 ```
-
-This command will return a URL that you can append to your cluster name to get a full URL. Use the full URL to download the object with any compatible HTTP client such as curl, wget, or Firefox.
-
-## Using the Swift REST API to access {{site.data.keyword.objectstorageshort}} {: #using-swift-restapi}
-
-You can use the Swift REST API with a command–line client interface, such as cURL, or call the API from your application.  
-
-### {{site.data.keyword.objectstorageshort}} URL {: #access-points}
-
-To interact with the {{site.data.keyword.objectstorageshort}} API, construct the {{site.data.keyword.objectstorageshort}} URL as follows:
+Führen Sie den Swift-Befehl `stat` aus, um zu überprüfen, ob `Temp-URL-Key` erfolgreich festgelegt wurde.
 ```
-	https://<access point>/<API version>/AUTH_<project ID>/<container namespace>/<object namespace>
+	swift stat
 ```
 
+#### Temporäre URL erstellen
 
-The URL consists of five parts. The `<API version>` is v1. You can find the  `<project ID>`, `<container namespace>`, and `<object namespace>` of your {{site.data.keyword.objectstorageshort}} from the {{site.data.keyword.objectstorageshort}} user interface.  For the `<access point>`, see the following table:
+Der Swift-Befehl `tempurl` arbeitet mit den folgenden Positionsargumenten:
+
+* [Methode] GET, um das Herunterladen zuzulassen. PUT, um das Hochladen zuzulassen.
+* [Sekunden] Zeit in Sekunden, die die temporäre URL verfügbar sein soll.
+* [Pfad] Der vollständige Pfad des Objekts im Format `/v1/<Authentifizierungskonto>/<Containername>/<Objektname>`. Weitere Informationen finden Sie bei der [{{site.data.keyword.objectstorageshort}}-URL](#access-points).
+* [Schlüssel] Der Schlüssel, den Sie in Schritt 2 festgelegt haben.
+
+```
+swift tempurl GET <Sekunden> <Pfad> <Schlüssel>
+```
+
+Dieser Befehl gibt eine URL zurück, die Sie an Ihren Clusternamen anhängen können, um eine vollständige URL zu erhalten. Verwenden Sie die vollständige URL, um das Objekt mit einem kompatiblen HTTP-Client wie curl, wget oder Firefox herunterzuladen.
+
+## Mit der Swift-REST-API auf {{site.data.keyword.objectstorageshort}} zugreifen {: #using-swift-restapi}
+
+Sie können die Swift-REST-API in einer Befehlszeilen-Clientschnittstelle wie cURL verwenden oder Sie können die API in Ihrer Anwendung aufrufen.  
+
+### {{site.data.keyword.objectstorageshort}}-URL {: #access-points}
+
+Zur Interaktion mit der {{site.data.keyword.objectstorageshort}}-API erstellen Sie die {{site.data.keyword.objectstorageshort}}-URL wie folgt:
+```
+	https://<Zugriffspunkt>/<API-Version>/AUTH_<Projekt-ID>/<Containernamensbereich>/<object namespace>
+```
 
 
-| **Region**  |   **Public access point**                     |
+Die URL besteht aus fünf Teilen. Die `<API-Version>` ist Version 1. Sie finden die Werte für `<Projekt-ID>`, `<Containernamensbereich>` und `<object namespace>` für Ihren {{site.data.keyword.objectstorageshort}} in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle.  Informationen für den `<Zugriffspunkt>` finden Sie in der folgenden Tabelle:
+
+
+| **Region**  |   **Öffentlicher Zugriffspunkt**                     |
 |-------------|-----------------------------------------------|
 | Dallas      | https://dal.objectstorage.open.softlayer.com/ |
 | London      | https://lon.objectstorage.open.softlayer.com/ |
 
 
-*Table 1. {{site.data.keyword.objectstorageshort}} access point*
+*Tabelle 1. {{site.data.keyword.objectstorageshort}}-Zugriffspunkt*
 
 
-### {{site.data.keyword.objectstorageshort}} API
+### {{site.data.keyword.objectstorageshort}}-API
 
-See the [OpenStack Swift API Complete Reference](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window} for a comprehensive list of the {{site.data.keyword.objectstorageshort}} REST API options and examples.
+Eine umfassende Liste der Optionen der {{site.data.keyword.objectstorageshort}}-REST-API mit Beispielen finden Sie in der [vollständigen Referenz zur OpenStack-Swift-API](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}.
 
-## Using {{site.data.keyword.objectstorageshort}} across multi-regions {: #multi-regions}  
+## {{site.data.keyword.objectstorageshort}} regionsübergreifend verwenden {: #multi-regions}  
 
-The IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} service supports the Dallas and London storage regions. These storage regions are independent of the {{site.data.keyword.Bluemix_notm}} region, such as US-South and United Kingdom, in which the {{site.data.keyword.objectstorageshort}} service instance is created.  For example, if you create an {{site.data.keyword.objectstorageshort}} instance in the US-South {{site.data.keyword.Bluemix_notm}} region, you can read and write data to either the Dallas or London storage region.  
+Der {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Service unterstützt die Speicherregionen Dallas und London. Diese Speicherregionen sind unabhängig von der {{site.data.keyword.Bluemix_notm}}-Region, wie zum Beispiel 'US-South' und 'United Kingdom', in der die {{site.data.keyword.objectstorageshort}}-Serviceinstanz erstellt wurde.  Beispiel: Wenn Sie eine {{site.data.keyword.objectstorageshort}}-Instanz in der {{site.data.keyword.Bluemix_notm}}-Region 'US-South' erstellen, haben Sie Lese- und Schreibzugriff auf Daten in der Speicherregion Dallas oder in der Speicherregion London.  
 
-For the US-South {{site.data.keyword.Bluemix_notm}} region, the Dallas storage region is the default. For the United Kingdom {{site.data.keyword.Bluemix_notm}} region, the London storage region is the default.  The {{site.data.keyword.objectstorageshort}} user interface always launches to the default storage region of the {{site.data.keyword.Bluemix_notm}} region. To switch regions, click the {{site.data.keyword.objectstorageshort}} Region drop-down list and choose another region.
+Für die {{site.data.keyword.Bluemix_notm}}-Region 'US-South' ist Dallas die Standardspeicherregion. Für die {{site.data.keyword.Bluemix_notm}}-Region 'United Kingdom' ist London die Standardspeicherregion.  Die {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle startet immer mit der Standardspeicherregion der {{site.data.keyword.Bluemix_notm}}-Region. Wenn Sie die Region wechseln wollen, klicken Sie auf die Dropdown-Liste für die {{site.data.keyword.objectstorageshort}}-Regionen und wählen eine andere Region aus.
 
-**Note:** The {{site.data.keyword.objectstorageshort}} service does NOT support cross storage region replication.
+**Anmerkung:** Der {{site.data.keyword.objectstorageshort}}-Service unterstützt keine speicherregionsübergreifende Replikation.
 
-### Multi-region access
+### Zugriff auf mehrere Regionen
 
-To use the {{site.data.keyword.objectstorageshort}} service, you must [authenticate to OpenStack Keystone](#keystone-authentication). After you successfully authenticated, an `X-Subject-Token` and the {{site.data.keyword.objectstorageshort}} endpoints will be available in the response.
+Für die Verwendung des {{site.data.keyword.objectstorageshort}}-Service müssen Sie sich [bei OpenStack Keystone authentifizieren](#keystone-authentication). Nach der erfolgreichen Authentifizierung werden ein `X-Subject-Token` und die {{site.data.keyword.objectstorageshort}}-Endpunkte in der Antwort zur Verfügung gestellt.
 
-For example, to create a container named `my_container` in the Dallas storage region, specify a Dallas access point in the curl command as follows:
+Beispiel: Wenn Sie einen Container mit dem Namen `my_container` in der Speicherregion Dallas erstellen wollen, geben Sie wie folgt einen Zugriffspunkt von Dallas im curl-Befehl an:
 ```
 	# curl -i https://dal.objectstorage.open.softlayer.com/v1/AUTH_3c9c89a2edbb458da74a9e81e215da9e/my_container -X PUT -H "Content-Length: 0" -H "X-Auth-Token: gAAAAABWlw5mwttbb_6G3LnTiGusyoOSEHXMG7oTnDYWN1vBZB6XAxUEhz4ehGkdw6Qm_I9ZFFXr8fwcc2KaEbpWbQoglhAvrYTXbrkn8MvErLdnbcT0XK2t5N7lEZyyKQlsgmQWcrch8VOO_OiSKKToORYR7luI-2TrR_JIVZm-8AAS6hLhk9"
 
@@ -396,7 +404,7 @@ For example, to create a container named `my_container` in the Dallas storage re
 	Date: Thu, 14 Jan 2016 03:16:13 GMT
 ```
 
-To create a container named `my_container` in the London storage region, specify a London access point in the curl command as follows:
+Wenn Sie einen Container mit dem Namen `my_container` in der Speicherregion London erstellen wollen, geben Sie wie folgt einen Zugriffspunkt von London im curl-Befehl an:
 ```
 	# curl -i https://lon.objectstorage.open.softlayer.com/v1/AUTH_3c9c89a2edbb458da74a9e81e215da9e/my_container -X PUT -H "Content-Length: 0" -H "X-Auth-Token: gAAAAABWlw5mwttbb_6G3LnTiGusyoOSEHXMG7oTnDYWN1vBZB6XAxUEhz4ehGkdw6Qm_I9ZFFXr8fwcc2KaEbpWbQoglhAvrYTXbrkn8MvErLdnbcT0XK2t5N7lEZyyKQlsgmQWcrch8VOO_OiSKKToORYR7luI-2TrR_JIVZm-8AAS6hLhk9"
 
@@ -406,33 +414,33 @@ To create a container named `my_container` in the London storage region, specify
 	X-Trans-Id: tx4a640ca81c7240ea8f812-00569712fc
 	Date: Thu, 14 Jan 2016 03:16:13 GMT
 ```
-**Note:** The `X-Subject-Token` that you acquired from Keystone works across storage regions.
+**Anmerkung:** Das `X-Subject-Token`, das Sie von Keystone empfangen haben, funktioniert speicherregionsübergreifend.
 
-For more information about the access points for different regions, see the [Object Storage access point](#access-points) table.
+Weitere Informationen zu den Zugriffspunkten für verschiedene Regionen finden Sie in der Tabelle mit den [Object Storage-Zugriffpunkten](#access-points).
 
 
-## Understanding authentication and credentials {: #understanding-authentication-credentials}
+## Informationen zu Authentifizierung und Berechtigungsnachweisen {: #understanding-authentication-credentials}
 
-### Generating {{site.data.keyword.objectstorageshort}} credentials without binding an application
+### {{site.data.keyword.objectstorageshort}}-Berechtigungsnachweise ohne Bindung einer Anwendung generieren
 
-To generate {{site.data.keyword.objectstorageshort}} cloud credentials for use outside a {{site.data.keyword.Bluemix_notm}} application, you must generate a service key for your {{site.data.keyword.objectstorageshort}} instance. You can generate a new key by selecting  **Service Credentials** from the sidebar of the user interface or by using the Cloud Foundry CLI (version 6.11.3 or later). After you generate and retrieve a service key for your {{site.data.keyword.objectstorageshort}} instance, you can use the cloud integration information to request a Keystone token by using an OpenStack SDK or the OpenStack Identity API and start using the Swift account to manage objects.
+Zum Generieren von {{site.data.keyword.objectstorageshort}}-Cloudberechtigungsnachweisen für die Verwendung außerhalb einer {{site.data.keyword.Bluemix_notm}}-Anwendung müssen Sie einen Serviceschlüssel für Ihre {{site.data.keyword.objectstorageshort}}-Instanz generieren. Sie können einen neuen Schlüssel generieren, indem Sie **Serviceberechtigungsnachweise** in der Seitenleiste der Benutzerschnittstelle auswählen oder die Befehlszeilenschnittstelle Cloud Foundry CLI (Version 6.11.3 oder höher) verwenden. Nach der Generierung und dem Abruf eines Serviceschlüssels für Ihre {{site.data.keyword.objectstorageshort}}-Instanz können Sie die Informationen zur Cloudintegration verwenden, um ein Keystone-Token mit einem OpenStack-SDK oder der OpenStack-Identity-API anzufordern und anschließend mit der Verwendung des Swift-Kontos zur Objektverwaltung zu beginnen.
 
-To create the key by using the Cloud Foundry CLI, log in and run the following command:
+Wenn Sie den Schlüssel über die Cloud Foundry CLI erstellen möchten, müssen Sie sich bei dieser Befehlszeilenschnittstelle anmelden und den folgenden Befehl ausführen:
  ```
-    cf create-service-key <object_storage_instance_name> <unique_name_for_this_key>
+    cf create-service-key <Object Storage-Instanzname> <eindeutiger Name für diesen Schlüssel>
 ```
-To retrieve the service credentials from the Cloud Foundry CLI, run the following command:
+Führen Sie den folgenden Befehl aus, um die Serviceberechtigungsnachweise über die Cloud Foundry CLI abzurufen:
 ```
-	cf service-key <object_storage_instance_name> <unique_name_for_this_key>
+	cf service-key <Object Storage-Instanzname> <eindeutiger Name für diesen Schlüssel>
 ```
 
-### Cloud projects and users
-Provisioning a new {{site.data.keyword.objectstorageshort}} instance creates an isolated Keystone project in the IBM Public Cloud. When you bind a new application to the {{site.data.keyword.objectstorageshort}} instance, a new Keystone user with access to the project is created. When you deprovision the instance, the project and user are deleted.
+### Cloudprojekte und -benutzer
+Durch die Bereitstellung einer neuen {{site.data.keyword.objectstorageshort}}-Instanz wird in der IBM Public Cloud ein isoliertes Keystone-Projekt erstellt. Wenn Sie eine neue Anwendung an die {{site.data.keyword.objectstorageshort}}-Instanz binden, wird ein neuer Keystone-Benutzer mit Zugriff auf das Projekt erstellt. Wenn Sie die Instanz löschen, werden auch Projekt und Benutzer gelöscht.
 
 ### OpenStack Identity (Keystone) v3 {: #keystone-authentication}
-The credentials structure contains a complete set of attributes to allow to you to choose the OpenStack token request method or OpenStack SDK that best fits your application.
+Die Struktur der Berechtigungsnachweise enthält einen vollständigen Satz von Attributen, sodass Sie die Methode für die OpenStack-Tokenanforderung oder das OpenStack-SDK auswählen können, das sich am besten für Ihre Anwendung eignet.
 
-The recommended v3 token request is a POST request to https://identity.open.softlayer.com/v3/auth/tokens as shown in the following curl command:
+Die empfohlene v3-Tokenanforderung ist eine POST-Anforderung an https://identity.open.softlayer.com/v3/auth/tokens, wie im folgenden curl-Befehl gezeigt:
 ```
 	curl -i \
 	  -H "Content-Type: application/json" \
@@ -459,9 +467,9 @@ The recommended v3 token request is a POST request to https://identity.open.soft
 	}' \
 	  https://identity.open.softlayer.com/v3/auth/tokens ; echo
 ```
-Use the value of the `X-Subject-Token` field from the response header as the `X-Auth-Token` field when you make requests to the {{site.data.keyword.objectstorageshort}} service.
+Verwenden Sie den Wert des Felds `X-Subject-Token` aus dem Antwortheader als `X-Auth-Token`, wenn Sie Anforderungen an den {{site.data.keyword.objectstorageshort}}-Service senden.
 
-An example response is as follows. The response is trimmed to show only the {{site.data.keyword.objectstorageshort}} relevent information.
+Eine Beispielantwort könnte wie folgt aussehen. Die Antwort wird so abgeschnitten, dass nur die für {{site.data.keyword.objectstorageshort}} releventen Informationen angezeigt werden.
 
 	HTTP/1.1 201 Created
 	Date: Mon, 29 Feb 2016 21:03:41 GMT
@@ -482,8 +490,8 @@ An example response is as follows. The response is trimmed to show only the {{si
 	    ],
 	    "catalog" : [
 	      {
-	        "endpoints" : [
-	          {
+	        "endpoints": [
+			{
 	            "id" : "20cbfa6ff22b4a67a1484d30235bfc80",
 	            "region" : "london",
 	            "region_id" : "london",
@@ -562,95 +570,95 @@ An example response is as follows. The response is trimmed to show only the {{si
 	}
 ```
 
-The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog. The Service Catalog is contained in the response body of the token request. The response is a full catalog of OpenStack services that are available. Select the endpoint from the Service Catalog with type of `object-store` and the region that matches the region field in the credentials.
+Die {{site.data.keyword.objectstorageshort}}-URL ist im Servicekatalog zu finden. Der Servicekatalog ist im Antworthauptteil der Tokenanforderung enthalten. Die Antwort ist ein vollständiger Katalog der OpenStack-Services, die verfügbar sind. Wählen Sie den Endpunkt im Servicekatalog mit dem Typ `object-store` und mit der Region aus, die dem Feld für die Region in den Berechtigungsnachweisen entspricht.
 
-**Note:** Use the public interface (`publicURL`). The internal interface (`internalURL`) is not accessible from {{site.data.keyword.Bluemix_notm}}.
-
-
-
-## Securing files with fine-grained access control {: #fine-grained-access-control}
-
-Fine-grained access control lists help secure files when you have multiple users who store files in the same container.
-
-Note: Procedures that are outlined in this doc require the Swift CLI. For more information, see [using {{site.data.keyword.objectstorageshort}} with the Swift CLI](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli).
+**Anmerkung:** Verwenden Sie die allgemein zugängliche Schnittstelle (`publicURL`). Auf die interne Schnittstelle (`internalURL`) kann von {{site.data.keyword.Bluemix_notm}} aus nicht zugegriffen werden.
 
 
-### Types of access {: #access-types}
 
-Access to the service is controlled by user roles and container access control lists. {{site.data.keyword.objectstorageshort}} users can be either administrative or non-administrative. Access control lists are enabled by administrative users at the container level and are not available for the service instance, storage account, or at the project level.
+## Dateien durch differenzierte Zugriffssteuerung schützen {: #fine-grained-access-control}
+
+Differenzierte Zugriffssteuerungslisten (ACLs) sind für den Schutz von Dateien hilfreich, wenn mehrere Benutzer vorhanden sind, die Dateien in demselben Container speichern.
+
+Anmerkung: Die in diesem Dokument erläuterten Prozeduren erfordern die Swift-CLI. Weitere Informationen finden Sie unter [{{site.data.keyword.objectstorageshort}} mit der Swift-CLI verwenden](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli).
+
+
+### Zugriffstypen {: #access-types}
+
+Der Zugriff auf den Service wird durch Benutzerrollen und Zugriffssteuerungslisten für Container gesteuert. {{site.data.keyword.objectstorageshort}}-Benutzer können Benutzer mit Administratorberechtigungen oder Benutzer ohne Administratorberechtigungen sein. Zugriffssteuerungslisten werden durch Administratorbenutzer auf der Containerebene aktiviert und sind für die Serviceinstanz, das Speicherkonto oder auf Projektebene nicht verfügbar.
 
 <table>
   <tr>
-    <th> Administrative users (admin) </th>
-    <th> Non-administrative users (member) </th>
+    <th> Benutzer mit Administratorberechtigungen (admin) </th>
+    <th> Benutzer ohne Administratorberechtigungen (member) </th>
   </tr>
   <tr>
-    <td> Manage access control </td>
-    <td> By default, have no access to the service or its containers </td>
+    <td> Zugriffssteuerung verwalten </td>
+    <td> Standardmäßig kein Zugriff auf den Service oder seine Container </td>
   </tr>
   <tr>
-    <td> Can create and delete containers </td>
-    <td> Can perform actions based on the containers read/write ACLs </td>
+    <td> Container erstellen und löschen </td>
+    <td> Aktionen abhängig von den Lese-/Schreibzugriffssteuerungslisten der Container </td>
   </tr>
   <tr>
-    <td> Can read and write to containers </td>
-    <td> Can perform actions as determined by the admin </td>
+    <td> Containerinhalt lesen und schreiben </td>
+    <td> Durch den Administrator festgelegte Aktionen </td>
   </tr>
 </table>
 
-*Table 1: User roles defined*
+*Tabelle 1: Definierte Benutzerrollen*
 
-You can manage {{site.data.keyword.objectstorageshort}} users through the {{site.data.keyword.Bluemix_notm}} user interface, the Cloud Foundry API, or the Cloud Foundry CLI.
+Sie können {{site.data.keyword.objectstorageshort}}-Benutzer über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle, die Cloud Foundry-API oder die Cloud Foundry CLI verwalten.
 
 
 
-### Generating {{site.data.keyword.objectstorageshort}} service credentials {: #generating}
+### {{site.data.keyword.objectstorageshort}}-Serviceberechtigungsnachweise generieren {: #generating}
 
-From the new {{site.data.keyword.Bluemix_notm}} console, you can generate new service credentials for {{site.data.keyword.objectstorageshort}} users.  To see the new console, click **Try the new {{site.data.keyword.Bluemix_notm}}**.
+Über die neue {{site.data.keyword.Bluemix_notm}}-Konsole können Sie neue Serviceberechtigungsnachweise für {{site.data.keyword.objectstorageshort}}-Benutzer generieren.  Zum Anzeigen der neuen Konsole klicken Sie auf die Option **Neues {{site.data.keyword.Bluemix_notm}} testen**.
 
-1.  Log in to {{site.data.keyword.Bluemix_notm}} as a user with a developer role. You must be located within the space of the service instance you want to manage.
-2. Click the **Service Credentials** tab.
-3. Click **New Credential**.
-4. Provide a name for the credential.
-5. In the **Add Inline Configuration Parameters** text field, input the credential information for the role you want to create. The information must be formatted as a JSON payload.
-  - To create an administrative user: `{"role":"admin"}`
-  - To create a non-administrative user: `{"role":"member"}`
-5. Click **Add**.
+1.  Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} als Benutzer mit einer Entwicklerrolle an. Sie müssen sich in dem Bereich der Serviceinstanz befinden, die Sie verwalten wollen.
+2. Klicken Sie auf die Registerkarte **Serviceberechtigungsnachweise**.
+3. Klicken Sie auf **Neuer Berechtigungsnachweis**.
+4. Geben Sie einen Namen für den Berechtigungsnachweis an.
+5. Geben Sie in das Textfeld **Lineare Konfigurationsparameter hinzufügen** die Informationen zu dem Berechtigungsnachweis für die Rolle ein, die Sie erstellen wollen. Die Informationen müssen als JSON-Nutzdaten formatiert sein.
+  - Zum Erstellen eines Benutzers mit Administratorberechtigungen: `{"role":"admin"}`
+  - Zum Erstellen eines Benutzers ohne Administratorberechtigungen: `{"role":"member"}`
+5. Klicken Sie auf **Hinzufügen**.
 
-To generate service credentials using cURL commands or the Swift CLI you can use the following steps.
+Zum Generieren von Serviceberechtigungsnachweisen durch cURL-Befehle oder über die Swift-CLI können Sie die folgenden Schritte ausführen.
 
-1. Log in to {{site.data.keyword.Bluemix_notm}} as a user with a developer role. You must be located within the space of the service instance you want to manage.
+1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} als Benutzer mit einer Entwicklerrolle an. Sie müssen sich in dem Bereich der Serviceinstanz befinden, die Sie verwalten wollen.
 
   ```
-  cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
+  cf login -a api.ng.bluemix.net -u <Benutzer-ID> -p <Kennwort> -o <Organisation> -s <Bereich>
   ```
 
-2. Generate service credentials. `service-key-name` will be the name of your credential. You can use either the Cloud Foundry command or the cURL command.
+2. Generieren Sie Serviceberechtigungsnachweise. `Serviceschlüsselname` wird dabei zum Namen Ihres Berechtigungsnachweises. Sie können entweder den Cloud Foundry-Befehl oder den cURL-Befehl verwenden.
 
-  Cloud Foundry command:
+  Cloud Foundry-Befehl:
   ```
-  cf create-service-key "<object_storage_service_instance_name>" <service-key-name> -c '{"role":"<object_storage_role>"}'
+  cf create-service-key "<Name der Object Storage-Serviceinstanz>" <Serviceschlüsselname> -c '{"role":"<Object Storage-Rolle>"}'
   ```
 
-  Example:
+  Beispiel:
 
   ```
   cf create-service-key "Object-Storage-AclTest" GeorgeKey -c '{"role":"member"}'
 
   ```
-  cURL command:
+  cURL-Befehl:
   ```
-  curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name": "<user_name>", "role": "member"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: " -H "Cookie: "
+  curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<Serviceinstanz-GUID>",   "name": "<Benutzername>", "role": "member"}' -X POST -H "Authorization: <Trägertoken>" -H "Content-Type: " -H "Cookie: "
   ```
 
-3. Validate the credentials for Service Key you created.
+3. Validieren Sie die Berechtigungsnachweise für den von Ihnen erstellten Serviceschlüssel.
 
-  Cloud Foundry command:
+  Cloud Foundry-Befehl:
   ```
-  cf service-key <service_key_name> <member_name>
+  cf service-key <Serviceschlüsselname> <Member-Name>
   ```
-  Example:
-  Creating a member service key for a service instance named Object-Storage-Acl-Test.
+  Beispiel:
+  Erstellen eines Member-Serviceschlüssels für eine Serviceinstanz mit dem Namen Object-Storage-Acl-Test.
   ```
   {
     "auth_url": "https://identity.open.softlayer.com",
@@ -665,58 +673,58 @@ To generate service credentials using cURL commands or the Swift CLI you can use
     "username": "member_2afbeea1d58b1867f46c699553d1e4513e7df83a"
   }
   ```
-  cURL command:
+  cURL-Befehl:
   ```
-  curl "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <bearer_token>" -H "Cookie: "
+  curl "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <Trägertoken>" -H "Cookie: "
   ```
 
 
 
-### Assigning access {: #assigning-access}  
+### Zugriff zuweisen {: #assigning-access}  
 
-Only an {{site.data.keyword.objectstorageshort}} user with an admin role can grant read or write access to a container for another user.
+Nur ein {{site.data.keyword.objectstorageshort}}-Benutzer mit Administratorrolle kann einem anderen Benutzer Lese- oder Schreibzugriff auf einen Container erteilen.
 
-To grant read access in the CLI use either the `--read-acl` or the `-r` option.
+Zum Erteilen des Lesezugriffs über die CLI verwenden Sie die Option `--read-acl` oder die Option `-r`.
 
-1. Authenticate your credentials by using the information in the service credentials you created.  You receive your Object Storage URL and authentication token as an output.
+1. Authentifizieren Sie Ihre Berechtigungsnachweise mit den Informationen in den Serviceberechtigungsnachweisen, die Sie erstellt haben.  Sie empfangen Ihre Object Storage-URL und Ihr Authentifizierungstoken als Ausgabe.
 
-  Swift command:
+  Swift-Befehl:
   ```
-  export OS_USER_ID=<user_id>
-  export OS_PASSWORD=<password>
-  export OS_TENANT_ID=<project_id>
+  export OS_USER_ID=<Benutzer-ID>
+  export OS_PASSWORD=<Kennwort>
+  export OS_TENANT_ID=<Projekt-ID>
   export OS_AUTH_URL=https://identity.open.softlayer.com/v3
-  export OS_REGION_NAME=<region>
+  export OS_REGION_NAME=<Region>
   export OS_IDENTITY_API_VERSION=3
   export OS_AUTH_VERSION=3
 
   swift auth
   ```
-  cURL command:
+  cURL-Befehl:
   ```
-  curl -i -H "X-Auth-User: <user_id>" -H "X-Auth-Key: <password>" <auth_url>
+  curl -i -H "X-Auth-User: <Benutzer-ID>" -H "X-Auth-Key: <Kennwort>" <Authentifizierungs-URL>
   ```
-3. Grant read access by running the following command:
+3. Führen Sie den folgenden Befehl aus, um Lesezugriff zu erteilen:
 
-  Swift command:
+  Swift-Befehl:
   ```
-  swift post <container_name> --read-acl "<user_id>:<project_id>"
+  swift post <Containername> --read-acl "<Benutzer-ID>:<Projekt-ID>"
   ```
-  cURL command:
+  cURL-Befehl:
   ```
-  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: <tenant_id>:<project_id>" -H "X-Auth-Token: <OS_AUTH_TOKEN>"
+  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: <Tenant-ID>:<Projekt-ID>" -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
-4. Verify the Read ACL value.
+4. Überprüfen Sie den Wert für die Lesezugriffssteuerungsliste (Read ACL).
 
-  Swift command:
+  Swift-Befehl:
   ```
-  swift stat <container_name>
+  swift stat <Containername>
   ```
-  cURL command:
+  cURL-Befehl:
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token:<OS_AUTH_TOKEN>"
   ```
-  Example output:
+  Beispielausgabe:
   ```
   HTTP/1.1 204 No Content
   Content-Length: 0
@@ -731,151 +739,151 @@ To grant read access in the CLI use either the `--read-acl` or the `-r` option.
   Date: Tue, 28 Jun 2016 20:57:58 GMT
   ```
 
-You can manipulate read ACL combinations.
+Sie können verschiedene ACL-Kombinationen für Lesezugriff angeben.
 
 <table>
   <tr>
-    <th> Permission </th>
-    <th> Read ACL options </th>
+    <th> Berechtigung </th>
+    <th> Optionen für Lesezugriffssteuerung (Read ACL) </th>
   </tr>
   <tr>
-    <td> Read for all referers regardless of account affiliation </td>
+    <td> Lesen für alle Referrer unabhängig von der Kontozuordnung </td>
     <td> `.r,*` </td>
   </tr>
   <tr>
-    <td> Read and list for all referers and listing </td>
+    <td> Lesen und Auflisten für alle Referrer und Listen </td>
     <td> `.r:*,.rlistings` </td>
   </tr>
   <tr>
-    <td> Read and list for a specified user in a specific project </td>
-    <td> `< project_id>:< user_id>` </td>
+    <td> Lesen und Auflisten für angegebenen Benutzer in bestimmtem Projekt </td>
+    <td> `< Projekt-ID>:< Benutzer-ID>` </td>
   </tr>
   <tr>
-    <td> Read and list for a specified user in every project </td>
-    <td> `<*>:< user_id>` </td>
+    <td> Lesen und Auflisten für angegebenen Benutzer in jedem Projekt </td>
+    <td> `<*>:< Benutzer-ID>` </td>
   </tr>
   <tr>
-    <td> Read and list for a every user in a specified project </td>
-    <td> `< project_id>:<*>` </td>
+    <td> Lesen und Auflisten für jeden Benutzer in angegebenem Projekt </td>
+    <td> `< Projekt-ID>:<*>` </td>
   </tr>
   <tr>
-    <td> Read and list for every user in every project  </td>
+    <td> Lesen und Auflisten für jeden Benutzer in jedem Projekt  </td>
     <td> `<*>:<*>` </td>
   </tr>
 </table>
 
-*Table 2: Read access permissions by option*
+*Tabelle 2: Lesezugriffsberechtigungen nach Option*
 
-Note: Use a comma (,) to separate access control lists. For example, `-read-acl project id:user_id1, project_id2:user_id2`.
+Anmerkung: Trennen Sie Zugriffssteuerungslisten durch ein Komma (,). Beispiel: `-read-acl projekt-id:benutzer-id1, projekt-id2:benutzer-id2`.
 
 
-To grant write access use the `--write-acl` or `-w` option through the Swift CLI.
+Zum Erteilen von Schreibzugriff verwenden Sie die Option `--write-acl` oder `-w` in der Swift-CLI.
 
-1. Authenticate your credentials by using the information in the service credentials you created.  You receive your Object Storage URL and authentication token as an output.
+1. Authentifizieren Sie Ihre Berechtigungsnachweise mit den Informationen in den Serviceberechtigungsnachweisen, die Sie erstellt haben.  Sie empfangen Ihre Object Storage-URL und Ihr Authentifizierungstoken als Ausgabe.
 
-  Swift command:
+  Swift-Befehl:
   ```
-  export OS_USER_ID="<user_id>"
-  export OS_PASSWORD="<password>"
-  export OS_TENANT_ID=<tenant_id>
+  export OS_USER_ID="<Benutzer-ID>"
+  export OS_PASSWORD="<Kennwort>"
+  export OS_TENANT_ID=<Tenant-ID>
   export OS_AUTH_URL=https://identity.open.softlayer.com/v3
-  export OS_REGION_NAME=<region>
+  export OS_REGION_NAME=<Region>
   export OS_IDENTITY_API_VERSION=3
   export OS_AUTH_VERSION=3
 
   swift auth
   ```
-  cURL command:
+  cURL-Befehl:
   ```
-  curl -i -H "X-Auth-User:< user_id>" -H "X-Auth-Key:< password>" https://identity.open.softlayer.com/v3
+  curl -i -H "X-Auth-User:<Benutzer-ID>" -H "X-Auth-Key:<Kennwort>" https://identity.open.softlayer.com/v3
   ```
-2. Grant write access by running the following command:
+2. Führen Sie den folgenden Befehl aus, um Schreibzugriff zu erteilen:
 
-  Swift command:
+  Swift-Befehl:
   ```
-  swift post <container_name> --write-acl "<user_id>:<project_id>"
+  swift post <Containername> --write-acl "<Benutzer-ID>:<Projekt-ID>"
   ```
-  cURL command:
+  cURL-Befehl:
   ```
-  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: <user_id>: <project_id>" -H "X-Auth-Token:<OS_AUTH_TOKEN>"
+  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: <Benutzer-ID>: <Projekt-ID>" -H "X-Auth-Token:<OS_AUTH_TOKEN>"
 
   ```
-3. Verify the write ACL value.
+3. Überprüfen Sie den Wert für die Schreibzugriffssteuerungsliste (Write ACL).
 
-  Swift command:
+  Swift-Befehl:
   ```
-  swift stat <container_name>
+  swift stat <Containername>
   ```
-  cURL command:
+  cURL-Befehl:
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token:<OS_AUTH_TOKEN>"
   ```
 
 
-You can manipulate write ACL combinations.
+Sie können verschiedene ACL-Kombinationen für Schreibzugriff angeben.
 
 <table>
   <tr>
-    <th> Permission </th>
-    <th> Write ACL options </th>
+    <th> Berechtigung </th>
+    <th> Optionen für Schreibzugriffssteuerung (Write ACL) </th>
   </tr>
   <tr>
-    <td> Write for a specified user in a specific project </td>
-    <td> `<project_id>:<user_id>` </td>
+    <td> Schreiben für angegebenen Benutzer in bestimmtem Projekt </td>
+    <td> `<Projekt-ID>:<Benutzer-ID>` </td>
   </tr>
   <tr>
-    <td> Write for a specified user in every project </td>  
-    <td> `*:<user_id>` </td>
+    <td> Schreiben für angegebenen Benutzer in jedem Projekt </td>  
+    <td> `*:<Benutzer-ID>` </td>
   </tr>
   <tr>
-    <td> Write for every user in a specified project </td>
-    <td> `<project_id>:<*>` </td>
+    <td> Schreiben für jeden Benutzer in angegebenem Projekt </td>
+    <td> `<Projekt-ID>:<*>` </td>
   </tr>
   <tr>
-    <td> Write for every user in every project </td>
+    <td> Schreiben für jeden Benutzer in jedem Projekt </td>
     <td> `<*>:<*>` </td>
   </tr>
 </table>
 
-*Table 3: Write access permissions by option*
+*Tabelle 3: Schreibzugriffsberechtigungen nach Option*
 
-Note: Use a comma (,) to separate access control lists. For example, `-write-acl project id:user_id1, project_id2:user_id2`.
-
-
+Anmerkung: Trennen Sie Zugriffssteuerungslisten durch ein Komma (,). Beispiel: `-write-acl projekt-id:benutzer-id1, projekt-id2:benutzer-id2`.
 
 
-### Removing access {: #removing-access}
 
-To remove read ACLs from a container:
 
-  Swift command:
+### Zugriff entfernen {: #removing-access}
+
+Gehen Sie wie folgt vor, um Lesezugriffssteuerungslisten von einem Container zu entfernen:
+
+  Swift-Befehl:
   ```
-  swift post <container_name> --read-acl “”
+  swift post <Containername> --read-acl “”
   ```
-  cURL command:
+  cURL-Befehl:
   ```
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
 
-To remove write ACLs from a container:
+Gehen Sie wie folgt vor, um Schreibzugriffssteuerungslisten von einem Container zu entfernen:
 
-  Swift command:
+  Swift-Befehl:
   ```
-  swift post <container_name> --write-acl “”
+  swift post <Containername> --write-acl “”
   ```
-  cURL command:
+  cURL-Befehl:
   ```
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
 
-To verify that you have removed an ACL:
+Überprüfen Sie, ob eine Zugriffssteuerungsliste (ACL) entfernt wurde:
 
-  Swift command:
+  Swift-Befehl:
   ```
-  swift stat <container_name>
+  swift stat <Containername>
   ```
 
-  Example output:
+  Beispielausgabe:
   ```
          Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
        Container: Test
@@ -892,7 +900,7 @@ X-Storage-Policy: standard
     Content-Type: text/plain; charset=utf-8
 
   ```
-  cURL command:
+  cURL-Befehl:
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
@@ -900,14 +908,14 @@ X-Storage-Policy: standard
 
 
 
-## Unbinding and deprovisioning {{site.data.keyword.objectstorageshort}} {: #deprovisioning-object-storage}
+## Bindung und Bereitstellung von {{site.data.keyword.objectstorageshort}} aufheben {: #deprovisioning-object-storage}
 
-### How to deprovision your {{site.data.keyword.objectstorageshort}} service
-1.	Select your service from the {{site.data.keyword.Bluemix_notm}} dashboard.  
-2.	Click the gear icon and select **Delete Service**.
+### Vorgehensweise zum Löschen Ihres {{site.data.keyword.objectstorageshort}}-Service
+1.	Wählen Sie Ihren Service im {{site.data.keyword.Bluemix_notm}}-Dashboard aus.  
+2.	Klicken Sie auf das Zahnradsymbol und wählen Sie **Service löschen** aus.
 
-**Attention:** If you deprovision an IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} service instance, the cloud project and Swift account are deleted. All containers and objects in the deprovisioned instance are deleted from Swift and cannot be restored.
+**Achtung:** Wenn Sie eine IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Serviceinstanz löschen, werden das Cloudprojekt und das Swift-Konto gelöscht. Alle Container und Objekte in der gelöschten Instanz werden aus Swift gelöscht und können nicht wiederhergestellt werden.
 
-### Unbinding an application or deleting a service key
+### Bindung für eine Anwendung aufheben oder einen Serviceschlüssel löschen
 
-If you unbind an application from the {{site.data.keyword.objectstorageshort}} instance or delete the service key, the credentials are deleted. The {{site.data.keyword.objectstorageshort}} account is not deleted until the {{site.data.keyword.objectstorageshort}} instance is deprovisioned. You can generate new cloud credentials by [rebinding or creating a new service key](#bind-object-storage-to-application).
+Wenn Sie die Bindung einer Anwendung an die {{site.data.keyword.objectstorageshort}}-Instanz aufheben oder den Serviceschlüssel löschen, werden die Berechtigungsnachweise gelöscht. Das {{site.data.keyword.objectstorageshort}}-Konto wird erst gelöscht, wenn die Bereitstellung der {{site.data.keyword.objectstorageshort}}-Instanz aufgehoben wird. Sie können neue Cloudberechtigungsnachweise generieren, indem Sie einen [neuen Serviceschlüssel binden oder erstellen](#bind-object-storage-to-application).

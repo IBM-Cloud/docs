@@ -1,44 +1,51 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} 사용 시작 {: #using-object-storage}
+# Einführung in {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
 
-*마지막 업데이트 날짜: 2016년 8월 13일*
+*Letzte Aktualisierung: 13. August 2016*
 {: .last-updated}
 
 
-## {{site.data.keyword.objectstorageshort}} 사용자 인터페이스 사용 {: #using-object-storage-ui}
+## {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle verwenden {: #using-object-storage-ui}
 
-### UI 요소 및 탐색
-{{site.data.keyword.objectstorageshort}}가 프로비저닝되면 {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} 서비스 인스턴스 대시보드에서 인스턴스 정보를 볼 수 있습니다. 대시보드에서 {{site.data.keyword.objectstorageshort}} 인스턴스를 선택하여 자세한 정보가 포함된 패널을 표시하십시오.   
-#### 사용량 데이터
-애플리케이션의 홈 페이지에 인스턴스에 대한 스토리지 사용량 정보가 표시됩니다. 여기에는 현재 **스토리지 컨테이너** 수와 모든 컨테이너에 있는 **오브젝트** 수의 총계도 표시됩니다. 메모리 사용량(메가바이트)이 나열되어 있습니다. **이용된 스토리지**는 현재 사용되는 공간의 크기를 가리킵니다. 
-#### 조치
-최신 사용 데이터를 검색하려면 **새로 고치기** 단추를 클릭하십시오.    
-####오브젝트 브라우저
-오브젝트 브라우저를 사용하여 오브젝트 스토리지 컨테이너 및 오브젝트를 관리하십시오. 사용자는 기타 조치 중에서 컨테이너를 작성하고, 파일을 업로드하고, 컨테이너 및 파일을 삭제할 수 있습니다.
+### Benutzerschnittstelle - Elemente und Navigation
+Wenn Ihr {{site.data.keyword.objectstorageshort}} bereitgestellt wurde, können Sie die Informationen zu Ihrer Instanz im {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Dashboard für Serviceinstanzen anzeigen. Wählen Sie im Dashboard Ihre {{site.data.keyword.objectstorageshort}}-Instanz aus, um den Fensterbereich mit ausführlicheren Informationen anzuzeigen.  
+#### Nutzungsdaten
+Auf der Startseite Ihrer Anwendung sehen Sie die Informationen zur Speicherbelegung für Ihre Instanz. Außerdem wird die aktuelle Anzahl der **Speichercontainer** und die Gesamtzahl der **Objekte** in allen Containern angezeigt, über die Sie verfügen. Ihre Speicherbelegung wird in Megabyte angegeben. **Belegter Speicher** bezieht sich auf die aktuelle Größe des Speicherplatzes, der belegt ist.
+#### Aktionen
+Klicken Sie auf die Schaltfläche **Aktualisieren**, um die aktuellsten Nutzungsdaten abzurufen.   
+####Objektbrowser
+Verwenden Sie den Objektbrowser, um Object Storage-Container und -Objekte zu verwalten. Sie können Container erstellen, Dateien hochladen, Container löschen, Dateien löschen und andere Aktionen ausführen.
 
 
-## {{site.data.keyword.Bluemix_notm}} 앱에서 {{site.data.keyword.objectstorageshort}} 사용 {: #using-object-storage-from-bluemix-app}
+## {{site.data.keyword.objectstorageshort}} über eine {{site.data.keyword.Bluemix_notm}}-App verwenden {: #using-object-storage-from-bluemix-app}
 
-### 작성 후 {{site.data.keyword.objectstorageshort}} 서비스를 애플리케이션에 바인딩하는 방법 {: #bind-object-storage-to-application}
-1.	{{site.data.keyword.Bluemix_notm}} 대시보드에서 바인딩할 앱을 선택하십시오. 
-2.	앱 개요에서 **서비스 또는 API 바인드**를 클릭하십시오. 
-3.	서비스 목록에서 {{site.data.keyword.objectstorageshort}} 인스턴스를 선택한 후 **추가**를 클릭하십시오. 
-4.	프롬프트되면 **다시 스테이징**을 클릭하십시오. 새 서비스를 사용하려면 앱을 다시 스테이징해야 합니다.
+### Vorgehensweise zum Binden eines {{site.data.keyword.objectstorageshort}}-Service an eine Anwendung nach der Erstellung {: #bind-object-storage-to-application}
+1.	Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard die App aus, die Sie binden möchten.
+2.	Klicken Sie in der App-Übersicht auf **Service oder API binden**.
+3.	Wählen Sie in der Liste der Services Ihre {{site.data.keyword.objectstorageshort}}-Instanz aus und klicken Sie auf **Hinzufügen**.
+4.	Klicken Sie auf **Erneutes Staging**, wenn Sie dazu aufgefordert werden. Für die Verwendung des neuen Service ist für Ihre App ein erneutes Staging erforderlich.
 
-### 바인딩된 컨텍스트
+### Gebundener Kontext
 
-바인딩된 컨텍스트에서 {{site.data.keyword.objectstorageshort}}를 사용하려는 경우 애플리케이션 바인딩 프로세스를 통해 간접적으로 클라우드 신임 정보가 제공됩니다. 서비스 인스턴스를 애플리케이션에 바인딩한 후에는 다음 예제와 비슷한 구성이 `VCAP_SERVICES` 환경 변수에 추가됩니다. 
+Wenn Sie {{site.data.keyword.objectstorageshort}} in einem gebundenen Kontext verwenden möchten, werden die Berechtigungsnachweise für die Cloud indirekt über den Anwendungsbindungsprozess bereitgestellt. Nach der erfolgreichen Bindung einer Serviceinstanz an Ihre Anwendung wird eine Konfiguration ähnlich der folgenden Beispielkonfiguration der Umgebungsvariablen `VCAP_SERVICES` hinzugefügt.
 
 ```
 {
 "Object-Storage": [
-{
+    {
   "name": "Object-Storage - YP",
       "label": "Object-Storage",
       "plan": "Free",
       "credentials": {
-         "auth_url": "https://identity.open.softlayer.com",
+     "auth_url": "https://identity.open.softlayer.com",
          "project": "object_storage_d049255b",
          "projectId": "0f47b41b06d047f9aae3b33f1db061ed",
          "region": "dallas",
@@ -48,48 +55,49 @@
          "domainId": "2df6373c549e49f8973fb6d22ab18c1a",
          "domainName": "639347"
         }
-       }
+   }
   ]
 }
 ```
 
-## Swift CLI를 사용하여 {{site.data.keyword.objectstorageshort}}에 액세스 {: #using-swift-cli}
+## Swift-Befehlszeilenschnittstelle (CLI) für den Zugriff auf {{site.data.keyword.objectstorageshort}} verwenden {: #using-swift-cli}
 
-인터넷을 통하거나 IBM {{site.data.keyword.Bluemix_notm}}의 애플리케이션과 가상 서버에서 {{site.data.keyword.objectstorageshort}} 서비스에 액세스할 수 있습니다. {{site.data.keyword.objectstorageshort}} 서비스의 일반적인 유스 케이스는 다음과 같습니다. 
+Sie können auf den {{site.data.keyword.objectstorageshort}}-Service über das Internet und durch Anwendungen und virtuelle Server in IBM {{site.data.keyword.Bluemix_notm}} zugreifen. Häufige Anwendungsfälle für den {{site.data.keyword.objectstorageshort}}-Service sind zum Beispiel:
 
-* 인스턴스에서 볼륨 데이터 백업
-* 대량의 데이터를 전송하는 경우 중개 위치로 사용
-* 직접 연결되지 않은 환경 간 데이터 전송
-* 중앙 저장소 역할 수행
+* Sicherung durch Backups von Datenträgerdaten aus Ihren Instanzen
+* Verwendung als Zwischenspeicherposition bei der Übertragung umfangreicher Datenvolumen
+* Übertragung von Daten zwischen Umgebungen, die nicht direkt verbunden sind
+* Einsatz als zentrales Repository
 
-{{site.data.keyword.objectstorageshort}} 서비스는 OpenStack Swift를 기반으로 하며 호환 가능한 클라이언트 애플리케이션을 사용하여 서비스에 액세스할 수 있습니다. 이 절에서는 Python Swift 클라이언트({{site.data.keyword.objectstorageshort}} API와 해당 확장기능의 명령행 인터페이스(CLI))를 사용하여 컨테이너와 파일 관련 작업을 수행하는 방법을 설명합니다. 
+Der {{site.data.keyword.objectstorageshort}}-Service basiert auf OpenStack Swift und ist für jede beliebige kompatible Clientanwendung zugänglich. In diesem Abschnitt wird die Verwendung des Python Swift-Clients beschrieben. Dies ist die Befehlszeilenschnittstelle (CLI, Command-Line Interface) für die {{site.data.keyword.objectstorageshort}}-API und die zugehörigen Erweiterungen für die Arbeit mit Containern und Dateien.
 
-### Swift 클라이언트 설치 {: #install-swift-client}
+### Swift-Client installieren {: #install-swift-client}
 
-다음 필수 소프트웨어가 아직 설치되지 않은 경우 이를 설치하십시오. 자세한 정보는 [OpenStack 문서](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software){: new_window}를 참조하십시오. 
-* Python 2.7 이상
-* 설치 도구 패키지
-* pip 패키지
+Installieren Sie die folgenden Softwarevoraussetzungen, falls diese noch nicht installiert sind. Weitere Informationen finden Sie in der [OpenStack-Dokumentation](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software){: new_window}.
+* Python 2.7 oder höher
+* Setuptools-Paket
+* Pip-Paket
 
-다음과 같이 Python pip를 사용하여 Python Swift 클라이언트를 설치하십시오. 
+Installieren Sie den Python Swift-Client mithilfe von Python-pip:
 
 ```
-	sudo pip install python-swiftclient```
+	sudo pip install python-swiftclient
+```
 
-다음 명령을 실행하여 Python Keystone 클라이언트를 설치하십시오.
+Installieren Sie den Python Keystone-Client, indem Sie den folgenden Befehl ausführen:
 
 ```
 	sudo pip install python-keystoneclient
 ```
 
-### 클라이언트 설정 {: #setup-swift-client}
+### Client einrichten {: #setup-swift-client}
 
-Swift 클라이언트는 다음 환경 변수에서 인증 정보를 가져옵니다. 
-* `OS_AUTH_URL`은 엔드포인트 URL
-* `OS_USER_ID`는 사용자 이름
-* `OS_PASSWORD`는 비밀번호
+Der Swift-Client entnimmt die Authentifizierungsinformationen den folgenden Umgebungsvariablen:
+* `OS_AUTH_URL` ist die Endpunkt-URL.
+* `OS_USER_ID` ist der Benutzername.
+* `OS_PASSWORD` ist das Kennwort.
 
-다음과 같이 인증 정보를 설정하십시오. 
+Legen Sie die Authentifizierungsinformationen wie folgt fest.
 
 ```
 export OS_USER_ID=24a20b8e4e724f5fa9e7bfdc79ca7e85
@@ -101,286 +109,291 @@ export OS_IDENTITY_API_VERSION=3
 export OS_AUTH_VERSION=3
 ```
 
-{{site.data.keyword.objectstorageshort}} 사용자 인터페이스의 **서비스 신임 정보** 페이지에 {{site.data.keyword.objectstorageshort}} 서비스의 신임 정보 값이 있습니다. 
+Sie finden die Werte für die Berechtigungsnachweise für Ihren {{site.data.keyword.objectstorageshort}}-Service auf der Seite **Serviceberechtigungsnachweise** in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle.
 
-**참고:** Swift 클라이언트에 대해 환경 변수 `OS_AUTH_URL`을 구성할 때 {{site.data.keyword.objectstorageshort}} 사용자 인터페이스에서 신임 정보의 `auth_url`에 `/v3`을 추가하십시오. 
+**Anmerkung:** Stellen Sie sicher, dass Sie dem Wert von `auth_url` aus den Berechtigungsnachweisen in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle den Wert `/v3` hinzufügen, wenn Sie die Umgebungsvariablen `OS_AUTH_URL` für den Swift-Client konfigurieren.
 
 
-### 컨테이너에 대한 작업 {: #work-with-containers}
+### Mit Containern arbeiten {: #work-with-containers}
 
-컨테이너 나열:
+Container auflisten:
 ```
 	swift list
 ```
-컨테이너 작성:
+Container erstellen:
 ```
-	swift post <container_name>
+	swift post <Containername>
 ```
-컨테이너의 컨텐츠 나열:
+Inhalt eines Containers auflisten:
 ```
-	swift list <container_name>
+	swift list <Containername>
 ```
-### 오브젝트에 대한 작업 {: #work-with-objects}
+### Mit Objekten arbeiten {: #work-with-objects}
 
-#### 컨테이너에 파일 추가
+#### Datei einem Container hinzufügen
 ```
-	swift upload <container_name> <file_name>
+	swift upload <Containername> <Dateiname>
 ```
-#### 컨테이너에 5GB를 초과하는 파일 추가
+#### Dateien mit einer Größe über 5 GB einem Container hinzufügen
 
-5GB보다 큰 파일을 업로드할 경우 파일을 작은 청크로 분할해야 합니다. `-segment-size` 매개변수를 제공하여 Swift 클라이언트에서 해당 업로드를 처리하도록 지시할 수 있습니다. 
+Wenn Sie eine Datei hochladen, die größer als 5 GB ist, müssen Sie sie in kleinere Segmente aufteilen. Sie können den Swift-Client durch Angabe des Parameters `-segment-size` anweisen, eine solche Hochladeoperation durchzuführen:
 ```
-	swift upload <container_name> <file_name> --segment-size <size_in_bytes>
+	swift upload <Containername> <Dateiname> --segment-size <Größe_in_Byte>
 ```
-각 세그먼트는 개별 컨테이너 `<container_name>_segments`에 병렬로 업로드됩니다. 모든 세그먼트가 업로드되면 원래 파일 이름 `<file_name>`을 사용하여 원래 컨테이너 `<container_name>`에서 하나의 파일에 세그먼트를 다운로드할 수 있도록 Swift가 Manifest 파일을 작성합니다. 예를 들어, 다음 명령은 세그먼트 크기 `1073741824`로 `test_container`라는 컨테이너에서 `large_file`이라는 파일을 업로드합니다. 
+Jedes Segment wird parallel in einen separaten Container mit dem Namen `<Containername>_segments` hochgeladen. Nach dem Hochladen aller Segmente erstellt Swift eine Manifestdatei, sodass die Segmente in eine einzige Datei aus dem ursprünglichen Container `<Containername>` mit dem ursprünglichen Dateinamen `<Dateiname>` heruntergeladen werden können.
+
+Beispiel: Mit dem folgenden Befehl wird eine Datei mit dem Namen `large_file` aus einem Container mit dem Namen `test_container` mit der Segmentgröße `1073741824` hochgeladen.
 ```
 	swift upload test_container -S 1073741824 large_file
 ```
-다음 명령을 실행하여 파일을 다운로드할 수 있습니다.
+Sie können den folgenden Befehl ausführen, um die Datei herunterzuladen:
 ```
 	swift download test_container large_file
 ```
-#### 파일 다운로드
+#### Datei herunterladen
 ```
-	swift download <container_name> <file_name>
+	swift download <Containername> <Dateiname>
 ```
-#### 컨테이너에 디렉토리 추가
+#### Verzeichnis einem Container hinzufügen
 
-Swift에는 실제 디렉토리 구조가 없지만 이름을 지정하여 디렉토리 레이아웃을 표시합니다. 컨테이너에 디렉토리를 추가하려면 다음 명령을 실행하십시오.
+Swift hat keine eigentliche Verzeichnisstruktur, verwendet jedoch eine entsprechende Benennung, um eine Verzeichnisstruktur darzustellen. Führen Sie den folgenden Befehl aus, um einem Container ein Verzeichnis hinzuzufügen:
 ```
-	swift upload <container_name> <directory_name>
+	swift upload <Containername> <Verzeichnisname>
 ```
-이 명령은 전체 디렉토리 구조를 상대 경로로 업로드합니다. 예를 들어, `/mnt/volume1`을 지정하는 경우 디렉토리 구조 mnt/volume1이 모든 파일 이름에 첨부되어 디렉토리 구조를 표시합니다.
+Durch diesen Befehl wird eine vollständige Verzeichnisstruktur als relativer Pfad hochgeladen. Beispiel: Wenn Sie `/mnt/volume1` angeben, wird die Verzeichnisstruktur 'mnt/volume1' an alle Dateinamen angefügt, um die Verzeichnisstruktur anzugeben.
 
 
-#### 디렉토리 다운로드
+#### Verzeichnis herunterladen
 
-디렉토리 구조를 다운로드하려면 `-prefix` 매개변수를 사용하여 다운로드하려는 디렉토리 또는 디렉토리 구조를 표시하십시오. 
+Zum Herunterladen einer Verzeichnisstruktur verwenden Sie den Parameter `-prefix`, um das Verzeichnis bzw. die Verzeichnisstruktur anzugeben, das/die heruntergeladen werden soll.
 ```
-	swift download <container_name> --prefix <directory>
+	swift download <Containername> --prefix <Verzeichnis>
 ```
-#### 파일 삭제
+#### Datei löschen
 ```
-	swift delete <container_name> <file_name>
+	swift delete <Containername> <Dateiname>
 ```
-### 오브젝트 버전화에 대한 작업 {: #work-with-object-versioning}
+### Mit Objektversionierung arbeiten {: #work-with-object-versioning}
 
-`X-Versions-Location` 플래그를 사용하여 컨테이너에서 각 오브젝트의 버전을 설정할 수 있습니다. 이를 수행하려면, 다음과 같이 추가 컨테이너를 작성하여 오브젝트의 이전 버전을 유지하십시오. 
+Sie können unter Verwendung des Flags `X-Versions-Location` Versionen jedes Objekts in Ihrem Container einrichten. Erstellen Sie hierfür wie folgt einen weiteren Container, um ältere Versionen Ihrer Objekte aufzubewahren.
 
-Swift 클라이언트를 사용하는 경우 다음과 같이 설정할 수 있습니다. 
+Bei der Verwendung des Swift-Clients können Sie die Einrichtung wie folgt vornehmen:
 ```
 	swift post container_one -H "X-Versions-Location:container_two"
 ```
-Curl을 사용하는 경우 다음과 같이 설정할 수 있습니다.
+Bei der Verwendung von curl können Sie die Einrichtung wie folgt vornehmen:
 ```
-	curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:container_two" https://<object-storage_url>/container_one
+	curl -i -X PUT -H "X-Auth-Token: <Token>" -H "X-Versions-Location:container_two" https://<Objektspeicher-URL>/container_one
 ```
-예제에서는 `container_one`에 저장된 오브젝트의 이전 버전을 포함하도록 `container_two`가 설정되었습니다. 따라서, `container_one`이 오브젝트의 최신 버전을 포함하고 `container_two`는 오브젝트의 이전 버전을 포함합니다. 버전화가 작동하기 위해서는 `container_two`가 있어야 합니다. 버전화를 설정하면 `container_one`으로 오브젝트를 업로드할 때 오브젝트의 기존 버전이 있는 경우 새 버전이 `container_one`에 작성되므로 기존 버전은 `container_two`로 이동됩니다. `container_one`에서 오브젝트를 삭제하는 경우, 오브젝트의 이전 버전은 `container_two`에서 다시 `container_one`으로 이동됩니다. 
+In diesem Beispiel wurde `container_two` so eingerichtet, dass er die älteren Versionen Ihrer Objekte enthält, die in `container_one` gespeichert sind. Daher enthält `container_one` die aktuelle Version Ihrer Objekte, `container_two` enthält die älteren Versionen Ihrer Objekte. Stellen Sie sicher, dass `container_two` existiert, damit die Versionierung funktioniert.
 
-`container_two`의 오브젝트는 다음과 같은 형식으로 이름이 자동 지정됩니다. `<Length><Object_name>/<Timestamp>`.
+Bei eingerichteter Versionierung wird die bereits vorhandene Version beim Hochladen eines Objekts in `container_one`, sofern es eine bereits vorhandene Version gibt, nach `container_two` verschoben, da die neue Version in `container_one` erstellt wird. Wenn Sie ein Objekt aus `container_one` löschen, wird die vorherige Version des Objekts von `container_two` wieder nach `container_one` verschoben.
 
-`Length`는 오브젝트 이름의 길이를 나타냅니다. 이 값은 3자이며 0으로 채워진 16진수입니다. `Object_name`은 오브젝트의 이름입니다. `Timestamp`는 오브젝트의 이 특정 버전이 원래 업로드된 때를 나타내는 시간소인입니다.
+Objekte in `container_two` werden automatisch im folgenden Format benannt: `<Länge><Objektname>/<Zeitmarke>`.
 
-버전화를 사용 안함으로 설정하려면, `X-Remove-Versions-Location` 플래그를 사용하십시오. 
+`Länge` bezieht sich dabei auf die Länge des Namens Ihres Objekts; dies ist eine aus drei Zeichen bestehende Hexadezimalzahl ohne Innenabstand. `Objektname` ist der Name Ihres Objekts. `Zeitmarke` ist die Zeitmarke des ursprünglichen Uploads dieser jeweiligen Version.
+
+Verwenden Sie für die Inaktivierung der Versionierung das Flag `X-Remove-Versions-Location`:
 ```
 	swift post container_one -H "X-Remove-Versions-Location:"
 ```
-또는
+oder
 ```
-	cURL -i -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Versions-Location: anyvalue" https://<object-storage_url>/container_one
+	cURL -i -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Versions-Location: anyvalue" https://<Objektspeicher-URL>/container_one
 ```
-다음은 버전화 사용에 대한 전체 예입니다.
+Im Folgenden sehen Sie ein vollständiges Beispiel für die Nutzung der Versionierung:
 
-1. 컨테이너 작성: 
+1. Container erstellen:
 ```
 		$ swift post container_one
 		$
 ```
-2. container_one에 대한 버전화 설정:
+2. Versionierung für container_one einrichten:
 ```
 		$ swift post container_one -H "X-Versions-Location:container_two"
 		$
 ```
-3. container_two 작성:
+3. container_two erstellen:
 ```
 		$ swift post container_two
 		$
 ```
-4. 처음으로 오브젝트를 container_one에 업로드:
+4. Objekt zum ersten Mal nach container_one hochladen:
 ```
 		$ swift upload container_one object
 		object
 		$
 ```
-5. container_one의 오브젝트 나열:
+5. Objekte in container_one auflisten:
 ```
 		$ swift list container_one
 		object
 		$
 ```
-6. container_two의 오브젝트 나열:
+6. Objekte in container_two auflisten:
 ```
 		$ swift list container_two
 		$
 ```
-7. 오브젝트의 새 버전을 container_one에 업로드:
+7. Neue Version des Objekts nach container_one hochladen:
 ```
 		$ swift upload container_one object
 		object
 		$
 ```
-8. container_one의 오브젝트 나열:
+8. Objekte in container_one auflisten:
 ```
 		$ swift list container_one
 		object
 		$
 ```
-9. container_two의 오브젝트 나열:
+9. Objekte in container_two auflisten:
 ```
 		$ swift list container_two
 		006object/1457456909.27383
 		$
 ```
-10. container_one의 오브젝트 삭제:
+10. Objekt in container_one löschen:
 ```
 		$ swift delete container_one object
 		object
 		$
 ```
-11. 컨테이너 둘 다 나열:
+11. Beide Container auflisten:
 ```
 		$ swift list container_one
 		object
 		$ swift list container_two
 		$
 ```
-### 오브젝트 삭제 스케줄링 {: #schedule-object-deletion}
 
-지정된 시간에 만료되도록 오브젝트를 설정할 수 있습니다. 즉, 오브젝트의 삭제를 스케줄링할 수 있습니다. `X-Delete-At` 또는 `X-Delete-After` 헤더 중 하나를 이용하여 이를 수행할 수 있습니다. `X-Delete-At` 헤더는 오브젝트를 삭제하는 epoch 시간을 나타내는 정수를 사용합니다. `X-Delete_After` 헤더는 오브젝트가 삭제되고 난 후의 시간(초)을 나타내는 정수를 사용합니다. 
+### Objektlöschung planen {: #schedule-object-deletion}
 
-컨테이너의 오브젝트에 게시하는 Swift 클라이언트를 사용하는 경우 다음 예를 참조하십시오. 
+Sie können für Ihre Objekte festlegen, dass diese in einer angegebenen Zeitdauer ablaufen sollen. Das heißt, Sie können die Löschung Ihrer Objekte planen. Hierfür können Sie den Header `X-Delete-At` oder `X-Delete-After` verwenden. Der Wert für den Header `X-Delete-At` ist eine ganze Zahl, die die Referenzzeit darstellt, zu der das Objekt gelöscht werden soll. Der Wert für den Header `X-Delete_After` ist eine ganze Zahl, die die Anzahl an Sekunden darstellt, nach deren Ablauf das Objekt gelöscht wird.
 
-* 오브젝트를 "2016/04/01 08:00:00"에 삭제되도록 설정하려면, 다음 명령을 사용하십시오. 
+Die folgenden Beispiele zeigen die Vorgehensweise, wenn Sie den Swift-Client für einen Post an das Objekt in Ihrem Container verwenden.
+
+* Verwenden Sie den folgenden Befehl, um für das Objekt den Löschzeitpunkt auf "2016/04/01 08:00:00" festzulegen:
 ```
 		swift post -H "X-Delete-At:1459515600" container object
 ```
-* 지금부터 1시간 안에 오브젝트를 삭제하도록 설정하려면, 다음 명령을 사용하십시오. 
+* Verwenden Sie den folgenden Befehl, um für das Objekt festzulegen, dass es eine Stunde nach dem aktuellen Zeitpunkt gelöscht werden soll:
 ```
 		swift post -H "X-Delete-After:3600" container object
 ```
-이를 수행하고 나면, `swift stat container object` 명령은 epoch 시간으로 적절한 만기가 포함된 `X-Delete-At` 헤더를 표시합니다.
+  Anschließend wird durch den Befehl `swift stat container object` der Header `X-Delete-At` mit dem entsprechenden Ablaufdatum in der Referenzzeit angezeigt.
 
-* 오브젝트에서 만기 시간을 제거하려면, 다음 명령을 사용하십시오. 
+* Verwenden Sie den folgenden Befehl, um die Ablaufzeit aus Ihrem Objekt zu entfernen:
 ```
 		swift post -H "X-Remove-Delete-After:" container object
 ```
-cURL을 사용하는 경우 명령은 다음과 같습니다.
+Bei der Verwendung von cURL sehen die Befehle wie folgt aus:
 
-* 오브젝트를 "2016/04/01 08:00:00"에 삭제되도록 설정하려면, 다음 명령을 사용하십시오. 
+* Verwenden Sie den folgenden Befehl, um für das Objekt den Löschzeitpunkt auf "2016/04/01 08:00:00" festzulegen:
 ```
-		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-At:1459515600" https://<object-storage_url>/container/object
+		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-At:1459515600" https://<Objektspeicher-URL>/container/object
 ```
-* 지금부터 1시간 안에 오브젝트를 삭제하도록 설정하려면, 다음 명령을 사용하십시오. 
+* Verwenden Sie den folgenden Befehl, um für das Objekt festzulegen, dass es eine Stunde nach dem aktuellen Zeitpunkt gelöscht werden soll:
 ```
-		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-After:3600" https://<object-storage_url>/container/object
+		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-After:3600" https://<Objektspeicher-URL>/container/object
 ```
-* 오브젝트에 헤더가 있는지 확인하려면, 다음 명령을 사용하십시오. 
+* Verwenden Sie den folgenden Befehl, um zu prüfen, ob das Objekt den Header aufweist:
 ```
-		cURL -I -H "X-Auth-Token: <token>" https://<object-storage_url>/container/object
+		cURL -I -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/container/object
 ```
-* 만기 시간을 제거하려면, 다음 명령을 사용하십시오. 
+* Verwenden Sie den folgenden Befehl, um die Ablaufzeit zu entfernen:
 ```
-		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Delete-At:" https://<object-storage_url>/container/object
+		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Delete-At:" https://<Objektspeicher-URL>/container/object
 ```
-**참고:** 표시된 정확한 시간에 오브젝트가 실제로 삭제되지 않을 수 있습니다. 그러나, 사실 오브젝트는 지정된 시간에 만기되고, 더 이상 연결할 수 없습니다. 다음 번에 Swift 클러스터에서 구성된 swift-object-expirer 디먼을 실행하면 실제로 삭제가 실행됩니다.
-
-
+**Anmerkung:** Die tatsächliche Löschung eines Objekts erfolgt möglicherweise nicht genau zur angegebenen Uhrzeit. Das Objekt läuft jedoch de facto zur angegebenen Zeit ab, d. h., es ist nicht mehr erreichbar. Die tatsächliche Löschung findet bei der nächsten Ausführung des in Ihrem Swift-Cluster konfigurierten Dämons 'swift-object-expirer' statt.
 
 
 
-### 임시 URL 작성 {: #create-temporary-url}
 
-임시 URL은 추가 인증할 필요 없이 오브젝트를 다운로드하기 위해 지정된 기간 동안 사용할 수 있는 추측하기 어려운 긴 URL입니다. 다음 단계를 수행하여 임시 URL을 생성하십시오.
 
-1. 인증 계정을 식별하십시오.
-2. 비밀 키를 설정하십시오.
-3. 임시 URL을 작성하십시오.
+### Temporäre URL erstellen {: #create-temporary-url}
 
-#### 인증 계정 식별
+Eine temporäre URL ist eine lange, schwer zu erratende URL, die für einen angegebenen Zeitraum zum Herunterladen von Objekten verwendet werden kann, ohne dass eine weitere Authentifizierung erforderlich ist. Sie generieren eine temporäre URL mit den folgenden Schritten:
 
-Swift `stat` 명령은 계정에 대한 정보를 인쇄합니다. 
-```
-	swift stat
-```
-계정 필드를 찾아 *계정* 뒤에 나오는 전체 문자열(`AUTH_` 포함)을 기록해두십시오.
+1. Geben Sie Ihr Authentifizierungskonto an.
+2. Legen Sie einen geheimen Schlüssel fest.
+3. Erstellen Sie eine temporäre URL.
 
-#### 비밀 키 설정
+#### Authentifizierungskonto angeben
 
-사용자가 선택하는 무엇이든 이 키가 될 수 있지만 우수 사례는 추측하기 어려운 긴 임의의 문자열을 선택하는 것입니다.
-```
-	swift post -m "Temp-URL-Key:<key>"
-```
-Swift `stat` 명령을 실행하여 `Temp-URL-Key`가 설정되어 있는지 확인하십시오.
+Der Swift-Befehl `stat` gibt Informationen zu Ihrem Konto aus:
 ```
 	swift stat
 ```
+Suchen Sie das Kontofeld (Account) und notieren Sie die vollständige Zeichenfolge hinter *Account*: einschließlich `AUTH_`.
 
-#### 임시 URL 작성
+#### Geheimen Schlüssel festlegen
 
-Swift `tempurl` 명령은 이러한 위치 인수를 사용합니다. 
-
-* [method] GET을 사용하여 다운로드합니다. PUT을 사용하여 업로드합니다. 
-* [seconds] 임시 URL을 사용할 수 있는 시간(초) 
-* [path] `/v1/<auth_account>/<container_name>/<object_name>`으로 표현되는 오브젝트의 전체 경로. 자세한 정보는 [{{site.data.keyword.objectstorageshort}} URL](#access-points)을 참조하십시오. 
-* [key] 2단계에서 설정한 키
-
+Dieser Schlüssel kann eine Zeichenfolge Ihrer Wahl sein. Ein bewährtes Verfahren ist, eine lange, zufällig zusammengesetzte und schwer zu erratende Zeichenfolge zu wählen.
 ```
-swift tempurl GET <seconds> <path> <key>
+	swift post -m "Temp-URL-Key:<Schlüssel>"
 ```
-
-이 명령은 전체 URL을 가져오기 위해 클러스터 이름에 추가할 수 있는 URL을 리턴합니다. curl, wget 또는 Firefox와 같은 호환 가능한 HTTP 클라이언트를 사용하여 오브젝트를 다운로드하려면 전체 URL을 사용하십시오.
-
-## Swift REST API를 사용하여 {{site.data.keyword.objectstorageshort}}에 액세스 {: #using-swift-restapi}
-
-명령행 클라이언트 인터페이스(예: cURL)에서 Swift REST API를 사용하거나 애플리케이션에서 API를 호출할 수 있습니다.  
-
-### {{site.data.keyword.objectstorageshort}} URL {: #access-points}
-
-{{site.data.keyword.objectstorageshort}} API와 상호작용하려면 다음과 같이 {{site.data.keyword.objectstorageshort}} URL을 생성하십시오.
+Führen Sie den Swift-Befehl `stat` aus, um zu überprüfen, ob `Temp-URL-Key` erfolgreich festgelegt wurde.
 ```
-	https://<access point>/<API version>/AUTH_<project ID>/<container namespace>/<object namespace>
+	swift stat
 ```
 
+#### Temporäre URL erstellen
 
-URL은 다섯 개의 파트로 구성됩니다. `<API version>`은 v1입니다. {{site.data.keyword.objectstorageshort}} 사용자 인터페이스에서 `<project ID>`, `<container namespace>` 및 {{site.data.keyword.objectstorageshort}}의 `<object namespace>`를 찾을 수 있습니다. `<access point>`의 경우 다음 표를 참조하십시오. 
+Der Swift-Befehl `tempurl` arbeitet mit den folgenden Positionsargumenten:
+
+* [Methode] GET, um das Herunterladen zuzulassen. PUT, um das Hochladen zuzulassen.
+* [Sekunden] Zeit in Sekunden, die die temporäre URL verfügbar sein soll.
+* [Pfad] Der vollständige Pfad des Objekts im Format `/v1/<Authentifizierungskonto>/<Containername>/<Objektname>`. Weitere Informationen finden Sie bei der [{{site.data.keyword.objectstorageshort}}-URL](#access-points).
+* [Schlüssel] Der Schlüssel, den Sie in Schritt 2 festgelegt haben.
+
+```
+swift tempurl GET <Sekunden> <Pfad> <Schlüssel>
+```
+
+Dieser Befehl gibt eine URL zurück, die Sie an Ihren Clusternamen anhängen können, um eine vollständige URL zu erhalten. Verwenden Sie die vollständige URL, um das Objekt mit einem kompatiblen HTTP-Client wie curl, wget oder Firefox herunterzuladen.
+
+## Mit der Swift-REST-API auf {{site.data.keyword.objectstorageshort}} zugreifen {: #using-swift-restapi}
+
+Sie können die Swift-REST-API in einer Befehlszeilen-Clientschnittstelle wie cURL verwenden oder Sie können die API in Ihrer Anwendung aufrufen.  
+
+### {{site.data.keyword.objectstorageshort}}-URL {: #access-points}
+
+Zur Interaktion mit der {{site.data.keyword.objectstorageshort}}-API erstellen Sie die {{site.data.keyword.objectstorageshort}}-URL wie folgt:
+```
+	https://<Zugriffspunkt>/<API-Version>/AUTH_<Projekt-ID>/<Containernamensbereich>/<object namespace>
+```
 
 
-| **지역**  |   **공용 액세스 지점**                     |
+Die URL besteht aus fünf Teilen. Die `<API-Version>` ist Version 1. Sie finden die Werte für `<Projekt-ID>`, `<Containernamensbereich>` und `<object namespace>` für Ihren {{site.data.keyword.objectstorageshort}} in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle.  Informationen für den `<Zugriffspunkt>` finden Sie in der folgenden Tabelle:
+
+
+| **Region**  |   **Öffentlicher Zugriffspunkt**                     |
 |-------------|-----------------------------------------------|
-| 댈러스      | https://dal.objectstorage.open.softlayer.com/ |
-| 런던        | https://lon.objectstorage.open.softlayer.com/ |
+| Dallas      | https://dal.objectstorage.open.softlayer.com/ |
+| London      | https://lon.objectstorage.open.softlayer.com/ |
 
 
-*표 1. {{site.data.keyword.objectstorageshort}} 액세스 지점*
+*Tabelle 1. {{site.data.keyword.objectstorageshort}}-Zugriffspunkt*
 
 
-### {{site.data.keyword.objectstorageshort}} API
+### {{site.data.keyword.objectstorageshort}}-API
 
-{{site.data.keyword.objectstorageshort}} REST API 옵션과 예제의 전체 목록은 [OpenStack Swift API 전체 참조](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}를 참조하십시오.
+Eine umfassende Liste der Optionen der {{site.data.keyword.objectstorageshort}}-REST-API mit Beispielen finden Sie in der [vollständigen Referenz zur OpenStack-Swift-API](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}.
 
-## 여러 지역에서 {{site.data.keyword.objectstorageshort}} 사용 {: #multi-regions}  
+## {{site.data.keyword.objectstorageshort}} regionsübergreifend verwenden {: #multi-regions}  
 
-IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} 서비스에서는 댈러스와 런던 스토리지 지역을 지원합니다. 해당 스토리지 지역은 {{site.data.keyword.objectstorageshort}} 서비스 인스턴스가 작성되는 {{site.data.keyword.Bluemix_notm}} 지역(예: 미국 남부와 영국)에 독립적입니다. 예를 들어, {{site.data.keyword.objectstorageshort}} 인스턴스를 미국 남부 {{site.data.keyword.Bluemix_notm}} 지역에서 작성하는 경우 댈러스 또는 런던 스토리지 지역에서 데이터를 읽고 쓸 수 있습니다.  
+Der {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Service unterstützt die Speicherregionen Dallas und London. Diese Speicherregionen sind unabhängig von der {{site.data.keyword.Bluemix_notm}}-Region, wie zum Beispiel 'US-South' und 'United Kingdom', in der die {{site.data.keyword.objectstorageshort}}-Serviceinstanz erstellt wurde.  Beispiel: Wenn Sie eine {{site.data.keyword.objectstorageshort}}-Instanz in der {{site.data.keyword.Bluemix_notm}}-Region 'US-South' erstellen, haben Sie Lese- und Schreibzugriff auf Daten in der Speicherregion Dallas oder in der Speicherregion London.  
 
-미국 남부 {{site.data.keyword.Bluemix_notm}} 지역의 경우 댈러스 스토리지 지역이 기본입니다. 영국 {{site.data.keyword.Bluemix_notm}} 지역의 경우에는 런던 스토리지 지역이 기본입니다. {{site.data.keyword.objectstorageshort}} 사용자 인터페이스는 항상 {{site.data.keyword.Bluemix_notm}} 지역의 기본 스토리지 지역으로 시작합니다. 지역을 전환하려면 {{site.data.keyword.objectstorageshort}} 지역 드롭 다운 목록을 클릭한 후 다른 지역을 선택하십시오.
+Für die {{site.data.keyword.Bluemix_notm}}-Region 'US-South' ist Dallas die Standardspeicherregion. Für die {{site.data.keyword.Bluemix_notm}}-Region 'United Kingdom' ist London die Standardspeicherregion.  Die {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle startet immer mit der Standardspeicherregion der {{site.data.keyword.Bluemix_notm}}-Region. Wenn Sie die Region wechseln wollen, klicken Sie auf die Dropdown-Liste für die {{site.data.keyword.objectstorageshort}}-Regionen und wählen eine andere Region aus.
 
-**참고:** {{site.data.keyword.objectstorageshort}} 서비스는 스토리지 지역 간 복제를 지원하지 않습니다.
+**Anmerkung:** Der {{site.data.keyword.objectstorageshort}}-Service unterstützt keine speicherregionsübergreifende Replikation.
 
-### 다중 지역 액세스
+### Zugriff auf mehrere Regionen
 
-{{site.data.keyword.objectstorageshort}} 서비스를 사용하려면 [OpenStack Keystone에 인증](#keystone-authentication)해야 합니다. 인증이 완료되면 응답으로 `X-Subject-Token` 및 {{site.data.keyword.objectstorageshort}} 엔드포인트를 사용할 수 있습니다. 
+Für die Verwendung des {{site.data.keyword.objectstorageshort}}-Service müssen Sie sich [bei OpenStack Keystone authentifizieren](#keystone-authentication). Nach der erfolgreichen Authentifizierung werden ein `X-Subject-Token` und die {{site.data.keyword.objectstorageshort}}-Endpunkte in der Antwort zur Verfügung gestellt.
 
-예를 들어, 댈러스 스토리지 지역에서 `my_container` 컨테이너를 작성하려면 다음과 같이 curl 명령에 댈러스 액세스 지점을 지정하십시오. 
+Beispiel: Wenn Sie einen Container mit dem Namen `my_container` in der Speicherregion Dallas erstellen wollen, geben Sie wie folgt einen Zugriffspunkt von Dallas im curl-Befehl an:
 ```
 	# curl -i https://dal.objectstorage.open.softlayer.com/v1/AUTH_3c9c89a2edbb458da74a9e81e215da9e/my_container -X PUT -H "Content-Length: 0" -H "X-Auth-Token: gAAAAABWlw5mwttbb_6G3LnTiGusyoOSEHXMG7oTnDYWN1vBZB6XAxUEhz4ehGkdw6Qm_I9ZFFXr8fwcc2KaEbpWbQoglhAvrYTXbrkn8MvErLdnbcT0XK2t5N7lEZyyKQlsgmQWcrch8VOO_OiSKKToORYR7luI-2TrR_JIVZm-8AAS6hLhk9"
 
@@ -391,7 +404,7 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 	Date: Thu, 14 Jan 2016 03:16:13 GMT
 ```
 
-런던 스토리지 지역에서 `my_container` 컨테이너를 작성하려면, 다음과 같이 curl 명령에 런던 액세스 지점을 지정하십시오. 
+Wenn Sie einen Container mit dem Namen `my_container` in der Speicherregion London erstellen wollen, geben Sie wie folgt einen Zugriffspunkt von London im curl-Befehl an:
 ```
 	# curl -i https://lon.objectstorage.open.softlayer.com/v1/AUTH_3c9c89a2edbb458da74a9e81e215da9e/my_container -X PUT -H "Content-Length: 0" -H "X-Auth-Token: gAAAAABWlw5mwttbb_6G3LnTiGusyoOSEHXMG7oTnDYWN1vBZB6XAxUEhz4ehGkdw6Qm_I9ZFFXr8fwcc2KaEbpWbQoglhAvrYTXbrkn8MvErLdnbcT0XK2t5N7lEZyyKQlsgmQWcrch8VOO_OiSKKToORYR7luI-2TrR_JIVZm-8AAS6hLhk9"
 
@@ -401,31 +414,33 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 	X-Trans-Id: tx4a640ca81c7240ea8f812-00569712fc
 	Date: Thu, 14 Jan 2016 03:16:13 GMT
 ```
-**참고:** Keystone에서 획득한 `X-Subject-Token`은 스토리지 지역 간에 작동합니다. 다른 지역의 액세스 지점에 대한 자세한 정보는 [Object Storage 액세스 지점](#access-points) 표를 참조하십시오.
+**Anmerkung:** Das `X-Subject-Token`, das Sie von Keystone empfangen haben, funktioniert speicherregionsübergreifend.
+
+Weitere Informationen zu den Zugriffspunkten für verschiedene Regionen finden Sie in der Tabelle mit den [Object Storage-Zugriffpunkten](#access-points).
 
 
-## 인증 및 신임 정보 이해 {: #understanding-authentication-credentials}
+## Informationen zu Authentifizierung und Berechtigungsnachweisen {: #understanding-authentication-credentials}
 
-### 애플리케이션을 바인딩하지 않고 {{site.data.keyword.objectstorageshort}} 신임 정보 생성
+### {{site.data.keyword.objectstorageshort}}-Berechtigungsnachweise ohne Bindung einer Anwendung generieren
 
-{{site.data.keyword.Bluemix_notm}} 애플리케이션 외부에서 사용할 {{site.data.keyword.objectstorageshort}} 클라우드 신임 정보를 생성하려면 {{site.data.keyword.objectstorageshort}} 인스턴스의 서비스 키를 생성해야 합니다. 사용자 인터페이스의 사이드바에서 **서비스 신임 정보**를 선택하거나 Cloud Foundry CLI(버전 6.11.3 이상)를 사용하여 새 키를 생성할 수 있습니다. {{site.data.keyword.objectstorageshort}} 인스턴스의 서비스 키를 생성하고 검색한 후에는 클라우드 통합 정보를 통해 OpenStack SDK 또는 OpenStack Identity API를 사용하여 Keystone 토큰을 요청하고 Swift 계정을 사용하여 오브젝트를 관리할 수 있습니다.
+Zum Generieren von {{site.data.keyword.objectstorageshort}}-Cloudberechtigungsnachweisen für die Verwendung außerhalb einer {{site.data.keyword.Bluemix_notm}}-Anwendung müssen Sie einen Serviceschlüssel für Ihre {{site.data.keyword.objectstorageshort}}-Instanz generieren. Sie können einen neuen Schlüssel generieren, indem Sie **Serviceberechtigungsnachweise** in der Seitenleiste der Benutzerschnittstelle auswählen oder die Befehlszeilenschnittstelle Cloud Foundry CLI (Version 6.11.3 oder höher) verwenden. Nach der Generierung und dem Abruf eines Serviceschlüssels für Ihre {{site.data.keyword.objectstorageshort}}-Instanz können Sie die Informationen zur Cloudintegration verwenden, um ein Keystone-Token mit einem OpenStack-SDK oder der OpenStack-Identity-API anzufordern und anschließend mit der Verwendung des Swift-Kontos zur Objektverwaltung zu beginnen.
 
-Cloud Foundry CLI를 사용하여 키를 작성하려면 로그인한 후 다음 명령을 실행하십시오. 
+Wenn Sie den Schlüssel über die Cloud Foundry CLI erstellen möchten, müssen Sie sich bei dieser Befehlszeilenschnittstelle anmelden und den folgenden Befehl ausführen:
  ```
-    cf create-service-key <object_storage_instance_name> <unique_name_for_this_key>
+    cf create-service-key <Object Storage-Instanzname> <eindeutiger Name für diesen Schlüssel>
 ```
-Cloud Foundry CLI에서 서비스 신임 정보를 검색하려면 다음 명령을 실행하십시오.
+Führen Sie den folgenden Befehl aus, um die Serviceberechtigungsnachweise über die Cloud Foundry CLI abzurufen:
 ```
-	cf service-key <object_storage_instance_name> <unique_name_for_this_key>
+	cf service-key <Object Storage-Instanzname> <eindeutiger Name für diesen Schlüssel>
 ```
 
-### 클라우드 프로젝트 및 사용자
-새 {{site.data.keyword.objectstorageshort}} 인스턴스를 프로비저닝하면 IBM 퍼블릭 클라우드에 격리된 Keystone 프로젝트가 작성됩니다. 새 애플리케이션을 {{site.data.keyword.objectstorageshort}} 인스턴스에 바인딩하면 프로젝트에 대한 액세스 권한이 있는 새 Keystone 사용자가 작성됩니다. 인스턴스를 디프로비저닝하면 프로젝트 및 사용자가 삭제됩니다. 
+### Cloudprojekte und -benutzer
+Durch die Bereitstellung einer neuen {{site.data.keyword.objectstorageshort}}-Instanz wird in der IBM Public Cloud ein isoliertes Keystone-Projekt erstellt. Wenn Sie eine neue Anwendung an die {{site.data.keyword.objectstorageshort}}-Instanz binden, wird ein neuer Keystone-Benutzer mit Zugriff auf das Projekt erstellt. Wenn Sie die Instanz löschen, werden auch Projekt und Benutzer gelöscht.
 
-### OpenStack Identity(Keystone) v3 {: #keystone-authentication}
-신임 정보 구조는 사용자 애플리케이션에 최적으로 맞는 OpenStack 토큰 요청 메소드 또는 OpenStack SDK를 선택할 수 있는 전체 속성 세트를 포함합니다.
+### OpenStack Identity (Keystone) v3 {: #keystone-authentication}
+Die Struktur der Berechtigungsnachweise enthält einen vollständigen Satz von Attributen, sodass Sie die Methode für die OpenStack-Tokenanforderung oder das OpenStack-SDK auswählen können, das sich am besten für Ihre Anwendung eignet.
 
-권장되는 v3 토큰 요청은 다음 curl 명령에 표시된 것처럼 https://identity.open.softlayer.com/v3/auth/tokens에 대한 POST 요청입니다.
+Die empfohlene v3-Tokenanforderung ist eine POST-Anforderung an https://identity.open.softlayer.com/v3/auth/tokens, wie im folgenden curl-Befehl gezeigt:
 ```
 	curl -i \
 	  -H "Content-Type: application/json" \
@@ -452,7 +467,9 @@ Cloud Foundry CLI에서 서비스 신임 정보를 검색하려면 다음 명령
 	}' \
 	  https://identity.open.softlayer.com/v3/auth/tokens ; echo
 ```
-{{site.data.keyword.objectstorageshort}} 서비스에 요청을 작성하는 경우 응답 헤더의 `X-Subject-Token` 필드 값을 `X-Auth-Token` 필드로 사용하십시오. 예제 응답은 다음과 같습니다. {{site.data.keyword.objectstorageshort}} 관련 정보만 표시하도록 응답이 조정됩니다. 
+Verwenden Sie den Wert des Felds `X-Subject-Token` aus dem Antwortheader als `X-Auth-Token`, wenn Sie Anforderungen an den {{site.data.keyword.objectstorageshort}}-Service senden.
+
+Eine Beispielantwort könnte wie folgt aussehen. Die Antwort wird so abgeschnitten, dass nur die für {{site.data.keyword.objectstorageshort}} releventen Informationen angezeigt werden.
 
 	HTTP/1.1 201 Created
 	Date: Mon, 29 Feb 2016 21:03:41 GMT
@@ -473,8 +490,8 @@ Cloud Foundry CLI에서 서비스 신임 정보를 검색하려면 다음 명령
 	    ],
 	    "catalog" : [
 	      {
-	        "endpoints" : [
-	          {
+	        "endpoints": [
+			{
 	            "id" : "20cbfa6ff22b4a67a1484d30235bfc80",
 	            "region" : "london",
 	            "region_id" : "london",
@@ -522,7 +539,9 @@ Cloud Foundry CLI에서 서비스 신임 정보를 검색하려면 다음 명령
 	        "name" : "swift"
 	      },
 	    ],
-	    "extras" : {},
+	    "extras" : {
+
+	    },
 	    "user" : {
 	      "id" : "0b8aebd924ef4cc7aa9232f07e47e874",
 	      "name" : "user_87c094ce47a9feae3a137ffcbbfa098a888c12a8",
@@ -551,95 +570,95 @@ Cloud Foundry CLI에서 서비스 신임 정보를 검색하려면 다음 명령
 	}
 ```
 
-{{site.data.keyword.objectstorageshort}} URL은 서비스 카탈로그에 있습니다. 서비스 카탈로그는 토큰 요청의 응답 본문에 포함되어 있습니다. 응답은 사용 가능한 OpenStack 서비스의 전체 카탈로그입니다. `object-store` 유형의 서비스 카탈로그에서 엔드포인트를 선택하고, 신임 정보의 지역 필드와 일치하는 지역을 선택하십시오. 
+Die {{site.data.keyword.objectstorageshort}}-URL ist im Servicekatalog zu finden. Der Servicekatalog ist im Antworthauptteil der Tokenanforderung enthalten. Die Antwort ist ein vollständiger Katalog der OpenStack-Services, die verfügbar sind. Wählen Sie den Endpunkt im Servicekatalog mit dem Typ `object-store` und mit der Region aus, die dem Feld für die Region in den Berechtigungsnachweisen entspricht.
 
-**참고:** 공용 인터페이스(`publicURL`)를 사용하십시오. 내부 인터페이스(`internalURL`)는 {{site.data.keyword.Bluemix_notm}}에서 액세스할 수 없습니다. 
-
-
-
-## 세분화된 액세스 제어를 사용하여 파일 보안 {: #fine-grained-access-control}
-
-세분화된 액세스 제어는 다중 사용자가 동일한 컨테이너에 파일을 저장하는 경우에 도움말 보안 파일을 나열합니다.
-
-참고: 이 문서에서 설명하는 프로시저에는 Swift CLI가 필요합니다. 자세한 정보는 [Swift CLI와 함께 {{site.data.keyword.objectstorageshort}} 사용](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli)을 참조하십시오.
+**Anmerkung:** Verwenden Sie die allgemein zugängliche Schnittstelle (`publicURL`). Auf die interne Schnittstelle (`internalURL`) kann von {{site.data.keyword.Bluemix_notm}} aus nicht zugegriffen werden.
 
 
-### 액세스 유형 {: #access-types}
 
-서비스에 대한 액세스는 사용자 역할 및 컨테이너 액세스 제어 목록에 의해 제어됩니다. {{site.data.keyword.objectstorageshort}} 사용자는 관리자 또는 비관리자일 수 있습니다. 액세스 제어 목록은 컨테이너 레벨에서 관리자에 의해 사용될 수 있으며 서비스 인스턴스, 스토리지 계정 또는 프로젝트 레벨에 대해 사용할 수 없습니다.
+## Dateien durch differenzierte Zugriffssteuerung schützen {: #fine-grained-access-control}
+
+Differenzierte Zugriffssteuerungslisten (ACLs) sind für den Schutz von Dateien hilfreich, wenn mehrere Benutzer vorhanden sind, die Dateien in demselben Container speichern.
+
+Anmerkung: Die in diesem Dokument erläuterten Prozeduren erfordern die Swift-CLI. Weitere Informationen finden Sie unter [{{site.data.keyword.objectstorageshort}} mit der Swift-CLI verwenden](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli).
+
+
+### Zugriffstypen {: #access-types}
+
+Der Zugriff auf den Service wird durch Benutzerrollen und Zugriffssteuerungslisten für Container gesteuert. {{site.data.keyword.objectstorageshort}}-Benutzer können Benutzer mit Administratorberechtigungen oder Benutzer ohne Administratorberechtigungen sein. Zugriffssteuerungslisten werden durch Administratorbenutzer auf der Containerebene aktiviert und sind für die Serviceinstanz, das Speicherkonto oder auf Projektebene nicht verfügbar.
 
 <table>
   <tr>
-    <th> 관리 사용자(admin) </th>
-    <th> 비관리 사용자(member) </th>
+    <th> Benutzer mit Administratorberechtigungen (admin) </th>
+    <th> Benutzer ohne Administratorberechtigungen (member) </th>
   </tr>
   <tr>
-    <td> 액세스 제어 관리 </td>
-    <td> 기본적으로 서비스 또는 해당 컨테이너에 대한 액세스가 없음 </td>
+    <td> Zugriffssteuerung verwalten </td>
+    <td> Standardmäßig kein Zugriff auf den Service oder seine Container </td>
   </tr>
   <tr>
-    <td> 컨테이너를 작성하고 삭제할 수 있음 </td>
-    <td> 컨테이너 읽기/쓰기 ACL을 기반으로 하여 조치를 수행할 수 있음 </td>
+    <td> Container erstellen und löschen </td>
+    <td> Aktionen abhängig von den Lese-/Schreibzugriffssteuerungslisten der Container </td>
   </tr>
   <tr>
-    <td> 컨테이너에 대해 읽고 쓸 수 있음 </td>
-    <td> admin에 의해 결정된 대로 조치를 수행할 수 있음 </td>
+    <td> Containerinhalt lesen und schreiben </td>
+    <td> Durch den Administrator festgelegte Aktionen </td>
   </tr>
 </table>
 
-*표 1: 정의된 사용자 역할*
+*Tabelle 1: Definierte Benutzerrollen*
 
-{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스, Cloud Foundry API 또는 Cloud Foundry CLI를 통해 {{site.data.keyword.objectstorageshort}} 사용자를 관리할 수 있습니다.
+Sie können {{site.data.keyword.objectstorageshort}}-Benutzer über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle, die Cloud Foundry-API oder die Cloud Foundry CLI verwalten.
 
 
 
-### {{site.data.keyword.objectstorageshort}} 서비스 신임 정보 생성 {: #generating}
+### {{site.data.keyword.objectstorageshort}}-Serviceberechtigungsnachweise generieren {: #generating}
 
-새 {{site.data.keyword.Bluemix_notm}} 콘솔에서 {{site.data.keyword.objectstorageshort}} 사용자에 대한 새 서비스 신임 정보를 생성할 수 있습니다. 새 콘솔을 보려면 **새 {{site.data.keyword.Bluemix_notm}} 시도**를 클릭하십시오.
+Über die neue {{site.data.keyword.Bluemix_notm}}-Konsole können Sie neue Serviceberechtigungsnachweise für {{site.data.keyword.objectstorageshort}}-Benutzer generieren.  Zum Anzeigen der neuen Konsole klicken Sie auf die Option **Neues {{site.data.keyword.Bluemix_notm}} testen**.
 
-1.  개발자 역할을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오. 관리할 서비스 인스턴스의 영역 내에 위치해야 합니다.
-2. **서비스 신임 정보** 탭을 클릭하십시오.
-3. **새 신임 정보**를 클릭하십시오.
-4. 신임 정보에 대한 이름을 제공하십시오.
-5. **인라인 구성 매개변수 추가** 텍스트 필드에 작성할 역할에 대한 신임 정보에 관한 정보를 입력하십시오. 이 정보는 JSON 페이로드로 형식화되어야 합니다.
-  - 관리 사용자 작성: `{"role":"admin"}`
-  - 비관리 사용자 작성: `{"role":"member"}`
-5. **추가**를 클릭하십시오.
+1.  Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} als Benutzer mit einer Entwicklerrolle an. Sie müssen sich in dem Bereich der Serviceinstanz befinden, die Sie verwalten wollen.
+2. Klicken Sie auf die Registerkarte **Serviceberechtigungsnachweise**.
+3. Klicken Sie auf **Neuer Berechtigungsnachweis**.
+4. Geben Sie einen Namen für den Berechtigungsnachweis an.
+5. Geben Sie in das Textfeld **Lineare Konfigurationsparameter hinzufügen** die Informationen zu dem Berechtigungsnachweis für die Rolle ein, die Sie erstellen wollen. Die Informationen müssen als JSON-Nutzdaten formatiert sein.
+  - Zum Erstellen eines Benutzers mit Administratorberechtigungen: `{"role":"admin"}`
+  - Zum Erstellen eines Benutzers ohne Administratorberechtigungen: `{"role":"member"}`
+5. Klicken Sie auf **Hinzufügen**.
 
-cURL 명령 또는 Swift CLI를 사용하여 서비스 신임 정보를 생성하려면 다음 단계를 따르십시오.
+Zum Generieren von Serviceberechtigungsnachweisen durch cURL-Befehle oder über die Swift-CLI können Sie die folgenden Schritte ausführen.
 
-1. 개발자 역할을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오. 관리할 서비스 인스턴스의 영역 내에 위치해야 합니다.
+1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} als Benutzer mit einer Entwicklerrolle an. Sie müssen sich in dem Bereich der Serviceinstanz befinden, die Sie verwalten wollen.
 
   ```
-  cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
+  cf login -a api.ng.bluemix.net -u <Benutzer-ID> -p <Kennwort> -o <Organisation> -s <Bereich>
   ```
 
-2. 서비스 신임 정보를 생성하십시오. `service-key-name`이 신임 정보의 이름이 됩니다. Cloud Foundry 명령 또는 cURL 명령을 사용할 수 있습니다.
+2. Generieren Sie Serviceberechtigungsnachweise. `Serviceschlüsselname` wird dabei zum Namen Ihres Berechtigungsnachweises. Sie können entweder den Cloud Foundry-Befehl oder den cURL-Befehl verwenden.
 
-  Cloud Foundry 명령:
+  Cloud Foundry-Befehl:
   ```
-  cf create-service-key "<object_storage_service_instance_name>" <service-key-name> -c '{"role":"<object_storage_role>"}'
+  cf create-service-key "<Name der Object Storage-Serviceinstanz>" <Serviceschlüsselname> -c '{"role":"<Object Storage-Rolle>"}'
   ```
 
-  예:
+  Beispiel:
 
   ```
   cf create-service-key "Object-Storage-AclTest" GeorgeKey -c '{"role":"member"}'
 
   ```
-  cURL 명령:
+  cURL-Befehl:
   ```
-  curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name": "<user_name>", "role": "member"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: " -H "Cookie: "
+  curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<Serviceinstanz-GUID>",   "name": "<Benutzername>", "role": "member"}' -X POST -H "Authorization: <Trägertoken>" -H "Content-Type: " -H "Cookie: "
   ```
 
-3. 작성한 서비스 키에 대한 신임 정보의 유효성을 검증하십시오.
+3. Validieren Sie die Berechtigungsnachweise für den von Ihnen erstellten Serviceschlüssel.
 
-  Cloud Foundry 명령:
+  Cloud Foundry-Befehl:
   ```
-  cf service-key <service_key_name> <member_name>
+  cf service-key <Serviceschlüsselname> <Member-Name>
   ```
-  예:
-  Object-Storage-Acl-Test라는 이름의 서비스 인스턴스에 대한 멤버 서비스 키 작성
+  Beispiel:
+  Erstellen eines Member-Serviceschlüssels für eine Serviceinstanz mit dem Namen Object-Storage-Acl-Test.
   ```
   {
     "auth_url": "https://identity.open.softlayer.com",
@@ -654,58 +673,58 @@ cURL 명령 또는 Swift CLI를 사용하여 서비스 신임 정보를 생성�
     "username": "member_2afbeea1d58b1867f46c699553d1e4513e7df83a"
   }
   ```
-  cURL 명령:
+  cURL-Befehl:
   ```
-  curl "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <bearer_token>" -H "Cookie: "
+  curl "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <Trägertoken>" -H "Cookie: "
   ```
 
 
 
-### 액세스 지정 {: #assigning-access}  
+### Zugriff zuweisen {: #assigning-access}  
 
-admin 역할을 가진 {{site.data.keyword.objectstorageshort}} 사용자만이 다른 사용자에 대한 컨테이너에 읽기 또는 쓰기 액세스를 부여할 수 있습니다. 
+Nur ein {{site.data.keyword.objectstorageshort}}-Benutzer mit Administratorrolle kann einem anderen Benutzer Lese- oder Schreibzugriff auf einen Container erteilen.
 
-CLI에서 읽기 액세스를 부여하려면 `--read-acl` 또는 `-r` 옵션을 사용하십시오.
+Zum Erteilen des Lesezugriffs über die CLI verwenden Sie die Option `--read-acl` oder die Option `-r`.
 
-1. 사용자가 작성한 서비스 신임 정보 내에 있는 정보를 사용하여 신임 정보를 인증하십시오. 출력으로 오브젝트 스토리지 URL 및 인증 토큰을 수신합니다.
+1. Authentifizieren Sie Ihre Berechtigungsnachweise mit den Informationen in den Serviceberechtigungsnachweisen, die Sie erstellt haben.  Sie empfangen Ihre Object Storage-URL und Ihr Authentifizierungstoken als Ausgabe.
 
-  Swift 명령:
+  Swift-Befehl:
   ```
-  export OS_USER_ID=<user_id>
-  export OS_PASSWORD=<password>
-  export OS_TENANT_ID=<project_id>
+  export OS_USER_ID=<Benutzer-ID>
+  export OS_PASSWORD=<Kennwort>
+  export OS_TENANT_ID=<Projekt-ID>
   export OS_AUTH_URL=https://identity.open.softlayer.com/v3
-  export OS_REGION_NAME=<region>
+  export OS_REGION_NAME=<Region>
   export OS_IDENTITY_API_VERSION=3
   export OS_AUTH_VERSION=3
 
   swift auth
   ```
-  cURL 명령:
+  cURL-Befehl:
   ```
-  curl -i -H "X-Auth-User: <user_id>" -H "X-Auth-Key: <password>" <auth_url>
+  curl -i -H "X-Auth-User: <Benutzer-ID>" -H "X-Auth-Key: <Kennwort>" <Authentifizierungs-URL>
   ```
-3. 다음 명령을 실행하여 읽기 액세스를 부여하십시오.
+3. Führen Sie den folgenden Befehl aus, um Lesezugriff zu erteilen:
 
-  Swift 명령:
+  Swift-Befehl:
   ```
-  swift post <container_name> --read-acl "<user_id>:<project_id>"
+  swift post <Containername> --read-acl "<Benutzer-ID>:<Projekt-ID>"
   ```
-  cURL 명령:
+  cURL-Befehl:
   ```
-  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: <tenant_id>:<project_id>" -H "X-Auth-Token: <OS_AUTH_TOKEN>"
+  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: <Tenant-ID>:<Projekt-ID>" -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
-4. 읽기 ACL 값을 확인하십시오.
+4. Überprüfen Sie den Wert für die Lesezugriffssteuerungsliste (Read ACL).
 
-  Swift 명령:
+  Swift-Befehl:
   ```
-  swift stat <container_name>
+  swift stat <Containername>
   ```
-  cURL 명령:
+  cURL-Befehl:
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token:<OS_AUTH_TOKEN>"
   ```
-  출력 예:
+  Beispielausgabe:
   ```
   HTTP/1.1 204 No Content
   Content-Length: 0
@@ -720,151 +739,151 @@ CLI에서 읽기 액세스를 부여하려면 `--read-acl` 또는 `-r` 옵션을
   Date: Tue, 28 Jun 2016 20:57:58 GMT
   ```
 
-읽기 ACL 조합을 조작할 수 있습니다.
+Sie können verschiedene ACL-Kombinationen für Lesezugriff angeben.
 
 <table>
   <tr>
-    <th> 권한 </th>
-    <th> 읽기 ACL 옵션 </th>
+    <th> Berechtigung </th>
+    <th> Optionen für Lesezugriffssteuerung (Read ACL) </th>
   </tr>
   <tr>
-    <td> 계정 소속에 상관없이 모든 참조자 읽기 </td>
+    <td> Lesen für alle Referrer unabhängig von der Kontozuordnung </td>
     <td> `.r,*` </td>
   </tr>
   <tr>
-    <td> 모든 참조자 및 목록에 대한 읽기 및 나열 </td>
+    <td> Lesen und Auflisten für alle Referrer und Listen </td>
     <td> `.r:*,.rlistings` </td>
   </tr>
   <tr>
-    <td> 특정 프로젝트의 지정된 사용자에 대한 읽기 및 나열 </td>
-    <td> `< project_id>:< user_id>` </td>
+    <td> Lesen und Auflisten für angegebenen Benutzer in bestimmtem Projekt </td>
+    <td> `< Projekt-ID>:< Benutzer-ID>` </td>
   </tr>
   <tr>
-    <td> 모든 프로젝트의 지정된 사용자에 대한 읽기 및 나열 </td>
-    <td> `<*>:< user_id>` </td>
+    <td> Lesen und Auflisten für angegebenen Benutzer in jedem Projekt </td>
+    <td> `<*>:< Benutzer-ID>` </td>
   </tr>
   <tr>
-    <td> 지정된 프로젝트의 모든 사용자에 대한 읽기 및 나열 </td>
-    <td> `< project_id>:<*>` </td>
+    <td> Lesen und Auflisten für jeden Benutzer in angegebenem Projekt </td>
+    <td> `< Projekt-ID>:<*>` </td>
   </tr>
   <tr>
-    <td> 모든 프로젝트의 모든 사용자에 대한 읽기 및 나열 </td>
+    <td> Lesen und Auflisten für jeden Benutzer in jedem Projekt  </td>
     <td> `<*>:<*>` </td>
   </tr>
 </table>
 
-*표 2: 옵션별 읽기 액세스 권한*
+*Tabelle 2: Lesezugriffsberechtigungen nach Option*
 
-참고: 액세스 제어 목록을 구분하려면 쉼표(,)를 사용하십시오. 예: `-read-acl project id:user_id1, project_id2:user_id2`.
+Anmerkung: Trennen Sie Zugriffssteuerungslisten durch ein Komma (,). Beispiel: `-read-acl projekt-id:benutzer-id1, projekt-id2:benutzer-id2`.
 
 
-쓰기 액세스를 부여하려면 Swift CLI를 통해 `--write-acl` 또는 `-w` 옵션을 사용하십시오. 
+Zum Erteilen von Schreibzugriff verwenden Sie die Option `--write-acl` oder `-w` in der Swift-CLI.
 
-1. 사용자가 작성한 서비스 신임 정보 내에 있는 정보를 사용하여 신임 정보를 인증하십시오. 출력으로 오브젝트 스토리지 URL 및 인증 토큰을 수신합니다.
+1. Authentifizieren Sie Ihre Berechtigungsnachweise mit den Informationen in den Serviceberechtigungsnachweisen, die Sie erstellt haben.  Sie empfangen Ihre Object Storage-URL und Ihr Authentifizierungstoken als Ausgabe.
 
-  Swift 명령:
+  Swift-Befehl:
   ```
-  export OS_USER_ID="<user_id>"
-  export OS_PASSWORD="<password>"
-  export OS_TENANT_ID=<tenant_id>
+  export OS_USER_ID="<Benutzer-ID>"
+  export OS_PASSWORD="<Kennwort>"
+  export OS_TENANT_ID=<Tenant-ID>
   export OS_AUTH_URL=https://identity.open.softlayer.com/v3
-  export OS_REGION_NAME=<region>
+  export OS_REGION_NAME=<Region>
   export OS_IDENTITY_API_VERSION=3
   export OS_AUTH_VERSION=3
 
   swift auth
   ```
-  cURL 명령:
+  cURL-Befehl:
   ```
-  curl -i -H "X-Auth-User:< user_id>" -H "X-Auth-Key:< password>" https://identity.open.softlayer.com/v3
+  curl -i -H "X-Auth-User:<Benutzer-ID>" -H "X-Auth-Key:<Kennwort>" https://identity.open.softlayer.com/v3
   ```
-2. 다음 명령을 실행하여 쓰기 액세스를 부여하십시오.
+2. Führen Sie den folgenden Befehl aus, um Schreibzugriff zu erteilen:
 
-  Swift 명령:
+  Swift-Befehl:
   ```
-  swift post <container_name> --write-acl "<user_id>:<project_id>"
+  swift post <Containername> --write-acl "<Benutzer-ID>:<Projekt-ID>"
   ```
-  cURL 명령:
+  cURL-Befehl:
   ```
-  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: <user_id>: <project_id>" -H "X-Auth-Token:<OS_AUTH_TOKEN>"
+  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: <Benutzer-ID>: <Projekt-ID>" -H "X-Auth-Token:<OS_AUTH_TOKEN>"
 
   ```
-3. 쓰기 ACL 값을 확인하십시오.
+3. Überprüfen Sie den Wert für die Schreibzugriffssteuerungsliste (Write ACL).
 
-  Swift 명령:
+  Swift-Befehl:
   ```
-  swift stat <container_name>
+  swift stat <Containername>
   ```
-  cURL 명령:
+  cURL-Befehl:
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token:<OS_AUTH_TOKEN>"
   ```
 
 
-쓰기 ACL 조합을 조작할 수 있습니다.
+Sie können verschiedene ACL-Kombinationen für Schreibzugriff angeben.
 
 <table>
   <tr>
-    <th> 권한 </th>
-    <th> 쓰기 ACL 옵션 </th>
+    <th> Berechtigung </th>
+    <th> Optionen für Schreibzugriffssteuerung (Write ACL) </th>
   </tr>
   <tr>
-    <td> 특정 프로젝트의 지정된 사용자에 대한 쓰기 </td>
-    <td> `<project_id>:<user_id>` </td>
+    <td> Schreiben für angegebenen Benutzer in bestimmtem Projekt </td>
+    <td> `<Projekt-ID>:<Benutzer-ID>` </td>
   </tr>
   <tr>
-    <td> 모든 프로젝트의 지정된 사용자에 대한 쓰기 </td>  
-    <td> `*:<user_id>` </td>
+    <td> Schreiben für angegebenen Benutzer in jedem Projekt </td>  
+    <td> `*:<Benutzer-ID>` </td>
   </tr>
   <tr>
-    <td> 지정된 프로젝트의 모든 사용자에 대한 쓰기 </td>
-    <td> `<project_id>:<*>` </td>
+    <td> Schreiben für jeden Benutzer in angegebenem Projekt </td>
+    <td> `<Projekt-ID>:<*>` </td>
   </tr>
   <tr>
-    <td> 모든 프로젝트의 모든 사용자에 대한 쓰기 </td>
+    <td> Schreiben für jeden Benutzer in jedem Projekt </td>
     <td> `<*>:<*>` </td>
   </tr>
 </table>
 
-*표 3: 옵션별 쓰기 액세스 권한*
+*Tabelle 3: Schreibzugriffsberechtigungen nach Option*
 
-참고: 액세스 제어 목록을 구분하려면 쉼표(,)를 사용하십시오. 예: `-write-acl project id:user_id1, project_id2:user_id2`.
-
-
+Anmerkung: Trennen Sie Zugriffssteuerungslisten durch ein Komma (,). Beispiel: `-write-acl projekt-id:benutzer-id1, projekt-id2:benutzer-id2`.
 
 
-### 액세스 제거 {: #removing-access}
 
-컨테이너에서 읽기 ACL 제거:
 
-  Swift 명령:
+### Zugriff entfernen {: #removing-access}
+
+Gehen Sie wie folgt vor, um Lesezugriffssteuerungslisten von einem Container zu entfernen:
+
+  Swift-Befehl:
   ```
-  swift post <container_name> --read-acl “”
+  swift post <Containername> --read-acl “”
   ```
-  cURL 명령:
+  cURL-Befehl:
   ```
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
 
-컨테이너에서 쓰기 ACL 제거:
+Gehen Sie wie folgt vor, um Schreibzugriffssteuerungslisten von einem Container zu entfernen:
 
-  Swift 명령:
+  Swift-Befehl:
   ```
-  swift post <container_name> --write-acl “”
+  swift post <Containername> --write-acl “”
   ```
-  cURL 명령:
+  cURL-Befehl:
   ```
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
 
-ACL을 제거했는지 여부 확인:
+Überprüfen Sie, ob eine Zugriffssteuerungsliste (ACL) entfernt wurde:
 
-  Swift 명령:
+  Swift-Befehl:
   ```
-  swift stat <container_name>
+  swift stat <Containername>
   ```
 
-  출력 예:
+  Beispielausgabe:
   ```
          Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
        Container: Test
@@ -881,7 +900,7 @@ X-Storage-Policy: standard
     Content-Type: text/plain; charset=utf-8
 
   ```
-  cURL 명령:
+  cURL-Befehl:
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
@@ -889,14 +908,14 @@ X-Storage-Policy: standard
 
 
 
-## {{site.data.keyword.objectstorageshort}} 바인드 해제 및 디프로비저닝 {: #deprovisioning-object-storage}
+## Bindung und Bereitstellung von {{site.data.keyword.objectstorageshort}} aufheben {: #deprovisioning-object-storage}
 
-### {{site.data.keyword.objectstorageshort}} 서비스 디프로비저닝 방법
-1.	{{site.data.keyword.Bluemix_notm}} 대시보드에서 서비스를 선택하십시오.   
-2.	기어 아이콘을 클릭한 후 **서비스 삭제**를 선택하십시오. 
+### Vorgehensweise zum Löschen Ihres {{site.data.keyword.objectstorageshort}}-Service
+1.	Wählen Sie Ihren Service im {{site.data.keyword.Bluemix_notm}}-Dashboard aus.  
+2.	Klicken Sie auf das Zahnradsymbol und wählen Sie **Service löschen** aus.
 
-**주의:** IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} 서비스 인스턴스를 디프로비저닝하면 클라우드 프로젝트와 Swift 계정이 삭제됩니다. 디프로비저닝된 인스턴스의 모든 컨테이너와 오브젝트가 Swift에서 삭제되며 이를 복원할 수 없습니다.
+**Achtung:** Wenn Sie eine IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Serviceinstanz löschen, werden das Cloudprojekt und das Swift-Konto gelöscht. Alle Container und Objekte in der gelöschten Instanz werden aus Swift gelöscht und können nicht wiederhergestellt werden.
 
-### 애플리케이션 바인드 해제 또는 서비스 키 삭제
+### Bindung für eine Anwendung aufheben oder einen Serviceschlüssel löschen
 
-{{site.data.keyword.objectstorageshort}} 인스턴스에서 애플리케이션을 바인드 해제하거나 서비스 키를 삭제하면 신임 정보가 삭제됩니다. {{site.data.keyword.objectstorageshort}} 계정은 {{site.data.keyword.objectstorageshort}} 인스턴스가 디프로비저닝될 때까지 삭제되지 않습니다. [새 서비스 키를 리바인드하거나 작성하여](#bind-object-storage-to-application) 새 클라우드 신임 정보를 생성할 수 있습니다.
+Wenn Sie die Bindung einer Anwendung an die {{site.data.keyword.objectstorageshort}}-Instanz aufheben oder den Serviceschlüssel löschen, werden die Berechtigungsnachweise gelöscht. Das {{site.data.keyword.objectstorageshort}}-Konto wird erst gelöscht, wenn die Bereitstellung der {{site.data.keyword.objectstorageshort}}-Instanz aufgehoben wird. Sie können neue Cloudberechtigungsnachweise generieren, indem Sie einen [neuen Serviceschlüssel binden oder erstellen](#bind-object-storage-to-application).

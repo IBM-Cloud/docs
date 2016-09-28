@@ -1,46 +1,53 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
-# 常见问题 {: #faq} 
+# FAQ {: #faq} 
 
-*上次更新时间：2016 年 7 月 18 日*
+*Letzte Aktualisierung: 18. Juli 2016*
 {: .last-updated}
 
 
-## 价格是如何根据所选套餐变化的？ {: #plan-price}
-定价根据所选套餐而变化。有关更多定价信息，请参阅 [IBM Bluemix 价格表](https://console.ng.bluemix.net/pricing/){: new_window}或使用[计算器](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}，以获取更详细的估算。
+## Wie variieren die Preise je nach ausgewähltem Plan? {: #plan-price}
+Die Preisgestaltung ist vom ausgewählten Plan abhängig. Weitere Informationen zu Preisen finden Sie in der [IBM Bluemix-Preisliste](https://console.ng.bluemix.net/pricing/){: new_window} oder verwenden Sie den [Preisrechner](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}, um detailliertere Preisschätzungen zu ermitteln.
 
 
-## 对于 {{site.data.keyword.objectstorageshort}}，我可以使用哪些帐户和付款套餐？ {: #account-payment}
-{{site.data.keyword.objectstorageshort}} 服务随附多个套餐选项。自一般可用性发行版以来，目前提供两种套餐：标准套餐和免费套餐。标准套餐只适用于 {{site.data.keyword.Bluemix_notm}} 付费帐户（即现买现付或预订帐户）和 IBM 内部用户。标准套餐包括每一个帐户存储使用量入门级 5 GB 免费信用额度。
+## Welche Konten und Zahlungspläne können für {{site.data.keyword.objectstorageshort}} verwendet werden? {: #account-payment}
+Der {{site.data.keyword.objectstorageshort}}-Service wird mit mehreren Planoptionen bereitgestellt. Mit dem Release der allgemeinen Verfügbarkeit werden gegenwärtig zwei Pläne angeboten: Standard und Kostenlos. Der Standardplan ist nur für gebührenpflichtige {{site.data.keyword.Bluemix_notm}}-Konten verfügbar, entweder für 'Nutzungsabhängig' oder für 'Abonnement', sowie für interne IBM Benutzer. Der Standardplan umfasst zur Einführung eine Gratisleistung in Form von 5 GB kostenfreier Speichernutzung pro Konto.
 
-仍有效的试用帐户可以使用免费套餐，免费套餐只允许 {{site.data.keyword.Bluemix_notm}} 组织中存在一个实例。在 {{site.data.keyword.Bluemix_notm}} 试用时间到期后，将禁用关联的 {{site.data.keyword.objectstorageshort}} 服务实例，即无法通过 {{site.data.keyword.Bluemix_notm}} 用户界面或命令行来访问存储帐户。在 30 天宽限期后，将清除 {{site.data.keyword.Bluemix_notm}} 帐户，并且删除所有数据。要避免数据丢失，建议尽快升级到 {{site.data.keyword.Bluemix_notm}} 付费帐户。要升级帐户，请单击用户管理菜单，然后选择**帐户**，这将提供有关升级过程的指示信息。
+Testkonten, die weiterhin aktiv sind, können den kostenlosen Plan nutzen, der nur das Vorhandensein einer Instanz in einer {{site.data.keyword.Bluemix_notm}}-Organisation zulässt. Wenn der Zeitraum für den {{site.data.keyword.Bluemix_notm}}-Test abläuft, wird die zugeordnete {{site.data.keyword.objectstorageshort}}-Serviceinstanz inaktiviert. Dies bedeutet, dass weder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle noch die Befehlszeile auf das Speicherkonto zugreifen kann. Nach einer Frist von 30 Tagen wird Ihr {{site.data.keyword.Bluemix_notm}}-Konto bereinigt und alle Daten werden gelöscht. Zur Vermeidung von Datenverlust wird empfohlen, das gebührenpflichtige {{site.data.keyword.Bluemix_notm}}-Konto so bald wie möglich zu aktualisieren. Zum Aktualisieren Ihres Kontos klicken Sie auf das Benutzermanagementmenü und wählen **Konto** aus. Dadurch werden Anweisungen zum Aktualisierungsprozess bereitgestellt.
 
-## 如何更改套餐？ {: #changeplan}  
-在 Beta 或免费套餐中创建的实例可以升级到标准套餐。关联的组织必须为 {{site.data.keyword.Bluemix_notm}} 付费帐户。具有 {{site.data.keyword.objectstorageshort}} 实例的试用帐户无法升级到标准套餐，而标准套餐上的实例也无法降级到其他套餐。升级时，服务实例和客户数据将迁移到新套餐。
+## Wie ändere ich meinen Plan? {: #changeplan}  
+Für Instanzen, die im Rahmen des Beta-Plans oder des kostenfreien Plans erstellt werden, kann ein Upgrade auf auf den Standardplan durchgeführt werden. Die zugeordnete Organisation muss ein gebührenpflichtiges {{site.data.keyword.Bluemix_notm}}-Konto sein. Testkonten mit {{site.data.keyword.objectstorageshort}}-Instanzen können nicht auf den Standardplan aktualisiert werden und Instanzen im Standardplan können nicht auf andere Pläne herabgestuft werden. Ihre Serviceinstanzen und Kundendaten werden bei einem Upgrade in den neuen Plan verschoben.
 
-要升级套餐：
-1.	在 {{site.data.keyword.objectstorageshort}} 用户界面中，单击**套餐**。
-2.	选择**标准**作为新套餐，然后单击**保存**。
+Gehen Sie wie folgt vor, um für Ihren Plan ein Upgrade durchzuführen:
+1.	Kicken Sie in der Benutzerschnittstelle von {{site.data.keyword.objectstorageshort}} auf **Plan**.
+2.	Wählen **Standard** als neuen Plan aus und klicken Sie auf **Speichern**.
 
-还可以使用命令行界面来更改付款套餐。有关更多信息，请参阅[如何更改套餐](../../pricing/index.html#changing)。
+Sie können außerdem Ihren Zahlungsplan über die Befehlszeilenschnittstelle ändern. Weitere Informationen finden Sie in [Vorgehensweise zum Ändern des Plans](../../pricing/index.html#changing).
 
 
-## 使用 {{site.data.keyword.objectstorageshort}} 如何计费和收费？ {: #charge-bill}
+## Welche Gebühren werden für meine Nutzung von {{site.data.keyword.objectstorageshort}} fällig und wann werden sie in Rechnung gestellt? {: #charge-bill}
 
-{{site.data.keyword.objectstorageshort}} 服务仅按使用内容收费。要开始使用此服务，无需支付最低费用、设置费或保证金。无需为 API 请求或入站数据网络流量付费。
+Für den Service {{site.data.keyword.objectstorageshort}} werden nur Gebühren für das, was Sie nutzen, fällig.  Um mit der Verwendung des Service zu beginnen, sind keine Mindestgebühren oder Konfigurationsgebühren zu entrichten und es sind auch keine sonstigen Verpflichtungen einzugehen. Es sind keine Gebühren für API-Anforderungen oder für Netzverkehr für eingehende Daten zu entrichten.
 
-按 {{site.data.keyword.objectstorageshort}} 使用量计费的依据是在整个计费周期内存储使用量。包括在 {{site.data.keyword.Bluemix_notm}} 组织帐户下创建的容器中的所有对象数据。 
+Die Kosten für Ihre Nutzung von {{site.data.keyword.objectstorageshort}} werden während des gesamten Fakturierungszyklus auf der Grundlage der Speichernutzung berechnet. Dies schließt alle Objektdaten in Containern ein, die Sie mit Ihrem {{site.data.keyword.Bluemix_notm}}-Organisationskonto erstellt haben. 
 
-出站数据传输收费适用于通过公用网络从您的任何对象容器中读取数据的情况。公用出站带宽的计费是针对计费周期内耗用的所有带宽。
+Gebühren für die Übertragung abgehender Daten werden fällig, sobald Daten aus einem Ihrer Objektcontainer über das öffentliche Netz gelesen werden. Bei der öffentlichen Bandbreite für abgehende Daten werden die Kosten für die gesamte verbrauchte Bandbreite im Fakturierungszyklus berechnet.
 
-{{site.data.keyword.objectstorageshort}} 定价的度量组件如下所示：
-* 存储使用量  - $0.04/GB/月
-* 公共出站数据传输  - $0.09/GB/月 
+Die Metrikkomponenten für die Preisbestimmung von {{site.data.keyword.objectstorageshort}} sind folgende:
+* Speichernutzung - $0.04 pro GB pro Monat
+* Öffentliche Übertragung abgehender Daten - $0.09 pro GB pro Monat 
 
-在计费周期结束后，{{site.data.keyword.Bluemix_notm}} 将对当前计费周期的使用量进行自动计费。您可以通过 {{site.data.keyword.Bluemix_notm}} 报告查看当前计费周期的费用。
+Am Ende des Fakturierungszyklus wird Ihnen die Nutzung während des momentanen Fakturierungszeitraums von {{site.data.keyword.Bluemix_notm}} automatisch in Rechnung gestellt. Sie können Ihre Gebühren für den momentanen Fakturierungszeitraum über die {{site.data.keyword.Bluemix_notm}}-Berichterstellungsfunktion einsehen.
 
-为伦敦和达拉斯发布的标准服务套餐定价相同。
+Der für London und Dallas freigegebene Standardserviceplan unterliegt derselben Preisbestimmung.
 
-## 在 {{site.data.keyword.objectstorageshort}} 中如何执行数据复制？ {: #replication}
-{{site.data.keyword.objectstorageshort}} 服务从多个存储节点复制数据并维护这些数据的三个副本。有关更多信息，请参阅 [OpenStack Swift 复制](http://docs.openstack.org/developer/swift/overview_replication.html){: new_window}文档。
+## Wie funktioniert die Datenreplikation in {{site.data.keyword.objectstorageshort}}? {: #replication}
+Der Service {{site.data.keyword.objectstorageshort}} pflegt drei Kopien Ihrer Daten, die in mehreren Speicherknoten repliziert werden. Weitere Informationen finden Sie in der Dokumentation [OpenStack Swift Replication](http://docs.openstack.org/developer/swift/overview_replication.html){: new_window}.
 

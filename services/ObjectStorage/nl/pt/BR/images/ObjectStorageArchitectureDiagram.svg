@@ -1024,51 +1024,51 @@
 		</g>
 		<g id="Text">
 			<rect id="XMLID_588_" x="86.6" y="154.6" class="st25" width="62.8" height="14.2"/>
-			<text id="XMLID_271_" transform="matrix(0.9283 0 0 1 86.605 160.9072)" class="st26 st27">Aplicativo cliente</text>
+			<text id="XMLID_271_" transform="matrix(0.9283 0 0 1 86.605 160.9072)" class="st26 st27">Clientanwendung</text>
 			<rect id="XMLID_586_" x="94.4" y="488.4" class="st25" width="205.5" height="14.2"/>
-			<text id="XMLID_252_" transform="matrix(0.9283 0 0 1 94.3895 500.6885)" class="st28 st26 st29">Datacenter da SoftLayer em Dallas</text>
+			<text id="XMLID_252_" transform="matrix(0.9283 0 0 1 94.3895 500.6885)" class="st28 st26 st29">SoftLayer-Rechenzentrum Dallas</text>
 			<rect id="XMLID_584_" x="77" y="70.5" class="st25" width="81.2" height="11.2"/>
-			<text id="XMLID_254_" transform="matrix(0.9283 0 0 1 76.9737 78.6548)" class="st28 st26 st30">Rede do Bluemix</text>
+			<text id="XMLID_254_" transform="matrix(0.9283 0 0 1 76.9737 78.6548)" class="st28 st26 st30">Bluemix-Netz</text>
 			<rect id="XMLID_582_" x="76.4" y="360" class="st25" width="85.1" height="14.2"/>
-			<text id="XMLID_258_" transform="matrix(0.9283 0 0 1 76.3809 366.3799)" class="st26 st27">Corretor de armazenamento de objeto</text>
+			<text id="XMLID_258_" transform="matrix(0.9283 0 0 1 76.3809 366.3799)" class="st26 st27">Object Storage Broker</text>
 			<rect id="XMLID_563_" x="92" y="238.2" class="st25" width="52" height="14.2"/>
-			<text id="XMLID_315_" transform="matrix(0.9283 0 0 1 91.9732 244.541)" class="st26 st27">Comutador privado</text>
+			<text id="XMLID_315_" transform="matrix(0.9283 0 0 1 91.9732 244.541)" class="st26 st27">Privater Switch</text>
 			<rect id="XMLID_561_" x="649.3" y="488.4" class="st25" width="216.6" height="14.2"/>
-			<text id="XMLID_348_" transform="matrix(0.9283 0 0 1 649.3102 500.6884)" class="st28 st26 st29">Datacenter da SoftLayer em Londres</text>
+			<text id="XMLID_348_" transform="matrix(0.9283 0 0 1 649.3102 500.6884)" class="st28 st26 st29">SoftLayer-Rechenzentrum London</text>
 			<rect id="XMLID_547_" x="633.9" y="457.9" class="st25" width="55.8" height="14.2"/>
-			<text id="XMLID_473_" transform="matrix(0.9283 0 0 1 633.8594 464.206)" class="st26 st27">Nós de armazenamento</text>
+			<text id="XMLID_473_" transform="matrix(0.9283 0 0 1 633.8594 464.206)" class="st26 st27">Speicherknoten</text>
 			<rect id="XMLID_472_" x="642" y="359" class="st25" width="45.2" height="14.2"/>
-			<text id="XMLID_410_" transform="matrix(0.9283 0 0 1 641.9571 365.3604)" class="st26 st27">Proxy de Swift</text>
+			<text id="XMLID_410_" transform="matrix(0.9283 0 0 1 641.9571 365.3604)" class="st26 st27">Swift-Proxy</text>
 			<rect id="XMLID_389_" x="621" y="70.5" class="st25" width="89" height="11.2"/>
-			<text id="XMLID_344_" transform="matrix(0.9283 0 0 1 621.0215 78.6548)" class="st28 st26 st30">Rede da SoftLayer</text>
+			<text id="XMLID_344_" transform="matrix(0.9283 0 0 1 621.0215 78.6548)" class="st28 st26 st30">SoftLayer-Netz</text>
 			<rect id="XMLID_347_" x="601.1" y="158.5" class="st25" width="118.4" height="14.2"/>
-			<text id="XMLID_614_" transform="matrix(0.9283 0 0 1 601.1417 164.8692)" class="st26 st27">Servidor de autenticação de Keystone</text>
+			<text id="XMLID_614_" transform="matrix(0.9283 0 0 1 601.1417 164.8692)" class="st26 st27">Keystone-Authentifizierungsserver</text>
 			<rect id="XMLID_343_" x="461.4" y="235" class="st25" width="28.8" height="14.2"/>
 			<text id="XMLID_728_" transform="matrix(0.9283 0 0 1 461.4185 241.3638)" class="st26 st27">Firewall</text>
 			<rect id="XMLID_304_" x="461.4" y="311.6" class="st25" width="28.8" height="14.2"/>
 			<text id="XMLID_131_" transform="matrix(0.9283 0 0 1 461.4185 317.9345)" class="st26 st27">Internet</text>
 			<rect id="XMLID_265_" x="437.3" y="117.7" class="st25" width="78.9" height="19.7"/>
-			<text id="XMLID_574_" transform="matrix(0.9283 0 0 1 437.3101 124.0166)" class="st26 st27">Federação de Keystone</text>
+			<text id="XMLID_574_" transform="matrix(0.9283 0 0 1 437.3101 124.0166)" class="st26 st27">Keystone-Zusammenschluss</text>
 			<rect id="XMLID_259_" x="799.1" y="158.5" class="st25" width="62.8" height="14.2"/>
-			<text id="XMLID_533_" transform="matrix(0.9283 0 0 1 799.1387 164.8447)" class="st26 st27">Aplicativo cliente</text>
+			<text id="XMLID_533_" transform="matrix(0.9283 0 0 1 799.1387 164.8447)" class="st26 st27">Clientanwendung</text>
 			<rect id="XMLID_253_" x="788.9" y="70.5" class="st25" width="81.2" height="11.2"/>
-			<text id="XMLID_346_" transform="matrix(0.9283 0 0 1 788.9005 78.6548)" class="st28 st26 st30">Rede do Bluemix</text>
+			<text id="XMLID_346_" transform="matrix(0.9283 0 0 1 788.9005 78.6548)" class="st28 st26 st30">Bluemix-Netz</text>
 			<rect id="XMLID_220_" x="790.5" y="360" class="st25" width="85.1" height="14.2"/>
-			<text id="XMLID_342_" transform="matrix(0.9283 0 0 1 790.4708 366.3799)" class="st26 st27">Corretor de armazenamento de objeto</text>
+			<text id="XMLID_342_" transform="matrix(0.9283 0 0 1 790.4708 366.3799)" class="st26 st27">Object Storage Broker</text>
 			<rect id="XMLID_213_" x="804.5" y="238.2" class="st25" width="52" height="14.2"/>
-			<text id="XMLID_69_" transform="matrix(0.9283 0 0 1 804.5079 244.541)" class="st26 st27">Comutador privado</text>
+			<text id="XMLID_69_" transform="matrix(0.9283 0 0 1 804.5079 244.541)" class="st26 st27">Privater Switch</text>
 			<rect id="XMLID_211_" x="635.3" y="238.2" class="st25" width="52" height="14.2"/>
-			<text id="XMLID_264_" transform="matrix(0.9283 0 0 1 635.3458 244.541)" class="st26 st27">Comutador público</text>
+			<text id="XMLID_264_" transform="matrix(0.9283 0 0 1 635.3458 244.541)" class="st26 st27">Öffentlicher Switch</text>
 			<rect id="XMLID_209_" x="255.2" y="456.8" class="st25" width="55.8" height="14.2"/>
-			<text id="XMLID_303_" transform="matrix(0.9283 0 0 1 255.1949 463.1425)" class="st26 st27">Nós de armazenamento</text>
+			<text id="XMLID_303_" transform="matrix(0.9283 0 0 1 255.1949 463.1425)" class="st26 st27">Speicherknoten</text>
 			<rect id="XMLID_207_" x="263.9" y="357.1" class="st25" width="45.2" height="14.2"/>
-			<text id="XMLID_219_" transform="matrix(0.9283 0 0 1 263.8658 363.4541)" class="st26 st27">Proxy de Swift</text>
+			<text id="XMLID_219_" transform="matrix(0.9283 0 0 1 263.8658 363.4541)" class="st26 st27">Swift-Proxy</text>
 			<rect id="XMLID_205_" x="237.4" y="70.5" class="st25" width="89" height="11.2"/>
-			<text id="XMLID_134_" transform="matrix(0.9283 0 0 1 237.4361 78.6548)" class="st28 st26 st30">Rede da SoftLayer</text>
+			<text id="XMLID_134_" transform="matrix(0.9283 0 0 1 237.4361 78.6548)" class="st28 st26 st30">SoftLayer-Netz</text>
 			<rect id="XMLID_187_" x="258.3" y="238.2" class="st25" width="52" height="14.2"/>
-			<text id="XMLID_132_" transform="matrix(0.9283 0 0 1 258.252 244.541)" class="st26 st27">Comutador público</text>
+			<text id="XMLID_132_" transform="matrix(0.9283 0 0 1 258.252 244.541)" class="st26 st27">Öffentlicher Switch</text>
 			<rect id="XMLID_185_" x="229" y="157.1" class="st25" width="118.4" height="14.2"/>
-			<text id="XMLID_130_" transform="matrix(0.9283 0 0 1 228.9879 163.4488)" class="st26 st27">Servidor de autenticação de Keystone</text>
+			<text id="XMLID_130_" transform="matrix(0.9283 0 0 1 228.9879 163.4488)" class="st26 st27">Keystone-Authentifizierungsserver</text>
 		</g>
 	</g>
 </switch>

@@ -1,19 +1,25 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
-# Sobre o {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
+# Informationen zu {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Última atualização: 10 de agosto de 2016*
+*Letzte Aktualisierung: 29. August 2016*
 {: .last-updated}
 
 
-O IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} usa o OpenStack Identity (Keystone) para autenticação e pode ser acessado diretamente usando chamadas API v1 do OpenStack Object Storage (Swift). O IBM {{site.data.keyword.objectstorageshort}} pode estar ligado a um aplicativo {{site.data.keyword.Bluemix_notm}} ou ser acessado de fora de um aplicativo {{site.data.keyword.Bluemix_notm}}. 
+IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} verwendet OpenStack Identity (Keystone) zur Authentifizierung und ist für Aufrufe der API von OpenStack Object Storage (Swift) V1 direkt zugänglich. IBM {{site.data.keyword.objectstorageshort}} kann an eine {{site.data.keyword.Bluemix_notm}}-Anwendung gebunden werden oder es kann von außerhalb einer {{site.data.keyword.Bluemix_notm}}-Anwendung darauf zugegriffen werden. 
 
-Para obter mais informações sobre como usar o OpenStack Swift e o Keystone, visualize o [site de documentação do OpenStack](http://docs.openstack.org){: new_window}.
+Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf der [OpenStack-Dokumentationssite](http://docs.openstack.org){: new_window} verfügbar.
 
-O diagrama de arquitetura do {{site.data.keyword.objectstorageshort}} é o seguinte:
+Das {{site.data.keyword.objectstorageshort}}-Architekturdiagramm sieht wie folgt aus:
 
-[![{{site.data.keyword.objectstorageshort}} Diagrama de
-arquitetura](images/ObjectStorageArchitectureDiagram.png)(images/ObjectStorageArchitectureDiagram.png)] {: new_window}
+![{{site.data.keyword.objectstorageshort architecture diagram }}](images/ObjectStorageArchitectureDiagram.png)
 
-*Figure 1. {{site.data.keyword.objectstorageshort}} Diagrama de arquitetura*
+*Abbildung 1. {{site.data.keyword.objectstorageshort}}-Architekturdiagramm*
 

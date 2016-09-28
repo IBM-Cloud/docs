@@ -7,20 +7,20 @@ copyright:
 
 {:new_window: target="_blank"}
 
-# Resolución de problemas de {{site.data.keyword.objectstorageshort}}
+# {{site.data.keyword.objectstorageshort}} - Fehlerbehebung
 {: #troubleshooting}
 
-*Última actualización: 17 de agosto de 2016*
+*Letzte Aktualisierung: 17. August 2016*
 {: .last-updated}
 
-A continuación, encontrará las respuestas a las preguntas sobre resolución de problemas más comunes sobre el uso de {{site.data.keyword.objectstoragefull}}.
+Im Folgenden finden Sie die Antworten auf häufige Fragen zur Fehlerbehebung bei der Verwendung von {{site.data.keyword.objectstoragefull}}.
 
-## Paquete de contenido de señal no reconocido devuelto al utilizar openstack4J con Perfil de Liberty
+## Nicht erkanntes Token-Content-Pack bei der Verwendung von openstack4J mit Liberty-Profil zurückgegeben
 {: #unrecognized_token}
 
-### Síntoma
+### Symptom
 
-El siguiente seguimiento de pila se puede haber producido al utilizar openstack4j con el Perfil de Liberty:
+Bei der Verwendung von openstack4j mit dem Liberty-Profil kann es zu folgendem Stack-Trace kommen:
 
     Exception thrown by application class 'org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity:124'
     org.openstack4j.api.exceptions.ClientResponseException: Unrecognized token 'contentpack': was expecting ('true', 'false' or 'null') at [Source: contentpack ; line: 1, column: 12]
@@ -36,26 +36,26 @@ El siguiente seguimiento de pila se puede haber producido al utilizar openstack4
     at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
     at java.lang.reflect.Method.invoke(Unknown Source)
 
-### Solución
+### Lösung
 
-Este problema se produce a partir de un problema de carga de clases, donde la biblioteca openstack4j contiene algunos de los mismos paquetes que se proporcionan en el perfil de Liberty.  Por ejemplo, OpenStack4j utiliza JERSEY, lo que puede colisionar con las bibliotecas de Wink.
+Die Ursache des Problems ist ein Klassenladeproblem, bei dem die Bibliothek 'openstack4j' einige derselben Pakete enthält, die im Liberty-Profil bereitgestellt werden.  So verwendet OpenStack4j beispielsweise JERSEY; dies kann zu Konflikten mit den Wink-Bibliotheken führen.
 
-Para resolver el problema, siga estos pasos:
+Führen Sie die folgenden Schritte aus, um das Problem zu beheben:
 
-1. Utilice la carga de clases inversa (parentLast).
-2. Excluya jaxrs de las características habilitadas.
+1. Umgekehrtes Laden von Klassen nutzen (parentLast).
+2. jaxrs aus aktivierten Features ausschließen.
 
-## Obtención de ayuda y soporte para {{site.data.keyword.objectstorageshort}}
+## Hilfe und Unterstützung für {{site.data.keyword.objectstorageshort}} erhalten
 {: #gettinghelp}
 
-Si tiene problemas o dudas al utilizar {{site.data.keyword.objectstoragefull}}, puede obtener ayuda buscando información o formulando preguntas en foros. También puede abrir una incidencia de soporte.
+Hilfe zu Problemen oder Fragen bei Verwendung von {{site.data.keyword.objectstoragefull}} finden Sie, indem Sie in einem Forum nach Informationen suchen oder dort Fragen stellen. Sie haben außerdem die Möglichkeit, ein Support-Ticket zu öffnen.
 
-Al utilizar los foros para formular una pregunta, añada una etiqueta para que la vean los equipos de desarrollo de {{site.data.keyword.Bluemix_notm}}.
+Wenn Sie in Foren eine Frage stellen, versehen Sie Ihre Frage mit einem Tag, sodass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungsteams registriert wird.
 
-* Si tiene preguntas técnicas sobre {{site.data.keyword.objectstorageshort}}, publique su pregunta en [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} y añada las etiquetas "ibm-bluemix" y "object-storage".
+* Wenn Sie technische Fragen zu {{site.data.keyword.objectstorageshort}} haben, stellen Sie Ihre Frage auf [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} und versehen Sie sie mit den Tags "ibm-bluemix" und "object-storage".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Para formular preguntas sobre el servicio y obtener instrucciones de iniciación, utilice el foro [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}. Incluya las etiquetas "object-storage" y "bluemix".
+* Bei Fragen zum Service sowie zum Abruf von Einführungsanweisungen wenden Sie sich an das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}. Versehen Sie Ihre Anfrage mit den Tags "object-storage" und "bluemix".
 
-Consulte [Obtener ayuda](https://console.ng.bluemix.net/docs/support/index.html#getting-help) para obtener más información sobre el uso de los foros.
+Unter [Hilfe anfordern](https://console.ng.bluemix.net/docs/support/index.html#getting-help) finden Sie weitere Informationen zur Nutzung der Foren.
 
-Para obtener más información sobre cómo abrir una incidencia de soporte de IBM, o sobre los niveles de soporte y las gravedades de las incidencias, consulte [Contacto con soporte](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+Informationen zum Öffnen eines IBM Support-Tickets oder zu den Supportebenen und Ticket-Prioritätsstufen finden Sie unter [Support kontaktieren](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).

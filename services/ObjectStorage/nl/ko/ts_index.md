@@ -1,19 +1,26 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} 문제점 해결
+# {{site.data.keyword.objectstorageshort}} - Fehlerbehebung
 {: #troubleshooting}
 
-*마지막 업데이트 날짜: 2016년 8월 17일*
+*Letzte Aktualisierung: 17. August 2016*
 {: .last-updated}
 
-다음은 {{site.data.keyword.objectstoragefull}} 사용에 대한 일반적인 문제점 해결 질문에 대한 응답입니다.
+Im Folgenden finden Sie die Antworten auf häufige Fragen zur Fehlerbehebung bei der Verwendung von {{site.data.keyword.objectstoragefull}}.
 
-## Liberty Profile이 포함된 openstack4J를 사용하는 경우 인식되지 않은 토큰 컨텐츠팩이 리턴됨
+## Nicht erkanntes Token-Content-Pack bei der Verwendung von openstack4J mit Liberty-Profil zurückgegeben
 {: #unrecognized_token}
 
-### 증상
+### Symptom
 
-Liberty Profile이 포함된 openstack4J를 사용하는 경우 다음 스택 추적이 발생할 수 있습니다. 
+Bei der Verwendung von openstack4j mit dem Liberty-Profil kann es zu folgendem Stack-Trace kommen:
 
     Exception thrown by application class 'org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity:124'
     org.openstack4j.api.exceptions.ClientResponseException: Unrecognized token 'contentpack': was expecting ('true', 'false' or 'null') at [Source: contentpack ; line: 1, column: 12]
@@ -29,26 +36,26 @@ Liberty Profile이 포함된 openstack4J를 사용하는 경우 다음 스택 �
     at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
     at java.lang.reflect.Method.invoke(Unknown Source)
 
-### 솔루션
+### Lösung
 
-이 문제점은 Liberty Profile에 제공되는 동일한 패키지의 일부가 openstack4j 라이브러리에 포함되는 클래스 로드 문제가 원인입니다. 예를 들어, OpenStack4j는 JERSEY를 사용하며 이는 Wink 라이브러리와 충돌할 수 있습니다. 
+Die Ursache des Problems ist ein Klassenladeproblem, bei dem die Bibliothek 'openstack4j' einige derselben Pakete enthält, die im Liberty-Profil bereitgestellt werden.  So verwendet OpenStack4j beispielsweise JERSEY; dies kann zu Konflikten mit den Wink-Bibliotheken führen.
 
-문제점을 해결하려면 다음 단계를 따르십시오. 
+Führen Sie die folgenden Schritte aus, um das Problem zu beheben:
 
-1. 역방향 클래스로딩을 사용합니다(parentLast).
-2. 사용하도록 설정된 기능에서 jaxrs를 제외합니다. 
+1. Umgekehrtes Laden von Klassen nutzen (parentLast).
+2. jaxrs aus aktivierten Features ausschließen.
 
-## {{site.data.keyword.objectstorageshort}}에 대한 도움말 가져오기 및 지원
+## Hilfe und Unterstützung für {{site.data.keyword.objectstorageshort}} erhalten
 {: #gettinghelp}
 
-{{site.data.keyword.objectstoragefull}} 사용에 대한 문제점 또는 질문이 있는 경우, 정보를 검색하거나 포럼을 통해 질문하여 도움말을 가져올 수 있습니다. 또한 지원 티켓을 열 수도 있습니다.
+Hilfe zu Problemen oder Fragen bei Verwendung von {{site.data.keyword.objectstoragefull}} finden Sie, indem Sie in einem Forum nach Informationen suchen oder dort Fragen stellen. Sie haben außerdem die Möglichkeit, ein Support-Ticket zu öffnen.
 
-포럼을 사용하여 질문하는 경우, {{site.data.keyword.Bluemix_notm}} 개발 팀이 볼 수 있도록 질문을 태그하십시오.
+Wenn Sie in Foren eine Frage stellen, versehen Sie Ihre Frage mit einem Tag, sodass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungsteams registriert wird.
 
-* {{site.data.keyword.objectstorageshort}}에 대한 기술적인 질문이 있는 경우, [스택 오버플로우](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window}에 질문을 게시하고 "ibm-bluemix" 및 "object-storage"를 사용하여 질문을 태그하십시오.
+* Wenn Sie technische Fragen zu {{site.data.keyword.objectstorageshort}} haben, stellen Sie Ihre Frage auf [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} und versehen Sie sie mit den Tags "ibm-bluemix" und "object-storage".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* 서비스 및 시작하기 지시사항에 대한 질문은 [IBM developerWorks dW 응답](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window} 포럼을 사용하십시오. "object-storage" 및 "bluemix" 태그를 포함하십시오.
+* Bei Fragen zum Service sowie zum Abruf von Einführungsanweisungen wenden Sie sich an das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}. Versehen Sie Ihre Anfrage mit den Tags "object-storage" und "bluemix".
 
-포럼 사용에 대한 자세한 정보는 [도움말 가져오기](https://console.ng.bluemix.net/docs/support/index.html#getting-help)를 참조하십시오.
+Unter [Hilfe anfordern](https://console.ng.bluemix.net/docs/support/index.html#getting-help) finden Sie weitere Informationen zur Nutzung der Foren.
 
-IBM 지원 티켓 열기 또는 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 문의](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)를 참조하십시오.
+Informationen zum Öffnen eines IBM Support-Tickets oder zu den Supportebenen und Ticket-Prioritätsstufen finden Sie unter [Support kontaktieren](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).

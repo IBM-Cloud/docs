@@ -1,46 +1,53 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # FAQ {: #faq} 
 
-*最終更新日: 2016 年 7 月 18 日*
+*Letzte Aktualisierung: 18. Juli 2016*
 {: .last-updated}
 
 
-## 選択するプランによって料金はどのように異なりますか {: #plan-price}
-料金は、選択したプランに応じて異なります。料金に関する詳しい情報は、[IBM Bluemix 料金シート](https://console.ng.bluemix.net/pricing/){: new_window}を参照するか、[計算器](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}を使用して詳細な見積もりを行ってください。
+## Wie variieren die Preise je nach ausgewähltem Plan? {: #plan-price}
+Die Preisgestaltung ist vom ausgewählten Plan abhängig. Weitere Informationen zu Preisen finden Sie in der [IBM Bluemix-Preisliste](https://console.ng.bluemix.net/pricing/){: new_window} oder verwenden Sie den [Preisrechner](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}, um detailliertere Preisschätzungen zu ermitteln.
 
 
-## {{site.data.keyword.objectstorageshort}} ではどのようなアカウントおよび支払プランを利用できますか {: #account-payment}
-{{site.data.keyword.objectstorageshort}} サービスには、プランに関して複数のオプションが用意されています。一般出荷版リリースの時点で、「標準」と「無料」の 2 つのプランが提供されています。「標準」プランは、{{site.data.keyword.Bluemix_notm}} 有料アカウント (「従量課金」または「サブスクリプション」向けと、IBM 社内ユーザー向けのみが利用可能です。「標準」プランには、導入時にストレージ使用量に関して、アカウント当たり 5 GB のクレジット無料枠が設けられています。
+## Welche Konten und Zahlungspläne können für {{site.data.keyword.objectstorageshort}} verwendet werden? {: #account-payment}
+Der {{site.data.keyword.objectstorageshort}}-Service wird mit mehreren Planoptionen bereitgestellt. Mit dem Release der allgemeinen Verfügbarkeit werden gegenwärtig zwei Pläne angeboten: Standard und Kostenlos. Der Standardplan ist nur für gebührenpflichtige {{site.data.keyword.Bluemix_notm}}-Konten verfügbar, entweder für 'Nutzungsabhängig' oder für 'Abonnement', sowie für interne IBM Benutzer. Der Standardplan umfasst zur Einführung eine Gratisleistung in Form von 5 GB kostenfreier Speichernutzung pro Konto.
 
-トライアル・アカウントは引き続きアクティブになっており、「無料」プランをご利用いただけます。無料プランでは、{{site.data.keyword.Bluemix_notm}} 組織内に 1 つのインスタンスのみ存在できます。{{site.data.keyword.Bluemix_notm}} のトライアル期間の満了時以降は、関連付けられている {{site.data.keyword.objectstorageshort}} サービス・インスタンスが無効になります。つまり、ストレージ・アカウントには {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースからも、コマンド・ラインからもアクセスできなくなります。30 日の猶予期間の後、ご使用の {{site.data.keyword.Bluemix_notm}} アカウントはパージされ、すべてのデータが削除されます。データが失われないようにするために、可能な限り早急に {{site.data.keyword.Bluemix_notm}} 有料アカウントにアップグレードすることをお勧めします。アカウントをアップグレードするには、ユーザー管理メニューをクリックして、**「アカウント」**を選択します。これにより、アップグレード・プロセスに関する説明が表示されます。
+Testkonten, die weiterhin aktiv sind, können den kostenlosen Plan nutzen, der nur das Vorhandensein einer Instanz in einer {{site.data.keyword.Bluemix_notm}}-Organisation zulässt. Wenn der Zeitraum für den {{site.data.keyword.Bluemix_notm}}-Test abläuft, wird die zugeordnete {{site.data.keyword.objectstorageshort}}-Serviceinstanz inaktiviert. Dies bedeutet, dass weder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle noch die Befehlszeile auf das Speicherkonto zugreifen kann. Nach einer Frist von 30 Tagen wird Ihr {{site.data.keyword.Bluemix_notm}}-Konto bereinigt und alle Daten werden gelöscht. Zur Vermeidung von Datenverlust wird empfohlen, das gebührenpflichtige {{site.data.keyword.Bluemix_notm}}-Konto so bald wie möglich zu aktualisieren. Zum Aktualisieren Ihres Kontos klicken Sie auf das Benutzermanagementmenü und wählen **Konto** aus. Dadurch werden Anweisungen zum Aktualisierungsprozess bereitgestellt.
 
-## プランの変更はどのようにして行うのですか {: #changeplan}  
-ベータ版を使用して (つまり、「無料」プランに基づいて) 作成されたインスタンスは、「標準」プランにアップグレードできます。関連付けられている組織は、{{site.data.keyword.Bluemix_notm}} 有料アカウントでなければなりません。{{site.data.keyword.objectstorageshort}} インスタンスを含むトライアル・アカウントは、「標準」プランにアップグレードできません。また「標準」プランに基づくインスタンスは、他のプランにダウングレードできません。アップグレードを行うと、ご使用のサービス・インスタンスとお客様データが新しいプランに移行されます。
+## Wie ändere ich meinen Plan? {: #changeplan}  
+Für Instanzen, die im Rahmen des Beta-Plans oder des kostenfreien Plans erstellt werden, kann ein Upgrade auf auf den Standardplan durchgeführt werden. Die zugeordnete Organisation muss ein gebührenpflichtiges {{site.data.keyword.Bluemix_notm}}-Konto sein. Testkonten mit {{site.data.keyword.objectstorageshort}}-Instanzen können nicht auf den Standardplan aktualisiert werden und Instanzen im Standardplan können nicht auf andere Pläne herabgestuft werden. Ihre Serviceinstanzen und Kundendaten werden bei einem Upgrade in den neuen Plan verschoben.
 
-プランのアップグレードは、以下の手順で行います。
-1.	{{site.data.keyword.objectstorageshort}} ユーザー・インターフェースで、**「プラン」**をクリックします。
-2.	新しいプランとして**「標準」**を選択し、**「保存」**をクリックします。
+Gehen Sie wie folgt vor, um für Ihren Plan ein Upgrade durchzuführen:
+1.	Kicken Sie in der Benutzerschnittstelle von {{site.data.keyword.objectstorageshort}} auf **Plan**.
+2.	Wählen **Standard** als neuen Plan aus und klicken Sie auf **Speichern**.
 
-コマンド・ライン・インターフェースを使用して支払プランを変更することもできます。詳細については、[「プラン変更方法」](../../pricing/index.html#changing)を参照してください。
+Sie können außerdem Ihren Zahlungsplan über die Befehlszeilenschnittstelle ändern. Weitere Informationen finden Sie in [Vorgehensweise zum Ändern des Plans](../../pricing/index.html#changing).
 
 
-## {{site.data.keyword.objectstorageshort}} の使用に対する課金および請求の方法はどのようになっていますか {: #charge-bill}
+## Welche Gebühren werden für meine Nutzung von {{site.data.keyword.objectstorageshort}} fällig und wann werden sie in Rechnung gestellt? {: #charge-bill}
 
-{{site.data.keyword.objectstorageshort}} サービスでは、使用したものに対してのみ課金されます。サービスの使用を開始するための最小料金、セットアップ料金、またはコミットメントはありません。API 要求およびインバウンド・データ・ネットワーク・トラフィックに対する課金はありません。
+Für den Service {{site.data.keyword.objectstorageshort}} werden nur Gebühren für das, was Sie nutzen, fällig.  Um mit der Verwendung des Service zu beginnen, sind keine Mindestgebühren oder Konfigurationsgebühren zu entrichten und es sind auch keine sonstigen Verpflichtungen einzugehen. Es sind keine Gebühren für API-Anforderungen oder für Netzverkehr für eingehende Daten zu entrichten.
 
-{{site.data.keyword.objectstorageshort}} 使用量は、請求サイクル内のストレージ使用量に基づいて請求されます。これには、{{site.data.keyword.Bluemix_notm}} 組織アカウントの下に作成されたコンテナー内のすべてのオブジェクト・データが含まれます。 
+Die Kosten für Ihre Nutzung von {{site.data.keyword.objectstorageshort}} werden während des gesamten Fakturierungszyklus auf der Grundlage der Speichernutzung berechnet. Dies schließt alle Objektdaten in Containern ein, die Sie mit Ihrem {{site.data.keyword.Bluemix_notm}}-Organisationskonto erstellt haben. 
 
-パブリック・ネットワーク上でオブジェクト・コンテナーからデータが読み取られるたびに、アウトバウンド・データ転送料金が適用されます。パブリック・アウトバウンド帯域幅は、請求サイクル内に消費されたすべての帯域幅に対して請求が行われます。
+Gebühren für die Übertragung abgehender Daten werden fällig, sobald Daten aus einem Ihrer Objektcontainer über das öffentliche Netz gelesen werden. Bei der öffentlichen Bandbreite für abgehende Daten werden die Kosten für die gesamte verbrauchte Bandbreite im Fakturierungszyklus berechnet.
 
-{{site.data.keyword.objectstorageshort}} 価格設定に対するメトリック・コンポーネントは、次のとおりです。
-* ストレージ使用量  - 月額、GB 当たり $0.04 (米ドル)
-* パブリック・アウトバウンド・データ転送  - 月額、GB 当たり $0.09 (米ドル) 
+Die Metrikkomponenten für die Preisbestimmung von {{site.data.keyword.objectstorageshort}} sind folgende:
+* Speichernutzung - $0.04 pro GB pro Monat
+* Öffentliche Übertragung abgehender Daten - $0.09 pro GB pro Monat 
 
-請求サイクルの終了時に、{{site.data.keyword.Bluemix_notm}} は、現在の請求対象期間の使用量に対する料金を自動的に請求します。{{site.data.keyword.Bluemix_notm}} レポート作成を使用して、現在の請求対象期間の料金を確認できます。
+Am Ende des Fakturierungszyklus wird Ihnen die Nutzung während des momentanen Fakturierungszeitraums von {{site.data.keyword.Bluemix_notm}} automatisch in Rechnung gestellt. Sie können Ihre Gebühren für den momentanen Fakturierungszeitraum über die {{site.data.keyword.Bluemix_notm}}-Berichterstellungsfunktion einsehen.
 
-ロンドンとダラスで公表されている標準サービス・プランは、同じ価格設定です。
+Der für London und Dallas freigegebene Standardserviceplan unterliegt derselben Preisbestimmung.
 
-## {{site.data.keyword.objectstorageshort}} では、データ複製はどのように行われますか {: #replication}
-{{site.data.keyword.objectstorageshort}} サービスでは、お客様のデータの 3 つのコピーを維持します。それらが複数のストレージ・ノード全体に複製されます。詳細については、[OpenStack Swift Replication](http://docs.openstack.org/developer/swift/overview_replication.html){: new_window} 資料を参照してください。
+## Wie funktioniert die Datenreplikation in {{site.data.keyword.objectstorageshort}}? {: #replication}
+Der Service {{site.data.keyword.objectstorageshort}} pflegt drei Kopien Ihrer Daten, die in mehreren Speicherknoten repliziert werden. Weitere Informationen finden Sie in der Dokumentation [OpenStack Swift Replication](http://docs.openstack.org/developer/swift/overview_replication.html){: new_window}.
 

@@ -1,19 +1,26 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} 疑難排解
+# {{site.data.keyword.objectstorageshort}} - Fehlerbehebung
 {: #troubleshooting}
 
-*前次更新：2016 年 8 月 17 日*
+*Letzte Aktualisierung: 17. August 2016*
 {: .last-updated}
 
-以下是關於使用 {{site.data.keyword.objectstoragefull}} 的一般疑難排解問題的回答。
+Im Folgenden finden Sie die Antworten auf häufige Fragen zur Fehlerbehebung bei der Verwendung von {{site.data.keyword.objectstoragefull}}.
 
-## 使用 openstack4J 搭配 Liberty 設定檔時傳回無法辨識的記號內容套件
+## Nicht erkanntes Token-Content-Pack bei der Verwendung von openstack4J mit Liberty-Profil zurückgegeben
 {: #unrecognized_token}
 
-### 症狀
+### Symptom
 
-使用 openstack4j 搭配 Liberity 設定檔時可能發生下列堆疊追蹤：
+Bei der Verwendung von openstack4j mit dem Liberty-Profil kann es zu folgendem Stack-Trace kommen:
 
     Exception thrown by application class 'org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity:124'
     org.openstack4j.api.exceptions.ClientResponseException: Unrecognized token 'contentpack': was expecting ('true', 'false' or 'null') at [Source: contentpack ; line: 1, column: 12]
@@ -29,26 +36,26 @@
     at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
     at java.lang.reflect.Method.invoke(Unknown Source)
 
-### 解決方案
+### Lösung
 
-此問題起因為類別載入問題，其中 openstack4j 程式庫包含 Liberty 設定檔所提供的部分相同套件。例如，OpenStack4j 使用 JERSEY，這可能會與 Wink 程式庫衝突。
+Die Ursache des Problems ist ein Klassenladeproblem, bei dem die Bibliothek 'openstack4j' einige derselben Pakete enthält, die im Liberty-Profil bereitgestellt werden.  So verwendet OpenStack4j beispielsweise JERSEY; dies kann zu Konflikten mit den Wink-Bibliotheken führen.
 
-若要解決此問題，請遵循下列步驟：
+Führen Sie die folgenden Schritte aus, um das Problem zu beheben:
 
-1. 使用反向類別載入 (parentLast)。
-2. 從已啟用的特性排除 jaxrs。
+1. Umgekehrtes Laden von Klassen nutzen (parentLast).
+2. jaxrs aus aktivierten Features ausschließen.
 
-## 取得 {{site.data.keyword.objectstorageshort}} 的協助及支援
+## Hilfe und Unterstützung für {{site.data.keyword.objectstorageshort}} erhalten
 {: #gettinghelp}
 
-如果您在使用 {{site.data.keyword.objectstoragefull}} 時有任何問題，則可以搜尋資訊或透過討論區提出問題來取得協助。您也可以開啟支援問題單。
+Hilfe zu Problemen oder Fragen bei Verwendung von {{site.data.keyword.objectstoragefull}} finden Sie, indem Sie in einem Forum nach Informationen suchen oder dort Fragen stellen. Sie haben außerdem die Möglichkeit, ein Support-Ticket zu öffnen.
 
-使用討論區提出問題時，請標記您的問題，讓 {{site.data.keyword.Bluemix_notm}} 開發團隊可以看到它。
+Wenn Sie in Foren eine Frage stellen, versehen Sie Ihre Frage mit einem Tag, sodass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungsteams registriert wird.
 
-* 如果您有關於 {{site.data.keyword.objectstorageshort}} 的技術問題，請在 [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} 上張貼您的問題，並使用 "ibm-bluemix" 及 "object-storage" 來標記您的問題。
+* Wenn Sie technische Fragen zu {{site.data.keyword.objectstorageshort}} haben, stellen Sie Ihre Frage auf [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} und versehen Sie sie mit den Tags "ibm-bluemix" und "object-storage".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* 若為關於服務及開始使用指示的問題，請使用 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window} 討論區。請包括 "object-storage" 及 "bluemix" 標籤。
+* Bei Fragen zum Service sowie zum Abruf von Einführungsanweisungen wenden Sie sich an das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}. Versehen Sie Ihre Anfrage mit den Tags "object-storage" und "bluemix".
 
-如需使用討論區的詳細資料，請參閱[取得協助](https://console.ng.bluemix.net/docs/support/index.html#getting-help)。
+Unter [Hilfe anfordern](https://console.ng.bluemix.net/docs/support/index.html#getting-help) finden Sie weitere Informationen zur Nutzung der Foren.
 
-如需開啟 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[聯絡支援中心](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)。
+Informationen zum Öffnen eines IBM Support-Tickets oder zu den Supportebenen und Ticket-Prioritätsstufen finden Sie unter [Support kontaktieren](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).

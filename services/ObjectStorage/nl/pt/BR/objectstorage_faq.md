@@ -1,46 +1,53 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
-# Perguntas frequentes {: #faq} 
+# FAQ {: #faq} 
 
-*Última atualização: 18 de julho de 2016*
+*Letzte Aktualisierung: 18. Juli 2016*
 {: .last-updated}
 
 
-## Como os preços variam dependendo do plano que eu escolher? {: #plan-price}
-A precificação varia dependendo do plano escolhido. Para obter mais informações sobre precificação, consulte a [Folha de precificação do IBM Bluemix](https://console.ng.bluemix.net/pricing/){: new_window} ou use a [Calculadora](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} para obter estimativas mais detalhadas.
+## Wie variieren die Preise je nach ausgewähltem Plan? {: #plan-price}
+Die Preisgestaltung ist vom ausgewählten Plan abhängig. Weitere Informationen zu Preisen finden Sie in der [IBM Bluemix-Preisliste](https://console.ng.bluemix.net/pricing/){: new_window} oder verwenden Sie den [Preisrechner](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}, um detailliertere Preisschätzungen zu ermitteln.
 
 
-## Quais contas e planos de pagamento posso usar para o {{site.data.keyword.objectstorageshort}}? {: #account-payment}
-O serviço {{site.data.keyword.objectstorageshort}} é fornecido com várias opções de planos. A partir de nossa liberação de disponibilidade geral, dois planos são oferecidos no momento, Padrão e Grátis. O plano Padrão está disponível somente para Contas pagas do {{site.data.keyword.Bluemix_notm}}, seja Pagamento por uso ou Assinatura, e para usuários internos da IBM. O plano Padrão inclui um Abono de crédito grátis introdutório de 5 GB no uso de armazenamento por conta.
+## Welche Konten und Zahlungspläne können für {{site.data.keyword.objectstorageshort}} verwendet werden? {: #account-payment}
+Der {{site.data.keyword.objectstorageshort}}-Service wird mit mehreren Planoptionen bereitgestellt. Mit dem Release der allgemeinen Verfügbarkeit werden gegenwärtig zwei Pläne angeboten: Standard und Kostenlos. Der Standardplan ist nur für gebührenpflichtige {{site.data.keyword.Bluemix_notm}}-Konten verfügbar, entweder für 'Nutzungsabhängig' oder für 'Abonnement', sowie für interne IBM Benutzer. Der Standardplan umfasst zur Einführung eine Gratisleistung in Form von 5 GB kostenfreier Speichernutzung pro Konto.
 
-Contas para teste que ainda estejam ativas podem usar o plano Grátis, que permite a existência de somente uma instância em uma Organização do {{site.data.keyword.Bluemix_notm}}. Depois que o tempo na avaliação do {{site.data.keyword.Bluemix_notm}} expirar, a instância de serviço associada do {{site.data.keyword.objectstorageshort}} será desativada, ou seja, a conta de armazenamento não poderá ser acessada pela interface com o usuário ou pela linha de comandos do {{site.data.keyword.Bluemix_notm}}. Depois de um período de cortesia de 30 dias, sua conta do {{site.data.keyword.Bluemix_notm}} será limpa e todos os dados excluídos. Para evitar perda de dados, recomenda-se fazer upgrade para uma Conta paga do {{site.data.keyword.Bluemix_notm}} o mais rápido possível. Para fazer upgrade de sua conta, clique no menu de gerenciamento de usuários e selecione **Conta**, que fornece instruções sobre o processo de upgrade.
+Testkonten, die weiterhin aktiv sind, können den kostenlosen Plan nutzen, der nur das Vorhandensein einer Instanz in einer {{site.data.keyword.Bluemix_notm}}-Organisation zulässt. Wenn der Zeitraum für den {{site.data.keyword.Bluemix_notm}}-Test abläuft, wird die zugeordnete {{site.data.keyword.objectstorageshort}}-Serviceinstanz inaktiviert. Dies bedeutet, dass weder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle noch die Befehlszeile auf das Speicherkonto zugreifen kann. Nach einer Frist von 30 Tagen wird Ihr {{site.data.keyword.Bluemix_notm}}-Konto bereinigt und alle Daten werden gelöscht. Zur Vermeidung von Datenverlust wird empfohlen, das gebührenpflichtige {{site.data.keyword.Bluemix_notm}}-Konto so bald wie möglich zu aktualisieren. Zum Aktualisieren Ihres Kontos klicken Sie auf das Benutzermanagementmenü und wählen **Konto** aus. Dadurch werden Anweisungen zum Aktualisierungsprozess bereitgestellt.
 
-## Como mudar meu plano? {: #changeplan}  
-É possível fazer upgrade de instâncias criadas por meio de Beta ou no plano Grátis para o plano Padrão. A organização associada deve ser uma conta paga do {{site.data.keyword.Bluemix_notm}}. Não é possível fazer upgrade de contas para teste com instâncias do {{site.data.keyword.objectstorageshort}} para o plano Padrão, e fazer downgrade de instâncias no plano Padrão para outros planos. Ao fazer upgrade, sua instância de serviço e dados do cliente são movidos para o novo plano.
+## Wie ändere ich meinen Plan? {: #changeplan}  
+Für Instanzen, die im Rahmen des Beta-Plans oder des kostenfreien Plans erstellt werden, kann ein Upgrade auf auf den Standardplan durchgeführt werden. Die zugeordnete Organisation muss ein gebührenpflichtiges {{site.data.keyword.Bluemix_notm}}-Konto sein. Testkonten mit {{site.data.keyword.objectstorageshort}}-Instanzen können nicht auf den Standardplan aktualisiert werden und Instanzen im Standardplan können nicht auf andere Pläne herabgestuft werden. Ihre Serviceinstanzen und Kundendaten werden bei einem Upgrade in den neuen Plan verschoben.
 
-Para fazer upgrade do plano:
-1.	Na interface com o usuário do {{site.data.keyword.objectstorageshort}}, clique em **Plano**.
-2.	Selecione **Padrão** como o novo plano e, em seguida, clique em **Salvar**.
+Gehen Sie wie folgt vor, um für Ihren Plan ein Upgrade durchzuführen:
+1.	Kicken Sie in der Benutzerschnittstelle von {{site.data.keyword.objectstorageshort}} auf **Plan**.
+2.	Wählen **Standard** als neuen Plan aus und klicken Sie auf **Speichern**.
 
-Também é possível mudar seu plano de pagamento usando a interface de linha de comandos. Para obter mais informações, consulte [Como mudar seu plano](../../pricing/index.html#changing).
+Sie können außerdem Ihren Zahlungsplan über die Befehlszeilenschnittstelle ändern. Weitere Informationen finden Sie in [Vorgehensweise zum Ändern des Plans](../../pricing/index.html#changing).
 
 
-## Como serei encarregado e cobrado pelo meu uso do {{site.data.keyword.objectstorageshort}}? {: #charge-bill}
+## Welche Gebühren werden für meine Nutzung von {{site.data.keyword.objectstorageshort}} fällig und wann werden sie in Rechnung gestellt? {: #charge-bill}
 
-O serviço do {{site.data.keyword.objectstorageshort}} cobra somente pelo que você usa.  Não há taxa mínima, taxas de configuração ou compromissos para iniciar o uso do serviço. Não há cobrança por solicitação de API ou tráfego de rede por dados de entrada.
+Für den Service {{site.data.keyword.objectstorageshort}} werden nur Gebühren für das, was Sie nutzen, fällig.  Um mit der Verwendung des Service zu beginnen, sind keine Mindestgebühren oder Konfigurationsgebühren zu entrichten und es sind auch keine sonstigen Verpflichtungen einzugehen. Es sind keine Gebühren für API-Anforderungen oder für Netzverkehr für eingehende Daten zu entrichten.
 
-Seu uso do {{site.data.keyword.objectstorageshort}} é faturado com base no uso de armazenamento dentro do ciclo de faturamento. Isto inclui todos os dados de objeto nos contêineres que foram criados em sua conta da organização no {{site.data.keyword.Bluemix_notm}}. 
+Die Kosten für Ihre Nutzung von {{site.data.keyword.objectstorageshort}} werden während des gesamten Fakturierungszyklus auf der Grundlage der Speichernutzung berechnet. Dies schließt alle Objektdaten in Containern ein, die Sie mit Ihrem {{site.data.keyword.Bluemix_notm}}-Organisationskonto erstellt haben. 
 
-Os encargos de Transferência dos dados de saída se aplicam sempre quando dados são lidos a partir de quaisquer dos seus contêineres de objetos na rede pública. A largura da banda de saída pública é faturada para toda a largura de banda consumida no ciclo de faturamento.
+Gebühren für die Übertragung abgehender Daten werden fällig, sobald Daten aus einem Ihrer Objektcontainer über das öffentliche Netz gelesen werden. Bei der öffentlichen Bandbreite für abgehende Daten werden die Kosten für die gesamte verbrauchte Bandbreite im Fakturierungszyklus berechnet.
 
-Os componentes de métricas para a precificação do {{site.data.keyword.objectstorageshort}} são os seguintes:
-* Uso de armazenamento  - $0.04 por GB por mês
-* Transferência de dados de saída pública  - $0.09 por GB por mês 
+Die Metrikkomponenten für die Preisbestimmung von {{site.data.keyword.objectstorageshort}} sind folgende:
+* Speichernutzung - $0.04 pro GB pro Monat
+* Öffentliche Übertragung abgehender Daten - $0.09 pro GB pro Monat 
 
-Ao final do ciclo de faturamento, o {{site.data.keyword.Bluemix_notm}}  faturará o cliente automaticamente pelo uso no período de faturamento atual. É possível visualizar seus encargos para o período atual de faturamento via relatório do {{site.data.keyword.Bluemix_notm}}.
+Am Ende des Fakturierungszyklus wird Ihnen die Nutzung während des momentanen Fakturierungszeitraums von {{site.data.keyword.Bluemix_notm}} automatisch in Rechnung gestellt. Sie können Ihre Gebühren für den momentanen Fakturierungszeitraum über die {{site.data.keyword.Bluemix_notm}}-Berichterstellungsfunktion einsehen.
 
-O plano de serviço padrão que é liberado para Londres e Dallas têm a mesma precificação.
+Der für London und Dallas freigegebene Standardserviceplan unterliegt derselben Preisbestimmung.
 
-## Como a replicação de dados é executada no {{site.data.keyword.objectstorageshort}}? {: #replication}
-O serviço {{site.data.keyword.objectstorageshort}} mantém três cópias de seus dados, que são replicadas entre múltiplos nós de armazenamento. Para obter informações adicionais, consulte o documento [OpenStack Swift Replication](http://docs.openstack.org/developer/swift/overview_replication.html){: new_window}.
+## Wie funktioniert die Datenreplikation in {{site.data.keyword.objectstorageshort}}? {: #replication}
+Der Service {{site.data.keyword.objectstorageshort}} pflegt drei Kopien Ihrer Daten, die in mehreren Speicherknoten repliziert werden. Weitere Informationen finden Sie in der Dokumentation [OpenStack Swift Replication](http://docs.openstack.org/developer/swift/overview_replication.html){: new_window}.
 
