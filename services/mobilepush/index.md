@@ -12,7 +12,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Last updated: 17 September 2016
+Last updated: 21 September 2016
 {: .last-updated}
 
 {:shortdesc}

@@ -61,7 +61,7 @@ For the same runtime or framework, IBM-created buildpacks take precedence over t
 
 ## External buildpacks
 
-You can use external or custom buildpacks in {{site.data.keyword.Bluemix_notm}}. You must specify the URL of the buildpack with the -b option, and specify the stack with the ```-s``` option on the **cf push** command. For example, to use an external community buildpack for static files, run the following command
+You can use external or custom buildpacks in {{site.data.keyword.Bluemix_notm}}. You must specify the URL of the buildpack with the -b option, and specify the stack with the `-s` option on the **cf push** command. For example, to use an external community buildpack for static files, run the following command
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
@@ -87,7 +87,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 Use the <strong>cf set-env</strong> command. For example, enter the following command to set the Java version to 1.7.0:
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &apos;{jre: { version: 1.7.0_+ }}&apos;</code></pre>
 <p>Then, restage your app to make the change effective:</p>
 <pre class="pre"><code>cf restage app_name</code></pre>
 </li>

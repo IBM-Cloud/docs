@@ -19,7 +19,7 @@ copyright:
 # Creating and invoking {{site.data.keyword.openwhisk_short}} actions
 {: #openwhisk_actions}
 
-Last updated: 9 September 2016
+Last updated: 27 September 2016
 {: .last-updated}
 
 Actions are stateless code snippets that run on the {{site.data.keyword.openwhisk}} platform. An action can be a JavaScript function, a Swift function, or a custom executable program packaged in a Docker container. For example, an action can be used to detect the faces in an image, aggregate a set of API calls, or post a Tweet.
@@ -76,7 +76,9 @@ Review the following steps and examples to create your first JavaScript action.
 
   You can see the `hello` action you just created.
 
-4. After you create your action, you can run it in the cloud in {{site.data.keyword.openwhisk_short}} with the 'invoke' command. You can invoke actions with a *blocking* invocation or a *non-blocking* invocation by specifying a flag in the command. A blocking invocation waits until the action runs to completion and returns a result. This example uses the blocking parameter, `--blocking`:
+4. After you create your action, you can run it in the cloud in OpenWhisk with the 'invoke' command. You can invoke actions with a *blocking* invocation (i.e., request/response style) or a *non-blocking* invocation by specifying a flag in the command. A blocking invocation request will _wait_ for the activation result to be available. The wait period is the lesser of 60 seconds or the action's configured [time limit](./openwhisk_reference.html#openwhisk_syslimits_timeout). The result of the activation is returned if it is available within the wait period. Otherwise, the activation continues processing in the system and an activation ID is returned so that one may check for the result later, as with non-blocking requests (see [here](#watching-action-output) for tips on monitoring activations).
+
+  This example uses the blocking parameter, `--blocking`:
 
   ```
   wsk action invoke --blocking hello
@@ -96,7 +98,7 @@ Review the following steps and examples to create your first JavaScript action.
 
   The command outputs two important pieces of information:
   * The activation ID (`44794bd6aab74415b4e42a308d880e5b`)
-  * The invocation result
+  * The invocation result if it is available within the expected wait period
 
   The result in this case is the string `Hello world` returned by the JavaScript function. The activation ID can be used to retrieve the logs or result of the invocation at a future time.  
 
@@ -283,7 +285,7 @@ JavaScript functions that run asynchronously may need to return the activation r
   ```
   {: screen}
 
-  Comparing the `start` and `end` time stamps in the activation record, you can see that this activation took slightly over twenty seconds to complete.
+  Comparing the `start` and `end` time stamps in the activation record, you can see that this activation took slightly over two seconds to complete.
 
 
 ### Using actions to call an external API
@@ -294,37 +296,38 @@ The examples so far have been self-contained JavaScript functions. You can also 
 This example invokes a Yahoo Weather service to get the current conditions at a specific location. 
 
 1. Save the following content in a file called `weather.js`.
+  
   ```
-    var request = require('request');
-
-    function main(params) {
-        var location = params.location || 'Vermont';
-        var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
-
-        return new Promise(function(resolve, reject) {
-            request.get(url, function(error, response, body) {
-                if (error) {
-                    reject(error);    
-                }
-                else {
-                    var condition = JSON.parse(body).query.results.channel.item.condition;
-                    var text = condition.text;
-                    var temperature = condition.temp;
-                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-                    resolve({msg: output});
-                }
-            });
-        });
-    }
+  var request = require('request');
+  
+  function main(params) {
+      var location = params.location || 'Vermont';
+      var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
+  
+      return new Promise(function(resolve, reject) {
+          request.get(url, function(error, response, body) {
+              if (error) {
+                  reject(error);    
+              }
+              else {
+                  var condition = JSON.parse(body).query.results.channel.item.condition;
+                  var text = condition.text;
+                  var temperature = condition.temp;
+                  var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                  resolve({msg: output});
+              }
+          });
+      });
+  }
   ```
   {: codeblock}
-
+  
   Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./openwhisk_reference.html#openwhisk_ref_javascript_environments) detail the Node.js packages that you can use in your actions.
-
+  
   This example also shows the need for asynchronous actions. The action returns a Promise to indicate that the result of this action is not available yet when the function returns. Instead, the result is available in the `request` callback after the HTTP call completes, and is passed as an argument to the `resolve()` function.
-
-
+  
 2. Run the following commands to create the action and invoke it:
+  
   ```
   wsk action create weather weather.js
   ```
@@ -339,27 +342,28 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   }
   ```
   {: screen}
-
+  
 ### Creating action sequences
 {: #openwhisk_create_action_sequence}
 
 You can create an action that chains together a sequence of actions.
 
-Several utility actions are provided in a package called `/whisk.system/util` that you can use to create your first sequence. You can learn more about packages in the [Packages](./openwhisk_packages.html) section.
+Several utility actions are provided in a package called `/whisk.system/utils` that you can use to create your first sequence. You can learn more about packages in the [Packages](./openwhisk_packages.html) section.
 
-1. Display the actions in the `/whisk.system/util` package.
+1. Display the actions in the `/whisk.system/utils` package.
   
   ```
-  wsk package get --summary /whisk.system/util
+  wsk package get --summary /whisk.system/utils
   ```
   {: pre}
   ```
-  package /whisk.system/util
-   action /whisk.system/util/cat: Concatenate array of strings
-   action /whisk.system/util/head: Filter first K array elements and discard rest
-   action /whisk.system/util/date: Get current date and time
-   action /whisk.system/util/sort: Sort array
-   action /whisk.system/util/split: Splits a string into an array of strings
+  package /whisk.system/utils: Building blocks that format and assemble data
+   action /whisk.system/utils/head: Extract prefix of an array
+   action /whisk.system/utils/split: Split a string into an array
+   action /whisk.system/utils/sort: Sorts an array
+   action /whisk.system/utils/echo: Returns the input
+   action /whisk.system/utils/date: Current date and time
+   action /whisk.system/utils/cat: Concatenates input into a string
   ```
   {: screen}
 
@@ -368,25 +372,16 @@ Several utility actions are provided in a package called `/whisk.system/util` th
 2. Create an action sequence so that the result of one action is passed as an argument to the next action.
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
+  wsk action create sequenceAction --sequence /whisk.system/utils/split,/whisk.system/utils/sort
   ```
   {: pre}
-
+  
   This action sequence converts some lines of text to an array, and sorts the lines.
-
-3. Before you invoke the action sequence, create a text file called 'haiku.txt' with a few lines of text:
-
-  ```
-  Over-ripe sushi,
-  The Master
-  Is full of regret.
-  ```
-  {: codeblock}
-
-4. Invoke the action:
+  
+3. Invoke the action:
   
   ```
-  wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
+  wsk action invoke --blocking --result sequenceAction --param payload "Over-ripe sushi,\nThe Master\nIs full of regret."
   ```
   {: pre}
   ```
@@ -400,7 +395,7 @@ Several utility actions are provided in a package called `/whisk.system/util` th
   }
   ```
   {: screen}
-
+  
   In the result, you see that the lines are sorted.
 
 **Note**: Parameters passed between actions in the sequence are explicit, except for default parameters.
@@ -408,7 +403,7 @@ Therefore parameters that are passed to the action sequence are only available t
 The result of the first action in the sequence becomes the input JSON object to the second action in the sequence (and so on).
 This object does not include any of the parameters originally passed to the sequence unless the first action explicitly includes them in its result.
 Input parameters to an action are merged with the action's default parameters, with the former taking precedence and overriding any matching default parameters.
-For more information about invoking action sequences with multiple named parameters, see [Setting default parameters](./actions.md#setting-default-parameters).
+For more information about invoking action sequences with multiple named parameters, see [Setting default parameters](./openwhisk_actions.html#openwhisk_binding_actions).
 
 ## Creating Python actions
 {: #openwhisk_actions_python}
@@ -422,11 +417,11 @@ An action is simply a top-level Python function, which means it is necessary to 
 `hello.py` with the following content:
 
 ```
-    def main(dict):
-        name = dict.get("name", "stranger")
-        greeting = "Hello " + name + "!"
-        print(greeting)
-        return {"greeting": greeting}
+def main(dict):
+    name = dict.get("name", "stranger")
+    greeting = "Hello " + name + "!"
+    print(greeting)
+    return {"greeting": greeting}
 ```
 {: codeblock}
 
@@ -444,6 +439,19 @@ When you use the command line and a `.py` source file, you do not need to
 specify that you are creating a Python action (as opposed to a JavaScript action);
 the tool determines that from the file extension.
 
+Action invocation is the same for Python actions as it is for JavaScript actions:
+
+```
+wsk action invoke --blocking --result helloPython --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
 
 
 ## Creating Swift actions
@@ -460,13 +468,13 @@ An action is simply a top-level Swift function. For example, create a file calle
 `hello.swift` with the following content:
 
 ```
-  func main(args: [String:Any]) -> [String:Any] {
-      if let name = args["name"] as? String {
-          return [ "greeting" : "Hello \(name)!" ]
-      } else {
-          return [ "greeting" : "Hello stranger!" ]
-      }
-  }
+func main(args: [String:Any]) -> [String:Any] {
+    if let name = args["name"] as? String {
+        return [ "greeting" : "Hello \(name)!" ]
+    } else {
+        return [ "greeting" : "Hello stranger!" ]
+    }
+}
 ```
 {: codeblock}
 
@@ -561,7 +569,7 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   By convention, the last line of output _must_ be a stringified JSON object which represents the result of the action.
 
 3. Build the Docker image and upload it using a supplied script. You must first run `docker login` to authenticate, and then run the script with a chosen image name.
-
+  
   ```
   docker login -u janesmith -p janes_password
   ```
@@ -571,24 +579,28 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   ```
   {: pre}
   ```
+  chmod +x buildAndPush.sh
+  ```
+  {: pre}
+  ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
-
+  
   Notice that part of the example.c file is compiled as part of the Docker image build process, so you do not need C compiled on your machine.
   In fact, unless you are compiling the binary on a compatible host machine, it may not run inside the container since formats will not match.
-
+  
   Your Docker container may now be used as an {{site.data.keyword.openwhisk_short}} action.
-
-
+  
+  
   ```
   wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
-
+  
   Notice the use of `--docker` when creating an action. Currently all Docker images are assumed to be hosted on Docker Hub.
   The action may be invoked as any other {{site.data.keyword.openwhisk_short}} action.
-
+  
   ```
   wsk action invoke --blocking --result example --param payload Rey
   ```
@@ -602,7 +614,7 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   }
   ```
   {: screen}
-
+  
   To update the Docker action, run buildAndPush.sh to refresh the image on Docker Hub, this will allow the next time the system pulls your Docker image to run the new code for your action. 
   If there are no warm containers any new invocations will use the new Docker image. 
   Take into account that if there is a warm container using a previous version of your Docker image, any new invocations will continue to use this image unless you run wsk action update, this will indicate to the system that for any new invocations force a docekr pull resulting on pulling your new Docker image.
@@ -615,9 +627,8 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   wsk action update --docker example janesmith/blackboxdemo
   ```
   {: pre}
-
+  
   You can find more information about creating Docker actions in the [References](./openwhisk_reference.html#openwhisk_ref_docker) section.
-
 
 ## Watching action output
 {: #openwhisk_actions_polling}

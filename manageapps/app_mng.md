@@ -82,6 +82,8 @@ These utilities support Node.js only.
   
   Go to the Instance Details page in the {{site.data.keyword.Bluemix_notm}} web console and select **Actions** to see the UI.
 
+  The *trace* utility is not available when the application was started using the "-b buildpack" option.
+
   The *trace* utility does not start *proxy*.
 
 ##How to configure App Management

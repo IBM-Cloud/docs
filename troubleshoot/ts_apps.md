@@ -1078,7 +1078,7 @@ To create a space, use one of the following methods:
 {: tsResolve}
  
   * On the {{site.data.keyword.Bluemix_notm}} Dashboard, select the organization in which you want to create the space, then click **Create a Space**.
-  * In the cf command line interface, type ```cf create-space <space_name> -o <organization_name>```.
+  * In the cf command line interface, type `cf create-space <space_name> -o <organization_name>`.
   
   
   

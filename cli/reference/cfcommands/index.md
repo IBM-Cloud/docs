@@ -46,7 +46,7 @@ If you want to display the URL of the API endpoint that you are currently using,
 
 Lists all of the applications that you deployed in the current space. The status of each application is also displayed.
 
-Assume that you have one instance for an app, in the instances column of the response from the cf apps command, you see 1/1 if your app is up and 0/1 if your app is down. If you see ?/1 which indicates that the app instance state is unknown, you can copy the app URL to your browser to check whether your app responds, or you can tail the log by the ``cf logs appname`` command to see if the app is generating log content.
+Assume that you have one instance for an app, in the instances column of the response from the cf apps command, you see 1/1 if your app is up and 0/1 if your app is down. If you see ?/1 which indicates that the app instance state is unknown, you can copy the app URL to your browser to check whether your app responds, or you can tail the log by the `cf logs appname` command to see if the app is generating log content.
 
 ## cf bind-service
 
@@ -217,7 +217,8 @@ cf push appname
 <dd>The name of the buildpack. The buildpack_name can be a custom buildpack by name or a Git URL, for example, `my-buildpack` or `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
 <dt>*-c* start_command</dt>
 <dd>The start command of your application. To use the default start command, specify a value of null for this option. For example:</dd>
-<dd>```
+<dd>
+```
 cf push appname -c null
 ```</dd>
 <dd>You can also use this option to run script files. For example:

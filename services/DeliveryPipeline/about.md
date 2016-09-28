@@ -12,9 +12,8 @@ copyright:
 
 
 # About {{site.data.keyword.deliverypipeline}}
-
 {: #deliverypipeline_about}
-*Last updated: 1 June 2016*
+Last updated: 29 August 2016
 {: .last-updated}
 
 The IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service, also known as pipeline, automates the continuous deployment of your Bluemix projects. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
@@ -82,7 +81,7 @@ If you want to require that conditions are met, include test jobs before or afte
 
 If your tests produce result files in JUnit XML format, a report that is based on the result files is shown on the **Tests** tab of every test result page. If a test fails, the job also fails.
 
-#### Environment properties for deployment scripts
+#### Environment properties for test scripts
 
 You can include environment properties in the script of a test job. The properties provide access to information about the job's run environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](./deploy_var.html).
 
@@ -137,9 +136,8 @@ Stages take their input from repositories and build jobs, and jobs within a stag
 [20]: #add_job
 [21]: ../deploy_ext
 [22]: ./images/pipeline_settings_icon.png
-[23]: ./images/pipeline_settings.png
-[24]: https://www.ng.bluemix.net/docs/services/reqnsi.html#add_service
-[25]: ../deploy_var
-[26]: ./images/click_stage_run_number.png
-[27]: ./images/diagram.jpg
+[23]: https://www.ng.bluemix.net/docs/services/reqnsi.html#add_service
+[24]: ../deploy_var
+[25]: ./images/click_stage_run_number.png
+[26]: ./images/diagram.jpg
 -->

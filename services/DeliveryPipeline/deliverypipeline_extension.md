@@ -18,10 +18,8 @@ copyright:
 {:codeblock:.codeblock}
 
 # Extending the {{site.data.keyword.deliverypipeline}} service
-
 {: #deliverypipeline_extending}
-
-*Last updated: 5 August 2016*
+Last updated: 29 August 2016
 {: .last-updated}
 
 You can extend the capabilities of the {{site.data.keyword.deliverypipeline}} service by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
@@ -82,7 +80,7 @@ Before you begin, [review the Terms of Use for the service](http://www-03.ibm.co
 
      If the Static Analyzer scan is not complete before the time that you specified, the job fails. However, the scan analysis continues to run and you can view it on the Static Analyzer dashboard. After the Static Analyzer scan is complete, if you rerun the job, the scan request is not resubmitted and the pipeline job can be completed. Alternatively, you can configure the pipeline not to be blocked on a successful scan result. For instructions, see the next step.
 
-  g. Select or clear the **Stop stage execution on job failure** check box depending on what you want to happen if this job fails or times out. Jobs can fail when vulnerabilities are high.
+  g. Select or clear the **Stop running this stage if this job fails** check box depending on what you want to happen if this job fails or times out. Jobs can fail when vulnerabilities are high.
 
     * If you select the check box and the job fails, later jobs in the stage and later stages do not run.
 
@@ -92,7 +90,7 @@ Before you begin, [review the Terms of Use for the service](http://www-03.ibm.co
 
 3. When the job finishes, view the results by clicking **View logs and history**. If the analysis succeeds or times out, a URL is shown in the scan results. If the scan status is pending, wait until the scan is complete to see the full results.
 
-4. If you need to run the processing stage again before the analysis is finished, you can. In the following situations, a new analysis is not resubmitted and the previous results are used:
+4. If you need to run the processing stage again before the analysis is finished, you can. However, in the following situations, a new analysis is not resubmitted and the previous results are used:
   * The processing stage was still running when you started a new analysis
   * A scan was already submitted for the build
   * A new source build hasn't run yet
@@ -218,7 +216,7 @@ To create Slack notifications:
       <li><code>warning</code></li>
       <li><code>danger</code></li>
       <li>Any hexadecimal color, such as #439FEO</li></ul></td>
-    <td>Optional. The color of the border that is displayed along the left side of the message in Slack. The default colors are green for good messages, red for bad messages, and gray for informational messages.</td>
+    <td>Optional. The color of the border that is displayed along the side of the message in Slack. The default colors are green for good messages, red for bad messages, and gray for informational messages.</td>
   </tr>
   <tr>
     <td><code>NOTIFY_FILTER</code></td>
@@ -270,7 +268,7 @@ To create HipChat notifications:
   <tr>
     <td><code>HIP_CHAT_TOKEN</code></td>
     <td>Alphanumeric String</td>
-    <td>Required. See above "Before you begin" for instructions on creating or copying an existing HipChat token.</td>
+    <td>Required. See "Before you begin" for instructions on creating or copying an existing HipChat token.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_ROOM_NAME</code></td>
@@ -287,7 +285,7 @@ To create HipChat notifications:
       <li><code>gray</code></li>
       <li><code>random</code></li></ul>
     </td>
-    <td>Optional: Specify the background color and the left-side border color of HipChat notifications. If you set <code>HIP_CHAT_COLOR</code>, you do not need to specify when you call the script below.
+    <td>Optional: Specify the background color and the border color of HipChat notifications. If you set <code>HIP_CHAT_COLOR</code>, you do not need to specify the color when you call the script.
      <p><code>-l notification_level</code></p> </td>
   </tr>
   <tr>
@@ -297,7 +295,7 @@ To create HipChat notifications:
       <li><code>danger</code></li>
       <li><code>info</code></li></ul>
     This variable applies to both HipChat and Clack notification colors. If you specify <code>NOTIFICATION_COLOR</code>, you do not need to specify <code>HIP_CHAT_COLOR</code> or <code>SLACK_COLOR</code>.</td>
-    <td>Optional: Specify the background color and the left-side border color of both HipChat and Slack notifications. If you set <code>NOTIFICATION_COLOR</code>, you do not need to specify when you call the script below.
+    <td>Optional: Specify the background color and the border color of both HipChat and Slack notifications. If you set <code>NOTIFICATION_COLOR</code>, you do not need to specify the color when you call the script.
      <p><code>-l notification_level</code></p> </td>
   </tr>
   <tr>
@@ -326,12 +324,10 @@ To create HipChat notifications:
 
 6. Repeat these steps to send HipChat notifications for other stages that include IBM Container Service, IBM Security Static Analyzer, and IBM Globalization jobs.
 
-
-
 ## Using Active Deploy for zero downtime deployment in the pipeline
 {: #deliverypipeline_activedeploy}
 
-You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Bluemix® DevOps Services Delivery Pipeline. For more information about getting started, [see the Active Deploy documentation](https://console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
+You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Bluemix® DevOps Services Delivery Pipeline. For more information about getting started, [see the Active Deploy documentation](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
 
 ## Building and deploying container images with the pipeline
 {: #deliverypipeline_containers}
@@ -340,4 +336,4 @@ You can automate your app builds and container deployments to Bluemix® by using
   - Building Docker images
   - Deploying images in containers to Bluemix
 
-For more information about getting started, see [the Delivery Pipeline and containers overview](https://console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
+For more information about getting started, see [the Delivery Pipeline and containers overview](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov).

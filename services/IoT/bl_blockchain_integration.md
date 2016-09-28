@@ -49,7 +49,7 @@ The following diagram illustrates the general {{site.data.keyword.iot_short_notm
 - Connect devices that produce data that you want to write to the blockchain ledger.  
 Follow the instructions in the [Connecting devices](iotplatform_task.html) topic to connect your devices.
 - Install the Monitoring UI.
-The Monitoring UI is used to verify the connection between {{site.data.keyword.iot_short_notm}} and the blockchain fabric. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/monitoring_ui) GitHub directory.
+The Monitoring UI is used to verify the connection between {{site.data.keyword.iot_short_notm}} and the blockchain fabric. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub directory.
 
 ### Using the IBM basic scenario to get started quickly
 
@@ -175,7 +175,7 @@ Congratulations, you are now up and running!
 {: #test_simple}
 
 If you are connected to the IBM-provided fabric and mapped your device data to the sample contract, you can test the end-to-end data flow from the device to the blockchain ledger. Use the IoT Blockchain Monitoring UI to view the blockchain activity and data for your assets.  
-**Tip:** If the Monitoring UI is not yet installed in your local environment, you can install it now. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/monitoring_ui) GitHub directory.  
+**Tip:** If the Monitoring UI is not yet installed in your local environment, you can install it now. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub directory.  
 1. Configure the Monitoring UI to connect to {{site.data.keyword.iot_short_notm}}.  
  In the Monitoring UI, click **CONFIGURATION** to configure the Monitoring UI connection:
  <table>
