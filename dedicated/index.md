@@ -52,6 +52,7 @@ In addition, there is a set of services and components that are included or opti
 |Optional | [{{site.data.keyword.SecureGateway}}](../services/SecureGateway/secure_gateway.html) | The {{site.data.keyword.SecureGateway}} service provides a secure way to connect {{site.data.keyword.Bluemix_notm}} applications to remote locations on-premises or in the cloud.  |
 |Optional | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | For increased redundancy, {{site.data.keyword.sescashort}} provides a replica of a session stored in the cache. Therefore, in the event of a brownout or outage, your client application maintains access to the session in the cache. The service supports session caching scenarios for web and mobile applications. |
 |Optional | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | This service lets your apps communicate with and consume data collected by your connected devices, sensors and gateways. The base offering permits running a private version of the {{site.data.keyword.iot_full}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 1.6 TB of data exchange. |
+| Optional | [{{site.data.keyword.deliverypipeline}}](../services/DeliveryPipeline/index.html) | The IBM {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} service automates the continuous deployment of your {{site.data.keyword.Bluemix_notm}} projects. |
 
 There are optional components that are available for you to purchase to scale and extend the capacity of your resources and services. You can purchase any of these components by contacting the sales team; go to [Contact us](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) for information about contacting a sales representative. To increase your plan for a service, you can select the plan from the service tile in your catalog.
 
@@ -81,6 +82,7 @@ There are optional components that are available for you to purchase to scale an
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.messagehub}} | An environment that provides publish and subscribe messaging of up to 10 GB per partition. Messages are retained and available for consumption for a maximum of 24 hours. |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.mobilepushshort}} | An environment that permits deployment and execution of {{site.data.keyword.mobilepushshort}} instances with ability to accept 300 requests per second. |
 |{{site.data.keyword.iot_short}} Dedicated incremental increase | An environment increase that permits running a private version of the {{site.data.keyword.iot_short}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 0.5 TB of data exchange. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.deliverypipeline}} | The IBM {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} service automates the continuous deployment of your {{site.data.keyword.Bluemix_notm}} projects. |
 
 
 **Note**: {{site.data.keyword.Bluemix_notm}} Dedicated components might indicate a specific configured capacity, such as gigabytes or transactions per second. Because actual capacity in practice for any configuration of the cloud service varies depending on many factors, the actual capacity in practice might be more or less than the configured capacity.
@@ -108,6 +110,7 @@ If you have a private instance of the service for your dedicated environment, yo
 |{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|Yes |
+|{{site.data.keyword.deliverypipeline}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.dialogshort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.game}}			|No		|No		|Yes |
