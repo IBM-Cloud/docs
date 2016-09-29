@@ -10,7 +10,7 @@ copyright:
 
 # Enabling Facebook authentication for web applications
 
-Last updated: 12 September 2016
+Last updated: 29 September 2016
 {: .last-updated}
 
 Use Facebook to authenticate users on your {{site.data.keyword.amafull}}  web application. Add {{site.data.keyword.amashort}} security functionality. 
