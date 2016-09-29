@@ -246,7 +246,7 @@ Overloaded methods are available to control the command subscription. The `proce
 ## Subscribing to device status
 {: #subscribing_device_status}
 
-Similar to subscribing to device events, applications can subscribe to device status, such as device connect and disconnect to {{site.data.keyword.iot_short_notm}}. By default, this subscription subscribes to status updates for all connected devices. Use the device type and device id parameters to control the scope of the subscription. The following code samples show how you can use these parameters to define the scope of a subscription:
+Similar to subscribing to device events, applications can subscribe to device status, such as device connect and disconnect to {{site.data.keyword.iot_short_notm}}. By default, this subscription subscribes to status updates for all connected devices. Use the device type and device ID parameters to control the scope of the subscription. The following code samples show how you can use these parameters to define the scope of a subscription:
 
 ### Subscribe to status updates for all devices
 
@@ -424,4 +424,4 @@ Applications can publish commands to connected devices, as shown in the followin
 -   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - A sample application that shows how you can publish a command to a device.
 -  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - A sample application that shows how you can subscribe to different events such as device events, device commands, device status, and application status.
 -   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - A sample application that shows how you can build a scalable application that balances the load of messages across multiple instances of the application.
--  [Backup and restore sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - A sample that shows how you can back up and restore the device configuration in a Cloudant NoSQL database.
+-  [Backup and restore sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - A sample that shows how you can back up and restore the device configuration in a {{site.data.keyword.cloudantfull}} NoSQL database.

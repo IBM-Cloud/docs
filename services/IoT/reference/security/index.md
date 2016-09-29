@@ -14,7 +14,7 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} security
 {: #sec-index}
-Last updated: 5 August 2016
+Last updated: 29 September 2016
 {: .last-updated}
 
 As a cloud-hosted service the {{site.data.keyword.iot_full}} embeds security as an important aspect of its architecture.
@@ -31,7 +31,7 @@ The following document answers some common questions about how your organization
 
 {{site.data.keyword.iot_short_notm}} runs within {{site.data.keyword.Bluemix_notm}} platform and so relies upon both {{site.data.keyword.Bluemix_notm}} and IBM SoftLayer for access and connectivity. The reliance upon {{site.data.keyword.Bluemix_notm}} and IBM SoftLayer makes {{site.data.keyword.Bluemix_notm}} and IBM SoftLayer security and reliability important to users of {{site.data.keyword.iot_short_notm}}
 
-For more details on the security of the {{site.data.keyword.Bluemix_notm}}, please see [{{site.data.keyword.Bluemix_notm}} platform security](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security).
+For more details on the security of the {{site.data.keyword.Bluemix_notm}}, please see [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security).
 
 ## {{site.data.keyword.iot_short_notm}} Security compliance
 {: #compliance}  
@@ -103,7 +103,7 @@ The topic space in which devices and applications operate is scoped within a sin
 {: #general}
 * [Getting started with {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [{{site.data.keyword.Bluemix_notm}} security](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} platform security](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
 * [Softlayer security](http://www.softlayer.com/security){:new_window}
 * [Softlayer compliance](http://www.softlayer.com/compliance){:new_window}
