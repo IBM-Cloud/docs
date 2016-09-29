@@ -27,7 +27,7 @@ copyright:
 若要啟動並執行此服務，您必須部署必要服務及應用程式，然後配置服務。
 
 **必要條件：**開始之前，請確定已具有下列必要條件：
-- [{{site.data.keyword.iotinsurance_short}} 服務](https://console.ng.bluemix.net/catalog/services/iot-for-insurance/) 實例必須存在於 {{site.data.keyword.Bluemix_notm}} 空間中。
+- [{{site.data.keyword.iotinsurance_short}} 服務](https://new-console.ng.bluemix.net/catalog/services/iot-for-insurance/) 實例必須存在於 {{site.data.keyword.Bluemix_notm}} 空間中。
 - 電腦上必須要有至少 10 GB 儲存空間。
 
 ## 部署必要服務及應用程式
@@ -70,7 +70,7 @@ copyright:
 
 ### 配置 {{site.data.keyword.mobilepushshort}}
 {: #config_push}
-若要啟用現有行動應用程式的推送通知，您必須配置 {{site.data.keyword.mobilepushshort}} 服務，以及新增「公開金鑰密碼化標準 (PKCS) 12」檔案。如需行動應用程式的相關資訊，請參閱[安裝及連接範例行動應用程式](iotinsurance_mobile_app.html)。如需 {{site.data.keyword.mobilepushshort}} 的相關資訊，請參閱[開始使用推送通知](https://console.stage1.ng.bluemix.net/docs/services/mobilepush/index.html)。
+若要啟用現有行動應用程式的推送通知，您必須配置 {{site.data.keyword.mobilepushshort}} 服務，以及新增「公開金鑰密碼化標準 (PKCS) 12」檔案。如需行動應用程式的相關資訊，請參閱[安裝及連接範例行動應用程式](iotinsurance_mobile_app.html)。如需 {{site.data.keyword.mobilepushshort}} 的相關資訊，請參閱[開始使用推送通知](https://new-console.stage1.ng.bluemix.net/docs/services/mobilepush/index.html)。
 
   1. 開啟 {{site.data.keyword.mobilepushshort}} 服務。
   2. 按一下**設定 Push**。
@@ -98,6 +98,6 @@ copyright:
 
 ## 相關鏈結
 {: #general}
-* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html)
+* [{{site.data.keyword.iot_full}} 文件](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
 * [開發人員支援討論區](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
 * [Stack Overflow 支援討論區](http://stackoverflow.com/questions/tagged/ibm-bluemix)
