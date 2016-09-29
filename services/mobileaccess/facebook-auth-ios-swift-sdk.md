@@ -10,7 +10,7 @@ copyright:
 # Enabling Facebook authentication for iOS apps (Swift SDK)
 {: #facebook-auth-ios}
 
-Last updated: 12 September 2016
+Last updated: 29 September 2016
 {: .last-updated}
 
 
@@ -23,7 +23,7 @@ To use Facebook as an identity provider in your {{site.data.keyword.amafull}} iO
 * An iOS project that is seft up to work with CocoaPods.  For more information, see **Install CocoaPods** in  [Setting up the iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
    **Note:** You do not need to install the core {{site.data.keyword.amashort}}  client SDK before proceeding.
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
-* A Facebook application on the Facebook for Developers site. 
+* A Facebook application on the [Facebook for Developers](https://developers.facebook.com)  site. 
 
 
 **Important:** You do not need to separately install the Facebook SDK (`com.facebook.FacebookSdk`). The Facebook SDK  installs automatically with the {{site.data.keyword.amashort}} `BMSFacebookAuthentication` pod. You can skip the **Add the Facebook SDK to your Xcode Project** step when you add or configure your app on the Facebook for Developers website.
@@ -33,9 +33,8 @@ To use Facebook as an identity provider in your {{site.data.keyword.amafull}} iO
 {: #facebook-auth-ios-config}
 On the Facebook for Developers site:
 
-1. Log in to your account.
+1. Log in to your account on  [Facebook for Developers](https://developers.facebook.com).
 1. Ensure that the iOS platform has been added to your app. When you add or configure the iOS platform more details are provided about the following steps.
-
 1. Specify the *bundleId* of your iOS application. To find the *bundleId* of your iOS application, look for the **Bundle Identifier** in either the `info.plist` file or Xcode project **General** tab.
 
   **Tip**: Consider enabling URL Scheme Suffix or Single Sign On if you are planning to use these features.
@@ -45,7 +44,7 @@ On the Facebook for Developers site:
 ## Configuring {{site.data.keyword.amashort}} for Facebook authentication
 {: #facebook-auth-ios-configmca}
 
-After you  configure the Facebook Application ID and your Facebook Application to serve iOS clients, you can enable Facebook authentication in {{site.data.keyword.amashort}}.
+After you  configure the Facebook App ID and your Facebook Application to serve iOS clients, you can enable Facebook authentication in {{site.data.keyword.amashort}}.
 
 1. Open your app in the {{site.data.keyword.Bluemix}} dashboard.
 
@@ -55,7 +54,7 @@ After you  configure the Facebook Application ID and your Facebook Application t
 
 1. Click the **Configure** button on the **Facebook** panel.
 
-1. Specify the Facebook Application ID and click **Save**.
+1. Specify the Facebook App ID and click **Save**.
 
 ## Configuring the {{site.data.keyword.amashort}} client SDK for iOS
 {: #facebook-auth-ios-sdk}
