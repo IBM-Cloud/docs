@@ -27,11 +27,11 @@ You must have:
 ## Configuring a Facebook application for your website
 To use Facebook as an identity provider on your website, you must add and configure the website platform on your Facebook application.
 
-1. Log in to the [Facebook Developers Portal](https://developers.facebook.com).
+1. Log in to the [Facebook for Developers](https://developers.facebook.com) website.
 2. Open or create your app.
-3. Note the **Application ID**  and **App Secret**. You need these values when you configure your web project for Facebook authentication in the {{site.data.keyword.amashort}} dashboard.
+3. Note the **App ID**  and **App Secret**. You need these values when you configure your web project for Facebook authentication in the {{site.data.keyword.amashort}} dashboard.
 4. Add the **Website** platform, if it does not exist.
-5. Add or open the **Facebook Login** from the Products list.
+5. Add or open the **Facebook Login** from the **Products** list.
 6. Enter the authorization server callback endpoint URI in the **Valid OAuth redirect URIs** box. Find this authorization redirect URI in the {{site.data.keyword.amashort}} dashboard configuration steps that follow.
 7. Save changes.
 
@@ -39,7 +39,7 @@ To use Facebook as an identity provider on your website, you must add and config
 
 
 ## Configuring {{site.data.keyword.amashort}} for Facebook authentication
-After you have your Facebook Application ID and App Secret, and your Facebook Application has been configured to serve web clients, you can enable Facebook authentication in the {{site.data.keyword.Bluemix_notm}}  dashboard.
+After you have your Facebook App ID and App Secret, and your Facebook Application has been configured to serve web clients, you can enable Facebook authentication in the {{site.data.keyword.Bluemix_notm}}  dashboard.
 
 1. Open the {{site.data.keyword.Bluemix_notm}} dashboard.
 2. Click the relevant app tile to load the app.
