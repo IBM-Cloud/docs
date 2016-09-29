@@ -7,19 +7,19 @@ copyright:
 
 {:new_window: target="_blank"}
 
-# Informationen zu {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
+# Acerca de {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Letzte Aktualisierung: 29. August 2016*
+*Última actualización: 29 de agosto de 2016*
 {: .last-updated}
 
 
-IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} verwendet OpenStack Identity (Keystone) zur Authentifizierung und ist für Aufrufe der API von OpenStack Object Storage (Swift) V1 direkt zugänglich. IBM {{site.data.keyword.objectstorageshort}} kann an eine {{site.data.keyword.Bluemix_notm}}-Anwendung gebunden werden oder es kann von außerhalb einer {{site.data.keyword.Bluemix_notm}}-Anwendung darauf zugegriffen werden. 
+IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} utiliza OpenStack Identity (Keystone) para la autenticación y se puede acceder a él directamente utilizando las llamadas de OpenStack Object Storage (Swift) API v1. IBM {{site.data.keyword.objectstorageshort}} se puede enlazar a una aplicación de {{site.data.keyword.Bluemix_notm}} o se puede acceder desde fuera de una aplicación de {{site.data.keyword.Bluemix_notm}}. 
 
-Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf der [OpenStack-Dokumentationssite](http://docs.openstack.org){: new_window} verfügbar.
+Para obtener más información sobre el uso de OpenStack Swift y Keystone, vea el [sitio de documentación de OpenStack](http://docs.openstack.org){: new_window}.
 
-Das {{site.data.keyword.objectstorageshort}}-Architekturdiagramm sieht wie folgt aus:
+El diagrama de arquitectura de {{site.data.keyword.objectstorageshort}} es el siguiente:
 
 ![{{site.data.keyword.objectstorageshort architecture diagram }}](images/ObjectStorageArchitectureDiagram.png)
 
-*Abbildung 1. {{site.data.keyword.objectstorageshort}}-Architekturdiagramm*
+*Figura 1. Diagrama de arquitectura de {{site.data.keyword.objectstorageshort}}*
 

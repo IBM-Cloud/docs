@@ -7,43 +7,52 @@ copyright:
 
 {:new_window: target="_blank"}
 
-# Einführung in {{site.data.keyword.objectstorageshort}}  {: #getting-started-with-object-storage}
+# Initiation à {{site.data.keyword.objectstorageshort}}  {: #getting-started-with-object-storage}
 
-Letzte Aktualisierung: 25. August 2016
+Dernière mise à jour : 25 août 2016
 {: .last-updated}
 
-{{site.data.keyword.objectstoragefull}} ermöglicht Ihnen zur Verwaltung Ihrer Daten den Zugriff auf ein vollständig eingerichtetes Swift {{site.data.keyword.objectstorageshort}}-Konto. Swift stellt eine vollständig verteilte Speicherplattform bereit, auf die von APIs zugegriffen werden kann. Diese Speicherplattform können Sie direkt in Ihren Anwendungen oder zu Backup-Zwecken verwenden, was sie zur einer idealen Lösung für kosteneffektiven Scale-out-Speicher macht.
+{{site.data.keyword.objectstoragefull}} permet d'accéder à un compte Swift {{site.data.keyword.objectstorageshort}} complet pour gérer vos données. Swift fournit une plateforme de stockage accessible par API, totalement distribuée. Vous pouvez l'utiliser directement dans vos applications ou pour les sauvegardes, ce qui en fait un outil idéal pour un stockage économique et dimensionnable.
 
-**Anmerkung:** Eine providerseitige Verschlüsselung wird nicht unterstützt. Für die Verschlüsselung von Daten vor dem Hochladen ist die Clientanwendung zuständig.
-
-
-Führen Sie die folgenden Schritte aus, um mit der Nutzung von {{site.data.keyword.objectstorageshort}} zu beginnen:
-
-1.	Stellen Sie Ihre {{site.data.keyword.objectstorageshort}}-Instanz aus dem {{site.data.keyword.Bluemix_notm}}-Katalog bereit.
-2.	Konfigurieren Sie Ihre {{site.data.keyword.objectstorageshort}}-Instanz und klicken Sie auf **Erstellen**. Wenn Sie anfangs die Option **Nicht binden** für das Feld **App** auswählen, können Sie trotzdem weiterhin die Serviceinstanz an Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung binden, wenn Sie die Konfiguration abgeschlossen haben. Anweisungen finden Sie unter [Eigene App binden](../ObjectStorage/objectstorge_usingobjectstorage.html#using-object-storage-from-bluemix-app).
+**Remarque :** aucun chiffrement côté fournisseur n'est fourni. C'est la responsabilité de l'application client de chiffrer les données avant leur téléchargement.
 
 
+Pour commencer à utiliser {{site.data.keyword.objectstorageshort}} :
 
-# Zugehörige Links
+1.	Mettez à disposition votre instance {{site.data.keyword.objectstorageshort}}
+depuis le catalogue {{site.data.keyword.Bluemix_notm}}.
+2.	Configurez votre instance {{site.data.keyword.objectstorageshort}} et cliquez sur **Créer**. Si vous avez choisi initialement l'option **Laisser non lié** pour la zone **Application**, vous
+pourrez toujours lier l'instance de service à votre application {{site.data.keyword.Bluemix_notm}} une fois que vous aurez terminé la
+configuration. Pour des instructions, voir
+la
+rubrique
+sur
+la
+[liaison
+de votre application](../ObjectStorage/objectstorge_usingobjectstorage.html#using-object-storage-from-bluemix-app).
+
+
+
+# Liens connexes
 {: #rellinks}
 
-## API-Referenz
+## Référence API
 {: #api}
 * [OpenStack {{site.data.keyword.objectstorageshort}} (Swift) API v1](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}
-* [OpenStack Identity (Keystone) API v3.0](http://developer.openstack.org/api-ref-identity-v3.html){: new_window}
+* [Identity API v3 (CURRENT)](http://developer.openstack.org/api-ref-identity-v3.html){: new_window}
 
 ## SDK
 {: #sdk}
-* [OpenStack Software Development Kits (SDK)](https://wiki.openstack.org/wiki/SDKs){: new_window}
+* [Kits de développement de logiciels (SDK) OpenStack](https://wiki.openstack.org/wiki/SDKs){: new_window}
 
-## Lernprogramme und Beispiele
+## Tutoriels et exemples
 {: #samples}
-* [Herstellen einer Verbindung zu {{site.data.keyword.objectstoragefull}} über Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
-* [Python für den Zugriff auf {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}} verwenden](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
-* [PHP zur Nutzung von {{site.data.keyword.objectstorageshort}} verwenden](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
-* [pkgcloud für den Zugriff auf {{site.data.keyword.objectstoragefull}} über Node.js verwenden](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new_window}
+* [Connecting to {{site.data.keyword.objectstoragefull}} with Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
+* [Use Python to access your {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
+* [Use PHP to leverage {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
+* [Use pkgcloud to access {{site.data.keyword.objectstoragefull}} with Node.js](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new_window}
 
-## Kompatible Laufzeiten
+## Contextes d'exécution compatibles
 {: #buildpacks}
 * [Liberty for Java](https://www.ng.bluemix.net/docs/runtimes/liberty/index.html){: new_window}
 * [SDK for Node.js](https://www.ng.bluemix.net/docs/runtimes/nodejs/index.html){: new_window}
@@ -51,10 +60,10 @@ Führen Sie die folgenden Schritte aus, um mit der Nutzung von {{site.data.keywo
 * [PHP](https://www.ng.bluemix.net/docs/runtimes/php/index.html){: new_window}
 * [Python](https://www.ng.bluemix.net/docs/runtimes/python/index.html){: new_window}
 * [Ruby](https://www.ng.bluemix.net/docs/runtimes/ruby/index.html){: new_window}
-* [Community-Buildpacks](https://www.ng.bluemix.net/docs/starters/byob.html){: new_window}
+* [Packs de construction de la communauté](https://www.ng.bluemix.net/docs/starters/byob.html){: new_window}
 
 
-## Zugehörige Links
+## Liens connexes
 {: #general}
-* [IBM {{site.data.keyword.Bluemix_notm}}-Preisliste](https://www.ng.bluemix.net/#/pricing){: new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}}-Voraussetzungen](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} - Tarification](https://www.ng.bluemix.net/#/pricing){: new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

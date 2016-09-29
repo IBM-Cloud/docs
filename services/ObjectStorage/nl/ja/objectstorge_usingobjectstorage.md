@@ -7,97 +7,98 @@ copyright:
 
 {:new_window: target="_blank"}
 
-# Einführung in {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
+# {{site.data.keyword.objectstorageshort}} の使用開始 {: #using-object-storage}
 
-*Letzte Aktualisierung: 13. August 2016*
+*最終更新日: 2016 年 8 月 13 日*
 {: .last-updated}
 
 
-## {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle verwenden {: #using-object-storage-ui}
+## {{site.data.keyword.objectstorageshort}} ユーザー・インターフェースの使用 {: #using-object-storage-ui}
 
-### Benutzerschnittstelle - Elemente und Navigation
-Wenn Ihr {{site.data.keyword.objectstorageshort}} bereitgestellt wurde, können Sie die Informationen zu Ihrer Instanz im {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Dashboard für Serviceinstanzen anzeigen. Wählen Sie im Dashboard Ihre {{site.data.keyword.objectstorageshort}}-Instanz aus, um den Fensterbereich mit ausführlicheren Informationen anzuzeigen.  
-#### Nutzungsdaten
-Auf der Startseite Ihrer Anwendung sehen Sie die Informationen zur Speicherbelegung für Ihre Instanz. Außerdem wird die aktuelle Anzahl der **Speichercontainer** und die Gesamtzahl der **Objekte** in allen Containern angezeigt, über die Sie verfügen. Ihre Speicherbelegung wird in Megabyte angegeben. **Belegter Speicher** bezieht sich auf die aktuelle Größe des Speicherplatzes, der belegt ist.
-#### Aktionen
-Klicken Sie auf die Schaltfläche **Aktualisieren**, um die aktuellsten Nutzungsdaten abzurufen.   
-####Objektbrowser
-Verwenden Sie den Objektbrowser, um Object Storage-Container und -Objekte zu verwalten. Sie können Container erstellen, Dateien hochladen, Container löschen, Dateien löschen und andere Aktionen ausführen.
+### UI エレメントとナビゲーション
+{{site.data.keyword.objectstorageshort}} がプロビジョンされると、{{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} サービス・インスタンス・ダッシュボードにインスタンス情報が表示されます。ダッシュボードから {{site.data.keyword.objectstorageshort}} インスタンスを選択すると、詳細情報を含むパネルが表示されます。  
+#### 使用量データ
+アプリケーションのホーム・ページに、インスタンスのストレージ使用量情報が表示されます。**ストレージ・コンテナー**の現在数と、全コンテナー内の**オブジェクト**の総数も示されます。メモリー使用量はメガバイト単位でリストされます。**「消費済みストレージ」**は、現在使用されているスペースの量を表します。
+#### アクション
+最新の使用量データを取得するには、**「最新表示」**ボタンをクリックします。   
+####オブジェクト・ブラウザー
+オブジェクト・ブラウザーを使用して、オブジェクト・ストレージのコンテナーおよびオブジェクトを管理します。コンテナーの作成、ファイルのアップロード、コンテナーの削除、ファイルの削除をはじめとするアクションを行えます。
 
 
-## {{site.data.keyword.objectstorageshort}} über eine {{site.data.keyword.Bluemix_notm}}-App verwenden {: #using-object-storage-from-bluemix-app}
+## {{site.data.keyword.Bluemix_notm}} アプリからの {{site.data.keyword.objectstorageshort}} の使用 {: #using-object-storage-from-bluemix-app}
 
-### Vorgehensweise zum Binden eines {{site.data.keyword.objectstorageshort}}-Service an eine Anwendung nach der Erstellung {: #bind-object-storage-to-application}
-1.	Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard die App aus, die Sie binden möchten.
-2.	Klicken Sie in der App-Übersicht auf **Service oder API binden**.
-3.	Wählen Sie in der Liste der Services Ihre {{site.data.keyword.objectstorageshort}}-Instanz aus und klicken Sie auf **Hinzufügen**.
-4.	Klicken Sie auf **Erneutes Staging**, wenn Sie dazu aufgefordert werden. Für die Verwendung des neuen Service ist für Ihre App ein erneutes Staging erforderlich.
+### {{site.data.keyword.objectstorageshort}} サービスを作成後にアプリケーションにバインドする方法 {: #bind-object-storage-to-application}
+1.	{{site.data.keyword.Bluemix_notm}} ダッシュボードで、バインドするアプリを選択します。
+2.	アプリ概要で**「サービスまたは API のバインド」**をクリックします。
+3.	サービスのリストから {{site.data.keyword.objectstorageshort}} インスタンスを選択し、**「追加」**をクリックします。
+4.	プロンプトが表示されたら、**「再ステージ」**をクリックします。新しいサービスを使用するには、アプリの再ステージが必要です。
 
-### Gebundener Kontext
+### バインド済みコンテキスト
 
-Wenn Sie {{site.data.keyword.objectstorageshort}} in einem gebundenen Kontext verwenden möchten, werden die Berechtigungsnachweise für die Cloud indirekt über den Anwendungsbindungsprozess bereitgestellt. Nach der erfolgreichen Bindung einer Serviceinstanz an Ihre Anwendung wird eine Konfiguration ähnlich der folgenden Beispielkonfiguration der Umgebungsvariablen `VCAP_SERVICES` hinzugefügt.
+{{site.data.keyword.objectstorageshort}} をバインド済みコンテキストで使用する場合は、アプリケーションのバインド・プロセスを通じてクラウド資格情報が間接的に提供されます。サービス・インスタンスがアプリケーションに正常にバインドされると、次の例のような構成が `VCAP_SERVICES` 環境変数に追加されます。
+
 
 ```
 {
 "Object-Storage": [
-    {
+{
   "name": "Object-Storage - YP",
-      "label": "Object-Storage",
-      "plan": "Free",
-      "credentials": {
+  "label": "Object-Storage",
+  "plan": "Free",
+  "credentials": {
      "auth_url": "https://identity.open.softlayer.com",
-         "project": "object_storage_d049255b",
-         "projectId": "0f47b41b06d047f9aae3b33f1db061ed",
-         "region": "dallas",
-         "userId": "ad78b2a3f843466988afd077731c61fc",
-         "username": "user_202db1f8a7aa3f3ac51ec68f10dbe7dc29070bc7",
-         "password": "K/jyIi2jR=1?D.TP",
-         "domainId": "2df6373c549e49f8973fb6d22ab18c1a",
-         "domainName": "639347"
-        }
+     "project": "object_storage_d049255b",
+     "projectId": "0f47b41b06d047f9aae3b33f1db061ed",
+     "region": "dallas",
+     "userId": "ad78b2a3f843466988afd077731c61fc",
+     "username": "user_202db1f8a7aa3f3ac51ec68f10dbe7dc29070bc7",
+     "password": "K/jyIi2jR=1?D.TP",
+     "domainId": "2df6373c549e49f8973fb6d22ab18c1a",
+     "domainName": "639347"
+    }
    }
   ]
 }
 ```
 
-## Swift-Befehlszeilenschnittstelle (CLI) für den Zugriff auf {{site.data.keyword.objectstorageshort}} verwenden {: #using-swift-cli}
+## Swift CLI を使用した {{site.data.keyword.objectstorageshort}} へのアクセス {: #using-swift-cli}
 
-Sie können auf den {{site.data.keyword.objectstorageshort}}-Service über das Internet und durch Anwendungen und virtuelle Server in IBM {{site.data.keyword.Bluemix_notm}} zugreifen. Häufige Anwendungsfälle für den {{site.data.keyword.objectstorageshort}}-Service sind zum Beispiel:
+インターネット経由で、または IBM {{site.data.keyword.Bluemix_notm}} 内のアプリケーションまたは仮想サーバーから、{{site.data.keyword.objectstorageshort}} サービスにアクセスできます。{{site.data.keyword.objectstorageshort}} サービスの一般的なユース・ケースは、以下のとおりです。
 
-* Sicherung durch Backups von Datenträgerdaten aus Ihren Instanzen
-* Verwendung als Zwischenspeicherposition bei der Übertragung umfangreicher Datenvolumen
-* Übertragung von Daten zwischen Umgebungen, die nicht direkt verbunden sind
-* Einsatz als zentrales Repository
+* インスタンスからのボリューム・データのバックアップ
+* 大量のデータを転送する場合の中継場所として使用
+* 直接接続されていない環境間でのデータの転送
+* 中央リポジトリーとして機能
 
-Der {{site.data.keyword.objectstorageshort}}-Service basiert auf OpenStack Swift und ist für jede beliebige kompatible Clientanwendung zugänglich. In diesem Abschnitt wird die Verwendung des Python Swift-Clients beschrieben. Dies ist die Befehlszeilenschnittstelle (CLI, Command-Line Interface) für die {{site.data.keyword.objectstorageshort}}-API und die zugehörigen Erweiterungen für die Arbeit mit Containern und Dateien.
+{{site.data.keyword.objectstorageshort}} サービスは OpenStack Swift に基づいており、互換性のある任意のクライアント・アプリケーションを使用してアクセスできます。このセクションでは、Python Swift クライアント ({{site.data.keyword.objectstorageshort}} API のコマンド・ライン・インターフェース (CLI) とその拡張機能) を使用してコンテナーおよびファイルを処理する方法について説明します。
 
-### Swift-Client installieren {: #install-swift-client}
+### Swift クライアントのインストール {: #install-swift-client}
 
-Installieren Sie die folgenden Softwarevoraussetzungen, falls diese noch nicht installiert sind. Weitere Informationen finden Sie in der [OpenStack-Dokumentation](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software){: new_window}.
-* Python 2.7 oder höher
-* Setuptools-Paket
-* Pip-Paket
+以下の前提ソフトウェアがまだインストールされていない場合は、インストールします。詳細については、[OpenStack Documentation](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software){: new_window} を参照してください。
+* Python 2.7 以降
+* setuptools パッケージ
+* pip パッケージ
 
-Installieren Sie den Python Swift-Client mithilfe von Python-pip:
+Python pip を使用して、Python Swift クライアントをインストールします。
 
 ```
 	sudo pip install python-swiftclient
 ```
 
-Installieren Sie den Python Keystone-Client, indem Sie den folgenden Befehl ausführen:
+次のコマンドを実行して、Python Keystone クライアントをインストールします。
 
 ```
 	sudo pip install python-keystoneclient
 ```
 
-### Client einrichten {: #setup-swift-client}
+### クライアントのセットアップ {: #setup-swift-client}
 
-Der Swift-Client entnimmt die Authentifizierungsinformationen den folgenden Umgebungsvariablen:
-* `OS_AUTH_URL` ist die Endpunkt-URL.
-* `OS_USER_ID` ist der Benutzername.
-* `OS_PASSWORD` ist das Kennwort.
+Swift クライアントは、以下の環境変数から認証情報を取得します。
+* `OS_AUTH_URL` は、エンドポイント URL
+* `OS_USER_ID` は、ユーザー名
+* `OS_PASSWORD` は、パスワード
 
-Legen Sie die Authentifizierungsinformationen wie folgt fest.
+認証情報を以下のように設定します。
 
 ```
 export OS_USER_ID=24a20b8e4e724f5fa9e7bfdc79ca7e85
@@ -109,157 +110,153 @@ export OS_IDENTITY_API_VERSION=3
 export OS_AUTH_VERSION=3
 ```
 
-Sie finden die Werte für die Berechtigungsnachweise für Ihren {{site.data.keyword.objectstorageshort}}-Service auf der Seite **Serviceberechtigungsnachweise** in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle.
+{{site.data.keyword.objectstorageshort}} ユーザー・インターフェースの**「サービス資格情報」**ページで、{{site.data.keyword.objectstorageshort}} サービスの資格情報値を検索できます。
 
-**Anmerkung:** Stellen Sie sicher, dass Sie dem Wert von `auth_url` aus den Berechtigungsnachweisen in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle den Wert `/v3` hinzufügen, wenn Sie die Umgebungsvariablen `OS_AUTH_URL` für den Swift-Client konfigurieren.
+**注:** Swift クライアントの環境変数 `OS_AUTH_URL` を構成する際には、必ず {{site.data.keyword.objectstorageshort}} ユーザー・インターフェース内の資格情報から取得した `auth_url` に `/v3` を追加してください。
 
 
-### Mit Containern arbeiten {: #work-with-containers}
+### コンテナーの処理 {: #work-with-containers}
 
-Container auflisten:
+コンテナーのリスト:
 ```
 	swift list
 ```
-Container erstellen:
+コンテナーの作成:
 ```
-	swift post <Containername>
+	swift post <container_name>
 ```
-Inhalt eines Containers auflisten:
+コンテナーの内容のリスト:
 ```
-	swift list <Containername>
+	swift list <container_name>
 ```
-### Mit Objekten arbeiten {: #work-with-objects}
+### オブジェクトの処理 {: #work-with-objects}
 
-#### Datei einem Container hinzufügen
+#### コンテナーへのファイルの追加
 ```
-	swift upload <Containername> <Dateiname>
+	swift upload <container_name> <file_name>
 ```
-#### Dateien mit einer Größe über 5 GB einem Container hinzufügen
+#### コンテナーへの 5 GB を超えるファイルの追加
 
-Wenn Sie eine Datei hochladen, die größer als 5 GB ist, müssen Sie sie in kleinere Segmente aufteilen. Sie können den Swift-Client durch Angabe des Parameters `-segment-size` anweisen, eine solche Hochladeoperation durchzuführen:
+5 GB を超えるファイルをアップロードする場合は、小さいチャンクに分割する必要があります。以下のように `-segment-size` パラメーターを指定することによって、こうしたアップロードの処理を Swift クライアントに指示することができます。
 ```
-	swift upload <Containername> <Dateiname> --segment-size <Größe_in_Byte>
+	swift upload <container_name> <file_name> --segment-size <size_in_bytes>
 ```
-Jedes Segment wird parallel in einen separaten Container mit dem Namen `<Containername>_segments` hochgeladen. Nach dem Hochladen aller Segmente erstellt Swift eine Manifestdatei, sodass die Segmente in eine einzige Datei aus dem ursprünglichen Container `<Containername>` mit dem ursprünglichen Dateinamen `<Dateiname>` heruntergeladen werden können.
-
-Beispiel: Mit dem folgenden Befehl wird eine Datei mit dem Namen `large_file` aus einem Container mit dem Namen `test_container` mit der Segmentgröße `1073741824` hochgeladen.
+各セグメントは、`<container_name>_segments` という名前の個別のコンテナーに並列でアップロードされます。すべてのセグメントがアップロードされた後、Swift はマニフェスト・ファイルを作成して、複数のセグメントを元のコンテナー `<container_name>` から単一ファイルに、元のファイル名 `<file_name>` でダウンロードできるようにします。
+例えば、次のコマンドは、名前が `test_container` というコンテナーから、セグメント・サイズが `1073741824` で名前が `large_file` というファイルをアップロードします。
 ```
 	swift upload test_container -S 1073741824 large_file
 ```
-Sie können den folgenden Befehl ausführen, um die Datei herunterzuladen:
+このファイルをダウンロードするには、以下のコマンドを実行します。
 ```
 	swift download test_container large_file
 ```
-#### Datei herunterladen
+#### ファイルのダウンロード
 ```
-	swift download <Containername> <Dateiname>
+	swift download <container_name> <file_name>
 ```
-#### Verzeichnis einem Container hinzufügen
+#### コンテナーへのディレクトリーの追加
 
-Swift hat keine eigentliche Verzeichnisstruktur, verwendet jedoch eine entsprechende Benennung, um eine Verzeichnisstruktur darzustellen. Führen Sie den folgenden Befehl aus, um einem Container ein Verzeichnis hinzuzufügen:
+Swift には、真のディレクトリー構造はありませんが、ディレクトリーのレイアウトを表すネーミングを使用しています。コンテナーにディレクトリーを追加するには、次のコマンドを実行します。
 ```
-	swift upload <Containername> <Verzeichnisname>
+	swift upload <container_name> <directory_name>
 ```
-Durch diesen Befehl wird eine vollständige Verzeichnisstruktur als relativer Pfad hochgeladen. Beispiel: Wenn Sie `/mnt/volume1` angeben, wird die Verzeichnisstruktur 'mnt/volume1' an alle Dateinamen angefügt, um die Verzeichnisstruktur anzugeben.
+このコマンドは、ディレクトリー構造全体を相対パスとしてアップロードします。例えば、`/mnt/volume1` と指定すると、ディレクトリー構造の mnt/volume1 がすべてのファイル名に付加されて、ディレクトリー構造を示します。
+#### ディレクトリーのダウンロード
 
-
-#### Verzeichnis herunterladen
-
-Zum Herunterladen einer Verzeichnisstruktur verwenden Sie den Parameter `-prefix`, um das Verzeichnis bzw. die Verzeichnisstruktur anzugeben, das/die heruntergeladen werden soll.
+ディレクトリー構造をダウンロードするには、`-prefix` パラメーターを使用して、ダウンロードするディレクトリーまたはディレクトリー構造を示します。
 ```
-	swift download <Containername> --prefix <Verzeichnis>
+	swift download <container_name> --prefix <directory>
 ```
-#### Datei löschen
+#### ファイルの削除
 ```
-	swift delete <Containername> <Dateiname>
+	swift delete <container_name> <file_name>
 ```
-### Mit Objektversionierung arbeiten {: #work-with-object-versioning}
+### オブジェクトのバージョン管理の処理 {: #work-with-object-versioning}
 
-Sie können unter Verwendung des Flags `X-Versions-Location` Versionen jedes Objekts in Ihrem Container einrichten. Erstellen Sie hierfür wie folgt einen weiteren Container, um ältere Versionen Ihrer Objekte aufzubewahren.
+`X-Versions-Location` フラグを使用して、コンテナー内の各オブジェクトのバージョンをセットアップできます。これを行うには、以下のように、オブジェクトの古いバージョンを保存するための追加コンテナーを作成します。
 
-Bei der Verwendung des Swift-Clients können Sie die Einrichtung wie folgt vornehmen:
+swift クライアントを使用する場合は、次のようにセットアップします。
 ```
 	swift post container_one -H "X-Versions-Location:container_two"
 ```
-Bei der Verwendung von curl können Sie die Einrichtung wie folgt vornehmen:
+curl を使用する場合は、次のようにセットアップします。
 ```
-	curl -i -X PUT -H "X-Auth-Token: <Token>" -H "X-Versions-Location:container_two" https://<Objektspeicher-URL>/container_one
+	curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:container_two" https://<object-storage_url>/container_one
 ```
-In diesem Beispiel wurde `container_two` so eingerichtet, dass er die älteren Versionen Ihrer Objekte enthält, die in `container_one` gespeichert sind. Daher enthält `container_one` die aktuelle Version Ihrer Objekte, `container_two` enthält die älteren Versionen Ihrer Objekte. Stellen Sie sicher, dass `container_two` existiert, damit die Versionierung funktioniert.
+この例では、`container_two` は、`container_one` に保管されたオブジェクトの古いバージョンを含めるようにセットアップされています。したがって、`container_one` には最新バージョンのオブジェクトが入り、`container_two` には古いバージョンのオブジェクトが入ります。バージョン管理が機能するためには、必ず `container_two` が存在するようにしてください。
+バージョン管理がセットアップされた状態で、`container_one` にオブジェクトをアップロードしたときに、そのオブジェクトの既存のバージョンが存在する場合、新しいバージョンが `container_one` に作成される時点で、既存のバージョンは `container_two` に移動されます。`container_one` からオブジェクトを削除した場合は、前のバージョンのオブジェクトが `container_two` から `container_one` に戻されます。
 
-Bei eingerichteter Versionierung wird die bereits vorhandene Version beim Hochladen eines Objekts in `container_one`, sofern es eine bereits vorhandene Version gibt, nach `container_two` verschoben, da die neue Version in `container_one` erstellt wird. Wenn Sie ein Objekt aus `container_one` löschen, wird die vorherige Version des Objekts von `container_two` wieder nach `container_one` verschoben.
+`container_two` 内のオブジェクトには、
+`<Length><Object_name>/<Timestamp>` というフォーマットで自動的に名前が付けられます。
 
-Objekte in `container_two` werden automatisch im folgenden Format benannt: `<Länge><Objektname>/<Zeitmarke>`.
+`Length` は、オブジェクトの名前の長さを表します。これは、ゼロが埋め込まれた 3 文字の 16 進数です。`Object_name` は、オブジェクトの名前です。`Timestamp` は、この特定のバージョンのオブジェクトが最初にアップロードされたときのタイム・スタンプです。
 
-`Länge` bezieht sich dabei auf die Länge des Namens Ihres Objekts; dies ist eine aus drei Zeichen bestehende Hexadezimalzahl ohne Innenabstand. `Objektname` ist der Name Ihres Objekts. `Zeitmarke` ist die Zeitmarke des ursprünglichen Uploads dieser jeweiligen Version.
-
-Verwenden Sie für die Inaktivierung der Versionierung das Flag `X-Remove-Versions-Location`:
+バージョン管理を無効にするには、`X-Remove-Versions-Location` フラグを以下のように使用します。
 ```
 	swift post container_one -H "X-Remove-Versions-Location:"
 ```
-oder
+または
 ```
-	cURL -i -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Versions-Location: anyvalue" https://<Objektspeicher-URL>/container_one
+	cURL -i -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Versions-Location: anyvalue" https://<object-storage_url>/container_one
 ```
-Im Folgenden sehen Sie ein vollständiges Beispiel für die Nutzung der Versionierung:
-
-1. Container erstellen:
+バージョン管理の完全な使用例を以下に示します。
+1. コンテナーの作成:
 ```
 		$ swift post container_one
 		$
 ```
-2. Versionierung für container_one einrichten:
+2. container_one のバージョン管理のセットアップ:
 ```
 		$ swift post container_one -H "X-Versions-Location:container_two"
 		$
 ```
-3. container_two erstellen:
+3. container_two の作成:
 ```
 		$ swift post container_two
 		$
 ```
-4. Objekt zum ersten Mal nach container_one hochladen:
+4. container_one への初回のオブジェクトのアップロード:
 ```
 		$ swift upload container_one object
 		object
 		$
 ```
-5. Objekte in container_one auflisten:
+5. container_one 内のオブジェクトのリスト:
 ```
 		$ swift list container_one
 		object
 		$
 ```
-6. Objekte in container_two auflisten:
+6. container_two 内のオブジェクトのリスト:
 ```
 		$ swift list container_two
 		$
 ```
-7. Neue Version des Objekts nach container_one hochladen:
+7. container_one への新しいバージョンのオブジェクトのアップロード:
 ```
 		$ swift upload container_one object
 		object
 		$
 ```
-8. Objekte in container_one auflisten:
+8. container_one 内のオブジェクトのリスト:
 ```
 		$ swift list container_one
 		object
 		$
 ```
-9. Objekte in container_two auflisten:
+9. container_two 内のオブジェクトのリスト:
 ```
 		$ swift list container_two
 		006object/1457456909.27383
 		$
 ```
-10. Objekt in container_one löschen:
+10. container_one 内のオブジェクトの削除:
 ```
 		$ swift delete container_one object
 		object
 		$
 ```
-11. Beide Container auflisten:
+11. 両方のコンテナーのリスト:
 ```
 		$ swift list container_one
 		object
@@ -267,133 +264,125 @@ Im Folgenden sehen Sie ein vollständiges Beispiel für die Nutzung der Versioni
 		$
 ```
 
-### Objektlöschung planen {: #schedule-object-deletion}
+### オブジェクトの削除のスケジューリング {: #schedule-object-deletion}
 
-Sie können für Ihre Objekte festlegen, dass diese in einer angegebenen Zeitdauer ablaufen sollen. Das heißt, Sie können die Löschung Ihrer Objekte planen. Hierfür können Sie den Header `X-Delete-At` oder `X-Delete-After` verwenden. Der Wert für den Header `X-Delete-At` ist eine ganze Zahl, die die Referenzzeit darstellt, zu der das Objekt gelöscht werden soll. Der Wert für den Header `X-Delete_After` ist eine ganze Zahl, die die Anzahl an Sekunden darstellt, nach deren Ablauf das Objekt gelöscht wird.
+指定の期限にオブジェクトの有効期限が切れるように設定できます。つまり、オブジェクトの削除をスケジュールに入れることができます。これを行うには、`X-Delete-At` ヘッダーまたは `X-Delete-After` ヘッダーのどちらかを使用します。`X-Delete-At` ヘッダーは、オブジェクトを削除するエポック時刻を表す整数値です。`X-Delete_After` ヘッダーは、オブジェクトが削除されるまでに経過する秒数を表す整数値です。
 
-Die folgenden Beispiele zeigen die Vorgehensweise, wenn Sie den Swift-Client für einen Post an das Objekt in Ihrem Container verwenden.
+swift クライアントを使用して、コンテナー内のオブジェクトに対して post を実行する場合は、以下の例を参照してください。
 
-* Verwenden Sie den folgenden Befehl, um für das Objekt den Löschzeitpunkt auf "2016/04/01 08:00:00" festzulegen:
+* 「2016/04/01 08:00:00」にオブジェクトを削除するように設定するには、次のコマンドを使用します。
 ```
 		swift post -H "X-Delete-At:1459515600" container object
 ```
-* Verwenden Sie den folgenden Befehl, um für das Objekt festzulegen, dass es eine Stunde nach dem aktuellen Zeitpunkt gelöscht werden soll:
+* 今から 1 時間後にオブジェクトを削除するように設定するには、次のコマンドを使用します。
 ```
 		swift post -H "X-Delete-After:3600" container object
 ```
-  Anschließend wird durch den Befehl `swift stat container object` der Header `X-Delete-At` mit dem entsprechenden Ablaufdatum in der Referenzzeit angezeigt.
-
-* Verwenden Sie den folgenden Befehl, um die Ablaufzeit aus Ihrem Objekt zu entfernen:
+これを行った後に `swift stat container object` コマンドを実行すると、適切な有効期限がエポック時刻で示された `X-Delete-At` ヘッダーが表示されます。
+* オブジェクトから有効期限を削除するには、次のコマンドを使用します。
 ```
 		swift post -H "X-Remove-Delete-After:" container object
 ```
-Bei der Verwendung von cURL sehen die Befehle wie folgt aus:
-
-* Verwenden Sie den folgenden Befehl, um für das Objekt den Löschzeitpunkt auf "2016/04/01 08:00:00" festzulegen:
+cURL を使用する場合、コマンドは以下のようになります。
+* 「2016/04/01 08:00:00」にオブジェクトを削除するように設定するには、次のコマンドを使用します。
 ```
-		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-At:1459515600" https://<Objektspeicher-URL>/container/object
+		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-At:1459515600" https://<object-storage_url>/container/object
 ```
-* Verwenden Sie den folgenden Befehl, um für das Objekt festzulegen, dass es eine Stunde nach dem aktuellen Zeitpunkt gelöscht werden soll:
+* 今から 1 時間後にオブジェクトを削除するように設定するには、次のコマンドを使用します。
 ```
-		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-After:3600" https://<Objektspeicher-URL>/container/object
+		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-After:3600" https://<object-storage_url>/container/object
 ```
-* Verwenden Sie den folgenden Befehl, um zu prüfen, ob das Objekt den Header aufweist:
+* オブジェクトにヘッダーが付いているかどうかを確認するには、次のコマンドを使用します。
 ```
-		cURL -I -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/container/object
+		cURL -I -H "X-Auth-Token: <token>" https://<object-storage_url>/container/object
 ```
-* Verwenden Sie den folgenden Befehl, um die Ablaufzeit zu entfernen:
+* 有効期限を削除するには、次のコマンドを使用します。
 ```
-		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Delete-At:" https://<Objektspeicher-URL>/container/object
+		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Delete-At:" https://<object-storage_url>/container/object
 ```
-**Anmerkung:** Die tatsächliche Löschung eines Objekts erfolgt möglicherweise nicht genau zur angegebenen Uhrzeit. Das Objekt läuft jedoch de facto zur angegebenen Zeit ab, d. h., es ist nicht mehr erreichbar. Die tatsächliche Löschung findet bei der nächsten Ausführung des in Ihrem Swift-Cluster konfigurierten Dämons 'swift-object-expirer' statt.
+**注:** オブジェクトの実際の削除は、指示された正確な時刻に行われるとは限りません。ただし、オブジェクトは実際に指定の時刻に期限切れになり、それ以降は到達不能になります。実際の削除は、swift クラスターに構成されている swift-object-expirer デーモンの次回の実行時に行われます。
+### 一時 URL の作成 {: #create-temporary-url}
 
+一時 URL は、指定された期間、追加の認証を必要とせずにオブジェクトをダウンロードするために使用できる、推測が困難な長い URL です。一時 URL の生成は、以下の手順で行います。
 
+1. 認証アカウントを識別します。
+2. 秘密鍵を設定します。
+3. 一時 URL を作成します。
 
+#### 認証アカウントの確認
 
-
-### Temporäre URL erstellen {: #create-temporary-url}
-
-Eine temporäre URL ist eine lange, schwer zu erratende URL, die für einen angegebenen Zeitraum zum Herunterladen von Objekten verwendet werden kann, ohne dass eine weitere Authentifizierung erforderlich ist. Sie generieren eine temporäre URL mit den folgenden Schritten:
-
-1. Geben Sie Ihr Authentifizierungskonto an.
-2. Legen Sie einen geheimen Schlüssel fest.
-3. Erstellen Sie eine temporäre URL.
-
-#### Authentifizierungskonto angeben
-
-Der Swift-Befehl `stat` gibt Informationen zu Ihrem Konto aus:
+Swift `stat` コマンドを実行すると、アカウントに関する情報が出力されます。
 ```
 	swift stat
 ```
-Suchen Sie das Kontofeld (Account) und notieren Sie die vollständige Zeichenfolge hinter *Account*: einschließlich `AUTH_`.
+「アカウント」フィールドを見つけて、*Account*: の後ろの `AUTH_` を含むすべての文字列をメモします。
+#### 秘密鍵の設定
 
-#### Geheimen Schlüssel festlegen
-
-Dieser Schlüssel kann eine Zeichenfolge Ihrer Wahl sein. Ein bewährtes Verfahren ist, eine lange, zufällig zusammengesetzte und schwer zu erratende Zeichenfolge zu wählen.
+この鍵は自由に選択できますが、ベスト・プラクティスは、ランダムで推測が困難な長いストリングを選択することです。
 ```
-	swift post -m "Temp-URL-Key:<Schlüssel>"
+	swift post -m "Temp-URL-Key:<key>"
 ```
-Führen Sie den Swift-Befehl `stat` aus, um zu überprüfen, ob `Temp-URL-Key` erfolgreich festgelegt wurde.
+Swift `stat` コマンドを実行して、`Temp-URL-Key` が正常に設定されたことを確認します。
 ```
 	swift stat
 ```
 
-#### Temporäre URL erstellen
+#### 一時 URL の作成
 
-Der Swift-Befehl `tempurl` arbeitet mit den folgenden Positionsargumenten:
+Swift `tempurl` コマンドでは、以下の定位置引数を使用します。
 
-* [Methode] GET, um das Herunterladen zuzulassen. PUT, um das Hochladen zuzulassen.
-* [Sekunden] Zeit in Sekunden, die die temporäre URL verfügbar sein soll.
-* [Pfad] Der vollständige Pfad des Objekts im Format `/v1/<Authentifizierungskonto>/<Containername>/<Objektname>`. Weitere Informationen finden Sie bei der [{{site.data.keyword.objectstorageshort}}-URL](#access-points).
-* [Schlüssel] Der Schlüssel, den Sie in Schritt 2 festgelegt haben.
+* [method] ダウンロードを許可する場合は GET。アップロードを許可する場合は PUT。
+* [seconds] 一時 URL が使用可能な時間 (秒数)。
+* [path] オブジェクトの絶対パス (`/v1/<auth_account>/<container_name>/<object_name>` として表示)。詳細については、[『{{site.data.keyword.objectstorageshort}} URL』](#access-points)を参照してください。
+* [key] ステップ 2 で設定した鍵。
 
 ```
-swift tempurl GET <Sekunden> <Pfad> <Schlüssel>
+swift tempurl GET <seconds> <path> <key>
 ```
 
-Dieser Befehl gibt eine URL zurück, die Sie an Ihren Clusternamen anhängen können, um eine vollständige URL zu erhalten. Verwenden Sie die vollständige URL, um das Objekt mit einem kompatiblen HTTP-Client wie curl, wget oder Firefox herunterzuladen.
+このコマンドによって返される URL をクラスター名に付加すると、完全な URL が得られます。互換性のある HTTP クライアント (curl、wget、Firefox など) を使用してオブジェクトをダウンロードするには、完全な URL を使用します。
 
-## Mit der Swift-REST-API auf {{site.data.keyword.objectstorageshort}} zugreifen {: #using-swift-restapi}
+## Swift REST API を使用した {{site.data.keyword.objectstorageshort}} へのアクセス {: #using-swift-restapi}
 
-Sie können die Swift-REST-API in einer Befehlszeilen-Clientschnittstelle wie cURL verwenden oder Sie können die API in Ihrer Anwendung aufrufen.  
+コマンド・ライン・クライアント・インターフェース (cURL など) で Swift REST API を使用することも、アプリケーションから API を呼び出すこともできます。  
 
-### {{site.data.keyword.objectstorageshort}}-URL {: #access-points}
+### {{site.data.keyword.objectstorageshort}} URL {: #access-points}
 
-Zur Interaktion mit der {{site.data.keyword.objectstorageshort}}-API erstellen Sie die {{site.data.keyword.objectstorageshort}}-URL wie folgt:
+{{site.data.keyword.objectstorageshort}} API と相互作用するには、 {{site.data.keyword.objectstorageshort}} URL を次のように構成します。
 ```
-	https://<Zugriffspunkt>/<API-Version>/AUTH_<Projekt-ID>/<Containernamensbereich>/<object namespace>
+	https://<access point>/<API version>/AUTH_<project ID>/<container namespace>/<object namespace>
 ```
 
 
-Die URL besteht aus fünf Teilen. Die `<API-Version>` ist Version 1. Sie finden die Werte für `<Projekt-ID>`, `<Containernamensbereich>` und `<object namespace>` für Ihren {{site.data.keyword.objectstorageshort}} in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle.  Informationen für den `<Zugriffspunkt>` finden Sie in der folgenden Tabelle:
+この URL は、5 つの部分で構成されています。`<API version>` は v1 です。{{site.data.keyword.objectstorageshort}} ユーザー・インターフェースから、{{site.data.keyword.objectstorageshort}} の `<project ID>`、`<container namespace>`、および `<object namespace>` を検索できます。`<access point>` については、次の表を参照してください。
 
 
-| **Region**  |   **Öffentlicher Zugriffspunkt**                     |
+| **地域**  |   **パブリック・アクセス・ポイント**                     |
 |-------------|-----------------------------------------------|
-| Dallas      | https://dal.objectstorage.open.softlayer.com/ |
-| London      | https://lon.objectstorage.open.softlayer.com/ |
+| ダラス      | https://dal.objectstorage.open.softlayer.com/ |
+| ロンドン      | https://lon.objectstorage.open.softlayer.com/ |
 
 
-*Tabelle 1. {{site.data.keyword.objectstorageshort}}-Zugriffspunkt*
+*表 1. {{site.data.keyword.objectstorageshort}} アクセス・ポイント*
 
 
-### {{site.data.keyword.objectstorageshort}}-API
+### {{site.data.keyword.objectstorageshort}} API
 
-Eine umfassende Liste der Optionen der {{site.data.keyword.objectstorageshort}}-REST-API mit Beispielen finden Sie in der [vollständigen Referenz zur OpenStack-Swift-API](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}.
+{{site.data.keyword.objectstorageshort}} REST API のオプションおよび例の包括的なリストについては、[OpenStack Swift API Complete Reference](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window} を参照してください。
 
-## {{site.data.keyword.objectstorageshort}} regionsübergreifend verwenden {: #multi-regions}  
+## 複数地域間での {{site.data.keyword.objectstorageshort}} の使用 {: #multi-regions}  
 
-Der {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Service unterstützt die Speicherregionen Dallas und London. Diese Speicherregionen sind unabhängig von der {{site.data.keyword.Bluemix_notm}}-Region, wie zum Beispiel 'US-South' und 'United Kingdom', in der die {{site.data.keyword.objectstorageshort}}-Serviceinstanz erstellt wurde.  Beispiel: Wenn Sie eine {{site.data.keyword.objectstorageshort}}-Instanz in der {{site.data.keyword.Bluemix_notm}}-Region 'US-South' erstellen, haben Sie Lese- und Schreibzugriff auf Daten in der Speicherregion Dallas oder in der Speicherregion London.  
+IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} サービスは、「ダラス」と「ロンドン」のストレージ地域をサポートしています。これらのストレージ地域は、{{site.data.keyword.objectstorageshort}} サービス・インスタンスが作成される {{site.data.keyword.Bluemix_notm}} 地域 (「米国南部」や「英国」など) から独立しています。例えば、米国南部 {{site.data.keyword.Bluemix_notm}} 地域に {{site.data.keyword.objectstorageshort}} インスタンスを作成した場合、「ダラス」と「ロンドン」のどちらのストレージ地域ともデータの読み取り/書き込みが行えます。  
 
-Für die {{site.data.keyword.Bluemix_notm}}-Region 'US-South' ist Dallas die Standardspeicherregion. Für die {{site.data.keyword.Bluemix_notm}}-Region 'United Kingdom' ist London die Standardspeicherregion.  Die {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle startet immer mit der Standardspeicherregion der {{site.data.keyword.Bluemix_notm}}-Region. Wenn Sie die Region wechseln wollen, klicken Sie auf die Dropdown-Liste für die {{site.data.keyword.objectstorageshort}}-Regionen und wählen eine andere Region aus.
+米国南部 {{site.data.keyword.Bluemix_notm}} 地域では、「ダラス」ストレージ地域がデフォルトです。英国 {{site.data.keyword.Bluemix_notm}} 地域では、「ロンドン」ストレージ地域がデフォルトです。{{site.data.keyword.objectstorageshort}} ユーザー・インターフェースは、常に {{site.data.keyword.Bluemix_notm}} 地域のデフォルトのストレージ地域を起動します。地域を切り替えるには、「{{site.data.keyword.objectstorageshort}} 地域」ドロップダウン・リストをクリックして、別の地域を選択します。
 
-**Anmerkung:** Der {{site.data.keyword.objectstorageshort}}-Service unterstützt keine speicherregionsübergreifende Replikation.
+**注:** {{site.data.keyword.objectstorageshort}} サービスは、ストレージ地域間の複製をサポートしません。
 
-### Zugriff auf mehrere Regionen
+### 複数地域アクセス
 
-Für die Verwendung des {{site.data.keyword.objectstorageshort}}-Service müssen Sie sich [bei OpenStack Keystone authentifizieren](#keystone-authentication). Nach der erfolgreichen Authentifizierung werden ein `X-Subject-Token` und die {{site.data.keyword.objectstorageshort}}-Endpunkte in der Antwort zur Verfügung gestellt.
+{{site.data.keyword.objectstorageshort}} サービスを使用するには、[OpenStack Keystone に対する認証](#keystone-authentication)が必要です。正常に認証された後、`X-Subject-Token` および {{site.data.keyword.objectstorageshort}} エンドポイントが応答内で使用可能になります。
 
-Beispiel: Wenn Sie einen Container mit dem Namen `my_container` in der Speicherregion Dallas erstellen wollen, geben Sie wie folgt einen Zugriffspunkt von Dallas im curl-Befehl an:
+例えば、「ダラス」ストレージ地域に `my_container` という名前のコンテナーを作成するには、curl コマンドで「ダラス」アクセス・ポイントを次のように指定します。
 ```
 	# curl -i https://dal.objectstorage.open.softlayer.com/v1/AUTH_3c9c89a2edbb458da74a9e81e215da9e/my_container -X PUT -H "Content-Length: 0" -H "X-Auth-Token: gAAAAABWlw5mwttbb_6G3LnTiGusyoOSEHXMG7oTnDYWN1vBZB6XAxUEhz4ehGkdw6Qm_I9ZFFXr8fwcc2KaEbpWbQoglhAvrYTXbrkn8MvErLdnbcT0XK2t5N7lEZyyKQlsgmQWcrch8VOO_OiSKKToORYR7luI-2TrR_JIVZm-8AAS6hLhk9"
 
@@ -404,7 +393,7 @@ Beispiel: Wenn Sie einen Container mit dem Namen `my_container` in der Speicherr
 	Date: Thu, 14 Jan 2016 03:16:13 GMT
 ```
 
-Wenn Sie einen Container mit dem Namen `my_container` in der Speicherregion London erstellen wollen, geben Sie wie folgt einen Zugriffspunkt von London im curl-Befehl an:
+「ロンドン」ストレージ地域に `my_container` という名前のコンテナーを作成するには、curl コマンドで「ロンドン」アクセス・ポイントを次のように指定します。
 ```
 	# curl -i https://lon.objectstorage.open.softlayer.com/v1/AUTH_3c9c89a2edbb458da74a9e81e215da9e/my_container -X PUT -H "Content-Length: 0" -H "X-Auth-Token: gAAAAABWlw5mwttbb_6G3LnTiGusyoOSEHXMG7oTnDYWN1vBZB6XAxUEhz4ehGkdw6Qm_I9ZFFXr8fwcc2KaEbpWbQoglhAvrYTXbrkn8MvErLdnbcT0XK2t5N7lEZyyKQlsgmQWcrch8VOO_OiSKKToORYR7luI-2TrR_JIVZm-8AAS6hLhk9"
 
@@ -414,33 +403,32 @@ Wenn Sie einen Container mit dem Namen `my_container` in der Speicherregion Lond
 	X-Trans-Id: tx4a640ca81c7240ea8f812-00569712fc
 	Date: Thu, 14 Jan 2016 03:16:13 GMT
 ```
-**Anmerkung:** Das `X-Subject-Token`, das Sie von Keystone empfangen haben, funktioniert speicherregionsübergreifend.
+**注:** Keystone から取得した `X-Subject-Token` は、全ストレージ地域で機能します。
+異なる地域のアクセス・ポイントについての詳細は、[「Object Storage アクセス・ポイント」](#access-points)表を参照してください。
 
-Weitere Informationen zu den Zugriffspunkten für verschiedene Regionen finden Sie in der Tabelle mit den [Object Storage-Zugriffpunkten](#access-points).
 
+## 認証と資格情報の理解 {: #understanding-authentication-credentials}
 
-## Informationen zu Authentifizierung und Berechtigungsnachweisen {: #understanding-authentication-credentials}
+### アプリケーションをバインドせずに {{site.data.keyword.objectstorageshort}} 資格情報を生成
 
-### {{site.data.keyword.objectstorageshort}}-Berechtigungsnachweise ohne Bindung einer Anwendung generieren
+{{site.data.keyword.Bluemix_notm}} アプリケーションの外部で使用する {{site.data.keyword.objectstorageshort}} クラウド資格情報を生成するには、{{site.data.keyword.objectstorageshort}} インスタンス用のサービス・キーを生成する必要があります。新しいキーの生成は、ユーザー・インターフェースのサイドバーから**「サービス資格情報」**を選択するか、Cloud Foundry CLI (バージョン 6.11.3 以降) を使用して行うことができます。{{site.data.keyword.objectstorageshort}} インスタンスのサービス・キーを生成して取得した後、クラウド統合情報を使用して OpenStack SDK または OpenStack Identity API で Keystone トークンを要求したり、Swift アカウントを使用してオブジェクトの管理を開始したりできます。
 
-Zum Generieren von {{site.data.keyword.objectstorageshort}}-Cloudberechtigungsnachweisen für die Verwendung außerhalb einer {{site.data.keyword.Bluemix_notm}}-Anwendung müssen Sie einen Serviceschlüssel für Ihre {{site.data.keyword.objectstorageshort}}-Instanz generieren. Sie können einen neuen Schlüssel generieren, indem Sie **Serviceberechtigungsnachweise** in der Seitenleiste der Benutzerschnittstelle auswählen oder die Befehlszeilenschnittstelle Cloud Foundry CLI (Version 6.11.3 oder höher) verwenden. Nach der Generierung und dem Abruf eines Serviceschlüssels für Ihre {{site.data.keyword.objectstorageshort}}-Instanz können Sie die Informationen zur Cloudintegration verwenden, um ein Keystone-Token mit einem OpenStack-SDK oder der OpenStack-Identity-API anzufordern und anschließend mit der Verwendung des Swift-Kontos zur Objektverwaltung zu beginnen.
-
-Wenn Sie den Schlüssel über die Cloud Foundry CLI erstellen möchten, müssen Sie sich bei dieser Befehlszeilenschnittstelle anmelden und den folgenden Befehl ausführen:
+Cloud Foundry CLI を使用してキーを作成するには、ログインして次のコマンドを実行します。
  ```
-    cf create-service-key <Object Storage-Instanzname> <eindeutiger Name für diesen Schlüssel>
+    cf create-service-key <object_storage_instance_name> <unique_name_for_this_key>
 ```
-Führen Sie den folgenden Befehl aus, um die Serviceberechtigungsnachweise über die Cloud Foundry CLI abzurufen:
+Cloud Foundry CLI からサービス資格情報を取得するには、次のコマンドを実行します。
 ```
-	cf service-key <Object Storage-Instanzname> <eindeutiger Name für diesen Schlüssel>
+	cf service-key <object_storage_instance_name> <unique_name_for_this_key>
 ```
 
-### Cloudprojekte und -benutzer
-Durch die Bereitstellung einer neuen {{site.data.keyword.objectstorageshort}}-Instanz wird in der IBM Public Cloud ein isoliertes Keystone-Projekt erstellt. Wenn Sie eine neue Anwendung an die {{site.data.keyword.objectstorageshort}}-Instanz binden, wird ein neuer Keystone-Benutzer mit Zugriff auf das Projekt erstellt. Wenn Sie die Instanz löschen, werden auch Projekt und Benutzer gelöscht.
+### クラウドのプロジェクトおよびユーザー
+新しい {{site.data.keyword.objectstorageshort}} インスタンスをプロビジョンすると、IBM Public Cloud に独立した Keystone プロジェクトが作成されます。{{site.data.keyword.objectstorageshort}} インスタンスに新しいアプリケーションをバインドすると、プロジェクトへのアクセス権限を持つ新しい Keystone ユーザーが作成されます。インスタンスをプロビジョン解除すると、プロジェクトとユーザーは削除されます。
 
 ### OpenStack Identity (Keystone) v3 {: #keystone-authentication}
-Die Struktur der Berechtigungsnachweise enthält einen vollständigen Satz von Attributen, sodass Sie die Methode für die OpenStack-Tokenanforderung oder das OpenStack-SDK auswählen können, das sich am besten für Ihre Anwendung eignet.
+アプリケーションに最適な OpenStack トークン要求メソッドまたは OpenStack SDK を選択できるように、資格情報構成には全セットの属性が含まれています。
 
-Die empfohlene v3-Tokenanforderung ist eine POST-Anforderung an https://identity.open.softlayer.com/v3/auth/tokens, wie im folgenden curl-Befehl gezeigt:
+推奨される v3 トークン要求は、以下の curl コマンドに示されているように、https://identity.open.softlayer.com/v3/auth/tokens への POST 要求です。
 ```
 	curl -i \
 	  -H "Content-Type: application/json" \
@@ -467,9 +455,8 @@ Die empfohlene v3-Tokenanforderung ist eine POST-Anforderung an https://identity
 	}' \
 	  https://identity.open.softlayer.com/v3/auth/tokens ; echo
 ```
-Verwenden Sie den Wert des Felds `X-Subject-Token` aus dem Antwortheader als `X-Auth-Token`, wenn Sie Anforderungen an den {{site.data.keyword.objectstorageshort}}-Service senden.
-
-Eine Beispielantwort könnte wie folgt aussehen. Die Antwort wird so abgeschnitten, dass nur die für {{site.data.keyword.objectstorageshort}} releventen Informationen angezeigt werden.
+応答ヘッダーの `X-Subject-Token` フィールドの値を、{{site.data.keyword.objectstorageshort}} サービスへの要求を行うときに `X-Auth-Token` フィールドとして使用します。
+応答の例を以下に示します。この応答は、{{site.data.keyword.objectstorageshort}} 関連の情報のみを示すために切り取られています。
 
 	HTTP/1.1 201 Created
 	Date: Mon, 29 Feb 2016 21:03:41 GMT
@@ -490,8 +477,8 @@ Eine Beispielantwort könnte wie folgt aussehen. Die Antwort wird so abgeschnitt
 	    ],
 	    "catalog" : [
 	      {
-	        "endpoints": [
-			{
+	        "endpoints" : [
+	          {
 	            "id" : "20cbfa6ff22b4a67a1484d30235bfc80",
 	            "region" : "london",
 	            "region_id" : "london",
@@ -570,95 +557,95 @@ Eine Beispielantwort könnte wie folgt aussehen. Die Antwort wird so abgeschnitt
 	}
 ```
 
-Die {{site.data.keyword.objectstorageshort}}-URL ist im Servicekatalog zu finden. Der Servicekatalog ist im Antworthauptteil der Tokenanforderung enthalten. Die Antwort ist ein vollständiger Katalog der OpenStack-Services, die verfügbar sind. Wählen Sie den Endpunkt im Servicekatalog mit dem Typ `object-store` und mit der Region aus, die dem Feld für die Region in den Berechtigungsnachweisen entspricht.
+{{site.data.keyword.objectstorageshort}} URL は、サービス・カタログ内にあります。サービス・カタログは、トークン要求の応答本体に含まれています。応答は、使用可能な OpenStack サービスの完全なカタログです。サービス・カタログから、タイプが `object-store` で、地域が、資格情報の地域フィールドに一致しているエンドポイントを選択します。
 
-**Anmerkung:** Verwenden Sie die allgemein zugängliche Schnittstelle (`publicURL`). Auf die interne Schnittstelle (`internalURL`) kann von {{site.data.keyword.Bluemix_notm}} aus nicht zugegriffen werden.
-
-
-
-## Dateien durch differenzierte Zugriffssteuerung schützen {: #fine-grained-access-control}
-
-Differenzierte Zugriffssteuerungslisten (ACLs) sind für den Schutz von Dateien hilfreich, wenn mehrere Benutzer vorhanden sind, die Dateien in demselben Container speichern.
-
-Anmerkung: Die in diesem Dokument erläuterten Prozeduren erfordern die Swift-CLI. Weitere Informationen finden Sie unter [{{site.data.keyword.objectstorageshort}} mit der Swift-CLI verwenden](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli).
+**注:** パブリック・インターフェース (`publicURL`) を使用してください。内部インターフェース (`internalURL`) は、{{site.data.keyword.Bluemix_notm}} からアクセスできません。
 
 
-### Zugriffstypen {: #access-types}
 
-Der Zugriff auf den Service wird durch Benutzerrollen und Zugriffssteuerungslisten für Container gesteuert. {{site.data.keyword.objectstorageshort}}-Benutzer können Benutzer mit Administratorberechtigungen oder Benutzer ohne Administratorberechtigungen sein. Zugriffssteuerungslisten werden durch Administratorbenutzer auf der Containerebene aktiviert und sind für die Serviceinstanz, das Speicherkonto oder auf Projektebene nicht verfügbar.
+## 微細化されたアクセス制御によるファイルの保護 {: #fine-grained-access-control}
+
+微細化されたアクセス制御リストは、複数のユーザーが同じコンテナー内に複数のファイルを保管している場合に、ファイルを保護するのに役立ちます。
+
+注: 本書に概説されている手順を実行するには、Swift CLI が必要です。詳細については、[using {{site.data.keyword.objectstorageshort}} with the Swift CLI](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli) を参照してください。
+
+
+### アクセスのタイプ {: #access-types}
+
+サービスへのアクセスは、ユーザーの役割とコンテナーのアクセス制御リストによって制御されます。{{site.data.keyword.objectstorageshort}} のユーザーは、管理ユーザーまたは非管理ユーザーのいずれかです。アクセス制御リストは、管理ユーザーによってコンテナー・レベルで有効にされ、サービス・インスタンス、ストレージ・アカウント、およびプロジェクト・レベルでは使用できません。
 
 <table>
   <tr>
-    <th> Benutzer mit Administratorberechtigungen (admin) </th>
-    <th> Benutzer ohne Administratorberechtigungen (member) </th>
+    <th> 管理ユーザー (管理者) </th>
+    <th> 非管理ユーザー (メンバー) </th>
   </tr>
   <tr>
-    <td> Zugriffssteuerung verwalten </td>
-    <td> Standardmäßig kein Zugriff auf den Service oder seine Container </td>
+    <td> アクセス制御を管理 </td>
+    <td> デフォルトでは、サービスおよびコンテナーに対するアクセス権限がない </td>
   </tr>
   <tr>
-    <td> Container erstellen und löschen </td>
-    <td> Aktionen abhängig von den Lese-/Schreibzugriffssteuerungslisten der Container </td>
+    <td> コンテナーの作成および削除が可能 </td>
+    <td> コンテナーの読み取り/書き込み ACL に基づいてアクションを実行可能 </td>
   </tr>
   <tr>
-    <td> Containerinhalt lesen und schreiben </td>
-    <td> Durch den Administrator festgelegte Aktionen </td>
+    <td> コンテナーの読み取りおよび書き込みが可能 </td>
+    <td> 管理者の決定に従ってアクションを実行可能 </td>
   </tr>
 </table>
 
-*Tabelle 1: Definierte Benutzerrollen*
+*表 1: 定義済みのユーザー役割*
 
-Sie können {{site.data.keyword.objectstorageshort}}-Benutzer über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle, die Cloud Foundry-API oder die Cloud Foundry CLI verwalten.
+{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェース、Cloud Foundry API、または Cloud Foundry CLI を使用して、{{site.data.keyword.objectstorageshort}} ユーザーを管理できます。
 
 
 
-### {{site.data.keyword.objectstorageshort}}-Serviceberechtigungsnachweise generieren {: #generating}
+### {{site.data.keyword.objectstorageshort}} サービス資格情報の生成 {: #generating}
 
-Über die neue {{site.data.keyword.Bluemix_notm}}-Konsole können Sie neue Serviceberechtigungsnachweise für {{site.data.keyword.objectstorageshort}}-Benutzer generieren.  Zum Anzeigen der neuen Konsole klicken Sie auf die Option **Neues {{site.data.keyword.Bluemix_notm}} testen**.
+新規 {{site.data.keyword.Bluemix_notm}} コンソールから、{{site.data.keyword.objectstorageshort}} ユーザーの新しいサービス資格情報を生成できます。新規コンソールを表示するには、**「Try the new {{site.data.keyword.Bluemix_notm}}」**をクリックします。
 
-1.  Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} als Benutzer mit einer Entwicklerrolle an. Sie müssen sich in dem Bereich der Serviceinstanz befinden, die Sie verwalten wollen.
-2. Klicken Sie auf die Registerkarte **Serviceberechtigungsnachweise**.
-3. Klicken Sie auf **Neuer Berechtigungsnachweis**.
-4. Geben Sie einen Namen für den Berechtigungsnachweis an.
-5. Geben Sie in das Textfeld **Lineare Konfigurationsparameter hinzufügen** die Informationen zu dem Berechtigungsnachweis für die Rolle ein, die Sie erstellen wollen. Die Informationen müssen als JSON-Nutzdaten formatiert sein.
-  - Zum Erstellen eines Benutzers mit Administratorberechtigungen: `{"role":"admin"}`
-  - Zum Erstellen eines Benutzers ohne Administratorberechtigungen: `{"role":"member"}`
-5. Klicken Sie auf **Hinzufügen**.
+1.  開発者の役割を持つユーザーとして、{{site.data.keyword.Bluemix_notm}} にログインします。ユーザーは管理対象のサービス・インスタンスのスペース内にいる必要があります。
+2. **「サービス資格情報」**タブをクリックします。
+3. **「新しい資格情報」**をクリックします。
+4. 資格情報の名前を指定します。
+5. **「インライン構成パラメーターの追加」**テキスト・フィールドに、作成する役割の資格情報を入力します。この情報は、JSON ペイロードとしてフォーマット設定する必要があります。
+  - 管理ユーザーを作成する場合: `{"role":"admin"}`
+  - 非管理ユーザーを作成する場合: `{"role":"member"}`
+5. **「追加」**をクリックします。
 
-Zum Generieren von Serviceberechtigungsnachweisen durch cURL-Befehle oder über die Swift-CLI können Sie die folgenden Schritte ausführen.
+cURL コマンドまたは Swift CLI を使用してサービス資格情報を生成するには、以下の手順を使用します。
 
-1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} als Benutzer mit einer Entwicklerrolle an. Sie müssen sich in dem Bereich der Serviceinstanz befinden, die Sie verwalten wollen.
+1. 開発者の役割を持つユーザーとして、{{site.data.keyword.Bluemix_notm}} にログインします。ユーザーは管理対象のサービス・インスタンスのスペース内にいる必要があります。
 
   ```
-  cf login -a api.ng.bluemix.net -u <Benutzer-ID> -p <Kennwort> -o <Organisation> -s <Bereich>
+  cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
   ```
 
-2. Generieren Sie Serviceberechtigungsnachweise. `Serviceschlüsselname` wird dabei zum Namen Ihres Berechtigungsnachweises. Sie können entweder den Cloud Foundry-Befehl oder den cURL-Befehl verwenden.
+2. サービス資格情報を生成します。`service-key-name` は、資格情報の名前です。Cloud Foundry コマンドまたは cURL コマンドのいずれかを使用できます。
 
-  Cloud Foundry-Befehl:
+  Cloud Foundry コマンド:
   ```
-  cf create-service-key "<Name der Object Storage-Serviceinstanz>" <Serviceschlüsselname> -c '{"role":"<Object Storage-Rolle>"}'
+  cf create-service-key "<object_storage_service_instance_name>" <service-key-name> -c '{"role":"<object_storage_role>"}'
   ```
 
-  Beispiel:
+  例:
 
   ```
   cf create-service-key "Object-Storage-AclTest" GeorgeKey -c '{"role":"member"}'
 
   ```
-  cURL-Befehl:
+  cURL コマンド:
   ```
-  curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<Serviceinstanz-GUID>",   "name": "<Benutzername>", "role": "member"}' -X POST -H "Authorization: <Trägertoken>" -H "Content-Type: " -H "Cookie: "
+  curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name": "<user_name>", "role": "member"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: " -H "Cookie: "
   ```
 
-3. Validieren Sie die Berechtigungsnachweise für den von Ihnen erstellten Serviceschlüssel.
+3. 作成したサービス・キーの資格情報を検証します。
 
-  Cloud Foundry-Befehl:
+  Cloud Foundry コマンド:
   ```
-  cf service-key <Serviceschlüsselname> <Member-Name>
+  cf service-key <service_key_name> <member_name>
   ```
-  Beispiel:
-  Erstellen eines Member-Serviceschlüssels für eine Serviceinstanz mit dem Namen Object-Storage-Acl-Test.
+  例:
+  Object-Storage-Acl-Test という名前のサービス・インスタンスのメンバー・サービス・キーを作成します。
   ```
   {
     "auth_url": "https://identity.open.softlayer.com",
@@ -673,58 +660,58 @@ Zum Generieren von Serviceberechtigungsnachweisen durch cURL-Befehle oder über 
     "username": "member_2afbeea1d58b1867f46c699553d1e4513e7df83a"
   }
   ```
-  cURL-Befehl:
+  cURL コマンド:
   ```
-  curl "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <Trägertoken>" -H "Cookie: "
+  curl "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <bearer_token>" -H "Cookie: "
   ```
 
 
 
-### Zugriff zuweisen {: #assigning-access}  
+### アクセス権限の割り当て {: #assigning-access}  
 
-Nur ein {{site.data.keyword.objectstorageshort}}-Benutzer mit Administratorrolle kann einem anderen Benutzer Lese- oder Schreibzugriff auf einen Container erteilen.
+管理者の役割を持つ {{site.data.keyword.objectstorageshort}} ユーザーのみが、別のユーザーに対してコンテナーの読み取り権限または書き込み権限を付与することができます。
 
-Zum Erteilen des Lesezugriffs über die CLI verwenden Sie die Option `--read-acl` oder die Option `-r`.
+CLI で読み取り権限を付与するには、`--read-acl` オプションまたは `-r` オプションを使用します。
 
-1. Authentifizieren Sie Ihre Berechtigungsnachweise mit den Informationen in den Serviceberechtigungsnachweisen, die Sie erstellt haben.  Sie empfangen Ihre Object Storage-URL und Ihr Authentifizierungstoken als Ausgabe.
+1. 作成したサービス資格情報内の情報を使用して、資格情報を認証します。出力として、Object Storage URL と認証トークンを受け取ります。
 
-  Swift-Befehl:
+  Swift コマンド:
   ```
-  export OS_USER_ID=<Benutzer-ID>
-  export OS_PASSWORD=<Kennwort>
-  export OS_TENANT_ID=<Projekt-ID>
+  export OS_USER_ID=<user_id>
+  export OS_PASSWORD=<password>
+  export OS_TENANT_ID=<project_id>
   export OS_AUTH_URL=https://identity.open.softlayer.com/v3
-  export OS_REGION_NAME=<Region>
+  export OS_REGION_NAME=<region>
   export OS_IDENTITY_API_VERSION=3
   export OS_AUTH_VERSION=3
 
   swift auth
   ```
-  cURL-Befehl:
+  cURL コマンド:
   ```
-  curl -i -H "X-Auth-User: <Benutzer-ID>" -H "X-Auth-Key: <Kennwort>" <Authentifizierungs-URL>
+  curl -i -H "X-Auth-User: <user_id>" -H "X-Auth-Key: <password>" <auth_url>
   ```
-3. Führen Sie den folgenden Befehl aus, um Lesezugriff zu erteilen:
+3. 以下のコマンドを実行して、読み取り権限を付与します。
 
-  Swift-Befehl:
+  Swift コマンド:
   ```
-  swift post <Containername> --read-acl "<Benutzer-ID>:<Projekt-ID>"
+  swift post <container_name> --read-acl "<user_id>:<project_id>"
   ```
-  cURL-Befehl:
+  cURL コマンド:
   ```
-  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: <Tenant-ID>:<Projekt-ID>" -H "X-Auth-Token: <OS_AUTH_TOKEN>"
+  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: <tenant_id>:<project_id>" -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
-4. Überprüfen Sie den Wert für die Lesezugriffssteuerungsliste (Read ACL).
+4. 読み取り ACL 値を検証します。
 
-  Swift-Befehl:
+  Swift コマンド:
   ```
-  swift stat <Containername>
+  swift stat <container_name>
   ```
-  cURL-Befehl:
+  cURL コマンド:
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token:<OS_AUTH_TOKEN>"
   ```
-  Beispielausgabe:
+  出力例:
   ```
   HTTP/1.1 204 No Content
   Content-Length: 0
@@ -739,151 +726,151 @@ Zum Erteilen des Lesezugriffs über die CLI verwenden Sie die Option `--read-acl
   Date: Tue, 28 Jun 2016 20:57:58 GMT
   ```
 
-Sie können verschiedene ACL-Kombinationen für Lesezugriff angeben.
+読み取り ACL の組み合わせを操作できます。
 
 <table>
   <tr>
-    <th> Berechtigung </th>
-    <th> Optionen für Lesezugriffssteuerung (Read ACL) </th>
+    <th> 許可 </th>
+    <th> 読み取り ACL オプション </th>
   </tr>
   <tr>
-    <td> Lesen für alle Referrer unabhängig von der Kontozuordnung </td>
+    <td> アカウントの加入に関係なくすべての参照者に対する読み取り</td>
     <td> `.r,*` </td>
   </tr>
   <tr>
-    <td> Lesen und Auflisten für alle Referrer und Listen </td>
+    <td> すべての参照者に対する読み取りとリストおよびリスト作成 </td>
     <td> `.r:*,.rlistings` </td>
   </tr>
   <tr>
-    <td> Lesen und Auflisten für angegebenen Benutzer in bestimmtem Projekt </td>
-    <td> `< Projekt-ID>:< Benutzer-ID>` </td>
+    <td> 特定のプロジェクトの指定されたユーザーに対する読み取りとリスト </td>
+    <td> `< project_id>:< user_id>` </td>
   </tr>
   <tr>
-    <td> Lesen und Auflisten für angegebenen Benutzer in jedem Projekt </td>
-    <td> `<*>:< Benutzer-ID>` </td>
+    <td> すべてのプロジェクトの指定されたユーザーに対する読み取りとリスト </td>
+    <td> `<*>:< user_id>` </td>
   </tr>
   <tr>
-    <td> Lesen und Auflisten für jeden Benutzer in angegebenem Projekt </td>
-    <td> `< Projekt-ID>:<*>` </td>
+    <td> 指定されたプロジェクトのすべてのユーザーに対する読み取りとリスト</td>
+    <td> `< project_id>:<*>` </td>
   </tr>
   <tr>
-    <td> Lesen und Auflisten für jeden Benutzer in jedem Projekt  </td>
+    <td> すべてのプロジェクトのすべてのユーザーに対する読み取りとリスト</td>
     <td> `<*>:<*>` </td>
   </tr>
 </table>
 
-*Tabelle 2: Lesezugriffsberechtigungen nach Option*
+*表 2: オプション別の読み取りアクセス許可*
 
-Anmerkung: Trennen Sie Zugriffssteuerungslisten durch ein Komma (,). Beispiel: `-read-acl projekt-id:benutzer-id1, projekt-id2:benutzer-id2`.
+注: アクセス制御リストを区切るには、コンマ (,) を使用します。例: `-read-acl project id:user_id1, project_id2:user_id2`。
 
 
-Zum Erteilen von Schreibzugriff verwenden Sie die Option `--write-acl` oder `-w` in der Swift-CLI.
+書き込み権限を付与するには、Swift CLI で `--write-acl` オプションまたは `-w` オプションを使用します。
 
-1. Authentifizieren Sie Ihre Berechtigungsnachweise mit den Informationen in den Serviceberechtigungsnachweisen, die Sie erstellt haben.  Sie empfangen Ihre Object Storage-URL und Ihr Authentifizierungstoken als Ausgabe.
+1. 作成したサービス資格情報内の情報を使用して、資格情報を認証します。出力として、Object Storage URL と認証トークンを受け取ります。
 
-  Swift-Befehl:
+  Swift コマンド:
   ```
-  export OS_USER_ID="<Benutzer-ID>"
-  export OS_PASSWORD="<Kennwort>"
-  export OS_TENANT_ID=<Tenant-ID>
+  export OS_USER_ID="<user_id>"
+  export OS_PASSWORD="<password>"
+  export OS_TENANT_ID=<tenant_id>
   export OS_AUTH_URL=https://identity.open.softlayer.com/v3
-  export OS_REGION_NAME=<Region>
+  export OS_REGION_NAME=<region>
   export OS_IDENTITY_API_VERSION=3
   export OS_AUTH_VERSION=3
 
   swift auth
   ```
-  cURL-Befehl:
+  cURL コマンド:
   ```
-  curl -i -H "X-Auth-User:<Benutzer-ID>" -H "X-Auth-Key:<Kennwort>" https://identity.open.softlayer.com/v3
+  curl -i -H "X-Auth-User:< user_id>" -H "X-Auth-Key:< password>" https://identity.open.softlayer.com/v3
   ```
-2. Führen Sie den folgenden Befehl aus, um Schreibzugriff zu erteilen:
+2. 以下のコマンドを実行して、書き込み権限を付与します。
 
-  Swift-Befehl:
+  Swift コマンド:
   ```
-  swift post <Containername> --write-acl "<Benutzer-ID>:<Projekt-ID>"
+  swift post <container_name> --write-acl "<user_id>:<project_id>"
   ```
-  cURL-Befehl:
+  cURL コマンド:
   ```
-  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: <Benutzer-ID>: <Projekt-ID>" -H "X-Auth-Token:<OS_AUTH_TOKEN>"
+  curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: <user_id>: <project_id>" -H "X-Auth-Token:<OS_AUTH_TOKEN>"
 
   ```
-3. Überprüfen Sie den Wert für die Schreibzugriffssteuerungsliste (Write ACL).
+3. 書き込み ACL 値を検証します。
 
-  Swift-Befehl:
+  Swift コマンド:
   ```
-  swift stat <Containername>
+  swift stat <container_name>
   ```
-  cURL-Befehl:
+  cURL コマンド:
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token:<OS_AUTH_TOKEN>"
   ```
 
 
-Sie können verschiedene ACL-Kombinationen für Schreibzugriff angeben.
+書き込み ACL の組み合わせを操作できます。
 
 <table>
   <tr>
-    <th> Berechtigung </th>
-    <th> Optionen für Schreibzugriffssteuerung (Write ACL) </th>
+    <th> 許可 </th>
+    <th> 書き込み ACL オプション </th>
   </tr>
   <tr>
-    <td> Schreiben für angegebenen Benutzer in bestimmtem Projekt </td>
-    <td> `<Projekt-ID>:<Benutzer-ID>` </td>
+    <td> 特定のプロジェクトの指定されたユーザーに対する書き込み</td>
+    <td> `<project_id>:<user_id>` </td>
   </tr>
   <tr>
-    <td> Schreiben für angegebenen Benutzer in jedem Projekt </td>  
-    <td> `*:<Benutzer-ID>` </td>
+    <td> すべてのプロジェクトの指定されたユーザーに対する書き込み</td>  
+    <td> `*:<user_id>` </td>
   </tr>
   <tr>
-    <td> Schreiben für jeden Benutzer in angegebenem Projekt </td>
-    <td> `<Projekt-ID>:<*>` </td>
+    <td> 指定されたプロジェクトのすべてのユーザーに対する書き込み</td>
+    <td> `<project_id>:<*>` </td>
   </tr>
   <tr>
-    <td> Schreiben für jeden Benutzer in jedem Projekt </td>
+    <td> すべてのプロジェクトのすべてのユーザーに対する書き込み</td>
     <td> `<*>:<*>` </td>
   </tr>
 </table>
 
-*Tabelle 3: Schreibzugriffsberechtigungen nach Option*
+*表 3: オプション別の書き込みアクセス許可*
 
-Anmerkung: Trennen Sie Zugriffssteuerungslisten durch ein Komma (,). Beispiel: `-write-acl projekt-id:benutzer-id1, projekt-id2:benutzer-id2`.
-
-
+注: アクセス制御リストを区切るには、コンマ (,) を使用します。例: `-write-acl project id:user_id1, project_id2:user_id2`。
 
 
-### Zugriff entfernen {: #removing-access}
 
-Gehen Sie wie folgt vor, um Lesezugriffssteuerungslisten von einem Container zu entfernen:
 
-  Swift-Befehl:
+### アクセス権限の削除 {: #removing-access}
+
+コンテナーから読み取り ACL を削除するには、以下のようにします。
+
+  Swift コマンド:
   ```
-  swift post <Containername> --read-acl “”
+  swift post <container_name> --read-acl “”
   ```
-  cURL-Befehl:
+  cURL コマンド:
   ```
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
 
-Gehen Sie wie folgt vor, um Schreibzugriffssteuerungslisten von einem Container zu entfernen:
+コンテナーから書き込み ACL を削除するには、以下のようにします。
 
-  Swift-Befehl:
+  Swift コマンド:
   ```
-  swift post <Containername> --write-acl “”
+  swift post <container_name> --write-acl “”
   ```
-  cURL-Befehl:
+  cURL コマンド:
   ```
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
 
-Überprüfen Sie, ob eine Zugriffssteuerungsliste (ACL) entfernt wurde:
+ACL が削除されたことを確認するには、以下のようにします。
 
-  Swift-Befehl:
+  Swift コマンド:
   ```
-  swift stat <Containername>
+  swift stat <container_name>
   ```
 
-  Beispielausgabe:
+  出力例:
   ```
          Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
        Container: Test
@@ -900,7 +887,7 @@ X-Storage-Policy: standard
     Content-Type: text/plain; charset=utf-8
 
   ```
-  cURL-Befehl:
+  cURL コマンド:
   ```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
@@ -908,14 +895,16 @@ X-Storage-Policy: standard
 
 
 
-## Bindung und Bereitstellung von {{site.data.keyword.objectstorageshort}} aufheben {: #deprovisioning-object-storage}
+## {{site.data.keyword.objectstorageshort}} のアンバインドおよびプロビジョン解除 {: #deprovisioning-object-storage}
 
-### Vorgehensweise zum Löschen Ihres {{site.data.keyword.objectstorageshort}}-Service
-1.	Wählen Sie Ihren Service im {{site.data.keyword.Bluemix_notm}}-Dashboard aus.  
-2.	Klicken Sie auf das Zahnradsymbol und wählen Sie **Service löschen** aus.
+### {{site.data.keyword.objectstorageshort}} サービスのプロビジョン解除方法
+1.	{{site.data.keyword.Bluemix_notm}} ダッシュボードからサービスを選択します。  
+2.	歯車アイコンをクリックして、**「サービスの削除」**を選択します。
 
-**Achtung:** Wenn Sie eine IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Serviceinstanz löschen, werden das Cloudprojekt und das Swift-Konto gelöscht. Alle Container und Objekte in der gelöschten Instanz werden aus Swift gelöscht und können nicht wiederhergestellt werden.
+**注意:**
+{{site.data.keyword.objectstorageshort}} for
+{{site.data.keyword.Bluemix_notm}} サービス・インスタンスをプロビジョン解除すると、クラウド・プロジェクトおよび Swift アカウントが削除されます。プロビジョン解除されたインスタンス内のすべてのコンテナーおよびオブジェクトが Swift から削除され、復元できません。
 
-### Bindung für eine Anwendung aufheben oder einen Serviceschlüssel löschen
+### アプリケーションのアンバインドまたはサービス・キーの削除
 
-Wenn Sie die Bindung einer Anwendung an die {{site.data.keyword.objectstorageshort}}-Instanz aufheben oder den Serviceschlüssel löschen, werden die Berechtigungsnachweise gelöscht. Das {{site.data.keyword.objectstorageshort}}-Konto wird erst gelöscht, wenn die Bereitstellung der {{site.data.keyword.objectstorageshort}}-Instanz aufgehoben wird. Sie können neue Cloudberechtigungsnachweise generieren, indem Sie einen [neuen Serviceschlüssel binden oder erstellen](#bind-object-storage-to-application).
+{{site.data.keyword.objectstorageshort}} インスタンスからアプリケーションをアンバインドするか、サービス・キーを削除すると、資格情報が削除されます。{{site.data.keyword.objectstorageshort}} アカウントは、{{site.data.keyword.objectstorageshort}} インスタンスがプロビジョン解除されるまで削除されません。[サービス・キーを再バインドまたは作成](#bind-object-storage-to-application)することによって、新しいクラウド資格情報を生成できます。

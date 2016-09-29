@@ -7,19 +7,19 @@ copyright:
 
 {:new_window: target="_blank"}
 
-# Informationen zu {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
+# Informazioni su {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Letzte Aktualisierung: 29. August 2016*
+*Ultimo aggiornamento: 29 agosto 2016*
 {: .last-updated}
 
 
-IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} verwendet OpenStack Identity (Keystone) zur Authentifizierung und ist für Aufrufe der API von OpenStack Object Storage (Swift) V1 direkt zugänglich. IBM {{site.data.keyword.objectstorageshort}} kann an eine {{site.data.keyword.Bluemix_notm}}-Anwendung gebunden werden oder es kann von außerhalb einer {{site.data.keyword.Bluemix_notm}}-Anwendung darauf zugegriffen werden. 
+IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} utilizza OpenStack Identity (Keystone) per l'autenticazione ed è possibile accedervi direttamente utilizzando le chiamate API OpenStack Object Storage (Swift) v1. È possibile eseguire il bind di IBM {{site.data.keyword.objectstorageshort}} a un'applicazione {{site.data.keyword.Bluemix_notm}} oppure è possibile accedere a esso dall'esterno di un'applicazione {{site.data.keyword.Bluemix_notm}}. 
 
-Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf der [OpenStack-Dokumentationssite](http://docs.openstack.org){: new_window} verfügbar.
+Per ulteriori informazioni sull'utilizzo di OpenStack Swift e Keystone, consulta il [sito della documentazione di OpenStack](http://docs.openstack.org){: new_window}.
 
-Das {{site.data.keyword.objectstorageshort}}-Architekturdiagramm sieht wie folgt aus:
+Il diagramma dell'architettura {{site.data.keyword.objectstorageshort}} è il seguente:
 
 ![{{site.data.keyword.objectstorageshort architecture diagram }}](images/ObjectStorageArchitectureDiagram.png)
 
-*Abbildung 1. {{site.data.keyword.objectstorageshort}}-Architekturdiagramm*
+*Figura 1. Diagramma dell'architettura {{site.data.keyword.objectstorageshort}}*
 

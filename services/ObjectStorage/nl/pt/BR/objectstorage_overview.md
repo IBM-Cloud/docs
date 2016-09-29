@@ -7,19 +7,19 @@ copyright:
 
 {:new_window: target="_blank"}
 
-# Informationen zu {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
+# Sobre o {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Letzte Aktualisierung: 29. August 2016*
+*Última atualização: 29 de agosto de 2016*
 {: .last-updated}
 
 
-IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} verwendet OpenStack Identity (Keystone) zur Authentifizierung und ist für Aufrufe der API von OpenStack Object Storage (Swift) V1 direkt zugänglich. IBM {{site.data.keyword.objectstorageshort}} kann an eine {{site.data.keyword.Bluemix_notm}}-Anwendung gebunden werden oder es kann von außerhalb einer {{site.data.keyword.Bluemix_notm}}-Anwendung darauf zugegriffen werden. 
+O IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} usa o OpenStack Identity (Keystone) para autenticação e pode ser acessado diretamente usando chamadas API v1 do OpenStack Object Storage (Swift). O IBM {{site.data.keyword.objectstorageshort}} pode estar ligado a um aplicativo {{site.data.keyword.Bluemix_notm}} ou ser acessado de fora de um aplicativo {{site.data.keyword.Bluemix_notm}}. 
 
-Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf der [OpenStack-Dokumentationssite](http://docs.openstack.org){: new_window} verfügbar.
+Para obter mais informações sobre como usar o OpenStack Swift e o Keystone, visualize o [site de documentação do OpenStack](http://docs.openstack.org){: new_window}.
 
-Das {{site.data.keyword.objectstorageshort}}-Architekturdiagramm sieht wie folgt aus:
+O diagrama de arquitetura do {{site.data.keyword.objectstorageshort}} é o seguinte:
 
 ![{{site.data.keyword.objectstorageshort architecture diagram }}](images/ObjectStorageArchitectureDiagram.png)
 
-*Abbildung 1. {{site.data.keyword.objectstorageshort}}-Architekturdiagramm*
+*Figura 1. Diagrama de arquitetura do {{site.data.keyword.objectstorageshort}}*
 

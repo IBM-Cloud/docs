@@ -7,20 +7,20 @@ copyright:
 
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} - Fehlerbehebung
+# {{site.data.keyword.objectstorageshort}} のトラブルシューティング
 {: #troubleshooting}
 
-*Letzte Aktualisierung: 17. August 2016*
+*最終更新日: 2016 年 8 月 17 日*
 {: .last-updated}
 
-Im Folgenden finden Sie die Antworten auf häufige Fragen zur Fehlerbehebung bei der Verwendung von {{site.data.keyword.objectstoragefull}}.
+{{site.data.keyword.objectstoragefull}} の使用時のトラブルシューティングに関する一般的な質問について、以下に回答を示します。
 
-## Nicht erkanntes Token-Content-Pack bei der Verwendung von openstack4J mit Liberty-Profil zurückgegeben
+## Liberty プロファイルで openstack4J を使用しているときに、認識されないトークン・コンテンツ・パックが返された
 {: #unrecognized_token}
 
-### Symptom
+### 症状
 
-Bei der Verwendung von openstack4j mit dem Liberty-Profil kann es zu folgendem Stack-Trace kommen:
+Liberty プロファイルで openstack4j を使用しているときに、以下のスタック・トレースが発生した可能性があります。
 
     Exception thrown by application class 'org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity:124'
     org.openstack4j.api.exceptions.ClientResponseException: Unrecognized token 'contentpack': was expecting ('true', 'false' or 'null') at [Source: contentpack ; line: 1, column: 12]
@@ -36,26 +36,26 @@ Bei der Verwendung von openstack4j mit dem Liberty-Profil kann es zu folgendem S
     at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
     at java.lang.reflect.Method.invoke(Unknown Source)
 
-### Lösung
+### 解決策
 
-Die Ursache des Problems ist ein Klassenladeproblem, bei dem die Bibliothek 'openstack4j' einige derselben Pakete enthält, die im Liberty-Profil bereitgestellt werden.  So verwendet OpenStack4j beispielsweise JERSEY; dies kann zu Konflikten mit den Wink-Bibliotheken führen.
+この問題は、クラス・ロードに原因があります。この場合、openstack4j ライブラリーに、Liberty プロファイルで提供されるものと同じパッケージがいくつか含まれています。例えば、OpenStack4j では JERSEY を使用しますが、これは Wink ライブラリーと衝突する可能性があります。
 
-Führen Sie die folgenden Schritte aus, um das Problem zu beheben:
+この問題を解決するには、以下の手順で行います。
 
-1. Umgekehrtes Laden von Klassen nutzen (parentLast).
-2. jaxrs aus aktivierten Features ausschließen.
+1. 逆方向のクラス・ロード (parentLast) を使用します。
+2. 有効にされたフィーチャーから jaxr を除外します。
 
-## Hilfe und Unterstützung für {{site.data.keyword.objectstorageshort}} erhalten
+## {{site.data.keyword.objectstorageshort}} に関するヘルプおよびサポートの入手
 {: #gettinghelp}
 
-Hilfe zu Problemen oder Fragen bei Verwendung von {{site.data.keyword.objectstoragefull}} finden Sie, indem Sie in einem Forum nach Informationen suchen oder dort Fragen stellen. Sie haben außerdem die Möglichkeit, ein Support-Ticket zu öffnen.
+{{site.data.keyword.objectstoragefull}} の使用時に問題や疑問が生じた場合は、フォーラムを通じて情報を検索したり、質問をしたりすることにより、支援を得ることができます。サポート・チケットをオープンすることもできます。
 
-Wenn Sie in Foren eine Frage stellen, versehen Sie Ihre Frage mit einem Tag, sodass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungsteams registriert wird.
+フォーラムを使用して質問を行う場合は、{{site.data.keyword.Bluemix_notm}} 開発チームの目にとまるように、質問にタグを付けてください。
 
-* Wenn Sie technische Fragen zu {{site.data.keyword.objectstorageshort}} haben, stellen Sie Ihre Frage auf [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} und versehen Sie sie mit den Tags "ibm-bluemix" und "object-storage".
+* {{site.data.keyword.objectstorageshort}} に関する技術的な質問がある場合は、[Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} に質問を投稿し、質問に「ibm-bluemix」と「object-storage」のタグを付けてください。
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Bei Fragen zum Service sowie zum Abruf von Einführungsanweisungen wenden Sie sich an das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}. Versehen Sie Ihre Anfrage mit den Tags "object-storage" und "bluemix".
+* サービスと使用開始の手順に関する質問の場合は、[IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window} フォーラムを使用してください。「object-storage」と「bluemix」のタグを含めてください。
 
-Unter [Hilfe anfordern](https://console.ng.bluemix.net/docs/support/index.html#getting-help) finden Sie weitere Informationen zur Nutzung der Foren.
+フォーラムの使用について詳しくは、[「ヘルプの取得」](https://console.ng.bluemix.net/docs/support/index.html#getting-help)を参照してください。
 
-Informationen zum Öffnen eines IBM Support-Tickets oder zu den Supportebenen und Ticket-Prioritätsstufen finden Sie unter [Support kontaktieren](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+IBM サポート・チケットのオープン、またはサポート・レベルとチケットの重大度に関する情報は、[「サポートへのお問い合わせ」](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)を参照してください。
