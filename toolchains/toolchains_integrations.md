@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-Last updated: 13 September 2016
+Last updated: 29 September 2016
 {: .last-updated}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
@@ -21,22 +21,22 @@ You can configure tool integrations that support development, deployment, and op
 
 **Important**: On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
 
-The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
+The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated, the tool integrations that are available to you depend on how {{site.data.keyword.jazzhub_title}} was set up on your specific environment.
 
 *Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated*
 
-|Tool integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated|
+|Tool integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated (environment dependent)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.deliverypipeline}} 		|Yes	   	|Yes  		|
 |{{site.data.keyword.DRA_short}} 		|Yes		|No			|
 |Eclipse Orion {{site.data.keyword.webide}}		|Yes		|Yes			|
-|GitHub		|Yes		|No		|
+|GitHub		|Yes		|Yes		|
 |Dedicated GitHub Enterprise			|No		|Yes		|
-|PagerDuty			|Yes		|No		|
+|PagerDuty			|Yes		|Yes		|
 |Sauce Labs		|Yes		|No		|
-|Slack			|Yes		|No		|
+|Slack			|Yes		|Yes		|
 
-**Tip**: If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. 
+**Tip**: If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}. 
 
 
 ## Configuring the delivery pipeline
@@ -144,7 +144,7 @@ Configure GitHub to manage your source code on the cloud:
 
 1. If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
- a. In the Configurable Integrations section, click **GitHub**. If you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+ a. In the Configurable Integrations section, click **GitHub**. If you are creating the toolchain on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
  
  b. Review the default target repo locations for the GitHub repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
  ![Default target repo locations](images/toolchain_github_config.png)
