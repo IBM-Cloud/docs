@@ -14,94 +14,98 @@ copyright:
 
 # About blockchain
 {: #ibmblockchain_overview}
-Last updated: 27 July 2016
+Last updated: 23 September 2016
 {: .last-updated}
 
 ## What is blockchain?
 {: #what}
 
-Blockchain is a technology for a new generation of transactional applications that establishes trust, accountability and transparency, while streamlining business processes. It is a design pattern made famous by bitcoin, but its practical uses extend far beyond cryptocurrency exchanges. With blockchain, we can reimagine the most fundamental business exchanges, and open the door to a new world of digital interactions.
+Blockchain is a technology for a new generation of transactional applications that establishes trust, accountability and transparency, while streamlining business processes. The blockchain network was first introduced by bitcoin, but its practical uses extend far beyond cryptocurrency exchanges. With blockchain, IBM is reimagining the most fundamental business exchanges, and opening the door to a new world of digital interactions.
 
-Blockchain has the potential to vastly reduce the cost and complexity of cross-enterprise business processes. Its distributed ledger makes it easier to create cost-efficient business networks, where virtually anything of value can be tracked and traded, without requiring a central point of control. The application of this emerging technology is showing great promise across a broad range of business applications. For example, blockchain networks allow securities trades to be settled in minutes, instead of days. Blockchain can also help companies streamline the flow of goods and payments, and enable manufacturers to reduce product recalls by easily sharing production logs with Original Equipment Manufacturers (OEMs) and regulators.
+Blockchain is projected to vastly reduce the cost and complexity of cross-enterprise business processes. Its distributed ledger makes it easier to create cost-efficient business networks, where virtually anything of value can be tracked and traded, without a centralized point of control. Blockchain is already showing great promise across a broad range of business applications. As just one example, blockchain networks allow securities trades to be settled in minutes, rather than days. Blockchain is also helping companies streamline the flow of goods and payments, and enabling  manufacturers to reduce product recalls by openly sharing production logs with OEMs and regulators.
 
 ## Key terms
 {: #keyterms}
 The following terms are instrumental in gaining a holistic understanding of blockchain concepts:
 
-**Transactor**: A network participant connected to the blockchain through a node, that issues transactions from the client side by leveraging an SDK or API.
+**Transactor**: A network participant connected to the blockchain network through a node, who submits transactions from a client using an SDK or API.
 
-**Transaction**: A request by a transactor to the blockchain to execute a function on the ledger.  Transaction types include deploy/invoke/query and are implemented through the chaincode functions set forth in the fabric's API contract.  <!---Chaincode implements the functions set forth in the fabric's API contract.  --->
+**Transaction**: A request by a transactor to execute a function on the blockchain network. The transaction types are deploy, invoke, and query, which are implemented through the chaincode functions set forth in the fabric's API contract.
 
-**Ledger**: A sequence of cryptographically-linked blocks, containing transactions and the current world state.  In addition to data from previous transactions, the ledger (blockchain) also contains the data for currently-running chaincode applications.
+**Ledger**: A sequence of cryptographically-linked blocks, containing transactions and the current world state. In addition to data from previous transactions, the ledger also contains the data for currently-running chaincode applications.
 
-**World state**: A key-value database that chaincodes may use to store state when executed by a transaction.
+**World state**:  Key-value database used by chaincodes to store their state when executed by a transaction.
 
-**Chaincode**: A piece of code containing embedded logic that is stored on the ledger as part of a transaction. Chaincode runs transactions that can modify the world state. A developer would generate a chaincode application and then deploy it to the network.  A user could then `invoke` or call this piece of chaincode through a client-side application that interfaces with a peer.
+**Chaincode**: Embedded logic that encodes the rules for specific types of network transactions. Developers write chaincode applications and deploy them to the network. End users then invoke chaincode through a client-side application that interfaces with a network peer, or node. Chaincode runs network transactions, which if validated, are appended to the shared ledger and modify world state.
 
-**Validating peer**: A network node that is responsible for running consensus, validating transactions and maintaining the ledger. When transactions are validated, they are appended to the ledger, in blocks. When a transaction fails validation, it  is purged from the block (not written to the ledger). A validating peer (VP) has the ability to deploy, invoke and query chaincode.
+**Validating peer**: A network node that runs the consensus protocol for the network to validate transactions and maintain the ledger. Validated transactions are appended to the ledger, in blocks. If a transaction fails consensus, it is purged from the block and therefore, not written to the ledger. A validating peer (VP) has authority to deploy, invoke and query chaincode.
 
-**Non-validating peer**: A network node that functions as a proxy, connecting transactors to validating peers. A non-validating peer (NVP) forwards invocation requests to its connected validating peer (VP). It also hosts the event stream server and the REST service. **Note:** The terms peer and node are often used interchangeably when discussing blockchain technology.
+**Non-validating peer**: A network node that functions as a proxy, connecting transactors to validating peers. A non-validating peer (NVP) forwards invocation requests to its connected validating peer (VP). It also hosts the event stream server and the REST service.
 
-**Consensus**: Consensus is a method of ordering network requests, or transactions (deploy and invoke), on a distributed network. The correct ordering of transactions is critical, because many transactions have a dependency on one or more prior transactions. On a blockchain network, there is no single authority that determines this order; instead, each validating node (or validating peer) contributes equally by implementing the agreed-upon consensus protocol. Consensus ensures that a quorum of nodes agree on the order in which transactions are appended to the shared ledger. By resolving any discrepancies in the transaction order, consensus guarantees that all network nodes are operating on an identical blockchain.  See the [consensus](etn_pbft.html) topic for more information and test cases.  
+**Consensus**: A protocol that maintains the order of blockchain network transactions (deploy and invoke). Validating nodes work collectively to approve transactions by implementing the consensus protocol. Consensus ensures that a quorum of nodes agree on the order of transactions on the shared ledger. By resolving any discrepancies in this order, consensus ensures that all nodes operate on an identical blockchain ledger. See the [consensus](etn_pbft.html) topic for more information and test cases.  
 
-**Permissioned ledger**: A blockchain network where each node is required to be a member of the network, and each node has access to only the transactions that its permissions allow.
+**Permissioned network**: A blockchain network where each node is required to maintain a member identity on the network, and each node has access to only the transactions that its permissions allow.
 
 ## Key concepts
 {: #keyconcepts}
 
-Blockchain consists of a network, over which members track and exchange assets, and a record of all exchanges (ledger), which is replicated to all participating members.  Applications deployed to a blockchain consist of a self-executing contract and a client-side application that interfaces with the network through an SDK or API.   Two or more parties, being part of a common blockchain network, would agree on the terms of the logic within the contract (e.g. when I get asset "a", I pay you amount "b").  Once deployed to the blockchain, functions in the contract can be invoked (i.e. a transaction can be triggered), with the ensuing invocation(s) ordered by a leading node and then broadcast to the network participants for consensus.  After validation, transactions are executed and recorded to the shared ledger by all participants.  Once recorded on the ledger, transactions can never be altered or deleted.
+**Overview**: Blockchain is a specific type of network, over which members track and exchange digitized assets. A shared ledger contains the single record of all network transactions, and is replicated across all network members. Chaincode applications contain self-executing contracts and client-side applications which interface with the network through an SDK or API.
+
+Two or more transacting parties, as members of a blockchain network, implicitly agree on the terms of the smart contract that governs the transaction (e.g. upon receipt of asset "a", asset "b" is due). Once deployed to the blockchain, functions in the contract can be invoked (i.e. a transaction can be triggered). Ensuing invocation(s) are ordered by a leading node and broadcast to validating peers for consensus. Following validation, transactions are executed and recorded to the ledger in blocks. The ledger is then distributed to all network nodes through replication. Once appended to the ledger, transactions can never be altered or deleted; the only way to undo or change the effects of an approved transaction is to submit a subsequent transaction.
 
 **Network**: A blockchain network is characterized as follows:
 
-- A decentralized peer-to-peer architecture, with nodes that represent network participants, such as banks and securities firms.
+- A distributed, decentralized peer-to-peer network, with nodes that represent network participants, such as banks, government agencies, manufacturers and securities firms.
 - A group of peers that validate transactions through a consensus protocol before committing them to a shared ledger.
 
-**Shared ledger**: The shared ledger can be thought of as the single source of truth for transactions on a blockchain network.  Companies might have multiple shared ledgers: one for each of the business networks in which they participate. The shared ledger can be used for recording and totaling financial transactions. A shared ledger has the following attributes:
-- It records all transactions across the business network.
-- It is shared amongst all participants.
+**Shared ledger**: The shared ledger is the single source of truth, or the entire history of validated transactions, on a blockchain network. Any discrepancies in the shared ledger across nodes are resolved through consensus. The ledger has the following attributes:
+- It records all validated transactions on the network.
+- It is shared across all network participants.
 - It is replicated, so that each participant has their own copy.
-- It is permissioned, so that participants can see only certain transactions.
+- It is permissioned, so that participants can only view their own transactions.
 
-Figure 1 depicts participants in a blockchain network and the shared ledger:
+**Example**: Figure 1 depicts an example equities blockchain network and the shared ledger:
 
-![Shared Ledger](images/Architecture_shared_ledger.png "Shared Ledger")
-*Figure 1. Overview of an equities market network and shared ledger*
+![Shared Ledger](images/Architecture_shared_ledger.png "Example equities blockchain network")
+*Figure 1. A shared ledger example*
 
-Figure 1 shows the typical network participants in an equities market - Asset custodian (bank), front office, operations, securities depository and a clearing party:
-1. The custodian invokes multiple pieces of chaincode to buy and sell blocks of securities.  
-2. Transactions can be triggered from any network node, but are ultimately submitted to the primary node on the network, which orders the transaction batch.  The primary node then broadcasts the ordered transactions to its network peers, all of whom possess a shared copy of the ledger, for agreement on the proposed order (consensus). 
-3. Once the order of the transactions is agreed upon (consensus), the transactions are executed and appended to the ledger.
+Figure 1 shows typical network participants in an equities market: Asset Custodian (bank), Front Office, Operations, securities depository (CSD) and a clearing party (Clearing/CCP):
+1. Using a client application, the custodian invokes chaincode to buy and sell blocks of securities.  
+2. Transactions can be triggered from any network node, but are always forwarded to the primary (leading) validating node, which orders the transactions. The primary node broadcasts the ordered transactions to all validating peers for consensus, or agreement, on the proposed order.
+3. If the order of transactions is agreed upon, the transactions are executed and appended to the ledger on each validating node. The ledger is then replicated to all network nodes.
 
 
 ## Network and application architecture
 {: #architecture}
 
-Figure 2 depicts an example blockchain network built upon a decentralized peer-to-peer architecture, with a Certificate Authority managing user roles and permissions for the network.
-
+Figure 2 depicts an example permissioned blockchain network, which features a distributed, decentralized peer-to-peer architecture and a Certificate Authority managing user roles and permissions:
 ![Blockchain Network](images/Architecture_network_and_application.png "Blockchain")
-*Figure 2. Overview of a blockchain network, with data flow and network access governed by member roles*
+*Figure 2. A permissioned blockchain network: data flow and network access are governed by member roles*
 
-Note that these steps are not meant to serve as a sequential representation, but rather as an explanation of the network architecture and application flow:
+The following descriptions correspond to the architecture and flow shown in Figure 2, which do not represent a sequential process:
 
-* A. - A blockchain user issues a transaction to the network.  The transaction can be a deploy, invoke or query, and is issued through a client side application leveraging an SDK or directly through a REST API.  
-* B. - Certain business networks may require a regulator or auditor.  In the case of an equities market network in the USA, an SEC regulator would perform financial oversight.  
-* C. - A network operator manages member permissions on the network.  For instance, the operator might enroll the regulator (B) as an "auditor" and the blockchain user (A) as a "client."  The auditor would be restricted to querying the blockchain, whereas the client might be able to deploy, invoke and query certain types of chaincode.
-* D. - A blockchain developer writes chaincode (smart contracts) and client-side applications to drive the smart contracts. It is possible for the blockchain developer to directly deploy chaincode to the network, perhaps through a REST interface.  However, it is more likely that a blockchain user (A) would deploy chaincode through an application layer.  The blockchain developer will likely need to code data/credentials from a business' existing System of Record (SOR) into the chaincode.  In order to do so he accesses the business' traditional data storage (G) out-of-band from the blockchain network.
-* E. - A blockchain user connects to the network through a peer node (A).  The node fetches and stores the user's enrollment and transaction certificates from the Certificate Authority.  A user is required to possess these digital certificates in order to participate and transact on a permissioned network.
-* F. - A user attempting to drive chaincode may need to verify his credentials with a business' existing SOR.  For instance, it may be the case that only a manager is able to query chaincode on the blockchain network.  In order to confirm the user's identity as a manager, the chaincode needs to go out-of-band and access the business' SOR.  It would likely access the data source through an existing processing platform (e.g. Websphere portal, IMS, etc.).
+**A:** A Blockchain User submits a transaction to the Permissioned Blockchain network. The transaction can be a deploy, invoke or query, and is issued through a client-side application leveraging an SDK, or directly through a REST API.  
 
+**B:** Trusted business networks provide access to regulators and auditors, such as the SEC in a U.S. equities market.  
 
-Figure 3 represents the architecture of the core components in the blockchain fabric. Membership Services, Blockchain Services and Chaincode Services are logical structures, not a physical partitioning of components into separate processes, address spaces or virtual machines.
+**C:** A Blockchain Network Operator manages member permissions, such as enrolling the Regulator (B) as an "auditor" and the Blockchain User (A) as a "client." An auditor could be restricted to query transactions, whereas a client could be authorized to deploy, invoke and query certain types of chaincode.
 
+**D:** A Blockchain Developer writes chaincode (smart contracts), and client-side applications to invoke smart contracts. The Blockchain Developer could deploy chaincode directly to the network, through a REST interface. To include credentials from a Traditional Data source in chaincode, the developer could use an out-of-band connection to access the data (G).
+
+**E:** A Blockchain User connects to the network through a peer node (A). Before proceeding with any transactions, the node retrieves the user's enrollment and transaction certificates from the Certificate Authority. Users must possess these digital certificates in order to transact on a permissioned network.
+
+**F:** A user attempting to drive chaincode could be required to verify their credentials on a Traditional Data source (G). To confirm the user's authorization, chaincode can use an out-of-band connection to this data, through a Traditional Processing platform.
+
+Figure 3 shows the IBM Blockchain core components. Membership Services, Blockchain Services and Chaincode Services are logical structures, not a physical partitioning of components into separate processes, address spaces or virtual machines:
 ![Reference Architecture](images/Architecture_core_com.png "Reference Architecture")
 *Figure 3. Hyperledger fabric reference architecture*
 
-**Membership Services**: Membership Services manage identity on the network. In a non-permissioned blockchain, participation does not require authorization, and all nodes can equally submit transactions and attempt to accumulate them into acceptable blocks; that is, there is no distinction of roles. Membership services combine elements of Public Key Infrastructure (PKI) and decentralization (consensus) to transform a non-permissioned blockchain into a permissioned blockchain.
+**Membership Services**: Membership Services manages user identities on a permissioned blockchain network through the Certificate Authority peer. Membership Services provides a distinction of roles by combining elements of Public Key Infrastructure (PKI) and decentralization (consensus). By contrast, non-permissioned networks do not provide member-specific authority or a distinction of roles.
 
-A permissioned blockchain requires entities to register for long-term identity credentials (enrollment certificates), which can be distinguished according to entity type. For users, credentials enable the Transaction Certificate Authority (TCA) to issue pseudonymous credentials; these transaction certificates are then used to authorize submitted transactions. Transaction certificates persist on the blockchain, and enable authorized auditors to cluster otherwise unlinkable transactions.  Membership services functions are conducted through the Certificate Authority peer on your blockchain network.  
+A permissioned blockchain requires entities to register for long-term identity credentials (Enrollment Certificates), which can be distinguished according to entity type. For users, an Enrollment Certificate authorizes  the Transaction Certificate Authority (TCA) to issue pseudonymous credentials; these certificates authorize transactions submitted by the user. Transaction certificates persist on the blockchain, and enable authorized auditors to associate otherwise unlinkable transactions.
 
-**Blockchain Services**: Blockchain Services manage the distributed ledger through a peer-to-peer protocol, built on HTTP/2. The data structures are highly optimized to provide the most efficient hash algorithm for maintaining the world state replication.  PBFT is implemented as the consensus protocol on each network.    
+**Blockchain Services**: Blockchain Services manages the shared ledger using a peer-to-peer protocol, which is built on HTTP/2. The data structures are highly optimized to provide the most efficient hash algorithm for maintaining replication of the shared ledger. PBFT is implemented as the consensus protocol.    
 
-**Chaincode Services**: Chaincode Services provide a secured and lightweight method to sandbox chaincode execution on the validating nodes. The environment is a “locked down” and secured container, along with a set of signed base images containing secure OS and chaincode language, runtime and SDK layers for Go, Java and Node.js. Additional languages can be enabled, if required.
+**Chaincode Services**: Chaincode Services provides a secured and lightweight method to sandbox chaincode execution on the validating nodes. The environment is a “locked down” and secured container, along with a set of signed base images containing secure OS and chaincode language, runtime and SDK layers for Go, Java and Node.js. Additional languages can be enabled, if required.
 
-Refer to the [protocol specification](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md#fabric) for the Hyperledger Project to learn more about blockchain and its various components.
+Refer to the [protocol specification](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md#fabric) for   Hyperledger Fabric 0.5 to learn more about IBM's implementation of blockchain.
