@@ -13,49 +13,50 @@ copyright:
 
 # Getting started with {{site.data.keyword.blockchain}} (Beta)
 {: #gettingstartedtemplate}
-Last updated: 7 September 2016
+Last updated: 19 September 2016
 {: .last-updated}
 
-With the {{site.data.keyword.blockchainfull}} service on Bluemix&reg;, you can spin up a multi-node blockchain network at the click of a button. Rather than creating and managing a network, developers can get into code faster and spend their time writing applications and working with chaincode. The service is a peer-to-peer permissioned network built on the [hyperledger/fabric](https://github.com/hyperledger/fabric) code from the Linux Foundation's Hyperledger Project.
+The {{site.data.keyword.blockchainfull}} service on Bluemix&reg; delivers a four-node development and test blockchain network for you, at the click of a button. Rather than creating a blockchain network from scratch, your developers can immediately start writing applications and deploying chaincode. The IBM Blockchain on Bluemix service is a peer-to-peer permissioned network, built on top of the [Hyperledger Fabric 0.5](https://github.com/hyperledger/fabric) code from the Linux Foundation's Hyperledger Project.
 {:shortdesc}
 
-You can use a blockchain network to digitally represent assets which can then be securely exchanged and tracked through a shared ledger. For more information about shared ledgers and business networks, see the [About blockchain](ibmblockchain_overview.html) topic.
+Blockchain networks are used to securely and efficiently exchange and track digital assets, and to permanently record all transactions on the shared ledger. For details on blockchain, see the [About blockchain](ibmblockchain_overview.html) topic.
 
-There are currently two versions available for the blockchain service - **Starter Developer** and **High Security Business Network**.  Use the comparisons in the table below to choose the right environment for your needs.
+## Choose your network plan
 
-![](images/red_alert.png) **This is a limited Beta offering, therefore you must receive IBM approval in order to access the High Security Business Network plan.**  Visit [IBM Blockchain on IBM Bluemix](http://www-stage.watson.ibm.com/files/blockchain/bluemix.html) and follow the steps to request a provisioning of the High Security Business Network.
+You have a choice between two IBM Blockchain on Bluemix plans: the **Starter Developer Network** or the **High Security Business Network**. Use the comparison chart below to choose the right environment for you.
 
-| Service (Plan) Type:      | Starter Developer               | High Security Business Network  |
+![](images/red_alert.png)  **The High Security Business Network** plan is a limited Beta offering; to select this plan, you must first request preapproval at [IBM Blockchain on IBM Bluemix](http://www-stage.watson.ibm.com/files/blockchain/bluemix.html).
+
+| Bluemix Service Plan:      | Starter Developer Network       | High Security Business Network  |
 | ------------------------- |:--------------------------:|:-----:|
-| Requires IBM approval: | No | Yes |
-| Purpose:  |  development and test levels of security performance and availability |  simulate enterprise network and test levels of security, performance and availability |
+| Requires IBM preapproval: | No | Yes |
+| Purpose:  |  Development, and test levels of security, performance and availability |  Simulate an enterprise network, and test levels of security, performance and availability |
 | Nodes:    | 4 nodes + Certificate Authority     | 4 nodes + Certificate Authority |
 | [Dashboard Monitor:](ibmblockchainmonitor.html) | Yes | Yes |
 | Confidential Transactions: | Yes | Yes |
 | [Consensus:](etn_pbft.html) | PBFT | PBFT |
-| Environment:     | shared multi-tenant | isolated single tenant |
+| Environment:     | Shared multi-tenant | Isolated single tenant |
 | [IBM Secure Service Container:](etn_ssc.html) | No | Yes |
 
+## Launch your network plan
 
+Use the following steps to create and deploy an unbound service instance of your blockchain network.  Your network includes a development environment with validating nodes and a security service, and  enables you to deploy chaincode, view logs and build applications:
 
-To get started, follow these steps to create and deploy an unbound service instance of a {{site.data.keyword.blockchain}} network.  Once complete, you will have your own development environment with validating nodes and a security service. From there, you can deploy chaincode, see results, and build your applications:
-
-1. From the landing page for the [{{site.data.keyword.blockchain}} DevOps Service](https://console.ng.bluemix.net/catalog/services/blockchain/), complete the following fields in the **Add Service** dialog on the far right of your screen:
-  - Choose **dev** from the **Space** drop-down window.
-  - Leave the **App** field as **Leave unbound** or bind your service to any application in your Bluemix org.
-  - Change the **Service name** to a name or value unique to you.  For example, **Blockchain Test Net123**.
-  - Leave the **Credential name** field as its default value.
-  - Choose **Starter Developer Plan** or **High Security** ( ![](images/green_dot.png) if approved) under the **Selected Plan** field.
-  - Click **CREATE**.
-2.  You are now on the **Service Dashboard** screen for your new service.  From here you can **Manage** your instance of the network:
-  - Click **LAUNCH** to see the blockchain monitor for your {{site.data.keyword.blockchain}} network.
-3.  The blockchain monitor displays network details, live logs, current ledger state, APIs, and chaincode templates.  Use the dashboard for any of the following functions:
-  - Access Discovery and API routes for the peers on your network.
-  - View any currently-running chaincode containers.
-  - View real-time logs and troubleshoot chaincode that fails to execute.
-  - View the world state for your ledger.
+1. From the [{{site.data.keyword.blockchain}} Service ](https://console.ng.bluemix.net/catalog/services/blockchain/) page, complete the **Add Service** form  in the right pane:
+  - **Space:** Select **dev**.
+  - **App:** Select either **Leave unbound**, or to bind your service to one of your Bluemix.org applications, **Select an application".
+  - **Service name:** Enter a unique name or value, such as, **Blockchain Test Net123**.
+  - **Credential name:** Leave the default value.
+  - Selected Plan: Choose **Starter Developer plan** or **High Security** ( ![](images/green_dot.png) with preapproval).
+  - Click the **CREATE** button.
+2.  You are now on the **Service Dashboard** screen for your new service. From here, you can **Manage** your instance of the network; click **LAUNCH** to use your blockchain monitor.
+3.  The blockchain monitor displays network details, live logs, current ledger state, APIs and chaincode templates. Use the dashboard for any of the following functions:
+  - Access Discovery and API routes for network peers.
+  - View any running chaincode containers.
+  - View real-time logs and troubleshoot chaincode.
+  - View the world state for the ledger.
   - Access the Swagger UI and interact with your network via the REST API.
-  - Deploy one of three available chaincode examples.
+  - Deploy one of the three chaincode examples.
 
 
 # Related Links
