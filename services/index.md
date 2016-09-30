@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Last updated: 30 September 2016*
+*Last updated: 10 August 2016*
 
 {{site.data.keyword.Bluemix_notm}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design.
 {:shortdesc}
@@ -65,6 +65,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|No|
 |{{site.data.keyword.datacshort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.deliverypipeline}}		|Yes		|Yes		|No|
 |{{site.data.keyword.dialogshort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.creshort}}			|Yes		|No		|No|
