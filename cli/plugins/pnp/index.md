@@ -4,7 +4,7 @@ copyright:
 
   years: 2016
 
-lastupdated: "2016-09-27"
+lastupdated: "2016-10-01"
 
 ---
 
@@ -67,16 +67,16 @@ chmod a+x ./private-network-peering-linux-amd64
 
 Follow these steps to install the plug-in from the Bluemix repository:
 
-1. Add the Bluemix repository into the Cloud Foundry CLI repositories. Use the following command:
-
+1. Add the Bluemix plug-in registry endpoint:  
 	```
-	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
+	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```  
-2. Run the following command:  
+
+2. Run the following command:
 
 	```
-	cf install-plugin private-network-peering -r bluemix
-	```
+	bluemix plugin install private-network-peering -r bluemix-bx
+	```  
 
 ## List of private network peering commands
 The following four commands are supported. Use the `bluemix network` command to see the list of available commands:
