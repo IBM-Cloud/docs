@@ -13,26 +13,23 @@ copyright:
 # Initiation à {{site.data.keyword.weather_short}}
 {: #insights_weather_overview}
 
-*Dernière mise à jour : 1er juillet 2016*
+Dernière mise à jour : 28 juillet 2016
 {: .last-updated}
 
 A l'aide d'{{site.data.keyword.weatherfull}}, incorporez les données météorologiques de The Weather Company (TWC) à vos applications {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
-**Attention :** Actuellement, il est **impossible** d'acheter ou d'utiliser le service {{site.data.keyword.weather_short}} dans les régions ou pays suivants : Afghanistan, Arménie, Azerbaïdjan, Bahreïn, Bangladesh, Bhoutan, Brunei, Cambodge, Chine, Chypre, Géorgie, Inde, Indonésie, Iran, Irak, Japon, Jordanie, Kazakhstan, Koweït, Kirghizistan, Laos, Liban, Malaisie, Maldives, Mongolie, Birmanie, Népal, Oman, Pakistan, Philippines,
-Qatar, Russie, Arabie Saoudite, Singapour, Corée du Sud, Sri Lanka, Syrie, Taïwan,
-Tadjikistan, Timor-Leste, Turquie, Turkménistan, Émirats arabes unis, Ouzbékistan, Vietnam, Yémen. Cette liste est mise à jour lorsque des informations supplémentaires sont disponibles. 
+**Attention :** Actuellement, il est **impossible** d'acheter ou d'utiliser le service {{site.data.keyword.weather_short}} dans les régions ou pays suivants : Afghanistan, Arménie, Azerbaïdjan, Bahreïn, Bangladesh, Bhoutan, Brunei, Cambodge, Chine, Chypre, Géorgie, Indonésie, Iran, Irak, Japon, Jordanie, Kazakhstan, Koweït, Kirghizistan, Laos, Liban, Malaisie, Maldives, Mongolie, Birmanie, Népal, Oman, Pakistan, Philippines,
+Qatar, Russie, Arabie Saoudite, Singapour, Corée du Sud, Sri Lanka, Syrie, Tadjikistan, Timor-Leste, Turquie, Turkménistan, Émirats arabes unis, Ouzbékistan, Vietnam, Yémen. Cette liste est mise à jour lorsque des informations supplémentaires sont disponibles.
 
-Si vous possédez déjà une application qui utilise le service [Insights for Weather](https://console.{DomainName}/docs/services/InsightsWeather/index.html){: new_window}, elle continuera de fonctionner sans aucune modification pendant une période de 90 jours après l'introduction d'{{site.data.keyword.weather_short}}. Pour bénéficier des nouvelles API et du modèle de tarification amélioré, faites migrer votre application vers le nouveau service.
+Si vous possédez déjà une application qui utilise le service [Insights for Weather](https://console.{DomainName}/docs/services/InsightsWeather/index.html){: new_window}, elle continuera de fonctionner sans aucune modification pendant une période de 90 jours après l'introduction d'{{site.data.keyword.weather_short}}. Pour bénéficier des nouvelles API et du modèle de tarification amélioré, vous pouvez faire migrer votre application vers le nouveau service.
 
 
 Avant de commencer, créez une application Web {{site.data.keyword.Bluemix_notm}} dans le tableau de bord avec un environnement d'exécution tel que Liberty for Java. Attendez que votre application soit mise à disposition, puis ajoutez le service {{site.data.keyword.weather_short}} à cette dernière.
 
-Lorsque vous liez votre application à {{site.data.keyword.weather_short}}, vous mettez à disposition des données d'identification uniques pour une instance du service.
-Votre application utilise ces données d'identification avec les [API REST](https://twcservice.{APPDomain}/rest-api/){:new_window} pour extraire des données météorologiques.
+Lorsque vous liez votre application à {{site.data.keyword.weather_short}}, vous mettez à disposition des données d'identification uniques pour une instance du service. Votre application utilise ces données d'identification avec les [API REST](https://twcservice.{APPDomain}/rest-api/){:new_window} pour extraire des données météorologiques.
 
 Procédez comme suit pour extraire les données d'identification de `VCAP_SERVICES` et intégrer l'instance du service à votre application.
-
 
 1. Accédez à la page des propriétés de votre application.
 2. Accédez à la section **Variables d'environnement**. Les informations `VCAP_SERVICES` pour chacun de vos services s'affichent.
@@ -61,7 +58,7 @@ Votre entrée `VCAP_SERVICES` est semblable à l'exemple suivant :
 ```
 
 **Remarque :** Chaque région est indépendante. Vous ne pouvez pas utiliser les données d'identification qui vous ont été fournies pour le service dans une région pour vous authentifier auprès d'un service d'une autre région.
-Si vous n'indiquez pas les données d'identification valides, un message "Unauthorized" (Non autorisé) est généré dans le corps de réponse.
+Si vous n'indiquez pas les données d'identification valides, un message *Unauthorized* (Non autorisé) est généré dans le corps de réponse.
 
 # rellinks
 {: #rellinks}

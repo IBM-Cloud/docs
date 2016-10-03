@@ -13,7 +13,7 @@ copyright:
 # Beispiele
 {: #tutorials_samples}
 
-*Letzte Aktualisierung: 01. Juli 2016*
+Letzte Aktualisierung: 28. Juli 2016
 {: .last-updated}
 
 Anhand der folgenden Beispiele erfahren Sie, wie Sie den Service {{site.data.keyword.weather_short}} verwenden können.
@@ -22,21 +22,21 @@ Anhand der folgenden Beispiele erfahren Sie, wie Sie den Service {{site.data.key
 ## Demo für {{site.data.keyword.weather_short}}
 {: #insights_weather_demo}
 
-Im Rahmen des {{site.data.keyword.weather_short}}-Service können Sie zum Anzeigen von Wetterdaten eine Beispielanwendung verwenden.
-Sie können auf die Anwendung zugreifen, indem Sie zu [https://weather-company-data-demo.mybluemix.net](https://weather-company-data-demo.mybluemix.net) navigieren.
-Die Anwendung wird in Ihrem Browser geöffnet
-und Sie werden gefragt, ob Sie der App Ihren aktuellen Standort mitteilen möchten.
+Mithilfe der [{{site.data.keyword.weather_short}}-Demo-App](http://weather-company-data-demo.{APPDomain}){: new_window}
+können Sie sich mit dem Abrufen von Wetterdaten mit dem Service {{site.data.keyword.weather_short}} vertraut machen.
+Die Anwendung wird in Ihrem Browser geöffnet und Sie werden gefragt, ob Sie der Anwendung Ihren aktuellen Standort mitteilen möchten.
 
-Über die Beispielanwendung können Sie die aktuellen Wetterbedingungen für Ihren Standort anzeigen.
+Über die Demoanwendung können Sie die aktuellen beobachteten Wetterbedingungen für Ihren Standort anzeigen.
 
 ![Bild der Hauptanzeige mit aktuellen Beobachtungen für Ottawa, ON.](images/twctestapp_main_screen.jpg "Bild der Hauptanzeige mit aktuellen Beobachtungen für Ottawa, ON.")
 
 Außerdem können Sie sich eine stündliche Wettervorhersage für die nächsten 48 Stunden und die tägliche Wettervorhersage für die nächsten 10 Tage ansehen.
-Wenn Sie den Cursor
-über die einzelnen Gebiete im Beispiel bewegen, werden die Ergebnisse des API-Aufrufs
+Bei der täglichen Wettervorhersage wird sowohl die Tages- als auch die Nachthälfte berücksichtigt.
+Wenn Sie auf die einzelnen Gebiete in der Demoanwendung klicken, werden die Ergebnisse des API-Aufrufs
 im JSON-Format angezeigt, einschließlich der Metadaten, mit denen die Daten abgerufen wurden.
 
-Klicken Sie in der Demoanwendung auf **In Bluemix bereitstellen**, um eine geklonte Version der Anwendung zu erstellen, oder klicken Sie auf die Option zum Klonen der App direkt vom GitHub ([clone the app directly from GitHub](https://github.com/IBM-Bluemix/weather-company-data-demo)).
+Klicken Sie in der Demoanwendung auf **In Bluemix bereitstellen**, um eine geklonte Version der Anwendung zu erstellen,
+oder klonen Sie die Anwendung direkt aus GitHub ([clone the app directly from GitHub](https://github.com/IBM-Bluemix/weather-company-data-demo)).
 
 ## Stündliche Vorhersage abrufen
 {: #getting_twenty_four_hour_forecast}
@@ -56,7 +56,8 @@ Mit der folgenden `GET`-Anforderung können Sie beispielsweise die stündliche 4
 ```
 GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/geocode/45.42/75.69/forecast/hourly/48hour.json?units=m&language=en-US
 ```
-Sie können in Ihrer Anwendung auch eine `GET`-Operation ausgeben, um die stündlichen 48-Stunden-Vorhersagedaten für eine bestimmte Postleitzahl abzurufen.
+Sie können in Ihrer Anwendung auch eine `GET`-Operation ausgeben, um die stündlichen 48-Stunden-Vorhersagedaten für
+eine Postleitzahl abzurufen.
 
 **Hinweis**: Sie können eine Postleitzahl für die unterstützten Landescodes nur für die Vereinigten Staaten (US), Großbritannien (GB), Frankreich (FR), Deutschland (DE) oder Italien (IT) angeben.
 
@@ -613,7 +614,8 @@ Der Antworthauptteil gibt die folgenden Metadaten und Informationen an:
 {: #using_location_services}
 
 ### Anforderung nach Städtenamen
-Zum Anfordern von Standortinformationen für eine bestimmte Stadt müssen Sie mindestens einen Abfrageparameter, z. B. einen Städtenamen, sowie den `locationType` der Stadt, angeben. Sie können auch `countryCode` und `adminDistrictCode` angeben, um die Anzahl der eindeutigen Standorte zu verringern, die abgerufen werden können.
+Zum Anfordern von Standortinformationen für eine Stadt müssen Sie mindestens einen Abfrageparameter,
+z. B. einen Städtenamen, sowie den `locationType` der Stadt angeben. Sie können auch `countryCode` und `adminDistrictCode` angeben, um die Anzahl der eindeutigen Standorte zu verringern, die abgerufen werden können.
 
 Mit folgender Anforderung werden beispielsweise die Standortinformationen für Atlanta, Georgia, USA, abgerufen.
 

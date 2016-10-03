@@ -13,7 +13,7 @@ copyright:
 # Introduzione a {{site.data.keyword.weather_short}}
 {: #insights_weather_overview}
 
-*Ultimo aggiornamento: 01 luglio 2016*
+Ultimo aggiornamento: 28 luglio 2016
 {: .last-updated}
 
 Utilizza {{site.data.keyword.weatherfull}} per incorporare i dati meteo da
@@ -22,18 +22,18 @@ The Weather Company (TWC) nelle tue applicazioni {{site.data.keyword.Bluemix}}.
 
 **Attenzione:** attualmente, il servizio {{site.data.keyword.weather_short}} **non può** essere acquistato o
 utilizzato nei seguenti paesi o regioni: Afghanistan, Armenia, Azerbaijan,
-Bahrain, Bangladesh, Bhutan, Brunei, Cambogia, Cina, Cipro, Georgia, India,
+Bahrain, Bangladesh, Bhutan, Brunei, Cambogia, Cina, Cipro, Georgia,
 Indonesia, Iran, Iraq, Giappone, Giordania, Kazakhstan, Kuwait, Kyrgyzstan, Laos,
 Libano, Malesia, Maldive, Mongolia, Myanmar, Nepal, Oman, Pakistan, Filippine,
-Qatar, Russia, Arabia Saudita, Singapore, Corea del sud, Sri Lanka, Siria, Taiwan,
+Qatar, Russia, Arabia Saudita, Singapore, Corea del sud, Sri Lanka, Siria,
 Tajikistan, Timor-Leste, Turchia, Turkmenistan, Emirati arabi uniti,
-Uzbekistan, Vietnam, Yemen. Questo elenco viene aggiornato quando sono disponibili ulteriori informazioni.
+Uzbekistan, Vietnam, Yemen.. Questo elenco viene aggiornato quando sono disponibili ulteriori informazioni.
 
 Se disponi di un'applicazione esistente che utilizza il
 [servizio Insights for Weather](https://console.{DomainName}/docs/services/InsightsWeather/index.html){: new_window},
 la tua applicazione continuerà a funzionare senza alcuna modifica per 90 giorni dopo l'introduzione di
 {{site.data.keyword.weather_short}}. Per usufruire dei benefici delle nuove API aggiunte
-e migliorare il modello dei prezzi, devi migrare la tua applicazione al nuovo servizio.
+e migliorare il modello dei prezzi, puoi migrare la tua applicazione al nuovo servizio. 
 
 Prima di iniziare, crea un'applicazione web {{site.data.keyword.Bluemix_notm}} nel dashboard
 con un runtime come Liberty for Java. Attendi il provisioning della tua applicazione e quindi
@@ -75,7 +75,7 @@ Il tuo `VCAP_SERVICES` sarà simile al seguente esempio:
 
 **Nota:** ogni regione è indipendente. Non puoi utilizzare le credenziali di servizio
 che ti sono state fornite in una regione per autenticarti a un servizio in un'altra regione.
-La mancata immissione delle credenziali corrette comporterà il ricevimento di un messaggio "Non autorizzato" nel corpo della risposta.
+La mancata immissione delle credenziali corrette comporterà il ricevimento di un messaggio *Non autorizzato* nel corpo della risposta.
 
 # rellinks
 {: #rellinks}

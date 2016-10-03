@@ -13,7 +13,7 @@ copyright:
 # Usando as APIs REST do {{site.data.keyword.weather_short}}
 {: #rest_apis}
 
-*Última atualização: 01 de julho de 2016*
+Última atualização: 22 de agosto de 2016
 {: .last-updated}
 
 É possível usar as [APIs REST](https://twcservice.{APPDomain}/rest-api/){:new_window}
@@ -36,7 +36,7 @@ clicando em **Variáveis de Ambiente** a partir do
 
 **Nota:** cada região é independente. Não é possível usar credenciais de serviço
 fornecidas a você em uma região para se autenticar em um serviço em outra região.
-A falha ao inserir credenciais adequadas resultará em uma mensagem "Desautorizado" no corpo da resposta.
+A falha ao inserir credenciais adequadas resulta em uma mensagem *Não autorizado* no corpo da resposta.
 
 Com as APIs REST, é possível recuperar dados de clima fornecendo uma localização geográfica como coordenadas de latitude e longitude.
 É possível usar as APIs a seguir.
@@ -44,12 +44,12 @@ Com as APIs REST, é possível recuperar dados de clima fornecendo uma localiza�
 |**API**                                  |**Descrição**              |
 |-----------------------------------------|-----------------------------|
 |`GET /v1/{geocode or location ID}/forecast/hourly/48hour.json`  |Retorna a previsão de clima de hora em hora para as próximas 48 horas para uma localização geográfica dependendo do formato que você fornecer. É possível fornecer um `geocode/{latitude}/{longitude}` ou um `location/{locationId}`. Os dados de previsão de hora em hora podem conter até 48 previsões de hora em hora para cada local. Deve-se descartar todas as previsões de hora em hora anteriores para um local quando novos dados forem recebidos.|
-|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |Retorna previsões de clima diário para 3, 5, 7 ou 10 dias para uma localização geográfica dependendo do formato que você fornecer. O número de dias retornados é especificado no formato como `3day`, `5day`, `7day` ou `10day`. É possível fornecer um `geocode/{latitude}/{longitude}` ou um `location/{locationId}`. Cada previsão diária pode conter uma previsão diurna, uma previsão noturna e uma previsão de 24 horas. Esses segmentos são objetos separados nas respostas JSON. Os dados de previsão diurna da previsão diária não ficam mais disponíveis depois do horário local de 15h. Às 15h, horário local, seu aplicativo não deverá mais exibir a previsão do dia.|
-|`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|Retorna previsões de clima diário em períodos de 6 horas para 3, 5, 7 ou 10 dias para uma localização geográfica dependendo do formato que você fornecer. O número de dias retornados é especificado no formato como `3day`, `5day`, `7day` ou `10day`. É possível fornecer um `geocode/{latitude}/{longitude}` ou um `location/{locationId}`. Cada previsão diária pode conter uma previsão da manhã, tarde, noite e de durante a noite. Esses segmentos são objetos separados nas respostas JSON.|
-|`GET /v1/{geocode or location ID}/observations.json`              |Retorna as condições climáticas atuais de uma localização geográfica. É possível fornecer um `geocode/{latitude}/{longitude}` ou um `location/{locationId}`. As observações recentes são retidas no banco de dados por até 10 minutos em estações de relatório específicas e 24 horas de observações por estação. Os dados de observação recentes são atualizados continuamente e substituídos com uma metodologia first-in / first-out (dados rotativos com observações mais recentes e deslocamento das observações mais antigas para o armazenamento de archive) com base na formatação do registro de data/hora das observações.|
-|`GET /v1/{geocode or location ID}/observations/timeseries.json`   |Retorna as observações atuais e até 24 horas de observações passadas, a partir da data e hora atuais, de uma localização geográfica.  É possível fornecer um `geocode/{latitude}/{longitude}` ou um `location/{locationId}`. As observações climáticas são reunidas a partir de dispositivos físicos implementados em todo o mundo e as observações climáticas atuais.|
+|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |Retorna previsões de clima diário para 3, 5, 7 ou 10 dias para uma localização geográfica dependendo do formato que você fornecer. O número de dias a serem retornados é especificado no formato como `3day`, `5day`, `7day` ou `10day`. É possível fornecer um `geocode/{latitude}/{longitude}` ou um `location/{locationId}`. Cada previsão diária pode conter uma previsão diurna, uma previsão noturna e uma previsão de 24 horas. Esses segmentos são objetos separados nas respostas JSON. Os dados de previsão diurna da previsão diária não ficam mais disponíveis depois do horário local de 15h. Às 15h no horário local, seu aplicativo não deverá mais exibir a previsão do dia.|
+|`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|Retorna previsões de clima diário em períodos de 6 horas para 3, 5, 7 ou 10 dias para uma localização geográfica, dependendo do formato fornecido. O número de dias a serem retornados é especificado no formato como `3day`, `5day`, `7day` ou `10day`. É possível fornecer um `geocode/{latitude}/{longitude}` ou um `location/{locationId}`. Cada previsão diária pode conter uma previsão da manhã, tarde, noite e de durante a noite. Esses segmentos são objetos separados nas respostas JSON.|
+|`GET /v1/{geocode or location ID}/observations.json`              |Retorna as condições climáticas atuais de uma localização geográfica. É possível fornecer um `geocode/{latitude}/{longitude}` ou um `location/{locationId}`.  As observações recentes são retidas no banco de dados por até 10 minutos em estações de relatório específicas e 24 horas de observações por estação. Os dados de observação recentes são atualizados continuamente e substituídos com uma metodologia first-in / first-out (dados rotativos com observações mais recentes e deslocamento das observações mais antigas para o armazenamento de archive) com base na formatação do registro de data/hora das observações.|
+|`GET /v1/{geocode or location ID}/observations/timeseries.json`   |Retorna as observações atuais e até 24 horas de observações passadas, a partir da data e hora atuais, de uma localização geográfica. É possível fornecer um `geocode/{latitude}/{longitude}` ou um `location/{locationId}`. As observações climáticas são reunidas a partir de dispositivos físicos implementados em todo o mundo e as observações climáticas atuais.|
 |`GET /v1/{geocode, country code, state, or area}/alerts.json`      |Retorna observações de clima, avisos, instruções e avisos que são emitidos pelo Serviço Nacional de Meteorologia (NWS), Environment Canada e MeteoAlarm (Europa) e incluem a tradução da descrição do evento, o nome do país e manchetes de alerta em 49 idiomas. É possível fornecer um `geocode/{latitude}/{longitude}`, `country/{countrycode}`, `country/{countrycode}/state/{statecode}`/ ou `country/{countrycode}/area/{areaid}`.|
-|`GET /v1/alert/{detail_key}/details.json`                         |Retorna observações de clima, avisos, instruções e avisos que são emitidos pelo Serviço Nacional de Meteorologia (NWS), Environment Canada e MeteoAlarm (Europa). Os detalhes incluem informações detalhadas sobre o alerta emitido pela autoridade meteorológica do governo para a área especificada e incluem a tradução da descrição do evento, o nome do país e manchetes de alerta em 49 idiomas.|
+|`GET /v1/alert/{detail_key}/details.json`                         |Retorna observações de clima, avisos, instruções e avisos que são emitidos pelo Serviço Nacional de Meteorologia (NWS), Environment Canada e MeteoAlarm (Europa). Os detalhes incluem informações detalhadas sobre o alerta emitido pela autoridade de clima do governo para a área especificada e incluem a tradução da descrição do evento, o nome do país e manchetes de alerta em 49 idiomas.|
 |`GET /v1/{geocode or postal code}/almanac/daily.json`             |Retorna informações diárias de almanaque (apenas EUA) que são originadas das estações de observações do Serviço Nacional de Meteorologia a partir de um período de medição de 10 a 30 anos ou mais. As informações são reunidas e fornecidas pelo Centro Nacional de Dados Climáticos (NCDC). É possível fornecer um `geocode/{latitude}/{longitude}` ou `location/{PostalLocationId}`.|
 |`GET /v1/{geocode or postal code}/almanac/monthly.json`           |Retorna informações mensais de almanaque (apenas EUA) que são originadas das estações de observações do Serviço Nacional de Meteorologia a partir de um período de medição de 10 a 30 anos ou mais. As informações são reunidas e fornecidas pelo Centro Nacional de Dados Climáticos (NCDC). É possível fornecer um `geocode/{latitude}/{longitude}` ou `location/{PostalLocationId}`.|
 |`GET /v3/location/{search or point}`                                  |Fornece a capacidade de procurar um nome ou uma localização geográfica do local (latitude e longitude) para recuperar um conjunto de locais que correspondem à solicitação. O Serviço de Localização suporta procura por nome da cidade ou código de endereçamento postal.|
@@ -58,14 +58,12 @@ Com as APIs REST, é possível recuperar dados de clima fornecendo uma localiza�
 ## Previsões diárias e intradiárias
 {: #daily_intraday}
 A API de previsão diária pode conter múltiplos dias ou previsões diárias para cada local.
-Cada dia de uma previsão pode conter até três previsões separadas. Para qualquer dia de
-previsão especificado a API pode retornar previsões de dia, noite e de 24 horas.
+Cada dia de uma previsão pode conter até três previsões separadas. Para qualquer
+dia de previsão, a API pode retornar previsões de dia, noite e de 24 horas.
 
 A API de previsão intradiária pode conter múltiplos dias ou previsões diárias para cada local.
-Cada dia de uma previsão contém quatro previsões de 6 horas separadas
-para manhã (das 7h às 13h),
-tarde (das 13h às 19h), noite (das 19h às 1h) e durante a
-noite (da 1h às 7h). A
+Cada dia de uma previsão contém quatro previsões de 6 horas separadas para a manhã (das 7h às 13h),
+a tarde (das 13h às 19h), a noite (das 19h à 1h) e durante a noite (da 1h às 7h). A
 previsão intradiária é semelhante em estrutura à previsão diária.
 
 Cada segmento tem um número da parte do dia, dia do nome da semana e nome da parte do dia. Por exemplo,
@@ -84,10 +82,10 @@ pelas APIs em uma manhã de quinta-feira:
 ## Observações atuais de série temporal
 {: #time_series}
 
-Os dados de observações meteorológicas de condições atuais e de série temporal fornecem informações sobre temperatura,
-precipitação, vento, pressão barométrica, visibilidade, radiação ultravioleta (UV)
+As condições atuais e os dados de observações de clima de série temporal fornecem informações sobre temperatura,
+precipitação, ventos, pressão barométrica, visibilidade, radiação ultravioleta (UV)
 e outros elementos de observação relacionados, incluindo estação de observação,
-data/hora de observação, códigos e frases de ícone de clima. A diferença entre
+data e hora da observação, códigos de ícone e frases de clima. A diferença entre
 observações séries temporais e observações atuais é o período de
 tempo da observação, que resulta em um ou mais conjuntos de dados de
 observação.
@@ -151,10 +149,10 @@ intervalo de dados em vez de um mês ou dia de dados específico.
 
 O formato de data para recuperar resultados do Almanaque Diário é um valor numérico de quatro dígitos que representa
 o mês e o dia para os dados necessários, ou seja, MMDD. Qualquer dia de dígito
-exclusivo **deve** ter um zero (0) antecedente, por exemplo, 01.
+único **deve** ter um zero antecedente, por exemplo, 01.
 
 O formato de data para recuperar resultados do Almanaque Mensal é mês, ou seja, MM. Qualquer mês de dígito
-exclusivo **deve** ter um zero (0) antecedente, por exemplo, 01.  Qualquer outro formato resulta em
+único **deve** ter um zero antecedente, por exemplo, 01. Qualquer outro formato resulta em
 um erro de API e nenhum dado será retornado.
 
 **Nota**: se você não fornecer o valor de data na solicitação, o sistema retornará um
@@ -180,11 +178,11 @@ https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/dai
 |**Atributo**     |**Descrição**                                    |
 |------------------|---------------------------------------------------|
 |`nome do host`        |O caminho da URL hospedada. Por exemplo, `https://twcservice.mybluemix.net:443/api/weather`.|
-|`versão`         |A iteração atual. Por exemplo, "v1".|
-|`local`        |O geocode ou ID de local. O grupo do local pode ser "geocode" ou "local". Por exemplo, "geocode/45.4214/75.6919" representa Ottawa, Canadá. Se uma coordenada de geocódigo for fornecida, a API retornará dados para o local mais próximo disponível. Os pontos são usados como separadores decimais e as vírgulas são usadas para separar os valores de latitude e longitude. Se um geocódigo for fornecido, os valores de latitude e longitude reais que são usados serão retornados nos metadados da resposta.|
-|`grupo de produtos`   |O produto. Por exemplo, "observações" ou "previsão". Um subgrupo de produto, por exemplo, "histórico", é opcional.|
-|`data`            |O tipo de data. Por exemplo, "diário" ou "mensal".|
-|`format`          |O formato. Por exemplo, "3day", "5day", "7day" ou "10day".|
+|`versão`         |A iteração atual. Por exemplo, `v1`.|
+|`local`        |O geocode ou ID de local. O grupo do local pode ser `geocode` ou `location`. Por exemplo, `geocode/45.4214/75.6919` representa Ottawa, Canadá. Se uma coordenada de geocódigo for fornecida, a API retornará dados para o local mais próximo disponível. Os pontos são usados como separadores decimais e as vírgulas são usadas para separar os valores de latitude e longitude. Se um geocódigo for fornecido, os valores de latitude e longitude reais que são usados serão retornados nos metadados da resposta.|
+|`grupo de produtos`   |O produto. Por exemplo, `observations` ou `forecast`. Um subgrupo do produto, por exemplo, `historical`, é opcional.|
+|`data`            |O tipo de data. Por exemplo, `daily` ou `monthly`.|
+|`format`          |O formato. Por exemplo, `3day`, `5day`, `7day` ou `10day`.|
 |`units`           |As unidades opcionais nas quais retornar a resposta. A API suporta as unidade de medida English (e), Metric (m) e UK-Hybrid (h). Se o Cliente fornecer as unidades de medida, mas não fornecer um valor, a API retornará os dados na unidade de medida que correspondem ao código de idioma. A unidade de medida padrão ou solicitada é retornada no parâmetro das unidades nos metadados da resposta.|
 |`linguagem`        |O idioma no qual retornar a resposta. O padrão é en-US. O idioma de tradução padrão ou solicitado é retornado no parâmetro de idioma nos metadados da resposta.|
 *Tabela 2. Detalhes da URL*
@@ -193,6 +191,87 @@ https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/dai
 a [Plataforma On-line de Procura de Padrão ISO](https://www.iso.org/obp/ui/#search/code/){:new_window}.
 As APIs usam o sistema de referência de coordenada de geocode WGS84. Para obter informações adicionais, consulte
 [Vocabulário Básico de Posição Geográfica](https://www.w3.org/2003/01/geo/){:new_window}.
+
+## Códigos e imagens de ícones
+{: #icon_code_images}
+
+Quando as APIs REST do {{site.data.keyword.weather_short}} retornam um código de ícone na resposta,
+é possível utilizá-lo para determinar qual imagem de ícone exibir no app.
+Há um relacionamento de um para um entre o código do ícone na resposta da API e o nome do arquivo da imagem do ícone.
+Por exemplo, se a resposta da API contiver um `icon_code` de 1, será possível usar o nome de arquivo `01.png`
+para exibir a imagem de ícone correspondente.
+
+No código, é possível criar uma função que usa o `icon_code` para determinar
+a URL da imagem do ícone. Por exemplo:
+
+```
+function getIconURL(code) {
+    return "images/weathericons/icon" + code + ".png";
+}
+```
+
+A tabela a seguir contém códigos de ícone, descrições e imagens que podem ser usadas
+com as APIs REST do {{site.data.keyword.weather_short}}. A tabela indica se um ícone
+será usado nas APIs de Previsão ou Observação e se o ícone estará disponível nas partes de previsão
+Noturna ou Diurna.
+
+|**Código**|**Descrição**|**Imagem**|**Uso da API** |**Noturna ou Diurna**|
+|----|--------------------------|------------|------------|--------------------|
+| 0  | Tornado                  | <img src="images/00.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Noite e Dia |
+| 1  | Tempestade tropical           | <img src="images/01.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 2  | Hurricane                | <img src="images/02.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Noite e Dia |
+| 3  | Tempestades fortes            | <img src="images/03.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Noite e Dia |
+| 4  | Trovão e granizo         | <img src="images/04.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 5  | Pancadas de chuva e neve     | <img src="images/05.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 6  | Chuva/Chuva com neve             | <img src="images/06.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 7  | Combinação de neve/Chuva com neve gelada  | <img src="images/07.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 8  | Garoa congelada         | <img src="images/08.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 9  | Garoa                  | <img src="images/09.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 10 | Chuva de Granizo            | <img src="images/10.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 11 | Chuva fraca               | <img src="images/11.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 12 | Chuva                     | <img src="images/12.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 13 | Ondas esparsas       | <img src="images/13.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 14 | Neve fraca               | <img src="images/14.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 15 | Ventos fortes/Neve oscilante  | <img src="images/15.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 16 | Neve                     | <img src="images/16.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 17 | Granizo                     | <img src="images/17.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 18 | Granizo                    | <img src="images/18.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 19 | Vento de areia/Tempestade de areia | <img src="images/19.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 20 | Nevoeiro                    | <img src="images/20.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 21 | Névoa seca/Ventania             | <img src="images/21.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 22 | Fumaça/Ventania            | <img src="images/22.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 23 | Brisa forte                   | <img src="images/23.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Noite e Dia |
+| 24 | Rajada de vento/Ventania    | <img src="images/24.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 25 | Frio glacial/Cristais de gelo    | <img src="images/25.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 26 | Cloudy                   | <img src="images/26.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 27 | Nublado na Maior Parte            | <img src="images/27.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 28 | Nublado na Maior Parte            | <img src="images/28.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Dia         |
+| 29 | Parcialmente Nublado            | <img src="images/29.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite       |
+| 30 | Parcialmente Nublado            | <img src="images/30.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Dia         |
+| 31 | Clear                    | <img src="images/31.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite       |
+| 32 | Ensolarado                    | <img src="images/32.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Dia         |
+| 33 | Melhora/Limpo na maior parte      | <img src="images/33.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite       |
+| 34 | Melhora/Ensolarado na maior parte      | <img src="images/34.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Dia         |
+| 35 | Combinação de chuva e granizo        | <img src="images/35.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Dia         |
+| 36 | Hot                      | <img src="images/36.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Dia         |
+| 37 | Tempestades com trovoadas isoladas   | <img src="images/37.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Dia         |
+| 38 | Temporais com Relâmpago e Trovão            | <img src="images/38.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 39 | Pancadas esparsas        | <img src="images/39.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Dia          |
+| 40 | Chuva Pesada               | <img src="images/40.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 41 | Pancadas de neve esparsas   | <img src="images/41.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Dia         |
+| 42 | Neve pesada               | <img src="images/42.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+| 43 | Nevasca                 | <img src="images/43.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Noite e Dia |
+| 44 | Not Available (N/A)      | <img src="images/44.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Noite e Dia |
+| 45 | Pancadas esparsas        | <img src="images/45.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Noite       |
+| 46 | Pancadas de neve esparsas   | <img src="images/46.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão                | Noite       |
+| 47 | Tempestades com trovoadas esparsas  | <img src="images/47.png " width="100" height="100" alt="Imagem do ícone."/>| Previsão e Observações | Noite e Dia |
+*Tabela 3. Códigos e imagens de ícones*
+
+É possível fazer download desse conjunto de ícones de clima como [PNGs](https://twcdocs.mybluemix.net/download/weather_icons_200x200_png.zip){:new_window}
+ou [SVGs](https://twcdocs.mybluemix.net/download/weather_icons_200x200_svg.zip){:new_window} e utilizá-los em seu app. 
+
+Também é possível fazer download do [conjunto de ícones](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} usado
+pelo [app demo do {{site.data.keyword.weather_short}}](http://weather-company-data-demo.{APPDomain}){: new_window}.
 
 ## Unidades de Medida
 {: #units_measure}
@@ -204,9 +283,9 @@ possível passar em uma unidade de medida que
 substitui a padrão.
 
 * Para en-US ou en, o código de unidade de medida padrão é
-Inglês/Imperial. O código de unidade é "e".
-* Para en-GB, a unidade de medida padrão é Hybrid-UK. O código de unidade é "h".
-* Para todo o resto, a unidade de medida padrão é Metric. O código de unidade é "m".
+Inglês/Imperial. O código de unidade é `e`.
+* Para en-GB, a unidade de medida padrão é Hybrid-UK. O código de unidade é `h`.
+* Para todo o resto, a unidade de medida padrão é Metric. O código de unidade é `m`.
 
 ## Tradução de Idioma
 {: #language_translation}
@@ -234,12 +313,12 @@ Os campos seguintes são convertidos:
 |`headline_text`     |O texto do título de um evento para o local.|
 |`event_desc`        |Uma descrição de um evento.|
 |`cntry_name`        |O nome do país no qual um evento ocorreu, especificado em letras maiúsculas e minúsculas.|
-*Tabela 3. Campos de resposta traduzidos*
+*Tabela 4. Campos de resposta traduzidos*
 
 ## Manipulando campos de dados nulos ou ausentes na resposta da API
 {: #handling_null_or_missing}
 
-Se um campo de dados for nulo porque os dados não estão disponíveis, as APIs REST retornarão as tags do campo apropriado com a palavra "nulo" ou nem retornarão o campo.
+Se um campo de dados for nulo porque os dados não estão disponíveis, as APIs REST retornarão as tags de campo apropriadas com a palavra `null` ou nem retornarão o campo.
 
 ## Tratamento de Erros
 {: #handling_errors}
@@ -253,7 +332,7 @@ Os códigos de erro a seguir são comuns a todas as APIs:
 |403       |Proibido. O servidor entendeu a solicitação mas está se recusando a atendê-la.|
 |404       |Não localizado. Se um parâmetro necessário não estiver presente na solicitação da API, um erro MissingParameterException com um código de erro 404 será retornado.|
 |500       |Erro do servidor interno. O servidor encontrou uma condição inesperada que o impediu de atender a solicitação.|
-*Tabela 4. Código de resposta de erro*
+*Tabela 5. Código de resposta de erro*
 
 A resposta sobre o erro é sempre a mesma. Vários códigos de
 erro podem ser retornados em uma única resposta.

@@ -13,7 +13,7 @@ copyright:
 # 關於 {{site.data.keyword.weather_short}}
 {: #about_weather}
 
-*前次更新：2016 年 7 月 1 日*
+前次更新：2016 年 8 月 22 日
 {: .last-updated}
 
 使用 {{site.data.keyword.weatherfull}}，可以將來自 The Weather Company (TWC) 的天氣資料納入 {{site.data.keyword.Bluemix}} 應用程式中。
@@ -31,8 +31,6 @@ copyright:
 * 政府發出的天氣警示，包括由 National Weather Service（美國）、Environment Canada 及 MeteoAlarm（歐洲）所發出的天氣監視、警告、聲明及建議。
 * 年鑑服務，提供歷史每日或每月天氣資料，資料來源是 National Weather Service（美國國家氣象局）觀測站，時間則跨越 10 到 30 年以上。
 * 位置對映服務，提供查閱位置名稱或地理編碼（經緯度）以擷取符合您要求之位置集的功能。
-
-您可以[下載一組圖示](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window}以便用於您的應用程式。
 
 ## 定價模型
 {: #pricing_models}
@@ -55,12 +53,15 @@ API 呼叫傳回的項目數，來驗證應用程式是否到達方案的限制�
 ## 意見與支援
 {: #feedback_support}
 
-如果您具有使用 {{site.data.keyword.weather_short}} 建立應用程式的技術問題，請在 [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window} 上張貼問題，並以 **ibm-bluemix** 和 **weather** 來標記您的問題。
+您可以搜尋資訊或透過討論區提問來取得協助。您也可以開啟支援問題單。
 
-如果遇到此服務的任何問題，請使用 [IBM developerWorks Answers 討論區](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}。
-請包含 **bluemix** 及 **weather** 標籤，以讓 IBM 為您提供更完善的支援。
+使用討論區提問時，請標記您的問題，以便 {{site.data.keyword.Bluemix_notm}} 開發團隊能看到它。
 
-如果您對於從 Insights for Weather 移轉應用程式到 {{site.data.keyword.weather_short}}
+* 如果您有使用 {{site.data.keyword.weather_short}} 開發或部署應用程式的相關技術問題，請將問題張貼在 [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window}，並使用 **ibm-bluemix** 和 **weather** 來標記您的問題。
+* 如果遇到服務或開始使用指示的相關問題，請使用 [IBM developerWorks Answers 討論區](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}。請包含 **bluemix** 及 **weather** 標籤。
+* 如果您對於從 Insights for Weather 移轉應用程式到 {{site.data.keyword.weather_short}}
 有問題，請到 [IBM developerWorks](http://www.ibm.com/developerworks){:new_window} 與我們聯絡。
 
-如需疑難排解 Bluemix 問題的相關資訊，請參閱[疑難排解](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}。如需關於透過論壇搜尋資訊及發問，以及關於與支援中心聯絡的詳細資料，請參閱[取得客戶支援](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}。
+如需使用討論區的詳細資料，請參閱[取得協助](https://console.{DomainName}/docs/support/index.html#getting-help){: new_window}。
+
+如需開啟 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://console.{DomainName}/docs/support/index.html#contacting-support){: new_window}。
