@@ -95,7 +95,7 @@ The objective is to use a JavaScript application--[helloblockchain.js](https://g
 	"credentials": {
 	```
 	
-1. Then add a final closing `}` to line 202 to close the object.  The layout of your ServiceCredentials.json should mirror that of the example [ServiceCredentials.json](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/ServiceCredentials.json), leaving you with a payload of 202 lines. If you obtain your credentials from a blockchain instance derived from the Bluemix [classic console](https://console.ng.bluemix.net/) format, then you needn't worry about this discrepancy.  The screenshots below depict the differences in the two layouts, with the initial showing *new console*, and the latter showing *classic*:
+1. Then add a final closing `}` to line 202 to close the object.  The layout of your ServiceCredentials.json should mirror that of the example [ServiceCredentials.json](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/ServiceCredentials.json), leaving you with a payload of 202 lines. If you obtain your credentials from a blockchain instance derived from the Bluemix [classic console](https://console.ng.bluemix.net/) format, then you can disregard this discrepancy.  The screenshots below depict the differences in the two layouts, with the initial showing *new console*, and the latter showing *classic*:
 
      ![Service Credentials New Console](images/servicecreds1.png "Service Credentials New Console")
      
