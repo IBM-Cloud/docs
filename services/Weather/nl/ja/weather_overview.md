@@ -13,7 +13,7 @@ copyright:
 # {{site.data.keyword.weather_short}} の概要
 {: #about_weather}
 
-*最終更新日: 2016 年 7 月 01 日*
+最終更新日: 2016 年 8 月 22 日
 {: .last-updated}
 
 {{site.data.keyword.weatherfull}} を使用して、The Weather Company (TWC) からの気象データをご使用の {{site.data.keyword.Bluemix}} アプリケーションに取り込みます。
@@ -32,8 +32,6 @@ REST API を使用すると、以下の情報を取得できます。
 * 政府が発表する気象アラート (注意報、警報、情報など)、およびアメリカ国立気象局 (米国)、カナダ環境省 (カナダ)、MeteoAlarm (ヨーロッパ) が発表する勧告。
 * アメリカ国立気象局の観測所で観測された、過去 10 年から 30 年以上にわたる期間の日ごとまたは月ごとの気象履歴データを提供するアルマナック・サービス。
 * ロケーション名またはジオコード (緯度と経度) で検索して、要求に一致する一連の場所を取得する機能を提供する場所マッピング・サービス。
-
-アプリで使用するために、[アイコンのセットをダウンロードする](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window}ことができます。
 
 ## 価格設定モデル
 {: #pricing_models}
@@ -54,12 +52,14 @@ REST API を使用すると、以下の情報を取得できます。
 ## フィードバックとサポート
 {: #feedback_support}
 
-{{site.data.keyword.weather_short}} を使用するアプリケーションの作成方法について技術的な質問がある場合は、[Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window} で質問を投稿し、質問に **ibm-bluemix** と **weather** のタグを付けてください。
+情報を検索するか、フォーラムで質問してヘルプを得ることができます。また、サポート・チケットを開くことができます。
 
-このサービスに関して問題がある場合は、[IBM developerWorks Answers フォーラム](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}をご利用ください。
-**bluemix** タグや **weather** タグを含めると、IBM からより良いサポートをご提供できます。
+フォーラムを使用して質問する場合は、{{site.data.keyword.Bluemix_notm}} の開発チームの目に触れるように、質問にタグを付けます。
 
-Insights for Weather から {{site.data.keyword.weather_short}} へのアプリのマイグレーションについてのご質問がある場合、[IBM developerWorks](http://www.ibm.com/developerworks){:new_window} からお問い合わせください。
+* {{site.data.keyword.weather_short}} を使用するアプリケーションの開発やデプロイについて技術的な質問がある場合は、[スタック・オーバーフロー](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window}に投稿し、質問に「**ibm-bluemix**」と「**weather**」のタグを付けます。
+* サービスおよび最初の手順に関して問題がある場合は、[IBM developerWorks Answers フォーラム](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}を使用してください。「**bluemix**」タグと「**weather**」タグを含めてください。
+* Insights for Weather から {{site.data.keyword.weather_short}} へのアプリのマイグレーションについてのご質問がある場合、[IBM developerWorks](http://www.ibm.com/developerworks){:new_window} からお問い合わせください。
 
-Bluemix の問題を解決するための情報は、[トラブルシューティング](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}を参照してください。
-フォーラムを介して情報を探したり質問する方法、サポートに連絡する方法について詳しくは、[お客様サポートの利用](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}を参照してください。
+フォーラムの使用について詳しくは、[ヘルプの利用](https://console.{DomainName}/docs/support/index.html#getting-help){: new_window}を参照してください。
+
+IBM サポート・チケットのオープンや、サポート・レベルおよびチケットの重大度について詳しくは、[サポートへのお問い合わせ](https://console.{DomainName}/docs/support/index.html#contacting-support){: new_window}を参照してください。

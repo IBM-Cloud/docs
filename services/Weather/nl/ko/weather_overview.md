@@ -13,7 +13,7 @@ copyright:
 # {{site.data.keyword.weather_short}} 정보
 {: #about_weather}
 
-*마지막 업데이트 날짜: 2016년 7월 1일*
+마지막 업데이트 날짜: 2016년 8월 22일
 {: .last-updated}
 
 {{site.data.keyword.weatherfull}}를 사용하여 TWC(The Weather Company)의 기상 데이터를
@@ -36,8 +36,6 @@ REST API를 사용하여 다음 정보를 검색할 수 있습니다.
 * National Weather Service(미국), Environment Canada 및 MeteoAlarm(유럽)에서 발행된 기상 감시, 경고, 명령문 및 보안 권고문을 포함하는 정부 발행 기상 경보입니다.
 * 10 - 30년 이상의 기간에서 National Weather Service 관측소의 히스토리 일별 또는 월별 기상 데이터를 제공하는 연감 서비스입니다.
 * 사용자 요청에 맞는 위치 세트를 검색하기 위해 위치 이름 또는 지오코드(위도 및 경도)를 검색하는 기능을 제공하는 위치 맵핑 서비스입니다.
-
-앱에서 사용할 [아이콘 세트를 다운로드](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window}할 수 있습니다.
 
 ## 가격 책정 모델
 {: #pricing_models}
@@ -77,17 +75,15 @@ API에 대한 분당 호출 수에 기반합니다. 클라이언트에게 월별
 ## 피드백 및 지원
 {: #feedback_support}
 
-{{site.data.keyword.weather_short}}에서 앱 작성에 대한 기술적 질문이 있으면
-[스택 오버플로우](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window}에 질문을 게시하고
-**ibm-bluemix** 및 **weather**로 질문에 태그를 지정하십시오.
+정보를 검색하거나 포럼에서 질문하여 도움을 받을 수 있습니다. 지원 티켓을 열 수도 있습니다.
 
-이 서비스에서 문제가 발생하면 [IBM developerWorks Answers 포럼](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}을 활용하십시오.
-**bluemix** 및 **weather** 태그를 포함하여 IBM에서 더 나은 지원을 받으십시오.
+포럼을 사용하여 질문하는 경우, {{site.data.keyword.Bluemix_notm}} 개발 팀에 표시되도록 해당 질문에 태그를 지정하십시오.
 
-Insights for Weather에서 {{site.data.keyword.weather_short}}까지 앱을 마이그레이션하는 데 대한 질문이 있으면
+* {{site.data.keyword.weather_short}}에서 앱 개발 또는 배치에 대한 기술적 질문이 있으면 [스택 오버플로우](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window}에 질문을 게시하고 **ibm-bluemix** 및 **weather**로 질문에 태그를 지정하십시오.
+* 서비스에 문제가 있거나 지시사항을 시작하는 데 문제가 있으면 [IBM developerWorks Answers 포럼](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}을 사용하십시오. **bluemix** 및 **weather** 태그를 포함하십시오.
+* Insights for Weather에서 {{site.data.keyword.weather_short}}까지 앱을 마이그레이션하는 데 대한 질문이 있으면
 [IBM developerWorks](http://www.ibm.com/developerworks){:new_window}에서 문의해 주십시오.
 
-Bluemix 관련 문제점 해결에 대한 정보는
-[문제점 해결](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}을 참조하십시오.
-정보 검색, 포럼을 통해 질문하기와 지원 문의에 대한 세부사항은
-[고객 지원 받기](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}를 참조하십시오. 
+포럼 사용에 대한 자세한 내용은 [도움말 가져오기](https://console.{DomainName}/docs/support/index.html#getting-help){: new_window}를 참조하십시오.
+
+IBM 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 정보는 [지원 문의](https://console.{DomainName}/docs/support/index.html#contacting-support){: new_window}를 참조하십시오.

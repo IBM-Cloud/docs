@@ -13,7 +13,7 @@ copyright:
 # 例
 {: #tutorials_samples}
 
-*最終更新日: 2016 年 7 月 01 日*
+最終更新日: 2016 年 7 月 28 日
 {: .last-updated}
 
 以下の例を用いて、{{site.data.keyword.weather_short}} サービスの使用方法を説明します。
@@ -22,16 +22,17 @@ copyright:
 ## {{site.data.keyword.weather_short}} デモ
 {: #insights_weather_demo}
 
-サンプル・アプリケーションを使用すると、{{site.data.keyword.weather_short}} サービスを使用して気象データを表示することができます。このアプリケーションには、[https://weather-company-data-demo.mybluemix.net/](https://weather-company-data-demo.mybluemix.net) にナビゲートしてアクセスできます。
+[{{site.data.keyword.weather_short}} デモ・アプリケーション](http://weather-company-data-demo.{APPDomain}){: new_window}を試すことで、{{site.data.keyword.weather_short}} サービスを使用した気象データの取得方法を習得できます。
 ご使用のブラウザーでアプリケーションが開き、ユーザーの現在の位置をアプリケーションと共有するかどうかを尋ねられます。
 
-サンプル・アプリケーションでは、現在の位置の気象についての、現在の観測された状態を表示できます。
+デモ・アプリケーションでは、現在の位置の気象についての、現在の観測された状態を表示できます。
 
 ![オンタリオ州オタワの現在の観測を示すメインスクリーンの画像。](images/twctestapp_main_screen.jpg "オンタリオ州オタワの現在の観測を示すメインスクリーンの画像。")
 
-次の 48 時間についての毎時の予報および次の 10 日間についての毎日の予報を表示することもできます。サンプル内でこれらの領域にマウスのポインターを合わせると、API 呼び出しの結果が JSON 形式で表示されます。これには、データを取得するために使用されたメタデータが含まれています。
+次の 48 時間についての毎時の予報および次の 10 日間についての毎日の予報を表示することもできます。毎日の予報では、夜間部分と日中部分が表示されます。
+デモ・アプリケーション内でこれらの各領域をクリックすると、API 呼び出しの結果が JSON 形式で表示されます。これには、データを取得するために使用されたメタデータが含まれています。
 
-デモ・アプリケーションで、**「Bluemix にデプロイ」**をクリックして、アプリケーションの複製版を作成するか、[GitHub から直接、アプリを複製します](https://github.com/IBM-Bluemix/weather-company-data-demo)。
+デモ・アプリケーションで、**「Bluemix にデプロイ」**をクリックして、アプリケーションの複製版を作成するか、[GitHub から直接、アプリケーションを複製します](https://github.com/IBM-Bluemix/weather-company-data-demo)。
 
 ## 毎時の予報の取得
 {: #getting_twenty_four_hour_forecast}
@@ -47,7 +48,7 @@ copyright:
 ```
 GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/geocode/45.42/75.69/forecast/hourly/48hour.json?units=m&language=en-US
 ```
-アプリケーションで `GET` 命令を発行して、特定の郵便番号について 48 時間の毎時の予報データを取得することもできます。
+アプリケーションで `GET` 命令を発行して、郵便番号の地域について 48 時間の毎時の予報データを取得することもできます。
 
 **注**: 郵便番号を指定できるのは、サポートされる国別コードの米国 (US)、英国 (GB)、フランス (FR)、ドイツ (DE)、またはイタリア (IT) の場合のみです。
 
@@ -274,7 +275,8 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 例えば、計測単位にメートル系が指定されている場合、現在の条件には、以下のようなデータが含まれている可能性があります。
 
 ```
-  "observation": {"key": "36821",
+  "observation": {
+    "key": "36821",
     "class": "observation",
     "expire_time_gmt": 1467051300,
     "obs_id": "36821",
@@ -593,7 +595,7 @@ https://twcservice.mybluemix.net:443/api/weather/v1/geocode/33.40/-83.42/almanac
 {: #using_location_services}
 
 ### 市区町村による要求
-特定の市区町村のロケーション情報を要求するには、少なくとも 1 つの照会パラメーター (市区町村名など) と市区町村の `locationType` を指定する必要があります。`countryCode` や `adminDistrictCode` を指定して、取得できる固有の場所の数を削減することもできます。
+市区町村のロケーション情報を要求するには、少なくとも 1 つの照会パラメーター (市区町村名など) と市区町村の `locationType` を指定する必要があります。`countryCode` や `adminDistrictCode` を指定して、取得できる固有の場所の数を削減することもできます。
 
 例えば、次の要求は、ジョージア州アトランタ (米国) のロケーション情報を取得します。
 

@@ -13,7 +13,7 @@ copyright:
 # 示例
 {: #tutorials_samples}
 
-*上次更新时间：2016 年 7 月 1 日*
+上次更新时间：2016 年 7 月 28 日
 {: .last-updated}
 
 通过以下示例了解如何使用 {{site.data.keyword.weather_short}} 服务。
@@ -22,13 +22,15 @@ copyright:
 ## {{site.data.keyword.weather_short}} 演示
 {: #insights_weather_demo}
 
-您可以使用样本应用程序通过 {{site.data.keyword.weather_short}} 服务来查看天气数据。该应用程序可通过导航至 [https://weather-company-data-demo.mybluemix.net](https://weather-company-data-demo.mybluemix.net) 进行访问。应用程序会在浏览器中打开，并询问您是否要与将您的当前位置与该应用程序共享。
+您可以通过尝试使用 [{{site.data.keyword.weather_short}} 演示应用程序](http://weather-company-data-demo.{APPDomain}){: new_window}来确定如何通过 {{site.data.keyword.weather_short}} 服务检索天气数据。
+应用程序会在浏览器中打开，并询问您是否要与将您的当前位置与该应用程序共享。
 
-在样本应用程序中，可以查看观察到的您所在位置的最新天气状况。
+在演示应用程序中，可以查看观察到的您所在位置的最新天气状况。
 
 ![包含安大略省渥太华最新观察数据的主屏幕图像。](images/twctestapp_main_screen.jpg "包含安大略省渥太华最新观察数据的主屏幕图像。")
 
-您还可以查看未来 48 小时的每小时天气预测以及未来 10 天的每天天气预测。如果将鼠标悬停在样本中各个区域，可以查看 JSON 格式的 API 调用结果，包括用于检索数据的元数据。
+您还可以查看未来 48 小时的每小时天气预测以及未来 10 天的每天天气预测。每天天气预报显示白天天气和夜间天气。
+如果在演示应用程序中单击各个区域，可以查看 JSON 格式的 API 调用结果，包括用于检索数据的元数据。
 
 在演示应用程序中，单击**部署到 Bluemix** 以创建应用程序的克隆版本，或者[直接从 GitHub 克隆应用程序](https://github.com/IBM-Bluemix/weather-company-data-demo)。
 
@@ -46,7 +48,7 @@ copyright:
 ```
 GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/geocode/45.42/75.69/forecast/hourly/48hour.json?units=m&language=en-US
 ```
-您还可以在应用程序中发出 `GET` 操作来检索给定邮政编码 48 小时的天气预测数据。**注**：您仅可以提供受支持国家或地区代码美国 (US)、英国 (GB)、法国 (FR)、德国 (DE) 或意大利 (IT) 的邮政编码。
+您还可以在应用程序中发出 `GET` 操作来检索邮政编码的 48 小时天气预测数据。**注**：您仅可以提供受支持国家或地区代码美国 (US)、英国 (GB)、法国 (FR)、德国 (DE) 或意大利 (IT) 的邮政编码。
 
 ```
 GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/location/97229%3A4%3AUS/forecast/hourly/48hour.json?units=m&language=en-US
@@ -147,7 +149,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 每天天气预测包含适用于一周指定天 (`dow`) 的 24 小时时间段的常规信息。例如，每天天气预测可能包含以下数据：
 
 ```
-      "class": "fod_long_range_daily",
+"class": "fod_long_range_daily",
       "expire_time_gmt": 1467043540,
       "fcst_valid": 1467075600,
       "fcst_valid_local": "2016-06-28T07:00:00+0600",
@@ -184,7 +186,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 每天天气预测包含一周指定天的日段和夜段。例如，这两个部分可能包含以下天气预测数据：
 
 ```
-      "night": {
+"night": {
         "fcst_valid": 1467118800,
         "fcst_valid_local": "2016-06-28T19:00:00+0600",
         "day_ind": "N",
@@ -266,7 +268,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 观察数据包含常规信息以及特定于度量单位的值。例如，如果度量单位指定为度量标准，那么最新天气状况可能包含以下数据：
 
 ```
-  "observation": {"key": "36821",
+"observation": {"key": "36821",
     "class": "observation",
     "expire_time_gmt": 1467051300,
     "obs_id": "36821",
@@ -333,7 +335,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 例如，警报标题数据可能包含以下数据：
 
 ```
-  "alerts": [
+"alerts": [
     {
       "key": "cf63821f-9521-3f27-92ec-e1562ccd469b",
       "class": "bulletin",
@@ -584,7 +586,7 @@ https://twcservice.mybluemix.net:443/api/weather/v1/geocode/33.40/-83.42/almanac
 {: #using_location_services}
 
 ### 按城市名请求
-要针对给定城市请求位置信息，您必须至少提供一个查询参数，如城市名和城市的 `locationType`。您还可以提供 `countryCode` 和`adminDistrictCode`，以减少可检索的唯一位置数。
+要请求城市的位置信息，您必须至少提供一个查询参数，如城市名和城市的 `locationType`。您还可以提供 `countryCode` 和 `adminDistrictCode`，以减少可检索的唯一位置数。
 
 
 例如，以下请求可检索美国乔治亚州亚特兰大的位置信息。

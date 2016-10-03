@@ -13,16 +13,24 @@ copyright:
 # Einführung in {{site.data.keyword.weather_short}}
 {: #insights_weather_overview}
 
-*Letzte Aktualisierung: 01. Juli 2016*
+Letzte Aktualisierung: 28. Juli 2016
 {: .last-updated}
 
 Verwenden Sie {{site.data.keyword.weatherfull}},
 um Wetterdaten von "The Weather Company" (TWC) in Ihre {{site.data.keyword.Bluemix}}-Anwendungen einzubinden.
 {:shortdesc}
 
-**Achtung:** Derzeit kann der Service {{site.data.keyword.weather_short}} in folgenden Ländern oder Regionen **nicht** erworben oder verwendet werden: Afghanistan, Armenien, Aserbaidschan, Bahrain, Bangladesch, Bhutan, Brunei, Kambodscha, China, Zypern, Georgien, Indien, Indonesien, Iran, Irak, Japan, Jordanien, Kasachstan, Kuwait, Kirgistan, Laos, Libanon, Malaysia, Malediven, Mongolei, Myanmar, Nepal, Oman, Pakistan, Philippinen, Katar, Russland, Saudi-Arabien, Singapur, Südkorea, Sri Lanka, Syrien, Taiwan, Tadschikistan, Timor-Leste, Türkei, Turkmenistan, Vereinigte Arabische Emirate, Usbekistan, Vietnam, Jemen. Diese Liste wird aktualisiert, sobald weitere Informationen verfügbar sind.
+**Achtung:** Derzeit kann der Service {{site.data.keyword.weather_short}} in folgenden Ländern
+oder Regionen **nicht** erworben oder verwendet werden: Afghanistan, Armenien,
+Aserbaidschan, Bahrain, Bangladesch, Bhutan, Brunei, Kambodscha, China, Zypern, Georgien,
+Indonesien, Iran, Irak, Japan, Jordanien, Kasachstan,
+Kuwait, Kirgistan, Laos, Libanon, Malaysia, Malediven, Mongolei,
+Myanmar, Nepal, Oman, Pakistan, Philippinen, Katar, Russland, Saudi-Arabien,
+Singapur, Südkorea, Sri Lanka, Syrien, Tadschikistan, Timor-Leste, Türkei,
+Turkmenistan, Vereinigte Arabische Emirate, Usbekistan, Vietnam, Jemen. Diese Liste wird aktualisiert, sobald weitere Informationen verfügbar sind.
 
-Wenn eine Ihrer vorhandenen Anwendungen den Service [Insights for Weather](https://console.{DomainName}/docs/services/InsightsWeather/index.html){: new_window} verwendet, funktioniert Ihre App nach der Einführung von {{site.data.keyword.weather_short}} weitere 90 Tage, ohne dass Änderungen vorgenommen werden müssen. Um die neu hinzugefügten APIs und das verbesserte Preismodell nutzen zu können, sollten Sie Ihre Anwendung auf den neuen Service migrieren.
+Wenn eine Ihrer vorhandenen Anwendungen den Service [Insights for Weather](https://console.{DomainName}/docs/services/InsightsWeather/index.html){: new_window} verwendet, funktioniert Ihre App nach der Einführung von {{site.data.keyword.weather_short}} weitere 90 Tage, ohne dass Änderungen vorgenommen werden müssen. Um die neu hinzugefügten APIs und das verbesserte Preismodell
+nutzen zu können, können Sie Ihre Anwendung auf den neuen Service migrieren.
 
 Bevor Sie starten, erstellen Sie im Dashboard eine {{site.data.keyword.Bluemix_notm}}-Web-App
 mit einer Laufzeit, z. B. Liberty for Java. Warten Sie auf die Bereitstellung Ihrer App und fügen Sie dann den Service {{site.data.keyword.weather_short}} zu Ihrer App hinzu.
@@ -62,10 +70,9 @@ Ihre `VCAP_SERVICES` sehen ähnlich wie im folgenden Beispiel aus:
 **Hinweis:** Alle Bereiche sind voneinander unabhängig. Sie können die Berechtigungsnachweise des Service,
 die Ihnen in einer Region bereitgestellt wurden, nicht für die Authentifizierung
 bei einem Service in einer anderen Region verwenden.
-Wenn Sie keine gültigen Berechtigungsnachweise eingeben, wird im
-Antwortteil eine Nachricht über unberechtigten Zugriff ausgegeben.
+Wenn Sie keine gültigen Berechtigungsnachweise eingeben, wird im Antwortteil eine Nachricht über unberechtigten Zugriff ausgegeben.
 
-# Rellinks
+# Zugehörige Links
 {: #rellinks}
 ## Beispiele
 {: #samples}

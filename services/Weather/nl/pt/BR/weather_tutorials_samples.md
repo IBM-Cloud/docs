@@ -13,7 +13,7 @@ copyright:
 # Exemplos:
 {: #tutorials_samples}
 
-*Última atualização: 01 de julho de 2016*
+Última atualização: 28 de julho de 2016
 {: .last-updated}
 
 Aprenda a usar o serviço {{site.data.keyword.weather_short}} com os exemplos a seguir.
@@ -22,26 +22,21 @@ Aprenda a usar o serviço {{site.data.keyword.weather_short}} com os exemplos a 
 ## Demo do {{site.data.keyword.weather_short}}
 {: #insights_weather_demo}
 
-É possível usar um aplicativo de amostra para visualizar dados de
-clima usando o serviço {{site.data.keyword.weather_short}}.
-O aplicativo é acessível navegando para [https://weather-company-data-demo.mybluemix.net](https://weather-company-data-demo.mybluemix.net).
-O aplicativo é aberto no navegador e pergunta se o Cliente deseja
-compartilhar sua localização atual com o aplicativo.
+É possível aprender como recuperar dados do clima com o serviço {{site.data.keyword.weather_short}}
+tentando o [app demo do {{site.data.keyword.weather_short}}](http://weather-company-data-demo.{APPDomain}){: new_window}.
+O aplicativo é aberto em seu navegador e pergunta se você deseja compartilhar sua localização atual com o aplicativo.
 
-No aplicativo de amostra, é possível ver as condições atuais
-observadas para o tempo em sua
-localização.
+No aplicativo demo, é possível ver as condições observadas atuais do clima em sua localização.
 
 ![Imagem da tela principal com observações atuais para Ottawa, ON.](images/twctestapp_main_screen.jpg "Imagem da tela principal com observações atuais para Ottawa, ON.")
 
 Também é possível ver a previsão de hora em hora para as próximas 48 horas e a previsão diária para os próximos 10 dias.
-Se
-você passar o mouse sobre cada uma dessas áreas na amostra, poderá
-ver os resultados da chamada API em formato JSON, que inclui os
-metadados que foram usados para recuperar os dados.
+A previsão diária mostra a parte do dia e a parte da noite.
+Se você clicar em cada uma dessas áreas no aplicativo demo, será possível ver os resultados da chamada API no formato JSON,
+que inclui os metadados que foram usados para recuperar os dados.
 
 No aplicativo demo, clique em **Implementar no Bluemix** para criar uma versão clonada do aplicativo
-ou [clone o app diretamente do GitHub](https://github.com/IBM-Bluemix/weather-company-data-demo).
+ou [clone o aplicativo diretamente do GitHub](https://github.com/IBM-Bluemix/weather-company-data-demo).
 
 ## Obtendo uma previsão de hora em hora
 {: #getting_twenty_four_hour_forecast}
@@ -64,8 +59,8 @@ para as coordenadas de latitude e longitude para Ottawa, ON, Canadá:
 ```
 GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/geocode/45.42/75.69/forecast/hourly/48hour.json?units=m&language=en-US
 ```
-Também é possível emitir uma operação `GET` em seu aplicativo para recuperar os dados da previsão de hora em hora de 48 horas
-para um determinado código de endereçamento postal.
+Também é possível emitir uma operação `GET` em seu aplicativo para recuperar os dados de uma previsão de hora em hora de 48 horas
+para um código de endereçamento postal.
 
 **Nota**: é possível fornecer um código de endereçamento postal somente para os códigos do país suportados: Estados Unidos (US),
 Reino Unido (GB), França (FR), Alemanha (DE) ou Itália (IT).
@@ -637,7 +632,7 @@ O corpo de resposta fornece os metadados e informações a seguir:
 {: #using_location_services}
 
 ### Solicitação por nome de cidade
-Para solicitar informações de local para uma determinada cidade, deve-se fornecer pelo menos
+Para solicitar informações de localização para uma cidade, deve-se fornecer pelo menos
 um parâmetro de consulta, como um nome de cidade e um `locationType` de cidade. Também é possível
 fornecer o `countryCode` e o `adminDistrictCode` para reduzir o número de
 locais exclusivos que podem ser recuperados.

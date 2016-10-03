@@ -13,7 +13,7 @@ copyright:
 # Guía de inicio de {{site.data.keyword.weather_short}}
 {: #insights_weather_overview}
 
-*Última actualización: 01 de julio de 2016*
+Última actualización: 28 de julio de 2016
 {: .last-updated}
 
 Utilice {{site.data.keyword.weatherfull}} para incorporar datos
@@ -23,10 +23,10 @@ meteorológicos de The Weather Company (TWC) en las aplicaciones
 
 **Atención:** Actualmente, el servicio {{site.data.keyword.weather_short}} **es posible que no** se pueda adquirir
 o utilizar en los siguientes países o regiones: Afganistán, Armenia, Azerbaiyán,
-Bahrein, Bangladesh, Bhutan, Brunei, Camboya, China, Chipre, Georgia, India,
+Bahrein, Bangladesh, Bhutan, Brunei, Camboya, China, Chipre, Georgia,
 Indonesia, Irán, Irak, Japón, Jordania, Kazajistán, Kuwait, Kirguizistán, Laos,
 Líbano, Malasia, Maldivas, Mongolia, Myanmar, Nepal, Omán, Pakistán, Filipinas,
-Qatar, Rusia, Arabia Saudí, Singapur, Corea del Sur, Sri Lanka, Siria, Taiwán,
+Qatar, Rusia, Arabia Saudí, Singapur, Corea del Sur, Sri Lanka, Siria,
 Tayikistán, Timor Oriental, Turquía, Turkmenistán, Emiratos Árabes Unidos,
 Uzbekistán, Vietnam, Yemen. Esta lista se actualiza cuando hay información adicional disponible.
 
@@ -34,7 +34,7 @@ Si tiene una aplicación existente que utiliza el
 [servicio Insights for Weather](https://console.{DomainName}/docs/services/InsightsWeather/index.html){: new_window},
 su app continuará funcionando sin modificaciones durante 90 días después de la introducción de
 {{site.data.keyword.weather_short}}. Para aprovechar las API recientemente añadidas
-y el modelo de tarifas mejorado, debe migrar la aplicación al nuevo servicio.
+y el modelo de tarifas mejorado, puede migrar la aplicación al nuevo servicio.
 
 Antes de empezar, cree una aplicación web de {{site.data.keyword.Bluemix_notm}} en el panel de control con un tiempo de ejecución como Liberty for Java. Espere a que se suministre su app
 y, a continuación, añada el servicio {{site.data.keyword.weather_short}} a la app.
@@ -73,7 +73,8 @@ Su `VCAP_SERVICES` es parecido al siguiente ejemplo:
 ```
 
 **Nota:** Cada región es independiente. No es posible utilizar las credenciales de servicio facilitadas en una región para autenticarse en un servicio de otra región.
-Si no se introducen las credenciales correctas, aparece un mensaje que indica que no está autorizado.
+Si no se pueden entrar las credenciales correctas se genera un mensaje *No autorizado*
+en el cuerpo de mensaje.
 
 # rellinks
 {: #rellinks}
