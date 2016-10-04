@@ -13,30 +13,30 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-Last updated: 13 September 2016
+Last updated: 29 September 2016
 {: .last-updated}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
 {:shortdesc}
 
-**Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
+**Important**: On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
 
-The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
+The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated, the tool integrations that are available to you depend on how {{site.data.keyword.jazzhub_title}} was set up on your specific environment.
 
 *Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated*
 
-|Tool integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated|
+|Tool integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated (environment dependent)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.deliverypipeline}} 		|Yes	   	|Yes  		|
 |{{site.data.keyword.DRA_short}} 		|Yes		|No			|
 |Eclipse Orion {{site.data.keyword.webide}}		|Yes		|Yes			|
-|GitHub		|Yes		|No		|
+|GitHub		|Yes		|Yes		|
 |Dedicated GitHub Enterprise			|No		|Yes		|
-|PagerDuty			|Yes		|No		|
+|PagerDuty			|Yes		|Yes		|
 |Sauce Labs		|Yes		|No		|
-|Slack			|Yes		|No		|
+|Slack			|Yes		|Yes		|
 
-**Tip**: If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. 
+**Tip**: If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}. 
 
 
 ## Configuring the delivery pipeline
@@ -53,9 +53,9 @@ Configure the {{site.data.keyword.deliverypipeline}} to automate the continuous 
 1. Specify a name for your new pipeline.
 1. If you plan to use your pipeline to deploy a user interface, select the **Viewable App** check box. All of the apps that your pipeline creates are shown in the **VIEW APP** list on the toolchain's Tool Integrations page.
 1. Click **Create Integration** to add the {{site.data.keyword.deliverypipeline}} to your toolchain.
-1. Click the tile for {{site.data.keyword.deliverypipeline}} to view the pipeline and configure it. To learn the basics of configuring a pipeline, see [Building and deploying pipelines](../services/DeliveryPipeline/build_deploy.html){: new_window}.
+1. Click the tile for {{site.data.keyword.deliverypipeline}} to view the pipeline and configure it. To learn the basics of configuring a pipeline, see [Building and deploying pipelines (Link opens in a new window)](../services/DeliveryPipeline/build_deploy.html){: new_window}.
 
-  **Tip**: If you want to trigger the pipeline when you push changes to your GitHub or {{site.data.keyword.ghe_short}} repository (repo), you must configure GitHub or {{site.data.keyword.ghe_short}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub or {{site.data.keyword.ghe_short}} repos that is associated with your toolchain. For instructions to configure GitHub, see  [GitHub](#github) section. For instructions to configure Dedicated GitHub Enterprise, see [Getting started with {{site.data.keyword.ghe_long}}](../services/ghededicated/index.html){: new_window}.
+  **Tip**: If you want to trigger the pipeline when you push changes to your GitHub or {{site.data.keyword.ghe_short}} repository (repo), you must configure GitHub or {{site.data.keyword.ghe_short}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub or {{site.data.keyword.ghe_short}} repos that is associated with your toolchain. For instructions to configure GitHub, see  [GitHub](#github) section. For instructions to configure Dedicated GitHub Enterprise, see [Getting started with {{site.data.keyword.ghe_long}} (Link opens in a new window)](../services/ghededicated/index.html){: new_window}.
   
 1. Optional: If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Public and you want Sauce Labs to run tests on your app, configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test job. For instructions to configure the test job, see the [Configuring a Sauce Labs test job in your pipeline](#config_saucelabs) section.
 
@@ -96,7 +96,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
   
 1. Click **SAVE**. Whenever your pipeline runs, your Sauce Labs tests run.
 
-To learn more, see [Delivery Pipeline](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window}.
+To learn more, see [Delivery Pipeline (Link opens in a new window)](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window}.
 
 
 ## Adding {{site.data.keyword.DRA_short}}
@@ -112,7 +112,7 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
 1. Click the add button (+).
 1. In the Tool Integrations section, click **Deployment Risk Analytics**. 
 1. Click **Create Integration**.
-1. Click the tile for {{site.data.keyword.DRA_short}}, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline. For more information, see [{{site.data.keyword.DRA_short}}](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}.
+1. Click the tile for {{site.data.keyword.DRA_short}}, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline. For more information, see [{{site.data.keyword.DRA_short}} (Link opens in a new window)](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}.
 
 
 ## Adding the Eclipse Orion {{site.data.keyword.webide}}
@@ -130,7 +130,7 @@ To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webi
 1. Click **Create Integration**.
 1. Click the tile for the new Eclipse Orion {{site.data.keyword.webide}}. Your workspace is pre-populated with your GitHub or {{site.data.keyword.ghe_short}} repos. The repos that are associated with your current toolchain are highlighted.
 
-To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](../toolchains/web_ide.html){: new_window}.
+To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}} (Link opens in a new window)](../toolchains/web_ide.html){: new_window}.
 
 
 ## Configuring GitHub
@@ -144,7 +144,7 @@ Configure GitHub to manage your source code on the cloud:
 
 1. If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
- a. In the Configurable Integrations section, click **GitHub**. If you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+ a. In the Configurable Integrations section, click **GitHub**. If you are creating the toolchain on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
  
  b. Review the default target repo locations for the GitHub repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
  ![Default target repo locations](images/toolchain_github_config.png)
@@ -169,19 +169,19 @@ Configure GitHub to manage your source code on the cloud:
 
 1. If you enabled GitHub Issues, click the tile for GitHub Issues to open it.
 
-For more information, see [GitHub](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and [GitHub Issues](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
+For more information, see [GitHub (Link opens in a new window)](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and [GitHub Issues (Link opens in a new window)](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
 
 ## Configuring Dedicated GitHub Enterprise
 {: #configghe}
 
-{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated GitHub Enterprise is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated GitHub Enterprise and GitHub Issues, see [Using Dedicated GitHub Enterprise](../services/ghededicated/index.html){: new_window} and [GitHub Issues](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
+{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated GitHub Enterprise is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated GitHub Enterprise and GitHub Issues, see [Using Dedicated GitHub Enterprise (Link opens in a new window)](../services/ghededicated/index.html){: new_window} and [GitHub Issues (Link opens in a new window)](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
-You can configure {{site.data.keyword.ghe_short}} as a tool integration in your toolchain so that you can manage source code in your company's [{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html#dedicated){: new_window} instance.
+You can configure {{site.data.keyword.ghe_short}} as a tool integration in your toolchain so that you can manage source code in your company's [{{site.data.keyword.Bluemix_notm}} Dedicated (Link opens in a new window)](../dedicated/index.html#dedicated){: new_window} instance.
 
 1. If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
- a. Before you log in to Dedicated GitHub Enterprise for the first time, ask your company's region administrator to add your user ID to your {{site.data.keyword.Bluemix_notm}} Dedicated instance from your company's user registry by using LDAP. For information about setting up your {{site.data.keyword.ghe_short}} account, see [Using Dedicated GitHub Enterprise](../services/ghededicated/index.html){: new_window}.
+ a. Before you log in to Dedicated GitHub Enterprise for the first time, ask your company's region administrator to add your user ID to your {{site.data.keyword.Bluemix_notm}} Dedicated instance from your company's user registry by using LDAP. For information about setting up your {{site.data.keyword.ghe_short}} account, see [Using Dedicated GitHub Enterprise (Link opens in a new window)](../services/ghededicated/index.html){: new_window}.
  
  b. In the Configurable Integrations section, click **{{site.data.keyword.ghe_short}}**.    
  
@@ -202,7 +202,7 @@ You can configure {{site.data.keyword.ghe_short}} as a tool integration in your 
  
 1. To use GitHub Issues for issue tracking, select the **Enable GitHub Issues** check box.
 1. Click **Create Integration**.
-1. Click the tile for the {{site.data.keyword.ghe_short}} repo that you want to work with. Your company's [{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html#dedicated){: new_window} instance opens, where you can view the contents of the repo.
+1. Click the tile for the {{site.data.keyword.ghe_short}} repo that you want to work with. Your company's [{{site.data.keyword.Bluemix_notm}} Dedicated (Link opens in a new window)](../dedicated/index.html#dedicated){: new_window} instance opens, where you can view the contents of the repo.
  
   **Tip**: You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the {{site.data.keyword.ghe_short}} repo and deploy an app from your workspace.
 
@@ -221,15 +221,15 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Tool Integrations**. 
 1. Click the add button (+).
 1. In the Tool Integrations section, click **PagerDuty**
-1. Type the PagerDuty site name that is associated with your PagerDuty account. If you don't have a PagerDuty account, [register for one](https://signup.pagerduty.com/accounts/new){: new_window}.
-1. Type the API access key for your PagerDuty account. For instructions to find the key, see [API Authentication](https://signup.pagerduty.com/accounts/new){: new_window}.
+1. Type the PagerDuty site name that is associated with your PagerDuty account. If you don't have a PagerDuty account, [register for one (Link opens in a new window)](https://signup.pagerduty.com/accounts/new){: new_window}.
+1. Type the API access key for your PagerDuty account. For instructions to find the key, see [API Authentication (Link opens in a new window)](https://signup.pagerduty.com/accounts/new){: new_window}.
 1. Type the name of your PagerDuty service.
 1. Type the email address for the primary PagerDuty contact.
 1. Type the phone number for the primary PagerDuty contact.
 1. Click **Create Integration**.
 1. Click the tile for PagerDuty to go to pagerduty.com. You can view the events that are associated with the PagerDuty service that you specified when you configured this tool integration for your toolchain. 
 
-To learn more, see [PagerDuty](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}.
+To learn more, see [PagerDuty (Link opens in a new window)](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}.
 
 
 ## Configuring Sauce Labs
@@ -243,14 +243,14 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Tool Integrations**. 
 1. Click the add button (+).
 1. In the Tool Integrations section, click **Sauce Labs**.
-1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message at the top of your Sauce Labs account page](https://saucelabs.com/account){: new_window}.
-1. Type the access key for your Sauce Labs account. You can [find the key in the lower-left corner of your Sauce Labs account page](https://saucelabs.com/account){: new_window}.
+1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message at the top of your Sauce Labs account page (Link opens in a new window)](https://saucelabs.com/account){: new_window}.
+1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page (Link opens in a new window)](https://saucelabs.com/account){: new_window}.
 1. Click **Create Integration**.
 1. Click the tile for Sauce Labs to go to saucelabs.com and view the test activity for the toolchain.
 
  **Tip**: If you added a Sauce Labs test job to the {{site.data.keyword.deliverypipeline}}, you can select the service instance.
 
-To learn more, see [Sauce Labs](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}.
+To learn more, see [Sauce Labs (Link opens in a new window)](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}.
 
 
 ## Configuring Slack
@@ -266,9 +266,9 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Tool Integrations**.
 1. Click the add button (+).
 1. In the Tool Integrations section, click **Slack**.
-1. Type the API authentication token for your Slack account. You must use a generated full-access token to authenticate with Slack. For instructions to find the token, see [Slack authentication](https://api.slack.com/web#authentication){: new_window}.
+1. Type the API authentication token for your Slack account. You must use a generated full-access token to authenticate with Slack. For instructions to find the token, see [Slack authentication (Link opens in a new window)](https://api.slack.com/web#authentication){: new_window}.
 1. Type the name of the Slack channel that you want notifications to be sent to. If the channel that you specify doesn't exist, it is created. If the channel was archived, it is reactivated.
 1. Click **Create Integration**.
 1. Click the tile for Slack. You can view all of the activity for your toolchain in the configured Slack channel.
 
-To learn more, see [Slack](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.
+To learn more, see [Slack (Link opens in a new window)](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.

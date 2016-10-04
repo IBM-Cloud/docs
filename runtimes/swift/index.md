@@ -8,7 +8,7 @@
 Last Updated: 19 September 2016
 {: .last-updated}
 
-The Runtime for Swift on {{site.data.keyword.Bluemix}} is powered by the [Swift buildpack for Bluemix](https://github.com/IBM-Swift/swift-buildpack) (i.e. swift_buildpack).
+The Runtime for Swift on {{site.data.keyword.Bluemix}} is powered by the [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack) (i.e. swift_buildpack).
 This buildpack provides a complete runtime environment for Swift applications.
 {: shortdesc}
 
@@ -92,7 +92,7 @@ There are also other online tools available from IBM for the Swift developer.
 * [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)
 * [Kitura Documentation and APIs](http://ibm-swift.github.io/Kitura/)
 * [Kitura Starter app for Bluemix](https://github.com/IBM-Swift/Kitura-Starter-Bluemix)
-* [Swift buildpack for Bluemix](https://github.com/IBM-Swift/swift-buildpack)
-* [Swift buildpack release notes](https://github.com/IBM-Swift/swift-buildpack/releases)
+* [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack)
+* [IBM Bluemix buildpack for Swift release notes](https://github.com/IBM-Swift/swift-buildpack/releases)
 * [Swift.org](https://swift.org/)
 * [Swift language documentation](https://swift.org/documentation)

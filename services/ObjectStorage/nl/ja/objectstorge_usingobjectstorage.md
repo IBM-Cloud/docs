@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.objectstorageshort}} の使用開始 {: #using-object-storage}
@@ -256,6 +263,7 @@ curl を使用する場合は、次のようにセットアップします。
 		$ swift list container_two
 		$
 ```
+
 ### オブジェクトの削除のスケジューリング {: #schedule-object-deletion}
 
 指定の期限にオブジェクトの有効期限が切れるように設定できます。つまり、オブジェクトの削除をスケジュールに入れることができます。これを行うには、`X-Delete-At` ヘッダーまたは `X-Delete-After` ヘッダーのどちらかを使用します。`X-Delete-At` ヘッダーは、オブジェクトを削除するエポック時刻を表す整数値です。`X-Delete_After` ヘッダーは、オブジェクトが削除されるまでに経過する秒数を表す整数値です。

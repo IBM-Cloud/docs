@@ -11,7 +11,7 @@ copyright:
 Last updated: 21 July 2016
 {: .last-updated}
 
-Add security to your mobile app with the {{site.data.keyword.amafull}} service. You can configure client authentication and identity providers so that users can log in to the app with their existing Google or Facebook accounts.
+Add security to your mobile app with the {{site.data.keyword.amafull}} service. You can configure client authorization for accessing protected back-end resources running on {{site.data.keyword.Bluemix_notm}}. Use identity providers (Google and Facebook), or custom identities to authenticate users and grant access to protected back-end resources and web apps.
 {:shortdesc}
 
 **Note:** The {{site.data.keyword.amashort}} service was previously known as Advanced Mobile Access.

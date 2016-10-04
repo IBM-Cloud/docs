@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # 開始使用 {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
@@ -254,6 +261,7 @@ Swift 沒有真正的目錄結構，但會使用命名來代表目錄階層。�
 		$ swift list container_two
 		$
 ```
+
 ### 排定物件刪除 {: #schedule-object-deletion}
 
 您可以設定物件，在給定的時間量內到期。換句話說，您可以排定物件刪除。若要這樣做，您可以利用 `X-Delete-At` 或 `X-Delete-After` 標頭。`X-Delete-At` 標頭會接受一個代表新紀元時間的整數，將會在該時間刪除物件。`X-Delete_After` 標頭會接受一個代表秒數的整數，在該秒數之後將會刪除物件。

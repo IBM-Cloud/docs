@@ -1,18 +1,25 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
-# About {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
+# Informazioni su {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Last updated: 10 August 2016*
+*Ultimo aggiornamento: 29 agosto 2016*
 {: .last-updated}
 
 
-IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} uses OpenStack Identity (Keystone) for authentication and can be accessed directly by using OpenStack Object Storage (Swift) API v1 calls. IBM {{site.data.keyword.objectstorageshort}} can be bound to a {{site.data.keyword.Bluemix_notm}} application or accessed from outside a {{site.data.keyword.Bluemix_notm}} application. 
+IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} utilizza OpenStack Identity (Keystone) per l'autenticazione ed è possibile accedervi direttamente utilizzando le chiamate API OpenStack Object Storage (Swift) v1. È possibile eseguire il bind di IBM {{site.data.keyword.objectstorageshort}} a un'applicazione {{site.data.keyword.Bluemix_notm}} oppure è possibile accedere a esso dall'esterno di un'applicazione {{site.data.keyword.Bluemix_notm}}. 
 
-For more information about using OpenStack Swift and Keystone, view the [OpenStack documentation site](http://docs.openstack.org){: new_window}.
+Per ulteriori informazioni sull'utilizzo di OpenStack Swift e Keystone, consulta il [sito della documentazione di OpenStack](http://docs.openstack.org){: new_window}.
 
-The {{site.data.keyword.objectstorageshort}} architecture diagram is as follows:
+Il diagramma dell'architettura {{site.data.keyword.objectstorageshort}} è il seguente:
 
-[![{{site.data.keyword.objectstorageshort}} Architecture Diagram](images/ObjectStorageArchitectureDiagram.png)](images/ObjectStorageArchitectureDiagram.png) {: new_window}
+![{{site.data.keyword.objectstorageshort architecture diagram }}](images/ObjectStorageArchitectureDiagram.png)
 
-*Figure 1. {{site.data.keyword.objectstorageshort}} Architecture Diagram*
+*Figura 1. Diagramma dell'architettura {{site.data.keyword.objectstorageshort}}*
 

@@ -155,7 +155,7 @@ You can view scheduled and pending maintenance updates, if you have the superuse
 
 Before you start scheduling and approving updates, you must set your preapproved maintenance windows. Non-disruptive updates are scheduled during the preapproved window times.
 
-You are required to set a minimum of 12 available hours in a week for a minimum of two days during each week. For example, you can set 6-hour windows across two separate days, or you can set 4-hour windows across three separate days. To ensure that the windows provide enough time for an update to be applied, each window must be a minimum of four hours in duration.
+You are required to set a minimum of 12 available hours each week, across a minimum of two days during the week. To ensure that the windows provide enough time for an update to be applied, each window must be a minimum of four hours in duration. For example, you can set 6-hour windows on each of two separate days, or you can set 4-hour windows on each of three separate days, for a total of 12 hours across the days. 
 
 **Note**: Only users with the Superuser permission (`ops.admin`) can schedule and approve maintenance updates.
 
@@ -163,7 +163,7 @@ You are required to set a minimum of 12 available hours in a week for a minimum 
 2. Expand the **Manage Available Update Windows** section.
 3. Click **Add new** ![Add new](images/add-new.png).
 4. Set your first availability window by selecting the frequency, duration, and start time for the window.
-5. Optional: Select **Mark as preferred**, if you'd like to set your recurring availability window as a preferred time for deployments to be scheduled. Preferred windows are given priority, when possible.
+5. Optional: If you want to set your recurring availability window as a preferred time for deployments to be scheduled, select **Mark as preferred**. Preferred windows are given priority, when possible.
 6. Click **Submit**.
 7. Repeat this process until you have met the minimum requirements for the weekly windows.
 

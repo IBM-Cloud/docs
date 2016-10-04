@@ -14,10 +14,10 @@ copyright:
 # Editing code with the Eclipse Orion {{site.data.keyword.webide}}
 {: #web_ide}
 
-Last updated: 22 July 2016
+Last updated: 9 September 2016
 {: .last-updated}
 
-The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development environment where you can develop for the web. You can develop in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. The {{site.data.keyword.webide}} works with nearly any language and offers syntax highlighting [for most file types](https://hub.jazz.net/docs/overview/#dev_support){: new_window}. Source control is built in through Git or Jazz SCM, and you can deploy code locally to test and debug your apps.
+The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development environment where you can develop for the web. You can develop in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. The {{site.data.keyword.webide}} works with nearly any language and offers syntax highlighting for most [file types (Link opens in a new window)](https://hub.jazz.net/docs/overview/#dev_support){: new_window}. Source control is built in through Git or Jazz SCM, and you can deploy code locally to test and debug your apps.
 {:shortdesc}
 
 Best of all, the {{site.data.keyword.webide}} is powered by the web. You have nothing to install, nothing to maintain, and nothing to scale. You can develop anywhere that you have an internet connection.
@@ -84,13 +84,13 @@ To see a list of the keyboard shortcuts in the editor, press Alt+Shift+?. If you
 ## Managing source code
 {: #sourcecontrol}
 
-The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon <img class="inline" src="./images/webide_git_icon.png"  alt="The Git Repository icon">. For more information, see [Source control with Git](https://hub.jazz.net/docs/git/){: new_window}.
+The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon <img class="inline" src="./images/webide_git_icon.png"  alt="The Git Repository icon">. For more information, see [Source control with Git (Link opens in a new window)](https://hub.jazz.net/docs/git/){: new_window}.
 
 
 ## Deploying an app from your workspace
 {: #deploy}
 
-1. To deploy your app, from the run bar, either select or [create](https://hub.jazz.net/tutorials/livesync/#launch_configuration){: new_window} a launch configuration.
+1. To deploy your app, from the run bar, either select or [create (Link opens in a new window)](https://hub.jazz.net/tutorials/livesync/#launch_configuration){: new_window} a launch configuration.
 1. Click the deploy icon <img class="inline" src="./images/webide_deploy_button.png"  alt="The deploy icon">. An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration. 
 2. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
 ![Run bar](images/webide_runbar.png)
@@ -112,7 +112,7 @@ To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.ke
 
 ### Before you begin 
 
-[Download and install the {{site.data.keyword.Bluemix_live_notm}} command-line interface](http://livesyncdownload.ng.bluemix.net){: new_window}.
+Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface (Link opens in a new window)](http://livesyncdownload.ng.bluemix.net){: new_window}.
 
 ### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}

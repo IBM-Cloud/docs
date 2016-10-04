@@ -13,7 +13,7 @@ copyright:
 # 예:
 {: #tutorials_samples}
 
-*마지막 업데이트 날짜: 2016년 7월 1일*
+마지막 업데이트 날짜: 2016년 7월 28일
 {: .last-updated}
 
 다음 예제와 함께 {{site.data.keyword.weather_short}} 서비스를 사용하는 방법을 학습합니다.
@@ -22,20 +22,21 @@ copyright:
 ## {{site.data.keyword.weather_short}} 데모
 {: #insights_weather_demo}
 
-샘플 애플리케이션을 통해 {{site.data.keyword.weather_short}} 서비스를 사용하여 기상 데이터를 볼 수 있습니다.
-애플리케이션은 [https://weather-company-data-demo.mybluemix.net](https://weather-company-data-demo.mybluemix.net)을 탐색하여 액세스 가능합니다.
-애플리케이션이 브라우저에서 열리고 사용자의 현재 위치를 앱과 공유할 것인지 묻습니다. 
+[{{site.data.keyword.weather_short}} 데모 앱](http://weather-company-data-demo.{APPDomain}){: new_window}을 시도하여 {{site.data.keyword.weather_short}}
+서비스와 함께 날씨 데이터를 검색하는 방법을 학습할 수 있습니다.
+애플리케이션이 브라우저에서 열리고 사용자의 현재 위치를 애플리케이션과 공유할지 여부를 묻습니다.
 
-샘플 애플리케이션에서 사용자의 위치에서 현재 관측된 기상 상태를 볼 수 있습니다. 
+데모 애플리케이션에서, 사용자 위치의 날씨에 대해 현재 관측된 상태를 볼 수 있습니다.
 
 ![온타리오주 오타와의 현재 관측이 표시된 기본 화면의 이미지입니다.](images/twctestapp_main_screen.jpg "온타리오주 오타와의 현재 관측이 표시된 기본 화면의 이미지입니다.")
 
 또한 그 다음 48시간 동안의 시간별 예보와 그 다음 10일 동안의 일별 예보를 볼 수 있습니다.
-샘플에서 이들 각 영역 위로 마우스를 이동하면 API 호출의 결과를
-JSON 형식으로 볼 수 있으며, 이 결과에는 데이터 검색에 사용된 메타데이터가 포함됩니다. 
+일별 예보에 주간 파트 및 야간 파트가 표시됩니다.
+데모 애플리케이션에서 이러한 영역을 각각 클릭하는 경우 JSON 형식으로 API 호출의 결과를 볼 수 있으며,
+이는 데이터를 검색하는 데 사용된 메타데이터가 포함됩니다.
 
-데모 애플리케이션에서 **Bluemix에 배치**를 클릭하여 애플리케이션의 복제된 버전을 작성하거나
-[GitHub에서 직접 앱을 복제할 수 있습니다](https://github.com/IBM-Bluemix/weather-company-data-demo).
+데모 애플리케이션에서, **Bluemix에 배치**를 클릭하여 애플리케이션의 복제된 버전을 작성하거나
+[GitHub에서 직접 애플리케이션 복제](https://github.com/IBM-Bluemix/weather-company-data-demo)를 수행하십시오.
 
 ## 시간별 예보 가져오기
 {: #getting_twenty_four_hour_forecast}
@@ -55,7 +56,7 @@ JSON 형식으로 볼 수 있으며, 이 결과에는 데이터 검색에 사용
 GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/geocode/45.42/75.69/forecast/hourly/48hour.json?units=m&language=en-US
 ```
 또한 애플리케이션에서 `GET` 연산을 실행하여 48시간 시간별 예보 데이터에서
-제공된 우편번호를 검색할 수 있습니다.
+우편번호를 검색할 수 있습니다.
 
 **참고**: 지원되는 국가 코드 미국(US),
 영국(GB), 프랑스(FR), 독일(DE) 또는 이탈리아(IT)의 우편번호만 제공할 수 있습니다.
@@ -166,7 +167,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 예를 들면, 일별 예보에는 다음 데이터가 포함됩니다.
 
 ```
-      "class": "fod_long_range_daily",
+"class": "fod_long_range_daily",
       "expire_time_gmt": 1467043540,
       "fcst_valid": 1467075600,
       "fcst_valid_local": "2016-06-28T07:00:00+0600",
@@ -204,7 +205,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 예를 들면, 이 두 파트에는 모두 다음 예보 데이터가 포함됩니다.
 
 ```
-      "night": {
+"night": {
         "fcst_valid": 1467118800,
         "fcst_valid_local": "2016-06-28T19:00:00+0600",
         "day_ind": "N",
@@ -291,7 +292,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 현재 상태에는 다음 데이터가 포함됩니다.
 
 ```
-  "observation": {
+"observation": {
     "key": "36821",
     "class": "observation",
     "expire_time_gmt": 1467051300,
@@ -362,7 +363,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 기상 경보 세부사항을 검색합니다. 예를 들어, 경보 헤드라인 데이터에는 다음 데이터가 포함될 수 있습니다.
 
 ```
-  "alerts": [
+"alerts": [
     {
       "key": "cf63821f-9521-3f27-92ec-e1562ccd469b",
       "class": "bulletin",
@@ -618,7 +619,7 @@ https://twcservice.mybluemix.net:443/api/weather/v1/geocode/33.40/-83.42/almanac
 {: #using_location_services}
 
 ### 구/군/시 이름별 요청
-제공된 구/군/시의 위치 정보를 요청하려면
+구/군/시의 위치 정보를 요청하려면
 구/군/시 이름 및 구/군/시의 `locationType` 등 하나 이상의 조회 매개변수를 제공해야 합니다. 또한
 `countryCode` 및 `adminDistrictCode`를 제공하여
 검색될 수 있는 고유한 위치의 수를 줄일 수 있습니다.

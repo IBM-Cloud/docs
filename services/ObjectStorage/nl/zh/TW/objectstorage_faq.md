@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # 常見問題 (FAQ) {: #faq} 

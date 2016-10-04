@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # 开始使用 {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
@@ -259,6 +266,7 @@ Swift 没有真正的目录结构，而是使用命名来表示目录布局。�
 		$ swift list container_two
 		$
 ```
+
 ### 安排对象删除 {: #schedule-object-deletion}
 
 您可以设置对象在给定时间量到期。换句话说，您可以安排删除对象。通过使用 `X-Delete-At` 或 `X-Delete-After` 标头，可以完成此操作。`X-Delete-At` 标头采用整数代表删除对象的戳记时间。`X-Delete_After` 标头采用整数代表在该秒数之后删除对象。

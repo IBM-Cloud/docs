@@ -11,13 +11,13 @@ copyright:
 # Using toolchains on {{site.data.keyword.Bluemix_notm}} Public
 {: #toolchains-using}
 
-*Last updated: 12 August 2016*
+Last updated: 13 September 2016
 {: .last-updated}
 
 You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
 {: shortdesc}
 
-**Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. Toolchains are available in the US South region only.
+**Important**: Toolchains are available in the US South region only.
 
 ## Configuring a tool integration
 {: #configuring_a_tool_integration}
@@ -91,4 +91,4 @@ You can delete a toolchain and specify which of the associated tool integrations
 1. Click **Delete Toolchain** and review or adjust the tool integrations that you are deleting.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
 
- **Tip**: When you delete a GitHub tool integration, the associated GitHub repo is not deleted from GitHub. You must manually remove the repo from GitHub.
+ **Tip**: When you delete a GitHub tool integration, the associated GitHub repo is not deleted from GitHub. You must manually remove the repo from GitHub.h

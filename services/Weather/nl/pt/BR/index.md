@@ -13,7 +13,7 @@ copyright:
 # Introdução ao {{site.data.keyword.weather_short}}
 {: #insights_weather_overview}
 
-*Última atualização: 01 de julho de 2016*
+Última atualização: 28 de julho de 2016
 {: .last-updated}
 
 Use o
@@ -23,20 +23,20 @@ aplicativos do
 {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
-**Atenção:** Atualmente, o serviço {{site.data.keyword.weather_short}} **não pode** ser comprado
+**Atenção:** atualmente, o serviço {{site.data.keyword.weather_short}} **não pode** ser comprado
 ou usado nos países ou nas regiões a seguir: Afeganistão, Armênia, Azerbaijão,
-Bahrein, Bangladesh, Butão, Brunei, Camboja, China, Chipre, Geórgia, Índia,
+Bahrein, Bangladesh, Butão, Brunei, Camboja, China, Chipre, Geórgia,
 Indonésia, Irã, Iraque, Japão, Jordânia, Cazaquistão, Kuwait, Quirguistão, Laos,
 Líbano, Malásia, Maldivas, Mongólia, Myanmar, Nepal, Omã, Paquistão, Filipinas,
-Catar, Rússia, Arábia Saudita, Singapura, Coreia do Sul, Sri Lanka, Síria, Taiwan,
+Catar, Rússia, Arábia Saudita, Singapura, Coreia do Sul, Sri Lanka, Síria,
 Tajiquistão, Timor-Leste, Turquia, Turquemenistão, Emirados Árabes Unidos,
 Uzbequistão, Vietnã, Iêmen. Essa lista é atualizada quando informações adicionais estão disponíveis.
 
 Se você tiver um aplicativo existente que usa o
 [serviço Insights for Weather](https://console.{DomainName}/docs/services/InsightsWeather/index.html){: new_window},
 o seu aplicativo continuará a funcionar sem nenhuma modificação por 90 dias após a introdução do
-{{site.data.keyword.weather_short}}. Para obter benefícios das APIs incluídas recentemente
-e do modelo de precificação melhorado, é necessário migrar o seu aplicativo para o novo serviço.
+{{site.data.keyword.weather_short}}. Para aproveitar as APIs recém-incluídas
+e o modelo de precificação melhorado, é possível migrar o aplicativo para o novo serviço.
 
 Antes de começar, crie um aplicativo da web do {{site.data.keyword.Bluemix_notm}} no painel com um tempo de execução como Liberty for Java. Espere
 o seu aplicativo ser provisionado e, em seguida, inclua o serviço
@@ -78,7 +78,7 @@ Seu `VCAP_SERVICES` é semelhante ao exemplo a seguir:
 
 **Nota:** cada região é independente. Não é possível usar credenciais de serviço
 fornecidas a você em uma região para se autenticar em um serviço em outra região.
-A falha ao inserir credenciais adequadas resultará em uma mensagem "Desautorizado" no corpo da resposta.
+A falha ao inserir credenciais adequadas resulta em uma mensagem *Não autorizado* no corpo da resposta.
 
 # rellinks
 {: #rellinks}

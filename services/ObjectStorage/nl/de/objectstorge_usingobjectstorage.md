@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # Einführung in {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
@@ -184,7 +191,7 @@ Bei eingerichteter Versionierung wird die bereits vorhandene Version beim Hochla
 
 Objekte in `container_two` werden automatisch im folgenden Format benannt: `<Länge><Objektname>/<Zeitmarke>`.
 
-`Länge` bezieht sich dabei auf die Länge des Namens Ihres Objekts; dies ist eine aus drei Zeichen bestehende Hexadezimalzahl ohne Innenabstand. `Objektname` ist der Name Ihres Objekts. `Zeitmarke` ist die Zeitmarke des ursprünglichen Uploads dieser jeweiligen Version. 
+`Länge` bezieht sich dabei auf die Länge des Namens Ihres Objekts; dies ist eine aus drei Zeichen bestehende Hexadezimalzahl ohne Innenabstand. `Objektname` ist der Name Ihres Objekts. `Zeitmarke` ist die Zeitmarke des ursprünglichen Uploads dieser jeweiligen Version.
 
 Verwenden Sie für die Inaktivierung der Versionierung das Flag `X-Remove-Versions-Location`:
 ```
@@ -259,6 +266,7 @@ Im Folgenden sehen Sie ein vollständiges Beispiel für die Nutzung der Versioni
 		$ swift list container_two
 		$
 ```
+
 ### Objektlöschung planen {: #schedule-object-deletion}
 
 Sie können für Ihre Objekte festlegen, dass diese in einer angegebenen Zeitdauer ablaufen sollen. Das heißt, Sie können die Löschung Ihrer Objekte planen. Hierfür können Sie den Header `X-Delete-At` oder `X-Delete-After` verwenden. Der Wert für den Header `X-Delete-At` ist eine ganze Zahl, die die Referenzzeit darstellt, zu der das Objekt gelöscht werden soll. Der Wert für den Header `X-Delete_After` ist eine ganze Zahl, die die Anzahl an Sekunden darstellt, nach deren Ablauf das Objekt gelöscht wird.
@@ -269,7 +277,7 @@ Die folgenden Beispiele zeigen die Vorgehensweise, wenn Sie den Swift-Client fü
 ```
 		swift post -H "X-Delete-At:1459515600" container object
 ```
-* Verwenden Sie den folgenden Befehl, um für das Objekt festzulegen, dass es eine Stunde nach dem aktuellen Zeitpunkt gelöscht werden soll: 
+* Verwenden Sie den folgenden Befehl, um für das Objekt festzulegen, dass es eine Stunde nach dem aktuellen Zeitpunkt gelöscht werden soll:
 ```
 		swift post -H "X-Delete-After:3600" container object
 ```
@@ -285,7 +293,7 @@ Bei der Verwendung von cURL sehen die Befehle wie folgt aus:
 ```
 		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-At:1459515600" https://<Objektspeicher-URL>/container/object
 ```
-* Verwenden Sie den folgenden Befehl, um für das Objekt festzulegen, dass es eine Stunde nach dem aktuellen Zeitpunkt gelöscht werden soll: 
+* Verwenden Sie den folgenden Befehl, um für das Objekt festzulegen, dass es eine Stunde nach dem aktuellen Zeitpunkt gelöscht werden soll:
 ```
 		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-After:3600" https://<Objektspeicher-URL>/container/object
 ```
@@ -357,7 +365,7 @@ Zur Interaktion mit der {{site.data.keyword.objectstorageshort}}-API erstellen S
 ```
 
 
-Die URL besteht aus fünf Teilen. Die `<API-Version>` ist Version 1. Sie finden die Werte für `<Projekt-ID>`, `<Containernamensbereich>` und `<object namespace>` für Ihren {{site.data.keyword.objectstorageshort}} in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle. Informationen für den `<Zugriffspunkt>` finden Sie in der folgenden Tabelle:
+Die URL besteht aus fünf Teilen. Die `<API-Version>` ist Version 1. Sie finden die Werte für `<Projekt-ID>`, `<Containernamensbereich>` und `<object namespace>` für Ihren {{site.data.keyword.objectstorageshort}} in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle.  Informationen für den `<Zugriffspunkt>` finden Sie in der folgenden Tabelle:
 
 
 | **Region**  |   **Öffentlicher Zugriffspunkt**                     |
@@ -377,7 +385,7 @@ Eine umfassende Liste der Optionen der {{site.data.keyword.objectstorageshort}}-
 
 Der {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Service unterstützt die Speicherregionen Dallas und London. Diese Speicherregionen sind unabhängig von der {{site.data.keyword.Bluemix_notm}}-Region, wie zum Beispiel 'US-South' und 'United Kingdom', in der die {{site.data.keyword.objectstorageshort}}-Serviceinstanz erstellt wurde.  Beispiel: Wenn Sie eine {{site.data.keyword.objectstorageshort}}-Instanz in der {{site.data.keyword.Bluemix_notm}}-Region 'US-South' erstellen, haben Sie Lese- und Schreibzugriff auf Daten in der Speicherregion Dallas oder in der Speicherregion London.  
 
-Für die {{site.data.keyword.Bluemix_notm}}-Region 'US-South' ist Dallas die Standardspeicherregion. Für die {{site.data.keyword.Bluemix_notm}}-Region 'United Kingdom' ist London die Standardspeicherregion. Die {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle startet immer mit der Standardspeicherregion der {{site.data.keyword.Bluemix_notm}}-Region. Wenn Sie die Region wechseln wollen, klicken Sie auf die Dropdown-Liste für die {{site.data.keyword.objectstorageshort}}-Regionen und wählen eine andere Region aus.
+Für die {{site.data.keyword.Bluemix_notm}}-Region 'US-South' ist Dallas die Standardspeicherregion. Für die {{site.data.keyword.Bluemix_notm}}-Region 'United Kingdom' ist London die Standardspeicherregion.  Die {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle startet immer mit der Standardspeicherregion der {{site.data.keyword.Bluemix_notm}}-Region. Wenn Sie die Region wechseln wollen, klicken Sie auf die Dropdown-Liste für die {{site.data.keyword.objectstorageshort}}-Regionen und wählen eine andere Region aus.
 
 **Anmerkung:** Der {{site.data.keyword.objectstorageshort}}-Service unterstützt keine speicherregionsübergreifende Replikation.
 
@@ -590,7 +598,7 @@ Der Zugriff auf den Service wird durch Benutzerrollen und Zugriffssteuerungslist
   </tr>
   <tr>
     <td> Container erstellen und löschen </td>
-    <td> Aktionen abhängig von den Lese-/Schreibzugriffssteuerungslisten der Container</td>
+    <td> Aktionen abhängig von den Lese-/Schreibzugriffssteuerungslisten der Container </td>
   </tr>
   <tr>
     <td> Containerinhalt lesen und schreiben </td>
@@ -606,16 +614,16 @@ Sie können {{site.data.keyword.objectstorageshort}}-Benutzer über die {{site.d
 
 ### {{site.data.keyword.objectstorageshort}}-Serviceberechtigungsnachweise generieren {: #generating}
 
-Über die neue {{site.data.keyword.Bluemix_notm}}-Konsole können Sie neue Serviceberechtigungsnachweise für {{site.data.keyword.objectstorageshort}}-Benutzer generieren. Zum Anzeigen der neuen Konsole klicken Sie auf die Option **Neues {{site.data.keyword.Bluemix_notm}} testen**. 
+Über die neue {{site.data.keyword.Bluemix_notm}}-Konsole können Sie neue Serviceberechtigungsnachweise für {{site.data.keyword.objectstorageshort}}-Benutzer generieren.  Zum Anzeigen der neuen Konsole klicken Sie auf die Option **Neues {{site.data.keyword.Bluemix_notm}} testen**.
 
 1.  Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} als Benutzer mit einer Entwicklerrolle an. Sie müssen sich in dem Bereich der Serviceinstanz befinden, die Sie verwalten wollen.
-2. Klicken Sie auf die Registerkarte **Serviceberechtigungsnachweise**. 
-3. Klicken Sie auf **Neuer Berechtigungsnachweis**. 
-4. Geben Sie einen Namen für den Berechtigungsnachweis an. 
+2. Klicken Sie auf die Registerkarte **Serviceberechtigungsnachweise**.
+3. Klicken Sie auf **Neuer Berechtigungsnachweis**.
+4. Geben Sie einen Namen für den Berechtigungsnachweis an.
 5. Geben Sie in das Textfeld **Lineare Konfigurationsparameter hinzufügen** die Informationen zu dem Berechtigungsnachweis für die Rolle ein, die Sie erstellen wollen. Die Informationen müssen als JSON-Nutzdaten formatiert sein.
   - Zum Erstellen eines Benutzers mit Administratorberechtigungen: `{"role":"admin"}`
   - Zum Erstellen eines Benutzers ohne Administratorberechtigungen: `{"role":"member"}`
-5. Klicken Sie auf **Hinzufügen**. 
+5. Klicken Sie auf **Hinzufügen**.
 
 Zum Generieren von Serviceberechtigungsnachweisen durch cURL-Befehle oder über die Swift-CLI können Sie die folgenden Schritte ausführen.
 
@@ -625,7 +633,7 @@ Zum Generieren von Serviceberechtigungsnachweisen durch cURL-Befehle oder über 
   cf login -a api.ng.bluemix.net -u <Benutzer-ID> -p <Kennwort> -o <Organisation> -s <Bereich>
   ```
 
-2. Generieren Sie Serviceberechtigungsnachweise. `Serviceschlüsselname` wird dabei zum Namen Ihres Berechtigungsnachweises. Sie können entweder den Cloud Foundry-Befehl oder den cURL-Befehl verwenden. 
+2. Generieren Sie Serviceberechtigungsnachweise. `Serviceschlüsselname` wird dabei zum Namen Ihres Berechtigungsnachweises. Sie können entweder den Cloud Foundry-Befehl oder den cURL-Befehl verwenden.
 
   Cloud Foundry-Befehl:
   ```
@@ -643,7 +651,7 @@ Zum Generieren von Serviceberechtigungsnachweisen durch cURL-Befehle oder über 
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<Serviceinstanz-GUID>",   "name": "<Benutzername>", "role": "member"}' -X POST -H "Authorization: <Trägertoken>" -H "Content-Type: " -H "Cookie: "
   ```
 
-3. Validieren Sie die Berechtigungsnachweise für den von Ihnen erstellten Serviceschlüssel. 
+3. Validieren Sie die Berechtigungsnachweise für den von Ihnen erstellten Serviceschlüssel.
 
   Cloud Foundry-Befehl:
   ```
@@ -674,11 +682,11 @@ Zum Generieren von Serviceberechtigungsnachweisen durch cURL-Befehle oder über 
 
 ### Zugriff zuweisen {: #assigning-access}  
 
-Nur ein {{site.data.keyword.objectstorageshort}}-Benutzer mit Administratorrolle kann einem anderen Benutzer Lese- oder Schreibzugriff auf einen Container erteilen. 
+Nur ein {{site.data.keyword.objectstorageshort}}-Benutzer mit Administratorrolle kann einem anderen Benutzer Lese- oder Schreibzugriff auf einen Container erteilen.
 
-Zum Erteilen des Lesezugriffs über die CLI verwenden Sie die Option `--read-acl` oder die Option `-r`. 
+Zum Erteilen des Lesezugriffs über die CLI verwenden Sie die Option `--read-acl` oder die Option `-r`.
 
-1. Authentifizieren Sie Ihre Berechtigungsnachweise mit den Informationen in den Serviceberechtigungsnachweisen, die Sie erstellt haben. Sie empfangen Ihre Object Storage-URL und Ihr Authentifizierungstoken als Ausgabe.
+1. Authentifizieren Sie Ihre Berechtigungsnachweise mit den Informationen in den Serviceberechtigungsnachweisen, die Sie erstellt haben.  Sie empfangen Ihre Object Storage-URL und Ihr Authentifizierungstoken als Ausgabe.
 
   Swift-Befehl:
   ```
@@ -696,7 +704,7 @@ Zum Erteilen des Lesezugriffs über die CLI verwenden Sie die Option `--read-acl
   ```
   curl -i -H "X-Auth-User: <Benutzer-ID>" -H "X-Auth-Key: <Kennwort>" <Authentifizierungs-URL>
   ```
-3. Führen Sie den folgenden Befehl aus, um Lesezugriff zu erteilen: 
+3. Führen Sie den folgenden Befehl aus, um Lesezugriff zu erteilen:
 
   Swift-Befehl:
   ```
@@ -706,7 +714,7 @@ Zum Erteilen des Lesezugriffs über die CLI verwenden Sie die Option `--read-acl
   ```
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: <Tenant-ID>:<Projekt-ID>" -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
-4. Überprüfen Sie den Wert für die Lesezugriffssteuerungsliste (Read ACL). 
+4. Überprüfen Sie den Wert für die Lesezugriffssteuerungsliste (Read ACL).
 
   Swift-Befehl:
   ```
@@ -731,7 +739,7 @@ Zum Erteilen des Lesezugriffs über die CLI verwenden Sie die Option `--read-acl
   Date: Tue, 28 Jun 2016 20:57:58 GMT
   ```
 
-Sie können verschiedene ACL-Kombinationen für Lesezugriff angeben. 
+Sie können verschiedene ACL-Kombinationen für Lesezugriff angeben.
 
 <table>
   <tr>
@@ -759,7 +767,7 @@ Sie können verschiedene ACL-Kombinationen für Lesezugriff angeben.
     <td> `< Projekt-ID>:<*>` </td>
   </tr>
   <tr>
-    <td> Lesen und Auflisten für jeden Benutzer in jedem Projekt </td>
+    <td> Lesen und Auflisten für jeden Benutzer in jedem Projekt  </td>
     <td> `<*>:<*>` </td>
   </tr>
 </table>
@@ -769,9 +777,9 @@ Sie können verschiedene ACL-Kombinationen für Lesezugriff angeben.
 Anmerkung: Trennen Sie Zugriffssteuerungslisten durch ein Komma (,). Beispiel: `-read-acl projekt-id:benutzer-id1, projekt-id2:benutzer-id2`.
 
 
-Zum Erteilen von Schreibzugriff verwenden Sie die Option `--write-acl` oder `-w` in der Swift-CLI. 
+Zum Erteilen von Schreibzugriff verwenden Sie die Option `--write-acl` oder `-w` in der Swift-CLI.
 
-1. Authentifizieren Sie Ihre Berechtigungsnachweise mit den Informationen in den Serviceberechtigungsnachweisen, die Sie erstellt haben. Sie empfangen Ihre Object Storage-URL und Ihr Authentifizierungstoken als Ausgabe.
+1. Authentifizieren Sie Ihre Berechtigungsnachweise mit den Informationen in den Serviceberechtigungsnachweisen, die Sie erstellt haben.  Sie empfangen Ihre Object Storage-URL und Ihr Authentifizierungstoken als Ausgabe.
 
   Swift-Befehl:
   ```
@@ -789,7 +797,7 @@ Zum Erteilen von Schreibzugriff verwenden Sie die Option `--write-acl` oder `-w`
   ```
   curl -i -H "X-Auth-User:<Benutzer-ID>" -H "X-Auth-Key:<Kennwort>" https://identity.open.softlayer.com/v3
   ```
-2. Führen Sie den folgenden Befehl aus, um Schreibzugriff zu erteilen: 
+2. Führen Sie den folgenden Befehl aus, um Schreibzugriff zu erteilen:
 
   Swift-Befehl:
   ```
@@ -800,7 +808,7 @@ Zum Erteilen von Schreibzugriff verwenden Sie die Option `--write-acl` oder `-w`
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: <Benutzer-ID>: <Projekt-ID>" -H "X-Auth-Token:<OS_AUTH_TOKEN>"
 
   ```
-3. Überprüfen Sie den Wert für die Schreibzugriffssteuerungsliste (Write ACL). 
+3. Überprüfen Sie den Wert für die Schreibzugriffssteuerungsliste (Write ACL).
 
   Swift-Befehl:
   ```
@@ -812,7 +820,7 @@ Zum Erteilen von Schreibzugriff verwenden Sie die Option `--write-acl` oder `-w`
   ```
 
 
-Sie können verschiedene ACL-Kombinationen für Schreibzugriff angeben. 
+Sie können verschiedene ACL-Kombinationen für Schreibzugriff angeben.
 
 <table>
   <tr>
@@ -846,7 +854,7 @@ Anmerkung: Trennen Sie Zugriffssteuerungslisten durch ein Komma (,). Beispiel: `
 
 ### Zugriff entfernen {: #removing-access}
 
-Gehen Sie wie folgt vor, um Lesezugriffssteuerungslisten von einem Container zu entfernen: 
+Gehen Sie wie folgt vor, um Lesezugriffssteuerungslisten von einem Container zu entfernen:
 
   Swift-Befehl:
   ```
@@ -857,7 +865,7 @@ Gehen Sie wie folgt vor, um Lesezugriffssteuerungslisten von einem Container zu 
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
 
-Gehen Sie wie folgt vor, um Schreibzugriffssteuerungslisten von einem Container zu entfernen: 
+Gehen Sie wie folgt vor, um Schreibzugriffssteuerungslisten von einem Container zu entfernen:
 
   Swift-Befehl:
   ```
@@ -868,7 +876,7 @@ Gehen Sie wie folgt vor, um Schreibzugriffssteuerungslisten von einem Container 
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
 
-Überprüfen Sie, ob eine Zugriffssteuerungsliste (ACL) entfernt wurde: 
+Überprüfen Sie, ob eine Zugriffssteuerungsliste (ACL) entfernt wurde:
 
   Swift-Befehl:
   ```

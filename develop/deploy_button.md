@@ -92,12 +92,12 @@ Specified Git branch:
 Default master branch:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&#41;
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
 <p>Specified Git branch:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&#41;
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>
@@ -171,7 +171,7 @@ With the manifest file, you can specify:
 	Supported builders: 
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, which builds output to the <code>./output/</code> folder </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, which builds output to the <code>. </code> folder </i>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, which builds output to the <code>. </code> folder </li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>, which builds output to the <code>. </code> folder </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>, which builds output to the <code>./target/</code> folder</li>
 	   </ul>
@@ -186,7 +186,7 @@ With the manifest file, you can specify:
 <li>In the root directory of your project, create a <code>.bluemix</code> directory.</li>
 <li>Upload the <code>pipeline.yml</code> file to the <code>.bluemix</code> repository.</li>
 </ol> </li>
-	<li>If you are deploying an app in a container by using <stong>IBM Containers</strong>, you must include Dockerfile in the root directory of the repository and, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. 
+	<li>If you are deploying an app in a container by using <strong>IBM Containers</strong>, you must include Dockerfile in the root directory of the repository and, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. 
 	<ul>
 	    <li> To learn more about creating Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">see the Docker documentation</a>. </li>
 	    <li>You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a <code>pipeline.yml</code> manually that is specifically for containers, <a href="https://github.com/Puquios/" target="_blank">see the examples in GitHub</a>. </li>

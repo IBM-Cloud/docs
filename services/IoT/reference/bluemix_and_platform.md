@@ -13,7 +13,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} and the {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
-Last updated: 30 August 2016
+Last updated: 29 September 2016
 {: .last-updated}
 
 The {{site.data.keyword.iot_full}} is a service that is available in {{site.data.keyword.Bluemix}}. You can access your {{site.data.keyword.iot_short_notm}} organization dashboard by using your {{site.data.keyword.Bluemix_notm}} dashboard. As a {{site.data.keyword.Bluemix_notm}} service, {{site.data.keyword.iot_short_notm}} can be integrated with other services that are hosted on {{site.data.keyword.Bluemix_notm}}. Details of specific third-party service integrations can be found in the [External Service Integrations](/extensions/index.html)
@@ -37,16 +37,14 @@ The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of
 
 The {{site.data.keyword.iot_short_notm}} offers two pricing models: Free and Standard. {{site.data.keyword.iot_short_notm}} Free allows up to 20 registered devices, 100MB of data exchanged, and a maximum of 10 bound applications.
 
-{{site.data.keyword.iot_short_notm}} Standard pricing allows an unlimited number of registered devices, 100 MB of data exchanged for free, and a cost per MB of data exchanged after the first 100 MB.
+{{site.data.keyword.iot_short_notm}} pricing allows an unlimited number of registered devices, 100 MB of data exchanged for free, and a cost per MB of data exchanged after the first 100 MB.
 
-For more information on the {{site.data.keyword.iot_short_notm}} Standard pricing:
+For more information on the {{site.data.keyword.iot_short_notm}} pricing:
 
 1. On your {{site.data.keyword.Bluemix_notm}} dashboard, click on your {{site.data.keyword.iot_short_notm}}.
 2. From the navigation menu on the left, select **Plan**.
 
 The pricing plans are displayed.
-
-For more information on {{site.data.keyword.Bluemix_notm}} billing and pricing, see [{{site.data.keyword.Bluemix_notm}} pricing details](https://console.stage1.ng.bluemix.net/docs/pricing/index.html).
 
 # Related Links
 {: #rellinks}
@@ -56,7 +54,7 @@ For more information on {{site.data.keyword.Bluemix_notm}} billing and pricing, 
 {: #general}
 
 * [{{site.data.keyword.Bluemix_notm}} security](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} platform security](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
 * [Softlayer security](http://www.softlayer.com/security){:new_window}
 * [Softlayer compliance](http://www.softlayer.com/compliance){:new_window}
