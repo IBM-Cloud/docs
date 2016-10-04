@@ -104,6 +104,6 @@ Perform the following tasks to enable push notifications for your mobile device.
 
 ## Related Links
 {: #general}
-* [{{site.data.keyword.iot_full}} documentation](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+* [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
 * [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

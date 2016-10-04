@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # FAQ {: #faq} 
@@ -37,7 +44,7 @@ Los componentes de la métrica de los precios de {{site.data.keyword.objectstora
 * Uso de almacenamiento - 0,04 $ por GB al mes
 * Transferencia de datos salientes pública - 0,09 por GB al mes 
 
-Al final del ciclo de facturación, {{site.data.keyword.Bluemix_notm}} le facturará automáticamente por el uso correspondiente al período de facturación actual. Puede ver sus cambios para el período de facturación actual a través de los informes de {{site.data.keyword.Bluemix_notm}}.
+Al final del ciclo de facturación, {{site.data.keyword.Bluemix_notm}} le facturará automáticamente por el uso correspondiente al período de facturación actual. Puede ver sus cargos para el período de facturación actual a través de los informes de {{site.data.keyword.Bluemix_notm}}.
 
 El plan de servicio estándar publicado para Londres y Dallas tiene los mismos precios.
 

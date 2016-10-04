@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # Resolução de problemas do {{site.data.keyword.objectstorageshort}}
@@ -43,7 +50,7 @@ Para resolver o problema, siga estas etapas:
 
 Se você tiver problemas ou perguntas ao usar o {{site.data.keyword.objectstoragefull}}, poderá obter ajuda procurando por informações ou fazendo perguntas através de um fórum. Também é possível abrir um chamado de suporte.
 
-Ao usar os fóruns para fazer uma pergunta, marque a sua pergunta para que ela possa ser vista pelas equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}}. 
+Ao usar os fóruns para fazer uma pergunta, marque a sua pergunta para que ela possa ser vista pelas equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}}.
 
 * Se você tiver questões técnicas sobre o {{site.data.keyword.objectstorageshort}}, poste a sua pergunta em
 [Estouro
@@ -52,7 +59,7 @@ da capacidade](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:ne
 * Para perguntas sobre o serviço e obter informações de introdução, use o fórum do [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}. Inclua
 as identificações "object-storage" e "bluemix".
 
-Consulte [Obtendo ajuda](https://console.ng.bluemix.net/docs/support/index.html#getting-help) para obter mais detalhes sobre o uso dos fóruns. 
+Consulte [Obtendo ajuda](https://console.ng.bluemix.net/docs/support/index.html#getting-help) para obter mais detalhes sobre o uso dos fóruns.
 
 Para obter informações sobre como abrir um chamado de suporte IBM ou sobre níveis de suporte e severidades de chamado, consulte
 [Entrando

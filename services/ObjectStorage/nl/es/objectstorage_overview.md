@@ -1,8 +1,15 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # Acerca de {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Última actualización: 10 de agosto de 2016*
+*Última actualización: 29 de agosto de 2016*
 {: .last-updated}
 
 
@@ -12,7 +19,7 @@ Para obtener más información sobre el uso de OpenStack Swift y Keystone, vea e
 
 El diagrama de arquitectura de {{site.data.keyword.objectstorageshort}} es el siguiente:
 
-[![{{site.data.keyword.objectstorageshort}} Diagrama de arquitectura](images/ObjectStorageArchitectureDiagram.png)(images/ObjectStorageArchitectureDiagram.png)] {: new_window}
+![{{site.data.keyword.objectstorageshort architecture diagram }}](images/ObjectStorageArchitectureDiagram.png)
 
 *Figura 1. Diagrama de arquitectura de {{site.data.keyword.objectstorageshort}}*
 

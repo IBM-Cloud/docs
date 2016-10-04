@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # Resolución de problemas de {{site.data.keyword.objectstorageshort}}
@@ -47,7 +54,7 @@ Al utilizar los foros para formular una pregunta, añada una etiqueta para que l
 
 * Si tiene preguntas técnicas sobre {{site.data.keyword.objectstorageshort}}, publique su pregunta en [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} y añada las etiquetas "ibm-bluemix" y "object-storage".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Para formular preguntas sobre el servicio y obtener instrucciones de iniciación, utilice el foro [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}.Incluya las etiquetas "object-storage" y "bluemix".
+* Para formular preguntas sobre el servicio y obtener instrucciones de iniciación, utilice el foro [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}. Incluya las etiquetas "object-storage" y "bluemix".
 
 Consulte [Obtener ayuda](https://console.ng.bluemix.net/docs/support/index.html#getting-help) para obtener más información sobre el uso de los foros.
 

@@ -14,7 +14,7 @@ copyright:
 
 # MQTT connectivity for devices
 {: #mqtt}
-Last updated: 09 September 2016
+Last updated: 21 September 2016
 {: .last-updated}
 
 MQTT is the primary protocol that devices and applications use to communicate with the {{site.data.keyword.iot_full}}. Client libraries, information, and samples are provided to help you to connect and integrate your devices with {{site.data.keyword.iot_short_notm}}.
@@ -66,7 +66,7 @@ Devices publish to the event topics in the following format:
 Where
 
 -  **event_id** is the ID of the event, for example ``status``.  The event ID can be any string that is valid in MQTT. If wildcards are not used, subscriber applications must use this string in their subscription topic to receive the events that are published on their topic.
--  **format_string** is the format of the event payload, for example ``json``. The format can be any string that is valid in MQTT. If wildcards are not used, subscriber applications must use this string in their subscription topic to receive events that are published on their topic.
+-  **format_string** is a string that defines the content type of the message payload so that the receiver of the message can determine how to parse the content. Common content type values include but are not limited to "json", "xml", "txt", and "csv". The value can be any string that is valid in MQTT.
 
 **Important:** The message payload is limited to a maximum of 131072 bytes. Messages larger than this limit are rejected.
 
@@ -81,7 +81,7 @@ Devices can subscribe to command topics in the following format:
 
 Where
  - **command_id** is the ID of the command, for example, ``update``. The command ID can be any string that is valid in the MQTT protocol.  If wildcards are not used, a device must use this string in its subscription topic to receive commands that are published on their topic.
- - **format_string** is the format of the command payload, for example ``json``. The format can be any string that is valid in the MQTT protocol. If wildcards are not used, a device must use this string in its subscription topic to receive commands that are published on their topic.
+ - **format_string** is a string that defines the content type of the command payload so that the receiver of the command can determine how to parse the content. Common content type values include but are not limited to "json", "xml", "txt", and "csv". The value can be any string that is valid in MQTT.
 
 Devices cannot subscribe to events from other devices. A device receives commands that are published only to its own device.
 
@@ -99,7 +99,7 @@ Messages with QoS=0 can be discarded and do not persist after the messaging serv
 {{site.data.keyword.iot_short_notm}} publishes requests that have a QoS level of 1 to support queuing of messages. To queue messages that are sent while a managed device is not connected, configure the device not to use clean sessions by setting the ``cleansession`` parameter to false.
 
 **Warning:**
-  If your managed device uses a durable subscription, any device management commands that are sent to your device while it is offline are reported as failed operations if the device does not reconnect to the service before the request times out. However, when the device reconnects, those requests are processed by the device. A durable subscription is specified by the ``cleansession=false`` parameter.
+  If your managed device uses a durable subscription, any commands that are sent to your device while it is offline are reported as failed operations if the device does not reconnect to the service before the request times out. However, when the device reconnects, those requests are processed by the device. A durable subscription is specified by the ``cleansession=false`` parameter.
 
 ### Topics
 

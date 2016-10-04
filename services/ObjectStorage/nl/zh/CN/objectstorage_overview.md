@@ -1,8 +1,15 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # 关于 {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*上次更新时间：2016 年 8 月 10 日*
+*上次更新时间：2016 年 8 月 29 日*
 {: .last-updated}
 
 
@@ -12,7 +19,7 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 
 {{site.data.keyword.objectstorageshort}} 体系结构图如下所示：
 
-[![{{site.data.keyword.objectstorageshort}} 体系结构图](images/ObjectStorageArchitectureDiagram.png)(images/ObjectStorageArchitectureDiagram.png)] {: new_window}
+![{{site.data.keyword.objectstorageshort architecture diagram }}](images/ObjectStorageArchitectureDiagram.png)
 
 *图 1. {{site.data.keyword.objectstorageshort}} 体系结构图*
 

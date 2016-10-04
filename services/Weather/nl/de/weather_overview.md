@@ -13,7 +13,7 @@ copyright:
 # Informationen zu {{site.data.keyword.weather_short}}
 {: #about_weather}
 
-*Letzte Aktualisierung: 01. Juli 2016*
+Letzte Aktualisierung: 22. August 2016
 {: .last-updated}
 
 Verwenden Sie {{site.data.keyword.weatherfull}},
@@ -37,8 +37,6 @@ Kondensationspunkt, Sichtweite und UV-Strahlung.
 * Amtlich ausgegebene Wetterwarnungen, darunter Wetterbeobachtungen, Warnungen, Aussagen und Empfehlungen, die vom National Weather Service (USA), Environment Canada und MeteoAlarm (Europa) ausgegeben werden.
 * Almanach-Services mit historischen täglichen oder monatlichen Wetterdaten von Beobachtungsstationen des National Weather Service aus einem Zeitraum von 10 bis 30 Jahren oder mehr.
 * Standort-Zuordnungsservices, die die Suche nach Standortnamen oder Geodaten (Längen- und Breitengrade) ermöglichen, um einen Satz von Standorten abzurufen, die mit Ihrer Suche übereinstimmen.
-
-Sie können auch eine [Gruppe von Symbolen herunterladen](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window}, die Sie in Ihrer App verwenden können.
 
 ## Preismodell
 {: #pricing_models}
@@ -65,12 +63,14 @@ Wenn Ihre App den Grenzwert der API-Aufrufe pro Monat erreicht, die im Rahmen de
 ## Feedback und Support
 {: #feedback_support}
 
-Wenn Sie technische Fragen zum Erstellen einer App mit {{site.data.keyword.weather_short}} haben, posten Sie Ihre Frage bei [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window} und markieren Sie Ihre Frage mit **ibm-bluemix** und **weather**.
+Wenn Sie Hilfe benötigen, können Sie die entsprechenden Informationen durchsuchen oder eine Frage in einem Forum stellen. Sie können aber auch ein Support-Ticket öffnen.
 
-Wenn Sie Probleme mit diesem Service haben sollten, verwenden Sie das Forum [IBM developerWorks Answers forum](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}.
-Schließen Sie die Tags **bluemix** und **weather** in Ihre Beiträge ein, damit IBM Sie besser unterstützen kann.
+Wenn Sie in einem Forum eine Frage stellen, versehen Sie diese mit einem Tag, damit sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungsteams erkannt wird.
 
-Wenn Sie Fragen zum Migrieren Ihrer App von Insights for Weather auf {{site.data.keyword.weather_short}} haben, kontaktieren Sie uns unter [IBM developerWorks](http://www.ibm.com/developerworks){:new_window}.
+* Wenn Sie technische Fragen zum Entwickeln und Bereitstellen einer App mit {{site.data.keyword.weather_short}} haben, posten Sie Ihre Frage bei [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window} und versehen Sie Ihre Frage mit den Tags **ibm-bluemix** und **weather**.
+* Wenn Sie Probleme mit dem Service oder den Anweisungen zur Einführung haben sollten, verwenden Sie das [IBM developerWorks Answers-Forum](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}. Versehen Sie Ihre Beiträge mit den Tags **bluemix** und **weather**.
+* Wenn Sie Fragen zum Migrieren Ihrer App von Insights for Weather auf {{site.data.keyword.weather_short}} haben, kontaktieren Sie uns unter [IBM developerWorks](http://www.ibm.com/developerworks){:new_window}.
 
-Informationen zur Fehlerbehebung bei Bluemix finden Sie im Thema zur [Fehlerbehebung](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
-Details zur Suche nach Informationen und für das Stellen von Fragen in Foren sowie zur Kontaktaufnahme mit dem Support finden Sie im Thema zum [Abrufen der Kundenunterstützung](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}.
+Weitere Details zur Nutzung der Foren finden Sie auf der Seite zum [Anfordern von Hilfe](https://console.{DomainName}/docs/support/index.html#getting-help){: new_window}.
+
+Weitere Informationen zum Öffnen eines IBM Support-Tickets oder zu Supportebenen und zur Priorität von Tickets finden Sie im Abschnitt zur [Kontaktaufnahme mit dem Support](https://console.{DomainName}/docs/support/index.html#contacting-support){: new_window}.

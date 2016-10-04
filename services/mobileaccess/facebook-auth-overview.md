@@ -12,8 +12,8 @@ copyright:
 # Authenticating users with Facebook credentials
 {: #facebook-auth-overview}
 
-Last updated: 16 August 2016
-{: .last-updated}
+Last updated: 29 September 2016
+{: .last-updated
 
 
 
@@ -54,19 +54,24 @@ The {{site.data.keyword.amashort}} web application request flow is similar to th
   * The final redirect is to the protected area of the web application itself, rather than back-end protected resource. 
 
 
-## Obtaining a Facebook Application ID from the Facebook Developer Portal
+## Obtaining a Facebook App ID from the Facebook for Developers website
 {: #facebook-appID}
 
-To start using Facebook as identity provider, you must create an application in the Facebook Developer Portal. During this process, you get a Facebook Application ID, which is a unique identifier to let Facebook know which application is attempting to connect.
+To start using Facebook as identity provider, create an application on the Facebook for Developer website. During this process, a Facebook App ID is created. This is a unique identifier used by Facebook in order to know which application is attempting to connect. 
 
-1. Open [Facebook Developer Portal](https://developers.facebook.com).
+You need this value to configure Facebook authentication for your mobile or web app.
 
-1. Click **My Apps** in the menu and select **Create a new app**.
-Select either iOS or Android application, and click **Skip and Create App ID** on the next screen.
+1. Access the [Facebook for Developers](https://developers.facebook.com) site.
 
-1. Set application display name of your choice and pick a category. Click **Create App ID** to continue.
+1. Open the **My Apps** pull-down list and select **Add a New App**.
 
-1. Copy the **App ID** that is displayed. This value is your Facebook Application ID.  You need this value to configure Facebook authentication with your mobile or web app.
+1. Enter the **Display Name** and **Contact Email values** values, and choose a **Category** from the pull-down list.
+
+1. Click **Create a New App ID**.
+
+1. A security check may appear. Perform the requested action.
+
+1. The **Product Setup** page appears. Copy the **App ID** that is displayed. 
 
 ## Next steps
 {: #next-steps}

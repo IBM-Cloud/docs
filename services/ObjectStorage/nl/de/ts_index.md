@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.objectstorageshort}} - Fehlerbehebung
@@ -6,7 +13,7 @@
 *Letzte Aktualisierung: 17. August 2016*
 {: .last-updated}
 
-Im Folgenden finden Sie die Antworten auf häufige Fragen zur Fehlerbehebung bei der Verwendung von {{site.data.keyword.objectstoragefull}}. 
+Im Folgenden finden Sie die Antworten auf häufige Fragen zur Fehlerbehebung bei der Verwendung von {{site.data.keyword.objectstoragefull}}.
 
 ## Nicht erkanntes Token-Content-Pack bei der Verwendung von openstack4J mit Liberty-Profil zurückgegeben
 {: #unrecognized_token}
@@ -31,7 +38,7 @@ Bei der Verwendung von openstack4j mit dem Liberty-Profil kann es zu folgendem S
 
 ### Lösung
 
-Die Ursache des Problems ist ein Klassenladeproblem, bei dem die Bibliothek 'openstack4j' einige derselben Pakete enthält, die im Liberty-Profil bereitgestellt werden. So verwendet OpenStack4j beispielsweise JERSEY; dies kann zu Konflikten mit den Wink-Bibliotheken führen.
+Die Ursache des Problems ist ein Klassenladeproblem, bei dem die Bibliothek 'openstack4j' einige derselben Pakete enthält, die im Liberty-Profil bereitgestellt werden.  So verwendet OpenStack4j beispielsweise JERSEY; dies kann zu Konflikten mit den Wink-Bibliotheken führen.
 
 Führen Sie die folgenden Schritte aus, um das Problem zu beheben:
 
@@ -41,14 +48,14 @@ Führen Sie die folgenden Schritte aus, um das Problem zu beheben:
 ## Hilfe und Unterstützung für {{site.data.keyword.objectstorageshort}} erhalten
 {: #gettinghelp}
 
-Hilfe zu Problemen oder Fragen bei Verwendung von {{site.data.keyword.objectstoragefull}} finden Sie, indem Sie in einem Forum nach Informationen suchen oder dort Fragen stellen. Sie haben außerdem die Möglichkeit, ein Support-Ticket zu öffnen. 
+Hilfe zu Problemen oder Fragen bei Verwendung von {{site.data.keyword.objectstoragefull}} finden Sie, indem Sie in einem Forum nach Informationen suchen oder dort Fragen stellen. Sie haben außerdem die Möglichkeit, ein Support-Ticket zu öffnen.
 
-Wenn Sie in Foren eine Frage stellen, versehen Sie Ihre Frage mit einem Tag, sodass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungsteams registriert wird. 
+Wenn Sie in Foren eine Frage stellen, versehen Sie Ihre Frage mit einem Tag, sodass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungsteams registriert wird.
 
-* Wenn Sie technische Fragen zu {{site.data.keyword.objectstorageshort}} haben, stellen Sie Ihre Frage auf [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} und versehen Sie sie mit den Tags "ibm-bluemix" und "object-storage". 
+* Wenn Sie technische Fragen zu {{site.data.keyword.objectstorageshort}} haben, stellen Sie Ihre Frage auf [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window} und versehen Sie sie mit den Tags "ibm-bluemix" und "object-storage".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Bei Fragen zum Service sowie zum Abruf von Einführungsanweisungen wenden Sie sich an das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}. Versehen Sie Ihre Anfrage mit den Tags "object-storage" und "bluemix". 
+* Bei Fragen zum Service sowie zum Abruf von Einführungsanweisungen wenden Sie sich an das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}. Versehen Sie Ihre Anfrage mit den Tags "object-storage" und "bluemix".
 
-Unter [Hilfe anfordern](https://console.ng.bluemix.net/docs/support/index.html#getting-help) finden Sie weitere Informationen zur Nutzung der Foren. 
+Unter [Hilfe anfordern](https://console.ng.bluemix.net/docs/support/index.html#getting-help) finden Sie weitere Informationen zur Nutzung der Foren.
 
-Informationen zum Öffnen eines IBM Support-Tickets oder zu den Supportebenen und Ticket-Prioritätsstufen finden Sie unter [Support kontaktieren](https://console.ng.bluemix.net/docs/support/index.html#contacting-support). 
+Informationen zum Öffnen eines IBM Support-Tickets oder zu den Supportebenen und Ticket-Prioritätsstufen finden Sie unter [Support kontaktieren](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).

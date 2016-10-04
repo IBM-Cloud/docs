@@ -11,14 +11,14 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Connecting and configuring a historian service by using a {{site.data.keyword.cloudant}}  
+# Connecting and configuring a historian service by using a {{site.data.keyword.cloudant_short_notm}}  
 {: #cloudant_main}
 Last updated: 16 September 2016
 {: .last-updated}
 
 Connecting a {{site.data.keyword.cloudantfull}} service to your {{site.data.keyword.iot_full}} allows you to store and access your device data. Device data is stored in daily, weekly, or monthly databases depending on your selected bucket interval.
 
-When you begin using a {{site.data.keyword.cloudant}} to store device data three databases are automatically created, one database is created for the current bucket interval, one for the upcoming interval, and one configuration database. Design documents can be added to the configuration database and will be copied to new databases as they are created. When the end of an interval is reached device data is stored in the bucket database for the new interval, and a new database is created for the following interval.
+When you begin using a {{site.data.keyword.cloudant_short_notm}} to store device data three databases are automatically created, one database is created for the current bucket interval, one for the upcoming interval, and one configuration database. Design documents can be added to the configuration database and will be copied to new databases as they are created. When the end of an interval is reached device data is stored in the bucket database for the new interval, and a new database is created for the following interval.
 
 When device data is sent to a database it can be stored in one of two ways. If the data is valid JSON and the format of the device event is set to `JSON`, the device data will be stored in the following format:
 
@@ -59,23 +59,23 @@ If the device data is not valid JSON or if the format is not set to `JSON` the d
 ## Before you begin  
 {: #byb}
 
-Before connecting a {{site.data.keyword.cloudant}} to your {{site.data.keyword.iot_short}} service, please complete the following tasks:
+Before connecting a {{site.data.keyword.cloudant_short_notm}} to your {{site.data.keyword.iot_short}} service, please complete the following tasks:
 
-- Set up a {{site.data.keyword.cloudant}} in the same Bluemix space as your {{site.data.keyword.iot_short_notm}} by using the Bluemix Catalog.
+- Set up a {{site.data.keyword.cloudant_short_notm}} in the same Bluemix space as your {{site.data.keyword.iot_short_notm}} by using the Bluemix Catalog.
 
-Ensure that you have developer privileges in the Bluemix organization and that you are signed in via Bluemix. If you are not signed in through Bluemix, or do not have developer privileges in this Bluemix organization, you will not be able to authorize the binding of the {{site.data.keyword.cloudant}} and the {{site.data.keyword.iot_short_notm}}.
+Ensure that you have developer privileges in the Bluemix organization and that you are signed in via Bluemix. If you are not signed in through Bluemix, or do not have developer privileges in this Bluemix organization, you will not be able to authorize the binding of the {{site.data.keyword.cloudant_short_notm}} and the {{site.data.keyword.iot_short_notm}}.
 
-Complete the following steps to connect a {{site.data.keyword.cloudant}}:
+Complete the following steps to connect a {{site.data.keyword.cloudant_short_notm}}:
 
 1. On your {{site.data.keyword.iot_short}} dashboard click **Extensions** in the navigation bar.
 2. In the Historical Data Storage tile, click **Setup**.
-2. All available {{site.data.keyword.cloudant}} services within the same Bluemix space as your {{site.data.keyword.iot_short}} service are listed in the Configure historical data storage section.
-3. Select the {{site.data.keyword.cloudant}} service that you wish to connect.
-4. Select your {{site.data.keyword.cloudant}} configuration options:
+2. All available {{site.data.keyword.cloudant_short_notm}} services within the same Bluemix space as your {{site.data.keyword.iot_short}} service are listed in the Configure historical data storage section.
+3. Select the {{site.data.keyword.cloudant_short_notm}} service that you wish to connect.
+4. Select your {{site.data.keyword.cloudant_short_notm}} configuration options:
 
   a. Select a bucket interval. The bucket interval controls how frequently new databases are created to store device data. New buckets are created at midnight in the selected timezone using your selected bucket interval.
 
-  b. Select a time zone. The time in the selected timezone will be used to determine which bucket device data should be placed in, not the time local to the device. Timestamps on device data being sent to the {{site.data.keyword.cloudant}} will be converted into the selected timezone when deciding into which database the data will be entered.
+  b. Select a time zone. The time in the selected timezone will be used to determine which bucket device data should be placed in, not the time local to the device. Timestamps on device data being sent to the {{site.data.keyword.cloudant_short_notm}} will be converted into the selected timezone when deciding into which database the data will be entered.
 
   c. Choose options that determine the database name. The database name will be `iotp_<orgID>_<dbname>_<bucket_name>` where:
 
@@ -103,4 +103,4 @@ Additional design documents can be added to the configuration database, and will
 
 <!--  # Related links
 {: #rellinks}
-* [Querying your {{site.data.keyword.cloudant}}](link) -->
+* [Querying your {{site.data.keyword.cloudant_short_notm}}](link) -->
