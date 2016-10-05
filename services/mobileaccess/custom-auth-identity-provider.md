@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Creating a custom identity provider
 {: #custom-create}
-
-Last updated: 31 August 2016
-{: .last-updated}
 
 
 To create a custom identity provider, develop a web application that exposes a RESTful API:

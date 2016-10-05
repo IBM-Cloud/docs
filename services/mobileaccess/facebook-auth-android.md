@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -10,9 +10,6 @@ copyright:
 
 # Enabling Facebook authentication for Android apps
 {: #facebook-auth-android}
-
-Last updated: 19 September 2016
-{: .last-updated}
 
 
 To use Facebook as identity provider in your {{site.data.keyword.amafull}} Android applications, add and configure the Android Platform for your Facebook application on the Facebook for Developers site.

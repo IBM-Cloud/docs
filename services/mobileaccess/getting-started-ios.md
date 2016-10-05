@@ -2,15 +2,13 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc}
 
 # Setting up the iOS Objective-C SDK
 {: #getting-started-ios}
 
-Last updated: 26 August 2016
-{: .last-updated}
 
 
 Instrument your iOS application with the {{site.data.keyword.amafull}} SDK, initialize the SDK, and make requests to protected and unprotected resources.

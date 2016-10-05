@@ -2,14 +2,12 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Protecting Node.js resources with {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}
 
-Last updated: 15 April 2016
-{: .last-updated}
 
 You can use the {{site.data.keyword.amashort}} server SDK to protect resources in your Node.js app.
 

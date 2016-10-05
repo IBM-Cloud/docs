@@ -2,15 +2,12 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc} 
 
 # Using {{site.data.keyword.amashort}} with a local development environment
 {: #protecting-local}
-
-Last updated: 23 July 2016
-{: .last-updated}
 
 You can configure your local development  to use the {{site.data.keyword.amafull}} service that is running on {{site.data.keyword.Bluemix}}. Specifically, you can develop code locally using the {{site.data.keyword.amashort}} server SDK and send {{site.data.keyword.amashort}} requests to the development server. These requests will be protected by the {{site.data.keyword.amashort}} service that is running on {{site.data.keyword.Bluemix}}.
 

@@ -2,14 +2,13 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 
 # Getting started with {{site.data.keyword.amashort}}
 {: #gettingstarted}
-Last updated: 21 July 2016
-{: .last-updated}
+
 
 Add security to your mobile app with the {{site.data.keyword.amafull}} service. You can configure client authorization for accessing protected back-end resources running on {{site.data.keyword.Bluemix_notm}}. Use identity providers (Google and Facebook), or custom identities to authenticate users and grant access to protected back-end resources and web apps.
 {:shortdesc}
