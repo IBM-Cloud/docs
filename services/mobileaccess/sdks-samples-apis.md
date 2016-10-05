@@ -2,15 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 {:shortdesc: .shortdesc}
 
 
 # {{site.data.keyword.amashort}} SDKs, samples, and API reference
-Last updated: 25 August 2016
-{: .last-updated}
+
 
 To add {{site.data.keyword.amafull}} SDKs to your app, choose the SDKs that you want to use. Then configure your dependency manager to pull the SDKs into your app.
 {:shortdesc}
