@@ -39,6 +39,10 @@ The constructor builds the client instance and accepts a `Properties` object tha
 |`auth-key`   |An optional API key, which is required when auth-method is set to `apikey`.  |
 |`auth-token`   |An API key token, which is required when auth-method is set to `apikey`. |
 |`clean-session`|A true or false value that is required only if you want to connect the application in durable subscription mode. By default, `clean-session` is set to `true`.|
+|`Port`  |Specify the port to connect to, supported ports are 8883 and 443. default port used is `8883`.|
+|`MaxInflightMessages`  |Sets the maximum number of inflight messages for the connection. default value is `100`.|
+|`Automatic-Reconnect`  |A true or false value required when you want to automatically reconnect the device to the Watson IoT Platform while it is in disconnected state. By default, `Automatic-Reconnect` is set to `false`.|
+|`Disconnected-Buffer-Size`  |The maximum number of messages that will be stored in memory while the client is disconnected. Default: `5000`.  |
 |`shared-subscription`|A boolean value. Set to `true` if you would like to build scalable applications that balance the load of messages across multiple instances of the application. For more information, see [Scalable applications](mqtt.html#/scalable-applications#scalable-applications).
 
 The `Properties` object creates definitions that are used to interact with the {{site.data.keyword.iot_short_notm}} module. If you do not specify the properties for this object, or if you specify `quickstart`, the client connects to the {{site.data.keyword.iot_short_notm}} Quickstart service as an unregistered device.
@@ -94,11 +98,21 @@ The application configuration file must be in the following format:
 
 To connect to the {{site.data.keyword.iot_short_notm}} use the `connect()` function. The `connect()` function includes an optional boolean parameter that is called `autoRetry` that determines whether the library attempts to reconnect in the event of a MqttException connection failure. By default, `autoRetry` is set to true. If an MqttSecurityException connection fails because incorrect device registration details are passed, the library does not attempt to reconnect, even if `autoRetry` is set to `true`.
 
+Also, one can use the `setKeepAliveInterval(int)` method before calling `connect()` to set the MQTT `keep alive interval`. This value, measured in seconds, defines the maximum time interval between messages sent or received. It enables the client to detect if the server is no longer available, without having to wait for the TCP/IP timeout. The client will ensure that at least one message travels across the network within each keep alive period. In the absence of a data-related message during the time period, the client sends a very small `ping` message, which the server will acknowledge. A value of 0 disables keepalive processing in the client. The default value is 60 seconds.
+
 ```
     Properties props = ApplicationClient.parsePropertiesFile(new File("C:\\temp\\application.prop"));
     ApplicationClient myClient = new ApplicationClient(props);
-
+    myClient.setKeepAliveInterval(120);
     myClient.connect();
+```
+
+Also, use the overloaded connect(int numberOfTimesToRetry) function to control the number of retries when there is a connection failure.
+
+```
+    DeviceClient myClient = new DeviceClient(options);
+    myClient.setKeepAliveInterval(120);
+    myClient.connect(10);
 ```
 
 After successfully connecting to the {{site.data.keyword.iot_short_notm}} service, your application clients can subscribe to device events, subscribe to device statuses, and publish device events and commands.
@@ -366,6 +380,28 @@ The following code sample shows how applications can publish events as if they o
     myClient.publishEvent(deviceType, deviceId, "blink", event);
 ```
 
+Events can be published in different formats, like JSON, String, Binary and etc.. By default the library publishes the event in JSON format, but one can specify the data in different formats. For example, to publish data in String format use the following code snippet (Note that the payload must be in String format),
+
+```
+    myClient.connect();
+    String data = "cpu:"+60;
+    status = myClient.publishEvent("load", data, "text", 2);
+```
+
+Any XML data can be converted to String and published as follows,
+
+```
+    status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
+```
+
+Similarly to publish events in binary format, use the byte array as shown below,
+
+```
+    myClient.connect();
+    byte[] cpuLoad = new byte[] {60, 35, 30, 25};
+    status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
+```
+
 ### Publish events by using HTTP
 {: #publishing_events_http}
 
@@ -385,7 +421,7 @@ In addition to MQTT, you can configure your applications to publish device event
     	event.addProperty("cpu",  90);
     	event.addProperty("mem",  70);
 
-    	code = myClient.publishEventOverHTTP(deviceType, deviceId, "blink", event);
+    	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
 For the complete code sample, see the following application example:
