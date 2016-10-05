@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # Empiece a utilizar {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
@@ -259,7 +266,8 @@ A continuación hay un ejemplo completo del uso del control de versiones:
 		$ swift list container_two
 		$
 ```
-### Supresión de un objeto de planificación{: #schedule-object-deletion}
+
+### Supresión de un objeto de planificación {: #schedule-object-deletion}
 
 Puede configurar los objetos para que caduquen en una determinada cantidad de tiempo. En otras palabras, puede planificar la supresión de los objetos. Puede hacer esto haciendo uso de las cabeceras `X-Delete-At` o `X-Delete-After`. La cabecera `X-Delete-At` toma un número entero que representa el tiempo Epoch en el que se suprime el objeto. La cabecera `X-Delete_After` toma un número entero que representa el número de segundos tras los que se suprimirá el objeto.
 
@@ -625,9 +633,9 @@ Para generar credenciales de servicio utilizando mandatos cURL o la CLI de Swift
   cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
   ```
 
-2. Generar credenciales de servicio. `service-key-name` será el nombre de su credencial. Puede utilizar el comando Cloud Foundry o el comando cURL.
+2. Generar credenciales de servicio. `service-key-name` será el nombre de su credencial. Puede utilizar el mandato Cloud Foundry o el mandato cURL.
 
-  Comando Cloud Foundry:
+  Mandato Cloud Foundry:
   ```
   cf create-service-key "<nombre_instancia_servicio_almacenamiento_objetos>" <service-key-name> -c '{"role":"<rol_almacenamiento_objetos>"}'
   ```
@@ -638,14 +646,14 @@ Para generar credenciales de servicio utilizando mandatos cURL o la CLI de Swift
   cf create-service-key "Object-Storage-AclTest" GeorgeKey -c '{"role":"member"}'
 
   ```
-  Comando cURL:
+  Mandato cURL:
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "guid_instancia_servicio": "<guid_instancia_servicio>",   "name": "<nombre_usuario>", "role": "member"}' -X POST -H "Authorization: <señal_portador>" -H "Content-Type: " -H "Cookie: "
   ```
 
 3. Valide las credenciales de la clave de servicio creada.
 
-  Comando Cloud Foundry:
+  Mandato Cloud Foundry:
   ```
   cf service-key <nombre_clave_servicio> <nombre_miembro>
   ```
@@ -665,7 +673,7 @@ Para generar credenciales de servicio utilizando mandatos cURL o la CLI de Swift
     "username": "member_2afbeea1d58b1867f46c699553d1e4513e7df83a"
   }
   ```
-  Comando cURL:
+  Mandato cURL:
   ```
   curl "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <señal_bearer>" -H "Cookie: "
   ```
@@ -680,7 +688,7 @@ Para conceder acceso de lectura en la CLI utilice la opción `--read-acl` o `-r`
 
 1. Autentique sus credenciales utilizando la información de las credenciales de servicio creadas.  Recibirá el URL de almacenamiento de objetos y la señal de autenticación como salida.
 
-  Comando Swift:
+  Mandato Swift:
   ```
   export OS_USER_ID=<ID_usuario>
   export OS_PASSWORD=<contraseña>
@@ -692,27 +700,27 @@ Para conceder acceso de lectura en la CLI utilice la opción `--read-acl` o `-r`
 
   swift auth
   ```
-  Comando cURL:
+  Mandato cURL:
   ```
   curl -i -H "X-Auth-User: <ID_usuario>" -H "X-Auth-Key: <contraseña>" <url_autorización>
   ```
 3. Conceda acceso de lectura ejecutando el siguiente mandato:
 
-  Comando Swift:
+  Mandato Swift:
   ```
   swift post <nombre_contenedor> --read-acl "<ID_usuario>:<ID_proyecto>"
   ```
-  Comando cURL:
+  Mandato cURL:
   ```
   curl -i <URL_ALMACENAMIENTO_SO> -X POST -H "Content-Length: 0" -H "X-Container-Read: <ID_inquilino>:<ID_poyecto>" -H "X-Auth-Token: <SEÑAL_AUTENTICACIÓN_SO>"
   ```
 4. Verifique el valor de ACL de lectura.
 
-  Comando Swift:
+  Mandato Swift:
   ```
   swift stat <nombre_contenedor>
   ```
-  Comando cURL:
+  Mandato cURL:
   ```
   curl -i <URL_ALMACENAMIENTO_SO> -I -H "X-Auth-Token:<SEÑAL_AUTENTICACIÓN_SO>"
   ```
@@ -773,7 +781,7 @@ Para conceder acceso de escritura, utilice la opción `--write-acl` o `-w` a tra
 
 1. Autentique sus credenciales utilizando la información de las credenciales de servicio creadas.  Recibirá el URL de almacenamiento de objetos y la señal de autenticación como salida.
 
-  Comando Swift:
+  Mandato Swift:
   ```
   export OS_USER_ID="<ID_usuario>"
   export OS_PASSWORD="<contraseña>"
@@ -785,28 +793,28 @@ Para conceder acceso de escritura, utilice la opción `--write-acl` o `-w` a tra
 
   swift auth
   ```
-  Comando cURL:
+  Mandato cURL:
   ```
   curl -i -H "X-Auth-User:< ID_usuario>" -H "X-Auth-Key:< contraseña>" https://identity.open.softlayer.com/v3
   ```
 2. Conceda acceso de escritura ejecutando el siguiente mandato:
 
-  Comando Swift:
+  Mandato Swift:
   ```
   swift post <nombre_contenedor> --write-acl "<ID_usuario>:<ID_proyecto>"
   ```
-  Comando cURL:
+  Mandato cURL:
   ```
   curl -i <URL_ALMACENAMIENTO_SO> -X POST -H "Content-Length: 0" -H "X-Container-Write: <ID_usuario>:<ID_poyecto>" -H "X-Auth-Token: <SEÑAL_AUTENTICACIÓN_SO>"
 
   ```
 3. Verifique el valor de ACL de escritura.
 
-  Comando Swift:
+  Mandato Swift:
   ```
   swift stat <nombre_contenedor>
   ```
-  Comando cURL:
+  Mandato cURL:
   ```
   curl -i <URL_ALMACENAMIENTO_SO> -I -H "X-Auth-Token:<SEÑAL_AUTENTICACIÓN_SO>"
   ```
@@ -848,29 +856,29 @@ Nota: utilice una coma (,) para separar las listas de control de acceso. Por eje
 
 Para eliminar los ACL de lectura de un contenedor:
 
-  Comando Swift:
+  Mandato Swift:
   ```
   swift post <nombre_contenedor> --read-acl “”
   ```
-  Comando cURL:
+  Mandato cURL:
   ```
   curl -i <URL_ALMACENAMIENTO_SO> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <SEÑAL_AUTENTICACIÓN_SO>"
   ```
 
 Para eliminar los ACL de escritura de un contenedor:
 
-  Comando Swift:
+  Mandato Swift:
   ```
   swift post <nombre_contenedor> --write-acl “”
   ```
-  Comando cURL:
+  Mandato cURL:
   ```
   curl -i <URL_ALMACENAMIENTO_SO> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <SEÑAL_AUTENTICACIÓN_SO>"
   ```
 
 Para comprobar que se ha eliminado un ACL:
 
-  Comando Swift:
+  Mandato Swift:
   ```
   swift stat <nombre_contenedor>
   ```
@@ -892,7 +900,7 @@ X-Storage-Policy: standard
     Content-Type: text/plain; charset=utf-8
 
   ```
-  Comando cURL:
+  Mandato cURL:
   ```
   curl -i <URL_ALMACENAMIENTO_SO> -I -H "X-Auth-Token: <SEÑAL_AUTENTICACIÓN_SO>"
   ```

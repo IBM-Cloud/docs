@@ -2,15 +2,12 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 {:shortdesc: .shortdesc} 
 
 # Setting up the Cordova plug-in
 {: #getting-started-cordova}
-
-Last updated: 25 August 2016
-{: .last-updated}
 
 
 Instrument your Cordova application with {{site.data.keyword.amafull}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.

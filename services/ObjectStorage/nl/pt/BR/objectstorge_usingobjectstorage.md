@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # Iniciar o uso do {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
@@ -137,6 +144,7 @@ Se você estiver fazendo upload de um arquivo maior que 5 GB, deverá dividi-lo 
 Cada segmento é transferido por upload em paralelo em um contêiner separado denominado `<container_name>_segments`. Após todos os segmentos serem transferidos por upload, a Swift
 cria um arquivo manifest de forma que os segmentos possam ser transferidos por download em um arquivo único a partir do contêiner original `<container_name>` com o nome do arquivo
 original `<file_name>`.
+
 Por exemplo, o comando a seguir faz upload de um arquivo denominado `large_file` a partir de um contêiner denominado `test_container` com o tamanho de segmento
 `1073741824`.
 ```
@@ -158,6 +166,7 @@ Swift não possui uma estrutura de diretórios verdadeira, mas usa a nomenclatur
 ```
 Esse comando fará upload da estrutura de diretório completa como um caminho relativo. Por exemplo, se você especificar `/mnt/volume1`, a estrutura de diretório mnt/volume1 será anexada a
 todos os nomes de arquivos para indicar a estrutura de diretório.
+
 
 #### Fazendo download de um diretório
 
@@ -184,6 +193,7 @@ Se estiver usando curl, poderá configurá-lo como este:
 No exemplo, `container_two` foi configurado para conter as versões mais velhas de seus objetos armazenados em `container_one`. Portanto, `container_one`
 terá a versão mais atual de seus objetos e `container_two` terá as versões mais velhas de seus objetos. Certifique-se de que `container_two` exista para que o versionamento
 funcione.
+
 Com o versionamento configurado, ao fazer upload de um objeto no `container_one`, se houver uma versão existente do objeto, a versão existente será movida para
 `container_two` conforme a nova versão for criada em `container_one`. Se você excluir um objeto do `container_one`, a versão anterior do objeto será movida
 do `container_two` de volta para o `container_one`.
@@ -266,6 +276,7 @@ Aqui está um exemplo completo do uso de versão:
 		$ swift list container_two
 		$
 ```
+
 ### Planejando a exclusão de objeto {: #schedule-object-deletion}
 
 É possível configurar seus objetos para expirar em período de tempo especificado. Ou seja, é possível planejar a exclusão de seus objetos. Isso pode ser feito usando um dos dois cabeçalhos `X-Delete-At` ou `X-Delete-After`. O cabeçalho `X-Delete-At` usa um número inteiro que representa o período no qual excluir o objeto. O cabeçalho `X-Delete_After` usa um número inteiro que representa o número de segundos após os quais o objeto será excluído.
@@ -366,7 +377,7 @@ Para interagir com a API do {{site.data.keyword.objectstorageshort}}, construa a
 
 A URL consiste em cinco partes. A `<API version>` é v1. É possível localizar o `<project ID>`, o `<container
 namespace>` e o
-`<object namespace>` de seu {{site.data.keyword.objectstorageshort}} a partir da interface com o usuário do {{site.data.keyword.objectstorageshort}}. Para o
+`<object namespace>` de seu {{site.data.keyword.objectstorageshort}} a partir da interface com o usuário do {{site.data.keyword.objectstorageshort}}.  Para o
 `<access point>`, consulte a tabela a seguir:
 
 
@@ -580,7 +591,7 @@ o terminal a partir do Catálogo de serviços com o tipo `object-store` e a regi
 
 
 
-## Protegendo arquivos com controle de acesso de baixa granularidade{: #fine-grained-access-control}
+## Protegendo arquivos com controle de acesso de baixa granularidade {: #fine-grained-access-control}
 
 Listas de controle de acesso de baixa granularidade ajudam a proteger arquivos quando você tiver múltiplos usuários que armazenem arquivos no mesmo contêiner.
 
@@ -588,7 +599,7 @@ Nota: Procedimentos que são esboçados nesse doc requerem a CLI de Swift. Para 
 [ usando o {{site.data.keyword.objectstorageshort}} com a CLI de Swift](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli).
 
 
-### Tipos de acesso{: #access-types}
+### Tipos de acesso {: #access-types}
 
 O acesso ao serviço é controlado por funções de usuário e listas de controle de acesso de contêiner. Usuários do {{site.data.keyword.objectstorageshort}} podem ser administrativos ou não
 administrativos. Listas de controle de acesso são ativadas por usuários administrativos no nível de contêiner e não estão disponíveis para a instância de serviço, conta de armazenamento ou no nível de projeto.
@@ -600,15 +611,15 @@ administrativos. Listas de controle de acesso são ativadas por usuários admini
   </tr>
   <tr>
     <td> Gerenciar controle de acesso </td>
-    <td> Por padrão, sem acesso ao serviço ou aos seus contêineres</td>
+    <td> Por padrão, sem acesso ao serviço ou aos seus contêineres </td>
   </tr>
   <tr>
-    <td> Podem criar e excluir contêineres</td>
+    <td> Podem criar e excluir contêineres </td>
     <td> Podem executar ações com base nas ACLs de leitura/gravação de contêineres </td>
   </tr>
   <tr>
-    <td> Podem ler e gravar em contêineres</td>
-    <td> Podem executar ações conforme determinado pelo administrador</td>
+    <td> Podem ler e gravar em contêineres </td>
+    <td> Podem executar ações conforme determinado pelo administrador </td>
   </tr>
 </table>
 
@@ -621,7 +632,7 @@ Cloud Foundry.
 
 ### Gerando credenciais de serviço do {{site.data.keyword.objectstorageshort}} {: #generating}
 
-A partir do console do {{site.data.keyword.Bluemix_notm}}, é possível gerar novas credenciais de serviço para os usuários do {{site.data.keyword.objectstorageshort}}. Para ver o novo
+A partir do console do {{site.data.keyword.Bluemix_notm}}, é possível gerar novas credenciais de serviço para os usuários do {{site.data.keyword.objectstorageshort}}.  Para ver o novo
 console, clique em **Tentar o novo {{site.data.keyword.Bluemix_notm}}**.
 
 1.  Efetue login no {{site.data.keyword.Bluemix_notm}} como um usuário com função de desenvolvedor. Deve-se estar localizado dentro do espaço da instância de serviço que você deseja gerenciar.
@@ -695,7 +706,7 @@ Apenas um usuário do {{site.data.keyword.objectstorageshort}} com uma função 
 
 Para conceder acesso de leitura na CLI use a opção `--read-acl` ou `-r`.
 
-1. Autentique as suas credenciais usando as informações nas credenciais de serviço que você criou. Você receberá a sua URL de Armazenamento de objeto e o token de autenticação como um resultado.
+1. Autentique as suas credenciais usando as informações nas credenciais de serviço que você criou.  Você receberá a sua URL de Armazenamento de objeto e o token de autenticação como um resultado.
 
   Comando Swift:
   ```
@@ -776,7 +787,7 @@ Para conceder acesso de leitura na CLI use a opção `--read-acl` ou `-r`.
     <td> `< project_id>:<*>` </td>
   </tr>
   <tr>
-    <td> Ler e listar para cada usuário em cada projeto </td>
+    <td> Ler e listar para cada usuário em cada projeto  </td>
     <td> `<*>:<*>` </td>
   </tr>
 </table>
@@ -788,7 +799,7 @@ Nota: use uma vírgula (,) para separar listas de controle de acesso. Por exempl
 
 Para conceder acesso de gravação use a opção `--write-acl` ou `-w` por meio da CLI de Swift.
 
-1. Autentique as suas credenciais usando as informações nas credenciais de serviço que você criou. Você receberá a sua URL de Armazenamento de objeto e o token de autenticação como um resultado.
+1. Autentique as suas credenciais usando as informações nas credenciais de serviço que você criou.  Você receberá a sua URL de Armazenamento de objeto e o token de autenticação como um resultado.
 
   Comando Swift:
   ```

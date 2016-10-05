@@ -27,7 +27,7 @@ Last updated: 16 September 2016
 To get up and running with this service, you must deploy required services and apps, then configure the services.
 
 **Prerequisites:** Before you begin, ensure that the following prerequisites are in place:
-- An instance of the [{{site.data.keyword.iotinsurance_short}} service](https://new-console.ng.bluemix.net/catalog/services/iot-for-insurance/) must exist in your {{site.data.keyword.Bluemix_notm}} space.
+- An instance of the [{{site.data.keyword.iotinsurance_short}} service](https://console.ng.bluemix.net/catalog/services/iot-for-insurance/) must exist in your {{site.data.keyword.Bluemix_notm}} space.
 - At least 2 GB of free memory must be available in your {{site.data.keyword.Bluemix_notm}} organization to enable the Deploy function.
 
 ## Deploying the required services and applications
@@ -67,7 +67,7 @@ Perform the following tasks to configure the services:
 
 ### Configuring {{site.data.keyword.mobilepushshort}}
 {: #config_push}
-To enable push notifications for an existing mobile app, you must configure the {{site.data.keyword.mobilepushshort}} service and add a Public Key Cryptography Standards (PKCS) 12 file. For information about the mobile app, see [Installing and connecting the sample mobile app](iotinsurance_mobile_app.html). For information about {{site.data.keyword.mobilepushshort}}, see [Getting started with Push Notifications](https://new-console.stage1.ng.bluemix.net/docs/services/mobilepush/index.html).
+To enable push notifications for an existing mobile app, you must configure the {{site.data.keyword.mobilepushshort}} service and add a Public Key Cryptography Standards (PKCS) 12 file. For information about the mobile app, see [Installing and connecting the sample mobile app](iotinsurance_mobile_app.html). For information about {{site.data.keyword.mobilepushshort}}, see [Getting started with Push Notifications](https://console.stage1.ng.bluemix.net/docs/services/mobilepush/index.html).
 
   1. Open the {{site.data.keyword.mobilepushshort}} service.
   2. Click **Setup Push**.
@@ -95,6 +95,6 @@ Learn what you can do with {{site.data.keyword.iotinsurance_short}}.
 
 ## Related Links
 {: #general}
-* [{{site.data.keyword.iot_full}} documentation](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+* [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
 * [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

@@ -13,7 +13,7 @@ copyright:
 # Exemples
 {: #tutorials_samples}
 
-*Dernière mise à jour : 1er juillet 2016*
+Dernière mise à jour : 28 juillet 2016
 {: .last-updated}
 
 Apprenez à utiliser le service {{site.data.keyword.weather_short}} à l'aide des exemples ci-après.
@@ -22,24 +22,24 @@ Apprenez à utiliser le service {{site.data.keyword.weather_short}} à l'aide de
 ## Démonstration {{site.data.keyword.weather_short}}
 {: #insights_weather_demo}
 
-Un exemple d'application vous permet de visualiser les données météorologiques fournies par le service {{site.data.keyword.weather_short}}.
-Vous pouvez accéder à l'application depuis [https://weather-company-data-demo.mybluemix.net](https://weather-company-data-demo.mybluemix.net).
+Vous pouvez apprendre à extraire des données météorologiques à l'aide du service {{site.data.keyword.weather_short}} en utilisant l'[application de démonstration {{site.data.keyword.weather_short}}](http://weather-company-data-demo.{APPDomain}){: new_window}.
 L'application s'ouvre dans votre navigateur et vous demande si vous souhaitez partager votre emplacement en cours avec elle.
 
-L'application vous permet de visualiser les conditions météorologiques en cours observées là où vous êtes.
+L'application de démonstration vous permet de visualiser les conditions météorologiques en cours observées là où vous êtes.
 
 ![Image de l'écran principal avec les observations en cours pour Ottawa, Ontario.](images/twctestapp_main_screen.jpg "Image de l'écran principal avec les observations en cours pour Ottawa, Ontario.")
 
 Vous pouvez également visualiser les prévisions heure par heure pour les 48 prochaines heures et les prévisions journalières pour les 10 prochains jours.
-En survolant les zones de l'exemple, vous voyez les résultats des appels d'API au format JSON, avec les métadonnées utilisées pour l'extraction des données.
+La prévision journalière affiche le segment de la journée et le segment de la nuit.
+Si vous cliquez sur chacune de ces zones dans l'application de démonstration, vous voyez les résultats des appels d'API au format JSON, avec les métadonnées utilisées pour l'extraction des données.
 
-Dans l'application de démonstration, cliquez sur **Deploy to Bluemix** pour créer une version clonées de l'application ou [clonez l'appli directement à partir de GitHub](https://github.com/IBM-Bluemix/weather-company-data-demo).
+
+Dans l'application de démonstration, cliquez sur **Deploy to Bluemix** pour créer une version clonée de l'application ou [clonez l'application directement à partir de GitHub](https://github.com/IBM-Bluemix/weather-company-data-demo).
 
 ## Extraction d'une prévision heure par heure
 {: #getting_twenty_four_hour_forecast}
 
 Vous pouvez exécuter une opération `GET` dans votre application pour extraire les données des prévisions heure par heure sur 48 heures.
-
 
 Le nom d'utilisateur (`username`) et le mot de passe (`password`) sont spécifiques à votre application et à votre instance du service.
 Ces informations figurent dans les variables d'environnement `VCAP_SERVICES`.
@@ -52,8 +52,8 @@ Par exemple, vous pouvez utiliser la demande `GET` suivante pour extraire les pr
 ```
 GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/geocode/45.42/75.69/forecast/hourly/48hour.json?units=m&language=en-US
 ```
-Vous pouvez aussi exécuter une opération `GET` dans votre application pour extraire les données des prévisions heure par heure sur 48 heures pour un code postal donné.
-**Remarque** : Vous pouvez entrer un code postal uniquement pour les codes de pays pris en charge (Etats-Unis (US), Royaume-Uni (GB), France (FR), Allemagne (DE) ou Italie (IT)). 
+Vous pouvez aussi exécuter une opération `GET` dans votre application pour extraire les données des prévisions heure par heure sur 48 heures pour un code postal.
+**Remarque** : Vous pouvez entrer un code postal uniquement pour les codes de pays pris en charge (Etats-Unis (US), Royaume-Uni (GB), France (FR), Allemagne (DE) ou Italie (IT)).
 
 ```
 GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/location/97229%3A4%3AUS/forecast/hourly/48hour.json?units=m&language=en-US
@@ -349,8 +349,7 @@ Par exemple, les métadonnées peuvent contenir les données suivantes :
 }
 ```
 
-Les données des titres d'alerte contiennent des informations générales, ainsi qu'une clé qui permet d'extraire les détails de l'alerte météorologique.
-Par exemple, les données des titres d'alerte peuvent contenir les données suivantes : 
+Les données des titres d'alerte contiennent des informations générales, ainsi qu'une clé qui permet d'extraire les détails de l'alerte météorologique. Par exemple, les données des titres d'alerte peuvent contenir les données suivantes :
 
 ```
   "alerts": [
@@ -509,7 +508,7 @@ Le corps de réponse fournit les métadonnées et informations suivantes :
 {: #getting_almanac_data}
 
 Vous pouvez exécuter une opération `GET` dans votre application pour extraire des données d'almanach journalières ou mensuelles.
-Par exemple, vous pouvez utiliser la demande `GET` suivante pour extraire les informations d'almanach journalières pour la ville d'Atlanta, Géorgie, aux Etats-Unis : 
+Par exemple, vous pouvez utiliser la demande `GET` suivante pour extraire les informations d'almanach journalières pour la ville d'Atlanta, Géorgie, aux Etats-Unis :
 
 ```
 https://twcservice.mybluemix.net:443/api/weather/v1/geocode/33.40/-83.42/almanac/daily.json?units=e&start=0112&end=0115
@@ -607,8 +606,7 @@ Le corps de réponse fournit les métadonnées et informations suivantes :
 {: #using_location_services}
 
 ### Demande par nom de ville
-Pour demander des informations de localisation pour une ville donnée, vous devez entrer au moins un paramètre de requête, tel qu'un nom de ville, et un paramètre `locationType` pour la ville. Vous pouvez également entrer les paramètres `countryCode` et `adminDistrictCode` pour réduire le nombre de localisations uniques qui peuvent être extraites.
-
+Pour demander des informations de localisation pour une ville, vous devez entrer au moins un paramètre de requête, tel qu'un nom de ville, et un paramètre `locationType` pour la ville. Vous pouvez également entrer les paramètres `countryCode` et `adminDistrictCode` pour réduire le nombre de localisations uniques qui peuvent être extraites.
 
 Par exemple, la demande suivante extrait les informations de localisation pour la ville d'Atlanta, Géorgie, Etats-Unis :
 
@@ -649,7 +647,7 @@ Le corps de réponse contient les informations de localisation et les métadonn�
 ```
 
 ### Demande par géocode
-Pour demander un ensemble de localisations pour un géocode, vous devez entrer une paire latitude/longitude valide. 
+Pour demander un ensemble de localisations pour un géocode, vous devez entrer une paire latitude/longitude valide.
 
 Par exemple, la demande suivante extrait les informations de localisation pour les coordonnées géographiques de la ville d'Atlanta, Géorgie, Etats-Unis :
 

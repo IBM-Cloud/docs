@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -10,9 +10,6 @@ copyright:
 
 # Enabling Facebook authentication for Cordova apps
 {: #facebook-auth-cordova}
-
-Last updated: 29 August 2016
-{: .last-updated}
 
 
 To configure {{site.data.keyword.amafull}}  Cordova applications for Facebook authentication integration, make changes in native code of the Cordova application, in Java, Objective-C, or Swift. Configure each platform separately. This Cordova application must already be instrumented with the  {{site.data.keyword.amashort}} SDK. 
@@ -26,7 +23,7 @@ Use the native development environment to make changes in the native code, for e
 You must have:
 * A Cordova project that is instrumented with the {{site.data.keyword.amashort}} client SDK, see [Setting up the Cordova plug-in](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
-* A Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* A Facebook App ID. For more information, see [Obtaining a Facebook App ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
 
@@ -57,7 +54,7 @@ Configure the {{site.data.keyword.amashort}} client SDK for Android within your 
 	
 2. Synchronize your project with Gradle by clicking **Tools > Android > Sync Project with Gradle Files**.
 
-3. Open the `android/res/values/strings.xml` file and add a `facebook_app_id` string that contains your Facebook Application ID.
+3. Open the `android/res/values/strings.xml` file and add a `facebook_app_id` string that contains your Facebook App ID.
 
 	```XML
 	<resources>
@@ -70,7 +67,7 @@ Configure the {{site.data.keyword.amashort}} client SDK for Android within your 
 	
 4. In the `AndroidManifest.xml` file of your Android project (`android/manifests/AndroidManifest.xml`):
 
- 	* Add required metadata for the Facebook SDK to the <application> element:
+	* Add required metadata for the Facebook SDK to the <application> element:
 
 	```XML
 	<application .......>

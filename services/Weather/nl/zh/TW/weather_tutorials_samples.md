@@ -13,7 +13,7 @@ copyright:
 # 範例
 {: #tutorials_samples}
 
-*前次更新：2016 年 7 月 1 日*
+前次更新：2016 年 7 月 28 日
 {: .last-updated}
 
 瞭解如何搭配使用 {{site.data.keyword.weather_short}} 服務與下列範例。
@@ -22,14 +22,14 @@ copyright:
 ## {{site.data.keyword.weather_short}} 展示
 {: #insights_weather_demo}
 
-您可以藉由使用 {{site.data.keyword.weather_short}} 服務，利用範例應用程式來檢視天氣資料。此應用程式可透過導覽至 [https://weather-company-data-demo.mybluemix.net](https://weather-company-data-demo.mybluemix.net) 進行存取。
-此應用程式會在瀏覽器中開啟，並詢問您是否要與應用程式分享您的目前位置。
+您可以試用 [{{site.data.keyword.weather_short}} 展示應用程式](http://weather-company-data-demo.{APPDomain}){: new_window}，學習如何使用
+{{site.data.keyword.weather_short}} 服務擷取天氣資料。此應用程式會在瀏覽器中開啟，並詢問您是否要與應用程式分享您的目前位置。
 
-從範例應用程式中，您可以查看所在位置目前觀測到的天氣狀況。
+從展示應用程式中，您可以查看所在位置目前觀測到的天氣狀況。
 
 ![含有渥太華目前觀測資料的主要畫面影像。](images/twctestapp_main_screen.jpg "含有渥太華目前觀測資料的主要畫面影像。")
 
-您也可以查看未來 48 小時的每小時預測，以及未來 10 天的每日預測。如果您將游標移至範例中每個區域的上方，則可以看到 JSON 格式的 API 呼叫結果，其中包含用來擷取資料的 meta 資料。
+您也可以查看未來 48 小時的每小時預測，以及未來 10 天的每日預測。每日預測顯示白天部分和晚上部分。如果您按一下展示應用程式中的這些區域，都可以看到 JSON 格式的 API 呼叫結果，其中包含用來擷取資料的 meta 資料。
 
 在展示應用程式中，按一下**部署至 Bluemix** 以建立應用程式的副本，或[直接從 GitHub 複製應用程式](https://github.com/IBM-Bluemix/weather-company-data-demo)。
 
@@ -47,7 +47,7 @@ copyright:
 ```
 GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/geocode/45.42/75.69/forecast/hourly/48hour.json?units=m&language=en-US
 ```
-您也可以在應用程式中發出 `GET` 作業，來擷取某個郵遞區號地區 48 小時的每小時預測資料。
+您也可以在應用程式中發出 `GET` 作業，來擷取郵遞區號地區 48 小時的每小時預測資料。
 
 **附註**：您可以提供郵遞區號，支援的國碼僅限於美國
 (US)、英國 (GB)、法國 (FR)、德國 (DE) 和義大利 (IT)。
@@ -155,7 +155,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 例如，每日預測可能包含下列資料：
 
 ```
-      "class": "fod_long_range_daily",
+"class": "fod_long_range_daily",
       "expire_time_gmt": 1467043540,
       "fcst_valid": 1467075600,
       "fcst_valid_local": "2016-06-28T07:00:00+0600",
@@ -193,7 +193,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 例如，這兩種部分可能包含下列預測資料：
 
 ```
-      "night": {
+"night": {
         "fcst_valid": 1467118800,
         "fcst_valid_local": "2016-06-28T19:00:00+0600",
         "day_ind": "N",
@@ -277,7 +277,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 觀測資料包含一般資訊及度量單位特有的值。例如，如果度量單位指定為 metric，則目前狀況可能包含下列資料：
 
 ```
-  "observation": {
+"observation": {
     "key": "36821",
     "class": "observation",
     "expire_time_gmt": 1467051300,
@@ -345,7 +345,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v1/ge
 警示標題資料包含一般資訊，以及擷取天氣警示詳細資料用的索引鍵。例如，警示標題資料可能包含下列資料：
 
 ```
-  "alerts": [
+"alerts": [
     {
       "key": "cf63821f-9521-3f27-92ec-e1562ccd469b",
       "class": "bulletin",
@@ -597,7 +597,7 @@ https://twcservice.mybluemix.net:443/api/weather/v1/geocode/33.40/-83.42/almanac
 {: #using_location_services}
 
 ### 依城市名稱要求
-若要要求某個城市的位置資訊，您必須至少提供一個查詢參數，例如城市名稱，以及城市的 `locationType`。您也可以提供 `countryCode` 和 `adminDistrictCode`，以減少可以擷取的唯一位置數目。
+若要要求城市的位置資訊，您必須至少提供一個查詢參數，例如城市名稱，以及城市的 `locationType`。您也可以提供 `countryCode` 和 `adminDistrictCode`，以減少可以擷取的唯一位置數目。
 
 例如，下列要求會擷取美國喬治亞州亞特蘭大的位置資訊。
 

@@ -19,7 +19,7 @@ copyright:
 
 #Linking SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts
 {: #softlayerlink}
-*Last updated: 15 August 2016*
+*Last updated: 3 October 2016*
 {: .last-updated}
 
 You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts. When you link your accounts, you are billed through SoftLayer for both SoftLayer and {{site.data.keyword.Bluemix_notm}} resources. If you have an existing account, billing through SoftLayer for {{site.data.keyword.Bluemix_notm}} takes effect for the new billing cycle that starts after the accounts are linked.
@@ -30,8 +30,8 @@ You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accoun
 After your accounts are linked, you can switch between accounts easily. You can still monitor the usage of your {{site.data.keyword.Bluemix_notm}} resources in the  {{site.data.keyword.Bluemix_notm}} user interface. However, the billing for these resources will now appear on the SoftLayer invoice.
 
 Although your account billing will be linked, your login ID will vary depending on how your SoftLayer account is authenticated:
-* For users in SoftLayer accounts that do not use IBMid for authentication, continue to use your SoftLayer ID for SoftLayer products and services, and use your IBMid for {{site.data.keyword.Bluemix_notm}} products and services.
-* For users in SoftLayer accounts that use IBMid for authentication, use your IBMid to access both your SoftLayer and your {{site.data.keyword.Bluemix_notm}} accounts.
+* For users in SoftLayer accounts that have not switched to an IBMid for authentication, continue to use your SoftLayer ID for SoftLayer products and services, and use your IBMid for {{site.data.keyword.Bluemix_notm}} products and services.
+* For users in SoftLayer accounts that have switched to an IBMid for authentication, use your IBMid to access both your SoftLayer and your {{site.data.keyword.Bluemix_notm}} accounts.
 
 **Attention:** After accounts are linked, they cannot be unlinked.  
 
@@ -72,6 +72,30 @@ You can repeat these steps over and over as more team members are added to your 
 The team member receives an email that includes a **Join the organization** link. If the member does not have an IBMid, the member is redirected to a registration page. Next, the member can enter some basic information and create their {{site.data.keyword.Bluemix_notm}} account.
 
 For more information about inviting team members through the {{site.data.keyword.Bluemix_notm}} user interface, see [Inviting team members](https://console.ng.bluemix.net/docs/admin/users_roles.html#inviteteammembers).
+
+## Switching to  IBMid
+{: #ibmid_switch}
+
+Authentication in SoftLayer now uses IBMid to provide a single login for {{site.data.keyword.Bluemix_notm}}. If you have an existing SoftLayer account, you can switch to an IBMid. A migration wizard can help guide you through this switch. 
+{:shortdesc}
+
+To begin the switch of your existing SoftLayer username to an IBMid, complete these steps:
+
+ 1. In the Customer Portal, go to the Edit User Profile page and click **Switch to IBMid**.
+ 2. Follow the migration wizard prompts to create your IBMid. Once you create your IBMid, you cannot change the ID, which is an email address. You can update the email associated with your profile, but by default that value is set as what you defined for your IBMid. After you complete the wizard, an email is sent to you.
+ 3. When you receive the email, follow the link or copy the URL into a browser and enter your registration code. The code is good for 7 days and it is a one-time use only code.  After it is used, it cannot be used again.
+ After you set up the IBMid to SoftLayer user link, you can log in to your account only with IBMid.  On the login dialog, you must use the **Log in with IBMid** button instead of entering your SoftLayer username and password.
+ 
+If you are a new customer, you are asked for an email address for your existing IBMid account, or to create a new IBMid account, when you check out your order. 
+
+### Mapping multiple SoftLayer accounts to one IBMid
+{: #map_multiple_accounts}
+
+You can associate one IBMid with multiple SoftLayer accounts by using an existing IBMid email address when setting up the account. Only one SoftLayer user for each account can be mapped to the single IBMid. The IBMid must be unique within each SoftLayer account. However, one user with access to multiple SoftLayer accounts can use one IBMid to access multiple SoftLayer accounts.
+
+For example, an IBMid can map to the master user in accounts A and B, and to an additional user in accounts C and D. One of the accounts mapped to that IBMid is the default account.  Usually, the default account is the account that was first mapped to the IBMid. However, you can switch which account is the default account  through an account switching feature in the Customer Portal.
+
+For a user with IBMid access to multiple accounts with two-factor authentication enabled, an appropriate two-factored authentication verification code per account is required during account log in and account switching.
 
 ## Using {{site.data.keyword.Bluemix_notm}} services with SoftLayer assets
 {: #bluemix_services}

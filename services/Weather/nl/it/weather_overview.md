@@ -13,7 +13,7 @@ copyright:
 # Informazioni su {{site.data.keyword.weather_short}}
 {: #about_weather}
 
-*Ultimo aggiornamento: 01 luglio 2016*
+Ultimo aggiornamento: 22 agosto 2016
 {: .last-updated}
 
 Utilizza {{site.data.keyword.weatherfull}} per incorporare i dati meteo da
@@ -34,10 +34,8 @@ Puoi utilizzare le API REST per richiamare le seguenti informazioni:
 * I dati meteo osservati correntemente per la georilevazione specificata. Questi dati meteo includono temperatura, precipitazioni, direzione e velocità del vento, umidità, pressione barometrica, punto di condensazione, visibilità e radiazioni ultraviolette (UV).
 * I dati meteo osservati per una georilevazione specificata fino ad includere le precedenti 24 ore. Questi dati sono originati dalle stazioni di osservazione fisiche.
 * Gli avvisi meteo emessi dal governo, incluse le osservazioni meteo, le avvertenze, le istruzioni e gli avvertimenti emessi dal National Weather Service (US), Environment Canada e MeteoAlarm (Europa).
-* I servizi astronomici che forniscono dati meteo giornalieri e mensili cronologici originati dalle stazioni di osservazione del National Weather Service per un periodo di tempo compreso tra 10 e 30 anni o più.
+* I servizi astronomici che forniscono dati meteo giornalieri e mensili cronologici originati dalle stazioni di osservazione del National Weather Service per un periodo di tempo compreso tra 10 e 30 anni o più. 
 * I servizi di associazione dell'ubicazione che forniscono la capacità di ricercare un nome ubicazione o un codice geografico (latitudine e longitudine) per richiamare una serie di ubicazioni che corrispondono alla tua richiesta.
-
-Puoi [scaricare una serie di icone](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} da utilizzare nella tua applicazione.
 
 ## Modello di prezzi
 {: #pricing_models}
@@ -80,16 +78,18 @@ $1.70 per 10.000 chiamate API.
 ## Feedback e supporto
 {: #feedback_support}
 
-In caso di domande tecniche sulla creazione di una applicazione con {{site.data.keyword.weather_short}}, pubblicare
-la domanda in [Stack
-Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window} e aggiungere i tag ibm-bluemix e
-**weather**. 
+Puoi ottenere supporto ricercando le informazioni o facendo una domanda in un forum. Puoi inoltre aprire un ticket di supporto. 
 
-Se stai riscontrando dei problemi con questo servizio, utilizza il [IBM developerWorks Answers forum](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}.
-Includi le tag **bluemix** e **weather** per permettere a IBM di fornire un migliore supporto.
+Quando utilizzi i forum per fare una domanda, contrassegna con una tag la tua domanda in modo che sia visualizzabile dai team di sviluppo {{site.data.keyword.Bluemix_notm}}.
 
-Se hai domande sulla migrazione della tua applicazione da Insights for Weather a {{site.data.keyword.weather_short}},
+* Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con {{site.data.keyword.weather_short}}, inserisci la tua domanda in
+[Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window} e contrassegnala con le  tag
+**ibm-bluemix** e **weather**.
+* Se stai riscontrando dei problemi con il servizio o sulle istruzioni per l'utilizzo iniziale, utilizza il
+[IBM developerWorks Answers forum](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}. Includi le tag **bluemix** e **weather**.
+* Se hai domande sulla migrazione della tua applicazione da Insights for Weather a {{site.data.keyword.weather_short}},
 contattaci all'indirizzo [IBM developerWorks](http://www.ibm.com/developerworks){:new_window}.
 
-Per informazioni sulla risoluzione di problemi con Bluemix, consulta [Risoluzione dei problemi](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
-Per i dettagli sulla ricerca di informazioni e le domande nei forum e su come contattare il supporto, consulta [Richiesta di assistenza clienti](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}.
+Consulta [Come ottenere supporto](https://console.{DomainName}/docs/support/index.html#getting-help){: new_window} per ulteriori dettagli sull'utilizzo dei forum.
+
+Consulta [Come contattare il supporto](https://console.{DomainName}/docs/support/index.html#contacting-support){: new_window} per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket.

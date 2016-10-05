@@ -120,7 +120,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**Note**: To add a user to a specific organization, you must be the manager of the organization, or you must have **Admin** (available alternative is **Superuser**) or **User** permission with **Write** access.
+**Note**: To add a user to a specific organization, you must be an **Admin** with the **users.write** (or **Superuser**) permission. If you are an organization manager, you can also be provided with the capability to add users to your organization by a Superuser who runs the **enable-managers-add-users** command.  See [Enabling managers to add users](index.html#clius_emau) for more information.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -204,6 +204,32 @@ cf ba remove-user <user_name>
 
 **Tip:** You can also use **ba ru** as an alias for the longer
 **ba remove-user** command name.
+
+### Enabling managers to add users
+{: #clius_emau}
+
+If you have the **Superuser** permission in your {{site.data.keyword.Bluemix_notm}} environment, you can enable organization managers to add users to the organizations they manage. Enter the following command:
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**Tip:** You can also use **ba emau** as an alias for the longer
+**ba enable-managers-add-users** command name.
+
+### Disabling managers from adding users
+{: #clius_dmau}
+
+If organization managers have been enabled to add users to the organizations they manage in your {{site.data.keyword.Bluemix_notm}} environment with the **enable-managers-add-users** command, and if you have the **Superuser** permission, you can remove this setting.  Enter the following command:
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**Tip:** You can also use **ba dmau** as an alias for the longer
+**ba disable-managers-add-users** command name.
 
 ### Adding and deleting an organization
 
@@ -502,6 +528,26 @@ one organization by entering additional organization names or GUIDs in the comma
 **Tip:** You can also use **ba espv** as an alias for the longer
 **ba edit-service-plan-visibility** command name.
 
+### Viewing resource usage information
+{: #cliresourceusage}
+
+You can view resource usage information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) usage data and historical memory and disk usage. Historical data for memory and disk usage is displayed, by default, weekly and in descending order. To view the resource usage information, use the following command:
+
+```
+cf ba resource-usage <monthly> <weekly> 
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;monthly&gt;</dt>
+<dd class="pd">View the historical data for memory and disk space a month at a time.</dd>
+<dt class="pt dlterm">&lt;weekly&gt;</dt>
+<dd class="pd">View the historical data for memory and disk space a week at a time. This is the default value.</dd>
+</dl>
+
+**Tip:** You can also use **ba rsu** as an alias for the longer
+**ba resource-usage** command name.
+
 ### Working with service brokers
 
 Use the following commands to list all service brokers, add or delete a service broker, or to update a service broker.
@@ -788,3 +834,84 @@ cf ba unbind-security-group <security-group> <org> <space>
 **Tip:** You can also use **ba usg** as an alias for the longer
 **ba unbind-staging-security-group** command name.
 
+### Working with buildpacks
+{: #buildpacks}
+
+If you have the apps catalog write permissions, you can list, create, update, or delete buildpacks.  
+#### List all buildpacks
+
+Use the following command to list all buildpacks or view a specific buildpack:
+
+```
+cf ba buildpacks <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">An optional parameter to specify a particular buildpack to view.</dd>
+</dl>
+
+**Tip:** You can also use **ba lb** as an alias for the longer
+**ba buildpacks** command name.
+
+#### Create and upload a buildpack
+
+You can create and upload a buildpack. You can upload any compressed file that has a .zip file type.  Use the following command to upload a buildpack:
+
+```
+cf ba create-buildpack <buildpack_name> <file_path> <position>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">The name of the buildpack to upload.</dd>
+<dt class="pt dlterm">&lt;file_path&gt;</dt>
+<dd class="pd">The path to the buildpack compressed file.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">The order in which the buildpacks are checked during buildpack auto-detection.</dd>
+</dl>
+
+**Tip:** You can also use **ba cb** as an alias for the longer
+**ba create-buildpack** command name.
+
+#### Update a buildpack
+
+To update an existing buildpack, use the following command:
+
+```
+cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">The name of the buildpack to update.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">The order in which the buildpacks are checked during buildpack auto-detection.</dd>
+<dt class="pt dlterm">&lt;enabled&gt;</dt>
+<dd class="pd">Indicates whether the buildpack is used for staging.</dd>
+<dt class="pt dlterm">&lt;locked&gt;</dt>
+<dd class="pd">Indicates whether the buildpack is locked to prevent updates.</dd>
+</dl>
+
+**Tip:** You can also use **ba ub** as an alias for the longer
+**ba update-buildpack** command name.
+
+#### Delete a buildpack
+
+To delete an existing buildpack, use the following command:
+
+```
+cf ba delete-buildpack <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">The name of the buildpack to delete.</dd>
+</dl>
+
+**Tip:** You can also use **ba db** as an alias for the longer
+**ba delete-buildpack** command name.

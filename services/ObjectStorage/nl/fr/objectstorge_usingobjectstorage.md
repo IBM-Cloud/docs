@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # Commencer à utiliser {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
@@ -158,6 +165,8 @@ Swift n'a pas de véritable structure de répertoires, mais utilise la désignat
 	swift upload <nom_conteneur> <nom_répertoire>
 ```
 Cette commande télécharge la structure de répertoire complète en tant que chemin relatif. Ainsi, si vous spécifiez `/mnt/volume1`, la structure de répertoire mnt/volume1 sera attachée à tous les noms de fichier pour indiquer la structure de répertoire.
+
+
 #### Téléchargement d'un répertoire
 
 Pour télécharger une structure de répertoire, utilisez le paramètre `-prefix` pour indiquer le répertoire ou la structure de répertoire que vous voulez charger.
@@ -182,12 +191,13 @@ Si vous utilisez curl, vous pouvez entrer la commande suivante :
 	curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:conteneur_deux" https://<url-stockage-objet>/conteneur_un
 ```
 Dans cet exemple, `conteneur_deux` a été configuré pour contenir les anciennes versions de vos objets qui sont stockés dans `conteneur_un`. De ce fait, `conteneur_un` contient la version la plus récente de vos objets et `conteneur_deux` comporte les versions les plus anciennes de vos objets. Assurez-vous que `conteneur_deux` existe pour que la gestion des versions fonctionne.
+
 Avec une gestion des versions configurée, quand vous téléchargez un objet dans `conteneur_un`, s'il existe déjà une
 version de l'objet, la version existante est déplacée dans `conteneur_deux` alors que la nouvelle version est créée dans `conteneur_un`. Si vous supprimez un objet de `conteneur_un`, la version précédente de l'objet est déplacée de `conteneur_deux` à to `conteneur_un`.
 
 Les objets dans `conteneur_deux` sont nommés automatiquement selon le format suivant : `<Longueur><Nom_objet>/<Horodatage>`.
 
-`Longueur` est la longueur du nom de votre objet ; il s'agit d'un nombre hexadécimal de trois caractères remplis avec des zéros.`Nom_objet` est le nom de votre objet. `Horodatage` est l'horodatage du téléchargement initial de cette version particulière de l'objet.
+`Longueur` est la longueur du nom de votre objet ; il s'agit d'un nombre hexadécimal de trois caractères remplis avec des zéros. `Nom_objet` est le nom de votre objet. `Horodatage` est l'horodatage du téléchargement initial de cette version particulière de l'objet.
 
 Pour désactiver la gestion des versions, utilisez l'indicateur `X-Remove-Versions-Location` :
 ```
@@ -258,6 +268,7 @@ Voici un exemple complet de gestion des versions :
 		$ swift list conteneur_deux
 		$
 ```
+
 ### Planification de la suppression d'un objet {: #schedule-object-deletion}
 
 Vous pouvez configurer vos objets pour qu'ils arrivent à expiration au bout d'un certain temps. En d'autres termes, vous pouvez planifier la
@@ -276,11 +287,13 @@ Si vous utilisez le client Swift, émettez une commande post pour l'objet dans v
 		swift post -H "X-Delete-After:3600" container object
 ```
   Après cela, la commande `swift stat container object` affiche l'en-tête `X-Delete-At` avec l'expiration appropriée exprimée en date et heure.
+
 * Pour retirer la date et l'heure d'expiration de votre objet, utilisez la commande suivante :
 ```
 		swift post -H "X-Remove-Delete-After:" container object
 ```
 Si vous utilisez cURL, les commandes sont les suivantes.
+
 * Pour que l'objet soit supprimé le 01/04/2016 à 08:00:00, utilisez la commande suivante :
 ```
 		cURL -X POST -H "X-Auth-Token: <jeton>" -H "X-Delete-At:1459515600" https://<url-stockage-objet>/container/object
@@ -315,7 +328,7 @@ Une URL temporaire est une URL longue et difficile à deviner qui peut être uti
 
 #### Identification de votre compte d'authentification
 
-La commande Swift `stat` imprime les informations relatives à votre compte : 
+La commande Swift `stat` imprime les informations relatives à votre compte :
 ```
 	swift stat
 ```
@@ -361,7 +374,7 @@ Pour interagir avec l'API {{site.data.keyword.objectstorageshort}}, construisez 
 ```
 
 
-L'URL se compose des cinq parties suivantes : La `<version de l'API>` est la version 1 (v1). Vous pouvez trouver les éléments `<ID projet>`, `<espace de nom de conteneur>` et `<espace de nom d'objet>` de votre conteneur {{site.data.keyword.objectstorageshort}} dans l'interface utilisateur {{site.data.keyword.objectstorageshort}}.Pour le `<point d'accès>`, voir le tableau suivant : 
+L'URL se compose des cinq parties suivantes : La `<version de l'API>` est la version 1 (v1). Vous pouvez trouver les éléments `<ID projet>`, `<espace de nom de conteneur>` et `<object namespace>` de votre conteneur {{site.data.keyword.objectstorageshort}} dans l'interface utilisateur {{site.data.keyword.objectstorageshort}}.  Pour le `<point d'accès>`, voir le tableau suivant :
 
 
 | **Région**  |   **Point d'accès public**                     |
@@ -391,7 +404,7 @@ Pour utiliser le service {{site.data.keyword.objectstorageshort}}, vous devez [v
 d'OpenStack Keystone](#keystone-authentication). Une fois authentifié, un jeton X-Subject-Token et les noeuds finaux {{site.data.keyword.objectstorageshort}}  sont disponibles dans la réponse.
 
 Ainsi, pour créer un conteneur intitulé `my_container` dans la région de stockage Dallas, spécifiez un point d'accès
-Dallas dans la commande curl, comme suit : 
+Dallas dans la commande curl, comme suit :
 ```
 	# curl -i https://dal.objectstorage.open.softlayer.com/v1/AUTH_3c9c89a2edbb458da74a9e81e215da9e/my_container -X PUT -H "Content-Length: 0" -H "X-Auth-Token: gAAAAABWlw5mwttbb_6G3LnTiGusyoOSEHXMG7oTnDYWN1vBZB6XAxUEhz4ehGkdw6Qm_I9ZFFXr8fwcc2KaEbpWbQoglhAvrYTXbrkn8MvErLdnbcT0XK2t5N7lEZyyKQlsgmQWcrch8VOO_OiSKKToORYR7luI-2TrR_JIVZm-8AAS6hLhk9"
 
@@ -413,6 +426,7 @@ Pour créer un conteneur intitulé `my_container` dans la région de stockage Lo
 	Date: Thu, 14 Jan 2016 03:16:13 GMT
 ```
 **Remarque :** le jeton `X-Subject-Token` que vous avez acquis depuis Keystone fonctionne sur différentes régions de stockage.
+
 Pour plus d'informations sur les points d'accès pour les différentes régions, voir le tableau [Point d'accès Object Storage](#access-points).
 
 
@@ -584,7 +598,7 @@ Les listes de contrôle d'accès affiné facilitent la sécurisation des fichier
 Remarque : les procédures décrites dans ce document requièrent Swift CLI. Pour plus d'informations, voir [using {{site.data.keyword.objectstorageshort}} with the Swift CLI](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-swift-cli).
 
 
-### Types d'accès{: #access-types}
+### Types d'accès {: #access-types}
 
 L'accès au service est géré par les rôles utilisateur et les listes de contrôle d'accès aux conteneurs. Les utilisateurs {{site.data.keyword.objectstorageshort}} peuvent être ou non des administrateurs. Les listes de contrôle d'accès sont activées par les administrateurs au niveau conteneur et ne sont pas disponibles pour l'instance de service, le compte de stockage ou au niveau du projet.
 
@@ -615,7 +629,7 @@ Vous pouvez gérer les utilisateurs {{site.data.keyword.objectstorageshort}} via
 
 ### Génération des données d'identification de service {{site.data.keyword.objectstorageshort}} {: #generating}
 
-Depuis la nouvelle console {{site.data.keyword.Bluemix_notm}}, vous pouvez générer de nouvelles données d'identification de service pour les utilisateurs {{site.data.keyword.objectstorageshort}}. Pour voir la nouvelle console, cliquez sur le bouton permettant d'essayer le nouveau {{site.data.keyword.Bluemix_notm}}.
+Depuis la nouvelle console {{site.data.keyword.Bluemix_notm}}, vous pouvez générer de nouvelles données d'identification de service pour les utilisateurs {{site.data.keyword.objectstorageshort}}.  Pour voir la nouvelle console, cliquez sur le bouton permettant d'essayer le nouveau {{site.data.keyword.Bluemix_notm}}.
 
 1.  Connectez-vous à {{site.data.keyword.Bluemix_notm}} en tant qu'utilisateur avec un rôle développeur. Vous devez vous trouver au sein de l'espace de l'instance de service que vous voulez gérer.
 2. Cliquez sur l'onglet **Données d'identification pour le service**.
@@ -681,13 +695,13 @@ Pour générer des données d'identification de service en utilisant les command
 
 
 
-### Affectation d'un accès{: #assigning-access}  
+### Affectation d'un accès {: #assigning-access}  
 
 Seul un utilisateur {{site.data.keyword.objectstorageshort}} avec un rôle admin peut accorder un accès en lecture ou en écriture à un conteneur pour un autre utilisateur.
 
 Pour accorder un accès en lecture dans l'interface de ligne de commande, utilisez l'option `--read-acl` ou `-r`.
 
-1. Authentifiez vos données d'identification en utilisant les informations des données d'identification de service que vous avez créées. Vous recevez votre URL Object Storage et votre jeton d'authentification dans une sortie spécifique.
+1. Authentifiez vos données d'identification en utilisant les informations des données d'identification de service que vous avez créées.  Vous recevez votre URL Object Storage et votre jeton d'authentification dans une sortie spécifique.
 
   Commande Swift :
   ```
@@ -744,15 +758,15 @@ Différentes combinaisons LCA (Liste de contrôle d'accès) d'accès en lecture 
 
 <table>
   <tr>
-    <th> Droit d'accès</th>
-    <th> Options LCA en lecture</th>
+    <th> Droit d'accès </th>
+    <th> Options LCA en lecture </th>
   </tr>
   <tr>
     <td> Lecture pour tous les référents quelle que soit leur affiliation de compte </td>
     <td> `.r,*` </td>
   </tr>
   <tr>
-    <td> Lecture et liste pour tous les référents et listes</td>
+    <td> Lecture et liste pour tous les référents et listes </td>
     <td> `.r:*,.rlistings` </td>
   </tr>
   <tr>
@@ -768,7 +782,7 @@ Différentes combinaisons LCA (Liste de contrôle d'accès) d'accès en lecture 
     <td> `< ID_projet>:<*>` </td>
   </tr>
   <tr>
-    <td> Lecture et liste pour chaque utilisateur dans chaque projet </td>
+    <td> Lecture et liste pour chaque utilisateur dans chaque projet  </td>
     <td> `<*>:<*>` </td>
   </tr>
 </table>
@@ -780,7 +794,7 @@ Remarque : utilisez une virgule (,) pour séparer les listes de contrôle d'acc�
 
 Pour accorder un accès en écriture, utilisez l'option `--write-acl` ou `-w` du client Swift.
 
-1. Authentifiez vos données d'identification en utilisant les informations des données d'identification de service que vous avez créées. Vous recevez votre URL Object Storage et votre jeton d'authentification dans une sortie spécifique.
+1. Authentifiez vos données d'identification en utilisant les informations des données d'identification de service que vous avez créées.  Vous recevez votre URL Object Storage et votre jeton d'authentification dans une sortie spécifique.
 
   Commande Swift :
   ```
@@ -825,7 +839,7 @@ Différentes combinaisons LCA (Liste de contrôle d'accès) d'accès en écritur
 
 <table>
   <tr>
-    <th> Droit d'accès</th>
+    <th> Droit d'accès </th>
     <th> Options LCA en écriture </th>
   </tr>
   <tr>
@@ -833,7 +847,7 @@ Différentes combinaisons LCA (Liste de contrôle d'accès) d'accès en écritur
     <td> `<ID_projet>:<ID_utilisateur>` </td>
   </tr>
   <tr>
-    <td> Ecriture pour un utilisateur spécifié dans chaque projet</td>  
+    <td> Ecriture pour un utilisateur spécifié dans chaque projet </td>  
     <td> `*:<ID_utilisateur>` </td>
   </tr>
   <tr>
@@ -853,7 +867,7 @@ Remarque : utilisez une virgule (,) pour séparer les listes de contrôle d'acc�
 
 
 
-### Retrait de l'accès{: #removing-access}
+### Retrait de l'accès {: #removing-access}
 
 Pour retirer les listes de contrôle d'accès en lecture d'un conteneur :
 
@@ -884,8 +898,7 @@ Pour vérifier que vous avez retiré une liste de contrôle d'accès :
   swift stat <nom_conteneur>
   ```
 
-    Sortie exemple :
-  
+  Sortie exemple :
   ```
          Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
        Container: Test

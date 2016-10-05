@@ -13,7 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-Last updated: 26 August 2016
+Last updated: 29 September 2016
 {: .last-updated}
 
 {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} gives you a versatile toolkit that includes gateway devices, device management, and powerful application access. By using {{site.data.keyword.iot_short_notm}}, you can collect connected device data and perform analytics on real-time data from your organization.
@@ -36,7 +36,7 @@ To get up and running with the service, explore the following options depending 
    |   The service is deployed | The service is not deployed
   ------------- | -------------
   **I have a device to connect** | [Connect your device to {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore device connection in the [Play organization demo](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  **I do not have a device to connect** | [Create and connect a Node-RED device simulator](nodereddevice_sample.html){:new_window}. | Get started with [Watson IoT Platform Starter](https://new-console.stage1.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}.
+  **I do not have a device to connect** | [Create and connect a Node-RED device simulator](nodereddevice_sample.html){:new_window}. | Get started with [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}.
 For more information on how to connect specific device types to {{site.data.keyword.iot_short_notm}}, see [developerWorks recipes](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}.  
 
 For device connection developer documentation, see:

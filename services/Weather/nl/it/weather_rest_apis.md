@@ -13,7 +13,7 @@ copyright:
 # Utilizzo delle {{site.data.keyword.weather_short}} API REST
 {: #rest_apis}
 
-*Ultimo aggiornamento: 01 luglio 2016*
+Ultimo aggiornamento: 22 agosto 2016
 {: .last-updated}
 
 Puoi utilizzare le [API REST](https://twcservice.{APPDomain}/rest-api/){:new_window}
@@ -27,7 +27,7 @@ Puoi trovare queste informazioni aprendo la tua applicazione e facendo clic su *
 
 **Nota:** ogni regione è indipendente. Non puoi utilizzare le credenziali di servizio
 che ti sono state fornite in una regione per autenticarti a un servizio in un'altra regione.
-La mancata immissione delle credenziali corrette comporterà il ricevimento di un messaggio "Non autorizzato" nel corpo della risposta.
+La mancata immissione delle credenziali corrette comporterà il ricevimento di un messaggio *Non autorizzato* nel corpo della risposta.
 
 Con le API REST, puoi richiamare i dati meteo fornendo una georilevazione come ad esempio le coordinate di latitudine e longitudine.
 Puoi utilizzare le seguenti API.
@@ -35,9 +35,9 @@ Puoi utilizzare le seguenti API.
 |**API**                                  |**Descrizione**              |
 |-----------------------------------------|-----------------------------|
 |`GET /v1/{geocode or location ID}/forecast/hourly/48hour.json`  |Restituisce una previsione meteo oraria per le successive 48 ore per una geoposizione in base al formato che hai fornito. Puoi fornire un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. I dati di previsione oraria possono contenere previsioni fino a 48 ore per ogni ubicazione. È necessario eliminare tutte le precedenti previsioni orarie per un'ubicazione quando si ricevono i nuovi dati.|
-|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |Restituisce le previsione meteo giornaliere per 3, 5, 7 o 10 giorni per una geoposizione in base al formato che hai fornito. Il numero di giorni restituiti viene specificato nel formato `3day`, `5day`, `7day` o `10day`. Puoi fornire un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Ogni previsione giornaliera può contenere una previsione per il giorno, una per la notte e una di 24 ore. Questi segmenti sono oggetti separati nelle risposte JSON. I dati di previsione per il giorno di una previsione giornaliera non sono più disponibili dopo le 15:00 dell'ora locale. Alle 15:00 ora locale, la tua applicazione non visualizzerà più i dati per la previsione per il giorno.|
-|`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|Restituisce le previsione meteo giornaliere in periodi di 6 ore per 3, 5, 7 o 10 giorni per una geoposizione in base al formato che hai fornito. Il numero di giorni restituiti viene specificato nel formato `3day`, `5day`, `7day` o `10day`. Puoi fornire un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Ogni previsione giornaliera può contenere una previsione per la mattina, il pomeriggio, la sera e la notte. Questi segmenti sono oggetti separati nelle risposte JSON.|
-|`GET /v1/{geocode or location ID}/observations.json`              |Restituisce le condizioni meteo per una georilevazione. Puoi fornire un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Queste osservazioni recenti vengono conservate nel database fino a 10 minuti per le stazioni di segnalazione specifiche e per 24 ore di osservazioni a stazione. I dati sulle osservazioni recenti vengono costantemente aggiornati e sostituiti con una metodologia primo arrivato / primo eliminato (ruotando i dati con le osservazioni più recenti e spostando le più vecchie nella memoria di archiviazione) in base all'indicatore di data/ora delle osservazioni.|
+|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |Restituisce le previsione meteo giornaliere per 3, 5, 7 o 10 giorni per una geoposizione in base al formato che hai fornito. Il numero di giorni da richiamare viene specificato nel formato `3day`, `5day`, `7day` o `10day`. Puoi fornire un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Ogni previsione giornaliera può contenere una previsione per il giorno, una per la notte e una di 24 ore. Questi segmenti sono oggetti separati nelle risposte JSON. I dati di previsione per il giorno di una previsione giornaliera non sono più disponibili dopo le 15:00 dell'ora locale. Alle 15:00 ora locale, la tua applicazione non visualizzerà più i dati per la previsione per il giorno.|
+|`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|Restituisce le previsione meteo giornaliere in periodi di sei ore per 3, 5, 7 o 10 giorni per una geoposizione in base al formato che hai fornito. Il numero di giorni da richiamare viene specificato nel formato `3day`, `5day`, `7day` o `10day`. Puoi fornire un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Ogni previsione giornaliera può contenere una previsione per la mattina, il pomeriggio, la sera e la notte. Questi segmenti sono oggetti separati nelle risposte JSON.|
+|`GET /v1/{geocode or location ID}/observations.json`              |Restituisce le condizioni meteo per una georilevazione. Puoi fornire un `geocode/{latitude}/{longitude}` o una `location/{locationId}`.  Queste osservazioni recenti vengono conservate nel database fino a 10 minuti per le stazioni di segnalazione specifiche e per 24 ore di osservazioni a stazione. I dati sulle osservazioni recenti vengono costantemente aggiornati e sostituiti con una metodologia primo arrivato / primo eliminato (ruotando i dati con le osservazioni più recenti e spostando le più vecchie nella memoria di archiviazione) in base all'indicatore di data/ora delle osservazioni.|
 |`GET /v1/{geocode or location ID}/observations/timeseries.json`   |Restituisce le osservazioni correnti e fino a 24 ore di osservazioni passate, dalla data e ora correnti, per una georilevazione. Puoi fornire un `geocode/{latitude}/{longitude}` o una `location/{locationId}`. Le osservazioni meteo vengono raccolte da periferiche fisiche ubicate globalmente e da osservazioni meteo correnti.|
 |`GET /v1/{geocode, country code, state, or area}/alerts.json`      |Restituisce gli avvisi, le avvertenze, le istruzioni e gli avvertimenti meteo emessi dal National Weather Service (NWS), Environment Canada e MeteoAlarm (Europa) e include la traduzione della descrizione dell'evento, il nome del paese e le intestazioni dell'avviso in 49 lingue. Puoi fornire un `geocode/{latitude}/{longitude}`, `country/{countrycode}`, `country/{countrycode}/state/{statecode}`/, o `country/{countrycode}/area/{areaid}`.|
 |`GET /v1/alert/{detail_key}/details.json`                         |Restituisce gli avvisi, le avvertenze, le istruzioni e gli avvertimenti meteo emessi dal National Weather Service (NWS), Environment Canada e MeteoAlarm (Europa). I dettagli includono informazioni approfondite sull'emissione degli avvisi del governo per l'area specificata e includono la traduzione della descrizione dell'evento, il nome del paese e le intestazioni dell'avviso in 49 lingue.|
@@ -49,11 +49,11 @@ Puoi utilizzare le seguenti API.
 ## Previsioni giornaliere e infragiornaliere
 {: #daily_intraday}
 L'API di previsione giornaliera può contenere più giorni di previsioni giornaliere per ogni ubicazione.
-Ogni giorno di previsione può contenere fino a tre previsioni separate. Per ogni giorno di previsione fornito,
+Ogni giorno di previsione può contenere fino a tre previsioni separate. Per ogni giorno di previsione,
 l'API può restituire previsioni del giorno, della notte e di 24 ore.
 
 L'API di previsione infragiornaliera può contenere più giorni di previsioni giornaliere per ogni ubicazione.
-Ogni giorno di una previsione contiene quattro previsioni separate di 6 ore per la mattina (dalle 7 alle 13),
+Ogni giorno di una previsione contiene quattro previsioni separate di sei ore per la mattina (dalle 7 alle 13),
 il pomeriggio (dalle 13 alle 19), la sera (dalle 19 all'1) e la notte (dall'1 alle 7). La previsione infragiornaliera
 è simile nella struttura alla previsione giornaliera.
 
@@ -137,10 +137,10 @@ un intervallo di date invece di un mese o un giorno della data.
 
 Il formato della data per richiamare i risultati di Daily Almanac è un valore numerico a quattro cifre che rappresenta
 il mese e il giorno per la data richiesta, MMDD. Ogni giorno con un solo numero
-**deve** essere preceduto da uno zero (0), ad esempio, 01.
+**deve** essere preceduto da uno zero, ad esempio, 01.
 
 Il formato della data per richiamare i risultati di Monthly Almanac è il mese, MM. Ogni mese con un solo numero
-**deve** essere preceduto da uno zero (0), ad esempio, 01.  Qualsiasi altro formato provoca un errore nell'API
+**deve** essere preceduto da uno zero, ad esempio, 01. Qualsiasi altro formato provoca un errore nell'API
 e non saranno restituiti dati.
 
 **Nota**: se non fornisci il valore della data nella richiesta, il sistema restituisce
@@ -165,11 +165,11 @@ https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/dai
 |**Attributo**     |**Descrizione**                                    |
 |------------------|---------------------------------------------------|
 |`hostname`        |Il percorso dell'URL ospitante. Ad esempio, `https://twcservice.mybluemix.net:443/api/weather`.|
-|`version`         |L'iterazione corrente. Ad esempio, "v1".|
-|`location`        |Il codice geografico o l'ID di ubicazione. Il gruppo di ubicazione può essere "geocode" o "location". Ad esempio, "geocode/45.4214/75.6919" rappresenta Ottawa, Canada. Se fornisci una coordinata di georilevazione, l'API restituisce i dati per l'ubicazione disponibile più vicina. I punti sono utilizzati come separatori decimali e le virgole sono utilizzate per separare i valori di latitudine e longitudine. Se fornisci un codice geografico, i valori di latitudine e longitudine attuali che stanno venendo utilizzati sono restituiti nei metadati della risposta.|
-|`product group`   |Il prodotto. Ad esempio, "observations" o "forecast". Un gruppo secondario del prodotto, ad esempio, "historical", è facoltativo.|
-|`data`            |Il tipo di data. Ad esempio, "daily" o "monthly". |
-|`format`          |Il formato. Ad esempio, "3day", "5day", "7day" o "10day".|
+|`version`         |L'iterazione corrente. Ad esempio, `v1`.|
+|`location`        |Il codice geografico o l'ID di ubicazione. Il gruppo di ubicazione può essere `geocode` o `location`. Ad esempio, `geocode/45.4214/75.6919` rappresenta Ottawa, Canada. Se fornisci una coordinata di georilevazione, l'API restituisce i dati per l'ubicazione disponibile più vicina. I punti sono utilizzati come separatori decimali e le virgole sono utilizzate per separare i valori di latitudine e longitudine. Se fornisci un codice geografico, i valori di latitudine e longitudine attuali che stanno venendo utilizzati sono restituiti nei metadati della risposta.|
+|`product group`   |Il prodotto. Ad esempio, `observations` o `forecast`. Un gruppo secondario del prodotto, ad esempio, `historical`, è facoltativo.|
+|`data`            |Il tipo di data. Ad esempio, `daily` o `monthly`.|
+|`format`          |Il formato. Ad esempio, `3day`, `5day`, `7day` o `10day`.|
 |`units`           |Le unità di misura facoltative con cui restituire la risposta. L'API supporta le unità di misura English (e), Metric (m) e UK-Hybrid (h). Se fornisci le unità di misura ma non un valore, l'API restituisce i dati nell'unità di misura che corrisponde al codice della lingua. L'unità di misura richiesta o predefinita viene restituita nel parametro units nei metadati della risposta.|
 |`language`        |La lingua in cui restituire la risposta. L'impostazione predefinita è en-US. La lingua di traduzione richiesta o predefinita viene restituita nel parametro language nei metadati della risposta.|
 *Tabella 2. Dettagli URL*
@@ -179,14 +179,95 @@ https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/dai
 Le API utilizzano il sistema di riferimento delle coordinate del codice geografico WGS84. Per ulteriori informazioni, consulta
 [Basic Geo Vocabulary](https://www.w3.org/2003/01/geo/){:new_window}.
 
+## Immagini e codici dell'icona
+{: #icon_code_images}
+
+Quando le API REST {{site.data.keyword.weather_short}} restituiscono un codice dell'icona nella risposta,
+puoi utilizzarlo per determinare quale immagine dell'icona visualizzare nella tua applicazione.
+Esiste una relazione uno-a-uno tra il codice dell'icona nella risposta dell'API e il nome del file dell'immagine dell'icona.
+Ad esempio, se la risposta dell'API contiene un `icon_code` di 1, puoi utilizzare il nome del file `01.png`
+per visualizzare l'immagine dell'icona corrispondente.
+
+Nel tuo codice, puoi creare una funzione che utilizza il `icon_code`
+per determinare l'URL dell'immagine dell'icona. Ad esempio:
+
+```
+function getIconURL(code) {
+    return "images/weathericons/icon" + code + ".png";
+}
+```
+
+La seguente tabella contiene le immagini, le descrizioni e i codici dell'icona che possono essere utilizzati
+con le API REST {{site.data.keyword.weather_short}}. La tabella indica se un'icona
+è utilizzata nelle API di osservazione o di previsione e se l'icona è disponibile nelle
+parti della previsione del giorno o della notte.
+
+|**Codice**|**Descrizione**|**Immagine**|**Utilizzo API** |**Notte o giorno**|
+|----|--------------------------|------------|------------|--------------------|
+| 0  | Tornado                  | <img src="images/00.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Notte e giorno |
+| 1  | Tempesta tropicale           | <img src="images/01.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 2  | Uragano                | <img src="images/02.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Notte e giorno |
+| 3  | Forti tempeste            | <img src="images/03.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Notte e giorno |
+| 4  | Tuoni e grandine         | <img src="images/04.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 5  | Rovesci da pioggia a neve     | <img src="images/05.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 6  | Pioggia / Nevischio             | <img src="images/06.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 7  | Freddo misto a neve / Nevischio  | <img src="images/07.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 8  | Pioggerella gelida         | <img src="images/08.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 9  | Pioggerella                  | <img src="images/09.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 10 | Pioggia gelida            | <img src="images/10.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 11 | Pioggia leggera               | <img src="images/11.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 12 | Pioggia                     | <img src="images/12.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 13 | Spruzzate di neve sparse       | <img src="images/13.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 14 | Neve leggera               | <img src="images/14.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 15 | Ventoso / Raffica di neve  | <img src="images/15.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 16 | Neve                     | <img src="images/16.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 17 | Grandine                     | <img src="images/17.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 18 | Nevischio                    | <img src="images/18.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 19 | Vento con sabbia / Tempesta di sabbia | <img src="images/19.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 20 | Nebbioso                    | <img src="images/20.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 21 | Foschia / Ventoso             | <img src="images/21.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 22 | Fumo / Ventoso            | <img src="images/22.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 23 | Ventilato                   | <img src="images/23.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Notte e giorno |
+| 24 | Vento con nebbia / Ventoso    | <img src="images/24.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 25 | Glaciale / Cristalli di ghiaccio    | <img src="images/25.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 26 | Nuvoloso                   | <img src="images/26.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 27 | Generalmente nuvoloso            | <img src="images/27.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 28 | Generalmente nuvoloso            | <img src="images/28.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Giorno         |
+| 29 | Parzialmente nuvoloso            | <img src="images/29.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte       |
+| 30 | Parzialmente nuvoloso            | <img src="images/30.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Giorno         |
+| 31 | Sereno                    | <img src="images/31.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte       |
+| 32 | Soleggiato                    | <img src="images/32.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Giorno         |
+| 33 | Bello / Generalmente sereno      | <img src="images/33.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte       |
+| 34 | Bello / Generalmente soleggiato      | <img src="images/34.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Giorno         |
+| 35 | Misto pioggia & grandine        | <img src="images/35.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Giorno         |
+| 36 | Caldo                      | <img src="images/36.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Giorno         |
+| 37 | Temporali isolati   | <img src="images/37.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Giorno         |
+| 38 | Temporali            | <img src="images/38.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 39 | Rovesci sparsi        | <img src="images/39.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Giorno         |
+| 40 | Forte pioggia               | <img src="images/40.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 41 | Rovesci nevosi sparsi   | <img src="images/41.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Giorno         |
+| 42 | Forte nevicata               | <img src="images/42.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+| 43 | Tormenta                 | <img src="images/43.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Notte e giorno |
+| 44 | Non disponibile (N/D)      | <img src="images/44.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Notte e giorno |
+| 45 | Rovesci sparsi        | <img src="images/45.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Notte       |
+| 46 | Rovesci nevosi sparsi   | <img src="images/46.png " width="100" height="100" alt="Immagine icona."/>| Previsione                | Notte       |
+| 47 | Temporali sparsi  | <img src="images/47.png " width="100" height="100" alt="Immagine icona."/>| Previsione e osservazioni | Notte e giorno |
+*Tabella 3. Immagini e codici dell'icona*
+
+Puoi scaricare questa serie di icone meteo come [PNG](https://twcdocs.mybluemix.net/download/weather_icons_200x200_png.zip){:new_window}
+o [SVG](https://twcdocs.mybluemix.net/download/weather_icons_200x200_svg.zip){:new_window} e utilizzarli nella tua applicazione. 
+
+Puoi ance scaricare la [serie di icone](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} che utilizza l'applicazione demo
+[{{site.data.keyword.weather_short}}](http://weather-company-data-demo.{APPDomain}){: new_window}.
+
 ## Unità di misura
 {: #units_measure}
 
 Quando utilizzi le API, non è necessario passare esplicitamente un'unità di misura. Le API utilizzano per impostazione predefinita l'unità di misura associata al codice di lingua nell'URL. Tuttavia, se desideri fornire un'unità di misura diversa dalla predefinita, puoi passare a un'unità di misura che sovrascrive la predefinita.
 
-* Per en-US o en, il codice di unità di misura predefinito è English/Imperial. Il codice di unità è "e".
-* Per en-GB, l'unità di misura predefinita è Hybrid-UK. Il codice di unità è "h".
-* Per tutte le altre, l'unità di misura predefinita è Metric. Il codice di unità è "m".
+* Per en-US o en, il codice di unità di misura predefinito è English/Imperial. Il codice di unità è `e`.
+* Per en-GB, l'unità di misura predefinita è Hybrid-UK. Il codice di unità è `h`.
+* Per tutte le altre, l'unità di misura predefinita è Metric. Il codice di unità è `m`.
 
 ## Traduzione in un'altra lingua
 {: #language_translation}
@@ -213,12 +294,12 @@ I seguenti campi sono tradotti:
 |`headline_text`     |Il testo dell'intestazione di un evento per l'ubicazione.|
 |`event_desc`        |Una descrizione dell'evento.|
 |`cntry_name`        |Il nome del paese in cui si è verificato l'evento, fornito in lettere maiuscole e minuscole.|
-*Tabella 3. Campi di risposta tradotti*
+*Tabella 4. Campi di risposta tradotti*
 
 ## Gestione dei campi dati mancanti o null nella risposta API
 {: #handling_null_or_missing}
 
-Se un campo dati è null perché i dati non sono disponibili, le API REST restituiscono le tag del campo appropriate con la parola "null" o non restituiscono il campo affatto.
+Se un campo di dati è null perché i dati on sono disponibili, le API REST restituiscono i tag campo appropriati con la parola `null` o non restituiscono affatto il campo. 
 
 ## Gestione errori
 {: #handling_errors}
@@ -232,7 +313,7 @@ I seguenti codici di errore sono comuni per tutte le API:
 |403       |Non consentito. Il server comprende la richiesta ma si rifiuta di soddisfarla.|
 |404       |Non trovato. Se un parametro obbligatorio non è presente nella richiesta API, viene restituito un errore MissingParameterException con un codice di errore 404.|
 |500       |Errore server interno. Il server ha riscontro una condizione inattesa che gli impedisce di soddisfare la richiesta.|
-*Tabella 4. Codice di risposta di errore*
+*Tabella 5. Codice di risposta di errore*
 
 La risposta sull'errore è sempre la stessa. Più codici di errore possono essere restituiti in una risposta.
 Ad esempio, un risposta di errore JSON potrebbe restituire quanto segue:

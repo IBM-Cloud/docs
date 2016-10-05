@@ -13,11 +13,14 @@ copyright:
 # Sobre o {{site.data.keyword.weather_short}}
 {: #about_weather}
 
-*Última atualização: 01 de julho de 2016*
+Última atualização: 22 de agosto de 2016
 {: .last-updated}
 
-Use o {{site.data.keyword.weatherfull}}
-para incorporar dados de clima da The Weather Company (TWC) para seus aplicativos do {{site.data.keyword.Bluemix}}.
+Use o
+{{site.data.keyword.weatherfull}}
+para incorporar dados de clima da The Weather Company (TWC) para seus
+aplicativos do
+{{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
 É possível incluir observações e previsões de clima no aplicativo {{site.data.keyword.Bluemix_notm}}
@@ -39,12 +42,9 @@ ultravioleta (UV).
 * Os dados de clima observados para uma localização geográfica especificada até e incluindo as 24 horas anteriores. Estes dados são originados a
 partir de estações de observação físicas.
 * Alertas de clima emitidos pelo Governo, incluindo weather watches, avisos, declarações e avisos emitidos pelo National Weather Service (EUA), Environment Canada e MeteoAlarm (Europa).
-* Serviços de almanaque que fornecem dados históricos de clima diários ou mensais provenientes de estações de observações do Serviço Nacional de Meteorologia a partir de um período de medição de 10 a
-30 anos ou mais.
+* Serviços de almanaque que fornecem dados históricos de clima diários ou mensais provenientes de estações de observações do Serviço Nacional de Meteorologia a partir de um período que vai de 10 a 30 anos ou mais.
 * Serviços de mapeamento de localização que fornecem a capacidade de procurar um nome ou uma localização geográfica do local (latitude e longitude) para recuperar um conjunto de locais que correspondem à sua
 solicitação.
-
-É possível [fazer download de um conjunto de ícones](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} para usar em seu aplicativo.
 
 ## Modelo de precificação
 {: #pricing_models}
@@ -87,18 +87,15 @@ média de US$1,70 por 10.000 chamadas API.
 ## Feedback e suporte
 {: #feedback_support}
 
-Se você tiver questões técnicas sobre a criação de um aplicativo com o {{site.data.keyword.weather_short}},
-poste a sua pergunta em [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window}
-e coloque uma tag em sua questão com **ibm-bluemix** e **weather**.
+É possível obter ajuda procurando informações ou fazendo uma pergunta em um fórum. Também é possível abrir um chamado de suporte.
 
-Se você tiver problemas com esse serviço, use o [fórum do IBM developerWorks Answers](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}.
-Inclua as tags **bluemix** e **weather** para permitir que a IBM forneça o melhor suporte.
+Ao usar os fóruns para fazer uma pergunta, identifique-a para que ela possa ser vista pelas equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}}.
 
-Se você tiver dúvidas sobre a migração de seu aplicativo do Insights for Weather para o {{site.data.keyword.weather_short}},
+* Se você tiver questões técnicas sobre o desenvolvimento ou a implementação de um app com o {{site.data.keyword.weather_short}}, poste sua pergunta no [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window} e identifique-a com **ibm-bluemix** e **weather**.
+* Se você tiver problemas com esse serviço ou com as instruções de introdução, use o [fórum do IBM developerWorks Answers](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}. Inclua as tags **bluemix** e **weather**.
+* Se você tiver dúvidas sobre a migração de seu aplicativo do Insights for Weather para o {{site.data.keyword.weather_short}},
 entre em contato conosco em [IBM developerWorks](http://www.ibm.com/developerworks){:new_window}.
 
-Para obter informações sobre resolução de problemas com o
-Bluemix, consulte
-[Resolução
-de problemas](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
-Para obter detalhes sobre a procura de informações, realização de perguntas nos fóruns e entrar em contato com o suporte, consulte [Obtendo suporte ao cliente](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}.
+Consulte [Obtendo ajuda](https://console.{DomainName}/docs/support/index.html#getting-help){: new_window} para obter mais detalhes sobre como usar os fóruns.
+
+Consulte [Entrando em contato com o suporte](https://console.{DomainName}/docs/support/index.html#contacting-support){: new_window} para obter informações sobre como abrir um chamado de suporte IBM ou sobre os níveis de suporte e as severidades dos chamados.

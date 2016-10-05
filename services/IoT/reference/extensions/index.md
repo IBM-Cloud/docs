@@ -13,10 +13,10 @@ copyright:
 
 # External service integrations
 {: #ref-index}
-Last updated: 13 September 2016
+Last updated: 26 September 2016
 {: .last-updated}
 
-External service integration allows you to access data and operations from third-party or external services within your {{site.date.keyword.iot_full}} organization.
+External service integration allows you to access data and operations from third-party or external services within your {{site.data.keyword.iot_full}} organization.
 
 ## Jasper
 {: #jasper}
@@ -48,8 +48,8 @@ In order to connect your Jasper service to your {{site.data.keyword.iot_short_no
 1. Enable the Jasper extension. To enable Jasper integration with your {{site.data.keyword.iot_short_notm}} organization, complete the following steps:
   1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
   2. In the **Extensions** page, click **Add Extension**.
-  3. Click **Add** next to AT&T.
-  4. Enter your AT&T username, password, access key and domain ID.
+  3. Click **Add** next to Jasper.
+  4. Enter your Jasper username, password, access key and domain ID.
   5. Click **Done**.
 
 2. Configure your devices
@@ -129,7 +129,7 @@ When the organization is successfully configured, the *Extensions* section displ
 ## ARM mbed connector
 {: #arm}
 
-The ARM mbed connector is an extension that allows you to connect your ARM mbed device to your {{site.data.keyword.iot_short_notm}}. The ARM mbed extension is allows the ARM mbed portal and the {{site.data.keyword.iot_short_notm}} to send and receive data from the ARM mbed portal.
+The ARM mbed connector allows you to connect your ARM mbed device to your {{site.data.keyword.iot_short_notm}}. The ARM mbed extension is allows the ARM mbed portal and the {{site.data.keyword.iot_short_notm}} to send and receive data from the ARM mbed portal.
 
 ### Setup Configuration
 
@@ -182,7 +182,7 @@ The following code sample shows the payload format for an asynchronous response 
 
 #### Sending commands to the ARM mbed platform
 
-The {{site.data.keyword.iot_short_notm}} can send commands to devices connected to the ARM mbed platform. Commands sent to the ARM mbed platform it must use the following JSON format.
+The {{site.data.keyword.iot_short_notm}} can send commands to devices connected to the ARM mbed platform. Commands sent to the ARM mbed platform must use the following JSON format.
 
 ```
 {
@@ -192,6 +192,8 @@ The {{site.data.keyword.iot_short_notm}} can send commands to devices connected 
   "payload": <Base64 encoded payload>
 }
 ```
+The method chosen is case sensitive. The initial '/' of the resource path must be skipped.
+
 
 The payload should be published to the following topic:
 
@@ -245,8 +247,12 @@ After the Orange extension has been enabled, each device with an Orange SIM card
 ```
 When the organization is successfully configured, the *Extensions* section displays under the *Extensions Configuration* section in the *Device Drilldown* view.
 
+## Historical Data Storage
+{: #historical_data}
 
-## Device Management Extensions
+The historical data storage extension lets you locate and configure compatible message storage services such as [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) or [{{site.data.keyword.messagehub_full}}](../../message_hub.html) for your IoT data.
+
+## Custom Device Management Packages
 {: #device_mgmt}
 
 Device management is a core feature of the {{site.data.keyword.iot_short_notm}}, however, it can be extended to develop additional functionality.
@@ -266,8 +272,34 @@ The device management extension allows you to install custom functions for devic
 ### Configuration for Blockchain
 
 {{site.data.keyword.iot_short_notm}} blockchain integration is a services offering  that is not activated by default in {{site.data.keyword.iot_short_notm}}. To activate the feature in your environment, complete the following steps:
- 1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Settings** and navigate to **Extensions**.
+ 1. From the {{site.data.keyword.iot_short_notm}} dashboard, **Extensions**.
  2. Click the **Tell me more** link next to the Blockchain extension to go to the IoT Blockchain Services Offering page.
  3. Fill out and submit the service request form.   
 The service approval typically takes approximately one day. After your request is approved, you receive an email with instructions on how to activate blockchain integration in your {{site.data.keyword.iot_short_notm}} organization.
  5. Return to the {{site.data.keyword.iot_short_notm}} dashboard for your organization to complete the setup. For more information, see [{{site.data.keyword.iot_short_notm}} blockchain integration](../../bl_blockchain_integration.html).
+
+## The Weather Company
+{: #weathercompany}
+
+The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
+
+**Note:** Only managed devices can set their own locations. All unmanaged devices must have their locations set manually by using the API. For more information on setting a device location, see [Update Location requests](../../devices/device_mgmt/index.html#update-location).
+
+<!--
+### Weather Data
+
+To view the weather data retrieved for a device location, find the device in the **Devices** pane and click on it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
+
+- Current weather.
+- Current temperature.
+- Predicted maximum and minimum temperature.
+- Relative humidity.
+- Pressure.
+- Visibility.
+- Wind speed.
+- Wind direction.
+- Latitude.
+- Longitude.
+
+Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html).
+-->

@@ -1,8 +1,15 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.objectstorageshort}} 정보  {: #about-object-storage} 
 
-*마지막 업데이트 날짜: 2016년 8월 10일*
+*마지막 업데이트 날짜: 2016년 8월 29일*
 {: .last-updated}
 
 
@@ -12,7 +19,7 @@ OpenStack Swift 및 Keystone 사용에 대한 자세한 정보는 [OpenStack 문
 
 {{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램은 다음과 같습니다.
 
-[![{{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램](images/ObjectStorageArchitectureDiagram.png)](images/ObjectStorageArchitectureDiagram.png) {: new_window}
+![{{site.data.keyword.objectstorageshort architecture diagram }}](images/ObjectStorageArchitectureDiagram.png)
 
 *그림 1. {{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램*
 

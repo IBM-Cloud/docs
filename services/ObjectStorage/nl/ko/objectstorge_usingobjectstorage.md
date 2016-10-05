@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.objectstorageshort}} 사용 시작 {: #using-object-storage}
@@ -11,7 +18,7 @@
 ### UI 요소 및 탐색
 {{site.data.keyword.objectstorageshort}}가 프로비저닝되면 {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} 서비스 인스턴스 대시보드에서 인스턴스 정보를 볼 수 있습니다. 대시보드에서 {{site.data.keyword.objectstorageshort}} 인스턴스를 선택하여 자세한 정보가 포함된 패널을 표시하십시오.   
 #### 사용량 데이터
-애플리케이션의 홈 페이지에 인스턴스에 대한 스토리지 사용량 정보가 표시됩니다. 여기에는 현재 **스토리지 컨테이너** 수와 모든 컨테이너에 있는 **오브젝트** 수의 총계도 표시됩니다. 메모리 사용량(메가바이트)이 나열되어 있습니다. **이용된 스토리지**는 현재 사용되는 공간의 크기를 가리킵니다. 
+애플리케이션의 홈 페이지에 인스턴스에 대한 스토리지 사용량 정보가 표시됩니다. 여기에는 현재 **스토리지 컨테이너** 수와 모든 컨테이너에 있는 **오브젝트** 수의 총계도 표시됩니다. 메모리 사용량(메가바이트)이 나열되어 있습니다. **이용된 스토리지**는 현재 사용되는 영역의 크기를 가리킵니다. 
 #### 조치
 최신 사용 데이터를 검색하려면 **새로 고치기** 단추를 클릭하십시오.    
 ####오브젝트 브라우저
@@ -74,7 +81,8 @@
 다음과 같이 Python pip를 사용하여 Python Swift 클라이언트를 설치하십시오. 
 
 ```
-	sudo pip install python-swiftclient```
+	sudo pip install python-swiftclient
+```
 
 다음 명령을 실행하여 Python Keystone 클라이언트를 설치하십시오.
 
@@ -254,6 +262,7 @@ Curl을 사용하는 경우 다음과 같이 설정할 수 있습니다.
 		$ swift list container_two
 		$
 ```
+
 ### 오브젝트 삭제 스케줄링 {: #schedule-object-deletion}
 
 지정된 시간에 만료되도록 오브젝트를 설정할 수 있습니다. 즉, 오브젝트의 삭제를 스케줄링할 수 있습니다. `X-Delete-At` 또는 `X-Delete-After` 헤더 중 하나를 이용하여 이를 수행할 수 있습니다. `X-Delete-At` 헤더는 오브젝트를 삭제하는 epoch 시간을 나타내는 정수를 사용합니다. `X-Delete_After` 헤더는 오브젝트가 삭제되고 난 후의 시간(초)을 나타내는 정수를 사용합니다. 

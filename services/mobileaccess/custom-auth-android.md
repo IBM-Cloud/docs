@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -11,9 +11,6 @@ copyright:
 
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Android app
 {: #custom-android}
-
-Last updated: 19 September 2016
-{: .last-updated}
 
 
 Configure your Android application with custom authentication to use the {{site.data.keyword.amashort}} client SDK, and connect your application to {{site.data.keyword.Bluemix}}.

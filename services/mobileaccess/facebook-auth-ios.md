@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,12 +10,6 @@ copyright:
 
 # Enabling Facebook authentication for your iOS apps (Objective-C SDK)
 {: #facebook-auth-ios}
-
-
-Last updated: 25 August 2016
-{: .last-updated}
-
-
 
 To use Facebook as identity provider in your {{site.data.keyword.amafull}} iOS applications, add and configure the iOS Platform for your Facebook application.
 

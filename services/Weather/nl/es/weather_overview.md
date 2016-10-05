@@ -13,7 +13,7 @@ copyright:
 # Acerca de {{site.data.keyword.weather_short}}
 {: #about_weather}
 
-*Última actualización: 01 de julio de 2016*
+Última actualización: 22 de agosto de 2016
 {: .last-updated}
 
 Utilice {{site.data.keyword.weatherfull}} para incorporar datos
@@ -42,8 +42,6 @@ punto de condensación, visibilidad y radiación ultravioleta (UV).
 * Las alertas meteorológicas emitidas por el gobierno, incluidas las observaciones, los avisos, las sentencias y las advertencias meteorológicas emitidos por el National Weather Service (EE.UU.), Environment Canada y MeteoAlarm (Europa).
 * Servicios de almanaque que proporcionan datos meteorológicos diarios o mensuales históricos que se obtienen de estaciones de observación del National Weather Service desde un periodo de tiempo que comprende de 10 a 30 años o más.
 * Servicios de correlación de ubicación que proporcionan la capacidad para buscar un nombre de ubicación o un geocódigo (latitud y longitud) para recuperar un conjunto de ubicaciones que coincidan con la solicitud.
-
-Puede [descargar un conjunto de iconos](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} para utilizarlos en la app.
 
 ## Modelo de precios
 {: #pricing_models}
@@ -83,15 +81,19 @@ de 1,70 $ por 10.000 llamadas de API.
 ## Comentarios y soporte
 {: #feedback_support}
 
-Si tiene dudas técnicas sobre cómo crear una aplicación con {{site.data.keyword.weather_short}},
+Puede obtener ayuda buscando información o haciendo una pregunta en un foro. También puede abrir una incidencia de soporte. 
+
+Cuando utilice los foros para hacer una pregunta, etiquete la pregunta para que puedan verla los equipos de desarrollo de
+{{site.data.keyword.Bluemix_notm}}. 
+
+* Si tiene dudas técnicas sobre cómo desarrollar o desplegar una app con {{site.data.keyword.weather_short}},
 publique su consulta en [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window}
 y etiquete su pregunta con **ibm-bluemix** y **weather**.
-
-Si tiene algún problema con el servicio, utilice el [foro de IBM developerWorks Answers](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}.
-Incluya los códigos **bluemix** y **weather** para permitir que IBM le proporcione un mejor soporte.
-
-Si tiene preguntas sobre la migración de la app de Insights for Weather a {{site.data.keyword.weather_short}},
+* Si tiene problemas con el servicio o al obtener instrucciones de inicio, utilice el
+[Foro de respuestas de IBM developerWorks](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}. Incluya los códigos **bluemix** y **weather**. 
+* Si tiene preguntas sobre la migración de la app de Insights for Weather a {{site.data.keyword.weather_short}},
 póngase en contacto con nosotros en [IBM developerWorks](http://www.ibm.com/developerworks){:new_window}.
 
-Para obtener información sobre la resolución de problemas con Bluemix, consulte [Resolución de problemas](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
-Para obtener detalles sobre la búsqueda de información y la realización de preguntas a través de foros y sobre cómo contactar con el soporte, consulte [Obtención de soporte al cliente](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}.
+Consulte [Obtención de ayuda](https://console.{DomainName}/docs/support/index.html#getting-help){: new_window} para obtener más detalles sobre el uso de los foros. 
+
+Consulte [Cómo obtener soporte](https://console.{DomainName}/docs/support/index.html#contacting-support){: new_window} para obtener información sobre la apertura de una incidencia de soporte de IBM o sobre los niveles de soporte y gravedad de incidencias. 

@@ -1,8 +1,15 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.objectstorageshort}} の概要 {: #about-object-storage} 
 
-*最終更新日: 2016 年 8 月 10 日*
+*最終更新日: 2016 年 8 月 29 日*
 {: .last-updated}
 
 
@@ -12,8 +19,7 @@ OpenStack Swift および Keystone について詳しくは、[OpenStack 資料�
 
 以下に {{site.data.keyword.objectstorageshort}} のアーキテクチャー図を示します。
 
+![{{site.data.keyword.objectstorageshort architecture diagram }}](images/ObjectStorageArchitectureDiagram.png)
 
-[![{{site.data.keyword.objectstorageshort}}アーキテクチャー図](images/ObjectStorageArchitectureDiagram.png)](images/ObjectStorageArchitectureDiagram.png){: new_window}
-
-*図 1. {{site.data.keyword.objectstorageshort}} アーキテクチャー図*
+*図1. {{site.data.keyword.objectstorageshort}} アーキテクチャー図*
 

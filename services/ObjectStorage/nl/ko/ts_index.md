@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2014, 2016
+
+---
+
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.objectstorageshort}} 문제점 해결
@@ -43,7 +50,7 @@ Liberty Profile이 포함된 openstack4J를 사용하는 경우 다음 스택 �
 
 {{site.data.keyword.objectstoragefull}} 사용에 대한 문제점 또는 질문이 있는 경우, 정보를 검색하거나 포럼을 통해 질문하여 도움말을 가져올 수 있습니다. 또한 지원 티켓을 열 수도 있습니다.
 
-포럼을 사용하여 질문하는 경우, {{site.data.keyword.Bluemix_notm}} 개발 팀이 볼 수 있도록 질문을 태그하십시오.
+포럼을 통해 질문하는 경우, {{site.data.keyword.Bluemix_notm}} 개발 팀이 볼 수 있도록 질문에 태그를 지정하십시오.
 
 * {{site.data.keyword.objectstorageshort}}에 대한 기술적인 질문이 있는 경우, [스택 오버플로우](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window}에 질문을 게시하고 "ibm-bluemix" 및 "object-storage"를 사용하여 질문을 태그하십시오.
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->

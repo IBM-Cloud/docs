@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Authenticating users with a custom identity provider
 {: #custom-id}
-
-Last updated: 16 August 2016
-{: .last-updated}
 
 
 Create a custom identity provider that uses the {{site.data.keyword.amafull}} service and implements your own logic for collecting and validating credentials. A custom identity provider is a web application that exposes a RESTful interface. You can host the custom identity provider on premises or on {{site.data.keyword.Bluemix}}. The only requirement is that the custom identity provider must be accessible from the public internet so that it can communicate with the {{site.data.keyword.amashort}} service.

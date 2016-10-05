@@ -13,7 +13,7 @@ copyright:
 # 关于 {{site.data.keyword.weather_short}}
 {: #about_weather}
 
-*上次更新时间：2016 年 7 月 1 日*
+上次更新时间：2016 年 8 月 22 日
 {: .last-updated}
 
 使用 {{site.data.keyword.weatherfull}} 可将来自 The Weather Company (TWC) 的数据合并到 {{site.data.keyword.Bluemix}} 应用程序中。
@@ -31,8 +31,6 @@ copyright:
 * 政府发布的天气警报，包括美国国家气象局、加拿大环境部和欧洲 MeteoAlarm 发布的天气监测、警告、预警和公告。
 * 年历服务，提供来自国家气象局观察站的每日或每月历史天气数据，时间跨度为 10 到 30 年或更长。
 * 位置映射服务，提供查找位置名或地理位置代码（经度和纬度）的能力，用于检索匹配请求的位置集。
-
-您可以[下载图标集](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window}以在应用程序中使用。
 
 ## 定价模型
 {: #pricing_models}
@@ -52,10 +50,26 @@ copyright:
 ## 反馈与支持
 {: #feedback_support}
 
-如果对使用 {{site.data.keyword.weather_short}} 创建应用程序有技术方面的问题，请在 [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window} 上发布您的问题，并使用 **ibm-bluemix** 和 **weather** 标记您的问题。
+您可以通过搜索信息或在论坛提问来获取帮助。您还可以开具支持凭单。
 
-如果使用此服务时遇到任何问题，请使用 [IBM developerWorks Answers 论坛](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}。请包含 **bluemix** 和 **weather** 标记以允许 IBM 可以更好地为您提供支持。
+使用论坛提问时，标记您的问题以便
+{{site.data.keyword.Bluemix_notm}} 开发团队可以看到。
 
-如果您对将应用程序从 Insights for Weather 迁移到 {{site.data.keyword.weather_short}} 存在疑问，请在 [IBM developerWorks](http://www.ibm.com/developerworks){:new_window} 联系我们。
 
-有关对 Bluemix 问题进行故障诊断的相关信息，请参阅[故障诊断](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}。有关通过论坛搜索信息与询问问题，以及联系支持的详细信息，请参阅[获取客户支持](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}。
+* 如果对使用 {{site.data.keyword.weather_short}} 开发
+或部署应用程序有技术方面的问题，请在
+[Stack
+Overflow](https://stackoverflow.com/questions/tagged/ibm-bluemix+weather){:new_window} 上发布您的问题，并使用
+**ibm-bluemix** 和 **weather**
+标记您的问题。
+* 如果使用此服务或入门指示信息时遇到任何问题，请使用
+[IBM
+developerWorks Answers 论坛](https://developer.ibm.com/answers/topics/weather/?smartspace=bluemix){:new_window}。请包含 bluemix 和 weather 标记。
+* 如果您对将应用程序从 Insights for Weather 迁移到
+{{site.data.keyword.weather_short}} 存在疑问，请在
+[IBM
+developerWorks](http://www.ibm.com/developerworks){:new_window} 上联系我们。
+
+请参阅[获取帮助](https://console.{DomainName}/docs/support/index.html#getting-help){: new_window}以获取有关使用论坛的更多详细信息。
+
+请参阅[联系支持](https://console.{DomainName}/docs/support/index.html#contacting-support){: new_window}以获取有关开具 IBM 支持凭单或有关支持级别和凭单严重性的信息。

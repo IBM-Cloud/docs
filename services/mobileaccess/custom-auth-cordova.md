@@ -2,15 +2,11 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Cordova app
 {: #custom-cordova}
-
-Last updated: 23 August 2016
-{: .last-updated}
-
 
 Configure your Cordova application that is using custom authentication to use the {{site.data.keyword.amafull}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
 

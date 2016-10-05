@@ -34,12 +34,12 @@ To monitor and analyze the performance of your applications, you can create and 
 
 <!-- ### Monitoring logging information with Logmet
 
-https://new-console.ng.bluemix.net/docs/services/MessageHub/index.html#messagehub072
+https://console.ng.bluemix.net/docs/services/MessageHub/index.html#messagehub072
 -->
 
 <!--
 ### Monitoring with New Relic
-For additional monitoring, you can use New Relic, a third-party service that provides monitoring metrics for your application. For instructions to create the New Relic service in your {{site.data.keyword.Bluemix_notm}} environment, see [Using New Relic](https://new-console.ng.bluemix.net/docs/runtimes/liberty/newRelic.html).
+For additional monitoring, you can use New Relic, a third-party service that provides monitoring metrics for your application. For instructions to create the New Relic service in your {{site.data.keyword.Bluemix_notm}} environment, see [Using New Relic](https://console.ng.bluemix.net/docs/runtimes/liberty/newRelic.html).
 -->
 
 
@@ -56,6 +56,6 @@ For additional monitoring, you can use New Relic, a third-party service that pro
 
 ## Related links
 {: #general}
-* [{{site.data.keyword.iot_full}} documentation](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+* [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
 * [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

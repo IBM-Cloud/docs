@@ -92,12 +92,12 @@ Specified Git branch:
 Default master branch:
 </p>
 <pre class="codeblock">
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required])
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
 <p>Specified Git branch:
 </p>
 <pre class="codeblock">
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required])
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>

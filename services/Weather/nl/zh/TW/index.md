@@ -13,7 +13,7 @@ copyright:
 # 開始使用 {{site.data.keyword.weather_short}}
 {: #insights_weather_overview}
 
-*前次更新：2016 年 7 月 1 日*
+前次更新：2016 年 7 月 28 日
 {: .last-updated}
 
 使用 {{site.data.keyword.weatherfull}}，可以將來自 The Weather Company (TWC) 的天氣資料納入 {{site.data.keyword.Bluemix}} 應用程式中。
@@ -21,13 +21,13 @@ copyright:
 
 **注意：**目前在下列國家或地區**可能無法**購買或使用 {{site.data.keyword.weather_short}} 服務：
 阿富汗、亞美尼亞、亞塞拜然、巴林、孟加拉、不丹、汶萊、柬埔寨、中國、塞普勒斯、
-喬治亞、印度、印尼、伊朗、伊拉克、日本、約旦、哈薩克、科威特、吉爾吉斯、寮國、
+喬治亞、印尼、伊朗、伊拉克、日本、約旦、哈薩克、科威特、吉爾吉斯、寮國、
 黎巴嫩、馬來西亞、馬爾地夫、蒙古、緬甸、尼泊爾、阿曼、巴基斯坦、菲律賓、卡達、
-俄羅斯、沙烏地阿拉伯、新加坡、大韓民國、斯里蘭卡、敘利亞、台灣、塔吉克、
+俄羅斯、沙烏地阿拉伯、新加坡、大韓民國、斯里蘭卡、敘利亞、塔吉克、
 東帝汶、土耳其、土庫曼、阿拉伯聯合大公國、烏茲別克、越南、葉門。此清單會在有額外資訊時進行更新。
 
 如果您現有的應用程式使用 [Insights for Weather 服務](https://console.{DomainName}/docs/services/InsightsWeather/index.html){: new_window}，您的應用程式將在引進
-{{site.data.keyword.weather_short}} 之後，無須任何修改可繼續運作 90 天。若要利用新增的 API 和改良的定價模型，則應該將應用程式移轉至新的服務。
+{{site.data.keyword.weather_short}} 之後，無須任何修改可繼續運作 90 天。若要利用新增的 API 和改良的定價模型，可以將應用程式移轉至新的服務。
 
 在您開始之前，請先使用例如 Liberty for Java 的運行環境，在儀表板中建立一個 {{site.data.keyword.Bluemix_notm}} Web 應用程式。等待應用程式佈建，然後將
 {{site.data.keyword.weather_short}} 服務新增至您的應用程式。
@@ -61,7 +61,7 @@ copyright:
 }
 ```
 
-**附註：**每個區域各自獨立。您無法將在某個區域佈建給您的服務認證，在另一個區域中用來鑑別服務。若無法輸入適當的認證，則會導致回應內文中出現「未獲授權」訊息。
+**附註：**每個區域各自獨立。您無法將在某個區域佈建給您的服務認證，在另一個區域中用來鑑別服務。若無法輸入適當的認證，則會導致回應內文中出現*未獲授權* 訊息。
 
 # 相關鏈結
 {: #rellinks}

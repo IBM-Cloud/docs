@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 {:screen: .screen}
@@ -12,9 +12,6 @@ copyright:
 # Enabling Google authentication for iOS Objective C apps
 {: #google-auth-ios}
 
-
-Last updated: 22 August 2016
-{: .last-updated}
 
 Use Google Sign-In to authenticate users on your {{site.data.keyword.amafull}} iOS app.
 
