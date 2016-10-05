@@ -32,6 +32,8 @@ You can use blockchain service in the Bluemix dedicated offering with z/OS to cr
 
 Practical Byzantine Fault Tolerance (PBFT) is a seminal consensus protocol that can be plugged in and configured per deployment. The ``obcpbft`` package is an implementation of the seminal [PBFT](http://dl.acm.org/citation.cfm?id=571640 "PBFT") consensus protocol, which provides consensus among validators despite a threshold of validators acting as _Byzantine_, i.e., being malicious or failing in an unpredictable manner. In the default configuration, both PBFT and Sieve are designed to run on at least *3t+1* validators (replicas), tolerating up to *t* potentially faulty (including malicious, or *Byzantine*) replicas. To learn more about core PBFT functions, see the [protocol specification](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md#fabric) section of the Linux Foundation's Hyperledger Project. 
 
+Watch a [![preview](http://img.youtube.com/vi/EKa5Gh9whgU/0.jpg)](http://www.youtube.com/watch?v=EKa5Gh9whgU)
+
 *(Need to indicate a practical reason why users need to know PBFT. What role PBFT plays in blockchain on z support and its relation to this support.)*
 
 

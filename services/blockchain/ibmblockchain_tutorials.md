@@ -13,7 +13,7 @@ copyright:
 
 # Sample apps and tutorials
 {: #1stanchor}
-Last updated: 28 September 2016
+Last updated: 5 October 2016
 {: .last-updated}
 
 The following samples demonstrate how applications and chaincode function in an IBM Blockchain network. To learn more about the Hyperledger Fabric 0.5 code that underpins your blockchain network, visit the [Fabric Docs](https://github.com/hyperledger/fabric/tree/master/docs) section of the Linux Foundation's Hyperledger Project.  
@@ -60,8 +60,10 @@ Complete the following topics to implement chaincode on an IBM Blockchain on Blu
 3. Add the Hyperledger Faric 0.5 shim code to your Go path by running the following command:
 
 	```
-	go get github.com/hyperledger/fabric/core/chaincode/shim
+	go get github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview/core/chaincode/shim
 	```
+	
+4. **Note**: Be sure to follow the above link to import the v0.5 hyperledger-archives shim code.  The Bluemix backend is built with this same versioning; as a result, it's important for the shim version and Bluemix version to align.   
 
 #### Setting up GitHub
 The Blockchain on Bluemix plans require your chaincode to be located in a [GitHub](https://Github.com/) repository. Create a GitHub account and set up Git as described at [Set Up Git](https://help.github.com/articles/set-up-git/). After setting up GitHub, complete the following steps:
