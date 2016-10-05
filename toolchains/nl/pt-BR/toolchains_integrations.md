@@ -13,56 +13,54 @@ copyright:
 # Configurando integrações de ferramenta
 {: #integrations}
 
-*Última atualização: 17 de junho de 2016*
+Última atualização: 13 de setembro de 2016
 {: .last-updated}
 
 É possível configurar integrações de ferramenta que suportam tarefas de desenvolvimento, implementação e operações ao criar uma cadeia de ferramentas ou é possível incluir e configurar integrações de ferramenta para customizar uma cadeia de ferramentas existente.  
 {:shortdesc}
 
-**Importante**: este recurso é experimental. As cadeias de ferramentas podem não ser estáveis e podem mudar de formas que
-não sejam compatíveis com versões anteriores. Elas não são recomendadas para uso em ambientes de produção. Para usar cadeias de ferramentas,
-deve-se fazer uma
-[solicitação
-para acesso](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window} única. As cadeias de ferramentas estão disponíveis na região sul dos EUA somente.
+**Importante**: no {{site.data.keyword.Bluemix_notm}} Public, cadeias de ferramentas estão disponíveis somente na região sul dos EUA.
 
-**Dica**: se desejar iniciar o desenvolvimento com seu código de origem, assegure-se de configurar o GitHub e as
-integrações de ferramenta GitHub Issues antes de configurar o {{site.data.keyword.deliverypipeline}}.
+As integrações de ferramentas que estão disponíveis para incluir e configurar para a sua cadeia de ferramentas são diferentes, dependendo de você estar usando cadeias de ferramentas no
+{{site.data.keyword.Bluemix_notm}} Public ou no {{site.data.keyword.Bluemix_notm}} Dedicated.
+
+*Tabela 1. Integrações de ferramentas disponíveis para cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Dedicated e Public*
+
+|Integração de ferramentas |Disponível no {{site.data.keyword.Bluemix_notm}} Public	|Disponível no {{site.data.keyword.Bluemix_notm}} Dedicated|
+|:----------|:------------------------------|:------------------|
+|{{site.data.keyword.deliverypipeline}} 		|Sim	   	|Sim  		|
+|{{site.data.keyword.DRA_short}} 		|Sim		|no			|
+|Eclipse Orion {{site.data.keyword.webide}}		|Sim		|Sim			|
+|GitHub		|Sim		|no		|
+|Dedicated GitHub Enterprise			|no		|Sim		|
+|PagerDuty			|Sim		|no		|
+|Sauce Labs		|Sim		|no		|
+|Slack			|Sim		|no		|
+
+**Dica**: se você deseja iniciar o desenvolvimento com o seu código-fonte no {{site.data.keyword.Bluemix_notm}} Public, configure a integração de ferramenta do GitHub antes de configurar a {{site.data.keyword.deliverypipeline}}. Se você deseja iniciar o desenvolvimento com o seu código no {{site.data.keyword.Bluemix_notm}} Dedicated, configure a integração de ferramenta do {{site.data.keyword.ghe_short}} antes de configurar a {{site.data.keyword.deliverypipeline}}. 
+
 
 ## Configurando o pipeline de entrega
 {: #deliverypipeline}
 
-O {{site.data.keyword.deliverypipeline}} automatiza a implementação contínua de seus projetos por meio de sequências de estágios que
-recuperam tarefas de entrada e de execução, como construções, testes e implementações. 
+O {{site.data.keyword.deliverypipeline}} automatiza a implementação contínua de seus projetos por meio de sequências de estágios que recuperam tarefas de entrada e de execução, como construções, testes e implementações. 
 
 Configure o {{site.data.keyword.deliverypipeline}} para automatizar a construção, o teste e a implementação contínuos de seus apps: 
 
 1. Se estiver configurando essa integração de ferramenta conforme estiver criando a cadeia de ferramentas, na seção Integrações
 configuráveis, clique em **Pipeline de entrega**. Dependendo do modelo que usar, campos diferentes poderão estar disponíveis. Revise
 os valores de campo padrão e, se necessário, mude essas configurações.
-1. Se você tiver uma cadeia de ferramentas e estiver incluindo essa integração de ferramenta nela, no painel DevOps, na guia
-**Cadeias de ferramentas**, clique na cadeia de ferramentas para abrir sua página Integrações de ferramenta. Como
-alternativa, na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visualizar cadeia de ferramentas**. Em
-seguida, clique em **Integrações de ferramenta**. 
+1. Se você tiver uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e estiver incluindo essa integração de ferramenta nela, no painel do DevOps, na guia **Cadeias de ferramentas**, clique na cadeia de ferramentas para abrir a sua página Integrações de ferramentas. Como alternativa, na página Visão geral de seu aplicativo, no ladrilho Entrega contínua, clique em **Visualizar cadeia de ferramentas**. Em seguida, clique em **Integrações de ferramenta**. Se você estiver usando uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Dedicated, no Painel, na guia **DEVOPS**, clique na cadeia de ferramentas para abrir a sua página Integrações de ferramentas. Como alternativa, no canto superior direito da página Visão geral do aplicativo, clique em **Visualizar cadeia de ferramentas**. Em seguida, clique em **Integrações de ferramenta**. 
 1. Clique no botão de inclusão (+).
 1. Na seção Integrações de ferramenta, clique em **Pipeline de entrega**.
 1. Especifique um nome para seu novo pipeline.
-1. Se planejar usar seu pipeline para implementar uma interface com o usuário, selecione a caixa de seleção **App
-visualizável**. Todos os apps que seu pipeline criar serão mostrados na lista **VISUALIZAR APP** na página Integrações
-de ferramenta da cadeia de ferramentas.
-1. Clique em **Criar integração** para incluir o {{site.data.keyword.deliverypipeline}} em sua cadeia de
-ferramentas.
-1. Clique no ladrilho para {{site.data.keyword.deliverypipeline}} para visualizar o pipeline e configurá-lo. Para aprender os fundamentos da configuração de um pipeline, consulte [Construindo e implementando pipelines](../services/DeliveryPipeline/build_deploy.html){: new_window}.
+1. Se planejar usar seu pipeline para implementar uma interface com o usuário, selecione a caixa de seleção **App visualizável**. Todos os apps que seu pipeline criar serão mostrados na lista **VISUALIZAR APP** na página Integrações de ferramenta da cadeia de ferramentas.
+1. Clique em **Criar integração** para incluir o {{site.data.keyword.deliverypipeline}} em sua cadeia de ferramentas.
+1. Clique no ladrilho para {{site.data.keyword.deliverypipeline}} para visualizar o pipeline e configurá-lo. Para aprender os conceitos básicos de configuração de uma pipeline, consulte [Construindo e implementando pipelines (O link é aberto em uma nova janela)](../services/DeliveryPipeline/build_deploy.html){: new_window}.
 
-  **Dica**: se desejar acionar o pipeline ao enviar por push as mudanças em seu repositório (repo) GitHub, deverá
-configurar o GitHub para sua cadeia de ferramentas antes de definir os estágios para seu pipeline. Os estágios do pipeline precisam das URLs Git
-para seus repos GitHub. Cada estágio de pipeline pode se
-referir a somente um dos repos GitHub associado a sua cadeia de
-ferramentas. Para obter
-instruções para configurar o GitHub, consulte a seção [GitHub e GitHub Issues](#github).
+  **Dica**: se você deseja acionar a pipeline ao enviar por push mudanças para o seu repositório (repo) GitHub ou do {{site.data.keyword.ghe_short}}, deve-se configurar o GitHub ou o {{site.data.keyword.ghe_short}} para a sua cadeia de ferramentas antes de definir os estágios para a sua pipeline. Os estágios de pipeline precisam das URLs do Git para os seus repositórios. Cada estágio de pipeline pode se referir a somente um dos repositórios GitHub ou do {{site.data.keyword.ghe_short}} que está associado com a sua cadeia de ferramentas. Para obter instruções para configurar o GitHub, consulte a seção [GitHub](#github). Para obter instruções para configurar o Dedicated GitHub Enterprise, consulte [Introdução ao {{site.data.keyword.ghe_long}} (O link é aberto em uma nova janela)](../services/ghededicated/index.html){: new_window}.
   
-1. Opcional: se desejar que o Sauce Labs execute testes em seu app, configure o {{site.data.keyword.deliverypipeline}} para
-incluir uma tarefa de teste de Sauce Labs. Para obter instruções para configurar a tarefa de teste, consulte a seção
-[Configurando uma tarefa de teste Sauce Labs em seu pipeline](#config_saucelabs).
+1. Opcional: se você estiver usando uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e desejar que os Sauce Labs executem testes em seu aplicativo, configure o {{site.data.keyword.deliverypipeline}} para incluir uma tarefa de teste dos Sauce Labs. Para obter instruções para configurar a tarefa de teste, consulte a seção [Configurando uma tarefa de teste Sauce Labs em seu pipeline](#config_saucelabs).
 
 ### Configurando uma tarefa de teste Sauce Labs em seu pipeline
 {: #config_saucelabs}
@@ -75,7 +73,7 @@ Configure o {{site.data.keyword.deliverypipeline}} para incluir uma tarefa de te
 
 1. Se você não tiver um estágio que implemente uma versão de teste de seu app, crie um.
 1. No estágio, inclua uma tarefa de teste após a tarefa de implementação. Ao colocar essas tarefas no mesmo estágio, elas poderão acessar o
-mesmo conjunto de propriedades do ambiente.
+mesmo conjunto de propriedades do ambiente.   
   ![Tarefa de Teste
 ](images/toolchain_test_job.png) 
 
@@ -86,11 +84,10 @@ mesmo conjunto de propriedades do ambiente.
   b. Insira seu nome de usuário e chave de acesso do Sauce Labs. Ao fazer isso, você externaliza esses valores para que possa usá-los em
 seus testes.
   
-1. Configure a tarefa de implementação. No campo **Implementar script**, inclua este comando: export CF_APP_NAME="$CF_APP". Esse
+1. Configure a tarefa de implementação. No campo **Implementar script**, inclua esse comando: `export CF_APP_NAME="$CF_APP"`. Esse
 comando exporta o nome do app como uma propriedade do ambiente.
-1. Configure a tarefa de teste. Os valores na imagem a seguir são exemplos. Os campos **Instância de serviço**,
-**Destino**, **Organização** e **Espaço** serão preenchidos com o nome de usuário, região,
-organização e espaço do Sauce Labs que estiver usando atualmente.
+1. Configure a tarefa de teste. Os valores na imagem a seguir são exemplos. Os campos **Instância de serviço**, **Destino**,
+**Organização** e **Espaço** são preenchidos com o nome do usuário, a região, a organização e o espaço dos Sauce Labs que você estiver usando.
 ![Configurar tarefa](images/toolchain_configure_job.png)
 
   a. Para o tipo de testador, selecione **Sauce Labs**.
@@ -101,7 +98,7 @@ organização e espaço do Sauce Labs que estiver usando atualmente.
 ferramentas, clique em **Configurar**. 
   
   c. No campo **Comando de execução de teste**, insira os comandos que instalam as dependências necessárias por
-seus testes e, em seguida, execute os testes. Por exemplo, para um app Node.js hipotético, é possível inserir:
+seus testes e, em seguida, execute os testes. Por exemplo, para um aplicativo Node.js, você pode inserir esses comandos:
      ```
      npm install
      node_modules/grunt-cli/bin/grunt test:sauce:parallel
@@ -110,25 +107,24 @@ seus testes e, em seguida, execute os testes. Por exemplo, para um app Node.js h
     d. Se desejar ver seus relatórios de teste nos logs de tarefa de teste, selecione a caixa de seleção **Ativar
 relatório de teste** e configure o Padrão de arquivo de resultado de teste como `test/*.xml`.
   
-1. Clique em **SALVAR**. Agora, sempre que seu pipeline for executado, seus testes Sauce Labs serão executados.
+1. Clique em **SALVAR**. Sempre que a sua pipeline for executada, os seus testes dos Sauce Labs serão executados.
 
-Para aprender mais, consulte [Pipeline
-de entrega](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window}.
+Para saber mais, consulte [Pipeline de entrega (O link é aberto em uma nova janela)](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window}.
 
-## Incluindo o Deployment Risk Analytics
+
+## Incluindo o {{site.data.keyword.DRA_short}}
 {: #dra}
 
 {{site.data.keyword.DRA_full}} coleta e analisa os resultados dos testes de unidade, testes funcionais e ferramentas de
 cobertura de código para determinar se seu código atende a critérios predefinidos em gates especificados em seu processo de implementação. Se seu
-código não atender ou exceder os critérios, a implementação será interrompida para evitar riscos de serem liberados. É possível usar o Deployment
-Risk Analytics como uma rede de segurança para seu ambiente de entrega contínua ou como uma forma de implementar e melhorar os padrões de
-qualidade. 
+código não atender ou exceder os critérios, a implementação será interrompida para evitar riscos de serem liberados. É possível usar o {{site.data.keyword.DRA_short}} como uma rede de segurança para o
+seu ambiente de entrega contínua ou como uma forma de implementar e melhorar os padrões de qualidade. 
 
- **Dica**: esta integração de ferramenta é pré-configurada. Ela não requer nenhum parâmetro de configuração e não é
+ **Nota**: esta integração de ferramenta é pré-configurada. Ela não requer nenhum parâmetro de configuração e não é
 possível reconfigurá-la.
  
-Inclua o Deployment Risk Analytics para manter e melhorar a qualidade de seu código no Bluemix monitorando suas implementações para
-identificar riscos antes de serem liberadas:
+Inclua o {{site.data.keyword.DRA_short}} para manter e melhorar a qualidade de seu código no {{site.data.keyword.Bluemix_notm}} monitorando as suas implementações para identificar riscos
+antes de serem liberadas.
 
 1. Se você tiver uma cadeia de ferramentas e estiver incluindo essa integração de ferramenta nela, no painel DevOps, na guia
 **Cadeias de ferramentas**, clique na cadeia de ferramentas para abrir sua página Integrações de ferramenta. Como alternativa,
@@ -138,8 +134,9 @@ em **Integrações de ferramenta**.
 1. Na seção Integrações de ferramenta, clique em **Deployment Risk Analytics**. 
 1. Clique em
 **Criar integração**.
-1. Clique no ladrilho para o Deployment Risk Analytics e, em seguida, conclua as etapas de introdução: criar critérios, conectar os
-critérios ao pipeline e executar o pipeline. Para obter mais informações, consulte [Deployment Risk Analytics](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}.
+1. Clique no ladrilho para o {{site.data.keyword.DRA_short}} e, em seguida, conclua as etapas de introdução: criar critérios, conectar os critérios à pipeline e executar a pipeline. Para obter
+mais informações, consulte [{{site.data.keyword.DRA_short}} (O link é aberto em uma nova janela)](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}.
+
 
 ## Incluindo o Eclipse Orion {{site.data.keyword.webide}}
 {: #webide}
@@ -147,33 +144,35 @@ critérios ao pipeline e executar o pipeline. Para obter mais informações, con
 O Eclipse Orion {{site.data.keyword.webide}} é um ambiente baseado na web integrado em que é possível criar, editar, executar,
 depurar e concluir tarefas de controle de fonte. É possível mover perfeitamente da edição para execução, do envio para implementação. 
 
- **Dica**: esta integração de ferramenta é pré-configurada. Ela não requer nenhum parâmetro de configuração e não é
+ **Nota**: esta integração de ferramenta é pré-configurada. Ela não requer nenhum parâmetro de configuração e não é
 possível reconfigurá-la.
  
-Inclua a integração de ferramenta Eclipse Orion {{site.data.keyword.webide}} para concluir as tarefas de controle de fonte:
+Para concluir tarefas de controle de fonte, inclua a integração de ferramenta do Eclipse Orion {{site.data.keyword.webide}}:
 
-1. Se você tiver uma cadeia de ferramentas e estiver incluindo essa integração de ferramenta nela, no painel DevOps, na guia
-**Cadeias de ferramentas**, clique na cadeia de ferramentas para abrir sua página Integrações de ferramenta. Como alternativa,
+1. Se você tiver uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e estiver incluindo essa integração de ferramenta nela, no painel do DevOps, na guia **Cadeias
+de ferramentas**, clique na cadeia de ferramentas para abrir a sua página Integrações de ferramentas. Como alternativa,
 na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visualizar cadeia de ferramentas**. Em seguida, clique
-em **Integrações de ferramenta**. 
+em **Integrações de ferramenta**. Se você estiver usando uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Dedicated, no Painel, na guia **DEVOPS**,
+clique na cadeia de ferramentas para abrir a sua página Integrações de ferramentas. Como alternativa, no canto superior direito da página Visão geral do aplicativo, clique em **Visualizar cadeia de
+ferramentas**. Em seguida, clique
+em **Integrações de ferramenta**.
 1. Clique no botão de inclusão (+).
 1. Na seção Integrações de ferramenta, clique em **Eclipse Orion Web IDE**. 
 1. Clique em
 **Criar integração**.
-1. Clique no ladrilho para o novo Eclipse Orion Web IDE. Sua
-área de trabalho é pré-preenchida com seus repos GitHub. Os
+1. Clique no ladrilho para o novo Eclipse Orion {{site.data.keyword.webide}}. A sua área de trabalho é previamente preenchida com seus repositórios GitHub ou do
+{{site.data.keyword.ghe_short}}. Os
 repos associados a
 sua cadeia de ferramentas atual são destacados.
 
-Para aprender mais, consulte [Web
-IDE](https://www.ibm.com/devops/method/content/code/tool_web_ide/){: new_window}.
+Para saber mais, consulte [Editando o código com o Eclipse Orion {{site.data.keyword.webide}} (O link é aberto em uma nova janela)](../toolchains/web_ide.html){: new_window}.
 
 
-## Configurando GitHub e GitHub Issues
+## Configurando o GitHub
 {: #github}
 
 O GitHub é um serviço de hospedagem baseado na web para
-repos Git. É possível ter ambas as cópias local e remota de
+repositórios Git. É possível ter ambas as cópias local e remota de
 seus repos, o que
 facilita a colaboração. 
 
@@ -181,18 +180,18 @@ O GitHub Issues é uma ferramenta de controle que mantém seu trabalho e seus pl
 é integrado a seu repo de
 desenvolvimento para que possa focar em tarefas importantes.
 
-Configure o GitHub e o GitHub Issues para gerenciar seu código de fonte na nuvem:
+Configure o GitHub para gerenciar o seu código-fonte na nuvem:
 
 1. Se estiver configurando esta integração de ferramenta conforme estiver criando a cadeia de ferramentas, siga estas etapas:
 
  a. Na seção Integrações configuráveis, clique em **GitHub**. Se você não tiver autorizado o
-{{site.data.keyword.Bluemix}} para acessar o GitHub, clique em **Autorizar** para acessar o website GitHub. Se você não
-tiver uma sessão GitHub ativa, será solicitado que efetue login. Clique em **Autorizar aplicativo** para permitir que o {{site.data.keyword.Bluemix}} acesse sua conta GitHub. Se
+{{site.data.keyword.Bluemix_notm}} para acessar o GitHub, clique em **Autorizar** para acessar o website GitHub. Se você não
+tiver uma sessão GitHub ativa, será solicitado que efetue login. Clique em **Autorizar aplicativo** para permitir que o {{site.data.keyword.Bluemix_notm}} acesse sua conta GitHub. Se
 você tiver uma sessão GitHub ativa, mas não tiver inserido sua senha recentemente, poderá ser solicitado que insira sua senha GitHub para
 confirmar.
  
  b. Revise os locais de repo de destino padrão para os
-repos GitHub. Esses repos são clonados a partir dos mesmos
+repositórios GitHub. Esses repos são clonados a partir dos mesmos
 repos de amostra. Se
 necessário, mude os nomes dos repos de destino.
  ![Locais de repo de destino padrão](images/toolchain_github_config.png)
@@ -203,153 +202,96 @@ na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visua
 em **Integrações de ferramenta**. 
 1. Clique no botão de inclusão (+).
 1. Na seção Integrações de ferramenta, clique em **GitHub**.
-1. Se você tiver um repo GitHub e desejar usá-lo, digite
+1. Se você tiver um repositório GitHub e desejar usá-lo, digite
 a
 URL. Para o tipo de repositório, clique em **Link**.
-1. Se desejar usar um novo repo GitHub, digite um nome
-para o repo GitHub, digite a URL para o repo que estiver
+1. Se desejar usar um novo repositório GitHub, digite um nome
+para o repositório GitHub, digite a URL para o repositório que estiver
 clonando ou bifurcando e
 selecione o tipo de repositório: 
 
- a. Para criar um repo vazio, selecione
-**Novo**. 
+ a. Para criar um repositório vazio, clique em **Novo**. 
  
- b. Para criar uma cópia de um repo GitHub, selecione
-**Clonar**.
+ b. Para criar uma cópia de um repositório GitHub, clique em **Clone**.
  
- c. Para bifurcar um repo GitHub para que possa contribuir
-com as mudanças por meio das solicitações de pull, selecione
-**Bifurcar**.
+ c. Para bifurcar um repositório GitHub para que você possa contribuir com as mudanças por meio das solicitações de pull, clique em **Bifurcar**.
  
 1. Se desejar usar o GitHub Issues para o controle de emissões, selecione a caixa de seleção **Ativar GitHub Issues**.
 1. Clique em
 **Criar integração**.
-1. Clique no ladrilho para o repo GitHub com que deseja
-trabalhar para acessar o github.com e visualize o conteúdo do repo.
+1. Clique no ladrilho para o repositório GitHub com o qual deseja trabalhar. O website do GitHub é aberto, no qual é possível visualizar os conteúdos do repositório.
  
-  **Dica**: é possível usar as ferramentas de gerenciamento de código fonte integradas no Eclipse Orion Web IDE para
-editar o repo GitHub e implementar um app a partir de sua área de
-trabalho.
+  **Dica**: é possível usar as ferramentas de gerenciamento de código-fonte integradas no Eclipse Orion {{site.data.keyword.webide}} para editar o repositório GitHub e
+implementar um aplicativo a partir de sua área de trabalho.
 
-1. Se você ativou o GitHub Issues, clique no ladrilho para o GitHub Issues para acessar o GitHub Issues.
+1. Se você ativou o GitHub Issues, clique no ladrilho para o GitHub Issues para abri-lo.
 
-Para aprender mais, consulte [GitHub](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} e [GitHub Issues](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.    
+Para obter mais informações, consulte [GitHub (O link é aberto em uma nova janela)](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} e
+[GitHub Issues (O link é aberto em uma nova janela)](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
-##Usando o Dedicated {{site.data.keyword.ghe_short}}
-{: #ghe}
 
-{{site.data.keyword.ghe_long}} é a versão hospedada pela nuvem IBM e totalmente gerenciada do
-{{site.data.keyword.ghe_short}}, disponível para ambientes Dedicated Bluemix. O GitHub fornece a experiência de codificação social que os desenvolvedores amam. O
-[{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html#dedicated){: new_window} fornece um ambiente de computação em nuvem em hardware isolado fisicamente, integrado à sua rede.
+## Configurando o Dedicated GitHub Enterprise
+{: #configghe}
 
-O Dedicated {{site.data.keyword.ghe_short}} é para clientes {{site.data.keyword.Bluemix_notm}} Dedicated somente.
+O {{site.data.keyword.ghe_long}} é um serviço de hospedagem no local, baseado na web para repositórios Git. O Dedicated GitHub Enterprise destina-se somente para clientes do
+{{site.data.keyword.Bluemix_notm}} Dedicated. O GitHub Issues é uma ferramenta de rastreamento que mantém o seu trabalho e os seus planos em um local. Ele
+é integrado a seu repo de
+desenvolvimento para que possa focar em tarefas importantes. Para obter mais informações sobre o Dedicated GitHub Enterprise e o GitHub Issues, consulte
+[Usando o Dedicated GitHub Enterprise (O link
+é aberto em uma nova janela)](../services/ghededicated/index.html){: new_window} e [GitHub Issues (O link
+é aberto em uma nova janela)](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
-### Configurando sua conta 
+É possível configurar o {{site.data.keyword.ghe_short}} como uma integração de ferramenta em sua cadeia de ferramentas de forma que seja possível gerenciar código-fonte na instância do
+[{{site.data.keyword.Bluemix_notm}} Dedicated de sua empresa (O link
+é aberto em uma nova janela)](../dedicated/index.html#dedicated){: new_window}.
 
-O {{site.data.keyword.ghe_short}} inclui a conexão única com o {{site.data.keyword.Bluemix_notm}} Dedicated. Para efetuar
-login no {{site.data.keyword.ghe_short}}, cole a URL de seu administrador de região ou e-mail de boas-vindas em um navegador. Sua URL
-seguirá este padrão: `github.your-company-dedicated-name.bluemix.net`. Conecte-se a seu ID do usuário e senha do {{site.data.keyword.Bluemix_notm}} Dedicated e a sua conta do {{site.data.keyword.ghe_short}} será criada
-automaticamente.
+1. Se estiver configurando esta integração de ferramenta conforme estiver criando a cadeia de ferramentas, siga estas etapas:
 
-**Nota:** se uma mensagem declarar que seu ID do usuário não existe, solicite ao seu administrador de região que inclua seu ID do usuário no registro do usuário do {{site.data.keyword.Bluemix_notm}} Dedicated. Se você for o administrador de região, consulte [Gerenciando usuários e permissões do {{site.data.keyword.Bluemix_notm}} Dedicated](https://new-console.stage1.ng.bluemix.net/docs/admin/index.html#oc_useradmin){: new_window}.
-
-Na maioria dos casos, seu nome de usuário GitHub é seu nome abreviado de e-mail, a menos que seu nome abreviado inclua caracteres que o
-GitHub não suporte, como pontos. Se seu nome abreviado incluir caracteres que o GitHub não suportar, os caracteres serão substituídos por traços.     
-
-### Incluindo um endereço de e-mail em sua conta
-
-Deve-se incluir seu endereço de e-mail em suas configurações de conta do {{site.data.keyword.ghe_short}} para receber
-notificações. Após incluir seu endereço de e-mail, você aproveita os recursos de codificação social do {{site.data.keyword.ghe_short}}.    
+ a. Antes de efetuar login no Dedicated GitHub Enterprise pela primeira vez, solicite ao administrador de região de sua empresa para incluir o seu ID do usuário em sua instância do
+{{site.data.keyword.Bluemix_notm}} Dedicated a partir de seu registro do usuário usando LDAP. Para obter informações sobre como configurar a sua conta do {{site.data.keyword.ghe_short}},
+consulte [Usando o Dedicated GitHub Enterprise (O link é aberto em uma nova janela)](../services/ghededicated/index.html){: new_window}.
  
-Para incluir seu endereço de e-mail em sua conta do Dedicated {{site.data.keyword.ghe_short}}, conclua estas etapas:    
-1. No canto superior direito de qualquer página do GitHub, clique em seu ícone de perfil e, em seguida, clique em
-**Configurações**.    
-2. Na barra lateral, clique em **E-mails**.    
-3. Inclua seu endereço de e-mail e clique em **Incluir**.     
-
-{: #ghe_auth}
-### Criando um token de acesso pessoal ou chave SSH para autenticação
-
-Para executar operações Git remotas como
-`clonar` ou `enviar por push` do
-seu repositório Git local,
-deve-se usar um token de acesso pessoal ou chave SSH para se autenticar com o {{site.data.keyword.ghe_short}}. A autenticação por
-meio de HTTPS é suportada usando um token de acesso somente; não é possível usar seu ID do usuário e senha para clonar ou enviar por push de um
-repositório local. As solicitações de API também requerem um token de acesso pessoal.
-
-**Nota:** para usar um token de acesso pessoal ou chave SSH para autenticação, deve-se configurar o Git localmente. Para
-obter instruções, consulte [Configurando o Git](https://help.github.com/enterprise/2.6/user/articles/set-up-git/){: new_window}.    
-
-Para criar um token de acesso pessoal, conclua estas etapas:    
-   1. No canto superior direito de qualquer página do GitHub, clique em seu ícone de perfil e, em seguida, clique em
-**Configurações**.    
-   2. Na barra lateral, clique em **Tokens de acesso pessoal**.   
-   3. Clique em **Gerar novo token**.
-   4. Inclua uma descrição de token e clique em **Gerar token**.
-   5. Copie o token em um local seguro ou app de gerenciamento de senha.
-     **Nota:** por motivos de segurança, após deixar a página, não será mais possível ver o token novamente.    
-
-Use seu token de acesso pessoal em vez de uma senha para o acesso da linha de comandos por HTTPS. 
-
-
-Para criar uma chave SSH, conclua estas etapas:
-   1. Abra o Git Bash (Windows) ou uma nova janela do Terminal (Linux e Mac).    
-   2. Cole o texto a seguir, substituindo o endereço de e-mail que incluiu em sua conta {{site.data.keyword.ghe_short}}:
+ b. Na seção Integrações configuráveis, clique em **{{site.data.keyword.ghe_short}}**.    
+ 
+ c. Revise o nome padrão para o novo repositório do {{site.data.keyword.ghe_short}}. Se necessário, mude o nome do novo repositório. A imagem a seguir mostra um exemplo de um repositório que
+é clonado a partir de um repositório de amostra. É possível usar um repositório existente ou um novo repositório. Para usar um repositório novo, é possível criar um repositório vazio, clonar um repositório
+ou bifurcar um repositório.
+ ![Locais de repositório padrão](images/toolchain_ghe_config.png)
    
-     ``
-     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-     # Cria uma nova chave SSH, usando o e-mail fornecido como um rótulo
-     Gerando par de chaves rsa pública/privada.
-     ``
+1. Se você tiver uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e estiver incluindo essa integração de ferramenta nela, no painel do DevOps, na guia **Cadeias
+de ferramentas**, clique na cadeia de ferramentas para abrir a sua página Integrações de ferramentas. Como alternativa, na página Visão geral de seu aplicativo, no ladrilho Entrega contínua, clique
+em **Visualizar cadeia de ferramentas**. Em seguida, clique
+em **Integrações de ferramenta**. Se você estiver usando uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Dedicated, no Painel, na guia **DEVOPS**,
+clique na cadeia de ferramentas para abrir a sua página Integrações de ferramentas. Como alternativa, no canto superior direito da página Visão geral do aplicativo, clique em **Visualizar cadeia de
+ferramentas**. Em seguida, clique
+em **Integrações de ferramenta**.
+1. Clique no botão de inclusão (+).
+1. Na seção Integrações de ferramentas, clique em **{{site.data.keyword.ghe_short}}**.
+1. Se você tiver um repositório do {{site.data.keyword.ghe_short}} que deseja usar, digite a URL para o repositório. Para o tipo de repositório, clique em
+**Existente**.
+1. Se você deseja usar um novo repositório do {{site.data.keyword.ghe_short}}, digite um nome para o repositório, digite a URL para o repositório que você está clonando ou bifurcando e
+selecione o tipo de repositório: 
 
-   3. Quando for solicitado que especifique um arquivo para salvar a chave, pressione Enter para aceitar o local padrão.
-   4. No prompt, digite um passphrase seguro. Para obter mais informações, consulte [Trabalhando com passphrases de chave SSH](https://help.github.com/enterprise/2.6/user/articles/working-with-ssh-key-passphrases/){: new_window}.   
+ a. Para criar um repositório vazio, clique em **Novo**. 
+ 
+ b. Para criar uma cópia de um repositório, clique em **Clonar**.
+ 
+ c. Para bifurcar um repositório de maneira que você possa contribuir com as mudanças por meio de solicitações de pull, clique em **Bifurcar**.
+ 
+1. Para usar o GitHub Issues para rastreamento de emissão, marque a caixa de seleção **Ativar o GitHub Issues**.
+1. Clique em
+**Criar integração**.
+1. Clique no ladrilho para o repositório do {{site.data.keyword.ghe_short}} com o qual deseja trabalhar. A instância do
+[{{site.data.keyword.Bluemix_notm}} Dedicated de sua empresa (O link é aberto em uma nova janela)](../dedicated/index.html#dedicated){: new_window} é aberta, na qual é possível
+visualizar os conteúdos do repositório.
+ 
+  **Dica**: é possível usar as ferramentas de gerenciamento de código-fonte integradas no Eclipse Orion {{site.data.keyword.webide}} para editar o repositório do
+{{site.data.keyword.ghe_short}} e
+implementar um aplicativo a partir de sua área de trabalho.
 
-Inclua sua chave SSH no ssh-agent:    
-   1. Assegure-se de que o ssh-agent esteja ativado. Usando o Git Bash, insira este comando para ativar o ssh-agent:
-      ``
-      # inicie o ssh-agent no plano de fundo
-      $ eval "$(ssh-agent -s)"
-      Agent pid 59566
-      ``    
-  
-   2. Inclua sua chave SSH no ssh-agent inserindo este comando:
-      ``
-      $ ssh-add ~/.ssh/id_rsa
-      ``    
-   3. Inclua a chave SSH em sua conta GitHub. Para obter mais informações, consulte
-[Incluindo uma nova chave SSH em sua
-conta GitHub](https://help.github.com/enterprise/2.6/user/articles/adding-a-new-ssh-key-to-your-github-account/){: new_window}.
-   
+1. Se você ativou o GitHub Issues, clique no ladrilho para o GitHub Issues.
 
-### Configurando organizações, equipes e repos GitHub    
-
-Configurar organizações GitHub é útil porque você cria grupos distintos de usuários que trabalham em projetos ou tarefas semelhantes. Organizar
-equipes em uma organização tem o benefício agregado de controlar o acesso a repos. Para obter mais informações, consulte [Organizações e equipes](https://help.github.com/enterprise/2.6/admin/guides/user-management/organizations-and-teams/){: new_window}.
-
-**Nota:** as organizações GitHub não são as mesmas que as organizações Bluemix.
-
-Configure o projeto de sua equipe concluindo estas etapas:
-
-   1. [Criar uma
-organização (org)](https://help.github.com/enterprise/2.6/user/articles/creating-a-new-organization-account/){: new_window}.
-   2. [Criar
-um repo para sua organização](https://help.github.com/enterprise/2.6/user/articles/create-a-repo/){: new_window}.
-   3. [Convidar usuários a se unirem em sua organização](https://help.github.com/enterprise/2.6/user/articles/inviting-users-to-join-your-organization/){: new_window}.
-   4. [Selecione cuidadosamente
-pelo menos um membro de equipe para ter permissões de proprietário em sua organização](https://help.github.com/enterprise/2.6/user/articles/changing-a-person-s-role-to-owner/){: new_window}.
-   
-  **Nota:** antes de convidar usuários para sua organização, eles devem efetuar login no
-{{site.data.keyword.ghe_short}} pelo menos uma vez ou suas contas {{site.data.keyword.ghe_short}} não estarão disponíveis para
-convite.
-   
-### Obtendo Suporte
-Para obter respostas agora, envie questões a [Estouro de pilha](http://stackoverflow.com/questions/ask?tags=ibm-bluemix_github-enterprise){: new_window}. 
-
-Para obter mais suporte, use estes recursos:    
-   1. Conclua o formulário em https://ibm.biz/bluemixsupport.   
-   2. Envie um novo chamado por meio do Client Success Portal em https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix.    
-
+<!-- 8/23/2016: The GHE Dedicated content has been moved to docs-staging/services/ghededicated/index.md -->
 
 ## Configurando o PagerDuty
 {: #pagerduty}
@@ -366,10 +308,10 @@ na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visua
 em **Integrações de ferramenta**. 
 1. Clique no botão de inclusão (+).
 1. Na seção Integrações de ferramenta, clique em **PagerDuty**
-1. Digite o nome do site PagerDuty associado à sua conta PagerDuty. Se você não tiver uma conta PagerDuty,
-[registre uma](https://signup.pagerduty.com/accounts/new){: new_window}.
-1. Digite a chave de acesso API para sua conta PagerDuty. Para obter instruções para localizar a chave, consulte
-[Autenticação de API](https://signup.pagerduty.com/accounts/new){: new_window}.
+1. Digite o nome do site PagerDuty associado à sua conta PagerDuty. Se você não tiver uma conta do PagerDuty, o [ registra-se para uma (O link é
+aberto em uma nova janela)](https://signup.pagerduty.com/accounts/new){: new_window}.
+1. Digite a chave de acesso API para sua conta PagerDuty. Para obter instruções para localizar a chave, consulte [Autenticação de API (O link é
+aberto em uma nova janela)](https://signup.pagerduty.com/accounts/new){: new_window}.
 1. Digite o nome de seu serviço PagerDuty.
 1. Digite o endereço de e-mail para o contato PagerDuty primário.
 1. Digite o número do telefone para o contato PagerDuty primário.
@@ -378,7 +320,7 @@ em **Integrações de ferramenta**.
 1. Clique no ladrilho para o PagerDuty para acessar o pagerduty.com. É possível visualizar os eventos associados ao serviço PagerDuty
 que você especificou quando configurou esta integração de ferramenta para sua cadeia de ferramentas. 
 
-Para aprender mais, consulte [PagerDuty](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}.
+Para saber mais, consulte [PagerDuty (O link é aberto em uma nova janela)](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}.
 
 
 ## Configurando o Sauce Labs
@@ -399,17 +341,17 @@ na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visua
 em **Integrações de ferramenta**. 
 1. Clique no botão de inclusão (+).
 1. Na seção Integrações de ferramenta, clique em **Sauce Labs**.
-1. Digite o nome de usuário associado à sua conta Sauce Labs. É possível [localizar seu nome de
-usuário na mensagem de boas-vindas na parte superior da página da sua conta Sauce Labs](https://saucelabs.com/account){: new_window}.
-1. Digite a chave de acesso para sua conta Sauce Labs. É possível [localizar a chave no
-canto inferior esquerdo da página da sua conta Sauce Labs](https://saucelabs.com/account){: new_window}.
+1. Digite o nome de usuário associado à sua conta Sauce Labs. É possível [localizar o seu nome do usuário na mensagem de boas-vindas na parte superior de sua
+página de conta dos Sauce Labs (O link é aberto em uma nova janela)](https://saucelabs.com/account){: new_window}.
+1. Digite a chave de acesso para sua conta Sauce Labs. É possível [localizar a chave em sua página de conta dos Sauce Labs (O link é aberto em uma nova
+janela)](https://saucelabs.com/account){: new_window}.
 1. Clique em
 **Criar integração**.
 1. Clique no ladrilho para o Sauce Labs para acessar saucelabs.com e visualizar a atividade de teste para a cadeia de ferramentas.
 
  **Dica**: se você incluiu uma tarefa de teste Sauce Labs no {{site.data.keyword.deliverypipeline}}, é possível selecionar a instância de serviço.
 
-Para aprender mais, consulte [Sauce Labs](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}.
+Para saber mais, consulte [Sauce Labs (O link é aberto em uma nova janela)](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}.
 
 
 ## Configurando o Slack
@@ -434,11 +376,11 @@ na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visua
 em **Integrações de ferramenta**.
 1. Clique no botão de inclusão (+).
 1. Na seção Integrações de ferramenta, clique em **Slack**.
-1. Digite o token de autenticação API para sua conta Slack. Deve-se usar um token de acesso total gerado para se autenticar com o Slack. Para
-obter instruções para localizar o token, consulte [Autenticação de Slack](https://api.slack.com/web#authentication){: new_window}.
+1. Digite o token de autenticação API para sua conta Slack. Deve-se usar um token de acesso total gerado para se autenticar com o Slack. Para obter instruções para localizar o token, consulte
+[Autenticação de folga (O link é aberto em uma nova janela)](https://api.slack.com/web#authentication){: new_window}.
 1. Digite o nome do canal Slack para o qual deseja que as notificações sejam enviadas. Se o canal que especificar não existir, ele será criado. Se o canal foi arquivado, ele será reativado.
 1. Clique em
 **Criar integração**.
 1. Clique no ladrilho para o Slack. É possível visualizar todas as atividades para sua cadeia de ferramentas no canal Slack configurado.
 
-Para aprender mais, consulte [Slack](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.
+Para saber mais, consulte [Folga (O link é aberto em uma nova janela)](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.

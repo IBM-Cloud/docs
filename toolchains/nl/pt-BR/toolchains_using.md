@@ -8,26 +8,23 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Usando uma cadeia de ferramentas
+# Usando cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Public
 {: #toolchains-using}
 
-*Última atualização: 4 de maio de 2016*
+Última atualização: 13 de setembro de 2016
 {: .last-updated}
 
 É possível usar uma cadeia de ferramentas para ser produtivo em seu trabalho diário de desenvolvimento, implementação e operações. Após
 configurar uma cadeia de ferramentas, é possível incluir, excluir ou configurar integrações de ferramenta e gerenciar acesso à cadeia de ferramentas.
 {: shortdesc}
 
-**Importante**: este recurso é experimental. As cadeias de ferramentas podem não ser estáveis e podem mudar de
-formas que não sejam compatíveis com versões anteriores. Elas não são recomendadas para uso em ambientes de produção. Para usar cadeias de
-ferramentas, deve-se fazer uma [solicitação
-para acesso](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window} única. As cadeias de ferramentas estão disponíveis na região sul dos EUA somente.
+**Importante**: cadeias de ferramentas estão disponíveis somente na região sul dos EUA.
 
 ## Configurando uma integração de ferramenta
 {: #configuring_a_tool_integration}
 
-É possível configurar uma integração de ferramenta pela primeira vez ou atualizar as definições de configuração para uma integração de
-ferramenta que já é parte da sua cadeia de ferramentas.
+Se você adiou a configuração de uma integração de ferramenta quando criou uma cadeia de ferramentas, um botão **Configurar** será
+mostrado em seu ladrilho. Se você configurou uma integração de ferramenta quando criou uma cadeia de ferramentas, será possível atualizar as definições de configuração.
 
 1. No painel DevOps, na guia **Cadeias de ferramentas**, clique em uma cadeia de ferramentas para abrir sua página
 Integrações de ferramenta. Como alternativa, na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visualizar cadeia de ferramentas** e, em seguida, clique em **Integrações de ferramenta**.
@@ -44,21 +41,13 @@ Integrações de ferramenta. Como alternativa, na página Visão geral do app, n
  
  Quando tiver finalizado a atualização das configurações, clique em **Salvar integração**.
 
- **Nota**: após configurar o repo para
-uma integração de ferramenta GitHub, a URL do repo poderá ser
-atualizada,
-mas o próprio repo não poderá ser mudado. Para usar um repo diferente, exclua a integração de ferramenta GitHub atual em sua cadeia de
-ferramentas, inclua uma integração de ferramenta GitHub em sua cadeia de ferramentas e configure essa integração de ferramenta para usar o novo
-repo.
-
 ## Incluindo uma integração de ferramenta
 {: #adding_a_tool_integration}
 
 É possível incluir e configurar integrações de ferramenta para sua cadeia de ferramentas.
 
 1. No painel DevOps, na guia **Cadeias de ferramentas**, clique em uma cadeia de ferramentas para abrir sua página
-Integrações de ferramenta. Como alternativa, na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visualizar cadeia de
-ferramentas** e, em seguida, clique em **Integrações de ferramenta**.
+Integrações de ferramenta. Como alternativa, na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visualizar cadeia de ferramentas** e, em seguida, clique em **Integrações de ferramenta**.
 1. Para ver uma lista de integrações de ferramenta para incluir, clique no botão de inclusão (+).
 1. Clique em uma integração de ferramenta que deseja incluir.
 1. Insira quaisquer informações necessárias para configurar a integração de ferramenta. 
@@ -67,21 +56,21 @@ ferramentas** e, em seguida, clique em **Integrações de ferramenta**.
 ## Excluindo uma integração de ferramenta
 {: #deleting_a_tool_integration}
 
-É possível excluir uma integração de ferramenta de sua cadeia de ferramentas. 
+Se você excluir uma integração de ferramenta a partir de sua cadeia de ferramentas, a exclusão não poderá ser desfeita. 
 
 1. No painel DevOps, na guia **Cadeias de ferramentas**, clique em uma cadeia de ferramentas para abrir sua página
-Integrações de ferramenta. Como alternativa, na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visualizar cadeia de
-ferramentas** e, em seguida, clique em **Integrações de ferramenta**.
+Integrações de ferramenta. Como alternativa, na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visualizar cadeia de ferramentas** e, em seguida, clique em **Integrações de ferramenta**.
 1. No ladrilho para a integração de ferramenta que deseja excluir, clique no menu para acessar as opções de configuração.
 1. Para excluir a integração de ferramenta de sua cadeia de ferramentas, clique em **Excluir**.
-1. Confirme clicando em **Excluir**.
+1. Confirme clicando em **Excluir**.  
 
 ## Gerenciando acesso
 {: #managing_access}
 
 É possível conceder aos usuários o acesso a uma cadeia de ferramentas, incluindo-os na organização (org) à qual a cadeia de ferramentas está
 associada. Cada cadeia de ferramentas é associada a uma organização específica e qualquer usuário que for um membro dessa organização poderá
-acessar as cadeias de ferramentas associadas. Se você alternar para uma organização diferente, será possível acessar um conjunto diferente de cadeias de ferramentas.
+acessar as cadeias de ferramentas associadas. Clique no ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-avatar-icon.svg) na barra de menus para
+abrir o widget de Conta e Suporte e visualizar a organização na qual você está trabalhando atualmente. Alterne para uma organização diferente para acessar um conjunto diferente de cadeias de ferramentas.
 
 <!--CA: Commenting out the content on authentication for Interconnect since it applies to GitHub Enterprise. This content can be exposed again when GHE is supported for the Dedicated Beta 2.-->
 
@@ -96,27 +85,27 @@ If you use Web ID authentication, when you add users to your Bluemix org and spa
 To add a user: -->
 
 1. No painel DevOps, na guia **Cadeias de ferramentas**, clique na cadeia de ferramentas para gerenciar e, em seguida,
-clique em **Gerenciar**. Como alternativa, na página Visão geral do app, no ladrilho Entrega contínua, clique em
-**Visualizar cadeia de ferramentas** e, em seguida, clique em **Gerenciar**.  
+clique em **Gerenciar**. Como alternativa, na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visualizar cadeia de ferramentas** e,
+em seguida, clique em **Gerenciar**.  
 1. Clique no link para sua organização. 
 1. Na página Gerenciar organizações, clique em **Convidar um usuário** e digite o endereço de e-mail do usuário.
-1. Se desejar dar permissões avançadas ao usuário, selecione uma ou mais das caixas de seleção **Gerenciador**,
-**Gerenciador de faturamento** ou **Auditor**.
+1. Se você deseja conceder permissões para gerenciar usuários em organizações do {{site.data.keyword.Bluemix_notm}}, selecione uma ou mais das
+caixas de seleção **Gerenciador**, **Gerenciador
+de faturamento** ou **Auditor**.
 1. Clique em **CONVIDAR**.
 1. Clique em **SALVAR**.
 
 ## Excluindo uma cadeia de ferramentas
 {: #deleting_a_toolchain}
 
-É possível excluir uma cadeia de ferramentas e especificar qual das integrações de ferramenta associadas deseja excluir.
+É possível excluir uma cadeia de ferramentas e especificar qual das integrações de ferramenta associadas deseja excluir. Quando você excluir uma cadeia de ferramentas, a exclusão não poderá ser desfeita.
 
-1. No painel DevOps, na guia **Cadeias de ferramentas**, clique na cadeia de ferramentas para excluir e, em seguida, clique em **Gerenciar**. 
-Como alternativa, na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visualizar cadeia de ferramentas** e,
+1. No painel DevOps, na guia **Cadeias de ferramentas**, clique na cadeia de ferramentas para excluir e, em seguida, clique em **Gerenciar**. Como alternativa, na página Visão geral do app, no ladrilho Entrega contínua, clique em **Visualizar cadeia de ferramentas** e,
 em seguida, clique em **Gerenciar**.
-1. Clique em **Excluir cadeia de ferramentas** e revise as integrações de ferramenta que estiver excluindo.
-1. Confirme a exclusão digitando o nome da cadeia de ferramentas e clicando em **Excluir**.
+1. Clique em **Excluir cadeia de ferramentas** e revise ou ajuste as integrações de ferramentas que você estiver excluindo.
+1. Confirme a exclusão digitando o nome da cadeia de ferramentas e clicando em **Excluir**.  
 
  **Dica**: ao excluir uma integração de
-ferramenta GitHub, o repo GitHub associado não é excluído do
+ferramenta GitHub, o repositório GitHub associado não é excluído do
 GitHub. Deve-se
-remover manualmente o repo do GitHub.
+remover manualmente o repositório GitHub.

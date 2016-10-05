@@ -8,73 +8,129 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Iniciación a las cadenas de herramientas (experimental)
+# Iniciación a las cadenas de herramientas (Beta)
 {: #toolchains_getting_started}
 
-*Última actualización: 8 de junio de 2016*
+Última actualización: 13 de septiembre de 2016
 {: .last-updated}  
 
-Una cadena de herramientas es un conjunto de integraciones de herramientas que admiten tareas de desarrollo, despliegue y operaciones. La potencia en conjunto de una cadena de herramientas es superior a la suma de las integraciones de las herramientas individuales.
+Las cadenas de herramientas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Una cadena de herramientas se puede crear de dos formas: mediante una plantilla o a partir de una app. En {{site.data.keyword.Bluemix_notm}} Público, las cadenas de herramientas están disponibles únicamente en el sur de EE. UU.
 {: shortdesc}
 
-Una cadena de herramientas se puede crear de dos formas: mediante una plantilla o a partir de una app. En función de la plantilla o cadena de herramientas que se utilice, es posible que la cadena de herramientas incluya un repositorio de GitHub que contenga código de inicio de la app y un conducto de entrega ya configurado. Cuando se envían los cambios al repositorio de GitHub de la cadena de herramientas, el conducto de entrega crea y despliega automáticamente la app en {{site.data.keyword.Bluemix}}.
+##Iniciación a las cadenas de herramientas: Público
+{: #getting_started_public}
 
-Como punto de partida, puede utilizar una plantilla de cadena de herramientas para utilizar una cadena de herramientas que tenga un conjunto específico de integraciones de herramientas o bien una cadena de herramientas vacía a la que puede añadir integraciones de herramientas. 
+Cada cadena de herramientas está asociada con una organización (org) específica y cualquier usuario que sea miembro de dicha organización puede acceder a las cadenas de herramientas asociadas. Para poder crear una cadena de herramientas, asegúrese de que está trabajando en la organización donde desea crear la cadena de herramientas. Para conmutar a otra organización, pulse el icono **{{site.data.keyword.avatar}}** ![Icono de avatar](../icons/i-avatar-icon.svg) en la barra de menús para abrir el widget de Cuenta y soporte.
 
-**Importante**: esta capacidad es experimental. Es posible que las cadenas de herramientas no sean estables y que cambien de tal modo que no sean compatibles con versiones anteriores. No se recomienda su uso en entornos de producción. Para utilizar cadenas de herramientas, debe realizar una [solicitud única de acceso](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}. Las cadenas de herramientas están disponibles únicamente en el sur de EE. UU. 
-
-
-##Creación de una cadena de herramientas a partir de una plantilla   
+###Creación de una cadena de herramientas a partir de una plantilla   
 {: #creating_a_toolchain_from_a_template}
 
-Una vez que se haya aprobado su solicitud para acceder a cadenas de herramientas, puede utilizar una plantilla como punto de partida para crear una cadena de herramientas que incluya un conjunto específico de integraciones de herramientas. 
+Puede utilizar una plantilla como punto de partida para crear una cadena de herramientas que incluya un conjunto específico de integraciones de herramientas.
 
-1. En el panel de control de DevOps, en la pestaña **Toolchains**, pulse **Create a Toolchain** para crear su primera cadena de herramientas. Si ya tiene una cadena de herramientas, pulse el botón de adición (+) para crear otra. 
-1. Pulse la plantilla de la cadena de herramientas. Por ejemplo, para utilizar un ejemplo de tienda en línea para crear la cadena de herramientas, pulse **Microservices Toolchain**. 
+1. Si está creando su primera cadena de herramientas, asegúrese de que las cadenas de herramientas estén habilitadas en su organización:
+   1. Abra el panel de control de DevOps y pulse el separador **Toolchains**.
+   2. Si se muestra el botón **Enable Toolchains**, púlselo y siga las solicitudes para crear la cadena de herramientas.
+   3. Si no se muestra el botón **Enable Toolchains**, las cadenas de herramientas ya estarán habilitadas. Continúe con el paso 2. 
+1. En el panel de control de DevOps, en la pestaña **Toolchains**, pulse el botón add (+) para crear una cadena de herramientas.
+1. Pulse la plantilla de la cadena de herramientas. Por ejemplo, para utilizar un ejemplo de tienda en línea para crear la cadena de herramientas, pulse **Microservices toolchain**. 
 1. En la página de creación de la cadena de herramientas, revise el diagrama de la cadena de herramientas que se dispone a crear. El diagrama muestra cada integración de herramienta en su fase de ciclo en la cadena de herramientas. El diagrama de la imagen siguiente es un ejemplo. Al crear una cadena de herramientas, el diagrama muestra cada una de las integraciones de herramienta que forma parte de la cadena de herramientas.
 ![Diagrama de cadena de herramientas](images/toolchain_diagram.png)
 
-1. Revise la información predeterminada para la configuración de la cadena de herramientas. El nombre de la cadena de herramientas la identifica en {{site.data.keyword.Bluemix}}. Si ya tiene una cadena de herramientas con dicho nombre, o si desea utilizar otro nombre, cambie el nombre de la cadena de herramientas   
-1. En la sección Configurable Integrations, seleccione cada una de las integraciones de herramienta para las que desee configurar su cadena de herramientas. Para obtener información sobre cómo configurar las integraciones de herramienta, consulte [Configurar integraciones de herramienta](../toolchains/toolchains_integrations.html){: new_window}.
-1. Pulse **Create**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente: 
+1. Revise la información predeterminada para la configuración de la cadena de herramientas. El nombre de la cadena de herramientas la identifica en {{site.data.keyword.Bluemix_notm}}. Si ya tiene una cadena de herramientas con dicho nombre, o si desea utilizar otro nombre, cambie el nombre de la cadena de herramientas.  
+1. En la sección Configurable Integrations, seleccione cada una de las integraciones de herramienta para las que desee configurar su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas (El enlace se abre en una ventana nueva)](../toolchains/toolchains_integrations.html){: new_window}.
+1. Pulse **Create**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente:
 
- * Se crea la cadena de herramientas. 
- * Si ha configurado la integración de la herramienta Delivery Pipeline, los conductos se activan. 
- * Si ha configurado la integración de la herramienta Sauce Labs, la integración de Sauce Labs se configura para añadir trabajos a los conductos y ejecutar pruebas. 
- * Si ha configurado la integración de la herramienta PagerDuty, la integración de PagerDuty se configura para enviar notificaciones al canal configurado en Slack. Estas notificaciones indican cuándo se produce el problema. 
+ * Se crea la cadena de herramientas.
+ * Si ha configurado la integración de la herramienta Delivery Pipeline, los conductos se activan.
+ * Si ha configurado la integración de la herramienta Sauce Labs, la integración de Sauce Labs se configura para añadir trabajos a los conductos y ejecutar pruebas.
+ * Si ha configurado la integración de la herramienta PagerDuty, la integración de PagerDuty se configura para enviar notificaciones al canal configurado en Slack. Estas notificaciones indican cuándo se produce el problema.
  * Si ha configurado la integración de la herramienta Slack, la integración de Slack se configura para enviar notificaciones al canal configurado en Slack. Estas notificaciones indican el progreso del despliegue; por ejemplo, `Connected with Project XYZ`, `Pipeline Configured` y `Stage 'build' started`.
- * S ha configurado la integración de la herramienta GitHub, el repositorio de ejemplo de GitHub se clona en su cuenta de GitHub. 
+ * Si ha configurado la integración de la herramienta GitHub, el repositorio de ejemplo de GitHub se clona en su cuenta de GitHub.
 
 
-##Creación de una cadena de herramientas a partir de una app
+###Creación de una cadena de herramientas a partir de una app
 {: #creating_a_toolchain_from_an_app}
 
-Una vez que se haya aprobado su solicitud para acceder a cadenas de herramientas, puede crear una cadena de herramientas a partir de su app. La cadena de herramientas puede admitir tareas continuadas de desarrollo, despliegue, supervisión, etc., y está asociada con su app. Cada app puede asociarse a una cadena de herramientas. Cuando se envían los cambios al repositorio de GitHub de la cadena de herramientas, el conducto crea y despliega automáticamente la app.   
+Puede crear una cadena de herramientas desde la app. La cadena de herramientas puede admitir tareas continuadas de desarrollo, despliegue, supervisión, etc., y está asociada con su app. Cada app puede asociarse a una cadena de herramientas. Cuando se envían los cambios al repositorio de GitHub de la cadena de herramientas, el conducto crea y despliega automáticamente la app.  
 
-1. En la página de visión general de la app, en el titulo Continuous Delivery, pulse **Add Toolchain**. Como alternativa, en Bluemix Classic Experience, pulse **ADD GIT**. La app se configura para una entrega continuada desde un nuevo repositorio de GitHub que ya contiene el código de inicio de la app. 
-1. En la página de creación de la cadena de herramientas, revise el diagrama de la cadena de herramientas que se dispone a crear. El diagrama muestra cada integración de herramienta en su fase de ciclo en la cadena de herramientas. 
-1. Revise la información predeterminada para la configuración de la cadena de herramientas. El nombre de la cadena de herramientas la identifica en {{site.data.keyword.Bluemix}}. Si ya tiene una cadena de herramientas con dicho nombre, o si desea utilizar otro nombre, cambie el nombre de la cadena de herramientas 
-1. En la sección Configurable Integrations, seleccione cada una de las integraciones de herramienta para las que desee configurar su cadena de herramientas. Para obtener información sobre cómo configurar las integraciones de herramienta, consulte [Configurar integraciones de herramienta](../toolchains/toolchains_integrations.html){: new_window}.
-1. Pulse **Create**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente: 
+1. Si está creando su primera cadena de herramientas, asegúrese de que las cadenas de herramientas estén habilitadas en su organización:
+   1. Abra el panel de control de DevOps y pulse el separador **Toolchains**.
+   2. Si se muestra el botón **Enable Toolchains**, púlselo y siga las solicitudes para crear la cadena de herramientas.
+   3. Si no se muestra el botón **Enable Toolchains**, las cadenas de herramientas ya estarán habilitadas. Continúe con el paso 2. 
+1. En la página de visión general de la app, en el titulo Continuous Delivery, pulse **Add Toolchain**. Como alternativa, en {{site.data.keyword.Bluemix_notm}} Classic Experience, en la esquina superior derecha de la página Visión general de la app, pulse **Añadir cadena de herramientas**. La app se configura para una entrega continuada desde un nuevo repositorio de GitHub que ya contiene el código de inicio de la app.
+1. En la página de creación de la cadena de herramientas, revise el diagrama de la cadena de herramientas que se dispone a crear. El diagrama muestra cada integración de herramienta en su fase de ciclo en la cadena de herramientas.
+1. Revise la información predeterminada para la configuración de la cadena de herramientas. El nombre de la cadena de herramientas la identifica en {{site.data.keyword.Bluemix_notm}}. Si ya tiene una cadena de herramientas con dicho nombre, o si desea utilizar otro nombre, cambie el nombre de la cadena de herramientas.
+1. En la sección Configurable Integrations, seleccione cada una de las integraciones de herramienta para las que desee configurar su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas (El enlace se abre en una ventana nueva)](../toolchains/toolchains_integrations.html){: new_window}.
+1. Pulse **Create**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente:
 
- * Se crea la cadena de herramientas. 
- * Si ha configurado la integración de la herramienta Delivery Pipeline, los conductos se activan. 
- * Si ha configurado la integración de la herramienta Sauce Labs, la integración de Sauce Labs se configura para añadir trabajos a los conductos y ejecutar pruebas. 
- * Si ha configurado la integración de la herramienta PagerDuty, la integración de PagerDuty se configura para enviar notificaciones al canal configurado en Slack. Estas notificaciones indican cuándo se produce el problema. 
+ * Se crea la cadena de herramientas.
+ * Si ha configurado la integración de la herramienta Delivery Pipeline, los conductos se activan.
+ * Si ha configurado la integración de la herramienta Sauce Labs, la integración de Sauce Labs se configura para añadir trabajos a los conductos y ejecutar pruebas.
+ * Si ha configurado la integración de la herramienta PagerDuty, la integración de PagerDuty se configura para enviar notificaciones al canal configurado en Slack. Estas notificaciones indican cuándo se produce el problema.
  * Si ha configurado la integración de la herramienta Slack, la integración de Slack se configura para enviar notificaciones al canal configurado en Slack. Estas notificaciones indican el progreso del despliegue; por ejemplo, `Connected with Project XYZ`, `Pipeline Configured` y `Stage 'build' started`.
- * S ha configurado la integración de la herramienta GitHub, el repositorio de ejemplo de GitHub se clona en su cuenta de GitHub. 
+ * Si ha configurado la integración de la herramienta GitHub, el repositorio de ejemplo de GitHub se clona en su cuenta de GitHub.
 
- 
+
+##Iniciación a las cadenas de herramientas: Dedicado
+{: #getting_started_dedicated}
+
+Cada cadena de herramientas está asociada con una organización (org) específica y cualquier usuario que sea miembro de dicha organización puede acceder a las cadenas de herramientas asociadas. Para poder crear una cadena de herramientas, pulse el icono **{{site.data.keyword.avatar}}** ![Icono de avatar](../icons/i-avatar-icon.svg) en la barra de menús para abrir el widget de Cuenta y soporte y ver la organización en la que está trabajando. Si dicha organización no es la misma en la que desea crear la cadena de herramientas, conmute a otra organización.
+
+###Creación de una cadena de herramientas a partir de una plantilla   
+{: #creating_a_toolchain_from_a_template_dedicated}
+
+Puede utilizar una plantilla como punto de partida para crear una cadena de herramientas que incluya un conjunto específico de integraciones de herramientas.
+
+1. Si está creando su primera cadena de herramientas, asegúrese de que las cadenas de herramientas estén habilitadas en su organización:
+   1. Abra el panel de control de DevOps y pulse el separador **Toolchains**.
+   2. Si se muestra el botón **Enable Toolchains**, púlselo y siga las solicitudes para crear la cadena de herramientas.
+   3. Si no se muestra el botón **Enable Toolchains**, las cadenas de herramientas ya estarán habilitadas. Continúe con el paso 2. 
+1. En el panel de control de {{site.data.keyword.Bluemix_notm}}, en la pestaña **DEVOPS**, pulse el botón add (+) para crear una cadena de herramientas.
+1. Pulse la plantilla de la cadena de herramientas. Por ejemplo, para crear una cadena de herramientas simple para desplegar una nueva app de Cloud Foundry, pulse **Cadena de herramientas simple de Cloud Foundry**. 
+1. En la página de creación de la cadena de herramientas, revise el diagrama de la cadena de herramientas que se dispone a crear. El diagrama muestra cada integración de herramienta en su fase de ciclo en la cadena de herramientas. El diagrama de la imagen siguiente es un ejemplo. Al crear una cadena de herramientas, el diagrama muestra cada una de las integraciones de herramienta que forma parte de la cadena de herramientas.
+![Diagrama de cadena de herramientas dedicada](images/toolchain_dedicated_diagram.png)
+
+1. Revise la información predeterminada para la configuración de la cadena de herramientas. El nombre de la cadena de herramientas la identifica en {{site.data.keyword.Bluemix_notm}}. Si ya tiene una cadena de herramientas con dicho nombre, o si desea utilizar otro nombre, cambie el nombre de la cadena de herramientas.  
+1. En la sección Configurable Integrations, seleccione cada una de las integraciones de herramienta para las que desee configurar su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas (El enlace se abre en una ventana nueva)](../toolchains/toolchains_integrations.html){: new_window}.
+1. Pulse **Create**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente:
+
+ * Se crea la cadena de herramientas.
+ * Si ha configurado la integración de la herramienta Delivery Pipeline, los conductos se activan.
+ * Si ha configurado la integración de herramientas de GitHub Enterprise, el repositorio de ejemplo de GitHub Enterprise se clona en su cuenta de GitHub Enterprise.
+
+
+###Creación de una cadena de herramientas a partir de una app
+{: #creating_a_toolchain_from_an_app_dedicated}
+
+Puede crear una cadena de herramientas desde la app. La cadena de herramientas puede admitir tareas continuadas de desarrollo, despliegue, supervisión, etc., y está asociada con su app. Cada app puede asociarse a una cadena de herramientas. Cuando se envían los cambios al repositorio de GitHub Enterprise de la cadena de herramientas, el conducto crea y despliega automáticamente la app.  
+
+1. Si está creando su primera cadena de herramientas, asegúrese de que las cadenas de herramientas estén habilitadas en su organización:
+   1. Abra el panel de control de DevOps y pulse el separador **Toolchains**.
+   2. Si se muestra el botón **Enable Toolchains**, púlselo y siga las solicitudes para crear la cadena de herramientas.
+   3. Si no se muestra el botón **Enable Toolchains**, las cadenas de herramientas ya estarán habilitadas. Continúe con el paso 2. 
+1. En la esquina superior derecha de la página Visión general de la aplicación, pulse **Añadir cadena de herramientas**. La app se configura para una entrega continuada desde un nuevo repositorio de GitHub Enterprise que ya contiene el código de inicio de la app.
+1. En la página de creación de la cadena de herramientas, revise el diagrama de la cadena de herramientas que se dispone a crear. El diagrama muestra cada integración de herramienta en su fase de ciclo en la cadena de herramientas.
+1. Revise la información predeterminada para la configuración de la cadena de herramientas. El nombre de la cadena de herramientas la identifica en {{site.data.keyword.Bluemix_notm}}. Si ya tiene una cadena de herramientas con dicho nombre, o si desea utilizar otro nombre, cambie el nombre de la cadena de herramientas.
+1. En la sección Configurable Integrations, seleccione cada una de las integraciones de herramienta para las que desee configurar su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas (El enlace se abre en una ventana nueva)](../toolchains/toolchains_integrations.html){: new_window}.
+1. Pulse **Create**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente:
+
+ * Se crea la cadena de herramientas.
+ * Si ha configurado la integración de la herramienta Delivery Pipeline, los conductos se activan.
+ * Si ha configurado la integración de herramientas de GitHub Enterprise, el repositorio de ejemplo de GitHub Enterprise se clona en su cuenta de GitHub Enterprise.
+
+
 ##Visualización de una cadena de herramientas
 {: #viewing_a_toolchain}
 
-Una ve que se ha configurado la cadena de herramientas y todas las integraciones de herramientas, es posible obtener una representación visual de la cadena de herramientas en la página Tool Integrations. 
+Una vez que se ha configurado la cadena de herramientas y sus integraciones de herramientas, es posible obtener una representación visual de la cadena de herramientas en la página Tool Integrations.
 
-1. En el panel de control de DevOps, en la pestaña **Toolchains**, pulse una cadena de herramientas para abrir la página Tool Integrations correspondiente. Como alternativa, en la página de visión general de la app, en el título Continuous Delivery, pulse **View Toolchain** y, a continuación, pulse **Tool Integrations**.
-1. Revise la página para obtener una representación visual de la cadena de herramientas. 
-1. Para acceder a una integración de herramienta de su cadena de herramientas, puse el título de la herramienta.  
+* Si utiliza {{site.data.keyword.Bluemix_notm}} Público, en el panel de control DevOps, en la pestaña **Toolchains**, pulse una cadena de herramientas para abrir su página Tool Integrations. Como alternativa, en la página Visión general de la aplicación, en el título Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Tool Integrations**. 
+   
+* Si utiliza {{site.data.keyword.Bluemix_notm}} Dedicado, en el Panel de control, en la pestaña **DEVOPS**, pulse la cadena de herramientas para abrir su página Tool Integrations. Como alternativa, en la esquina superior derecha de la página Visión general de la aplicación, pulse **Ver cadena de herramientas**.
+
+* Para acceder a una integración de herramienta de su cadena de herramientas, pulse el título de la herramienta. 
  
- **Consejo**: si tiene más de un repositorio de GitHub, es posible que tenga varios títulos para la misma integración de herramienta porque cada repositorio necesita su propio conducto. 
+ **Consejo**: si tiene más de un repositorio de GitHub o GitHub Enterprise, es posible que tenga varios títulos para la misma integración de herramienta porque cada repositorio está representado por su propio título.
 
 
  <!-- The toolchain in the following image is an example. When you create your own toolchain, the visual representation of the toolchain shows the tool integrations that you configure.
@@ -87,11 +143,13 @@ Una ve que se ha configurado la cadena de herramientas y todas las integraciones
 ## Tutoriales y ejemplos
 {: #samples}
 
-* [Crear una aplicación con tres microservicios](https://www.ibm.com/devops/method/tutorials/tutorial_microservices_part1){:new_window}
+* [Crear una aplicación con tres microservicios (Beta) (El enlace se abre en una ventana nueva)](https://www.ibm.com/devops/method/tutorials/tutorial_microservices_part1){:new_window}
+* [Crear una cadena de herramientas desde una plantilla en {{site.data.keyword.Bluemix_notm}} Dedicado (Experimental) (El enlace se abre en una ventana nueva)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window}
+* [Crear una cadena de herramientas desde una app en {{site.data.keyword.Bluemix_notm}} Dedicado (Experimental) (El enlace se abre en una ventana nueva)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window}
 
 ## Enlaces relacionados
 {: #general}
 
-* [Cadena de herramientas de microservicios (experimental)](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}
-* [Cadena de herramientas simple (experimental)](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window}
-* [Método Garage de IBM&reg; Bluemix&reg;](https://www.ibm.com/devops/method){:new_window}
+* [Cadena de herramientas de microservicios (Beta) (El enlace se abre en una ventana nueva)](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}
+* [Cadena de herramientas simple (Beta) (El enlace se abre en una ventana nueva)](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window}
+* [IBM Bluemix Garage Method (El enlace se abre en una ventana nueva)](https://www.ibm.com/devops/method){:new_window}
