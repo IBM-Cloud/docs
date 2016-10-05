@@ -28,7 +28,7 @@ copyright:
 {:user_ID: data-hd-keyref="user_ID"}
 
 # Deploying your app with the command line interface
-Last updated: 15 September 2016
+Last updated: 5 October 2016
 {: .last-updated}
 
 You can use the command line interface to deploy and modify applications and service instances.
