@@ -13,11 +13,29 @@ copyright:
 
 ## Un elenco degli aggiornamenti più recenti nel pacchetto di build Liberty.
 
-*Ultimo aggiornamento: 17 giugno 2016*
+Ultimo aggiornamento: 13 settembre 2016
 {: .last-updated}
 
+### 16 settembre, 2016: pacchetto di build Liberty aggiornato v3.3-20160912-1729
+* La versione del runtime Liberty predefinita è stata aggiornata alla release [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661). La versione del runtime Liberty è stata aggiornata alla release [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/).Con questi aggiornamenti, le funzioni Liberty `cloudant-1.0` e `passwordUtilities-1.0`, precedentemente disponibili come funzioni beta, sono ora disponibili come funzioni pronte per la produzione.
+* Il pacchetto di build contiene anche una versione aggiornata di IBM JRE 8.0: SR3 FP11.
+* Il pacchetto di build è stato modificato per scaricare l'ultimo 1.4.x [MariaDB Connector/J JDBC driver](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) quando di esegue la [configurazione automatica per il tipo MySQL dei servizi](autoConfig.html) a causa di un problema con l'ultimo 1.5.x driver.
+
+### 26 agosto, 2016: pacchetto di build Liberty aggiornato v3.2-20160822-2200
+* Il pacchetto di build contiene le versioni aggiornate di IBM JRE: 8 SR3 FP10 e 7.1 SR3 FP50.
+* La versione del runtime Liberty è stata aggiornata alla release [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/).
+* Il plug-in del servizio che fornisce il [supporto di configurazione automatica](autoConfig.html) per il servizio [SQL Database](../../services/SQLDB/index.html#SQLDB) è stato aggiornato per utilizzare sempre i certificati firmati JVM durante la connessione al servizio tramite TLS.
+
+### 22 luglio 2016: pacchetto di build Liberty aggiornato v3.1-20160717-2254
+* La funzionalità [Gestione applicazione](../../manageapps/app_mng.html) è stata aggiornata per supportare l'autenticazione federata. Inoltre, il runtime Node.js utilizzato dai programmi di utilità `devconsole` e `shell` è stato aggiornato alla versione `0.12.15` più recente. 
+* Il pacchetto di build aggiunge il supporto per l'agent di monitoraggio dell'applicazione[Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/).
+* Il pacchetto di build fornisce un raccoglitore di dati aggiornato per il [servizio Monitoring and Analytics](../../services/monana/index.html#monana_oview).
+* Il pacchetto di build fornisce inoltre una versione aggiornata dell'agent per il [servizio Auto-Scaling](../../services/Auto-Scaling/index.html). 
+* La versione del runtime Liberty è stata aggiornata alla release [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/).
+
 ### 17 giugno 2016: pacchetto di build Liberty aggiornato v3.0-20160608-1450
-* Il pacchetto di build ora contiene due versioni di WebSphere Liberty, l'ultima release stabile e l'ultima release beta. Nello specifico, fornisce la release stabile [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) e la release beta [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). La release stabile sarà utilizzata per impostazione predefinita. Consulta [Versioni Liberty](buildpackDefaults.html#liberty_versions) per ulteriori dettagli. 
+* Il pacchetto di build ora contiene due versioni di WebSphere Liberty, l'ultima release stabile e l'ultima release mensile. Nello specifico, fornisce la release stabile [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) e la release mensile [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). La release stabile sarà utilizzata per impostazione predefinita. Consulta [Versioni Liberty](buildpackDefaults.html#liberty_versions) per ulteriori dettagli. 
+* Il pacchetto di build contiene inoltre delle correzioni per la sicurezza per [Apache Standard Taglibs vulnerability](http://www-01.ibm.com/support/docview.wss?uid=swg21985531).
 
 ### 25 maggio 2016: pacchetto di build Liberty aggiornato v2.9-20160519-1249
 * Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di maggio](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). La versione aggiornata di Liberty rende disponibile le funzioni beta *bluemixLogCollector-1.1* e *logstashCollector-1.1* in Bluemix.

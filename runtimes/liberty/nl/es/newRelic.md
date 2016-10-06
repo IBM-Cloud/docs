@@ -11,7 +11,7 @@ copyright:
 # Utilización de New Relic
 {: #new_relic}
 
-*Última actualización: 10 de junio de 2016*
+Última actualización: 10 de junio de 2016
 {: .last-updated}
 
 New Relic es un servicio de otro proveedor que proporciona métricas de supervisión de la aplicación. Para obtener más información sobre lo que ofrece el servicio New Relic, consulte [New

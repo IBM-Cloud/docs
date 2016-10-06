@@ -11,7 +11,7 @@ copyright:
 # New Relic verwenden
 {: #new_relic}
 
-*Letzte Aktualisierung: 10. Juni 2016*
+Letzte Aktualisierung: 10. Juni 2016
 {: .last-updated}
 
 Bei New Relic handelt es sich um einen Service eines anderen Anbieters, der Überwachungsmetriken für Ihre Anwendung

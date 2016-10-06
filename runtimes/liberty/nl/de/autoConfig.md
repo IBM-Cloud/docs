@@ -12,7 +12,7 @@ copyright:
 # Automatische Konfiguration gebundener Services
 {: #auto_config}
 
-*Letzte Aktualisierung: 10. Juni 2016*
+Letzte Aktualisierung: 10. Juni 2016
 {: .last-updated}
 
 An die Liberty-Anwendung können verschiedene Services gebunden werden. Abhängig von den Vorgaben des Entwicklers können Services containerverwaltet und/oder anwendungsverwaltet sein.

@@ -12,7 +12,7 @@ copyright:
 # Opzioni per eseguire il push di applicazioni Liberty
 {: #options_for_pushing}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 10 giugno 2016
 {: .last-updated}
 
 La modalità di funzionamento del server Liberty in Bluemix è controllata dal pacchetto di build Liberty. I pacchetti di build possono fornire un ambiente di runtime completo per
@@ -200,7 +200,7 @@ Nota: le applicazioni web distribuite come parte della directory server sono acc
 
 Puoi anche eseguire il push di un server in pacchetto a Bluemix. Il file di server in pacchetto viene creato utilizzando il comando di package server di Liberty. Oltre ai file di applicazione e configurazione, il file di server in pacchetto può contenere risorse condivise e funzioni utente Liberty richieste dall'applicazione.
 
-Per impacchettare un server Liberty, utilizza il comando ./bin/server package dalla directory di installazione di Liberty. Specifica il nome server e includi l'opzione '––include=usr'.
+Per impacchettare un server Liberty, utilizza il comando `./bin/server package` dalla directory di installazione di Liberty. Specifica il nome server e includi l'opzione `--include=usr`. 
 Ad esempio, se il tuo server Liberty è defaultServer, esegui il comando:
 
 ```
@@ -208,7 +208,9 @@ Ad esempio, se il tuo server Liberty è defaultServer, esegui il comando:
 ```
 {: codeblock}
 
-Questo comando genera un file serverName.zip nella directory del server. Puoi quindi eseguire il push di tale file compresso a Bluemix con il comando cf push.
+Questo comando genera un file serverName.zip nella directory del server. Se hai utilizzato l'opzione ``--archive`` per specificare un differente file di archivio, assicurati che abbia l'estensione ``.zip` invece di ``.jar`. **Il pacchetto di build non supporta i file del server in pacchetto creati con l'estensione `.jar`**.
+
+Puoi quindi eseguire il push del file `.zip` generato a Bluemix con il comando `cf push`.
 Ad esempio:
 
 ```

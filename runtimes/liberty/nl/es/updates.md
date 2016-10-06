@@ -13,8 +13,19 @@ copyright:
 
 ## Una lista de las últimas actualizaciones del paquete de compilación de Liberty.
 
-*Última actualización: 20 de julio de 2016*
+Última actualización: 13 de septiembre de 2016
 {: .last-updated}
+
+### 16 de septiembre de 2016: se ha actualizado el paquete de compilación de Liberty v3.3-20160912-1729
+* La versión de tiempo de ejecución predeterminada de Liberty se ha actualizado al release [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661). La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/).
+Con estas actualizaciones, las características `cloudant-1.0` y `passwordUtilities-1.0` de Liberty, anteriormente disponibles como versiones beta, pasan a estar disponibles como características disponibles en producción. 
+* El paquete de compilación también contiene una versión actualizada de IBM JRE 8.0: SR3 FP11.
+* El paquete de compilación se ha ajustado para descargar el [conector MariaDB/controlador J JDBC](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.4.x al realizar la [configuración automática para el tipo de servicios MySQL](autoConfig.html) debido a un problema con el último controlador 1.5.x. 
+
+### 26 de agosto de 2016: se ha actualizado el paquete de compilación de Liberty v3.2-20160822-2200
+* El paquete de compilación contiene versiones actualizadas de IBM JRE: 8 SR3 FP10 y 7.1 SR3 FP50.
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/). 
+* El plugin de servicio que proporciona [soporte de configuración automática](autoConfig.html) para el servicio [SQL Database](../../services/SQLDB/index.html#SQLDB) se ha actualizado para utilizar siempre los certificados de confianza de la JVM al conectarse al servicio a través de TLS.
 
 ### 22 de julio de 2016: Se ha actualizado el paquete de compilación de Liberty v3.1-20160717-2254
 * La funcionalidad [App Management](../../manageapps/app_mng.html) se ha actualizado para dar soporte a la autenticación federada. Igualmente, el tiempo de ejecución de Node.js utilizado por los programas de utilidad `devconsole` y `shell` se ha actualizado a la versión `0.12.15` más reciente. 

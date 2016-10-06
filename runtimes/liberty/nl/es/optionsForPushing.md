@@ -12,7 +12,7 @@ copyright:
 # Opciones para enviar aplicaciones Liberty
 {: #options_for_pushing}
 
-*Última actualización: 10 de junio de 2016*
+Última actualización: 10 de junio de 2016
 {: .last-updated}
 
 El comportamiento del servidor Liberty en Bluemix se controla mediante el paquete de compilación de Liberty. Los paquetes de compilación pueden ofrecer un entorno de tiempo de ejecución completo para una determinada clase de aplicaciones. Constituyen la clave para ofrecer portabilidad entre nubes y contribuir a una arquitectura de nube abierta. El paquete de compilación de Liberty proporciona un contenedor WebSphere Liberty capaz de ejecutar aplicaciones Java EE 7 y OSGi. Admite infraestructura extendidas, como Spring e incluye IBM JRE. WebSphere Liberty permite desarrollar rápidamente aplicaciones adaptadas a la nube. El paquete de compilación de Liberty da soporte a varias aplicaciones que se despliegan en un único servidor Liberty. Como parte de la integración del paquete de compilación de Liberty en Bluemix, el paquete de compilación garantiza que las variables de entorno para los servicios de enlace se muestran como variables de configuración en el servidor Liberty.
@@ -188,7 +188,7 @@ Nota: Se puede acceder a las aplicaciones web desplegadas como parte del directo
 
 Puede enviar por push un archivo del servidor empaquetado a Bluemix. El archivo del servidor empaquetado se crea mediante el mandato server package de Liberty. Además de los archivos de la aplicación y de configuración, el archivo del servidor empaquetado puede contener recursos compartidos y las características de usuario de Liberty que necesita la aplicación.
 
-Para empaquetar un servidor Liberty, utilice el mandato `./bin/server package` desde el directorio de instalación de Liberty. Especifique el nombre del servidor e incluya la opción `--include=usr`.
+Para empaquetar un servidor Liberty, utilice el mandato `./bin/server package` desde el directorio de instalación de Liberty. Especifique el nombre del servidor e incluya la opción `--include=usr`. 
 Por ejemplo, si el servidor Liberty es defaultServer, ejecute el mandato:
 
 ```

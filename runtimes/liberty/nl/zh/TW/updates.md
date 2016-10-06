@@ -13,8 +13,18 @@ copyright:
 
 ## Liberty 建置套件中的最新更新項目清單。
 
-*前次更新：2016 年 7 月 20 日*
+前次更新：2016 年 9 月 13 日
 {: .last-updated}
+
+### 2016 年 9 月 16 日：已更新 Liberty 建置套件 v3.3-20160912-1729
+* 預設 Liberty 運行環境版本已更新至 [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 版。每月 Liberty 運行環境版本已更新至 [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) 版。在這些更新中，先前以測試版功能提供的 `cloudant-1.0` 及 `passwordUtilities-1.0` Liberty 功能，現在以可用於正式作業的功能提供。
+* 建置套件也包含已更新的 IBM JRE 8.0: SR3 FP11 版本。
+* 由於最新的 1.5.x 驅動程式發生問題，建置套件已調整為當[自動配置 MySQL 類型的服務](autoConfig.html)時，下載最新的 1.4.x [MariaDB Connector/J JDBC 驅動程式](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)。
+
+### 2016 年 8 月 26 日：已更新 Liberty 建置套件 v3.2-20160822-2200
+* 建置套件包含已更新的 IBM JRE：8 SR3 FP10 及 7.1 SR3 FP50 版本。
+* 每月 Liberty 運行環境版本已更新至 [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/) 版。
+* 對 [SQL Database](../../services/SQLDB/index.html#SQLDB) 服務提供[自動配置支援](autoConfig.html)的服務外掛程式已更新為當透過 TLS 連接至服務時，一律使用 JVM 的信任憑證。
 
 ### 2016 年 7 月 22 日：已更新 Liberty 建置套件 v3.1-20160717-2254
 * 已更新[應用程式管理](../../manageapps/app_mng.html)功能來支援聯合鑑別。此外，`devconsole` 和 `shell` 公用程式所使用的 Node.js 運行環境也已更新為最新的 `0.12.15` 版。 

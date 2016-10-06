@@ -12,7 +12,7 @@ copyright:
 # Optionen zur Durchführung von Push-Operationen für Liberty-Apps
 {: #options_for_pushing}
 
-*Letzte Aktualisierung: 10. Juni 2016*
+Letzte Aktualisierung: 10. Juni 2016
 {: .last-updated}
 
 Das Verhalten des Liberty-Servers in Bluemix wird durch das Liberty-Buildpack gesteuert. Buildpacks können eine vollständige Laufzeitumgebung für bestimmte Anwendungsklassen bereitstellen. Sie sind der Schlüssel für die Portierbarkeit in Clouds und die Bereitstellung einer offenen Cloudarchitektur. Mit dem Liberty-Buildpack wird ein WebSphere Liberty-Container bereitgestellt, mit dem Java EE 7- und OSGi-Anwendungen ausgeführt werden können. Es unterstützt gängige Frameworks wie Spring und umfasst die IBM JRE. WebSphere Liberty ermöglicht eine zeiteffiziente, an die Cloud angepasste Anwendungsentwicklung. Das Liberty-Buildpack unterstützt mehrere Anwendungen, die in einem einzigen Liberty-Server implementiert werden. Im Rahmen der Integration des Liberty-Buildpacks in Bluemix stellt das Buildpack sicher, dass die Umgebungsvariablen zum Binden von Services im Liberty-Server als Konfigurationsvariablen dargestellt werden.
@@ -196,7 +196,7 @@ Hinweis: Auf die Webanwendungen, die als Teil des Serververzeichnisses implement
 
 Sie können auch eine Datei für einen paketierten Server mit einer Push-Operation an Bluemix übertragen. Die Datei für den paketierten Server wird mithilfe des Liberty-Befehls zum Erstellen von Serverpaketen erstellt. Zusätzlich zu den Anwendungs- und Konfigurationsdateien kann die Datei des paketierten Servers gemeinsam genutzte Ressourcen und Liberty-Benutzerfeatures enthalten, die von der Anwendung benötigt werden.
 
-Verwenden Sie zum Paketieren eines Liberty-Servers den Befehl `./bin/server package` aus dem Liberty-Installationsverzeichnis. Geben Sie den Servernamen an und verwenden Sie die Option `--include=usr`.
+Verwenden Sie zum Paketieren eines Liberty-Servers den Befehl `./bin/server package` aus dem Liberty-Installationsverzeichnis. Geben Sie den Servernamen an und verwenden Sie die Option `--include=usr`. 
 Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Sie folgenden Befehl aus:
 
 ```

@@ -11,15 +11,15 @@ copyright:
 # Límites de memoria y el paquete de compilación de Liberty
 {: #memory_limits}
 
-*Última actualización: 10 de junio de 2016*
+Última actualización: 10 de junio de 2016
 {: .last-updated}
 
 Se debe especificar un límite de memoria cuando se despliega una aplicación con el paquete de compilación de Liberty.
 
-**Evitar
-problemas**
+## Evitar
+problemas
 
-* Un servlet "Hello World" que se despliegue con el paquete de compilación
+Un servlet "Hello World" que se despliegue con el paquete de compilación
 de Liberty con un límite de memoria de 256 MB quizás no se despliegue y ejecute correctamente. Si se despliega, se ejecutará cerca del límite de
 256 M. Considere la posibilidad de especificar un mínimo de 512 M como límite de memoria incluso para aplicaciones sencillas.
 

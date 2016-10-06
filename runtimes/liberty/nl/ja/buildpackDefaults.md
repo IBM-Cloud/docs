@@ -12,7 +12,7 @@ copyright:
 # ビルドパックのデフォルト
 {: #buildpack_defauts}
 
-*最終更新日: 2016 年 6 月 10 日*
+最終更新日: 2016 年 6 月 10 日
 {: .last-updated}
 
 Liberty ビルドパックは Bluemix で頻繁に更新されます。

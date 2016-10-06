@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 13 luglio 2016
 {: .last-updated}
 
 Il runtime Tomcat su {{site.data.keyword.Bluemix}} si avvale del java_buildpack.
@@ -43,7 +43,7 @@ Possono essere entrambe specificate nel file manifest dell'applicazione.  Ad ese
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-La versione Tomcat predefinita corrente è 8.0.30.  La versione Java predefinita corrente è 1.8.0_65.
+La versione corrente del pacchetto di build è v3.6 che contiene Tomcat versione 8.30.0 e la versione Java predefinita 1.8.0_71.
 Per ulteriori informazioni, consulta per favore le [java-buildpack releases](https://github.com/cloudfoundry/java-buildpack/releases).
 
 # rellinks

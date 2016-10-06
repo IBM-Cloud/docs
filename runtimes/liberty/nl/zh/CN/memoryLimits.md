@@ -11,14 +11,14 @@ copyright:
 # 内存限制和 Liberty buildpack
 {: #memory_limits}
 
-*上次更新时间：2016 年 6 月 10 日*
+上次更新时间：2016 年 6 月 10 日
 {: .last-updated}
 
 使用 Liberty buildpack 部署应用程序时，必须指定内存限制。
 
-**避免故障**
+## 避免故障
 
-* 内存限制为 256 MB 时，使用 Liberty buildpack 部署的“Hello World”servlet 可能无法正确部署并运行。如果部署了此 servlet，那么其运行时占用的内存会接近 256M 的限制。即使对于简单应用程序，也请考虑至少为“内存限制”指定 512M。
+内存限制为 256 MB 时，使用 Liberty buildpack 部署的“Hello World”servlet 可能无法正确部署并运行。如果部署了此 servlet，那么其运行时占用的内存会接近 256M 的限制。即使对于简单应用程序，也请考虑至少为“内存限制”指定 512M。
 
 ## 内存限制和 Liberty buildpack
 {: #memory_limits_and_liberty}

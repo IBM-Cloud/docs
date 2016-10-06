@@ -11,10 +11,19 @@ copyright:
 # sdk-for-nodejs 빌드팩의 최신 업데이트
 {: #latest_updates}
 
-*마지막 업데이트 날짜: 2016년 7월 18일*
+마지막 업데이트 날짜: 2016년 8월 26일
 {: .last-updated}
 
 sdk-for-nodejs 빌드팩의 최신 업데이트 목록
+## 2016년 8월 26일: 업데이트된 Node.js 빌드팩 v3.7-20160826-1101
+이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2 및 6.4.0을 지원합니다. 기본 버전은 이제 4.5.0입니다.
+
+이 릴리스는 버그 수정([Cloud Foundry의 Node.js 빌드팩 1.5.18](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18)의 버그 수정 포함)을 포함합니다. 
+
+이 릴리스에서는 [Bluemix Node.js 빌드팩 v3.3 – FIPS 모드 및 그 외](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/)에 공지된 대로 strongpm 앱 관리 핸들러에 대한 지원이 제거되었습니다. 
+
+Node.js 6.x와 [개발 모드](../../manageapps/app_mng.html#devmode)를 사용할 때 알려진 문제가 있음에 주의하십시오. 개발 모드를 사용하려면 먼저 임시 해결책으로서 개발 모드를 사용 가능하게 설정한 후 애플리케이션을 다시 스테이징해야 합니다. 
+
 ## 2016년 7월 22일: 업데이트된 Node.js 빌드팩 v3.6-20160715-0749
 이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 및 6.2.2를 지원합니다. 현재 기본 버전은 4.4.7입니다.
 

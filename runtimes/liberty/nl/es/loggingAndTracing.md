@@ -12,7 +12,7 @@ copyright:
 # Registro y rastreo
 {: #logging_tracing}
 
-*Última actualización: 21 de junio de 2016*
+Última actualización: 21 de junio de 2016
 {: .last-updated}
 
 ## Archivos de registro

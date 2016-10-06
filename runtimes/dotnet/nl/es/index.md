@@ -12,7 +12,7 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-*Última actualización: 30 de mayo de 2016*
+Última actualización: 30 de mayo de 2016
 
 El tiempo de ejecución de ASP.NET en {{site.data.keyword.Bluemix}} está basado en el paquete de compilación de ASP.NET Core. ASP.NET Core es una infraestructura de código abierto modular para crear aplicaciones web .NET.
 .Net Core es un tiempo de ejecución pequeño multiplataforma que puede ser objetivo de las aplicaciones de ASP.NET Core. 
@@ -38,7 +38,7 @@ Controle la versión de .NET CLI con un global.json opcional en el directorio ra
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview1-002702"
+        "version": "1.0.0-preview2-003121"
       }
    }
 ```
@@ -69,9 +69,12 @@ Para coincidir más a fondo con cómo se ejecuta la aplicación Bluemix, siga la
 La herramienta Yeoman puede utilizarse para generar nuevas plantillas de proyecto tal como se describen en
 [Creación de proyectos con Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
+Para más información sobre cómo desarrollar localmente utilizando Visual Studio, consulte [Desarrollo con Visual Studio](../../starters/deploy_vs.html){: new_window}.
+
 ## Envío por push de una aplicación publicada
 
-Si desea que la aplicación contenga todos sus binarios necesarios de modo que el paquete de compilación no descargue ningún binario externo, puede enviar por push una aplicación *autocontenida* publicada.  Consulte [Tipos de portabilidad en .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window} para obtener más información sobre las aplicaciones autocontenidas.
+Si desea que la aplicación contenga todos sus binarios necesarios de modo que el paquete de compilación no descargue ningún binario externo, puede enviar por push una aplicación *autocontenida* publicada.  Consulte [Tipos de app de .NET Core ](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window} para obtener más información sobre aplicaciones autocontenidas.
+
 
 Para publicar un problema de aplicación, emita un mandato como el siguiente:
 ```
@@ -105,7 +108,7 @@ En este ejemplo, el paquete de compilación compila automáticamente los proyect
 ```
 {: codeblock}
 
-## Utilización de ejemplos del repositorio cli-samples y la plantilla de Visual Studio
+## Configuración de la aplicación para que escuche en el puerto correcto
 
 El paquete de compilación ejecutará la aplicación con el mandato *dotnet run* y pasará el argumento de línea de mandato como se indica a continuación
 ```
@@ -125,20 +128,33 @@ Son necesarias modificaciones en el método principal tal como se indican en los
     var config = new ConfigurationBuilder() //ADD THESE 3 LINES AT THE TOP OF THE MAIN METHOD
         .AddCommandLine(args)
         .Build();
-    
+
     var host = new WebHostBuilder()
         .UseKestrel()
         .UseConfiguration(config) //ADD THIS LINE BEFORE 'UseStartup'
-        .UseStartup&lt;Startup&gt;()  
+        .UseStartup&lt;Startup&gt;()
         .Build();
     host.Run();
 }
-</pre>  
+</pre>
 {: codeblock}
 
 Añada la siguiente dependencia a project.json: 
 ```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+```
+{: codeblock}
+
+Añada la siguiente propiedad a la sección `buildOptions` de project.json:
+```
+  "copyToOutput": {
+    "include": [
+      "wwwroot",
+      "Areas/**/Views",
+      "Views",
+      "appsettings.json"
+    ]
+  }
 ```
 {: codeblock}
 
@@ -147,6 +163,20 @@ Añada una sentencia *using* al archivo que contiene su método principal:
   using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
+
+En el método `Startup` de Startup.cs, elimine la siguiente línea:
+```
+  .SetBasePath(env.ContentRootPath)
+```
+{: codeblock}
+
+En el método `Main` de Program.cs, elimine la siguiente línea:
+```
+  .UseContentRoot(Directory.GetCurrentDirectory())
+```
+{: codeblock}
+
+Estos cambios deben permitir que .NET CLI encuentre las `Vistas` de la aplicación porque ahora se copiarán en la salida de la compilación cuando se ejecute el mandato `dotnet run`. Si la aplicación tiene otros archivos, como los archivos de configuración json, que son necesarios en el tiempo de ejecución, también deberá añadirlos a la sección `include` de `copyToOutput` del archivo project.json.
 
 # rellinks
 {: #rellinks}

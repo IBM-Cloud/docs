@@ -12,7 +12,7 @@ copyright:
 
 # Go
 {: #go_runtime}
-*Letzte Aktualisierung: 06. Juli 2016*
+Letzte Aktualisierung: 06. Juli 2016
 
 Die Laufzeit von Go in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'go_buildpack'.
 Das Buildpack 'go_buildpack' bietet eine vollständige Laufzeitumgebung für Go-Apps.

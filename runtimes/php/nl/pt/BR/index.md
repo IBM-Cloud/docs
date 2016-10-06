@@ -11,7 +11,7 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*Última atualização: 6 de julho de 2016*
+Última atualização: 06 de julho de 2016
 {: .last-updated}
 
 O tempo de execução PHP no {{site.data.keyword.Bluemix}} foi desenvolvido com o php_buildpack.

@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*Dernière mise à jour : 06 juillet 2016*
+Dernière mise à jour : 06 juillet 2016
 {: .last-updated}
 
 L'environnement d'exécution Ruby dans {{site.data.keyword.Bluemix}} repose sur le pack ruby_buildpack.

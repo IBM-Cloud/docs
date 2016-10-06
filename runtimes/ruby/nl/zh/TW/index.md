@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*前次更新：2016 年 7 月 6 日*
+前次更新：2016 年 7 月 6 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Ruby 運行環境是採用 ruby_buildpack 技術。ruby_buildpack 為 Ruby 應用程式提供完整的運行環境。

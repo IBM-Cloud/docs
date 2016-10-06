@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*Letzte Aktualisierung: 13. Juli 2016*
+Letzte Aktualisierung: 13. Juli 2016
 {: .last-updated}
 
 Die Laufzeit von Tomcat in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'java_buildpack'.

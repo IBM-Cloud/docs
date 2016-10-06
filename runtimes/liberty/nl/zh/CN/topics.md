@@ -12,7 +12,7 @@ copyright:
 # Liberty 主题
 {: #topics}
 
-*上次更新时间：2016 年 6 月 10 日*
+上次更新时间：2016 年 6 月 10 日
 {: .last-updated}
 
 * [Liberty 运行时](index.html)

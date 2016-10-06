@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*Última atualização: 7 de julho de 2016*
+Última atualização: 29 de agosto de 2016
 {: .last-updated}
 
 O tempo de execução Node.js no {{site.data.keyword.Bluemix}} é desenvolvido com o buildpack sdk-for-nodejs.
@@ -125,7 +125,9 @@ NPM fornece um recurso de script permitindo que você execute scripts, incluindo
 
 ### Comportamento do cache
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} mantém um diretório de cache por aplicativo de nó, que é persistido entre as construções. O cache armazena dependências resolvidas para que elas não sejam transferidas por download e instaladas toda vez que o app for implementado.  Por exemplo, suponha que myapp dependa de **express**.  Em seguida, na primeira vez que myapp for implementado, o módulo **expess** será transferido por download.  Em implementações subsequentes de myapp, a instância armazenada em cache de **express** será usada. O comportamento padrão é armazenar em cache todos os node_modules instalados pelo NPM e bower_components instalados pelo bower.
+{{site.data.keyword.Bluemix}} mantém um diretório de cache por aplicativo de nó, que é persistido entre as construções. O cache armazena dependências resolvidas para que elas não sejam transferidas por download e instaladas toda vez que o app for implementado.  Por exemplo, suponha que myapp dependa de **express**.  Em
+seguida, na primeira vez que myapp for implementado, o módulo
+**express** será transferido por download. Em implementações subsequentes de myapp, a instância armazenada em cache de **express** será usada. O comportamento padrão é armazenar em cache todos os node_modules instalados pelo NPM e bower_components instalados pelo bower.
 
 Use a variável NODE_MODULES_CACHE para determinar se o builpack Node usa ou ignora ou não o cache de construções anteriores. O valor padrão é true.  Para desativar o armazenamento em cache, configure NODE_MODULES_CACHE como false, por exemplo, por meio da linha de comandos cf:
 ```
@@ -277,7 +279,7 @@ A tabela a seguir explica o comportamento do node.js v6 com FIPS.
 
 O Bluemix fornece várias versões do buildpack Node.js.
 * O buildpack **sdk-for-nodejs** criado pela IBM é o buildpack padrão usado para aplicativos Node.js no Bluemix.
-* O **nodejs_buildpack** é o buildpack externo que é fornecido pela comunidade do Cloud Foundry.
+* O **nodejs_buildpack** é um buildpack de comunidade fornecido pela comunidade do Cloud Foundry.
 
 O buildpack **sdk-for-nodejs** tem precedência sobre o **nodejs_buildpack** no Bluemix. Se desejar usar o **nodejs_buildpack** com seu aplicativo em vez do buildpack **sdk-for-nodejs**, você deverá especificar seu buildpack, por exemplo, usando a opção -b com o comando **cf push**.
 
@@ -302,4 +304,4 @@ Geralmente, o buildpack **sdk-for-nodejs** atual e uma versão anterior estão d
 * [Gerenciamento de Aplicativos
 ](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
-* [StrongLoop](https://strongloop.com)
+* [IBM API Connect](https://strongloop.com/)

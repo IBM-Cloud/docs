@@ -11,7 +11,7 @@ copyright:
 
 # Python
 {: #python_runtime}
-*上次更新时间：2016 年 7 月 6 日*
+上次更新时间：2016 年 7 月 6 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Python 运行时由 python_buildpack 提供支持。python_buildpack 为 Python 2 和 Python 3 应用程序提供了一个完整的运行时环境。

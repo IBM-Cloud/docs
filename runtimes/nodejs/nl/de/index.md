@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Node.js
 {: #nodejs_runtime}
-*Letzte Aktualisierung: 07. Juli 2016*
+Letzte Aktualisierung: 29. August 2016
 {: .last-updated}
 
 Die Laufzeit von Node.js in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'sdk-for-nodejs'.
@@ -70,7 +70,7 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 ```
 {: codeblock}
 
-Wenn die Anwendung in Bluemix ausgeführt wird, enthalten die Umgebungsvariablen VCAP_APP_HOST und VCAP_APP_PORT mit diesem Code die für Bluemix internen Werte für den Host und den Port, auf dem die App für eingehende Verbindungen empfangsbereit ist. Bei lokaler Ausführung der Anwendung sind die Umgebungsvariablen VCAP_APP_HOST und VCAP_APP_PORT nicht definiert, wodurch **localhost** als Host und **3000** als Portnummer verwendet werden. Durch diese Schreibung können Sie die Anwendung sowohl lokal für Textzwecke als auch in Bluemix ausführen, ohne Änderungen vornehmen zu müssen.
+Wenn die Anwendung in Bluemix ausgeführt wird, enthalten die Umgebungsvariablen VCAP_APP_HOST und VCAP_APP_PORT mit diesem Code die für Bluemix internen Werte für den Host und den Port, auf dem die App für eingehende Verbindungen empfangsbereit ist. Bei lokaler Ausführung der Anwendung sind die Umgebungsvariablen VCAP_APP_HOST und VCAP_APP_PORT nicht definiert, wodurch **localhost** als Host und **3000** als Portnummer verwendet werden. Durch diese Schreibung können Sie die Anwendung sowohl lokal für Testzwecke als auch in Bluemix ausführen, ohne Änderungen vornehmen zu müssen.
 
 ## Offlinemodus
 {: #offline_mode}
@@ -117,7 +117,7 @@ NPM stellt eine Scripting-Funktion bereit, mit der Sie Scripts einschließlich d
 
 ### Caching-Verhalten
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} enthält pro Knotenanwendung ein Cacheverzeichnis, das von einem Build zum anderen erhalten bleibt. Der Cache speichert aufgelöste Abhängigkeiten, das heißt, sie werden nicht bei jeder Implementierung der App heruntergeladen und installiert.  Beispiel: Nehmen Sie an, die 'myapp' hängt von **express** ab.  Beim ersten Implementieren von 'myapp' wird das Modul **express** heruntergeladen.  Bei den nachfolgenden Implementierungen von 'myapp' wird die in den Cache gestellte Instanz von **express** verwendet. Das Standardverhalten sieht so aus, dass alle von NPM installierten Knotenmodule (node_modules) und alle von Bower installierten Bower-Komponenten (bower_components) in den Cache gestellt werden.
+{{site.data.keyword.Bluemix}} enthält pro Knotenanwendung ein Cacheverzeichnis, das von einem Build zum anderen erhalten bleibt. Der Cache speichert aufgelöste Abhängigkeiten, das heißt, sie werden nicht bei jeder Implementierung der App heruntergeladen und installiert. Beispiel: Nehmen Sie an, die 'myapp' hängt von **express** ab. Dann wird 'myapp' das erste Mal bereitgestellt, wenn das Modul **express** heruntergeladen wird. Bei den nachfolgenden Implementierungen von 'myapp' wird die in den Cache gestellte Instanz von **express** verwendet. Das Standardverhalten sieht so aus, dass alle von NPM installierten Knotenmodule (node_modules) und alle von Bower installierten Bower-Komponenten (bower_components) in den Cache gestellt werden.
 
 Legen Sie mithilfe der Variablen NODE_MODULES_CACHE fest, ob das Node-Buildpack den bei vorherigen Builds verwendeten Cache verwendet oder ignoriert. Der Standardwert ist 'true'.  Legen Sie zum Inaktivieren des Cachings für NODE_MODULES_CACHE den Wert 'false' fest, beispielsweise über die cf-Befehlszeile:
 ```
@@ -256,7 +256,7 @@ Die folgende Tabelle erläutert das Verhalten von node.js Version 6 bezüglich F
 
 Bluemix stellt mehrere Versionen des Node.js-Buildpacks bereit.
 * Das von IBM erstellte Buildpack **sdk-for-nodejs** ist das für Node.js-Anwendungen in Bluemix standardmäßig verwendete Buildpack.
-* Das **nodejs_buildpack** ist das externe Buildpack, das von der Cloud Foundry-Community bereitgestellt wird.
+* Das **nodejs_buildpack** ist ein Community-Buildpack, das von der Cloud Foundry-Community zur Verfügung gestellt wird.
 
 Das Buildpack **sdk-for-nodejs** hat in Bluemix Vorrang vor dem Buildpack **nodejs_buildpack**. Wenn Sie mit Ihrer Anwendung das Buildpack **nodejs_buildpack** statt des Buildpacks **sdk-for-nodejs** verwenden wollen, müssen Sie Ihr Buildpack angeben, beispielsweise indem Sie mit dem Befehl **cf push** die Option Option '-b' angeben.
 
@@ -280,4 +280,4 @@ In der Regel stehen das aktuelle Buildpack **sdk-for-nodejs** und eine frühere 
 * [Neueste Aktualisierungen für das Node.js-Buildpack](../../runtimes/nodejs/updates.html)
 * [App-Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
-* [StrongLoop](https://strongloop.com)
+* [IBM API Connect](https://strongloop.com/)

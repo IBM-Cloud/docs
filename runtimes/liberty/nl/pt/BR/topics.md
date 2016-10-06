@@ -12,7 +12,7 @@ copyright:
 # Tópicos do Liberty
 {: #topics}
 
-*Última atualização: 10 de junho de 2016*
+Última atualização: 10 de junho de 2016
 {: .last-updated}
 
 * [Tempo de execução do Liberty](index.html)

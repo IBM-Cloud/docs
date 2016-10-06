@@ -11,7 +11,7 @@ copyright:
 # 使用 Dynatrace
 {: #using_dynatrace}
 
-*前次更新：2016 年 6 月 10 日*
+前次更新：2016 年 6 月 10 日
 {: .last-updated}
 
 Dynatrace 是協力廠商服務，可為您的應用程式提供監視功能。
@@ -76,7 +76,7 @@ Dynatrace 代理程式必須在 Web 伺服器上進行管理，而 Liberty 建�
 ```
       ---
       6.3.0: https://my-dynatrace-agent.mybluemix.net/dynatrace-agent-6.3.0-unix.jar
-```
+```  
 {: codeblock}
      * index.yml 檔案所指定的位置上必須提供 **dynatrace-agent-6.3.0-unix.jar** 檔案。Jar 檔和 index.yml 的位置可以是相同的目錄。
 

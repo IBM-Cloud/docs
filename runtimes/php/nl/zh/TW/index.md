@@ -11,7 +11,7 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*前次更新：2016 年 7 月 6 日*
+前次更新：2016 年 7 月 6 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 PHP 運行環境是採用 php_buildpack 技術。php_buildpack 為 PHP 應用程式提供完整的運行環境。

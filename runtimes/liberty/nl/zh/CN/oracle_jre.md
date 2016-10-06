@@ -11,7 +11,7 @@ copyright:
 # 使用 Oracle JRE
 {: #using_oraacle_jre}
 
-*上次更新时间：2016 年 6 月 21 日*
+上次更新时间：2016 年 6 月 21 日
 {: .last-updated}
 
 您可以选择使用 Oracle JRE 在 Bluemix 上运行 Liberty 应用程序。为此，必须执行以下操作：

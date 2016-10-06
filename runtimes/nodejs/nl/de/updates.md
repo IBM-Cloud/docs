@@ -11,10 +11,19 @@ copyright:
 # Neueste Aktualisierungen für das Buildpack 'sdk-for-nodejs'
 {: #latest_updates}
 
-*Letzte Aktualisierung: 18. Juli 2016*
+Letzte Aktualisierung: 26. August 2016
 {: .last-updated}
 
 Eine Liste mit den neuesten Aktualisierungen im Buildpack 'sdk-for-nodejs'.
+## August 26, 2016: Updated Node.js buildpack v3.7-20160826-1101
+Mit diesem Release des Buildpacks werden die IBM SDK for Node.js-Laufzeitversionen: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2 und 6.4.0 hinzugefügt. Der Standardwert ist jetzt 4.5.0.
+
+Dieses Release beinhaltet auch die Fehlerkorrekturen aus dem [Node.js-Buildpack 1.5.18 von Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18).
+
+Das Release entfernt die Unterstützung für den strongpm App Management-Handler entsprechend der Ankündigung in [Bluemix Node.js Buildpack v3.3 – FIPS-Modus und mehr](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). 
+
+Beachten Sie, dass es ein bekanntes Problem bei der Verwendung von Node.js 6.x und dem [Entwicklungsmodus](../../manageapps/app_mng.html#devmode) gibt. Als Problemumgehung müssen Sie, nachdem Sie den Entwicklungsmodus aktiviert haben, Ihrer Anwendung vor der Verwendung erneut eine Stage zuweisen. 
+
 ## 22. Juli 2016: Node.js buildpack v3.6-20160715-0749 aktualisiert
 Mit diesem Release des Buildpacks werden die IBM SDK for Node.js-Laufzeitversionen 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 und 6.2.2 unterstützt. Die Standardversion ist jetzt 4.4.7.
 
@@ -173,7 +182,7 @@ Darüber hinaus wurde das Feature 'App-Management' im Node.js-Buildpack umgestal
 ## 23. Oktober 2014: Node.js-Buildpack v1.6-20141013-1736 aktualisiert
 
 * Das Node.js-Buildpack enthält nun [IBM SDK for Node.js v1.1.0.8](https://developer.ibm.com/node/sdk/). Dieses Update bedeutet, dass Ihnen eine vollständig unterstützte IBM Node.js-Laufzeit zur Verfügung steht, wenn Sie die letzte stabile Node.js-Laufzeit für Ihre Anwendung angeben (v0.10.32). Dieses neueste SDK umfasst einen Fix für ein Problem mit dem eingebetteten Modul 'qs', das zu einem Denial-of-Service-Fehler führte. Außerdem enthält es eine aktualisierte Version des Moduls 'npm' sowie weitere Verbesserungen in den Modulen 'http' und 'url'. Weitere Details finden Sie im [Änderungsprotokoll für v0.10.32](https://raw.githubusercontent.com/joyent/node/v0.10.32/ChangeLog).
-* Das Buildpack enthält außerdem einen Fix für einen Programmfehler, durch den während der Implementierung eine fehlerhafte Datei index.html zur Kundenanwendung hinzugefügt wurde.
+* Das Buildpack enthält außerdem einen Fix für einen Programmfehler, durch den während der Implementierung eine fehlerhafte Datei 'index.html' zur Kundenanwendung hinzugefügt wurde.
 
 ## 30. September 2014: Node.js-Buildpack v1.4-20140908-1746 aktualisiert
 

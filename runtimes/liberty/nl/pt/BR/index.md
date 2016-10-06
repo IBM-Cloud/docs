@@ -12,7 +12,7 @@ copyright:
 # Liberty for Java
 {: #liberty_runtime}
 
-*Última atualização: 10 de junho de 2016*
+Última atualização: 10 de junho de 2016
 {: .last-updated}
 
 Os aplicativos Liberty for Java no {{site.data.keyword.Bluemix}} são desenvolvidos pelo buildpack liberty-for-java. O buildpack liberty-for-java fornece um ambiente de tempo de execução completo para executar os aplicativos Java EE 7 e OSGi na parte superior do perfil Liberty. Ele suporta estruturas populares como Spring e inclui o IBM JRE. O WebSphere Liberty permite o desenvolvimento rápido de aplicativo, o que é bem adequado para a nuvem.

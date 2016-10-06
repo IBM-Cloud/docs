@@ -12,7 +12,7 @@ copyright:
 # Liberty 주제
 {: #topics}
 
-*마지막 업데이트 날짜: 2016년 6월 10일*
+마지막 업데이트 날짜: 2016년 6월 10일
 {: .last-updated}
 
 * [Liberty 런타임](index.html)

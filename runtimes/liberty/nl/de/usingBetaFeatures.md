@@ -11,7 +11,7 @@ copyright:
 # Beta-Features verwenden
 {: #using_beta_features}
 
-*Letzte Aktualisierung: 10. Juni 2016*
+Letzte Aktualisierung: 10. Juni 2016
 {: .last-updated}
 
 Die Beta-Features von Liberty ermöglichen den vorzeitigen Zugriff auf die neuen Funktionen und Programmiermodelle, die in einem zukünftigen Liberty-Release enthalten sein können. Die meisten Beta-Features können auch in Anwendungen verwendet werden, die in Bluemix implementiert sind.
@@ -30,19 +30,10 @@ In Bluemix verfügbare Liberty-Beta-Features
 
 <tr>
 <td>bluemixLogCollector-1.1</td>
-<td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
 <td>logstashCollector-1.1</td>
-</tr>
-
-<tr>
 <td>osgiBundle-1.0</td>
-<td>passwordUtilities-1.0</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
-
 </table>
 
 Führen Sie die folgenden Schritte aus, um die Liberty-Beta-Features in Bluemix verwenden zu können:
@@ -52,7 +43,7 @@ Führen Sie die folgenden Schritte aus, um die Liberty-Beta-Features in Bluemix 
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
-            <feature>passwordUtilities-1.0</feature>
+            <feature>bluemixLogCollector-1.1</feature>
         </featureManager>
     </server>
 ```

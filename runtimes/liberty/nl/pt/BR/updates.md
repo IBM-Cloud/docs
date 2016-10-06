@@ -13,8 +13,24 @@ copyright:
 
 ## Uma lista das atualizações mais recentes no buildpack do Liberty.
 
-*Última atualização: 20 de julho de 2016*
+Última atualização: 13 de setembro de 2016
 {: .last-updated}
+
+### 16 de setembro de 2016: atualizado o buildpack do Liberty v3.3-20160912-1729
+* A versão de runtime padrão do Liberty foi atualizada para a liberação
+[16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661). A
+versão de runtime mensal do Liberty foi atualizada para a liberação
+[2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/). Com
+essas atualizações, os recursos `cloudant-1.0` e
+`passwordUtilities-1.0` do Liberty, anteriormente disponíveis como
+recursos beta, agora estão disponíveis como recursos prontos para produção.
+* O buildpack também contém uma versão atualizada do IBM JRE 8.0: SR3 FP11.
+* O buildpack foi ajustado para fazer download do [driver JDBC MariaDB Connector/J](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.4.x mais recente ao executar [configuração automática para tipo de serviços MySQL](autoConfig.html) devido a um problema com o driver 1.5.x mais recente.
+
+### 26 de agosto de 2016: atualizado o buildpack do Liberty v3.2-20160822-2200
+* O buildpack contém versões atualizadas do IBM JRE: 8 SR3 FP10 e 7.1 SR3 FP50.
+* A versão de runtime mensal do Liberty foi atualizada para a liberação [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/).
+* O plug-in de serviço que fornece [suporte de configuração automática](autoConfig.html) para o serviço [SQL Database](../../services/SQLDB/index.html#SQLDB) foi atualizado para usar sempre os certificados confiáveis da JVM ao conectar-se ao serviço sobre TLS.
 
 ### 22 de julho de 2016: atualizado o buildpack do Liberty v3.1-20160717-2254
 * A funcionalidade [Gerenciamento de app](../../manageapps/app_mng.html) foi atualizada para suportar autenticação federada. Além disso, o tempo de execução do Node.js que é usado pelos utilitários `devconsole` e `shell` foi atualizado para a versão mais recente `0.12.15`. 

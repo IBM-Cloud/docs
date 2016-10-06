@@ -12,7 +12,7 @@ copyright:
 
 # node.js 的離線模式
 {: #offline_mode}
-*前次更新：2016 年 7 月 20 日*
+前次更新：2016 年 7 月 20 日
 {: .last-updated}
 
 將 node.js 應用程式推送至 {{site.data.keyword.Bluemix}} 之後，SDK for Node.js 建置套件通常會從外部資源下載構件，例如 NPM 提供的 node 模組。在某些情況下，例如使用 [Bluemix 專用](../../dedicated/index.html#dedicated)和 [Bluemix 本端](../../local/index.html#local)時，您可能會希望不要依賴存取 Bluemix 的外部網站，或是希望對這些外部網站有更明確的控制。  

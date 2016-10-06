@@ -12,7 +12,7 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-*Dernière mise à jour : 30 mai 2016*
+Dernière mise à jour : 30 mai 2016
 
 L'environnement d'exécution ASP.NET Core sur {{site.data.keyword.Bluemix}} utilise la technologie du pack de construction ASP.NET Core. ASP.NET Core est une infrastructure open source modulaire permettant de créer des applications Web .NET.
 .Net Core est un petit environnement d'exécution multiplateforme qui peut être ciblé par des applications ASP.NET Core. 
@@ -38,7 +38,7 @@ Contrôlez la version .NET CLI à l'aide d'un fichier global.json facultatif con
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview1-002702"
+        "version": "1.0.0-preview2-003121"
       }
    }
 ```
@@ -67,9 +67,11 @@ Pour coller le plus possible au mode d'exécution de l'application dans Bluemix,
 
 L'outil Yeoman peut être utilisé pour générer de nouveaux modèles de projet, comme indiqué dans [Building Projects with Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
+Pour plus d'informations sur un développement local via Visual Studio, voir [Developing with Visual Studio](../../starters/deploy_vs.html){: new_window}.
+
 ## Envoi par commande push d'une application publiée
 
-Si votre application doit contenir tous ses fichiers binaires requis et éviter ainsi que le pack de construction ne télécharge des fichiers binaires externes, vous pouvez envoyer par commande push une application *autonome* publiée.  Pour plus d'informations sur les applications autonomes, voir [Types of portability in .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}.
+Si votre application doit contenir tous ses fichiers binaires requis et éviter ainsi que le pack de construction ne télécharge des fichiers binaires externes, vous pouvez envoyer par commande push une application *autonome* publiée.  Voir [.NET Core App Types](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window} pour plus d'informations sur les applications autonomes,
 
 Pour publier une application, exécutez une commande telle que la suivante :
 ```
@@ -103,7 +105,7 @@ Dans cet exemple, le pack de construction compile automatiquement les projets *M
 ```
 {: codeblock}
 
-## Utilisation d'exemples à partir du répertoire cli-samples et du modèle Visual Studio
+## Configuration de votre application pour écouter sur le port adéquat
 
 Le pack de construction va exécuter votre application avec la commande *dotnet run* et transmettre l'argument de ligne de commande qui suit :
 ```
@@ -120,23 +122,36 @@ Des modifications doivent être apportées à la méthode principale, comme indi
 <pre>
   public static void Main(string[] args)
   {
-    var config = new ConfigurationBuilder() //AJOUTER CES 3 LIGNES EN HAUT DE LA METHODE PRINCIPALE
+    var config = new ConfigurationBuilder() //ADD THESE 3 LINES AT THE TOP OF THE MAIN METHOD
         .AddCommandLine(args)
         .Build();
-    
+
     var host = new WebHostBuilder()
         .UseKestrel()
         .UseConfiguration(config) //ADD THIS LINE BEFORE 'UseStartup'
-        .UseStartup&lt;Startup&gt;()  
+        .UseStartup&lt;Startup&gt;()
         .Build();
     host.Run();
 }
-</pre>  
+</pre>
 {: codeblock}
 
 Ajoutez la dépendance suivante à project.json : 
 ```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+```
+{: codeblock}
+
+Ajoutez la propriété suivante dans la section `buildOptions` du fichier project.json 
+```
+  "copyToOutput": {
+    "include": [
+      "wwwroot",
+      "Areas/**/Views",
+      "Views",
+      "appsettings.json"
+    ]
+  }
 ```
 {: codeblock}
 
@@ -145,6 +160,20 @@ Ajoutez une instruction *using* au fichier qui contient votre méthode principal
   using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
+
+Dans la méthode `Startup` de Startup.cs, retirez la ligne suivante :
+```
+  .SetBasePath(env.ContentRootPath)
+```
+{: codeblock}
+
+Dans la méthode `Main` de Program.cs, retirez la ligne suivante :
+```
+  .UseContentRoot(Directory.GetCurrentDirectory())
+```
+{: codeblock}
+
+Ces changements doivent permettre à .NET CLI de trouver les éléments `Vues` de votre application car ils sont copiés dans le résultat de la génération quand la commande `dotnet run` s'exécute. Si votre application dispose d'autres fichiers, comme des fichiers de configuration json, qui sont requis au moment de l'exécution, vous devez les ajouter à la section `include` de `copyToOutput` dans le fichier project.json.
 
 # rellinks
 {: #rellinks}

@@ -11,11 +11,28 @@ copyright:
 # Aggiornamenti più recenti al pacchetto di build sdk-for-nodejs
 {: #latest_updates}
 
-*Ultimo aggiornamento: 22 giugno 2016*
+Ultimo aggiornamento: 26 agosto 2016
 {: .last-updated}
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build sdk-for-nodejs.
-## 22 giugno 2016: pacchetto di build Node.js aggiornato v3.5-20160608-1102
+## 26 agosto, 2016: pacchetto di build Node.js aggiornato v3.7-20160826-1101
+Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2 e 6.4.0. La versione predefinita è ora la 4.5.0. 
+
+Questa release supporta le correzioni ai bug, inclusi quelli dal [Cloud Foundry’s Node.js buildpack 1.5.18](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18).
+
+La release rimuove il supporto per il gestore Gestione applicazioni strongpm come annunciato in [Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
+
+Nota che è presente un problema noto quando utilizzi Node.js 6.x e la [Modalità di sviluppo](../../manageapps/app_mng.html#devmode). Per aggirare questo problema dovrai ripreparare la tua applicazione dopo l'abilitazione della modalità di sviluppo prima di poter iniziare ad utilizzarla.
+
+## 22 luglio 2016: pacchetto di build Node.js aggiornato v3.6-20160715-0749
+Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 e 6.2.2. La versione predefinita è ora la 4.4.7.
+
+Questa release include un proxy di gestione dell'applicazione aggiornato che supporta gli accessi federati.
+
+Sono incluse le correzioni per le seguenti vulnerabilità di sicurezza:
+* [CVE-2016-1669](http://www-01.ibm.com/support/docview.wss?uid=swg21986383)
+
+## 22 giugno 2016: pacchetto di build Node.js aggiornato v3.5-20160609-1608
 
 Questa release del pacchetto di build aggiunge le versioni di runtime di IBM SDK for Node.js 4.4.5 e 6.2.0. La versione predefinita è ora la 4.4.5.
 
@@ -25,7 +42,7 @@ Questa release supporta le correzioni ai problemi dal [pacchetto di build Node.j
 
 ## 20 maggio 2016: pacchetto di build Node.js aggiornato v3.4-20160518-1653
 
-Questa release del pacchetto di build aggiunge le versioni di runtime di IBM SDK for Node.js 0.10.45, 0.12.14, 4.4.4, 6.0.0 e 6.1.0. La versione predefinita è ora la 4.4.4. 
+Questa release del pacchetto di build aggiunge le versioni di runtime di IBM SDK for Node.js 0.10.45, 0.12.14, 4.4.4, 6.0.0 e 6.1.0. La versione predefinita è ora la 4.4.4.
 
 Sono incluse le correzioni per le seguenti vulnerabilità di sicurezza:
 * [CVE-2015-8855](http://www-01.ibm.com/support/docview.wss?uid=swg21982852)
