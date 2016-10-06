@@ -2,13 +2,15 @@
 
 # {{site.data.keyword.blockstorageshort}} (Beta) 入门
 
-上次更新时间：2016 年 7 月 29 日
+上次更新时间：2016 年 9 月 7 日
 {: .last-updated}
 
 {{site.data.keyword.blockstoragefull}} 针对需要持久存储的事务密集型工作负载和运行时提供了对块级别存储的访问。您可以使用 {{site.data.keyword.blockstorageshort}} 服务来管理卷生命周期、将卷连接到 IBM Virtual Servers 以及为块存储卷创建快照。
 
 开始之前，请查看以下信息。
 
+* 确保空间中已创建 {{site.data.keyword.blockstorageshort}} 服务的实例。有关如何添加新服务实例的更多信息，请参阅[请求新的
+服务实例](../../services/reqnsi.html#req_instance)。
 * {{site.data.keyword.blockstorageshort}} 仅在未绑定的上下文中受支持。 
 * 您必须已创建 IBM {{site.data.keyword.virtualmachinesshort}}，才能连接块存储卷。要了解有关将块存储卷与 IBM {{site.data.keyword.virtualmachinesshort}} 配合使用的更多信息，请参阅[块存储卷和 IBM Virtual Servers](../../virtualmachines/vm_create.html#storage_BS)。 
 
@@ -16,39 +18,49 @@
 
 1. 创建卷。
    
-   a. 打开 {{site.data.keyword.blockstorageshort}} 服务。
+   a. 在 Bluemix UI 中，选择**控制台 > 存储器**。
 
-   b. 单击**创建**，以启动**创建卷**对话框。
+   b. 选择先前供应的“块存储器”实例。
 
-   c.	提供所需的卷大小。不接受小数。大小受分配给组织的配额限制。
+   c. 在“管理”页面上，单击**创建卷**以启动“创建卷”对话框。
+
+   d.	提供名称。 
    
-   d.	提供名称。名称仅用于显示。
+      **注：**名称仅用于显示。
    
-   e.（可选）提供更详细的卷描述。
+   e. 提供所需的卷大小。 
    
-   f.	单击**创建**，以提交信息并关闭对话框。
+      **注：**不接受小数。大小受分配给组织的配额限制。
+   
+   f.（可选）提供更详细的卷描述。
+   
+   g.	单击**创建**以提交信息并关闭对话框。
 
   创建卷可能需要几分钟时间。
 
 2. 将卷连接到虚拟服务器。
 
-   a. 打开 {{site.data.keyword.blockstorageshort}} 服务。
+   a. 在 Bluemix UI 中，选择**控制台 > 存储器**。
+
+   b. 选择先前供应的“块存储器”实例。
+
+   c. 从可用卷列表中选择卷。
    
-   b. 从可用卷列表中选择卷。
+   d.	在“操作”下拉菜单上，单击**连接**。
    
-   c.	单击**连接**。
+   e.	在“连接”对话框中，从下拉列表中选择虚拟服务器实例。 
    
-   d.	在“连接”对话框中，从下拉列表中选择虚拟服务器实例。 
+   f.（可选）指定要用于连接此卷的设备。 
    
-   e.（可选）指定要用于连接此卷的设备。如果未指定设备，系统会自动选择虚拟服务器上第一个可用的设备。
+      **注：**如果未指定设备，系统会自动选择虚拟服务器上第一个可用的设备。
    
-   f.	单击**连接**，以提交信息并关闭对话框。
+   g.	单击**连接**以提交信息并关闭对话框。
    
    卷会列在已连接卷的表中，其中还会列出有关虚拟服务器实例的信息。现在，虚拟服务器可以使用该设备来持久存储数据。 
  
 后续步骤
 
-准备卷，以便开始使用。有关更多信息，请参阅[准备卷](../BlockStorage/blockstorage_preparingvolume.html)。
+连接卷后，必须配置虚拟服务器来利用该卷。有关更多信息，请参阅[准备卷](../BlockStorage/blockstorage_preparingvolume.html)。
 
 # 相关链接
 {: #rellinks}

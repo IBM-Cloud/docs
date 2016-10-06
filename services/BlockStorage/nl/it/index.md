@@ -2,53 +2,64 @@
 
 # Introduzione a {{site.data.keyword.blockstorageshort}} (Beta)
 
-Ultimo aggiornamento: 29 luglio 2016
+Ultimo aggiornamento: 07 settembre 2016
 {: .last-updated}
 
 {{site.data.keyword.blockstoragefull}} fornisce l'accesso all'archiviazione a livello di blocchi per i carichi di lavoro e i runtime che utilizzano molte transazioni e che hanno bisogno di un'archiviazione persistente. Puoi utilizzare il servizio {{site.data.keyword.blockstorageshort}} per gestire i cicli di vita del volume, collegare i volumi ai tuoi server virtuali IBM e creare istantanee dei tuoi volumi di archiviazione blocchi.
 
 Prima di iniziare, rivedi le seguenti informazioni.
 
-* Il servizio {{site.data.keyword.blockstorageshort}} è supportato solo in un contesto senza bind.  
+* Assicurati di aver creato un'istanza del servizio {{site.data.keyword.blockstorageshort}} nel tuo spazio. Per ulteriori informazioni su come aggiungere una nuova istanza del servizio, consulta [Richiesta di una nuova istanza del servizio](../../services/reqnsi.html#req_instance).
+* Il servizio {{site.data.keyword.blockstorageshort}} è supportato solo in un contesto senza bind. 
 * Devi disporre di IBM {{site.data.keyword.virtualmachinesshort}} creato per collegare i volumi di archiviazione blocchi. Per informazioni sull'utilizzo del volumi di archiviazione blocchi con {{site.data.keyword.virtualmachinesshort}}, consulta [Volumi di archiviazione blocchi e server virtuali IBM](../../virtualmachines/vm_create.html#storage_BS). 
 
 Completa questa procedura per iniziare ad utilizzare {{site.data.keyword.blockstorageshort}}:
 
-1. Crea un volume. 
+1. Crea un volume.
    
-   a. Apri il servizio {{site.data.keyword.blockstorageshort}}.
+   a. Nella IU di Bluemix, seleziona **Console > Archivio**.
 
-   b. Fai clic su **Crea** per avviare la finestra di dialogo **Crea volume**.
+   b. Seleziona l'istanza di Block Storage di cui hai precedentemente eseguito il provisioning.
 
-   c.	Fornisci la dimensione del volume che desideri. I numeri decimali non sono accettati. La dimensione è limitata dalla quota assegnata alla tua organizzazione.
+   c. Nella pagina di gestione, fai clic su **Crea volume** per avviare la finestra di dialogo di creazione del volume.
+
+   d.	Fornisci un nome. 
    
-   d.	Fornisci un nome. Il nome serve solo per finalità di visualizzazione.
+      **Nota:** il nome serve solo per finalità di visualizzazione.
    
-   e.	Facoltativamente, fornisci una descrizione più dettagliata del volume.
+   e.	Fornisci la dimensione del volume che desideri.  
    
-   f.	Fai clic su **Crea** per inoltrare le informazioni e chiudere la finestra di dialogo.
+      **Nota:** i numeri decimali non sono accettati. La dimensione è limitata dalla quota assegnata alla tua organizzazione.
+   
+   f.	Facoltativamente, fornisci una descrizione più dettagliata del volume.
+   
+   g.	Fai clic su **Crea** per inoltrare le informazioni e chiudere la finestra di dialogo.
 
   La creazione di un volume può richiedere qualche minuto.
 
 2. Collega un volume a un server virtuale.
 
-   a. Apri il servizio {{site.data.keyword.blockstorageshort}}.
+   a. Nella IU di Bluemix, seleziona **Console > Archivio**.
+
+   b. Seleziona l'istanza di Block Storage di cui hai precedentemente eseguito il provisioning.
+
+   c. Seleziona un volume dall'elenco di volumi disponibili.
    
-   b. Seleziona un volume dall'elenco di volumi disponibili.
+   d.	Dal menu a discesa delle azioni, fai clic su **Allega**.
    
-   c.	Fai clic su **Collega**.
+   e.	Nella finestra di dialogo Collega, seleziona un'istanza di un server virtuale dall'elenco a discesa. 
    
-   d.	Nella finestra di dialogo Collega, seleziona un'istanza di un server virtuale dall'elenco a discesa. 
+   f.	Facoltativamente, specifica il dispositivo da utilizzare per collegare questo volume.  
    
-   e.	Facoltativamente, specifica il dispositivo da utilizzare per collegare questo volume. Se non specifichi il dispositivo, il sistema seleziona automaticamente il primo dispositivo disponibile sul server virtuale.
+      **Nota:** se non specifichi il dispositivo, il sistema seleziona automaticamente il primo dispositivo disponibile sul server virtuale.
    
-   f.	Fai clic su **Collega** per inoltrare le informazioni e chiudere la finestra di dialogo.
+   g.	Fai clic su **Collega** per inoltrare le informazioni e chiudere la finestra di dialogo.
    
    Il volume è elencato nella tabella di volumi collegati con le informazioni sull'istanza del server virtuale. Il server virtuale può ora utilizzare il dispositivo per salvare in modo permanente i dati. 
  
 Operazioni successive
 
-Prepara il volume per l'utilizzo. Per ulteriori informazioni, consulta [Preparazione dei volumi](../BlockStorage/blockstorage_preparingvolume.html).
+Dopo aver collegato il tuo volume, devi configurare il tuo server virtuale per utilizzare il volume. Per ulteriori informazioni, consulta [Preparazione dei volumi](../BlockStorage/blockstorage_preparingvolume.html).
 
 # Link correlati
 {: #rellinks}
