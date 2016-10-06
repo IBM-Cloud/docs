@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-09-26"
+lastupdated: "2016-10-06"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-09-26"
 # Troubleshooting
 {: #troubleshooting}
 
-You can find the answers to common troubleshooting questions about using {{site.data.keyword.iotinsurance_full}} on {{site.data.keyword.Bluemix_notm}}.
+Here are the answers to common troubleshooting questions about using {{site.data.keyword.iotinsurance_full}} on {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
 ## Problem deploying the apps
