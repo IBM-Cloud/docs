@@ -1,95 +1,121 @@
 {:new_window: target="_blank"} 
 
-# Iniciación a {{site.data.keyword.blockstorageshort}} (Beta)
+# Iniciación a {{site.data.keyword.blockstorageshort}} (BETA)
 
-Última actualización: 7 de septiembre de 2016
-{: .last-updated}
+{{site.data.keyword.blockstoragefull}} proporciona almacenamiento a nivel de bloque para cargas de trabajo con gran intensidad de transacciones y tiempos de ejecución que necesitan almacenamiento persistente.
 
-{{site.data.keyword.blockstoragefull}} proporciona almacenamiento a nivel de bloque para las cargas de trabajo con gran intensidad de transacciones y tiempos de ejecución que necesitan almacenamiento persistente. Puede utilizar el servicio {{site.data.keyword.blockstorageshort}} para gestionar los ciclos de vida del volumen, adjuntar los volúmenes a sus servidores virtuales de IBM y crear instantáneas de volúmenes de nivel de bloque.
+Puede utilizar IBM {{site.data.keyword.blockstorageshort}} for {{site.data.keyword.Bluemix_notm}} para crear volúmenes de {{site.data.keyword.blockstorageshort}} que se pueden adjuntar a máquinas virtuales. Los datos en los volúmenes de almacenamiento en bloque persiste más allá del ciclo de vida de las máquinas virtuales. IBM {{site.data.keyword.blockstorageshort}} utiliza OpenStack Cinder para gestionar el ciclo de vida del volumen.
 
-Antes de empezar, revise la información siguiente.
+Los volúmenes de {{site.data.keyword.blockstorageshort}} se crean mediante una instancia del servicio IBM {{site.data.keyword.blockstorageshort}}. Puede adjuntar los volúmenes a una máquina virtual bajo un dispositivo específico que proporcione o el sistema puede seleccionar automáticamente un nombre de dispositivo disponible. La máquina virtual realiza sus operaciones de E/S directamente con el dispositivo especificado independientemente del servicio {{site.data.keyword.blockstorageshort}}.
 
-* Asegúrese que crea una instancia del servicio
-{{site.data.keyword.blockstorageshort}} en su espacio. Para
-obtener más información acerca de cómo añadir una instancia de un
-nuevo servicio, consulte [Solicitud de una instancia de servicio nueva](../../services/reqnsi.html#req_instance).
-* Solo se da soporte al servicio {{site.data.keyword.blockstorageshort}} en un contexto no enlazado. 
-* Deberá tener una {{site.data.keyword.virtualmachinesshort}} de IBM creada para adjuntar los volúmenes de almacenamiento en bloque. Para obtener más información sobre el uso de volúmenes de almacenamiento en bloque con {{site.data.keyword.virtualmachinesshort}} de IBM, consulte [Volúmenes de almacenamiento en bloque y servidores virtuales de IBM](../../virtualmachines/vm_create.html#storage_BS). 
+También puede crear instantáneas de volúmenes a nivel de bloque. El servicio {{site.data.keyword.blockstorageshort}} no permite la creación de instantáneas mientas el volumen esté adjunto, por lo que las instantáneas resultantes serán coherentes a bloqueo. 
 
-Complete estos pasos para empezar a utilizar {{site.data.keyword.blockstorageshort}}:
-
-1. Crear un volumen.
-   
-   a. En la IU de Bluemix UI, seleccione **Consola >
-Almacenamiento**.
-
-   b. Seleccione el almacenamiento en bloque que suministró
-previamente.
-
-   c. En la página Gestionar, pulse **Crear volumen** para abrir el diálogo Crear volumen.
-
-   d.	Especifique un nombre. 
-   
-      **Nota:** El nombre es solo para
-fines de visualización.
-   
-   e. Proporcione el tamaño del volumen que desea. 
-   
-      **Nota:** No se aceptan números
-decimales. El tamaño está limitado por la cuota asignada a su organización.
-   
-   f.	Opcionalmente, proporcione una descripción más
-detallada del volumen.
-   
-   g.	Pulse **Crear** para enviar la
-información y cerrar el diálogo.
-
-  La creación de un volumen puede tardar unos minutos.
-
-2. Adjunte un volumen a un servidor virtual.
-
-   a. En la IU de Bluemix UI, seleccione **Consola >
-Almacenamiento**.
-
-   b. Seleccione el almacenamiento en bloque que suministró
-previamente.
-
-   c. Seleccione un volumen de la lista de volúmenes
-disponibles.
-   
-   d.	Desde el menú desplegable de Acciones, pulse
-**Adjuntar**.
-   
-   e.	En el diálogo Adjuntar, seleccione una instancia de un
-servidor virtual de la lista desplegable.  
-   
-   f.	Opcionalmente, especifique el dispositivo que va a
-utilizar para adjuntar este volumen.  
-   
-      **Nota:**Si no especifica ningún dispositivo, el sistema selecciona automáticamente el primer dispositivo disponible en el
-servidor virtual.
-   
-   g.	Pulse **Adjuntar** para enviar la
-información y cerrar el diálogo. 
-   
-   El volumen se lista en la tabla de volúmenes adjuntos con la información sobre la instancia de servidor virtual. Ahora el servidor virtual puede utilizar el dispositivo para persistir datos. 
+## Cómo crear una instancia del servicio {{site.data.keyword.blockstorageshort}}
+Para crear una instancia del servicio {{site.data.keyword.blockstorageshort}} en su espacio, siga estos pasos:
  
-Qué hacer a continuación
+1.	Vaya al separador **Catálogo** de {{site.data.keyword.Bluemix_notm}} y escriba **{{site.data.keyword.blockstorageshort}}** en el recuadro de búsqueda, o vaya a **Servicios** y seleccione **Almacenamiento**. Pulse el servicio **{{site.data.keyword.blockstorageshort}}**. 
+2.	Especifique un espacio y un nombre de servicio. Seleccione el plan y pulse **Crear**.
+ 	
+Sólo se da soporte al servicio {{site.data.keyword.blockstorageshort}} en un contexto no enlazado. 
 
-Después de adjuntar su volumen, debe configurar su servidor
-virtual para hacer uso del volumen. Para más información, consulte [Cómo preparar volúmenes](../BlockStorage/blockstorage_preparingvolume.html).
+Se crea una instancia del servicio {{site.data.keyword.blockstorageshort}} en su espacio. Puede abrir la IU de {{site.data.keyword.blockstorageshort}} para gestionar volúmenes en cualquier momento pulsando el icono de la instancia de servicio.
 
-# Enlaces relacionados
-{: #rellinks}
+## Interfaz de usuario (IU) de {{site.data.keyword.blockstorageshort}}
+La interfaz gráfica de usuario de {{site.data.keyword.blockstorageshort}} proporciona una visión general de nivel superior de sus volúmenes de almacenamiento, instantáneas y el consumo de almacenamiento total de los volúmenes e instancias en la parte superior de la ventana. 
 
-## Tutoriales y ejemplos
-{:id="samples"}
+La cabecera incluye la fecha y hora de la última renovación de la IU. Puede utilizar el icono de renovar (un icono con una flecha circular) para renovar la IU manualmente, si es necesario. 
 
-* [Cómo utilizar IBM Block Storage for Bluemix con IBM Virtual Servers](https://developer.ibm.com/bluemix/2016/02/24/use-block-storage-for-bluemix-with-virtual-servers/){: new_window}
-* [Cómo empezar con IBM Block Storage for Bluemix](https://developer.ibm.com/bluemix/2016/02/15/getting-started-with-block-storage/){: new_window}
-* [Demo de IBM Block Storage for Bluemix](https://www.youtube.com/watch?v=3gCIHYKU1rE&list=PLzpeuWUENMK2d3L5qCITo2GQEt-7r0oqm&index=45){: new_window}
+Utilice la barra de búsqueda para buscar volúmenes basados en la serie que especifique. Las tablas se filtran a medida que escribe para mostrar sólo les volúmenes que coinciden con la serie de búsqueda especificada.
 
-## Referencia de API
-{: #api}
-* [OpenStack Block Storage (Cinder) API v2](http://developer.openstack.org/api-ref-blockstorage-v2.html){: new_window}
+Debajo de la visión general hay dos separadores para volúmenes e instantáneas. El separador de volúmenes está seleccionado de forma predeterminada. Las tablas de este separador listan información detallada sobre los volúmenes disponibles y adjuntos. Cada fila de una tabla muestra las propiedades más importantes de un volumen. Al expandir una fila, se muestran más propiedades. Los volúmenes adjuntos también muestran la instancia de máquina virtual y el dispositivo al que se ha adjuntado el volumen. 
 
+El separador de instancias muestra una tabla de instantáneas con propiedades y comportamiento similares. 
+
+Utilice el icono Crear de encima de las tablas para crear un nuevo volumen o manipular los existentes. Si va a crear un volumen a partir de una instantánea, también puede utilizar la lista desplegable Acciones. 
+
+
+## Acciones de volúmenes
+
+### Crear un volumen
+
+1.	Pulse **Crear** para abrir el diálogo **Crear volumen**.
+2.	Proporcione el tamaño del volumen que desea. No se aceptan números decimales. El tamaño está limitado por la cuota asignada a su organización.
+3.	Especifique un nombre. El nombre es solo para fines de visualización.
+4.	Opcionalmente, proporcione una descripción más detallada del volumen. 
+5.	Pulse **Crear** para enviar la información y cerrar el diálogo. 
+
+La creación de un volumen puede tardar unos minutos. 
+
+### Suprimir un volumen
+
+1.	Seleccione el volumen que desea suprimir.
+2.	Pulse **Suprimir**.
+3.	Confirme la supresión de este volumen.
+
+No puede suprimir un volumen adjunto a una máquina virtual. Primero debe desconectar el volumen.
+
+### Ampliar un volumen
+Puede aumentar el tamaño del volumen mediante la acción **Ampliar**. No puede reducir el tamaño de un volumen.
+
+1.	Seleccione el volumen que desea ampliar.
+2.	Pulse **Ampliar**.
+3.	Seleccione el nuevo amaño del volumen. Proporcione el nuevo tamaño total del volumen.
+4.	Pulse **Ampliar** para enviar la información y cerrar el diálogo. 
+
+Para poder ampliarse, el volumen debe tener el estado **Disponible**. 
+
+### Adjuntar y desconectar un volumen a una máquina virtual
+Los volúmenes se adjuntan y desconectan de máquinas virtuales como dispositivos con un nombre de dispositivo específico. Para que una máquina virtual pueda hacer que los datos de un volumen sean persistentes, debe adjuntar el volumen a la máquina virtual.
+
+Para adjuntar un volumen, siga estos pasos: 
+
+1.	Seleccione un volumen de la lista de volúmenes disponibles.
+2.	Pulse **Adjuntar**.
+3.	En el diálogo Adjuntar, seleccione una instancia de una máquina virtual de la lista desplegable. 
+4.	Opcionalmente, especifique el dispositivo que se debe utilizar para adjuntar este volumen. Si no especifica ningún dispositivo, el sistema automáticamente selecciona el primer dispositivo disponible en la máquina virtual.
+5.	Pulse **Adjuntar** para enviar la información y cerrar el diálogo.
+
+El volumen se lista en la tabla de volúmenes adjuntos con la información sobre la instancia de máquina virtual. 
+Ahora la máquina virtual puede utilizar el dispositivo para persistir datos. 
+
+Para desconectar un volumen, siga estos pasos: 
+
+1.	Seleccione un volumen de la lista de volúmenes adjuntos. 
+2.	Pulse **Desconectar**.
+3.	Confirme la desconexión en el diálogo. 
+
+Tras la desconexión, el volumen ya no está disponible para las operaciones de E/S de la instancia de máquina virtual. En la IU del servicio {{site.data.keyword.blockstorageshort}}, el volumen ahora está disponible para adjuntarse a otras máquinas virtuales.
+
+## Acciones de instantáneas
+
+### Crear una instantánea
+
+1.	Seleccione el separador **Volúmenes** para obtener una lista de volúmenes.
+2.	Seleccione el volumen del que desea crear una instantánea en la columna de volúmenes no adjuntos. Asegúrese de que el volumen que seleccione no esté adjunto. Se resalta el volumen seleccionado. 
+3.	Pulse **Acciones** y seleccione **Crear instantánea** en la lista desplegable.
+4.	Asigne un nombre a la instantánea y pulse **Crear**.
+
+**Nota:** No puede suprimir un volumen mientras existan instantáneas del volumen. 
+
+### Crear un volumen a partir de una instantánea
+
+1.	Seleccione el separador **Instantáneas** para obtener una lista de instantáneas.
+2.	Seleccione la instantánea a partir de la cual desea crear un volumen. Se resalta la instantánea seleccionada.
+3.	Pulse **Acciones** y seleccione **Crear volumen** en la lista desplegable.
+4.	Asigne un nombre al nuevo volumen y, opcionalmente, un nuevo tamaño y pulse **Crear**. 
+
+**Nota:** El nuevo tamaño del volumen debe ser igual o mayor que el tamaño de la instantánea. 
+
+### Suprimir una instantánea
+
+1.	Seleccione el separador **Instantáneas** para obtener una lista de instantáneas.
+2.	Seleccione la instantánea que desea suprimir. Se resalta la instantánea seleccionada.
+3.	Pulse **Acciones** y seleccione **Suprimir**. 
+
+
+
+># Enlaces relacionados {:class="linklist"}
+>## Referencia de API {:id="api"}
+>* [OpenStack Block Storage (Cinder) API v2](http://developer.openstack.org/api-ref-blockstorage-v2.html){: new_window}
+>
+>{:elementKind="article" id="rellinks"}

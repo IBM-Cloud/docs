@@ -2,76 +2,120 @@
 
 # {{site.data.keyword.blockstorageshort}}(베타) 시작하기
 
-마지막 업데이트 날짜: 2016년 9월 7일
-{: .last-updated}
+{{site.data.keyword.blockstoragefull}}에서는 지속적 스토리지가 필요한 경우 트랜잭션이 많은 워크로드와 런타임의 블록 레벨 스토리지에 대한 액세스를 제공합니다.
 
-{{site.data.keyword.blockstoragefull}}는 지속적 스토리지가 필요한 트랜잭션 집중 워크로드 및 런타임에 블록 레벨 스토리지에 대한 액세스를 제공합니다. {{site.data.keyword.blockstorageshort}} 서비스를 사용하여 볼륨 라이프사이클을 관리하고 IBM Virtual Servers에 볼륨을 연결하며 Block Storage 볼륨의 스냅샷을 작성할 수 있습니다. 
+IBM {{site.data.keyword.blockstorageshort}} for {{site.data.keyword.Bluemix_notm}}를 사용하여 가상 머신에 연결할 수 있는 {{site.data.keyword.blockstorageshort}} 볼륨을 작성할 수 있습니다. 블록 스토리지 볼륨의 데이터는 가상 머신의 라이프사이클 이상 지속됩니다. IBM {{site.data.keyword.blockstorageshort}}에서는 OpenStack Cinder를 사용하여 볼륨 라이프사이클을 관리합니다. 
 
-시작하기 전에 다음 정보를 검토하십시오. 
+{{site.data.keyword.blockstorageshort}} 볼륨은 IBM {{site.data.keyword.blockstorageshort}} 서비스 인스턴스를 통해 작성합니다. 사용자가 제공하는 특정 디바이스의 가상 머신에 볼륨을 연결하거나 시스템이 자동으로 사용 가능한 디바이스 이름을 선택할 수 있습니다. 가상 머신은 {{site.data.keyword.blockstorageshort}} 서비스에 독립적으로 지정된 디바이스에서 직접 I/O 오퍼레이션을 수행합니다. 
 
-* 영역에 {{site.data.keyword.blockstorageshort}} 서비스의 인스턴스를 작성했는지 확인하십시오. 새 서비스 인스턴스를 추가하는 방법에 대한 자세한 정보는 [새 서비스 인스턴스 요청](../../services/reqnsi.html#req_instance)을 참조하십시오.
-* {{site.data.keyword.blockstorageshort}} 서비스는 바인딩되지 않은 컨텍스트에서만 지원됩니다.  
-* Block Storage 볼륨을 연결하려면 IBM {{site.data.keyword.virtualmachinesshort}}가 작성되어 있어야 합니다. IBM {{site.data.keyword.virtualmachinesshort}}에서 Block Storage 볼륨을 사용하는 방법에 대해 자세히 보려면 [Block Storage 볼륨 및 IBM Virtual Servers](../../virtualmachines/vm_create.html#storage_BS)를 참조하십시오.  
+또한 볼륨의 블록 레벨 스냅샷을 작성할 수 있습니다. {{site.data.keyword.blockstorageshort}} 서비스에서는 볼륨이 연결되어 있는 동안 스냅샷 작성을 허용하지 않으므로 결과 스냅샷은 crash-consistent 상태가 됩니다.  
 
-{{site.data.keyword.blockstorageshort}}를 시작하려면 다음 단계를 완료하십시오. 
-
-1. 볼륨을 작성하십시오. 
-   
-   a. Bluemix UI에서 **콘솔 > 스토리지**를 선택하십시오.
-
-   b. 이전에 프로비저닝한 Block Storage 인스턴스를 선택하십시오.
-
-   c. 관리 페이지에서 **볼륨 작성**을 클릭하여 볼륨 작성 대화 상자를 시작하십시오.
-
-   d.	이름을 입력하십시오.  
-   
-      **참고:** 이름은 표시 용도로만 사용됩니다.
-   
-   e. 원하는 볼륨 크기를 제공하십시오. 
-   
-      **참고:** 소수는 허용되지 않습니다. 크기는 조직에 지정된 할당량에 따라 제한됩니다. 
-   
-   f.	선택적으로 볼륨에 대한 자세한 설명을 제공하십시오.
-   
-   g.	**작성**을 클릭하여 정보를 제출하고 대화 상자를 닫으십시오.
-
-  볼륨을 작성하는 데 시간이 걸릴 수 있습니다. 
-
-2. 가상 서버에 볼륨을 연결하십시오. 
-
-   a. Bluemix UI에서 **콘솔 > 스토리지**를 선택하십시오.
-
-   b. 이전에 프로비저닝한 Block Storage 인스턴스를 선택하십시오.
-
-   c. 사용 가능한 볼륨 목록에서 볼륨을 선택하십시오.
-   
-   d.	조치 드롭 다운 메뉴에서 **연결**을 클릭하십시오.
-   
-   e.	연결 대화 상자의 드롭 다운 목록에서 가상 서버의 인스턴스를 선택하십시오. 
-   
-   f.	선택적으로 이 볼륨을 연결하는 데 사용할 디바이스를 지정하십시오. 
-   
-      **참고:** 디바이스를 지정하지 않으면 시스템에서 가상 서버에서 처음으로 사용 가능한 디바이스를 자동으로 선택합니다.
-   
-   g.	**연결**을 클릭하여 정보를 제출하고 대화 상자를 닫으십시오.
-   
-   가상 서버 인스턴스에 대한 정보와 함께 연결된 볼륨 테이블에 볼륨이 나열됩니다. 이제 가상 서버에서 디바이스를 사용하여 데이터를 지속할 수 있습니다.  
+## {{site.data.keyword.blockstorageshort}} 서비스 인스턴스 작성 방법
+사용자 영역에 {{site.data.keyword.blockstorageshort}} 서비스의 인스턴스를 작성하려면 다음 단계를 수행하십시오. 
  
-다음 단계
+1.	{{site.data.keyword.Bluemix_notm}} **카탈로그** 탭으로 이동하여 검색 상자에 **{{site.data.keyword.blockstorageshort}}**를 입력하거나 **서비스**로 이동하여 **스토리지**를 선택하십시오. **{{site.data.keyword.blockstorageshort}}** 서비스를 클릭하십시오.  
+2.	영역과 서비스 이름을 입력하십시오. 플랜을 선택하고 **작성**을 클릭하십시오.
+ 	
+{{site.data.keyword.blockstorageshort}} 서비스는 바인딩되지 않은 컨텍스트에서만 지원됩니다.  
 
-볼륨이 연결되고 나면 볼륨을 사용하도록 가상 서버를 구성해야 합니다. 자세한 정보는 [볼륨 준비](../BlockStorage/blockstorage_preparingvolume.html)를 참조하십시오. 
+사용자 영역에 {{site.data.keyword.blockstorageshort}} 서비스의 인스턴스가 작성됩니다. 서비스 인스턴스 아이콘을 클릭하여 언제든 {{site.data.keyword.blockstorageshort}} UI를 열어 볼륨을 관리할 수 있습니다. 
 
-# 관련 링크 
-{: #rellinks}
+## {{site.data.keyword.blockstorageshort}} 사용자 인터페이스(UI)
+{{site.data.keyword.blockstorageshort}} 그래픽 사용자 인터페이스에서는 창의 맨 위에서 스토리지 볼륨, 스냅샷, 볼륨과 스냅샷의 총 스토리지 이용량에 대한 상위 레벨 개요를 제공합니다.  
 
-## 튜토리얼 및 샘플
-{:id="samples"}
+헤더에는 최근 UI를 새로 고친 날짜 및 시간이 포함됩니다. 필요한 경우 새로 고치기 아이콘(둥근 화살표 아이콘)을 사용하여 UI를 수동으로 새로 고칠 수 있습니다.  
 
-* [How to Use IBM Block Storage for Bluemix with IBM Virtual Servers](https://developer.ibm.com/bluemix/2016/02/24/use-block-storage-for-bluemix-with-virtual-servers/){: new_window}
-* [Getting Started with IBM Block Storage for Bluemix](https://developer.ibm.com/bluemix/2016/02/15/getting-started-with-block-storage/){: new_window}
-* [IBM Block Storage for Bluemix Demo](https://www.youtube.com/watch?v=3gCIHYKU1rE&list=PLzpeuWUENMK2d3L5qCITo2GQEt-7r0oqm&index=45){: new_window}
+입력한 문자열을 기반으로 볼륨을 찾으려면 검색 막대를 사용하십시오. 입력된 검색 문자열과 일치하는 볼륨만 표시하도록 사용자가 입력할 때 테이블이 필터링됩니다. 
 
-## API 참조 
-{: #api}
-* [OpenStack Block Storage(Cinder) API v2](http://developer.openstack.org/api-ref-blockstorage-v2.html){: new_window}
+개요 아래에는 볼륨과 스냅샷의 두 탭이 있습니다. 볼륨 탭이 기본적으로 선택되어 있습니다. 이 탭의 테이블에는 사용 가능한 볼륨과 연결된 볼륨에 대한 자세한 정보가 나열되어 있습니다. 테이블의 각 행은 볼륨의 가장 중요한 특성을 표시합니다. 행을 펼치면 추가 특성이 표시됩니다. 연결된 볼륨도 가상 머신 인스턴스와 볼륨이 연결된 디바이스를 표시합니다.  
 
+스냅샷 탭에는 비슷한 특성과 동작을 가진 스냅샷의 테이블이 표시됩니다.  
+
+새 볼륨을 작성하거나 기존 볼륨을 조작하려면 테이블 위에 있는 작성 아이콘을 사용하십시오. 스냅샷에서 볼륨을 작성하는 경우 조치 드롭 다운 목록도 사용할 수 있습니다.
+
+
+## 볼륨 조치
+
+### 볼륨 작성
+
+1.	**작성**을 클릭하여 **볼륨 작성** 대화 상자를 시작하십시오. 
+2.	원하는 볼륨 크기를 입력하십시오. 소수는 허용되지 않습니다. 크기는 조직에 지정된 할당량에 따라 제한됩니다. 
+3.	이름을 입력하십시오. 이름은 표시 용도로만 사용됩니다.
+4.	선택적으로 볼륨에 대한 자세한 설명을 입력하십시오.  
+5.	**작성**을 클릭하여 정보를 제출하고 대화 상자를 닫으십시오.  
+
+볼륨을 작성하는 데 시간이 걸릴 수 있습니다.  
+
+### 볼륨 삭제
+
+1.	삭제할 볼륨을 선택하십시오. 
+2.	**삭제**를 클릭하십시오. 
+3.	이 볼륨의 삭제를 확인하십시오. 
+
+가상 머신에 연결된 볼륨을 삭제할 수 없습니다. 먼저 볼륨을 분리해야 합니다. 
+
+### 볼륨 확장
+**확장** 조치를 통해 볼륨의 크기를 늘릴 수 있습니다. 볼륨 크기를 줄일 수는 없습니다. 
+
+1.	확장할 볼륨을 선택하십시오. 
+2.	**확장**을 클릭하십시오. 
+3.	볼륨의 새 크기를 선택하십시오. 새 총 볼륨 크기를 입력하십시오. 
+4.	**확장**을 클릭하여 정보를 제출하고 대화 상자를 닫으십시오.  
+
+볼륨을 확장하려면 볼륨이 **사용 가능** 상태여야 합니다.  
+
+### 가상 머신에 볼륨 연결 및 분리
+볼륨은 특정 디바이스 이름을 가진 디바이스로 가상 머신에서 연결되거나 분리됩니다. 가상 머신이 볼륨에서 데이터를 지속하려면 가상 머신에 볼륨을 연결해야 합니다. 
+
+볼륨을 연결하려면 다음 단계를 수행하십시오.  
+
+1.	사용 가능한 볼륨 목록에서 볼륨을 선택하십시오. 
+2.	**연결**을 클릭하십시오. 
+3.	연결 대화 상자의 드롭 다운 목록에서 가상 머신의 인스턴스를 선택하십시오.  
+4.	선택적으로 이 볼륨을 연결하는 데 사용할 디바이스를 지정하십시오. 디바이스를 지정하지 않으면 시스템이 자동으로 가상 머신에서 첫 번째 사용 가능한 디바이스를 선택합니다. 
+5.	**연결**을 클릭하여 정보를 제출하고 대화 상자를 닫으십시오. 
+
+가상 머신 인스턴스에 대한 정보와 함께 연결된 볼륨 테이블에 볼륨이 나열됩니다.
+가상 머신에서 이제 디바이스를 사용하여 데이터를 지속할 수 있습니다.  
+
+볼륨을 분리하려면 다음 단계를 수행하십시오.  
+
+1.	연결된 볼륨 목록에서 볼륨을 선택하십시오.  
+2.	**분리**를 클릭하십시오. 
+3.	대화 상자에서 분리를 확인하십시오.  
+
+볼륨이 분리되면 가상 머신 인스턴스의 I/O 오퍼레이션에 볼륨을 더 이상 사용할 수 없습니다. {{site.data.keyword.blockstorageshort}} 서비스 UI에서 볼륨을 다른 가상 머신에 연결할 수 있습니다. 
+
+## 스냅샷 조치
+
+### 스냅샷 작성
+
+1.	**볼륨** 탭을 선택하여 볼륨 목록을 가져오십시오. 
+2.	연결되지 않은 볼륨 열에서 스냅샷을 작성할 볼륨을 선택하십시오. 선택한 볼륨이 연결되어 있지 않은지 확인하십시오. 선택한 볼륨이 강조표시됩니다.  
+3.	**조치**를 클릭한 후 드롭 다운 목록에서 **스냅샷 작성**을 선택하십시오. 
+4.	스냅샷에 이름을 지정하고 **작성**을 클릭하십시오. 
+
+**참고:** 볼륨의 스냅샷이 있는 동안에는 볼륨을 삭제할 수 없습니다.  
+
+### 스냅샷에서 볼륨 작성
+
+1.	**스냅샷** 탭을 선택하여 스냅샷 목록을 가져오십시오. 
+2.	볼륨을 작성하는 데 사용할 스냅샷을 선택하십시오. 선택한 스냅샷이 강조표시됩니다. 
+3.	**조치**를 클릭한 후 드롭 다운 목록에서 **볼륨 작성**을 선택하십시오. 
+4.	새 볼륨에 이름을 지정하고 선택적으로 새 크기를 지정한 후 **작성**을 클릭하십시오.  
+
+**참고:** 새 볼륨 크기는 스냅샷 크기보다 크거나 같아야 합니다.  
+
+### 스냅샷 삭제
+
+1.	**스냅샷** 탭을 선택하여 스냅샷 목록을 가져오십시오. 
+2.	삭제할 스냅샷을 선택하십시오. 선택한 스냅샷이 강조표시됩니다. 
+3.	**조치**를 클릭한 후 **삭제**를 선택하십시오.  
+
+
+
+># 관련 링크 {:class="linklist"}
+>## API 참조 {:id="api"}
+>* [OpenStack Block Storage(Cinder) API v2](http://developer.openstack.org/api-ref-blockstorage-v2.html){: new_window}
+>
+>{:elementKind="article" id="rellinks"}
