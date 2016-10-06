@@ -12,7 +12,7 @@ copyright:
 # Configuración automática de servicios enlazados
 {: #auto_config}
 
-*Última actualización: 10 de junio de 2016*
+Última actualización: 10 de junio de 2016
 {: .last-updated}
 
 Puede enlazar diversos servicios a su aplicación Liberty. Los servicios se pueden gestionar mediante contenedor, mediante aplicación o ambos, en función de lo que desee el desarrollador.

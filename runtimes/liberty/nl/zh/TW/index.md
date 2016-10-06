@@ -12,7 +12,7 @@ copyright:
 # Liberty for Java
 {: #liberty_runtime}
 
-*前次更新：2016 年 6 月 10 日*
+前次更新：2016 年 6 月 10 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Liberty for Java 應用程式採用 liberty-for-java 建置套件的技術。除了 Liberty 設定檔之外，liberty-for-java 建置套件還提供一個完整的運行環境來執行 Java EE 7 和 OSGi 應用程式。它支援例如 Spring 的熱門架構，且包含了 IBM JRE。WebSphere Liberty 讓您能進行極適合雲端的快速應用程式開發。

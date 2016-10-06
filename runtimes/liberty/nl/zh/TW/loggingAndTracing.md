@@ -12,7 +12,7 @@ copyright:
 # 記載和追蹤
 {: #logging_tracing}
 
-*前次更新：2016 年 6 月 21 日*
+前次更新：2016 年 6 月 21 日
 {: .last-updated}
 
 ## 日誌檔

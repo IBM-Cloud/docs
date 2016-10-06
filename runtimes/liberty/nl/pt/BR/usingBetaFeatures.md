@@ -11,7 +11,7 @@ copyright:
 # Usando os recursos beta
 {: #using_beta_features}
 
-*Última atualização: 10 de junho de 2016*
+Última atualização: 10 de junho de 2016
 {: .last-updated}
 
 Os recursos beta do Liberty fornecem um acesso antecipado aos novos
@@ -33,19 +33,10 @@ Recursos beta do Liberty disponíveis no Bluemix
 
 <tr>
 <td>bluemixLogCollector-1.1</td>
-<td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
 <td>logstashCollector-1.1</td>
-</tr>
-
-<tr>
 <td>osgiBundle-1.0</td>
-<td>passwordUtilities-1.0</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
-
 </table>
 
 Para usar os recursos beta do Liberty no Bluemix, será necessário fazer o seguinte:
@@ -55,7 +46,7 @@ Para usar os recursos beta do Liberty no Bluemix, será necessário fazer o segu
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
-            <feature>passwordUtilities-1.0</feature>
+            <feature>bluemixLogCollector-1.1</feature>
         </featureManager>
     </server>
 ```

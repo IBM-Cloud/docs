@@ -12,7 +12,7 @@ copyright:
 # 建置套件預設值
 {: #buildpack_defauts}
 
-*前次更新：2016 年 6 月 10 日*
+前次更新：2016 年 6 月 10 日
 {: .last-updated}
 
 Liberty 建置套件在 Bluemix 中經常更新。

@@ -11,14 +11,14 @@ copyright:
 # Personalización del JRE
 {: #customizing_jre}
 
-*Última actualización: 10 de junio de 2016*
+Última actualización: 15 de agosto de 2016
 {: .last-updated}
 
 Las aplicaciones se ejecutan en entorno de tiempo de ejecución Java (JRE), proporcionado y configurado por el paquete de compilación de Liberty. El paquete de compilación de Liberty también permite configurar la versión o el tipo de JRE, personalizar las opciones de JVM o solapar las funciones de JRE.
 
 ## IBM JRE
 
-De forma predeterminada, las aplicaciones se configuran para ejecutarse con una versión reducida de IBM JRE. Esta versión ligera de JRE se ha limitado para ofrecer la función esencial con una ocupación de memoria y de disco mucho más reducida. Para obtener más información sobre el contenido del JRE ligero, consulte [Tiempo de ejecución de Liberty for Java](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html).
+De forma predeterminada, las aplicaciones se configuran para ejecutarse con una versión reducida de IBM JRE. Esta versión ligera de JRE se ha limitado para ofrecer la función esencial con una ocupación de memoria y de disco mucho más reducida. Para obtener información sobre el contenido del JRE ligero, consulte  [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
 Se utiliza IBM JRE versión 8 de forma predeterminada. Utilice la variable de entorno JBP_CONFIG_IBMJDK para especificar una versión alternativa de IBM JRE. Por ejemplo, para utilizar la versión
 				más reciente de IBM JRE 7.1, establezca la variable de entorno siguiente:

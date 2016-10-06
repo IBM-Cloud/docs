@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*上次更新时间：2016 年 7 月 7 日*
+上次更新时间：2016 年 8 月 29 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Node.js 运行时采用 sdk-for-nodejs buildpack 技术。
@@ -119,7 +119,7 @@ NPM 提供了脚本编制功能，允许您运行脚本，其中包括分别适�
 
 ### 高速缓存行为
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} 为每个节点应用程序保留一个高速缓存目录，并且将在构建之间持久存储该目录。高速缓存会存储解析的依赖项，这样每次部署应用程序时就不需要再下载和安装这些依赖项。例如，假设 myapp 依赖于 **express**。那么第一次部署 myapp 时会下载 **expess** 模块。在后续部署 myapp 时，会使用高速缓存的 **express** 实例。缺省行为是对 NPM 安装的所有 node_modules 以及 bower 安装的 bower_components 进行高速缓存。
+{{site.data.keyword.Bluemix}} 为每个节点应用程序保留一个高速缓存目录，并且将在构建之间持久存储该目录。高速缓存会存储解析的依赖项，这样每次部署应用程序时就不需要再下载和安装这些依赖项。例如，假设 myapp 依赖于 **express**。那么第一次部署 myapp 时会下载 **express** 模块。在后续部署 myapp 时，会使用高速缓存的 **express** 实例。缺省行为是对 NPM 安装的所有 node_modules 以及 bower 安装的 bower_components 进行高速缓存。
 
 使用 NODE_MODULES_CACHE 变量来确定 Node buildpack 是使用还是忽略先前构建的高速缓存。缺省值为 true。要禁用高速缓存，请将 NODE_MODULES_CACHE 设置为 false，例如，通过 cf 命令行：
 
@@ -258,7 +258,7 @@ console.log('ssl version is [' +process.versions.openssl +']');
 
 Bluemix 提供多个版本的 Node.js buildpack。
 * IBM 创建的 **sdk-for-nodejs** buildpack 是 Bluemix 中用于 Node.js 应用程序的缺省 buildpack。
-* **nodejs_buildpack** 是 Cloud Foundry 社区提供的外部 buildpack。
+* **nodejs_buildpack** 是 Cloud Foundry 社区提供的社区 buildpack。
 
 在 Bluemix 中，**sdk-for-nodejs** buildpack 优先于 **nodejs_buildpack**。如果想要将 **nodejs_buildpack**（而不是 **sdk-for-nodejs** buildpack）用于应用程序，那么必须指定 buildpack，例如，使用 -b 选项以及 **cf push** 命令。
 
@@ -282,4 +282,4 @@ Bluemix 提供多个版本的 Node.js buildpack。
 * [Node.js buildpack 的最新更新](../../runtimes/nodejs/updates.html)
 * [应用程序管理](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
-* [StrongLoop](https://strongloop.com)
+* [IBM API Connect](https://strongloop.com/)

@@ -11,7 +11,7 @@ copyright:
 # 使用測試版特性
 {: #using_beta_features}
 
-*前次更新：2016 年 6 月 10 日*
+前次更新：2016 年 6 月 10 日
 {: .last-updated}
 
 Liberty 測試版特性可讓您提早存取未來 Liberty 版本中可能包含的新功能及程式設計模型。大部分的測試版特性也可以用於已部署至 Bluemix 的應用程式。
@@ -29,19 +29,10 @@ Bluemix 中可用的 Liberty 測試版特性
 
 <tr>
 <td>bluemixLogCollector-1.1</td>
-<td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
 <td>logstashCollector-1.1</td>
-</tr>
-
-<tr>
 <td>osgiBundle-1.0</td>
-<td>passwordUtilities-1.0</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
-
 </table>
 
 若要在 Bluemix 中使用 Liberty 測試版特性，您需要執行下列動作：
@@ -52,7 +43,7 @@ Bluemix 中可用的 Liberty 測試版特性
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
-            <feature>passwordUtilities-1.0</feature>
+            <feature>bluemixLogCollector-1.1</feature>
         </featureManager>
     </server>
 ```

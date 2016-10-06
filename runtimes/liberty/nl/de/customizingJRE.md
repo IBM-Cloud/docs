@@ -11,7 +11,7 @@ copyright:
 # JRE anpassen
 {: #customizing_jre}
 
-*Letzte Aktualisierung: 10. Juni 2016*
+Letzte Aktualisierung: 15. August 2016
 {: .last-updated}
 
 Anwendungen werden in einer vom Liberty-Buildpack bereitgestellten und konfigurierten
@@ -22,7 +22,7 @@ JVM-Optionen anzupassen oder die JRE-Funktionen zu überschreiben.
 
 Standardmäßig werden Anwendungen für die Ausführung mit einer einfachen IBM JRE-Version
 konfiguriert. Diese einfache JRE wurde verschlankt, um die Kernfunktionalität
-mit einem deutlich geringeren Platten- und Speicherbedarf bereitzustellen. Weitere Informationen zu den Inhalten der einfachen JRE finden Sie in [Liberty for Java runtime](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html).
+mit einem deutlich geringeren Platten- und Speicherbedarf bereitzustellen. Weitere Informationen zum Inhalt der einfachen JRE finden Sie im Abschnitt zum Thema [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
 Standardmäßig wird IBM JRE Version 8 verwendet. Mit der Umgebungsvariablen JBP_CONFIG_IBMJDK können Sie eine alternative Version der IBM JRE angeben. Legen Sie beispielsweise die folgende Umgebungsvariable fest, um die neueste Version von
 IBM JRE 7.1 zu verwenden:

@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 29 agosto 2016
 {: .last-updated}
 
 Il runtime Node.js su {{site.data.keyword.Bluemix}} si avvale della tecnologia del pacchetto di build sdk-for-nodejs.
@@ -71,6 +71,11 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 {: codeblock}
 
 Con questo codice, quando l'applicazione è in esecuzione su Bluemix, le variabili di ambiente VCAP_APP_HOST e VCAP_APP_PORT contengono i valori di host e porta interni per Bluemix e su cui l'applicazione è in ascolto per le connessioni in entrata. Quando l'applicazione è in esecuzione in locale, VCAP_APP_HOST e VCAP_APP_PORT non sono definite e si utilizza pertanto **localhost** come host e **3000** come numero porta. Scritto in questo modo, puoi eseguire l'applicazione in locale per attività di test e su Bluemix senza apportare ulteriori modifiche.
+
+## Modalità offline
+{: #offline_mode}
+
+Consulta [Modalità offline](offlineMode.html) per informazioni sul controllo dell'accesso al pacchetto di build da siti esterni. 
 
 ## Gestione applicazioni
 {{site.data.keyword.Bluemix}} fornisce diversi programmi di utilità per la gestione e il debug della tua applicazione Node.js.  Consulta [Gestione applicazioni](../../manageapps/app_mng.html) per i dettagli completi.
@@ -274,7 +279,7 @@ Di norma, sono disponibili il pacchetto di build **sdk-for-nodejs** e una versio
 {: #rellinks}
 ## general
 {: #general}
-* [Aggiornamenti più recenti al pacchetto di build Node.js](updates.html)
+* [Aggiornamenti più recenti al pacchetto di build Node.js](../../runtimes/nodejs/updates.html)
 * [Gestione applicazioni](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
-* [StrongLoop](https://strongloop.com)
+* [IBM API Connect](https://strongloop.com/)

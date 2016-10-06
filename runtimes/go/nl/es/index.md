@@ -12,7 +12,7 @@ copyright:
 
 # Go
 {: #go_runtime}
-*Última actualización: 06 de julio de 2016*
+Última actualización: 06 de julio de 2016
 
 El tiempo de ejecución de Go en {{site.data.keyword.Bluemix}} está basado en go_buildpack.
 go_buildpack proporciona un entorno de ejecución completo para aplicaciones Go.
@@ -23,7 +23,7 @@ go_buildpack se utiliza si la aplicación contiene un archivo denominado *.go.
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio de Go. La aplicación de inicio de Go es una aplicación sencilla Go que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la app de inicio, y realizar y enviar los cambios al entorno de Bluemix. Consulte [Utilización de las aplicaciones de iniciador](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio de Go.  La aplicación de inicio de Go es una aplicación sencilla Go que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la app de inicio, y realizar y enviar los cambios al entorno de Bluemix. Consulte [Utilización de las aplicaciones de iniciador](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}

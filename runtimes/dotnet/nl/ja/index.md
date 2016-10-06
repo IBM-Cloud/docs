@@ -12,7 +12,7 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-*最終更新日: 2016 年 5 月 30 日*
+最終更新日: 2016 年 5 月 30 日
 
 {{site.data.keyword.Bluemix}} の ASP.NET Core ランタイムには ASP.NET Core ビルドパックが採用されています。ASP.NET Core は、.NET Web アプリケーションをビルドするためのオープン・ソースのモジュラー・フレームワークです。
 .Net Core は、ASP.NET Core アプリケーションのターゲットにできる小規模なクロスプラットフォーム・ランタイムです。
@@ -38,7 +38,7 @@ copyright:
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview1-002702"
+        "version": "1.0.0-preview2-003121"
       }
    }
 ```
@@ -66,9 +66,11 @@ copyright:
 
 [『Building Projects with Yeoman』](http://docs.asp.net/en/latest/client-side/yeoman.html)に説明されているように、Yeoman ツールを使用して新規プロジェクトのテンプレートを生成できます。
 
+Visual Studio を使用したローカルでの開発については、[『Visual Studio を使用した開発』](../../starters/deploy_vs.html){: new_window}を参照してください。
+
 ## パブリッシュされたアプリケーションのプッシュ
 
-ビルドパックが外部のバイナリーをダウンロードしないように、アプリケーションに必要なバイナリーをすべて組み込む場合、パブリッシュされた*自己完結型*アプリケーションをプッシュすることができます。自己完結型アプリケーションについて詳しくは、 [『Types of portability in .Net Core』](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}を参照してください。
+ビルドパックが外部のバイナリーをダウンロードしないように、アプリケーションに必要なバイナリーをすべて組み込む場合、パブリッシュされた*自己完結型*アプリケーションをプッシュすることができます。自己完結型アプリケーションについて詳しくは、[『.NET Core App Types』](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}を参照してください。
 
 アプリケーションをパブリッシュするには、次のようなコマンドを発行します。
 ```
@@ -101,7 +103,7 @@ project = src/MyApp.Web/MyApp.Web.xproj
 ```
 {: codeblock}
 
-## cli-samples リポジトリーからのサンプルおよび Visual Studio テンプレートの使用
+## 正しいポートで listen するようにアプリケーションを構成
 
 ビルドパックは、*dotnet run* コマンドを使用してアプリケーションを実行し、後続のコマンド・ライン引数を渡します。
 ```
@@ -121,20 +123,32 @@ kestrel が正しいポートで listen するようにするために、アプ�
     var config = new ConfigurationBuilder() //Main メソッドの先頭にこの 3 行を追加します
         .AddCommandLine(args)
         .Build();
-    
+
     var host = new WebHostBuilder()
         .UseKestrel()
         .UseConfiguration(config) //「UseStartup」の前にこの行を追加します
-        .UseStartup&lt;Startup&gt;()  
-        .Build();
+        .UseStartup&lt;Startup&gt;()        .Build();
     host.Run();
 }
-</pre>  
+</pre>
 {: codeblock}
 
 以下の依存関係を project.json に追加します。 
 ```
-"Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+```
+{: codeblock}
+
+以下のプロパティーを project.json の `buildOptions` セクションに追加します。
+```
+  "copyToOutput": {
+    "include": [
+      "wwwroot",
+      "Areas/**/Views",
+      "Views",
+      "appsettings.json"
+    ]
+  }
 ```
 {: codeblock}
 
@@ -143,6 +157,20 @@ main メソッドを含むファイルに、*using* ステートメントを追�
 using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
+
+Startup.cs の `Startup` メソッドで、次の行を削除します。
+```
+  .SetBasePath(env.ContentRootPath)
+```
+{: codeblock}
+
+Program.cs の `Main` メソッドで、次の行を削除します。
+```
+  .UseContentRoot(Directory.GetCurrentDirectory())
+```
+{: codeblock}
+
+これらの変更により、.NET CLI がアプリケーションの `Views` を見つけることができます。これは、`dotnet run` コマンドの実行時にビルド出力にコピーされるようになるためです。JSON 構成ファイルなど、実行時に必要な他のファイルがアプリケーションにある場合、これらのファイルも project.json ファイルの `copyToOutput` の `include` セクションに追加する必要があります。
 
 # 関連リンク
 {: #rellinks}

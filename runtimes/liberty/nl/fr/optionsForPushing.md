@@ -12,7 +12,7 @@ copyright:
 # Options pour l'envoi par commande push d'applications Liberty
 {: #options_for_pushing}
 
-*Dernière mise à jour : 10 juin 2016*
+Dernière mise à jour : 10 juin 2016
 {: .last-updated}
 
 Le comportement du serveur Liberty dans Bluemix est contrôlé par le pack de construction Liberty. Les packs de construction peuvent fournir un environnement d'exécution complet pour une classe d'applications spécifique. Ils sont cruciaux pour assurer la portabilité entre les clouds et une contribution à une architecture de cloud ouverte. Le
@@ -213,7 +213,7 @@ fonctions utilisateur Liberty requises par l'application.
 
 Pour
 conditionner un serveur Liberty, utilisez la commande `./bin/server
-package` à partir du répertoire d'installation de Liberty. Spécifiez le nom de votre serveur et incluez l'option `--include=usr`.
+package` à partir du répertoire d'installation de Liberty. Spécifiez le nom de votre serveur et incluez l'option `--include=usr`. 
 Par exemple, si le serveur Liberty se nomme defaultServer, exécutez la commande suivante :
 
 ```

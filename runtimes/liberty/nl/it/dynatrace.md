@@ -11,7 +11,7 @@ copyright:
 # Utilizzo di Dynatrace
 {: #using_dynatrace}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 10 giugno 2016
 {: .last-updated}
 
 Dynatrace è un servizio di terze parti che fornisce monitoraggio per la tua applicazione.

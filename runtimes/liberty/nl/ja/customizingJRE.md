@@ -11,7 +11,7 @@ copyright:
 # JRE のカスタマイズ
 {: #customizing_jre}
 
-*最終更新日: 2016 年 6 月 10 日*
+最終更新日: 2016 年 8 月 15 日
 {: .last-updated}
 
 アプリケーションは、Liberty ビルドパックによって提供および構成される Java ランタイム環境 (JRE) で実行されます。Liberty ビルドパックにより、JRE のバージョンまたはタイプの構成、JVM オプションのカスタマイズ、JRE 機能のオーバーレイも可能になります。
@@ -19,7 +19,7 @@ copyright:
 ## IBM JRE
 
 デフォルトでは、アプリケーションは軽量版の IBM JRE で実行するように構成されます。この軽量 JRE は、
-中核の重要な機能のみを提供するようにしたもので、ディスクおよびメモリーにおける占有スペースが大幅に削減されます。軽量 JRE の内容について詳しくは、[Liberty for Java runtime](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html) を参照してください。
+中核の重要な機能のみを提供するようにしたもので、ディスクおよびメモリーにおける占有スペースが大幅に削減されます。軽量 JRE の内容について詳しくは、[Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html) を参照してください。
 
 デフォルトでは IBM JRE バージョン 8 が使用されます。別のバージョンの IBM JRE を指定するには、JBP_CONFIG_IBMJDK 環境変数を使用します。例えば、最新の IBM JRE 7.1 を使用するには、以下の環境変数を設定します。
 ```
@@ -35,13 +35,13 @@ version プロパティーをバージョン範囲に設定することができ
 オプションで、JRE として OpenJDK を使用して実行するようにアプリケーションを構成できます。アプリケーションを OpenJDK を使用して実行できるようにするには、JVM 環境変数を「openjdk」に設定します。例えば、
 cf コマンド・ライン・ツールを使用して、次のコマンドを実行します。
 ```
-$ cf set-env myapp JVM 'openjdk'
+    $ cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 デフォルトでは、使用可能であれば OpenJDK バージョン 8 が使用されます。別のバージョンの OpenJDK を指定するには、JBP_CONFIG_OPENJDK  環境変数を使用します。例えば、最新の OpenJDK 7 を使用するには、以下の環境変数を設定します。
 ```
-$ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -69,14 +69,15 @@ Liberty ビルドパックにより、以下を考慮して、デフォルト JV
 
 * Bluemix 環境。
 
-JVM オプションは、Bluemix 環境での最適化を提供するように、さらに、メモリー関連のエラー条件の診断に役立つように構成されます。  * JVM ダンプ・オプションを無効にし、アプリケーションのメモリーが枯渇したときにプロセスを kill することで、アプリケーションの迅速な障害復旧が構成されます。
+    JVM オプションは、Bluemix 環境での最適化を提供するように、さらに、メモリー関連のエラー条件の診断に役立つように構成されます。
+  * JVM ダンプ・オプションを無効にし、アプリケーションのメモリーが枯渇したときにプロセスを kill することで、アプリケーションの迅速な障害復旧が構成されます。
   * 仮想化チューニング (IBM JRE のみ)。
   * 障害発生時のアプリケーションの使用可能メモリー・リソースに関する情報を Loggregator にルーティングします。
   * JVM メモリー・ダンプを有効にするようにアプリケーションが構成されている場合、Java プロセスの kill は無効にされ、JVM メモリー・ダンプは共通のアプリケーション「dumps」ディレクトリーにルーティングされます。これらのダンプは、その後、Bluemix ダッシュボードまたは CF CLI で表示できます。
 
 以下に、512 M のメモリー制限を指定してデプロイされたアプリケーションに対してビルドパックが生成した、デフォルト JVM 構成例を示します。   
 ```
--Xtune:virtualized
+    -Xtune:virtualized
     -Xmx384M
     -Xdump:none
     -Xdump:heap:defaults:file=../../../../../dumps/heapdump.%Y%m%d.%H%M%S.%pid.%seq.phd
@@ -175,7 +176,7 @@ JVM_ARGS 環境変数で指定されたアプリケーション定義オプシ�
 コマンド・ライン・オプションとして保持されます。staging_info.yml ファイルから表示できます。
 
 ```
-$ cf files myapp staging_info.yml
+    $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
@@ -184,14 +185,14 @@ WAR、EAR、サーバー・ディレクトリー、およびパッケージさ�
 WAR、EAR、およびサーバー・ディレクトリーの jvm.options ファイルを表示するには、次のコマンドを実行します。
 
 ```
-$ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 パッケージされたサーバーの jvm.options ファイルを表示するには、<serverName> を実際のサーバー名に置き換えて次のコマンドを実行します。
 
 ```
-$ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+    $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
 ```
 {: codeblock}
 
@@ -202,36 +203,38 @@ IBM JRE の JVM 冗長ガーベッジ・コレクション・ロギングを有�
 * アプリケーションの manifest.yml ファイルに含まれる JVM オプション:
 
   <pre>
-env: 
-JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"  </pre>
+    env:
+      JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
+  </pre>
   {: codeblock}
 
 * 生成された JVM 冗長ガーベッジ・コレクション・ロギングを表示するには、以下のようにします。
 
   <pre>
-$ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
   </pre>
   {: codeblock}    
 
 * OutOfMemory 条件に基づいて heap、snap、および javacore をトリガーするように、デプロイ済みアプリケーションの IBM JRE JVM オプションを更新するには、 以下のように JVM オプションを指定してアプリケーションの環境変数を設定し、アプリケーションを再始動します。
 
   <pre>
-$ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
-$ cf restart myapp  </pre>
+    $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
+    $ cf restart myapp
+  </pre>
   {: codeblock}
 
 * メモリー不足条件がトリガーされたときに生成された JVM ダンプを表示するには、以下のようにします。
 
   <pre>
-$ cf files myapp dumps
+    $ cf files myapp dumps
 
     Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
     OK
 
-Snap.20141106.100252.81.0003.trc           307.3K
+    Snap.20141106.100252.81.0003.trc           307.3K
     heapdump.20141106.100252.81.0001.phd       3.9M
     javacore.20141106.100252.81.0002.txt     870.5K
-</pre>
+  </pre>
   {: codeblock}
 
 ### JRE のオーバーレイ
@@ -275,14 +278,14 @@ Snap.20141106.100252.81.0003.trc           307.3K
 例えば、AES 256 ビット暗号化を使用する場合、以下の Java ポリシー・ファイルをオーバーレイする必要があります。
 
 ```
-.java\jre\lib\security\US_export_policy.jar
+    .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
 ```
 {: codeblock}
 
 適切な非制限ポリシー・ファイルをダウンロードし、それらを次のファイルとしてアプリケーションに追加します。
 ```
-resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
+    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: codeblock}

@@ -11,7 +11,7 @@ copyright:
 
 # Python
 {: #python_runtime}
-*Última actualización: 06 de julio de 2016*
+Última actualización: 06 de julio de 2016
 {: .last-updated}
 
 El tiempo de ejecución de Python en {{site.data.keyword.Bluemix}} está basado en el python_buildpack.

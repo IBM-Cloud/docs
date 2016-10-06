@@ -11,7 +11,7 @@ copyright:
 # Personalizzazione del JRE
 {: #customizing_jre}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 15 agosto 2016
 {: .last-updated}
 
 Le applicazioni vengono eseguite in un JRE (Java runtime
@@ -23,7 +23,7 @@ le opzioni JVM o sovrapporre le funzioni JRE.
 Per impostazione predefinita, le applicazioni
 sono configurate per essere eseguite con una versione leggera di IBM JRE. Questo JRE
 leggero è semplificato per fornire una funzionalità di base ed essenziale con
-un ingombro su disco e in memoria decisamente ridotto. Per ulteriori informazioni sui contenuti del JRE leggero, consulta [Liberty for Java runtime](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html).
+un ingombro su disco e in memoria decisamente ridotto. Per ulteriori informazioni sui contenuti del JRE leggero, consulta [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
 Per impostazione predefinita, viene utilizzato IBM JRE versione 8. Utilizza la variabile di ambiente JBP_CONFIG_IBMJDK per specificare una versione alternativa di IBM JRE. Ad esempio, per utilizzare
 				l'IBM JRE 7.1 più recente, imposta la seguente variabile di
@@ -57,6 +57,11 @@ Se abilitato, viene utilizzato OpenJDK versione 8 per impostazione predefinita. 
 
 La proprietà version può essere impostata su un intervallo di versioni come 1.7.+ o qualsiasi versione
 				specifica elencata nell'[elenco di versioni OpenJDK disponibili](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Per dei risultati ottimali, utilizza Java 8.
+
+## JRE Oracle
+{: #oracle_jre}
+
+Consulta [Utilizzo di JRE Oracle](oracle_jre.html) per informazioni sull'utilizzo di JRE Oracle.
 
 ## Configurazione delle opzioni JRE
 {: #configuring_jre}

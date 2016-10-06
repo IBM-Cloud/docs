@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Node.js
 {: #nodejs_runtime}
-*Última actualización: 07 de julio de 2016*
+Última actualización: 29 de agosto de 2016
 {: .last-updated}
 
 El tiempo de ejecución de Node.js en {{site.data.keyword.Bluemix}} está basado en el paquete de compilación de sdk-for-nodejs.
@@ -119,7 +119,7 @@ NPM proporciona un recurso de creación de scripts que le permite ejecutar scrip
 
 ### Comportamiento de la memoria caché
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} mantiene un directorio de memoria caché por aplicación de nodo, que es persistente entre las compilaciones. La memoria caché almacena dependencias resueltas para que no se descargue ni se instale cada vez que se despliegue la app.  Por ejemplo, suponga que myapp depende de **express**.  A continuación, la primera vez que se despliegue myapp, se descargará el módulo **express**.  En los despliegues posteriores de myapp, se utilizará la instancia en memoria caché de **express**. El comportamiento predeterminado es almacenar en memoria caché todos los node_modules instalados por NPM y los bower_components instalados por bower.
+{{site.data.keyword.Bluemix}} mantiene un directorio de memoria caché por aplicación de nodo, que es persistente entre las compilaciones. La memoria caché almacena dependencias resueltas para que no se descargue ni se instale cada vez que se despliegue la app.  Por ejemplo, suponga que myapp depende de **express**.  A continuación, la primera vez que se despliegue myapp, se descargará el módulo **express**. En los despliegues posteriores de myapp, se utilizará la instancia en memoria caché de **express**. El comportamiento predeterminado es almacenar en memoria caché todos los node_modules instalados por NPM y los bower_components instalados por bower.
 
 Utilice la variable NODE_MODULES_CACHE para determinar si el paquete de compilación de nodos utiliza o no tiene en cuenta la memoria caché desde compilaciones anteriores. El valor predeterminado es true.  Para inhabilitar el almacenamiento en memoria caché del conjunto NODE_MODULES_CACHE en false, por ejemplo a través de la línea de mandatos de cf:
 ```
@@ -259,7 +259,7 @@ La siguiente tabla explica el comportamiento de node.js v6 con FIPS.
 
 Bluemix proporciona varias versiones del paquete de compilación Node.js.
 * El paquete de compilación **sdk-for-nodejs** creado por IBM es el paquete de compilación predeterminado que se utiliza para aplicaciones Node.js en Bluemix.
-* **nodejs_buildpack** es el paquete de compilación externo proporcionado por la comunidad de Cloud Foundry.
+* **nodejs_buildpack** es un paquete de compilación de comunidad proporcionado por la comunidad de Cloud. 
 
 El paquete de compilación **sdk-for-nodejs** tendrá precedencia sobre el **nodejs_buildpack** en Bluemix. Si desea utilizar **nodejs_buildpack** con la aplicación en lugar del paquete de compilación **sdk-for-nodejs**, debe especificar el paquete de compilación, por ejemplo, utilizando la opción -b con el mandato **cf push**.
 
@@ -283,4 +283,4 @@ Normalmente, están disponibles el paquete de compilación **sdk-for-nodejs** ac
 * [Últimas actualizaciones del paquete de compilación Node.js](../../runtimes/nodejs/updates.html)
 * [App Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
-* [StrongLoop](https://strongloop.com)
+* [IBM API Connect](https://strongloop.com/)

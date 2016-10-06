@@ -12,7 +12,7 @@ copyright:
 # Protokollierung und Tracing
 {: #logging_tracing}
 
-*Letzte Aktualisierung: 21. Juni 2016*
+Letzte Aktualisierung: 21. Juni 2016
 {: .last-updated}
 
 ## Protokolldateien
@@ -25,7 +25,7 @@ Führen Sie beispielsweise zum Anzeigen der Datei 'messages.log' folgenden Befeh
 ```
 {: codeblock}
 
-Die Protokollebene und weitere Traceoptionen können in der Libertry-Konfigurationsdatei definiert werden. Weitere Informationen hierzu finden Sie unter [Liberty-Profil: Protokollierung und Trace](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html?cp=SSAW57_8.5.5%2F3-17-0-0). Das Tracing kann mithilfe der Konsole von IBM Bluemix auch in einer aktive Anwendungsinstanz angepasst werden.
+Die Protokollebene und weitere Traceoptionen können in der Liberty-Konfigurationsdatei definiert werden. Weitere Informationen hierzu finden Sie unter [Liberty-Profil: Protokollierung und Trace](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html?cp=SSAW57_8.5.5%2F3-17-0-0). Das Tracing kann mithilfe der Konsole von IBM Bluemix auch in einer aktive Anwendungsinstanz angepasst werden.
 
 ## Trace- und Speicherauszugsfunktionen verwenden
 {: #using_trace_and_dump}

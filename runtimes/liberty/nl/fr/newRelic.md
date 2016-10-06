@@ -11,7 +11,7 @@ copyright:
 # Utilisation de New Relic
 {: #new_relic}
 
-*Dernière mise à jour : 10 juin 2016*
+Dernière mise à jour : 10 juin 2016
 {: .last-updated}
 
 New Relic est un service tiers qui fournit des mesures de surveillance pour votre application. Pour

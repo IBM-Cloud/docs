@@ -11,7 +11,7 @@ copyright:
 # Utilizzo di New Relic
 {: #new_relic}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 10 giugno 2016
 {: .last-updated}
 
 New Relic è un servizio di terze parti che fornisce delle

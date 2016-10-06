@@ -11,7 +11,7 @@ copyright:
 # Utilización de Dynatrace
 {: #using_dynatrace}
 
-*Última actualización: 10 de junio de 2016*
+Última actualización: 10 de junio de 2016
 {: .last-updated}
 
 Dynatrace es un servicio de otro proveedor que proporciona supervisión de la aplicación.

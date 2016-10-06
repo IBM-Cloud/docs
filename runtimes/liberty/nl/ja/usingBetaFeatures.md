@@ -11,7 +11,7 @@ copyright:
 # ベータ・フィーチャーの使用
 {: #using_beta_features}
 
-*最終更新日: 2016 年 6 月 10 日*
+最終更新日: 2016 年 6 月 10 日
 {: .last-updated}
 
 Liberty ベータ・フィーチャーによって、将来の Liberty リリースに含まれる可能性のある新しい機能およびプログラミング・モデルに早期にアクセスできます。大部分のベータ・フィーチャーは、Bluemix にデプロイされたアプリケーションでも使用できます。
@@ -29,19 +29,10 @@ Bluemix で使用可能な Liberty ベータ・フィーチャー
 
 <tr>
 <td>bluemixLogCollector-1.1</td>
-<td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
 <td>logstashCollector-1.1</td>
-</tr>
-
-<tr>
 <td>osgiBundle-1.0</td>
-<td>passwordUtilities-1.0</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
-
 </table>
 
 Bluemix で Liberty ベータ・フィーチャーを使用するには、以下を行う必要があります。
@@ -52,7 +43,7 @@ Bluemix で Liberty ベータ・フィーチャーを使用するには、以下
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
-            <feature>passwordUtilities-1.0</feature>
+            <feature>bluemixLogCollector-1.1</feature>
         </featureManager>
     </server>
 ```

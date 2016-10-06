@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*上次更新时间：2016 年 7 月 6 日*
+上次更新时间：2016 年 7 月 6 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Ruby 运行时由 ruby_buildpack 提供支持。ruby_buildpack 为 Ruby 应用程序提供了完整的运行时环境。

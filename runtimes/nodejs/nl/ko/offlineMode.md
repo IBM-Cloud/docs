@@ -12,7 +12,7 @@ copyright:
 
 # node.js의 오프라인 모드
 {: #offline_mode}
-*마지막 업데이트 날짜: 2016년 7월 20일*
+마지막 업데이트 날짜: 2016년 7월 20일
 {: .last-updated}
 
 node.js 애플리케이션이 {{site.data.keyword.Bluemix}}에 푸시될 때 SDK for Node.js 빌드팩은

@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*Dernière mise à jour : 07 juillet 2016*
+Dernière mise à jour : 29 août 2016
 {: .last-updated}
 
 L'environnement d'exécution Node.js sur {{site.data.keyword.Bluemix}} utilise la technologie du pack de construction sdk-for-nodejs.
@@ -126,7 +126,7 @@ NPM est doté d'une fonction permettant d'exécuter des scripts, y compris les s
 
 ### Comportement du cache
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} gère un répertoire de cache par application node, qui est conservé d'une génération à l'autre. Le cache stocke les dépendances résolues pour qu'elles ne soient pas téléchargées et installées à chaque déploiement de l'app.  Supposons, par exemple, que myapp dépende d'**express**.  Lors du premier déploiement de myapp, le module **express** est téléchargé.  Lors des déploiements suivants, l'instance d'**express** mise en cache est utilisée. Le comportement par défaut consiste à mettre en cache tous les modules node_modules installés par NPM et tous les composants bower_components installés par bower.
+{{site.data.keyword.Bluemix}} gère un répertoire de cache par application node, qui est conservé d'une génération à l'autre. Le cache stocke les dépendances résolues pour qu'elles ne soient pas téléchargées et installées à chaque déploiement de l'app.  Supposons, par exemple, que myapp dépende d'**express**.  Lors du premier déploiement de myapp, le module **express** est téléchargé. Lors des déploiements suivants, l'instance d'**express** mise en cache est utilisée. Le comportement par défaut consiste à mettre en cache tous les modules node_modules installés par NPM et tous les composants bower_components installés par bower.
 
 Utilisez la variable NODE_MODULES_CACHE pour déterminer si le pack de construction Node utilise ou ignore le cache des générations précédentes. La valeur par défaut est true.  Pour désactiver la mise en cache, définissez NODE_MODULES_CACHE sur false, par exemple par la ligne de commande cf :
 ```
@@ -263,7 +263,7 @@ Le tableau suivant explique le comportement de node.js V6 avec FIPS :
 
 Bluemix fournit plusieurs versions du pack de construction Node.js.
 * Le pack de construction **sdk-for-nodejs** créé par IBM est le pack de construction par défaut utilisé pour les applications Node.js dans Bluemix.
-* **nodejs_buildpack** est le pack de construction externe fourni par la communauté Cloud Foundry.
+* **nodejs_buildpack** est un pack de construction de communauté fourni par la communauté Cloud Foundry.
 
 Le pack de construction **sdk-for-nodejs** a
 priorité sur le pack de construction **nodejs_buildpack** dans Bluemix. Si vous
@@ -290,4 +290,4 @@ Généralement, le pack de construction **sdk-for-nodejs** en cours et une versi
 * [Mises à jour les plus récentes du pack de construction Node.js](../../runtimes/nodejs/updates.html)
 * [App Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
-* [StrongLoop](https://strongloop.com)
+* [IBM API Connect](https://strongloop.com/)

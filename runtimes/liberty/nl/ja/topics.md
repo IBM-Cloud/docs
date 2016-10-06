@@ -12,7 +12,7 @@ copyright:
 # Liberty トピック
 {: #topics}
 
-*最終更新日: 2016 年 6 月 10 日*
+最終更新日: 2016 年 6 月 10 日
 {: .last-updated}
 
 * [Liberty ランタイム](index.html)

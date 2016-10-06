@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*前次更新：2016 年 7 月 13 日*
+前次更新：2016 年 7 月 13 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Tomcat 運行環境是採用 java_buildpack 技術。

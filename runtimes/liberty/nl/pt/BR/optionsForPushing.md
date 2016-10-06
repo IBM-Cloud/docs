@@ -12,7 +12,7 @@ copyright:
 # Opções para enviar por push os apps Liberty
 {: #options_for_pushing}
 
-*Última atualização: 10 de junho de 2016*
+Última atualização: 10 de junho de 2016
 {: .last-updated}
 
 O comportamento do servidor Liberty no Bluemix é controlado pelo buildpack do Liberty. Os buildpacks podem fornecer um ambiente de tempo de execução completo para uma classe específica de aplicativos. Eles são a chave para fornecer a portabilidade nas nuvens e para contribuir com uma arquitetura de nuvem aberta. O buildpack do Liberty fornece um contêiner do WebSphere Liberty capaz de executar os aplicativos Java EE 7 e OSGi. Ele suporta estruturas populares como Spring e inclui o IBM JRE. O WebSphere Liberty permite o desenvolvimento rápido de aplicativo que é adequado para a nuvem. O buildpack do Liberty suporta diversos aplicativos que são implementados em um único servidor do Liberty. Como parte da integração do buildpack do Liberty no Bluemix, o buildpack assegura que as variáveis de ambiente para os serviços de ligação sejam mostradas como variáveis de configuração no servidor Liberty.
@@ -190,7 +190,7 @@ Também é possível enviar por push um arquivo do servidor em pacote para o Blu
 
 Para colocar em pacote um servidor do Liberty, use o comando
 `./bin/server package` a partir do seu diretório de instalação do
-Liberty. Especifique o nome do servidor e inclua a opção `--include=usr`.
+Liberty. Especifique o nome do servidor e inclua a opção `--include=usr`. 
 Por exemplo, se o servidor Liberty for defaultServer, execute o comando:
 
 ```

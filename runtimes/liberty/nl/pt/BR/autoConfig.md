@@ -12,7 +12,7 @@ copyright:
 # Configuração automática de serviços ligados
 {: #auto_config}
 
-*Última atualização: 10 de junho de 2016*
+Última atualização: 10 de junho de 2016
 {: .last-updated}
 
 É possível ligar vários serviços ao seu aplicativo Liberty. Os serviços podem ser gerenciados por contêiner, por aplicativo ou por ambos, dependendo do que o desenvolvedor

@@ -11,10 +11,10 @@ copyright:
 # Oracle JRE verwenden
 {: #using_oraacle_jre}
 
-*Letzte Aktualisierung: 21. Juni 2016*
+Letzte Aktualisierung: 21. Juni 2016
 {: .last-updated}
 
-Sie können Ihre Liberty-Anwendung in Bluemix mit Oracle JRE ausführen. Dazu müssen Sie:
+Sie können Ihre Liberty-Anwendung in Bluemix mit Oracle JRE ausführen.  Dazu müssen Sie:
 * JRE an einer Position hosten, von der es vom Buildpack heruntergeladen werden kann,
 * eine Datei index.yml hosten, die die Position des Host-JRE bereitstellt, und
 * Ihre Anwendung für die Verwendung von JRE konfigurieren.
@@ -23,8 +23,8 @@ Sie können Ihre Liberty-Anwendung in Bluemix mit Oracle JRE ausführen. Dazu m�
 {: #hosting_jre}
 
 Die Oracle JRE-Datei muss als Host einen Web-Server haben und das Liberty-Buildpack muss diese Datei von diesem Server herunterladen können. Sie können sie mithilfe einer beliebigen verfügbaren Serverfunktion in Bluemix selbst hosten oder Sie können sie an einer öffentlich verfügbaren Position hosten.  Der Server muss mit einer 'index.yml-Datei konfiguriert werden, die Details zu der JRE-Datei angibt. Führen Sie die Schritte aus, die im Folgenden für das Hosten des der JRE- und index.yml-Datei angegeben sind:
-  1. Fordern Sie Oracle JRE an. Beachten Sie, dass die JRE-Version unter einem Unix-64-Bit-Betriebssystem und eine tar.gz-Datei sein muss.
-  2. Hosten Sie die JRE-Datei an einer Position, von der das Liberty-Buildpack sie herunterladen kann.  
+  1. Fordern Sie Oracle JRE an.  Beachten Sie, dass die JRE-Version unter einem Unix-64-Bit-Betriebssystem und eine tar.gz-Datei sein muss.
+  2. Hosten Sie die JRE-Datei an einer Position, von der das Liberty-Buildpack sie herunterladen kann. 
   3. Stellen Sie sicher, dass Sie an der Hostingposition eine index.yml-Datei bereitstellen. Die Datei 'index.yml' muss einen Eintrag enthalten, der aus der Versions-ID der Oracle JRE-Datei besteht, auf die ein Semikolon und die vollständige URL der Position folgt, an der sich diese JRE-Datei befindet. Das Format der index.yml-Datei ist wie folgt:
 ```
    ---
@@ -41,7 +41,7 @@ Die Oracle JRE-Datei muss als Host einen Web-Server haben und das Liberty-Buildp
 ## Die App konfigurieren
 {: #configure_app}
 
-Es müssen zwei Umgebungsvariablen für die Liberty-Anwendung festgelegt werden. *JBP_CONFIG_OPENJDK* muss festgelegt werden, um die Position der index.yml-Datei anzugeben. Die Umgebungsvariable *JVM* muss auf *openjdk* festgelegt werden, um das Buildpack für die Verwendung einer alterntiven JRE zu konfigurieren.
+Es müssen zwei Umgebungsvariablen für die Liberty-Anwendung festgelegt werden. *JBP_CONFIG_OPENJDK* muss festgelegt werden, um die Position der index.yml-Datei anzugeben. Die Umgebungsvariable *JVM* muss auf *openjdk* festgelegt werden, um das Buildpack für die Verwendung einer alternativen JRE zu konfigurieren.
 
 Der Wert der Variable JBP_CONFIG_OPENJDK ist
 ```
@@ -68,7 +68,7 @@ Um die JVM-Umgebungsvariable festzulegen, können Sie einen ähnlichen Befehl wi
 ## Bestätigung
 {: #confirmation}
 
-Um zu bestätigen, dass die erwartete JRE verwendet wird, suchen Sie in staging_task.log nach einer ähnlichen Nachricht wie die folgende:
+Um zu bestätigen, dass die erwartete JRE verwendet wird, suchen Sie in 'staging_task.log' nach einer ähnlichen Nachricht wie die folgende:
 ```
    -----> Downloading OpenJdk 1.8.0_91 from https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz (6.2s)
 ```

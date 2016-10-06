@@ -11,7 +11,7 @@ copyright:
 # Monitorando o Liberty no Bluemix com o JConsole
 {: #jconsole}
 
-*Última atualização: 10 de junho de 2016*
+Última atualização: 10 de junho de 2016
 {: .last-updated}
 
 ## As etapas para monitorar o tempo de execução do Bluemix Liberty com o JConsole são as seguintes:

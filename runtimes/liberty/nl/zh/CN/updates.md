@@ -13,8 +13,18 @@ copyright:
 
 ## Liberty buildpack 中最新更新的列表。
 
-*上次更新时间：2016 年 7 月 20 日*
+上次更新时间：2016 年 9 月 13 日
 {: .last-updated}
+
+### 2016 年 9 月 16 日：更新了 Liberty buildpack V3.3-20160912-1729
+* 缺省 Liberty 运行时版本已更新为 [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 发行版。每月 Liberty 运行时版本已更新为 [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) 发行版。通过这些更新，先前作为 Beta 功能提供的 `cloudant-1.0` 和 `passwordUtilities-1.0` Liberty 功能现在都作为可用于生产的功能提供。
+* 该 buildpack 中还包含更新版本的 IBM JRE 8.0：SR3 FP11。
+* 该 buildpack 已更新为执行 [MySQL 服务类型自动配置](autoConfig.html)时，下载最新的 1.4.x [MariaDB Connector/J JDBC 驱动程序](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)。
+
+### 2016 年 8 月 26 日：更新了 Liberty buildpack V3.2-20160822-2200
+* 该 buildpack 包含更新版本的 IBM JRE：8 SR3 FP10 和 7.1 SR3 FP50。
+* 每月 Liberty 运行时版本已更新为 [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/) 发行版。
+* 更新了用于为 [SQL 数据库](../../services/SQLDB/index.html#SQLDB)服务提供[自动配置支持](autoConfig.html)的服务插件，以在通过 TLS 连接到该服务时，始终使用 JVM 的可信证书。
 
 ### 2016 年 7 月 22 日：更新了 Liberty buildpack V3.1-20160717-2254
 * [应用程序管理](../../manageapps/app_mng.html)功能已更新为支持联合认证。此外，`devconsole` 和 `shell` 实用程序使用的 Node.js 运行时已更新到最新的 `0.12.15` 版本。 

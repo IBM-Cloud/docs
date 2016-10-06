@@ -13,15 +13,26 @@ copyright:
 
 ## Liste des dernières mises à jour apportées au pack de construction Liberty.
 
-*Dernière mise à jour : 20 juillet 2016*
+Dernière mise à jour : 13 septembre 2016
 {: .last-updated}
+
+### 16 septembre 2016 : Pack de construction Liberty v3.3-20160912-1729 mis à jour
+* La version d'exécution Liberty par défaut a été mise au niveau de l'édition [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661). La version d'exécution Liberty mensuelle a été mise au niveau de l'édition [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/). Avec ces mises à jour, les fonctions Liberty `cloudant-1.0` et `passwordUtilities-1.0`, disponibles auparavant en tant que fonctions bêta, sont désormais disponibles en tant que fonctions prêtes pour la
+production. 
+* Le pack de construction contient également une version mise à jour de l'environnement IBM JRE 8.0 : SR3 FP11.
+* Le pack de construction a été ajusté pour télécharger le dernier niveau du [pilote JDBC MariaDB Connector/J](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) lors de l'exécution de la [configuration automatique du type MySQL de services](autoConfig.html), du fait d'un problème avec le dernier pilote 1.5.x.
+
+### 26 août 2016 : Pack de construction Liberty v3.2-20160822-2200 mis à jour
+* Le pack de construction contient également les versions mises à jour d'IBM JRE : 8 SR3 FP10 et 7.1 SR3 FP50.
+* La version d'exécution Liberty mensuelle a été mise au niveau de l'édition [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/).
+* Le plug-in de service qui fournit le [support de configuration automatique](autoConfig.html) pour le service [SQL Database](../../services/SQLDB/index.html#SQLDB) a été mis à jour pour toujours utiliser les certificats sécurisés JVM lors de la connexion au service sur TLS.
 
 ### 22 juillet 2016 : Pack de construction Liberty v3.1-20160717-2254 mis à jour
 * La fonctionnalité [Gestion de l'appli](../../manageapps/app_mng.html) a été mise à jour pour prendre en charge l'authentification fédérée. De plus, le contexte d'exécution Node.js dont se servent les utilitaires `devconsole` et `shell` a été mis à jour vers la version la plus récente, `0.12.15`. 
 * Le pack de construction ajoute une prise en charge de l'agent de surveillance d'application [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/).
 * Le pack de construction fournit un collecteur de données mis à jour pour le [service Monitoring and Analytics](../../services/monana/index.html#monana_oview).
 * Le pack de construction fournit aussi une version mise à jour de l'agent pour le [service de mise à l'échelle automatique](../../services/Auto-Scaling/index.html). 
-* La version d'exécution Liberty mensuelle a été mise au niveau de la version [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/).
+* La version d'exécution Liberty mensuelle a été mise au niveau de l'édition [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/).
 
 ### 17 juin 2016 : Pack de construction Liberty v3.0-20160608-1450 mis à jour
 * Le pack de construction contient désormais deux versions de WebSphere Liberty (la dernière édition stable et la dernière édition mensuelle). Plus spécifiquement, il fournit l'édition stable [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) et l'édition mensuelle [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). L'édition stable sera utilisée par défaut. Pour plus d'informations, voir [Liberty versions](buildpackDefaults.html#liberty_versions). 

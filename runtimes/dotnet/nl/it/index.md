@@ -12,17 +12,17 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-*Ultimo aggiornamento: 30 maggio 2016*
+Ultimo aggiornamento: 30 maggio 2016 
 
 Il runtime ASP.NET Core su {{site.data.keyword.Bluemix}} si avvale della tecnologia del pacchetto di build ASP.NET Core. ASP.NET Core
 è un framework open source modulare per la creazione di applicazioni web .NET.
-.Net Core è un runtime piccolo, multipiattaforma che può essere destinato alle applicazioni ASP.NET Core.
+.Net Core è un runtime piccolo, multipiattaforma che può essere destinato alle applicazioni ASP.NET Core. 
 Forniscono un'abilitazione moderna, basata sul cloud per le applicazioni web.
 {: shortdesc}
 
 ## Rilevamento
 {: #detection}
-Il pacchetto di build Bluemix ASP.NET Core viene utilizzato se sono presenti nell'applicazione uno o più file project.json o
+Il pacchetto di build Bluemix ASP.NET Core viene utilizzato se sono presenti nell'applicazione una più cartelle contenenti un file project.json o almeno un file .cs oppure
  se l'applicazione viene trasmessa dalla directory di output del comando *dotnet publish*.
 
 ## Applicazione starter
@@ -40,7 +40,7 @@ Controlla la versione CLI .NET con un global.json facoltativo nella directory ro
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview1-002702"
+        "version": "1.0.0-preview2-003121"
       }
    }
 ```
@@ -71,10 +71,13 @@ Per conoscere il più precisamente possibile come l'applicazione venga eseguita 
 Lo strumento Yeoman può essere utilizzato per generare nuovi template del progetto come descritto in
 [Building Projects with Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
+Per informazioni sullo sviluppo locale utilizzando Visual Studio, consulta [Sviluppo con Visual Studio](../../starters/deploy_vs.html){: new_window}.
+
 ## Esecuzione del push di un'applicazione pubblicata
 
 Se desideri che la tua applicazione contenga tutti i propri binari richiesti così che il pacchetto di build non scarichi
-binari esterni, puoi eseguire il push di un'applicazione *self-contained* pubblicata.  Consulta [Types of portability in .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}
+binari esterni, puoi eseguire il push di un'applicazione *self-contained* pubblicata.  Consulta
+[.NET Core App Types](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}
 per ulteriori informazioni sulle applicazioni autonome.
 
 Per pubblicare un'applicazione immetti un comando tipo:
@@ -109,7 +112,7 @@ In questo esempio, il pacchetto di build compilerà automaticamente i progetti *
 ```
 {: codeblock}
 
-## Utilizzando gli esempi dal repository esempi-cli e dal template Visual Studio
+## Configurazione della tua applicazione per ascoltare sulla porta appropriata
 
 Il pacchetto di build eseguirà la tua applicazione con il comando *dotnet run* e passerà il seguente argomento di riga di comando
 ```
@@ -130,20 +133,33 @@ Le modifiche richieste al metodo principale sono annotate nei commenti nel segue
     var config = new ConfigurationBuilder() //ADD THESE 3 LINES AT THE TOP OF THE MAIN METHOD
         .AddCommandLine(args)
         .Build();
-    
+
     var host = new WebHostBuilder()
         .UseKestrel()
         .UseConfiguration(config) //ADD THIS LINE BEFORE 'UseStartup'
-        .UseStartup&lt;Startup&gt;()  
+        .UseStartup&lt;Startup&gt;()
         .Build();
     host.Run();
 }
-</pre>  
+</pre>
 {: codeblock}
 
 Aggiungi la seguente dipendenza a project.json: 
 ```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+```
+{: codeblock}
+
+Aggiungi la seguente proprietà alla sezione `buildOptions` di project.json:
+```
+  "copyToOutput": {
+    "include": [
+      "wwwroot",
+      "Areas/**/Views",
+      "Views",
+      "appsettings.json"
+    ]
+  }
 ```
 {: codeblock}
 
@@ -152,6 +168,20 @@ Aggiungi un'istruzione *using* al file che contiene il metodo principale:
   using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
+
+Nel metodo `Startup` Startup.cs, rimuovi la seguente riga:
+```
+  .SetBasePath(env.ContentRootPath)
+```
+{: codeblock}
+
+Nel metodo `Main` Program.cs, rimuovi la seguente riga:
+```
+  .UseContentRoot(Directory.GetCurrentDirectory())
+```
+{: codeblock}
+
+Queste modifiche consentono alla CLI .NE di trovare le `Views` della tua applicazione che saranno ora copiate nell'output di build quando viene eseguito il comando `dotnet run`.  Se la tua applicazione dispone di altri file, come ad esempio dei file di configurazione json, richiesti durante il runtime, devi quindi aggiungerli nella sezione `include` di `copyToOutput` nel file project.json.
 
 # rellinks
 {: #rellinks}

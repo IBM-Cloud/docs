@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*Letzte Aktualisierung: 06. Juli 2016*
+Letzte Aktualisierung: 06. Juli 2016
 {: .last-updated}
 
 Die Laufzeit von Ruby in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'ruby_buildpack'.

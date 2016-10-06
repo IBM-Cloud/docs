@@ -12,13 +12,11 @@ copyright:
 # Liberty アプリケーションのプッシュのオプション
 {: #options_for_pushing}
 
-*最終更新日: 2016 年 6 月 10 日*
+最終更新日: 2016 年 6 月 10 日
 {: .last-updated}
 
 Bluemix における Liberty サーバーの動作は、Liberty ビルドパックによって制御されます。 ビルドパックは、特定のクラスのアプリケーションに対して、完全なランタイム環境を提供することができます。また、
-クラウド間の移植性を可能にし、また、オープンなクラウド・アーキテクチャーに寄与する上で要となります。Liberty ビルドパックは、
-Java EE 7 アプリケーションおよび OSGi アプリケーションを実行することのできる WebSphere Liberty コンテナーを提供します。
-また、Spring などの一般的なフレームワークをサポートし、IBM JRE を含んでいます。WebSphere Liberty は素早いアプリケーション開発を可能にし、これはクラウドに適しています。
+クラウド間の移植性を可能にし、また、オープンなクラウド・アーキテクチャーに寄与する上で要となります。Liberty ビルドパックは、Java EE 7 アプリケーションおよび OSGi アプリケーションを実行することのできる WebSphere Liberty コンテナーを提供します。また、Spring などの一般的なフレームワークをサポートし、IBM JRE を含んでいます。WebSphere Liberty は素早いアプリケーション開発を可能にし、これはクラウドに適しています。
 Liberty ビルドパックは、単一の Liberty サーバーにデプロイされた複数のアプリケーションをサポートします。Bluemix への Liberty ビルドパック統合の一部として、ビルドパックは、サービスをバインドするための環境変数が必ず Liberty サーバー内に構成変数として表示されるようにします。
 
 以下の方法を使用して、Liberty アプリケーションを Bluemix にデプロイできます。
@@ -37,7 +35,7 @@ WAR または EAR ファイルなどのスタンドアロン・アプリケー�
 スタンドアロン・アプリケーションをデプロイするには、WAR または EAR ファイルをポイントする -p パラメーターを使用して cf push コマンドを実行します。例えば、次のとおりです。
 
 ```
-$ cf push <yourappname> -p myapp.war
+    $ cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -64,7 +62,7 @@ $ cf push <yourappname> -p myapp.war
 jsp-2.3 フィーチャーと websocket-1.1 フィーチャーのみを使用可能にするには、次のコマンドを実行し、アプリケーションの再ステージングを行います。
 
 ```
-$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -75,7 +73,7 @@ WAR ファイルをデプロイした場合、Web アプリケーションは組
 
 
 ```
-http://<yourappname>.mybluemix.net/
+    http://<yourappname>.mybluemix.net/
 ```
 {: codeblock}
 
@@ -84,7 +82,7 @@ EAR ファイルをデプロイした場合、組み込み Web アプリケー�
 
 
 ```
-http://<yourappname>.mybluemix.net/acme/
+    http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -132,14 +130,14 @@ http://<yourappname>.mybluemix.net/acme/
 例えば、次のとおりです。
 
 ```
-$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 重要: 環境変数の変更を有効にするには、次のようにアプリケーションの再ステージングを実行する必要があります。
 
 ```
-$ cf restage myapp
+    $ cf restage myapp
 ```
 {: codeblock}
 
@@ -152,7 +150,7 @@ Liberty プロファイルをワークステーションにインストールし
 例えば、Liberty サーバーの名前が defaultServer の場合、次のコマンドを実行します。
 
 ```
-$ cf push <yourappname> -p wlp/usr/servers/defaultServer
+    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -180,14 +178,14 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 サーバー・ディレクトリーの準備ができたら、それを Bluemix にデプロイできます。
 
 ```
-$ cf push <yourappname> -p defaultServer
+    $ cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
 注: サーバー・ディレクトリーの一部としてデプロイされた Web アプリケーションは、[Liberty プロファイルで決定されたコンテキスト・ルート](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)からアクセス可能です。例えば、次のとおりです。
 
 ```
-http://<yourappname>.mybluemix.net/acme/
+    http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -200,7 +198,7 @@ Liberty サーバーをパッケージするには、Liberty インストール�
 例えば、Liberty サーバーが defaultServer の場合、次のコマンドを実行します。
 
 ```
-$ wlp/bin/server package defaultServer --include=usr
+    $ wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
@@ -210,7 +208,7 @@ $ wlp/bin/server package defaultServer --include=usr
 例えば、次のとおりです。
 
 ```
-$ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 

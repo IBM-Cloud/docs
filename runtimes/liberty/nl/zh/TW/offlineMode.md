@@ -12,7 +12,7 @@ copyright:
 
 # Liberty 的離線模式
 {: #offline_mode}
-*前次更新：2016 年 7 月 20 日*
+前次更新：2016 年 7 月 20 日
 {: .last-updated}
 
 將 Liberty 應用程式推送至 {{site.data.keyword.Bluemix}} 後，Liberty 建置套件即可存取 Bluemix 的外部網站，以取得應用程式所需的構件。下面是 Liberty 建置套件可以存取的外部網站。在 [Bluemix 專用](../../dedicated/index.html#dedicated)和 [Bluemix 本端](../../local/index.html#local)環境中，需要將這些網站設定為*白名單*。

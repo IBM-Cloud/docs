@@ -11,7 +11,7 @@ copyright:
 # New Relic 사용
 {: #new_relic}
 
-*마지막 업데이트 날짜: 2016년 6월 10일*
+마지막 업데이트 날짜: 2016년 6월 10일
 {: .last-updated}
 
 New Relic은 애플리케이션에 모니터링 메트릭을 제공하는 써드파티 서비스입니다. New Relic 서비스의 혜택에 대한 자세한 정보는 [New Relic](http://newrelic.com/java)을 참조하십시오.

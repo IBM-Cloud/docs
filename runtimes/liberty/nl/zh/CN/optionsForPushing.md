@@ -12,7 +12,7 @@ copyright:
 # 用于推送 Liberty 应用程序的选项
 {: #options_for_pushing}
 
-*上次更新时间：2016 年 6 月 10 日*
+上次更新时间：2016 年 6 月 10 日
 {: .last-updated}
 
 Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。buildpack 可以为特定类的应用程序提供完整运行时环境。这些 buildpack 是在云中提供可移植性并构成开放式云体系结构的关键所在。Liberty buildpack 提供了能够运行 Java EE 7 和 OSGi 应用程序的 WebSphere Liberty 容器。

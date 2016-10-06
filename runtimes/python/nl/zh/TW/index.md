@@ -11,7 +11,7 @@ copyright:
 
 # Python
 {: #python_runtime}
-*前次更新：2016 年 7 月 6 日*
+前次更新：2016 年 7 月 6 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Python 運行環境是採用 python_buildpack 技術。python_buildpack 為 Python 2 和 Python 3 應用程式都有提供完整的運行環境。

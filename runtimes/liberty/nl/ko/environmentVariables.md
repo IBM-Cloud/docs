@@ -13,7 +13,7 @@ copyright:
 # 환경 변수 
 {: #environment_variables}
 
-*마지막 업데이트 날짜: 2016년 6월 10일*
+마지막 업데이트 날짜: 2016년 6월 10일
 {: .last-updated}
 
 Java용 Liberty에서 지원하는 환경 변수

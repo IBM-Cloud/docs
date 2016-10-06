@@ -12,7 +12,7 @@ copyright:
 # Liberty-Themen
 {: #topics}
 
-*Letzte Aktualisierung: 10. Juni 2016*
+Letzte Aktualisierung: 10. Juni 2016
 {: .last-updated}
 
 * [Liberty-Laufzeit](index.html)

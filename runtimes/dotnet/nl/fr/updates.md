@@ -11,9 +11,14 @@ copyright:
 # Dernières mises à jour apportées au pack de construction ASP.NET Core
 {: #latest_updates}
 
-*Dernière mise à jour : 07 juillet 2016*
+Dernière mise à jour : 26 août 2016
 
 Liste des dernières mises à jour apportées au pack de construction aspnet.
+
+## 31 août 2016 : Pack de construction ASP.NET Core v1.0-20160826-1345 mis à jour
+
+* Ajout d'une prise en charge pour l'exécution de scripts de pré-compilation ou de post-compilation via NPM et Bower afin d'installer des bibliothèques css et javascript frontales.
+* Changement du statut du pack de construction (de Bêta à GA)
 
 ## 11 juillet 2016 : Pack de construction ASP.NET Core v0.9-20160706-1603 mis à jour
 

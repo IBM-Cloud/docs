@@ -11,7 +11,7 @@ copyright:
 # 使用 JConsole 监视 Bluemix 中的 Liberty
 {: #jconsole}
 
-*上次更新时间：2016 年 6 月 10 日*
+上次更新时间：2016 年 6 月 10 日
 {: .last-updated}
 
 ## 使用 JConsole 监视 Bluemix 中的 Liberty 的步骤如下：
