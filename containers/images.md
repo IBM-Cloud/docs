@@ -12,7 +12,7 @@ copyright:
 # Container images
 *Last updated: 11 November 2015*
 
-You can create containers from IBM images. Images can be deployed as a single container or as scalable container groups.
+You can create containers from IBM images. Images can be deployed as single containers or as scalable container groups.
 {:shortdesc}
 
 <ul class="runtimeIconList">
