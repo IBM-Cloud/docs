@@ -259,24 +259,6 @@ Device management is a core feature of the {{site.data.keyword.iot_short_notm}},
 
 The device management extension allows you to install custom functions for device management. For more information on custom device management functions, see [device management custom extensions](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
-## Blockchain
-{: #blockchain}
-
-{{site.data.keyword.iot_short_notm}} with blockchain enables IoT devices to provide data to blockchain transactions, which stores the data in the blockchain's immutable ledger and uses it in smart contract business rules. {{site.data.keyword.iot_short_notm}} maps device data to the data format that is required by the blockchain's smart contract and passes it to a blockchain fabric to store in the blockchain ledger.
-
-### Supported operations for Blockchain
-- Trigger smart contract updates with device events.
-- Run smart contract business logic to update ledger state with device event data.
-- Monitor the blockchain, transactions, and ledger state with the monitoring UI.
-
-### Configuration for Blockchain
-
-{{site.data.keyword.iot_short_notm}} blockchain integration is a services offering  that is not activated by default in {{site.data.keyword.iot_short_notm}}. To activate the feature in your environment, complete the following steps:
- 1. From the {{site.data.keyword.iot_short_notm}} dashboard, **Extensions**.
- 2. Click the **Tell me more** link next to the Blockchain extension to go to the IoT Blockchain Services Offering page.
- 3. Fill out and submit the service request form.   
-The service approval typically takes approximately one day. After your request is approved, you receive an email with instructions on how to activate blockchain integration in your {{site.data.keyword.iot_short_notm}} organization.
- 5. Return to the {{site.data.keyword.iot_short_notm}} dashboard for your organization to complete the setup. For more information, see [{{site.data.keyword.iot_short_notm}} blockchain integration](../../bl_blockchain_integration.html).
 
 ## The Weather Company
 {: #weathercompany}
