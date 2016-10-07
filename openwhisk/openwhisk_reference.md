@@ -435,12 +435,12 @@ All the capabilities in the system are available through a REST API. There are c
 
 These are the collection endpoints:
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/actions`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/triggers`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/rules`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/packages`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/activations`
 
 The `openwhisk.{DomainName}` is the OpenWhisk API hostname (for example, openwhisk.ng.bluemix.net, 172.17.0.1, and so on).
 
@@ -451,12 +451,13 @@ You can perform a GET request on the collection endpoints to fetch a list of ent
 
 There are entity endpoints for each type of entity:
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/activations/{activationName}`
+
 
 The namespace and activation endpoints support only GET requests. The actions, triggers, rules, and packages endpoints support GET, PUT, and DELETE requests. The endpoints of actions, triggers, and rules also support POST requests, which are used to invoke actions and triggers and enable or disable rules. Refer to the [API reference](https://new-console.{DomainName}/apidocs/98) for details.
 
@@ -505,7 +506,6 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 | logs | a container is not allowed to write more than N MB to stdout | per action | MB | 10 |
 | concurrent | no more than N concurrent activations per namespace are allowed | per namespace | number | 100 |
 | minuteRate | a user cannot invoke more than this many actions per minute | per user | number | 120 |
-| hourRate | a user cannot invoke more than this many actions per hour | per user | number | 3600 |
 | codeSize | the maximum size of the actioncode | not configurable, limit per action | MB | 48 |
 | parameters | the maximum size of the paramters that can be attached | not configurable, limit per action/package/trigger | MB | 1 |
 
@@ -542,9 +542,9 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 * The default limit can be statically configured by whisk in consul kvstore.
 * A user is currently not able to change the limits.
 
-### Invocations per minute/hour (Fixed: 120/3600)
+### Invocations per minute (Fixed: 120)
 {: #openwhisk_syslimits_invocations}
-* The rate limit N is set to 120/3600 and limits the number of action invocations in one minute/hour windows.
+* The rate limit N is set to 120 and limits the number of action invocations in one minute windows.
 * A user cannot change this limit when creating the action.
 * A CLI or API call that exceeds this limit receives an error code corresponding to HTTP status code `429: TOO MANY REQUESTS`.
 
@@ -572,11 +572,10 @@ Triggers are subject to a firing rate per minute and per hour as documented in t
 
 | limit | description | configurable | unit | default |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | a user cannot fire more than this many triggers per minute | per user | number | 60 |
-| hourRate | a user cannot fire more than this many triggers per hour | per user | number | 720 |
+| minuteRate | a user cannot fire more than this many triggers per minute | per user | number | 5000 |
 
-### Triggers per minute/hour (Fixed: 60/720)
+### Triggers per minute (Fixed: 60)
 {: #openwhisk_syslimits_triggerratelimit}
-* The rate limit N is set to 60/720 and limits the number of triggers that may be fired in one minute/hour windows.
+* The rate limit N is set to 60 and limits the number of triggers that may be fired in one minute windows.
 * A user cannot change this limit when creating the trigger.
 * A CLI or API call that exceeds this limit receives an error code corresponding to HTTP status code `429: TOO MANY REQUESTS`.

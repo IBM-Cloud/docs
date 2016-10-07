@@ -160,7 +160,7 @@ Parameters can be passed to the action when it is invoked.
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+  wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
   ```
@@ -182,14 +182,14 @@ Rather than pass all the parameters to an action every time, you can bind certai
 1. Update the action by using the `--param` option to bind parameter values.
 
   ```
-  wsk action update hello --param place 'Vermont'
+  wsk action update hello --param place Vermont
   ```
   {: pre}
 
 2. Invoke the action, passing only the `name` parameter this time.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie'
+  wsk action invoke --blocking --result hello --param name Bernie
   ```
   {: pre}
   ```
@@ -204,7 +204,7 @@ Rather than pass all the parameters to an action every time, you can bind certai
 3. Invoke the action, passing both `name` and `place` values. The latter overwrites the value that is bound to the action.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+  wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
   ```
@@ -307,7 +307,7 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
       return new Promise(function(resolve, reject) {
           request.get(url, function(error, response, body) {
               if (error) {
-                  reject(error);    
+                  reject(error);
               }
               else {
                   var condition = JSON.parse(body).query.results.channel.item.condition;
@@ -333,7 +333,7 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+  wsk action invoke --blocking --result weather --param location "Brooklyn, NY"
   ```
   {: pre}
   ```
@@ -366,9 +366,9 @@ Several utility actions are provided in a package called `/whisk.system/utils` t
    action /whisk.system/utils/cat: Concatenates input into a string
   ```
   {: screen}
-
+  
   You will be using the `split` and `sort` actions in this example.
-
+  
 2. Create an action sequence so that the result of one action is passed as an argument to the next action.
   
   ```
@@ -617,7 +617,7 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   
   To update the Docker action, run buildAndPush.sh to refresh the image on Docker Hub, this will allow the next time the system pulls your Docker image to run the new code for your action. 
   If there are no warm containers any new invocations will use the new Docker image. 
-  Take into account that if there is a warm container using a previous version of your Docker image, any new invocations will continue to use this image unless you run wsk action update, this will indicate to the system that for any new invocations force a docekr pull resulting on pulling your new Docker image.
+  Take into account that if there is a warm container using a previous version of your Docker image, any new invocations will continue to use this image unless you run wsk action update, this will indicate to the system that for any new invocations force a docker pull resulting on pulling your new Docker image.
   
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
