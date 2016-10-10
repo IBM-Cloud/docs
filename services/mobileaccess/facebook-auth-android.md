@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -16,10 +16,11 @@ To use Facebook as identity provider in your {{site.data.keyword.amafull}} Andro
 {:shortdesc}
 
 ## Before you begin
-{: #facebook-auth-android-before}
+{: #before-you-begin}
 You must have:
 * An Android project that is configured to work with Gradle. The project does not need to be instrumented with {{site.data.keyword.amashort}} client SDK.  
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* Your service parameter values. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile options**. The `applicationRoute` and `tenantId` (also known as `appGUID`)  values are displayed in the **Route** and **App GUID / TenantId** fields. You will need these values for intializing the SDK and for sending requests to the back-end application.
 * A Facebook app with an Android platform on the Facebook for Developers site (https://developers.facebook.com).
 
 **Important:** You do not need to separately install the Facebook SDK (`com.facebook.FacebookSdk`). The Facebook SDK is installed automatically by Gradle when you add the {{site.data.keyword.amashort}} Facebook client SDK. You can skip this step when you add the Android platform in the Facebook for Developers site.
@@ -162,7 +163,7 @@ Your Android project might have two `build.gradle` files:  for the project and a
 
    * Replace `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, `BMSClient.REGION_UK`.
    
-   * Replace `<MCAServiceTenantId>` with the `tenantId` value that you see when you click  the **Show Credentials** button on the {{site.data.keyword.Bluemix_notm}} service tile.
+   * Replace `<MCAServiceTenantId>` with the `tenantId` value (see [Before you begin](#before-you-begin)). 
    
   **Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 	
@@ -181,12 +182,13 @@ Your Android project might have two `build.gradle` files:  for the project and a
 ## Testing the authentication
 After the client SDK is initialized and Facebook Authentication Manager is registered, you can start making requests to your mobile backend.
 
-### Before you begin
+### Before you begin testing
 {: #facebook-auth-android-testing-before}
 You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Try to send a request to a protected endpoint of your newly created mobile back-end application in your browser. Open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can only be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK.
+1. Try to send a request to a protected endpoint of your newly created mobile back-end application in your browser. Open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`.  For information on obtaining the `{applicationRoute}` value, see   [Before you begin](#before-you-begin). 
+
+	The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can only be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK.
 
 1. Use your Android application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register `FacebookAuthenticationManager`.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc} 
 
@@ -10,6 +10,13 @@ lastupdated: "2016-10-02"
 {: #protecting-local}
 
 You can configure your local development  to use the {{site.data.keyword.amafull}} service that is running on {{site.data.keyword.Bluemix}}. Specifically, you can develop code locally using the {{site.data.keyword.amashort}} server SDK and send {{site.data.keyword.amashort}} requests to the development server. These requests will be protected by the {{site.data.keyword.amashort}} service that is running on {{site.data.keyword.Bluemix}}.
+
+## Before you begin
+{: #before-you-begin}
+You must have:
+
+* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* Your service parameter values. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile options**. The `applicationRoute` and  `appGUID` (also known as `tenantId`) values are displayed in the **Route** and **App GUID / TenantId** fields. You will need these values for intializing the SDK and for sending requests to the back-end application.
 
 ## Setting up the server SDK
 {: #serversetup}
@@ -23,8 +30,6 @@ To use {{site.data.keyword.amashort}} with a local development server, you must 
 
 1. Open the {{site.data.keyword.Bluemix_notm}} dashboard of your mobile back-end application that is protected with the {{site.data.keyword.amashort}} service.
 
-1. Click **Mobile Options**, and copy the **AppGUID** value.
-
 1. In your local development environment, set the   *VCAP_APPLICATION* environment variable. The variable must contain a stringified JSON object with a single property.
 ```JavaScript
 {
@@ -32,7 +37,7 @@ To use {{site.data.keyword.amashort}} with a local development server, you must 
 }
 ```
 
-Replace the *appGUID* variable with the value from the **Mobile Options** **AppGUID** field.
+Replace the *appGUID* value with the `appGUID` value obtained in [Before you begin](#before-you-begin). 
 
 1. Click **Show Credentials** on the {{site.data.keyword.amashort}} service tile in your mobile back-end application on the {{site.data.keyword.Bluemix_notm}} dashboard. A JSON object displays with access credentials that {{site.data.keyword.amashort}} provides to your mobile back-end application.
 
@@ -56,7 +61,7 @@ var vcapServices = {
 				"clientId": "appGUID",
 				"secret": "secret",
 				"serverUrl": "https://imf-authserver.ng.bluemix.net/imf-authserver",
-				"tenantId": "appGUID"
+				"tenantId": "tenantId"
 			}
 		}
 	]
@@ -72,8 +77,7 @@ var MCABackendStrategy =
 // Rest of your code
 ```
 
-
-Replace the occurrences of the *appGUID* value in the code with your mobile back-end *appGUID* value.
+Replace the *appGUID* value with the `appGUID` value obtained in [Before you begin](#before-you-begin). 
 
 
 ## Configuring {{site.data.keyword.amashort}} applications to work with a local development server
@@ -82,6 +86,8 @@ Replace the occurrences of the *appGUID* value in the code with your mobile back
 Initialize the {{site.data.keyword.amashort}} client SDKs with the real URL of your {{site.data.keyword.Bluemix_notm}} application, and use the localhost (or IP address) in each of your requests. See the following samples.
 
 Replace the `BMSClient.REGION_UK` with the appropriate region.
+
+Replace the *appGUID* and *bluemixAppRoute* values with the values obtained in [Before you begin](#before-you-begin). 
 
 You might need to change `localhost` to an actual IP address of your development server in the following examples.
 
@@ -155,27 +161,31 @@ IMFResourceRequest *request =  [IMFResourceRequest
 {: #swift}
 
 ```Swift
-let baseRequestUrl = "http://localhost:3000";
-let bluemixAppRoute = "http://myapp.mybluemix.net";
-let bluemixAppGUID = "your-bluemix-app-guid";
-Let tenantId = "your-MCA-service-tenantID";
 
-IMFClient.sharedInstance().initializeWithBackendRoute(bluemixAppRoute,
-	 							backendGUID: bluemixAppGuid)
-IMFAuthorizationManager.sharedInstance().initializeWithTenantId(tenantId)
+let baseRequestUrl = "http://localhost:3000"
+let bluemixAppRoute = "http://myapp.mybluemix.net"
+let tenantId = "your-MCA-service-tenantID"
+let regionName = BMSClient.REGION_US_SOUTH // set your MCA application region here. Currently these can be BMSClient.REGION_US_SOUTH, BMSClient.REGION_SYDNEY, BMSClient.REGION_UK.
+
+BMSClient.sharedInstance.initialize(bluemixAppRoute: bluemixAppRoute, bluemixAppGUID: tenantId, bluemixRegion: regionName)
+
+BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
+           
+let requestPath = baseRequestUrl + "/resource/path"               
+let request = Request(url: requestPath, method: HttpMethod.GET)
+            
+request.send { (response, error) in
+	if let error = error {
+    			print("Connection failure")
+     		print("Error :: \(error)");
+     		print("Status :: \(response?.statusCode)");
+    	} else {
+           print("Connection success")
+           print("Response :: \(response?.responseText)")
+    }                
+}
 
 
-let requestPath = baseRequestUrl + "/resource/path"
-
-let request = IMFResourceRequest(path: requestPath, method: "GET");
-
-request.sendWithCompletionHandler { (response, error) -> Void in
-	if (nil != error){
-		NSLog("Error :: %@", error.description)
-	} else {
-		NSLog("Response :: %@", response.responseText)
-	}
-};
 
 ```
 

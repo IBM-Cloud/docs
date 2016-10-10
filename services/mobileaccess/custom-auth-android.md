@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-09"
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -24,6 +24,7 @@ You must have a resource that is protected by an instance of the {{site.data.key
  * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
+Take note of your service parameter values. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile options**. The `applicationRoute` and `tenantId` (also known as `appGUID`)  values are displayed in the **Route** and **App GUID / TenantId** fields. You will need these values for intializing the SDK and for sending requests to the back-end application.
 
 ## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #custom-android-initialize}
@@ -111,7 +112,6 @@ void submitAuthenticationChallengeAnswer(JSONObject answer);
 void submitAuthenticationFailure (JSONObject info);
 ```
 
-
 ## Sample implementation of a custom AuthenticationListener
 {: #custom-android-samplecustom}
 
@@ -186,8 +186,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 
 In the code:
-* Replace `MCAServiceTenantId` with the `tenantId` value that you get when you click on the **Show 
-Credentials** button on the {{site.data.keyword.amashort}} service tile.
+* Replace `MCAServiceTenantId` with the `tenantId` value (see [Before you begin](##before-you-begin)). 
 * Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard.
 
 
@@ -195,16 +194,16 @@ Credentials** button on the {{site.data.keyword.amashort}} service tile.
 {: #custom-android-testing}
 After the client SDK is initialized and a custom AuthenticationListener is registered, you can start making requests to your mobile back-end application.
 
-### Before you begin
+### Before you test
 {: #custom-android-testing-before}
 You must have an application that was created with the {{site.data.keyword.mobilefirstbp}} boilerplate and have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
 
 
-1. Send a request to the protected endpoint (`{applicationRoute}/protected`) of your mobile back-end application from your browser, for example `http://my-mobile-backend.mybluemix.net/protected`.
+1. Send a request to the protected endpoint (`{applicationRoute}/protected`) of your mobile back-end application from your browser, for example `http://my-mobile-backend.mybluemix.net/protected`. For information on obtaining the `{applicationRoute}` value, see   [Before you begin](#before-you-begin). 
 
 1. The `/protected` endpoint of a mobile back-end application that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your  browser.
 
-1. Use your Android application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom AuthenticationListener.
+1. Use your Android application to make request to the same protected endpoint that includes the `{applicationRoute}`. Add the following code after you initialize `BMSClient` and register your custom AuthenticationListener.
 
 	```Java
 	Request request = new Request("{applicationRoute}/protected", Request.GET);
@@ -227,8 +226,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
 	});
 ```
 
-	Replace `{applicationRoute}` with the *route* value you get when you click **Mobile Options** in your app on the {{site.data.keyword.Bluemix}} dashboard.
-
+	
 1. 	When your request succeeds, the following output is in the LogCat tool:
 
 	![image](images/android-custom-login-success.png)
