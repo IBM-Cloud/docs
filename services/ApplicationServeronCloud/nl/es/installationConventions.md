@@ -15,7 +15,7 @@ copyright:
 ## Convenios de instalación de celdas
 {: cell_installation_conventions}
 
-Una celda de WebSphere Application Server for Bluemix se instala y configura siguiendo una estructura de directorios estandarizada: En la lista siguiente se indican algunos de los valores importantes.  Consulte el archivo /etc/virtualimage.properties para obtener una lista completa de valores.
+Una celda de WebSphere Application Server for Bluemix se instala y configura siguiendo una estructura de directorios estandarizada. En la lista siguiente se indican algunos de los valores importantes.  Consulte el archivo /etc/virtualimage.properties para obtener una lista completa de valores.
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer

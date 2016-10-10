@@ -17,7 +17,7 @@ copyright:
 Uma lista das atualizações mais recentes para o serviço.
 
 ## 17 de agosto de 2016: WebSphere Application
-Server for {{site.data.keyword.Bluemix_notm}} atualizado 
+Server for {{site.data.keyword.Bluemix_notm}} atualizado
 
 * Feito upgrade dos binários do WebSphere Application Server for Bluemix de 8.5.5.9 para 8.5.5.10
 * Resolvidas as [várias vulnerabilidades de segurança](http://www-01.ibm.com/support/docview.wss?uid=swg21988710){: new_window} que afetam o WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}, incluindo:
