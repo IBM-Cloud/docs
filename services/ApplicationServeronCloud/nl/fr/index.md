@@ -11,11 +11,10 @@ copyright:
 
 # Initiation à IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #getting_started}
-
-*Dernière mise à jour : 24 juin 2016*
+Dernière mise à jour : 25 août 2016
 {: .last-updated}
 
-{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} est un service permettant une configuration rapide sur une instance WebSphere Application Server Liberty, Traditional Network Deployment ou Traditional WebSphere, pré-configurée dans un environnement de cloud hébergé sur {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} est un service permettant une configuration rapide sur une instance WebSphere Application Server Liberty, Traditional Network Deployment ou Traditional WebSphere Java EE pré-configurée dans un environnement de cloud hébergé sur {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 ## Présentation de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}

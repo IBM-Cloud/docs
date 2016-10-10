@@ -31,7 +31,7 @@ En utilisant les API REST compatibles Swagger 2.0, les clients ont accès à la 
 
 **Remarque :** après création d'une instance de service, selon la taille Tee-Shirt créée, votre service risque de ne pas être immédiatement prêt à être utilisé. Il est recommandé de faire une requête sur la zone **Statut** de l'élément JSON retourné pour déterminer l'état actuel de l'instance de service.
 
-**Remarque :** l'URL **apiEndpoint** référencée dans les [exemples d'API REST](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} pointe sur la région "Sud des Etats-Unis". Si vous utilisez d'autres régions, assurez-vous que votre application se réfère à la bonne URL **apiEndpoint**.
+**Remarque :** l'URL **apiEndpoint** référencée dans les [exemples d'API REST](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} pointe sur la région "Sud des Etats-Unis".  Si vous utilisez d'autres régions, assurez-vous que votre application se réfère à la bonne URL **apiEndpoint**.
 
 *Tableau 1. URL de point d'extension d'API pour la mise en oeuvre des API REST*
 

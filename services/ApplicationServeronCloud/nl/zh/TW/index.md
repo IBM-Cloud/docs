@@ -11,11 +11,10 @@ copyright:
 
 # 開始使用 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #getting_started}
-
-*前次更新：2016 年 6 月 24 日*
+前次更新：2016 年 8 月 25 日
 {: .last-updated}
 
-{{site.data.keyword.IBM}}WebSphere Application Server for {{site.data.keyword.Bluemix}} 服務可協助您在 {{site.data.keyword.Bluemix_notm}} 管理之雲端環境中的預先配置 WebSphere Application Server Liberty、傳統網路部署或傳統 WebSphere 實例上快速設定。
+{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} 服務可協助您在 {{site.data.keyword.Bluemix_notm}} 管理之雲端環境中的預先配置 WebSphere Application Server Liberty、傳統 Network Deployment 或傳統 WebSphere Java EE 實例上快速設定。
 {: shortdesc}
 
 ## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 概觀

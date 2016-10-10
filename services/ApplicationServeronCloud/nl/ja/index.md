@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2016
@@ -11,11 +11,10 @@ copyright:
 
 # IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 概説
 {: #getting_started}
-
-*最終更新日: 2016 年 6 月 24 日*
+最終更新日: 2016 年 8 月 25 日
 {: .last-updated}
 
-{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} は、{{site.data.keyword.Bluemix_notm}} 上でホストされるクラウド環境で、事前定義済みの WebSphere Application Server Liberty、Traditional Network Deployment、または Traditional WebSphere インスタンスを迅速にセットアップできるようにするサービスです。
+{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} は、{{site.data.keyword.Bluemix_notm}} 上でホストされるクラウド環境で、事前定義済みの WebSphere Application Server Liberty、Traditional Network Deployment、または Traditional WebSphere Java EE インスタンスを迅速にセットアップできるようにするサービスです。
 {: shortdesc}
 
 ## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} の概要
