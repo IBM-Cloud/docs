@@ -2,14 +2,13 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-27"
 
 ---
-# Monitoring apps with {{site.data.keyword.mobileanalytics_short}}
+# Monitoring applications with {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
-Last updated: 24 August 2016
-{: .last-updated}
 
-The {{site.data.keyword.mobileanalytics_full}} provides monitoring and analytics for your mobile applications. You can record app logs and monitor data with the {{site.data.keyword.mobileanalytics_short}} Client SDK. Developers can control when to send this data to the {{site.data.keyword.mobileanalytics_short}} Service. When data is delivered to {{site.data.keyword.mobileanalytics_short}}, you can use the {{site.data.keyword.mobileanalytics_short}} dashboard to get analytics insights about your mobile applications, devices, and app logs.
+The {{site.data.keyword.mobileanalytics_full}} provides monitoring and analytics for your mobile applications. You can record application logs and monitor data with the {{site.data.keyword.mobileanalytics_short}} Client SDK. Developers can control when to send this data to the {{site.data.keyword.mobileanalytics_short}} Service. When data is delivered to {{site.data.keyword.mobileanalytics_short}}, you can use the {{site.data.keyword.mobileanalytics_short}} dashboard to get analytics insights about your mobile applications, devices, and application logs.
 {: shortdesc}
 
 <!--
@@ -50,7 +49,7 @@ In this example, you use app log data to create a flow chart. The final graph sh
 5. Click the **Chart Definition** tab and provide the following values:
   * Source: Application Name
   * Destination: Log Level
-  * Property: your app name
+  * Property: your application name
 7. Click **Save**
 
 ### Exporting custom data
@@ -90,14 +89,14 @@ You can also export and import custom chart definitions programmatically by usin
 
 You can set thresholds in alert definitions in the {{site.data.keyword.mobileanalytics_short}} Console to better monitor your activities.
 
-You can configure thresholds, which if exceeded, trigger alerts to notify the {{site.data.keyword.mobileanalytics_short}} Console monitor. The triggered alerts can be visualized on the console, or the alerts can be handled by a custom webhook. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> This feature provides a proactive means of detecting app log errors and application crashes server log errors. Reactive thresholds and alerts keep you from having to sift through your data and set thresholds at a wide spectrum of granularity.
+You can configure thresholds, which if exceeded, trigger alerts to notify the {{site.data.keyword.mobileanalytics_short}} Console monitor. The triggered alerts can be visualized on the console, or the alerts can be handled by a custom webhook. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> This feature provides a proactive means of detecting application log errors and application crashes server log errors. Reactive thresholds and alerts keep you from having to sift through your data and set thresholds at a wide spectrum of granularity.
 
-### Creating an alert definition for app logs
+### Creating an alert definition for application logs
 {: #alert-def-client-logs}
 
-You can create an alert definition that is based on app logs.
+You can create an alert definition that is based on application logs.
 
-In this example, you use app log data to create an alert definition. The alert monitors all app logs that were received in the last 5 minutes, and continues to check every 5 minutes, until the alert definition is disabled or deleted. An alert is triggered for each device that sent 3 or more app error logs with the same app name and version.
+In this example, you use application log data to create an alert definition. The alert monitors all application logs that were received in the last 5 minutes, and continues to check every 5 minutes, until the alert definition is disabled or deleted. An alert is triggered for each device that sent 3 or more application error logs with the same application name and version.
 
 1. In the {{site.data.keyword.mobileanalytics_short}} Console, click **Definitions** to go to the Alert Definitions page.
 2. Click **Create Alert** to create an alert.
@@ -126,17 +125,17 @@ In this example, you use app log data to create an alert definition. The alert m
 
 You created an alert definition to trigger an alert at the end of each 5 minute interval if the number of app logs reached your threshold of 3 or more error logs.
 
-### Creating an alert definition for app crashes
+### Creating an alert definition for application crashes
 {: #alert-def-app-crash}
 
-You can create an alert definition based on app crashes.
+You can create an alert definition based on application crashes.
 
-In this example, you use app crash data to create an alert definition. The alert monitors all app crashes in the last 2 minutes, and continues to check every 2 minutes, until the alert definition is disabled or deleted. An alert is triggered for each app that crashed 5 or more times. For more information about app crashes, see [App crashes](app_crash/c_op_analytics_crashes.html).
+In this example, you use application crash data to create an alert definition. The alert monitors all application crashes in the last 2 minutes, and continues to check every 2 minutes, until the alert definition is disabled or deleted. An alert is triggered for each application that crashed 5 or more times. For more information about application crashes, see [Application crashes](app_crash/c_op_analytics_crashes.html).
 
 1. In the {{site.data.keyword.mobileanalytics_short}} Console, click **Definitions** to display the Alerts Definitions page.
 2. Click **Create Alert**.
 3. Provide the following values:
-	* Alert Name: Alert for App Crashes
+	* Alert Name: Alert for Application Crashes
 	* Message: App Crash Alert
 	* Query Frequency: Application Crashes
 		* Application Name: Any application
@@ -178,54 +177,53 @@ In this example, you view the details of your triggered alerts from the Alert Lo
 
 3. Optional: Select an alert and click the **Trash** icon to delete the alert.
 
-## App crashes
+## Monitoring application crashes
 {: #monitor-app-crash}
 
-You can view information about your app crashes in the {{site.data.keyword.mobileanalytics_short}} Console to better monitor and troubleshoot your apps.
+You can view information about your application crashes in the {{site.data.keyword.mobileanalytics_short}} Console to better monitor and troubleshoot your applications.
 
-### App crash monitoring
+### Application crash monitoring
 {: #app-crash}
 
-You can quickly see information about your app crashes in the **Crashes** section of the {{site.data.keyword.mobileanalytics_short}} Console. <!--In the **Overview** page of the **Dashboard** section,--> The **Crashes** bar graph shows a histogram of crashes over time.
+The **Crash Overview** table shows the following data columns:
+
+* Application: application name
+* Crashes: total number of crashes for that app
+* Total Uses: total number of times a user opens and closes that app
+* Crash Rate: percentage of crashes per use
+
+You can quickly see information about your application crashes the **Crashes** table. <!--In the **Overview** page of the **Dashboard** section,--> The **Crashes** bar graph shows a histogram of crashes over time.
 
 You can display data in two ways:
 
 1. Display crash rate: crash rate over time
 2. Display total crashes: total crashes over time
 
-
 ### App crash troubleshooting
 {: #app-crash-troubleshooting}
 
-You can view the **Crashes** page in the <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} Console to better administer your apps.
-
-The **Crash Overview** table shows the following data columns:
-
-* App: app name
-* Crashes: total number of crashes for that app
-* Total Uses: total number of times a user opens and closes that app
-* Crash Rate: percentage of crashes per use
+You can view the **Troubleshooting** page in the <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} Console to better administer your apps.
 
 The **Crash Summary** table is sortable and includes the following data columns:
 
 * Crashes
 * Devices
 * Last Crash
-* App
+* Application
 * OS
 * Message
 
-You can click on the + icon next to any entry to display the **Crash Details** table, which includes the following columns:
+Click on the + icon next to any entry to display the **Crash Details** table, which includes the following columns:
 
 * Time Crashed
-* App Version
+* Application Version
 * OS Version
 * Device Model
 * Device ID
 * Download: link to download the logs that led up to the crash
 
-You can expand any entry in the **Crash Details** table to get more details, including a stacktrace.
+Expand any entry in the **Crash Details** table to get more details, including a stacktrace.
 
-**Note**: The data for the **Crash Summary** table is populated by querying the fatal level app logs. If your app does not collect fatal app logs, no data is available.
+**Note**: The data for the **Crash Summary** table is populated by querying the fatal level app logs. If your application does not collect fatal application logs, no data is available.
 
 
