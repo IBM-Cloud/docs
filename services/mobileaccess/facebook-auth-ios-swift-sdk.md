@@ -183,6 +183,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 	    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		let mcaAuthManager = MCAAuthorizationManager.sharedInstance
    			 mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+	//the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney
 		BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 	
 		FacebookAuthenticationManager.sharedInstance.register()
@@ -192,7 +193,7 @@ A common, though not mandatory, place to put the initialization code is in the `
  
  In the code:
  
- * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or  `BMSClient.REGION_UK`.
+ * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.The region value that appears should be one of the following: **US South**, **United Kingdom**, or **Sydney**, and correspond to the values required in the code:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
  * Replace `tenantId` with the **App GUID / TenantId** value that you saved from the **Mobile options** (see [Configuring Mobile Client Access for Facebook authentication](#facebook-auth-ios-configmca)).
 
 1. Notify the Facebook SDK about the app activation and register the Facebook Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code after you initialize the BMSClient instance and register Facebook as the authentication manager.

@@ -96,15 +96,14 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 
 	let mcaAuthManager = MCAAuthorizationManager.sharedInstance
     mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+      // possible values for regionName: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, BMSClient.Region.sydney
 	BMSClient.sharedInstance.authorizationManager = mcaAuthManager	
 	return true
 	}
  ```
 
 * Replace the `tenantId` with value  you obtained from **Mobile options**. See **step 1**.
-* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
-
-
+* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon") in the menu bar to open the **Account and Support** widget. The region value that appears should be one of the following: **US South**, **United Kingdom**, or **Sydney**, and correspond to the constant values required in the code:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
 
    
 ## Making a request to your mobile back-end application
