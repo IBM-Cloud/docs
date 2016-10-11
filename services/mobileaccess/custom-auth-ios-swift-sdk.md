@@ -61,14 +61,15 @@ Initialize the SDK by passing the `applicationGUID` (tenantId) parameter. A comm
 ```Swift
 
 	let tenantId = "<serviceTenantID>"
-	let regionName = "<applicationBluemixRegion>"
-	let customRealm = “<yourProtectedRealm>”
+	let regionName = <applicationBluemixRegion>
+	let customRealm = "<yourProtectedRealm>"
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: 
 		[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
 		let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 	    		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+	 //the regionName should be one of the following BMSClient.Region constants: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney   
 		BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 
 	//Auth delegate for handling custom challenge
@@ -101,7 +102,7 @@ Initialize the SDK by passing the `applicationGUID` (tenantId) parameter. A comm
 
 In the code:
 
-* Replace `"<applicationBluemixRegion>"` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
+* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value that appears should be one of the following: **US South**, **United Kingdom**, or **Sydney**, and correspond to the constants required in the code:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
 * Replace `"<yourProtectedRealm>"` with the **Realm name** value you defined in the **Custom** tile of {{site.data.keyword.amashort}} dashboard. 
 * Replace `"<serviceTenantID>"` with the **tenantId** value retrieved from **Mobile options**. See [Configuring Mobile Client Access for custom authentication](#custom-auth-ios-configmca).
 

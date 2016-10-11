@@ -131,18 +131,18 @@ A common, though not mandatory, place to put the initialization code is in the `
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
 	    let mcaAuthManager = MCAAuthorizationManager.sharedInstance
-	        mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+	    		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+	 ///the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney   
 	    BMSClient.sharedInstance.authorizationManager = mcaAuthManager
-
-	GoogleAuthenticationManager.sharedInstance.register()
-
-	return true
+		GoogleAuthenticationManager.sharedInstance.register()
+		return true
 	}
 
 	// [START openurl]
 	    func application(_ application: UIApplication,
 			     open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, 
+			sourceApplication: sourceApplication, annotation: annotation)
 	    }
 
 	    @available(iOS 9.0, *)
@@ -153,8 +153,8 @@ A common, though not mandatory, place to put the initialization code is in the `
 	 ```
 
  In the code:
- * Replace  `<serviceTenantID>` with the value you retrieved from the **Mobile options** (see [Configuring Mobile Client Access for Google authentication](#google-auth-ios-config)). 
-* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
+ 	* Replace  `<serviceTenantID>` with the value you retrieved from the **Mobile options** (see [Configuring Mobile Client Access for Google authentication](#google-auth-ios-config)). 
+	* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value that appears should be one of the following: **US South**, **United Kingdom**, or **Sydney**, and correspond to the values required in the code:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
 	
 
 
