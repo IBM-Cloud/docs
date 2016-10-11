@@ -13,7 +13,7 @@ copyright:
 
 # Connecting devices
 {: #iotplatform_task}
-Last updated: 13 September 2016
+Last updated: 20 October 2016
 {: .last-updated}
 
 Before you can begin receiving data from your your IoT devices, you must connect them to  {{site.data.keyword.iot_full}}. Connecting a device to {{site.data.keyword.iot_short_notm}} involves registering the device with {{site.data.keyword.iot_short_notm}} and then using the registration information to configure the device to connect to {{site.data.keyword.iot_short_notm}}.
@@ -64,7 +64,7 @@ The device ID is used to identify the device in the {{site.data.keyword.iot_shor
  **Tip:** You can add and edit device metadata later.
 13. Click **Next** to complete the addition of your device.
 14. Verify that the summary information is correct and then click **Add** to add the connection.  
-**Tip:** You have the option to accept an automatically generated authentication token or to provide an authentication token yourself. If you choose to create your own token, make sure that it is between 8 and 36 characters long, contains a mix of lower and upper case letters, numbers, and hyphen, underscore, or period. The token must not contain repeated character sequences, dictionary words, user names, or other predefined sequences.
+**Tip:** You have the option to accept an automatically generated authentication token or to provide an authentication token yourself. If you choose to create your own token, make sure that it consists only of alpha-numerical characters and the following special characters: hyphen (-), underscore (_), exclamation-point (!), ampersand (&), at sign (@), question mark (?), asterisk (*), plus sign (+), period ( . ), or right and left parentheses. The token must not contain repeated character sequences, dictionary words, user names, or other predefined sequences.
 15. In the device information page, copy and save the following device information:  
  - Organization ID, such as `tubo8x`
  - Device Type, such as `my_device_type`
