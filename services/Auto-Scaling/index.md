@@ -247,9 +247,9 @@ Table 1. Policy fields in the scaling policy
 
 | Metric name | Description | Supported application type |
 |-------------|----------------------| ------------------- |
-| *JVM heap* |	The usage percentage of the JVM heap memory.	| Liberty for Java |
+| *Heap* |	The usage percentage of the heap memory.	| Liberty for Java, Node.js SDK |
 | *Memory*   |	The usage percentage of the memory.	|  All |
-| *Throughput* | The number of the processed requests per second.| Liberty for Java |
+| *Throughput* | The number of the processed requests per second.| Liberty for Java, Node.js SDK |
 | *Response time* |	The response time of the processed requests.	| Liberty for Java |
 
 Table 2. Supported metric names
