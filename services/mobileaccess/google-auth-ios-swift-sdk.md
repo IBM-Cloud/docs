@@ -130,9 +130,9 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-		let mcaAuthManager = MCAAuthorizationManager.sharedInstance
-	    mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
-	•	BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+	    let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+	        mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+	    BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 
 	GoogleAuthenticationManager.sharedInstance.register()
 
