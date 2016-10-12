@@ -130,7 +130,7 @@ You created an alert definition to trigger an alert at the end of each 5 minute 
 
 You can create an alert definition based on application crashes.
 
-In this example, you use application crash data to create an alert definition. The alert monitors all application crashes in the last 2 minutes, and continues to check every 2 minutes, until the alert definition is disabled or deleted. An alert is triggered for each application that crashed 5 or more times. For more information about application crashes, see [Application crashes](app_crash/c_op_analytics_crashes.html).
+In this example, you use application crash data to create an alert definition. The alert monitors all application crashes in the last 2 minutes, and continues to check every 2 minutes, until the alert definition is disabled or deleted. An alert is triggered for each application that crashed 5 or more times. For more information about application crashes, see [Application crashes](#app-crash).
 
 1. In the {{site.data.keyword.mobileanalytics_short}} Console, click **Definitions** to display the Alerts Definitions page.
 2. Click **Create Alert**.
