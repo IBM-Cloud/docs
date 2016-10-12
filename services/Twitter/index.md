@@ -5,7 +5,7 @@
 
 # Getting started with Insights for Twitter {: #insights_twitter_overview}
 
-*Last updated: 13 May 2016*
+*Last updated: 12 Oct 2016*
 {: .last-updated}
 
 Use {{site.data.keyword.twitterfull}} to incorporate Twitter content from the Twitter [Decahose](http://support.gnip.com/apis/firehose/overview.html){: new_window} or [PowerTrack](http://support.gnip.com/apis/powertrack/overview.html){: new_window} streams into your {{site.data.keyword.Bluemix}} applications.
