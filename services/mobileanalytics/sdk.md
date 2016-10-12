@@ -9,6 +9,9 @@ lastupdated: "2016-10-08"
 # Instrumenting your application to use the {{site.data.keyword.mobileanalytics_short}} client SDKs
 {: #mobileanalytics_sdk}
 
+Last updated: 08 October 2016
+{: .last-updated}
+
 The {{site.data.keyword.mobileanalytics_full}} SDKs enable you to instrument your mobile application.
 {: shortdesc}
 
