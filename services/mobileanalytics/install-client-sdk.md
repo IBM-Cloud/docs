@@ -9,6 +9,9 @@ lastupdated: "2016-09-29"
 # Installing the {{site.data.keyword.mobileanalytics_short}} Client SDKs
 {: #mobileanalytics_sdk}
 
+Last updated: 29 September 2016
+{: .last-updated}
+
 The {{site.data.keyword.mobileanalytics_short}}
 Client SDKs are currently available for Android, iOS and WatchOS.
 {: #shortdesc}
