@@ -16,7 +16,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-Last updated: 4 August 2016
+Last updated: 12 October 2016
 {: .last-updated}
 
 Version: 0.4.1
