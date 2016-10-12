@@ -11,8 +11,10 @@ lastupdated: "2016-10-08"
 {:codeblock:.codeblock}
 
 # Getting started with {{site.data.keyword.mobileanalytics_short}} (Beta)
-
 {: #gettingstartedtemplate}
+
+Last updated: 08 October 2016
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} provides developers, IT administrators, and business stakeholders insight into how their mobile apps are performing and how they are being used. Monitor performance and usage of all your applications from your desktop or tablet. Quickly identify trends and anomalies, drill down to resolve issues, and trigger alerts when key metrics cross critical thresholds. 
 {: shortdesc}
