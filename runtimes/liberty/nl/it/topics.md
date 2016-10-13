@@ -12,7 +12,7 @@ copyright:
 # Argomenti Liberty
 {: #topics}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 10 giugno 2016
 {: .last-updated}
 
 * [Runtime Liberty](index.html)
@@ -27,9 +27,11 @@ copyright:
 * [Utilizzo di Dynatrace](dynatrace.html)
 * [Utilizzo di New Relic](newRelic.html)
 * [Personalizzazione del JRE](customizingJRE.html)
+* [JRE Oracle](oracle_jre.html)
 * [Registrazione e traccia ](loggingAndTracing.html)
 * [Variabili di ambiente](environmentVariables.html)
 * [Valori predefiniti dei pacchetti di build](buildpackDefaults.html)
+* [Modalità offline](offlineMode.html)
 * [Ultimi aggiornamenti](updates.html)
 
 # rellinks

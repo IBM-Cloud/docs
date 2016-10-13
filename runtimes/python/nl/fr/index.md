@@ -11,7 +11,7 @@ copyright:
 
 # Python
 {: #python_runtime}
-*Dernière mise à jour : 06 juillet 2016*
+Dernière mise à jour : 06 juillet 2016
 {: .last-updated}
 
 L'environnement d'exécution Python dans {{site.data.keyword.Bluemix}} repose sur le pack python_buildpack.

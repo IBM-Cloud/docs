@@ -12,7 +12,7 @@ copyright:
 # Configurazione automatica dei servizi di cui è stato eseguito il bind
 {: #auto_config}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 10 giugno 2016
 {: .last-updated}
 
 Puoi eseguire il bind di diversi servizi alla tua applicazione Liberty. I servizi possono essere gestiti dal contenitore, gestiti dall'applicazione o entrambe le cose, a seconda delle scelte

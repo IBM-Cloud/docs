@@ -11,7 +11,7 @@ copyright:
 # 使用 Dynatrace
 {: #using_dynatrace}
 
-*上次更新时间：2016 年 6 月 10 日*
+上次更新时间：2016 年 6 月 10 日
 {: .last-updated}
 
 Dynatrace 是第三方服务，它提供对应用程序的监视。

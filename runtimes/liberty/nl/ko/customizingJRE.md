@@ -11,14 +11,14 @@ copyright:
 # JRE 사용자 정의
 {: #customizing_jre}
 
-*마지막 업데이트 날짜: 2016년 6월 10일*
+마지막 업데이트 날짜: 2016년 8월 15일
 {: .last-updated}
 
 애플리케이션은 Liberty 빌드팩에 의해 제공되고 구성되는 Java 런타임 환경(JRE)에서 실행됩니다. 또한 Liberty 빌드팩은 JRE 버전 또는 유형을 구성하고 JVM 옵션을 사용자 정의하거나 JRE 기능을 오버레이할 수 있도록 합니다. 
 
 ## IBM JRE
 
-기본적으로 애플리케이션은 IBM JRE의 경량 버전에서 실행되도록 구성되어 있습니다. 이 경량 JRE는 훨씬 줄어든 디스크 및 메모리 공간으로 코어, 핵심 기능을 제공할 수 있도록 불필요한 기능들을 모두 제거했습니다. 경량 JRE의 컨텐츠에 대한 자세한 정보는 [Liberty for Java 런타임](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html)을 참조하십시오.
+기본적으로 애플리케이션은 IBM JRE의 경량 버전에서 실행되도록 구성되어 있습니다. 이 경량 JRE는 훨씬 줄어든 디스크 및 메모리 공간으로 코어, 핵심 기능을 제공할 수 있도록 불필요한 기능들을 모두 제거했습니다. 경량 JRE의 컨텐츠에 대한 자세한 정보는 [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html)를 참조하십시오.
 
 기본적으로 IBM JRE 버전 8이 사용됩니다. JBP_CONFIG_IBMJDK 환경 변수를 사용하면 IBM JRE의 대체 버전을 지정할 수 있습니다. 예를 들어, 최신 IBM JRE 7.1을 사용하려면 다음 환경 변수를 설정하십시오. 
 ```
@@ -170,7 +170,7 @@ JVM 옵션을 JRE에 적용하면 Liberty 빌드팩의 기본 옵션이 먼저 �
 ### 실행 중인 애플리케이션에 적용된 JVM 옵션 판별
 {: #determining_applied_jvm_options}
 
-JVM_ARGS 환경 변수를 통해 지정된 애플리케이션 정의 옵션을 제외하고는, 작업 결과로 지정된 옵션이 런타임 환경에서 명령행 옵션(독립형 Java 애플리케이션)으로 또는 jvm.options 파일에(비독립형 Java 애플리케이션)에 지속됩니다. 애플리케이션에 대해 적용된 JVM 옵션은 Bluemix 대시보드 또는 CF CLI에서 볼 수 있습니다. 
+JVM_ARGS 환경 변수를 통해 지정된 애플리케이션 정의 옵션을 제외하고는, 작업 결과로 지정된 옵션이 런타임 환경에서 명령행 옵션(독립형 Java 애플리케이션)으로 또는 jvm.options 파일(비독립형 Java 애플리케이션)에 지속됩니다. 애플리케이션에 대해 적용된 JVM 옵션은 Bluemix 대시보드 또는 CF CLI에서 볼 수 있습니다. 
 
 독립형 Java 애플리케이션에 대한 JVM 옵션은 명령행 옵션으로서 유지됩니다. 이 옵션은 staging_info.yml 파일에서 확인할 수 있습니다.
 

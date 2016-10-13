@@ -11,14 +11,14 @@ copyright:
 # 自訂 JRE
 {: #customizing_jre}
 
-*前次更新：2016 年 6 月 10 日*
+前次更新：2016 年 8 月 15 日
 {: .last-updated}
 
 應用程式是在 Liberty 建置套件所提供及配置的 Java 運行環境 (JRE) 中執行。Liberty 建置套件也可以配置 JRE 版本或類型、自訂 JVM 選項，或重疊 JRE 功能。
 
 ## IBM JRE
 
-依預設，應用程式會配置成使用輕量型版本的 IBM JRE 來執行。這個輕量型 JRE 經過拆解以提供核心的重要功能，並且大量減少磁碟和記憶體佔用量。如需輕量型 JRE 內容的相關資訊，請參閱 [Liberty for Java 運行環境](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html)。
+依預設，應用程式會配置成使用輕量型版本的 IBM JRE 來執行。這個輕量型 JRE 經過拆解以提供核心的重要功能，並且大量減少磁碟和記憶體佔用量。如需輕量型 JRE 內容的相關資訊，請參閱[小型覆蓋區 JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html)。
 
 依預設會使用 IBM JRE 第 8 版。請使用 JBP_CONFIG_IBMJDK 環境變數來指定 IBM JRE 的替代版本。例如，若要使用最新的 IBM JRE 7.1，請設定下列環境變數：
 ```

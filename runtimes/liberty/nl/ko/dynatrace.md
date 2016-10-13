@@ -11,7 +11,7 @@ copyright:
 # Dynatrace 사용
 {: #using_dynatrace}
 
-*마지막 업데이트 날짜: 2016년 6월 10일*
+마지막 업데이트 날짜: 2016년 6월 10일
 {: .last-updated}
 
 Dynatrace는 앱에 대한 모니터링을 제공하는 써드파티 서비스입니다. 

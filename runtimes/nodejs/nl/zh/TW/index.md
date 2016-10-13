@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*前次更新：2016 年 7 月 7 日*
+前次更新：2016 年 8 月 29 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Node.js 運行環境是採用 sdk-for-nodejs 建置套件的技術。sdk-for-nodejs 建置套件為 Node.js 應用程式提供完整的運行環境。
@@ -120,7 +120,7 @@ NPM 提供 Scripting 機能讓您執行 Script，包括安裝 node_modules 之�
 
 ### 快取行為
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} 會為每個 node 應用程式維護一個快取目錄，它會在兩次建置之間持續保存。快取會儲存已解析的相依關係，因此不必每次部署應用程式時都進行下載及安裝。例如，假設 myapp 依賴 **express**。那麼，第一次部署 myapp 時，會下載 **expess** 模組。後續部署 myapp 時，則會使用 **express** 的快取實例。預設行為是快取 NPM 安裝的所有 node_modules 以及 bower 安裝的 bower_components。
+{{site.data.keyword.Bluemix}} 會為每個 node 應用程式維護一個快取目錄，它會在兩次建置之間持續保存。快取會儲存已解析的相依關係，因此不必每次部署應用程式時都進行下載及安裝。例如，假設 myapp 依賴 **express**。然後，第一次部署 myapp 時，即會下載 **express** 模組。後續部署 myapp 時，則會使用 **express** 的快取實例。預設行為是快取 NPM 安裝的所有 node_modules 以及 bower 安裝的 bower_components。
 
 使用 NODE_MODULES_CACHE 變數，以決定 Node 建置套件會使用還是忽略先前建置的快取。預設值是 true。若要停用快取，則將 NODE_MODULES_CACHE 設為 false，例如透過 cf 指令行：
 
@@ -258,7 +258,7 @@ Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS](https:
 
 Bluemix 提供多個版本的 Node.js 建置套件。
 * IBM 建立的 **sdk-for-nodejs** 建置套件是用於 Bluemix 中之 Node.js 應用程式的預設建置套件。
-* **nodejs_buildpack** 是 Cloud Foundry 社群所提供的外部建置套件。
+* **nodejs_buildpack** 是 Cloud Foundry 社群所提供的社群建置套件。
 
 在 Bluemix 中，**sdk-for-nodejs** 建置套件的優先順序高於 **nodejs_buildpack**。如果您想要對應用程式使用 **nodejs_buildpack** 而非 **sdk-for-nodejs** 建置套件，您必須指定您的建置套件，例如，使用 -b 選項來搭配 **cf push** 指令。
 
@@ -281,4 +281,4 @@ Bluemix 提供多個版本的 Node.js 建置套件。
 * [Node.js 建置套件的最新更新項目](../../runtimes/nodejs/updates.html)
 * [應用程式管理](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
-* [StrongLoop](https://strongloop.com)
+* [IBM API Connect](https://strongloop.com/)

@@ -11,7 +11,7 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*最終更新日: 2016 年 7 月 6 日*
+最終更新日: 2016 年 7 月 6 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} の PHP ランタイムには php_buildpack が採用されています。

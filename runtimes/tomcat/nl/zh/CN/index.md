@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*上次更新时间：2016 年 7 月 13 日*
+上次更新时间：2016 年 7 月 13 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Tomcat 运行时由 java_buildpack 提供技术支持。

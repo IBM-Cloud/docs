@@ -12,7 +12,7 @@ copyright:
 
 # Go
 {: #go_runtime}
-*上次更新时间：2016 年 7 月 6 日*
+上次更新时间：2016 年 7 月 6 日
 
 {{site.data.keyword.Bluemix}} 上的 Go 运行时由 go_buildpack 提供支持。go_buildpack 为 Go 应用程序提供了一个完整的运行时环境。
 {: shortdesc}

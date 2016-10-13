@@ -11,10 +11,10 @@ copyright:
 # Usando o Oracle JRE
 {: #using_oraacle_jre}
 
-*Última atualização: 21 de junho de 2016*
+Última atualização: 21 de junho de 2016
 {: .last-updated}
 
-Será possível executar o aplicativo Liberty no Bluemix com o Oracle JRE se você escolher essa opção. Para isso, deve-se
+Será possível executar o aplicativo Liberty no Bluemix com o Oracle JRE se você escolher essa opção.  Para isso, deve-se
 * hospedar o JRE em um local a partir do qual o buildpack possa fazer download dele,
 * hospedar um arquivo index.yml que forneça o local do JRE do host e
 * configurar seu aplicativo para usar esse JRE.
@@ -23,8 +23,8 @@ Será possível executar o aplicativo Liberty no Bluemix com o Oracle JRE se voc
 {: #hosting_jre}
 
 O arquivo do Oracle JRE deve ser hospedado em um servidor da web e o buildpack do Liberty deve estar apto a fazer o download dele a partir desse servidor. É possível hospedá-lo no próprio Bluemix, usando qualquer um dos recursos do servidor disponível ou hospedá-lo em algum local publicamente disponível.  O servidor deve ser configurado com um arquivo index.yml que especifique os detalhes sobre o arquivo JRE. Conclua as etapas que se seguem para hospedar o JRE e o index.yml:
-  1. Adquira o Oracle JRE. Observe que o JRE deve ser a versão para uso em um sistema operacional Unix de 64 bits e deve ser um arquivo tar.gz.
-  2. Hospede o arquivo JRE em um local a partir do qual o buildpack do Liberty possa fazer download dele.  
+  1. Adquira o Oracle JRE.  Observe que o JRE deve ser a versão para uso em um sistema operacional Unix de 64 bits e deve ser um arquivo tar.gz.
+  2. Hospede o arquivo JRE em um local a partir do qual o buildpack do Liberty possa fazer download dele. 
   3. Assegure-se de fornecer um arquivo index.yml no local de hosting. O arquivo index.yml deve conter uma entrada que consista no ID da versão do Oracle JRE seguido por dois-pontos e a URL completa do local desse arquivo JRE. O formato do index.yml é:
 ```
    ---

@@ -2,13 +2,10 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 # Sending requests with IMFURLProtocol
 {: #imfurl}
-
-Last updated: 16 August 2016
-{: .last-updated}
 
 In some cases, you might not be able to use the `IMFResourceRequest` class for sending requests to resources protected by {{site.data.keyword.amafull}}, such as when a request to a protected resource is sent by some third-party code. A possible solution is use the `IMFURLProtocol` API, along with the standard `NSURLRequest (NSMutableURLRequest)` call.
 

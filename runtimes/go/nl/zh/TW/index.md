@@ -12,7 +12,7 @@ copyright:
 
 # Go
 {: #go_runtime}
-*前次更新：2016 年 7 月 6 日*
+前次更新：2016 年 7 月 6 日
 
 {{site.data.keyword.Bluemix}} 上的 Go 運行環境是採用 go_buildpack 技術。go_buildpack 為 Go 應用程式提供完整的運行環境。
 {: shortdesc}

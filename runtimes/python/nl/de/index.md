@@ -11,7 +11,7 @@ copyright:
 
 # Python
 {: #python_runtime}
-*Letzte Aktualisierung: 06. Juli 2016*
+Letzte Aktualisierung: 06. Juli 2016
 {: .last-updated}
 
 Die Laufzeit von Python in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'python_buildpack'.

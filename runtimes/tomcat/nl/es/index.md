@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*Última actualización: 13 de julio de 2016*
+Última actualización: 13 de julio de 2016
 {: .last-updated}
 
 El tiempo de ejecución de Tomcat en {{site.data.keyword.Bluemix}} está basado en el java_buildpack.

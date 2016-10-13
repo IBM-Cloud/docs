@@ -11,10 +11,19 @@ copyright:
 # sdk-for-nodejs 建置套件的最新更新項目
 {: #latest_updates}
 
-*前次更新：2016 年 7 月 18 日*
+前次更新：2016 年 8 月 26 日
 {: .last-updated}
 
 sdk-for-nodejs 建置套件中的最新更新項目清單。
+## 2016 年 8 月 26 日：已更新 Node.js 建置套件 v3.7-20160826-1101
+這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.45、0.10.46、0.12.14、0.12.15、4.4.7、4.5.0、6.2.2 和 6.4.0。預設值現在是 4.5.0。
+
+這個版本包括錯誤修正程式（包括 [Cloud Foundry 的 Node.js 建置套件 1.5.18](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18) 中的錯誤修正程式）。
+
+這個版本不再支援 [Bluemix Node.js 建置套件 3.3 版 - FIPS 模式及其他項目](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/)中所發表的 strongpm「應用程式管理」處理程式。
+
+請注意，使用 Node.js 6.x 及[開發模型](../../manageapps/app_mng.html#devmode)時，有一個已知問題。作為暫行解決方法，您將需要在啟用「開發模型」之後重新編譯打包您的應用程式，然後才能開始使用它。
+
 ## 2016 年 7 月 22 日：已更新 Node.js 建置套件 v3.6-20160715-0749
 這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.45, 0.10.46、0.12.14、0.12.15、4.4.6、4.4.7、6.2.1 和 6.2.2。現在預設值為 4.4.7。
 

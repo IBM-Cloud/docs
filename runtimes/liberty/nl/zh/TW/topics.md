@@ -12,7 +12,7 @@ copyright:
 # Liberty 主題
 {: #topics}
 
-*前次更新：2016 年 6 月 10 日*
+前次更新：2016 年 6 月 10 日
 {: .last-updated}
 
 * [Liberty 運行環境](index.html)

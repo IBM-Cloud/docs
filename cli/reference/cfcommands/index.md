@@ -319,8 +319,13 @@ Displays the version of the cf command line interface.
 cf -v
 ```
 
-# rellinks
+# Related Links
 {: #rellinks}
-## general 
+
+## Related Links
 {: #general}
-* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+
+* [Download Cloud Foundry CLI](https://github.com/cloudfoundry/cli/releases)
+{:new_window}
+* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+{:new_window}

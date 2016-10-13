@@ -12,7 +12,7 @@ copyright:
 # ロギングとトレース
 {: #logging_tracing}
 
-*最終更新日: 2016 年 6 月 21 日*
+最終更新日: 2016 年 6 月 21 日
 {: .last-updated}
 
 ## ログ・ファイル
@@ -21,7 +21,7 @@ copyright:
 標準 Liberty ログ (messages.log  または ffdc directory など) は、IBM Bluemix の各アプリケーション・インスタンスのログ・ディレクトリーにあります。これらのログは、IBM Bluemix コンソールから、または cf logs および cf files コマンドを使用して、アクセスできます。例えば、messages.log ファイルを表示するには、次のコマンドを実行します。
 
 ```
-$ cf files <yourappname> logs/messages.log
+    $ cf files <yourappname> logs/messages.log
 ```
 {: codeblock}
 

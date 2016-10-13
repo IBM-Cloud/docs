@@ -11,15 +11,15 @@ copyright:
 # Speicherbegrenzungen und das Liberty-Buildpack
 {: #memory_limits}
 
-*Letzte Aktualisierung: 10. Juni 2016*
+Letzte Aktualisierung: 10. Juni 2016
 {: .last-updated}
 
 Bei der Implementierung einer Anwendung mit dem Liberty-Buildpack muss eine
 Speicherbegrenzung angegeben werden.
 
-**Probleme vermeiden**
+## Probleme vermeiden
 
-* Ein Hello World-Servlet, das mit dem Liberty-Buildpack
+Ein Hello World-Servlet, das mit dem Liberty-Buildpack
 und einer Speicherbegrenzung von 256 MB implementiert wird, kann möglicherweise nicht ordnungsgemäß
 implementiert und ausgeführt werden. Bei einer Implementierung wird der Grenzwert von 256 MB nahezu
 erreicht. Auch für einfache Anwendungen sollte eine Speicherbegrenzung von mindestens 512 MB

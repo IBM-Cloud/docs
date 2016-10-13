@@ -11,7 +11,7 @@ copyright:
 # Surveillance de Liberty dans Bluemix à l'aide de JConsole
 {: #jconsole}
 
-*Dernière mise à jour : 10 juin 2016*
+Dernière mise à jour : 10 juin 2016
 {: .last-updated}
 
 ## La procédure de surveillance de l'environnement d'exécution Bluemix Liberty à l'aide de JConsole est la suivante :

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -10,9 +10,6 @@ copyright:
 
 # Enabling Facebook authentication for Cordova apps
 {: #facebook-auth-cordova}
-
-Last updated: 29 September 2016
-{: .last-updated}
 
 
 To configure {{site.data.keyword.amafull}}  Cordova applications for Facebook authentication integration, make changes in native code of the Cordova application, in Java, Objective-C, or Swift. Configure each platform separately. This Cordova application must already be instrumented with the  {{site.data.keyword.amashort}} SDK. 

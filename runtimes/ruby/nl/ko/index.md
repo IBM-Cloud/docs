@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*마지막 업데이트 날짜: 2016년 7월 6일*
+마지막 업데이트 날짜: 2016년 7월 6일
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}}의 Ruby 런타임은 ruby_buildpack을 통해 제공됩니다.

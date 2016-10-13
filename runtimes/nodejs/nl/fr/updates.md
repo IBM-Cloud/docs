@@ -11,10 +11,19 @@ copyright:
 # Dernières mises à jour apportées au pack de construction sdk-for-nodejs
 {: #latest_updates}
 
-*Dernière mise à jour : 18 juillet 2016*
+Dernière mise à jour : 26 août 2016
 {: .last-updated}
 
 Liste des dernières mises à jour apportées au pack de construction sdk-for-nodejs.
+## 26 août 2016 : Pack de construction Node.js v3.7-20160826-1101 mis à jour
+Cette édition du pack de construction prend en charge les versions d'exécution IBM SDK for Node.js : 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2, et 6.4.0. La valeur par défaut est désormais 4.5.0.
+
+Cette édition inclut des correctifs de bogue, dont ceux du [pack de construction Node.js 1.5.18 de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18).
+
+L'édition retire la prise en charge pour le gestionnaire StrongPM d'App Management, comme annoncé dans [Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
+
+Notez qu'un problème a été identifié lors de l'utilisation de Node.js 6.x et du [mode de développement](../../manageapps/app_mng.html#devmode). Pour contourner le problème, vous devez reconstituer votre application après activation du mode de développement avant de commencer à l'utiliser.
+
 ## 22 juillet 2016 : Pack de construction Node.js v3.6-20160715-0749 mis à jour
 Cette édition du pack de construction prend en charge les versions d'exécution IBM SDK for Node.js suivantes : 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 et 6.2.2. La version par défaut est désormais 4.4.7.
 

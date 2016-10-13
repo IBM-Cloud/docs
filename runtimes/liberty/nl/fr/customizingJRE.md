@@ -11,7 +11,7 @@ copyright:
 # Personnalisation de l'environnement d'exécution Java (JRE)
 {: #customizing_jre}
 
-*Dernière mise à jour : 10 juin 2016*
+Dernière mise à jour : 15 août 2016
 {: .last-updated}
 
 Les applications sont exécutées dans un environnement d'exécution Java (JRE) fourni et configuré par le
@@ -22,8 +22,7 @@ l'environnement d'exécution Java (JRE).
 ## IBM JRE
 
 Par défaut, les applications sont configurées pour s'exécuter avec une version simple d'IBM JRE. Cette dernière est
-simplifiée pour fournir la fonction essentielle de base avec une empreinte de mémoire et de disque réduite. Pour plus d'informations sur l'environnement d'exécution Java (JRE) allégé,
-voir [Contexte d'exécution Liberty for Java](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html).
+simplifiée pour fournir la fonction essentielle de base avec une empreinte de mémoire et de disque réduite. Pour plus d'informations sur le contenu de l'environnement JRE allégé, voir [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
 IBM
 JRE version 8 est utilisé par défaut. Utilisez la variable d'environnement JBP_CONFIG_IBMJDK afin de spécifier une autre version d'IBM JRE. Par exemple, pour utiliser la version la plus récente d'IBM JRE 7.1, définissez la variable d'environnement suivante :

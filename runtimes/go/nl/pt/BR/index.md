@@ -12,7 +12,7 @@ copyright:
 
 # Ir
 {: #go_runtime}
-*Última atualização: 6 de julho de 2016*
+Última atualização: 06 de julho de 2016
 
 O tempo de execução Go no {{site.data.keyword.Bluemix}} foi desenvolvido com o go_buildpack.
 O go_buildpack fornece um ambiente de tempo de execução completo para apps Go.

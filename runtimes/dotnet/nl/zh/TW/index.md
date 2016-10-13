@@ -12,7 +12,7 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-*前次更新：2016 年 5 月 30 日*
+前次更新：2016 年 5 月 30 日
 
 {{site.data.keyword.Bluemix}} 上的 ASP.NET Core 運行環境是採用 ASP.NET Core 建置套件的技術。ASP.NET Core 是模組化開放程式碼架構，用於建置 .NET Web 應用程式。
 .Net Core 是 ASP.NET Core 應用程式可以設為目標的小型跨平台運行環境。
@@ -38,7 +38,7 @@ copyright:
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview1-002702"
+        "version": "1.0.0-preview2-003121"
       }
    }
 ```
@@ -67,9 +67,11 @@ copyright:
 
 Yeoman 工具可以用來產生新的專案範本（如[使用 Yeoman 建置專案](http://docs.asp.net/en/latest/client-side/yeoman.html)中所述）。
 
+如需使用 Visual Studio 進行本端開發的相關資訊，請參閱[使用 Visual Studio 開發](../../starters/deploy_vs.html){: new_window}。
+
 ## 推送已發佈的應用程式
 
-如果您要應用程式包含其所有必要的二進位檔，讓建置套件不需要下載任何外部二進位檔，則可以推送已發佈的*自行包含* 應用程式。如需自行包含應用程式的相關資訊，請參閱 [.Net Core 中的可攜性類型](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}。
+如果您要應用程式包含其所有必要的二進位檔，讓建置套件不需要下載任何外部二進位檔，則可以推送已發佈的*自行包含* 應用程式。如需自行包含應用程式的相關資訊，請參閱 [.NET 核心應用程式類型](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}。
 
 若要發佈應用程式，請發出指令，例如：
 ```
@@ -103,7 +105,7 @@ project = src/MyApp.Web/MyApp.Web.xproj
 ```
 {: codeblock}
 
-## 使用 cli-samples 儲存庫中的範例和 Visual Studio 範本
+## 配置要在適當埠接聽的應用程式
 
 建置套件將使用 *dotnet run* 指令來執行您的應用程式，以及傳遞下列指令行引數：
 ```
@@ -123,20 +125,32 @@ project = src/MyApp.Web/MyApp.Web.xproj
     var config = new ConfigurationBuilder() //ADD THESE 3 LINES AT THE TOP OF THE MAIN METHOD
         .AddCommandLine(args)
         .Build();
-    
+
     var host = new WebHostBuilder()
         .UseKestrel()
         .UseConfiguration(config) //ADD THIS LINE BEFORE 'UseStartup'
-        .UseStartup&lt;Startup&gt;()  
-        .Build();
+        .UseStartup&lt;Startup&gt;()        .Build();
     host.Run();
 }
-</pre>  
+</pre>
 {: codeblock}
 
 將下列相依關係新增至 project.json： 
 ```
-"Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+```
+{: codeblock}
+
+將下列內容新增至 project.json 的 `buildOptions` 區段：
+```
+  "copyToOutput": {
+    "include": [
+      "wwwroot",
+      "Areas/**/Views",
+      "Views",
+      "appsettings.json"
+    ]
+  }
 ```
 {: codeblock}
 
@@ -145,6 +159,20 @@ project = src/MyApp.Web/MyApp.Web.xproj
 using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
+
+在 Startup.cs `Startup` 方法中，移除下列一行：
+```
+  .SetBasePath(env.ContentRootPath)
+```
+{: codeblock}
+
+在 Program.cs `Main` 方法中，移除下列一行：
+```
+  .UseContentRoot(Directory.GetCurrentDirectory())
+```
+{: codeblock}
+
+這些變更應該容許 .NET CLI 尋找應用程式的 `Views`，因為當 `dotnet run` 指令執行時，它們將立即複製至建置輸出。如果您的應用程式具有運行環境需要的任何其他檔案（例如 json 配置檔），您也應該將那些檔案新增至 project.json 檔案中 `copyToOutput` 的 `include` 區段。
 
 # 相關鏈結
 {: #rellinks}

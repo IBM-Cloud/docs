@@ -12,7 +12,7 @@ copyright:
 # Valori predefiniti dei pacchetti di build
 {: #buildpack_defauts}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 10 giugno 2016
 {: .last-updated}
 
 Il pacchetto di build Liberty viene aggiornato frequentemente in Bluemix. Ogni release può contenere delle correzioni per la protezione o dei miglioramenti delle funzioni.
@@ -35,7 +35,7 @@ Il pacchetto di build fornisce due versioni del runtime Liberty:
   * Non fornisce alcuna [funzione beta](usingBetaFeatures.html).
   * Normalmente aggiornato su base trimestrale.
 
-2. L'ultima release beta.
+2. La release mensile
   * Deve essere abilitata esplicitamente impostando la variabile di ambiente **JBP_CONFIG_LIBERTY** con il valore **"version: +"**.
   * Fornisce le [funzioni beta](usingBetaFeatures.html).
   * Normalmente aggiornata su base mensile.

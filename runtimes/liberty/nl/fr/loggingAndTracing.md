@@ -12,7 +12,7 @@ copyright:
 # Journalisation et traçage
 {: #logging_tracing}
 
-*Dernière mise à jour : 21 juin 2016*
+Dernière mise à jour : 21 juin 2016
 {: .last-updated}
 
 ## Fichiers journaux

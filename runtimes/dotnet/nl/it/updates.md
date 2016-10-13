@@ -8,12 +8,25 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Aggiornamenti più recenti al pacchetto di build ASP.NET Core 
+# Aggiornamenti più recenti al pacchetto di build ASP.NET Core
 {: #latest_updates}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 26 agosto 2016
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build aspnet.
+
+## 31 agosto, 2016: aggiornamento del pacchetto di build ASP.NET Core v1.0-20160826-1345
+
+* Aggiunto supporto per l'esecuzione pre e post compilazione degli script utilizzando NPM e Bower per installare le librerie css e javascript di front-end.
+* Spostato il pacchetto di build dallo stato Beta allo stato GA
+
+## 11 luglio, 2016: aggiornamento del pacchetto di build ASP.NET Core v0.9-20160706-1603
+
+Questa versione del pacchetto di build include le seguenti modifiche:
+
+* Questa versione del pacchetto di build supporta la CLI .NET 1.0 Preview 2 build e .NET Core 1.0 RTM
+* Il pacchetto di build continua a supportare la CLI .NET 1.0 Preview 1 e .NET Core 1.0 RC2
+* La versione della CLI .NET predefinita da installare è ora 1.0.0-preview2-003121
 
 ## 10 giugno, 2016: aggiornamento del pacchetto di build ASP.NET Core v0.8.1-20160526-0957
 

@@ -11,7 +11,7 @@ copyright:
 # Utilizzo delle funzioni beta
 {: #using_beta_features}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 10 giugno 2016
 {: .last-updated}
 
 Le funzioni beta Liberty forniscono un accesso anticipato ai nuovi modelli di funzionalità e
@@ -30,19 +30,10 @@ Funzioni beta Liberty disponibili in Bluemix
 
 <tr>
 <td>bluemixLogCollector-1.1</td>
-<td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
 <td>logstashCollector-1.1</td>
-</tr>
-
-<tr>
 <td>osgiBundle-1.0</td>
-<td>passwordUtilities-1.0</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
-
 </table>
 
 Per utilizzare le funzioni beta Liberty in Bluemix devi fare quanto segue:
@@ -52,7 +43,7 @@ Per utilizzare le funzioni beta Liberty in Bluemix devi fare quanto segue:
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
-            <feature>passwordUtilities-1.0</feature>
+            <feature>bluemixLogCollector-1.1</feature>
         </featureManager>
     </server>
 ```
@@ -72,7 +63,7 @@ di installare e abilitare le funzioni beta per la tua applicazione.  Ad esempio:
           IBM_LIBERTY_BETA: "true"
 ```
 
-3. Imposta la variabile di ambiente **JBP_CONFIG_LIBERTY** su **"version: +"**. Questa variabile abilita il [Runtime beta Liberty](buildpackDefaults.html#liberty_versions) il quale supporta le funzioni beta. Ad esempio:
+3. Imposta la variabile di ambiente **JBP_CONFIG_LIBERTY** su **"version: +"**. Questa variabile abilita il [Runtime mensile Liberty](buildpackDefaults.html#liberty_versions) il quale supporta le funzioni beta. Ad esempio:
   * utilizzando lo strumento di riga di comando cf:
 ```
        $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"

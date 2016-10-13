@@ -11,9 +11,14 @@ copyright:
 # ASP.NET 核心 buildpack 的最新更新
 {: #latest_updates}
 
-*上次更新时间：2016 年 7 月 7 日*
+上次更新时间：2016 年 8 月 26 日
 
 aspnet buildpack 中最新更新的列表。
+
+## 2016 年 8 月 31 日：更新了 ASP.NET 核心 buildpack V1.0-20160826-1345
+
+* 添加了如下支持：使用 NPM 和 Bower 运行前期和后期编译脚本，以安装前端 javascript 和 css 库。
+* 将 buildpack 从 Beta 状态移为 GA 状态
 
 ## 2016 年 7 月 11 日：更新了 ASP.NET 核心 buildpack V0.9-20160706-1603
 

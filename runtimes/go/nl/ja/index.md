@@ -12,7 +12,7 @@ copyright:
 
 # Go
 {: #go_runtime}
-*最終更新日: 2016 年 7 月 6 日*
+最終更新日: 2016 年 7 月 6 日
 
 {{site.data.keyword.Bluemix}} の Go ランタイムには go_buildpack が採用されています。
 go_buildpack は、Go アプリケーションのための完全なランタイム環境を提供します。

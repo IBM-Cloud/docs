@@ -11,7 +11,7 @@ copyright:
 # Customizando o JRE
 {: #customizing_jre}
 
-*Última atualização: 10 de junho de 2016*
+Última atualização: 15 de agosto de 2016
 {: .last-updated}
 
 Os aplicativos são executados em um Java Runtime
@@ -24,7 +24,9 @@ customizar as opções da JVM ou sobrepor as funções do JRE.
 Por padrão, os aplicativos são configurados
 para executar com uma versão leve do IBM JRE. Esse
 JRE leve é dividido para fornecer função principal essencial com um disco
-e área de cobertura da memória muito reduzidos. Para obter informações adicionais sobre o conteúdo do JRE leve, veja [Liberty for Java Runtime](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html).
+e área de cobertura da memória muito reduzidos. Para obter mais informações sobre o
+conteúdo do JRE leve, consulte
+[Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
 O
 IBM JRE versão 8 é usado, por padrão. Use a variável de ambiente JBP_CONFIG_IBMJDK para especificar uma versão alternativa do IBM JRE. Por exemplo, para usar o mais recente

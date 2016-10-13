@@ -12,7 +12,7 @@ copyright:
 
 # Liberty 的脱机方式
 {: #offline_mode}
-*上次更新时间：2016 年 7 月 20 日*
+上次更新时间：2016 年 7 月 20 日
 {: .last-updated}
 
 将 Liberty 应用程序推送到 {{site.data.keyword.Bluemix}} 后，Liberty buildpack 就可以访问 Bluemix 外部站点来获取应用程序所需的工件。下面是 Liberty buildpack 可以访问的外部站点。在 [Bluemix Dedicated](../../dedicated/index.html#dedicated) 和 [Bluemix Local](../../local/index.html#local) 环境中，可能需要将这些站点*列入白名单*。

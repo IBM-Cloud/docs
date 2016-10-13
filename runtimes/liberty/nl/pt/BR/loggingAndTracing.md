@@ -12,7 +12,7 @@ copyright:
 # Criação de Log e Rastreio
 {: #logging_tracing}
 
-*Última atualização: 21 de junho de 2016*
+Última atualização: 21 de junho de 2016
 {: .last-updated}
 
 ## Arquivos de log

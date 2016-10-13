@@ -12,7 +12,7 @@ copyright:
 
 # Liberty의 오프라인 모드
 {: #offline_mode}
-*마지막 업데이트 날짜: 2016년 7월 20일*
+마지막 업데이트 날짜: 2016년 7월 20일
 {: .last-updated}
 
 Liberty 애플리케이션이 {{site.data.keyword.Bluemix}}에 푸시되면 Liberty 빌드팩이 Bluemix의 외부에 있는 사이트에 액세스하여

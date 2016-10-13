@@ -11,15 +11,15 @@ copyright:
 # Limiti di memoria e pacchetto di build Liberty
 {: #memory_limits}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 10 giugno 2016
 {: .last-updated}
 
 Quando distribuisci un'applicazione con il pacchetto di build Liberty, è necessario specificare
 un limite di memoria.
 
-**Prevenzione dei problemi**
+## Prevenzione dei problemi
 
-* Potrebbe non essere stato possibile distribuire
+Potrebbe non essere stato possibile distribuire
 ed eseguire correttamente un servlet "Hello World" distribuito con il pacchetto di build
 Liberty con un limite di memoria di 256 MB. Se viene distribuito, la sua esecuzione
 è prossima al limite di 256M. Valuta una specifica di un minimo di 512M come

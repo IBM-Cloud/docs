@@ -13,8 +13,18 @@ copyright:
 
 ## Eine Liste mit den neuesten Aktualisierungen im Liberty-Buildpack.
 
-*Letzte Aktualisierung: 20. Juli 2016*
+Letzte Aktualisierung: 13. September 2016
 {: .last-updated}
+
+### September 16, 2016: Updated Liberty buildpack v3.3-20160912-1729
+* Die Standardversion der Liberty-Laufzeit wurde auf Release [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) aktualisiert. Die monatliche Liberty-Laufzeit wurde auf das Release [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) aktualisiert. Mit diesen Aktualisierungen stehen die Liberty-Features `cloudant-1.0` und `passwordUtilities-1.0`, die zuvor als Features der Betaversion verfügbar waren, nun als für die Produktion einsatzbereite Features zur Verfügung. 
+* Das Buildpack enthält ferner eine aktualisierte Version der IBM JRE 8.0: SR3 FP11.
+* Das Buildpack wurde so angepasst, dass es den aktuellsten 1.4.x [MariaDB Connector/J JDBC-Treiber](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) herunterlädt, wenn aufgrund eines Problems mit dem aktuellen 1.5.x-Treiber eine [Autokonfiguration für den Servicetyp MySQL](autoConfig.html) ausgeführt wird. 
+
+### August 26, 2016: Updated Liberty buildpack v3.2-20160822-2200
+* Das Buildpack enthält aktualisierte Versionen von IBM JRE: 8 SR3 FP10 und 7.1 SR3 FP50.
+* Die monatliche Liberty-Laufzeitversion wurde auf das Release [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/) aktualisiert. 
+* Das Service-Plug-in, das [Unterstützung für die automatische Konfiguration](autoConfig.html) für den Service [SQL Database](../../services/SQLDB/index.html#SQLDB) bereitstellt, wurde aktualisiert, damit die vertrauenswürdigen Zertifikate der JVM immer verwendet werden, wenn eine Verbindung zum Service über TLS hergestellt wird.
 
 ### 22. Juli 2016: Liberty-Buildpack v3.1-20160717-2254 aktualisiert
 * Die Funktion [App-Management](../../manageapps/app_mng.html) wurde aktualisiert und unterstützt jetzt die eingebundene Authentifizierung. Die Node.js-Laufzeit, die von den Dienstprogrammen `devconsole` und `shell` verwendet wird, wurde auf die neueste Version `0.12.15` aktualisiert. 
@@ -24,7 +34,7 @@ copyright:
 * Die monatliche Liberty-Laufzeitversion wurde auf das Release [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/) aktualisiert.
 
 ### 17. Juni 2016: Liberty-Buildpack v3.0-20160608-1450 aktualisiert
-* Das Buildpack enthält jetzt zwei Versionen von WebSphere Liberty, das neueste stabile Release und das neueste monatliche Release. Konkret handelt es sich um das stabile Release [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) und das monatliche Realease [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). Standardmäßig wird das stabile Release verwendet. Weitere Details finden Sie in [Liberty-Versionen](buildpackDefaults.html#liberty_versions). 
+* Das Buildpack enthält jetzt zwei Versionen von WebSphere Liberty, das neueste stabile Release und das neueste monatliche Release. Konkret handelt es sich um das stabile Release [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) und das monatliche Release [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). Standardmäßig wird das stabile Release verwendet. Weitere Details finden Sie in [Liberty-Versionen](buildpackDefaults.html#liberty_versions). 
 * Das Buildpack enthält Sicherheitskorrekturen für die [Sicherheitslücke in Apache Standard Taglibs](http://www-01.ibm.com/support/docview.wss?uid=swg21985531).
 
 ### 25. Mai 2016: Liberty-Buildpack v2.9-20160519-1249 aktualisiert

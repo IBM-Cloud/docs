@@ -11,10 +11,26 @@ copyright:
 # Atualizações mais recentes para o buildpack sdk-for-nodejs
 {: #latest_updates}
 
-*Última atualização: 18 de julho de 2016*
+Última atualização: 26 de agosto de 2016
 {: .last-updated}
 
 Uma lista das atualizações mais recentes no buildpack sdk-for-nodejs.
+## 26 de agosto de 2016: atualizado o buildpack do Node.js v3.7-20160826-1101
+Esta liberação do buildpack suporta as versões de runtime do IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2 e 6.4.0. O padrão agora é 4.5.0.
+
+Esta liberação inclui correções de erro, inclusive aquelas do
+[buildpack
+1.5.18 do Node.js do Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18).
+
+A liberação remove o suporte do manipulador de gerenciamento de app strongpm conforme anunciado em
+[Bluemix
+Node.js Buildpack v3.3 – modo FIPS e mais](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
+
+Observe que há um problema conhecido ao usar o Node.js 6.x e o
+[Modo de desenvolvimento](../../manageapps/app_mng.html#devmode). Como
+solução alternativa, será necessário remontar seu aplicativo depois de ativar o modo de
+desenvolvimento para poder começar a utilizá-lo.
+
 ## 22 de julho de 2016: atualizado o buildpack do Node.js v3.6-20160715-0749
 Esta liberação do buildpack suporta as versões de runtime do IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 e 6.2.2. O padrão agora é 4.4.7.
 

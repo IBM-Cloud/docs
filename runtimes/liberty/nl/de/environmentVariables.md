@@ -13,7 +13,7 @@ copyright:
 # Umgebungsvariablen
 {: #environment_variables}
 
-*Letzte Aktualisierung: 10. Juni 2016*
+Letzte Aktualisierung: 10. Juni 2016
 {: .last-updated}
 
 Von Liberty for Java unterstützte Umgebungsvariablen

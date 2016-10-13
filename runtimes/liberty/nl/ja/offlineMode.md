@@ -12,7 +12,7 @@ copyright:
 
 # Liberty のオフライン・モード
 {: #offline_mode}
-*最終更新日: 2016 年 7 月 20 日*
+最終更新日: 2016 年 7 月 20 日
 {: .last-updated}
 
 Liberty アプリケーションが {{site.data.keyword.Bluemix}} にプッシュされると、Liberty ビルドパックは Bluemix の外部のサイトにアクセスして、アプリケーションに必要な成果物を取得できます。Liberty ビルドパックによるアクセスが可能な外部サイトを以下に示します。[Bluemix Dedicated](../../dedicated/index.html#dedicated) および [Bluemix Local](../../local/index.html#local) の環境では、これらのサイトは*ホワイトリスト*に登録されていることが必要な場合があります。

@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*最終更新日: 2016 年 7 月 13 日*
+最終更新日: 2016 年 7 月 13 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Tomcat ランタイムには java_buildpack が採用されています。
@@ -20,7 +20,8 @@ copyright:
 
 {{site.data.keyword.Bluemix}} で Tomcat ランタイムを使用するには、-b オプションを使用して java_buildpack を指定する必要があります。例えば、次のように指定します。
 <pre>
-cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack</pre>
+    cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+</pre>
 
 Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md) を参照してください。
 
@@ -36,7 +37,7 @@ Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](http
 アプリケーションで使用する Java のバージョンは、JBP_CONFIG_OPEN_JDK_JRE 環境変数を使用して変更できます。
 これらはいずれも、アプリケーションのマニフェスト・ファイルで指定できます。例えば、次のように指定します。
 ```
-env:
+    env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```

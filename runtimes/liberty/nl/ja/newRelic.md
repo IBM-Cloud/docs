@@ -11,7 +11,7 @@ copyright:
 # New Relic の使用
 {: #new_relic}
 
-*最終更新日: 2016 年 6 月 10 日*
+最終更新日: 2016 年 6 月 10 日
 {: .last-updated}
 
 New Relic は、アプリケーションのモニタリング・メトリックを提供するサード・パーティーのサービスです。New Relic サービスが提供する内容について詳しくは、[New
@@ -26,7 +26,7 @@ Relic](http://newrelic.com/java)を参照してください。
 Liberty ビルドパックがアプリケーション用に生成したサンプル構成は以下のようになります。
 
 ```
--javaagent:/home/vcap/app/.new_relic_agent/new_relic_agent-3.12.0.jar
+    -javaagent:/home/vcap/app/.new_relic_agent/new_relic_agent-3.12.0.jar
     -Dnewrelic.home=/home/vcap/app/.new_relic_agent
     -Dnewrelic.config.license_key=123456
     -Dnewrelic.config.app_name=myapp
@@ -41,7 +41,8 @@ IBM Bluemix 内で既存の Java アプリケーションを New Relic でモニ
 1. IBM Bluemix に New Relic サービス・インスタンスを作成します。
 
   <pre>
-$ cf create-service newrelic standard mynewrelic  </pre>
+    $ cf create-service newrelic standard mynewrelic
+  </pre>
   {: codeblock}
 
 2. New Relic サービスを使用してアプリケーションを IBM Bluemix にデプロイします。以下のサンプル・アプリケーション・マニフェストを参照してください。
@@ -70,15 +71,15 @@ $ cf create-service newrelic standard mynewrelic  </pre>
 1. 既存のライセンス・キーを使用してユーザー提供のサービス・インスタンスを作成します。例えば、既存のライセンス・キーが 1234567 の場合、「create-user-provided-service」に CF CLI を使用して、以下のプロンプトでライセンス・キー 1234567 を入力できます。
 
   ```
-$ cf create-user-provided-service mynewrelic -p "licenseKey"
+    $ cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
-```
+  ```
   {: codeblock}
 
 2. ユーザー提供の New Relic サービス・インスタンスを使用してアプリケーションを IBM Bluemix にデプロイします。ユーザー提供の New Relic サービス・インスタンスを使用するサンプル・アプリケーション・マニフェストは以下のようになります。
   <pre>
         &dash;&dash;&dash;
-applications:
+        applications:
         - name: myapp
          memory: 1G
          instances: 1
