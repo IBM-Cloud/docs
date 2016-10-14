@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-Last Updated: 29 August 2016
+Last Updated: 15 September 2016
 {: .last-updated}
 
 The Node.js runtime on {{site.data.keyword.Bluemix}} is powered by the sdk-for-nodejs buildpack.
@@ -65,12 +65,11 @@ Use this information to facilitate running your Node.js application both locally
 
 The following example shows part of the source for an **js** file:
 ```
-var port = (process.env.VCAP_APP_PORT || 3000);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var port = (process.env.PORT || 3000);
 ```
 {: codeblock}
 
-With this code, when the application is running on Bluemix, the VCAP_APP_HOST and VCAP_APP_PORT environment variables contain the host and port values which are internal to Bluemix, and on which the app listens for incoming connections. When the application is running locally, VCAP_APP_HOST and VCAP_APP_PORT are not defined so **localhost** is used as the host and **3000** is used as the port number. Written this way, you can run the application locally for testing purposes and on Bluemix without making further changes.
+With this code, when the application is running on Bluemix, the PORT environment variable contains the port value which is internal to Bluemix, and on which the app listens for incoming connections. When the application is running locally, PORT is not defined so **3000** is used as the port number. Written this way, you can run the application locally for testing purposes and on Bluemix without making further changes.
 
 ## Offline mode
 {: #offline_mode}
@@ -85,7 +84,7 @@ See [Offline mode](offlineMode.html) for information on controlling the buildpac
 
 {{site.data.keyword.Bluemix}} provides all the [currently available Node.js runtimes](http://nodejs.org/dist/). Of those, IBM provides versions which contain enhancements and bug fixes. See [Latest Updates to the Node.js Buildpack](../../runtimes/nodejs/updates.html) for more information.
 
-The IBM Node.js buildpack caches all the IBM runtime versions. So if you use IBM SDK for Node.js runtime in your application, you get faster application performance when your application is pushed to Bluemix.
+The IBM Node.js buildpack caches the IBM runtime versions. So if you use IBM SDK for Node.js runtime in your application, you get faster application performance when your application is pushed to Bluemix.
 
 Use the **node** parameter in the **engines** section in the **package.json** file to specify the version of Node.js runtime that you want to run.
 
