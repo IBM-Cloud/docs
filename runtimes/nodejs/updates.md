@@ -11,10 +11,15 @@ copyright:
 # Latest Updates to the sdk-for-nodejs buildpack
 {: #latest_updates}
 
-Last Updated: 26 August 2016
+Last Updated: 7 October 2016
 {: .last-updated}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+## October 7, 2016: Updated Node.js buildpack v3.8-20161006-1211
+This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.46, 0.10.47, 0.12.15, 0.12.16, 4.5.0, 4.6.0, 6.6.0, and 6.7.0. The default is now 4.6.0.
+
+In addition to the new runtimes, this release contains buildpack bug fixes. A fix for the known issue when using Node.js 6.x and Development Mode that was mentioned in the v3.7-20160826-1101 release updates is one of them. It is also synchronized with the [Cloud Foundry Node.js buildpack v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20). 
+
 ## August 26, 2016: Updated Node.js buildpack v3.7-20160826-1101
 This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2, and 6.4.0. The default is now 4.5.0.
 
