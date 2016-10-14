@@ -13,7 +13,7 @@ copyright:
 # Managing translations
 {: #globalizationpipeline_managingtranslations}
 
-*Last updated: 13 July 2016*
+*Last updated: 14 Oct 2016*
 {: .last-updated}
 
 Once you have created bundles and started generating translations for your application, the machine generated content can be used as is or further modified. You can also choose to use a machine translation other than the default. This section describes how to change the machine translation engine that performs the translations for your bundles, how to perform human post-translation editing, and also how you can assign user roles and access restrictions to the people that will need to access to your translations.
@@ -26,7 +26,7 @@ Once you have created bundles and started generating translations for your appli
 
 To add and configure an alternative machine translation service for {{site.data.keyword.GlobalizationPipeline_short}}, select the **Machine Translation Configuration** tab from the {{site.data.keyword.GlobalizationPipeline_short}} dashboard.
 
-* To add a machine translation service that is in the {{site.data.keyword.Bluemix_notm}} catalog, (**Watson Language Translation**), the service must first be added to your {{site.data.keyword.Bluemix_notm}} space.
+* To add a machine translation service that is in the {{site.data.keyword.Bluemix_notm}} catalog, (**Watson Language Translator**), the service must first be added to your {{site.data.keyword.Bluemix_notm}} space.
 
 * To add a third party service, select the button for that service on the **Machine Translation Configuration** tab and provide the user credentials required to access the service.
 
