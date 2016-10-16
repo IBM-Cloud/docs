@@ -61,16 +61,20 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 -->
 
 # 相关链接
+{: #rellinks}
 ## 样本
+{: #samples}
 * [交互式 Decahose 搜索演示](https://cdetestapp.mybluemix.net/){: new_window}
 * [developerWorks：Decahose 搜索演示的教程和源代码](http://www.ibm.com/developerworks/cloud/library/cl-twitter-search-insights-bluemix-trs/index.html){: new_window}
 * [分析“美国狙击手”票房数据 (YouTube)](https://www.youtube.com/watch?v=Gfk5quglXvI){: new_window}
 * [设置 Insights 动手实验室](https://github.com/IBM-Bluemix/places-insights-lab){: new_window}
 
-## api
+## API
+{: #api}
 * [REST API](https://cdeservice.{APPDomain}/rest-api/){: new_window}
 
-## 兼容的运行时 {:id="buildpacks"}
+## 兼容运行时 
+{: #buildpacks}
 * [Go](https://console.{DomainName}/docs/runtimes/go/index.html){: new_window}
 * [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html){: new_window}
 * [Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html){: new_window}
@@ -80,7 +84,8 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 * [Swift](https://console.{DomainName}/docs/runtimes/swift/index.html){: new_window}
 * [Tomcat](https://console.{DomainName}/docs/runtimes/tomcat/index.html){: new_window}
 
-## 常规
+## 一般信息
+{: #general}
 * [{{site.data.keyword.Bluemix_notm}} 服务中的新增功能](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){: new_window}
 * [向应用程序添加服务](../reqnsi.html){: new_window}
 * [端到端开发](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}

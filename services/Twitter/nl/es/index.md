@@ -64,16 +64,20 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 -->
 
 # rellinks
-## ejemplos
+{: #rellinks}
+## Ejemplos
+{: #samples}
 * [Demo de búsqueda de decahose interactiva](https://cdetestapp.mybluemix.net/){: new_window}
 * [developerWorks: Guía de aprendizaje y código fuente para la demo de búsqueda de decahose](http://www.ibm.com/developerworks/cloud/library/cl-twitter-search-insights-bluemix-trs/index.html){: new_window}
 * [Análisis de los datos de taquilla de "El francotirador" (YouTube)](https://www.youtube.com/watch?v=Gfk5quglXvI){: new_window}
 * [Places Insights hands-on lab](https://github.com/IBM-Bluemix/places-insights-lab){: new_window}
 
 ## api
+{: #api}
 * [API REST](https://cdeservice.{APPDomain}/rest-api/){: new_window}
 
-## tiempos de ejecución compatibles{:id="buildpacks"}
+## Nodos de ejecución compatibles
+{: #buildpacks}
 * [Ir](https://console.{DomainName}/docs/runtimes/go/index.html){: new_window}
 * [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html){: new_window}
 * [Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html){: new_window}
@@ -83,7 +87,8 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 * [Swift](https://console.{DomainName}/docs/runtimes/swift/index.html){: new_window}
 * [Tomcat](https://console.{DomainName}/docs/runtimes/tomcat/index.html){: new_window}
 
-## general
+## General
+{: #general}
 * [Novedades en {{site.data.keyword.Bluemix_notm}} Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){: new_window}
 * [Adición de un servicio a la aplicación](../reqnsi.html){: new_window}
 * [Desarrollo completo](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
