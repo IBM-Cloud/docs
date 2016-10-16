@@ -62,28 +62,31 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 -->
 
 # rellinks
-## SAMPLEs
+{: #rellinks}
+## amostras
+{: #samples}
 * [Demo de procura do decahose interativo](https://cdetestapp.mybluemix.net/){: new_window}
 * [developerWorks: tutorial e código-fonte do demo de procura do decahose](http://www.ibm.com/developerworks/cloud/library/cl-twitter-search-insights-bluemix-trs/index.html){: new_window}
 * [Analisando os dados de bilheteria de "Sniper americano" (YouTube)](https://www.youtube.com/watch?v=Gfk5quglXvI){: new_window}
 * [Aulas práticas em laboratório do Places Insights](https://github.com/IBM-Bluemix/places-insights-lab){: new_window}
 
-## api
-* [API REST
-](https://cdeservice.{APPDomain}/rest-api/){: new_window}
+## API
+{: #api}
+* [API REST](https://cdeservice.{APPDomain}/rest-api/){: new_window}
 
-## tempos de execução compatíveis {:id="buildpacks"}
+## tempos de execução compatíveis
+{: #buildpacks}
 * [Ir](https://console.{DomainName}/docs/runtimes/go/index.html){: new_window}
 * [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html){: new_window}
 * [Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html){: new_window}
 * [PHP](https://console.{DomainName}/docs/runtimes/php/index.html){: new_window}
 * [Python](https://console.{DomainName}/docs/runtimes/python/index.html){: new_window}
 * [Ruby](https://console.{DomainName}/docs/runtimes/ruby/index.html){: new_window}
-* [Swift
-](https://console.{DomainName}/docs/runtimes/swift/index.html){: new_window}
+* [Swift](https://console.{DomainName}/docs/runtimes/swift/index.html){: new_window}
 * [Tomcat ](https://console.{DomainName}/docs/runtimes/tomcat/index.html){: new_window}
 
 ## gerais
+{: #general}
 * [O que há de novo nos serviços do {{site.data.keyword.Bluemix_notm}}](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){: new_window}
 * [Incluindo um serviço em seu aplicativo](../reqnsi.html){: new_window}
 * [Desenvolvimento de ponta a ponta](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}

@@ -61,16 +61,20 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 -->
 
 # 相關鏈結
+{: #rellinks}
 ## 範例
+{: #samples}
 * [互動式 decahose 搜尋展示](https://cdetestapp.mybluemix.net/){: new_window}
 * [developerWorks：decahose 搜尋展示的指導教學及原始碼](http://www.ibm.com/developerworks/cloud/library/cl-twitter-search-insights-bluemix-trs/index.html){: new_window}
 * [分析 "American Sniper" 票房資料 (YouTube)](https://www.youtube.com/watch?v=Gfk5quglXvI){: new_window}
 * [Places Insights 上機實驗](https://github.com/IBM-Bluemix/places-insights-lab){: new_window}
 
 ## API
+{: #api}
 * [REST API](https://cdeservice.{APPDomain}/rest-api/){: new_window}
 
-## 相容的運行環境 {:id="buildpacks"}
+## 相容的運行環境
+{: #buildpacks}
 * [Go](https://console.{DomainName}/docs/runtimes/go/index.html){: new_window}
 * [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html){: new_window}
 * [Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html){: new_window}
@@ -81,6 +85,7 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 * [Tomcat](https://console.{DomainName}/docs/runtimes/tomcat/index.html){: new_window}
 
 ## 一般
+{: #general}
 * [{{site.data.keyword.Bluemix_notm}} 服務的新增內容](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){: new_window}
 * [將服務新增至您的應用程式](../reqnsi.html){: new_window}
 * [端對端開發](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}

@@ -61,16 +61,20 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 -->
 
 # 관련 링크
+{: #rellinks}
 ## 샘플
+{: #samples}
 * [대화식 Decahose 검색 데모](https://cdetestapp.mybluemix.net/){: new_window}
 * [developerWorks: Decahose 검색 데모에 대한 학습서 및 소스 코드](http://www.ibm.com/developerworks/cloud/library/cl-twitter-search-insights-bluemix-trs/index.html){: new_window}
 * ["American Sniper" 박스 오피스 데이터 분석 (유튜브)](https://www.youtube.com/watch?v=Gfk5quglXvI){: new_window}
 * [Insights 핸즈온 랩 위치](https://github.com/IBM-Bluemix/places-insights-lab){: new_window}
 
-## API
+## api
+{: #api}
 * [REST API](https://cdeservice.{APPDomain}/rest-api/){: new_window}
 
-## 호환 가능 런타임 {:id="buildpacks"}
+## 호환 가능 런타임 
+{: #buildpacks}
 * [Go](https://console.{DomainName}/docs/runtimes/go/index.html){: new_window}
 * [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html){: new_window}
 * [Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html){: new_window}
@@ -81,6 +85,7 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 * [Tomcat](https://console.{DomainName}/docs/runtimes/tomcat/index.html){: new_window}
 
 ## 일반
+{: #general}
 * [{{site.data.keyword.Bluemix_notm}} 서비스의 새로운 기능](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){: new_window}
 * [서비스를 애플리케이션에 추가](../reqnsi.html){: new_window}
 * [엔드 투 엔드 개발](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
