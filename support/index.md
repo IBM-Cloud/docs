@@ -28,7 +28,7 @@ To open a support ticket or find other help options, you can use the Account and
 {: #using-avatar}
 The Account and Support widget enables you to check account information, view status, stay up to date with notifications, select your region, select and manage orgs, and log out. In addition, you can get help and provide feedback.
 
-To open the Account and Support widget, log in to the {{site.data.keyword.Bluemix_notm}} user interface and click the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) in the menu bar.
+To open the Account and Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console and click the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) in the menu bar.
 
 Click **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
 
@@ -68,7 +68,7 @@ On the Status page, you can find the following information:
 
 You can find the Status page by choosing either of the following options:
 
-  * Log in to the {{site.data.keyword.Bluemix_notm}} user interface, click the {{site.data.keyword.avatar}} icon ![Avatar icon](./images/account_support.svg) in the menu bar, and then click **Status**. Check the listed resources for the ![some issues](images/some_issues.svg) icon. This icon might indicate an outage.
+  * Log in to the {{site.data.keyword.Bluemix_notm}} console, click the {{site.data.keyword.avatar}} icon ![Avatar icon](./images/account_support.svg) in the menu bar, and then click **Status**. Check the listed resources for the ![some issues](images/some_issues.svg) icon. This icon might indicate an outage.
   * Access it directly at [IBM {{site.data.keyword.Bluemix_notm}} - System Status](http://ibm.biz/bluemixstatus){: new_window}.
 
 
@@ -145,7 +145,7 @@ For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform noti
 
 You can open support tickets if you have a valid {{site.data.keyword.Bluemix_notm}} account. 
 
-If you have a {{site.data.keyword.Bluemix_notm}} account linked with a SoftLayer account, you can open support tickets for {{site.data.keyword.Bluemix_notm}} from the SoftLayer Customer portal or from the {{site.data.keyword.Bluemix_notm}} user interface.
+If you have a {{site.data.keyword.Bluemix_notm}} account linked with a SoftLayer account, you can open support tickets for {{site.data.keyword.Bluemix_notm}} from the SoftLayer Customer portal or from the {{site.data.keyword.Bluemix_notm}} console.
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
@@ -197,7 +197,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer in a country 
 </li>
 <li>If you have an IBMid and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the {{site.data.keyword.avatar}} icon <img src="images/account_support.svg" alt="Avatar icon" /> in the menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
 <li>If you don't have an IBMid, you can contact someone in your organization who does have one, or work with your IBM representative.
-<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Dedicated environment.</p></li>
+<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} console in your Dedicated environment.</p></li>
 </ul>
 
 If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer in China, you can request support from the [UNISYS Service Management IBM Bluemix page](https://chinabluemix.itsm.unisysedge.cn){: new_window}. In addition, customers in China can get free support at [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
@@ -217,7 +217,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Local customer, support is provi
 </li>
 <li>If you have an IBMid and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the {{site.data.keyword.avatar}} icon <img src="images/account_support.svg" alt="Avatar icon" /> in the menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
 <li>If you don't have an IBMid, you can contact someone in your organization who does have one, or work with your IBM representative.
-<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Local environment.</p></li>
+<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} console in your Local environment.</p></li>
 </ul>
 
 
