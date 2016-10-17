@@ -7,7 +7,7 @@ copyright:
 
 #Enabling iOS applications to receive and send {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-Last updated: 22 September 2016
+Last updated: 12 October 2016
 {: .last-updated}
 
 You can enable iOS applications to receive and send {{site.data.keyword.mobilepushshort}} to your devices.
@@ -359,4 +359,4 @@ After you have successfully set up basic notifications, you can configure config
 
 Add these Push Notifications Service features to your app.
 To use tag-based notifications, see [Tag-based Notifications](c_tag_basednotifications.html).
-To use advanced notifications options, see [Advanced push notifications](t_advance_notifications.html).
+To use advanced notifications options, see [Enabling advanced push notifications](t_advance_badge_sound_payload.html).
