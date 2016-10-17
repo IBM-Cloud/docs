@@ -2,23 +2,23 @@
 
 copyright:
   years: 2016
-lastupdated:  "2016-09-12"
+lastupdated:  "2016-10-14"
 ---
 
-#	Using the Professional 1 Application plan
-{: #using_mobilefoundation_p2}
+#	Using the Professional Per Capacity plan
+{: #using_mobilefoundation_p4}
 
 <!--Last updated: 12 September 2016
-{: .last-updated}-->
+{: .last-updated} -->
 
-With the Professional 1 Application plan users can create 1 mobile application with multiple mobile operating systems.
-After you create the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service instance, read the following procedure to get started with the service.
+With the Professional Per Capacity plan users can create any number of mobile applications with multiple mobile operating systems.
+After you create the {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity service instance, read the following procedure to get started with the service.
 
 ## Pre-requisites
-{: #prerequisites_p2}
+{: #prerequisites_p4}
 
-Consider the following before you configure  {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service instance.
-* {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application is supported only with {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional (supporting OLTP) {{site.data.keyword.Bluemix_notm}} plans.
+Consider the following before you configure  {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity service instance.
+* {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity is supported only with {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional (supporting OLTP) {{site.data.keyword.Bluemix_notm}} plans.
 
 * You should have access to the {{site.data.keyword.dashdbshort_notm}} service instance credentials before you can configure the settings of your {{site.data.keyword.mobilefoundation_short}} service instance.
 
@@ -26,17 +26,17 @@ Consider the following before you configure  {{site.data.keyword.mobilefoundatio
 
 
 ## Adding the database connection
-{: #configure_dashdb_p2}
+{: #configure_dashdb_p4}
 
 ###  First steps
-{: #firststeps_p2}
+{: #firststeps_p4}
 
-After you create the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service instance, follow the procedure below to get started.
+After you create the {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity service instance, follow the procedure below to get started.
 
 ### Setting up connection to {{site.data.keyword.dashdbshort_notm}} service instance
-{: #connect_dashdb_p2}
+{: #connect_dashdb_p4}
 
-After the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service instance is created you will see the *Overview* page where you will need to specify the connection information for the {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional service instance.
+After the {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity service instance is created you will see the *Overview* page where you will need to specify the connection information for the {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional service instance.
 
 1. Select the {{site.data.keyword.Bluemix_notm}} `Organization` where the {{site.data.keyword.dashdbshort_notm}} service instance exists.
 
@@ -48,21 +48,21 @@ After the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Applicati
 
 +  Test the connection to the specified {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional service instance.
 
-+  Click **Continue**. This action creates the required tables in the configured {{site.data.keyword.dashdbshort_notm}} database service instance.
++  Click **Add**. This action creates the required tables in the configured {{site.data.keyword.dashdbshort_notm}} database service instance.
 
 **Note**: You cannot change the {{site.data.keyword.dashdbshort_notm}} service instance that is configured to be used by your {{site.data.keyword.mobilefoundation_short}} service instance. However, you can use the same {{site.data.keyword.dashdbshort_notm}} service instance across multiple {{site.data.keyword.mobilefoundation_short}} service instances, as each {{site.data.keyword.mobilefoundation_short}} service instance creates its own schema in the selected {{site.data.keyword.dashdbshort_notm}} service instance.
 
 * In a few seconds, you can access the `Overview` page that provides you with  tutorials and videos to help you get started with the  {{site.data.keyword.mobilefoundation_short}} service.
 
 ## Starting the {{site.data.keyword.mobilefirst}} server
-{: #start_mobilefoundation_p2}
+{: #start_mobilefoundation_p4}
 
 * To start the {{site.data.keyword.mfserver_short_notm}}, with default settings, click **Start Basic Server**.
 
 * This selection provisions an {{site.data.keyword.mfserver_long_notm}} with the following settings:
-    -  1 GB of memory. This size is enough for development, moderate testing activities and small scale production workloads.
+    -  2 nodes with 1 GB memory each. This size is good for development, moderate testing activities and small scale production workloads.
 
-    -	The `username` and `password` is automatically generated for you. You have access to them when the server is up and running.
+    -	The `username` and `password` are automatically generated for you. You have access to them when the server is up and running.
 
 The process of provisioning your server starts. This process takes about 10 minutes, and a message window indicates the progress of this operation. When complete a dashboard is displayed where you can see:
 
@@ -75,14 +75,14 @@ The process of provisioning your server starts. This process takes about 10 minu
 *	Click **Launch Console** to open the {{site.data.keyword.mfp_oc_short_notm}}.
 
 
-<!--This console runs inside the container.--> With the console you can manage your mobile apps, adapters and mobile devices, use your server as a mobile backend, send push notifications, and do more.
+<!--This console runs inside the container.--> With the console, you can manage your mobile apps, adapters, and mobile devices, use your server as a mobile backend, send push notifications, and do more.
 
 ##  Adding Mobile Analytics server
-{: #adding_analytics_server_prof}
+{: #adding_analytics_server_p4}
 
  You can now monitor your mobile application on {{site.data.keyword.mobilefirst}} server by adding a Mobile Analytics server to the {{site.data.keyword.mobilefoundation_short}} service instance.
 
- Professional plan creates the Mobile Analytics server in a container group, user can customize the configuration by selecting the number of container nodes in the container group.
+ The Professional plan creates the Mobile Analytics server in a container group, the user can customize the configuration by selecting the number of container nodes in the container group.
 
  Users can also attach volumes to the containers to persist data. The volume once selected cannot be changed. 20 GB is the default file share space available to the user. If the user needs additional storage space to persist analytics data, he is required to buy additional file share and create a volume using this file share. He can then select this new volume while deploying the analytics server.
 
@@ -90,18 +90,20 @@ The process of provisioning your server starts. This process takes about 10 minu
 
 * Click **Add Analytics** to add the Mobile Analytics server to the {{site.data.keyword.mobilefoundation_short}} service instance.
 
+* You can choose the Mobile Analytics server configuration, the minimum supported configuration for the Analytics server is 2 nodes with 1 GB memory each, you can choose to create an Analytics server up to a maximum configuration of 32 nodes with 16 GB memory each.
+
 The process of provisioning starts. This process takes about 10 minutes, and a message window indicates the progress of this operation.  
 
 * Launch the MobileFirst Analytics Console from the {{site.data.keyword.mfp_oc_short_notm}}.
 
-* Single sign-on is enabled between the {{site.data.keyword.mfserver_short_notm}} and the Mobile Analytics server. Mobile Analytics server is configured with the same LTPA keys and user credentials as the {{site.data.keyword.mfserver_short_notm}} server. You can use the same `username` and `password` to log in to the Mobile Analytics console as used to log in to the {{site.data.keyword.mfp_oc_short_notm}}.
+* Single sign-on is enabled between the {{site.data.keyword.mfserver_short_notm}} and the Mobile Analytics server. Mobile Analytics server is configured with the same LTPA keys and user credentials as the {{site.data.keyword.mfserver_short_notm}} server. You can use the same `username` and `password` to login to the Mobile Analytics console as used to login to the {{site.data.keyword.mfp_oc_short_notm}}.
 
-For more information on MobileFirst Analytics you can refer to [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/).
+For more information on MobileFirst Analytics, you can refer to [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/).
 
 **Note:** The Mobile Analytics server is removed when you delete the {{site.data.keyword.mobilefoundation_short}} service instance or when you attempt to re-create the {{site.data.keyword.mfserver_short_notm}}.
 
 ## Re-creating the {{site.data.keyword.mobilefirst}} server
-{: #recreate_mobilefoundation_p2}
+{: #recreate_mobilefoundation_p4}
 
 *	Click **Recreate** to re-create the server.
 
@@ -110,7 +112,7 @@ For more information on MobileFirst Analytics you can refer to [MobileFirst Foun
 **Note**: All the data from your previous server instance including information on the apps and adapters is persisted in the configured {{site.data.keyword.dashdbshort_notm}} service instance, this data is used to recreate your server.
 
 ##	Setting up advanced configuration
-{: #using_mfs_advanced_p2}
+{: #using_mfs_advanced_p4}
 
 Use the **Start Server with Advanced Configuration** from the `Overview` page to create the server with advanced or custom settings. You can also update the server settings to customize your server configuration by clicking the **Configuration** tab. {{site.data.keyword.mobilefoundation_short}} gives you access to some advanced settings.
 
@@ -119,6 +121,6 @@ Use the **Start Server with Advanced Configuration** from the `Overview` page to
 
   - **Nodes** displays the number of nodes that are created.
 
-      - {{site.data.keyword.mobilefirst}} server farm can be created by configuring the number of nodes here.
+      - {{site.data.keyword.mobilefirst}} server farm can be created by configuring the number of nodes here. The minimum supported configuration is 2 nodes with 1 GB memory each and the maximum supported configuration is 32 nodes with 16 GB memory each.
 
 See [{{site.data.keyword.mobilefoundation_long}} documentation](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}, for more details.
