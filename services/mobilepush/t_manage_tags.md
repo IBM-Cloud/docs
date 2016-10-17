@@ -7,7 +7,7 @@ copyright:
 
 # Managing tags
 {: #manage_tags}
-Last updated: 21 September 2016
+Last updated: 27 September 2016
 {: .last-updated}
 
 Use the {{site.data.keyword.mobilepushshort}} dashboard to create and delete tags for your application and then initiate tag-based notifications. The tag-based notification is received on devices that are subscribed to tags.
@@ -396,8 +396,9 @@ Tag-based notifications are messages targeted to all devices that are subscribed
 
 Create tags on the **Tag** screen. For information about how to create tags, see [Creating tags](t_manage_tags.html).
 
-1. From the **Push Notification** dashboard, click the **Notifications** tab.
-1. Select the **Tags** option to send tag-based notifications.
-1. In the **Search** tags field, search for the tags that want to use and then click the **+Add** button.![Notifications Screen](images/tag_notification.jpg)
+1. From the **Push Notification** dashboard, click **Send Notifications**.
+1. Select the **Device by Tag** option in the **Send To** drop-down list.
+1. Search for the tags that want to use and select them.
+![Notifications Screen](images/tag_notification.jpg)
 1. In the **Message Text** field, enter text that would be sent as a notification to the subscribed audience.
-1. Click the **Send**.
+1. Click **Send**.

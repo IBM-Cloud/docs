@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # Configuring credentials for APNs
 {: #create-push-credentials-apns}
-Last updated: 17 September 2016
+Last updated: 14 October 2016
 {: .last-updated}
 
 Apple Push Notification Service (APNs) allows application developers to send remote notifications from the {{site.data.keyword.mobilepushshort}} service instance on Bluemix (the provider) to iOS devices and applications. Messages are sent to a target application on the device. 
@@ -33,22 +33,17 @@ Obtain and configure your APNs credentials. The APNs certificates are securely m
 
 The App ID (the bundle identifier) is a unique identifier that identifies a specific application. Each application requires an App ID. Services like the {{site.data.keyword.mobilepushshort}} service are configured to the App ID.
 
-
-
 1. Make sure you have an [Apple Developers](https://developer.apple.com/) account.
 2. Go to the [Apple Developer](https://developer.apple.com) portal, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
 3. Go to the **Registering App IDs** section in the [Apple Developer Library](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991), and follow the instructions to register the App ID.
 
-	When you register an App ID, select the following options:
-	* Push Notifications
+When you register an App ID, select the following options:
 
-		![App Services](images/appID_appservices_enablepush.jpg)
-
-	* Explicit ID Suffix
-
-		![Explicit ID](images/appID_bundleID.jpg)
-
-<!--4. Create a development and distribution APNs SSL certificate.-->
+* Push Notifications
+![App Services](images/appID_appservices_enablepush.jpg)
+* Explicit ID Suffix
+![Explicit ID](images/appID_bundleID.jpg)
+4. Create a development and distribution APNs SSL certificate.
 
 ##Create a development and distribution APNs SSL certificate
 {: #create-push-credentials-apns-ssl}

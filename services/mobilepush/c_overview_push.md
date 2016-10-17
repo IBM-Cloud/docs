@@ -7,7 +7,7 @@ copyright:
 
 # About {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Last updated: 27 September 2016
+Last updated: 14 October 2016
 {: .last-updated}
 
 IBM {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android mobile devices, and to Google Chrome and Mozilla Firefox web browsers. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
@@ -20,7 +20,7 @@ The {{site.data.keyword.mobilepushshort}} service is now OpenWhisk enabled. For 
 ## {{site.data.keyword.mobilepushshort}} service process
 {: #overview_push_process}
 
-Mobile and browser clients can subscribe and register for the {{site.data.keyword.mobilepushshort}} service. On startup, the client applications will register and subscribe themselves to the {{site.data.keyword.mobilepushshort}} service. The notifications are dispatched to the Apple Push Notification Service (APNs) or Google Cloud Messaging (GCM) server and then sent to registered mobile or browser clients.
+Mobile and browser clients can subscribe and register for the {{site.data.keyword.mobilepushshort}} service. On startup, the client applications will register and subscribe themselves to the {{site.data.keyword.mobilepushshort}} service. The notifications are dispatched to the Apple Push Notification Service (APNs) or Firebase Cloud Messaging (FCM)/Google Cloud Messaging (GCM) server and then sent to registered mobile or browser clients.
 
 ![Push Overview](images/overview.jpg)
 
@@ -48,7 +48,7 @@ The {{site.data.keyword.mobilepushshort}} service manages all information relate
 ###Gateways
 {: gateways}
 
-Platform specific Push Notifications cloud services such as Google Cloud Messaging (GCM) or Apple Push Notification Service (APNs) that is used by IBM {{site.data.keyword.mobilepushshort}} service to dispatch notifications to the mobile and browser applications.
+Platform specific Push Notifications cloud services such as FCM/GCM or Apple Push Notification Service (APNs) that is used by IBM {{site.data.keyword.mobilepushshort}} service to dispatch notifications to the mobile and browser applications.
 
 ###Push Security
 {: push-security}
@@ -90,7 +90,7 @@ Notifications can be targeted to reach a particular device platform. For example
 ## {{site.data.keyword.mobilepushshort}} message size
 {: #push-message-size}
 
-The {{site.data.keyword.mobilepushshort}} message payload size is dependent on the constraints laid out by the Gateways (GCM, APNs) and client platforms. 
+The {{site.data.keyword.mobilepushshort}} message payload size is dependent on the constraints laid out by the Gateways (FCM/GCM, APNs) and client platforms. 
 
 ###iOS
 {: ios-message-size}
