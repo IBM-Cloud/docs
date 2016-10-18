@@ -341,10 +341,10 @@ This error occurs when you have exceeded the limit on the number of service inst
 Delete any services instances that are not needed, or remove the limit on the number of service instances that you can have.
 {: tsResolve}
  
-  * To delete a services instance, you can use the {{site.data.keyword.Bluemix_notm}} user interface or the command line interface.
-    To use the {{site.data.keyword.Bluemix_notm}} user interface to delete a service instance, complete the following steps:
-	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click the service that you want to delete.  The service tile displays.
-	  2. On the service tile, click the **Menu** icon.
+  * To delete a services instance, you can use the {{site.data.keyword.Bluemix_notm}} console or the command line interface.
+    To use the {{site.data.keyword.Bluemix_notm}} console to delete a service instance, complete the following steps:
+	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click the service that you want to delete.  The service card displays.
+	  2. On the service card, click the **Menu** icon.
 	  3. Click **Delete Service**. After you delete the service instance, you will be prompted to restage the application that the service instance was bound to. 
     To use the command line interface to delete a service instance, complete the following steps:
 	  1. Unbind the service instance from an application by typing `cf unbind-service <appname> <service_instance_name>`.
@@ -406,8 +406,8 @@ You can either increase the memory quota of your account, or reduce the memory t
 {: tsResolve} 
 
   * To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](../pricing/index.html#pay-accounts){: new_window}. 
-  * To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} user interface or the cf command line interface.
-    If you use the {{site.data.keyword.Bluemix_notm}} user interface, complete the following steps:
+  * To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} console or the cf command line interface.
+    If you use the {{site.data.keyword.Bluemix_notm}} console, complete the following steps:
 	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, select your application. The app details page opens.
 	  2. In the runtime pane, you can reduce the maximum memory limit or the numbers of app instances, or both, for your app. 
 	  
@@ -551,7 +551,7 @@ You might not be able to locate your organization on {{site.data.keyword.Bluemix
   
  
 
-You can log in to the {{site.data.keyword.Bluemix_notm}} user interface successfully, but you cannot push apps by using the cf command line interface or the Eclipse plug-in.
+You can log in to the {{site.data.keyword.Bluemix_notm}} console successfully, but you cannot push apps by using the cf command line interface or the Eclipse plug-in.
 {: tsSymptoms}
 
 When you try to push an application to {{site.data.keyword.Bluemix_notm}} by using the cf command line interface, you see one of the following error messages with the organization name specified in the message: 
@@ -1105,19 +1105,19 @@ This is supported behavior of the {{site.data.keyword.Bluemix_notm}} and you can
 <!-- begin STAGING ONLY --> 
 	
 	
-## Administrators can't view all orgs by using the {{site.data.keyword.Bluemix_notm}} user interface
+## Administrators can't view all orgs by using the {{site.data.keyword.Bluemix_notm}} console
 {: #ts_ui_org}
 
-As an administrator, when you use the {{site.data.keyword.Bluemix_notm}} user interface, you can't display every organization to administer them. You can display and administer only those organizations to which you belong.
+As an administrator, when you use the {{site.data.keyword.Bluemix_notm}} console, you can't display every organization to administer them. You can display and administer only those organizations to which you belong.
 
  
 
-As an administrator, you cannot see all the organizations by using the {{site.data.keyword.Bluemix_notm}} user interface.
+As an administrator, you cannot see all the organizations by using the {{site.data.keyword.Bluemix_notm}} console.
 {: tsSymptoms}
 
  
 
-This is a limitation of the {{site.data.keyword.Bluemix_notm}} user interface.
+This is a limitation of the {{site.data.keyword.Bluemix_notm}} console.
 {: tsCauses}
 
  
