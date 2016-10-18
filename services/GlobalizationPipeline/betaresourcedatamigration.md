@@ -13,7 +13,7 @@ copyright:
 # Migrating resource data from beta version
 {: #globalizationpipeline_betaresourcedatamigration}
 
-*Last updated: 13 July 2016*
+*Last updated: 14 Oct 2016*
 {: .last-updated}
 
 The beta version of {{site.data.keyword.GlobalizationPipeline_full}} will be terminated after a certain period after the release of the GA version. User data in beta instances will not be moved to GA service instances. To keep the data after GA, you can export resource data into files, then import to the new instance. Please note that you cannot perform this operation using the service dashboard. Also, exporting resource data into one of resource file format will not preserve other metadata associated with the resource entries.
@@ -82,5 +82,5 @@ Alternatively, you can copy bundle from one place to another using the command:
 The commands above extract existing bundle data and resource entry data and uploads them to the new location. During the process, some fields controlled by REST server will be updated (such as updatedBy/updatedAt field). Also, because these commands do not copy service binding and configuration data, you may need to configure MT services in the destination instance.
 
 
-For example, the beta version supports Arabic translation through Watson Language Translation. In the GA version, Arabic translation is no longer offered for free. When you port beta data to the new GA instance, already translated Arabic contents will be preserved. No change in source language will trigger Arabic translation automatically, unless you set up Watson binding to enable Arabic translation. This is also the case when the source instance is the GA version. External MT service binding is specific to a GP instance; the binding/configuration to another instance will not be ported automatically. 
+For example, the beta version supports Arabic translation through Watson Language Translator. In the GA version, Arabic translation is no longer offered for free. When you port beta data to the new GA instance, already translated Arabic contents will be preserved. No change in source language will trigger Arabic translation automatically, unless you set up Watson binding to enable Arabic translation. This is also the case when the source instance is the GA version. External MT service binding is specific to a GP instance; the binding/configuration to another instance will not be ported automatically. 
 

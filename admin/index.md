@@ -392,7 +392,7 @@ You can also view the monthly usage and associated charges at the account level 
 <ol>
 <li>Click the <strong>{{site.data.keyword.avatar}}</strong> icon ![Avatar](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Usage details</strong>.</li>
 <li>Click <strong>Public</strong>.</li>
-<li>Select the org that you want to see data for, or select <strong>All Organizations</strong> to view the data for all orgs at once.</li>
+<li>Select the org that you want to see data for.</li>
 <li>You can see usage details for the following categories:
 <ul>
 <li>Runtime apps that have usage</li>

@@ -61,16 +61,20 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 -->
 
 # rellinks
+{: #rellinks}
 ## samples
+{: #samples}
 * [Interactive decahose search demo](https://cdetestapp.mybluemix.net/){: new_window}
 * [developerWorks: Tutorial and source code for decahose search demo](http://www.ibm.com/developerworks/cloud/library/cl-twitter-search-insights-bluemix-trs/index.html){: new_window}
 * [Analyzing "American Sniper" box office data (YouTube)](https://www.youtube.com/watch?v=Gfk5quglXvI){: new_window}
 * [Places Insights hands-on lab](https://github.com/IBM-Bluemix/places-insights-lab){: new_window}
 
 ## api
+{: #api}
 * [API REST ](https://cdeservice.{APPDomain}/rest-api/){: new_window}
 
-## compatible runtimes {:id="buildpacks"}
+## runtime compatibili
+{: #buildpacks}
 * [Go](https://console.{DomainName}/docs/runtimes/go/index.html){: new_window}
 * [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html){: new_window}
 * [Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html){: new_window}
@@ -81,6 +85,7 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 * [Tomcat](https://console.{DomainName}/docs/runtimes/tomcat/index.html){: new_window}
 
 ## general
+{: #general}
 * [Novità nei servizi {{site.data.keyword.Bluemix_notm}}](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){: new_window}
 * [Aggiunta di un servizio alla tua applicazione](../reqnsi.html){: new_window}
 * [Sviluppo end-to-end](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}

@@ -67,9 +67,11 @@ Device credentials and API keys can be individually revoked if they are compromi
 ## How do we ensure your devices connect securely to the {{site.data.keyword.iot_short_notm}}?
 {: #secure-device-connection}
 
-The {{site.data.keyword.iot_short_notm}} supports connectivity over TLS v1.2. Devices connected use a combination of clientId and the authentication token that is generated when adding the devices to your platform. MQTT v3.1.1 is used to allow simple interoperability across many platforms and languages.
+Devices connected use a combination of clientId and the authentication token that is generated when adding the devices to your platform. MQTT v3.1.1 is used to allow simple interoperability across many platforms and languages. The {{site.data.keyword.iot_short_notm}} supports connectivity over TLS v1.2.
 
 ![image](connectivity_platform.svg)
+
+For more information about TLS and cipher suite requirements, see the [TLS requirements](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements)  section in the `Application, device, and gateway connections to Watson IoT Platform` documentation.
 
 ## How do we prevent data leaking between IoT devices?
 {: #prevent-leak-devices}

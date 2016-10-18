@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 11 October 2016*
+*Last updated: 14 October 2016*
 {: .last-updated}
 
 
@@ -78,7 +78,6 @@ There are optional components that are available for you to purchase to scale an
 |Dedicated Direct Link 10 Gbps capacity | A dedicated network link that connects directly to the appropriate SoftLayer network point of presence designed for data transfers of up to 10 Gbps. |
 |{{site.data.keyword.Bluemix_notm}} Dedicated community services  | An environment that permits deploying and running  community services up to a total of 50 instances for each community service.  |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated Hardware Firewall - High Availability | A redundant 1 Gbps hardware firewall configured for protection for single, multiple, or all servers on same VLAN within the Dedicated environment. |
-|Dedicated 1 Gbps Vyatta VPN configured for high availability  | A 1 Gbps Vyatta VPN configured for high availability for use by the dedicated environment. |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.messagehub}} | An environment that provides publish and subscribe messaging of up to 10 GB per partition. Messages are retained and available for consumption for a maximum of 24 hours. |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.mobilepushshort}} | An environment that permits deployment and execution of {{site.data.keyword.mobilepushshort}} instances with ability to accept 300 requests per second. |
 |{{site.data.keyword.iot_short}} Dedicated incremental increase | An environment increase that permits running a private version of the {{site.data.keyword.iot_short}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 0.5 TB of data exchange. |
@@ -100,41 +99,42 @@ If you have a private instance of the service for your dedicated environment, yo
 |Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Australian Sydney region|
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
-|{{site.data.keyword.alertnotificationshort}}		|Yes		|Yes			|Yes		|
+|{{site.data.keyword.alertnotificationshort}}	|Yes		|Yes		|Yes	|
+|{{site.data.keyword.apiconnect_short}}         |Yes            |Yes            |Yes  |
 |{{site.data.keyword.appseccloudshort}}		|Yes		|Yes		|Yes |
-|{{site.data.keyword.hadoopst}}			|Yes		|No		|No |
+|{{site.data.keyword.apiconnect_short}} 	|Yes   	 	|Yes  	 	|Yes   |
+|Automated Accessibility Checker |Yes       |Yes    |Yes   |
 |{{site.data.keyword.rules_short}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.cloudant}}			|Yes		|Yes		|Yes |
-|{{site.data.keyword.conceptexpansionshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.conceptinsightsshort}}	|Yes		|Yes		|Yes |
+|{{site.data.keyword.iotmapinsights_short}}    |Yes  |Yes  |Yes  |
+|{{site.data.keyword.conversationshort}}  |Yes  |Yes  |Yes  |
 |{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|Yes |
-|{{site.data.keyword.deliverypipeline}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.dialogshort}}		|Yes		|Yes		|Yes|
+|Delivery Pipeline Next		|Yes		|No		|No |
+|Digital Content Checker |Yes  |Yes  |Yes  |
 |{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.game}}			|No		|No		|Yes |
+|{{site.data.keyword.iotdriverinsights_short}}  |Yes |Yes  |Yes  |
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|Yes |
 |{{site.data.keyword.GlobalizationPipeline_short}}	|Yes		| Yes		| Yes |
 |{{site.data.keyword.identitymixershort}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.iot4auto_short}} |Yes   |Yes  |Yes  |
+|{{site.data.keyword.iotelectronics}}  |Yes  |Yes  |No |
+|{{site.data.keyword.iotinsurance_short}} |No   |No   |Yes  |
 |{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|Yes |
+|{{site.data.keyword.languagetranslatorshort}} |Yes  |Yes  |Yes  |
+|{{site.data.keyword.dwl_short}}  |Yes  |Yes  |No  |
 |{{site.data.keyword.eventhubshort}}		|Yes		|No		|No|
 |{{site.data.keyword.messagehub}}		|Yes		|Yes		|No|
-|{{site.data.keyword.macm_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.manda}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.mqa}}			|Yes		|Yes		|Yes |
-|{{site.data.keyword.mql}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.mql}}			|No		|No		|Yes |
 |{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
-|{{site.data.keyword.objectstorageshort}}	|Yes		|Yes		|No|
 |{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.pm_short}}			|Yes		|Yes		|No |
-|{{site.data.keyword.presenceinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.mobilepush}}		|Yes		|Yes		|Yes |
-|{{site.data.keyword.questionandanswershort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.relationshipextractionshort}}	|Yes	|Yes		|Yes|
 |{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.runbook_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes |
@@ -144,10 +144,9 @@ If you have a private instance of the service for your dedicated environment, yo
 |{{site.data.keyword.texttospeechshort}} 	|Yes 		|Yes	 	|Yes|
 |{{site.data.keyword.toneanalyzershort}} 	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.tradeoffanalyticsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.visualinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.visualrecognitionshort}}	|Yes 		|Yes	 	|Yes|
 |{{site.data.keyword.iot_short}}		|Yes		|Yes		|No|
-|{{site.data.keyword.workflow}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|Yes |
 
 ## {{site.data.keyword.Bluemix_notm}} Dedicated architecture

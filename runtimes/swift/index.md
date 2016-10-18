@@ -5,7 +5,7 @@
 
 # IBM Bluemix Runtime for Swift
 {: #swift_runtime}
-Last Updated: 19 September 2016
+Last Updated: 16 October 2016
 {: .last-updated}
 
 The Runtime for Swift on {{site.data.keyword.Bluemix}} is powered by the [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack) (i.e. swift_buildpack).
@@ -15,29 +15,27 @@ This buildpack provides a complete runtime environment for Swift applications.
 ## Starter application
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} provides a Kitura-based Swift [starter application](https://github.com/IBM-Swift/Kitura-Starter-Bluemix). The Kitura starter app is a simple Swift app that you can use to learn about the types of server applications you can develop by using the Swift programming language. This sample app creates a basic Kitura HTTP server that returns HTML content to the client.
+{{site.data.keyword.Bluemix}} provides a Kitura-based Swift [starter application](https://github.com/IBM-Bluemix/Kitura-Starter). The Kitura starter app is a simple Swift app that you can use to learn about the types of server applications you can develop by using the Swift programming language. This sample app creates a basic Kitura HTTP server that returns HTML content to the client.
 
 **Note:** The Kitura starter app is meant to be used for educational purposes. You can experiment with the starter app by making enhancements, and push those changes to the {{site.data.keyword.Bluemix}} environment. See [Using the starter applications](../../cfapps/starter_app_usage.html) for help with using the starter application.
 
 ## Renaming your app
 {: #renaming_your_app}
 
-If you want to rename your app, either from the Kitura Starter, or more generally, there are a few changes that need to be addressed. This will both avoid confusion, and ensure an error-free deployment.
+If you want to rename your app, either from the Kitura starter, or more generally, there are a few changes that need to be addressed. This will both avoid confusion, and ensure an error-free deployment.
 
-- Rename the App's project folder to match your app's name.
+- Rename the app's project folder to match your app's name.
 - `Package.swift` - Change the following entries:
-    - `name` - Should match the app's name
-    - `targets[Target(name:)]` - Should match the app's name
-- `manifest.yml` - Change following entries;
-    - `name` - Should match the app's name
-    - `host` - Represents the primary host segment of the app's URL
-- `Procfile` - The value for `web` should match the app's directory name. This is the command run after compilation to start the web app.
-
+    - `name` - Should match the app's name.
+    - `targets[Target(name:)]` - Should match the app's name.
+- `manifest.yml` - Change following entries:
+    - `name` - Should match the app's name.
+    - `command` - The name of the executable to start your app (should match the name specified in the Package.swift file).
 
 ## Runtime versions
 {: #runtime_versions}
 
-By default, the Runtime for Swift (swift_buildpack) hosted on {{site.data.keyword.Bluemix}} uses the latest GA version of the Swift binaries. This is the only version of Swift directly supported by IBM, and is the recommended version to use in your app. You can determine this supported version by examining the swift_buildpack's [latest release information](https://github.com/IBM-Swift/swift-buildpack/releases). The buildpack may list other Swift versions as shown within it's [manifest.yml](https://github.com/IBM-Swift/swift-buildpack/blob/master/manifest.yml) file. These common, but unsupported, versions of Swift are pre-cached within the buildpack, which provide reduced provisoning time.
+By default, the Runtime for Swift (swift_buildpack) hosted on {{site.data.keyword.Bluemix}} uses the latest GA version of the Swift binaries. This is the only version of Swift directly supported by IBM, and is the recommended version to use in your app. You can determine this supported version by examining the swift_buildpack's [latest release information](https://github.com/IBM-Swift/swift-buildpack/releases). The buildpack may list other Swift versions as shown within it's [manifest.yml](https://github.com/IBM-Swift/swift-buildpack/blob/master/manifest.yml) file. These common, but unsupported, versions of Swift are pre-cached within the buildpack, which provide reduced provisioning time.
 
 If you'd like to use a different version of Swift on {{site.data.keyword.Bluemix}} for your application, you can specify the version with a `.swift-version` file in the root of your repository. This `.swift-version` file defines which Swift version is to be used by the swift_buildpack.
 
@@ -49,7 +47,7 @@ $ cat .swift-version
 
 Because there are frequent Swift language updates, you should always include a `.swift-version` file so that your app is "pinned" to the Swift version your application is known to work with.
 
-Please note that you can specifiy any valid version of Swift in your `.swift-version` file. These alternate versions must match the naming of and are pulled directly from [Swift.org](https://swift.org/download/). While using a non-cache version will take a bit longer to provision, there is no runtime performance difference of your Swift app.
+Please note that you can specify any valid version of Swift in your `.swift-version` file. These alternate versions must match the naming of and are pulled directly from [Swift.org](https://swift.org/download/). While using a non-cache version will take a bit longer to provision, there is no runtime performance difference of your Swift app.
 
 The default swift_buildpack in {{site.data.keyword.Bluemix}} is used if your app's root directory contains a `Package.swift` file.  If you'd like to use use an alternate buildpack, you must specify this by adding a `buildpack: {buildpackUrl}` entry to your app's manifest.yml file. Alternatively, you can define this at deployment time, using the `cf push -b {buildpackUrl}` command argument.
 
@@ -63,11 +61,11 @@ For MaxOS users, you can use the [IBM Cloud Tools for Swift](http://cloudtools.b
 
 ## Enhanced Integration
 
-Working with the [Kitura web framework](http://ibm-swift.github.io/Kitura/) provides a great deal of capabilities. Kitura is modular in nature, and you will soon want to extend its functionality with packaged SDKs, to provide features such as authentication, access to Watson based services, and a wide variety of databases.  Kitura provides support for many databses directly, while other open source projects also provide SDKs for many database platforms. The following is a non-exhaustive list of SDKs provided by Kitura to work with external resources.
+Working with the [Kitura web framework](http://ibm-swift.github.io/Kitura/) provides a great deal of capabilities. Kitura is modular in nature, and you will soon want to extend its functionality with packaged SDKs, to provide features such as authentication, access to Watson based services, and a wide variety of databases.  Kitura provides support for many databases directly, while other open source projects also provide SDKs for many database platforms. The following is a non-exhaustive list of SDKs provided by Kitura to work with external resources.
 
 - [IBM Watson](https://swiftpkgs.ng.bluemix.net/package/IBM-Swift/swift-watson-sdk)
 - [IBM DB2 and DashDB](https://swiftpkgs.ng.bluemix.net/package/IBM-DTeam/swift-for-db2)
-- [IBM Cloudant and Couchbase](https://swiftpkgs.ng.bluemix.net/package/cloudant/swift-cloudant)
+- [IBM Cloudant and CouchDB](https://swiftpkgs.ng.bluemix.net/package/cloudant/swift-cloudant)
 - [IBM ObjectStorage](https://swiftpkgs.ng.bluemix.net/package/ibm-bluemix-mobile-services/bluemix-objectstorage-serversdk-swift)
 - [Apache Cassandra](https://swiftpkgs.ng.bluemix.net/package/IBM-Swift/Kassandra)
 - [Aphid MQTT](https://swiftpkgs.ng.bluemix.net/package/IBM-Swift/Aphid)
@@ -91,7 +89,7 @@ There are also other online tools available from IBM for the Swift developer.
 * [IBM Swift Package Catalog](https://swiftpkgs.ng.bluemix.net/)
 * [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)
 * [Kitura Documentation and APIs](http://ibm-swift.github.io/Kitura/)
-* [Kitura Starter app for Bluemix](https://github.com/IBM-Swift/Kitura-Starter-Bluemix)
+* [Kitura Starter app for Bluemix](https://github.com/IBM-Bluemix/Kitura-Starter)
 * [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack)
 * [IBM Bluemix buildpack for Swift release notes](https://github.com/IBM-Swift/swift-buildpack/releases)
 * [Swift.org](https://swift.org/)
