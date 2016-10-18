@@ -210,7 +210,7 @@ When you register users for {{site.data.keyword.Bluemix_notm}}, you must registe
 To register multiple users for {{site.data.keyword.Bluemix_notm}}, you must complete the following steps for each user:
 {: tsResolve}
 
-  1. Click **SIGN UP** in the {{site.data.keyword.Bluemix_notm}} user interface.
+  1. Click **SIGN UP** in the {{site.data.keyword.Bluemix_notm}} console.
   2. Complete the steps by following the wizard.
 
     
@@ -218,10 +218,10 @@ To register multiple users for {{site.data.keyword.Bluemix_notm}}, you must comp
 ## {{site.data.keyword.Bluemix_notm}} page can't be loaded
 {: #ts_err}
 
-When you use the {{site.data.keyword.Bluemix_notm}} user interface, you might not be able to load a {{site.data.keyword.Bluemix_notm}} page. Instead, you might see error messages BXNUI0001E or BXNUI0016E.
+When you use the {{site.data.keyword.Bluemix_notm}} console, you might not be able to load a {{site.data.keyword.Bluemix_notm}} page. Instead, you might see error messages BXNUI0001E or BXNUI0016E.
  
 
-You might see one of the following error messages when you use the {{site.data.keyword.Bluemix_notm}} user interface:
+You might see one of the following error messages when you use the {{site.data.keyword.Bluemix_notm}} console:
 {: tsSymptoms}
 
 `BXNUI0001E: The page wasn't loaded because Bluemix didn't detect whether a session exists.`
