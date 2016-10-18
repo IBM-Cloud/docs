@@ -33,13 +33,17 @@ To access the Java client libraries and samples for {{site.data.keyword.iot_shor
 The constructor builds the client instance and accepts a properties object that contains the following definitions:
 
 |Definition |Description |
-|:---|:---|
+|:----|:----|
 |`org` |Your organization ID. This field is required. If you are using a Quickstart flow, specify ``quickstart``.|
 |`type`  |The type of your device. This field is required.|
 |`id`  |The ID of your device. This field is required.|
 |`auth-method`   |The method of authentication to be used. The only value that is currently supported is `token`.|
 |`auth-token`   |An authentication token to securely connect your device to Watson IoT Platform.|
 |`clean-session`|A true or false value that is required only if you want to connect the application in durable subscription mode. By default, `clean-session` is set to `true`.|
+|`Port`  |Specify the port to connect to, supported ports are 8883 and 443. default port used is `8883`.|
+|`MaxInflightMessages`  |Sets the maximum number of inflight messages for the connection. default value is `100`.|
+|`Automatic-Reconnect`  |A true or false value required when you want to automatically reconnect the device to the Watson IoT Platform while it is in disconnected state. By default, `Automatic-Reconnect` is set to `false`.|
+|`Disconnected-Buffer-Size`  |The maximum number of messages that will be stored in memory while the client is disconnected. Default: `5000`.  |
 
 **Note:** To connect the device in durable subscription mode, set `clean-session` to `false`. For more information about clean session, see the 'Subscription Buffers and Clean Session' section of the [MQTT documentation](../../reference/mqtt/index.html#subscription-buffers-and-clean-session).
 
@@ -194,12 +198,22 @@ The content of the configuration file must be in the following format:
 ## Connecting to the {{site.data.keyword.iot_short_notm}}
 {: #connecting_to_iotp}
 
-Connect to the {{site.data.keyword.iot_short_notm}} by calling the connect function. The connect function takes an optional boolean parameter `autoRetry`, which is `true` by default. The `autoRetry` parameter allows the library to reconnect when an MqttException error occurs. Note that the library doesn't try to reconnect when an MqttSecurityException errors because incorrect device registration details were used, even if the `autoRetry` parameter is set to `true`.
+Connect to the {{site.data.keyword.iot_short_notm}} by calling the connect function. The connect function takes an optional boolean parameter `autoRetry`, which is `true` by default. The `autoRetry` parameter allows the library to reconnect when an MqttException error occurs. Note that the library doesn't try to reconnect when an MqttSecurityException errors because of incorrect device registration details were used, even if the `autoRetry` parameter is set to `true`.
+
+Also, one can use the `setKeepAliveInterval(int)` method before calling `connect()` to set the MQTT `keep alive interval`. This value, measured in seconds, defines the maximum time interval between messages sent or received. It enables the client to detect if the server is no longer available, without having to wait for the TCP/IP timeout. The client will ensure that at least one message travels across the network within each keep alive period. In the absence of a data-related message during the time period, the client sends a very small `ping` message, which the server will acknowledge. A value of 0 disables keepalive processing in the client. The default value is 60 seconds.
 
 ```
 DeviceClient myClient = new DeviceClient(options);
-
+myClient.setKeepAliveInterval(120);
 myClient.connect(true);
+```
+
+Also, use the overloaded connect(int numberOfTimesToRetry) function to control the number of retries when there is a connection failure.
+
+```
+DeviceClient myClient = new DeviceClient(options);
+myClient.setKeepAliveInterval(120);
+myClient.connect(10);
 ```
 
 After the successful connection to the {{site.data.keyword.iot_short_notm}} service, the device client can perform operations such as publishing events and subscribing to device commands from an application.
@@ -244,6 +258,32 @@ event.addProperty("mem",  70);
 myClient.publishEvent("status", event, 2);
 ```
 
+### Publish event using custom format
+
+Events can be published in different formats, like JSON, String, Binary and etc.. By default, the library publishes the event in JSON format, but one can specify the data in different formats. For example, to publish data in String format use the following code snippet,(Note that the type of the payload must be in String format)
+
+```
+myClient.connect();
+
+String data = "cpu:"+getProcessCpuLoad();
+status = myClient.publishEvent("load", data, "text", 2);
+```
+
+Any XML data can be converted to String and published as follows,
+
+```
+status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
+```
+
+Similarly, to publish events in binary format, use the byte array as shown below,
+
+```
+myClient.connect();
+
+byte[] cpuLoad = new byte[] {30, 35, 30, 25};
+status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
+```
+
 ### Publish event by using HTTP
 
 In addition to MQTT, the devices can publish events to the {{site.data.keyword.iot_short_notm}} by using HTTP and by using the following steps:
@@ -260,7 +300,7 @@ event.addProperty("name", "foo");
 event.addProperty("cpu",  90);
 event.addProperty("mem",  70);
 
-int httpCode = myClient.publishEventOverHTTP("blink", event);
+boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
 You can find the entire code in the [HttpDeviceEventPublish] device example.
