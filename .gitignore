@@ -1,4 +1,6 @@
 
+.DS_Store
+services/.DS_Store
 services/Auto-Scaling/nl/.DS_Store
 
 services/Auto-Scaling/nl/es/.DS_Store

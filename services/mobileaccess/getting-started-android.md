@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -10,10 +10,6 @@ lastupdated: "2016-10-02"
 
 # Setting up the Android SDK
 {: #getting-started-android}
-
-Last updated: 19 September 2016
-{: .last-updated}
-
 
 Instrument your Android application with the {{site.data.keyword.amafull}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.
 
@@ -23,6 +19,7 @@ Instrument your Android application with the {{site.data.keyword.amafull}} clien
 {: #before-you-begin}
 You must have:
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* Your service parameter values. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile options**. The `applicationRoute` and `tenantId` (also known as `appGUID`)  values are displayed in the **Route** and **App GUID / TenantId** fields. You will need these values for intializing the SDK and for sending requests to the back-end application.
 * An Android Studio project, set up to work with Gradle. For more information about how to set up your Android development environment, see [Google Developer Tools](http://developer.android.com/sdk/index.html).
 
 ## Installing the {{site.data.keyword.amashort}} client SDK
@@ -69,14 +66,14 @@ Initialize the client SDK  by passing the **context** and **region** parameters 
 ```
 
    * Replace the `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: `BMSClient.REGION_US_SOUTH`,  `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
-   * Replace "MCAServiceTenantId" with the **tenantId** value you can find by clicking the **Show Credentials** button on the  {{site.data.keyword.amashort}} service tile.
+   * Replace "MCAServiceTenantId" with the **tenantId** value (see [Before you begin](#before-you-begin)). 
 
 ## Making a request to your mobile back-end application
 {: #request}
 
 After the {{site.data.keyword.amashort}} client SDK is initialized, you can start making requests to your mobile back-end application.
 
-1. Try to send a request to a protected endpoint of your new mobile back-end application. In your browser, open the following URL: `{applicationRoute}/protected` (for example `http://my-mobile-backend.mybluemix.net/protected`).
+1. Try to send a request to a protected endpoint of your new mobile back-end application. In your browser, open the following URL: `{applicationRoute}/protected` (for example `http://my-mobile-backend.mybluemix.net/protected`).   For information on obtaining the `{applicationRoute}` value, see   [Before you begin](#before-you-begin). 
 	
 	The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser, because this endpoint can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK.
 

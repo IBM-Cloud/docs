@@ -11,11 +11,10 @@ copyright:
 
 # IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 시작하기
 {: #getting_started}
-
-*마지막 업데이트 날짜: 2016년 6월 24일*
+마지막 업데이트 날짜: 2016년 8월 25일
 {: .last-updated}
 
-{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}}는 {{site.data.keyword.Bluemix_notm}}에 호스팅된 클라우드 환경에서 사전 구성된 WebSphere Application Server Liberty, Traditional Network Deployment 또는 Traditional WebSphere 인스턴스에 대한 신속한 설정을 용이하게 해주는 서비스입니다.
+{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}}는 {{site.data.keyword.Bluemix_notm}}에 호스팅된 클라우드 환경에서 사전 구성된 WebSphere Application Server Liberty, Traditional Network Deployment 또는 Traditional WebSphere Java EE 인스턴스에 대한 신속한 설정을 용이하게 해주는 서비스입니다.
 {: shortdesc}
 
 ## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}의 개요

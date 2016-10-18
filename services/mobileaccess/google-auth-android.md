@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-10"
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -18,6 +18,7 @@ You must have:
 
 * An Android project in Android Studio that is configured to work with Gradle. It does not need to be instrumented with {{site.data.keyword.amashort}} client SDK.  
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* Your service parameter values. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile options**. The `applicationRoute` and `tenantId` (also known as `appGUID`)  values are displayed in the **Route** and **App GUID / TenantId** fields. You will need these values for intializing the SDK and for sending requests to the back-end application.
 
 Setting up Google authentication for your {{site.data.keyword.amashort}}  Android app will require further configuring of:
 * The {{site.data.keyword.Bluemix_notm}} application
@@ -136,7 +137,7 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 	```
 
   * Replace  `BMSClient.REGION_UK` with the appropriate region.  To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
-  * Replace `<MCAServiceTenantId>` with the `tenantId` value you can find by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile. 
+  * Replace `<MCAServiceTenantId>`  with the `tenantId` value (see [Before you begin](##before-you-begin)). 
 
    **Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
@@ -158,10 +159,11 @@ After the client SDK is initialized and the Google Authentication Manager is reg
 
 Before you begin testing, you must have a mobile back-end application that was created with the **MobileFirst Services Starter** boilerplate, and already have a resource protected by the  {{site.data.keyword.amashort}} `/protected` endpoint. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Try to send a request to the protected endpoint of your mobile back-end application in your desktop browser by opening `{applicationRoute}/protected`, for example: `http://my-mobile-backend.mybluemix.net/protected`.
- The `/protected` endpoint of a mobile back-end application created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}. Therefore, it can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, you will see `Unauthorized` in your desktop browser.
+1. Try to send a request to the protected endpoint of your mobile back-end application in your desktop browser by opening `{applicationRoute}/protected`, for example: `http://my-mobile-backend.mybluemix.net/protected`.  For information on obtaining the `{applicationRoute}` value, see   [Before you begin](#before-you-begin). 
 
-1. Use your Android application to make request to the same endpoint. Add the following code after you initialize the `BMSClient` instance and register `GoogleAuthenticationManager`.
+	The `/protected` endpoint of a mobile back-end application created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}. Therefore, it can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, you will see `Unauthorized` in your desktop browser.
+
+1. Use your Android application to make request to the same protected endpoint. Add the following code after you initialize the `BMSClient` instance and register `GoogleAuthenticationManager`.
 
 	```Java
 	Request request = new Request("{applicationRoute}/protected", Request.GET);
@@ -182,8 +184,7 @@ Before you begin testing, you must have a mobile back-end application that was c
 			}
 		}
 	});
-```
-	Replace `{applicationRoute}` with the *route* value you get when you click Mobile Options in your app on the {{site.data.keyword.Bluemix}} dashboard.
+	```
 
 1. Run your application. A Google Login screen pops up. After login, the app requests permission to access resources:
 

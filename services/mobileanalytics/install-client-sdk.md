@@ -2,12 +2,14 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-29"
 
 ---
 
 # Installing the {{site.data.keyword.mobileanalytics_short}} Client SDKs
 {: #mobileanalytics_sdk}
-Last updated: 7 September 2016
+
+Last updated: 29 September 2016
 {: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_short}}
@@ -23,30 +25,15 @@ The {{site.data.keyword.mobileanalytics_short}} Client SDK is distributed with G
 
 1. Create an [Android Studio](http://developer.android.com/sdk/index.html) project or open an existing project.
 
-2. Open the `build.gradle` file that is in your application module.
+2. Open the `build.gradle` file that is in your **app module**.
 
-  **Tip**: Your Android project might have two `build.gradle` files: one for the project and one for the application module. Make sure to use the **application module** file.
+  **Tip**: Your Android project might have two `build.gradle` files: one for the project and one for the app module. Make sure to use the **app module** file.
 
-3. Find the `Dependencies` section of the `build.gradle` file and add a compile dependency for the {{site.data.keyword.mobileanalytics_short}} Client SDK, as follows:
-
-  ```Gradle
-    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
-      name:'analytics',
-      version: '1.+',
-      ext: 'aar',
-      transitive: true
-  ```
-  {: codeblock}
-
-  Your repositories statement should be similar to the following code example:
+3. Find the `Dependencies` section of the `build.gradle` file and add a compile dependency for the {{site.data.keyword.mobileanalytics_short}} Client SDK. Your repositories statement should be similar to the following code example:
 
 	```Gradle
       dependencies {
-        compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
-          name:'analytics',
-          version: '1.+',
-          ext: 'aar',
-          transitive: true
+        compile 'com.ibm.mobilefirstplatform.clientsdk.android:analytics:1.+'
     	// other dependencies  
       }
   ```
@@ -54,12 +41,13 @@ The {{site.data.keyword.mobileanalytics_short}} Client SDK is distributed with G
 
 4. Synchronize your project with Gradle by clicking **Tools &gt; Android &gt; Sync Project with Gradle Files**.
 
-5. Open the `AndroidManifest.xml` file for your Android project and add internet access permission under the `<manifest>` element:
+5. Open the `AndroidManifest.xml` file for your Android project. You can find this file in **app > manifests**. Add internet access permission under the `<manifest>` element:
 
 	```XML
 	 <uses-permission android:name="android.permission.INTERNET" />
    ```
    {: codeblock}
+6. You have now installed the Android Client SDK. Next,  [Import and initialize](sdk.html#initalize-ma-sdk-android) the Analytics Client SDK.   
 
 ## Installing the Swift SDK
 {: #installing-sdk-ios}
@@ -71,7 +59,7 @@ The {{site.data.keyword.mobileanalytics_full}} SDK enables you to instrument you
 ### Before you begin
 {: #before-you-begin-ios}
 
-Make sure that you correctly set up Xcode. To learn how to set up your iOS development environment, see the [Apple Developer website](https://developer.apple.com/support/xcode/).
+Make sure that you correctly set up Xcode. To learn how to set up your iOS development environment, see the [Apple Developer website](https://developer.apple.com/support/xcode/). Read about the [Xcode requirements](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements) for Client SDK Swift Analytics.
 
 The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [Cocoapods](https://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage#getting-started), which are dependency managers for Cocoa projects. CocoaPods and Carthage automatically download artifacts from repositories and makes them available to your application.
 
@@ -84,55 +72,28 @@ The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [Cocoapo
     sudo gem install cocoapods
     ```
     {: codeblock}
+    
+    For Xcode 8: `sudo gem install cocoapods --pre`
+    
+   Make sure that you have the latest version of `BMSAnalytics` by updating your local CocoaPods repository, as follows:
+   
+    ```
+    pod repo update master
+    ```
+    {: codeblock}
 
-2. If you have not already initialized your workspace for CocoaPods, run the `pod init` command in the root directory of your Xcode project. CocoaPods creates a `Podfile` file for you, which is where you define dependencies for your Xcode project.
-
-3. Add the `BMSAnalytics` pod to the target in your Podfile, for example:
-
-  ```
-  use_frameworks!
-
-  target 'MyApp' do
-     pod 'BMSAnalytics'
-  end
-  ```
-  {: codeblock}
-
-4. Save the `Podfile` file and run `pod install` from the command line.
-
-	**Tip**: If you get an error when you add the `BMSAnalytics` pod, it could be that BMSAnalytics is not yet in your local cocoapods master repo. Run `pod repo update master` and retry `pod install`.
+2. Follow the [CocoaPods installation instructions](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods) on GitHub.
 	
-5. Open your Xcode project workspace by using the `.xcworkspace` file that was generated by CocoaPods.
-
-	#### Swift 2.3
-	{: #swift23}
-
-	For apps that are built with Swift 2.3, you might receive a prompt to **Convert to Current Swift Syntax?** when opening your project in Xcode 8 (following the installation of BMSAnalytics). Choose the Convert option, and select `BMSCore.framework`, `BMSAnalyticsAPI.framework`, and `BMSAnalytics.framework`. 
-	
-	**Note**: Choose the convert option only once. If the prompt displays again, after you have already converted, always choose the **Later** option.
-
-	#### Swift 3.0
-	{: #swift30}
-
-	For apps that are built with Swift 3.0, you might receive a prompt to **Convert to Current Swift Syntax?** when opening your project in Xcode 8 (following the installation of BMSAnalytics). Always choose the **Later** option.
+3. After you have installed the iOS Client SDK,  [Import and initialize](sdk.html#init-ma-sdk-ios) the Analytics Client SDK.   
 
 #### Carthage
 {: #carthage}
 
 Add frameworks to your project using [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos).
 
-1. Add `BMSAnalytics` frameworks to your Cartfile:
-  ```
-  github "ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"
-  ```
-  {: codeblock}
-  
-2. Update Carthage as follows:
-	* Swift 2.2: Run the `carthage update` command. 
-	* Swift 2.3: Change the Command Line Tools setting in Xcode preferences to Xcode 8.0, then run the `TOOLCHAINS=com.apple.dt.toolchain.Swift_2_3 carthage update` bash command.
-	* Swift 3.0: Change the Command Line Tools setting in Xcode preferences to Xcode 8.0, then run the `carthage update` command. 
-3. When the build completes, drag `BMSAnalytics.framework`, `BMSCore.framework` and `BMSAnalyticsAPI.framework` into your Xcode project.
-4. Follow the instructions on the [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) site to complete the integration.
+1. Follow the [Carthage installation instructions](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage) on GitHub.
+
+2. After you have installed the iOS Client SDK,  [Import and initialize](sdk.html#init-ma-sdk-ios) the Analytics Client SDK.
 
 # rellinks
 

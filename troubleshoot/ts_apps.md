@@ -19,7 +19,7 @@ copyright:
 # Troubleshooting for managing apps
 {: #managingapps}
 
-Last updated: 18 August 2016
+Last updated: 11 October 2016
 {: .last-updated} 
 
 General problems with managing applications might include applications can't be updated, double-byte characters aren't displayed. However, in many cases, you can recover from these problems by following a few easy steps.
@@ -149,7 +149,7 @@ You can't create an app or a service if your current organization does not have 
 When you try to create an app in Bluemix, you see the following error message:
 {: tsSymptoms}
 
-`BXNUI0515E: The attempt to retrieve the spaces in the org failed because of a network connection problem.`
+`BXNUI0515E: The spaces in the org weren't retrieved. Either a network connection problem occurred, or your current organization does not have a space associated with it.`
 
 This error often is received the first time you try to create an app or a service from the Catalog when a space is not created yet. 
 {: tsCauses}

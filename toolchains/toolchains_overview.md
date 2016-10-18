@@ -11,7 +11,7 @@ copyright:
 # Getting started with toolchains (Beta)
 {: #toolchains_getting_started}
 
-Last updated: 4 October 2016
+Last updated: 7 October 2016
 {: .last-updated}  
 
 Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
@@ -19,6 +19,11 @@ Toolchains are available in the Public and Dedicated environments on {{site.data
 
 ##Getting started with toolchains: Public
 {: #getting_started_public}
+
+**Note:** Make sure that you are working in the New Bluemix experience by checking the top banner.
+
+ * If you see a message about trying the new Bluemix, you are working in the Classic Bluemix experience. Click the link to open the New Bluemix experience.
+ * If you don't see that message, you are working in the New Bluemix experience already.
 
 Each toolchain is associated with a specific organization (org) and any user that is a member of that org can access its associated toolchains. Before you create a toolchain, make sure that you are working in the org where you want to create the toolchain. The org that you are currently working in is displayed in the menu bar. To switch to another org, click the org in the menu bar and then select the org that you want to switch to.
 

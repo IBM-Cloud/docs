@@ -40,8 +40,7 @@ serviço, dependendo do tamanho de Camiseta criado, seu serviço poderá
 não estar preparado imediatamente para uso. Recomenda-se consultar o campo **Status** do JSON retornado para determinar o estado atual da instância de serviço.
 
 **Nota:** a URL **apiEndpoint** referenciada em [Amostras de API REST](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} aponta para a região sul
-dos EUA.
-Se estiver usando outras regiões, assegure-se de que seu aplicativo referencie a URL **apiEndpoint** apropriada.
+dos EUA.  Se estiver usando outras regiões, assegure-se de que seu aplicativo referencie a URL **apiEndpoint** apropriada.
 
 *Tabela 1. URLs de terminal de API para implementação de API Rest*
 

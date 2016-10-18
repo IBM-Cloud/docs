@@ -11,13 +11,16 @@ copyright:
 # Using toolchains on {{site.data.keyword.Bluemix_notm}} Public
 {: #toolchains-using}
 
-Last updated: 4 October 2016
+Last updated: 7 October 2016
 {: .last-updated}
 
-You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
+You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain. Toolchains are available in the US South region only.
 {: shortdesc}
 
-**Important**: Toolchains are available in the US South region only.
+**Note**: Make sure that you are working in the New Bluemix experience by checking the top banner.
+
+ * If you see a message about trying the new Bluemix, you are working in the Classic Bluemix experience. Click the link to open the New Bluemix experience.
+ * If you don't see that message, you are working in the New Bluemix experience already.
 
 ## Configuring a tool integration
 {: #configuring_a_tool_integration}

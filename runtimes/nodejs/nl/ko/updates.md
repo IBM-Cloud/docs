@@ -166,8 +166,8 @@ Node.js v2.6.1은 [StrongPM 앱 관리 핸들러](https://developer.ibm.com/blue
 ##  2015년 4월 2일: 업데이트된 Node.js 빌드팩 v1.15-20150331-2231
 
 * Node.js 빌드팩에는 세 개의 새로운 기능이 있으며 사용자가 데스크탑에 있는 것과 같이 다시 배치하지 않고 Bluemix에서 신속하게 개발하도록 도움을 줍니다. 
-  * 데스크탑 동기화: (Windows) 데스크탑 트리를 클라우드 기반 프로젝트 작업공간과 동기화합니다. 
-  * 라이브 편집: Bluemix에서 실행 중인 Node.js 애플리케이션을 변경하고 브라우저에서 즉시 테스트할 수 있습니다. 
+  * Desktop Sync: (Windows) 데스크탑 트리를 클라우드 기반 프로젝트 작업공간과 동기화합니다. 
+  * Live Edit: Bluemix에서 실행 중인 Node.js 애플리케이션을 변경하고 브라우저에서 즉시 테스트할 수 있습니다. 
   * 디버그: 환경으로 쉘(shell)하여 디버그합니다! 노드 검사기 디버거를 사용하여 코드의 동적 편집, 중단점 삽입, 코드 스텝 스루, 런타임 다시 시작 등을 수행할 수 있습니다. 
   * 자세한 정보는 [앱 관리](../../manageapps/app_mng.html#Utilities)를 참조하십시오. 
 * [Cloud Foundry의 Node.js 빌드팩](https://github.com/cloudfoundry/nodejs-buildpack)에서 최신 변경사항을 가져왔습니다. 이러한 변경은 커뮤니티에서 작성한 몇 가지 버그 수정 및 개선사항과 함께 제공됩니다. 
