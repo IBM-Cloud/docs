@@ -182,7 +182,7 @@ You cannot invite users to your organization if you are a collaborator of the or
 If you are unable to invite users to your organization and need a different role to do so, contact your organization manager to change your role. To identify your organization manager, complete the following steps:
 {: tsResolve}
 
-  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) in the menu bar, and select **Manage Organizations**.
+  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard. From the menu bar, click the **Support** menu item and click **Manage Organizations**.
   2. Go to your organization, and view the information of organization manager on the **USERS** tab.  
   
 If you are unable to invite users because you are a collaborator and not a member, you must delete your previous {{site.data.keyword.Bluemix_notm}} account and then be invited to join the account as a member of the organization. To delete your previous account and join the account as a member, complete the following steps: 
