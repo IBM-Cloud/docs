@@ -143,7 +143,7 @@ Depending on the way the new code is deployed, choose one of the following metho
 
   * For new code that is deployed from the cf command line, check the output from the *cf push* command. In addition, you can use the *cf logs* command to find more clues for solving the problem. For more information about how to use the *cf logs* command, see [viewing logs from the command line interface](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
 
-  * For new code that is deployed from a GUI such as the {{site.data.keyword.Bluemix_notm}} user interface, DevOps Delivery Pipeline, or Travis-CI, you can check the logs from the interface. For example, if you deploy the new code from {{site.data.keyword.Bluemix_notm}} user interface, you can go to Dashboard, find your app, and then view logs for clues.   For more information about how to view logs from the {{site.data.keyword.Bluemix_notm}} user interface, see [Viewing logs from Bluemix Dashboard](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
+  * For new code that is deployed from a GUI such as the {{site.data.keyword.Bluemix_notm}} console, DevOps Delivery Pipeline, or Travis-CI, you can check the logs from the interface. For example, if you deploy the new code from {{site.data.keyword.Bluemix_notm}} console, you can go to Dashboard, find your app, and then view logs for clues.   For more information about how to view logs from the {{site.data.keyword.Bluemix_notm}} console, see [Viewing logs from Bluemix Dashboard](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
  
 
 # rellinks
