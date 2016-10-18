@@ -28,7 +28,7 @@ To open a support ticket or find other help options, you can use the Support wid
 {: #using-avatar}
 The Support widget enables you to get help and provide feedback.
 
-To open the Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console.  From the menu bar, click the **Support** &gt; **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
+To open the Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click the **Support** &gt; **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
 
 ### Using the Account menu
 {: #using-accountmenu}
@@ -124,7 +124,7 @@ For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform noti
 
   * Check for current maintenance windows or an incident in progress
 
-	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) in the menu bar or the [IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window} help page.
+	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the **Support** menu item on the menu bar or the [IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window} help page.
 
   * Take advantage of multiple {{site.data.keyword.Bluemix_notm}} regions
 
@@ -197,7 +197,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer in a country 
 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a> help page. You can use an email address or your IBMid for this form. Select the **{{site.data.keyword.Bluemix_notm}} Dedicated** option for the Region field.
 <p>Form submissions are monitored from Sunday 10:00 PM UTC through Friday 11:59 PM UTC.</p>
 </li>
-<li>If you have an IBMid and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the {{site.data.keyword.avatar}} icon <img src="images/account_support.svg" alt="Avatar icon" /> in the menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
+<li>If you have an IBMid and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the **Support** menu bar item and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
 <li>If you don't have an IBMid, you can contact someone in your organization who does have one, or work with your IBM representative.
 <p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} console in your Dedicated environment.</p></li>
 </ul>
