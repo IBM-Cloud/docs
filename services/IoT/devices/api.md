@@ -63,7 +63,7 @@ All requests must include an authorization header. Basic authentication is the o
 
 ```
 username = "use-token-auth"
-password = Authentication token
+password = The authentication token specified/generated at device registration
 ```
 
 ### Content-Type request headers
