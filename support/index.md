@@ -145,7 +145,7 @@ For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform noti
 
 You can open support tickets if you have a valid {{site.data.keyword.Bluemix_notm}} account. 
 
-If you have a {{site.data.keyword.Bluemix_notm}} account linked with a SoftLayer account, you can open support tickets for {{site.data.keyword.Bluemix_notm}} from the SoftLayer Customer portal or from the {{site.data.keyword.Bluemix_notm}} console.
+If you have a {{site.data.keyword.Bluemix_notm}} account linked with a {{site.data.keyword.BluSoftlayer_full}} account, you can open support tickets for {{site.data.keyword.Bluemix_notm}} from the {{site.data.keyword.BluSoftlayer}} Customer portal or from the {{site.data.keyword.Bluemix_notm}} console.
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
