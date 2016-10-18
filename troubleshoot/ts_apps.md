@@ -157,7 +157,7 @@ This error often is received the first time you try to create an app or a servic
 Ensure that you created a space in your current organization.  To create a space, use one of the following methods:
 {: tsResolve}
 
-  * Click the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) to open the Account and Support widget, select the organization that you want to create the space in, and then click **Create a Space**.
+  * From the menu bar, click **Account** &gt; **Manage Organizations.** Select the organization that you want to create the space in, and then click **Create a Space**.
   * In the cf command line interface, type `cf create-space <space_name> -o <organization_name>`.
 
 Try again. If you see this message again, go to the [Bluemix status](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
