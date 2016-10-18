@@ -7,7 +7,7 @@ copyright:
 
 # Next steps
 {: #next_steps_tags}
-Last updated: 14 October 2016
+Last updated: 17 October 2016
 {: .last-updated}
 
 After you have successfully set up basic notifications, you can configure tag-based notifications and advanced options.

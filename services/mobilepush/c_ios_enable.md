@@ -184,7 +184,7 @@ Specifies the unique AppGUID key that is assigned to the {{site.data.keyword.mob
 ```
 //Initialize client Push SDK for Objective-C
 IMFPushClient *push = [IMFPushClient sharedInstance];
-[push initializeWithAppGUID:@"appGUID"];
+[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"];
 ```
 	{: codeblock}
 
@@ -193,7 +193,7 @@ IMFPushClient *push = [IMFPushClient sharedInstance];
 ```
 //Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
-push.initializeWithAppGUID("appGUID")
+push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 ```
 	{: codeblock}
 

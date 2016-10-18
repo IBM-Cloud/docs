@@ -7,7 +7,7 @@ copyright:
 
 # Enabling Cordova applications to receive push notifications
 {: #cordova_enable}
-Last updated: 12 October 2016
+Last updated: 17 October 2016
 {: .last-updated}
 
 Cordova is a platform for building hybrid applications with JavaScript, CSS, and HTML. The {{site.data.keyword.mobilepushshort}} supports development of Cordova-based iOS and Android applications.

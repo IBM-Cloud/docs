@@ -6,59 +6,47 @@ years: 2015 2016
 ---
 
 
-# Enabling web applications to receive {{site.data.keyword.mobilepushshort}}
+# Enabling Chrome Apps and Extensions to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
 Last updated: 17 October 2016
 {: .last-updated}
 
-You can now enable Google Chrome and Mozilla Firefox web applications to receive   {{site.data.keyword.mobilepushshort}}.
+You can now enable Google Chrome Apps and Extensions to receive  {{site.data.keyword.mobilepushshort}}.
 
-## Installing the web browser client SDK for {{site.data.keyword.mobilepushshort}}
+## Installing client SDK for {{site.data.keyword.mobilepushshort}}
 {: #web_install}
 
-This topic describes how to install and use the client JavaScript Push SDK to further develop your Web applications.
+This topic describes how to install and use the client JavaScript Push SDK to further develop your Chrome Apps and Extensions.
 
-### Initializing in Google Chrome Web application
+### Initializing in Google Chrome Apps and Extensions
 
-For installing the Javascript SDK in Chrome Web application complete the steps:
+For installing the Javascript SDK in Chrome Apps and Extensions, complete the steps:
 
-Download the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest_Website.json` from the [Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
+Download the `BMSPushSDK.js` and `manifest_Chrome_Ext.json` (For chrome Extensions) or `manifest_Chrome_App.json` (for Chrome Apps) from the [Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
 
-1. Edit the `manifest_Website.json` file.
 
-For Google Chrome browser, change `name` to your site's name. Change `gcm_sender_id` to your Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) sender_ID. For more information, see [Google documentation](https://developers.google.com/web/fundamentals/getting-started/codelabs/push-notifications/#make_a_project_on_the_google_developer_console). The gcm_sender_id value contains only numbers.
 
+- For Chrome Apps, configure the manifest file:
+ 1. In the `manifest_Chrome_App.json` file, provide the name, description, and icons.
+ 2. Add the `BMSPushSDK.js` in the `app.background.scripts`.
+ 3. Change the `manifest_Chrome_App.json` to `manifest.json`.
+
+- For Chrome Extensions, configure the manifest file:
+ 1. In the `manifest_Chrome_Ext.json` file provide name, description, and icons.
+ 2. Add the `BMSPushSDK.js` in the `background.scripts`.
+ 3. Change the `manifest_Chrome_Ext.json` to `manifest.json`.
+
+In the `background.js` file add the following to receive push notifications 
 ```
- {
-  "name": "YOUR_WEBSITE_NAME",
-  "gcm_sender_id": "GCM_Sender_Id"
- }
+chrome.gcm.onMessage.addListener(BMSPushBackground.onMessageReceived)
+chrome.notifications.onClicked.addListener(BMSPushBackground.notification_onClicked);
+chrome.notifications.onButtonClicked.addListener(BMSPushBackground.notifiation_buttonClicked); 
 ```
-    {: codeblock}
- 
-For Mozilla Firefox browser, add the following values in `manifest.json` file.     Change `name` to your site's name.
+	{: codeblock}
 
-```
-{
-  "name": "YOUR_WEBSITE_NAME"
- }
-```
-    {: codeblock}
 
-2. Change the `manifest_Website.json` file name to `manifest.json`.
-3. Add the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` to your root directory.
-3. Include the `manifest.json` in ``<head>`` tag of your html file .
-```
- <link rel="manifest" href="manifest.json">
-```
-    {: codeblock}
-4. Include Bluemix Web push SDK to the web application from GitHub.
-```
- <script src="BMSPushSDK.js" async></script>
-```
-    {: codeblock}
 
-## Initializing the Web Push SDK 
+## Initializing the Push SDK 
 {: #web_initialize}
 
 Initialse the push SDK with Bluemix {{site.data.keyword.mobilepushshort}} service `app GUID` and `app Region`.  
@@ -85,7 +73,7 @@ The `App Region` specifies the location where the {{site.data.keyword.mobilepush
 ```
 	{: codeblock}
 
-## Registering the web application
+## Registering the Chrome Apps and Extensions
 {: #web_register}
 
 Use the `register()` API to register the device with {{site.data.keyword.mobilepushshort}} service. For registering from Google Chrome, add the Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) API Key and Web Site URL in the Bluemix {{site.data.keyword.mobilepushshort}} service web configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html) under Chrome setup.
@@ -120,11 +108,14 @@ After you have developed your applications, you can send a push notification.
 3. You can choose to provide optional settings:
   - **Notification Title**: This is the text that would be displayed as message alert heading.
   - **Notification Icon URL**: If your message needs to be delivered with an app notification icon, provide the link to your icon in the field.
+  - **Collapse key**: Collapse keys are attached to notifications. If multiple notifications arrive sequentially with the same collapse key when the device is offline, they are collapsed. When a device comes online, it receives notifications from the FCM/GCM server, and displays only the latest notification bearing the same collapse key. If the collapse key is not set, both the new and old messages are stored for the future delivery.
+  - **Time to live**: This value is set in seconds. If this parameter is not specified, the FCM/GCM server stores the message for four weeks and will try to deliver. The validity expires after four weeks. The possible value range is from 0 to 2,419,200 seconds.
+  - **Delay when idle**: Setting this value to `true` instructs the FCM/GCM server not to deliver the notification if the device is idle. Set this value to `false`, to ensure delivery of notification even if the device is idle.
   - **Additional payload**: Specifies the custom payload values for your notifications.
 
 The following image shows the web notifications option in the dashboard.
 
-  ![Notifications screen](images/DashboardWebpush.jpg)
+  ![Notifications screen](images/push_chrome_extns.jpg)
   
 ## Next steps
   {: #next_steps_tags}

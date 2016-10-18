@@ -9,7 +9,7 @@ years: 2015, 2016
 {:new_window: target="_blank"}
 # Configuring credentials for FCM
 {: #create-push-enable-gcm}
-Last updated: 14 October 2016
+Last updated: 17 October 2016
 {: .last-updated}
 
 Firebase Cloud Messaging (FCM) is the gateway used to deliver push notifications to Android devices, Google Chrome and Mozilla web browsers. FCM has replaced Google Cloud Messaging (GCM). You need to get your FCM credentials, and then set up the {{site.data.keyword.mobilepushshort}} service on the dashboard. Ensure that you use FCM configurations for new apps. Existing apps can continue to function with the GCM configurations.
@@ -27,7 +27,7 @@ To setup the FCM, generate the API key and Sender ID, complete the steps:
 3. In the navigation pane, click the Settings icon and select **Project settings**.
 4. Choose the Cloud Messaging tab to generate a Server API Key and a Sender ID.
 
-##Setting up {{site.data.keyword.mobilepushshort}} service for Android
+##Setting up {{site.data.keyword.mobilepushshort}} service for Android and Chrome Apps and Extensions
 {: #setup-push-android}
 
 **Note:** You will need your FCM/GCM API Key and Sender ID (project number).
@@ -36,10 +36,10 @@ To setup the FCM, generate the API key and Sender ID, complete the steps:
 
 ![Push dashboard](images/push_unbound.jpg)
 
-2. Click the **Setup Push** button, to configure the FCM/GCM credentials.
-3. On the **Configuration** tab, go to the **Google Cloud Messaging** section and configure the Sender ID (FCM/GCM project number) and API Key.
+2. Click the **Setup Push** button, to configure the FCM/GCM credentials for Android applications and Google Chrome Apps and Extensions.
+3. On the **Configuration** page, for Android, go to the **Mobile** tab and configure the Sender ID (GCM project number) and API Key. For Google Chrome Apps and Extensions, go to the **Web** tab and configure the Sender ID (FCM/GCM project number) and API Key appropriately.
 4. Click **Save**.
-5. Next steps. [Enabling notifications for Android](c_enable_push.html).
+5. Next steps. [Enabling notifications for Android](c_enable_push.html) or [Enabling notifications for Google Chrome Apps & Extensions](c_enable_push.html).
 
 ###Configuring for Google Chrome and Mozilla Firefox web push (using FCM/GCM)
 {: #config-gcm-mozilla}

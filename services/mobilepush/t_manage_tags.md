@@ -7,7 +7,7 @@ copyright:
 
 # Managing tags
 {: #manage_tags}
-Last updated: 27 September 2016
+Last updated: 17 October 2016
 {: .last-updated}
 
 Use the {{site.data.keyword.mobilepushshort}} dashboard to create and delete tags for your application and then initiate tag-based notifications. The tag-based notification is received on devices that are subscribed to tags.
@@ -202,9 +202,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 ## Google Chrome and Mozilla Firefox
 {: web-get-tags}
 
-Copy the following code snippets into your web application to get a list of tags to which the web application is subscribed and to get a list of available tags to which the web application can subscribe.
-
-Retrieve an array of tags that are available to subscribe to.
+To obtain the list of available tags, to which customers can subscribe, use the following code.
 
 ```
 var bmsPush = new BMSPush();
@@ -222,7 +220,7 @@ bmsPush.retrieveAvailableTags(function(response)
 ```
 	{: codeblock}
 
-Use the `retrieveSubscriptions` API to get a list of tags that to which the web application is subscribed.
+Copy the following code snippets into your Google Chrome Apps and Extensions to get a list of tags to which customers have subscribed.
 
 ```
 var bmsPush = new BMSPush();
@@ -232,6 +230,39 @@ bmsPush.retrieveSubscriptions(function(response)
  })
 ```
 	{: codeblock}
+
+## Google Chrome Apps and Extensions
+{: web-get-tags}
+
+To obtain the list of available tags, to which customers can subscribe, use the following code.
+
+```
+var bmsPush = new BMSPush();
+bmsPush.retrieveAvailableTags(function(response) 
+{
+  alert(response.response)
+  var json = JSON.parse(response.response);
+  var tagsA = []
+  for (i in json.tags)
+{
+    tagsA.push(json.tags[i].name)
+   }
+   alert(tagsA)
+ })
+```
+	{: codeblock}
+
+Copy the following code snippets into your Google Chrome Apps and Extensions to get a list of tags to which customers have subscribed.
+
+```
+var bmsPush = new BMSPush();
+bmsPush.retrieveSubscriptions(function(response) 
+{
+   alert(response.response)
+ })
+```
+	{: codeblock}
+
 
 # Subscribing and unsubscribing tags
 {: #Subscribe_tags}
