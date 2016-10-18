@@ -21,17 +21,19 @@ If you experience problems with {{site.data.keyword.Bluemix}}, you have several 
 
 ## Getting help
 {: #getting-help}
-To open a support ticket or find other help options, you can use the Account and Support widget. You can also go directly to the Stack Overflow or developerWorks (dW) Answers forums to search information or post questions.
+To open a support ticket or find other help options, you can use the Support widget. You can also go directly to the Stack Overflow or developerWorks (dW) Answers forums to search information or post questions.
 {:shortdesc}
 
-### Using the Account and Support widget
+### Using the Support widget
 {: #using-avatar}
-The Account and Support widget enables you to check account information, view status, stay up to date with notifications, select your region, select and manage orgs, and log out. In addition, you can get help and provide feedback.
+The Support widget enables you to get help and provide feedback.
 
-To open the Account and Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console and click the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) in the menu bar.
+To open the Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console.  From the menu bar, click **Support** and **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
 
-Click **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
+### Using the Account menu
+{: #using-accountmenu}
 
+Use the Account menu items to check account information, view status, stay up to date with notifications, select your region, select and manage orgs, and log out.
 
 ### Asking a question
 {: #asking-a-question}
@@ -42,8 +44,8 @@ The Stack Overflow and dW Answers forums both provide a wide variety of searchab
   * Go to [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} to ask questions about the {{site.data.keyword.Bluemix_notm}} offering, and about getting started instructions.
   * In China, go to [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} to ask questions.
 
-You can also ask a question in Stack Overflow directly from the Account and Support widget by completing the following steps:
-  1. From the Account and Support widget, click **Get help**. 
+You can also ask a question in Stack Overflow directly from the Support widget by completing the following steps:
+  1. From the Support widget, click **Get help**. 
   2. On the page that is displayed, type your question in the search field to find answers. 
   3. If the expected answer is not returned, click **POST TO STACK OVERFLOW** to post your question.
 
@@ -167,7 +169,7 @@ If you are unable to resolve your technical problem with the troubleshooting and
 
 If the problem is not due to an outage, and you are a customer in a country or region excluding China, open a support ticket by using one of the following options:
 
-  * From the Account and Support widget, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
+  * From the Support widget, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
   * Use the [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} help page. You can submit tickets for sales, billing, IBMid and login, and technical support problems. For technical support problems, you can further select a technical group after you click **Technical Support**. For example, if you need help with Cloud Foundry apps, OpenWhisk, Containers, Virtual Servers, or Bare Metal servers, you can choose **Application Services**. If you need help with a specific service, select the corresponding service category. To determine the category that your service belongs to, see categories under [Services](../services/index.html){: new_window} in the navigation pane.  
   * From [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. After you sign in to the portal, click **Open Ticket**, and then fill in the support form. 
   
