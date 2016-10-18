@@ -8,7 +8,7 @@ copyright:
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 14 October 2016
+Last updated: 17 October 2016
 {: .last-updated}
 
 You can enable Android applications to receive {{site.data.keyword.mobilepushshort}} to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.

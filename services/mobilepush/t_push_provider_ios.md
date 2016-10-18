@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # Configuring credentials for APNs
 {: #create-push-credentials-apns}
-Last updated: 14 October 2016
+Last updated: 17 October 2016
 {: .last-updated}
 
 Apple Push Notification Service (APNs) allows application developers to send remote notifications from the {{site.data.keyword.mobilepushshort}} service instance on Bluemix (the provider) to iOS devices and applications. Messages are sent to a target application on the device. 
@@ -88,7 +88,7 @@ You must obtain separate certificates for your development and distribution envi
 	![Export certificate and keys](images/keychain_export_key.jpg)
 17. In the **Save As** field, provide the certificate a meaningful name. For example, `sandbox_apns.p12_certifcate` or `production_apns.p12`, then click **Save**.
 	![Export certificate and keys](images/certificate_p12v2.jpg)
-18. In the **Enter a password** field, enter a password to protect the exported items, then click **OK**. You can use this password to configure your APNs settings on the Push dashboard.
+18. In the **Enter a password** field, enter a password to protect the exported items, then click **OK**. You can use this password to configure your APNs settings on the Push dashboard.{: #step18}
 	![Export certificate and keys](images/export_p12.jpg)
 19. The **Key Access.app** prompts you to export your key from the **Keychain** screen. Enter your administrative password for your Mac to allow your system to export these items, and then select the **Always Allow** option. A `.p12` certificate is generated on your desktop.
 
@@ -121,24 +121,6 @@ Use the store provisioning profile to submit your app for distribution to the Ap
 1. Go to the [Apple Developer](https://developer.apple.com) portal, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
 2. Double-click the downloaded provisioning profile to install it into Xcode.
 
-##Creating .p12 push certificate file for Bluemix push
-{: #create-p12-push-certificate-file-for-Bluemix-push}
-
-To create a valid `.p12` push certificate file, use the APNs `.p12` certificate, along with the development/distribution profile certificate. 
-Complete the steps. You can choose to pick up either the development or distribution certificate:
-
-	{: screen}  
-	developer_identity.cer - Development profile downloaded from Apple 
-	apns.p12 - APNS .p12 exported from the keychain
-	openssl x509 -in developer_identity.cer -inform DER -out
-	developer_identity.pem -outform PEM
-	openssl pkcs12 -nocerts -in apns.p12 -out apns.pem
-	openssl pkcs12 -export -inkey apns.pem -in developer_identity.pem -out 	bluemixPush_dev.p12
-	
-	
-	
-Store the `bluemixPush_dev.p12` file on your desktop.
-
 ##Setting up APNs on the {{site.data.keyword.mobilepushshort}} Dashboard
 {: #create-push-credentials-apns-dashboard}
 
@@ -163,7 +145,7 @@ Set up APNs on the Push dashboard, as follows:
 
 	The Push dashboard displays:
 	![Set push notifications dashboard](images/wizard.jpg)
-2. On the **Configuration** tab, go to the **Apple Push Certificate** section,  select **Sandbox** (development) or **Production** (distribution) and then upload the `p.12` certificate that you created using the previous [step](#create-p12-push-certificate-file-for-Bluemix-push).
+2. On the **Configuration** tab, go to the **Apple Push Certificate** section,  select **Sandbox** (development) or **Production** (distribution) and then upload the `p.12` certificate that you created using the previous [step](#step18).
 	![Set push notifications configure tab](images/credential_screen.jpg)
 3. In the **Password** field, enter the password that is associated with the `.p12` certificate file, then click **Save**.
 

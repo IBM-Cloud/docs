@@ -7,7 +7,7 @@ copyright:
 
 # Interactive notifications
 {: #interactive-notifications}
-Last updated: 14 October 2016
+Last updated: 17 October 2016
 {: .last-updated}
 
 Interactive notifications allow users to act when a notification arrives without opening the application. When an interactive notification arrives, the device shows the action buttons along with the notification message. Interactive notifications are supported on iOS devices with version 8 and later. If an interactive notification is sent to iOS devices with version lesser than 8, the notification actions are not displayed.
