@@ -2,7 +2,6 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-10-19"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +12,8 @@ lastupdated: "2016-10-19"
 
 
 # Working with large files {: #large-files}
-
+*Last updated: 19 October 2016*
+{: .last-updated}
 
 Uploading objects is limited to a maximum size of 5 GB in a single upload. However, you can still upload objects larger than 5GB if segment them into smaller objects. Once the segmented objects have been uploaded, a manifest file is also needed to concatenate the segments into the original object. There are two ways to do this: Dynamic Large Objects (DLO) and Static Large Objects (SLO).
 
