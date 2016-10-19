@@ -435,14 +435,14 @@ All the capabilities in the system are available through a REST API. There are c
 
 These are the collection endpoints:
 
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces`
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/actions`
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/triggers`
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/rules`
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/packages`
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/activations`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-The `openwhisk.{DomainName}` is the OpenWhisk API hostname (for example, openwhisk.ng.bluemix.net, 172.17.0.1, and so on).
+The `openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span>` is the OpenWhisk API hostname (for example, openwhisk.ng.bluemix.net, 172.17.0.1, and so on).
 
 For the `{namespace}`, the character `_` can be used to specify the user's *default
 namespace* (that is, email address).
@@ -451,12 +451,12 @@ You can perform a GET request on the collection endpoints to fetch a list of ent
 
 There are entity endpoints for each type of entity:
 
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}`
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://`openwhisk.{DomainName}`/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
 
 
 The namespace and activation endpoints support only GET requests. The actions, triggers, rules, and packages endpoints support GET, PUT, and DELETE requests. The endpoints of actions, triggers, and rules also support POST requests, which are used to invoke actions and triggers and enable or disable rules. Refer to the [API reference](https://new-console.{DomainName}/apidocs/98) for details.
