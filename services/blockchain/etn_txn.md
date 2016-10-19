@@ -14,7 +14,7 @@ years: 2016
 
 # Testing blockchain networks
 {: #etn_txn}
-Last updated: 23 September 2016
+Last updated: 07 October 2016
 {: .last-updated}
 
 Use the following roles and transactions tests to confirm IBM Blockchain network security and availability. All tests can be conducted using the Starter Developer plan or the High Security Business Network plan.
@@ -23,9 +23,9 @@ Use the following roles and transactions tests to confirm IBM Blockchain network
 ## Testing roles and transactions
 {: #sdk}
 
-The Hyperledger Fabric 0.5 HFC SDK for Node.js contains unit tests that highlight security features such as privacy, confidentiality and unlinkability. You can explore these unit tests, at https://github.com/hyperledger/fabric/tree/master/sdk/node/test/unit, to see code examples for registering and enrolling users, transferring assets, and managing assets with user roles and user attributes. The following unit tests are available:
+The Hyperledger Fabric v0.5 HFC SDK for Node.js contains unit tests that highlight security features such as privacy, confidentiality and unlinkability. You can explore these unit tests at https://github.com/hyperledger/fabric/tree/master/sdk/node/test/unit to see code examples for registering and enrolling users, transferring assets, and managing assets with user roles and user attributes. The following unit tests are available:
 
-### `registrar.js` test
+### registrar.js
 The registrar.js test enrolls an "admin" user and designates that user as the blockchain network `registrar`. This test also registers and enrolls the additional users "webAdmin" and "webUser". The "webAdmin" identity is granted authority to register additional members with the role of 'client'. The "webUser" identity is not granted authority to register  additional members. When "webAdmin" attempts to register and enroll users with the "auditor" and "validator" roles, and when "webUser" attempts to register and enroll "webUser2", the attempts fail.
 
 The following screenshot shows that "webAdmin" is registered and enrolled, and set as the chain `registrar`. The "webAdmin" user successfully registers and enrolls "webUser":
@@ -51,7 +51,7 @@ In the following screenshot, "webUser" attempts to register and enroll "webUser2
   if (!err) return cb(Error("webUser should not be allowed to register a client"));
   expect="webUser may not register member of type client";
 ```
-### `chain-tests.js` test
+### chain-tests.js
 The chain-test.js test registers and enrolls a test user, as implemented by the blockchain network `registrar`. This test also shows the test user's authority to `deploy`, `invoke`, and query chaincode, and to query state variables. When the test user attempts to query a non-existing function or variable, an error message is returned:  
 
 The test user constructs a deploy request with the following payload:
@@ -103,7 +103,7 @@ The query transaction fails because fcn: "BOGUS" does not specify a valid chainc
 ```js
 t.pass(util.format("Failed to query non-existing chaincode function: request=%j, error=%j",queryRequest,err));
 ```
-### `asset-mgmt.js` test
+### asset-mgmt.js
 The asset-mgmt.js test enrolls three users: Alice, Bob, and Charlie. This test also has Alice deploy chaincode, and then invoke the chaincode to assign an asset to Bob. Bob then invokes the same chaincode to transfer the same asset to Charlie. A query confirms the successful asset transfer.
 
 Alice constructs the following payload to transfer an asset (Ferrari) to user Bob, who is represented by his enrollment certificate (eCert) bobAppCert:
@@ -162,7 +162,7 @@ if (results.result != charlieAppCert.encode().toString('hex')) {
             fail(t, "Charlie is not the owner of the asset.")
         }
 ```
-### `asset-mgmt-with-roles.js` test
+### asset-mgmt-with-roles.js
 The asset-mgmt-with-roles.js test expands on the transfer of ownership scenario in the `asset-mgmt.js` example, by introducing roles and user attributes for three personas: Alice, Bob and assigner. The assigner member invokes the chaincode and successfully transfers an asset to Alice. Alice fails to successfully transfer the same asset to Bob, because she does not own the assigner attribute. A query on the asset confirms the successful transfer by the assigner member, and a failed transfer by Alice.
 
 The "assigner" assigns Alice (designated by aliceCert) as the owner of an asset, which is defined in the args parameter as "MyAsset":
@@ -200,7 +200,9 @@ Alice attempts to assign Bob as the owner of the asset. The attempt fails, becau
                 });
             }
 ```
-### `asset-mgmt-with-dynamic-roles` test
+
+<!-- comment this one out until Hl v0.6 GAs
+### asset-mgmt-with-dynamic-roles
 The asset-mgmt-with-dynamic-roles.js test is a variation of `asset-mgmt-with-roles.js`.  The prior test shows the users Alice, Bob, and assigner being enrolled to the network.  However, these users were previously registered with attributes hardcoded in the membersrvc.yaml.  In other words, the `chain.enroll` function logged these users into the network with their corresponding attributes, affiliations, and roles from the membersrvc.yaml; the registration portion had already occurred.  
 
 In this test we see the registration and enrollment of unique users (i.e. users not already present in the membersrvc.yaml). The dynamic registration and enrollment is done through a callback of the `registerAndEnroll` function, as seen at the end of this test:
@@ -227,6 +229,6 @@ console.log("enrolling alice2 ...");
             alice = user;
 ```
 
-The remainder of the test is the same as `asset-mgmt-with-roles.js`, with alice failing to assign Bob as the owner of the asset.  
+The remainder of the test is the same as `asset-mgmt-with-roles.js`, with Alice failing to assign Bob as the owner of the asset.
 
-
+-->
