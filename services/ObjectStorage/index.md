@@ -2,8 +2,6 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-10-19"
-
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -11,6 +9,8 @@ lastupdated: "2016-10-19"
 
 # Getting started with {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage}
 
+*Last updated: 19 October 2016*
+{: .last-updated}
 
 {{site.data.keyword.objectstoragefull}} provides unstructured cloud data storage. You can store and access your content as well as interactively compose and connect to apps and services.
 {: shortdesc}
@@ -23,25 +23,16 @@ Some common use cases for the {{site.data.keyword.objectstorageshort}} service a
 * Acting as a central repository
 
 
-Bluemix offers a public and dedicated storage option.
-<dl>
-  <dt><dfn> {{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} </dfn></dt>
-  <dd> Provides you with access to a fully provisioned Swift {{site.data.keyword.objectstorageshort}} account to manage your data. </dd>
-  <dd> Provider side encryption is not provided. </dd>
-  <dt><dfn> {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.objectstorageshort}} </dfn></dt>
-  <dd> Allows you to manage your data with a fully provisioned account based on S3 APIs. </dd>
-  <dd> Provider side encryption is provided. </dd>
-</dl>
 
+{{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} provides you with access to a fully provisioned Swift {{site.data.keyword.objectstorageshort}} account to manage your data. Provider side encryption is not provided.
 
 
 1.	Provision your service instance from the {{site.data.keyword.Bluemix_notm}} catalog. Configure your instance and click **Create**. If you initially choose the **Leave Unbound** option for the **App** field, you can still bind the service instance to your {{site.data.keyword.Bluemix_notm}} app later.
-2. In your service instance dashboard, create a container in Object Storage Public or a bucket for Object Storage dedicated to start storing objects.
+2. In your service instance dashboard, create a container to start storing objects.
 3. Add a file to your container or bucket from the **Actions** drop-down menu.
 4. To test access to your objects, click **Download** and review the file.
 5. When you're ready to connect your instance to an application, set up your service credentials and [bind the service](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service).
 
-<!-- Staging only content end -->
 
 
 # Related Links
