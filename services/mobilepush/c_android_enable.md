@@ -8,7 +8,7 @@ copyright:
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 17 October 2016
+Last updated: 19 October 2016
 {: .last-updated}
 
 You can enable Android applications to receive {{site.data.keyword.mobilepushshort}} to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
@@ -211,6 +211,7 @@ You can further customize the {{site.data.keyword.mobilepushshort}} settings for
 
 - **Collapse Key**:  Collapse keys are attached to notifications. If multiple notifications arrive sequentially with the same collapse key when the device is offline, they are collapsed. When a device comes online, it receives notifications from the FCM/GCM server, and displays only the latest notification bearing the same collapse key. If the collapse key is not set, both the new and old messages are stored for the future delivery.
 - **Sound**: Indicates a sound clip to be played on the receipt of a notification. Supports default or the name of a sound resource bundled in the app.
+- **Icon**: Specify the name of the icon to be displayed for the notification. Ensure that you have packaged the icon in the res/drawable folder, with the client application.
 - **Priority**: Specifies the options for assigning delivery priority to messages. A priority of `high` or `max` will result in heads-up notification, while `low` or `default` priority messages would not open network connections on a sleeping device. For messages with the option set to `min`, it will be a silent notification.
 - **Visibility**: You can choose to set the notification visibility option to either `public` or `private`. The `private` option restricts public viewing and you can choose to enable it if your device is secure with a pin or pattern, and the notification setting is set to "Hide sensitive notification content". When the visibility is set as `private`, a "redact" field must be mentioned. Only the content specified in the redact field will show up on a secure locked screen on the device. Choosing `public` would render the notifications to be freely read.
 - **Time to live**: This value is set in seconds. If this parameter is not specified, the FCM/GCM server stores the message for four weeks and will try to deliver. The validity expires after four weeks. The possible value range is from 0 to 2,419,200 seconds.
