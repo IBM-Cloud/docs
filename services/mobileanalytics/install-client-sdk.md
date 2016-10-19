@@ -61,9 +61,9 @@ The {{site.data.keyword.mobileanalytics_full}} SDK enables you to instrument you
 
 Make sure that you correctly set up Xcode. To learn how to set up your iOS development environment, see the [Apple Developer website](https://developer.apple.com/support/xcode/). Read about the [Xcode requirements](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements) for Client SDK Swift Analytics.
 
-The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [Cocoapods](https://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage#getting-started), which are dependency managers for Cocoa projects. CocoaPods and Carthage automatically download artifacts from repositories and makes them available to your application.
+The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [CocoaPods](https://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage#getting-started), which are dependency managers for Cocoa projects. CocoaPods and Carthage automatically download artifacts from repositories and makes them available to your application.
 
-#### Cocoapods
+#### CocoaPods
 {: #cocoapods}
 
 1. If CocoaPods is not installed, run:
