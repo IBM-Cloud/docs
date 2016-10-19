@@ -2,7 +2,6 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-10-19"
 
 ---
 {:new_window: target="_blank"}
@@ -14,32 +13,42 @@ lastupdated: "2016-10-19"
 
 # Creating a temporary URL {: #create-temporary-url}
 
+*Last updated: 19 October 2016*
+{: .last-updated}
 
 A temporary URL is a long, difficult-to-guess URL that can be used for a specified period to download objects without requiring further authentication.
 {: shortdesc}
 
 
 1. Identify your authentication information by printing your account information with the following command:
+
     ```
     swift stat
     ```
     {: pre}
+    
     **Note**: Locate the Account field and note the full string behind *Account*: including `AUTH_`.
 2. Set a secret key. This key can be anything that you select, but best practice is that you select a long, random, and hard to guess string. To set the key, run the following command:
+
     ```
     swift post -m "Temp-URL-Key:<key>"
     ```
     {: pre}
+    
 3. Verify that the `Temp-URL-Key` was set successfully by running the following command.
+
     ```
     swift stat
     ```
     {: pre}
+    
 4. Create a temporary URL by running the following command:
+
     ```
     swift tempurl GET <seconds> <path> <key>
     ```
     {: pre}
+    
     The following table explains the positional arguments that the Swift `tempurl` command takes.
     <table>
       <tr>
