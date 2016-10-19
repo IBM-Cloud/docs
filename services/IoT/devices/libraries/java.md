@@ -14,11 +14,11 @@ copyright:
 # Java for device developers
 {: #java}
 
-Last updated: 02 Aug 2016
+Last updated: 18 October 2016
 {: .last-updated}
 
 
-You can use Java to build and customize devices that interact with your organization on {{site.data.keyword.iot_full}}. Use the information and examples that are provided to start developing your devices by using Java.
+You can build and customize devices that interact with your organization on {{site.data.keyword.iot_full}} by using Java. A Java client library for {{site.data.keyword.iot_short_notm}}, documentation, and examples are provided to help you get started with device development.
 {:shortdesc}
 
 ## Downloading the Java client and resources
@@ -26,26 +26,29 @@ You can use Java to build and customize devices that interact with your organiza
 
 To access the Java client libraries and samples for {{site.data.keyword.iot_short_notm}}, go to the [iot-java](https://github.com/ibm-watson-iot/iot-java) repository in GitHub and complete the installation instructions.
 
-
 ## Constructor
 {: #constructor}
 
-The constructor builds the client instance and accepts a properties object that contains the following definitions:
+The constructor builds the client instance and accepts the `Properties` object, which contains the following definitions:
 
 |Definition |Description |
-|:---|:---|
-|`org` |Your organization ID. This field is required. If you are using a Quickstart flow, specify ``quickstart``.|
-|`type`  |The type of your device. This field is required.|
-|`id`  |The ID of your device. This field is required.|
-|`auth-method`   |The method of authentication to be used. The only value that is currently supported is `token`.|
-|`auth-token`   |An authentication token to securely connect your device to Watson IoT Platform.|
-|`clean-session`|A true or false value that is required only if you want to connect the application in durable subscription mode. By default, `clean-session` is set to `true`.|
+|:----|:----|
+|`org` |A required value that must be set to your organization ID. If you are using a Quickstart flow, specify `quickstart`.|
+|`type`  |A required value that specifies the type of the device.|
+|`id`  |A required value that specifies the unique ID of the device.|
+|`auth-method`  |The method of authentication to be used. The only method that is supported is `token`.|
+|`auth-token`   |An authentication token to securely connect your device to {{site.data.keyword.iot_short_notm}}.|
+|`clean-session`|A true or false value that is required only if you want to connect the application in durable subscription mode. By default, `clean-session` is set to true.|
+|`Port`|The port number to connect to. Specify either 8883 or 443. If you do not specify a port number, the client connects to {{site.data.keyword.iot_short_notm}} on port number 8883 by default.|
+|`MaxInflightMessages`  |Sets the maximum number of in-flight messages for the connection. The default value is 100.|
+|`Automatic-Reconnect`  |A true or false value that is required when you want to automatically reconnect the device to {{site.data.keyword.iot_short_notm}} while it is in a disconnected state. The default value is false.|
+|`Disconnected-Buffer-Size`|The maximum number of messages that can be stored in memory while the client is disconnected. The default value is 5000.|
 
 **Note:** To connect the device in durable subscription mode, set `clean-session` to `false`. For more information about clean session, see the 'Subscription Buffers and Clean Session' section of the [MQTT documentation](../../reference/mqtt/index.html#subscription-buffers-and-clean-session).
 
-The properties object creates definitions that are used to interact with the {{site.data.keyword.iot_short_notm}} module.
+The `Properties` object creates definitions that are used to interact with the {{site.data.keyword.iot_short_notm}} module.
 
-The following code shows a device publishing events in Quickstart mode.
+The following code sample shows how devices can publish events in Quickstart mode.
 
 ```
 package com.ibm.iotf.sample.client.device;
@@ -139,7 +142,7 @@ public class RegisteredDeviceEventPublish {
 
 ### Using a configuration file
 
-Instead of using a properties object directly, you can use a configuration file that contains the name-value pairs for the properties. If you are using a configuration file that contains a properties object, use the following code format:
+Instead of using the `Properties` object directly, you can use a configuration file that contains the name-value pairs for the properties. If you are using a configuration file that contains the `Properties` object, use the following code format:
 
 ```
 package com.ibm.iotf.sample.client.device;
@@ -191,18 +194,31 @@ The content of the configuration file must be in the following format:
     auth-token=$token
 ```
 
-## Connecting to the {{site.data.keyword.iot_short_notm}}
+## Connecting to {{site.data.keyword.iot_short_notm}}
 {: #connecting_to_iotp}
 
-Connect to the {{site.data.keyword.iot_short_notm}} by calling the connect function. The connect function takes an optional boolean parameter `autoRetry`, which is `true` by default. The `autoRetry` parameter allows the library to reconnect when an MqttException error occurs. Note that the library doesn't try to reconnect when an MqttSecurityException errors because incorrect device registration details were used, even if the `autoRetry` parameter is set to `true`.
+
+To connect to {{site.data.keyword.iot_short_notm}}, use the `connect()` function. The `connect()` function includes an optional boolean parameter called `autoRetry`, which determines whether the library tries to reconnect when there is an MqttException connection failure. By default, `autoRetry` is set to true. If an MqttSecurityException connection fails because incorrect device registration details are passed, the library does not attempt to reconnect, even if `autoRetry` is set to true.
+
+To set the 'keep alive' interval for MQTT, you can optionally use the `setKeepAliveInterval(int)` method before you call the `connect()` function. The `setKeepAliveInterval(int)` value is  measured in seconds, and defines the maximum time interval between messages that are sent or received. When used, the client can detect when the server is no longer available without waiting for the end of the TCP/IP timeout period to be reached. The client ensures that at least one message travels across the network within each 'keep alive' interval period. If zero data-related messages are received during the timeout period, the client sends a small `ping` message, which the server acknowledges. The `setKeepAliveInterval(int)` is set to 60 seconds by default. To disable the 'keep alive' processing feature on the client, set the `setKeepAliveInterval(int)` value to 0.
+
 
 ```
 DeviceClient myClient = new DeviceClient(options);
-
+myClient.setKeepAliveInterval(120);
 myClient.connect(true);
 ```
 
-After the successful connection to the {{site.data.keyword.iot_short_notm}} service, the device client can perform operations such as publishing events and subscribing to device commands from an application.
+To control the number of retries that occur when there is a connection failure, use the overloaded connect(int numberOfTimesToRetry) function.
+
+
+```
+DeviceClient myClient = new DeviceClient(options);
+myClient.setKeepAliveInterval(120);
+myClient.connect(10);
+```
+
+After your devices successfully connect to {{site.data.keyword.iot_short_notm}}, they can publish events and subscribe to device commands from an application.
 
 
 ## Publishing events
@@ -230,7 +246,7 @@ myClient.publishEvent("status", event);
 
 ### Increasing the QoS level for an event
 
-You can increase the [QoS levels](../../reference/mqtt/index.html#qos-levels) for events that are published. Events that have a QoS level that is greater than zero might take longer to publish, because of the extra confirmation receipt information that is included.
+You can increase the [QoS levels](../../reference/mqtt/index.html#qos-levels) for events that are published. Events with a QoS level that is greater than zero might take longer to publish because of the extra confirmation receipt information that is included.
 
 ```
 myClient.connect();
@@ -244,13 +260,43 @@ event.addProperty("mem",  70);
 myClient.publishEvent("status", event, 2);
 ```
 
-### Publish event by using HTTP
+### Publishing events in custom formats
 
-In addition to MQTT, the devices can publish events to the {{site.data.keyword.iot_short_notm}} by using HTTP and by using the following steps:
+Events can be published in different formats, for example, JSON, string, binary, and more. By default, the library publishes events in JSON format, but you can specify the data in different formats if you prefer. For example, to publish data in string format use the following code snippet.
 
-* Construct a DeviceClient instance by using the properties file.
-* Construct an event that needs to be published.
-* Specify the event name and publish the event by using the ``publishEventOverHTTP()`` method, as shown in the following code:
+```
+myClient.connect();
+
+String data = "cpu:"+getProcessCpuLoad();
+status = myClient.publishEvent("load", data, "text", 2);
+```
+
+**Note:** In the previous code example, the payload of the event must be in string format.
+
+Any XML data can be converted to string format and published as follows,
+
+```
+status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
+```
+
+Similarly, to publish events in binary format, use the byte array that is outlined in the following example:
+
+```
+myClient.connect();
+
+byte[] cpuLoad = new byte[] {30, 35, 30, 25};
+status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
+```
+
+### Publish events by using HTTP
+{: #publishing_events_http}
+
+
+In addition to using MQTT, you can also configure your devices to publish events to {{site.data.keyword.iot_short_notm}} through HTTP. The following steps outline the sequence for publishing events through HTTP:
+
+1. Construct a `DeviceClient` instance by using the properties file.
+2. Construct an event that needs to be published.
+3. Specify the event name, and then publish the event by using the ``publishEventOverHTTP()`` method, as shown in the following code sample:
 
 ``` sourceCode
 DeviceClient myClient = new DeviceClient(deviceProps);
@@ -260,14 +306,14 @@ event.addProperty("name", "foo");
 event.addProperty("cpu",  90);
 event.addProperty("mem",  70);
 
-int httpCode = myClient.publishEventOverHTTP("blink", event);
+boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-You can find the entire code in the [HttpDeviceEventPublish] device example.
+To view the entire code, see the [HttpDeviceEventPublish] device example.
 
-Based on the settings in the properties file, the ``publishEventOverHTTP()`` method either publishes the event in Quickstart mode or in registered flow mode. When the Organization ID in the properties file is `quickstart`, the ``publishEventOverHTTP()`` method publishes the event to the device example quickstart service and publishes the event in plain HTTP format. When a valid registered organization is used in the properties file, this method always publishes the event in HTTPS, which is HTTP over SSL, so all the communication is secured.
+Based on the settings in the properties file, the ``publishEventOverHTTP()`` method publishes the event in either Quickstart mode or in registered flow mode. When the organization ID in the properties file is set to `quickstart`, the ``publishEventOverHTTP()`` method publishes the event to the device example quickstart service and publishes the event in plain HTTP format. When a valid registered organization is specified in the properties file, events are securely published through HTTPS.
 
-The HTTP protocol provides 'at most once' delivery, which is similar to the 'at most once' (QoS 0) quality of service level of the MQTT protocol. When you use 'at most once' delivery to publish events, the application must implement retry logic when there is an error.
+The HTTP protocol provides 'at most once' delivery, which is similar to the 'at most once' (QoS 0) quality of service level of the MQTT protocol. When you use 'at most once' delivery to publish events, the application must implement retry logic whenever there is an error.
 
 [HttpDeviceEventPublish]: https://github.com/ibm-messaging/iot-device-samples/blob/master/java/device-samples/src/main/java/com/ibm/iotf/sample/client/device/HttpDeviceEventPublish.java
 
@@ -275,7 +321,7 @@ The HTTP protocol provides 'at most once' delivery, which is similar to the 'at 
 {: #handling_commands}
 
 When the device client connects, it automatically subscribes to any commands for this device. To process specific commands, you need to register a command callback method.
-The messages are returned as an instance of the Command class, which has the following properties:
+The messages are returned as an instance of the `Command` class, which contains the following properties:
 
 | Property     |Data type     | Description|
 |----------------|----------------|
@@ -362,4 +408,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## Samples
 {: #samples}
 
-For a list of device and device management samples that are developed by using the  {{site.data.keyword.iot_short_notm}} Java Client library, see the [GitHub  repository](https://github.com/ibm-messaging/iot-device-samples/tree/master/java).
+For a list of device and device management samples that are developed by using the {{site.data.keyword.iot_short_notm}} Java Client library, see the [iot-device-samples GitHub repository](https://github.com/ibm-messaging/iot-device-samples/tree/master/java).

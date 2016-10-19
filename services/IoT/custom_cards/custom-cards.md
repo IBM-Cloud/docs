@@ -27,7 +27,7 @@ The browser that is running {{site.data.keyword.iot_short_notm}} dashboards retr
 
 To enable centralized version control by using the card server, the custom card code is not cached on the client side. If a custom card is no longer available or if the card server cannot be reached, a placeholder is used to keep a consistent dashboard layout.
 
-**Tip:** To test the custom cards feature without setting up your own development environment, you can connect to the IBM-provided sample custom cards server at: https://customcards.mybluemix.net
+**Tip:** To test the custom cards feature without setting up your own development environment, you can connect to the IBM-provided sample custom cards server at: `https://customcards.mybluemix.net`
 
 To build your cards, you must set up a node.js-based local development environment and import sample cards from the IBM-provided custom cards GitHub repository. After you create your cards, you deploy the cards package to a secure (HTTPS) web server that you then link the {{site.data.keyword.iot_short_notm}} custom cards extension to.   
 
@@ -66,7 +66,7 @@ Custom cards are currently offered as an experimental feature.
  4. In the **Custom Card** tile, click **Setup**.
  5. In the Configure Custom Cards section, click **Add** and enter the secure (HTTPS) URL for the sample card server in the server field.  
 If you are connecting to your own server, enter the URL of that server.    
-**Tip:** The URL of the IBM sample cards server is: https://customcards.mybluemix.net  
+**Tip:** The URL of the IBM sample cards server is: `https://customcards.mybluemix.net`  
  6. Click **Retrieve Certificate** to connect to the custom cards server and retrieve the security certificate information for the server.  
  **Important:** Use the certificate information to verify that you are connecting to the intended known and secured custom cards server.
  4. Click **Done** to add the server connection.
@@ -90,7 +90,7 @@ Congratulations, you have connected to a custom card server and added a custom c
 
 To prepare for custom cards development, you can set up your local custom card development environment and test deploy the HelloWorld sample card.
 
-To create a custom card server and deploy the IBM sample cards, follow the detailed instructions in the [custom-cards repository](https://github.com/ibm-watson-iot/custom-cards/README.md) readme.
+To create a custom card server and deploy the IBM sample cards, follow the detailed instructions in the [custom-cards repository](https://github.com/ibm-watson-iot/custom-cards/blob/master/README.md) readme.
 
 The following high-level steps are involved in the process:
 1. Make sure that your local development environment has Node.js with the npm node package manager.  
@@ -101,7 +101,7 @@ For information about installing Node.js, including the download links, go here:
   - The server must support Cross-Origin Resource Sharing (CORS) connections.  
 **Tip:** For test and proof of concept work, you can use the built-in sample node.js server, which is configured to meet these requirements.
 3. Create your own repository.
-Fork and clone the example custom card repository https://github.ibm.com/Watson-IoT/custom-cards
+Fork and clone the example custom card repository at: https://github.com/ibm-watson-iot/custom-cards
 4. Create your own module and card framework.
 Custom cards are organized in modules. Set up a new HelloWorld card module.
 5. Reference the new card.
@@ -143,8 +143,8 @@ A card that is used to control device events for simulated devices by enabling a
 
 The following high-level steps create a new card:
 
-**Tip:** For detailed steps, see [Creating boards and cards Readme](https://github.com/ibm-watson-iot/custom-cards/README.md) in the example custom cards repository Readme.
-1. Create your own card module
+**Tip:** For detailed steps, see [Creating boards and cards Readme](https://github.com/ibm-watson-iot/custom-cards/blob/master/README.md) in the example custom cards repository Readme.
+1. Create your own card module.
  1. Use one of the sample card modules as a template for your module.
  2. Update all instances of the module name in your new module file names and files content.  
  For example, replace `HelloWorld` with your module name in all file names and file content instances.
