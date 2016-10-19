@@ -137,7 +137,9 @@ You can use the following tutorial to get an understanding of the full lifecycle
     swift delete container_one object
     ```
     {: pre}
+    
 11. List both containers. You will see your original file in `container_one` and `container_two` will be empty.
+
     ```
     swift list container_one
     swift list container_two
