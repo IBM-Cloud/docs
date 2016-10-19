@@ -7,7 +7,7 @@ copyright:
 
 #Enabling iOS applications to receive and send {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-Last updated: 12 October 2016
+Last updated: 19 October 2016
 {: .last-updated}
 
 You can enable iOS applications to receive and send {{site.data.keyword.mobilepushshort}} to your devices.
@@ -238,7 +238,9 @@ if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
 ```
 //For Swift
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil) UIApplication.sharedApplication().registerUserNotificationSettings(settings) UIApplication.sharedApplication().registerForRemoteNotifications()
+	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil) 
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications()
 	}
 ```
 	{: codeblock}
@@ -277,8 +279,6 @@ After the token is received from APNs, pass the token to Push Notifications as p
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
-   push.initializeWithAppGUID("appGUID")
-   push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
    push.initializeWithAppGUID("appGUID")
    push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
        if error.isEmpty {
