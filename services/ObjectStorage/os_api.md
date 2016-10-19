@@ -2,7 +2,6 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-10-07"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +10,8 @@ lastupdated: "2016-10-07"
 {:pre: .pre}
 
 ## Using the Swift REST API to access {{site.data.keyword.objectstorageshort}} {: #using-swift-restapi}
-
+*Last updated: 19 October 2016*
+{: .last-updated}
 
 You can use the Swift REST API with a command–line client interface, such as cURL, or call the API from your application.
 {: shortdesc}
