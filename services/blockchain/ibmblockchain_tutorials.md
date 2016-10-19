@@ -16,16 +16,16 @@ copyright:
 Last updated: 5 October 2016
 {: .last-updated}
 
-The following samples demonstrate how applications and chaincode function in an IBM Blockchain network. To learn more about the Hyperledger Fabric 0.5 code that underpins your blockchain network, visit the [Fabric Docs](https://github.com/hyperledger/fabric/tree/master/docs) section of the Linux Foundation's Hyperledger Project.  
+The following samples demonstrate how applications and chaincode function in an IBM Blockchain network. To learn more about the Hyperledger Fabric v0.5 code, which underpins your blockchain network, visit the [Fabric Docs](https://github.com/hyperledger/fabric/tree/master/docs) section of the Linux Foundation's Hyperledger Project.  
 {:shortdesc}
 
 To experience chaincode applications in action, you can immediately deploy the Marbles, Commercial Paper or Car Lease demo below (click a Deploy to Bluemix button). Or continue reading to explore the Hello Chaincode tutorial.
 
 - [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)  **Marbles**
 - [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)  **Commercial Paper**
-- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  **Car Lease**
+- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  **Car Lease**  
 
-
+<br>
 ## Using the Hello Chaincode tutorial
 {: #hellocc}
 This tutorial guides you through using basic building blocks to code an elementary chaincode application. You will  incrementally build a working chaincode that creates generic assets for exchanging on a network. Then you will interact with your chaincode through the network API. After completing this tutorial, you will be able to answer the following questions:
@@ -43,7 +43,6 @@ Chaincode is Go (GoLang) or Java code that enables users to interact with a bloc
 
 ### Implementing your first chaincode
 Complete the following topics to implement chaincode on an IBM Blockchain on Bluemix network:
-
 #### Setting up the environment
 1. Download and install Golang for your operating system from: [GoLang](https://golang.org/dl/).
 2. Set your GOPATH:
@@ -57,13 +56,13 @@ Complete the following topics to implement chaincode on an IBM Blockchain on Blu
 		- Your GOROOT and GOPATH values must be unique. GOROOT is auto-generated when you install Go, and should be C:\Go\.
 		- Set your GOPATH to the workspace directory that you created. In this example, **GOPATH** is  **C:\Users\ADMIN\Documents\GoProjects**.  
 		- For more details, run the command `go help gopath` or visit the [Go Documentation](https://golang.org/doc/install).
-3. Add the Hyperledger Faric 0.5 shim code to your Go path by running the following command:
+3. Add the Hyperledger Faric v0.5 shim code to your Go path by running the following command:
 
 	```
 	go get github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview/core/chaincode/shim
 	```
-	
-4. **Note**: Be sure to follow the above link to import the v0.5 hyperledger-archives shim code.  The Bluemix backend is built with this same versioning; as a result, it's important for the shim version and Bluemix version to align.   
+
+4. **Note**: Be sure to follow the above link to import the v0.5 hyperledger-archives shim code.  The Bluemix backend is built with this same versioning; as a result, it's important for the shim version and Bluemix version to align.
 
 #### Setting up GitHub
 The Blockchain on Bluemix plans require your chaincode to be located in a [GitHub](https://Github.com/) repository. Create a GitHub account and set up Git as described at [Set Up Git](https://help.github.com/articles/set-up-git/). After setting up GitHub, complete the following steps:
@@ -77,7 +76,6 @@ The Blockchain on Bluemix plans require your chaincode to be located in a [GitHu
 	```
 The command should return with no errors or messages.
 
-
 #### Implementing the chaincode interface
 The next step is implementing the chaincode shim interface in your Golang code. The three main functions are **Init**, **Invoke**, and **Query**. All three functions take a function name and an array of strings as input, but vary as to when they are called. You will be building up to a working chaincode that creates generic assets for exchange on a blockchain network.
 
@@ -90,7 +88,6 @@ The `import` statement lists dependencies that are required to build your chainc
 ### Passing values
 
 The following chaincode values are passed:
-
 #### Init()
 Init is called to initialize your chaincode when you first deploy it to the network. In this example, you use `Init` to configure the initial state of one variable on the ledger.
 
@@ -111,7 +108,7 @@ func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args [
 }
 ```
 
-This is done by using the shim function `stub.PutState`. The first argument is the key as a string, and the second argument is the value as an array of bytes. This function may return an error, which your code inspects and returns if present:
+This is done by using the shim function `stub.PutState`. The first argument is the key as a string, and the second argument is the value as an array of bytes. This function may return an error, which your code inspects and returns if present.
 
 #### Invoke()
 `Invoke` is called to add a transaction request to the chain. The structure of `Invoke` is simple;
@@ -157,7 +154,7 @@ func (t *SimpleChaincode) write(stub *shim.ChaincodeStub, args []string) ([]byte
 }
 ```
 
-This `write` function should look similar to your previous `Init` change. You can now set the key and value for `PutState`, which allows you to store any key/value pair on the blockchain ledger.  
+This `write` function should look similar to your previous `Init` change. You can now set the key and value for `PutState`, which allows you to store any key/value pair on the blockchain ledger.
 
 #### Query()
 `Query` is called to query your chaincode state, and does not add blocks to the chain. Only deploy and invoke functions add new blocks. Use `Query` to read the value of your chaincode state's key/value pairs.
@@ -216,8 +213,9 @@ func main() {
 
 ### Interacting with your chaincode
 The fastest way to test your chaincode is to use the REST interface on your peers.
-The Swagger UI on your Bluemix dashboard monitor allows you to experiment with deploying chaincode, without writing any additional code.
+The Swagger UI on your Bluemix dashboard monitor allows you to experiment with deploying chaincode, without writing any additional code.  
 
+<br>
 #### Swagger API
 Complete the following steps to use the Swagger API:
 
@@ -235,16 +233,15 @@ Complete the following steps to use the Swagger API:
   - Copy the set of credentials to a text file for later use.
   - Expand the **Registrar** API section.
   - Expand the `POST /registrar` section.
-  - Populate the `Value` field with JSON that specifies an `enrollID` and `enrollSecret' from your credentials: 
-  
-  ![Register Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/registrar.PNG)
-  
+  - Populate the `Value` field with JSON that specifies an `enrollID` and `enrollSecret' from your credentials:
+
+  ![Register Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/registrar.PNG "Register example")
+
   The *Response Body* should look like the following example:
-  
-  ![Register Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/register_response.PNG)
+
+  ![Register Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/register_response.PNG "Register example response body")
 
 Now that you have an `enrollID` set up, you can use this ID when deploying, invoking, and querying chaincode in the following steps.
-
 ### Deploying your chaincode
 In order to deploy your chaincode through the REST interface, your chaincode must be stored in a public GitHub repository. When you send a deploy request to a peer, you specify the URL for the chaincode repository, and the parameters to initialize the chaincode.
 
@@ -279,10 +276,10 @@ In order to deploy your chaincode through the REST interface, your chaincode mus
 	```
 
   The *Response Body* should look similar to the following example:
-  
-  ![Deploy Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/deploy_response.PNG)
-  
-  The response for the deployment will contain the ID for this chaincode. The ID is a 128 character alphanumeric hash, which you can use for future invoke or query requests. Copy this ID to your text editor.  
+
+  ![Deploy Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/deploy_response.PNG "Deploy example response body")
+
+  The response for the deployment will contain the ID for this chaincode. The ID is a 128 character alphanumeric hash, which you can use for future invoke or query requests. Copy this ID to your text editor.
 
 #### Query
 Query your chaincode for the value of the `hello_world` key, which you set with the `Init` function:
@@ -311,9 +308,9 @@ Query your chaincode for the value of the `hello_world` key, which you set with 
 	}
 	```
   The *Response Body" should look similar to the following example:
-  
-  ![Query Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/query_response.PNG)
-  
+
+  ![Query Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/query_response.PNG "Query example response body")
+
   The value of `hello_world` is "hi there", which was set by the body of your previous deploy call.
 
 #### Invoke
@@ -344,17 +341,16 @@ Call your generic write function with `invoke`. Change the value of `hello_world
 	}
 	```
   The *Response Body" should look similar to the following example:
-  
-  ![Invoke Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/invoke_response.PNG)
-  
+
+  ![Invoke Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/invoke_response.PNG "Invoke example response body")
+
   Re-run the query above, and you should get the following response:
-  
-  ![Query2 Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/query2_response.PNG)
 
-You have just completed writing some basic chaincode.
+  ![Query2 Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/query2_response.PNG "Invoke example response")
+
+You have just completed writing some basic chaincode.  
+
 <br>
-
-
 ## Requirements for Marbles, Commercial Paper, and Car Lease demos
 {: #requirements}
 
@@ -364,35 +360,32 @@ The following prerequisites are included with your Bluemix service for running t
 - Node.js 0.12.0+ and npm v2+
 - Golang Environment (required only to build your own chaincode)
 
-The demos require proficiency with Node.js and the express module. You must also have a conceptual understanding of 'chaincode', 'ledger', and 'peer' in a blockchain context; refer to the [Hyperledger Fabric  Glossary](https://github.com/hyperledger/fabric/blob/master/docs/glossary.md).
+The demos require proficiency with Node.js and the express module. You must also have a conceptual understanding of 'chaincode', 'ledger', and 'peer' in a blockchain context; refer to the [Hyperledger Fabric  Glossary](https://github.com/hyperledger/fabric/blob/master/docs/glossary.md).  
+
 <br>
-
-
 ## Using the Marbles demo
 {: #marbles}
 
 The Marbles application demonstrates a simple asset transfer between two parties. The application is designed to test the JavaScript SDK, guide its development, and help developers become familiar with the SDK and chaincode.
 
-Explore the [Marbles Tutorials](https://github.com/IBM-Blockchain/marbles/blob/master/tutorial_part1.md) to learn how the web application, SDK and chaincode work together. If you arealready familiar with chaincode and IBM Blockchain, you can [manually deploy](https://github.com/IBM-Blockchain/marbles/blob/master/tutorial_part1.md#) the demo to Bluemix, or  click the Deploy to Bluemix button to use the web application:
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)
+Explore the [Marbles Tutorials](https://github.com/IBM-Blockchain/marbles/blob/master/tutorial_part1.md) to learn how the web application, SDK and chaincode work together. If you arealready familiar with chaincode and IBM Blockchain, you can [manually deploy](https://github.com/IBM-Blockchain/marbles/blob/master/tutorial_part1.md#) the demo to Bluemix, or  click the Deploy to Bluemix button to use the web application:  
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)  
+
 <br>
-
-
 ## Using the Commercial Paper demo
 {: #commercialpaper}
 
-The Commercial Paper application demonstrates how a commercial paper trading network can be implemented using IBM Blockchain. The Commercial Paper demo explores a permissioned blockchain network, on which participants are assigned roles and corresponding levels of access. Visit the [Commercial Paper README](https://github.com/IBM-Blockchain/cp-web#readme) to learn more about the components of this demo, or deploy it  to Bluemix immediately to see the trading network in action:
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)
-<br>
+The Commercial Paper application demonstrates how a commercial paper trading network can be implemented using IBM Blockchain. The Commercial Paper demo explores a permissioned blockchain network, on which participants are assigned roles and corresponding levels of access. Visit the [Commercial Paper README](https://github.com/IBM-Blockchain/cp-web#readme) to learn more about the components of this demo, or deploy it  to Bluemix immediately to see the trading network in action:  
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)  
 
+<br>
 ## Using the Car Lease demo
 {: #carlease}
 
-The Car Lease application demonstrates the lifecycle of a vehicle, from manufacturing, through a series of owners, and  finishing with the vehicle being scrapped. The demo uses Node.js for server-side programming, and Golang for chaincode running on the IBM Blockchain network. The demo includes two instances of chaincode: one defines the rules for vehicle transactions, and the other logs all vehicle transactions during its lifetime. Both chaincode programs use JSON objects to store data. Vist the [Car Lease README](https://github.com/IBM-Blockchain/car-lease-demo/blob/master/README.md) to learn more about the application architecture and vehicle attributes associated with this demo, or deploy the demo immediately to Bluemix:
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)
+The Car Lease application demonstrates the lifecycle of a vehicle, from manufacturing, through a series of owners, and  finishing with the vehicle being scrapped. The demo uses Node.js for server-side programming, and Golang for chaincode running on the IBM Blockchain network. The demo includes two instances of chaincode: one defines the rules for vehicle transactions, and the other logs all vehicle transactions during its lifetime. Both chaincode programs use JSON objects to store data. Vist the [Car Lease README](https://github.com/IBM-Blockchain/car-lease-demo/blob/master/README.md) to learn more about the application architecture and vehicle attributes associated with this demo, or deploy the demo immediately to Bluemix:  
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  
+
 <br>
-
-
 ## Non-deterministic chaincode
 {: #ndcc}
 

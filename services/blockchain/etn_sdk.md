@@ -12,9 +12,9 @@ years: 2016
 {:pre: .pre}
 
 
-# Hyperledger Fabric Client SDK for Node.js
+# HFC SDK for Node.js
 {: #etn_sdk}
-Last updated: 26 September 2016
+Last updated: 07 October 2016
 {: .last-updated}
 
 The Hyperledger Fabric Client (HFC) SDK enables application developers to build Node.js applications that interact with a blockchain network. Node.js applications that leverage the HFC SDK can be used to perform the following network tasks:
@@ -29,7 +29,6 @@ The HFC SDK provides APIs, through which applications interact with a Hyperledge
 1. Pluggable key value store, which is used to retrieve and store keys associated with a member. The  `chain.setKeyValStore()` method overrides the default file-based key value store implementation. The chain key value store is used to warehouse sensitive private keys, so access must be appropriately protected.
 2. Pluggable member service, which is used to register and enroll members. The `chain.setMemberServices()` method  overrides the default implementation in `MemberServices`. Member services implements the Hyperledger fabric as a  permissioned blockchain network, which provides anonymity, unlinkability of transactions, and confidentiality.
 
-
 You can include the HFC SDK in your Node.js app by using the offline method or the npm method:
 *  offline method: first copy the files from the Hyperledger Fabric source tree  (https://github.com/hyperledger/fabric/tree/master/sdk/node/lib) into your Node.js app `/lib` directory. Then include the HFC SDK in your application by adding the following code snippet:
 
@@ -40,16 +39,15 @@ var hfc = require("./lib/hfc");
 * npm method: from the command line, first install the HFC SDK from npm with the following snippet:
 
 ```
-npm install hfc@0.5.3 
+npm install hfc@0.5.3
 ```
 
 Then include the HFC SDK in your application with the following code snippet:
 
 ```js
 var hfc = require('hfc');
-```
-
-
+```  
+<br>
 ## HFC Objects
 {: #objects}
 
@@ -59,9 +57,9 @@ The following HFC objects (classes and interfaces) are described at a high level
 * The `KeyValStore` interface is used by HFC to store and retrieve all persistent data. This data includes private keys, which must be kept secure. The default implementation is a file-based version located in the `FileKeyValStore` class.
 * The `MemberServices` interface is implemented by the `MemberServicesImpl` class, and provides security and identity-related features such as privacy, unlinkability and confidentiality. This implementation issues *eCerts* (member enrollment certificates) and *tCerts* (transaction certificates for each member).
 * The `Member` class represents end users who transact on the network, and other types of members such as peers (nodes). Use the `Member` class, which interacts with the `MemberServices` object, to *register* and *enroll* members and users. You can also deploy, query, and invoke chaincode directly from the 'Member' class by transacting with `Peer` objects; this implementation simply delegates the work to a temporary `TransactionContext` object.
-* The `TransactionContext` class implements the bulk of the deploy, invoke and query logic. Each `TransactionContext` instance receives a unique tCert from `MemberServices`, which it always uses to submit transactions. To issue multiple transactions with the same tCert, retrieve a `TransactionContext` object directly from a Member object, and issue multiple deploy, invoke and query operations. However, using a single tCert for multiple transactions links the transactions such that they are identifiable as involving the same anonymous user. To avoid transaction linkage, call deploy, invoke, and query on the `User` or `Member` object.
+* The `TransactionContext` class implements the bulk of the deploy, invoke and query logic. Each `TransactionContext` instance receives a unique tCert from `MemberServices`, which it always uses to submit transactions. To issue multiple transactions with the same tCert, retrieve a `TransactionContext` object directly from a Member object, and issue multiple deploy, invoke and query operations. However, using a single tCert for multiple transactions links the transactions such that they are identifiable as involving the same anonymous user. To avoid transaction linkage, call deploy, invoke, and query on the `User` or `Member` object.  
 
-
+<br>
 ## Sample Node.js application
 {: #nodesample}
 
@@ -77,7 +75,7 @@ The objective is to use a JavaScript application--[helloblockchain.js](https://g
     mkdir -p $HOME/workspace
     ```
 
-1. Go to your newly created workspace folder and install hfc v0.5.3 with the following command:
+1. Go to your newly created workspace folder and install HFC v0.5.3 with the following command:
 
      ```
      cd $HOME/workspace
@@ -94,11 +92,11 @@ The objective is to use a JavaScript application--[helloblockchain.js](https://g
 	```
 	"credentials": {
 	```
-	
-1. Then add a final closing `}` to line 202 to close the object.  The layout of your ServiceCredentials.json should mirror that of the example [ServiceCredentials.json](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/ServiceCredentials.json), leaving you with a payload of 202 lines. If you obtain your credentials from a blockchain instance derived from the Bluemix [classic console](https://console.ng.bluemix.net/) format, then you can disregard this discrepancy.  The screenshots below depict the differences in the two layouts, with the initial showing *new console*, and the latter showing *classic*:
+
+1. Then add a final closing `}` to line 202 to close the object.  The layout of your ServiceCredentials.json should mirror that of the example [ServiceCredentials.json](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/ServiceCredentials.json), leaving you with a payload of 202 lines. If you obtain your credentials from a blockchain instance derived from the Bluemix [classic console](https://console.ng.bluemix.net/) format, then you needn't worry about this discrepancy.  The screenshots below depict the differences in the two layouts, with the initial showing *new console*, and the latter showing *classic*:
 
      ![Service Credentials New Console](images/servicecreds1.png "Service Credentials New Console")
-     
+
      ![Service Credentials](images/servicecreds.png "Service Credentials")
 
 1. Upon adding ServiceCredentials.json, your `/workspace` directory should look similar to the following screenshot:
@@ -148,13 +146,13 @@ Successfully completed chaincode invoke transaction: request={"chaincodeID":"9be
 Successfully queried  chaincode function: request={"chaincodeID":"9be0a0ed3f1788e8728c8911c747d2f6d0e205fa63422dc598d498fe709b9b8d","fcn":"query","args":["a"]}, value=99
 ```
 
-Be aware that when running on a Starter Developer network it can sometimes take up to ten minutes for your chaincode container to start.  However, once started, subsequent deployments and invocations will succeed immediately, because the prerequisite files have been stored on the host machine for your blockchain instance.  
+Be aware that when running on a Starter Developer network it can sometimes take up to ten minutes for your chaincode container to start.  However, once started, subsequent deployments and invocations will execute immediately, because the prerequisite files have been stored on the host machine for your blockchain instance.  
 
 Navigate to the **Blockchain** tab from your **Network Console**. This view shows blocks being appended to the blockchain ledger as the helloblockchain.js program issues deploy and invoke transactions. The following screenshot shows the results of running helloblockchain.js twice, with the default arguments for "a" and "b":
 
-   ![Node workspace3](images/nodeworkspace3.PNG "Node workspace 3")
+   ![Node workspace3](images/nodeworkspace3.PNG "Node workspace 3")  
 
-
+<br>
 ## Troubleshooting
 Ensure that you are running **hfc@0.5.3** by issuing either of the following commands from your **/workspace** directory:
   * npm list | grep hfc
@@ -176,18 +174,18 @@ Once your chaincode is successfully deployed on the network, you can reduce the 
 
 If you receive a handshake error, try a different `grpc` version. You can access your grpc version with either of the following commands:
     - `npm list | grep grpc`
-    - `npm list -g | grep grpc`
+    - `npm list -g | grep grpc`  
 
-
+<br>
 ## Public and Private Keys
 {: #keys}
 
 Hyperledger Fabric uses certificate authorities, and their underlying public and private keys, to meet the security requirements of businesses operating on a shared blockchain. Member identity management, role management and transactional privacy can all be controlled through the HFC SDK.
 
-User and transactional privacy on a shared blockchain are managed through the implementation of a PKI (Public Key Infrastructure) framework. The PKI, through certificate authorities, manages the generation, distribution and revocation of keys and digital certificates. The complete technical specifications for PKI and Membership Services are described in the security section of the Hyperledger Fabric 0.5 [protocol specification](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md). The basic tenets of the Hyperledger Fabric PKI are explained below:
+User and transactional privacy on a shared blockchain are managed through the implementation of a PKI (Public Key Infrastructure) framework. The PKI, through certificate authorities, manages the generation, distribution and revocation of keys and digital certificates. The complete technical specifications for PKI and Membership Services are described in the security section of the Hyperledger Fabric v0.5 [protocol specification](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md). The basic tenets of the Hyperledger Fabric PKI are explained below:
 
-1. The Registration Authority (RA) validates the identity of a user who is requesting access to the blockchain network.  This can be done dynamically by a user with `registrar` authority, or manually by editing the membersrvc.yaml file. The registration process occurs out-of-band and is executed through the `RegisterUser` function. The RA assigns enrollment credentials--`<enrollID>` and `<enrollPWD>`--to the user.
+1. The Registration Authority (RA) validates the identity of a user who is requesting access to the blockchain network.  This can be done dynamically by a user with `registrar` authority, or manually by editing the membersrvc.yaml file. The registration process occurs out-of-band and is executed through the `RegisterUser` function. The RA assigns enrollment credentials-`<enrollID>` and `<enrollPWD>`-to the user.
 
-2. The user then sends an enrollment request to the Enrollment Certificate Authority (ECA), using the `CreateCertificatePair` function. This payload contains the user's one-time `<enrollPWD>`, Public Signature Verification Key and Public Encryption Key, and is signed with the user's Private Signature Verification Key. Upon receipt of the enrollment request, the ECA issues an encrypted challenge to the user that can only be decrypted with the user's Private Encryption Key. After decrypting the challenge, the user resends the certificate request. The ECA, contingent upon an accurately decrypted response, returns an authenticated certificate pair signed with its digital signature. The digital signature is produced by cryptographically hashing the certificate request (message) using the SHA-2 algorithm to produce a "digest." This "message digest" is then encrypted with the ECA's private signature key. Network members can then authenticate the digital signature by decrypting it with the ECA's public signature key. The returned enrollment certificate (eCert) pair contains one certificate for data signing (private) and one for data encryption (public). This eCert pair is static and long-term and can be either visible or invisible to transactions.
+2. The user then sends an enrollment request to the Enrollment Certificate Authority (ECA), using the `CreateCertificatePair` function. This payload contains the user's one-time `<enrollPWD>`, Public Signature Verification Key and Public Encryption Key, and is signed with the user's Private Signature Verification Key. <br><br>Upon receipt of the enrollment request, the ECA issues an encrypted challenge to the user that can only be decrypted with the user's Private Encryption Key. After decrypting the challenge, the user resends the certificate request. The ECA, contingent upon an accurately decrypted response, returns an authenticated certificate pair signed with its digital signature. <br><br>The digital signature is produced by cryptographically hashing the certificate request (message) using the SHA-2 algorithm to produce a "digest." This "message digest" is then encrypted with the ECA's private signature key. Network members can then authenticate the digital signature by decrypting it with the ECA's public signature key. The returned enrollment certificate (eCert) pair contains one certificate for data signing (private) and one for data encryption (public). This eCert pair is static and long-term and can be either visible or invisible to transactions.
 
 3. To transact on any blockchain network, each user must also have transaction certificates (tCerts). Upon successful enrollment, a user submits a request to the Transaction Certificate Authority (TCA) for a batch of tCerts. A tCert is short-term, specific to one transaction, and can be modified by the client using an API. After verifying the user's eCert, the TCA assigns a batch of tCerts and a KeyDF_Key (Key Derivation Function Key), which allows the user to decrypt their private keys. While the single KeyDF_Key is used for each tCert in the batch, the ensuing private key that is generated is unique to each tCert. To transact, a client must be able to sign the transaction payload with the decrypted private key. Only then is a transaction forwarded to network validating peers for consensus.

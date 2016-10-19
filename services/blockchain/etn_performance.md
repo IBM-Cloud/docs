@@ -12,12 +12,12 @@ years: 2016
 {:pre: .pre}
 
 
-# Verified behaviors
+# Verified performance
 {: #etn_performance}
-Last updated: 15 July 2016
+Last updated: 07 October 2016
 {: .last-updated}
 
-The following behaviors have been tested and verified by IBM.  The results were achieved in a High Security setting unless otherwise noted: 
+The following behaviors have been tested and verified by IBM. The results were achieved on a High Security network, unless otherwise noted:
 {:shortdesc}
 
 ### Performance/Stress
@@ -32,7 +32,7 @@ This testing was done to obtain the TPS (transactions per-second) of invokes and
 - transaction types: invoke a->b, invoke b->a, then repeat & query a, query b, then repeat
 
 | Transaction type | Number of peers | Number of threads | Run duration (min) | Transactions per second |
-| ----------- |:------------:|:-----:|:----------:|:----------:|
+| ---------- |:-------:|:-----:|:------:|:------:|
 | invokes   |  4  | 100 | 10 | 72  |
 | invokes   |  4  | 100 | 60 | 66  |
 | queries   |  4  | 100 | 10 | 252 |
@@ -41,7 +41,7 @@ This testing was done to obtain the TPS (transactions per-second) of invokes and
 ### Resiliency/Consensus
 
 This testing was done to ensure the stability and resiliency of PBFT when Byzantine faults occur.  The tests included:
-	
+
 - Stopping 1 node and continue sending deploy, invoke, and query transactions.  The network continues to operate. Performed on each node in the network.
 - Stopping 2 nodes, the network halts due to a lack of consensus.
 - Restarting one of the nodes stopped in the previous test.  The network resumes and the node that restarted syncs with the other validating peers. For detailed steps on PBFT testing, see the [Testing consensus and availability](etn_pbft.html) topic.

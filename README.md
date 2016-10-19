@@ -400,6 +400,13 @@ We have worked to output all Markdown markup to standard and valid HTML5 tags:
 * Elements having a WAI-ARIA 'article' role must have a label specified with aria-label or aria-labelledby.
 * Use header elements where appropriate: Pass thru HTML tagging when Markdown markup is not available, for example definition lists (dl, dt, dd)
 * There must be a non-empty title element in the head of the document: For the HTML output from Markdown, the `<head>` element does not contain a `<title>` element. We added this with a header file.
+* To embed a video, you must ensure that the video player is fully accessible. If you link to multimedia or video content, ensure the following are complete:
+	* Where you link to your video, the player must be accessible which means using keyboard access only the user must be able to stop/start the video and turn on captions.
+	* Include captioning for the video.
+	* Include a text transcript for your video. This text transcript must be accessible, so you must run AVT testing on this document that is available for viewing or download. Also, included in this transcript must be the full audio description that has all on-screen actions described. For example, your video is a demo of a set of on-screen actions, so all clicks, movements, menu options, etc. must be announced. If this is not the case, a separate audio description with these plus a transcript is required. The text transcript should always include on-screen actions and the audio.
+	* The content within your video should pass visual accessibility standards such a color contrast for images of text, high contrast, etc.  
+	
+
 
 Additional accessibility *might* be needed as content is migrated to Markdown. And, as a result, updates to the parser and/or to the markup recommendations *might* be required.
 
