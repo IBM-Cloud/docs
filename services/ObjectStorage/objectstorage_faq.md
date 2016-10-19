@@ -2,13 +2,15 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-10-07"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # FAQ {: #faq}
+
+*Last updated: 19 October 2016*
+{: .last-updated}
 
 This FAQ provides answers to common questions about the {{site.data.keyword.objectstorageshort}} service.
 {: shortdesc}
