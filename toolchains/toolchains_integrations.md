@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-Last updated: 5 October 2016
+Last updated: 18 October 2016
 {: .last-updated}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
@@ -32,6 +32,7 @@ The tool integrations that are available to add and configure for your toolchain
 |Eclipse Orion {{site.data.keyword.webide}}		|Yes		|Yes			|
 |GitHub		|Yes		|Yes		|
 |Dedicated GitHub Enterprise			|No		|Yes		|
+|Other Tool			|Yes		|Yes		|
 |PagerDuty			|Yes		|Yes		|
 |Sauce Labs		|Yes		|No		|
 |Slack			|Yes		|Yes		|
@@ -210,6 +211,27 @@ You can configure {{site.data.keyword.ghe_short}} as a tool integration in your 
 
 <!-- 8/23/2016: The GHE Dedicated content has been moved to docs-staging/services/ghededicated/index.md -->
 
+## Configuring a custom tool (Other Tool)
+{: #othertool}
+
+If your team uses a tool that isn't included on the toolchains integrations list, you can integrate a custom tool. 
+
+Configure a custom tool so that it works with other tools in your toolchain and is available to your team:
+1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Other Tool**.
+
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Tool Integrations**.
+1. Click the add button (+).
+1. In the Tool Integrations section, click **Other Tool**.
+1. Type the tool name.
+1. Select the Lifecycle phase that is most closely associated with the tool. The lifecycle phase choice determines which category your tool is listed under on the Toolchains Integrations page.
+1. Add an icon URL. The icon will appear on your tool's integration card.
+1. Add a documentation URL.
+1. Specify a tool instance name. For example: My Team Tool.
+1. Add a tool instance URL. Clicking the tool integration card leads to the URL you list for the tool instance.
+1. Add a description of your tool.
+1. (Advanced) Add additional properties if required. For example, list any information or attributes that are required for your tool to integrate with other tools in your toolchain.  
+1. Click **Create Integration**.
+
 ## Configuring PagerDuty
 {: #pagerduty}
 
@@ -272,3 +294,9 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 1. Click the tile for Slack. You can view all of the activity for your toolchain in the configured Slack channel.
 
 To learn more, see [Slack (Link opens in a new window)](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.
+
+
+
+
+
+

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015，2016
-lastupdated: 2016-09-28  
+lastupdated: "2016-10-12"  
  
 
 ---
@@ -16,7 +16,7 @@ lastupdated: 2016-09-28
 
 # Getting started with the {{site.data.keyword.autoscaling}} service
 {: #autoscaling}
-Last updated: 28 September 2016
+Last updated: 12 October 2016
 {: .last-updated}
 
 In {{site.data.keyword.Bluemix_notm}}, you can automatically manage your application capacity. Use the {{site.data.keyword.autoscalingfull}} service to automatically increase or decrease the compute capacity of your application. The number of application instances are adjusted dynamically based on the {{site.data.keyword.autoscaling}} policy that you define.
@@ -48,8 +48,8 @@ Now you can configure the {{site.data.keyword.autoscaling}} policy, see the metr
 <dl>
 <dt>Policy Configuration</dt>
 <dd>Use this section to create or edit the scaling rules to specify the conditions in which certain scaling activities are to be triggered.<ul>
-<li> For Liberty for Java™ applications, you can define scaling rules for JVM Heap, Memory, and Throughput.
-<li> For Node.js applications, you can define scaling rules for Memory.
+<li> For Liberty for Java™ applications, you can define scaling rules for Heap, Memory, Response Time, and Throughput.  
+<li> For Node.js applications, you can define scaling rules for Heap, Memory, and Throughput.
 <li> For Ruby applications, you can define scaling rules for Memory.</ul>
 *Note:* You can define multiple scaling rules for more than one metric type. However, the {{site.data.keyword.autoscaling}} service does not detect conflicts between scaling policies. When you define the scaling policy, you must ensure that multiple scaling rules do not conflict with one another. Otherwise, you might see the total instance number fluctuates because the application scales in 1 minute and scales out the next.<br/><br/>
 If the workload of your application changes dramatically during the peak time and the spare time, you can create a scaling schedule to handle the different scaling requirements for different time periods. Use the Minimum Instance Count parameter that is specified in a schedule to define the baseline of the application instance number, while dynamic scaling rules still apply to the schedule to trigger the scaling in and scaling out actions.</dd>
@@ -247,9 +247,9 @@ Table 1. Policy fields in the scaling policy
 
 | Metric name | Description | Supported application type |
 |-------------|----------------------| ------------------- |
-| *JVM heap* |	The usage percentage of the JVM heap memory.	| Liberty for Java |
+| *Heap* |	The usage percentage of the heap memory.	| Liberty for Java, Node.js SDK |
 | *Memory*   |	The usage percentage of the memory.	|  All |
-| *Throughput* | The number of the processed requests per second.| Liberty for Java |
+| *Throughput* | The number of the processed requests per second.| Liberty for Java, Node.js SDK |
 | *Response time* |	The response time of the processed requests.	| Liberty for Java |
 
 Table 2. Supported metric names

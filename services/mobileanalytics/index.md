@@ -11,8 +11,8 @@ lastupdated: "2016-10-19"
 {:codeblock:.codeblock}
 
 # Getting started with {{site.data.keyword.mobileanalytics_short}} (Beta)
-
 {: #gettingstartedtemplate}
+
 
 Last updated: 19 October 2016
 {: .last-updated}

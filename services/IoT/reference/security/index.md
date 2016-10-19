@@ -29,9 +29,9 @@ The following document answers some common questions about how your organization
 ## {{site.data.keyword.iot_short_notm}} and {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} runs within {{site.data.keyword.Bluemix_notm}} platform and so relies upon both {{site.data.keyword.Bluemix_notm}} and IBM SoftLayer for access and connectivity. The reliance upon {{site.data.keyword.Bluemix_notm}} and IBM SoftLayer makes {{site.data.keyword.Bluemix_notm}} and IBM SoftLayer security and reliability important to users of {{site.data.keyword.iot_short_notm}}
+{{site.data.keyword.iot_short_notm}} runs within {{site.data.keyword.Bluemix_notm}} platform and so relies upon both {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.Bluemix_BluSoftlayer_full}} for access and connectivity. The reliance upon {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.Bluemix_BluSoftlayer}} makes {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.Bluemix_BluSoftlayer}} security and reliability important to users of {{site.data.keyword.iot_short_notm}}
 
-For more details on the security of the {{site.data.keyword.Bluemix_notm}}, please see [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security).
+For more details about the security of the {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security).
 
 ## {{site.data.keyword.iot_short_notm}} Security compliance
 {: #compliance}  
@@ -67,9 +67,11 @@ Device credentials and API keys can be individually revoked if they are compromi
 ## How do we ensure your devices connect securely to the {{site.data.keyword.iot_short_notm}}?
 {: #secure-device-connection}
 
-The {{site.data.keyword.iot_short_notm}} supports connectivity over TLS v1.2. Devices connected use a combination of clientId and the authentication token that is generated when adding the devices to your platform. MQTT v3.1.1 is used to allow simple interoperability across many platforms and languages.
+Devices connected use a combination of clientId and the authentication token that is generated when adding the devices to your platform. MQTT v3.1.1 is used to allow simple interoperability across many platforms and languages. The {{site.data.keyword.iot_short_notm}} supports connectivity over TLS v1.2.
 
 ![image](connectivity_platform.svg)
+
+For more information about TLS and cipher suite requirements, see the [TLS requirements](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements)  section in the `Application, device, and gateway connections to Watson IoT Platform` documentation.
 
 ## How do we prevent data leaking between IoT devices?
 {: #prevent-leak-devices}
@@ -105,5 +107,5 @@ The topic space in which devices and applications operate is scoped within a sin
 * [{{site.data.keyword.Bluemix_notm}} security](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Softlayer security](http://www.softlayer.com/security){:new_window}
-* [Softlayer compliance](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.Bluemix_BluSoftlayer}} security](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.Bluemix_BluSoftlayer}} compliance](http://www.softlayer.com/compliance){:new_window}

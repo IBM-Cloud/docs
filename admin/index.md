@@ -297,7 +297,7 @@ update notifications that require action on your part. There are two types of ma
 <dd>A disruptive update might affect your environment, running applications, or your users' access to your applications. You have the ability to schedule and approve each of these maintenance updates within the allotted 21-day maintenance window to ensure that the update is not applied during critical business hours. You can select the suggested deployment date and time that is based on your preapproved update windows, or you can select two more times and dates for IBM to choose from when applying the update.</dd>
 </dl>
 
-For more information about setting preapproved maintenance windows, and setting specific unavailable dates for maintenance, see [Maintenance updates](admin/index.html#oc_schedulemaintenance).
+For more information about setting preapproved maintenance windows, and setting specific unavailable dates for maintenance, see [Maintenance updates](index.html#oc_schedulemaintenance).
 
 ### General system information
 
@@ -392,7 +392,7 @@ You can also view the monthly usage and associated charges at the account level 
 <ol>
 <li>Click the <strong>{{site.data.keyword.avatar}}</strong> icon ![Avatar](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Usage details</strong>.</li>
 <li>Click <strong>Public</strong>.</li>
-<li>Select the org that you want to see data for, or select <strong>All Organizations</strong> to view the data for all orgs at once.</li>
+<li>Select the org that you want to see data for.</li>
 <li>You can see usage details for the following categories:
 <ul>
 <li>Runtime apps that have usage</li>

@@ -1,0 +1,273 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+{:new_window: target="\_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
+# 외부 서비스 통합
+{: #ref-index}
+마지막 업데이트 날짜: 2016년 9월 13일
+{: .last-updated}
+
+외부 서비스 통합을 사용하면 {{site.date.keyword.iot_full}} 조직에 있는 써드파티 또는 외부 서비스의 오퍼레이션과 데이터에 액세스할 수 있습니다.
+
+## Jasper
+{: #jasper}
+
+Jasper는 SIM 디바이스의 관리 플랫폼입니다. Jasper는 {{site.data.keyword.iot_short_notm}} 대시보드에 통합되므로 {{site.data.keyword.iot_short_notm}} 조직 대시보드를 통해 Jasper 디바이스를 관리할 수 있습니다.
+
+### Jasper에 지원되는 오퍼레이션
+
+IBM 플랫폼을 통해 제공되는 기본 제공 Jasper 통합에서는 다음과 같은 Jasper 오퍼레이션을 지원합니다.
+
+- 전체 Jasper 데이터 보기
+  - 상태, 요금제, 월별 데이터 사용, 월별 SMS 사용, 월별 음성 사용, 초과 한도, 추가된 날짜 및 수정한 날짜를 표시합니다.
+- SIM 활성화 상태 변경
+  - 인벤토리, 활성화 준비, 활성화됨, 비활성화됨 및 폐기됨 중에 선택하십시오.
+- SIM 사용 보기
+  - 주기 시작 날짜, 청구 가능 및 총 데이터, 청구 가능 및 총 SMS, 청구 가능 및 총 음성을 표시합니다.
+  - 주기 시작 날짜는 YYYY-MM-DD 형식을 사용하여 설정할 수 있습니다.
+- SIM에 SMS 전송
+- 요금제 변경
+
+다음 구성 단계가 완료된 후 Jasper에 연결된 디바이스의 디바이스 드릴 다운에서 지원되는 오퍼레이션에 액세스할 수 있습니다.
+
+
+### Jasper 구성
+
+{{site.data.keyword.iot_short_notm}} 조직에 Jasper 서비스를 연결하려면 먼저 두 단계의 구성을 수행해야 합니다. 먼저 {{site.data.keyword.iot_short_notm}}을 Jasper 서비스에 연결한 다음 {{site.data.keyword.iot_short_notm}} 디바이스를 구성해야 합니다.
+
+
+1. Jasper 확장기능을 사용하십시오. {{site.data.keyword.iot_short_notm}} 조직과 Jasper를 통합할 수 있으려면 다음 단계를 완료하십시오.
+  1. {{site.data.keyword.iot_short_notm}} 대시보드에서 **확장기능**을 선택하십시오.
+  2. **확장기능** 페이지에서 **확장기능 추가**를 클릭하십시오.
+  3. AT&T 옆의 **추가**를 클릭하십시오.
+  4. AT&T 사용자 이름, 비밀번호, 액세스 키 및 도메인 ID를 입력하십시오.
+  5. **완료**를 클릭하십시오.
+
+2. 디바이스를 구성하십시오.
+{{site.data.keyword.iot_short_notm}} 대시보드에서 Jasper의 데이터를 표시하도록 {{site.data.keyword.iot_short_notm}} 조직과 Jasper 계정에 모두 연결된 디바이스를 구성할 수 있습니다.
+**중요:** Jasper 구성은 디바이스 추가 프로세스의 일부로 적용할 수 없습니다. 이전에 연결된 디바이스만 Jasper로 구성할 수 있습니다.
+Jasper 연결 디바이스를 구성하려면 다음 단계를 완료하십시오.
+ 1. {{site.data.keyword.iot_short_notm}} 대시보드의 디바이스 탭에서 구성할 Jasper 연결 디바이스를 찾으십시오.
+ 2. *디바이스 드릴 다운* 보기를 열 디바이스를 선택하십시오.
+ 3. *확장기능 구성*까지 아래로 화면이동하십시오.
+ 4. 다음 JSON 형식을 사용하여 확장기능 구성을 입력한 다음 **변경 확인**을 클릭하여 구성을 저장하십시오.  
+
+```json  
+    {
+        "jasper": {
+            "iccid": "string"
+        }
+    }
+
+```
+
+조직이 정상적으로 구성되면 *확장기능* 섹션이 *디바이스 드릴 다운* 보기의 *확장기능 구성* 섹션에 표시됩니다.
+
+## AT&T
+{: #att}
+
+### AT&T에 지원되는 오퍼레이션
+
+AT&T 확장기능을 사용하면 다음 AT&T 오퍼레이션을 수행할 수 있습니다.
+
+- 전체 AT&T 데이터 보기
+  - 상태, 요금제, 월별 데이터 사용, 월별 SMS 사용, 월별 음성 사용, 초과 한도, 추가된 날짜 및 수정한 날짜를 표시합니다.
+- SIM 활성화 상태 변경
+  - 인벤토리, 활성화 준비, 활성화됨, 비활성화됨 및 폐기됨 중에 선택하십시오.
+- SIM 사용 보기
+  - 주기 시작 날짜, 청구 가능 및 총 데이터, 청구 가능 및 총 SMS, 청구 가능 및 총 음성을 표시합니다.
+  - 주기 시작 날짜는 YYYY-MM-DD 형식을 사용하여 설정할 수 있습니다.
+- SIM에 SMS 전송
+- 요금제 변경
+
+### AT&T의 구성
+
+{{site.data.keyword.iot_short_notm}} 조직을 AT&T에 연결하려면 조직 구성 및 디바이스 구성을 완료해야 합니다.
+
+{{site.data.keyword.iot_short_notm}} 플랫폼을 구성하려면 다음 단계를 완료하십시오.
+
+1. AT&T 확장 기능을 사용하십시오. AT&T와 {{site.data.keyword.iot_short_notm}} 조직을 통합할 수 있으려면 다음 단계를 완료하십시오.
+  1. {{site.data.keyword.iot_short_notm}} 대시보드에서 **확장기능**을 선택하십시오.
+  2. **확장기능** 페이지에서 **확장기능 추가**를 클릭하십시오.
+  3. AT&T 옆의 **추가**를 클릭하십시오.
+  4. AT&T 사용자 이름, 비밀번호, 액세스 키 및 도메인 ID를 입력하십시오.
+  5. **완료**를 클릭하십시오.
+
+{{site.data.keyword.iot_short_notm}} 조직을 AT&T 계정과 연결하려면 먼저 두 단계의 구성을 수행해야 합니다. 조직 구성을 완료한 다음 디바이스를 구성하십시오.
+
+
+2. 디바이스를 구성하십시오.
+{{site.data.keyword.iot_short_notm}} 대시보드에서 AT&T의 데이터를 표시하도록 {{site.data.keyword.iot_short_notm}} 조직과 AT&T 계정에 모두 연결된 디바이스를 구성할 수 있습니다.
+**중요:** AT&T 구성은 디바이스 추가 프로세스의 일부로 적용할 수 없습니다. 이전에 연결된 디바이스만 AT&T로 구성할 수 있습니다.
+AT&T 연결 디바이스를 구성하려면 다음 단계를 완료하십시오.
+ 1. {{site.data.keyword.iot_short_notm}} 대시보드의 디바이스 탭에서 구성할 AT&T 연결 디바이스를 찾으십시오.
+ 2. *디바이스 드릴 다운* 보기를 열 디바이스를 선택하십시오.
+ 3. *확장기능 구성*까지 아래로 화면이동하십시오.
+ 4. 다음 JSON 형식을 사용하여 확장기능 구성을 입력한 다음 **변경 확인**을 클릭하여 구성을 저장하십시오.  
+
+```json
+    {
+        "atnt": {
+            "iccid": "string"
+        }
+    }
+
+```
+
+조직이 정상적으로 구성되면 *확장기능* 섹션이 *디바이스 드릴 다운* 보기의 *확장기능 구성* 섹션에 표시됩니다.
+
+<!--
+## ARM mbed connector
+{: #arm}
+
+The ARM mbed connector is an extension that allows you to connect your ARM mbed device to your {{site.data.keyword.iot_short_notm}}. The ARM mbed extension is allows the ARM mbed portal and the {{site.data.keyword.iot_short_notm}} to send and receive data from the ARM mbed portal.
+
+### Setup Configuration
+
+
+1. Enable the ARM mbed connector extension. To enable the ARM mbed connector extension complete the following steps:
+  1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Settings** and navigate to **Extensions**.
+  2. In the **Extensions** menu, click **Add Extension**.
+  3. Click **Add** next to ARM mbed connector extension.
+  4. Enter your ARM mbed access key and domain ID. You can find these by using the ARM mbed portal at https://connector.mbed.com.
+  5. Check the credentials are correct by clicking the **Check Connection** button.
+  6. Click **Done**.
+
+### Payload Format
+
+There are two types of incoming messages from the ARM mbed platform, notifications and asynchronous responses. The {{site.data.keyword.iot_short_notm}} can send commands to devices that are connected to the ARM mbed platform.
+
+#### Notifications
+
+Notifications are generated by changes in device or sensor data. After the {{site.data.keyword.iot_short_notm}} processes the message, it is to the device event topic in the same way as a device connected directly to the {{site.data.keyword.iot_short_notm}}. The event type used for notifications originating on devices connected to the ARM mbed platform is `notify`.
+
+The following code sample shows the payload format for a notification sent by the ARM mbed platform API:
+
+```
+{
+  "ep":<endpoint/deviceID>,
+  "path":<resource path>,
+  "ct":<content type>,
+  "payload":<Base64 encoded payload>,
+  "max-age":<how long the payload is valid, in seconds>
+}
+```
+
+#### Asynchronous responses
+
+When the {{site.data.keyword.iot_short_notm}} sends a command to a device connected to the ARM mbed platform, the device sends a confirmation message back to the {{site.data.keyword.iot_short_notm}}. This confirmation message is called an _asynchronous response_ and uses the event type `asyncResponse`.
+
+The following code sample shows the payload format for an asynchronous response sent by the ARM mbed cloud service:
+
+```
+{
+  "id":<transaction id>,
+  "status":<200 is command was sucessfully executed. Check other HTTP response codes>,
+  "ct":<content type>,
+  "max-age":<how long the payload is valid, in seconds>,
+  "payload":<base64 encoded payload>,
+  "ep":<endpoint/deviceID affected by the command>,
+  "path":<resource path affected by the command>
+}
+```
+
+#### Sending commands to the ARM mbed platform
+
+The {{site.data.keyword.iot_short_notm}} can send commands to devices connected to the ARM mbed platform. Commands sent to the ARM mbed platform it must use the following JSON format.
+
+```
+{
+  "method":<PUT or POST>,
+  "deviceId":<endpoint/deviceId>,
+  "resourceId":<resource path>,
+  "payload": <Base64 encoded payload>
+}
+```
+
+The payload should be published to the following topic:
+
+```
+iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
+```
+-->
+
+## Orange
+{: #orange}
+
+Orange 확장기능을 사용하면 {{site.data.keyword.iot_short_notm}}에 연결되었으며 Orange SIM 카드가 설치된 디바이스에서 SIM 카드 데이터를 볼 수 있습니다.
+
+https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration-with-orange-beta/
+
+### Orange에 지원되는 오퍼레이션
+
+{{site.data.keyword.iot_short_notm}} 서비스에 연결되어 있고 Orange SIM 카드가 있는 디바이스가 있으면 Orange 확장기능을 사용하여 다음 SIM 카드 데이터를 볼 수 있습니다.
+
+- SIM 일련 번호
+- 활성화 상태
+- 마지막 상태 변경
+- 마지막 상태 새로 고치기
+- 위치 상태
+
+### Orange 구성
+
+
+
+Orange 확장기능을 사용하려면 다음을 수행하십시오.
+
+1. {{site.data.keyword.iot_short_notm}} 대시보드에서 **확장기능**을 선택하십시오.
+2. **확장기능** 페이지에서 **확장기능 추가**를 클릭하십시오.
+3. Orange 확장기능 옆의 **추가**를 클릭하십시오.
+4. Orange 사용자 이름과 비밀번호를 입력하십시오.
+6. **완료**를 클릭하십시오.
+
+Orange 확장기능을 사용으로 설정하고 나면 Orange SIM 데이터를 표시하도록 Orange SIM 카드가 있는 각 디바이스를 구성해야 합니다.
+
+1. {{site.data.keyword.iot_short_notm}} 대시보드의 디바이스 탭에서 구성할 Orange SIM 디바이스를 찾으십시오.
+2. 디바이스를 선택하고 *확장기능 구성*까지 아래로 화면이동하십시오.
+3. 다음 JSON 형식을 사용하여 확장기능 구성을 입력한 다음 **변경 확인**을 클릭하여 구성을 저장하십시오.
+
+```  
+    {
+        "orange": {
+            "serialnumber": "<serial number of Orange SIM>"
+        }
+    }
+
+```
+조직이 정상적으로 구성되면 *확장기능* 섹션이 *디바이스 드릴 다운* 보기의 *확장기능 구성* 섹션에 표시됩니다.
+
+
+## 디바이스 관리 확장기능
+{: #device_mgmt}
+
+디바이스 관리는 {{site.data.keyword.iot_short_notm}}의 코어 기능이지만 추가 기능을 개발하기 위해 확장할 수 있습니다.
+
+디바이스 관리 확장기능을 사용하면 디바이스 관리용 사용자 정의 기능을 설치할 수 있습니다. 사용자 정의 디바이스 관리 기능에 대한 자세한 정보는 [디바이스 관리 사용자 정의 확장기능](../../devices/device_mgmt/custom_actions.html){: new_window}을 참조하십시오.
+
+## 블록체인(Blockchain)
+{: #blockchain}
+
+블록체인이 포함된 {{site.data.keyword.iot_short_notm}}을 사용하면 IoT 디바이스에서 블록체인 트랜잭션에 데이터를 제공할 수 있으므로, 블록체인의 불변 원장에 데이터를 저장하고 스마트 계약 비즈니스 규칙에서 사용할 수 있습니다. {{site.data.keyword.iot_short_notm}}에서 블록체인의 스마트 계약에 필요한 데이터 형식에 디바이스 데이터를 맵핑한 다음 블록체인 원장에 저장하도록 블록체인 패브릭에 전달합니다.
+
+### 블록체인에 지원되는 오퍼레이션
+- 스마트 계약을 디바이스 이벤트로 업데이트하도록 트리거합니다.
+- 스마트 계약 비즈니스 로직을 실행하여 원장 상태를 디바이스 이벤트 데이터로 업데이트합니다.
+- 모니터링 UI로 블록체인, 트랜잭션 및 원장 상태를 모니터합니다.
+
+### 블록체인 구성
+
+{{site.data.keyword.iot_short_notm}} 블록체인 통합은 {{site.data.keyword.iot_short_notm}}에서 기본적으로 활성화되지 않는 서비스 오퍼링입니다. 사용자 환경에서 이 기능을 활성화하려면 다음 단계를 완료하십시오.
+ 1. {{site.data.keyword.iot_short_notm}} 대시보드에서 **설정**을 선택하고 **확장기능**으로 이동하십시오.
+ 2. 블록체인 확장기능 옆의 **자세한 정보** 링크를 클릭하여 IoT 블록체인 서비스 오퍼링 페이지로 이동하십시오.
+ 3. 서비스 요청 양식을 작성하여 제출하십시오.
+일반적으로 서비스를 승인하는 데는 하루 정도 걸립니다. 요청이 승인되고 나면 {{site.data.keyword.iot_short_notm}} 조직에서 블록체인 통합을 활성화하는 방법에 대한 지시사항이 포함된 이메일이 전송됩니다.
+ 5. 조직이 설정을 완료하도록 {{site.data.keyword.iot_short_notm}} 대시보드로 돌아가십시오. 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 블록체인 통합](../../bl_blockchain_integration.html)을 참조하십시오.

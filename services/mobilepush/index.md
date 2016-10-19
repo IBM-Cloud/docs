@@ -12,12 +12,12 @@ copyright:
 
 # Getting started with {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Last updated: 21 September 2016
+Last updated: 17 October 2016
 {: .last-updated}
 
 {:shortdesc}
 
-The {{site.data.keyword.mobilepushshort}} service provides a unified platform to send and manage mobile and web {{site.data.keyword.mobilepushshort}} that are targeted to iOS, Android mobile platforms, Google Chrome and Mozilla Firefox web browsers. The {{site.data.keyword.mobilepushshort}} service manages the mapping of your application users to their devices, device platform, web browsers and handles dispatching push notifications to them. With this service, you can send broadcasts, unicasts, (based on deviceID), and also tags (or topics) as push notifications to your mobile and web browser application users. You can also use an SDK and [REST APIs](https://mobile.{DomainName}/imfpushrestapidocs/) to further develop your client applications.
+The {{site.data.keyword.mobilepushshort}} service provides a unified platform to send and manage mobile and web push notifications that are targeted to iOS, Android mobile platforms, Google Chrome, Mozilla Firefox web browsers and Google Chrome Apps and Extensions. The {{site.data.keyword.mobilepushshort}} service manages the mapping of your application users to their devices, device platform, web browsers and handles dispatching push notifications to them. With this service, you can send broadcasts, unicasts, (based on deviceID), and also tags (or topics) as push notifications to your mobile and web browser application users. You can also use an SDK and [REST APIs](https://mobile.{DomainName}/imfpush/) to further develop your client applications.
 
 This section describes how to set up basic push notifications. When you use a basic notification, the notifications are broadcast instead of reaching a specific set of users using tags.
 
@@ -49,4 +49,4 @@ This section describes how to set up basic push notifications. When you use a ba
 * [Push API Reference (Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html){: new_window}
 * [IMFPush API reference iOS](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window}
 * [BMSPush API reference iOS (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/blob/development/Apple Docs/index.html){: new_window}
-* [REST API Reference](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}
+* [REST API Reference](https://mobile.{DomainName}/imfpush/){: new_window}

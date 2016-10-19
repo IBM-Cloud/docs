@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-09-12"
 ---
 
 #	Using the Professional 1 Application plan
 {: #using_mobilefoundation_p2}
 
-Last updated: 12 September 2016
-{: .last-updated}
+<!--Last updated: 12 September 2016
+{: .last-updated}-->
 
 With the Professional 1 Application plan users can create 1 mobile application with multiple mobile operating systems.
 After you create the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service instance, read the following procedure to get started with the service.

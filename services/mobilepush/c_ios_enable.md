@@ -7,7 +7,7 @@ copyright:
 
 #Enabling iOS applications to receive and send {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-Last updated: 22 September 2016
+Last updated: 19 October 2016
 {: .last-updated}
 
 You can enable iOS applications to receive and send {{site.data.keyword.mobilepushshort}} to your devices.
@@ -184,7 +184,7 @@ Specifies the unique AppGUID key that is assigned to the {{site.data.keyword.mob
 ```
 //Initialize client Push SDK for Objective-C
 IMFPushClient *push = [IMFPushClient sharedInstance];
-[push initializeWithAppGUID:@"appGUID"];
+[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"];
 ```
 	{: codeblock}
 
@@ -193,7 +193,7 @@ IMFPushClient *push = [IMFPushClient sharedInstance];
 ```
 //Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
-push.initializeWithAppGUID("appGUID")
+push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 ```
 	{: codeblock}
 
@@ -238,7 +238,9 @@ if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
 ```
 //For Swift
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil) UIApplication.sharedApplication().registerUserNotificationSettings(settings) UIApplication.sharedApplication().registerForRemoteNotifications()
+	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil) 
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications()
 	}
 ```
 	{: codeblock}
@@ -277,8 +279,6 @@ After the token is received from APNs, pass the token to Push Notifications as p
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
-   push.initializeWithAppGUID("appGUID")
-   push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
    push.initializeWithAppGUID("appGUID")
    push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
        if error.isEmpty {
@@ -359,4 +359,4 @@ After you have successfully set up basic notifications, you can configure config
 
 Add these Push Notifications Service features to your app.
 To use tag-based notifications, see [Tag-based Notifications](c_tag_basednotifications.html).
-To use advanced notifications options, see [Advanced push notifications](t_advance_notifications.html).
+To use advanced notifications options, see [Enabling advanced push notifications](t_advance_badge_sound_payload.html).

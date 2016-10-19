@@ -17,6 +17,7 @@ You must have:
 
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
 * Your service parameter values. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile options**. The `applicationRoute` and  `appGUID` (also known as `tenantId`) values are displayed in the **Route** and **App GUID / TenantId** fields. You will need these values for intializing the SDK and for sending requests to the back-end application.
+*  Find the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: **US South**, **Sydney**, or **UK**. The exact SDK constant values that correspond to these names are indicated in the code examples. 
 
 ## Setting up the server SDK
 {: #serversetup}
@@ -85,7 +86,7 @@ Replace the *appGUID* value with the `appGUID` value obtained in [Before you beg
 
 Initialize the {{site.data.keyword.amashort}} client SDKs with the real URL of your {{site.data.keyword.Bluemix_notm}} application, and use the localhost (or IP address) in each of your requests. See the following samples.
 
-Replace the `BMSClient.REGION_UK` with the appropriate region.
+Replace the region with the appropriate region.
 
 Replace the *appGUID* and *bluemixAppRoute* values with the values obtained in [Before you begin](#before-you-begin). 
 
@@ -99,7 +100,8 @@ String bluemixAppRoute = "http://myapp.mybluemix.net";
 String bluemixAppGUID = "your-bluemix-app-guid";
 String tenantId = "your-MCA-service-tenantID";
 
-BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.REGION_UK);
+BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.REGION_UK); 
+//  set your MCA application region here. Currently possible values are BMSClient.REGION_US_SOUTH, BMSClient.REGION_SYDNEY, or BMSClient.REGION_UK
 BMSClient.getInstance().setAuthorizationManager(
                  MCAAuthorizationManager.createInstance(this, tenantId));
 
@@ -165,7 +167,8 @@ IMFResourceRequest *request =  [IMFResourceRequest
 let baseRequestUrl = "http://localhost:3000"
 let bluemixAppRoute = "http://myapp.mybluemix.net"
 let tenantId = "your-MCA-service-tenantID"
-let regionName = BMSClient.REGION_US_SOUTH // set your MCA application region here. Currently these can be BMSClient.REGION_US_SOUTH, BMSClient.REGION_SYDNEY, BMSClient.REGION_UK.
+let regionName = BMSClient.Region.usSouth
+// set your MCA application region here. Currently these can be BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, BMSClient.Region.sydney
 
 BMSClient.sharedInstance.initialize(bluemixAppRoute: bluemixAppRoute, bluemixAppGUID: tenantId, bluemixRegion: regionName)
 
@@ -209,8 +212,7 @@ var failure = function(error){
 	console.log("failure", error);
 }
 
-var request = new MFPRequest(baseRequestUrl +
-							"/resource/path", MFPRequest.GET);
+var request = new MFPRequest(baseRequestUrl + "/resource/path", MFPRequest.GET);
 
 request.send(success, failure);
 ```

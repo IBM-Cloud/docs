@@ -7,13 +7,12 @@ copyright:
 
 # Enabling Cordova applications to receive push notifications
 {: #cordova_enable}
-Last updated: 22 September 2016
+Last updated: 17 October 2016
 {: .last-updated}
 
 Cordova is a platform for building hybrid applications with JavaScript, CSS, and HTML. The {{site.data.keyword.mobilepushshort}} supports development of Cordova-based iOS and Android applications.
 
-You can enable Cordova applications to receive and send push notifications to your devices.
-
+You can enable Cordova applications to receive push notifications to your devices.
 
 ## Installing the Cordova push plug-in
 {: #cordova_install}
@@ -399,4 +398,4 @@ After you have successfully set up basic notifications, you can configure config
 
 Add the {{site.data.keyword.mobilepushshort}} service features to your app.
 To use tag-based notifications, see [Tag-based Notifications](c_tag_basednotifications.html).
-To use advanced notifications options, see [Advanced push notifications](t_advance_notifications.html).
+To use advanced notifications options, see [Enabling advanced push notifications](t_advance_badge_sound_payload.html).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-08-03"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,8 @@ copyright:
 # Maintenance and updates
 {: #maintupdates_mf}
 
-Last updated: 03 August 2016
-{: .last-updated}
+<!--Last updated: 03 August 2016
+{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} provisions a {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group-->. The updates to the {{site.data.keyword.mobilefoundation_short}} server are notified to the users. You can choose to update the {{site.data.keyword.mobilefoundation_short}} server when it is convenient for you.
 {:shortdesc}

@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 15 September 2016*
+*Last updated: 14 October 2016*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
@@ -51,7 +51,6 @@ There are optional components that are available for you to purchase to scale an
 
 | **Name** | **Description** |
 |----------|-----------------|
-|{{site.data.keyword.Bluemix_notm}} Local access one-time set up | A one-time set-up charge for deploying and configuring the local environment. |
 |{{site.data.keyword.Bluemix_notm}} Local compute resources 16 GB capacity increase | An extension of the IBM {{site.data.keyword.Bluemix_notm}} Local compute resources to provide an extra 16 GB of memory capacity. |
 |{{site.data.keyword.Bluemix_notm}} Data & Session Cache 50 GB capacity increase | An environment that permits deploying and running Data Cache and Session Cache instances up to a cumulative capacity of 50 GB. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 5 Million API Calls | An environment that permits running a private version of {{site.data.keyword.apiconnect_short}} with a capacity of 5 million API Calls a month targeted towards departmental API projects. |
@@ -77,39 +76,42 @@ The syndicated catalog provides the function to create hybrid applications that 
 |Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Australian Sydney region|
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
-|{{site.data.keyword.alertnotificationshort}}		|Yes		|Yes			|Yes		|
+|{{site.data.keyword.alertnotificationshort}}	|Yes		|Yes		|Yes	|
+|{{site.data.keyword.apiconnect_short}}         |Yes            |Yes            |Yes  |
 |{{site.data.keyword.appseccloudshort}}		|Yes		|Yes		|Yes |
-|{{site.data.keyword.hadoopst}}			|Yes		|No		|No |
+|{{site.data.keyword.apiconnect_short}} 	|Yes   	 	|Yes  	 	|Yes   |
+|Automated Accessibility Checker |Yes       |Yes    |Yes   |
 |{{site.data.keyword.rules_short}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.cloudant}}			|Yes		|Yes		|Yes |
-|{{site.data.keyword.conceptexpansionshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.conceptinsightsshort}}	|Yes		|Yes		|Yes |
+|{{site.data.keyword.iotmapinsights_short}}    |Yes  |Yes  |Yes  |
+|{{site.data.keyword.conversationshort}}  |Yes  |Yes  |Yes  |
 |{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|Yes |
-|{{site.data.keyword.dialogshort}}		|Yes		|Yes		|Yes|
+|Delivery Pipeline Next		|Yes		|No		|No |
+|Digital Content Checker |Yes  |Yes  |Yes  |
 |{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.game}}			|No		|No		|Yes |
+|{{site.data.keyword.iotdriverinsights_short}}  |Yes |Yes  |Yes  |
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|Yes |
 |{{site.data.keyword.GlobalizationPipeline_short}}	|Yes		| Yes		| Yes |
 |{{site.data.keyword.identitymixershort}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.iot4auto_short}} |Yes   |Yes  |Yes  |
+|{{site.data.keyword.iotelectronics}}  |Yes  |Yes  |No |
+|{{site.data.keyword.iotinsurance_short}} |No   |No   |Yes  |
 |{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|Yes |
+|{{site.data.keyword.languagetranslatorshort}} |Yes  |Yes  |Yes  |
+|{{site.data.keyword.dwl_short}}  |Yes  |Yes  |No  |
 |{{site.data.keyword.eventhubshort}}		|Yes		|No		|No|
 |{{site.data.keyword.messagehub}}		|Yes		|Yes		|No|
-|{{site.data.keyword.macm_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.manda}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.mqa}}			|Yes		|Yes		|Yes |
-|{{site.data.keyword.mql}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.mql}}			|No		|No		|Yes |
 |{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.pm_short}}			|Yes		|Yes		|No |
-|{{site.data.keyword.presenceinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.mobilepush}}		|Yes		|Yes		|Yes |
-|{{site.data.keyword.questionandanswershort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.relationshipextractionshort}}	|Yes	|Yes		|Yes|
 |{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.runbook_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes |
@@ -119,10 +121,9 @@ The syndicated catalog provides the function to create hybrid applications that 
 |{{site.data.keyword.texttospeechshort}} 	|Yes 		|Yes	 	|Yes|
 |{{site.data.keyword.toneanalyzershort}} 	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.tradeoffanalyticsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.visualinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.visualrecognitionshort}}	|Yes 		|Yes	 	|Yes|
 |{{site.data.keyword.iot_short}}		|Yes		|Yes		|No|
-|{{site.data.keyword.workflow}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|Yes |
 
 ## {{site.data.keyword.Bluemix_notm}} Local architecture
@@ -178,7 +179,7 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 <li>Contact your IBM designated account representative or contact <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a> to get started.</li>
 <li>Establish your {{site.data.keyword.Bluemix_notm}} Local agreement with IBM that includes milestone dates for delivery.
 	<ol type="a">
-	<li>Work with IBM on your fee for your {{site.data.keyword.Bluemix_notm}} Local instance. The monthly recurring fee is based on the local services that you want to use, plus a subscription to all {{site.data.keyword.Bluemix_notm}} public services. You then receive an invoice for anything that you use beyond that subscription agreement.</li>
+	<li>Work with IBM on your one-time setup and recurring monthly fees for your {{site.data.keyword.Bluemix_notm}} Local instance. The monthly recurring fee is based on the local services that you want to use, plus a subscription to all {{site.data.keyword.Bluemix_notm}} public services. You then receive an invoice for anything that you use beyond that subscription agreement.</li>
 	<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Local instance.</li>
 	</ol>
 	</li>
