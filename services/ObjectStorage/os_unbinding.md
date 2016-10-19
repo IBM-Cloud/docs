@@ -2,7 +2,6 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-09-26"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +9,8 @@ lastupdated: "2016-09-26"
 
 # Unbinding and deprovisioning your  {{site.data.keyword.objectstorageshort}} instance {: #deprovisioning-object-storage}
 
+*Last updated: 19 October 2016*
+{: .last-updated}
 
 
 ### Unbinding your instance
