@@ -2,7 +2,6 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-10-19"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +12,8 @@ lastupdated: "2016-10-19"
 
 
 # Scheduling object deletion {: #schedule-object-deletion}
-
+*Last updated: 19 October 2016*
+{: .last-updated}
 
 You can schedule the deletion of your objects. You can do this by making use of either of the `X-Delete-At` or `X-Delete-After` headers.
 {: shortdesc}
