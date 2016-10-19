@@ -9,10 +9,12 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
-
-# Accessing {{site.data.keyword.objectstorageshort}} using the Swift CLI {: #using-swift-cli}
+# Start using {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
 *Last updated: 19 October 2016*
 {: .last-updated}
+
+# Accessing {{site.data.keyword.objectstorageshort}} using the Swift CLI {: #using-swift-cli}
+
 
 The {{site.data.keyword.objectstorageshort}} service is based on OpenStack Swift and can be accessed by using any compatible client application. This section describes how to use the Python Swift client, which is the command-line interface (CLI) for the {{site.data.keyword.objectstorageshort}} API and its extensions, to work with containers and files.
 {: shortdesc}
