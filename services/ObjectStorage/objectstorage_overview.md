@@ -9,7 +9,7 @@ copyright:
 
 # About {{site.data.keyword.objectstorageshort}}  {: #about-object-storage} 
 
-*Last updated: 29 August 2016*
+*Last updated: 19 October 2016*
 {: .last-updated}
 
 {{site.data.keyword.objectstorageshort}} uses metadata to identify objects placed in storage so that they are easily searchable and quickly accessible even among large amounts of data.
