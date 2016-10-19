@@ -117,7 +117,6 @@ If you have a private instance of the service for your dedicated environment, yo
 |{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|Yes |
-|Delivery Pipeline Next		|Yes		|No		|No |
 |Digital Content Checker |Yes  |Yes  |Yes  |
 |{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.iotdriverinsights_short}}  |Yes |Yes  |Yes  |
