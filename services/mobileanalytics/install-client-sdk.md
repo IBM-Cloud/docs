@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-29"
+lastupdated: "2016-10-18"
 
 ---
 
 # Installing the {{site.data.keyword.mobileanalytics_short}} Client SDKs
 {: #mobileanalytics_sdk}
 
-Last updated: 29 September 2016
+Last updated: 18 October 2016
 {: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_short}}
@@ -82,7 +82,7 @@ The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [Cocoapo
     ```
     {: codeblock}
 
-2. Follow the [CocoaPods installation instructions](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods) on GitHub.
+2. Follow the [{{site.data.keyword.Bluemix_notm}} Mobile Services Swift SDK instructions](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods) on GitHub.
 	
 3. After you have installed the iOS Client SDK,  [Import and initialize](sdk.html#init-ma-sdk-ios) the Analytics Client SDK.   
 
