@@ -8,6 +8,9 @@ lastupdated: "2016-09-27"
 # Monitoring applications with {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
 
+Last updated: 27 September 2016
+{: .last-updated}
+
 The {{site.data.keyword.mobileanalytics_full}} provides monitoring and analytics for your mobile applications. You can record application logs and monitor data with the {{site.data.keyword.mobileanalytics_short}} Client SDK. Developers can control when to send this data to the {{site.data.keyword.mobileanalytics_short}} Service. When data is delivered to {{site.data.keyword.mobileanalytics_short}}, you can use the {{site.data.keyword.mobileanalytics_short}} dashboard to get analytics insights about your mobile applications, devices, and application logs.
 {: shortdesc}
 
@@ -130,7 +133,7 @@ You created an alert definition to trigger an alert at the end of each 5 minute 
 
 You can create an alert definition based on application crashes.
 
-In this example, you use application crash data to create an alert definition. The alert monitors all application crashes in the last 2 minutes, and continues to check every 2 minutes, until the alert definition is disabled or deleted. An alert is triggered for each application that crashed 5 or more times. For more information about application crashes, see [Application crashes](app_crash/c_op_analytics_crashes.html).
+In this example, you use application crash data to create an alert definition. The alert monitors all application crashes in the last 2 minutes, and continues to check every 2 minutes, until the alert definition is disabled or deleted. An alert is triggered for each application that crashed 5 or more times. For more information about application crashes, see [Application crashes](#app_crash).
 
 1. In the {{site.data.keyword.mobileanalytics_short}} Console, click **Definitions** to display the Alerts Definitions page.
 2. Click **Create Alert**.

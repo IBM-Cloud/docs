@@ -2,12 +2,15 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-08"
+lastupdated: "2016-10-18"
 
 ---
 
 # Instrumenting your application to use the {{site.data.keyword.mobileanalytics_short}} client SDKs
 {: #mobileanalytics_sdk}
+
+Last updated: 19 October 2016
+{: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_full}} SDKs enable you to instrument your mobile application.
 {: shortdesc}
@@ -202,15 +205,14 @@ Analytics.isEnabled = false
 // Enable recording of usage analytics
 Analytics.isEnabled = true
 
-// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
+// Send recorded usage analytics to the Mobile Analytics Service
 Analytics.send(completionHandler: { (response: Response?, error: Error?) in
-    
+
     if let response = response {
-        logger.debug(message: "Status code: \(response.statusCode)")
-        logger.debug(message: "Response: \(response.responseText)")
+        // Handle Analytics send success here.
     }
     if let error = error {
-        logger.error(message: "Error: \(error)")
+        // Handle Analytics send failure here.
     }
 })
 ```
@@ -344,8 +346,8 @@ Logger.logLevelFilter = LogLevel.info
 
 // Create two logger instances
 // You can create multiple log instances to organize your logs
-let logger1 = Logger.logger(name: “feature1Logger”)
-let logger2 = Logger.logger(name: “feature2Logger”)
+let logger1 = Logger.logger(name: "feature1Logger")
+let logger2 = Logger.logger(name: "feature2Logger")
 
 // Log messages with different levels
 logger1.debug(message: "debug message for feature 1") 
@@ -416,9 +418,9 @@ Logger.sdkDebugLoggingEnabled = true
 
 You can see [application crash data](app-monitoring.html#monitor-app-crash) by sending analytics and log information to {{site.data.keyword.mobileanalytics_short}}.
 
-The `Analytics.send()` method populates the crash overview and crashes tables on the Crashes page. Charts in this section are enabled by using the initialization and sending process for analytics; no special configuration is necessary.
+The `Analytics.send()` method populates the **Crash Overview** and **Crashes** tables on the **Crashes** page. Charts in this section are enabled by using the initialization and sending process for analytics; no special configuration is necessary.
 
-The `Logger.send()` method populates the the Crashes and Crash Details tables on the Troubleshooting page. You must enable your application to store and send logs to populate the charts in this section, by adding an additional statement in your application code:
+The `Logger.send()` method populates the the **Crash Summary** and **Crash Details** tables on the **Troubleshooting** page. You must enable your application to store and send logs to populate the charts in this section, by adding an additional statement in your application code:
 
 #### Android
 {: #android-crash-statement}
@@ -438,9 +440,10 @@ See [sample logger usage](sdk.html##ios-logger-sample-swift2).
 
 ## Tracking active users
 {: #trackingusers}
+
 If your application can recognize unique users on a device, you can optionally track how many users are actively using your application by passing the user name of the active user to {{site.data.keyword.mobileanalytics_short}}. 
 
-Enable user tracking by initializing {{site.data.keyword.mobileanalytics_short}} with `hasUserContext=true`. Otherwise, {{site.data.keyword.mobileanalytics_short}}  captures only one user per device. 
+Enable user tracking by initializing {{site.data.keyword.mobileanalytics_short}} with `hasUserContext=true`. Otherwise, {{site.data.keyword.mobileanalytics_short}} captures only one user per device. 
 
 #### Android
 {: #android-tracking-users}

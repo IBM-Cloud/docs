@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-08"
+lastupdated: "2016-10-19"
 
 ---
 {:new_window: target="_blank"}
@@ -14,6 +14,9 @@ lastupdated: "2016-10-08"
 
 {: #gettingstartedtemplate}
 
+Last updated: 19 October 2016
+{: .last-updated}
+
 {{site.data.keyword.mobileanalytics_full}} provides developers, IT administrators, and business stakeholders insight into how their mobile apps are performing and how they are being used. Monitor performance and usage of all your applications from your desktop or tablet. Quickly identify trends and anomalies, drill down to resolve issues, and trigger alerts when key metrics cross critical thresholds. 
 {: shortdesc}
 
@@ -21,7 +24,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 
 1. After you create an instance <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->of the {{site.data.keyword.mobileanalytics_short}} service, you can access the {{site.data.keyword.mobileanalytics_short}} Console by clicking your tile in the **Services** section of the {{site.data.keyword.Bluemix}} Dashboard.
 
- The {{site.data.keyword.mobileanalytics_short}} service launches with **demo mode** enabled. Demo mode populates charts in the **APP DATA** section so you can see how your data will display. You can toggle demo mode off when you have your own data. The {{site.data.keyword.mobileanalytics_short}} console is read-only when in demo mode, therefore you will not be able to create new alert definitions.
+ The {{site.data.keyword.mobileanalytics_short}} service launches with **demo mode** enabled. Demo mode populates charts on the **APP DATA** and **ALERTS** pages, so you can see how your data will display. You can toggle demo mode off when you have your own data. The {{site.data.keyword.mobileanalytics_short}} console is read-only when in demo mode, therefore you will not be able to create new alert definitions.
 
 2. Install the {{site.data.keyword.mobileanalytics_short}} [Client SDKs](install-client-sdk.html). You can optionally use the {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}.
 
