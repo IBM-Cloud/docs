@@ -137,9 +137,7 @@ An empty card that contains the infrastructure for a card. Use this card as a te
 - Webcam  
 A simple web camera card. Configure the card with a webcam URL and set the refresh rate.
 - iFrame  
-A very basic iFrame card that you can use to embed any secure (HTTPS) web page in your board.
-- Function generator  
-A card that is used to control device events for simulated devices by enabling and disabling the sending of data for each function and setting the message sending rate.
+A basic iFrame card that you can use to embed any secure (HTTPS) web page in your board.
 
 The following high-level steps create a new card:
 
