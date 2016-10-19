@@ -2,7 +2,6 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-10-19"
 
 ---
 {:new_window: target="_blank"}
@@ -13,6 +12,8 @@ lastupdated: "2016-10-19"
 
 
 # Securing files {: #understanding-authentication}
+*Last updated: 19 October 2016*
+{: .last-updated}
 
 ## OpenStack Identity (Keystone) v3 {: #keystone-authentication}
 
@@ -24,6 +25,7 @@ The credentials structure contains a complete set of attributes to allow to you 
 For more information about using OpenStack Swift and Keystone, view the [OpenStack documentation site](http://docs.openstack.org).
 
 The recommended v3 token request is a POST request to https://identity.open.softlayer.com/v3/auth/tokens as shown in the following curl command:
+
 ```
 	curl -i \
 	  -H "Content-Type: application/json" \
@@ -55,6 +57,7 @@ The recommended v3 token request is a POST request to https://identity.open.soft
 Use the value of the `X-Subject-Token` field from the response header as the `X-Auth-Token` field when you make requests to the {{site.data.keyword.objectstorageshort}} service.
 
 An example response is as follows. The response is trimmed to show only the {{site.data.keyword.objectstorageshort}} relevent information.
+
 ```
 	HTTP/1.1 201 Created
 	Date: Mon, 29 Feb 2016 21:03:41 GMT
@@ -157,8 +160,6 @@ An example response is as follows. The response is trimmed to show only the {{si
 {: screen}
 
 The {{site.data.keyword.objectstorageshort}} URL is found in the service catalog. The service catalog is contained in the response body of the token request. The response is a full catalog of OpenStack services that are available. Select the endpoint from the service catalog with type of `object-store` and the region that matches the region field in the credentials.
-
-<!--- SHAWNA NOTE: WHAT DOES THIS MEAN? SERVICE CATALOG? TOKEN REQUEST? CAN WE JUST GIVE THEM THE OBJECT STORAGE ENDPOINT? WHY DO WE HAVE THEM DO THIS? WHAT ARE WE TRYING TO TELL THEM HERE. IS THIS SOMETHING THEY NEED TO DO? SOMETHING THAT WE'RE LETTING THEM KNOW? --->
 
 **Note:** Use the public interface (`publicURL`). The internal interface (`internalURL`) is not accessible from {{site.data.keyword.Bluemix_notm}}.
 
@@ -275,6 +276,7 @@ An {{site.data.keyword.objectstorageshort}} user with an admin role can grant re
 
 1. Authenticate your credentials. You can use either the credentials that are found in the service credentials tab of the UI or you can generate new credentials. For more information about generating new credentials, see [Generating service credentials](insert link here). You receive your {{site.data.keyword.objectstorageshort}} URL and authentication token as an output.
     Swift command:
+    
     ```
     export OS_USER_ID=<user_id>
     export OS_PASSWORD=<password>
@@ -287,18 +289,24 @@ An {{site.data.keyword.objectstorageshort}} user with an admin role can grant re
     swift auth
     ```
     {: codeblock}
+    
     cURL command:
+    
     ```
     curl -i -H "X-Auth-User: <user_id>" -H "X-Auth-Key: <password>" <auth_url>
     ```
     {: pre}
+    
 2. Grant read access by running the following command:
     Swift command:
+    
     ```
     swift post <container_name> --read-acl "<user_id>:<project_id>"
     ```
     {: pre}
+    
     cURL command:
+    
     ```
     curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: <tenant_id>:<project_id>" -H "X-Auth-Token: <OS_AUTH_TOKEN>"
     ```
@@ -308,16 +316,20 @@ An {{site.data.keyword.objectstorageshort}} user with an admin role can grant re
 
 3. Verify the Read ACL value.
     Swift command:
+    
     ```
     swift stat <container_name>
     ```
     {: pre}
     cURL command:
+    
     ```
     curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token:<OS_AUTH_TOKEN>"
     ```
     {: pre}
+    
     You can see in the following example output that read access has been granted:
+    
     ```
     HTTP/1.1 204 No Content
     Content-Length: 0
@@ -369,6 +381,7 @@ An {{site.data.keyword.objectstorageshort}} user with an admin role can grant wr
 
 1. Authenticate your credentials by using the information in the service credentials you created.  You receive your {{site.data.keyword.objectstorageshort}} URL and authentication token as an output.
     Swift command:
+    
     ```
     export OS_USER_ID="<user_id>"
     export OS_PASSWORD="<password>"
@@ -381,31 +394,41 @@ An {{site.data.keyword.objectstorageshort}} user with an admin role can grant wr
     swift auth
     ```
     {: codeblock}
+    
     cURL command:
+    
     ```
     curl -i -H "X-Auth-User:< user_id>" -H "X-Auth-Key:< password>" https://identity.open.softlayer.com/v3
     ```
     {: pre}
+    
 2. Grant write access by running the following command:
     Swift command:
+    
     ```
     swift post <container_name> --write-acl "<user_id>:<project_id>"
     ```
     {: pre}
+    
     cURL command:
+    
     ```
     curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: <user_id>: <project_id>" -H "X-Auth-Token:<OS_AUTH_TOKEN>"
     ```
     {: pre}
+    
     **Note**: Use a comma (,) to separate access control lists.
 
 3. Verify the write ACL value.
     Swift command:
+    
     ```
     swift stat <container_name>
     ```
     {: pre}
+    
     cURL command:
+    
     ```
     curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token:<OS_AUTH_TOKEN>"
     ```
@@ -417,11 +440,14 @@ An {{site.data.keyword.objectstorageshort}} user with an admin role can grant wr
 
 To remove read ACLs from a container:
 * Swift command:
+
     ```
     swift post <container_name> --read-acl “”
     ```
     {: pre}
+    
 *  cURL command:
+
     ```
     curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
     ```
@@ -430,11 +456,14 @@ To remove read ACLs from a container:
 To remove write ACLs from a container:
 
 * Swift command:
+
     ```
     swift post <container_name> --write-acl “”
     ```
     {: pre}
+    
 *  cURL command:
+
     ```
     curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
     ```
@@ -443,12 +472,14 @@ To remove write ACLs from a container:
 To verify that you have removed an ACL:
 
 * Swift command:
+
     ```
     swift stat <container_name>
     ```
     {: pre}
 
   The following example output shows both the Read ACL and Write ACL as blank which means that access has been removed.
+  
   ```
            Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
          Container: Test
