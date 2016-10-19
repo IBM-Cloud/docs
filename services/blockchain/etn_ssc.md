@@ -12,42 +12,41 @@ years: 2016
 {:pre: .pre}
 
 
-# Understanding the IBM Secure Service Container
+# IBM Secure Service Container
 {: #etn_ssc}
 
-Last updated: 22 July 2016
+Last updated: 13 October 2016
 {: .last-updated}
 
-The High Security Business Network is deployed as an appliance into an IBM Secure Service Container, which provides the base infrastructure for hosting blockchain services. The appliance combines operating systems, Docker, middleware, and software components that work autonomously, and provides core services and infrastructure with optimized security.
+The IBM Blockchain High Security Business Network is deployed as an appliance into IBM Secure Service Container, which provides the base infrastructure for hosting blockchain services. The appliance combines operating systems, Docker containers, middleware, and software components that work autonomously, and provides core services and infrastructure with optimized security.
 {:shortdesc}
 
-The following architecture diagram illustrates how the IBM Secure Service Container and blockchain appliances are organized:
+IBM Secure Service Container brings the advanced cryptography, security, and reliability of the z Systems LinuxONE platform to blockchain services for handling sensitive and regulated data. Blockchain is protected through a series of features from the IBM Secure Service Container: encapsulated operating system, encrypted appliance disks, tamper protection, protected memory, and strong LPAR isolation that can be configured to match EAL5+ certification.
 
+The following architecture diagram illustrates how IBM Secure Service Container and blockchain appliances are organized:
 
-
-![Architecture diagram](images/Architecture_HSBN_SSC.png)
+![Architecture diagram](images/Architecture_HSBN_SSC.png "IBM Secure Service Container and blockchain appliances")
 *Figure 1. Overview of IBM Secure Service Container and blockchain appliances*
-
-IBM Secure Service Container provides a secure environment for you to use the High Security Business Network. It brings the advanced cryptography, security, and reliability of the z Systems LinuxONE platform to blockchain services for handling sensitive and regulated data. Blockchain is protected through a series of features from the IBM Secure Service Container: encapsulated operating system, encrypted appliance disks, tamper protection, protected memory, and strong LPAR isolation that can be configured to match EAL5+ certification.
-
+<br><br>
 ## Key security features
-The IBM Secure Service Container provides the following optimized security functions for blockchain services:  
+IBM Secure Service Container provides the following optimized security functions for blockchain services:  
 
 ### Protection from system administrators
 >Appliance code cannot be accessed even by platform or system administrators.  Data access is controlled by the appliance, therefore unauthorized access is disabled.  This is supported through a combination of signing and encrypting all data in flight and in rest. All the access to memory is also removed. Firmware supports this with a secure boot architecture.
 
->System administrators have the following limitations when blockchain is secured by the IBM Secure Service Container:
->* Cannot access the blockchain node
->* Cannot view the blockchain
+>System administrators have the following limitations when blockchain is secured by IBM Secure Service Container:
+>* Cannot access nodes
+>* Cannot view the blockchain network
 
 ### Tamper protection  
->The IBM Secure Service Container disables all external interfaces that provide LPAR memory access. An image boot loader is signed to ensure that it cannot be tampered or exchanged with a different one.
+>IBM Secure Service Container disables all external interfaces that provide LPAR memory access. An image boot loader is signed to ensure that it cannot be tampered or exchanged with a different one.
 
 ### Encrypted appliance disks
 >All code and data stored on disk is encrypted at all times by using the Linux encryption layer:  
 - Encapsulated operating system
 - Protected IP
-- Embedded monitoring and self-healing
+- Embedded monitoring and self-healing  
+<br>
 
 ## Managing appliances via REST APIs
 Software appliances are preconfigured for you to use on the reliable, secure, and scalable z Systems platform. You can manage these appliances via REST APIs without any configuration.
@@ -84,4 +83,4 @@ curl -u dashboarduser_type0_2ef27***:89317***https://ad3130e8-4a1a-4ce6-a084-689
 	}]
 }
 ```
-To learn more about how to interact with blockchain via REST APIs, see [Network Console](https://new-console.ng.bluemix.net/docs/services/blockchain/ibmblockchainmonitor.html) and [Samples and tutorials](https://new-console.ng.bluemix.net/docs/services/blockchain/ibmblockchain_tutorials.html).
+To learn more about how to interact with blockchain via REST APIs, see [Dashboard monitor](https://new-console.ng.bluemix.net/docs/services/blockchain/ibmblockchainmonitor.html) and [Samples and tutorials](https://new-console.ng.bluemix.net/docs/services/blockchain/ibmblockchain_tutorials.html).

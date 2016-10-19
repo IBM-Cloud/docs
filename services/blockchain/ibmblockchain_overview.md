@@ -22,7 +22,8 @@ Last updated: 23 September 2016
 
 Blockchain is a technology for a new generation of transactional applications that establishes trust, accountability and transparency, while streamlining business processes. The blockchain network was first introduced by bitcoin, but its practical uses extend far beyond cryptocurrency exchanges. With blockchain, IBM is reimagining the most fundamental business exchanges, and opening the door to a new world of digital interactions.
 
-Blockchain is projected to vastly reduce the cost and complexity of cross-enterprise business processes. Its distributed ledger makes it easier to create cost-efficient business networks, where virtually anything of value can be tracked and traded, without a centralized point of control. Blockchain is already showing great promise across a broad range of business applications. As just one example, blockchain networks allow securities trades to be settled in minutes, rather than days. Blockchain is also helping companies streamline the flow of goods and payments, and enabling  manufacturers to reduce product recalls by openly sharing production logs with OEMs and regulators.
+Blockchain is projected to vastly reduce the cost and complexity of cross-enterprise business processes. Its distributed ledger makes it easier to create cost-efficient business networks, where virtually anything of value can be tracked and traded, without a centralized point of control. Blockchain is already showing great promise across a broad range of business applications. As just one example, blockchain networks allow securities trades to be settled in minutes, rather than days. Blockchain is also helping companies streamline the flow of goods and payments, and enabling  manufacturers to reduce product recalls by openly sharing production logs with OEMs and regulators.  
+<br>
 
 ## Key terms
 {: #keyterms}
@@ -44,8 +45,9 @@ The following terms are instrumental in gaining a holistic understanding of bloc
 
 **Consensus**: A protocol that maintains the order of blockchain network transactions (deploy and invoke). Validating nodes work collectively to approve transactions by implementing the consensus protocol. Consensus ensures that a quorum of nodes agree on the order of transactions on the shared ledger. By resolving any discrepancies in this order, consensus ensures that all nodes operate on an identical blockchain ledger. See the [consensus](etn_pbft.html) topic for more information and test cases.  
 
-**Permissioned network**: A blockchain network where each node is required to maintain a member identity on the network, and each node has access to only the transactions that its permissions allow.
+**Permissioned network**: A blockchain network where each node is required to maintain a member identity on the network, and each node has access to only the transactions that its permissions allow.  
 
+<br>
 ## Key concepts
 {: #keyconcepts}
 
@@ -65,21 +67,19 @@ Two or more transacting parties, as members of a blockchain network, implicitly 
 - It is permissioned, so that participants can only view their own transactions.
 
 **Example**: Figure 1 depicts an example equities blockchain network and the shared ledger:
-
 ![Shared Ledger](images/Architecture_shared_ledger.png "Example equities blockchain network")
 *Figure 1. A shared ledger example*
 
 Figure 1 shows typical network participants in an equities market: Asset Custodian (bank), Front Office, Operations, securities depository (CSD) and a clearing party (Clearing/CCP):
 1. Using a client application, the custodian invokes chaincode to buy and sell blocks of securities.  
 2. Transactions can be triggered from any network node, but are always forwarded to the primary (leading) validating node, which orders the transactions. The primary node broadcasts the ordered transactions to all validating peers for consensus, or agreement, on the proposed order.
-3. If the order of transactions is agreed upon, the transactions are executed and appended to the ledger on each validating node. The ledger is then replicated to all network nodes.
-
+3. If the order of transactions is agreed upon, the transactions are executed and appended to the ledger on each validating node. The ledger is then replicated to all network nodes.  
 
 ## Network and application architecture
 {: #architecture}
 
 Figure 2 depicts an example permissioned blockchain network, which features a distributed, decentralized peer-to-peer architecture and a Certificate Authority managing user roles and permissions:
-![Blockchain Network](images/Architecture_network_and_application.png "Blockchain")
+![Blockchain Network](images/Architecture_network_and_application.png "Example permissioned blockchain network")
 *Figure 2. A permissioned blockchain network: data flow and network access are governed by member roles*
 
 The following descriptions correspond to the architecture and flow shown in Figure 2, which do not represent a sequential process:
