@@ -4,20 +4,24 @@ copyright:
 
   years: 2016
 
+lastupdated: "2016-10-19"
+
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
+{:note: .deprecated}
 
 # Getting started with {{site.data.keyword.networksecuritygroups_short}}
 {: #nsgintro}  
-*Last updated: 05 July 2016*
-{: .last-updated}
 
 The {{site.data.keyword.networksecuritygroups_full}} service in Bluemix&reg; focuses on network security. Use the IBM Network Security Groups service to configure and manage network policies that control inbound and outbound traffic between virtual servers.  
 {: shortdesc}
+
+**This service is deprecated:** Existing service instances can be used until 23 December 2016. 
+{: deprecated}
 
 Before you begin, create a Network Security Groups service instance from the [Bluemix catalog](https://console.{DomainName}/catalog/services/network-security-groups/). The service UI is displayed after you create the service instance. You can also access the service UI by selecting the service instance tile from the Bluemix dashboard.
 
