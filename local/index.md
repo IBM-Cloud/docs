@@ -88,7 +88,6 @@ The syndicated catalog provides the function to create hybrid applications that 
 |{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|Yes |
-|Delivery Pipeline Next		|Yes		|No		|No |
 |Digital Content Checker |Yes  |Yes  |Yes  |
 |{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.iotdriverinsights_short}}  |Yes |Yes  |Yes  |
