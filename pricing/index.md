@@ -303,7 +303,8 @@ The following items are the free allowances for the {{site.data.keyword.virtualm
 
 You can use different methods to know how much you need to pay for using {{site.data.keyword.Bluemix_notm}} to build and host your app.
 
-* The cost estimators on the {{site.data.keyword.Bluemix_notm}} Pricing page provides a rough estimation of the cost based on the size of your app.
+* The cost estimators on the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}} 
+provides a rough estimation of the cost based on the size of your app.
 * The cost calculator on the {{site.data.keyword.Bluemix_notm}} Pricing page provides accurate app prices based on your input of runtime and service usages.
 * You can also calculate your cost manually.
 
@@ -312,7 +313,7 @@ You can use different methods to know how much you need to pay for using {{site.
 
 You can quickly price your app by using the cost calculators that are provided by {{site.data.keyword.Bluemix_notm}}.
 
-1. Go to the {{site.data.keyword.Bluemix_notm}} [pricing page](https://console.{DomainName}/pricing/). 
+1. Go to the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}}. 
 2. Use one of the **Estimate Your Costs** widgets, or click **Open Calculator** to use the **Down to the penny pricing calculator**.
 
 To use the calculator, type your projected monthly usage of the listed resources; for example, number of instances or push notifications. Click inside the **Monthly Usage** field for hints about the units that are expected in the field. The calculator displays the price for your input immediately. You can also adjust the calculator to display yearly costs instead of monthly costs.
