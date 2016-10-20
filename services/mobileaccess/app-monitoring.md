@@ -190,7 +190,8 @@ logger1.debug("debug message for feature 1")
 logger2.info("info message for feature 2")
 
 // Send logs to the {{site.data.keyword.amashort}} service
-Logger.send()```
+Logger.send()
+```
 {: codeblock}
 
 #### Cordova

@@ -44,7 +44,7 @@ The cards execute their code in your {{site.data.keyword.iot_short_notm}} browse
 
 It is important that you only configure known and secured custom cards servers to supply custom cards to your users’ dashboards.   
 
-For more information on how to secure your custom cards server, see [Custom cards security](reference/security/custom_cards_server.html).
+For more information on how to secure your custom cards server, see [Custom cards security](../reference/security/custom_cards_server.html).
 
 The following steps walk you through the process of connecting to a test card server, deploying sample cards on your own card server, and finally creating your own cards and deploying them on your server.
 
@@ -73,11 +73,11 @@ If you are connecting to your own server, enter the URL of that server.
 5. Create a new card that is based on the sample cards.
  1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Boards**.
  2. Click **Create New Board**.  
- Complete the Create new board dialog box. For information, see [Creating boards and cards](https://new-console.ng.bluemix.net/docs/services/IoT/data_visualization.html#visualizing_data).
+ Complete the Create new board dialog box. For information, see [Creating boards and cards](../data_visualization.html#visualizing_data).
  3. Open the new board.
  4. Click **Add New Card**.  
  5. Scroll down to **Custom cards** and select one of the sample cards.  
- Complete the card creation process. For information, see [Creating boards and cards](https://new-console.ng.bluemix.net/docs/services/IoT/data_visualization.html#visualizing_data).  
+ Complete the card creation process. For information, see [Creating boards and cards](../data_visualization.html#visualizing_data).  
 
  Your new custom card is now in your new board.  
  ![Sample custom card.](sample_custom_card.png "Sample custom card.")
@@ -141,7 +141,7 @@ A basic iFrame card that you can use to embed any secure (HTTPS) web page in you
 
 The following high-level steps create a new card:
 
-**Tip:** For detailed steps, see [Creating boards and cards Readme](https://github.com/ibm-watson-iot/custom-cards/blob/master/README.md) in the example custom cards repository Readme.
+**Tip:** For detailed steps, see [Creating custom cards Readme](https://github.com/ibm-watson-iot/custom-cards/blob/master/README.md) in the example custom cards repository.
 1. Create your own card module.
  1. Use one of the sample card modules as a template for your module.
  2. Update all instances of the module name in your new module file names and files content.  

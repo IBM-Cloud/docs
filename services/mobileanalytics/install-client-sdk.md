@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-29"
+lastupdated: "2016-10-18"
 
 ---
 
 # Installing the {{site.data.keyword.mobileanalytics_short}} Client SDKs
 {: #mobileanalytics_sdk}
 
-Last updated: 29 September 2016
+Last updated: 18 October 2016
 {: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_short}}
@@ -61,9 +61,9 @@ The {{site.data.keyword.mobileanalytics_full}} SDK enables you to instrument you
 
 Make sure that you correctly set up Xcode. To learn how to set up your iOS development environment, see the [Apple Developer website](https://developer.apple.com/support/xcode/). Read about the [Xcode requirements](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements) for Client SDK Swift Analytics.
 
-The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [Cocoapods](https://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage#getting-started), which are dependency managers for Cocoa projects. CocoaPods and Carthage automatically download artifacts from repositories and makes them available to your application.
+The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [CocoaPods](https://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage#getting-started), which are dependency managers for Cocoa projects. CocoaPods and Carthage automatically download artifacts from repositories and makes them available to your application.
 
-#### Cocoapods
+#### CocoaPods
 {: #cocoapods}
 
 1. If CocoaPods is not installed, run:
@@ -82,7 +82,7 @@ The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [Cocoapo
     ```
     {: codeblock}
 
-2. Follow the [CocoaPods installation instructions](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods) on GitHub.
+2. Follow the [{{site.data.keyword.Bluemix_notm}} Mobile Services Swift SDK instructions](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods) on GitHub.
 	
 3. After you have installed the iOS Client SDK,  [Import and initialize](sdk.html#init-ma-sdk-ios) the Analytics Client SDK.   
 

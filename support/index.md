@@ -42,7 +42,7 @@ The Stack Overflow and dW Answers forums both provide a wide variety of searchab
 
   * Go to [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} to ask technical questions about developing apps with the Bluemix platform and services.
   * Go to [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} to ask questions about the {{site.data.keyword.Bluemix_notm}} offering, and about getting started instructions.
-  * In China, go to [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} to ask questions.
+
 
 You can also ask a question in Stack Overflow directly from the Support widget by completing the following steps:
   1. From the Support widget, click **Get help**. 
@@ -167,7 +167,7 @@ Assigned client success manager (CSM) | Not included | Not included | Not includ
 
 If you are unable to resolve your technical problem with the troubleshooting and help options, you can ask for support. However, before contacting support for a technical issue, ensure that the problem is not due to an outage by checking {{site.data.keyword.Bluemix_notm}} status.
 
-If the problem is not due to an outage, and you are a customer in a country or region excluding China, open a support ticket by using one of the following options:
+If the problem is not due to an outage, open a support ticket by using one of the following options:
 
   * From the Support widget, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
   * Use the [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} help page. You can submit tickets for sales, billing, IBMid and login, and technical support problems. For technical support problems, you can further select a technical group after you click **Technical Support**. For example, if you need help with Cloud Foundry apps, OpenWhisk, Containers, Virtual Servers, or Bare Metal servers, you can choose **Application Services**. If you need help with a specific service, select the corresponding service category. To determine the category that your service belongs to, see categories under [Services](../services/index.html){: new_window} in the navigation pane.  
@@ -177,12 +177,11 @@ If the problem is not due to an outage, and you are a customer in a country or r
 
 When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity and response time](index.html#support-ticket-severity){: new_window} for information about the different severities. If your request is urgent, but you only have free or basic support, you can upgrade your account to submit high-severity (level 1, 2, and 3) tickets. To upgrade your account to a higher support level, contact your IBM sales representative by email at sales@bluemix.net.
 
-If you are a customer in China, you can get paid support to your account from the [UNISYS Service Management IBM Bluemix page](https://chinabluemix.itsm.unisysedge.cn){: new_window}.
 
 #### Checking support ticket status
 {: #check-ticket-status}
 
-Each support ticket is assigned a unique ticket number for reference. In countries or regions other than China, you can use the ticket number to review your support ticket progress and update the support ticket at the [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Updates and responses are sent to you by email and recorded in the ticket notes. 
+Each support ticket is assigned a unique ticket number for reference. You can use the ticket number to review your support ticket progress and update the support ticket at the [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Updates and responses are sent to you by email and recorded in the ticket notes. 
 
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -202,7 +201,6 @@ If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer in a country 
 <p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} console in your Dedicated environment.</p></li>
 </ul>
 
-If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer in China, you can request support from the [UNISYS Service Management IBM Bluemix page](https://chinabluemix.itsm.unisysedge.cn){: new_window}. In addition, customers in China can get free support at [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
 
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Local
@@ -262,7 +260,7 @@ To report a potential security vulnerability, complete the following steps:
 ### Escalating a support ticket
 {: #escalation}
 
-With standard or premium support, in a country or region other than China, if you have not received a timely response to a support ticket, or if you feel that a support ticket is not being addressed appropriately, you can escalate the support ticket. Through the support ticket escalation process, IBM management reviews your concerns and works with you to improve the support experience.
+With standard or premium support, if you have not received a timely response to a support ticket, or if you feel that a support ticket is not being addressed appropriately, you can escalate the support ticket. Through the support ticket escalation process, IBM management reviews your concerns and works with you to improve the support experience.
 
 To submit an escalation request, complete the following steps:
   1. Open a new support ticket with the summary **Escalation Request**.
