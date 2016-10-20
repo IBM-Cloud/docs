@@ -221,22 +221,20 @@ When a packaged server or a Liberty server directory is pushed, the Liberty buil
 ### Referenceable variables
 {: #referenceable_variables}
 
-The following variables are defined in the runtime-vars.xml file, and referenced from a pushed server.xml file. All the variables are case-sensitive.
+The following variables are defined in the `runtime-vars.xml` file, and referenced from a pushed `server.xml` file. All the variables are case-sensitive.
 
 * ${port}: The HTTP port that the Liberty server is listening on.
-* ${vcap_console_port}: The port where the vcap console is running (usually the same as ${port}).
-* ${vcap_app_port}: The port where the app server is listening (usually the same as ${port}).
-* ${vcap_console_ip}: The IP address of the vcap console (usually the IP address that the Liberty server is listening on).
+* ${vcap_app_port}: Same as ${port}. Not set when running on Diego.
 * ${application_name}: The name of the application, as defined by using the options in the cf push command.
-* ${application_version}: The version of this instance of the application, which takes the form of a UUID, such as b687ea75-49f0-456e-b69d-e36e8a854caa. This variable changes with each successive push of the application that contains new code or changes to the application artifacts.
-* ${host}: The IP address of the DEA that is running the application (usually the same as ${vcap_console_ip}).
+* ${application_version}: The version of this instance of the application, which takes the form of a UUID, such as `b687ea75-49f0-456e-b69d-e36e8a854caa`. This variable changes with each successive push of the application that contains new code or changes to the application artifacts.
+* ${host}: The IP address of the application instance.
 * ${application_uris}: A JSON-style array of the endpoints that can be used to access this application, for example: myapp.mydomain.com.
-* ${start}: The time and date that the application was started, taking a form similar to 2013-08-22 10:10:18 -0400.
+* ${start}: The time and date that the application was started, taking a form similar to `2013-08-22 10:10:18 -0400`. Not set when running on Diego.
 
 ### Accessing information of bound services
 {: #accessing_info_of_bound_services}
 
-When you want to bind a service to your application, information about the service, such as connection credentials, is included in the [VCAP_SERVICES environment variable](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) that Cloud Foundry sets for the application. For [automatically configured services](autoConfig.html), the Liberty buildpack generates or updates service binding entries in the server.xml file. The contents of the service binding entries can be in one of the following forms:
+When you want to bind a service to your application, information about the service, such as connection credentials, is included in the [VCAP_SERVICES environment variable](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) that Cloud Foundry sets for the application. For [automatically configured services](autoConfig.html), the Liberty buildpack generates or updates service binding entries in the server.xml file. The contents of the service binding entries can be in one of the following forms:
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt;, which describes the information such as the name, type, and plan of the service.
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, which describes the connection information for the service.
