@@ -36,6 +36,8 @@ If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{si
 |View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending maintenance updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. See [Viewing system information](index.html#oc_system). |
 |Extend notifications and set up notification subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending**. You can use webhooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and notification subscriptions](index.html#oc_eventsubscription). |
 
+**Tip**: The Infrastructure dashboard in the {{site.data.keyword.Bluemix_notm}} console is available only in linked accounts in {{site.data.keyword.Bluemix_notm}} Public environments.
+
 
 ## Notifications and notification subscriptions
 {: #oc_eventsubscription}
