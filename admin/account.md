@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-10-20"
+  
 
 
 ---
@@ -17,6 +17,8 @@ lastupdated: "2016-10-20"
 
 # Managing your {{site.data.keyword.Bluemix_notm}} account
 {: #mngacct}
+*Last updated: 20 October 2016*
+{: .last-updated}
 
 Go to the **Account** link to set notifications, view your account usage, or view your bill.
 {:shortdesc}
