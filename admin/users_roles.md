@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,10 +17,8 @@ copyright:
 
 # Managing team members and roles
 {: #userroles}
-Last updated: 16 August 2016
-{: .last-updated}
 
-From the **Team Directory** page for your account, you can manage existing team members and their roles in your organization and spaces, as well as invite new team members. To access the team directory for your account, go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Team Directory**. 
+From the **Team Directory** page for your account, you can manage existing team members and their roles in your organization and spaces, as well as invite new team members. To access the team directory for your account, click **Account** &gt; **Team Directory**. 
 {:shortdesc}
 
 Account owners perform all operations on organizations and spaces including managing team members and their assigned roles. Organization managers  have access to invite team members and manage roles. Space managers can use the **Manage Organizations** page to add existing account members to the space and adjust their roles. Check out the following information to learn more about roles.
@@ -68,9 +66,10 @@ Depending on how you have your {{site.data.keyword.Bluemix_notm}} accounts and o
 
 To change the visibility of the team directory page complete the following steps:
 
-1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Team Directory**. 
+1. Click **Account** &gt; **Team Directory**.
 2. For the **Visibility to** option, click the current selection to view the options.
 3. Then, select **All** or **Just me** based on the current needs for your account.
+4. Then, click **Save**.
 
 ## Inviting team members
 {: #inviteteammembers}
@@ -78,7 +77,7 @@ To change the visibility of the team directory page complete the following steps
 Account owners and organization managers can invite team members to orgs from the Invite Team Members page. When you add new team members, they are assigned the auditor roles automatically. You can change the roles later on the Team Directory page. To invite a team member, complete these steps:
 
 <ol>
-<li>Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Invite Team Member**.</li>
+<li>Click **Account** &gt; **Invite Team Members**.</li>
 <li>Select the org that you want to invite team members to.</li>
 <li>Click **Next**.</li>
 <li>Select the spaces that you want to allow access to for your team members.</li>
@@ -94,14 +93,21 @@ Account owners and organization managers can invite team members to orgs from th
 
 Click **View Pending** to check if invites are pending or accepted. You can choose to resend the invitation email or cancel the invitation for a pending invite at any time.
 
-If you have a SoftLayer account linked with your {{site.data.keyword.Bluemix_notm}} account, you can add your SoftLayer team members. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Invite Team Members** page. Then, click **Add** in the **Add SoftLayer Team Members** section to authenticate into your SoftLayer account and view a list of team members from your SoftLayer account. For more information about adding team members from your SoftLayer account, see [Inviting SoftLayer team members to {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users).
+### Adding SoftLayer team members
+If you have a SoftLayer account linked with your {{site.data.keyword.Bluemix_notm}} account, you can add your SoftLayer team members.
+ 1. Go to **Account** > **Invite Team Members**. 
+ 2. Click **Add** in the **Add SoftLayer Team Members** section to authenticate into your SoftLayer account and view a list of team members from your SoftLayer account. 
+ 
+Adding team members to your {{site.data.keyword.Bluemix_notm}} account does not grant them access to {{site.data.keyword.Bluemix_notm}} Infrastructure. To give users access to the Infrastructure dashboard, go to **Infrastructure** > **Account** > **Users** and click on the **Add User** link. You must have permission to add users.
+ 
+ For more information about adding team members from your SoftLayer account, see [Inviting SoftLayer team members to {{site.data.keyword.Bluemix_notm}}](/docs/admin/softlayerlink.html#invite_users).
 
 ## Editing roles
 {: #editinguserroles}
 
 Account owners and organization managers can edit organization and space roles for existing team members on the **Team Directory** page. 
 
-1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Team Directory**.
+1. Click **Account** &gt; **Team Directory**.
 2. Locate the team member whose roles you want to edit.
 3. Click **View Roles**.
 4. Select or clear the org role selections to modify the org access for the team member.
@@ -112,10 +118,21 @@ Account owners and organization managers can edit organization and space roles f
 
 Space managers can edit roles for the team members in their space on the **Manage Organizations** page.
 
-1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Manage Organizations**.
+1. Click **Account** &gt; **Manage Organizations**.
 2. Locate the org that your space is in.
 3. Click **View Details**.
 4. Locate your space, and click **Edit space**.
 5. Select the **Users** tab.
 6. Select or clear the space role option for the role that you want to add or remove for the team member.
-7. Click **Save**.
+7. Then, click **Save**.
+
+## Removing team members
+{: #removingteammembers}
+
+Account owners and organization managers can remove team members from an account by using the **Team Directory** page. To remove a team member, complete the following steps:
+
+1. Click **Account** &gt; **Team Directory**.
+3. Locate the user that you want to remove from the account and click the **Remove** icon ![Remove icon](/docs/icons/icon_remove.svg).
+4. In the **Remove User** window, click **Remove** to confirm that you want to remove the specified user from the account.
+
+The user is removed from the displayed list of team members for the account.
