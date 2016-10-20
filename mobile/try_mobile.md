@@ -2,17 +2,17 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-07-18"
+lastupdated: "2016-10-19"
 
 ---
 
 # Creating mobile apps from the {{site.data.keyword.mobilefirstbp}} Starter boilerplate
 {: #try_mobile}
 
-Last updated: 18 July 2016
+Last updated: 19 October 2016
 {: .last-updated}
 
-You can use each of the {{site.data.keyword.Bluemix}} Mobile services independently. You can also use them together, with the {{site.data.keyword.mobilefirstbp}} Starter boilerplate, to get the most benefit. 
+You can use each of the {{site.data.keyword.Bluemix}} Mobile services independently. You can also use them together, with the {{site.data.keyword.mobilefirstbp}} Starter boilerplate, to get the most benefit.
 
 To get started, use the {{site.data.keyword.mobilefirstbp}} Starter to create your app. The boilerplate enables you to complete the following actions:
 
@@ -20,7 +20,7 @@ To get started, use the {{site.data.keyword.mobilefirstbp}} Starter to create yo
 * Provision an instance of each of the {{site.data.keyword.Bluemix_notm}} Mobile services and bind the service to the Node.js application.
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
 -->
 
 After you use the {{site.data.keyword.mobilefirstbp}} Starter boilerplate to create your app, you can either get Hello Bluemix samples for each of the services or start instrumenting your existing app to use {{site.data.keyword.Bluemix_notm}} services.
@@ -52,8 +52,8 @@ You can either use all of the {{site.data.keyword.Bluemix_notm}} Mobile services
 <td valign="top"><b>User identity providers</b> <br/>You can use the following identity providers: <ul><li>Facebook</li><li>Google</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Push Notifications service icon"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>The  {{site.data.keyword.mobilepushfull}} service provides a unified platform to send and manage mobile push notifications that are targeted to iOS and Android platforms. This service manages the mapping of your application users to their devices, device platform, and handles dispatching push notifications to the devices. With this service, you can send broadcasts, unicasts (based on userID, deviceID), and tags (or topics) based on push notifications to your mobile application users.</td>
-<td valign="top"><b>Push service providers</b><ul><li>Apple Push Notifications Service</li><li>Google Cloud Messaging</li></ul></td>
+<td><img src="images/catalog_icons-09.png" alt="Push Notifications service icon"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>The  {{site.data.keyword.mobilepushfull}} service provides a unified platform to send and manage push notifications targeted to Mobile (iOS & Android) platforms, and Web browser applications. This service manages the mapping of your application users to their devices, device platform, and browsers, and handles dispatching push notifications to subscribers. With this service, you can send broadcasts, unicasts (based on userID, deviceID), and tags (or topics) based on push notifications to your customers.</td>
+<td valign="top"><b>Push service providers</b><ul><li>Apple Push Notifications Service</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>
 <td><img src="images/cloudant64.png" alt="Cloudant service icon"><b>Cloudant NoSQLDB</b><br/> Cloudant is a NoSQL database as a service (DBaaS). It's built from the ground up to scale globally, run non-stop, and handle a wide variety of data types like JSON, full-text, and geospatial. </td>

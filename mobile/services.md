@@ -17,7 +17,7 @@ Last updated: 18 October 2016
 {: .last-updated}
 
 From the {{site.data.keyword.Bluemix}} Mobile dashboard **Services** view, you can view your existing services or create new services. The Mobile dashboard provides a single location to view all of the Bluemix services that are being managed by projects.  
- 
+
 If you delete services from the **Services** view, you will disconnect the service from the project that it is associated with. Create a new service instance if you want to reconnect the service to the project.
 
 ## {{site.data.keyword.Bluemix_notm}} Mobile services overview
