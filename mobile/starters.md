@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2016-10-13"
 # Starters
 {: #starters}
 
-Last updated: 13 October 2016
+Last updated: 20 October 2016
 {: .last-updated}
 
 With the {{site.data.keyword.Bluemix}} Mobile dashboard, you can create your project by using a UI Starter or a Code Starter.
@@ -34,7 +34,7 @@ The UI Starters offer patterns of applications that enable you to modify and adj
 
 Experienced mobile developers, who have a good understanding of Android and iOS development tools, can use Code Starters to integrate common mobile services and key Bluemix services like {{site.data.keyword.ibmwatson}}, {{site.data.keyword.weather_short}}, and {{site.data.keyword.cloudant}}, with a production-ready starting point. These Code Starters massively reduce the time it takes to get your mobile app running with {{site.data.keyword.Bluemix_notm}}.
 
-Code Starters are optimized to be production ready starter code that focuses on demonstrating a key {{site.data.keyword.Bluemix_notm}} integration with a high-value service. Each starter focuses on one service and shows the integration of the service SDKs into the code. In some cases, Code Starters offer a simple user experience to highlight the integration of the service data or interactions with the user. Each Code Starter is configured to be enabled with Push, Analytics, and Authentication capabilities, if you decide to configure them for your mobile project.
+Code Starters are optimized to be production ready starter code that focuses on demonstrating a key {{site.data.keyword.Bluemix_notm}} integration with a high-value service. Each starter focuses on one service and shows the integration of the service SDKs into the code. In some cases, Code Starters offer a simple user experience to highlight the integration of the service data or interactions with the user. Each Code Starter is configured to be enabled with Push, Authentication, and possibly other capabilities, if you decide to configure them for your mobile project.
 
 If you choose to create your project with a Code Starter, you do not have the option to design your app from within the UI Builder.
 

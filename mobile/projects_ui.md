@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2016-10-13"
 # Creating a project with a UI Starter
 {: #projects_ui}
 
-Last updated: 13 October 2016
+Last updated: 20 October 2016
 {: .last-updated}
 
 You can use a UI Starter in {{site.data.keyword.Bluemix}} Mobile dashboard to create a project in the {{site.data.keyword.Bluemix_notm}} environment. This procedure does not apply to projects that use the Code Starters. See [Creating a project with a Code Starter](projects_code.html) for instructions for Code Starters.
@@ -39,7 +39,7 @@ Complete the following steps to create a project with a UI Starter:
 	
 2. Make your selections on the **Project Overview** screen.  The **Project Overview** screen displays information about your project and the optional capabilities that you can add to your project, like Push Notifications.  
 
-	1. Optional: Select **Add** to add one of the listed capabilities to your project. Edit the **Service name** for your service and click **Create**.
+	1. Optional: Select **Add** to add one of the listed capabilities to your project. Edit the **Service name** for your service and click **Create**. When you add services to your project, you link to the {{site.data.keyword.Bluemix_notm}} page for that service. Configure the service by providing the information that is required for the service.
 	
 	2. Optional: Repeat step *a* for any additional capabilities that you want to add to your project. 
 
