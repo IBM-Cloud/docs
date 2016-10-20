@@ -17,26 +17,28 @@ copyright:
 
 <!-- draft - staging only -->
 
-#Linking SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts
+# Linking SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts
 {: #softlayerlink}
-*Last updated: 3 October 2016*
+*Last updated: 20 October 2016*
 {: .last-updated}
 
-You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts. When you link your accounts, you are billed through SoftLayer for both SoftLayer and {{site.data.keyword.Bluemix_notm}} resources. If you have an existing account, billing through SoftLayer for {{site.data.keyword.Bluemix_notm}} takes effect for the new billing cycle that starts after the accounts are linked.
+You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts. When you link your accounts, you are billed through {{site.data.keyword.Bluemix_notm}} for both SoftLayer and {{site.data.keyword.Bluemix_notm}} resources. If you have an existing {{site.data.keyword.Bluemix_notm}} account, billing through {{site.data.keyword.Bluemix_notm}} for SoftLayer for takes effect for the new billing cycle that starts after the accounts are linked.
 {:shortdesc}
 
-**Important:** All linked accounts in {{site.data.keyword.Bluemix_notm}} must be Pay-As-You-Go accounts. You can create a new Pay-As-You-Go account or link an existing Pay-As-You-Go account. Or, you can link an existing trial account, but it will be upgraded to a Pay-As-You-Go account.  
+**Important:** All linked accounts in {{site.data.keyword.Bluemix_notm}} must be Pay-As-You-Go accounts. You can create a new Pay-As-You-Go account or link an existing Pay-As-You-Go account. Or, you can link an existing trial account, but it will be upgraded to a Pay-As-You-Go account. Subscription {{site.data.keyword.Bluemix_notm}} accounts cannot be linked.  
 
-After your accounts are linked, you can switch between accounts easily. You can still monitor the usage of your {{site.data.keyword.Bluemix_notm}} resources in the  {{site.data.keyword.Bluemix_notm}} user interface. However, the billing for these resources will now appear on the SoftLayer invoice.
+After your accounts are linked:
 
-Although your account billing will be linked, your login ID will vary depending on how your SoftLayer account is authenticated:
-* For users in SoftLayer accounts that have not switched to an IBMid for authentication, continue to use your SoftLayer ID for SoftLayer products and services, and use your IBMid for {{site.data.keyword.Bluemix_notm}} products and services.
-* For users in SoftLayer accounts that have switched to an IBMid for authentication, use your IBMid to access both your SoftLayer and your {{site.data.keyword.Bluemix_notm}} accounts.
+* You must use your IBMid credentials to access both your SoftLayer and your {{site.data.keyword.Bluemix_notm}} accounts.
+* Any existing SoftLayer discounts are applied across {{site.data.keyword.Bluemix_notm}} charges. 
+* You will receive one invoice in United States dollars (USD).
+* You can monitor the usage of your {{site.data.keyword.BluSoftlayer}} resources in the {{site.data.keyword.Bluemix_notm}} user interface. 
 
-**Attention:** After accounts are linked, they cannot be unlinked.  
+**Attention:** After accounts are linked, they cannot be unlinked. 
 
 If you have a SoftLayer account, and you want to link SoftLayer and {{site.data.keyword.Bluemix_notm}} accounts, complete these steps:
- 1. From the {{site.data.keyword.slportal}}, click **Link a {{site.data.keyword.Bluemix_notm}} Account**. 
+
+ 1. From the {{site.data.keyword.slportal}}, click **Link a {{site.data.keyword.Bluemix_notm}} Account**.
  2. Read and accept the terms for linking SoftLayer and {{site.data.keyword.Bluemix_notm}} accounts.
  3. When requested, provide the email address that is associated with your {{site.data.keyword.Bluemix_notm}} account. If you don't have a {{site.data.keyword.Bluemix_notm}} account, provide the email address that you want to use, then follow the instructions to be invited to {{site.data.keyword.Bluemix_notm}} and create an account.
 
@@ -44,32 +46,30 @@ You must be a Master User in the SoftLayer account to link accounts.
 
 After you have linked your accounts, the **Go to {{site.data.keyword.Bluemix_notm}}** link is available in the SoftLayer global header. Clicking this link takes you to the {{site.data.keyword.Bluemix_notm}} login page. In addition, the **SoftLayer** link is now available in the {{site.data.keyword.Bluemix_notm}} header. Clicking the link takes you to the home page of the {{site.data.keyword.slportal}} in a new window.
 
-
 ## Credits for {{site.data.keyword.Bluemix_notm}} usage when accounts are linked
 {: #slcredit}
 
-When you link {{site.data.keyword.Bluemix_notm}} and SoftLayer billing accounts, you receive a $200.00 credit toward {{site.data.keyword.Bluemix_notm}} usage. The credit must be used within 30 days of linking the accounts.
+When you link your {{site.data.keyword.Bluemix_notm}} account from your SoftLayer account, you receive a $200.00 credit that you can use within {{site.data.keyword.Bluemix_notm}} only. The credit must be used within 30 days of linking the accounts.
 
 For information about how to view the credits and expiration date, see [Viewing credits](https://console.ng.bluemix.net/docs/pricing/index.html#credits).
 
 ## Inviting SoftLayer team members to {{site.data.keyword.Bluemix_notm}}
 {: #invite_users}
 
-You can invite your SoftLayer team members to join {{site.data.keyword.Bluemix_notm}} when linking  {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts. Or, you can invite SoftLayer team members later from the {{site.data.keyword.Bluemix_notm}} user interface.
+You can invite your SoftLayer team members to join {{site.data.keyword.Bluemix_notm}} when you link your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts. Or, you can invite SoftLayer team members later from the {{site.data.keyword.Bluemix_notm}} user interface.
 {:shortdesc}
 
 From the {{site.data.keyword.Bluemix_notm}} user interface, you can select to invite all members of your SoftLayer account or you can select individual members. When inviting team members, you must set the {{site.data.keyword.Bluemix_notm}} account role for the invitees. For more information about the different roles in {{site.data.keyword.Bluemix_notm}}, see [User roles](https://console.ng.bluemix.net/docs/admin/users_roles.html#userrolesinfo).
 
 You must be a Master User in the SoftLayer account to invite team members to the {{site.data.keyword.Bluemix_notm}} account.
 
-To invite team members through {{site.data.keyword.Bluemix_notm}}:
- 1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) > **Accounts** > **Invite Team Members**.
- 2. Click **Add** to authenticate into your SoftLayer account and view a list of team members from your SoftLayer account.
- 3. Select the team members to invite and click **Send**.
+To invite team members through {{site.data.keyword.Bluemix_notm}}, complete the following steps:
 
-You can repeat these steps over and over as more team members are added to your Softlayer account.
+ 1. Click **Account** &gt; **Invite Team Members**.
+ 2. Click **Add** to authenticate into your SoftLayer account and view a list of team members from your {{site.data.keyword.BluSoftlayer}} account.
+ 3. Select the team members to invite and click **Send**.
  
-The team member receives an email that includes a **Join the organization** link. If the member does not have an IBMid, the member is redirected to a registration page. Next, the member can enter some basic information and create their {{site.data.keyword.Bluemix_notm}} account.
+The team member receives an email that includes a **Join the organization** link. If the team member does not have an IBMid, the team member is redirected to a registration page. Next, the team member can enter some basic information and create their {{site.data.keyword.Bluemix_notm}} account.
 
 For more information about inviting team members through the {{site.data.keyword.Bluemix_notm}} user interface, see [Inviting team members](https://console.ng.bluemix.net/docs/admin/users_roles.html#inviteteammembers).
 
@@ -79,9 +79,9 @@ For more information about inviting team members through the {{site.data.keyword
 Authentication in SoftLayer now uses IBMid to provide a single login for {{site.data.keyword.Bluemix_notm}}. If you have an existing SoftLayer account, you can switch to an IBMid. A migration wizard can help guide you through this switch. 
 {:shortdesc}
 
-To begin the switch of your existing SoftLayer username to an IBMid, complete these steps:
+To begin the switch of your existing SoftLayer username to an IBMid, complete the following steps:
 
- 1. In the Customer Portal, go to the Edit User Profile page and click **Switch to IBMid**.
+ 1. In the {{site.data.keyword.slportal}}, go to the Edit User Profile page and click **Switch to IBMid**.
  2. Follow the migration wizard prompts to create your IBMid. Once you create your IBMid, you cannot change the ID, which is an email address. You can update the email associated with your profile, but by default that value is set as what you defined for your IBMid. After you complete the wizard, an email is sent to you.
  3. When you receive the email, follow the link or copy the URL into a browser and enter your registration code. The code is good for 7 days and it is a one-time use only code.  After it is used, it cannot be used again.
  After you set up the IBMid to SoftLayer user link, you can log in to your account only with IBMid.  On the login dialog, you must use the **Log in with IBMid** button instead of entering your SoftLayer username and password.
@@ -112,7 +112,7 @@ For example, have you ever wanted to add cognitive capabilities from Watson to y
 
 You can gain *Insights and Cognitive* knowledge by calling Watson APIs from your apps in SoftLayer to make them more personalized. Or, use *Data and Analytics* services to tap into high performance analytics for your apps. Or, choose database-as-a-service where you can leave the management to {{site.data.keyword.Bluemix_notm}}.
 
-Modernize your application development by using containers with services like {{site.data.keyword.activedeployshort}} and {{site.data.keyword.deliverypipeline}}. You can then use the {{site.data.keyword.vpn_short}} service to tunnel back to SoftLayer to connect your container in a private network to the SoftLayer private network. All of the usage charges of the compute resources and services are reflected in your SoftLayer bill. 
+Modernize your application development by using containers with services like {{site.data.keyword.activedeployshort}} and {{site.data.keyword.deliverypipeline}}. You can then use the {{site.data.keyword.vpn_short}} service to tunnel back to SoftLayer to connect your container in a private network to the SoftLayer private network. All of the usage charges of the compute resources and services are reflected in your {{site.data.keyword.Bluemix_notm}} bill. 
 
 ### API-based {{site.data.keyword.Bluemix_notm}} services
 Not all {{site.data.keyword.Bluemix_notm}} services can be used with SoftLayer. The following services can be set up to run with your application code:
@@ -158,26 +158,25 @@ Not all {{site.data.keyword.Bluemix_notm}} services can be used with SoftLayer. 
 
 **Note:** Not all plans for these services are available. Only the plans enabled for Pay-As-You-Go accounts are available to use with linked accounts. However, you can use any plan for any of these services if you have a separate {{site.data.keyword.Bluemix_notm}} account that is billed separately.
 
-
 ## Billing for {{site.data.keyword.Bluemix_notm}} usage when accounts are linked
 {: #bill_usage}
 
-After you've linked your {{site.data.keyword.Bluemix_notm}} and SoftLayer billing accounts, the next billing cycle will be charged in a single SoftLayer bill.
+After you've linked your {{site.data.keyword.Bluemix_notm}} and SoftLayer billing accounts, the next billing cycle will be charged in a single {{site.data.keyword.Bluemix_notm}} bill.
 {:shortdesc}
 
 Your {{site.data.keyword.Bluemix_notm}} usage cycle is on a calendar month basis, so your account is billed each month on the billing day that was established for your charge agreement. With SoftLayer, your usage cycle begins from when you started with SoftLayer, so you are billed each month on the same day of the month as when you signed up for your SoftLayer account. 
 
-When your accounts are linked, your {{site.data.keyword.Bluemix_notm}} usage will continue to be measured for the current month's cycle, and you will be billed for that usage on a {{site.data.keyword.Bluemix_notm}} invoice. Starting on the first of the next month, your {{site.data.keyword.Bluemix_notm}} charges will be on your SoftLayer invoice.
+When your accounts are linked, your {{site.data.keyword.Bluemix_notm}} usage will continue to be measured for the current month's cycle, and you will be billed for that usage on a {{site.data.keyword.Bluemix_notm}} invoice. Starting on the first of the next month, your {{site.data.keyword.Bluemix_notm}} and SoftLayer charges will be combined on your {{site.data.keyword.Bluemix_notm}} invoice.
 
-For example, if you linked your accounts on April 16th, you will get a Bluemix invoice for your April usage. Your May usage will be billed through your SoftLayer account.
+For example, if you linked your accounts on April 16th, you will get a Bluemix invoice for your April usage. Depending on when you linked your accounts, you might get a separate bill for your SoftLayer usage. Your May usage for both SoftLayer and {{site.data.keyword.Bluemix_notm}} will be billed through your {{site.data.keyword.Bluemix_notm}} account.
 
 ![Linking Bluemix and SoftLayer accounts summary](images/BluemixSoftLayerBill.svg)
 
-After your bills are combined, your SoftLayer invoice will have a **{{site.data.keyword.Bluemix_notm}}** section on the summary invoice. On the detailed billing view, {{site.data.keyword.Bluemix_notm}} charges will show as other services and begin with *"{{site.data.keyword.Bluemix_notm}} Plan..."*.
+After your bills are linked, your {{site.data.keyword.Bluemix_notm}} invoice will list the different charges for each resource that you have used under the following headings:
+
+* **Bare Metal Servers and Attached Services**
+* **Virtual Servers and Attached Services**
+* **Unattached Services**
 
 For information about how to view {{site.data.keyword.Bluemix_notm}} usage, see [Viewing usage details](https://console.ng.bluemix.net/docs/pricing/index.html#usage).
 
-
-# rellinks
-## general
-* [Video: Link SoftLayer and Bluemix Accounts For a Single Invoice](https://www.youtube.com/watch?v=Xb01idt2NiU&index=1&list=PLzpeuWUENMK2d3L5qCITo2GQEt-7r0oqm)
