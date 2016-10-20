@@ -37,7 +37,7 @@ The {{site.data.keyword.iot4auto_short}} service includes the following {{site.d
 *Table 1. Services of {{site.data.keyword.iot4auto_short}}*
 
 ## Starter experience
-Experience the capabilities of {{site.data.keyword.iot4auto_short}}. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-automotive-starter.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
+Experience the capabilities of {{site.data.keyword.iot4auto_short}}. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
 
 ## Preparing to deploy
 
@@ -81,7 +81,7 @@ To get up and running quickly, complete the following steps:
 ## Tutorials and Samples
 {: #samples}
 
-* [IBM IoT for Automotive Starter Experience](https://iot-automotive-starter.mybluemix.net){:new_window}
+* [IBM IoT for Automotive Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window}
 * [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
 * [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
 
