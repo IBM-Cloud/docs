@@ -56,7 +56,6 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.APIM}}			|Yes		|Yes		|Yes|
 |{{site.data.keyword.autoscaling}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.bigicloudst}}		|Yes		|No		|No|
-|{{site.data.keyword.blockstorageshort}}  |No  |Yes  |No|
 |{{site.data.keyword.rules_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.cloudint}}			|Yes		|Yes		|No|
 |{{site.data.keyword.cloudant}}			|Yes		|Yes		|Yes|
