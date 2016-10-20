@@ -100,7 +100,7 @@ If you have a SoftLayer account linked with your {{site.data.keyword.Bluemix_not
  1. Go to **Account** > **Invite Team Members**. 
  2. Click **Add** in the **Add SoftLayer Team Members** section to authenticate into your SoftLayer account and view a list of team members from your SoftLayer account. 
  
-Adding team members to your {{site.data.keyword.Bluemix_notm}} account does not grant them access to {{site.data.keyword.Bluemix_notm}} Infrastructure. To give users access to the Infrastructure dashboard, go to **Infrastructure** > **Account** > **Users** and click on the **Add User** link. You must have permission to add users.
+Adding team members to your {{site.data.keyword.Bluemix_notm}} account does not grant them access to {{site.data.keyword.Bluemix_notm}} Infrastructure. To give users access to the Infrastructure dashboard, go to **Infrastructure** > **Account** > **Users** and click the **Add User** link. You must have permission to add users.
  
  For more information about adding team members from your SoftLayer account, see [Inviting SoftLayer team members to {{site.data.keyword.Bluemix_notm}}](/docs/admin/softlayerlink.html#invite_users).
 
