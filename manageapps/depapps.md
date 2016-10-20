@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -14,9 +15,6 @@ copyright:
 #Deploying apps
 {: #deployingapps}
 
-*Last updated: 28 July 2016*
-{: .last-updated}
-
 You can deploy applications to {{site.data.keyword.Bluemix}} by using various methods, such as the command line interface and integrated development environments (IDEs). You can also use application manifests to deploy applications. By using an application manifest, you reduce the number of deployment details that you must specify every time that you deploy an application to {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
@@ -27,7 +25,7 @@ Deploying an application to {{site.data.keyword.Bluemix_notm}} includes two phas
 
 ###Staging an application
 
-During the staging phase, a droplet execution agent (DEA) uses the information that you provide in the cf command line interface or the `manifest.yml` file to decide what to create for application staging. The DEA selects an appropriate buildpack to stage your application, and the result of the staging process is a droplet. For more information about deploying an application to {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} architecture, How {{site.data.keyword.Bluemix_notm}} works](../public/index.html#publicarch).
+During the staging phase, a droplet execution agent (DEA) uses the information that you provide in the cf command line interface or the `manifest.yml` file to decide what to create for application staging. The DEA selects an appropriate buildpack to stage your application, and the result of the staging process is a droplet. For more information about deploying an application to {{site.data.keyword.Bluemix_notm}}, see [How {{site.data.keyword.Bluemix_notm}} works](/docs/overview/whatisbluemix.html#howwork).
 
 During the staging process, the DEA checks whether the buildpack matches the application. For example, a Liberty runtime for a .war file, or a Node.js runtime for .js files. The DEA then creates an isolated container that contains the buildpack and the application code. The container is managed by the Warden component. For more information, see [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
 
