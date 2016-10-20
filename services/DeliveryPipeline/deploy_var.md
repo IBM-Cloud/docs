@@ -6,7 +6,7 @@ copyright:
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
+    It must be surrounded by 3 dashes.
     The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
     Indentation as per the previous template must be preserved.
 -->
@@ -53,7 +53,7 @@ The following properties and resources are available by default in pipeline envi
 | IDS_JOB_ID | The unique ID of the job's configuration. |
 | IDS_JOB_NAME | The name of the job's configuration. |
 | IDS_OUTPUT_PROPS | Comma-separated names of your stage environment properties. |
-| IDS_PROJECT_NAME | The name of the project, for example, <code>Owner &#124; Project Name</code>. |
+| IDS_PROJECT_NAME | The name of the project, for example, <code>Owner - Project Name</code>. |
 | IDS_STAGE_NAME | The name of the current stage. |
 | IDS_URL | The URL for the current pipeline. |
 | IDS_VERSION | The number for the build that is being deployed or the SCM identifier. This property is available only for deploy jobs.
