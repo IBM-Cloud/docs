@@ -12,7 +12,9 @@ copyright:
 
 #Services
 {: #services}
+
 *Last updated: 10 August 2016*
+{: .last-updated} 
 
 You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
 {:shortdesc}
@@ -143,7 +145,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 
 # Adding a service to your application
 {: #add_service}
-*Last updated: 8 March 2016*
+
 
 {{site.data.keyword.Bluemix}} has a list of services and manages them on behalf of the developers. To add a service for your application to use, you must request an instance of this service and configure the application to interact with the service.
 
