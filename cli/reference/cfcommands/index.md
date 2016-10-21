@@ -35,6 +35,12 @@ cf api BluemixServerURL
 <dl>
 <dt>BluemixServerURL</dt>
 <dd>The URL of the Bluemix API endpoint that you must specify when you connect to {{site.data.keyword.Bluemix_notm}}. Typically, this URL is https://api.{DomainName}. 
+Each Bluemix Public region and Bluemix Dedicated deployment has a unique API endpoint. For Bluemix Public the endpoints are:
+
+     * US South: https://api.ng.bluemix.net
+     * United Kingdom: https://api.eu-gb.bluemix.net
+     * Sydney: https://api.au-syd.bluemix.net
+     
 If you want to display the URL of the API endpoint that you are currently using, you do not need to specify this parameter for the cf api command.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Disables the SSL validation process. Use of this parameter might cause security problems.</dd>
