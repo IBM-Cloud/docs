@@ -17,65 +17,82 @@ copyright:
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Last updated: 18 August 2016
+Last updated: 23 October 2016
 {: .last-updated} 
 
 General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
 {:shortdesc}
 
 ## Unable to log in to {{site.data.keyword.Bluemix_notm}}
+{: #ts_unabletologin}
+
+You must have a valid {{site.data.keyword.Bluemix_notm}} account to log in.
+
+
+When you try to log in to {{site.data.keyword.Bluemix_notm}}, you see one of the following error messages: 
+{: tsSymptoms} 
+
+ * From the Customer Portal
+  
+   `You have reached this page because your authentication was successful, however, this IBMid is not associated with any IBM Cloud accounts. If you believe this to be in error, contact your Account Owner or Master User.`
+
+ * From the {{site.data.keyword.Bluemix_notm}} console
+  
+  `You have reached this page because your authentication was successful, however, this IBMid is not associated with any  {{site.data.keyword.Bluemix_notm}} accounts.`
+
+
+One of the most likely reasons for getting this error message is that you do not have a {{site.data.keyword.Bluemix_notm}} account created yet or you need to switch to IBMid authentication. 
+{: tsCauses} 
+ 
+
+Follow the sign up process to create a {{site.data.keyword.Bluemix_notm}} account or contact your master user or account administrator for switching to IBMid. 
+{: tsResolve}
+
+Depending on how your account is set up, some of these log in options might apply to you: 
+ * SoftLayer users with SoftLayer IDs must log in through the [Customer Portal](https://control.softlayer.com).
+ * SoftLayer users with an IBMid and with or without a linked Bluemix account can log in through the [Customer Portal](https://control.softlayer.com) to open the SoftLayer Customer Portal or through the [Bluemix console](https://console.{DomainName}) to open the Infrastructure dashboard. 
+ * Bluemix users without a linked SoftLayer account must log in through the Bluemix console.
+ * Bluemix users with a linked SoftLayer account can log in through the [Bluemix console](https://console.{DomainName}) or the [Customer Portal](https://control.softlayer.com).
+ 
+
+## Password is invalid
 {: #ts_logintobm}
 
-You must have a valid IBMid and password to log in to {{site.data.keyword.Bluemix_notm}}.
+You must have a valid IBMid to log in to the {{site.data.keyword.Bluemix_notm}} console.
 
-
-When you try to sign in to {{site.data.keyword.Bluemix_notm}}, you see the following error message: 
+When you try to log in to {{site.data.keyword.Bluemix_notm}}, you see the following error message: 
 {: tsSymptoms} 
 
 `The password that you entered is not correct.`
 
-
-The IBMid and password that you use to sign in to {{site.data.keyword.Bluemix_notm}} is invalid.
+The IBMid and password that you use to log in to {{site.data.keyword.Bluemix_notm}} is invalid.
 {: tsCauses} 
  
-
-To get a valid IBMid and password, go to the My IBM profile page, and then complete one of the following steps:
+To get a valid IBMid and password, go to the My IBM profile page, then complete one of the following steps:
 {: tsResolve}
-  * If you have already registered an IBMid and you want to check whether your ID and password are valid, click **Sign in** and enter your IBMid and password on the Sign in page. If you have forgotten your password, click **Forgot your password** on the Sign in page to reset your password. If you have forgotten your IBMid or continue to have problems with your password, contact the Worldwide IBM Registration Help Desk for help. 
-  * If you don't have an IBMid, click **Register** to register an IBMid and password. 
-  
-**Note:** For IBM employees, the IBMid might be different from the intranet login ID. 
+  * If you have already registered for an IBMid and you want to check whether your ID and password are valid, click **Log in** and enter your IBMid and password on the Log in page. If you have forgotten your password, click **Forgot your password** on the Log in page to reset your password. If you have forgotten your IBMid or continue to have problems with your password, contact the Worldwide IBM Registration Help Desk for help. 
+  * If you don't have an IBMid, click **Register** to register for an IBMid and password. 
 
 
 
-<!-- begin STAGING ONLY --> 
+## Cannot log in with a Softlayer username
+{: #ts_softlayer_username}
 
-## Problem accessing external website
-{: #ts_bmlinkid}
-
-You cannot log in to {{site.data.keyword.Bluemix_notm}} by using your IBM intranet ID unless you link your intranet ID with your IBMid.
+You must have a valid IBMid and password to log in to {{site.data.keyword.Bluemix_notm}}.
 
 
-After you select **Sign in with your intranet ID** from the {{site.data.keyword.Bluemix_notm}} Sign in page, you might see the following error message:
+When you try logging in to the {{site.data.keyword.Bluemix_notm}} console with your Softlayer username, you receive the following message: 
 {: tsSymptoms} 
 
-`Problem Accessing External Website`
+`We didn't recognize this IBMid or email.`
 
+You must have an IBMid to log in to use the Infrastructure dashboard in the Bluemix console.
+{: tsCauses} 
+ 
+If you are a SoftLayer user who is using a SoftLayer ID, you must switch to IBMid authentication in the Customer Portal within each account that you have access to before you are able to log in by using IBMid authentication. 
 
-
-This problem occurs when you log in to {{site.data.keyword.Bluemix_notm}} by using an IBM intranet ID that is not linked to an IBMid. Your IBMid is the ID that you use to log in to www.ibm.com.
-{: tsCauses}
-
-
-As an IBM employee, before you are able to log in to {{site.data.keyword.Bluemix_notm}} by using your IBM intranet ID, you must link your intranet ID with your external IBMid. To link the two IDs, complete the following steps:
-{: tsResolve} 
-
-  1. On the [Central Sign-on](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window} page, click **My Sign-ons**.
-  2. On the My Sign-ons page, click **Link IDs**, and enter your IBMid and password on the {{site.data.keyword.Bluemix_notm}} Sign in page. After that, your intranet ID and IBMid will be automatically linked.
-  
-
-<!-- end STAGING ONLY -->
-
+Contact your master user or account administrator for switching to IBMid. 
+{: tsResolve}
 
 
 
@@ -99,10 +116,7 @@ When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** field on t
 Close the message window, and then click the **RESET** button in your runtime pane. 
 {: tsResolve} 
 
-
-
-
-    
+  
     
 ## Automatic failover between {{site.data.keyword.Bluemix_notm}} regions is not available
 {: #ts_failover}
@@ -230,7 +244,6 @@ You might see one of the following error messages when you use the {{site.data.k
 `BXNUI0016E: The apps and services weren't retrieved because a Bluemix page didn't load.`
 
  
-
 You can complete one or more of the following actions as necessary:
 {: tsResolve}
 
