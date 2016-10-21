@@ -1,11 +1,13 @@
 {:new_window: target="_blank"}
 
 
-# About {{site.data.keyword.blockstorageshort}}
+# About {{site.data.keyword.blockstorageshort}} (Deprecated)
 {: #about-block-storage}
 
-Last updated: 07 September 2016
+Last updated: 24 October 2016
 {: .last-updated}
+
+**This service is deprecated:** Existing volumes can be used until 24 December 2016. For more information, see [{{site.data.keyword.blockstorageshort}} (Beta) is deprecated](../BlockStorage/index.html).
 
 The IBM {{site.data.keyword.blockstorageshort}} service allows you to attach persistent storage to a virtual server.  To use the storage, you attach the block volumes to your virtual servers, as depicted in the following image. The data in block storage volumes persists beyond the lifecycle of your virtual server. This means that you can detach the volumes from a server instance and reattach to another server instance, without any changes to your data. {{site.data.keyword.blockstorageshort}} uses OpenStack Cinder to manage the volume lifecycle. 
 

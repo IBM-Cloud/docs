@@ -24,11 +24,13 @@ copyright:
 <!-- The short description section should include the service long name and "Bluemix" for search optimization. Example short description: -->
 
 <!-- Add a heading and content for how to get help and support. Use this template for beta and GA services:  -->
-# Getting help and support for {{site.data.keyword.blockstorageshort}} 
+# Getting help and support for {{site.data.keyword.blockstorageshort}} (Deprecated)
 {: #gettinghelp}
 
-Last updated: 26 August 2016
+Last updated: 24 October 2016
 {: .last-updated}
+
+**This service is deprecated:** Existing volumes can be used until 24 December 2016. For more information, see [{{site.data.keyword.blockstorageshort}} (Beta) is deprecated](../BlockStorage/index.html).
 
 If you have problems or questions when using {{site.data.keyword.blockstoragefull}}, you can get help by searching for information or by asking questions through one of the forums listed below. You can also open a support ticket. 
 
