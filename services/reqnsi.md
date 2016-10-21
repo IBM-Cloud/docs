@@ -13,7 +13,7 @@ copyright:
 #Services
 {: #services}
 
-*Last updated: 10 August 2016*
+*Last updated: 21 October 2016*
 {: .last-updated} 
 
 You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
@@ -301,7 +301,7 @@ If you have a service instance that is created and bound to apps in one region, 
       2. Retrieve the credentials and the connection parameters from the VCAP_SERVICES environment variable of the service instance in the region where the service exists. Complete the following steps:
 
 	       1. In the {{site.data.keyword.Bluemix_notm}} Dashboard, click your application tile. The Overview page is displayed.
-	       2. In the navigation pane, click **Environment Variables**. The *VCAP_SERVICES* environment variable details are displayed on the right pane. Record the JSON content for the service instance.
+	       2. In the navigation pane, click **Environment Variables**. The *VCAP_SERVICES* environment variable details are displayed. Record the JSON content for the service instance.
 
       3. Switch to the region where you want to use the service instance. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand **Region** or click the **Region** icon, and then select the region where you want to use the service instance.
 
