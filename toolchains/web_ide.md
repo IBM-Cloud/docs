@@ -29,8 +29,7 @@ The {{site.data.keyword.webide}} is customizable so that you can choose the colo
 
 <!-- LH: I don't think we need to include the following table, so I'm commenting it out. When you're viewing the settings in the Web IDE, this information should be obvious -->
 
-<!--| Categories | Description  |
-|---|---|
+<!--| Categories | Description  ||---|---|
 | Cloud Foundry  | Define a Cloud Foundry API and Manage URL  |
 | CSS Validation | Define the severities for CSS linting rules that you use to check your code  |
 | Editor Settings  | Configure editor-specific settings for key bindings, editor behavior, layout, and more  |
