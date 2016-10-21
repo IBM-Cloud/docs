@@ -6,8 +6,8 @@ copyright:
 ---
 
 
-{:shortdesc: .shortdesc} 
-{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:new_window: target="blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
@@ -53,7 +53,9 @@ Log files are automatically created when you are using the Cloud Foundry infrast
 ###Log Retention
 {: #log_retention}
 
-* In Bluemix Cloud Foundry apps, log data is stored for 30 days by default.
+* In {{site.data.keyword.Bluemix_notm}} Public, log data is stored for 7 days for Cloud Foundry apps.
+
+<!-- change this to: In {{site.data.keyword.Bluemix_notm}} Public, log data is stored for 7 days for Cloud Foundry apps. -->
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -209,7 +211,7 @@ To view logs that you are interested in or exclude the content that you don't wa
 
 * To view a portion instead of the complete verbose logs, use the **cut** option. For example, to display the component and message information, use the following command:
 ```
-cf logs appname --recent | cut -c 29-40,46- 
+cf logs appname --recent | cut -c 29-40,46-
 ```
 
 For more information about the **grep** option, type cut --help.
@@ -229,24 +231,24 @@ For more information about the **grep** option, type `grep --help`.
 
 To stream logs from your app and the system to an external log host, complete the following steps:
 
-  1. Determine the logging endpoint. 
-     
+  1. Determine the logging endpoint.
+
 	 You can send logs to a third-party log aggregator, such as Papertrail, Splunk, or Sumologic. You can also send logs to a syslog host, a syslog host that is encrypted with TLS (Transport Layer Security), or an HTTPS POST endpoint. The methods to obtain logging endpoints vary for different log hosts.
 
   2. Create a user-provided service instance.
-     
-	 Use the `cf create-user-provided-service` command (or `cups`, a short version of the command) to create a user-provided service instance: 
+
+	 Use the `cf create-user-provided-service` command (or `cups`, a short version of the command) to create a user-provided service instance:
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```
 	 &lt;service_name&gt;
-	 
+
 	 The name for the user-provided service instance.
-	 
+
 	 &lt;logging_endpoint&gt;
-	 
+
 	 The logging endpoint that {{site.data.keyword.Bluemix_notm}} sends logs to. Refer to the following table to replace *logging_endpoint* with your value:
-	 
+
 	 <table>
      <thead>
      <tr>
@@ -272,57 +274,57 @@ To stream logs from your app and the system to an external log host, complete th
 	 <td>This endpoint must be on the public Internet and accessible by {{site.data.keyword.Bluemix_notm}}</td>
      </tr>
      </tbody>
-     </table>	
+     </table>
   3. Bind the service instance to your app.
 
-	 Use the following command to bind the service instance to your app: 
-	
+	 Use the following command to bind the service instance to your app:
+
 	 ```
 	 cf bind-service <appname> <service_name>
 	 ```
 	 &lt;appname&gt;
-	 
+
 	 The name of your app.
-	 
+
 	 &lt;service_name&gt;
-	 
+
 	 The name for the user-provided service instance.
-	 
-  4. Restage the app. 
-     Type `cf restage appname` for the changes to take effect. 
+
+  4. Restage the app.
+     Type `cf restage appname` for the changes to take effect.
 
 #### Viewing logs from external hosts
 {: #viewing_logs_external}
 
-	 
+
 When logs are generated, after a short delay you can view messages in your external log host that are similar to the messages that you view from the {{site.data.keyword.Bluemix_notm}} user interface or from the cf command line interface.  If you have multiple instances of your app, the logs are aggregated and you can see all the logs for your app. In addition, the logs are persisted between app crashes and deployments.
 
-**Note:** Logs that you view in the command line interface are not in the syslog format, and might not exactly match the messages that are displayed in your external log host. 
+**Note:** Logs that you view in the command line interface are not in the syslog format, and might not exactly match the messages that are displayed in your external log host.
 
-### Example: Streaming Cloud Foundry application logs to Splunk 
+### Example: Streaming Cloud Foundry application logs to Splunk
 {: #splunk}
 
-In this example, a developer named Jane creates a virtual server by using IBM Virtual Servers Beta and the Ubuntu image.  Jane tries to stream Cloud Foundry app logs from {{site.data.keyword.Bluemix_notm}} to Splunk. 
+In this example, a developer named Jane creates a virtual server by using IBM Virtual Servers Beta and the Ubuntu image.  Jane tries to stream Cloud Foundry app logs from {{site.data.keyword.Bluemix_notm}} to Splunk.
 
   1. To begin, Jane sets up Splunk.
 
-     a. Jane downloads Splunk Light from the [Download Splunk Light site](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}, and then installs it by using the following command. The software is installed on */opt/splunk*. 
-       
+     a. Jane downloads Splunk Light from the [Download Splunk Light site](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}, and then installs it by using the following command. The software is installed on */opt/splunk*.
+
 	    ```
         dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
         ```
-	   
+
      b. Jane installs and patches the RFC5424 syslog technology add-on to integrate with {{site.data.keyword.Bluemix_notm}}. For more information about the instructions for installing the add-on, see the [Cloud Foundry guideline](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.  
 
 	    Jane installs the add-on by using the following commands:
-        
+
 	    ```
         cd /opt/splunk/etc/apps
         tar xvfz ~/rfc5424-syslog_11.tgz
         ```
-	   
+
         Then, Jane patches the add-on by replacing */opt/splunk/etc/apps/rfc5424/default/transforms.conf* with a new *transforms.conf* file that consists of the following text:
-	   
+
 	    ```
         [rfc5424_host]
         DEST_KEY = MetaData:Host
@@ -337,56 +339,56 @@ In this example, a developer named Jane creates a virtual server by using IBM Vi
         {:screen}	   
 
      c. After Splunk is set up, Jane must open some ports on the Ubuntu machine to accept the incoming syslog drain (port 5140) and Splunk web UI (port 8000) because {{site.data.keyword.Bluemix_notm}} virtual server has the firewall set up by default.
-	   
+
 	    **Note:** The iptable confiration is done here for Jane's evaluation purpose and is temporary. To configure the firewall setting in Bluemix virtual server in production, see the [Network Security Groups](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} documentation for details.
-	 
+
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
        iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
        iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
        iptables -A INPUT -p tcp --sport 8000 -j ACCEPT
 	   ```
-	   {:screen}	
-	  
+	   {:screen}
+
 	   Then, Jane runs Splunk by using the following command:
 
        ```
 	   /opt/splunk/bin/splunk start --accept-license
        ```
-		
+
   2. Jane configures the Splunk settings to accept the syslog drain from {{site.data.keyword.Bluemix_notm}}. She must create a data input for the syslog drain.
 
-     a. From the Splunk web interface, Jane clicks **Data > Data inputs**. A list of input types that Splunk supports is displayed. 
-	 
+     a. From the Splunk web interface, Jane clicks **Data > Data inputs**. A list of input types that Splunk supports is displayed.
+
      b. She selects **TCP**, because the syslog drain uses the TCP protocol.
-	 
+
      c. In the **TCP** pane, she enters **5140** in the **Port** field, leaves the remaining fields blank, and then clicks **Next**.
-	 
+
      d. From the **Source Type** list, she selects **Uncategorized > rfc5424_syslog**.
-	 
+
      e. For the **Method** type, she selects **IP**.
-	 
+
      f. In the **Index** field, Jane clicks **Create a new index**. She names the new index "bluemix", and then clicks **Save**.
-	 
+
      g. Finally, in the **Review** window, Jane confirms that the setting is correct and then clicks **Submit** to enable this data input.
 
   3. In {{site.data.keyword.Bluemix_notm}}, Jane creates a syslog drain service and binds the service to an app.
 
      a. Jane creates a syslog drain service by using the following command from the cf cli:
-	 
+
      ```
      cf cups splunk -l syslog://dummyhost:5140
      ```
-        
-     **Note:** *dummyhost* is not the real name. It is used to hide the actual host name. 
+
+     **Note:** *dummyhost* is not the real name. It is used to hide the actual host name.
 
      b. Jane binds the syslog drain service to an app in her space, and then restages the app.
-	 
+
 	 ```
      cf bind-service myapp splunk
      cf restage myapp
      ```
-		
+
 
 Jane tries out her app, and then she types the following query string in the Splunk web interface:
 
@@ -394,8 +396,4 @@ Jane tries out her app, and then she types the following query string in the Spl
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-Jane sees a stream of logs in her Splunk web interface. Though the Splunk that Jane installs is Splunk Light, she can still retain 500MB logs a day. 
-
-
-
-
+Jane sees a stream of logs in her Splunk web interface. Though the Splunk that Jane installs is Splunk Light, she can still retain 500MB logs a day.
