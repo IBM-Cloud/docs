@@ -19,7 +19,7 @@ copyright:
 
 # Linking SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts
 {: #softlayerlink}
-*Last updated: 20 October 2016*
+*Last updated: 23 October 2016*
 {: .last-updated}
 
 You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts. When you link your accounts, you are billed through {{site.data.keyword.Bluemix_notm}} for both SoftLayer and {{site.data.keyword.Bluemix_notm}} resources. If you have an existing {{site.data.keyword.Bluemix_notm}} account, billing through {{site.data.keyword.Bluemix_notm}} for SoftLayer for takes effect for the new billing cycle that starts after the accounts are linked.
@@ -76,8 +76,10 @@ For more information about inviting team members through the {{site.data.keyword
 ## Switching to  IBMid
 {: #ibmid_switch}
 
-Authentication in SoftLayer now uses IBMid to provide a single login for {{site.data.keyword.Bluemix_notm}}. If you have an existing SoftLayer account, you can switch to an IBMid. A migration wizard can help guide you through this switch. 
+Authentication in SoftLayer now uses IBMid to provide a single login for {{site.data.keyword.Bluemix_notm}}. If you have an existing SoftLayer account, you can switch to an IBMid. A migration wizard will guide you through this switch. 
 {:shortdesc}
+
+After you begin the switch to IBMid, as long as you do not complete the process, you can cancel it. But, you will still be prompted to switch to IBMid the next time that you log in.
 
 To begin the switch of your existing SoftLayer username to an IBMid, complete the following steps:
 
