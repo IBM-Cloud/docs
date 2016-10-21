@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.Bluemix}} Mobile dashboard
 {: #mobile}
-Last updated: 13 October 2016
+Last updated: 21 October 2016
 {: .last-updated}
 
 The {{site.data.keyword.Bluemix}} Mobile dashboard offers a single place to manage the {{site.data.keyword.Bluemix_notm}} capabilities that you need to create and manage your {{site.data.keyword.Bluemix_notm}} Mobile application. The Mobile dashboard brings the most common services that are required for a mobile developer into a single, connected experience that has been optimized for the mobile developer.
@@ -61,7 +61,7 @@ Check back often to stay current with new features.
 {: #general}
 -->
 * [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
+* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
 * [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
