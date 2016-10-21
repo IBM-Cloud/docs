@@ -8,7 +8,7 @@ copyright:
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 19 October 2016
+Last updated: 21 October 2016
 {: .last-updated}
 
 You can enable Android applications to receive {{site.data.keyword.mobilepushshort}} to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
@@ -115,7 +115,7 @@ Specifies the location where the app is hosted. You can use one of the three val
 ```
 //Initialize client Push SDK for Java
 MFPPush push = MFPPush.getInstance();
-push.initialize(getApplicationContext(), "AppGUID");
+push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ```
 	{: codeblock}
 
