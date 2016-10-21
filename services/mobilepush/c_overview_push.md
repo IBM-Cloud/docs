@@ -105,7 +105,7 @@ The {{site.data.keyword.mobilepushshort}} message payload size is dependent on t
 
 For iOS 8 and later, the maximum size allowed is 2 kilobytes. Apple Push Notification service does not send notifications that exceeds this limit.
 
-###Android, Chrome and Firefox Browsers
+###Android, Firefox browser, Chrome browser, and Chrome Apps & Extensions
 {: android-message-size}
 
 There is a limitation of 4 kilobytes as the maximum allowed message size.  
