@@ -12,7 +12,7 @@ copyright:
 # What is {{site.data.keyword.Bluemix_notm}}?
 {: #bluemixoverview}
 
-*Last updated: 21 October 2016*
+*Last updated: 23 October 2016*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} is {{site.data.keyword.IBM_notm}}'s innovative cloud computing platform that combines platform as a service (PaaS) with infrastructure as a service (IaaS). Additionally, {{site.data.keyword.Bluemix_notm}} has a rich catalog of cloud services that can be easily integrated with PaaS and IaaS to build business applications rapidly.
@@ -251,7 +251,5 @@ Cloud Foundry command line interface, Version 6.5.1 or later
 * [Getting started](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
 * [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [Learn about the hybrid model](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
-* [{{site.data.keyword.Bluemix_notm}} Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs)
-* [{{site.data.keyword.Bluemix_notm}} known issues](https://developer.ibm.com/bluemix/support/#issues)
 * [Managing your account](/docs/admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)
