@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-20"
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2016-10-20"
 # Starters
 {: #starters}
 
-Last updated: 20 October 2016
+Last updated: 21 October 2016
 {: .last-updated}
 
 With the {{site.data.keyword.Bluemix}} Mobile dashboard, you can create your project by using a UI Starter or a Code Starter.
@@ -50,5 +50,6 @@ If you choose to create your project with a Code Starter, you do not have the op
 ### Code Starter tutorials
 {: #tutorials_Code}
 
+* [End-to-end tutorial of the {{site.data.keyword.visualrecognition}} Code Starter](tutorial.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)

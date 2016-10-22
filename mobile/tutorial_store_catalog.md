@@ -39,7 +39,7 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 
    4. Enter your project name and click **Create**.
 
-2. Optional: Add Push Notifications.
+2. Optional: Add the Push Notifications capability.
 
    1. Click **Add** for **Push Notifications** on the **Project Overview** page.
 
@@ -51,9 +51,9 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 
    4. For Android, [configure Google Cloud Messaging](../services/mobilepush/t_push_provider_android.html){: new_window}.
 
-3. Optional: Add other services.
+3. Optional: Add other capabilities.
 
-   1. Click **Add** for the service on the **Project Overview** page.
+   1. Click **Add** for the capability on the **Project Overview** page.
 
    2. Enter your service name and click **Create**.
 
