@@ -60,6 +60,8 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    2. Enter your service name and click **Create**.
    
    3. Toggle off **Demo Mode** to see your analytics data after you run your app.
+   
+   4. See [Getting started with {{site.data.keyword.mobileanalytics_short}}](../services/mobileanalytics/index.html){: new_window} for more information about configuring Analytics.
   
 4. Optional: Add the Authentication capability.
 
@@ -73,7 +75,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
    4. Select your identity provider and enter the required information to configure it. You can enable only one identity provider.
 
-   5. See [Getting started with Mobile Client Access](../services/mobileaccess/index.html){: new_window} for more information about configuring authentication.
+   5. See [Getting started with {{site.data.keyword.amashort}}](../services/mobileaccess/index.html){: new_window} for more information about configuring Authentication.
 
 5. Generate your project code.
 
@@ -99,13 +101,13 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
    2. Open your Terminal and navigate to your project folder.
    
-      1. Run `pod setup`.
+      1. Run `pod setup` if you need to set up your CocoaPods repository.
       
-      2. Run `pod update`.
+      2. Run `pod update` if you need to update you update your existing pods.
       
-      3. Run `pod install`.
+      3. Run `pod install` to install the pods that are required for your project.
       
-      4. Run `carthage update --platform iOS`.
+      4. Run `carthage update --platform iOS` to build the dependencies and frameworks to use the {{site.data.keyword.ibmwatson}} Developer Cloud iOS SDK.
       
    3. Open your `VisualRecognitionProject.xcworkspace` Xcode workspace.
    
