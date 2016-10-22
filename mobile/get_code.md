@@ -27,7 +27,7 @@ The following developer tools are needed when you are working with generated cod
 	* Install the latest [Android 7.0](https://www.android.com/versions/nougat-7-0/) runtime.
 
 #### iOS
-* Xcode 8.0 (recommended)
+* [Xcode 8.0](https://developer.apple.com/xcode/) (recommended)
 	* Install the latest [iOS 10](http://www.apple.com/ios/ios-10/) runtime.
 * [Homebrew](http://brew.sh/)
 	* Command line tool to assist in the installation of other tools and runtimes, such as CocoaPods and Carthage, for Apple developers.
