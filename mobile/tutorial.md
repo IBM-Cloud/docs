@@ -7,7 +7,7 @@ lastupdated: "2016-10-21"
 ---
 {:new_window: target="_blank"}
 
-# End-to-end tutorial of the {{site.data.keyword.visualrecognition}} Code Starter
+# End-to-end tutorial of the {{site.data.keyword.visualrecognitionshort}} Code Starter
 {: #tutorial}
 
 Last updated: 21 October 2016
