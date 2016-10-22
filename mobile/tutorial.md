@@ -95,7 +95,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
 1. Extract the `VisualRecognitionProject-Swift.zip` file.
 
-2. Open the `README.md` file in a Markdown viewer to configure your project.
+2. Open the `README.md` file in a Markdown viewer to review the steps to configure your project.
 
    1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://new-console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
    
