@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Last updated: 10 August 2016*
+*Last updated: 23 October 2016*
 
 {{site.data.keyword.Bluemix_notm}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design.
 {:shortdesc}
@@ -37,85 +37,103 @@ Experimental services might not be stable and can change in ways that are not co
 ##Services by region
 {: #services_region}
 
-Not all services are available in every {{site.data.keyword.Bluemix_notm}} region. The following table shows the services that are provided by IBM.
+Not all services are available for purchase in every {{site.data.keyword.Bluemix_notm}} region. And, even if the service is available to purchase in that region, the service might be hosted in a different location. The following table shows the services that are provided by IBM.
 
 
-
-|Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Australian Sydney region|
+|Service	|Available for purchase in Dallas, United States	|Available for purchase in London, United Kingdom |Available for purchase in Sydney, Australia|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}			|Yes		|No		|No|
-|{{site.data.keyword.activedeployshort}}			|Yes		|Yes		|No|
-|{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
-|{{site.data.keyword.alertnotificationshort}}		|Yes		|Yes			|Yes		|
-|{{site.data.keyword.appsecshort}}		|Yes		|No		|No|
-|{{site.data.keyword.appseccloudshort}}  |Yes  |Yes  |Yes  |
-|{{site.data.keyword.APS_DA}}			|Yes		|No		|No|
-|{{site.data.keyword.APS_MA}}			|Yes		|No		|No|
-|{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes|
-|{{site.data.keyword.hadoopst}}			|Yes		|No		|No|
-|{{site.data.keyword.APIM}}			|Yes		|Yes		|Yes|
-|{{site.data.keyword.autoscaling}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.bigicloudst}}		|Yes		|No		|No|
-|{{site.data.keyword.rules_short}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.cloudint}}			|Yes		|Yes		|No|
-|{{site.data.keyword.cloudant}}			|Yes		|Yes		|Yes|
-|{{site.data.keyword.conceptexpansionshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.conceptinsightsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|No|
-|{{site.data.keyword.datacshort}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.deliverypipeline}}		|Yes		|Yes		|No|
-|{{site.data.keyword.dialogshort}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.creshort}}			|Yes		|No		|No|
-|{{site.data.keyword.game}}			|Yes		|Yes		|Yes|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|Yes|
-|{{site.data.keyword.GlobalizationPipeline_short}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
-|{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.IntegrationTestingshort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.iot_short}}		|Yes		|Yes		|No|
-|{{site.data.keyword.keymanagementserviceshort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.messagehub}}		|Yes		|Yes		|No|
-|{{site.data.keyword.messageresonanceshort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.APS_MAiOS}} 		|Yes		|No		|No|
-|{{site.data.keyword.macm_short}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.mobilemam}}		|Yes		|Yes		|No|
-|{{site.data.keyword.mobiledata}}		|Yes		|Yes		|No|
-|{{site.data.keyword.manda}}			|Yes		|Yes		|Yes|
-|{{site.data.keyword.mqa}}			|Yes		|Yes		|Yes|
-|{{site.data.keyword.mql}}			|Yes		|Yes		|Yes|
-|{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
-|{{site.data.keyword.objectstorageshort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.mobilepush}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.mobilepushshort}}				|Yes		|Yes		|Yes|
-|{{site.data.keyword.questionandanswershort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.rapidApps}}		|Yes		|Yes		|No|
-|{{site.data.keyword.relationshipextractionshort}}	|Yes	|Yes		|Yes|
-|{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
-|{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.servicediscoveryshort}}		|Yes		|Yes		|No|
-|{{site.data.keyword.serviceproxyshort}}		|Yes		|Yes		|No|
-|{{site.data.keyword.sescashort}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.ssofull}}			|Yes		|No		|No|
-|{{site.data.keyword.speechtotextshort}}	|Yes 		|Yes	 	|Yes|
-|{{site.data.keyword.sqldb}}			|Yes		|Yes		|No|
-|{{site.data.keyword.staticanalyzershort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.streaminganalyticsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.texttospeechshort}} 	|Yes 		|Yes	 	|Yes|
-|{{site.data.keyword.times}}			|Yes		|Yes		|No|
-|{{site.data.keyword.toneanalyzershort}} 	|Yes 		|Yes 		|Yes|
-|{{site.data.keyword.trackplan}}		|Yes		|Yes		|No|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.visualinsightsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.visualizationrenderingshort}} |Yes		|Yes		|No|
-|{{site.data.keyword.workflow}}			|Yes		|Yes		|Yes|
-|{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.xpagesservice_short}}	|Yes		|Yes		|No|
+|{{site.data.keyword.cloudaccesstrailshort}}			|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region|
+|{{site.data.keyword.activedeployshort}}			|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region |
+|{{site.data.keyword.alchemyapishort}} 		|Hosted in Dallas,US	   	|Hosted in Dallas,US  		|Hosted in Dallas,US |
+|{{site.data.keyword.alertnotificationshort}}		|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU |
+|{{site.data.keyword.appseccloudshort}}  |Hosted in Dallas,US  |Hosted in Dallas,US  |Hosted in Dallas,US  |
+|Apache Spark			|Hosted in Dallas,US		|Not available in region		|Not available in region|
+|{{site.data.keyword.apiconnect_short}}			|Hosted in US South		|Hosted in United Kingdom		|Hosted in Sydney |
+|{{site.data.keyword.APIHarmony}}			|Hosted in US South		|Hosted in United Kingdom		|Hosted in Sydney |
+|Automated Accessibility Tester			|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.autoscaling}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.prf_hubshort}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.bigicloudst}}		|Hosted in Dallas,US		|Not available in region		|Not available in region |
+|{{site.data.keyword.blockchain}}  |Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.rules_short}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|CDN			|Hosted in Dallas,US		|Not available in region		|Not available in region |
+|{{site.data.keyword.conversationshort}}		|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US |
+|{{site.data.keyword.iotmapinsights_short}}			|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|Cloud Foundry Runtimes		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.cloudant}}			|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.composeForEtcd}}	|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.composeForMongoDB}}			|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.composeForPostgreSQL}}			|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.composeForRethinkDB}}	|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.composeForRabbitMQ}}	|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.composeForRedis}}	|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.conceptinsightsshort}}	|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US |
+|{{site.data.keyword.dashdbshort}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney |
+|{{site.data.keyword.datacshort}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.DB2OnCloud_short}}		|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Sydney,AU |
+|{{site.data.keyword.deliverypipeline}}		|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US |
+|Deployment Risk Analytics		|Hosted in Dallas,US		|Not available in region		|Not available in region |
+|Digital Content Checker		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.documentconversionshort}}	|Hosted in Houston,US		|Hosted in Houston,US		|Hosted in Houston,US |
+|{{site.data.keyword.docgen_short}}		|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region |
+|Elasticsearch by Compose	|Hosted in Dallas,US and Northern Virginia,US	|Hosted in London,UK and Ireland		|Hosted in Sydney,AU |
+|{{site.data.keyword.geospatialshort_Geospatial}}	|Hosted in Dallas,US	|Hosted in London,UK		|Hosted in London, UK |
+|{{site.data.keyword.GlobalizationPipeline_short}}	|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.dataworks_short}}		|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region |
+|{{site.data.keyword.openwhisk}}		|Hosted in Dallas,US		|Not available in region		|Not available in region |
+|{{site.data.keyword.containerlong}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.datastagefull}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.graphshort}}       |Hosted in Dallas,US		|Hosted in Dallas,US		|Not available in region |
+|{{site.data.keyword.mdmcloudfull}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|Identity Mixer		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.IOCloud_short}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.twittershort}}		|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Sydney,AU |
+|{{site.data.keyword.IntegrationTestingshort}}	|Hosted in San Jose,US		|Not available in region		|Not available in region|
+|{{site.data.keyword.iot4auto_short}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU|
+|{{site.data.keyword.iotelectronics}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU|
+|{{site.data.keyword.iotinsurance_short}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU|
+|{{site.data.keyword.iot_short}}		|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region|
+|{{site.data.keyword.iotrtinsights_short}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU|
+|IoT Workbench		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU|
+|{{site.data.keyword.keymanagementserviceshort}}	|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region|
+|{{site.data.keyword.languagetranslationshort}}	|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US |
+|{{site.data.keyword.pm_short}}   |Hosted in Dallas,US		|Hosted in London,UK		|Not available in region|
+|{{site.data.keyword.eventhubshort}}		|Hosted in Dallas,US		|Not available in region		|Not available in region|
+|{{site.data.keyword.messagehub}}		|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region|
+|{{site.data.keyword.incubator}}		|Hosted in Dallas,US		|Not available in region		|Not available in region|
+|{{site.data.keyword.mobileanalytics_short}}		|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region|
+|{{site.data.keyword.amashort}}			|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU |
+|{{site.data.keyword.macm_short}}		|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU |
+|{{site.data.keyword.mobilefoundation_short}}			|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU |
+|{{site.data.keyword.mqa}}			|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU |
+|{{site.data.keyword.manda}}			|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.mql}}			|Not available in region		|Not available in region		|Hosted in Sydney,AU |
+|Network Security Groups for VMs 	|Not available in region		|Hosted in Dallas,US		|Not available in region |
+|{{site.data.keyword.nlclassifierlshort}} 	|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US |
+|{{site.data.keyword.objectstorageshort}}	|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region|
+|Open Toolchain			|Hosted in Dallas,US		|Not available in region		|Not available in region|
+|{{site.data.keyword.personalityinsightsshort}}	|Hosted in Houston,US		|Hosted in Houston,US		|Hosted in Houston,US |
+|{{site.data.keyword.mobilepushshort}}				|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU |
+|{{site.data.keyword.runbook_short}}				|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU |
+|{{site.data.keyword.SecureGateway}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.sescashort}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.servicediscoveryshort}}		|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region|
+|{{site.data.keyword.serviceproxyshort}}		|Hosted in Dallas, US		|Hosted in London,UK		|Not available in region|
+|{{site.data.keyword.ssofull}}			|Hosted in Washington,US		|Not available in region		|Not available in region|
+|{{site.data.keyword.speechtotextshort}}	|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US |
+|{{site.data.keyword.streaminganalyticsshort}}	|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in London,UK|
+|{{site.data.keyword.texttospeechshort}} 	|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US |
+|{{site.data.keyword.toneanalyzershort}} 	|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US |
+|{{site.data.keyword.trackplan}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.tradeoffanalyticsshort}}	|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US |
+|Visual Recognition	|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US |
+|VPN			|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region|
+|{{site.data.keyword.weather_short}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.appserver_short}}	|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.workloadscheduler}}	|Hosted in Dallas, US and Washington,US		|Hosted in Amsterdam,NL and Milan,IT		|Hosted in Melbourne,AU |
+|{{site.data.keyword.xpagesservice_short}}	|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
 *Table 2. Service availability*
+
 
 ## Continued availability for services
 {: #services_availability}
