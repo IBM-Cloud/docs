@@ -18,7 +18,7 @@ When you have completed the configuration and setup of your mobile project with 
 You will need to complete credentials for services that are not configurable in your downloaded project. The `README.md` file for the starter project contains instructions. View the `README.md` file in a Markdown viewer to complete the setup.
 
 ### Prerequisite Developer Tools
-{: prereq-dev-tools}
+{: #prereq-dev-tools}
 
 The following developer tools are needed when you are working with generated code from the {{site.data.keyword.Bluemix_notm}} Mobile dashboard:
 

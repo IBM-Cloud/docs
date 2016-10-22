@@ -40,7 +40,7 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 
    4. Enter your project name and click **Create**.
 
-2. Optional: Add Push Notifications.
+2. Optional: Add the Push Notifications capability.
 
    1. Click **Add** for **Push Notifications** in the **Project Overview** page.
 
@@ -52,7 +52,17 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 
    4. For Android, [configure Google Cloud Messaging](../services/mobilepush/t_push_provider_android.html){: new_window}.
    
-3. Optional: Add Authentication services.
+3. Optional: Add the Analytics capability.
+
+   1. Click **Add** for **Analytics** in the **Project Overview** page.
+
+      You can alternatively click **Create** from the **Analytics** page.
+
+   2. Enter your service name and click **Create**.
+   
+   3. Toggle off **Demo Mode** to see your analytics data after you run your app.
+
+4. Optional: Add the Authentication capability.
 
    1. Click **Add** for **Authentication** on the **Project Overview** page.
 
@@ -60,17 +70,11 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 
    2. Enter your service name and click **Create**.
    
-   3. Select your authentication method and enter the required information to configure it. You can only enable one method.
+   3. Toggle on **Authentication**.
+   
+   4. Select your identity provider and enter the required information to configure it. You can enable only one identity provider.
 
-   4. See [Getting started with Mobile Client Access](../services/mobileaccess/index.html){: new_window} for more information about configuring authentication.
-
-4. Optional: Add other services.
-
-   1. Click **Add** for the service on the **Project Overview** page.
-
-   2. Enter your service name and click **Create**.
-
-   3. Follow the instructions that are provided with the service to set it up.
+   5. See [Getting started with Mobile Client Access](../services/mobileaccess/index.html){: new_window} for more information about configuring authentication.
 
 5. Download your project.
 
