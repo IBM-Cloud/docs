@@ -2746,7 +2746,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 Re-create the IBM Containers service in the Bluemix space that you are logged into. The original quota for the space is maintained.
 
-<strong>Important</strong>: When you run this command, all of your single containers and groups in this space will not be migrated to the re-provisioned space and will be removed during the migration process. Images and volumes will not be affected.
+<strong>Important</strong>: When you run this command, none of your single containers and groups in this space will be migrated to the re-provisioned space and they will be removed during the migration process. 
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
