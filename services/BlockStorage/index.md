@@ -11,7 +11,7 @@ If you’re an existing {{site.data.keyword.blockstoragefull}} (Beta) user, you 
 
 **New Endurance and Performance storage solutions available in IBM Bluemix**
 
-You can now deploy block storage globally through the new **Infrastructure** category in IBM Bluemix®. For more information about using the Endurance and Performance storage solutions in the **Infrastructure** category, see [Endurance Storage](https://knowledgelayer.softlayer.com/topic/endurance-storage) and [Performance Storage](https://knowledgelayer.softlayer.com/topic/performance-storage).
+You can now deploy block storage globally through the new **Storage** category in IBM Bluemix®. For more information about using the Endurance and Performance storage solutions in the **Storage** category, see [Block Storage](https://www.ibm.com/cloud-computing/bluemix/block-storage), [Endurance Storage](https://knowledgelayer.softlayer.com/topic/endurance-storage), or [Performance Storage](https://knowledgelayer.softlayer.com/topic/performance-storage).
 
 ## Save data from your existing block storage volumes before 28 November 2016
 
