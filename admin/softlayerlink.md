@@ -46,6 +46,8 @@ You must be a Master User in the SoftLayer account to link accounts.
 
 After you have linked your accounts, the **Go to {{site.data.keyword.Bluemix_notm}}** link is available in the SoftLayer global header. Clicking this link takes you to the {{site.data.keyword.Bluemix_notm}} login page. In addition, the **SoftLayer** link is now available in the {{site.data.keyword.Bluemix_notm}} header. Clicking the link takes you to the home page of the {{site.data.keyword.slportal}} in a new window.
 
+{{site.data.keyword.Bluemix_notm}} infrastructure offerings are connected to a three-tiered network, segmenting public, private, and management traffic. Infrastructure on a customer's {{site.data.keyword.Bluemix_notm}} account might transfer data between one another across the private network at no cost. Infrastructure offerings, such as bare metal servers, virtual servers, and cloud storage, connect to other applications and services in the {{site.data.keyword.Bluemix_notm}} catalog, such as Watson services, containers, or runtimes, across the public network. Data transfer between those two types of offerings is metered and charged at standard public network bandwidth rates.
+
 ## Credits for {{site.data.keyword.Bluemix_notm}} usage when accounts are linked
 {: #slcredit}
 
