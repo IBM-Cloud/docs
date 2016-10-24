@@ -3239,7 +3239,7 @@ bluemix ic unpause proxy
 
 Delete the IBM Containers service from the Bluemix space that you are logged into.
 
-<strong>Attention</strong>: When you run this command, all your single containers and container groups are lost. Your space is still available in Bluemix. To start using the IBM Containers again, you must run bluemix ic provision to provision the IBM Containers service again.
+<strong>Attention</strong>: When you run this command, all your single containers and container groups are lost. Your space is still available in Bluemix. To start using the IBM Containers again, you must run `bluemix ic reprovision` to provision the IBM Containers service again.
 
 ```
 bluemix ic reprovision [--force|-f]
