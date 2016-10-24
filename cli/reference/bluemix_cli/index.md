@@ -2215,9 +2215,9 @@ Create a container group `my_container_group` by using the `registry.ng.bluemix.
 bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode -- tail -f /dev/null
 ```
 
-Create a scalable group `mygroup` with the automatic recovery enabled by using the `registry.ng.bluemix.net/ibmliberty` image. The port is `9080`, the host name is `mycontainerhost`, the domain name is `.mybluemix.net`.
+Create a scalable group `mygroup` with the automatic recovery enabled by using the `registry.ng.bluemix.net/ibmliberty` image. The port is `9080`, the host name is `mycontainerhost`, the domain name is `mybluemix.net`.
 ```
-bluemix ic group-create -p 9080 --auto -n mycontainerhost -d .mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty
+bluemix ic group-create -p 9080 --auto -n mycontainerhost -d mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty
 ```
 
 
