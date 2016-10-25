@@ -1951,29 +1951,6 @@ bluemix plugin uninstall IBM-Containers
 ```
 
 
-## bluemix ic init
-{: #bluemix_ic_init}
-
-Initialize the containers environment on your local machine to use the full capabilities of the IBM Containers service.
-
-```
-bluemix ic init
-```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Target
-
-**Note:** Before initialization, ensure that the Docker CLI (docker) is installed and configured in your PATH environment variable. To switch to another region, use the `bluemix region-set` command. 
-
-<strong>Examples</strong>:
-
-Switch to the `us-south` region:
-
-```
-bluemix region-set us-south
-```
-
-
-
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
