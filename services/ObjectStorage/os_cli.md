@@ -4,17 +4,20 @@ copyright:
   years: 2014, 2016
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
+
 # Start using {{site.data.keyword.objectstorageshort}}  {: #using-object-storage}
+
 *Last updated: 19 October 2016*
 {: .last-updated}
 
-# Accessing {{site.data.keyword.objectstorageshort}} using the Swift CLI {: #using-swift-cli}
 
+# Accessing {{site.data.keyword.objectstorageshort}} using the Swift CLI {: #using-swift-cli}
 
 The {{site.data.keyword.objectstorageshort}} service is based on OpenStack Swift and can be accessed by using any compatible client application. This section describes how to use the Python Swift client, which is the command-line interface (CLI) for the {{site.data.keyword.objectstorageshort}} API and its extensions, to work with containers and files.
 {: shortdesc}
@@ -130,6 +133,7 @@ To generate service credentials using the Swift CLI, you can use the following s
     swift post <container_name>
     ```
     {: pre}
+    *Note* If you get an error message, confirm that you have installed [the prerequisite software](../os_cli.html##install-swift-client).
 3. (*Optional*) To verify that your container was created, run the following command to list your containers.
     ```
     swift list
