@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-25"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # About {{site.data.keyword.iot4auto_short}} (Experimental)
 {: #iotautomotive_overview}
-
-Last updated: 29 July 2016
-{: .last-updated}
 
 {{site.data.keyword.iot4auto_full}} is a service on {{site.data.keyword.Bluemix_notm}} that you can use to view and analyze big data from vehicles.
 
