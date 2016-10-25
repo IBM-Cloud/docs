@@ -11,7 +11,7 @@ copyright:
 
 # Unbinding and deprovisioning your  {{site.data.keyword.objectstorageshort}} instance {: #deprovisioning-object-storage}
 
-*Last updated: 19 October 2016*
+*Last updated: 25 October 2016*
 {: .last-updated}
 
 ### Unbinding your instance
