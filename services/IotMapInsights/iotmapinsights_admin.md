@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-25"  
 ---
 
 {:new_window: target="_blank"}
@@ -14,8 +14,6 @@ copyright:
 
 # Administering
 {: #iotmapinsights_admin}
-Last updated: 22 June 2016
-{: .last-updated}
 
 Administer your {{site.data.keyword.iotmapinsights_full}} service instance by using the administration console on the {{site.data.keyword.Bluemix_notm}} dashboard. From the administration console, you can configure parameters for  {{site.data.keyword.iotmapinsights_short}} and manage the data that is stored in the service. You can also view the tenant information and reset the tenant password.
 {:shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-25"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,6 @@ copyright:
 
 # Getting started with Driving Behavior Analysis
 {: #drb_index}
-Last updated: 16 June 2016
-{: .last-updated}
 
 Driving Behavior Analysis is a service within the {{site.data.keyword.Bluemix_notm}}  {{site.data.keyword.iotdriverinsights_full}} service that you can use to collect and analyze driver behavior from car probe and contextual data. Furthermore, you can use the {{site.data.keyword.iotdriverinsights_short}} API to integrate the analyzed driver behavior data into your other {{site.data.keyword.Bluemix_notm}} applications.
 
@@ -96,7 +94,7 @@ When you complete the steps, a set of driver behavior data is generated in your 
 
 * [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
 * [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
-* [IoT for Automotive Starter Application](https://iot-automotive-starter.mybluemix.net){:new_window}
+* [IoT for Automotive Starter Application](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window}
 
 
 ## API reference
