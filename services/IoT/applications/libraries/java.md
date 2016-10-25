@@ -23,6 +23,9 @@ You can build and customize applications that interact with your organization on
 ## Downloading the Java client and resources
 {: #java_client_download}
 
+Last updated: 25 October 2016
+{: .last-updated}
+
 To access the Java client libraries and samples for {{site.data.keyword.iot_short_notm}}, go to the [iot-java](https://github.com/ibm-watson-iot/iot-java) repository in GitHub and complete the installation instructions.
 
 
