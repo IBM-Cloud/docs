@@ -8,7 +8,7 @@ years: 2015 2016
 
 # Enabling Chrome Apps and Extensions to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 17 October 2016
+Last updated: 26 October 2016
 {: .last-updated}
 
 You can now enable Google Chrome Apps and Extensions to receive  {{site.data.keyword.mobilepushshort}}.
@@ -113,14 +113,14 @@ After you have developed your applications, you can send a push notification.
   - **Delay when idle**: Setting this value to `true` instructs the FCM/GCM server not to deliver the notification if the device is idle. Set this value to `false`, to ensure delivery of notification even if the device is idle.
   - **Additional payload**: Specifies the custom payload values for your notifications.
 
-The following image shows the web notifications option in the dashboard.
+The following image shows the Chrome Apps and Extensions notifications option in the dashboard.
 
   ![Notifications screen](images/push_chrome_extns.jpg)
   
 ## Next steps
   {: #next_steps_tags}
 
-After you have successfully set up basic notifications, you can configure configure tag-based notifications and advanced options.
+After you have successfully set up basic notifications, you can choose to configure tag-based notifications and advanced options.
 
 Add these {{site.data.keyword.mobilepushshort}} service features to your app. To use tag-based notifications, see [Tag-based Notifications](c_tag_basednotifications.html). To use advanced notifications options, see [Advanced notifications](t_advance_badge_sound_payload.html).
 

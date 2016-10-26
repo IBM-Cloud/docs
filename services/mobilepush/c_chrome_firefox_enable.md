@@ -8,7 +8,7 @@ years: 2015 2016
 
 # Enabling web applications to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 17 October 2016
+Last updated: 26 October 2016
 {: .last-updated}
 
 You can now enable Google Chrome and Mozilla Firefox web applications to receive   {{site.data.keyword.mobilepushshort}}.
@@ -129,7 +129,7 @@ The following image shows the web notifications option in the dashboard.
 ## Next steps
   {: #next_steps_tags}
 
-After you have successfully set up basic notifications, you can configure configure tag-based notifications and advanced options.
+After you have successfully set up basic notifications, you can choose to configure tag-based notifications and advanced options.
 
 Add these {{site.data.keyword.mobilepushshort}} service features to your app. To use tag-based notifications, see [Tag-based Notifications](c_tag_basednotifications.html). To use advanced notifications options, see [Advanced notifications](t_advance_badge_sound_payload.html).
 
