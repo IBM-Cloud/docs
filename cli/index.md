@@ -49,14 +49,14 @@ Easily extend your {{site.data.keyword.Bluemix_notm}} command line interface wit
 * To install {{site.data.keyword.Bluemix_notm}} CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
 
 ```
-bluemix plugin repo-add bluemix-bx-staging https://plugins.stage1.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx https://plugins.ng.bluemix.net
 ```
 {: codeblock}
 
 * Then, run the following command to install a plug-in:
 
 ```
-bluemix plugin install plugin_name -r bluemix-bx-staging
+bluemix plugin install plugin_name -r bluemix-bx
 ```
 {: codeblock}
 
@@ -72,14 +72,14 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 * To install cf CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
 
 ```
-cf add-plugin-repo bluemix-cf-staging https://plugins.stage1.ng.bluemix.net
+cf add-plugin-repo bluemix-cf https://plugins.ng.bluemix.net
 ```
 {: codeblock}
 
 * Then, run the following command to install a plug-in:
 
 ```
-cf install-plugin plugin_name -r bluemix-cf-staging
+cf install-plugin plugin_name -r bluemix-cf
 ```
 {: codeblock}
 
