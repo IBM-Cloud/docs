@@ -82,3 +82,21 @@ You can delete a toolchain and specify which of its associated tool integrations
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.
 
  **Tip**: When you delete a GitHub Enterprise tool integration, the associated GitHub Enterprise repo is not deleted from GitHub Enterprise. You must manually remove the repo from GitHub Enterprise.
+
+
+# Related Links
+{: #rellinks}
+
+## Tutorials and Samples
+{: #samples}
+
+* [Create an application with three microservices (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/tutorials/tutorial_microservices_part1){:new_window}
+* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window}
+* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window}
+
+## Related Links
+{: #general}
+
+* [Microservices toolchain (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}
+* [Simple toolchain (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window}
+* [IBM Bluemix Garage Method (Link opens in a new window)](https://www.ibm.com/devops/method){:new_window}
