@@ -13,11 +13,21 @@ copyright:
 
 ## A list of the latest updates in the Liberty buildpack.
 
-Last Updated: 13 September 2016
+Last Updated: 19 October 2016
 {: .last-updated}
 
+### October 21, 2016: Updated Liberty buildpack v3.4-20161018-2004
+* The default Liberty runtime version `16.0.0.3` was updated to include [PI68805](http://www-01.ibm.com/support/docview.wss?uid=swg1PI68805) and [PI69141](http://www-01.ibm.com/support/docview.wss?uid=swg1PI69141) iFixes. 
+* The monthly Liberty runtime version was updated to the [2016.9.0.1](https://developer.ibm.com/wasdev/blog/2016/09/23/beta-websphere-liberty-and-tools-october-2016/) release. 
+* The buildpack also contains an updated version of IBM JRE 8.0: SR3 FP12.
+* The IBM JRE 8.0 and 7.1 are now configured to enable [all TLS protocols when `SSLContext.getContext("TLS")` is called](https://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/matchsslcontext_tls.html) to match Oracle's JRE behavior. IBM JRE 7.1 is also configured to enable [all TLS protocols when `SSLContext.getDefault()` is called](https://www.ibm.com/support/knowledgecenter/SSYKE2_7.1.0/com.ibm.java.security.component.71.doc/security-component/jsse2Docs/overrideSSLprotocol.html) to match IBM's JRE 8.0 behavior.
+* The buildpack provides an updated data collector for the [Monitoring and Analytics service](../../services/monana/index.html#monana_oview).
+* The buildpack was changed back to download the latest 1.5.x [MariaDB Connector/J JDBC driver](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) when performing [auto-configuration for MySQL type of services](autoConfig.html).
+* The buildpack introduces support for customizing service auto-configuration behavior via the `LBP_SERVICE_CONFIG_<serviceType>` environment variable. For example, it can be used to change the location or version of a JDBC driver to download for the MySQL service. See the documentation of [services that support auto-configuration](autoConfig.html) for more information. 
+* The buildpack also contains a number of [Diego](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) improvements related to application health check and the [App Management](../../manageapps/app_mng.html) functionality.
+
 ### September 16, 2016: Updated Liberty buildpack v3.3-20160912-1729
-* The default Liberty runtime version was updated to the [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) release. The monthly Liberty runtime version was updated to the [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) release. With these updates, the `cloudant-1.0` and `passwordUtilities-1.0` Liberty features, previously available as beta features, are now available as production-ready features.   
+* The default Liberty runtime version was updated to the [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) release. The monthly Liberty runtime version was updated to the [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) release. With these updates, the `cloudant-1.0` and `passwordUtilities-1.0` Liberty features, previously available as beta features, are now available as production-ready features.
 * [Security fixes](http://www-01.ibm.com/support/docview.wss?uid=swg21990527) for the Liberty runtime are included.
 * The buildpack also contains an updated version of IBM JRE 8.0: SR3 FP11.
 * The buildpack was adjusted to download the latest 1.4.x [MariaDB Connector/J JDBC driver](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) when performing [auto-configuration for MySQL type of services](autoConfig.html) due to a problem with the latest 1.5.x driver.

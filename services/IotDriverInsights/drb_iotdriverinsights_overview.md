@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-25"  
 ---
 
 {:new_window: target="_blank"}
@@ -14,9 +14,6 @@ copyright:
 
 # About Driving Behavior Analysis
 {: #iotdriverinsights_overview}
-Last updated: 16 June 2016
-{: .last-updated}
-
 
 Driving Behavior Analysis is a service that you can use to analyze the behavior of a driver from car probe and contextual data.
 

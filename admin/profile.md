@@ -17,10 +17,10 @@ copyright:
 
 # Profile settings
 {: #usersettings}
-Last updated: 16 August 2016
+Last updated: 20 October 2016
 {: .last-updated}
 
-Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profile** to update your profile settings.
+Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **User Profile** to update your profile settings.
 {:shortdesc}
 
  On the **Profile** page, you can set or update the following information:
@@ -32,9 +32,10 @@ Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar
 ## Changing your profile photo
 {: #photo}
 
-1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profile**.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **User Profile**.
 
-* Click **Change Photo** to upload a new photo.
+* Click **UPLOAD A PHOTO** to upload a photo.
+* Click **CHANGE PHOTO** to upload a new photo.
 * Click **Remove Photo** to remove your photo.
 
 ## Editing your IBMid information
@@ -44,10 +45,10 @@ An IBMid is a single ID that you use to log into your {{site.data.keyword.Bluemi
 
 You cannot change your IBMid, but you can edit your profile information associated with it. If you need to change your IBMid account information, such as your name, email, phone number, password, or company name, complete the following steps:
 
-1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profile**.
-2. Click **Edit your IBMid**.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **User Profile**.
+2. Click **edit your IBMid**.
 3. Edit your user information.
-4. Click **Submit**.
+4. Click **Save**.
 
 ## Analytics tracking setting
 {: #tracking}
@@ -58,5 +59,5 @@ If you choose to disable tracking, then you might not be able to use some featur
 
 To disable analytics tracking, complete the following steps:
 
-1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profile**.
-2. Set analytics tracking to **Off**.
+1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **User Profile**.
+2. Set analytics tracking to **off**.

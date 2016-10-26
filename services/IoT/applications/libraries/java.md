@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-24"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # Java for application developers
 {: #java}
 
-Last updated: 18 October 2016
-{: .last-updated}
 
 You can build and customize applications that interact with your organization on {{site.data.keyword.iot_full}} by using Java. A Java client library for {{site.data.keyword.iot_short_notm}}, documentation, and examples are provided to help you get started with application development.
 
@@ -23,6 +22,9 @@ You can build and customize applications that interact with your organization on
 
 ## Downloading the Java client and resources
 {: #java_client_download}
+
+Last updated: 25 October 2016
+{: .last-updated}
 
 To access the Java client libraries and samples for {{site.data.keyword.iot_short_notm}}, go to the [iot-java](https://github.com/ibm-watson-iot/iot-java) repository in GitHub and complete the installation instructions.
 
@@ -44,7 +46,7 @@ The constructor builds the client instance and accepts the `Properties` object, 
 |`MaxInflightMessages`  |Sets the maximum number of in-flight messages for the connection. The default value is 100.|
 |`Automatic-Reconnect`  |A true or false value that is required when you want to automatically reconnect the device to {{site.data.keyword.iot_short_notm}} while it is in a disconnected state. The default value is false.|
 |`Disconnected-Buffer-Size`|The maximum number of messages that can be stored in memory while the client is disconnected. The default value is 5000.|
-|`shared-subscription`|A boolean value that must be set to true if you would like to build scalable applications that balance the load of messages across multiple instances of the application. For more information, see [Scalable applications](mqtt.html#/scalable-applications#scalable-applications).
+|`shared-subscription`|A boolean value that must be set to true if you would like to build scalable applications that balance the load of messages across multiple instances of the application. For more information, see [Scalable applications](../mqtt.html#scalable_apps).
 
 The `Properties` object creates definitions that are used to interact with the {{site.data.keyword.iot_short_notm}} module. If you do not specify the properties for this object, or if you specify `quickstart`, the client connects to the {{site.data.keyword.iot_short_notm}} Quickstart service as an unregistered device.
 

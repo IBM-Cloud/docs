@@ -7,7 +7,7 @@ copyright:
 
 # About {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Last updated: 17 October 2016
+Last updated: 26 October 2016
 {: .last-updated}
 
 IBM {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android mobile devices, to Google Chrome and Mozilla Firefox web browsers and also to Google Chrome Apps and Extensions. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
@@ -105,7 +105,7 @@ The {{site.data.keyword.mobilepushshort}} message payload size is dependent on t
 
 For iOS 8 and later, the maximum size allowed is 2 kilobytes. Apple Push Notification service does not send notifications that exceeds this limit.
 
-###Android, Chrome and Firefox Browsers
+###Android, Firefox browser, Chrome browser, and Chrome Apps & Extensions
 {: android-message-size}
 
-There is a limitation of 4 kilobyes as the maximum allowed message size.  
+There is a limitation of 4 kilobytes as the maximum allowed message payload size.  

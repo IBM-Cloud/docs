@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-21"
 
 ---
 
@@ -13,10 +14,11 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} and the {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
-Last updated: 29 September 2016
+Last updated: 21 October 2016
 {: .last-updated}
 
 The {{site.data.keyword.iot_full}} is a service that is available in {{site.data.keyword.Bluemix}}. You can access your {{site.data.keyword.iot_short_notm}} organization dashboard by using your {{site.data.keyword.Bluemix_notm}} dashboard. As a {{site.data.keyword.Bluemix_notm}} service, {{site.data.keyword.iot_short_notm}} can be integrated with other services that are hosted on {{site.data.keyword.Bluemix_notm}}. Details of specific third-party service integrations can be found in the [External Service Integrations](/extensions/index.html)
+{:shortdesc}
 
 ## How the {{site.data.keyword.iot_short_notm}} works with {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-work}
@@ -41,7 +43,7 @@ The {{site.data.keyword.iot_short_notm}} offers two pricing models: Free and Sta
 
 For more information on the {{site.data.keyword.iot_short_notm}} pricing:
 
-1. On your {{site.data.keyword.Bluemix_notm}} dashboard, click on your {{site.data.keyword.iot_short_notm}}.
+1. On your {{site.data.keyword.Bluemix_notm}} dashboard, click your {{site.data.keyword.iot_short_notm}}.
 2. From the navigation menu on the left, select **Plan**.
 
 The pricing plans are displayed.
@@ -56,5 +58,5 @@ The pricing plans are displayed.
 * [{{site.data.keyword.Bluemix_notm}} security](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Softlayer security](http://www.softlayer.com/security){:new_window}
-* [Softlayer compliance](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} security](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} compliance](http://www.softlayer.com/compliance){:new_window}

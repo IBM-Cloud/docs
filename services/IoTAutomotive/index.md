@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-25"  
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # Getting started with {{site.data.keyword.iot4auto_short}} (Experimental)
 {: #getting_started_iotautomotive}
-
-Last updated: 30 September 2016
-{: .last-updated}
 
 {{site.data.keyword.iot4auto_full}} is a {{site.data.keyword.Bluemix_notm}} service that you can use to retrieve, manage, and analyze big data from connected vehicles. The analytics of {{site.data.keyword.iot4auto_short}} provide intelligent and actionable insights into driving behavior, vehicle location, and other automotive-related activities and events of interest.
 {:shortdesc}
@@ -35,9 +33,6 @@ The {{site.data.keyword.iot4auto_short}} service includes the following {{site.d
 |[Driver Behavior](../IotDriverInsights/index.html){:new_window}| A service that can analyze driver behavior and identify trajectory patterns of a journey from the car probe and context data that is retrieved from a connected vehicle.
 |[Context Mapping](../IotMapInsights/index.html){:new_window}| A service that provides geospatial functions, such as map matching and shortest path search for road networks.
 *Table 1. Services of {{site.data.keyword.iot4auto_short}}*
-
-## Starter experience
-Experience the capabilities of {{site.data.keyword.iot4auto_short}}. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-automotive-starter.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
 
 ## Preparing to deploy
 
@@ -65,6 +60,9 @@ To get up and running quickly, complete the following steps:
   - Response: car probe data with road link ID
 5. Analyze the driver data. For more information, see [Driver Behavior](../IotDriverInsights/index.html){:new_window}.
 
+## Starter experience
+Experience the capabilities of {{site.data.keyword.iot4auto_short}}. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use the available  {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
+
 
 # Related Links
 {: #rellinks}
@@ -81,7 +79,7 @@ To get up and running quickly, complete the following steps:
 ## Tutorials and Samples
 {: #samples}
 
-* [IBM IoT for Automotive Starter Experience](https://iot-automotive-starter.mybluemix.net){:new_window}
+* [IBM IoT for Automotive Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window}
 * [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
 * [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
 

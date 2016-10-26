@@ -18,6 +18,8 @@ copyright:
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
 
+*Last updated: 20 October 2016*
+{: .last-updated}
 
 If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
 {:shortdesc}
@@ -35,6 +37,8 @@ If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{si
 |Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](index.html#oc_report). |
 |View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending maintenance updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. See [Viewing system information](index.html#oc_system). |
 |Extend notifications and set up notification subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending**. You can use webhooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and notification subscriptions](index.html#oc_eventsubscription). |
+
+**Tip**: The Infrastructure dashboard in the {{site.data.keyword.Bluemix_notm}} console is available only in linked accounts in {{site.data.keyword.Bluemix_notm}} Public environments.
 
 
 ## Notifications and notification subscriptions

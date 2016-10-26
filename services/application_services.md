@@ -12,6 +12,7 @@ copyright:
 {: #app_services}
 
 *Last updated: 28 January 2016*
+{: .last-updated}
 
 Use these services to add or remove features rapidly while you develop web applications in the cloud. You can also simplify management tasks, and organize your business processes and rules. 
 {:shortdesc}

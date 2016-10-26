@@ -1,11 +1,13 @@
 {:new_window: target="_blank"}
 
 
-# Creating {{site.data.keyword.blockstorageshort}} volumes
+# Creating {{site.data.keyword.blockstorageshort}} volumes (Deprecated)
 {: #creating-block-storage-volume}
 
-Last updated: 13 September 2016
+Last updated: 24 October 2016
 {: .last-updated}
+
+**This service is deprecated:** Existing volumes can be used until 24 December 2016. For more information, see [{{site.data.keyword.blockstorageshort}} (Beta) is deprecated](../BlockStorage/index.html).
 
 To create a volume, follow these steps:
 
@@ -23,6 +25,8 @@ To create a volume, follow these steps:
 7.	Click **Create** to submit the information and close the dialog.
 
 Creating a volume can take a few moments. 
+
+Alternatively, you can use the OpenStackClient command line to create a volume. For more information, see [Creating a block storage volume by using the OSC client](../../virtualmachines/vm_manage_volumes.html#vm_create_volume_cli).
 
 What's next?
 

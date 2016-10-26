@@ -2,17 +2,17 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.Bluemix}} Mobile dashboard
 {: #mobile}
-Last updated: 13 October 2016
+Last updated: 21 October 2016
 {: .last-updated}
 
-The {{site.data.keyword.Bluemix}} Mobile dashboard offers a single place to manage the {{site.data.keyword.Bluemix_notm}} capabilities that you need to create and manage your {{site.data.keyword.Bluemix_notm}} Mobile application. The Mobile dashboard brings the most common services that are required for a mobile developer into a single, connected experience that has been optimized for the mobile developer. 
+The {{site.data.keyword.Bluemix}} Mobile dashboard offers a single place to manage the {{site.data.keyword.Bluemix_notm}} capabilities that you need to create and manage your {{site.data.keyword.Bluemix_notm}} Mobile application. The Mobile dashboard brings the most common services that are required for a mobile developer into a single, connected experience that has been optimized for the mobile developer.
 
 The Mobile dashboard enables a mobile developer to create a project from a variety of Starters, create and connect key {{site.data.keyword.Bluemix_notm}} optimized services to your project, and quickly download working code with SDKs. The SDKs are fully integrated with capability credentials that enable you to have it running on your device in minutes. When your application is running and you have set up and configured Push, Analytics and/or Mobile Authentication capabilities, you can return to your project to monitor and manage engagement with your application users.
 
@@ -21,7 +21,7 @@ While the Mobile dashboard provides an integrated development experience, some d
 
 <!--With {{site.data.keyword.Bluemix}} Mobile services, you can incorporate pre-built, managed, and scalable cloud services into your mobile applications. You can focus on building your mobile apps, instead of the complexities of managing the back-end infrastructure.
 
-The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bluemix_notm}} where you can create mobile projects easily from within the dashboard. 
+The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bluemix_notm}} where you can create mobile projects easily from within the dashboard.
 -->
 
 
@@ -31,9 +31,9 @@ To get started with the Mobile dashboard, click the **Mobile** category from you
 ## Getting Started
 {: getting-started-mobiledashboard}
 
-The dashboard enables you to manage mobile apps through the concept of a project. Create a project on the **Getting Started** page by clicking **Create Project**. You will be presented with [Starter](starters.html) options that enable you to quickly start creating your app. 
+The dashboard enables you to manage mobile apps through the concept of a project. Create a project on the **Getting Started** page by clicking **Create Project**. You will be presented with [Starter](starters.html) options that enable you to quickly start creating your app.
 
-With the [Projects](projects.html) view, you can manage all of your projects in one place. The project holds all of the capability information that you need for the mobile app. You can easily integrate and manage Push, Analytics, and Authentication mobile services in the project, with more capabilities to follow in the near future. 
+With the [Projects](projects.html) view, you can manage all of your projects in one place. The project holds all of the capability information that you need for the mobile app. You can easily integrate and manage Push, Analytics, and Authentication mobile services in the project, with more capabilities to follow in the near future.
 
 The [Services](services.html) view shows an operational view of your existing mobile service instances. The Mobile dashboard supports a mobile developer and a mobile app management user.
 
@@ -61,8 +61,8 @@ Check back often to stay current with new features.
 {: #general}
 -->
 * [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](ttps://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing Bluemix Mobile Code Starters](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/2016/10/introducing-bluemix-mobile-code-starters/){: new_window}
+* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
+* [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
 

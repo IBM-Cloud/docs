@@ -1,11 +1,13 @@
 {:new_window: target="_blank"}
 
 
-# Preparing {{site.data.keyword.blockstorageshort}} volumes 
+# Preparing {{site.data.keyword.blockstorageshort}} volumes (Deprecated)
 {: #preparing-block-storage-volume}
 
-Last updated: 07 September 2016
+Last updated: 24 October 2016
 {: .last-updated}
+
+**This service is deprecated:** Existing volumes can be used until 24 December 2016. For more information, see [{{site.data.keyword.blockstorageshort}} (Beta) is deprecated](../BlockStorage/index.html).
 
   After you create your volume and attach it to a virtual server, you must mount and prepare the volume to be used.
   

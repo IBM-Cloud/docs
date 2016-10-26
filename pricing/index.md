@@ -51,7 +51,7 @@ copyright:
 # Pricing
 {: #pricing}
 
-*Last updated: 13 September 2016*
+Last updated: 20 October 2016
 {: .last-updated}
 
 You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage Dashboard view for you to check the actual cost after you build your apps.
@@ -120,7 +120,7 @@ After you create a billable account, you can edit the information that you provi
 
 If you encounter any problems with {{site.data.keyword.Bluemix_notm}} when you are using a Pay-As-You-Go or a Subscription account, see [Getting online help](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) for more information.
 
-**Note:** If you link your {{site.data.keyword.Bluemix_notm}} billing account with a SoftLayer account, starting on the first of the next month, your {{site.data.keyword.Bluemix_notm}} charges will be on your SoftLayer invoice. For more details, see [Viewing credits](../admin//softlayerlink.html#bill_usage).
+**Note:** If you link your {{site.data.keyword.Bluemix_notm}} billing account with a SoftLayer account, starting on the first of the next month, your {{site.data.keyword.Bluemix_notm}} and SoftLayer charges will be on your {{site.data.keyword.Bluemix_notm}} invoice. For more details, see [Viewing credits](/docs/admin//softlayerlink.html#bill_usage).
 
 ###Pay-As-You-Go account
 {: #pay-as-you-go}
@@ -303,7 +303,8 @@ The following items are the free allowances for the {{site.data.keyword.virtualm
 
 You can use different methods to know how much you need to pay for using {{site.data.keyword.Bluemix_notm}} to build and host your app.
 
-* The cost estimators on the {{site.data.keyword.Bluemix_notm}} Pricing page provides a rough estimation of the cost based on the size of your app.
+* The cost estimators on the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}} 
+provides a rough estimation of the cost based on the size of your app.
 * The cost calculator on the {{site.data.keyword.Bluemix_notm}} Pricing page provides accurate app prices based on your input of runtime and service usages.
 * You can also calculate your cost manually.
 
@@ -312,7 +313,7 @@ You can use different methods to know how much you need to pay for using {{site.
 
 You can quickly price your app by using the cost calculators that are provided by {{site.data.keyword.Bluemix_notm}}.
 
-1. Go to the {{site.data.keyword.Bluemix_notm}} [pricing page](https://console.{DomainName}/pricing/). 
+1. Go to the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}}. 
 2. Use one of the **Estimate Your Costs** widgets, or click **Open Calculator** to use the **Down to the penny pricing calculator**.
 
 To use the calculator, type your projected monthly usage of the listed resources; for example, number of instances or push notifications. Click inside the **Monthly Usage** field for hints about the units that are expected in the field. The calculator displays the price for your input immediately. You can also adjust the calculator to display yearly costs instead of monthly costs.
@@ -408,32 +409,34 @@ Although the United States dollar (USD) is used in the pricing examples, other c
 |ZAR |	  South African rand|
 *Table 8. Supported currencies* 
 
+**Note:** If you have linked your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts, the single invoice you receive is in United States dollars (USD) only.  
+
 ##Usage dashboard
 {: #usage}
 
-As an account owner or a billing manager, you can use the Usage Dashboard view to see the real-time charges for the runtimes and services that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region and space, for the past 12 months.
+As an account owner or a billing manager, you can use the Usage Dashboard page to see the real-time charges for the runtimes and services that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region and space, for the past 12 months.
 
-To open the Usage Dashboard view, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Usage Dashboard**. In the view, you can see a summary of the runtime and service usage for the account. Billing managers can see the details for only the organizations in which they are billing managers.
+To open the **Usage Dashboard** page, click **Account** &gt; *your_account_name* &gt; **Usage Dashboard**. In the page, you can see a summary of the runtime and service usage for the account. Billing managers can see the details for only the organizations in which they are billing managers.
 
 The account owner is charged for the total usage that is incurred across all organizations at the end of each billing cycle. Each billing cycle lasts one month.
 
-Account owners can filter the usage summary by region and organization. If you are an account owner, set **Organization** as **All Organizations** to see the usage for the entire account for a 12-month period. Click a particular month to see the usage for that month. The charges shown represent the amount that you, as account owner, are billed for that month.
+Account owners can filter the usage summary by region and organization. The charges shown represent the amount that you, as the account owner, are billed for that month.
 
 If you select a specific organization for the **Organization**, you can see the total usage for that organization, including any usage as part of a free tier. The charges shown for the organization are not the charges that you are billed. The free tier usage is shown as free at the account level, but not at the organizational level. Therefore, when you view the organizational usage, you see the real usage for that organization including both free and charged usage. All organizational usage is rolled up to the account usage after the free tier is removed.
 
 ##Viewing credits
 {: #credits}
 
-As an account owner or a billing manager, you can use the Usage Dashboard view to see any credits for your account. You might have credits if, for example, you linked a SoftLayer account with a {{site.data.keyword.Bluemix_notm}} account.
+As an account owner or a billing manager, you can use the **Usage Dashboard** page to see any credits for your account. You might have credits if, for example, you linked a SoftLayer account with a {{site.data.keyword.Bluemix_notm}} account.
 
-To open the Usage Dashboard view, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg), then select **Account**. On the page that is displayed, click **Usage Dashboard**. In the view, you can see any credits, if they exist, and when they expire.
+To open the **Usage Dashboard** page, click **Account**. On the page that is displayed, click **Usage Dashboard**. In the page, you can see any credits, if they exist, and when they expire.
 
 ##Notifications
 {: #notifications}
 
 As an account manager of a Pay-As-You-Go account, you can set spending notifications against the total cost of your account, for your runtime, services, and for individual services, excluding third-party services. You receive notifications when you reach 80%, 90%, and 100% of the spending thresholds that you specify.
 
-To open the **Notifications** view, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *your_account_name* &gt; **Spending Notifications**. Enter a numeric value to set the spending threshold for triggering a notification for each type of spending notification as needed. You can also add and delete notifications for individual services.
+To open the **Notifications** view, click **Account** &gt; *your_account_name* &gt; **Spending Notifications**. Enter a numeric value to set the spending threshold for triggering a notification for each type of spending notification as needed. You can also add and delete notifications for individual services.
 
 ##How to change your plan
 {: #changing}

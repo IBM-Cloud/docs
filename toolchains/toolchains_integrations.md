@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-Last updated: 18 October 2016
+Last updated: 24 October 2016
 {: .last-updated}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
