@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-14"
+lastupdated: "2016-10-26"
 
 ---
 
@@ -122,6 +122,8 @@ The syndicated catalog provides the function to create hybrid applications that 
 |{{site.data.keyword.iot_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|Yes |
+
+**Note**: Third-party services are not included in the table. Check your local catalog for third-party service options.
 
 ## {{site.data.keyword.Bluemix_notm}} Local architecture
 {: #localarch}
