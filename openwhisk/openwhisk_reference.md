@@ -502,7 +502,7 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 | concurrent | no more than N activations are allowed per namespace either executing or queued for execution | per namespace | number | 1000 |
 | minuteRate | a user cannot invoke more than this many actions per minute | per user | number | 5000 |
 | codeSize | the maximum size of the actioncode | not configurable, limit per action | MB | 48 |
-| parameters | the maximum size of the paramters that can be attached | not configurable, limit per action/package/trigger | MB | 1 |
+| parameters | the maximum size of the parameters that can be attached | not configurable, limit per action/package/trigger | MB | 1 |
 
 ### Per action timeout (ms) (Default: 60s)
 {: #openwhisk_syslimits_timeout}
