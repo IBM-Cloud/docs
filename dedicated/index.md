@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-19" 
+lastupdated: "2016-10-26" 
 
 ---
 
@@ -148,6 +148,8 @@ If you have a private instance of the service for your dedicated environment, yo
 |{{site.data.keyword.iot_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|Yes |
+
+**Note**: Third-party services are not included in the table. Check your dedicated catalog for third-party service options.
 
 ## {{site.data.keyword.Bluemix_notm}} Dedicated architecture
 {: #dedicatedarch}
