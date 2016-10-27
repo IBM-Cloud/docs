@@ -1,12 +1,11 @@
 ---
 
- 
+
 
 copyright:
-
   years: 2016
+lastupdated: "2016-08-02"
 
- 
 
 ---
 
@@ -18,8 +17,7 @@ copyright:
 
 # Using and creating {{site.data.keyword.openwhisk_short}} packages
 {: #openwhisk_packages}
-Last updated: 2 August 2016
-{: .last-updated}
+
 
 In {{site.data.keyword.openwhisk}}, you can use packages to bundle together a set of related actions, and share them with others.
 

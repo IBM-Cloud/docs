@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-27"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} system details
 {: #openwhisk_reference}
-Last updated: 27 September 2016
-{: .last-updated}
+
 
 The following sections provide more details about the {{site.data.keyword.openwhisk}} system.
 {: shortdesc}
