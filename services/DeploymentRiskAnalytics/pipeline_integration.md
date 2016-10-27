@@ -14,7 +14,7 @@ copyright:
 # Integrating {{site.data.keyword.DRA_short}} with {{site.data.keyword.deliverypipeline}}
 {: #DRA_toolchain_configure_pipeline}
 
-*Last updated: 13 October 2016*
+*Last updated: 26 October 2016*
 {: .last-updated}
 
 After you define the policies for {{site.data.keyword.DRA_full}} to monitor, the next step is to add {{site.data.keyword.DRA_short}} to a toolchain, and then configure a continuous delivery pipeline.
@@ -34,6 +34,38 @@ To use {{site.data.keyword.DRA_short}}, add it to any toolchain that uses the {{
 4. Click **Create Integration**.
 
 5. In your toolchain, click the {{site.data.keyword.deliverypipeline}} tile. You can configure {{site.data.keyword.DRA_short}} in any number of pipelines.
+
+## Preparing pipeline stages for {{site.data.keyword.DRA_short}}
+
+**Important**: You must create several environment properties in each pipeline stage to successfully integrate {{site.data.keyword.DRA_short}} with your project. 
+
+For each pipeline stage:
+
+1. Click **Stage Configuration** and then **Configure stage**. 
+
+2. Click **ENVIRONMENT PROPERTIES**. 
+
+3. Add the following three text properties, and then save the changes to the stage:
+
+<table><thead>
+<tr>
+<th>Environment property</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>LOGICAL_APP_NAME</code></td>
+<td>The name of the app as it appears on {{site.data.keyword.DRA_short}} dashboards. </td>
+</tr>
+<tr>
+<td><code>LOGICAL_ENV_NAME</code></td>
+<td>The name of the environment that the app is running in. This is used to categorize the app in {{site.data.keyword.DRA_short}} dashboards.</td>
+</tr>
+<tr>
+<td><code>BUILD_PREFIX</code></td>
+<td>A prefix that is added to builds as shown on {{site.data.keyword.DRA_short}} dashboards.</td>
+</tr>
+</tbody></table>
 
 
 ## Updating test jobs for {{site.data.keyword.DRA_short}}
