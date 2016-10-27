@@ -1,11 +1,9 @@
 ---
-
  
 
 copyright:
-
   years: 2016
-
+lastupdated: "2016-08-08"
  
 
 ---
@@ -15,8 +13,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-Last updated: 8 August 2016
-{: .last-updated}
 
 
 {{site.data.keyword.Bluemix_notm}} abstracts and hides most of the complexities that are associated with hosting and managing cloud-based apps. As an application developer, you can focus on developing your app without having to manage the infrastructure that is required to host it.
