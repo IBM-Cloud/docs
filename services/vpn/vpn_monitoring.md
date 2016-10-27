@@ -4,6 +4,8 @@ copyright:
 
   years: 2015, 2016
 
+lastupdated: "2016-10-20"
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,19 +15,17 @@ copyright:
 
 # Monitoring status and traffic flow
 {: #monitor}  
-*Last updated: 08 June 2016*  
-{: .last-updated}
 
-Use the monitoring feature to view the connection status and traffic flow between your on-premises or SoftLayer server VPN gateway, and the {{site.data.keyword.vpn_short}} gateway. 
+Use the monitoring feature to view the connection status and traffic flow between your on-premises or {{site.data.keyword.BluSoftlayer}} server VPN gateway, and the {{site.data.keyword.vpn_short}} gateway. 
 {:shortdesc}  
 ##Monitoring on service dashboard
 {: #dashboard}
 
 Select the **Monitoring** tab to view the following connection statistics.
 
-* **Connection Status:** Up or Down status of the VPN connection between your on-premises or SoftLayer server VPN gateway, and the IBM VPN gateway.  
-* **Traffic Outbound (Bytes) (in last 10 minutes)** and **Traffic Outbound (Packets) (in last 10 minutes):** Traffic flow from the IBM VPN gateway to your on-premises or SoftLayer server VPN gateway. Each datapoint on the graph represents data that is transmitted in the 10 minutes before the datapoint time.  
-* **Traffic Inbound (Bytes) (in last 10 minutes)** and **Traffic Inbound (Packets) (in last 10 minutes):** Traffic flow from your on-premises or SoftLayer server VPN gateway to the IBM VPN gateway. Each datapoint on the graph represents data that is transmitted in the 10 minutes before the datapoint time.  
+* **Connection Status:** Up or Down status of the VPN connection between your on-premises or {{site.data.keyword.BluSoftlayer}} server VPN gateway, and the IBM VPN gateway.  
+* **Traffic Outbound (Bytes) (in last 10 minutes)** and **Traffic Outbound (Packets) (in last 10 minutes):** Traffic flow from the IBM VPN gateway to your on-premises or {{site.data.keyword.BluSoftlayer}} server VPN gateway. Each datapoint on the graph represents data that is transmitted in the 10 minutes before the datapoint time.  
+* **Traffic Inbound (Bytes) (in last 10 minutes)** and **Traffic Inbound (Packets) (in last 10 minutes):** Traffic flow from your on-premises or {{site.data.keyword.BluSoftlayer}} server VPN gateway to the IBM VPN gateway. Each datapoint on the graph represents data that is transmitted in the 10 minutes before the datapoint time.  
 
 The monitoring statistics are displayed as graphs. You can set the time window to the last hour, last 2 hours, last 24 hrs, or last 3 days. The graphs are automatically updated every 20 minutes. However, you can fetch the latest data any time by switching away from the monitoring tab and returning to it.
 

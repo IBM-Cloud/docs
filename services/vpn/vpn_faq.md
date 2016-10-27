@@ -4,6 +4,8 @@ copyright:
 
   years: 2015, 2016
 
+lastupdated: "2016-10-26"
+
 ---
 
 {:new_window: target="_blank"}
@@ -11,8 +13,7 @@ copyright:
 
 # {{site.data.keyword.vpn_short}} FAQs
 {: #vpn_faq}
-*Last updated: 08 June 2016*
-{: .last-updated}
+
 
 Following are some frequently asked questions.
 {:shortdesc}
@@ -52,9 +53,9 @@ Following are some frequently asked questions.
 
 	Currently, the IBM VPN service is available only at the Bluemix Space level. If your Bluemix Organization has multiple Spaces, then a separate VPN service can be defined for each space.
 
-7. How do I connect the IBM VPN service with the SoftLayer Gateway Appliance service (GaaS)?
+7. How do I connect the IBM VPN service with the IBM Bluemix Gateway Appliance service?
 
-	You can build an IPsec tunnel to establish secure communication between the IBM VPN service and the SoftLayer GaaS. [See configuration example.](vpn_onpremises.html#gaas){: new_window}
+	You can build an IPsec tunnel to establish secure communication between the IBM VPN service and the IBM Bluemix Gateway Appliance service. [See configuration example.](vpn_onpremises.html#gaas){: new_window}
 
 8. Can I access the container and container group using their private IP addresses?
 
