@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-23"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,9 +11,6 @@ copyright:
 
 # What is {{site.data.keyword.Bluemix_notm}}?
 {: #bluemixoverview}
-
-*Last updated: 23 October 2016*
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} is {{site.data.keyword.IBM_notm}}'s innovative cloud computing platform that combines platform as a service (PaaS) with infrastructure as a service (IaaS). Additionally, {{site.data.keyword.Bluemix_notm}} has a rich catalog of cloud services that can be easily integrated with PaaS and IaaS to build business applications rapidly.
 {:shortdesc}
