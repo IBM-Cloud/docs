@@ -230,7 +230,8 @@ cf push appname
 <dt>*-c*start_command</dt>
 <dd>O comando start do seu aplicativo. Para usar o comando inicial padrão, especifique um valor de null para essa opção. Por
 exemplo:</dd>
-<dd>```
+<dd>
+```
 cf push appname -c null
 ```</dd>
 <dd>Também
@@ -240,21 +241,23 @@ cf push appname -c “bash ./<run.sh>"
 ```</dd>
 <dt>*-f* manifest_path</dt>
 <dd>O caminho do arquivo de manifesto. O arquivo manifest padrão é manifest.yml sob o diretório-raiz de seu aplicativo.</dd>
-<dt>*-i* instance_number</dt>
+<dt>*-i*instance_number</dt>
 <dd>O número de instâncias.</dd>
-<dt>*-k* disk_limit</dt>
-<dd>O limite de disco para o aplicativo, por exemplo, *256M*, *1024M* ou *1G*.</dd>
-<dt>*-m* memory_limit</dt>
-<dd>O limite de memória para o aplicativo, por exemplo, *256M*, *1024M* ou *1G*.</dd>
-<dt>*-n* host_name</dt>
+<dt>*-k*disk_limit</dt>
+<dd>O limite de disco para o aplicativo, por exemplo, *256M*, *1024M*
+oi *1G*.</dd>
+<dt>*-m*memory_limit</dt>
+<dd>O limite de memória para o aplicativo, por exemplo, *256M*, *1024M*
+ou *1G*.</dd>
+<dt>*-n*host_name</dt>
 <dd>O nome do host para o aplicativo, por exemplo, *my-subdomain*.</dd>
-<dt>*-p* app_path</dt>
+<dt>*-p*app_path</dt>
 <dd>O caminho para o diretório do aplicativo ou o archive do aplicativo</dd>
-<dt>*-t* timeout</dt>
+<dt>*-t*timeout</dt>
 <dd>Tempo máximo, em segundos, para o aplicativo iniciar. Outros tempos-limite do lado do servidor podem substituir esse
 valor.</dd>
 <dt>*-s* stackname</dt>
-<dd>A pilha para executar os apps. Uma pilha é um sistema de arquivos pré-construído que inclui o sistema operacional. Use `cf stacks` para visualizar as pilhas disponíveis em {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd>A pilha para executar os apps. Uma pilha é um sistema de arquivos pré-construído que inclui o sistema operacional. Use `cf stacks` para visualizar as pilhas disponíveis no {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*--no-hostname*</dt>
 <dd>Mapeia o domínio do sistema do Bluemix para esse aplicativo.</dd>
 <dt>*--no-manifest*</dt>
@@ -276,12 +279,14 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 <dl>
 <dt>appname</dt>
 <dd>O nome do aplicativo.</dd>
-<dt>*-i* instance_number</dt>
+<dt>*-i*instance_number</dt>
 <dd>O número de instâncias</dd>
-<dt>*-k* disk_limit</dt>
-<dd>O limite de disco para o aplicativo, por exemplo, *256M*, *1024M* ou *1G*.</dd>
-<dt>*-m* memory_limit</dt>
-<dd>O limite de memória para o aplicativo, por exemplo, *256M*, *1024M* ou *1G*.</dd>
+<dt>*-k*disk_limit</dt>
+<dd>O limite de disco para o aplicativo, por exemplo, *256M*, *1024M*
+oi *1G*.</dd>
+<dt>*-m*memory_limit</dt>
+<dd>O limite de memória para o aplicativo, por exemplo, *256M*, *1024M*
+ou *1G*.</dd>
 <dt>*-f*</dt>
 <dd>Força o aplicativo a reiniciar sem prompt.</dd>
 </dl>
@@ -340,4 +345,4 @@ cf -v
 {: #rellinks}
 ## general 
 {: #general}
-* [Cartão de Referência Rápida - comandos cf](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [Cartão de referência rápida - comandos cf](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

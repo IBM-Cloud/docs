@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  anni: 2015, 2016
+  
 
 ---
 
@@ -15,8 +16,9 @@ copyright:
 # Risoluzione dei problemi di accesso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Ultimo aggiornamento: 14 luglio 2016*
+Ultimo aggiornamento: 11 agosto 2016
 {: .last-updated}
+
 
 I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero includere un utente che non riesce ad accedere a {{site.data.keyword.Bluemix_notm}}, un account bloccato in uno stato In sospeso e così via. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi. 
 {:shortdesc}
@@ -30,19 +32,19 @@ Per accedere a {{site.data.keyword.Bluemix_notm}}, devi disporre di un ID IBM e 
 Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore: 
 {: tsSymptoms} 
 
-`L'ID e/o password IBM immessi non sono corretti. Riprova.`
+`La password immessa non è corretta.`
 
 
-L'ID e la password IBM da te utilizzati per accedere a {{site.data.keyword.Bluemix_notm}} non sono validi.
+L'ID IBM e password da te utilizzati per accedere a {{site.data.keyword.Bluemix_notm}} non sono validi.
 {: tsCauses} 
  
 
-Per ottenere un ID e una password IBM validi, vai alla pagina Il mio profilo IBM e completa una della seguenti procedure:
+Per ottenere un ID IBM e una password validi, vai alla pagina Il mio profilo IBM e completa una della seguenti procedure:
 {: tsResolve}
-  * Se già hai registrato un ID IBM e vuoi controllare se il tuo ID e la tua password sono validi, fai clic su **Accedi** e immetti il tuo ID IBM e la relativa password nella pagina Accedi. Se hai dimenticato la password, fai clic su **Password dimenticata** nella parte destra della pagina di accesso per reimpostare la password. Se hai dimenticato il tuo ID IBM o continui ad avere problemi con la tua password, contatta l'Help Desk Worldwide IBM Registration per ottenere assistenza. 
+  * Se già hai registrato un ID IBM e vuoi controllare se il tuo ID e la tua password sono validi, fai clic su **Accedi** e immetti il tuo ID IBM e la relativa password nella pagina di accesso. Se hai dimenticato la password, fai clic su **Password dimenticata** per reimpostarla. Se hai dimenticato il tuo ID IBM o continui ad avere problemi con la tua password, contatta l'Help Desk Worldwide IBM Registration per ottenere assistenza. 
   * Se non hai un ID IBM, fai clic su **Registrati** per registrare un ID IBM e password. 
   
-**Nota:** Per i dipendenti IBM, l'ID IBM potrebbe essere diverso dall'ID di accesso Intranet. 
+**Nota:** per i dipendenti IBM, l'ID IBM potrebbe essere diverso dall'ID di accesso Intranet. 
 
 
 
@@ -126,7 +128,7 @@ da te fornito. Controlla la cartella della posta in arrivo e quella della posta 
 
 
 
-## Impossibile aggiungere utenti a un'organizzazione 
+## Impossibile aggiungere utenti a un'organizzazione
 {: #ts_adduser}
 
 Puoi invitare più di un utente a lavorare nella stessa organizzazione. Puoi invitare utenti nella tua organizzazione solo
@@ -174,7 +176,7 @@ per modificare il tuo ruolo. Per identificare il gestore della tua organizzazion
 la seguente procedura:
 {: tsResolve}
 
-  1. Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto** ![Account e supporto](images/account_support.svg) nella barra dei menu e seleziona **Gestisci organizzazioni**.
+  1. Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona {{site.data.keyword.avatar}} ![icona Avatar](images/account_support.svg) nella barra dei menu e seleziona **Gestisci organizzazioni**.
   2. Vai alla tua organizzazione e visualizza le informazioni del gestore organizzazione
 sulla scheda **UTENTI**.  
   
@@ -217,9 +219,7 @@ Per registrare più utenti per {{site.data.keyword.Bluemix_notm}},
 devi completare la seguente procedura per ogni utente:
 {: tsResolve}
 
-  1. Fai clic su **ESEGUI REGISTRAZIONE** nella parte superiore
-destra dell'interfaccia utente
-{{site.data.keyword.Bluemix_notm}}.
+  1. Fai clic su **ESEGUI REGISTRAZIONE** nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}.
   2. Completa i passi seguendo la procedura guidata.
 
     
@@ -259,38 +259,6 @@ apps` per vedere se l'applicazione è in esecuzione.
   
   
   
-  
-  
-## La barra dei menu superiore di {{site.data.keyword.Bluemix_notm}}
-scompare
-{: #ts_topmenubar}
-
-Potresti non riuscire a visualizzare la barra dei menu superiore di {{site.data.keyword.Bluemix_notm}}
-quando ridimensioni la finestra del tuo browser o quando utilizzi un dispositivo
-mobile.
-
-
-Quando riduci la dimensione della finestra del tuo browser o
-quando utilizzi un dispositivo mobile, la barra dei menu superiore di {{site.data.keyword.Bluemix_notm}}
-scompare. Quando la barra dei menu superiore scompare, il menu cassetto laterale
-mostrato come icona a linee in pila, viene visualizzato nell'angolo superiore
-sinistro. 
-{: tsSymptoms}
-
- 
-
-L'interfaccia utente {{site.data.keyword.Bluemix_notm}}
-ha un design responsivo. Quando l'ambiente di visualizzazione cambia,
-potrebbe cambiare anche il layout dell'interfaccia utente
-{{site.data.keyword.Bluemix_notm}}. 
-{: tsCauses}
- 
-
-Utilizza invece il menu cassetto laterale nell'angolo superiore sinistro.
-{: tsResolve}
-
-
-
 
 
 
@@ -361,7 +329,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 Le seguenti versioni della JVM (Java virtual machine) non possono stabilire una sessione di debug: IBM JVM 7, IBM JVM 8 e versioni precedenti di Oracle JVM 8.
 {: tsCauses}
 
-Se il tuo workbench JVM è di una di queste versioni, potresti avere problemi durante la creazione di una sessione di debug. La versione JVM del workbench è normalmente la JVM di sistema del tuo computer lcoale. La tua JVM di sistema non è la stessa della tua applicazione Java Bluemix in esecuzione. L'applicazione Java Bluemix viene quasi sempre eseguita su JVM IBM e alcune volte su JVM OpenJDK.
+Se il tuo workbench JVM è di una di queste versioni, potresti avere problemi durante la creazione di una sessione di debug. La versione JVM del workbench è normalmente la JVM di sistema del tuo computer locale. La tua JVM di sistema non è la stessa della tua applicazione Java Bluemix in esecuzione. L'applicazione Java Bluemix viene quasi sempre eseguita su JVM IBM e alcune volte su JVM OpenJDK.
   
 
 Per controllare la versione di Java che segue IBM Eclipse Tools for Bluemix, completa la seguente procedura:
@@ -383,6 +351,48 @@ Se il JVM workbench JVM è IBM JVM 7 o 8 o una versione precedente di Oracle JVM
   3. Controlla se la proprietà `eclipse.vm` punta alla tua nuova installazione di Oracle JVM 8.
 
 
+  
+## Impossibile riutilizzare i nomi di applicazioni eliminate
+{: #ts_reuse_appname}
+  
+Dopo aver eliminato un'applicazione, puoi riutilizzarne il nome solo dopo aver eliminato la rotta dell'applicazione. 
+
+Quando tenti di riutilizzare il nome applicazione, ricevi il seguente messaggio:
+{: tsSymptoms}
+
+`Il nome è già utilizzato da un'altra applicazione.`
+
+Quando si elimina un'applicazione, la sua rotta, ossia l'URL dell'applicazione, non viene eliminata automaticamente. Pertanto, non è disponibile per il riutilizzo. Per poterlo riutilizzare, devi accedere allo spazio in cui è stata creata l'applicazione per eliminare la rotta.
+{: tsCauses}
+
+Per eliminare la rotta non utilizzata, effettua la seguente procedura: 
+{: tsResolve}
+
+  1. Controlla se la rotta appartiene allo spazio corrente immettendo il seguente comando: 
+     ```
+	 cf routes
+	 ```
+  2. Se la rotta non appartiene allo spazio corrente, passa allo spazio o all'organizzazione a cui appartiene immettendo il seguente comando: 
+     ```
+	 cf target -o org_name -s space_name
+	 ```
+  3. Elimina la rotta dell'applicazione immettendo il seguente comando:
+     ```
+	 cf delete-route domain_name -n host_name
+	 ```
+	 Ad
+esempio:
+	 ```
+	 cf delete-route mybluemix.net -n app001
+	 ```
+
+  
+  
+  
+  
+  
+  
+  
 ## Impossibile richiamare gli spazi in un'organizzazione
 {: #ts_retrieve_space}
 
@@ -393,17 +403,17 @@ Quando tenti di creare un'applicazione in Bluemix, viene visualizzato il seguent
 
 `BXNUI0515E: il tentativo di richiamare gli spazi nell'organizzazione non è riuscito a causa di un problema nella connessione di rete.`
 
-Questo errore spesso viene ricevuto la prima volta che si tenta di creare un'applicazione o un servizio dal catalogo quando ancora non è stato creato uno spazio.
+Questo errore spesso viene ricevuto la prima volta che si tenta di creare un'applicazione o un servizio dal catalogo quando ancora non è stato creato uno spazio. 
 {: tsCauses}
 
 Assicurati di aver creato uno spazio nella tua organizzazione corrente.  Per creare uno spazio, utilizza uno dei seguenti metodi:
 {: tsResolve}
 
-  * Da Account e Supporto ![Account e Supporto](images/account_support.svg), seleziona l'organizzazione in cui vuoi crare lo spazio e fai quindi clic su **Crea uno spazio**.
+  * Fai clic sull'icona {{site.data.keyword.avatar}} ![icona Avatar](images/account_support.svg) per aprire il widget Account e supporto, seleziona l'organizzazione in cui vuoi creare lo spazio e fai clic su **Crea uno spazio**.
   * Nell'interfaccia riga di comando cf, immetti `cf create-space <nome_spazio>
 -o <nome_organizzazione>`.
 
-Riprova. Se vedi di nuovo questo messaggio, vai alla pagina sugli [stati di Bluemix](https://status.eu-gb.bluemix.net/){: new_window} per controllare se un servizio o un componente ha qualche problema.
+Riprova. Se vedi di nuovo questo messaggio, vai alla pagina sugli [stati di Bluemix](http://ibm.biz/bluemixstatus){: new_window} per controllare se un servizio o un componente ha qualche problema.
 
 
 
@@ -525,7 +535,7 @@ errori della cache del browser.
 
  
 
-Se sospetti che un servizio {{site.data.keyword.Bluemix_notm}} sia inattivo, controlla prima la pagina [dello stato di {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#status){: new_window}. Come soluzione alternativa, potresti voler utilizzare questo servizio in un'altra regione
+Se sospetti che un servizio {{site.data.keyword.Bluemix_notm}} sia inattivo, controlla prima la pagina [Stato di {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Come soluzione alternativa, potresti voler utilizzare questo servizio in un'altra regione
 {{site.data.keyword.Bluemix_notm}}. Informazioni dettagliate sono disponibili in [Utilizzo
 dei servizi in un'altra regione](../services/reqnsi.html#cross_region_service){: new_window}. Se lo stato del servizio è normale,
 prova le seguenti operazioni per risolvere il problema: 
@@ -687,9 +697,8 @@ il limite per il numero di istanze del servizio che puoi avere.
 o l'interfaccia riga di comando.
     Per utilizzare l'interfaccia utente di {{site.data.keyword.Bluemix_notm}}
 per eliminare un'istanza del servizio, completa la seguente procedura:
-	  1. Sul Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic su **SERVIZI** nel riquadro a sinistra. Vengono visualizzati i
-tile dei servizi. 
-	  2. Sul tile del servizio che vuoi eliminare, fai clic sull'icona **Menu**.
+	  1. Nel Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul servizio che vuoi eliminare. Viene visualizzato il tile del servizio. 
+	  2. Sul tile del servizio, fai clic sull'icona **Menu**.
 	  3. Fai clic su **Elimina servizio**. Dopo aver eliminato
 l'istanza del servizio, ti verrà richiesto di preparare nuovamente l'applicazione
 a cui era associata l'istanza del servizio. 
@@ -946,7 +955,7 @@ cui è stata creata la tua organizzazione. Per ulteriori informazioni sull'utili
   
 
 
-## Impossibile creare rotte di applicazione 
+## Impossibile creare rotte di applicazione
 {: #ts_hostistaken}
 
 Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, la rotta dell'applicazione non può essere creata se il nome host da te specificato è già in uso.
@@ -982,7 +991,7 @@ push` con l'opzione **-n**.
     ```
 
 
-## Non è possibile distribuire delle applicazioni WAR utilizzando il comando cf push 
+## Non è possibile distribuire delle applicazioni WAR utilizzando il comando cf push
 {: #ts_cf_war}
 
 Potresti non riuscire a utilizzare il comando cf push per distribuire un'applicazione web archiviata a {{site.data.keyword.Bluemix_notm}} se la posizione dell'applicazione non è specificata correttamente.
@@ -1385,8 +1394,52 @@ codice utilizzando i comandi Git:
 	```
 	<appname> open
 	```
-	
 
+## La distribuzione di un'applicazione dalla barra di esecuzione non riesce
+{: #deployinganappfromtherunbarfails}
+
+In questo scenario, la distribuzione non riesce indicando uno stato "non sincronizzato" di colore giallo. 
+
+L'applicazione che stai distribuendo ha la stessa rotta di un'altra applicazione in esecuzione. Per correggere questo problema, modifica la rotta in modo che sia univoca.
+
+## Impossibile trovare la barra di esecuzione
+{: #runbarcannotbefound}
+
+Se non riesci a visualizzare la barra di esecuzione in Eclipse Orion {{site.data.keyword.webide}}, si è verificato uno dei seguenti problemi:
+
+1. {{site.data.keyword.jazzhub}} non riesce a identificare il tuo progetto.
+   * Correzione: nella directory root del tuo progetto, crea un file `project.json`.
+2. {{site.data.keyword.jazzhub_short}} non riesce a determinare in quale cartella si trova la tua applicazione.
+   * Correzione: se la tua applicazione si trova in una directory diversa dalla root del progetto, effettua una delle seguenti operazioni:
+      * Nella directory root del tuo progetto, crea un file `manifest.yml`. Modifica quindi il file in modo che punti alla posizione della tua applicazione, ad esempio `path: percorso_tua_applicazione`
+      * Sposta la tua applicazione nella directory root del tuo progetto.
+3. {{site.data.keyword.jazzhub_short}} non riconosce la tua applicazione come applicazione Node.js.
+   * Correzione: nella cartella dell'applicazione del tuo progetto, crea un file `package.json`.
+   
+
+## L'hook GitHub non funziona
+{: #githubhookisntworking}
+
+Se hai configurato il tuo progetto GitHub per creare link dell'elemento di lavoro quando esegui il push di commit e i link non funzionano nel modo previsto, usa la seguente procedura per trovare il problema:
+
+1. Nel repository GitHub, fai clic su **Impostazioni**.
+   ![Link alle impostazioni GitHub](images/githubSettings1_small.png)
+
+2. Fai clic su **Webhook & servizi**.
+   ![Link ai servizi e webhook GitHub](images/githubHooks1_small.png)
+
+3. Per visualizzare il messaggio, passa il puntatore del mouse sull'icona dello stato {{site.data.keyword.jazzhub}}.
+   ![Messaggio di errore sull'hook del servizio](images/troubleshoothook1_small.png)
+
+4. Risolvi il problema in base al messaggio GitHub.
+
+5. Per verificare che la correzione abbia funzionato, esegui il commit e il push di un'altra modifica o vai alla pagina del servizio per {{site.data.keyword.jazzhub_short}} e fai clic su **Verifica servizio**.
+   ![Pulsante Verifica servizio GitHub](images/githubTestService_small.png)
+
+6. Verifica che non vi siano errori controllando di nuovo l'icona dello stato.
+   ![Icona dello stato senza errori](images/githubResolved_small.png)
+
+Per ulteriori informazioni, consulta [Setting up GitHub for Bluemix DevOps Services projects](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Risoluzione dei problemi relativi alla gestione degli account
@@ -1417,7 +1470,7 @@ Lo stato del tuo account {{site.data.keyword.Bluemix_notm}} diventa inattivo qua
 Per riattivare il tuo account, contatta il [Supporto {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. Nell'email, devi includere le seguenti informazioni:
 {: tsResolve}
 
-  * L'ID IBM da te utilizzato per accedere a {{site.data.keyword.Bluemix_notm}}.
+  * L'ID IBM utilizzato per accedere a {{site.data.keyword.Bluemix_notm}}.
   * Il nome dell'organizzazione in cui verrà creata la tua applicazione. Queste informazioni consentono al team di supporto di determinare se ti sono stati assegnati i ruoli o l'appartenenza appropriati all'interno della tua organizzazione.
 
 
@@ -1447,8 +1500,8 @@ Per creare uno spazio, utilizza uno dei seguenti metodi:
 {: tsResolve}
  
   * Sul Dashboard {{site.data.keyword.Bluemix_notm}}, seleziona l'organizzazione in cui vuoi creare lo spazio e fai quindi clic su **Crea uno spazio**.
-  * Nell'interfaccia riga di comando cf, immetti ```cf create-space <nome_spazio>
--o <nome_organizzazione>```.
+  * Nell'interfaccia riga di comando cf, immetti `cf create-space <nome_spazio>
+-o <nome_organizzazione>`.
   
   
   
@@ -1520,7 +1573,7 @@ Potresti riscontrare dei problemi quando utilizzi i runtime IBM® Bluemix™. Tu
 {:shortdesc}
 
 
-## Pacchetto di build obsoleto utilizzato quando viene eseguito il push di un'applicazione 
+## Pacchetto di build obsoleto utilizzato quando viene eseguito il push di un'applicazione
 {: #ts_loading_bp}
 
 

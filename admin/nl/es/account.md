@@ -15,50 +15,82 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Managing your {{site.data.keyword.Bluemix_notm}} account
+# Gestión de la cuenta {{site.data.keyword.Bluemix_notm}}
 {: #mngacct}
-*Last updated: 16 May 2016*
+*Última actualización: 16 de agosto de 2016*
+{: .last-updated}
 
-Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** to set notifications for your account, view your account usage, or view your bill.
+Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** para establecer notificaciones para su cuenta, ver el uso de cuenta o ver la factura.
 {:shortdesc}
 
-## Setting notifications
+## Registro en {{site.data.keyword.Bluemix_notm}}
+{: #signup}
+
+Puede registrarse para obtener una cuenta de {{site.data.keyword.Bluemix_notm}} utilizando un ID de IBM existente, creando un nuevo ID de IBM o utilizando un ID federado. Un ID federado es un ID dentro del dominio de una empresa que ha sido registrado con IBM, por lo que el dominio y las credenciales de usuario pueden utilizarse para acceder a aplicaciones web de IBM.  
+
+Es posible utilizar un ID federado para registrarse en {{site.data.keyword.Bluemix_notm}} solo si su empresa ya ha trabajado con IBM para el registro.  El registro del dominio de una empresa con IBM permite que los usuarios puedan iniciar sesión en los productos y servicios de IBM utilizando sus credenciales de usuario de empresa existentes. La autenticación la gestiona el proveedor de identidades de la empresa. Al iniciar sesión en
+{{site.data.keyword.Bluemix_notm}} con un ID federado, se le solicita que inicie sesión a través de la página de inicio de sesión de su empresa. Para obtener información sobre la solicitud para registrar el dominio de su empresa u organización con IBM, o para obtener más información sobre el proceso, consulte [Guía de adopción de federación empresarial de ID de IBM](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Es necesario un patrocinador de IBM, como un abogado de ofertas o un abogado de cliente, al solicitar el registro de ID federados.
+
+*Tabla 1. Métodos de inicio de sesión*
+
+| Métodos de inicio de sesión | Detalles |    
+|-----------------|---------|
+|ID de IBM existente | Si ya tiene un ID de IBM, regístrese en {{site.data.keyword.Bluemix_notm}} con sus credenciales existentes que utilice para otros productos y servicios de IBM. Se le solicitará que especifique un número de teléfono al registrarse. |
+|ID de IBM nuevo | Si no aún no tiene un ID de IBM, puede optar por crear uno. El ID de IBM le permite utilizar un nombre de usuario de inicio de sesión para todos los productos y servicios de IBM que utilice, incluyendo {{site.data.keyword.Bluemix_notm}}. Deberá especificar su información personal, incluyendo su nombre y apellido, número de teléfono y contraseña para las nuevas credenciales. Puede utilizar este ID de IBM para iniciar sesión al utilizar otros productos y servicios de IBM.  |
+|ID federado | Si la empresa ha solicitado registrar las credenciales de usuario desde el dominio de su empresa con IBM, puede registrarse en
+{{site.data.keyword.Bluemix_notm}} utilizando las credenciales que ya utilice para el inicio de sesión de su empresa. Se le solicitará que especifique un número de teléfono al registrarse. |
+
+## Configuración de notificaciones
 {: #notifications}
 
-If you are a Pay-As-You-Go {{site.data.keyword.Bluemix_notm}} account owner, you can set up email spending notifications. Set notifications for total account, runtime, container, and service spending, as well as spending for individual services, excluding third-party services. You receive notifications when you reach 80%, 90%, and 100% of the spending thresholds that you specify. You can edit each spending notification at any time as your needs change.
+Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; **Notificaciones** para configurar notificaciones de gastos y de cuenta generales. Las notificaciones de gastos están disponibles únicamente para propietarios de cuentas de {{site.data.keyword.Bluemix_notm}} de Pago según uso y Suscripción.
 
-**Note**:  If you own more than one account, you can choose to set spending notifications for each individual account.
+Puede establecer notificaciones de correo electrónico de plataforma para incidencias de
+{{site.data.keyword.Bluemix_notm}} y mantenimiento planificado, así como establecer notificaciones de gastos que le avisen cuando la cuenta esté cerca del umbral de gasto que haya especificado. Realice las tareas siguientes para establecer tipos de notificaciones distintos para la cuenta.
 
-Complete the following steps to set up email notifications for spending limits:
+### Establecimiento de notificaciones de plataforma
+
+Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; **Notificaciones** &gt; **Plataforma** para establecer notificaciones de correo electrónico para mantenimiento planificado e incidencias de {{site.data.keyword.Bluemix_notm}}. Puede seleccionar o deseleccionar cada opción para habilitar o inhabilitar la notificación por correo electrónico.
+
+### Establecimiento de notificaciones de gastos
+{: #spendingnotifications}
+
+Si es un propietario de cuenta de {{site.data.keyword.Bluemix_notm}} de Pago según uso o Suscripción, puede establecer notificaciones de gasto por correo electrónico. Establezca notificaciones sobre el gasto total de la cuenta, tiempo de ejecución, contenedor y servicio, así como sobre el gasto de servicios individuales, sin incluir los servicios de terceros. Recibe notificaciones al alcanzar el 80%, 90%, y 100% de los umbrales de gasto que especifique. Puede editar cada notificación de gasto en cualquier momento en el que necesite el cambio.
+
+Complete los siguientes pasos para configurar notificaciones por correo electrónico para los límites de gasto:
 
 <ol>
-<li>Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Spending Notifications**.</li>
-<li>Enter a numeric value to set the spending threshold for triggering a notification for each type of spending notification:<br />
+<li>Vaya al icono **Cuenta y soporte** ![Icono Cuenta y soporte](../admin/images/account_support.svg) &gt; **Cuenta** &gt; **Notificaciones** &gt; **Gasto**.</li>
+<li>Entre un valor numérico para establecer el umbral de gasto para desencadenar una notificación para cada tipo de notificación:<br />
 <ul>
-<li>Total account spending</li>
-<li>Total runtime spending</li>
-<li>Total services spending</li>
-<li>Total container spending</li>
-<li>Spending for a specific service</li>
+<li>Total de cuenta</li>
+<li>Total de tiempo de ejecución</li>
+<li>Total de servicios</li>
+<li>Total de contenedor</li>
+<li>Gasto de un servicio específico</li>
 </ul>
 </li>
-<li>Select **Save Settings**.</li>
+<li>Seleccione **Guardar valores**.</li>
 </ol>
 
-**Note**: If you have a trial account, you can upgrade to a Subscription or Pay-As-You-Go account to set spending limits. For more information about Pay-As-You-Go and Subscription accounts, see [How you are billed](../pricing/index.html#pay-accounts).
+**Nota**: si tiene una cuenta de prueba, puede actualizarla a una cuenta de Suscripción o Pago según uso para establecer los límites de gasto. Para obtener más información sobre las cuentas Pago según uso y Suscripción, consulte [Cómo se le factura](../pricing/index.html#pay-accounts).
 
-## Viewing usage
+
+## Visualización de uso
 {: #acctusage}
 
-As an account owner or a billing manager for an org, you can use the Usage Dashboard view to see the real-time charges for the runtimes, containers, services, and support that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region.
+Como propietario de cuenta o gestor de facturación para una organización, puede utilizar la vista Panel de control de uso para ver los cargos en tiempo real para los tiempos de ejecución, contenedores, servicios y soporte utilizados cada mes en sus organizaciones. Puede ver el consumo de GB por hora y de servicio de tiempo de ejecución en todas las regiones o seleccionar para ver una región determinada.
 
-To open the Usage Dashboard view, click the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Usage Dashboard**. Billing managers can see the details for only the organizations in which they are billing managers.
+Para abrir la vista Panel de control de uso, pulse el icono **{{site.data.keyword.avatar}}**
+![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Panel de control de uso**. Los gestores de facturación pueden ver los detalles sólo para las organizaciones en las que hay gestores de facturación.
 
-The account owner is charged for the total usage that is incurred across all organizations at the end of each billing cycle. As an account owner, you can filter the usage summary by region and organization. You can also click a particular month to see the usage for that month. Select **All Organizations** from the **Organizations** list to see the usage for all organizations in the account.
+La cuenta se factura al propietario por el uso total en el que han incurrido todas las organizaciones al final de cada ciclo de facturación. Como propietario de cuenta puede filtrar el resumen de uso por región y organización. También puede pulsar un mes concreto para ver el uso para ese mes. Seleccione **Todas las organizaciones** en la lista **Organizaciones** para ver el uso para todas las organizaciones de la cuenta.
 
 
-## Updating billing information
+## Actualización de la información de facturación
 {: #account_billing}
 
-As the account owner, you can edit, add, or remove saved credit card information that is associated with your {{site.data.keyword.Bluemix_notm}} account. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Billing**.
+Como propietario de cuenta, puede editar, añadir o eliminar información de tarjeta de crédito guardada que está asociada a la cuenta {{site.data.keyword.Bluemix_notm}}. Vaya al icono **{{site.data.keyword.avatar}}**
+![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Facturación**.
 
+Si tiene una cuenta de SoftLayer vinculada a su cuenta de {{site.data.keyword.Bluemix_notm}}, consulte [Facturación por el uso de {{site.data.keyword.Bluemix_notm}} cuando las cuentas están vinculadas](../admin/softlayerlink.html#bill_usage) para obtener más información sobre el tipo de facturación.

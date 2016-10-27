@@ -29,9 +29,9 @@ Sie können nun die SoftLayer- und {{site.data.keyword.Bluemix_notm}}-Abrechnung
 
 Nachdem die Konten verknüpft wurden, können Sie die Konten leicht wechseln. Sie können die Nutzung der {{site.data.keyword.Bluemix_notm}}-Ressourcen weiterhin in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle überwachen. Diese Ressourcen werden nun allerdings über die SoftLayer-Rechnung abgerechnet.
 
-Auch wenn die Kontoabrechnung verknüpft ist, ist die Anmelde-ID abhängig von der Authentifizierung des SoftLayer-Kontos unterschiedlich: 
-* Benutzer mit SoftLayer-Konten, die nicht die IBM ID zur Authentifizierung verwenden, sollten weiterhin ihre SoftLayer-ID für SoftLayer-Produkte und -Services und ihre IBM ID für {{site.data.keyword.Bluemix_notm}}-Produkte und -Services verwenden. 
-* Benutzer mit SoftLayer-Konten, die die IBM ID zur Authentifizierung verwenden, sollten die IBM ID für den Zugriff auf SoftLayer- und {{site.data.keyword.Bluemix_notm}}-Konten verwenden. 
+Auch wenn die Kontoabrechnung verknüpft ist, ist die Anmelde-ID abhängig von der Authentifizierung des SoftLayer-Kontos unterschiedlich:
+* Benutzer mit SoftLayer-Konten, die nicht die IBM ID zur Authentifizierung verwenden, sollten weiterhin ihre SoftLayer-ID für SoftLayer-Produkte und -Services und ihre IBM ID für {{site.data.keyword.Bluemix_notm}}-Produkte und -Services verwenden.
+* Benutzer mit SoftLayer-Konten, die die IBM ID zur Authentifizierung verwenden, sollten die IBM ID für den Zugriff auf SoftLayer- und {{site.data.keyword.Bluemix_notm}}-Konten verwenden.
 
 **Achtung:** Das Verknüpfen der Konten kann nicht rückgängig gemacht werden.  
 

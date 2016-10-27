@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} público
 {: #public}
-*Última actualización: 19 de mayo de 2016*
+Última actualización: 8 de agosto de 2016
 {: .last-updated}
 
 
@@ -112,7 +112,8 @@ Cada app puede tener uno o varios URL asociados, pero todos deben apuntar al pun
 
 Una región de {{site.data.keyword.Bluemix_notm}} es un territorio geográfico definido en el que puede desplegar sus apps. Puede crear apps e instancias de servicios en distintas regiones con la misma infraestructura de {{site.data.keyword.Bluemix_notm}} para la gestión de apps y la misma vista de detalles de uso para la facturación. Puede seleccionar la región se esté más cerca de sus clientes y desplegar sus apps a esta región para obtener una latencia baja de la app. También puede seleccionar la región en la que desea conservar los datos de app para solucionar los problemas de seguridad. Cuando crea apps en varias regiones, si una región queda fuera de servicio, las apps que están en las otras regiones seguirán funcionando. Su concesión de recursos es la misma para cada región que utilice.
 
-Si está utilizando la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, puede cambiar a una región distinta para trabajar con los espacios de esa región. Vaya al icono **Cuenta y soporte** ![Icono Cuenta y soporte](../admin/images/account_support.svg) y expanda el selector **Región**. A continuación puede seleccionar una región distinta de la lista. 
+Si está utilizando la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, puede cambiar a una región distinta para trabajar con los espacios de esa región. Pulse el icono **{{site.data.keyword.avatar}}** ![Icono
+Avatar](../icons/i-avatar-icon.svg) y expanda el selector Región. A continuación, puede seleccionar una región distinta de la lista.
 
 Si utiliza la interfaz de línea de mandatos cf, debe conectarse a la región {{site.data.keyword.Bluemix_notm}} con la que desea trabajar utilizando el mandato cf api y especificando el punto final API de la región. Por ejemplo, escriba el siguiente mandato para conectarse a la región de
 {{site.data.keyword.Bluemix_notm}} de Europa - Reino Unido:

@@ -67,7 +67,7 @@ seguente comando:</p>
 
 ## Pacchetti di build esterni
 
-Puoi utilizzare pacchetti di build esterni o personalizzati in {{site.data.keyword.Bluemix_notm}}. Devi specificare l'URL del pacchetto di build con l'opzione -b e specificare lo stack con l'opzione ```-s``` nel comando **cf push**. Ad esempio, per utilizzare un pacchetto di build della community esterno per i file statici, esegui questo comando
+Puoi utilizzare pacchetti di build esterni o personalizzati in {{site.data.keyword.Bluemix_notm}}. Devi specificare l'URL del pacchetto di build con l'opzione -b e specificare lo stack con l'opzione `-s` nel comando **cf push**. Ad esempio, per utilizzare un pacchetto di build della community esterno per i file statici, esegui questo comando
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
@@ -96,7 +96,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 Utilizza il comando <strong>cf set-env</strong>. Ad esempio, immetti il seguente comando per impostare la versione Java su 1.7.0:
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
 <p>Quindi, per rendere effettive
 le modifiche, prepara di nuovo la tua applicazione:</p>
 <pre class="pre"><code>cf restage app_name</code></pre>

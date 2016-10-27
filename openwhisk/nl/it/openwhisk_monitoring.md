@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  anni: 2016
 
  
 
@@ -17,13 +17,13 @@ copyright:
 {:pre: .pre}
 
 # Monitoraggio dell'attività {{site.data.keyword.openwhisk_short}} con il dashboard {{site.data.keyword.openwhisk_short}}
-*Ultimo aggiornamento: 9 febbraio 2016*
+Ultimo aggiornamento: 2 agosto 2016
 {: .last-updated}
 
 Il [dashboard {{site.data.keyword.openwhisk}}](https://{DomainName}/whisk/dashboard/) fornisce un riepilogo grafico della tua attività. Utilizza il dashboard per determinare le prestazioni e l'integrità delle tue azioni su {{site.data.keyword.openwhisk_short}}. 
 {:shortdesc}
 
-Fai clic su Ricarica in qualsiasi momento per aggiornare il dashboard con i più recenti dati di log delle attivazioni.
+Fai clic su **Ricarica** in qualsiasi momento per aggiornare il dashboard con i più recenti dati di log delle attivazioni.
 
 ## Riepilogo attività
 {: #summary}
@@ -48,8 +48,8 @@ La vista **Istogramma attività** visualizza un grafico a barre orizzontale per 
 ## Log attività
 {: #log}
 
-Questa vista mostra una versione formattata del log delle attivazioni. Quest'ultimo mostra i dettagli di ciascuna attivazione, ma richiede ogni minuto informazioni su eventuali nuove attivazioni. Fai clic su un'azione per visualizzare un log dettagliato. 
-**Nota**: per ottenere l'output visualizzato nel Log attività attraverso la CLI, utilizzare il seguente comando: 
+Questa vista visualizza una versione formattata del log di attivazione. Mostra i dettagli di ogni attivazione, ma richiede informazioni sulle nuove attivazioni una volta al minuto. Fai clic su un'azione per visualizzare un log dettagliato. 
+**Nota:** per visualizzare l'output nel Log attività mediante la CLI, utilizza il seguente comando: 
 
   ```
   wsk activation poll
@@ -61,4 +61,4 @@ Questa vista mostra una versione formattata del log delle attivazioni. Quest'ult
 
 Seleziona il log azioni da visualizzare e l'intervallo temporale dell'attività registrata. 
 
-**Nota**: questi filtri vengono applicati a tutte le viste sul dashboard.
+**Nota:** questi filtri vengono applicati a tutte le viste nel dashboard.

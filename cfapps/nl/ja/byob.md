@@ -61,7 +61,7 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 
 ## 外部ビルドパック
 
-{{site.data.keyword.Bluemix_notm}} では、外部ビルドパックやカスタム・ビルドパックを使用できます。**cf push** コマンドの -b オプションでビルドパックの URL を指定し、```-s``` オプションでスタックを指定する必要があります。例えば、静的ファイル用の外部コミュニティー・ビルドパックを使用するには、以下のコマンドを実行します。
+{{site.data.keyword.Bluemix_notm}} では、外部ビルドパックやカスタム・ビルドパックを使用できます。**cf push** コマンドの -b オプションでビルドパックの URL を指定し、`-s` オプションでスタックを指定する必要があります。例えば、静的ファイル用の外部コミュニティー・ビルドパックを使用するには、以下のコマンドを実行します。
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
@@ -87,7 +87,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 <strong>cf set-env</strong> コマンドを使用します。例えば、Java バージョンを 1.7.0 に設定するには、次のコマンドを入力します。
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
 <p>その後、変更を有効にするためにアプリを再ステージします。</p>
 <pre class="pre"><code>cf restage app_name</code></pre>
 </li>

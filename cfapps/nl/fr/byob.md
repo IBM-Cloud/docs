@@ -67,7 +67,7 @@ applications Ruby, il n'existe aucun pack de construction créé par IBM. Pour u
 ## Packs de construction externes
 
 Vous pouvez utiliser des packs de construction externes ou personnalisés dans {{site.data.keyword.Bluemix_notm}}. Vous devez spécifier
-l'adresse URL du pack de construction avec l'option -b et indiquer la pile avec l'option ```-s``` sur la commande **cf push**. Par exemple, pour utiliser un pack de construction de communauté externe pour des fichiers statiques, exécutez la commande suivante :
+l'adresse URL du pack de construction avec l'option -b et la pile avec l'option `-s` dans la commande **cf push**. Par exemple, pour utiliser un pack de construction de communauté externe pour des fichiers statiques, exécutez la commande suivante :
 
 ```
 cf push nom_app -p chemin_app -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
@@ -97,7 +97,7 @@ cf push nom_app -p chemin_app -b https://github.com/dmikusa-pivotal/cf-php-build
 <ul>
 <li>
 Utilisez la commande <strong>cf set-env</strong>. Par exemple, entrez la commande suivante pour définir la version Java 1.7.0 :
-<pre class="pre"><code>cf set-env nom_app JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
+<pre class="pre"><code>cf set-env nom_app JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
 <p>Ensuite, reconstituez votre application pour appliquer
 la modification :</p>
 <pre class="pre"><code>cf restage nom_app</code></pre>

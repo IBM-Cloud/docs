@@ -138,10 +138,16 @@ wsk action update hello hello.js
   ```
   {: pre}
 
-3. 建立及啟用規則。這三個參數是規則、觸發程式及動作的名稱。
-  
+3. 建立規則。請注意，將會在建立時啟用規則，表示它會立即可用以回應觸發程式的啟動。這三個參數是規則、觸發程式及動作的名稱。
+
   ```
-wsk rule create --enable myRule locationUpdate hello
+  wsk rule create myRule locationUpdate hello
+  ```
+  {: pre}
+
+  您隨時都可以選擇停用規則。
+  ```
+  wsk rule disable myRule
   ```
   {: pre}
 
@@ -183,4 +189,4 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   您看到 hello 動作接收到事件有效負載並傳回預期字串。
 
 您可以建立多個規則，來建立相同觸發程式與不同動作的關聯。觸發程式與建立規則的動作必須在相同的名稱空間中，而不能屬於套件。
-如果您要使用屬於套件的動作，可以將動作複製到名稱空間中。例如：`wsk action create echo --copy /whisk.system/samples/echo`。
+如果您要使用屬於套件的動作，可以將動作複製到名稱空間中。例如：`wsk action create echo --copy /whisk.system/utils/echo`。

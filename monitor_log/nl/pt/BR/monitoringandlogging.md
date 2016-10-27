@@ -14,7 +14,7 @@ copyright:
 #Monitoramento e criação de log
 {: #monitoringandlogging}
 
-*Última atualização: 1 de julho de 2016*
+Última atualização: 2 de setembro de 2016
 {: .last-updated}
 
 Ao monitorar seus apps e revisar logs, é possível seguir a execução do aplicativo e o fluxo de dados para obter um melhor entendimento de sua implementação. Além disso, é possível reduzir o tempo e o esforço necessários para localizar problemas e repará-los.
@@ -52,11 +52,16 @@ Analytics](../services/monana/index.html).
 
 Os arquivos de log são criados automaticamente quando se está usando a infraestrutura do Cloud Foundry para executar seus apps no {{site.data.keyword.Bluemix_notm}}. Ao encontrar erros em qualquer estágio de implementação no tempo de execução, é possível verificar os logs para obter pistas que podem ajudar a resolver seu problema.
 
+###Retenção de log
+{: #log_retention}
+
+* Em aplicativos Cloud Foundry do Bluemix, dados do log são armazenados por 30 dias por padrão.
+
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
 
 
-###Formato do Log
+###Formato do log
 {: #log_format}
 
 Os logs para aplicativos {{site.data.keyword.Bluemix_notm}} são exibidos em um formato fixo, semelhante ao padrão a seguir:
@@ -139,7 +144,7 @@ Toda entrada de log contém quatro campos. Consulte a lista a seguir para obter 
 
 Para ver os logs de implementação ou de tempo de execução, conclua as etapas a seguir:
 1. Efetue login no {{site.data.keyword.Bluemix_notm}} e, em seguida, clique no quadro de seu app no Painel. A página de detalhes do app é exibida.
-2. Na barra de navegação à esquerda, clique em **Logs**.
+2. Na barra de navegação, clique em **Logs**.
 
 No console de **Logs**, é possível visualizar os logs recentes para seu app ou acompanhar logs em tempo real. Além disso, é possível filtrar logs por tipo de log e canal.
 
@@ -213,7 +218,8 @@ cf logs appname --recent | cut -c 29-40,46-
 ```
 
 Para obter mais informações sobre a opção **grep**, digite cut --help.
-* Para exibir entradas de log que contêm determinadas palavras-chave, use a opção **grep**. Por exemplo, para exibir entradas de log que contêm a palavra-chave [APP, é possível usar o comando a seguir:
+* Para exibir entradas de log que contêm determinadas palavras-chave, use a opção **grep**. Por exemplo, para exibir entradas de log que contêm a palavra-chave `[APP`, é possível usar o comando a seguir:
+
 ```
 cf logs appname --recent | grep '\[App'
 ```
@@ -236,15 +242,16 @@ Para mover logs de seu app e do sistema para um host de log externo, conclua as 
 
   2. Crie uma instância de serviço fornecida pelo usuário.
      
-	 Utilize o comando ```cf create-user-provided-service``` (ou ```cups```, uma versão curta do comando) para criar um instância de serviço fornecida pelo usuário: 
+	 Use o comando `cf create-user-provided-service` (ou `cups`, uma versão curta do comando) para criar uma instância de serviço fornecido pelo
+usuário: 
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```
-	 **service_name**
+	 &lt;service_name&gt;
 	 
 	 O nome da instância de serviço fornecida pelo usuário.
 	 
-	 **logging_endpoint**
+	 &lt;logging_endpoint&gt;
 	 
 	 O terminal de criação de log para o qual o {{site.data.keyword.Bluemix_notm}} envia logs. Consulte a tabela a seguir para substituir *logging_endpoint* por seu valor:
 	 
@@ -279,18 +286,18 @@ Para mover logs de seu app e do sistema para um host de log externo, conclua as 
 	 Use o comando a seguir para ligar a instância de serviço a seu app: 
 	
 	 ```
-	 cf bind-service appname <service_name>
+	 cf bind-service <appname> <service_name>
 	 ```
-	 **appname**
+	 &lt;appname&gt;
 	 
 	 O nome do seu app.
 	 
-	 **nome_do_serviço**
+	 &lt;service_name&gt;
 	 
 	 O nome da instância de serviço fornecida pelo usuário.
 	 
   4. Remonte o app. 
-     Tipo ```cf restage appname``` para que as mudanças entrem em vigor. 
+     Digite `cf restage appname` para que as mudanças entrem em vigor. 
 
 #### Visualizando logs de hosts externos
 {: #viewing_logs_external}
@@ -363,7 +370,7 @@ produção, consulte a documentação de [Network Security Groups](https://new-c
 		
   2. A Jane define as configurações do Splunk para aceitar o dreno de syslog a partir do {{site.data.keyword.Bluemix_notm}}. Ela deve criar uma entrada de dados para o dreno de syslog.
 
-     a. A partir do lado esquerdo da interface da web do Splunk, a Jane clica em **Dados > Entradas de dados**. Uma lista de tipos de entrada que o Splunk suporta é exibida. 
+     a. A partir da interface da web do Splunk, a Jane clica em **Dados > Entradas de dados**. Uma lista de tipos de entrada que o Splunk suporta é exibida. 
 	 
      b. Ela seleciona **TCP**, porque o dreno de syslog usa o protocolo TCP.
 	 

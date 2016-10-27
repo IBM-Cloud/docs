@@ -78,7 +78,7 @@ Nicht alle Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region ver
 |{{site.data.keyword.weather_short}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.IntegrationTestingshort}}	|Ja		|Ja		|Nein|
 |{{site.data.keyword.iot_short}}		|Ja		|Ja		|Nein|
-|{{site.data.keyword.keymanagementserviceshort}}	|Nein		|Ja		|Nein|
+|{{site.data.keyword.keymanagementserviceshort}}	|Ja		|Ja		|Nein|
 |{{site.data.keyword.languagetranslationshort}}	|Ja		|Ja		|Ja|
 |{{site.data.keyword.messagehub}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.messageresonanceshort}}	|Ja		|Ja		|Nein|

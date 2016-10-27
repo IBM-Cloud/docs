@@ -159,7 +159,7 @@ nslookup mybluemix.net
   
 如果您因自己是合作人員（而非成員）而無法邀請使用者，則您必須刪除先前的 {{site.data.keyword.Bluemix_notm}} 帳戶，然後受邀以組織成員的身分加入帳戶。若要刪除先前的帳戶並以成員的身分加入帳戶，請完成下列步驟： 
 
-  1. 聯絡 [{{site.data.keyword.Bluemix_notm}} 支援](http://ibm.biz/bluemixsupport){: new_window}，以開啟一個支援問題單，並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包括此資訊。 
+  1. 聯絡 [{{site.data.keyword.Bluemix_notm}} 支援](http://ibm.biz/bluemixsupport){: new_window}，以開啟一個支援問題單，並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包含此資訊。 
   2. 刪除您的帳戶之後，請讓具有組織管理員角色的使用者，邀請您以組織管理員的身分加入組織。然後，透過該邀請註冊 {{site.data.keyword.Bluemix_notm}}。 
 
 
@@ -363,7 +363,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 確定已在現行組織中建立空間。若要建立空間，請使用下列其中一種方法：
 {: tsResolve}
 
-  * 按一下{{site.data.keyword.avatar}}圖示 ![「虛擬人像」圖示](images/account_support.svg) 來開啟「帳戶和支援」小組件，選取您要在其中建立空間的組織，然後按一下**建立空間**。
+  * 按一下{{site.data.keyword.avatar}}圖示 ![「虛擬人像」圖示](images/account_support.svg) 來開啟「帳戶及支援」小組件，選取您要在其中建立空間的組織，然後按一下**建立空間**。
   * 在 cf 指令行介面中，鍵入 `cf create-space <space_name> -o <organization_name>`。
 
 請重試。如果再次看到此訊息，請移至 [Bluemix 狀態](http://ibm.biz/bluemixstatus){: new_window}頁面，以檢查服務或元件是否有問題。

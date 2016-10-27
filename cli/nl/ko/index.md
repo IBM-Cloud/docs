@@ -18,16 +18,16 @@ copyright:
 # CLI 및 개발 도구
 {: #cli}
 
-*마지막 업데이트 날짜: 2016년 6월 28일*
+*마지막 업데이트 날짜: 2016년 8월 31일*
 {: .last-updated}
 
-{{site.data.keyword.Bluemix_short}}를 통해 통합 명령행 인터페이스 및 CLI 플러그인과 같은 강력한 도구를 이용할 수 있습니다. 각각의 CLI를 다운로드하여 {{site.data.keyword.Bluemix_notm}} 환경에 사용 가능합니다.
+{{site.data.keyword.Bluemix_short}}를 통해 통합 명령행 인터페이스 및 CLI 플러그인과 같은 강력한 도구를 이용할 수 있습니다. 각각의 CLI를 다운로드하여 {{site.data.keyword.Bluemix_notm}} 인터페이스에 사용 가능합니다.
 {:shortdesc}
 
 ## ![](./images/CLI.svg) 명령행 인터페이스
 {: #downloads}
 
-{{site.data.keyword.Bluemix_notm}} 환경을 지원하는 명령행 인터페이스를 다운로드하여 설치하십시오.  
+{{site.data.keyword.Bluemix_notm}} 인터페이스를 지원하는 명령행 인터페이스를 다운로드하여 설치하십시오.  
 
 가상 서버 관리에 사용되는 [OpenStack CLI 도구](../virtualmachines/vm_index.html#vm_setup_cli){: new_window}를 제외하면, Cloud Foundry cf 명령행 도구는 기타 모든 {{site.data.keyword.Bluemix_notm}} CLI 도구를 사용하기 위한 전제조건입니다. {{site.data.keyword.Bluemix_notm}} 명령행 도구는 Cloud Foundry 애플리케이션 이외에 {{site.data.keyword.Bluemix_notm}} 환경을 관리하는 확장된 경험을 제공합니다.
 

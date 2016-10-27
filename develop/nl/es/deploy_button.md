@@ -101,12 +101,12 @@ Specified Git branch:
 Default master branch:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;URL_repositorio_git> # [required]&#41;
+[![Desplegar en Bluemix](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
 </pre>
 <p>Specified Git branch:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;URL_repositorio_git> &branch=&lt;rama_git&gt; # [required]&#41;
+[![Desplegar en Bluemix](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
 </pre>
 </li>
 </ul>
@@ -117,7 +117,7 @@ Default master branch:
 
 ##Consideraciones sobre snippet para el botón {: #button-snippet}
 
-Revise estas consideraciones cuando personalice el fragmento de código del botón Desplegar en Bluemix . 
+Revise estas consideraciones cuando personalice el fragmento de código del botón Desplegar en Bluemix. 
 
 * Ambas plantillas utilizan una vía de acceso predeterminada a una imagen de botón externa en formato PNG y en inglés. 
 
@@ -133,7 +133,7 @@ de forma remota o descargarla desde [ftp://public.dhe.ibm.com/cloud/bluemix/depl
 	
 ##Consideraciones sobre el repositorio para el botón {: #button-repo} 
 
-Revise estas consideraciones del repositorio del proyecto que utilizará en el botón Desplegar en Bluemix . 
+Revise estas consideraciones del repositorio del proyecto que utilizará en el botón Desplegar en Bluemix. 
 
 <ul>
 <li>No es necesario tener ningún archivo <code>manifest.yml</code> en el repositorio. Sin embargo, deberá proporcionar un archivo de manifiesto que declare otros servicios en el caso de que la app los necesite para ejecutarse.  
@@ -141,7 +141,7 @@ Revise estas consideraciones del repositorio del proyecto que utilizará en el b
 En el archivo de manifiesto puede especificar: 
     <ul>
     <li>Un nombre de app exclusivo.</li>  
-    <li>Servicios declarados: una extensión de manifiesto que crea o busca los servicios necesarios u opcionales que deben configurarse previsiblemente antes de desplegar la app, como por ejemplo un servicio de caché de datos. Encontrará una lista de los servicios, etiquetas y planes seleccionables de {{site.data.keyword.Bluemix_notm}}; para ello, utilice la interfaz de línea de mandatos CF de <a href="https://github.com/cloudfoundry/cli/releases"></a> para ejecutar el mandato <code>cf marketplace</code> o vaya al catálogo de <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}}</a>. 
+    <li>Servicios declarados: una extensión de manifiesto que crea o busca los servicios necesarios u opcionales que deben configurarse previsiblemente antes de desplegar la app, como por ejemplo un servicio de caché de datos. Encontrará una lista de los servicios, etiquetas y planes seleccionables de {{site.data.keyword.Bluemix_notm}}; para ello, utilice la interfaz de línea de mandatos CF de <a href="https://github.com/cloudfoundry/cli/releases"></a> para ejecutar el mandato <code>cf marketplace</code> o vaya al <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">catálogo de {{site.data.keyword.Bluemix_notm}}</a>.
     
     <strong>Nota:</strong> Los servicios declarados son una extensión de IBM del formato de manifiesto estándar de Cloud Foundry. Es posible que se vaya revisando dicha extensión en posteriores releases a medida que se desarrolle y mejore la característica.
 	
@@ -182,7 +182,7 @@ En el archivo de manifiesto puede especificar:
 	Compiladores soportados: 
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, que crea la salida en la carpeta <code>./output/</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, que crea la salida en la carpeta <code>.</code> </i>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, que crea la salida en la carpeta <code>.</code> </li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>, que compila la salida a <code>. </code> </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>, que crea la salida en la carpeta <code>./target/</code></li>
 	   </ul>
@@ -198,7 +198,7 @@ En el archivo de manifiesto puede especificar:
 <li>En el directorio raíz del proyecto, cree un directorio <code>.bluemix</code>.</li>
 <li>Suba el archivo <code>pipeline.yml</code> al repositorio <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Si está desarrollando una app en un contenedor utilizando <strong>IBM Containers</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>. 
+	<li>Si está desarrollando una app en un contenedor utilizando <strong>IBM Containers</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>.
 	<ul>
 	    <li> Para obtener más información sobre cómo crear Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">consulte la documentación de Docker</a>. </li>
 	    <li>Puede crear un archivo <code>pipeline.yml</code> manualmente o puede generar uno a partir de un proyecto existente de DevOps Services. Para crear un <code>pipeline.yml</code> manualmente que sea específicamente para contenedores, <a href="https://github.com/Puquios/" target="_blank">consulte los ejemplos en GitHub</a>. </li>

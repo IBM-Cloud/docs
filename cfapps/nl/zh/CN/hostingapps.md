@@ -135,7 +135,8 @@ copyright:
 <li>推送应用程序。可以使用 cf push 命令上传应用程序。<ol>
 <li>通过运行以下命令来连接并登录到 {{site.data.keyword.Bluemix_notm}}。系统提示时，选择组织和空间。<pre>cf login -a https://api.ng.bluemix.net</pre></li>
 <li>从应用程序目录中，输入带有应用程序名称的 cf push 命令。应用程序名称在 {{site.data.keyword.Bluemix_notm}} 环境中必须唯一。<pre>cf push appname</pre></li>
-<li>可选：如果使用外部 buildpack，那么必须在 cf push 命令中使用 -b 选项。例如：<pre>cf push appname -b buildpack_URL</pre>
+<li>可选：如果使用外部 buildpack，那么必须在 cf push 命令中使用 -b 选项。例如：
+<pre>cf push appname -b buildpack_URL</pre>
 <p>有关详细信息，请参阅“使用社区 buildpack”。</p>
 </li></ol>
 </li>

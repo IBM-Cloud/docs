@@ -27,7 +27,7 @@ copyright:
 ## {{site.data.keyword.openwhisk_short}} 的運作方式
 {: #openwhisk_how}
 
-{{site.data.keyword.openwhisk_short}} 是一個事件驅動運算平台，可執行程式碼來回應事件或直接呼叫。
+{{site.data.keyword.openwhisk_short}} 是事件驅動運算平台（也稱為「無伺服器運算」或「功能即服務 (FaaS)」），會執行程式碼來回應事件或直接呼叫。
 
 下圖顯示高階 {{site.data.keyword.openwhisk_short}} 架構。
 

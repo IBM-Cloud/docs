@@ -95,7 +95,7 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.weather_short}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.IntegrationTestingshort}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.iot_short}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.keymanagementserviceshort}}	|Non		|Oui		|Non|
+|{{site.data.keyword.keymanagementserviceshort}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.languagetranslationshort}}	|Oui		|Oui		|Oui|
 |{{site.data.keyword.messagehub}}		|Oui		|Oui		|Non|
 |{{site.data.keyword.messageresonanceshort}}	|Oui		|Oui		|Non|

@@ -5,7 +5,6 @@ copyright:
 
 ---
 
-
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -14,7 +13,7 @@ copyright:
 #Liberty アプリおよび Node.js アプリの管理
 {: #app_management}
 
-*最終更新日: 2016 年 3 月 17 日*
+最終更新日: 2016 年 9 月 15 日
 {: .last-updated}
 
 アプリ管理は、開発用およびデバッグ用のユーティリティーの一式であり、{{site.data.keyword.Bluemix}} 上の Liberty および Node.js アプリケーション用に使用可能にすることができます。
@@ -75,42 +74,8 @@ http://<yourappname>.mybluemix.net/bluemix-debug/shell
   インスペクター・プロセスは、アプリケーション・コンテナーで実行されます。このユーティリティーを使用することで、CPU 使用プロファイルの作成、ブレークポイントの追加、コードのデバッグを行うことができます。それも、{{site.data.keyword.Bluemix_notm}} でのアプリケーションの実行中に行うことができます。ノード・インスペクター・モジュールについて詳しくは、[GitHub の node-inspector](https://github.com/node-inspector/node-inspector){:new_window} を参照してください。
   
   *inspector* ユーティリティーは *proxy* も開始します。
-  
-  2. *strongpm*: [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} を使用して、[StrongLoop Metrics、Profiling、Tracing](https://strongloop.com/node-js/devops-tools/){:new_window} などのユーティリティーによって Node.js アプリケーションを分析できるようにします。
-    
-  *strongpm* ユーティリティーは *proxy* も開始します。
-  
-  以下のステップを実行して、[StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} によって Node.js アプリケーションを構成します。
-
-    1. *strongpm* BlUEMIX_APP_MGMT_ENABLE 環境変数を構成し、アプリケーションを再ステージングします。
-    
-	```
-cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
-    cf restage <appname>
-    ```
 	
-    2. Cloud Foundry コマンド・ラインから、アプリケーションへの経路を追加します。ここで、経路のアプリケーション名には「-pm」を追加します (例えば、<appname>-pm.mybluemix.net)。
-    
-	```
-cf map-route <appname> ng.bluemix.net -n <appname>-pm
-    ```
-	
-    3. ローカル・ワークステーションで [StrongLoop npm モジュール](https://www.npmjs.com/package/strongloop){:new_window}をインストールします。
-    
-	```
-npm install -g strongloop
-    ```
-	
-    4. [StrongLoop の Web サイト](https://strongloop.com/register/){:new_window}でアカウントを作成します。
-    5. ローカル・ワークステーションで Arc を起動し、作成したアカウントでログインします。
-    
-	```
-slc arc
-    ```
-	
-    6. Arc 内の「Process Manager」ビューにナビゲートします。新しく作成した経路とポート 80 を Process Manager に入力します。「Activate」ボタンを押します。詳しくは、[Arc の使用に関する完全な資料](https://docs.strongloop.com/display){:new_window}を参照してください。
-	
-  3. *trace*: アプリケーションが *log4js*、*ibmbluemix*、または *bunyan* ロギング・モジュールを使用している場合のトレース・レベルを動的に設定します。
+  2. *trace*: アプリケーションが *log4js*、*ibmbluemix*、または *bunyan* ロギング・モジュールを使用している場合のトレース・レベルを動的に設定します。
   
   **注:** サポートされる依存関係バージョン:
 
@@ -119,6 +84,8 @@ slc arc
     * ibmbluemix: (1.0.0-20140707-1250) から (1.0.0-20150409-1328)
   
   {{site.data.keyword.Bluemix_notm}} Web コンソールで「インスタンスの詳細」ページに移動し、**「アクション」**を選択して UI を表示します。
+
+  *trace* ユーティリティーは、アプリケーションが "-b buildpack" オプションを使用して開始された場合は使用できません。
 
   *trace* ユーティリティーは *proxy* を開始しません。
 

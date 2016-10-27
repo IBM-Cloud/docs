@@ -51,7 +51,7 @@ copyright:
 # Tarification
 {: #pricing}
 
-*Dernière mise à jour : 16 août 2016*
+*Dernière mise à jour : 13 septembre 2016*
 {: .last-updated}
 
 Vous pouvez exécuter des applications dans {{site.data.keyword.Bluemix}} et essayer des services
@@ -339,11 +339,9 @@ sur un modèle de tarification à tranches graduées :
 |------------------|--------------------|------------|
 |500 |	500 × 1 (prix unitaire pour la tranche 1) = 500 |	500 $|
 |1500 |	(1000 × 1 (prix unitaire pour la tranche 1)) + (500 × 0.90 (prix unitaire pour la tranche 2)) = 1450 |	1450 $|
-|2500 |	(1000 × 1 (prix unitaire pour la tranche 1)) + (1000 × 0.90 (prix unitaire pour la tranche 2)) + (500 × 0.75 (prix unitaire pour la tranche 3)) =
-2275 |	2275 $ |
+|2500 |	(1000 × 1 (prix unitaire pour la tranche 1)) + (1000 × 0.90 (prix unitaire pour la tranche 2)) + (500 × 0.75 (prix unitaire pour la tranche 3)) = 2275 |	2275 $ |
 |... |	... |	...|
-|5200 |	(1000 × 1 (prix unitaire pour la tranche 1)) + (1000 × 0.90 (prix unitaire pour la tranche 2)) + (1000 × 0.75 (prix unitaire pour la tranche 3)) +
-(1000 × 0.60 (prix unitaire pour la tranche 4)) + (1200 × 0.40 (prix unitaire pour la tranche 5)) = 3730 |	3730 $|
+|5200 |	(1000 × 1 (prix unitaire pour la tranche 1)) + (1000 × 0.90 (prix unitaire pour la tranche 2)) + (1000 × 0.75 (prix unitaire pour la tranche 3)) + (1000 × 0.60 (prix unitaire pour la tranche 4)) + (1200 × 0.40 (prix unitaire pour la tranche 5)) = 3730 |	3730 $|
 *Tableau 4. Calcul du prix avec le modèle de tarification à tranches graduées*
 
 ####Tranche fixe
@@ -436,7 +434,6 @@ coût réel de votre application est calculé. L'application Web utilise les ser
 * Deux stratégies {{site.data.keyword.autoscaling}}, un processeur et de la mémoire
 * 2 Go par mois pour {{site.data.keyword.datacshort}}
 * 150 Go par mois pour NoSQL Database, 100 000 appels API lourds et 500 000 appels API légers
-* 8 Go par mois pour {{site.data.keyword.sqldb}} Database
 * 20 Go pour le trafic réseau entrant et sortant
 
 ###Prix des ressources {{site.data.keyword.Bluemix_notm}}
@@ -452,10 +449,7 @@ temps, par exemple sur un mois. La tarification dans cet exemple est en dollar.
 |Data Cache - Starter |	1 Go d'espace en cache et une réplique |	55,00 $/instance |
 |Data Cache - Standard |	5 Go d'espace en cache et une réplique |	155,00 $/instance |
 |Data Cache - Premium |	25 Go d'espace en cache et une réplique |	505,00 $/instance|
-|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 Go de stockage de données gratuits<br/>50 000 appels d'API légers
-gratuits par mois<br/>10 000 appels d'API lourds gratuits par mois | 1,00 $/Go<br/>0,03 $/1000 appels d'API légers<br/>0,15 $/1000
-appels d'API lourds |
-|SQL Database 	| 2 Go gratuits par instance<br/>10 Go maximum par instance |	30,00 $/instance |
+|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 Go de stockage de données gratuits<br/>50 000 appels d'API légers gratuits par mois<br/>10 000 appels d'API lourds gratuits par mois | 1,00 $/Go<br/>0,03 $/1000 appels d'API légers<br/>0,15 $/1000 appels d'API lourds |
 *Tableau 7. Fiche des prix*
 
 ###Calcul du prix de l'application
@@ -499,15 +493,37 @@ mois. Soustrayez la franchise gratuite de 50 000 appels API légers et de 10 000
 <p>
 Le prix total est de 148 + 13,5 + 13,5 = 175 $.</p></dd>
 
-<dt>8 Go par mois pour SQL Database</dt>
-<dd>Le prix total est de 30 $ par instance.</dd>
-
 <dt>20 Go pour le trafic réseau entrant et sortant</dt>
 <dd>Le trafic réseau entrant et sortant n'est pas facturé.</dd>
 
 </dl>
 
-Une fois tous les éléments additionnés, le prix total de l'application est 384,15 $.
+Une fois tous les éléments ajoutés, le prix total de l'application est de 354,15 $.
+
+###Devises prises en charge
+
+Bien que le dollar américain (USD) soit utilisé dans les exemples de prix, d'autres devises sont prises en charge dans {{site.data.keyword.Bluemix_notm}}. Le
+tableau ci-dessous répertorie les devises prises en charge.
+
+
+|Code ISO 4217| Devise  |
+|-------------|---------|
+|AUD |	  Dollar australien|
+|BRL |	  Réal brésilien|
+|CAD |	  Dollar canadien|
+|CHF |	  Franc suisse|
+|DKK |	  Couronne danoise|
+|EUR |	  Euro|
+|GBP |	  Livre sterling|
+|INR |	  Roupie indienne|
+|JPY |	  Yen japonais|
+|KRW |	  Won sud-coréen|
+|NOK |	  Couronne norvégienne|
+|NZD |	  Dollar néo-zélandais |
+|SEK |	  Couronne suédoise|
+|USD |    Dollar américain|
+|ZAR |	  Rand sud-africain|
+*Tableau 8. Devises prises en charge*
 
 ##Tableau de bord de l'utilisation
 {: #usage}
@@ -554,7 +570,7 @@ En tant que responsable d'un compte de type Paiement à la carte, vous pouvez d�
 total de votre compte, pour votre contexte d'exécution et vos services et pour des services individuels, à l'exception des services de tiers. Vous recevez des
 notifications lorsque vous atteignez 80 %, 90 % et 100 % des seuils que vous avez spécifiés pour les dépenses.
 
-Pour ouvrir la vue **Notifications**, cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Comptet** &gt; *nom_votre_compte* &gt; **Notifications relatives aux dépenses**. Entrez une valeur numérique afin de définir un
+Pour ouvrir la vue **Notifications**, cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; *nom_votre_compte* &gt; **Notifications relatives aux dépenses**. Entrez une valeur numérique afin de définir un
 seuil pour les dépenses, en fonction duquel une notification sera déclenchée, pour chaque type de notification relative aux dépenses, si nécessaire. Vous pouvez aussi ajouter et supprimer des notifications pour des services individuels.
 
 ##Changement de plan
@@ -576,15 +592,8 @@ exécuter.
 
 |Service |	Information|
 |--------|-------------|
-|Presence Insights 	|Si vous avez choisi un plan léger et que vous dépassez les franchises, un message 403 s'affiche ou est consigné afin
-d'indiquer que vous ne disposez plus des autorisations, et votre instance de service est désactivée. De plus, les appels d'API REST POST sont rejetés avec
-une réponse 403.<br/><br/>Si votre service est désactivé car vous avez dépassé les franchises, vous pouvez procéder à la mise à niveau du plan
-léger vers un plan payant. Votre service est réactivé dans les deux heures.<br/><br/>Si vous disposez d'un plan payant, vous pouvez passer à un
-plan inférieur, c'est-à-dire au plan léger, tant que votre utilisation ne dépasse pas la franchise du plan léger pour les événements et l'espace de
-stockage total.<br/><br/>Lorsque vous mettez un plan à niveau ou passez à un plan inférieur, il n'est pas nécessaire de reconstituer ou de
-redémarrer vos applications.|
-*Tableau 8. Etapes à effectuer pour changer de plan*
-
+|Presence Insights 	|Si vous avez choisi un plan léger et que vous dépassez les franchises, un message 403 s'affiche ou est consigné afin d'indiquer que vous ne disposez plus des autorisations, et votre instance de service est désactivée. De plus, les appels d'API REST POST sont rejetés avec une réponse 403.<br/><br/>Si votre service est désactivé car vous avez dépassé les franchises, vous pouvez procéder à la mise à niveau du plan léger vers un plan payant. Votre service est réactivé dans les deux heures.<br/><br/>Si vous disposez d'un plan payant, vous pouvez passer à un plan inférieur, c'est-à-dire au plan léger, tant que votre utilisation ne dépasse pas la franchise du plan léger pour les événements et l'espace de stockage total.<br/><br/>Lorsque vous mettez un plan à niveau ou passez à un plan inférieur, il n'est pas nécessaire de reconstituer ou de redémarrer vos applications.|
+*Tableau 9. Etapes à effectuer pour changer de plan*
 ###Changement de plan via l'interface de ligne de commande
 
 Si vous le souhaitez, vous pouvez changer de plan de service via l'interface de ligne de commande.

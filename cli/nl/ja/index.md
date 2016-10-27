@@ -18,7 +18,7 @@ copyright:
 # CLI と開発ツール
 {: #cli}
 
-*最終更新日: 2016 年 6 月 28 日*
+*最終更新日: 2016 年 8 月 31 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix_short}} では、統合コマンド・ライン・インターフェースおよび CLI プラグインなどの強力なツールにアクセスできます。これらの各 CLI のダウンロードは、ユーザーの {{site.data.keyword.Bluemix_notm}} 体験をサポートするためにすべて使用可能です。

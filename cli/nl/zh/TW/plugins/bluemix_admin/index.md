@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-前次更新：2016 年 8 月 17 日
+前次更新：2016 年 9 月 1 日
 {: .last-updated}
 
 
@@ -43,12 +43,12 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">您的 {{site.data.keyword.Bluemix_notm}} 實例 URL 的子網域。例如，<code>https://console.mycompany.bluemix.net/cli</code>。</dd>
+<dd class="pd">您的 {{site.data.keyword.Bluemix_notm}} 實例 URL 的子網域。例如，<code>https://console.mycompany.bluemix.net/cli</code></dd>
 </dl>
 </li>
-<li>若要安裝 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式，請執行下列指令：<br/><br/>
+<li>若要安裝「{{site.data.keyword.Bluemix_notm}} 管理 CLI」外掛程式，請執行下列指令：<br/><br/>
 <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
@@ -61,7 +61,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式
 
-您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式來新增或移除使用者、對組織指派或取消指派使用者，以及執行其他管理作業。若要查看指令清單，請執行下列指令：
+您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式來新增或移除使用者、對組織指派或取消指派使用者，以及執行其他管理作業。當您建立組織名稱、空間名稱及應用程式安全群組時，不支援特殊字元（例如空格、加號 (+) 及 & 符號）。請嘗試使用混合大寫或底線來建立唯一名稱。
+
+若要查看指令清單，請執行下列指令：
 
 
 ```
@@ -103,7 +105,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**附註**：若要將使用者新增至特定組織，您必須是組織的管理員，或者必須具有 **Admin**（可用的替代項目是 **Superuser**）或具有 **Write** 存取權的 **User** 許可權。
+**附註**：若要將使用者新增至特定組織，您必須是組織的管理員，或者必須具有**管理**（可用的替代項目是**超級使用者**）或具有**寫入**存取權的**使用者**許可權。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -118,17 +120,23 @@ cf ba add-user <user_name> <organization>
 
 ### 搜尋使用者
 
-您可以搜尋使用者。輸入下列指令： 
+您可以搜尋使用者。視需要，輸入下列指令與選用搜尋過濾器參數（name、permission、organization 及 role）：
 
 ```
-cf ba search-users <user_name>
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">指派給使用者的許可權。例如，超級使用者、基本、型錄、使用者及報告。如需所指派使用者許可權的相關資訊，請參閱[許可權](../../../admin/index.html#permissions)。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">使用者所屬的組織名稱。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">指派給使用者的組織角色。例如，組織的管理員、帳單管理員或審核員。您必須使用此參數來指定組織。如需角色的相關資訊，請參閱[使用者角色](../../../admin/users_roles.html#userrolesinfo)。</dd>
 
 </dl>
 
@@ -149,9 +157,9 @@ cf ba set-permissions <user_name> <permission> <access>
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
 <dt class="pt dlterm">&lt;permission&gt;</dt>
-<dd class="pd">設定使用者的許可權：Admin（可用的替代項目是 Superuser）、Login（可用的替代項目是 Basic）、Catalog（Read 或 Write 存取權）、Reports（Read 或 Write 存取權）或 Users（Read 或 Write 存取權）。</dd>
+<dd class="pd">設定使用者的許可權：管理（可用的替代項目是「超級使用者」）、登入（可用的替代項目是「基本存取」）、型錄（「讀取」或「寫入」存取權）、報告（「讀取」或「寫入」存取權）或使用者（「讀取」或「寫入」存取權）。</dd>
 <dt class="pt dlterm">&lt;access&gt;</dt>
-<dd class="pd">對於 Catalog、Reports 或 Users 許可權，您還必須將存取層次設定為<code>讀取</code>或<code>寫入</code>。</dd>
+<dd class="pd">對於「型錄」、「報告」或「使用者」許可權，您還必須將存取層次設定為<code>讀取</code>或<code>寫入</code>。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba sp** 作為較長的 **ba set-permissions** 指令名稱的別名。
@@ -160,7 +168,7 @@ cf ba set-permissions <user_name> <permission> <access>
 
 ### 移除使用者
 
-您可以輸入下列指令，從您的 {{site.data.keyword.Bluemix_notm}} 環境中移除使用者：
+您可以輸入下列指令，從您的 {{site.data.keyword.Bluemix_notm}} 環境移除使用者：
 
 ```
 cf ba remove-user <user_name>
@@ -408,7 +416,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要從服務的可見性清單中移除之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
+<dd class="pd">要從服務的可見性清單移除之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba rspv** 作為較長的 **ba remove-service-plan-visibility** 指令名稱的別名。
@@ -471,7 +479,7 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 
 **提示：**您也可以使用 **ba asb** 作為較長的 **ba add-service-broker** 指令名稱的別名。
 
-* 您可以輸入下列指令來刪除服務分配管理系統，以從 {{site.data.keyword.Bluemix_notm}}「型錄」中移除自訂服務：
+* 您可以輸入下列指令來刪除服務分配管理系統，以從 {{site.data.keyword.Bluemix_notm}}「型錄」移除自訂服務：
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -510,7 +518,7 @@ cf ba delete-service-broker <service_broker>
 
 ASG 是當作虛擬防火牆使用，可控制 {{site.data.keyword.Bluemix_notm}} 環境中應用程式的出埠資料流量。每一個 ASG 都包含一份規則清單，可容許與外部網路之間的特定資料流量和通訊。您可以將一個以上的 ASG 連結至特定安全群組集（例如，用於套用廣域存取權的群組集），也可以連結至 {{site.data.keyword.Bluemix_notm}} 環境中組織內的空間。
 
-{{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許所有執行中應用程式或所有暫置應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
+{{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許對所有執行中應用程式或所有編譯打包中應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
 
 **附註**：下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。
 

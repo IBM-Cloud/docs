@@ -146,7 +146,8 @@ IBM Eclipse Tools for Bluemix が稼働している Java のバージョンを�
 {: #ts_retrieve_space}
 現行組織に関連付けられたスペースがない場合、アプリまたはサービスを作成できません。
 
-Bluemix でアプリを作成しようとすると、以下のエラー・メッセージが表示されます。{: tsSymptoms}
+Bluemix でアプリを作成しようとすると、以下のエラー・メッセージが表示されます。
+{: tsSymptoms}
 
 `BXNUI0515E: 組織のスペースを取得しようとして、ネットワーク接続の問題のために失敗しました。`
 
@@ -212,7 +213,16 @@ Bluemix でアプリを作成しようとすると、以下のエラー・メッ
 ```
 process.env.VCAP_SERVICES
 ```
-他のプログラミング言語で使用できるコマンドについて詳しくは、[Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} および [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} を参照してください。## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリをデプロイできない
+他のプログラミング言語で使用できるコマンドについて詳しくは、[Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} および [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} を参照してください。
+
+
+
+
+
+
+
+
+## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリをデプロイできない
 {: #ts_bm_tools_facet}
 
 サポートされないファセットが Eclipse プロジェクトに適用された場合、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない可能性があります。 
@@ -296,41 +306,6 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-	
-	
-## Git リポジトリーを追加できない
-{: #ts_cannot_addgit}
-
-ダッシュボード上にアプリを作成し、その後 Git リポジトリーを作成するために「Git の追加」をクリックしたが、続行できません。
-
-
-
-**「Git の追加」**をクリックすると、ウィンドウが開き、次のいずれかの問題が発生します。
-{: tsSymptoms} 
-
-  * ウィンドウが空白画面で停止する。
-  * サード・パーティーの Cookie に問題があるというメッセージが表示される。
-
-
-
-ご使用のブラウザーが、Cookie を設定しないように構成されている可能性があります。その Cookie は、{{site.data.keyword.Bluemix_notm}} コンソールのコンテキスト内から hub.jazz.net インターネット・ドメイン内の IBM® Bluemix DevOps Services サイトから設定する必要があります。
-{: tsCauses}  
-
- 
-
-この問題は、次の方法のいずれかで修正することができます。
-{: tsResolve}
-
-  * {{site.data.keyword.Bluemix_notm}} コンソールから開くウィンドウに示されている指示に従います。ボタンをクリックします。別のブラウザー・ウィンドウが一時的に開きます。そのウィンドウで、DevOps Services が認証 Cookie を設定します。
-  * 別のブラウザー・タブで、https://hub.jazz.net にアクセスし、ログインします。{{site.data.keyword.Bluemix_notm}} コンソールに戻り、ページを更新します。**「Git の追加」**を再度クリックします。
-  * サード・パーティーの Cookie を使用可能にするようにブラウザー設定を変更し、「Git の追加」を再度クリックします。設定の構成について詳しくは、以下のご使用ブラウザーの資料を参照してください。
-    * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-これらの回避策で問題が解決されない場合は、idslogin@jazz.net に E メールをお送りください。
-
-
 
 ## Android アプリが {{site.data.keyword.mobilepushshort}} を受信できない
 {: #ts_push}
@@ -340,7 +315,8 @@ Google にアクセス不能な特定地域の Android アプリは、IBM {{site
 Bluemix アプリに {{site.data.keyword.mobilepushshort}} サービスをバインドして、登録デバイスにメッセージを送信します。ただし、Android プラットフォームで開発されたアプリは、特定の地域で通知を受信できません。
 {: tsSymptoms}
 
-IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messaging (GCM) サービスを使用して、Android プラットフォームで開発されたモバイル・アプリに通知を送ります。Android アプリが通知を受信できるようにするには、Google Cloud Messaging (GCM) サービスがモバイル・アプリからアクセス可能でなければなりません。GCM サービスが Android アプリから到達不能の地域では、Android アプリは{{site.data.keyword.mobilepushshort}}を受信できません。{: tsCauses}
+IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messaging (GCM) サービスを使用して、Android プラットフォームで開発されたモバイル・アプリに通知を送ります。Android アプリが通知を受信できるようにするには、Google Cloud Messaging (GCM) サービスがモバイル・アプリからアクセス可能でなければなりません。GCM サービスが Android アプリから到達不能の地域では、Android アプリは{{site.data.keyword.mobilepushshort}}を受信できません。
+{: tsCauses}
 
  
 回避策としては、 GCM サービスに依存しないサード・パーティー・サービス (例えば、[Pushy](https://pushy.me){: new_window}、[igetui](http://www.getui.com/){: new_window}、[jpush](https://www.jpush.cn/){: new_window} など) を使用します。
@@ -661,7 +637,8 @@ push` コマンドを **-n** オプションで使用します。
 
  	
 	
-**-p** オプションを使用して、WAR ファイルを指定するか、WAR ファイルへのパスを追加してください。以下に例を示します。{: tsResolve}
+**-p** オプションを使用して、WAR ファイルを指定するか、WAR ファイルへのパスを追加してください。以下に例を示します。
+{: tsResolve}
 
 ```
 cf push MyUniqueAppName01 -p app.war
@@ -670,7 +647,13 @@ cf push MyUniqueAppName01 -p app.war
 ```
 cf push MyUniqueAppName02 -p "./app.war"
 ```
-`cf push` コマンドの詳細な情報を確認するには、`cf push -h` を入力してください。## Liberty アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
+`cf push` コマンドの詳細な情報を確認するには、`cf push -h` を入力してください。
+
+
+
+
+
+## Liberty アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
 {: #ts_doublebytes}
 
 サーブレットまたは JSP ファイルに対して Unicode サポートが適切に構成されていない場合、2 バイト文字が適切に表示されない可能性があります。
@@ -689,13 +672,11 @@ Liberty アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッ
 サーブレットまたは JSP ファイル内で、以下のコードを使用できます。
 {: tsResolve} 
 
-  * サーブレット・ソース・ファイル内
-     
+  * サーブレット・ソース・ファイル内 
     ```
 	response.setContentType("text/html; charset=UTF-8");
 	```
-  * JSP 内
-     
+  * JSP 内 
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
@@ -1027,18 +1008,18 @@ Eclipse Orion {{site.data.keyword.webide}} に実行バーが見つからない�
 コミットのプッシュ時にワークアイテムのリンクを作成するように GitHub プロジェクトを構成したが、リンクが期待どおり動作していない場合は、以下の手順で問題点を見つけてください。
 
 1. GitHub リポジトリーで**「Settings」**をクリックします。
-   ![GitHub の「Settings」リンク](images/githubSettings1_small.png)
+   ![GitHub の「Settings」リンク](images/github_settings.png)
 
 2. **「Webhooks & services」**をクリックします。
-   ![GitHub の「Web hooks and services」リンク](images/githubHooks1_small.png)
+   ![GitHub の「Web hooks and services」リンク](images/github_webhook.png)
 
 3. メッセージを表示するには、{{site.data.keyword.jazzhub}} 状況アイコンの上にマウスを移動します。
-   ![サービス・フックに関するエラー・メッセージ](images/troubleshoothook1_small.png)
+   ![サービス・フックに関するエラー・メッセージ](images/github_error.png)
 
 4. GitHub のメッセージに従って、エラーを解決します。
 
 5. 修正により問題が解決したことを確認するには、別の変更をコミットしてプッシュするか、{{site.data.keyword.jazzhub_short}} のサービス・ページに移動して**「Test service」**をクリックします。
-   ![GitHub の「Test Service」ボタン](images/githubTestService_small.png)
+   ![GitHub の「Test Service」ボタン](images/github_test.png)
 
 6. 状況アイコンを再びチェックして、エラーがないことを確認します。
    ![エラーのない状況アイコン](images/githubResolved_small.png)
@@ -1103,8 +1084,8 @@ Eclipse Orion {{site.data.keyword.webide}} に実行バーが見つからない�
 {: tsResolve}
  
   * {{site.data.keyword.Bluemix_notm}} ダッシュボードで、スペースを作成する組織を選択し、次に**「スペースの作成」**をクリックします。
-  * cf コマンド・ライン・インターフェースに ```cf create-space <space_name>
--o <organization_name>``` と入力します。
+  * cf コマンド・ライン・インターフェースに `cf create-space <space_name>
+-o <organization_name>` と入力します。
   
   
   
@@ -1215,9 +1196,10 @@ IBM® Bluemix™ ランタイムを使用すると問題が発生することが
   * [Cloud Foundry Java ビルドパック](https://github.com/cloudfoundry/java-buildpack){: new_window}。このビルドパックには、最新バージョンのビルドパックが使用されるように組み込みメカニズムが装備されています。このメカニズムによる処理方法について詳しくは、[extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window} を参照してください。 
   * [Cloud Foundry Node.js ビルドパック](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。このビルドパックは、環境変数を使用して同様の機能を提供します。この Node.js ビルドパックを有効にして、毎回インターネットからノード・モジュールをダウンロードするには、cf コマンド・ライン・インターフェースに次のコマンドを入力します。 	
   ```
-set NODE_MODULES_CACHE=false
-```
-使用中のビルドパックが最新のコンポーネントを自動的にロードするメカニズムを提供していない場合は、以下のステップに従って手動でキャッシュ・ディレクトリー内のコンテンツを削除し、アプリを再度プッシュします。  1. ヌル・ビルドパックのブランチ (例えば https://github.com/ryandotsmith/null-buildpack) をチェックアウトします。ブランチをチェックアウトする方法については、[Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window} を参照してください。  
+  set NODE_MODULES_CACHE=false
+  ```
+使用中のビルドパックが最新のコンポーネントを自動的にロードするメカニズムを提供していない場合は、以下のステップに従って手動でキャッシュ・ディレクトリー内のコンテンツを削除し、アプリを再度プッシュします。
+  1. ヌル・ビルドパックのブランチ (例えば https://github.com/ryandotsmith/null-buildpack) をチェックアウトします。ブランチをチェックアウトする方法については、[Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window} を参照してください。  
   2. `null-buildpack/bin/compile` ファイルに以下の行を追加して変更をコミットします。変更をコミットする方法については、[Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window} を参照してください。
 
   ```
@@ -1273,7 +1255,10 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-デフォルトのロギング構成を変更する方法について詳しくは、 『[error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}』を参照してください。## サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない
+デフォルトのロギング構成を変更する方法について詳しくは、 『[error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}』を参照してください。
+
+
+## サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない
 {: #ts_importpylib}
 
 サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない場合があります。この問題は、構成ファイルを Python アプリケーションのルート・ディレクトリーに追加することで解決できます。
@@ -1309,7 +1294,11 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	```
 	web: python <yourappname>.py $PORT
 	```
-これでサード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできます。## 「インスタンスの詳細」ページの「アクション」ボタンが使用不可になっている
+これでサード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできます。
+
+
+
+## 「インスタンスの詳細」ページの「アクション」ボタンが使用不可になっている
 {: #ts_actionsbutton}
 
 

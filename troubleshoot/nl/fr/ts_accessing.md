@@ -75,7 +75,7 @@ En tant qu'employé IBM, avant de pouvoir vous connecter à {{site.data.keyword.
 {: tsResolve} 
 
   1. Sur la page [Central Sign-on](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window}, cliquez sur **My Sign-ons**.
-  2. Sur la page My Sign-ons, cliquez sur **Link IDs** et entrez votre IBMid et votre mot de passe sur la page Sign in de {{site.data.keyword.Bluemix_notm}}. Après cela, votre ID intranet et votre IBMid sont automatiquement liés. 
+  2. Sur la page My Sign-ons, cliquez sur **Link IDs** et entrez votre IBMid et votre mot de passe sur la page Sign in de {{site.data.keyword.Bluemix_notm}}. Après cela, votre ID intranet et votre IBMid sont automatiquement liés.
   
 
 <!-- end STAGING ONLY -->
@@ -250,7 +250,7 @@ Pour enregistrer plusieurs utilisateurs pour
 utilisateur :
 {: tsResolve}
 
-  1. Cliquez sur **S'INSCRIRE** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. 
+  1. Cliquez sur **S'INSCRIRE** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
   2. Suivez les étapes de l'assistant.
 
     

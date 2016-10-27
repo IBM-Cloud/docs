@@ -228,7 +228,7 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
 ## {{site.data.keyword.Bluemix_notm}} 安全部署
 {: #security-deployment}
 
-{{site.data.keyword.Bluemix_notm}} 安全部署架構包括適用於應用程式使用者及開發人員的不同資訊流程，以確保安全存取。
+{{site.data.keyword.Bluemix_notm}} 安全部署架構包含適用於應用程式使用者及開發人員的不同資訊流程，以確保安全存取。
 
 ![Bluemix 安全部署架構](images/sec_deployment.svg)
 

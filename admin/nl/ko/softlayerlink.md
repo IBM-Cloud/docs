@@ -27,7 +27,7 @@ copyright:
 
 **중요사항:** {{site.data.keyword.Bluemix_notm}}의 모든 연결된 계정은 종량과금제 계정이어야 합니다. 종량과금제 계정을 새로 작성하거나 기존 종량과금제 계정을 연결할 수 있습니다. 또는 기존 시험판 계정을 연결할 수 있지만, 이는 종량과금제 계정으로 업그레이드됩니다.   
 
-계정이 연결된 후에는 계정 간에 쉽게 전환할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 {{site.data.keyword.Bluemix_notm}} 리소스의 사용량을 계속 모니터할 수 있습니다. 그러나 이러한 리소스에 대한 청구는 이제 SoftLayer 송장에 나타납니다. 
+계정이 연결된 후에는 계정 간에 쉽게 전환할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 {{site.data.keyword.Bluemix_notm}} 리소스의 사용량을 계속 모니터링할 수 있습니다. 그러나 이러한 리소스에 대한 청구는 이제 SoftLayer 송장에 나타납니다. 
 
 계정 청구가 연결되지만, 로그인 ID가 SoftLayer 계정 인증 방식에 따라 다릅니다.
 * SoftLayer 계정에 있는 사용자 중 인증에 IBM ID를 사용하지 않는 사용자의 경우 SoftLayer 제품과 서비스에는 계속해서 SoftLayer ID를 사용하고 {{site.data.keyword.Bluemix_notm}} 제품 및 서비스에는 IBM ID를 사용하십시오. 
@@ -86,7 +86,7 @@ SoftLayer 자산으로 API 기반 퍼블릭 {{site.data.keyword.Bluemix_notm}} �
 3. 서비스 신임 정보를 복사하고 이를 사용자 애플리케이션에 추가하여 기존 코드로 실행할 서비스를 설정하십시오. 
 4. 앱을 업데이트한 후에 SoftLayer 인프라에 새 버전을 배치하십시오. 
 
-SoftLayer에서 사용자 앱의 Watson API를 호출하여 이를 보다 개인화함으로써 *Insights 및 Cognitive* 지식을 얻을 수 있습니다. 또는 *데이터 및 분석* 서비스를 사용하여 앱에 대한 고성능 분석을 활용할 수 있습니다. 또는 {{site.data.keyword.Bluemix_notm}}에 관리를 맡길 수 있는 DaaS(database-as-a-service)를 선택하십시오. 
+SoftLayer에서 사용자 앱의 Watson API를 호출하여 이를 보다 개인화함으로써 *Insights 및 코그너티브* 지식을 얻을 수 있습니다. 또는 *데이터 및 분석* 서비스를 사용하여 앱에 대한 고성능 분석을 활용할 수 있습니다. 또는 {{site.data.keyword.Bluemix_notm}}에 관리를 맡길 수 있는 DaaS(database-as-a-service)를 선택하십시오. 
 
 {{site.data.keyword.activedeployshort}} 및 {{site.data.keyword.deliverypipeline}} 등의 서비스와 함께 컨테이너를 사용하여 애플리케이션 개발을 현대화하십시오. 그리고 {{site.data.keyword.vpn_short}} 서비스를 사용하여 SoftLayer로 다시 터널링함으로써 사설 네트워크의 컨테이너를 SoftLayer 사설 네트워크에 연결할 수 있습니다. 컴퓨팅 리소스 및 서비스에 대한 모든 사용 비용은 SoftLayer 청구에 반영됩니다.  
 

@@ -2050,8 +2050,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 
 ## bluemix ic cp
 {: #bluemix_ic_cp}
-Copie arquivos ou pastas entre um contêiner e o sistema de arquivos local. Esse comando chama a CLI do Docker. 
-Para obter mais informações, consulte o comando
+Copie arquivos ou pastas entre um contêiner e o sistema de arquivos local. Esse comando chama a CLI do Docker. Para obter mais informações, consulte o comando
 [build](https://docs.docker.com/reference/commandline/cp/){: new_window}
 na ajuda do Docker.
 
@@ -2288,7 +2287,7 @@ contêineres em um grupo devido a uma falha no hardware. Você pode não ser cap
 essa opção com tamanhos de grupo maiores porque cada região e organização do Bluemix tem
 um conjunto limitado de nós de cálculo disponíveis para implementação. Se sua
 implementação não for bem-sucedida, reduza o número de instâncias de contêiner no grupo
-ou remova a opção --anti.</dd>
+ou remova a opção --anti. </dd>
     
    <dt>--bind SERVICE_INSTANCE_NAME (opcional)</dt>
    <dd> Inclua um serviço em um grupo de contêiner em execução. </dd>
@@ -2492,7 +2491,6 @@ bluemix ic ips [-q]
 <strong>Exemplos</strong>:
 
 O exemplo a seguir mostra uma solicitação para receber uma lista de todos os endereços IP da organização.
-
 ```
 bluemix ic ips -q
 ```
@@ -2512,8 +2510,7 @@ bluemix ic ip-request [-q]
 
    <dl>
    <dt>-q (opcional)</dt>
-   <dd>Liste somente os endereços IP, sem os IDs dos contêineres que estão ligados a
-esses endereços IP.</dd>
+   <dd>Liste somente os endereços IP, sem os IDs dos contêineres que estão ligados a esses endereços IP.</dd>
    </dl>
 
 
@@ -2835,7 +2832,7 @@ região será usado.</dd>
 ## bluemix ic unprovision
 {: #bluemix_ic_unprovision}
 
-Exclua o serviço IBM Containers do espaço do Bluemix em que você efetuou login. 
+Exclua o serviço IBM Containers do espaço do Bluemix em que você efetuou login.
 
 <strong>Atenção</strong>: Quando você executar esse comando, todos os contêineres
 únicos e grupos de contêineres serão perdidos. Seu espaço ainda estará disponível no

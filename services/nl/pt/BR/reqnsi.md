@@ -65,8 +65,7 @@ o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Pa
 
 
 
-O {{site.data.keyword.Bluemix_notm}} também tem serviços experimentais que você pode tentar. 
-Para visualizar todos os serviços experimentais, modelos e tempos de execução
+O {{site.data.keyword.Bluemix_notm}} também tem serviços experimentais que você pode tentar. Para visualizar todos os serviços experimentais, modelos e tempos de execução
 disponíveis, efetue login no {{site.data.keyword.Bluemix_notm}}, role para o
 final do Catálogo e, em seguida, clique em **{{site.data.keyword.Bluemix_notm}} Lab Catalog**.
 

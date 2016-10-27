@@ -15,7 +15,7 @@ copyright:
 
 # Seguridad de {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Última actualización: 9 de mayo de 2016*
+Última actualización: 22 de julio de 2016
 {: .last-updated}
 
 Diseñada con prácticas de ingeniería seguras, la plataforma {{site.data.keyword.Bluemix}} dispone de controles de seguridad de varios niveles de la red y de la infraestructura. {{site.data.keyword.Bluemix_notm}} ofrece una serie de servicios de seguridad que pueden utilizar los desarrolladores de apps para proteger sus apps móviles y web. Estos elementos se combinan para convertir {{site.data.keyword.Bluemix_notm}} en una plataforma con opciones claras para el desarrollo de apps seguras.
@@ -73,16 +73,17 @@ Para {{site.data.keyword.Bluemix_notm}} dedicado y local, la autenticación a tr
 <dt>Protección de los datos</dt>
 <dd> Todo el tráfico de {{site.data.keyword.Bluemix_notm}} pasa por IBM WebSphere® DataPower® SOA Appliances, que ofrece funciones de proxy inverso, terminación de SSL y equilibrio de cargas.
 Se permiten los siguientes métodos HTTP:
- * DELETE
- * GET
- * HEAD
- * OPTIONS
- * POST
- * PUT
- * TRACE
-
-La inactividad de HTTP supera el tiempo de espera transcurridos 2 minutos.
-
+<ul>
+<li>DELETE</li>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+<li>POST</li>
+<li>PUT</li>
+<li>TRACE</li>
+</ul>
+La inactividad de HTTP supera el tiempo de espera transcurridos 2 minutos.</dd>
+<dd>
 DataPower rellena las siguientes cabeceras:
 <dl>
 <dt>$wsis</dt>
@@ -110,10 +111,10 @@ DataPower rellena las siguientes cabeceras:
 
 <dl>
 <dt>Segregación del entorno</dt>
-<dd> En {{site.data.keyword.Bluemix_notm}} público, los entornos de desarrollo y de producción se han separado para mejorar la estabilidad y la seguridad de las apps.</dd>
+<dd>En {{site.data.keyword.Bluemix_notm}} público, los entornos de desarrollo y de producción se han separado para mejorar la estabilidad y la seguridad de las apps.</dd>
 
 <dt>Cortafuegos</dt>
-<dd> Se han colocado cortafuegos para restringir el acceso a la red {{site.data.keyword.Bluemix_notm}}. En {{site.data.keyword.Bluemix_notm}}
+<dd>Se han colocado cortafuegos para restringir el acceso a la red {{site.data.keyword.Bluemix_notm}}. En {{site.data.keyword.Bluemix_notm}}
 local, el cortafuegos de su empresa segrega el resto de la red desde la instancia de {{site.data.keyword.Bluemix_notm}}.</dd>
 
 <dt>Protección frente a intrusiones</dt>
@@ -145,13 +146,13 @@ Nessus, para detectar cualquier problema en la configuración de la red y del ho
 <dt>Gestión de accesos de usuario</dt>
 <dd>Dentro de {{site.data.keyword.Bluemix_notm}}, se siguen directrices de separación de responsabilidades para asignar a los usuarios privilegios de acceso granulares y para garantizar que los usuarios solo tienen el acceso que necesitan para realizar su trabajo según el principio de privilegio menor.
 
-En un entorno {{site.data.keyword.Bluemix_notm}} dedicado y local, los administradores asignados pueden gestionar roles y permisos para el usuario de {{site.data.keyword.Bluemix_notm}} en su organización mediante la Consola de administración. para obtener detalles, consulte [Gestión de {{site.data.keyword.Bluemix_notm}} local y dedicado](../admin/index.html#mng).
+En los entornos {{site.data.keyword.Bluemix_notm}} dedicado y local, los administradores asignados pueden gestionar roles y permisos para los usuarios de {{site.data.keyword.Bluemix_notm}} en su organización mediante la Consola de administración. Para obtener detalles, consulte [Gestión de {{site.data.keyword.Bluemix_notm}} local y dedicado](../admin/index.html#mng).
 </dd>
 </dl>
 
 ### Seguridad física
 
-{{site.data.keyword.Bluemix_notm}} público y dedicado se basa en la topología de red dentro de red de SoftLayer para la seguridad de la red física. Esta arquitectura de red dentro de red garantiza que sólo el personal autorizado pueda acceder a los sistemas. En {{site.data.keyword.Bluemix_notm}} local, usted es
+{{site.data.keyword.Bluemix_notm}} público y dedicado se basan en la topología de red dentro de red de SoftLayer para la seguridad de la red física. Esta arquitectura de red dentro de red garantiza que sólo el personal autorizado pueda acceder a los sistemas. En {{site.data.keyword.Bluemix_notm}} local, usted es
 el propietario de la seguridad física de la instancia local. El centro de datos está protegido detrás del cortafuegos de la compañía.
 
 En la topología de red dentro de red de SoftLayer, la capa de red pública controla el tráfico público a los sitios web alojados o a los recursos en línea. La capa de red privada permite una verdadera gestión fuera de banda a través de un operador autónomo sobre SSL, PPTP o pasarelas IPSec VPN. La capa de red entre centros de datos proporciona conectividad segura y gratuita entre servidores distribuidos en distintas instalaciones de SoftLayer.
@@ -180,7 +181,7 @@ Hay que tener en cuenta cada tipo de datos al planificar la seguridad de los dat
 
 La plataforma {{site.data.keyword.Bluemix_notm}} preserva los datos
 data-in-transit protegiendo el acceso del usuario final a la app mediante SSL, a través de la red hasta que los datos alcanzan IBM
-DataPower Gateway en el límite de la red interna de {{site.data.keyword.Bluemix_notm}}. IBM DataPower Gateway actúa como proxy inverso y ofrece terminación de SSL.
+DataPower Gateway en el límite de la red interna de {{site.data.keyword.Bluemix_notm}}. IBM DataPower Gateway actúa como proxy inverso y ofrece terminación de SSL. Desde ese punto a la aplicación, IPSEC se utiliza para proteger los datos a medida que viajan de IBM DataPower Gateway a la aplicación.
 
 La seguridad de los datos de tipo data-in-use y data-at-rest es responsabilidad del usuario, que es quien desarrolla la app. Puede aprovechar los diversos servicios relacionados con datos disponibles en el Catálogo de {{site.data.keyword.Bluemix_notm}} para ayudarle con este tema.
 
@@ -191,7 +192,7 @@ Como desarrollador de apps, debe habilitar las configuraciones de seguridad, inc
 
 Puede utilizar las funciones de seguridad que proporcionan diversos servicios de {{site.data.keyword.Bluemix_notm}} para proteger las apps. Todos los servicios de {{site.data.keyword.Bluemix_notm}} que genera IBM siguen las recomendaciones de desarrollo de ingeniería segura de IBM.
 
-**Nota:** Algunos de los servicios que se describen aquí puede que no se apliquen a las instancias dedicadas o locales de Bluemix.
+**Nota:** algunos de los servicios que se describen aquí puede que no se apliquen a las instancias de {{site.data.keyword.Bluemix_notm}} dedicado o local.
 
 ### Servicio SSO
 
@@ -231,35 +232,11 @@ las apps y la base de datos está protegida mediante certificados SSL. Este serv
 
 Para obtener más información, consulte [Guía de iniciación a dashDB](../services/dashDB/index.html).
 
-### Cloud Integration
-
-El servicio Cloud Integration le permite integrar datos de la nube y locales. Puede añadir un servicio para que interactúe con las bases de datos de fondo, como por ejemplo DB2, Oracle y SAP. A continuación, puede mover datos o crear API REST para que las apps de {{site.data.keyword.Bluemix_notm}} accedan a ellos y los utilicen. El servicio permite establecer una comunicación segura con conectores seguros locales y deja al descubierto sistemas de fondo de registro como API REST para que los puedan utilizar las apps.
-
-Para obtener más información, consulte [Guía de iniciación a Cloud Integration](../services/CloudIntegration/index.html).
-
 ### Secure Gateway
 
 El servicio Secure Gateway le permite conectar de forma segura apps {{site.data.keyword.Bluemix_notm}} con ubicaciones remotas, tanto locales como en la nube. Proporciona conectividad segura y establece un túnel entre la organización {{site.data.keyword.Bluemix_notm}} y la ubicación remota a la que desea conectarse. Puede configurar y crear una pasarela segura mediante la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o un paquete de API.
 
 Para obtener más información, consulte [Guía de iniciación a Secure Gateway](../services/SecureGateway/secure_gateway.html).
-
-### SQL Database
-
-El servicio SQL Database incorpora a la app una base de datos relacional con todas sus funciones. Este servicio utiliza IBM Directory Server LDAP para la autenticación e IBM InfoSphere® Guardium® Data Activity Monitor para proteger la base de datos a la que acceden las apps. La conexión entre
-las apps y la base de datos está protegida mediante el certificado SSL
-firmado por DigiCert.
-
-En determinados planes con este servicio, puede utilizar la consola de base de datos SQL en
-{{site.data.keyword.Bluemix_notm}} para obtener informes que contengan la información siguiente:
-
- * Datos sensible que puedan encontrarse en la base de datos a la que acceden
-las apps.
- * Los usuarios de las apps que han accedido a la base de datos en un período especificado.
- * Los usuarios de las apps que acceden a los datos sensibles de la base de datos.
-
-Para enmascarar los datos mediante SQL, las apps pueden llamar a las funciones de enmascaramiento definidas por el usuario (UDF) que se despliegan junto con la base de datos. Por ejemplo, puede enmascarar los datos que desee utilizar en otro lugar para efectuar pruebas. Las UDF implementan los algoritmos de enmascaramiento de datos de IBM Infosphere Optim™.
-
-El plan premium de este servicio también incluye cifrado de datos. Para obtener más información sobre este servicio, consulte [Guía de iniciación a SQL Database](../services/SQLDB/index.html).
 
 ### Información sobre seguridad y gestión de sucesos
 
@@ -280,7 +257,7 @@ Para los usuarios de la app de {{site.data.keyword.Bluemix_notm}} **, el **flujo
  3. A través del direccionador de la red.
  4. Alcanza el tiempo de ejecución de la app en el agente de ejecución de droplet (DEA).
 
-El *desarrollador de* {{site.data.keyword.Bluemix_notm}} sigue dos flujos principales, para inicio de sesión y para desarrollo y despliegue.
+El *desarrollador de* {{site.data.keyword.Bluemix_notm}} sigue dos flujos principales: para inicio de sesión y para desarrollo y despliegue.
  * El **flujo del desarrollador para inicio de sesión** incluye lo siguiente:
     * Para los desarrolladores que han iniciado una sesión en {{site.data.keyword.Bluemix_notm}} público, el flujo es el siguiente:
       1. A través del servicio IBM Single Sign On.
@@ -292,7 +269,7 @@ El *desarrollador de* {{site.data.keyword.Bluemix_notm}} sigue dos flujos princi
     3. A través del direccionador de la red.
     4. A través de autorización mediante el controlador de nube de Cloud Foundry, para garantizar el acceso solo a las apps e instancias de servicio que ha creado el desarrollador.
 
-Para los administradores de {{site.data.keyword.Bluemix_notm}} dedicado y {{site.data.keyword.Bluemix_notm}} local**, el **flujo del administrador** es el siguiente:
+Para los *administradores* de {{site.data.keyword.Bluemix_notm}} dedicado y {{site.data.keyword.Bluemix_notm}} local, el **flujo del administrador** es el siguiente:
  1. A través de un cortafuegos, con prevención de intrusiones y seguridad de la red.
  2. A través de IBM DataPower Gateway, con proxy inverso y proxy de terminación de SSL.
  3. A través del direccionador de la red.

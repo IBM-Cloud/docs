@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 系統詳細資料
 {: #openwhisk_reference}
-前次更新：2016 年 8 月 4 日
+前次更新：2016 年 9 月 9 日
 {: .last-updated}
 
 下列各節提供有關 {{site.data.keyword.openwhisk}} 系統的其他詳細資料。
@@ -92,24 +92,22 @@ copyright:
 
 此外，不保證將自動執行動作。可以同時執行兩個動作，而其負面影響可能會交錯。OpenWhisk 無法確保任何特定並行一致性模型是否有負面影響。所有並行性負面影響都是相依實作。
 
-### 最多一次語意
+### 動作執行保證
 {: #openwhisk_atmostonce}
-
-系統支援最多呼叫一次動作。
 
 收到呼叫要求時，系統會記錄要求，並分派啟動。
 
-系統會傳回啟動 ID（如果是非封鎖呼叫），以確認收到呼叫。請注意，即使沒有此回應（可能是因為網路連線中斷），還是可能會收到呼叫。
+系統會傳回啟動 ID（如果是非封鎖呼叫），以確認收到呼叫。請注意，如果在您接收到 HTTP 回應之前發生網路失敗或其他干擾失敗，則 {{site.data.keyword.openwhisk_short}} 可能已接受並處理要求。
 
 系統嘗試呼叫該動作一次，而導致下列四種結果的其中一種：
-- *成功*：順利完成動作呼叫。
+- *成功*：動作呼叫已順利完成。
 - *應用程式錯誤*：動作呼叫成功，但動作故意傳回錯誤值（例如，因為引數的前置條件不相符）。
 - *動作開發人員錯誤*：已呼叫動作，但異常完成（例如，動作偵測不到異常狀況，或有語法錯誤）。
-- *Whisk 內部錯誤*：系統無法呼叫動作。
-結果會記錄在啟動記錄的 `status` 欄位中（如下節所記載）。
+- *Whisk 內部錯誤*：系統無法呼叫動作。結果會記錄在啟動記錄的 `status` 欄位中（如下節所記載）。
 
 每個成功收到的呼叫以及每個可能向使用者收費的呼叫，最後都會有一筆啟動記錄。
 
+請注意，如果發生*動作開發人員錯誤*，則動作可能會局部執行，並產生外部可見的負面影響。使用者必須負責檢查是否實際發生這類負面影響，並在想要時發出重試邏輯。也請注意，特定 *whisk 內部錯誤* 將指出動作已開始執行，但系統在動作登錄完成之前失敗。
 
 ## 啟動記錄
 {: #openwhisk_ref_activation}
@@ -121,7 +119,7 @@ copyright:
 - *activationId*：啟動 ID。
 - *start* 及 *end*：記錄啟動開始及結束的時間戳記。值為 [UNIX 時間格式](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15)。
 - *namespace* 及 `name`：實體的名稱空間及名稱。
-- *logs*：字串陣列，內含動作在其啟動期間所產生的日誌。每一個陣列元素都對應至動作之 `stdout` 或 `stderr` 的行輸出，並且包括日誌輸出的時間及串流。結構如下所示：`TIMESTAMP STREAM: LOG_OUTPUT`。
+- *logs*：字串陣列，內含動作在其啟動期間所產生的日誌。每一個陣列元素都對應至動作之 `stdout` 或 `stderr` 的行輸出，並且包含日誌輸出的時間及串流。結構如下：`TIMESTAMP STREAM: LOG_OUTPUT`。
 - *response*：定義索引鍵 `success`、`status` 及 `result` 的字典：
   - *status*：啟動結果，可能是下列其中一個值："success"、"application error"、"action developer error"、"whisk internal error"。
   - *success*：假設並且只有在狀態為 `"success"` 時，才會為 `true`
@@ -154,7 +152,7 @@ function helper() {
 ### 同步及非同步行為
 {: #openwhisk_ref_javascript_synchasynch}
 
-JavaScript 函數常見於在回呼函數中繼續執行，即使是在傳回之後也是一樣。考慮到這種情況，JavaScript 動作的啟動可以是*同步* 或*非同步*。
+JavaScript 函數很常會在回呼函數中繼續執行，即使是函數返回之後也是一樣。考慮到這種情況，JavaScript 動作的啟動可以是*同步* 或*非同步*。
 
 如果 main 函數在下列其中一種狀況下結束，則 JavaScript 動作的啟動是**同步**：
 
@@ -199,7 +197,7 @@ function main(args) {
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-            reject({ done: true });
+        reject({ done: true });
        }, 100);
     })
  }
@@ -228,40 +226,58 @@ function main(params) {
 請注意，不論啟動是同步還是非同步，動作的呼叫都可以是封鎖或非封鎖。
 
 ### 其他 SDK 方法
-{: #openwhisk_ref_javascript_additsdk}
 
-`whisk.invoke()` 函數會呼叫另一個動作。它接受定義下列參數的字典作為引數：
+`whisk.invoke()` 函數會呼叫另一個動作，並傳回所產生之啟動的 Promise。它接受定義下列參數的字典作為引數：
 
 - *name*：要呼叫之動作的完整名稱。
 - *parameters*：JSON 物件，代表所呼叫動作的輸入。如果省略，預設值為空的物件。
-- *apiKey*：用來呼叫動作的授權金鑰。預設值為 `whisk.getAuthKey()`。 
-- *blocking*：應該以封鎖還是非封鎖模式呼叫動作。預設值為 `false`，這指出非封鎖呼叫。
-- *next*：要在呼叫完成時執行的選用回呼函數。
+- *apiKey*：用來呼叫動作的授權金鑰。預設值為 `whisk.getAuthKey()`。
+- *blocking*：應該以封鎖還是非封鎖模式呼叫動作。`blocking` 為 true 時，呼叫會先等待所呼叫動作的結果，再解析所傳回的 Promise。預設值為 `false`，這指出非封鎖呼叫。
 
-`next` 的簽章是 `function(error, activation)`，其中：
+`whisk.invoke()` 會傳回 Promise。若要讓 OpenWhisk 系統等待呼叫完成，您必須從動作的 `main` 函數傳回此 Promise。
+- 如果呼叫失敗，Promise 將會使用說明失敗呼叫的物件來拒絕。它可能會有兩個欄位：
+  - *error*：說明錯誤的物件 - 通常是字串。
+  - *activation*：根據呼叫失敗的本質，不一定存在的選用字典。如果存在，則會有下列欄位：
+    - *activationId*：啟動 ID：
+    - *result*：如果已使用封鎖模式來呼叫動作，則動作結果為 JSON 物件，否則為 `undefined`。
+- 如果呼叫成功，Promise 將使用字典來解析，而字典說明透過上述 *activationId* 及 *result* 欄位的啟動。
 
-- 如果呼叫成功，則 `error` 是 `false`，如果失敗，則為*實際* 值（在布林環境定義中評估時轉換為 true 的值），這通常是說明錯誤的字串。
-- 發生錯誤時，可能是未定義 `activation`（視失敗模式而定）。
-- 若已定義，則 `activation` 是包含下列欄位的字典：
-  - *activationId*：啟動 ID：
-  - *result*：如果已使用封鎖模式來呼叫動作，則動作結果為 JSON 物件，否則為 `undefined`。
+以下是使用所傳回 Promise 的封鎖呼叫範例：
+```javascript
+return whisk.invoke({
+  name: 'myAction',
+  blocking: true
+})
+.then(function (activation) {
+    // activation completed successfully, activation contains the result
+    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
+})
+.catch(function (reason) {
+    console.log('An error has occured ' + reason.error);
 
-`whisk.trigger()` 函數會發動觸發程式。它接受包含下列參數的 JSON 物件作為引數：
+    if(reason.activation) {
+      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
+    } else {
+      console.log('Failed to create activation.');
+    }
+});
+```
+{: codeblock}
+
+`whisk.trigger()` 函數會發動觸發程式，並傳回所產生之啟動的 Promise。它接受包含下列參數的 JSON 物件作為引數：
 
 - *name*：要呼叫的觸發程式的完整名稱。
 - *parameters*：JSON 物件，代表觸發程式的輸入。如果省略，預設值為空的物件。
 - *apiKey*：用來發動觸發程式的授權金鑰。預設值為 `whisk.getAuthKey()`。
-- *next*：要在發動完成時執行的選用回呼。
 
-`next` 的簽章是 `function(error, activation)`，其中：
-
-- 如果發動成功，則 `error` 是 `false`，如果失敗，則為*實際* 值，這通常是說明錯誤的字串。
-- 發生錯誤時，可能是未定義 `activation`（視失敗模式而定）。
-- 若已定義，則 `activation` 是 `activationId` 欄位包含啟動 ID 的字典。
+`whisk.trigger()` 會傳回 Promise。如果您需要 OpenWhisk 系統等待觸發程式完成，您應該從動作的 `main` 函數傳回此 Promise。
+- 如果觸發程式失敗，Promise 將會使用說明錯誤的物件來拒絕。
+- 如果觸發程式成功，Promise 將會使用 `activationId` 欄位包含啟動 ID 的字典來解析。
 
 `whisk.getAuthKey()` 函數會傳回用來執行動作的授權金鑰。您通常不需要直接呼叫此函數，因為 `whisk.invoke()` 及 `whisk.trigger()` 函數會隱含地使用它。
 
-### Node.js 運行環境
+### JavaScript 運行環境
+{: #openwhisk_ref_javascript_environments}
 
 在 Node.js 6.2.0 版環境中，預設會執行 JavaScript 動作。如果在建立/更新動作時明確指定值為 'nodejs:6' 的 `--kind` 旗標，則 6.2.0 環境也會用於動作。
 下列套件可在 Node.js 6.2.0 環境中使用：
@@ -352,20 +368,56 @@ function main(params) {
 - xmlhttprequest 1.7.0 版
 - yauzl 2.3.1 版
 
+## Python 動作
+
+Python 動作預設是使用 Python 2.7.12 來執行。
+除了標準 Python 程式庫之外，下列套件也可供 Python 動作使用。
+
+- attrs 16.1.0 版
+- beautifulsoup4 4.5.1 版
+- cffi 1.7.0 版
+- click 6.6 版
+- cryptography 1.5 版
+- cssselect 0.9.2 版
+- enum34 1.1.6 版
+- flask 0.11.1 版
+- gevent 1.1.2 版
+- greenlet 0.4.10 版
+- httplib2 0.9.2 版
+- idna 2.1 版
+- ipaddress 1.0.16 版
+- itsdangerous 0.24 版
+- jinja2 2.8 版
+- lxml 3.6.4 版
+- markupsafe 0.23 版
+- parsel 1.0.3 版
+- pyasn1 0.1.9 版
+- pyasn1-modules 0.0.8 版
+- pycparser 2.14 版
+- pydispatcher 2.0.5 版
+- pyopenssl 16.1.0 版
+- python-dateutil 2.5.3 版
+- queuelib 1.4.2 版
+- requests 2.11.1 版
+- scrapy 1.1.2 版
+- service-identity 16.0.0 版
+- simplejson 3.8.2 版
+- six 1.10.0 版
+- twisted 16.4.0 版
+- w3lib 1.15.0 版
+- werkzeug 0.11.10 版
+- zope.interface 4.3.1 版
 
 ## Docker 動作
 {: #openwhisk_ref_docker}
 
-Docker 動作是在 Docker 容器中執行使用者提供的二進位檔。二進位檔是在根據 Ubuntu 14.04 LTD 的 Docker 映像檔中執行，因此二進位檔必須與此發行套件相容。
+Docker 動作是在 Docker 容器中執行使用者提供的二進位檔。二進位檔是在根據 [python:2.7.12-alpine](https://hub.docker.com/r/library/python) 的 Docker 映像檔中執行，因此二進位檔必須與此發行套件相容。
 
-動作輸入 "payload" 參數會被當作位置引數傳遞至二進位程式，而且會在 "result" 參數中傳回執行程式的標準輸出。
+Docker 架構是建置 OpenWhisk 相容 Docker 映像檔的一種簡便方式。您可以使用 `wsk sdk install docker` CLI 指令來安裝架構。
 
-Docker 架構是建置 {{site.data.keyword.openwhisk_short}} 相容 Docker 映像檔的一種簡便方式。您可以使用 `wsk sdk install docker` CLI 指令來安裝架構。
+主要二進位程式必須位在容器的 `/action/exec` 中。執行檔會透過 `stdin` 接收到輸入引數，而且必須透過 `stdout` 來傳回結果。
 
-主要二進位程式會複製到 `dockerSkeleton/client/action` 檔案。任何伴隨的檔案或程式庫都可以存在於 `dockerSkeleton/client` 目錄中。
-
-透過修改 `dockerSkeleton/Dockerfile`，也可以包含任何編譯步驟或相依關係。例如，如果動作是 Python Script，您可以安裝 Python。
-
+透過修改 `dockerSkeleton` 中所含的 `Dockerfile`，即可包括任何編譯步驟或相依關係。
 
 ## REST API
 {: #openwhisk_ref_restapi}
@@ -374,14 +426,14 @@ Docker 架構是建置 {{site.data.keyword.openwhisk_short}} 相容 Docker 映�
 
 以下是集合端點：
 
-- `https://{BASE URL}/api/v1/namespaces`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+- `https://openwhisk.{DomainName}/api/v1/namespaces`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
 
-`{BASE URL}` 是 OpenWhisk API 主機名稱（例如，openwhisk.ng.bluemix.net、172.17.0.1 等）。
+`openwhisk.{DomainName}` 是 OpenWhisk API 主機名稱（例如，openwhisk.ng.bluemix.net、172.17.0.1 等）。
 
 針對 `{namespace}`，字元 `_` 可以用來指定使用者的 *預設名稱空間*（亦即，電子郵件位址）。
 
@@ -389,12 +441,12 @@ Docker 架構是建置 {{site.data.keyword.openwhisk_short}} 相容 Docker 映�
 
 每一種實體類型都有實體端點：
 
-- `https://{BASE URL}/api/v1/namespaces/{namespace}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
 
 名稱空間和啟動端點僅支援 GET 要求。動作、觸發程式、規則和套件端點可支援 GET、PUT 及 DELETE 要求。動作、觸發程式和規則的端點也可支援 POST 要求（用來呼叫動作和觸發程式，以及啟用或停用規則）。如需詳細資料，請參閱 [API 參考資料](https://new-console.{DomainName}/apidocs/98)。
 
@@ -433,7 +485,8 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 ## 系統限制
 {: #openwhisk_syslimits}
 
-{{site.data.keyword.openwhisk_short}} 有一些系統限制，包括動作所使用的記憶體數量，以及每小時允許的動作呼叫次數。下表列出預設限制。
+### 動作
+{{site.data.keyword.openwhisk_short}} 有一些系統限制，包括動作所使用的記憶體數量，以及每小時允許的動作呼叫次數。下表列出動作的預設限制。
 
 | 限制 | 說明 | 可配置 | 單位 | 預設值 |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -469,6 +522,10 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 * 動作的程式碼大小上限為 48MB。
 * 建議 JavaScript 動作使用工具，將所有原始碼（包括相依關係）連結成單一組合檔。
 
+### 每個啟動有效負載大小 (MB)（固定：1MB）
+{: #openwhisk_syslimits_activationsize}
+* POST 內容大小，加上為動作呼叫或觸發程式發動而附帶的任何參數，上限為 1MB。
+
 ### 每個名稱空間同時呼叫（預設值：100）
 {: #openwhisk_syslimits_concur}
 * 目前針對名稱空間所處理的啟動次數不能超過 100。
@@ -479,7 +536,7 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 {: #openwhisk_syslimits_invocations}
 * 速率限制 N 設定為 120/3600，並限制一分鐘/小時的時間範圍內的動作呼叫次數。
 * 使用者無法在建立動作時變更此限制。
-* 超過此限制的 CLI 呼叫會收到與 TOO_MANY_REQUESTS 對應的錯誤碼。
+* 超過此限制的 CLI 或 API 呼叫會收到與 HTTP 狀態碼 `429: TOO MANY REQUESTS` 對應的錯誤碼。
 
 ### 參數大小（固定：1MB）
 {: #openwhisk_syslimits_parameters}
@@ -498,3 +555,18 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 * 可供使用者使用的程序數上限為 512（同時適用於硬性和軟性限制）。
 * docker run 指令使用引數 `--ulimit nproc=512:512`。
 * 如需程序數上限 ulimit 的相關資訊，請參閱 [docker run](https://docs.docker.com/engine/reference/commandline/run) 文件。
+
+### 觸發程式
+
+如下表所記錄，觸發程式受限於每分鐘及每小時的發動率。
+
+| 限制 | 說明 | 可配置 | 單位 | 預設值 |
+| ----- | ----------- | ------------ | -----| ------- |
+| minuteRate | 使用者每分鐘不能發動超過這麼多觸發程式 | 每位使用者 | 數字 | 60 |
+| hourRate | 使用者每小時不能發動超過這麼多觸發程式 | 每位使用者 | 數字 | 720 |
+
+### 每分鐘/小時的觸發程式數目（固定：60/720）
+{: #openwhisk_syslimits_triggerratelimit}
+* 速率限制 N 設定為 60/720，並限制一分鐘/小時的時間範圍內可能發動的觸發程式數目。
+* 使用者無法在建立觸發程式時變更此限制。
+* 超過此限制的 CLI 或 API 呼叫會收到與 HTTP 狀態碼 `429: TOO MANY REQUESTS` 對應的錯誤碼。

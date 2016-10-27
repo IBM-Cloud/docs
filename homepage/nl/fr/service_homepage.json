@@ -22,7 +22,7 @@
     "href": "openwhisk/index.html",
     "category_id": "traitement"
   }, {
-    "id": "conteneur",
+    "id": "container",
     "title": "IBM Containers",
     "href": "containers/container_index.html",
     "category_id": "traitement"
@@ -40,6 +40,11 @@
     "type": "supplémentaire",
     "title": "Essayer les chaînes d'outils",
     "href": "toolchains/toolchains_overview.html",
+    "category_id": "devops"
+  }, {
+    "type": "supplémentaire",
+    "title": "Essayer Dedicated GitHub Enterprise",
+    "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "supplémentaire",

@@ -18,7 +18,7 @@ copyright:
 # Ferramentas de CLI e de desenvolvimento
 {: #cli}
 
-*Última atualização: 28 de junho de 2016*
+*Última atualização: 31 de agosto de 2016*
 {: .last-updated}
 
 Com o {{site.data.keyword.Bluemix_short}}, você tem acesso a poderosas ferramentas, tais como uma interface da linha de comandos unificada e plug-ins de CLI. Todos esses downloads de CLI estão disponíveis para suportar sua experiência no {{site.data.keyword.Bluemix_notm}}.

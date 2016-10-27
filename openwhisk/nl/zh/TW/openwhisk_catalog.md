@@ -18,7 +18,7 @@ copyright:
 
 # 使用針對 {{site.data.keyword.openwhisk_short}} 啟用的 {{site.data.keyword.Bluemix_notm}} 服務
 {: #openwhisk_ecosystem}
-前次更新：2016 年 8 月 4 日
+前次更新：2016 年 9 月 9 日
 {: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，套件的型錄可讓您輕鬆地使用有用的功能來加強應用程式，以及在生態系統中存取外部服務。已啟用 {{site.data.keyword.openwhisk_short}} 功能的外部服務範例包括 Cloudant、The Weather Company、Slack 及 GitHub。
@@ -30,7 +30,7 @@ copyright:
 
 ## 使用 Cloudant 套件
 {: #openwhisk_catalog_cloudant}
-`/whisk.system/cloudant` 套件可讓您使用 Cloudant 資料庫。它包括下列動作及資訊來源。
+`/whisk.system/cloudant` 套件可讓您使用 Cloudant 資料庫。它包含下列動作及資訊來源。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
@@ -81,7 +81,7 @@ wsk package list
   ```
   {: screen}
 
-  您可以看到對應至 {{site.data.keyword.Bluemix_notm}} Cloudant 服務實例的套件連結的完整名稱。
+  您可以看到對應至 {{site.data.keyword.Bluemix_notm}} Cloudant 服務實例的完整套件連結名稱。
 
 4. 確認先前建立的套件連結是使用 Cloudant {{site.data.keyword.Bluemix_notm}} 服務實例主機及認證所配置。
 
@@ -141,7 +141,7 @@ packages
 您可以使用 `changes` 資訊來源，配置服務在每次變更 Cloudant 資料庫時發動觸發程式。參數如下所示：
 
 - `dbname`：Cloudant 資料庫的名稱。
-- `includeDoc`：如果設為 true，所發動的每一個觸發程式事件都會包括已修改的 Cloudant 文件。 
+- `includeDoc`：如果設為 true，所發動的每一個觸發程式事件都會包含已修改的 Cloudant 文件。 
 - `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。您可以將其設定至上限 10,000。如果您嘗試設定超過 10,000 的值，將會拒絕要求。
 
 1. 使用您先前建立的套件連結中的 `changes` 資訊來源，來建立觸發程式。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
@@ -170,7 +170,7 @@ wsk activation poll
 
 您現在可以建立規則，並將它們關聯至可反應文件更新的動作。
 
-所產生事件的內容取決於建立觸發程式時的 `includeDoc` 參數值。如果參數設為 true，所發動的每一個觸發程式事件都會包括已修改的 Cloudant 文件。例如，請考量下列已修改的文件：
+所產生事件的內容取決於建立觸發程式時的 `includeDoc` 參數值。如果參數設為 true，所發動的每一個觸發程式事件都會包含已修改的 Cloudant 文件。例如，請考量下列已修改的文件：
 
   ```
   {
@@ -212,11 +212,11 @@ wsk activation poll
 1. 使用您先前建立的套件連結中的 `write` 動作，來儲存文件。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
 
   ```
-wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
-  ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
+  ok: invoked /myNamespace/myCloudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
     "id": "heisenberg",
     "ok": true,
@@ -238,7 +238,7 @@ wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbnam
 1. 使用您先前建立的套件連結中的 `read` 動作，來提取文件。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
 
   ```
-wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+  wsk action invoke /myNamespace/myCloudant/read --blocking --result --param dbname testdb --param id heisenberg
   ```
   {: pre}
   ```
@@ -256,7 +256,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 
 `/whisk.system/alarms` 套件可以用來依指定的頻率發動觸發程式。這適用於設定循環工作或作業（例如，每個小時呼叫系統備份動作）。
 
-該套件包括下列資訊來源。
+該套件包含下列資訊來源。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
@@ -269,7 +269,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 
 `/whisk.system/alarms/alarm` 資訊來源會配置「警示」服務依指定的頻率發動觸發程式事件。參數如下所示：
 
-- `cron`：指出何時發動觸發程式的字串（根據 UNIX crontab 語法）（世界標準時間 (UTC)）。字串是六個連串的欄位，以空格區隔：`X X X X X X `。如需使用 cron 語法的詳細資料，請參閱：https://github.com/ncb000gt/node-cron。下列是該字串指出的部分頻率範例：
+- `cron`：根據 UNIX crontab 語法，指出何時發動觸發程式的字串（世界標準時間，UTC）。字串是六個欄位的序列，以空格區隔：`X X X X X X `。如需使用 cron 語法的詳細資料，請參閱：https://github.com/ncb000gt/node-cron。以下是一些以該字串指出的頻率範例：
 
   - `* * * * * *`：每秒。
   - `0 * * * * *`：每分鐘整分。
@@ -295,7 +295,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 
 `/whisk.system/weather` 套件提供一種簡便的方式來呼叫 Weather Company Data for IBM Bluemix API。
 
-該套件包括下列動作。
+該套件包含下列動作。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
@@ -313,7 +313,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 - `password`：獲授權呼叫預報 API 的 The Weather Company Data for IBM Bluemix 的密碼。
 - `latitude`：位置的緯度座標。
 - `longitude`：位置的經度座標。
-- `timeperiod`：預報的時段。有效選項為 '10day' -（預設值）傳回 10 天的每日預報、'24hour' - 傳回 2 天的每小時預報、'current' - 傳回目前的天氣狀況、'timeseries' - 傳回目前的觀察，以及從目前日期和時間起，過去最多 24 小時的觀察。 
+- `timeperiod`：預報的時段。有效選項為 '10day' -（預設值）傳回 10 天的每日預報、'48hour' - 傳回 2 天的每小時預報、'current' - 傳回目前的天氣狀況、'timeseries' - 傳回目前的觀察，以及從目前日期和時間算起，過去最多 24 小時的觀察。
 
 
 下列範例說明如何建立套件連結，然後取得 10 天預報。
@@ -321,7 +321,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 1. 使用 API 金鑰建立套件連結。
 
   ```
-wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
   ```
   {: pre}
 
@@ -362,7 +362,7 @@ wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7'
 
 `/whisk.system/watson` 套件提供一種簡便的方來呼叫各種 Watson API。
 
-該套件包括下列動作。
+該套件包含下列動作。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
@@ -385,7 +385,7 @@ wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7'
 - `translateFrom`：兩位數的來源語言代碼。
 - `translateTo`：兩位數的目標語言代碼。
 
-下列範例說明如何建立套件連結以及翻譯一些文字。
+下列範例說明如何建立套件連結以及翻譯某串文字。
 
 1. 使用 Watson 認證建立套件連結。
 
@@ -394,7 +394,7 @@ wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERN
   ```
   {: pre}
 
-2. 在套件連結中呼叫 `translate` 動作，以將一些文字從英文翻譯成法文。
+2. 在套件連結中呼叫 `translate` 動作，以將某串文字從英文翻譯成法文。
 
   ```
 wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
@@ -409,16 +409,16 @@ wsk action invoke myWatson/translate --blocking --result --param payload 'Blue s
   {: screen}
 
 
-### 識別一些文字的語言
+### 識別某串文字的語言
 {: #openwhisk_catalog_watson_identifylang}
 
-`/whisk.system/watson/languageId` 動作識別一些文字的語言。參數如下所示：
+`/whisk.system/watson/languageId` 動作識別某串文字的語言。參數如下所示：
 
 - `username`：Watson API 使用者名稱。
 - `password`：Watson API 密碼。
 - `payload`：要識別的文字。
 
-下列範例說明如何建立套件連結，以及識別一些文字的語言。
+下列範例說明如何建立套件連結，以及識別某串文字的語言。
 
 1. 使用 Watson 認證建立套件連結。
 
@@ -443,10 +443,10 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
   {: screen}
 
 
-### 將部分文字轉換成語音
+### 將某串文字轉換成語音
 {: #openwhisk_catalog_watson_texttospeech}
 
-`/whisk.system/watson/textToSpeech` 動作會將部分文字轉換成音訊語音。參數如下所示：
+`/whisk.system/watson/textToSpeech` 動作會將某串文字轉換成音訊語音。參數如下所示：
 
 - `username`：Watson API 使用者名稱。
 - `password`：Watson API 密碼。
@@ -455,7 +455,7 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
 - `accept`：語音檔的格式。
 - `encoding`：語音二進位資料的編碼。
 
-下列範例說明如何建立套件連結，以及將部分文字轉換成語音。
+下列範例說明如何建立套件連結，以及將某串文字轉換成語音。
 
 1. 使用 Watson 認證建立套件連結。
 
@@ -488,7 +488,7 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
 - `payload`：要轉換成文字的已編碼語音二進位資料。
 - `content_type`：音訊的 MIME 類型。
 - `encoding`：語音二進位資料的編碼。
-- `continuous`：指出是否傳回代表連續詞組（以長時間暫停分隔）的多個最終結果。
+- `continuous`：指出是否傳回代表以長間歇分隔之連續詞組的多個最終結果。
 - `inactivity_timeout`：時間（秒），如果在所提交的音訊中只偵測到靜音，將在此期限之後結束連線。
 - `interim_results`：指出服務是否要傳回臨時結果。
 - `keywords`：要在音訊中標示的關鍵字清單。
@@ -529,7 +529,7 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 
 `/whisk.system/slack` 套件提供一種簡便的方式來使用 [Slack API](https://api.slack.com/)。
 
-該套件包括下列動作：
+該套件包含下列動作：
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
@@ -547,12 +547,13 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 - `channel`：要將訊息張貼至其中的 Slack 通道。
 - `username`：用來張貼訊息的名稱。
 - `text`：要張貼的訊息。
+- `token`：（選用）Slack [存取記號](https://api.slack.com/tokens)。如需如何使用 Slack 存取記號的詳細資料，請參閱[下面](./openwhisk_catalog.html#openwhisk_catalog_slack_token)。
 
 下列範例說明如何配置 Slack、建立套件連結，以及將訊息張貼至通道。
 
 1. 針對您的團隊配置 Slack [送入的 Webhook](https://api.slack.com/incoming-webhooks)。
 
-  配置 Slack 之後，您可以取得與下列類似的 Webhook URL：`https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`。在下一步中，您需要此項目。
+  配置 Slack 之後，您會得到與下列類似的 Webhook URL：`https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`。在下一步中，您會需要它。
 
 2. 使用 Slack 認證、要張貼至其中的通道，以及用來進行張貼的使用者名稱，來建立套件連結。
 
@@ -568,13 +569,17 @@ wsk action invoke mySlack/post --blocking --result --param text 'Hello from Open
   ```
   {: pre}
 
+### 使用 Slack 記號型 API
+{: #openwhisk_catalog_slack_token}
+
+如果您想要的話，可以選擇性地選擇使用 Slack 的記號型 API，而不是 Webhook API。如果您選擇這麼做，則請傳入包含 Slack [存取記號](https://api.slack.com/tokens)的 `token` 參數。您接著可以使用任何 [Slack API 方法](https://api.slack.com/methods)作為 `url` 參數。例如，若要張貼訊息，您將使用 `url` 參數值 [slack.postMessage](https://api.slack.com/methods/chat.postMessage)。
 
 ## 使用 GitHub 套件
 {: #openwhisk_catalog_github}
 
 `/whisk.system/github` 套件提供一種簡便的方來使用 [GitHub API](https://developer.github.com/)。
 
-該套件包括下列資訊來源：
+該套件包含下列資訊來源：
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
@@ -599,7 +604,7 @@ wsk action invoke mySlack/post --blocking --result --param text 'Hello from Open
 
   下一步將會使用存取記號。
 
-2. 使用存取記號，建立針對 GitHub 儲存庫所配置的套件連結。
+2. 建立使用存取記號針對 GitHub 儲存庫而配置的套件連結。
 
   ```
 wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
@@ -623,7 +628,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 
 `/whisk.system/pushnotifications` 套件可讓您使用 Push 服務。 
 
-該套件包括下列動作及資訊來源：
+該套件包含下列動作及資訊來源：
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |

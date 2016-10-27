@@ -18,7 +18,7 @@ copyright:
 # CLI- und Dev-Tools
 {: #cli}
 
-*Letzte Aktualisierung: 28. Juni 2016*
+*Letzte Aktualisierung: 31. August 2016*
 {: .last-updated}
 
 Mit {{site.data.keyword.Bluemix_short}} haben Sie Zugriff auf leistungsfähige Tools wie zum Beispiel eine einheitliche Befehlszeilenschnittstelle und CLI-Plug-ins. Alle diese CLI-Downloads werden zur Unterstützung Ihrer Arbeit mit {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt.

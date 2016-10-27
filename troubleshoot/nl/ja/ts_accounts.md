@@ -76,8 +76,8 @@ copyright:
 {: tsResolve}
  
   * {{site.data.keyword.Bluemix_notm}} ダッシュボードで、スペースを作成する組織を選択し、次に**「スペースの作成」**をクリックします。
-  * cf コマンド・ライン・インターフェースに ```cf create-space <space_name>
--o <organization_name>``` と入力します。
+  * cf コマンド・ライン・インターフェースに `cf create-space <space_name>
+-o <organization_name>` と入力します。
   
   
   

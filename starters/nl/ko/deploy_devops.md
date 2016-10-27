@@ -21,7 +21,7 @@ copyright:
 {{site.data.keyword.Bluemix}}에 자동으로 배치되는 호스팅되는 Git 저장소를 작성할 수 있습니다. 그런 다음 변경사항을 Git 저장소에 푸시하여 사용자의 앱에서 실행되는 코드를 수정할 수 있습니다.
 {:shortdesc}
 
-1. 시작하려면 앱의 개요 페이지에서 **Git 저장소 및 파이프라인 추가**를 클릭하거나 {{site.data.keyword.Bluemix_notm}} Classic Experience에서 **GIT 추가**를 클릭하십시오. 
+1. 시작하려면 앱의 개요 페이지에서 **Git 저장소 및 파이프라인 추가**를 클릭하거나 {{site.data.keyword.Bluemix_notm}} 기존 인터페이스에서 **GIT 추가**를 클릭하십시오. 
 2. 열린 창에서 **스타터 앱 패키지로 저장소 채우기 및 파이프라인 빌드 및 배치 사용** 선택란이 선택되어 있는지 확인하십시오. Git 저장소가 작성됩니다. 스타터 코드가 사용 가능하면 저장소에 로드됩니다. 또한 {{site.data.keyword.jazzhub}}에서 실행 중인 Delivery Pipeline 서비스에 의해 애플리케이션이 배치됩니다.   
 3. 앱을 업데이트하려면 명령행 또는 Web IDE를 사용할 수 있습니다.
    **명령행을 사용하는 경우:**

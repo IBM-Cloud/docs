@@ -141,10 +141,16 @@ wsk action update hello hello.js
   ```
   {: pre}
 
-3. 규칙을 작성하고 사용하도록 설정하십시오. 세 가지 매개변수는 규칙, 트리거 및 조치의 이름입니다.
+3. 규칙을 작성하십시오. 규칙은 작성 즉시 사용 가능합니다. 즉, 트리거의 활성화에 곧바로 응답할 수 있습니다. 세 가지 매개변수는 규칙, 트리거 및 조치의 이름입니다.
   
   ```
-wsk rule create --enable myRule locationUpdate hello
+  wsk rule create myRule locationUpdate hello
+  ```
+  {: pre}
+
+  언제든지 규칙이 사용되지 않도록 선택할 수 있습니다. 
+  ```
+  wsk rule disable myRule
   ```
   {: pre}
 
@@ -186,4 +192,4 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   hello 조치가 이벤트 페이로드를 수신하고 예상 문자열을 리턴한 것을 볼 수 있습니다.
 
 동일한 트리거를 다른 조치와 연관시키는 다중 규칙을 작성할 수 있습니다. 규칙을 작성하는 조치 및 트리거는 동일한 네임스페이스 안에 있어야 하며 패키지에 속할 수 없습니다.
-패키지에 속한 조치를 사용하려는 경우 네임스페이스에 조치를 복사할 수 있습니다. 예: `wsk action create echo --copy /whisk.system/samples/echo`.
+패키지에 속한 조치를 사용하려는 경우 네임스페이스에 조치를 복사할 수 있습니다. 예: `wsk action create echo --copy /whisk.system/utils/echo`.

@@ -18,7 +18,7 @@ copyright:
 # CLI 和开发工具
 {: #cli}
 
-*上次更新时间：2016 年 6 月 28 日*
+*上次更新时间：2016 年 8 月 31 日*
 {: .last-updated}
 
 通过 {{site.data.keyword.Bluemix_short}}，您可以访问各种功能强大的工具，例如统一命令行界面和 CLI 插件。其中每个 CLI 下载都可用于支持您的 {{site.data.keyword.Bluemix_notm}} 体验。

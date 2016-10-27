@@ -136,9 +136,15 @@ wsk action update hello hello.js
   ```
   {: pre}
 
-3. 创建并启用规则。三个参数分别是规则名称、触发器和操作。
+3. 创建规则。请注意，规则创建后即会启用，这意味着规则将立即可用于响应触发器激活。三个参数分别是规则名称、触发器和操作。
   ```
-wsk rule create --enable myRule locationUpdate hello
+  wsk rule create myRule locationUpdate hello
+  ```
+  {: pre}
+
+  您可以随时选择禁用规则。
+  ```
+  wsk rule disable myRule
   ```
   {: pre}
 
@@ -179,4 +185,4 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   您将看到 hello 操作收到了事件有效内容，并返回了期望的字符串。
 
 可以创建多个规则，用于将同一触发器与不同操作相关联。制定规则的触发器和操作必须位于相同的名称空间，且不能属于包。
-如果您想要使用属于包的操作，那么您可以将该操作复制到名称空间。例如：`wsk action create echo --copy /whisk.system/samples/echo`。
+如果您想要使用属于包的操作，那么您可以将该操作复制到名称空间。例如：`wsk action create echo --copy /whisk.system/utils/echo`。

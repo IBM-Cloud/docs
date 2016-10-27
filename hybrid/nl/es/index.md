@@ -40,7 +40,7 @@ de {{site.data.keyword.Bluemix_notm}} se crea a su medida. Y, con el catálogo s
 una combinación de recursos y servicios de cálculo dedicados así como prestaciones de las que puede disponer por medio de
 la sindicación de catálogo. Más información sobre [{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html).
 
-**Nota:** La información relacionada con SoftLayer para {{site.data.keyword.Bluemix}} Dedicated no es válid para China. 
+**Nota:** La información relacionada con SoftLayer para {{site.data.keyword.Bluemix}} Dedicated no es válida para China. 
 
 ## Local
 

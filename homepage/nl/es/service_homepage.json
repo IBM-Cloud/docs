@@ -1,19 +1,19 @@
 {
   "id": "docs_homepage_services",
-  "title": "How to use Bluemix services",
-  "subtitle": "Learn about service types and availability",
+  "title": "Cómo utilizar los servicios de Bluemix",
+  "subtitle": "Obtenga información sobre los tipos de servicio y su disponibilidad",
   "subtitleHref": "services/index.html",
   "items": [{
     "id": "cfApp",
-    "title": "Cloud Foundry Applications",
+    "title": "Aplicaciones de Cloud Foundry",
     "href": "cfapps/index.html",
     "category_id": "compute"
   }, {
-    "title": "Runtimes",
+    "title": "Tiempos de ejecución",
     "href": "cfapps/runtimes.html",
     "category_id": "compute"
   }, {
-    "title": "Boilerplates",
+    "title": "Contenedores modelo",
     "href": "cfapps/boilerplates.html",
     "category_id": "compute"
   }, {
@@ -22,7 +22,7 @@
     "href": "openwhisk/index.html",
     "category_id": "compute"
   }, {
-    "id": "container",
+    "id": "contenedor",
     "title": "IBM Containers",
     "href": "containers/container_index.html",
     "category_id": "compute"
@@ -33,18 +33,24 @@
     "category_id": "compute"
   }, {
     "type": "extra",
-    "title": "Try working with data",
+    "title": "Pruebe a trabajar con datos",
     "href": "services/WorkWithData/index.html",
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "Try toolchains",
+    "title": "Pruebe las cadenas de herramientas",
     "href": "toolchains/toolchains_overview.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Try mobile Bluemix services",
+    "title": "Pruebe Dedicated GitHub Enterprise",
+    "href": "services/ghededicated/index.html",
+    "category_id": "devops"
+  }, {
+    "type": "extra",
+    "title": "Pruebe el panel de control de Bluemix Mobile",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]
 }
+

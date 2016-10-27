@@ -15,8 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#{{site.data.keyword.jazzhub_short}} サンプル・プロジェクトにおけるテキスト・ベースのパイプラインの共有
-{: #share-pipeline}
+#{{site.data.keyword.jazzhub_short}} サンプル・プロジェクトにおけるテキスト・ベースのパイプラインの共有 {: #share-pipeline}
 
 *最終更新日: 2015 年 12 月 7 日* 
 
@@ -83,8 +82,7 @@ stages:
 ```
 {: codeblock} 
 
-##YAML ファイルの構文
-{: #yaml-syntax}
+##YAML ファイルの構文 {: #yaml-syntax}
 
 どのようなパイプラインも、以下の構文を使用してテキストで表現することができます。
 
@@ -97,8 +95,7 @@ stages:
 ```
 {: codeblock} 
 
-ステージ:
- 
+ステージ: 
 ```
 ---
 name: <name>
@@ -114,7 +111,6 @@ name: <name>
 {: codeblock} 
 
 入力:
-
 ```
 type: 'git' | 'job'
 [branch: <branch name>] ;only for Git inputs
@@ -124,7 +120,6 @@ job: <job name>			   	;only for job inputs
 {: codeblock} 
 
 トリガー:
-
 ```
 type: 'commit' | 'stage'
 [enabled: 'true | 'false'] ;true is assumed if not specified
@@ -132,7 +127,6 @@ type: 'commit' | 'stage'
 {: codeblock} 	
 	
 プロパティー:
-
 ```
 name: <property name>
 value: <property value>
@@ -141,7 +135,6 @@ value: <property value>
 {: codeblock} 
 
 ジョブ:
-
 ```
 [name: <job name>]
 type: 'builder' | 'deployer' | 'tester'
@@ -159,7 +152,6 @@ fail_stage: 'true' | 'false'
 {: codeblock} 
 
 ターゲット:
-
 ```
 url: <target url>
 organization: <org name>

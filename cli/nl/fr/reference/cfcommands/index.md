@@ -186,7 +186,7 @@ de passe peut être enregistré dans l'historique de la ligne de commande. Pour 
 avec le paramètre -p. A la place,
 entrez le mot de passe lorsque l'interface de ligne de commande vous y invite.</dd>
 <dt>*-sso*</dt>
-<dd>Vous devez utiliser l'option de connexion unique (SSO) pour vous connecter à l'aide d'un ID fédéré. Cela n'est pas obligatoire lorsque vous vous connectez avec un ID IBM. Si vous essayez de vous connecter avec un ID fédéré sans spécifier le paramètre de connexion unique, vous serez invité à l'inclure. Lorsque vous utilisez le paramètre de connexion unique, vous êtes invité à entrer un code d'accès unique lors de la connexion.</dd>
+<dd>Vous devez utiliser l'option de connexion unique (SSO) pour vous connecter à l'aide d'un ID fédéré. Cela n'est pas obligatoire lorsque vous vous connectez avec un IBMid. Si vous essayez de vous connecter avec un ID fédéré sans spécifier le paramètre de connexion unique, vous serez invité à l'inclure. Lorsque vous utilisez le paramètre de connexion unique, vous êtes invité à entrer un code d'accès unique lors de la connexion.</dd>
 <dt>*-o*nom_organisation</dt>
 <dd>Nom de l'organisation à laquelle vous voulez vous connecter.</dd>
 <dt>*-s*nom_espace</dt>
@@ -237,29 +237,31 @@ cf push nom_app
 `mon_pack_construction` ou `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
 <dt>*-c*commande_démarrage</dt>
 <dd>Commande de démarrage de votre application. Pour utiliser la commande de démarrage par défaut, spécifiez la valeur null pour cette option. Par exemple :</dd>
-<dd>```
+<dd>
+```
 cf push nom_app -c null
 ```</dd>
 <dd>Vous pouvez aussi utiliser cette option pour exécuter des fichiers script. Par exemple :
 ```
 cf push nom_app -c “bash ./<run.sh>"
 ```</dd>
-<dt>*-f* chemin_manifeste</dt>
+<dt>*-f* chemin_manifeste </dt>
 <dd>Chemin d'accès au fichier manifeste. Le fichier manifeste par défaut est manifest.yml sous le répertoire racine de votre application.</dd>
-<dt>*-i* nombre_instances</dt>
+<dt>*-i* nombre_instances </dt>
 <dd>Nombre d'instances.</dd>
-<dt>*-k* limite_disque</dt>
-<dd>Limite de disque pour l'application, par exemple, *256M*, *1024M* ou *1G*.</dd>
-<dt>*-m* limite_mémoire</dt>
-<dd>Limite de mémoire pour l'application, par exemple, *256M*, *1024M* ou *1G*.</dd>
+<dt>*-k* limite_disque </dt>
+<dd>Limite de disque pour l'application, par exemple *256M*, *1024M* ou *1G*.</dd>
+<dt>*-m* limite_mémoire </dt>
+<dd>Limite de mémoire pour l'application, par exemple *256M*, *1024M* ou *1G*.</dd>
 <dt>*-n* nom_hôte</dt>
-<dd>Nom d'hôte pour l'application, par exemple, *my-subdomain*.</dd>
-<dt>*-p* chemin_app</dt>
+<dd>Nom d'hôte de l'application, par exemple *mon_sous-domaine*.</dd>
+<dt>*-p* chemin_app </dt>
 <dd>Chemin d'accès au répertoire de l'application ou au fichier archive de l'application.</dd>
-<dt>*-t* délai</dt>
+<dt>*-t* délai_attente </dt>
 <dd>Délai maximal de démarrage de l'application, en secondes. Il se peut que d'autres délais d'attente côté serveur remplacent cette valeur.</dd>
-<dt>*-s* nom_pile</dt>
-<dd>Pile pour l'exécution des applications. Une pile est un système de fichiers préconfiguré incluant le système d'exploitation. Utilisez `cf stacks` pour afficher les piles disponibles dans {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt>*-s* nom_pile </dt>
+<dd>Pile pour l'exécution des applications. Une pile est un système de fichiers préconfiguré incluant le système d'exploitation. Utilisez `cf
+stacks` pour afficher les piles disponibles dans {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*--no-hostname*</dt>
 <dd>Mappe le domaine de système Bluemix à cette application.</dd>
 <dt>*--no-manifest*</dt>
@@ -281,12 +283,12 @@ cf scale nom_app -i nombre_instances -k limite_disque -m limite_mémoire
 <dl>
 <dt>nom_app</dt>
 <dd>Nom de l'application.</dd>
-<dt>*-i* nombre_instances</dt>
+<dt>*-i* nombre_instances </dt>
 <dd>Nombre d'instances.</dd>
-<dt>*-k* limite_disque</dt>
-<dd>Limite de disque pour l'application, par exemple, *256M*, *1024M* ou *1G*.</dd>
-<dt>*-m* limite_mémoire</dt>
-<dd>Limite de mémoire pour l'application, par exemple, *256M*, *1024M* ou *1G*.</dd>
+<dt>*-k* limite_disque </dt>
+<dd>Limite de disque pour l'application, par exemple *256M*, *1024M* ou *1G*.</dd>
+<dt>*-m* limite_mémoire </dt>
+<dd>Limite de mémoire pour l'application, par exemple *256M*, *1024M* ou *1G*.</dd>
 <dt>*-f*</dt>
 <dd>Force l'application à redémarrer sans invite.</dd>
 </dl>
@@ -343,4 +345,4 @@ cf -v
 {: #rellinks}
 ## general 
 {: #general}
-* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [Fiche de référence rapide - Commandes cf](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

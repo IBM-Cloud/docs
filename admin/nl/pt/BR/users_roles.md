@@ -25,7 +25,8 @@ membros da equipe. Para acessar o diretório da equipe de sua conta, acesse o í
 **{{site.data.keyword.avatar}}**
 ![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
 **Conta** &gt; *your_account_name* &gt;
-**Diretório da equipe**.{:shortdesc}
+**Diretório da equipe**. 
+{:shortdesc}
 
 Proprietários da conta executam todas as operações nas organizações e espaços, incluindo o gerenciamento de membros da equipe e de suas funções designadas. Gerenciadores de organização têm acesso para
 convidar membros da equipe e gerenciar funções. Gerenciadores de
@@ -125,8 +126,7 @@ eles são designados com a função de auditor automaticamente. É possível mud
 Clique em **Visualizar pendente**, para verificar se os convites estão pendentes ou aceitos. É possível optar por reenviar o e-mail de convite ou cancelar o convite para um convite
 pendente a qualquer momento.
 
-Se você tiver uma conta do SoftLayer vinculada à sua conta do {{site.data.keyword.Bluemix_notm}}, poderá incluir os membros de sua equipe do SoftLayer. 
-Acesse o ícone **{{site.data.keyword.avatar}}**
+Se você tiver uma conta do SoftLayer vinculada à sua conta do {{site.data.keyword.Bluemix_notm}}, poderá incluir os membros de sua equipe do SoftLayer. Acesse o ícone **{{site.data.keyword.avatar}}**
 ![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
 **Conta** &gt; *your_account_name* &gt; página
 **Convidar membros da equipe**. Em seguida, clique em

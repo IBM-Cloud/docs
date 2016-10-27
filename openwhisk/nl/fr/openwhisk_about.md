@@ -27,8 +27,8 @@ Les sections ci-après présentent {{site.data.keyword.openwhisk}} en détail.
 ## Fonctionnement d'{{site.data.keyword.openwhisk_short}}
 {: #openwhisk_how}
 
-{{site.data.keyword.openwhisk_short}} est une plateforme de calcul gérée par des événements et qui exécute un code en réponse à des événements
-ou à des appels directs.
+{{site.data.keyword.openwhisk_short}} est une plateforme de calcul gérée par des événements également appelée calcul sans serveur ou Function
+as a Service (FaaS) qui exécute un code en réponse à des événements ou des appels directs. 
 
 La figure ci-dessous présente l'architecture générale d'{{site.data.keyword.openwhisk_short}}.
 

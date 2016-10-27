@@ -18,14 +18,14 @@ copyright:
 
 # Supervisión de su actividad de {{site.data.keyword.openwhisk_short}} con el Panel de control de
 {{site.data.keyword.openwhisk_short}}
-*Última actualización: 9 de febrero de 2016*
+Última actualización: 2 de agosto de 2016
 {: .last-updated}
 
 El [Panel de control {{site.data.keyword.openwhisk}}](https://{DomainName}/whisk/dashboard/) proporciona un resumen gráfico de su actividad. Utilice el panel de control para determinar el rendimiento y estado de sus acciones de
 {{site.data.keyword.openwhisk_short}}. 
 {:shortdesc}
 
-Pulse Recargar en cualquier momento para actualizar el panel de control con los datos de registro de activación más recientes.
+Pulse **Recargar** en cualquier momento para actualizar el panel de control con los datos de registro de activación más recientes.
 
 ## Resumen de actividad
 {: #summary}
@@ -59,7 +59,7 @@ de acciones pasadas y presentes. En rojo se indican los errores en acciones espe
 {: #log}
 
 Esta vista muestra una versión con formato del registro de activación. Muestra los detalles de cada activación, pero sondea una vez un minuto en busca de nuevas activaciones. Pulse en una acción para mostrar un registro detallado. 
-**Nota**: para obtener la salida mostrada del registro de actividad usando la CLI, utilice el mandato siguiente: 
+**Nota: ** para obtener la salida mostrada del registro de actividad usando la CLI, utilice el mandato siguiente: 
 
   ```
   wsk activation poll
@@ -71,4 +71,4 @@ Esta vista muestra una versión con formato del registro de activación. Muestra
 
 Seleccione el registro de acción que quiera ver, y seleccione el marco de tiempo de la actividad registrada. 
 
-**Nota**: estos filtros se aplican a todas las vistas del panel de control.
+**Nota:** estos filtros se aplican a todas las vistas del panel de control.

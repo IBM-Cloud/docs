@@ -249,7 +249,7 @@ cf push appname -c "bash ./<run.sh>"
 <dt>*-t* timeout</dt>
 <dd>應用程式啟動的時間上限（秒）。其他伺服器端的逾時可能會置換此值。</dd>
 <dt>*-s* stackname</dt>
-<dd>要執行應用程式的堆疊。堆疊是預先建置的檔案系統（包括作業系統）。請使用 `cf stacks` 來檢視 {{site.data.keyword.Bluemix_notm}} 中的可用堆疊。</dd>
+<dd>要執行應用程式的堆疊。堆疊是預先建置的檔案系統（包括作業系統）。使用 `cf stacks`，以檢視 {{site.data.keyword.Bluemix_notm}} 中的可用堆疊。</dd>
 <dt>*--no-hostname*</dt>
 <dd>將 Bluemix 系統網域對映到此應用程式。</dd>
 <dt>*--no-manifest*</dt>
@@ -265,6 +265,7 @@ cf push appname -c "bash ./<run.sh>"
 ## cf scale
 
 顯示或變更應用程式的實例數目、磁碟空間限制及記憶體限制。
+
 ```
 cf scale appname -i instance_number -k disk_limit -m memory_limit
 ```
@@ -284,6 +285,7 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 ## cf services
 
 列出現行空間中可用的所有服務。
+
 ```
 cf services
 ```
@@ -291,6 +293,7 @@ cf services
 ## cf set-env
 
 設定應用程式的環境變數。
+
 ```
 cf set-env appname var_name var_value
 ```
@@ -306,6 +309,7 @@ cf set-env appname var_name var_value
 ## cf stacks
 
 列出所有堆疊。堆疊是預先建置的檔案系統，包括可以執行應用程式的作業系統。
+
 ```
 cf stacks
 ```
@@ -313,6 +317,7 @@ cf stacks
 ## cf stop
 
 停止應用程式。
+
 ```
 cf stop appname
 ```
@@ -324,12 +329,13 @@ cf stop appname
 ## cf -v
 
 顯示 cf 指令行介面的版本。
+
 ```
 cf -v
 ```
 
-# rellinks
+# 相關鏈結
 {: #rellinks}
-## general
+## 一般 
 {: #general}
-* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [快速參照卡 - cf 指令](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

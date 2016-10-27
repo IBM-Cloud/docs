@@ -211,14 +211,14 @@ führen Sie die folgenden Schritte durch:
 des Service und 'service_instance' der Name, den Sie für diese Serviceinstanz verwenden möchten.
 
     ```
-cf create-service service_name service_plan service_instance
+    cf create-service service_name service_plan service_instance
     ```
 
 3. Verwenden Sie den folgenden Befehl, um die Serviceinstanz an eine Anwendung zu binden. Dabei ist 'appname' der Name der Anwendung und 'service_instance' der Name
 der Serviceinstanz.
 
     ```
-cf bind-service appname service_instance
+    cf bind-service appname service_instance
     ```
 
 Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich im selben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external){: new_window}.
@@ -265,7 +265,7 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
 1. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz entweder mit dem Befehl **cf create-user-provided-service** oder mit dem Befehl **cf cups**:
     * Verwenden Sie zum Erstellen einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und trennen Sie die Parameternamen durch Kommas. Die cf-Befehlszeilenschnittstelle fordert Sie dann nacheinander zum Angeben der einzelnen Parameter auf. Beispiel:
         ```
-cf cups testups1 -p "host, port, dbname, username, password"
+        cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -278,7 +278,7 @@ cf cups testups1 -p "host, port, dbname, username, password"
     * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokollmanagementsoftware eines Drittanbieters weitergibt, verwenden Sie die Option **-l** und geben Sie das von der Protokollmanagementsoftware des Drittanbieters bereitgestellte Ziel an. Beispiel:
 
         ```
-cf cups testups2 -l syslog://example.com
+        cf cups testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -288,7 +288,7 @@ cf cups testups2 -l syslog://example.com
     * Verwenden Sie zum Aktualisieren einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und geben Sie die Parameterschlüssel und -werte in einem JSON-Objekt an. Beispiel:
 
         ```
-cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -296,7 +296,7 @@ cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
     * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokoll-Management-Software eines Drittanbieters weitergibt, verwenden Sie die Option -l. Beispiel:
 
         ```
-cf uups testups2 -l syslog://example2.com
+        cf uups testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```

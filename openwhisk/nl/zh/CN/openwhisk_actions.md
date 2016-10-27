@@ -19,7 +19,7 @@ copyright:
 # 创建并调用 {{site.data.keyword.openwhisk_short}} 操作
 {: #openwhisk_actions}
 
-上次更新时间：2016 年 8 月 4 日
+上次更新时间：2016 年 9 月 9 日
 {: .last-updated}
 
 操作是在 {{site.data.keyword.openwhisk}} 平台上运行的无状态代码片段。操作可以是 JavaScript 函数、Swift 函数或封装在 Docker 容器中的定制可执行程序。例如，操作可用于检测映像中的构面、聚集一组 API 调用或发布推文。
@@ -75,7 +75,9 @@ actions
 
   您可以看到刚才创建的 `hello` 操作。
 
-4. 创建操作后，可以使用“invoke”命令在 {{site.data.keyword.openwhisk_short}} 的云中运行该操作。可以通过在命令中指定标记以使用*阻塞*调用或*非阻塞*调用来调用操作。阻塞调用会等待操作运行至完成并返回结果。此示例使用的是阻塞参数 `--blocking`：
+4. 创建操作后，可以使用“invoke”命令在 OpenWhisk 的云中运行该操作。可以通过在命令中指定标记以使用*阻塞*调用（即，请求/响应样式）或*非阻塞*调用来调用操作。阻塞调用请求将*等待*激活结果可用。等待时间段为 60 秒或为操作的已配置[时间限制](./reference.md#per-action-timeout-ms-default-60s)（两者取较短的时间）。如果激活结果在等待时间段内可用，那么会返回激活结果。否则，激活会继续在系统中处理，并返回激活标识，以便可以稍后检查结果，这与非阻塞请求一样（请参阅[此处](#watching-action-output)，以获取有关监视激活的提示）。
+
+  此示例使用的是阻塞参数 `--blocking`：
 
   ```
 wsk action invoke --blocking hello
@@ -94,7 +96,7 @@ ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
 
   此命令输出两条重要的信息：
   * 激活标识 (`44794bd6aab74415b4e42a308d880e5b`)
-  * 调用结果
+  * 如果激活结果在预期的等待时间段内可用，那么输出调用结果
 
   在本例中，结果为 JavaScript 函数返回的字符串 `Hello world`。激活标识可以用于在未来检索调用的日志或结果。  
 
@@ -281,7 +283,7 @@ wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: screen}
 
-  通过比较激活记录中的 `start` 和 `end` 时间戳记，可以看出完成此激活所用时间略微超过 20 秒。
+  通过比较激活记录中的 `start` 和 `end` 时间戳记，可以看出完成此激活所用时间略微超过 2 秒。
 
 
 ### 使用操作来调用外部 API
@@ -293,6 +295,7 @@ wsk activation get b066ca51e68c4d3382df2d8033265db0
 
 1. 将以下内容保存在名为 `weather.js` 的文件中。
 
+  
   ```
 var request = require('request');function main(params) {
      var location = params.location || 'Vermont';
@@ -311,17 +314,17 @@ var request = require('request');function main(params) {
                     resolve({msg: output});
                 }
             });
-        });
-    }
+      });
+  }
   ```
   {: codeblock}
-
-  请注意，示例中的操作使用 JavaScript `request` 库向 Yahoo Weather API 发起 HTTP 请求，然后从 JSON 结果中抽取字段。[参考](./reference.md#runtime-environment)详细描述了可以在操作中使用的 Node.js 包。
-
+  
+  请注意，示例中的操作使用 JavaScript `request` 库向 Yahoo Weather API 发起 HTTP 请求，然后从 JSON 结果中抽取字段。[参考](./reference.md#javascript-runtime-environments)详细描述了可以在操作中使用的 Node.js 包。
+  
   此示例还显示了需要异步操作。此操作返回 Promise，指示函数返回时此操作的结果尚不可用。相反，结果会在 HTTP 调用完成后在 `request` 回调中提供，并且会作为自变量传递给 `resolve()` 函数。
-
-
+  
 2. 运行以下命令来创建并调用操作：
+  
   ```
 wsk action create weather weather.js
   ```
@@ -336,27 +339,28 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   }
   ```
   {: screen}
-
+  
 ### 创建操作序列
 {: #openwhisk_create_action_sequence}
 
 可以创建用于将一序列操作链接在一起的操作。
 
-在名为 `/whisk.system/util` 的包中提供了多个实用程序操作，可用于创建第一个序列。您可以在[包](./openwhisk_packages.html)部分中了解有关包的更多信息。
+在名为 `/whisk.system/utils` 的包中提供了多个实用程序操作，可用于创建第一个序列。您可以在[包](./packages.md)部分中了解有关包的更多信息。
 
-1. 显示 `/whisk.system/util` 包中的操作。
+1. 显示 `/whisk.system/utils` 包中的操作。
   
   ```
-wsk package get --summary /whisk.system/util
+  wsk package get --summary /whisk.system/utils
   ```
   {: pre}
   ```
-package /whisk.system/util
-   action /whisk.system/util/cat: Concatenate array of strings
-   action /whisk.system/util/head: Filter first K array elements and discard rest
-   action /whisk.system/util/date: Get current date and time
-   action /whisk.system/util/sort: Sort array
-   action /whisk.system/util/split: Splits a string into an array of strings
+  package /whisk.system/utils：构建用于设置数据格式和组合数据的块
+   action /whisk.system/utils/head：抽取数组的前缀
+   action /whisk.system/utils/split：将字符串拆分成数组
+   action /whisk.system/utils/sort：对数组排序
+   action /whisk.system/utils/echo：返回输入
+   action /whisk.system/utils/date：当前日期和时间
+   action /whisk.system/utils/cat：将输入连接成一个字符串
   ```
   {: screen}
 
@@ -365,25 +369,16 @@ package /whisk.system/util
 2. 创建操作序列，使一个操作的结果作为自变量传递给下一个操作。
   
   ```
-wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
+  wsk action create sequenceAction --sequence /whisk.system/utils/split,/whisk.system/utils/sort
   ```
   {: pre}
-
+  
   此操作序列会将一些文本行转换为数组，然后对这些行排序。
-
-3. 调用操作序列之前，请创建名为“haiku.txt”的文本文件，其中包含以下几行文本：
-
-  ```
-Over-ripe sushi,
-  The Master
-  Is full of regret.
-  ```
-  {: codeblock}
-
-4. 调用操作：
+  
+3. 调用操作：
   
   ```
-wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
+  wsk action invoke --blocking --result sequenceAction --param payload "Over-ripe sushi,\nThe Master\nIs full of regret."
   ```
   {: pre}
   ```
@@ -397,11 +392,10 @@ wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)
   }
   ```
   {: screen}
-
+  
   在结果中，您会看到这些行已排序。
 
-**注**：有关使用多个指定参数来调用操作序列的更多信息，请参阅[设置缺省参数](./actions.md#setting-default-parameters)
-
+**注**：在序列中的操作之间传递的参数为显式参数，但缺省参数除外。因此，传递到操作序列的参数只可用于序列中的第一个操作。序列中第一个操作的结果成为序列中第二个操作的输入 JSON 对象（依此类推）。此对象不包含初始传递到序列的任何参数，除非第一个操作在其结果中显式包含这些参数。操作的输入参数会与操作的缺省参数合并，并且操作的输入参数优先于并覆盖任何匹配的缺省参数。有关使用多个指定参数来调用操作序列的更多信息，请参阅[设置缺省参数](./actions.md#setting-default-parameters)。
 
 ## 创建 Python 操作
 {: #openwhisk_actions_python}
@@ -433,6 +427,19 @@ wsk action create helloPython hello.py
 
 使用命令行和 `.py` 源文件时，无需指定您要创建 Python 操作（与 JavaScript 操作相反）；该工具会根据文件扩展名来进行确定。
 
+Python 操作的操作调用与 JavaScript 操作的操作调用相同：
+
+```
+wsk action invoke --blocking --result helloPython --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
 
 
 ## 创建 Swift 操作
@@ -450,10 +457,10 @@ wsk action create helloPython hello.py
 ```
 func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
           return [ "greeting" : "Hello \(name)!" ]
-      } else {
+    } else {
 return [ "greeting" : "Hello stranger!" ]
-      }
-  }
+    }
+}
 ```
 {: codeblock}
 
@@ -484,6 +491,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **注意：**Swift 操作在 Linux 环境中运行。Swift on Linux 仍在开发中；{{site.data.keyword.openwhisk_short}} 通常会使用最新可用发行版，但此版本不一定稳定。此外，用于 {{site.data.keyword.openwhisk_short}} 的 Swift 版本可能与 Mac OS 上 Xcode 的稳定发行版中的 Swift 版本不一致。
 
+
 ## 创建 Docker 操作
 {: #openwhisk_actions_docker}
 
@@ -493,7 +501,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 作为先决条件，您必须拥有 Docker Hub 帐户。要设置免费 Docker 标识和帐户，请转至 [Docker Hub](https://hub.docker.com){: new_window}。
 
-对于后续指示信息，假定用户标识为“janesmith”，密码为“janes_password”。假定已设置 CLI，必须执行三个步骤来设置定制二进制文件以供 {{site.data.keyword.openwhisk_short}} 使用。在此之后，上传的 Docker 映像即可用作操作。
+对于后续指示信息，假定 Docker 用户标识为 `janesmith`，密码为 `janes_password`。假定已设置 CLI，必须执行三个步骤来设置定制二进制文件以供 {{site.data.keyword.openwhisk_short}} 使用。在此之后，上传的 Docker 映像即可用作操作。
 
 1. 下载 Docker 框架。可以使用 CLI 进行下载，如下所示：
 
@@ -511,7 +519,7 @@ ls dockerSkeleton/
   ```
   {: pre}
   ```
-Dockerfile      README.md       buildAndPush.sh client          server
+  Dockerfile      README.md       buildAndPush.sh example.c
   ```
   {: screen}
 
@@ -520,23 +528,25 @@ Dockerfile      README.md       buildAndPush.sh client          server
 2. 在 Docker 框架中设置定制二进制文件。该框架已经包含可以使用的 C 程序。
 
   ```
-cat ./dockerSkeleton/client/example.c
+  cat dockerSkeleton/example.c
   ```
-  {: pre}
   {: pre}
   ```
   #include <stdio.h>
   
-  int main(int argc, char *argv[]) {printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
+  int main(int argc, char *argv[]) {printf("This is an example log message from an arbitrary C program!\n");
+      printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s }",
              (argc == 1) ? "undefined" : argv[1]);
   }
   ```
-  {: screen}
+  {: codeblock}
 
-  可以根据需要修改此文件。
+  可以根据需要修改此文件，或者向 Docker 映像添加其他代码和依赖关系。对于后者，可能需要根据需要对 `Dockerfile` 进行调整，才能构建可执行文件。二进制文件必须位于容器内的 `/action/exec` 中。
+
+  可执行文件会从命令行接收单个自变量。该自变量是字符串序列化的 JSON 对象，表示操作的自变量。程序可能会记录到 `stdout` 或 `stderr`。根据约定，输出的最后一行*必须*是字符串化的 JSON 对象，用于表示操作结果。
 
 3. 使用提供的脚本来构建 Docker 映像并进行上传。必须首先运行 `docker login` 以进行认证，然后使用所选映像名称来运行脚本。
-
+  
   ```
 docker login -u janesmith -p janes_password
   ```
@@ -546,18 +556,26 @@ cd dockerSkeleton
   ```
   {: pre}
   ```
+  chmod +x buildAndPush.sh
+  ```
+  {: pre}
+  ```
 ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
-
-  请注意，在 Docker 映像构建过程中，会对 example.c 文件中的部分内容进行编译，所以无需在您的计算机上对 C 程序进行编译。
-
-4. 要通过 Docker 映像而不是通过提供的 JavaScript 文件来创建操作，请添加 `--docker`，并将 JavaScript 文件名替换为 Docker 映像名称。
-
+  
+  请注意，在 Docker 映像构建过程中，会对 example.c 文件中的部分内容进行编译，所以无需在您的计算机上对 C 程序进行编译。事实上，除非要在兼容主机上编译二进制文件，否则其不会在容器内部运行，因为格式不匹配。
+  
+  现在，Docker 容器可用作 {{site.data.keyword.openwhisk_short}} 操作。
+  
+  
   ```
 wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
+  
+  请注意，创建操作时使用 `--docker`。目前，假定所有 Docker 映像都在 Docker Hub 上进行托管。该操作可能会作为其他任何 {{site.data.keyword.openwhisk_short}} 操作进行调用。
+  
   ```
 wsk action invoke --blocking --result example --param payload Rey
   ```
@@ -571,9 +589,9 @@ wsk action invoke --blocking --result example --param payload Rey
   }
   ```
   {: screen}
-
-5. 要更新 Docker 操作，请运行 `buildAndPush.sh` 以刷新 Docker Hub 上的映像，然后您必须运行 `wsk action update` 以使系统访存新映像。新的调用将使用新映像而非具有旧代码的暖映像开始。
-
+  
+  要更新 Docker 操作，请运行 buildAndPush.sh 以刷新 Docker Hub 上的映像，这将允许下次系统拉取 Docker 映像来运行操作的新代码。如果没有暖容器，那么任何新调用都将使用新的 Docker 映像。请考虑以下情况：如果存在使用先前版本的 Docker 映像的暖容器，那么除非运行 wsk 操作更新，否则任何新调用都将继续使用此映像，这将指示系统对于任何新调用，强制执行 docekr pull 会对新 Docker 映像执行拉取操作。
+  
   ```
 ./buildAndPush.sh janesmith/blackboxdemo
   ```
@@ -582,9 +600,8 @@ wsk action invoke --blocking --result example --param payload Rey
   wsk action update --docker example janesmith/blackboxdemo
   ```
   {: pre}
-
-您可以在[参考](./openwhisk_reference.html#openwhisk_ref_docker)部分中找到有关创建 Docker 操作的更多信息。
-
+  
+  您可以在[参考](./openwhisk_reference.html#openwhisk_ref_docker)部分中找到有关创建 Docker 操作的更多信息。
 
 ## 监视操作输出
 {: #openwhisk_actions_polling}

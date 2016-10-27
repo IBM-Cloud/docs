@@ -14,7 +14,7 @@ copyright:
 #Despliegue de apps
 {: #deployingapps}
 
-*Última actualización: 9 de mayo de 2016*
+*Última actualización: 28 de julio de 2016*
 {: .last-updated}
 
 Puede desplegar apps en {{site.data.keyword.Bluemix}} utilizando varios métodos, como por ejemplo la interfaz de línea de mandatos y los entornos de desarrollo integrado (IDE). También puede utilizar manifiestos de app para desplegar apps. Si utiliza un manifiesto de app debe reducir el número de detalles de despliegue que debe especificar cada vez que despliega una app en {{site.data.keyword.Bluemix_notm}}.
@@ -84,7 +84,7 @@ utilice el mandato siguiente:
   cf push appname -p app_path
   ```
   
-A El archivo `package.json` debe estar en su app Node.js para que lo reconozca el paquete de compilación de Node.js. El archivo `app.js` es el script
+El archivo `package.json` debe estar en su app Node.js para que lo reconozca el paquete de compilación de Node.js. El archivo `app.js` es el script
 de entrada de la app, que se puede especificar en el archivo `package.json`. El ejemplo siguiente muestra un archivo `package.json` sencillo:
 
   ```
@@ -406,7 +406,7 @@ Las variables de entorno definidas por el usuario son específicas para una apli
 
   * Utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. Siga estos pasos:
     1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el icono de la app. Se mostrará la página de detalles de la App.
-	2. En el panel de navegación izquierdo, pulse **Variables de entorno**.
+	2. Pulse **Variables de entorno**.
 	3. Pulse **USER-DEFINED** y, a continuación, pulse **ADD**.
 	4. Rellene los campos obligatorios y, a continuación, pulse **SAVE**.
   * Utilice la interfaz de línea de mandatos cf. Añada una variable definida por el usuario utilizando el mandato `cf set-env`. Por ejemplo: 

@@ -14,7 +14,7 @@ copyright:
 #モニターとロギング
 {: #monitoringandlogging}
 
-*最終更新日: 2016 年 7 月 1 日*
+最終更新日: 2016 年 9 月 2 日
 {: .last-updated}
 
 アプリをモニターし、ログを確認することで、アプリケーション実行
@@ -54,6 +54,11 @@ Analytics](../services/monana/index.html) を参照してください。
 {: #logging_for_bluemix_apps}
 
 Cloud Foundry インフラストラクチャーを使用して {{site.data.keyword.Bluemix_notm}} でアプリを実行している場合、ログ・ファイルが自動的に作成されます。デプロイメントからランタイムまでのどのステージでも、エラーが発生した場合は、ログを調べて問題解決の糸口を探すことができます。
+
+###ログ保持期間
+{: #log_retention}
+
+* Bluemix Cloud Foundry アプリでは、ログ・データはデフォルトで 30 日間保管されます。
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -138,7 +143,7 @@ Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 
 デプロイメントまたはランタイムのログを表示するには、以下の手順を実行します。
 1. {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードでアプリのタイルをクリックします。アプリの詳細ページが表示されます。
-2. 左側のナビゲーション・バーで、**「ログ」**をクリックします。
+2. ナビゲーション・バーで、**「ログ」**をクリックします。
 
 **「ログ」**コンソールでは、アプリの最近のログを表示したり、最新のログ (ログ・ファイルの末尾) をリアルタイムで確認することができます。また、ログのタイプとチャネルでログをフィルターに掛けることもできます。
 
@@ -200,16 +205,20 @@ Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 * 完全な詳細ログではなく、一部を表示する場合、**cut** オプションを使用します。例えば、コンポーネントおよびメッセージの情報を表示するには、以下のコマンドを使用します。
 
 ```
-cf logs appname --recent | cut -c 29-40,46- 
+cf logs appname --recent | cut -c 29-40,46-
 ```
 
 **grep** オプションについて詳しくは、cut --help と入力してください。
-* 特定のキーワードが含まれているログ項目を表示するには、**grep** オプションを使用します。例えば、キーワード「[APP」が含まれているログ項目を表示するには、以下のコマンドを使用できます。
+* 特定のキーワードが含まれているログ項目を表示するには、**grep** オプションを使用します。例えば、キーワード「`[APP`」が含まれているログ項目を表示するには、以下のコマンドを使用できます。
 
 ```
 cf logs appname --recent | grep '\[App'
 ```
-**grep** オプションについて詳しくは、`grep --help` と入力してください。### 外部ログ・ホストの構成
+**grep** オプションについて詳しくは、`grep --help` と入力してください。
+
+
+
+### 外部ログ・ホストの構成
 {: #thirdparty_logging}
 
 {{site.data.keyword.Bluemix_notm}} は、限られた量のログ情報をメモリー内に保持します。情報がログに記録されると、古い情報が新しい情報に置き換えられます。すべてのログ情報を保持するには、外部ログ・ホスト (例えば、サード・パーティーのログ管理サービスまたはその他のホスト) にログを保存することができます。
@@ -222,15 +231,15 @@ cf logs appname --recent | grep '\[App'
 
   2. ユーザー提供のサービス・インスタンスを作成します。
      
-	 ```cf create-user-provided-service``` コマンド (または、短縮版コマンドの ```cups```) を使用して、ユーザー提供のサービス・インスタンスを作成します。 
+	 `cf create-user-provided-service` コマンド (または、短縮版コマンドの `cups`) を使用して、ユーザー提供のサービス・インスタンスを作成します。 
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```
-	 **service_name**
+	 &lt;service_name&gt;
 	 
 	 ユーザー提供のサービス・インスタンスの名前。
 	 
-	 **logging_endpoint**
+	 &lt;logging_endpoint&gt;
 	 
 	 {{site.data.keyword.Bluemix_notm}} がログを送信する先のロギング・エンドポイント。次の表を参照して、*logging_endpoint* を適切な値で置き換えてください。
 	 
@@ -265,18 +274,18 @@ cf logs appname --recent | grep '\[App'
 	 サービス・インスタンスをアプリにバインドするには、以下のコマンドを使用します。 
 	
 	 ```
-	 cf bind-service appname <service_name>
-	```
-	 **appname**
+	 cf bind-service <appname> <service_name>
+	 ```
+	 &lt;appname&gt;
 	 
 	 アプリの名前。
 	 
-	 **service_name**
+	 &lt;service_name&gt;
 	 
 	 ユーザー提供のサービス・インスタンスの名前。
 	 
   4. アプリを再ステージングします。
-     変更を有効にするために、```cf restage appname``` を入力します。 
+     変更を有効にするために、`cf restage appname` を入力します。 
 
 #### 外部ホストからのログの表示
 {: #viewing_logs_external}
@@ -359,8 +368,7 @@ cd /opt/splunk/etc/apps
 {{site.data.keyword.Bluemix_notm}} から syslog ドレーンを受け
 入れます。syslog ドレーン用にデータ入力を作成する必要があります。
 
-     a. Splunk Web インターフェース
-の左側から、**「データ (Data)」>「データ入力 (Data inputs)」
+     a. Splunk Web インターフェースから、**「データ (Data)」>「データ入力 (Data inputs)」
 **とクリックします。Splunk がサポー
 トする入力タイプのリストが表示されます。 
 	 
@@ -383,9 +391,7 @@ cd /opt/splunk/etc/apps
 で、**「新規索引の作成 (Create a new index)」
 **をクリックします。新規索引に「bluemix」という名前を付け、**「保存」**をクリックします。
 	 
-     g. 最後に**「レビュー (Review)」**ウ
-ィンドウで、設定が正しいことを確認し、**「送信 (Submit)」**を
-クリックしてこのデータ入力を有効にします。
+     g. 最後に**「レビュー (Review)」**ウィンドウで、設定が正しいことを確認し、**「送信 (Submit)」**をクリックしてこのデータ入力を有効にします。
 
   3. {{site.data.keyword.Bluemix_notm}}で、syslog ドレ
 ーン・サービスを作成し、これをアプリにバインドします。

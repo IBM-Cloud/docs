@@ -18,7 +18,7 @@ copyright:
 
 # Uso y creación de paquetes de {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
-*Última actualización: 28 de marzo de 2016*
+Última actualización: 2 de agosto de 2016
 {: .last-updated}
 
 En {{site.data.keyword.openwhisk}}, puede utilizar paquetes para agrupar un conjunto de acciones relacionadas y
@@ -34,8 +34,7 @@ Toda entidad de {{site.data.keyword.openwhisk_short}}, incluyendo los paquetes, 
 y el nombre completo de una entidad es `/namespaceName[/packageName]/entityName`. Para obtener más información, consulte
 las [Directrices de denominación](./openwhisk_reference.html#openwhisk_entities).
 
-En las secciones siguientes se describe cómo examinar paquetes y usar para ellos los desencadenantes e información de entrada. Además,
-si está interesado en contribuir al catálogo con sus propios paquetes, lea las secciones sobre creación y compartición de paquetes.
+En las secciones siguientes se describe cómo examinar paquetes y usar para ellos los desencadenantes e información de entrada. Además, si está interesado en contribuir con sus propios paquetes al catálogo, lea las secciones sobre la creación y compartición de paquetes.
 
 ## Examinar paquetes
 {: #openwhisk_packagedisplay}
@@ -51,14 +50,17 @@ lista de las entidades de un paquete y obtener una descripción de las entidades
   {: pre}
   ```
   packages
-  /whisk.system/alarms                                              shared
-  /whisk.system/cloudant                                            shared
-  /whisk.system/github                                              shared
-  /whisk.system/samples                                             shared
-  /whisk.system/slack                                               shared
-  /whisk.system/util                                                shared
-  /whisk.system/watson                                              shared
-  /whisk.system/weather                                             shared
+  /whisk.system/cloudant                                                 shared
+  /whisk.system/alarms                                                   shared
+  /whisk.system/watson                                                   shared
+  /whisk.system/websocket                                                shared
+  /whisk.system/weather                                                  shared
+  /whisk.system/system                                                   shared
+  /whisk.system/utils                                                    shared
+  /whisk.system/slack                                                    shared
+  /whisk.system/samples                                                  shared
+  /whisk.system/github                                                   shared
+  /whisk.system/pushnotifications                                        shared
   ```
   {: screen}
 
@@ -120,7 +122,7 @@ la acción `greeting` en el paquete `/whisk.system/samples` con distintos parám
 
   Observe que la acción `greeting` acepta dos parámetros: `name` y `place`.
 
-2. Invoque el acción sin ningún parámetro.
+2. Invoque la acción sin ningún parámetro.
 
   ```
   wsk action invoke --blocking --result /whisk.system/samples/greeting
@@ -135,7 +137,7 @@ la acción `greeting` en el paquete `/whisk.system/samples` con distintos parám
 
   La salida es un mensaje genérico porque no se han especificado parámetros.
 
-3. Invoque el acción con parámetros.
+3. Invoque la acción con parámetros.
 
   ```
   wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
@@ -181,10 +183,10 @@ En el ejemplo sencillo siguiente, enlaza al paquete `/whisk.system/samples`.
   {: pre}
   ```
   package /myNamespace/valhallaSamples
-   action /myNamespace/valhallaSamples/greeting: Print a friendly greeting
+   action /myNamespace/valhallaSamples/greeting: Returns a friendly greeting
    action /myNamespace/valhallaSamples/wordCount: Count words in a string
-   action /myNamespace/valhallaSamples/helloWorld: Print to the console
-   action /myNamespace/valhallaSamples/echo: Returns the input arguments, unchanged
+   action /myNamespace/valhallaSamples/helloWorld: Demonstrates logging facilities
+   action /myNamespace/valhallaSamples/curl: Curl a host url
   ```
   {: screen}
 
@@ -228,8 +230,7 @@ el valor predeterminado establecido en el enlace del paquete `valhallaSamples`.
 {: #openwhisk_package_trigger}
 
 La información de entrada ofrece una forma cómoda de configurar un origen de suceso externo para activar dichos sucesos
-para un desencadenante de {{site.data.keyword.openwhisk_short}}. En este ejemplo se muestra cómo utilizar la información de entrada del paquete Alarms para activar un desencadenante cada segundo,
-y usar una regla para invocar una acción cada segundo.
+para un desencadenante de {{site.data.keyword.openwhisk_short}}. En este ejemplo se muestra cómo utilizar la información de entrada del paquete Alarms para activar un desencadenante cada segundo y cómo usar una regla para invocar una acción cada segundo.
 
 1. Obtener una descripción de la información de entrada en el paquete `/whisk.system/alarms`.
 
@@ -521,4 +522,3 @@ todo su contenido es también privado.
   {: screen}
 
   En el ejemplo anterior, se trabaja con el espacio de nombres `myNamespace` y este espacio de nombres aparece en el nombre completo.
-

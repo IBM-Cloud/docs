@@ -119,7 +119,7 @@ TestNode zu beginnen.
 {{site.data.keyword.Bluemix_notm}} herzustellen:
   
   ```
-cf api https://api.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   Weitere Informationen zum Herstellen einer Verbindung zu anderen {{site.data.keyword.Bluemix_notm}}-Regionen finden Sie im Abschnitt zu den {{site.data.keyword.Bluemix_notm}}-Regionen. Nach Angabe der {{site.data.keyword.Bluemix_notm}}-Region werden die von Ihnen angegebenen Positionsinformationen
@@ -128,19 +128,18 @@ gespeichert.
   4. Melden Sie sich als Nächstes bei {{site.data.keyword.Bluemix_notm}} an, indem Sie den Befehl 'cf login' verwenden.
   
   ```
-cf login -u eigene_benutzer-id -p ***** -o name_der_eigenen_organisation -s name_des_eigenen_bereichs
+  cf login -u eigene_benutzer-id -p ***** -o name_der_eigenen_organisation -s name_des_eigenen_bereichs
   ```
   
   5. Nachdem Sie sich bei {{site.data.keyword.Bluemix_notm}} angemeldet haben, können Sie Ihre App in {{site.data.keyword.Bluemix_notm}} bereitstellen. Geben Sie im Verzeichnis (`C:\test`) der App den folgenden Befehl ein:
   
   ```
-cf push TestNode
+  cf push TestNode
   ```
   
   Weitere Informationen zum Befehl **cf push** finden Sie unter 'Anwendung hochladen'.
   
   6. Nun können Sie auf die App zugreifen, indem Sie die folgende Anwendungs-URL in einen Browser eingeben:
-  
   ```
   http://TestNode.mybluemix.net
   ```
@@ -162,13 +161,13 @@ Um den Service {{site.data.keyword.cloudant}} in der App verwenden zu können, m
   Verwenden Sie den Befehl 'cf create-service', um eine neue Instanz eines Service zu erstellen. Beispiel:
   
   ```
-cf create-service cloudantNoSQLDB Shared cloudant100
+  cf create-service cloudantNoSQLDB Shared cloudant100
   ```
   
   Sie können auch den Befehl 'cf services' verwenden, um eine Liste der Serviceinstanzen anzuzeigen, die Sie erstellt haben.
   
   ```
-cf services
+  cf services
   ```
   
   Nach Erstellung einer Serviceinstanz ist diese Instanz für alle Ihre Anwendungen verfügbar und kann entsprechend gebunden und verwendet werden.
@@ -180,7 +179,7 @@ cf services
 angeben.
   
   ```
-cf bind-service TestNode cloudant100
+  cf bind-service TestNode cloudant100
   ```
   
   Durch das Binden einer Serviceinstanz an eine Anwendung kann {{site.data.keyword.Bluemix_notm}} mit dem Service kommunizieren und angeben, dass eine neue Anwendung mit der betreffenden Serviceinstanz kommunizieren wird. Die Verarbeitung der Anwendung und der Serviceinstanz durch
@@ -206,10 +205,9 @@ verwenden kann, um eine Verbindung zu dieser Instanz von {{site.data.keyword.clo
   <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
   
   Beispiel: Ihre Node.js-App könnte wie folgt auf diese Informationen zugreifen:
-  
   ```
-if (process.env.VCAP_SERVICES) {
-    var env = JSON.parse(process.env.VCAP_SERVICES);
+  if (process.env.VCAP_SERVICES) {
+        var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
@@ -229,11 +227,11 @@ die Umgebungsvariable VCAP_SERVICES hingegen nicht vorhanden, wird die lokale Se
   
   Sie können mit einer Serviceinstanz interagieren, indem Sie die entsprechenden Berechtigungsnachweisinformationen verwenden. Zu den möglichen Aktionen gehören Lese-, Schreib- und Aktualisierungsvorgänge. Das folgende Beispiel veranschaulicht, wie ein JSON-Objekt in die Serviceinstanz von
 {{site.data.keyword.cloudant}} eingefügt wird:
-  
   ```
-// Neue Nachricht erstellen
+  // Neue Nachricht erstellen
 var create_message = function(req, res) {
-  require('cloudantdb').connect(cloudant.url, function(err, conn) {    var collection = conn.collection('messages');
+  require('cloudantdb').connect(cloudant.url, function(err, conn) {
+    var collection = conn.collection('messages');
 
     // Nachrichtendatensatz erstellen
     var parsedUrl = require('url').parse(req.url, true);

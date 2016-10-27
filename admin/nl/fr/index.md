@@ -1,4 +1,4 @@
----
+﻿---
 
 
 
@@ -17,7 +17,7 @@ copyright:
 
 # Gestion de l'environnement {{site.data.keyword.Bluemix_notm}} local et de l'environnement {{site.data.keyword.Bluemix_notm}} dédié
 {: #mng}
-Dernière mise à jour : 16 août 2016
+Dernière mise à jour : 20 septembre 2016
 {: .last-updated}
 
 Si vous disposez d'un accès administrateur pour l'environnement {{site.data.keyword.Bluemix}} local ou {{site.data.keyword.Bluemix_notm}} dédié, accédez à la page **Administration** pour gérer les ressources, surveiller l'utilisation des quotas, administrer des droits d'utilisateur, planifier des notifications de mise à niveau, afficher des rapports de sécurité et des journaux, etc. Vous pouvez gérer votre organisation en créant des espaces et en configurant des [rôles utilisateur et autorisations](index.html#oc_useradmin). Voir [Gestion de vos organisations](../admin/orgs_spaces.html).
@@ -41,7 +41,9 @@ Si vous disposez d'un accès administrateur pour l'environnement {{site.data.key
 ## Notifications et abonnements à des événements
 {: #oc_eventsubscription}
 
-Vous pouvez prendre connaissance à tout moment du statut de votre environnement en consultant la page Statut. Les incidents sont signalés sur cette page au fur et à mesure qu'ils se produisent. {{site.data.keyword.Bluemix_notm}} envoie également des notifications à la zone Notifications sur la page Administration pour des événements tels que des mises à jour de maintenance planifiées ou en attente.
+Vous pouvez prendre connaissance à tout moment du statut de votre environnement en consultant la page Statut. Les incidents et les événements de
+mise à jour de maintenance planifiés avec interruption sont signalés sur cette
+page au fur et à mesure qu'ils se produisent. {{site.data.keyword.Bluemix_notm}} envoie également des notifications à la zone Notifications sur la page Administration pour des événements tels que des mises à jour de maintenance planifiées ou en attente.
 
 ### Notifications
 
@@ -51,20 +53,33 @@ Vous pouvez afficher les notifications pour votre environnement local ou dédié
 
 | **Type d'événement** | **Méthode de notification** |       
 |-----------------|-------------------|
-| Mises à jour de maintenance | Vous êtes prévenu en cas de mises à jour de maintenance prévues dans la zone Notifications de la page Administration. Accédez à la page **Administration**, puis sélectionnez l'icône **Notifications** ![Notifications](images/icon_announcement.svg). Pour afficher la liste complète ainsi que l'historique de vos notifications en attente et consultées, cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** &gt; *Nombre* **en attente**. Vous pouvez étendre la capacité de notification en configurant un abonnement envoyant un courrier électronique aux destinataires de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix. |
+| Mises à jour de maintenance | Vous êtes prévenu en cas de mises à jour de maintenance prévues dans la zone Notifications de la page Administration. Accédez à la page **Administration**, puis sélectionnez l'icône **Notifications** ![Notifications](images/icon_announcement.svg). Pour afficher la liste complète ainsi que l'historique de vos notifications en attente et consultées, cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** &gt; *Nombre* **en attente**.|
+|  | Vous êtes également prévenu en cas d'événements de mise à jour de maintenance planifiés avec interruption dans la page Statut.
+Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis sélectionnez **Etat**.|
+|  | Vous pouvez étendre la capacité de notification en configurant un abonnement envoyant un courrier électronique aux destinataires de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.|
 | Incidents critiques | Vous êtes prévenu en cas d'incident critique dans la page Statut. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis sélectionnez **Etat**. Vous pouvez étendre la capacité de notification en configurant un abonnement à des événements qui envoie un courrier électronique au destinataire de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.  |  
-| Statut {{site.data.keyword.Bluemix_notm}} | Vous pouvez toujours examiner le statut le plus récent de la plateforme, des services et de votre instance {{site.data.keyword.Bluemix_notm}} sur la page Statut. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis sélectionnez **Etat**.   |
+| Statut {{site.data.keyword.Bluemix_notm}} | Vous pouvez toujours examiner le statut le plus récent de la plateforme, des services et de votre instance {{site.data.keyword.Bluemix_notm}} sur la page Statut. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis sélectionnez **Etat**.  |
 
 ### Configuration d'abonnements à des événements
 
-Vous pouvez étendre la fonctionnalité des notifications envoyées à la page Administration et à la page Statut en utilisant des abonnements à des événements pour configurer un courrier personnalisé ou encore utiliser des webhooks pour les intégrer à l'outil de votre choix. Si vous sélectionnez l'option webhooks, vos notifications sont acheminées directement à la destination de votre choix, par exemple à un numéro de téléphone (via un message SMS). Vous pouvez personnaliser le type de notification, notamment les alertes relatives aux mises à jour de maintenance ou aux incidents critiques, ainsi que les informations qui sont incluses dans le corps de chaque notification.
+Vous pouvez étendre la fonctionnalité des notifications qui sont envoyées à la page Administration et à la page Statut en utilisant des abonnements à
+des
+événements. Utilisez ces derniers pour configurer un courrier électronique personnalisé ou utiliser des webhooks à intégrer à l'outil de
+votre
+choix.  
+ * Si vous sélectionnez l'option de courrier électronique, vos notifications sont envoyées aux adresses électroniques que vous spécifiez.
+Vous pouvez sélectionner des notifications d'incidents ou de mises à jour de maintenance. Une notification par courrier électronique initiale est envoyée. Ensuite,
+si l'incident ou la mise à jour de maintenance est modifié, une autre notification comportant la modification est envoyée à chaque fois qu'une modification
+est effectuée.   
+ * Si vous sélectionnez l'option webhooks, vos notifications sont acheminées directement à la destination de votre choix, par exemple à un numéro de téléphone (via un message SMS). Vous pouvez personnaliser le type de notification, notamment les alertes relatives aux mises à jour de maintenance ou aux incidents critiques, ainsi que les informations qui sont incluses dans le corps de chaque notification.
 
 **Remarque **: seuls les utilisateurs disposant de l'autorisation de superutilisateur (`ops.admin`) peuvent configurer des abonnements à des événements.
 
-Pour accéder à la page **Abonnements à des événements**, procédez comme suit :
+Vous pouvez accéder à la page **Abonnements à des événements** de l'une des façons suivantes : 
 
 * Pour les notifications de mise à jour de maintenance, accédez à **INFORMATIONS SYSTEME &gt; *Nombre * en attente &gt; Abonnements **.
-* Pour les notifications relatives à des incidents, cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) &gt; **Status**, puis sur l'icône **S'abonner** ![S'abonner](images/icon_subscribe.svg).
+* Pour les notifications relatives à des incidents, cliquez sur l'icône **{{site.data.keyword.avatar}}**
+![Avatar](../support/images/account_support.svg) &gt; **Statut**, puis sur l'icône **S'abonner** ![S'abonner](images/icon_subscribe.svg).
 
 **Remarque** : vous pouvez accéder à la page des abonnements à des événements pour les deux types de notification en appliquant l'une des deux méthodes décrites.
 
@@ -82,12 +97,12 @@ Pour créer un abonnement de courrier électronique ou webhook depuis la page **
 
 | **Zone** | **Description** |
 |-----------------|-------------------|
-| Type | Sélectionnez **Courrier électronique**. |
-| Evénement | Choisissez de vous abonner aux notifications relatives à une mise à jour ou à un incident. |
 | Activé | Sélectionnez l'option d'activation des notifications par courrier électronique. Effacez la sélection pour désactiver la notification par courrier électronique. Les abonnements sont activés par défaut. |
-| Combiner des notifications | Sélectionnez l'option permettant de combiner les notifications relatives aux incidents pour toutes les régions dans une seule notification. Cette option est disponible uniquement pour les incidents.  |
+| Type | Sélectionnez **Courrier électronique**. |
+| Evénement | Choisissez de vous abonner aux notifications relatives à un événement **Maintenance** ou **Incident**.  |
+| Combiner des notifications | Sélectionnez l'option permettant de combiner les notifications relatives aux incidents pour toutes les régions dans une seule notification. Cette option est disponible uniquement pour les incidents. |
 | Objet | Renseignez la ligne d'objet du courrier électronique. Cette zone est obligatoire.  |
-| Corps | Entrez le texte du corps du message à envoyer dans le message électronique. Vous pouvez utiliser les valeurs de contenu IBM pour alimenter la notification par courrier électronique avec les informations pertinentes. Reportez-vous au tableau [Valeurs de la section Contenu](index.html#payload) pour déterminer les valeurs que vous pouvez utiliser. Utilisez des balises HTML élémentaires pour structurer votre courrier électronique. Si vous n'entrez pas d'informations dans cette section, vous recevrez une notification ne comportant pas d'information supplémentaire. Cette zone est obligatoire. |
+| Corps | Entrez le texte du corps du message à envoyer dans le message électronique. Vous pouvez utiliser les valeurs de contenu IBM pour alimenter la notification par courrier électronique avec les informations pertinentes. Reportez-vous au tableau [Valeurs de la section Contenu](index.html#payload) pour déterminer les valeurs que vous pouvez utiliser. Utilisez des balises HTML élémentaires pour structurer votre courrier électronique. Cette zone est obligatoire. |
 | A | Entrez l'adresse ou les adresses électroniques des destinataires de la notification par courrier électronique dans une liste séparée par des virgules. Développez les options "cc" ou "bcc" pour ajouter d'autres destinataires au courrier électronique. Cette zone est obligatoire. |
 | Description | Ajoutez une description unique pour l'abonnement que vous créez. |
 
@@ -96,11 +111,11 @@ Pour créer un abonnement de courrier électronique ou webhook depuis la page **
 
 | **Zone** | **Description** |
 |-----------------|-------------------|
+| Activé | Sélectionnez l'option d'activation de la notification. Effacez la sélection pour désactiver la notification. Les abonnements sont activés par défaut. |
 | Type | Sélectionnez **Webhook** |
 | Méthode | Sélectionnez **GET** ou **POST**. |
-| Evénement | Choisissez de vous abonner aux notifications relatives à une mise à jour ou à un incident. |
-| Activé | Sélectionnez l'option d'activation de la notification. Effacez la sélection pour désactiver la notification. Les abonnements sont activés par défaut. |
-| Combiner des notifications | Sélectionnez l'option permettant de combiner les notifications relatives aux incidents pour toutes les régions dans une seule notification. Cette option est disponible uniquement pour les incidents.  |
+| Evénement | Choisissez de vous abonner aux notifications relatives à un événement **Maintenance** ou **Incident**.  |
+| Combiner des notifications | Sélectionnez l'option permettant de combiner les notifications relatives aux incidents pour toutes les régions dans une seule notification. Cette option est disponible uniquement pour les incidents. |
 | URL | Entrez l'URL pour connexion à votre service Web. |
 | Description | Ajoutez une description unique pour l'abonnement que vous créez. |
 | Nom d'utilisateur | Entrez votre nom d'utilisateur pour votre service Web. Si vous ne voulez pas utiliser vos données d'identification personnelles, vous pouvez configurer un ID fonctionnel à utiliser spécifiquement avec {{site.data.keyword.Bluemix_notm}}. |
@@ -112,26 +127,36 @@ Pour créer un abonnement de courrier électronique ou webhook depuis la page **
 
 | **Valeur IBM** | **Description** | **Type d'événement** |
 |----------------|----------------|------------------------|
-| {{content.title}} | Titre du message |  Mise à jour et incident  |
-| {{type}} | Mise à jour ou incident | Mise à jour et incident |
-| {{region}} | Région affectée | Mise à jour et incident |
-| {{content.message}} | Description du message |   Mise à jour et incident  |
+| {{content.title}} | Titre du message |  Mise à jour de maintenance et incident  |
+| {{content.message}} | Description du message |   Mise à jour de maintenance et incident  |
+| {{region}} | Région affectée | Mise à jour de maintenance et incident  |
 | {{content.severity}} | Evaluation de la gravité | Incident |
 | {{content.category}} | Services affectés | Incident |
 | {{content.subCategoryName}} | Composants affectés | Incident |
-| {{status}} | Statut de la mise à jour | Mise à jour |
-| {{content.scheduleWindow.start}} | Date de début planifiée pour la mise à jour | Mise à jour |
-| {{content.scheduleWindow.end}} | Heure de fin planifiée pour la mise à jour | Mise à jour |
-| {{content.disruption}} | Composants affectés | Mise à jour |
+| {{status}} | Statut de la mise à jour | Mise à jour de maintenance |
+| {{content.scheduleWindow.start}} | Date de début planifiée pour la mise à jour | Mise à jour de maintenance |
+| {{content.disruption}} | Composants affectés | Mise à jour de maintenance |
+| {{type}} | Mise à jour ou incident | Mise à jour de maintenance et incident  |
+| {{content.scheduleWindow.end}} | Heure de fin planifiée pour la mise à jour | Mise à jour de maintenance |
 
-Une fois votre abonnement à un événement sauvegardé, vous recevrez des notifications via la méthode configurée. Les notifications continuent d'être publiées dans la page Statut pour les incidents et dans la zone Notifications de la page Administration pour les mises à jour de maintenance.
+Une fois votre abonnement à un événement sauvegardé, vous recevrez des notifications via la méthode configurée. Les notifications apparaissent
+toujours aux emplacements suivants :
+  
+ * Dans la page Statut pour les incidents  
+ * Dans la page Statut pour les événements de mise à jour de maintenance planifiés avec interruption 
+ * Dans la zone Notifications de la page Administration pour les mises à jour de maintenance
 
 Vous pouvez sélectionner n'importe quel abonnement à un événement sauvegardé, examiner l'activité récente ou l'éditer selon vos besoins. Cliquez sur une entrée d'activité récente pour la développer et visualiser les détails de son historique.
 
 ## Mises à jour de maintenance
 {: #oc_schedulemaintenance}
 
-Vous pouvez afficher les mises à jour de maintenance planifiées et en attente en sélectionnant **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* en attente ** pour accéder à la page **Mises à jour du système**.
+Vous pouvez afficher les mises à jour de maintenance planifiées et en attente, si vous disposez du droit de
+superutilisateur (`ops.admin`), en cliquant sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* en
+attente** pour accéder à la page **Mises à jour du système**. Tous les utilisateurs de votre environnement peuvent afficher
+les événements de mise à jour de maintenance planifiés avec interruption en cliquant sur l'icône
+**{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis en sélectionnant
+**Statut**.
 
 **Remarque **: reportez-vous tout d'abord à la section [Définition de fenêtres de maintenance pré-approuvées](index.html#preapprovedmaintenance) ci-dessous. Ces fenêtres doivent être définies pour qu'IBM puisse planifier la maintenance de votre environnement.
 
@@ -162,7 +187,7 @@ des mises à jour de maintenance.
 2. Développez la section **Gérer les fenêtres de disponibilité pour les mises à jour**.
 3. Cliquez sur **Ajouter** ![Ajouter](images/add-new.png).
 4. Définissez votre première fenêtre de disponibilité en sélectionnant la fréquence, la durée et l'heure de début de la fenêtre.
-5. Facultatif : sélectionnez **Marquer comme préféré** si vous souhaitez définir votre fenêtre de disponibilité récurrente comme période de planification préférée pour vos déploiements. Les fenêtres préférées sont prioritaires, chaque fois que cela est possible. 
+5. Facultatif : sélectionnez **Marquer comme préféré** si vous souhaitez définir votre fenêtre de disponibilité récurrente comme période de planification préférée pour vos déploiements. Les fenêtres préférées sont prioritaires, chaque fois que cela est possible.
 6. Cliquez sur **Soumettre**.
 7. Répétez ce processus jusqu'à ce que vous ayez rempli les exigences minimales pour les fenêtres hebdomadaires.
 
@@ -212,7 +237,7 @@ vous sélectionnez **Autres dates**, vous pouvez ouvrir le calendrier pour séle
 
 En fonction de votre sélection, la mise à jour est planifiée pour son déploiement à la date suggérée que vous avez acceptée,
 lors d'une des fenêtres pré-approuvées ou à l'une des dates et heures spécifiques que vous avez sélectionnées. Lorsque la mise à jour est planifiée pour son
-déploiement par IBM, la date planifiée est indiquée dans les détails de la mise à jour sur la page **Mises à jour du système**. Vous pouvez replanifier un déploiement déjà planifié uniquement si un jour (24 heures) avant la date et l'heure de début planifiées est conservé. Une fois que vous avez replanifié un déploiement, vous ne pouvez plus le redéployer à nouveau. 
+déploiement par IBM, la date planifiée est indiquée dans les détails de la mise à jour sur la page **Mises à jour du système**. Vous pouvez replanifier un déploiement déjà planifié uniquement si un jour (24 heures) avant la date et l'heure de début planifiées est conservé. Une fois que vous avez replanifié un déploiement, vous ne pouvez plus le redéployer à nouveau.
 
 
 ## Affichage des informations système
@@ -267,26 +292,78 @@ Vous pouvez afficher différents types d'informations relatives à l'utilisation
 
 - Des informations sur les ressources, notamment l'espace disque, l'utilisation de l'unité centrale, l'utilisation du réseau et les temps de réponse moyens. Voir [Utilisation des ressources](index.html#resourceusage).
 - L'utilisation du compte par organisation, notamment le nombre d'applications de contexte d'exécution et leur utilisation, le nombre total de Go/heure consommé par les contextes d'exécution, ainsi que le nombre d'instances de service et leur utilisation. Voir [Utilisation du compte](index.html#accountusage).
-- L'utilisation du quota de mémoire des organisations, la mémoire allouée aux applications en fonction du quota de mémoire utilisé total, et une vue de la consommation de Go/heure par application pour une organisation spécifique. Vous pouvez aussi afficher l'utilisation du quota pour toutes les organisations dans la page Administration des organisations, dans la section Surveillance des quotas. Voir [Administration des organisations](../admin/index.html#orgusage).
+- L'utilisation du quota de mémoire des organisations, la mémoire allouée aux applications en fonction du quota de mémoire utilisé total, et une vue de la consommation de Go/heure par application pour une organisation spécifique. 
+Vous pouvez aussi afficher l'utilisation du quota pour toutes les organisations dans la page Administration des organisations, dans la section **Surveillance
+des quotas**. Voir [Administration des organisations](../admin/index.html#orgusage).
 
 
 ### Utilisation des ressources
 {: #resourceusage}
 
-Pour afficher des informations relatives à l'utilisation des ressources, cliquez sur **ADMINISTRATION &gt; UTILISATION**.
+Pour afficher des informations relatives à l'utilisation des ressources, cliquez sur **ADMINISTRATION &gt; Utilisation
+des ressources**.
 
-Dans la section Surveillance des ressources, vous pouvez consulter les informations suivantes :
+Dans la section **Utilisation des ressources**, vous pouvez consulter les informations suivantes :
 
-- Des informations relatives à l'utilisation des ressources, par exemple le nombre de gigaoctets de mémoire et le nombre de gigaoctets d'espace disque qui sont utilisés. Vous pouvez afficher l'utilisation moyenne de l'unité centrale par tous les agents DEA (Droplet Execution Agent). Cliquez sur la vignette de l'**UC** afin d'afficher l'utilisation de l'unité centrale pour chaque agent DEA. L'agent DEA associé à l'utilisation la plus élevée est répertorié en premier, et chaque agent est identifié par son travail et son adresse IP. L'utilisation de l'unité centrale est exprimée dans trois catégories : la quantité d'unité centrale utilisée pour les processus système, la quantité d'unité centrale utilisée pour les processus utilisateur et la quantité d'unité centrale utilisée pour les processus en attente.
-- Des informations relatives à l'utilisation du réseau pour la bande passante entrante et la bande passante sortante, pour le jour précédent, la semaine précédente ou le mois précédent. Les données affichées dépendent de la somme du trafic entrant et sortant pour les réseaux publics et privés.
-- Le temps de réponse moyen pour {{site.data.keyword.Bluemix_notm}} au cours des dix minutes précédentes, de l'heure précédente ou du jour précédent.
+
+- Des informations sur l'utilisation des ressources, comme la quantité de mémoire et l'espace disque pouvant être réservés et physiquement
+disponibles, ainsi que la quantité de mémoire et l'espace disque actuellement réservés et physiquement utilisés. Vous pouvez également consulter des
+informations sur l'utilisation moyenne de l'unité centrale dans tous les agents DEA. Pour afficher l'utilisation de votre mémoire, de votre disque ou de
+votre unité centrale par agent DEA, cliquez sur **Répartition**.
+Vous pouvez afficher un récapitulatif des quantités **réservées** et **physiques** pour votre mémoire et votre disque.
+<dl>
+	<dt><strong>Physique</strong></dt>
+	<dd>Quantité de mémoire ou espace disque acheté pour votre environnement. </dd>
+	<dt><strong>Réservé</strong></dt>
+	<dd>Quantité totale de mémoire ou espace disque disponible pour la réservation par toutes les applications déployées et en cours d'exécution dans votre
+environnement. Etant donné que les applications utilisent rarement toute la mémoire qu'elles réservent, la valeur physique est généralement inférieure
+à la valeur réservée.
+</dd>
+	</dl>
+
+	En plus de la représentation graphique, vous pouvez afficher le pourcentage de mémoire et d'espace disque que votre environnement utilise. Vous pouvez
+également afficher les quantités réservées et physiques, en gigaoctets, dans le cadre de l'utilisation réelle, par rapport à la quantité disponible.
+Pour afficher des informations plus détaillées sur votre utilisation de la mémoire réservée et physique, cliquez sur **Historique**. Vous
+pouvez choisir d'afficher les données hebdomadaires ou mensuelles.
+La vue **Utilisation de la mémoire historique** affiche un graphique de l'utilisation de la mémoire pour la période que vous
+choisissez.
+  
+	<dl>
+	<dt><strong>Limite mémoire réservée</strong></dt>
+	<dd>Affichée sous forme de ligne en pointillés horizontale, la limite mémoire réservée est la quantité totale de mémoire qui peut être réservée
+collectivement par toutes les applications qui s'exécutent dans votre environnement. </dd>
+	<dt><strong>Réservée</strong></dt>
+	<dd>La zone Réservée indique la mémoire qui est réservée collectivement par toutes les applications qui s'exécutent dans votre environnement. <p>Pour
+identifier les organisations qui ont réservé le plus de mémoire à un moment précis, passez votre souris sur le point à côté de la zone Réservée qui
+est associée à ce moment. Ensuite, vous pouvez cliquer sur une organisation dans le graphique circulaire pour afficher davantage d'informations sur cette
+organisation.
+</p></dd>
+	<dt><strong>Limite physique</strong></dt>
+	<dd>Affichée sous forme de ligne en pointillés horizontale, la limite physique indique la quantité de mémoire physique qui a été achetée pour votre
+environnement. </dd>
+	<dt><strong>Physique</strong></dt>
+	<dd>La zone Physique affiche la quantité de mémoire utilisée. </dd>
+	</dl>
+- Des informations sur l'utilisation du réseau relatives à la bande passante entrante et à la bande passante sortante, au cours des 6 dernières
+heures ou du dernier jour. Les données affichées dépendent de la somme du trafic entrant et sortant pour les réseaux publics et privés.
+- Le temps de réponse moyen pour {{site.data.keyword.Bluemix_notm}} au cours des 10 dernières minutes, de la dernière heure et du dernier
+jour.
+
 - Le nombre moyen de transactions par seconde pour {{site.data.keyword.Bluemix_notm}} au cours des dix minutes précédentes, de l'heure précédente ou du jour précédent.
 
 ### Utilisation du compte
 {: #accountusage}
 
 Vous pouvez afficher l'utilisation mensuelle pour votre compte, pour votre environnement dédié ou local. Vous pouvez utiliser ces données afin de
-déterminer les frais à facturer à des organisations spécifiques en fonction de leur consommation.
+déterminer les frais à facturer à des organisations spécifiques en fonction de leur consommation. Tous les utilisateurs de la console d'administration
+qui disposent du droit **Utilisateurs** avec l'accès **Lecture** peuvent afficher les données d'utilisation du
+compte. De plus, les responsables de la facturation des organisations peuvent afficher les données d'utilisation du compte pour leurs organisations, même
+s'ils ne disposent pas du droit **Utilisateurs** dans la console d'administration. En tant qu'administrateur de la console (droit de
+superutilisateur), vous pouvez affecter le rôle de responsable de la facturation pour des organisations en cliquant sur l'icône
+**{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) &gt;
+**Gérer les organisations**.
+
+Pour afficher les données d'utilisation du compte, procédez comme suit : 
 
 <ol>
 <li>Cliquez sur l'icône <strong>{{site.data.keyword.avatar}}</strong> ![Avatar](../support/images/account_support.svg) &gt; <strong>Compte</strong> &gt; <strong>Détails sur l'utilisation</strong>.</li>
@@ -338,7 +415,9 @@ sélectionnez une organisation dans **Liste des organisations**. La page **Gére
 - Le nombre de routes utilisées
 - Un graphique du quota de mémoire qui représente le quota utilisé et le quota non utilisé
 - Un graphique de l'allocation des applications qui indique quelles sont les applications incluses dans le quota de mémoire utilisé
-- Un graphique de l'utilisation des applications mesurée qui représente un rapport sur trois mois du nombre de Go/heure consommé par application déployée. Vous pouvez sélectionner la **vue Liste** pour examiner les données de toutes les applications, notamment l'allocation mémoire par application et l'utilisation mesurée en Go par heure au cours des trois derniers mois.
+- Un graphique de l'utilisation des applications mesurée qui représente un rapport sur trois mois du nombre de Go/heure consommé par application
+déployée. Vous pouvez sélectionner la **vue Liste** pour examiner les données de toutes les applications, notamment l'allocation mémoire par
+application et l'utilisation mesurée en Go par heure au cours des trois derniers mois.
 
 Pour plus d'informations sur l'affichage de l'utilisation par organisation, l'ajustement des plans d'établissement des quotas et la gestion de vos organisations, voir [Administration des organisations](../admin/index.html#oc_organizations).
 
@@ -355,7 +434,11 @@ Effectuez l'une des opérations suivantes :
 - Lors de l'affichage d'un rapport ou d'un journal, vous pouvez cliquer sur l'icône ![Télécharger](images/icon_download.png) pour télécharger le rapport.
 
 Le tableau ci-dessous présente la liste des rapports de sécurité qui sont générés pour l'environnement {{site.data.keyword.Bluemix_notm}}
-local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié.
+local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié. La plupart des rapports sont générés quotidiennement. Toutefois, les
+rapports sur les événements de gestion des clés et de chiffrement sont générés mensuellement. Tous les rapports sont conservés pendant 90 jours dans la
+console d'administration, à partir de laquelle vous pouvez y accéder. Au bout de ces 90 jours, {{site.data.keyword.Bluemix_notm}} les tient à
+disposition hors ligne sur demande pendant 9 mois. Au total, les rapports sont disponibles en vue de leur extraction pendant un an.
+
 
 *Tableau 6. Liste des rapports de sécurité*
 
@@ -363,7 +446,7 @@ local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié.
 |-----------------|-------------------|---------------------|
 | Pare-feu | Connexions au pare-feu | Evénements liés à la connexion de l'administrateur aux unités de pare-feu Vyatta. |
 | Pare-feu | Refus du pare-feu | Evénements générés par les unités de pare-feu Vyatta lorsqu'une demande d'accès est refusée selon les règles de pare-feu appliquées. |
-| Evénements de connexion d'administrateur {{site.data.keyword.Bluemix_notm}} | Connexion des administrateurs {{site.data.keyword.Bluemix_notm}}  | Evénements générés par le système d'exploitation lorsqu'un administrateur démarre une session SSH sur chaque système {{site.data.keyword.Bluemix_notm}}. |
+| Evénements de connexion d'administrateur {{site.data.keyword.Bluemix_notm}} | Connexion des administrateurs {{site.data.keyword.Bluemix_notm}} | Evénements générés par le système d'exploitation lorsqu'un administrateur démarre une session SSH sur chaque système {{site.data.keyword.Bluemix_notm}}. |
 | Evénements de connexion de développeur d'applications {{site.data.keyword.Bluemix_notm}} | Connexion des développeurs d'applications {{site.data.keyword.Bluemix_notm}} | Evénements générés par le composant de connexion à la plateforme {{site.data.keyword.Bluemix_notm}} lorsqu'un utilisateur de la plateforme {{site.data.keyword.Bluemix_notm}} démarre une session via la ligne de commande, les API REST ou l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. |
 | Evénements d'administration d'administrateur {{site.data.keyword.Bluemix_notm}} | Evénements d'administration du système d'exploitation des administrateurs {{site.data.keyword.Bluemix_notm}} | Evénements générés par le système d'exploitation lorsqu'un administrateur effectue une action dans une session de travail en cours. |
 | Evénements d'administration de développeur d'applications {{site.data.keyword.Bluemix_notm}} | Evénements d'administration (Cloud Foundry) {{site.data.keyword.Bluemix_notm}} | Evénements liés aux opérations effectuées par l'utilisateur de la plateforme {{site.data.keyword.Bluemix_notm}} via la ligne de commande, les API REST ou l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. |
@@ -387,7 +470,7 @@ Vous pouvez afficher le statut de l'environnement {{site.data.keyword.Bluemix_no
 ### Statut de l'environnement {{site.data.keyword.Bluemix_notm}}
 
 Vous pouvez surveiller le statut de votre instance {{site.data.keyword.Bluemix_notm}} à l'aide de la page Statut de
-{{site.data.keyword.Bluemix_notm}}. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis sélectionnez **Etat**. 
+{{site.data.keyword.Bluemix_notm}}. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis sélectionnez **Etat**.
 
 La page Statut est l'emplacement central pour rechercher des notifications et des annonces sur les événements clés affectant la plateforme {{site.data.keyword.Bluemix_notm}} et les principaux services dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez vous abonner à un flux RSS pour recevoir les notifications automatiquement et ne pas avoir à les rechercher. Pour plus d'informations sur la page Statut et la configuration du flux RSS, voir [Affichage de {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
@@ -436,20 +519,19 @@ applications compte tenu de leur compatibilité.
 ### Enregistrement d'un courtier de services
 {: #servicebrokerui}
 
-Si vous voulez afficher un service particulier dans votre catalogue {{site.data.keyword.Bluemix_notm}}, vous devez implémenter et enregistrer
-un courtier de services. Une fois votre courtier enregistré, vous pouvez choisir les organisations qui peuvent accéder au service dans votre instance
+Si vous voulez afficher un service dans votre catalogue {{site.data.keyword.Bluemix_notm}}, vous devez implémenter et enregistrer un
+[courtier de services](http://docs.cloudfoundry.org/services/api.html){: new_window}. Une fois votre courtier enregistré, vous pouvez choisir les organisations qui peuvent accéder au service dans votre instance
 locale ou dédiée.
 
-Les méthodes d'utilisation du courtier de services varient selon le nombre de services qu'il gère ou selon qu'il a déjà été enregistré dans {{site.data.keyword.Bluemix_notm}}.
+Les méthodes d'utilisation de votre courtier de services dépendent du nombre de services qu'il gère ou varient selon qu'il a déjà été enregistré dans
+{{site.data.keyword.Bluemix_notm}} ou non.
 
 - Si votre courtier de services gère un service, vous pouvez vous servir de l'interface utilisateur pour l'enregistrer après avoir implémenté
 l'[API de courtier de services](http://docs.cloudfoundry.org/services/api.html){: new_window}. Voir
 [Enregistrement d'un courtier de services qui gère un service](index.html#registerbrokerui).
-- Si votre courtier de services gère plusieurs services, à ce stade, vous ne pouvez pas l'enregistrer après avoir implémenté l'API de courtier de
-services. A la place, utilisez l'interface de ligne de
-commande cf avec le plug-in d'[interface de ligne de commande
-d'administration {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (sous-commande ba) ou utilisez
-l'[API de service personnalisé](index.html#servicebrokerapi).
+- Si votre courtier de services gère plusieurs services, utilisez l'interface de ligne de commande cf avec le plug-in
+d'[interface de ligne de commande d'administration de {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html)
+(sous-commande `ba`), ou utiliser l'[API de service personnalisé](index.html#servicebrokerapi).
 - Si votre courtier de services est déjà enregistré et que vous voulez le mettre à jour ou le supprimer, utilisez l'interface de ligne de commande
 cf avec le plug-in d'[interface de ligne de commande
 d'administration {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (sous-commande ba) ou utilisez
@@ -458,73 +540,74 @@ l'[API de service personnalisé](index.html#servicebrokerapi).
 #### Enregistrement d'un courtier de services qui gère un service
 {: #registerbrokerui}
 
-Procédez comme suit pour enregistrer votre courtier de services :
+Prenez connaissance des informations suivantes et effectuez les étapes d'enregistrement de votre courtier de services :
 
-<ol>
-<li><a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implémentez l'API de courtier de services Cloud Foundry</a>
-pour permettre la communication entre votre service et {{site.data.keyword.Bluemix_notm}}. L'API de courtier de services est un ensemble de noeuds
-finaux REST consommés par {{site.data.keyword.Bluemix_notm}}.<br />
-<br />
-<p>Lorsque vous implémentez le courtier de services, dans la réponse JSON de <code>GET /v2/catalog</code>, vous devez fournir les définitions pour
-vos service et vos plans de service, notamment les informations relatives au service que vous voulez afficher. Examinez, par exemple, l'exemple
-JSON suivant de la réponse (GET) du Catalogue :</p>
-<p><pre>
-"services": [
+
+**Avant de commencer** : <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">implémentez l'API de courtier
+de services Cloud Foundry</a> pour permettre la communication entre votre service et {{site.data.keyword.Bluemix_notm}}. L'API de courtier de services est un ensemble de noeuds
+finaux REST consommés par {{site.data.keyword.Bluemix_notm}}.
+
+Lorsque vous implémentez le courtier de services, dans la réponse JSON de <code>GET /v2/catalog</code>, vous devez fournir les définitions pour
+vos service et vos plans de service, notamment les informations relatives au service que vous voulez afficher. Par exemple, examinez l'exemple de code JSON
+de la réponse du catalogue (GET) :
+
+
+```
+{
+"services":[
    {
       "bindable":true,
-      "description":"Cool Service est une solution d'analyse et d'entreposage de données. ",
+      "description":"Cool Service est une solution d'analyse et d'entreposage de données.",
       "id":"cool-service-id",
       "name":"coolservice",
-      "tags": [
-         "customer_dedicated"
-      ],
-      "metadata": {
-         "displayName": "Cool Service",
+      "metadata":{
+         "displayName":"Cool Service",
          "serviceMonitorApi":"https://myservicesstatus.mybluemix.net/healthcheck/",
-         "providerDisplayName":"Cool company",
-         "longDescription":"Cool Service est une solution d'analyse et d'entreposage. Vous pouvez placer rapidement vos données dans une base de
-données de la prochaine génération structurant les données en colonne en mémoire et commencer à exécuter des requêtes analytiques complexes. ",
+         "providerDisplayName":"Société Cool"
+         "longDescription":"Cool Service est une solution d'analyse et d'entreposage de données. Vous pouvez placer rapidement vos données dans une base de
+données de la prochaine génération structurant les données en colonne en mémoire et commencer à exécuter des requêtes analytiques complexes." ,
          "bullets":[
             {
                "title":"Rapide et simple",
                "description":"Cool Service utilise des innovations et la technologie structurant les données en colonne en mémoire, comme le traitement vectoriel parallèle et la compression afin d'analyser et de renvoyer rapidement les données pertinentes."
             },
             {
-               "title": "Connectivité",
-               "description": "Cool Service a été conçu pour vous permettre de vous connecter facilement à tous vos services et à toutes vos applications. Vous pouvez
-commencer à analyser vos données immédiatement à l'aide d'outils familiers."
-            }
-         ],
-         "featuredImageUrl": "http://chemin/accès/icône_64x64.png",
-         "imageUrl": "http://chemin/accès/icône_50x50.png",
-         "mediumImageUrl": "http://chemin/accès/icône_32x32.png",
-         "smallImageUrl": "http://chemin/accès/icône_24x24.png",
-         "documentationUrl": "http://chemin/accès/documentation.html",
-         "instructionsUrl": "http://chemin/accès/serviceexemple.md",
-         "termsUrl": "http://chemin/accès/termes_du_contrat.pdf",
-         "media": [{
-               "type": "youtube",
-               "thumbnailUrl": "http://chemin/accès/miniature.png",
-               "url": "http://chemin/accès/youtube/vidéo",
-               "caption": "Utilisation de Cool Service dans 60 secondes"
+               "title":"Connectivity",
+          "description": "Cool Service a été conçu pour vous permettre de vous connecter facilement à tous vos services et à toutes vos applications. Vous
+pouvez commencer à analyser vos données immédiatement à l'aide d'outils familiers."
+],
+         "featuredImageUrl":"http://chemin/icon_64x64.png",
+         "imageUrl":"http://chemin/icon_50x50.png",
+         "mediumImageUrl":"http://chemin/icon_32x32.png",
+         "smallImageUrl":"http://chemin/icon_24x24.png",
+         "documentationUrl":"http://chemin/documentation.html",
+         "instructionsUrl":"http://chemin/servicesample.md",
+         "termsUrl":"http://chemin/terms_of_agreement.pdf",
+         "media":[
+            {
+               "type":"youtube",
+               "thumbnailUrl":"http://chemin/thumbnail.png",
+               "url":"http://chemin/video/youtube",
+               "caption":"Utilisez Cool Service en 60 secondes"
             },
             {
-               "type": "image",
-               "thumbnailUrl": "http://chemin/accès/miniature.png",
-               "url": "http://chemin/accès/fichier_image.png",
-               "caption": "Cool Service connecte des applications"
+               "type":"image",
+               "thumbnailUrl":"http://chemin/thumbnail.png",
+               "url":"http://chemin/image_file.png",
+               "caption":"Cool Service connecte des applications"
             },
             {
-               "type": "video",
-               "thumbnailUrl": "http://chemin/accès/minia.png",
-               "caption": "Cool Service fonctionne avec des tables",
-               "source": [{
+               "type":"video",
+               "thumbnailUrl":"http://chemin/thumb.png",
+               "caption":"Cool Service fonctionne avec des tables",
+               "source":[
+                  {
                      "type":"video/mp4",
-                     "url": "http://chemin/accès/fichier_vidéo.mp4"
+                     "url":"http://chemin/video_file.mp4"
                   },
                   {
                      "type":"video/ogg",
-                     "url": "http://chemin/accès/fichier_vidéo.ogg"
+                     "url":"http://chemin/video_file.ogg"
                   }
                ]
             }
@@ -534,10 +617,11 @@ commencer à analyser vos données immédiatement à l'aide d'outils familiers."
          {
             "name":"smallplan",
             "description":"Schéma et espace table dédiés par instance de service sur un serveur partagé. 1 Go et 10 Go de stockage de base de données
-compressées peuvent contenir respectivement jusqu'à 5 Go et 50 Go de données non compressées selon des taux de compression typiques.",
+compressées peuvent contenir respectivement jusqu'à 5 Go et 50 Go de données non compressées selon des taux de compression standard."
+,
             "free":false,
             "id":"cool-service-plan-id",
-            "metadata": {
+            "metadata":{
                "bullets":[
                   "1 Go minimum par instance. 10 Go maximum par instance."
                ],
@@ -555,11 +639,117 @@ compressées peuvent contenir respectivement jusqu'à 5 Go et 50 Go de données 
    }
 ]
 }
-</pre></p>
-<p><strong>Remarque</strong> : lorsque vous créez un courtier de services pour un environnement local ou dédié, vous devez spécifier
-`customer_dedicated` dans la zone "tags" dans votre fichier JSON de définition de service.</p>
-</li>
-<li>Après avoir implémenté l'API Service Broker, accédez à <strong>Administration</strong> &gt; <strong>Gestion du catalogue</strong>.</li>
+```
+{: codeblock}
+
+Les tableaux ci-dessous peuvent vous aider à remplir le fichier JSON. 
+
+*Tableau. Zones JSON*
+
+| **Zones JSON** | **Description** |
+|-----------------|-----------------|
+|bindable   | Valeur booléenne qui indique si des instances de service peuvent être liées à des applications.   |
+|description | Description du service qui s'affiche lorsque vous utilisez la commande cf marketplace ou passez votre souris sur l'icône de service dans le
+catalogue de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Vous pouvez ajouter une phrase unique comme description.
+ |
+|name | Nom du service qui s'affiche dans l'interface de ligne de commande cf. Il doit être unique dans {{site.data.keyword.Bluemix_notm}} et doit
+utiliser des minuscules et ne pas contenir d'espace. Vous ne pouvez pas le changer une fois le service enregistré auprès de {{site.data.keyword.Bluemix_notm}}. |
+|id  | ID du service. Il doit être unique dans {{site.data.keyword.Bluemix_notm}} et il doit s'agir d'un identificateur global unique. Vous ne
+pouvez pas le changer une fois le service enregistré auprès de {{site.data.keyword.Bluemix_notm}}. |
+|metadata | Métadonnées du plan de service qui s'affichent dans le catalogue {{site.data.keyword.Bluemix_notm}} et dans la fiche de prix. La zone metadata est facultative. Vous pouvez spécifier d'autres zones pour les métadonnées. Voir le tableau suivant intitulé
+[Zones de métadonnées](index.html#metadatafields) pour plus d'informations.  |
+|plans | Tableau de définitions de plan de service. Voir le tableau suivant intitulé [Zones de plan](index.html#planfields) pour plus d'informations.  |
+
+*Tableau. Zones de métadonnées*
+{: #metadatafields}
+
+| **Valeurs des métadonnées** | **Description** |
+|---------------------|-----------------|
+|displayName          | Nom du plan qui est affiché dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}. Il est affiché dans la page des détails du service dans le catalogue ainsi que dans la fiche de prix. La première lettre du plan seulement doit être en majuscule. N'utilisez pas "Default" comme nom de plan par défaut ; utilisez plutôt "Standard".  |
+|providerDisplayName | Nom du fournisseur de services. |
+|longDescription | Description détaillée du service. Envisagez d'utiliser deux phrases au moins pour une description longue. |
+|plans                | Tableau de définitions de plan de service. Chaque entrée de tableau dans la zone des plans se compose des zones suivantes : name, description, free, id et metadata. Voir le tableau suivant intitulé [Zones de plan](index.html#planfields) pour plus d'informations.  |
+|bullets | Tableau de chaînes affichées pour un service. Vous pouvez utiliser des puces pour fournir des informations en plus de la description longue. La zone bullets doit contenir deux éléments de puce au moins. Chaque puce inclut la zone de titre et la zone de description.  |
+|imageUrl | Adresse URL d'une grande image PNG (50 x 50 pixels).  |
+|smallImageUrl | Adresse URL d'une petite image PNG (24 x 24 pixels). |
+|mediumImageUrl | Adresse URL d'une image moyenne PNG (32 x 32 pixels). |
+|featuredImageUrl | Adresse URL de l'image mise en évidence (64 x 64 pixels). |
+|documentationUrl | Adresse URL de la documentation sur le service. |
+|termsUrl | Adresse URL des fichiers PDF contenant les termes du contrat. |
+|media (facultative)  | Tableau d'éléments pour l'affichage des vidéos et des captures d'écran qui présentent le service dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Un élément media peut contenir les zones suivantes : type (image, youtube, video), thumbnailUrl (adresse URL de l'image d'aperçu pour l'élément de support, url (adresse URL de la capture d'écran ou de la vidéo YouTube), source (sources des vidéos qui ne sont pas hébergées sur YouTube. Le "type" de la source de la vidéo doit être pris en charge par HTML5. Incluez les zones "type" et "url" pour la vidéo.), et caption (légende pour l'élément media. Les légendes contribuent à l'accessibilité pour les personnes souffrant de handicaps et leur permettent de comprendre vos éléments support.). |
+|serviceKeysSupported | Valeur booléenne qui indique si l'API des clés de service est prise en charge. Celle-ci permet d'activer un service à utiliser hors de {{site.data.keyword.Bluemix_notm}}. La valeur par défaut est false. |
+|plan_updateable | Valeur booléenne qui indique si le service prend en charge les changements de plan. La valeur par défaut est false. |
+|embeddableDashboard (facultative)  | Zone qui indique comment le tableau de bord du service est affiché dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}. Si vous ne spécifiez pas cette zone, le tableau de bord est imbriqué mais est limité à une largeur minimale de 960 pixels et présente un remplissage horizontal supplémentaire autour de l'iframe. Vous pouvez utiliser true, false, drilldown ou launch. Vous pouvez utiliser les zones suivantes pour cette valeur : true, false, drilldown et launch.  |
+|notCreatable (facultative)  | Valeur booléenne qui indique si des instances pour le service peuvent être créées depuis l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et depuis l'interface de ligne de commande cf. La valeur true signifie que les instances de service ne peuvent pas être créées depuis l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande cf. La valeur par défaut est false. |
+|notCreatableMessage (facultative)  | Message affiché dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} si des instances de service ne peuvent pas être créées. Si vous ne spécifiez pas cette zone, le message par défaut suivant est affiché : Pour être averti de sa disponibilité, confirmez votre adresse électronique ou entrez une nouvelle adresse. |
+|notCreatableRobotMessage (facultative)  | Message affiché dans la bulle de la page des détails du service dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Il indique qu'un service présente un problème ou toute autre raison rendant le service indisponible. Vous pouvez spécifier un message afin d'expliquer la raison. Si vous ne spécifiez pas cette zone, le message par défaut suivant est affiché : Ce service n'est pas disponible actuellement.  |
+|apiReferenceUrl (facultative)  | Adresse URL de l'iframe dans la zone Référence d'API de la page des détails du service dans le catalogue. Si elle n'est pas utilisée pour la page des détails du service dans le catalogue, vous pouvez entrer la valeur numérique affectée à votre documentation d'API REST pour votre service lorsque vous avez enregistré le service dans le microservice de la documentation d'API REST {{site.data.keyword.Bluemix_notm}}. Ainsi, votre documentation d'API REST s'affichera dans le tableau de bord du service.  |
+|sdkDownloadUrl (facultative)  | Adresse URL de la page Web qui est ouverte lorsque vous cliquez sur le bouton Télécharger les logiciels SDK. Ce dernier se trouve sur la vignette du service dans la page de présentation des applications dans le	tableau de bord. La page Web est ouverte dans un nouvel onglet de navigateur. |
+|serviceMonitorApi    | Adresse URL d'une API qui renvoie les données JSON indiquant la santé du service, conformément à l'exemple ci-après. La zone serviceMonitorApi ou serviceMonitorApp doit être définie dans vos métadonnées de service. Voir l'exemple de code ci-après.  |
+|serviceMonitorApp    | Adresse URL d'une application qui peut être déployée dans {{site.data.keyword.Bluemix_notm}} et liée à un service afin de fournir la sortie spécifique de statut du service. L'application doit renvoyer le même format de données JSON que serviceMonitorApi. La zone serviceMonitorApi ou serviceMonitorApp doit être définie dans vos métadonnées de service. Voir l'exemple de code ci-après.  |
+
+```
+{
+    "service": "nomservice",
+    "version": 1,
+    "health": [
+        {
+            "plan": "starter",
+            "status": 0,
+            "serviceinput": "count(*) from healthcheck",
+            "serviceoutput": "10…or error 1234 database not running",
+            "responsetime": 4
+        },
+        {
+            "plan": "enterprise",
+            "status": 1,
+            "serviceinput": "count(*)fromhealthcheck",
+            "serviceoutput": "10…orerror1234databasenotrunning",
+            "responsetime": 4
+        }
+    ]
+}
+```
+{: pre}
+
+L'exemple suivant montre comment la réponse JSON de GET /v2/catalog est mappée à la page des détails du service dans le
+catalogue {{site.data.keyword.Bluemix_notm}} : 
+
+![Détails du service dans le catalogue.](images/metadata.png "Vue des détails du service dans le catalogue Bluemix")
+
+*Tableau. Zones de plan*
+{: #planfields}
+
+| **Valeurs de plan** | **Description** |
+|---------------------|-----------------|
+|name       | Nom du service qui est utilisé dans l'interface de ligne de commande cf. Par exemple, le nom du plan est affiché dans la sortie de la commande cf marketplace. Il doit être en minuscules, ne pas contenir d'espace, et être unique dans le service.   |
+|description       | Description du plan de service. Elle est affichée une fois que vous sélectionnez un plan dans la page des détails du service dans le catalogue {{site.data.keyword.Bluemix_notm}}.  |
+|free      | Valeur booléenne qui indique si le plan de service est gratuit. La valeur par défaut est true.  |
+|id       | ID du plan de service. Il doit être unique dans {: new_window} et il doit s'agir d'un identificateur global unique.   |
+|metadata (facultative)     | Métadonnées du plan de service qui s'affichent dans le catalogue {{site.data.keyword.Bluemix_notm}} et dans la fiche de prix. La zone metadata est facultative. Vous pouvez spécifier les zones suivantes dans la zone metadata : displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber) et paidOnly. Voir le tableau ci-après intitulé [Zones de métadonnées de plan](index.html#planmetadata) pour plus d'informations.  |
+
+*Tableau. Zones de métadonnées de plan*
+{: #planmetadata}
+
+| **Valeurs des métadonnées de plan** | **Description** |
+|------------------------|-----------------|
+|displayName             | Nom du plan qui est affiché dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}. Il est affiché dans la page des détails du service dans le catalogue ainsi que dans la fiche de prix.    |
+|type                    | Type de plan. Vous pouvez utiliser les valeurs suivantes pour cette zone : subscription (un plan d'abonnement. La valeur par défaut est false.), reservable (un plan réservable. Cette valeur n'est utilisée que lorsque le plan est un plan d'abonnement, c'est-à-dire lorsque la valeur de plan.metadata.subscription est true. La valeur par défaut est false.), planDetails (quantité détaillée et description des ressources pouvant être utilisées avec le plan. Cette valeur n'est utilisée que lorsque le plan est réservable, c'est-à-dire lorsque la valeur de plan.metadata.reserveable est true.) |
+|bullets                 | Description des ressources pouvant être utilisées avec le plan. Elle est affichée dans la colonne **Fonctions** dans la page des détails du service du catalogue et dans la fiche de prix.  |
+|costs                   | Informations sur le coût du service qui sont affichées dans la colonne Prix dans la page des détails du service du catalogue et dans la fiche de prix. Chaque entrée de tableau contient les zones suivantes : unitId (ID de l'unité. Utilisez le pluriel et des majuscules seulement. Pour les plans gratuits, cette zone est facultative.), unit (mesure utilisée pour le calcul du prix du service. La valeur de cette zone est utilisée dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} pour représenter le paramètre de calcul des frais.), et partNumber (identificateur `part_number` utilisé par le système de facturation. Pour les plans gratuits, cette zone est facultative.).   |
+|paidOnly (facultative)      | Valeur booléenne qui indique si ce plan de service est disponible pour les comptes {{site.data.keyword.Bluemix_notm}} payants seulement. Si la valeur est **true**, le plan de service n'est valable que pour les comptes payants et ne peut pas être ajouté à des comptes d'essai. Si la valeur est **false**, le plan de service peut être ajouté à des comptes payants et à des comptes d'essai. La valeur par défaut est **false**.	  |
+
+L'exemple ci-après montre comment la réponse JSON de GET /v2/catalog est mappée à la page des détails du service dans le catalogue
+{{site.data.keyword.Bluemix_notm}}. Il illustre notamment comment les zones de métadonnées de plan décrites dans le tableau précédent
+sont mappées à l'interface utilisateur :
+
+
+![Détails des métadonnées de plan dans
+le catalogue Bluemix.](images/plan_metadata.png "Vue des valeurs des métadonnées de plan dans le catalogue Bluemix")
+
+
+<ol>
+<li>Après avoir implémenté l'API de courtier de services, accédez à <strong>Administration</strong> &gt; <strong>Gestion du catalogue</strong>.</li>
 <li>Cliquez sur <strong>Enregistrement d'un courtier de services</strong>.</li>
 <li>Remplissez le formulaire en entrant des valeurs dans les zones suivantes :
 <ul>
@@ -582,6 +772,7 @@ lancez à nouveau le processus d'enregistrement en remplissant le formulaire.</p
 A présent, votre service apparaît dans la catégorie Services personnalisés de votre catalogue {{site.data.keyword.Bluemix_notm}}. Accédez à
 **ADMINISTRATION &gt; GESTION DES CATALOGUES** et sélectionnez la vignette dans le catalogue. Vous pouvez activer différents plans et
 éditer la visibilité d'un plan pour vos organisations à tout moment.
+
 
 ## Administration des organisations
 {: #oc_organizations}
@@ -607,7 +798,7 @@ Pour créer une organisation et ajouter des responsables, procédez comme suit :
 
 Vous pouvez créer des espaces dans votre organisation, par exemple un espace *dev* comme environnement de développement, un espace *test* comme environnement de test et un espace *production* comme environnement de production. Ensuite, vous pouvez associer vos applications à des espaces. Procédez comme suit pour créer un espace :
 
-1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../admin/images/account_support.svg) &gt; **Gérer les organisations**. 
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../admin/images/account_support.svg) &gt; **Gérer les organisations**.
 2. Sélectionnez l'organisation à laquelle ajouter un espace.
 3. Cliquez sur **Créer un espace**.
 4. Entrez un nom d'espace.
@@ -616,34 +807,38 @@ Vous pouvez créer des espaces dans votre organisation, par exemple un espace *d
 
 ### Surveillance des quotas
 
-Vous pouvez développer la section Surveillance des quotas pour afficher les informations suivantes :
+Vous pouvez développer la section **Surveillance des quotas** pour afficher les informations suivantes : 
 
-- Utilisation de la mémoire de l'environnement. Cette section détaille l'utilisation de la mémoire pour l'intégralité de l'environnement système.
-	Le graphique fournit diverses informations, notamment la quantité de mémoire système utilisée, la quantité de mémoire système totale, le quota utilisé et
-le quota total alloué. La liste de termes suivante définit les types d'utilisation de la mémoire qui sont affichés dans le graphique :
+- L'utilisation de la mémoire de l'environnement présente en détail l'utilisation de la mémoire dans l'environnement système complet. Le graphique affiche les informations suivantes :
+ 
+<ul>
+<li>La mémoire physique qui est utilisée et la limite de mémoire physique </li>
+<li>Le quota de mémoire réservée et la limite de mémoire réservée </li>
+<li>Le quota total de mémoire pour vos organisations </li>
+</ul>
+Les types ci-après d'utilisation de la mémoire sont affichés dans le graphique.
 
 	<dl>
-	<dt><strong>Mémoire système utilisée</strong></dt>
+	<dt><strong>Mémoire physique utilisée</strong></dt>
 	<dd>Quantité de mémoire physique utilisée par votre environnement.</dd>
-	<dt><strong>Mémoire système totale</strong></dt>
+	<dt><strong>Limite physique</strong></dt>
 	<dd>Quantité de mémoire physique totale qui est disponible dans votre environnement.</dd>
-	<dt><strong>Quota déployé</strong></dt>
-	<dd>Quantité de mémoire allouée à toutes les applications déployées dans toutes les organisations. La somme du quota déployé peut dépasser la quantité de mémoire système totale physique pour votre environnement. Par exemple, si la quantité de mémoire système totale est de 16 Go et que vous allouez 4 Go de mémoire à chaque organisation pour cinq organisations différentes, le quota total est supérieur à la quantité de mémoire système totale qui vous a été allouée pour toutes les organisations. Cependant, dans la plupart des cas, les organisations n'utilisent pas le quota total qui leur est alloué individuellement. De plus, les organisations n'utilisent pas toutes la totalité de leur quota d'allocation de mémoire simultanément. </dd>
-	<dt><strong>Total quota</strong></dt>
-	<dd>Quantité de mémoire totale qui est allouée dans toutes les organisations.</dd>
+	<dt><strong>Quota mémoire réservée</strong></dt>
+	<dd>Quantité de mémoire réservée pour toutes les applications déployées, dans toutes les organisations. La somme du quota qui est réservé peut dépasser la limite physique de mémoire pour votre environnement. Par exemple, si la limite de mémoire physique est de 16 Go, vous pouvez réserver 4 Go de mémoire à chaque application, pour un total de cinq applications différentes. Le quota qui est réservé dépasse la limite physique de mémoire. Cependant, dans la plupart des cas, les applications n'utilisent pas le quota total qui est réservé individuellement pour chaque application. De plus, les applications n'utilisent pas toutes la totalité de leur quota de mémoire réservée simultanément. </dd>
+	<dt><strong>Limite mémoire réservée</strong></dt>
+	<dd>Mémoire totale pouvant être réservée pour toutes les applications dans votre environnement. </dd>
+	<dt><strong>Quota total</strong></dt>
+	<dd>Quota total de mémoire dans toutes les organisations. </dd>
 	</dl>
+	**Remarque** : les données sont actualisées automatiquement toutes les 4 heures. Cliquez sur **Recalculer** si vous voulez actualiser les données figurant sur la page avant qu'elles ne soient mises à jour automatiquement. 
 
-- Utilisation de la mémoire de l'organisation. Cette section détaille l'utilisation de la mémoire au niveau de l'organisation. Vous pouvez afficher le quota total et le
-quota déployé pour chaque organisation. Le graphique fournit des informations triées en fonction de l'utilisation de la mémoire la plus élevée par
-organisation ; par défaut, l'organisation qui utilise la quantité de mémoire la plus élevée est répertoriée en premier. Vous pouvez effectuer un tri en
-fonction du paramètre **Utilisation de la mémoire la plus élevée** et du paramètre **Allocation de mémoire
-superflue**.
+- Utilisation de la mémoire de l'organisation. Cette section détaille l'utilisation de la mémoire au niveau de l'organisation. Vous pouvez afficher le quota total de mémoire, le quota réservé et la mémoire physique utilisée par chaque organisation. Le graphique fournit des informations triées en fonction de la réservation de mémoire la plus élevée par organisation ; par défaut, l'organisation qui réserve la quantité de mémoire la plus élevée est répertoriée en premier. Vous pouvez effectuer un tri en fonction du paramètre **Utilisation de la mémoire la plus élevée** et du paramètre **Allocation de mémoire superflue**.
 
 	<dl>
 	<dt><strong>Utilisation de la mémoire la plus élevée</strong></dt>
-	<dd>Utilisez cette option pour identifier l'organisation qui utilise la quantité de mémoire la plus élevée. Effectuez un tri par utilisation de la mémoire la plus élevée pour identifier les organisations qui utilisent la quantité de mémoire la plus élevée. La liste est triée par quota déployé. </dd>
+	<dd>Utilisez cette option pour identifier l'organisation qui a réservé la quantité de mémoire la plus élevée. Effectuez un tri par utilisation de la mémoire la plus élevée pour identifier les organisations qui ont réservé la quantité de mémoire la plus élevée. La liste est triée par quota réservé. </dd>
 	<dt><strong>Allocation de mémoire superflue</strong></dt>
-	<dd>Utilisez cette option pour identifier les organisations dont le plan d'établissement des quotas est supérieur aux besoins.	Effectuez un tri par allocation de mémoire superflue pour identifier les organisations qui utilisent la quantité de mémoire la plus faible par rapport au quota qui leur a été alloué. </dd>
+	<dd>Utilisez cette option pour identifier les organisations dont le quota total de mémoire est supérieur aux besoins.	Effectuez un tri par allocation de mémoire superflue pour identifier les organisations qui utilisent la quantité de mémoire la plus faible par rapport au quota qui leur a été alloué. </dd>
 	</dl>
 
 ### Ajustement des plans d'établissement des quotas
@@ -684,20 +879,48 @@ invites à l'écran.
 ## Gestion des utilisateurs et des droits
 {: #oc_useradmin}
 
-Vous pouvez ajouter des utilisateurs individuels ou des groupes d'utilisateurs et
-afficher les droits d'utilisateur. En général, les utilisateurs sont ajoutés à votre instance {{site.data.keyword.Bluemix_notm}} depuis le registre d'utilisateurs de votre société via LDAP (Lightweight Directory Access Protocol). Si vous disposez du droit **Superutilisateur**, vous pouvez également définir et gérer les droits des autres
+Vous pouvez utiliser des utilisateurs individuels ou des groupes d'utiliateurs. En général, les utilisateurs sont ajoutés à votre instance {{site.data.keyword.Bluemix_notm}} depuis le registre d'utilisateurs de votre société via LDAP (Lightweight Directory Access Protocol). Vous
+pouvez aussi afficher les droits utilisateur.
+Si vous disposez du droit **Superutilisateur**, vous pouvez également définir et gérer les droits des autres
 utilisateurs. Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES UTILISATEURS**.
 
 La page Administration des utilisateurs affiche tous les utilisateurs pour l'instance locale ou dédiée. Les droits de chaque utilisateur sont affichés sous forme d'icônes dans le tableau. Les droits possibles sont les suivants : Aucun, **Superutilisateur**, **Accès de base**,**Connexion**, **Catalogue**, **Rapports** et **Utilisateurs**.
-Il est possible d'affecter les valeurs **Activé** ou **Désactivé** aux droits **Superutilisateur** et **Accès de base** alors que les droits restants sont activés ou désactivés avec des types d'accès spécifiques, y compris les accès **Lecture** ou **Ecriture** pour ces droits, comme représentés par des icônes. Voir [Droits](#permissions) pour la description de chaque type et l'explication des icônes.
+Les droits **Superutilisateur** et **Accès de base** peuvent être associés à la valeur **Activé**
+ou **Désactivé**, alors que les droits restants sont activés ou désactivés avec des types d'accès spécifiques, notamment
+**Lecture** ou
+**Ecriture**, représentés par des icônes. Voir [Droits](#permissions) pour la description de chaque type et l'explication des icônes.
 
 ### Gestion des utilisateurs
 
-En fonction de l'accès **Lecture** ou **Ecriture** pour les droits des utilisateurs, vous pouvez rechercher des utilisateurs existants, retirer des utilisateurs et ajouter des utilisateurs individuellement ou via un groupe. Notez que si vous possédez le droit **Superutilisateur**, vous disposez d'un accès complet vous permettant d'exécuter n'importe quelle tâche pour la gestion des utilisateurs dans l'environnement. Passez en revue les tâches de gestion des utilisateurs suivantes et le niveau d'accès requis pour accomplir chacune de ces tâches : 
+En fonction de l'accès **Lecture** ou **Ecriture** pour les droits des utilisateurs, vous pouvez rechercher des utilisateurs existants, retirer des utilisateurs et ajouter des utilisateurs individuellement ou via un groupe. 
+Si vous possédez le droit **Superutilisateur**, vous disposez d'un accès complet vous permettant d'exécuter n'importe quelle
+tâche pour la gestion des utilisateurs dans l'environnement. Passez en revue les tâches de gestion des utilisateurs suivantes et le niveau d'accès requis pour accomplir chacune de ces tâches :
 
 * Localisez les utilisateurs. Si vous disposez des accès **Lecture** ou **Ecriture** et que vous connaissez une partie ou la totalité du nom d'utilisateur, vous pouvez localiser des utilisateurs dans la table à l'aide de la zone **Rechercher**. 
+Vous pouvez également filtrer la liste des utilisateurs en fonction de leur organisation et de leurs droits. Pour filtrer une liste d'utilisateurs,
+procédez comme suit :
 
-* Ajoutez un seul utilisateur. Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter des utilisateurs. 
+  <ol>
+  <li>Cliquez sur <strong>Filtrer</strong>.</li>
+  <li> Cliquez sur <strong>Organisations</strong> ou <strong>Droits</strong>, selon le filtrage que vous voulez appliquer.
+  <dl>
+	<dt><strong>Organisation</strong></dt>
+	<dd>Pour filtrer des utilisateurs par organisation, commencez à saisir le nom de l'organisation dans la zone <strong>Organisation</strong> et sélectionnez
+l'organisation dans la liste. Ensuite, sélectionnez le ou les rôles affectés aux utilisateurs dans l'organisation. </dd>
+	<dt><strong>Droits</strong></dt>
+	<dd>Pour filtrer les utilisateurs en fonction de leurs droits, sélectionnez d'abord le type d'utilisateur. Par exemple, vous pouvez choisir d'afficher
+tous les superutilisateurs. Pour les droits autres que <strong>Superutilisateur</strong> ou <strong>Accès de base</strong>, vous pouvez aussi sélectionner
+le type d'accès, par exemple <strong>Lecture</strong> ou <strong>Ecriture</strong>.</dd>
+	</dl></li>
+  <li>Cliquez sur <strong>Appliquer</strong>.</li>
+   </ol>
+
+   La fenêtre Administration des utilisateurs affiche les filtres que vous définissez et les utilisateurs qui sont trouvés avec les filtres
+spécifiés. Ensuite, vous pouvez rechercher un utilisateur dans la table filtrée. Vous pouvez aussi modifier la liste des filtres spécifiés en retirant une
+option de filtre de la liste.
+
+
+* Ajoutez un seul utilisateur. Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter des utilisateurs.
 
   1. Pour ajouter un seul utilisateur depuis votre annuaire LDAP, cliquez sur **Ajouter un utilisateur**.
   2. Dans la zone **Rechercher**, entrez l'adresse électronique de l'utilisateur, puis sélectionnez l'utilisateur dans la liste.
@@ -708,7 +931,7 @@ l'organisation et en le sélectionnant dans la liste.
   **Remarque** : lorsque l'opération d'ajout aboutit, l'utilisateur est ajouté au tableau pour que vous puissiez
 l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit ne leur est affecté.
 
-* Ajoutez un groupe d'utilisateurs depuis votre annuaire LDAP. Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter des utilisateurs. 
+* Ajoutez un groupe d'utilisateurs depuis votre annuaire LDAP. Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter des utilisateurs.
 
   1. Cliquez sur **Ajouter un groupe d'utilisateurs**.
   2. Dans la zone **Rechercher**, entrez un nom de groupe à rechercher, puis sélectionnez le nom de groupe dans la liste.
@@ -721,7 +944,7 @@ l'organisation et en le sélectionnant dans la liste.
 d'ajout aboutit, l'utilisateur ou le groupe est ajouté au tableau pour que vous puissiez l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit ne leur est affecté.
 
 * Ajoutez un groupe d'utilisateurs en important une feuille de calcul qui répertorie des ID utilisateur, des adresses électroniques d'utilisateur et
-l'organisation à laquelle vous voulez ajouter l'utilisateur. Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter des utilisateurs. 
+l'organisation à laquelle vous voulez ajouter l'utilisateur. Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter des utilisateurs.
 
 **Remarque** : entrez les ID utilisateur qui correspondent aux valeurs utilisées dans votre registre d'utilisateurs.
 
@@ -743,13 +966,13 @@ utilisateurs, consultez le message d'erreur afin de prendre des mesures pour les
 * Pour éditer les droits et les organisations des utilisateurs, vous devez disposer du droit **Superutilisateur**. Pour éditer les droits des utilisateurs, localisez ces derniers et cliquez sur leur nom. Dans
 la page **Edition d'utilisateur**, vous pouvez activer ou désactiver les droits :
 
-    * Sélectionnez **Activé** dans la liste pour activer le droit **Superutilisateur** ou **Accès de base**. 
+    * Sélectionnez **Activé** dans la liste pour activer le droit **Superutilisateur** ou **Accès de base**.
     * Sélectionnez **Lecture** dans la liste pour que l'utilisateur dispose de l'accès **Lecture** (en lecture seule) pour ce droit ou sélectionnez **Ecriture** pour que l'utilisateur dispose de l'accès **Ecriture** (édition ou ajout et retrait) pour ce droit.
     * Sélectionnez **Désactivé** pour désactiver n'importe lequel des droits.
 
-    **Remarque** : lorsque le droit **Superutilisateur** a pour valeur **Activé**, tous les autres droits sont définis avec l'accès **Ecriture**. 
+    **Remarque** : lorsque le droit **Superutilisateur** a pour valeur **Activé**, tous les autres droits sont définis avec l'accès **Ecriture**.
 
-* Pour ajouter ou retirer un utilisateur dans une organisation spécifique, vous devez disposer du droit **Superutilisateur** ou du droit **Utilisateurs** avec l'accès **Ecriture**. 
+* Pour ajouter ou retirer un utilisateur dans une organisation spécifique, vous devez disposer du droit **Superutilisateur** ou du droit **Utilisateurs** avec l'accès **Ecriture**.
 
     1. Pour ajouter un utilisateur à une organisation, sélectionnez le nom de celui-ci dans le tableau pour accéder à la page **Edition d'utilisateur**. Ensuite, utilisez la zone de recherche pour localiser une organisation, sélectionnez celle-ci dans la liste, puis cliquez sur **Sauvegarder**.
     2. Pour retirer un utilisateur d'une organisation, sélectionnez le nom de l'utilisateur concerné dans le tableau afin d'accéder à la page **Edition d'utilisateur**. Ensuite, cliquez sur ![Retirer](images/icon_remove.svg) pour l'organisation dont vous souhaitez retirer l'utilisateur, puis cliquez sur **Sauvegarder**.
@@ -757,25 +980,19 @@ la page **Edition d'utilisateur**, vous pouvez activer ou désactiver les droits
 ### Droits
 {: #permissions}
 
-Les droits suivants peuvent être accordés aux utilisateurs avec des niveaux d'accès spécifiques qui permettent à ces derniers d'exécuter des tâches spécifiques :
+Les droits suivants peuvent être accordés aux utilisateurs avec des niveaux d'accès particuliers (lecture ou écriture) qui permettent à ces
+derniers d'exécuter des tâches
+spécifiques dans la console d'administration. 
 
 *Tableau 7. Droits*
 
 | **Droit d'utilisateur** | **Description** |       
 |-----------------|-------------------|
-| Superutilisateur | Les utilisateurs pour lesquels le droit **Superutilisateur** a pour valeur **Activé** sont autorisés à éditer des droits pour d'autres utilisateurs. Si le droit est activé, l'accès complet à tous les autres droits est automatiquement activé. Outre les tâches décrites dans ce tableau pour chaque droit, le superutilisateur peut également configurer des abonnements d'événement afin de recevoir directement des alertes relatives à des opérations de maintenance ou à des incidents, planifier des tâches de maintenance, exécuter des vérifications sur les composants de console et créer des organisations et des espaces pour l'environnement.  |
-| Accès de base | Les utilisateurs pour lesquels le droit **Accès de base** a pour valeur **Activé** sont autorisés à afficher l'option de page d'administration dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}. Les utilisateurs pour lesquels le droit est activé peuvent accéder aux vignettes [Informations système](#oc_system) et [Utilisation des ressources](#oc_resource). Sans ce droit, les utilisateurs ne peuvent pas voir l'option de menu d'administration ni y accéder. |
+| Superutilisateur | Les utilisateurs pour lesquels le droit **Superutilisateur** a pour valeur **Activé** sont autorisés à éditer des droits pour d'autres utilisateurs. Si le droit est activé, l'accès complet à tous les autres droits est automatiquement activé .En plus des tâches décrites dans ce tableau pour chaque droit, ces utilisateurs peuvent également configurer des abonnements d'événement afin de recevoir directement des alertes relatives à des opérations de maintenance ou à des incidents, planifier des tâches de maintenance, exécuter des vérifications sur les composants de console et créer des organisations et des espaces pour l'environnement. Ce droit équivaut au rôle d'administrateur (admin) pour la console d'administration.   |
+| Accès de base | Les utilisateurs pour lesquels le droit **Accès de base** a pour valeur **Activé** sont autorisés à afficher l'option de page d'administration dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}. Les utilisateurs pour lesquels le droit est activé peuvent accéder aux vignettes [Informations système](#oc_system) et [Utilisation des ressources](#oc_resource). Sans ce droit, les utilisateurs ne peuvent pas voir l'option de menu d'administration ni y accéder. Ce droit équivaut au rôle d'administrateur (admin) pour la console d'administration. Il équivaut aussi au droit de connexion utilisé précédemment pour la console d'administration.  |
 | Catalogue | Les utilisateurs disposant du droit **Catalogue** peuvent lire (accès **Lecture** ou modifier (accès **Ecriture**) les services disponibles dans l'instance locale ou dédiée. L'accès en lecture permet à l'utilisateur d'accéder à la vignette Gestion du catalogue pour afficher les services disponibles. L'accès en écriture permet à l'utilisateur d'accéder à la vignette [Gestion du catalogue](#oc_catalog) pour afficher les services, éditer la visibilité des services, enregistrer des services personnalisés et contrôler la liste de priorité du pack de construction. |  
 | Rapports | Les utilisateurs disposant du droit **Rapports** peuvent lire (accès **Lecture**) ou modifier (accès **Ecriture**) les rapports de sécurité. L'accès en lecture permet à l'utilisateur d'accéder à la vignette Rapports et journaux pour télécharger des rapports. L'accès en écriture permet à l'utilisateur d'afficher la vignette [Rapports et journaux](#oc_report) et d'utiliser l'interface CLI pour télécharger de nouveaux rapports et créer de nouvelles catégories auxquelles les utilisateurs pourront accéder. |
 | Utilisateurs | Les utilisateurs disposant du droit **Utilisateurs** peuvent afficher (accès **Lecture**) la liste d'utilisateurs ou ajouter ou retirer des utilisateurs (accès **Ecriture**). Ce droit ne vous permet pas de définir des droits pour d'autres utilisateurs. L'accès en écriture permet à l'utilisateur d'ajouter de nouveaux utilisateurs à l'environnement, de supprimer des utilisateurs de l'environnement et d'ajouter des utilisateurs existants à des organisations qui existent déjà dans l'environnement. De plus, l'accès **Ecriture** permet à l'utilisateur d'ajouter de nouvelles organisations, de supprimer des organisations et d'éditer les utilisateurs des organisations. |
-
-
-Des droits peuvent être activés pour l'utilisateur avec un accès **Lecture** ou
-**Ecriture** pour ces droits, comme représenté par les icônes suivantes :
-
-* L'icône ![Activé, représentée par une coche](images/icon_enabled.svg) associée à un droit signifie que celui-ci est activé.
-* L'icône ![Lire, représentée par un oeil](images/icon_read.svg) signifie que l'utilisateur dispose de l'accès **Lecture** (lecture seule) pour ce droit.
-* L'icône ![Ecrire, représentée par un crayon](images/icon_write.svg) signifie que l'utilisateur dispose de l'accès **Ecriture** (édition, ajout ou retrait) pour ce droit.
 
 
 ## Gestion des utilisateurs avec l'API REST Admin
@@ -967,7 +1184,7 @@ Vous pouvez utiliser l'API REST `Admin` pour ajouter des utilisateurs à l'insta
 devez disposer du droit **Utilisateurs** avec l'accès **Ecriture** pour pouvoir ajouter des utilisateurs ou du droit **Superutilisateur** (ops.admin) pour la console d'administration. De plus, en tant qu'administrateur, vous pouvez autoriser les membres d'organisation qui ne disposent pas des droits `Utilisateur` ou `Superutilisateur` à ajouter de nouveaux utilisateurs uniquement à leur organisation. Utilisez la commande d'API suivante pour cette fonction spécifique pour les responsables d'organisation :
 
 ```
-PUT console.<subdomain>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE ou FALSE>
+PUT console.<sous-domaine>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE ou FALSE>
 ```
 {: screen}
 

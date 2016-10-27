@@ -13,7 +13,7 @@ copyright:
 
 # 使用 {{site.data.keyword.openwhisk_short}} 行動 SDK
 {: #openwhisk_mobile_sdk}
-前次更新：2016 年 8 月 4 日
+前次更新：2016 年 8 月 26 日
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} 提供適用於 iOS 及 watchOS 2 裝置的行動 SDK，讓行動應用程式輕鬆地發動遠端觸發程式以及呼叫遠端動作。目前沒有適用於 Android 的版本；Android 開發人員可以直接使用 {{site.data.keyword.openwhisk}} REST API。
@@ -32,18 +32,15 @@ copyright:
 適用於行動的 {{site.data.keyword.openwhisk_short}} SDK 可用於透過 CocoaPods 進行的公用配送。假設已安裝 CocoaPods，請將下列幾行放入入門範本應用程式專案目錄內名為 'Podfile' 的檔案中。 
 
 ```
-source 'https://github.com/openwhisk/openwhisk-podspecs.git'
-
+install! 'cocoapods', :deterministic_uuids => false
 use_frameworks!
 
 target 'MyApp' do
-     platform :ios, '9.0'
-     pod 'OpenWhisk'
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 
-target 'MyApp WatchKit Extension' do
-     platform :watchos, '2.0'
-     pod 'OpenWhisk-Watch'
+target 'MyApp WatchKit Extension' do 
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 ```
 {: codeblock}
@@ -55,7 +52,7 @@ end
 
 在應用程式的專案目錄中建立檔案，並將它命名為 'Cartfile'。請在檔案中放入下一行：
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Or latest version
 ```
 {: codeblock}
 
@@ -238,7 +235,7 @@ whisk.urlSession = session
 ### SDK 按鈕
 {: #openwhisk_sdk_configure_button}
 
-為方便起見，SDK 包括 `WhiskButton`，以擴充 `UIButton` 容許它呼叫動作。若要使用 `WhiskButton`，請遵循此範例：
+為方便起見，SDK 包含 `WhiskButton`，以擴充 `UIButton` 容許它呼叫動作。若要使用 `WhiskButton`，請遵循此範例：
 
 ```
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))

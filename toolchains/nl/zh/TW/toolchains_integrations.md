@@ -16,14 +16,14 @@ copyright:
 前次更新：2016 年 9 月 13 日
 {: .last-updated}
 
-您可以在建立工具鏈時配置可支援開發、部署及操作作業的工具整合，也可以新增及配置用來自訂現有工具鏈的工具整合。  
+您可以在建立工具鏈時配置支援開發、部署及操作作業的工具整合，也可以新增及配置工具整合來自訂現有工具鏈。  
 {:shortdesc}
 
-**重要事項**：在「{{site.data.keyword.Bluemix_notm}} 公用」上，工具鏈只適用於美國南部地區。
+**重要事項**：這是實驗性功能。工具鏈可能不穩定，而且可能會變更，而與較舊版不相容。不建議將它們用於正式作業環境。在「{{site.data.keyword.Bluemix_notm}} 公用」上，工具鏈僅適用於美國南部地區。
 
-根據在「{{site.data.keyword.Bluemix_notm}} 公用」或「{{site.data.keyword.Bluemix_notm}} 專用」上是否使用工具鏈，可用來新增及配置工具鏈的工具整合會不同。
+根據您是在「{{site.data.keyword.Bluemix_notm}} 公用」還是「{{site.data.keyword.Bluemix_notm}} 專用」上使用工具鏈，可用來新增及配置工具鏈的工具整合會有所不同。
 
-*表格 1. 可用於「{{site.data.keyword.Bluemix_notm}} 公用」及「專用」上之工具鏈的工具整合*
+*表 1. {{site.data.keyword.Bluemix_notm}} 公用及專用上可用於工具鏈的工具整合*
 
 |工具整合 |可用於 {{site.data.keyword.Bluemix_notm}} 公用	|可用於 {{site.data.keyword.Bluemix_notm}} 專用|
 |:----------|:------------------------------|:------------------|
@@ -42,53 +42,53 @@ copyright:
 ## 配置 Delivery Pipeline
 {: #deliverypipeline}
 
-{{site.data.keyword.deliverypipeline}} 會透過數個系列的階段來自動化專案的持續部署，而這些階段會擷取輸入及執行工作（例如建置、測試及部署）。 
+{{site.data.keyword.deliverypipeline}} 會透過擷取輸入及執行工作（例如建置、測試及部署）的一連串階段，來自動持續部署專案。 
 
-配置 {{site.data.keyword.deliverypipeline}} 來自動化您應用程式的持續建置、測試及部署： 
+配置 {{site.data.keyword.deliverypipeline}} 來自動持續建置、測試及部署應用程式： 
 
-1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **Delivery Pipeline**。根據您使用的範本，可能會有不同的欄位。請檢閱預設欄位值，並在必要時變更那些設定。
-1. 如果您在「{{site.data.keyword.Bluemix_notm}} 公用」上有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤上，按一下工具鏈來開啟它的「工具整合」頁面。或者，在應用程式之「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。如果您是在「{{site.data.keyword.Bluemix_notm}} 專用」上使用工具鏈，請在「儀表板」的 **DevOps** 標籤上，按一下工具鏈來開啟它的「工具整合」頁面。或者，在應用程式之「概觀」頁面的右上角，按一下**檢視工具鏈**。然後，按一下**工具整合**。 
+1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **Delivery Pipeline**。根據您使用的範本，可能會有不同的欄位。請檢閱預設欄位值，並在必要時變更這些設定。
+1. 如果您在「{{site.data.keyword.Bluemix_notm}} 公用」上有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤中按一下工具鏈，以開啟其「工具整合」頁面。或者，在應用程式「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。如果您要在「{{site.data.keyword.Bluemix_notm}} 專用」上使用工具鏈，請在「儀表板」的 **DevOps** 標籤上按一下工具鏈，以開啟其「工具整合」頁面。或者，在應用程式「概觀」頁面的右上角，按一下**檢視工具鏈**。然後，按一下**工具整合**。 
 1. 按一下新增按鈕 (+)。
 1. 在「工具整合」區段中，按一下 **Delivery Pipeline**。
 1. 指定新管線的名稱。
-1. 如果您計劃使用管線來部署使用者介面，請選取**可檢視的應用程式**勾選框。管線所建立的所有應用程式都會顯示在工具鏈之「工具整合」頁面的**檢視應用程式**清單中。
-1. 按一下**建立整合**，以將 {{site.data.keyword.deliverypipeline}} 新增至您的工具鏈。
-1. 按一下 {{site.data.keyword.deliverypipeline}} 的磚來檢視管線，並對其進行配置。若要瞭解如何配置管線的基本觀念，請參閱[建置及部署管線（在新視窗中開啟鏈結）](../services/DeliveryPipeline/build_deploy.html){: new_window}。
+1. 如果您計劃使用管線來部署使用者介面，請選取**可檢視的應用程式**勾選框。您管線建立的所有應用程式都會顯示在工具鏈之「工具整合」頁面的**檢視應用程式**清單中。
+1. 按一下**建立整合**，以將 {{site.data.keyword.deliverypipeline}} 新增至工具鏈。
+1. 按一下 {{site.data.keyword.deliverypipeline}} 的磚，以檢視及配置管線。若要瞭解如何配置管線的基本觀念，請參閱[建置及部署管線](../services/DeliveryPipeline/build_deploy.html){: new_window}。
 
-  **提示**：如果您要在將變更推送至 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫時觸發管線，必須先配置工具鏈的 GitHub 或 {{site.data.keyword.ghe_short}}，再定義管線的階段。管線階段需要儲存庫的 Git URL。每一個管線階段都只能參照與您工具鏈相關聯的其中一個 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫。如需配置 GitHub 的指示，請參閱  [GitHub](#github) 一節。如需配置「專用 GitHub Enterprise」的指示，請參閱[開始使用{{site.data.keyword.ghe_long}}（在新視窗中開啟鏈結）](../services/ghededicated/index.html){: new_window}。
+  **提示**：如果您要在將變更推送至 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫時觸發管線，則必須先配置工具鏈的 GitHub 或 {{site.data.keyword.ghe_short}}，再定義管線的階段。管線階段需要儲存庫的 Git URL。每一個管線階段都只能參照與工具鏈相關聯的其中一個 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫。如需配置 GitHub 的指示，請參閱 [GitHub](#github) 小節。如需配置「專用 GitHub Enterprise」的指示，請參閱[開始使用 {{site.data.keyword.ghe_long}}](../services/ghededicated/index.html){: new_window}。
   
-1. 選用項目：如果您是在「{{site.data.keyword.Bluemix_notm}} 公用」上使用工具鏈，並且想要 Sauce Labs 對您的應用程式執行測試，請配置 {{site.data.keyword.deliverypipeline}} 來新增 Sauce Labs 測試工作。如需配置測試工作的指示，請參閱[在管線中配置 Sauce Labs 測試工作](#config_saucelabs)一節。
+1. 選用項目：如果您要在「{{site.data.keyword.Bluemix_notm}} 公用」上使用工具鏈，並想要 Sauce Labs 對您的應用程式執行測試，請配置 {{site.data.keyword.deliverypipeline}} 來新增 Sauce Labs 測試工作。如需配置測試工作的指示，請參閱[在管線中配置 Sauce Labs 測試工作](#config_saucelabs)小節。
 
 ### 在管線中配置 Sauce Labs 測試工作
 {: #config_saucelabs}
 
-您需要工作中管線有建置並部署應用程式的階段，而且必須為工具鏈配置 Sauce Labs，再於管線中配置 Sauce Labs 測試工作。如需配置 Sauce Labs 的指示，請參閱 [Sauce Labs](#saucelabs) 一節。
+您在管線中配置 Sauce Labs 測試工作之前，需要工作中管線具有建置及部署應用程式的階段，並且必須為工具鏈配置 Sauce Labs。如需配置 Sauce Labs 的指示，請參閱 [Sauce Labs](#saucelabs) 小節。
 
-配置 {{site.data.keyword.deliverypipeline}} 來新增 Sauce Labs 測試工作：
+配置 {{site.data.keyword.deliverypipeline}} 以新增 Sauce Labs 測試工作：
 
-1. 如果您沒有可部署您應用程式之測試版本的階段，請建立一個。
-1. 在此階段中，於部署工作之後新增測試工作。將這些工作放在相同的階段中，它們即可存取一組相同的環境內容。
+1. 如果您沒有部署應用程式測試版本的階段，則請建立一個階段。
+1. 在此階段中，於部署工作之後新增測試工作。將這些工作放在相同的階段中，它們就可以存取一組相同的環境內容。
   ![測試工作](images/toolchain_test_job.png) 
 
 1. 配置階段： 
 
   a. 在**環境內容**標籤上，建立三個內容：CF_APP_NAME、SAUCE_USERNAME 及 SAUCE_ACCESS_KEY。
   
-  b. 輸入 Sauce Labs 使用者名稱和存取金鑰。這麼做可以提出那些值，以將它們用於測試中。
+  b. 輸入 Sauce Labs 使用者名稱及存取金鑰。這樣做就可以提出這些值，以將它們用於您的測試。
   
 1. 配置部署工作。在**部署 Script** 欄位中，包括下列指令：`export CF_APP_NAME="$CF_APP"`。該指令會將應用程式名稱匯出為環境內容。
-1. 配置測試工作。下列影像中的值是範例。**服務實例**、**目標**、**組織**及**空間**欄位會移入您正在使用的 Sauce Labs 使用者名稱、地區、組織及空間。
+1. 配置測試工作。下列影像中的值是範例。**服務實例**、**目標**、**組織**及**空間**欄位中會移入您所使用的 Sauce Labs 使用者名稱、地區、組織及空間。
 ![配置工作](images/toolchain_configure_job.png)
 
   a. 針對測試器類型，選取 **Sauce Labs**。
   
   b. 針對服務實例，選取您為工具鏈配置 Sauce Labs 時所使用的 Sauce Labs 使用者名稱。 
   
-   **提示**：若要查看您為工具鏈配置 Sauce Labs 時所使用的使用者名稱和存取金鑰，請按一下**配置**。 
+   **提示**：若要查看您為工具鏈配置 Sauce Labs 時所使用的使用者名稱及存取金鑰，請按一下**配置**。 
   
-  c. 在**測試執行指令**欄位中，輸入可安裝測試所需相依關係的指令，然後執行測試。例如，針對 Node.js 應用程式，您可以輸入下列指令：
+  c. 在**測試執行指令**欄位中，輸入安裝測試所需相依關係的指令，然後執行測試。例如，針對 Node.js 應用程式，您可能會輸入下列指令：
      ```
-npm install
+     npm install
      node_modules/grunt-cli/bin/grunt test:sauce:parallel
      ```
   
@@ -96,7 +96,7 @@ npm install
   
 1. 按一下**儲存**。只要執行管線，就會執行 Sauce Labs 測試。
 
-若要進一步瞭解，請參閱 [Delivery Pipeline（在新視窗中開啟鏈結）](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window}。
+若要進一步瞭解，請參閱 [Delivery Pipeline](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window}。
 
 
 ## 新增{{site.data.keyword.DRA_short}}
@@ -106,13 +106,13 @@ npm install
 
  **附註**：這是預先配置的工具整合。它不需要任何配置參數，而且您無法重新配置它。
  
-新增「{{site.data.keyword.DRA_short}}」來維護和改善您的程式碼在 {{site.data.keyword.Bluemix_notm}} 中的品質，方法是在發行部署之前監視部署來識別風險。
+新增「{{site.data.keyword.DRA_short}}」來維護及改善您的程式碼在 {{site.data.keyword.Bluemix_notm}} 中的品質，方法是在發行部署之前監視部署來識別風險：
 
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤上按一下工具鏈，以開啟它的「工具整合」頁面。或者，在應用程式之「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。 
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤中按一下工具鏈，以開啟其「工具整合」頁面。或者，在應用程式「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。 
 1. 按一下新增按鈕 (+)。
 1. 在「工具整合」區段中，按一下**部署風險分析**。 
 1. 按一下**建立整合**。
-1. 按一下「{{site.data.keyword.DRA_short}}」的磚，然後完成入門步驟：建立準則，並將準則連接至管線，然後執行管線。如需相關資訊，請參閱[{{site.data.keyword.DRA_short}}（在新視窗中開啟鏈結）](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}。
+1. 按一下「{{site.data.keyword.DRA_short}}」的磚，然後完成開始使用步驟：建立準則，並將準則連接至管線，然後執行管線。如需相關資訊，請參閱[{{site.data.keyword.DRA_short}}](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}。
 
 
 ## 新增 Eclipse Orion {{site.data.keyword.webide}}
@@ -124,13 +124,13 @@ Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，�
  
 若要完成來源控制作業，請新增 Eclipse Orion {{site.data.keyword.webide}} 工具整合：
 
-1. 如果您在「{{site.data.keyword.Bluemix_notm}} 公用」上有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤上，按一下工具鏈來開啟它的「工具整合」頁面。或者，在應用程式之「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。如果您是在「{{site.data.keyword.Bluemix_notm}} 專用」上使用工具鏈，請在「儀表板」的 **DevOps** 標籤上，按一下工具鏈來開啟它的「工具整合」頁面。或者，在應用程式之「概觀」頁面的右上角，按一下**檢視工具鏈**。然後，按一下**工具整合**。
+1. 如果您在「{{site.data.keyword.Bluemix_notm}} 公用」上有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤中按一下工具鏈，以開啟其「工具整合」頁面。或者，在應用程式「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。如果您要在「{{site.data.keyword.Bluemix_notm}} 專用」上使用工具鏈，請在「儀表板」的 **DevOps** 標籤上按一下工具鏈，以開啟其「工具整合」頁面。或者，在應用程式「概觀」頁面的右上角，按一下**檢視工具鏈**。然後，按一下**工具整合**。
 1. 按一下新增按鈕 (+)。
 1. 在「工具整合」區段中，按一下 **Eclipse Orion Web IDE**。 
 1. 按一下**建立整合**。
 1. 按一下新 Eclipse Orion {{site.data.keyword.webide}} 的磚。您的工作區會預先移入您的 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫。會強調顯示與現行工具鏈相關聯的儲存庫。
 
-若要進一步瞭解，請參閱[使用 Eclipse Orion {{site.data.keyword.webide}} 編輯程式碼（在新視窗中開啟鏈結）](../toolchains/web_ide.html){: new_window}。
+若要進一步瞭解，請參閱[使用 Eclipse Orion {{site.data.keyword.webide}} 編輯程式碼](../toolchains/web_ide.html){: new_window}。
 
 
 ## 配置 GitHub
@@ -138,7 +138,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，�
 
 GitHub 是 Git 儲存庫的 Web 型管理服務。您可以同時具有儲存庫的本端和遠端副本，方便進行分工合作。 
 
-GitHub Issues 是一個追蹤工具，可將您的工作和方案都保留在一個位置。它會與您的開發儲存庫整合，以聚焦在重要作業。
+GitHub Issues 是一種追蹤工具，可將您的工作和方案全都保留在一個位置。它會與您的開發儲存庫整合，讓您聚焦在重要作業。
 
 配置 GitHub，以在雲端上管理您的原始碼：
 
@@ -149,7 +149,7 @@ GitHub Issues 是一個追蹤工具，可將您的工作和方案都保留在一
  b. 檢閱 GitHub 儲存庫的預設目標儲存庫位置。那些儲存庫是從範例儲存庫中複製而來。必要的話，請變更目標儲存庫的名稱。
  ![預設目標儲存庫位置](images/toolchain_github_config.png)
    
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤上按一下工具鏈，以開啟它的「工具整合」頁面。或者，在應用程式之「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。 
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤中按一下工具鏈，以開啟其「工具整合」頁面。或者，在應用程式「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。 
 1. 按一下新增按鈕 (+)。
 1. 在「工具整合」區段中，按一下 **GitHub**。
 1. 如果您有 GitHub 儲存庫並且想要使用它，請鍵入 URL。針對儲存庫類型，請按一下**鏈結**。
@@ -163,35 +163,35 @@ GitHub Issues 是一個追蹤工具，可將您的工作和方案都保留在一
  
 1. 如果您要使用 GitHub Issues 進行問題追蹤，請選取**啟用 GitHub Issues** 勾選框。
 1. 按一下**建立整合**。
-1. 按一下您要使用之 GitHub 儲存庫的磚。即會開啟 GitHub 網站，您可以其中檢視儲存庫的內容。
+1. 按一下您要使用之 GitHub 儲存庫的磚。即會開啟 GitHub 網站，您可以在其中檢視儲存庫的內容。
  
   **提示**：您可以使用 Eclipse Orion {{site.data.keyword.webide}} 中的整合原始碼管理工具來編輯 GitHub 儲存庫，以及從工作區中部署應用程式。
 
-1. 如果您已啟用 GitHub Issues，請按一下 GitHub Issues 的磚予以開啟。
+1. 如果您已啟用 GitHub Issues，請按一下 GitHub Issues 的磚來開啟它。
 
-如需相關資訊，請參閱 [GitHub（在新視窗中開啟鏈結）](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window}及 [GitHub Issues（在新視窗中開啟鏈結）](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}。
+如需相關資訊，請參閱 [GitHub](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} 及 [GitHub Issues](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}。
 
 
 ## 配置專用 GitHub Enterprise
 {: #configghe}
 
-「{{site.data.keyword.ghe_long}}」是 Git 儲存庫的內部部署 Web 型管理服務。「專用 GitHub Enterprise」僅供「{{site.data.keyword.Bluemix_notm}} 專用」客戶使用。GitHub Issues 是一個追蹤工具，可將您的工作及方案保留在一個位置。它會與您的開發儲存庫整合，以聚焦在重要作業。如需「專用 GitHub Enterprise」及 GitHub Issues 的相關資訊，請參閱[使用專用 GitHub Enterprise（在新視窗中開啟鏈結）](../services/ghededicated/index.html){: new_window}及 [GitHub Issues（在新視窗中開啟鏈結）](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}。
+{{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。「專用 GitHub Enterprise」僅適用於「{{site.data.keyword.Bluemix_notm}} 專用」客戶。GitHub Issues 是一種追蹤工具，可將您的工作和方案保留在一個位置。它會與您的開發儲存庫整合，讓您聚焦在重要作業。如需「專用 GitHub Enterprise」及 GitHub Issues 的相關資訊，請參閱[使用專用 GitHub Enterprise](../services/ghededicated/index.html){: new_window} 及 [GitHub Issues](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}。
 
-您可以將 {{site.data.keyword.ghe_short}} 配置為工具鏈中的工具整合，以在公司的 [{{site.data.keyword.Bluemix_notm}} 專用（在新視窗中開啟鏈結）](../dedicated/index.html#dedicated){: new_window}實例中管理原始碼。
+您可以將 {{site.data.keyword.ghe_short}} 配置成工具鏈中的工具整合，以管理公司的 [{{site.data.keyword.Bluemix_notm}} 專用](../dedicated/index.html#dedicated){: new_window}實例中的原始碼。
 
 1. 如果您要在建立工具鏈時配置此工具整合，請遵循下列步驟：
 
- a. 第一次登入「專用 GitHub Enterprise」之前，請要求公司的地區管理者使用 LDAP 將您的使用者 ID 從公司的使用者登錄新增至「{{site.data.keyword.Bluemix_notm}} 專用」實例。如需設定 {{site.data.keyword.ghe_short}} 帳戶的相關資訊，請參閱[使用專用 GitHub Enterprise（在新視窗中開啟鏈結）](../services/ghededicated/index.html){: new_window}。
+ a. 第一次登入「專用 GitHub Enterprise」之前，請要求公司的地區管理者使用 LDAP 將您的使用者 ID 從公司使用者登錄新增至「{{site.data.keyword.Bluemix_notm}} 專用」實例。如需設定 {{site.data.keyword.ghe_short}} 帳戶的相關資訊，請參閱[使用專用 GitHub Enterprise](../services/ghededicated/index.html){: new_window}。
  
  b. 在「可配置的整合」區段中，按一下 **{{site.data.keyword.ghe_short}}**。    
  
- c. 檢閱新 {{site.data.keyword.ghe_short}} 儲存庫的預設名稱。必要的話，請變更新儲存庫的名稱。下列影像顯示從範例儲存庫複製的儲存庫範例。您可以使用現有儲存庫或新儲存庫。若要使用新的儲存庫，您可以建立空的儲存庫、複製儲存庫，或分出儲存庫。
+ c. 檢閱新 {{site.data.keyword.ghe_short}} 儲存庫的預設名稱。必要的話，請變更新儲存庫的名稱。下列影像會顯示從範例儲存庫中複製的儲存庫範例。您可以使用現有儲存庫或新的儲存庫。若要使用新的儲存庫，您可以建立空的儲存庫、複製儲存庫或分出儲存庫。
  ![預設儲存庫位置](images/toolchain_ghe_config.png)
    
-1. 如果您在「{{site.data.keyword.Bluemix_notm}} 公用」上有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤上，按一下工具鏈來開啟它的「工具整合」頁面。或者，在應用程式之「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。如果您是在「{{site.data.keyword.Bluemix_notm}} 專用」上使用工具鏈，請在「儀表板」的 **DevOps** 標籤上，按一下工具鏈來開啟它的「工具整合」頁面。或者，在應用程式之「概觀」頁面的右上角，按一下**檢視工具鏈**。然後，按一下**工具整合**。
+1. 如果您在「{{site.data.keyword.Bluemix_notm}} 公用」上有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤中按一下工具鏈，以開啟其「工具整合」頁面。或者，在應用程式「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。如果您要在「{{site.data.keyword.Bluemix_notm}} 專用」上使用工具鏈，請在「儀表板」的 **DevOps** 標籤上按一下工具鏈，以開啟其「工具整合」頁面。或者，在應用程式「概觀」頁面的右上角，按一下**檢視工具鏈**。然後，按一下**工具整合**。
 1. 按一下新增按鈕 (+)。
 1. 在「工具整合」區段中，按一下 **{{site.data.keyword.ghe_short}}**。
-1. 如果您有想要使用的 {{site.data.keyword.ghe_short}} 儲存庫，請鍵入儲存庫的 URL。針對儲存庫類型，請按一下**現有**。
+1. 如果您有要使用的 {{site.data.keyword.ghe_short}} 儲存庫，請鍵入儲存庫的 URL。針對儲存庫類型，請按一下**現有**。
 1. 如果您要使用新的 {{site.data.keyword.ghe_short}} 儲存庫，請鍵入儲存庫的名稱，並鍵入您所複製或分出之儲存庫的 URL，然後選取儲存庫類型： 
 
  a. 若要建立空的儲存庫，請按一下**新建**。 
@@ -202,7 +202,7 @@ GitHub Issues 是一個追蹤工具，可將您的工作和方案都保留在一
  
 1. 若要使用 GitHub Issues 進行問題追蹤，請選取**啟用 GitHub Issues** 勾選框。
 1. 按一下**建立整合**。
-1. 按一下您要使用之 {{site.data.keyword.ghe_short}} 儲存庫的磚。即會開啟您的公司 [{{site.data.keyword.Bluemix_notm}} 專用（在新視窗中開啟鏈結）](../dedicated/index.html#dedicated){: new_window}實例，您可以其中檢視儲存庫的內容。
+1. 按一下您要使用之 {{site.data.keyword.ghe_short}} 儲存庫的磚。即會開啟您公司的 [{{site.data.keyword.Bluemix_notm}} 專用](../dedicated/index.html#dedicated){: new_window}實例，您可以在其中檢視儲存庫的內容。
  
   **提示**：您可以使用 Eclipse Orion {{site.data.keyword.webide}} 中的整合原始碼管理工具來編輯 {{site.data.keyword.ghe_short}} 儲存庫，以及從工作區中部署應用程式。
 
@@ -218,39 +218,39 @@ PagerDuty 會將多個監視系統中的資料整合至單一視圖。發生問�
 配置 PagerDuty 在管線階段失敗時傳送通知，讓您可以更快速地修正問題，並減少關閉時間：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **PagerDuty**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤上按一下工具鏈，以開啟它的「工具整合」頁面。或者，在應用程式之「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。 
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤中按一下工具鏈，以開啟其「工具整合」頁面。或者，在應用程式「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。 
 1. 按一下新增按鈕 (+)。
 1. 在「工具整合」區段中，按一下 **PagerDuty**。
-1. 鍵入與 PagerDuty 帳戶相關聯的 PagerDuty 網站名稱。如果您沒有 PagerDuty 帳戶，請[註冊一個帳戶（在新視窗中開啟鏈結）](https://signup.pagerduty.com/accounts/new){: new_window}。
-1. 鍵入 PagerDuty 帳戶的 API 存取金鑰。如需尋找金鑰的指示，請參閱 [API 鑑別（在新視窗中開啟鏈結）](https://signup.pagerduty.com/accounts/new){: new_window}。
+1. 鍵入與 PagerDuty 帳戶相關聯的 PagerDuty 網站名稱。如果您沒有 PagerDuty 帳戶，請[註冊一個帳戶](https://signup.pagerduty.com/accounts/new){: new_window}。
+1. 鍵入 PagerDuty 帳戶的 API 存取金鑰。如需尋找金鑰的指示，請參閱 [API 鑑別](https://signup.pagerduty.com/accounts/new){: new_window}。
 1. 鍵入 PagerDuty 服務的名稱。
 1. 鍵入主要 PagerDuty 聯絡人的電子郵件位址。
 1. 鍵入主要 PagerDuty 聯絡人的電話號碼。
 1. 按一下**建立整合**。
 1. 按一下 PagerDuty 的磚以移至 pagerduty.com。您可以檢視與 PagerDuty 服務相關聯的事件，而 PagerDuty 服務是您在配置工具鏈的這個工具整合時所指定。 
 
-若要進一步瞭解，請參閱 [PagerDuty（在新視窗中開啟鏈結）](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}。
+若要進一步瞭解，請參閱 [PagerDuty](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}。
 
 
 ## 配置 Sauce Labs
 {: #saucelabs}
 
-Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipeline}} 中將 Sauce Labs 測試套組配置為測試工作時，測試套組可以在持續交付處理程序期間對 Web 或行動應用程式執行測試。這些測試可以提供對專案的重要流程控制，作為防止部署不正確程式碼的閘道。
+Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipeline}} 中將 Sauce Labs 測試套組配置為測試工作時，測試套組可以在持續交付程序期間對 Web 或行動應用程式執行測試。這些測試可以提供專案的重要流程控制，作為防止部署不正確程式碼的閘道。
 
 配置 Sauce Labs 對多個作業系統和瀏覽器執行自動化功能測試，讓您模擬使用者可能使用網站或應用程式的方式：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **Sauce Labs**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤上按一下工具鏈，以開啟它的「工具整合」頁面。或者，在應用程式之「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。 
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤中按一下工具鏈，以開啟其「工具整合」頁面。或者，在應用程式「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。 
 1. 按一下新增按鈕 (+)。
 1. 在「工具整合」區段中，按一下 **Sauce Labs**。
-1. 鍵入與 Sauce Labs 帳戶相關聯的使用者名稱。您可以[在 Sauce Labs 帳戶頁面頂端的歡迎使用訊息中找到使用者名稱（在新視窗中開啟鏈結）](https://saucelabs.com/account){: new_window}。
-1. 鍵入 Sauce Labs 帳戶的存取金鑰。尋找[在 Sauce Labs 帳戶頁面上找到金鑰（在新視窗中開啟鏈結）](https://saucelabs.com/account){: new_window}。
+1. 鍵入與 Sauce Labs 帳戶相關聯的使用者名稱。您可以[在 Sauce Labs 帳戶頁面頂端的歡迎使用訊息中找到使用者名稱](https://saucelabs.com/account){: new_window}。
+1. 鍵入 Sauce Labs 帳戶的存取金鑰。您可以[在 Sauce Labs 帳戶頁面的左下角找到金鑰](https://saucelabs.com/account){: new_window}。
 1. 按一下**建立整合**。
 1. 按一下 Sauce Labs 的磚以移至 saucelabs.com，然後檢視工具鏈的測試活動。
 
  **提示**：如果您已將 Sauce Labs 測試工作新增至 {{site.data.keyword.deliverypipeline}}，則可以選取服務實例。
 
-若要進一步瞭解，請參閱 [Sauce Labs（在新視窗中開啟鏈結）](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}。
+若要進一步瞭解，請參閱 [Sauce Labs](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}。
 
 
 ## 配置 Slack
@@ -260,15 +260,15 @@ Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipelin
 
 Slack 是一種雲端型、即時傳訊和通知系統。Slack 會提供持續性會談，這在進行團隊協同作業時比電子郵件更具互動性。您可以透過專用通道或與工作直接相關的一組通道來與團隊進行通訊。您也可以透過通道或兩位以上人員之間的直接訊息來共用檔案和影像。會保留透過直接訊息和通道的通訊，讓您可以搜尋它們。 
 
-配置 Slack 接收來自工具整合有關工具鏈的通知（例如測試和部署活動）：
+配置 Slack 接收來自工具整合的工具鏈相關通知（例如測試和部署活動）：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **Slack**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤上按一下工具鏈，以開啟它的「工具整合」頁面。或者，在應用程式之「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**標籤中按一下工具鏈，以開啟其「工具整合」頁面。或者，在應用程式「概觀」頁面的「持續交付」磚上，按一下**檢視工具鏈**。然後，按一下**工具整合**。
 1. 按一下新增按鈕 (+)。
 1. 在「工具整合」區段中，按一下 **Slack**。
-1. 鍵入 Slack 帳戶的 API 鑑別記號。您必須使用產生的完整存取記號向 Slack 進行鑑別。如需尋找記號的指示，請參閱 [Slack 鑑別（在新視窗中開啟鏈結）](https://api.slack.com/web#authentication){: new_window}。
+1. 鍵入 Slack 帳戶的 API 鑑別記號。您必須使用產生的完整存取記號向 Slack 進行鑑別。如需尋找記號的指示，請參閱 [Slack 鑑別](https://api.slack.com/web#authentication){: new_window}。
 1. 鍵入您要接收通知的 Slack 通道名稱。如果您指定的通道不存在，則會建立它。如果已保存通道，則會重新啟動它。
 1. 按一下**建立整合**。
 1. 按一下 Slack 的磚。您可以在已配置的 Slack 通道中檢視工具鏈的所有活動。
 
-若要進一步瞭解，請參閱 [Slack（在新視窗中開啟鏈結）](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}。
+若要進一步瞭解，請參閱 [Slack](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}。

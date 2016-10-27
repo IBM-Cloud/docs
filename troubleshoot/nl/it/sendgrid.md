@@ -1,14 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  anni: 2015, 2015
+
 
 ---
 
 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
@@ -45,4 +46,3 @@ Se desideri inviare altre email anche dopo aver raggiunto il limite
 di 25.000 email per istanza del servizio al mese, puoi aggiungere un'altra
 istanza del servizio. Per ulteriori informazioni su SendGrid, vedi [Introduzione a SendGrid](https://sendgrid.com/docs/index.html){: new_window}.    
 {: tsResolve}
-

@@ -80,7 +80,7 @@ für {{site.data.keyword.Bluemix_notm}} bereitstellen.
   * Um Liberty-Serverpakete für {{site.data.keyword.Bluemix_notm}} bereitzustellen, verwenden Sie den folgenden Befehl in Ihrem Quellenverzeichnis:
   
   ```
-cf push
+  cf push
   ```
   
   Weitere Informationen zum Liberty-Buildpack finden Sie unter [Liberty for Java](../runtimes/liberty/index.html).
@@ -88,23 +88,24 @@ cf push
   * Um Java Tomcat-Anwendungen für {{site.data.keyword.Bluemix_notm}} bereitzustellen, verwenden Sie den folgenden Befehl:
   
   ```
-cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
+  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * Um WAR-Pakete in {{site.data.keyword.Bluemix_notm}} bereitzustellen, verwenden Sie den folgenden Befehl:
   
   ```
-cf push App-Name -p app.war
+  cf push App-Name -p app.war
   ```
-Alternativ können Sie ein Verzeichnis angeben, in dem Ihre Anwendungsdateien enthalten sind. Verwenden Sie dazu den folgenden Befehl:  
+  Alternativ können Sie ein Verzeichnis angeben, in dem Ihre Anwendungsdateien enthalten sind. Verwenden Sie dazu den folgenden Befehl:
+  
   ```
-cf push App-Name -p "./app"
+  cf push App-Name -p "./app"
   ```
   
   * Um Node.js-Anwendungen für {{site.data.keyword.Bluemix_notm}} bereitzustellen, verwenden Sie den folgenden Befehl:
   
   ```
-cf push appname -p app_path
+  cf push appname -p app_path
   ```
   
 Die Datei `package.json` muss sich in Ihrer Node.js-Anwendung befinden, damit die Anwendung vom Node.js-Buildpack erkannt werden kann. Die Datei `app.js` ist das Einstiegsscript für die Anwendung und kann in der Datei `package.json` angegeben werden. Das folgende Beispiel zeigt eine einfache `package.json`-Datei:
@@ -133,7 +134,7 @@ Die Datei `package.json` muss sich in Ihrer Node.js-Anwendung befinden, damit di
   * Um PHP-, Ruby- oder Python-Anwendungen in {{site.data.keyword.Bluemix_notm}} bereitzustellen, verwenden Sie den folgenden Befehl in dem Verzeichnis, das die Anwendungsquelle enthält:
   
   ```
-cf push App-Name
+  cf push App-Name
   ```
 
 ###Bereitstellung einer App in mehreren Bereichen
@@ -143,13 +144,13 @@ Eine App ist für den Bereich, in dem sie bereitgestellt wird, spezifisch. Es is
   1. Wechseln Sie in den Bereich, in dem Sie Ihre App bereitstellen möchten; verwenden Sie hierfür den Befehl **cf target** zusammen mit der Option **-s**:
   
   ```
-cf target -s <Bereichsname>
+  cf target -s <Bereichsname>
   ```
   
   2. Wechseln Sie in Ihr App-Verzeichnis und stellen Sie Ihre App mithilfe des Befehls **cf push** bereit; dabei muss der App-Name in Ihrer Domäne eindeutig sein.
   
   ```
-cf push App-Name
+  cf push App-Name
   ```
   
 ##Anwendungsmanifest
@@ -230,7 +231,8 @@ Die folgenden Umgebungsvariablen einer aktiven {{site.data.keyword.Bluemix_notm}
   
   ```
   {
-   "VCAP_SERVICES": {    "AppScan Dynamic Analyzer": [
+   "VCAP_SERVICES": {
+    "AppScan Dynamic Analyzer": [
      {
       "credentials": {
        "bindingid": "0ab3162a-867e-4137-a2e7-39463a89472e",
@@ -414,13 +416,13 @@ Zum Angeben von Startbefehlen für Ihre Anwendung können Sie eine der nachstehe
   * Verwenden Sie den Befehl **cf push** und geben Sie den Parameter '-c' an. Wenn Sie beispielsweise eine Node.js-Anwendung bereitstellen, können Sie den Startbefehl **node app.js** im Parameter '-c' angeben:
   
   ```
-cf push appname -p app_path -c "node app.js"
+  cf push appname -p app_path -c "node app.js"
   ```
   
   * Verwenden Sie den Parameter 'command' in der Datei `manifest.yml`. Wenn Sie beispielsweise eine Node.js-Anwendung bereitstellen, können Sie den Startbefehl **node app.js** in der Manifestdatei angeben:
   
   ```
-command: node app.js
+  command: node app.js
   ```
   
 
@@ -436,7 +438,7 @@ Benutzerdefinierte Umgebungsvariablen sind für eine Anwendung spezifisch. Sie h
 	4. Füllen Sie die erforderlichen Felder aus und klicken Sie auf **SAVE** (Speichern).
   * Verwenden Sie die Befehlszeilenschnittstelle 'cf'. Fügen Sie eine benutzerdefinierte Variable mit dem Befehl `cf set-env` hinzu. Beispiel: 
     ```
-cf set-env appname Umgebungsvariablenname Umgebungsvariablenwert
+    cf set-env appname Umgebungsvariablenname Umgebungsvariablenwert
     ```
 	
   * Mithilfe der Datei `manifest.yml`. Fügen Sie Wertepaare in der Datei hinzu. Beispiel: 

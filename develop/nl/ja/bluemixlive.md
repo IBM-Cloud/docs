@@ -74,7 +74,7 @@ Desktop Sync では以下の点を考慮してください。
 <li>コマンド・ラインで、以下のコマンドを使用してログインします。ユーザー ID とパスワードの入力を求めるプロンプトが出されます。  
 <pre class="codeblock">bl login</pre>
 
-<strong>注:</strong> DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="BluemixDevOps Services">What's federated authentication and how does it affect me?</a> を参照してください。 
+<strong>注:</strong> DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a> を参照してください。 
 </li>
 
 <li>以下のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} Live Sync で同期できるプロジェクトのリストを表示します。
@@ -312,21 +312,23 @@ bl login | l [ -u username ] [-p password ][ -s server ]
 
 次のコマンドを実行すると、*username* と *password* の両方の入力を求めるプロンプトが出されます。
 
-
 ```
-bl login```
+bl login
+```
 {: pre}
 
 ユーザー `name@company.com:` でログインします。
 
 ```
-bl login –u name@company.com –p pa55w0rd```
+bl login –u name@company.com –p pa55w0rd
+```
 {: pre}
 
 ユーザー `name@company.com` をパスワード *pa55 w0rd* でログインします。パスワードにスペースが含まれているため、引用符で囲む必要があります。
 
 ```
-bl login –u name@company.com –p “pa55 w0rd”```
+bl login –u name@company.com –p “pa55 w0rd”
+```
 {: pre}
 
 ## ログアウト
@@ -371,8 +373,7 @@ bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremo
 
 **引数**
 
-*projectName*:*“alias | mproject”* という形式のプロジェクト名、
-あるいは該当プロジェクトをログイン・ユーザーが所有している場合には単に *myproject* のみの形式のプロジェクト名。
+*projectName*:*“alias | mproject”* という形式のプロジェクト名、あるいは該当プロジェクトをログイン・ユーザーが所有している場合には単に *myproject* のみの形式のプロジェクト名。
 
 **options**
 
@@ -395,16 +396,16 @@ bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremo
 
 
 ```
-bl sync```
+bl sync
+```
 {: pre}
 
-該当プロジェクトをログイン・ユーザーが所有する場合、
-このコマンドは同期を開始し、`bl sync “alias |
-myproject”` と同等の処理を行います。
+該当プロジェクトをログイン・ユーザーが所有する場合、このコマンドは同期を開始し、`bl sync “alias | myproject”` と同等の処理を行います。
 
 
 ```
-bl sync  myproject```
+bl sync  myproject
+```
 {: pre}
 
 次のコマンドは、
@@ -420,7 +421,8 @@ bl sync “my pro ject”
 プロジェクト `myproject` とディレクトリー `myfolder` の同期を開始します。
 
 ```
-bl sync myproject –d  myfolder```
+bl sync myproject –d  myfolder
+```
 {: pre}
 
 ## 作成
@@ -464,13 +466,15 @@ bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT
 以下のコマンドは、プライベート・プロジェクトの作成プロセスを開始し、使用するプロジェクト名を求めるプロンプトを出します。
 
 ```
-bl create```
+bl create
+```
 {: pre}
 
 以下のコマンドは、`myNewProject` という名前のパブリック・プロジェクトを作成します。
 
 ```
-bl create -n myNewProject --public```
+bl create -n myNewProject --public
+```
 {: pre}
 
 ## 状況
@@ -487,10 +491,7 @@ bl status | ss [ projectName ]
 
 **引数**
 
-*projectName*:`“alias | myproject”
-` という形式のプロジェクト名、 あるいは該当プロジェクトをロ
-グイン・ユーザーが所有している場合には単に
-`myproject` のみの形式のプロジェクト名。
+*projectName*:`“alias | myproject”` という形式のプロジェクト名、あるいは該当プロジェクトをログイン・ユーザーが所有している場合には単に `myproject` のみの形式のプロジェクト名。
 
 **例**
 
@@ -499,23 +500,24 @@ bl status | ss [ projectName ]
 
 
 ```
-bl status ```
+bl status
+```
 {: pre}
 
-該当プロジェクトをログイン・ユーザーが所有する場合、
-この例は、プロジェクト *myproject* の状況を表示し、`bl status “alias |
-myproject”` と同等です。
+該当プロジェクトをログイン・ユーザーが所有する場合、この例は、プロジェクト *myproject* の状況を表示し、`bl status “alias | myproject”` と同等です。
 
 
 ```
-bl status myproject```
+bl status myproject
+```
 {: pre}
 
 次の例では、プロジェクト `my pro ject` に関連付けられた実行中のアプリケーションの状況を表示します。このプロジェクト名はスペースを含むため、引用符で囲みます。
 
 
 ```
-bl status “my pro ject”```
+bl status “my pro ject”
+```
 {: pre}
 
 ## 開始
@@ -534,10 +536,7 @@ bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit
 
 **引数**
 
-*projectName*:*“alias | myproject”
-* という形式のプロジェクト名、 あるいは該当プロジェクトをログ
-イン・ユーザーが所有している場合には単に *myproject* のみ
-の形式のプロジェクト名。
+*projectName*:*“alias | myproject”* という形式のプロジェクト名、あるいは該当プロジェクトをログイン・ユーザーが所有している場合には単に *myproject* のみの形式のプロジェクト名。
 
 **options**
 
@@ -561,7 +560,8 @@ bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit
 
 
 ```
-bl start myproject –l “launchConfigurations/my.launch”```
+bl start myproject –l “launchConfigurations/my.launch”
+```
 {: pre}
 
 次のコマンドは、起動ファイル `launchConfigurations/my.launch`
@@ -570,7 +570,8 @@ bl start myproject –l “launchConfigurations/my.launch”```
 
 
 ```
-bl start –l “launchConfigurations/my.launch” ```
+bl start –l “launchConfigurations/my.launch”
+```
 {: pre}
 
 次のコマンドは、マニフェスト・ファイル `manifest.yml`
@@ -580,13 +581,15 @@ bl start –l “launchConfigurations/my.launch” ```
 
 
 ```
-bl start –m “mymanifest.yml” ```
+bl start –m “mymanifest.yml”
+```
 {: pre}
 
-このコマンドは、マニフェスト・ファイル ``manifest.yml`` で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始し、```bl start –m manifest.yml`` と同等です。
+このコマンドは、マニフェスト・ファイル ``manifest.yml`` で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始し、``bl start –m manifest.yml`` と同等です。
 
 ```
-bl start```
+bl start
+```
 {: pre}
 
 ## 停止
@@ -621,7 +624,8 @@ bl stop | sp projectName [ -l launchConfiguration ]
 
 
 ```
-bl stop```
+bl stop
+```
 {: pre}
 
 次のコマンドは、起動ファイル `mylaunchConfig`
@@ -629,7 +633,8 @@ bl stop```
 
 
 ```
-bl stop myproject –l “mylaunchConfig” ```
+bl stop myproject –l “mylaunchConfig”
+```
 {: pre}
 
 次のコマンドは、現行ディレクトリーが、
@@ -639,7 +644,8 @@ bl stop myproject –l “mylaunchConfig” ```
 
 
 ```
-bl stop –l “launchConfigurations/mylaunchconfig.launch” ```
+bl stop –l “launchConfigurations/mylaunchconfig.launch”
+```
 {: pre}
 
 ># 関連リンク {:class="linklist"}

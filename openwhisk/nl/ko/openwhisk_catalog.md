@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}}를 사용하도록 설정된 {{site.data.keyword.Bluemix_notm}} 서비스 사용
 {: #openwhisk_ecosystem}
-마지막 업데이트 날짜: 2016년 8월 4일
+마지막 업데이트 날짜: 2016년 9월 9일
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}}에서 패키지 카탈로그는 유용한 기능으로 앱을 강화하고 에코시스템 내에서 외부 서비스에 액세스할 수 있는 쉬운 방법을 제공합니다. {{site.data.keyword.openwhisk_short}} 사용 가능 외부 서비스의 예로는 Cloudant, The Weather Company, Slack 및 GitHub 등이 있습니다.
@@ -212,11 +212,11 @@ wsk activation poll
 1. 앞에서 작성한 패키지 바인딩 내의 `write` 조치를 사용하여 문서를 저장하십시오. `/myNamespace/myCloudant`를 사용자의 패키지 이름으로 대체하십시오.
 
   ```
-wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
-  ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
+  ok: invoked /myNamespace/myCloudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
         "id": "heisenberg",
     "ok": true,
@@ -238,7 +238,7 @@ wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbnam
 1. 앞에서 작성한 패키지 바인딩 내의 `read` 조치를 사용하여 문서를 페치하십시오. `/myNamespace/myCloudant`를 사용자의 패키지 이름으로 대체하십시오.
 
   ```
-wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+  wsk action invoke /myNamespace/myCloudant/read --blocking --result --param dbname testdb --param id heisenberg
   ```
   {: pre}
   ```
@@ -269,7 +269,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 
 `/whisk.system/alarms/alarm` 피드는 지정된 빈도로 트리거 이벤트를 실행하기 위해 알람 서비스를 구성합니다. 매개변수는 다음과 같습니다.
 
-- `cron`: 협정 세계시(UTC)로 트리거를 실행할 시점을 표시하는 UNIX crontab 구문 기반의 문자열입니다. 문자열은 공백으로 구분되는 여섯 개 필드의 시퀀스입니다(`X X X X X X `). cron 구문 사용에 대한 세부사항은 https://github.com/ncb000gt/node-cron의 내용을 참조하십시오. 다음은 문자열로 표시하는 빈도의 몇 가지 예입니다. 
+- `cron`: 협정 세계시(UTC)로 트리거를 실행할 시점을 표시하는 UNIX crontab 구문 기반의 문자열입니다. 문자열은 공백으로 구분되는 여섯 개 필드의 시퀀스입니다(`X X X X X X `). cron 구문 사용에 대한 세부사항은 다음을 참조하십시오. https://github.com/ncb000gt/node-cron 다음은 문자열로 표시하는 빈도의 몇 가지 예입니다. 
 
   - `* * * * * *`: 매초. 
   - `0 * * * * *`: 매분의 처음. 
@@ -313,7 +313,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 - `password`: 예보 API를 호출할 자격이 있는 Weather Company Data for IBM Bluemix의 비밀번호입니다. 
 - `latitude`: 위치의 위도 좌표입니다.
 - `longitude`: 위치의 경도 좌표입니다.
-- `timeperiod`: 예보에 대한 기간입니다. 유효한 옵션은 '10day' - (기본값) 일별로 10일 예보를 리턴함, '24hour' - 시별로 2일 예보를 리턴함, 'current' - 현재 날씨 상태를 리턴함, 'timeseries' - 현재 관측 및 현재 날짜 및 시간으로부터 최대 24시간의 지난 관측을 모두 리턴함.  
+- `timeperiod`: 예보에 대한 기간입니다. 유효한 옵션은 다음과 같습니다. '10day' - (기본값) 일별로 10일 예보를 리턴함, '48hour' - 시별로 2일 예보를 리턴함, 'current' - 현재 날씨 상태를 리턴함, 'timeseries' - 현재 관측 및 현재 날짜 및 시간으로부터 최대 24시간의 지난 관측을 모두 리턴함. 
 
 
 다음은 패키지 바인딩을 작성한 후 10일 간의 예보를 가져오는 예입니다. 
@@ -321,7 +321,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 1. 사용자의 API 키를 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
   ```
   {: pre}
 
@@ -547,6 +547,7 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 - `channel`: 메시지를 게시할 Slack 채널입니다.
 - `username`: 메시지를 게시할 사용자 이름입니다.
 - `text`: 게시할 메시지입니다.
+- `token`: (선택사항) Slack [액세스 토큰](https://api.slack.com/tokens)입니다. Slack 액세스 토큰 사용에 대한 세부사항은 [아래의 내용](./openwhisk_catalog.html#openwhisk_catalog_slack_token)을 참조하십시오.
 
 다음은 Slack을 구성하고 패키지 바인딩을 작성하여 메시지를 채널에 게시하는 예입니다.
 
@@ -568,6 +569,10 @@ wsk action invoke mySlack/post --blocking --result --param text 'Hello from Open
   ```
   {: pre}
 
+### Slack 토큰 기반 API 사용
+{: #openwhisk_catalog_slack_token}
+
+원하는 경우, 선택적으로 웹후크 API 대신 Slack의 토큰 기반 API를 사용하도록 선택할 수 있습니다. 이렇게 선택하는 경우, Slack [액세스 토큰](https://api.slack.com/tokens)이 포함된 `token` 매개변수를 전달하십시오. 그런 다음 [Slack API 메소드](https://api.slack.com/methods)를 `url` 매개변수로 사용할 수 있습니다. 예를 들어, 메시지를 게시하려면 [slack.postMessage](https://api.slack.com/methods/chat.postMessage)의 `url` 매개변수값을 사용합니다. 
 
 ## GitHub 패키지 사용
 {: #openwhisk_catalog_github}

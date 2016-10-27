@@ -28,7 +28,7 @@ Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../i
 
 Sie können sich unter Verwendung einer vorhandenen IBMid, durch Erstellung einer neuen IBMid oder unter Verwendung einer eingebundenen ID für ein {{site.data.keyword.Bluemix_notm}}-Konto anmelden. Eine eingebundene ID ist eine ID innerhalb einer Unternehmensdomäne, die für IBM registriert wurde, um über die Domäne und die Benutzerberechtigungsnachweise auf IBM Webanwendungen zugreifen zu können.  
 
-Die Anmeldung an {{site.data.keyword.Bluemix_notm}} mit einer eingebundenen ID ist nur dann möglich, wenn Ihr Unternehmen bereits bei IBM registriert wurde. Nach der Registrierung der Unternehmensdomäne bei IBM können sich die Benutzer unter Verwendung der bestehenden Benutzerberechtigungsnachweise des Unternehmens bei IBM Produkten und Services anmelden. Die Authentifizierung erfolgt über den Identitätsprovider Ihres Unternehmens. Bei der Anmeldung an {{site.data.keyword.Bluemix_notm}} mit einer eingebundenen ID werden Sie zur Anmeldung über die Anmeldeseite Ihres Unternehmens aufgefordert. Weitere Informationen zur Registrierung der Domäne Ihres Unternehmens oder Ihrer Organisation bei IBM und zu den hierfür erforderlichen Schritten finden Sie in der Veröffentlichung [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Für die Registrierung eingebundener IDs muss ein IBM Sponsor, wie beispielsweise ein Angebotsmanager oder Kundenansprechpartner, kontaktiert werden.
+Die Anmeldung an {{site.data.keyword.Bluemix_notm}} mit einer eingebundenen ID ist nur dann möglich, wenn Ihr Unternehmen bereits bei IBM registriert wurde.  Nach der Registrierung der Unternehmensdomäne bei IBM können sich die Benutzer unter Verwendung der bestehenden Benutzerberechtigungsnachweise des Unternehmens bei IBM Produkten und Services anmelden. Die Authentifizierung erfolgt über den Identitätsprovider Ihres Unternehmens. Bei der Anmeldung an {{site.data.keyword.Bluemix_notm}} mit einer eingebundenen ID werden Sie zur Anmeldung über die Anmeldeseite Ihres Unternehmens aufgefordert. Weitere Informationen zur Registrierung der Domäne Ihres Unternehmens oder Ihrer Organisation bei IBM und zu den hierfür erforderlichen Schritten finden Sie in der Veröffentlichung [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Für die Registrierung eingebundener IDs muss ein IBM Sponsor, wie beispielsweise ein Angebotsmanager oder Kundenansprechpartner, kontaktiert werden.
 
 *Tabelle 1. Anmeldemethoden*
 
@@ -41,13 +41,13 @@ Die Anmeldung an {{site.data.keyword.Bluemix_notm}} mit einer eingebundenen ID i
 ## Benachrichtigungen einstellen
 {: #notifications}
 
-Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; **Benachrichtigungen**, um allgemeine Benachrichtigungen über Konten und Ausgaben festzulegen. Ausgabebenachrichtigungen sind nur für Eigener eines nutzungsabhängigen {{site.data.keyword.Bluemix_notm}}-Kontos oder -Abonnementkontos verfügbar. 
+Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; **Benachrichtigungen**, um allgemeine Benachrichtigungen über Konten und Ausgaben festzulegen. Ausgabebenachrichtigungen sind nur für Eigener eines nutzungsabhängigen {{site.data.keyword.Bluemix_notm}}-Kontos oder -Abonnementkontos verfügbar.
 
-Sie können Plattform-E-Mail-Benachrichtigungen für {{site.data.keyword.Bluemix_notm}}-Vorfälle und die geplante Instandhaltung festlegen und Sie können Ausgabebenachrichtigungen definieren, durch die Sie gewarnt werden, wenn sich die Ausgaben für Ihr Konto dem festgelegten Schwellenwert nähern. Führen Sie die folgenden Tasks aus, um unterschiedliche Benachrichtigungstypen für Ihr Konto festzulegen. 
+Sie können Plattform-E-Mail-Benachrichtigungen für {{site.data.keyword.Bluemix_notm}}-Vorfälle und die geplante Instandhaltung festlegen und Sie können Ausgabebenachrichtigungen definieren, durch die Sie gewarnt werden, wenn sich die Ausgaben für Ihr Konto dem festgelegten Schwellenwert nähern. Führen Sie die folgenden Tasks aus, um unterschiedliche Benachrichtigungstypen für Ihr Konto festzulegen.
 
 ### Plattformbenachrichtigungen einstellen
 
-Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; **Benachrichtigungen** &gt; **Plattform**, um E-Mail-Benachrichtigungen für {{site.data.keyword.Bluemix_notm}}-Vorfälle und geplante Wartungsmaßnahmen festzulegen. Sie können jede einzelne Option auswählen oder abwählen, um die E-Mail-Benachrichtigung zu aktivieren oder zu inaktivieren. 
+Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; **Benachrichtigungen** &gt; **Plattform**, um E-Mail-Benachrichtigungen für {{site.data.keyword.Bluemix_notm}}-Vorfälle und geplante Wartungsmaßnahmen festzulegen. Sie können jede einzelne Option auswählen oder abwählen, um die E-Mail-Benachrichtigung zu aktivieren oder zu inaktivieren.
 
 ### Ausgabebenachrichtigungen einstellen
 {: #spendingnotifications}
@@ -57,8 +57,8 @@ Wenn Sie Eigner eines {{site.data.keyword.Bluemix_notm}}-Abonnementkontos oder e
 Führen Sie die folgenden Schritte aus, um E-Mail-Benachrichtigungen für Ausgabenlimits einzurichten:
 
 <ol>
-<li>Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; **Benachrichtigungen** &gt; **Ausgaben**. </li>
-<li>Geben Sie einen numerischen Wert ein, um das Ausgabelimit für das Auslösen einer Benachrichtigung für jeden Typ der Benachrichtigung festzulegen: <br />
+<li>Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) &gt; **Konto** &gt; **Benachrichtigungen** &gt; **Ausgaben**.</li>
+<li>Geben Sie einen numerischen Wert ein, um das Ausgabelimit für das Auslösen einer Benachrichtigung für jeden Typ der Benachrichtigung festzulegen:<br />
 <ul>
 <li>Gesamtausgaben - Konto</li>
 <li>Gesamtausgaben - Laufzeit</li>

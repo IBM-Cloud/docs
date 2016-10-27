@@ -14,10 +14,10 @@ copyright:
 # 使用 Eclipse Orion {{site.data.keyword.webide}} 編輯程式碼
 {: #web_ide}
 
-前次更新：2016 年 9 月 9 日
+前次更新：2016 年 7 月 22 日
 {: .last-updated}
 
-Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 開發的瀏覽器型開發環境。有了內容輔助、程式碼完成及錯誤檢查的協助，您就可以使用 JavaScript、HTML 及 CSS 進行開發。{{site.data.keyword.webide}} 幾乎使用任何語言，並且提供大部分[檔案類型（在新視窗中開啟鏈結）](https://hub.jazz.net/docs/overview/#dev_support){: new_window}的語法強調顯示。來源控制是透過 Git 或 Jazz SCM 所建置，而且您可以在本端部署程式碼來測試及除錯應用程式。
+Eclipse Orion {{site.data.keyword.webide}} 是一種您可以在其中針對 Web 進行開發的瀏覽器型開發環境。有了內容輔助、程式碼完成及錯誤檢查的協助，您就可以使用 JavaScript、HTML 及 CSS 進行開發。{{site.data.keyword.webide}} 幾乎可與任何語言搭配運作，並且提供[大部分檔案類型的](https://hub.jazz.net/docs/overview/#dev_support){: new_window}語法強調顯示。來源控制是透過 Git 或 Jazz SCM 所建置，而且您可以在本端部署程式碼來測試應用程式並對其進行除錯。
 {:shortdesc}
 
 最好的是，{{site.data.keyword.webide}} 採用 Web 技術。您沒有要安裝的項目、要維護的項目，以及要調整的項目。您可以在具有網際網路連線的任何位置進行開發。
@@ -50,7 +50,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 開發�
 
 2. 按一下**編輯器設定**。
 
-3. 若要從**本端編輯器設定**功能表中包括或排除設定，請按一下設定旁邊的圓形。
+3. 若要從**本端編輯器設定**功能表中包括或排除設定，請按一下設定旁邊的圓圈。
 
 ![「編輯器設定」切換](images/webide_editor_settings_toggle.png)
 
@@ -84,15 +84,15 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 開發�
 ## 管理原始碼
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} 是與原始碼管理工具整合。若要使用 Git 儲存庫，請按一下 **Git 儲存庫**圖示 <img class="inline" src="./images/webide_git_icon.png"  alt="「Git 儲存庫」圖示">。如需相關資訊，請參閱[使用 Git 進行來源控制（在新視窗中開啟鏈結）](https://hub.jazz.net/docs/git/){: new_window}。
+{{site.data.keyword.webide}} 可與原始碼管理工具整合。若要使用 Git 儲存庫，請按一下 **Git 儲存庫**圖示 <img class="inline" src="./images/webide_git_icon.png"  alt="「Git 儲存庫」圖示">。如需相關資訊，請參閱[使用 Git 進行來源控制](https://hub.jazz.net/docs/git/){: new_window}。
 
 
 ## 從工作區部署應用程式
 {: #deploy}
 
-1. 若要部署應用程式，請從執行列中選取或[建立（在新視窗中開啟鏈結）](https://hub.jazz.net/tutorials/livesync/#launch_configuration){: new_window}啟動配置。
+1. 若要部署應用程式，請從執行列中選取或[建立](https://hub.jazz.net/tutorials/livesync/#launch_configuration){: new_window}啟動配置。
 1. 按一下部署圖示 <img class="inline" src="./images/webide_deploy_button.png"  alt="部署圖示">。使用您工作區的現行內容以及啟動配置中所定義的環境，即可部署您應用程式的實例。 
-2. 部署應用程式之後，即可使用執行列來停止、重新啟動或除錯應用程式、檢視日誌，以及其他作業。
+2. 部署應用程式之後，即可使用執行列來停止、重新啟動應用程式或對其進行除錯、檢視日誌，以及執行其他作業。
 ![執行列](images/webide_runbar.png)
 
 <!-- LH: I'm commenting out the following list because I think this information is obvious from the UI. I also updated the preceding sentence to mention a few things that you can do from the run bar.
@@ -108,11 +108,11 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 開發�
  ## 在 {{site.data.keyword.webide}} 外部編輯
 {: #editlocal}
 
-若要使用 {{site.data.keyword.webide}} 以外的編輯器，請設定 {{site.data.keyword.Bluemix_live}}，直接在任何工具中使用專案檔。{{site.data.keyword.Bluemix_live_notm}} 是一種指令行應用程式，可同步化本端檔案系統中的變更與 {{site.data.keyword.jazzhub}} 中的雲端工作區。 
+若要使用 {{site.data.keyword.webide}} 以外的編輯器，請設定 {{site.data.keyword.Bluemix_live}}，以便直接在任何工具中使用專案檔。{{site.data.keyword.Bluemix_live_notm}} 是一種指令行應用程式，可同步化本端檔案系統中的變更與 {{site.data.keyword.jazzhub}} 中的雲端工作區。 
 
 ### 開始之前 
 
-下載並安裝 [{{site.data.keyword.Bluemix_live_notm}} 指令行介面（在新視窗中開啟鏈結）](http://livesyncdownload.ng.bluemix.net){: new_window}。
+[下載並安裝 {{site.data.keyword.Bluemix_live_notm}} 指令行介面](http://livesyncdownload.ng.bluemix.net){: new_window}。
 
 ### 同步化本端環境與 {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}
@@ -125,7 +125,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 開發�
 	```
 	{: pre}
 
-3. 系統提示您時，請輸入 IBMid 及密碼。
+3. 系統提示您時，請輸入 IBM ID 及密碼。
 4. 檢視 {{site.data.keyword.Bluemix_notm}} 專案清單： 
 
 	```
@@ -155,7 +155,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 開發�
 	```
 	{: codeblock}
 
-2. 使用您在 {{site.data.keyword.webide}} 中建立的啟動配置。在您選取啟動配置之後，會在本端環境中啟用「桌面同步」特性。在剛剛開啟的指令行視窗中，您可以檢視應用程式的 URL、除錯 URL、管理 URL，以及檢視 {{site.data.keyword.Bluemix_live_notm}} 狀態。
+2. 使用您在 {{site.data.keyword.webide}} 中建立的啟動配置。在您選取啟動配置之後，會在本端環境中啟用「桌面同步」特性。在剛剛開啟的指令行視窗中，您可以檢視應用程式的 URL、對 URL 進行除錯、管理 URL，以及檢視 {{site.data.keyword.Bluemix_live_notm}} 狀態。
 
 3. 重新整理瀏覽器，並驗證您可以在本端工作區中看到儲存至靜態檔案的變更。 
 

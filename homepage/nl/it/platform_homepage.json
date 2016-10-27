@@ -12,7 +12,7 @@
 		"img": "homepage/images/manage_apps.svg",
 		"href": "manageapps/mngapps.html"
 	}, {
-		"title": "Amministrazione ",
+		"title": "Amministrazione",
 		"description": "Gestisci organizzazioni e spazi, compreso l'accesso utente.",
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"

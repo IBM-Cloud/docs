@@ -20,9 +20,9 @@ copyright:
 使用 {{site.data.keyword.Bluemix}}，即可在 {{site.data.keyword.Bluemix_notm}} 使用者介面中建立您的應用程式。建立之後，您可以決定要繼續使用使用者介面、使用 cf 指令行介面，還是使用 {{site.data.keyword.jazzhub_title}} 來開發、追蹤、計劃及部署您的應用程式。
 {:shortdesc}
 
-在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，請從入門範本開始。*入門範本* 是一種範本，包括預先定義的服務，以及使用特定建置套件進行配置的應用程式碼。入門範本有兩種類型：樣板及運行環境。
+在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，請從入門範本開始。*入門範本* 是一種範本，它包含預先定義的服務，以及使用特定建置套件進行配置的應用程式碼。入門範本有兩種類型：樣板及運行環境。
 
-*樣板* 是一種容器，它適用於應用程式及其相關聯運行環境，以及特定網域的預先定義服務。例如，Mobile Cloud 樣板包括 Node.js 運行環境，以及 Mobile Data、Mobile Application Security 和 Push 服務。此外，也包括 SDK 及範例應用程式，以便開始開發用來存取這些服務的行動應用程式。
+*樣板* 是一種容器，它適用於應用程式及其相關聯運行環境，以及特定網域的預先定義服務。例如，Mobile Cloud 樣板包含 Node.js 運行環境，以及 Mobile Data、Mobile Application Security 和 Push 服務。此外，也包含 SDK 及範例應用程式，以便開始開發用來存取這些服務的行動應用程式。
 
 *運行環境* 是用來執行應用程式的資源集。{{site.data.keyword.Bluemix_notm}} 提供運行環境作為不同類型之應用程式的容器。運行環境會以建置套件的方式，整合到 {{site.data.keyword.Bluemix_notm}}，並會自動配置以供使用，且幾乎不需要維護。
 

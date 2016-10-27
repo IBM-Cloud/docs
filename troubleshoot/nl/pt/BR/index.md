@@ -29,7 +29,8 @@ problemas seguindo algumas etapas simples.
 ## Não é possível efetuar login no {{site.data.keyword.Bluemix_notm}}
 {: #ts_logintobm}
 
-Deve-se ter um ID IBM e uma senha válidos para efetuar login no {{site.data.keyword.Bluemix_notm}}.
+Deve-se ter um ID IBM e uma senha válidos para efetuar login no
+{{site.data.keyword.Bluemix_notm}}.
 
 
 Ao tentar efetuar conectar ao {{site.data.keyword.Bluemix_notm}},
@@ -39,22 +40,25 @@ você verá a mensagem de erro a seguir:
 `A senha inserida não está correta.`
 
 
-O ID IBM e a senha que você usa para conectar-se ao {{site.data.keyword.Bluemix_notm}} são inválidos.
+O ID IBM e a senha que você usa para conectar-se ao
+{{site.data.keyword.Bluemix_notm}} são inválidos.
 {: tsCauses} 
  
 
 Para obter um ID IBM e uma senha válidos, acesse a página Meu perfil IBM e conclua
 uma das etapas a seguir:
 {: tsResolve}
-  * Se você já tiver registrado um ID IBM e desejar verificar se seu ID e senha são
-válidos, clique em **Conectar** e insira seu ID IBM e sua senha na
+  * Se você já tiver registrado um ID IBM e desejar verificar se seu ID e senha
+são válidos, clique em **Conectar** e insira seu ID IBM e sua senha na
 página Conectar. Caso tenha esquecido sua senha, clique em **Esqueceu sua
 senha** na página Conectar para reconfigurar sua senha. Caso tenha esquecido
-seu ID IBM ou continue a ter problemas com a senha, entre em contato com o Help desk de registro IBM mundial para obter ajuda.  
-  * Se você não tiver um ID IBM, clique em **Registrar** para registrar um ID IBM e uma senha.  
+seu ID IBM ou continue a ter problemas com a senha, entre em contato com o Help desk de
+registro IBM mundial para obter ajuda. 
+  * Se você não tiver um ID IBM, clique em **Registrar** para
+registrar um ID IBM e uma senha. 
   
-**Nota:** Para funcionários IBM, o ID IBM pode ser diferente
-do ID de login da intranet. 
+**Nota:** Para funcionários IBM, o ID IBM pode ser diferente do
+ID de login da intranet. 
 
 
 
@@ -184,9 +188,10 @@ para alterar a sua função. Para identificar o gerente da organização, conclu
 etapas a seguir:
 {: tsResolve}
 
-  1. Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone
-{{site.data.keyword.avatar}} ![ícone Avatar](images/account_support.svg) na barra de menus e
-selecione **Gerenciar organizações**.
+  1. Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no
+ícone {{site.data.keyword.avatar}} ![ícone
+Avatar](images/account_support.svg) na barra de menus e selecione Gerenciar
+organizações**.
   2. Acesse sua organização e visualize as informações sobre o gerente da organização na guia **USUÁRIOS**.  
   
 Se você não conseguir convidar os usuários porque é um colaborador
@@ -360,36 +365,37 @@ Se a sua JVM de ambiente de trabalho for IBM JVM 7 ou 8, ou uma versão anterior
 ## Não é possível reutilizar nomes de aplicativos excluídos
 {: #ts_reuse_appname}
   
-Depois de excluir um app, é possível reutilizar o nome do app somente depois de
-excluir a rota do app. 
+Depois de excluir um app, é possível reutilizar o nome do app somente depois de excluir a rota do app. 
 
 Quando você tentar reutilizar o nome do app, receberá a mensagem a seguir:
 {: tsSymptoms}
 
 `O nome já é usado por outro app.`
 
-Quando um app é excluído, sua rota, que é a URL do app, não é automaticamente
-excluída. Portanto, não está disponível para reutilização. Deve-se acessar o espaço em
-que o app foi criado para excluir a rota para que ele possa ser reutilizado.
+Quando um app é excluído, sua rota, que é a URL do app, não é automaticamente excluída. Portanto, não está disponível para reutilização. Deve-se acessar o espaço em que o app foi criado para excluir a rota para que ele possa ser reutilizado.
 {: tsCauses}
 
-Execute as etapas a seguir para excluir a rota não utilizada:
+Execute as etapas a seguir para excluir a rota não utilizada: 
 {: tsResolve}
 
   1. Verifique se a rota pertence ao espaço atual inserindo o comando a seguir: 
      ```
-	 cf routes 	 ```
+	 cf routes
+	 ```
   2. Se a rota não pertencer ao espaço atual, alterne para o espaço ou a
 organização à qual ela pertence inserindo o comando a seguir: 
      ```
-	 cf target -o org_name -s space_name 	 ```
+	 cf target -o org_name -s space_name
+	 ```
   3. Exclua a rota do app inserindo o comando a seguir:
      ```
-	 cf delete-route domain_name -n host_name 	 ```
+	 cf delete-route domain_name -n host_name
+	 ```
 	 Por
 exemplo:
 	 ```
-	 cf delete-route mybluemix.net -n app001 	 ```
+	 cf delete-route mybluemix.net -n app001
+	 ```
 
   
   
@@ -539,7 +545,10 @@ os dropouts do provedor de serviços da Internet (ISP), configurações de firew
 
  
 
-Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, primeiro verifique a página [Status do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução alternativa. As informações detalhadas estão disponíveis em [Usando serviços em outra região](../services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal, tente as etapas a seguir para resolver o problema:
+Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, primeiro verifique a página [Status do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução
+alternativa. As informações detalhadas estão disponíveis em
+[Usando serviços em outra região](../services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal,
+tente as etapas a seguir para resolver o problema: 
 {: tsResolve}
 
   * Tente novamente a ação:
@@ -548,7 +557,8 @@ funcionar, limpe os cookies e o cache do seu navegador e, em seguida, recarregue
 	* Usar um navegador diferente.
 	* Reinicializar seu roteador, seu modem e seu computador. Reinicializar esses dispositivos pode limpar diversos erros
 que conduzem ao erro 502. 
-  * Aguardar e tentar novamente mais tarde. Em algumas instâncias, os problemas temporários podem ocorrer com seu provedor de serviços da Internet ou serviços do {{site.data.keyword.Bluemix_notm}}. É possível aguardar até que os problemas temporários sejam resolvidos.
+  * Aguardar e tentar novamente mais tarde. Em algumas instâncias, os problemas temporários podem ocorrer com seu provedor
+de serviços da Internet ou serviços do {{site.data.keyword.Bluemix_notm}}. É possível aguardar até que os problemas temporários sejam resolvidos.
   * Se o problema ainda existir, entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}. Veja [Entrando em contato com o Suporte do {{site.data.keyword.Bluemix_notm}}](../support/index.html#contacting-bluemix-support){: new_window} para obter mais informações. 
 
 
@@ -1088,11 +1098,13 @@ ao problema:
 {: tsResolve} 
 
   * Especifique o comando inicial por um dos métodos a seguir: 
-      * Use a interface de linha de comandos cf. Por exemplo: 
+      * Use a interface de linha de comandos cf. Por
+exemplo: 
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por exemplo:
+	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por
+exemplo:
 	    ```
 		{
       ...
@@ -1101,7 +1113,8 @@ ao problema:
  	   }
 	}
 	    ```
-	  * Use o arquivo `manifest.yml`. Por exemplo: 
+	  * Use o arquivo `manifest.yml`. Por
+exemplo: 
 	    ```
 		applications:
   name: MyUniqueNodejs01
@@ -1231,13 +1244,15 @@ Esse problema ocorre porque nenhum buildpack integrado é fornecido para apps Me
 Para usar um buildpack customizado para apps Meteor, use um dos métodos a seguir:
 {: tsResolve}
 
-  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por exemplo:
+  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por
+exemplo:
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
   * Se você implementar seu aplicativo a partir do prompt de comandos, use o comando `cf
 push` e especifique seu buildpack customizado usando
-a opção **-b**. Por exemplo:
+a opção **-b**. Por
+exemplo:
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
@@ -1383,66 +1398,52 @@ o código usando comandos Git:
 
 Nesse cenário, a implementação falha em um estado amarelo, "não sincronizado". 
 
-O app que você está implementando tem a mesma rota de outro app que está em
-execução. Para corrigir esse problema, mude o caminho para ser exclusivo.
+O app que você está implementando tem a mesma rota de outro app que está
+em execução. Para corrigir esse problema, mude o caminho para ser exclusivo.
 
 ## A barra de execução não pode ser encontrada
 {: #runbarcannotbefound}
 
-Caso você não veja a barra de execução no Eclipse Orion
-{{site.data.keyword.webide}}, um destes problemas ocorreu:
+Caso você não veja a barra de execução no Eclipse Orion {{site.data.keyword.webide}}, um destes problemas ocorreu:
 
-1. O {{site.data.keyword.jazzhub}} não está identificando seu projeto como
-um projeto.
-   * Correção: no diretório raiz do seu projeto, crie um arquivo
-`project.json`.
-2. O {{site.data.keyword.jazzhub_short}} falhou ao determinar em qual
-pasta seu app está.
-   * Correção: se seu app estiver em um diretório diferente da raiz do projeto,
-execute uma destas etapas:
+1. O {{site.data.keyword.jazzhub}} não está identificando seu projeto como um projeto.
+   * Correção: no diretório raiz do seu projeto, crie um arquivo `project.json`.
+2. O {{site.data.keyword.jazzhub_short}} falhou ao determinar em qual pasta seu app está.
+   * Correção: se seu app estiver em um diretório diferente da raiz do projeto, execute uma destas etapas:
       * No diretório raiz do seu projeto, crie um arquivo
-`manifest.yml`. Em seguida, edite o arquivo para que ele aponte para o
-local de seu app; por exemplo, `path: path_to_your_app`
+`manifest.yml`. Em seguida, edite o arquivo para que ele aponte para o local de seu app; por exemplo, `path: path_to_your_app`
       * Mova seu app para que ele fique no diretório raiz do seu projeto.
-3. O {{site.data.keyword.jazzhub_short}} não detecta que seu app é um app
-Node.js.
-   * Correção: na pasta do app de seu projeto, crie um arquivo
-`package.json`.
+3. O {{site.data.keyword.jazzhub_short}} não detecta que seu app é um app Node.js.
+   * Correção: na pasta do app de seu projeto, crie um arquivo `package.json`.
    
 
 ## O gancho do GitHub não está funcionando
 {: #githubhookisntworking}
 
-Se você configurou seu projeto GitHub para criar links de itens de trabalho quando
-você enviar por push confirmações e os links não estiverem funcionando conforme o
-esperado, siga estas etapas para encontrar o problema:
+Se você configurou seu projeto GitHub para criar links de itens de trabalho
+quando você enviar por push confirmações e os links não estiverem funcionando
+conforme o esperado, siga estas etapas para encontrar o problema:
 
 1. Em seu repositório GitHub, clique em **Configurações**.
    ![Link de configurações do GitHub](images/githubSettings1_small.png)
 
 2. Clique em **Webhooks & serviços**.
-   ![Link de webhooks e serviços do
-GitHub](images/githubHooks1_small.png)
+   ![Link de webhooks e serviços do GitHub](images/githubHooks1_small.png)
 
-3. Para visualizar a mensagem, passe o mouse sobre o ícone de status do
-{{site.data.keyword.jazzhub}}.
-   ![Mensagem de erro no gancho de
-serviço](images/troubleshoothook1_small.png)
+3. Para visualizar a mensagem, passe o mouse sobre o ícone de status do {{site.data.keyword.jazzhub}}.
+   ![Mensagem de erro no gancho de serviço](images/troubleshoothook1_small.png)
 
 4. Resolva o erro de acordo com a mensagem do GitHub.
 
-5. Para verificar se a correção funcionou, confirme e envie por push outra
-mudança, ou acesse a página de serviço do {{site.data.keyword.jazzhub_short}} e
-clique em **Testar serviço**.
-   ![botão Testar serviço do
-GitHub](images/githubTestService_small.png)
+5. Para verificar se a correção funcionou, confirme e envie por push outra mudança, ou acesse a página de serviço do {{site.data.keyword.jazzhub_short}} e clique em **Testar serviço**.
+   ![botão Testar serviço do GitHub](images/githubTestService_small.png)
 
 6. Confirme se não há erros verificando o ícone de status novamente.
-![Ícone de status sem erros](images/githubResolved_small.png)
+   ![Ícone de status sem erros](images/githubResolved_small.png)
 
 Para obter mais informações, consulte
-[Configurando projetos do GitHub para
-o Bluemix DevOps Services](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+[Configurando projetos do GitHub
+para o Bluemix DevOps Services](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Resolução de problemas para gerenciamento de contas
@@ -1475,8 +1476,7 @@ O status de sua conta do {{site.data.keyword.Bluemix_notm}} torna-se inativo qua
 Para reativar sua conta, entre em contato com o [Suporte {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. No email, deve-se incluir as informações a seguir:
 {: tsResolve}
 
-  * O ID IBM que você usa para efetuar login no
-{{site.data.keyword.Bluemix_notm}}.
+  * O ID IBM que você usa para efetuar login no {{site.data.keyword.Bluemix_notm}}.
   * O nome da organização em que seu app está sendo criado. Essas informações podem ajudar a equipe de suporte a determinar se você está designado às funções ou associação corretas em sua organização.
 
 
@@ -1506,7 +1506,7 @@ Para criar um espaço, use um dos métodos a seguir:
 {: tsResolve}
  
   * No Painel do {{site.data.keyword.Bluemix_notm}}, selecione a organização em que você deseja criar o espaço, em seguida, clique em **Criar um espaço**.
-  * Na interface da linha de comandos cf, digite ```cf create-space <space_name> -o <organization_name>```.
+  * Na interface de linha de comandos cf, digite `cf create-space <space_name> -o <organization_name>`.
   
   
   

@@ -157,7 +157,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 確定已在現行組織中建立空間。若要建立空間，請使用下列其中一種方法：
 {: tsResolve}
 
-  * 按一下{{site.data.keyword.avatar}}圖示 ![「虛擬人像」圖示](images/account_support.svg) 來開啟「帳戶和支援」小組件，選取您要在其中建立空間的組織，然後按一下**建立空間**。
+  * 按一下{{site.data.keyword.avatar}}圖示 ![「虛擬人像」圖示](images/account_support.svg) 來開啟「帳戶及支援」小組件，選取您要在其中建立空間的組織，然後按一下**建立空間**。
   * 在 cf 指令行介面中，鍵入 `cf create-space <space_name> -o <organization_name>`。
 
 請重試。如果再次看到此訊息，請移至 [Bluemix 狀態](http://ibm.biz/bluemixstatus){: new_window}頁面，以檢查服務或元件是否有問題。
@@ -303,40 +303,6 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
     ```
 	cf push appname -p app_path -k <disk_quota>
 	```
-
-	
-	
-## 無法新增 Git 儲存庫
-{: #ts_cannot_addgit}
-
-在「儀表板」上建立應用程式之後，您按一下「新增 GIT」以建立 Git 儲存庫，但無法繼續。
-
-
-
-當您按一下**新增 GIT** 時，會開啟視窗，並發生下列其中一個問題：
-{: tsSymptoms} 
-
-  * 視窗會停滯並顯示空白畫面。
-  * 訊息指出協力廠商 Cookie 有問題存在。
-
-
-
-您的瀏覽器可能配置為避免設定 Cookie。該 Cookie 必須從 {{site.data.keyword.Bluemix_notm}} 主控台的環境定義內，從 hub.jazz.net 網際網路網域中的 IBM® Bluemix DevOps Services 網站設定。
-{: tsCauses}  
-
- 
-
-您可以使用下列其中一種方法來修正此問題：
-{: tsResolve}
-
-  * 遵循從 {{site.data.keyword.Bluemix_notm}} 主控台開啟之視窗中的指示。按一下按鈕。隨即暫時性地開啟另一個瀏覽器視窗。在該視窗中，DevOps Services 會設定鑑別 Cookie。
-  * 在另一個瀏覽器分頁中，前往 https://hub.jazz.net 並登入。回到 {{site.data.keyword.Bluemix_notm}} 主控台，然後重新整理頁面。再按一下**新增 GIT**。
-  * 變更瀏覽器設定，以啟用協力廠商 Cookie，然後再按一下「新增 GIT」。如需關於配置設定的詳細資料，請參閱瀏覽器的文件：
-    * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window} 如果那些暫行解決方法無法修正問題，請傳送電子郵件至 idslogin@jazz.net。
-
 
 
 ## Android 應用程式無法收到 {{site.data.keyword.mobilepushshort}}
@@ -567,8 +533,8 @@ path: path_to_application
 {: tsResolve}
 
   * 建議的作法是使用 IBM Node.js 建置套件來啟動應用程式。如需相關資訊，請參閱[將 Node.js 應用程式部署至 {{site.data.keyword.Bluemix_notm}}](../runtimes/nodejs/index.html#nodejs_runtime){: new_window} 主題的「啟動指令」小節。 
-  * 將 `manifest.yml` 中的 command 屬性修訂為 command: null 或編輯 push 指令以包括 `-c null`，來停用現有應用程式的指令。 
-  * 從 `manifest.yml` 中移除 **command** 屬性。然後，從 {{site.data.keyword.Bluemix_notm}} 中刪除現行應用程式，並重新推送應用程式。
+  * 將 `manifest.yml` 中的 command 屬性修訂為 command: null 或編輯 push 指令以包含 `-c null`，來停用現有應用程式的指令。 
+  * 從 `manifest.yml` 移除 **command** 屬性。然後，從 {{site.data.keyword.Bluemix_notm}} 刪除現行應用程式，並重新推送應用程式。
   
 <!-- end STAGING ONLY -->  
   
@@ -1036,18 +1002,18 @@ git clone <git_repository_URL>
 如果您已在推送確定時配置 GitHub 專案來建立工作項目鏈結，而且鏈結未如預期運作，請遵循下列步驟來尋找問題：
 
 1. 在 GitHub 儲存庫中，按一下**設定**。
-   ![GitHub 設定鏈結](images/githubSettings1_small.png)
+   ![GitHub 設定鏈結](images/github_settings.png)
 
 2. 按一下 **Webhook 及服務**。
-   ![GitHub Webhook 及服務鏈結](images/githubHooks1_small.png)
+   ![GitHub Webhook 及服務鏈結](images/github_webhook.png)
 
 3. 若要檢視訊息，請將游標移至 {{site.data.keyword.jazzhub}} 狀態圖示上方。
-   ![服務連結鉤上的錯誤訊息](images/troubleshoothook1_small.png)
+   ![服務連結鉤上的錯誤訊息](images/github_error.png)
 
 4. 根據 GitHub 訊息來解決錯誤。
 
 5. 若要驗證修正可作用，請確定並推送另一個變更，或移至 {{site.data.keyword.jazzhub_short}} 的服務頁面，然後按一下**測試服務**。
-   ![「GitHub 測試服務」按鈕](images/githubTestService_small.png)
+   ![「GitHub 測試服務」按鈕](images/github_test.png)
 
 6. 再次檢查狀態圖示，驗證未發生錯誤。
    ![狀態圖示，未發生錯誤](images/githubResolved_small.png)

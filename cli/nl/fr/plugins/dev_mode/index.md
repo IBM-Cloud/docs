@@ -43,7 +43,7 @@ Vous pouvez effectuer les tâches suivantes à l'aide de l'interface CLI dev_mod
 Utilisez l'une des méthodes suivantes pour installer l'outil de ligne de commande dev_mode :
 - Installation locale
   1. Téléchargez le plug-in dev_mode correspondant à votre plateforme depuis le [référentiel de plug-in
-de l'interface de ligne de commande IBM Bluemix](http://plugins.{DomainName}).
+de l'interface de ligne de commande IBM Bluemix](http://plugins.ng.bluemix.net).
   2. Accédez au dossier dans lequel le plug-in dev_mode est enregistré et installez ce plug-in via la commande cf install-plugin. Par exemple : 
   
         ```

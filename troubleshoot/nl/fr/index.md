@@ -221,7 +221,7 @@ Pour enregistrer plusieurs utilisateurs pour
 utilisateur :
 {: tsResolve}
 
-  1. Cliquez sur **S'INSCRIRE** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. 
+  1. Cliquez sur **S'INSCRIRE** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
   2. Suivez les étapes de l'assistant.
 
     
@@ -366,7 +366,7 @@ passer à la JVM 8 d'Oracle :
 ## Impossible de réutiliser le nom des applications supprimées
 {: #ts_reuse_appname}
   
-Après avoir supprimé une application, vous ne pouvez réutiliser le nom de cette dernière qu'après en avoir supprimé la route.  
+Après avoir supprimé une application, vous ne pouvez réutiliser le nom de cette dernière qu'après en avoir supprimé la route. 
 
 Lorsque vous essayez de réutiliser le nom de l'application, vous recevez le message suivant :
 {: tsSymptoms}
@@ -376,7 +376,7 @@ Lorsque vous essayez de réutiliser le nom de l'application, vous recevez le mes
 Lorsqu'une application est supprimée, sa route, autrement dit, son URL, n'est pas automatiquement supprimée. Par conséquent, elle n'est pas disponible pour être réutilisée. Vous devez accéder à l'espace où l'application a été créée afin de supprimer la route et pouvoir réutiliser l'application.
 {: tsCauses}
 
-Procédez comme suit pour supprimer la route inutilisée :
+Procédez comme suit pour supprimer la route inutilisée : 
 {: tsResolve}
 
   1. Vérifiez si la route appartient à l'espace en cours en entrant la commande suivante : 
@@ -386,7 +386,7 @@ Procédez comme suit pour supprimer la route inutilisée :
   2. Si la route n'appartient pas à l'espace en cours, accédez à l'espace ou à l'organisation auxquels elle appartient en entrant la commande suivante : 
      ```
 	 cf target -o nom_org -s nom_espace
-```
+	 ```
   3. Supprimez la route de l'application en entrant la commande suivante :
      ```
 	 cf delete-route nom_domaine -n nom_hôte
@@ -709,7 +709,7 @@ supprimez la limite relative au nombre d'instances de service dont vous pouvez d
   * Pour supprimer une instance de service, vous pouvez utiliser l'interface utilisateur
 {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande.
     Pour utiliser l'interface utilisateur {{site.data.keyword.Bluemix_notm}} afin de supprimer une instance de service, procédez comme suit :
-	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le service que vous souhaitez supprimer. La vignette du service s'affiche.  
+	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le service que vous souhaitez supprimer. La vignette du service s'affiche. 
 	  2. Sur la vignette du service, cliquez sur l'icône **Menu**.
 	  3. Cliquez sur **Supprimer le service**. Une fois l'instance de service supprimée, vous êtes invité à reconstituer l'application à
 laquelle l'instance de service était liée. 
@@ -1404,7 +1404,7 @@ l'application. Pour vérifier que le code ne présente pas d'erreur, générez-l
 ## Echec du déploiement d'une application à partir de la barre d'exécution
 {: #deployinganappfromtherunbarfails}
 
-Dans ce scénario, le déploiement échoue et génère l'état "non synchronisé" affiché en jaune.  
+Dans ce scénario, le déploiement échoue et génère l'état "non synchronisé" affiché en jaune. 
 
 L'application que vous déployez a la même route que l'autre application qui est en cours d'exécution. Pour remédier à ce problème, modifiez la route afin qu'elle soit unique.
 
@@ -1413,20 +1413,20 @@ L'application que vous déployez a la même route que l'autre application qui es
 
 Si vous ne voyez pas la barre d'exécution dans Eclipse Orion {{site.data.keyword.webide}}, cela signifie que l'une des erreurs suivantes s'est produite :
 
-1. {{site.data.keyword.jazzhub}} n'identifie pas votre projet en tant que projet. 
-   * Correctif : dans le répertoire racine de votre projet, créez un fichier `project.json`. 
-2. {{site.data.keyword.jazzhub_short}} n'a pas réussi à déterminer le dossier dans lequel réside votre application. 
+1. {{site.data.keyword.jazzhub}} n'identifie pas votre projet en tant que projet.
+   * Correctif : dans le répertoire racine de votre projet, créez un fichier `project.json`.
+2. {{site.data.keyword.jazzhub_short}} n'a pas réussi à déterminer le dossier dans lequel réside votre application.
    * Correctif : si votre application réside dans un autre répertoire que le répertoire racine du projet, procédez comme suit :
       * Dans le répertoire racine du projet, créez un fichier `manifest.yml`. Editez ensuite le fichier de sorte qu'il pointe vers l'emplacement de votre application. Par exemple, `path: chemin_de_votre_applicaiton`
       * Déplacez votre application de sorte qu'elle réside dans le répertoire racine de votre projet.
-3. {{site.data.keyword.jazzhub_short}} ne détecte pas que votre application est une application Node.js. 
-   * Correctif : dans le dossier d'application de votre projet, créez un fichier `package.json`. 
+3. {{site.data.keyword.jazzhub_short}} ne détecte pas que votre application est une application Node.js.
+   * Correctif : dans le dossier d'application de votre projet, créez un fichier `package.json`.
    
 
 ## Le point d'ancrage GitHub ne fonctionne pas
 {: #githubhookisntworking}
 
-Si vous avez configuré votre projet GitHub pour qu'il crée des liens d'élément de travail lorsque vous insérez des validations et que ces liens ne fonctionnent pas comme prévu, procédez comme suit pour identifier le problème : 
+Si vous avez configuré votre projet GitHub pour qu'il crée des liens d'élément de travail lorsque vous insérez des validations et que ces liens ne fonctionnent pas comme prévu, procédez comme suit pour identifier le problème :
 
 1. Dans le référentiel GitHub, cliquez sur **Paramètres**.
    ![Lien des paramètres GitHub](images/githubSettings1_small.png)
@@ -1437,7 +1437,7 @@ Si vous avez configuré votre projet GitHub pour qu'il crée des liens d'éléme
 3. Pour afficher le message, survolez l'icône d'état {{site.data.keyword.jazzhub}}.
    ![Message d'erreur sur le point d'ancrage de service](images/troubleshoothook1_small.png)
 
-4. Corrigez l'erreur en fonction du message GitHub. 
+4. Corrigez l'erreur en fonction du message GitHub.
 
 5. Pour vérifier que le correctif a fonctionné, validez et insérez une autre modification ou accédez à la page de service pour {{site.data.keyword.jazzhub_short}} et cliquez sur **Tester le service**.
    ![Bouton de test de service GitHub](images/githubTestService_small.png)
@@ -1508,7 +1508,7 @@ Pour créer un espace, appliquez l'une des méthodes suivantes :
 {: tsResolve}
  
   * Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, sélectionnez l'organisation dans laquelle créer l'espace, puis cliquez sur **Créer un espace**.
-  * Dans l'interface de ligne de commande cf, tapez ```cf create-space <nom_espace> -o <nom_organisation>```.
+  * Dans l'interface de ligne de commande cf, tapez `cf create-space <nom_espace> -o <nom_organisation>`.
   
   
   

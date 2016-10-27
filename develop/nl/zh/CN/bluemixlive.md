@@ -73,7 +73,7 @@ copyright:
 <li>在命令行上，使用以下命令登录。系统将提示您输入用户标识和密码。  
 <pre class="codeblock">bl login</pre>
 
-<strong>注：</strong>DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么您的 IBM 标识和密码可以与所有客户端一起使用。有关创建个人访问令牌的更多信息，请参阅 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a> 
+<strong>注：</strong>DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么您的 IBM 标识和密码可以用于所有客户机。有关创建个人访问令牌的更多信息，请参阅 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a> 
 </li>
 
 <li>通过输入以下命令，查看可用于 {{site.data.keyword.Bluemix_notm}} Live Sync 同步的项目的列表：
@@ -174,7 +174,7 @@ bl start --restart
 
 在安装 {{site.data.keyword.Bluemix_notm}} 实时调试后，可以使用调试工具。
 
-推送应用程序，然后浏览到 `https://app-host.mybluemix.net/bluemix-debug/manage`，以访问 {{site.data.keyword.Bluemix_notm}} 调试用户界面。收到认证的提示时，请输入用户标识和个人访问令牌或 IBM 标识密码。    
+推送应用程序，然后浏览到 `https://app-host.mybluemix.net/bluemix-debug/manage`，以访问 {{site.data.keyword.Bluemix_notm}} 调试用户界面。收到认证提示时，请输入用户标识和个人访问令牌或 IBM 标识密码。    
 
    **注：**DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么您的 IBM 标识和密码可以与所有客户端一起使用。有关创建个人访问令牌的更多信息，请参阅 [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 

@@ -70,7 +70,7 @@ el mandato siguiente:</p>
 
 ## Paquetes de compilación externos
 
-Puede utilizar paquetes de compilación externos o personalizados en {{site.data.keyword.Bluemix_notm}}. Debe especificar el URL del paquete de compilación con la opción -b, así como la pila con la opción ```-s``` en el mandato **cf push**. Por ejemplo, para utilizar un paquete de compilación de la comunidad externo para archivos estáticos, ejecute el siguiente mandato:
+Puede utilizar paquetes de compilación externos o personalizados en {{site.data.keyword.Bluemix_notm}}. Debe especificar el URL del paquete de compilación con la opción -b, así como la pila con la opción `-s` en el mandato **cf push**. Por ejemplo, para utilizar un paquete de compilación de la comunidad externo para archivos estáticos, ejecute el siguiente mandato:
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
@@ -101,7 +101,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 Utilice el mandato <strong>cf set-env</strong>. Por ejemplo, especifique el mandato siguiente para establecer la versión de Java a 1.7.0:
-<pre class="pre"><code>cf set-env nombre_app JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { versión: 1.7.0_+ }}&#39;</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
 <p>A continuación,
 vuelva a transferir la app para que el cambio sea efectivo:</p>
 <pre class="pre"><code>cf restage nombre_app</code></pre>

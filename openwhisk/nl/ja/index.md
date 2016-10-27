@@ -16,11 +16,11 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# {{site.data.keyword.openwhisk_short}} 概説
-最終更新日: 2016 年 8 月 4 日
+# {{site.data.keyword.openwhisk_short}} 概説 (ベータ)
+最終更新日: 2016 年 9 月 9 日
 {: .last-updated}
 
-{{site.data.keyword.openwhisk}} は、イベント・ドリブンの分散計算サービスです。{{site.data.keyword.openwhisk_short}} は、イベントに応えて、または、Web アプリやモバイル・アプリからの HTTP を介した直接起動に応えて、アプリケーション・ロジックを実行します。イベントは、Bluemix サービス (Cloudant など) および外部ソースから提供できます。開発者は、アプリケーション・ロジックの開発と、オンデマンドで実行されるアクションの作成に専念できます。アクションの実行率は常にイベント率に一致するため、本来の拡張性と回復力に応じたものになり、最適な使用効率をもたらします。使用した分のみ支払えばよく、サーバーを管理する必要はありません。[ソース・コード](https://github.com/openwhisk/openwhisk)を入手し、システムを自身で実行することもできます。
+{{site.data.keyword.openwhisk}} は、サーバーレス・コンピューティングまたは Function as a Service (FaaS) とも呼ばれる分散イベント・ドリブン計算サービスです。{{site.data.keyword.openwhisk_short}} は、イベントに応えて、または、Web アプリやモバイル・アプリからの HTTP を介した直接起動に応えて、アプリケーション・ロジックを実行します。イベントは、Bluemix サービス (Cloudant など) および外部ソースから提供できます。開発者は、アプリケーション・ロジックの開発と、オンデマンドで実行されるアクションの作成に専念できます。アクションの実行率は常にイベント率に一致するため、本来の拡張性と回復力に応じたものになり、最適な使用効率をもたらします。使用した分のみ支払えばよく、サーバーを管理する必要はありません。[ソース・コード](https://github.com/openwhisk/openwhisk)を入手し、システムを自身で実行することもできます。
 {: shortdesc}
 
 {{site.data.keyword.openwhisk_short}} の動作について詳しくは、『[{{site.data.keyword.openwhisk_short}} 概要](./openwhisk_about.html)』を参照してください。
@@ -30,8 +30,10 @@ copyright:
 
 {{site.data.keyword.openwhisk_short}} コマンド・ライン・インターフェース (CLI) を使用して、名前空間および許可鍵をセットアップできます。[「CLI の構成」](https://new-console.{DomainName}/openwhisk/cli){: new_window}に移動し、手順に従ってインストールしてください。 
 
-**非推奨に関する注意** Python のインストールが不要な新しい CLI が利用可能です。
-以前の CLI (Python ベース) は現在非推奨で、バックアップのダウンロード・オプションとしてのみ利用可能です。非推奨の CLI を使用する場合は、システムに Python 2.7 がインストールされていなければなりません。 
+### HTTPS プロキシーを使用するための CLI の構成
+
+HTTPS プロキシーを使用するように CLI をセットアップできます。HTTPS プロキシーをセットアップするには、`HTTPS_PROXY` という名前の環境変数を作成する必要があります。この変数をフォーマット `{PROXY IP}:{PROXY PORT}` を使用して HTTPS プロキシーのアドレスとそのポートに設定する必要があります。
+
 
 {{site.data.keyword.openwhisk_short}} を CLI と共にセットアップした後、コマンド・ラインから使用を開始できます。
 
@@ -78,14 +80,14 @@ function main(params) {
 2. {{site.data.keyword.openwhisk_short}} CLI コマンド・ラインから、次のコマンドを入力してアクションを作成します。
 
     ```
-wsk action create hello hello.js
+    wsk action create hello hello.js
     ```
     {: pre}
 
 3. 次に、以下のコマンドを入力することによって、アクションを起動します。
 
     ```
-wsk action invoke hello --blocking --result
+    wsk action invoke hello --blocking --result
     ```
     {: pre}  
 
@@ -99,7 +101,7 @@ wsk action invoke hello --blocking --result
     {: screen}
 
     ```
-wsk action invoke hello --blocking --result --param name Fred
+    wsk action invoke hello --blocking --result --param name Fred
     ```
     {: pre}  
 
