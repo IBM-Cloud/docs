@@ -2,101 +2,46 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
 
-# Creating mobile projects from the Mobile dashboard
+# {{site.data.keyword.Bluemix}} Mobile dashboard
 {: #mobile}
-Last Updated: 24 August 2016
-{: .last-updated} 
+Last updated: 21 October 2016
+{: .last-updated}
 
-With {{site.data.keyword.Bluemix}} Mobile services, you can incorporate pre-built, managed, and scalable cloud services into your mobile applications without relying on IT involvement. You can focus on building your mobile apps instead of the complexities of managing the back-end infrastructure.
+The {{site.data.keyword.Bluemix}} Mobile dashboard offers a single place to manage the {{site.data.keyword.Bluemix_notm}} capabilities that you need to create and manage your {{site.data.keyword.Bluemix_notm}} Mobile application. The Mobile dashboard brings the most common services that are required for a mobile developer into a single, connected experience that has been optimized for the mobile developer.
 
-The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bluemix_notm}}. You can create new mobile projects easily from within the dashboard. With the **Projects** view, you can manage all of your projects in one place. The **Services** view shows your existing mobile service instances.
+The Mobile dashboard enables a mobile developer to create a project from a variety of Starters, create and connect key {{site.data.keyword.Bluemix_notm}} optimized services to your project, and quickly download working code with SDKs. The SDKs are fully integrated with capability credentials that enable you to have it running on your device in minutes. When your application is running and you have set up and configured Push, Analytics and/or Mobile Authentication capabilities, you can return to your project to monitor and manage engagement with your application users.
 
-To view the Mobile dashboard, click the **Mobile** category from your {{site.data.keyword.Bluemix_notm}} home.
-<img src="images/mobile_dashboard.jpg" alt="{{site.data.keyword.Bluemix_notm}} home">
+While the Mobile dashboard provides an integrated development experience, some developers might still want to have finer-grained control and wire services together manually. If this is your preferred approach, you might want to consider using the [{{site.data.keyword.mobilefirstbp}} Starter boilerplate](try_mobile.html).
 
-To get started, click **New Project** from the Mobile dashboard **Projects** view.
 
-## {{site.data.keyword.Bluemix_notm}} Mobile services overview
-{: #mobile_services_overview}
+<!--With {{site.data.keyword.Bluemix}} Mobile services, you can incorporate pre-built, managed, and scalable cloud services into your mobile applications. You can focus on building your mobile apps, instead of the complexities of managing the back-end infrastructure.
 
-The following table depicts the available {{site.data.keyword.Bluemix_notm}} Mobile services. You can use individual services from the {{site.data.keyword.Bluemix_notm}} catalog, or you can integrate them into your mobile project.
+The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bluemix_notm}} where you can create mobile projects easily from within the dashboard.
+-->
 
-<table summary="This table describes {{site.data.keyword.Bluemix_notm}} Mobile services and provides links to the service documentation">
-<caption>Table 1. {{site.data.keyword.Bluemix_notm}} Mobile services</caption>
-<th>{{site.data.keyword.Bluemix_notm}} Mobile service</th>
-<th>Description</th>
-<tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icon"><br/>{{site.data.keyword.mobileanalytics_short}} (Beta)</td>
-<td valign="top">Use the {{site.data.keyword.mobileanalytics_full}} service to gain insight into how your mobile apps are performing and how they are being used.<br/><br/>
-Read more about operating this service in the <a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} documentation link">{{site.data.keyword.mobileanalytics_short}} documentation</a>.
-</td>
-</tr>
-<tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} service icon"><br/>{{site.data.keyword.amashort}}</td>
-<td valign="top">Use the {{site.data.keyword.amafull}} service to add security functionality to your mobile app. You can configure client authentication and identity providers so that users can log in to the app with their existing Google or Facebook accounts.<br/><br/>
-Read more about operating this service in the <a href="../services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} documentation link">{{site.data.keyword.amashort}} documentation</a>.</td>
-</tr>
-<tr>
-<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} service icon"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
-<td valign="top">Use the {{site.data.keyword.mobilefoundation_long}} service to expedite setting up an {{site.data.keyword.mfp_full}} environment from which you can develop, test, and operate enterprise mobile apps.<br/><br/>
-Read more about operating this service in the <a href="../services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} documentation link">{{site.data.keyword.mobilefoundation_short}} documentation</a>.</td>
-</tr>
-<tr>
-<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} service icon"><br/>{{site.data.keyword.mqa}}</td>
-<td valign="top">Use the {{site.data.keyword.mqafull}} service to discover and set up mobile quality services for your apps. You can view high-level quality metrics for your mobile apps to get a quick understanding of the issues for apps that you are working on. These metrics include information for crashes, bugs, user feedback, and user sentiment. By viewing this information for your apps, you can determine whether to investigate specific issues further.<br/><br/>
-Read more about operating this service in the <a href="../services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} documentation link">{{site.data.keyword.mqa}} documentation</a>.</td>
-</tr>
-<tr>
-<td><img src="images/catalog_icons-09.png" alt="Push Notifications service icon"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">Use the {{site.data.keyword.mobilepushfull}} service to send and manage mobile push notifications that are targeted to iOS and Android platforms. This service manages the mapping of your application users to their devices, device platform, and handles dispatching push notifications to the devices. With this service, you can send broadcasts, unicasts (based on userID, deviceID), and tags (or topics) based on push notifications to your mobile application users.<br/><br/>
-Read more about operating this service in the <a href="../services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} documentation link">{{site.data.keyword.mobilepushshort}} documentation</a>.</td>
-</table>
 
-## Integrating mobile services
-{: #services_integration}
-You can integrate your existing {{site.data.keyword.Bluemix_notm}} Mobile services, such as {{site.data.keyword.mobilepushshort}} and {{site.data.keyword.cloudant}}, into your project.
+To get started with the Mobile dashboard, click the **Mobile** category from your {{site.data.keyword.Bluemix_notm}} Console.
 
-#### Integrating {{site.data.keyword.mobilepushshort}}
-{: #push_integration}
 
-To integrate your existing {{site.data.keyword.mobilepushshort}} service, follow these steps:
+## Getting Started
+{: getting-started-mobiledashboard}
 
-1. Click your {{site.data.keyword.mobilepushshort}} service instance.
-2. Click **Mobile Options** and copy the **Route** and **AppGuid** values.
+The dashboard enables you to manage mobile apps through the concept of a project. Create a project on the **Getting Started** page by clicking **Create Project**. You will be presented with [Starter](starters.html) options that enable you to quickly start creating your app.
 
-   **Note**: Your {{site.data.keyword.mobilepushshort}} service must be bound to an app to see **Mobile Options**.
+With the [Projects](projects.html) view, you can manage all of your projects in one place. The project holds all of the capability information that you need for the mobile app. You can easily integrate and manage Push, Analytics, and Authentication mobile services in the project, with more capabilities to follow in the near future.
 
-3. Navigate back to the Mobile dashboard **Projects** view.
-4. Click on your project to edit it.
-5. Click **Push** and enable notifications.
-6. Provide the **AppGuid** value that you previously copied into **App ID**.
-7. Provide the **Route** value that you previously copied into **App Route URL**.
+The [Services](services.html) view shows an operational view of your existing mobile service instances. The Mobile dashboard supports a mobile developer and a mobile app management user.
 
-#### Integrating {{site.data.keyword.cloudant}}
-{: #cloudant_integration}
 
-To integrate your existing {{site.data.keyword.cloudant}} service, follow these steps:
+<!--You can also discover the {{site.data.keyword.Bluemix_notm}} Mobile offerings, link to the Mobile documentation and get answers from our {{site.data.keyword.Bluemix_notm}} Mobile services community on Stack Overflow.-->
 
-1. Click your {{site.data.keyword.cloudant}} service instance.
-2. Click **LAUNCH**.
-3. In the **Databases** view, click your Database name.
-4. Click **API** and copy the **API Key** value through your database name.
 
-   **Note**: Do not copy the content past your database name.
-   
-5. Click **Permissions** > **Generate API Key** and copy the **Key** and **Password** values.
-6. Navigate back to the Mobile dashboard **Projects** view.
-7. Click on your project to edit it.
-8. Click **Data** > **+ Data Source** > **Cloudant** and provide your data source name and click **Add**.
-9. Click **Cloudant Config**.
-10. Provide the **API Key** value that you previously copied into **API URL**.
-11. Provide the **Key** value that you previously copied into **User**.
-12. Provide the **Password** value that you previously copied into **Password**.
-13. Click **Ok**.
+Check back often to stay current with new features.
 
 
 # Related Links
@@ -112,13 +57,16 @@ To integrate your existing {{site.data.keyword.cloudant}} service, follow these 
 * [Push Notifications](../services/mobilepush/index.html){: new_window}
 -->
 
-## Blog Posts
+<!--## Blog Posts
 {: #general}
+-->
 * [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
+* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
+* [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
- 
-## Tutorials and Samples
-{: #samples}
-* [Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
 
+<!--## Tutorials and Samples
+{: #samples}
+-->
+* [Sample: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}

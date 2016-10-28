@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*最終更新日: 2016 年 7 月 7 日*
+最終更新日: 2016 年 8 月 29 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Node.js ランタイムには sdk-for-nodejs ビルドパックが採用されています。
@@ -120,12 +120,12 @@ NPM は、スクリプトの実行を可能にするスクリプティング機�
 
 ### キャッシュの動作
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} は、ノード・アプリケーションごとにキャッシュ・ディレクトリーを維持します。これはビルド間でも存続します。キャッシュには解決された依存関係が格納されるため、これらはアプリケーションがデプロイされるたびにダウンロードもインストールもされることはありません。例えば、myapp が **express** に依存しているとします。myapp の初回デプロイ時に、**expess** モジュールがダウンロードされます。myapp のそれ以降のデプロイ時には、**express** のキャッシュされたインスタンスが使用されます。デフォルトの動作では、NPM によってインストールされた node_modules と、bower によってインストールされた bower_components がすべてキャッシュされます。
+{{site.data.keyword.Bluemix}} は、ノード・アプリケーションごとにキャッシュ・ディレクトリーを維持します。これはビルド間でも存続します。キャッシュには解決された依存関係が格納されるため、これらはアプリケーションがデプロイされるたびにダウンロードもインストールもされることはありません。例えば、myapp が **express** に依存しているとします。その場合、myapp の初回デプロイ時に、**express** モジュールがダウンロードされます。myapp のそれ以降のデプロイ時には、**express** のキャッシュされたインスタンスが使用されます。デフォルトの動作では、NPM によってインストールされた node_modules と、bower によってインストールされた bower_components がすべてキャッシュされます。
 
 Node ビルドパックが以前のビルドからのキャッシュを使用するか無視するかを決定するには、NODE_MODULES_CACHE 変数を使用します。デフォルト値は true です。キャッシングを無効にするには、NODE_MODULES_CACHE を (例えば cf コマンド・ラインで) false に設定します。
 
 ```
-$ cf set-env myapp NODE_MODULES_CACHE false
+    $ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
@@ -148,14 +148,14 @@ Nodejs ビルドパック v3.2-20160315-1257 以降では [FIPS](https://en.wiki
 例えば、以下のように指定します。
 
 ```
-$ cf set-env myapp FIPS_MODE true
+    $ cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
 FIPS_MODE が true の場合、一部のノード・モジュールが機能しない可能性があることを認識しておくことが重要です。例えば、[Express](http://expressjs.com/) のように、**[MD5](https://en.wikipedia.org/wiki/MD5) を使用するノード・モジュールは失敗します**。Express の場合、Expess アプリケーションで [etag](http://expressjs.com/en/api.html) を false に設定すると、こうした失敗を回避するのに役立つことがあります。例えば、コードで以下のようにすることができます。
 
 ```
-app.set('etag', false);
+    app.set('etag', false);
 ```
 {: codeblock}
 詳しくは、[stackoverflow の投稿](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)を参照してください。**注:** [アプリケーション管理](../../manageapps/app_mng.html)と FIPS_MODE は、同時にはサポートされ*ません*。BLUEMIX_APP_MGMT_ENABLE 環境変数が設定され、かつ FIPS_MODE 環境変数が true に設定されると、アプリケーションはステージングに失敗します。
@@ -174,7 +174,7 @@ FIPS_MODE の状態を確認するには、以下のようにさまざまな方�
 
 <li> **process.versions.openssl** の値を確認できます。例えば、次のように指定します。
 <pre>
-console.log('ssl version is [' +process.versions.openssl +']');
+  console.log('ssl version is [' +process.versions.openssl +']');
   </pre>
   {: codeblock}
 
@@ -255,7 +255,7 @@ Node.js バージョン 6 を使用して FIPS モードで実行するには、
 
 Bluemix は、複数バージョンの Node.js ビルドパックを提供します。
 * IBM 作成の **sdk-for-nodejs** ビルドパックは、Bluemix 内の Node.js アプリケーションで使用されるデフォルト・ビルドパックです。
-* **nodejs_buildpack** は、Cloud Foundry コミュニティーによって提供される外部ビルドパックです。
+* **nodejs_buildpack** は、Cloud Foundry コミュニティーによって提供されるコミュニティー・ビルドパックです。
 
 **sdk-for-nodejs** ビルドパックは、Bluemix 内の **nodejs_buildpack** に優先します。**sdk-for-nodejs** ビルドパックの代わりに **nodejs_buildpack** をアプリケーションで使用したい場合は、例えば **cf push** コマンドで -b オプションを使用してビルドパックを指定する必要があります。
 
@@ -278,4 +278,4 @@ Bluemix は、複数バージョンの Node.js ビルドパックを提供しま
 * [Node.js ビルドパックに対する最新の更新](../../runtimes/nodejs/updates.html)
 * [アプリケーション管理](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
-* [StrongLoop](https://strongloop.com)
+* [IBM API Connect](https://strongloop.com/)

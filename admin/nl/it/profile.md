@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  anni: 2015, 2016
 
 
 
@@ -17,22 +17,22 @@ copyright:
 
 # Impostazioni del profilo
 {: #usersettings}
-Ultimo aggiornamento: 23 giugno 2016
+Ultimo aggiornamento: 16 agosto 2016
 {: .last-updated}
 
-Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; **Account** &gt; **Profilo** per aggiornare le impostazioni del tuo profilo.
+Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profilo** per aggiornare le impostazioni del tuo profilo.
 {:shortdesc}
 
  Nella pagina **Profilo**, puoi impostare o aggiornare le seguenti informazioni:
 
  * Una foto del profilo visibile agli altri utenti {{site.data.keyword.Bluemix_notm}}
- * Le informazioni dell'ID IBM, compresi nome, email, numero di telefono, password, società e ruolo
+ * Informazioni dell'ID IBM, tra cui nome, e-mail, numero di telefono, password, azienda e ruolo.
  * Impostazione della traccia di analisi
 
 ## Modifica della tua foto del profilo
 {: #photo}
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; **Account** &gt; **Profilo**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profilo**.
 
 * Fai clic su **Cambia foto** per caricare una nuova foto.
 * Fai clic su **Rimuovi foto** per rimuovere la tua foto.
@@ -40,9 +40,9 @@ Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images
 ## Modifica delle informazioni del tuo ID IBM
 {: #ibmid}
 
-Se devi modificare le tue informazioni dell'account ID IBM, come nome, email, numero di telefono, password o nome della società, completa la seguente procedura:
+Se devi modificare le informazioni relative al tuo account dell'ID IBM, quali nome, e-mail, numero di telefono, password o nome dell'azienda, completa la seguente procedura:
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; **Account** &gt; **Profilo**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profilo**.
 2. Fai clic su **Modifica il tuo ID IBM**.
 3. Modifica le tue informazioni utente.
 4. Fai clic su **Inoltra**.
@@ -56,5 +56,5 @@ Se scegli di disabilitare la traccia, potresti non essere in grado di utilizzare
 
 Per disabilitare la traccia di analisi, completa la seguente procedura:
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; **Account** &gt; **Profilo**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; **Profilo**.
 2. Imposta la traccia di analisi su **Disattivo**.

@@ -30,7 +30,8 @@ Es kann vorkommen, dass eine Fehlernachricht angezeigt wird, wenn Sie versuchen,
 {:shortdesc}
 
 
-Wenn Sie versuchen, eine Serviceinstanz zu löschen, wird die Service-Broker-Fehlernachricht ```Gateway timeout``` (Zeitlimitüberschreitung für Gateway) angezeigt. {: tsSymptoms}
+Wenn Sie versuchen, eine Serviceinstanz zu löschen, wird die Service-Broker-Fehlernachricht `Gateway timeout` (Zeitlimitüberschreitung für Gateway) angezeigt.
+{: tsSymptoms}
 
 
 Dieses Problem tritt auf, wenn die Serviceinstanz bereits vom Cloud-Controller gelöscht wurde.

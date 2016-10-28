@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-25"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,25 +14,25 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotmapinsights_short}}
 {: #iotdriverinsights_index}
-Last updated: 22 June 2016
-{: .last-updated}
 
-{{site.data.keyword.iotmapinsights_full}} is a service on {{site.data.keyword.Bluemix}} that you can use to enable geospatial functions such as map matching and shortest path search for road networks across the globe with your applications.  
+{{site.data.keyword.iotmapinsights_full}} is a service on {{site.data.keyword.Bluemix}} that you can use to enable geospatial functions, such as map matching and shortest path search for global road networks, in your applications. Use the powerful capabilities of {{site.data.keyword.iotmapinsights_short}} to build smart automotive solutions.
 {:shortdesc}
 
-The following features are available through the {{site.data.keyword.iotmapinsights_short}} REST API:
+## Features
+
+The following features are available by using the {{site.data.keyword.iotmapinsights_short}} REST API:
 
 |Feature|Use to...|
 |:---|:---|
 |Highly accurate map matching|Match your GPS location to the actual mapped road network|
 |Road geometry data retrieval|Retrieve the mapped road network to draw road shapes on a map|
-|Dynamic shortest path search|Search for the shortest route that incorporate real-time events such as traffic|
-|Real-time traffic event manipulation|Add real-time map-matched events, for example, traffic conditions to improve route planning results|
+|Dynamic shortest path search|Search for the shortest route that incorporates real-time events, such as traffic|
+|Real-time traffic event manipulation|Add real-time map-matched events, such as traffic conditions, to improve route planning results|
 
 ## Before you begin
 {: #byb}
 
-1. When you add an instance of the service from the [{{site.data.keyword.Bluemix_notm}} catalog](https://console.stage1.ng.bluemix.net/catalog/services/iot-automotive/){: new_window}, ensure that it is not bound to an app, and that you make a note of the automatically generated tenant ID, user name, and password values. You need these values later to access the service through the   {{site.data.keyword.iotmapinsights_short}} API.
+1. When you add an instance of the service from the [{{site.data.keyword.Bluemix_notm}} catalog](https://console.ng.bluemix.net/catalog/services/iot-automotive/){: new_window}, ensure that it is not bound to an app and that you make a note of the automatically generated tenant ID, user name, and password values. You need these values later to access the service by using the   {{site.data.keyword.iotmapinsights_short}} API.
 
 2. Familiarize yourself with [OpenStreetMap](http://www.openstreetmap.org/){: new_window}.  
 
@@ -55,10 +55,10 @@ The following features are available through the {{site.data.keyword.iotmapinsig
 To map raw GPS coordinates to map-matched coordinates, complete the following steps:
 
 1. Prepare a set of raw GPS coordinates to be analyzed.
-2. Send the raw GPS coordinates by using the `mapMatching` API command. Optionally set a heading angle of each position in degrees to specify the direction of the travel.
+2. Send the raw GPS coordinates by using the `mapMatching` API command. Optionally, set a heading angle of each position in degrees to specify the direction of the travel.
  - Request: Raw GPS data
  - Response: Map-matched GPS data, Link ID
-3. Optional: Get the road type data by using the `getLinkInformation` API command. You can retrieve the matched road shape data as a series of coordinates with the `getLinkInformation` REST API.
+3. Optional: Get the road type data by using the `getLinkInformation` API command. You can retrieve the matched road shape data as a series of coordinates by using the `getLinkInformation` REST API.
  - Request: Link ID
  - Response: Road type
 
@@ -68,8 +68,8 @@ To map raw GPS coordinates to map-matched coordinates, complete the following st
 Find the shortest route path information between the specified origin and destination coordinates by using the following steps:
 
 1. Determine a start and end position for the shortest path.
-2. Send the start and end coordinates with the `routeSearch` REST API.
-Optionally, set a heading angle for each position, in degrees, to specify the direction of travel.
+2. Send the start and end coordinates by using the `routeSearch` REST API.
+Optionally, set a heading angle for each position in degrees to specify the direction of travel.
  - Request: Origin and destination coordinates
  - Response: Map-matched shortest route
 
@@ -86,26 +86,18 @@ Send the traffic event information to the {{site.data.keyword.iotmapinsights_sho
  - Request: Event information
  - Response: Event ID
 3. Find events by using the `queryEvent` REST API command.
-Search for traffic events that are within a specific rectangular area, and optionally for a specific traffic event type.
+Search for traffic events that are within a specific rectangular area and optionally, for a specific traffic event type.
  - Request: Area information.
  - Response: Event information.  
 4. Optional: Remove a traffic event that is no longer valid by using the `deleteEvent` API  command.
 5. Optional: Retrieve an area on the road that is affected by a traffic event by using the `getAffectedLinksInformation` API command.
 
+## Starter experience
+Experience the capabilities of {{site.data.keyword.iotmapinsights_short}} and other {{site.data.keyword.iot4auto_short}} services. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use several {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
+
+
 # Related Links
 {: #rellinks}
-
-## Tutorials and Samples
-{: #samples}
-
-* [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
-* [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
-* [IoT for Automotive Starter Application](https://iot-automotive-starter.mybluemix.net){:new_window}
-
-## API Reference
-{: #api}
-
-* [API docs](http://ibm.biz/IoTContextMapping_APIdoc){:new_window}
 
 ## Related Links
 {: #general}
@@ -118,3 +110,17 @@ Search for traffic events that are within a specific rectangular area, and optio
 * [OpenStreetMap](http://www.openstreetmap.org/){:new_window}
 * [&copy; OpenStreetMap contributors](http://www.openstreetmap.org/copyright){:new_window}
 * [Open Data Commons Open Database License (ODbL)](http://opendatacommons.org/licenses/odbl/){:new_window}
+
+
+## Tutorials and Samples
+{: #samples}
+
+* [IBM IoT for Automotive Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window}
+* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
+* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
+
+
+## API Reference
+{: #api}
+
+* [API docs](http://ibm.biz/IoTContextMapping_APIdoc){:new_window}

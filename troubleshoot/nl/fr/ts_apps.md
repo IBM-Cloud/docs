@@ -35,7 +35,7 @@ Des problèmes d'ordre général liés à la gestion des applications peuvent su
 Il se peut que vous ne puissiez pas activer le mode débogage si votre version de machine virtuelle Java (JVM) est la version 8 ou antérieure. 
 
 
-Après avoir sélectionné **Activer le débogage d'application**, les outils tentent de faire passer l'application en mode débogage. Le plan de travail Eclipse entame alors une session de débogage. Lorsque les outils parviennent à activer le mode débogage, le statut de l'application Web affiche `Mise à jour du mode`, `Développement`, et `Débogage`.
+Après avoir sélectionné **Activer le débogage d'application**, les outils tentent de faire passer l'application en mode débogage. Le plan de travail Eclipse entame alors une session de débogage. Lorsque les outils parviennent à activer le mode débogage, le statut de l'application Web affiche `Mise à jour du mode`, `Développement`, et `Débogage`. 
 {: tsSymptoms}
 
 Par contre, si les outils ne parviennent pas à activer le mode débogage, le statut de l'application Web indique uniquement `Mise à jour du mode` et `Développement`, sans afficher `Débogage`. Les outils peuvent également afficher le message d'erreur suivant dans la vue Console :
@@ -108,7 +108,7 @@ Si la machine virtuelle Java de votre plan de travail utilise la JVM 7 ou 8 d'IB
 ## Impossible de réutiliser le nom des applications supprimées
 {: #ts_reuse_appname}
   
-Après avoir supprimé une application, vous ne pouvez réutiliser le nom de cette dernière qu'après en avoir supprimé la route.  
+Après avoir supprimé une application, vous ne pouvez réutiliser le nom de cette dernière qu'après en avoir supprimé la route. 
 
 Lorsque vous essayez de réutiliser le nom de l'application, vous recevez le message suivant :
 {: tsSymptoms}
@@ -118,7 +118,7 @@ Lorsque vous essayez de réutiliser le nom de l'application, vous recevez le mes
 Lorsqu'une application est supprimée, sa route, autrement dit, son URL, n'est pas automatiquement supprimée. Par conséquent, elle n'est pas disponible pour être réutilisée. Vous devez accéder à l'espace où l'application a été créée afin de supprimer la route et pouvoir réutiliser l'application.
 {: tsCauses}
 
-Procédez comme suit pour supprimer la route inutilisée :
+Procédez comme suit pour supprimer la route inutilisée : 
 {: tsResolve}
 
   1. Vérifiez si la route appartient à l'espace en cours en entrant la commande suivante : 
@@ -128,7 +128,7 @@ Procédez comme suit pour supprimer la route inutilisée :
   2. Si la route n'appartient pas à l'espace en cours, accédez à l'espace ou à l'organisation auxquels elle appartient en entrant la commande suivante : 
      ```
 	 cf target -o nom_org -s nom_espace
-```
+	 ```
   3. Supprimez la route de l'application en entrant la commande suivante :
      ```
 	 cf delete-route nom_domaine -n nom_hôte
@@ -200,7 +200,6 @@ Pour obtenir le niveau de droits approprié, appliquez l'une des méthodes suiva
 Des erreurs d'autorisation peuvent survenir lorsque votre application accède à un service {{site.data.keyword.Bluemix_notm}} si les données d'identification du service sont codées en dur dans votre application. 
 
 Une fois que vous avez configuré votre application pour qu'elle communique avec un service {{site.data.keyword.Bluemix_notm}}, vous la déployez dans {{site.data.keyword.Bluemix_notm}}. Toutefois, vous ne pouvez pas utiliser l'application pour accéder au service {{site.data.keyword.Bluemix_notm}} et recevez une erreur d'autorisation.
-
 {: tsSymptoms}
 
 Il se peut que les données d'identification codées en dur dans l'application ne soient pas correctes. A chaque fois que le service est recréé, les données d'identification permettant d'y accéder changent.
@@ -213,11 +212,11 @@ Au lieu de coder en dur les données d'identification dans votre application, ut
 ```
 process.env.VCAP_SERVICES
 ```
-Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autres langages de programmation, voir [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} et [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autres langages de programmation, voir [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} et [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
 
-
-
-
+ 
+ 
 
 
 
@@ -335,48 +334,13 @@ application dans {{site.data.keyword.Bluemix_notm}} :
 	cf push nom_app -p chemin_app -k <quota_disque>
 	```
 
-	
-	
-## Impossibilité d'ajouter un référentiel Git
-{: #ts_cannot_addgit}
-
-Après avoir créé une application dans le tableau de bord, vous cliquez sur Ajouter un référentiel Git afin de créer un référentiel Git, mais vous ne pouvez pas continuer.
-
-
-
-Lorsque vous cliquez sur **Ajouter un référentiel Git**, une fenêtre s'ouvre et l'un des problèmes suivants survient :
-{: tsSymptoms} 
-
-  * La fenêtre est bloquée et affiche un écran blanc.
-  * Un message signale qu'un problème lié à des cookies tiers existe.
-
-
-
-Il se peut que votre navigateur soit configuré de sorte à empêcher la définition d'un cookie. Ce cookie doit être défini depuis le site IBM® Bluemix DevOps Services dans le domaine Internet hub.jazz.net, dans le contexte de la console {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}  
-
- 
-
-Pour résoudre ce problème, procédez de l'une des manières suivantes :
-{: tsResolve}
-
-  * Suivez les instructions figurant dans la fenêtre qui s'ouvre depuis la console {{site.data.keyword.Bluemix_notm}}. Cliquez sur le bouton. Une autre fenêtre de navigateur s'ouvre provisoirement. Dans cette fenêtre, DevOps Services définit le cookie d'authentification.
-  * Dans un autre onglet de navigateur, accédez à https://hub.jazz.net et connectez-vous. Revenez à la console {{site.data.keyword.Bluemix_notm}} et actualisez la page. Cliquez sur
-**Ajouter un référentiel Git** à nouveau.
-  * Changez les paramètres de votre navigateur pour autoriser les cookies tiers et cliquez sur Ajouter un référentiel Git à nouveau. Pour des détails sur la configuration des paramètres, voir la documentation de votre navigateur :
-    * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window} Si ces solutions de contournement ne résolvent pas le problème, envoyez un courrier électronique à idslogin@jazz.net.
-
-
 
 ## Impossibilité de recevoir des {{site.data.keyword.mobilepushshort}} pour les applications Android
 {: #ts_push}
 
 Dans certaines régions où Google n'est pas accessible, les applications Android ne peuvent pas recevoir les notifications que vous envoyez via le service {{site.data.keyword.mobilepushshort}} d'IBM. Dans ce cas, vous pouvez utiliser des services de tiers comme solution palliative.
 
-Vous liez un service {{site.data.keyword.mobilepushshort}} pour votre application Bluemix et envoyez un message aux unités enregistrées. Toutefois, les applications qui sont développées sur la plateforme Android ne peuvent pas recevoir vos notifications dans certaines régions.
+Vous liez un service {{site.data.keyword.mobilepushshort}} pour votre application Bluemix et envoyez un message aux unités enregistrées. Toutefois, les applications qui sont développées sur la plateforme Android ne peuvent pas recevoir vos notifications dans certaines régions. 
 {: tsSymptoms}
 
 Le service IBM {{site.data.keyword.mobilepushshort}} utilise le service de messagerie basée sur le cloud de Google (GCM) pour transmettre les notifications aux applications mobiles développées sur la plateforme Android. Les applications mobiles doivent pouvoir accéder au service GCM pour que les applications Android puissent recevoir les notifications. Dans les régions où le service GCM n'est pas accessible aux applications Android, ces dernières ne peuvent pas recevoir de notifications {{site.data.keyword.mobilepushshort}}.
@@ -411,11 +375,10 @@ Supprimez les instances de service dont vous n'avez pas besoin ou supprimez la l
  
   * Pour supprimer une instance de service, vous pouvez utiliser l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande.
     Pour utiliser l'interface utilisateur {{site.data.keyword.Bluemix_notm}} afin de supprimer une instance de service, procédez comme suit :
-	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le service que vous souhaitez supprimer. La vignette du service s'affiche. 
+	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le service que vous souhaitez supprimer.  La vignette du service s'affiche.
 	  2. Sur la vignette du service, cliquez sur l'icône **Menu**.
-	  3. Cliquez sur **Supprimer le service**. Une fois l'instance de service supprimée, vous êtes invité à reconstituer l'application à laquelle l'instance de service était liée.
-
-Pour utiliser l'interface de ligne de commande afin de supprimer une instance de service, procédez comme suit :
+	  3. Cliquez sur **Supprimer le service**. Une fois l'instance de service supprimée, vous êtes invité à reconstituer l'application à laquelle l'instance de service était liée. 
+    Pour utiliser l'interface de ligne de commande afin de supprimer une instance de service, procédez comme suit :
 	  1. Supprimez la liaison de l'instance de service à une application en entrant `cf
 unbind-service <nom_app> <nom_instance_service>`.
 	  2. Supprimez l'instance de service en entrant `cf delete-service
@@ -619,7 +582,7 @@ Utilisez l'une des méthodes suivantes pour résoudre le problème :
 ## Bluemix Live Sync Debug ne démarre pas à partir de la ligne de commande
 {: #ts_no_debug}
 
-Vous avez activé la fonction IBM Bluemix Live Sync Debug pour votre application à l'aide de la ligne de commande, mais vous ne pouvez pas accéder à l'interface de débogage.   
+Vous avez activé la fonction IBM Bluemix Live Sync Debug pour votre application à l'aide de la ligne de commande, mais vous ne pouvez pas accéder à l'interface de débogage.  
   
  
 
@@ -636,12 +599,12 @@ La fonction de débogage ne peut pas activée dans les cas suivants :
 
  
   
-Utilisez l'une des options suivantes pour résoudre le problème :
+Utilisez l'une des options suivantes pour résoudre le problème : 
 {: tsResolve}
 
-  * La pratique recommandée consiste à utiliser le pack de construction IBM Node.js pour démarrer l'application. Pour plus d'informations, voir la section sur la commande de démarrage dans la rubrique [Déploiemenr d'une application Node.js sur {{site.data.keyword.Bluemix_notm}}](../runtimes/nodejs/index.html#nodejs_runtime){: new_window}.  
+  * La pratique recommandée consiste à utiliser le pack de construction IBM Node.js pour démarrer l'application. Pour plus d'informations, voir la section sur la commande de démarrage dans la rubrique [Déploiemenr d'une application Node.js sur {{site.data.keyword.Bluemix_notm}}](../runtimes/nodejs/index.html#nodejs_runtime){: new_window}. 
   * Désactivez la commande pour votre application existante en modifiant l'attribut command dans le fichier `manifest.yml` par command: null ou en éditant votre commande push en y ajoutant `-c null`. 
-  * Retirez l'attribut **command** du fichier `manifest.yml`. Supprimez ensuite l'application en cours de {{site.data.keyword.Bluemix_notm}} et insérez de nouveau l'application. 
+  * Retirez l'attribut **command** du fichier `manifest.yml`. Supprimez ensuite l'application en cours de {{site.data.keyword.Bluemix_notm}} et insérez de nouveau l'application.
   
 <!-- end STAGING ONLY -->  
   
@@ -1139,7 +1102,7 @@ l'application. Pour vérifier que le code ne présente pas d'erreur, générez-l
 ## Echec du déploiement d'une application à partir de la barre d'exécution
 {: #deployinganappfromtherunbarfails}
 
-Dans ce scénario, le déploiement échoue et génère l'état "non synchronisé" affiché en jaune.  
+Dans ce scénario, le déploiement échoue et génère l'état "non synchronisé" affiché en jaune. 
 
 L'application que vous déployez a la même route que l'autre application qui est en cours d'exécution. Pour remédier à ce problème, modifiez la route afin qu'elle soit unique.
 
@@ -1148,34 +1111,34 @@ L'application que vous déployez a la même route que l'autre application qui es
 
 Si vous ne voyez pas la barre d'exécution dans Eclipse Orion {{site.data.keyword.webide}}, cela signifie que l'une des erreurs suivantes s'est produite :
 
-1. {{site.data.keyword.jazzhub}} n'identifie pas votre projet en tant que projet. 
-   * Correctif : dans le répertoire racine de votre projet, créez un fichier `project.json`. 
-2. {{site.data.keyword.jazzhub_short}} n'a pas réussi à déterminer le dossier dans lequel réside votre application. 
+1. {{site.data.keyword.jazzhub}} n'identifie pas votre projet en tant que projet.
+   * Correctif : dans le répertoire racine de votre projet, créez un fichier `project.json`.
+2. {{site.data.keyword.jazzhub_short}} n'a pas réussi à déterminer le dossier dans lequel réside votre application.
    * Correctif : si votre application réside dans un autre répertoire que le répertoire racine du projet, procédez comme suit :
       * Dans le répertoire racine du projet, créez un fichier `manifest.yml`. Editez ensuite le fichier de sorte qu'il pointe vers l'emplacement de votre application. Par exemple, `path: chemin_de_votre_applicaiton`
       * Déplacez votre application de sorte qu'elle réside dans le répertoire racine de votre projet.
-3. {{site.data.keyword.jazzhub_short}} ne détecte pas que votre application est une application Node.js. 
-   * Correctif : dans le dossier d'application de votre projet, créez un fichier `package.json`. 
+3. {{site.data.keyword.jazzhub_short}} ne détecte pas que votre application est une application Node.js.
+   * Correctif : dans le dossier d'application de votre projet, créez un fichier `package.json`.
    
 
 ## Le point d'ancrage GitHub ne fonctionne pas
 {: #githubhookisntworking}
 
-Si vous avez configuré votre projet GitHub pour qu'il crée des liens d'élément de travail lorsque vous insérez des validations et que ces liens ne fonctionnent pas comme prévu, procédez comme suit pour identifier le problème : 
+Si vous avez configuré votre projet GitHub pour qu'il crée des liens d'élément de travail lorsque vous insérez des validations et que ces liens ne fonctionnent pas comme prévu, procédez comme suit pour identifier le problème :
 
 1. Dans le référentiel GitHub, cliquez sur **Paramètres**.
-   ![Lien des paramètres GitHub](images/githubSettings1_small.png)
+   ![Lien des paramètres GitHub](images/github_settings.png)
 
 2. Cliquez sur **Webhooks & services**.
-   ![Lien des webhooks et services GitHub](images/githubHooks1_small.png)
+   ![Lien des webhooks et services GitHub](images/github_webhook.png)
 
 3. Pour afficher le message, survolez l'icône d'état {{site.data.keyword.jazzhub}}.
-   ![Message d'erreur sur le point d'ancrage de service](images/troubleshoothook1_small.png)
+   ![Message d'erreur sur le point d'ancrage de service](images/github_error.png)
 
-4. Corrigez l'erreur en fonction du message GitHub. 
+4. Corrigez l'erreur en fonction du message GitHub.
 
 5. Pour vérifier que le correctif a fonctionné, validez et insérez une autre modification ou accédez à la page de service pour {{site.data.keyword.jazzhub_short}} et cliquez sur **Tester le service**.
-   ![Bouton de test de service GitHub](images/githubTestService_small.png)
+   ![Bouton de test de service GitHub](images/github_test.png)
 
 6. Vérifiez l'absence d'erreurs en consultant à nouveau l'icône d'état.
    ![Icône d'état sans erreur](images/githubResolved_small.png)
@@ -1243,7 +1206,7 @@ Pour créer un espace, appliquez l'une des méthodes suivantes :
 {: tsResolve}
  
   * Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, sélectionnez l'organisation dans laquelle créer l'espace, puis cliquez sur **Créer un espace**.
-  * Dans l'interface de ligne de commande cf, tapez ```cf create-space <nom_espace> -o <nom_organisation>```.
+  * Dans l'interface de ligne de commande cf, tapez `cf create-space <nom_espace> -o <nom_organisation>`.
   
   
   
@@ -1259,8 +1222,7 @@ Ce problème peut se produire lorsque vous affectez la même route d'adresse URL
 {: tsCauses}
 
 Par exemple, vous envoyez par commande push l'application mon_App1 dans {{site.data.keyword.Bluemix_notm}} et définissez le nom de domaine
-"mynewapp.stage1.mybluemix.net". Puis, vous envoyez par commande push une autre application mon_App2 dans le même espace et affectez "mynewapp.mybluemix.net" à l'une de ses routes d'URL.
-La route est désormais mappée aux deux applications.
+"mynewapp.stage1.mybluemix.net". Puis, vous envoyez par commande push une autre application mon_App2 dans le même espace et affectez "mynewapp.mybluemix.net" à l'une de ses routes d'URL. La route est désormais mappée aux deux applications.
 
  
 
@@ -1278,7 +1240,7 @@ pour la mise à niveau de votre application. Pour plus d'informations, voir Dép
 ## Les administrateurs ne peuvent pas visualiser toutes les organisations à l'aide de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}
 {: #ts_ui_org}
 
-En tant qu'administrateur, lorsque vous utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, vous ne pouvez pas afficher chaque organisation à des fins d'administration. Vous pouvez afficher et administrer uniquement les organisations auxquelles vous appartenez. 
+En tant qu'administrateur, lorsque vous utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, vous ne pouvez pas afficher chaque organisation à des fins d'administration. Vous pouvez afficher et administrer uniquement les organisations auxquelles vous appartenez.
 
  
 
@@ -1639,7 +1601,7 @@ Vous pouvez résoudre ce problème en suivant l'une des méthodes ci-dessous :
 ## Les objets de consignateur Log4js ne sont pas affichés dans la fenêtre en incrustation Node.js Trace
 {: #ts_logger}
 
-Les objets de consignateur Log4js ne sont pas affichés dans la fenêtre en incrustation Node.js Trace lorsque les modules log4js et ibmbluemix sont utilisés dans votre application.  	
+Les objets de consignateur Log4js ne sont pas affichés dans la fenêtre en incrustation Node.js Trace lorsque les modules log4js et ibmbluemix sont utilisés dans votre application. 	
 
  
 Les objets de consignateur Log4js ne sont pas affichés dans la fenêtre en incrustation Node.js Trace lorsque les modules log4js, winston et ibmbluemix sont utilisés dans votre application.

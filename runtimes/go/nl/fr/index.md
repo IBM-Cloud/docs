@@ -12,7 +12,7 @@ copyright:
 
 # Go
 {: #go_runtime}
-*Dernière mise à jour : 06 juillet 2016*
+Dernière mise à jour : 06 juillet 2016
 
 L'environnement d'exécution Go dans {{site.data.keyword.Bluemix}} repose sur le pack go_buildpack.
 Le pack go_buildpack fournit un environnement d'exécution complet pour les applis Go.

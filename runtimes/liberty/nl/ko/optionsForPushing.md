@@ -12,7 +12,7 @@ copyright:
 # Liberty 앱 푸시 옵션
 {: #options_for_pushing}
 
-*마지막 업데이트 날짜: 2016년 6월 10일*
+마지막 업데이트 날짜: 2016년 6월 10일
 {: .last-updated}
 
 Bluemix에서 Liberty 서버의 동작은 Liberty 빌드팩을 통해 제어됩니다. 빌드팩은 애플리케이션의 특정 클래스에 맞는 완전한 런타임 환경을 제공할 수 있습니다. 클라우드 이식성을 높이고 개방형 클라우드 아키텍처를 향상시키는 데 있어 핵심 요소입니다. Liberty 빌드팩은 Java EE 7 및 OSGi 애플리케이션의 실행이 가능한 WebSphere Liberty 컨테이너를 제공합니다. 이는 Spring과 같은 유명한 프레임워크를 지원하며 IBM JRE를 포함합니다. WebSphere Liberty를 통해 클라우드에 적합한 애플리케이션을 신속하게 개발할 수 있습니다. Liberty 빌드팩은 하나의 Liberty 서버에 배치되는 여러 개의 애플리케이션을 지원합니다. Liberty 빌드팩이 Bluemix에 통합되는 과정에서 서비스 바인딩을 위한 환경 변수가 Liberty 서버에서 구성 변수로 표시되는지 확인합니다. 

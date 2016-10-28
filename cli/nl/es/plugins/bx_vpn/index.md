@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2015 2016
 
  
 
@@ -14,18 +14,26 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Plugin de CLI de Bluemix para VPN
+# Plug-in de {{site.data.keyword.vpn_short}} para la CLI de {{site.data.keyword.Bluemix_notm}}
 
-*Última actualización:* 18 de enero de 2016
+*Última actualización: 20 de junio de 2016*
+{: .last-updated}
 
-*Versión:* 0.1.5
+*Versión:* 1.4.0
 
-Puede utiliza el plugin de VPN de CLI de Bluemix para configurar y gestionar su servicio de Red privada virtual (VPN) de IBM.
+Puede utilizar la interfaz de línea de mandatos (CLI) para configurar y gestionar su servicio de
+{{site.data.keyword.vpn_full}}. El plug-in de CLI de
+{{site.data.keyword.vpn_short}} está disponible en dos versiones: una para su uso con el plug-in de CLI de Cloud Foundry y la otra para su uso con el plug-in de CLI de {{site.data.keyword.Bluemix}}. Ambas versiones del plug-in proporcionan las mismas funciones.  
 {:shortdesc}
 
-La información que sigue nombra todos los mandatos
-compatibles con el plugin de la CLI de Bluemix e incluye sus nombres, opciones, uso,
-requisitos previos, descripciones y ejemplos.
+El plug-in de {{site.data.keyword.vpn_short}} está disponible para los sistemas operativos Windows, MAC y Linux. Asegúrese de utilizar el aplicable a su caso.
+
+A continuación se muestran instrucciones para trabajar con el plug-in de CLI de
+{{site.data.keyword.Bluemix_notm}}. Para utilizar el plug-in con el plug-in de CLI de Cloud Foundry (cf), consulte
+[Plug-in de CLI de {{site.data.keyword.vpn_short}} para la CLI de cf](../vpn/index.html).
+
+
+La información que se indica a continuación muestra todos los mandatos soportados por el plug-in de {{site.data.keyword.vpn_short}} para la CLI de Bluemix e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Consulte [Amplíe su interfaz de línea de mandatos de Bluemix](../../index.html#cli_bluemix_ext) para ver cómo instalar el plug-in vpn.
 
 **Nota:** *Requisitos previos* lista las acciones que son necesarias antes de utilizar el mandato. Los requisitos previos pueden incluir una o varias de las acciones siguientes:
 <dl>
@@ -42,14 +50,14 @@ requisitos previos, descripciones y ejemplos.
 Crea una conexión VPN.
 
 ```
-bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
+bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **Prerrequisitos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
-*CONNECTION_NAME*  (obligatorio): nombre de la conexión
+*CONNECTION_NAME*  (obligatorio): nombre de la conexión.
 
 -g *GATEWAY_NAME*  (obligatorio): nombre de la pasarela.
 
@@ -93,7 +101,7 @@ bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "19
 Crea una política IKE.
 
 ```
-bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
+bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Prerrequisitos**:  Punto final, inicio de sesión, destino
@@ -102,7 +110,7 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] 
 
 *POLICY_NAME*  (obligatorio):  nombre de la política IKE.
 
--g *GATEWAY_NAME*  (obligatorio):  nombre de la pasarela.
+-g *GATEWAY_NAME*  (obligatorio): nombre de la pasarela.
 
 -d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados.
 
@@ -124,7 +132,7 @@ bluemix vpn ike-create my_ike -g my_gateway
 Crea una política IPSec.
 
 ```
-bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
+bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Prerrequisitos**:  Punto final, inicio de sesión, destino
@@ -133,7 +141,7 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP
 
 *POLICY_NAME*  (obligatorio):  nombre de la política IPSec.
 
--g *GATEWAY_NAME*  (obligatorio):  nombre de la pasarela.
+-g *GATEWAY_NAME*  (obligatorio): nombre de la pasarela.
 
 -d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados.
 
@@ -155,7 +163,7 @@ bluemix vpn ipsec-create my_policy -g my_gateway
 Crea una pasarela VPN.
 
 ```
-bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **Prerrequisitos**:  Punto final, inicio de sesión, destino
@@ -334,14 +342,14 @@ bluemix vpn gateway-delete GATEWAY_NAME
 Actualiza una conexión VPN existente.
 
 ```
-bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY] [-subnets "SUBNET/MASK"][-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
+bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME] [-k PRESHARED_KEY] [-subnets "SUBNET/MASK"] [-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION] [-peer_id PEER_ID] [-admin_state ADMIN_STATE] [-dpd-action ACTION] [-gateway_ip IP_ADDRESS] [-i INITIATOR_STATE] [-dpd-timeout VALUE] [-dpd-interval VALUE] [-ike NAME] [-ipsec NAME]
 ```
 
 **Prerrequisitos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
-*CONNECTION_NAME*  (obligatorio): nombre de la conexión
+*CONNECTION_NAME*  (obligatorio): nombre de la conexión.
 
 -g *GATEWAY_NAME*  (opcional):  nombre de la pasarela.
 
@@ -377,7 +385,7 @@ en el intervalo configurado para comprobar el estado activo del igual. Rango: 5-
 Actualiza una política IKE.
 
 ```
-bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Prerrequisitos**:  Punto final, inicio de sesión, destino
@@ -401,7 +409,7 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP
 Actualiza una política IPSec.
 
 ```
-bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
+bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME] [-d DESCRIPTION] [-pfs GROUP] [-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
 ```
 
 **Prerrequisitos**:  Punto final, inicio de sesión, destino
@@ -425,7 +433,7 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GRO
 Actualiza una pasarela VPN existente.
 
 ```
-bluemix vpn gateway-update GATEWAY_NAME [-t TYPE][-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
+bluemix vpn gateway-update GATEWAY_NAME [-t TYPE] [-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
 ```
 
 **Prerrequisitos**:  Punto final, inicio de sesión, destino

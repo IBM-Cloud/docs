@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  anni: 2016
 
  
 
@@ -18,7 +18,7 @@ copyright:
 
 # Utilizzo e creazione di pacchetti {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
-*Ultimo aggiornamento: 28 marzo 2016*
+Ultimo aggiornamento: 2 agosto 2016
 {: .last-updated}
 
 In {{site.data.keyword.openwhisk}}, puoi utilizzare i pacchetti per raggruppare una serie di azioni correlate e condividerle con altri.
@@ -29,7 +29,7 @@ Un pacchetto può includere *azioni* e *feed*.
 
 Ogni entità {{site.data.keyword.openwhisk_short}}, inclusi i pacchetti, appartiene a uno *spazio dei nomi* e il nome completo di un'entità è `/nomeSpazioNomi[/nomePacchetto]/nomeEntità`. Per ulteriori informazioni, vedi le [linee guida di denominazione](./openwhisk_reference.html#openwhisk_entities).
 
-Le seguenti sezioni descrivono come navigare tra i pacchetti e utilizzare i trigger e i feed al loro interno. Inoltre, per coloro che sono interessati a portare i propri pacchetti nel catalogo, leggere le sezioni sulla creazione e la condivisione dei pacchetti.
+Le seguenti sezioni descrivono come navigare tra i pacchetti e utilizzare i trigger e i feed al loro interno. Inoltre, se sei interessato a portare i tuoi pacchetti nel catalogo, leggi le sezioni sulla creazione e la condivisione dei pacchetti.
 
 ## Esplorazione dei pacchetti
 {: #openwhisk_packagedisplay}
@@ -44,14 +44,17 @@ In {{site.data.keyword.openwhisk_short}} sono registrati vari pacchetti. Puoi ot
   {: pre}
   ```
   packages
-  /whisk.system/alarms                                              shared
-  /whisk.system/cloudant                                            shared
-  /whisk.system/github                                              shared
-  /whisk.system/samples                                             shared
-  /whisk.system/slack                                               shared
-  /whisk.system/util                                                shared
-  /whisk.system/watson                                              shared
-  /whisk.system/weather                                             shared
+  /whisk.system/cloudant                                                 shared
+  /whisk.system/alarms                                                   shared
+  /whisk.system/watson                                                   shared
+  /whisk.system/websocket                                                shared
+  /whisk.system/weather                                                  shared
+  /whisk.system/system                                                   shared
+  /whisk.system/utils                                                    shared
+  /whisk.system/slack                                                    shared
+  /whisk.system/samples                                                  shared
+  /whisk.system/github                                                   shared
+  /whisk.system/pushnotifications                                        shared
   ```
   {: screen}
 
@@ -167,10 +170,10 @@ Nel semplice esempio di seguito riportato, puoi eseguire il bind del pacchetto `
   {: pre}
   ```
   package /myNamespace/valhallaSamples
-   action /myNamespace/valhallaSamples/greeting: Print a friendly greeting
+   action /myNamespace/valhallaSamples/greeting: Returns a friendly greeting
    action /myNamespace/valhallaSamples/wordCount: Count words in a string
-   action /myNamespace/valhallaSamples/helloWorld: Print to the console
-   action /myNamespace/valhallaSamples/echo: Returns the input arguments, unchanged
+   action /myNamespace/valhallaSamples/helloWorld: Demonstrates logging facilities
+   action /myNamespace/valhallaSamples/curl: Curl a host url
   ```
   {: screen}
 
@@ -211,7 +214,7 @@ Nel semplice esempio di seguito riportato, puoi eseguire il bind del pacchetto `
 ## Creazione e utilizzo dei feed di trigger
 {: #openwhisk_package_trigger}
 
-I feed possono essere opportunamente utilizzati per configurare un'origine eventi esterna per l'attivazione di questi eventi in un trigger {{site.data.keyword.openwhisk_short}}. Questo esempio mostra come utilizzare un feed del pacchetto Alarms per attivare un trigger e utilizzare una regola per chiamare un'azione ogni secondo.
+I feed possono essere opportunamente utilizzati per configurare un'origine eventi esterna per l'attivazione di questi eventi in un trigger {{site.data.keyword.openwhisk_short}}. Questo esempio mostra come utilizzare un feed nel pacchetto Allarmi per attivare un trigger e come utilizzare una regola per chiamare un'azione ogni secondo.
 
 1. Ottieni una descrizione del feed del pacchetto `/whisk.system/alarms`.
 
@@ -493,4 +496,3 @@ Altri utenti possono ora utilizzare il tuo pacchetto `custom`, includendo il bin
   {: screen}
 
   Nell'esempio precedente, hai utilizzato lo spazio dei nomi `myNamespace`, che appare nel nome completo.
-

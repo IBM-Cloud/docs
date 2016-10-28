@@ -18,7 +18,7 @@ copyright:
 # CLI 和開發工具
 {: #cli}
 
-*前次更新：2016 年 6 月 28 日*
+*前次更新：2016 年 8 月 31 日*
 {: .last-updated}
 
 使用 {{site.data.keyword.Bluemix_short}}，您可以存取各種功能強大的工具，例如統一指令行介面和 CLI 外掛程式。其中每個 CLI 下載都可用來支援您的 {{site.data.keyword.Bluemix_notm}} 體驗。

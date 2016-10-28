@@ -37,7 +37,7 @@ Puoi eseguire le seguenti attività con la CLI dev_mode:
 
 Utilizza uno dei seguenti metodi per installare lo strumento riga di comando dev_mode:
 - Installa in locale.
-  1. Scarica il plug-in dev_mode per la tua piattaforma da [IBM Bluemix CLI Plugin Repository](http://plugins.{DomainName}).
+  1. Scarica il plug-in dev_mode per la tua piattaforma da [IBM Bluemix CLI Plugin Repository](http://plugins.ng.bluemix.net).
   2. Passa alla cartella di salvataggio del plug-in dev_mode e installalo utilizzando il comando cf install-plugin. Per esempio: 
   
         ```

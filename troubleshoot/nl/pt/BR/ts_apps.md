@@ -120,7 +120,7 @@ Quando você tentar reutilizar o nome do app, receberá a mensagem a seguir:
 Quando um app é excluído, sua rota, que é a URL do app, não é automaticamente excluída. Portanto, não está disponível para reutilização. Deve-se acessar o espaço em que o app foi criado para excluir a rota para que ele possa ser reutilizado.
 {: tsCauses}
 
-Execute as etapas a seguir para excluir a rota não utilizada:
+Execute as etapas a seguir para excluir a rota não utilizada: 
 {: tsResolve}
 
   1. Verifique se a rota pertence ao espaço atual inserindo o comando a seguir: 
@@ -270,7 +270,7 @@ Outras causas menos comuns de um erro de Gateway inválido são os dropouts do p
 
  
 
-Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, primeiro verifique a página [Status do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução alternativa. As informações detalhadas estão disponíveis em [Usando serviços em outra região](../services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal, tente as etapas a seguir para resolver o problema:
+Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, primeiro verifique a página [Status do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução alternativa. As informações detalhadas estão disponíveis em [Usando serviços em outra região](../services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal, tente as etapas a seguir para resolver o problema: 
 {: tsResolve}
 
   * Tente novamente a ação:
@@ -290,7 +290,7 @@ Se o espaço em disco se esgotar, será possível modificar manualmente a cota d
 
   
 
-Quando o espaço em disco se esgotar, você poderá ver uma mensagem que indica se a cota do disco foi excedida. Para resolver o problema, você pode ter tentado aumentar a escala de sua instância de app para obter mais espaço em disco. Por exemplo, você pode escalar de 256 MB para 1256 MB, mudando a cota de memória na página de detalhes do app. No entanto, como a cota do disco permaneceu a mesma, você não obteve mais espaço em disco.
+Quando o espaço em disco se esgotar, você poderá ver uma mensagem que indica se a cota do disco foi excedida. Para resolver o problema, você pode ter tentado aumentar a escala de sua instância de app para obter mais espaço em disco. Por exemplo, você pode escalar de 256 MB para 1256 MB, mudando a cota de memória na página de detalhes do app. No entanto, como a cota do disco permaneceu a mesma, você não obteve mais espaço em disco. 
 {: tsSymptoms}
 
 
@@ -311,48 +311,13 @@ Use um dos métodos a seguir para especificar sua cota do disco. A cota máxima 
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-	
-	
-## Não é possível incluir o repositório Git
-{: #ts_cannot_addgit}
-
-Depois de criar um app no Painel, você clica em INCLUIR GIT para criar um repositório Git, mas não é possível continuar.
-
-
-
-Ao clicar em **INCLUIR GIT**, uma janela é aberta e ocorre um destes problemas:
-{: tsSymptoms} 
-
-  * A janela é interrompida com uma tela em branco.
-  * Uma mensagem indica que existe um problema com cookies de terceiros.
-
-
-
-Seu navegador pode ser configurado para evitar que um cookie seja configurado. Esse cookie deve ser configurado a partir do site do IBM® Bluemix DevOps Services no domínio da Internet hub.jazz.net a partir do contexto do console do {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}  
-
- 
-
-É possível corrigir esse problema de uma das seguintes formas:
-{: tsResolve}
-
-  * Siga as instruções da janela que é aberta no console do {{site.data.keyword.Bluemix_notm}}. Clique no botão. Outra janela do navegador é aberta temporariamente. Nessa janela, o DevOps Services configura o cookie de autenticação.
-  * Em outra guia do navegador, acesse https://hub.jazz.net e efetue login. Retorne para o console do {{site.data.keyword.Bluemix_notm}} e atualize a página. Clique em **INCLUIR GIT** novamente.
-  * Mude as configurações do navegador para ativar os cookies de terceiros e clique em INCLUIR GIT novamente. Para obter detalhes sobre como configurar as definições, consulte a documentação do navegador:
-    * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-Se essas soluções alternativas não corrigirem o problema, envie um e-mail para idslogin@jazz.net.
-
-
 
 ## Apps Android não podem receber {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
 Apps Android em certas regiões em que o Google não está acessível não podem receber as notificações que você envia por meio do serviço IBM {{site.data.keyword.mobilepushshort}}. Nesse caso, é possível usar os serviços de terceiro como solução alternativa.
 
-Você liga um serviço {{site.data.keyword.mobilepushshort}} ao seu app Bluemix e envia uma mensagem aos dispositivos registrados. No entanto, os apps que são desenvolvidos na plataforma Android não podem receber suas notificações em certas regiões.
+Você liga um serviço {{site.data.keyword.mobilepushshort}} ao seu app Bluemix e envia uma mensagem aos dispositivos registrados. No entanto, os apps que são desenvolvidos na plataforma Android não podem receber suas notificações em certas regiões. 
 {: tsSymptoms}
 
 O serviço IBM {{site.data.keyword.mobilepushshort}} usa o serviço Google Cloud Messaging (GCM) para despachar notificações para apps móveis que são desenvolvidos na plataforma Android. Para ativar o recebimento de notificações em apps Android, o serviço Google Cloud Messaging (GCM) deve estar acessível para apps móveis. Nas regiões em que o serviço GCM não pode ser atingido pelos apps Android, os apps Android não conseguem receber {{site.data.keyword.mobilepushshort}}.
@@ -370,7 +335,7 @@ Use serviços de terceiro que não dependam do serviço GCM como uma solução a
 Se você for um usuário de conta para teste, talvez não possa criar um aplicativo no {{site.data.keyword.Bluemix_notm}} se tiver excedido seu limite de serviços da organização.
  
 
-Ao tentar criar um aplicativo no {{site.data.keyword.Bluemix_notm}}, você verá a mensagem de erro a seguir:
+Ao tentar criar um aplicativo no {{site.data.keyword.Bluemix_notm}}, você verá a mensagem de erro a seguir: 
 {: tsSymptoms}
 
 `BXNUI2032E: O recurso <service_instances> não foi criado. Ocorreu um erro enquanto o Cloud Foundry estava sendo contatado para criar o recurso. Mensagem do Cloud Foundry: "Você excedeu seu limite de serviços da organização."`
@@ -387,9 +352,9 @@ Exclua todas as instâncias de serviços que não são necessárias, ou remova o
  
   * Para excluir a instância de serviços, é possível usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface com o usuário.
     Para usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} para excluir uma instância de serviço, conclua as etapas a seguir:
-	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no serviço que você deseja acessar. O quadro do serviço é exibido.
+	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no serviço que você deseja acessar.  O quadro do serviço é exibido.
 	  2. No quadro do serviço, clique no ícone **Menu**.
-	  3. Clique em **Excluir serviço**. Depois de excluir a instância de serviço, você será solicitado a refazer o estágio no aplicativo ao qual a instância de serviço foi vinculada.
+	  3. Clique em **Excluir serviço**. Depois de excluir a instância de serviço, você será solicitado a refazer o estágio no aplicativo ao qual a instância de serviço foi vinculada. 
     Para usar a interface de linha de comandos para excluir uma instância de serviço, conclua as etapas a seguir:
 	  1. Desvincule a instância de serviço de um aplicativo digitando `cf unbind-service <appname> <service_instance_name>`.
 	  2. Exclua a instância de serviço digitando `cf delete-service <service_instance_name>`.
@@ -796,11 +761,13 @@ ao problema:
 {: tsResolve} 
 
   * Especifique o comando inicial por um dos métodos a seguir: 
-      * Use a interface de linha de comandos cf. Por exemplo: 
+      * Use a interface de linha de comandos cf. Por
+exemplo: 
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por exemplo:
+	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por
+exemplo:
 	    ```
 		{
       ...
@@ -809,7 +776,8 @@ ao problema:
  	   }
 	}
 	    ```
-	  * Use o arquivo `manifest.yml`. Por exemplo: 
+	  * Use o arquivo `manifest.yml`. Por
+exemplo: 
 	    ```
 		applications:
   name: MyUniqueNodejs01
@@ -939,13 +907,15 @@ Esse problema ocorre porque nenhum buildpack integrado é fornecido para apps Me
 Para usar um buildpack customizado para apps Meteor, use um dos métodos a seguir:
 {: tsResolve}
 
-  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por exemplo:
+  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por
+exemplo:
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
   * Se você implementar seu aplicativo a partir do prompt de comandos, use o comando `cf
 push` e especifique seu buildpack customizado usando
-a opção **-b**. Por exemplo:
+a opção **-b**. Por
+exemplo:
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
@@ -1120,21 +1090,21 @@ quando você enviar por push confirmações e os links não estiverem funcionand
 conforme o esperado, siga estas etapas para encontrar o problema:
 
 1. Em seu repositório GitHub, clique em **Configurações**.
-   ![Link de configurações do GitHub](images/githubSettings1_small.png)
+   ![Link de configurações do GitHub](images/github_settings.png)
 
 2. Clique em **Webhooks & serviços**.
-   ![Link de webhooks e serviços do GitHub](images/githubHooks1_small.png)
+   ![Link de webhooks e serviços do GitHub](images/github_webhook.png)
 
 3. Para visualizar a mensagem, passe o mouse sobre o ícone de status do {{site.data.keyword.jazzhub}}.
-   ![Mensagem de erro no gancho de serviço](images/troubleshoothook1_small.png)
+   ![Mensagem de erro no gancho de serviço](images/github_error.png)
 
 4. Resolva o erro de acordo com a mensagem do GitHub.
 
 5. Para verificar se a correção funcionou, confirme e envie por push outra mudança, ou acesse a página de serviço do {{site.data.keyword.jazzhub_short}} e clique em **Testar serviço**.
-   ![botão Testar serviço do GitHub](images/githubTestService_small.png)
+   ![botão Testar serviço do GitHub](images/github_test.png)
 
 6. Confirme se não há erros verificando o ícone de status novamente.
-![Ícone de status sem erros](images/githubResolved_small.png)
+   ![Ícone de status sem erros](images/githubResolved_small.png)
 
 Para obter mais informações, consulte
 [Configurando projetos do GitHub
@@ -1201,7 +1171,7 @@ Para criar um espaço, use um dos métodos a seguir:
 {: tsResolve}
  
   * No Painel do {{site.data.keyword.Bluemix_notm}}, selecione a organização em que você deseja criar o espaço, em seguida, clique em **Criar um espaço**.
-  * Na interface da linha de comandos cf, digite ```cf create-space <space_name> -o <organization_name>```.
+  * Na interface de linha de comandos cf, digite `cf create-space <space_name> -o <organization_name>`.
   
   
   
@@ -1251,7 +1221,10 @@ Essa é uma limitação da interface com o usuário do {{site.data.keyword.Bluem
 
  
 
-É possível usar o comando, como `cf orgs`, `cf create-org` e `cf delete-org`, a partir da interface de linha de comandos cf para gerenciar todas as organizações. Para obter uma lista completa de comandos cf, insira `cf help`.
+É possível usar o comando, como `cf orgs`, `cf
+create-org` e `cf delete-org`, a partir da interface de linha
+de comandos cf para gerenciar todas as organizações. Para obter uma lista completa de
+comandos cf, insira `cf help`.
 {: tsResolve}
 	
 <!-- end STAGING ONLY -->

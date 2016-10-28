@@ -27,7 +27,7 @@ copyright:
 ## {{site.data.keyword.openwhisk_short}} の動作
 {: #openwhisk_how}
 
-{{site.data.keyword.openwhisk_short}} は、イベントまたは直接起動に応えてコードを実行する、イベント・ドリブンの計算プラットフォームです。
+{{site.data.keyword.openwhisk_short}} は、サーバーレス・コンピューティングまたは Function as a Service (FaaS) とも呼ばれるイベント・ドリブン計算プラットフォームであり、イベントまたは直接起動に応えてコードを実行します。
 
 次の図は、{{site.data.keyword.openwhisk_short}} アーキテクチャーの概要を示したものです。
 

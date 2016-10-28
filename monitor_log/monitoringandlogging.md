@@ -14,7 +14,7 @@ copyright:
 #Monitoring and logging with Cloud Foundry
 {: #monitoringandlogging}
 
-Last updated: 22 September 2016
+Last updated: 28 October 2016
 {: .last-updated}
 
 By monitoring your apps and reviewing logs, you can follow application execution and data flow to get a better understanding of your deployment. In addition, you can reduce the time and effort that is required to locate any issues and repair them.
@@ -53,7 +53,7 @@ Log files are automatically created when you are using the Cloud Foundry infrast
 ###Log Retention
 {: #log_retention}
 
-* In Bluemix Cloud Foundry apps, log data is stored for 30 days by default.
+In {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry apps, log data is stored for 7 days by default.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -138,7 +138,7 @@ You can view the logs for your Cloud Foundry apps in three places:
 {: #viewing_logs_UI}
 
 To see the deployment or runtime logs, complete the following steps:
-1. Log in to {{site.data.keyword.Bluemix_notm}}, and then click the tile for your app on the Dashboard. The app details page is displayed.
+1. Log in to {{site.data.keyword.Bluemix_notm}}, and then click the tile for your app. The app details page is displayed.
 2. In the navigation bar, click **Logs**.
 
 In the **Logs** console, you can view the recent logs for your app or tail logs in real time. In addition, you can filter logs by log type and channel.
@@ -394,7 +394,7 @@ Jane tries out her app, and then she types the following query string in the Spl
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-Jane sees a stream of logs in her Splunk web interface. Though the Splunk that Jane installs is Splunk Light, she can still retain 500MB logs a day. 
+Jane sees a stream of logs in her Splunk web interface. Though the Splunk that Jane installs is Splunk Light, she can still retain 500MB logs a day.  
 
 
 

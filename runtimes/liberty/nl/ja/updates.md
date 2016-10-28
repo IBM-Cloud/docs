@@ -13,8 +13,18 @@ copyright:
 
 ## Liberty ビルドパックの最新更新のリスト。
 
-*最終更新日: 2016 年 7 月 20 日*
+最終更新日: 2016 年 9 月 13 日
 {: .last-updated}
+
+### 2016 年 9 月 16 日: 更新された Liberty ビルドパック v3.3-20160912-1729
+* デフォルトの Liberty ランタイム・バージョンが [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) リリースに更新されました。月次 Liberty ランタイム・バージョンが [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) リリースに更新されました。これらの更新によって、前にベータ・フィーチャーとして使用可能だった `cloudant-1.0` Liberty フィーチャーと `passwordUtilities-1.0` Liberty フィーチャーが、実動で使用可能なフィーチャーになりました。
+* このビルドパックには、更新されたバージョンの IBM JRE 8.0: SR3 FP11 も含まれています。
+* このビルドパックは、最新の 1.5.x ドライバーの問題が原因で、[MySQL タイプのサービスの自動構成](autoConfig.html)を実行したときに最新の 1.4.x [MariaDB Connector/J JDBC ドライバー](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)をダウンロードするように調整されました。
+
+### 2016 年 8 月 26 日: 更新された Liberty ビルドパック v3.2-20160822-2200
+* このビルドパックには、IBM JRE: 8 SR3 FP10 および 7.1 SR3 FP50 の更新版が含まれています。
+* 月次 Liberty ランタイム・バージョンが [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/) リリースに更新されました。
+* [SQL Database](../../services/SQLDB/index.html#SQLDB) サービス用の[自動構成サポート](autoConfig.html)を提供するサービス・プラグインは、TLS を介したサービスへの接続時に常に JVM のトラステッド証明書を使用するように更新されました。
 
 ### 2016 年 7 月 22 日: 更新された Liberty ビルドパック v3.1-20160717-2254
 * [アプリケーション管理](../../manageapps/app_mng.html)機能が更新され、フェデレーテッド認証をサポートするようになりました。また、`devconsole` ユーティリティーと `shell` ユーティリティーによって使用される Node.js ランタイムが、最新バージョンの `0.12.15` に更新されました。 

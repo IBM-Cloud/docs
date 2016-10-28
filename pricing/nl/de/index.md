@@ -51,7 +51,7 @@ copyright:
 # Preisstruktur
 {: #pricing}
 
-*Letzte Aktualisierung: 16. August 2016*
+*Letzte Aktualisierung: 13. September 2016*
 {: .last-updated}
 
 Sie können kostenfrei Anwendungen in {{site.data.keyword.Bluemix}} ausführen und {{site.data.keyword.Bluemix_notm}}-Services testen. Sie können sich für einen kostenfreien 30-Tage-Test anmelden, bei dem Sie zusätzliche Leistungen, einschließlich kostenloser Unterstützung, erhalten. Nach 30 Tagen können Sie einen Kontotyp auswählen und nur für das bezahlen, was Sie über die kostenfreien Leistungen hinaus nutzen. Bluemix stellt Ihnen eine Berechnungsfunktion zur Verfügung, sodass Sie die Kosten im Voraus einschätzen können, sowie die Ansicht 'Nutzungsdashboard', in der Sie die tatsächlichen Kosten nach dem Erstellen Ihrer Apps überprüfen können.
@@ -400,7 +400,6 @@ und -Elemente:
 * Zwei {{site.data.keyword.autoscaling}}-Richtlinien (Prozessor und Speicher)
 * 2 GB {{site.data.keyword.datacshort}} pro Monat
 * 150 GB NoSQL-Datenbank pro Monat, 100.000 komplexe API-Aufrufe und 500.000 einfache API-Aufrufe
-* 8 GB {{site.data.keyword.sqldb}}-Datenbankkapazität pro Monat
 * 20 GB Datenvolumen für ein- und ausgehenden Netzverkehr
 
 ###Preise für {{site.data.keyword.Bluemix_notm}}-Ressourcen
@@ -418,7 +417,6 @@ nicht schwanken. Alle Preisangaben in diesem Beispiel erfolgen in US-Währung.
 |Datencache - Standard |	5 GB Cachebereich und ein Replikat |	$155,00 USD/Instanz |
 |Datencache - Premium |	25 GB Cachebereich und ein Replikat |	$505,00 USD/Instanz|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB freier Speicher<br/>50.000 einfache API-Aufrufe pro Monat kostenlos<br/>10.000 komplexe API-Aufruf pro Monat kostenlos | $1,00 USD/GB<br/>0,03 USD/1000 einfache API-Aufrufe<br/>$0,15 USD/1000 komplexe API-Aufrufe |
-|SQL Database 	| 2 GB pro Instanz kostenlos<br/>Maximal 10 GB pro Instanz |	$30,00 USD/Instanz |
 *Tabelle 7. Preisliste*
 
 ###Berechnung des Anwendungspreises
@@ -459,16 +457,35 @@ Gesamtspeicherpreis setzt sich dann wie folgt zusammen:</p>
 <p>
 Der Gesamtpreis beträgt 148 + 13,5 + 13,5 = $175.</p></dd>
 
-<dt>8 GB SQL-Datenbankkapazität pro Monat</dt>
-<dd>Der Gesamtpreis beläuft sich auf $30 pro Instanz.</dd>
-
 <dt>20 GB Datenvolumen für ein- und ausgehenden Netzverkehr</dt>
 <dd>Eingehender und ausgehender Netzdatenverkehr ist gebührenfrei.</dd>
 
 </dl>
 
-Wenn alle Positionen addiert werden, beträgt der Gesamtpreis
-der Anwendung $384,15.
+Wenn alle Positionen addiert werden, beträgt der Gesamtpreis der Anwendung $354.15.
+
+###Unterstützte Währungen
+
+Obwohl in den Preisbeispielen US-Dollar (USD) verwendet werden, werden in {{site.data.keyword.Bluemix_notm}} auch andere Währungen unterstützt. In der folgenden Tabelle werden die unterstützten Währungen aufgelistet.
+
+|ISO 4217-Code| Währung|
+|-------------|---------|
+|AUD |	  Australischer Dollar|
+|BRL |	  Brasilianischer Real|
+|CAD |	  Kanadischer Dollar|
+|CHF |	  Schweizer Franken|
+|DKK |	  Dänische Krone|
+|EUR |	  Euro|
+|GBP |	  Britisches Pfund|
+|INR |	  Indische Rupie|
+|JPY |	  Japanischer Yen|
+|KRW |	  Südkoreanischer Won|
+|NOK |	  Norwegische Krone|
+|NZD |	  Neuseeländischer Dollar|
+|SEK |	  Schwedische Krone|
+|USD |    US-Dollar|
+|ZAR |	  Südafrikanischer Rand|
+*Tabelle 8: Unterstützte Währungen*
 
 ##Nutzungsdashboard
 {: #usage}
@@ -511,7 +528,7 @@ Nur bestimmte Services ermöglichen Ihnen das Ändern des Serviceplans. Wenn Pla
 |Service |	Informationen|
 |--------|-------------|
 |Presence Insights 	|Wenn Sie einen Lite-Plan verwenden und das kostenfreie Kontingent überschreiten, wird die Nachricht 403 angezeigt oder protokolliert, um anzugeben, dass Sie nicht mehr über die entsprechende Berechtigung verfügen und dass Ihre Serviceinstanz inaktiviert ist. Darüber hinaus werden REST-API-Aufrufe des Typs POST mit der Antwort 403 zurückgewiesen.<br/><br/>Wenn der Service inaktiviert wurde, weil Sie das kostenfreie Kontingent überschritten haben, können Sie ein Upgrade von einem Lite-Plan auf einen Paid-Plan durchführen. Der Service wird innerhalb von 2 Stunden erneut aktiviert.<br/><br/>Wenn Sie einen Paid-Plan verwenden, können Sie eine Herabstufung auf einen Lite-Plan durchführen, vorausgesetzt, Ihre Nutzungsrate für Ereignisse und Gesamtspeicher bleibt innerhalb des Lite-Kontingents für diese Posten.<br/><br/>Wenn Sie ein Upgrade oder eine Herabstufung des Plans vornehmen, müssen Sie kein erneutes Staging und keinen Neustart für Ihre Apps durchführen.|
-*Tabelle 8. Die nächsten Schritte für die Änderung Ihres Plans*
+*Tabelle 9: Die nächsten Schritte für die Änderung Ihres Plans*
 
 ###Verwendungshinweise zum Ändern des Plans über die Befehlszeilenschnittstelle
 

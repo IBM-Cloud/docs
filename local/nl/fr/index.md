@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} local
 {: #local}
-*Dernière mise à jour : 16 août 2016*
+*Dernière mise à jour : 15 septembre 2016*
 {: .last-updated}
 
 L'environnement {{site.data.keyword.Bluemix}} local apporte la puissance et l'agilité de la plateforme reposant sur le cloud
@@ -44,24 +44,14 @@ déterminer les éléments inclus et ceux dont vous pouvez faire l'acquisition.
 | **Type** | **Nom ** | **Description** |
 |----------|----------|-----------------|
 |Inclus | [Contextes d'exécution {{site.data.keyword.Bluemix_notm}}](../cfapps/runtimes.html) | Utilisez des contextes d'exécution pour que votre application soit opérationnelle rapidement, sans qu'il soit nécessaire de configurer et de gérer des machines et des systèmes d'exploitation. Vous pouvez utiliser tous les contextes d'exécution {{site.data.keyword.Bluemix_notm}} dans votre instance {{site.data.keyword.Bluemix_notm}} locale.|
-|Inclus | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | Augmente ou diminue dynamiquement la capacité de vos ressources de traitement en fonction de
-règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix}} local.|
-|Facultatif | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} intègre {{site.data.keyword.APIM}}
-et IBM StrongLoop dans une offre unique qui fournit une solution complète pour la création, l'exécution, la gestion et l'application d'API et de
-microservices. |
-|Facultatif | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | Utilisez le service {{site.data.keyword.APIMfull}} pour composer des API, les gérer et les diffuser sur les réseaux sociaux. Vous pouvez importer des API avec des ressources en utilisant une adresse URL de proxy ou en assemblant des données à partir de sources de données HTTP. L'avantage avec le service {{site.data.keyword.APIM}} est que vous pouvez gérer la façon dont vos API sont utilisées. |
-|Facultatif | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} fournit l'accès à une couche de données JSON NoSQL
-entièrement gérée toujours active. Ce service est compatible avec CouchDB et accessible via une interface HTTP facile à utiliser pour les modèles
-d'application mobile et Web. Pour plus d'informations, voir la [documentation](http://docs.cloudant.com/BluemixLocal.html){: new_window} complète et la [configuration matérielle](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} requise pour un environnement local.  |
-|Facultatif (bêta) | {{site.data.keyword.containershort}} | Conteneurs Run Docker dans l'environnement {{site.data.keyword.Bluemix_notm}} local. Les conteneurs sont des objets logiciels virtuels qui incluent tous les éléments qu'une application a besoin d'exécuter. Un conteneur tire parti de l'isolation et de l'allocation des ressources, mais est plus portable et efficace que, par exemple, une machine virtuelle. |
+|Inclus | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | Augmente ou diminue dynamiquement la capacité de vos ressources de traitement en fonction de règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix}} local.|
+|Facultatif | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} intègre {{site.data.keyword.APIM}} et IBM StrongLoop dans une offre unique qui fournit une solution complète pour la création, l'exécution, la gestion et l'application d'API et de microservices. |
+|Facultatif | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} fournit l'accès à une couche de données JSON NoSQL entièrement gérée toujours active. Ce service est compatible avec CouchDB et accessible via une interface HTTP facile à utiliser pour les modèles d'application mobile et Web. Pour plus d'informations, voir la [documentation](http://docs.cloudant.com/BluemixLocal.html){: new_window} complète et la [configuration matérielle](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} requise pour un environnement local. |
+|Facultatif | [{{site.data.keyword.containershort}}](../containers/container_index.html)  | Conteneurs Run Docker dans l'environnement {{site.data.keyword.Bluemix_notm}} local. Les conteneurs sont des objets logiciels virtuels qui incluent tous les éléments qu'une application a besoin d'exécuter. Un conteneur tire parti de l'isolation et de l'allocation des ressources, mais est plus portable et efficace que, par exemple, une machine virtuelle. Pour des informations sur la configuration matérielle requise, voir [IBM {{site.data.keyword.containershort}} dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local](../containers/container_dl.html). |
 |Facultatif | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
-|Facultatif | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | Pour augmenter la redondance, {{site.data.keyword.sescashort}} fournit une réplique d'une session
-qu'il stocke en cache. Par conséquent, en cas de microcoupure ou d'indisponibilité, votre application client peut continuer à accéder à la session en cache. Le service
-prend en charge des scénarios de mise en cache de session pour les applications Web et mobiles. |
-|Facultatif | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | Ce service permet à vos applications de communiquer et de consommer les données collectées par vos
-périphériques connectés, capteurs et passerelles. L'offre de base locale inclut un environnement initial permettant l'exécution d'une version privée d'IBM
-{{site.data.keyword.iot_full}} dans l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 1,6 To
-d'échange de données. |
+|Facultatif | [{{site.data.keyword.mobilepush}}](../services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} est un service que vous pouvez utiliser pour envoyer des notifications à un périphérique iOS ou Android. Les notifications peuvent être ciblées pour tous les utilisateurs d'application ou pour un ensemble spécifique d'utilisateurs et de périphériques à l'aide d'étiquettes. Vous pouvez administrer des périphériques, des étiquettes et des abonnements. Vous pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API (interfaces de programme d'application) REST (Representational State Transfer) pour développer plus en détail vos applications client. |
+|Facultatif | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | Pour augmenter la redondance, {{site.data.keyword.sescashort}} fournit une réplique d'une session qu'il stocke en cache. Par conséquent, en cas de microcoupure ou d'indisponibilité, votre application client peut continuer à accéder à la session en cache. Le service prend en charge des scénarios de mise en cache de session pour les applications Web et mobiles. |
+|Facultatif | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | Ce service permet à vos applications de communiquer et de consommer les données collectées par vos périphériques connectés, capteurs et passerelles. L'offre de base locale inclut un environnement initial permettant l'exécution d'une version privée d'IBM {{site.data.keyword.iot_full}} dans l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 1,6 To d'échange de données. |
 
 
 Vous pouvez acquérir des composants facultatifs pour élargir la capacité de vos ressources et périphériques. Vous pouvez acquérir ces composants en contactant
@@ -70,30 +60,19 @@ pour plus d'informations sur la manière de contacter un ingénieur commercial. 
 
 *Tableau 2. Composant facultatifs dont vous pouvez faire l'acquisition*
 
-| **Nom** | **Description** |
+| **Nom ** | **Description** |
 |----------|-----------------|
 |{{site.data.keyword.Bluemix_notm}} Local access one-time set up | Redevance unique pour déploiement et configuration de l'environnement local. |
-|{{site.data.keyword.Bluemix_notm}} Local compute resources 16 GB capacity increase | Extension des ressources de traitement d'IBM
-{{site.data.keyword.Bluemix_notm}}
-Local pour fournir une capacité mémoire supplémentaire de 16 Go. |
-|{{site.data.keyword.Bluemix_notm}} Data & Session Cache 50 GB capacity increase | Environnement permettant le déploiement et l'exécution
-d'instances Data Cache et Session Cache jusqu'à une capacité cumulée de 50 Go. |
-|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 5 Million API Calls | Environnement permettant
-l'exécution d'une version privée de {{site.data.keyword.apiconnect_short}} avec une capacité de 5 millions d'appels d'API par mois
-ciblant des projets d'API au niveau des départements de l'entreprise. |
-|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 100 thousand API Calls increase| Extension de
-l'environnement {{site.data.keyword.apiconnect_short}} Professional offrant une capacité supplémentaire de 100000  appels d'API par mois. |
-|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 25 Million API Calls | Environnement permettant
-l'exécution d'une version privée de {{site.data.keyword.apiconnect_short}} avec une capacité de 25 millions d'appels d'API par
-mois ciblant des projets d'API au niveau de l'entreprise. |
-|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 100 thousand API Calls increase | Extension de
-l'environnement {{site.data.keyword.apiconnect_short}} Enterprise offrant une capacité supplémentaire de 100000 appels d'API par mois. |
-|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} 500 API calls capacity increase | Environnement permettant l'exécution
-d'une version privée de {{site.data.keyword.APIM}} {{site.data.keyword.Bluemix_notm}}, avec une capacité de 500 appels d'API par seconde. |
+|{{site.data.keyword.Bluemix_notm}} Local compute resources 16 GB capacity increase | Extension des ressources de traitement d'IBM {{site.data.keyword.Bluemix_notm}} Local pour fournir une capacité mémoire supplémentaire de 16 Go. |
+|{{site.data.keyword.Bluemix_notm}} Data & Session Cache 50 GB capacity increase | Environnement permettant le déploiement et l'exécution d'instances Data Cache et Session Cache jusqu'à une capacité cumulée de 50 Go. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 5 Million API Calls | Environnement permettant l'exécution d'une version privée de {{site.data.keyword.apiconnect_short}} avec une capacité de 5 millions d'appels d'API par mois ciblant des projets d'API au niveau des départements de l'entreprise. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 100 thousand API Calls increase| Extension de l'environnement {{site.data.keyword.apiconnect_short}} Professional offrant une capacité supplémentaire de 100000  appels d'API par mois. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 25 Million API Calls | Environnement permettant l'exécution d'une version privée de {{site.data.keyword.apiconnect_short}} avec une capacité de 25 millions d'appels d'API par mois ciblant des projets d'API au niveau de l'entreprise. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 100 thousand API Calls increase | Extension de l'environnement {{site.data.keyword.apiconnect_short}} Enterprise offrant une capacité supplémentaire de 100000 appels d'API par mois. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} Cluster | Environnement permettant le déploiement d'un cluster de 3 noeuds du service {{site.data.keyword.cloudant}}. La capacité de données des noeuds est déterminée par l'infrastructure fournie par vous pour l'environnement local. |
-|{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local incremental increase | Environnement s'ajoutant à l'offre
-de service de base {{site.data.keyword.iot_full}} Local et permettant l'exécution d'une version privée d'{{site.data.keyword.iot_full}} dans
-l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 0,5 To d'échange de données. |
+|{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local incremental increase | Environnement s'ajoutant à l'offre de service de base {{site.data.keyword.iot_full}} Local et permettant l'exécution d'une version privée d'{{site.data.keyword.iot_full}} dans l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 0,5 To d'échange de données. |
+|IBM {{site.data.keyword.mobilepush}} Local | Environnement permettant le déploiement et l'exécution d'une instance {{site.data.keyword.mobilepush}} avec la possibilité d'accepter 300 demandes par seconde.  |
+|IBM {{site.data.keyword.mobilepush}} Local add-on instance | Environnement permettant le déploiement et l'exécution d'une instance {{site.data.keyword.mobilepush}} avec la possibilité d'accepter 300 demandes supplémentaires par seconde.  |
 
 
 **Remarque **: les composants {{site.data.keyword.Bluemix_notm}} Local peuvent indiquer une capacité configurée
@@ -120,7 +99,6 @@ service.
 |{{site.data.keyword.alertnotificationshort}}		|Oui		|Oui			|Oui		|
 |{{site.data.keyword.appseccloudshort}}		|Oui		|Oui		|Oui |
 |{{site.data.keyword.hadoopst}}			|Oui		|Non		|Non |
-|{{site.data.keyword.APIM}}			|Oui		|Oui		|Oui |
 |{{site.data.keyword.rules_short}}		|Oui		|Oui		|Oui |
 |{{site.data.keyword.cloudant}}			|Oui		|Oui		|Oui |
 |{{site.data.keyword.conceptexpansionshort}}	|Oui		|Oui		|Oui|
@@ -402,54 +380,29 @@ La phase de création permet d'établir l'environnement {{site.data.keyword.Blue
 
 | **Tâche** | **Détails de la tâche** | **Partie responsable** |
 |----------|------------------|-----------------------|
-|Définir les normes de conformité | Identifier les normes du gouvernement, de l'industrie et de l'entreprise propriétaire qui sont requises pour
-l'environnement. | Client |
-|Créer un plan d'intégration de conformité et de sécurité | Créer un plan d'intégration et de sécurité qui inclut les coûts, la planification et les
-ressources qui sont nécessaires pour assurer la conformité et la sécurité. | IBM |
+|Définir les normes de conformité | Identifier les normes du gouvernement, de l'industrie et de l'entreprise propriétaire qui sont requises pour l'environnement. | Client |
+|Créer un plan d'intégration de conformité et de sécurité | Créer un plan d'intégration et de sécurité qui inclut les coûts, la planification et les ressources qui sont nécessaires pour assurer la conformité et la sécurité. | IBM |
 |Approbation du plan de conformité | Approbation du plan de conformité. | Client |
-|Créer la taille de l'environnement |  	Créer la taille de l'environnement en fonction de choix prédéfinis qui prennent en compte les objectifs de haute
-disponibilité et de reprise après incident, ainsi que la mise à disposition initiale des services et de l'agent DEA nécessaires pour la prise en charge des
-applications créées avec la plateforme. Vous collaborez avec IBM pour définir par exemple les bases de données qui sont nécessaires, les services qui sont proposés dans le catalogue mixte du
-client, etc. | IBM et le client partagent la responsabilité |
-|Sélectionner une architecture | Sélectionner une architecture en fonction de choix prédéfinis qui prennent en compte les exigences de haute disponibilité
-et de reprise après incident. | IBM |
+|Créer la taille de l'environnement |  	Créer la taille de l'environnement en fonction de choix prédéfinis qui prennent en compte les objectifs de haute disponibilité et de reprise après incident, ainsi que la mise à disposition initiale des services et de l'agent DEA nécessaires pour la prise en charge des applications créées avec la plateforme. Vous collaborez avec IBM pour définir par exemple les bases de données qui sont nécessaires, les services qui sont proposés dans le catalogue mixte du client, etc. | IBM et le client partagent la responsabilité |
+|Sélectionner une architecture | Sélectionner une architecture en fonction de choix prédéfinis qui prennent en compte les exigences de haute disponibilité et de reprise après incident. | IBM |
 |Définir les objectifs de reprise après incident | Définir les exigences de reprise après incident pour l'environnement. | Client |
-|Créer un plan de reprise après incident | Définir le plan de reprise après incident et vous consulter. IBM crée un modèle de reprise après incident et
-vous consulte pour que vous puissiez donner votre feedback et approuver le plan. | IBM et le client partagent la responsabilité |
-|Créer un plan de sauvegarde et de reprise | Créer un plan de sauvegarde et de reprise qui définit la fréquence et les exigences pour une distribution sur
-site et hors site de la sauvegarde. IBM sauvegarde des composants de plateforme, des services IBM, des métadonnées de service incluant des rôles
-utilisateur,
-etc. Vous sauvegardez les données propres à l'application desquelles vous êtes en charge. | IBM et le client partagent la responsabilité |
-|Identifier les outils pour la détection d'événements et l'identification des problèmes. | Identifier les outils IBM et tiers utilisés pour la détection
-d'événements et l'identification des problèmes au niveau de la plateforme {{site.data.keyword.Bluemix_notm}}. | IBM |
-|Définir un plan d'escalade | Définir le plan d'escalade pour analyser les besoins et résoudre les événements détectés depuis les composants de
-surveillance. | IBM |
-|Signer des accords relatifs à l'infrastructure, la plateforme et le support | Signer le contrat d'abonnement incluant les dispositions financières pour
-l'environnement. Signer l'abonnement au support. | Client |
-|Procurer l'environnement | Procurer les ressources de traitement, le réseau et le stockage. Pour plus d'informations sur les exigences de
-l'infrastructure pour l'environnement, voir [Exigences de l'infrastructure d'un environnement Bluemix local](../local/index.html#localinfra). | Client |
+|Créer un plan de reprise après incident | Définir le plan de reprise après incident et vous consulter. IBM crée un modèle de reprise après incident et vous consulte pour que vous puissiez donner votre feedback et approuver le plan. | IBM et le client partagent la responsabilité |
+|Créer un plan de sauvegarde et de reprise | Créer un plan de sauvegarde et de reprise qui définit la fréquence et les exigences pour une distribution sur site et hors site de la sauvegarde. IBM sauvegarde des composants de plateforme, des services IBM, des métadonnées de service incluant des rôles utilisateur, etc. Vous sauvegardez les données propres à l'application desquelles vous êtes en charge. | IBM et le client partagent la responsabilité |
+|Identifier les outils pour la détection d'événements et l'identification des problèmes. | Identifier les outils IBM et tiers utilisés pour la détection d'événements et l'identification des problèmes au niveau de la plateforme {{site.data.keyword.Bluemix_notm}}. | IBM |
+|Définir un plan d'escalade | Définir le plan d'escalade pour analyser les besoins et résoudre les événements détectés depuis les composants de surveillance. | IBM |
+|Signer des accords relatifs à l'infrastructure, la plateforme et le support | Signer le contrat d'abonnement incluant les dispositions financières pour l'environnement. Signer l'abonnement au support. | Client |
+|Procurer l'environnement | Procurer les ressources de traitement, le réseau et le stockage. Pour plus d'informations sur les exigences de l'infrastructure pour l'environnement, voir [Exigences de l'infrastructure d'un environnement Bluemix local](../local/index.html#localinfra). | Client |
 |Installer la solution de réseau privé virtuel | Installer la solution de réseau privé virtuel bidirectionnelle. | IBM |
-|Installer les composants de plateforme, d'application, de surveillance et de gestion | Installer, configurer et vérifier les composants de plateforme,
-comme
-BOSH Director, le contrôleur de cloud, le gestionnaire de santé, la messagerie, les routeurs, les agents DEA et les fournisseurs de services, ainsi que les
-composants de surveillance qui sont définis dans le plan d'escalade et de détection des problèmes. | IBM |
-|Installer et configurer les composants de sécurité | Installer et configurer les composants de sécurité qui sont liés dans le plan de surveillance et
-d'escalade, notamment IBM QRadar, le coffre des identifications, le système de prévention des intrusions, IBM BigFix et IBM Security Privileged Identity
-Management. | IBM |
+|Installer les composants de plateforme, d'application, de surveillance et de gestion | Installer, configurer et vérifier les composants de plateforme, comme BOSH Director, le contrôleur de cloud, le gestionnaire de santé, la messagerie, les routeurs, les agents DEA et les fournisseurs de services, ainsi que les composants de surveillance qui sont définis dans le plan d'escalade et de détection des problèmes. | IBM |
+|Installer et configurer les composants de sécurité | Installer et configurer les composants de sécurité qui sont liés dans le plan de surveillance et d'escalade, notamment IBM QRadar, le coffre des identifications, le système de prévention des intrusions, IBM BigFix et IBM Security Privileged Identity Management. | IBM |
 |Configurer le serveur de connexion | Configurer le serveur de connexion en vue de son utilisation avec l'annuaire LDAP d'entreprise. | IBM |
-|Installer et configurer des composants personnalisés |  	Installer et configurer des composants personnalisés qui se trouvent hors de la portée du
-produit et des services {{site.data.keyword.Bluemix_notm}}. | Client |
-|Connecter le pipeline {{site.data.keyword.Bluemix_notm}} | Connecter le pipeline de distribution continue et l'intégration continue
-{{site.data.keyword.Bluemix_notm}} avec des référentiels IBM. | IBM |
+|Installer et configurer des composants personnalisés |  	Installer et configurer des composants personnalisés qui se trouvent hors de la portée du produit et des services {{site.data.keyword.Bluemix_notm}}. | Client |
+|Connecter le pipeline {{site.data.keyword.Bluemix_notm}} | Connecter le pipeline de distribution continue et l'intégration continue {{site.data.keyword.Bluemix_notm}} avec des référentiels IBM. | IBM |
 |Personnaliser les composants externes de la solution | Personnaliser les équilibreurs de charge pour les scénarios de reprise après incident. | Client |
-|Effectuer le suivi du statut des contrôles de sécurité, de conformité et d'audit  | Effectuer le suivi du statut jusqu'à ce que tous les outils et
-processus soient en place pour que la conformité identifiée soit assurée. | Client |
-|Réviser l'infrastructure physique | Réviser les locaux physiques qui hébergent les composants de la solution afin d'identifier d'éventuelles menaces et
-réviser les contrôles de sécurité pour la protection du centre de données. | Client |
-|Inspecter le logiciel de surveillance | Inspecter les composants de surveillance et de gestion tels que définis dans le plan d'escalade et
-d'identification des problèmes. | Client |
-|Inspecter le système d'exploitation | Vérifier que l'image de système d'exploitation satisfait les normes de conformité. IBM fournit l'accès à l'image de
-système d'exploitation. | IBM et le client partagent la responsabilité |
+|Effectuer le suivi du statut des contrôles de sécurité, de conformité et d'audit  | Effectuer le suivi du statut jusqu'à ce que tous les outils et processus soient en place pour que la conformité identifiée soit assurée. | Client |
+|Réviser l'infrastructure physique | Réviser les locaux physiques qui hébergent les composants de la solution afin d'identifier d'éventuelles menaces et réviser les contrôles de sécurité pour la protection du centre de données. | Client |
+|Inspecter le logiciel de surveillance | Inspecter les composants de surveillance et de gestion tels que définis dans le plan d'escalade et d'identification des problèmes. | Client |
+|Inspecter le système d'exploitation | Vérifier que l'image de système d'exploitation satisfait les normes de conformité. IBM fournit l'accès à l'image de système d'exploitation. | IBM et le client partagent la responsabilité |
 
 Ensuite vient la phase de progression. Elle décrit la relation de collaboration qui existe entre vous et IBM. Les objectifs principaux de cette phase
 sont les suivants :
@@ -463,23 +416,17 @@ sont les suivants :
 | **Tâche** | **Détails de la tâche** | **Partie responsable** |
 |----------|------------------|-----------------------|
 |Réviser les rapports de capacité hebdomadaire | Réviser les rapports de capacité hebdomadaires et prendre des mesures correctives, si nécessaire. | Client |
-|Créer des projections sur une base mensuelle | Collecter des informations et créer une projection sur une base mensuelle pour la capacité et la
-consommation. | IBM et le client partagent la responsabilité |
-|Réviser les projections de capacité | Réviser les projections de capacité car elle sont liées à des événements externes pouvant avoir un impact sur la
-capacité ainsi que sur de nouveaux déploiements anticipés des applications. Collaborer avec IBM pour réviser les projections et le plan en conséquence. | IBM et le client partagent la responsabilité |
+|Créer des projections sur une base mensuelle | Collecter des informations et créer une projection sur une base mensuelle pour la capacité et la consommation. | IBM et le client partagent la responsabilité |
+|Réviser les projections de capacité | Réviser les projections de capacité car elle sont liées à des événements externes pouvant avoir un impact sur la capacité ainsi que sur de nouveaux déploiements anticipés des applications. Collaborer avec IBM pour réviser les projections et le plan en conséquence. | IBM et le client partagent la responsabilité |
 |Ajuster la capacité |  Ajouter ou retirer de la capacité au fur et à mesure que vos besoins changent. | IBM |
 |Publier la maintenance et les mises à jour entrantes | Créer une documentation pour la maintenance requise des composants IBM. | IBM |
-|Assurer la maintenance | Communiquer avec IBM pour planifier une maintenance requise au cours d'une fenêtre de 21 jours. Vous pouvez fournir les dates qui ne vous
-conviennent pas dans la fenêtre de 30 jours ; IBM s'arrangera pour planifier la maintenance en conséquence. | IBM et le client partagent la responsabilité |
-|Echecs de mise à disposition d'adresse | Corriger les échecs de mise à disposition, le cas échéant, pour les services créés par le client qui sont
-déployés dans le catalogue. | IBM |
+|Assurer la maintenance | Communiquer avec IBM pour planifier une maintenance requise au cours d'une fenêtre de 21 jours. Vous pouvez fournir les dates qui ne vous conviennent pas dans la fenêtre de 30 jours ; IBM s'arrangera pour planifier la maintenance en conséquence. | IBM et le client partagent la responsabilité |
+|Echecs de mise à disposition d'adresse | Corriger les échecs de mise à disposition, le cas échéant, pour les services créés par le client qui sont déployés dans le catalogue. | IBM |
 |Effectuer une analyse réseau et IP | Effectuer des analyses réseau et IP quotidiennement et mensuellement. | IBM et le client partagent la responsabilité |
 |Fournir l'accès aux journaux d'audit | Fournit l'accès à tous les journaux d'audit de sécurité et d'administration   | IBM et le client partagent la responsabilité |
 |Mener le test | Tester régulièrement les contrôles clés des opérations et effectuer un test de pénétration tiers. | IBM et le client partagent la responsabilité |
-|Génération de rapports sur le statut, coordination de l'audit et réunions sur la conformité  | Assurer la génération de rapports sur le statut, la
-coordination d'audit externe et la représentation dans des réunions sur le statut des examens de conformité. | IBM |
-|Attestation d'emploi et vérification des besoins d'affaires | Effectuer l'attestation d'emploi trimestrielle et la vérification des besoins d'affaires
-continus pour les interlocuteurs IBM qui ont accès à l'environnement client. | IBM |
+|Génération de rapports sur le statut, coordination de l'audit et réunions sur la conformité  | Assurer la génération de rapports sur le statut, la coordination d'audit externe et la représentation dans des réunions sur le statut des examens de conformité. | IBM |
+|Attestation d'emploi et vérification des besoins d'affaires | Effectuer l'attestation d'emploi trimestrielle et la vérification des besoins d'affaires continus pour les interlocuteurs IBM qui ont accès à l'environnement client. | IBM |
 |Résolution des vulnérabilités en matière de sécurité | Résoudre les vulnérabilités signalées en matière de sécurité sur la plateforme. | IBM |
 
 L'étape finale d'achèvement représente la fin de la relation entre vous et {{site.data.keyword.Bluemix_notm}}. Les tâches principales de
@@ -520,7 +467,7 @@ stockage et des ressources en plusieurs machines virtuelles. Choisissez la combi
 condition que le nombre minimal de coeurs physiques par couche ESXi
 soit huit. Les spécifications suivantes s'appliquent au contexte d'exécution {{site.data.keyword.Bluemix_notm}} de base seulement :
 <ul>
-<li>32 coeurs physiques à 2 Ghz ou plus chacun </li>
+<li>32 coeurs physiques à 2 Ghz ou plus chacun</li>
 <li>512 Go de mémoire RAM physique</li>
 <li>Taille totale de magasin de données de 7,5 To
 <ul>
@@ -533,9 +480,9 @@ soit huit. Les spécifications suivantes s'appliquent au contexte d'exécution {
 </dd>
 <dt>**Haute disponibilité**</dt>
 <dd>
-Pour pouvoir prendre en charge une défaillance de noeud unique, vous devez disposer de n+1 couches ESXi. Par exemple, si les 32 coeurs et les 512 Go de mémoire sont obtenus à l'aide de deux coeurs 16x et serveurs ESXi 256 Go, vous avez besoin de ces trois de ces serveurs pour prendre en charge la panne totale d'un seul noeud.
+Pour pouvoir prendre en charge une défaillance de noeud unique, vous devez disposer de n+1 couches ESXi. Par exemple, si les 32 coeurs et les 512 Go de mémoire sont obtenus à l'aide de deux coeurs 16x et serveurs ESXi 256 Go, vous avez besoin de ces trois de ces serveurs pour prendre en charge la panne totale d'un seul noeud. 
 <p><strong>Remarque :</strong> l'administrateur VMware du client peut décider d'appliquer une reprise en ligne à haute disponibilité stricte dans le cluster
-afin de garantir les ressources. Si vous choisissez de poursuivre sans la reprise à haute disponibilité, vous pouvez répondre aux exigences de ressource minimum de 32 coeurs et 512 Go. </p>
+afin de garantir les ressources. Si vous choisissez de poursuivre sans la reprise à haute disponibilité, vous pouvez répondre aux exigences de ressource minimum de 32 coeurs et 512 Go.</p>
 </dd>
 <dt>**Réseau**</dt>
 <dd>
@@ -701,7 +648,7 @@ avec les versions ESXi et vCenter les plus récentes. Cependant, les versions ES
 les plus récentes peuvent ne pas être prises en charge pendant de courtes périodes. Avant toute mise à jour, reportez-vous à la section Exigences de l'infrastructure
 [Local](../local/index.html#localinfra) pour connaître les versions les plus récentes compatibles.
 
-## Réponse aux incidents et support
+## Réponse aux incidents et support pour l'environnement {{site.data.keyword.Bluemix_notm}} local 
 {: #incidentresponse}
 
 ### Problèmes détectés par le client
@@ -735,7 +682,7 @@ sont traités du dimanche 22h00
 GMT au samedi 12h00 GMT. Pour plus d'informations sur la gravité des tickets de demande de service et la collaboration avec le support, voir
 <a href="../support/index.html#contacting-bluemix-support-local">Contacter le service de support</a>.
 
-## Reprise après incident
+## Reprise après incident pour l'environnement {{site.data.keyword.Bluemix_notm}} local 
 {: #dr}
 
 La reprise après incident pour l'environnement {{site.data.keyword.Bluemix_short}} local peut être configurée de la même façon que dans

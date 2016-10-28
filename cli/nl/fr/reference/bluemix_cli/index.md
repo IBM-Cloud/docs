@@ -2353,7 +2353,7 @@ bluemix ic group-update [--min NOMBRE_MIN_INSTANCES] [--max NOMBRE_MAX_INSTANCES
    <dd>Nombre d'instances dont vous avez besoin. La valeur par défaut est <i>2</i>.</dd>
    </dl>
 
-**Astuce :** vous ne pouvez spécifier qu'une seule des options suivantes à la fois : `--min NOMBRE_MIN_INSTANCES`, `--max NOMBRE_MAX_INSTANCES` ou `--desired NOMBRE_INSTANCES_SOUHAITE`. 
+**Astuce :** vous ne pouvez spécifier qu'une seule des options suivantes à la fois : `--min NOMBRE_MIN_INSTANCES`, `--max NOMBRE_MAX_INSTANCES` ou `--desired NOMBRE_INSTANCES_SOUHAITE`.
 
    <dl>
    <dt>-e <i>CLE_ENV=VAL_ENV</i>(facultatif)</dt>
@@ -2493,7 +2493,7 @@ bluemix ic ips [-q]
 
    <dl>
    <dt>-q (facultatif)</dt>
-   <dd>Répertorie uniquement les adresses IP, sans les ID des conteneurs qui sont liés à ces adresses IP. </dd>
+   <dd>Répertorie uniquement les adresses IP, sans les ID des conteneurs qui sont liés à ces adresses IP.</dd>
    </dl>
 
 
@@ -2519,7 +2519,7 @@ bluemix ic ip-request [-q]
 
    <dl>
    <dt>-q (facultatif)</dt>
-   <dd>Répertorie uniquement les adresses IP, sans les ID des conteneurs qui sont liés à ces adresses IP. </dd>
+   <dd>Répertorie uniquement les adresses IP, sans les ID des conteneurs qui sont liés à ces adresses IP.</dd>
    </dl>
 
 
@@ -2801,7 +2801,7 @@ bluemix ic rename ANCIEN_NOM NOUVEAU_NOM
 
 <dl>
    <dt>ANCIEN_NOM (requis)</dt>
-   <dd>Ancien nom du conteneur. </dd>
+   <dd>Ancien nom du conteneur.</dd>
    <dt>NOUVEAU_NOM (requis)</dt>
    <dd>Nouveau nom du conteneur.</dd>
    </dl>
@@ -2809,9 +2809,9 @@ bluemix ic rename ANCIEN_NOM NOUVEAU_NOM
 ## bluemix ic reprovision
 {: #bluemix_ic_reprovision}
 
-Recrée le service IBM Containers dans l'espace Bluemix auquel vous êtes connecté. Le quota d'origine pour l'espace est conservé. 
+Recrée le service IBM Containers dans l'espace Bluemix auquel vous êtes connecté. Le quota d'origine pour l'espace est conservé.
 
-<strong>Important</strong> : lorsque vous exécutez cette commande, vos conteneurs et groupes de conteneurs contenus dans cet espace ne sont pas migrés vers l'espace qui est remis à disposition et ils sont tous retirés lors du processus de migration. Les images et les volumes ne sont pas concernés. 
+<strong>Important</strong> : lorsque vous exécutez cette commande, vos conteneurs et groupes de conteneurs contenus dans cet espace ne sont pas migrés vers l'espace qui est remis à disposition et ils sont tous retirés lors du processus de migration. Les images et les volumes ne sont pas concernés.
 
 ```
 bluemix ic reprovision [--force|-f] [NOM_ENVIRONNEMENT]
@@ -2820,7 +2820,7 @@ bluemix ic reprovision [--force|-f] [NOM_ENVIRONNEMENT]
 
 <dl>
    <dt>--force|-f (facultatif)</dt>
-   <dd>Force la recréation du service IBM Containers dans l'espace Bluemix. </dd>
+   <dd>Force la recréation du service IBM Containers dans l'espace Bluemix.</dd>
    <dt>NOM_ENVIRONNEMENT (facultatif)</dt>
    <dd>Nom de l'environnement IBM Containers dans lequel vos conteneurs sont déployés. Si aucun nom d'environnement n'est spécifié, l'environnement par défaut défini pour la région est utilisé.</dd>
    </dl>
@@ -2828,9 +2828,9 @@ bluemix ic reprovision [--force|-f] [NOM_ENVIRONNEMENT]
 ## bluemix ic unprovision
 {: #bluemix_ic_unprovision}
 
-Supprime le service IBM Containers de l'espace Bluemix auquel vous êtes connecté. 
+Supprime le service IBM Containers de l'espace Bluemix auquel vous êtes connecté.
 
-<strong>Attention</strong> : lorsque vous exécutez cette commande, tous vos conteneurs et groupes de conteneurs sont perdus. Votre espace est toujours disponible dans Bluemix. Pour recommencer à utiliser le service IBM Containers, vous devez exécuter bluemix ic provision pour remettre à disposition ce service. 
+<strong>Attention</strong> : lorsque vous exécutez cette commande, tous vos conteneurs et groupes de conteneurs sont perdus. Votre espace est toujours disponible dans Bluemix. Pour recommencer à utiliser le service IBM Containers, vous devez exécuter bluemix ic provision pour remettre à disposition ce service.
 
 ```
 bluemix ic reprovision [--force|-f] 
@@ -2839,7 +2839,7 @@ bluemix ic reprovision [--force|-f]
 
 <dl>
    <dt>--force|-f (facultatif)</dt>
-   <dd>Force la suppression de Bluemix dans l'espace Bluemix. </dd>
+   <dd>Force la suppression de Bluemix dans l'espace Bluemix.</dd>
  </dl>
  
 ## bluemix ic restart
@@ -3253,16 +3253,16 @@ bluemix ic top mon_conteneur
 ## bluemix ic service-bind
 {: #bluemix_ic_service-bind}
 
-Ajout d'un service à un groupe de conteneurs en cours d'exécution. Cette commande est disponible uniquement pour les groupes de conteneurs. Les conteneurs doivent être liés à un service via la commande bluemix ic run.  
+Ajout d'un service à un groupe de conteneurs en cours d'exécution. Cette commande est disponible uniquement pour les groupes de conteneurs. Les conteneurs doivent être liés à un service via la commande bluemix ic run. 
 
 ```
-bluemix ic service-bind NOM_GROUPE INSTANCE_SERVICE
+bluemix ic service-bind NOM_GROUPE INSTANCE_SERVICE 
 ```
 <strong>Options de commande</strong> :
 
    <dl>
    <dt>NOM_GROUPE (requis)</dt>
-   <dd>ID ou nom du groupe. </dd>
+   <dd>ID ou nom du groupe.</dd>
    
    <dt>INSTANCE_SERVICE (requis)</dt>
    <dd>Nom de l'instance de service qui doit être ajouté au groupe de conteneurs.</dd>
@@ -3276,13 +3276,13 @@ Suppression d'un service dans un groupe de conteneurs en exécution. Cette comma
 uniques, vous devez supprimer le conteneur et en créer un nouveau sans le service.
 
 ```
-bluemix ic service-unbind NOM_GROUPE INSTANCE_SERVICE
+bluemix ic service-unbind NOM_GROUPE INSTANCE_SERVICE 
 ```
 <strong>Options de commande</strong> :
 
    <dl>
    <dt>NOM_GROUPE (requis)</dt>
-   <dd>ID ou nom du groupe. </dd>
+   <dd>ID ou nom du groupe.</dd>
    
    <dt>INSTANCE_SERVICE (requis)</dt>
    <dd>Nom de l'instance de service qui doit être ajouté au groupe de conteneurs.</dd>
@@ -3398,7 +3398,7 @@ bluemix ic volume-space-add NOM_VOLUME NOM_ESPACE [NOM_ESPACE2 [...]]
    <dd>Nom du volume.</dd>
    
    <dt>NOM_ESPACE (requis)</dt>
-   <dd>Nom de l'espace. </dd>
+   <dd>Nom de l'espace.</dd>
    </dl>
    
 ## bluemix ic volume-space-remove
@@ -3419,7 +3419,7 @@ bluemix ic volume-space-remove NOM_VOLUME NOM_ESPACE [NOM_ESPACE2 [...]]
    <dd>Nom du volume.</dd>
    
    <dt>NOM_ESPACE (requis)</dt>
-   <dd>Nom de l'espace. </dd>
+   <dd>Nom de l'espace.</dd>
    </dl>
 
 
@@ -3551,8 +3551,7 @@ bluemix ic wait mon_conteneur
 {: #bluemix_ic_wait_status}
 
 Indique d'attendre qu'un conteneur unique ou un groupe de conteneurs passe à un état non transitoire. Pendant cette attente, la ligne de commande ne renvoie pas de résultat et vous ne pouvez pas entrer de
-commandes. Dès que le conteneur passe à un état non transitoire, un message OK s'affiche.
-Pour les conteneurs uniques, les états non transitoires sont notamment les suivants : En cours d'exécution, Arrêt, En panne, En pause ou Suspendu. Pour les groupes de conteneurs, les états non transitoires sont notamment les suivants : CREATE_COMPLETE, UPDATE_COMPLETE ou FAILED
+commandes. Dès que le conteneur passe à un état non transitoire, un message OK s'affiche. Pour les conteneurs uniques, les états non transitoires sont notamment les suivants : En cours d'exécution, Arrêt, En panne, En pause ou Suspendu. Pour les groupes de conteneurs, les états non transitoires sont notamment les suivants : CREATE_COMPLETE, UPDATE_COMPLETE ou FAILED
 
 ```
 bluemix ic wait-status CONTENEUR

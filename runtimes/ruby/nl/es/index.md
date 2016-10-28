@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*Última actualización: 06 de julio de 2016*
+Última actualización: 06 de julio de 2016
 {: .last-updated}
 
 El tiempo de ejecución de Ruby en {{site.data.keyword.Bluemix}} está basado en el ruby_buildpack.

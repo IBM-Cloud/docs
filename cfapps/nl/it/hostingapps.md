@@ -305,7 +305,7 @@ Foundry.
 ## Link correlati
 {: #general}
 
-* [IBM Containers](../containers/container_cli_ov.html)
+* [IBM Containers](../containers/container_index.html)
 * [Virtual Machine](../virtualmachines/vm_index.html)
 * [Introduzione a Delivery Pipeline](../services/DeliveryPipeline/index.html)
 * [Distribuzione di applicazioni con IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)

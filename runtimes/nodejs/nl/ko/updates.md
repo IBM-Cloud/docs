@@ -11,10 +11,19 @@ copyright:
 # sdk-for-nodejs 빌드팩의 최신 업데이트
 {: #latest_updates}
 
-*마지막 업데이트 날짜: 2016년 7월 18일*
+마지막 업데이트 날짜: 2016년 8월 26일
 {: .last-updated}
 
 sdk-for-nodejs 빌드팩의 최신 업데이트 목록
+## 2016년 8월 26일: 업데이트된 Node.js 빌드팩 v3.7-20160826-1101
+이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2 및 6.4.0을 지원합니다. 기본 버전은 이제 4.5.0입니다.
+
+이 릴리스는 버그 수정([Cloud Foundry의 Node.js 빌드팩 1.5.18](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18)의 버그 수정 포함)을 포함합니다. 
+
+이 릴리스에서는 [Bluemix Node.js 빌드팩 v3.3 – FIPS 모드 및 그 외](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/)에 공지된 대로 strongpm 앱 관리 핸들러에 대한 지원이 제거되었습니다. 
+
+Node.js 6.x와 [개발 모드](../../manageapps/app_mng.html#devmode)를 사용할 때 알려진 문제가 있음에 주의하십시오. 개발 모드를 사용하려면 먼저 임시 해결책으로서 개발 모드를 사용 가능하게 설정한 후 애플리케이션을 다시 스테이징해야 합니다. 
+
 ## 2016년 7월 22일: 업데이트된 Node.js 빌드팩 v3.6-20160715-0749
 이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 및 6.2.2를 지원합니다. 현재 기본 버전은 4.4.7입니다.
 
@@ -157,8 +166,8 @@ Node.js v2.6.1은 [StrongPM 앱 관리 핸들러](https://developer.ibm.com/blue
 ##  2015년 4월 2일: 업데이트된 Node.js 빌드팩 v1.15-20150331-2231
 
 * Node.js 빌드팩에는 세 개의 새로운 기능이 있으며 사용자가 데스크탑에 있는 것과 같이 다시 배치하지 않고 Bluemix에서 신속하게 개발하도록 도움을 줍니다. 
-  * 데스크탑 동기화: (Windows) 데스크탑 트리를 클라우드 기반 프로젝트 작업공간과 동기화합니다. 
-  * 라이브 편집: Bluemix에서 실행 중인 Node.js 애플리케이션을 변경하고 브라우저에서 즉시 테스트할 수 있습니다. 
+  * Desktop Sync: (Windows) 데스크탑 트리를 클라우드 기반 프로젝트 작업공간과 동기화합니다. 
+  * Live Edit: Bluemix에서 실행 중인 Node.js 애플리케이션을 변경하고 브라우저에서 즉시 테스트할 수 있습니다. 
   * 디버그: 환경으로 쉘(shell)하여 디버그합니다! 노드 검사기 디버거를 사용하여 코드의 동적 편집, 중단점 삽입, 코드 스텝 스루, 런타임 다시 시작 등을 수행할 수 있습니다. 
   * 자세한 정보는 [앱 관리](../../manageapps/app_mng.html#Utilities)를 참조하십시오. 
 * [Cloud Foundry의 Node.js 빌드팩](https://github.com/cloudfoundry/nodejs-buildpack)에서 최신 변경사항을 가져왔습니다. 이러한 변경은 커뮤니티에서 작성한 몇 가지 버그 수정 및 개선사항과 함께 제공됩니다. 

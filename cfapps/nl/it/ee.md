@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  anni: 2015, 2016
 
  
 
@@ -18,7 +18,7 @@ copyright:
 # Scenario: sviluppo end-to-end
 {: #ee}
 
-*Ultimo aggiornamento: 15 giugno 2016*
+*Ultimo aggiornamento: 16 agosto 2016*
 {: .last-updated}
 
 Puoi utilizzare l'interfaccia utente, la piattaforma e una selezione di strumenti {{site.data.keyword.Bluemix}}
@@ -54,7 +54,7 @@ per una bassa latenza di rete, riservatezza dei dati e maggiore disponibilità. 
 
 Per questo scenario, vuoi distribuire un'applicazione Web che utilizza Node.js. Supponiamo che ti trovi negli Stati Uniti così come la maggior parte degli utenti della
 tua applicazione. Decidi di creare ed eseguire la tua applicazione vicino alla base
-dei tuoi utenti, in modo da poter usufruire di una più bassa latenza di rete. Una volta effettuato l'accesso a {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto** ![Icona Account e supporto](../admin/images/account_support.svg), quindi seleziona la regione **Stati Uniti Sud**. Puoi quindi attenerti alla seguente procedura per creare un'applicazione:
+dei tuoi utenti, in modo da poter usufruire di una più bassa latenza di rete. Dopo che ti sei collegato a {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg), quindi seleziona la regione **Stati Uniti Sud**. Puoi quindi attenerti alla seguente procedura per creare un'applicazione:
 
   1. Seleziona **Calcola**.
   2. Fai clic sull'icona Più.
@@ -251,7 +251,7 @@ informazioni nel seguente modo:
   ```
   if (process.env.VCAP_SERVICES) {
         var env = JSON.parse(process.env.VCAP_SERVICES);
-        var cloudant = env['"cloudantNoSQLDB'][0].credentials;
+        var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
                 "username" : "user1",

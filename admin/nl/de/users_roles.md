@@ -20,7 +20,7 @@ copyright:
 Letzte Aktualisierung: 16. August 2016
 {: .last-updated}
 
-Auf der Seite **Teamverzeichnis** für Ihr Konto können Sie vorhanden Teammitglieder und deren Rollen in Ihrer Organisation und in Bereichen verwalten sowie neue Teammitglieder einladen. Um auf das Teamverzeichnis für Ihr Konto zuzugreifen, klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teamverzeichnis**.
+Auf der Seite **Teamverzeichnis** für Ihr Konto können Sie vorhanden Teammitglieder und deren Rollen in Ihrer Organisation und in Bereichen verwalten sowie neue Teammitglieder einladen. Um auf das Teamverzeichnis für Ihr Konto zuzugreifen, klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teamverzeichnis**. 
 {:shortdesc}
 
 Kontoeigner führen alle Operationen für Organisationen und Bereiche einschließlich der Verwaltung der Teammitglieder und der ihnen zugeordneten Rollen aus. Organisationsmanager können Teammitglieder einladen und Rollen verwalten. Bereichsmanager können die Seite **Organisationen verwalten** verwenden, um vorhandene Kontomitglieder zum Bereich hinzuzufügen und deren Rollen anzupassen. Lesen Sie die folgenden Informationen, um mehr über Rollen zu erfahren.
@@ -64,13 +64,13 @@ Die folgenden Rollen können auf Bereichsebene zugeordnet werden:
 ## Sichtbarkeit des Teamverzeichnisses anpassen
 {: #teamdirectoryvisibility}
 
-Abhängig von der Konfiguration der {{site.data.keyword.Bluemix_notm}}-Konten und -Organisationen kann es sinnvoll sein, die Sichtbarkeit des Teamverzeichnisses der Teamverzeichnisseite zu ändern. Standardmäßig können alle Teammitglieder die gesamte Liste der Kontoteammitglieder anzeigen, einschließlich aller Mitglieder aller Organisationen in diesem Konto. Es kann sein, dass die Sichtbarkeit der Teamverzeichnisseite aus Datenschutz- oder Sicherheitsgründen angepasst werden muss. Es gibt zwei Optionen zum Einstellen der Sichtbarkeit der Teamverzeichnisseite: alle Teammitglieder oder nur Sie als Kontoeigner. 
+Abhängig von der Konfiguration der {{site.data.keyword.Bluemix_notm}}-Konten und -Organisationen kann es sinnvoll sein, die Sichtbarkeit des Teamverzeichnisses der Teamverzeichnisseite zu ändern. Standardmäßig können alle Teammitglieder die gesamte Liste der Kontoteammitglieder anzeigen, einschließlich aller Mitglieder aller Organisationen in diesem Konto. Es kann sein, dass die Sichtbarkeit der Teamverzeichnisseite aus Datenschutz- oder Sicherheitsgründen angepasst werden muss. Es gibt zwei Optionen zum Einstellen der Sichtbarkeit der Teamverzeichnisseite: alle Teammitglieder oder nur Sie als Kontoeigner.
 
-Führen Sie die folgenden Schritte aus, um die Sichtbarkeit der Teamverzeichnisseite zu ändern: 
+Führen Sie die folgenden Schritte aus, um die Sichtbarkeit der Teamverzeichnisseite zu ändern:
 
 1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Teamverzeichnis**. 
-2. Klicken Sie zur Verwendung der Option **Sichtbarkeit für** auf die aktuelle Auswahl zum Anzeigen der Optionen. 
-3. Wählen Sie anschließend abhängig von den aktuellen Anforderungen an das Konto **Alle** oder **Nur für mich** aus. 
+2. Klicken Sie zur Verwendung der Option **Sichtbarkeit für** auf die aktuelle Auswahl zum Anzeigen der Optionen.
+3. Wählen Sie anschließend abhängig von den aktuellen Anforderungen an das Konto **Alle** oder **Nur für mich** aus.
 
 ## Teammitglieder einladen
 {: #inviteteammembers}

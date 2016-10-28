@@ -2,14 +2,12 @@
 
 copyright:
   years: 2016
+lastupdated:  "2016-09-12"
 
 ---
 
 #	Using the Developer plan
 {: #using_mobilefoundation_p1}
-
-Last updated: 12 September 2016
-{: .last-updated}
 
 After you create the {{site.data.keyword.mobilefoundation_short}}: Developer service instance, in a few seconds, you can access the `Overview` page on {{site.data.keyword.Bluemix_notm}}, which provides you tutorials and videos to help you get started with the  {{site.data.keyword.mobilefoundation_short}} service.
 
@@ -47,7 +45,7 @@ The process of provisioning starts. This process takes about 10 minutes, and a m
 
 * Single sign-on is enabled between the {{site.data.keyword.mfserver_short_notm}} and the Mobile Analytics server. Mobile Analytics server is configured with the same LTPA keys and user credentials as the {{site.data.keyword.mfserver_short_notm}}. You can use the same `username` and `password` to log in to the Mobile Analytics console as used to log in to the {{site.data.keyword.mfp_oc_short_notm}}.
 
-For more information on MobileFirst Analytics you can refer to [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/).
+For more information on MobileFirst Analytics you can refer to [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
 
 **Note:** The Mobile Analytics server is removed when you delete the {{site.data.keyword.mobilefoundation_short}} service instance or when you attempt to re-create the {{site.data.keyword.mfserver_short_notm}}.
 

@@ -11,7 +11,7 @@ copyright:
 # Dynatrace verwenden
 {: #using_dynatrace}
 
-*Letzte Aktualisierung: 10. Juni 2016*
+Letzte Aktualisierung: 10. Juni 2016
 {: .last-updated}
 
 Bei Dynatrace handelt es sich um einen Service eines anderen Anbieters, der Überwachungsmetriken für Ihre App bereitstellt.
@@ -78,7 +78,7 @@ zusätzlichen Konfigurationsschritte erforderlich.
 
 ### Dynatrace-Agent hosten
 {: #hosting_dynatrace_agent}
-Der Dynatrace-Agent muss als Host einen Web-Server haben und das Liberty-Buildpack muss die JAR-Datei des Agenten von diesem Server herunterladen können. Der Server muss mit einer 'index.yml-Datei konfiguriert werden, die Details zu der JAR-Datei des Agenten angibt. Führen Sie die Schritte aus, die im Folgenden für die Konfiguration des Dynatrace-Agenten angegeben sind:
+Der Dynatrace-Agent muss als Host einen Web-Server haben und das Liberty-Buildpack muss die JAR-Datei des Agenten von diesem Server herunterladen können. Der Server muss mit einer 'index.yml'-Datei konfiguriert werden, die Details zu der JAR-Datei des Agenten angibt. Führen Sie die Schritte aus, die im Folgenden für die Konfiguration des Dynatrace-Agenten angegeben sind:
   1. Laden Sie die JAR-Datei des Dynatrace-Agenten herunter. Lesen Sie [Dynatrace Server Platform Installers](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace) auf der Website der Dynatrace-Community, um Anweisungen zum Herunterladen der JAR-Datei des Dynatrace-Agenten zu erhalten. Die entsprechende JAR-Datei des Agenten für die Ausführung in Bluemix ist **dynatrace-agent-unix.jar** Version **6.+**.
   2. Hosten Sie die JAR-Datei des Agenten an einer Position, von der das Liberty-Buildpack sie herunterladen kann. Sie können sie mithilfe einer beliebigen verfügbaren Serverfunktion in Bluemix selbst hosten oder Sie können sie an einer öffentlich verfügbaren Position hosten.
      * Stellen Sie sicher, dass Sie an der Hostingposition eine index.yml-Datei bereitstellen. Die Datei 'index.yml' muss einen Eintrag enthalten, der aus der Versions-ID der JAR-Datei des Agenten besteht, auf die ein Semikolon und die vollständige URL der Position folgt, an der sich diese JAR-Datei des Agenten befindet. Beispiel:

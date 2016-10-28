@@ -12,7 +12,7 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*마지막 업데이트 날짜: 2016년 7월 7일*
+마지막 업데이트 날짜: 2016년 8월 29일
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}}의 Node.js 런타임은 sdk-for-nodejs 빌드팩을 통해 제공됩니다. sdk-for-nodejs 빌드팩은 Node.js 앱을 위한 완전한 런타임 환경을 제공합니다.
@@ -119,7 +119,7 @@ NPM은 사용자 node_modules가 설치되기 전과 후에 적용되는 **prein
 
 ### 캐시 작동
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}}는 노드 애플리케이션당 캐시 디렉토리를 유지보수하며, 이는 빌드 사이에서 지속됩니다. 캐시는 해결된 종속 항목을 저장하므로 이러한 항목은 앱이 배치될 때마다 다운로드 및 설치되지 않습니다. 예를 들어 myapp이 **express**에 종속된다고 가정합니다. myapp을 처음 배치할 때 **expess** 모듈이 다운로드됩니다. 이후에 myapp을 배치할 때는 **express**의 캐시된 인스턴스가 사용됩니다. 기본 동작은 NPM에서 설치한 모든 node_modules와 bower에서 설치한 bower_components를 캐시하는 것입니다. 
+{{site.data.keyword.Bluemix}}는 노드 애플리케이션당 캐시 디렉토리를 유지보수하며, 이는 빌드 사이에서 지속됩니다. 캐시는 해결된 종속 항목을 저장하므로 이러한 항목은 앱이 배치될 때마다 다운로드 및 설치되지 않습니다. 예를 들어 myapp이 **express**에 종속된다고 가정합니다. 그러면 처음 myapp을 배치할 때 **express** 모듈이 다운로드됩니다. 이후에 myapp을 배치할 때는 **express**의 캐시된 인스턴스가 사용됩니다. 기본 동작은 NPM에서 설치한 모든 node_modules와 bower에서 설치한 bower_components를 캐시하는 것입니다. 
 
 Node 빌드팩이 이전 빌드의 캐시를 사용할지 또는 무시할지를 판별하려면 NODE_MODULES_CACHE 변수를 사용하십시오. 기본값은 true입니다. 캐싱을 사용 안함으로 설정하려면 NODE_MODULES_CACHE를 false로 설정하십시오. 예를 들어 cf 명령행을 사용하는 경우 다음과 같습니다.
 
@@ -257,7 +257,7 @@ Node.js 버전 6과 함께 FIPS 모드를 실행하려면 **FIPS_MODE=true**로 
 
 Bluemix는 여러 버전의 Node.js 빌드팩을 제공합니다. 
 * IBM 작성 **sdk-for-nodejs** 빌드팩은 Bluemix의 Node.js 애플리케이션에 사용되는 기본 빌드팩입니다. 
-* **nodejs_buildpack**은 Cloud Foundry 커뮤니티에서 제공되는 외부 빌드팩입니다. 
+* **nodejs_buildpack**은 Cloud Foundry 커뮤니티에서 제공하는 커뮤니티 빌드팩입니다. 
 
 **sdk-for-nodejs** 빌드팩은 Bluemix의 **nodejs_buildpack**에 우선합니다. 애플리케이션에 **sdk-for-nodejs** 대신 **nodejs_buildpack**을 사용하려면 사용자 빌드팩을 지정해야 합니다. 예를 들어 **cf push** 명령에서 -b 옵션을 사용하여 지정하십시오. 
 
@@ -279,4 +279,4 @@ sdk_for_nodejs                            2          true      false    buildpac
 * [Node.js 빌드팩의 최신 업데이트](../../runtimes/nodejs/updates.html)
 * [앱 관리](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
-* [StrongLoop](https://strongloop.com)
+* [IBM API Connect](https://strongloop.com/)

@@ -11,7 +11,7 @@ copyright:
 # Utilisation de Dynatrace
 {: #using_dynatrace}
 
-*Dernière mise à jour : 10 juin 2016*
+Dernière mise à jour : 10 juin 2016
 {: .last-updated}
 
 Dynatrace est un service tiers qui offre une fonction de surveillance pour votre appli.

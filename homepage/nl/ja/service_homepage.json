@@ -43,6 +43,11 @@
     "category_id": "devops"
   }, {
     "type": "extra",
+    "title": "Dedicated GitHub Enterprise の試行",
+    "href": "services/ghededicated/index.html",
+    "category_id": "devops"
+  }, {
+    "type": "extra",
     "title": "Bluemix Mobile ダッシュボードの試行",
     "href": "mobile/index.html",
     "category_id": "モバイル"

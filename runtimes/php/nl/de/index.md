@@ -11,7 +11,7 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*Letzte Aktualisierung: 06. Juli 2016*
+Letzte Aktualisierung: 06. Juli 2016
 {: .last-updated}
 
 Die Laufzeit von PHP in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'php_buildpack'.

@@ -12,7 +12,7 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-*Última atualização: 30 de maio de 2016*
+Última atualização: 30 de maio de 2016
 
 O tempo de execução ASP.NET Core no {{site.data.keyword.Bluemix}} é desenvolvido com o buildpack ASP.NET Core. O ASP.NET Core
 é uma estrutura de software livre modular para a construção de aplicativos da web .NET.
@@ -41,7 +41,7 @@ Controle a versão da CLI .NET com um global.json opcional no diretório raiz do
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview1-002702"
+        "version": "1.0.0-preview2-003121"
       }
    }
 ```
@@ -72,11 +72,16 @@ Para corresponder com mais exatidão como o aplicativo é executado no Bluemix, 
 A ferramenta Yeoman pode ser usada para gerar novos modelos de projeto, conforme descrito em
 [Construindo projetos com o Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
+Para obter informações sobre como desenvolver localmente usando o Visual Studio,
+consulte [Desenvolvendo com o Visual Studio](../../starters/deploy_vs.html){: new_window}.
+
 ## Enviando por push um aplicativo publicado
 
 Se você quiser que seu aplicativo contenha todos os binários necessários para que o buildpack não faça download de
-qualquer binário externo, será possível enviar por push um aplicativo *autocontido* publicado.  Consulte [Tipos de portabilidade no .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}
-para obter mais informações sobre aplicativos autocontido.
+qualquer binário externo, será possível enviar por push um aplicativo *autocontido* publicado.  Consulte
+[Tipos de
+app .NET Core](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window} para obter mais informações sobre
+aplicativos autocontidos.
 
 Para publicar um aplicativo, emita um comando como:
 ```
@@ -125,7 +130,7 @@ este seja um projeto xproj, também poderia ser especificado como
 ```
 {: codeblock}
 
-## Usando amostras do repositório de amostras da cli e modelo do Visual Studio
+## Configurando seu aplicativo para atender na porta adequada
 
 O buildpack executará seu aplicativo com o comando *dotnet run* e
 passará o argumento de linha de comandos da seguinte forma
@@ -148,20 +153,33 @@ São necessárias modificações no método Main, conforme observado pelos comen
     var config = new ConfigurationBuilder() //ADD THESE 3 LINES AT THE TOP OF THE MAIN METHOD
         .AddCommandLine(args)
         .Build();
-    
+
     var host = new WebHostBuilder()
         .UseKestrel()
         .UseConfiguration(config) //ADD THIS LINE BEFORE 'UseStartup'
-        .UseStartup&lt;Startup&gt;()  
+        .UseStartup&lt;Startup&gt;()
         .Build();
     host.Run();
 }
-</pre>  
+</pre>
 {: codeblock}
 
 Inclua a dependência a seguir no project.json: 
 ```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+```
+{: codeblock}
+
+Inclua a propriedade a seguir na seção `buildOptions` de project.json:
+```
+  "copyToOutput": {
+    "include": [
+      "wwwroot",
+      "Areas/**/Views",
+      "Views",
+      "appsettings.json"
+    ]
+  }
 ```
 {: codeblock}
 
@@ -170,6 +188,26 @@ Inclua uma instrução *using* no arquivo que contém seu método Main:
   using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
+
+No método Startup.cs `Startup`, remova a linha a seguir:
+```
+  .SetBasePath(env.ContentRootPath)
+```
+{: codeblock}
+
+No método Program.cs `Main`, remova a linha a seguir:
+```
+  .UseContentRoot(Directory.GetCurrentDirectory())
+```
+{: codeblock}
+
+Essas mudanças devem permitir que a CLI .NET localize as `Views`
+do seu aplicativo, uma vez que elas agora serão copiadas na saída de construção quando o
+comando `dotnet run` for executado. Se seu aplicativo tiver qualquer
+outro arquivo, como arquivos de configuração json, que são necessários no tempo de
+execução, também será necessário incluí-los na seção
+`include` de
+`copyToOutput` no arquivo project.json.
 
 # rellinks
 {: #rellinks}

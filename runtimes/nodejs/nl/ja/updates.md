@@ -11,10 +11,19 @@ copyright:
 # sdk-for-nodejs ビルドパックに対する最新の更新
 {: #latest_updates}
 
-*最終更新日: 2016 年 7 月 18 日*
+最終更新日: 2016 年 8 月 26 日
 {: .last-updated}
 
 sdk-for-nodejs ビルドパックの最新更新のリスト。
+## 2016 年 8 月 26 日: 更新された Node.js ビルドパック v3.7-20160826-1101
+このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.45、0.10.46、0.12.14、0.12.15、4.4.7、4.5.0、6.2.2、および 6.4.0 をサポートします。現在のデフォルトは 4.5.0 です。
+
+このリリースは、[Cloud Foundry の Node.js ビルドパック 1.5.18](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18) からのものを含むバグ修正を組み込みます。
+
+このリリースは、[Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/) で発表されたように、strongpm アプリケーション管理ハンドラーのサポートを削除します。
+
+Node.js 6.x および[開発モード](../../manageapps/app_mng.html#devmode)の使用時には既知の問題があることに注意してください。回避策として、開発モードを有効にした後で、使用を開始する前にアプリケーションを再ステージする必要があります。
+
 ## 2016 年 7 月 22 日: 更新された Node.js ビルドパック v3.6-20160715-0749
 このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.45、0.10.46、0.12.14、0.12.15、4.4.6、4.4.7、6.2.1、および 6.2.2 をサポートします。現在のデフォルトは 4.4.7 です。
 

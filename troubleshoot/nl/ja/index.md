@@ -351,7 +351,8 @@ IBM Eclipse Tools for Bluemix が稼働している Java のバージョンを�
 
 現行組織に関連付けられたスペースがない場合、アプリまたはサービスを作成できません。
 
-Bluemix でアプリを作成しようとすると、以下のエラー・メッセージが表示されます。{: tsSymptoms}
+Bluemix でアプリを作成しようとすると、以下のエラー・メッセージが表示されます。
+{: tsSymptoms}
 
 `BXNUI0515E: 組織のスペースを取得しようとして、ネットワーク接続の問題のために失敗しました。`
 
@@ -420,7 +421,16 @@ Bluemix でアプリを作成しようとすると、以下のエラー・メッ
 ```
 process.env.VCAP_SERVICES
 ```
-他のプログラミング言語で使用できるコマンドについて詳しくは、[Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} および [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} を参照してください。## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリをデプロイできない
+他のプログラミング言語で使用できるコマンドについて詳しくは、[Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} および [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} を参照してください。
+
+
+
+
+
+
+
+
+## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリをデプロイできない
 {: #ts_bm_tools_facet}
 
 サポートされないファセットが Eclipse プロジェクトに適用された場合、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない可能性があります。 
@@ -652,12 +662,11 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 	  2. 「ランタイム」ペインで、そのアプリの最大メモリー上限またはアプリ・インスタンス数のいずれか、あるいはその両方を減らすことができます。
 cf コマンド・ライン・インターフェースを使用する場合は、以下の手順を実行します。
 	  1. アプリで使用しているメモリー量を調べます。
-
 	  ```
 	  cf apps
 	  ```
-	     cf apps コマンドで、自分が現行スペースにデプロイしたアプリがすべてリストされます。各アプリの状況も表示されます。      2. アプリが使用するメモリー量を削減するには、アプリ・インスタンス数または最大メモリー上限のいずれか、あるいはその両方を減らします。
-
+	     cf apps コマンドで、自分が現行スペースにデプロイしたアプリがすべてリストされます。各アプリの状況も表示されます。
+      2. アプリが使用するメモリー量を削減するには、アプリ・インスタンス数または最大メモリー上限のいずれか、あるいはその両方を減らします。
 	  ```
 	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
@@ -843,7 +852,8 @@ cf push <appname> -p <app_path> -n <hostname>
 
  	
 	
-**-p** オプションを使用して、WAR ファイルを指定するか、WAR ファイルへのパスを追加してください。以下に例を示します。{: tsResolve}
+**-p** オプションを使用して、WAR ファイルを指定するか、WAR ファイルへのパスを追加してください。以下に例を示します。
+{: tsResolve}
 
 ```
 cf push MyUniqueAppName01 -p app.war
@@ -852,7 +862,13 @@ cf push MyUniqueAppName01 -p app.war
 ```
 cf push MyUniqueAppName02 -p "./app.war"
 ```
-`cf push` コマンドの詳細な情報を確認するには、`cf push -h` を入力してください。## Liberty アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
+`cf push` コマンドの詳細な情報を確認するには、`cf push -h` を入力してください。
+
+
+
+
+
+## Liberty アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
 {: #ts_doublebytes}
 
 サーブレットまたは JSP ファイルに対して Unicode サポートが適切に構成されていない場合、2 バイト文字が適切に表示されない可能性があります。
@@ -871,13 +887,11 @@ Liberty アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッ
 サーブレットまたは JSP ファイル内で、以下のコードを使用できます。
 {: tsResolve} 
 
-  * サーブレット・ソース・ファイル内
-     
+  * サーブレット・ソース・ファイル内 
     ```
 	response.setContentType("text/html; charset=UTF-8");
 	```
-  * JSP 内
-     
+  * JSP 内 
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
@@ -1284,8 +1298,8 @@ Eclipse Orion {{site.data.keyword.webide}} に実行バーが見つからない�
 {: tsResolve}
  
   * {{site.data.keyword.Bluemix_notm}} ダッシュボードで、スペースを作成する組織を選択し、次に**「スペースの作成」**をクリックします。
-  * cf コマンド・ライン・インターフェースに ```cf create-space <space_name>
--o <organization_name>``` と入力します。
+  * cf コマンド・ライン・インターフェースに `cf create-space <space_name>
+-o <organization_name>` と入力します。
   
   
   
@@ -1378,9 +1392,9 @@ IBM® Bluemix™ ランタイムを使用すると問題が発生することが
   ```
 set NODE_MODULES_CACHE=false
 ```
-使用中のビルドパックが最新のコンポーネントを自動的にロードするメカニズムを提供していない場合は、以下のステップに従って手動でキャッシュ・ディレクトリー内のコンテンツを削除し、アプリを再度プッシュします。  1. ヌル・ビルドパックのブランチ (例えば https://github.com/ryandotsmith/null-buildpack) をチェックアウトします。ブランチをチェックアウトする方法については、[Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window} を参照してください。  
+使用中のビルドパックが最新のコンポーネントを自動的にロードするメカニズムを提供していない場合は、以下のステップに従って手動でキャッシュ・ディレクトリー内のコンテンツを削除し、アプリを再度プッシュします。
+  1. ヌル・ビルドパックのブランチ (例えば https://github.com/ryandotsmith/null-buildpack) をチェックアウトします。ブランチをチェックアウトする方法については、[Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window} を参照してください。  
   2. `null-buildpack/bin/compile` ファイルに以下の行を追加して変更をコミットします。変更をコミットする方法については、[Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window} を参照してください。
-
   ```
 rm -rfv $2/*
   ```
@@ -1434,7 +1448,10 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-デフォルトのロギング構成を変更する方法について詳しくは、 『[error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}』を参照してください。## サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない
+デフォルトのロギング構成を変更する方法について詳しくは、 『[error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}』を参照してください。
+
+
+## サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない
 {: #ts_importpylib}
 
 サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない場合があります。この問題は、構成ファイルを Python アプリケーションのルート・ディレクトリーに追加することで解決できます。
@@ -1456,19 +1473,24 @@ pid @{HOME}/nginx/logs/nginx.pid;
 {: tsResolve}
 
   1. `requirements.txt` ファイルを Python アプリのルート・ディレクトリーに追加します。
-`requirements.txt` ファイルには、Python アプリケーションに必要なライブラリー・パッケージとそのパッケージのバージョンが指定されています。以下の例には、`requirements.txt` ファイルの内容が示されています。ここで、`web.py==0.37` は、ダウンロードされる `web.py` ライブラリーのバージョンが 0.37 であることを示しています。`wsgiref==0.1.2` は、web.py ライブラリーに必要な Web サーバー・ゲートウェイ・インターフェースのバージョンが 0.1.2 であることを示しています。
-
+     `requirements.txt` ファイルには、Python アプリケーションに必要なライブラリー・パッケージとそのパッケージのバージョンが指定されています。以下の例には、`requirements.txt` ファイルの内容が示されています。ここで、`web.py==0.37` は、ダウンロードされる `web.py` ライブラリーのバージョンが 0.37 であることを示しています。`wsgiref==0.1.2` は、web.py ライブラリーに必要な Web サーバー・ゲートウェイ・インターフェースのバージョンが 0.1.2 であることを示しています。
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
 	 ```
-	`requirements.txt` ファイルの構成方法について詳しくは、 「[Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html)」を参照してください。  2. `Procfile` ファイルを Python アプリケーションのルート・ディレクトリーに追加します。
-`Procfile` ファイルには、Python アプリケーションの開始コマンドを含めてください。以下のコマンドでは、*yourappname* が Python アプリケーションの名前で、*PORT* は、アプリのユーザーから要求を受信するために Python アプリケーションが使用しなければならないポート番号です。*$PORT* はオプションです。開始コマンドに PORT を指定しない場合は、代わりに、アプリ内部にある `VCAP_APP_PORT` 環境変数下のポート番号が使用されます。
- 
+	`requirements.txt` ファイルの構成方法について詳しくは、 「[Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html)」を参照してください。
+
+  2. `Procfile` ファイルを Python アプリケーションのルート・ディレクトリーに追加します。
+  `Procfile` ファイルには、Python アプリケーションの開始コマンドを含めてください。以下のコマンドでは、*yourappname* が Python アプリケーションの名前で、*PORT* は、アプリのユーザーから要求を受信するために Python アプリケーションが使用しなければならないポート番号です。*$PORT* はオプションです。開始コマンドに PORT を指定しない場合は、代わりに、アプリ内部にある `VCAP_APP_PORT` 環境変数下のポート番号が使用されます。 
 	```
 	web: python <yourappname>.py $PORT
 	```
-これでサード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできます。## 「インスタンスの詳細」ページの「アクション」ボタンが使用不可になっている
+これでサード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできます。
+
+
+
+
+## 「インスタンスの詳細」ページの「アクション」ボタンが使用不可になっている
 {: #ts_actionsbutton}
 
 

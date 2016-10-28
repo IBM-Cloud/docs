@@ -13,7 +13,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 모바일 SDK 사용
 {: #openwhisk_mobile_sdk}
-마지막 업데이트 날짜: 2016년 8월 4일
+마지막 업데이트 날짜: 2016년 8월 26일
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}}에서는 쉽게 원격 트리거를 실행하고 원격 조치를 호출할 수 있도록 모바일 앱을 사용하는 iOS 및 watchOS 2 디바이스에 대한 모바일 SDK를 제공합니다. 현재 Android용 버전은 사용할 수 없습니다. Android 개발자는 직접 {{site.data.keyword.openwhisk}} REST API를 사용할 수 있습니다.
@@ -32,14 +32,14 @@ CocoaPods, Carthage를 사용하거나 소스 디렉토리에서 모바일 SDK�
 모바일용 {{site.data.keyword.openwhisk_short}} SDK는 CocoaPods를 통해 공용 배포에 대해 사용 가능합니다. CocoaPods가 설치되었다고 가정하고, 스타터 앱 프로젝트 디렉토리 내의 'Podfile'이라고 하는 파일에 다음 행을 두십시오.  
 
 ```
-source 'https://github.com/openwhisk/openwhisk-podspecs.git'use_frameworks!target 'MyApp' do
-     platform :ios, '9.0'
-     pod 'OpenWhisk'
-end
+install! 'cocoapods', :deterministic_uuids => false
+use_frameworks!
 
-target 'MyApp WatchKit Extension' do
-     platform :watchos, '2.0'
-     pod 'OpenWhisk-Watch'
+target 'MyApp' do
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
+end
+target 'MyApp WatchKit Extension' do 
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 ```
 {: codeblock}
@@ -51,7 +51,7 @@ end
 
 앱의 프로젝트 디렉토리에서 파일을 작성하고 이름을 'Cartfile'로 지정하십시오. 파일에 다음 행을 넣으십시오. 
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Or latest version
 ```
 {: codeblock}
 
@@ -201,7 +201,7 @@ whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
 
-이 예에서는 localhost:8080에서 실행 중인 설치를 사용합니다. baseUrl을 지정하지 않으면 모바일 SDK가 https://openwhisk.ng.bluemix.net에서 실행되는 인스턴스를 사용합니다. 
+이 예에서는 localhost:8080에서 실행 중인 설치를 사용합니다. baseUrl을 지정하지 않으면 모바일 SDK가 다음에서 실행되는 인스턴스를 사용합니다. https://openwhisk.ng.bluemix.net 
 
 특수 네트워크 처리가 필요한 경우 사용자 정의 NSURLSession을 패스할 수 있습니다. 예를 들어, 자체 서명된 인증서를 사용하는 {{site.data.keyword.openwhisk_short}} 설치가 있을 수 있습니다.
 

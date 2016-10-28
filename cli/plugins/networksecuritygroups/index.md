@@ -1,15 +1,29 @@
+---
+
+
+
+copyright:
+
+  years: 2015, 2016
+
+lastupdated: "2016-10-22"
+
+
+---
+
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:note: .deprecated}
 
 # IBM Network Security Groups CLI
-
-*Last updated: 01 March 2016*
-{: .last-updated}
 
 *Version:* 0.1.1
 
 You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.networksecuritygroups_full}} service. The IBM Network Security Groups CLI is a plug-in that is used with the [Bluemix&reg; CLI](http://clis.ng.bluemix.net/ui/home.html). The plug-in is available for Windows, Mac OS, and Linux operating systems. Ensure that you use the plug-in that is applicable to you.
+
+**This CLI is deprecated:** This CLI is deprecated as of 24 October 2016. You can continue to use the CLI until 24 December 2016. 
+{: deprecated}
 
 Before you begin, install the IBM Bluemix CLI. See [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html) for details.
 

@@ -37,7 +37,7 @@ copyright:
 
 使用下列其中一個方法安裝 dev_mode 指令行工具：
 - 在本端安裝。
-  1. 從 [IBM Bluemix CLI 外掛程式儲存庫](http://plugins.{DomainName})下載您的平台的 dev_mode 外掛程式。
+  1. 從 [IBM Bluemix CLI 外掛程式儲存庫](http://plugins.ng.bluemix.net)下載您的平台的 dev_mode 外掛程式。
   2. 移至儲存 dev_mode 外掛程式的資料夾，然後使用 cf install-plugin 指令來安裝 dev_mode 外掛程式。例如： 
   
         ```

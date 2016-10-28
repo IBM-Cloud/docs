@@ -12,7 +12,7 @@ copyright:
 
 # node.js のオフライン・モード
 {: #offline_mode}
-*最終更新日: 2016 年 7 月 20 日*
+最終更新日: 2016 年 7 月 20 日
 {: .last-updated}
 
 node.js アプリケーションが {{site.data.keyword.Bluemix}} にプッシュされると、SDK for Node.js ビルドパックは通常、NPM からのノード・モジュールなど、外部リソースから成果物をダウンロードします。[Bluemix Dedicated](../../dedicated/index.html#dedicated) および [Bluemix Local](../../local/index.html#local) を使用するなど一部の環境では、Bluemix の外部のサイトへのアクセスに依存しないこと、あるいは外部サイトへのアクセスをより明示的に制御することが必要な場合があります。  

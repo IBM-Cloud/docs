@@ -30,7 +30,7 @@ acceda a la sección Tiempos de ejecución (Runtimes).
 4. Proporcione el nombre de app, modifique el nombre de host si fuera necesario, y pulse **Crear**.
 5. Si app empieza la transferencia, y se muestra la página de inicio de su app en el Panel de control de Bluemix cuando se inicia su app.
 6. Puede seguir las instrucciones en dicha página para hacer las tareas siguientes:
-  * Descargue la interfaz de línea de mandatos de Cloud Foundry .
+  * Descargue la interfaz de línea de mandatos de Cloud Foundry.
   * Descargue la aplicación de inicio.
   * Realice los pasos para volver a desplegar la aplicación de inicio.
 7. Modifique la app y vuelva a desplegarla.

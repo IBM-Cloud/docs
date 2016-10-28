@@ -43,11 +43,11 @@ copyright:
 
 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; **通知**，以設定一般帳戶和消費通知。消費通知僅適用於「訂閱」和「隨收隨付制」的 {{site.data.keyword.Bluemix_notm}} 帳戶擁有者。
 
-您可以針對 {{site.data.keyword.Bluemix_notm}} 事件和計劃性的維護作業設定平台電子郵件通知，並可設定消費通知，以在帳戶接近您指定的消費臨界值時警示您。請完成下列作業，為您的帳戶設定不同的通知類型。
+您可以針對 {{site.data.keyword.Bluemix_notm}} 偶發事件和計劃性的維護作業設定平台電子郵件通知，並可設定消費通知，以在帳戶接近您指定的消費臨界值時警示您。請完成下列作業，為您的帳戶設定不同的通知類型。
 
 ### 設定平台通知
 
-移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; **通知** &gt; **平台**，以設定 {{site.data.keyword.Bluemix_notm}} 事件和計劃性維護的電子郵件通知。您可以選取或清除每一個選項，以啟用或停用電子郵件通知。
+移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; **通知** &gt; **平台**，以設定 {{site.data.keyword.Bluemix_notm}} 偶發事件和計劃性維護的電子郵件通知。您可以選取或清除每一個選項，以啟用或停用電子郵件通知。
 
 ### 設定消費通知
 {: #spendingnotifications}
@@ -57,7 +57,7 @@ copyright:
 完成下列步驟，以設定消費限制的電子郵件通知：
 
 <ol>
-<li>移至**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg) &gt; **帳戶** &gt; **通知** &gt; **消費**。</li>
+<li>移至**帳戶及支援**圖示 ![「帳戶及支援」圖示](../admin/images/account_support.svg) &gt; **帳戶** &gt; **通知** &gt; **消費**。</li>
 <li>輸入數值，以針對每一種通知類型來設定觸發通知的消費臨界值：<br />
 <ul>
 <li>帳戶總計</li>

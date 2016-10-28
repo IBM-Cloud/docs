@@ -11,7 +11,7 @@ copyright:
 # Dynatrace の使用
 {: #using_dynatrace}
 
-*最終更新日: 2016 年 6 月 10 日*
+最終更新日: 2016 年 6 月 10 日
 {: .last-updated}
 
 Dynatrace は、アプリケーションのモニタリングを提供するサード・パーティー・サービスです。
@@ -27,11 +27,13 @@ Liberty アプリケーションが Dynatrace を使用するように構成さ�
 <ol>
 <li>Dynatrace コレクターをセットアップします。<ul>
   <li>Dynatrace コレクターのダウンロード手順およびセットアップ手順については、[Dynatrace コミュニティー Web サイト](https://community.dynatrace.com/community/display/EVAL/Step+3+-+Connect+Agent+to+Dynatrace)を参照してください。</li>
-  <li>コレクターは、Bluemix 内のアプリケーションで実行されている Dynatrace エージェントにアクセス可能なロケーションでセットアップする必要があります。</li>
+  <li>コレクターは、Bluemix 内のアプリケーションで実行されている Dynatrace エージェントにアクセス可能なロケーションでセットアップする必要があります。
+  </li>
   </ul>
 </li>
 <li>実行中の Dynatrace コレクターを指すユーザー提供サービスを作成します。<b>注</b> ユーザー提供のサービスの名前には <b>dynatrace</b> が含まれている必要があります。例えば、次のコマンドを使用します。<pre>
-$ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'  </pre>
+  $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'
+  </pre>
   {: codeblock}
 
 この例では、my-dynatrace-collector はサービスに付けられた名前、DynatraceCollectorIPaddress は構成済み Dynatrace コレクターの IP アドレス、profile はこのモニター対象アプリケーションに関連付けられたオプションの Dynatrace プロファイル名です。デフォルト・プロファイル値は Monitoring です。オプション・パラメーターは次の例のように指定できます。
@@ -85,20 +87,23 @@ Dynatrace エージェントは Web サーバー上でホストされる必要�
    <li> 値が *"repository_root: URL_of_server_hosting_index.yml"* になるように変数 **JBP_CONFIG_DYNATRACEAGENT** を設定します。例えば、アプリケーションのプッシュ後に次のコマンドを発行します。
   
   <pre>   
-$ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'  </pre>
+    $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
+  </pre>
   {: codeblock}
 
   この例では、*my-dynatrace-agent-host.mybluemix.net* は、以前に構成したサーバーでホストされる index.yml ファイルの URL です。
   </li>
   <li> 環境変数の設定後、アプリケーションを再ステージングします。Liberty アプリケーションの staging_task.log には、エージェント・ホスティング・サーバーからの Dynatrace エージェントの正常なダウンロードを示すメッセージが出されます。例えば、次のように指定します。
 <pre>
-Downloading dynatrace-agent-6.3.0-unix.jar 6.3.0 from https://my-dynatrace-agent-host.mybluemix.net/dynatrace-agent-6.3.0-unix.jar (17.8s)  </pre>
+    Downloading dynatrace-agent-6.3.0-unix.jar 6.3.0 from https://my-dynatrace-agent-host.mybluemix.net/dynatrace-agent-6.3.0-unix.jar (17.8s)
+  </pre>
   {: codeblock}
 
 </li>
 <li>staging_task.log を見るには、次のコマンドを実行します。
 <pre>
-$ cf files myAppName logs/staging_task.log  </pre>  
+    $ cf files myAppName logs/staging_task.log
+  </pre>  
   {: codeblock}
 
 </li>

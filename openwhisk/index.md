@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -17,8 +13,7 @@ copyright:
 {:pre: .pre}
 
 # Getting started with {{site.data.keyword.openwhisk_short}} (Beta)
-Last updated: 9 September 2016
-{: .last-updated}
+
 
 {{site.data.keyword.openwhisk}} is a distributed, event-driven compute service also referred to as Serverless computing or as Function as a Service (FaaS), {{site.data.keyword.openwhisk_short}} runs application logic in response to events or direct invocations from web or mobile apps over HTTP. Events can be provided from Bluemix services like Cloudant and from external sources. Developers can focus on writing application logic, and creating actions that are executed on demand. The rate of executing actions always matches the event rate, resulting in inherent scaling and resiliency and optimal utilization. You pay for only what you use and you don't have to manage a server. You can also get the [source code](https://github.com/openwhisk/openwhisk) and run the system yourself.
 {: shortdesc}
@@ -28,8 +23,8 @@ For more details about how {{site.data.keyword.openwhisk_short}} works, see [Abo
 ## Setting up the {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_configure_cli}
 
-You can use the {{site.data.keyword.openwhisk_short}} command line interface (CLI) to set up your namespace and authorization key. 
-Go to [Configure CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} and follow the instructions to install it. 
+You can use the {{site.data.keyword.openwhisk_short}} command line interface (CLI) to set up your namespace and authorization key.
+Go to [Configure CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} and follow the instructions to install it.
 
 ### Configure the CLI to use an HTTPS proxy
 

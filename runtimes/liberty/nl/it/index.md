@@ -12,7 +12,7 @@ copyright:
 # Liberty for Java
 {: #liberty_runtime}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 10 giugno 2016
 {: .last-updated}
 
 Le applicazioni Liberty for Java su {{site.data.keyword.Bluemix}} si avvalgono del pacchetto di build liberty-for-java. Il pacchetto di build liberty-for-java fornisce un ambiente di runtime completo per eseguire applicazioni Java EE 7 e OSGi sul profilo Liberty. Supporta framework di uso comune come Spring e include l'IBM JRE. WebSphere Liberty abilita un rapido sviluppo delle applicazioni che è adatto per il cloud.

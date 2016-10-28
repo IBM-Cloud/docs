@@ -12,7 +12,7 @@ copyright:
 
 #Servicios
 {: #services}
-*Última actualización: 20 de enero de 2016*
+*Última actualización: 10 de agosto de 2016*
 
 Puede encontrar servicios disponibles en el **Catálogo** en **Servicios** en la interfaz de usuario de {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -79,6 +79,7 @@ No todos los servicios están disponibles en cada región de {{site.data.keyword
 |{{site.data.keyword.APIM}}			|Sí		|Sí		|No|
 |{{site.data.keyword.autoscaling}}		|Sí		|Sí		|Sí|
 |{{site.data.keyword.bigicloudst}}		|Sí		|No		|No|
+|{{site.data.keyword.blockstorageshort}}        |No             |Sí            |No |
 |{{site.data.keyword.rules_short}}		|Sí		|Sí		|No|
 |{{site.data.keyword.cloudint}}			|Sí		|Sí		|No|
 |{{site.data.keyword.cloudant}}			|Sí		|Sí		|No|
@@ -207,7 +208,7 @@ usar servicios de {{site.data.keyword.Bluemix_notm}} ](#accser_external){: new_w
 
 Después de enlazar una instancia de servicio a una aplicación, debe configurar la aplicación para que interactúe con el servicio.
 
-Cada servicio puede requerir un mecanismo diferente para comunicarse con las app. Estos mecanismos están documentados como parte de la definición de servicio con fines informativos cuando desarrolle app. Para una mayor coherencia, los mecanismos son necesarios para que la aplicación interactúe con el servicio.
+Cada servicio puede requerir un mecanismo diferente para comunicarse con las aplicaciones. Estos mecanismos están documentados como parte de la definición de servicio con fines informativos cuando desarrolle aplicaciones. Para una mayor coherencia, los mecanismos son necesarios para que la aplicación interactúe con el servicio.
 
 * Para interactuar con servicios de base de datos, utilice la información que {{site.data.keyword.Bluemix_notm}} proporciona como, por ejemplo, el ID de usuario, la contraseña y el URI de acceso para la aplicación.
 * Para interactuar con los servicios de dispositivos móviles de fondo, utilice la información que {{site.data.keyword.Bluemix_notm}} proporciona como la identidad de la aplicación (ID de app), la información de seguridad que es específica del cliente y el URI de acceso para la aplicación. Los servicios móviles suelen funcionar compartiendo el contexto entre sí, de forma que la información contextual como, por ejemplo, el nombre del desarrollador de la aplicación y el usuario que utilizan la aplicación, se pueden compartir entre el conjunto de servicios.
@@ -228,7 +229,7 @@ Para habilitar una app externa o una herramienta de terceros para que utilice un
     2. En el Catálogo, seleccione el servicio que desee pulsando el título del servicio. Se abre la página de detalles del servicio.
     3. En la ventana Añadir servicio, mantenga la selección de la lista **App**: como **Dejar sin enlazar**. Esta selección significa que el servicio no se conectará a una app de {{site.data.keyword.Bluemix_notm}}.
     4. Realice las selecciones que necesite. A continuación, pulse **CREAR**. Se creará una instancia de servicio y se mostrará el Panel de control del servicio.
-2. En el panel de navegación izquierdo del Panel de control del servicio, puede seleccionar **Credenciales de servicio** para visualizar o añadir credenciales en formato JSON. Utilice la clave API que se muestra como credenciales para conectarse a la instancia del servicio.
+2. En el panel de navegación del Panel de control del servicio, puede seleccionar **Credenciales de servicio** para visualizar o añadir credenciales en formato JSON. Utilice la clave API que se muestra como credenciales para conectarse a la instancia del servicio.
 
 La aplicación que se ejecuta fuera de {{site.data.keyword.Bluemix_notm}} ahora puede acceder al servicio de {{site.data.keyword.Bluemix_notm}}.
 
@@ -304,14 +305,14 @@ Si tiene una instancia de servicio creada y enlazada a apps en una región, pued
     
 	Supongamos que va a iniciar la región en la que desea utilizar la instancia de servicio. Para utilizar una instancia de servicio existente en otra región, siga estos pasos:
 
-      1. Vaya a la región en la que reside la instancia de servicio. En la barra de menús superior de {{site.data.keyword.Bluemix_notm}}, expanda **Región** o pulse el icono **Región** y seleccione la región en la que reside la instancia de servicio.
+      1. Vaya a la región en la que reside la instancia de servicio. En la barra de menús de {{site.data.keyword.Bluemix_notm}}, expanda **Región** o pulse el icono **Región** y seleccione la región en la que reside la instancia de servicio.
 
       2. Recupere las credenciales y los parámetros de conexión de la variable de entorno VCAP_SERVICES de la instancia de servicio de la región en la que existe el servicio. Siga estos pasos:
 
 	       1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el icono de la aplicación. Se muestra la página Visión general.
-	       2. En el panel de navegación izquierdo, pulse **Variables de entorno**. Se muestran los detalles de la variable de entorno *VCAP_SERVICES* en el panel derecho. Registre el contenido JSON correspondiente a la instancia de servicio.
+	       2. En el panel de navegación, pulse **Variables de entorno**. Se muestran los detalles de la variable de entorno *VCAP_SERVICES* en el panel derecho. Registre el contenido JSON correspondiente a la instancia de servicio.
 
-      3. Vaya a la región en la que desea utilizar la instancia de servicio. En la barra de menús superior de {{site.data.keyword.Bluemix_notm}}, expanda **Región** o pulse el icono **Región** y seleccione la región en la que desea utilizar la instancia de servicio.
+      3. Vaya a la región en la que desea utilizar la instancia de servicio. En la barra de menús de {{site.data.keyword.Bluemix_notm}}, expanda **Región** o pulse el icono **Región** y seleccione la región en la que desea utilizar la instancia de servicio.
 
       4. Cree una instancia de servicio suministrada por el usuario utilizando las credenciales y los parámetros de conexión que ha registrado de la variable de entorno *VCAP_SERVICES*. Para obtener información sobre cómo crear una instancia de servicio proporcionada por el usuario, consulte el tema sobre [creación de una instancia de servicio proporcionada por el usuario](#user_provide_services){: new_window}.
 
@@ -337,8 +338,8 @@ Para utilizar una instancia de servicio de otro servicio, siga estos pasos:
 
 1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, pulse
 el mosaico para el servicio al que desee acceder. Se mostrará el panel de control para el servicio.
-2. En el panel de navegación de la izquierda, pulse *Gestionar* para autorizar el enlace desde otras instancias de servicio utilizando la consola de la instancia de servicio.
-3. Si desea denegar a otros servicios el acceso a la instancia de servicio, pulse *Autorización de acceso de servicio* en el panel de navegación izquierdo y, a continuación, utilice *Revocar* para eliminar el enlace de servicio. 
+2. En el panel de navegación, pulse **Gestionar** para autorizar el enlace desde otras instancias de servicio utilizando la consola de la instancia de servicio.
+3. Si desea denegar a otros servicios el acceso a la instancia de servicio, pulse **Autorización de acceso de servicio** en el panel de navegación y, a continuación, utilice **Revocar** para eliminar el enlace de servicio. 
 
 # rellinks
 {: #rellinks}

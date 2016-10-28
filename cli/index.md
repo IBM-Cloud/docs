@@ -18,7 +18,7 @@ copyright:
 # CLI and dev tools
 {: #cli}
 
-*Last updated: 31 August 2016*
+*Last updated: 25 October 2016*
 {: .last-updated}
 
 With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such as a unified command line interface and CLI plug-ins. Each of these CLI downloads are all available to support your {{site.data.keyword.Bluemix_notm}} experience.
@@ -29,7 +29,7 @@ With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such
 
 Download and install command line interfaces to support your {{site.data.keyword.Bluemix_notm}} experience. 
 
-Except for the [OpenStack CLI tool](../virtualmachines/vm_index.html#vm_setup_cli){: new_window} that is used for Virtual Servers management, the Cloud Foundry cf command line tool is a prerequisite for all other {{site.data.keyword.Bluemix_notm}} CLI tools. {{site.data.keyword.Bluemix_notm}} command line tool provides extended experience to manage your {{site.data.keyword.Bluemix_notm}} environment besides Cloud Foundry applications.
+The Cloud Foundry cf command line tool is a prerequisite for all {{site.data.keyword.Bluemix_notm}} CLI tools. {{site.data.keyword.Bluemix_notm}} command line tool provides extended experience to manage your {{site.data.keyword.Bluemix_notm}} environment besides Cloud Foundry applications.
 
 Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI tools and {{site.data.keyword.Bluemix_notm}} environment, you must configure the  `http-proxy` environment variable with the actual HTTP proxy url and port if there is any. See [Using the CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} for more details.
 
@@ -44,15 +44,22 @@ Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI t
 Easily extend your {{site.data.keyword.Bluemix_notm}} command line interface with more commands. To access the {{site.data.keyword.Bluemix_notm}} command line interface plug-ins, see the [CLI Plug-in Repository](https://plugins.ng.bluemix.net/).
 
 ### Extend your {{site.data.keyword.Bluemix_notm}} command line interface: bx
+{: cli_bluemix_ext}
 
-1. To install {{site.data.keyword.Bluemix_notm}} CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
+* To install {{site.data.keyword.Bluemix_notm}} CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
+
 ```
-bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx https://plugins.ng.bluemix.net
 ```
-2. Run the following command to install a plug-in:
+{: codeblock}
+
+* Then, run the following command to install a plug-in:
+
 ```
-bluemix plugin install plugin_name -r bluemix-bx-staging
+bluemix plugin install plugin_name -r bluemix-bx
 ```
+{: codeblock}
+
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
 |-----|-----|-----|
@@ -60,15 +67,22 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 
 ### Extend your Cloud Foundry command line interface: cf
+{: cli_cf_ext}
 
-1. To install cf CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
+* To install cf CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
+
 ```
-cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf https://plugins.ng.bluemix.net
 ```
-2. Run the following command to install a plug-in:
+{: codeblock}
+
+* Then, run the following command to install a plug-in:
+
 ```
-cf install-plugin plugin_name -r bluemix-cf-staging
+cf install-plugin plugin_name -r bluemix-cf
 ```
+{: codeblock}
+
 
 | *Active Deploy* | *Admin Console* | 
 |-----------------|-----------------|
@@ -77,8 +91,6 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
 | Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Plug-in name: VPN <br> [View Docs](./plugins/vpn/index.html) |
-
-<!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) Integrated development tools

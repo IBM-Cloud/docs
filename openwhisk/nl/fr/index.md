@@ -16,12 +16,15 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# Initiation à {{site.data.keyword.openwhisk_short}}
-Dernière mise à jour : 4 août 2016
+# Initiation à {{site.data.keyword.openwhisk_short}} (bêta)
+Dernière mise à jour : 9 septembre 2016
 {: .last-updated}
 
-{{site.data.keyword.openwhisk}} est un service de calcul géré par des événements. {{site.data.keyword.openwhisk_short}} exécute une
-logique d'application en réponse à des événements ou à des appels directs provenant d'applications Web ou mobiles via HTTP. Les événements peuvent être fournis par des services Bluemix tels que Cloudant et par des sources externes. Les développeurs peuvent se consacrer à
+{{site.data.keyword.openwhisk}} est un service de calcul distribué et géré par des événements, également appelé calcul sans serveur ou
+Function as a
+Service (FaaS). {{site.data.keyword.openwhisk_short}} exécute une
+logique d'application en réponse à des événements ou à des appels directs provenant d'applications Web ou mobiles via HTTP.
+Les événements peuvent être fournis par des services Bluemix tels que Cloudant et par des sources externes. Les développeurs peuvent se consacrer à
 l'écriture de la logique d'application et à la création d'actions qui sont exécutées à la demande. La fréquence d'exécution des actions correspond toujours
 à la fréquence des événements, ce qui assure une mise à l'échelle et une résilience inhérentes ainsi qu'une utilisation optimale. Vous ne payez que pour ce que vous utilisez et il n'est pas nécessaire de gérer un serveur. Vous pouvez aussi obtenir le
 [code source](https://github.com/openwhisk/openwhisk) et exécuter le système vous-même.
@@ -36,11 +39,15 @@ Vous pouvez utiliser l'interface de ligne de commande d'{{site.data.keyword.open
 clé d'autorisation. 
 Accédez à la page de [configuration de l'interface de ligne de commande](https://new-console.{DomainName}/openwhisk/cli){: new_window} et suivez les instructions d'installation. 
 
-**Avis sur l'obsolescence** Il existe une nouvelle interface de ligne de commande qui ne requiert pas l'installation de Python.
-L'interface de ligne de commande précédente (basée sur Python) est actuellement obsolète et uniquement disponible comme option de téléchargement alternative. Si vous choisissez d'utiliser l'interface de ligne de commande obsolète, Python 2.7 doit être installé sur votre système.  
+### Configuration de l'interface de ligne de commande pour l'utilisation d'un proxy HTTPS 
+
+L'interface de ligne de commande peut être configurée en vue de l'utilisation d'un proxy HTTPS. Pour configurer un proxy HTTPS, vous devez créer une
+variable d'environnement appelée `HTTPS_PROXY`. Celle-ci doit avoir pour valeur l'adresse du proxy HTTPS et son port au format suivant :
+`{IP PROXY}:{PORT PROXY}`.
+
 
 Une fois {{site.data.keyword.openwhisk_short}} configuré avec l'interface de ligne de commande, vous pouvez commencer à l'utiliser à partir
-de la ligne de commande. 
+de la ligne de commande.
 
 ## Utilisation de l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_cli}
@@ -69,7 +76,8 @@ logiciel SDK {{site.data.keyword.openwhisk_short}} pour iOS. Pour plus de détai
 {: #openwhisk_start_using_restapi}
 
 une fois votre environnement {{site.data.keyword.openwhisk_short}} activé, vous pouvez utiliser {{site.data.keyword.openwhisk_short}}
-avec vos applications Web ou mobiles à l'aide d'appels d'API REST. Pour plus de détails sur les API pour les actions, les activations, les
+avec vos applications Web ou mobiles à l'aide d'appels d'API REST.
+Pour plus de détails sur les API pour les actions, les activations, les
 packages, les règles et les déclencheurs, voir la [documentation
 de l'API {{site.data.keyword.openwhisk_short}}](https://new-console.{DomainName}/apidocs/98).
 

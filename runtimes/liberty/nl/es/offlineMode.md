@@ -12,11 +12,11 @@ copyright:
 
 # Modo fuera de línea para Liberty
 {: #offline_mode}
-*Última actualización: 20 de julio de 2016*
+Última actualización: 20 de julio de 2016
 {: .last-updated}
 
 Cuando se envía por push una aplicación Liberty a {{site.data.keyword.Bluemix}}, el paquete de compilación de Liberty puede acceder a sitios externos a Bluemix
-para adquirir artefactos que necesita la aplicación. A continuación se muestran los sitios externos a los que puede acceder el paquete de compilación de Liberty. En los entornos [Bluemix dedicado](../../dedicated/index.html#dedicated) y
+para adquirir artefactos que necesita la aplicación.  A continuación se muestran los sitios externos a los que puede acceder el paquete de compilación de Liberty.  En los entornos [Bluemix dedicado](../../dedicated/index.html#dedicated) y
 [Bluemix local](../../local/index.html#local), es posible que estos sitios necesiten incluirse en una *lista blanca*.
 
 * https://download.run.pivotal.io y https://java-buildpack.cloudfoundry.org se utilizan para acceder a componentes para:

@@ -19,7 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} 조치 작성 및 호출
 {: #openwhisk_actions}
 
-마지막 업데이트 날짜: 2016년 8월 4일
+마지막 업데이트 날짜: 2016년 9월 9일
 {: .last-updated}
 
 조치는 {{site.data.keyword.openwhisk}} 플랫폼에서 실행되는 Stateless 코드 스니펫입니다. 조치는 JavaScript 함수, Swift 함수 또는 Docker 컨테이너에 패키지화된 사용자 정의 실행 가능 프로그램일 수 있습니다. 예를 들어, 이미지에서 얼굴을 발견하거나 일련의 API 호출을 집계하거나 트윗을 게시하기 위해 조치를 사용할 수 있습니다.
@@ -75,7 +75,9 @@ actions
 
   방금 작성한 `hello` 조치를 볼 수 있습니다.
 
-4. 조치를 작성한 후에 'invoke' 명령을 사용하여 {{site.data.keyword.openwhisk_short}}의 클라우드 내에서 이를 실행할 수 있습니다. 명령에 플래그를 지정하여 *블로킹* 호출 또는 *비블로킹* 호출을 사용하여 조치를 호출할 수 있습니다. 블로킹 호출은 조치가 실행을 완료하고 결과를 리턴할 때까지 대기합니다. 이 예에서는 블로킹 매개변수인 `--blocking`을 사용합니다. 
+4. 조치를 작성한 후에 'invoke' 명령을 사용하여 OpenWhisk의 클라우드 내에서 이를 실행할 수 있습니다. 명령에 플래그를 지정하여 *블로킹* 호출(즉, 요청/응답 스타일) 또는 *비블로킹* 호출로 조치를 호출할 수 있습니다. 블로킹 호출 요청은 활성화 결과를 사용할 수 있을 때까지 *대기*합니다. 대기 기간은 조치의 구성된 [시간 한계](./reference.md#per-action-timeout-ms-default-60s) 또는 60초 미만입니다. 대기 기간 내에 활성화 결과를 사용할 수 있는 경우 활성화 결과가 리턴됩니다. 그렇지 않은 경우, 비블로킹 요청과 마찬가지로 시스템에서 활성화 처리가 계속되고 나중에 결과를 확인할 수 있도록 활성화 ID가 리턴됩니다(활성화 모니터링에 대한 팁은 [여기](#watching-action-output) 참조). 
+
+  이 예에서는 블로킹 매개변수인 `--blocking`을 사용합니다. 
 
   ```
 wsk action invoke --blocking hello
@@ -94,7 +96,7 @@ ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
 
   명령은 두 가지 중요한 정보 조각을 출력합니다.
   * 활성화 ID(`44794bd6aab74415b4e42a308d880e5b`)
-  * 호출 결과
+  * 예상 대기 기간 내에 사용 가능한 경우 호출 결과
 
   이 경우의 결과는 JavaScript 함수에 의해 리턴되는 `Hello world` 문자열입니다. 활성화 ID는 나중에 로그 또는 활성화의 결과를 검색하는 데 사용될 수 있습니다.  
 
@@ -293,6 +295,7 @@ wsk activation get b066ca51e68c4d3382df2d8033265db0
 
 1. `weather.js`라는 파일에 다음 컨텐츠를 저장하십시오.
   
+  
   ```
 var request = require('request');function main(params) {
      var location = params.location || 'Vermont';
@@ -311,17 +314,17 @@ var request = require('request');function main(params) {
                     resolve({msg: output});
                 }
             });
-        });
-    }
+      });
+  }
   ```
   {: codeblock}
-
-  예에서 조치가 JavaScript `request` 라이브러리를 사용하여 Yahoo Weather API에 대한 HTTP 요청을 작성하고 JSON 결과에서 필드를 추출합니다. [참조](./reference.md#runtime-environment)에서는 사용자의 조치에서 사용할 수 있는 Node.js 패키지에 대해 자세히 설명합니다.
-
+  
+  예에서 조치가 JavaScript `request` 라이브러리를 사용하여 Yahoo Weather API에 대한 HTTP 요청을 작성하고 JSON 결과에서 필드를 추출합니다. [참조](./reference.md#javascript-runtime-environments)에서는 사용자의 조치에서 사용할 수 있는 Node.js 패키지에 대해 자세히 설명합니다.
+  
   또한 이 예에서는 비동기 조치에 대한 필요성을 표시합니다. 이 조치는 Promise를 리턴하여 함수가 리턴할 때 이 조치의 결과를 아직 사용할 수 없음을 표시합니다. 대신 HTTP 호출이 완료된 후 `request` 콜백에서 결과를 사용할 수 있으며 결과는 `resolve()` 함수에 인수로 전달됩니다. 
-
-
+  
 2. 다음 명령을 실행하여 조치를 작성하고 호출하십시오.
+  
   ```
 wsk action create weather weather.js
   ```
@@ -336,27 +339,28 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   }
   ```
   {: screen}
-
+  
 ### 조치 시퀀스 작성
 {: #openwhisk_create_action_sequence}
 
 일련의 조치를 연결하는 조치를 작성할 수 있습니다.
 
-첫 번째 시퀀스를 작성하는 데 사용할 수 있는 `/whisk.system/util` 패키지에서 여러 유틸리티 조치가 제공됩니다. [패키지](./openwhisk_packages.html) 절에서 패키지에 대한 자세한 정보를 볼 수 있습니다.
+몇 개의 유틸리티 조치가 `/whisk.system/utils`라는 패키지에서 제공되며 첫 번째 시퀀스를 작성하는 데 이를 사용할 수 있습니다. [패키지](./packages.md) 절에서 패키지에 대한 자세한 정보를 볼 수 있습니다.
 
-1. `/whisk.system/util` 패키지의 조치를 표시합니다.
+1. `/whisk.system/utils` 패키지의 조치를 표시하십시오.
   
   ```
-wsk package get --summary /whisk.system/util
+  wsk package get --summary /whisk.system/utils
   ```
   {: pre}
   ```
-package /whisk.system/util
-   action /whisk.system/util/cat: Concatenate array of strings
-   action /whisk.system/util/head: Filter first K array elements and discard rest
-   action /whisk.system/util/date: Get current date and time
-   action /whisk.system/util/sort: Sort array
-   action /whisk.system/util/split: Splits a string into an array of strings
+  package /whisk.system/utils: Building blocks that format and assemble data
+   action /whisk.system/utils/head: Extract prefix of an array
+   action /whisk.system/utils/split: Split a string into an array
+   action /whisk.system/utils/sort: Sorts an array
+   action /whisk.system/utils/echo: Returns the input
+   action /whisk.system/utils/date: Current date and time
+   action /whisk.system/utils/cat: Concatenates input into a string
   ```
   {: screen}
 
@@ -365,25 +369,16 @@ package /whisk.system/util
 2. 한 조치의 결과가 다음 조치에 인수로 전달되도록 조치 시퀀스를 작성하십시오.
   
   ```
-wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
+  wsk action create sequenceAction --sequence /whisk.system/utils/split,/whisk.system/utils/sort
   ```
   {: pre}
-
+  
   이 조치 시퀀스는 텍스트의 일부 행을 배열로 변환하여 해당 행을 정렬합니다.
-
-3. 조치 시퀀스를 호출하기 전에 텍스트 몇 행이 있는 'haiku.txt'를 작성하십시오.
-
-  ```
-Over-ripe sushi,
-  The Master
-  Is full of regret.
-  ```
-  {: codeblock}
-
-4. 조치 호출:
+  
+3. 조치 호출:
   
   ```
-wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
+  wsk action invoke --blocking --result sequenceAction --param payload "Over-ripe sushi,\nThe Master\nIs full of regret."
   ```
   {: pre}
   ```
@@ -397,11 +392,15 @@ wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)
   }
   ```
   {: screen}
-
+  
   결과에서 행이 정렬된 것을 볼 수 있습니다.
 
-**참고**: 여러 이름 지정된 매개변수를 사용하여 조치 시퀀스를 호출하는 방법에 대한 자세한 정보는 [기본 매개변수 설정](./actions.md#setting-default-parameters)을 참조하십시오. 
-
+**참고**: 시퀀스의 조치 간에 전달되는 매개변수는 기본 매개변수를 제외하곤 명시적입니다.
+따라서 조치 시퀀스에 전달되는 매개변수는 시퀀스의 첫 번째 조치에서만 사용 가능합니다.
+시퀀스에 있는 첫 번째 조치의 결과는 시퀀스의 두 번째 조치에 대한 입력 JSON 오브젝트가 됩니다(계속해서 동일하게 반복).
+시퀀스에 처음 전달된 매개변수를 첫 번째 조치가 명시적으로 해당 결과에 포함시키지 않는 경우 이 오브젝트는 그러한 매개변수를 포함하지 않습니다.
+조치에 대한 입력 매개변수는 조치의 기본 매개변수와 병합되며, 앞에 있는 것이 우선되고 일치하는 기본 매개변수를 대체합니다.
+이름 지정된 여러 매개변수를 사용하여 조치 시퀀스를 호출하는 방법에 대한 자세한 정보는 [기본 매개변수 설정](./actions.md#setting-default-parameters)을 참조하십시오.
 
 ## Python 조치 작성
 {: #openwhisk_actions_python}
@@ -437,6 +436,19 @@ wsk action create helloPython hello.py
 조치와 반대로) Python 조치를 작성 중임을 지정할 필요가 없습니다.
 도구가 파일 확장자에서 이를 판별합니다. 
 
+Python 조치에 대한 조치 호출은 JavaScript 조치에 대한 조치 호출과 동일합니다. 
+
+```
+wsk action invoke --blocking --result helloPython --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
 
 
 ## Swift 조치 작성
@@ -454,10 +466,10 @@ Swift 조치 작성 프로세스는 JavaScript 조치 작성 프로세스와 유
 ```
 func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
           return [ "greeting" : "Hello \(name)!" ]
-      } else {
+    } else {
 return [ "greeting" : "Hello stranger!" ]
-      }
-  }
+    }
+}
 ```
 {: codeblock}
 
@@ -493,6 +505,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 사용합니다. 이러한 최신 릴리스가 항상 안정적인 것은 아닙니다. 또한 {{site.data.keyword.openwhisk_short}}와
 함께 사용되는 Swift의 버전이 XCode on MacOS의 안정적인 릴리스의 Swift 버전과 일치하지 않을 수 있습니다.
 
+
 ## Docker 조치 작성
 {: #openwhisk_actions_docker}
 
@@ -502,7 +515,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 전제조건으로, Docker 허브 계정이 있어야 합니다. 무료 Docker ID 및 계정을 설정하려면 [Docker 허브](https://hub.docker.com){: new_window}로 이동하십시오.
 
-다음 지시사항에서는 사용자 ID가 "janesmith"이며 비밀번호가 "janes_password"라고 가정합니다. CLI가 이미 설정되었다고 가정하면 {{site.data.keyword.openwhisk_short}}에 의해 사용될 사용자 정의 2진을 설정하기 위해 세 단계가 필요합니다. 그런 다음 업로드된 Docker 이미지가 조치로 사용될 수 있습니다.
+다음 지시사항에서는 Docker 사용자 ID가 `janesmith`이고 비밀번호가 `janes_password`라고 가정합니다. CLI가 이미 설정되었다고 가정하면, {{site.data.keyword.openwhisk_short}}에서 사용할 사용자 정의 2진을 설정하는 데 세 단계가 필요합니다. 그런 다음 업로드된 Docker 이미지가 조치로 사용될 수 있습니다.
 
 1. Docker 스켈레톤을 다운로드하십시오. 다음과 같이 CLI를 사용하여 다운로드할 수 있습니다.
 
@@ -520,7 +533,7 @@ ls dockerSkeleton/
   ```
   {: pre}
   ```
-Dockerfile      README.md       buildAndPush.sh client          server
+  Dockerfile      README.md       buildAndPush.sh example.c
   ```
   {: screen}
 
@@ -529,23 +542,29 @@ Dockerfile      README.md       buildAndPush.sh client          server
 2. Docker 스켈레톤에 사용자 정의 2진을 설정하십시오. 스켈레톤은 사용할 수 있는 C 프로그램을 이미 포함하고 있습니다.
 
   ```
-cat ./dockerSkeleton/client/example.c
+  cat dockerSkeleton/example.c
   ```
-  {: pre}
   {: pre}
   ```
   #include <stdio.h>
   
-  int main(int argc, char *argv[]) {printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
+  int main(int argc, char *argv[]) {printf("This is an example log message from an arbitrary C program!\n");
+      printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s }",
              (argc == 1) ? "undefined" : argv[1]);
   }
   ```
-  {: screen}
+  {: codeblock}
 
-  필요에 따라 이 파일을 수정할 수 있습니다.
+  필요에 따라 이 파일을 수정하거나 Docker 이미지에 추가 코드 및 종속 항목을 추가할 수 있습니다.
+  후자의 경우, 실행 파일을 빌드하기 위해 필요에 따라 `Dockerfile`을 수정해야 할 수도 있습니다.
+  2진은 컨테이너 내부(`/action/exec`)에 있어야 합니다. 
+
+  실행 파일은 명령행에서 단일 변수를 수신합니다. 이는 조치에 대한 인수를 나타내는 JSON
+  오브젝트의 문자열 직렬화입니다. 프로그램은 `stdout` 또는 `stderr`에 로그할 수 있습니다.
+  관례상 출력의 마지막 행은 *반드시* 조치의 결과를 나타내는 문자열로 변환된 JSON 오브젝트여야 합니다. 
 
 3. Docker 이미지를 빌드하고 제공된 스크립트를 사용하여 이를 업로드하십시오. 먼저 `docker login`을 실행하여 인증한 다음 선택된 이미지 이름을 사용하여 스크립트를 실행하십시오.
-
+  
   ```
 docker login -u janesmith -p janes_password
   ```
@@ -555,18 +574,27 @@ cd dockerSkeleton
   ```
   {: pre}
   ```
+  chmod +x buildAndPush.sh
+  ```
+  {: pre}
+  ```
 ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
-
-  example.c 파일의 일부는 Docker 이미지 빌드 프로세스의 일부로 컴파일되므로 사용자 시스템에서 C 컴파일이 필요하지 않습니다. 
-
-4. 제공된 JavaScript 파일이 아니라 Docker 이미지에서 조치를 작성하려면 `--docker`를 추가하고 JavaScript 파일 이름을 Docker 이미지 이름으로 대체하십시오.
-
+  
+  example.c 파일의 일부는 Docker 이미지 빌드 프로세스의 일부로 컴파일되므로 사용자 시스템에서 C 컴파일이 필요하지 않습니다. 실제로 호환 가능한 호스트 시스템에서 2진을 컴파일하지 않는 경우 형식이 일치하지 않기 때문에 컨테이너 내에서 실행되지 않을 수 있습니다. 
+  
+  Docker 컨테이너는 이제 {{site.data.keyword.openwhisk_short}} 조치로 사용될 수 있습니다. 
+  
+  
   ```
 wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
+  
+  조치를 작성할 때 `--docker`의 사용에 주의하십시오. 현재 모든 Docker 이미지는 Docker 허브에 호스팅되는 것으로 가정합니다.
+  이 조치는 다른 {{site.data.keyword.openwhisk_short}} 조치로서 호출할 수 있습니다. 
+  
   ```
 wsk action invoke --blocking --result example --param payload Rey
   ```
@@ -580,9 +608,11 @@ wsk action invoke --blocking --result example --param payload Rey
   }
   ```
   {: screen}
-
-5. Docker 조치를 업데이트하려면 `buildAndPush.sh`를 실행하여 Docker 허브의 이미지를 새로 고치십시오. 그러면 새 이미지를 페치할 시스템을 작성하는 데 `wsk action update`를 실행해야 합니다. 새 호출은 이전 코드가 포함된 웜 이미지가 아니라 새 이미지를 통해 시작합니다.
-
+  
+  Docker 조치를 업데이트하려면 buildAndPush.sh를 실행하여 Docker 허브의 이미지를 새로 고치십시오. 그러면 다음 번에 시스템이 Docker 이미지를 가져와 조치의 새 코드를 실행할 수 있습니다.
+  웜(warm) 컨테이너가 없는 경우 새 호출은 새 Docker 이미지를 사용합니다.
+  이전 버전의 Docker 이미지를 사용하는 웜(warm) 컨테이너가 있는 경우, wsk 조치 업데이트를 실행하지 않는 한 새 호출은 계속해서 이 이미지를 사용합니다. wsk 조치 업데이트는 새 호출에 대해 새 Docker 이미지를 가져오는 docker pull을 강제 실행하도록 시스템에 지시합니다. 
+  
   ```
 ./buildAndPush.sh janesmith/blackboxdemo
   ```
@@ -591,9 +621,8 @@ wsk action invoke --blocking --result example --param payload Rey
   wsk action update --docker example janesmith/blackboxdemo
   ```
   {: pre}
-
-[참조](./openwhisk_reference.html#openwhisk_ref_docker) 절에서 Docker 조치 작성에 대한 자세한 정보를 찾을 수 있습니다.
-
+  
+  [참조](./openwhisk_reference.html#openwhisk_ref_docker) 절에서 Docker 조치 작성에 대한 자세한 정보를 찾을 수 있습니다.
 
 ## 조치 출력 감시
 {: #openwhisk_actions_polling}
@@ -637,24 +666,22 @@ ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0
 
 사용하지 않는 조치를 삭제하여 정리할 수 있습니다.
 
-1. 다음 명령을 실행하여 조치 삭제:
-  
+1. 다음 명령을 실행하여 조치를 삭제하십시오.
   ```
-wsk action delete hello
+  wsk action delete hello
   ```
   {: pre}
   ```
-ok: deleted hello
+  ok: deleted hello
   ```
   {: screen}
 
 2. 조치가 더 이상 조치 목록에 표시되지 않는지 확인하십시오.
-  
   ```
-wsk action list
+  wsk action list
   ```
   {: pre}
   ```
-actions
+  actions
   ```
   {: screen}

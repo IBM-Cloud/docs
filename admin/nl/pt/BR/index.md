@@ -17,7 +17,7 @@ copyright:
 
 # Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Última atualização: 16 de agosto de 2016
+Última atualização: 20 de setembro de 2016
 {: .last-updated}
 
 Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix}}
@@ -46,7 +46,8 @@ relatórios e logs de segurança e mais. É possível gerenciar suas organizaç�
 ## Notificações e inscrições de eventos
 {: #oc_eventsubscription}
 
-Também é possível sempre saber o status de seu ambiente, verificando a página Status. Conforme ocorrerem, os incidentes são relatados na página Status. O {{site.data.keyword.Bluemix_notm}}
+Também é possível sempre saber o status de seu ambiente, verificando a página Status. À medida que ocorrem, incidentes e eventos de atualização de manutenção disruptiva planejada são relatados na página
+Status. O {{site.data.keyword.Bluemix_notm}}
 também envia notificações para a área Notificações na página de Administração para eventos como atualizações planejadas ou de manutenção pendentes.
 
 ### Notificações
@@ -60,8 +61,13 @@ notificações e onde cada tipo de notificação é postado.
 |-----------------|-------------------|
 | Atualizações de Manutenção | Você é alertado sobre atualizações de manutenção futuras na área Notificações na página de Administração. Acesse a página **Administração** e, em seguida, selecione o ícone **Notificações** ![Notificações](images/icon_announcement.svg). Para
 ver uma lista completa e o histórico de suas notificações pendentes e completas, clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** &gt; *Número*
-**pendente**. É possível ampliar o recurso de notificação configurando uma assinatura que envia um e-mail a destinatários de sua opção. Ou é possível configurar uma assinatura que use
-webhooks para integrar as notificações a partir da página Administração com um serviço da web de sua opção. |
+**pendente**.|
+|  | Você também é alertado sobre eventos de atualização de manutenção disruptiva planejada na página Status. Clique no ícone
+**{{site.data.keyword.avatar}}**
+![Avatar](../support/images/account_support.svg) e selecione
+**Status**.|
+|  | É possível ampliar o recurso de notificação configurando uma assinatura que envia um e-mail a destinatários de sua opção. Ou é possível configurar uma assinatura que use
+webhooks para integrar as notificações a partir da página Administração com um serviço da web de sua opção.|
 | Incidentes críticos | Você é alertado sobre incidentes críticos na página Status. Clique
 no ícone **{{site.data.keyword.avatar}}**
 ![Avatar](../support/images/account_support.svg) e selecione
@@ -72,16 +78,20 @@ webhooks para integrar as notificações a partir da página Administração com
 página Status. Clique no ícone
 **{{site.data.keyword.avatar}}**
 ![Avatar](../support/images/account_support.svg) e selecione
-**Status**.   |
+**Status**.  |
 
 ### Configurando assinaturas de eventos
 
-É possível ampliar a funcionalidade das notificações que são enviadas para a página Administração e a página Status usando inscrições de evento para configurar um e-mail customizado ou usar webhooks
-para integrar com uma ferramenta de sua opção. Se você selecionar a opção webhooks, as suas notificações serão roteadas diretamente para um destino de sua opção, como um número de telefone (por mensagem SMS). É possível customizar o tipo de notificação, especificamente atualizações de manutenção ou alertas de incidente crítico e as informações incluídas no corpo de cada notificação.
+É possível estender a funcionalidade das notificações que são enviadas para a página de Administração e a página Status usando inscrições de evento. Use inscrições de evento para configurar um e-mail
+customizado ou use webhooks para integrar com uma ferramenta de sua opção. 
+ * Se você selecionar a opção de e-mail, as suas notificações serão enviadas aos endereços de e-mail que especificar. É possível selecionar notificações de incidentes ou atualizações de manutenção. Uma
+notificação por e-mail inicial será enviada. Em seguida, se o incidente ou a atualização de manutenção tiver uma mudança feita nela, outra notificação com a mudança será enviada sempre que uma mudança
+for feita.  
+ * Se você selecionar a opção webhooks, as suas notificações serão roteadas diretamente para um destino de sua opção, como um número de telefone (por mensagem SMS). É possível customizar o tipo de notificação, especificamente atualizações de manutenção ou alertas de incidente crítico e as informações incluídas no corpo de cada notificação.
 
 **Nota**: somente usuários com a permissão de super usuário (`ops.admin`) podem configurar inscrições de evento.
 
-Para acessar a página de **Inscrições de Evento**, conclua as etapas a seguir:
+É possível acessar a página de **Inscrições de evento**, de uma das maneiras a seguir:
 
 * Para notificações de atualização de manutenção, acesse **INFORMAÇÕES DO SISTEMA &gt; *Número* pendente &gt; Assinaturas**.
 * Para notificações de incidentes, clique no ícone
@@ -108,14 +118,14 @@ revise as tabelas a seguir.
 
 | **Campo** | **Descrição** |
 |-----------------|-------------------|
-| Tipo | Selecione **E-mail**. |
-| Evento | Selecione para ser inscrito para notificações para uma Atualização ou um Incidente. |
 | Ativar | Selecione a opção para ativar as notificações por e-mail. Limpe a seleção para desativar a notificação por e-mail. As assinaturas são ativadas por padrão. |
+| Tipo | Selecione **E-mail**. |
+| Evento | Selecione para ser inscrito para notificações para um evento de **Manutenção** ou **Incidente**. |
 | Combinar notificações | Selecione a opção para combinar as notificações de incidentes
 para todas as regiões em uma única notificação. Essa opção está disponível somente para incidentes. |
 | Assunto | Insira a linha de assunto para o e-mail. Este campo é requerido.  |
 | Corpo | Insira o texto do corpo da mensagem a ser enviada no e-mail. É possível usar os valores de carga útil da IBM para preencher a notificação por e-mail com informações pertinentes. Consulte a tabela
-de [Valores da seção de carga útil](index.html#payload) para identificar quais valores é possível utilizar. Use marcas HTML básicas para estruturar o seu e-mail. Se você não inserir informações nesta seção, receberá uma notificação sem quaisquer informações adicionais. Este campo é requerido. |
+de [Valores da seção de carga útil](index.html#payload) para identificar quais valores é possível utilizar. Use marcas HTML básicas para estruturar o seu e-mail. Este campo é requerido. |
 | Para | Insira o endereço ou endereços de e-mail usando uma lista separada por vírgula para os destinatários da notificação por e-mail. Expanda as opções "cc" ou "bcc" para copiar outros no e-mail. Este campo é requerido. |
 | Descrição | Inclua uma descrição exclusiva para a assinatura que você está criando. |
 
@@ -124,14 +134,13 @@ de [Valores da seção de carga útil](index.html#payload) para identificar quai
 
 | **Campo** | **Descrição** |
 |-----------------|-------------------|
-| Tipo | Selecione **Webhook** |
-| Método | Selecione **GET** ou **POST**. |
-| Evento | Selecione para ser inscrito para notificações para uma Atualização ou um Incidente. |
 | Ativar | Selecione a opção para ativar a notificação. Limpe a seleção para desativar a
 notificação. As assinaturas são ativadas por padrão. |
+| Tipo | Selecione **Webhook** |
+| Método | Selecione **GET** ou **POST**. |
+| Evento | Selecione para ser inscrito para notificações para um evento de **Manutenção** ou **Incidente**. |
 | Combinar notificações | Selecione a opção para combinar as notificações de incidentes
-para todas as regiões em uma única notificação. Essa opção está disponível somente para
-incidentes. |
+para todas as regiões em uma única notificação. Essa opção está disponível somente para incidentes. |
 | URL | Insira a URL para se conectar ao seu serviço da web. |
 | Descrição | Inclua uma descrição exclusiva para a assinatura que você está criando. |
 | Nome de Usuário | Insira seu nome de usuário para o seu serviço da web. Se não desejar usar suas credenciais pessoais, será possível configurar um ID funcional para usar especificamente com o {{site.data.keyword.Bluemix_notm}}. |
@@ -145,19 +154,22 @@ de [Valores da seção de carga útil](index.html#payload) para identificar quai
 
 | **Valor IBM** | **Descrição** | **Tipo do evento** |
 |----------------|----------------|------------------------|
-| {{content.title}} | título Message |  Atualização e incidente  |
-| {{type}} | Atualização ou incidente | Atualização e incidente |
-| {{region}} | Região afetada | Atualização e incidente |
-| {{content.message}} | Descrição da mensagem |   Atualização e incidente  |
+| {{content.title}} | título Message |  Atualização de manutenção e incidente |
+| {{content.message}} | Descrição da mensagem |   Atualização de manutenção e incidente |
+| {{region}} | Região afetada | Atualização de manutenção e incidente |
 | {{content.severity}} | Classificação de gravidade | Incidente |
 | {{content.category}} | Serviços afetados | Incidente |
 | {{content.subCategoryName}} | Componentes afetados | Incidente |
-| {{status}} | Status da atualização | Atualizar |
-| {{content.scheduleWindow.start}} | A data de início planejada para a atualização | Atualizar |
-| {{content.scheduleWindow.end}} | O horário de encerramento planejado para a atualização | Atualizar |
-| {{content.disruption}} | Componentes afetados | Atualizar |
+| {{status}} | Status da atualização | Atualização de manutenção |
+| {{content.scheduleWindow.start}} | A data de início planejada para a atualização | Atualização de manutenção |
+| {{content.disruption}} | Componentes afetados | Atualização de manutenção |
+| {{type}} | Atualização ou incidente | Atualização de manutenção e incidente |
+| {{content.scheduleWindow.end}} | O horário de encerramento planejado para a atualização | Atualização de Manutenção |
 
-Quando a sua inscrição de evento for salva, você receberá notificações por meio do método que você configurar. Notificações ainda são postadas na página Status para incidentes e na área Notificações da página Administração para atualizações de manutenção.
+Quando a sua inscrição de evento for salva, você receberá notificações por meio do método que você configurar. Notificações ainda são postadas nos locais a seguir:  
+ * Na página Status para incidentes 
+ * Na página Status para os eventos de atualização de manutenção disruptiva planejada
+ * Na área de Notificações da página de Administração para atualizações de manutenção
 
 É possível selecionar qualquer inscrição de evento salva, visualizar a atividade recente ou editar conforme necessário. Clique para expandir qualquer entrada de atividade recente para visualizar os
 detalhes de histórico.
@@ -165,8 +177,10 @@ detalhes de histórico.
 ## Atualizações de Manutenção
 {: #oc_schedulemaintenance}
 
-É possível visualizar atualizações de manutenção planejadas e pendentes, acessando **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* pendente** para acessar
-a página **Atualizações do sistema**.
+É possível visualizar atualizações de manutenção planejadas e pendentes, se você tiver a permissão de superusuário (`ops.admin`), clicando em **ADMINISTRAÇÃO &gt; INFORMAÇÕES
+DO SISTEMA &gt; *Número* pendente** para acessar a página de **Atualizações do sistema**. Todos os usuários de seu ambiente podem visualizar os eventos de atualização de
+manutenção disruptiva planejada clicando no ícone **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) e, em seguida, selecionando
+**Status**.
 
 **Nota**: consulte a seção a seguir para [Configurar janelas de manutenção pré-aprovadas](index.html#preapprovedmaintenance) para iniciar. Essas janelas devem ser configuradas em ordem para a IBM planejar a manutenção
 para o seu ambiente.
@@ -309,33 +323,60 @@ visualizar relatórios de segurança e logs para a sua instância do {{site.data
 
 - Informações do recurso, incluindo espaço em disco, uso de CPU, uso de rede e tempos médios de resposta. Consulte [Uso de recursos](index.html#resourceusage).
 - Uso da conta por organização, incluindo o número de apps do tempo de execução com uso, número total de GB/horas de tempo de execução e o número de instâncias de serviço com uso. Consulte [Uso da conta](index.html#accountusage).
-- Uso de cota de memória da organização, memória de app alocada com base na cota de memória total usada e uma visualização de uso de GB/hora por app para uma organização específica. Também é possível visualizar o uso de cotas para todas as organizações na página Administração da organização na seção Monitoramento de cota. Consulte [Administração da organização](../admin/index.html#orgusage).
+- Uso de cota de memória da organização, memória de app alocada com base na cota de memória total usada e uma visualização de uso de GB/hora por app para uma organização específica. Também é possível
+visualizar o uso de cota para todas as organizações na página de Administração da organização na seção **Monitoramento de cota**. Consulte [Administração da organização](../admin/index.html#orgusage).
 
 
 ### Uso do Recurso
 {: #resourceusage}
 
-Para visualizar informações de uso de recursos, clique em **ADMINISTRAÇÃO &gt; USO**.
+Para visualizar informações de uso de recurso, clique em **ADMINISTRAÇÃO &gt; Uso de recurso**.
 
-Na seção Monitoramento de recurso, é possível visualizar as
-informações a seguir:
+Na seção **Uso de recurso**, é possível visualizar as informações a seguir:
 
-- Informações de uso do recurso, tais como quantos GB de memória e quantos GB de espaço em disco são
-usados. É possível visualizar o uso de CPU médio em todos os Droplet Execution Agents (DEAs). Clique no quadrado de
-**CPU** e poderá ver o uso de CPU para cada DEA. O DEA com o mais alto uso é listado primeiro e cada
-um é identificado por suas tarefas e endereço IP. O uso de CPU é separado em três categorias que incluem a quantia de
-CPU gasto em processos do sistema, quantia de CPU gasta em processos do usuário e quantia de
-CPU gasta em processos em espera.
-- As informações de uso da rede para entrada de largura da banda e saída da largura da banda, durante o último dia, durante a última semana ou
-durante o último mês.
-Os dados exibidos são baseados na soma do tráfego de entrada e de saída para as redes públicas e privadas.
-- Tempo médio de resposta para {{site.data.keyword.Bluemix_notm}} nos últimos 10 minutos, hora e dia.
+- Informações de uso de recurso, como a quantia de memória e de espaço em disco que pode ser reservado e quanto está fisicamente disponível e a quantia de memória e de espaço em disco que está realmente
+reservado e quanto é usado fisicamente. Também é possível ver informações sobre o uso de CPU médio em todos os Droplet Execution Agents (DEAs). Para ver o uso de sua memória, disco ou CPU pelo DEA, clique em
+**Detalhamento**.
+É possível ver um resumo das quantias **Reservadas** e **Físicas** para a sua memória e disco.
+	<dl>
+	<dt><strong>Física</strong></dt>
+	<dd>A quantia de memória ou espaço em disco que foi comprada para o seu ambiente. </dd>
+	<dt><strong>Reservada</strong></dt>
+	<dd>A quantia total de memória ou espaço em disco que está disponível para ser reservado por todos os aplicativos implementados e em execução em seu ambiente. Como os aplicativos raramente usam toda a
+memória que está reservada por eles, o valor físico geralmente é inferior ao valor reservado.</dd>
+	</dl>
+
+	Além da representação gráfica, é possível ver a porcentagem de memória e espaço em disco que o seu ambiente está usando. Também é possível ver ambas as quantias, reservada e física, em GB, do uso real
+comparado com a quantia que está disponível.
+Para ver mais informações detalhadas sobre o seu uso de memória física e reservada, clique em **Histórico.** É possível especificar o prazo para visualizar como semanal ou mensal. A
+visualização **Uso de memória histórico** mostra um gráfico de uso de memória durante o tempo que você escolher.  
+
+	<dl>
+	<dt><strong>Limite reservado</strong></dt>
+	<dd>Mostrado como uma linha pontilhada horizontal, o Limite reservado é a quantia total de memória que pode ser coletivamente reservada por todos os aplicativos em execução em seu ambiente.</dd>
+	<dt><strong>Reservada</strong></dt>
+	<dd>A Área reservada mostra a memória que está atualmente reservada coletivamente por todos os aplicativos em execução em seu ambiente.
+	<p>Para ver quais organizações reservaram mais memória em um determinado momento, passe o mouse sobre o ponto ao longo da Área reservada que está associado a esse momento. Em seguida, é possível clicar em uma
+organização no gráfico de pizza que é exibido para ver mais informações sobre essa organização.</p></dd>
+	<dt><strong>Limite físico</strong></dt>
+	<dd>Exibido como uma linha pontilhada horizontal, o Limite físico mostra a quantia de memória física que foi comprada para o seu ambiente.</dd>
+	<dt><strong>Física</strong></dt>
+	<dd>A Área física mostra a quantia de memória que realmente está sendo usada.</dd>
+	</dl>
+- Informações de uso de rede para entrada de largura da banda e saída da largura da banda, nas últimas 6 horas ou no último dia. Os dados exibidos são baseados na soma do tráfego de entrada e de saída para as redes públicas e privadas.
+- Tempo médio de resposta para o {{site.data.keyword.Bluemix_notm}} nos últimos 10 minutos, 1 hora e 1 dia.
 - Transações médias por segundo para {{site.data.keyword.Bluemix_notm}} nos últimos 10 minutos, hora e dia.
 
 ### Uso de conta
 {: #accountusage}
 
-É possível visualizar o uso mensal de sua conta para seu ambiente dedicado ou local. É possível usar esses dados para identificar quanto cobrar de organizações específicas com base no uso das mesmas.
+É possível visualizar o uso mensal de sua conta para seu ambiente dedicado ou local. É possível usar esses dados para identificar quanto cobrar de organizações específicas com base no uso das mesmas. Todos
+os usuários do console do administrador que são designados com a permissão de **Usuários** com acesso de **Leitura** podem visualizar os dados de uso de conta. Além
+disso, os gerentes de faturamento da organização podem visualizar os dados de uso de conta para as suas organizações, mesmo se o gerenciador de faturamento não tiver a permissão **Usuários**
+do console do administrador designada. Como um administrador do console do administrador (permissão de superusuário), é possível designar a função de gerenciador de faturamento para as organizações clicando
+no ícone **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) &gt; **Gerenciar organizações**.
+
+Para visualizar dados de uso de conta, conclua estas etapas:
 
 <ol>
 <li>Clique no ícone <strong>{{site.data.keyword.avatar}}</strong>
@@ -407,7 +448,10 @@ bem como ao conteúdo de texto contido nos logs e relatórios. Também é possí
 - Ao exibir um relatório ou log, é possível clicar no ícone ![Download](images/icon_download.png)
 para fazer download do relatório.
 
-A tabela a seguir mostra a lista de relatórios de segurança gerados para o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated.
+A tabela a seguir mostra a lista de relatórios de segurança gerados para o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated. A maioria dos
+relatórios é gerada em uma base diária. No entanto, a criptografia e os relatórios de eventos de gerenciamento de chave são gerados mensalmente. Todos os relatórios são retidos por 90 dias no console de
+administração para a sua recuperação. Após esses 90 dias, os relatórios estarão disponíveis por solicitação a partir do {{site.data.keyword.Bluemix_notm}} por 9 meses. No total, os
+relatórios estarão disponíveis para recuperação por até 1 ano.
 
 *Tabela 6. Lista de relatórios de segurança*
 
@@ -438,10 +482,10 @@ A tabela a seguir mostra a lista de relatórios de segurança gerados para o {{s
 
 ### Status do ambiente do {{site.data.keyword.Bluemix_notm}}
 
-É possível monitorar o status para a sua instância do {{site.data.keyword.Bluemix_notm}}, usando a página Status do {{site.data.keyword.Bluemix_notm}}. 
-Clique no ícone **{{site.data.keyword.avatar}}**
+É possível monitorar o status para a sua instância do {{site.data.keyword.Bluemix_notm}}, usando a página Status do {{site.data.keyword.Bluemix_notm}}. Clique no ícone
+**{{site.data.keyword.avatar}}**
 ![Avatar](../support/images/account_support.svg) e selecione
-**Status**. 
+**Status**.
 
 A página Status é o local central para localizar notificações e anúncios sobre os eventos principais que estão afetando a plataforma do {{site.data.keyword.Bluemix_notm}} e os serviços principais no {{site.data.keyword.Bluemix_notm}}. É possível assinar um feed RSS para notificações de modo que não seja necessário verificá-las. Para obter mais informações sobre a página Status e a configuração do feed RSS, veja [Visualizando o {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
@@ -487,116 +531,234 @@ Também é possível gerenciar a ordem de prioridade dos buildpacks disponíveis
 ### Registrando um broker de serviço
 {: #servicebrokerui}
 
-Se você tiver um serviço que deseja exibir em seu catálogo do {{site.data.keyword.Bluemix_notm}}, deve-se implementar e registrar um broker de serviço. Após registrar seu broker, será possível escolher quais organizações podem acessar o serviço em sua instância local ou dedicada.
+Se você tiver um serviço que deseja exibir em seu catálogo do {{site.data.keyword.Bluemix_notm}}, deve-se implementar e registrar um [broker de serviço](http://docs.cloudfoundry.org/services/api.html){: new_window}. Após registrar seu broker, será possível escolher quais organizações podem acessar o serviço em sua instância local ou dedicada.
 
-Os métodos para trabalhar com seu broker de serviço variam, dependendo de quantos serviços ele gerencia ou se ele já foi registrado com o {{site.data.keyword.Bluemix_notm}}.
+Os métodos para trabalhar com o seu broker de serviço variam, dependendo de quantos serviços ele gerencia ou se ele já foi registrado com o {{site.data.keyword.Bluemix_notm}}.
 
 - Se o seu broker de serviço gerenciar um serviço, será possível usar a interface com o usuário para registrá-lo após ter implementado a [API do broker de serviço](http://docs.cloudfoundry.org/services/api.html){: new_window}. Consulte [Registrando um broker de serviço que gerencia um serviço](index.html#registerbrokerui).
-- Se o seu broker de serviço gerencia vários serviços, neste momento, não será possível registrá-lo após ter implementado a API do broker de serviço. Em vez disso, use a CLI cf com o [plug-in de administrador do {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (subcomando `ba`) ou use a [API de serviço customizada](index.html#servicebrokerapi).
+- Se o seu broker de serviço gerenciar múltiplos serviços, use a CLI cf com o plug-in da CLI do administrador do [{{site.data.keyword.Bluemix_notm}}
+](../cli/plugins/bluemix_admin/index.html) (subcomando ba) ou use a [API de serviço customizado](index.html#servicebrokerapi).
 - Se seu broker de serviço já estiver registrado e você desejar atualizar ou excluir o mesmo, use a CLI cf com o [plug-in de administrador do {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (subcomando `ba`) ou use a [API de serviço customizada](index.html#servicebrokerapi).
 
 #### Registrando um broker de serviço que gerencia um serviço
 {: #registerbrokerui}
 
-Conclua as etapas a seguir para registrar seu broker de serviço:
+Revise as informações a seguir e conclua as etapas para registrar o seu broker de serviço:
 
-<ol>
-<li><a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implemente a API do broker de serviço Cloud Foundry</a> para ativar a comunicação entre seu serviço e o {{site.data.keyword.Bluemix_notm}}. A API do broker de serviço é um conjunto de terminais REST que são consumidos pelo {{site.data.keyword.Bluemix_notm}}.<br />
-<br />
-<p>Quando você estiver implementando o broker de serviço, na resposta JSON de <code>GET /v2/catalog</code>, deve-se fornecer as definições para seu serviço e planos de serviço, incluindo as informações de serviço que deseja exibir. Por exemplo, revise o JSON de amostra a seguir da resposta do Catálogo (GET)</p>
-<p><pre>
+**Antes de iniciar**: <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implemente a API do broker de serviço do Cloud Foundry</a> para ativar a comunicação
+entre o seu serviço e o {{site.data.keyword.Bluemix_notm}}. A API do broker de serviço é um conjunto de terminais REST que são consumidos pelo {{site.data.keyword.Bluemix_notm}}.
+
+Quando você estiver implementando o broker de serviço, na resposta JSON de <code>GET /v2/catalog</code>, deve-se fornecer as definições para seu serviço e planos de serviço, incluindo as informações de serviço que deseja exibir. Por exemplo, revise o JSON de amostra a seguir da resposta do Catálogo (GET):
+
+```
+{
 "services": [
-   {
+        {
       "bindable":true,
-      "description":"O Cool Service é uma solução de data warehousing e analítica.",
+      "description":"Cool Service is an analytics and data warehousing solution.",
       "id":"cool-service-id",
       "name":"coolservice",
-      "tags": [
-         "customer_dedicated"
-      ],
-      "metadata": {
-         "displayName": "Cool Service",
+      "metadata":{
+         "displayName":"Cool Service",
          "serviceMonitorApi":"https://myservicesstatus.mybluemix.net/healthcheck/",
-         "providerDisplayName":"Empresa do Cool",
-         "longDescription":"O Cool Service é uma solução de data warehousing e analítica. É possível mover rapidamente os seus dados para um banco de dados colunar contido na memória e começar a executar
-consultas analíticas complexas.",
-         "bullets": [
-            {
-               "title": "Fast and Simple",
-               "description": "Cool Service uses dynamic in-memory columnar technology and innovations, such as parallel vector processing and actionable compression to rapidly scan and return relevant data."
+         "providerDisplayName":"Empresa Cool",
+         "longDescription":"Cool Service é uma solução de data warehousing e análise de dados. É possível mover rapidamente seus dados para um banco de dados colunar contido na memória de próxima geração e começar a executar consultas analíticas complexas.",
+                "bullets": [
+                    {
+               "title": "Rápido e simples",
+                        "description": "O Cool Service usa terminologia colunar dinâmica contida na memória e inovações, como processamento de vetor paralelo e compactação acionável para varrer e retornar rapidamente os dados relevantes."
             },
             {
-               "title": "Connectivity",
-               "description":"O Cool Service é construído para permitir que você se conecte facilmente e a todos os seus serviços e aplicativos. É possível começar a analisar os seus dados imediatamente com
-ferramentas familiares."
+               "title": "Conectividade",
+                        "description": "O Cool Service é construído para permitir que você se conecte facilmente a todos os seus serviços e aplicativos. You can start analyzing your data immediately with familiar tools."
             }
          ],
-         "featuredImageUrl": "http://path/to/icon_64x64.png",
-         "imageUrl": "http://path/to/icon_50x50.png",
-         "mediumImageUrl": "http://path/to/icon_32x32.png",
-         "smallImageUrl": "http://path/to/icon_24x24.png",
-         "documentationUrl": "http://path/to/documentation.html",
-         "instructionsUrl": "http://path/to/servicesample.md",
-         "termsUrl": "http://path/to/terms_of_agreement.pdf",
-         "media":[
-            {
+                "featuredImageUrl": "http://path/to/icon_64x64.png",
+                "imageUrl": "http://path/to/icon_50x50.png",
+                "mediumImageUrl": "http://path/to/icon_32x32.png",
+                "smallImageUrl": "http://path/to/icon_24x24.png",
+                "documentationUrl": "http://path/to/documentation.html",
+                "instructionsUrl": "http://path/to/servicesample.md",
+                "termsUrl": "http://path/to/terms_of_agreement.pdf",
+                "media": [{
                "type": "youtube",
-               "thumbnailUrl": "http://path/to/thumbnail.png",
-               "url": "http://path/to/youtube/video",
-               "caption": "Using Cool Service in 60 Seconds"
+			"thumbnailUrl": "http://path/to/thumbnail.png",
+			"url": "http://path/to/youtube/video",
+			"caption": "Usando o Cool Service em 60 segundos"
             },
             {
                "type": "image",
-               "thumbnailUrl": "http://path/to/thumbnail.png",
-               "url": "http://path/to/image_file.png",
-               "caption": "Cool Service connects applications"
+			"thumbnailUrl": "http://path/to/thumbnail.png",
+			"url": "http://path/to/image_file.png",
+			"caption": "O Cool Service conecta aplicativos"
             },
             {
                "type": "video",
-               "thumbnailUrl": "http://path/to/thumb.png",
-               "caption": "Cool Service works with tables",
-               "source": [
-                  {
+			"thumbnailUrl": "http://path/to/thumb.png",
+			"caption": "O Cool Service trabalha com tabelas",
+			"source": [{
                      "type": "video/mp4",
-                     "url": "http://path/to/video_file.mp4"
+				"url": "http://path/to/video_file.mp4"
                   },
                   {
-                     "type": "video/ogg",
-                     "url": "http://path/to/video_file.ogg"
+                     "type":"video/ogg",
+                     "url":"http://path/to/video_file.ogg"
                   }
                ]
             }
          ]
       },
-      "plans":[
-         {
-            "name":"smallplan",
-            "description":"Esquema e espaço de tabela dedicados por instância de serviço em um servidor compartilhado. 1 GB e 10 GB de armazenamento do banco de dados compactados podem conter até 5 GB e 50 GB
-de dados descompactados, respectivamente, com base nas proporções de compactação típicas.",
-            "free":false,
-            "id":"cool-service-plan-id",
-            "metadata": {
+            "plans": [
+                {
+            "name": "smallplan",
+                    "description": "Esquema e espaço de tabela dedicados por instância de serviço em um servidor compartilhado. 1 GB e 10 GB de armazenamento do banco de dados compactado pode conter até 5 GB e 50 GB de dados descompactados, respectivamente, com base nas proporções de compactação típica.",
+                    "free": false,
+                    "id": "cool-service-plan-id",
+                    "metadata": {
                "bullets": [
-                  "Mín. de 1 GB por instância. Máx. de 10 GB por instância."
+                  "1 GB no mín. por instância. 10 GB no máximo por instância."
                ],
-               "costs":[
-                  {
-                     "unitId":"INSTANCES_PER_MONTH",
-                     "unit":"MONTHLY",
-                     "partNumber":"D15UTLL"
-                  }
+                        "costs": [
+                            {
+                     "unitId": "INSTANCES_PER_MONTH",
+                                "unit": "MONTHLY",
+                                "partNumber": "D15UTLL"
+                            }
                ],
-               "displayName":"Small"
-            }
+                        "displayName": "Pequeno"
+                    }
          }
       ]
    }
 ]
 }
-</pre></p>
-<p><strong>Nota</strong>: ao criar um broker de serviço para um ambiente local ou dedicado, deve-se especificar `customer_dedicated` no campo "tags" de seu arquivo JSON de definição de serviço.</p>
-</li>
-<li>Após implementar a API do broker de serviço, acesse <strong>ADMINISTRAÇÃO </strong> &gt; <strong>GERENCIAMENTO DE CATÁLOGO</strong>.</li>
+```
+{: codeblock}
+
+As tabelas a seguir podem ajudá-lo a preencher o arquivo de JSON.
+
+*Tabela. Campos de JSON*
+
+| **Campos de JSON** | **Descrição** |
+|-----------------|-----------------|
+|ligáveis   | Um valor booleano que indica se as instâncias de serviço podem ser ligadas a aplicativos.  |
+|Descrição | A descrição do serviço que é exibida quando você usa o comando cf marketplace ou passa o mouse sobre o ícone de serviço no catálogo da interface com o usuário do
+{{site.data.keyword.Bluemix_notm}}. É possível incluir uma única sentença ou frase para a descrição. |
+|Nome | O nome do serviço que é exibido na interface de linha de comandos cf. Esse nome deve ser exclusivo no {{site.data.keyword.Bluemix_notm}} e deve usar letras minúsculas e não deve conter espaços. Não
+é possível mudar o nome do serviço após registrar o serviço com o {{site.data.keyword.Bluemix_notm}}. |
+|ID  | O ID do serviço. Esse ID deve ser exclusivo no {{site.data.keyword.Bluemix_notm}} e deve ser um GUID (Identificador Exclusivo Global). Não é possível mudar o ID do serviço depois de registrar o
+serviço com o {{site.data.keyword.Bluemix_notm}}. |
+|meta-dados | Os metadados de plano de serviço que são exibidos no catálogo do {{site.data.keyword.Bluemix_notm}} e na folha de precificação. O campo de metadados é um campo opcional. É possível
+especificar campos adicionais para os metadados. Consulte a tabela a seguir para [Campos de metadados](index.html#metadatafields) para obter mais informações. |
+|planejamentos | Uma matriz de definições de plano de serviço. Consulte a tabela a seguir para [Campos de plano](index.html#planfields) para obter mais informações. |
+
+*Tabela. Campos de metadados*
+{: #metadatafields}
+
+| **Valores de metadados** | **Descrição** |
+|---------------------|-----------------|
+|nome de exibição          | O nome do plano que é exibido na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Esse nome é exibido na página de detalhes do serviço no catálogo e na folha de precificação. Altere
+para letras maiúsculas somente a primeira letra do nome do plano. Não use "Padrão" como o nome do plano padrão; use "Padrão" como alternativa. |
+|providerDisplayName | O nome do provedor de serviços |
+|longDescription | A descrição detalhada para o serviço. Considere usar pelo menos duas sentenças para uma descrição longa. |
+|planejamentos                | Uma matriz de definições de plano de serviço. Cada entrada de matriz do campo de planos consiste nos campos a seguir: nome, descrição, grátis, ID e metadados. Consulte a tabela
+a seguir para [Campos de plano](index.html#planfields) para obter mais informações. |
+|projéteis | Uma matriz de sequências que são exibidas para um serviço. É possível usar marcadores para fornecer informações além da descrição longa. O campo de marcadores deve conter, pelo menos, dois elementos de marcador. Cada
+marcador inclui o campo de título e descrição. |
+|imageUrl | A URL de uma imagem de PNG grande (50 x 50 pixels). |
+|smallImageUrl | A URL de uma imagem de PNG pequena (24 x 24 pixels). |
+|mediumImageUrl | A URL de uma imagem de PNG média (32 x 32 pixels). |
+|featuredImageUrl | A URL de uma imagem apresentada (64 x 64 pixels). |
+|documentationUrl | A URL de documentação sobre o serviço. |
+|termsUrl | A URL para arquivos PDF que contêm termos de acordo. |
+|mídia (opcional) | Uma matriz de elementos para exibir os vídeos e as capturas de tela que introduzem o serviço na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Um elemento de mídia pode conter os campos a seguir: type (imagem, youtube, vídeo), thumbnailUrl (A URL da imagem de visualização para o elemento de mídia.), url (A URL da captura de tela ou o vídeo do YouTube.),
+source (As origens de vídeos que não estão hospedadas no YouTube. O "tipo" da origem do vídeo deve ser suportado por HTML5. Inclua "tipo" e "url" para o vídeo.) e legenda (A legenda para o elemento de mídia. As
+legendas ajudam na acessibilidade para pessoas com deficiências para entenderem os seus elementos de mídia.). |
+|serviceKeysSupported | Um valor booleano que indica se a API de chaves de serviço é suportada. A API de chaves de serviço é usada para permitir que um serviço seja usado fora do {{site.data.keyword.Bluemix_notm}}. O valor padrão é false. |
+|plan_updateable | Um valor booleano que indica se o serviço suporta mudanças de plano. O valor padrão é false. |
+|embeddableDashboard (opcional) | Um campo que indica como o painel de serviço é exibido na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Se você não especificar esse campo, o painel será integrado, mas estará restrito a uma largura mínima de 960px e o painel terá preenchimento horizontal adicional ao redor do iframe. É
+possível usar verdadeiro, falso, drill down ou ativação. É possível usar os campos a seguir para este valor: verdadeiro, falso, drill down e ativação.  |
+|notCreatable (opcional) | Um valor booleano que indica se instâncias para o serviço podem ser criadas a partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}} e a partir da interface da linha de comandos. Um
+valor verdadeiro significa que as instâncias de serviço não podem ser criadas a partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a partir da interface da linha de comandos cf. O valor padrão é false. |
+|notCreatableMessage (opcional) | Uma mensagem que será exibida na interface com o usuário do {{site.data.keyword.Bluemix_notm}} se as instâncias de serviço não puderem ser criadas. Se você não
+especificar esse campo, a mensagem padrão a seguir será exibida: A ser notificado quando estiver disponível, confirme o seu endereço de e-mail ou insira um endereço de e-mail diferente. |
+|notCreatableRobotMessage (opcional) | Uma mensagem que é exibida na bolha de fala da página de detalhes do serviço na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. A mensagem é usada para indicar se um serviço pode ter um problema ou outro motivo que esteja causando sua indisponibilidade. É possível especificar uma mensagem para explicar o motivo. 
+Se você não especificar esse campo, a mensagem padrão a seguir será exibida: Esse serviço está indisponível atualmente. |
+|apiReferenceUrl (opcional) | A URL do iframe na área Referência da API na página de detalhes do serviço em Catálogo. Se não usado para a página de detalhes do serviço no Catálogo, será possível inserir o valor
+numérico designado para o seu Doc da API REST para seu serviço ao registrá-lo no microsserviço do Doc da API REST do {{site.data.keyword.Bluemix_notm}}. Isso exibirá o seu Doc da API REST no painel de
+serviço. |
+|sdkDownloadUrl (opcional) | A URL da página da web que será aberta quando você clicar no botão Download SDK. O botão Download SDK está no ladrilho de serviço da página de visão geral do aplicativo no	Painel. A página da web é aberta em uma nova guia do navegador. |
+|serviceMonitorApi    | A URL para uma API que retorna os dados de JSON, conforme mostrado no exemplo a seguir, que relata o funcionamento do serviço. Deve-se ter serviceMonitorApi ou
+serviceMonitorApp em seus metadados de serviço. Consulte a amostra de código a seguir para obter um exemplo. |
+|serviceMonitorApp    | A URL para um aplicativo que pode ser implementado no {{site.data.keyword.Bluemix_notm}} e ligado a um serviço para fornecer a saída específica de status de serviço. O
+aplicativo deve retornar o mesmo formato de dados de JSON que a serviceMonitorApi. Deve-se ter serviceMonitorApi ou serviceMonitorApp em seus metadados de serviço. Consulte a amostra de código a seguir para
+obter um exemplo. |
+
+```
+{
+    "service": "servicename",
+    "version": 1,
+    "health": [
+        {
+            "plan": "starter",
+            "status": 0,
+            "serviceinput": "count(*) from healthcheck",
+            "serviceoutput": "10…or error 1234 database not running",
+            "responsetime": 4
+        },
+        {
+            "plan": "enterprise",
+            "status": 1,
+            "serviceinput": "count(*)fromhealthcheck",
+            "serviceoutput": "10…orerror1234databasenotrunning",
+            "responsetime": 4
+        }
+    ]
+}
+```
+{: pre}
+
+O exemplo a seguir mostra como a resposta de JSON de GET /v2/catalog é mapeada para a página de detalhes do serviço no catálogo do {{site.data.keyword.Bluemix_notm}}:
+
+![Detalhes do serviço no catálogo.](images/metadata.png "Visualização de detalhes do serviço do catálogo do Bluemix")
+
+*Tabela. Campos de plano*
+{: #planfields}
+
+| **Valores de plano** | **Descrição** |
+|---------------------|-----------------|
+|Nome       | O nome do plano de serviço que é usado na interface de linha de comandos cf. Por exemplo, o nome do plano é exibido na saída do comando cf marketplace. O nome do plano deve estar em letras minúsculas e não deve conter espaços e deve ser exclusivo dentro do serviço.  |
+|Descrição       | A descrição do plano de serviço. A descrição é exibida após você selecionar um plano na página de detalhes do serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. |
+|grátis      | Um valor booleano que indica se o plano de serviço é grátis. O valor padrão é verdadeiro. |
+|ID       | O ID do plano de serviço. O ID deve ser exclusivo dentro de {: new_window}e deve ser um GUID.  |
+|metadados (opcional)    | Os metadados de plano de serviço que são exibidos no catálogo do {{site.data.keyword.Bluemix_notm}} e na folha de precificação. O campo de metadados é um campo opcional. É
+possível especificar os campos a seguir no campo de metadados: displayName, tipo (assinatura, reservável, planDetails), custo, custos (unitId, unidade, partNumber) e paidOnly. Consulte a tabela
+a seguir para [Campos de metadados de plano](index.html#planmetadata) para obter mais informações. |
+
+*Tabela. Campos de metadados de plano*
+{: #planmetadata}
+
+| **Valores de metadados de plano** | **Descrição** |
+|------------------------|-----------------|
+|nome de exibição             | O nome do plano que é exibido na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Esse nome é exibido na página de detalhes do serviço no catálogo e na folha de precificação.   |
+|type                    | O tipo do plano. É possível usar os valores a seguir para esse campo: assinatura (Um plano de assinatura. O valor-padrão é falso.), reservável (Um plano reservável. Esse valor é
+usado quando o plano é um plano de assinatura, ou seja, o valor de plan.metadata.subscription é verdadeiro. O valor-padrão é falso.), planDetails (Uma quantidade e descrição detalhadas dos recursos que podem
+ser usados com o plano. Esse valor é usado quando o plano é reservável, ou seja, o valor de plan.metadata.reserveable é verdadeiro.) |
+|projéteis                 | Uma descrição dos recursos que podem ser usados com o plano. A descrição é exibida na coluna **Recursos** na página de detalhes do serviço do catálogo e na folha de precificação. |
+|custos                   | As informações de custo sobre o serviço que é exibido na coluna Preço na página de detalhes do serviço do catálogo e na folha de precificação. Cada entrada de matriz contém os
+campos a seguir: unitId (O ID da unidade. Use a forma plural e altere para letras maiúsculas todas as letras. Para planos grátis, esse campo é opcional), unidade (A métrica que é usada para calcular os
+encargos do serviço. O valor desse campo é usado na interface com o usuário do {{site.data.keyword.Bluemix_notm}} para representar a métrica de encargo) e partNumber (O identificador
+`part_number` que é usado pelo sistema de faturamento. Para planos grátis, esse campo é opcional).   |
+|paidOnly (opcional)     | Um valor booleano que indica se esse plano de serviço está disponível apenas para o {{site.data.keyword.Bluemix_notm}} pagar contas. Um valor de **true** significa que o plano de serviço é somente para contas de pagamento e não pode ser incluído em contas para teste. Um valor de **false** significa que o plano de serviço pode ser incluído nas contas de pagamento e contas para teste. O valor padrão é **false**.	  |
+
+O exemplo a seguir mostra como a resposta de JSON de GET /v2/catalog é mapeada para a página de detalhes do serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. Especificamente, como
+os campos de metadados do plano descritos na tabela anterior mapeiam para a interface com o usuário:
+
+![Detalhes de metadados de plano no catálogo.](images/plan_metadata.png "Visualização de valores de metadados de plano de catálogo do Bluemix")
+
+
+<ol>
+<li>Após você ter implementado a API do broker de serviço, acesse <strong>ADMINISTRAÇÃO</strong> &gt; <strong>GERENCIAMENTO DE CATÁLOGO</strong>.</li>
 <li>Clique em <strong>REGISTRAR UM BROKER DE SERVIÇO</strong>.</li>
 <li>Preencha o formulário inserindo valores nos campos a seguir:
 <ul>
@@ -616,6 +778,7 @@ de dados descompactados, respectivamente, com base nas proporções de compacta�
 </ol>
 
 Agora é possível ver seu serviço na categoria Serviços customizados em seu Catálogo do {{site.data.keyword.Bluemix_notm}}. Acesse **ADMINISTRAÇÃO &gt; GERENCIAMENTO DO CATÁLOGO** e selecione o quadro no catálogo. É possível ativar diferentes planos e editar a visibilidade do plano de suas organizações a qualquer momento.
+
 
 ## Administrando as organizações
 {: #oc_organizations}
@@ -652,46 +815,38 @@ produção. Em seguida, é possível associar os apps aos espaços. Conclua as e
 
 ### Monitoramento de cota
 
-Na seção Monitoramento de cota, é possível expandir a seção e visualizar as informações a seguir:
+É possível expandir a seção **Monitoramento de cota** para visualizar as informações a seguir:
 
-- Uso de memória do ambiente. Esta seção detalha o uso de memória para o ambiente do sistema integral.
-	O gráfico fornece informações que incluem a memória do sistema usado, a memória do sistema total,
- a cota que é usada e a cota total alocada. A lista de termos a seguir define os tipos de uso de memória
- que são exibidos no gráfico.
+- O uso de memória do ambiente detalha o uso de memória para o ambiente do sistema integral. O gráfico mostra as informações a seguir: 
+<ul>
+<li>A memória física que está em uso e o limite de memória física</li>
+<li>a cota de memória reservada e o limite de memória reservada</li>
+<li>a cota total de memória para as suas organizações</li>
+</ul>
+Os tipos de uso de memória a seguir são exibidos no gráfico.
 
 	<dl>
-	<dt><strong>Memória do sistema usado</strong></dt>
+	<dt><strong>Físico usado</strong></dt>
 	<dd>A memória física que é usada por seu ambiente.</dd>
-	<dt><strong>Memória total do sistema</strong></dt>
+	<dt><strong>Limite físico</strong></dt>
 	<dd>A memória física total disponível para seu ambiente.</dd>
-	<dt><strong>Cota implementada</strong></dt>
-	<dd>A soma de memória que é alocada para todos os apps implementados, em todas as organizações. A soma da cota
- implementada pode exceder a memória total do sistema físico para seu ambiente. Por exemplo,
- se você tiver uma memória total do sistema de 16 GB e alocar 4 GB de memória cada num
- total de cinco organizações diferentes, a cota total excede a memória total do sistema
- que foi alocada para todas as organizações. No entanto, em muitos casos, as organizações podem não
- usar a cota total que é alocada individualmente para cada organização. Além disso,
- todas as organizações podem não usar sua alocação de memória de cota total ao mesmo tempo. </dd>
+	<dt><strong>Cota reservada</strong></dt>
+	<dd>A soma de memória que é reservada para todos os aplicativos implementados, em todas as organizações. A soma da cota que é reservada pode exceder o limite de memória física para o seu ambiente. Por exemplo, se você tiver um limite de memória física de 16 GB, você poderia reservar 4 GB de memória cada para um total de cinco aplicativos diferentes. A cota que é reservada excede o limite de memória física. No entanto, em muitos casos, as organizações podem não usar a cota total que é reservada individualmente para cada aplicativo. Além disso, todos os aplicativos podem não usar a sua cota total de memória reservada ao mesmo tempo.</dd>
+	<dt><strong>Limite reservado</strong></dt>
+	<dd>A memória total que pode ser reservada em todos os aplicativos para o seu ambiente.</dd>
 	<dt><strong>Cota total</strong></dt>
-	<dd>A memória total que é alocada em todas as organizações.</dd>
+	<dd>A cota de memória total em todas as organizações.</dd>
 	</dl>
+	**Nota**: os dados são atualizados automaticamente a cada 4 horas. Clique em **Recalcular** se você deseja atualizar os dados na página antes que sejam atualizados automaticamente.
 
-- Uso de memória da organização. Esta seção detalha o uso de memória em um nível de organização. É possível
-visualizar o abono da cota total e a cota que é implementada para cada organização. O gráfico fornece informações que
-são listadas pelo mais alto uso de memória por organização e a organização que usa a maior quantia de memória, por
-padrão, é listada primeiro. É possível classificar por
+- Uso de memória da organização. Esta seção detalha o uso de memória em um nível de organização. É possível visualizar a cota de memória total, a cota que é reservada e a memória física usada por cada organização. O gráfico fornece informações que são listadas pela memória mais alta reservada por organização e a organização que reserva a maior quantia de memória, por padrão, é listada primeiro. É possível classificar por
 **Mais alto uso de memória** e **Excesso de alocação de memória**.
 
 	<dl>
 	<dt><strong>Mais alto uso de memória</strong></dt>
-	<dd>Use esta opção para identificar a organização que usa a maior quantidade de memória. Classifique pelo mais alto uso de
-memória para identificar as organizações que estão usando a maior quantia de memória. A lista é classificada pela cota
-implementada. </dd>
+	<dd>Use esta opção para identificar a organização que reservou a maior quantia de memória. Classifique pelo uso de memória mais alto para identificar as organizações que reservaram a maior quantia de memória. A lista é classificada por cota reservada. </dd>
 	<dt><strong>Alocação de memória em excesso</strong></dt>
-	<dd>Use esta opção para identificar as organizações que possuem um plano de cota que é maior do que o necessário.
-	Classifique
-por uso de memória em excesso para identificar as organizações que estão usando a menor quantia de memória para a cota
-que foi alocada para a organização. </dd>
+	<dd>Use esta opção para identificar as organizações que possuem uma cota de memória total que é maior do que o necessário. Classifique por uso de memória em excesso para identificar as organizações que estão usando a menor quantia de memória para a cota que foi alocada para a organização. </dd>
 	</dl>
 
 ### Ajustando planos de cota
@@ -724,9 +879,8 @@ Na seção Lista de organizações, é possível visualizar todas as organizaç�
 ## Gerenciando usuários e permissões
 {: #oc_useradmin}
 
-É possível incluir usuários individualmente
-ou em grupos e visualizar permissões do usuário. Geralmente, os usuários são incluídos em sua instância do {{site.data.keyword.Bluemix_notm}} a partir do registro de usuário de sua empresa por meio do
-Lightweight Directory Access Protocol (LDAP). Se você tiver recebido permissão de
+É possível incluir usuários individualmente ou em grupos. Geralmente, os usuários são incluídos em sua instância do {{site.data.keyword.Bluemix_notm}} a partir do registro de usuário de sua empresa por meio do
+Lightweight Directory Access Protocol (LDAP). Também é possível visualizar permissões de usuário. Se você tiver recebido permissão de
 **Super usuário**, será possível também configurar e gerenciar
 permissões de outros usuários. Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DE USUÁRIO**.
 
@@ -735,24 +889,39 @@ instância local ou dedicada. As permissões para cada usuário são exibidas us
 podem ser as permissões: Nenhuma, **Super usuário**,
 **Acesso básico**, **Catálogo**,
 **Relatórios** e **Usuários**.
-As permissões **Super usuário** e **Acesso
-básico** podem ser configuradas como **Ativado** ou
-**Desativado**, enquanto as permissões restantes são ativadas ou
-desativadas com tipos de acesso específicos, incluindo **Leitura** ou
-**Gravação** para essa permissão, conforme representado por ícones. Consulte
+As permissões de **Superusuário** e **Acesso básico** podem ser configuradas como **Ativada** ou **Desativada**, enquanto as
+permissões restantes são ativadas ou desativadas com tipos de acesso específicos, incluindo acesso de **Leitura** ou **Gravação** para essa permissão, conforme
+representado por ícones. Consulte
 [Permissões](#permissions) para obter descrições de cada tipo e explicação dos ícones.
 
 ### Trabalhando com Usuários
 
 Dependendo de seu acesso de **Leitura** ou **Gravação** para as permissões de acesso dos usuários, é possível procurar usuários existentes, remover usuários e
-incluir usuários individualmente ou por um grupo. Observe que se você tiver a permissão
-de **Super usuário**, terá acesso total para concluir quaisquer
-tarefas para gerenciamento de usuários no ambiente. Revise as tarefas de gerenciamento de
+incluir usuários individualmente ou por um grupo. Se você tiver a permissão de **Superusuário**, terá acesso total para concluir quaisquer tarefas para gerenciamento de usuários
+no ambiente. Revise as tarefas de gerenciamento de
 usuários a seguir e o nível de acesso necessário para concluir cada tarefa:
 
 * Localizar usuários. Se tiver acesso de **Leitura** ou
 **Gravação** e você souber todo ou parte do nome do usuário, poderá
-localizar os usuários na tabela usando o campo **Procurar**.
+localizar os usuários na tabela usando o campo **Procurar**. Também é possível filtrar a lista de usuários por sua organização e permissões. Para filtrar uma lista de usuários, conclua
+estas etapas:
+  <ol>
+  <li>Clique em <strong>Filtrar</strong>. </li>
+  <li> Clique em <strong>Organizações</strong> ou <strong>Permissões</strong>, dependendo de por qual delas você deseja filtrar.
+  <dl>
+	<dt><strong>Organização</strong></dt>
+	<dd>Para filtrar os usuários por sua organização, inicie digitando o nome da organização no campo de <strong>Organização</strong> e selecione a organização a partir da lista. Em seguida, selecione a função
+ou as funções designadas para os usuários dentro da organização.</dd>
+	<dt><strong>Permissões</strong></dt>
+	<dd>Para filtrar os usuários por suas permissões, primeiro selecione o tipo de usuário ou usuários. Por exemplo, talvez você queira ver todos os Superusuários. Para permissões diferentes de
+<strong>Superusuário</strong> ou <strong>Acesso básico</strong>, também é possível selecionar o tipo de acesso, por exemplo, <strong>Leitura</strong> ou
+<strong>Gravação</strong>.</dd>
+	</dl></li>
+  <li>Clique em <strong>Aplicar</strong>.</li>
+   </ol>
+
+   A janela Administração de usuário mostra os filtros que você configura e os usuários que resultaram a partir dos filtros especificados. É possível, então, procurar um usuário na tabela filtrada. Também
+é possível modificar a lista de filtros especificados removendo uma opção de filtro da lista.
 
 * Incluir um único usuário. Se você tiver a permissão de **Super usuário** ou a permissão de **Usuários** com acesso de **Gravação**, será possível incluir usuários.
 
@@ -764,10 +933,7 @@ localizar os usuários na tabela usando o campo **Procurar**.
   **Nota**: quando a operação de inclusão é bem-sucedida, o usuário é incluído na tabela para você visualizar e procurar. Quando os usuários são
 incluídos, eles não possuem permissões designadas.
 
-* Incluir um grupo de usuário a partir do seu diretório LDAP. Se você tiver a
-permissão de **Super usuário** ou a permissão de
-**Usuários** com acesso de **Gravação**, será
-possível incluir usuários.
+* Incluir um grupo de usuário a partir do seu diretório LDAP. Se você tiver a permissão de **Super usuário** ou a permissão de **Usuários** com acesso de **Gravação**, será possível incluir usuários.
 
   1. Clique em **Incluir grupo de usuários**.
   2. No campo de **Procura**digite um nome do grupo para procurar e selecione o nome do grupo na lista preenchida.
@@ -781,8 +947,7 @@ uma tarefa em lote de segundo plano. Quando a operação de inclusão
 é bem-sucedida, o usuário ou o grupo é incluído na tabela para você visualizar e procurar. Quando os usuários são
 incluídos, eles não possuem permissões designadas.
 
-* Inclua um grupo de usuários, importando uma planilha que inclua IDs de usuário, endereços de e-mail do usuário e a organização à qual você planeja incluir o usuário. 
-Se você tiver a permissão de **Super usuário** ou a permissão de
+* Inclua um grupo de usuários, importando uma planilha que inclua IDs de usuário, endereços de e-mail do usuário e a organização à qual você planeja incluir o usuário. Se você tiver a permissão de **Super usuário** ou a permissão de
 **Usuários** com acesso de **Gravação**, será
 possível incluir usuários.
 
@@ -836,22 +1001,22 @@ localizar uma organização, selecione a organização a partir da lista e cliqu
 ### Permissões
 {: #permissions}
 
-Os usuários podem ser designados com as permissões a seguir com níveis de acesso específicos que permitem que o usuário conclua tarefas específicas:
+Os usuários podem ser designados com as permissões a seguir com níveis de acesso específicos (de leitura ou gravação) que permitem que o usuário conclua tarefas específicas dentro do console
+do administrador.
 
 *Tabela 7. Permissões*
 
 | **Permissão do usuário** | **Descrição** |       
 |-----------------|-------------------|
 | Superusuário | Os usuários com permissão de **Super usuário** configurada como **Ligado** podem editar permissões para outros usuários. Se você tiver a permissão ativa,
-ela ativa automaticamente o acesso total a todas as outras permissões. Além das tarefas
-esboçadas para cada permissão nesta tabela, também pode configurar
-inscrições de eventos para ser alertado diretamente sobre manutenção ou incidentes,
-planejar manutenção, executar verificações em componentes do console e criar organizações
-e espaços para o ambiente. |
+ela ativa automaticamente o acesso total a todas as outras permissões. Além das tarefas esboçadas para cada permissão nessa tabela, eles também podem configurar inscrições de eventos para serem alertados
+diretamente sobre manutenção ou incidentes, planejarem manutenção, executarem verificações em componentes do console e criarem organizações e espaços para o ambiente. Essa permissão é equivalente à função do
+administrador (admin) para o console do administrador.  |
 | Acesso básico | Os usuários com permissão de **Acesso básico** configurada
 como **Ligado** têm permissão para ver a opção da página de
 Administração na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Usuários com a permissão ativada podem acessar os quadros de [Informações do sistema](#oc_system) e de [Uso de
-recursos](#oc_resource). Sem essa permissão, os usuários não podem ver ou acessar a opção de menu de Administração. |
+recursos](#oc_resource). Sem essa permissão, os usuários não podem ver ou acessar a opção de menu de Administração. Essa permissão é equivalente à função do administrador (admin) para o console do administrador. Essa
+permissão é equivalente à permissão de login usada anteriormente para o console do administrador. |
 | Catálogo | Usuários com permissão de **Catálogo** podem ter o acesso designado para **Leitura** ou **Gravação** (modificar) cujos serviços
 estão disponíveis na instância local ou dedicada. O acesso de leitura permite que o usuário acesse o quadro de Gerenciamento de catálogo para visualizar serviços disponíveis. O acesso de gravação permite que o
 usuário acesse o quadro de [Gerenciamento de catálogo](#oc_catalog) para visualizar serviços, editar a visibilidade de serviços, registrar serviços customizados e controlar a lista de
@@ -864,14 +1029,6 @@ logs](#oc_report), bem como use a CLI para fazer upload de novos relatórios e c
 (incluir ou remover) usuários. Essa permissão não permite configurar permissões para outros usuários. O acesso de gravação permite que o usuário inclua novos usuários no ambiente, exclua usuários do ambiente
 e inclua usuários existentes em organizações que já existem no ambiente. Além disso, o acesso de **Gravação** permite que o usuário inclua novas organizações, exclua organizações e
 edite os usuários dentro das organizações. |
-
-
-As permissões podem ser ativadas para o usuário com o acesso de **Leitura** ou **Gravação** para essa permissão, conforme representado pelos ícones a seguir:
-
-* O ícone ![Ativado, representado por uma marca de seleção](images/icon_enabled.svg) associada com uma permissão significa que ela está ativada.
-* O ícone ![Leitura, representado por um olho](images/icon_read.svg) significa que o usuário tem acesso de **Leitura** (somente leitura) para essa permissão.
-* O ícone ![Gravação, representado por um lápis](images/icon_write.svg) significa que o usuário tem acesso de **Gravação** (editar, incluir ou remover) para essa
-permissão.
 
 
 ## Gerenciando usuários com a API REST Admin
@@ -945,7 +1102,7 @@ O exemplo a seguir mostra a saída a partir deste
 Ao incluir um usuário, você deve especificar uma organização. É possível usar a API REST `Admin` para listar todas as organizações. Deve-se
 ter a permissão de **Usuários** com o acesso de
 **Leitura** para listar organizações. Para listar todas as
-organizações, execute o comando a seguir: 
+organizações, execute o comando a seguir:
 
 `curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
 {: codeblock}
@@ -1184,7 +1341,6 @@ O exemplo a seguir mostra a saída a partir deste
 remover usuários da instância do {{site.data.keyword.Bluemix_notm}}. Deve-se ter
 permissão de **Usuários** com acesso de
 **Gravação** para remover usuários.
-
 
 Para remover um usuário, deve-se fornecer o ID de usuário do usuário. Execute o comando a seguir:
 

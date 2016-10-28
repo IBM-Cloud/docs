@@ -1,13 +1,17 @@
 {:new_window: target="_blank"} 
 
 
-# Using {{site.data.keyword.blockstorageshort}} snapshot {: #using-block-storage-snapshot} 
-Last updated: 07 September 2016
+# Using {{site.data.keyword.blockstorageshort}} snapshot {: #using-block-storage-snapshot}  (Deprecated)
+Last updated: 24 October 2016
 {: .last-updated}
 
-To use snapshots, follow these steps:
+**This service is deprecated:** Existing volumes can be used until 24 December 2016. For more information, see [{{site.data.keyword.blockstorageshort}} (Beta) is deprecated](../BlockStorage/index.html).
+
+Review the following information to create a snapshot, create a volume from a snapshot, or delete a snapshot. Alternatively, you can manage your volumes and snapshots using the OpenStackClient (OSC) command line. For more information, see [Managing block storage volumes using the OSC command line](../../virtualmachines/vm_manage_volumes.html#vm_manage_volumes).
 
 ## Creating a snapshot {: #creating-snapshot} 
+
+To create a snapshot, follow these steps:
 
 1.  In the Bluemix UI, select **Console > Storage**.
 2.  Select the Block Storage instance you previously provisioned.
@@ -24,6 +28,8 @@ To use snapshots, follow these steps:
 
 ## Creating a volume from a snapshot {: #creating-volume-from-snapshot}
 
+To create a volume from a snapshot, follow these steps:
+
 1.  In the Bluemix UI, select **Console > Storage**.
 2.  Select the Block Storage instance you previously provisioned.
 3.	Click the Manage tab.
@@ -35,6 +41,8 @@ To use snapshots, follow these steps:
 **Note:** The new volume size must be equal or greater than the snapshot size. 
 
 ## Deleting a snapshot {: #deleting-snapshot}
+
+To delete a snapshot, follow these steps:
 
 1.  In the Bluemix UI, select **Console > Storage**.
 2.  Select the Block Storage instance you previously provisioned.

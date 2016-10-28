@@ -12,7 +12,7 @@ copyright:
 # Configuration automatique des services liés
 {: #auto_config}
 
-*Dernière mise à jour : 10 juin 2016*
+Dernière mise à jour : 10 juin 2016
 {: .last-updated}
 
 Vous pouvez lier divers services à votre application Liberty. Les services peuvent être gérés par le conteneur, gérés par l'application, ou les deux, selon le souhait du développeur.

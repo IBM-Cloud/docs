@@ -39,7 +39,6 @@ configurações de perfil.
 ![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
 **Conta** &gt; **Perfil**.
 
-
 * Clique em **Mudar foto**, para fazer upload de uma nova foto.
 * Clique em **Remover foto**, para remover a sua foto.
 
@@ -52,7 +51,6 @@ e-mail, telefone, senha ou nome da empresa, conclua as etapas a seguir:
 1. Acesse o ícone **{{site.data.keyword.avatar}}**
 ![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
 **Conta** &gt; **Perfil**.
-
 2. Clique em **Editar seu ID IBM**.
 3. Edite as informações sobre o usuário.
 4. Clique em
@@ -71,5 +69,4 @@ Para desativar o rastreamento de analítica, conclua as etapas a seguir:
 1. Acesse o ícone **{{site.data.keyword.avatar}}**
 ![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
 **Conta** &gt; **Perfil**.
-
 2. Configure o rastreamento de analítica como **Desligado**.

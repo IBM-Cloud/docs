@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-25"
 ---
 
 {:new_window: target="_blank"}
@@ -14,38 +14,27 @@ copyright:
 # Getting started with {{site.data.keyword.iotdriverinsights_short}}
 {: #getting_started_iotdriverinsights}
 
-Last updated: 16 June 2016
-{: .last-updated}
-
 {{site.data.keyword.iotdriverinsights_full}} is a set of services on {{site.data.keyword.Bluemix_notm}} that you can use to collect and analyze driver behavior.
 
 {:shortdesc}
 
+The {{site.data.keyword.iotdriverinsights_short}} service includes subservices that provide intelligent analytics for large volumes of automotive data. The powerful capabilities of {{site.data.keyword.iotdriverinsights_short}} can help you build smart automotive solutions.
 
-The {{site.data.keyword.iotdriverinsights_short}} service includes the following services, which provide powerful analytics for large volumes of automotive data.
+## Services of {{site.data.keyword.iotdriverinsights_short}}
 
 |Service|Description|Getting started|About|
 |:---|:---|:---|:---|
 |Driving Behavior Analysis|A service that you can use to collect and analyze driver behavior from car probe and contextual data.| [Getting started with Driving Behavior Analysis](./drb_index.html)|[About Driving Behavior Analysis](drb_iotdriverinsights_overview.html)|
-|Trajectory Pattern Analysis|A service that you can use to analyze the Origin/Destination (O/D) and route patterns of driving trips from car probe data.| [Getting started with Trajectory Pattern Analysis](./tp_index.html)|[About Trajectory Pattern Analysis](tp_iotdriverinsights_overview.html)|
+|Trajectory Pattern Analysis|A service that you can use to analyze the Origin/Destination (O/D) and route patterns of driving trips based on data that is collected by the car probe.| [Getting started with Trajectory Pattern Analysis](./tp_index.html)|[About Trajectory Pattern Analysis](tp_iotdriverinsights_overview.html)|
+
+## Starter experience
+Experience the capabilities of {{site.data.keyword.iotdriverinsights_short}} and other IoT for Automotive services. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use IoT Automotive services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
 
 
 # Related Links
 {: #rellinks}
 
-## Tutorials and Samples
-{: #samples}
-
-* [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
-* [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
-* [IoT for Automotive Starter Application](https://iot-automotive-starter.mybluemix.net){:new_window}
-
-## API reference
-{: #api}
-
-* [API docs](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}
-
-## Other resources
+## Related links
 {: #general}
 
 * [Getting started with {{site.data.keyword.iotmapinsights_short}}](../IotMapInsights/index.html){:new_window}
@@ -53,3 +42,15 @@ The {{site.data.keyword.iotdriverinsights_short}} service includes the following
 * [dW Answers on IBM developerWorks](https://developer.ibm.com/answers/topics/iot-driver-behavior){:new_window}
 * [Stack Overflow](http://stackoverflow.com/questions/tagged/iot-driver-behavior){:new_window}
 * [What's new in Bluemix Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
+
+## Tutorials and Samples
+{: #samples}
+
+* [IBM IoT for Automotive Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window}
+* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
+* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
+
+## API reference
+{: #api}
+
+* [API docs](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}

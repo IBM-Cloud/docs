@@ -12,7 +12,7 @@ copyright:
 # Registrazione e traccia
 {: #logging_tracing}
 
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 21 giugno 2016
 {: .last-updated}
 
 ## File di log
@@ -36,7 +36,7 @@ Nell'interfaccia utente IBM Bluemix, sono disponibili delle funzionalità di tra
 * Utilizza Dump per creare e manipolare dump di heap e di thread su istanze dell'applicazione in esecuzione.
 
 Per eseguire tale azione, seleziona un'applicazione Liberty
-nell'interfaccia utente. Sotto Runtime nella navigazione sulla sinistra, puoi aprire i dettagli dell'istanza. Seleziona una o più istanze. Nel menu Azioni, puoi scegliere TRACCIA o DUMP.
+nell'interfaccia utente. Nella categoria Runtime nella navigazione, puoi aprire i dettagli dell'istanza. Seleziona una o più istanze. Nel menu Azioni, puoi scegliere TRACCIA o DUMP.
 
 # rellinks
 {: #rellinks}

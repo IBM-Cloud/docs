@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-27"
  
 
 ---
@@ -19,8 +19,6 @@ copyright:
 # Creating and invoking {{site.data.keyword.openwhisk_short}} actions
 {: #openwhisk_actions}
 
-Last updated: 27 September 2016
-{: .last-updated}
 
 Actions are stateless code snippets that run on the {{site.data.keyword.openwhisk}} platform. An action can be a JavaScript function, a Swift function, or a custom executable program packaged in a Docker container. For example, an action can be used to detect the faces in an image, aggregate a set of API calls, or post a Tweet.
 {:shortdesc}
@@ -160,7 +158,7 @@ Parameters can be passed to the action when it is invoked.
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+  wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
   ```
@@ -182,14 +180,14 @@ Rather than pass all the parameters to an action every time, you can bind certai
 1. Update the action by using the `--param` option to bind parameter values.
 
   ```
-  wsk action update hello --param place 'Vermont'
+  wsk action update hello --param place Vermont
   ```
   {: pre}
 
 2. Invoke the action, passing only the `name` parameter this time.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie'
+  wsk action invoke --blocking --result hello --param name Bernie
   ```
   {: pre}
   ```
@@ -204,7 +202,7 @@ Rather than pass all the parameters to an action every time, you can bind certai
 3. Invoke the action, passing both `name` and `place` values. The latter overwrites the value that is bound to the action.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+  wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
   ```
@@ -307,7 +305,7 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
       return new Promise(function(resolve, reject) {
           request.get(url, function(error, response, body) {
               if (error) {
-                  reject(error);    
+                  reject(error);
               }
               else {
                   var condition = JSON.parse(body).query.results.channel.item.condition;
@@ -333,7 +331,7 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+  wsk action invoke --blocking --result weather --param location "Brooklyn, NY"
   ```
   {: pre}
   ```
@@ -342,7 +340,84 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   }
   ```
   {: screen}
-  
+
+### Packaging an action as a Node.js module
+
+As an alternative to writing all your action code in a single JavaScript source file, you can write an action as a `npm` package. Consider as an example a directory with the following files:
+
+First, `package.json`:
+
+```
+{
+  "name": "my-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies" : {
+    "left-pad" : "1.1.3"
+  }
+}
+```
+{: codeblock}
+
+Then, `index.js`:
+
+```
+function myAction(args) {
+    const leftPad = require("left-pad")
+    const lines = args.lines || [];
+    return { padded: lines.map(l => leftPad(l, 30, ".")) }
+}
+
+exports.main = myAction;
+```
+{: codeblock}
+
+Note that the action is exposed through `exports.main`; the action handler itself can have any name, as long as it conforms to the usual signature of accepting an object and returning an object (or a `Promise` of an object).
+
+To create an OpenWhisk action from this package:
+
+1. Install first all dependencies locally
+
+  ```
+  npm install
+  ```
+  {: pre}
+
+2. Create a `.zip` archive containing all files (including all dependencies):
+
+  ```
+  zip -r action.zip *
+  ```
+  {: pre}
+
+3. Create the action:
+
+  ```
+  wsk action create packageAction --kind nodejs:6 action.zip
+  ```
+  {: pre}
+
+  Note that when creating an action from a `.zip` archive using the CLI tool, you must explicitly provide a value for the `--kind` flag.
+
+4. You can invoke the action like any other:
+
+  ```
+  wsk action invoke --blocking --result packageAction --param lines "[\"and now\", \"for something completely\", \"different\" ]"
+  ```
+  {: pre}
+  ```
+  {
+      "padded": [
+          ".......................and now",
+          "......for something completely",
+          ".....................different"
+      ]
+  }
+  ```
+  {: screen}
+
+Finally, note that while most `npm` packages install JavaScript sources on `npm install`, some also install and compile binary artifacts. The archive file upload currently does not support binary dependencies but rather only JavaScript dependencies. Action invocations may fail if the archive includes binary dependencies.
+    
 ### Creating action sequences
 {: #openwhisk_create_action_sequence}
 
@@ -366,9 +441,9 @@ Several utility actions are provided in a package called `/whisk.system/utils` t
    action /whisk.system/utils/cat: Concatenates input into a string
   ```
   {: screen}
-
+  
   You will be using the `split` and `sort` actions in this example.
-
+  
 2. Create an action sequence so that the result of one action is passed as an argument to the next action.
   
   ```
@@ -617,7 +692,7 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   
   To update the Docker action, run buildAndPush.sh to refresh the image on Docker Hub, this will allow the next time the system pulls your Docker image to run the new code for your action. 
   If there are no warm containers any new invocations will use the new Docker image. 
-  Take into account that if there is a warm container using a previous version of your Docker image, any new invocations will continue to use this image unless you run wsk action update, this will indicate to the system that for any new invocations force a docekr pull resulting on pulling your new Docker image.
+  **Note:** If there is a warm container using a previous version of your Docker image, any new invocations will continue to use this image until you run `wsk action update` on the action. The action update forces the system to pull the Docker image again.
   
   ```
   ./buildAndPush.sh janesmith/blackboxdemo

@@ -5,7 +5,7 @@
 
 # Getting started with Insights for Twitter {: #insights_twitter_overview}
 
-*Last updated: 13 May 2016*
+*Last updated: 12 Oct 2016*
 {: .last-updated}
 
 Use {{site.data.keyword.twitterfull}} to incorporate Twitter content from the Twitter [Decahose](http://support.gnip.com/apis/firehose/overview.html){: new_window} or [PowerTrack](http://support.gnip.com/apis/powertrack/overview.html){: new_window} streams into your {{site.data.keyword.Bluemix}} applications.
@@ -61,16 +61,20 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 -->
 
 # rellinks
+{: #rellinks}
 ## samples
+{: #samples}
 * [Interactive decahose search demo](https://cdetestapp.mybluemix.net/){: new_window}
 * [developerWorks: Tutorial and source code for decahose search demo](http://www.ibm.com/developerworks/cloud/library/cl-twitter-search-insights-bluemix-trs/index.html){: new_window}
 * [Analyzing "American Sniper" box office data (YouTube)](https://www.youtube.com/watch?v=Gfk5quglXvI){: new_window}
 * [Places Insights hands-on lab](https://github.com/IBM-Bluemix/places-insights-lab){: new_window}
 
 ## api
+{: #api}
 * [REST API](https://cdeservice.{APPDomain}/rest-api/){: new_window}
 
-## compatible runtimes {:id="buildpacks"}
+## compatible runtimes
+{: #buildpacks}
 * [Go](https://console.{DomainName}/docs/runtimes/go/index.html){: new_window}
 * [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html){: new_window}
 * [Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html){: new_window}
@@ -81,6 +85,7 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 * [Tomcat](https://console.{DomainName}/docs/runtimes/tomcat/index.html){: new_window}
 
 ## general
+{: #general}
 * [What's new in {{site.data.keyword.Bluemix_notm}} Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){: new_window}
 * [Adding a service to your application](../reqnsi.html){: new_window}
 * [End-to-end development](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}

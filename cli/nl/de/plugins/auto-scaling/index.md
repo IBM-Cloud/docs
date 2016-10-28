@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2015，20166
 
  
 
@@ -17,13 +17,14 @@ copyright:
 # Benutzerschnittstelle (CLI) für Autoskalierung
 {: #autoscalingcli}
 
-*Letzte Aktualisierung: 25. Februar 2016*
+Letzte Aktualisierung: 25. Februar 2016
 {: .last-updated}
+
 
 Sie können den Service {{site.data.keyword.autoscaling}} unter Verwendung der {{site.data.keyword.autoscaling}}-CLI für {{site.data.keyword.Bluemix_notm}} konfigurieren. Die {{site.data.keyword.autoscaling}}-CLI unterstützt Linux64, Win64 und OSX und stellt eine ähnliche Funktionalität wie die REST-konforme API für Autoskalierung (Auto-Scaling RESTful API) bereit.
 {: shortdesc}
 
-Bevor Sie beginnen, müssen Sie die {{site.data.keyword.Bluemix_notm}}-CLI installieren. Anweisungen hierzu enthält das Dokument zum [Download der {{site.data.keyword.Bluemix_notm}}-CLI](http://plugins.{DomainName}/ui/home.html){: new_window}.
+Bevor Sie beginnen, müssen Sie die {{site.data.keyword.Bluemix_notm}}-CLI installieren. Anweisungen hierzu enthält das Dokument zum [Download der {{site.data.keyword.Bluemix_notm}}-CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}.
 
 ## {{site.data.keyword.Bluemix_notm}}-CLI-Plug-in hinzufügen
 
@@ -117,8 +118,6 @@ bx as policy-enable|policy-disable <APP_NAME>
 
 Sie können das Protokoll der Autoskalierungsaktivität einer bestimmten App anzeigen. In der Befehlszeilenschnittstelle wird eine Tabelle der Autoskalierungsprotokolleinträge angezeigt.
 
-
-
 ```
 bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
 ```
@@ -133,14 +132,16 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 <dd class="pd">Die Zeitmarke für das Ende des Protokollbereichs. Die unterstützten Formate sind `jjjj-MM-ttTHH:mm:ss+/-hhmm, jjjj-MM-ttTHH:mm:ssZ`. Standardmäßig ist die Zeitmarke auf die aktuelle Uhrzeit eingestellt. Detaillierte Informationen zum Zeitmarkenformat enthält der <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C-Standard 'Date and Time Formats'</a>. 
 </dl>
 
+
+
 **Tipp:** Sie können auch die Option **--json** verwenden, um eine Quelltextformatierung der ursprünglichen JSON-Antwort zu erstellen.
 
 # Zugehörige Links
-{: #rellinks}
+{: rellinks}
 ## Allgemein
-{: #general}
+{: general}
 * [{{site.data.keyword.autoscaling}}-Service](../../../services/Auto-Scaling/index.html)
-* [{{site.data.keyword.Bluemix_notm}}-CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
+* [{{site.data.keyword.Bluemix_notm}}-CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [W3C-Standard 'Date and Time Formats'](https://www.w3.org/TR/NOTE-datetime){: new_window}
 
 

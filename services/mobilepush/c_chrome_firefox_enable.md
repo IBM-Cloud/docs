@@ -8,25 +8,25 @@ years: 2015 2016
 
 # Enabling web applications to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 21 September 2016
+Last updated: 26 October 2016
 {: .last-updated}
 
-You can now enable Google Chrome and Mozilla Firefox web applications to receive and send {{site.data.keyword.mobilepushshort}}.
+You can now enable Google Chrome and Mozilla Firefox web applications to receive   {{site.data.keyword.mobilepushshort}}.
 
 ## Installing the web browser client SDK for {{site.data.keyword.mobilepushshort}}
 {: #web_install}
 
 This topic describes how to install and use the client JavaScript Push SDK to further develop your Web applications.
 
-### Initializing in Google Chrome and Mozilla Firefox
+### Initializing in Google Chrome Web application
 
 For installing the Javascript SDK in Chrome Web application complete the steps:
 
-Download the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` from the [Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
+Download the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest_Website.json` from the [Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
 
-1. Edit the `manifest.json` file.
+1. Edit the `manifest_Website.json` file.
 
-For Google Chrome browser, change `name` to your site's name. Change `gcm_sender_id` to your Google Cloud Messaging (GCM) sender_ID ([How to get it ?](t_push_provider_android.html)). The gcm_sender_id value contains only numbers.
+For Google Chrome browser, change `name` to your site's name. Change `gcm_sender_id` to your Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) sender_ID. For more information, see [Google documentation](https://developers.google.com/web/fundamentals/getting-started/codelabs/push-notifications/#make_a_project_on_the_google_developer_console). The gcm_sender_id value contains only numbers.
 
 ```
  {
@@ -45,7 +45,8 @@ For Mozilla Firefox browser, add the following values in `manifest.json` file.  
 ```
     {: codeblock}
 
-2. Add the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` to your root directory.
+2. Change the `manifest_Website.json` file name to `manifest.json`.
+3. Add the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` to your root directory.
 3. Include the `manifest.json` in ``<head>`` tag of your html file .
 ```
  <link rel="manifest" href="manifest.json">
@@ -77,8 +78,9 @@ The `App Region` specifies the location where the {{site.data.keyword.mobilepush
  }
   var initParams = {
   "appGUID":"push app GUID",
-  "appRegion":"Region where service hosted"
-  }
+  "appRegion":"Region where service hosted",
+   "clientSecret":"clientSecret of your push service"
+    }
   bmsPush.initialize(params, callback)
 ```
 	{: codeblock}
@@ -86,7 +88,7 @@ The `App Region` specifies the location where the {{site.data.keyword.mobilepush
 ## Registering the web application
 {: #web_register}
 
-Use the `register()` API to register the device with {{site.data.keyword.mobilepushshort}} service. For registering from Google Chrome, add the Google Cloud Messaging (GCM) API Key and Web Site URL in the Bluemix {{site.data.keyword.mobilepushshort}} service web configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html) under Chrome setup.
+Use the `register()` API to register the device with {{site.data.keyword.mobilepushshort}} service. For registering from Google Chrome, add the Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) API Key and Web Site URL in the Bluemix {{site.data.keyword.mobilepushshort}} service web configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html) under Chrome setup.
 
 For registering from Mozilla Firefox, add website URL in the Bluemix {{site.data.keyword.mobilepushshort}} service web configuration dashboard under Firefox setup.
 
@@ -98,7 +100,8 @@ function callback(response) {
   }
   var initParams = {
   "appGUID":"push app GUID",
-  "appRegion":"Region where service hosted"
+  "appRegion":"Region where service hosted",
+  "clientSecret":"clientSecret of your push service"
   }
   bmsPush.initialize(params, callback)
   bmsPush.register(function(response) {
@@ -126,6 +129,9 @@ The following image shows the web notifications option in the dashboard.
 ## Next steps
   {: #next_steps_tags}
 
-After you have successfully set up basic notifications, you can configure configure tag-based notifications and advanced options.
+After you have successfully set up basic notifications, you can choose to configure tag-based notifications and advanced options.
 
-Add these {{site.data.keyword.mobilepushshort}} service features to your app. To use tag-based notifications, see [Tag-based Notifications](c_tag_basednotifications.html). To use advanced notifications options, see [Advanced push notifications](t_advance_notifications.html).
+Add these {{site.data.keyword.mobilepushshort}} service features to your app. To use tag-based notifications, see [Tag-based Notifications](c_tag_basednotifications.html). To use advanced notifications options, see [Advanced notifications](t_advance_badge_sound_payload.html).
+
+
+

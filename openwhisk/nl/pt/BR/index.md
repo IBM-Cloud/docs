@@ -16,13 +16,12 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# Introdução ao {{site.data.keyword.openwhisk_short}}
-Última atualização: 4 de agosto de 2016
+# Introdução ao {{site.data.keyword.openwhisk_short}} (Beta)
+Última atualização: 9 de setembro de 2016
 {: .last-updated}
 
-O {{site.data.keyword.openwhisk}} é um serviço de cálculo distribuído acionado por eventos. 
-O {{site.data.keyword.openwhisk_short}} executa a lógica de aplicativo em
-resposta a eventos ou chamadas diretas de apps da web ou móveis sobre HTTP. Os eventos
+O {{site.data.keyword.openwhisk}} é um serviço de cálculo distribuído, orientado para eventos também referido como Cálculo sem servidor ou como Função como um serviço (FaaS), o
+{{site.data.keyword.openwhisk_short}} executa uma lógica de aplicativo em resposta a eventos ou chamadas diretas a partir de aplicativos da web ou móveis sobre HTTP. Os eventos
 podem ser fornecidos a partir de serviços do Bluemix, como o Cloudant e a partir de
 fontes externas. Os desenvolvedores podem focar a composição da lógica do aplicativo e a criação de ações que são executadas sob demanda. A
 taxa de execução de ações sempre corresponde à taxa de eventos, resultando em ajuste de
@@ -37,10 +36,12 @@ Para obter mais detalhes sobre como o {{site.data.keyword.openwhisk_short}} func
 É possível usar a interface da linha de comandos (CLI) do {{site.data.keyword.openwhisk_short}} para configurar o namespace e a chave de autorização. 
 Acesse [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e siga as instruções para instalá-la. 
 
-**Aviso de descontinuação** Há uma nova CLI disponível que não
-requer a instalação do Python. A CLI anterior (baseada em Python) foi descontinuada
-atualmente e só está disponível como opção de download de backup. Se você optar por usar
-a CLI descontinuada, deverá ter o Python 2.7 instalado em seu sistema 
+### Configure a CLI para usar um proxy HTTPS
+
+A CLI pode ser configurada para usar um proxy HTTPS. Para configurar um proxy HTTPS, uma variável de ambiente chamada `HTTPS_PROXY` deve
+ ser criada. A variável deve ser configurada para o endereço do proxy HTTPS e a sua porta usando o formato a seguir:
+`{PROXY IP}:{PROXY PORT}`.
+
 
 Após o {{site.data.keyword.openwhisk_short}} ser configurado com a CLI,
 será possível iniciá-lo a partir da linha de comandos.
@@ -59,13 +60,12 @@ Após ter configurado seu ambiente, será possível iniciar o uso da CLI do {{si
 ## Usando o {{site.data.keyword.openwhisk_short}} a partir de um app do iOS
 {: #openwhisk_start_using_ios}
 
-É possível usar o {{site.data.keyword.openwhisk_short}} a partir de seu app móvel do iOS ou do Apple Watch usando o SDK do iOS do {{site.data.keyword.openwhisk_short}}. 
-Para obter mais detalhes, consulte a [documentação do iOS](./openwhisk_mobile_sdk.html).
+É possível usar o {{site.data.keyword.openwhisk_short}} a partir de seu app móvel do iOS ou do Apple Watch usando o SDK do iOS do {{site.data.keyword.openwhisk_short}}. Para obter mais detalhes, consulte a [documentação do iOS](./openwhisk_mobile_sdk.html).
 
 ## Usando APIs REST com o {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_restapi}
 
-Após seu ambiente do {{site.data.keyword.openwhisk_short}} ser ativado, é possível usar o {{site.data.keyword.openwhisk_short}} com seus apps da web ou apps móveis com chamadas API REST. 
+Após seu ambiente do {{site.data.keyword.openwhisk_short}} ser ativado, é possível usar o {{site.data.keyword.openwhisk_short}} com seus apps da web ou apps móveis com chamadas API REST.
 Para obter mais detalhes sobre as APIs para ações, ativações, pacotes, regras e
 acionadores, consulte a
 [documentação

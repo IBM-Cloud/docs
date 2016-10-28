@@ -39,26 +39,29 @@ In {{site.data.keyword.openwhisk_short}} sind verschiedene Pakete registriert. S
 1. Rufen Sie eine Liste der Pakete im Namensbereich `/whisk.system` ab.
 
   ```
-wsk package list /whisk.system
+  wsk package list /whisk.system
   ```
   {: pre}
   ```
-packages
-  /whisk.system/alarms                                              shared
-  /whisk.system/cloudant                                            shared
-  /whisk.system/github                                              shared
-  /whisk.system/samples                                             shared
-  /whisk.system/slack                                               shared
-  /whisk.system/util                                                shared
-  /whisk.system/watson                                              shared
-  /whisk.system/weather                                             shared
+  packages
+  /whisk.system/cloudant                                                 shared
+  /whisk.system/alarms                                                   shared
+  /whisk.system/watson                                                   shared
+  /whisk.system/websocket                                                shared
+  /whisk.system/weather                                                  shared
+  /whisk.system/system                                                   shared
+  /whisk.system/utils                                                    shared
+  /whisk.system/slack                                                    shared
+  /whisk.system/samples                                                  shared
+  /whisk.system/github                                                   shared
+  /whisk.system/pushnotifications                                        shared
   ```
   {: screen}
 
 2. Rufen Sie eine Liste der Entitäten im Paket `/whisk.system/cloudant` ab.
 
   ```
-wsk package get --summary /whisk.system/cloudant
+  wsk package get --summary /whisk.system/cloudant
   ```
   {: pre}
   ```
@@ -77,7 +80,7 @@ wsk package get --summary /whisk.system/cloudant
 3. Rufen Sie eine Beschreibung der Aktion `/whisk.system/cloudant/read` ab.
 
   ```
-wsk action get --summary /whisk.system/cloudant/read
+  wsk action get --summary /whisk.system/cloudant/read
   ```
   {: pre}
   ```
@@ -97,7 +100,7 @@ Sie können Aktionen in einem Paket ebenso wie bei anderen Aktionen aufrufen. Di
 1. Rufen Sie eine Beschreibung der Aktion `/whisk.system/samples/greeting` ab.
 
   ```
-wsk action get --summary /whisk.system/samples/greeting
+  wsk action get --summary /whisk.system/samples/greeting
   ```
   {: pre}
   ```
@@ -111,12 +114,12 @@ wsk action get --summary /whisk.system/samples/greeting
 2. Rufen Sie die Aktion ohne Parameter auf.
 
   ```
-wsk action invoke --blocking --result /whisk.system/samples/greeting
+  wsk action invoke --blocking --result /whisk.system/samples/greeting
   ```
   {: pre}
   ```
   {
-            "payload": "Hello, stranger from somewhere!"
+      "payload": "Hello, stranger from somewhere!"
   }
   ```
   {: screen}
@@ -126,12 +129,12 @@ wsk action invoke --blocking --result /whisk.system/samples/greeting
 3. Rufen Sie die Aktion mit Parametern auf.
 
   ```
-wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
+  wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
   ```
   {: pre}
   ```
   {
-            "payload": "Hello, Mork from Ork!"
+      "payload": "Hello, Mork from Ork!"
   }
   ```
   {: screen}
@@ -151,26 +154,26 @@ In dem folgenden einfachen Beispiel erstellen Sie eine Bindung an das Paket `/wh
 1. Erstellen Sie eine Bindung an das Paket `/whisk.system/samples` und legen Sie einen Standardwert für den Parameter `place` fest.
 
   ```
-wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla
+  wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla
   ```
   {: pre}
   ```
-ok: created binding valhallaSamples
+  ok: created binding valhallaSamples
   ```
   {: screen}
 
 2. Rufen Sie eine Beschreibung der Paketbindung ab.
 
   ```
-wsk package get --summary valhallaSamples
+  wsk package get --summary valhallaSamples
   ```
   {: pre}
   ```
-package /myNamespace/valhallaSamples
-   action /myNamespace/valhallaSamples/greeting: Print a friendly greeting
+  package /myNamespace/valhallaSamples
+   action /myNamespace/valhallaSamples/greeting: Returns a friendly greeting
    action /myNamespace/valhallaSamples/wordCount: Count words in a string
-   action /myNamespace/valhallaSamples/helloWorld: Print to the console
-   action /myNamespace/valhallaSamples/echo: Returns the input arguments, unchanged
+   action /myNamespace/valhallaSamples/helloWorld: Demonstrates logging facilities
+   action /myNamespace/valhallaSamples/curl: Curl a host url
   ```
   {: screen}
 
@@ -179,12 +182,12 @@ package /myNamespace/valhallaSamples
 3. Rufen Sie eine Aktion in der Paketbindung auf.
 
   ```
-wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
+  wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
   ```
   {: pre}
   ```
   {
-            "payload": "Hello, Odin from Valhalla!"
+      "payload": "Hello, Odin from Valhalla!"
   }
   ```
   {: screen}
@@ -194,12 +197,12 @@ wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
 4. Rufen Sie eine Aktion auf und überschreiben Sie den Standardparameterwert.
 
   ```
-wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin --param place Asgard
+  wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin --param place Asgard
   ```
   {: pre}
   ```
   {
-            "payload": "Hello, Odin from Asgard!"
+      "payload": "Hello, Odin from Asgard!"
   }
   ```
   {: screen}
@@ -215,17 +218,17 @@ Feeds sind eine bequeme Methode zum Konfigurieren einer externen Ereignisquelle 
 1. Rufen Sie eine Beschreibung des Feeds im Paket `/whisk.system/alarms` ab.
 
   ```
-wsk package get --summary /whisk.system/alarms
+  wsk package get --summary /whisk.system/alarms
   ```
   {: pre}
   ```
-package /whisk.system/alarms
+  package /whisk.system/alarms
    feed   /whisk.system/alarms/alarm
   ```
   {: screen}
 
   ```
-wsk action get --summary /whisk.system/alarms/alarm
+  wsk action get --summary /whisk.system/alarms/alarm
   ```
   {: pre}
   ```
@@ -245,15 +248,15 @@ wsk action get --summary /whisk.system/alarms/alarm
   ```
   {: pre}
   ```
-ok: created trigger feed everyEightSeconds
+  ok: created trigger feed everyEightSeconds
   ```
   {: screen}
 
 3. Erstellen Sie eine Datei 'hello.js' mit dem folgenden Aktionscode.
 
   ```
-function main(params) {
-     return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+  function main(params) {
+      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -261,18 +264,18 @@ function main(params) {
 4. Stellen Sie sicher, dass die Aktion vorhanden ist.
 
   ```
-wsk action update hello hello.js
+  wsk action update hello hello.js
   ```
   {: pre}
 
 5. Erstellen Sie eine Regel, die die Aktion `hello` jedes Mal aufruft, wenn der Auslöser `everyEightSeconds` aktiviert wird.
 
   ```
-wsk rule create --enable myRule everyEightSeconds hello
+  wsk rule create --enable myRule everyEightSeconds hello
   ```
   {: pre}
   ```
-ok: created rule myRule
+  ok: created rule myRule
   ok: rule myRule is activating
   ```
   {: screen}
@@ -298,22 +301,22 @@ Versuchen Sie das folgende Beispiel, um ein angepasstes Paket mit einer einfache
 1. Erstellen Sie ein Paket mit dem Namen "custom".
 
   ```
-wsk package create custom
+  wsk package create custom
   ```
   {: pre}
   ```
-ok: created package custom
+  ok: created package custom
   ```
   {: screen}
 
 2. Rufen Sie eine Zusammenfassung des Pakets ab.
 
   ```
-wsk package get --summary custom
+  wsk package get --summary custom
   ```
   {: pre}
   ```
-package /myNamespace/custom
+  package /myNamespace/custom
   ```
   {: screen}
 
@@ -322,18 +325,18 @@ package /myNamespace/custom
 3. Erstellen Sie eine Datei mit dem Namen `identity.js`, die den folgenden Aktionscode enthält. Diese Aktion gibt alle Eingabeparameter zurück.
 
   ```
-function main(args) { return args; }
+  function main(args) { return args; }
   ```
   {: codeblock}
 
 4. Erstellen Sie eine Aktion `identity` im Paket `custom`.
 
   ```
-wsk action create custom/identity identity.js
+  wsk action create custom/identity identity.js
   ```
   {: pre}
   ```
-ok: created action custom/identity
+  ok: created action custom/identity
   ```
   {: screen}
 
@@ -342,11 +345,11 @@ ok: created action custom/identity
 5. Rufen Sie erneut eine Zusammenfassung des Pakets ab.
 
   ```
-wsk package get --summary custom
+  wsk package get --summary custom
   ```
   {: pre}
   ```
-package /myNamespace/custom
+  package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
   {: screen}
@@ -356,7 +359,7 @@ package /myNamespace/custom
 6. Rufen Sie die Aktion in dem Paket auf.
 
   ```
-wsk action invoke --blocking --result custom/identity
+  wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
   ```
@@ -370,23 +373,24 @@ Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Daz
 1. Aktualisieren Sie das Paket `custom` mit zwei Parametern: `city` und `country`.
 
   ```
-wsk package update custom --param city Austin --param country USA
+  wsk package update custom --param city Austin --param country USA
   ```
   {: pre}
   ```
-ok: updated package custom
+  ok: updated package custom
   ```
   {: screen}
 
 2. Zeigen Sie die Parameter in dem Paket und in der Aktion an und beachten Sie, wie die Aktion `identity` in dem Paket die Parameter aus dem Paket übernimmt.
 
   ```
-wsk package get custom parameters
+  wsk package get custom parameters
   ```
   {: pre}
   ```
-ok: got package custom, projecting parameters
-  [{
+  ok: got package custom, projecting parameters
+  [
+      {
           "key": "city",
           "value": "Austin"
       },
@@ -399,12 +403,13 @@ ok: got package custom, projecting parameters
   {: screen}
 
   ```
-wsk action get custom/identity parameters
+  wsk action get custom/identity parameters
   ```
   {: pre}
   ```
-ok: got action custom/identity, projecting parameters
-  [{
+  ok: got action custom/identity, projecting parameters
+  [
+      {
           "key": "city",
           "value": "Austin"
       },
@@ -419,12 +424,12 @@ ok: got action custom/identity, projecting parameters
 3. Rufen Sie die Aktion 'identity' ohne Parameter auf, um zu prüfen, ob die Aktion die Parameter tatsächlich übernimmt.
 
   ```
-wsk action invoke --blocking --result custom/identity
+  wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
   ```
   {
-            "city": "Austin",
+      "city": "Austin",
       "country": "USA"
   }
   ```
@@ -433,12 +438,12 @@ wsk action invoke --blocking --result custom/identity
 4. Rufen Sie die Aktion 'identity' mit Parametern auf. Die Aufrufparameter werden mit den Paketparametern gemischt, wobei die Aufrufparameter die Paketparameter überschreiben.
 
   ```
-wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
+  wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
   ```
   {: pre}
   ```
   {
-            "city": "Dallas",
+      "city": "Dallas",
       "country": "USA",
       "state": "Texas"
   }
@@ -454,22 +459,22 @@ Wenn die Aktionen und Feeds, die ein Paket bilden, auf Fehler geprüft und getes
 1. Stellen Sie das Paket zur gemeinsamen Nutzung durch alle Benutzer bereit:
 
   ```
-wsk package update custom --shared
+  wsk package update custom --shared
   ```
   {: pre}
   ```
-ok: updated package custom
+  ok: updated package custom
   ```
   {: screen}
 
 2. Zeigen Sie die Eigenschaft `publish` des Pakets an, um zu prüfen, ob sie jetzt den Wert 'true' hat.
 
   ```
-wsk package get custom publish
+  wsk package get custom publish
   ```
   {: pre}
   ```
-ok: got package custom, projecting publish
+  ok: got package custom, projecting publish
   true
   ```
   {: screen}
@@ -480,11 +485,11 @@ Andere Benutzer können Ihr Paket `custom` jetzt verwenden, indem sie Bindungen 
 1. Rufen Sie eine Beschreibung des Pakets ab, um die vollständig qualifizierten Namen des Pakets und der Aktion anzuzeigen.
 
   ```
-wsk package get --summary custom
+  wsk package get --summary custom
   ```
   {: pre}
   ```
-package /myNamespace/custom
+  package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
   {: screen}

@@ -1,13 +1,19 @@
 {:new_window: target="_blank"} 
 
-# Using {{site.data.keyword.blockstorageshort}} volume 
+# Using {{site.data.keyword.blockstorageshort}} volume (Deprecated)
 {: #using-block-storage-volume} 
-Last updated: 07 September 2016
+Last updated: 24 October 2016
 {: .last-updated}
 
-To use volumes, follow these steps:
+**This service is deprecated:** Existing volumes can be used until 24 December 2016. For more information, see [{{site.data.keyword.blockstorageshort}} (Beta) is deprecated](../BlockStorage/index.html).
+
+Review the following information to delete, extend, attach or detach your volumes. Alternatively, you can manage your volumes and snapshots using the OpenStackClient (OSC) command line. For more information, see [Managing block storage volumes using the OSC command line](../../virtualmachines/vm_manage_volumes.html#vm_manage_volumes).
 
 ## Deleting a volume {: #deleting-volume}
+
+You cannot delete a volume that is attached to a virtual server. You must detach the volume first. Deleting the volume makes the volume inaccessible for future use and the data in it is lost. Also, you cannot delete volumes that have associated snapshots.
+
+To delete a volume, follow these steps:
 
 1.  In the Bluemix UI, select **Console > Storage**.
 2.  Select the Block Storage instance you previously provisioned.
@@ -15,10 +21,13 @@ To use volumes, follow these steps:
 4.	From the Actions drop-down menu, click **Delete**.
 5.	Confirm the deletion of this volume.
 
-You cannot delete a volume that is attached to a virtual server. You must detach the volume first. Deleting the volume makes the volume inaccessible for future use and the data in it is lost. Also, you cannot delete volumes that have associated snapshots.
 
 ## Extending a volume {: #extending-volume}
 You can increase the volume in size to up to ten times the original size through the **Extend** action. You cannot reduce the size of a volume.
+
+To be extended, a volume must be in **Available** state. After you extend the volume, you must notify the filesystem (such as ext4) that the disk has been extended by resizing the filesystem to the new size.
+
+To extend a volume, follow these steps:
 
 1.  In the Bluemix UI, select **Console > Storage**.
 2.  Select the Block Storage instance you previously provisioned.
@@ -27,7 +36,6 @@ You can increase the volume in size to up to ten times the original size through
 5.	Select the new size of the volume. Provide the new total size of the volume.
 6.	Click **Extend** to submit the information and close the dialog. 
 
-To be extended, a volume must be in **Available** state. After you extend the volume, you must notify the filesystem (such as ext4) that the disk has been extended by resizing the filesystem to the new size. 
 
 ## Attaching and detaching a volume to a virtual server {: #attaching-detaching-volume}
 Volumes are attached and detached from virtual servers as devices with a specific device name. For a virtual server to be able to persist data on a volume, you must attach the volume to the virtual server.

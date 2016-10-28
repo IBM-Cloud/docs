@@ -11,7 +11,7 @@ copyright:
 # Utilisation des fonctions bêta
 {: #using_beta_features}
 
-*Dernière mise à jour : 10 juin 2016*
+Dernière mise à jour : 10 juin 2016
 {: .last-updated}
 
 Les fonctions bêta de Liberty sont destinées à faciliter l'accès aux nouvelles fonctionnalités et aux nouveaux modèles de programmation pouvant être intégrés dans une édition future de Liberty. La plupart des fonctions bêta peuvent également être utilisées dans des applications déployées sur Bluemix.
@@ -30,19 +30,10 @@ Fonctions bêta de Liberty disponibles dans Bluemix
 
 <tr>
 <td>bluemixLogCollector-1.1</td>
-<td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
 <td>logstashCollector-1.1</td>
-</tr>
-
-<tr>
 <td>osgiBundle-1.0</td>
-<td>passwordUtilities-1.0</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
-
 </table>
 
 Pour utiliser les fonctions bêta de Liberty dans Bluemix, procédez comme suit :
@@ -52,7 +43,7 @@ Pour utiliser les fonctions bêta de Liberty dans Bluemix, procédez comme suit 
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
-            <feature>passwordUtilities-1.0</feature>
+            <feature>bluemixLogCollector-1.1</feature>
         </featureManager>
     </server>
 ```
@@ -84,7 +75,7 @@ Pour utiliser les fonctions bêta de Liberty dans Bluemix, procédez comme suit 
           JBP_CONFIG_LIBERTY: "version: +"
 ```
 
-Si vous activez les fonctions bêta sur une application existante, n'oubliez pas de reconstituer cette dernière après avoir définir les variables d'environnement.
+Si vous activez les fonctions bêta sur une application existante, n'oubliez pas de reconstituer cette dernière après avoir défini les variables d'environnement.
 
 {: #codeblock}
 

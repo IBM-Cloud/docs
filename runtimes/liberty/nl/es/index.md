@@ -12,7 +12,7 @@ copyright:
 # Liberty for Java
 {: #liberty_runtime}
 
-*Última actualización: 10 de junio de 2016*
+Última actualización: 10 de junio de 2016
 {: .last-updated}
 
 Las aplicaciones Liberty for Java de {{site.data.keyword.Bluemix}} se basan en el paquete de compilación liberty-for-java. El paquete de compilación liberty-for-java proporciona un entorno de ejecución completo para la ejecución de aplicaciones Java EE 7 y OSGi sobre el perfil de Liberty. Admite infraestructura extendidas, como Spring e incluye IBM JRE. WebSphere Liberty permite desarrollar rápidamente aplicaciones adaptadas a la nube.

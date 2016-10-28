@@ -8,7 +8,7 @@ copyright:
 
 # Registering a device with userId
 {: #register_device_with_userId}
-Last updated: 22 September 2016
+Last updated: 17 October 2016
 {: .last-updated}
 
 To register for userId-based notification, complete the following steps:
@@ -149,7 +149,34 @@ Use the following APIs to register for userId based notifications. Initialize th
 var bmsPush = new BMSPush();
 var params = {
     "appGUID":"push app GUID",
-    "appRegion":"App Region"
+    "appRegion":"App Region",
+    "clientSecret":"Push Client Secret" 
+    }
+  bmsPush.initialize(params, function(response){
+    alert(response.response)
+    })
+```
+	{: codeblock}
+  
+After successfully initialized register the web application with userId.
+
+```
+bmsPush.registerWithUserId("UserId", function(response) {
+ alert(response.response)
+  })
+```
+	{: codeblock}
+
+## Google Chrome Apps and Extensions
+{: web-register-new}
+
+Use the following APIs to register for userId based notifications. Initialize the SDK with `app GUID`, `app Region` and `Client Secret`.
+
+```
+var bmsPush = new BMSPush();
+var params = {
+    "appGUID":"push app GUID",
+    "appRegion":"App Region",
     "clientSecret":"Push Client Secret" 
     }
   bmsPush.initialize(params, function(response){

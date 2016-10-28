@@ -12,11 +12,11 @@ copyright:
 
 # Modo off-line para o Liberty
 {: #offline_mode}
-*Última atualização: 20 de julho de 2016*
+Última atualização: 20 de julho de 2016
 {: .last-updated}
 
 Quando um aplicativo Liberty é enviado por push para o {{site.data.keyword.Bluemix}}, o buildpack do Liberty pode acessar sites externos ao Bluemix
-para adquirir os artefatos requeridos pelo aplicativo. Veja a seguir os sites externos que o buildpack do Liberty pode acessar. Nos ambientes [Bluemix Dedicado](../../dedicated/index.html#dedicated) e
+para adquirir os artefatos requeridos pelo aplicativo.  Veja a seguir os sites externos que o buildpack do Liberty pode acessar.  Nos ambientes [Bluemix Dedicado](../../dedicated/index.html#dedicated) e
 [Bluemix Local](../../local/index.html#local), estes sites podem precisar ser *incluídos na lista de desbloqueio*.
 
 * https://download.run.pivotal.io e https://java-buildpack.cloudfoundry.org são usados para acessar componentes para:

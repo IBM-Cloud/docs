@@ -8,62 +8,60 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Utilización de cadenas de herramientas
+# Uso de cadenas de herramientas en {{site.data.keyword.Bluemix_notm}} público
 {: #toolchains-using}
 
-*Última actualización: 4 de mayo de 2016*
+*Última actualización: 12 de agosto de 2016*
 {: .last-updated}
 
-Puede utilizar una cadena de herramientas para que sea productiva en su trabajo diario de desarrollo, despliegue y operaciones. Una vez que se ha configurado una cadena de herramientas, es posible añadir, eliminar o configurar integraciones de herramientas y gestionar el acceso a la cadena de herramientas.
+Puede utilizar una cadena de herramientas para ser productivo en sus actividades diarias de desarrollo, despliegue y operaciones. Tras configurar una cadena de herramientas, puede añadir, suprimir o configurar integraciones de herramientas y gestionar el acceso a la cadena de herramientas.
 {: shortdesc}
 
-**Importante**: esta capacidad es experimental. Es posible que las cadenas de herramientas no sean estables y que cambien de tal modo que no sean compatibles con versiones anteriores. No se recomienda su uso en entornos de producción. Para utilizar cadenas de herramientas, debe realizar una [solicitud única de acceso](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}. Las cadenas de herramientas están disponibles únicamente en el sur de EE. UU. 
+**Importante**: esta funcionalidad es experimental. Las cadenas de herramientas pueden no ser estables y es posible que cambien de modo que no sean compatibles con versiones anteriores. No se recomienda utilizarlas en entornos de producción. Las cadenas de herramientas están disponibles solo en la región EE.UU. sur.
 
-## Configuración de una integración de herramienta
+## Configuración de una integración de herramientas
 {: #configuring_a_tool_integration}
 
-Puede configurar una integración de herramienta por primera vez o actualizar los ajustes de la configuración para una integración de herramienta que ya forme parte de su cadena de herramientas. 
+Si ha aplazado la configuración de una integración de herramientas al crear una cadena de herramientas, se mostrará un botón **Configurar** en el mosaico correspondiente. Si ha configurado una integración de herramientas al crear una cadena de herramientas, puede actualizar los valores de configuración.
 
-1. En el panel de control de DevOps, en la pestaña **Toolchains**, pulse una cadena de herramientas para abrir la página Tool Integrations correspondiente. Como alternativa, en la página de visión general de la app, en el título Continuous Delivery, pulse **View Toolchain** y, a continuación, pulse **Tool Integrations**.
-1. Si necesita configurar una integración de herramienta por primera vez, en su título, pulse **Configure**.
+1. En el panel de control de DevOps, en la pestaña **Cadenas de herramientas**, pulse una cadena de herramientas para abrir la página Integraciones de herramientas correspondiente. Si lo prefiere, en la página Visión general de la app, mosaico Entrega continua, pulse **Ver cadena de herramientas** y, a continuación, **Integraciones de herramientas**.
+1. Si necesita configurar una integración de herramientas por primera vez, en el mosaico correspondiente, pulse **Configurar**.
 
-  ![Botón de configuración](images/toolchain_tile_configure.png)
+  ![Botón Configurar](images/toolchain_tile_configure.png)
 
- Cuando haya terminado de configurar la integración de la herramienta, pulse **Save Integration**.
+ Cuando haya terminado de configurar la integración de herramientas, pulse **Guardar integración**.
  
-1. Si necesita actualizar la configuración de una integración de herramienta, en su título, pulse el menú para acceder a las opciones de configuración. 
+1. Si necesita actualizar la configuración de una integración de herramientas, en el mosaico correspondiente, pulse el menú para acceder a las opciones de configuración.
 
   ![Menú de configuración](images/toolchain_tile_menu.png)
  
- Cuando haya terminado de configurar los ajustes, pulse **Save Integration**.
+ Cuando haya terminado de actualizar los valores, pulse **Guardar integración**.
 
- **Nota**: una vez que haya configurado el repositorio para la integración de una herramienta GitHub, el URL del repositorio podrá actualizarse, pero no podrá modificar el repositorio. Para utilizar otro repositorio, elimine la integración de herramienta GitHub actual de su cadena de herramientas, añada una integración de la herramienta GitHub a su cadena de herramientas y configure dicha integración para utilizar el nuevo repositorio. 
-
-## Adición de una integración de herramienta
+## Adición de una integración de herramientas
 {: #adding_a_tool_integration}
 
-Puede añadir y configurar integraciones de herramientas para su cadena de herramientas. 
+Puede añadir y configurar las integraciones de herramientas para su cadena de herramientas.
 
-1. En el panel de control de DevOps, en la pestaña **Toolchains**, pulse una cadena de herramientas para abrir la página Tool Integrations correspondiente. Como alternativa, en la página de visión general de la app, en el título Continuous Delivery, pulse **View Toolchain** y, a continuación, pulse **Tool Integrations**.
-1. Para ver una lista de las integraciones de herramientas que se deben añadir, pulse el botón de adición (+).
-1. Pulse en la integración de herramientas que desee añadir. 
-1. Introduzca la información necesaria para configurar la integración de la herramienta.  
-1. Pulse **Create Integration** para añadir la integración de la herramienta en su cadena de herramientas. 
+1. En el panel de control de DevOps, en la pestaña **Cadenas de herramientas**, pulse una cadena de herramientas para abrir la página Integraciones de herramientas correspondiente. Si lo prefiere, en la página Visión general de la app, mosaico Entrega continua, pulse **Ver cadena de herramientas** y, a continuación, **Integraciones de herramientas**.
+1. Para ver una lista de integraciones para añadir, pulse el botón (+).
+1. Pulse una integración de herramientas que desee añadir.
+1. Indique la información necesaria para configurar la integración de herramientas. 
+1. Pulse **Crear integración** para añadir la integración de herramientas a su cadena de herramientas.
 
-## Eliminación de una integración de herramienta
+## Supresión de una integración de herramientas
 {: #deleting_a_tool_integration}
 
-Puede eliminar una integración de herramienta de su cadena de herramientas.  
+Si suprime una integración de herramientas de la cadena de herramientas, la supresión no se puede deshacer. 
 
-1. En el panel de control de DevOps, en la pestaña **Toolchains**, pulse una cadena de herramientas para abrir la página Tool Integrations correspondiente. Como alternativa, en la página de visión general de la app, en el título Continuous Delivery, pulse **View Toolchain** y, a continuación, pulse **Tool Integrations**.
-1. En el título de la integración de herramienta que desea eliminar, pulse el menú para acceder a las opciones de configuración. 
-1. Para eliminar la integración de herramienta de su cadena de herramientas, pulse **Delete**.
-1. Confirme la acción pulsando **Delete**.
+1. En el panel de control de DevOps, en la pestaña **Cadenas de herramientas**, pulse una cadena de herramientas para abrir la página Integraciones de herramientas correspondiente. Si lo prefiere, en la página Visión general de la app, mosaico Entrega continua, pulse **Ver cadena de herramientas** y, a continuación, **Integraciones de herramientas**.
+1. En el mosaico de la integración de herramientas que desea suprimir, pulse el menú para acceder a las-opciones de configuración.
+1. Para suprimir la integración de herramientas de la cadena de herramientas, pulse **Suprimir**.
+1. Confirme pulsando **Suprimir**.  
 
-## Gestión del acceso
+## Gestión de acceso
 {: #managing_access}
 
-Puede conceder acceso a los usuarios a una cadena de herramientas si los añade a la organización con la que está asociada la cadena de herramientas. Cada cadena de herramientas está asociada con una organización específica, y cualquier usuario que sea miembro de dicha organización puede acceder a las cadenas de herramientas asociadas. Si cambia de organización, puede acceder a un conjunto de cadenas de herramientas distinto. 
+Puede conceder a los usuarios acceso a una cadena de herramientas añadiéndolos a la organización (org) con la que está asociada la cadena de herramientas. Cada cadena de herramientas está asociada con una organización específica y cualquier usuario que sea miembro de la organización en cuestión puede acceder a las cadenas de herramientas asociadas. Pulse el icono **{{site.data.keyword.avatar}}** ![icono Avatar](../icons/i-avatar-icon.svg) en la barra de menús para abrir el widget Cuenta y soporte y ver la organización con la que está trabajando actualmente. Cambie de organización para acceder a otro conjunto de cadenas de herramientas.
 
 <!--CA: Commenting out the content on authentication for Interconnect since it applies to GitHub Enterprise. This content can be exposed again when GHE is supported for the Dedicated Beta 2.-->
 
@@ -77,20 +75,20 @@ If you use Web ID authentication, when you add users to your Bluemix org and spa
 
 To add a user: -->
 
-1. En el panel de control de DevOps, en la pestaña **Toolchains**, pulse la cadena de herramientas que desee gestionar y pulse **Manage**. Como alternativa, en la página de visión general de la aplicación, en el título Continuous Delivery, pulse **View Toolchain** y luego pulse **Manage**.  
-1. Pulse el enlace de su organización.  
-1. En la página Manage Organizations, pulse **Invite a User** y escriba la dirección de correo electrónico del usuario.
-1. Si desea conceder permisos avanzados al usuario, seleccione las casillas **Manager**, **Billing Manager** o **Auditor** que corresponda. 
-1. Pulse **INVITE**.
-1. Pulse **SAVE**.
+1. En el panel de control de DevOps, pestaña **Cadenas de herramientas**, pulse la cadena de herramientas que se gestionará y, a continuación, pulse **Gestionar**. Si lo prefiere, en la página Visión general de la app, mosaico Entrega continua, pulse **Ver cadena de herramientas** y, a continuación, **Gestionar**.  
+1. Pulse el enlace de su organización. 
+1. En la página Gestionar organizaciones, pulse **Invitar a usuario** y escriba la dirección de correo electrónico del usuario.
+1. Si desea conceder permisos avanzados para gestionar usuarios en organizaciones de {{site.data.keyword.Bluemix_notm}}, seleccione una o varias de las casillas **Gestor**, **Gestor de facturación** o **Auditor**.
+1. Pulse **INVITAR**.
+1. Pulse **GUARDAR**.
 
-## Eliminación de una cadena de herramientas
+## Supresión de una cadena de herramientas
 {: #deleting_a_toolchain}
 
-Puede eliminar una cadena de herramientas y especificar qué integraciones de herramienta asociadas desea eliminar. 
+Puede suprimir una cadena de herramientas y especificar cuál de las integraciones de herramientas asociadas desea suprimir. Cuando se suprime una cadena de herramientas, la supresión no se puede deshacer.
 
-1. En el panel de control de DevOps, en la pestaña **Toolchains**, pulse la cadena de herramientas que desee eliminar y pulse **Manage**. Como alternativa, en la página de visión general de la aplicación, en el título Continuous Delivery, pulse **View Toolchain** y luego pulse **Manage**.
-1. Pulse **Delete Toolchain** y revise las integraciones de herramientas que se dispone a eliminar. 
-1. Para confirmar la eliminación, escriba el nombre de la cadena de herramientas y pulse **Delete**.
+1. En el panel de control de DevOps, pestaña **Cadenas de herramientas**, pulse la cadena de herramientas que se suprimirá y, a continuación, pulse **Gestionar**. Si lo prefiere, en la página Visión general de la app, mosaico Entrega continua, pulse **Ver cadena de herramientas** y, a continuación, **Gestionar**.
+1. Pulse **Suprimir cadena de herramientas** y revise o ajuste las integraciones de herramientas que se está suprimiendo.
+1. Confirme la supresión escribiendo el nombre de la cadena de herramientas y pulsando **Suprimir**.  
 
- **Consejo**: cuando elimine la integración de una herramienta GitHub, el repositorio de GitHub asociado no se eliminará de GitHub. Deberá eliminar el repositorio manualmente. 
+ **Consejo**: cuando suprima una integración de herramientas GitHub, el repositorio de GitHub asociado no se suprimirá de GitHub. Debe eliminar manualmente el repositorio de GitHub.

@@ -173,7 +173,7 @@ cf bind-service TestNode cloudant100
   
   3. 使用服務實例。
   
-  在此情況下，VCAP_SERVICES 環境變數包括應用程式可用來連接至此 {{site.data.keyword.cloudant}} 實例的資訊，例如下列項目：
+  在此情況下，VCAP_SERVICES 環境變數包含應用程式可用來連接至此 {{site.data.keyword.cloudant}} 實例的資訊，例如下列項目：
   
   <dl><dt>username</dt>
   <dd>d72837bb-b341-4038-9c8e-7f7232916197-bluemix</dd>

@@ -13,7 +13,7 @@ copyright:
 # 環境變數
 {: #environment_variables}
 
-*前次更新：2016 年 6 月 10 日*
+前次更新：2016 年 6 月 10 日
 {: .last-updated}
 
 Liberty for Java 支援的環境變數。

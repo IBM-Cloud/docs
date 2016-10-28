@@ -25,13 +25,13 @@ Estos temas incluyen métodos de creación y gestión de una instancia de servic
 Las instancias de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} se crean, suministran, gestionan y suprimen de una de las siguientes formas:
 
 * En el Panel de control de catálogo y servicio de {{site.data.keyword.Bluemix_notm}} en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
-* En la creación de una aplicación o script que utiliza nuestras API de RESTful.
+* En la creación de una aplicación o script que utiliza nuestras API RESTful.
 
-Mediante el uso de las API REST compatible con Swagger 2.0, los clientes tienen acceso a la misma función como se ha proporcionado a través del portal y panel de control. Para obtener más información sobre las API REST y los recursos soportados, consulte WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [Documentación de API REST](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}. Para obtener código de ejemplo que ayude en el uso de las API REST, descargue los [ejemplos de la API REST](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} alojados en git.
+Mediante el uso de las API REST compatible con Swagger 2.0, los clientes tienen acceso a la misma función como se ha proporcionado a través del portal y panel de control. Para obtener más información sobre las API REST y los recursos soportados, consulte WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [Documentación de API REST](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}.  Para obtener código de ejemplo que ayude en el uso de las API REST, descargue los [ejemplos de la API REST](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} alojados en git.
 
 **Nota:** después de crear una instancia de servicio, en función del tamaño de Camiseta que se crea, el servicio puede no estar listo inmediatamente para su uso. Se recomienda consultar el campo **Estado** del JSON devuelto para determinar el estado actual de la instancia de servicio.
 
-**Nota:** el URL de **apiEndpoint** al que se hace referencia en los [ejemplos de las API REST](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} apunta a la región del sur de Estados Unidos. Si utiliza otras regiones, asegúrese de que la aplicación hace referencia al **apiEndpoint** apropiado.
+**Nota:** el URL de **apiEndpoint** al que se hace referencia en los [ejemplos de las API REST](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} apunta a la región del sur de Estados Unidos.  Si utiliza otras regiones, asegúrese de que la aplicación hace referencia al **apiEndpoint** apropiado.
 
 *Tabla 1. URL de punto final de API para la implementación de la API Rest*
 
@@ -195,5 +195,5 @@ Uso:
 Para especificar varios puertos, sepárelos
 con una coma ","
 
-**Nota**: los parámetros sport y dport del puerto abierto se abren en los apartados INPUT y OUTPUT del cortafuegos. Debe ejecutar este script como raíz utilizando sudo. También puede
+**Nota**: los parámetros sport y dport del puerto abierto se abren en los apartados INPUT y OUTPUT del cortafuegos. Debe ejecutar este script como root utilizando sudo. También puede
 modificar iptables directamente.

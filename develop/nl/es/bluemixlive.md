@@ -17,7 +17,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Última actualización: 07 de abril de 2016*
+*Última actualización: 24 de junio de 2016*
 {: .last-updated}  
 
 Si está creando una app Node.js, puede utilizar {{site.data.keyword.Bluemix}} Live Sync para actualizar rápidamente la instancia de la app que se ejecuta en {{site.data.keyword.Bluemix_notm}} y desarrollarla como lo haría en el escritorio sin tener que volver a desplegarla.   
@@ -77,8 +77,11 @@ Para obtener más detalles sobre los mandatos, consulte [Mandatos de Bluemix Liv
 
 <strong>Importante:</strong> La herramienta de línea de mandatos bl solo está disponible para Windows 7 y 8 y Mac OS X versión 10.9 o posterior. </li>
 
-<li>En una línea de mandatos, inicie sesión con el mandato siguiente. Se le solicitará su ID y contraseña de IBM.  
+<li>En una línea de mandatos, inicie sesión con el mandato siguiente. Se le solicitará su ID de usuario y contraseña.  
 <pre class="codeblock">bl login</pre>
+
+<strong>Nota:</strong> su ID de usuario para DevOps Services puede ser un ID de IBM o un ID federado (ID corporativo). Si utiliza la autenticación federada para iniciar sesión en su cliente de línea de mandatos Bluemix Live Sync, debe utilizar una señal de acceso personal en lugar de una contraseña. Si no utiliza autenticación federada, el ID de IBM y la contraseña funcionarán con todos los clientes. Para obtener más información sobre la creación de una señal de acceso personal, consulte
+<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> ¿Qué es la autenticación federada y cómo me afecta?</a> 
 </li>
 
 <li>Consulte la lista de proyectos disponibles para sincronizar {{site.data.keyword.Bluemix_notm}} Live Sync introduciendo el siguiente mandato:
@@ -198,7 +201,9 @@ de inicio que incluya un mandato start para la app.
 Una vez instalado {{site.data.keyword.Bluemix_notm}} Live
 Debug, puede utilizar las herramientas de depuración.
 
-Envíe la app por push y vaya a `https://app-host.mybluemix.net/bluemix-debug/manage` para acceder a la interfaz de usuario de depuración de {{site.data.keyword.Bluemix_notm}}. Cuando se le solicite, escriba el ID y la contraseña de IBM para autenticarse.
+Envíe la app y luego vaya a `https://app-host.mybluemix.net/bluemix-debug/manage` para acceder a la interfaz de usuario de depuración de {{site.data.keyword.Bluemix_notm}}. Cuando se le solicite que se autentique, especifique su ID y su señal de acceso personal o su ID de IBM y contraseña.     
+
+   **Nota**: su ID de usuario para DevOps Services puede ser un ID de IBM o un ID federado (ID corporativo). Si utiliza la autenticación federada para iniciar sesión en su cliente de línea de mandatos Bluemix Live Sync, debe utilizar una señal de acceso personal en lugar de una contraseña. Si no utiliza autenticación federada, el ID de IBM y la contraseña funcionarán con todos los clientes. Para obtener más información sobre la creación de una señal de acceso personal, consulte [¿Qué es la autenticación federada y cómo me afecta?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 ###Restauración de configuraciones de app e inhabilitación de Bluemix Live
 Debug {: #restore_live_debug}
@@ -231,7 +236,7 @@ Para obtener más información sobre cómo descargar y utilizar el mandato bl, c
 La línea de mandatos de {{site.data.keyword.Bluemix_live}}, **bl**, tiene la sintaxis siguiente:
 
 ```
-bl mandato [argumentos][options] [--help]
+bl mandato [argumentos] [opciones] [--help]
 ```
 {: pre}
 
@@ -304,7 +309,7 @@ bl sync --help
 {: bl_login}
 
 ```
-bl login | l [ -u nombre de usuario ][-p contraseña ][ -s servidor ]
+bl login | l [ -u nombre_usuario ] [-p contraseña ][ -s servidor ]
 ```
 {: pre}
 
@@ -319,12 +324,14 @@ Utilice este mandato para iniciar una sesión en {{site.data.keyword.Bluemix_not
 
 **Opciones**
 
--u *nombre de usuario*: El ID de IBM que utiliza para iniciar sesión en
-{{site.data.keyword.Bluemix_notm}}.
+-u *nombre_usuario*: su ID de usuario para iniciar sesión en {{site.data.keyword.Bluemix_notm}}.
 
--p *contraseña*: La contraseña de su ID de IBM.
+-p *contraseña*: su señal de acceso personal o contraseña de ID de IBM. 
 
--s *servidor*: El nombre de servidor o la dirección IP del servidor de {{site.data.keyword.jazzhub_short}}.
+-s *servidor*: el nombre del servidor o la dirección IP del servidor de
+{{site.data.keyword.jazzhub_short}}.    
+
+   **Nota**: su ID de usuario para DevOps Services puede ser un ID de IBM o un ID federado (ID corporativo). Si utiliza la autenticación federada para iniciar sesión en su cliente de línea de mandatos Bluemix Live Sync, debe utilizar una señal de acceso personal en lugar de una contraseña. Si no utiliza autenticación federada, el ID de IBM y la contraseña funcionarán con todos los clientes. Para obtener más información sobre la creación de una señal de acceso personal, consulte [¿Qué es la autenticación federada y cómo me afecta?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 **Ejemplos**
 
@@ -377,7 +384,7 @@ Utilice este mandato para listar todos los proyectos que están disponibles para
 {: bl_sync}
 
 ```
-bl sync | s nombreProyecto -d directorioLocal [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s nombreProyecto -d directorioLocal [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
 ```
 {: pre}
 
@@ -433,7 +440,7 @@ bl sync myproject –d  myfolder
 {: bl_create}
 
 ```
-bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
 ```
 {: pre}
 
@@ -445,7 +452,7 @@ Utilice este mandato desde un directorio que contenga código para crear un proy
 
 -n *PROJECT_NAME*: Un nombre para su proyecto. Valor predeterminado: nombre del directorio actual.
 
--r *REGION*: Una región de {{site.data.keyword.Bluemix_notm}}. Vaor predeterminado: EE. UU. sur.
+-r *REGION*: Una región de {{site.data.keyword.Bluemix_notm}}. Valor predeterminado: EE. UU. sur.
 
 -o *ORG*: Una organización de {{site.data.keyword.Bluemix_notm}}. Valor predeterminado: la primera org que se encuentre.
 
@@ -522,7 +529,7 @@ bl status “my pro ject”
 {: bl_start}
 
 ```
-bl start | st nombreProyecto [ -l víaAccesoConfiguraciónLanzamiento ] -m víaAccesoManifiesto ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl start | st nombreProyecto [ -l víaAccesoConfiguraciónLanzamiento ] -m víaAccesoManifiesto ] [ --liveedit ] [--noliveedit ] [ --restart ]
 ```
 {: pre}
 

@@ -2,26 +2,27 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-31"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Developer documentation for {{site.data.keyword.iot_short}}
+# Developer documentation for {{site.data.keyword.iot_short_notm}}
 {: #developer_doc_overview}
 
-Content and samples are provided to help you to build applications and integrate your devices within the  {{site.data.keyword.iot_full}} organization.
-
+{: .last-updated}
+Client libraries, content, and samples are available to help you to build and develop code to integrate your applications and devices on {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
 
-## Developing your {{site.data.keyword.iot_short}}
+## Developing your {{site.data.keyword.iot_short_notm}}
 {: #goals}
-There are several ways in which you can set up and connect your devices to {{site.data.keyword.iot_short}} and retrieve and analyze the real-time data that you are interested in. Information is provided to help you to do the following tasks:
+There are several ways in which you can set up and connect your devices to {{site.data.keyword.iot_short_notm}} and retrieve and analyze the real-time data that you are interested in. Information is provided to help you to do the following tasks:
 
 -  Create and manage applications
 -  Create, connect, and manage devices
@@ -33,7 +34,7 @@ There are several ways in which you can set up and connect your devices to {{sit
 ## Application development
 {: #app-dev}
 
-You can build and manage applications in {{site.data.keyword.iot_short}} by using the following supported protocols and standards:
+You can build and manage applications in {{site.data.keyword.iot_short_notm}} by using the following supported protocols and standards:
 
 - MQTT messaging protocol
 - Python
@@ -44,7 +45,7 @@ You can build and manage applications in {{site.data.keyword.iot_short}} by usin
 ## Device development
 {: #device-dev}
 
-You can build and manage devices in {{site.data.keyword.iot_short}} by using the following supported protocols and standards:
+You can build and manage devices in {{site.data.keyword.iot_short_notm}} by using the following supported protocols and standards:
 
 - MQTT messaging protocol
 - Python
@@ -56,5 +57,21 @@ You can build and manage devices in {{site.data.keyword.iot_short}} by using the
 
 ## Gateway development
 {: #gateway-dev}
-If your devices cannot directly connect to the internet, use the information provided to build a gateway device to retrieve and send data to applications in your {{site.data.keyword.iot_short}} organization. 
-The MQTT messaging protocol is supported for gateway development in {{site.data.keyword.iot_short}}.
+If your devices cannot directly connect to the internet, use the information provided to build a gateway device to retrieve and send data to applications in your {{site.data.keyword.iot_short_notm}} organization.
+The MQTT messaging protocol is supported for gateway development in {{site.data.keyword.iot_short_notm}}.
+
+For links to the available client libraries for {{site.data.keyword.iot_short_notm}}, click **Resources**.
+
+# Related Links
+{: #rellinks}
+
+## Client libraries for {{site.data.keyword.iot_short_notm}}
+{: #client_libraries}
+
+* [C++](https://github.com/ibm-watson-iot/iot-cpp){:new_window}
+* [C#](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
+* [Embedded C](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
+* [Java](https://github.com/ibm-watson-iot/iot-java){:new_window}
+* [mBed C++](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+* [Node.js](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
+* [Python](https://github.com/ibm-watson-iot/iot-python){:new_window}

@@ -54,7 +54,8 @@ Node.js アプリをビルドする場合、{{site.data.keyword.Bluemix_notm}} L
 
 1. コマンド・ラインで、以下のコマンドを入力してログインします。
 ```
-bl login```
+bl login
+```
 プロンプトが出されたら、{{site.data.keyword.ibmid}} とパスワードを入力します。
 
 2. 以下のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} Live Sync で同期できるプロジェクトのリストを表示します。
@@ -73,7 +74,8 @@ bl sync projectName -d localDirectory --verbose
 4. 別のコマンド・ライン・ウィンドウのローカル・ディレクトリーで以下のコマンドを入力し、アプリケーションを Live Edit モードで {{site.data.keyword.Bluemix_notm}} にデプロイします。
 
 ```
-bl start```  
+bl start
+```  
 
 ローカル・ディレクトリーにあるファイルを変更すると、その変更内容は、{{site.data.keyword.Bluemix_notm}} で稼動しているアプリケーションとプロジェクト・クラウド・ワークスペースの両方に自動的に伝搬します。
 Node アプリケーションの再始動が必要な場合は、以下のコマンドを使用できます。

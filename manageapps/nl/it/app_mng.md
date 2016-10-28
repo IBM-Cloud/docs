@@ -1,10 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  anni: 2015, 2016
 
 ---
-
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
@@ -14,7 +13,7 @@ copyright:
 #Gestione di applicazioni Liberty e Node.js
 {: #app_management}
 
-*Ultimo aggiornamento: 17 marzo 2016*
+Ultimo aggiornamento: 15 settembre 2016
 {: .last-updated}
 
 La Gestione applicazioni è un insieme di programmi di utilità per lo sviluppo e il debug che è possibile abilitare per
@@ -73,42 +72,8 @@ Questi programmi di utilità supportano solo Node.js.
   Il processo inspector viene eseguito nel contenitore della tua applicazione. Utilizza questo programma di utilità per creare profili di utilizzo CPU, aggiungere punti di interruzione e codice di debug, il tutto mentre la tua applicazione è in esecuzione su {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni sul modulo node inspector, vedi [node-inspector on GitHub](https://github.com/node-inspector/node-inspector){:new_window}.
   
   Il programma di utilità *inspector* avvia anche *proxy*.
-  
-  2. *strongpm*: abilita l'utilizzo di [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} per analizzare la tua applicazione Node.js con programmi di utilità quali [StrongLoop Metrics, Profiling e Tracing](https://strongloop.com/node-js/devops-tools/){:new_window}.
-    
-  Il programma di utilità *strongpm* avvia anche *proxy*.
-  
-  Completa la seguente procedura per configurare la tua applicazione Node.js con [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window}.
-
-    1. Configura la variabile di ambiente *strongpm* BlUEMIX_APP_MGMT_ENABLE e prepara di nuovo l'applicazione.
-    
-	```
-    cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
-    cf restage <appname>
-    ```
 	
-    2. Dalla riga di comando Cloud Foundry, aggiungi una rotta alla tua applicazione, dove la rotta ha "-pm" aggiunto al nome applicazione, ad esempio <appname>-pm.mybluemix.net.
-    
-	```
-    cf map-route <appname> ng.bluemix.net -n <appname>-pm
-    ```
-	
-    3. Installa il [modulo StrongLoop npm](https://www.npmjs.com/package/strongloop){:new_window} sulla tua workstation locale.
-    
-	```
-    npm install -g strongloop
-    ```
-	
-    4. Crea un account sul[sito Web di StrongLoop](https://strongloop.com/register/){:new_window}.
-    5. Avvia Arc sulla tua workstation locale e accedi con l'account creato.
-    
-	```
-    slc arc
-    ```
-	
-    6. Passa alla vista Process Manager all'interno di Arc. Immetti la rotta appena creata con la porta 80 in Process Manager. Premi il pulsante Attiva. Per ulteriori dettagli, consulta la [documentazione completa sull'utilizzo di Arc](https://docs.strongloop.com/display){:new_window}.
-	
-  3. *trace*: imposta in modo dinamico i livelli di traccia se la tua applicazione utilizza i moduli di registrazione *log4js*, *ibmbluemix* o *bunyan*.
+  2. *trace*: imposta in modo dinamico i livelli di traccia se la tua applicazione utilizza i moduli di registrazione *log4js*, *ibmbluemix* o *bunyan*.
   
   **Nota:** versioni supportate per le dipendenze:
 
@@ -117,6 +82,8 @@ Questi programmi di utilità supportano solo Node.js.
     * ibmbluemix: (1.0.0-20140707-1250)-(1.0.0-20150409-1328)
   
   Vai alla pagina Dettagli istanza nella console Web di {{site.data.keyword.Bluemix_notm}} e seleziona **Azioni** per visualizzare l'interfaccia utente.
+
+  Il programma di utilità *trace* non è disponibile se l'applicazione è stata avviata utilizzando l'opzione "-b buildpack".
 
   Il programma di utilità *trace* non avvia *proxy*.
 

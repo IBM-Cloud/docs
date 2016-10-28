@@ -51,7 +51,7 @@ copyright:
 # Tarifas
 {: #pricing}
 
-*Última actualización: 1 de juno de 2016*
+*Última actualización: 13 de septiembre de 2016*
 {: .last-updated}
 
 Puede ejecutar apps en {{site.data.keyword.Bluemix}} y probar los servicios de {{site.data.keyword.Bluemix_notm}} de forma gratuita. Puede realizar una prueba gratuita de 30 días que le otorga concesiones adicionales, incluido soporte gratuito. Transcurridos 30 días, puede elegir un tipo de cuenta y pagar sólo según uso superadas las concesiones gratuitas. Bluemix proporciona una calculadora de costes para estimar con anticipación los costes y una vista Panel de control de uso para comprobar el coste real después de crear las apps.
@@ -117,7 +117,7 @@ Con una cuenta Pago según uso, se le factura en función del uso del cálculo y
 
 Puede convertir la cuenta gratuita en una cuenta facturable en cualquier momento. Toda la información de la cuenta no facturable de prueba gratuita y las soluciones de {{site.data.keyword.Bluemix_notm}} se fusionarán de forma transparente en la nueva cuenta facturable.
 
-Tras crear una cuenta facturable, puede editar la información que ha proporcionado. Pulse el **icono Configuración de perfil** en la esquina superior derecha de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y, a continuación, pulse **Cuenta &gt; Tipo de cuenta** para editar la información.
+Tras crear una cuenta facturable, puede editar la información que ha proporcionado. Pulse el **icono Configuración de perfil** y, a continuación, pulse **Cuenta &gt; Tipo de cuenta** para editar la información.
 
 Si surgen problemas con {{site.data.keyword.Bluemix_notm}} cuando vaya a utilizar una cuenta de Pago según uso o una Suscripción, consulte [Obtención de ayuda en línea](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) para obtener más información.
 
@@ -348,7 +348,6 @@ Suponga que tiene una app web de Node.js con prestaciones de escalabilidad y que
 * Dos políticas, un procesador y una memoria de {{site.data.keyword.autoscaling}}.
 * 2 GB al mes de {{site.data.keyword.datacshort}}
 * 150 GB al mes de base de datos NoSQL, 100.000 llamadas de API pesadas y 500.000 llamadas de API ligeras.
-* 8 GB al mes de {{site.data.keyword.sqldb}} Database
 * 20 GB de tráfico de red de entrada o de salida
 
 ###Precios para recursos de {{site.data.keyword.Bluemix_notm}}
@@ -364,7 +363,6 @@ Para dar un ejemplo sencillo, suponga que los precios en la tabla siguiente no f
 |Memoria caché de datos - Estándar |	5 GB de memoria caché y una réplica |	155,00 USD/instancia |
 |Memoria caché de datos - Premium |	25 GB de memoria caché y una réplica |	505,00 USD/instancia|
 |IBM Cloudant® NoSQL DB para {{site.data.keyword.Bluemix_notm}} |	2 GB de almacenamiento gratuito de datos<br/>50.000 llamadas de API ligeras gratuitas al mes<br/>10.000 llamadas de API pesadas gratuitas al mes | 1,00 USD/GB<br/>0,03 USD/1000 llamadas de API ligeras<br/>0,15 USD/1000 llamadas de API pesadas |
-|SQL Database 	| 2 GB gratuitos por instancia<br/>Un máximo de 10 GB por instancia |	30,00 USD/instancia |
 *Tabla 7. Hoja de precios*
 
 ###Cálculo del precio de la app
@@ -398,22 +396,43 @@ Añada el número de GB y deduzca 2 GB de concesión gratuita. Se cargan 148 GB 
 <p>
 El precio total es 148 + 13.5 + 13.5 = 175 dólares.</p></dd>
 
-<dt>8 GB al mes de SQL Database</dt>
-<dd>El precio total es de 30 dólares por instancia.</dd>
-
 <dt>20 GB de tráfico de red de entrada o de salida</dt>
 <dd>El tráfico de red de entrada y salida está libre de cargo adicional.</dd>
 
 </dl>
 
-Cuando se añaden todos los elementos, el precio total de la app es de 384,15 dólares.
+Cuando se añaden todos los elementos, el precio total de la app es de 354,15 dólares.
+
+###Monedas soportadas
+
+Aunque el dólar estadounidense (USD) se utiliza en los ejemplos de precios, también se admiten otras divisas en {{site.data.keyword.Bluemix_notm}}. En la tabla siguiente se proporciona una lista con las distintas monedas soportadas.
+
+|Código ISO 4217| Moneda|
+|-------------|---------|
+|AUD |	  Dólar australiano|
+|BRL |	  Real brasileño|
+|CAD |	  Dólar canadiense|
+|CHF |	  Franco suizo|
+|DKK |	  Corona danesa|
+|EUR |	  Euro|
+|GBP |	  Libra esterlina|
+|INR |	  Rupia india|
+|JPY |	  Yen japonés|
+|KRW |	  Won de Corea del Sur|
+|NOK |	  Corona noruega|
+|NZD |	  Dólar neozelandés|
+|SEK |	  Corona sueca|
+|USD |    Dólar estadounidense|
+|ZAR |	  Rand sudafricano|
+*Tabla 8. Monedas admitidas*
 
 ##Panel de control de uso
 {: #usage}
 
 Como propietario de cuenta o gestor de facturación, puede utilizar la vista Panel de control de uso para ver los cargos en tiempo real del tiempo de ejecución y servicios utilizados cada mes en sus organizaciones. Puede ver el consumo de GB por hora y de servicio de tiempo de ejecución en todas las regiones o seleccionar para ver una región y espacio determinados durante los últimos 12 meses.
 
-Para abrir la vista Panel de control de uso, pulse el icono **Cuenta y soporte** &gt; **Cuenta** &gt; *su_nombre_cuenta* &gt; **Panel de control de uso**. En esta vista, puede ver un resumen del tiempo de ejecución y del uso del servicio para la cuenta. Los gestores de facturación pueden ver los detalles sólo para las organizaciones en las que hay gestores de facturación.
+Para abrir la vista Panel de control de uso, pulse el icono **{{site.data.keyword.avatar}}**
+![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Panel de control de uso**. En esta vista, puede ver un resumen del tiempo de ejecución y del uso del servicio para la cuenta. Los gestores de facturación pueden ver los detalles sólo para las organizaciones en las que hay gestores de facturación.
 
 La cuenta se factura al propietario por el uso total en el que han incurrido todas las organizaciones al final de cada ciclo de facturación. Cada ciclo de factura dura un mes.
 
@@ -426,32 +445,34 @@ Si selecciona una organización específica para la **Organización**, puede ver
 
 Como propietario de una cuenta o gestor de facturación, puede utilizar la vista Panel de control de uso para ver los créditos de su cuenta. Es posible que tenga créditos, por ejemplo, si ha vinculado una cuenta de SoftLayer con una cuenta de {{site.data.keyword.Bluemix_notm}}.
 
-Para abrir la vista Panel de control de uso, pulse el icono **Cuenta y soporte** ![Icono Cuenta y soporte](../admin/images/account_support.svg) y seleccione **Cuenta**. En la página que se muestra, pulse **Panel de control de uso**. En la vista puede ver los créditos, si existen, y la fecha de vencimiento. 
+Para abrir la vista Panel de control de uso, pulse el icono **{{site.data.keyword.avatar}}**
+![Icono Avatar](../icons/i-avatar-icon.svg) y, a continuación, seleccione **Cuenta**. En la página que se muestra, pulse **Panel de control de uso**. En la vista puede ver los créditos, si existen, y la fecha de vencimiento.
 
 ##Notificaciones
 {: #notifications}
 
 Como gestor de cuentas de una cuenta Pago según uso, puede establecer notificaciones de gasto relativas al coste total de su cuenta, para su tiempo de ejecución, servicios y para los servicios individuales, excluidos los servicios de terceros. Recibe notificaciones al alcanzar el 80%, 90%, y 100% de los umbrales de gasto que especifique.
 
-Para abrir la vista **Notificaciones**, pulse el icono **Cuenta y soporte** &gt; **Cuenta** &gt; *su_nombre_cuenta* &gt; **Notificaciones de gasto**. Entre un valor numérico para establecer el umbral de gasto para desencadenar una notificación para cada tipo de notificación de gasto según sea necesario. También puede añadir y suprimir notificaciones para servicios individuales.
+Para abrir la vista **Notificaciones**, pulse el icono **{{site.data.keyword.avatar}}**
+![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Notificaciones de gastos**. Entre un valor numérico para establecer el umbral de gasto para desencadenar una notificación para cada tipo de notificación de gasto según sea necesario. También puede añadir y suprimir notificaciones para servicios individuales.
 
 ##Cómo cambiar el plan
 {: #changing}
 
 Puede cambiar su plan de servicios en {{site.data.keyword.Bluemix_notm}} en el Panel de control del servicio, si los cambios de plan están habilitados para dicho servicio.
 
-Sólo determinados servicios le proporcionan la capacidad de cambiar el plan de servicios. Si los cambios de plan están habilitados para el servicio, el Panel de control de servicio muestra una opción **Plan** en la navegación de la izquierda. Cada servicio tiene un conjunto distinto de pasos siguientes a seguir
+Sólo determinados servicios le proporcionan la capacidad de cambiar el plan de servicios. Si los cambios de plan están habilitados para el servicio, el Panel de control de servicio muestra una opción **Plan** en la navegación. Cada servicio tiene un conjunto distinto de pasos siguientes a seguir
 si cambia su plan.
 
 1. Para cambiar el plan, en el Panel de control del servicio, pulse **Plan**. Por lo general, puede actualizar su plan o reducirlo.
 2. Tras cambiar su plan, debe completar un conjunto de pasos a seguir. Los pasos varían según el tipo de cambio
 de plan y del servicio. Por ejemplo, si ha reducido su plan, es posible que tenga que volver a transferir su
-app. O, si ha actualizado su plan, es posible que deba volver a transferir su app y realizar otras acciones.<br/><br/>Para volver a transferir su app, vaya al Panel de control de {{site.data.keyword.Bluemix_notm}} y busque la app a la que está vinculado el servicio. En el menú de la app, seleccione **Reiniciar app**.<br/><br/>Otros acciones de paso siguiente dependen del servicio. Para acciones específicas, consulte la tabla siguiente.
+app. O, si ha actualizado su plan, es posible que deba volver a transferir su app y realizar otras acciones.<br/><br/>Para volver a transferir su app, vaya al Panel de control de {{site.data.keyword.Bluemix_notm}} y busque la app a la que está vinculado el servicio. En el menú de la app, seleccione **Reiniciar app**.<br/><br/>Otras acciones de paso siguiente dependen del servicio. Para acciones específicas, consulte la tabla siguiente.
 
 |Servicio |	Información|
 |--------|-------------|
 |Presence Insights 	|Si tiene un plan Lite y supera el permitido gratis, se mostrará un mensaje 403 o se registra para indicar que ya no tiene autorización, y su instancia de servicio se inhabilita. Además, las llamadas POST REST API se rechazan con la respuesta 403.<br/><br/>Si su servicio está inhabilitado porque no supera el permiso gratuito, puede actualizar de un plan Lite a un plan Paid. El servicio se reanudará dentro de las dos siguientes horas.<br/><br/>Si tiene un plan Paid, puede reducir el plan al plan Lite, siempre que su uso permanezca dentro de lo permitido en el plan Lite para sucesos y almacenamiento total.<br/><br/>Cuando actualice o reduzca el plan, no tiene que volver a transferir ni a reiniciar las apps.|
-*Tabla 8. Pasos siguientes para cambiar su plan*
+*Tabla 9. Pasos siguientes para cambiar su plan*
 
 ###Cómo cambiar el plan por medio de la interfaz de línea de mandatos
 

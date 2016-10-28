@@ -12,7 +12,7 @@ copyright:
 # Rubriques Liberty
 {: #topics}
 
-*Dernière mise à jour : 10 juin 2016*
+Dernière mise à jour : 10 juin 2016
 {: .last-updated}
 
 * [Environnement d'exécution Liberty](index.html)

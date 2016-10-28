@@ -12,13 +12,21 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-Last updated: 30 May 2016
+Last updated: 6 October 2016
 
 The ASP.NET Core runtime on {{site.data.keyword.Bluemix}} is powered by the ASP.NET Core buildpack. ASP.NET Core 
 is a modular open source framework for building .NET web applications.
 .Net Core is a small, cross-platform runtime that can be targeted by ASP.NET Core applications. 
 They combine to enable modern, cloud-based web applications.
 {: shortdesc}
+
+# Supported versions
+{: #supported_versions}
+This buildpack supports the following versions, those marked as deprecated will be removed in a future buildpack release:
+
+1. .NET Core 1.0.0-rc2-final (beta) (deprecated)
+2. .NET Core 1.0.0
+3. .NET Core 1.0.1
 
 ## Detection
 {: #detection}
@@ -46,7 +54,7 @@ Control the .NET CLI version with an optional global.json in the application's r
 ```
 {: codeblock}
 
-If not specified, the most current stable Release Candidate is used.
+For a list of supported CLI versions see [Latest Updates to the ASP.NET Core Buildpack](../../runtimes/dotnet/updates.html). If not specified, the most current stable Release Candidate is used.
 
 ### Customizing NuGet package sources
 

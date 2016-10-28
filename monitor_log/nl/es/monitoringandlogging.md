@@ -14,7 +14,7 @@ copyright:
 #Supervisión y registro
 {: #monitoringandlogging}
 
-*Última actualización: 24 de mayo de 2016*
+Última actualización: 2 de septiembre de 2016
 {: .last-updated}
 
 Al supervisar sus apps y revisar los registros, puede seguir la ejecución de la aplicación y el flujo de datos para comprender mejor su despliegue. Además, puede reducir el tiempo y esfuerzo necesarios para localizar cualquier problema y repararlo.
@@ -22,7 +22,7 @@ Al supervisar sus apps y revisar los registros, puede seguir la ejecución de la
 
 Las app {{site.data.keyword.Bluemix}} se pueden distribuir ampliamente (app de varias instancias) y la ejecución de la aplicación y sus datos se puede compartir en varios servicios. En este entorno complejo, la supervisión de las apps y la revisión de los registros es importante para gestionar las app.
 
-##Supervisión y registro de apps
+##Supervisión y registro de apps de Cloud Foundry
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} tiene un mecanismo de registro incorporado para producir archivos de registro para las app a medida que se ejecutan. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Además, también puede configurar la app para escribir mensajes de registro en el archivo de registro. Para obtener más información sobre los formatos de registro y cómo ver registros, consulte [Registro de apps que se ejecutan en on Cloud Foundry](#logging_for_bluemix_apps).
@@ -50,6 +50,11 @@ Para supervisar apps de {{site.data.keyword.Bluemix_notm}}, utilice uno de los s
 
 Los archivos de registro se crean automáticamente al utilizar la infraestructura Cloud Foundry para ejecutar sus apps en {{site.data.keyword.Bluemix_notm}}. Cuando encuentra errores en cualquier etapa del despliegue al tiempo de ejecución, puede
 comprobar los registros en busca de pistas que pudieran ayudar a solucionar su problema.
+
+###Retención de registros
+{: #log_retention}
+
+* En las apps de Bluemix Cloud Foundry, los datos de registro se almacenan durante 30 días de forma predeterminada.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -135,7 +140,7 @@ Puede ver los registros para sus app Cloud Foundry en tres lugares:
 
 Para ver los registros de despliegue o de tiempo de ejecución, realice los pasos siguientes:
 1. Inicie sesión en {{site.data.keyword.Bluemix_notm}}, y a continuación pulse en el icono de su app en el panel de control. Se mostrará la página de detalles de la app.
-2. En la barra de navegación izquierdo, pulse **Registros**.
+2. En la barra de navegación, pulse **Registros**.
 
 En la consola **Registros**, puede ver los registros recientes para su app o la parte más reciente de los registros en tiempo real. Además, puede filtrar registros por tipo de registro y canal.
 
@@ -205,7 +210,8 @@ cf logs appname --recent | cut -c 29-40,46-
 ```
 
 Para obtener más información sobre la opción **grep**, escriba cut --help.
-* Para visualizar las entradas de registro que contienen ciertas palabras clave, utilice la opción **grep**. Por ejemplo, para visualizar las entradas de registro que contienen la palabra clave [APP, puede utilizar el mandato siguiente:
+* Para visualizar las entradas de registro que contienen ciertas palabras clave, utilice la opción **grep**. Por ejemplo, para visualizar las entradas de registro que contienen la palabra clave `[APP`, puede utilizar el mandato siguiente:
+
 ```
 cf logs appname --recent | grep '\[App'
 ```
@@ -228,16 +234,16 @@ obtener los puntos finales del registro varían para los distintos hosts de regi
 
   2. Cree un a instancia de servicio proporcionada por el usuario.
      
-	 Utilice el mandato ```cf create-user-provided-service``` (o ```cups``, una versión abreviada del mismo)
+	 Utilice el mandato `cf create-user-provided-service` (o `cups`, una versión abreviada del mismo)
 para crear una instancia de servicio proporcionado por el usuario: 
 	 ```
 	 cf create-user-provided-service <nombre_servicio> -l <punto_final_registro>
 	 ```
-	 **nombre_servicio**
+	 &lt;nombre_servicio&gt;
 	 
 	 El nombre de la instancia de servicio proporcionado por el usuario.
 	 
-	 **punto_final_registro**
+	 &lt;punto_final_registro&gt;
 	 
 	 El punto final del registro al que {{site.data.keyword.Bluemix_notm}} envía los registros. Consulte la tabla siguiente
 para sustituir *punto_final_registro* por su valor:
@@ -274,18 +280,18 @@ para sustituir *punto_final_registro* por su valor:
 	 Utilice el mandato siguiente para enlazar la instancia de servicio a su app: 
 	
 	 ```
-	 cf bind-service nombreapp <nombre_servicio>
+	 cf bind-service <appname> <nombre_servicio>
 	 ```
-	 **nombre_app**
+	 &lt;nombreapp&gt;
 	 
 	 El nombre de su app.
 	 
-	 **nombre_servicio**
+	 &lt;nombre_servicio&gt;
 	 
 	 El nombre de la instancia de servicio proporcionado por el usuario.
 	 
   4. Volver a transferir la app. 
-     Escriba ```cf restage appname``` para que los cambios surtan efecto. 
+     Escriba `cf restage appname` para que se apliquen los cambios. 
 
 #### Visualización de registros de hosts externos
 {: #viewing_logs_external}
@@ -301,7 +307,7 @@ después de una detención anómala de la app, o tras su redespliegue.
 ### Ejemplo: Transmisión de registros de aplicación de Cloud Foundry a Splunk 
 {: #splunk}
 
-En este ejemplo, un desarrollador llamado Jane crea un servidor virtual mediante IBM Virtual Servers Beta y la imagen de Ubuntu. Jane intenta transmitir los registros de la app Cloud Foundry de {{site.data.keyword.Bluemix_notm}} a Splunk. 
+En este ejemplo, un desarrollador llamado Jane crea un servidor virtual mediante IBM Virtual Servers Beta y la imagen de Ubuntu.  Jane intenta transmitir los registros de la app Cloud Foundry de {{site.data.keyword.Bluemix_notm}} a Splunk. 
 
   1. Para empezar, Jane configura Splunk.
 
@@ -313,14 +319,14 @@ En este ejemplo, un desarrollador llamado Jane crea un servidor virtual mediante
 	   
      b. Jane instala y aplica los parches del complemento de tecnología syslog RFC5424 para integrarlos con {{site.data.keyword.Bluemix_notm}}. Para obtener más información e instrucciones para instalar el complemento, consulte las [directrices de Cloud Foundry](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.  
 
-	    Jane instala el complemento utilizando estos mandatos: 
+	    Jane instala el complemento utilizando estos mandatos:
         
 	    ```
         cd /opt/splunk/etc/apps
         tar xvfz ~/rfc5424-syslog_11.tgz
         ```
 	   
-        Luego aplica los parches en el complemento sustituyendo */opt/splunk/etc/apps/rfc5424/default/transforms.conf* por un nuevo archivo *transforms.conf* que contiene el texto siguiente: 
+        Luego aplica los parches en el complemento sustituyendo */opt/splunk/etc/apps/rfc5424/default/transforms.conf* por un nuevo archivo *transforms.conf* que contiene el texto siguiente:
 	   
 	    ```
         [rfc5424_host]
@@ -335,9 +341,9 @@ En este ejemplo, un desarrollador llamado Jane crea un servidor virtual mediante
         ```
         {:screen}	   
 
-     c. Una vez que Splunk ya está configurado, Jane debe abrir algunos puertos de la máquina Ubuntu para aceptar el drenaje de syslog entrante (puerto 5140) y la interfaz de usuario web de Splunk (puerto 8000) porque el servidor virtual de {{site.data.keyword.Bluemix_notm}} tiene el cortafuegos configurado de forma predeterminada. 
+     c. Una vez que Splunk ya está configurado, Jane debe abrir algunos puertos de la máquina Ubuntu para aceptar el drenaje de syslog entrante (puerto 5140) y la interfaz de usuario web de Splunk (puerto 8000) porque el servidor virtual de {{site.data.keyword.Bluemix_notm}} tiene el cortafuegos configurado de forma predeterminada.
 	   
-	    **Nota:** Aquí se realiza la confirmación del objetivo de evaluación de Jane y es temporal. Para configurar los parámetros del cortafuegos en el servidor virtual Bluemix en producción, consulte la documentación de [Network Security Groups](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} para obtener información detallada. 
+	    **Nota:** Aquí se realiza la confirmación del objetivo de evaluación de Jane y es temporal. Para configurar los parámetros del cortafuegos en el servidor virtual Bluemix en producción, consulte la documentación de [Network Security Groups](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} para obtener información detallada.
 	 
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
@@ -347,15 +353,15 @@ En este ejemplo, un desarrollador llamado Jane crea un servidor virtual mediante
 	   ```
 	   {:screen}	
 	  
-	   Luego Jane ejecuta Splunk mediante este mandato: 
+	   Luego Jane ejecuta Splunk mediante este mandato:
 
        ```
 	   /opt/splunk/bin/splunk start --accept-license
        ```
 		
-  2. Jane configura los ajustes de Splunk para aceptar el drenaje de syslog de {{site.data.keyword.Bluemix_notm}}. Debe crear una entrada de datos para el drenaje de syslog. 
+  2. Jane configura los ajustes de Splunk para aceptar el drenaje de syslog de {{site.data.keyword.Bluemix_notm}}. Debe crear una entrada de datos para el drenaje de syslog.
 
-     a. Desde el lado izquierdo dela interfaz web de Splunk, Jane pulsa **Data > Data inputs**. Se visualiza una lista de los tipos de entrada admitidos por Splunk.  
+     a. Desde la interfaz web de Splunk, Jane pulsa **Data > Data inputs**. Se visualiza una lista de los tipos de entrada admitidos por Splunk. 
 	 
      b. Jane selecciona **TCP**, porque el drenaje de syslog utiliza el protocolo TCP.
 	 
@@ -369,17 +375,17 @@ En este ejemplo, un desarrollador llamado Jane crea un servidor virtual mediante
 	 
      g. Por último, en la ventana **Review**, Jane confirma que el ajuste es correcto y pulsa **Submit** para habilitar esta entrada de datos. 
 
-  3. En {{site.data.keyword.Bluemix_notm}}, Jane crea un servicio de drenaje syslog y lo vincula con una app. 
+  3. En {{site.data.keyword.Bluemix_notm}}, Jane crea un servicio de drenaje syslog y lo vincula con una app.
 
-     a. Jane crea un servicio de drenaje syslog utilizando el mandato siguiente desde la interfaz de línea de mandatos de cf. 
+     a. Jane crea un servicio de drenaje syslog utilizando el mandato siguiente desde la interfaz de línea de mandatos de cf:
 	 
      ```
      cf cups splunk -l syslog://dummyhost:5140
      ```
         
-     **Nota:** *dummyhost* no es el nombre real. Se utiliza para ocultar el nombre de host real.  
+     **Nota:** *dummyhost* no es el nombre real. Se utiliza para ocultar el nombre de host real. 
 
-     b. Jane enlaza el servicio de drenaje syslog con una app de su espacio y luego vuelve a transferir la app. 
+     b. Jane enlaza el servicio de drenaje syslog con una app de su espacio y luego vuelve a transferir la app.
 	 
 	 ```
      cf bind-service myapp splunk
@@ -387,13 +393,13 @@ En este ejemplo, un desarrollador llamado Jane crea un servidor virtual mediante
      ```
 		
 
-Jane prueba la app y luego escribe la siguiente serie de consulta en la interfaz web de Splunk: 
+Jane prueba la app y luego escribe la siguiente serie de consulta en la interfaz web de Splunk:
 
 ```
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-Jane ve una secuencia de registros en su interfaz web de Splunk. Aunque la versión de Splunk que Jane instala es Splunk Light, puede mantener 500 MB de registros al día.  
+Jane ve una secuencia de registros en su interfaz web de Splunk. Aunque la versión de Splunk que Jane instala es Splunk Light, puede mantener 500 MB de registros al día. 
 
 
 

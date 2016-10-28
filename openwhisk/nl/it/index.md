@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  anni: 2016
 
  
 
@@ -16,11 +16,11 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# Introduzione a {{site.data.keyword.openwhisk_short}}
-*Ultimo aggiornamento: 28 giugno 2016*
+# Introduzione a {{site.data.keyword.openwhisk_short}} (Beta)
+Ultimo aggiornamento: 09 settembre 2016
 {: .last-updated}
 
-{{site.data.keyword.openwhisk}} è un servizio di calcolo distribuito guidato dagli eventi. {{site.data.keyword.openwhisk_short}} esegue la logica dell'applicazione in risposta a eventi o chiamate dirette provenienti da applicazioni Web o mobile su HTTP. Gli eventi possono essere forniti da servizi Bluemix quali Cloudant e da fonti esterne. Gli sviluppatori possono concentrarsi sulla scrittura della logica dell'applicazione e sulla creazione di azioni eseguite su richiesta. Il tasso di esecuzione delle azioni corrisponde sempre al tasso degli eventi, con conseguenti utilizzo ottimale e resilienza e ridimensionamento intrinsechi. Paghi solo per ciò che usi e non devi gestire alcun server. Puoi anche ottenere il [codice sorgente](https://github.com/openwhisk/openwhisk) ed eseguire il sistema autonomamente.
+{{site.data.keyword.openwhisk}} è un servizio di calcolo distribuito guidato dagli eventi, indicato anche come Serverless computing o FaaS (Function as a Service); {{site.data.keyword.openwhisk_short}} esegue la logica dell'applicazione in risposta a eventi o chiamate dirette provenienti da applicazioni Web o mobili su HTTP. Gli eventi possono essere forniti da servizi Bluemix come Cloudant e da fonti esterne. Gli sviluppatori possono concentrarsi sulla scrittura della logica dell'applicazione e sulla creazione di azioni eseguite su richiesta. La frequenza di esecuzione delle azioni corrisponde sempre alla frequenza degli eventi, con conseguente resilienza e ridimensionamento intrinseci e utilizzo ottimale. Paghi solo per ciò che usi e non devi gestire alcun server. Puoi anche ottenere il [codice sorgente](https://github.com/openwhisk/openwhisk) ed eseguire il sistema autonomamente.
 {: shortdesc}
 
 Per ulteriori dettagli sul funzionamento di {{site.data.keyword.openwhisk_short}}, vedi [Informazioni su {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
@@ -29,10 +29,16 @@ Per ulteriori dettagli sul funzionamento di {{site.data.keyword.openwhisk_short}
 {: #openwhisk_start_configure_cli}
 
 Puoi utilizzare l'interfaccia di riga comando (CLI) {{site.data.keyword.openwhisk_short}} per configurare il tuo spazio dei nomi e la tua chiave di autorizzazione. 
-Passa a [Configura CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e segui le istruzioni per installarla.
-Nota che per utilizzare la CLI è necessario che Python 2.7 sia installato sul tuo sistema.
+Passa a [Configura CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e segui le istruzioni per installarla. 
 
-Una volta configurato {{site.data.keyword.openwhisk_short}} con la CLI, puoi iniziare a utilizzarlo dalla riga di comando o attraverso le API REST.
+### Configura la CLI per utilizzare un proxy HTTPS
+
+La CLI può essere configurata per utilizzare un proxy HTTPS. Per configurare un proxy HTTPS, è necessario creare una variabile di ambiente denominata
+`HTTPS_PROXY`. La variabile deve essere impostata sull'indirizzo del proxy HTTPS e sulla sua porta utilizzando il seguente formato:
+`{PROXY IP}:{PROXY PORT}`.
+
+
+Una volta configurato {{site.data.keyword.openwhisk_short}} con la CLI, puoi iniziare a utilizzarlo dalla riga di comando.
 
 ## Utilizzo della CLI {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_cli}
@@ -48,12 +54,13 @@ Una volta configurato il tuo ambiente, puoi iniziare a utilizzare la CLI {{site.
 ## Utilizzo di {{site.data.keyword.openwhisk_short}} da un'applicazione iOS
 {: #openwhisk_start_using_ios}
 
-Puoi utilizzare {{site.data.keyword.openwhisk_short}} dalla tua applicazione mobile iOS o Apple Watch, attraverso l'SDK iOS {{site.data.keyword.openwhisk_short}}. Per maggiori dettagli, fai riferimento alla documentazione di [iOS](./openwhisk_mobile_sdk.html).
+Puoi utilizzare {{site.data.keyword.openwhisk_short}} dalla tua applicazione mobile iOS o Apple Watch, attraverso l'SDK iOS {{site.data.keyword.openwhisk_short}}. Per ulteriori dettagli, consulta la [documentazione iOS](./openwhisk_mobile_sdk.html).
 
 ## Utilizzo delle API REST con {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_restapi}
 
-Una volta abilitato il tuo ambiente {{site.data.keyword.openwhisk_short}}, puoi utilizzare {{site.data.keyword.openwhisk_short}} con le tue applicazioni Web o mobile con chiamate API REST. Per ulteriori dettagli sull'utilizzo delle API per azioni, attivazioni, pacchetti, regole e trigger, vedi la [{{site.data.keyword.openwhisk_short}} documentazione API](https://new-console.{DomainName}/apidocs/98).
+Una volta abilitato il tuo ambiente {{site.data.keyword.openwhisk_short}}, puoi utilizzare {{site.data.keyword.openwhisk_short}} con le tue applicazioni Web o mobile con chiamate API REST.
+Per ulteriori dettagli sull'utilizzo delle API per azioni, attivazioni, pacchetti, regole e trigger, consulta la [documentazione API {{site.data.keyword.openwhisk_short}}](https://new-console.{DomainName}/apidocs/98).
 
 ## {{site.data.keyword.openwhisk_short}}Esempio Hello World
 {: #openwhisk_start_hello_world}
@@ -115,6 +122,7 @@ Puoi anche utilizzare le funzionalità guidate dagli eventi in {{site.data.keywo
 
 
 ## Dettagli del sistema
+{: #openwhisk_system_details}
 
 Puoi trovare ulteriori informazioni su {{site.data.keyword.openwhisk_short}} nei seguenti argomenti:
 
@@ -123,10 +131,15 @@ Puoi trovare ulteriori informazioni su {{site.data.keyword.openwhisk_short}} nei
 * [Limiti](./openwhisk_reference.html#openwhisk_syslimits)
 * [API REST](https://new-console.{DomainName}/apidocs/98)
 
-# rellinks
-## api
-* [Documentazione API REST](./openwhisk_reference.html#openwhisk_ref_restapi)
+# Link correlati
+{: #rellinks}
 
-## generale
+## Guida di riferimento API
+{: #api}
+* [Documentazione API REST](./openwhisk_reference.html#openwhisk_ref_restapi)
+* [API REST](https://new-console.{DomainName}/apidocs/98){:new_window}
+
+## Link correlati
+{: #general}
 * [Scopri: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
 * [{{site.data.keyword.openwhisk_short}} su IBM developerWorks](https://developer.ibm.com/openwhisk/){:new_window}

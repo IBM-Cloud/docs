@@ -156,19 +156,24 @@ Application Web ou pour périphérique mobile. Voir aussi [application mobile](#
 [application Web](#x2116500).
 
 ### application mobile
-{: #x7636517}
-
-Voir [application mobile](#x4258535).
-
-### application mobile
 {: #x4258535}
 
 Application conçue pour une plateforme mobile. Tout comme les applications Web, les applis mobiles fournissent une fonctionnalité qui va au-delà de l'affichage statique d'informations, par exemple, en autorisant l'utilisateur à filtrer des nouvelles pratiquement en temps réel. Voir aussi [appli](#x4281528).
+
+### application mobile
+{: #x7636517}
+
+Voir [application mobile](#x4258535).
 
 ### application systems control and auditability (ASCA)
 {: #x2214361}
 
 
+
+### application Web
+{: #x7636628}
+
+Voir [application Web](#x2116500).
 
 ### application Web
 {: #x2116500}
@@ -177,11 +182,6 @@ Application à laquelle un navigateur Web peut accéder et qui fournit
 une fonctionnalité qui va au-delà de l'affichage statique d'informations,
 par exemple en autorisant l'utilisateur à interroger une base de données. Les composants les plus courants d'une application Web sont les pages
 HTML, les pages JSP et les servlets. Voir aussi [appli](#x4281528).
-
-### application Web
-{: #x7636628}
-
-Voir [application Web](#x2116500).
 
 ### architecte responsable PDT
 {: #x2214734}
@@ -781,15 +781,15 @@ Jeu d'outils de développement, tels qu'éditeurs de code source, compilateur,
 et débogueurs qui sont accessibles à partir d'une même interface utilisateur.
 
 ### environnement d'exécution
+{: #x2391929}
+
+Ensemble des ressources utilisées pour exécuter l'application. Voir aussi [module de démarrage](#x7470511).
+
+### environnement d'exécution
 {: #x2037566}
 
 Ensemble de ressources utilisées pour exécuter un programme ou un processus.
 
-
-### environnement d'exécution
-{: #x2391929}
-
-Ensemble des ressources utilisées pour exécuter l'application. Voir aussi [module de démarrage](#x7470511).
 
 ### EOL
 {: #x2214575}
@@ -1373,14 +1373,14 @@ Mode d'exécution de requête Java qui fournit l'accès natif aux sources de don
 
 
 ### modèle
-{: #x2041200}
-
-Structure prédéfinie associée à un artefact.
-
-### modèle
 {: #x2245601}
 
 Représentation physique ou métier de la structure de données provenant d'une ou de plusieurs sources de données. Un modèle décrit des objets de données, la structure, le regroupement ainsi que les relations et la sécurité. Dans Cognos BI, un modèle est créé et mis à jour dans Framework Manager. Le modèle ou un sous-ensemble de celui-ci doit être publié sur le serveur Cognos sous forme de package que les utilisateurs pourront utiliser pour créer et exécuter des rapports.
+
+### modèle
+{: #x2041200}
+
+Structure prédéfinie associée à un artefact.
 
 ### mode production
 {: #x6070975}
@@ -1432,16 +1432,16 @@ Score dérivé des évaluations d'application par les utilisateurs à partir des
 
 
 ### organisation
+{: #x7470494}
+
+Voir [organisation](#x2032585).
+
+### organisation
 {: #x2032585}
 
 Méthodologie de regroupement pour les utilisateurs dans Bluemix. Les organisations permettent de gérer les quotas. Les utilisateurs d'une
 organisation partagent les quotas d'instances de service et de mémoire. Voir aussi [domaine](#x2021210), [espace](#x2039442).
 
-
-### organisation
-{: #x7470494}
-
-Voir [organisation](#x2032585).
 
 ### outil de gestion de la transformation métier (BTMT)
 {: #x2214418}
@@ -1696,11 +1696,6 @@ Type de sortie de rapport géré hautement interactif et facile à utiliser, uti
 {: #x2036865}
 
 Emplacement de stockage de persistance pour des données et d'autres ressources d'application.
-
-### référentiel
-{: #x7639721}
-
-Voir [référentiel](#x2036865).
 
 ### référentiel d'images privé
 {: #x8439215}

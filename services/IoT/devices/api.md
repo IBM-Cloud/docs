@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-11"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # HTTP REST API for devices
 {: #api}
-Last updated: 09 September 2016
-{: .last-updated}
 
 **Important:** The {{site.data.keyword.iot_full}} HTTP REST API for devices feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 
@@ -61,10 +60,11 @@ If you are connecting a device or application to the Quickstart service, use one
 
 All requests must include an authorization header. Basic authentication is the only method that is supported. When a device makes an HTTP request through the {{site.data.keyword.iot_short_notm}} HTTP REST API, the following credentials are required:
 
-```
-username = "use-token-auth"
-password = Authentication token
-```
+|Credential|Required input|
+|:---|:---|
+|User name|`use-token-auth`
+|Password| The authentication token that was either automatically generated or manually specified when you registered the device.
+
 
 ### Content-Type request headers
 
@@ -82,3 +82,62 @@ A `Content-Type` request header must be provided with the request. The following
 Similar to the MQTT quality of service "at most once" delivery service level 0, HTTP REST messaging provides non-persistent message delivery but it validates that the request is correct and that it can be delivered to the server before it sends the HTTP response. A reply that contains a HTTP status code of 200 confirms that the message was delivered to the server. When you use either the "at most once" MQTT quality of service level or the HTTP equivalent to deliver event messages, the device or application must implement retry logic to guarantee delivery.
 
 For more information about the MQTT protocol and the quality of service levels for {{site.data.keyword.iot_short_notm}}, see [MQTT messaging](../reference/mqtt/index.html).
+
+
+<--!
+Moved from the obsolete Features dev topic. Location to be discussed with dev.
+## Last event cache
+{: #last-event-cache}
+
+By using the {{site.data.keyword.iot_short_notm}} Last Event Cache API, you can retrieve the last event that was sent by a device. This works whether the device is online or offline, which allows you to retrieve device status regardless of the device's physical location or use status. You can retrieve the last recorded value of an event ID for a specific device, or the last recorded value for each event ID that was reported by a specific device. Last event data of a device can be retrieved for any specific event that occurred up to 365 days ago.
+
+To request the most recent value for a specific event ID, use the following API request, which returns the last recorded value for the “power” event ID.
+
+```
+GET /api/v0002/device/types/<device-type>/devices/<device-id>/events/power
+```
+
+The response is returned in the following JSON format:
+
+```
+{
+    "deviceId": "<device-id>",
+    "eventId": "power",
+    "format": "json",
+    "payload": "eyJzdGF0ZSI6Im9uIn0=",
+    "timestamp": "2016-03-14T14:12:06.527+0000",
+    "typeId": "<device-type>"
+}
+```
+
+**Note:** While the API response is in JSON format, event payloads can be written in any format. Payloads returned by Last Event Cache API are encoded in base64.
+
+To request the most recent value for each event ID that was reported by a device, use the following API request:
+
+```
+GET /api/v0002/device/types/<device-type>/devices/<device-id>/events
+```
+
+The response will include all event IDs that were sent by the device. In the following example, values are returned for the “power” and “temperature” events.
+
+```
+[
+    {
+        "deviceId": "<device-id>",
+        "eventId": "power",
+        "format": "json",
+        "payload": "eyJzdGF0ZSI6Im9uIn0=",
+        "timestamp": "2016-03-14T14:12:06.527+0000",
+        "typeId": "<device-type>"
+    },
+    {
+        "deviceId": "<device-id>",
+        "eventId": "temperature",
+        "format": "json",
+        "payload": "eyJpbnRlcm5hbCI6MjIsICJleHRlcm5hbCI6MTZ9",
+        "timestamp": "2016-03-14T14:17:44.891+0000",
+        "typeId": "<device-type>"
+    }
+]
+```
+-->

@@ -11,7 +11,7 @@ copyright:
 # JConsole を使用した Bluemix での Liberty のモニタリング
 {: #jconsole}
 
-*最終更新日: 2016 年 6 月 10 日*
+最終更新日: 2016 年 6 月 10 日
 {: .last-updated}
 
 ## JConsole を使用して Bluemix Liberty ランタイムをモニターする手順は以下のとおりです。
@@ -50,13 +50,15 @@ copyright:
 JConsole は Java インストール済み環境に含まれています。JConsole アプリケーションを開始するには、&lt;java-home&gt;/bin に移動し、次のコマンドを実行します。
 
 ```
-$ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar```
+    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
+```
 {: codeblock}
 
 Java trustStore を構成するために追加のパラメーターを渡さなければならない場合があります。次のパラメーターはほとんどの場合に機能します。
 
 ```
--J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks```
+    -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
+```
 {: codeblock}
 
 ### 接続の実行
@@ -71,14 +73,15 @@ Java trustStore を構成するために追加のパラメーターを渡さな�
 接続が失敗する場合、問題の診断に役立てるためにログを生成できます。
 最初に、jconsole コマンドに **-J-Djava.util.logging.config.file=c:/tmp/logging.properties** を追加することによって、クライアント・サイドのトレースを収集してみてください。ロギング・プロパティー・ファイルのサンプルを以下に示します。
 ```
-handlers= java.util.logging.FileHandler
+    handlers= java.util.logging.FileHandler
     .level=INFO java.util.logging.FileHandler.pattern = /tmp/jmxtrace.log
     java.util.logging.FileHandler.limit = 50000
     java.util.logging.FileHandler.count = 1
     java.util.logging.FileHandler.formatter = java.util.logging.SimpleFormatter
     javax.management.level=FINEST
     javax.management.remote.level=FINER
-    com.ibm.level=FINEST```
+    com.ibm.level=FINEST
+```
 {: codeblock}
 
 jconsole コマンドに <b>&dash;J&dash;Djavax.net.debug=ssl</b> を追加することもできます。そうすると、別の JConsole 出力ウィンドウに SSL 診断トレースが生成されます。最後に、以下を server.xml ファイルに追加することにより、サーバー・サイドでトレースを有効にすることができます。

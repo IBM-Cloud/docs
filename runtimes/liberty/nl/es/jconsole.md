@@ -11,7 +11,7 @@ copyright:
 # Supervisión de Liberty en Bluemix con JConsole
 {: #jconsole}
 
-*Última actualización: 10 de junio de 2016*
+Última actualización: 10 de junio de 2016
 {: .last-updated}
 
 ## A continuación se muestran los pasos para supervisar el tiempo de ejecución de Bluemix Liberty con JConsole:

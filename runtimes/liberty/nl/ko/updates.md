@@ -13,8 +13,18 @@ copyright:
 
 ## Liberty 빌드팩의 최신 업데이트 목록
 
-*마지막 업데이트 날짜: 2016년 7월 20일*
+마지막 업데이트 날짜: 2016년 9월 13일
 {: .last-updated}
+
+### 2016년 9월 16일: 업데이트된 Liberty 빌드팩 v3.3-20160912-1729
+* 기본 Liberty 런타임 버전은 [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 릴리스로 업데이트되었습니다. 월별 Liberty 런타임 버전은 [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) 릴리스로 업데이트되었습니다. 이러한 업데이트로 인해 이전에는 베타 기능으로 사용 가능했던 `cloudant-1.0` 및 `passwordUtilities-1.0` Liberty 기능이 이제 프로덕션 준비 기능으로 사용 가능합니다. 
+* 이 빌드팩에는 IBM JRE 8.0: SR3 FP11의 업데이트된 버전도 포함되어 있습니다.
+* 최신 1.5.x 드라이버의 문제점으로 인해, 빌드팩이 [MySQL 유형 서비스에 대한 자동 구성](autoConfig.html)을 수행할 때 최신 1.4.x [MariaDB Connector/J JDBC 드라이버](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)를 다운로드하도록 조정되었습니다. 
+
+### 2016년 8월 26일: 업데이트된 Liberty 빌드팩 v3.2-20160822-2200
+* 이 빌드팩에는 IBM JRE: 8 SR3 FP10 및 7.1 SR3 FP50의 업데이트된 버전이 포함되어 있습니다.
+* 월별 Liberty 런타임 버전은 [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/) 릴리스로 업데이트되었습니다.
+* [SQL Database](../../services/SQLDB/index.html#SQLDB) 서비스에 [자동 구성 지원](autoConfig.html)을 제공하는 서비스 플러그인이 TLS를 통해 서비스에 연결할 때 항상 JVM의 신뢰할 수 있는 인증서를 사용하도록 업데이트되었습니다. 
 
 ### 2016년 7월 22일: 업데이트된 Liberty 빌드팩 v3.1-20160717-2254
 * [앱 관리](../../manageapps/app_mng.html) 기능이 연합 인증을 지원하도록 업데이트되었습니다. 또한, `devconsole` 및 `shell` 유틸리티에서 사용되는 Node.js 런타임이 최신 `0.12.15` 버전으로 업데이트되었습니다. 

@@ -67,8 +67,8 @@ usar o buildpack integrado da comunidade inserindo o comando a seguir:</p>
 
 ## Buildpacks externos
 
-É possível usar buildpacks externos ou customizados no {{site.data.keyword.Bluemix_notm}}. Deve-se especificar a URL do buildpack com a opção -b e especificar a pilha com a opção ```-s``` no
-comando **cf push**. Por exemplo, para usar um buildpack de comunidade externo para arquivos estáticos, execute o comando a seguir
+É possível usar buildpacks externos ou customizados no {{site.data.keyword.Bluemix_notm}}. Deve-se especificar a URL do buildpack com a opção -b e especificar a pilha com a opção
+`-s` no comando **cf push**. Por exemplo, para usar um buildpack de comunidade externo para arquivos estáticos, execute o comando a seguir
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
@@ -98,7 +98,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 Use o comando <strong>cf set-env</strong>. Por exemplo, insira o comando a seguir para configurar a versão Java para 1.7.0:
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
 <p>Em seguida,
 remonte seu aplicativo para efetivar a mudança:</p>
 <pre class="pre"><code>cf restage app_name</code></pre>

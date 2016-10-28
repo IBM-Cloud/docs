@@ -40,3 +40,21 @@ When using the forums to ask a question, tag your question so that it is seen by
 See [Getting help (Link opens in a new window)](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
 
 For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support (Link opens in a new window)](https://www.{DomainName}/docs/support/index.html#contacting-support).
+
+
+# Related Links
+{: #rellinks}
+
+## Tutorials and Samples
+{: #samples}
+
+* [Create an application with three microservices (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/tutorials/tutorial_microservices_part1){:new_window}
+* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window}
+* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window}
+
+## Related Links
+{: #general}
+
+* [Microservices toolchain (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}
+* [Simple toolchain (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window}
+* [IBM Bluemix Garage Method (Link opens in a new window)](https://www.ibm.com/devops/method){:new_window}

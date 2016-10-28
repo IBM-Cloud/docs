@@ -11,14 +11,14 @@ copyright:
 # 定制 JRE
 {: #customizing_jre}
 
-*上次更新时间：2016 年 6 月 10 日*
+上次更新时间：2016 年 8 月 15 日
 {: .last-updated}
 
 应用程序在 Liberty buildpack 提供和配置的 Java 运行时环境 (JRE) 中运行。通过 Liberty buildpack，还可以配置 JRE 版本或类型，定制 JVM 选项或覆盖 JRE 功能。
 
 ## IBM JRE
 
-缺省情况下，应用程序配置为使用 IBM JRE 的轻量级版本运行。此轻量级 JRE 已精简为只提供必要的核心功能，使用的磁盘和内存占用量都大幅减少。有关轻量级 JRE 内容的更多信息，请参阅 [Liberty for Java 运行时](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html)。
+缺省情况下，应用程序配置为使用 IBM JRE 的轻量级版本运行。此轻量级 JRE 已精简为只提供必要的核心功能，使用的磁盘和内存占用量都大幅减少。有关轻量级 JRE 内容的更多信息，请参阅 [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html)。
 
 缺省情况下，将使用 IBM JRE V8。使用 JBP_CONFIG_IBMJDK 环境变量可指定 IBM JRE 的替代版本。例如，要使用最新版本的 IBM JRE 7.1，请设置以下环境变量：
 

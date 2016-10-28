@@ -52,7 +52,7 @@ Diese Ansicht zeigt eine formatierte Version des Aktivierungsprotokolls an. Sie 
 **Hinweis:** Wenn Sie Ausgabe, die im Aktivitätenprotokoll angezeigt wird, über die CLI abrufen wollen, verwenden Sie den folgenden Befehl: 
 
   ```
-wsk activation poll
+  wsk activation poll
   ```
   {: pre} 
 

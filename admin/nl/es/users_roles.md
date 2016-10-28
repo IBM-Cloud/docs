@@ -17,10 +17,11 @@ copyright:
 
 # Gestión de roles y miembros del equipo
 {: #userroles}
-*Última actualización: 1 de juno de 2016*
+Última actualización: 16 de agosto de 2016
 {: .last-updated}
 
-En la página **Directorio del equipo** para la cuenta, puede gestionar los miembros del equipo existentes y sus roles en la organización y espacios, así como invitar a nuevos miembros del equipo. Para acceder al directorio de equipo para su cuenta, vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; **Cuenta** &gt; *su_nombre_cuenta* &gt; **Directorio del equipo**. 
+En la página **Directorio del equipo** para la cuenta, puede gestionar los miembros del equipo existentes y sus roles en la organización y espacios, así como invitar a nuevos miembros del equipo. Para acceder al directorio de equipo para su cuenta, vaya al icono
+**{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Directorio del equipo**. 
 {:shortdesc}
 
 Los propietarios de cuentas llevan a cabo todas las operaciones en las organizaciones y los espacios incluida la gestión de miembros del equipo y sus roles asignados. Los gestores de organización tienen acceso a invitar a miembros del equipo y gestionar roles. Los gestores de espacio pueden utilizar la página **Gestionar organizaciones** para añadir miembros de cuentas existentes al espacio y ajustar sus roles. Consulte la siguiente información para aprender más sobre roles.
@@ -61,13 +62,26 @@ Los siguientes roles se pueden asignar a nivel de espacio:
 
 **Nota**: los miembros del equipo que tienen asignado el rol de espacio de gestor o desarrollador puede acceder a la variable de entorno VCAP_SERVICES. Sin embargo, un miembro del equipo que tienen asignado el rol de auditor no puede acceder a VCAP_SERVICES.
 
+## Ajuste de la visibilidad del directorio de equipo
+{: #teamdirectoryvisibility}
+
+En función de cómo tenga configuradas sus cuentas y organizaciones de {{site.data.keyword.Bluemix_notm}}, es posible que desee cambiar la visibilidad de la página del directorio de equipo. De forma predeterminada, todos los miembros de equipo de la cuenta pueden ver la lista completa de miembros de equipo de la cuenta, incluyendo todos los miembros de todas las organizaciones de la cuenta. Es posible que tenga problemas de privacidad o motivos de seguridad que le lleven a ajustar la visibilidad de la página del directorio de equipo. Tiene dos opciones para definir la visibilidad de la página del directorio de equipo: todos los miembros del equipo o solo usted como propietario de la cuenta.
+
+Para cambiar la visibilidad de la página del directorio de equipo, realice los pasos siguientes:
+
+1. Vaya al icono **{{site.data.keyword.avatar}}**
+![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Directorio del equipo**. 
+2. Para la opción **Visibilidad de**, pulse la selección actual para ver las opciones.
+3. A continuación, seleccione **Todos** o **Solo yo** en función de las necesidades actuales para su cuenta.
+
 ## Invitación a miembros del equipo
 {: #inviteteammembers}
 
 Los propietarios de cuentas y gestores de organizaciones pueden invitar a los miembros del equipo a las organizaciones desde la página Invitar miembros del equipo. Cuando añade nuevos miembro del equipo, se les asignan automáticamente los roles de auditor. Puede cambiar los roles más adelante en la página Directorio del equipo. Para invitar a un miembro del equipo, realice estos pasos:
 
 <ol>
-<li>Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; **Cuenta** &gt; *su_nombre_cuenta* &gt; **Invitar a miembro del equipo**.</li>
+<li>Vaya al icono **{{site.data.keyword.avatar}}**
+![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Invitar miembro del equipo**.</li>
 <li>Seleccione la organización a la que desea invitar los miembros del equipo.</li>
 <li>Pulse **Siguiente**.</li>
 <li>Seleccione los espacios a los que desea permitir acceso a los miembros del equipo.</li>
@@ -83,14 +97,16 @@ Los propietarios de cuentas y gestores de organizaciones pueden invitar a los mi
 
 Pulse **Ver pendiente** para comprobar si hay invitaciones pendientes o aceptadas. Puede elegir reenviar el correo electrónico de invitación o cancelar la invitación para una invitación pendiente en cualquier momento.
 
-Si tiene una cuenta de SoftLayer vinculada a su cuenta de {{site.data.keyword.Bluemix_notm}}, puede añadir los miembros de su equipo de SoftLayer. Vaya al icono **Cuenta y soporte** ![Icono Cuenta y soporte](../admin/images/account_support.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Invitar miembros del equipo**. A continuación, pulse **Añadir** en la sección **Añadir miembros del equipo SoftLayer** para autenticarse en su cuenta de SoftLayer y ver la lista de miembros del equipo de su cuenta de SoftLayer. Para obtener más información sobre cómo añadir miembros del equipo de su cuenta de SoftLayer, consulte [Invitar a miembros del equipo de SoftLayer a {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users).
+Si tiene una cuenta de SoftLayer vinculada a su cuenta de {{site.data.keyword.Bluemix_notm}}, puede añadir los miembros de su equipo de SoftLayer. Vaya al icono **{{site.data.keyword.avatar}}**
+![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; Página **Invitar miembros del equipo**. A continuación, pulse **Añadir** en la sección **Añadir miembros del equipo SoftLayer** para autenticarse en su cuenta de SoftLayer y ver la lista de miembros del equipo de su cuenta de SoftLayer. Para obtener más información sobre cómo añadir miembros del equipo de su cuenta de SoftLayer, consulte [Invitar a miembros del equipo de SoftLayer a {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users).
 
 ## Editar roles
 {: #editinguserroles}
 
 Los propietarios de cuentas y gestores de organizaciones pueden editar roles de organización y espacio para miembros del equipo existentes en la página **Directorio del equipo**. 
 
-1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; **Cuenta** &gt; *su_nombre_cuenta* &gt; **Directorio del equipo**.
+1. Vaya al icono **{{site.data.keyword.avatar}}**
+![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Directorio del equipo**.
 2. Localice el miembro del equipo cuyos roles desea editar.
 3. Pulse **Ver roles**.
 4. Seleccione o elimine las selecciones del rol de organización para modificar el acceso de organización para el miembro del equipo.
@@ -101,7 +117,8 @@ Los propietarios de cuentas y gestores de organizaciones pueden editar roles de 
 
 Los gestores de espacio pueden editar roles para los miembros del equipo en su espacio en la página **Gestionar organizaciones**.
 
-1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; **Cuenta** &gt; *su_nombre_cuenta* &gt; **Gestionar organizaciones**.
+1. Vaya al icono **{{site.data.keyword.avatar}}**
+![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Gestionar organizaciones**.
 2. Localice la organización en la que está su espacio.
 3. Pulse **Ver detalles**.
 4. Localice el espacio y pulse **Editar espacio**.

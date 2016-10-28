@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  anni: 2015, 2016
 
  
 
@@ -18,7 +18,7 @@ copyright:
 # CLI e strumenti di sviluppo
 {: #cli}
 
-*Ultimo aggiornamento: 28 giugno 2016*
+*Ultimo aggiornamento: 31 agosto 2016*
 {: .last-updated}
 
 Con {{site.data.keyword.Bluemix_short}}, hai accesso a potenti strumenti, quali un'interfaccia riga di comando unificata e i plug-in delle CLI. Ciascuno di questi download di CLI è disponibile a supporto della tua esperienza {{site.data.keyword.Bluemix_notm}}.

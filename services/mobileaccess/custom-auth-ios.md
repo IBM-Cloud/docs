@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Configuring {{site.data.keyword.amashort}} client SDK for iOS (Objective-C)
 {: #custom-ios}
-
-Last updated: 23 August 2016
-{: .last-updated}
 
 
 Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amafull}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.

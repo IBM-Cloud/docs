@@ -1,65 +1,24 @@
 {:new_window: target="_blank"} 
 
-# Getting started with {{site.data.keyword.blockstorageshort}} (Beta)
+# {{site.data.keyword.blockstorageshort}} (Beta) is deprecated
 
-Last updated: 07 September 2016
+Last updated: 26 October 2016
 {: .last-updated}
 
-{{site.data.keyword.blockstoragefull}} provides access to block level storage for transaction-intensive workloads and runtimes that need persistent storage. You can use the {{site.data.keyword.blockstorageshort}} service to manage volume lifecycles, attach volumes to your IBM Virtual Servers, and create snapshots of your block storage volumes.
+If you’re an existing {{site.data.keyword.blockstoragefull}} (Beta) user, you can continue to use the service until 24 December 2016. 
 
-Before you begin, review the following information.
+**This service is deprecated:** Existing volumes can be managed until 24 December 2016. For more information, see [Retirement of Beta Services – Virtual Servers, Block Storage, Network Security Groups](https://www.ibm.com/blogs/bluemix/?p=55163).
 
-* Ensure that you created an instance of the {{site.data.keyword.blockstorageshort}} service in your space. For more information on how to add a new service instance, see [Requesting a new service instance](../../services/reqnsi.html#req_instance).
-* The {{site.data.keyword.blockstorageshort}} service is supported only in an unbound context. 
-* You must have IBM {{site.data.keyword.virtualmachinesshort}} created to attach block storage volumes. To learn more about using block storage volumes with IBM {{site.data.keyword.virtualmachinesshort}}, see [Block storage volumes and IBM Virtual Servers](../../virtualmachines/vm_create.html#storage_BS). 
+**New Endurance and Performance storage solutions available in IBM Bluemix**
 
-Complete these steps to get started with {{site.data.keyword.blockstorageshort}}:
+You can now deploy block storage globally through the new **Infrastructure** category in IBM Bluemix®. For more information about using the Endurance and Performance storage solutions in the **Infrastructure** category, see [Block Storage](https://www.ibm.com/cloud-computing/bluemix/block-storage). For additional documentation, see [Endurance Storage](https://knowledgelayer.softlayer.com/topic/endurance-storage) or [Performance Storage](https://knowledgelayer.softlayer.com/topic/performance-storage).
 
-1. Create a volume.
-   
-   a. In the Bluemix UI, select **Console > Storage**.
+## Save data from your existing block storage volumes before 28 November 2016
 
-   b. Select the Block Storage instance you previously provisioned.
+Ensure that you save any data from your existing block storage volumes before 28 November 2016, when all virtual server instances will be suspended. If you need to resume an instance for some reason, you can contact IBM Bluemix support. All block storage volumes will be deleted on 24 December 2016.
 
-   c. On the Manage page, click **Create volume** to start the Create Volume dialog.
+Take action to retain data from your existing volumes. For example, use the **tar** command to create an archive file and copy it to another storage device.
 
-   d.	Provide a name. 
-   
-      **Note:** The name is for display purposes only.
-   
-   e. Provide the size of the volume that you want. 
-   
-      **Note:** Decimal numbers are not accepted. The size is limited by the quota that is assigned to your organization.
-   
-   f.	Optionally, provide a more detailed description of the volume.
-   
-   g.	Click **Create** to submit the information and close the dialog.
-
-  Creating a volume can take a few moments.
-
-2. Attach a volume to a virtual server.
-
-   a. In the Bluemix UI, select **Console > Storage**.
-
-   b. Select the Block Storage instance you previously provisioned.
-
-   c. Select a volume from the list of available volumes.
-   
-   d.	From the Actions drop-down menu, click **Attach**.
-   
-   e.	In the Attach dialog, select an instance of a virtual server from the drop-down list. 
-   
-   f.	Optionally, specify the device to be used to attach this volume. 
-   
-      **Note:** If you do not specify the device, the system automatically selects the first available device on the virtual server.
-   
-   g.	Click **Attach** to submit the information and close the dialog.
-   
-   The volume is listed in the table of attached volumes with the information about the virtual server instance. The virtual server can now use the device to persist data. 
- 
-What's next?
-
-After your volume is attached, you must configure your virtual server to make use of the volume. For more information, see [Preparing volumes](../BlockStorage/blockstorage_preparingvolume.html).
 
 # Related Links
 {: #rellinks}

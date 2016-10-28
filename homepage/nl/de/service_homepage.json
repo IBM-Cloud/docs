@@ -43,6 +43,11 @@
     "category_id": "devops"
   }, {
     "type": "extra",
+    "title": "Dedicated GitHub Enterprise versuchen",
+    "href": "services/ghededicated/index.html",
+    "category_id": "devops"
+  }, {
+    "type": "extra",
     "title": "Mobiles Bluemix-Dashboard versuchen",
     "href": "mobile/index.html",
     "category_id": "mobile"

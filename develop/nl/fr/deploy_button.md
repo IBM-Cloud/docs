@@ -95,12 +95,12 @@ Branche Git indiquée :
 Branche principale par défaut :
 </p>
 <pre class="codeblock">
-[&#33;[Déployer dans Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;URL_référentiel_Git> # [required]&#41;
+[![Déployer dans Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required])
 </pre>
 <p>Branche Git indiquée :
 </p>
 <pre class="codeblock">
-[&#33;[Déployer dans Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;URL_référentiel_Git> &branch=&lt;branche_Git&gt; # [required]&#41;
+[![Déployer dans Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required])
 </pre>
 </li>
 </ul>
@@ -175,7 +175,8 @@ générations automatisées ont lieu lorsqu'un fichier script de génération es
 	Générateurs pris en charge : 
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant :</a> /<code>build.xml</code>, qui génère la sortie dans le dossier <code>./output/</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle :</a> <code>/build.gradle</code>, qui génère la sortie dans le dossier <code>.</code> </i>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle :</a> <code>/build.gradle</code>, qui
+génère la sortie dans le dossier <code>. </code> </li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt :</a> <code>/Gruntfile.js</code>, qui génère la sortie dans le dossier <code>.</code> </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven :</a> <code>/pom.xml</code>, qui génère la sortie dans le dossier <code>./target/</code></li>
 	   </ul>
@@ -191,8 +192,8 @@ générations automatisées ont lieu lorsqu'un fichier script de génération es
 <li>Dans le répertoire racine de votre projet, créez un répertoire <code>.bluemix</code>.</li>
 <li>Téléchargez le fichier <code>pipeline.yml</code> dans le référentiel <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Si vous déployez une application dans un conteneur en utilisant <strong>IBM Containers</strong>, vous devez inclure le document Dockerfile dans le répertoire racine du référentiel et inclure un fichier <code>pipeline.yml</code> dans un répertoire <code>.bluemix</code>. 
-	<ul>
+	<li>Si vous déployez une application dans un conteneur en utilisant <strong>IBM Containers</strong>, vous devez inclure le document Dockerfile dans
+le répertoire racine du référentiel et inclure un fichier <code>pipeline.yml</code> dans un répertoire <code>.bluemix</code>.	<ul>
 	    <li> Pour en savoir plus sur la création de documents Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">voir la documentation Docker</a>. </li>
 	    <li>Vous pouvez créer un fichier <code>pipeline.yml</code> manuellement ou en générer un à partir d'un projet DevOps Services existant. Pour créer manuellement un fichier <code>pipeline.yml</code> propre à des conteneurs, <a href="https://github.com/Puquios/" target="_blank">consultez les exemples dans GitHub</a>. </li>
         </ul>

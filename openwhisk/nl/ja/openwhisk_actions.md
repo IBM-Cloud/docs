@@ -19,7 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} アクションの作成と起動
 {: #openwhisk_actions}
 
-最終更新日: 2016 年 8 月 4 日
+最終更新日: 2016 年 9 月 9 日
 {: .last-updated}
 
 アクションとは、{{site.data.keyword.openwhisk}} プラットフォームで実行されるステートレスなコード・スニペットです。JavaScript 関数、Swift 関数、または、Docker コンテナーにパッケージした実行可能なカスタム・プログラムをアクションにできます。例えば、アクションを使用して、イメージ内の顔を検出したり、一連の API 呼び出しを集約したり、ツイートを投稿したりできます。
@@ -43,7 +43,8 @@ copyright:
 1. 以下の内容を持つ JavaScript ファイルを作成します。この例では、ファイル名は 'hello.js' です。
   
   ```
-function main() {return {payload: 'Hello world'};
+  function main() {
+      return {payload: 'Hello world'};
   }
   ```
   {: codeblock}
@@ -53,65 +54,68 @@ function main() {return {payload: 'Hello world'};
 2. 以下の JavaScript 関数からアクションを作成します。この例では、アクションは「hello」という名前です。
 
   ```
-wsk action create hello hello.js
+  wsk action create hello hello.js
   ```
   {: pre}
   ```
-ok: created action hello
+  ok: created action hello
   ```
   {: screen}
 
 3. 作成したアクションをリストします。
   
   ```
-wsk action list
+  wsk action list
   ```
   {: pre}
   ```
-actions
+  actions
   hello       private
   ```
   {: screen}
 
   作成したばかりの `hello` アクションが表示されているのを確認できます。
 
-4. アクションを作成した後、invoke コマンドを使用して、そのアクションを {{site.data.keyword.openwhisk_short}} においてクラウド内で実行できます。コマンドにフラグを指定することによって、アクションを*ブロッキング*起動または*非ブロッキング*起動のいずれかで起動できます。ブロッキング起動は、アクションの実行が完了するのを待ってから結果を返します。
+4. アクションを作成した後、invoke コマンドを使用して、そのアクションを OpenWhisk においてクラウド内で実行できます。コマンドにフラグを指定することによって、*ブロッキング* 起動 (つまり、要求/応答スタイル) または*非ブロッキング* 起動のいずれかでアクションを起動できます。ブロッキング起動要求は、アクティベーション結果が使用可能になるのを*待機* します。待機時間は、60 秒と、アクションに構成された[制限時間](./reference.md#per-action-timeout-ms-default-60s)のいずれか小さいほうです。アクティベーションの結果が待機時間内に使用可能になった場合、その結果が返されます。使用可能にならない場合、非ブロッキング要求の場合と同様に、アクティベーション処理はシステムで続行され、結果を後でチェックできるようにアクティベーション ID が返されます (アクティベーションのモニターに関するヒントについては、[ここ](#watching-action-output)を参照してください)。
+
+  
 次の例では、ブロッキングを示す `--blocking` パラメーターが使用されています。
 
   ```
-wsk action invoke --blocking hello
+  wsk action invoke --blocking hello
   ```
   {: pre}
   ```
-ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  {"result": {
-  "payload": "Hello world"
+  ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
+  {
+      "result": {
+          "payload": "Hello world"
       },
-  "status": "success",
-  "success": true
+      "status": "success",
+      "success": true
   }
   ```
   {: screen}
 
   コマンドの出力は、次の 2 つの重要な情報です。
   * アクティベーション ID (`44794bd6aab74415b4e42a308d880e5b`)
-  * 起動結果
+  * 予期される待機時間内に使用可能になった場合は起動結果
 
   この例の結果は、JavaScript 関数によって返されたストリング `Hello world` です。アクティベーション ID は、後でログまたは起動結果を取り出すときに使用できます。  
 
 5. アクションの結果をすぐに必要としない場合は、`--blocking` フラグを省略して非ブロッキング起動を行うことができます。結果は後でアクティベーション ID を使用して取得できます。次の例を参照してください。
 
   ```
-wsk action invoke hello
+  wsk action invoke hello
   ```
   {: pre}
   ```
-ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
+  ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: screen}
 
   ```
-wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
+  wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: pre}
   ```
@@ -124,11 +128,11 @@ wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
 6. アクティベーション ID を記録しておくのを忘れた場合、最新のものから古いものへと順に並べられたアクティベーションのリストを取得できます。アクティベーションのリストを取得するには、次のコマンドを実行します。
 
   ```
-wsk activation list
+  wsk activation list
   ```
   {: pre}
   ```
-activations
+  activations
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
@@ -153,11 +157,11 @@ activations
 2. `hello` アクションを更新し、`name` パラメーター値と `place` パラメーター値を渡してアクションを起動します。次の例を参照してください。
   
   ```
-wsk action update hello hello.js
+  wsk action update hello hello.js
   ```
   {: pre}
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
   ```
   {: pre}
   ```
@@ -179,14 +183,14 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
 1. アクションを更新し、`--param` オプションを使用してパラメーター値をバインドします。
 
   ```
-wsk action update hello --param place 'Vermont'
+  wsk action update hello --param place 'Vermont'
   ```
   {: pre}
 
 2. 今回は `name` パラメーターのみを渡してアクションを起動します。
 
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie'
+  wsk action invoke --blocking --result hello --param name 'Bernie'
   ```
   {: pre}
   ```
@@ -201,7 +205,7 @@ wsk action invoke --blocking --result hello --param name 'Bernie'
 3. `name` 値と `place` 値の両方を渡してアクションを起動します。後者は、アクションにバインドされた値を上書きします。
 
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
   ```
   {: pre}
   ```
@@ -219,10 +223,10 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
 1. 以下の内容を `asyncAction.js` という名前のファイルに保存します。
 
   ```
-function main(args) {
-     return new Promise(function(resolve, reject) {
-             setTimeout(function() {
-          resolve({ done: true });
+  function main(args) {
+       return new Promise(function(resolve, reject) {
+         setTimeout(function() {
+           resolve({ done: true });
          }, 2000);
       })
    }
@@ -240,16 +244,16 @@ function main(args) {
 2. 以下のコマンドを実行して、アクションを作成して起動します。
 
   ```
-wsk action create asyncAction asyncAction.js
+  wsk action create asyncAction asyncAction.js
   ```
   {: pre}
   ```
-wsk action invoke --blocking --result asyncAction
+  wsk action invoke --blocking --result asyncAction
   ```
   {: pre}
   ```
   {
-            "done": true
+      "done": true
   }
   ```
   {: screen}
@@ -259,30 +263,30 @@ wsk action invoke --blocking --result asyncAction
 3. アクティベーション・ログを取り出して、アクティベーションの完了にかかった時間を確認します。
 
   ```
-wsk activation list --limit 1 asyncAction
+  wsk activation list --limit 1 asyncAction
   ```
   {: pre}
   ```
-activations
+  activations
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
   {: screen}
 
 
   ```
-wsk activation get b066ca51e68c4d3382df2d8033265db0
+  wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
  ```
   {
-            "start": 1455881628103,
+      "start": 1455881628103,
       "end":   1455881648126,
       ...
   }
   ```
   {: screen}
 
-  アクティベーション・レコード中の `start` と `end` のタイム・スタンプを比較することで、このアクティベーションの完了に 20 秒と少しかかったことが分かります。
+  アクティベーション・レコード中の `start` と `end` のタイム・スタンプを比較することで、このアクティベーションの完了に 2 秒と少しかかったことが分かります。
 
 
 ### 外部 API を呼び出すためのアクションの使用
@@ -294,41 +298,44 @@ wsk activation get b066ca51e68c4d3382df2d8033265db0
 
 1. 以下の内容を `weather.js` という名前のファイルに保存します。
   
+  
   ```
-var request = require('request');function main(params) {
-     var location = params.location || 'Vermont';
-        var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
-    
-        return new Promise(function(resolve, reject) {
-       request.get(url, function(error, response, body) {
-            if (error) {
-                    reject(error);    
-                }
-                else {
-                    var condition = JSON.parse(body).query.results.channel.item.condition;
-                    var text = condition.text;
-                    var temperature = condition.temp;
-                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-                    resolve({msg: output});
-                }
-            });
-        });
-    }
+  var request = require('request');
+
+  function main(params) {
+      var location = params.location || 'Vermont';
+      var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
+
+      return new Promise(function(resolve, reject) {
+          request.get(url, function(error, response, body) {
+              if (error) {
+                  reject(error);
+              }
+              else {
+                  var condition = JSON.parse(body).query.results.channel.item.condition;
+                  var text = condition.text;
+                  var temperature = condition.temp;
+                  var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                  resolve({msg: output});
+              }
+          });
+      });
+  }
   ```
   {: codeblock}
-
-  この例では、アクションは JavaScript `request` ライブラリーを使用して Yahoo Weather API への HTTP 要求を行い、JSON 結果からフィールドを抽出することに注意してください。[リファレンス](./reference.md#runtime-environment)に、アクションで使用できる Node.js パッケージについての詳しい説明が記載されています。
-
+  
+  この例では、アクションは JavaScript `request` ライブラリーを使用して Yahoo Weather API への HTTP 要求を行い、JSON 結果からフィールドを抽出することに注意してください。[リファレンス](./reference.md#javascript-runtime-environments)に、アクションで使用できる Node.js パッケージについての詳しい説明が記載されています。
+  
   この例は、非同期アクションの必要性も示しています。アクションは Promise を戻して、関数が戻ったときにこのアクションの結果はまだ使用可能になっていないことを示します。代わりに、結果は、HTTP 呼び出しが完了した後に `request` コールバックで使用可能になり、引数として `resolve()` 関数に渡されます。
-
-
+  
 2. 以下のコマンドを実行して、アクションを作成して起動します。
+  
   ```
-wsk action create weather weather.js
+  wsk action create weather weather.js
   ```
   {: pre}
   ```
-wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+  wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   ```
   {: pre}
   ```
@@ -337,27 +344,28 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   }
   ```
   {: screen}
-
+  
 ### アクション・シーケンスの作成
 {: #openwhisk_create_action_sequence}
 
 一連のアクションをチェーニングする 1 つのアクションを作成できます。
 
-いくつかのユーティリティー・アクションが `/whisk.system/util` という名前のパッケージに入って提供されており、初めてのシーケンスを作成するためにこれを使用できます。パッケージについて詳しくは、『[パッケージ](./openwhisk_packages.html)』セクションを参照してください。
+いくつかのユーティリティー・アクションが `/whisk.system/utils` という名前のパッケージに入って提供されており、初めてのシーケンスを作成するためにこれを使用できます。パッケージについて詳しくは、『[パッケージ](./packages.md)』セクションを参照してください。
 
-1. `/whisk.system/util` パッケージ内のアクションを表示します。
+1. `/whisk.system/utils` パッケージ内のアクションを表示します。
   
   ```
-wsk package get --summary /whisk.system/util
+  wsk package get --summary /whisk.system/utils
   ```
   {: pre}
   ```
-package /whisk.system/util
-   action /whisk.system/util/cat: Concatenate array of strings
-   action /whisk.system/util/head: Filter first K array elements and discard rest
-   action /whisk.system/util/date: Get current date and time
-   action /whisk.system/util/sort: Sort array
-   action /whisk.system/util/split: Splits a string into an array of strings
+  package /whisk.system/utils: Building blocks that format and assemble data
+   action /whisk.system/utils/head: Extract prefix of an array
+   action /whisk.system/utils/split: Split a string into an array
+   action /whisk.system/utils/sort: Sorts an array
+   action /whisk.system/utils/echo: Returns the input
+   action /whisk.system/utils/date: Current date and time
+   action /whisk.system/utils/cat: Concatenates input into a string
   ```
   {: screen}
 
@@ -366,25 +374,16 @@ package /whisk.system/util
 2. アクション・シーケンスを作成して、1 つのアクションの結果が次のアクションに引数として渡されるようにします。
   
   ```
-wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
+  wsk action create sequenceAction --sequence /whisk.system/utils/split,/whisk.system/utils/sort
   ```
   {: pre}
-
+  
   このアクション・シーケンスは、数行のテキストを 1 つの配列に変換し、行をソートします。
-
-3. アクション・シーケンスを起動する前に、次のような数行のテキストからなる 'haiku.txt' という名前のテキスト・ファイルを作成します。
-
-  ```
-Over-ripe sushi,
-  The Master
-  Is full of regret.
-  ```
-  {: codeblock}
-
-4. アクションを起動します。
+  
+3. アクションを起動します。
   
   ```
-wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
+  wsk action invoke --blocking --result sequenceAction --param payload "Over-ripe sushi,\nThe Master\nIs full of regret."
   ```
   {: pre}
   ```
@@ -398,11 +397,15 @@ wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)
   }
   ```
   {: screen}
-
+  
   結果では行がソートされていることが分かります。
 
-**注**: 複数の名前付きパラメーターを指定したアクション・シーケンス呼び出しについて詳しくは、『[デフォルト・パラメーターの設定](./actions.md#setting-default-parameters)』を参照してください。
-
+**注**: シーケンス中のアクション間で渡されるパラメーターは、デフォルト・パラメーターを除いて、明示的です。
+したがって、アクション・シーケンスに渡されるパラメーターを使用できるのはシーケンス中の先頭アクションのみです。
+シーケンス中の先頭アクションの結果が、シーケンス中の 2 番目のアクションへの入力 JSON オブジェクトになります (以下同様)。
+このオブジェクトには、最初にシーケンスに渡されたパラメーターはどれも含まれません (ただし、先頭アクションがその結果にそれらのパラメーターを明示的に組み込んだ場合は除きます)。
+あるアクションへの入力パラメーターは、そのアクションのデフォルト・パラメーターとマージされます。その際、入力パラメーターが優先され、一致するデフォルト・パラメーターはオーバーライドされます。
+複数の名前付きパラメーターを指定したアクション・シーケンス呼び出しについて詳しくは、『[デフォルト・パラメーターの設定](./actions.md#setting-default-parameters)』を参照してください。
 
 ## Creating Python actions
 {: #openwhisk_actions_python}
@@ -415,11 +418,11 @@ Python アクションの作成プロセスは、JavaScript アクションの�
 アクションは、単に最上位の Python 関数です。つまり、`main` という名前のメソッドが必要です。例えば、以下の内容で `hello.py` という名前のファイルを作成します。
 
 ```
-    def main(dict):
-        name = dict.get("name", "stranger")
-        greeting = "Hello " + name + "!"
-        print(greeting)
-        return {"greeting": greeting}
+def main(dict):
+    name = dict.get("name", "stranger")
+    greeting = "Hello " + name + "!"
+    print(greeting)
+    return {"greeting": greeting}
 ```
 {: codeblock}
 
@@ -434,6 +437,19 @@ wsk action create helloPython hello.py
 
 コマンド・ラインおよび `.py` ソース・ファイルを使用する場合、(JavaScript アクションとは対照的に) Python アクションを作成していることを指定する必要はありません。そのことはツールがファイル拡張子から判定します。
 
+アクション起動は、Python アクションの場合と JavaScript アクションの場合で同じです。
+
+```
+wsk action invoke --blocking --result helloPython --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
 
 
 ## Swift アクションの作成
@@ -449,12 +465,13 @@ Swift アクションの作成プロセスは、JavaScript アクションの場
 アクションは、単にトップレベルの Swift 関数です。例えば、以下の内容で `hello.swift` という名前のファイルを作成します。
 
 ```
-func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
-          return [ "greeting" : "Hello \(name)!" ]
-      } else {
-return [ "greeting" : "Hello stranger!" ]
-      }
-  }
+func main(args: [String:Any]) -> [String:Any] {
+    if let name = args["name"] as? String {
+        return [ "greeting" : "Hello \(name)!" ]
+    } else {
+        return [ "greeting" : "Hello stranger!" ]
+    }
+}
 ```
 {: codeblock}
 
@@ -486,6 +503,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 **重要:** Swift アクションは Linux 環境で実行されます。Linux 上の Swift はまだ発展途上であり、
 {{site.data.keyword.openwhisk_short}} は通常は使用可能な最新リリースを使用しますが、それは必ずしも安定しているとは限りません。それに加えて、{{site.data.keyword.openwhisk_short}} で使用される Swift のバージョンは、安定したリリースの MacOS 用 XCode からの Swift のバージョンと不整合である可能性があります。
 
+
 ## Docker アクションの作成
 {: #openwhisk_actions_docker}
 
@@ -495,12 +513,12 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 前提条件として、Docker Hub アカウントを持っている必要があります。無料の Docker ID およびアカウントをセットアップするには、[Docker Hub](https://hub.docker.com){: new_window} にアクセスしてください。
 
-以下の説明では、ユーザー ID が「janesmith」であり、パスワードが「janes_password」であると想定しています。CLI が既にセットアップ済みである場合、{{site.data.keyword.openwhisk_short}} で使用するためのカスタム・バイナリーをセットアップするには、3 つのステップが必要です。その後、アップロードされた Docker イメージをアクションとして使用できます。
+以下の説明では、Docker ユーザー ID が `janesmith` であり、パスワードが `janes_password`　であると想定しています。CLI が既にセットアップ済みである場合、{{site.data.keyword.openwhisk_short}} で使用するためのカスタム・バイナリーをセットアップするには、3 つのステップが必要です。その後、アップロードされた Docker イメージをアクションとして使用できます。
 
 1. Docker スケルトンをダウンロードします。次のように CLI を使用してダウンロードできます。
 
   ```
-wsk sdk install docker
+  wsk sdk install docker
   ```
   {: pre}
   ```
@@ -509,11 +527,11 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   {: screen}
 
   ```
-ls dockerSkeleton/
+  ls dockerSkeleton/
   ```
   {: pre}
   ```
-Dockerfile      README.md       buildAndPush.sh client          server
+  Dockerfile      README.md       buildAndPush.sh example.c
   ```
   {: screen}
 
@@ -522,47 +540,61 @@ Dockerfile      README.md       buildAndPush.sh client          server
 2. ブラック・ボックス・スケルトン内にカスタム・バイナリーをセットアップします。スケルトンには既に C プログラムが含まれているので、それを使用できます。
 
   ```
-cat ./dockerSkeleton/client/example.c
+  cat dockerSkeleton/example.c
   ```
-  {: pre}
   {: pre}
   ```
   #include <stdio.h>
   
   int main(int argc, char *argv[]) {
-      printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
+      printf("This is an example log message from an arbitrary C program!\n");
+      printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s }",
              (argc == 1) ? "undefined" : argv[1]);
   }
   ```
-  {: screen}
+  {: codeblock}
 
-  必要に応じてこのファイルを変更できます。
+  必要に応じてこのファイルを変更するか、または、追加コードおよび依存関係を Docker イメージに追加できます。
+  後者の場合、必要に応じて `Dockerfile` を微調整して実行可能バイナリーをビルドする必要があります。
+  そのバイナリーはコンテナー内部の `/action/exec` に置く必要があります。
+
+  実行可能バイナリーはコマンド・ラインから単一の引数を受け取ります。それは、アクションへの引数を表す JSON オブジェクトのストリング・シリアライゼーションです。プログラムは `stdout` または `stderr` にログを記録することがあります。
+  規約により、出力の最終行は、アクションの結果を表す、stringify によって文字列化された JSON オブジェクト*でなければなりません*。
 
 3. Docker イメージをビルドし、提供されているスクリプトを使用してアップロードします。最初に `docker login` を実行して認証し、次に、選択したイメージ名でスクリプトを実行する必要があります。
-
+  
   ```
-docker login -u janesmith -p janes_password
+  docker login -u janesmith -p janes_password
   ```
   {: pre}
   ```
-cd dockerSkeleton
+  cd dockerSkeleton
+  ```
+  {: pre}
+  ```
+  chmod +x buildAndPush.sh
   ```
   {: pre}
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
-
-  example.c ファイルの部分は Docker イメージのビルド・プロセスの一環としてコンパイルされるので、ご使用のマシン上で C をコンパイルする必要はないことに注意してください。
-
-4. 提供された JavaScript ファイルではなく Docker イメージからアクションを作成するには、`--docker` を追加し、JavaScript ファイル名を Docker イメージ名に置き換えます。
-
+  
+  example.c ファイルの部分は Docker イメージのビルド・プロセスの一環としてコンパイルされるので、ご使用のマシン上で C をコンパイルする必要はないことに注意してください。実際、このバイナリーは、互換ホスト・マシン上でコンパイルしないと、フォーマットが一致しないためにコンテナー内では稼働しない可能性があります。
+  
+  これで、Docker コンテナーを {{site.data.keyword.openwhisk_short}} アクションとして使用できます。
+  
+  
   ```
-wsk action create --docker example janesmith/blackboxdemo
+  wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
+  
+  アクションを作成するときには、`--docker` の使用に注意してください。現在は、すべての Docker イメージが Docker Hub でホストされると想定されています。
+  このアクションは他の任意の {{site.data.keyword.openwhisk_short}} アクションとして起動される可能性があります。
+  
   ```
-wsk action invoke --blocking --result example --param payload Rey
+  wsk action invoke --blocking --result example --param payload Rey
   ```
   {: pre}
   ```
@@ -574,9 +606,11 @@ wsk action invoke --blocking --result example --param payload Rey
   }
   ```
   {: screen}
-
-5. Docker アクションを更新するには、`buildAndPush.sh` を実行して Docker Hub 上のイメージをリフレッシュし、その次に `wsk action update` を実行して、システムが新しいイメージを取り出すようにする必要があります。新規の呼び出しは、古いコードを含むウォーム・イメージではなく、新しいイメージを使い始めます。
-
+  
+  Docker アクションを更新するには、buildAndPush.sh を実行して Docker Hub 上のイメージをリフレッシュします。これにより、次回システムが Docker イメージをプルすると、アクションの新しいコードが実行されるようになります。
+  ウォーム・コンテナーがない場合、すべての新しい起動は新規 Docker イメージを使用します。
+  前のバージョンの Docker イメージを使用しているウォーム・コンテナーがある場合は、wsk action update を実行しない限り、新しい起動はこのイメージを使用し続けるということを考慮してください。wsk action update の実行は、新しい起動には Docker プルを強制することをシステムに指示し、結果的に新規 Docker イメージがプルされることになります。
+  
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```
@@ -585,9 +619,8 @@ wsk action invoke --blocking --result example --param payload Rey
   wsk action update --docker example janesmith/blackboxdemo
   ```
   {: pre}
-
-『[リファレンス](./openwhisk_reference.html#openwhisk_ref_docker)』セクションに、Docker アクションの作成に関するさらに詳しい説明が記載されています。
-
+  
+  『[リファレンス](./openwhisk_reference.html#openwhisk_ref_docker)』セクションに、Docker アクションの作成に関するさらに詳しい説明が記載されています。
 
 ## アクション出力の監視
 {: #openwhisk_actions_polling}
@@ -599,7 +632,7 @@ wsk action invoke --blocking --result example --param payload Rey
 1. シェルから次のコマンドを実行します。
   
   ```
-wsk activation poll
+  wsk activation poll
   ```
   {: pre}
 
@@ -608,11 +641,11 @@ wsk activation poll
 2. 別のウィンドウに切り替えて、アクションを起動します。
 
   ```
-wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
+  wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
   ```
   {: pre}
   ```
-ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
+  ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
   ```
   {: screen}
 
@@ -634,21 +667,21 @@ ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0
 1. アクションを削除するには、次のコマンドを実行します。
   
   ```
-wsk action delete hello
+  wsk action delete hello
   ```
   {: pre}
   ```
-ok: deleted hello
+  ok: deleted hello
   ```
   {: screen}
 
 2. 対象のアクションが、もうアクションのリストに含まれていないことを確認します。
   
   ```
-wsk action list
+  wsk action list
   ```
   {: pre}
   ```
-actions
+  actions
   ```
   {: screen}

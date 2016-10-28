@@ -23,9 +23,9 @@ copyright:
 
 在 {{site.data.keyword.openwhisk}} 中，您可以使用套件以將一組相關動作組合在一起，並與其他人共用。
 
-套件可以包括*動作* 及*資訊來源*。
-- 動作是在 {{site.data.keyword.openwhisk_short}} 上執行的程式碼片段。例如，Cloudant 套件包括在 Cloudant 資料庫中讀取及寫入記錄的動作。
-- 資訊來源是用來配置外部事件來源，以發動觸發程式事件。例如，「警示」套件包括可依指定的頻率發動觸發程式的資訊來源。
+套件可以包含*動作* 及*資訊來源*。
+- 動作是在 {{site.data.keyword.openwhisk_short}} 上執行的程式碼片段。例如，Cloudant 套件包含在 Cloudant 資料庫中讀取及寫入記錄的動作。
+- 資訊來源是用來配置外部事件來源，以發動觸發程式事件。例如，「警示」套件包含可依指定的頻率發動觸發程式的資訊來源。
 
 每個 {{site.data.keyword.openwhisk_short}} 實體（包括套件）都屬於*名稱空間*，而實體的完整名稱是 `/namespaceName[/packageName]/entityName`。如需相關資訊，請參閱[命名準則](./openwhisk_reference.html#openwhisk_entities)。
 
@@ -43,15 +43,18 @@ wsk package list /whisk.system
   ```
   {: pre}
   ```
-packages
-  /whisk.system/alarms                                              shared
-  /whisk.system/cloudant                                            shared
-  /whisk.system/github                                              shared
-  /whisk.system/samples                                             shared
-  /whisk.system/slack                                               shared
-  /whisk.system/util                                                shared
-  /whisk.system/watson                                              shared
-  /whisk.system/weather                                             shared
+  packages
+  /whisk.system/cloudant                                                 shared
+  /whisk.system/alarms                                                   shared
+  /whisk.system/watson                                                   shared
+  /whisk.system/websocket                                                shared
+  /whisk.system/weather                                                  shared
+  /whisk.system/system                                                   shared
+  /whisk.system/utils                                                    shared
+  /whisk.system/slack                                                    shared
+  /whisk.system/samples                                                  shared
+  /whisk.system/github                                                   shared
+  /whisk.system/pushnotifications                                        shared
   ```
   {: screen}
 
@@ -166,11 +169,11 @@ wsk package get --summary valhallaSamples
   ```
   {: pre}
   ```
-package /myNamespace/valhallaSamples
-   action /myNamespace/valhallaSamples/greeting: Print a friendly greeting
+  package /myNamespace/valhallaSamples
+   action /myNamespace/valhallaSamples/greeting: Returns a friendly greeting
    action /myNamespace/valhallaSamples/wordCount: Count words in a string
-   action /myNamespace/valhallaSamples/helloWorld: Print to the console
-   action /myNamespace/valhallaSamples/echo: Returns the input arguments, unchanged
+   action /myNamespace/valhallaSamples/helloWorld: Demonstrates logging facilities
+   action /myNamespace/valhallaSamples/curl: Curl a host url
   ```
   {: screen}
 

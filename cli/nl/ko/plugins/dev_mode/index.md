@@ -37,7 +37,7 @@ dev_mode CLI로 다음 태스크를 수행할 수 있습니다.
 
 dev_mode 명령행 도구를 설치하려면 다음 방법 중 하나를 사용하십시오.
 - 로컬로 설치합니다.
-  1. [IBM Bluemix CLI 플러그인 저장소](http://plugins.{DomainName})에서 플랫폼에 맞는 dev_mode 플러그인을 다운로드하십시오.
+  1. [IBM Bluemix CLI 플러그인 저장소](http://plugins.ng.bluemix.net)에서 플랫폼에 맞는 dev_mode 플러그인을 다운로드하십시오.
   2. dev_mode 플러그인이 저장된 폴더로 이동하고, cf install-plugin 명령을 사용하여 dev_mode 플러그인을 설치하십시오. 예를 들어, 다음과 같습니다.  
   
         ```

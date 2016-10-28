@@ -11,7 +11,7 @@ copyright:
 # 使用 Beta 功能
 {: #using_beta_features}
 
-*上次更新时间：2016 年 6 月 10 日*
+上次更新时间：2016 年 6 月 10 日
 {: .last-updated}
 
 Liberty Beta 功能让您可以提早使用未来 Liberty 发行版中可能会包含的新功能和编程模型。大部分 Beta 功能还可以在部署到 Bluemix 的应用程序中使用。
@@ -29,19 +29,10 @@ Bluemix 中可用的 Liberty Beta 功能
 
 <tr>
 <td>bluemixLogCollector-1.1</td>
-<td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
 <td>logstashCollector-1.1</td>
-</tr>
-
-<tr>
 <td>osgiBundle-1.0</td>
-<td>passwordUtilities-1.0</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
-
 </table>
 
 要在 Bluemix 中使用 Liberty Beta 功能，您需要执行以下操作：
@@ -51,7 +42,7 @@ Bluemix 中可用的 Liberty Beta 功能
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
-            <feature>passwordUtilities-1.0</feature>
+            <feature>bluemixLogCollector-1.1</feature>
         </featureManager>
     </server>
 ```

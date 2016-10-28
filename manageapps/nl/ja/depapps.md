@@ -53,7 +53,7 @@ copyright:
   * Liberty サーバー・パッケージを {{site.data.keyword.Bluemix_notm}} にデプロイするには、ソース・ディレクトリーから以下のコマンドを使用します。
   
   ```
-cf push
+  cf push
   ```
   
   Liberty ビルドパックの詳細については、[「Liberty for Java」](../runtimes/liberty/index.html)を参照してください。
@@ -61,23 +61,23 @@ cf push
   * Java Tomcat アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
   
   ```
-cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
+  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * WAR パッケージを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
   
   ```
-cf push appname -p app.war
+  cf push appname -p app.war
   ```
-もしくは、以下のコマンドを使用してアプリケーション・ファイルを含むディレクトリーを指定することも可能です。  
+  もしくは、以下のコマンドを使用してアプリケーション・ファイルを含むディレクトリーを指定することも可能です。  
   ```
-cf push appname -p "./app"
+  cf push appname -p "./app"
   ```
   
   * Node.js アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
   
   ```
-cf push appname -p app_path
+  cf push appname -p app_path
   ```
   
 アプリケーションが Node.js ビルドパックによって認識されるようにするには、`package.json` ファイルがご使用の Node.js アプリケーション内にある必要があります。`app.js` ファイルはアプリケーションのエントリー・スクリプトで、`package.json` ファイル内に指定できます。以下は単純な `package.json` ファイルの例です。
@@ -93,7 +93,7 @@ cf push appname -p app_path
         },
         "scripts": {
                   "start": "node app.js"
-},
+        },
         "engines": {
                 "node": ">=0.10.0"
         },
@@ -116,14 +116,14 @@ cf push appname
   1. **-s** オプションを指定した **cf target** コマンドを使用して、アプリをデプロイするスペースに切り替えます。
   
   ```
-cf target -s <space_name>
+  cf target -s <space_name>
   ```
   
   2. アプリケーション・ディレクトリーに移動し、**cf push** コマンドを使用してアプリをデプロイします。ここで、appname はドメイン内で固有でなければなりません。
   
   ```
-cf push appname 
-```
+  cf push appname
+  ```
   
 ##アプリケーション・マニフェスト
 {: #appmanifest}
@@ -197,10 +197,10 @@ cf push -f appManifest.yml
   ```
   {
    "VCAP_SERVICES": {
-"AppScan Dynamic Analyzer": [
+    "AppScan Dynamic Analyzer": [
      {
-      "credentials"   :
-  {"bindingid": "0ab3162a-867e-4137-a2e7-39463a89472e",
+      "credentials": {
+       "bindingid": "0ab3162a-867e-4137-a2e7-39463a89472e",
        "password": "xE/jh/PlRj3ruuy8RCl8JNyEywaivRH1xXSZcbVExKg="
       },
       "label": "AppScan Dynamic Analyzer",
@@ -215,8 +215,8 @@ cf push -f appManifest.yml
     ],
     "mysql-5.5": [
      {
-      "credentials"   :
-  {"host": "23.246.200.38",
+      "credentials": {
+       "host": "23.246.200.38",
        "hostname": "23.246.200.38",
        "name": "d296abcc06c9e418b94abcaafdf547620",
        "password": "peRiYCG4ZYqu3",
@@ -263,59 +263,59 @@ DEA によって定義された変数を以下に示します。
   <dd>デプロイ済みアプリケーションについての情報が含まれた JSON ストリング。この情報にはアプリケーション名、URI、メモリー制限、アプリケーションが現在の状態になった時点のタイム・スタンプなどが含まれます。以下に例を示します。
 <pre class="pre codeblock"><code>
   {
-"limits": {
+    "limits": {
         "mem": 512,
-"disk": 1024,
-"fds": 16384
+        "disk": 1024,
+        "fds": 16384
     },
-"application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
-"application_name": "testapp",
-"application_uris": [
+    "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
+    "application_name": "testapp",
+    "application_uris": [
         "testapp.AppDomainNameng.mybluemix.net"
     ],
-"version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
-"name": "testapp",
-"space_name": "dev",
-"space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
-"uris": [
+    "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
+    "name": "testapp",
+    "space_name": "dev",
+    "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
+    "uris": [
         "testapp.AppDomainNameng.mybluemix.net"
     ],
-"users": null,
-"application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
-"instance_id": "09f50e22848d4ec0b943e9e487c23569",
-"instance_index": 0,
-"host": "0.0.0.0",
-"port": 61399,
-"started_at": "2015-01-16 06:50:51 +0000",
-"started_at_timestamp": 1421391051,
-"start": "2015-01-16 06:50:51 +0000",
-"state_timestamp": 1421391051
+    "users": null,
+    "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
+    "instance_id": "09f50e22848d4ec0b943e9e487c23569",
+    "instance_index": 0,
+    "host": "0.0.0.0",
+    "port": 61399,
+    "started_at": "2015-01-16 06:50:51 +0000",
+    "started_at_timestamp": 1421391051,
+    "start": "2015-01-16 06:50:51 +0000",
+    "state_timestamp": 1421391051
 }
 </code></pre></dd>
   <dt><strong>VCAP_SERVICES</strong></dt>
   <dd>デプロイ済みアプリケーションにバインドされたサービスの情報が含まれた JSON ストリング。以下に例を示します。
 <pre class="pre codeblock"><code>
   {
-"mysql-5.5": [
+    "mysql-5.5": [
         {
-"name": "mysql-ix",
-"label": "mysql-5.5",
-"tags": [
-"mysql",
-"relational",
-"data_management",
-"ibm_experimental"
+            "name": "mysql-ix",
+            "label": "mysql-5.5",
+            "tags": [
+                "mysql",
+                "relational",
+                "data_management",
+                "ibm_experimental"
             ],
-"plan": "300",
-"credentials"   :
-  {"name": "d296abcc06c9e418b94abcaafdf547620",
-"hostname": "23.246.200.38",
-"host": "23.246.200.38",
-"port": 3307,
-"user": "uzpGf7eGJ7mtB",
-"username": "uzpGf7eGJ7mtB",
-"password": "peRiYCG4ZYqu3",
-"uri": "mysql://uzpGf7eGJ7mtB:peRiYCG4ZYqu3@23.246.200.38:3307/d296abcc06c9e418b94abcaafdf547620"
+            "plan": "300",
+            "credentials": {
+                "name": "d296abcc06c9e418b94abcaafdf547620",
+                "hostname": "23.246.200.38",
+                "host": "23.246.200.38",
+                "port": 3307,
+                "user": "uzpGf7eGJ7mtB",
+                "username": "uzpGf7eGJ7mtB",
+                "password": "peRiYCG4ZYqu3",
+                "uri": "mysql://uzpGf7eGJ7mtB:peRiYCG4ZYqu3@23.246.200.38:3307/d296abcc06c9e418b94abcaafdf547620"
             }
         }
     ]
@@ -361,7 +361,7 @@ DEA によって定義された変数を以下に示します。
 
 ```
 if (process.env.VCAP_SERVICES) {
-var env = JSON.parse (process.env.VCAP_SERVICES);
+    var env = JSON.parse (process.env.VCAP_SERVICES);
     myvar = env.foo[bar].foo;
 }
 ```
@@ -383,14 +383,14 @@ var env = JSON.parse (process.env.VCAP_SERVICES);
   * **cf push** コマンドを使用して -c パラメーターを指定します。例えば、Node.js アプリケーションをデプロイする場合、**node app.js** 開始コマンドを -c パラメーターに指定することができます。
   
   ```
-cf push appname -p app_path -c "node app.js"
+  cf push appname -p app_path -c "node app.js"
   ```
   
   * `manifest.yml` ファイルで command パラメーターを使用します。例えば、Node.js アプリケーションをデプロイする場合、**node app.js** 開始コマンドをマニフェスト・ファイルで指定することができます。
   
   ```
-command: node app.js
-```
+  command: node app.js
+  ```
   
 
 ### ユーザー定義環境変数の追加
@@ -405,7 +405,7 @@ command: node app.js
 	4. 必須フィールドに入力し、次に**「保存」**をクリックします。
   * cf コマンド・ライン・インターフェースを使用します。`cf set-env` コマンドを使用してユーザー定義変数を追加します。例えば次のようにします。 
     ```
-cf set-env appname env_var_name env_var_value
+    cf set-env appname env_var_name env_var_value
     ```
 	
   * `manifest.yml` ファイルを使用します。このファイル内に値の組を追加します。例えば次のようにします。 

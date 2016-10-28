@@ -30,7 +30,7 @@ copyright:
 帳戶鏈結之後，即可在帳戶之間輕鬆地切換。您還是可以在 {{site.data.keyword.Bluemix_notm}} 使用者介面中監視 {{site.data.keyword.Bluemix_notm}} 資源的用量。不過，這些資源的計費現在會出現在 SoftLayer 發票上。
 
 雖然您的帳戶計費將會鏈結，但您的登入 ID 會依據 SoftLayer 帳戶的鑑別方式而不同：
-* 若為 SoftLayer 帳戶中未使用 IBM ID 進行鑑別的使用者，請繼續將 SoftLayer ID 用於 SoftLayer 產品及服務，並將 IBM ID 用於 {{site.data.keyword.Bluemix_notm}} 產品及服務。
+* 若為 SoftLayer 帳戶中未使用 IBM ID 進行鑑別的使用者，請繼續針對 SoftLayer 產品及服務使用 SoftLayer ID，並針對 {{site.data.keyword.Bluemix_notm}} 產品及服務使用 IBM ID。
 * 若為 SoftLayer 帳戶中使用 IBM ID 進行鑑別的使用者，請使用 IBM ID 來存取 SoftLayer 及 {{site.data.keyword.Bluemix_notm}} 帳戶。
 
 **注意：**帳戶鏈結之後，便無法解除鏈結。  
@@ -69,7 +69,7 @@ copyright:
 
 隨著更多的團隊成員新增至您的 SoftLayer 帳戶，您可以一再地重複此作業。
  
-團隊成員會收到包含**加入組織**鏈結的電子郵件。如果該成員沒有 IBM ID，則會重新導向至登錄頁面。接著，該成員可以輸入一些基本資訊，並建立自己的 {{site.data.keyword.Bluemix_notm}} 帳戶。
+團隊成員會收到包含**加入組織**鏈結的電子郵件。如果該成員沒有 IBM ID，則會將成員重新導向至登錄頁面。接著，該成員可以輸入一些基本資訊，並建立自己的 {{site.data.keyword.Bluemix_notm}} 帳戶。
 
 如需透過 {{site.data.keyword.Bluemix_notm}} 使用者介面來邀請團隊成員的相關資訊，請參閱[邀請團隊成員](https://console.ng.bluemix.net/docs/admin/users_roles.html#inviteteammembers)。
 

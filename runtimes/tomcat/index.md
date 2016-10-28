@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*Last Updated: 06 July 2016*
+Last Updated: 20 October 2016
 {: .last-updated}
 
 The Tomcat runtime on {{site.data.keyword.Bluemix}} is powered by the java_buildpack.
@@ -43,8 +43,24 @@ Both of these can be specified in the application's manifest file.  For example:
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-The current default Tomcat version is 8.0.36.  The current default Java version is 1.8.0_91.
+The current java_buildpack version is v3.6 which contains default Tomcat version 8.30.0 and default Java version 1.8.0_71.
 For more information please see [java-buildpack releases](https://github.com/cloudfoundry/java-buildpack/releases).
+
+## HTTPS redirect
+{: #https_redirect}
+
+The Tomcat runtime can be configured to trust Bluemix internal proxies and allow the redirect of HTTP traffic to HTTPS (SSL).
+To do so modify the server.xml file, setting the RemoteIpValve Valve element with internalProxies and protocolHeader options.
+
+The Tomcat runtime [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) included in the buildpack only sets the protocolHeader of the RemoteIpValve Valve element by default.  To redirect HTTP traffic to HTTPS in Bluemix configure the RemoteIpValve element in your custom server.xml as follows:
+
+```
+ <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />
+```
+{: codeblock}
+
+More configuration options for the RemoteIpValve can be found in the
+[Tomcat documentation](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
 
 # rellinks
 {: #rellinks}

@@ -42,8 +42,7 @@ copyright:
   
   <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">app_name</var> -m 512m</pre>
   
-  {{site.data.keyword.Bluemix_notm}} 包括內建的建置套件。
-在部分案例中，即使是內建建置套件，您也必須提供 -c 選項，來指定用來啟動應用程式的指令。例如，您需要使用 -c 選項來推送 Node.js 應用程式：
+  {{site.data.keyword.Bluemix_notm}} 包含內建的建置套件。在部分案例中，即使是內建建置套件，您也必須提供 -c 選項，來指定用來啟動應用程式的指令。例如，您需要使用 -c 選項來推送 Node.js 應用程式：
   
   <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">app_name</var> -c start_command</pre>
   

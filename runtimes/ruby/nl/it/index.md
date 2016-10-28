@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*Ultimo aggiornamento: 10 giugno 2016*
+Ultimo aggiornamento: 06 luglio 2016
 {: .last-updated}
 
 Il runtime Ruby su {{site.data.keyword.Bluemix}} si avvale del ruby_buildpack.
@@ -41,20 +41,20 @@ Puoi specificare la versione di Ruby che deve essere utilizzata dalla tua applic
 ```
 {: codeblock}
 
-Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 2.2.2.
+Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 2.2.4.
 
 ### Versioni disponibili:
 {: #available_versions}
 
 Le seguenti versioni Ruby sono disponibili nel [pacchetto
-di build Ruby](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.7?cm_mc_uid=02162397679414470795470&cm_mc_sid_50200000=1447951462) attualmente installato
+di build Ruby](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.16) attualmente installato
 in {{site.data.keyword.Bluemix}}:
 
-* 2.0.0
-* 2.1.6
-* 2.1.7
-* 2.2.2
+* 2.1.8
+* 2.1.9
 * 2.2.3
+* 2.2.4
+* 2.3.0
 
 Se la tua applicazione richiede una versione di Ruby che non è elencata,
 puoi utilizzare il [pacchetto
@@ -65,4 +65,4 @@ di build Ruby](https://github.com/cloudfoundry/ruby-buildpack) esterno per distr
 ## general
 {: #general}
 * [Pacchetto di build Cloud Foundry per Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Documentazione di Ruby on Rails](http://rubyonrails.org/documentation/)
+* [Documentazione di Ruby on Rails](http://api.rubyonrails.org/)

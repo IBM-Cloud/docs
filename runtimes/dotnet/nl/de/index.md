@@ -12,7 +12,7 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-*Letzte Aktualisierung: 30. Mai 2016*
+Letzte Aktualisierung: 30. Mai 2016
 
 Die Laufzeit von ASP.NET Core in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'ASP.NET Core'. ASP.NET Core
 ist ein modulares Open-Source-Framework zum Erstellen von .NET-Webanwendungen.
@@ -39,7 +39,7 @@ Steuern Sie die .NET-CLI-Version mit einer optionalen Datei global.json im Stamm
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview1-002702"
+        "version": "1.0.0-preview2-003121"
       }
    }
 ```
@@ -70,12 +70,13 @@ Um der Ausführung der Anwendung in Bluemix am nächsten zu kommen, führen Sie 
 Das Tool Yeoman kann zum Generieren neuer Projektvorlagen verwendet werden, wie in
 [Projekte mit Yeoman erstellen](http://docs.asp.net/en/latest/client-side/yeoman.html) beschrieben.
 
+Informationen zur lokalen Entwicklung mit Visual Studio finden Sie im Abschnitt zum Thema [Mit Visual Studio entwickeln](../../starters/deploy_vs.html){: new_window}.
+
 ## Veröffentlichte Anwendung mit einer Push-Operation übertragen
 
 Wenn Sie möchten, dass Ihre Anwendung alle erforderlichen Binärdateien enthält, sodass das Buildpack keine
 externen Binärdateien herunterlädt, können Sie eine veröffentlichte *eigenständige* Anwendung mit einer Push-Operation
-übertragen.  Weitere Informationen zu eigenständigen Anwendungen finden Sie in
-[Portierbarkeitstypen in .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}.
+übertragen. Weitere Informationen zu eigenständigen Anwendungen finden Sie unter dem Thema [.NET Core App-Typen](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}.
 
 Geben Sie zum Veröffentlichen einer Anwendung einen Befehl wie den folgenden ein:
 ```
@@ -109,7 +110,7 @@ In diesem Beispiel würde das Buildpack automatisch die Projekte *MyApp.DAL* und
 ```
 {: codeblock}
 
-## Beispiele aus dem Repository für CLI-Beispiele und Vorlagen von Visual Studio verwenden
+## Ihre Anwendung für die Überwachung des richtigen Ports konfigurieren
 
 Das Buildpack führt Ihre Anwendung mit dem Befehl *dotnet run* aus und übergibt das folgende Befehlszeilenargument:
 ```
@@ -130,20 +131,33 @@ und die von Visual Studio bereitgestellten Vorlagen vor der Bereitstellung für 
     var config = new ConfigurationBuilder() //FÜGEN SIE DIESE 3 ZEILEN AM ANFANG DER METHODE MAIN HINZU
         .AddCommandLine(args)
         .Build();
-    
+
     var host = new WebHostBuilder()
         .UseKestrel()
         .UseConfiguration(config) //FÜGEN SIE DIESE ZEILE VOR 'UseStartup' HINZU
-        .UseStartup&lt;Startup&gt;()  
+        .UseStartup&lt;Startup&gt;()
         .Build();
     host.Run();
 }
-</pre>  
+</pre>
 {: codeblock}
 
 Fügen Sie die folgende Abhängigkeit der Datei project.json hinzu: 
 ```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+```
+{: codeblock}
+
+Fügen Sie die folgende Eigenschaft zum Abschnitt `buildOptions` in der Datei project.json hinzu:
+```
+  "copyToOutput": {
+    "include": [
+      "wwwroot",
+      "Areas/**/Views",
+      "Views",
+      "appsettings.json"
+    ]
+  }
 ```
 {: codeblock}
 
@@ -152,6 +166,20 @@ Fügen Sie der Datei, die Ihre Methode 'Main' enthält, eine Anweisung *using* h
   using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
+
+Entfernen Sie folgende Zeile in der `Startup`-Methode Startup.cs:
+```
+  .SetBasePath(env.ContentRootPath)
+```
+{: codeblock}
+
+Entfernen Sie folgende Zeile in der `Main`-Methode Program.cs: 
+```
+  .UseContentRoot(Directory.GetCurrentDirectory())
+```
+{: codeblock}
+
+Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet run` ausgeführt wird. Wenn Ihre Anwendung über andere Dateien wie beispielsweise json-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann sollten Sie auch diese zum Abschnitt `include` von `copyToOutput` in der Datei project.json hinzufügen.
 
 # Zugehörige Links
 {: #rellinks}

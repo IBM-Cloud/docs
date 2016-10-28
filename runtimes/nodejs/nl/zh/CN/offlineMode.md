@@ -12,7 +12,7 @@ copyright:
 
 # node.js 的脱机方式
 {: #offline_mode}
-*上次更新时间：2016 年 7 月 20 日*
+上次更新时间：2016 年 7 月 20 日
 {: .last-updated}
 
 将 node.js 应用程序推送到 {{site.data.keyword.Bluemix}} 时，SDK for Node.js buildpack 通常会从外部资源下载工件，例如从 NPM 下载节点模块。在某些情况下（例如，在 [Bluemix Dedicated](../../dedicated/index.html#dedicated) 和 [Bluemix Local](../../local/index.html#local) 中），您可能并不想对访问 Bluemix 外部站点有任何依赖，或者您希望能够对访问这些外部站点有更明确的控制。  

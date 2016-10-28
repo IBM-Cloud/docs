@@ -11,15 +11,15 @@ copyright:
 # Limites mémoire et pack de construction Liberty
 {: #memory_limits}
 
-*Dernière mise à jour : 10 juin 2016*
+Dernière mise à jour : 10 juin 2016
 {: .last-updated}
 
 Une limite mémoire doit être spécifiée lorsque vous déployez une application à l'aide du pack de construction
 Liberty.
 
-**Comment éviter les problèmes**
+## Comment éviter les problèmes
 
-* Il se peut qu'un servlet "Hello World" déployé à l'aide du pack de construction
+Il se peut qu'un servlet "Hello World" déployé à l'aide du pack de construction
 Liberty avec une limite mémoire de 256 Mo ne puisse pas être déployé et fonctionner correctement. S'il est déployé, il opère proche de la limite de
 256 Mo. Vous devriez envisager d'affecter une limite mémoire d'au moins 512 Mo, et ce même pour des applications simples.
 

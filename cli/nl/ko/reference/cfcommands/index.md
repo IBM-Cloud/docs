@@ -35,7 +35,7 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>{{site.data.keyword.Bluemix_notm}}에 연결할 때 지정해야 하는 Bluemix API 엔드포인트의 URL입니다. 일반적으로 이 URL은 다음과 같습니다. https://api.{DomainName}.
+<dd>{{site.data.keyword.Bluemix_notm}}에 연결할 때 지정해야 하는 Bluemix API 엔드포인트의 URL입니다. 일반적으로 이 URL은 다음과 같습니다: https://api.{DomainName}.
 현재 사용 중인 API 엔드포인트의 URL을 표시하려는 경우 cf api 명령에 이 매개변수를 지정할 필요가 없습니다.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>SSL 유효성 검증 프로세스를 사용 안함으로 설정합니다. 이 매개변수를 사용할 경우 보안 문제가 발생할 수 있습니다. </dd>
@@ -226,56 +226,50 @@ cf push appname
 <dd>빌드팩 이름입니다. buildpack_name은 이름 또는 Git URL로 된 사용자 정의 빌드팩일 수 있습니다(예: `my-buildpack` 또는 `https://github.com/heroku/heroku-buildpack-play.git`).</dd>
 <dt>*-c* start_command</dt>
 <dd>애플리케이션의 시작 명령입니다. 기본 시작 명령을 사용하려면 이 옵션에 대해 null 값을 지정하십시오. 예를 들어, 다음과 같습니다. </dd>
-<dd>```
+<dd>
+```
 cf push appname -c null
 ```</dd>
 <dd>이 옵션을 사용하여 스크립트 파일을 실행할 수도 있습니다. 예:
 ```
 cf push appname -c “bash ./<run.sh>"
 ```</dd>
-<dt>*-f* manifest_path</dt>
-<dd>Manifest 파일의 경로입니다. 기본 Manifest 파일은 애플리케이션의 루트 디렉토리 아래에 있는 manifest.yml입니다.</dd>
-<dt>*-i* instance_number</dt>
-<dd>인스턴스 수입니다. </dd>
-<dt>*-k* disk_limit</dt>
-<dd>애플리케이션의 디스크 한계입니다(예: *256M*, *1024M* 또는 *1G*).</dd>
+<dt>*-f*manifest_path</dt> <dd>Manifest 파일의 경로입니다. 기본 Manifest 파일은 애플리케이션의 루트 디렉토리 아래에 있는 manifest.yml입니다.</dd>
+<dt>*-i*instance_number</dt> <dd>인스턴스 수입니다. </dd>
+<dt>*-k*disk_limit</dt> <dd>애플리케이션에 대한 디스크 한계입니다(예: *256M*, *1024M*
+또는 *1G*). </dd>
 <dt>*-m* memory_limit</dt>
-<dd>애플리케이션의 메모리 한계입니다(예: *256M*, *1024M* 또는 *1G*).</dd>
+<dd>애플리케이션에 대한 메모리 한계입니다(예: *256M*, *1024M*
+또는 *1G*). </dd>
 <dt>*-n* host_name</dt>
-<dd>애플리케이션의 호스트 이름입니다(예: *my-subdomain*).</dd>
-<dt>*-p* app_path</dt>
-<dd>애플리케이션 디렉토리 또는 애플리케이션 아카이브 파일의 경로입니다. </dd>
-<dt>*-t* timeout</dt>
-<dd>애플리케이션 시작에 걸리는 최대 시간(초)입니다. 다른 서버 측 제한시간이 이 값을 대체할 수 있습니다. </dd>
+<dd>애플리케이션의 호스트 이름입니다(예: *my-subdomain*). </dd>
+<dt>*-p*app_path</dt> <dd>애플리케이션 디렉토리 또는 애플리케이션 아카이브 파일의 경로입니다. </dd>
+<dt>*-t*timeout</dt> <dd>애플리케이션 시작에 걸리는 최대 시간(초)입니다. 다른 서버 측 제한시간이 이 값을 대체할 수 있습니다. </dd>
 <dt>*-s* stackname</dt>
-<dd>앱을 실행하기 위한 스택입니다. 스택은 운영 체제를 포함하는 빌드별 파일 시스템입니다. `cf stacks`를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 사용 가능한 스택을 보십시오.</dd>
-<dt>*--no-hostname*</dt>
-<dd>Bluemix 시스템 도메인을 이 애플리케이션에 맵핑합니다.</dd>
-<dt>*--no-manifest*</dt>
-<dd>기본 Manifest 파일을 무시합니다. </dd>
-<dt>*--no-route*</dt>
-<dd>라우트를 이 애플리케이션에 맵핑하지 않습니다. </dd>
-<dt>*--no-start*</dt>
-<dd>애플리케이션이 배치된 후 애플리케이션을 시작하지 않습니다. </dd>
-<dt>*--random-route*</dt>
-<dd>애플리케이션에 대한 랜덤 라우트를 작성합니다. </dd>
+<dd>앱을 실행하기 위한 스택입니다. 스택은 운영 체제를 포함하는 빌드별 파일 시스템입니다. {{site.data.keyword.Bluemix_notm}}에서 사용 가능한 스택을 보려면 `cf stacks`를 사용하십시오.</dd>
+<dt>*--no-hostname*</dt> <dd>Bluemix 시스템 도메인을 이 애플리케이션에 맵핑합니다.</dd>
+<dt>*--no-manifest*</dt> <dd>기본 Manifest 파일을 무시합니다. </dd>
+<dt>*--no-route*</dt> <dd>라우트를 이 애플리케이션에 맵핑하지 않습니다. </dd>
+<dt>*--no-start*</dt> <dd>애플리케이션이 배치된 후 애플리케이션을 시작하지 않습니다. </dd>
+<dt>*--random-route*</dt> <dd>애플리케이션에 대한 랜덤 라우트를 작성합니다. </dd>
 </dl>
 
 ## cf scale
 
 애플리케이션에 대한 인스턴스 번호, 디스크 공간 한계 및 메모리 한계를 표시하거나 변경합니다.
+
 ```
 cf scale appname -i instance_number -k disk_limit -m memory_limit
 ```
 <dl>
 <dt>appname</dt>
 <dd>애플리케이션 이름입니다. </dd>
-<dt>*-i* instance_number</dt>
-<dd>인스턴스 수입니다. </dd>
-<dt>*-k* disk_limit</dt>
-<dd>애플리케이션의 디스크 한계입니다(예: *256M*, *1024M* 또는 *1G*).</dd>
+<dt>*-i*instance_number</dt> <dd>인스턴스 수입니다. </dd>
+<dt>*-k*disk_limit</dt> <dd>애플리케이션에 대한 디스크 한계입니다(예: *256M*, *1024M*
+또는 *1G*). </dd>
 <dt>*-m* memory_limit</dt>
-<dd>애플리케이션의 메모리 한계입니다(예: *256M*, *1024M* 또는 *1G*).</dd>
+<dd>애플리케이션에 대한 메모리 한계입니다(예: *256M*, *1024M*
+또는 *1G*). </dd>
 <dt>*-f*</dt>
 <dd>프롬프트 없이 애플리케이션을 강제로 다시 시작합니다. </dd>
 </dl>
@@ -283,6 +277,7 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 ## cf services
 
 현재 영역에서 사용 가능한 모든 서비스를 나열합니다.
+
 ```
 cf services
 ```
@@ -290,6 +285,7 @@ cf services
 ## cf set-env
 
 애플리케이션에 대한 환경 변수를 설정합니다.
+
 ```
 cf set-env appname var_name var_value
 ```
@@ -305,6 +301,7 @@ cf set-env appname var_name var_value
 ## cf stacks
 
 모든 스택을 나열합니다. 스택은 앱을 실행할 수 있는 운영 체제를 포함하여 미리 빌드된 파일 시스템입니다.
+
 ```
 cf stacks
 ```
@@ -312,6 +309,7 @@ cf stacks
 ## cf stop
 
 애플리케이션을 중지합니다.
+
 ```
 cf stop appname
 ```
@@ -323,12 +321,13 @@ cf stop appname
 ## cf -v
 
 명령행 인터페이스의 버전을 표시합니다.
+
 ```
 cf -v
 ```
 
 # 관련 링크
 {: #rellinks}
-## 일반
+## 일반 
 {: #general}
-* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [빠른 참조 카드 - cf 명령](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

@@ -14,7 +14,7 @@ copyright:
 #更新应用程序
 {: #updatingapps}
 
-*上次更新时间：2016 年 5 月 9 日*
+上次更新时间：2016 年 8 月 25 日
 {: .last-updated}
 
 
@@ -24,7 +24,7 @@ copyright:
 ##创建并使用定制域
 {: #domain}
 
-您可以在应用程序的 URL 中使用定制域，而不使用缺省 {{site.data.keyword.Bluemix_notm}} 系统域，即 mybluemix.net。
+对于 CF 应用程序和容器组，您可以在应用程序的 URL 中使用定制域，而不使用缺省 {{site.data.keyword.Bluemix_notm}} 系统域，即 mybluemix.net。
 
 域提供了分配给 {{site.data.keyword.Bluemix_notm}} 中组织的 URL 路径。要使用定制域，必须在公共 DNS 服务器上注册定制域，在 {{site.data.keyword.Bluemix_notm}} 中配置定制域，然后将定制域映射到公共 DNS 服务器上的 {{site.data.keyword.Bluemix_notm}} 系统域。定制域映射到 {{site.data.keyword.Bluemix_notm}} 系统域后，对定制域的请求会路由到 {{site.data.keyword.Bluemix_notm}} 中的应用程序。
 
@@ -33,62 +33,73 @@ copyright:
 * 使用 {{site.data.keyword.Bluemix_notm}} 用户界面：
 
   1. 为组织创建定制域。
-    
-	1. 在 {{site.data.keyword.Bluemix_notm}} **仪表板**的菜单栏上，单击**管理组织**。
-	
+
+	1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织** &gt; **查看组织详细信息** &gt; **编辑组织** &gt; **域**.
+
 	2. 在**域**选项卡上，单击**添加域**，输入定制域名，然后单击**保存**。
-    	
+	
+	**注**：例如，可以使用 `mycompany.com` 将路径 `www.mycompany.com` 与应用程序相关联。还可以使用 `example.mycompany.com` 将路径 `www.example.mycompany.com` 与应用程序相关联。
+
   2. 将包含定制域的路径添加到应用程序。
-  
-    1. 在 {{site.data.keyword.Bluemix_notm}} **仪表板**的菜单栏上，单击要添加路径的应用程序的磁贴。这将显示“**概述**”页面。
-	
-	2. 在**概述**页面上的应用程序菜单中，单击**编辑路径和应用程序访问权**。
-	
+
+    1. 在菜单栏上，从下拉菜单中选择**控制台**，然后单击要添加路径的应用程序所在行。这将显示“**概述**”页面。
+
+	2. 从**查看应用程序**菜单中，选择**编辑路径和访问权**。
+
 	3. 单击**添加路径**，然后指定要用于应用程序的路径。
-	
+	4. 单击**保存**。 
+
 * 使用 cf 命令行界面：
-  
+
   1. 通过输入以下命令，为组织创建定制域：
-    
+
     ```
 cf create-domain <your org name> mydomain
     ```
-    
+
     *organization_name*
-  
+
         组织的名称。
-	  
+
     *mydomain*
-    
+
         要使用的定制域名。
-	  
-  2. 通过输入以下命令，将包含定制域的路径添加到应用程序：
-    
+
+  2. 将包含定制域的路径添加到应用程序。对于 CF 应用程序，请输入以下命令：
+
     ```
 cf map-route myapp mydomain -n host_name
     ```
-    
+    对于容器组，请输入以下命令：
+```
+     cf ic route map -n host_name -d mydomain mycontainergroup
+     ```
     *myapp*
-      
-    	应用程序的名称。
-  	
+
+    	对于 CF 应用程序，为应用程序的名称。
+
     *mydomain*
-      
+
     	定制域的名称。
-	
+
     *host_name*
-    
+
         要用于应用程序的路径中的主机名。
-	
+        
+    *mycontainergroup*
+    
+        对于容器组，为容器组的名称。  
+
+
 在 {{site.data.keyword.Bluemix_notm}} 中配置定制域后，必须将该定制域映射到您注册的 DNS 服务器上的 {{site.data.keyword.Bluemix_notm}} 系统域：
 
-  1. 为 DNS 服务器上的定制域名设置“CNAME”记录。
+  1. 为 DNS 服务器上的定制域名设置“CNAME”记录。用于设置 CNAME 记录的步骤根据 DNS 提供程序而变化。例如，如果使用的是 GoDaddy，请遵循 GoDaddy 中的 [Domains Help](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} 指南。
   2. 将定制域名映射到运行应用程序的 {{site.data.keyword.Bluemix_notm}} 区域的安全端点。使用以下区域端点来提供在 {{site.data.keyword.Bluemix_notm}} 中分配给您组织的 URL 路径：
-  
+
     * US-SOUTH：`secure.us-south.bluemix.net`
     * EU-GB：`secure.eu-gb.bluemix.net`
     * AU-SYD：`secure.au-syd.bluemix.net`
-  
+
 在浏览器或命令行界面中，输入以下 URL 来访问 myapp 应用程序：
 
 ```
@@ -121,38 +132,38 @@ cf delete-route domain -n hostname -f
 在此示例中，应用程序的名称为 Blue。此示例演示了如何使用 **cf rename** 命令来更新 *Blue* 的版本，而不中断到应用程序的流量。现在，在更新版本可用时，可以选择删除 *Blue* 的旧版本。
 
 1. 将 *Blue* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}。
-  
+
   ```
 cf push Blue
   ```
-  
+
   **结果：**该 *Blue* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
-  
+
 2. 使用 **cf rename** 命令将 *Blue* 应用程序重命名为 *Green*：
-  
+
   ```
 cf rename Blue Green
   ```
-  
+
   使用 **cf apps** 命令列出当前空间中的应用程序：
-  
+
   ```
   ...
   name             requested state   instances   memory   disk   urls
   Green            started           1/1         1G       1G	 Blue.mybluemix.net
   ...
   ```
-  
+
   **结果：**该 *Green* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
 
 3. 进行必要的更改，并使更新的 *Blue* 版本准备就绪。将更新的 *Blue* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}：
-  
+
   ```
 cf push Blue
   ```
-  
+
   使用 **cf apps** 命令列出当前空间中的应用程序：
-  
+
   ```
   ...
   name             requested state   instances   memory   disk   urls
@@ -160,48 +171,48 @@ cf push Blue
   Blue             started           1/1         1G       1G	 Blue.mybluemix.net
   ...
   ```
-  
+
   **结果：**
     * 应用程序的两个实例已部署：*Blue* 和 *Green*。
 	* 该 *Green* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
-	
+
 4. 可选：如果想要删除应用程序的旧版本 (*Green*)，请使用 **cf delete** 命令。
-  
+
   ```
 cf delete Green -f
   ```
-  
+
   使用 **cf route** 命令列出空间中的路径：
-  
+
   ```
   ...
   host             domain           apps
   Blue             mybluemix.net    Blue
   ...
   ```
-  
+
   **结果：**该 *Blue* 应用程序正在响应 URL `Blue.mybluemix.net`。
-  
+
 ###示例：使用 cf map-route 命令
 
 在此示例中，*Blue* 是先前部署的应用程序，*Green* 是更新的版本。此示例演示了如何使用 **cf map-route** 命令来更新 *Blue* 的版本，而不中断到应用程序的流量。现在，在更新版本可用时，可以选择删除 *Blue* 的旧版本。
 
 1. 将 *Blue* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}。
-  
+
   ```
 cf push Blue
   ```
-  
+
   **结果：**该 *Blue* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
-  
+
 2. 进行必要的更改，并使 *Green* 版本准备就绪。将 *Green* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}：
-  
+
   ```
 cf push Green
   ```
-  
+
   使用 **cf route** 命令列出当前空间中的应用程序：
-  
+
   ```
   ...
   host             domain           apps
@@ -209,20 +220,20 @@ cf push Green
   Green            mybluemix.net    Green
   ...
   ```
-  
+
   **结果：**
-  
+
     * 应用程序的两个实例已部署：*Blue* 和 *Green*。
 	* 该 *Blue* 应用程序正在响应 URL `Blue.mybluemix.net`。*Green* 应用程序正在响应 URL `Green.mybluemix.net`。
-	
+
 3. 将 *Blue* 应用程序映射到 *Green* 应用程序，让 `Blue.mybluemix.net` 的所有流量路由到 *Blue* 应用程序和 *Green* 应用程序。
-  
+
   ```
 cf map-route Green mybluemix.net -n Blue
   ```
-  
+
   使用 cf routes 命令列出空间中的路径：
-  
+
   ```
   ...
   host             domain           apps
@@ -230,20 +241,20 @@ cf map-route Green mybluemix.net -n Blue
   Green            mybluemix.net    Green
   ...
   ```
-  
+
   **结果：**
 
     * 现在，CF 路由器会将 Blue.mybluemix.net 的流量发送到 Blue 应用程序和 Green 应用程序。
 	* CF 路由器会继续将 Green.mybluemix.net 的流量发送到 Green 应用程序。
-	
+
 4. 验证 *Green* 是否在按预期运行时，请从 *Blue* 应用程序除去 `Blue.mybluemix.net` 路径：
-  
+
   ```
 cf unmap-route Blue mybluemix.net -n Blue
   ```
-  
+
   使用 cf routes 命令列出空间中的路径：
-  
+
   ```
   ...
   host             domain           apps
@@ -251,32 +262,32 @@ cf unmap-route Blue mybluemix.net -n Blue
   Green            mybluemix.net    Green
   ...
   ```
-  
+
   **结果：**CF 路由器停止将流量发送到 *Blue* 应用程序。*Green* 应用程序正在响应以下两个 URL：`Green.mybluemix.net` 和 `Blue.mybluemix.net`。
-  
+
 5. 除去 *Green* 应用程序的 `Green.mybluemix.net` 路径。
-  
+
   ```
 cf unmap-route Green mybluemix.net -n Green
   ```
-  
+
   **结果：**CF 路由器停止将流量发送到 *Blue* 应用程序。*Green* 应用程序正在响应 URL `Blue.mybluemix.net`。
-  
+
 6. 可选：如果想要删除应用程序的旧版本 (*Blue*)，请使用 `cf delete` 命令。
-  
+
   ```
 cf delete Blue -f
   ```
-  
+
   使用 cf route 命令列出空间中的路径：
-  
+
   ```
   ...
   host             domain           apps
   Blue             mybluemix.net    Green
   ...
   ```
-  
+
   **结果：**该 *Green* 应用程序正在响应 URL `Blue.mybluemix.net`。
 
 

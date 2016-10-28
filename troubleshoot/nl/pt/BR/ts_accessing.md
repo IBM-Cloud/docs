@@ -53,9 +53,9 @@ são válidos, clique em **Conectar** e insira seu ID IBM e sua senha na
 página Conectar. Caso tenha esquecido sua senha, clique em **Esqueceu sua
 senha** na página Conectar para reconfigurar sua senha. Caso tenha esquecido
 seu ID IBM ou continue a ter problemas com a senha, entre em contato com o Help desk de
-registro IBM mundial para obter ajuda.  
+registro IBM mundial para obter ajuda. 
   * Se você não tiver um ID IBM, clique em **Registrar** para
-registrar um ID IBM e uma senha.  
+registrar um ID IBM e uma senha. 
   
 **Nota:** Para funcionários IBM, o ID IBM pode ser diferente do
 ID de login da intranet. 

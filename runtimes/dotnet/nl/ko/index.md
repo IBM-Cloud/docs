@@ -12,7 +12,7 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-*마지막 업데이트 날짜: 2016년 5월 30일*
+마지막 업데이트 날짜: 2016년 5월 30일 
 
 {{site.data.keyword.Bluemix}}의 ASP.NET Core 런타임은 ASP.NET Core 빌드팩을 통해 제공됩니다.
 ASP.NET Core는 .NET 웹 애플리케이션 빌드를 위한 모듈형 오픈 소스 프레임워크입니다.
@@ -40,7 +40,7 @@ Bluemix ASP.NET Core 빌드팩은 애플리케이션에 project.json 및 하나 
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview1-002702"
+        "version": "1.0.0-preview2-003121"
       }
    }
 ```
@@ -69,9 +69,12 @@ Bluemix ASP.NET Core 빌드팩은 애플리케이션에 project.json 및 하나 
 
 [Yeoman으로 프로젝트 빌드](http://docs.asp.net/en/latest/client-side/yeoman.html)의 설명에 따라 Yeoman 도구를 사용하여 새 프로젝트 템플리트를 생성할 수 있습니다.
 
+Visual Studio를 사용하여 로컬에서 개발하는 방법에 대한 정보는 [Visual Studio를 사용하여 개발](../../starters/deploy_vs.html){: new_window}을 참조하십시오. 
+
 ## 공개된 애플리케이션 푸시
 
-빌드팩이 외부 바이너리를 다운로드하지 않도록 애플리케이션이 모든 필수 바이너리를 포함하게 하려는 경우, 공개된 *자체 포함* 애플리케이션을 푸시할 수 있습니다. 자체 포함 애플리케이션에 대한 자세한 정보는 [.Net Core에서 이식성 유형](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}을 참조하십시오. 
+빌드팩이 외부 바이너리를 다운로드하지 않도록 애플리케이션이 모든 필수 바이너리를 포함하게 하려는 경우, 공개된 *자체 포함* 애플리케이션을 푸시할 수 있습니다. 자체 포함 애플리케이션에 대한 자세한 정보는 [.NET Core 앱 유형](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}을
+참조하십시오. 
 
 애플리케이션을 공개하려면 다음과 같이 명령을 발행하십시오. 
 ```
@@ -108,7 +111,7 @@ project = src/MyApp.Web/MyApp.Web.xproj
 ```
 {: codeblock}
 
-## cli-samples 저장소 및 Visual Studio 템플리트에서 샘플 사용
+## 적절한 포트에서 청취하도록 애플리케이션 구성
 
 빌드팩은 *dotnet run* 명령으로 애플리케이션을 실행하고 뒤에 오는 명령행 인수를 전달합니다. 
 ```
@@ -128,20 +131,32 @@ project = src/MyApp.Web/MyApp.Web.xproj
     var config = new ConfigurationBuilder() //ADD THESE 3 LINES AT THE TOP OF THE MAIN METHOD
         .AddCommandLine(args)
         .Build();
-    
+
     var host = new WebHostBuilder()
         .UseKestrel()
         .UseConfiguration(config) //ADD THIS LINE BEFORE 'UseStartup'
-        .UseStartup&lt;Startup&gt;()  
-        .Build();
+        .UseStartup&lt;Startup&gt;()        .Build();
     host.Run();
 }
-</pre>  
+</pre>
 {: codeblock}
 
 다음 종속 항목을 project.json에 추가하십시오.  
 ```
-"Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+```
+{: codeblock}
+
+project.json의 `buildOptions` 섹션에 다음 특성을 추가하십시오. 
+```
+  "copyToOutput": {
+    "include": [
+      "wwwroot",
+      "Areas/**/Views",
+      "Views",
+      "appsettings.json"
+    ]
+  }
 ```
 {: codeblock}
 
@@ -150,6 +165,20 @@ Main 메소드를 포함하는 파일에 *using* 명령문을 추가하십시오
 using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
+
+Startup.cs `Startup` 메소드에서 다음 행을 제거하십시오. 
+```
+  .SetBasePath(env.ContentRootPath)
+```
+{: codeblock}
+
+Program.cs `Main` 메소드에서 다음 행을 제거하십시오. 
+```
+  .UseContentRoot(Directory.GetCurrentDirectory())
+```
+{: codeblock}
+
+이렇게 변경하면 .NET CLI가 애플리케이션의 `Views`를 찾을 수 있어야 합니다. 이제 이러한 보기는 `dotnet run` 명령이 실행될 때 빌드 출력에 복사되기 때문입니다. 애플리케이션에 런타임 시 필요한 다른 파일(예: json 구성 파일)이 있는 경우에는 이러한 파일도 project.json 파일에 있는 `copyToOutput`의 `include` 섹션에 추가해야 합니다.
 
 # 관련 링크
 {: #rellinks}

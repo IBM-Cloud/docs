@@ -207,8 +207,7 @@ Para visualizar a cota para a sua organização, conclua as etapas a seguir:
 3. Clique em **Edit**.
 4. Selecione a guia **Cota**.
 
-Para atualizar a cota para sua organização, deve-se abrir um chamado de suporte. 
-Para obter mais informações sobre a abertura de um chamado de suporte, consulte
+Para atualizar a cota para sua organização, deve-se abrir um chamado de suporte. Para obter mais informações sobre a abertura de um chamado de suporte, consulte
 [Obtendo suporte ao cliente](../support/index.html#contacting-support).
 Para obter mais informações sobre a cota para contêineres, consulte
 [Cota](../containers/container_planning_org_ov.html##container_planning_quota)

@@ -4,7 +4,7 @@ copyright:
 
   years: 2016
 
-lastupdated: "2016-10-01"
+lastupdated: "2016-10-14"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2016-10-01"
 # Private network peering plug-in for Bluemix CLI
 {: #private_network_cli}
 
-Use the private network peering command line interface (CLI) to configure and manage private network peering between two {{site.data.keyword.Bluemix}} spaces. The private network connection between the two spaces is not encrypted. Private network peering is supported for IBM Containers (docker containers). The Bluemix spaces can be located in different availability zones in the same region or can be located in the different regions. The private network peering CLI plug-in is available for use with the Bluemix CLI plug-in.
+Use the private network peering command line interface (CLI) to configure and manage private network peering between two {{site.data.keyword.Bluemix}} spaces. Private network peering is supported for IBM Containers (docker containers). The Bluemix spaces can be located in different availability zones in the same region or can be located in the different regions. The private network peering CLI plug-in is available for use with the Bluemix CLI plug-in.
 
 The private network peering CLI plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the plug-in that is applicable to you.
 

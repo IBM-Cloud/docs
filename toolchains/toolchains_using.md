@@ -11,20 +11,23 @@ copyright:
 # Using toolchains on {{site.data.keyword.Bluemix_notm}} Public
 {: #toolchains-using}
 
-Last updated: 13 September 2016
+Last updated: 27 October 2016
 {: .last-updated}
 
-You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
+You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain. Toolchains are available in the US South region only.
 {: shortdesc}
 
-**Important**: Toolchains are available in the US South region only.
+**Note**: Make sure that you are working in the New Bluemix experience by checking the top banner.
+
+ * If you see a message about trying the new Bluemix, you are working in the Classic Bluemix experience. Click the link to open the New Bluemix experience.
+ * If you don't see that message, you are working in the New Bluemix experience already.
 
 ## Configuring a tool integration
 {: #configuring_a_tool_integration}
 
 If you deferred the configuration of a tool integration when you created a toolchain, a **Configure** button is shown on its tile. If you configured a tool integration when you created a toolchain, you can update the configuration settings.
 
-1. On the DevOps dashboard, on the **Toolchains** tab, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Tool Integrations**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Overview**.
 1. If you need to configure a tool integration for the first time, on its tile, click **Configure**.
 
   ![Configure button](images/toolchain_tile_configure.png)
@@ -42,7 +45,7 @@ If you deferred the configuration of a tool integration when you created a toolc
 
 You can add and configure tool integrations for your toolchain.
 
-1. On the DevOps dashboard, on the **Toolchains** tab, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Tool Integrations**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Overview**.
 1. To see a list of tool integrations to add, click the add button (+).
 1. Click a tool integration that you want to add.
 1. Enter any required information to configure the tool integration. 
@@ -53,7 +56,7 @@ You can add and configure tool integrations for your toolchain.
 
 If you delete a tool integration from your toolchain, the deletion cannot be undone. 
 
-1. On the DevOps dashboard, on the **Toolchains** tab, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Tool Integrations**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Overview**.
 1. On the tile for the tool integration that you want to delete, click the menu to access the configuration options.
 1. To delete the tool integration from your toolchain, click **Delete**.
 1. Confirm by clicking **Delete**.  
@@ -61,7 +64,7 @@ If you delete a tool integration from your toolchain, the deletion cannot be und
 ## Managing access
 {: #managing_access}
 
-You can grant users access to a toolchain by adding them to the organization (org) that the toolchain is associated with. Each toolchain is associated with a specific org, and any user that is a member of that org can access the associated toolchains. Click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) in the menu bar to open the Account and Support widget and view the org that you are currently working in. Switch to a different org to access a different set of toolchains.
+You can grant users access to a toolchain by adding them to the organization (org) that the toolchain is associated with. Each toolchain is associated with a specific org, and any user that is a member of that org can access the associated toolchains. The org that you are currently working in is displayed in the menu bar. Click the org and then switch to a different org to access a different set of toolchains.
 
 <!--CA: Commenting out the content on authentication for Interconnect since it applies to GitHub Enterprise. This content can be exposed again when GHE is supported for the Dedicated Beta 2.-->
 
@@ -75,7 +78,7 @@ If you use Web ID authentication, when you add users to your Bluemix org and spa
 
 To add a user: -->
 
-1. On the DevOps dashboard, on the **Toolchains** tab, click the toolchain to manage, and then click **Manage**. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Manage**.  
+1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to manage, and then click **Manage**. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Manage**.  
 1. Click the link to your organization. 
 1. On the Manage Organizations page, click **Invite a User** and type the user's email address.
 1. If you want to give advanced permissions to manage users in {{site.data.keyword.Bluemix_notm}} orgs, select one or more of the **Manager**, **Billing Manager**, or **Auditor** check boxes.
@@ -87,8 +90,26 @@ To add a user: -->
 
 You can delete a toolchain and specify which of the associated tool integrations you want to delete. When you delete a toolchain, the deletion cannot be undone.
 
-1. On the DevOps dashboard, on the **Toolchains** tab, click the toolchain to delete, and then click **Manage**. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Manage**.
+1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to delete, and then click **Manage**. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Manage**.
 1. Click **Delete Toolchain** and review or adjust the tool integrations that you are deleting.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
 
- **Tip**: When you delete a GitHub tool integration, the associated GitHub repo is not deleted from GitHub. You must manually remove the repo from GitHub.h
+ **Tip**: When you delete a GitHub tool integration, the associated GitHub repo is not deleted from GitHub. You must manually remove the repo from GitHub.
+
+
+# Related Links
+{: #rellinks}
+
+## Tutorials and Samples
+{: #samples}
+
+* [Create an application with three microservices (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/tutorials/tutorial_microservices_part1){:new_window}
+* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window}
+* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window}
+
+## Related Links
+{: #general}
+
+* [Microservices toolchain (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}
+* [Simple toolchain (Beta) (Link opens in a new window)](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window}
+* [IBM Bluemix Garage Method (Link opens in a new window)](https://www.ibm.com/devops/method){:new_window}

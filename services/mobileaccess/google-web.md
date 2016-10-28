@@ -2,14 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-09-07"
 
 ---
 
 # Enabling Google authentication for web apps
 {: #google-auth-web}
-
-Last updated: 1 June 2016
-{: .last-updated}
 
 Use Google Sign-In to authenticate users on your web app.
 

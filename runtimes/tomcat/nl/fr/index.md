@@ -12,7 +12,7 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*Dernière mise à jour : 13 juillet 2016*
+Dernière mise à jour : 13 juillet 2016
 {: .last-updated}
 
 L'environnement d'exécution Tomcat sur {{site.data.keyword.Bluemix}} repose sur le pack java_buildpack.

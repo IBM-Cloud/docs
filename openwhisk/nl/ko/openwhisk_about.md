@@ -27,7 +27,7 @@ copyright:
 ## {{site.data.keyword.openwhisk_short}}의 작동 방식
 {: #openwhisk_how}
 
-{{site.data.keyword.openwhisk_short}}는 이벤트 또는 직접 호출에 응답하여 코드를 실행하는 이벤트 주도적인 컴퓨팅 플랫폼입니다.
+{{site.data.keyword.openwhisk_short}}는 이벤트 구동 컴퓨팅 플랫폼으로 Serverless 컴퓨팅 또는 FaaS(Function as a Service)라고도 하며 이벤트 또는 직접 호출에 대한 응답으로 코드를 실행합니다. 
 
 다음 그림에서는
 상위 레벨 {{site.data.keyword.openwhisk_short}} 아키텍처를 보여줍니다.
@@ -71,4 +71,4 @@ copyright:
 ### IoT
 {: #openwhisk_use_cases_iot}
 
-IoT(Internet of Things) 시나리오는 종종 내재적으로 센서 주도적입니다. 예를 들어, 특정 온도를 초과하는 센서에 반응해야 하는 경우 {{site.data.keyword.openwhisk_short}}의 조치가 트리거될 수 있습니다. 
+IoT(Internet of Things) 시나리오는 주로 거의 센서 구동입니다. 예를 들어, 특정 온도를 초과하는 센서에 반응해야 하는 경우 {{site.data.keyword.openwhisk_short}}의 조치가 트리거될 수 있습니다. 

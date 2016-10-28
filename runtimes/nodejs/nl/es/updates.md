@@ -11,10 +11,21 @@ copyright:
 # Últimas actualizaciones del paquete de compilación sdk-for-nodejs
 {: #latest_updates}
 
-*Última actualización: 18 de julio de 2016*
+Última actualización: 26 de agosto de 2016
 {: .last-updated}
 
 Una lista de las últimas actualizaciones del paquete de compilación sdk-for-nodejs.
+## 26 de agosto de 2016: se ha actualizado el paquete de compilación de Node.js v3.7-20160826-1101
+Este release del paquete de compilación da soporte a las versiones de tiempo de ejecución de IBM SDK para Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2 y 6.4.0.
+El valor predeterminado es ahora 4.5.0. 
+
+Este release incluye arreglos de errores, incluidos los del [paquete de compilación Node.js de Cloud Foundry 1.5.18](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18).
+
+El release elimina soporte para el manejador de gestión de app strongpm tal como se ha publicado en [Paquete de compilación Bluemix Node.js v3.3 – modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
+
+Tenga en cuenta que es un problema conocido cuando se utiliza Node.js 6.x y la [modalidad de desarrollo](../../manageapps/app_mng.html#devmode). Como una solución provisional será necesario volver a transferir la aplicación después de habilitar la modalidad de desarrollo antes de poder empezar a utilizarla.
+
+
 ## 22 de julio de 2016: Se ha actualizado el paquete de compilación de Node.js v3.6-20160715-0749
 Este release del paquete de compilación da soporte a las versiones de tiempo de ejecución de IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 y 6.2.2. El valor predeterminado es ahora 4.4.7.
 

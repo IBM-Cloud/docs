@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02" 
 ---
 
 # Configuring {{site.data.keyword.amashort}} for custom authentication
 {: #custom-dash}
-
-Last updated: 17 July 2016
-{: .last-updated}
 
 
 To use custom authentication with your mobile app, you must register a custom authentication realm and the base URL of your custom identity provider in the {{site.data.keyword.amashort}} service dashboard.

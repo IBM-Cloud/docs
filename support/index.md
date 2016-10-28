@@ -12,25 +12,44 @@ copyright:
 # Getting customer support
 {: #getting-customer-support}
 
-Last updated: 4 August 2016
+Last updated: 22 October 2016
 {: .last-updated}
 
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through a forum, or opening a support ticket.
 {:shortdesc}
 
+
 ## Getting help
 {: #getting-help}
-To open a support ticket or find other help options, you can use the Account and Support widget. You can also go directly to the Stack Overflow or developerWorks (dW) Answers forums to search information or post questions.
+To open a support ticket or find other help options, you can use the Support widget. You can also go directly to the Stack Overflow or developerWorks (dW) Answers forums to search information or post questions. If you are using an account that is linked between {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer}}, see [Using the Support widget for linked accounts](#using-avatar-linked) and [Opening a support ticket for linked accounts](#open-ticket-linked).
+
 {:shortdesc}
 
-### Using the Account and Support widget
+
+### Using the Support widget
 {: #using-avatar}
-The Account and Support widget enables you to check account information, view status, stay up to date with notifications, select your region, select and manage orgs, and log out. In addition, you can get help and provide feedback.
+The Support widget enables you to get help and provide feedback.
 
-To open the Account and Support widget, log in to the {{site.data.keyword.Bluemix_notm}} user interface and click the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) in the menu bar.
+To open the Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click the **Support** &gt; **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
 
-Click **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
+### Using the Support widget for linked accounts
+{: #using-avatar-linked}
+
+If you are using an account that is linked between {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer}}, the Support widget is slightly different. Log in to the Bluemix console and click the **Support** link from the menu bar to open the Support widget and then select **Add Ticket** &gt; **Find Answers**. The following options are available to you:
+
+* You can search through Bluemix Docs, Stack Overflow, and DW Answers by setting a filter to change the search results to include only the selected items.
+* You can link directly out to Stack Overflow **#IBMBluemix** or DW Answers to search or post.
+* You can submit an idea to IBM User Voice.
+* You can contact sales by either calling or finding a sales representative, or by linking to the Find a Sales Representative form.
+* You can connect with **@IBMBluemixHelp** on Twitter to enhance your Bluemix experience.
+
+
+
+### Using the Account menu items
+{: #using-accountmenu}
+
+Use the Account menu items to check account information, view status, stay up to date with notifications, select your region, select and manage orgs, and log out.
 
 
 ### Asking a question
@@ -40,10 +59,10 @@ The Stack Overflow and dW Answers forums both provide a wide variety of searchab
 
   * Go to [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} to ask technical questions about developing apps with the Bluemix platform and services.
   * Go to [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} to ask questions about the {{site.data.keyword.Bluemix_notm}} offering, and about getting started instructions.
-  * In China, go to [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} to ask questions.
 
-You can also ask a question in Stack Overflow directly from the Account and Support widget by completing the following steps:
-  1. From the Account and Support widget, click **Get help**. 
+
+You can also ask a question in Stack Overflow directly from the Support widget by completing the following steps:
+  1. From the Support widget, click **Get help**. 
   2. On the page that is displayed, type your question in the search field to find answers. 
   3. If the expected answer is not returned, click **POST TO STACK OVERFLOW** to post your question.
 
@@ -68,7 +87,7 @@ On the Status page, you can find the following information:
 
 You can find the Status page by choosing either of the following options:
 
-  * Log in to the {{site.data.keyword.Bluemix_notm}} user interface, click the {{site.data.keyword.avatar}} icon ![Avatar icon](./images/account_support.svg) in the menu bar, and then click **Status**. Check the listed resources for the ![some issues](images/some_issues.svg) icon. This icon might indicate an outage.
+  * Log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click **Support** and then click **Status**.  Check the listed resources for the ![some issues](images/some_issues.svg) icon. This icon might indicate an outage.
   * Access it directly at [IBM {{site.data.keyword.Bluemix_notm}} - System Status](http://ibm.biz/bluemixstatus){: new_window}.
 
 
@@ -86,15 +105,13 @@ To subscribe, follow these steps:
 
 	See your reader's **Help** section for more information. 	   
 
-Other methods of reading RSS feeds are available through web browser plug-ins such as the following:
-  * [RSS Feed](http://feeder.co/){: new_window} Reader for Chrome 
+Other methods of reading RSS feeds are available through web browser plug-ins such as the following: 
+  * [RSS Feed](http://feeder.co/){: new_window} Reader for Chrome
   * [Brief](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} add-on for Firefox
 
-
 News sources like the following also provide methods to read RSS feeds:
-
   * [Feedly](http://www.feedly.com/){: new_window} 
-  * [G2reader](http://www.g2reader.com/en/){: new_window} 
+  * [G2reader](http://www.g2reader.com/en/){: new_window}
 
 You can also use a third-party service to automatically send an email for each RSS update. The following list provides some example third-party services:
 
@@ -107,10 +124,14 @@ You can also use a third-party service to automatically send an email for each R
 
 {{site.data.keyword.Bluemix_notm}} typically has approximately 50 updates per month.
 
+
+
 ### Setting up incident and maintenance email notifications
 {: #setting-up-notifications}
 
-For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform notifications. Platform notifications are optional email alerts for incident and maintenance events for the {{site.data.keyword.Bluemix_notm}} platform. You can choose to receive these email notifications by clicking the {{site.data.keyword.avatar}} icon ![Avatar icon](../admin/images/account_support.svg) &gt; **Notifications** &gt; **Platform** options. For more information about setting account notifications, go to [Setting notifications](../admin/account.html#notifications).
+For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform notifications. Platform notifications are optional email alerts for incident and maintenance events for the {{site.data.keyword.Bluemix_notm}} platform. You can choose to receive these email notifications by clicking the **Account** menu item  &gt; **Notifications** &gt; **Platform** options. For more information about setting account notifications, go to [Setting notifications](../admin/account.html#notifications).
+
+
 ### Best practices for monitoring status
 {: #best-practices}
 
@@ -122,7 +143,7 @@ For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform noti
 
   * Check for current maintenance windows or an incident in progress
 
-	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) in the menu bar or the [IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window} help page.
+	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the **Support** menu item on the menu bar or the [IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window} help page.
 
   * Take advantage of multiple {{site.data.keyword.Bluemix_notm}} regions
 
@@ -143,9 +164,9 @@ For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform noti
 ## Contacting support
 {: #contacting-support}
 
-You can open support tickets if you have a valid {{site.data.keyword.Bluemix_notm}} account. 
+You can open support tickets if you have a valid {{site.data.keyword.Bluemix_notm}} account by using a variety of options. [Opening a support ticket](#open-ticket). 
 
-If you have a {{site.data.keyword.Bluemix_notm}} account linked with a SoftLayer account, you can open support tickets for {{site.data.keyword.Bluemix_notm}} from the SoftLayer Customer portal or from the {{site.data.keyword.Bluemix_notm}} user interface.
+If you have a {{site.data.keyword.Bluemix_notm}} account linked with a {{site.data.keyword.BluSoftlayer_full}} account, you can open support tickets for {{site.data.keyword.Bluemix_notm}} from the {{site.data.keyword.BluSoftlayer}} Customer Portal or from the {{site.data.keyword.Bluemix_notm}} console by using the Support widget. See [Opening a support ticket for linked accounts](#open-ticket-linked).
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
@@ -160,27 +181,35 @@ Support language | English | English | English | English
 Assigned client success manager (CSM) | Not included | Not included | Not included | Included at<br> 8 hours per week
 *Table 1. Support levels*
 
-#### Opening a support ticket
+### Opening a support ticket
 {: #open-ticket}
 
 If you are unable to resolve your technical problem with the troubleshooting and help options, you can ask for support. However, before contacting support for a technical issue, ensure that the problem is not due to an outage by checking {{site.data.keyword.Bluemix_notm}} status.
 
-If the problem is not due to an outage, and you are a customer in a country or region excluding China, open a support ticket by using one of the following options:
 
-  * From the Account and Support widget, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
-  * Use the [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} help page. You can submit tickets for sales, billing, IBMid and login, and technical support problems. For technical support problems, you can further select a technical group after you click the **Technical Support** tile. For example, if you need help with Cloud Foundry apps, OpenWhisk, Containers, Virtual Servers, or Bare Metal servers, you can choose **Application Services**. If you need help with a specific service, select the corresponding service category. To determine the category that your service belongs to, see categories under [Services](../services/index.html){: new_window} in the navigation pane.  
+
+If the problem is not due to an outage, open a support ticket by using one of the following options:
+
+  * From the Support widget, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
+  * Use the [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} help page. You can submit tickets for sales, billing, IBMid and login, and technical support problems. For technical support problems, you can further select a technical group after you click **Technical Support**. For example, if you need help with Cloud Foundry apps, OpenWhisk, Containers, Virtual Servers, or Bare Metal servers, you can choose **Application Services**. If you need help with a specific service, select the corresponding service category. To determine the category that your service belongs to, see categories under [Services](../services/index.html){: new_window} in the navigation pane.  
   * From [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. After you sign in to the portal, click **Open Ticket**, and then fill in the support form. 
   
-
-
 When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity and response time](index.html#support-ticket-severity){: new_window} for information about the different severities. If your request is urgent, but you only have free or basic support, you can upgrade your account to submit high-severity (level 1, 2, and 3) tickets. To upgrade your account to a higher support level, contact your IBM sales representative by email at sales@bluemix.net.
 
-If you are a customer in China, you can get paid support to your account from the [UNISYS Service Management IBM Bluemix page](https://chinabluemix.itsm.unisysedge.cn){: new_window}.
+### Opening a support ticket for linked accounts
+{: #open-ticket-linked}
 
-#### Checking support ticket status
+If you are using an account that is linked between {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer}}, you can open a support ticket from the {{site.data.keyword.Bluemix_notm}} console by using the Support widget. 
+
+To open a {{site.data.keyword.Bluemix_notm}} support ticket for a linked account, click **Support** from the menu bar to open the Support widget and select **Add ticket**. In the ticket form, select **Technical** for the ticket type and complete the form to indicate what you need technical support for. If you have Premium Level Support, choose the severity level for your issue. You will receive an email notification in a few minutes for the ticket. Follow the instructions in the email for further communications on the issue.
+
+
+### Checking support ticket status
 {: #check-ticket-status}
 
-Each support ticket is assigned a unique ticket number for reference. In countries or regions other than China, you can use the ticket number to review your support ticket progress and update the support ticket at the [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Updates and responses are sent to you by email and recorded in the ticket notes. 
+Each support ticket is assigned a unique ticket number for reference. You can use the ticket number to review your support ticket progress and update the support ticket at the [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Updates and responses are sent to you by email and recorded in the ticket notes.  
+
+
 
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -188,7 +217,7 @@ Each support ticket is assigned a unique ticket number for reference. In countri
 
 <!-- Michelle links to this anchor  -->
 
-If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer in a country or region other than China, support is provided by the IBM {{site.data.keyword.Bluemix_notm}} support team. You can choose from a few different options to get support, depending on whether you have an IBMid.
+If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer, support is provided by the IBM {{site.data.keyword.Bluemix_notm}} support team. You can choose from a few different options to get support, depending on whether you have an IBMid.
 
 <ul>
 <li>Contact support by opening a new ticket using the
@@ -197,11 +226,8 @@ If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer in a country 
 </li>
 <li>If you have an IBMid and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the {{site.data.keyword.avatar}} icon <img src="images/account_support.svg" alt="Avatar icon" /> in the menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
 <li>If you don't have an IBMid, you can contact someone in your organization who does have one, or work with your IBM representative.
-<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Dedicated environment.</p></li>
+<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} console in your Dedicated environment.</p></li>
 </ul>
-
-If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer in China, you can request support from the [UNISYS Service Management IBM Bluemix page](https://chinabluemix.itsm.unisysedge.cn){: new_window}. In addition, customers in China can get free support at [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
-
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Local
 {: #contacting-bluemix-support-local}
@@ -215,13 +241,10 @@ If you are a {{site.data.keyword.Bluemix_notm}} Local customer, support is provi
 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a> help page. You can use an email address or your IBMid for this form. Select the **{{site.data.keyword.Bluemix_notm}} Local** option for the  Region field.
 <p>Form submissions are monitored from Sunday 10:00 PM UTC through Friday 11:59 PM UTC.</p>
 </li>
-<li>If you have an IBMid and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the {{site.data.keyword.avatar}} icon <img src="images/account_support.svg" alt="Avatar icon" /> in the menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
+<li>If you have an IBMid and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the **Support** menu bar item and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
 <li>If you don't have an IBMid, you can contact someone in your organization who does have one, or work with your IBM representative.
-<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Local environment.</p></li>
+<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} console in your Local environment.</p></li>
 </ul>
-
-
-
 
 ### Support ticket severity and response time
 {: #support-ticket-severity}
@@ -252,22 +275,20 @@ To report a potential security vulnerability, complete the following steps:
   2. Clearly describe in the ticket summary that the ticket is about a potential security vulnerability.
   2. Provide details of the potential security vulnerability by including one of the following items:
        * A phone number at which you can be reached to discuss the issue.
-	   * Details of the issue. You must encrypt the details as a block of text in the body of the ticket, and provide instructions on how IBM Support can securely contact you to obtain decryption instructions.
-	   
+	   * Details of the issue. You must encrypt the details as a block of text in the body of the ticket, and provide instructions on how IBM Support can securely contact you to obtain decryption instructions. 
 	   
 	   
 
 ### Escalating a support ticket
 {: #escalation}
 
-With standard or premium support, in a country or region other than China, if you have not received a timely response to a support ticket, or if you feel that a support ticket is not being addressed appropriately, you can escalate the support ticket. Through the support ticket escalation process, IBM management reviews your concerns and works with you to improve the support experience.
+With standard or premium support, if you have not received a timely response to a support ticket, or if you feel that a support ticket is not being addressed appropriately, you can escalate the support ticket. Through the support ticket escalation process, IBM management reviews your concerns and works with you to improve the support experience.
 
 To submit an escalation request, complete the following steps:
   1. Open a new support ticket with the summary **Escalation Request**.
   2. To ensure that your escalation request can be matched with the original support ticket, include the following information in the body of the ticket:
        * The ticket number of your open support ticket that needs escalation.
 	   * A brief summary of the reasons that escalation is needed.
-
 
 
 

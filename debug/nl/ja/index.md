@@ -92,7 +92,8 @@ Liberty ランタイム・アプリケーションのログ分析も提供され
 
 ログの最初のエラーが、ステージングが失敗した理由を示しています。この例では、最初のエラーはステージングの段階での DEA コンポーネントからの出力です。
 ```
-2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3```
+2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3
+```
 {: screen}
 
 

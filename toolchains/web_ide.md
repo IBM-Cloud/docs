@@ -14,7 +14,7 @@ copyright:
 # Editing code with the Eclipse Orion {{site.data.keyword.webide}}
 {: #web_ide}
 
-Last updated: 9 September 2016
+Last updated: 26 October 2016
 {: .last-updated}
 
 The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development environment where you can develop for the web. You can develop in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. The {{site.data.keyword.webide}} works with nearly any language and offers syntax highlighting for most [file types (Link opens in a new window)](https://hub.jazz.net/docs/overview/#dev_support){: new_window}. Source control is built in through Git or Jazz SCM, and you can deploy code locally to test and debug your apps.
@@ -25,34 +25,21 @@ Best of all, the {{site.data.keyword.webide}} is powered by the web. You have no
 ## Setting up the editor
 {: #editorsetup}
 
-The {{site.data.keyword.webide}} is customizable so that you can choose the color schemes, technical tools, and settings that meet your development needs. To view and modify the settings, from the menu on the left, click the **Settings** icon <img class="inline" src="./images/webide_settings_icon.png"  alt="The settings icon">.
+The {{site.data.keyword.webide}} is customizable so that you can choose the color schemes, technical tools, and settings that meet your development needs. To view and modify the settings, from the menu on the left, click the **Settings** icon <img class="inline" src="./images/webide_settings_icon_light.png"  alt="The settings icon">.
 
-<!-- LH: I don't think we need to include the following table, so I'm commenting it out. When you're viewing the settings in the Web IDE, this information should be obvious -->
+If you often need to change certain settings while you edit, you can access those settings quickly from the **Local Editor Settings** icon <img class="inline" src="./images/webide_local_settings_icon_light.png"  alt="Local Editor Settings icon"> in the upper-right corner of the editor
 
-<!--| Categories | Description  |
-|---|---|
-| Cloud Foundry  | Define a Cloud Foundry API and Manage URL  |
-| CSS Validation | Define the severities for CSS linting rules that you use to check your code  |
-| Editor Settings  | Configure editor-specific settings for key bindings, editor behavior, layout, and more  |
-| Editor Styles  | Configure color schemes for the languages that you use, or import a theme from another editors  |
-| Git  | Configure general settings for Git  |
-| Globalization | Define globalization settings for your code |
-| JavaScript Validation  | Define the severities for the JavaScript linting rules that you use to check your code  |
-| Plug-ins  | Install, disable, or remove plug-ins from the editor  | -->
-
-If you often need to change certain settings while you edit, you can access those settings quickly from the **Local Editor Settings** icon <img class="inline" src="./images/webide_local_settings_icon.png"  alt="Local Editor Settings icon"> in the upper-right corner of the editor
-
-![Local Editor Settings](images/webide_local_editor_settings.png)
+![Local Editor Settings](images/webide_local_editor_settings_light.png)
 
 By default, the settings for the editor style and font size are always shown. To include other editor settings in the menu, follow these steps:
 
-1. Click the **Local Editor Settings** icon <img class="inline" src="./images/webide_local_settings_icon.png"  alt="Local Editor Settings icon">.
+1. Click the **Local Editor Settings** icon <img class="inline" src="./images/webide_local_settings_icon_light.png"  alt="Local Editor Settings icon">.
 
 2. Click **Editor Settings**.
 
 3. To include or exclude a setting from the **Local Editor Settings** menu, click the circle that is next to the setting.
 
-![Editor Settings toggle](images/webide_editor_settings_toggle.png)
+![Editor Settings toggle](images/webide_editor_settings_toggle_light.png)
 
 
 ## Editing code
@@ -64,10 +51,10 @@ The {{site.data.keyword.webide}} has two main sections. The first section is the
 
 The second section is the editor pane on the right. The editor provides several coding features, including content assist and syntax validation.
 
-![Web IDE](images/webide.png)
+![Web IDE](images/webide_light.png)
 
 ### Working with multiple files
-1. To work with two files at the same time, click the **Change split editor mode** icon <img class="inline" src="./images/webide_split_editor_icon.png"  alt="Split Editor icon"> at the top of the editor.
+1. To work with two files at the same time, click the **Change split editor mode** icon <img class="inline" src="./images/webide_split_editor_icon_light.png"  alt="Split Editor icon"> at the top of the editor.
 2. From the menu that opens, select a view.
 
  After you select a view, if a file was already open in the editor, it is shown in both editor views.
@@ -84,26 +71,16 @@ To see a list of the keyboard shortcuts in the editor, press Alt+Shift+?. If you
 ## Managing source code
 {: #sourcecontrol}
 
-The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon <img class="inline" src="./images/webide_git_icon.png"  alt="The Git Repository icon">. For more information, see [Source control with Git (Link opens in a new window)](https://hub.jazz.net/docs/git/){: new_window}.
+The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon <img class="inline" src="./images/webide_git_icon_light.png"  alt="The Git Repository icon">. For more information, see [Source control with Git (Link opens in a new window)](https://hub.jazz.net/docs/git/){: new_window}.
 
 
 ## Deploying an app from your workspace
 {: #deploy}
 
 1. To deploy your app, from the run bar, either select or [create (Link opens in a new window)](https://hub.jazz.net/tutorials/livesync/#launch_configuration){: new_window} a launch configuration.
-1. Click the deploy icon <img class="inline" src="./images/webide_deploy_button.png"  alt="The deploy icon">. An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration. 
+1. Click the deploy icon <img class="inline" src="./images/webide_deploy_button_light.png"  alt="The deploy icon">. An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration. 
 2. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
-![Run bar](images/webide_runbar.png)
-
-<!-- LH: I'm commenting out the following list because I think this information is obvious from the UI. I also updated the preceding sentence to mention a few things that you can do from the run bar.
-
- * Stop the app: <img  class="inline" src="./images/webide_stop_button.png"  alt="The stop icon">
- * Open the deployed app: <img class="inline" src="./images/webide_open_app_url.png"  alt="The open app URL icon">
- * View the logs of the deployed app: <img class="inline" src="./images/webide_view_logs.png"  alt="The view logs icon">
- * Open the app's Dashboard: <img  class="inline" src="./images/webide_open_dashboard.png"  alt="The open dashboard icon">
- * If you are developing a Node.js app, enable Live Edit mode: <img  class="inline"  src="./images/webide_enable_live_edit.png"  alt="The enable live edit slider">
- * With Live Edit mode enabled, restart the app quickly, without redeployment: <img  class="inline" src="./images/webide_live_edit_restart.png"  alt="The Live Edit restart icon">
- * With Live Edit mode enabled, access the debugger: <img  class="inline" src="./images/webide_debug_icon.png"  alt="The debug icon"> -->
+![Run bar](images/webide_runbar_light.png)
 
  ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}

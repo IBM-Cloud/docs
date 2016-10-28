@@ -11,7 +11,7 @@ copyright:
 # Liberty in Bluemix mit JConsole überwachen
 {: #jconsole}
 
-*Letzte Aktualisierung: 10. Juni 2016*
+Letzte Aktualisierung: 10. Juni 2016
 {: .last-updated}
 
 ## Die Schritte für die Überwachung der Bluemix-Liberty-Laufzeit mit JConsole sind wie folgt:

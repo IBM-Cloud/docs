@@ -11,9 +11,14 @@ copyright:
 # Neueste Aktualisierungen für das Buildpack 'ASP.NET Core'
 {: #latest_updates}
 
-*Letzte Aktualisierung: 07. Juli 2016*
+Letzte Aktualisierung: 26. August 2016
 
 Eine Liste mit den neuesten Aktualisierungen im aspnet-Buildpack.
+
+## Aug 31, 2016: Updated ASP.NET Core buildpack v1.0-20160826-1345
+
+* Fügen Sie Unterstützung für die Ausführung von Prä- und Postkompilierscripts unter Verwendung von NPM und Bower hinzu, um Front-End-JavaScript- und CSS-Bibliotheken zu installieren. 
+* Versetzen Sie das Buildpack von der Betaversion in den GA-Status
 
 ## 11. Juli 2016: Buildpack 'ASP.NET Core' v0.9-20160706-1603 aktualisiert
 

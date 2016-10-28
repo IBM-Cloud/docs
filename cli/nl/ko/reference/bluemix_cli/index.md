@@ -643,7 +643,9 @@ bluemix scale CF_APP_NAME|CONTAINER_GROUP_NAME [-i INSTANCE_COUNT] [-k DISK_QUOT
    <dt>-m <i>MEMORY_SIZE</i>(선택사항)</dt>
    <dd>cf 애플리케이션의 새 메모리 크기입니다. 컨테이너 그룹을 스케일링하는 데는 유효하지 않습니다.</dd>
     </dl>
-<strong>예제</strong>:`my-container-group`의 현재 인스턴스 번호를 표시합니다.
+<strong>예제</strong>:
+
+`my-container-group`의 현재 인스턴스 번호를 표시합니다.
 
 ```
 bluemix scale my-container-group

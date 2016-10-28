@@ -12,7 +12,7 @@ copyright:
 
 # ASP.NET 核心 
 {: #dotnet_core}
-*上次更新时间：2016 年 5 月 30 日*
+上次更新时间：2016 年 5 月 30 日
 
 {{site.data.keyword.Bluemix}} 上的“ASP.NET 核心”运行时采用“ASP.NET 核心”buildpack 技术。“ASP.NET 核心”是用于构建 .NET Web 应用程序的模块化开放式源代码框架。“.Net 核心”是跨平台的小型运行时，可由“ASP.NET 核心”应用程序实现。将它们相结合可实现基于云的先进 Web 应用程序。
 {: shortdesc}
@@ -36,7 +36,7 @@ copyright:
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview1-002702"
+        "version": "1.0.0-preview2-003121"
       }
    }
 ```
@@ -64,9 +64,11 @@ copyright:
 
 使用 Yeoman 工具可生成新的项目模板，如 [Building Projects with Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html) 中所述。
 
+有关使用 Visual Studio 进行本地开发的信息，请参阅[使用 Visual Studio 进行开发](../../starters/deploy_vs.html){: new_window}。
+
 ## 推送发布的应用程序
 
-如果想要在应用程序中包含其需要的所有二进制文件，以使 buildpack 无需下载任何外部二进制文件，您可以推送发布的*自包含*应用程序。请参阅 [Types of portability in .Net Core](http://dotnet.github.io/docs/core-concepts/app-types.html){: new_window}，以获取有关自包含应用程序的更多信息。
+如果想要在应用程序中包含其需要的所有二进制文件，以使 buildpack 无需下载任何外部二进制文件，您可以推送发布的*自包含*应用程序。请参阅 [.NET Core App Types](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}，以获取有关自包含应用程序的更多信息。
 
 要发布应用程序，请发出类似如下命令：
 ```
@@ -100,7 +102,7 @@ project = src/MyApp.Web/MyApp.Web.xproj
 ```
 {: codeblock}
 
-## 使用 cli 样本存储库中的样本以及 Visual Studio 模板
+## 配置应用程序以侦听正确的端口
 
 buildpack 将使用 *dotnet run* 命令运行您的应用程序，并传递以下内容之后的命令行自变量
 ```
@@ -120,20 +122,32 @@ buildpack 将使用 *dotnet run* 命令运行您的应用程序，并传递以�
     var config = new ConfigurationBuilder() //ADD THESE 3 LINES AT THE TOP OF THE MAIN METHOD
         .AddCommandLine(args)
         .Build();
-    
+
     var host = new WebHostBuilder()
         .UseKestrel()
         .UseConfiguration(config) //ADD THIS LINE BEFORE 'UseStartup'
-        .UseStartup&lt;Startup&gt;()  
-        .Build();
+        .UseStartup&lt;Startup&gt;()        .Build();
     host.Run();
 }
-</pre>  
+</pre>
 {: codeblock}
 
 将以下依赖项添加到 project.json 中： 
 ```
-"Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc2-final",
+  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+```
+{: codeblock}
+
+将以下属性添加到 project.json 的 `buildOptions` 部分中：
+```
+  "copyToOutput": {
+    "include": [
+      "wwwroot",
+      "Areas/**/Views",
+      "Views",
+      "appsettings.json"
+    ]
+  }
 ```
 {: codeblock}
 
@@ -142,6 +156,20 @@ buildpack 将使用 *dotnet run* 命令运行您的应用程序，并传递以�
 using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
+
+在 Startup.cs `Startup` 方法中，除去以下行：
+```
+  .SetBasePath(env.ContentRootPath)
+```
+{: codeblock}
+
+在 Program.cs `Main` 方法中，除去以下行：
+```
+  .UseContentRoot(Directory.GetCurrentDirectory())
+```
+{: codeblock}
+
+这些更改应该可以让 .NET CLI 找到应用程序的 `Views`，因为执行 `dotnet run` 命令之后，这些 Views 将复制到构建输出中。如果应用程序具有其他任何运行时需要使用的文件（例如 json 配置文件），那么您也应该将这些文件添加到 project.json 文件中 `copyToOutput` 的 `include` 部分。
 
 # 相关链接
 {: #rellinks}

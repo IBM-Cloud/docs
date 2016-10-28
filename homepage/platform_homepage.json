@@ -2,6 +2,16 @@
 	"id": "docs_homepage_platform",
 	"title": "How to use the Bluemix platform",
 	"items": [{
+		"title": "What is Bluemix?",
+		"description": "A new way to experience cloud, combining infrastructure, applications, and services.",
+		"img": "homepage/images/WhatIsBluemix-icon.svg",
+		"href": "overview/whatisbluemix.html"
+	}, {
+		"title": "Setting up your account",
+		"description": "Update your profile, set account and spending notifications, invite team members, or manage orgs and spaces.",
+		"img": "homepage/images/admin.svg",
+		"href": "admin/adminpublic.html"
+	}, {
 		"title": "CLI and Dev Tools",
 		"description": "Access tools, such as a unified command line interface and CLI plug-ins.",
 		"img": "homepage/images/cli.svg",
@@ -12,20 +22,10 @@
 		"img": "homepage/images/manage_apps.svg",
 		"href": "manageapps/mngapps.html"
 	}, {
-		"title": "Administering",
-		"description": "Manage orgs and spaces, including user access.",
-		"img": "homepage/images/admin.svg",
-		"href": "admin/adminpublic.html"
-	}, {
 		"title": "Monitoring and Logging",
 		"description": "Follow application usage and data flow to get a better understanding of your deployment.",
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
-	}, {
-		"title": "Pricing",
-		"description": "Estimate costs with the calculator and see actual costs with the usage details view.",
-		"img": "homepage/images/pricing.svg",
-		"href": "pricing/index.html"
 	}, {
 		"title": "Troubleshooting",
 		"description": "If you experience problems with the platform, use these troubleshooting tasks to determine what steps to take.",
@@ -38,9 +38,14 @@
 		"href": "security/index.html"
 	}, {
 		"title": "Hybrid",
-		"description": "Delivered as-a-service across public, dedicated, and on-premises deployment models.",
+		"description": "Delivered as-a-service in dedicated and on-premises deployment models.",
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
+	}, {
+		"title": "Pricing",
+		"description": "Estimate costs with the calculator and see actual costs with the usage details view.",
+		"img": "homepage/images/pricing.svg",
+		"href": "pricing/index.html"
 	}]
 
 }

@@ -37,7 +37,7 @@ Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/
 * Cliquez sur **Changer de photo** pour télécharger une nouvelle photo.
 * Cliquez sur **Supprimer la photo** pour retirer votre photo.
 
-## Edition de vos informations IBMid
+## Edition de vos informations IBMid 
 {: #ibmid}
 
 Si vous devez changer les informations de votre compte IBMid, comme votre nom, votre adresse électronique, votre numéro de téléphone, votre mot

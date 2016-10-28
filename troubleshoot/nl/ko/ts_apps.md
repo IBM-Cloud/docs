@@ -302,43 +302,8 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-	
-	
-## Git 저장소를 추가할 수 없음
-{: #ts_cannot_addgit}
 
-대시보드에서 앱을 작성한 후 Git 추가를 클릭하여 Git 저장소를 작성할 수 있지만 처리할 수는 없습니다.
-
-
-
-**Git 추가**를 클릭하면 이 열리고 다음 문제 중 하나가 발생합니다.
-{: tsSymptoms} 
-
-  * 창이 빈 화면 상태로 정지합니다.
-  * 써드파티 쿠키와 관련하여 문제점이 발생했다는 메시지가 표시됩니다.
-
-
-
-쿠키가 설정되지 않도록 브라우저를 구성할 수 있습니다. 해당 쿠키는 {{site.data.keyword.Bluemix_notm}} 콘솔 컨텍스트 내 hub.jazz.net 인터넷 도메인에 있는 IBM® Bluemix DevOps Services 사이트에서 설정해야 합니다.
-{: tsCauses}  
-
- 
-
-다음 방법 중 하나를 사용하여 이러한 문제점을 해결할 수 있습니다.
-{: tsResolve}
-
-  * {{site.data.keyword.Bluemix_notm}} 콘솔에서 열리는 창에 나와 있는 지시사항을 따르십시오. 단추를 클릭하십시오. 다른 브라우저 창이 일시적으로 열립니다. 해당 창에서 DevOps Services는 인증 쿠키를 설정합니다.
-  * 다른 브라우저 탭에서 다음으로 이동하여 로그인하십시오. https://hub.jazz.net {{site.data.keyword.Bluemix_notm}} 콘솔로 돌아가서 페이지를 새로 고치십시오. **Git 추가**를 다시 클릭하십시오.
-  * 써드파티 쿠키를 지원하도록 브라우저 설정을 변경하고 Git 추가를 다시 클릭하십시오. 설정을 구성하는 방법에 대한 자세한 정보는 브라우저 관련 문서를 참조하십시오.
-    * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-이러한 임시 해결책으로 문제점을 해결하지 못한 경우 idslogin@jazz.net으로 이메일을 보내십시오.
-
-
-
-## Android 앱이 {{site.data.keyword.mobilepushshort}}을 받을 수 없음
+## Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없음
 {: #ts_push}
 
 Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM {{site.data.keyword.mobilepushshort}} 서비스를 통해 전송하는 알림을 받을 수 없습니다. 이 경우에는 써드파티 서비스를 임시 해결책으로 사용할 수 있습니다.
@@ -346,7 +311,7 @@ Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM {{site.dat
 Bluemix 앱에 사용할 {{site.data.keyword.mobilepushshort}} 서비스를 바인딩하고 등록된 디바이스에 메시지를 전송합니다. 하지만 Android 플랫폼에서 개발된 앱이 특정 지역에서 알림을 수신할 수 없습니다.
 {: tsSymptoms}
 
-IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Messaging) 서비스를 사용하여 Android 플랫폼에서 개발되는 모바일 앱에 알림을 디스패치합니다. Android 앱이 알림을 수신하도록 설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수 있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는 Android 앱이 {{site.data.keyword.mobilepushshort}}을 받을 수 없습니다.
+IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Messaging) 서비스를 사용하여 Android 플랫폼에서 개발되는 모바일 앱에 알림을 디스패치합니다. Android 앱이 알림을 수신하도록 설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수 있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는 Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없습니다.
 {: tsCauses}
 
  
@@ -364,7 +329,7 @@ GCM 서비스에 의존하지 않는 써드파티 서비스를 임시 해결책�
 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
 
-`BXNUI2032E: <service_instances> 리소스가 작성되지 않았습니다. 리소스를 작성하기 위해 Cloud Foundry에 접속하는 동안 오류가 발생했습니다. Cloud Foundry 메시지: "조직의 서비스 한계를 초과했습니다."`
+`BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Cloud Foundry message: "You have exceeded your organization's services limit."`
 
 
 
@@ -445,7 +410,6 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
     {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
 	  1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션을 선택하십시오. 앱 세부사항 페이지가 열립니다.
 	  2. 런타임 페이지에서 앱에 대한 최대 메모리 한계 또는 앱 인스턴스 수를 줄이거나 둘 다 줄일 수 있습니다. 
-	 
 	  
 	cf 명령행 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
 	
@@ -668,7 +632,7 @@ Eclipse 도구를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix
 
  	
 	
-**-p** 옵션을 사용하여 WAR 파일을 지정하거나 WAR 파일의 경로를 추가하십시오. 예를 들어 다음과 같습니다.
+**-p** 옵션을 사용하여 WAR 파일을 지정하거나 WAR 파일의 경로를 추가하십시오. 예를 들어, 다음과 같습니다.
 {: tsResolve}
 
 ```
@@ -1049,18 +1013,18 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
 커미트를 푸시할 때 작업-항목 링크를 작성하도록 GitHub 프로젝트를 구성한 경우 링크가 예상대로 작동하지 않으면 다음 단계를 수행하여 문제점을 찾으십시오. 
 
 1. GitHub 저장소에서 **설정**을 클릭하십시오.
-   ![GitHub 설정 링크](images/githubSettings1_small.png)
+   ![GitHub 설정 링크](images/github_settings.png)
 
 2. **웹후크 & 서비스**를 클릭하십시오.
-   ![GitHub 웹후크 및 서비스 링크](images/githubHooks1_small.png)
+   ![GitHub 웹후크 및 서비스 링크](images/github_webhook.png)
 
 3. 메시지를 보려면 {{site.data.keyword.jazzhub}} 상태 아이콘 위로 마우스를 이동하십시오.
-   ![서비스 후크에 대한 오류 메시지](images/troubleshoothook1_small.png)
+   ![서비스 후크에 대한 오류 메시지](images/github_error.png)
 
 4. GitHub 메시지에 따라 오류를 해결하십시오. 
 
 5. 수정사항이 작동하는지 확인하려면 다른 변경사항을 커미트하고 푸시하거나 {{site.data.keyword.jazzhub_short}}의 서비스 페이지로 이동한 후 **테스트 서비스**를 클릭하십시오.
-   ![GitHub 테스트 서비스 단추](images/githubTestService_small.png)
+   ![GitHub 테스트 서비스 단추](images/github_test.png)
 
 6. 상태 아이콘을 다시 확인하여 오류가 없는지 확인하십시오.
    ![오류가 없는 상태 아이콘](images/githubResolved_small.png)
@@ -1127,7 +1091,7 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
 {: tsResolve}
  
   * {{site.data.keyword.Bluemix_notm}} 대시보드에서 영역을 작성할 조직을 선택한 다음 **영역 작성**을 클릭하십시오.
-  * cf 명령행 인터페이스에서 ```cf create-space <space_name> -o <organization_name>```을 입력하십시오.
+  * cf 명령행 인터페이스에서 `cf create-space <space_name> -o <organization_name>`을 입력하십시오.
   
   
   

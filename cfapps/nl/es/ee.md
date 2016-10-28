@@ -18,7 +18,7 @@ copyright:
 # Caso de ejemplo: Desarrollo completo
 {: #ee}
 
-*Última actualización: 15 de juno de 2016*
+*Última actualización: 16 de agosto de 2016*
 {: .last-updated}
 
 Puede utilizar la interfaz de usuario y la plataforma de {{site.data.keyword.Bluemix}} y una selección de herramientas para compilar, ejecutar y desplegar sus apps. Para empezar, puede seguir este caso de ejemplo completo de desarrollo.
@@ -40,11 +40,12 @@ Después de iniciar la sesión, puede empezar a crear la primera app mediante la
 
 En {{site.data.keyword.Bluemix_notm}}, las apps están asociados a organizaciones y espacios. Una organización es propiedad de varios colaboradores, quienes la utilizan. Inicialmente, obtiene una organización predeterminada que se llama como su nombre de usuario y cuyo único colaborador es usted. También obtiene un espacio dentro de esta organización. El espacio es un entorno en el que ejecutar sus apps; por ejemplo, puede tener un espacio dev como entorno de desarrollo, un espacio test como entorno de prueba y un espacio production como entorno de producción. Además, cada uno de los entornos pertenece a una región. Con {{site.data.keyword.Bluemix_notm}}, puede desplegar las apps en una determinada región geográfica para reducir la latencia de la red, y mejorar la privacidad de los datos y la disponibilidad. Consulte Regiones para obtener detalles.
 
-En este caso de ejemplo, va a desarrollar una app web utilizando Node.js. Supongamos que está en EE. UU. y la mayoría de los usuarios de su app también están en los EE. UU. Decide para crear y ejecutar su app cerca de la base de usuarios, para poder beneficiarse de una menor latencia de la red. Después de iniciar sesión en {{site.data.keyword.Bluemix_notm}}, pulse el icono **Cuenta y soporte** ![Icono Cuenta y soporte](../admin/images/account_support.svg), y seleccione la región **EE.UU. sur**. A continuación, puede llevar a cabo los
+En este caso de ejemplo, va a desarrollar una app web utilizando Node.js. Supongamos que está en EE. UU. y la mayoría de los usuarios de su app también están en los EE. UU. Decide para crear y ejecutar su app cerca de la base de usuarios, para poder beneficiarse de una menor latencia de la red. Tras iniciar sesión en {{site.data.keyword.Bluemix_notm}}, pulse el icono **{{site.data.keyword.avatar}}**
+![Icono Avatar](../icons/i-avatar-icon.svg) y, a continuación, seleccione la región **EE.UU. sur**. A continuación, puede llevar a cabo los
 siguientes pasos para crear una app:
 
   1. Seleccione **Calcular**.
-  2. Pulse el icono del signo más. 
+  2. Pulse el icono del signo más.
   3. seleccione **SDK for Node.js**.
   4. Escriba un nombre exclusivo para la app, como por ejemplo NodoPrueba, y pulse **Crear**. El nombre de la app debe ser exclusivo en todo el entorno {{site.data.keyword.Bluemix_notm}}.
   
@@ -189,7 +190,7 @@ Para utilizar el servicio {{site.data.keyword.cloudant}} dentro de la app, debe 
   ```
   if (process.env.VCAP_SERVICES) {
         var env = JSON.parse(process.env.VCAP_SERVICES);
-        var cloudant = env['"cloudantNoSQLDB'][0].credentials;
+        var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
                 "username" : "user1",

@@ -18,7 +18,7 @@ copyright:
 # CLI do administrador do {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
-Última atualização: 17 de agosto de 2016
+Última atualização: 1 de setembro de 2016
 {: .last-updated}
 
 
@@ -53,14 +53,12 @@ o plug-in:
 <li>Para incluir o repositório do plug-in Administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/> <code> cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomínio da URL da sua instância do {{site.data.keyword.Bluemix_notm}}. Por
-exemplo, <code>https://console.mycompany.bluemix.net/cli</code>.</dd>
+<dd class="pd">Subdomínio da URL da sua instância do {{site.data.keyword.Bluemix_notm}}. Por exemplo, <code>https://console.mycompany.bluemix.net/cli</code></dd>
 </dl>
 </li>
-<li>Para instalar o plug-in CLI admin do
-{{site.data.keyword.Bluemix_notm}}, execute o seguinte
-comando:<br/><br/> <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
+<li>Para instalar o plug-in da CLI do administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>
+<code>
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
@@ -75,7 +73,10 @@ seguida, poderá incluir o repositório atualizado e instalar o plug-in mais rec
 ## Usando o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
 
 É possível usar o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}} para incluir ou remover usuários, designar ou remover designação de usuários de organizações e
-executar outras tarefas de gerenciamento. Para ver uma lista de comandos, execute o comando
+executar outras tarefas de gerenciamento. Os caracteres especiais como espaços, sinais de mais (+) e e comercial (&) não são suportados quando você cria nomes de organização, nomes de espaço e grupos
+de segurança do aplicativo. Tente usar letras maiúsculas e minúsculas mistas ou sublinhados para criar nomes exclusivos.
+
+Para ver uma lista de comandos, execute o comando
 a seguir:
 
 ```
@@ -139,17 +140,25 @@ deve-se ser o gerente da organização ou deve-se ter a permissão de
 
 ### Procurar um Usuário
 
-É possível procurar um usuário. Insira o comando a seguir:
+É possível procurar um usuário. Insira o comando a seguir em conjunção com os parâmetros de filtro de procura opcionais conforme necessário (nome, permissão, organização e função):
 
 ```
-cf ba search-users <user_name>
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">O nome do usuário no {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
+<dd class="pd">O nome do usuário no {{site.data.keyword.Bluemix_notm}}. </dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">A permissão designada ao usuário. Por exemplo, superusuário, básico, catálogo, usuário e relatórios. Para obter mais informações sobre permissões de usuário designadas, consulte
+[Permissões](../../../admin/index.html#permissions). Não é possível usar esse parâmetro com o parâmetro de organização na mesma consulta. </dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">O nome da organização à qual o usuário pertence. Não é possível usar esse parâmetro com o parâmetro de organização na mesma consulta. </dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">A função de organização designada ao usuário. Por exemplo, gerente, gerente de faturamento ou auditor para a organização. Deve-se especificar a organização com esse parâmetro. Para obter mais
+informações sobre funções, consulte [Funções de usuário](../../../admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 
@@ -415,8 +424,8 @@ cf ba disable-service-plan <plan_identifier>
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você
-inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico",
-será solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será
+solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
 **Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
 serviços que estão disponíveis para esse serviço.</dd>
 </dl>
@@ -439,8 +448,8 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você
-inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico",
-será solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será
+solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
 **Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
 serviços que estão disponíveis para esse serviço.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
@@ -460,8 +469,8 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você
-inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico",
-será solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será
+solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
 **Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
 serviços que estão disponíveis para esse serviço.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
@@ -485,8 +494,8 @@ que você especifica no comando.
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">O nome ou o GUID do plano de serviço que você deseja ativar. Se você
-inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico",
-será solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
+inserir um nome de plano de serviço não exclusivo, por exemplo, "Padrão" ou "Básico", será
+solicitado que escolha a partir dos planos de serviços. Para identificar um nome do plano de serviço, selecione a categoria de serviço a partir da página inicial, em seguida, selecione
 **Incluir** para visualizar os serviços para essa categoria. Clique no nome do serviço para abrir a visualização de detalhes e, então, será possível visualizar os nomes dos planos de
 serviços que estão disponíveis para esse serviço.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>

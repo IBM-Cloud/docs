@@ -11,10 +11,10 @@ copyright:
 # Uso de Oracle JRE
 {: #using_oraacle_jre}
 
-*Última actualización: 21 de junio de 2016*
+Última actualización: 21 de junio de 2016
 {: .last-updated}
 
-Puede ejecutar la aplicación Liberty en Bluemix con el Oracle JRE si lo ha elegido. Para ello, debe
+Puede ejecutar la aplicación Liberty en Bluemix con el Oracle JRE si lo ha elegido.  Para ello, debe
 * alojar el JRE en una ubicación desde la que pueda descargarlo el paquete de compilación,
 * alojar un archivo index.yml que proporciona la ubicación del JRE de host, y
 * configurar la aplicación para utilizar dicho JRE.
@@ -22,8 +22,8 @@ Puede ejecutar la aplicación Liberty en Bluemix con el Oracle JRE si lo ha eleg
 ## Alojamiento del JRE e index.yml
 {: #hosting_jre}
 
-El archivo de Oracle JRE debe estar alojado en un servidor web, y el paquete de compilación de Liberty debe ser capaz de descargarlo desde dicho servidor. Puede alojarlo en el mismo Bluemix utilizando cualquiera de los recursos del servidor disponibles, o puede alojarlo en alguna ubicación disponible de forma pública. El servidor debe estar configurado con un archivo index.yml que especifique los detalles sobre el archivo JRE. Complete los pasos que se muestran a continuación para alojar el JRE e index.yml:
-  1. Adquiera el Oracle JRE. Tenga en cuenta que el JRE debe ser la versión para utilizarlo en un SO Unix de 64 bits, y que debe ser un archivo tar.gz.
+El archivo de Oracle JRE debe estar alojado en un servidor web, y el paquete de compilación de Liberty debe ser capaz de descargarlo desde dicho servidor. Puede alojarlo en el mismo Bluemix utilizando cualquiera de los recursos del servidor disponibles, o puede alojarlo en alguna ubicación disponible de forma pública.  El servidor debe estar configurado con un archivo index.yml que especifique los detalles sobre el archivo JRE. Complete los pasos que se muestran a continuación para alojar el JRE e index.yml:
+  1. Adquiera el Oracle JRE.  Tenga en cuenta que el JRE debe ser la versión para utilizarlo en un SO Unix de 64 bits, y que debe ser un archivo tar.gz.
   2. Aloje el archivo JRE en una ubicación desde la que el paquete de compilación de Liberty pueda descargarlo. 
   3. Asegúrese de que se proporciona un archivo index.yml en la ubicación de alojamiento. El archivo index.yml debe contener una entrada que conste del ID de versión del Oracle JRE seguido por dos puntos y el URL completo de la ubicación de dicho archivo de JRE. El formato del index.yml es:
 ```

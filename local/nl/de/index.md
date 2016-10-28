@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Letzte Aktualisierung: 16. August 2016*
+*Letzte Aktualisierung: 15. September 2016*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} Local bringt die Leistungsstärke und Beweglichkeit (der Geschäftsabläufe) der cloudbasierten {{site.data.keyword.Bluemix_notm}}-Plattform in Ihr Rechenzentrum. Mit {{site.data.keyword.Bluemix_notm}} Local können Sie die hochsensiblen Verarbeitungsprozesse hinter der Firewall des Unternehmens schützen und gleichzeitig eine sichere Verbindung und Synchronisation mit {{site.data.keyword.Bluemix_notm}} Public gewährleisten.
@@ -36,10 +36,10 @@ Darüber hinaus ist eine Reihe von Services als {{site.data.keyword.Bluemix_notm
 |Inbegriffen | [{{site.data.keyword.Bluemix_notm}}-Laufzeiten](../cfapps/runtimes.html) | Machen Sie mit Laufzeiten Ihre App schnell betriebsbereit, ohne Maschinen und Betriebssysteme einrichten und verwalten zu müssen. Alle {{site.data.keyword.Bluemix_notm}}-Laufzeiten stehen Ihnen zur Verwendung in Ihrer {{site.data.keyword.Bluemix_notm}} Local-Instanz zur Verfügung.|
 |Inbegriffen | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | Dynamisches Erhöhen oder Verringern der Rechenleistung Ihrer Anwendung basierend auf Richtlinien. Mit diesem Service können Sie Ihre {{site.data.keyword.Bluemix}} Local-Umgebung unbegrenzt nutzen.|
 |Optional | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} integriert {{site.data.keyword.APIM}} und IBM StrongLoop in ein einzelnes Angebot, das eine Komplettlösung bietet, um APIs und Microservices zu erstellen, auszuführen, zu verwalten und durchzusetzen. |
-|Optional | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | Verwenden Sie den {{site.data.keyword.APIMfull}}-Service zum Erstellen, Verwalten und Mitteilen von APIs. Sie können mit einer Proxy-URL oder durch Zusammenstellen von Daten aus HTTP-Datenquellen neue APIs mit Ressourcen importieren. Die Verwendung des {{site.data.keyword.APIM}}-Service bietet den Vorteil, dass Sie steuern können, wie Ihre APIs genutzt werden. |
-|Optional | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} bietet Zugriff auf eine vollständig verwaltete NoSQL-JSON-Datenebene, die permanent aktiv ist. Dieser Service ist mit CouchDB kompatibel und über eine einfache HTTP-Schnittstelle für mobile Anwendungsmodelle und Webanwendungsmodellezugänglich. Weitere Informationen finden Sie in der vollständigen [Dokumentation](http://docs.cloudant.com/BluemixLocal.html){: new_window} und in den [Hardwarevoraussetzung](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} für eine lokale Umgebung. |
-|Optional (Beta) | {{site.data.keyword.containershort}} | Docker-Container in {{site.data.keyword.Bluemix_notm}} Local ausführen. Container sind virtuelle Softwareobjekte, die alle für die Ausführung von Apps erforderlichen Elemente enthalten. Container bieten den Vorteil der Ressourcenisolation und -zuordnung, wobei sie besser portierbar und effizienter als beispielsweise virtuelle Maschinen sind. |
+|Optional | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} bietet Zugriff auf eine vollständig verwaltete NoSQL-JSON-Datenebene, die permanent aktiv ist. Dieser Service ist mit CouchDB kompatibel und über eine einfache HTTP-Schnittstelle für mobile Anwendungsmodelle und Webanwendungsmodelle zugänglich. Weitere Informationen finden Sie in der vollständigen [Dokumentation](http://docs.cloudant.com/BluemixLocal.html){: new_window} und in den [Hardwarevoraussetzung](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} für eine lokale Umgebung. |
+|Optional | [{{site.data.keyword.containershort}}](../containers/container_index.html)  | Docker-Container in {{site.data.keyword.Bluemix_notm}} Local ausführen. Container sind virtuelle Softwareobjekte, die alle für die Ausführung von Apps erforderlichen Elemente enthalten. Container bieten den Vorteil der Ressourcenisolation und -zuordnung, wobei sie besser portierbar und effizienter als beispielsweise virtuelle Maschinen sind. Informationen zu den Hardwarevoraussetzungen finden Sie unter [IBM {{site.data.keyword.containershort}} in {{site.data.keyword.Bluemix_notm}} Dedicated and Bluemix Local](../containers/container_dl.html). |
 |Optional | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | Dieser Service bietet ein speicherinternes Datengitter, durch das Szenarios mit verteiltem Caching für Ihre Apps unterstützt werden. Umfasst 50 GB speicherinternen Cache. |
+|Optional | [{{site.data.keyword.mobilepush}}](../services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} ist ein Service, mit dem Sie Benachrichtigungen an iOS- und Android-Geräte senden können. Benachrichtigungen können sich an alle Anwendungsbenutzer oder mithilfe von Tags an eine bestimmte Gruppe von Benutzern und Geräten wenden. Sie können Geräte, Tags und Abonnements verwalten. Sie können auch ein SDK (SDK, Software-Development-Kit) und REST-APIs (REST, Representational State Transfer; API, Application Program Interface) verwenden, um die Clientanwendung weiterzuentwickeln. |
 |Optional | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | Um die Redundanz zu erhöhen, stellt {{site.data.keyword.sescashort}} eine Replik für eine Sitzung bereit, die im Cache gespeichert ist. Daher kann Ihre Clientanwendung auch im Falle eines Spannungsabfalls oder einer Betriebsunterbrechung weiterhin auf die im Cache gespeicherte Sitzung zugreifen. Der Service unterstützt das Sitzungs-Caching für Webanwendungen und mobile Anwendungen. |
 |Optional | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | Dieser Service ermöglicht Ihren Apps die Kommunikation mit und die Nutzung der von Ihren verbundenen Geräten, Sensoren und Gateways erfassten Daten. Das lokale Basisangebot beinhaltet eine Startumgebung, die die Ausführung einer privaten Version von IBM {{site.data.keyword.iot_full}} in der lokalen Umgebung mit einer Kapazität für 100.000 gleichzeitig verbundene Geräte oder Anwendungen und 1,6 TB für den Datenaustausch ermöglicht. |
 
@@ -57,9 +57,10 @@ Durch optionale Komponenten, die zusätzlich zum Kauf angeboten werden, können 
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional - Kapazitätserweiterung auf 100.000 API-Aufrufe| Diese Erweiterung der {{site.data.keyword.apiconnect_short}} Professional-Umgebung bietet eine zusätzliche Kapazität von 100.000 API-Aufrufen pro Monat. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise - 25 Millionen API-Aufrufe | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.apiconnect_short}} mit einer Kapazität von 25 Millionen API-Aufrufen pro Monat. Richtet sich an API-Projekte auf Unternehmensebene. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise - Kapazitätserweiterung auf 100.000 API-Aufrufe | Diese Erweiterung der {{site.data.keyword.apiconnect_short}} Enterprise-Umgebung bietet eine zusätzliche Kapazität von 100.000 API-Aufrufen pro Monat. |
-|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} - Kapazitätserweiterung auf 500 API-Aufrufe | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.APIM}} for {{site.data.keyword.Bluemix_notm}} mit einer Kapazität von 500 API-Aufrufen pro Sekunde. |
-|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} Cluster | Diese Umgebung ermöglicht die Bereitstellung eines aus drei Knoten bestehenden Clusters des {{site.data.keyword.cloudant}}-Service. Die Datenkapazität der Knoten legen Sie durch die Infrastruktur fest, die Sie für die lokale Umgebung bereitstellen.  |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} Cluster | Diese Umgebung ermöglicht die Bereitstellung eines aus drei Knoten bestehenden Clusters des {{site.data.keyword.cloudant}}-Service. Die Datenkapazität der Knoten legen Sie durch die Infrastruktur fest, die Sie für die lokale Umgebung bereitstellen. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local - inkrementelle Erhöhung | Diese zusätzliche Umgebung zum {{site.data.keyword.iot_full}} Local-Basisserviceangebot ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.iot_full}} in der lokalen Umgebung mit einer Kapazität für 100.000 gleichzeitig verbundene Geräte oder Anwendungen und 0,5 TB für den Datenaustausch. |
+|IBM {{site.data.keyword.mobilepush}} Local | Eine Umgebung, die die Implementierung und Ausführung der {{site.data.keyword.mobilepush}}-Instanz mit der Möglichkeit, 300 Anfragen pro Sekunde zu akzeptieren, bietet. |
+|IBM {{site.data.keyword.mobilepush}} Local - Add-on-Instanz | Eine Umgebung, die die Implementierung und Ausführung der {{site.data.keyword.mobilepush}}-Instanz mit der Möglichkeit, 300 zusätzliche Anfragen pro Sekunde zu akzeptieren, bietet. |
 
 
 **Hinweis**: Für {{site.data.keyword.Bluemix_notm}} Local-Komponenten wird möglicherweise eine bestimmte konfigurierte Kapazität (z. B. Gigabyte oder Transaktionen pro Sekunde) angegeben. Da die tatsächliche Kapazität im realen Einsatz für eine bestimmte Konfiguration des Cloud-Service von vielen verschiedenen Faktoren abhängt, kann die tatsächliche Kapazität in der Praxis nach oben oder unten von der konfigurierten Kapazität abweichen.
@@ -78,7 +79,6 @@ Der syndizierte Katalog bietet die Funktion zum Erstellen von Hybridanwendungen,
 |{{site.data.keyword.alertnotificationshort}}		|Ja		|Ja			|Ja		|
 |{{site.data.keyword.appseccloudshort}}		|Ja		|Ja		|Ja |
 |{{site.data.keyword.hadoopst}}			|Ja		|Nein		|Nein |
-|{{site.data.keyword.APIM}}			|Ja		|Ja		|Ja |
 |{{site.data.keyword.rules_short}}		|Ja		|Ja		|Ja |
 |{{site.data.keyword.cloudant}}			|Ja		|Ja		|Ja |
 |{{site.data.keyword.conceptexpansionshort}}	|Ja		|Ja		|Ja|
@@ -350,7 +350,7 @@ Die finale Phase der Fertigstellung stellt das Ende der Beziehung zwischen Ihnen
 ## Infrastrukturanforderungen für {{site.data.keyword.Bluemix_notm}} Local
 {: #localinfra}
 
-Bei {{site.data.keyword.Bluemix_notm}} Local entscheiden Sie über die physische Sicherheit und die Hosting-Infrastruktur für die lokale Instanz. 
+Bei {{site.data.keyword.Bluemix_notm}} Local entscheiden Sie über die physische Sicherheit und die Hosting-Infrastruktur für die lokale Instanz.
 
 Die Mindestanforderungen für das Einrichten von {{site.data.keyword.Bluemix_notm}} Local sind von IBM wie im Folgenden angegeben festgelegt.
 
@@ -382,7 +382,7 @@ Datenspeicher verwenden, muss das Präfix bei diesen Datenspeichern übereinstim
 </dd>
 <dt>**Hochverfügbarkeit**</dt>
 <dd>
-Um den Ausfall eines einzelnen Knotens auffangen zu können, müssen Sie über n+1 ESXi-Server verfügen. Wenn der Bedarf an 32 Kernen und 512 GB Speicher durch ESXi-Server mit 2 x 16 Kernen und 256 GB Speicher gedeckt wird, benötigen Sie drei dieser Server, um den vollständigen Ausfall eines einzelnen Knotens auffangen zu können.
+Um den Ausfall eines einzelnen Knotens auffangen zu können, müssen Sie über n+1 ESXi-Server verfügen. Wenn der Bedarf an 32 Kernen und 512 GB Speicher durch ESXi-Server mit 2 x 16 Kernen und 256 GB Speicher gedeckt wird, benötigen Sie drei dieser Server, um den vollständigen Ausfall eines einzelnen Knotens auffangen zu können. 
 <p><strong>Hinweis:</strong> Der VMware-Administrator beim Kunden kann über ein striktes Durchsetzen der automatischen Funktionsübernahme für hohe Verfügbarkeit im Cluster entscheiden, die die Verfügbarkeit der Ressourcen garantiert. Wenn Sie ohne die automatische Funktionsübernahme für hohe Verfügbarkeit fortfahren, wird der Ressourcenbedarf von mindestens 32 Kernen und 512 GB Speicher erfüllt.</p>
 </dd>
 <dt>**Netz**</dt>
@@ -523,7 +523,7 @@ Das {{site.data.keyword.Bluemix_notm}}-Operationsteam überwacht die Umgebung au
 
 {{site.data.keyword.Bluemix_notm}} bemüht sich darum, die Kompatibilität der lokalen Umgebungen mit den neuesten ESXi- und vCenter-Versionen zu gewährleisten. Es kann jedoch vorkommen, dass die neuesten ESXi- und vCenter-Versionen für kurze Zeit nicht unterstützt werden. Vor der Anwendung von Aktualisierungen können Sie die neuesten kompatiblen Versionen der Dokumentation zu den [Anforderungen an die lokale Infrastruktur](../local/index.html#localinfra) entnehmen.
 
-## Intervention und Unterstützung bei Vorfällen
+## Intervention und Unterstützung bei Vorfällen für {{site.data.keyword.Bluemix_notm}} Local
 {: #incidentresponse}
 
 ### Von Kunden erkannte Probleme
@@ -544,7 +544,7 @@ Die Behebung des Problems erfolgt je nach Problem entweder durch Sie selbst, dur
 
 **Hinweis:** Support-Tickets der Priorität 1 werden 24 Stunden täglich und 7 Tage die Woche überwacht. Andere Ticket werden in der Zeit zwischen Sonntag 22:00 Uhr GMT und Samstag 12:00 GMT bearbeitet. Weitere Informationen zu Prioritätsstufen von Support-Tickets sowie zur Zusammenarbeit mit dem Support finden Sie unter <a href="../support/index.html#contacting-bluemix-support-local">Support kontaktieren</a>.
 
-## Disaster-Recovery
+## Disaster-Recovery for {{site.data.keyword.Bluemix_notm}} Local
 {: #dr}
 
 Disaster Recovery für {{site.data.keyword.Bluemix_short}} Local kann auf ähnliche Weise konfiguriert werden wie bei der Verwendung von {{site.data.keyword.Bluemix_short}} Public. {{site.data.keyword.Bluemix_short}} Public bietet eine fortlaufend verfügbare Plattform für Innovationen mit mehreren sichern Kennzahlen, die sicherstellen, dass Ihre Organisationen, Bereiche und Apps immer verfügbar sind. Durch das Bereitstellen von Apps in mehreren geografischen Regionen lässt sich eine kontinuierliche Verfügbarkeit realisieren, die vor einem ungeplanten, gleichzeitigen Ausfall mehrerer Hardware- und Softwarekomponenten bzw. dem Ausfall eines gesamten Rechenzentrums schützt. Auf diese Weise sind selbst im Fall einer Naturkatastrophe an einem spezifischen Standort die verteilten Instanzen der {{site.data.keyword.Bluemix_notm}} Public-App an anderen Standorten weiterhin verfügbar.

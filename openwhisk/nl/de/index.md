@@ -16,11 +16,11 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# Einführung in {{site.data.keyword.openwhisk_short}}
-Letzte Aktualisierung: 4. August 2016
+# Einführung in {{site.data.keyword.openwhisk_short}} (Beta)
+Letzte Aktualisierung: 9. September 2016
 {: .last-updated}
 
-{{site.data.keyword.openwhisk}} ist ein verteilter, ereignisgesteuerter Berechnungsservice. {{site.data.keyword.openwhisk_short}} führt Anwendungslogik in Reaktion auf Ereignisse oder direkte Aufrufe durch Web-Apps oder mobile Apps über HTTP aus. Ereignisse können von Bluemix-Services wie Cloudant und von externen Quellen bereitgestellt werden. Entwickler können sich auf das Schreiben von Anwendungslogik sowie auf das Erstellen von Aktionen, die auf Anforderung ausgeführt werden, konzentrieren. Die Rate der Ausführung von Aktionen entspricht immer der Ereignisrate, sodass sich eine inhärente Skalierung und Ausfallsicherheit sowie eine optimale Auslastung ergeben. Sie bezahlen nur für das, was Sie nutzen, und Sie brauchen keinen Server zu verwalten. Sie können darüber hinaus den [Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
+{{site.data.keyword.openwhisk}} ist ein verteilter, ereignisgesteuerter Berechnungsservice (auch serverunabhängiges Computing oder Function as a Service (FaaS)), der Code in Reaktion auf Ereignisse oder direkte Aufrufe über das Web oder mobile Apps über HTTP ausführt.Ereignisse können von Bluemix-Services wie Cloudant und von externen Quellen bereitgestellt werden. Entwickler können sich auf das Schreiben von Anwendungslogik sowie auf das Erstellen von Aktionen, die auf Anforderung ausgeführt werden, konzentrieren. Die Rate der Ausführung von Aktionen entspricht immer der Ereignisrate, sodass sich eine inhärente Skalierung und Ausfallsicherheit sowie eine optimale Auslastung ergeben. Sie bezahlen nur für das, was Sie nutzen, und Sie brauchen keinen Server zu verwalten. Sie können darüber hinaus den [Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
 {: shortdesc}
 
 Weitere Einzelheiten zur Funktionsweise von {{site.data.keyword.openwhisk_short}} finden Sie unter [Informationen zu {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
@@ -28,10 +28,14 @@ Weitere Einzelheiten zur Funktionsweise von {{site.data.keyword.openwhisk_short}
 ## {{site.data.keyword.openwhisk_short}}-CLI einrichten
 {: #openwhisk_start_configure_cli}
 
-Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten. Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor.  
+Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten. 
+Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor. 
 
-**Hinweis zu veralteten Versionen:** Es ist eine neue Befehlszeilenschnittstelle (CLI) verfügbar, für die Python nicht installiert sein muss.
-Die vorherige Befehlszeilenschnittstelle (Python-basiert) ist nun veraltet und steht nur noch als Backup-Downloadoption zur Verfügung. Zur Verwendung der veralteten Befehlszeilenschnittstelle muss Python 2.7 auf Ihrem System installiert sein. 
+### CLI für die Verwendung eines HTTPS-Proxy konfigurieren
+
+Die CLI kann so eingerichtet werden, dass ein HTTPS-Proxy verwendet werden kann. Um einen HTTPS-Proxy einzurichten, muss die Umgebungsvariable `HTTPS_PROXY` erstellt werden erstellt werden. Die Variable muss auf die Adresse des HTTPS-Proxy festgelegt werden und der Port muss das folgende Format haben:
+`{PROXY IP}:{PROXY PORT}`.
+
 
 Nach der Einrichtung von {{site.data.keyword.openwhisk_short}} mithilfe der Befehlszeilenschnittstelle können Sie mit der Verwendung über die Befehlszeile beginnen.
 
@@ -54,7 +58,8 @@ Sie können {{site.data.keyword.openwhisk_short}} mithilfe des {{site.data.keywo
 ## REST-APIs mit {{site.data.keyword.openwhisk_short}} verwenden
 {: #openwhisk_start_using_restapi}
 
-Nach der Einrichtung Ihrer {{site.data.keyword.openwhisk_short}}-Umgebung können Sie {{site.data.keyword.openwhisk_short}} mit Ihren Web-Apps oder mobilen Apps mithilfe von REST-API-Aufrufen verwenden. Weitere Details zu den APIs für Aktionen, Aktivierungen, Pakete, Regeln und Auslöser finden Sie in der [API-Dokumentation für {{site.data.keyword.openwhisk_short}}](https://new-console.{DomainName}/apidocs/98).
+Nach der Einrichtung Ihrer {{site.data.keyword.openwhisk_short}}-Umgebung können Sie {{site.data.keyword.openwhisk_short}} mit Ihren Web-Apps oder mobilen Apps mithilfe von REST-API-Aufrufen verwenden.
+Weitere Details zu den APIs für Aktionen, Aktivierungen, Pakete, Regeln und Auslöser finden Sie in der [API-Dokumentation für {{site.data.keyword.openwhisk_short}}](https://new-console.{DomainName}/apidocs/98).
 
 ## {{site.data.keyword.openwhisk_short}}-Beispiel Hello World
 {: #openwhisk_start_hello_world}
@@ -78,14 +83,14 @@ Führen Sie die folgenden Schritte aus, um dieses Beispiel zu verwenden:
 2. Erstellen Sie die Aktion, indem Sie über die Befehlszeile der {{site.data.keyword.openwhisk_short}}-CLI den folgenden Befehl eingeben:
 
     ```
-wsk action create hello hello.js
+    wsk action create hello hello.js
     ```
     {: pre}
 
 3. Rufen Sie anschließend die Aktion auf, indem Sie die folgenden Befehle eingeben.
 
     ```
-wsk action invoke hello --blocking --result
+    wsk action invoke hello --blocking --result
     ```
     {: pre}  
 
@@ -99,7 +104,7 @@ wsk action invoke hello --blocking --result
     {: screen}
 
     ```
-wsk action invoke hello --blocking --result --param name Fred
+    wsk action invoke hello --blocking --result --param name Fred
     ```
     {: pre}  
 

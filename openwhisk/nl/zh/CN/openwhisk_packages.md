@@ -43,15 +43,18 @@ wsk package list /whisk.system
   ```
   {: pre}
   ```
-packages
-  /whisk.system/alarms                                              shared
-  /whisk.system/cloudant                                            shared
-  /whisk.system/github                                              shared
-  /whisk.system/samples                                             shared
-  /whisk.system/slack                                               shared
-  /whisk.system/util                                                shared
-  /whisk.system/watson                                              shared
-  /whisk.system/weather                                             shared
+  packages
+  /whisk.system/cloudant                                                 shared
+  /whisk.system/alarms                                                   shared
+  /whisk.system/watson                                                   shared
+  /whisk.system/websocket                                                shared
+  /whisk.system/weather                                                  shared
+  /whisk.system/system                                                   shared
+  /whisk.system/utils                                                    shared
+  /whisk.system/slack                                                    shared
+  /whisk.system/samples                                                  shared
+  /whisk.system/github                                                   shared
+  /whisk.system/pushnotifications                                        shared
   ```
   {: screen}
 
@@ -166,11 +169,11 @@ wsk package get --summary valhallaSamples
   ```
   {: pre}
   ```
-package /myNamespace/valhallaSamples
-   action /myNamespace/valhallaSamples/greeting: Print a friendly greeting
-   action /myNamespace/valhallaSamples/wordCount: Count words in a string
-   action /myNamespace/valhallaSamples/helloWorld: Print to the console
-   action /myNamespace/valhallaSamples/echo: Returns the input arguments, unchanged
+  package /myNamespace/valhallaSamples
+   action /myNamespace/valhallaSamples/greeting：返回友好的问候
+   action /myNamespace/valhallaSamples/wordCount：统计字符串中的字数
+   action /myNamespace/valhallaSamples/helloWorld：演示日志记录工具
+   action /myNamespace/valhallaSamples/curl：对主机 URL 执行 Curl
   ```
   {: screen}
 

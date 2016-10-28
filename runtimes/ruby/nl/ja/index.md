@@ -11,7 +11,7 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*最終更新日: 2016 年 7 月 6 日*
+最終更新日: 2016 年 7 月 6 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Ruby ランタイムには ruby_buildpack が採用されています。
@@ -32,7 +32,7 @@ ruby_buildpack は、アプリケーションのルート・ディレクトリ�
 
 
 ```
-source 'https://rubygems.org'
+  source 'https://rubygems.org'
   ruby '2.1.7'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'

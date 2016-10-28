@@ -37,7 +37,7 @@ Bluemix 開発モード・コマンド・ライン・インターフェース (d
 
 dev_mode コマンド・ライン・ツールのインストールには、以下の方法のいずれかを使用します。
 - ローカルでインストールする。
-  1. [IBM Bluemix CLI Plugin Repository](http://plugins.{DomainName})から、ご使用のプラットフォームに合った dev_mode プラグインをダウンロードします。
+  1. [IBM Bluemix CLI Plugin Repository](http://plugins.ng.bluemix.net)から、ご使用のプラットフォームに合った dev_mode プラグインをダウンロードします。
   2. dev_mode プラグインが保存されているフォルダーに移動し、cf install-plugin コマンドを使用して dev_mode プラグインをインストールします。例えば次のようにします。 
   
         ```

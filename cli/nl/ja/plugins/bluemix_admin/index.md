@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-最終更新日: 2016 年 8 月 17 日
+最終更新日: 2016 年 9 月 1 日
 {: .last-updated}
 
 
@@ -43,11 +43,11 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">ご使用の {{site.data.keyword.Bluemix_notm}} インスタンス用 URL のサブドメインです。例えば、<code>https://console.mycompany.bluemix.net/cli</code> などです。</dd>
+<dd class="pd">ご使用の {{site.data.keyword.Bluemix_notm}} インスタンス用 URL のサブドメインです。例えば、<code>https://console.mycompany.bluemix.net/cli</code> です。</dd>
 </dl>
 </li>
 <li>{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインをインストールするには、以下のコマンドを実行します:<br/><br/> <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
@@ -61,7 +61,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 ## {{site.data.keyword.Bluemix_notm}} 管理
 CLI プラグインの使用
 
-{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用すると、ユーザーの追加と削除、組織へのユーザーの割り当てと割り当て解除、といった管理タスクを実行できます。コマンドのリストを表示するには、次のコマンドを実行します。
+{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用すると、ユーザーの追加と削除、組織へのユーザーの割り当てと割り当て解除、といった管理タスクを実行できます。組織名、スペース名、およびアプリケーション・セキュリティー・グループを作成するときに特殊文字 (スペース、正符号 (+)、アンパーサンド (&) など) はサポートされていません。一部を大文字にしたり下線を使用したりして、固有の名前を作成してください。
+
+コマンドのリストを表示するには、次のコマンドを実行します。
 
 
 ```
@@ -118,18 +120,23 @@ cf ba add-user <user_name> <organization>
 
 ### ユーザーの検索
 
-ユーザーを検索できます。次のコマンドを入力します。
-
+ユーザーを検索できます。必要に応じてオプションの検索フィルター・パラメーター (name、permission、organization、および role) を指定して、以下のコマンドを入力してください。
 
 ```
-cf ba search-users <user_name>
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 内のユーザーの名前。</dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">ユーザーに割り当てられた許可。例えば、superuser、basic、catalog、user、および reports です。割り当てられたユーザー許可について詳しくは、『[許可](../../../admin/index.html#permissions)』を参照してください。同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。</dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">ユーザーが所属する組織の名前。同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。</dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">ユーザーに割り当てられた、組織の役割。例えば、組織の管理者、請求管理者、または監査員です。このパラメーターと一緒に組織を指定する必要があります。役割について詳しくは、『[ユーザー役割](../../../admin/users_roles.html#userrolesinfo)』を参照してください。</dd>
 
 </dl>
 

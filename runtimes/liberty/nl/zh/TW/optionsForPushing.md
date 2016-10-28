@@ -12,7 +12,7 @@ copyright:
 # 推送 Liberty 應用程式的選項
 {: #options_for_pushing}
 
-*前次更新：2016 年 6 月 10 日*
+前次更新：2016 年 6 月 10 日
 {: .last-updated}
 
 Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建置套件可以為特定的應用程式類別提供完整的運行環境。

@@ -14,7 +14,7 @@ copyright:
 #监视和日志记录
 {: #monitoringandlogging}
 
-*上次更新时间：2016 年 7 月 1 日*
+上次更新时间：2016 年 9 月 2 日
 {: .last-updated}
 
 通过监视应用程序和复查日志，您可以跟进应用程序的执行和数据流，从而更好地了解部署情况。此外，还可以减少找到任何问题并进行修复所需的时间和精力。
@@ -49,6 +49,11 @@ copyright:
 {: #logging_for_bluemix_apps}
 
 使用 Cloud Foundry 基础架构在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，会自动创建日志文件。在从部署到运行时的任何阶段遇到错误时，都可以检查日志，以获取可能有助于解决问题的线索。
+
+###日志保留时间
+{: #log_retention}
+
+* 在 Bluemix Cloud Foundry 应用程序中，缺省情况下日志数据存储 30 天。
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -134,7 +139,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 
 要查看部署或运行时日志，请完成以下步骤：
 1. 登录到 {{site.data.keyword.Bluemix_notm}}，然后在“仪表板”上单击应用程序的磁贴。这将显示应用程序详细信息页面。
-2. 在左侧导航栏中，单击**日志**。
+2. 在导航栏中，单击**日志**。
 
 在**日志**控制台中，可以查看应用程序最近的日志或实时查看尾部日志。此外，可以按日志类型和通道来过滤日志。
 
@@ -201,7 +206,8 @@ cf logs appname --recent | cut -c 29-40,46-
 ```
 
 有关 **grep** 选项的更多信息，请键入 cut --help。
-* 要显示包含特定关键字的日志条目，请使用 **grep** 选项。例如，要显示包含关键字 [APP 的日志条目，可以使用以下命令：
+* 要显示包含特定关键字的日志条目，请使用 **grep** 选项。例如，要显示包含关键字 `[APP` 的日志条目，可以使用以下命令：
+
 ```
 cf logs appname --recent | grep '\[App'
 ```
@@ -222,15 +228,15 @@ cf logs appname --recent | grep '\[App'
 
   2. 创建用户提供的服务实例。
      
-	 使用 ```cf create-user-provided-service``` 命令（或此命令的简短版本 ```cups```）来创建用户提供的服务实例： 
+	 使用 `cf create-user-provided-service` 命令（或此命令的简短版本 `cups`）来创建用户提供的服务实例： 
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```
-	 **service_name**
+	 &lt;service_name&gt;
 	 
 	 用户提供的服务实例的名称。
 	 
-	 **logging_endpoint**
+	 &lt;logging_endpoint&gt;
 	 
 	 {{site.data.keyword.Bluemix_notm}} 向其发送日志的日志记录端点。请参阅下表，以将 *logging_endpoint* 替换为您的值：
 	 
@@ -265,17 +271,17 @@ cf logs appname --recent | grep '\[App'
 	 使用以下命令将服务实例绑定到应用程序： 
 	
 	 ```
-	 cf bind-service appname <service_name>
-	```
-	 **appname**
+	 cf bind-service <appname> <service_name>
+	 ```
+	 &lt;appname&gt;
 	 
 	 应用程序的名称。
 	 
-	 **service_name**
+	 &lt;service_name&gt;
 	 
 	 用户提供的服务实例的名称。
 	 
-  4. 重新编译打包应用程序。键入 ```cf restage appname``` 以使更改生效。 
+  4. 重新编译打包应用程序。键入 `cf restage appname` 以使更改生效。 
 
 #### 查看外部主机中的日志
 {: #viewing_logs_external}
@@ -343,7 +349,7 @@ dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
 		
   2. Jane 配置 Splunk 设置，以从 {{site.data.keyword.Bluemix_notm}} 接受 syslog 漏出。她必须针对 syslog 漏出创建数据输入。
 
-     a. 在 Splunk Web 界面的左侧，Jane 单击**数据 > 数据输入**。此时将显示 Splunk 支持的输入类型列表。 
+     a. 在 Splunk Web 界面中，Jane 单击**数据 > 数据输入**。此时将显示 Splunk 支持的输入类型列表。 
 	 
      b. 她选择 **TCP**，因为 syslog 漏出使用 TCP 协议。
 	 

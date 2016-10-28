@@ -1006,7 +1006,7 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
 
 <strong>範例</strong>：
 
-以 `OrgManager` 角色，從組織 `IBM` 中移除使用者 `Mary`：
+以 `OrgManager` 角色，從組織 `IBM` 移除使用者 `Mary`：
 
 ```
 bluemix iam org-role-unset Mary IBM OrgManager
@@ -1102,7 +1102,7 @@ bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 
 <strong>範例</strong>：
 
-以 `SpaceManager` 角色，從組織 `IBM` 和空間 `Cloud` 中移除使用者 `Mary`：
+以 `SpaceManager` 角色，從組織 `IBM` 和空間 `Cloud` 移除使用者 `Mary`：
 
 ```
 bluemix iam space-role-unset Mary IBM Cloud SpaceManager
@@ -1800,7 +1800,7 @@ bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ## bluemix plugin repo-remove
 {: #bluemix_plugin_repo_remove}
 
-從 {{site.data.keyword.Bluemix_notm}} CLI 中移除外掛程式儲存庫。
+從 {{site.data.keyword.Bluemix_notm}} CLI 移除外掛程式儲存庫。
 
 ```
 bluemix plugin repo-remove REPO_NAME
@@ -1816,7 +1816,7 @@ bluemix plugin repo-remove REPO_NAME
 
 <strong>範例</strong>：
 
-從 {{site.data.keyword.Bluemix_notm}} CLI 中移除 `bluemix-repo` 儲存庫：
+從 {{site.data.keyword.Bluemix_notm}} CLI 移除 `bluemix-repo` 儲存庫：
 
 ```
 bluemix plugin repo-remove bluemix-repo
@@ -1983,7 +1983,7 @@ bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
 
    <dl>
    <dt>--no-stdin（選用）</dt>
-   <dd>不包括標準輸入。</dd>
+   <dd>不要包含標準輸入。</dd>
    <dt>--sig-proxy（選用）</dt>
    <dd>將所有接收到的信號 Proxy 到處理程序。預設值為 <i>true</i>。</dd>
    <dt>CONTAINER（必要）</dt>
@@ -2217,7 +2217,7 @@ bluemix ic group-create --name GROUP_NAME [--memory,-m MEMORY_SIZE] [-n,--hostna
    <dd>通常網域為 <i>.mybluemix.net</i>。主機與網域會合併，以構成完整公用路徑 URL，例如 <i>http://mycontainerhost.mybluemix.net</i>。在使用 <i>bluemix ic group-inspect</i> 指令檢閱容器群組的詳細資料時，主機與網域會一起列出，作為路徑。</dd>
    
    <dt>-e <i>ENV_KEY=ENV_VAL</i>|--env <i>ENV_KEY=ENV_VAL</i>（選用）</dt>
-   <dd>設定環境變數。個別列出多個索引鍵。如果包括引號，請用它們括住環境變數名稱及值。例如：`-e "key1=value1" -e "key2=value2" -e "key3=value3"`。下表顯示一些您可以指定的常用環境變數：</dd>
+   <dd>設定環境變數。個別列出多個索引鍵。如果包含引號，請用它們括住環境變數名稱及值。例如：`-e "key1=value1" -e "key2=value2" -e "key3=value3"`。下表顯示一些您可以指定的常用環境變數：</dd>
     </dl>
  
 
@@ -2262,10 +2262,10 @@ bluemix ic group-create --name GROUP_NAME [--memory,-m MEMORY_SIZE] [-n,--hostna
    <dd>建立容器群組並啟用自動回復後，IBM Containers 會對所指派的埠提出 HTTP 要求，以檢查每個實例的性能。<br>
 如果您未在兩個後續 90 秒間隔內收到來自容器實例的回應，則會移除實例，並將其取代為新的實例。如果容器回應，則不需要採取任何動作。此處理程序會不斷地重複。在 30 分鐘時間範圍期間，如果本身為群組成員的不同容器總數等於或超出觀察到的群組大小上限的 3 倍，則會永久停用容器群組的自動回復。若要重新啟用自動回復，您必須重建容器群組。</dd>
   <dt>--anti（選用）</dt>
-  <dd> 使用互斥，讓容器群組更高度可用。--anti 選項會強制將群組中的每個容器實例放在不同的實體運算節點上，這樣可減少群組中所有容器因硬體故障而損毀的機會。您可能無法搭配使用此選項與較大的群組大小，因為每一個 Bluemix 地區及組織都有有限的一組運算節點可進行部署。如果您的部署失敗，請減少群組中的容器實例數，或移除 --anti 選項。</dd>
+  <dd> 使用互斥，讓容器群組更高度可用。--anti 選項會強制將群組中的每個容器實例放在不同的實體運算節點上，這樣可減少群組中所有容器因硬體故障而損毀的機會。您可能無法搭配使用此選項與較大的群組大小，因為每一個 Bluemix 地區及組織可用來進行部署的運算節點集有限。如果您的部署失敗，請減少群組中的容器實例數，或移除 --anti 選項。</dd>
     
    <dt>--bind SERVICE_INSTANCE_NAME（選用）</dt>
-   <dd> 將服務新增至執行中容器群組。</dd>
+   <dd> 將服務新增至執行中的容器群組。</dd>
    
    <dt>CMD（選用）</dt>
    <dd>傳遞給容器群組執行的指令及引數。這個指令必須是長時間執行的指令。請不要使用不會執行很久的短期指令（例如，<i>/bin/date</i>），因為短期指令可能會導致容器損毀。<br> <strong>附註：</strong> <ul>
@@ -2324,7 +2324,7 @@ bluemix ic group-update [--min MIN_INSTANCE_COUNT] [--max MAX_INSTANCE_COUNT] [-
 
    <dl>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>（選用）</dt>
-   <dd>設定環境變數。個別列出多個索引鍵。如果包括引號，請用它們括住環境變數名稱及值。例如：`-e "key1=value1" -e "key2=value2" -e "key3=value3"`。</dd>
+   <dd>設定環境變數。個別列出多個索引鍵。如果包含引號，請用它們括住環境變數名稱及值。例如：`-e "key1=value1" -e "key2=value2" -e "key3=value3"`。</dd>
     </dl>
    <dl>
    <dt>GROUP_NAME（必要）</dt>
@@ -2343,7 +2343,7 @@ bluemix ic group-update --max 5 my_group
 ## bluemix ic group-remove
 {: #bluemix_ic_group_remove}
 
-從組織的專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中移除容器群組。
+從組織的專用 {{site.data.keyword.Bluemix_notm}} 儲存庫移除容器群組。
 
 ```
 bluemix ic group-remove [-f|--force] GROUP_NAME [GROUP_NAME2 [...]]
@@ -2461,7 +2461,7 @@ bluemix ic ips [-q]
 
    <dl>
    <dt>-q（選用）</dt>
-   <dd>若沒有連結至那些 IP 位址的容器的 ID，則僅會列出 IP 位址。</dd>
+   <dd>只列出 IP 位址，而不含連結至那些 IP 位址之容器的 ID。</dd>
    </dl>
 
 
@@ -2487,7 +2487,7 @@ bluemix ic ip-request [-q]
 
    <dl>
    <dt>-q（選用）</dt>
-   <dd>若沒有連結至那些 IP 位址的容器的 ID，則僅會列出 IP 位址。</dd>
+   <dd>只列出 IP 位址，而不含連結至那些 IP 位址之容器的 ID。</dd>
    </dl>
 
 
@@ -2796,7 +2796,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ## bluemix ic unprovision
 {: #bluemix_ic_unprovision}
 
-從您已登入的 Bluemix 空間中刪除 IBM Containers 服務。
+從您已登入的 Bluemix 空間刪除 IBM Containers 服務。
 
 <strong>注意</strong>：當您執行此指令時，會遺失您的所有單一容器及容器群組。您的空間仍可在 Bluemix 中使用。若要重新開始使用 IBM Containers，您必須執行 bluemix ic provision 來重新佈建 IBM Containers 服務。
 
@@ -2805,7 +2805,7 @@ bluemix ic reprovision [--force|-f]
 ```
 <strong>指令選項</strong>：<dl>
    <dt>--force|-f（選用）</dt>
-   <dd>強制從 Bluemix 空間中刪除 Bluemix。</dd>
+   <dd>強制從 Bluemix 空間刪除 IBM Containers 服務。</dd>
  </dl>
  
 ## bluemix ic restart
@@ -3218,7 +3218,7 @@ bluemix ic top my_container
 ## bluemix ic service-bind
 {: #bluemix_ic_service-bind}
 
-將服務新增至執行中容器群組。此指令僅適用於容器群組。單一容器必須在執行 bluemix ic run 指令時連結服務。 
+將服務新增至執行中的容器群組。此指令僅適用於容器群組。單一容器必須在執行 bluemix ic run 指令時連結服務。 
 
 ```
 bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE 
@@ -3235,7 +3235,7 @@ bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE
 ## bluemix ic service-unbind
 {: #bluemix_ic_service-unbind}
 
-從執行中容器群組中移除服務。此指令僅適用於容器群組。單一容器必須移除容器，並在沒有服務的情況下建立新的容器。
+從執行中的容器群組移除服務。此指令僅適用於容器群組。單一容器必須移除容器，並在沒有服務的情況下建立新的容器。
 
 ```
 bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE 
@@ -3367,7 +3367,7 @@ bluemix ic volume-space-add VOLUME_NAME SPACE_NAME [SPACE2_NAME [...]]
 ## bluemix ic volume-space-remove
 {: #bluemix_ic_volume_space_remove}
 
-從磁區中移除空間
+從磁區移除空間
 
 ```
 bluemix ic volume-space-remove VOLUME_NAME SPACE_NAME [SPACE2_NAME [...]]
@@ -3516,7 +3516,7 @@ bluemix ic wait my_container
 ## bluemix ic wait-status
 {: #bluemix_ic_wait_status}
 
-等待單一容器或容器群組達到非暫時性狀態。在此等待時間，您的指令行未返回，因此您無法輸入指令。只要容器達到非暫時性狀態，就會顯示 OK 訊息。若為單一容器，非暫時性狀態包括 Running、Shutdown、Crashed、Paused 或 Suspended。若為容器群組，非暫時性狀態包括 CREATE_COMPLETE、UPDATE_COMPLETE 或 FAILED
+等待單一容器或容器群組達到非暫時性狀態。在此等待時間，您的指令行不會返回，因此您無法輸入指令。只要容器達到非暫時性狀態，就會顯示 OK 訊息。若為單一容器，非暫時性狀態包括 Running、Shutdown、Crashed、Paused 或 Suspended。若為容器群組，非暫時性狀態包括 CREATE_COMPLETE、UPDATE_COMPLETE 或 FAILED
 
 ```
 bluemix ic wait-status CONTAINER

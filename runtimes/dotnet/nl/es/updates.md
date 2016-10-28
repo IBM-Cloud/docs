@@ -11,9 +11,14 @@ copyright:
 # Últimas actualizaciones para el paquete de compilación de ASP.NET Core
 {: #latest_updates}
 
-*Última actualización: 07 de julio de 2016*
+Última actualización: 26 de agosto de 2016
 
 Una lista de las últimas actualizaciones del paquete de compilación de aspnet.
+
+## 31 de agosto de 2016: Se ha actualizado el paquete de compilación de ASP.NET Core v1.0-20160826-1345
+
+* Añada soporte para ejecutar scripts previos y posteriores a la compilación utilizando NPM y Bower para instalar bibliotecas css y javascript de interfaz de usuario.
+* Mueva el paquete de compilación del estado Beta al estado GA
 
 ## 11 de julio de 2016: Se ha actualizado el paquete de compilación de ASP.NET Core v0.9-20160706-1603
 

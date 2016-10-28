@@ -163,7 +163,6 @@ Wenn Sie nicht Benutzer zu Ihrer Organisation einladen können und zum Einladen 
 {: tsResolve}
 
   1. Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg) in der Menüleiste und wählen Sie **Organisationen verwalten** aus. n ausgeführt werden.
-
   2. Wechseln Sie zu Ihrer Organisation und zeigen Sie die Informationen zum Organisationsmanager in der Registerkarte **Benutzer** an.  
   
 Wenn Sie nicht die Möglichkeit haben, Benutzer einzuladen, weil Sie ein Mitarbeiter und kein Mitglied sind, müssen Sie Ihr vorheriges {{site.data.keyword.Bluemix_notm}}-Konto löschen und anschließend eingeladen werden, als Mitglied der Organisation am Konto teilzunehmen. Um Ihr vorheriges Konto zu löschen und dem Konto als Mitglied beizutreten, führen Sie die folgenden Schritte durch: 
@@ -330,7 +329,7 @@ Bei der Wiederverwendung des App-Namens wird die folgende Nachricht angezeigt:
 Beim Löschen einer App wird die zugehörige Route (URL für die App) nicht automatisch gelöscht. Deshalb kann sie nicht wiederverwendet werden. Sie müssen den Bereich aufrufen, in dem die App erstellt wurde, um die Route zu löschen.
 {: tsCauses}
 
-Führen Sie die folgenden Schritte aus, um die nicht verwendete Route zu löschen:
+Führen Sie die folgenden Schritte aus, um die nicht verwendete Route zu löschen: 
 {: tsResolve}
 
   1. Stellen Sie fest, ob die Route zum aktuellen Bereich gehört. Geben Sie dazu den folgenden Befehl ein: 
@@ -345,8 +344,8 @@ Führen Sie die folgenden Schritte aus, um die nicht verwendete Route zu lösche
      ```
 	 cf delete-route domain_name -n host_name
 	 ```
-	 Beispiel: 	
-```
+	 Beispiel:
+	 ```
 	 cf delete-route mybluemix.net -n app001
 	 ```
 
@@ -360,24 +359,24 @@ Führen Sie die folgenden Schritte aus, um die nicht verwendete Route zu lösche
 ## Abrufen von Bereichen in Organisation nicht möglich
 {: #ts_retrieve_space}
 
-Sie können eine App oder einen Service nicht erstellen, wenn der derzeitigen Organisation kein Bereich zugeordnet ist. 
+Sie können eine App oder einen Service nicht erstellen, wenn der derzeitigen Organisation kein Bereich zugeordnet ist.
 
 Bei dem Versuch, in Bluemix eine Anwendung zu erstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
 
 `BXNUI0515E: Die Bereiche in der Organisation wurden aufgrund eines Netzverbindungsproblems nicht abgerufen.`
 
-Dieser Fehler tritt oft auf, wenn Sie zum ersten Mal versuchen, im Katalog eine App oder einen Service zu erstellen, wenn noch kein Bereich erstellt wurde.
+Dieser Fehler tritt oft auf, wenn Sie zum ersten Mal versuchen, im Katalog eine App oder einen Service zu erstellen, wenn noch kein Bereich erstellt wurde. 
 {: tsCauses}
 
-Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erstellt haben. Wenden Sie eine der folgenden Methoden an,
-um einen Bereich zu erstellen: 
+Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erstellt haben.  Wenden Sie eine der folgenden Methoden an,
+um einen Bereich zu erstellen:
 {: tsResolve}
 
   * Klicken Sie auf das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg), um das Widget 'Konto und Unterstützung' zu öffnen. Wählen Sie die Organisation aus, in der Sie den Bereich erstellen möchten, und klicken Sie anschließend auf **Bereich erstellen**.
-  * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`. 
+  * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`.
 
-Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt. 
+Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt.
 
 
 
@@ -407,7 +406,7 @@ Sie verfügen nicht über die erforderliche Berechtigungsebene zum Ausführen de
 Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der folgenden Methoden: 
 {: tsResolve}
  * Wählen Sie eine andere Organisation und einen anderen Bereich aus, für die bzw. den Sie die Rolle des Entwicklers ausfüllen. 
- * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](../admin/orgs_spaces.html){: new_window}. 
+ * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](../admin/orgs_spaces.html){: new_window}.
  
 
  
@@ -556,13 +555,11 @@ Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. S
 {: tsResolve}
 
   * Fügen Sie in der Datei 'manifest.yml' den folgenden Teil hinzu:
-    
     ```
 	disk_quota: <disk_quota>
 	```
   * Verwenden Sie die Option **-k** in Kombination mit dem Befehl `cf push`,
 wenn Sie Ihre App mit Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen:
-    
     ```
 	cf push appname -p app_path -k <disk_quota>
 	```
@@ -728,12 +725,11 @@ Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von
 	  2. Im Teilfenster für die Laufzeit können Sie die maximale Hauptspeicherkapazität für Ihre Anwendung, die Anzahl der Anwendungsinstanzen oder beides reduzieren. 
 	Führen Sie bei Verwendung der cf-Befehlszeilenschnittstelle folgende Schritte aus:
 	  1. Überprüfen Sie, wie viel Speicherplatz für Ihre Anwendungen verwendet wird:
-	  
 	  ```
 	  cf apps
 	  ```
-	     Mit dem Befehl 'cf apps' werden alle Anwendungen aufgelistet, die Sie in Ihrem aktuellen Bereich bereitgestellt haben. Der Status der einzelnen Anwendungen wird auch angezeigt.      2. Zum Verringern der von Ihrer Anwendung verwendeten Speichermenge verringern Sie die Anzahl der Anwendungsinstanzen, die maximale Hauptspeicherkapazität oder beides:
-	  
+	     Mit dem Befehl 'cf apps' werden alle Anwendungen aufgelistet, die Sie in Ihrem aktuellen Bereich bereitgestellt haben. Der Status der einzelnen Anwendungen wird auch angezeigt.
+      2. Zum Verringern der von Ihrer Anwendung verwendeten Speichermenge verringern Sie die Anzahl der Anwendungsinstanzen, die maximale Hauptspeicherkapazität oder beides:
 	  ```
 	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
@@ -816,9 +812,8 @@ Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen:
 
   * Ist die Datei `manifest.yml` nicht auf der höchsten Ebene Ihres Projekts gespeichert, speichern Sie sie dort.
   * Ist Ihre App in einem Unterverzeichnis gespeichert, geben Sie den Pfad zum Unterverzeichnis in der Datei `manifest.yml` an.
-  
   ```
-path: path_to_application
+   path: path_to_application
    ```
   * Erstellen Sie die Datei `package.json` im selben Verzeichnis wie Ihre App.
 
@@ -896,14 +891,12 @@ Der angegebene Hostname muss innerhalb der verwendeten Domäne eindeutig sein. V
 {: tsResolve} 
 
   * Wenn Sie zum Implementieren der Anwendung die Datei `manifest.yml` verwenden, geben Sie den Hostnamen in der Option host an.	 
-    	 
     ```
-host: <hostname>	
+    host: <hostname>	
 	```
   * Wenn Sie die Anwendung über die Eingabeaufforderung bereitstellen, verwenden Sie den Befehl `cf push` mit der Option **-n**. 
-     
     ```
-cf push <appname> -p <app_path> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ```
 
 
@@ -960,12 +953,10 @@ Sie können den folgenden Code im Servlet oder der JSP-Datei verwenden:
 {: tsResolve} 
 
   * In der Servletquellendatei: 
-     
     ```
 	response.setContentType("text/html; charset=UTF-8");
 	```
   * In der JSP-Datei: 
-     
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
@@ -1149,7 +1140,7 @@ Verwenden Sie eine der folgenden Methoden, um ein angepasstes Buildpack für Met
 
   * Wenn Sie zum Implementieren der App die Datei `manifest.yml` verwenden, geben Sie die URL oder den Namen des angepassten Buildpacks mithilfe der Option 'buildpack' an. Beispiel:
   ```
-buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
+  buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
   * Wenn Sie die Anwendung in einer Eingabeaufforderung bereitstellen, verwenden Sie den Befehl `cf push` und geben Sie das angepasste Buildpack mit der Option **-b** an. Beispiel:
     ```
@@ -1246,35 +1237,29 @@ Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen:
   * Wenn in der Fehlernachricht angegeben wird, dass ein erforderlicher Service im Zielbereich bereits vorhanden ist, wählen Sie aus, dass ein anderer Bereich verwendet werden soll.
   * Wenn in der Fehlernachricht angegeben wird, dass mit dem Build ein Problem besteht, beheben Sie alle Fehler im Code, die verhindern, dass für die App ein Build erfolgen kann. Zum Überprüfen, dass der Code keine Probleme enthält, erstellen Sie den Code mithilfe von Git-Befehlen:
     1. Klonen Sie das Git-Repository:
-    
     ```
-git clone <URL des Git-Repositorys>
+    git clone <URL des Git-Repositorys>
     ```
 	2. Öffnen Sie das Verzeichnis der App:
-	
 	```
 	cd <appname>
 	```
 	3. Erstellen Sie die App:
-	
 	```
 	<appname> create
 	```
 	4. Stellen Sie Add-ons bereit, falls erforderlich.
 	5. Fügen Sie erforderliche Konfigurationsvariablen hinzu.
 	6. Führen Sie die Push-Operation für den Code durch:
-	
 	```
 	git push <appname> master
 	```
 	7. Überprüfen Sie, dass der Build für die App ordnungsgemäß ausgeführt wird.
 	8. Führen Sie, falls erforderlich, den nach der Bereitstellung auszuführenden Befehl (post deployment) aus:
-	
 	```
 	<appname> run
 	```
 	9. Öffnen Sie die App und prüfen Sie, ob sie ordnungsgemäß ausgeführt wird:
-	
 	```
 	<appname> open
 	```
@@ -1386,7 +1371,7 @@ um einen Bereich zu erstellen:
  
   * Wählen Sie auf dem Dashboard von {{site.data.keyword.Bluemix_notm}} die Organisation aus, in der Sie den Bereich erstellen möchten;
 klicken Sie anschließend auf **Bereich erstellen**.
-  * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: ```cf create-space <Name des Bereichs> -o <Name der Organisation>. ```.
+  * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`.
   
   
   
@@ -1458,7 +1443,7 @@ Bei einer Push-Operation für eine App können möglicherweise nicht die neueste
 
  
 
-Wenn Sie eine Push-Operation oder erneutes Staging für eine App durchführen, nachdem das Buildpack aktualisiert wurde, werden die neuesten Buildpack-Komponenten nicht automatisch geladen. Dies führt dazu, dass die App die veralteten Buildpack-Komponenten aus dem Cache verwendet. Aktualisierungen, die für das Buildpack angewendet wurden, seit die letzte Push-Operation für die App ausgeführt wurde, werden nicht implementiert.
+Wenn Sie eine Push-Operation oder erneutes Staging für eine App durchführen, nachdem das Buildpack aktualisiert wurde, werden die neuesten Buildpack-Komponenten nicht automatisch geladen. Dies führt dazu, dass die App die veralteten Buildpack-Komponenten aus dem Cache verwendet. Aktualisierungen, die für das Buildpack angewendet wurden, seit die letzte Push-Operation für die App ausgeführt wurde, werden nicht implementiert. 
 {: tsSymptoms}
 
 
@@ -1479,9 +1464,8 @@ Sie können Buildpacks verwenden, die über integrierte Mechanismen verfügen, m
 Wenn das verwendete Buildpack keinen Mechanismus zum automatischen Laden der neuesten Komponenten bereitstellt, können Sie den Inhalt des Cacheverzeichnisses manuell löschen und eine Push-Operation für Ihre App durchführen, indem Sie die folgenden Schritte ausführen:
   1. Checken Sie eine Verzweigung eines Null-Buildpacks aus, z. B. https://github.com/ryandotsmith/null-buildpack. Informationen zum Auschecken einer Verzweigung finden Sie in [Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
   2. Fügen Sie die folgende Zeile zur Datei `null-buildpack/bin/compile` hinzu und schreiben Sie die Änderungen fest. Informationen zum Festschreiben von Änderungen finden Sie in [Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
-  
   ```
-rm -rfv $2/*
+  rm -rfv $2/*
   ```
   3. Führen Sie für Ihre App eine Push-Operation mit dem modifizierten Null-Buildpack durch, um den Inhalt des Cache zu löschen. Verwenden Sie hierzu den folgenden Befehl: Nach der Ausführung dieses Schritts ist der gesamte Inhalt des Cacheverzeichnisses Ihrer App gelöscht.
   ```
@@ -1557,19 +1541,24 @@ Dieses Problem tritt auf, wenn für die Python-Anwendung Konfigurationsinformati
 Fügen Sie zum Lösen des Problems die Datei `requirements.txt` und die Datei `Procfile` im Stammverzeichnis Ihrer Python-Anwendung hinzu. Bei den folgenden Informationen wird vorausgesetzt, dass Sie die Bibliothek 'web.py' importieren:
 {: tsResolve}
 
-  1. Fügen Sie die Datei `requirements.txt` im Stammverzeichnis Ihrer Python-Anwendung hinzu. Die Datei `requirements.txt` gibt die für Ihre Python-Anwendung erforderlichen Bibliothekspakete sowie die Version der Pakete an. Das folgende Beispiel zeigt den Inhalt der Datei `requirements.txt`, wobei `web.py==0.37` angibt, dass es sich bei der Version der Bibliothek `web.py` um '0.37' handelt, und `wsgiref==0.1.2` angibt, dass es sich bei der für die Bibliothek 'web.py' erforderliche Version der Gateway-Schnittstelle des Web-Servers um '0.1.2' handelt.
+  1. Fügen Sie die Datei `requirements.txt` im Stammverzeichnis Ihrer Python-Anwendung hinzu.
+     Die Datei `requirements.txt` gibt die für Ihre Python-Anwendung erforderlichen Bibliothekspakete sowie die Version der Pakete an. Das folgende Beispiel zeigt den Inhalt der Datei `requirements.txt`, wobei `web.py==0.37` angibt, dass es sich bei der Version der Bibliothek `web.py` um '0.37' handelt, und `wsgiref==0.1.2` angibt, dass es sich bei der für die Bibliothek 'web.py' erforderliche Version der Gateway-Schnittstelle des Web-Servers um '0.1.2' handelt.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
 	 ```
 	Weitere Informationen zur Konfiguration der Datei `requirements.txt` finden Sie unter [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html). 
 	 
-  2. Fügen Sie im Stammverzeichnis Ihrer Python-Anwendung die Datei `Procfile` hinzu. Die Datei `Procfile` muss den Startbefehl für Ihre Python-Anwendung enthalten. Im folgenden Befehl ist *NameIhrerAnwendung* der Name Ihrer Python-Anwendung und *PORT* ist die Portnummer, die Ihre Python-Anwendung zum Empfangen von Anforderungen von Benutzern der Anwendung verwenden muss. *$PORT* ist optional. Wenn Sie im Startbefehl PORT nicht angeben, wird stattdessen die Portnummer unter der Umgebungsvariablen `VCAP_APP_PORT` verwendet, die sich innerhalb der Anwendung befindet. 
-	 
+  2. Fügen Sie im Stammverzeichnis Ihrer Python-Anwendung die Datei `Procfile` hinzu.
+	Die Datei `Procfile` muss den Startbefehl für Ihre Python-Anwendung enthalten. Im folgenden Befehl ist *NameIhrerAnwendung* der Name Ihrer Python-Anwendung und *PORT* ist die Portnummer, die Ihre Python-Anwendung zum Empfangen von Anforderungen von Benutzern der Anwendung verwenden muss. *$PORT* ist optional. Wenn Sie im Startbefehl PORT nicht angeben, wird stattdessen die Portnummer unter der Umgebungsvariablen `VCAP_APP_PORT` verwendet, die sich innerhalb der Anwendung befindet. 
 	```
 	web: python <NameIhrerAnwendung>.py $PORT
 	```
-Sie können nun die Python-Bibliothek eines Drittanbieters in {{site.data.keyword.Bluemix_notm}} importieren.## Schaltfläche 'Aktionen' auf Seite 'Instanzdetails' ist inaktiviert
+Sie können nun die Python-Bibliothek eines Drittanbieters in {{site.data.keyword.Bluemix_notm}} importieren.	
+
+
+
+## Schaltfläche 'Aktionen' auf Seite 'Instanzdetails' ist inaktiviert
 {: #ts_actionsbutton}
 
 
@@ -1692,9 +1681,10 @@ Dieses Problem wird durch einen der folgenden Gründe verursacht:
 {: tsCauses} 
 
   * Die Speicherauszugsdateien werden mit aktiven Anwendungsinstanzen generiert und die Dateien belegen das zugeordnete Datenträgerkontingent. Das Datenträgerkontingent für eine Anwendungsinstanz beträgt standardmäßig 1 GB. Wenn Sie die Plattenbelegung überprüfen möchten, klicken Sie auf **Dashboard>Anwendung>Anwendungslaufzeit**. Im folgenden Beispiel werden die Laufzeitinformationen inklusive der Plattenbelegung für zwei Instanzen einer Anwendung aufgeführt:
-    
     ```
-Instance	State	CPU	Memory Usage	Disk Usage0		Running	1.0%	344.8MB/512MB	236.8MB/1GB
+    Instance	State	CPU	Memory Usage	Disk Usage
+
+	0		Running	1.0%	344.8MB/512MB	236.8MB/1GB
 	2		Running	2.3%	361.2MB/512MB	235.7MB/1GB
     ```
   * Das Datenträgerkontingent wird durch das aktuelle Organisationskontingent eingeschränkt.
@@ -1707,7 +1697,6 @@ Sie können dieses Problem auch auf eine der folgenden Methoden beheben:
 
   * Löschen der Speicherauszugsdateien, nachdem sie heruntergeladen wurden.
   * Erneute Bereitstellung der Anwendung mit einem größeren Datenträgerkontingent und dem folgenden Eintrag im Bereitstellungsmanifest:
-    
     ```
 	disk_quota: 2048
 	```

@@ -201,11 +201,11 @@ verfügbar ist.
 | 12 | Regen                     | <img src="images/12.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
 | 13 | Vereinzelt Schauer       | <img src="images/13.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
 | 14 | Leichter Schneefall               | <img src="images/14.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
-| 15 | Schneetreiben/Schneeverwehungen  | <img src="images/15.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
+| 15 | Schneetreiben / Schneeverwehungen  | <img src="images/15.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
 | 16 | Schnee                     | <img src="images/16.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
 | 17 | Hagel                     | <img src="images/17.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
 | 18 | Graupel                    | <img src="images/18.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
-| 19 | Staubverwirbelungen/ Sandsturm | <img src="images/19.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
+| 19 | Staubverwirbelungen / Sandsturm | <img src="images/19.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
 | 20 | Neblig                    | <img src="images/20.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
 | 21 | Dunst/windig             | <img src="images/21.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |
 | 22 | Neblig/windig            | <img src="images/22.png " width="100" height="100" alt="Symbolabbildung."/>| Vorhersage und Beobachtung | Nacht und Tag |

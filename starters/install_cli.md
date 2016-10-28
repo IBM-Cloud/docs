@@ -28,7 +28,7 @@ copyright:
 {:user_ID: data-hd-keyref="user_ID"}
 
 # Deploying your app with the command line interface
-Last updated: 15 September 2016
+Last updated: 5 October 2016
 {: .last-updated}
 
 You can use the command line interface to deploy and modify applications and service instances.
@@ -62,6 +62,10 @@ After the command line interfaces are installed, you can get started:
   5. Log in to {{site.data.keyword.Bluemix_notm}}.
  
   <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
+  
+  If you are using a federated ID, use the -sso option.
+
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>" -sso</pre>
   
   6. Deploy your app to {{site.data.keyword.Bluemix_notm}}. For more information about the cf push command, see [Uploading your application](/docs/starters/upload_app.html).
   

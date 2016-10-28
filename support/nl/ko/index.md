@@ -54,7 +54,7 @@ copyright:
 ## {{site.data.keyword.Bluemix_notm}} 상태 보기
 {: #viewing-bluemix-status}
 
-{{site.data.keyword.Bluemix_notm}} 상태 페이지는 {{site.data.keyword.Bluemix_notm}}의 주요 서비스 및 {{site.data.keyword.Bluemix_notm}} 플랫폼에 영향을 미치는 주요 이벤트에 대한 알림 및 공지사항을 찾는 중심 위치입니다.
+{{site.data.keyword.Bluemix_notm}} 상태 페이지는 {{site.data.keyword.Bluemix_notm}}의 주요 서비스 및 {{site.data.keyword.Bluemix_notm}} 플랫폼에 영향을 미치는 주요 이벤트에 대한 알림 및 공지사항을 찾는 중심 위치입니다. 
 
 상태 페이지에서는 다음과 같은 정보를 찾을 수 있습니다.
 

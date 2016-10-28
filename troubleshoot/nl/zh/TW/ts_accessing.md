@@ -188,7 +188,7 @@ nslookup stage1.mybluemix.net
   
 如果您因自己是合作人員（而非成員）而無法邀請使用者，則您必須刪除先前的 {{site.data.keyword.Bluemix_notm}} 帳戶，然後受邀以組織成員的身分加入帳戶。若要刪除先前的帳戶並以成員的身分加入帳戶，請完成下列步驟： 
 
-  1. 聯絡 [{{site.data.keyword.Bluemix_notm}} 支援](http://ibm.biz/bluemixsupport){: new_window}，以開啟一個支援問題單，並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包括此資訊。 
+  1. 聯絡 [{{site.data.keyword.Bluemix_notm}} 支援](http://ibm.biz/bluemixsupport){: new_window}，以開啟一個支援問題單，並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包含此資訊。 
   2. 刪除您的帳戶之後，請讓具有組織管理員角色的使用者，邀請您以組織管理員的身分加入組織。然後，透過該邀請註冊 {{site.data.keyword.Bluemix_notm}}。 
 
 

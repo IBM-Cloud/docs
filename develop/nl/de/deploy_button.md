@@ -92,12 +92,12 @@ Angegebener Git-Zweig:
 Standard-Master-Zweig:
 </p>
 <pre class="codeblock">
-[&#33;[In Bluemix bereitstellen]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;URL des Git-Repositorys> # [required]&#41;
+[![In Bluemix bereitstellen](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
 </pre>
 <p>Angegebener Git-Zweig:
 </p>
 <pre class="codeblock">
-[&#33;[In Bluemix bereitstellen]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;URL des Git-Repositorys> &branch=&lt;Git-Zweig&gt; # [required]&#41;
+[![In Bluemix bereitstellen](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
 </pre>
 </li>
 </ul>
@@ -171,7 +171,7 @@ Mit der Manifestdatei können Sie Folgendes angeben:
 	Unterstützte Buildprogramme: 
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, mit Ausgabe an den Ordner <code>./output/</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, mit Ausgabe an den Ordner <code>. </code> </i>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, mit Ausgabe an den Ordner <code>. </code> </li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>, mit Ausgabe an den Ordner <code>. </code> </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>, mit Ausgabe an den Ordner <code>./target/</code></li>
 	   </ul>
@@ -186,7 +186,7 @@ Mit der Manifestdatei können Sie Folgendes angeben:
 <li>Erstellen Sie im Stammverzeichnis Ihres Projekts ein Verzeichnis <code>.bluemix</code>.</li>
 <li>Laden Sie die Datei <code>pipeline.yml</code> in das Repository <code>.bluemix</code> hoch.</li>
 </ol> </li>
-	<li>Wenn Sie mithilfe von <stong>IBM Containers</strong> eine App in einem Container bereitstellen, müssen Sie im Stammverzeichnis des Repositorys eine Dockerfile und in einem Verzeichnis <code>.bluemix</code> eine Datei <code>pipeline.yml</code> aufnehmen. 
+	<li>Wenn Sie mithilfe von <strong>IBM Containers</strong> eine App in einem Container bereitstellen, müssen Sie im Stammverzeichnis des Repositorys eine Dockerfile und in einem Verzeichnis <code>.bluemix</code> eine Datei <code>pipeline.yml</code> aufnehmen.
 	<ul>
 	    <li> Weitere Informationen zur Erstellung von Dockerfiles finden Sie in der <a href="https://docs.docker.com/reference/builder/" target="_blank">Docker-Dokumentation</a>. </li>
 	    <li>Sie können eine Datei mit der Bezeichnung <code>pipeline.yml</code> manuell erstellen oder sie auf der Grundlage eines vorhandenen DevOps Services-Projekts generieren. Informationen zum manuellen Erstellen einer Datei <code>pipeline.yml</code>, die speziell für Container vorgesehen ist, finden Sie in den <a href="https://github.com/Puquios/" target="_blank">Beispielen in GitHub</a>. </li>

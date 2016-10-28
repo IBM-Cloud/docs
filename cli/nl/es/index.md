@@ -18,19 +18,19 @@ copyright:
 # Herramientas de CLI y de desarrollo
 {: #cli}
 
-*Última actualización: 27 de mayo de 2016*
+*Última actualización: 31 de agosto de 2016*
 {: .last-updated}
 
 Con {{site.data.keyword.Bluemix_short}}, tiene acceso a potentes herramientas como, por ejemplo, una interfaz de línea de mandatos unificada y plug-ins de CLI. Cada una de estas descargas de CLI están disponibles para dar soporte a su experiencia de {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
-## ![Interfaces de línea de mandatos](./images/CLI.svg) Interfaces de línea de mandatos
+## ![](./images/CLI.svg) Interfaces de línea de mandatos
 {: #downloads}
 
-Descargue e instale las interfaz de línea de mandatos que dan soporte a su experiencia de
+Descargue e instale las interfaces de línea de mandatos que dan soporte a su experiencia de
 {{site.data.keyword.Bluemix_notm}}. 
 
-Con la excepción de la [herramienta de CLI de OpenStack](../virtualmachines/vm_index.html#vm_setup_cli){: new_window} que se utiliza para gestionar servidores virtuales, la herramienta de línea de mandatos cf DeCloud Foundry es un requisito previo para todas las demás herramientas de CLI de {{site.data.keyword.Bluemix_notm}}. La herramienta de línea de mandatos de {{site.data.keyword.Bluemix_notm}} proporciona
+Con la excepción de la [herramienta de CLI de OpenStack](../virtualmachines/vm_index.html#vm_setup_cli){: new_window} que se utiliza para gestionar servidores virtuales, la herramienta de línea de mandatos cf de Cloud Foundry es un requisito previo para todas las demás herramientas de CLI de {{site.data.keyword.Bluemix_notm}}. La herramienta de línea de mandatos de {{site.data.keyword.Bluemix_notm}} proporciona
 una experiencia ampliada para gestionar su entorno de {{site.data.keyword.Bluemix_notm}} aparte de las aplicaciones de Cloud Foundry.
 
 De forma predeterminada, ambas herramientas de CLI utilizan el puerto 443. Si tiene el proxy HTTP entre las herramientas de interfaz de línea de mandatos (CLI) y el entorno de {{site.data.keyword.Bluemix_notm}}, debe configurar la variable de entorno `http-proxy` con el puerto y el URL de proxy HTTP real en el caso de que exista. Consulte [Utilización de la CLI cf con un servidor proxy HTTP](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} para obtener más detalles.
@@ -41,17 +41,17 @@ De forma predeterminada, ambas herramientas de CLI utilizan el puerto 443. Si ti
 | [Descargue CLI](http://clis.ng.bluemix.net/) <br> [Ver docs](./reference/bluemix_cli/index.html)|  [Descargue CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [Ver docs](./reference/cfcommands/index.html) |
 
 
-## ![Plugins de interfaces de línea de mandatos](./images/CLI_Plugin.svg) Plugins de interfaces de línea de mandatos
+## ![](./images/CLI_Plugin.svg) Plug-ins de la interfaz de línea de mandatos
 
 Amplíe fácilmente su interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} con más mandatos. Para acceder
-a los plugin de la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}, consulte el
-[Repositorio de plugin de la CLI](http://plugins.ng.bluemix.net/).
+a los plugins de la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}, consulte el
+[Repositorio de plugin de la CLI](https://plugins.ng.bluemix.net/).
 
 ### Amplíe su interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}: bx
 
 1. Para instalar los plugins de CLI de {{site.data.keyword.Bluemix_notm}} desde el registro de {{site.data.keyword.Bluemix_notm}}, establezca el punto final de registro del plug-in:
 ```
-bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
 ```
 2. Ejecute el mandato siguiente para instalar un plugin:
 ```
@@ -67,7 +67,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 1. Para instalar plugins CLI cf desde el registro de {{site.data.keyword.Bluemix_notm}}, establezca el punto final del registro de plug-ins:
 ```
-cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
 ```
 2. Ejecute el mandato siguiente para instalar un plugin:
 ```
@@ -85,7 +85,7 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 <!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
-## ![Herramientas para el desarrollo integrado](./images/Integrated_Dev_Tools.svg) Herramientas para el desarrollo integrado
+## ![](./images/Integrated_Dev_Tools.svg) Herramientas para el desarrollo integrado
 
 Descargue e instale plugins para integrar sus servicios favoritos de {{site.data.keyword.Bluemix_notm}}.
 

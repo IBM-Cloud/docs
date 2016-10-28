@@ -16,10 +16,7 @@ copyright:
 # Debugging
 {: #debugging}
 
-*Last updated: 25 May 2016*
-{: .last-updated}
-
-If you experience problems with {{site.data.keyword.Bluemix}}, you can view the log files to investigate the problems and debug the errors. 
+If you experience problems with {{site.data.keyword.Bluemix}}, you can view the log files to investigate the problems and debug the errors.
 {:shortdesc}
 
 Logs provide information such as whether a job runs successfully, or whether it fails. They also provide relevant information that can be used to debug and determine the cause of a problem.
@@ -38,17 +35,17 @@ The following procedure shows how you can use the `cf logs` command to debug sta
 
   1. Connect to {{site.data.keyword.Bluemix_notm}} by entering the following code in the cf command line interface:
      ```
-	 cf api https://api.ng.bluemix.net
+	 cf api https://api.stage1.ng.bluemix.net
 	 ```
-	 
+
   2. Log in to {{site.data.keyword.Bluemix_notm}} by entering `cf login`.
-  
+
   3. Retrieve recent logs by entering `cf logs appname --recent`. If you want to filter a verbose log, use the `grep` option. For example, you can enter the following code to display only the [STG] logs:
     ```
 	cf logs appname --recent | grep '\[STG\]'
 	```
   4. View the first error that is displayed in the log.
-  
+
 If you use the IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} plug-in to deploy applications, in the **Console** tab of the Eclipse tool, you can see logs that are similar to the cf logs output. You can also open a separate Eclipse window to track `the logs` when you deploy the application.
 
 In addition to the `cf logs` command, in {{site.data.keyword.Bluemix_notm}} you can also use the Monitoring and Analytics service to collect the log details. In addition, the Monitoring and Analytics service monitors the performance, health, and availability of your applications. It also provides log analytics for Node.js and Liberty runtime applications.  
@@ -80,7 +77,7 @@ The first error in the log shows the reason why the staging fails. In the exampl
 {: screen}
 
 
-For a Node.js application, the DEA uses the information in the `package.json` file to download the modules. From this error, you can see that error occurs for the module. Therefore, you might need to review the 18th line of the `package.json` file. 
+For a Node.js application, the DEA uses the information in the `package.json` file to download the modules. From this error, you can see that error occurs for the module. Therefore, you might need to review the 18th line of the `package.json` file.
 
 ```
 15   "jade": "~1.3.0",
@@ -104,47 +101,47 @@ You can see that a comma is placed at the end of line 17, therefore, a key-value
 
 ## Debugging runtime errors
 {: #debugging-runtime-errors}
-If you experience problems with your application at run time, application logs can help to pinpoint the cause of the error and recover from that problem. 
+If you experience problems with your application at run time, application logs can help to pinpoint the cause of the error and recover from that problem.
 
 Specifically, logging to stdout and stderr can be enabled. For more information about how to configure the log files for applications that are deployed by using the {{site.data.keyword.Bluemix_notm}} built-in buildpacks, see the following list:
 
   * For Liberty for Java™ applications, see [Liberty Profile: Logging and Trace](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
-  * For Node.js applications, see [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}. 
+  * For Node.js applications, see [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
   * For PHP applications, see [error_log](http://php.net/manual/en/function.error-log.php){: new_window}.
   * For Python applications, see [Logging HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
   * For Ruby on Rails applications, see [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * For Ruby Sinatra applications, see [Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
-  
+
 When you enter `cf logs appname --recent` in the cf command line interface, only the most recent logs are displayed. To view the logs for errors that occurred earlier, you must retrieve all the logs and search for the errors. To retrieve all the logs for your application, use one of the following methods:
-<dl> 
-<dt><strong>{{site.data.keyword.Bluemix_notm}} Monitoring and Analytics Service</strong></dt> 
-<dd>The integrated log file search and analysis capabilities of the Monitoring and Analytics Service can help you to quickly identify errors. For more information, see <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Monitoring and Analytics</a>.</dd> 
-<dt><strong>Third-party tools</strong></dt> 
-<dd>You can collect and export the logs from your application to an external log host. For more information, see <a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">Configuring external logging</a>.</dd> 
-<dt><strong>Scripts to collect and export the logs </strong></dt> 
-<dd>To use a script to automatically collect and export the logs to an external file, you must connect to the {{site.data.keyword.Bluemix_notm}} server from your computer, and you must have enough space on your computer to download the logs. For more information, see <a href="../support/index.html#collecting-diagnostic-information" target="_blank">Collecting diagnostic information</a>. </dd>
+<dl>
+<dt><strong>{{site.data.keyword.Bluemix_notm}} Monitoring and Analytics Service</strong></dt>
+<dd>The integrated log file search and analysis capabilities of the Monitoring and Analytics Service can help you to quickly identify errors. For more information, see <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Monitoring and Analytics</a>.</dd>
+<dt><strong>Third-party tools</strong></dt>
+<dd>You can collect and export the logs from your application to an external log host. For more information, see <a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">Configuring external logging</a>.</dd>
+<dt><strong>Scripts to collect and export the logs </strong></dt>
+<dd>To use a script to automatically collect and export the logs to an external file, you must connect to the {{site.data.keyword.Bluemix_notm}} console from your computer, and you must have enough space on your computer to download the logs. For more information, see <a href="../support/index.html#collecting-diagnostic-information" target="_blank">Collecting diagnostic information</a>. </dd>
 </dl>
 
-The `stdout.log` and `stderr.log` files were previously accessible, by default, through the application view in the {{site.data.keyword.Bluemix_notm}} Dashboard under **Files** > **logs**. However, that application logging is no longer available with the current version of Cloud Foundry where {{site.data.keyword.Bluemix_notm}} is hosted. To keep the stdout and stderr application logging accessible through the {{site.data.keyword.Bluemix_notm}} Dashboard under **Files** > **logs**, you can redirect the logging to other files in the {{site.data.keyword.Bluemix_notm}} file system, depending on the runtime that you are using. 
+The `stdout.log` and `stderr.log` files were previously accessible, by default, through the application view in the {{site.data.keyword.Bluemix_notm}} console under **Files** > **logs**. However, that application logging is no longer available with the current version of Cloud Foundry where {{site.data.keyword.Bluemix_notm}} is hosted. To keep the stdout and stderr application logging accessible through the {{site.data.keyword.Bluemix_notm}} console under **Files** > **logs**, you can redirect the logging to other files in the {{site.data.keyword.Bluemix_notm}} file system, depending on the runtime that you are using.
 
   * For Liberty for Java applications, output directed to stdout and stderr is already contained in the `messages.log` file in the logs directory. Look for entries prefixed with SystemOut and SystemErr respectively.
   * For Node.js applications, you can override the console.log function to explicitly write to a file in the logs directory.
   * For PHP applications, you can use the error_log function write to a file in the logs directory.
   * For Python applications, you can have the logger write to a file in the logs directory: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * For Ruby applications, you can have the logger write to a file in the logs directory.
- 
- 
+
+
 ### Debugging code changes
 {: #debug_code_changes}
 
 If you are making code changes to an app that is already deployed and working, yet your code changes aren't being reflected in {{site.data.keyword.Bluemix_notm}}, you can debug by using the logs. Whether or not your app is running, you can check the logs that are generated during the app deployment or runtime to debug why the new code isn't working.
 
-Depending on the way the new code is deployed, choose one of the following methods to debug the code changes: 
+Depending on the way the new code is deployed, choose one of the following methods to debug the code changes:
 
-  * For new code that is deployed from the cf command line, check the output from the *cf push* command. In addition, you can use the *cf logs* command to find more clues for solving the problem. For more information about how to use the *cf logs* command, see [viewing logs from the command line interface](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
+  * For new code that is deployed from the cf command line, check the output from the *cf push* command. In addition, you can use the *cf logs* command to find more clues for solving the problem. For more information about how to use the *cf logs* command, see [viewing logs from the command line interface](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}.
 
-  * For new code that is deployed from a GUI such as the {{site.data.keyword.Bluemix_notm}} user interface, DevOps Delivery Pipeline, or Travis-CI, you can check the logs from the interface. For example, if you deploy the new code from {{site.data.keyword.Bluemix_notm}} user interface, you can go to Dashboard, find your app, and then view logs for clues.   For more information about how to view logs from the {{site.data.keyword.Bluemix_notm}} user interface, see [Viewing logs from Bluemix Dashboard](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
- 
+  * For new code that is deployed from a GUI such as the {{site.data.keyword.Bluemix_notm}} console, DevOps Delivery Pipeline, or Travis-CI, you can check the logs from the interface. For example, if you deploy the new code from {{site.data.keyword.Bluemix_notm}} console, you can go to Dashboard, find your app, and then view logs for clues.   For more information about how to view logs from the {{site.data.keyword.Bluemix_notm}} console, see [Viewing logs from Bluemix Dashboard](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
+
 
 # rellinks
 {: #rellinks}
@@ -154,9 +151,10 @@ Depending on the way the new code is deployed, choose one of the following metho
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [Getting started with IBM Monitoring and Analytics for Bluemix service](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [How Bluemix works](../public/index.html#howwork){: new_window}
+  * [How Bluemix works](../overview/whatisbluemix.html#howwork){: new_window}
   * [Installing the cf command tool](../starters/install_cli.html){: new_window}
   * [Viewing logs](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+
   
   
  

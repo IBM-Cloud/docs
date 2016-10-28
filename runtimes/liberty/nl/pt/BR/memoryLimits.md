@@ -11,14 +11,14 @@ copyright:
 # Limites de memória e o buildpack do Liberty
 {: #memory_limits}
 
-*Última atualização: 10 de junho de 2016*
+Última atualização: 10 de junho de 2016
 {: .last-updated}
 
 Um limite de memória deve ser especificado ao implementar um aplicativo com o buildpack do Liberty.
 
-**Evite problemas**
+## Evite problemas
 
-* Um servlet "Hello World" que é implementado com o buildpack do Liberty com um
+Um servlet "Hello World" que é implementado com o buildpack do Liberty com um
 limite de memória de 256 MB pode não ser implementado e executado corretamente. Se
 for implementado, ele será executado próximo do limite de 256 M. Considere especificar um mínimo de 512 M como
 Limite de memória até para aplicativos simples.

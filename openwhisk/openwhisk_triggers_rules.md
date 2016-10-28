@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-02-22"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # Creating triggers and rules
 {: #openwhisk_triggers}
-Last updated: 22 February 2016
-{: .last-updated}
+
 
 {{site.data.keyword.openwhisk}} triggers and rules bring event-driven capabilities to the platform. Events from external and internal event sources are channeled through a trigger, and rules allow your actions to react to these events.
 {: shortdesc}
@@ -61,7 +56,7 @@ You can set up rules so that a single trigger event invokes multiple actions, an
 - `imageUpload -> classifyImage` rule.
 - `imageUpload -> thumbnailImage` rule.
 
-The three rules establish the following behavior: images in both tweets and uploaded images are classified, uploaded images are classified, and a thumbnail version is generated. 
+The three rules establish the following behavior: images in both tweets and uploaded images are classified, uploaded images are classified, and a thumbnail version is generated.
 
 ## Creating and firing triggers
 {: #openwhisk_triggers_fire}
@@ -71,12 +66,12 @@ Triggers can be fired when certain events occur, or can be fired manually.
 As an example, create a trigger to send user location updates, and manually fire the trigger.
 
 1. Enter the following command to create the trigger:
- 
+
   ```
   wsk trigger create locationUpdate
   ```
   {: pre}
- 
+
   ```
   ok: created trigger locationUpdate
   ```
@@ -88,7 +83,7 @@ As an example, create a trigger to send user location updates, and manually fire
   wsk trigger list
   ```
   {: pre}
- 
+
   ```
   triggers
   /someNamespace/locationUpdate                            private
@@ -100,7 +95,7 @@ As an example, create a trigger to send user location updates, and manually fire
 3. Next, fire a trigger event by specifying the trigger name and parameters:
 
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
 
@@ -117,7 +112,7 @@ Triggers cannot be created inside a package; they must be created directly under
 
 Rules are used to associate a trigger with an action. Each time a trigger event is fired, the action is invoked with the event parameters.
 
-As an example, create a rule that calls the hello action whenever a location update is posted. 
+As an example, create a rule that calls the hello action whenever a location update is posted.
 
 1. Create a 'hello.js' file with the action code we will use:
   ```
@@ -132,7 +127,7 @@ As an example, create a rule that calls the hello action whenever a location upd
   wsk trigger update locationUpdate
   ```
   {: pre}
-  
+
   ```
   wsk action update hello hello.js
   ```
@@ -152,10 +147,10 @@ As an example, create a rule that calls the hello action whenever a location upd
 
 4. Fire the locationUpdate trigger. Each time that you fire an event, the hello action is called with the event parameters.
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-  
+
   ```
   ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
@@ -166,13 +161,13 @@ As an example, create a rule that calls the hello action whenever a location upd
   wsk activation list --limit 1 hello
   ```
   {: pre}
-  
+
   ```
   activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
-  
+
   ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
