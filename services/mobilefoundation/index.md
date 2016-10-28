@@ -3,6 +3,7 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-31"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-31"
 
 # Getting started with {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
-
-<!--Last updated: 31 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_long}} expedites setting up an {{site.data.keyword.mfp_full}} environment from which you can develop, test, and operate enterprise mobile apps. {{site.data.keyword.mobilefoundation_short}} is available under two different service plans: Developer and Professional 1 Application.
 {:shortdesc}
