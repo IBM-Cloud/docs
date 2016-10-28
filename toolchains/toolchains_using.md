@@ -11,7 +11,7 @@ copyright:
 # Using toolchains on {{site.data.keyword.Bluemix_notm}} Public
 {: #toolchains-using}
 
-Last updated: 7 October 2016
+Last updated: 27 October 2016
 {: .last-updated}
 
 You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain. Toolchains are available in the US South region only.
@@ -27,7 +27,7 @@ You can use a toolchain to be productive in your daily development, deployment, 
 
 If you deferred the configuration of a tool integration when you created a toolchain, a **Configure** button is shown on its tile. If you configured a tool integration when you created a toolchain, you can update the configuration settings.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Tool Integrations**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Overview**.
 1. If you need to configure a tool integration for the first time, on its tile, click **Configure**.
 
   ![Configure button](images/toolchain_tile_configure.png)
@@ -45,7 +45,7 @@ If you deferred the configuration of a tool integration when you created a toolc
 
 You can add and configure tool integrations for your toolchain.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Tool Integrations**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Overview**.
 1. To see a list of tool integrations to add, click the add button (+).
 1. Click a tool integration that you want to add.
 1. Enter any required information to configure the tool integration. 
@@ -56,7 +56,7 @@ You can add and configure tool integrations for your toolchain.
 
 If you delete a tool integration from your toolchain, the deletion cannot be undone. 
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Tool Integrations**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Overview**.
 1. On the tile for the tool integration that you want to delete, click the menu to access the configuration options.
 1. To delete the tool integration from your toolchain, click **Delete**.
 1. Confirm by clicking **Delete**.  
