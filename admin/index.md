@@ -484,14 +484,14 @@ You can run a verification at any time. You must be logged in to select the opti
 ## Managing your Catalog
 {: #oc_catalog}
 
-You can manage which {{site.data.keyword.Bluemix_notm}} services and starters are visible to users in the {{site.data.keyword.Bluemix_notm}} Catalog. Click **ADMINISTRATION &gt; CATALOG MANAGEMENT**.
+You can manage which {{site.data.keyword.Bluemix_notm}} services are visible to users in the {{site.data.keyword.Bluemix_notm}} Catalog. Click **ADMINISTRATION &gt; CATALOG MANAGEMENT**.
 
-Select a service or starter tile to edit the service or starter plan visibility. To edit the
+Select a service tile to edit the service plan visibility. To edit the
 visibility, select from the following options:
 
-- To show the hidden service or starter so that it is visible to your users in the
+- To show the hidden service so that it is visible to your users in the
 Catalog, select **ENABLE ALL PLANS**.
-- To hide the service or starter from your users in the {{site.data.keyword.Bluemix_notm}}
+- To hide the service from your users in the {{site.data.keyword.Bluemix_notm}}
 Catalog, select **DISABLE ALL PLANS**.
 - To control the visibility of an individual plan, select the plan name, and then use the
 drop-down menu to select **Enable for all organizations**, **Disable for all organizations**, or **Enable plan for specific organizations**.
