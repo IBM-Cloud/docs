@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2016
@@ -6,13 +6,13 @@ copyright:
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 
 
 # {{site.data.keyword.iotinsurance_short}} について
 {: #about_servicename}
-最終更新日: 2016 年 9 月 12 日
+最終更新日: 2016 年 9 月 15 日
 {: .last-updated}
 
 {{site.data.keyword.iotinsurance_full}} は、保険契約者からフルコンテキスト・データを収集して分析し、パーソナライズされたリスク評価、リアルタイム保護、保険契約関連コストの削減を実現する、統合 IoT 実稼働インスタンスです。
@@ -22,14 +22,14 @@ copyright:
 
 ## プロセス・フロー
 {: #processFlow}
-保険会社は {{site.data.keyword.Bluemix_notm}} サービス・ブローカー内にインスタンスを所有します。保険会社の顧客の住宅には、センサー提供会社のクラウドに接続されたセンサーが配置されています。住宅所有者はモバイル・デバイスから、{{site.data.keyword.iotinsurance_short}} サービスに対し、{{site.data.keyword.iotinsurance_short}} からのセンサー・データの受信を許可します。{{site.data.keyword.iotinsurance_short}} サービスは、センサー・プロバイダーのクラウドに接続し、各ユーザーのデータをプルし、IoT サーバーに送信します。顧客の住宅のセンサーで、保険会社のシールドに指定された条件を満たしたことが示されると、保険会社のダッシュボードと顧客のデバイスに通知が送信されます。
+保険会社は {{site.data.keyword.Bluemix_notm}} サービス・ブローカー内にインスタンスを所有します。保険会社の顧客の住宅には、センサー提供会社のクラウドに接続されたセンサーが配置されています。住宅所有者はモバイル・デバイスから、{{site.data.keyword.iotinsurance_short}} サービスに対し、{{site.data.keyword.iotinsurance_short}} からのセンサー・データの受信を許可します。{{site.data.keyword.iotinsurance_short}} サービスは、センサー提供会社のクラウドに接続し、各ユーザーのデータをプルし、IoT サーバーに送信します。顧客の住宅のセンサーで、保険会社のシールドに指定された条件を満たしたことが示されると、保険会社のダッシュボードと顧客のデバイスに通知が送信されます。
 
 ## コンポーネント
 {: #components}
 
 ### 保険ダッシュボード
 {: #insurance_dashboard}
-保険ダッシュボードには、保険会社のユーザー (代理店など) 向けに、顧客の保険対象資産の状況に関する全体像が示されます。シールドとイベントを国レベル、都道府県レベル、またはアカウント・レベルで表示できます。
+保険ダッシュボードには、保険会社のユーザー (代理店など) 向けに、顧客の保険対象資産の状況に関する全体像が示されます。シールドとイベントを国レベル、都道府県レベル、およびアカウント・レベルで表示できます。
 
 サンプル保険ダッシュボードにはシミュレーション・データがロードされ、収集して分析できる情報の種類が例示されます。
 
@@ -37,7 +37,7 @@ copyright:
 {: #mobileapp}
 モバイル・スターター・アプリでは、保険契約者 (住宅所有者など) が、自宅にあるセンサーから {{site.data.keyword.iotinsurance_short}} によって送信される情報を表示し、それに対応します。
 
-モバイル・デバイスを使用する際に、住宅所有者はサービスにセンサー提供会社のクラウドに接続してデータを送受信することを許可します。例えば、センサーが水漏れを検知したときに、住宅所有者がモバイル・スターター・アプリで通知を受信することなどが考えられます。詳しくは、[Installing and connecting the mobile starter app](index.html#iot4i_mobile}) を参照してください。
+モバイル・デバイスを使用する際に、住宅所有者はサービスにセンサー提供会社のクラウドに接続してデータを送受信することを許可します。例えば、センサーが水漏れを検知したときに、住宅所有者がモバイル・スターター・アプリで通知を受信することなどが考えられます。詳しくは、[Installing and connecting the mobile starter app](iotinsurance_mobile_app.html}) を参照してください。
 
 ### REST API
 {: #rest_api}
@@ -45,11 +45,11 @@ REST API は、モバイル・スターター・アプリ、保険ダッシュ�
 
 サービス・コンソールからアクセスする API は、{{site.data.keyword.iotinsurance_short}} インスタンスに合わせてカスタマイズされます。
 
-API ページでは、以下を行なうことができます。  
+API ページでは、以下を行うことができます。  
   - 使用可能なすべての API 呼び出しと関連資料を参照する。
   - 個々の API 呼び出しを試行する。API 呼び出しを選択してすべての情報を表示し、**「お試しください」**をクリックします。
 
-一般的なシナリオで開始するのに役立つ、API サンプルが用意されています。詳しくは、[{{site.data.keyword.iotinsurance_short}} API examples](https://github.ibm.com/Iot4i/iot4i-api-examples) を参照してください。
+一般的なシナリオで開始するのに役立つ、API サンプルが用意されています。詳しくは、[{{site.data.keyword.iotinsurance_short}} API examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs) を参照してください。
 
 ### クラウド・プロバイダー
 {: #cloudprovider}

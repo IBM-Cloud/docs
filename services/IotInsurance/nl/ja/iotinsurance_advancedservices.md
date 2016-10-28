@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2016
@@ -6,7 +6,7 @@ copyright:
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -18,7 +18,7 @@ copyright:
 
 # 拡張サービスを使用したパフォーマンスの最適化
 {: #iotins_advancedservices}
-最終更新日: 2016 年 9 月 12 日
+最終更新日: 2016 年 9 月 15 日
 {: .last-updated}
 
 パフォーマンスを最適化し、{{site.data.keyword.iotinsurance_short}} インスタンスをモニターするために、{{site.data.keyword.Bluemix_notm}} で 1 つ以上の拡張サービスを作成して構成することができます。
@@ -34,12 +34,12 @@ copyright:
 
 <!-- ### Monitoring logging information with Logmet
 
-https://new-console.ng.bluemix.net/docs/services/MessageHub/index.html#messagehub072
+https://console.ng.bluemix.net/docs/services/MessageHub/index.html#messagehub072
 -->
 
 <!--
 ### Monitoring with New Relic
-For additional monitoring, you can use New Relic, a third-party service that provides monitoring metrics for your application. For instructions to create the New Relic service in your {{site.data.keyword.Bluemix_notm}} environment, see [Using New Relic](https://new-console.ng.bluemix.net/docs/runtimes/liberty/newRelic.html).
+For additional monitoring, you can use New Relic, a third-party service that provides monitoring metrics for your application. For instructions to create the New Relic service in your {{site.data.keyword.Bluemix_notm}} environment, see [Using New Relic](https://console.ng.bluemix.net/docs/runtimes/liberty/newRelic.html).
 -->
 
 
@@ -52,10 +52,10 @@ For additional monitoring, you can use New Relic, a third-party service that pro
 
 ## API リファレンス
 {: #api}
-* [{{site.data.keyword.iotinsurance_short}} API サンプル](https://github.com/ibm-watson-iot/ioti-samples){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API サンプル](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs){:new_window}
 
 ## 関連リンク
 {: #general}
-* [{{site.data.keyword.iot_full}} 資料](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+* [{{site.data.keyword.iot_full}} 資料](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [開発者サポート・フォーラム](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
 * [Stack overflow サポート・フォーラム](http://stackoverflow.com/questions/tagged/ibm-bluemix)
