@@ -6,7 +6,7 @@ copyright:
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -18,7 +18,7 @@ copyright:
 
 # 使用進階服務來最佳化效能
 {: #iotins_advancedservices}
-前次更新：2016 年 9 月 12 日
+前次更新：2016 年 9 月 15 日
 {: .last-updated}
 
 若要最佳化效能並監視 {{site.data.keyword.iotinsurance_short}} 實例，您可以在 {{site.data.keyword.Bluemix_notm}} 中建立及配置一個以上的進階服務。
@@ -34,12 +34,12 @@ copyright:
 
 <!-- ### Monitoring logging information with Logmet
 
-https://new-console.ng.bluemix.net/docs/services/MessageHub/index.html#messagehub072
+https://console.ng.bluemix.net/docs/services/MessageHub/index.html#messagehub072
 -->
 
 <!--
 ### Monitoring with New Relic
-For additional monitoring, you can use New Relic, a third-party service that provides monitoring metrics for your application. For instructions to create the New Relic service in your {{site.data.keyword.Bluemix_notm}} environment, see [Using New Relic](https://new-console.ng.bluemix.net/docs/runtimes/liberty/newRelic.html).
+For additional monitoring, you can use New Relic, a third-party service that provides monitoring metrics for your application. For instructions to create the New Relic service in your {{site.data.keyword.Bluemix_notm}} environment, see [Using New Relic](https://console.ng.bluemix.net/docs/runtimes/liberty/newRelic.html).
 -->
 
 
@@ -52,10 +52,10 @@ For additional monitoring, you can use New Relic, a third-party service that pro
 
 ## API 參考資料
 {: #api}
-* [{{site.data.keyword.iotinsurance_short}} API 範例](https://github.com/ibm-watson-iot/ioti-samples){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API 範例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs){:new_window}
 
 ## 相關鏈結
 {: #general}
-* [{{site.data.keyword.iot_full}} 文件](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [開發人員支援討論區](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
 * [Stack Overflow 支援討論區](http://stackoverflow.com/questions/tagged/ibm-bluemix)

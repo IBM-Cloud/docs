@@ -18,7 +18,7 @@ copyright:
 
 # 샘플 모바일 앱 설치 및 연결
 {: #iotins_gettingstarted}
-마지막 업데이트 날짜: 2016년 9월 12일
+마지막 업데이트 날짜: 2016년 9월 15일
 {: .last-updated}
 
 {{site.data.keyword.iotinsurance_full}} 샘플 모바일 앱은 {{site.data.keyword.iotinsurance_short}}의 모바일 클라이언트에서 사용할 참조 구현입니다. 앱을 사용하여 시스템에 새 디바이스를 등록하고 해당 디바이스와 대한 경보를 받을 수 있습니다.
@@ -57,7 +57,7 @@ copyright:
 
 모바일 디바이스의 푸시 알림을 사용하려면 다음 태스크를 수행하십시오. 푸시 알림 서비스를 사용하려면 올바른 Apple 개발자 계정 멤버십이 있어야 합니다. 
 
-1. https://developer.apple.com/account에서 Aapple 개발자 계정으로 로그인하십시오. 
+1. 다음에서 Apple 개발자 계정으로 로그인하십시오. https://developer.apple.com/account
 
 2. 인증 파일을 작성하십시오. 
   1. **인증서, ID & 프로파일**을 선택하십시오. 
@@ -89,7 +89,7 @@ copyright:
 5. 공개 키 암호 표준(PKCS) 12 파일을 작성하여 {{site.data.keyword.mobilepushshort}} 서비스에 추가하십시오. 
   1. 키 체인 액세스를 열고 **내 인증서**를 선택하십시오. 
   2. **Apple 개발 IOS 푸시 서비스: (번들 ID)**를 마우스 오른쪽 단추로 클릭한 후 파일의 비밀번호 내보내기, 저장, 입력을 수행하십시오. 
-  3. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.mobilepushshort}} 서비스를 여십시오. 
+  3. {{site.data.keyword.Bluemix_notm}} 콘솔에서 {{site.data.keyword.mobilepushshort}} 서비스를 여십시오. 
   4. **푸시 설정**을 클릭하십시오. 
   5. Apple 푸시 알림 인증서 섹션에 PKCS 12 파일을 업로드한 후 비밀번호를 입력하십시오. 
   6. Xcode에서 번들 ID를 앞서 작성한 ID로 변경하십시오. 
@@ -104,6 +104,6 @@ copyright:
 
 ## 관련 링크
 {: #general}
-* [{{site.data.keyword.iot_full}} 문서](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+* [{{site.data.keyword.iot_full}} 문서](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [개발자 지원 포럼](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
 * [스택 오버플로우 지원 포럼](http://stackoverflow.com/questions/tagged/ibm-bluemix)

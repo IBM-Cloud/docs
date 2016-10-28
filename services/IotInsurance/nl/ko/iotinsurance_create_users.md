@@ -18,7 +18,7 @@ copyright:
 
 # 사용자 및 실드 연관 작성
 {: #gettingstartedtemplate}
-마지막 업데이트 날짜: 2016년 9월 12일
+마지막 업데이트 날짜: 2016년 9월 15일
 {: .last-updated}
 
 {{site.data.keyword.iotinsurance_short}} 서비스를 작성하고 필수 지원 서비스와 앱을 배치한 후 권한이 부여된 사용자와 실드 연관을 작성하여 서비스를 테스트할 수 있습니다.
@@ -28,10 +28,10 @@ copyright:
 
 - 컴퓨터에 설치된 [Node.js](https://nodejs.org/en/).   
 - Eclipse와 같은 Node.js 사용 런타임 환경. 
-- Git 소프트웨어와 [API 예제의 GitHub 소스 코드 저장소](https://github.com/ibm-watson-iot/ioti-samples)에 대한 액세스 권한.
- 또는 [소스 코드 파일로 아카이브](https://github.com/ibm-watson-iot/ioti-samples/archive/master.zip)를 다운로드할 수 있습니다. 
+- Git 소프트웨어와 [API 예제의 GitHub 소스 코드 저장소](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)에 대한 액세스 권한.
+ 또는 [소스 코드 파일로 아카이브](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/archive/master.zip)를 다운로드할 수 있습니다. 
 - 준비된 소스 코드. 소스 코드를 준비하려면 다음 단계를 완료하십시오. 
-  1. [GitHub 소스 코드 저장소](https://github.com/ibm-watson-iot/ioti-samples)를 컴퓨터에 복제하거나 다운로드하십시오. 
+  1. [GitHub 소스 코드 저장소](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)를 컴퓨터에 복제하거나 다운로드하십시오. 
   2. 복사된 소스 코드 파일을 포함하는 폴더로 이동하는 명령 프롬프트를 사용하고 `npm install` 명령을 실행하여 프로젝트의 오픈 소스 필수 소프트웨어를 설치하십시오. 
 
 샘플 모바일 앱과 대시보드의 기능을 테스트하는 데 사용할 수 있는 사용자를 작성하십시오. 
