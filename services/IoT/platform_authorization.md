@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Application connection
-Last updated: 14 September 2016
-{: .last-updated}
 
 To connect your application to {{site.data.keyword.iot_full}}, you must connect by using API keys and tokens or binding your application directly to {{site.data.keyword.iot_short_notm}} in {{site.data.keyword.Bluemix_notm}}. You use the access dashboard to grant access.
 {:shortdesc}

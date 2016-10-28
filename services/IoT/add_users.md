@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Managing user access
-Last updated: 16 September 2016
-{: .last-updated}
 
 From the access dashboard, you can control and manage access to your {{site.data.keyword.iot_full}} organization. You can add users by adding, inviting, registering, or importing them. You can also give different levels of access to your users by assiging roles.
 {:shortdesc}
@@ -73,7 +72,7 @@ To register a member with your {{site.data.keyword.iot_short_notm}} organization
 2. Click **Add Member** and select **Invite**.
 3. Enter the email address of the member.
 4. Select a role for this member.
-5. Enter the subject, realm name, and issuer. 
+5. Enter the subject, realm name, and issuer.
    **Important:** Ensure that the `Subject`, `Realm Name`, and `Issuer` fields comply with the OpenID Connect recommendations and standards. For more information, see the [OpenID Connect](http://openid.net/connect/) website.
 6. Optional: Set an expiry date for the member.
 7. Click **Register Member**.

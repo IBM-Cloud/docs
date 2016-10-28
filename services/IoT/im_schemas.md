@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2016
+lastupdated: "2016-10-13"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Create device type schemas
 {: #iotrtinsights_task}
-Last updated: 1 August 2016
-{: .last-updated}
 
 To use {{site.data.keyword.iot_short}} features such as rules and actions, you must create a schema to map device properties to user-friendly properties names, set the data units for the properties, and specify a message type to use with the schema.
 {: shortdesc}
@@ -68,7 +67,7 @@ To add a schema:
  `Float` or `Integer`.</li>
  <li>Property - A property identifier for the virtual property. For example:  
 `temp_virt`</li>
-    <li>Calculation - Add one or more components to define a valid function. You can use properties, numerical values, and mathematical operators such as +, -, \*, /, (, ), and AVG to build your calculation. The AVG component is used to calculate the average property value over a specified period of time.</br> **Important:**  The AVG component only returns property datapoints if the data for the selected property comes from a device that is connected to a gateway with an Edge Analytics Agent installed. For more information, see [Installing the edge analytics agent](gateways/dashboard.html#edge).</li>
+    <li>Calculation - Add one or more components to define a valid function. You can use properties, numerical values, and mathematical operators such as +, -, \*, /, (, ), AVG, and Z-score to build your calculation. </br>The AVG component is used to calculate the average property value over a specified period of time. </br>The Z-score component returns the difference in standard deviation units between the datapoint and the mean datapoint value over a number of datapoints or over a time period.</br> **Important:**  The AVG and Z-score components only return property datapoints if the data for the selected property comes from a device that is connected to a gateway with an Edge Analytics Agent installed. For more information, see [Installing the edge analytics agent](gateways/dashboard.html#edge). In addition, rule conditions that compare AVG and Z-score values are not supported.</li>
     <li>Data unit - Optional: The unit of data of the property. For example: `C` or `Mph`</li>
     <li> Decimal places - Optional, float only: The number of decimals to include in the device data.</li>
    </ul>

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-11"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # HTTP REST API for devices
 {: #api}
-Last updated: 11 October 2016
-{: .last-updated}
 
 **Important:** The {{site.data.keyword.iot_full}} HTTP REST API for devices feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 
@@ -64,7 +63,7 @@ All requests must include an authorization header. Basic authentication is the o
 |Credential|Required input|
 |:---|:---|
 |User name|`use-token-auth`
-|Password| The authentication token that was either automatically generated or manually specified when you registered the device. 
+|Password| The authentication token that was either automatically generated or manually specified when you registered the device.
 
 
 ### Content-Type request headers

@@ -1,7 +1,8 @@
-﻿---
+---
 
 copyright:
   years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,13 +15,11 @@ copyright:
 
 # Edge analytics
 {: #edge_analytics}
-Last updated: 1 August 2016
-{: .last-updated}
 
 With edge analytics, you move the analytics rule-triggering process from the cloud to an edge analytics enabled gateway that might dramatically reduce the amount of device data traffic to the cloud by doing the analytics processing close to the device.
 {:shortdesk}
 
-Devices send their data to an edge analytics enabled gateway where edge analytics rules parse the data. Depending on your rule and its action, critical data and alerts might be sent to {{site.data.keyword.iot_full}}, trigger an alert on the gateway, or be written to a text file local to the gateway.
+Devices send their data to an edge analytics enabled gateway where edge analytics rules parse the data. Depending on your rule and its action, critical data and alerts might be sent to {{site.data.keyword.iot_full}}, trigger an alert on the gateway, or be written to a text file that is local to the gateway.
 
 The following diagram illustrates the general architecture of an {{site.data.keyword.iot_full}} edge analytics environment.
 ![IBM Watson IoT Platform for edge analytics architecture](images/architecture_platform_edge.svg "IBM Watson IoT Platform withe edge analytics architecture")
@@ -33,7 +32,7 @@ The following diagram illustrates the general architecture of an {{site.data.key
 Before you begin creating edge rules and actions:
 - Make sure that your gateway is connected to {{site.data.keyword.iot_short}} and that device data is being transmitted. See [Connecting gateways](gateways/dashboard.html) for more information.
 - Install the Edge Analytics Agent (EAA) on your gateway. For information, see [Installing the edge analytics agent](gateways/dashboard.html#edge). </br> **Tip:** EAA-enabled gateways provide EAA diagnostic data in the form of gateway device messages. For information, see [Edge Analytics Agent diagnostic metrics](#eaa_metrics).
-- Make sure that the device properties that you want to use as conditions in your rules have been mapped to schemas. See [Connecting devices](iotplatform_task.html) and [Creating schemas](im_schemas.html) for more information.
+- Make sure that the device properties that you want to use as conditions in your rules are mapped to schemas. See [Connecting devices](iotplatform_task.html) and [Creating schemas](im_schemas.html) for more information.
 
 ## Managing edge rules and actions  
 {: #managing_rules}
@@ -42,14 +41,14 @@ Edge rules are managed by using the following:
 - The **Rules** dashboard is used to create and edit cloud and edge rules and actions for your devices and gateways.
 - The **Edge Rules Gateways** board is used to activate, deactivate, update, and remove an edge rule on your gateways. To access the Edge Rules Gateways board, from the Rules dashboard click **Manage Rule** for the edge rule that you want to manage. For more information, see [ Activating, deactivating, and managing edge rules for your gateways](#manage).
 
-To get an overview of edge rules and alerts that for your gateway connected devices, use the following boards:
+To get an overview of edge rules and alerts that have been triggered for your gateway-connected devices, use the following boards:
 
- |Board Name | Description |  
+|Board Name | Description |  
  |:---|:---|  
   |Rule-Centric Analytics | Shows the rules for your organization, including edge rules. Additional cards list forwarded edge alerts, associated devices, device properties, and forwarded edge alert information. |  
  |Device-Centric Analytics | Shows the devices that are connected to your organization. Additional cards show forwarded alerts for a selected edge device, information for a selected device, device properties, and forwarded alert information. |
 
- For more information about the default analytics boards, see [Visualizing real-time data by using boards and cards](data_visualization.html#default_boards).
+For more information about the default analytics boards, see [Visualizing real-time data by using boards and cards](data_visualization.html#default_boards).
 
 
 ## Creating edge rules
@@ -65,8 +64,10 @@ To create a rule:
 3. Set up the rule logic.  
 Add one or more IF conditions to use as triggers for the rule.  
 You can add conditions in parallel rows to apply them as OR conditions, or you can add conditions in sequential columns to apply them as AND conditions.  
-**Note:** To be able to select a device property as input for a rule, the property must be mapped to a schema. See [Creating schemas](im_schemas.html) for more information.   
-**Important:** To trigger a condition that trigger two or more property conditions that are combined sequentially by using AND, the triggering data points must be included in the same device message. If the data is received in more than one message, the sequential conditions do not trigger.  
+**Note:** To be able to select a device property as input for a rule, the property must be mapped to a schema. See [Creating schemas](im_schemas.html) for more information.  
+
+**Important:** To trigger a condition that compares two properties or to trigger two or more property conditions that are combined sequentially by using AND, the triggering data points must be included in the same device message. If the data is received in more than one message, the condition or sequential conditions do not trigger.  
+
 **Examples:**   
 A simple rule might trigger an alert if a parameter value is larger than a specified value:  
 `temp>80`  
@@ -187,30 +188,29 @@ To see information about the state of the gateway:
  - See the **Sensor information** section for detailed diagnostic information from the gateway. The following table describes the different properties that might be included in the gateway device messages.
 
 
-Property | Description
---- | ---
-`MsgInCount` |The number of messages that were sent to the Edge Analytics Agent (EAA).
-`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | The estimated number of messages per second that were sent to the EAA during the last time period.  </br>**Note:** `MsgInRate` is an alias for `MsgInRate1Min`. `MsgInMeanRate` is the mean message rate since start up.
-`LastHeartBeat` | The millisecond time stamp when the last heartbeat message was generated. A heartbeat message is generated every 10 seconds at minimum.
-`CurrentTimestamp` | The milliseconds time stamp when the current monitoring message was generated.
-`IsAlive` | This property is 0 if the difference between `LastHeartBeat` and `CurrentTimestamp` is greater than 20 seconds.
-`BytesOutCount` | The number of message bytes that are sent by the EAA to {{site.data.keyword.iot_short}}.
-`BytesOutRate`, `BytesOutRate1Min`, `BytesOutRate15Min`, `BytesOutRate5Min`, `BytesOutMeanRate` | The estimated number of message bytes per second that were sent by the EAA to {{site.data.keyword.iot_short}} during the last time period. </br>**Note:** `BytesOutRate` is an alias for `BytesOutRate1Min`. `BytesOutMeanRate` is the mean rate since start up.
-`BytesInCount` | The number of message bytes that were sent by {{site.data.keyword.iot_short}} to the EAA.
-`BytesInMeanRate`, `BytesInRate1Min`, `BytesInRate`, `BytesInRate15Min`, `BytesInRate5Min` | The estimated number of message bytes per second that that were sent by {{site.data.keyword.iot_short}} to the EAA in the last time period. </br>**Note:** BytesOutRate is an alias for BytesOutRate1Min. BytesOutMeanRate count the mean rate from startup.
-`RuleBytesInCount` |The number of message bytes that were sent to the EAA rule engine core. </br> **Note:** If no rule is set for a device type, messages for that device type are not sent to the rule engine core.
-`RuleBytesInRate5Min`, `RuleBytesInRate`, `RuleBytesInMeanRate`, `RuleBytesInRate1Min`, `RuleBytesInRate15Min` | The estimated number of message bytes per second that were sent to the EAA rule engine core during the last time period. </br> **Note:** `RuleBytesInMeanRate` is the mean rate since start up.
-`MsgOutCount` | The number of messages that were sent by the EAA to {{site.data.keyword.iot_short}}.
-`MsgOutRate`, `MsgOutMeanRate`, `MsgOutRate1Min`, `MessageOutRate5Min`, `MsgOutRate15Min` | The estimated number of messages bytes per second that are sent by the EAA to {{site.data.keyword.iot_short}} during the last time period.</br> **Note:** `MsgOutRate` is an alias for `MsgOutRate1Min`. `MsgOutMeanRate` is the mean rate since start up.
-`MsgReducePercent` | The percentage difference between incoming and outgoing messages. </br>The following formula is used for the calculation: `(msgIn - msgOut) / msgIn`
-`BytesReducePercent` | The percentage difference between incoming and outgoing bytes. </br>The following formula is used for the calculation: `(bytesIn - bytesOut) / bytesIn`
-`MsgRateReduce` | The percentage difference between incoming and outgoing message rate. </br>The following formula is used for the calculation: `(msgInRate - msgOutRate) / msgInRate`
-`BytesRateReduce` | The percentage difference between incoming and outgoing messages bytes. </br>The following formula is used for the calculation: `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | The current system load for the system where the EAA is running. **Note:** The CPU rate will be sent only if the `mpstat` command is available on the system where the EAA is running. Otherwise, the system load average for the last minute is sent. </br>“The system load average is the sum of the number of runnable entities queued to the available processors and the number of runnable entities that run on the available processors averaged over a time. The way in which the load average is calculated is operating system specific but is typically a damped time-dependent average. If the load average is not available, a negative value is returned. ”  
-From javadoc for ManagementFactory.getOperatingSystemMXBean
-`FreeMemory` | The number of bytes of free memory for the Java Virtual Machine (JVM) where EAA is running.
-`MemoryUsed` | The number of bytes of JVM memory that is used by EAA.
-`InQueueSize` | The number of messages that are queued for EAA processing.
-`RuleNumber` | The number of defined rules in the rule engine core.
-`ProcessorNumber` | For debug use. The number of defined processors in the rule engine core. </br>**Note:** A processor is the minimal execution unit in the rule engine core.
-`DataPointsInWindow` | The total number of data points that are buffered in the time window. The byte size of a data point differs depending on its data type. For example, a float/int data point size is 8 bytes whereas a string data point size differs depending on its length. In most cases you can estimate the memory usage of the time window by using the following formula: `DataPointsInWindow * 8`.
+ Property | Description
+ --- | ---
+ `MsgInCount` |The number of messages that were sent to the Edge Analytics Agent (EAA).
+ `MsgInRate` | The estimated number of messages per second that were sent to the EAA during the last time minute.  
+ `LastHeartBeat` | The millisecond timestamp when the last heart beat message was generated. A heart beat message is generated every 10 seconds at minimum.
+ `CurrentTimestamp` | The milliseconds timestamp when the current monitoring message was generated.
+ `IsAlive` | This property is 0 if the difference between `LastHeartBeat` and `CurrentTimestamp` is greater than 20 seconds.
+ `BytesOutCount` | The number of message bytes that are sent by the EAA to {{site.data.keyword.iot_short}}.
+ `BytesOutRate` | The estimated number of message bytes per second that were sent by the EAA to {{site.data.keyword.iot_short}} during the last minute.
+ `BytesInCount` | The number of message bytes that were sent by {{site.data.keyword.iot_short}} to the EAA.
+ `BytesInRate` | The estimated number of message bytes per second that that were sent by {{site.data.keyword.iot_short}} to the EAA in the last minute.
+ `RuleBytesInCount` |The number of message bytes that were sent to the EAA rule engine core. </br> **Note:** If no rule is set for a device type, messages for that device type are not sent to the rule engine core.
+ `RuleBytesInRate` | The estimated number of message bytes per second that were sent to the EAA rule engine core during the last minute.
+ `MsgOutCount` | The number of messages that were sent by the EAA to {{site.data.keyword.iot_short}}.
+ `MsgOutRate` | The estimated number of messages bytes per second that are sent by the EAA to {{site.data.keyword.iot_short}} during the last minute.
+ `MsgReducePercent` | The percentage difference between incoming and outgoing messages. </br>The following formula is used for the calculation: `(msgIn - msgOut) / msgIn`
+ `BytesReducePercent` | The percentage difference between incoming and outgoing bytes. </br>The following formula is used for the calculation: `(bytesIn - bytesOut) / bytesIn`
+ `MsgRateReduce` | The percentage difference between incoming and outgoing message rate. </br>The following formula is used for the calculation: `(msgInRate - msgOutRate) / msgInRate`
+ `BytesRateReduce` | The percentage difference between incoming and outgoing messages bytes. </br>The following formula is used for the calculation: `(bytesInRate - bytesOutRate) / bytesInRate`
+ `SystemLoad` | The current system load for the on the system where the EAA is running. **Note:** The CPU rate will be sent only if the `mpstat` command is available on the system where the EAA is running. Otherwise, the system load average for the last minute is sent. </br>“The system load average is the sum of the number of runnable entities queued to the available processors and the number of runnable entities running on the available processors averaged over a period of time. The way in which the load average is calculated is operating system specific but is typically a damped time-dependent average. If the load average is not available, a negative value is returned. ” - javadoc for _ManagementFactory.getOperatingSystemMXBean_.
+ `FreeMemory` | The number of bytes of free memory for the Java Virtual Machine (JVM) where EAA is running.
+ `MemoryUsed` | The number of bytes of JVM memory that is used by EAA.
+ `InQueueSize` | The number of messages that are queued for EAA processing.
+ `RuleNumber` | The number of defined rules in the rule engine core.
+ `ProcessorNumber` | For debug use. The number of defined processors in the rule engine core. </br>**Note:** A processor is the minimal execution unit in the rule engine core.
+ `DataPointsInWindow` | The total number of data points that are buffered in the time window. The byte size of a data point differs depending on its data type. For example, a float/int data point size is 8 bytes whereas a string data point size differs depending on its length.  In most cases you can estimate the memory usage of the time window by using the following formula: `DataPointsInWindow * 8`.

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-29"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} Feature Overview
 {: #feature_overview}
-
-Last updated: 29 June 2016
-{: .last-updated}
 
 The {{site.data.keyword.iot_full}} is built on the following key areas:
 

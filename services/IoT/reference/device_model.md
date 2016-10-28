@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Device model
 {: #device_model}
-Last updated: 16 September 2016
-{: .last-updated}
 
 The device model describes the metadata and management characteristics of a device. The device database in the {{site.data.keyword.iot_full}} is the master
 source of device information. Applications and managed devices can send updates, including location changes or the progress of a firmware update to the device database. As soon as these updates are received by the {{site.data.keyword.iot_short_notm}}, the database is updated and the information is made available to applications.
