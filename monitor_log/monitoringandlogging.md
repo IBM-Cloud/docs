@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-28"
 
 ---
 
@@ -14,8 +16,6 @@ copyright:
 #Monitoring and logging with Cloud Foundry
 {: #monitoringandlogging}
 
-Last updated: 28 October 2016
-{: .last-updated}
 
 By monitoring your apps and reviewing logs, you can follow application execution and data flow to get a better understanding of your deployment. In addition, you can reduce the time and effort that is required to locate any issues and repair them.
 {:shortdesc}
