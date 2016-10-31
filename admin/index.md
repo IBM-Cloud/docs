@@ -4,6 +4,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-25"
 
 
 ---
@@ -18,27 +19,29 @@ copyright:
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
 
-*Last updated: 20 October 2016*
-{: .last-updated}
 
-If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
+If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](/docs/admin/index.html#oc_useradmin); see [Managing your organizations](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
 *Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance*
-{: #caption}
 
 | What can I do? | Details |    
 |----------------|---------|
-|Monitor system usage | Click **ADMINISTRATION &gt; USAGE**. View your system information, monitor CPU usage, and plan usage to make the best decisions for your business. See [Viewing usage information](index.html#oc_resource).|
-|Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT** to manage which services are visible to your users and orgs. See [Managing your catalog](index.html#oc_catalog).|
-|Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** to create organizations, monitor quotas for organizations, and make needs-based decisions quickly. See [Administering organizations](index.html#oc_organizations).|
-|Create spaces and assign user roles | Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), then select **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](../admin/orgs_spaces.html). |
-|Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](index.html#oc_useradmin). |
-|Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](index.html#oc_report). |
-|View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending maintenance updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. See [Viewing system information](index.html#oc_system). |
-|Extend notifications and set up notification subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending**. You can use webhooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and notification subscriptions](index.html#oc_eventsubscription). |
+|Monitor system usage | Click **ADMINISTRATION &gt; USAGE**. View your system information, monitor CPU usage, and plan usage to make the best decisions for your business. See [Viewing usage information](/docs/admin/index.html#oc_resource).|
+|Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT** to manage which services are visible to your users and orgs. See [Managing your catalog](/docs/admin/index.html#oc_catalog).|
+|Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** to create organizations, monitor quotas for organizations, and make needs-based decisions quickly. See [Administering organizations](/docs/admin/index.html#oc_organizations).|
+|Create spaces and assign user roles | Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), then select **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](/docs/admin/orgs_spaces.html). |
+|Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](/docs/admin/index.html#oc_useradmin). |
+|Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](/docs/admin/index.html#oc_report). |
+|View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending maintenance updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. See [Viewing system information](/docs/admin/index.html#oc_system). |
+|Extend notifications and set up notification subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending**. You can use webhooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and notification subscriptions](/docs/admin/index.html#oc_eventsubscription). |
+
+<!-- staging only for WoW start -->
 
 **Tip**: The Infrastructure dashboard in the {{site.data.keyword.Bluemix_notm}} console is available only in linked accounts in {{site.data.keyword.Bluemix_notm}} Public environments.
+
+
+<!-- staging only for WoW end -->
 
 
 ## Notifications and notification subscriptions
@@ -51,7 +54,6 @@ You can always know the status of your environment by checking the Status page. 
 You can view notifications for your local or dedicated environment to monitor the status of your environment. Review the following table for information about the different types of notifications and where each notification type is posted.
 
 *Table 2. Event types and notifications methods*
-{: #caption}
 
 | **Event Type** | **Notification method** |       
 |-----------------|-------------------|
@@ -89,7 +91,6 @@ To create an email or webhook subscription from the **Notification Subscriptions
   * Click **Save and Close** to save the subscription to your notification subscription list, and return to the previous page.
 
 *Table 3. Fields for email notification subscriptions about maintenance updates or incidents*
-{: #caption}
 {: #emailnotmaintinc}
 
 | **Field** | **Description** |
@@ -104,7 +105,6 @@ To create an email or webhook subscription from the **Notification Subscriptions
 | Description | Add a unique description for the subscription that you are creating. |
 
 *Table 4. Fields for email notification subscriptions about thresholds*
-{: #caption}
 {: #emailnottrhesh}
 
 | **Field** | **Description** |
@@ -126,7 +126,6 @@ Threshold data is collected once every 6 hours. A notification is sent only once
 If you don't want to wait 6 hours for the notification to be sent when the threshold is met, after you complete the fields on the form, you can click **Save and Test** to save and test the notification with sample data.
 
 *Table 5. Form fields for a webhook notification subscription about maintenance or incidents*
-{: #caption}
 {: #webhooknotsub}
 
 | **Field** | **Description** |
@@ -151,7 +150,6 @@ If you don't want to wait 6 hours for the notification to be sent when the thres
 | Combine notifications | Select the option to combine the incident notifications for all regions into a single notification. This option is available for incidents only. |
 
 *Table 6. Form fields for a webhook notification subscription about thresholds*
-{: #caption}
 {: #webhooknotthresh}
 
 | **Field** | **Description** |
@@ -171,7 +169,6 @@ If you don't want to wait 6 hours for the notification to be sent when the thres
 | URL | Enter the URL to connect to your web service. |
 
 *Table 7. Maintenance and incident payload section values*
-{: #caption}
 {: #payload}
 
 | **IBM value** | **Description** | **Event type** |
@@ -189,7 +186,6 @@ If you don't want to wait 6 hours for the notification to be sent when the thres
 | {{type}} | Update or incident | Maintenance update and incident |
 
 *Table 8. Threshold payload section values*
-{: #caption}
 {: #threshpayload}
 
 | **IBM value** | **Description** | **Event type** |
@@ -292,7 +288,7 @@ LDAP configuration details.
 ### Pending system updates
 
 In the Updates section, you can see the number of pending
-update notifications that require action on your part. There are two types of maintenance updates that you might see:
+update notifications that require action on your part. There are two types that you might see:
 
 <dl>
 <dt>Non-disruptive updates</dt>
@@ -442,7 +438,6 @@ icon to download the report.
 The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated. Most reports are generated on a daily basis. However, the encryption and key management events reports are generated monthly. All reports are retained for 90 days in the administration console for your retrieval. After that 90 days, the reports are available offline per request from {{site.data.keyword.Bluemix_notm}} for 9 months. In total, reports are available for retrieval for up to 1 year.
 
 *Table 9. Security report list*
-{: #caption}
 
 | **Category** | **Report** | **Description** |      
 |-----------------|-------------------|---------------------|
@@ -620,7 +615,6 @@ When you are implementing the service broker, in the JSON response of <code>GET 
 The following tables can help you fill in the JSON file.
 
 *Table 10. JSON fields*
-{: #caption}
 
 | **JSON fields** | **Description** |
 |-----------------|-----------------|
@@ -632,7 +626,6 @@ The following tables can help you fill in the JSON file.
 |plans | An array of service plan definitions. See the following table for [Plan fields](index.html#planfields) for more information. |
 
 *Table 11. Metadata fields*
-{: #caption}
 {: #metadatafields}
 
 | **Metadata values** | **Description** |
@@ -689,7 +682,6 @@ The following example shows how the JSON response of GET /v2/catalog is mapped t
 ![Service details in the catalog.](images/metadata.png "Bluemix Catalog service details view")
 
 *Table 12. Plan fields*
-{: #caption}
 {: #planfields}
 
 | **Plan values** | **Description** |
@@ -701,7 +693,6 @@ The following example shows how the JSON response of GET /v2/catalog is mapped t
 |metadata (optional)    | The service plan metadata that is displayed in the {{site.data.keyword.Bluemix_notm}} catalog and in the pricing sheet. The metadata field is an optional field. You can specify the following fields within the metadata field: displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber), and paidOnly. See the following table for [Plan metadata fields](index.html#planmetadata) for more information. |
 
 *Table 13. Plan metadata fields*
-{: #caption}
 {: #planmetadata}
 
 | **Plan metadata values** | **Description** |
@@ -926,7 +917,6 @@ Depending on your **Read** or **Write** access for the users' permissions, you c
 Users can be assigned the following permissions with specific access levels (read or write) that enable the user to complete specific tasks within the admin console.
 
 *Table 14. Permissions*
-{: #caption}
 
 | **User permission** | **Description** |       
 |-----------------|-------------------|
@@ -1273,6 +1263,307 @@ command:
  ```
 {: screen}
 
+## API for metrics (experimental)
+{: #envappmetricsapi}
+
+You can use two experimental APIs to gather metrics about your environment or applications. Both APIs return an array of data points for the metrics that you requested over the time that you specified.
+
+**Notes**:
+
+1. A user can make up to 200 API requests for metrics an hour.
+2. Each API request returns up to 200 data points per request. If more data is available, a URL is provided in the response for loading the next set of data.
+
+## Gathering metrics about your environment 
+
+You can use the experimental environment API to gather high-level environment information over a time period that you specify. Available data points within the time that you specify are returned. Data is recorded approximately every hour. If, for example, you requested six hours of CPU data for the environment, the response would include CPU data for each of the six requested hours.
+
+### Environment metrics query parameters
+
+Using the following query parameters, you can gather metrics for your CPU, disk, memory, network, and apps:
+
+<dl class="parml">
+<dt class="pt dlterm">metric</dt>
+<dd class="pd">One or more of the following values, separated by commas: 'memory', 'disk', 'cpu', 'network' and 'apps.'</dd>
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">The earliest point in time from which data is returned. If no startTime is specified, the earliest available data point is included. For example, to gather data between 2 PM and 5 PM, specify a startTime of 2 PM.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">The latest point in time from which data is returned. If no endTime is specified, the most recent data point is used. For example, to gather data between 2 PM and 5 PM, specify an endTime of 5 PM.</dd>
+<dt class="pt dlterm">sort</dt>
+<dd class="pd">The order in which the data is returned. Valid values are 'asc' (ascending) and 'desc' (descending). The default is descending, returning the most recent data first. </dd>
+</dl>
+
+### Environment metrics data format
+
+The following sections provide the data format.
+
+ * To gather data records about your memory usage, use the following data format:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "memory": {
+    "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
+    "memory_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "47"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "51"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "45"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "43"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * To gather data records about your disk usage, use the following data format:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "disk": {
+    "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
+    "disk_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "14"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "12"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * To gather data records about your CPU usage, use the following data format:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "cpu": {
+    "average_percent_cpu_used": 27.288461538461544,
+    "cpu_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "sys_percent": "8.4",
+        "user_percent": "2.7",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "sys_percent": "7.4",
+        "user_percent": "2.4",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "sys_percent": "5.3",
+        "user_percent": "1.9",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "sys_percent": "8.2",
+        "user_percent": "22.6",
+        "wait_percent": "0.0"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * To gather data records about your network, use the following data format:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "network": {
+    "datapower": {
+    "response_times": [
+      {
+        "proxy": "custom_certificates",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "90",
+        "one_minute_ms": "89",
+        "ten_minutes_ms": "83",
+        "one_hour_ms": "85",
+        "one_day_ms": "95"
+      }
+      ],
+        "transactions": [
+      {
+        "proxy": "custom_domains",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "697",
+        "one_minute_ms": "747",
+        "ten_minutes_ms": "802",
+        "one_hour_ms": "794",
+        "one_day_ms": "730"
+      }
+      ],
+        "bandwidth": {
+        "in_mbps": 10855,
+        "out_mbps": 38090
+      }
+  }
+}
+```
+{: screen}
+
+* To gather data records about your applications, use the following data format:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "apps": {
+    "count": 1406,
+    "allocation": {
+      "memory_gb": 571.8,
+      "disk_gb": 1204
+    }
+  }
+}
+```
+{: screen}
+
+### Environment metrics response format
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+## Gathering metrics about your applications
+
+Data is recorded for all applications approximately every hour. A request for a particular metric returns information for all apps in each data sample in the time period you specify, which is sorted in descending order by the requested metric. For example, requesting all apps by CPU over a 6-hour time period in an environment that has 200 apps returns 1200 records, 200 at a time.
+
+To reduce the amount of information that is returned for each data sample in the requested time period, you can specify a count option. Using the previous example and adding a count option of 5 returns 30 records that represent the top 5 applications by CPU for each data sample.
+
+### Applications endpoints 
+
+You can use the following endpoints to invoke this API command:
+* /api/v1/app/cpu/physical 
+* /api/v1/app/memory/physical
+* /api/v1/app/memory/reserved
+* /api/v1/app/disk/physical
+* /api/v1/app/disk/reserved
+
+### Applications query parameters
+ 
+Use the following query parameters to gather metrics for your applications:
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">The earliest point in time from which data is returned. If no startTime is specified, the earliest available data point is included. For example, to gather data between 2 PM and 5 PM, specify a startTime of 2 PM.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">The latest point in time from which data is returned. If no endTime is specified, the most recent data point is used. For example, to gather data between 2 PM and 5 PM, specify an endTime of 5 PM.</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">The number of records to return within each data sample.
+</dd>
+</dl>
+
+### Applications response format
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+Each document that is returned represents the requested metrics for an application in each data sample, at the point in time of the request.
+
+
 ## Custom service API
 {: #servicebrokerapi}
 
@@ -1351,20 +1642,14 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "name": "Service broker's name",
     "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
-    "created_at": "2015-12-07T19:51:50Z",
-    "updated_at": null,
-    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
+
 ```
 {: screen}
 
@@ -1382,7 +1667,6 @@ Use the following API and code examples to update a service.
 {: #updaterequest}
 
 *Table 16. Fields*
-{: #caption}
 
 | **Name** | **Description** |
 |-----------------|-------------------|
@@ -1432,19 +1716,12 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "name": "Service Broker's name",
     "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
-    "created_at": "2015-12-07T20:11:08Z",
-    "updated_at": "2015-12-07T20:11:19Z",
-    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
 ```
 {: screen}
@@ -1454,7 +1731,6 @@ Content-Type: application/json
 Use the following API and code examples to delete a service.
 
 *Table 17. Parameter*
-{: #caption}
 
 | **Name** | **Description** |
 |-----------------|-------------------|
