@@ -124,7 +124,6 @@ To configure your AT&T-connected devices, complete the following steps:
 
 When the organization is successfully configured, the *Extensions* section displays under the *Extensions Configuration* section in the *Device Drilldown* view.
 
-<!--
 ## ARM mbed connector
 {: #arm}
 
@@ -199,7 +198,7 @@ The payload should be published to the following topic:
 ```
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ```
--->
+
 
 ## Orange
 {: #orange}
