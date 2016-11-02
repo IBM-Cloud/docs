@@ -38,7 +38,7 @@ After {{site.data.keyword.openwhisk_short}} is set up with the CLI, you can begi
 ## Using the {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_using_cli}
 
-After you have configured your environment, you can begin using the {{site.data.keyword.openwhisk_short}} CLI to do the following:
+After you have [configured your environment](https://new-console.{DomainName}/openwhisk/cli){: new_window}, you can begin using the {{site.data.keyword.openwhisk_short}} CLI to do the following:
 
 * Run your code snippets, or actions, on {{site.data.keyword.openwhisk_short}}. See [Creating and invoking actions](./openwhisk_actions.html).
 * Use triggers and rules to enable your actions to respond to events. See [Creating triggers and rules](./openwhisk_triggers_rules.html).
